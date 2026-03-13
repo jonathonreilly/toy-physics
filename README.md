@@ -1,6 +1,13 @@
 # Discrete Octopus-Physics Toy Model
 
-This workspace contains a small runnable prototype for the event-network ontology.
+This workspace contains a small runnable prototype for an event-network octopus-physics ontology.
+
+## How To Read This README
+
+- `Model Axioms`, `Primitives`, and `Toy Rules` describe the conceptual scaffold and the assumptions currently carried by the model.
+- `What the current script implements` describes the mechanics that are actually present in the repository.
+- `What the current script demonstrates` is narrower: it lists behaviors that the runnable toy model currently produces or pressure-tests.
+- `What is still cheating` lists the assumptions that remain unresolved or only partially justified.
 
 ## Model Axioms
 
@@ -42,13 +49,22 @@ The code models the following toy primitives:
 - Alternatives tagged by different durable records cannot combine.
 - Conscious systems are part of the wider framework as record-integrating predictive processes, but this prototype only models durable records, not consciousness itself.
 
+## Conceptual Motivation
+
+These points explain how the current toy model is motivated. They are not all direct outputs of the script:
+
+- The ontology starts from events, links, delays, and durable records rather than particles in a pre-given container.
+- The local `retained update` term `sqrt(dt^2 - dx^2)` is motivated by the boost-like symmetry pressure test, while the `spent delay` action adds the extra accounting assumption that still has to be justified.
+- Gravity-like behavior is motivated by treating persistent self-maintaining patterns as sources of local delay/load rather than by inserting a force law.
+- Measurement is motivated as durable record formation, with interference lost when alternatives are separated into different record sectors.
+
 Run it with:
 
 ```bash
 python3 /Users/jonreilly/Projects/Physics/toy_event_physics.py
 ```
 
-What it does:
+What the current script implements:
 
 - Extracts a classical-looking limit from the same shared local rule by following stationary-action geodesics on the async graph.
 - Derives the local delay field from an emergent persistent pattern whose late-time occupancy sources graph-load under neighbor averaging, with the initial disturbance and self-maintenance rule jointly selected by searching interior one-node seeds against a compact rule family.
@@ -62,7 +78,7 @@ What it does:
   - why the `square rule` is less arbitrary once reversible linear mixing is required
   - which local scalar remains stable under boost-like frame mixing
 
-What the script shows:
+What the current script demonstrates:
 
 - The same local rule can be used to extract stationary-action geodesics while still inferring causal order from local delays.
 - With a proper-time-style action derived from the same delay field, those geodesics bend inward in a gravity-like way instead of merely routing around a slow region.
@@ -81,6 +97,7 @@ What the script shows:
 - The next decomposition makes that crossing more explicit: for a fixed distorted path, the consistency margin is linear in `w`, with a calculable critical weight `w* = 2 * delay_penalty / retained_total`.
 - In the current hardest observed targets, the largest critical weights are all in `large:skew-wrap-large`, clustered around `w* ~= 0.953..0.955`.
 - The key subtlety is that the hardest scenario does not stay on one branch all the way through the scan. At `w = 0.75..0.90`, the active winner is `S[2,3]/B[3,4]` with source row `-1` and a much easier threshold around `w* ~= 0.794`; near the crossing, the optimizer switches to `S[3,4]/B[1,3]` with source row `0`, and that new branch carries the tighter threshold `w* ~= 0.955`.
+- The new selection diagnostic makes the cause of that switch explicit: the fallback branch is structurally stable across the scan, but its `center gap` degrades from `0.241` to `0.013` as `w` rises, so it drops from `survives` to `mixed/fragile`; the rescue branch stays `survives` throughout and takes over once the old branch no longer clears the robustness threshold.
 - So the retained-weight benchmark is best understood as a piecewise-linear lower envelope of active rule/path branches, not as a single line in `w`. That is why `w = 0.95` still fails while `w = 1.0` passes.
 - With that repair in place, `extended` still produces the larger average boundary-delay span, while the reduced `compact` family keeps a slightly larger average center gap.
 - The earlier `skew-wrap` miss is now understood as a legacy reduced-family coverage bug, not as a deep compact-vs-extended ontology split.

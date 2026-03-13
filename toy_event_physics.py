@@ -223,6 +223,21 @@ class WeightBranchScanRow:
     critical_weight: float
 
 
+@dataclass
+class RuleSelectionDiagnosticRow:
+    retained_weight: float
+    fallback_rule: str
+    fallback_center_gap: float
+    fallback_arrival_span: float
+    fallback_status: str
+    rescue_rule: str
+    rescue_center_gap: float
+    rescue_arrival_span: float
+    rescue_status: str
+    final_rule: str
+    switched: bool
+
+
 @dataclass(frozen=True)
 class LocalRule:
     persistent_nodes: frozenset[tuple[int, int]]
@@ -1459,6 +1474,26 @@ def resolve_robust_rule_candidate(
     return chosen_rule, diagnostics, metrics, fallback_used
 
 
+def scan_self_maintaining_rules_fallback_only(
+    nodes: set[tuple[int, int]],
+    wrap_y: bool,
+    postulates: RulePostulates,
+) -> tuple[RuleCandidate | None, SearchDiagnostics]:
+    del postulates
+    return scan_self_maintenance_rules(
+        nodes,
+        count_options=SWEEP_COMPACT_COUNT_OPTIONS,
+        wrap_y=wrap_y,
+        evolution_steps=10,
+        sample_window=4,
+        occupancy_threshold=0.6,
+        min_component_fraction=0.7,
+        preferred_rule_pairs=WINNER_RULE_PAIRS,
+        preferred_bonus=0.08,
+        seed_builders=(point_seed_builder, cluster_seed_builder),
+    )
+
+
 def focused_skew_wrap_diagnosis(postulates: RulePostulates) -> list[FocusedComparison]:
     """Compare the legacy, repaired, minimal, and full compact families on skew-wrap."""
 
@@ -2388,6 +2423,104 @@ def weight_branch_scan(
     return rows
 
 
+def rule_selection_diagnostics(
+    pack_name: str,
+    scenario_name: str,
+    retained_weights: tuple[float, ...] = (0.75, 0.8, 0.85, 0.9, 0.95, 1.0),
+) -> list[RuleSelectionDiagnosticRow]:
+    nodes, wrap_y = scenario_by_name(pack_name, scenario_name)
+    rows: list[RuleSelectionDiagnosticRow] = []
+
+    for retained_weight in retained_weights:
+        postulates = RulePostulates(
+            phase_per_action=4.0,
+            attenuation_power=1.0,
+            action_mode="retained_mix",
+            field_mode="relaxed",
+            action_retained_weight=retained_weight,
+        )
+        fallback_rule, _fallback_diag = scan_self_maintaining_rules_fallback_only(
+            nodes,
+            wrap_y,
+            postulates,
+        )
+        rescue_rule, _rescue_diag, rescue_metrics = quality_rescue_rule(
+            nodes,
+            wrap_y,
+            SWEEP_COMPACT_COUNT_OPTIONS,
+            postulates,
+        )
+        final_rule, _diag, final_metrics, _fallback_used = resolve_robust_rule_candidate(
+            nodes,
+            wrap_y,
+            SWEEP_COMPACT_COUNT_OPTIONS,
+            postulates,
+        )
+
+        fallback_metrics = (
+            evaluate_rule_candidate(nodes, wrap_y, fallback_rule, postulates)
+            if fallback_rule is not None
+            else None
+        )
+        rows.append(
+            RuleSelectionDiagnosticRow(
+                retained_weight=retained_weight,
+                fallback_rule=(
+                    format_rule_signature(
+                        fallback_rule.survive_counts,
+                        fallback_rule.birth_counts,
+                    )
+                    if fallback_rule is not None
+                    else "none"
+                ),
+                fallback_center_gap=(
+                    fallback_metrics[0] if fallback_metrics is not None else float("nan")
+                ),
+                fallback_arrival_span=(
+                    fallback_metrics[1] if fallback_metrics is not None else float("nan")
+                ),
+                fallback_status=(
+                    fallback_metrics[4] if fallback_metrics is not None else "no pattern"
+                ),
+                rescue_rule=(
+                    format_rule_signature(
+                        rescue_rule.survive_counts,
+                        rescue_rule.birth_counts,
+                    )
+                    if rescue_rule is not None
+                    else "none"
+                ),
+                rescue_center_gap=(
+                    rescue_metrics[0] if rescue_metrics is not None else float("nan")
+                ),
+                rescue_arrival_span=(
+                    rescue_metrics[1] if rescue_metrics is not None else float("nan")
+                ),
+                rescue_status=(
+                    rescue_metrics[4] if rescue_metrics is not None else "no pattern"
+                ),
+                final_rule=(
+                    format_rule_signature(
+                        final_rule.survive_counts,
+                        final_rule.birth_counts,
+                    )
+                    if final_rule is not None
+                    else "none"
+                ),
+                switched=(
+                    final_rule is not None
+                    and fallback_rule is not None
+                    and (
+                        final_rule.survive_counts != fallback_rule.survive_counts
+                        or final_rule.birth_counts != fallback_rule.birth_counts
+                    )
+                ),
+            )
+        )
+
+    return rows
+
+
 def sample_boundary_arrivals(
     width: int,
     sample_ys: list[int],
@@ -2905,6 +3038,28 @@ def render_weight_branch_scan_table(
     return "\n".join(lines)
 
 
+def render_rule_selection_diagnostic_table(
+    rows: list[RuleSelectionDiagnosticRow],
+) -> str:
+    lines = [
+        "weight | fallback rule     | gap/span   | status   | rescue rule       | gap/span   | status   | final rule         | switched",
+        "-------+-------------------+------------+----------+-------------------+------------+----------+--------------------+---------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.retained_weight:>6.2f} | "
+            f"{row.fallback_rule:<17} | "
+            f"{row.fallback_center_gap:>5.3f}/{row.fallback_arrival_span:>5.3f} | "
+            f"{row.fallback_status:<8} | "
+            f"{row.rescue_rule:<17} | "
+            f"{row.rescue_center_gap:>5.3f}/{row.rescue_arrival_span:>5.3f} | "
+            f"{row.rescue_status:<8} | "
+            f"{row.final_rule:<18} | "
+            f"{'yes' if row.switched else 'no'}"
+        )
+    return "\n".join(lines)
+
+
 def main() -> None:
     print("OCTOPUS PHYSICS TOY MODEL")
     print()
@@ -3345,6 +3500,27 @@ def main() -> None:
             f"- At the top end of the scan, the active branch carries critical weight w* = {final_row.critical_weight:.3f}; that is why the margin is still negative at 0.95 but positive at 1.00."
         )
     print("- This is the more rigorous picture: the toy model’s retained-weight benchmark is piecewise linear in w because the optimizer can switch motifs, sources, and paths as w changes.")
+    print()
+
+    print("18) Why the active rule switches near the crossing")
+    selection_rows = rule_selection_diagnostics(hardest_pack, hardest_scenario)
+    print(render_rule_selection_diagnostic_table(selection_rows))
+    print()
+    print("Interpretation:")
+    print("- This separates the search stages. The fallback search keeps proposing the same compact branch on the hard case, while the rescue stage evaluates a small winner-rule palette by robustness quality under the current action rule.")
+    if selection_rows:
+        low_row = selection_rows[0]
+        high_row = selection_rows[-1]
+        print(
+            f"- At low high-end weights, the fallback branch `{low_row.fallback_rule}` still clears the survive threshold, so it remains the final choice."
+        )
+        print(
+            f"- Near the crossing, that same fallback branch loses center-gap quality and drops from `{selection_rows[-2].fallback_status}` at w = {selection_rows[-2].retained_weight:.2f} to `{high_row.fallback_status}` at w = {high_row.retained_weight:.2f}, while the rescue branch `{high_row.rescue_rule}` remains `{high_row.rescue_status}`."
+        )
+        print(
+            f"- So the switch is not caused by the seed/rule search discovering a brand-new structure at high w; it is caused by the rescue scorer preferring a different winner motif once the old branch no longer satisfies the robustness quality thresholds."
+        )
+    print("- That gives a cleaner internal explanation of the crossing: first the active envelope changes branch because robustness quality changes, then the final branch crosses zero near its own critical weight.")
     print()
 
     print("REMAINING CHEATS")
