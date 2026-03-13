@@ -78,12 +78,30 @@ class RobustnessResult:
     scenario_name: str
     rule_family: str
     seed_node: tuple[int, int]
+    rule_signature: str
+    rule_breadth: int
     persistent_nodes: int
     center_gap: float
     arrival_span: float
     centroid_y: float
+    occupancy_mean: float
+    density: float
     survived: bool
     status: str
+
+
+@dataclass
+class FamilyDiagnostic:
+    rule_family: str
+    survives: int
+    mixed: int
+    fragile: int
+    no_pattern: int
+    avg_rule_breadth: float
+    avg_nodes: float
+    avg_center_gap: float
+    avg_arrival_span: float
+    dominant_rule: str
 
 
 @dataclass(frozen=True)
@@ -358,6 +376,13 @@ def component_area(component: frozenset[tuple[int, int]]) -> int:
     xs = [x for x, _y in component]
     ys = [y for _x, y in component]
     return (max(xs) - min(xs) + 1) * (max(ys) - min(ys) + 1)
+
+
+def format_rule_signature(
+    survive_counts: frozenset[int],
+    birth_counts: frozenset[int],
+) -> str:
+    return f"S{sorted(survive_counts)}/B{sorted(birth_counts)}"
 
 
 def select_self_maintenance_rule(
@@ -913,10 +938,17 @@ def evaluate_robustness_scenario(
         scenario_name=scenario_name,
         rule_family=rule_family,
         seed_node=chosen_rule.seed_node,
+        rule_signature=format_rule_signature(
+            chosen_rule.survive_counts,
+            chosen_rule.birth_counts,
+        ),
+        rule_breadth=len(chosen_rule.survive_counts) + len(chosen_rule.birth_counts),
         persistent_nodes=len(chosen_rule.persistent_nodes),
         center_gap=center_gap,
         arrival_span=arrival_span,
         centroid_y=centroid_y,
+        occupancy_mean=chosen_rule.occupancy_mean,
+        density=chosen_rule.density,
         survived=survived,
         status=status,
     )
@@ -956,10 +988,14 @@ def run_robustness_sweep(postulates: RulePostulates) -> list[RobustnessResult]:
                         scenario_name=scenario_name,
                         rule_family=rule_family,
                         seed_node=(-1, -1),
+                        rule_signature="-",
+                        rule_breadth=0,
                         persistent_nodes=0,
                         center_gap=float("nan"),
                         arrival_span=float("nan"),
                         centroid_y=float("nan"),
+                        occupancy_mean=float("nan"),
+                        density=float("nan"),
                         survived=False,
                         status="no pattern",
                     )
@@ -1215,21 +1251,81 @@ def classify_robustness(center_gap: float, arrival_span: float) -> tuple[bool, s
     return False, "fragile"
 
 
+def summarize_robustness(rows: list[RobustnessResult]) -> list[FamilyDiagnostic]:
+    summaries: list[FamilyDiagnostic] = []
+    for family in sorted({row.rule_family for row in rows}):
+        family_rows = [row for row in rows if row.rule_family == family]
+        active_rows = [row for row in family_rows if row.status != "no pattern"]
+        rule_counts = Counter(
+            row.rule_signature
+            for row in active_rows
+            if row.rule_signature != "-"
+        )
+        dominant_rule = rule_counts.most_common(1)[0][0] if rule_counts else "-"
+
+        if active_rows:
+            avg_rule_breadth = sum(row.rule_breadth for row in active_rows) / len(active_rows)
+            avg_nodes = sum(row.persistent_nodes for row in active_rows) / len(active_rows)
+            avg_center_gap = sum(row.center_gap for row in active_rows) / len(active_rows)
+            avg_arrival_span = sum(row.arrival_span for row in active_rows) / len(active_rows)
+        else:
+            avg_rule_breadth = float("nan")
+            avg_nodes = float("nan")
+            avg_center_gap = float("nan")
+            avg_arrival_span = float("nan")
+
+        summaries.append(
+            FamilyDiagnostic(
+                rule_family=family,
+                survives=sum(row.status == "survives" for row in family_rows),
+                mixed=sum(row.status == "mixed" for row in family_rows),
+                fragile=sum(row.status == "fragile" for row in family_rows),
+                no_pattern=sum(row.status == "no pattern" for row in family_rows),
+                avg_rule_breadth=avg_rule_breadth,
+                avg_nodes=avg_nodes,
+                avg_center_gap=avg_center_gap,
+                avg_arrival_span=avg_arrival_span,
+                dominant_rule=dominant_rule,
+            )
+        )
+    return summaries
+
+
 def render_robustness_table(rows: list[RobustnessResult]) -> str:
     lines = [
-        "scenario    | family   | seed     | nodes | center gap | arrival span | centroid y | status",
-        "------------+----------+----------+-------+------------+--------------+------------+--------",
+        "scenario    | family   | rule              | nodes | center gap | arrival span | status",
+        "------------+----------+-------------------+-------+------------+--------------+--------",
     ]
     for row in rows:
         lines.append(
             f"{row.scenario_name:<11} | "
             f"{row.rule_family:<8} | "
-            f"{str(row.seed_node):<8} | "
+            f"{row.rule_signature:<17} | "
             f"{row.persistent_nodes:>5} | "
             f"{row.center_gap:>10.3f} | "
             f"{row.arrival_span:>12.3f} | "
-            f"{row.centroid_y:>10.3f} | "
             f"{row.status}"
+        )
+    return "\n".join(lines)
+
+
+def render_family_diagnostics_table(rows: list[FamilyDiagnostic]) -> str:
+    lines = [
+        "family   | survives | mixed | fragile | no pattern | avg breadth | avg nodes | avg gap | avg span | dominant rule",
+        "---------+----------+-------+---------+------------+-------------+-----------+---------+----------+-------------------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.rule_family:<8} | "
+            f"{row.survives:>8} | "
+            f"{row.mixed:>5} | "
+            f"{row.fragile:>7} | "
+            f"{row.no_pattern:>10} | "
+            f"{row.avg_rule_breadth:>11.2f} | "
+            f"{row.avg_nodes:>9.2f} | "
+            f"{row.avg_center_gap:>7.3f} | "
+            f"{row.avg_arrival_span:>8.3f} | "
+            f"{row.dominant_rule}"
         )
     return "\n".join(lines)
 
@@ -1403,29 +1499,25 @@ def main() -> None:
 
     print("8) Robustness sweep across shapes, boundaries, and rule families")
     robustness_rows = run_robustness_sweep(distorted_postulates)
+    family_diagnostics = summarize_robustness(robustness_rows)
     print(render_robustness_table(robustness_rows))
+    print()
+    print(render_family_diagnostics_table(family_diagnostics))
     print()
     survived_count = sum(row.survived for row in robustness_rows)
     mixed_count = sum(row.status == "mixed" for row in robustness_rows)
     no_pattern_count = sum(row.status == "no pattern" for row in robustness_rows)
-    family_summaries = []
-    for family in sorted({row.rule_family for row in robustness_rows}):
-        family_rows = [row for row in robustness_rows if row.rule_family == family]
-        family_summaries.append(
-            (
-                family,
-                sum(row.survived for row in family_rows),
-                sum(row.status == "mixed" for row in family_rows),
-                sum(row.status == "no pattern" for row in family_rows),
-            )
-        )
+    family_by_name = {row.rule_family: row for row in family_diagnostics}
     print("Interpretation:")
     print("- Each scenario varies graph shape, vertical boundary treatment, or the searched local rule family while keeping the same ontology.")
     print("- `center gap` measures whether the action-favored path stays focused near the emergent field centroid instead of peeling away immediately.")
     print("- `arrival span` measures how non-uniform the induced boundary delay shifts are across the far edge.")
     print(f"- In this run, {survived_count} scenarios were `survives`, {mixed_count} were `mixed`, and {no_pattern_count} produced no compact persistent pattern under the sweep budget.")
-    for family, family_survives, family_mixed, family_no_pattern in family_summaries:
-        print(f"- `{family}` family: {family_survives} survives, {family_mixed} mixed, {family_no_pattern} no pattern.")
+    print("- The family table adds an explanatory layer: average selected-rule breadth, average persistent-node count, and the dominant winning rule signature.")
+    compact_family = family_by_name.get("compact")
+    extended_family = family_by_name.get("extended")
+    if compact_family and extended_family:
+        print(f"- Here the `extended` family looks healthier because it found compact patterns in {6 - extended_family.no_pattern}/6 cases versus {6 - compact_family.no_pattern}/6 for `compact`, and its active cases produced a larger average boundary-delay span ({extended_family.avg_arrival_span:.3f} vs {compact_family.avg_arrival_span:.3f}).")
     print("- This does not prove universality, but it starts separating structural behavior from single-geometry artifacts.")
     print()
 

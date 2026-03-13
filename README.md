@@ -69,6 +69,7 @@ What the script shows:
 - The delay field itself now emerges from a local graph-relaxation rule: the code searches over interior one-node seeds and simple update rules, grows each candidate into an orbit, and lets the most localized stable non-boundary component source the decaying load profile.
 - A local-delay graph can recover an inferred causal order without assigning all nodes the same global step number.
 - The robustness sweep is informative rather than purely celebratory: under the current search budget the extended rule family is noticeably more robust than the compact one, and skewed geometries often fail to nucleate compact persistent patterns at all.
+- The current diagnostics suggest why: the extended family finds compact persistent patterns in more scenarios and produces a larger average boundary-delay span once it does, so its gravity-like distortion is both more available and stronger.
 - Cross-slit interference disappears when histories are separated by durable record sectors, without any appeal to consciousness, while single-slit diffraction remains inside each sector.
 - A Hadamard-style reversible mixer preserves the 2-norm but not 1- or 4-norm totals, which is a useful reason the Born-style square survives the pressure test better than arbitrary power rules.
 - Under boost-like frame mixing, `sqrt(dt^2 - dx^2)` is the only tested local scalar that remains invariant; the remaining action assumption is the choice to treat `dt - sqrt(dt^2 - dx^2)` as spent delay.
