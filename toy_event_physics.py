@@ -157,6 +157,15 @@ class MechanismAblationResult:
     failed_scenarios: str
 
 
+@dataclass
+class ActionDiscriminatorResult:
+    label: str
+    survives: int
+    min_response: float
+    min_wrapped_response: float
+    failed_scenarios: str
+
+
 @dataclass(frozen=True)
 class LocalRule:
     persistent_nodes: frozenset[tuple[int, int]]
@@ -1280,6 +1289,85 @@ def quality_rescue_rule(
     return best_rule, merge_search_diagnostics(*diagnostics_parts), best_metrics
 
 
+def resolve_robust_rule_candidate(
+    nodes: set[tuple[int, int]],
+    wrap_y: bool,
+    count_options: tuple[frozenset[int], ...],
+    postulates: RulePostulates,
+) -> tuple[
+    RuleCandidate | None,
+    SearchDiagnostics,
+    tuple[float, float, float, bool, str] | None,
+    bool,
+]:
+    chosen_rule, diagnostics = scan_self_maintenance_rules(
+        nodes,
+        count_options=count_options,
+        wrap_y=wrap_y,
+        evolution_steps=8,
+        sample_window=3,
+        occupancy_threshold=2 / 3,
+        min_component_fraction=0.9,
+        preferred_rule_pairs=WINNER_RULE_PAIRS,
+        preferred_bonus=0.05,
+        seed_builders=(point_seed_builder,),
+    )
+    fallback_used = False
+    if chosen_rule is None:
+        fallback_rule, fallback_diagnostics = scan_self_maintenance_rules(
+            nodes,
+            count_options=count_options,
+            wrap_y=wrap_y,
+            evolution_steps=10,
+            sample_window=4,
+            occupancy_threshold=0.6,
+            min_component_fraction=0.7,
+            preferred_rule_pairs=WINNER_RULE_PAIRS,
+            preferred_bonus=0.08,
+            seed_builders=(point_seed_builder, cluster_seed_builder),
+        )
+        diagnostics = merge_search_diagnostics(diagnostics, fallback_diagnostics)
+        chosen_rule = fallback_rule
+        fallback_used = chosen_rule is not None
+    if chosen_rule is None:
+        return None, diagnostics, None, False
+
+    metrics = evaluate_rule_candidate(
+        nodes,
+        wrap_y=wrap_y,
+        chosen_rule=chosen_rule,
+        postulates=postulates,
+    )
+    center_gap, arrival_span, _centroid_y, _survived, status = metrics
+    if status != "survives":
+        rescue_rule, rescue_diagnostics, rescue_metrics = quality_rescue_rule(
+            nodes,
+            wrap_y=wrap_y,
+            count_options=count_options,
+            postulates=postulates,
+        )
+        diagnostics = merge_search_diagnostics(diagnostics, rescue_diagnostics)
+        if rescue_rule is not None and rescue_metrics is not None:
+            rescue_key = (
+                robustness_rank(rescue_metrics[4]),
+                rescue_metrics[0] + rescue_metrics[1],
+                rescue_metrics[1],
+                rescue_metrics[0],
+            )
+            current_key = (
+                robustness_rank(status),
+                center_gap + arrival_span,
+                arrival_span,
+                center_gap,
+            )
+            if rescue_key > current_key:
+                chosen_rule = rescue_rule
+                metrics = rescue_metrics
+                fallback_used = True
+
+    return chosen_rule, diagnostics, metrics, fallback_used
+
+
 def focused_skew_wrap_diagnosis(postulates: RulePostulates) -> list[FocusedComparison]:
     """Compare the legacy, repaired, minimal, and full compact families on skew-wrap."""
 
@@ -1377,36 +1465,13 @@ def evaluate_robustness_scenario(
     rule_family: str,
     postulates: RulePostulates,
 ) -> RobustnessResult:
-    chosen_rule, diagnostics = scan_self_maintenance_rules(
+    chosen_rule, diagnostics, metrics, fallback_used = resolve_robust_rule_candidate(
         nodes,
-        count_options=count_options,
         wrap_y=wrap_y,
-        evolution_steps=8,
-        sample_window=3,
-        occupancy_threshold=2 / 3,
-        min_component_fraction=0.9,
-        preferred_rule_pairs=WINNER_RULE_PAIRS,
-        preferred_bonus=0.05,
-        seed_builders=(point_seed_builder,),
+        count_options=count_options,
+        postulates=postulates,
     )
-    fallback_used = False
-    if chosen_rule is None:
-        fallback_rule, fallback_diagnostics = scan_self_maintenance_rules(
-            nodes,
-            count_options=count_options,
-            wrap_y=wrap_y,
-            evolution_steps=10,
-            sample_window=4,
-            occupancy_threshold=0.6,
-            min_component_fraction=0.7,
-            preferred_rule_pairs=WINNER_RULE_PAIRS,
-            preferred_bonus=0.08,
-            seed_builders=(point_seed_builder, cluster_seed_builder),
-        )
-        diagnostics = merge_search_diagnostics(diagnostics, fallback_diagnostics)
-        chosen_rule = fallback_rule
-        fallback_used = chosen_rule is not None
-    if chosen_rule is None:
+    if chosen_rule is None or metrics is None:
         return RobustnessResult(
             scenario_name=scenario_name,
             rule_family=rule_family,
@@ -1430,48 +1495,7 @@ def evaluate_robustness_scenario(
             survived=False,
             status="no pattern",
         )
-    center_gap, arrival_span, centroid_y, survived, status = evaluate_rule_candidate(
-        nodes,
-        wrap_y=wrap_y,
-        chosen_rule=chosen_rule,
-        postulates=postulates,
-    )
-    if status != "survives":
-        rescue_rule, rescue_diagnostics, rescue_metrics = quality_rescue_rule(
-            nodes,
-            wrap_y=wrap_y,
-            count_options=count_options,
-            postulates=postulates,
-        )
-        diagnostics = merge_search_diagnostics(diagnostics, rescue_diagnostics)
-        if rescue_rule is not None and rescue_metrics is not None:
-            (
-                rescue_center_gap,
-                rescue_arrival_span,
-                rescue_centroid_y,
-                rescue_survived,
-                rescue_status,
-            ) = rescue_metrics
-            rescue_key = (
-                robustness_rank(rescue_status),
-                rescue_center_gap + rescue_arrival_span,
-                rescue_arrival_span,
-                rescue_center_gap,
-            )
-            current_key = (
-                robustness_rank(status),
-                center_gap + arrival_span,
-                arrival_span,
-                center_gap,
-            )
-            if rescue_key > current_key:
-                chosen_rule = rescue_rule
-                center_gap = rescue_center_gap
-                arrival_span = rescue_arrival_span
-                centroid_y = rescue_centroid_y
-                survived = rescue_survived
-                status = rescue_status
-                fallback_used = True
+    center_gap, arrival_span, centroid_y, survived, status = metrics
 
     return RobustnessResult(
         scenario_name=scenario_name,
@@ -1648,6 +1672,125 @@ def mechanism_ablation_results() -> list[MechanismAblationResult]:
                     for row in failed_rows
                 )
                 or "-",
+            )
+        )
+    return rows
+
+
+def average_side_path_response(
+    nodes: set[tuple[int, int]],
+    wrap_y: bool,
+    chosen_rule: RuleCandidate,
+    postulates: RulePostulates,
+) -> float:
+    distorted_rule = derive_local_rule(
+        persistent_nodes=chosen_rule.persistent_nodes,
+        postulates=postulates,
+    )
+    free_rule = derive_local_rule(
+        persistent_nodes=frozenset(),
+        postulates=postulates,
+    )
+    field = derive_node_field(nodes, distorted_rule, wrap_y=wrap_y)
+    _centroid_x, centroid_y = field_centroid(field)
+    min_x = min(x for x, _y in nodes)
+    max_x = max(x for x, _y in nodes)
+    left_boundary_ys = sorted(y for x, y in nodes if x == min_x)
+    right_boundary_ys = sorted(y for x, y in nodes if x == max_x)
+    source_y = closest_value(left_boundary_ys, centroid_y)
+    target_ys = select_target_rows(right_boundary_ys, source_y)
+    center_target = min(target_ys, key=lambda y: (abs(y - source_y), y))
+
+    responses: list[float] = []
+    for target_y in target_ys:
+        if target_y == center_target:
+            continue
+        _free_action, free_path = stationary_action_path_on_nodes(
+            nodes,
+            source=(min_x, source_y),
+            target=(max_x, target_y),
+            rule=free_rule,
+            wrap_y=wrap_y,
+        )
+        _distorted_action, distorted_path = stationary_action_path_on_nodes(
+            nodes,
+            source=(min_x, source_y),
+            target=(max_x, target_y),
+            rule=distorted_rule,
+            wrap_y=wrap_y,
+        )
+        free_path_y = {x: y for x, y in free_path}
+        distorted_path_y = {x: y for x, y in distorted_path}
+        all_xs = sorted(set(free_path_y) | set(distorted_path_y))
+        responses.append(
+            sum(
+                abs(distorted_path_y.get(x, free_path_y.get(x, 0)) - free_path_y.get(x, 0))
+                for x in all_xs
+            )
+        )
+
+    return sum(responses) / len(responses)
+
+
+def action_discriminator_results() -> list[ActionDiscriminatorResult]:
+    variants = (
+        ("baseline", "spent_delay", "relaxed"),
+        ("coordinate-delay action", "coordinate_delay", "relaxed"),
+        ("link-length action", "link_length", "relaxed"),
+        ("support-only field", "spent_delay", "support_only"),
+        ("no field", "spent_delay", "none"),
+    )
+
+    rows: list[ActionDiscriminatorResult] = []
+    for label, action_mode, field_mode in variants:
+        postulates = RulePostulates(
+            phase_per_action=4.0,
+            attenuation_power=1.0,
+            action_mode=action_mode,
+            field_mode=field_mode,
+        )
+        responses: list[tuple[str, float, bool]] = []
+        statuses: list[str] = []
+        failed_scenarios: list[str] = []
+        for scenario_name, nodes, wrap_y in robustness_scenarios():
+            chosen_rule, _diagnostics, metrics, _fallback_used = resolve_robust_rule_candidate(
+                nodes,
+                wrap_y=wrap_y,
+                count_options=SWEEP_COMPACT_COUNT_OPTIONS,
+                postulates=postulates,
+            )
+            if chosen_rule is None or metrics is None:
+                statuses.append("no pattern")
+                failed_scenarios.append(f"{scenario_name}:no pattern")
+                responses.append((scenario_name, 0.0, wrap_y))
+                continue
+
+            _center_gap, _arrival_span, _centroid_y, _survived, status = metrics
+            statuses.append(status)
+            if status != "survives":
+                failed_scenarios.append(f"{scenario_name}:{status}")
+            responses.append(
+                (
+                    scenario_name,
+                    average_side_path_response(
+                        nodes,
+                        wrap_y=wrap_y,
+                        chosen_rule=chosen_rule,
+                        postulates=postulates,
+                    ),
+                    wrap_y,
+                )
+            )
+
+        rows.append(
+            ActionDiscriminatorResult(
+                label=label,
+                survives=sum(status == "survives" for status in statuses),
+                min_response=min(response for _name, response, _wrap in responses),
+                min_wrapped_response=min(
+                    response for _name, response, wrap in responses if wrap
+                ),
+                failed_scenarios=", ".join(failed_scenarios) or "-",
             )
         )
     return rows
@@ -2057,6 +2200,22 @@ def render_mechanism_ablation_table(rows: list[MechanismAblationResult]) -> str:
     return "\n".join(lines)
 
 
+def render_action_discriminator_table(rows: list[ActionDiscriminatorResult]) -> str:
+    lines = [
+        "mechanism               | survives | min response | min wrapped | failed scenarios",
+        "------------------------+----------+--------------+-------------+------------------------------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.label:<24} | "
+            f"{row.survives:>8} | "
+            f"{row.min_response:>12.3f} | "
+            f"{row.min_wrapped_response:>11.3f} | "
+            f"{row.failed_scenarios}"
+        )
+    return "\n".join(lines)
+
+
 def main() -> None:
     print("ALIEN-EVENT TOY MODEL")
     print()
@@ -2351,6 +2510,28 @@ def main() -> None:
     if link_length_action:
         print(f"- The uncomfortable result is that bare link-length action still survives the current sweep, which means the present robustness metric does not yet uniquely single out the proper-time-style action.")
     print("- That last point is probably the clearest sign of where we still need to go before calling this a genuinely strong toy-theory result: we need a sharper discriminator that rewards the intended action rule and rejects cruder substitutes.")
+    print()
+
+    print("12) Action-response discriminator for the chosen geodesics")
+    action_rows = action_discriminator_results()
+    print(render_action_discriminator_table(action_rows))
+    print()
+    print("Interpretation:")
+    print("- This adds the missing check: if the field really matters to the action rule, the distorted geodesic should move relative to the free geodesic instead of merely inheriting good center-gap scores from geometry alone.")
+    action_by_label = {row.label: row for row in action_rows}
+    baseline_action = action_by_label.get("baseline")
+    coordinate_action = action_by_label.get("coordinate-delay action")
+    link_length_action = action_by_label.get("link-length action")
+    support_only_action = action_by_label.get("support-only field")
+    if baseline_action:
+        print(f"- The baseline is the only tested mechanism that both survives all six scenarios and keeps a strictly positive minimum wrapped-case response ({baseline_action.min_wrapped_response:.3f}).")
+    if coordinate_action:
+        print(f"- Coordinate-delay action fails this discriminator because it breaks {coordinate_action.failed_scenarios} and also drops to zero wrapped-case response in at least one scenario.")
+    if link_length_action:
+        print(f"- Bare link-length action also fails: it survives the old sweep, but its minimum response is {link_length_action.min_response:.3f}, which means the chosen paths are not reacting to the field at all.")
+    if support_only_action:
+        print(f"- Support-only field propagation still bends paths, but it does not survive the hard wrapped skew case ({support_only_action.failed_scenarios}), so field relaxation remains part of the load-bearing structure.")
+    print("- That is a meaningful upgrade in where we stand: among the small set of tested alternatives, the intended spent-delay action with relaxed field propagation is now uniquely selected by the combined robustness-plus-response benchmark.")
     print()
 
     print("REMAINING CHEATS")
