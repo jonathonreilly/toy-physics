@@ -143,17 +143,35 @@ class AblationResult:
     failed_scenarios: str
 
 
+@dataclass
+class MechanismAblationResult:
+    label: str
+    action_mode: str
+    field_mode: str
+    survives: int
+    mixed: int
+    fragile: int
+    no_pattern: int
+    avg_center_gap: float
+    avg_arrival_span: float
+    failed_scenarios: str
+
+
 @dataclass(frozen=True)
 class LocalRule:
     persistent_nodes: frozenset[tuple[int, int]]
     phase_wavenumber: float
     attenuation_power: float = 1.0
+    action_mode: str = "spent_delay"
+    field_mode: str = "relaxed"
 
 
 @dataclass(frozen=True)
 class RulePostulates:
     phase_per_action: float
     attenuation_power: float = 1.0
+    action_mode: str = "spent_delay"
+    field_mode: str = "relaxed"
 
 
 COMPACT_COUNT_OPTIONS = (
@@ -227,6 +245,8 @@ def derive_local_rule(
         persistent_nodes=persistent_nodes,
         phase_wavenumber=postulates.phase_per_action,
         attenuation_power=postulates.attenuation_power,
+        action_mode=postulates.action_mode,
+        field_mode=postulates.field_mode,
     )
 
 
@@ -235,6 +255,20 @@ def proper_time_deficit(delay: float, link_length: float) -> float:
 
     retained_update = math.sqrt(max(delay * delay - link_length * link_length, 0.0))
     return delay - retained_update
+
+
+def action_increment_for_mode(
+    delay: float,
+    link_length: float,
+    action_mode: str,
+) -> float:
+    if action_mode == "spent_delay":
+        return proper_time_deficit(delay, link_length)
+    if action_mode == "coordinate_delay":
+        return delay
+    if action_mode == "link_length":
+        return link_length
+    raise ValueError(f"Unknown action mode: {action_mode}")
 
 
 def lorentz_boost(delay: float, dx: float, velocity: float) -> tuple[float, float]:
@@ -709,8 +743,14 @@ def derive_node_field(
     """Derive a local slowing field from a persistent subgraph."""
 
     support = derive_persistence_support(nodes, rule.persistent_nodes, wrap_y=wrap_y)
+    if rule.field_mode == "none":
+        return {node: 0.0 for node in nodes}
     if not any(support.values()):
         return support
+    if rule.field_mode == "support_only":
+        return support
+    if rule.field_mode != "relaxed":
+        raise ValueError(f"Unknown field mode: {rule.field_mode}")
 
     field = dict(support)
     graph_boundaries = boundary_nodes(nodes, wrap_y=wrap_y)
@@ -773,7 +813,11 @@ def local_edge_properties(
     link_length = math.dist(start, end)
     local_field = 0.5 * (node_field[start] + node_field[end])
     delay = link_length * (1.0 + local_field)
-    action_increment = proper_time_deficit(delay, link_length)
+    action_increment = action_increment_for_mode(
+        delay,
+        link_length,
+        rule.action_mode,
+    )
 
     amplitude = cmath.exp(1j * rule.phase_wavenumber * action_increment) / (
         delay ** rule.attenuation_power
@@ -1569,6 +1613,46 @@ def ablate_compact_subset(
     return rows
 
 
+def mechanism_ablation_results() -> list[MechanismAblationResult]:
+    variants = (
+        ("baseline", "spent_delay", "relaxed"),
+        ("coordinate-delay action", "coordinate_delay", "relaxed"),
+        ("link-length action", "link_length", "relaxed"),
+        ("support-only field", "spent_delay", "support_only"),
+        ("no field", "spent_delay", "none"),
+    )
+
+    rows: list[MechanismAblationResult] = []
+    for label, action_mode, field_mode in variants:
+        postulates = RulePostulates(
+            phase_per_action=4.0,
+            attenuation_power=1.0,
+            action_mode=action_mode,
+            field_mode=field_mode,
+        )
+        sweep_rows = run_family_sweep(SWEEP_COMPACT_COUNT_OPTIONS, label, postulates)
+        failed_rows = [row for row in sweep_rows if row.status != "survives"]
+        rows.append(
+            MechanismAblationResult(
+                label=label,
+                action_mode=action_mode,
+                field_mode=field_mode,
+                survives=sum(row.status == "survives" for row in sweep_rows),
+                mixed=sum(row.status == "mixed" for row in sweep_rows),
+                fragile=sum(row.status == "fragile" for row in sweep_rows),
+                no_pattern=sum(row.status == "no pattern" for row in sweep_rows),
+                avg_center_gap=sum(row.center_gap for row in sweep_rows) / len(sweep_rows),
+                avg_arrival_span=sum(row.arrival_span for row in sweep_rows) / len(sweep_rows),
+                failed_scenarios=", ".join(
+                    f"{row.scenario_name}:{row.status}"
+                    for row in failed_rows
+                )
+                or "-",
+            )
+        )
+    return rows
+
+
 def sample_boundary_arrivals(
     width: int,
     sample_ys: list[int],
@@ -1954,6 +2038,25 @@ def render_ablation_table(rows: list[AblationResult]) -> str:
     return "\n".join(lines)
 
 
+def render_mechanism_ablation_table(rows: list[MechanismAblationResult]) -> str:
+    lines = [
+        "mechanism               | survives | mixed | fragile | no pattern | avg gap | avg span | failed scenarios",
+        "------------------------+----------+-------+---------+------------+---------+----------+------------------------------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.label:<24} | "
+            f"{row.survives:>8} | "
+            f"{row.mixed:>5} | "
+            f"{row.fragile:>7} | "
+            f"{row.no_pattern:>10} | "
+            f"{row.avg_center_gap:>7.3f} | "
+            f"{row.avg_arrival_span:>8.3f} | "
+            f"{row.failed_scenarios}"
+        )
+    return "\n".join(lines)
+
+
 def main() -> None:
     print("ALIEN-EVENT TOY MODEL")
     print()
@@ -2223,6 +2326,31 @@ def main() -> None:
     if remove_34:
         print(f"- Removing `[3, 4]` is the most damaging ablation ({remove_34.failed_scenarios}), which makes it look like the strongest structural motif in the current compact family.")
     print("- In other words, the current compact family is no longer just small; within the current sweep it is irreducible.")
+    print()
+
+    print("11) Mechanism ablation of the load-bearing assumptions")
+    mechanism_rows = mechanism_ablation_results()
+    print(render_mechanism_ablation_table(mechanism_rows))
+    print()
+    print("Interpretation:")
+    print("- This tests the deeper question behind the toy theory: which assumptions in the dynamics are actually carrying the gravity-like behavior, and which are still underconstrained?")
+    mechanism_by_label = {row.label: row for row in mechanism_rows}
+    baseline_mechanism = mechanism_by_label.get("baseline")
+    coordinate_action = mechanism_by_label.get("coordinate-delay action")
+    link_length_action = mechanism_by_label.get("link-length action")
+    support_only_field = mechanism_by_label.get("support-only field")
+    no_field_mechanism = mechanism_by_label.get("no field")
+    if baseline_mechanism:
+        print(f"- The baseline survives all six compact-family scenarios with average gap {baseline_mechanism.avg_center_gap:.3f} and average span {baseline_mechanism.avg_arrival_span:.3f}.")
+    if coordinate_action:
+        print(f"- Replacing spent-delay action with plain coordinate delay weakens the model enough to break {coordinate_action.failed_scenarios}, so the action accounting is doing some real work.")
+    if support_only_field:
+        print(f"- Replacing relaxed field propagation with raw local support weakens the hardest wrapped skew case ({support_only_field.failed_scenarios}), which is strong evidence that field relaxation is load-bearing.")
+    if no_field_mechanism:
+        print(f"- Removing the field entirely collapses the whole effect ({no_field_mechanism.failed_scenarios}), so the delay field is definitely not decorative.")
+    if link_length_action:
+        print(f"- The uncomfortable result is that bare link-length action still survives the current sweep, which means the present robustness metric does not yet uniquely single out the proper-time-style action.")
+    print("- That last point is probably the clearest sign of where we still need to go before calling this a genuinely strong toy-theory result: we need a sharper discriminator that rewards the intended action rule and rejects cruder substitutes.")
     print()
 
     print("REMAINING CHEATS")
