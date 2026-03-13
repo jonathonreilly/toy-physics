@@ -2,6 +2,46 @@
 
 This workspace contains a small runnable prototype for the event-network ontology.
 
+## Model Axioms
+
+This toy model is built around a compact "alien" ontology:
+
+- Reality is an evolving network of events and influence relations.
+- Stable objects are persistent self-maintaining patterns in that network.
+- Space is inferred from influence neighborhoods and signal delays.
+- Duration is local update count along a pattern's history.
+- The arrow of time is the direction of increasing durable record formation.
+- Free systems follow the locally simplest allowed continuation.
+- Inertia is undisturbed natural continuation.
+- Gravity is natural continuation in a distorted continuation structure.
+- Measurement is the formation of durable records that separate previously combinable alternatives.
+- Consciousness is part of the wider ontology as a high-order record-integrating self-model, but it is not simulated here.
+
+## Primitives
+
+The code models the following toy primitives:
+
+- `Event e`: a local change.
+- `Link e -> e'`: an allowed influence from one event to another.
+- `delta(e,e')`: delay on that influence.
+- `k(e,e')`: compatibility weight for that influence.
+- `History h`: an ordered chain of linked events.
+- `W(h)`: the total weight of a history.
+- `R`: a durable record state.
+- `S`: a stable self-maintaining pattern in the event network.
+- `tau_S(h)`: the internal update count of pattern `S` along history `h`.
+
+## Toy Rules
+
+- Reality evolves by extending compatible histories.
+- Free evolution follows the locally best-compatible histories.
+- Geometry is inferred from the delay and coupling structure, not assumed first.
+- Duration is local update count, not a universal background.
+- Dense stable patterns modify local delays, compatibilities, and update rates.
+- Alternatives without durable records can combine.
+- Alternatives tagged by different durable records cannot combine.
+- Conscious systems are part of the wider framework as record-integrating predictive processes, but this prototype only models durable records, not consciousness itself.
+
 Run it with:
 
 ```bash

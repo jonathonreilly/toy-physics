@@ -1,3 +1,23 @@
+"""Discrete event-network toy model.
+
+Core ontology:
+- Reality is an evolving network of events and influence relations.
+- Stable objects are persistent self-maintaining patterns in that network.
+- Space is inferred from influence neighborhoods and signal delays.
+- Duration is local update count along a pattern's history.
+- Measurement is durable record formation, not conscious observation.
+
+Toy primitives:
+- Event e: a local change.
+- Link e -> e': an allowed influence relation.
+- delta(e,e'): local delay.
+- k(e,e'): local compatibility weight.
+- History h: an ordered chain of linked events.
+- R: a durable record state.
+- S: a stable self-maintaining pattern.
+- tau_S(h): internal update count along a history.
+"""
+
 from __future__ import annotations
 
 from collections import Counter, defaultdict
@@ -562,6 +582,27 @@ def build_rectangular_nodes(
     }
 
 
+def build_tapered_nodes(width: int, height: int) -> set[tuple[int, int]]:
+    mid_x = width / 2
+    nodes: set[tuple[int, int]] = set()
+    for x in range(width + 1):
+        pinch = max(0, 2 - round(abs(x - mid_x) / max(mid_x, 1)))
+        y_limit = max(2, height - pinch)
+        for y in range(-y_limit, y_limit + 1):
+            nodes.add((x, y))
+    return nodes
+
+
+def build_skewed_nodes(width: int, height: int) -> set[tuple[int, int]]:
+    nodes = build_rectangular_nodes(width, height)
+    removed = {
+        (x, y)
+        for x, y in nodes
+        if (x >= width - 2 and y >= height - 1) or (x <= 2 and y <= -height + 1)
+    }
+    return nodes - removed
+
+
 def graph_neighbors(
     node: tuple[int, int],
     nodes: set[tuple[int, int]],
@@ -649,6 +690,39 @@ def build_causal_dag(
             and arrival_times[neighbor] > arrival_times[node] + epsilon
         ]
     return dag
+
+
+def closest_value(values: list[int], target: float) -> int:
+    return min(values, key=lambda value: (abs(value - target), value))
+
+
+def select_target_rows(boundary_ys: list[int], center_y: float) -> list[int]:
+    sorted_ys = sorted(boundary_ys)
+    center = closest_value(sorted_ys, center_y)
+    lower_candidates = [y for y in sorted_ys if y < center]
+    upper_candidates = [y for y in sorted_ys if y > center]
+
+    lower = lower_candidates[-1] if lower_candidates else sorted_ys[0]
+    upper = upper_candidates[0] if upper_candidates else sorted_ys[-1]
+
+    if lower == center and len(sorted_ys) >= 2:
+        lower = sorted_ys[0]
+    if upper == center and len(sorted_ys) >= 2:
+        upper = sorted_ys[-1]
+
+    selected = []
+    for y in (lower, center, upper):
+        if y not in selected:
+            selected.append(y)
+
+    if len(selected) < 3:
+        for y in sorted_ys:
+            if y not in selected:
+                selected.append(y)
+            if len(selected) == 3:
+                break
+
+    return sorted(selected)
 
 
 def stationary_action_path_on_nodes(
@@ -743,6 +817,115 @@ def compare_geodesics(
             )
         )
     return comparisons
+
+
+def evaluate_robustness_scenario(
+    scenario_name: str,
+    nodes: set[tuple[int, int]],
+    wrap_y: bool,
+    count_options: tuple[frozenset[int], ...],
+    rule_family: str,
+    postulates: RulePostulates,
+) -> RobustnessResult:
+    min_x = min(x for x, _y in nodes)
+    max_x = max(x for x, _y in nodes)
+    left_boundary_ys = sorted(y for x, y in nodes if x == min_x)
+    right_boundary_ys = sorted(y for x, y in nodes if x == max_x)
+
+    chosen_rule = select_self_maintenance_rule(
+        nodes,
+        count_options=count_options,
+        wrap_y=wrap_y,
+    )
+    distorted_rule = derive_local_rule(
+        persistent_nodes=chosen_rule.persistent_nodes,
+        postulates=postulates,
+    )
+    free_rule = derive_local_rule(
+        persistent_nodes=frozenset(),
+        postulates=postulates,
+    )
+    field = derive_node_field(nodes, distorted_rule, wrap_y=wrap_y)
+    _centroid_x, centroid_y = field_centroid(field)
+    source_y = closest_value(left_boundary_ys, centroid_y)
+    target_ys = select_target_rows(right_boundary_ys, source_y)
+
+    distorted_actions: list[tuple[int, float]] = []
+    for target_y in target_ys:
+        action, _path = stationary_action_path_on_nodes(
+            nodes,
+            source=(min_x, source_y),
+            target=(max_x, target_y),
+            rule=distorted_rule,
+            wrap_y=wrap_y,
+        )
+        distorted_actions.append((target_y, action))
+
+    center_target = min(target_ys, key=lambda y: (abs(y - source_y), y))
+    center_action = next(action for y, action in distorted_actions if y == center_target)
+    side_actions = [action for y, action in distorted_actions if y != center_target]
+    center_gap = sum(side_actions) / len(side_actions) - center_action
+
+    free_arrivals = infer_arrival_times_from_source(
+        nodes,
+        source=(min_x, source_y),
+        rule=free_rule,
+        wrap_y=wrap_y,
+    )
+    distorted_arrivals = infer_arrival_times_from_source(
+        nodes,
+        source=(min_x, source_y),
+        rule=distorted_rule,
+        wrap_y=wrap_y,
+    )
+    arrival_shifts = [
+        distorted_arrivals[(max_x, y)] - free_arrivals[(max_x, y)]
+        for y in right_boundary_ys
+        if (max_x, y) in free_arrivals and (max_x, y) in distorted_arrivals
+    ]
+    arrival_span = max(arrival_shifts) - min(arrival_shifts)
+    survived = center_gap > 0.25 and arrival_span > 0.25
+
+    return RobustnessResult(
+        scenario_name=scenario_name,
+        rule_family=rule_family,
+        seed_node=chosen_rule.seed_node,
+        persistent_nodes=len(chosen_rule.persistent_nodes),
+        center_gap=center_gap,
+        arrival_span=arrival_span,
+        centroid_y=centroid_y,
+        survived=survived,
+    )
+
+
+def run_robustness_sweep(postulates: RulePostulates) -> list[RobustnessResult]:
+    scenarios = (
+        ("rect-hard", build_rectangular_nodes(8, 5), False),
+        ("rect-wrap", build_rectangular_nodes(8, 5), True),
+        ("taper-hard", build_tapered_nodes(8, 5), False),
+        ("taper-wrap", build_tapered_nodes(8, 5), True),
+        ("skew-hard", build_skewed_nodes(8, 5), False),
+        ("skew-wrap", build_skewed_nodes(8, 5), True),
+    )
+    rule_families = (
+        ("compact", COMPACT_COUNT_OPTIONS),
+        ("extended", EXTENDED_COUNT_OPTIONS),
+    )
+
+    results: list[RobustnessResult] = []
+    for scenario_name, nodes, wrap_y in scenarios:
+        for rule_family, count_options in rule_families:
+            results.append(
+                evaluate_robustness_scenario(
+                    scenario_name=scenario_name,
+                    nodes=nodes,
+                    wrap_y=wrap_y,
+                    count_options=count_options,
+                    rule_family=rule_family,
+                    postulates=postulates,
+                )
+            )
+    return results
 
 
 def sample_boundary_arrivals(
