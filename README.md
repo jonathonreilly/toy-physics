@@ -73,6 +73,8 @@ What the script shows:
 - The failure-mode diagnostics also show that skewed cases mostly fail by producing empty or fragmented candidate patterns, not by hitting the boundary filter, which points more toward a pattern-formation weakness than a boundary-selection bug.
 - A staged search helps materially: a stricter point-seed pass followed by a clustered-seed fallback removes the current `no pattern` cases in the sweep, shifting the bottleneck from pattern existence to pattern quality.
 - A guided quality-rescue pass helps further: prioritizing winner-rule motifs upgrades the current sweep to 11 surviving scenarios out of 12, leaving only one mixed skewed case.
+- A focused `skew-wrap` diagnosis narrows that last miss further: the reduced compact sweep omits the rescuing motif `S[3,4]/B[1,3]`, and once the full compact family is allowed the same case upgrades to `survives`.
+- That makes the remaining frontier sharper: the current gap is more about reduced sweep coverage and search budget than about a deep split between `compact` and `extended` ontologies.
 - Cross-slit interference disappears when histories are separated by durable record sectors, without any appeal to consciousness, while single-slit diffraction remains inside each sector.
 - A Hadamard-style reversible mixer preserves the 2-norm but not 1- or 4-norm totals, which is a useful reason the Born-style square survives the pressure test better than arbitrary power rules.
 - Under boost-like frame mixing, `sqrt(dt^2 - dx^2)` is the only tested local scalar that remains invariant; the remaining action assumption is the choice to treat `dt - sqrt(dt^2 - dx^2)` as spent delay.

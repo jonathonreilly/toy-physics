@@ -123,6 +123,15 @@ class SearchDiagnostics:
     dominant_rejection: str
 
 
+@dataclass
+class FocusedComparison:
+    label: str
+    rule_signature: str
+    center_gap: float
+    arrival_span: float
+    status: str
+
+
 @dataclass(frozen=True)
 class LocalRule:
     persistent_nodes: frozenset[tuple[int, int]]
@@ -1171,6 +1180,75 @@ def quality_rescue_rule(
     return best_rule, merge_search_diagnostics(*diagnostics_parts), best_metrics
 
 
+def focused_skew_wrap_diagnosis(postulates: RulePostulates) -> list[FocusedComparison]:
+    """Compare the last weak sweep case under reduced and full rule families."""
+
+    nodes = build_skewed_nodes(6, 4)
+    rows: list[FocusedComparison] = []
+
+    compact_sweep_rule, _compact_sweep_diag, compact_sweep_metrics = quality_rescue_rule(
+        nodes,
+        wrap_y=True,
+        count_options=SWEEP_COMPACT_COUNT_OPTIONS,
+        postulates=postulates,
+    )
+    if compact_sweep_rule is not None and compact_sweep_metrics is not None:
+        rows.append(
+            FocusedComparison(
+                label="compact sweep",
+                rule_signature=format_rule_signature(
+                    compact_sweep_rule.survive_counts,
+                    compact_sweep_rule.birth_counts,
+                ),
+                center_gap=compact_sweep_metrics[0],
+                arrival_span=compact_sweep_metrics[1],
+                status=compact_sweep_metrics[4],
+            )
+        )
+
+    compact_full_rule, _compact_full_diag, compact_full_metrics = quality_rescue_rule(
+        nodes,
+        wrap_y=True,
+        count_options=COMPACT_COUNT_OPTIONS,
+        postulates=postulates,
+    )
+    if compact_full_rule is not None and compact_full_metrics is not None:
+        rows.append(
+            FocusedComparison(
+                label="compact full",
+                rule_signature=format_rule_signature(
+                    compact_full_rule.survive_counts,
+                    compact_full_rule.birth_counts,
+                ),
+                center_gap=compact_full_metrics[0],
+                arrival_span=compact_full_metrics[1],
+                status=compact_full_metrics[4],
+            )
+        )
+
+    extended_sweep_rule, _extended_sweep_diag, extended_sweep_metrics = quality_rescue_rule(
+        nodes,
+        wrap_y=True,
+        count_options=SWEEP_EXTENDED_COUNT_OPTIONS,
+        postulates=postulates,
+    )
+    if extended_sweep_rule is not None and extended_sweep_metrics is not None:
+        rows.append(
+            FocusedComparison(
+                label="extended sweep",
+                rule_signature=format_rule_signature(
+                    extended_sweep_rule.survive_counts,
+                    extended_sweep_rule.birth_counts,
+                ),
+                center_gap=extended_sweep_metrics[0],
+                arrival_span=extended_sweep_metrics[1],
+                status=extended_sweep_metrics[4],
+            )
+        )
+
+    return rows
+
+
 def evaluate_robustness_scenario(
     scenario_name: str,
     nodes: set[tuple[int, int]],
@@ -1682,6 +1760,22 @@ def render_failure_diagnostics_table(rows: list[RobustnessResult]) -> str:
     return "\n".join(lines)
 
 
+def render_focused_comparison_table(rows: list[FocusedComparison]) -> str:
+    lines = [
+        "setup          | rule              | center gap | arrival span | status",
+        "---------------+-------------------+------------+--------------+--------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.label:<14} | "
+            f"{row.rule_signature:<17} | "
+            f"{row.center_gap:>10.3f} | "
+            f"{row.arrival_span:>12.3f} | "
+            f"{row.status}"
+        )
+    return "\n".join(lines)
+
+
 def main() -> None:
     print("ALIEN-EVENT TOY MODEL")
     print()
@@ -1896,6 +1990,29 @@ def main() -> None:
     if skew_rows:
         print(f"- In the skewed geometries specifically, the search failed mostly by producing empty or fragmented candidates ({sum(row.empty_patterns for row in skew_rows)} empty, {sum(row.disconnected_rejections for row in skew_rows)} split, {sum(row.boundary_rejections for row in skew_rows)} boundary), so the current weakness looks more like pattern-formation difficulty than boundary filtering.")
     print("- This does not prove universality, but it starts separating structural behavior from single-geometry artifacts.")
+    print()
+
+    print("9) Focused diagnosis of the last compact skew-wrap miss")
+    focused_rows = focused_skew_wrap_diagnosis(distorted_postulates)
+    print(render_focused_comparison_table(focused_rows))
+    print()
+    print("Interpretation:")
+    print("- This isolates the one place where the reduced sweep still made `compact` look worse than `extended`.")
+    focused_by_label = {row.label: row for row in focused_rows}
+    compact_sweep = focused_by_label.get("compact sweep")
+    compact_full = focused_by_label.get("compact full")
+    extended_sweep = focused_by_label.get("extended sweep")
+    if compact_sweep and compact_full:
+        print(f"- Under the reduced compact sweep family, `skew-wrap` picks {compact_sweep.rule_signature} and lands `{compact_sweep.status}` with center gap {compact_sweep.center_gap:.3f} and arrival span {compact_sweep.arrival_span:.3f}.")
+        print(f"- When the full compact family is allowed, the same geometry upgrades to {compact_full.rule_signature} and lands `{compact_full.status}` with center gap {compact_full.center_gap:.3f} and arrival span {compact_full.arrival_span:.3f}.")
+    if compact_sweep and compact_full and compact_sweep.status != compact_full.status:
+        print("- That means the remaining compact weakness is not a deep topology failure; it is mostly a sweep-budget artifact caused by the reduced rule subset omitting a rescuing motif.")
+    if compact_full and extended_sweep:
+        if compact_full.rule_signature == extended_sweep.rule_signature:
+            print(f"- The full compact family and reduced extended sweep converge on the same rescuing rule, {compact_full.rule_signature}, which is strong evidence that the issue is rule coverage rather than a fundamental family split.")
+        else:
+            print(f"- The full compact family and reduced extended sweep still prefer different rescuing rules ({compact_full.rule_signature} vs {extended_sweep.rule_signature}), so the remaining gap is more about which motifs are easiest to reach under the current search.")
+    print("- That narrows the frontier again: the next question is not `can compact work here?`, but `what is the smallest reduced rule subset that preserves the winning motifs across hard topologies?`.")
     print()
 
     print("REMAINING CHEATS")
