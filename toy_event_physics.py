@@ -25,7 +25,7 @@ from dataclasses import dataclass
 import cmath
 import heapq
 import math
-from typing import DefaultDict
+from typing import Callable, DefaultDict
 
 
 @dataclass
@@ -80,6 +80,7 @@ class RobustnessResult:
     seed_node: tuple[int, int]
     rule_signature: str
     rule_breadth: int
+    fallback_used: bool
     persistent_nodes: int
     center_gap: float
     arrival_span: float
@@ -239,6 +240,15 @@ def point_seed(
     center: tuple[int, int],
 ) -> frozenset[tuple[int, int]]:
     return frozenset({center})
+
+
+def point_seed_builder(
+    center: tuple[int, int],
+    nodes: set[tuple[int, int]],
+    wrap_y: bool,
+) -> frozenset[tuple[int, int]]:
+    del nodes, wrap_y
+    return point_seed(center)
 
 
 def clamped_offsets(center_y: int, offsets: list[int], height: int) -> list[int]:
@@ -409,6 +419,26 @@ def dominant_rejection_label(counts: Counter[str]) -> str:
     return max(sorted(counts), key=lambda label: counts[label])
 
 
+def merge_search_diagnostics(*diagnostics: SearchDiagnostics) -> SearchDiagnostics:
+    counts = Counter(
+        {
+            "empty": sum(diag.empty_patterns for diag in diagnostics),
+            "disconnected": sum(diag.disconnected_rejections for diag in diagnostics),
+            "size": sum(diag.size_rejections for diag in diagnostics),
+            "boundary": sum(diag.boundary_rejections for diag in diagnostics),
+        }
+    )
+    return SearchDiagnostics(
+        total_trials=sum(diag.total_trials for diag in diagnostics),
+        empty_patterns=counts["empty"],
+        disconnected_rejections=counts["disconnected"],
+        size_rejections=counts["size"],
+        boundary_rejections=counts["boundary"],
+        accepted_candidates=sum(diag.accepted_candidates for diag in diagnostics),
+        dominant_rejection=dominant_rejection_label(counts),
+    )
+
+
 def scan_self_maintenance_rules(
     nodes: set[tuple[int, int]],
     count_options: tuple[frozenset[int], ...] = COMPACT_COUNT_OPTIONS,
@@ -416,6 +446,11 @@ def scan_self_maintenance_rules(
     evolution_steps: int = 10,
     sample_window: int = 4,
     occupancy_threshold: float = 0.75,
+    min_component_fraction: float = 1.0,
+    seed_builders: tuple[
+        Callable[[tuple[int, int], set[tuple[int, int]], bool], frozenset[tuple[int, int]]],
+        ...,
+    ] = (point_seed_builder,),
 ) -> tuple[RuleCandidate | None, SearchDiagnostics]:
     """Search over seeds and local rules, returning the best pattern plus rejection stats."""
 
@@ -432,84 +467,86 @@ def scan_self_maintenance_rules(
     accepted_candidates = 0
 
     for seed_node in interior_nodes:
-        seed_nodes = point_seed(seed_node)
-        for survive_counts in count_options:
-            for birth_counts in count_options:
-                total_trials += 1
-                persistent_nodes, occupancy, orbit_sizes = derive_emergent_persistent_nodes(
-                    nodes,
-                    seed_nodes=seed_nodes,
-                    survive_counts=survive_counts,
-                    birth_counts=birth_counts,
-                    steps=evolution_steps,
-                    sample_window=sample_window,
-                    occupancy_threshold=occupancy_threshold,
-                    wrap_y=wrap_y,
-                )
-                if not persistent_nodes:
-                    rejection_counts["empty"] += 1
-                    continue
+        for seed_builder in seed_builders:
+            seed_nodes = seed_builder(seed_node, nodes, wrap_y)
+            for survive_counts in count_options:
+                for birth_counts in count_options:
+                    total_trials += 1
+                    persistent_nodes, occupancy, orbit_sizes = derive_emergent_persistent_nodes(
+                        nodes,
+                        seed_nodes=seed_nodes,
+                        survive_counts=survive_counts,
+                        birth_counts=birth_counts,
+                        steps=evolution_steps,
+                        sample_window=sample_window,
+                        occupancy_threshold=occupancy_threshold,
+                        wrap_y=wrap_y,
+                    )
+                    if not persistent_nodes:
+                        rejection_counts["empty"] += 1
+                        continue
 
-                largest_component = max(
-                    connected_components(persistent_nodes, nodes, wrap_y=wrap_y),
-                    key=len,
-                )
-                if len(largest_component) != len(persistent_nodes):
-                    rejection_counts["disconnected"] += 1
-                    continue
-                if not 4 <= len(largest_component) <= 16:
-                    rejection_counts["size"] += 1
-                    continue
+                    largest_component = max(
+                        connected_components(persistent_nodes, nodes, wrap_y=wrap_y),
+                        key=len,
+                    )
+                    component_fraction = len(largest_component) / len(persistent_nodes)
+                    if component_fraction < min_component_fraction:
+                        rejection_counts["disconnected"] += 1
+                        continue
+                    if not 4 <= len(largest_component) <= 16:
+                        rejection_counts["size"] += 1
+                        continue
 
-                density = component_density(largest_component)
-                boundary_count = boundary_touch_count(largest_component, nodes, wrap_y=wrap_y)
-                if boundary_count:
-                    rejection_counts["boundary"] += 1
-                    continue
+                    density = component_density(largest_component)
+                    boundary_count = boundary_touch_count(largest_component, nodes, wrap_y=wrap_y)
+                    if boundary_count:
+                        rejection_counts["boundary"] += 1
+                        continue
 
-                accepted_candidates += 1
-                area = component_area(largest_component)
-                support = derive_persistence_support(nodes, largest_component, wrap_y=wrap_y)
-                support_sum = sum(support[node] for node in largest_component)
-                average_occupancy = sum(occupancy[node] for node in largest_component) / len(
-                    largest_component
-                )
-                component_occupancy = {
-                    node: occupancy[node] if node in largest_component else 0.0
-                    for node in nodes
-                }
-                orbit_variation = max(orbit_sizes[-4:]) - min(orbit_sizes[-4:])
+                    accepted_candidates += 1
+                    area = component_area(largest_component)
+                    support = derive_persistence_support(nodes, largest_component, wrap_y=wrap_y)
+                    support_sum = sum(support[node] for node in largest_component)
+                    average_occupancy = sum(occupancy[node] for node in largest_component) / len(
+                        largest_component
+                    )
+                    component_occupancy = {
+                        node: occupancy[node] if node in largest_component else 0.0
+                        for node in nodes
+                    }
+                    orbit_variation = max(orbit_sizes[-4:]) - min(orbit_sizes[-4:])
 
-                candidate = RuleCandidate(
-                    seed_node=seed_node,
-                    survive_counts=survive_counts,
-                    birth_counts=birth_counts,
-                    persistent_nodes=largest_component,
-                    occupancy=component_occupancy,
-                    orbit_sizes=orbit_sizes,
-                    support_sum=support_sum,
-                    occupancy_mean=average_occupancy,
-                    density=density,
-                    boundary_touch=boundary_count,
-                    area=area,
-                )
-                seed_distance_sq = (
-                    (candidate.seed_node[0] - graph_center[0]) ** 2
-                    + (candidate.seed_node[1] - graph_center[1]) ** 2
-                )
-                candidate_key = (
-                    round(candidate.occupancy_mean, 12),
-                    round(candidate.density, 12),
-                    round(candidate.support_sum, 12),
-                    -float(candidate.area),
-                    -float(orbit_variation),
-                    -float(seed_distance_sq),
-                    -float(candidate.seed_node[0]),
-                    -float(candidate.seed_node[1]),
-                )
-                if best_key is None or candidate_key > best_key:
-                    best_key = candidate_key
-                    best_candidate = candidate
+                    candidate = RuleCandidate(
+                        seed_node=seed_node,
+                        survive_counts=survive_counts,
+                        birth_counts=birth_counts,
+                        persistent_nodes=largest_component,
+                        occupancy=component_occupancy,
+                        orbit_sizes=orbit_sizes,
+                        support_sum=support_sum,
+                        occupancy_mean=average_occupancy,
+                        density=density,
+                        boundary_touch=boundary_count,
+                        area=area,
+                    )
+                    seed_distance_sq = (
+                        (candidate.seed_node[0] - graph_center[0]) ** 2
+                        + (candidate.seed_node[1] - graph_center[1]) ** 2
+                    )
+                    candidate_key = (
+                        round(candidate.occupancy_mean, 12),
+                        round(candidate.density, 12),
+                        round(candidate.support_sum, 12),
+                        -float(candidate.area),
+                        -float(orbit_variation),
+                        -float(seed_distance_sq),
+                        -float(candidate.seed_node[0]),
+                        -float(candidate.seed_node[1]),
+                    )
+                    if best_key is None or candidate_key > best_key:
+                        best_key = candidate_key
+                        best_candidate = candidate
 
     diagnostics = SearchDiagnostics(
         total_trials=total_trials,
@@ -752,6 +789,21 @@ def graph_neighbors(
     return sorted(neighbors)
 
 
+def cluster_seed_builder(
+    center: tuple[int, int],
+    nodes: set[tuple[int, int]],
+    wrap_y: bool,
+) -> frozenset[tuple[int, int]]:
+    """A slightly richer local seed biased toward dense nearby directions."""
+
+    neighbors = graph_neighbors(center, nodes, wrap_y=wrap_y)
+    ranked_neighbors = sorted(
+        neighbors,
+        key=lambda neighbor: (-len(graph_neighbors(neighbor, nodes, wrap_y=wrap_y)), neighbor),
+    )
+    return frozenset([center, *ranked_neighbors[:2]])
+
+
 def infer_arrival_times_from_source(
     nodes: set[tuple[int, int]],
     source: tuple[int, int],
@@ -948,7 +1000,24 @@ def evaluate_robustness_scenario(
         evolution_steps=8,
         sample_window=3,
         occupancy_threshold=2 / 3,
+        min_component_fraction=0.9,
+        seed_builders=(point_seed_builder,),
     )
+    fallback_used = False
+    if chosen_rule is None:
+        fallback_rule, fallback_diagnostics = scan_self_maintenance_rules(
+            nodes,
+            count_options=count_options,
+            wrap_y=wrap_y,
+            evolution_steps=10,
+            sample_window=4,
+            occupancy_threshold=0.6,
+            min_component_fraction=0.7,
+            seed_builders=(point_seed_builder, cluster_seed_builder),
+        )
+        diagnostics = merge_search_diagnostics(diagnostics, fallback_diagnostics)
+        chosen_rule = fallback_rule
+        fallback_used = chosen_rule is not None
     if chosen_rule is None:
         return RobustnessResult(
             scenario_name=scenario_name,
@@ -956,6 +1025,7 @@ def evaluate_robustness_scenario(
             seed_node=(-1, -1),
             rule_signature="-",
             rule_breadth=0,
+            fallback_used=False,
             persistent_nodes=0,
             center_gap=float("nan"),
             arrival_span=float("nan"),
@@ -1030,6 +1100,7 @@ def evaluate_robustness_scenario(
             chosen_rule.birth_counts,
         ),
         rule_breadth=len(chosen_rule.survive_counts) + len(chosen_rule.birth_counts),
+        fallback_used=fallback_used,
         persistent_nodes=len(chosen_rule.persistent_nodes),
         center_gap=center_gap,
         arrival_span=arrival_span,
@@ -1368,13 +1439,14 @@ def summarize_robustness(rows: list[RobustnessResult]) -> list[FamilyDiagnostic]
 
 def render_robustness_table(rows: list[RobustnessResult]) -> str:
     lines = [
-        "scenario    | family   | rule              | nodes | center gap | arrival span | status",
-        "------------+----------+-------------------+-------+------------+--------------+--------",
+        "scenario    | family   | search   | rule              | nodes | center gap | arrival span | status",
+        "------------+----------+----------+-------------------+-------+------------+--------------+--------",
     ]
     for row in rows:
         lines.append(
             f"{row.scenario_name:<11} | "
             f"{row.rule_family:<8} | "
+            f"{('fallback' if row.fallback_used else 'primary'):<8} | "
             f"{row.rule_signature:<17} | "
             f"{row.persistent_nodes:>5} | "
             f"{row.center_gap:>10.3f} | "
@@ -1613,18 +1685,26 @@ def main() -> None:
     no_pattern_failures = Counter(row.dominant_rejection for row in no_pattern_rows)
     no_pattern_label = no_pattern_failures.most_common(1)[0][0] if no_pattern_failures else "none"
     skew_rows = [row for row in robustness_rows if row.scenario_name.startswith("skew")]
+    fallback_rescues = sum(row.fallback_used and row.status != "no pattern" for row in robustness_rows)
     print("Interpretation:")
     print("- Each scenario varies graph shape, vertical boundary treatment, or the searched local rule family while keeping the same ontology.")
     print("- `center gap` measures whether the action-favored path stays focused near the emergent field centroid instead of peeling away immediately.")
     print("- `arrival span` measures how non-uniform the induced boundary delay shifts are across the far edge.")
     print(f"- In this run, {survived_count} scenarios were `survives`, {mixed_count} were `mixed`, and {no_pattern_count} produced no compact persistent pattern under the sweep budget.")
+    print(f"- The staged search rescued {fallback_rescues} scenarios that the primary point-seed search did not solve on its own.")
     print("- The family table adds an explanatory layer: average selected-rule breadth, average persistent-node count, and the dominant winning rule signature.")
     compact_family = family_by_name.get("compact")
     extended_family = family_by_name.get("extended")
     if compact_family and extended_family:
-        print(f"- Here the `extended` family looks healthier because it found compact patterns in {6 - extended_family.no_pattern}/6 cases versus {6 - compact_family.no_pattern}/6 for `compact`, and its active cases produced a larger average boundary-delay span ({extended_family.avg_arrival_span:.3f} vs {compact_family.avg_arrival_span:.3f}).")
+        if compact_family.no_pattern == 0 and extended_family.no_pattern == 0:
+            print(f"- Under the staged search, both families now find compact patterns in all sweep scenarios, but `extended` still produces a larger average boundary-delay span ({extended_family.avg_arrival_span:.3f} vs {compact_family.avg_arrival_span:.3f}) and a slightly larger average center gap ({extended_family.avg_center_gap:.3f} vs {compact_family.avg_center_gap:.3f}).")
+        else:
+            print(f"- Here the `extended` family looks healthier because it found compact patterns in {6 - extended_family.no_pattern}/6 cases versus {6 - compact_family.no_pattern}/6 for `compact`, and its active cases produced a larger average boundary-delay span ({extended_family.avg_arrival_span:.3f} vs {compact_family.avg_arrival_span:.3f}).")
     print(f"- Across the non-surviving cases, the most common rejection mode was `{dominant_failure_label}`.")
-    print(f"- Among the strict `no pattern` cases, the dominant blocker was `{no_pattern_label}`, which helps tell us whether the issue is topology-driven or just selector strictness.")
+    if no_pattern_count:
+        print(f"- Among the strict `no pattern` cases, the dominant blocker was `{no_pattern_label}`, which helps tell us whether the issue is topology-driven or just selector strictness.")
+    else:
+        print("- There are no remaining strict `no pattern` cases in this sweep, so the current bottleneck has shifted from pattern existence to pattern quality.")
     if skew_rows:
         print(f"- In the skewed geometries specifically, the search failed mostly by producing empty or fragmented candidates ({sum(row.empty_patterns for row in skew_rows)} empty, {sum(row.disconnected_rejections for row in skew_rows)} split, {sum(row.boundary_rejections for row in skew_rows)} boundary), so the current weakness looks more like pattern-formation difficulty than boundary filtering.")
     print("- This does not prove universality, but it starts separating structural behavior from single-geometry artifacts.")
