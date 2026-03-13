@@ -213,6 +213,16 @@ class CriticalWeightCase:
     retained_total: float
 
 
+@dataclass
+class WeightBranchScanRow:
+    retained_weight: float
+    rule_signature: str
+    source_y: int
+    worst_target_y: int
+    min_margin: float
+    critical_weight: float
+
+
 @dataclass(frozen=True)
 class LocalRule:
     persistent_nodes: frozenset[tuple[int, int]]
@@ -2074,12 +2084,25 @@ def all_off_center_targets(boundary_ys: list[int], source_y: int) -> list[int]:
     return [y for y in sorted(boundary_ys) if y != source_y]
 
 
-def minimum_proper_time_margin(
+def scenario_by_name(
+    pack_name: str,
+    scenario_name: str,
+) -> tuple[set[tuple[int, int]], bool]:
+    for current_pack_name, scenarios in benchmark_packs():
+        if current_pack_name != pack_name:
+            continue
+        for current_scenario_name, nodes, wrap_y in scenarios:
+            if current_scenario_name == scenario_name:
+                return nodes, wrap_y
+    raise KeyError(f"Unknown benchmark scenario: {pack_name}:{scenario_name}")
+
+
+def scenario_target_margins(
     nodes: set[tuple[int, int]],
     wrap_y: bool,
     chosen_rule: RuleCandidate,
     postulates: RulePostulates,
-) -> tuple[float, float]:
+) -> list[CriticalWeightCase]:
     distorted_rule = derive_local_rule(
         persistent_nodes=chosen_rule.persistent_nodes,
         postulates=postulates,
@@ -2096,6 +2119,7 @@ def minimum_proper_time_margin(
     left_boundary_ys = sorted(y for x, y in nodes if x == min_x)
     right_boundary_ys = sorted(y for x, y in nodes if x == max_x)
     source_y = closest_value(left_boundary_ys, centroid_y)
+
     free_costs, free_previous = stationary_action_tree_on_nodes(
         nodes,
         source=(min_x, source_y),
@@ -2111,7 +2135,7 @@ def minimum_proper_time_margin(
         node_field=distorted_field,
     )
 
-    margins: list[float] = []
+    rows: list[CriticalWeightCase] = []
     for target_y in all_off_center_targets(right_boundary_ys, source_y):
         free_action = free_costs[(max_x, target_y)]
         distorted_action = distorted_costs[(max_x, target_y)]
@@ -2126,11 +2150,51 @@ def minimum_proper_time_margin(
             distorted_previous,
         )
         free_delay = path_delay_total(free_path, free_rule, free_field)
-        distorted_delay = path_delay_total(distorted_path, distorted_rule, distorted_field)
-        action_gain = free_action - distorted_action
+        distorted_delay = path_delay_total(
+            distorted_path,
+            distorted_rule,
+            distorted_field,
+        )
+        retained_total = path_retained_total(
+            distorted_path,
+            distorted_rule,
+            distorted_field,
+        )
         delay_penalty = distorted_delay - free_delay
-        margins.append(action_gain - delay_penalty)
+        rows.append(
+            CriticalWeightCase(
+                pack_name="",
+                scenario_name="",
+                target_y=target_y,
+                critical_weight=(
+                    (2.0 * delay_penalty / retained_total)
+                    if retained_total > 0.0
+                    else math.inf
+                ),
+                margin_at_one=retained_total - 2.0 * delay_penalty,
+                delay_penalty=delay_penalty,
+                retained_total=retained_total,
+            )
+        )
+    return rows
 
+
+def minimum_proper_time_margin(
+    nodes: set[tuple[int, int]],
+    wrap_y: bool,
+    chosen_rule: RuleCandidate,
+    postulates: RulePostulates,
+) -> tuple[float, float]:
+    margins = [
+        row.margin_at_one
+        + (postulates.action_retained_weight - 1.0) * row.retained_total
+        for row in scenario_target_margins(
+            nodes,
+            wrap_y,
+            chosen_rule,
+            postulates,
+        )
+    ]
     scenario_min_margin = min(margins)
     return scenario_min_margin, scenario_min_margin
 
@@ -2221,75 +2285,21 @@ def critical_weight_cases(
             if chosen_rule is None or metrics is None or metrics[4] != "survives":
                 continue
 
-            distorted_rule = derive_local_rule(
-                persistent_nodes=chosen_rule.persistent_nodes,
-                postulates=postulates,
-            )
-            free_rule = derive_local_rule(
-                persistent_nodes=frozenset(),
-                postulates=postulates,
-            )
-            distorted_field = derive_node_field(nodes, distorted_rule, wrap_y=wrap_y)
-            free_field = derive_node_field(nodes, free_rule, wrap_y=wrap_y)
-            _centroid_x, centroid_y = field_centroid(distorted_field)
-            min_x = min(x for x, _y in nodes)
-            max_x = max(x for x, _y in nodes)
-            left_boundary_ys = sorted(y for x, y in nodes if x == min_x)
-            right_boundary_ys = sorted(y for x, y in nodes if x == max_x)
-            source_y = closest_value(left_boundary_ys, centroid_y)
-
-            _free_costs, free_previous = stationary_action_tree_on_nodes(
+            for target_row in scenario_target_margins(
                 nodes,
-                source=(min_x, source_y),
-                rule=free_rule,
-                wrap_y=wrap_y,
-                node_field=free_field,
-            )
-            _distorted_costs, distorted_previous = stationary_action_tree_on_nodes(
-                nodes,
-                source=(min_x, source_y),
-                rule=distorted_rule,
-                wrap_y=wrap_y,
-                node_field=distorted_field,
-            )
-
-            for target_y in all_off_center_targets(right_boundary_ys, source_y):
-                free_path = reconstruct_path(
-                    (min_x, source_y),
-                    (max_x, target_y),
-                    free_previous,
-                )
-                distorted_path = reconstruct_path(
-                    (min_x, source_y),
-                    (max_x, target_y),
-                    distorted_previous,
-                )
-                free_delay = path_delay_total(free_path, free_rule, free_field)
-                distorted_delay = path_delay_total(
-                    distorted_path,
-                    distorted_rule,
-                    distorted_field,
-                )
-                retained_total = path_retained_total(
-                    distorted_path,
-                    distorted_rule,
-                    distorted_field,
-                )
-                delay_penalty = distorted_delay - free_delay
-                critical_weight = (
-                    (2.0 * delay_penalty / retained_total)
-                    if retained_total > 0.0
-                    else math.inf
-                )
+                wrap_y,
+                chosen_rule,
+                postulates,
+            ):
                 rows.append(
                     CriticalWeightCase(
                         pack_name=pack_name,
                         scenario_name=scenario_name,
-                        target_y=target_y,
-                        critical_weight=critical_weight,
-                        margin_at_one=retained_total - 2.0 * delay_penalty,
-                        delay_penalty=delay_penalty,
-                        retained_total=retained_total,
+                        target_y=target_row.target_y,
+                        critical_weight=target_row.critical_weight,
+                        margin_at_one=target_row.margin_at_one,
+                        delay_penalty=target_row.delay_penalty,
+                        retained_total=target_row.retained_total,
                     )
                 )
     return sorted(
@@ -2304,6 +2314,78 @@ def critical_weight_cases(
         ),
         reverse=True,
     )
+
+
+def weight_branch_scan(
+    pack_name: str,
+    scenario_name: str,
+    retained_weights: tuple[float, ...] = (0.75, 0.8, 0.85, 0.9, 0.95, 1.0),
+) -> list[WeightBranchScanRow]:
+    nodes, wrap_y = scenario_by_name(pack_name, scenario_name)
+    rows: list[WeightBranchScanRow] = []
+
+    for retained_weight in retained_weights:
+        postulates = RulePostulates(
+            phase_per_action=4.0,
+            attenuation_power=1.0,
+            action_mode="retained_mix",
+            field_mode="relaxed",
+            action_retained_weight=retained_weight,
+        )
+        chosen_rule, _diagnostics, metrics, _fallback_used = resolve_robust_rule_candidate(
+            nodes,
+            wrap_y=wrap_y,
+            count_options=SWEEP_COMPACT_COUNT_OPTIONS,
+            postulates=postulates,
+        )
+        if chosen_rule is None or metrics is None or metrics[4] != "survives":
+            rows.append(
+                WeightBranchScanRow(
+                    retained_weight=retained_weight,
+                    rule_signature="no pattern",
+                    source_y=0,
+                    worst_target_y=0,
+                    min_margin=-math.inf,
+                    critical_weight=math.inf,
+                )
+            )
+            continue
+
+        distorted_rule = derive_local_rule(
+            persistent_nodes=chosen_rule.persistent_nodes,
+            postulates=postulates,
+        )
+        distorted_field = derive_node_field(nodes, distorted_rule, wrap_y=wrap_y)
+        _centroid_x, centroid_y = field_centroid(distorted_field)
+        min_x = min(x for x, _y in nodes)
+        left_boundary_ys = sorted(y for x, y in nodes if x == min_x)
+        source_y = closest_value(left_boundary_ys, centroid_y)
+        target_rows = scenario_target_margins(
+            nodes,
+            wrap_y,
+            chosen_rule,
+            postulates,
+        )
+        worst_target_row = min(
+            target_rows,
+            key=lambda row: (row.margin_at_one + (retained_weight - 1.0) * row.retained_total, row.target_y),
+        )
+        rows.append(
+            WeightBranchScanRow(
+                retained_weight=retained_weight,
+                rule_signature=format_rule_signature(
+                    chosen_rule.survive_counts,
+                    chosen_rule.birth_counts,
+                ),
+                source_y=source_y,
+                worst_target_y=worst_target_row.target_y,
+                min_margin=worst_target_row.margin_at_one
+                + (retained_weight - 1.0) * worst_target_row.retained_total,
+                critical_weight=worst_target_row.critical_weight,
+            )
+        )
+
+    return rows
 
 
 def sample_boundary_arrivals(
@@ -2804,6 +2886,25 @@ def render_critical_weight_table(
     return "\n".join(lines)
 
 
+def render_weight_branch_scan_table(
+    rows: list[WeightBranchScanRow],
+) -> str:
+    lines = [
+        "weight | rule              | source y | worst target | min margin | active w*",
+        "-------+-------------------+----------+--------------+------------+----------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.retained_weight:>6.2f} | "
+            f"{row.rule_signature:<17} | "
+            f"{row.source_y:>8} | "
+            f"{row.worst_target_y:>12} | "
+            f"{row.min_margin:>10.3f} | "
+            f"{row.critical_weight:>8.3f}"
+        )
+    return "\n".join(lines)
+
+
 def main() -> None:
     print("OCTOPUS PHYSICS TOY MODEL")
     print()
@@ -3218,6 +3319,32 @@ def main() -> None:
         )
     print("- That does not derive the spent-delay rule from deeper symmetry yet, but it does explain the empirical crossing: the hardest cases need a coefficient just under 1, which is why 0.95 still fails while 1.00 passes.")
     print("- So the model is now doing something stronger than brute-force search: it is exposing a specific accounting identity that controls where the retained-weight family changes sign.")
+    print()
+
+    print("17) Active-branch scan of the hardest crossing case")
+    hardest_pack = critical_rows[0].pack_name if critical_rows else "large"
+    hardest_scenario = critical_rows[0].scenario_name if critical_rows else "skew-wrap-large"
+    branch_rows = weight_branch_scan(hardest_pack, hardest_scenario)
+    print(render_weight_branch_scan_table(branch_rows))
+    print()
+    print("Interpretation:")
+    print("- The global benchmark is not one fixed line in w; it is the lower envelope of the active rule-and-path branches selected by the search.")
+    if branch_rows:
+        start_rule = branch_rows[0].rule_signature
+        end_rule = branch_rows[-1].rule_signature
+        if start_rule != end_rule:
+            print(
+                f"- In the hardest case, the active branch switches from `{start_rule}` at low high-end weights to `{end_rule}` near the crossing, so the final sign change is a branch-switch plus a linear margin crossing, not just one branch sliding upward."
+            )
+        else:
+            print(
+                f"- In the hardest case, the same branch `{start_rule}` remains active across the scanned weights, so the sign change is a single linear crossing."
+            )
+        final_row = branch_rows[-1]
+        print(
+            f"- At the top end of the scan, the active branch carries critical weight w* = {final_row.critical_weight:.3f}; that is why the margin is still negative at 0.95 but positive at 1.00."
+        )
+    print("- This is the more rigorous picture: the toy model’s retained-weight benchmark is piecewise linear in w because the optimizer can switch motifs, sources, and paths as w changes.")
     print()
 
     print("REMAINING CHEATS")
