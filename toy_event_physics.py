@@ -179,6 +179,19 @@ class ActionFamilyResult:
     min_wrapped_response: float
 
 
+@dataclass
+class ActionPackResult:
+    pack_name: str
+    retained_weight: float
+    survives: int
+    mixed: int
+    fragile: int
+    no_pattern: int
+    min_response: float
+    min_wrapped_response: float
+    pack_pass: bool
+
+
 @dataclass(frozen=True)
 class LocalRule:
     persistent_nodes: frozenset[tuple[int, int]]
@@ -1557,6 +1570,33 @@ def robustness_scenarios() -> tuple[tuple[str, set[tuple[int, int]], bool], ...]
     )
 
 
+def mirrored_nodes(nodes: set[tuple[int, int]]) -> set[tuple[int, int]]:
+    return {(x, -y) for x, y in nodes}
+
+
+def benchmark_packs() -> tuple[tuple[str, tuple[tuple[str, set[tuple[int, int]], bool], ...]], ...]:
+    return (
+        ("base", robustness_scenarios()),
+        (
+            "large",
+            (
+                ("rect-wrap-large", build_rectangular_nodes(8, 5), True),
+                ("taper-hard-large", build_tapered_nodes(8, 5), False),
+                ("taper-wrap-large", build_tapered_nodes(8, 5), True),
+                ("skew-wrap-large", build_skewed_nodes(8, 5), True),
+            ),
+        ),
+        (
+            "mirror",
+            (
+                ("skew-hard-mirror", mirrored_nodes(build_skewed_nodes(6, 4)), False),
+                ("skew-wrap-mirror", mirrored_nodes(build_skewed_nodes(6, 4)), True),
+                ("rect-hard-large", build_rectangular_nodes(8, 5), False),
+            ),
+        ),
+    )
+
+
 def run_family_sweep(
     count_options: tuple[frozenset[int], ...],
     rule_family: str,
@@ -1872,6 +1912,68 @@ def action_family_results(
                 ),
             )
         )
+    return rows
+
+
+def action_family_pack_results(
+    retained_weights: tuple[float, ...] = (0.0, 0.25, 0.5, 0.75, 1.0),
+) -> list[ActionPackResult]:
+    rows: list[ActionPackResult] = []
+    for pack_name, scenarios in benchmark_packs():
+        for retained_weight in retained_weights:
+            postulates = RulePostulates(
+                phase_per_action=4.0,
+                attenuation_power=1.0,
+                action_mode="retained_mix",
+                field_mode="relaxed",
+                action_retained_weight=retained_weight,
+            )
+            statuses: list[str] = []
+            responses: list[tuple[float, bool]] = []
+            for _scenario_name, nodes, wrap_y in scenarios:
+                chosen_rule, _diagnostics, metrics, _fallback_used = resolve_robust_rule_candidate(
+                    nodes,
+                    wrap_y=wrap_y,
+                    count_options=SWEEP_COMPACT_COUNT_OPTIONS,
+                    postulates=postulates,
+                )
+                if chosen_rule is None or metrics is None:
+                    statuses.append("no pattern")
+                    responses.append((0.0, wrap_y))
+                    continue
+                statuses.append(metrics[4])
+                responses.append(
+                    (
+                        average_side_path_response(
+                            nodes,
+                            wrap_y=wrap_y,
+                            chosen_rule=chosen_rule,
+                            postulates=postulates,
+                        ),
+                        wrap_y,
+                    )
+                )
+
+            min_response = min(response for response, _wrap in responses)
+            min_wrapped_response = min(
+                response for response, wrap in responses if wrap
+            )
+            rows.append(
+                ActionPackResult(
+                    pack_name=pack_name,
+                    retained_weight=retained_weight,
+                    survives=sum(status == "survives" for status in statuses),
+                    mixed=sum(status == "mixed" for status in statuses),
+                    fragile=sum(status == "fragile" for status in statuses),
+                    no_pattern=sum(status == "no pattern" for status in statuses),
+                    min_response=min_response,
+                    min_wrapped_response=min_wrapped_response,
+                    pack_pass=(
+                        all(status == "survives" for status in statuses)
+                        and min_wrapped_response > 0.0
+                    ),
+                )
+            )
     return rows
 
 
@@ -2314,6 +2416,25 @@ def render_action_family_table(rows: list[ActionFamilyResult]) -> str:
     return "\n".join(lines)
 
 
+def render_action_pack_table(rows: list[ActionPackResult]) -> str:
+    lines = [
+        "pack   | retained w | survives | mixed | fragile | min response | min wrapped | pass",
+        "-------+------------+----------+-------+---------+--------------+-------------+-----",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.pack_name:<6} | "
+            f"{row.retained_weight:>10.2f} | "
+            f"{row.survives:>8} | "
+            f"{row.mixed:>5} | "
+            f"{row.fragile:>7} | "
+            f"{row.min_response:>12.3f} | "
+            f"{row.min_wrapped_response:>11.3f} | "
+            f"{'yes' if row.pack_pass else 'no'}"
+        )
+    return "\n".join(lines)
+
+
 def main() -> None:
     print("ALIEN-EVENT TOY MODEL")
     print()
@@ -2648,6 +2769,46 @@ def main() -> None:
         print(f"- Under the combined robustness-plus-response benchmark, the surviving retained-weight window narrows to the high end of the tested family: w = {surviving_weights}.")
         print(f"- Within that window, the strongest wrapped-case path response occurs at w = {strongest_row.retained_weight:.2f} with minimum wrapped response {strongest_row.min_wrapped_response:.3f}.")
     print("- So the broader family sweep does not yet prove that the exact spent-delay coefficient must be 1.0, but it does push us away from the low-weight half of the family and toward the proper-time-style end.")
+    print()
+
+    print("14) Cross-pack benchmark for the retained-weight family")
+    pack_rows = action_family_pack_results()
+    print(render_action_pack_table(pack_rows))
+    print()
+    print("Interpretation:")
+    print("- This broadens the benchmark beyond the original six-scenario sweep by checking the same retained-weight family on larger and mirrored packs as well.")
+    all_pack_names = {pack_name for pack_name, _scenarios in benchmark_packs()}
+    pack_winners = sorted(
+        {
+            row.retained_weight
+            for row in pack_rows
+            if row.pack_pass
+        }
+    )
+    passing_all_packs = [
+        weight
+        for weight in sorted({row.retained_weight for row in pack_rows})
+        if {
+            row.pack_name
+            for row in pack_rows
+            if row.retained_weight == weight and row.pack_pass
+        } == all_pack_names
+    ]
+    if passing_all_packs:
+        print(
+            "- Across the tested packs, the retained weights that pass every pack-level benchmark are "
+            + ", ".join(f"w = {weight:.2f}" for weight in passing_all_packs)
+            + "."
+        )
+    if pack_winners:
+        strongest_pack_row = max(
+            (row for row in pack_rows if row.pack_pass),
+            key=lambda row: (row.min_wrapped_response, row.min_response, row.retained_weight),
+        )
+        print(
+            f"- The strongest pack-level response in the current grid occurs for pack `{strongest_pack_row.pack_name}` at w = {strongest_pack_row.retained_weight:.2f}, with minimum wrapped response {strongest_pack_row.min_wrapped_response:.3f}."
+        )
+    print("- This is encouraging but still not a full derivation: the benchmark keeps narrowing us toward the high-retained-update end, but it has not yet collapsed the family to a single exact coefficient.")
     print()
 
     print("REMAINING CHEATS")
