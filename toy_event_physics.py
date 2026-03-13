@@ -83,6 +83,7 @@ class RobustnessResult:
     arrival_span: float
     centroid_y: float
     survived: bool
+    status: str
 
 
 @dataclass(frozen=True)
@@ -118,6 +119,22 @@ EXTENDED_COUNT_OPTIONS = COMPACT_COUNT_OPTIONS + (
     frozenset({3, 5}),
     frozenset({2, 3, 5}),
     frozenset({1, 2, 3, 4, 5}),
+)
+
+SWEEP_COMPACT_COUNT_OPTIONS = (
+    frozenset({1}),
+    frozenset({2}),
+    frozenset({3}),
+    frozenset({1, 2}),
+    frozenset({2, 3}),
+    frozenset({3, 4}),
+)
+
+SWEEP_EXTENDED_COUNT_OPTIONS = SWEEP_COMPACT_COUNT_OPTIONS + (
+    frozenset({1, 3}),
+    frozenset({1, 2, 3}),
+    frozenset({2, 3, 4}),
+    frozenset({1, 2, 3, 4}),
 )
 
 
@@ -347,6 +364,9 @@ def select_self_maintenance_rule(
     nodes: set[tuple[int, int]],
     count_options: tuple[frozenset[int], ...] = COMPACT_COUNT_OPTIONS,
     wrap_y: bool = False,
+    evolution_steps: int = 10,
+    sample_window: int = 4,
+    occupancy_threshold: float = 0.75,
 ) -> RuleCandidate:
     """Search over seeds and local rules for a compact localized persistent pattern."""
     best_candidate: RuleCandidate | None = None
@@ -366,9 +386,9 @@ def select_self_maintenance_rule(
                     seed_nodes=seed_nodes,
                     survive_counts=survive_counts,
                     birth_counts=birth_counts,
-                    steps=10,
-                    sample_window=4,
-                    occupancy_threshold=0.75,
+                    steps=evolution_steps,
+                    sample_window=sample_window,
+                    occupancy_threshold=occupancy_threshold,
                     wrap_y=wrap_y,
                 )
                 if not persistent_nodes:
@@ -836,6 +856,9 @@ def evaluate_robustness_scenario(
         nodes,
         count_options=count_options,
         wrap_y=wrap_y,
+        evolution_steps=8,
+        sample_window=3,
+        occupancy_threshold=2 / 3,
     )
     distorted_rule = derive_local_rule(
         persistent_nodes=chosen_rule.persistent_nodes,
@@ -884,7 +907,7 @@ def evaluate_robustness_scenario(
         if (max_x, y) in free_arrivals and (max_x, y) in distorted_arrivals
     ]
     arrival_span = max(arrival_shifts) - min(arrival_shifts)
-    survived = center_gap > 0.25 and arrival_span > 0.25
+    survived, status = classify_robustness(center_gap, arrival_span)
 
     return RobustnessResult(
         scenario_name=scenario_name,
@@ -895,36 +918,52 @@ def evaluate_robustness_scenario(
         arrival_span=arrival_span,
         centroid_y=centroid_y,
         survived=survived,
+        status=status,
     )
 
 
 def run_robustness_sweep(postulates: RulePostulates) -> list[RobustnessResult]:
     scenarios = (
-        ("rect-hard", build_rectangular_nodes(8, 5), False),
-        ("rect-wrap", build_rectangular_nodes(8, 5), True),
-        ("taper-hard", build_tapered_nodes(8, 5), False),
-        ("taper-wrap", build_tapered_nodes(8, 5), True),
-        ("skew-hard", build_skewed_nodes(8, 5), False),
-        ("skew-wrap", build_skewed_nodes(8, 5), True),
+        ("rect-hard", build_rectangular_nodes(6, 4), False),
+        ("rect-wrap", build_rectangular_nodes(6, 4), True),
+        ("taper-hard", build_tapered_nodes(6, 4), False),
+        ("taper-wrap", build_tapered_nodes(6, 4), True),
+        ("skew-hard", build_skewed_nodes(6, 4), False),
+        ("skew-wrap", build_skewed_nodes(6, 4), True),
     )
     rule_families = (
-        ("compact", COMPACT_COUNT_OPTIONS),
-        ("extended", EXTENDED_COUNT_OPTIONS),
+        ("compact", SWEEP_COMPACT_COUNT_OPTIONS),
+        ("extended", SWEEP_EXTENDED_COUNT_OPTIONS),
     )
 
     results: list[RobustnessResult] = []
     for scenario_name, nodes, wrap_y in scenarios:
         for rule_family, count_options in rule_families:
-            results.append(
-                evaluate_robustness_scenario(
-                    scenario_name=scenario_name,
-                    nodes=nodes,
-                    wrap_y=wrap_y,
-                    count_options=count_options,
-                    rule_family=rule_family,
-                    postulates=postulates,
+            try:
+                results.append(
+                    evaluate_robustness_scenario(
+                        scenario_name=scenario_name,
+                        nodes=nodes,
+                        wrap_y=wrap_y,
+                        count_options=count_options,
+                        rule_family=rule_family,
+                        postulates=postulates,
+                    )
                 )
-            )
+            except RuntimeError:
+                results.append(
+                    RobustnessResult(
+                        scenario_name=scenario_name,
+                        rule_family=rule_family,
+                        seed_node=(-1, -1),
+                        persistent_nodes=0,
+                        center_gap=float("nan"),
+                        arrival_span=float("nan"),
+                        centroid_y=float("nan"),
+                        survived=False,
+                        status="no pattern",
+                    )
+                )
     return results
 
 
@@ -1168,6 +1207,33 @@ def render_born_test(result: dict[int, list[tuple[float, float]]]) -> str:
     return "\n".join(lines)
 
 
+def classify_robustness(center_gap: float, arrival_span: float) -> tuple[bool, str]:
+    if center_gap > 0.1 and arrival_span > 0.5:
+        return True, "survives"
+    if center_gap > 0.05 and arrival_span > 0.25:
+        return False, "mixed"
+    return False, "fragile"
+
+
+def render_robustness_table(rows: list[RobustnessResult]) -> str:
+    lines = [
+        "scenario    | family   | seed     | nodes | center gap | arrival span | centroid y | status",
+        "------------+----------+----------+-------+------------+--------------+------------+--------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.scenario_name:<11} | "
+            f"{row.rule_family:<8} | "
+            f"{str(row.seed_node):<8} | "
+            f"{row.persistent_nodes:>5} | "
+            f"{row.center_gap:>10.3f} | "
+            f"{row.arrival_span:>12.3f} | "
+            f"{row.centroid_y:>10.3f} | "
+            f"{row.status}"
+        )
+    return "\n".join(lines)
+
+
 def main() -> None:
     print("ALIEN-EVENT TOY MODEL")
     print()
@@ -1333,6 +1399,34 @@ def main() -> None:
     print("- If local neighborhoods admit a universal signal speed and boost-like frame mixing, the retained update sqrt(dt^2 - dx^2) is the stable scalar.")
     print("- The action we use is then interpreted as spent delay: coordinate delay minus retained update.")
     print("- That does not fully derive the rule, but it narrows the remaining assumption to the accounting step rather than the invariant itself.")
+    print()
+
+    print("8) Robustness sweep across shapes, boundaries, and rule families")
+    robustness_rows = run_robustness_sweep(distorted_postulates)
+    print(render_robustness_table(robustness_rows))
+    print()
+    survived_count = sum(row.survived for row in robustness_rows)
+    mixed_count = sum(row.status == "mixed" for row in robustness_rows)
+    no_pattern_count = sum(row.status == "no pattern" for row in robustness_rows)
+    family_summaries = []
+    for family in sorted({row.rule_family for row in robustness_rows}):
+        family_rows = [row for row in robustness_rows if row.rule_family == family]
+        family_summaries.append(
+            (
+                family,
+                sum(row.survived for row in family_rows),
+                sum(row.status == "mixed" for row in family_rows),
+                sum(row.status == "no pattern" for row in family_rows),
+            )
+        )
+    print("Interpretation:")
+    print("- Each scenario varies graph shape, vertical boundary treatment, or the searched local rule family while keeping the same ontology.")
+    print("- `center gap` measures whether the action-favored path stays focused near the emergent field centroid instead of peeling away immediately.")
+    print("- `arrival span` measures how non-uniform the induced boundary delay shifts are across the far edge.")
+    print(f"- In this run, {survived_count} scenarios were `survives`, {mixed_count} were `mixed`, and {no_pattern_count} produced no compact persistent pattern under the sweep budget.")
+    for family, family_survives, family_mixed, family_no_pattern in family_summaries:
+        print(f"- `{family}` family: {family_survives} survives, {family_mixed} mixed, {family_no_pattern} no pattern.")
+    print("- This does not prove universality, but it starts separating structural behavior from single-geometry artifacts.")
     print()
 
     print("REMAINING CHEATS")

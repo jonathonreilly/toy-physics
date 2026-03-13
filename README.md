@@ -1,6 +1,6 @@
 # Discrete Alien-Physics Toy Model
 
-This workspace contains a small runnable prototype for the event-network ontology.
+This workspace contains a small runnable prototype for the event-network ontology we built in conversation.
 
 ## Model Axioms
 
@@ -53,6 +53,7 @@ What it does:
 - Extracts a classical-looking limit from the same shared local rule by following stationary-action geodesics on the async graph.
 - Derives the local delay field from an emergent persistent pattern whose late-time occupancy sources graph-load under neighbor averaging, with the initial disturbance and self-maintenance rule jointly selected by searching interior one-node seeds against a compact rule family.
 - Infers causal order from positive local delays on a graph, then orients propagation by that inferred causal order instead of a global step counter.
+- Runs a small robustness sweep across rectangular, tapered, and skewed graphs, with hard or wrapped vertical boundaries and compact or extended local rule families.
 - Models `measurement` as durable record formation in a two-slit-style path network.
 - Uses one shared local edge rule for the causal-shell graph, the asynchronous continuation model, and the slit graph.
 - Makes the local rule explicit through a small set of postulates and a derived `LocalRule` object.
@@ -67,6 +68,7 @@ What the script shows:
 - With a proper-time-style action derived from the same delay field, those geodesics bend inward in a gravity-like way instead of merely routing around a slow region.
 - The delay field itself now emerges from a local graph-relaxation rule: the code searches over interior one-node seeds and simple update rules, grows each candidate into an orbit, and lets the most localized stable non-boundary component source the decaying load profile.
 - A local-delay graph can recover an inferred causal order without assigning all nodes the same global step number.
+- The robustness sweep is informative rather than purely celebratory: under the current search budget the extended rule family is noticeably more robust than the compact one, and skewed geometries often fail to nucleate compact persistent patterns at all.
 - Cross-slit interference disappears when histories are separated by durable record sectors, without any appeal to consciousness, while single-slit diffraction remains inside each sector.
 - A Hadamard-style reversible mixer preserves the 2-norm but not 1- or 4-norm totals, which is a useful reason the Born-style square survives the pressure test better than arbitrary power rules.
 - Under boost-like frame mixing, `sqrt(dt^2 - dx^2)` is the only tested local scalar that remains invariant; the remaining action assumption is the choice to treat `dt - sqrt(dt^2 - dx^2)` as spent delay.
@@ -76,6 +78,7 @@ What is still cheating:
 - The spatial graph geometry is still hand-authored.
 - The gravity-like classical limit still assumes that histories extremize spent delay `dt - sqrt(dt^2 - ds^2)` rather than deriving that accounting rule from deeper dynamics.
 - The delay field is now derived from an emergent persistent pattern, but the rule family and locality preferences used to choose among candidate patterns are still hand-chosen.
+- The robustness sweep budget is also hand-chosen: smaller graphs, reduced rule families, and shorter persistence windows trade completeness for runtime.
 - Complex amplitudes are still assumed rather than derived.
 - Consciousness is still outside the simulation; only record formation is present.
 
