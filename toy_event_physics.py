@@ -192,6 +192,16 @@ class ActionPackResult:
     pack_pass: bool
 
 
+@dataclass
+class ProperTimeConsistencyResult:
+    retained_weight: float
+    survives: int
+    min_margin: float
+    min_wrapped_margin: float
+    worst_case: str
+    pass_all: bool
+
+
 @dataclass(frozen=True)
 class LocalRule:
     persistent_nodes: frozenset[tuple[int, int]]
@@ -1097,6 +1107,26 @@ def stationary_action_path_on_nodes(
     wrap_y: bool = False,
 ) -> tuple[float, list[tuple[int, int]]]:
     node_field = derive_node_field(nodes, rule, wrap_y=wrap_y)
+    action_cost, previous = stationary_action_tree_on_nodes(
+        nodes,
+        source,
+        rule,
+        wrap_y=wrap_y,
+        node_field=node_field,
+    )
+    path = reconstruct_path(source, target, previous)
+    return action_cost[target], path
+
+
+def stationary_action_tree_on_nodes(
+    nodes: set[tuple[int, int]],
+    source: tuple[int, int],
+    rule: LocalRule,
+    wrap_y: bool = False,
+    node_field: dict[tuple[int, int], float] | None = None,
+) -> tuple[dict[tuple[int, int], float], dict[tuple[int, int], tuple[int, int]]]:
+    if node_field is None:
+        node_field = derive_node_field(nodes, rule, wrap_y=wrap_y)
     action_cost: dict[tuple[int, int], float] = {source: 0.0}
     previous: dict[tuple[int, int], tuple[int, int]] = {}
     frontier: list[tuple[float, tuple[int, int]]] = [(0.0, source)]
@@ -1105,8 +1135,6 @@ def stationary_action_path_on_nodes(
         current_action, node = heapq.heappop(frontier)
         if current_action != action_cost[node]:
             continue
-        if node == target:
-            break
 
         for neighbor in graph_neighbors(node, nodes, wrap_y=wrap_y):
             _delay, action_increment, _amplitude = local_edge_properties(
@@ -1121,13 +1149,21 @@ def stationary_action_path_on_nodes(
                 previous[neighbor] = node
                 heapq.heappush(frontier, (neighbor_action, neighbor))
 
+    return action_cost, previous
+
+
+def reconstruct_path(
+    source: tuple[int, int],
+    target: tuple[int, int],
+    previous: dict[tuple[int, int], tuple[int, int]],
+) -> list[tuple[int, int]]:
     path = [target]
     current = target
     while current != source:
         current = previous[current]
         path.append(current)
     path.reverse()
-    return action_cost[target], path
+    return path
 
 
 def stationary_action_path(
@@ -1752,8 +1788,9 @@ def average_side_path_response(
         persistent_nodes=frozenset(),
         postulates=postulates,
     )
-    field = derive_node_field(nodes, distorted_rule, wrap_y=wrap_y)
-    _centroid_x, centroid_y = field_centroid(field)
+    distorted_field = derive_node_field(nodes, distorted_rule, wrap_y=wrap_y)
+    free_field = derive_node_field(nodes, free_rule, wrap_y=wrap_y)
+    _centroid_x, centroid_y = field_centroid(distorted_field)
     min_x = min(x for x, _y in nodes)
     max_x = max(x for x, _y in nodes)
     left_boundary_ys = sorted(y for x, y in nodes if x == min_x)
@@ -1761,24 +1798,34 @@ def average_side_path_response(
     source_y = closest_value(left_boundary_ys, centroid_y)
     target_ys = select_target_rows(right_boundary_ys, source_y)
     center_target = min(target_ys, key=lambda y: (abs(y - source_y), y))
+    _free_costs, free_previous = stationary_action_tree_on_nodes(
+        nodes,
+        source=(min_x, source_y),
+        rule=free_rule,
+        wrap_y=wrap_y,
+        node_field=free_field,
+    )
+    _distorted_costs, distorted_previous = stationary_action_tree_on_nodes(
+        nodes,
+        source=(min_x, source_y),
+        rule=distorted_rule,
+        wrap_y=wrap_y,
+        node_field=distorted_field,
+    )
 
     responses: list[float] = []
     for target_y in target_ys:
         if target_y == center_target:
             continue
-        _free_action, free_path = stationary_action_path_on_nodes(
-            nodes,
-            source=(min_x, source_y),
-            target=(max_x, target_y),
-            rule=free_rule,
-            wrap_y=wrap_y,
+        free_path = reconstruct_path(
+            (min_x, source_y),
+            (max_x, target_y),
+            free_previous,
         )
-        _distorted_action, distorted_path = stationary_action_path_on_nodes(
-            nodes,
-            source=(min_x, source_y),
-            target=(max_x, target_y),
-            rule=distorted_rule,
-            wrap_y=wrap_y,
+        distorted_path = reconstruct_path(
+            (min_x, source_y),
+            (max_x, target_y),
+            distorted_previous,
         )
         free_path_y = {x: y for x, y in free_path}
         distorted_path_y = {x: y for x, y in distorted_path}
@@ -1974,6 +2021,151 @@ def action_family_pack_results(
                     ),
                 )
             )
+    return rows
+
+
+def path_delay_total(
+    path: list[tuple[int, int]],
+    rule: LocalRule,
+    node_field: dict[tuple[int, int], float],
+) -> float:
+    total_delay = 0.0
+    for start, end in zip(path, path[1:]):
+        delay, _action_increment, _amplitude = local_edge_properties(
+            start,
+            end,
+            rule,
+            node_field,
+        )
+        total_delay += delay
+    return total_delay
+
+
+def all_off_center_targets(boundary_ys: list[int], source_y: int) -> list[int]:
+    return [y for y in sorted(boundary_ys) if y != source_y]
+
+
+def minimum_proper_time_margin(
+    nodes: set[tuple[int, int]],
+    wrap_y: bool,
+    chosen_rule: RuleCandidate,
+    postulates: RulePostulates,
+) -> tuple[float, float]:
+    distorted_rule = derive_local_rule(
+        persistent_nodes=chosen_rule.persistent_nodes,
+        postulates=postulates,
+    )
+    free_rule = derive_local_rule(
+        persistent_nodes=frozenset(),
+        postulates=postulates,
+    )
+    distorted_field = derive_node_field(nodes, distorted_rule, wrap_y=wrap_y)
+    free_field = derive_node_field(nodes, free_rule, wrap_y=wrap_y)
+    _centroid_x, centroid_y = field_centroid(distorted_field)
+    min_x = min(x for x, _y in nodes)
+    max_x = max(x for x, _y in nodes)
+    left_boundary_ys = sorted(y for x, y in nodes if x == min_x)
+    right_boundary_ys = sorted(y for x, y in nodes if x == max_x)
+    source_y = closest_value(left_boundary_ys, centroid_y)
+    free_costs, free_previous = stationary_action_tree_on_nodes(
+        nodes,
+        source=(min_x, source_y),
+        rule=free_rule,
+        wrap_y=wrap_y,
+        node_field=free_field,
+    )
+    distorted_costs, distorted_previous = stationary_action_tree_on_nodes(
+        nodes,
+        source=(min_x, source_y),
+        rule=distorted_rule,
+        wrap_y=wrap_y,
+        node_field=distorted_field,
+    )
+
+    margins: list[float] = []
+    for target_y in all_off_center_targets(right_boundary_ys, source_y):
+        free_action = free_costs[(max_x, target_y)]
+        distorted_action = distorted_costs[(max_x, target_y)]
+        free_path = reconstruct_path(
+            (min_x, source_y),
+            (max_x, target_y),
+            free_previous,
+        )
+        distorted_path = reconstruct_path(
+            (min_x, source_y),
+            (max_x, target_y),
+            distorted_previous,
+        )
+        free_delay = path_delay_total(free_path, free_rule, free_field)
+        distorted_delay = path_delay_total(distorted_path, distorted_rule, distorted_field)
+        action_gain = free_action - distorted_action
+        delay_penalty = distorted_delay - free_delay
+        margins.append(action_gain - delay_penalty)
+
+    scenario_min_margin = min(margins)
+    return scenario_min_margin, scenario_min_margin
+
+
+def proper_time_consistency_results(
+    retained_weights: tuple[float, ...] = (0.75, 0.8, 0.85, 0.9, 0.95, 1.0),
+) -> list[ProperTimeConsistencyResult]:
+    rows: list[ProperTimeConsistencyResult] = []
+    total_scenarios = sum(len(scenarios) for _pack_name, scenarios in benchmark_packs())
+    for retained_weight in retained_weights:
+        postulates = RulePostulates(
+            phase_per_action=4.0,
+            attenuation_power=1.0,
+            action_mode="retained_mix",
+            field_mode="relaxed",
+            action_retained_weight=retained_weight,
+        )
+        survives = 0
+        worst_case = ""
+        min_margin = math.inf
+        min_wrapped_margin = math.inf
+
+        for pack_name, scenarios in benchmark_packs():
+            for scenario_name, nodes, wrap_y in scenarios:
+                chosen_rule, _diagnostics, metrics, _fallback_used = resolve_robust_rule_candidate(
+                    nodes,
+                    wrap_y=wrap_y,
+                    count_options=SWEEP_COMPACT_COUNT_OPTIONS,
+                    postulates=postulates,
+                )
+                if chosen_rule is None or metrics is None or metrics[4] != "survives":
+                    worst_case = f"{pack_name}:{scenario_name}:no pattern"
+                    min_margin = -math.inf
+                    if wrap_y:
+                        min_wrapped_margin = -math.inf
+                    continue
+
+                survives += 1
+                scenario_min_margin, scenario_min_wrapped_margin = minimum_proper_time_margin(
+                    nodes,
+                    wrap_y=wrap_y,
+                    chosen_rule=chosen_rule,
+                    postulates=postulates,
+                )
+                if scenario_min_margin < min_margin:
+                    min_margin = scenario_min_margin
+                    worst_case = f"{pack_name}:{scenario_name}"
+                if wrap_y:
+                    min_wrapped_margin = min(min_wrapped_margin, scenario_min_wrapped_margin)
+
+        rows.append(
+            ProperTimeConsistencyResult(
+                retained_weight=retained_weight,
+                survives=survives,
+                min_margin=min_margin,
+                min_wrapped_margin=min_wrapped_margin,
+                worst_case=worst_case or "-",
+                pass_all=(
+                    survives == total_scenarios
+                    and min_margin > 0.0
+                    and min_wrapped_margin > 0.0
+                ),
+            )
+        )
     return rows
 
 
@@ -2435,6 +2627,25 @@ def render_action_pack_table(rows: list[ActionPackResult]) -> str:
     return "\n".join(lines)
 
 
+def render_proper_time_consistency_table(
+    rows: list[ProperTimeConsistencyResult],
+) -> str:
+    lines = [
+        "retained w | survives | min margin | min wrapped | pass | worst case",
+        "-----------+----------+------------+-------------+------+------------------------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.retained_weight:>10.2f} | "
+            f"{row.survives:>8} | "
+            f"{row.min_margin:>10.3f} | "
+            f"{row.min_wrapped_margin:>11.3f} | "
+            f"{'yes' if row.pass_all else 'no':>4} | "
+            f"{row.worst_case}"
+        )
+    return "\n".join(lines)
+
+
 def main() -> None:
     print("ALIEN-EVENT TOY MODEL")
     print()
@@ -2809,6 +3020,30 @@ def main() -> None:
             f"- The strongest pack-level response in the current grid occurs for pack `{strongest_pack_row.pack_name}` at w = {strongest_pack_row.retained_weight:.2f}, with minimum wrapped response {strongest_pack_row.min_wrapped_response:.3f}."
         )
     print("- This is encouraging but still not a full derivation: the benchmark keeps narrowing us toward the high-retained-update end, but it has not yet collapsed the family to a single exact coefficient.")
+    print()
+
+    print("15) High-end proper-time consistency benchmark")
+    proper_time_rows = proper_time_consistency_results()
+    print(render_proper_time_consistency_table(proper_time_rows))
+    print()
+    print("Interpretation:")
+    print("- This is a sharper high-end zoom: for every pack and every off-center boundary target, it asks whether the distorted geodesic saves more action than the extra coordinate delay it willingly spends in the field.")
+    print("- A positive margin here means the path choice is being driven by full retained-update leverage rather than by a weaker partial weighting that still bends the path but never quite dominates the extra delay.")
+    proper_time_winners = [row for row in proper_time_rows if row.pass_all]
+    if proper_time_winners:
+        print(
+            "- In the tested high-end grid, the retained weights that keep that margin positive across every surviving pack and wrapped case are "
+            + ", ".join(f"w = {row.retained_weight:.2f}" for row in proper_time_winners)
+            + "."
+        )
+    strongest_proper_time = max(
+        proper_time_rows,
+        key=lambda row: (row.min_margin, row.min_wrapped_margin, row.retained_weight),
+    )
+    print(
+        f"- The strongest minimum margin in this grid occurs at w = {strongest_proper_time.retained_weight:.2f}, with worst case `{strongest_proper_time.worst_case}` and minimum margin {strongest_proper_time.min_margin:.3f}."
+    )
+    print("- This still is not a first-principles derivation, but it is the first benchmark in this toy model that singles out the exact spent-delay point within a tested retained-weight family.")
     print()
 
     print("REMAINING CHEATS")
