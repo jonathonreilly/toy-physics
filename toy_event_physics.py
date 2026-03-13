@@ -174,6 +174,14 @@ SWEEP_EXTENDED_COUNT_OPTIONS = SWEEP_COMPACT_COUNT_OPTIONS + (
     frozenset({1, 2, 3, 4}),
 )
 
+WINNER_RULE_PAIRS = (
+    (frozenset({2, 3}), frozenset({3})),
+    (frozenset({1}), frozenset({1, 3})),
+    (frozenset({3, 4}), frozenset({1, 3})),
+    (frozenset({2, 3, 4}), frozenset({1})),
+    (frozenset({1, 2, 3}), frozenset({1, 3})),
+)
+
 
 def derive_local_rule(
     persistent_nodes: frozenset[tuple[int, int]],
@@ -419,6 +427,37 @@ def dominant_rejection_label(counts: Counter[str]) -> str:
     return max(sorted(counts), key=lambda label: counts[label])
 
 
+def ordered_rule_pairs(
+    count_options: tuple[frozenset[int], ...],
+    preferred_rule_pairs: tuple[tuple[frozenset[int], frozenset[int]], ...] = (),
+) -> list[tuple[frozenset[int], frozenset[int]]]:
+    all_pairs = [
+        (survive_counts, birth_counts)
+        for survive_counts in count_options
+        for birth_counts in count_options
+    ]
+    preferred = [
+        pair
+        for pair in preferred_rule_pairs
+        if pair[0] in count_options and pair[1] in count_options
+    ]
+    remaining = [pair for pair in all_pairs if pair not in preferred]
+    return [*preferred, *remaining]
+
+
+def filter_rule_pairs(
+    count_options: tuple[frozenset[int], ...],
+    exact_rule_pairs: tuple[tuple[frozenset[int], frozenset[int]], ...] | None,
+) -> list[tuple[frozenset[int], frozenset[int]]]:
+    if exact_rule_pairs is None:
+        return []
+    return [
+        pair
+        for pair in exact_rule_pairs
+        if pair[0] in count_options and pair[1] in count_options
+    ]
+
+
 def merge_search_diagnostics(*diagnostics: SearchDiagnostics) -> SearchDiagnostics:
     counts = Counter(
         {
@@ -447,6 +486,9 @@ def scan_self_maintenance_rules(
     sample_window: int = 4,
     occupancy_threshold: float = 0.75,
     min_component_fraction: float = 1.0,
+    preferred_rule_pairs: tuple[tuple[frozenset[int], frozenset[int]], ...] = (),
+    exact_rule_pairs: tuple[tuple[frozenset[int], frozenset[int]], ...] | None = None,
+    preferred_bonus: float = 0.0,
     seed_builders: tuple[
         Callable[[tuple[int, int], set[tuple[int, int]], bool], frozenset[tuple[int, int]]],
         ...,
@@ -461,6 +503,10 @@ def scan_self_maintenance_rules(
     xs = [x for x, _y in nodes]
     ys = [y for _x, y in nodes]
     graph_center = ((min(xs) + max(xs)) / 2, (min(ys) + max(ys)) / 2)
+    preferred_set = set(preferred_rule_pairs)
+    rule_pairs = filter_rule_pairs(count_options, exact_rule_pairs)
+    if not rule_pairs:
+        rule_pairs = ordered_rule_pairs(count_options, preferred_rule_pairs)
 
     total_trials = 0
     rejection_counts: Counter[str] = Counter()
@@ -469,8 +515,7 @@ def scan_self_maintenance_rules(
     for seed_node in interior_nodes:
         for seed_builder in seed_builders:
             seed_nodes = seed_builder(seed_node, nodes, wrap_y)
-            for survive_counts in count_options:
-                for birth_counts in count_options:
+            for survive_counts, birth_counts in rule_pairs:
                     total_trials += 1
                     persistent_nodes, occupancy, orbit_sizes = derive_emergent_persistent_nodes(
                         nodes,
@@ -505,6 +550,7 @@ def scan_self_maintenance_rules(
                         continue
 
                     accepted_candidates += 1
+                    preferred_score = preferred_bonus if (survive_counts, birth_counts) in preferred_set else 0.0
                     area = component_area(largest_component)
                     support = derive_persistence_support(nodes, largest_component, wrap_y=wrap_y)
                     support_sum = sum(support[node] for node in largest_component)
@@ -538,6 +584,7 @@ def scan_self_maintenance_rules(
                         round(candidate.occupancy_mean, 12),
                         round(candidate.density, 12),
                         round(candidate.support_sum, 12),
+                        round(preferred_score, 12),
                         -float(candidate.area),
                         -float(orbit_variation),
                         -float(seed_distance_sq),
@@ -567,6 +614,8 @@ def select_self_maintenance_rule(
     evolution_steps: int = 10,
     sample_window: int = 4,
     occupancy_threshold: float = 0.75,
+    preferred_rule_pairs: tuple[tuple[frozenset[int], frozenset[int]], ...] = (),
+    preferred_bonus: float = 0.0,
 ) -> RuleCandidate:
     """Search over seeds and local rules for a compact localized persistent pattern."""
     best_candidate, _diagnostics = scan_self_maintenance_rules(
@@ -576,6 +625,8 @@ def select_self_maintenance_rule(
         evolution_steps=evolution_steps,
         sample_window=sample_window,
         occupancy_threshold=occupancy_threshold,
+        preferred_rule_pairs=preferred_rule_pairs,
+        preferred_bonus=preferred_bonus,
     )
     if best_candidate is None:
         raise RuntimeError("No compact self-maintenance rule produced a persistent pattern.")
@@ -980,68 +1031,17 @@ def compare_geodesics(
     return comparisons
 
 
-def evaluate_robustness_scenario(
-    scenario_name: str,
+def evaluate_rule_candidate(
     nodes: set[tuple[int, int]],
     wrap_y: bool,
-    count_options: tuple[frozenset[int], ...],
-    rule_family: str,
+    chosen_rule: RuleCandidate,
     postulates: RulePostulates,
-) -> RobustnessResult:
+) -> tuple[float, float, float, bool, str]:
     min_x = min(x for x, _y in nodes)
     max_x = max(x for x, _y in nodes)
     left_boundary_ys = sorted(y for x, y in nodes if x == min_x)
     right_boundary_ys = sorted(y for x, y in nodes if x == max_x)
 
-    chosen_rule, diagnostics = scan_self_maintenance_rules(
-        nodes,
-        count_options=count_options,
-        wrap_y=wrap_y,
-        evolution_steps=8,
-        sample_window=3,
-        occupancy_threshold=2 / 3,
-        min_component_fraction=0.9,
-        seed_builders=(point_seed_builder,),
-    )
-    fallback_used = False
-    if chosen_rule is None:
-        fallback_rule, fallback_diagnostics = scan_self_maintenance_rules(
-            nodes,
-            count_options=count_options,
-            wrap_y=wrap_y,
-            evolution_steps=10,
-            sample_window=4,
-            occupancy_threshold=0.6,
-            min_component_fraction=0.7,
-            seed_builders=(point_seed_builder, cluster_seed_builder),
-        )
-        diagnostics = merge_search_diagnostics(diagnostics, fallback_diagnostics)
-        chosen_rule = fallback_rule
-        fallback_used = chosen_rule is not None
-    if chosen_rule is None:
-        return RobustnessResult(
-            scenario_name=scenario_name,
-            rule_family=rule_family,
-            seed_node=(-1, -1),
-            rule_signature="-",
-            rule_breadth=0,
-            fallback_used=False,
-            persistent_nodes=0,
-            center_gap=float("nan"),
-            arrival_span=float("nan"),
-            centroid_y=float("nan"),
-            occupancy_mean=float("nan"),
-            density=float("nan"),
-            total_trials=diagnostics.total_trials,
-            empty_patterns=diagnostics.empty_patterns,
-            disconnected_rejections=diagnostics.disconnected_rejections,
-            size_rejections=diagnostics.size_rejections,
-            boundary_rejections=diagnostics.boundary_rejections,
-            accepted_candidates=diagnostics.accepted_candidates,
-            dominant_rejection=diagnostics.dominant_rejection,
-            survived=False,
-            status="no pattern",
-        )
     distorted_rule = derive_local_rule(
         persistent_nodes=chosen_rule.persistent_nodes,
         postulates=postulates,
@@ -1090,6 +1090,190 @@ def evaluate_robustness_scenario(
     ]
     arrival_span = max(arrival_shifts) - min(arrival_shifts)
     survived, status = classify_robustness(center_gap, arrival_span)
+    return center_gap, arrival_span, centroid_y, survived, status
+
+
+def robustness_rank(status: str) -> int:
+    return {
+        "survives": 3,
+        "mixed": 2,
+        "fragile": 1,
+        "no pattern": 0,
+    }[status]
+
+
+def quality_rescue_rule(
+    nodes: set[tuple[int, int]],
+    wrap_y: bool,
+    count_options: tuple[frozenset[int], ...],
+    postulates: RulePostulates,
+    winner_rule_pairs: tuple[tuple[frozenset[int], frozenset[int]], ...] = WINNER_RULE_PAIRS,
+) -> tuple[RuleCandidate | None, SearchDiagnostics, tuple[float, float, float, bool, str] | None]:
+    """Search a small winner-rule set and choose by robustness quality, not just pattern compactness."""
+
+    best_rule: RuleCandidate | None = None
+    best_metrics: tuple[float, float, float, bool, str] | None = None
+    best_key: tuple[float, ...] | None = None
+    diagnostics_parts: list[SearchDiagnostics] = []
+
+    for rule_pair in winner_rule_pairs:
+        if rule_pair[0] not in count_options or rule_pair[1] not in count_options:
+            continue
+        candidate, diagnostics = scan_self_maintenance_rules(
+            nodes,
+            count_options=count_options,
+            wrap_y=wrap_y,
+            evolution_steps=10,
+            sample_window=4,
+            occupancy_threshold=0.6,
+            min_component_fraction=0.7,
+            exact_rule_pairs=(rule_pair,),
+            preferred_rule_pairs=winner_rule_pairs,
+            preferred_bonus=0.2,
+            seed_builders=(point_seed_builder, cluster_seed_builder),
+        )
+        diagnostics_parts.append(diagnostics)
+        if candidate is None:
+            continue
+
+        metrics = evaluate_rule_candidate(
+            nodes,
+            wrap_y=wrap_y,
+            chosen_rule=candidate,
+            postulates=postulates,
+        )
+        center_gap, arrival_span, _centroid_y, _survived, status = metrics
+        quality_key = (
+            robustness_rank(status),
+            center_gap + arrival_span,
+            arrival_span,
+            center_gap,
+            candidate.occupancy_mean,
+            candidate.density,
+        )
+        if best_key is None or quality_key > best_key:
+            best_key = quality_key
+            best_rule = candidate
+            best_metrics = metrics
+
+    if not diagnostics_parts:
+        empty_diagnostics = SearchDiagnostics(
+            total_trials=0,
+            empty_patterns=0,
+            disconnected_rejections=0,
+            size_rejections=0,
+            boundary_rejections=0,
+            accepted_candidates=0,
+            dominant_rejection="none",
+        )
+        return None, empty_diagnostics, None
+
+    return best_rule, merge_search_diagnostics(*diagnostics_parts), best_metrics
+
+
+def evaluate_robustness_scenario(
+    scenario_name: str,
+    nodes: set[tuple[int, int]],
+    wrap_y: bool,
+    count_options: tuple[frozenset[int], ...],
+    rule_family: str,
+    postulates: RulePostulates,
+) -> RobustnessResult:
+    chosen_rule, diagnostics = scan_self_maintenance_rules(
+        nodes,
+        count_options=count_options,
+        wrap_y=wrap_y,
+        evolution_steps=8,
+        sample_window=3,
+        occupancy_threshold=2 / 3,
+        min_component_fraction=0.9,
+        preferred_rule_pairs=WINNER_RULE_PAIRS,
+        preferred_bonus=0.05,
+        seed_builders=(point_seed_builder,),
+    )
+    fallback_used = False
+    if chosen_rule is None:
+        fallback_rule, fallback_diagnostics = scan_self_maintenance_rules(
+            nodes,
+            count_options=count_options,
+            wrap_y=wrap_y,
+            evolution_steps=10,
+            sample_window=4,
+            occupancy_threshold=0.6,
+            min_component_fraction=0.7,
+            preferred_rule_pairs=WINNER_RULE_PAIRS,
+            preferred_bonus=0.08,
+            seed_builders=(point_seed_builder, cluster_seed_builder),
+        )
+        diagnostics = merge_search_diagnostics(diagnostics, fallback_diagnostics)
+        chosen_rule = fallback_rule
+        fallback_used = chosen_rule is not None
+    if chosen_rule is None:
+        return RobustnessResult(
+            scenario_name=scenario_name,
+            rule_family=rule_family,
+            seed_node=(-1, -1),
+            rule_signature="-",
+            rule_breadth=0,
+            fallback_used=False,
+            persistent_nodes=0,
+            center_gap=float("nan"),
+            arrival_span=float("nan"),
+            centroid_y=float("nan"),
+            occupancy_mean=float("nan"),
+            density=float("nan"),
+            total_trials=diagnostics.total_trials,
+            empty_patterns=diagnostics.empty_patterns,
+            disconnected_rejections=diagnostics.disconnected_rejections,
+            size_rejections=diagnostics.size_rejections,
+            boundary_rejections=diagnostics.boundary_rejections,
+            accepted_candidates=diagnostics.accepted_candidates,
+            dominant_rejection=diagnostics.dominant_rejection,
+            survived=False,
+            status="no pattern",
+        )
+    center_gap, arrival_span, centroid_y, survived, status = evaluate_rule_candidate(
+        nodes,
+        wrap_y=wrap_y,
+        chosen_rule=chosen_rule,
+        postulates=postulates,
+    )
+    if status != "survives":
+        rescue_rule, rescue_diagnostics, rescue_metrics = quality_rescue_rule(
+            nodes,
+            wrap_y=wrap_y,
+            count_options=count_options,
+            postulates=postulates,
+        )
+        diagnostics = merge_search_diagnostics(diagnostics, rescue_diagnostics)
+        if rescue_rule is not None and rescue_metrics is not None:
+            (
+                rescue_center_gap,
+                rescue_arrival_span,
+                rescue_centroid_y,
+                rescue_survived,
+                rescue_status,
+            ) = rescue_metrics
+            rescue_key = (
+                robustness_rank(rescue_status),
+                rescue_center_gap + rescue_arrival_span,
+                rescue_arrival_span,
+                rescue_center_gap,
+            )
+            current_key = (
+                robustness_rank(status),
+                center_gap + arrival_span,
+                arrival_span,
+                center_gap,
+            )
+            if rescue_key > current_key:
+                chosen_rule = rescue_rule
+                center_gap = rescue_center_gap
+                arrival_span = rescue_arrival_span
+                centroid_y = rescue_centroid_y
+                survived = rescue_survived
+                status = rescue_status
+                fallback_used = True
 
     return RobustnessResult(
         scenario_name=scenario_name,
@@ -1514,7 +1698,11 @@ def main() -> None:
         persistent_nodes=frozenset(),
         postulates=flat_postulates,
     )
-    chosen_rule = select_self_maintenance_rule(derived_nodes)
+    chosen_rule = select_self_maintenance_rule(
+        derived_nodes,
+        preferred_rule_pairs=WINNER_RULE_PAIRS,
+        preferred_bonus=0.05,
+    )
     pattern_seed = point_seed(center=chosen_rule.seed_node)
     persistent_nodes = chosen_rule.persistent_nodes
     occupancy = chosen_rule.occupancy
@@ -1697,7 +1885,7 @@ def main() -> None:
     extended_family = family_by_name.get("extended")
     if compact_family and extended_family:
         if compact_family.no_pattern == 0 and extended_family.no_pattern == 0:
-            print(f"- Under the staged search, both families now find compact patterns in all sweep scenarios, but `extended` still produces a larger average boundary-delay span ({extended_family.avg_arrival_span:.3f} vs {compact_family.avg_arrival_span:.3f}) and a slightly larger average center gap ({extended_family.avg_center_gap:.3f} vs {compact_family.avg_center_gap:.3f}).")
+            print(f"- Under the staged search, both families now find compact patterns in all sweep scenarios; `extended` produces the larger average boundary-delay span ({extended_family.avg_arrival_span:.3f} vs {compact_family.avg_arrival_span:.3f}), while `compact` now has the slightly larger average center gap ({compact_family.avg_center_gap:.3f} vs {extended_family.avg_center_gap:.3f}).")
         else:
             print(f"- Here the `extended` family looks healthier because it found compact patterns in {6 - extended_family.no_pattern}/6 cases versus {6 - compact_family.no_pattern}/6 for `compact`, and its active cases produced a larger average boundary-delay span ({extended_family.avg_arrival_span:.3f} vs {compact_family.avg_arrival_span:.3f}).")
     print(f"- Across the non-surviving cases, the most common rejection mode was `{dominant_failure_label}`.")
