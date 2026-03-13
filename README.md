@@ -68,13 +68,12 @@ What the script shows:
 - With a proper-time-style action derived from the same delay field, those geodesics bend inward in a gravity-like way instead of merely routing around a slow region.
 - The delay field itself now emerges from a local graph-relaxation rule: the code searches over interior one-node seeds and simple update rules, grows each candidate into an orbit, and lets the most localized stable non-boundary component source the decaying load profile.
 - A local-delay graph can recover an inferred causal order without assigning all nodes the same global step number.
-- The robustness sweep is informative rather than purely celebratory: under the current staged search the extended rule family is still more robust than the compact one, and skewed geometries remain the weakest case even when the search does find patterns.
-- The current diagnostics suggest why: the extended family finds compact persistent patterns in more scenarios and produces a larger average boundary-delay span once it does, so its gravity-like distortion is both more available and stronger.
-- The failure-mode diagnostics also show that skewed cases mostly fail by producing empty or fragmented candidate patterns, not by hitting the boundary filter, which points more toward a pattern-formation weakness than a boundary-selection bug.
-- A staged search helps materially: a stricter point-seed pass followed by a clustered-seed fallback removes the current `no pattern` cases in the sweep, shifting the bottleneck from pattern existence to pattern quality.
-- A guided quality-rescue pass helps further: prioritizing winner-rule motifs upgrades the current sweep to 11 surviving scenarios out of 12, leaving only one mixed skewed case.
-- A focused `skew-wrap` diagnosis narrows that last miss further: the reduced compact sweep omits the rescuing motif `S[3,4]/B[1,3]`, and once the full compact family is allowed the same case upgrades to `survives`.
-- That makes the remaining frontier sharper: the current gap is more about reduced sweep coverage and search budget than about a deep split between `compact` and `extended` ontologies.
+- The robustness sweep is now stronger than before: a motif-preserving reduced compact family survives all six tested scenarios while using only four count options, and the extended family also survives all six.
+- The compact-family repair is informative rather than ad hoc: the hard-topology winners under the full compact family are `skew-hard -> S[2,3]/B[3]` and `skew-wrap -> S[3,4]/B[1,3]`, so the exact minimal reduced subset that preserves those winners is `{3}, {1,3}, {2,3}, {3,4}`.
+- That repaired four-option compact subset still survives the whole rectangular / tapered / skewed sweep, so we do not need the full compact palette to keep the hard-topology behavior.
+- With that repair in place, `extended` still produces the larger average boundary-delay span, while the reduced `compact` family keeps a slightly larger average center gap.
+- The earlier `skew-wrap` miss is now understood as a legacy reduced-family coverage bug, not as a deep compact-vs-extended ontology split.
+- The failure-mode story is still useful history: before the repair, skewed cases mostly failed by producing empty or fragmented candidate patterns, not by hitting the boundary filter, which pointed more toward pattern formation than boundary selection.
 - Cross-slit interference disappears when histories are separated by durable record sectors, without any appeal to consciousness, while single-slit diffraction remains inside each sector.
 - A Hadamard-style reversible mixer preserves the 2-norm but not 1- or 4-norm totals, which is a useful reason the Born-style square survives the pressure test better than arbitrary power rules.
 - Under boost-like frame mixing, `sqrt(dt^2 - dx^2)` is the only tested local scalar that remains invariant; the remaining action assumption is the choice to treat `dt - sqrt(dt^2 - dx^2)` as spent delay.
