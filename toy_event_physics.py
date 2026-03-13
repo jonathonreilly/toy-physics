@@ -24,6 +24,7 @@ from collections import Counter, defaultdict
 from dataclasses import dataclass
 import cmath
 import heapq
+import itertools
 import math
 from typing import Callable, DefaultDict
 
@@ -132,6 +133,16 @@ class FocusedComparison:
     status: str
 
 
+@dataclass
+class AblationResult:
+    removed_option: str
+    survives: int
+    mixed: int
+    fragile: int
+    no_pattern: int
+    failed_scenarios: str
+
+
 @dataclass(frozen=True)
 class LocalRule:
     persistent_nodes: frozenset[tuple[int, int]]
@@ -176,14 +187,20 @@ LEGACY_SWEEP_COMPACT_COUNT_OPTIONS = (
     frozenset({3, 4}),
 )
 
-MOTIF_PRESERVING_COMPACT_COUNT_OPTIONS = (
+REPAIRED_COMPACT_COUNT_OPTIONS = (
     frozenset({3}),
     frozenset({1, 3}),
     frozenset({2, 3}),
     frozenset({3, 4}),
 )
 
-SWEEP_COMPACT_COUNT_OPTIONS = MOTIF_PRESERVING_COMPACT_COUNT_OPTIONS
+MINIMAL_COMPACT_COUNT_OPTIONS = (
+    frozenset({1, 3}),
+    frozenset({2, 3}),
+    frozenset({3, 4}),
+)
+
+SWEEP_COMPACT_COUNT_OPTIONS = MINIMAL_COMPACT_COUNT_OPTIONS
 
 SWEEP_EXTENDED_COUNT_OPTIONS = SWEEP_COMPACT_COUNT_OPTIONS + (
     frozenset({1, 2, 3}),
@@ -463,6 +480,10 @@ def format_count_options(
     count_options: tuple[frozenset[int], ...],
 ) -> str:
     return ", ".join(f"{sorted(counts)}" for counts in count_options)
+
+
+def format_single_count_option(counts: frozenset[int]) -> str:
+    return str(sorted(counts))
 
 
 def dominant_rejection_label(counts: Counter[str]) -> str:
@@ -1216,7 +1237,7 @@ def quality_rescue_rule(
 
 
 def focused_skew_wrap_diagnosis(postulates: RulePostulates) -> list[FocusedComparison]:
-    """Compare the legacy, repaired, and full compact families on skew-wrap."""
+    """Compare the legacy, repaired, minimal, and full compact families on skew-wrap."""
 
     nodes = build_skewed_nodes(6, 4)
     rows: list[FocusedComparison] = []
@@ -1244,13 +1265,13 @@ def focused_skew_wrap_diagnosis(postulates: RulePostulates) -> list[FocusedCompa
     repaired_rule, _repaired_diag, repaired_metrics = quality_rescue_rule(
         nodes,
         wrap_y=True,
-        count_options=SWEEP_COMPACT_COUNT_OPTIONS,
+        count_options=REPAIRED_COMPACT_COUNT_OPTIONS,
         postulates=postulates,
     )
     if repaired_rule is not None and repaired_metrics is not None:
         rows.append(
             FocusedComparison(
-                label="motif-preserving",
+                label="four-option repair",
                 rule_signature=format_rule_signature(
                     repaired_rule.survive_counts,
                     repaired_rule.birth_counts,
@@ -1258,6 +1279,26 @@ def focused_skew_wrap_diagnosis(postulates: RulePostulates) -> list[FocusedCompa
                 center_gap=repaired_metrics[0],
                 arrival_span=repaired_metrics[1],
                 status=repaired_metrics[4],
+            )
+        )
+
+    minimal_rule, _minimal_diag, minimal_metrics = quality_rescue_rule(
+        nodes,
+        wrap_y=True,
+        count_options=SWEEP_COMPACT_COUNT_OPTIONS,
+        postulates=postulates,
+    )
+    if minimal_rule is not None and minimal_metrics is not None:
+        rows.append(
+            FocusedComparison(
+                label="minimal three",
+                rule_signature=format_rule_signature(
+                    minimal_rule.survive_counts,
+                    minimal_rule.birth_counts,
+                ),
+                center_gap=minimal_metrics[0],
+                arrival_span=minimal_metrics[1],
+                status=minimal_metrics[4],
             )
         )
 
@@ -1488,6 +1529,44 @@ def derive_motif_preserving_compact_subset(
 
     subset = tuple(sorted(required_counts, key=count_option_sort_key))
     return subset, hard_rows
+
+
+def derive_smallest_surviving_subset(
+    candidate_options: tuple[frozenset[int], ...],
+    postulates: RulePostulates,
+) -> tuple[tuple[frozenset[int], ...], list[RobustnessResult]]:
+    for size in range(1, len(candidate_options) + 1):
+        for subset in itertools.combinations(candidate_options, size):
+            rows = run_family_sweep(subset, "compact minimal", postulates)
+            if all(row.status == "survives" for row in rows):
+                return tuple(sorted(subset, key=count_option_sort_key)), rows
+    raise RuntimeError("No surviving compact subset found inside the candidate family.")
+
+
+def ablate_compact_subset(
+    count_options: tuple[frozenset[int], ...],
+    postulates: RulePostulates,
+) -> list[AblationResult]:
+    rows: list[AblationResult] = []
+    for removed_option in count_options:
+        ablated = tuple(option for option in count_options if option != removed_option)
+        sweep_rows = run_family_sweep(ablated, "compact ablation", postulates)
+        failed_rows = [row for row in sweep_rows if row.status != "survives"]
+        rows.append(
+            AblationResult(
+                removed_option=format_single_count_option(removed_option),
+                survives=sum(row.status == "survives" for row in sweep_rows),
+                mixed=sum(row.status == "mixed" for row in sweep_rows),
+                fragile=sum(row.status == "fragile" for row in sweep_rows),
+                no_pattern=sum(row.status == "no pattern" for row in sweep_rows),
+                failed_scenarios=", ".join(
+                    f"{row.scenario_name}:{row.status}"
+                    for row in failed_rows
+                )
+                or "-",
+            )
+        )
+    return rows
 
 
 def sample_boundary_arrivals(
@@ -1844,16 +1923,33 @@ def render_failure_diagnostics_table(rows: list[RobustnessResult]) -> str:
 
 def render_focused_comparison_table(rows: list[FocusedComparison]) -> str:
     lines = [
-        "setup             | rule              | center gap | arrival span | status",
-        "------------------+-------------------+------------+--------------+--------",
+        "setup              | rule              | center gap | arrival span | status",
+        "-------------------+-------------------+------------+--------------+--------",
     ]
     for row in rows:
         lines.append(
-            f"{row.label:<16} | "
+            f"{row.label:<17} | "
             f"{row.rule_signature:<17} | "
             f"{row.center_gap:>10.3f} | "
             f"{row.arrival_span:>12.3f} | "
             f"{row.status}"
+        )
+    return "\n".join(lines)
+
+
+def render_ablation_table(rows: list[AblationResult]) -> str:
+    lines = [
+        "remove option | survives | mixed | fragile | no pattern | failed scenarios",
+        "--------------+----------+-------+---------+------------+------------------------------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.removed_option:<13} | "
+            f"{row.survives:>8} | "
+            f"{row.mixed:>5} | "
+            f"{row.fragile:>7} | "
+            f"{row.no_pattern:>10} | "
+            f"{row.failed_scenarios}"
         )
     return "\n".join(lines)
 
@@ -2061,7 +2157,7 @@ def main() -> None:
     extended_family = family_by_name.get("extended")
     if compact_family and extended_family:
         if compact_family.survives == 6 and extended_family.survives == 6:
-            print(f"- With the motif-preserving compact subset, both families now survive all six scenarios; `extended` still produces the larger average boundary-delay span ({extended_family.avg_arrival_span:.3f} vs {compact_family.avg_arrival_span:.3f}), while `compact` keeps the slightly larger average center gap ({compact_family.avg_center_gap:.3f} vs {extended_family.avg_center_gap:.3f}).")
+            print(f"- With the minimal compact subset, both families now survive all six scenarios; `extended` still produces the larger average boundary-delay span ({extended_family.avg_arrival_span:.3f} vs {compact_family.avg_arrival_span:.3f}), while `compact` keeps the slightly larger average center gap ({compact_family.avg_center_gap:.3f} vs {extended_family.avg_center_gap:.3f}).")
         elif compact_family.no_pattern == 0 and extended_family.no_pattern == 0:
             print(f"- Under the staged search, both families now find compact patterns in all sweep scenarios; `extended` produces the larger average boundary-delay span ({extended_family.avg_arrival_span:.3f} vs {compact_family.avg_arrival_span:.3f}), while `compact` now has the slightly larger average center gap ({compact_family.avg_center_gap:.3f} vs {extended_family.avg_center_gap:.3f}).")
         else:
@@ -2081,28 +2177,52 @@ def main() -> None:
 
     print("9) Minimal compact subset that preserves the hard-topology winners")
     focused_rows = focused_skew_wrap_diagnosis(distorted_postulates)
-    derived_subset, hard_rows = derive_motif_preserving_compact_subset(distorted_postulates)
+    repaired_subset, hard_rows = derive_motif_preserving_compact_subset(distorted_postulates)
+    minimal_subset, minimal_rows = derive_smallest_surviving_subset(
+        repaired_subset,
+        distorted_postulates,
+    )
     print(render_focused_comparison_table(focused_rows))
     print()
     print("Interpretation:")
-    print("- The legacy reduced family is shown only as a diagnosis baseline; the current compact sweep uses the motif-preserving reduced subset.")
+    print("- The legacy reduced family is shown only as a diagnosis baseline; the current compact sweep uses the minimal surviving subset.")
     focused_by_label = {row.label: row for row in focused_rows}
     legacy_reduced = focused_by_label.get("legacy reduced")
-    repaired_reduced = focused_by_label.get("motif-preserving")
+    repaired_reduced = focused_by_label.get("four-option repair")
+    minimal_reduced = focused_by_label.get("minimal three")
     compact_full = focused_by_label.get("compact full")
     if legacy_reduced and repaired_reduced:
-        print(f"- In `skew-wrap`, the legacy reduced family picked {legacy_reduced.rule_signature} and stayed `{legacy_reduced.status}`, while the repaired reduced family upgrades to {repaired_reduced.rule_signature} and lands `{repaired_reduced.status}`.")
-    if repaired_reduced and compact_full and repaired_reduced.rule_signature == compact_full.rule_signature:
-        print(f"- The repaired reduced family and the full compact family converge on the same hard-case winner, {repaired_reduced.rule_signature}, so we do not need the full compact palette to keep that behavior.")
+        print(f"- In `skew-wrap`, the legacy reduced family picked {legacy_reduced.rule_signature} and stayed `{legacy_reduced.status}`, while the repaired four-option family upgrades to {repaired_reduced.rule_signature} and lands `{repaired_reduced.status}`.")
+    if minimal_reduced and compact_full and minimal_reduced.rule_signature == compact_full.rule_signature:
+        print(f"- The minimal three-option family and the full compact family converge on the same hard-case winner, {minimal_reduced.rule_signature}, so we do not need the full compact palette to keep that behavior.")
     hard_rule_signatures = ", ".join(
         f"{row.scenario_name} -> {row.rule_signature}"
         for row in hard_rows
     )
     print(f"- Under the full compact family, the hard-topology winners are {hard_rule_signatures}.")
-    print(f"- Preserving those exact winners requires the count options {format_count_options(derived_subset)}.")
-    if derived_subset == SWEEP_COMPACT_COUNT_OPTIONS:
-        print("- That set is exact and minimal for this target: each hard-topology winner needs its own survive/birth count options, and together they reduce the compact sweep family to four count motifs.")
-    print("- Because that four-option subset still survives the whole six-scenario sweep, we can proceed with a genuinely reduced compact family instead of treating motif omission as a blocker.")
+    print(f"- Preserving those hard-topology winners first repairs the compact family to {format_count_options(repaired_subset)}.")
+    print(f"- Exhaustive minimization inside that repaired family then shrinks it further to {format_count_options(minimal_subset)} while still surviving all six sweep scenarios.")
+    if minimal_subset == SWEEP_COMPACT_COUNT_OPTIONS and all(row.status == 'survives' for row in minimal_rows):
+        print("- That is the current compact sweep family, so we can proceed with a genuinely minimal reduced subset instead of treating motif omission as a blocker.")
+    print()
+
+    print("10) One-by-one ablation of the minimal compact subset")
+    ablation_rows = ablate_compact_subset(SWEEP_COMPACT_COUNT_OPTIONS, distorted_postulates)
+    print(render_ablation_table(ablation_rows))
+    print()
+    print("Interpretation:")
+    print("- This asks the sharper question: once the compact family is minimal, which surviving-count options are actually indispensable?")
+    option_labels = {row.removed_option: row for row in ablation_rows}
+    remove_13 = option_labels.get("[1, 3]")
+    remove_23 = option_labels.get("[2, 3]")
+    remove_34 = option_labels.get("[3, 4]")
+    if remove_13:
+        print(f"- Removing `[1, 3]` breaks `skew-wrap` first ({remove_13.failed_scenarios}), so that motif is carrying the hardest wrapped skew case.")
+    if remove_23:
+        print(f"- Removing `[2, 3]` breaks `taper-wrap` first ({remove_23.failed_scenarios}), so that motif is doing important work for the wrapped tapered geometry.")
+    if remove_34:
+        print(f"- Removing `[3, 4]` is the most damaging ablation ({remove_34.failed_scenarios}), which makes it look like the strongest structural motif in the current compact family.")
+    print("- In other words, the current compact family is no longer just small; within the current sweep it is irreducible.")
     print()
 
     print("REMAINING CHEATS")

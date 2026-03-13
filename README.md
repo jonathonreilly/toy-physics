@@ -68,9 +68,10 @@ What the script shows:
 - With a proper-time-style action derived from the same delay field, those geodesics bend inward in a gravity-like way instead of merely routing around a slow region.
 - The delay field itself now emerges from a local graph-relaxation rule: the code searches over interior one-node seeds and simple update rules, grows each candidate into an orbit, and lets the most localized stable non-boundary component source the decaying load profile.
 - A local-delay graph can recover an inferred causal order without assigning all nodes the same global step number.
-- The robustness sweep is now stronger than before: a motif-preserving reduced compact family survives all six tested scenarios while using only four count options, and the extended family also survives all six.
-- The compact-family repair is informative rather than ad hoc: the hard-topology winners under the full compact family are `skew-hard -> S[2,3]/B[3]` and `skew-wrap -> S[3,4]/B[1,3]`, so the exact minimal reduced subset that preserves those winners is `{3}, {1,3}, {2,3}, {3,4}`.
-- That repaired four-option compact subset still survives the whole rectangular / tapered / skewed sweep, so we do not need the full compact palette to keep the hard-topology behavior.
+- The robustness sweep is now stronger than before: a minimal reduced compact family survives all six tested scenarios, and the extended family also survives all six.
+- The compact-family repair is informative rather than ad hoc: the hard-topology winners under the full compact family are `skew-hard -> S[2,3]/B[3]` and `skew-wrap -> S[3,4]/B[1,3]`, which first repairs the compact family to `{3}, {1,3}, {2,3}, {3,4}`.
+- Exhaustive minimization inside that repaired family shows one motif is still redundant, so the actual surviving compact subset is just `{1,3}, {2,3}, {3,4}`.
+- One-by-one ablation of that three-option subset then shows all three remaining motifs are indispensable in the current sweep: removing `{1,3}` breaks `skew-wrap`, removing `{2,3}` breaks `taper-wrap`, and removing `{3,4}` causes the broadest collapse.
 - With that repair in place, `extended` still produces the larger average boundary-delay span, while the reduced `compact` family keeps a slightly larger average center gap.
 - The earlier `skew-wrap` miss is now understood as a legacy reduced-family coverage bug, not as a deep compact-vs-extended ontology split.
 - The failure-mode story is still useful history: before the repair, skewed cases mostly failed by producing empty or fragmented candidate patterns, not by hitting the boundary filter, which pointed more toward pattern formation than boundary selection.
