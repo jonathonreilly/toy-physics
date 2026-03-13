@@ -1,6 +1,6 @@
 # Discrete Alien-Physics Toy Model
 
-This workspace contains a small runnable prototype for the event-network ontology we built in conversation.
+This workspace contains a small runnable prototype for the event-network ontology.
 
 Run it with:
 
