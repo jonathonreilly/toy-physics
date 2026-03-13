@@ -202,6 +202,17 @@ class ProperTimeConsistencyResult:
     pass_all: bool
 
 
+@dataclass
+class CriticalWeightCase:
+    pack_name: str
+    scenario_name: str
+    target_y: int
+    critical_weight: float
+    margin_at_one: float
+    delay_penalty: float
+    retained_total: float
+
+
 @dataclass(frozen=True)
 class LocalRule:
     persistent_nodes: frozenset[tuple[int, int]]
@@ -2041,6 +2052,24 @@ def path_delay_total(
     return total_delay
 
 
+def path_retained_total(
+    path: list[tuple[int, int]],
+    rule: LocalRule,
+    node_field: dict[tuple[int, int], float],
+) -> float:
+    total_retained = 0.0
+    for start, end in zip(path, path[1:]):
+        delay, _action_increment, _amplitude = local_edge_properties(
+            start,
+            end,
+            rule,
+            node_field,
+        )
+        link_length = math.dist(start, end)
+        total_retained += math.sqrt(max(delay * delay - link_length * link_length, 0.0))
+    return total_retained
+
+
 def all_off_center_targets(boundary_ys: list[int], source_y: int) -> list[int]:
     return [y for y in sorted(boundary_ys) if y != source_y]
 
@@ -2167,6 +2196,114 @@ def proper_time_consistency_results(
             )
         )
     return rows
+
+
+def critical_weight_cases(
+    retained_weight: float = 1.0,
+) -> list[CriticalWeightCase]:
+    postulates = RulePostulates(
+        phase_per_action=4.0,
+        attenuation_power=1.0,
+        action_mode="retained_mix",
+        field_mode="relaxed",
+        action_retained_weight=retained_weight,
+    )
+    rows: list[CriticalWeightCase] = []
+
+    for pack_name, scenarios in benchmark_packs():
+        for scenario_name, nodes, wrap_y in scenarios:
+            chosen_rule, _diagnostics, metrics, _fallback_used = resolve_robust_rule_candidate(
+                nodes,
+                wrap_y=wrap_y,
+                count_options=SWEEP_COMPACT_COUNT_OPTIONS,
+                postulates=postulates,
+            )
+            if chosen_rule is None or metrics is None or metrics[4] != "survives":
+                continue
+
+            distorted_rule = derive_local_rule(
+                persistent_nodes=chosen_rule.persistent_nodes,
+                postulates=postulates,
+            )
+            free_rule = derive_local_rule(
+                persistent_nodes=frozenset(),
+                postulates=postulates,
+            )
+            distorted_field = derive_node_field(nodes, distorted_rule, wrap_y=wrap_y)
+            free_field = derive_node_field(nodes, free_rule, wrap_y=wrap_y)
+            _centroid_x, centroid_y = field_centroid(distorted_field)
+            min_x = min(x for x, _y in nodes)
+            max_x = max(x for x, _y in nodes)
+            left_boundary_ys = sorted(y for x, y in nodes if x == min_x)
+            right_boundary_ys = sorted(y for x, y in nodes if x == max_x)
+            source_y = closest_value(left_boundary_ys, centroid_y)
+
+            _free_costs, free_previous = stationary_action_tree_on_nodes(
+                nodes,
+                source=(min_x, source_y),
+                rule=free_rule,
+                wrap_y=wrap_y,
+                node_field=free_field,
+            )
+            _distorted_costs, distorted_previous = stationary_action_tree_on_nodes(
+                nodes,
+                source=(min_x, source_y),
+                rule=distorted_rule,
+                wrap_y=wrap_y,
+                node_field=distorted_field,
+            )
+
+            for target_y in all_off_center_targets(right_boundary_ys, source_y):
+                free_path = reconstruct_path(
+                    (min_x, source_y),
+                    (max_x, target_y),
+                    free_previous,
+                )
+                distorted_path = reconstruct_path(
+                    (min_x, source_y),
+                    (max_x, target_y),
+                    distorted_previous,
+                )
+                free_delay = path_delay_total(free_path, free_rule, free_field)
+                distorted_delay = path_delay_total(
+                    distorted_path,
+                    distorted_rule,
+                    distorted_field,
+                )
+                retained_total = path_retained_total(
+                    distorted_path,
+                    distorted_rule,
+                    distorted_field,
+                )
+                delay_penalty = distorted_delay - free_delay
+                critical_weight = (
+                    (2.0 * delay_penalty / retained_total)
+                    if retained_total > 0.0
+                    else math.inf
+                )
+                rows.append(
+                    CriticalWeightCase(
+                        pack_name=pack_name,
+                        scenario_name=scenario_name,
+                        target_y=target_y,
+                        critical_weight=critical_weight,
+                        margin_at_one=retained_total - 2.0 * delay_penalty,
+                        delay_penalty=delay_penalty,
+                        retained_total=retained_total,
+                    )
+                )
+    return sorted(
+        rows,
+        key=lambda row: (
+            row.critical_weight,
+            row.delay_penalty,
+            row.retained_total,
+            row.pack_name,
+            row.scenario_name,
+            row.target_y,
+        ),
+        reverse=True,
+    )
 
 
 def sample_boundary_arrivals(
@@ -2646,8 +2783,29 @@ def render_proper_time_consistency_table(
     return "\n".join(lines)
 
 
+def render_critical_weight_table(
+    rows: list[CriticalWeightCase],
+    limit: int = 6,
+) -> str:
+    lines = [
+        "pack   | scenario         | target y | critical w* | margin@1 | delay penalty | retained",
+        "-------+------------------+----------+-------------+----------+---------------+---------",
+    ]
+    for row in rows[:limit]:
+        lines.append(
+            f"{row.pack_name:<6} | "
+            f"{row.scenario_name:<16} | "
+            f"{row.target_y:>8} | "
+            f"{row.critical_weight:>11.3f} | "
+            f"{row.margin_at_one:>8.3f} | "
+            f"{row.delay_penalty:>13.3f} | "
+            f"{row.retained_total:>7.3f}"
+        )
+    return "\n".join(lines)
+
+
 def main() -> None:
-    print("ALIEN-EVENT TOY MODEL")
+    print("OCTOPUS PHYSICS TOY MODEL")
     print()
     derived_nodes = build_rectangular_nodes(width=12, height=8)
     flat_postulates = RulePostulates(
@@ -3044,6 +3202,22 @@ def main() -> None:
         f"- The strongest minimum margin in this grid occurs at w = {strongest_proper_time.retained_weight:.2f}, with worst case `{strongest_proper_time.worst_case}` and minimum margin {strongest_proper_time.min_margin:.3f}."
     )
     print("- This still is not a first-principles derivation, but it is the first benchmark in this toy model that singles out the exact spent-delay point within a tested retained-weight family.")
+    print()
+
+    print("16) Critical-weight decomposition of the w = 1 crossing")
+    critical_rows = critical_weight_cases()
+    print(render_critical_weight_table(critical_rows))
+    print()
+    print("Interpretation:")
+    print("- For a fixed distorted path, the proper-time consistency margin is linear in the retained weight: margin(w) = w * retained_total - 2 * delay_penalty.")
+    print("- That means each off-center target carries a calculable critical weight w* = 2 * delay_penalty / retained_total, above which that path finally pays for the extra coordinate delay it spends in the field.")
+    if critical_rows:
+        worst_row = critical_rows[0]
+        print(
+            f"- In the current run the largest observed threshold is w* = {worst_row.critical_weight:.3f} at `{worst_row.pack_name}:{worst_row.scenario_name}` targeting y = {worst_row.target_y}, with margin@1 = {worst_row.margin_at_one:.3f}."
+        )
+    print("- That does not derive the spent-delay rule from deeper symmetry yet, but it does explain the empirical crossing: the hardest cases need a coefficient just under 1, which is why 0.95 still fails while 1.00 passes.")
+    print("- So the model is now doing something stronger than brute-force search: it is exposing a specific accounting identity that controls where the retained-weight family changes sign.")
     print()
 
     print("REMAINING CHEATS")

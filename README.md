@@ -1,10 +1,10 @@
-# Discrete Alien-Physics Toy Model
+# Discrete Octopus-Physics Toy Model
 
 This workspace contains a small runnable prototype for the event-network ontology we built in conversation.
 
 ## Model Axioms
 
-This toy model is built around a compact "alien" ontology:
+This toy model is built around a compact "octopus physics" ontology:
 
 - Reality is an evolving network of events and influence relations.
 - Stable objects are persistent self-maintaining patterns in that network.
