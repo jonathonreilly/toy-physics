@@ -166,6 +166,19 @@ class ActionDiscriminatorResult:
     failed_scenarios: str
 
 
+@dataclass
+class ActionFamilyResult:
+    retained_weight: float
+    survives: int
+    mixed: int
+    fragile: int
+    no_pattern: int
+    avg_center_gap: float
+    avg_arrival_span: float
+    min_response: float
+    min_wrapped_response: float
+
+
 @dataclass(frozen=True)
 class LocalRule:
     persistent_nodes: frozenset[tuple[int, int]]
@@ -173,6 +186,7 @@ class LocalRule:
     attenuation_power: float = 1.0
     action_mode: str = "spent_delay"
     field_mode: str = "relaxed"
+    action_retained_weight: float = 1.0
 
 
 @dataclass(frozen=True)
@@ -181,6 +195,7 @@ class RulePostulates:
     attenuation_power: float = 1.0
     action_mode: str = "spent_delay"
     field_mode: str = "relaxed"
+    action_retained_weight: float = 1.0
 
 
 COMPACT_COUNT_OPTIONS = (
@@ -256,6 +271,7 @@ def derive_local_rule(
         attenuation_power=postulates.attenuation_power,
         action_mode=postulates.action_mode,
         field_mode=postulates.field_mode,
+        action_retained_weight=postulates.action_retained_weight,
     )
 
 
@@ -270,9 +286,13 @@ def action_increment_for_mode(
     delay: float,
     link_length: float,
     action_mode: str,
+    retained_weight: float,
 ) -> float:
+    retained_update = math.sqrt(max(delay * delay - link_length * link_length, 0.0))
     if action_mode == "spent_delay":
-        return proper_time_deficit(delay, link_length)
+        return delay - retained_update
+    if action_mode == "retained_mix":
+        return delay - retained_weight * retained_update
     if action_mode == "coordinate_delay":
         return delay
     if action_mode == "link_length":
@@ -826,6 +846,7 @@ def local_edge_properties(
         delay,
         link_length,
         rule.action_mode,
+        rule.action_retained_weight,
     )
 
     amplitude = cmath.exp(1j * rule.phase_wavenumber * action_increment) / (
@@ -1796,6 +1817,64 @@ def action_discriminator_results() -> list[ActionDiscriminatorResult]:
     return rows
 
 
+def action_family_results(
+    retained_weights: tuple[float, ...] = (0.0, 0.25, 0.5, 0.75, 1.0),
+) -> list[ActionFamilyResult]:
+    rows: list[ActionFamilyResult] = []
+    for retained_weight in retained_weights:
+        postulates = RulePostulates(
+            phase_per_action=4.0,
+            attenuation_power=1.0,
+            action_mode="retained_mix",
+            field_mode="relaxed",
+            action_retained_weight=retained_weight,
+        )
+        sweep_rows = run_family_sweep(
+            SWEEP_COMPACT_COUNT_OPTIONS,
+            f"retained={retained_weight:.2f}",
+            postulates,
+        )
+        responses: list[tuple[float, bool]] = []
+        for scenario_name, nodes, wrap_y in robustness_scenarios():
+            chosen_rule, _diagnostics, metrics, _fallback_used = resolve_robust_rule_candidate(
+                nodes,
+                wrap_y=wrap_y,
+                count_options=SWEEP_COMPACT_COUNT_OPTIONS,
+                postulates=postulates,
+            )
+            if chosen_rule is None or metrics is None:
+                responses.append((0.0, wrap_y))
+                continue
+            responses.append(
+                (
+                    average_side_path_response(
+                        nodes,
+                        wrap_y=wrap_y,
+                        chosen_rule=chosen_rule,
+                        postulates=postulates,
+                    ),
+                    wrap_y,
+                )
+            )
+
+        rows.append(
+            ActionFamilyResult(
+                retained_weight=retained_weight,
+                survives=sum(row.status == "survives" for row in sweep_rows),
+                mixed=sum(row.status == "mixed" for row in sweep_rows),
+                fragile=sum(row.status == "fragile" for row in sweep_rows),
+                no_pattern=sum(row.status == "no pattern" for row in sweep_rows),
+                avg_center_gap=sum(row.center_gap for row in sweep_rows) / len(sweep_rows),
+                avg_arrival_span=sum(row.arrival_span for row in sweep_rows) / len(sweep_rows),
+                min_response=min(response for response, _wrap in responses),
+                min_wrapped_response=min(
+                    response for response, wrap in responses if wrap
+                ),
+            )
+        )
+    return rows
+
+
 def sample_boundary_arrivals(
     width: int,
     sample_ys: list[int],
@@ -2216,6 +2295,25 @@ def render_action_discriminator_table(rows: list[ActionDiscriminatorResult]) -> 
     return "\n".join(lines)
 
 
+def render_action_family_table(rows: list[ActionFamilyResult]) -> str:
+    lines = [
+        "retained w | survives | mixed | fragile | avg gap | avg span | min response | min wrapped",
+        "-----------+----------+-------+---------+---------+----------+--------------+------------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.retained_weight:>10.2f} | "
+            f"{row.survives:>8} | "
+            f"{row.mixed:>5} | "
+            f"{row.fragile:>7} | "
+            f"{row.avg_center_gap:>7.3f} | "
+            f"{row.avg_arrival_span:>8.3f} | "
+            f"{row.min_response:>12.3f} | "
+            f"{row.min_wrapped_response:>10.3f}"
+        )
+    return "\n".join(lines)
+
+
 def main() -> None:
     print("ALIEN-EVENT TOY MODEL")
     print()
@@ -2531,7 +2629,25 @@ def main() -> None:
         print(f"- Bare link-length action also fails: it survives the old sweep, but its minimum response is {link_length_action.min_response:.3f}, which means the chosen paths are not reacting to the field at all.")
     if support_only_action:
         print(f"- Support-only field propagation still bends paths, but it does not survive the hard wrapped skew case ({support_only_action.failed_scenarios}), so field relaxation remains part of the load-bearing structure.")
-    print("- That is a meaningful upgrade in where we stand: among the small set of tested alternatives, the intended spent-delay action with relaxed field propagation is now uniquely selected by the combined robustness-plus-response benchmark.")
+    print("- That is a meaningful upgrade in where we stand: among the named alternatives we tested here, the intended spent-delay action with relaxed field propagation is the only one that survives both robustness and field-response.")
+    print()
+
+    print("13) Parameterized retained-weight action family sweep")
+    action_family_rows = action_family_results()
+    print(render_action_family_table(action_family_rows))
+    print()
+    print("Interpretation:")
+    print("- This widens the action search from a few named formulas to a one-parameter family: action = delay - w * retained_update, with field relaxation held fixed.")
+    positive_response_rows = [
+        row for row in action_family_rows
+        if row.survives == len(robustness_scenarios()) and row.min_wrapped_response > 0.0
+    ]
+    if positive_response_rows:
+        surviving_weights = ", ".join(f"{row.retained_weight:.2f}" for row in positive_response_rows)
+        strongest_row = max(positive_response_rows, key=lambda row: row.min_wrapped_response)
+        print(f"- Under the combined robustness-plus-response benchmark, the surviving retained-weight window narrows to the high end of the tested family: w = {surviving_weights}.")
+        print(f"- Within that window, the strongest wrapped-case path response occurs at w = {strongest_row.retained_weight:.2f} with minimum wrapped response {strongest_row.min_wrapped_response:.3f}.")
+    print("- So the broader family sweep does not yet prove that the exact spent-delay coefficient must be 1.0, but it does push us away from the low-weight half of the family and toward the proper-time-style end.")
     print()
 
     print("REMAINING CHEATS")
