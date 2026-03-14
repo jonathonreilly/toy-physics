@@ -304,6 +304,142 @@ class SelectorSweepCase:
     differs: bool
 
 
+@dataclass
+class EvaluatedCandidate:
+    rule_family: str
+    pack_name: str
+    scenario_name: str
+    retained_weight: float
+    candidate_identity: tuple[
+        frozenset[int],
+        frozenset[int],
+        frozenset[tuple[int, int]],
+    ]
+    search_sources: str
+    seed_node: tuple[int, int]
+    rule_signature: str
+    persistent_nodes: int
+    occupancy_mean: float
+    density: float
+    center_gap: float
+    arrival_span: float
+    centroid_y: float
+    status: str
+    status_rank: int
+    min_margin: float
+    min_wrapped_margin: float
+    geometric_focus_gap: float
+    stiffness: float
+    current_selected: bool
+    on_robustness: bool = False
+    on_proper_time: bool = False
+    on_geometry: bool = False
+    on_mixed: bool = False
+
+
+@dataclass
+class FrontierScenarioRow:
+    pack_name: str
+    scenario_name: str
+    rule_family: str
+    retained_weight: float
+    pool_size: int
+    selected_rule: str
+    selected_on_robustness: bool
+    selected_on_proper_time: bool
+    selected_on_geometry: bool
+    selected_on_mixed: bool
+    robustness_count: int
+    proper_time_count: int
+    geometry_count: int
+    mixed_count: int
+    robustness_rules: str
+    proper_time_rules: str
+    geometry_rules: str
+    mixed_rules: str
+
+
+@dataclass
+class FrontierAggregateRow:
+    rule_family: str
+    rule_signature: str
+    case_hits: int
+    selected_hits: int
+    robustness_hits: int
+    proper_time_hits: int
+    geometry_hits: int
+    mixed_hits: int
+
+
+@dataclass
+class FrontierTraceRow:
+    retained_weight: float
+    rule_signature: str
+    search_sources: str
+    current_selected: bool
+    on_robustness: bool
+    on_proper_time: bool
+    on_geometry: bool
+    on_mixed: bool
+    status: str
+    center_gap: float
+    arrival_span: float
+    min_margin: float
+    min_wrapped_margin: float
+
+
+@dataclass
+class RawFrontierPool:
+    selector_candidates: dict[
+        tuple[frozenset[int], frozenset[int], frozenset[tuple[int, int]]],
+        RuleCandidate,
+    ]
+    primary_selector_identity: tuple[
+        frozenset[int],
+        frozenset[int],
+        frozenset[tuple[int, int]],
+    ] | None
+    fallback_selector_identity: tuple[
+        frozenset[int],
+        frozenset[int],
+        frozenset[tuple[int, int]],
+    ] | None
+    rescue_selector_identities: tuple[
+        tuple[
+            frozenset[int],
+            frozenset[int],
+            frozenset[tuple[int, int]],
+        ],
+        ...,
+    ]
+    pooled_candidates: dict[
+        tuple[frozenset[int], frozenset[int], frozenset[tuple[int, int]]],
+        RuleCandidate,
+    ]
+    candidate_sources: dict[
+        tuple[frozenset[int], frozenset[int], frozenset[tuple[int, int]]],
+        str,
+    ]
+    primary_best_identity: tuple[
+        frozenset[int],
+        frozenset[int],
+        frozenset[tuple[int, int]],
+    ] | None
+    fallback_best_identity: tuple[
+        frozenset[int],
+        frozenset[int],
+        frozenset[tuple[int, int]],
+    ] | None
+    rescue_identities: tuple[
+        tuple[
+            frozenset[int],
+            frozenset[int],
+            frozenset[tuple[int, int]],
+        ],
+        ...,
+    ]
+
+
 @dataclass(frozen=True)
 class LocalRule:
     persistent_nodes: frozenset[tuple[int, int]]
@@ -731,6 +867,179 @@ def merge_search_diagnostics(*diagnostics: SearchDiagnostics) -> SearchDiagnosti
     )
 
 
+def candidate_identity_key(
+    candidate: RuleCandidate,
+) -> tuple[frozenset[int], frozenset[int], frozenset[tuple[int, int]]]:
+    return (
+        candidate.survive_counts,
+        candidate.birth_counts,
+        candidate.persistent_nodes,
+    )
+
+
+def candidate_search_key(
+    candidate: RuleCandidate,
+    graph_center: tuple[float, float],
+    preferred_set: set[tuple[frozenset[int], frozenset[int]]],
+    preferred_bonus: float,
+) -> tuple[float, ...]:
+    preferred_score = (
+        preferred_bonus
+        if (candidate.survive_counts, candidate.birth_counts) in preferred_set
+        else 0.0
+    )
+    orbit_variation = max(candidate.orbit_sizes[-4:]) - min(candidate.orbit_sizes[-4:])
+    seed_distance_sq = (
+        (candidate.seed_node[0] - graph_center[0]) ** 2
+        + (candidate.seed_node[1] - graph_center[1]) ** 2
+    )
+    return (
+        round(candidate.occupancy_mean, 12),
+        round(candidate.density, 12),
+        round(candidate.support_sum, 12),
+        round(preferred_score, 12),
+        -float(candidate.area),
+        -float(orbit_variation),
+        -float(seed_distance_sq),
+        -float(candidate.seed_node[0]),
+        -float(candidate.seed_node[1]),
+    )
+
+
+def collect_self_maintenance_candidates(
+    nodes: set[tuple[int, int]],
+    count_options: tuple[frozenset[int], ...] = COMPACT_COUNT_OPTIONS,
+    wrap_y: bool = False,
+    evolution_steps: int = 10,
+    sample_window: int = 4,
+    occupancy_threshold: float = 0.75,
+    min_component_fraction: float = 1.0,
+    preferred_rule_pairs: tuple[tuple[frozenset[int], frozenset[int]], ...] = (),
+    exact_rule_pairs: tuple[tuple[frozenset[int], frozenset[int]], ...] | None = None,
+    preferred_bonus: float = 0.0,
+    seed_builders: tuple[
+        Callable[[tuple[int, int], set[tuple[int, int]], bool], frozenset[tuple[int, int]]],
+        ...,
+    ] = (point_seed_builder,),
+) -> tuple[list[RuleCandidate], SearchDiagnostics]:
+    """Search over seeds and local rules, returning all accepted compact patterns plus rejection stats."""
+
+    graph_boundaries = boundary_nodes(nodes, wrap_y=wrap_y)
+    interior_nodes = sorted(node for node in nodes if node not in graph_boundaries)
+    xs = [x for x, _y in nodes]
+    ys = [y for _x, y in nodes]
+    graph_center = ((min(xs) + max(xs)) / 2, (min(ys) + max(ys)) / 2)
+    preferred_set = set(preferred_rule_pairs)
+    rule_pairs = filter_rule_pairs(count_options, exact_rule_pairs)
+    if not rule_pairs:
+        rule_pairs = ordered_rule_pairs(count_options, preferred_rule_pairs)
+
+    total_trials = 0
+    rejection_counts: Counter[str] = Counter()
+    accepted_candidates = 0
+    best_by_identity: dict[
+        tuple[frozenset[int], frozenset[int], frozenset[tuple[int, int]]],
+        RuleCandidate,
+    ] = {}
+    best_key_by_identity: dict[
+        tuple[frozenset[int], frozenset[int], frozenset[tuple[int, int]]],
+        tuple[float, ...],
+    ] = {}
+
+    for seed_node in interior_nodes:
+        for seed_builder in seed_builders:
+            seed_nodes = seed_builder(seed_node, nodes, wrap_y)
+            for survive_counts, birth_counts in rule_pairs:
+                total_trials += 1
+                persistent_nodes, occupancy, orbit_sizes = derive_emergent_persistent_nodes(
+                    nodes,
+                    seed_nodes=seed_nodes,
+                    survive_counts=survive_counts,
+                    birth_counts=birth_counts,
+                    steps=evolution_steps,
+                    sample_window=sample_window,
+                    occupancy_threshold=occupancy_threshold,
+                    wrap_y=wrap_y,
+                )
+                if not persistent_nodes:
+                    rejection_counts["empty"] += 1
+                    continue
+
+                largest_component = max(
+                    connected_components(persistent_nodes, nodes, wrap_y=wrap_y),
+                    key=len,
+                )
+                component_fraction = len(largest_component) / len(persistent_nodes)
+                if component_fraction < min_component_fraction:
+                    rejection_counts["disconnected"] += 1
+                    continue
+                if not 4 <= len(largest_component) <= 16:
+                    rejection_counts["size"] += 1
+                    continue
+
+                density = component_density(largest_component)
+                boundary_count = boundary_touch_count(largest_component, nodes, wrap_y=wrap_y)
+                if boundary_count:
+                    rejection_counts["boundary"] += 1
+                    continue
+
+                accepted_candidates += 1
+                area = component_area(largest_component)
+                support = derive_persistence_support(nodes, largest_component, wrap_y=wrap_y)
+                support_sum = sum(support[node] for node in largest_component)
+                average_occupancy = sum(occupancy[node] for node in largest_component) / len(
+                    largest_component
+                )
+                component_occupancy = {
+                    node: occupancy[node] if node in largest_component else 0.0
+                    for node in nodes
+                }
+
+                candidate = RuleCandidate(
+                    seed_node=seed_node,
+                    survive_counts=survive_counts,
+                    birth_counts=birth_counts,
+                    persistent_nodes=largest_component,
+                    occupancy=component_occupancy,
+                    orbit_sizes=orbit_sizes,
+                    support_sum=support_sum,
+                    occupancy_mean=average_occupancy,
+                    density=density,
+                    boundary_touch=boundary_count,
+                    area=area,
+                )
+                identity = candidate_identity_key(candidate)
+                search_key = candidate_search_key(
+                    candidate,
+                    graph_center=graph_center,
+                    preferred_set=preferred_set,
+                    preferred_bonus=preferred_bonus,
+                )
+                if identity not in best_key_by_identity or search_key > best_key_by_identity[identity]:
+                    best_key_by_identity[identity] = search_key
+                    best_by_identity[identity] = candidate
+
+    diagnostics = SearchDiagnostics(
+        total_trials=total_trials,
+        empty_patterns=rejection_counts["empty"],
+        disconnected_rejections=rejection_counts["disconnected"],
+        size_rejections=rejection_counts["size"],
+        boundary_rejections=rejection_counts["boundary"],
+        accepted_candidates=accepted_candidates,
+        dominant_rejection=dominant_rejection_label(rejection_counts),
+    )
+
+    sorted_candidates = [
+        best_by_identity[identity]
+        for identity in sorted(
+            best_by_identity,
+            key=lambda current_identity: best_key_by_identity[current_identity],
+            reverse=True,
+        )
+    ]
+    return sorted_candidates, diagnostics
+
+
 def scan_self_maintenance_rules(
     nodes: set[tuple[int, int]],
     count_options: tuple[frozenset[int], ...] = COMPACT_COUNT_OPTIONS,
@@ -749,114 +1058,20 @@ def scan_self_maintenance_rules(
 ) -> tuple[RuleCandidate | None, SearchDiagnostics]:
     """Search over seeds and local rules, returning the best pattern plus rejection stats."""
 
-    best_candidate: RuleCandidate | None = None
-    best_key: tuple[float, ...] | None = None
-    graph_boundaries = boundary_nodes(nodes, wrap_y=wrap_y)
-    interior_nodes = sorted(node for node in nodes if node not in graph_boundaries)
-    xs = [x for x, _y in nodes]
-    ys = [y for _x, y in nodes]
-    graph_center = ((min(xs) + max(xs)) / 2, (min(ys) + max(ys)) / 2)
-    preferred_set = set(preferred_rule_pairs)
-    rule_pairs = filter_rule_pairs(count_options, exact_rule_pairs)
-    if not rule_pairs:
-        rule_pairs = ordered_rule_pairs(count_options, preferred_rule_pairs)
-
-    total_trials = 0
-    rejection_counts: Counter[str] = Counter()
-    accepted_candidates = 0
-
-    for seed_node in interior_nodes:
-        for seed_builder in seed_builders:
-            seed_nodes = seed_builder(seed_node, nodes, wrap_y)
-            for survive_counts, birth_counts in rule_pairs:
-                    total_trials += 1
-                    persistent_nodes, occupancy, orbit_sizes = derive_emergent_persistent_nodes(
-                        nodes,
-                        seed_nodes=seed_nodes,
-                        survive_counts=survive_counts,
-                        birth_counts=birth_counts,
-                        steps=evolution_steps,
-                        sample_window=sample_window,
-                        occupancy_threshold=occupancy_threshold,
-                        wrap_y=wrap_y,
-                    )
-                    if not persistent_nodes:
-                        rejection_counts["empty"] += 1
-                        continue
-
-                    largest_component = max(
-                        connected_components(persistent_nodes, nodes, wrap_y=wrap_y),
-                        key=len,
-                    )
-                    component_fraction = len(largest_component) / len(persistent_nodes)
-                    if component_fraction < min_component_fraction:
-                        rejection_counts["disconnected"] += 1
-                        continue
-                    if not 4 <= len(largest_component) <= 16:
-                        rejection_counts["size"] += 1
-                        continue
-
-                    density = component_density(largest_component)
-                    boundary_count = boundary_touch_count(largest_component, nodes, wrap_y=wrap_y)
-                    if boundary_count:
-                        rejection_counts["boundary"] += 1
-                        continue
-
-                    accepted_candidates += 1
-                    preferred_score = preferred_bonus if (survive_counts, birth_counts) in preferred_set else 0.0
-                    area = component_area(largest_component)
-                    support = derive_persistence_support(nodes, largest_component, wrap_y=wrap_y)
-                    support_sum = sum(support[node] for node in largest_component)
-                    average_occupancy = sum(occupancy[node] for node in largest_component) / len(
-                        largest_component
-                    )
-                    component_occupancy = {
-                        node: occupancy[node] if node in largest_component else 0.0
-                        for node in nodes
-                    }
-                    orbit_variation = max(orbit_sizes[-4:]) - min(orbit_sizes[-4:])
-
-                    candidate = RuleCandidate(
-                        seed_node=seed_node,
-                        survive_counts=survive_counts,
-                        birth_counts=birth_counts,
-                        persistent_nodes=largest_component,
-                        occupancy=component_occupancy,
-                        orbit_sizes=orbit_sizes,
-                        support_sum=support_sum,
-                        occupancy_mean=average_occupancy,
-                        density=density,
-                        boundary_touch=boundary_count,
-                        area=area,
-                    )
-                    seed_distance_sq = (
-                        (candidate.seed_node[0] - graph_center[0]) ** 2
-                        + (candidate.seed_node[1] - graph_center[1]) ** 2
-                    )
-                    candidate_key = (
-                        round(candidate.occupancy_mean, 12),
-                        round(candidate.density, 12),
-                        round(candidate.support_sum, 12),
-                        round(preferred_score, 12),
-                        -float(candidate.area),
-                        -float(orbit_variation),
-                        -float(seed_distance_sq),
-                        -float(candidate.seed_node[0]),
-                        -float(candidate.seed_node[1]),
-                    )
-                    if best_key is None or candidate_key > best_key:
-                        best_key = candidate_key
-                        best_candidate = candidate
-
-    diagnostics = SearchDiagnostics(
-        total_trials=total_trials,
-        empty_patterns=rejection_counts["empty"],
-        disconnected_rejections=rejection_counts["disconnected"],
-        size_rejections=rejection_counts["size"],
-        boundary_rejections=rejection_counts["boundary"],
-        accepted_candidates=accepted_candidates,
-        dominant_rejection=dominant_rejection_label(rejection_counts),
+    candidates, diagnostics = collect_self_maintenance_candidates(
+        nodes,
+        count_options=count_options,
+        wrap_y=wrap_y,
+        evolution_steps=evolution_steps,
+        sample_window=sample_window,
+        occupancy_threshold=occupancy_threshold,
+        min_component_fraction=min_component_fraction,
+        preferred_rule_pairs=preferred_rule_pairs,
+        exact_rule_pairs=exact_rule_pairs,
+        preferred_bonus=preferred_bonus,
+        seed_builders=seed_builders,
     )
+    best_candidate = candidates[0] if candidates else None
     return best_candidate, diagnostics
 
 
@@ -3060,6 +3275,742 @@ def selector_policy_sweep_cases(
     return rows
 
 
+def merge_candidate_sources(
+    current_sources: str,
+    new_source: str,
+) -> str:
+    source_parts = set(filter(None, current_sources.split("+"))) if current_sources else set()
+    source_parts.update(filter(None, new_source.split("+")))
+    return "+".join(sorted(source_parts))
+
+
+def family_count_options() -> tuple[tuple[str, tuple[frozenset[int], ...]], ...]:
+    return (
+        ("compact", SWEEP_COMPACT_COUNT_OPTIONS),
+        ("extended", SWEEP_EXTENDED_COUNT_OPTIONS),
+    )
+
+
+def build_frontier_postulates(retained_weight: float) -> RulePostulates:
+    return RulePostulates(
+        phase_per_action=4.0,
+        attenuation_power=1.0,
+        action_mode="retained_mix",
+        field_mode="relaxed",
+        action_retained_weight=retained_weight,
+    )
+
+
+def evaluate_frontier_candidate(
+    candidate: RuleCandidate,
+    rule_family: str,
+    pack_name: str,
+    scenario_name: str,
+    retained_weight: float,
+    search_sources: str,
+    nodes: set[tuple[int, int]],
+    wrap_y: bool,
+    postulates: RulePostulates,
+    current_selected: bool,
+) -> EvaluatedCandidate:
+    center_gap, arrival_span, centroid_y, _survived, status = evaluate_rule_candidate(
+        nodes,
+        wrap_y,
+        candidate,
+        postulates,
+    )
+    min_margin, min_wrapped_margin = minimum_proper_time_margin(
+        nodes,
+        wrap_y,
+        candidate,
+        postulates,
+    )
+    _source_y, _center_distance, _side_average, geometric_focus_gap, _path_shapes = geometric_focus_summary(
+        nodes,
+        wrap_y,
+        candidate,
+        postulates,
+    )
+    stiffness = center_gap / geometric_focus_gap if geometric_focus_gap != 0.0 else math.inf
+    return EvaluatedCandidate(
+        rule_family=rule_family,
+        pack_name=pack_name,
+        scenario_name=scenario_name,
+        retained_weight=retained_weight,
+        candidate_identity=candidate_identity_key(candidate),
+        search_sources=search_sources,
+        seed_node=candidate.seed_node,
+        rule_signature=format_rule_signature(
+            candidate.survive_counts,
+            candidate.birth_counts,
+        ),
+        persistent_nodes=len(candidate.persistent_nodes),
+        occupancy_mean=candidate.occupancy_mean,
+        density=candidate.density,
+        center_gap=center_gap,
+        arrival_span=arrival_span,
+        centroid_y=centroid_y,
+        status=status,
+        status_rank=robustness_rank(status),
+        min_margin=min_margin,
+        min_wrapped_margin=min_wrapped_margin,
+        geometric_focus_gap=geometric_focus_gap,
+        stiffness=stiffness,
+        current_selected=current_selected,
+    )
+
+
+def frontier_axes() -> dict[str, tuple[str, ...]]:
+    return {
+        "robustness": ("status_rank", "center_gap", "arrival_span"),
+        "proper_time": ("status_rank", "min_margin", "min_wrapped_margin"),
+        "geometry": ("status_rank", "geometric_focus_gap"),
+        "mixed": ("status_rank", "arrival_span", "stiffness", "min_wrapped_margin"),
+    }
+
+
+def dominates_candidate(
+    left: EvaluatedCandidate,
+    right: EvaluatedCandidate,
+    axes: tuple[str, ...],
+) -> bool:
+    left_values = [getattr(left, axis) for axis in axes]
+    right_values = [getattr(right, axis) for axis in axes]
+    return all(left_value >= right_value for left_value, right_value in zip(left_values, right_values)) and any(
+        left_value > right_value for left_value, right_value in zip(left_values, right_values)
+    )
+
+
+def pareto_frontier_identities(
+    candidates: list[EvaluatedCandidate],
+    axes: tuple[str, ...],
+) -> set[
+    tuple[
+        frozenset[int],
+        frozenset[int],
+        frozenset[tuple[int, int]],
+    ]
+]:
+    frontier: set[
+        tuple[
+            frozenset[int],
+            frozenset[int],
+            frozenset[tuple[int, int]],
+        ]
+    ] = set()
+    for candidate in candidates:
+        if any(
+            dominates_candidate(other_candidate, candidate, axes)
+            for other_candidate in candidates
+            if other_candidate.candidate_identity != candidate.candidate_identity
+        ):
+            continue
+        frontier.add(candidate.candidate_identity)
+    return frontier
+
+
+def format_frontier_rule_signatures(
+    candidates: list[EvaluatedCandidate],
+) -> str:
+    signatures = sorted({candidate.rule_signature for candidate in candidates})
+    return ", ".join(signatures) if signatures else "-"
+
+
+def collect_raw_frontier_pool(
+    nodes: set[tuple[int, int]],
+    wrap_y: bool,
+    count_options: tuple[frozenset[int], ...],
+) -> RawFrontierPool:
+    xs = [x for x, _y in nodes]
+    ys = [y for _x, y in nodes]
+    graph_center = ((min(xs) + max(xs)) / 2, (min(ys) + max(ys)) / 2)
+    pooled_candidates: dict[
+        tuple[frozenset[int], frozenset[int], frozenset[tuple[int, int]]],
+        RuleCandidate,
+    ] = {}
+    candidate_sources: dict[
+        tuple[frozenset[int], frozenset[int], frozenset[tuple[int, int]]],
+        str,
+    ] = {}
+
+    search_specs = (
+        (
+            "primary",
+            dict(
+                evolution_steps=8,
+                sample_window=3,
+                occupancy_threshold=2 / 3,
+                min_component_fraction=0.9,
+                preferred_rule_pairs=WINNER_RULE_PAIRS,
+                preferred_bonus=0.05,
+                seed_builders=(point_seed_builder,),
+            ),
+        ),
+        (
+            "fallback",
+            dict(
+                evolution_steps=10,
+                sample_window=4,
+                occupancy_threshold=0.6,
+                min_component_fraction=0.7,
+                preferred_rule_pairs=WINNER_RULE_PAIRS,
+                preferred_bonus=0.08,
+                seed_builders=(point_seed_builder, cluster_seed_builder),
+            ),
+        ),
+    )
+
+    primary_best_identity = None
+    fallback_best_identity = None
+    rescue_identity_list: list[
+        tuple[frozenset[int], frozenset[int], frozenset[tuple[int, int]]]
+    ] = []
+    winner_signatures = {
+        format_rule_signature(survive_counts, birth_counts)
+        for survive_counts, birth_counts in WINNER_RULE_PAIRS
+        if survive_counts in count_options and birth_counts in count_options
+    }
+
+    for source_label, search_kwargs in search_specs:
+        collected_candidates, _diagnostics = collect_self_maintenance_candidates(
+            nodes,
+            count_options=count_options,
+            wrap_y=wrap_y,
+            **search_kwargs,
+        )
+        if collected_candidates:
+            best_identity = candidate_identity_key(collected_candidates[0])
+            if source_label == "primary":
+                primary_best_identity = best_identity
+            else:
+                fallback_best_identity = best_identity
+        for candidate in collected_candidates:
+            identity = candidate_identity_key(candidate)
+            if identity not in pooled_candidates:
+                pooled_candidates[identity] = candidate
+                candidate_sources[identity] = source_label
+            else:
+                candidate_sources[identity] = merge_candidate_sources(
+                    candidate_sources[identity],
+                    source_label,
+                )
+
+    present_rule_signatures = {
+        format_rule_signature(candidate.survive_counts, candidate.birth_counts)
+        for candidate in pooled_candidates.values()
+    }
+    for survive_counts, birth_counts in WINNER_RULE_PAIRS:
+        if survive_counts not in count_options or birth_counts not in count_options:
+            continue
+        winner_signature = format_rule_signature(survive_counts, birth_counts)
+        if winner_signature in present_rule_signatures:
+            continue
+        exact_candidates, _diagnostics = collect_self_maintenance_candidates(
+            nodes,
+            count_options=count_options,
+            wrap_y=wrap_y,
+            evolution_steps=10,
+            sample_window=4,
+            occupancy_threshold=0.6,
+            min_component_fraction=0.7,
+            exact_rule_pairs=((survive_counts, birth_counts),),
+            preferred_rule_pairs=WINNER_RULE_PAIRS,
+            preferred_bonus=0.2,
+            seed_builders=(point_seed_builder, cluster_seed_builder),
+        )
+        for candidate in exact_candidates:
+            identity = candidate_identity_key(candidate)
+            rescue_identity_list.append(identity)
+            if identity not in pooled_candidates:
+                pooled_candidates[identity] = candidate
+                candidate_sources[identity] = "rescue"
+                present_rule_signatures.add(winner_signature)
+            else:
+                candidate_sources[identity] = merge_candidate_sources(
+                    candidate_sources[identity],
+                    "rescue",
+                )
+                present_rule_signatures.add(winner_signature)
+
+    primary_selector_identity = primary_best_identity
+    fallback_selector_identity = fallback_best_identity
+    rescue_selector_identities = tuple(
+        dict.fromkeys(
+            identity
+            for identity, candidate in pooled_candidates.items()
+            if format_rule_signature(
+                candidate.survive_counts,
+                candidate.birth_counts,
+            ) in winner_signatures
+        )
+    )
+
+    best_identity_by_signature: dict[str, tuple[frozenset[int], frozenset[int], frozenset[tuple[int, int]]]] = {}
+    best_signature_key: dict[str, tuple[float, ...]] = {}
+    merged_signature_sources: dict[str, str] = {}
+    for identity, candidate in pooled_candidates.items():
+        rule_signature = format_rule_signature(
+            candidate.survive_counts,
+            candidate.birth_counts,
+        )
+        merged_signature_sources[rule_signature] = merge_candidate_sources(
+            merged_signature_sources.get(rule_signature, ""),
+            candidate_sources[identity],
+        )
+        search_key = candidate_search_key(
+            candidate,
+            graph_center=graph_center,
+            preferred_set=set(),
+            preferred_bonus=0.0,
+        )
+        if rule_signature not in best_signature_key or search_key > best_signature_key[rule_signature]:
+            best_signature_key[rule_signature] = search_key
+            best_identity_by_signature[rule_signature] = identity
+
+    signature_pooled_candidates = {
+        identity: pooled_candidates[identity]
+        for identity in best_identity_by_signature.values()
+    }
+    signature_candidate_sources = {
+        identity: merged_signature_sources[
+            format_rule_signature(
+                signature_pooled_candidates[identity].survive_counts,
+                signature_pooled_candidates[identity].birth_counts,
+            )
+        ]
+        for identity in signature_pooled_candidates
+    }
+
+    if primary_best_identity is not None:
+        primary_signature = format_rule_signature(
+            pooled_candidates[primary_best_identity].survive_counts,
+            pooled_candidates[primary_best_identity].birth_counts,
+        )
+        primary_best_identity = best_identity_by_signature[primary_signature]
+    if fallback_best_identity is not None:
+        fallback_signature = format_rule_signature(
+            pooled_candidates[fallback_best_identity].survive_counts,
+            pooled_candidates[fallback_best_identity].birth_counts,
+        )
+        fallback_best_identity = best_identity_by_signature[fallback_signature]
+    rescue_identity_list = list(
+        dict.fromkeys(
+            best_identity_by_signature[
+                format_rule_signature(
+                    pooled_candidates[identity].survive_counts,
+                    pooled_candidates[identity].birth_counts,
+                )
+            ]
+            for identity in rescue_identity_list
+        )
+    )
+
+    return RawFrontierPool(
+        selector_candidates=dict(pooled_candidates),
+        primary_selector_identity=primary_selector_identity,
+        fallback_selector_identity=fallback_selector_identity,
+        rescue_selector_identities=rescue_selector_identities,
+        pooled_candidates=signature_pooled_candidates,
+        candidate_sources=signature_candidate_sources,
+        primary_best_identity=primary_best_identity,
+        fallback_best_identity=fallback_best_identity,
+        rescue_identities=tuple(dict.fromkeys(rescue_identity_list)),
+    )
+
+
+def choose_current_selected_signature(
+    raw_pool: RawFrontierPool,
+    nodes: set[tuple[int, int]],
+    wrap_y: bool,
+    postulates: RulePostulates,
+    selector_mode: str = "always_compare",
+) -> str | None:
+    selector_metric_cache: dict[
+        tuple[frozenset[int], frozenset[int], frozenset[tuple[int, int]]],
+        tuple[tuple[float, ...], str, str],
+    ] = {}
+
+    def selector_metrics(
+        identity: tuple[frozenset[int], frozenset[int], frozenset[tuple[int, int]]],
+    ) -> tuple[tuple[float, ...], str, str]:
+        if identity not in selector_metric_cache:
+            candidate = raw_pool.selector_candidates[identity]
+            center_gap, arrival_span, centroid_y, _survived, status = evaluate_rule_candidate(
+                nodes,
+                wrap_y,
+                candidate,
+                postulates,
+            )
+            selector_metric_cache[identity] = (
+                candidate_quality_key(
+                    candidate,
+                    (
+                        center_gap,
+                        arrival_span,
+                        centroid_y,
+                        status == "survives",
+                        status,
+                    ),
+                ),
+                status,
+                format_rule_signature(
+                    candidate.survive_counts,
+                    candidate.birth_counts,
+                ),
+            )
+        return selector_metric_cache[identity]
+
+    selected_identity = raw_pool.primary_selector_identity or raw_pool.fallback_selector_identity
+    selected_status = "no pattern"
+    selected_key = None
+    if selected_identity is not None:
+        selected_key, selected_status, _selected_signature = selector_metrics(selected_identity)
+    should_consult_rescue = (
+        selector_mode == "always_compare"
+        or selected_identity is None
+        or selected_status != "survives"
+    )
+    if should_consult_rescue:
+        rescue_identities = [
+            identity
+            for identity in raw_pool.rescue_selector_identities
+            if identity in raw_pool.selector_candidates
+        ]
+        if rescue_identities:
+            best_rescue_identity = max(
+                rescue_identities,
+                key=lambda identity: selector_metrics(identity)[0],
+            )
+            rescue_key, _rescue_status, _rescue_signature = selector_metrics(best_rescue_identity)
+            if selected_key is None or rescue_key > selected_key:
+                selected_identity = best_rescue_identity
+                selected_key = rescue_key
+
+    if selected_identity is None:
+        return None
+    return selector_metrics(selected_identity)[2]
+
+
+def collect_candidate_pool(
+    pack_name: str,
+    scenario_name: str,
+    nodes: set[tuple[int, int]],
+    wrap_y: bool,
+    rule_family: str,
+    count_options: tuple[frozenset[int], ...],
+    retained_weight: float,
+    raw_pool: RawFrontierPool | None = None,
+) -> list[EvaluatedCandidate]:
+    postulates = build_frontier_postulates(retained_weight)
+    current_raw_pool = raw_pool or collect_raw_frontier_pool(
+        nodes,
+        wrap_y,
+        count_options,
+    )
+
+    evaluated_candidates = [
+        evaluate_frontier_candidate(
+            candidate=candidate,
+            rule_family=rule_family,
+            pack_name=pack_name,
+            scenario_name=scenario_name,
+            retained_weight=retained_weight,
+            search_sources=current_raw_pool.candidate_sources[identity],
+            nodes=nodes,
+            wrap_y=wrap_y,
+            postulates=postulates,
+            current_selected=False,
+        )
+        for identity, candidate in current_raw_pool.pooled_candidates.items()
+    ]
+    selected_signature = choose_current_selected_signature(
+        current_raw_pool,
+        nodes,
+        wrap_y,
+        postulates,
+        selector_mode="always_compare",
+    )
+    for candidate in evaluated_candidates:
+        candidate.current_selected = candidate.rule_signature == selected_signature
+    evaluated_candidates.sort(
+        key=lambda candidate: (
+            candidate.current_selected,
+            candidate.status_rank,
+            candidate.center_gap + candidate.arrival_span,
+            candidate.arrival_span,
+            candidate.center_gap,
+            candidate.rule_signature,
+            candidate.seed_node,
+        ),
+        reverse=True,
+    )
+
+    frontier_sets = {
+        view_name: pareto_frontier_identities(evaluated_candidates, axes)
+        for view_name, axes in frontier_axes().items()
+    }
+    for candidate in evaluated_candidates:
+        candidate.on_robustness = candidate.candidate_identity in frontier_sets["robustness"]
+        candidate.on_proper_time = candidate.candidate_identity in frontier_sets["proper_time"]
+        candidate.on_geometry = candidate.candidate_identity in frontier_sets["geometry"]
+        candidate.on_mixed = candidate.candidate_identity in frontier_sets["mixed"]
+
+    return evaluated_candidates
+
+
+def frontier_case_analysis(
+    pack_name: str,
+    scenario_name: str,
+    nodes: set[tuple[int, int]],
+    wrap_y: bool,
+    rule_family: str,
+    count_options: tuple[frozenset[int], ...],
+    retained_weight: float,
+    raw_pool: RawFrontierPool | None = None,
+) -> tuple[FrontierScenarioRow, list[EvaluatedCandidate]]:
+    candidates = collect_candidate_pool(
+        pack_name=pack_name,
+        scenario_name=scenario_name,
+        nodes=nodes,
+        wrap_y=wrap_y,
+        rule_family=rule_family,
+        count_options=count_options,
+        retained_weight=retained_weight,
+        raw_pool=raw_pool,
+    )
+    selected_candidates = [candidate for candidate in candidates if candidate.current_selected]
+    selected_candidate = selected_candidates[0] if selected_candidates else None
+    robustness_candidates = [candidate for candidate in candidates if candidate.on_robustness]
+    proper_time_candidates = [candidate for candidate in candidates if candidate.on_proper_time]
+    geometry_candidates = [candidate for candidate in candidates if candidate.on_geometry]
+    mixed_candidates = [candidate for candidate in candidates if candidate.on_mixed]
+    row = FrontierScenarioRow(
+        pack_name=pack_name,
+        scenario_name=scenario_name,
+        rule_family=rule_family,
+        retained_weight=retained_weight,
+        pool_size=len(candidates),
+        selected_rule=(selected_candidate.rule_signature if selected_candidate is not None else "none"),
+        selected_on_robustness=(selected_candidate.on_robustness if selected_candidate is not None else False),
+        selected_on_proper_time=(selected_candidate.on_proper_time if selected_candidate is not None else False),
+        selected_on_geometry=(selected_candidate.on_geometry if selected_candidate is not None else False),
+        selected_on_mixed=(selected_candidate.on_mixed if selected_candidate is not None else False),
+        robustness_count=len(robustness_candidates),
+        proper_time_count=len(proper_time_candidates),
+        geometry_count=len(geometry_candidates),
+        mixed_count=len(mixed_candidates),
+        robustness_rules=format_frontier_rule_signatures(robustness_candidates),
+        proper_time_rules=format_frontier_rule_signatures(proper_time_candidates),
+        geometry_rules=format_frontier_rule_signatures(geometry_candidates),
+        mixed_rules=format_frontier_rule_signatures(mixed_candidates),
+    )
+    return row, candidates
+
+
+def frontier_sweep_results(
+    retained_weights: tuple[float, ...] = (0.75, 0.8, 0.85, 0.9, 0.95, 1.0),
+) -> tuple[list[FrontierScenarioRow], list[EvaluatedCandidate]]:
+    scenario_rows: list[FrontierScenarioRow] = []
+    candidates: list[EvaluatedCandidate] = []
+    for rule_family, count_options in family_count_options():
+        for pack_name, scenarios in benchmark_packs():
+            for scenario_name, nodes, wrap_y in scenarios:
+                raw_pool = collect_raw_frontier_pool(
+                    nodes,
+                    wrap_y,
+                    count_options,
+                )
+                for retained_weight in retained_weights:
+                    scenario_row, case_candidates = frontier_case_analysis(
+                        pack_name=pack_name,
+                        scenario_name=scenario_name,
+                        nodes=nodes,
+                        wrap_y=wrap_y,
+                        rule_family=rule_family,
+                        count_options=count_options,
+                        retained_weight=retained_weight,
+                        raw_pool=raw_pool,
+                    )
+                    scenario_rows.append(scenario_row)
+                    candidates.extend(case_candidates)
+    return scenario_rows, candidates
+
+
+def summarize_frontier_aggregates(
+    candidates: list[EvaluatedCandidate],
+) -> list[FrontierAggregateRow]:
+    case_sets: DefaultDict[tuple[str, str], set[tuple[str, str, float]]] = defaultdict(set)
+    selected_sets: DefaultDict[tuple[str, str], set[tuple[str, str, float]]] = defaultdict(set)
+    robustness_sets: DefaultDict[tuple[str, str], set[tuple[str, str, float]]] = defaultdict(set)
+    proper_time_sets: DefaultDict[tuple[str, str], set[tuple[str, str, float]]] = defaultdict(set)
+    geometry_sets: DefaultDict[tuple[str, str], set[tuple[str, str, float]]] = defaultdict(set)
+    mixed_sets: DefaultDict[tuple[str, str], set[tuple[str, str, float]]] = defaultdict(set)
+
+    for candidate in candidates:
+        family_rule = (candidate.rule_family, candidate.rule_signature)
+        case_key = (candidate.pack_name, candidate.scenario_name, candidate.retained_weight)
+        case_sets[family_rule].add(case_key)
+        if candidate.current_selected:
+            selected_sets[family_rule].add(case_key)
+        if candidate.on_robustness:
+            robustness_sets[family_rule].add(case_key)
+        if candidate.on_proper_time:
+            proper_time_sets[family_rule].add(case_key)
+        if candidate.on_geometry:
+            geometry_sets[family_rule].add(case_key)
+        if candidate.on_mixed:
+            mixed_sets[family_rule].add(case_key)
+
+    rows = [
+        FrontierAggregateRow(
+            rule_family=rule_family,
+            rule_signature=rule_signature,
+            case_hits=len(case_sets[(rule_family, rule_signature)]),
+            selected_hits=len(selected_sets[(rule_family, rule_signature)]),
+            robustness_hits=len(robustness_sets[(rule_family, rule_signature)]),
+            proper_time_hits=len(proper_time_sets[(rule_family, rule_signature)]),
+            geometry_hits=len(geometry_sets[(rule_family, rule_signature)]),
+            mixed_hits=len(mixed_sets[(rule_family, rule_signature)]),
+        )
+        for rule_family, rule_signature in case_sets
+    ]
+    return sorted(
+        rows,
+        key=lambda row: (
+            row.rule_family,
+            -row.mixed_hits,
+            -row.robustness_hits,
+            -row.proper_time_hits,
+            -row.geometry_hits,
+            -row.selected_hits,
+            row.rule_signature,
+        ),
+    )
+
+
+def frontier_hard_case_trace(
+    retained_weights: tuple[float, ...] = (0.75, 0.8, 0.85, 0.9, 0.95, 1.0),
+) -> tuple[str, str, list[FrontierTraceRow]]:
+    hardest_rows = critical_weight_cases()
+    hardest_pack = hardest_rows[0].pack_name if hardest_rows else "mirror"
+    hardest_scenario = hardest_rows[0].scenario_name if hardest_rows else "rect-hard-large"
+    nodes, wrap_y = scenario_by_name(hardest_pack, hardest_scenario)
+    fallback_candidate, _fallback_diag = scan_self_maintaining_rules_fallback_only(
+        nodes,
+        wrap_y,
+        RulePostulates(phase_per_action=4.0),
+    )
+    rescue_candidate, _rescue_diag, _rescue_metrics = quality_rescue_rule(
+        nodes,
+        wrap_y,
+        SWEEP_COMPACT_COUNT_OPTIONS,
+        build_frontier_postulates(1.0),
+    )
+    raw_pool = collect_raw_frontier_pool(
+        nodes,
+        wrap_y,
+        SWEEP_COMPACT_COUNT_OPTIONS,
+    )
+    traced_signatures = [
+        format_rule_signature(
+            fallback_candidate.survive_counts,
+            fallback_candidate.birth_counts,
+        )
+        if fallback_candidate is not None
+        else "none",
+        format_rule_signature(
+            rescue_candidate.survive_counts,
+            rescue_candidate.birth_counts,
+        )
+        if rescue_candidate is not None
+        else "none",
+    ]
+
+    rows: list[FrontierTraceRow] = []
+    for retained_weight in retained_weights:
+        _scenario_row, case_candidates = frontier_case_analysis(
+            pack_name=hardest_pack,
+            scenario_name=hardest_scenario,
+            nodes=nodes,
+            wrap_y=wrap_y,
+            rule_family="compact",
+            count_options=SWEEP_COMPACT_COUNT_OPTIONS,
+            retained_weight=retained_weight,
+            raw_pool=raw_pool,
+        )
+        candidates_by_signature: dict[str, EvaluatedCandidate] = {}
+        for candidate in case_candidates:
+            existing_candidate = candidates_by_signature.get(candidate.rule_signature)
+            candidate_key = (
+                candidate.current_selected,
+                candidate.on_robustness or candidate.on_proper_time or candidate.on_geometry or candidate.on_mixed,
+                candidate.on_robustness,
+                candidate.on_mixed,
+                candidate.on_proper_time,
+                candidate.on_geometry,
+                candidate.status_rank,
+                candidate.center_gap + candidate.arrival_span,
+                candidate.min_margin,
+                candidate.seed_node,
+            )
+            if existing_candidate is None:
+                candidates_by_signature[candidate.rule_signature] = candidate
+                continue
+            existing_key = (
+                existing_candidate.current_selected,
+                existing_candidate.on_robustness or existing_candidate.on_proper_time or existing_candidate.on_geometry or existing_candidate.on_mixed,
+                existing_candidate.on_robustness,
+                existing_candidate.on_mixed,
+                existing_candidate.on_proper_time,
+                existing_candidate.on_geometry,
+                existing_candidate.status_rank,
+                existing_candidate.center_gap + existing_candidate.arrival_span,
+                existing_candidate.min_margin,
+                existing_candidate.seed_node,
+            )
+            if candidate_key > existing_key:
+                candidates_by_signature[candidate.rule_signature] = candidate
+        for traced_signature in traced_signatures:
+            candidate = candidates_by_signature.get(traced_signature)
+            if candidate is None:
+                rows.append(
+                    FrontierTraceRow(
+                        retained_weight=retained_weight,
+                        rule_signature=traced_signature,
+                        search_sources="-",
+                        current_selected=False,
+                        on_robustness=False,
+                        on_proper_time=False,
+                        on_geometry=False,
+                        on_mixed=False,
+                        status="not in pool",
+                        center_gap=float("nan"),
+                        arrival_span=float("nan"),
+                        min_margin=float("nan"),
+                        min_wrapped_margin=float("nan"),
+                    )
+                )
+                continue
+            rows.append(
+                FrontierTraceRow(
+                    retained_weight=retained_weight,
+                    rule_signature=traced_signature,
+                    search_sources=candidate.search_sources,
+                    current_selected=candidate.current_selected,
+                    on_robustness=candidate.on_robustness,
+                    on_proper_time=candidate.on_proper_time,
+                    on_geometry=candidate.on_geometry,
+                    on_mixed=candidate.on_mixed,
+                    status=candidate.status,
+                    center_gap=candidate.center_gap,
+                    arrival_span=candidate.arrival_span,
+                    min_margin=candidate.min_margin,
+                    min_wrapped_margin=candidate.min_wrapped_margin,
+                )
+            )
+    return hardest_pack, hardest_scenario, rows
+
+
 def sample_boundary_arrivals(
     width: int,
     sample_ys: list[int],
@@ -3698,6 +4649,82 @@ def render_selector_sweep_table(
     return "\n".join(lines)
 
 
+def format_metric(value: float) -> str:
+    if math.isnan(value):
+        return "nan"
+    if math.isinf(value):
+        return "inf" if value > 0 else "-inf"
+    return f"{value:.3f}"
+
+
+def render_frontier_scenario_table(
+    rows: list[FrontierScenarioRow],
+    limit: int = 12,
+) -> str:
+    lines = [
+        "pack   | scenario         | family   | w    | pool | selected           | sel R/P/G/M | R/P/G/M counts | robustness rules     | proper-time rules   | geometry rules      | mixed rules",
+        "-------+------------------+----------+------+-----+--------------------+-------------+----------------+----------------------+---------------------+---------------------+---------------------",
+    ]
+    for row in rows[:limit]:
+        lines.append(
+            f"{row.pack_name:<6} | "
+            f"{row.scenario_name:<16} | "
+            f"{row.rule_family:<8} | "
+            f"{row.retained_weight:>4.2f} | "
+            f"{row.pool_size:>3} | "
+            f"{row.selected_rule:<18} | "
+            f"{('Y' if row.selected_on_robustness else 'n')}/{('Y' if row.selected_on_proper_time else 'n')}/{('Y' if row.selected_on_geometry else 'n')}/{('Y' if row.selected_on_mixed else 'n'):<7} | "
+            f"{row.robustness_count:>1}/{row.proper_time_count:>1}/{row.geometry_count:>1}/{row.mixed_count:>1}          | "
+            f"{row.robustness_rules:<20} | "
+            f"{row.proper_time_rules:<19} | "
+            f"{row.geometry_rules:<19} | "
+            f"{row.mixed_rules}"
+        )
+    return "\n".join(lines)
+
+
+def render_frontier_aggregate_table(
+    rows: list[FrontierAggregateRow],
+) -> str:
+    lines = [
+        "family   | rule              | cases | selected | robustness | proper-time | geometry | mixed",
+        "---------+-------------------+-------+----------+------------+-------------+----------+------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.rule_family:<8} | "
+            f"{row.rule_signature:<17} | "
+            f"{row.case_hits:>5} | "
+            f"{row.selected_hits:>8} | "
+            f"{row.robustness_hits:>10} | "
+            f"{row.proper_time_hits:>11} | "
+            f"{row.geometry_hits:>8} | "
+            f"{row.mixed_hits:>4}"
+        )
+    return "\n".join(lines)
+
+
+def render_frontier_trace_table(
+    rows: list[FrontierTraceRow],
+) -> str:
+    lines = [
+        "w    | rule              | sources      | current | R/P/G/M | status      | gap/span       | margin/wrapped",
+        "-----+-------------------+--------------+---------+---------+-------------+----------------+---------------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.retained_weight:>4.2f} | "
+            f"{row.rule_signature:<17} | "
+            f"{row.search_sources:<12} | "
+            f"{'yes' if row.current_selected else 'no':<7} | "
+            f"{('Y' if row.on_robustness else 'n')}/{('Y' if row.on_proper_time else 'n')}/{('Y' if row.on_geometry else 'n')}/{('Y' if row.on_mixed else 'n'):<5} | "
+            f"{row.status:<11} | "
+            f"{format_metric(row.center_gap):>6}/{format_metric(row.arrival_span):<7} | "
+            f"{format_metric(row.min_margin):>6}/{format_metric(row.min_wrapped_margin)}"
+        )
+    return "\n".join(lines)
+
+
 def main() -> None:
     print("DISCRETE EVENT-NETWORK TOY MODEL")
     print()
@@ -4282,6 +5309,82 @@ def main() -> None:
         if all(row.gated_status == row.ungated_status == "survives" for row in differing_sweep_rows):
             print("- Every changed case still `survives` under both selectors, so selector policy is steering branch choice more than pass/fail status.")
     print("- This is the cleanest current conclusion: both the focusing metric and the selector policy are load-bearing choices in the present toy model.")
+    print()
+
+    print("23) Selector-free frontier overview")
+    frontier_scenario_rows, frontier_candidates = frontier_sweep_results()
+    interesting_frontier_rows = [
+        row
+        for row in frontier_scenario_rows
+        if len({row.robustness_rules, row.proper_time_rules, row.geometry_rules, row.mixed_rules}) > 1
+        or not (
+            row.selected_on_robustness
+            and row.selected_on_proper_time
+            and row.selected_on_geometry
+            and row.selected_on_mixed
+        )
+    ]
+    print(
+        render_frontier_scenario_table(
+            interesting_frontier_rows,
+            limit=min(12, len(interesting_frontier_rows)),
+        )
+    )
+    print()
+    print("Interpretation:")
+    total_frontier_cases = len(frontier_scenario_rows)
+    print("- This keeps all viable motifs in play instead of collapsing immediately to one winner.")
+    print(
+        f"- Across {total_frontier_cases} family-pack-weight cases, {len(interesting_frontier_rows)} show either frontier disagreement between views or a current selector that is not on every frontier."
+    )
+    print(
+        f"- The current selector lies on the robustness/proper-time/geometry/mixed frontiers in "
+        f"{sum(row.selected_on_robustness for row in frontier_scenario_rows)}/{total_frontier_cases}, "
+        f"{sum(row.selected_on_proper_time for row in frontier_scenario_rows)}/{total_frontier_cases}, "
+        f"{sum(row.selected_on_geometry for row in frontier_scenario_rows)}/{total_frontier_cases}, and "
+        f"{sum(row.selected_on_mixed for row in frontier_scenario_rows)}/{total_frontier_cases} cases."
+    )
+    print("- So the frontier view is already doing something the scalar selector cannot: it separates 'still viable under some physical reading' from 'currently chosen by one quality key'.")
+    print()
+
+    print("24) Frontier motif frequency across both families")
+    frontier_aggregate_rows = summarize_frontier_aggregates(frontier_candidates)
+    print(render_frontier_aggregate_table(frontier_aggregate_rows[:12]))
+    print()
+    print("Interpretation:")
+    compact_frontier_rows = [row for row in frontier_aggregate_rows if row.rule_family == "compact"]
+    extended_frontier_rows = [row for row in frontier_aggregate_rows if row.rule_family == "extended"]
+    if compact_frontier_rows:
+        print(
+            f"- In `compact`, the most persistent frontier motif in this run is `{compact_frontier_rows[0].rule_signature}`, appearing on the mixed frontier in {compact_frontier_rows[0].mixed_hits} cases and being currently selected in {compact_frontier_rows[0].selected_hits}."
+        )
+    if extended_frontier_rows:
+        print(
+            f"- In `extended`, the most persistent frontier motif in this run is `{extended_frontier_rows[0].rule_signature}`, appearing on the mixed frontier in {extended_frontier_rows[0].mixed_hits} cases and being currently selected in {extended_frontier_rows[0].selected_hits}."
+        )
+    print("- This is the selector-invariant layer we wanted: it tells us which motifs keep reappearing as nondominated, even when the current baseline picks only one of them.")
+    print()
+
+    print("25) Hard-case frontier trace for the fallback and rescue motifs")
+    trace_pack, trace_scenario, frontier_trace_rows = frontier_hard_case_trace()
+    print(render_frontier_trace_table(frontier_trace_rows))
+    print()
+    print("Interpretation:")
+    print(f"- This focuses on the current hardest compact case, `{trace_pack}:{trace_scenario}`, and tracks the fallback/rescue motifs across the retained-weight scan.")
+    trace_by_signature: DefaultDict[str, list[FrontierTraceRow]] = defaultdict(list)
+    for row in frontier_trace_rows:
+        trace_by_signature[row.rule_signature].append(row)
+    for rule_signature, rows in trace_by_signature.items():
+        if rule_signature == "none":
+            continue
+        print(
+            f"- `{rule_signature}` lands on robustness/proper-time/geometry/mixed in "
+            f"{sum(row.on_robustness for row in rows)}/{len(rows)}, "
+            f"{sum(row.on_proper_time for row in rows)}/{len(rows)}, "
+            f"{sum(row.on_geometry for row in rows)}/{len(rows)}, and "
+            f"{sum(row.on_mixed for row in rows)}/{len(rows)} weights."
+        )
+    print("- That is the cleanest selector-free version of the current result: different metric views keep different motifs alive, which is why a single scalar selector still carries real interpretive weight.")
     print()
 
     print("REMAINING CHEATS")
