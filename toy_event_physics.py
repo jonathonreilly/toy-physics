@@ -535,6 +535,38 @@ class ContourSensitivityRow:
 
 
 @dataclass
+class SelectedMetricCaseRow:
+    dataset: str
+    rule_family: str
+    pack_name: str
+    scenario_name: str
+    variant_name: str
+    selected_rule: str
+    status: str
+    center_gap: float
+    arrival_span: float
+
+
+@dataclass
+class FocusObservableBenchmarkRow:
+    observable: str
+    core_preserved: int
+    core_cases: int
+    geometry_preserved: int
+    geometry_survive_cases: int
+    geometry_promoted: int
+    geometry_non_survive_cases: int
+    procedural_preserved: int
+    procedural_survive_cases: int
+    procedural_promoted: int
+    procedural_non_survive_cases: int
+    contour_survive_preserved: int
+    contour_survive_cases: int
+    contour_miss_status: str
+    contour_miss_score: float
+
+
+@dataclass
 class RawFrontierPool:
     selector_candidates: dict[
         tuple[frozenset[int], frozenset[int], frozenset[tuple[int, int]]],
@@ -5836,6 +5868,219 @@ def contour_sensitivity_sweep(
     return rows
 
 
+def selected_metric_rows_for_factory(
+    dataset: str,
+    perturbation_factory: Callable[
+        [str, str, set[tuple[int, int]], bool],
+        tuple[tuple[str, set[tuple[int, int]], int], ...],
+    ],
+    retained_weight: float = 1.0,
+    perturbed_pool_builder: Callable[
+        [set[tuple[int, int]], bool, tuple[frozenset[int], ...], tuple[tuple[frozenset[int], frozenset[int]], ...]],
+        RawFrontierPool,
+    ] | None = None,
+) -> list[SelectedMetricCaseRow]:
+    current_pool_builder = perturbed_pool_builder or collect_restricted_frontier_pool
+    rows: list[SelectedMetricCaseRow] = []
+
+    for rule_family, count_options in family_count_options():
+        for pack_name, scenarios in benchmark_packs():
+            for scenario_name, nodes, wrap_y in scenarios:
+                base_raw_pool = collect_raw_frontier_pool(
+                    nodes,
+                    wrap_y,
+                    count_options,
+                )
+                base_evaluation_cache = build_frontier_evaluation_cache(nodes, wrap_y)
+                _base_row, base_candidates = frontier_case_analysis(
+                    pack_name=pack_name,
+                    scenario_name=scenario_name,
+                    nodes=nodes,
+                    wrap_y=wrap_y,
+                    rule_family=rule_family,
+                    count_options=count_options,
+                    retained_weight=retained_weight,
+                    raw_pool=base_raw_pool,
+                    evaluation_cache=base_evaluation_cache,
+                )
+                allowed_rule_pairs = base_palette_rule_pairs(base_candidates)
+
+                for variant_name, perturbed_nodes, _node_delta in perturbation_factory(
+                    pack_name,
+                    scenario_name,
+                    nodes,
+                    wrap_y,
+                ):
+                    perturbed_raw_pool = current_pool_builder(
+                        perturbed_nodes,
+                        wrap_y,
+                        count_options,
+                        allowed_rule_pairs,
+                    )
+                    perturbed_evaluation_cache = build_frontier_evaluation_cache(
+                        perturbed_nodes,
+                        wrap_y,
+                    )
+                    perturbed_row, perturbed_candidates = frontier_case_analysis(
+                        pack_name=pack_name,
+                        scenario_name=scenario_name,
+                        nodes=perturbed_nodes,
+                        wrap_y=wrap_y,
+                        rule_family=rule_family,
+                        count_options=count_options,
+                        retained_weight=retained_weight,
+                        raw_pool=perturbed_raw_pool,
+                        evaluation_cache=perturbed_evaluation_cache,
+                    )
+                    selected_candidate = next(
+                        candidate for candidate in perturbed_candidates if candidate.current_selected
+                    )
+                    rows.append(
+                        SelectedMetricCaseRow(
+                            dataset=dataset,
+                            rule_family=rule_family,
+                            pack_name=pack_name,
+                            scenario_name=scenario_name,
+                            variant_name=variant_name,
+                            selected_rule=perturbed_row.selected_rule,
+                            status=selected_candidate.status,
+                            center_gap=selected_candidate.center_gap,
+                            arrival_span=selected_candidate.arrival_span,
+                        )
+                    )
+
+    return rows
+
+
+def focus_observable_benchmark(
+    retained_weight: float = 1.0,
+    geometry_variant_limit: int = 2,
+    geometry_rediscovery_limit: int = 1,
+    procedural_variant_limit: int = 2,
+    procedural_rediscovery_limit: int = 1,
+) -> list[FocusObservableBenchmarkRow]:
+    postulates = build_frontier_postulates(retained_weight)
+    core_rows = run_robustness_sweep(postulates)
+    geometry_rows = selected_metric_rows_for_factory(
+        dataset="geometry",
+        perturbation_factory=lambda pack_name, scenario_name, nodes, wrap_y: randomized_geometry_variants(
+            pack_name,
+            scenario_name,
+            nodes,
+            wrap_y,
+            variant_limit=geometry_variant_limit,
+        ),
+        retained_weight=retained_weight,
+        perturbed_pool_builder=lambda nodes, wrap_y, count_options, allowed_rule_pairs: (
+            collect_limited_rediscovery_frontier_pool(
+                nodes,
+                wrap_y,
+                count_options,
+                allowed_rule_pairs,
+                rediscovery_limit=geometry_rediscovery_limit,
+            )
+        ),
+    )
+    procedural_rows = selected_metric_rows_for_factory(
+        dataset="procedural",
+        perturbation_factory=lambda pack_name, scenario_name, nodes, wrap_y: procedural_geometry_variants(
+            pack_name,
+            scenario_name,
+            nodes,
+            wrap_y,
+            variant_limit=procedural_variant_limit,
+        ),
+        retained_weight=retained_weight,
+        perturbed_pool_builder=lambda nodes, wrap_y, count_options, allowed_rule_pairs: (
+            collect_limited_rediscovery_frontier_pool(
+                nodes,
+                wrap_y,
+                count_options,
+                allowed_rule_pairs,
+                rediscovery_limit=procedural_rediscovery_limit,
+            )
+        ),
+    )
+    contour_rows = contour_sensitivity_sweep(rediscovery_limit=procedural_rediscovery_limit)
+    observables = ("box-min", "harmonic", "geometric", "arithmetic")
+    benchmark_rows: list[FocusObservableBenchmarkRow] = []
+
+    for observable in observables:
+        core_preserved = sum(
+            classify_focus_observable(row.center_gap, row.arrival_span, observable)[1] == "survives"
+            for row in core_rows
+            if row.status == "survives"
+        )
+        geometry_survive_cases = sum(row.status == "survives" for row in geometry_rows)
+        geometry_non_survive_cases = sum(row.status != "survives" for row in geometry_rows)
+        geometry_preserved = sum(
+            classify_focus_observable(row.center_gap, row.arrival_span, observable)[1] == "survives"
+            for row in geometry_rows
+            if row.status == "survives"
+        )
+        geometry_promoted = sum(
+            classify_focus_observable(row.center_gap, row.arrival_span, observable)[1] == "survives"
+            for row in geometry_rows
+            if row.status != "survives"
+        )
+        procedural_survive_cases = sum(row.status == "survives" for row in procedural_rows)
+        procedural_non_survive_cases = sum(row.status != "survives" for row in procedural_rows)
+        procedural_preserved = sum(
+            classify_focus_observable(row.center_gap, row.arrival_span, observable)[1] == "survives"
+            for row in procedural_rows
+            if row.status == "survives"
+        )
+        procedural_promoted = sum(
+            classify_focus_observable(row.center_gap, row.arrival_span, observable)[1] == "survives"
+            for row in procedural_rows
+            if row.status != "survives"
+        )
+        contour_survive_cases = sum(row.status == "survives" for row in contour_rows)
+        contour_survive_preserved = sum(
+            classify_focus_observable(row.center_gap, row.arrival_span, observable)[1] == "survives"
+            for row in contour_rows
+            if row.status == "survives"
+        )
+        contour_miss = next(row for row in contour_rows if row.alpha == 1.0)
+        contour_miss_score, contour_miss_status = classify_focus_observable(
+            contour_miss.center_gap,
+            contour_miss.arrival_span,
+            observable,
+        )
+        benchmark_rows.append(
+            FocusObservableBenchmarkRow(
+                observable=observable,
+                core_preserved=core_preserved,
+                core_cases=sum(row.status == "survives" for row in core_rows),
+                geometry_preserved=geometry_preserved,
+                geometry_survive_cases=geometry_survive_cases,
+                geometry_promoted=geometry_promoted,
+                geometry_non_survive_cases=geometry_non_survive_cases,
+                procedural_preserved=procedural_preserved,
+                procedural_survive_cases=procedural_survive_cases,
+                procedural_promoted=procedural_promoted,
+                procedural_non_survive_cases=procedural_non_survive_cases,
+                contour_survive_preserved=contour_survive_preserved,
+                contour_survive_cases=contour_survive_cases,
+                contour_miss_status=contour_miss_status,
+                contour_miss_score=contour_miss_score,
+            )
+        )
+
+    benchmark_rows.sort(
+        key=lambda row: (
+            -row.core_preserved,
+            -row.geometry_preserved,
+            -row.procedural_preserved,
+            -row.contour_survive_preserved,
+            -row.geometry_promoted,
+            -row.procedural_promoted,
+            row.observable,
+        )
+    )
+    return benchmark_rows
+
+
 def random_rediscovery_limit_sweep_summary(
     retained_weight: float = 1.0,
     variant_limit: int = 3,
@@ -6759,6 +7004,42 @@ def classify_robustness(center_gap: float, arrival_span: float) -> tuple[bool, s
     return False, "fragile"
 
 
+def focus_observable_score(
+    center_gap: float,
+    arrival_span: float,
+    observable: str,
+) -> float:
+    normalized_gap = max(0.0, center_gap / 0.1)
+    normalized_span = max(0.0, arrival_span / 0.5)
+    if observable == "box-min":
+        return min(normalized_gap, normalized_span)
+    if observable == "harmonic":
+        denominator = normalized_gap + normalized_span
+        return (
+            0.0
+            if denominator <= 0.0
+            else (2.0 * normalized_gap * normalized_span) / denominator
+        )
+    if observable == "geometric":
+        return math.sqrt(normalized_gap * normalized_span)
+    if observable == "arithmetic":
+        return 0.5 * (normalized_gap + normalized_span)
+    raise ValueError(f"Unknown focus observable: {observable}")
+
+
+def classify_focus_observable(
+    center_gap: float,
+    arrival_span: float,
+    observable: str,
+) -> tuple[float, str]:
+    score = focus_observable_score(center_gap, arrival_span, observable)
+    if score > 1.0:
+        return score, "survives"
+    if score > 0.5:
+        return score, "mixed"
+    return score, "fragile"
+
+
 def summarize_robustness(rows: list[RobustnessResult]) -> list[FamilyDiagnostic]:
     summaries: list[FamilyDiagnostic] = []
     for family in sorted({row.rule_family for row in rows}):
@@ -7429,6 +7710,25 @@ def render_contour_sensitivity_table(
             f"{row.center_range:>7.2f} | "
             f"{row.center_total_variation:>5.2f} | "
             f"{'yes' if row.crosses_midline else 'no ':<4}"
+        )
+    return "\n".join(lines)
+
+
+def render_focus_observable_benchmark_table(
+    rows: list[FocusObservableBenchmarkRow],
+) -> str:
+    lines = [
+        "observable  | core ok | geom ok/prom | proc ok/prom | contour ok | contour miss",
+        "------------+---------+--------------+--------------+------------+--------------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.observable:<10} | "
+            f"{row.core_preserved:>2}/{row.core_cases:<2} | "
+            f"{row.geometry_preserved:>2}/{row.geometry_survive_cases:<2} +{row.geometry_promoted:>1}/{row.geometry_non_survive_cases:<1} | "
+            f"{row.procedural_preserved:>2}/{row.procedural_survive_cases:<2} +{row.procedural_promoted:>1}/{row.procedural_non_survive_cases:<1} | "
+            f"{row.contour_survive_preserved:>2}/{row.contour_survive_cases:<2} | "
+            f"{row.contour_miss_status:<8} {row.contour_miss_score:>5.2f}"
         )
     return "\n".join(lines)
 
@@ -8529,6 +8829,31 @@ def main() -> None:
                 "- That directly supports the current hypothesis: stronger cross-midline centerline variation can preserve local focusing while washing out the far-boundary delay signature that the present robustness threshold still needs."
             )
     print("- This is the strongest mechanism test we have on that miss so far because it varies one geometric ingredient while holding the span profile nearly fixed.")
+    print()
+
+    print("43) Benchmark of alternative focusing observables")
+    focus_benchmark_rows = focus_observable_benchmark(
+        geometry_variant_limit=geometry_variant_limit,
+        geometry_rediscovery_limit=geometry_rediscovery_limit,
+        procedural_variant_limit=procedural_variant_limit,
+        procedural_rediscovery_limit=procedural_rediscovery_limit,
+    )
+    print(render_focus_observable_benchmark_table(focus_benchmark_rows))
+    print()
+    print("Interpretation:")
+    best_observable = focus_benchmark_rows[0]
+    print(
+        f"- This compares the current axis-aligned threshold (`box-min`) against smooth combined observables on the core robustness sweep, the geometry-randomized ensemble, the procedural generator, and the contour miss."
+    )
+    print(
+        f"- In this run, `{best_observable.observable}` is the strongest tested smoother by the current benchmark ordering: it preserves {best_observable.core_preserved}/{best_observable.core_cases} core survives, {best_observable.geometry_preserved}/{best_observable.geometry_survive_cases} geometry-randomized survives, and {best_observable.procedural_preserved}/{best_observable.procedural_survive_cases} procedural survives while classifying the contour miss as `{best_observable.contour_miss_status}`."
+    )
+    box_row = next(row for row in focus_benchmark_rows if row.observable == "box-min")
+    harmonic_row = next(row for row in focus_benchmark_rows if row.observable == "harmonic")
+    print(
+        f"- The key question is whether a smoother observable can rescue the contour miss without promoting obviously weak cases too aggressively. `box-min` leaves the contour miss at `{box_row.contour_miss_status}`, while `harmonic` changes it to `{harmonic_row.contour_miss_status}` with score {harmonic_row.contour_miss_score:.2f}."
+    )
+    print("- That gives us a direct threshold-cheat diagnostic: we can now argue from measured tradeoffs rather than from one hand-picked miss.")
     print()
 
     print("REMAINING CHEATS")
