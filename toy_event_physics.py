@@ -4719,6 +4719,68 @@ def base_palette_rule_pairs(
     )
 
 
+def perturbation_case_needs_drift_report(row: PerturbationCaseRow) -> bool:
+    return (
+        not row.selected_matches_base
+        or not row.base_selected_alive
+        or not row.robustness_overlap
+        or not row.mixed_overlap
+    )
+
+
+def perturbation_case_sort_key(row: PerturbationCaseRow) -> tuple[object, ...]:
+    return (
+        row.selected_matches_base,
+        row.base_selected_alive,
+        row.mixed_overlap,
+        row.robustness_overlap,
+        row.rule_family,
+        row.pack_name,
+        row.scenario_name,
+        row.variant_name,
+    )
+
+
+def bounded_insert_sorted(
+    rows: list[object],
+    row: object,
+    limit: int,
+    key_fn: Callable[[object], tuple[object, ...]],
+) -> None:
+    rows.append(row)
+    rows.sort(key=key_fn)
+    if len(rows) > limit:
+        del rows[limit:]
+
+
+def build_perturbation_aggregate_rows(
+    grouped_rows: DefaultDict[tuple[str, str], list[PerturbationCaseRow]],
+) -> list[PerturbationAggregateRow]:
+    aggregate_rows = [
+        PerturbationAggregateRow(
+            rule_family=rule_family,
+            variant_name=variant_name,
+            cases=len(rows),
+            survives=sum(row.perturbed_status == "survives" for row in rows),
+            selected_retained=sum(row.selected_matches_base for row in rows),
+            base_selected_alive=sum(row.base_selected_alive for row in rows),
+            robustness_overlap=sum(row.robustness_overlap for row in rows),
+            proper_time_overlap=sum(row.proper_time_overlap for row in rows),
+            geometry_overlap=sum(row.geometry_overlap for row in rows),
+            mixed_overlap=sum(row.mixed_overlap for row in rows),
+        )
+        for (rule_family, variant_name), rows in grouped_rows.items()
+    ]
+    aggregate_rows.sort(
+        key=lambda row: (
+            row.rule_family,
+            row.variant_name != "all",
+            row.variant_name,
+        )
+    )
+    return aggregate_rows
+
+
 def perturbation_frontier_results_for_factory(
     perturbation_factory: Callable[
         [str, str, set[tuple[int, int]], bool],
@@ -4848,6 +4910,120 @@ def perturbation_frontier_results_for_factory(
     return case_rows, aggregate_rows
 
 
+def perturbation_frontier_summary_for_factory(
+    perturbation_factory: Callable[
+        [str, str, set[tuple[int, int]], bool],
+        tuple[tuple[str, set[tuple[int, int]], int], ...],
+    ],
+    retained_weight: float = 1.0,
+    drift_limit: int = 16,
+) -> tuple[list[PerturbationAggregateRow], list[PerturbationCaseRow]]:
+    grouped_rows: DefaultDict[tuple[str, str], list[PerturbationCaseRow]] = defaultdict(list)
+    drift_rows: list[PerturbationCaseRow] = []
+
+    for rule_family, count_options in family_count_options():
+        for pack_name, scenarios in benchmark_packs():
+            for scenario_name, nodes, wrap_y in scenarios:
+                base_raw_pool = collect_raw_frontier_pool(
+                    nodes,
+                    wrap_y,
+                    count_options,
+                )
+                base_evaluation_cache = build_frontier_evaluation_cache(nodes, wrap_y)
+                base_row, base_candidates = frontier_case_analysis(
+                    pack_name=pack_name,
+                    scenario_name=scenario_name,
+                    nodes=nodes,
+                    wrap_y=wrap_y,
+                    rule_family=rule_family,
+                    count_options=count_options,
+                    retained_weight=retained_weight,
+                    raw_pool=base_raw_pool,
+                    evaluation_cache=base_evaluation_cache,
+                )
+                base_signature_sets = frontier_signature_sets(base_candidates)
+                base_selected_rule = base_row.selected_rule
+                allowed_rule_pairs = base_palette_rule_pairs(base_candidates)
+
+                for variant_name, perturbed_nodes, node_delta in perturbation_factory(
+                    pack_name,
+                    scenario_name,
+                    nodes,
+                    wrap_y,
+                ):
+                    perturbed_raw_pool = collect_restricted_frontier_pool(
+                        perturbed_nodes,
+                        wrap_y,
+                        count_options,
+                        allowed_rule_pairs,
+                    )
+                    perturbed_evaluation_cache = build_frontier_evaluation_cache(
+                        perturbed_nodes,
+                        wrap_y,
+                    )
+                    perturbed_row, perturbed_candidates = frontier_case_analysis(
+                        pack_name=pack_name,
+                        scenario_name=scenario_name,
+                        nodes=perturbed_nodes,
+                        wrap_y=wrap_y,
+                        rule_family=rule_family,
+                        count_options=count_options,
+                        retained_weight=retained_weight,
+                        raw_pool=perturbed_raw_pool,
+                        evaluation_cache=perturbed_evaluation_cache,
+                    )
+                    perturbed_signature_sets = frontier_signature_sets(perturbed_candidates)
+                    perturbed_frontier_union = set().union(*perturbed_signature_sets.values())
+                    selected_candidate = next(
+                        (
+                            candidate
+                            for candidate in perturbed_candidates
+                            if candidate.current_selected
+                        ),
+                        None,
+                    )
+                    case_row = PerturbationCaseRow(
+                        rule_family=rule_family,
+                        pack_name=pack_name,
+                        scenario_name=scenario_name,
+                        variant_name=variant_name,
+                        node_delta=node_delta,
+                        base_selected_rule=base_selected_rule,
+                        perturbed_selected_rule=perturbed_row.selected_rule,
+                        perturbed_status=(
+                            selected_candidate.status if selected_candidate is not None else "no pattern"
+                        ),
+                        selected_matches_base=(perturbed_row.selected_rule == base_selected_rule),
+                        base_selected_alive=(base_selected_rule in perturbed_frontier_union),
+                        robustness_overlap=bool(
+                            base_signature_sets["robustness"]
+                            & perturbed_signature_sets["robustness"]
+                        ),
+                        proper_time_overlap=bool(
+                            base_signature_sets["proper_time"]
+                            & perturbed_signature_sets["proper_time"]
+                        ),
+                        geometry_overlap=bool(
+                            base_signature_sets["geometry"]
+                            & perturbed_signature_sets["geometry"]
+                        ),
+                        mixed_overlap=bool(
+                            base_signature_sets["mixed"] & perturbed_signature_sets["mixed"]
+                        ),
+                    )
+                    grouped_rows[(rule_family, variant_name)].append(case_row)
+                    grouped_rows[(rule_family, "all")].append(case_row)
+                    if perturbation_case_needs_drift_report(case_row):
+                        bounded_insert_sorted(
+                            drift_rows,
+                            case_row,
+                            drift_limit,
+                            perturbation_case_sort_key,
+                        )
+
+    return build_perturbation_aggregate_rows(grouped_rows), drift_rows
+
+
 def perturbation_frontier_results(
     retained_weight: float = 1.0,
 ) -> tuple[list[PerturbationCaseRow], list[PerturbationAggregateRow]]:
@@ -4860,12 +5036,37 @@ def perturbation_frontier_results(
     )
 
 
+def perturbation_frontier_summary(
+    retained_weight: float = 1.0,
+    drift_limit: int = 16,
+) -> tuple[list[PerturbationAggregateRow], list[PerturbationCaseRow]]:
+    return perturbation_frontier_summary_for_factory(
+        lambda _pack_name, _scenario_name, nodes, wrap_y: deterministic_topology_perturbations(
+            nodes,
+            wrap_y,
+        ),
+        retained_weight=retained_weight,
+        drift_limit=drift_limit,
+    )
+
+
 def random_perturbation_frontier_results(
     retained_weight: float = 1.0,
 ) -> tuple[list[PerturbationCaseRow], list[PerturbationAggregateRow]]:
     return perturbation_frontier_results_for_factory(
         random_topology_perturbations,
         retained_weight=retained_weight,
+    )
+
+
+def random_perturbation_frontier_summary(
+    retained_weight: float = 1.0,
+    drift_limit: int = 16,
+) -> tuple[list[PerturbationAggregateRow], list[PerturbationCaseRow]]:
+    return perturbation_frontier_summary_for_factory(
+        random_topology_perturbations,
+        retained_weight=retained_weight,
+        drift_limit=drift_limit,
     )
 
 
@@ -6543,7 +6744,7 @@ def main() -> None:
     print()
 
     print("26) Deterministic topology perturbation ensemble")
-    perturbation_case_rows, perturbation_aggregate_rows = perturbation_frontier_results()
+    perturbation_aggregate_rows, drift_rows = perturbation_frontier_summary()
     print(render_perturbation_aggregate_table(perturbation_aggregate_rows))
     print()
     print("Interpretation:")
@@ -6560,26 +6761,6 @@ def main() -> None:
     print()
 
     print("27) Perturbation drift cases")
-    drift_rows = [
-        row
-        for row in perturbation_case_rows
-        if not row.selected_matches_base
-        or not row.base_selected_alive
-        or not row.mixed_overlap
-        or not row.robustness_overlap
-    ]
-    drift_rows.sort(
-        key=lambda row: (
-            row.selected_matches_base,
-            row.base_selected_alive,
-            row.mixed_overlap,
-            row.robustness_overlap,
-            row.rule_family,
-            row.pack_name,
-            row.scenario_name,
-            row.variant_name,
-        )
-    )
     print(render_perturbation_case_table(drift_rows, limit=min(16, len(drift_rows))))
     print()
     print("Interpretation:")
@@ -6659,7 +6840,7 @@ def main() -> None:
     print()
 
     print("30) Small random perturbation ensemble")
-    random_case_rows, random_aggregate_rows = random_perturbation_frontier_results()
+    random_aggregate_rows, random_drift_rows = random_perturbation_frontier_summary()
     print(render_perturbation_aggregate_table(random_aggregate_rows))
     print()
     print("Interpretation:")
@@ -6676,26 +6857,6 @@ def main() -> None:
     print()
 
     print("31) Random perturbation drift cases")
-    random_drift_rows = [
-        row
-        for row in random_case_rows
-        if not row.selected_matches_base
-        or not row.base_selected_alive
-        or not row.robustness_overlap
-        or not row.mixed_overlap
-    ]
-    random_drift_rows.sort(
-        key=lambda row: (
-            row.selected_matches_base,
-            row.base_selected_alive,
-            row.mixed_overlap,
-            row.robustness_overlap,
-            row.rule_family,
-            row.pack_name,
-            row.scenario_name,
-            row.variant_name,
-        )
-    )
     print(render_perturbation_case_table(random_drift_rows, limit=min(16, len(random_drift_rows))))
     print()
     print("Interpretation:")
