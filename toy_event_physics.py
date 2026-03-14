@@ -454,7 +454,8 @@ class DerivedBootstrapStabilityRow:
     rule_signature: str
     basis_hits: int
     subset_basis_hits: int
-    random_basis_hits: int
+    linear_random_hits: int
+    nonlinear_basis_hits: int
     case_basis_hits: int
     top_basis_hits: int
 
@@ -6536,6 +6537,13 @@ DERIVED_AXIS_BASIS_FIELDS = (
 
 DERIVED_BOOTSTRAP_RANDOM_COUNT = 12
 DERIVED_BOOTSTRAP_RANDOM_SEED = 17
+DERIVED_BOOTSTRAP_TRANSFORM_MODES = (
+    "signed_sqrt",
+    "signed_log1p",
+    "softsign",
+)
+DERIVED_BOOTSTRAP_TRANSFORM_RANDOM_COUNT = 2
+DERIVED_BOOTSTRAP_TRANSFORM_RANDOM_SEED = 71
 
 
 def derived_metric_vector(candidate: EvaluatedCandidate) -> tuple[float, ...]:
@@ -7030,6 +7038,54 @@ def projected_metric_rows(
     return projected_rows, projected_anchor
 
 
+def transform_metric_value(value: float, mode: str) -> float:
+    if mode == "identity":
+        return value
+    if mode == "signed_sqrt":
+        return math.copysign(math.sqrt(abs(value)), value) if value != 0.0 else 0.0
+    if mode == "signed_log1p":
+        return math.copysign(math.log1p(abs(value)), value) if value != 0.0 else 0.0
+    if mode == "softsign":
+        return value / (1.0 + abs(value)) if value != 0.0 else 0.0
+    raise ValueError(f"Unknown metric transform mode: {mode}")
+
+
+def transform_metric_rows(
+    metric_rows: list[tuple[float, ...]],
+    mode: str,
+) -> list[tuple[float, ...]]:
+    return [
+        tuple(transform_metric_value(value, mode) for value in row)
+        for row in metric_rows
+    ]
+
+
+def transform_anchor(
+    anchor: tuple[float, ...],
+    mode: str,
+) -> tuple[float, ...]:
+    return tuple(transform_metric_value(value, mode) for value in anchor)
+
+
+def project_metric_rows_and_anchor(
+    metric_rows: list[tuple[float, ...]],
+    anchor: tuple[float, ...],
+    projection_matrix: tuple[tuple[float, ...], ...],
+) -> tuple[list[tuple[float, ...]], tuple[float, ...]]:
+    projected_rows = [
+        tuple(
+            sum(weight * value for weight, value in zip(projection_row, row))
+            for projection_row in projection_matrix
+        )
+        for row in metric_rows
+    ]
+    projected_anchor = tuple(
+        sum(weight * value for weight, value in zip(projection_row, anchor))
+        for projection_row in projection_matrix
+    )
+    return projected_rows, projected_anchor
+
+
 def derived_bootstrap_ensemble(
     baseline_rows: list[FrontierScenarioRow],
     baseline_candidates: list[EvaluatedCandidate],
@@ -7042,8 +7098,11 @@ def derived_bootstrap_ensemble(
     family_rule_case_hits: DefaultDict[tuple[str, str], int] = defaultdict(int)
     family_rule_basis_hits: DefaultDict[tuple[str, str], set[str]] = defaultdict(set)
     family_rule_subset_hits: DefaultDict[tuple[str, str], set[str]] = defaultdict(set)
-    family_rule_random_hits: DefaultDict[tuple[str, str], set[str]] = defaultdict(set)
+    family_rule_linear_random_hits: DefaultDict[tuple[str, str], set[str]] = defaultdict(set)
+    family_rule_nonlinear_hits: DefaultDict[tuple[str, str], set[str]] = defaultdict(set)
     family_rule_top_hits: DefaultDict[tuple[str, str], int] = defaultdict(int)
+    base_metric_rows = [derived_metric_vector(candidate) for candidate in baseline_candidates]
+    base_anchor = (1.0, 1.0, 0.0, 0.0, 1.0)
 
     def record_basis(
         basis_name: str,
@@ -7069,8 +7128,10 @@ def derived_bootstrap_ensemble(
                 family_rule_basis_hits[family_rule].add(basis_name)
                 if basis_type == "subset":
                     family_rule_subset_hits[family_rule].add(basis_name)
+                elif basis_type == "linear-random":
+                    family_rule_linear_random_hits[family_rule].add(basis_name)
                 else:
-                    family_rule_random_hits[family_rule].add(basis_name)
+                    family_rule_nonlinear_hits[family_rule].add(basis_name)
                 family_rule_case_hits[family_rule] += aggregate_row.pc123_hits
         basis_rows.append(
             DerivedBootstrapBasisRow(
@@ -7095,8 +7156,9 @@ def derived_bootstrap_ensemble(
         record_basis(basis_name, "subset", len(metric_fields), annotated_candidates)
 
     for basis_name, projection_matrix in random_specs:
-        metric_rows, anchor = projected_metric_rows(
-            baseline_candidates,
+        metric_rows, anchor = project_metric_rows_and_anchor(
+            base_metric_rows,
+            base_anchor,
             projection_matrix,
         )
         _components, annotated_candidates = derived_axis_components_from_metric_rows(
@@ -7104,7 +7166,39 @@ def derived_bootstrap_ensemble(
             metric_rows,
             anchor,
         )
-        record_basis(basis_name, "random", len(projection_matrix), annotated_candidates)
+        record_basis(basis_name, "linear-random", len(projection_matrix), annotated_candidates)
+
+    for transform_index, transform_mode in enumerate(DERIVED_BOOTSTRAP_TRANSFORM_MODES):
+        transformed_rows = transform_metric_rows(base_metric_rows, transform_mode)
+        transformed_anchor = transform_anchor(base_anchor, transform_mode)
+        _components, annotated_candidates = derived_axis_components_from_metric_rows(
+            baseline_candidates,
+            transformed_rows,
+            transformed_anchor,
+        )
+        record_basis(f"xform:{transform_mode}", "nonlinear", len(DERIVED_AXIS_METRIC_FIELDS), annotated_candidates)
+
+        transform_random_specs = random_projection_basis_specs(
+            count=DERIVED_BOOTSTRAP_TRANSFORM_RANDOM_COUNT,
+            seed=DERIVED_BOOTSTRAP_TRANSFORM_RANDOM_SEED + transform_index,
+        )
+        for random_name, projection_matrix in transform_random_specs:
+            projected_rows, projected_anchor = project_metric_rows_and_anchor(
+                transformed_rows,
+                transformed_anchor,
+                projection_matrix,
+            )
+            _components, annotated_candidates = derived_axis_components_from_metric_rows(
+                baseline_candidates,
+                projected_rows,
+                projected_anchor,
+            )
+            record_basis(
+                f"{transform_mode}:{random_name}",
+                "nonlinear",
+                len(projection_matrix),
+                annotated_candidates,
+            )
 
     full_signatures = basis_case_pc123_signatures["full5"]
     for row in basis_rows:
@@ -7122,7 +7216,8 @@ def derived_bootstrap_ensemble(
             rule_signature=rule_signature,
             basis_hits=len(family_rule_basis_hits[(rule_family, rule_signature)]),
             subset_basis_hits=len(family_rule_subset_hits[(rule_family, rule_signature)]),
-            random_basis_hits=len(family_rule_random_hits[(rule_family, rule_signature)]),
+            linear_random_hits=len(family_rule_linear_random_hits[(rule_family, rule_signature)]),
+            nonlinear_basis_hits=len(family_rule_nonlinear_hits[(rule_family, rule_signature)]),
             case_basis_hits=family_rule_case_hits[(rule_family, rule_signature)],
             top_basis_hits=family_rule_top_hits[(rule_family, rule_signature)],
         )
@@ -8660,8 +8755,8 @@ def render_derived_bootstrap_stability_table(
     limit: int = 12,
 ) -> str:
     lines = [
-        "family   | rule              | basis hits | subset | random | case hits | top hits",
-        "---------+-------------------+------------+--------+--------+-----------+---------",
+        "family   | rule              | basis hits | subset | lin-rnd | nonlin | case hits | top hits",
+        "---------+-------------------+------------+--------+---------+--------+-----------+---------",
     ]
     for row in rows[:limit]:
         lines.append(
@@ -8669,7 +8764,8 @@ def render_derived_bootstrap_stability_table(
             f"{row.rule_signature:<17} | "
             f"{row.basis_hits:>10} | "
             f"{row.subset_basis_hits:>6} | "
-            f"{row.random_basis_hits:>6} | "
+            f"{row.linear_random_hits:>7} | "
+            f"{row.nonlinear_basis_hits:>6} | "
             f"{row.case_basis_hits:>9} | "
             f"{row.top_basis_hits:>7}"
         )
@@ -10339,10 +10435,11 @@ def main() -> None:
     print()
     print("Interpretation:")
     subset_basis_count = sum(row.basis_type == "subset" for row in bootstrap_basis_rows)
-    random_basis_count = sum(row.basis_type == "random" for row in bootstrap_basis_rows)
+    linear_random_basis_count = sum(row.basis_type == "linear-random" for row in bootstrap_basis_rows)
+    nonlinear_basis_count = sum(row.basis_type == "nonlinear" for row in bootstrap_basis_rows)
     total_basis_count = len(bootstrap_basis_rows)
     print(
-        f"- This is the stability-map version of the basis test: instead of checking a few named bases, it bootstraps {subset_basis_count} subset bases and {random_basis_count} seeded random projection bases, for {total_basis_count} total basis views on the same harmonic-continuous candidate pool."
+        f"- This is the stability-map version of the basis test: instead of checking a few named bases, it bootstraps {subset_basis_count} subset bases, {linear_random_basis_count} seeded linear-random projection bases, and {nonlinear_basis_count} mild nonlinear bases, for {total_basis_count} total basis views on the same harmonic-continuous candidate pool."
     )
     if bootstrap_basis_rows:
         full_basis_bootstrap = next(row for row in bootstrap_basis_rows if row.basis_name == "full5")
@@ -10372,8 +10469,23 @@ def main() -> None:
         print(
             f"- Basis ubiquity is broader than top-rank dominance here: {len(ubiquitous_rules)} motif-family pairs appear on pc123 in every sampled basis, but `{compact_bootstrap.rule_signature}` still leads because it wins more basis-case frontiers and more top-basis slots."
         )
+    if compact_bootstrap is not None and extended_bootstrap is not None:
+        print(
+            f"- The dominant motif also survives the broadened generator itself: in `compact` it appears in {compact_bootstrap.subset_basis_hits}/{subset_basis_count} subset bases, {compact_bootstrap.linear_random_hits}/{linear_random_basis_count} linear-random bases, and {compact_bootstrap.nonlinear_basis_hits}/{nonlinear_basis_count} nonlinear bases; in `extended`, those counts are {extended_bootstrap.subset_basis_hits}/{subset_basis_count}, {extended_bootstrap.linear_random_hits}/{linear_random_basis_count}, and {extended_bootstrap.nonlinear_basis_hits}/{nonlinear_basis_count}."
+        )
+    full_overlap_basis_count = sum(
+        row.pc123_overlap_with_full == row.cases
+        for row in bootstrap_basis_rows
+    )
+    weakest_bootstrap_basis = min(
+        bootstrap_basis_rows,
+        key=lambda row: (row.pc123_overlap_with_full, row.selected_on_pc123, row.basis_name),
+    )
     print(
-        "- This is the strongest current answer to the basis-dependence question: not which motif wins for one chosen basis, but which motifs keep reappearing on the full derived frontier across an ensemble of basis choices."
+        f"- The broadened generator is not perfectly faithful anymore: {full_overlap_basis_count}/{total_basis_count} sampled bases keep full case-by-case pc123 overlap with the full reference, and the weakest current basis is `{weakest_bootstrap_basis.basis_name}` at {weakest_bootstrap_basis.pc123_overlap_with_full}/{weakest_bootstrap_basis.cases} overlap and {weakest_bootstrap_basis.selected_on_pc123}/{weakest_bootstrap_basis.cases} selected-on-pc123."
+    )
+    print(
+        "- This is the strongest current answer to the basis-dependence question: not which motif wins for one chosen basis, or even one basis family, but which motifs keep reappearing on the full derived frontier across subset, linear-random, and nonlinear basis ensembles."
     )
     print()
 
