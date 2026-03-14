@@ -521,6 +521,20 @@ class ProceduralFailureDiagnosticRow:
 
 
 @dataclass
+class ContourSensitivityRow:
+    alpha: float
+    selected_rule: str
+    status: str
+    mixed_overlap: bool
+    center_gap: float
+    arrival_span: float
+    mean_center: float
+    center_range: float
+    center_total_variation: float
+    crosses_midline: bool
+
+
+@dataclass
 class RawFrontierPool:
     selector_candidates: dict[
         tuple[frozenset[int], frozenset[int], frozenset[tuple[int, int]]],
@@ -2606,6 +2620,41 @@ def column_profile_geometry_metrics(
         crosses_midline,
         span_range,
     )
+
+
+def ordered_profile_centers_and_spans(
+    nodes: set[tuple[int, int]],
+) -> tuple[tuple[int, ...], tuple[float, ...], tuple[int, ...]]:
+    profile = column_interval_profile(nodes)
+    xs = tuple(sorted(profile))
+    centers = tuple((profile[x][0] + profile[x][1]) / 2 for x in xs)
+    spans = tuple(profile[x][1] - profile[x][0] for x in xs)
+    return xs, centers, spans
+
+
+def build_profile_from_centers_and_spans(
+    xs: tuple[int, ...],
+    centers: tuple[float, ...],
+    spans: tuple[int, ...],
+) -> dict[int, tuple[int, int]]:
+    profile: dict[int, tuple[int, int]] = {}
+    for index, x in enumerate(xs):
+        center = centers[index]
+        span = spans[index]
+        low_y = math.floor(center - span / 2)
+        high_y = low_y + span
+        if index > 0:
+            prev_low, prev_high = profile[xs[index - 1]]
+            if low_y > prev_high + 1:
+                shift = low_y - (prev_high + 1)
+                low_y -= shift
+                high_y -= shift
+            if high_y < prev_low - 1:
+                shift = (prev_low - 1) - high_y
+                low_y += shift
+                high_y += shift
+        profile[x] = (low_y, high_y)
+    return profile
 
 
 def run_family_sweep(
@@ -5676,6 +5725,117 @@ def procedural_compact_failure_diagnostics(
     return rows
 
 
+def contour_sensitivity_sweep(
+    retained_weight: float = 1.0,
+    rediscovery_limit: int = 1,
+    alphas: tuple[float, ...] = (0.0, 0.25, 0.5, 0.75, 1.0),
+) -> list[ContourSensitivityRow]:
+    compact_count_options = dict(family_count_options())["compact"]
+    pack_name = "base"
+    scenario_name = "taper-hard"
+    nodes, wrap_y = scenario_by_name(pack_name, scenario_name)
+
+    base_raw_pool = collect_raw_frontier_pool(
+        nodes,
+        wrap_y,
+        compact_count_options,
+    )
+    base_evaluation_cache = build_frontier_evaluation_cache(nodes, wrap_y)
+    _base_row, base_candidates = frontier_case_analysis(
+        pack_name=pack_name,
+        scenario_name=scenario_name,
+        nodes=nodes,
+        wrap_y=wrap_y,
+        rule_family="compact",
+        count_options=compact_count_options,
+        retained_weight=retained_weight,
+        raw_pool=base_raw_pool,
+        evaluation_cache=base_evaluation_cache,
+    )
+    base_mixed_rules = {
+        candidate.rule_signature
+        for candidate in base_candidates
+        if candidate.on_mixed
+    }
+    allowed_rule_pairs = base_palette_rule_pairs(base_candidates)
+
+    procedural_variants = {
+        variant_name: perturbed_nodes
+        for variant_name, perturbed_nodes, _node_delta in procedural_geometry_variants(
+            pack_name,
+            scenario_name,
+            nodes,
+            wrap_y,
+            variant_limit=2,
+        )
+    }
+    survivor_nodes = procedural_variants["procedural-a"]
+    miss_nodes = procedural_variants["procedural-b"]
+    xs, survivor_centers, _survivor_spans = ordered_profile_centers_and_spans(survivor_nodes)
+    miss_xs, miss_centers, miss_spans = ordered_profile_centers_and_spans(miss_nodes)
+    if xs != miss_xs:
+        raise RuntimeError("Contour sensitivity sweep requires aligned x columns.")
+
+    rows: list[ContourSensitivityRow] = []
+    for alpha in alphas:
+        centers = tuple(
+            survivor_center + alpha * (miss_center - survivor_center)
+            for survivor_center, miss_center in zip(survivor_centers, miss_centers)
+        )
+        profile = build_profile_from_centers_and_spans(xs, centers, miss_spans)
+        sweep_nodes = build_nodes_from_interval_profile(profile)
+        sweep_pool = collect_limited_rediscovery_frontier_pool(
+            sweep_nodes,
+            wrap_y,
+            compact_count_options,
+            allowed_rule_pairs,
+            rediscovery_limit=rediscovery_limit,
+        )
+        sweep_evaluation_cache = build_frontier_evaluation_cache(sweep_nodes, wrap_y)
+        _sweep_row, sweep_candidates = frontier_case_analysis(
+            pack_name=pack_name,
+            scenario_name=scenario_name,
+            nodes=sweep_nodes,
+            wrap_y=wrap_y,
+            rule_family="compact",
+            count_options=compact_count_options,
+            retained_weight=retained_weight,
+            raw_pool=sweep_pool,
+            evaluation_cache=sweep_evaluation_cache,
+        )
+        selected_candidate = next(
+            candidate for candidate in sweep_candidates if candidate.current_selected
+        )
+        sweep_mixed_rules = {
+            candidate.rule_signature
+            for candidate in sweep_candidates
+            if candidate.on_mixed
+        }
+        (
+            mean_center,
+            center_range,
+            center_total_variation,
+            crosses_midline,
+            _span_range,
+        ) = column_profile_geometry_metrics(sweep_nodes)
+        rows.append(
+            ContourSensitivityRow(
+                alpha=alpha,
+                selected_rule=selected_candidate.rule_signature,
+                status=selected_candidate.status,
+                mixed_overlap=bool(base_mixed_rules & sweep_mixed_rules),
+                center_gap=selected_candidate.center_gap,
+                arrival_span=selected_candidate.arrival_span,
+                mean_center=mean_center,
+                center_range=center_range,
+                center_total_variation=center_total_variation,
+                crosses_midline=crosses_midline,
+            )
+        )
+
+    return rows
+
+
 def random_rediscovery_limit_sweep_summary(
     retained_weight: float = 1.0,
     variant_limit: int = 3,
@@ -7251,6 +7411,28 @@ def render_procedural_failure_diagnostic_table(
     return "\n".join(lines)
 
 
+def render_contour_sensitivity_table(
+    rows: list[ContourSensitivityRow],
+) -> str:
+    lines = [
+        "alpha | selected rule        | status    | mixed | gap/span      | mean c | c-range | c-var | cross",
+        "------+----------------------+-----------+-------+---------------+--------+---------+-------+------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.alpha:>5.2f} | "
+            f"{row.selected_rule:<20} | "
+            f"{row.status:<9} | "
+            f"{'yes' if row.mixed_overlap else 'no ':<5} | "
+            f"{row.center_gap:>5.3f}/{row.arrival_span:<5.3f} | "
+            f"{row.mean_center:>6.2f} | "
+            f"{row.center_range:>7.2f} | "
+            f"{row.center_total_variation:>5.2f} | "
+            f"{'yes' if row.crosses_midline else 'no ':<4}"
+        )
+    return "\n".join(lines)
+
+
 def main() -> None:
     print("DISCRETE EVENT-NETWORK TOY MODEL")
     print()
@@ -8322,6 +8504,31 @@ def main() -> None:
                     "- So the current evidence points to one specific sensitivity: a cross-midline, high-variation centerline can preserve local focusing while flattening far-boundary delay distortion enough to miss the current `survives` threshold."
                 )
     print("- That is a useful narrowing of the remaining cheat: the model does not look generically fragile here; it looks specifically sensitive to shapes that keep local geodesic focusing but stop imprinting a strong boundary-delay signature.")
+    print()
+
+    print("42) Contour-sensitivity sweep for the compact taper-hard miss")
+    contour_rows = contour_sensitivity_sweep(
+        rediscovery_limit=procedural_rediscovery_limit,
+    )
+    print(render_contour_sensitivity_table(contour_rows))
+    print()
+    print("Interpretation:")
+    survive_rows = [row for row in contour_rows if row.status == "survives"]
+    mixed_rows = [row for row in contour_rows if row.status == "mixed"]
+    if survive_rows and mixed_rows:
+        last_survive = survive_rows[-1]
+        first_mixed = mixed_rows[0]
+        print(
+            f"- Holding the span profile fixed and increasing only the centerline deformation keeps mixed-frontier overlap intact throughout the sweep, but the `survives -> mixed` transition happens once arrival span falls below the current `0.5` cutoff: {last_survive.arrival_span:.3f} at alpha={last_survive.alpha:.2f} versus {first_mixed.arrival_span:.3f} at alpha={first_mixed.alpha:.2f}."
+        )
+        print(
+            f"- Over the same transition, center gap does not collapse ({last_survive.center_gap:.3f} -> {first_mixed.center_gap:.3f}); what grows sharply is centerline swing ({last_survive.center_total_variation:.2f} -> {first_mixed.center_total_variation:.2f})."
+        )
+        if first_mixed.crosses_midline:
+            print(
+                "- That directly supports the current hypothesis: stronger cross-midline centerline variation can preserve local focusing while washing out the far-boundary delay signature that the present robustness threshold still needs."
+            )
+    print("- This is the strongest mechanism test we have on that miss so far because it varies one geometric ingredient while holding the span profile nearly fixed.")
     print()
 
     print("REMAINING CHEATS")
