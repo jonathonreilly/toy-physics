@@ -419,6 +419,22 @@ class DerivedAxisAggregateRow:
 
 
 @dataclass
+class DerivedBasisAblationRow:
+    basis_name: str
+    metrics: str
+    dimension: int
+    cases: int
+    selected_on_pc1: int
+    selected_on_pc12: int
+    selected_on_pc123: int
+    pc123_overlap_with_full: int
+    compact_top_rule: str
+    compact_top_pc123: int
+    extended_top_rule: str
+    extended_top_pc123: int
+
+
+@dataclass
 class FrontierTraceRow:
     retained_weight: float
     rule_signature: str
@@ -6484,8 +6500,24 @@ DERIVED_AXIS_METRIC_FIELDS = (
 )
 
 
+DERIVED_AXIS_BASIS_FIELDS = (
+    ("full5", DERIVED_AXIS_METRIC_FIELDS),
+    ("no_focus", ("center_gap", "arrival_span", "min_margin", "geometric_focus_gap")),
+    ("focus3", ("center_gap", "arrival_span", "focus_score")),
+    ("no_margin", ("center_gap", "arrival_span", "geometric_focus_gap", "focus_score")),
+    ("action3", ("arrival_span", "min_margin", "focus_score")),
+)
+
+
 def derived_metric_vector(candidate: EvaluatedCandidate) -> tuple[float, ...]:
     return tuple(float(getattr(candidate, field_name)) for field_name in DERIVED_AXIS_METRIC_FIELDS)
+
+
+def derived_metric_vector_for_fields(
+    candidate: EvaluatedCandidate,
+    metric_fields: tuple[str, ...],
+) -> tuple[float, ...]:
+    return tuple(float(getattr(candidate, field_name)) for field_name in metric_fields)
 
 
 def dot_product(left: tuple[float, ...], right: tuple[float, ...]) -> float:
@@ -6541,15 +6573,31 @@ def deflate_covariance(
     )
 
 
-def derived_axis_loadings(
+def derived_axis_seed_vectors(
+    dimension: int,
+) -> tuple[tuple[float, ...], ...]:
+    all_positive = tuple(1.0 for _index in range(dimension))
+    alternating = tuple(1.0 if index % 2 == 0 else -1.0 for index in range(dimension))
+    staggered = tuple(
+        (1.0 if index % 3 == 0 else (-1.0 if index % 3 == 1 else 0.5))
+        for index in range(dimension)
+    )
+    return (all_positive, alternating, staggered)
+
+
+def derived_axis_components(
     candidates: list[EvaluatedCandidate],
+    metric_fields: tuple[str, ...],
     component_count: int = 3,
-) -> tuple[list[DerivedAxisLoadingRow], list[EvaluatedCandidate]]:
+) -> tuple[list[tuple[float, tuple[float, ...]]], list[EvaluatedCandidate]]:
     if not candidates:
         return [], []
 
-    metric_rows = [derived_metric_vector(candidate) for candidate in candidates]
-    dimension = len(DERIVED_AXIS_METRIC_FIELDS)
+    metric_rows = [
+        derived_metric_vector_for_fields(candidate, metric_fields)
+        for candidate in candidates
+    ]
+    dimension = len(metric_fields)
     means = [
         sum(row[index] for row in metric_rows) / len(metric_rows)
         for index in range(dimension)
@@ -6571,29 +6619,71 @@ def derived_axis_loadings(
         for left_index in range(dimension)
     )
 
-    anchor = (1.0, 1.0, 0.0, 0.0, 1.0)
-    component_vectors: list[tuple[float, ...]] = []
-    loading_rows: list[DerivedAxisLoadingRow] = []
-    working_covariance = covariance
-    seed_vectors = (
-        (1.0, 1.0, 1.0, 1.0, 1.0),
-        (1.0, -1.0, 1.0, -1.0, 0.5),
-        (0.5, 1.0, -1.0, 1.0, -0.5),
+    anchor = tuple(
+        1.0 if field_name in {"center_gap", "arrival_span", "focus_score"} else 0.0
+        for field_name in metric_fields
     )
-
+    if all(value == 0.0 for value in anchor):
+        anchor = tuple(1.0 for _field in metric_fields)
+    seed_vectors = derived_axis_seed_vectors(dimension)
+    working_covariance = covariance
+    components: list[tuple[float, tuple[float, ...]]] = []
     for component_index in range(min(component_count, dimension)):
+        default_seed = tuple(
+            1.0 if metric_index == component_index else 0.0
+            for metric_index in range(dimension)
+        )
         eigenvalue, eigenvector = principal_component(
             working_covariance,
-            seed_vectors[component_index] if component_index < len(seed_vectors) else tuple(
-                1.0 if metric_index == component_index else 0.0
-                for metric_index in range(dimension)
-            ),
+            seed_vectors[component_index] if component_index < len(seed_vectors) else default_seed,
         )
         if eigenvalue <= 1e-10 or all(abs(value) <= 1e-10 for value in eigenvector):
             break
         if dot_product(eigenvector, anchor) < 0.0:
             eigenvector = tuple(-value for value in eigenvector)
-        component_vectors.append(eigenvector)
+        components.append((eigenvalue, eigenvector))
+        working_covariance = deflate_covariance(
+            working_covariance,
+            eigenvalue,
+            eigenvector,
+        )
+
+    annotated_candidates = [
+        replace(
+            candidate,
+            pc1_score=0.0,
+            pc2_score=0.0,
+            pc3_score=0.0,
+        )
+        for candidate in candidates
+    ]
+    for component_index, (_eigenvalue, eigenvector) in enumerate(components[:3]):
+        annotated_candidates = [
+            replace(
+                candidate,
+                **{
+                    f"pc{component_index + 1}_score": dot_product(
+                        standardized_row,
+                        eigenvector,
+                    )
+                },
+            )
+            for candidate, standardized_row in zip(annotated_candidates, standardized_rows)
+        ]
+    return components, annotated_candidates
+
+
+def derived_axis_loadings(
+    candidates: list[EvaluatedCandidate],
+    component_count: int = 3,
+) -> tuple[list[DerivedAxisLoadingRow], list[EvaluatedCandidate]]:
+    components, annotated_candidates = derived_axis_components(
+        candidates,
+        DERIVED_AXIS_METRIC_FIELDS,
+        component_count=component_count,
+    )
+    loading_rows: list[DerivedAxisLoadingRow] = []
+    for component_index, (eigenvalue, eigenvector) in enumerate(components):
         loading_rows.append(
             DerivedAxisLoadingRow(
                 component=f"pc{component_index + 1}",
@@ -6605,29 +6695,6 @@ def derived_axis_loadings(
                 focus_score=eigenvector[4],
             )
         )
-        working_covariance = deflate_covariance(
-            working_covariance,
-            eigenvalue,
-            eigenvector,
-        )
-
-    annotated_candidates = candidates
-    for component_index in range(3):
-        if component_index >= len(component_vectors):
-            break
-        component = component_vectors[component_index]
-        annotated_candidates = [
-            replace(
-                candidate,
-                **{
-                    f"pc{component_index + 1}_score": dot_product(
-                        standardized_row,
-                        component,
-                    )
-                },
-            )
-            for candidate, standardized_row in zip(annotated_candidates, standardized_rows)
-        ]
     return loading_rows, annotated_candidates
 
 
@@ -6758,6 +6825,151 @@ def derived_axis_frontier_analysis(
         )
     )
     return loading_rows, scenario_rows, aggregate_rows
+
+
+def derived_basis_ablation(
+    baseline_rows: list[FrontierScenarioRow],
+    baseline_candidates: list[EvaluatedCandidate],
+    basis_fields: tuple[tuple[str, tuple[str, ...]], ...] = DERIVED_AXIS_BASIS_FIELDS,
+) -> list[DerivedBasisAblationRow]:
+    grouped_baseline_candidates: DefaultDict[
+        tuple[str, str, str, float],
+        list[EvaluatedCandidate],
+    ] = defaultdict(list)
+    for candidate in baseline_candidates:
+        grouped_baseline_candidates[frontier_candidate_case_key(candidate)].append(candidate)
+
+    baseline_rows_by_case = {
+        frontier_scenario_case_key(row): row
+        for row in baseline_rows
+    }
+    derived_views = derived_axis_frontier_views()
+    basis_case_pc123_signatures: dict[str, dict[tuple[str, str, str, float], set[str]]] = {}
+    basis_aggregate_rows: dict[str, list[DerivedAxisAggregateRow]] = {}
+    basis_selected_counts: dict[str, tuple[int, int, int]] = {}
+
+    for basis_name, metric_fields in basis_fields:
+        grouped_candidates: DefaultDict[
+            tuple[str, str, str, float],
+            list[EvaluatedCandidate],
+        ] = defaultdict(list)
+        _components, annotated_candidates = derived_axis_components(
+            baseline_candidates,
+            metric_fields,
+        )
+        for candidate in annotated_candidates:
+            grouped_candidates[frontier_candidate_case_key(candidate)].append(candidate)
+
+        case_sets: DefaultDict[tuple[str, str], set[tuple[str, str, float]]] = defaultdict(set)
+        selected_sets: DefaultDict[tuple[str, str], set[tuple[str, str, float]]] = defaultdict(set)
+        pc1_sets: DefaultDict[tuple[str, str], set[tuple[str, str, float]]] = defaultdict(set)
+        pc12_sets: DefaultDict[tuple[str, str], set[tuple[str, str, float]]] = defaultdict(set)
+        pc123_sets: DefaultDict[tuple[str, str], set[tuple[str, str, float]]] = defaultdict(set)
+        pc123_signatures_by_case: dict[tuple[str, str, str, float], set[str]] = {}
+        selected_on_pc1 = 0
+        selected_on_pc12 = 0
+        selected_on_pc123 = 0
+
+        for case_key in sorted(grouped_candidates):
+            case_candidates = grouped_candidates[case_key]
+            baseline_row = baseline_rows_by_case[case_key]
+            frontier_identities = {
+                view_name: pareto_frontier_identities(case_candidates, axes)
+                for view_name, axes in derived_views.items()
+            }
+            selected_candidate = next(
+                candidate
+                for candidate in case_candidates
+                if candidate.rule_signature == baseline_row.selected_rule and candidate.current_selected
+            )
+            selected_on_pc1 += selected_candidate.candidate_identity in frontier_identities["pc1"]
+            selected_on_pc12 += selected_candidate.candidate_identity in frontier_identities["pc12"]
+            selected_on_pc123 += selected_candidate.candidate_identity in frontier_identities["pc123"]
+            pc123_signatures_by_case[case_key] = {
+                candidate.rule_signature
+                for candidate in case_candidates
+                if candidate.candidate_identity in frontier_identities["pc123"]
+            }
+
+            case_triplet = (
+                baseline_row.pack_name,
+                baseline_row.scenario_name,
+                baseline_row.retained_weight,
+            )
+            for candidate in case_candidates:
+                family_rule = (candidate.rule_family, candidate.rule_signature)
+                case_sets[family_rule].add(case_triplet)
+                if candidate.current_selected:
+                    selected_sets[family_rule].add(case_triplet)
+                if candidate.candidate_identity in frontier_identities["pc1"]:
+                    pc1_sets[family_rule].add(case_triplet)
+                if candidate.candidate_identity in frontier_identities["pc12"]:
+                    pc12_sets[family_rule].add(case_triplet)
+                if candidate.candidate_identity in frontier_identities["pc123"]:
+                    pc123_sets[family_rule].add(case_triplet)
+
+        basis_case_pc123_signatures[basis_name] = pc123_signatures_by_case
+        basis_selected_counts[basis_name] = (
+            selected_on_pc1,
+            selected_on_pc12,
+            selected_on_pc123,
+        )
+        aggregate_rows = [
+            DerivedAxisAggregateRow(
+                rule_family=rule_family,
+                rule_signature=rule_signature,
+                case_hits=len(case_sets[(rule_family, rule_signature)]),
+                selected_hits=len(selected_sets[(rule_family, rule_signature)]),
+                pc1_hits=len(pc1_sets[(rule_family, rule_signature)]),
+                pc12_hits=len(pc12_sets[(rule_family, rule_signature)]),
+                pc123_hits=len(pc123_sets[(rule_family, rule_signature)]),
+            )
+            for rule_family, rule_signature in case_sets
+        ]
+        aggregate_rows.sort(
+            key=lambda row: (
+                row.rule_family,
+                -row.pc123_hits,
+                -row.pc12_hits,
+                -row.pc1_hits,
+                -row.selected_hits,
+                row.rule_signature,
+            )
+        )
+        basis_aggregate_rows[basis_name] = aggregate_rows
+
+    full_case_signatures = basis_case_pc123_signatures["full5"]
+    ablation_rows: list[DerivedBasisAblationRow] = []
+    total_cases = len(baseline_rows)
+    for basis_name, metric_fields in basis_fields:
+        selected_on_pc1, selected_on_pc12, selected_on_pc123 = basis_selected_counts[basis_name]
+        pc123_overlap_with_full = sum(
+            bool(
+                basis_case_pc123_signatures[basis_name][case_key]
+                & full_case_signatures[case_key]
+            )
+            for case_key in full_case_signatures
+        )
+        aggregate_rows = basis_aggregate_rows[basis_name]
+        compact_top = next((row for row in aggregate_rows if row.rule_family == "compact"), None)
+        extended_top = next((row for row in aggregate_rows if row.rule_family == "extended"), None)
+        ablation_rows.append(
+            DerivedBasisAblationRow(
+                basis_name=basis_name,
+                metrics=", ".join(metric_fields),
+                dimension=len(metric_fields),
+                cases=total_cases,
+                selected_on_pc1=selected_on_pc1,
+                selected_on_pc12=selected_on_pc12,
+                selected_on_pc123=selected_on_pc123,
+                pc123_overlap_with_full=pc123_overlap_with_full,
+                compact_top_rule=compact_top.rule_signature if compact_top is not None else "-",
+                compact_top_pc123=compact_top.pc123_hits if compact_top is not None else 0,
+                extended_top_rule=extended_top.rule_signature if extended_top is not None else "-",
+                extended_top_pc123=extended_top.pc123_hits if extended_top is not None else 0,
+            )
+        )
+    return ablation_rows
 
 
 def random_rediscovery_limit_sweep_summary(
@@ -8224,6 +8436,26 @@ def render_derived_axis_aggregate_table(
             f"{row.pc1_hits:>3} | "
             f"{row.pc12_hits:>4} | "
             f"{row.pc123_hits:>4}"
+        )
+    return "\n".join(lines)
+
+
+def render_derived_basis_ablation_table(
+    rows: list[DerivedBasisAblationRow],
+) -> str:
+    lines = [
+        "basis      | dim | sel pc1/12/123 | pc123 ovlp | compact top        | ext top            | metrics",
+        "-----------+-----+----------------+------------+--------------------+--------------------+------------------------------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.basis_name:<9} | "
+            f"{row.dimension:>3} | "
+            f"{row.selected_on_pc1:>3}/{row.selected_on_pc12:<3}/{row.selected_on_pc123:<3} | "
+            f"{row.pc123_overlap_with_full:>10} | "
+            f"{row.compact_top_rule:<18} {row.compact_top_pc123:>2} | "
+            f"{row.extended_top_rule:<18} {row.extended_top_pc123:>2} | "
+            f"{row.metrics}"
         )
     return "\n".join(lines)
 
@@ -9825,6 +10057,53 @@ def main() -> None:
         )
     print(
         "- So this is the cleanest current test of selector-invariant structure without our hand-picked view vocabulary. The result is mixed but informative: the same core motif family still dominates the full derived frontier, but much of the apparent low-dimensional agreement disappears once we stop naming the views ourselves."
+    )
+    print()
+
+    print("47) Metric-basis ablation of the derived frontier")
+    derived_basis_rows = derived_basis_ablation(
+        harmonic_continuous_frontier_rows,
+        harmonic_continuous_frontier_candidates,
+    )
+    print(render_derived_basis_ablation_table(derived_basis_rows))
+    print()
+    print("Interpretation:")
+    full_basis_row = next(row for row in derived_basis_rows if row.basis_name == "full5")
+    print(
+        f"- This asks whether the derived-axis result is specific to our current five-metric basis or whether it survives smaller alternative bases. The full basis keeps the selected rule on pc123 in {full_basis_row.selected_on_pc123}/{full_basis_row.cases} cases."
+    )
+    smaller_bases = [row for row in derived_basis_rows if row.basis_name != "full5"]
+    strongest_alternative = sorted(
+        smaller_bases,
+        key=lambda row: (-row.selected_on_pc123, -row.pc123_overlap_with_full, row.dimension, row.basis_name),
+    )[0]
+    weakest_alternative = sorted(
+        smaller_bases,
+        key=lambda row: (row.selected_on_pc123, row.pc123_overlap_with_full, row.dimension, row.basis_name),
+    )[0]
+    print(
+        f"- The strongest smaller basis in this run is `{strongest_alternative.basis_name}`, which keeps the selected rule on pc123 in {strongest_alternative.selected_on_pc123}/{strongest_alternative.cases} cases and overlaps the full-basis pc123 frontier in {strongest_alternative.pc123_overlap_with_full}/{strongest_alternative.cases}."
+    )
+    print(
+        f"- The weakest is `{weakest_alternative.basis_name}`, at {weakest_alternative.selected_on_pc123}/{weakest_alternative.cases} selected-on-pc123 and {weakest_alternative.pc123_overlap_with_full}/{weakest_alternative.cases} full-basis overlap."
+    )
+    if all(row.pc123_overlap_with_full == full_basis_row.cases for row in derived_basis_rows):
+        print(
+            f"- Every tested basis still shares at least one pc123 motif with the full-basis frontier in all {full_basis_row.cases} cases, so the full derived frontier is not isolated to one metric bundle."
+        )
+    compact_top_matches = sum(
+        row.compact_top_rule == full_basis_row.compact_top_rule
+        for row in derived_basis_rows
+    )
+    extended_top_matches = sum(
+        row.extended_top_rule == full_basis_row.extended_top_rule
+        for row in derived_basis_rows
+    )
+    print(
+        f"- The top pc123 motif is basis-stable in `compact` for {compact_top_matches}/{len(derived_basis_rows)} tested bases and in `extended` for {extended_top_matches}/{len(derived_basis_rows)}."
+    )
+    print(
+        "- So this is the next cheat-removal result: the full covariance-derived frontier is not uniquely tied to one hand-picked metric bundle, but the detailed motif ranking is still basis-dependent. Some reduced bases preserve the pc123 story completely, while others flip the leading motif family."
     )
     print()
 
