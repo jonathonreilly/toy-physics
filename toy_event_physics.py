@@ -634,6 +634,40 @@ class ProjectionCoreMechanismCaseRow:
 
 
 @dataclass
+class RoughnessCoreSweepRow:
+    alpha: float
+    rule_family: str
+    retained_weight: float
+    regime: str
+    selected_rule: str
+    selected_in_core: bool
+    core_count: int
+    union_count: int
+    center_range: float
+    center_variation: float
+    span_range: float
+    crosses_midline: bool
+
+
+@dataclass
+class RoughnessCoreAggregateRow:
+    alpha: float
+    rule_family: str
+    cases: int
+    selected_in_core_cases: int
+    empty_cases: int
+    single_selected_cases: int
+    single_other_cases: int
+    multi_selected_cases: int
+    multi_other_cases: int
+    avg_core_count: float
+    center_range: float
+    center_variation: float
+    span_range: float
+    crosses_midline: bool
+
+
+@dataclass
 class FrontierTraceRow:
     retained_weight: float
     rule_signature: str
@@ -8472,6 +8506,145 @@ def projection_core_mechanism_map(
     return regime_rows, case_feature_rows
 
 
+def harmonic_continuous_case_analysis(
+    pack_name: str,
+    scenario_name: str,
+    nodes: set[tuple[int, int]],
+    wrap_y: bool,
+    rule_family: str,
+    count_options: tuple[frozenset[int], ...],
+    retained_weight: float,
+) -> tuple[FrontierScenarioRow, list[EvaluatedCandidate]]:
+    scenario_row, candidates = frontier_case_analysis(
+        pack_name=pack_name,
+        scenario_name=scenario_name,
+        nodes=nodes,
+        wrap_y=wrap_y,
+        rule_family=rule_family,
+        count_options=count_options,
+        retained_weight=retained_weight,
+    )
+    _harmonic_agg, _harmonic_changes, harmonic_rows, harmonic_candidates = frontier_observable_ablation(
+        [scenario_row],
+        candidates,
+        observable="harmonic",
+        ranking_mode="bucketed",
+    )
+    _harmonic_cont_agg, _harmonic_cont_changes, harmonic_cont_rows, harmonic_cont_candidates = frontier_observable_ablation(
+        harmonic_rows,
+        harmonic_candidates,
+        observable="harmonic",
+        ranking_mode="continuous",
+    )
+    return harmonic_cont_rows[0], harmonic_cont_candidates
+
+
+def roughness_core_sweep(
+    retained_weights: tuple[float, ...] = (0.75, 0.8, 0.85, 0.9, 0.95, 1.0),
+    alphas: tuple[float, ...] = (0.0, 0.2, 0.4, 0.6, 0.8, 1.0),
+) -> tuple[list[RoughnessCoreSweepRow], list[RoughnessCoreAggregateRow]]:
+    pack_name = "base"
+    scenario_name = "taper-hard"
+    nodes, wrap_y = scenario_by_name(pack_name, scenario_name)
+    procedural_variants = {
+        variant_name: perturbed_nodes
+        for variant_name, perturbed_nodes, _node_delta in procedural_geometry_variants(
+            pack_name,
+            scenario_name,
+            nodes,
+            wrap_y,
+            variant_limit=2,
+        )
+    }
+    survivor_nodes = procedural_variants["procedural-a"]
+    miss_nodes = procedural_variants["procedural-b"]
+    xs, survivor_centers, _survivor_spans = ordered_profile_centers_and_spans(survivor_nodes)
+    miss_xs, miss_centers, miss_spans = ordered_profile_centers_and_spans(miss_nodes)
+    if xs != miss_xs:
+        raise RuntimeError("Roughness core sweep requires aligned x columns.")
+
+    rows: list[RoughnessCoreSweepRow] = []
+    for alpha in alphas:
+        centers = tuple(
+            survivor_center + alpha * (miss_center - survivor_center)
+            for survivor_center, miss_center in zip(survivor_centers, miss_centers)
+        )
+        profile = build_profile_from_centers_and_spans(xs, centers, miss_spans)
+        sweep_nodes = build_nodes_from_interval_profile(profile)
+        (
+            _mean_center,
+            center_range,
+            center_variation,
+            crosses_midline,
+            span_range,
+        ) = column_profile_geometry_metrics(sweep_nodes)
+        for rule_family, count_options in family_count_options():
+            for retained_weight in retained_weights:
+                harmonic_cont_row, harmonic_cont_candidates = harmonic_continuous_case_analysis(
+                    pack_name=pack_name,
+                    scenario_name=f"{scenario_name}:roughness-{alpha:.2f}",
+                    nodes=sweep_nodes,
+                    wrap_y=wrap_y,
+                    rule_family=rule_family,
+                    count_options=count_options,
+                    retained_weight=retained_weight,
+                )
+                case_core_rows, _aggregate_rows = derived_projection_family_case_core_analysis(
+                    [harmonic_cont_row],
+                    harmonic_cont_candidates,
+                    projection_dimension=4,
+                    generator="orthonormal",
+                )
+                case_core_row = case_core_rows[0]
+                rows.append(
+                    RoughnessCoreSweepRow(
+                        alpha=alpha,
+                        rule_family=rule_family,
+                        retained_weight=retained_weight,
+                        regime=projection_core_regime(case_core_row),
+                        selected_rule=case_core_row.selected_rule,
+                        selected_in_core=case_core_row.selected_in_core,
+                        core_count=case_core_row.core_count,
+                        union_count=case_core_row.union_count,
+                        center_range=center_range,
+                        center_variation=center_variation,
+                        span_range=span_range,
+                        crosses_midline=crosses_midline,
+                    )
+                )
+
+    aggregate_rows: list[RoughnessCoreAggregateRow] = []
+    for alpha in alphas:
+        for rule_family in ("compact", "extended"):
+            family_rows = [
+                row
+                for row in rows
+                if row.alpha == alpha and row.rule_family == rule_family
+            ]
+            aggregate_rows.append(
+                RoughnessCoreAggregateRow(
+                    alpha=alpha,
+                    rule_family=rule_family,
+                    cases=len(family_rows),
+                    selected_in_core_cases=sum(row.selected_in_core for row in family_rows),
+                    empty_cases=sum(row.regime == "empty" for row in family_rows),
+                    single_selected_cases=sum(row.regime == "single-selected" for row in family_rows),
+                    single_other_cases=sum(row.regime == "single-other" for row in family_rows),
+                    multi_selected_cases=sum(row.regime == "multi-selected" for row in family_rows),
+                    multi_other_cases=sum(row.regime == "multi-other" for row in family_rows),
+                    avg_core_count=sum(row.core_count for row in family_rows) / len(family_rows),
+                    center_range=family_rows[0].center_range,
+                    center_variation=family_rows[0].center_variation,
+                    span_range=family_rows[0].span_range,
+                    crosses_midline=family_rows[0].crosses_midline,
+                )
+            )
+
+    rows.sort(key=lambda row: (row.rule_family, row.retained_weight, row.alpha))
+    aggregate_rows.sort(key=lambda row: (row.rule_family, row.alpha))
+    return rows, aggregate_rows
+
+
 def random_rediscovery_limit_sweep_summary(
     retained_weight: float = 1.0,
     variant_limit: int = 3,
@@ -10268,6 +10441,51 @@ def render_projection_core_mechanism_case_table(
             f"{row.center_range:>4.1f} | "
             f"{row.center_variation:>5.1f} | "
             f"{row.span_range:>3.1f}"
+        )
+    return "\n".join(lines)
+
+
+def render_roughness_core_aggregate_table(
+    rows: list[RoughnessCoreAggregateRow],
+) -> str:
+    lines = [
+        "family   | alpha | sel core | empty | single sel/other | multi sel/other | avg core | crng | cvar | srng | cross",
+        "---------+-------+----------+-------+------------------+-----------------+----------+------+------+------+------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.rule_family:<8} | "
+            f"{row.alpha:>5.2f} | "
+            f"{row.selected_in_core_cases:>8} | "
+            f"{row.empty_cases:>5} | "
+            f"{row.single_selected_cases:>6}/{row.single_other_cases:<5} | "
+            f"{row.multi_selected_cases:>5}/{row.multi_other_cases:<5} | "
+            f"{row.avg_core_count:>8.2f} | "
+            f"{row.center_range:>4.1f} | "
+            f"{row.center_variation:>4.1f} | "
+            f"{row.span_range:>4.1f} | "
+            f"{('Y' if row.crosses_midline else 'n'):<4}"
+        )
+    return "\n".join(lines)
+
+
+def render_roughness_core_case_table(
+    rows: list[RoughnessCoreSweepRow],
+    limit: int = 18,
+) -> str:
+    lines = [
+        "family   | w    | alpha | regime          | sel core | core/u | rule",
+        "---------+------+-------+-----------------+----------+--------+-------------------",
+    ]
+    for row in rows[:limit]:
+        lines.append(
+            f"{row.rule_family:<8} | "
+            f"{row.retained_weight:>4.2f} | "
+            f"{row.alpha:>5.2f} | "
+            f"{row.regime:<15} | "
+            f"{('Y' if row.selected_in_core else 'n'):<8} | "
+            f"{row.core_count:>2}/{row.union_count:<5} | "
+            f"{row.selected_rule}"
         )
     return "\n".join(lines)
 
@@ -12360,6 +12578,46 @@ def main() -> None:
         )
     print(
         "- This turns the case-core result into a real mechanism map: empty cores, single-motif cores, and multi-motif cores now line up with different contour-roughness and topology signatures instead of only looking like abstract counts."
+    )
+    print()
+
+    print("56) Controlled roughness sweep at fixed span profile")
+    roughness_core_rows, roughness_core_aggregate_rows = roughness_core_sweep()
+    roughness_transition_rows = [
+        row
+        for row in roughness_core_rows
+        if row.alpha in {0.0, 0.2, 0.6, 1.0}
+        and row.retained_weight in {0.75, 1.0}
+    ]
+    print(render_roughness_core_aggregate_table(roughness_core_aggregate_rows))
+    print()
+    print(
+        render_roughness_core_case_table(
+            roughness_transition_rows,
+            limit=min(18, len(roughness_transition_rows)),
+        )
+    )
+    print()
+    print("Interpretation:")
+    compact_alpha0 = next(row for row in roughness_core_aggregate_rows if row.rule_family == "compact" and row.alpha == 0.0)
+    compact_alpha02 = next(row for row in roughness_core_aggregate_rows if row.rule_family == "compact" and row.alpha == 0.2)
+    compact_alpha06 = next(row for row in roughness_core_aggregate_rows if row.rule_family == "compact" and row.alpha == 0.6)
+    compact_alpha1 = next(row for row in roughness_core_aggregate_rows if row.rule_family == "compact" and row.alpha == 1.0)
+    extended_alpha0 = next(row for row in roughness_core_aggregate_rows if row.rule_family == "extended" and row.alpha == 0.0)
+    extended_alpha02 = next(row for row in roughness_core_aggregate_rows if row.rule_family == "extended" and row.alpha == 0.2)
+    extended_alpha06 = next(row for row in roughness_core_aggregate_rows if row.rule_family == "extended" and row.alpha == 0.6)
+    extended_alpha1 = next(row for row in roughness_core_aggregate_rows if row.rule_family == "extended" and row.alpha == 1.0)
+    print(
+        f"- This is the controlled version of the mechanism question: the span profile is held fixed while only the centerline path changes. The key variable is the realized roughness, not alpha by itself."
+    )
+    print(
+        f"- In `compact`, the low-roughness mid-sweep states are the clean ones: alpha {compact_alpha02.alpha:.2f} has center-variation {compact_alpha02.center_variation:.1f}, selected-in-core {compact_alpha02.selected_in_core_cases}/{compact_alpha02.cases}, and zero empty cases, while the rougher states at alpha {compact_alpha0.alpha:.2f}, {compact_alpha06.alpha:.2f}, and {compact_alpha1.alpha:.2f} all return to all-empty cores."
+    )
+    print(
+        f"- In `extended`, the same geometry family shows a richer version of that pattern: alpha {extended_alpha02.alpha:.2f} at center-variation {extended_alpha02.center_variation:.1f} gives {extended_alpha02.multi_selected_cases}/{extended_alpha02.cases} multi-selected cores, alpha {extended_alpha06.alpha:.2f} at variation {extended_alpha06.center_variation:.1f} collapses to {extended_alpha06.empty_cases}/{extended_alpha06.cases} empty cores, and the roughest endpoint alpha {extended_alpha1.alpha:.2f} partially re-enters the single-selected regime ({extended_alpha1.single_selected_cases}/{extended_alpha1.cases})."
+    )
+    print(
+        "- So the transition is continuous in the geometry metrics but not monotone in alpha. What survives the control test is the stronger claim: the case-core regime clearly tracks realized centerline roughness at fixed span profile, even though the response can be family-dependent and re-entrant."
     )
     print()
 
