@@ -828,6 +828,20 @@ class CrossDatasetSubsetRow:
 
 
 @dataclass
+class CrossDatasetDepthAblationRow:
+    rule_family: str
+    max_depth: int
+    raw_balanced_frontier: int
+    raw_transfer_frontier: int
+    compressed_behaviors: int
+    compressed_overlap_with_reference: int
+    roughness_on_balanced: bool
+    roughness_on_transfer: bool
+    top_balanced_subset: str
+    top_transfer_subset: str
+
+
+@dataclass
 class FrontierTraceRow:
     retained_weight: float
     rule_signature: str
@@ -9246,6 +9260,7 @@ def centerline_decision_tree_benchmark(
 def centerline_feature_subset_benchmark(
     mode_rows: list[CenterlineModeSweepRow],
     max_subset_size: int = 3,
+    max_depth: int = 2,
 ) -> list[CenterlineFeatureSubsetRow]:
     candidate_features = geometry_candidate_features()
     benchmark_rows: list[CenterlineFeatureSubsetRow] = []
@@ -9254,13 +9269,13 @@ def centerline_feature_subset_benchmark(
         modes = sorted({row.mode for row in family_rows})
         for subset_size in range(1, max_subset_size + 1):
             for feature_names in itertools.combinations(candidate_features, subset_size):
-                full_tree = learn_tiny_decision_tree(family_rows, feature_names, 2)
+                full_tree = learn_tiny_decision_tree(family_rows, feature_names, max_depth)
                 train_accuracy = decision_tree_accuracy(full_tree, family_rows)
                 fold_scores: dict[str, float] = {}
                 for mode in modes:
                     train_rows = [row for row in family_rows if row.mode != mode]
                     test_rows = [row for row in family_rows if row.mode == mode]
-                    fold_tree = learn_tiny_decision_tree(train_rows, feature_names, 2)
+                    fold_tree = learn_tiny_decision_tree(train_rows, feature_names, max_depth)
                     fold_scores[mode] = decision_tree_accuracy(fold_tree, test_rows)
                 benchmark_rows.append(
                     CenterlineFeatureSubsetRow(
@@ -9428,6 +9443,47 @@ def geometry_prediction_rows_from_roughness(
     return rows
 
 
+def build_cross_dataset_prediction_context(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    procedural_variant_limit: int = 2,
+    procedural_rediscovery_limit: int = 1,
+) -> tuple[
+    list[CenterlineModeSweepRow],
+    list[GeometryPredictionRow],
+    list[GeometryPredictionRow],
+    list[GeometryPredictionRow],
+]:
+    if mode_retained_weight is None:
+        mode_core_rows, _mode_aggregate = centerline_mode_core_sweep()
+    else:
+        mode_core_rows, _mode_aggregate = centerline_mode_core_sweep(
+            retained_weights=(mode_retained_weight,),
+        )
+    roughness_rows, _roughness_aggregate = roughness_core_sweep(
+        retained_weights=(retained_weight,),
+    )
+    procedural_rows = procedural_geometry_prediction_rows(
+        retained_weight=retained_weight,
+        variant_limit=procedural_variant_limit,
+        rediscovery_limit=procedural_rediscovery_limit,
+    )
+    mode_prediction_rows = geometry_prediction_rows_from_mode(
+        mode_core_rows,
+        retained_weight=mode_retained_weight,
+    )
+    roughness_prediction_rows = geometry_prediction_rows_from_roughness(
+        roughness_rows,
+        retained_weight=retained_weight,
+    )
+    return (
+        mode_core_rows,
+        mode_prediction_rows,
+        roughness_prediction_rows,
+        procedural_rows,
+    )
+
+
 def procedural_geometry_prediction_rows(
     retained_weight: float = 1.0,
     variant_limit: int = 2,
@@ -9498,27 +9554,16 @@ def cross_dataset_transfer_benchmark(
     procedural_variant_limit: int = 2,
     procedural_rediscovery_limit: int = 1,
 ) -> list[CrossDatasetTransferRow]:
-    if mode_retained_weight is None:
-        mode_core_rows, _mode_aggregate = centerline_mode_core_sweep()
-    else:
-        mode_core_rows, _mode_aggregate = centerline_mode_core_sweep(
-            retained_weights=(mode_retained_weight,),
-        )
-    roughness_rows, _roughness_aggregate = roughness_core_sweep(
-        retained_weights=(retained_weight,),
-    )
-    procedural_rows = procedural_geometry_prediction_rows(
-        retained_weight=retained_weight,
-        variant_limit=procedural_variant_limit,
-        rediscovery_limit=procedural_rediscovery_limit,
-    )
-    mode_prediction_rows = geometry_prediction_rows_from_mode(
+    (
         mode_core_rows,
-        retained_weight=mode_retained_weight,
-    )
-    roughness_prediction_rows = geometry_prediction_rows_from_roughness(
-        roughness_rows,
+        mode_prediction_rows,
+        roughness_prediction_rows,
+        procedural_rows,
+    ) = build_cross_dataset_prediction_context(
         retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+        procedural_variant_limit=procedural_variant_limit,
+        procedural_rediscovery_limit=procedural_rediscovery_limit,
     )
     decision_rows = centerline_decision_tree_benchmark(mode_core_rows)
     subset_rows = centerline_feature_subset_benchmark(mode_core_rows)
@@ -9617,55 +9662,19 @@ def cross_dataset_transfer_benchmark(
     return benchmark_rows
 
 
-def dominates_subset_row(
-    left: CrossDatasetSubsetRow,
-    right: CrossDatasetSubsetRow,
-    axes: tuple[str, ...],
-) -> bool:
-    left_values = [getattr(left, axis) for axis in axes]
-    right_values = [getattr(right, axis) for axis in axes]
-    return all(left_value >= right_value for left_value, right_value in zip(left_values, right_values)) and any(
-        left_value > right_value for left_value, right_value in zip(left_values, right_values)
-    )
-
-
-def cross_dataset_subset_pareto_benchmark(
-    retained_weight: float = 1.0,
-    mode_retained_weight: float | None = None,
-    procedural_variant_limit: int = 2,
-    procedural_rediscovery_limit: int = 1,
+def cross_dataset_subset_pareto_from_rows(
+    mode_core_rows: list[CenterlineModeSweepRow],
+    mode_prediction_rows: list[GeometryPredictionRow],
+    roughness_prediction_rows: list[GeometryPredictionRow],
+    procedural_rows: list[GeometryPredictionRow],
     max_subset_size: int = 3,
+    max_depth: int = 2,
 ) -> list[CrossDatasetSubsetRow]:
-    if mode_retained_weight is None:
-        mode_core_rows, _mode_aggregate = centerline_mode_core_sweep()
-    else:
-        mode_core_rows, _mode_aggregate = centerline_mode_core_sweep(
-            retained_weights=(mode_retained_weight,),
-        )
-    roughness_rows, _roughness_aggregate = roughness_core_sweep(
-        retained_weights=(retained_weight,),
-    )
-    procedural_rows = procedural_geometry_prediction_rows(
-        retained_weight=retained_weight,
-        variant_limit=procedural_variant_limit,
-        rediscovery_limit=procedural_rediscovery_limit,
-    )
-    mode_prediction_rows = geometry_prediction_rows_from_mode(
-        mode_core_rows,
-        retained_weight=mode_retained_weight,
-    )
-    roughness_prediction_rows = geometry_prediction_rows_from_roughness(
-        roughness_rows,
-        retained_weight=retained_weight,
-    )
     subset_rows = centerline_feature_subset_benchmark(
         mode_core_rows,
         max_subset_size=max_subset_size,
+        max_depth=max_depth,
     )
-    subset_index = {
-        (row.rule_family, row.feature_subset): row
-        for row in subset_rows
-    }
     candidate_features = geometry_candidate_features()
     benchmark_rows: list[CrossDatasetSubsetRow] = []
     for rule_family in ("compact", "extended"):
@@ -9678,12 +9687,17 @@ def cross_dataset_subset_pareto_benchmark(
         family_procedural_rows = [
             row for row in procedural_rows if row.rule_family == rule_family
         ]
+        family_subset_index = {
+            row.feature_subset: row
+            for row in subset_rows
+            if row.rule_family == rule_family
+        }
         family_rows: list[CrossDatasetSubsetRow] = []
         for subset_size in range(1, max_subset_size + 1):
             for feature_names in itertools.combinations(candidate_features, subset_size):
                 feature_subset = ", ".join(feature_names)
-                subset_row = subset_index[(rule_family, feature_subset)]
-                tree = learn_tiny_decision_tree(family_mode_rows, feature_names, 2)
+                subset_row = family_subset_index[feature_subset]
+                tree = learn_tiny_decision_tree(family_mode_rows, feature_names, max_depth)
                 roughness_accuracy = decision_tree_accuracy(tree, family_roughness_rows)
                 procedural_accuracy = decision_tree_accuracy(tree, family_procedural_rows)
                 family_rows.append(
@@ -9732,6 +9746,47 @@ def cross_dataset_subset_pareto_benchmark(
     return benchmark_rows
 
 
+def dominates_subset_row(
+    left: CrossDatasetSubsetRow,
+    right: CrossDatasetSubsetRow,
+    axes: tuple[str, ...],
+) -> bool:
+    left_values = [getattr(left, axis) for axis in axes]
+    right_values = [getattr(right, axis) for axis in axes]
+    return all(left_value >= right_value for left_value, right_value in zip(left_values, right_values)) and any(
+        left_value > right_value for left_value, right_value in zip(left_values, right_values)
+    )
+
+
+def cross_dataset_subset_pareto_benchmark(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    procedural_variant_limit: int = 2,
+    procedural_rediscovery_limit: int = 1,
+    max_subset_size: int = 3,
+    max_depth: int = 2,
+) -> list[CrossDatasetSubsetRow]:
+    (
+        mode_core_rows,
+        mode_prediction_rows,
+        roughness_prediction_rows,
+        procedural_rows,
+    ) = build_cross_dataset_prediction_context(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+        procedural_variant_limit=procedural_variant_limit,
+        procedural_rediscovery_limit=procedural_rediscovery_limit,
+    )
+    return cross_dataset_subset_pareto_from_rows(
+        mode_core_rows=mode_core_rows,
+        mode_prediction_rows=mode_prediction_rows,
+        roughness_prediction_rows=roughness_prediction_rows,
+        procedural_rows=procedural_rows,
+        max_subset_size=max_subset_size,
+        max_depth=max_depth,
+    )
+
+
 def compress_redundant_subset_frontier_rows(
     rows: list[CrossDatasetSubsetRow],
 ) -> list[CrossDatasetSubsetRow]:
@@ -9776,6 +9831,121 @@ def compress_redundant_subset_frontier_rows(
         )
     )
     return compressed_rows
+
+
+def subset_frontier_behavior_key(
+    row: CrossDatasetSubsetRow,
+) -> tuple[bool, bool, float, float, float, float, float, str]:
+    return (
+        row.on_balanced_frontier,
+        row.on_transfer_frontier,
+        row.mode_cv_accuracy,
+        row.roughness_accuracy,
+        row.procedural_accuracy,
+        row.mean_transfer_accuracy,
+        row.worst_transfer_accuracy,
+        row.tree_description,
+    )
+
+
+def cross_dataset_subset_depth_ablation(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    procedural_variant_limit: int = 2,
+    procedural_rediscovery_limit: int = 1,
+    max_subset_size: int = 3,
+    depths: tuple[int, ...] = (1, 2, 3),
+) -> list[CrossDatasetDepthAblationRow]:
+    (
+        mode_core_rows,
+        mode_prediction_rows,
+        roughness_prediction_rows,
+        procedural_rows,
+    ) = build_cross_dataset_prediction_context(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+        procedural_variant_limit=procedural_variant_limit,
+        procedural_rediscovery_limit=procedural_rediscovery_limit,
+    )
+    unique_depths = tuple(dict.fromkeys(depths))
+    pareto_by_depth: dict[int, list[CrossDatasetSubsetRow]] = {}
+    compressed_by_depth: dict[int, list[CrossDatasetSubsetRow]] = {}
+    for max_depth in unique_depths:
+        rows = cross_dataset_subset_pareto_from_rows(
+            mode_core_rows=mode_core_rows,
+            mode_prediction_rows=mode_prediction_rows,
+            roughness_prediction_rows=roughness_prediction_rows,
+            procedural_rows=procedural_rows,
+            max_subset_size=max_subset_size,
+            max_depth=max_depth,
+        )
+        pareto_by_depth[max_depth] = rows
+        compressed_by_depth[max_depth] = compress_redundant_subset_frontier_rows(rows)
+
+    reference_depth = 2 if 2 in unique_depths else unique_depths[0]
+    ablation_rows: list[CrossDatasetDepthAblationRow] = []
+    for max_depth in unique_depths:
+        for rule_family in ("compact", "extended"):
+            family_rows = [
+                row for row in pareto_by_depth[max_depth] if row.rule_family == rule_family
+            ]
+            family_compressed = [
+                row for row in compressed_by_depth[max_depth] if row.rule_family == rule_family
+            ]
+            reference_family = [
+                row
+                for row in compressed_by_depth[reference_depth]
+                if row.rule_family == rule_family
+            ]
+            reference_keys = {
+                subset_frontier_behavior_key(row)
+                for row in reference_family
+            }
+            overlap = sum(
+                subset_frontier_behavior_key(row) in reference_keys
+                for row in family_compressed
+            )
+            roughness_row = next(
+                row for row in family_rows if row.feature_subset == "center_variation"
+            )
+            balanced_rows = [row for row in family_rows if row.on_balanced_frontier]
+            transfer_rows = [row for row in family_rows if row.on_transfer_frontier]
+            top_balanced = max(
+                balanced_rows,
+                key=lambda row: (
+                    row.mode_cv_accuracy,
+                    row.mean_transfer_accuracy,
+                    row.worst_transfer_accuracy,
+                    -row.subset_size,
+                    row.feature_subset,
+                ),
+            )
+            top_transfer = max(
+                transfer_rows,
+                key=lambda row: (
+                    row.mean_transfer_accuracy,
+                    row.worst_transfer_accuracy,
+                    row.mode_cv_accuracy,
+                    -row.subset_size,
+                    row.feature_subset,
+                ),
+            )
+            ablation_rows.append(
+                CrossDatasetDepthAblationRow(
+                    rule_family=rule_family,
+                    max_depth=max_depth,
+                    raw_balanced_frontier=len(balanced_rows),
+                    raw_transfer_frontier=len(transfer_rows),
+                    compressed_behaviors=len(family_compressed),
+                    compressed_overlap_with_reference=overlap,
+                    roughness_on_balanced=roughness_row.on_balanced_frontier,
+                    roughness_on_transfer=roughness_row.on_transfer_frontier,
+                    top_balanced_subset=top_balanced.feature_subset,
+                    top_transfer_subset=top_transfer.feature_subset,
+                )
+            )
+    ablation_rows.sort(key=lambda row: (row.rule_family, row.max_depth))
+    return ablation_rows
 
 
 def random_rediscovery_limit_sweep_summary(
@@ -11821,6 +11991,27 @@ def render_cross_dataset_subset_pareto_table(
             f"{row.mean_transfer_accuracy:>5.2f} | "
             f"{row.worst_transfer_accuracy:>5.2f} | "
             f"{row.feature_subset}"
+        )
+    return "\n".join(lines)
+
+
+def render_cross_dataset_depth_ablation_table(
+    rows: list[CrossDatasetDepthAblationRow],
+) -> str:
+    lines = [
+        "family   | depth | raw B/T | comp | ovlp d2 | rough B/T | top balanced                | top transfer",
+        "---------+-------+---------+------+---------+-----------+-----------------------------+-----------------------------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.rule_family:<8} | "
+            f"{row.max_depth:>5} | "
+            f"{row.raw_balanced_frontier:>3}/{row.raw_transfer_frontier:<3} | "
+            f"{row.compressed_behaviors:>4} | "
+            f"{row.compressed_overlap_with_reference:>7} | "
+            f"{('Y' if row.roughness_on_balanced else 'n')}/{('Y' if row.roughness_on_transfer else 'n'):<9} | "
+            f"{row.top_balanced_subset:<27} | "
+            f"{row.top_transfer_subset}"
         )
     return "\n".join(lines)
 
@@ -14280,6 +14471,33 @@ def main() -> None:
     )
     print(
         "- This is the current best predictor-level summary in the repo: it separates subsets that only win by in-family fit from subsets that remain nondominated once transfer matters too, while collapsing away redundant supersets that add no new behavior."
+    )
+    print()
+
+    print("64) Depth ablation of the predictor Pareto fronts")
+    depth_ablation_rows = cross_dataset_subset_depth_ablation()
+    print(render_cross_dataset_depth_ablation_table(depth_ablation_rows))
+    print()
+    print("Interpretation:")
+    compact_depth_rows = [row for row in depth_ablation_rows if row.rule_family == "compact"]
+    extended_depth_rows = [row for row in depth_ablation_rows if row.rule_family == "extended"]
+    compact_reference = next(row for row in compact_depth_rows if row.max_depth == 2)
+    extended_reference = next(row for row in extended_depth_rows if row.max_depth == 2)
+    compact_depth1 = next(row for row in compact_depth_rows if row.max_depth == 1)
+    compact_depth3 = next(row for row in compact_depth_rows if row.max_depth == 3)
+    extended_depth1 = next(row for row in extended_depth_rows if row.max_depth == 1)
+    extended_depth3 = next(row for row in extended_depth_rows if row.max_depth == 3)
+    print(
+        "- This tests whether the current predictor story is really geometric or partly a depth-2 artifact. The same subset fronts are recomputed at depths 1, 2, and 3 using the same mode/roughness/procedural datasets."
+    )
+    print(
+        f"- In `compact`, depth 2 is the reference with {compact_reference.compressed_behaviors} compressed frontier behaviors. Depth 1 collapses that to {compact_depth1.compressed_behaviors} behaviors with {compact_depth1.compressed_overlap_with_reference} exact overlaps, while depth 3 expands to {compact_depth3.compressed_behaviors} with {compact_depth3.compressed_overlap_with_reference} overlaps."
+    )
+    print(
+        f"- In `extended`, depth 2 compresses to {extended_reference.compressed_behaviors} behaviors. Depth 1 also compresses to {extended_depth1.compressed_behaviors} but with {extended_depth1.compressed_overlap_with_reference} exact overlaps, and depth 3 shifts to {extended_depth3.compressed_behaviors} with {extended_depth3.compressed_overlap_with_reference} overlaps."
+    )
+    print(
+        f"- The stable part is sharper than the balanced-frontier counts: roughness-only stays on both fronts at all tested depths in both families, and it remains the top transfer subset throughout. What moves with depth is the in-family top balanced subset: `compact` shifts from `{compact_depth1.top_balanced_subset}` to `{compact_reference.top_balanced_subset}` to `{compact_depth3.top_balanced_subset}`, while `extended` shifts from `{extended_depth1.top_balanced_subset}` to `{extended_reference.top_balanced_subset}` to `{extended_depth3.top_balanced_subset}`."
     )
     print()
 
