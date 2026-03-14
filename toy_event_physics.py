@@ -576,6 +576,29 @@ class ProjectionFamilyStabilityRow:
 
 
 @dataclass
+class ProjectionFamilyCaseCoreRow:
+    pack_name: str
+    scenario_name: str
+    rule_family: str
+    retained_weight: float
+    selected_rule: str
+    selected_in_core: bool
+    core_count: int
+    union_count: int
+    core_rules: str
+    union_rules: str
+
+
+@dataclass
+class ProjectionFamilyCoreAggregateRow:
+    rule_family: str
+    rule_signature: str
+    core_hits: int
+    union_hits: int
+    selected_core_hits: int
+
+
+@dataclass
 class FrontierTraceRow:
     retained_weight: float
     rule_signature: str
@@ -8182,6 +8205,142 @@ def derived_projection_family_stability_map(
     return basis_rows, stability_rows
 
 
+def derived_projection_family_case_core_analysis(
+    baseline_rows: list[FrontierScenarioRow],
+    baseline_candidates: list[EvaluatedCandidate],
+    projection_dimension: int = 4,
+    generator: str = "orthonormal",
+    strengths: tuple[float, ...] = DERIVED_TRANSFORM_STRENGTHS,
+    projection_count: int = DERIVED_PROJECTION_GENERATOR_COUNT,
+) -> tuple[list[ProjectionFamilyCaseCoreRow], list[ProjectionFamilyCoreAggregateRow]]:
+    base_metric_rows = [derived_metric_vector(candidate) for candidate in baseline_candidates]
+    base_anchor = (1.0, 1.0, 0.0, 0.0, 1.0)
+    baseline_rows_by_case = {
+        frontier_scenario_case_key(row): row
+        for row in baseline_rows
+    }
+    case_signature_sets: DefaultDict[
+        tuple[str, str, str, float],
+        list[set[str]],
+    ] = defaultdict(list)
+
+    for transform_index, transform_mode in enumerate(DERIVED_BOOTSTRAP_TRANSFORM_MODES):
+        for strength in strengths:
+            transformed_rows = transform_metric_rows(
+                base_metric_rows,
+                transform_mode,
+                strength=strength,
+            )
+            transformed_anchor = transform_anchor(
+                base_anchor,
+                transform_mode,
+                strength=strength,
+            )
+            random_specs = random_projection_basis_specs(
+                count=projection_count,
+                seed=(
+                    DERIVED_TRANSFORM_PROJECTION_BOOTSTRAP_SEED
+                    + 100 * transform_index
+                    + int(round(strength * 100))
+                ),
+                projection_dimension=projection_dimension,
+            )
+            for _random_name, projection_matrix in random_specs:
+                adjusted_projection = projection_matrix_variant(
+                    projection_matrix,
+                    generator,
+                )
+                projected_rows, projected_anchor = project_metric_rows_and_anchor(
+                    transformed_rows,
+                    transformed_anchor,
+                    adjusted_projection,
+                )
+                _components, annotated_candidates = derived_axis_components_from_metric_rows(
+                    baseline_candidates,
+                    projected_rows,
+                    projected_anchor,
+                )
+                _scenario_rows, _aggregate_rows, pc123_signatures_by_case = evaluate_derived_axis_candidates(
+                    baseline_rows,
+                    annotated_candidates,
+                )
+                for case_key, signatures in pc123_signatures_by_case.items():
+                    case_signature_sets[case_key].append(signatures)
+
+    case_rows: list[ProjectionFamilyCaseCoreRow] = []
+    core_hits: DefaultDict[tuple[str, str], set[tuple[str, str, float]]] = defaultdict(set)
+    union_hits: DefaultDict[tuple[str, str], set[tuple[str, str, float]]] = defaultdict(set)
+    selected_core_hits: DefaultDict[tuple[str, str], set[tuple[str, str, float]]] = defaultdict(set)
+
+    for case_key in sorted(case_signature_sets):
+        signature_sets = case_signature_sets[case_key]
+        baseline_row = baseline_rows_by_case[case_key]
+        selected_rule = baseline_row.selected_rule
+        if signature_sets:
+            core_rules_set = set.intersection(*(set(signatures) for signatures in signature_sets))
+            union_rules_set = set.union(*(set(signatures) for signatures in signature_sets))
+        else:
+            core_rules_set = set()
+            union_rules_set = set()
+        case_triplet = (
+            baseline_row.pack_name,
+            baseline_row.scenario_name,
+            baseline_row.retained_weight,
+        )
+        for rule_signature in core_rules_set:
+            family_rule = (baseline_row.rule_family, rule_signature)
+            core_hits[family_rule].add(case_triplet)
+            if rule_signature == selected_rule:
+                selected_core_hits[family_rule].add(case_triplet)
+        for rule_signature in union_rules_set:
+            family_rule = (baseline_row.rule_family, rule_signature)
+            union_hits[family_rule].add(case_triplet)
+
+        case_rows.append(
+            ProjectionFamilyCaseCoreRow(
+                pack_name=baseline_row.pack_name,
+                scenario_name=baseline_row.scenario_name,
+                rule_family=baseline_row.rule_family,
+                retained_weight=baseline_row.retained_weight,
+                selected_rule=selected_rule,
+                selected_in_core=selected_rule in core_rules_set,
+                core_count=len(core_rules_set),
+                union_count=len(union_rules_set),
+                core_rules=", ".join(sorted(core_rules_set)) if core_rules_set else "-",
+                union_rules=", ".join(sorted(union_rules_set)) if union_rules_set else "-",
+            )
+        )
+
+    aggregate_rows = [
+        ProjectionFamilyCoreAggregateRow(
+            rule_family=rule_family,
+            rule_signature=rule_signature,
+            core_hits=len(core_hits[(rule_family, rule_signature)]),
+            union_hits=len(union_hits[(rule_family, rule_signature)]),
+            selected_core_hits=len(selected_core_hits[(rule_family, rule_signature)]),
+        )
+        for rule_family, rule_signature in union_hits
+    ]
+    case_rows.sort(
+        key=lambda row: (
+            row.rule_family,
+            row.pack_name,
+            row.scenario_name,
+            row.retained_weight,
+        )
+    )
+    aggregate_rows.sort(
+        key=lambda row: (
+            row.rule_family,
+            -row.core_hits,
+            -row.union_hits,
+            -row.selected_core_hits,
+            row.rule_signature,
+        )
+    )
+    return case_rows, aggregate_rows
+
+
 def random_rediscovery_limit_sweep_summary(
     retained_weight: float = 1.0,
     variant_limit: int = 3,
@@ -9889,6 +10048,47 @@ def render_projection_family_stability_table(
             f"{row.basis_hits:>10} | "
             f"{row.case_hits:>9} | "
             f"{row.top_hits:>7}"
+        )
+    return "\n".join(lines)
+
+
+def render_projection_family_case_core_table(
+    rows: list[ProjectionFamilyCaseCoreRow],
+    limit: int = 12,
+) -> str:
+    lines = [
+        "pack   | scenario         | family   | w    | selected           | sel core | core/union | core rules",
+        "-------+------------------+----------+------+--------------------+----------+------------+------------------------------",
+    ]
+    for row in rows[:limit]:
+        lines.append(
+            f"{row.pack_name:<6} | "
+            f"{row.scenario_name:<16} | "
+            f"{row.rule_family:<8} | "
+            f"{row.retained_weight:>4.2f} | "
+            f"{row.selected_rule:<18} | "
+            f"{('Y' if row.selected_in_core else 'n'):<8} | "
+            f"{row.core_count:>3}/{row.union_count:<6} | "
+            f"{row.core_rules}"
+        )
+    return "\n".join(lines)
+
+
+def render_projection_family_core_aggregate_table(
+    rows: list[ProjectionFamilyCoreAggregateRow],
+    limit: int = 12,
+) -> str:
+    lines = [
+        "family   | rule              | core hits | union hits | sel-core hits",
+        "---------+-------------------+-----------+------------+--------------",
+    ]
+    for row in rows[:limit]:
+        lines.append(
+            f"{row.rule_family:<8} | "
+            f"{row.rule_signature:<17} | "
+            f"{row.core_hits:>9} | "
+            f"{row.union_hits:>10} | "
+            f"{row.selected_core_hits:>12}"
         )
     return "\n".join(lines)
 
@@ -11884,6 +12084,63 @@ def main() -> None:
     )
     print(
         "- So once the projection bottleneck is relaxed, much more of the selector-free structure survives intact. The remaining disagreement now looks more like motif ranking inside a robust family than like wholesale loss of overlap."
+    )
+    print()
+
+    print("54) Case-core analysis on the 4D orthonormal family")
+    projection_case_core_rows, projection_core_aggregate_rows = derived_projection_family_case_core_analysis(
+        harmonic_continuous_frontier_rows,
+        harmonic_continuous_frontier_candidates,
+        projection_dimension=4,
+        generator="orthonormal",
+    )
+    interesting_projection_core_rows = [
+        row
+        for row in projection_case_core_rows
+        if row.core_count > 1 or not row.selected_in_core or row.core_count != row.union_count
+    ]
+    print(
+        render_projection_family_case_core_table(
+            interesting_projection_core_rows,
+            limit=min(12, len(interesting_projection_core_rows)),
+        )
+    )
+    print()
+    print(render_projection_family_core_aggregate_table(projection_core_aggregate_rows[:12]))
+    print()
+    print("Interpretation:")
+    total_projection_cases = len(projection_case_core_rows)
+    nonempty_core_cases = sum(row.core_count > 0 for row in projection_case_core_rows)
+    selected_in_core_cases = sum(row.selected_in_core for row in projection_case_core_rows)
+    exact_core_cases = sum(row.core_count == row.union_count for row in projection_case_core_rows)
+    max_core_size = max((row.core_count for row in projection_case_core_rows), default=0)
+    compact_core = next(
+        (row for row in projection_core_aggregate_rows if row.rule_family == "compact"),
+        None,
+    )
+    extended_core = next(
+        (row for row in projection_core_aggregate_rows if row.rule_family == "extended"),
+        None,
+    )
+    print(
+        f"- This is the stricter selector-free question: not which motifs appear in many `4D orthonormal` bases, but which ones survive the intersection across all 60 bases for each case."
+    )
+    print(
+        f"- The case core is nonempty in {nonempty_core_cases}/{total_projection_cases} cases, and the currently selected rule is itself in the case core in {selected_in_core_cases}/{total_projection_cases}."
+    )
+    print(
+        f"- Exact basis-indifference is still rare: only {exact_core_cases}/{total_projection_cases} cases have `core == union`, and the largest current core size is {max_core_size}."
+    )
+    if compact_core is not None:
+        print(
+            f"- In `compact`, the strongest unavoidable motif is `{compact_core.rule_signature}`, with {compact_core.core_hits} core hits out of {compact_core.union_hits} union hits and {compact_core.selected_core_hits} cases where it is both selected and unavoidable."
+        )
+    if extended_core is not None:
+        print(
+            f"- In `extended`, the strongest unavoidable motif is `{extended_core.rule_signature}`, with {extended_core.core_hits} core hits out of {extended_core.union_hits} union hits and {extended_core.selected_core_hits} cases where it is both selected and unavoidable."
+        )
+    print(
+        "- That tells us the remaining disagreement is not just about whether motifs appear somewhere on the frontier. We can now separate broad family ubiquity from true case-by-case inevitability inside the stronger 4D projection family."
     )
     print()
 
