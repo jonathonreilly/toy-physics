@@ -885,6 +885,18 @@ class OrdinalVariantComparisonRow:
 
 
 @dataclass
+class GeneratedGeometryPredictorRow:
+    rule_family: str
+    feature_subset: str
+    model_family: str
+    geometry_accuracy: float
+    procedural_accuracy: float
+    generated_mean_accuracy: float
+    generated_worst_accuracy: float
+    description: str
+
+
+@dataclass
 class FrontierTraceRow:
     retained_weight: float
     rule_signature: str
@@ -9826,6 +9838,69 @@ def procedural_geometry_prediction_rows(
     return prediction_rows
 
 
+def geometry_randomization_prediction_rows(
+    retained_weight: float = 1.0,
+    variant_limit: int = 2,
+) -> list[GeometryPredictionRow]:
+    prediction_rows: list[GeometryPredictionRow] = []
+    for pack_name, scenarios in benchmark_packs():
+        for scenario_name, nodes, wrap_y in scenarios:
+            for variant_name, perturbed_nodes, _node_delta in randomized_geometry_variants(
+                pack_name,
+                scenario_name,
+                nodes,
+                wrap_y,
+                variant_limit=variant_limit,
+            ):
+                xs, centers, _spans = ordered_profile_centers_and_spans(perturbed_nodes)
+                if not xs:
+                    continue
+                _signature, turning_points, max_step_fraction = centerline_mode_invariants(
+                    centers,
+                )
+                (
+                    _mean_center,
+                    center_range,
+                    center_variation,
+                    crosses_midline,
+                    span_range,
+                ) = column_profile_geometry_metrics(perturbed_nodes)
+                for rule_family, count_options in family_count_options():
+                    harmonic_cont_row, harmonic_cont_candidates = harmonic_continuous_case_analysis(
+                        pack_name=pack_name,
+                        scenario_name=f"{scenario_name}:{variant_name}",
+                        nodes=perturbed_nodes,
+                        wrap_y=wrap_y,
+                        rule_family=rule_family,
+                        count_options=count_options,
+                        retained_weight=retained_weight,
+                    )
+                    case_core_rows, _aggregate_rows = derived_projection_family_case_core_analysis(
+                        [harmonic_cont_row],
+                        harmonic_cont_candidates,
+                        projection_dimension=4,
+                        generator="orthonormal",
+                    )
+                    case_core_row = case_core_rows[0]
+                    prediction_rows.append(
+                        GeometryPredictionRow(
+                            dataset_name="geometry-randomized",
+                            source_name=f"{pack_name}:{scenario_name}:{variant_name}",
+                            rule_family=rule_family,
+                            retained_weight=retained_weight,
+                            regime=projection_core_regime(case_core_row),
+                            center_range=center_range,
+                            center_variation=center_variation,
+                            span_range=span_range,
+                            turning_points=turning_points,
+                            max_step_fraction=max_step_fraction,
+                            crosses_midline=crosses_midline,
+                        )
+                    )
+    prediction_rows.sort(key=lambda row: (row.rule_family, row.source_name))
+    return prediction_rows
+
+
 def cross_dataset_transfer_benchmark(
     retained_weight: float = 1.0,
     mode_retained_weight: float | None = None,
@@ -10480,6 +10555,115 @@ def ordinal_variant_comparison(
             -row.mean_transfer_accuracy,
             -row.mode_cv_accuracy,
             row.variant_name,
+        )
+    )
+    return comparison_rows
+
+
+def generated_geometry_predictor_comparison(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    geometry_variant_limit: int = 2,
+    procedural_variant_limit: int = 2,
+    procedural_rediscovery_limit: int = 1,
+    max_subset_size: int = 3,
+    top_k_subset_rows: int = 3,
+) -> list[GeneratedGeometryPredictorRow]:
+    (
+        mode_core_rows,
+        mode_prediction_rows,
+        roughness_prediction_rows,
+        procedural_rows,
+    ) = build_cross_dataset_prediction_context(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+        procedural_variant_limit=procedural_variant_limit,
+        procedural_rediscovery_limit=procedural_rediscovery_limit,
+    )
+    geometry_rows = geometry_randomization_prediction_rows(
+        retained_weight=retained_weight,
+        variant_limit=geometry_variant_limit,
+    )
+    subset_rows = centerline_feature_subset_benchmark(
+        mode_core_rows,
+        max_subset_size=max_subset_size,
+        max_depth=2,
+    )
+    subset_pareto_rows = cross_dataset_subset_pareto_from_rows(
+        mode_core_rows=mode_core_rows,
+        mode_prediction_rows=mode_prediction_rows,
+        roughness_prediction_rows=roughness_prediction_rows,
+        procedural_rows=procedural_rows,
+        max_subset_size=max_subset_size,
+        max_depth=2,
+    )
+    compressed_pareto_rows = compress_redundant_subset_frontier_rows(subset_pareto_rows)
+    candidate_map = structural_feature_subset_candidates(
+        subset_rows,
+        compressed_pareto_rows,
+        top_k_subset_rows=top_k_subset_rows,
+    )
+    variant_specs = (
+        ("minmax-equal", "minmax", "equal"),
+        ("zscore-equal", "zscore", "equal"),
+        ("minmax-spread", "minmax", "spread"),
+    )
+    comparison_rows: list[GeneratedGeometryPredictorRow] = []
+    for rule_family in ("compact", "extended"):
+        family_mode_rows = [
+            row for row in mode_prediction_rows if row.rule_family == rule_family
+        ]
+        family_geometry_rows = [
+            row for row in geometry_rows if row.rule_family == rule_family
+        ]
+        family_procedural_rows = [
+            row for row in procedural_rows if row.rule_family == rule_family
+        ]
+        for feature_names in candidate_map[rule_family]:
+            feature_subset = ", ".join(feature_names)
+            tree = learn_tiny_decision_tree(family_mode_rows, feature_names, 2)
+            geometry_accuracy = decision_tree_accuracy(tree, family_geometry_rows)
+            procedural_accuracy = decision_tree_accuracy(tree, family_procedural_rows)
+            comparison_rows.append(
+                GeneratedGeometryPredictorRow(
+                    rule_family=rule_family,
+                    feature_subset=feature_subset,
+                    model_family="tree-depth2",
+                    geometry_accuracy=geometry_accuracy,
+                    procedural_accuracy=procedural_accuracy,
+                    generated_mean_accuracy=(geometry_accuracy + procedural_accuracy) / 2.0,
+                    generated_worst_accuracy=min(geometry_accuracy, procedural_accuracy),
+                    description=format_tiny_decision_tree(tree),
+                )
+            )
+            for variant_name, normalization_mode, weight_mode in variant_specs:
+                score_model = fit_ordinal_score_model(
+                    family_mode_rows,
+                    feature_names,
+                    normalization_mode=normalization_mode,
+                    weight_mode=weight_mode,
+                )
+                geometry_accuracy = ordinal_score_accuracy(score_model, family_geometry_rows)
+                procedural_accuracy = ordinal_score_accuracy(score_model, family_procedural_rows)
+                comparison_rows.append(
+                    GeneratedGeometryPredictorRow(
+                        rule_family=rule_family,
+                        feature_subset=feature_subset,
+                        model_family=f"ordinal-{variant_name}",
+                        geometry_accuracy=geometry_accuracy,
+                        procedural_accuracy=procedural_accuracy,
+                        generated_mean_accuracy=(geometry_accuracy + procedural_accuracy) / 2.0,
+                        generated_worst_accuracy=min(geometry_accuracy, procedural_accuracy),
+                        description=format_ordinal_score_model(score_model),
+                    )
+                )
+    comparison_rows.sort(
+        key=lambda row: (
+            row.rule_family,
+            -row.generated_mean_accuracy,
+            -row.generated_worst_accuracy,
+            row.feature_subset,
+            row.model_family,
         )
     )
     return comparison_rows
@@ -12591,6 +12775,26 @@ def render_ordinal_variant_comparison_table(
             f"{row.procedural_accuracy:>5.2f} | "
             f"{row.mean_transfer_accuracy:>5.2f} | "
             f"{row.worst_transfer_accuracy:>4.2f}"
+        )
+    return "\n".join(lines)
+
+
+def render_generated_geometry_predictor_table(
+    rows: list[GeneratedGeometryPredictorRow],
+) -> str:
+    lines = [
+        "family   | subset                       | model                 | geom  | proc  | mean  | worst",
+        "---------+------------------------------+-----------------------+-------+-------+-------+------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.rule_family:<8} | "
+            f"{row.feature_subset:<28} | "
+            f"{row.model_family:<21} | "
+            f"{row.geometry_accuracy:>5.2f} | "
+            f"{row.procedural_accuracy:>5.2f} | "
+            f"{row.generated_mean_accuracy:>5.2f} | "
+            f"{row.generated_worst_accuracy:>4.2f}"
         )
     return "\n".join(lines)
 
@@ -15191,6 +15395,37 @@ def main() -> None:
     )
     print(
         "- The clean read is now family-specific. In `compact`, the roughness-only transfer winner survives all tested ordinal variants unchanged. In `extended`, the roughness-only score stays stable, but a spread-weighted `center_variation + center_range` model rises above it. So the transfer-stable core now looks like a small roughness-centered family, not one uniquely fixed subset."
+    )
+    print()
+
+    print("67) Generated-geometry ensemble benchmark")
+    generated_geometry_rows = generated_geometry_predictor_comparison()
+    print(render_generated_geometry_predictor_table(generated_geometry_rows))
+    print()
+    print("Interpretation:")
+    compact_generated_rows = [row for row in generated_geometry_rows if row.rule_family == "compact"]
+    extended_generated_rows = [row for row in generated_geometry_rows if row.rule_family == "extended"]
+    compact_generated_best = compact_generated_rows[0]
+    extended_generated_best = extended_generated_rows[0]
+    compact_generated_rough = next(
+        row for row in compact_generated_rows
+        if row.feature_subset == "center_variation" and row.model_family == "tree-depth2"
+    )
+    extended_generated_rough = next(
+        row for row in extended_generated_rows
+        if row.feature_subset == "center_variation" and row.model_family == "tree-depth2"
+    )
+    print(
+        "- This is the broader graph-side test: instead of only roughness plus procedural transfer, the predictors are now scored on a generated-geometry ensemble that combines whole-shape jitter and procedural regeneration."
+    )
+    print(
+        f"- In `compact`, the best generated-ensemble model is `{compact_generated_best.model_family}` on `{compact_generated_best.feature_subset}` with mean accuracy {compact_generated_best.generated_mean_accuracy:.2f}. Roughness-only as the reference tree gets {compact_generated_rough.generated_mean_accuracy:.2f}, so the broader graph-side test now favors a different member of the roughness-centered family."
+    )
+    print(
+        f"- In `extended`, the best generated-ensemble model is `{extended_generated_best.model_family}` on `{extended_generated_best.feature_subset}` with mean accuracy {extended_generated_best.generated_mean_accuracy:.2f}. Roughness-only as the reference tree gets {extended_generated_rough.generated_mean_accuracy:.2f}, and several roughness-centered models tie at that top level."
+    )
+    print(
+        "- So the broader graph-side answer is again family-level rather than single-winner. The generated-geometry ensemble does not preserve one unique predictor; it still favors a small roughness-centered family, but different members of that family can win once the contour generation is broadened."
     )
     print()
 
