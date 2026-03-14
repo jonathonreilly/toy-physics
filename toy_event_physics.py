@@ -264,6 +264,34 @@ class CenterGapGeometryRow:
     gap_end: float
 
 
+@dataclass
+class FocusMetricComparisonRow:
+    retained_weight: float
+    fallback_action_gap: float
+    rescue_action_gap: float
+    fallback_geometric_gap: float
+    rescue_geometric_gap: float
+    fallback_stiffness: float
+    rescue_stiffness: float
+    action_winner: str
+    geometric_winner: str
+    stiffness_winner: str
+
+
+@dataclass
+class SelectorPolicyRow:
+    retained_weight: float
+    fallback_rule: str
+    fallback_status: str
+    fallback_quality: float
+    rescue_rule: str
+    rescue_status: str
+    rescue_quality: float
+    gated_final_rule: str
+    ungated_final_rule: str
+    differs: bool
+
+
 @dataclass(frozen=True)
 class LocalRule:
     persistent_nodes: frozenset[tuple[int, int]]
@@ -2676,6 +2704,55 @@ def center_gap_path_summary(
     )
 
 
+def geometric_focus_summary(
+    nodes: set[tuple[int, int]],
+    wrap_y: bool,
+    candidate: RuleCandidate,
+    postulates: RulePostulates,
+) -> tuple[int, float, float, float, tuple[tuple[int, ...], ...]]:
+    rule = derive_local_rule(
+        persistent_nodes=candidate.persistent_nodes,
+        postulates=postulates,
+    )
+    field = derive_node_field(nodes, rule, wrap_y=wrap_y)
+    _centroid_x, centroid_y = field_centroid(field)
+    min_x = min(x for x, _y in nodes)
+    max_x = max(x for x, _y in nodes)
+    left_boundary_ys = sorted(y for x, y in nodes if x == min_x)
+    right_boundary_ys = sorted(y for x, y in nodes if x == max_x)
+    source_y = closest_value(left_boundary_ys, centroid_y)
+    target_ys = select_target_rows(right_boundary_ys, source_y)
+    center_target = min(target_ys, key=lambda y: (abs(y - source_y), y))
+
+    path_distances: list[tuple[int, float]] = []
+    path_shapes: list[tuple[int, ...]] = []
+    for target_y in target_ys:
+        _action, path = stationary_action_path_on_nodes(
+            nodes,
+            source=(min_x, source_y),
+            target=(max_x, target_y),
+            rule=rule,
+            wrap_y=wrap_y,
+        )
+        path_shapes.append(tuple(y for _x, y in path))
+        path_distances.append(
+            (
+                target_y,
+                sum(abs(y - centroid_y) for _x, y in path) / len(path),
+            )
+        )
+
+    center_distance = next(distance for target_y, distance in path_distances if target_y == center_target)
+    side_average = sum(distance for target_y, distance in path_distances if target_y != center_target) / 2
+    return (
+        source_y,
+        center_distance,
+        side_average,
+        side_average - center_distance,
+        tuple(path_shapes),
+    )
+
+
 def center_gap_geometry_diagnostics(
     pack_name: str,
     scenario_name: str,
@@ -2751,6 +2828,166 @@ def center_gap_geometry_diagnostics(
                 side_avg_end=end_summary[2],
                 gap_start=start_summary[3],
                 gap_end=end_summary[3],
+            )
+        )
+
+    return rows
+
+
+def focus_metric_comparison(
+    pack_name: str,
+    scenario_name: str,
+    retained_weights: tuple[float, ...] = (0.75, 0.8, 0.85, 0.9, 0.95, 1.0),
+) -> list[FocusMetricComparisonRow]:
+    nodes, wrap_y = scenario_by_name(pack_name, scenario_name)
+    baseline_postulates = RulePostulates(phase_per_action=4.0)
+    fallback_candidate, _fallback_diag = scan_self_maintaining_rules_fallback_only(
+        nodes,
+        wrap_y,
+        baseline_postulates,
+    )
+    rescue_candidate, _rescue_diag, _rescue_metrics = quality_rescue_rule(
+        nodes,
+        wrap_y,
+        SWEEP_COMPACT_COUNT_OPTIONS,
+        RulePostulates(
+            phase_per_action=4.0,
+            attenuation_power=1.0,
+            action_mode="retained_mix",
+            field_mode="relaxed",
+            action_retained_weight=1.0,
+        ),
+    )
+    rows: list[FocusMetricComparisonRow] = []
+
+    for retained_weight in retained_weights:
+        postulates = RulePostulates(
+            phase_per_action=4.0,
+            attenuation_power=1.0,
+            action_mode="retained_mix",
+            field_mode="relaxed",
+            action_retained_weight=retained_weight,
+        )
+        fallback_action = center_gap_path_summary(nodes, wrap_y, fallback_candidate, postulates)
+        rescue_action = center_gap_path_summary(nodes, wrap_y, rescue_candidate, postulates)
+        fallback_geom = geometric_focus_summary(nodes, wrap_y, fallback_candidate, postulates)
+        rescue_geom = geometric_focus_summary(nodes, wrap_y, rescue_candidate, postulates)
+        fallback_stiffness = (
+            fallback_action[3] / fallback_geom[3]
+            if fallback_geom[3] != 0.0
+            else math.inf
+        )
+        rescue_stiffness = (
+            rescue_action[3] / rescue_geom[3]
+            if rescue_geom[3] != 0.0
+            else math.inf
+        )
+        rows.append(
+            FocusMetricComparisonRow(
+                retained_weight=retained_weight,
+                fallback_action_gap=fallback_action[3],
+                rescue_action_gap=rescue_action[3],
+                fallback_geometric_gap=fallback_geom[3],
+                rescue_geometric_gap=rescue_geom[3],
+                fallback_stiffness=fallback_stiffness,
+                rescue_stiffness=rescue_stiffness,
+                action_winner=(
+                    "rescue"
+                    if rescue_action[3] > fallback_action[3]
+                    else "fallback"
+                ),
+                geometric_winner=(
+                    "rescue"
+                    if rescue_geom[3] > fallback_geom[3]
+                    else "fallback"
+                ),
+                stiffness_winner=(
+                    "rescue"
+                    if rescue_stiffness > fallback_stiffness
+                    else "fallback"
+                ),
+            )
+        )
+
+    return rows
+
+
+def selector_policy_diagnostics(
+    pack_name: str,
+    scenario_name: str,
+    retained_weights: tuple[float, ...] = (0.75, 0.8, 0.85, 0.9, 0.95, 1.0),
+) -> list[SelectorPolicyRow]:
+    nodes, wrap_y = scenario_by_name(pack_name, scenario_name)
+    rows: list[SelectorPolicyRow] = []
+    for retained_weight in retained_weights:
+        postulates = RulePostulates(
+            phase_per_action=4.0,
+            attenuation_power=1.0,
+            action_mode="retained_mix",
+            field_mode="relaxed",
+            action_retained_weight=retained_weight,
+        )
+        fallback_rule, _fallback_diag = scan_self_maintaining_rules_fallback_only(
+            nodes,
+            wrap_y,
+            postulates,
+        )
+        fallback_metrics = evaluate_rule_candidate(nodes, wrap_y, fallback_rule, postulates)
+        rescue_rule, _rescue_diag, rescue_metrics = quality_rescue_rule(
+            nodes,
+            wrap_y,
+            SWEEP_COMPACT_COUNT_OPTIONS,
+            postulates,
+        )
+        final_rule, _diag, _metrics, _fallback_used = resolve_robust_rule_candidate(
+            nodes,
+            wrap_y,
+            SWEEP_COMPACT_COUNT_OPTIONS,
+            postulates,
+        )
+
+        fallback_quality = fallback_metrics[0] + fallback_metrics[1]
+        rescue_quality = rescue_metrics[0] + rescue_metrics[1]
+        fallback_key = (
+            robustness_rank(fallback_metrics[4]),
+            fallback_quality,
+            fallback_metrics[1],
+            fallback_metrics[0],
+        )
+        rescue_key = (
+            robustness_rank(rescue_metrics[4]),
+            rescue_quality,
+            rescue_metrics[1],
+            rescue_metrics[0],
+        )
+        ungated_rule = rescue_rule if rescue_key > fallback_key else fallback_rule
+        rows.append(
+            SelectorPolicyRow(
+                retained_weight=retained_weight,
+                fallback_rule=format_rule_signature(
+                    fallback_rule.survive_counts,
+                    fallback_rule.birth_counts,
+                ),
+                fallback_status=fallback_metrics[4],
+                fallback_quality=fallback_quality,
+                rescue_rule=format_rule_signature(
+                    rescue_rule.survive_counts,
+                    rescue_rule.birth_counts,
+                ),
+                rescue_status=rescue_metrics[4],
+                rescue_quality=rescue_quality,
+                gated_final_rule=format_rule_signature(
+                    final_rule.survive_counts,
+                    final_rule.birth_counts,
+                ),
+                ungated_final_rule=format_rule_signature(
+                    ungated_rule.survive_counts,
+                    ungated_rule.birth_counts,
+                ),
+                differs=(
+                    final_rule.survive_counts != ungated_rule.survive_counts
+                    or final_rule.birth_counts != ungated_rule.birth_counts
+                ),
             )
         )
 
@@ -3336,6 +3573,45 @@ def render_center_gap_geometry_table(
     return "\n".join(lines)
 
 
+def render_focus_metric_comparison_table(
+    rows: list[FocusMetricComparisonRow],
+) -> str:
+    lines = [
+        "weight | action gap f/r | geom gap f/r | stiffness f/r | action winner | geom winner | stiffness winner",
+        "-------+----------------+--------------+---------------+---------------+-------------+-----------------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.retained_weight:>6.2f} | "
+            f"{row.fallback_action_gap:>5.3f}/{row.rescue_action_gap:<5.3f} | "
+            f"{row.fallback_geometric_gap:>5.3f}/{row.rescue_geometric_gap:<5.3f} | "
+            f"{row.fallback_stiffness:>5.3f}/{row.rescue_stiffness:<5.3f} | "
+            f"{row.action_winner:<13} | "
+            f"{row.geometric_winner:<11} | "
+            f"{row.stiffness_winner}"
+        )
+    return "\n".join(lines)
+
+
+def render_selector_policy_table(
+    rows: list[SelectorPolicyRow],
+) -> str:
+    lines = [
+        "weight | fallback status/quality | rescue status/quality | gated final        | ungated final      | differs",
+        "-------+-------------------------+-----------------------+--------------------+--------------------+--------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.retained_weight:>6.2f} | "
+            f"{row.fallback_status:<8}/{row.fallback_quality:>5.3f}   | "
+            f"{row.rescue_status:<8}/{row.rescue_quality:>5.3f} | "
+            f"{row.gated_final_rule:<18} | "
+            f"{row.ungated_final_rule:<18} | "
+            f"{'yes' if row.differs else 'no'}"
+        )
+    return "\n".join(lines)
+
+
 def main() -> None:
     print("DISCRETE EVENT-NETWORK TOY MODEL")
     print()
@@ -3848,6 +4124,45 @@ def main() -> None:
                 f"- The rescue branch also narrows its gap, but it starts wider and ends at {rescue_geometry.gap_end:.3f}, which is still above the survive threshold."
             )
     print("- So the geometric meaning of center-gap collapse is not that the center path gets worse. It is that the current action rule makes the side detours almost as cheap as the center route on the old branch, so path focusing disappears.")
+    print()
+
+    print("21) Alternative focus metrics on the frozen hard-case branches")
+    focus_rows = focus_metric_comparison(hardest_pack, hardest_scenario)
+    print(render_focus_metric_comparison_table(focus_rows))
+    print()
+    print("Interpretation:")
+    print("- This asks whether the hard-case ranking is specific to the current action-gap focus metric or whether it survives under more geometric observables.")
+    if focus_rows:
+        first_focus = focus_rows[0]
+        last_focus = focus_rows[-1]
+        print(
+            f"- Under raw action-gap, the rescue branch wins throughout the scan ({first_focus.fallback_action_gap:.3f}/{first_focus.rescue_action_gap:.3f} at w = {focus_rows[0].retained_weight:.2f}, {last_focus.fallback_action_gap:.3f}/{last_focus.rescue_action_gap:.3f} at w = {focus_rows[-1].retained_weight:.2f})."
+        )
+        print(
+            f"- Under pure geometric focus gap, the fallback branch wins throughout ({first_focus.fallback_geometric_gap:.3f}/{first_focus.rescue_geometric_gap:.3f} at the start, unchanged in winner at the end)."
+        )
+        print(
+            f"- The stiffness ratio, which measures action-gap per unit geometric separation, favors the rescue branch throughout and captures the fact that the old branch loses cost contrast even while its geometry stays focused."
+        )
+    print("- So `center gap` is not a neutral physical truth of the toy model. It is one particular focusing observable, and metric choice materially changes which branch looks best.")
+    print()
+
+    print("22) Selector-policy gating versus always-compare selection")
+    selector_rows = selector_policy_diagnostics(hardest_pack, hardest_scenario)
+    print(render_selector_policy_table(selector_rows))
+    print()
+    print("Interpretation:")
+    print("- The current resolver is gated: it keeps the fallback branch whenever that branch still `survives`, and only consults the rescue branch once the fallback drops below the survive threshold.")
+    if selector_rows:
+        differing_rows = [row for row in selector_rows if row.differs]
+        if differing_rows:
+            print(
+                f"- On the hard case, the ungated selector would already choose `{selector_rows[0].ungated_final_rule}` at low high-end weights, but the gated selector keeps `{selector_rows[0].gated_final_rule}` until w = {differing_rows[0].retained_weight:.2f}."
+            )
+        print(
+            f"- That means the timing of the branch switch is partly determined by selector policy, not just by the raw dynamics."
+        )
+    print("- This is the cleanest current conclusion: both the focusing metric and the gated selection rule are load-bearing choices in the present toy model.")
     print()
 
     print("REMAINING CHEATS")

@@ -102,6 +102,8 @@ What the current script demonstrates:
 - The new selection diagnostic makes the cause of that switch explicit: the fallback branch is structurally stable across the scan, but its `center gap` degrades from `0.241` to `0.013` as `w` rises, so it drops from `survives` to `mixed/fragile`; the rescue branch stays `survives` throughout and takes over once the old branch no longer clears the robustness threshold.
 - A frozen-branch comparison then removes another layer of heuristic freedom: when those two competing persistent patterns are held fixed and only `w` is varied, the same qualitative crossover remains. The old branch becomes more proper-time-consistent as `w` rises, but its `center gap` collapses; the rescue branch stays robust and only becomes proper-time-consistent near the top end. So the switch reflects a real tension between the current robustness metric and the proper-time benchmark, not just search churn.
 - The next geometric diagnostic makes that tension more concrete: on the old branch, the source row and comparison paths stay fixed while `w` rises, but the side routes get cheaper faster than the center route, so the `center gap` collapses because detours become almost as cheap as staying centered.
+- The next comparison shows that metric choice is genuinely load-bearing. On the hard case, raw action-gap metrics favor the rescue branch throughout, but pure geometric-focus gap favors the fallback branch throughout. A mixed `stiffness` metric, action-gap per unit geometric separation, again favors the rescue branch.
+- A selector-policy ablation sharpens that further: an ungated selector would already choose the rescue branch at low high-end weights, but the current gated selector keeps the fallback branch until it stops `survives`. So the observed switch timing is partly a selector-policy effect, not just a property of the raw dynamics.
 - So the retained-weight benchmark is best understood as a piecewise-linear lower envelope of active rule/path branches, not as a single line in `w`. That is why `w = 0.95` still fails while `w = 1.0` passes.
 - With that repair in place, `extended` still produces the larger average boundary-delay span, while the reduced `compact` family keeps a slightly larger average center gap.
 - The earlier `skew-wrap` miss is now understood as a legacy reduced-family coverage bug, not as a deep compact-vs-extended ontology split.
@@ -115,6 +117,7 @@ What is still cheating:
 - The spatial graph geometry is still hand-authored.
 - The gravity-like classical limit still assumes that histories extremize spent delay `dt - sqrt(dt^2 - ds^2)` rather than deriving that accounting rule from deeper dynamics.
 - The delay field is now derived from an emergent persistent pattern, but the rule family and locality preferences used to choose among candidate patterns are still hand-chosen.
+- The current robustness criterion is still hand-chosen too: `center gap`, `arrival span`, and the gated fallback-then-rescue selector materially affect which branch wins on the hardest case.
 - The robustness sweep budget is also hand-chosen: smaller graphs, reduced rule families, and shorter persistence windows trade completeness for runtime.
 - Complex amplitudes are still assumed rather than derived.
 - Consciousness is still outside the simulation; only record formation is present.
