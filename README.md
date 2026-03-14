@@ -75,7 +75,7 @@ What the current script implements:
 - Models `measurement` as durable record formation in a two-slit-style path network.
 - Uses one shared local edge rule for the causal-shell graph, the asynchronous continuation model, and the slit graph.
 - Makes the local rule explicit through a small set of postulates and a derived `LocalRule` object.
-- Uses bounded-memory summary passes for the deterministic, pairwise cross-weight, high-end weight-ladder, and random perturbation ensembles so the selector-free perturbation diagnostics can run without materializing every case row at once.
+- Uses bounded-memory summary passes for the deterministic, pairwise cross-weight, high-end weight-ladder, tracked-palette random, and limited-rediscovery random perturbation ensembles so the selector-free perturbation diagnostics can run without materializing every case row at once.
 - Pressure-tests two of the biggest cheats:
   - why `positive weights only` are too weak for interference
   - why the `square rule` is less arbitrary once reversible linear mixing is required
@@ -119,6 +119,9 @@ What the current script demonstrates:
 - A slightly wider seeded-random perturbation ensemble now pushes on the same question from the opposite direction: not hand-picked nudges, but three random removable/addable node choices drawn from each benchmark graph. In the current run, the same split still mostly survives that test.
 - Under the widened random ensemble, `mixed`-frontier overlap survives in `38/39` compact and `39/39` extended cases, while robustness overlap survives in `30/39` for both families. By contrast, the exact unperturbed winner is retained in only `12/39` compact and `8/39` extended random perturbation cases.
 - That is still the strongest selector-free result so far, but it is a little more honest than the earlier two-variant picture: once we stop insisting on one exact winning motif, the mixed-frontier family still looks substantially more stable than the exact winner under deterministic nudges, a small high-end weight shift, and a broader seeded-random graph ensemble, even though the wider random pass now exposes one compact-family mixed-frontier miss.
+- A limited-rediscovery random ensemble then removes one more cheat: instead of forcing perturbed graphs to stay inside the unperturbed frontier palette, it lets each random perturbation reintroduce up to two extra locally rediscovered motifs. In the current run, that repairs the last random `fragile` cases, but it does not strengthen the selector-free overlap story uniformly.
+- Under limited rediscovery, all `39/39` random cases now `survive` in both families, and the mixed-frontier overlap remains `38/39` for `compact` and `39/39` for `extended`. But the stronger overlap claims get weaker: robustness overlap drops to `29/39` compact and `26/39` extended, and base selected-motif frontier survival drops to `32/39` compact and `29/39` extended.
+- That tradeoff is useful rather than disappointing. It says some of the earlier random robustness was genuinely helped by palette inheritance, but the mixed frontier still remains the strongest selector-free object even after we relax that inheritance.
 - With that repair in place, `extended` still produces the larger average boundary-delay span, while the reduced `compact` family keeps a slightly larger average center gap.
 - The earlier `skew-wrap` miss is now understood as a legacy reduced-family coverage bug, not as a deep compact-vs-extended ontology split.
 - The failure-mode story is still useful history: before the repair, skewed cases mostly failed by producing empty or fragmented candidate patterns, not by hitting the boundary filter, which pointed more toward pattern formation than boundary selection.
@@ -134,7 +137,7 @@ What is still cheating:
 - The current robustness criterion is still hand-chosen too: `center gap`, `arrival span`, and selector policy materially affect which surviving branch wins on the hardest cases.
 - The current perturbation ensemble is still a first pass: it uses only two deterministic graph nudges per scenario, tracks the unperturbed frontier palette instead of doing open-ended motif rediscovery on every perturbed graph, and only evaluates the strongest retained-weight point `w = 1.0`.
 - The weight-robustness checks are still local: the current pairwise comparison uses only `w = 0.95` and `w = 1.0`, and the stronger ladder check only extends that to `w = 0.90, 0.95, 1.0`, so the model is still being tested in a narrow high-end band near the spent-delay point rather than across the whole retained-weight family.
-- The random perturbation ensemble is also intentionally small and seeded: it currently samples only three random variants per scenario and still tracks the unperturbed frontier palette, so it is a first robustness probe rather than a large-scale random-graph study.
+- The random perturbation ensemble is also intentionally small and seeded: it currently samples only three random variants per scenario, and even the looser rediscovery mode only allows two extra locally rediscovered motifs back into the perturbed pool, so it is still a first robustness probe rather than a large-scale random-graph study.
 - The robustness sweep budget is also hand-chosen: smaller graphs, reduced rule families, and shorter persistence windows trade completeness for runtime.
 - Complex amplitudes are still assumed rather than derived.
 - Consciousness is still outside the simulation; only record formation is present.

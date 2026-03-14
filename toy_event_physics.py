@@ -4453,6 +4453,79 @@ def collect_restricted_frontier_pool(
     )
 
 
+def collect_limited_rediscovery_frontier_pool(
+    nodes: set[tuple[int, int]],
+    wrap_y: bool,
+    count_options: tuple[frozenset[int], ...],
+    allowed_rule_pairs: tuple[tuple[frozenset[int], frozenset[int]], ...],
+    rediscovery_limit: int = 2,
+) -> RawFrontierPool:
+    tracked_pool = collect_restricted_frontier_pool(
+        nodes,
+        wrap_y,
+        count_options,
+        allowed_rule_pairs,
+    )
+    if rediscovery_limit <= 0:
+        return tracked_pool
+
+    open_pool = collect_raw_frontier_pool(nodes, wrap_y, count_options)
+    tracked_signatures = {
+        format_rule_signature(candidate.survive_counts, candidate.birth_counts)
+        for candidate in tracked_pool.pooled_candidates.values()
+    }
+    graph_center = perturbation_graph_center(nodes)
+    rediscovery_identities = sorted(
+        (
+            identity
+            for identity, candidate in open_pool.pooled_candidates.items()
+            if format_rule_signature(candidate.survive_counts, candidate.birth_counts)
+            not in tracked_signatures
+        ),
+        key=lambda identity: candidate_search_key(
+            open_pool.pooled_candidates[identity],
+            graph_center=graph_center,
+            preferred_set=set(),
+            preferred_bonus=0.0,
+        ),
+        reverse=True,
+    )[:rediscovery_limit]
+    if not rediscovery_identities:
+        return tracked_pool
+
+    selector_candidates = dict(tracked_pool.selector_candidates)
+    pooled_candidates = dict(tracked_pool.pooled_candidates)
+    candidate_sources = dict(tracked_pool.candidate_sources)
+    rescue_selector_identities = list(tracked_pool.rescue_selector_identities)
+    rescue_identities = list(tracked_pool.rescue_identities)
+
+    for identity in rediscovery_identities:
+        candidate = open_pool.pooled_candidates[identity]
+        selector_candidates[identity] = candidate
+        pooled_candidates[identity] = candidate
+        candidate_sources[identity] = merge_candidate_sources(
+            candidate_sources.get(identity, ""),
+            merge_candidate_sources(
+                open_pool.candidate_sources.get(identity, ""),
+                "rediscovery",
+            ),
+        )
+        rescue_selector_identities.append(identity)
+        rescue_identities.append(identity)
+
+    return RawFrontierPool(
+        selector_candidates=selector_candidates,
+        primary_selector_identity=tracked_pool.primary_selector_identity,
+        fallback_selector_identity=tracked_pool.fallback_selector_identity,
+        rescue_selector_identities=tuple(dict.fromkeys(rescue_selector_identities)),
+        pooled_candidates=pooled_candidates,
+        candidate_sources=candidate_sources,
+        primary_best_identity=tracked_pool.primary_best_identity,
+        fallback_best_identity=tracked_pool.fallback_best_identity,
+        rescue_identities=tuple(dict.fromkeys(rescue_identities)),
+    )
+
+
 def choose_current_selected_signature(
     raw_pool: RawFrontierPool,
     nodes: set[tuple[int, int]],
@@ -4978,9 +5051,14 @@ def perturbation_frontier_summary_for_factory(
     ],
     retained_weight: float = 1.0,
     drift_limit: int = 16,
+    perturbed_pool_builder: Callable[
+        [set[tuple[int, int]], bool, tuple[frozenset[int], ...], tuple[tuple[frozenset[int], frozenset[int]], ...]],
+        RawFrontierPool,
+    ] | None = None,
 ) -> tuple[list[PerturbationAggregateRow], list[PerturbationCaseRow]]:
     grouped_rows: DefaultDict[tuple[str, str], list[PerturbationCaseRow]] = defaultdict(list)
     drift_rows: list[PerturbationCaseRow] = []
+    current_pool_builder = perturbed_pool_builder or collect_restricted_frontier_pool
 
     for rule_family, count_options in family_count_options():
         for pack_name, scenarios in benchmark_packs():
@@ -5012,7 +5090,7 @@ def perturbation_frontier_summary_for_factory(
                     nodes,
                     wrap_y,
                 ):
-                    perturbed_raw_pool = collect_restricted_frontier_pool(
+                    perturbed_raw_pool = current_pool_builder(
                         perturbed_nodes,
                         wrap_y,
                         count_options,
@@ -5142,6 +5220,34 @@ def random_perturbation_frontier_summary(
         ),
         retained_weight=retained_weight,
         drift_limit=drift_limit,
+    )
+
+
+def random_rediscovery_perturbation_frontier_summary(
+    retained_weight: float = 1.0,
+    drift_limit: int = 16,
+    variant_limit: int = 3,
+    rediscovery_limit: int = 2,
+) -> tuple[list[PerturbationAggregateRow], list[PerturbationCaseRow]]:
+    return perturbation_frontier_summary_for_factory(
+        lambda pack_name, scenario_name, nodes, wrap_y: random_topology_perturbations(
+            pack_name,
+            scenario_name,
+            nodes,
+            wrap_y,
+            variant_limit=variant_limit,
+        ),
+        retained_weight=retained_weight,
+        drift_limit=drift_limit,
+        perturbed_pool_builder=lambda nodes, wrap_y, count_options, allowed_rule_pairs: (
+            collect_limited_rediscovery_frontier_pool(
+                nodes,
+                wrap_y,
+                count_options,
+                allowed_rule_pairs,
+                rediscovery_limit=rediscovery_limit,
+            )
+        ),
     )
 
 
@@ -7369,6 +7475,70 @@ def main() -> None:
                 f"- In {len(random_overlap_drift)} random cases, a stronger overlap claim also breaks, which marks the places where even the selector-free story is not yet fully perturbation-robust."
             )
     print("- This is now a stronger statement than before: we are no longer only showing that the split survives curated perturbations; we are checking that it still appears under seeded random graph nudges.")
+    print()
+
+    print("34) Random perturbation ensemble with limited motif rediscovery")
+    rediscovery_limit = 2
+    rediscovery_aggregate_rows, rediscovery_drift_rows = (
+        random_rediscovery_perturbation_frontier_summary(
+            variant_limit=random_variant_limit,
+            rediscovery_limit=rediscovery_limit,
+        )
+    )
+    print(render_perturbation_aggregate_table(rediscovery_aggregate_rows))
+    print()
+    print("Interpretation:")
+    print(
+        f"- This removes one more cheat from the random ensemble: instead of forcing every perturbed graph to stay inside the unperturbed frontier palette, it lets up to {rediscovery_limit} extra locally rediscovered motifs back into the candidate pool."
+    )
+    rediscovery_all_rows = [
+        row for row in rediscovery_aggregate_rows if row.variant_name == "all"
+    ]
+    for tracked_row in random_all_rows:
+        rediscovery_row = next(
+            row
+            for row in rediscovery_all_rows
+            if row.rule_family == tracked_row.rule_family
+        )
+        print(
+            f"- In `{tracked_row.rule_family}`, mixed-frontier overlap moves from {tracked_row.mixed_overlap}/{tracked_row.cases} under tracked palette to {rediscovery_row.mixed_overlap}/{rediscovery_row.cases} under limited rediscovery, while selected-rule retention moves from {tracked_row.selected_retained}/{tracked_row.cases} to {rediscovery_row.selected_retained}/{rediscovery_row.cases}."
+        )
+        print(
+            f"- Robustness overlap moves from {tracked_row.robustness_overlap}/{tracked_row.cases} to {rediscovery_row.robustness_overlap}/{rediscovery_row.cases}, and baseline selected-motif frontier survival moves from {tracked_row.base_selected_alive}/{tracked_row.cases} to {rediscovery_row.base_selected_alive}/{rediscovery_row.cases}."
+        )
+    print("- This is the cleaner robustness question: which selector-free conclusions survive once perturbed graphs are allowed a little local novelty instead of being forced to reuse the base palette.")
+    print()
+
+    print("35) Limited-rediscovery random drift cases")
+    print(
+        render_perturbation_case_table(
+            rediscovery_drift_rows,
+            limit=min(16, len(rediscovery_drift_rows)),
+        )
+    )
+    print()
+    print("Interpretation:")
+    if rediscovery_drift_rows:
+        rediscovery_selected_drift = [
+            row for row in rediscovery_drift_rows if not row.selected_matches_base
+        ]
+        rediscovery_overlap_drift = [
+            row
+            for row in rediscovery_drift_rows
+            if not row.robustness_overlap or not row.base_selected_alive
+        ]
+        print(
+            f"- There are {len(rediscovery_drift_rows)} limited-rediscovery random cases where either the selected motif changes or a stronger baseline-overlap claim drops out."
+        )
+        if rediscovery_selected_drift:
+            print(
+                f"- In {len(rediscovery_selected_drift)} of them, the exact winner changes even after allowing local rediscovery, so selector fragility clearly survives that relaxation."
+            )
+        if rediscovery_overlap_drift:
+            print(
+                f"- In {len(rediscovery_overlap_drift)} cases, stronger overlap claims still break, which tells us the remaining fragility is not only a palette-inheritance artifact."
+            )
+    print("- If the mixed-frontier story stays strong here, that is much better evidence that it reflects something structural in the toy model rather than just inherited motif bookkeeping.")
     print()
 
     print("REMAINING CHEATS")
