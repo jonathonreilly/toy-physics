@@ -2250,6 +2250,7 @@ def random_topology_perturbations(
     scenario_name: str,
     nodes: set[tuple[int, int]],
     wrap_y: bool,
+    variant_limit: int = 2,
 ) -> tuple[tuple[str, set[tuple[int, int]], int], ...]:
     removable_nodes = removable_perturbation_nodes(nodes, wrap_y)
     addable_nodes = addable_perturbation_nodes(nodes, wrap_y)
@@ -2269,20 +2270,48 @@ def random_topology_perturbations(
     rng.shuffle(shuffled_additions)
 
     variants: list[tuple[str, set[tuple[int, int]], int]] = []
-    first_remove = shuffled_removals[0]
-    variants.append(("random-punch-a", set(nodes) - {first_remove}, -1))
-
-    if shuffled_additions:
-        second_remove = shuffled_removals[1] if len(shuffled_removals) > 1 else first_remove
+    removal_index = 0
+    addition_index = 0
+    variant_index = 0
+    while len(variants) < variant_limit and removal_index < len(shuffled_removals):
+        remove_node = shuffled_removals[removal_index]
         variants.append(
             (
-                "random-shift-a",
-                (set(nodes) - {second_remove}) | {shuffled_additions[0]},
-                0,
+                f"random-punch-{chr(ord('a') + variant_index)}",
+                set(nodes) - {remove_node},
+                -1,
             )
         )
-    elif len(shuffled_removals) > 1:
-        variants.append(("random-punch-b", set(nodes) - {shuffled_removals[1]}, -1))
+        removal_index += 1
+        variant_index += 1
+        if len(variants) >= variant_limit:
+            break
+        if addition_index < len(shuffled_additions):
+            shift_remove = (
+                shuffled_removals[removal_index]
+                if removal_index < len(shuffled_removals)
+                else remove_node
+            )
+            variants.append(
+                (
+                    f"random-shift-{chr(ord('a') + addition_index)}",
+                    (set(nodes) - {shift_remove}) | {shuffled_additions[addition_index]},
+                    0,
+                )
+            )
+            addition_index += 1
+            if removal_index < len(shuffled_removals):
+                removal_index += 1
+        elif removal_index < len(shuffled_removals):
+            variants.append(
+                (
+                    f"random-punch-{chr(ord('a') + variant_index)}",
+                    set(nodes) - {shuffled_removals[removal_index]},
+                    -1,
+                )
+            )
+            removal_index += 1
+        variant_index += 1
 
     deduped_variants: list[tuple[str, set[tuple[int, int]], int]] = []
     seen_node_sets: set[frozenset[tuple[int, int]]] = set()
@@ -5052,9 +5081,16 @@ def perturbation_frontier_summary(
 
 def random_perturbation_frontier_results(
     retained_weight: float = 1.0,
+    variant_limit: int = 2,
 ) -> tuple[list[PerturbationCaseRow], list[PerturbationAggregateRow]]:
     return perturbation_frontier_results_for_factory(
-        random_topology_perturbations,
+        lambda pack_name, scenario_name, nodes, wrap_y: random_topology_perturbations(
+            pack_name,
+            scenario_name,
+            nodes,
+            wrap_y,
+            variant_limit=variant_limit,
+        ),
         retained_weight=retained_weight,
     )
 
@@ -5062,9 +5098,16 @@ def random_perturbation_frontier_results(
 def random_perturbation_frontier_summary(
     retained_weight: float = 1.0,
     drift_limit: int = 16,
+    variant_limit: int = 2,
 ) -> tuple[list[PerturbationAggregateRow], list[PerturbationCaseRow]]:
     return perturbation_frontier_summary_for_factory(
-        random_topology_perturbations,
+        lambda pack_name, scenario_name, nodes, wrap_y: random_topology_perturbations(
+            pack_name,
+            scenario_name,
+            nodes,
+            wrap_y,
+            variant_limit=variant_limit,
+        ),
         retained_weight=retained_weight,
         drift_limit=drift_limit,
     )
@@ -5147,6 +5190,206 @@ def perturbation_weight_stability_results(
         )
     )
     return case_rows, aggregate_rows
+
+
+def perturbation_weight_case_needs_drift_report(row: PerturbationWeightCaseRow) -> bool:
+    return (
+        not row.same_selected
+        or not row.base_alive_both
+        or not row.robustness_both
+        or not row.mixed_both
+    )
+
+
+def perturbation_weight_case_sort_key(
+    row: PerturbationWeightCaseRow,
+) -> tuple[object, ...]:
+    return (
+        row.same_selected,
+        row.base_alive_both,
+        row.mixed_both,
+        row.robustness_both,
+        row.rule_family,
+        row.pack_name,
+        row.scenario_name,
+        row.variant_name,
+    )
+
+
+def build_perturbation_weight_aggregate_rows(
+    grouped_rows: DefaultDict[tuple[str, str], list[PerturbationWeightCaseRow]],
+) -> list[PerturbationWeightAggregateRow]:
+    aggregate_rows = [
+        PerturbationWeightAggregateRow(
+            rule_family=rule_family,
+            variant_name=variant_name,
+            cases=len(rows),
+            survives_both=sum(row.survives_both for row in rows),
+            same_selected=sum(row.same_selected for row in rows),
+            base_alive_both=sum(row.base_alive_both for row in rows),
+            robustness_both=sum(row.robustness_both for row in rows),
+            proper_time_both=sum(row.proper_time_both for row in rows),
+            geometry_both=sum(row.geometry_both for row in rows),
+            mixed_both=sum(row.mixed_both for row in rows),
+        )
+        for (rule_family, variant_name), rows in grouped_rows.items()
+    ]
+    aggregate_rows.sort(
+        key=lambda row: (
+            row.rule_family,
+            row.variant_name != "all",
+            row.variant_name,
+        )
+    )
+    return aggregate_rows
+
+
+def perturbation_weight_stability_summary(
+    retained_weights: tuple[float, float] = (0.95, 1.0),
+    drift_limit: int = 16,
+) -> tuple[list[PerturbationWeightAggregateRow], list[PerturbationWeightCaseRow]]:
+    low_weight, high_weight = retained_weights
+    grouped_rows: DefaultDict[tuple[str, str], list[PerturbationWeightCaseRow]] = defaultdict(list)
+    drift_rows: list[PerturbationWeightCaseRow] = []
+
+    for rule_family, count_options in family_count_options():
+        for pack_name, scenarios in benchmark_packs():
+            for scenario_name, nodes, wrap_y in scenarios:
+                base_raw_pool = collect_raw_frontier_pool(
+                    nodes,
+                    wrap_y,
+                    count_options,
+                )
+                base_evaluation_cache = build_frontier_evaluation_cache(nodes, wrap_y)
+                perturbation_variants = deterministic_topology_perturbations(
+                    nodes,
+                    wrap_y,
+                )
+                variant_inputs = {
+                    variant_name: (
+                        node_delta,
+                        perturbed_nodes,
+                        build_frontier_evaluation_cache(
+                            perturbed_nodes,
+                            wrap_y,
+                        ),
+                    )
+                    for variant_name, perturbed_nodes, node_delta in perturbation_variants
+                }
+                scenario_rows_by_weight: dict[float, dict[str, PerturbationCaseRow]] = {}
+                for retained_weight in (low_weight, high_weight):
+                    base_row, base_candidates = frontier_case_analysis(
+                        pack_name=pack_name,
+                        scenario_name=scenario_name,
+                        nodes=nodes,
+                        wrap_y=wrap_y,
+                        rule_family=rule_family,
+                        count_options=count_options,
+                        retained_weight=retained_weight,
+                        raw_pool=base_raw_pool,
+                        evaluation_cache=base_evaluation_cache,
+                    )
+                    base_signature_sets = frontier_signature_sets(base_candidates)
+                    base_selected_rule = base_row.selected_rule
+                    allowed_rule_pairs = base_palette_rule_pairs(base_candidates)
+                    rows_by_variant: dict[str, PerturbationCaseRow] = {}
+                    for variant_name in sorted(variant_inputs):
+                        node_delta, perturbed_nodes, perturbed_evaluation_cache = (
+                            variant_inputs[variant_name]
+                        )
+                        perturbed_raw_pool = collect_restricted_frontier_pool(
+                            perturbed_nodes,
+                            wrap_y,
+                            count_options,
+                            allowed_rule_pairs,
+                        )
+                        perturbed_row, perturbed_candidates = frontier_case_analysis(
+                            pack_name=pack_name,
+                            scenario_name=scenario_name,
+                            nodes=perturbed_nodes,
+                            wrap_y=wrap_y,
+                            rule_family=rule_family,
+                            count_options=count_options,
+                            retained_weight=retained_weight,
+                            raw_pool=perturbed_raw_pool,
+                            evaluation_cache=perturbed_evaluation_cache,
+                        )
+                        perturbed_signature_sets = frontier_signature_sets(perturbed_candidates)
+                        perturbed_frontier_union = set().union(*perturbed_signature_sets.values())
+                        selected_candidate = next(
+                            (
+                                candidate
+                                for candidate in perturbed_candidates
+                                if candidate.current_selected
+                            ),
+                            None,
+                        )
+                        rows_by_variant[variant_name] = PerturbationCaseRow(
+                            rule_family=rule_family,
+                            pack_name=pack_name,
+                            scenario_name=scenario_name,
+                            variant_name=variant_name,
+                            node_delta=node_delta,
+                            base_selected_rule=base_selected_rule,
+                            perturbed_selected_rule=perturbed_row.selected_rule,
+                            perturbed_status=(
+                                selected_candidate.status if selected_candidate is not None else "no pattern"
+                            ),
+                            selected_matches_base=(perturbed_row.selected_rule == base_selected_rule),
+                            base_selected_alive=(base_selected_rule in perturbed_frontier_union),
+                            robustness_overlap=bool(
+                                base_signature_sets["robustness"]
+                                & perturbed_signature_sets["robustness"]
+                            ),
+                            proper_time_overlap=bool(
+                                base_signature_sets["proper_time"]
+                                & perturbed_signature_sets["proper_time"]
+                            ),
+                            geometry_overlap=bool(
+                                base_signature_sets["geometry"]
+                                & perturbed_signature_sets["geometry"]
+                            ),
+                            mixed_overlap=bool(
+                                base_signature_sets["mixed"] & perturbed_signature_sets["mixed"]
+                            ),
+                        )
+                    scenario_rows_by_weight[retained_weight] = rows_by_variant
+
+                for variant_name in sorted(
+                    set(scenario_rows_by_weight[low_weight]) & set(scenario_rows_by_weight[high_weight])
+                ):
+                    low_row = scenario_rows_by_weight[low_weight][variant_name]
+                    high_row = scenario_rows_by_weight[high_weight][variant_name]
+                    case_row = PerturbationWeightCaseRow(
+                        rule_family=low_row.rule_family,
+                        pack_name=low_row.pack_name,
+                        scenario_name=low_row.scenario_name,
+                        variant_name=low_row.variant_name,
+                        low_weight=low_weight,
+                        high_weight=high_weight,
+                        low_selected_rule=low_row.perturbed_selected_rule,
+                        high_selected_rule=high_row.perturbed_selected_rule,
+                        low_status=low_row.perturbed_status,
+                        high_status=high_row.perturbed_status,
+                        same_selected=(low_row.perturbed_selected_rule == high_row.perturbed_selected_rule),
+                        survives_both=(low_row.perturbed_status == "survives" and high_row.perturbed_status == "survives"),
+                        base_alive_both=(low_row.base_selected_alive and high_row.base_selected_alive),
+                        robustness_both=(low_row.robustness_overlap and high_row.robustness_overlap),
+                        proper_time_both=(low_row.proper_time_overlap and high_row.proper_time_overlap),
+                        geometry_both=(low_row.geometry_overlap and high_row.geometry_overlap),
+                        mixed_both=(low_row.mixed_overlap and high_row.mixed_overlap),
+                    )
+                    grouped_rows[(case_row.rule_family, case_row.variant_name)].append(case_row)
+                    grouped_rows[(case_row.rule_family, "all")].append(case_row)
+                    if perturbation_weight_case_needs_drift_report(case_row):
+                        bounded_insert_sorted(
+                            drift_rows,
+                            case_row,
+                            drift_limit,
+                            perturbation_weight_case_sort_key,
+                        )
+
+    return build_perturbation_weight_aggregate_rows(grouped_rows), drift_rows
 
 
 def frontier_hard_case_trace(
@@ -6782,7 +7025,7 @@ def main() -> None:
     print()
 
     print("28) Cross-weight stability of the perturbation ensemble")
-    perturbation_weight_case_rows, perturbation_weight_aggregate_rows = perturbation_weight_stability_results()
+    perturbation_weight_aggregate_rows, weight_drift_rows = perturbation_weight_stability_summary()
     print(render_perturbation_weight_aggregate_table(perturbation_weight_aggregate_rows))
     print()
     print("Interpretation:")
@@ -6799,26 +7042,6 @@ def main() -> None:
     print()
 
     print("29) Cross-weight perturbation drift cases")
-    weight_drift_rows = [
-        row
-        for row in perturbation_weight_case_rows
-        if not row.same_selected
-        or not row.base_alive_both
-        or not row.robustness_both
-        or not row.mixed_both
-    ]
-    weight_drift_rows.sort(
-        key=lambda row: (
-            row.same_selected,
-            row.base_alive_both,
-            row.mixed_both,
-            row.robustness_both,
-            row.rule_family,
-            row.pack_name,
-            row.scenario_name,
-            row.variant_name,
-        )
-    )
     print(render_perturbation_weight_case_table(weight_drift_rows, limit=min(16, len(weight_drift_rows))))
     print()
     print("Interpretation:")
@@ -6839,12 +7062,17 @@ def main() -> None:
     print("- This is the current frontier of rigor in the toy model: the mixed-frontier family looks substantially more stable than the exact winner, but the winner is still the piece most easily knocked around by both topology and retained-weight changes.")
     print()
 
-    print("30) Small random perturbation ensemble")
-    random_aggregate_rows, random_drift_rows = random_perturbation_frontier_summary()
+    print("30) Slightly wider random perturbation ensemble")
+    random_variant_limit = 3
+    random_aggregate_rows, random_drift_rows = random_perturbation_frontier_summary(
+        variant_limit=random_variant_limit
+    )
     print(render_perturbation_aggregate_table(random_aggregate_rows))
     print()
     print("Interpretation:")
-    print("- This widens the perturbation test in the other direction: instead of only using hand-picked center and upper nudges, it samples a small deterministic-random perturbation ensemble from the same removable/addable node sets for each benchmark graph.")
+    print(
+        f"- This widens the perturbation test in the other direction: instead of only using hand-picked center and upper nudges, it samples {random_variant_limit} deterministic-random perturbation variants per scenario from the same removable/addable node sets for each benchmark graph."
+    )
     random_all_rows = [row for row in random_aggregate_rows if row.variant_name == "all"]
     for row in random_all_rows:
         print(
