@@ -219,6 +219,18 @@ What the current script demonstrates:
   - `oscillatory/no-cross`: `0/12`
 - Across the current mode sweep there are `9` roughness groups where identical center-variation still splits into different case-core outcomes by invariant class.
 - That is the strongest current mechanism statement in the repo: roughness magnitude matters, but monotone vs oscillatory and crossing vs non-crossing explain the case-core behavior better than roughness alone, without yet collapsing it to one single invariant rule.
+- A sixteenth diagnostic then turns that into a predictive test rather than another descriptive split. It trains tiny decision trees on the raw sweep features and evaluates them with leave-one-mode-out generalization.
+- That is the right next step because it asks whether the learned invariants actually predict the empty/single/multi regime on held-out modes better than roughness alone, instead of only sorting already-observed cases after the fact.
+- In `compact`, roughness-only is still the best of the original named trees at `0.46` leave-one-mode-out accuracy, ahead of `mixed` at `0.44` and `invariant-only` at `0.43`.
+- In `extended`, roughness-only and `mixed` tie at `0.59`, both ahead of `invariant-only` at `0.51`.
+- So the present invariant bundle is explanatory but not yet the best predictive compression.
+- A seventeenth diagnostic then removes the last hand-picked-feature cheat in that predictive test. Instead of privileging the current invariant bundle, it exhaustively searches all raw 1-, 2-, and 3-feature subsets from the same mode sweep.
+- That search changes the story in a useful way. In `compact`, the best subset is `turning_points + crosses_midline` at `0.56`, which beats roughness-only. In `extended`, several simple summaries tie at `0.59`, including `center_range`, `center_variation`, and `max_step_fraction`.
+- So roughness is not uniquely load-bearing in the predictive sweep. The cleaner current claim is that the original invariant bundle was incomplete: smaller raw subsets can beat or match roughness once the feature search is no longer hand-picked.
+- An eighteenth diagnostic then asks whether those new best subsets are actually stable across held-out modes or only look good in the aggregate sweep.
+- In `compact`, there is no repeat fold winner at all: each held-out mode picks a different 2-feature subset.
+- In `extended`, the fold winners narrow to a 2-way split: `center_range` wins `2/4` held-out modes and `center_variation` wins the other `2/4`.
+- So the predictive lift now looks real, but it still comes from a small family of simple geometry summaries rather than one locked minimal law.
 - With that repair in place, `extended` still produces the larger average boundary-delay span, while the reduced `compact` family keeps a slightly larger average center gap.
 - The earlier `skew-wrap` miss is now understood as a legacy reduced-family coverage bug, not as a deep compact-vs-extended ontology split.
 - The failure-mode story is still useful history: before the repair, skewed cases mostly failed by producing empty or fragmented candidate patterns, not by hitting the boundary filter, which pointed more toward pattern formation than boundary selection.

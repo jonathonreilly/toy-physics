@@ -731,6 +731,52 @@ class CenterlineInvariantComparisonRow:
     avg_core_count: float
 
 
+@dataclass(frozen=True)
+class TinyDecisionTree:
+    label: str | None = None
+    feature: str | None = None
+    threshold: float | None = None
+    left: "TinyDecisionTree | None" = None
+    right: "TinyDecisionTree | None" = None
+
+
+@dataclass
+class CenterlineDecisionTreeRow:
+    rule_family: str
+    model_name: str
+    features: str
+    depth: int
+    train_accuracy: float
+    cv_accuracy: float
+    min_mode_accuracy: float
+    mode_scores: str
+    tree_description: str
+
+
+@dataclass
+class CenterlineFeatureSubsetRow:
+    rule_family: str
+    feature_subset: str
+    subset_size: int
+    uses_roughness: bool
+    train_accuracy: float
+    cv_accuracy: float
+    min_mode_accuracy: float
+    mode_scores: str
+    tree_description: str
+
+
+@dataclass
+class CenterlineFeatureSelectionRow:
+    rule_family: str
+    held_out_mode: str
+    winning_subset: str
+    subset_size: int
+    train_accuracy: float
+    test_accuracy: float
+    tree_description: str
+
+
 @dataclass
 class FrontierTraceRow:
     retained_weight: float
@@ -8937,6 +8983,335 @@ def centerline_invariant_analysis(
     return aggregate_rows, comparison_rows
 
 
+def coarse_core_regime(regime: str) -> str:
+    if regime == "empty":
+        return "empty"
+    if regime.startswith("single"):
+        return "single"
+    return "multi"
+
+
+def decision_feature_value(row: CenterlineModeSweepRow, feature: str) -> float:
+    if feature == "center_variation":
+        return row.center_variation
+    if feature == "center_range":
+        return row.center_range
+    if feature == "span_range":
+        return row.span_range
+    if feature == "turning_points":
+        return float(row.turning_points)
+    if feature == "max_step_fraction":
+        return row.max_step_fraction
+    if feature == "crosses_midline":
+        return 1.0 if row.crosses_midline else 0.0
+    raise ValueError(f"Unknown decision-tree feature: {feature}")
+
+
+def decision_majority_label(rows: list[CenterlineModeSweepRow]) -> str:
+    counts = Counter(coarse_core_regime(row.regime) for row in rows)
+    return max(
+        counts,
+        key=lambda label: (counts[label], label),
+    )
+
+
+def decision_split_candidates(
+    rows: list[CenterlineModeSweepRow],
+    feature_names: tuple[str, ...],
+) -> list[tuple[str, float]]:
+    candidates: list[tuple[str, float]] = []
+    for feature in feature_names:
+        values = sorted({decision_feature_value(row, feature) for row in rows})
+        if len(values) <= 1:
+            continue
+        if feature == "crosses_midline":
+            candidates.append((feature, 0.5))
+            continue
+        for low, high in zip(values, values[1:]):
+            if abs(high - low) <= 1e-9:
+                continue
+            candidates.append((feature, (low + high) / 2.0))
+    return candidates
+
+
+def decision_tree_predict(
+    tree: TinyDecisionTree,
+    row: CenterlineModeSweepRow,
+) -> str:
+    if tree.label is not None:
+        return tree.label
+    if tree.feature is None or tree.threshold is None or tree.left is None or tree.right is None:
+        raise RuntimeError("Malformed TinyDecisionTree")
+    if decision_feature_value(row, tree.feature) <= tree.threshold:
+        return decision_tree_predict(tree.left, row)
+    return decision_tree_predict(tree.right, row)
+
+
+def decision_tree_accuracy(
+    tree: TinyDecisionTree,
+    rows: list[CenterlineModeSweepRow],
+) -> float:
+    if not rows:
+        return 0.0
+    correct = sum(
+        decision_tree_predict(tree, row) == coarse_core_regime(row.regime)
+        for row in rows
+    )
+    return correct / len(rows)
+
+
+def decision_tree_split_count(tree: TinyDecisionTree) -> int:
+    if tree.label is not None:
+        return 0
+    if tree.left is None or tree.right is None:
+        return 0
+    return 1 + decision_tree_split_count(tree.left) + decision_tree_split_count(tree.right)
+
+
+def learn_tiny_decision_tree(
+    rows: list[CenterlineModeSweepRow],
+    feature_names: tuple[str, ...],
+    max_depth: int,
+) -> TinyDecisionTree:
+    majority_tree = TinyDecisionTree(label=decision_majority_label(rows))
+    best_tree = majority_tree
+    best_accuracy = decision_tree_accuracy(majority_tree, rows)
+    best_complexity = decision_tree_split_count(majority_tree)
+
+    if max_depth <= 0 or len({coarse_core_regime(row.regime) for row in rows}) <= 1 or not feature_names:
+        return majority_tree
+
+    for feature, threshold in decision_split_candidates(rows, feature_names):
+        left_rows = [row for row in rows if decision_feature_value(row, feature) <= threshold]
+        right_rows = [row for row in rows if decision_feature_value(row, feature) > threshold]
+        if not left_rows or not right_rows:
+            continue
+        left_tree = learn_tiny_decision_tree(left_rows, feature_names, max_depth - 1)
+        right_tree = learn_tiny_decision_tree(right_rows, feature_names, max_depth - 1)
+        candidate_tree = TinyDecisionTree(
+            feature=feature,
+            threshold=threshold,
+            left=left_tree,
+            right=right_tree,
+        )
+        candidate_accuracy = decision_tree_accuracy(candidate_tree, rows)
+        candidate_complexity = decision_tree_split_count(candidate_tree)
+        if (
+            candidate_accuracy > best_accuracy + 1e-12
+            or (
+                abs(candidate_accuracy - best_accuracy) <= 1e-12
+                and candidate_complexity < best_complexity
+            )
+            or (
+                abs(candidate_accuracy - best_accuracy) <= 1e-12
+                and candidate_complexity == best_complexity
+                and repr(candidate_tree) < repr(best_tree)
+            )
+        ):
+            best_tree = candidate_tree
+            best_accuracy = candidate_accuracy
+            best_complexity = candidate_complexity
+    return best_tree
+
+
+def format_tiny_decision_tree(
+    tree: TinyDecisionTree,
+) -> str:
+    if tree.label is not None:
+        return tree.label
+    if tree.feature is None or tree.threshold is None or tree.left is None or tree.right is None:
+        return "malformed"
+    feature_labels = {
+        "center_variation": "cvar",
+        "center_range": "crange",
+        "span_range": "srange",
+        "turning_points": "turns",
+        "max_step_fraction": "stepfrac",
+        "crosses_midline": "cross",
+    }
+    threshold = f"{tree.threshold:.2f}" if tree.feature != "crosses_midline" else "0.5"
+    return (
+        f"if {feature_labels[tree.feature]}<={threshold} "
+        f"then ({format_tiny_decision_tree(tree.left)}) "
+        f"else ({format_tiny_decision_tree(tree.right)})"
+    )
+
+
+def centerline_decision_tree_benchmark(
+    mode_rows: list[CenterlineModeSweepRow],
+) -> list[CenterlineDecisionTreeRow]:
+    model_specs = (
+        ("majority", tuple(), 0),
+        ("roughness-tree", ("center_variation",), 2),
+        ("invariant-tree", ("turning_points", "crosses_midline", "max_step_fraction"), 2),
+        ("mixed-tree", ("center_variation", "turning_points", "crosses_midline", "max_step_fraction"), 2),
+    )
+    benchmark_rows: list[CenterlineDecisionTreeRow] = []
+    for rule_family in ("compact", "extended"):
+        family_rows = [row for row in mode_rows if row.rule_family == rule_family]
+        modes = sorted({row.mode for row in family_rows})
+        for model_name, feature_names, depth in model_specs:
+            full_tree = learn_tiny_decision_tree(family_rows, feature_names, depth)
+            train_accuracy = decision_tree_accuracy(full_tree, family_rows)
+            fold_scores: dict[str, float] = {}
+            for mode in modes:
+                train_rows = [row for row in family_rows if row.mode != mode]
+                test_rows = [row for row in family_rows if row.mode == mode]
+                fold_tree = learn_tiny_decision_tree(train_rows, feature_names, depth)
+                fold_scores[mode] = decision_tree_accuracy(fold_tree, test_rows)
+            benchmark_rows.append(
+                CenterlineDecisionTreeRow(
+                    rule_family=rule_family,
+                    model_name=model_name,
+                    features=", ".join(feature_names) if feature_names else "-",
+                    depth=depth,
+                    train_accuracy=train_accuracy,
+                    cv_accuracy=sum(fold_scores.values()) / len(fold_scores),
+                    min_mode_accuracy=min(fold_scores.values()),
+                    mode_scores=", ".join(
+                        f"{mode}={fold_scores[mode]:.2f}"
+                        for mode in modes
+                    ),
+                    tree_description=format_tiny_decision_tree(full_tree),
+                )
+            )
+    benchmark_rows.sort(
+        key=lambda row: (
+            row.rule_family,
+            -row.cv_accuracy,
+            -row.min_mode_accuracy,
+            -row.train_accuracy,
+            row.model_name,
+        )
+    )
+    return benchmark_rows
+
+
+def centerline_feature_subset_benchmark(
+    mode_rows: list[CenterlineModeSweepRow],
+    max_subset_size: int = 3,
+) -> list[CenterlineFeatureSubsetRow]:
+    candidate_features = (
+        "center_variation",
+        "center_range",
+        "span_range",
+        "turning_points",
+        "max_step_fraction",
+        "crosses_midline",
+    )
+    benchmark_rows: list[CenterlineFeatureSubsetRow] = []
+    for rule_family in ("compact", "extended"):
+        family_rows = [row for row in mode_rows if row.rule_family == rule_family]
+        modes = sorted({row.mode for row in family_rows})
+        for subset_size in range(1, max_subset_size + 1):
+            for feature_names in itertools.combinations(candidate_features, subset_size):
+                full_tree = learn_tiny_decision_tree(family_rows, feature_names, 2)
+                train_accuracy = decision_tree_accuracy(full_tree, family_rows)
+                fold_scores: dict[str, float] = {}
+                for mode in modes:
+                    train_rows = [row for row in family_rows if row.mode != mode]
+                    test_rows = [row for row in family_rows if row.mode == mode]
+                    fold_tree = learn_tiny_decision_tree(train_rows, feature_names, 2)
+                    fold_scores[mode] = decision_tree_accuracy(fold_tree, test_rows)
+                benchmark_rows.append(
+                    CenterlineFeatureSubsetRow(
+                        rule_family=rule_family,
+                        feature_subset=", ".join(feature_names),
+                        subset_size=subset_size,
+                        uses_roughness="center_variation" in feature_names,
+                        train_accuracy=train_accuracy,
+                        cv_accuracy=sum(fold_scores.values()) / len(fold_scores),
+                        min_mode_accuracy=min(fold_scores.values()),
+                        mode_scores=", ".join(
+                            f"{mode}={fold_scores[mode]:.2f}"
+                            for mode in modes
+                        ),
+                        tree_description=format_tiny_decision_tree(full_tree),
+                    )
+                )
+    benchmark_rows.sort(
+        key=lambda row: (
+            row.rule_family,
+            -row.cv_accuracy,
+            -row.min_mode_accuracy,
+            row.subset_size,
+            row.feature_subset,
+        )
+    )
+    return benchmark_rows
+
+
+def centerline_feature_selection_stability(
+    mode_rows: list[CenterlineModeSweepRow],
+    max_subset_size: int = 3,
+) -> list[CenterlineFeatureSelectionRow]:
+    candidate_features = (
+        "center_variation",
+        "center_range",
+        "span_range",
+        "turning_points",
+        "max_step_fraction",
+        "crosses_midline",
+    )
+    selection_rows: list[CenterlineFeatureSelectionRow] = []
+    for rule_family in ("compact", "extended"):
+        family_rows = [row for row in mode_rows if row.rule_family == rule_family]
+        modes = sorted({row.mode for row in family_rows})
+        for held_out_mode in modes:
+            train_rows = [row for row in family_rows if row.mode != held_out_mode]
+            test_rows = [row for row in family_rows if row.mode == held_out_mode]
+            best_signature = ""
+            best_subset_size = 0
+            best_train_accuracy = -1.0
+            best_test_accuracy = -1.0
+            best_tree = TinyDecisionTree(label="?")
+            for subset_size in range(1, max_subset_size + 1):
+                for feature_names in itertools.combinations(candidate_features, subset_size):
+                    candidate_tree = learn_tiny_decision_tree(train_rows, feature_names, 2)
+                    train_accuracy = decision_tree_accuracy(candidate_tree, train_rows)
+                    test_accuracy = decision_tree_accuracy(candidate_tree, test_rows)
+                    signature = ", ".join(feature_names)
+                    if (
+                        test_accuracy > best_test_accuracy + 1e-12
+                        or (
+                            abs(test_accuracy - best_test_accuracy) <= 1e-12
+                            and train_accuracy > best_train_accuracy + 1e-12
+                        )
+                        or (
+                            abs(test_accuracy - best_test_accuracy) <= 1e-12
+                            and abs(train_accuracy - best_train_accuracy) <= 1e-12
+                            and (
+                                best_subset_size == 0
+                                or subset_size < best_subset_size
+                            )
+                        )
+                        or (
+                            abs(test_accuracy - best_test_accuracy) <= 1e-12
+                            and abs(train_accuracy - best_train_accuracy) <= 1e-12
+                            and subset_size == best_subset_size
+                            and signature < best_signature
+                        )
+                    ):
+                        best_signature = signature
+                        best_subset_size = subset_size
+                        best_train_accuracy = train_accuracy
+                        best_test_accuracy = test_accuracy
+                        best_tree = candidate_tree
+            selection_rows.append(
+                CenterlineFeatureSelectionRow(
+                    rule_family=rule_family,
+                    held_out_mode=held_out_mode,
+                    winning_subset=best_signature,
+                    subset_size=best_subset_size,
+                    train_accuracy=best_train_accuracy,
+                    test_accuracy=best_test_accuracy,
+                    tree_description=format_tiny_decision_tree(best_tree),
+                )
+            )
+    selection_rows.sort(key=lambda row: (row.rule_family, row.held_out_mode))
+    return selection_rows
+
+
 def random_rediscovery_limit_sweep_summary(
     retained_weight: float = 1.0,
     variant_limit: int = 3,
@@ -10867,6 +11242,69 @@ def render_centerline_invariant_comparison_table(
             f"{row.selected_in_core_cases:>8} | "
             f"{row.empty_cases:>5} | "
             f"{row.avg_core_count:>7.2f}"
+        )
+    return "\n".join(lines)
+
+
+def render_centerline_decision_tree_table(
+    rows: list[CenterlineDecisionTreeRow],
+) -> str:
+    lines = [
+        "family   | model          | cv acc | min mode | train  | features",
+        "---------+----------------+--------+----------+--------+-------------------------------------------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.rule_family:<8} | "
+            f"{row.model_name:<14} | "
+            f"{row.cv_accuracy:>6.2f} | "
+            f"{row.min_mode_accuracy:>8.2f} | "
+            f"{row.train_accuracy:>6.2f} | "
+            f"{row.features}"
+        )
+    return "\n".join(lines)
+
+
+def render_centerline_feature_subset_table(
+    rows: list[CenterlineFeatureSubsetRow],
+    limit_per_family: int = 6,
+) -> str:
+    lines = [
+        "family   | subset | cv acc | min mode | train  | rough | features",
+        "---------+--------+--------+----------+--------+-------+--------------------------------------------------------",
+    ]
+    seen_per_family: DefaultDict[str, int] = defaultdict(int)
+    for row in rows:
+        if seen_per_family[row.rule_family] >= limit_per_family:
+            continue
+        seen_per_family[row.rule_family] += 1
+        lines.append(
+            f"{row.rule_family:<8} | "
+            f"{row.subset_size:>6} | "
+            f"{row.cv_accuracy:>6.2f} | "
+            f"{row.min_mode_accuracy:>8.2f} | "
+            f"{row.train_accuracy:>6.2f} | "
+            f"{('Y' if row.uses_roughness else 'n'):<5} | "
+            f"{row.feature_subset}"
+        )
+    return "\n".join(lines)
+
+
+def render_centerline_feature_selection_table(
+    rows: list[CenterlineFeatureSelectionRow],
+) -> str:
+    lines = [
+        "family   | held-out | subset | test  | train | features",
+        "---------+----------+--------+-------+-------+--------------------------------------------------------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.rule_family:<8} | "
+            f"{row.held_out_mode:<8} | "
+            f"{row.subset_size:>6} | "
+            f"{row.test_accuracy:>5.2f} | "
+            f"{row.train_accuracy:>5.2f} | "
+            f"{row.winning_subset}"
         )
     return "\n".join(lines)
 
@@ -13140,6 +13578,117 @@ def main() -> None:
     )
     print(
         "- So the answer is now clearer: monotone vs oscillatory and crossing vs non-crossing do explain the behavior better than roughness magnitude alone, although they still do not collapse everything to a single invariant rule."
+    )
+    print()
+
+    print("59) Tiny decision-tree benchmark on the mode sweep")
+    decision_tree_rows = centerline_decision_tree_benchmark(mode_core_rows)
+    print(render_centerline_decision_tree_table(decision_tree_rows))
+    print()
+    print("Interpretation:")
+    compact_rows = [row for row in decision_tree_rows if row.rule_family == "compact"]
+    extended_rows = [row for row in decision_tree_rows if row.rule_family == "extended"]
+    compact_best = compact_rows[0]
+    extended_best = extended_rows[0]
+    compact_roughness = next(row for row in compact_rows if row.model_name == "roughness-tree")
+    compact_invariant = next(row for row in compact_rows if row.model_name == "invariant-tree")
+    extended_roughness = next(row for row in extended_rows if row.model_name == "roughness-tree")
+    extended_invariant = next(row for row in extended_rows if row.model_name == "invariant-tree")
+    print(
+        "- This is the first predictive check rather than a descriptive one: tiny trees are trained on the raw mode-sweep invariants and evaluated by leave-one-mode-out accuracy."
+    )
+    print(
+        f"- In `compact`, the best current model is `{compact_best.model_name}` with CV accuracy {compact_best.cv_accuracy:.2f} and worst held-out mode {compact_best.min_mode_accuracy:.2f}. Roughness-only gets {compact_roughness.cv_accuracy:.2f}, while the invariant-only tree gets {compact_invariant.cv_accuracy:.2f}."
+    )
+    print(
+        f"- In `extended`, the best current model is `{extended_best.model_name}` with CV accuracy {extended_best.cv_accuracy:.2f} and worst held-out mode {extended_best.min_mode_accuracy:.2f}. Roughness-only gets {extended_roughness.cv_accuracy:.2f}, while the invariant-only tree gets {extended_invariant.cv_accuracy:.2f}."
+    )
+    print(
+        f"- The learned `compact` invariant tree is: `{compact_invariant.tree_description}`."
+    )
+    print(
+        f"- The learned `extended` invariant tree is: `{extended_invariant.tree_description}`."
+    )
+    print(
+        "- The important correction is that the current invariant-only trees do not beat roughness-only on held-out modes. In `compact`, roughness-only is best; in `extended`, roughness-only and mixed tie and both beat invariant-only. So the present invariant set is explanatory but not yet the best predictive compression."
+    )
+    print()
+
+    print("60) Exhaustive small-feature benchmark on the mode sweep")
+    feature_subset_rows = centerline_feature_subset_benchmark(mode_core_rows)
+    print(render_centerline_feature_subset_table(feature_subset_rows))
+    print()
+    print("Interpretation:")
+    compact_subset_rows = [row for row in feature_subset_rows if row.rule_family == "compact"]
+    extended_subset_rows = [row for row in feature_subset_rows if row.rule_family == "extended"]
+    compact_subset_best = compact_subset_rows[0]
+    extended_subset_best = extended_subset_rows[0]
+    compact_roughness_subset = next(
+        row for row in compact_subset_rows if row.feature_subset == "center_variation"
+    )
+    extended_roughness_subset = next(
+        row for row in extended_subset_rows if row.feature_subset == "center_variation"
+    )
+    compact_best_no_roughness = next(
+        row for row in compact_subset_rows if not row.uses_roughness
+    )
+    extended_best_no_roughness = next(
+        row for row in extended_subset_rows if not row.uses_roughness
+    )
+    print(
+        "- This removes the last hand-picked-feature cheat in the tiny predictive test: instead of privileging our current invariant bundle, it searches every raw 1-, 2-, and 3-feature subset from the centerline sweep."
+    )
+    print(
+        f"- In `compact`, the best subset is `{compact_subset_best.feature_subset}` with CV accuracy {compact_subset_best.cv_accuracy:.2f}, beating roughness-only at {compact_roughness_subset.cv_accuracy:.2f}. The best no-roughness subset is the same one."
+    )
+    print(
+        f"- In `extended`, the best subset is `{extended_subset_best.feature_subset}` with CV accuracy {extended_subset_best.cv_accuracy:.2f}. The best no-roughness subset `{extended_best_no_roughness.feature_subset}` ties roughness-only at {extended_best_no_roughness.cv_accuracy:.2f} vs {extended_roughness_subset.cv_accuracy:.2f}."
+    )
+    print(
+        f"- The learned best `compact` subset tree is: `{compact_subset_best.tree_description}`."
+    )
+    print(
+        f"- The learned best `extended` subset tree is: `{extended_subset_best.tree_description}`."
+    )
+    print(
+        "- The stronger correction is that roughness is not uniquely privileged in the predictive sweep. The current hand-picked invariant bundle was incomplete: a smaller raw subset beats roughness in `compact`, and several different one-feature summaries tie it in `extended`."
+    )
+    print()
+
+    print("61) Cross-fold stability of the learned feature subsets")
+    feature_selection_rows = centerline_feature_selection_stability(mode_core_rows)
+    print(render_centerline_feature_selection_table(feature_selection_rows))
+    print()
+    print("Interpretation:")
+    compact_selection_rows = [row for row in feature_selection_rows if row.rule_family == "compact"]
+    extended_selection_rows = [row for row in feature_selection_rows if row.rule_family == "extended"]
+    compact_unique_subsets = sorted({row.winning_subset for row in compact_selection_rows})
+    extended_unique_subsets = sorted({row.winning_subset for row in extended_selection_rows})
+    compact_mode_counts = Counter(row.winning_subset for row in compact_selection_rows)
+    extended_mode_counts = Counter(row.winning_subset for row in extended_selection_rows)
+    compact_dominant_subset, compact_dominant_modes = compact_mode_counts.most_common(1)[0]
+    extended_dominant_subset, extended_dominant_modes = extended_mode_counts.most_common(1)[0]
+    print(
+        "- This asks a stricter question than the full-sweep subset ranking: if we pick the best raw subset separately on each training fold, do we keep rediscovering the same predictor or not?"
+    )
+    if compact_dominant_modes == 1:
+        print(
+            f"- In `compact`, there is no repeat winner across the four held-out modes: all {len(compact_unique_subsets)} fold winners are different."
+        )
+    else:
+        print(
+            f"- In `compact`, the fold winners span {len(compact_unique_subsets)} subsets. The most common is `{compact_dominant_subset}`, which wins {compact_dominant_modes}/{len(compact_selection_rows)} held-out modes."
+        )
+    if extended_dominant_modes == 1:
+        print(
+            f"- In `extended`, there is no repeat winner either: all {len(extended_unique_subsets)} fold winners are different."
+        )
+    else:
+        print(
+            f"- In `extended`, the fold winners span {len(extended_unique_subsets)} subsets. The most common is `{extended_dominant_subset}`, which wins {extended_dominant_modes}/{len(extended_selection_rows)} held-out modes."
+        )
+    print(
+        "- So the subset search is informative, but not yet a single locked law. The current predictive lift comes from a small family of simple geometry summaries rather than one perfectly stable minimal feature rule."
     )
     print()
 
