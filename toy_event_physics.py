@@ -461,6 +461,40 @@ class DerivedBootstrapStabilityRow:
 
 
 @dataclass
+class DerivedTransformBreakRow:
+    mode: str
+    direct_transform_break_strength: float | None
+    projected_transform_break_strength: float | None
+    weakest_basis_name: str
+    weakest_overlap: int
+    weakest_selected_on_pc123: int
+
+
+@dataclass
+class DerivedTransformStrengthRow:
+    basis_name: str
+    mode: str
+    strength: float
+    variant_name: str
+    selected_on_pc123: int
+    pc123_overlap_with_full: int
+    compact_top_rule: str
+    compact_top_pc123: int
+    extended_top_rule: str
+    extended_top_pc123: int
+
+
+@dataclass
+class DerivedTransformStabilityRow:
+    rule_family: str
+    rule_signature: str
+    basis_hits: int
+    direct_hits: int
+    projected_hits: int
+    top_hits: int
+
+
+@dataclass
 class FrontierTraceRow:
     retained_weight: float
     rule_signature: str
@@ -6542,6 +6576,7 @@ DERIVED_BOOTSTRAP_TRANSFORM_MODES = (
     "signed_log1p",
     "softsign",
 )
+DERIVED_TRANSFORM_STRENGTHS = (0.0, 0.25, 0.5, 0.75, 1.0)
 DERIVED_BOOTSTRAP_TRANSFORM_RANDOM_COUNT = 2
 DERIVED_BOOTSTRAP_TRANSFORM_RANDOM_SEED = 71
 
@@ -7038,24 +7073,30 @@ def projected_metric_rows(
     return projected_rows, projected_anchor
 
 
-def transform_metric_value(value: float, mode: str) -> float:
-    if mode == "identity":
+def transform_metric_value(value: float, mode: str, strength: float = 1.0) -> float:
+    if mode == "identity" or strength <= 0.0:
         return value
+    full_value: float
     if mode == "signed_sqrt":
-        return math.copysign(math.sqrt(abs(value)), value) if value != 0.0 else 0.0
-    if mode == "signed_log1p":
-        return math.copysign(math.log1p(abs(value)), value) if value != 0.0 else 0.0
-    if mode == "softsign":
-        return value / (1.0 + abs(value)) if value != 0.0 else 0.0
-    raise ValueError(f"Unknown metric transform mode: {mode}")
+        full_value = math.copysign(math.sqrt(abs(value)), value) if value != 0.0 else 0.0
+    elif mode == "signed_log1p":
+        full_value = math.copysign(math.log1p(abs(value)), value) if value != 0.0 else 0.0
+    elif mode == "softsign":
+        full_value = value / (1.0 + abs(value)) if value != 0.0 else 0.0
+    else:
+        raise ValueError(f"Unknown metric transform mode: {mode}")
+    if strength >= 1.0:
+        return full_value
+    return (1.0 - strength) * value + strength * full_value
 
 
 def transform_metric_rows(
     metric_rows: list[tuple[float, ...]],
     mode: str,
+    strength: float = 1.0,
 ) -> list[tuple[float, ...]]:
     return [
-        tuple(transform_metric_value(value, mode) for value in row)
+        tuple(transform_metric_value(value, mode, strength) for value in row)
         for row in metric_rows
     ]
 
@@ -7063,8 +7104,9 @@ def transform_metric_rows(
 def transform_anchor(
     anchor: tuple[float, ...],
     mode: str,
+    strength: float = 1.0,
 ) -> tuple[float, ...]:
-    return tuple(transform_metric_value(value, mode) for value in anchor)
+    return tuple(transform_metric_value(value, mode, strength) for value in anchor)
 
 
 def project_metric_rows_and_anchor(
@@ -7239,6 +7281,221 @@ def derived_bootstrap_ensemble(
         )
     )
     return basis_rows, stability_rows
+
+
+def derived_transform_strength_sweep(
+    baseline_rows: list[FrontierScenarioRow],
+    baseline_candidates: list[EvaluatedCandidate],
+    strengths: tuple[float, ...] = DERIVED_TRANSFORM_STRENGTHS,
+    random_projection_count: int = DERIVED_BOOTSTRAP_TRANSFORM_RANDOM_COUNT,
+) -> tuple[
+    list[DerivedTransformBreakRow],
+    list[DerivedTransformStrengthRow],
+    list[DerivedTransformStabilityRow],
+]:
+    base_metric_rows = [derived_metric_vector(candidate) for candidate in baseline_candidates]
+    base_anchor = (1.0, 1.0, 0.0, 0.0, 1.0)
+    full_components, full_candidates = derived_axis_components(
+        baseline_candidates,
+        DERIVED_AXIS_METRIC_FIELDS,
+    )
+    _full_scenario_rows, _full_aggregate_rows, full_pc123_signatures = evaluate_derived_axis_candidates(
+        baseline_rows,
+        full_candidates,
+    )
+    del full_components
+
+    strength_rows: list[DerivedTransformStrengthRow] = []
+    family_rule_basis_hits: DefaultDict[tuple[str, str], set[str]] = defaultdict(set)
+    family_rule_direct_hits: DefaultDict[tuple[str, str], set[str]] = defaultdict(set)
+    family_rule_projected_hits: DefaultDict[tuple[str, str], set[str]] = defaultdict(set)
+    family_rule_top_hits: DefaultDict[tuple[str, str], int] = defaultdict(int)
+
+    def evaluate_strength_basis(
+        basis_name: str,
+        mode: str,
+        strength: float,
+        variant_name: str,
+        metric_rows: list[tuple[float, ...]],
+        anchor: tuple[float, ...],
+    ) -> None:
+        _components, annotated_candidates = derived_axis_components_from_metric_rows(
+            baseline_candidates,
+            metric_rows,
+            anchor,
+        )
+        scenario_rows, aggregate_rows, pc123_signatures_by_case = evaluate_derived_axis_candidates(
+            baseline_rows,
+            annotated_candidates,
+        )
+        compact_top = next((row for row in aggregate_rows if row.rule_family == "compact"), None)
+        extended_top = next((row for row in aggregate_rows if row.rule_family == "extended"), None)
+        if compact_top is not None:
+            family_rule_top_hits[(compact_top.rule_family, compact_top.rule_signature)] += 1
+        if extended_top is not None:
+            family_rule_top_hits[(extended_top.rule_family, extended_top.rule_signature)] += 1
+        selected_on_pc123 = sum(row.selected_on_pc123 for row in scenario_rows)
+        pc123_overlap_with_full = sum(
+            bool(pc123_signatures_by_case[case_key] & full_pc123_signatures[case_key])
+            for case_key in full_pc123_signatures
+        )
+        strength_rows.append(
+            DerivedTransformStrengthRow(
+                basis_name=basis_name,
+                mode=mode,
+                strength=strength,
+                variant_name=variant_name,
+                selected_on_pc123=selected_on_pc123,
+                pc123_overlap_with_full=pc123_overlap_with_full,
+                compact_top_rule=compact_top.rule_signature if compact_top is not None else "-",
+                compact_top_pc123=compact_top.pc123_hits if compact_top is not None else 0,
+                extended_top_rule=extended_top.rule_signature if extended_top is not None else "-",
+                extended_top_pc123=extended_top.pc123_hits if extended_top is not None else 0,
+            )
+        )
+        is_direct = variant_name == "direct"
+        for aggregate_row in aggregate_rows:
+            if aggregate_row.pc123_hits <= 0:
+                continue
+            family_rule = (aggregate_row.rule_family, aggregate_row.rule_signature)
+            family_rule_basis_hits[family_rule].add(basis_name)
+            if is_direct:
+                family_rule_direct_hits[family_rule].add(basis_name)
+            else:
+                family_rule_projected_hits[family_rule].add(basis_name)
+
+    for transform_index, transform_mode in enumerate(DERIVED_BOOTSTRAP_TRANSFORM_MODES):
+        transform_random_specs = random_projection_basis_specs(
+            count=random_projection_count,
+            seed=DERIVED_BOOTSTRAP_TRANSFORM_RANDOM_SEED + transform_index,
+        )
+        for strength in strengths:
+            transformed_rows = transform_metric_rows(
+                base_metric_rows,
+                transform_mode,
+                strength=strength,
+            )
+            transformed_anchor = transform_anchor(
+                base_anchor,
+                transform_mode,
+                strength=strength,
+            )
+            evaluate_strength_basis(
+                basis_name=f"{transform_mode}:s{strength:.2f}:direct",
+                mode=transform_mode,
+                strength=strength,
+                variant_name="direct",
+                metric_rows=transformed_rows,
+                anchor=transformed_anchor,
+            )
+            for random_name, projection_matrix in transform_random_specs:
+                projected_rows, projected_anchor = project_metric_rows_and_anchor(
+                    transformed_rows,
+                    transformed_anchor,
+                    projection_matrix,
+                )
+                evaluate_strength_basis(
+                    basis_name=f"{transform_mode}:s{strength:.2f}:{random_name}",
+                    mode=transform_mode,
+                    strength=strength,
+                    variant_name=random_name,
+                    metric_rows=projected_rows,
+                    anchor=projected_anchor,
+                )
+
+    break_rows: list[DerivedTransformBreakRow] = []
+    total_cases = len(baseline_rows)
+    for mode in DERIVED_BOOTSTRAP_TRANSFORM_MODES:
+        mode_rows = [row for row in strength_rows if row.mode == mode]
+        direct_rows = sorted(
+            (row for row in mode_rows if row.variant_name == "direct"),
+            key=lambda row: row.strength,
+        )
+        projected_rows = sorted(
+            (row for row in mode_rows if row.variant_name != "direct"),
+            key=lambda row: (row.strength, row.variant_name),
+        )
+        direct_baseline = direct_rows[0] if direct_rows else None
+        direct_break_strength = next(
+            (
+                row.strength
+                for row in direct_rows
+                if direct_baseline is not None
+                and row.strength > direct_baseline.strength
+                and (
+                    row.pc123_overlap_with_full < direct_baseline.pc123_overlap_with_full
+                    or row.selected_on_pc123 < direct_baseline.selected_on_pc123
+                )
+            ),
+            None,
+        )
+        projected_baselines = {
+            row.variant_name: row
+            for row in projected_rows
+            if row.strength == min(strengths)
+        }
+        projected_break_strength = next(
+            (
+                row.strength
+                for row in projected_rows
+                if row.variant_name in projected_baselines
+                and row.strength > projected_baselines[row.variant_name].strength
+                and (
+                    row.pc123_overlap_with_full < projected_baselines[row.variant_name].pc123_overlap_with_full
+                    or row.selected_on_pc123 < projected_baselines[row.variant_name].selected_on_pc123
+                )
+            ),
+            None,
+        )
+        weakest_row = min(
+            mode_rows,
+            key=lambda row: (
+                row.pc123_overlap_with_full,
+                row.selected_on_pc123,
+                row.variant_name,
+                row.strength,
+            ),
+        )
+        break_rows.append(
+            DerivedTransformBreakRow(
+                mode=mode,
+                direct_transform_break_strength=direct_break_strength,
+                projected_transform_break_strength=projected_break_strength,
+                weakest_basis_name=weakest_row.basis_name,
+                weakest_overlap=weakest_row.pc123_overlap_with_full,
+                weakest_selected_on_pc123=weakest_row.selected_on_pc123,
+            )
+        )
+
+    stability_rows = [
+        DerivedTransformStabilityRow(
+            rule_family=rule_family,
+            rule_signature=rule_signature,
+            basis_hits=len(family_rule_basis_hits[(rule_family, rule_signature)]),
+            direct_hits=len(family_rule_direct_hits[(rule_family, rule_signature)]),
+            projected_hits=len(family_rule_projected_hits[(rule_family, rule_signature)]),
+            top_hits=family_rule_top_hits[(rule_family, rule_signature)],
+        )
+        for rule_family, rule_signature in family_rule_basis_hits
+    ]
+    strength_rows.sort(
+        key=lambda row: (
+            row.mode,
+            row.strength,
+            row.variant_name != "direct",
+            row.variant_name,
+        )
+    )
+    break_rows.sort(key=lambda row: row.mode)
+    stability_rows.sort(
+        key=lambda row: (
+            row.rule_family,
+            -row.basis_hits,
+            -row.top_hits,
+            row.rule_signature,
+        )
+    )
+    return break_rows, strength_rows, stability_rows
 
 
 def random_rediscovery_limit_sweep_summary(
@@ -8768,6 +9025,68 @@ def render_derived_bootstrap_stability_table(
             f"{row.nonlinear_basis_hits:>6} | "
             f"{row.case_basis_hits:>9} | "
             f"{row.top_basis_hits:>7}"
+        )
+    return "\n".join(lines)
+
+
+def render_derived_transform_break_table(
+    rows: list[DerivedTransformBreakRow],
+) -> str:
+    lines = [
+        "mode         | direct xfrm | proj xfrm  | weakest basis               | overlap | sel pc123",
+        "-------------+-------------+------------+----------------------------+---------+----------",
+    ]
+    for row in rows:
+        direct_label = "-" if row.direct_transform_break_strength is None else f"{row.direct_transform_break_strength:.2f}"
+        projected_label = "-" if row.projected_transform_break_strength is None else f"{row.projected_transform_break_strength:.2f}"
+        lines.append(
+            f"{row.mode:<11} | "
+            f"{direct_label:>11} | "
+            f"{projected_label:>10} | "
+            f"{row.weakest_basis_name:<26} | "
+            f"{row.weakest_overlap:>7} | "
+            f"{row.weakest_selected_on_pc123:>8}"
+        )
+    return "\n".join(lines)
+
+
+def render_derived_transform_strength_table(
+    rows: list[DerivedTransformStrengthRow],
+    limit: int = 15,
+) -> str:
+    lines = [
+        "mode         | s    | variant | sel pc123 | ovlp full | compact top        | ext top",
+        "-------------+------+---------+-----------+-----------+--------------------+--------------------",
+    ]
+    for row in rows[:limit]:
+        lines.append(
+            f"{row.mode:<11} | "
+            f"{row.strength:>4.2f} | "
+            f"{row.variant_name:<7} | "
+            f"{row.selected_on_pc123:>9} | "
+            f"{row.pc123_overlap_with_full:>9} | "
+            f"{row.compact_top_rule:<18} {row.compact_top_pc123:>2} | "
+            f"{row.extended_top_rule:<18} {row.extended_top_pc123:>2}"
+        )
+    return "\n".join(lines)
+
+
+def render_derived_transform_stability_table(
+    rows: list[DerivedTransformStabilityRow],
+    limit: int = 12,
+) -> str:
+    lines = [
+        "family   | rule              | basis hits | direct | projected | top hits",
+        "---------+-------------------+------------+--------+-----------+---------",
+    ]
+    for row in rows[:limit]:
+        lines.append(
+            f"{row.rule_family:<8} | "
+            f"{row.rule_signature:<17} | "
+            f"{row.basis_hits:>10} | "
+            f"{row.direct_hits:>6} | "
+            f"{row.projected_hits:>9} | "
+            f"{row.top_hits:>7}"
         )
     return "\n".join(lines)
 
@@ -10486,6 +10805,83 @@ def main() -> None:
     )
     print(
         "- This is the strongest current answer to the basis-dependence question: not which motif wins for one chosen basis, or even one basis family, but which motifs keep reappearing on the full derived frontier across subset, linear-random, and nonlinear basis ensembles."
+    )
+    print()
+
+    print("49) Transform-strength sweep inside the nonlinear basis family")
+    transform_break_rows, transform_strength_rows, transform_stability_rows = derived_transform_strength_sweep(
+        harmonic_continuous_frontier_rows,
+        harmonic_continuous_frontier_candidates,
+    )
+    print(render_derived_transform_break_table(transform_break_rows))
+    print()
+    print(
+        render_derived_transform_strength_table(
+            transform_strength_rows,
+            limit=min(15, len(transform_strength_rows)),
+        )
+    )
+    print()
+    print(render_derived_transform_stability_table(transform_stability_rows[:12]))
+    print()
+    print("Interpretation:")
+    total_transform_bases = len(transform_strength_rows)
+    print(
+        f"- This pushes on the last hand-set part of the nonlinear family: not just which transform class is used, but how hard it is applied. The current sweep covers {total_transform_bases} transform views across direct and projected variants."
+    )
+    earliest_projected_break = min(
+        (
+            row.projected_transform_break_strength
+            for row in transform_break_rows
+            if row.projected_transform_break_strength is not None
+        ),
+        default=None,
+    )
+    earliest_direct_break = min(
+        (
+            row.direct_transform_break_strength
+            for row in transform_break_rows
+            if row.direct_transform_break_strength is not None
+        ),
+        default=None,
+    )
+    if earliest_direct_break is None:
+        print("- None of the direct transformed bases break their identity-strength baseline anywhere on the current strength grid.")
+    else:
+        print(
+            f"- The earliest direct transform-induced break on the current grid occurs at strength {earliest_direct_break:.2f}."
+        )
+    if earliest_projected_break is None:
+        print("- None of the projected transformed bases degrade beyond their strength-zero projection baselines on the current grid either.")
+    else:
+        print(
+            f"- The earliest projected transform-induced break occurs at strength {earliest_projected_break:.2f}, which tells us the transform/projection combination is what starts to destabilize overlap first once projection alone is factored out."
+        )
+    weakest_transform_row = min(
+        transform_strength_rows,
+        key=lambda row: (
+            row.pc123_overlap_with_full,
+            row.selected_on_pc123,
+            row.mode,
+            row.strength,
+            row.variant_name,
+        ),
+    )
+    print(
+        f"- The weakest current transform view is `{weakest_transform_row.basis_name}`, with overlap {weakest_transform_row.pc123_overlap_with_full}/{len(harmonic_continuous_frontier_rows)} and selected-on-pc123 {weakest_transform_row.selected_on_pc123}/{len(harmonic_continuous_frontier_rows)}."
+    )
+    compact_transform = next((row for row in transform_stability_rows if row.rule_family == "compact"), None)
+    extended_transform = next((row for row in transform_stability_rows if row.rule_family == "extended"), None)
+    if compact_transform is not None:
+        print(
+            f"- In `compact`, the most transform-stable motif is `{compact_transform.rule_signature}`, appearing in {compact_transform.basis_hits}/{total_transform_bases} transform views with {compact_transform.top_hits} top-view wins."
+        )
+    if extended_transform is not None:
+        print(
+            f"- In `extended`, the most transform-stable motif is `{extended_transform.rule_signature}`, appearing in {extended_transform.basis_hits}/{total_transform_bases} transform views with {extended_transform.top_hits} top-view wins."
+        )
+    print(
+        "- So this turns the nonlinear family into a proper stress test: we can now say not just that some mild transforms work, but where overlap first starts to break and which motifs remain stable across the whole transform-strength sweep."
     )
     print()
 
