@@ -423,6 +423,41 @@ class PerturbationAggregateRow:
 
 
 @dataclass
+class PerturbationWeightCaseRow:
+    rule_family: str
+    pack_name: str
+    scenario_name: str
+    variant_name: str
+    low_weight: float
+    high_weight: float
+    low_selected_rule: str
+    high_selected_rule: str
+    low_status: str
+    high_status: str
+    same_selected: bool
+    survives_both: bool
+    base_alive_both: bool
+    robustness_both: bool
+    proper_time_both: bool
+    geometry_both: bool
+    mixed_both: bool
+
+
+@dataclass
+class PerturbationWeightAggregateRow:
+    rule_family: str
+    variant_name: str
+    cases: int
+    survives_both: int
+    same_selected: int
+    base_alive_both: int
+    robustness_both: int
+    proper_time_both: int
+    geometry_both: int
+    mixed_both: int
+
+
+@dataclass
 class RawFrontierPool:
     selector_candidates: dict[
         tuple[frozenset[int], frozenset[int], frozenset[tuple[int, int]]],
@@ -4742,6 +4777,85 @@ def perturbation_frontier_results(
     return case_rows, aggregate_rows
 
 
+def perturbation_weight_stability_results(
+    retained_weights: tuple[float, float] = (0.95, 1.0),
+) -> tuple[list[PerturbationWeightCaseRow], list[PerturbationWeightAggregateRow]]:
+    low_weight, high_weight = retained_weights
+    low_case_rows, _low_aggregate_rows = perturbation_frontier_results(retained_weight=low_weight)
+    high_case_rows, _high_aggregate_rows = perturbation_frontier_results(retained_weight=high_weight)
+
+    low_by_key = {
+        (
+            row.rule_family,
+            row.pack_name,
+            row.scenario_name,
+            row.variant_name,
+        ): row
+        for row in low_case_rows
+    }
+    high_by_key = {
+        (
+            row.rule_family,
+            row.pack_name,
+            row.scenario_name,
+            row.variant_name,
+        ): row
+        for row in high_case_rows
+    }
+
+    case_rows: list[PerturbationWeightCaseRow] = []
+    grouped_rows: DefaultDict[tuple[str, str], list[PerturbationWeightCaseRow]] = defaultdict(list)
+    for case_key in sorted(set(low_by_key) & set(high_by_key)):
+        low_row = low_by_key[case_key]
+        high_row = high_by_key[case_key]
+        case_row = PerturbationWeightCaseRow(
+            rule_family=low_row.rule_family,
+            pack_name=low_row.pack_name,
+            scenario_name=low_row.scenario_name,
+            variant_name=low_row.variant_name,
+            low_weight=low_weight,
+            high_weight=high_weight,
+            low_selected_rule=low_row.perturbed_selected_rule,
+            high_selected_rule=high_row.perturbed_selected_rule,
+            low_status=low_row.perturbed_status,
+            high_status=high_row.perturbed_status,
+            same_selected=(low_row.perturbed_selected_rule == high_row.perturbed_selected_rule),
+            survives_both=(low_row.perturbed_status == "survives" and high_row.perturbed_status == "survives"),
+            base_alive_both=(low_row.base_selected_alive and high_row.base_selected_alive),
+            robustness_both=(low_row.robustness_overlap and high_row.robustness_overlap),
+            proper_time_both=(low_row.proper_time_overlap and high_row.proper_time_overlap),
+            geometry_both=(low_row.geometry_overlap and high_row.geometry_overlap),
+            mixed_both=(low_row.mixed_overlap and high_row.mixed_overlap),
+        )
+        case_rows.append(case_row)
+        grouped_rows[(case_row.rule_family, case_row.variant_name)].append(case_row)
+        grouped_rows[(case_row.rule_family, "all")].append(case_row)
+
+    aggregate_rows = [
+        PerturbationWeightAggregateRow(
+            rule_family=rule_family,
+            variant_name=variant_name,
+            cases=len(rows),
+            survives_both=sum(row.survives_both for row in rows),
+            same_selected=sum(row.same_selected for row in rows),
+            base_alive_both=sum(row.base_alive_both for row in rows),
+            robustness_both=sum(row.robustness_both for row in rows),
+            proper_time_both=sum(row.proper_time_both for row in rows),
+            geometry_both=sum(row.geometry_both for row in rows),
+            mixed_both=sum(row.mixed_both for row in rows),
+        )
+        for (rule_family, variant_name), rows in grouped_rows.items()
+    ]
+    aggregate_rows.sort(
+        key=lambda row: (
+            row.rule_family,
+            row.variant_name != "all",
+            row.variant_name,
+        )
+    )
+    return case_rows, aggregate_rows
+
+
 def frontier_hard_case_trace(
     retained_weights: tuple[float, ...] = (0.75, 0.8, 0.85, 0.9, 0.95, 1.0),
 ) -> tuple[str, str, list[FrontierTraceRow]]:
@@ -5628,6 +5742,52 @@ def render_perturbation_case_table(
     return "\n".join(lines)
 
 
+def render_perturbation_weight_aggregate_table(
+    rows: list[PerturbationWeightAggregateRow],
+) -> str:
+    lines = [
+        "family   | variant      | cases | survive both | same sel | base alive both | R both | P both | G both | M both",
+        "---------+--------------+-------+--------------+----------+-----------------+--------+--------+--------+-------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.rule_family:<8} | "
+            f"{row.variant_name:<12} | "
+            f"{row.cases:>5} | "
+            f"{row.survives_both:>12} | "
+            f"{row.same_selected:>8} | "
+            f"{row.base_alive_both:>15} | "
+            f"{row.robustness_both:>6} | "
+            f"{row.proper_time_both:>6} | "
+            f"{row.geometry_both:>6} | "
+            f"{row.mixed_both:>5}"
+        )
+    return "\n".join(lines)
+
+
+def render_perturbation_weight_case_table(
+    rows: list[PerturbationWeightCaseRow],
+    limit: int = 12,
+) -> str:
+    lines = [
+        "pack   | scenario         | family   | variant      | sel@low -> sel@high   | stat low/high | same | alive | R/P/G/M both",
+        "-------+------------------+----------+--------------+-----------------------+---------------+------+-------+---------------",
+    ]
+    for row in rows[:limit]:
+        lines.append(
+            f"{row.pack_name:<6} | "
+            f"{row.scenario_name:<16} | "
+            f"{row.rule_family:<8} | "
+            f"{row.variant_name:<12} | "
+            f"{row.low_selected_rule:<9}->{row.high_selected_rule:<9} | "
+            f"{row.low_status:<6}/{row.high_status:<6} | "
+            f"{'yes' if row.same_selected else 'no ':<4} | "
+            f"{'yes' if row.base_alive_both else 'no ':<5} | "
+            f"{('Y' if row.robustness_both else 'n')}/{('Y' if row.proper_time_both else 'n')}/{('Y' if row.geometry_both else 'n')}/{('Y' if row.mixed_both else 'n')}"
+        )
+    return "\n".join(lines)
+
+
 def main() -> None:
     print("DISCRETE EVENT-NETWORK TOY MODEL")
     print()
@@ -6346,6 +6506,64 @@ def main() -> None:
                 f"- In {len(fragile_drift)} cases, the unperturbed selected motif is not even frontier-alive after perturbation, which is a stronger failure than a simple selector switch."
             )
     print("- This is exactly the kind of pressure test we wanted: it tells us which current stories are genuinely topology-robust and which ones are still partly artifacts of the specific benchmark graphs.")
+    print()
+
+    print("28) Cross-weight stability of the perturbation ensemble")
+    perturbation_weight_case_rows, perturbation_weight_aggregate_rows = perturbation_weight_stability_results()
+    print(render_perturbation_weight_aggregate_table(perturbation_weight_aggregate_rows))
+    print()
+    print("Interpretation:")
+    print("- This asks a stricter question than the single-weight perturbation pass: not just whether a selector-free motif survives topology nudges at w = 1.0, but whether that topology-robust story also survives when the retained weight is moved down to w = 0.95.")
+    weight_all_rows = [row for row in perturbation_weight_aggregate_rows if row.variant_name == "all"]
+    for row in weight_all_rows:
+        print(
+            f"- In `{row.rule_family}`, the same perturbed selected rule survives at both weights in {row.survives_both}/{row.cases} cases, the selected motif itself stays the same in {row.same_selected}/{row.cases}, and the mixed-frontier overlap survives at both weights in {row.mixed_both}/{row.cases}."
+        )
+        print(
+            f"- The tighter selector-free overlaps persist at both weights in robustness/proper-time/geometry for {row.robustness_both}/{row.cases}, {row.proper_time_both}/{row.cases}, and {row.geometry_both}/{row.cases} cases."
+        )
+    print("- So this section distinguishes two different notions of stability: frontier families that survive both topology and weight nudges, and exact selected winners that are still comparatively fragile.")
+    print()
+
+    print("29) Cross-weight perturbation drift cases")
+    weight_drift_rows = [
+        row
+        for row in perturbation_weight_case_rows
+        if not row.same_selected
+        or not row.base_alive_both
+        or not row.robustness_both
+        or not row.mixed_both
+    ]
+    weight_drift_rows.sort(
+        key=lambda row: (
+            row.same_selected,
+            row.base_alive_both,
+            row.mixed_both,
+            row.robustness_both,
+            row.rule_family,
+            row.pack_name,
+            row.scenario_name,
+            row.variant_name,
+        )
+    )
+    print(render_perturbation_weight_case_table(weight_drift_rows, limit=min(16, len(weight_drift_rows))))
+    print()
+    print("Interpretation:")
+    if weight_drift_rows:
+        selector_weight_drift = [row for row in weight_drift_rows if not row.same_selected]
+        overlap_weight_drift = [row for row in weight_drift_rows if not row.robustness_both or not row.base_alive_both]
+        print(
+            f"- There are {len(weight_drift_rows)} perturbed cases where the story changes across w = {weight_drift_rows[0].low_weight:.2f} -> {weight_drift_rows[0].high_weight:.2f}."
+        )
+        if selector_weight_drift:
+            print(
+                f"- In {len(selector_weight_drift)} of them, the selected perturbed motif changes across the two retained weights, which is the cleanest sign that the winner remains more weight-sensitive than the frontier family."
+            )
+        if overlap_weight_drift:
+            print(
+                f"- In {len(overlap_weight_drift)} cases, even a stronger selector-free overlap claim drops out across the two weights, so those are the places where the current model still looks weight-fragile rather than merely selector-fragile."
+            )
+    print("- This is the current frontier of rigor in the toy model: the mixed-frontier family looks substantially more stable than the exact winner, but the winner is still the piece most easily knocked around by both topology and retained-weight changes.")
     print()
 
     print("REMAINING CHEATS")
