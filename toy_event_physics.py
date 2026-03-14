@@ -2476,6 +2476,98 @@ def randomized_geometry_variants(
     return tuple(deduped_variants)
 
 
+def procedural_geometry_variants(
+    pack_name: str,
+    scenario_name: str,
+    nodes: set[tuple[int, int]],
+    wrap_y: bool,
+    variant_limit: int = 2,
+) -> tuple[tuple[str, set[tuple[int, int]], int], ...]:
+    del wrap_y  # profile generation itself is independent of wrap mode
+    xs = sorted({x for x, _y in nodes})
+    min_y = min(y for _x, y in nodes)
+    max_y = max(y for _x, y in nodes)
+    full_span = max_y - min_y
+    min_span = max(4, full_span - 2)
+    max_span = max(min_span, full_span + 1)
+    low_floor = min_y - 1
+    high_ceiling = max_y + 1
+    max_center_shift = max(1, (high_ceiling - low_floor) // 4)
+
+    deduped_variants: list[tuple[str, set[tuple[int, int]], int]] = []
+    seen_node_sets: set[frozenset[tuple[int, int]]] = {frozenset(nodes)}
+
+    for attempt_index in range(variant_limit * 8):
+        rng = random.Random(
+            stable_random_seed(
+                pack_name,
+                scenario_name,
+                "procedural-geometry",
+                str(attempt_index),
+            )
+        )
+        profile: dict[int, tuple[int, int]] = {}
+        center_shift = rng.randint(-1, 1)
+        span = rng.randint(min_span, max_span)
+
+        for index, x in enumerate(xs):
+            if index > 0:
+                center_shift = max(
+                    -max_center_shift,
+                    min(max_center_shift, center_shift + rng.choice((-1, 0, 1))),
+                )
+                span = max(
+                    min_span,
+                    min(max_span, span + rng.choice((-1, 0, 1))),
+                )
+
+            center = center_shift + rng.choice((0.0, 0.0, -0.5, 0.5))
+            low_y = math.floor(center - span / 2)
+            high_y = low_y + span
+
+            if low_y < low_floor:
+                shift = low_floor - low_y
+                low_y += shift
+                high_y += shift
+            if high_y > high_ceiling:
+                shift = high_y - high_ceiling
+                low_y -= shift
+                high_y -= shift
+
+            if index > 0:
+                prev_low, prev_high = profile[xs[index - 1]]
+                if low_y > prev_high + 1:
+                    shift = low_y - (prev_high + 1)
+                    low_y -= shift
+                    high_y -= shift
+                if high_y < prev_low - 1:
+                    shift = (prev_low - 1) - high_y
+                    low_y += shift
+                    high_y += shift
+
+            profile[x] = (low_y, high_y)
+
+        perturbed_nodes = build_nodes_from_interval_profile(profile)
+        identity = frozenset(perturbed_nodes)
+        if identity in seen_node_sets:
+            continue
+        if len(connected_components(identity, perturbed_nodes, wrap_y=False)) != 1:
+            continue
+        seen_node_sets.add(identity)
+        variant_name = f"procedural-{chr(ord('a') + len(deduped_variants))}"
+        deduped_variants.append(
+            (
+                variant_name,
+                perturbed_nodes,
+                len(perturbed_nodes) - len(nodes),
+            )
+        )
+        if len(deduped_variants) >= variant_limit:
+            break
+
+    return tuple(deduped_variants)
+
+
 def run_family_sweep(
     count_options: tuple[frozenset[int], ...],
     rule_family: str,
@@ -5413,6 +5505,34 @@ def geometry_randomization_frontier_summary(
     )
 
 
+def procedural_geometry_frontier_summary(
+    retained_weight: float = 1.0,
+    drift_limit: int = 16,
+    variant_limit: int = 2,
+    rediscovery_limit: int = 1,
+) -> tuple[list[PerturbationAggregateRow], list[PerturbationCaseRow]]:
+    return perturbation_frontier_summary_for_factory(
+        lambda pack_name, scenario_name, nodes, wrap_y: procedural_geometry_variants(
+            pack_name,
+            scenario_name,
+            nodes,
+            wrap_y,
+            variant_limit=variant_limit,
+        ),
+        retained_weight=retained_weight,
+        drift_limit=drift_limit,
+        perturbed_pool_builder=lambda nodes, wrap_y, count_options, allowed_rule_pairs: (
+            collect_limited_rediscovery_frontier_pool(
+                nodes,
+                wrap_y,
+                count_options,
+                allowed_rule_pairs,
+                rediscovery_limit=rediscovery_limit,
+            )
+        ),
+    )
+
+
 def random_rediscovery_limit_sweep_summary(
     retained_weight: float = 1.0,
     variant_limit: int = 3,
@@ -7940,6 +8060,64 @@ def main() -> None:
                 f"- In {len(geometry_overlap_drift)} of them, stronger overlap claims also break, which tells us whole-family geometry is still a real source of fragility even after minimal rediscovery."
             )
     print("- This is the new pressure point on the graph-family cheat: if the mixed frontier stays strong here too, then a lot of the current result is surviving beyond the specific hand-authored pack shapes.")
+    print()
+
+    print("39) Procedural graph-generator ensemble")
+    procedural_variant_limit = 2
+    procedural_rediscovery_limit = 1
+    procedural_aggregate_rows, procedural_drift_rows = procedural_geometry_frontier_summary(
+        variant_limit=procedural_variant_limit,
+        rediscovery_limit=procedural_rediscovery_limit,
+    )
+    print(render_perturbation_aggregate_table(procedural_aggregate_rows))
+    print()
+    print("Interpretation:")
+    print(
+        f"- This goes one step farther than whole-shape jitter: instead of deforming the existing contour, it regenerates the graph column profile from scratch inside the same bounding box using a seeded smooth contour rule, again with the minimal rediscovery limit {procedural_rediscovery_limit}."
+    )
+    procedural_all_rows = [
+        row for row in procedural_aggregate_rows if row.variant_name == "all"
+    ]
+    for row in procedural_all_rows:
+        print(
+            f"- In `{row.rule_family}`, the procedural cases still `survive` in {row.survives}/{row.cases}, keep mixed-frontier overlap in {row.mixed_overlap}/{row.cases}, and keep robustness overlap in {row.robustness_overlap}/{row.cases}."
+        )
+        print(
+            f"- The unperturbed selected motif stays frontier-alive in {row.base_selected_alive}/{row.cases}, while the exact selected winner is retained in only {row.selected_retained}/{row.cases} cases."
+        )
+    print("- This is the cleanest attack yet on the hand-authored graph-family cheat: if the mixed frontier still stays strong here, it is surviving not just perturbations of the benchmark family, but a small independent graph generator living in the same bounding boxes.")
+    print()
+
+    print("40) Procedural graph-generator drift cases")
+    print(
+        render_perturbation_case_table(
+            procedural_drift_rows,
+            limit=min(16, len(procedural_drift_rows)),
+        )
+    )
+    print()
+    print("Interpretation:")
+    if procedural_drift_rows:
+        procedural_selected_drift = [
+            row for row in procedural_drift_rows if not row.selected_matches_base
+        ]
+        procedural_overlap_drift = [
+            row
+            for row in procedural_drift_rows
+            if not row.robustness_overlap or not row.base_selected_alive
+        ]
+        print(
+            f"- There are {len(procedural_drift_rows)} procedural cases where either the selected motif changes or a stronger overlap claim drops out."
+        )
+        if procedural_selected_drift:
+            print(
+                f"- In {len(procedural_selected_drift)} of them, the exact winner changes under independently generated geometry, which is another reminder that selected-winner identity is the most fragile layer of the current story."
+            )
+        if procedural_overlap_drift:
+            print(
+                f"- In {len(procedural_overlap_drift)} of them, stronger overlap claims also break, which is where the graph-family cheat is still showing through most clearly."
+            )
+    print("- If the mixed frontier survives this too, then we are getting close to the limit of what the current benchmark machinery can tell us without moving to a broader graph-generator study.")
     print()
 
     print("REMAINING CHEATS")
