@@ -334,7 +334,10 @@ class EvaluatedCandidate:
     geometric_focus_gap: float
     stiffness: float
     focus_score: float
-    current_selected: bool
+    current_selected: bool = False
+    pc1_score: float = 0.0
+    pc2_score: float = 0.0
+    pc3_score: float = 0.0
     on_robustness: bool = False
     on_proper_time: bool = False
     on_geometry: bool = False
@@ -373,6 +376,46 @@ class FrontierAggregateRow:
     proper_time_hits: int
     geometry_hits: int
     mixed_hits: int
+
+
+@dataclass
+class DerivedAxisLoadingRow:
+    component: str
+    eigenvalue: float
+    center_gap: float
+    arrival_span: float
+    min_margin: float
+    geometric_focus_gap: float
+    focus_score: float
+
+
+@dataclass
+class DerivedAxisScenarioRow:
+    pack_name: str
+    scenario_name: str
+    rule_family: str
+    retained_weight: float
+    selected_rule: str
+    selected_on_pc1: bool
+    selected_on_pc12: bool
+    selected_on_pc123: bool
+    pc1_count: int
+    pc12_count: int
+    pc123_count: int
+    pc1_rules: str
+    pc12_rules: str
+    pc123_rules: str
+
+
+@dataclass
+class DerivedAxisAggregateRow:
+    rule_family: str
+    rule_signature: str
+    case_hits: int
+    selected_hits: int
+    pc1_hits: int
+    pc12_hits: int
+    pc123_hits: int
 
 
 @dataclass
@@ -6432,6 +6475,291 @@ def frontier_observable_ablation(
     return aggregate_rows, change_rows, ablated_rows, ablated_candidates
 
 
+DERIVED_AXIS_METRIC_FIELDS = (
+    "center_gap",
+    "arrival_span",
+    "min_margin",
+    "geometric_focus_gap",
+    "focus_score",
+)
+
+
+def derived_metric_vector(candidate: EvaluatedCandidate) -> tuple[float, ...]:
+    return tuple(float(getattr(candidate, field_name)) for field_name in DERIVED_AXIS_METRIC_FIELDS)
+
+
+def dot_product(left: tuple[float, ...], right: tuple[float, ...]) -> float:
+    return sum(left_value * right_value for left_value, right_value in zip(left, right))
+
+
+def matrix_vector_product(
+    matrix: tuple[tuple[float, ...], ...],
+    vector: tuple[float, ...],
+) -> tuple[float, ...]:
+    return tuple(
+        sum(row_value * vector_value for row_value, vector_value in zip(row, vector))
+        for row in matrix
+    )
+
+
+def normalize_vector(vector: tuple[float, ...]) -> tuple[float, ...]:
+    norm = math.sqrt(sum(value * value for value in vector))
+    if norm <= 0.0:
+        return tuple(0.0 for _value in vector)
+    return tuple(value / norm for value in vector)
+
+
+def principal_component(
+    covariance: tuple[tuple[float, ...], ...],
+    seed: tuple[float, ...],
+    iterations: int = 32,
+) -> tuple[float, tuple[float, ...]]:
+    vector = normalize_vector(seed)
+    if all(value == 0.0 for value in vector):
+        vector = tuple(1.0 if index == 0 else 0.0 for index in range(len(seed)))
+    for _step in range(iterations):
+        projected = matrix_vector_product(covariance, vector)
+        if math.sqrt(sum(value * value for value in projected)) <= 1e-12:
+            break
+        vector = normalize_vector(projected)
+    eigenvalue = dot_product(vector, matrix_vector_product(covariance, vector))
+    return eigenvalue, vector
+
+
+def deflate_covariance(
+    covariance: tuple[tuple[float, ...], ...],
+    eigenvalue: float,
+    eigenvector: tuple[float, ...],
+) -> tuple[tuple[float, ...], ...]:
+    return tuple(
+        tuple(
+            covariance[row_index][column_index]
+            - eigenvalue * eigenvector[row_index] * eigenvector[column_index]
+            for column_index in range(len(covariance[row_index]))
+        )
+        for row_index in range(len(covariance))
+    )
+
+
+def derived_axis_loadings(
+    candidates: list[EvaluatedCandidate],
+    component_count: int = 3,
+) -> tuple[list[DerivedAxisLoadingRow], list[EvaluatedCandidate]]:
+    if not candidates:
+        return [], []
+
+    metric_rows = [derived_metric_vector(candidate) for candidate in candidates]
+    dimension = len(DERIVED_AXIS_METRIC_FIELDS)
+    means = [
+        sum(row[index] for row in metric_rows) / len(metric_rows)
+        for index in range(dimension)
+    ]
+    variances = [
+        sum((row[index] - means[index]) ** 2 for row in metric_rows) / max(1, len(metric_rows) - 1)
+        for index in range(dimension)
+    ]
+    scales = [math.sqrt(variance) if variance > 1e-12 else 1.0 for variance in variances]
+    standardized_rows = [
+        tuple((row[index] - means[index]) / scales[index] for index in range(dimension))
+        for row in metric_rows
+    ]
+    covariance = tuple(
+        tuple(
+            sum(row[left_index] * row[right_index] for row in standardized_rows) / max(1, len(standardized_rows) - 1)
+            for right_index in range(dimension)
+        )
+        for left_index in range(dimension)
+    )
+
+    anchor = (1.0, 1.0, 0.0, 0.0, 1.0)
+    component_vectors: list[tuple[float, ...]] = []
+    loading_rows: list[DerivedAxisLoadingRow] = []
+    working_covariance = covariance
+    seed_vectors = (
+        (1.0, 1.0, 1.0, 1.0, 1.0),
+        (1.0, -1.0, 1.0, -1.0, 0.5),
+        (0.5, 1.0, -1.0, 1.0, -0.5),
+    )
+
+    for component_index in range(min(component_count, dimension)):
+        eigenvalue, eigenvector = principal_component(
+            working_covariance,
+            seed_vectors[component_index] if component_index < len(seed_vectors) else tuple(
+                1.0 if metric_index == component_index else 0.0
+                for metric_index in range(dimension)
+            ),
+        )
+        if eigenvalue <= 1e-10 or all(abs(value) <= 1e-10 for value in eigenvector):
+            break
+        if dot_product(eigenvector, anchor) < 0.0:
+            eigenvector = tuple(-value for value in eigenvector)
+        component_vectors.append(eigenvector)
+        loading_rows.append(
+            DerivedAxisLoadingRow(
+                component=f"pc{component_index + 1}",
+                eigenvalue=eigenvalue,
+                center_gap=eigenvector[0],
+                arrival_span=eigenvector[1],
+                min_margin=eigenvector[2],
+                geometric_focus_gap=eigenvector[3],
+                focus_score=eigenvector[4],
+            )
+        )
+        working_covariance = deflate_covariance(
+            working_covariance,
+            eigenvalue,
+            eigenvector,
+        )
+
+    annotated_candidates = candidates
+    for component_index in range(3):
+        if component_index >= len(component_vectors):
+            break
+        component = component_vectors[component_index]
+        annotated_candidates = [
+            replace(
+                candidate,
+                **{
+                    f"pc{component_index + 1}_score": dot_product(
+                        standardized_row,
+                        component,
+                    )
+                },
+            )
+            for candidate, standardized_row in zip(annotated_candidates, standardized_rows)
+        ]
+    return loading_rows, annotated_candidates
+
+
+def derived_axis_frontier_views() -> dict[str, tuple[str, ...]]:
+    return {
+        "pc1": ("pc1_score",),
+        "pc12": ("pc1_score", "pc2_score"),
+        "pc123": ("pc1_score", "pc2_score", "pc3_score"),
+    }
+
+
+def derived_axis_signature_sets(
+    candidates: list[EvaluatedCandidate],
+    views: dict[str, tuple[str, ...]] | None = None,
+) -> dict[str, set[str]]:
+    active_views = views or derived_axis_frontier_views()
+    sets: dict[str, set[str]] = {}
+    for view_name, axes in active_views.items():
+        identities = pareto_frontier_identities(candidates, axes)
+        sets[view_name] = {
+            candidate.rule_signature
+            for candidate in candidates
+            if candidate.candidate_identity in identities
+        }
+    return sets
+
+
+def derived_axis_frontier_analysis(
+    baseline_rows: list[FrontierScenarioRow],
+    baseline_candidates: list[EvaluatedCandidate],
+) -> tuple[
+    list[DerivedAxisLoadingRow],
+    list[DerivedAxisScenarioRow],
+    list[DerivedAxisAggregateRow],
+]:
+    loading_rows, annotated_candidates = derived_axis_loadings(baseline_candidates)
+    grouped_candidates: DefaultDict[
+        tuple[str, str, str, float],
+        list[EvaluatedCandidate],
+    ] = defaultdict(list)
+    for candidate in annotated_candidates:
+        grouped_candidates[frontier_candidate_case_key(candidate)].append(candidate)
+
+    baseline_rows_by_case = {
+        frontier_scenario_case_key(row): row
+        for row in baseline_rows
+    }
+    derived_views = derived_axis_frontier_views()
+    scenario_rows: list[DerivedAxisScenarioRow] = []
+    case_sets: DefaultDict[tuple[str, str], set[tuple[str, str, float]]] = defaultdict(set)
+    selected_sets: DefaultDict[tuple[str, str], set[tuple[str, str, float]]] = defaultdict(set)
+    pc1_sets: DefaultDict[tuple[str, str], set[tuple[str, str, float]]] = defaultdict(set)
+    pc12_sets: DefaultDict[tuple[str, str], set[tuple[str, str, float]]] = defaultdict(set)
+    pc123_sets: DefaultDict[tuple[str, str], set[tuple[str, str, float]]] = defaultdict(set)
+
+    for case_key in sorted(grouped_candidates):
+        case_candidates = grouped_candidates[case_key]
+        baseline_row = baseline_rows_by_case[case_key]
+        frontier_identities = {
+            view_name: pareto_frontier_identities(case_candidates, axes)
+            for view_name, axes in derived_views.items()
+        }
+        selected_candidate = next(
+            candidate
+            for candidate in case_candidates
+            if candidate.rule_signature == baseline_row.selected_rule and candidate.current_selected
+        )
+        pc1_candidates = [
+            candidate for candidate in case_candidates if candidate.candidate_identity in frontier_identities["pc1"]
+        ]
+        pc12_candidates = [
+            candidate for candidate in case_candidates if candidate.candidate_identity in frontier_identities["pc12"]
+        ]
+        pc123_candidates = [
+            candidate for candidate in case_candidates if candidate.candidate_identity in frontier_identities["pc123"]
+        ]
+        scenario_rows.append(
+            DerivedAxisScenarioRow(
+                pack_name=baseline_row.pack_name,
+                scenario_name=baseline_row.scenario_name,
+                rule_family=baseline_row.rule_family,
+                retained_weight=baseline_row.retained_weight,
+                selected_rule=baseline_row.selected_rule,
+                selected_on_pc1=selected_candidate.candidate_identity in frontier_identities["pc1"],
+                selected_on_pc12=selected_candidate.candidate_identity in frontier_identities["pc12"],
+                selected_on_pc123=selected_candidate.candidate_identity in frontier_identities["pc123"],
+                pc1_count=len(pc1_candidates),
+                pc12_count=len(pc12_candidates),
+                pc123_count=len(pc123_candidates),
+                pc1_rules=format_frontier_rule_signatures(pc1_candidates),
+                pc12_rules=format_frontier_rule_signatures(pc12_candidates),
+                pc123_rules=format_frontier_rule_signatures(pc123_candidates),
+            )
+        )
+        case_triplet = (baseline_row.pack_name, baseline_row.scenario_name, baseline_row.retained_weight)
+        for candidate in case_candidates:
+            family_rule = (candidate.rule_family, candidate.rule_signature)
+            case_sets[family_rule].add(case_triplet)
+            if candidate.current_selected:
+                selected_sets[family_rule].add(case_triplet)
+            if candidate.candidate_identity in frontier_identities["pc1"]:
+                pc1_sets[family_rule].add(case_triplet)
+            if candidate.candidate_identity in frontier_identities["pc12"]:
+                pc12_sets[family_rule].add(case_triplet)
+            if candidate.candidate_identity in frontier_identities["pc123"]:
+                pc123_sets[family_rule].add(case_triplet)
+
+    aggregate_rows = [
+        DerivedAxisAggregateRow(
+            rule_family=rule_family,
+            rule_signature=rule_signature,
+            case_hits=len(case_sets[(rule_family, rule_signature)]),
+            selected_hits=len(selected_sets[(rule_family, rule_signature)]),
+            pc1_hits=len(pc1_sets[(rule_family, rule_signature)]),
+            pc12_hits=len(pc12_sets[(rule_family, rule_signature)]),
+            pc123_hits=len(pc123_sets[(rule_family, rule_signature)]),
+        )
+        for rule_family, rule_signature in case_sets
+    ]
+    aggregate_rows.sort(
+        key=lambda row: (
+            row.rule_family,
+            -row.pc123_hits,
+            -row.pc12_hits,
+            -row.pc1_hits,
+            -row.selected_hits,
+            row.rule_signature,
+        )
+    )
+    return loading_rows, scenario_rows, aggregate_rows
+
+
 def random_rediscovery_limit_sweep_summary(
     retained_weight: float = 1.0,
     variant_limit: int = 3,
@@ -7832,6 +8160,70 @@ def render_frontier_aggregate_table(
             f"{row.proper_time_hits:>11} | "
             f"{row.geometry_hits:>8} | "
             f"{row.mixed_hits:>4}"
+        )
+    return "\n".join(lines)
+
+
+def render_derived_axis_loading_table(
+    rows: list[DerivedAxisLoadingRow],
+) -> str:
+    lines = [
+        "component | eigen | center | arrival | margin | geometry | focus",
+        "----------+-------+--------+---------+--------+----------+------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.component:<8} | "
+            f"{row.eigenvalue:>5.2f} | "
+            f"{row.center_gap:>6.3f} | "
+            f"{row.arrival_span:>7.3f} | "
+            f"{row.min_margin:>6.3f} | "
+            f"{row.geometric_focus_gap:>8.3f} | "
+            f"{row.focus_score:>5.3f}"
+        )
+    return "\n".join(lines)
+
+
+def render_derived_axis_scenario_table(
+    rows: list[DerivedAxisScenarioRow],
+    limit: int = 12,
+) -> str:
+    lines = [
+        "pack   | scenario         | family   | w    | selected           | sel pc1/12/123 | counts  | pc1 rules           | pc12 rules          | pc123 rules",
+        "-------+------------------+----------+------+--------------------+----------------+---------+---------------------+---------------------+---------------------",
+    ]
+    for row in rows[:limit]:
+        lines.append(
+            f"{row.pack_name:<6} | "
+            f"{row.scenario_name:<16} | "
+            f"{row.rule_family:<8} | "
+            f"{row.retained_weight:>4.2f} | "
+            f"{row.selected_rule:<18} | "
+            f"{('Y' if row.selected_on_pc1 else 'n')}/{('Y' if row.selected_on_pc12 else 'n')}/{('Y' if row.selected_on_pc123 else 'n'):<10} | "
+            f"{row.pc1_count:>1}/{row.pc12_count:>2}/{row.pc123_count:>3} | "
+            f"{row.pc1_rules:<19} | "
+            f"{row.pc12_rules:<19} | "
+            f"{row.pc123_rules}"
+        )
+    return "\n".join(lines)
+
+
+def render_derived_axis_aggregate_table(
+    rows: list[DerivedAxisAggregateRow],
+) -> str:
+    lines = [
+        "family   | rule              | cases | selected | pc1 | pc12 | pc123",
+        "---------+-------------------+-------+----------+-----+------+------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.rule_family:<8} | "
+            f"{row.rule_signature:<17} | "
+            f"{row.case_hits:>5} | "
+            f"{row.selected_hits:>8} | "
+            f"{row.pc1_hits:>3} | "
+            f"{row.pc12_hits:>4} | "
+            f"{row.pc123_hits:>4}"
         )
     return "\n".join(lines)
 
@@ -9367,6 +9759,72 @@ def main() -> None:
         )
     print(
         "- So the bucketization is not just cosmetic. It is carrying most of the frontier disagreement: once the harmonic score is used continuously, the winner changes only moderately, but the selected motif becomes nondominated on every frontier in every scanned case."
+    )
+    print()
+
+    print("46) Derived-axis frontier analysis on the harmonic-continuous candidate pool")
+    derived_loading_rows, derived_scenario_rows, derived_aggregate_rows = derived_axis_frontier_analysis(
+        harmonic_continuous_frontier_rows,
+        harmonic_continuous_frontier_candidates,
+    )
+    print(render_derived_axis_loading_table(derived_loading_rows))
+    print()
+    interesting_derived_rows = [
+        row
+        for row in derived_scenario_rows
+        if len({row.pc1_rules, row.pc12_rules, row.pc123_rules}) > 1
+        or not (row.selected_on_pc1 and row.selected_on_pc12 and row.selected_on_pc123)
+    ]
+    print(
+        render_derived_axis_scenario_table(
+            interesting_derived_rows,
+            limit=min(12, len(interesting_derived_rows)),
+        )
+    )
+    print()
+    print(render_derived_axis_aggregate_table(derived_aggregate_rows[:12]))
+    print()
+    print("Interpretation:")
+    total_derived_cases = len(derived_scenario_rows)
+    print(
+        f"- This pass removes the hand-named frontier vocabulary itself. It derives a compact basis from covariance across `center_gap`, `arrival_span`, `min_margin`, `geometric_focus_gap`, and the harmonic focus score on the harmonic-continuous candidate pool."
+    )
+    print(
+        f"- Across {total_derived_cases} harmonic-continuous cases, the selected rule lies on the derived pc1 / pc12 / pc123 frontiers in "
+        f"{sum(row.selected_on_pc1 for row in derived_scenario_rows)}/{total_derived_cases}, "
+        f"{sum(row.selected_on_pc12 for row in derived_scenario_rows)}/{total_derived_cases}, and "
+        f"{sum(row.selected_on_pc123 for row in derived_scenario_rows)}/{total_derived_cases} cases."
+    )
+    if derived_loading_rows:
+        first_loading = derived_loading_rows[0]
+        print(
+            f"- The leading derived axis `{first_loading.component}` loads most strongly on arrival/focus-style structure ({first_loading.arrival_span:.3f}, {first_loading.focus_score:.3f}) with center-gap contribution {first_loading.center_gap:.3f}."
+        )
+    compact_derived = next(
+        (row for row in derived_aggregate_rows if row.rule_family == "compact"),
+        None,
+    )
+    extended_derived = next(
+        (row for row in derived_aggregate_rows if row.rule_family == "extended"),
+        None,
+    )
+    if compact_derived is not None:
+        print(
+            f"- In `compact`, the most persistent derived-axis motif in this run is `{compact_derived.rule_signature}`, appearing on the pc123 frontier in {compact_derived.pc123_hits} cases while being selected in {compact_derived.selected_hits}."
+        )
+    if extended_derived is not None:
+        print(
+            f"- In `extended`, the most persistent derived-axis motif in this run is `{extended_derived.rule_signature}`, appearing on the pc123 frontier in {extended_derived.pc123_hits} cases while being selected in {extended_derived.selected_hits}."
+        )
+    print(
+        f"- The full derived frontier is much more faithful than the lower-dimensional projections: the selected rule stays on pc123 in {sum(row.selected_on_pc123 for row in derived_scenario_rows)}/{total_derived_cases} cases, but only on pc1 in {sum(row.selected_on_pc1 for row in derived_scenario_rows)}/{total_derived_cases} and on pc12 in {sum(row.selected_on_pc12 for row in derived_scenario_rows)}/{total_derived_cases}."
+    )
+    if interesting_derived_rows:
+        print(
+            f"- {len(interesting_derived_rows)}/{total_derived_cases} cases still show disagreement between pc1 / pc12 / pc123 or lose the selected rule from one of those projections, so the covariance-derived basis does not simply collapse the story to one low-dimensional frontier."
+        )
+    print(
+        "- So this is the cleanest current test of selector-invariant structure without our hand-picked view vocabulary. The result is mixed but informative: the same core motif family still dominates the full derived frontier, but much of the apparent low-dimensional agreement disappears once we stop naming the views ourselves."
     )
     print()
 
