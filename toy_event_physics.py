@@ -292,6 +292,18 @@ class SelectorPolicyRow:
     differs: bool
 
 
+@dataclass
+class SelectorSweepCase:
+    pack_name: str
+    scenario_name: str
+    retained_weight: float
+    gated_rule: str
+    gated_status: str
+    ungated_rule: str
+    ungated_status: str
+    differs: bool
+
+
 @dataclass(frozen=True)
 class LocalRule:
     persistent_nodes: frozenset[tuple[int, int]]
@@ -1380,6 +1392,21 @@ def robustness_rank(status: str) -> int:
     }[status]
 
 
+def candidate_quality_key(
+    candidate: RuleCandidate,
+    metrics: tuple[float, float, float, bool, str],
+) -> tuple[float, ...]:
+    center_gap, arrival_span, _centroid_y, _survived, status = metrics
+    return (
+        robustness_rank(status),
+        center_gap + arrival_span,
+        arrival_span,
+        center_gap,
+        candidate.occupancy_mean,
+        candidate.density,
+    )
+
+
 def quality_rescue_rule(
     nodes: set[tuple[int, int]],
     wrap_y: bool,
@@ -1420,15 +1447,7 @@ def quality_rescue_rule(
             chosen_rule=candidate,
             postulates=postulates,
         )
-        center_gap, arrival_span, _centroid_y, _survived, status = metrics
-        quality_key = (
-            robustness_rank(status),
-            center_gap + arrival_span,
-            arrival_span,
-            center_gap,
-            candidate.occupancy_mean,
-            candidate.density,
-        )
+        quality_key = candidate_quality_key(candidate, metrics)
         if best_key is None or quality_key > best_key:
             best_key = quality_key
             best_rule = candidate
@@ -1454,6 +1473,7 @@ def resolve_robust_rule_candidate(
     wrap_y: bool,
     count_options: tuple[frozenset[int], ...],
     postulates: RulePostulates,
+    selector_mode: str = "always_compare",
 ) -> tuple[
     RuleCandidate | None,
     SearchDiagnostics,
@@ -1498,8 +1518,12 @@ def resolve_robust_rule_candidate(
         chosen_rule=chosen_rule,
         postulates=postulates,
     )
-    center_gap, arrival_span, _centroid_y, _survived, status = metrics
-    if status != "survives":
+    _center_gap, _arrival_span, _centroid_y, _survived, status = metrics
+    should_consult_rescue = (
+        selector_mode == "always_compare"
+        or (selector_mode == "gated" and status != "survives")
+    )
+    if should_consult_rescue:
         rescue_rule, rescue_diagnostics, rescue_metrics = quality_rescue_rule(
             nodes,
             wrap_y=wrap_y,
@@ -1508,18 +1532,8 @@ def resolve_robust_rule_candidate(
         )
         diagnostics = merge_search_diagnostics(diagnostics, rescue_diagnostics)
         if rescue_rule is not None and rescue_metrics is not None:
-            rescue_key = (
-                robustness_rank(rescue_metrics[4]),
-                rescue_metrics[0] + rescue_metrics[1],
-                rescue_metrics[1],
-                rescue_metrics[0],
-            )
-            current_key = (
-                robustness_rank(status),
-                center_gap + arrival_span,
-                arrival_span,
-                center_gap,
-            )
+            rescue_key = candidate_quality_key(rescue_rule, rescue_metrics)
+            current_key = candidate_quality_key(chosen_rule, metrics)
             if rescue_key > current_key:
                 chosen_rule = rescue_rule
                 metrics = rescue_metrics
@@ -2939,28 +2953,23 @@ def selector_policy_diagnostics(
             SWEEP_COMPACT_COUNT_OPTIONS,
             postulates,
         )
-        final_rule, _diag, _metrics, _fallback_used = resolve_robust_rule_candidate(
+        gated_rule, _diag, _metrics, _fallback_used = resolve_robust_rule_candidate(
             nodes,
             wrap_y,
             SWEEP_COMPACT_COUNT_OPTIONS,
             postulates,
+            selector_mode="gated",
+        )
+        ungated_rule, _diag2, _metrics2, _fallback_used2 = resolve_robust_rule_candidate(
+            nodes,
+            wrap_y,
+            SWEEP_COMPACT_COUNT_OPTIONS,
+            postulates,
+            selector_mode="always_compare",
         )
 
         fallback_quality = fallback_metrics[0] + fallback_metrics[1]
         rescue_quality = rescue_metrics[0] + rescue_metrics[1]
-        fallback_key = (
-            robustness_rank(fallback_metrics[4]),
-            fallback_quality,
-            fallback_metrics[1],
-            fallback_metrics[0],
-        )
-        rescue_key = (
-            robustness_rank(rescue_metrics[4]),
-            rescue_quality,
-            rescue_metrics[1],
-            rescue_metrics[0],
-        )
-        ungated_rule = rescue_rule if rescue_key > fallback_key else fallback_rule
         rows.append(
             SelectorPolicyRow(
                 retained_weight=retained_weight,
@@ -2977,20 +2986,77 @@ def selector_policy_diagnostics(
                 rescue_status=rescue_metrics[4],
                 rescue_quality=rescue_quality,
                 gated_final_rule=format_rule_signature(
-                    final_rule.survive_counts,
-                    final_rule.birth_counts,
+                    gated_rule.survive_counts,
+                    gated_rule.birth_counts,
                 ),
                 ungated_final_rule=format_rule_signature(
                     ungated_rule.survive_counts,
                     ungated_rule.birth_counts,
                 ),
                 differs=(
-                    final_rule.survive_counts != ungated_rule.survive_counts
-                    or final_rule.birth_counts != ungated_rule.birth_counts
+                    gated_rule.survive_counts != ungated_rule.survive_counts
+                    or gated_rule.birth_counts != ungated_rule.birth_counts
                 ),
             )
         )
 
+    return rows
+
+
+def selector_policy_sweep_cases(
+    retained_weights: tuple[float, ...] = (0.75, 0.8, 0.85, 0.9, 0.95, 1.0),
+) -> list[SelectorSweepCase]:
+    rows: list[SelectorSweepCase] = []
+    for pack_name, scenarios in benchmark_packs():
+        for scenario_name, nodes, wrap_y in scenarios:
+            for retained_weight in retained_weights:
+                postulates = RulePostulates(
+                    phase_per_action=4.0,
+                    attenuation_power=1.0,
+                    action_mode="retained_mix",
+                    field_mode="relaxed",
+                    action_retained_weight=retained_weight,
+                )
+                gated_rule, _diag, gated_metrics, _fallback_used = resolve_robust_rule_candidate(
+                    nodes,
+                    wrap_y,
+                    SWEEP_COMPACT_COUNT_OPTIONS,
+                    postulates,
+                    selector_mode="gated",
+                )
+                ungated_rule, _diag2, ungated_metrics, _fallback_used2 = resolve_robust_rule_candidate(
+                    nodes,
+                    wrap_y,
+                    SWEEP_COMPACT_COUNT_OPTIONS,
+                    postulates,
+                    selector_mode="always_compare",
+                )
+                rows.append(
+                    SelectorSweepCase(
+                        pack_name=pack_name,
+                        scenario_name=scenario_name,
+                        retained_weight=retained_weight,
+                        gated_rule=(
+                            format_rule_signature(gated_rule.survive_counts, gated_rule.birth_counts)
+                            if gated_rule is not None
+                            else "none"
+                        ),
+                        gated_status=(gated_metrics[4] if gated_metrics is not None else "no pattern"),
+                        ungated_rule=(
+                            format_rule_signature(ungated_rule.survive_counts, ungated_rule.birth_counts)
+                            if ungated_rule is not None
+                            else "none"
+                        ),
+                        ungated_status=(ungated_metrics[4] if ungated_metrics is not None else "no pattern"),
+                        differs=(
+                            gated_rule is None
+                            or ungated_rule is None
+                            or gated_rule.survive_counts != ungated_rule.survive_counts
+                            or gated_rule.birth_counts != ungated_rule.birth_counts
+                            or (gated_metrics is not None and ungated_metrics is not None and gated_metrics[4] != ungated_metrics[4])
+                        ),
+                    )
+                )
     return rows
 
 
@@ -3597,7 +3663,7 @@ def render_selector_policy_table(
     rows: list[SelectorPolicyRow],
 ) -> str:
     lines = [
-        "weight | fallback status/quality | rescue status/quality | gated final        | ungated final      | differs",
+        "weight | fallback status/quality | rescue status/quality | legacy gated       | current compare    | differs",
         "-------+-------------------------+-----------------------+--------------------+--------------------+--------",
     ]
     for row in rows:
@@ -3607,6 +3673,26 @@ def render_selector_policy_table(
             f"{row.rescue_status:<8}/{row.rescue_quality:>5.3f} | "
             f"{row.gated_final_rule:<18} | "
             f"{row.ungated_final_rule:<18} | "
+            f"{'yes' if row.differs else 'no'}"
+        )
+    return "\n".join(lines)
+
+
+def render_selector_sweep_table(
+    rows: list[SelectorSweepCase],
+    limit: int = 12,
+) -> str:
+    lines = [
+        "pack   | scenario         | weight | legacy rule/status   | current rule/status  | differs",
+        "-------+------------------+--------+----------------------+----------------------+--------",
+    ]
+    for row in rows[:limit]:
+        lines.append(
+            f"{row.pack_name:<6} | "
+            f"{row.scenario_name:<16} | "
+            f"{row.retained_weight:>6.2f} | "
+            f"{row.gated_rule:<18}/{row.gated_status:<8} | "
+            f"{row.ungated_rule:<18}/{row.ungated_status:<8} | "
             f"{'yes' if row.differs else 'no'}"
         )
     return "\n".join(lines)
@@ -4054,25 +4140,37 @@ def main() -> None:
     print("- This is the more rigorous picture: the toy model’s retained-weight benchmark is piecewise linear in w because the optimizer can switch motifs, sources, and paths as w changes.")
     print()
 
-    print("18) Why the active rule switches near the crossing")
+    print("18) Why the current selector prefers the rescue motif")
     selection_rows = rule_selection_diagnostics(hardest_pack, hardest_scenario)
     print(render_rule_selection_diagnostic_table(selection_rows))
     print()
     print("Interpretation:")
-    print("- This separates the search stages. The fallback search keeps proposing the same compact branch on the hard case, while the rescue stage evaluates a small winner-rule palette by robustness quality under the current action rule.")
+    print("- This separates the search stages. The fallback scan keeps proposing one compact motif, while the rescue stage evaluates a small winner-rule palette by the same quality key the current always-compare selector uses.")
     if selection_rows:
         low_row = selection_rows[0]
         high_row = selection_rows[-1]
-        print(
-            f"- At low high-end weights, the fallback branch `{low_row.fallback_rule}` still clears the survive threshold, so it remains the final choice."
-        )
-        print(
-            f"- Near the crossing, that same fallback branch loses center-gap quality and drops from `{selection_rows[-2].fallback_status}` at w = {selection_rows[-2].retained_weight:.2f} to `{high_row.fallback_status}` at w = {high_row.retained_weight:.2f}, while the rescue branch `{high_row.rescue_rule}` remains `{high_row.rescue_status}`."
-        )
-        print(
-            f"- So the switch is not caused by the seed/rule search discovering a brand-new structure at high w; it is caused by the rescue scorer preferring a different winner motif once the old branch no longer satisfies the robustness quality thresholds."
-        )
-    print("- That gives a cleaner internal explanation of the crossing: first the active envelope changes branch because robustness quality changes, then the final branch crosses zero near its own critical weight.")
+        low_fallback_quality = low_row.fallback_center_gap + low_row.fallback_arrival_span
+        low_rescue_quality = low_row.rescue_center_gap + low_row.rescue_arrival_span
+        high_fallback_quality = high_row.fallback_center_gap + high_row.fallback_arrival_span
+        high_rescue_quality = high_row.rescue_center_gap + high_row.rescue_arrival_span
+        if all(row.switched for row in selection_rows):
+            print(
+                f"- On the current hardest case, the rescue motif `{low_row.rescue_rule}` wins the quality comparison at every scanned weight, even though the fallback motif `{low_row.fallback_rule}` also stays `{low_row.fallback_status}` throughout."
+            )
+            print(
+                f"- At w = {low_row.retained_weight:.2f}, the fallback branch has the slightly larger center gap ({low_row.fallback_center_gap:.3f} vs {low_row.rescue_center_gap:.3f}), but the rescue branch carries much larger arrival span ({low_row.rescue_arrival_span:.3f} vs {low_row.fallback_arrival_span:.3f}), so the total quality key already favors rescue ({low_rescue_quality:.3f} vs {low_fallback_quality:.3f})."
+            )
+            print(
+                f"- By w = {high_row.retained_weight:.2f}, the rescue branch also edges ahead in center gap ({high_row.rescue_center_gap:.3f} vs {high_row.fallback_center_gap:.3f}) while keeping the same span advantage, so the preference is even cleaner ({high_rescue_quality:.3f} vs {high_fallback_quality:.3f})."
+            )
+        else:
+            print(
+                f"- At low scanned weights, the fallback motif `{low_row.fallback_rule}` remains the final choice."
+            )
+            print(
+                f"- Later in the scan, the rescue motif `{high_row.rescue_rule}` overtakes it because the quality comparison changes, not because the search discovers a completely new type of structure."
+            )
+    print("- So the selector is not maximizing proper-time consistency by itself. It is maximizing a hand-chosen robustness quality, and on the current hardest case that quality prefers the rescue motif from the start.")
     print()
 
     print("19) Frozen-branch competition on the hardest case")
@@ -4085,16 +4183,18 @@ def main() -> None:
     fallback_rows = [row for row in frozen_rows if row.branch_label == 'fallback-fixed']
     rescue_rows = [row for row in frozen_rows if row.branch_label == 'rescue-fixed']
     if fallback_rows and rescue_rows:
+        fallback_positive = next((row.retained_weight for row in fallback_rows if row.min_margin > 0.0), None)
+        rescue_positive = next((row.retained_weight for row in rescue_rows if row.min_margin > 0.0), None)
         print(
-            f"- The frozen fallback branch `{fallback_rows[0].rule_signature}` actually becomes more proper-time-consistent as w rises: its minimum margin goes from {fallback_rows[0].min_margin:.3f} to {fallback_rows[-1].min_margin:.3f}."
+            f"- The frozen fallback branch `{fallback_rows[0].rule_signature}` becomes proper-time-consistent earlier, with minimum margin rising from {fallback_rows[0].min_margin:.3f} to {fallback_rows[-1].min_margin:.3f}{'' if fallback_positive is None else f' and turning positive by w = {fallback_positive:.2f}' }."
         )
         print(
-            f"- But its center gap collapses from {fallback_rows[0].center_gap:.3f} to {fallback_rows[-1].center_gap:.3f}, so it drops from `{fallback_rows[0].status}` to `{fallback_rows[-1].status}` under the current robustness criterion."
+            f"- The frozen rescue branch `{rescue_rows[0].rule_signature}` keeps the much larger arrival span ({rescue_rows[0].arrival_span:.3f} vs {fallback_rows[0].arrival_span:.3f}) and only becomes proper-time-consistent near the top end{'' if rescue_positive is None else f', at w = {rescue_positive:.2f}' }."
         )
         print(
-            f"- The frozen rescue branch `{rescue_rows[0].rule_signature}` stays above the robustness threshold and only becomes proper-time-consistent right near the top end, moving from min margin {rescue_rows[0].min_margin:.3f} to {rescue_rows[-1].min_margin:.3f}."
+            f"- Both frozen branches remain `{fallback_rows[0].status}`/`{rescue_rows[0].status}` under the present sweep criteria, so the current selector is not choosing between 'working' and 'failing' physics here. It is choosing between an earlier proper-time win and a stronger delay-distortion signature."
         )
-    print("- So the hard-case switch is not just a search artifact. It reflects a real tension in the current model between proper-time consistency and the center-gap robustness metric.")
+    print("- So the hardest current case exposes a sharper tension than before: the selected branch is not the earliest proper-time winner, but the branch that looks strongest under the present robustness quality key.")
     print()
 
     print("20) Geometric meaning of center-gap collapse")
@@ -4117,13 +4217,17 @@ def main() -> None:
                 f"- On the old branch, the source row stays at y = {fallback_geometry.source_y_start} and the comparison paths remain {'the same' if fallback_geometry.stable_paths else 'different'} from w = 0.75 to w = 1.00."
             )
             print(
-                f"- Its center action falls from {fallback_geometry.center_action_start:.3f} to {fallback_geometry.center_action_end:.3f}, but the side average falls faster, from {fallback_geometry.side_avg_start:.3f} to {fallback_geometry.side_avg_end:.3f}. That is why the gap collapses from {fallback_geometry.gap_start:.3f} to {fallback_geometry.gap_end:.3f}."
+                f"- Its center action falls from {fallback_geometry.center_action_start:.3f} to {fallback_geometry.center_action_end:.3f}, while the side average falls from {fallback_geometry.side_avg_start:.3f} to {fallback_geometry.side_avg_end:.3f}. That changes the gap from {fallback_geometry.gap_start:.3f} to {fallback_geometry.gap_end:.3f}."
             )
         if rescue_geometry is not None:
             print(
-                f"- The rescue branch also narrows its gap, but it starts wider and ends at {rescue_geometry.gap_end:.3f}, which is still above the survive threshold."
+                f"- The rescue branch keeps the same source row at y = {rescue_geometry.source_y_start}, changes path shape as w rises, and ends with gap {rescue_geometry.gap_end:.3f}."
             )
-    print("- So the geometric meaning of center-gap collapse is not that the center path gets worse. It is that the current action rule makes the side detours almost as cheap as the center route on the old branch, so path focusing disappears.")
+            if fallback_geometry is not None:
+                print(
+                    f"- So the current selector is not responding to a source-row jump. It is comparing two fixed-source branches whose final action contrast and delay-distortion trade off differently ({fallback_geometry.gap_end:.3f} vs {rescue_geometry.gap_end:.3f} in final gap)."
+                )
+    print("- The geometry diagnostic now points to the same issue as the frozen-branch comparison: the selector is sensitive to how much path contrast survives together with the broader boundary-delay signal, not just to proper-time margin.")
     print()
 
     print("21) Alternative focus metrics on the frozen hard-case branches")
@@ -4135,40 +4239,56 @@ def main() -> None:
     if focus_rows:
         first_focus = focus_rows[0]
         last_focus = focus_rows[-1]
+        if first_focus.action_winner == last_focus.action_winner:
+            print(
+                f"- Under raw action-gap, the {first_focus.action_winner} branch wins throughout the scan ({first_focus.fallback_action_gap:.3f}/{first_focus.rescue_action_gap:.3f} at w = {focus_rows[0].retained_weight:.2f}, {last_focus.fallback_action_gap:.3f}/{last_focus.rescue_action_gap:.3f} at w = {focus_rows[-1].retained_weight:.2f})."
+            )
+        else:
+            print(
+                f"- Under raw action-gap, the ranking flips across the scan: `{first_focus.action_winner}` wins at w = {focus_rows[0].retained_weight:.2f} ({first_focus.fallback_action_gap:.3f}/{first_focus.rescue_action_gap:.3f}), but `{last_focus.action_winner}` wins by w = {focus_rows[-1].retained_weight:.2f} ({last_focus.fallback_action_gap:.3f}/{last_focus.rescue_action_gap:.3f})."
+            )
         print(
-            f"- Under raw action-gap, the rescue branch wins throughout the scan ({first_focus.fallback_action_gap:.3f}/{first_focus.rescue_action_gap:.3f} at w = {focus_rows[0].retained_weight:.2f}, {last_focus.fallback_action_gap:.3f}/{last_focus.rescue_action_gap:.3f} at w = {focus_rows[-1].retained_weight:.2f})."
+            f"- Under pure geometric focus gap, the {first_focus.geometric_winner} branch wins throughout ({first_focus.fallback_geometric_gap:.3f}/{first_focus.rescue_geometric_gap:.3f} at the start, unchanged in winner at the end)."
         )
         print(
-            f"- Under pure geometric focus gap, the fallback branch wins throughout ({first_focus.fallback_geometric_gap:.3f}/{first_focus.rescue_geometric_gap:.3f} at the start, unchanged in winner at the end)."
-        )
-        print(
-            f"- The stiffness ratio, which measures action-gap per unit geometric separation, favors the rescue branch throughout and captures the fact that the old branch loses cost contrast even while its geometry stays focused."
+            f"- The stiffness ratio, which measures action-gap per unit geometric separation, favors the {first_focus.stiffness_winner} branch throughout and captures the fact that no single focus observable is emerging as uniquely canonical here."
         )
     print("- So `center gap` is not a neutral physical truth of the toy model. It is one particular focusing observable, and metric choice materially changes which branch looks best.")
     print()
 
-    print("22) Selector-policy gating versus always-compare selection")
+    print("22) Legacy gated selector versus current always-compare selection")
     selector_rows = selector_policy_diagnostics(hardest_pack, hardest_scenario)
     print(render_selector_policy_table(selector_rows))
     print()
+    selector_sweep_rows = selector_policy_sweep_cases()
+    differing_sweep_rows = [row for row in selector_sweep_rows if row.differs]
+    print(render_selector_sweep_table(differing_sweep_rows, limit=len(differing_sweep_rows)))
+    print()
     print("Interpretation:")
-    print("- The current resolver is gated: it keeps the fallback branch whenever that branch still `survives`, and only consults the rescue branch once the fallback drops below the survive threshold.")
+    print("- The current resolver always compares fallback and rescue candidates by the same quality key. This section compares that baseline against the older gated policy, which only consulted rescue after the fallback branch dropped below `survives`.")
     if selector_rows:
         differing_rows = [row for row in selector_rows if row.differs]
         if differing_rows:
             print(
-                f"- On the hard case, the ungated selector would already choose `{selector_rows[0].ungated_final_rule}` at low high-end weights, but the gated selector keeps `{selector_rows[0].gated_final_rule}` until w = {differing_rows[0].retained_weight:.2f}."
+                f"- On the current hardest case, the legacy gated selector keeps `{differing_rows[0].gated_final_rule}` while the current selector prefers `{differing_rows[0].ungated_final_rule}` over the full differing window w = {differing_rows[0].retained_weight:.2f}..{differing_rows[-1].retained_weight:.2f}."
             )
-        print(
-            f"- That means the timing of the branch switch is partly determined by selector policy, not just by the raw dynamics."
+    if differing_sweep_rows:
+        changed_scenarios = ", ".join(
+            sorted({f"{row.pack_name}:{row.scenario_name}" for row in differing_sweep_rows})
         )
-    print("- This is the cleanest current conclusion: both the focusing metric and the gated selection rule are load-bearing choices in the present toy model.")
+        print(
+            f"- Across the compact benchmark packs, changing only the selector policy alters {len(differing_sweep_rows)}/{len(selector_sweep_rows)} pack-weight cases, concentrated in {changed_scenarios}."
+        )
+        if all(row.gated_status == row.ungated_status == "survives" for row in differing_sweep_rows):
+            print("- Every changed case still `survives` under both selectors, so selector policy is steering branch choice more than pass/fail status.")
+    print("- This is the cleanest current conclusion: both the focusing metric and the selector policy are load-bearing choices in the present toy model.")
     print()
 
     print("REMAINING CHEATS")
     print("- The spatial graph itself is still hand-authored rather than derived from deeper constraints.")
     print("- The gravity-like classical limit still assumes that histories extremize spent delay dt - sqrt(dt^2 - ds^2) rather than deriving that accounting rule from deeper dynamics.")
     print("- The delay field is now derived from an emergent persistent pattern, but the rule family and locality preferences used to choose among candidate patterns are still hand-chosen.")
+    print("- The current robustness quality is still hand-chosen too: center gap, arrival span, and selector policy materially affect which surviving branch the model prefers on hard cases.")
     print("- Complex amplitudes are assumed because they match the interference requirement.")
     print("- Consciousness is not modeled here; only durable records and self-insensitive measurement.")
 
