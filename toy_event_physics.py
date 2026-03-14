@@ -21,7 +21,7 @@ Toy primitives:
 from __future__ import annotations
 
 from collections import Counter, defaultdict
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 import cmath
 import heapq
 import itertools
@@ -564,6 +564,44 @@ class FocusObservableBenchmarkRow:
     contour_survive_cases: int
     contour_miss_status: str
     contour_miss_score: float
+
+
+@dataclass
+class FrontierObservableAblationRow:
+    observable: str
+    rule_family: str
+    cases: int
+    selected_changes: int
+    selected_survives: int
+    baseline_selected_survives: int
+    selected_on_robustness: int
+    selected_on_proper_time: int
+    selected_on_geometry: int
+    selected_on_mixed: int
+    baseline_on_robustness: int
+    baseline_on_proper_time: int
+    baseline_on_geometry: int
+    baseline_on_mixed: int
+
+
+@dataclass
+class FrontierObservableChangeRow:
+    pack_name: str
+    scenario_name: str
+    rule_family: str
+    retained_weight: float
+    baseline_selected_rule: str
+    observable_selected_rule: str
+    baseline_selected_status: str
+    observable_selected_status: str
+    baseline_on_robustness: bool
+    baseline_on_proper_time: bool
+    baseline_on_geometry: bool
+    baseline_on_mixed: bool
+    observable_on_robustness: bool
+    observable_on_proper_time: bool
+    observable_on_geometry: bool
+    observable_on_mixed: bool
 
 
 @dataclass
@@ -6081,6 +6119,291 @@ def focus_observable_benchmark(
     return benchmark_rows
 
 
+def frontier_candidate_case_key(
+    candidate: EvaluatedCandidate,
+) -> tuple[str, str, str, float]:
+    return (
+        candidate.rule_family,
+        candidate.pack_name,
+        candidate.scenario_name,
+        candidate.retained_weight,
+    )
+
+
+def frontier_scenario_case_key(
+    row: FrontierScenarioRow,
+) -> tuple[str, str, str, float]:
+    return (
+        row.rule_family,
+        row.pack_name,
+        row.scenario_name,
+        row.retained_weight,
+    )
+
+
+def evaluated_candidate_quality_key(
+    candidate: EvaluatedCandidate,
+) -> tuple[float, ...]:
+    return (
+        candidate.status_rank,
+        candidate.center_gap + candidate.arrival_span,
+        candidate.arrival_span,
+        candidate.center_gap,
+        candidate.occupancy_mean,
+        candidate.density,
+    )
+
+
+def relabel_frontier_candidate_status(
+    candidate: EvaluatedCandidate,
+    observable: str,
+) -> EvaluatedCandidate:
+    _score, status = classify_focus_observable(
+        candidate.center_gap,
+        candidate.arrival_span,
+        observable,
+    )
+    return replace(
+        candidate,
+        status=status,
+        status_rank=robustness_rank(status),
+        current_selected=False,
+        on_robustness=False,
+        on_proper_time=False,
+        on_geometry=False,
+        on_mixed=False,
+    )
+
+
+def rerank_frontier_case_candidates(
+    candidates: list[EvaluatedCandidate],
+    observable: str,
+) -> tuple[FrontierScenarioRow, list[EvaluatedCandidate]]:
+    relabeled_candidates = [
+        relabel_frontier_candidate_status(candidate, observable)
+        for candidate in candidates
+    ]
+    if not relabeled_candidates:
+        raise ValueError("Cannot rerank an empty frontier case")
+
+    selected_identity = max(
+        relabeled_candidates,
+        key=lambda candidate: (
+            evaluated_candidate_quality_key(candidate),
+            candidate.rule_signature,
+            candidate.seed_node,
+        ),
+    ).candidate_identity
+
+    frontier_sets = {
+        view_name: pareto_frontier_identities(relabeled_candidates, axes)
+        for view_name, axes in frontier_axes().items()
+    }
+    relabeled_candidates = [
+        replace(
+            candidate,
+            current_selected=candidate.candidate_identity == selected_identity,
+            on_robustness=candidate.candidate_identity in frontier_sets["robustness"],
+            on_proper_time=candidate.candidate_identity in frontier_sets["proper_time"],
+            on_geometry=candidate.candidate_identity in frontier_sets["geometry"],
+            on_mixed=candidate.candidate_identity in frontier_sets["mixed"],
+        )
+        for candidate in relabeled_candidates
+    ]
+    relabeled_candidates.sort(
+        key=lambda candidate: (
+            candidate.current_selected,
+            candidate.status_rank,
+            candidate.center_gap + candidate.arrival_span,
+            candidate.arrival_span,
+            candidate.center_gap,
+            candidate.rule_signature,
+            candidate.seed_node,
+        ),
+        reverse=True,
+    )
+
+    selected_candidates = [candidate for candidate in relabeled_candidates if candidate.current_selected]
+    selected_candidate = selected_candidates[0] if selected_candidates else None
+    robustness_candidates = [candidate for candidate in relabeled_candidates if candidate.on_robustness]
+    proper_time_candidates = [candidate for candidate in relabeled_candidates if candidate.on_proper_time]
+    geometry_candidates = [candidate for candidate in relabeled_candidates if candidate.on_geometry]
+    mixed_candidates = [candidate for candidate in relabeled_candidates if candidate.on_mixed]
+    first_candidate = relabeled_candidates[0]
+    row = FrontierScenarioRow(
+        pack_name=first_candidate.pack_name,
+        scenario_name=first_candidate.scenario_name,
+        rule_family=first_candidate.rule_family,
+        retained_weight=first_candidate.retained_weight,
+        pool_size=len(relabeled_candidates),
+        selected_rule=selected_candidate.rule_signature if selected_candidate is not None else "-",
+        selected_on_robustness=selected_candidate.on_robustness if selected_candidate is not None else False,
+        selected_on_proper_time=selected_candidate.on_proper_time if selected_candidate is not None else False,
+        selected_on_geometry=selected_candidate.on_geometry if selected_candidate is not None else False,
+        selected_on_mixed=selected_candidate.on_mixed if selected_candidate is not None else False,
+        robustness_count=len(robustness_candidates),
+        proper_time_count=len(proper_time_candidates),
+        geometry_count=len(geometry_candidates),
+        mixed_count=len(mixed_candidates),
+        robustness_rules=format_frontier_rule_signatures(robustness_candidates),
+        proper_time_rules=format_frontier_rule_signatures(proper_time_candidates),
+        geometry_rules=format_frontier_rule_signatures(geometry_candidates),
+        mixed_rules=format_frontier_rule_signatures(mixed_candidates),
+    )
+    return row, relabeled_candidates
+
+
+def frontier_observable_ablation(
+    baseline_rows: list[FrontierScenarioRow],
+    baseline_candidates: list[EvaluatedCandidate],
+    observable: str = "harmonic",
+) -> tuple[
+    list[FrontierObservableAblationRow],
+    list[FrontierObservableChangeRow],
+    list[FrontierScenarioRow],
+    list[EvaluatedCandidate],
+]:
+    baseline_rows_by_case = {
+        frontier_scenario_case_key(row): row
+        for row in baseline_rows
+    }
+    grouped_candidates: DefaultDict[
+        tuple[str, str, str, float],
+        list[EvaluatedCandidate],
+    ] = defaultdict(list)
+    for candidate in baseline_candidates:
+        grouped_candidates[frontier_candidate_case_key(candidate)].append(candidate)
+
+    ablated_rows: list[FrontierScenarioRow] = []
+    ablated_candidates: list[EvaluatedCandidate] = []
+    change_rows: list[FrontierObservableChangeRow] = []
+    aggregate_counts: DefaultDict[str, dict[str, int]] = defaultdict(lambda: defaultdict(int))
+
+    for case_key in sorted(grouped_candidates):
+        case_candidates = grouped_candidates[case_key]
+        baseline_row = baseline_rows_by_case[case_key]
+        baseline_candidates_by_rule = {
+            candidate.rule_signature: candidate
+            for candidate in case_candidates
+        }
+        ablated_row, ablated_case_candidates = rerank_frontier_case_candidates(
+            case_candidates,
+            observable,
+        )
+        ablated_candidates_by_rule = {
+            candidate.rule_signature: candidate
+            for candidate in ablated_case_candidates
+        }
+        ablated_rows.append(ablated_row)
+        ablated_candidates.extend(ablated_case_candidates)
+
+        selected_candidate = next(
+            candidate for candidate in ablated_case_candidates if candidate.current_selected
+        )
+        baseline_selected_candidate = ablated_candidates_by_rule.get(
+            baseline_row.selected_rule
+        )
+        family_counts = aggregate_counts[ablated_row.rule_family]
+        family_counts["cases"] += 1
+        family_counts["selected_changes"] += (
+            ablated_row.selected_rule != baseline_row.selected_rule
+        )
+        family_counts["selected_survives"] += selected_candidate.status == "survives"
+        family_counts["selected_on_robustness"] += ablated_row.selected_on_robustness
+        family_counts["selected_on_proper_time"] += ablated_row.selected_on_proper_time
+        family_counts["selected_on_geometry"] += ablated_row.selected_on_geometry
+        family_counts["selected_on_mixed"] += ablated_row.selected_on_mixed
+        if baseline_selected_candidate is not None:
+            family_counts["baseline_selected_survives"] += (
+                baseline_selected_candidate.status == "survives"
+            )
+            family_counts["baseline_on_robustness"] += baseline_selected_candidate.on_robustness
+            family_counts["baseline_on_proper_time"] += baseline_selected_candidate.on_proper_time
+            family_counts["baseline_on_geometry"] += baseline_selected_candidate.on_geometry
+            family_counts["baseline_on_mixed"] += baseline_selected_candidate.on_mixed
+
+        baseline_selected_baseline = baseline_candidates_by_rule[baseline_row.selected_rule]
+        if (
+            ablated_row.selected_rule != baseline_row.selected_rule
+            or baseline_selected_candidate is None
+            or baseline_selected_candidate.status != baseline_selected_baseline.status
+            or baseline_selected_candidate.on_robustness != baseline_row.selected_on_robustness
+            or baseline_selected_candidate.on_proper_time != baseline_row.selected_on_proper_time
+            or baseline_selected_candidate.on_geometry != baseline_row.selected_on_geometry
+            or baseline_selected_candidate.on_mixed != baseline_row.selected_on_mixed
+        ):
+            change_rows.append(
+                FrontierObservableChangeRow(
+                    pack_name=ablated_row.pack_name,
+                    scenario_name=ablated_row.scenario_name,
+                    rule_family=ablated_row.rule_family,
+                    retained_weight=ablated_row.retained_weight,
+                    baseline_selected_rule=baseline_row.selected_rule,
+                    observable_selected_rule=ablated_row.selected_rule,
+                    baseline_selected_status=(
+                        baseline_selected_candidate.status
+                        if baseline_selected_candidate is not None
+                        else "missing"
+                    ),
+                    observable_selected_status=selected_candidate.status,
+                    baseline_on_robustness=(
+                        baseline_selected_candidate.on_robustness
+                        if baseline_selected_candidate is not None
+                        else False
+                    ),
+                    baseline_on_proper_time=(
+                        baseline_selected_candidate.on_proper_time
+                        if baseline_selected_candidate is not None
+                        else False
+                    ),
+                    baseline_on_geometry=(
+                        baseline_selected_candidate.on_geometry
+                        if baseline_selected_candidate is not None
+                        else False
+                    ),
+                    baseline_on_mixed=(
+                        baseline_selected_candidate.on_mixed
+                        if baseline_selected_candidate is not None
+                        else False
+                    ),
+                    observable_on_robustness=ablated_row.selected_on_robustness,
+                    observable_on_proper_time=ablated_row.selected_on_proper_time,
+                    observable_on_geometry=ablated_row.selected_on_geometry,
+                    observable_on_mixed=ablated_row.selected_on_mixed,
+                )
+            )
+
+    aggregate_rows = [
+        FrontierObservableAblationRow(
+            observable=observable,
+            rule_family=rule_family,
+            cases=counts["cases"],
+            selected_changes=counts["selected_changes"],
+            selected_survives=counts["selected_survives"],
+            baseline_selected_survives=counts["baseline_selected_survives"],
+            selected_on_robustness=counts["selected_on_robustness"],
+            selected_on_proper_time=counts["selected_on_proper_time"],
+            selected_on_geometry=counts["selected_on_geometry"],
+            selected_on_mixed=counts["selected_on_mixed"],
+            baseline_on_robustness=counts["baseline_on_robustness"],
+            baseline_on_proper_time=counts["baseline_on_proper_time"],
+            baseline_on_geometry=counts["baseline_on_geometry"],
+            baseline_on_mixed=counts["baseline_on_mixed"],
+        )
+        for rule_family, counts in aggregate_counts.items()
+    ]
+    aggregate_rows.sort(key=lambda row: row.rule_family)
+    change_rows.sort(
+        key=lambda row: (
+            row.rule_family,
+            row.pack_name,
+            row.scenario_name,
+            row.retained_weight,
+        )
+    )
+    return aggregate_rows, change_rows, ablated_rows, ablated_candidates
+
+
 def random_rediscovery_limit_sweep_summary(
     retained_weight: float = 1.0,
     variant_limit: int = 3,
@@ -7733,6 +8056,50 @@ def render_focus_observable_benchmark_table(
     return "\n".join(lines)
 
 
+def render_frontier_observable_ablation_table(
+    rows: list[FrontierObservableAblationRow],
+) -> str:
+    lines = [
+        "observable  | family   | cases | sel chg | sel surv | base surv | sel R/P/G/M | base R/P/G/M",
+        "------------+----------+-------+---------+----------+-----------+-------------+--------------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.observable:<10} | "
+            f"{row.rule_family:<8} | "
+            f"{row.cases:>5} | "
+            f"{row.selected_changes:>7} | "
+            f"{row.selected_survives:>8} | "
+            f"{row.baseline_selected_survives:>9} | "
+            f"{row.selected_on_robustness:>3}/{row.selected_on_proper_time:<1}/{row.selected_on_geometry:<1}/{row.selected_on_mixed:<1}       | "
+            f"{row.baseline_on_robustness:>4}/{row.baseline_on_proper_time:<1}/{row.baseline_on_geometry:<1}/{row.baseline_on_mixed:<1}"
+        )
+    return "\n".join(lines)
+
+
+def render_frontier_observable_change_table(
+    rows: list[FrontierObservableChangeRow],
+    limit: int = 12,
+) -> str:
+    lines = [
+        "pack   | scenario         | family   | w    | baseline -> observable | base@obs  | sel@obs  | base R/P/G/M | obs R/P/G/M",
+        "-------+------------------+----------+------+------------------------+-----------+----------+--------------+-------------",
+    ]
+    for row in rows[:limit]:
+        lines.append(
+            f"{row.pack_name:<6} | "
+            f"{row.scenario_name:<16} | "
+            f"{row.rule_family:<8} | "
+            f"{row.retained_weight:>4.2f} | "
+            f"{row.baseline_selected_rule:<9}->{row.observable_selected_rule:<9} | "
+            f"{row.baseline_selected_status:<9} | "
+            f"{row.observable_selected_status:<8} | "
+            f"{('Y' if row.baseline_on_robustness else 'n')}/{('Y' if row.baseline_on_proper_time else 'n')}/{('Y' if row.baseline_on_geometry else 'n')}/{('Y' if row.baseline_on_mixed else 'n'):<4} | "
+            f"{('Y' if row.observable_on_robustness else 'n')}/{('Y' if row.observable_on_proper_time else 'n')}/{('Y' if row.observable_on_geometry else 'n')}/{('Y' if row.observable_on_mixed else 'n')}"
+        )
+    return "\n".join(lines)
+
+
 def main() -> None:
     print("DISCRETE EVENT-NETWORK TOY MODEL")
     print()
@@ -8854,6 +9221,63 @@ def main() -> None:
         f"- The key question is whether a smoother observable can rescue the contour miss without promoting obviously weak cases too aggressively. `box-min` leaves the contour miss at `{box_row.contour_miss_status}`, while `harmonic` changes it to `{harmonic_row.contour_miss_status}` with score {harmonic_row.contour_miss_score:.2f}."
     )
     print("- That gives us a direct threshold-cheat diagnostic: we can now argue from measured tradeoffs rather than from one hand-picked miss.")
+    print()
+
+    print("44) Harmonic-status ablation through the frontier machinery")
+    harmonic_ablation_rows, harmonic_change_rows, harmonic_frontier_rows, harmonic_frontier_candidates = frontier_observable_ablation(
+        frontier_scenario_rows,
+        frontier_candidates,
+        observable="harmonic",
+    )
+    print(render_frontier_observable_ablation_table(harmonic_ablation_rows))
+    print()
+    interesting_harmonic_changes = [
+        row
+        for row in harmonic_change_rows
+        if row.baseline_selected_rule != row.observable_selected_rule
+        or row.baseline_selected_status != row.observable_selected_status
+        or row.baseline_on_mixed != row.observable_on_mixed
+        or row.baseline_on_robustness != row.observable_on_robustness
+    ]
+    print(
+        render_frontier_observable_change_table(
+            interesting_harmonic_changes,
+            limit=min(12, len(interesting_harmonic_changes)),
+        )
+    )
+    print()
+    print("Interpretation:")
+    total_harmonic_cases = len(harmonic_frontier_rows)
+    total_harmonic_candidates = len(harmonic_frontier_candidates)
+    harmonic_selected_changes = sum(row.selected_changes for row in harmonic_ablation_rows)
+    harmonic_selected_survives = sum(row.selected_survives for row in harmonic_ablation_rows)
+    harmonic_base_survives = sum(row.baseline_selected_survives for row in harmonic_ablation_rows)
+    print(
+        f"- This is a diagnostic-only pass: it keeps the same evaluated frontier candidates ({total_harmonic_candidates} across {total_harmonic_cases} benchmark cases) and only relabels their `status/status_rank` under the `harmonic` focusing observable before rerunning selection and Pareto membership."
+    )
+    print(
+        f"- Under that relabeling, the selected rule changes in {harmonic_selected_changes}/{total_harmonic_cases} cases. The harmonic-selected rule `survives` in {harmonic_selected_survives}/{total_harmonic_cases} cases, while the baseline-selected rule still `survives` under harmonic in {harmonic_base_survives}/{total_harmonic_cases}."
+    )
+    compact_harmonic = next(
+        (row for row in harmonic_ablation_rows if row.rule_family == "compact"),
+        None,
+    )
+    extended_harmonic = next(
+        (row for row in harmonic_ablation_rows if row.rule_family == "extended"),
+        None,
+    )
+    if compact_harmonic is not None and extended_harmonic is not None:
+        print(
+            f"- In `compact`, the harmonic-selected rule lies on the mixed frontier in {compact_harmonic.selected_on_mixed}/{compact_harmonic.cases} cases and keeps the baseline-selected motif on that same frontier in {compact_harmonic.baseline_on_mixed}/{compact_harmonic.cases}. In `extended`, those counts are {extended_harmonic.selected_on_mixed}/{extended_harmonic.cases} and {extended_harmonic.baseline_on_mixed}/{extended_harmonic.cases}."
+        )
+    if interesting_harmonic_changes:
+        first_change = interesting_harmonic_changes[0]
+        print(
+            f"- The first changed case here is `{first_change.pack_name}:{first_change.scenario_name}` at w = {first_change.retained_weight:.2f}, where the baseline-selected `{first_change.baseline_selected_rule}` is reinterpreted under harmonic as `{first_change.baseline_selected_status}` and the harmonic rerank picks `{first_change.observable_selected_rule}`."
+        )
+    print(
+        "- So this does not replace the baseline selector yet. It tells us how much of the current frontier story depends on the sharp box-min status rule, and how much survives once the threshold is smoothed while the rest of the machinery is held fixed."
+    )
     print()
 
     print("REMAINING CHEATS")
