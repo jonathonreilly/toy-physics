@@ -554,6 +554,28 @@ class ProjectionDimensionAblationRow:
 
 
 @dataclass
+class ProjectionFamilyBasisRow:
+    basis_name: str
+    mode: str
+    strength: float
+    selected_on_pc123: int
+    pc123_overlap_with_full: int
+    compact_top_rule: str
+    compact_top_pc123: int
+    extended_top_rule: str
+    extended_top_pc123: int
+
+
+@dataclass
+class ProjectionFamilyStabilityRow:
+    rule_family: str
+    rule_signature: str
+    basis_hits: int
+    case_hits: int
+    top_hits: int
+
+
+@dataclass
 class FrontierTraceRow:
     retained_weight: float
     rule_signature: str
@@ -8034,6 +8056,132 @@ def derived_projection_dimension_ablation(
     return rows
 
 
+def derived_projection_family_stability_map(
+    baseline_rows: list[FrontierScenarioRow],
+    baseline_candidates: list[EvaluatedCandidate],
+    projection_dimension: int = 4,
+    generator: str = "orthonormal",
+    strengths: tuple[float, ...] = DERIVED_TRANSFORM_STRENGTHS,
+    projection_count: int = DERIVED_PROJECTION_GENERATOR_COUNT,
+) -> tuple[list[ProjectionFamilyBasisRow], list[ProjectionFamilyStabilityRow]]:
+    base_metric_rows = [derived_metric_vector(candidate) for candidate in baseline_candidates]
+    base_anchor = (1.0, 1.0, 0.0, 0.0, 1.0)
+    _full_components, full_candidates = derived_axis_components(
+        baseline_candidates,
+        DERIVED_AXIS_METRIC_FIELDS,
+    )
+    _full_scenario_rows, _full_aggregate_rows, full_pc123_signatures = evaluate_derived_axis_candidates(
+        baseline_rows,
+        full_candidates,
+    )
+
+    basis_rows: list[ProjectionFamilyBasisRow] = []
+    family_rule_basis_hits: DefaultDict[tuple[str, str], set[str]] = defaultdict(set)
+    family_rule_case_hits: DefaultDict[tuple[str, str], int] = defaultdict(int)
+    family_rule_top_hits: DefaultDict[tuple[str, str], int] = defaultdict(int)
+
+    for transform_index, transform_mode in enumerate(DERIVED_BOOTSTRAP_TRANSFORM_MODES):
+        for strength in strengths:
+            transformed_rows = transform_metric_rows(
+                base_metric_rows,
+                transform_mode,
+                strength=strength,
+            )
+            transformed_anchor = transform_anchor(
+                base_anchor,
+                transform_mode,
+                strength=strength,
+            )
+            random_specs = random_projection_basis_specs(
+                count=projection_count,
+                seed=(
+                    DERIVED_TRANSFORM_PROJECTION_BOOTSTRAP_SEED
+                    + 100 * transform_index
+                    + int(round(strength * 100))
+                ),
+                projection_dimension=projection_dimension,
+            )
+            for random_name, projection_matrix in random_specs:
+                basis_name = f"{generator}:d{projection_dimension}:{transform_mode}:s{strength:.2f}:{random_name}"
+                adjusted_projection = projection_matrix_variant(
+                    projection_matrix,
+                    generator,
+                )
+                projected_rows, projected_anchor = project_metric_rows_and_anchor(
+                    transformed_rows,
+                    transformed_anchor,
+                    adjusted_projection,
+                )
+                _components, annotated_candidates = derived_axis_components_from_metric_rows(
+                    baseline_candidates,
+                    projected_rows,
+                    projected_anchor,
+                )
+                scenario_rows, aggregate_rows, pc123_signatures_by_case = evaluate_derived_axis_candidates(
+                    baseline_rows,
+                    annotated_candidates,
+                )
+                selected_on_pc123 = sum(row.selected_on_pc123 for row in scenario_rows)
+                overlap = sum(
+                    bool(pc123_signatures_by_case[case_key] & full_pc123_signatures[case_key])
+                    for case_key in full_pc123_signatures
+                )
+                compact_top = next((row for row in aggregate_rows if row.rule_family == "compact"), None)
+                extended_top = next((row for row in aggregate_rows if row.rule_family == "extended"), None)
+                if compact_top is not None:
+                    family_rule_top_hits[(compact_top.rule_family, compact_top.rule_signature)] += 1
+                if extended_top is not None:
+                    family_rule_top_hits[(extended_top.rule_family, extended_top.rule_signature)] += 1
+                for aggregate_row in aggregate_rows:
+                    if aggregate_row.pc123_hits <= 0:
+                        continue
+                    family_rule = (aggregate_row.rule_family, aggregate_row.rule_signature)
+                    family_rule_basis_hits[family_rule].add(basis_name)
+                    family_rule_case_hits[family_rule] += aggregate_row.pc123_hits
+
+                basis_rows.append(
+                    ProjectionFamilyBasisRow(
+                        basis_name=basis_name,
+                        mode=transform_mode,
+                        strength=strength,
+                        selected_on_pc123=selected_on_pc123,
+                        pc123_overlap_with_full=overlap,
+                        compact_top_rule=compact_top.rule_signature if compact_top is not None else "-",
+                        compact_top_pc123=compact_top.pc123_hits if compact_top is not None else 0,
+                        extended_top_rule=extended_top.rule_signature if extended_top is not None else "-",
+                        extended_top_pc123=extended_top.pc123_hits if extended_top is not None else 0,
+                    )
+                )
+
+    stability_rows = [
+        ProjectionFamilyStabilityRow(
+            rule_family=rule_family,
+            rule_signature=rule_signature,
+            basis_hits=len(family_rule_basis_hits[(rule_family, rule_signature)]),
+            case_hits=family_rule_case_hits[(rule_family, rule_signature)],
+            top_hits=family_rule_top_hits[(rule_family, rule_signature)],
+        )
+        for rule_family, rule_signature in family_rule_basis_hits
+    ]
+    basis_rows.sort(
+        key=lambda row: (
+            row.mode,
+            row.strength,
+            row.basis_name,
+        )
+    )
+    stability_rows.sort(
+        key=lambda row: (
+            row.rule_family,
+            -row.basis_hits,
+            -row.case_hits,
+            -row.top_hits,
+            row.rule_signature,
+        )
+    )
+    return basis_rows, stability_rows
+
+
 def random_rediscovery_limit_sweep_summary(
     retained_weight: float = 1.0,
     variant_limit: int = 3,
@@ -9702,6 +9850,45 @@ def render_projection_dimension_ablation_table(
             f"{row.weakest_basis_name:<31} | "
             f"{row.compact_dominant_rule:<17} {row.compact_dominant_basis_hits:>2}/{row.bases:<2} | "
             f"{row.extended_dominant_rule:<17} {row.extended_dominant_basis_hits:>2}/{row.bases:<2}"
+        )
+    return "\n".join(lines)
+
+
+def render_projection_family_basis_table(
+    rows: list[ProjectionFamilyBasisRow],
+    limit: int = 15,
+) -> str:
+    lines = [
+        "mode         | s    | sel pc123 | ovlp full | compact top        | ext top",
+        "-------------+------+-----------+-----------+--------------------+--------------------",
+    ]
+    for row in rows[:limit]:
+        lines.append(
+            f"{row.mode:<11} | "
+            f"{row.strength:>4.2f} | "
+            f"{row.selected_on_pc123:>9} | "
+            f"{row.pc123_overlap_with_full:>9} | "
+            f"{row.compact_top_rule:<18} {row.compact_top_pc123:>2} | "
+            f"{row.extended_top_rule:<18} {row.extended_top_pc123:>2}"
+        )
+    return "\n".join(lines)
+
+
+def render_projection_family_stability_table(
+    rows: list[ProjectionFamilyStabilityRow],
+    limit: int = 12,
+) -> str:
+    lines = [
+        "family   | rule              | basis hits | case hits | top hits",
+        "---------+-------------------+------------+-----------+---------",
+    ]
+    for row in rows[:limit]:
+        lines.append(
+            f"{row.rule_family:<8} | "
+            f"{row.rule_signature:<17} | "
+            f"{row.basis_hits:>10} | "
+            f"{row.case_hits:>9} | "
+            f"{row.top_hits:>7}"
         )
     return "\n".join(lines)
 
@@ -11629,6 +11816,74 @@ def main() -> None:
     )
     print(
         "- If higher dimensions materially restore overlap, then some of the remaining instability is compression-driven rather than a failure of the underlying motif family."
+    )
+    print()
+
+    print("53) Selector-free stability map on the 4D orthonormal projection family")
+    projection_family_basis_rows, projection_family_stability_rows = derived_projection_family_stability_map(
+        harmonic_continuous_frontier_rows,
+        harmonic_continuous_frontier_candidates,
+        projection_dimension=4,
+        generator="orthonormal",
+    )
+    print(
+        render_projection_family_basis_table(
+            projection_family_basis_rows,
+            limit=min(15, len(projection_family_basis_rows)),
+        )
+    )
+    print()
+    print(render_projection_family_stability_table(projection_family_stability_rows[:12]))
+    print()
+    print("Interpretation:")
+    total_projection_family_bases = len(projection_family_basis_rows)
+    full_overlap_projection_family = sum(
+        row.pc123_overlap_with_full == len(harmonic_continuous_frontier_rows)
+        for row in projection_family_basis_rows
+    )
+    min_selected_projection_family = min(
+        row.selected_on_pc123
+        for row in projection_family_basis_rows
+    )
+    max_selected_projection_family = max(
+        row.selected_on_pc123
+        for row in projection_family_basis_rows
+    )
+    compact_projection_family = next(
+        (row for row in projection_family_stability_rows if row.rule_family == "compact"),
+        None,
+    )
+    extended_projection_family = next(
+        (row for row in projection_family_stability_rows if row.rule_family == "extended"),
+        None,
+    )
+    ubiquitous_projection_family = [
+        row
+        for row in projection_family_stability_rows
+        if row.basis_hits == total_projection_family_bases
+    ]
+    print(
+        f"- This reruns the selector-free stability story on the stronger `4D orthonormal` projection family instead of treating `3D` as the default bottleneck. The family contains {total_projection_family_bases} projected bases across mode, strength, and projection variants."
+    )
+    print(
+        f"- The overlap story is now much cleaner: {full_overlap_projection_family}/{total_projection_family_bases} bases keep nonempty `pc123` overlap with the full reference in all {len(harmonic_continuous_frontier_rows)} cases."
+    )
+    print(
+        f"- Selected-rule retention is still not perfectly invariant, but it is much stronger than in the tighter projected families: selected-on-`pc123` ranges from {min_selected_projection_family}/{len(harmonic_continuous_frontier_rows)} to {max_selected_projection_family}/{len(harmonic_continuous_frontier_rows)} across the family."
+    )
+    if compact_projection_family is not None:
+        print(
+            f"- In `compact`, the dominant selector-free motif is `{compact_projection_family.rule_signature}`, appearing in {compact_projection_family.basis_hits}/{total_projection_family_bases} bases, {compact_projection_family.case_hits} basis-case frontiers, and {compact_projection_family.top_hits} top-basis wins."
+        )
+    if extended_projection_family is not None:
+        print(
+            f"- In `extended`, the dominant selector-free motif is `{extended_projection_family.rule_signature}`, appearing in {extended_projection_family.basis_hits}/{total_projection_family_bases} bases, {extended_projection_family.case_hits} basis-case frontiers, and {extended_projection_family.top_hits} top-basis wins."
+        )
+    print(
+        f"- Ubiquity is broader than a single winner here too: {len(ubiquitous_projection_family)} motif-family pairs appear on `pc123` in all {total_projection_family_bases} bases of the 4D orthonormal family."
+    )
+    print(
+        "- So once the projection bottleneck is relaxed, much more of the selector-free structure survives intact. The remaining disagreement now looks more like motif ranking inside a robust family than like wholesale loss of overlap."
     )
     print()
 
