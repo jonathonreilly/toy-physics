@@ -668,6 +668,42 @@ class RoughnessCoreAggregateRow:
 
 
 @dataclass
+class CenterlineModeSweepRow:
+    mode: str
+    amplitude: float
+    rule_family: str
+    retained_weight: float
+    regime: str
+    selected_rule: str
+    selected_in_core: bool
+    core_count: int
+    union_count: int
+    center_range: float
+    center_variation: float
+    span_range: float
+    crosses_midline: bool
+
+
+@dataclass
+class CenterlineModeAggregateRow:
+    mode: str
+    amplitude: float
+    rule_family: str
+    cases: int
+    selected_in_core_cases: int
+    empty_cases: int
+    single_selected_cases: int
+    single_other_cases: int
+    multi_selected_cases: int
+    multi_other_cases: int
+    avg_core_count: float
+    center_range: float
+    center_variation: float
+    span_range: float
+    crosses_midline: bool
+
+
+@dataclass
 class FrontierTraceRow:
     retained_weight: float
     rule_signature: str
@@ -8645,6 +8681,133 @@ def roughness_core_sweep(
     return rows, aggregate_rows
 
 
+def normalize_mode_vector(values: tuple[float, ...]) -> tuple[float, ...]:
+    mean_value = sum(values) / len(values)
+    centered = tuple(value - mean_value for value in values)
+    max_abs = max(abs(value) for value in centered)
+    if max_abs <= 1e-9:
+        return tuple(0.0 for _value in centered)
+    return tuple(value / max_abs for value in centered)
+
+
+def centerline_mode_basis(xs: tuple[int, ...]) -> dict[str, tuple[float, ...]]:
+    length = len(xs)
+    if length <= 1:
+        return {"flat": tuple(0.0 for _x in xs)}
+    normalized_xs = tuple(
+        -1.0 + 2.0 * index / (length - 1)
+        for index in range(length)
+    )
+    return {
+        "tilt": normalize_mode_vector(normalized_xs),
+        "bowl": normalize_mode_vector(tuple(2.0 * x * x - 1.0 for x in normalized_xs)),
+        "step": normalize_mode_vector(
+            tuple(-1.0 if index < length / 2 else 1.0 for index in range(length))
+        ),
+        "zigzag": normalize_mode_vector(
+            tuple(1.0 if index % 2 == 0 else -1.0 for index in range(length))
+        ),
+    }
+
+
+def centerline_mode_core_sweep(
+    retained_weights: tuple[float, ...] = (0.75, 0.8, 0.85, 0.9, 0.95, 1.0),
+    amplitudes: tuple[float, ...] = (0.0, 0.5, 1.0, 1.5, 2.0),
+) -> tuple[list[CenterlineModeSweepRow], list[CenterlineModeAggregateRow]]:
+    pack_name = "base"
+    scenario_name = "taper-hard"
+    nodes, wrap_y = scenario_by_name(pack_name, scenario_name)
+    xs, base_centers, base_spans = ordered_profile_centers_and_spans(nodes)
+    mode_basis = centerline_mode_basis(xs)
+
+    rows: list[CenterlineModeSweepRow] = []
+    for mode_name, mode_vector in mode_basis.items():
+        for amplitude in amplitudes:
+            centers = tuple(
+                center + amplitude * mode_component
+                for center, mode_component in zip(base_centers, mode_vector)
+            )
+            profile = build_profile_from_centers_and_spans(xs, centers, base_spans)
+            sweep_nodes = build_nodes_from_interval_profile(profile)
+            (
+                _mean_center,
+                center_range,
+                center_variation,
+                crosses_midline,
+                span_range,
+            ) = column_profile_geometry_metrics(sweep_nodes)
+            for rule_family, count_options in family_count_options():
+                for retained_weight in retained_weights:
+                    harmonic_cont_row, harmonic_cont_candidates = harmonic_continuous_case_analysis(
+                        pack_name=pack_name,
+                        scenario_name=f"{scenario_name}:{mode_name}:{amplitude:.2f}",
+                        nodes=sweep_nodes,
+                        wrap_y=wrap_y,
+                        rule_family=rule_family,
+                        count_options=count_options,
+                        retained_weight=retained_weight,
+                    )
+                    case_core_rows, _aggregate_rows = derived_projection_family_case_core_analysis(
+                        [harmonic_cont_row],
+                        harmonic_cont_candidates,
+                        projection_dimension=4,
+                        generator="orthonormal",
+                    )
+                    case_core_row = case_core_rows[0]
+                    rows.append(
+                        CenterlineModeSweepRow(
+                            mode=mode_name,
+                            amplitude=amplitude,
+                            rule_family=rule_family,
+                            retained_weight=retained_weight,
+                            regime=projection_core_regime(case_core_row),
+                            selected_rule=case_core_row.selected_rule,
+                            selected_in_core=case_core_row.selected_in_core,
+                            core_count=case_core_row.core_count,
+                            union_count=case_core_row.union_count,
+                            center_range=center_range,
+                            center_variation=center_variation,
+                            span_range=span_range,
+                            crosses_midline=crosses_midline,
+                        )
+                    )
+
+    aggregate_rows: list[CenterlineModeAggregateRow] = []
+    for mode_name in sorted(mode_basis):
+        for amplitude in amplitudes:
+            for rule_family in ("compact", "extended"):
+                family_rows = [
+                    row
+                    for row in rows
+                    if row.mode == mode_name
+                    and row.amplitude == amplitude
+                    and row.rule_family == rule_family
+                ]
+                aggregate_rows.append(
+                    CenterlineModeAggregateRow(
+                        mode=mode_name,
+                        amplitude=amplitude,
+                        rule_family=rule_family,
+                        cases=len(family_rows),
+                        selected_in_core_cases=sum(row.selected_in_core for row in family_rows),
+                        empty_cases=sum(row.regime == "empty" for row in family_rows),
+                        single_selected_cases=sum(row.regime == "single-selected" for row in family_rows),
+                        single_other_cases=sum(row.regime == "single-other" for row in family_rows),
+                        multi_selected_cases=sum(row.regime == "multi-selected" for row in family_rows),
+                        multi_other_cases=sum(row.regime == "multi-other" for row in family_rows),
+                        avg_core_count=sum(row.core_count for row in family_rows) / len(family_rows),
+                        center_range=family_rows[0].center_range,
+                        center_variation=family_rows[0].center_variation,
+                        span_range=family_rows[0].span_range,
+                        crosses_midline=family_rows[0].crosses_midline,
+                    )
+                )
+
+    rows.sort(key=lambda row: (row.rule_family, row.mode, row.amplitude, row.retained_weight))
+    aggregate_rows.sort(key=lambda row: (row.rule_family, row.mode, row.amplitude))
+    return rows, aggregate_rows
+
+
 def random_rediscovery_limit_sweep_summary(
     retained_weight: float = 1.0,
     variant_limit: int = 3,
@@ -10482,6 +10645,51 @@ def render_roughness_core_case_table(
             f"{row.rule_family:<8} | "
             f"{row.retained_weight:>4.2f} | "
             f"{row.alpha:>5.2f} | "
+            f"{row.regime:<15} | "
+            f"{('Y' if row.selected_in_core else 'n'):<8} | "
+            f"{row.core_count:>2}/{row.union_count:<5} | "
+            f"{row.selected_rule}"
+        )
+    return "\n".join(lines)
+
+
+def render_centerline_mode_aggregate_table(
+    rows: list[CenterlineModeAggregateRow],
+) -> str:
+    lines = [
+        "family   | mode   | amp  | sel core | empty | single sel/other | multi sel/other | avg core | cvar | cross",
+        "---------+--------+------+----------+-------+------------------+-----------------+----------+------+------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.rule_family:<8} | "
+            f"{row.mode:<6} | "
+            f"{row.amplitude:>4.1f} | "
+            f"{row.selected_in_core_cases:>8} | "
+            f"{row.empty_cases:>5} | "
+            f"{row.single_selected_cases:>6}/{row.single_other_cases:<5} | "
+            f"{row.multi_selected_cases:>5}/{row.multi_other_cases:<5} | "
+            f"{row.avg_core_count:>8.2f} | "
+            f"{row.center_variation:>4.1f} | "
+            f"{('Y' if row.crosses_midline else 'n'):<4}"
+        )
+    return "\n".join(lines)
+
+
+def render_centerline_mode_case_table(
+    rows: list[CenterlineModeSweepRow],
+    limit: int = 20,
+) -> str:
+    lines = [
+        "family   | mode   | amp  | w    | regime          | sel core | core/u | rule",
+        "---------+--------+------+-------+-----------------+----------+--------+-------------------",
+    ]
+    for row in rows[:limit]:
+        lines.append(
+            f"{row.rule_family:<8} | "
+            f"{row.mode:<6} | "
+            f"{row.amplitude:>4.1f} | "
+            f"{row.retained_weight:>4.2f} | "
             f"{row.regime:<15} | "
             f"{('Y' if row.selected_in_core else 'n'):<8} | "
             f"{row.core_count:>2}/{row.union_count:<5} | "
@@ -12618,6 +12826,69 @@ def main() -> None:
     )
     print(
         "- So the transition is continuous in the geometry metrics but not monotone in alpha. What survives the control test is the stronger claim: the case-core regime clearly tracks realized centerline roughness at fixed span profile, even though the response can be family-dependent and re-entrant."
+    )
+    print()
+
+    print("57) Centerline-mode basis sweep at fixed span profile")
+    mode_core_rows, mode_core_aggregate_rows = centerline_mode_core_sweep()
+    interesting_mode_rows = [
+        row
+        for row in mode_core_rows
+        if row.amplitude in {0.0, 1.0, 2.0}
+        and row.retained_weight in {0.75, 1.0}
+        and row.regime != "single-selected"
+    ]
+    print(render_centerline_mode_aggregate_table(mode_core_aggregate_rows))
+    print()
+    print(
+        render_centerline_mode_case_table(
+            interesting_mode_rows,
+            limit=min(20, len(interesting_mode_rows)),
+        )
+    )
+    print()
+    print("Interpretation:")
+    compact_tilt_10 = next(
+        row
+        for row in mode_core_aggregate_rows
+        if row.rule_family == "compact" and row.mode == "tilt" and row.amplitude == 1.0
+    )
+    compact_step_15 = next(
+        row
+        for row in mode_core_aggregate_rows
+        if row.rule_family == "compact" and row.mode == "step" and row.amplitude == 1.5
+    )
+    compact_zigzag_05 = next(
+        row
+        for row in mode_core_aggregate_rows
+        if row.rule_family == "compact" and row.mode == "zigzag" and row.amplitude == 0.5
+    )
+    extended_bowl_15 = next(
+        row
+        for row in mode_core_aggregate_rows
+        if row.rule_family == "extended" and row.mode == "bowl" and row.amplitude == 1.5
+    )
+    extended_zigzag_05 = next(
+        row
+        for row in mode_core_aggregate_rows
+        if row.rule_family == "extended" and row.mode == "zigzag" and row.amplitude == 0.5
+    )
+    extended_zigzag_15 = next(
+        row
+        for row in mode_core_aggregate_rows
+        if row.rule_family == "extended" and row.mode == "zigzag" and row.amplitude == 1.5
+    )
+    print(
+        "- This removes the last big path-choice cheat in the roughness story. Instead of one interpolation path, the same fixed-span test now probes four independent centerline modes."
+    )
+    print(
+        f"- The broad roughness link survives, but not as a one-number rule. In `compact`, the smoother `tilt` mode stays mostly single-selected through amplitude {compact_tilt_10.amplitude:.1f} ({compact_tilt_10.selected_in_core_cases}/{compact_tilt_10.cases} selected-in-core at center-variation {compact_tilt_10.center_variation:.1f}), and `step` even recovers to {compact_step_15.selected_in_core_cases}/{compact_step_15.cases} selected-in-core at amplitude {compact_step_15.amplitude:.1f}. By contrast, `zigzag` is already fully destructive at amplitude {compact_zigzag_05.amplitude:.1f}, with {compact_zigzag_05.empty_cases}/{compact_zigzag_05.cases} empty cores and center-variation {compact_zigzag_05.center_variation:.1f}."
+    )
+    print(
+        f"- `Extended` shows the same dependence on mode symmetry even more strongly. `Bowl` at amplitude {extended_bowl_15.amplitude:.1f} gives {extended_bowl_15.multi_selected_cases}/{extended_bowl_15.cases} multi-selected cores, while `zigzag` collapses to {extended_zigzag_05.empty_cases}/{extended_zigzag_05.cases} empty cores already at amplitude {extended_zigzag_05.amplitude:.1f}, then re-enters as {extended_zigzag_15.selected_in_core_cases}/{extended_zigzag_15.cases} selected-in-core at amplitude {extended_zigzag_15.amplitude:.1f}."
+    )
+    print(
+        "- So the stronger statement is now: case-core structure depends on realized roughness, but also on the symmetry class of the deformation. The roughness-core link is broader than one interpolation path, yet not reducible to roughness magnitude alone."
     )
     print()
 
