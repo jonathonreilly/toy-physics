@@ -673,6 +673,9 @@ class CenterlineModeSweepRow:
     amplitude: float
     rule_family: str
     retained_weight: float
+    signature: str
+    turning_points: int
+    max_step_fraction: float
     regime: str
     selected_rule: str
     selected_in_core: bool
@@ -689,6 +692,7 @@ class CenterlineModeAggregateRow:
     mode: str
     amplitude: float
     rule_family: str
+    signature: str
     cases: int
     selected_in_core_cases: int
     empty_cases: int
@@ -701,6 +705,30 @@ class CenterlineModeAggregateRow:
     center_variation: float
     span_range: float
     crosses_midline: bool
+
+
+@dataclass
+class CenterlineInvariantAggregateRow:
+    rule_family: str
+    signature: str
+    crosses_midline: bool
+    cases: int
+    selected_in_core_cases: int
+    empty_cases: int
+    avg_core_count: float
+    avg_center_variation: float
+
+
+@dataclass
+class CenterlineInvariantComparisonRow:
+    rule_family: str
+    center_variation: float
+    signature: str
+    crosses_midline: bool
+    cases: int
+    selected_in_core_cases: int
+    empty_cases: int
+    avg_core_count: float
 
 
 @dataclass
@@ -8710,6 +8738,40 @@ def centerline_mode_basis(xs: tuple[int, ...]) -> dict[str, tuple[float, ...]]:
     }
 
 
+def centerline_mode_invariants(
+    centers: tuple[float, ...],
+) -> tuple[str, int, float]:
+    diffs = [
+        centers[index + 1] - centers[index]
+        for index in range(len(centers) - 1)
+    ]
+    nonzero_diffs = [diff for diff in diffs if abs(diff) > 1e-9]
+    total_variation = sum(abs(diff) for diff in nonzero_diffs)
+    turning_points = 0
+    if len(nonzero_diffs) >= 2:
+        signs = [1 if diff > 0.0 else -1 for diff in nonzero_diffs]
+        turning_points = sum(
+            signs[index + 1] != signs[index]
+            for index in range(len(signs) - 1)
+        )
+    max_step_fraction = (
+        max(abs(diff) for diff in nonzero_diffs) / total_variation
+        if total_variation > 1e-9
+        else 0.0
+    )
+    if total_variation <= 1e-9:
+        signature = "flat"
+    elif turning_points >= 2:
+        signature = "oscillatory"
+    elif turning_points == 1:
+        signature = "curved"
+    elif max_step_fraction >= 0.6:
+        signature = "step-like"
+    else:
+        signature = "smooth-monotone"
+    return signature, turning_points, max_step_fraction
+
+
 def centerline_mode_core_sweep(
     retained_weights: tuple[float, ...] = (0.75, 0.8, 0.85, 0.9, 0.95, 1.0),
     amplitudes: tuple[float, ...] = (0.0, 0.5, 1.0, 1.5, 2.0),
@@ -8726,6 +8788,9 @@ def centerline_mode_core_sweep(
             centers = tuple(
                 center + amplitude * mode_component
                 for center, mode_component in zip(base_centers, mode_vector)
+            )
+            signature, turning_points, max_step_fraction = centerline_mode_invariants(
+                centers,
             )
             profile = build_profile_from_centers_and_spans(xs, centers, base_spans)
             sweep_nodes = build_nodes_from_interval_profile(profile)
@@ -8760,6 +8825,9 @@ def centerline_mode_core_sweep(
                             amplitude=amplitude,
                             rule_family=rule_family,
                             retained_weight=retained_weight,
+                            signature=signature,
+                            turning_points=turning_points,
+                            max_step_fraction=max_step_fraction,
                             regime=projection_core_regime(case_core_row),
                             selected_rule=case_core_row.selected_rule,
                             selected_in_core=case_core_row.selected_in_core,
@@ -8788,6 +8856,7 @@ def centerline_mode_core_sweep(
                         mode=mode_name,
                         amplitude=amplitude,
                         rule_family=rule_family,
+                        signature=family_rows[0].signature,
                         cases=len(family_rows),
                         selected_in_core_cases=sum(row.selected_in_core for row in family_rows),
                         empty_cases=sum(row.regime == "empty" for row in family_rows),
@@ -8806,6 +8875,66 @@ def centerline_mode_core_sweep(
     rows.sort(key=lambda row: (row.rule_family, row.mode, row.amplitude, row.retained_weight))
     aggregate_rows.sort(key=lambda row: (row.rule_family, row.mode, row.amplitude))
     return rows, aggregate_rows
+
+
+def centerline_invariant_analysis(
+    mode_rows: list[CenterlineModeSweepRow],
+) -> tuple[list[CenterlineInvariantAggregateRow], list[CenterlineInvariantComparisonRow]]:
+    grouped_aggregate: DefaultDict[tuple[str, str, bool], list[CenterlineModeSweepRow]] = defaultdict(list)
+    grouped_comparison: DefaultDict[tuple[str, float, str, bool], list[CenterlineModeSweepRow]] = defaultdict(list)
+
+    for row in mode_rows:
+        grouped_aggregate[(row.rule_family, row.signature, row.crosses_midline)].append(row)
+        grouped_comparison[(row.rule_family, row.center_variation, row.signature, row.crosses_midline)].append(row)
+
+    aggregate_rows: list[CenterlineInvariantAggregateRow] = []
+    for (rule_family, signature, crosses_midline), rows in grouped_aggregate.items():
+        aggregate_rows.append(
+            CenterlineInvariantAggregateRow(
+                rule_family=rule_family,
+                signature=signature,
+                crosses_midline=crosses_midline,
+                cases=len(rows),
+                selected_in_core_cases=sum(row.selected_in_core for row in rows),
+                empty_cases=sum(row.regime == "empty" for row in rows),
+                avg_core_count=sum(row.core_count for row in rows) / len(rows),
+                avg_center_variation=sum(row.center_variation for row in rows) / len(rows),
+            )
+        )
+
+    comparison_rows: list[CenterlineInvariantComparisonRow] = []
+    for (rule_family, center_variation, signature, crosses_midline), rows in grouped_comparison.items():
+        comparison_rows.append(
+            CenterlineInvariantComparisonRow(
+                rule_family=rule_family,
+                center_variation=center_variation,
+                signature=signature,
+                crosses_midline=crosses_midline,
+                cases=len(rows),
+                selected_in_core_cases=sum(row.selected_in_core for row in rows),
+                empty_cases=sum(row.regime == "empty" for row in rows),
+                avg_core_count=sum(row.core_count for row in rows) / len(rows),
+            )
+        )
+
+    aggregate_rows.sort(
+        key=lambda row: (
+            row.rule_family,
+            -row.selected_in_core_cases,
+            row.empty_cases,
+            row.signature,
+            row.crosses_midline,
+        )
+    )
+    comparison_rows.sort(
+        key=lambda row: (
+            row.rule_family,
+            row.center_variation,
+            row.signature,
+            row.crosses_midline,
+        )
+    )
+    return aggregate_rows, comparison_rows
 
 
 def random_rediscovery_limit_sweep_summary(
@@ -10694,6 +10823,50 @@ def render_centerline_mode_case_table(
             f"{('Y' if row.selected_in_core else 'n'):<8} | "
             f"{row.core_count:>2}/{row.union_count:<5} | "
             f"{row.selected_rule}"
+        )
+    return "\n".join(lines)
+
+
+def render_centerline_invariant_aggregate_table(
+    rows: list[CenterlineInvariantAggregateRow],
+    limit: int = 12,
+) -> str:
+    lines = [
+        "family   | signature       | cross | cases | sel core | empty | avg core | avg cvar",
+        "---------+-----------------+-------+-------+----------+-------+----------+---------",
+    ]
+    for row in rows[:limit]:
+        lines.append(
+            f"{row.rule_family:<8} | "
+            f"{row.signature:<15} | "
+            f"{('Y' if row.crosses_midline else 'n'):<5} | "
+            f"{row.cases:>5} | "
+            f"{row.selected_in_core_cases:>8} | "
+            f"{row.empty_cases:>5} | "
+            f"{row.avg_core_count:>8.2f} | "
+            f"{row.avg_center_variation:>7.2f}"
+        )
+    return "\n".join(lines)
+
+
+def render_centerline_invariant_comparison_table(
+    rows: list[CenterlineInvariantComparisonRow],
+    limit: int = 16,
+) -> str:
+    lines = [
+        "family   | cvar | signature       | cross | cases | sel core | empty | avg core",
+        "---------+------+-----------------+-------+-------+----------+-------+---------",
+    ]
+    for row in rows[:limit]:
+        lines.append(
+            f"{row.rule_family:<8} | "
+            f"{row.center_variation:>4.1f} | "
+            f"{row.signature:<15} | "
+            f"{('Y' if row.crosses_midline else 'n'):<5} | "
+            f"{row.cases:>5} | "
+            f"{row.selected_in_core_cases:>8} | "
+            f"{row.empty_cases:>5} | "
+            f"{row.avg_core_count:>7.2f}"
         )
     return "\n".join(lines)
 
@@ -12889,6 +13062,84 @@ def main() -> None:
     )
     print(
         "- So the stronger statement is now: case-core structure depends on realized roughness, but also on the symmetry class of the deformation. The roughness-core link is broader than one interpolation path, yet not reducible to roughness magnitude alone."
+    )
+    print()
+
+    print("58) Centerline-invariant mechanism test")
+    invariant_aggregate_rows, invariant_comparison_rows = centerline_invariant_analysis(
+        mode_core_rows,
+    )
+    informative_comparison_rows = [
+        row
+        for row in invariant_comparison_rows
+        if sum(
+            candidate.rule_family == row.rule_family
+            and candidate.center_variation == row.center_variation
+            for candidate in invariant_comparison_rows
+        ) > 1
+    ]
+    print(
+        render_centerline_invariant_aggregate_table(
+            invariant_aggregate_rows,
+            limit=min(12, len(invariant_aggregate_rows)),
+        )
+    )
+    print()
+    print(
+        render_centerline_invariant_comparison_table(
+            informative_comparison_rows,
+            limit=min(16, len(informative_comparison_rows)),
+        )
+    )
+    print()
+    print("Interpretation:")
+    compact_cvar2 = [
+        row
+        for row in invariant_comparison_rows
+        if row.rule_family == "compact" and row.center_variation == 2.0
+    ]
+    extended_cvar6 = [
+        row
+        for row in invariant_comparison_rows
+        if row.rule_family == "extended" and row.center_variation == 6.0
+    ]
+    divergence_groups = 0
+    for rule_family in ("compact", "extended"):
+        roughness_values = sorted({row.center_variation for row in invariant_comparison_rows if row.rule_family == rule_family})
+        for roughness_value in roughness_values:
+            rows = [
+                row
+                for row in invariant_comparison_rows
+                if row.rule_family == rule_family and row.center_variation == roughness_value
+            ]
+            if len(rows) >= 2 and len({row.selected_in_core_cases for row in rows}) >= 2:
+                divergence_groups += 1
+    print(
+        "- This compares a small invariant set against raw roughness directly. The key question is whether similar roughness values still split by invariant class."
+    )
+    if compact_cvar2:
+        print(
+            f"- In `compact` at center-variation 2.0, the invariant split is already strong: "
+            + "; ".join(
+                f"{row.signature}/{('cross' if row.crosses_midline else 'no-cross')} -> {row.selected_in_core_cases}/{row.cases} sel-core"
+                for row in compact_cvar2
+            )
+            + "."
+        )
+    if extended_cvar6:
+        print(
+            f"- In `extended` at center-variation 6.0, the same thing happens: "
+            + "; ".join(
+                f"{row.signature}/{('cross' if row.crosses_midline else 'no-cross')} -> {row.selected_in_core_cases}/{row.cases} sel-core"
+                for row in extended_cvar6
+            )
+            + "."
+        )
+    print(
+        f"- Across the current mode sweep, there are {divergence_groups} roughness groups where identical center-variation still splits into different case-core outcomes by invariant class."
+    )
+    print(
+        "- So the answer is now clearer: monotone vs oscillatory and crossing vs non-crossing do explain the behavior better than roughness magnitude alone, although they still do not collapse everything to a single invariant rule."
     )
     print()
 

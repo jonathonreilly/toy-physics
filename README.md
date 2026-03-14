@@ -208,6 +208,17 @@ What the current script demonstrates:
 - In `compact`, the smoother `tilt` mode stays mostly single-selected through amplitude `1.0` (`5/6` selected-in-core), and `step` even recovers to `6/6` selected-in-core at amplitude `1.5`. By contrast, `zigzag` is already fully destructive at amplitude `0.5`, with `6/6` empty cores.
 - In `extended`, `bowl` at amplitude `1.5` gives `6/6` multi-selected cores, while `zigzag` collapses to `6/6` empty cores at amplitude `0.5` and then re-enters as `6/6` selected-in-core at amplitude `1.5`.
 - So the roughness/core link is broader than one interpolation path, but it is not reducible to roughness magnitude alone. The symmetry class of the deformation is now clearly part of the mechanism.
+- A fifteenth diagnostic then distills that mode result into a small invariant test. It groups the same fixed-span mode sweep by a simple shape signature: `smooth-monotone`, `step-like`, `curved`, `oscillatory`, plus whether the centerline crosses the midline.
+- This is the direct answer to whether those invariants explain the behavior better than raw roughness alone. In the current run, they do.
+- At the same roughness in `compact` (`center-variation = 2.0`), the outcomes split sharply by invariant class:
+  - `curved/no-cross`: `1/6` selected-in-core
+  - `smooth-monotone/cross`: `5/6`
+  - `step-like/cross`: `3/6`
+- At the same roughness in `extended` (`center-variation = 6.0`), the split is even sharper:
+  - `curved/cross`: `6/6` selected-in-core
+  - `oscillatory/no-cross`: `0/12`
+- Across the current mode sweep there are `9` roughness groups where identical center-variation still splits into different case-core outcomes by invariant class.
+- That is the strongest current mechanism statement in the repo: roughness magnitude matters, but monotone vs oscillatory and crossing vs non-crossing explain the case-core behavior better than roughness alone, without yet collapsing it to one single invariant rule.
 - With that repair in place, `extended` still produces the larger average boundary-delay span, while the reduced `compact` family keeps a slightly larger average center gap.
 - The earlier `skew-wrap` miss is now understood as a legacy reduced-family coverage bug, not as a deep compact-vs-extended ontology split.
 - The failure-mode story is still useful history: before the repair, skewed cases mostly failed by producing empty or fragmented candidate patterns, not by hitting the boundary filter, which pointed more toward pattern formation than boundary selection.
