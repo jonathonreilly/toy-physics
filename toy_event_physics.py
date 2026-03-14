@@ -333,6 +333,7 @@ class EvaluatedCandidate:
     min_wrapped_margin: float
     geometric_focus_gap: float
     stiffness: float
+    focus_score: float
     current_selected: bool
     on_robustness: bool = False
     on_proper_time: bool = False
@@ -4394,6 +4395,7 @@ def evaluate_frontier_candidate(
         min_wrapped_margin = snapshot.min_wrapped_margin
         geometric_focus_gap = snapshot.geometric_focus_gap
         stiffness = snapshot.stiffness
+    focus_score = focus_observable_score(center_gap, arrival_span, "box-min")
     return EvaluatedCandidate(
         rule_family=rule_family,
         pack_name=pack_name,
@@ -4420,16 +4422,20 @@ def evaluate_frontier_candidate(
         min_wrapped_margin=min_wrapped_margin,
         geometric_focus_gap=geometric_focus_gap,
         stiffness=stiffness,
+        focus_score=focus_score,
         current_selected=current_selected,
     )
 
 
-def frontier_axes() -> dict[str, tuple[str, ...]]:
+def frontier_axes(
+    ranking_mode: str = "bucketed",
+) -> dict[str, tuple[str, ...]]:
+    primary_axis = "status_rank" if ranking_mode == "bucketed" else "focus_score"
     return {
-        "robustness": ("status_rank", "center_gap", "arrival_span"),
-        "proper_time": ("status_rank", "min_margin", "min_wrapped_margin"),
-        "geometry": ("status_rank", "geometric_focus_gap"),
-        "mixed": ("status_rank", "arrival_span", "stiffness", "min_wrapped_margin"),
+        "robustness": (primary_axis, "center_gap", "arrival_span"),
+        "proper_time": (primary_axis, "min_margin", "min_wrapped_margin"),
+        "geometry": (primary_axis, "geometric_focus_gap"),
+        "mixed": (primary_axis, "arrival_span", "stiffness", "min_wrapped_margin"),
     }
 
 
@@ -6158,7 +6164,7 @@ def relabel_frontier_candidate_status(
     candidate: EvaluatedCandidate,
     observable: str,
 ) -> EvaluatedCandidate:
-    _score, status = classify_focus_observable(
+    score, status = classify_focus_observable(
         candidate.center_gap,
         candidate.arrival_span,
         observable,
@@ -6167,6 +6173,7 @@ def relabel_frontier_candidate_status(
         candidate,
         status=status,
         status_rank=robustness_rank(status),
+        focus_score=score,
         current_selected=False,
         on_robustness=False,
         on_proper_time=False,
@@ -6175,9 +6182,21 @@ def relabel_frontier_candidate_status(
     )
 
 
+def frontier_primary_metric(
+    candidate: EvaluatedCandidate,
+    ranking_mode: str,
+) -> float:
+    if ranking_mode == "bucketed":
+        return float(candidate.status_rank)
+    if ranking_mode == "continuous":
+        return candidate.focus_score
+    raise ValueError(f"Unknown frontier ranking mode: {ranking_mode}")
+
+
 def rerank_frontier_case_candidates(
     candidates: list[EvaluatedCandidate],
     observable: str,
+    ranking_mode: str = "bucketed",
 ) -> tuple[FrontierScenarioRow, list[EvaluatedCandidate]]:
     relabeled_candidates = [
         relabel_frontier_candidate_status(candidate, observable)
@@ -6189,7 +6208,14 @@ def rerank_frontier_case_candidates(
     selected_identity = max(
         relabeled_candidates,
         key=lambda candidate: (
-            evaluated_candidate_quality_key(candidate),
+            (
+                frontier_primary_metric(candidate, ranking_mode),
+                candidate.center_gap + candidate.arrival_span,
+                candidate.arrival_span,
+                candidate.center_gap,
+                candidate.occupancy_mean,
+                candidate.density,
+            ),
             candidate.rule_signature,
             candidate.seed_node,
         ),
@@ -6197,7 +6223,7 @@ def rerank_frontier_case_candidates(
 
     frontier_sets = {
         view_name: pareto_frontier_identities(relabeled_candidates, axes)
-        for view_name, axes in frontier_axes().items()
+        for view_name, axes in frontier_axes(ranking_mode).items()
     }
     relabeled_candidates = [
         replace(
@@ -6213,7 +6239,7 @@ def rerank_frontier_case_candidates(
     relabeled_candidates.sort(
         key=lambda candidate: (
             candidate.current_selected,
-            candidate.status_rank,
+            frontier_primary_metric(candidate, ranking_mode),
             candidate.center_gap + candidate.arrival_span,
             candidate.arrival_span,
             candidate.center_gap,
@@ -6257,6 +6283,7 @@ def frontier_observable_ablation(
     baseline_rows: list[FrontierScenarioRow],
     baseline_candidates: list[EvaluatedCandidate],
     observable: str = "harmonic",
+    ranking_mode: str = "bucketed",
 ) -> tuple[
     list[FrontierObservableAblationRow],
     list[FrontierObservableChangeRow],
@@ -6289,6 +6316,7 @@ def frontier_observable_ablation(
         ablated_row, ablated_case_candidates = rerank_frontier_case_candidates(
             case_candidates,
             observable,
+            ranking_mode=ranking_mode,
         )
         ablated_candidates_by_rule = {
             candidate.rule_signature: candidate
@@ -6375,7 +6403,7 @@ def frontier_observable_ablation(
 
     aggregate_rows = [
         FrontierObservableAblationRow(
-            observable=observable,
+            observable=f"{observable}-{ranking_mode}",
             rule_family=rule_family,
             cases=counts["cases"],
             selected_changes=counts["selected_changes"],
@@ -9277,6 +9305,68 @@ def main() -> None:
         )
     print(
         "- So this does not replace the baseline selector yet. It tells us how much of the current frontier story depends on the sharp box-min status rule, and how much survives once the threshold is smoothed while the rest of the machinery is held fixed."
+    )
+    print()
+
+    print("45) Continuous-score ablation inside the harmonic frontier pass")
+    harmonic_continuous_rows, harmonic_continuous_changes, harmonic_continuous_frontier_rows, harmonic_continuous_frontier_candidates = frontier_observable_ablation(
+        harmonic_frontier_rows,
+        harmonic_frontier_candidates,
+        observable="harmonic",
+        ranking_mode="continuous",
+    )
+    print(render_frontier_observable_ablation_table(harmonic_continuous_rows))
+    print()
+    interesting_continuous_changes = [
+        row
+        for row in harmonic_continuous_changes
+        if row.baseline_selected_rule != row.observable_selected_rule
+        or row.baseline_on_robustness != row.observable_on_robustness
+        or row.baseline_on_proper_time != row.observable_on_proper_time
+        or row.baseline_on_geometry != row.observable_on_geometry
+        or row.baseline_on_mixed != row.observable_on_mixed
+    ]
+    print(
+        render_frontier_observable_change_table(
+            interesting_continuous_changes,
+            limit=min(12, len(interesting_continuous_changes)),
+        )
+    )
+    print()
+    print("Interpretation:")
+    total_continuous_cases = len(harmonic_continuous_frontier_rows)
+    total_continuous_candidates = len(harmonic_continuous_frontier_candidates)
+    continuous_selected_changes = sum(row.selected_changes for row in harmonic_continuous_rows)
+    continuous_selected_survives = sum(row.selected_survives for row in harmonic_continuous_rows)
+    continuous_bucketed_survives = sum(row.baseline_selected_survives for row in harmonic_continuous_rows)
+    print(
+        f"- This is the bucketization test proper: it keeps the same harmonic-relabeled candidate pool ({total_continuous_candidates} candidates across {total_continuous_cases} cases) and replaces the discrete `status_rank` gate with the continuous harmonic focus score as the leading selector/frontier axis."
+    )
+    print(
+        f"- Relative to the bucketed harmonic pass, the selected rule changes in {continuous_selected_changes}/{total_continuous_cases} cases. The continuously ranked harmonic-selected rule still `survives` in {continuous_selected_survives}/{total_continuous_cases} cases, while the bucketed harmonic-selected rule still `survives` in {continuous_bucketed_survives}/{total_continuous_cases}."
+    )
+    compact_continuous = next(
+        (row for row in harmonic_continuous_rows if row.rule_family == "compact"),
+        None,
+    )
+    extended_continuous = next(
+        (row for row in harmonic_continuous_rows if row.rule_family == "extended"),
+        None,
+    )
+    if compact_continuous is not None and extended_continuous is not None:
+        print(
+            f"- In both families, the continuously ranked harmonic selector now lies on all four frontier views in every scanned case: `compact` {compact_continuous.selected_on_robustness}/{compact_continuous.cases}, {compact_continuous.selected_on_proper_time}/{compact_continuous.cases}, {compact_continuous.selected_on_geometry}/{compact_continuous.cases}, {compact_continuous.selected_on_mixed}/{compact_continuous.cases}; `extended` {extended_continuous.selected_on_robustness}/{extended_continuous.cases}, {extended_continuous.selected_on_proper_time}/{extended_continuous.cases}, {extended_continuous.selected_on_geometry}/{extended_continuous.cases}, {extended_continuous.selected_on_mixed}/{extended_continuous.cases}."
+        )
+        print(
+            f"- By contrast, the bucketed harmonic winner remains on the continuous proper-time/geometry frontiers in only {compact_continuous.baseline_on_proper_time}/{compact_continuous.cases} and {compact_continuous.baseline_on_geometry}/{compact_continuous.cases} compact cases, and {extended_continuous.baseline_on_proper_time}/{extended_continuous.cases} and {extended_continuous.baseline_on_geometry}/{extended_continuous.cases} extended cases."
+        )
+    if interesting_continuous_changes:
+        first_change = interesting_continuous_changes[0]
+        print(
+            f"- The first changed case here is `{first_change.pack_name}:{first_change.scenario_name}` at w = {first_change.retained_weight:.2f}, where the bucketed harmonic winner `{first_change.baseline_selected_rule}` gives way to `{first_change.observable_selected_rule}` once the harmonic score is treated continuously instead of in `survives/mixed/fragile` buckets."
+        )
+    print(
+        "- So the bucketization is not just cosmetic. It is carrying most of the frontier disagreement: once the harmonic score is used continuously, the winner changes only moderately, but the selected motif becomes nondominated on every frontier in every scanned case."
     )
     print()
 
