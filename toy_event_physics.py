@@ -317,6 +317,8 @@ class EvaluatedCandidate:
     ]
     search_sources: str
     seed_node: tuple[int, int]
+    survive_counts: frozenset[int]
+    birth_counts: frozenset[int]
     rule_signature: str
     persistent_nodes: int
     occupancy_mean: float
@@ -386,6 +388,38 @@ class FrontierTraceRow:
     arrival_span: float
     min_margin: float
     min_wrapped_margin: float
+
+
+@dataclass
+class PerturbationCaseRow:
+    rule_family: str
+    pack_name: str
+    scenario_name: str
+    variant_name: str
+    node_delta: int
+    base_selected_rule: str
+    perturbed_selected_rule: str
+    perturbed_status: str
+    selected_matches_base: bool
+    base_selected_alive: bool
+    robustness_overlap: bool
+    proper_time_overlap: bool
+    geometry_overlap: bool
+    mixed_overlap: bool
+
+
+@dataclass
+class PerturbationAggregateRow:
+    rule_family: str
+    variant_name: str
+    cases: int
+    survives: int
+    selected_retained: int
+    base_selected_alive: int
+    robustness_overlap: int
+    proper_time_overlap: int
+    geometry_overlap: int
+    mixed_overlap: int
 
 
 @dataclass
@@ -2047,6 +2081,124 @@ def benchmark_packs() -> tuple[tuple[str, tuple[tuple[str, set[tuple[int, int]],
             ),
         ),
     )
+
+
+def perturbation_graph_center(nodes: set[tuple[int, int]]) -> tuple[float, float]:
+    xs = [x for x, _y in nodes]
+    ys = [y for _x, y in nodes]
+    return ((min(xs) + max(xs)) / 2, (min(ys) + max(ys)) / 2)
+
+
+def removable_perturbation_nodes(
+    nodes: set[tuple[int, int]],
+    wrap_y: bool,
+) -> list[tuple[int, int]]:
+    protected_nodes = outer_boundary_nodes(nodes)
+    removable_nodes: list[tuple[int, int]] = []
+    for node in sorted(nodes):
+        if node in protected_nodes:
+            continue
+        perturbed_nodes = set(nodes)
+        perturbed_nodes.remove(node)
+        if len(connected_components(frozenset(perturbed_nodes), perturbed_nodes, wrap_y=wrap_y)) == 1:
+            removable_nodes.append(node)
+    return removable_nodes
+
+
+def addable_perturbation_nodes(
+    nodes: set[tuple[int, int]],
+    wrap_y: bool,
+) -> list[tuple[int, int]]:
+    min_x = min(x for x, _y in nodes)
+    max_x = max(x for x, _y in nodes)
+    min_y = min(y for _x, y in nodes)
+    max_y = max(y for _x, y in nodes)
+    addable_nodes: list[tuple[int, int]] = []
+    for x in range(min_x + 1, max_x):
+        for y in range(min_y + 1, max_y):
+            candidate = (x, y)
+            if candidate in nodes:
+                continue
+            augmented_nodes = set(nodes)
+            augmented_nodes.add(candidate)
+            if len(graph_neighbors(candidate, augmented_nodes, wrap_y=wrap_y)) >= 4:
+                addable_nodes.append(candidate)
+    return addable_nodes
+
+
+def deterministic_topology_perturbations(
+    nodes: set[tuple[int, int]],
+    wrap_y: bool,
+) -> tuple[tuple[str, set[tuple[int, int]], int], ...]:
+    center_x, center_y = perturbation_graph_center(nodes)
+    removable_nodes = removable_perturbation_nodes(nodes, wrap_y)
+    addable_nodes = addable_perturbation_nodes(nodes, wrap_y)
+
+    def center_remove_key(node: tuple[int, int]) -> tuple[float, float, int, int]:
+        return (
+            (node[0] - center_x) ** 2 + (node[1] - center_y) ** 2,
+            abs(node[1] - center_y),
+            node[0],
+            node[1],
+        )
+
+    def upper_remove_key(node: tuple[int, int]) -> tuple[float, float, int, int]:
+        return (
+            -float(node[1]),
+            abs(node[0] - center_x),
+            (node[0] - center_x) ** 2 + (node[1] - center_y) ** 2,
+            node[0],
+        )
+
+    def lower_remove_key(node: tuple[int, int]) -> tuple[float, float, int, int]:
+        return (
+            float(node[1]),
+            abs(node[0] - center_x),
+            (node[0] - center_x) ** 2 + (node[1] - center_y) ** 2,
+            node[0],
+        )
+
+    def pocket_add_key(node: tuple[int, int]) -> tuple[float, float, int, int]:
+        augmented_nodes = set(nodes)
+        augmented_nodes.add(node)
+        return (
+            -float(len(graph_neighbors(node, augmented_nodes, wrap_y=wrap_y))),
+            (node[0] - center_x) ** 2 + (node[1] - center_y) ** 2,
+            node[0],
+            node[1],
+        )
+
+    variants: list[tuple[str, set[tuple[int, int]], int]] = []
+    if removable_nodes:
+        center_remove = min(removable_nodes, key=center_remove_key)
+        upper_remove = min(removable_nodes, key=upper_remove_key)
+        lower_remove = min(removable_nodes, key=lower_remove_key)
+        variants.append(("center-punch", set(nodes) - {center_remove}, -1))
+        if addable_nodes:
+            pocket_add = min(addable_nodes, key=pocket_add_key)
+            variants.append(
+                (
+                    "center-shift",
+                    (set(nodes) - {center_remove}) | {pocket_add},
+                    0,
+                )
+            )
+        variants.extend(
+            (
+                ("upper-punch", set(nodes) - {upper_remove}, -1),
+                ("lower-punch", set(nodes) - {lower_remove}, -1),
+            )
+        )
+
+    deduped_variants: list[tuple[str, set[tuple[int, int]], int]] = []
+    seen_node_sets: set[frozenset[tuple[int, int]]] = set()
+    for variant_name, perturbed_nodes, node_delta in variants:
+        identity = frozenset(perturbed_nodes)
+        if identity in seen_node_sets:
+            continue
+        seen_node_sets.add(identity)
+        deduped_variants.append((variant_name, perturbed_nodes, node_delta))
+    return tuple(deduped_variants[:2])
 
 
 def run_family_sweep(
@@ -3724,6 +3876,8 @@ def evaluate_frontier_candidate(
         candidate_identity=candidate_identity_key(candidate),
         search_sources=search_sources,
         seed_node=candidate.seed_node,
+        survive_counts=candidate.survive_counts,
+        birth_counts=candidate.birth_counts,
         rule_signature=format_rule_signature(
             candidate.survive_counts,
             candidate.birth_counts,
@@ -3999,6 +4153,148 @@ def collect_raw_frontier_pool(
         primary_best_identity=primary_best_identity,
         fallback_best_identity=fallback_best_identity,
         rescue_identities=tuple(dict.fromkeys(rescue_identity_list)),
+    )
+
+
+def collect_restricted_frontier_pool(
+    nodes: set[tuple[int, int]],
+    wrap_y: bool,
+    count_options: tuple[frozenset[int], ...],
+    allowed_rule_pairs: tuple[tuple[frozenset[int], frozenset[int]], ...],
+) -> RawFrontierPool:
+    if not allowed_rule_pairs:
+        return collect_raw_frontier_pool(nodes, wrap_y, count_options)
+
+    xs = [x for x, _y in nodes]
+    ys = [y for _x, y in nodes]
+    graph_center = ((min(xs) + max(xs)) / 2, (min(ys) + max(ys)) / 2)
+    pooled_candidates: dict[
+        tuple[frozenset[int], frozenset[int], frozenset[tuple[int, int]]],
+        RuleCandidate,
+    ] = {}
+    candidate_sources: dict[
+        tuple[frozenset[int], frozenset[int], frozenset[tuple[int, int]]],
+        str,
+    ] = {}
+
+    search_specs = (
+        (
+            "primary",
+            dict(
+                evolution_steps=8,
+                sample_window=3,
+                occupancy_threshold=2 / 3,
+                min_component_fraction=0.9,
+                preferred_rule_pairs=allowed_rule_pairs,
+                exact_rule_pairs=allowed_rule_pairs,
+                preferred_bonus=0.05,
+                seed_builders=(point_seed_builder,),
+            ),
+        ),
+        (
+            "fallback",
+            dict(
+                evolution_steps=10,
+                sample_window=4,
+                occupancy_threshold=0.6,
+                min_component_fraction=0.7,
+                preferred_rule_pairs=allowed_rule_pairs,
+                exact_rule_pairs=allowed_rule_pairs,
+                preferred_bonus=0.08,
+                seed_builders=(point_seed_builder, cluster_seed_builder),
+            ),
+        ),
+    )
+
+    primary_best_identity = None
+    fallback_best_identity = None
+    for source_label, search_kwargs in search_specs:
+        collected_candidates, _diagnostics = collect_self_maintenance_candidates(
+            nodes,
+            count_options=count_options,
+            wrap_y=wrap_y,
+            **search_kwargs,
+        )
+        if collected_candidates:
+            best_identity = candidate_identity_key(collected_candidates[0])
+            if source_label == "primary":
+                primary_best_identity = best_identity
+            else:
+                fallback_best_identity = best_identity
+        for candidate in collected_candidates:
+            identity = candidate_identity_key(candidate)
+            if identity not in pooled_candidates:
+                pooled_candidates[identity] = candidate
+                candidate_sources[identity] = source_label
+            else:
+                candidate_sources[identity] = merge_candidate_sources(
+                    candidate_sources[identity],
+                    source_label,
+                )
+
+    best_identity_by_signature: dict[
+        str,
+        tuple[frozenset[int], frozenset[int], frozenset[tuple[int, int]]],
+    ] = {}
+    best_signature_key: dict[str, tuple[float, ...]] = {}
+    merged_signature_sources: dict[str, str] = {}
+    for identity, candidate in pooled_candidates.items():
+        rule_signature = format_rule_signature(
+            candidate.survive_counts,
+            candidate.birth_counts,
+        )
+        merged_signature_sources[rule_signature] = merge_candidate_sources(
+            merged_signature_sources.get(rule_signature, ""),
+            candidate_sources[identity],
+        )
+        search_key = candidate_search_key(
+            candidate,
+            graph_center=graph_center,
+            preferred_set=set(allowed_rule_pairs),
+            preferred_bonus=0.0,
+        )
+        if rule_signature not in best_signature_key or search_key > best_signature_key[rule_signature]:
+            best_signature_key[rule_signature] = search_key
+            best_identity_by_signature[rule_signature] = identity
+
+    signature_pooled_candidates = {
+        identity: pooled_candidates[identity]
+        for identity in best_identity_by_signature.values()
+    }
+    signature_candidate_sources = {
+        identity: merged_signature_sources[
+            format_rule_signature(
+                signature_pooled_candidates[identity].survive_counts,
+                signature_pooled_candidates[identity].birth_counts,
+            )
+        ]
+        for identity in signature_pooled_candidates
+    }
+
+    if primary_best_identity is not None:
+        primary_signature = format_rule_signature(
+            pooled_candidates[primary_best_identity].survive_counts,
+            pooled_candidates[primary_best_identity].birth_counts,
+        )
+        primary_best_identity = best_identity_by_signature[primary_signature]
+    if fallback_best_identity is not None:
+        fallback_signature = format_rule_signature(
+            pooled_candidates[fallback_best_identity].survive_counts,
+            pooled_candidates[fallback_best_identity].birth_counts,
+        )
+        fallback_best_identity = best_identity_by_signature[fallback_signature]
+
+    all_signature_identities = tuple(dict.fromkeys(signature_pooled_candidates.keys()))
+    return RawFrontierPool(
+        selector_candidates=dict(signature_pooled_candidates),
+        primary_selector_identity=primary_best_identity,
+        fallback_selector_identity=fallback_best_identity,
+        rescue_selector_identities=all_signature_identities,
+        pooled_candidates=signature_pooled_candidates,
+        candidate_sources=signature_candidate_sources,
+        primary_best_identity=primary_best_identity,
+        fallback_best_identity=fallback_best_identity,
+        rescue_identities=all_signature_identities,
     )
 
 
@@ -4297,6 +4593,153 @@ def summarize_frontier_aggregates(
             row.rule_signature,
         ),
     )
+
+
+def frontier_signature_sets(
+    candidates: list[EvaluatedCandidate],
+) -> dict[str, set[str]]:
+    return {
+        "robustness": {candidate.rule_signature for candidate in candidates if candidate.on_robustness},
+        "proper_time": {candidate.rule_signature for candidate in candidates if candidate.on_proper_time},
+        "geometry": {candidate.rule_signature for candidate in candidates if candidate.on_geometry},
+        "mixed": {candidate.rule_signature for candidate in candidates if candidate.on_mixed},
+    }
+
+
+def perturbation_frontier_results(
+    retained_weight: float = 1.0,
+) -> tuple[list[PerturbationCaseRow], list[PerturbationAggregateRow]]:
+    case_rows: list[PerturbationCaseRow] = []
+    grouped_rows: DefaultDict[tuple[str, str], list[PerturbationCaseRow]] = defaultdict(list)
+
+    for rule_family, count_options in family_count_options():
+        for pack_name, scenarios in benchmark_packs():
+            for scenario_name, nodes, wrap_y in scenarios:
+                base_raw_pool = collect_raw_frontier_pool(
+                    nodes,
+                    wrap_y,
+                    count_options,
+                )
+                base_evaluation_cache = build_frontier_evaluation_cache(nodes, wrap_y)
+                base_row, base_candidates = frontier_case_analysis(
+                    pack_name=pack_name,
+                    scenario_name=scenario_name,
+                    nodes=nodes,
+                    wrap_y=wrap_y,
+                    rule_family=rule_family,
+                    count_options=count_options,
+                    retained_weight=retained_weight,
+                    raw_pool=base_raw_pool,
+                    evaluation_cache=base_evaluation_cache,
+                )
+                base_signature_sets = frontier_signature_sets(base_candidates)
+                base_selected_rule = base_row.selected_rule
+                base_palette_rule_pairs = tuple(
+                    dict.fromkeys(
+                        (
+                            candidate.survive_counts,
+                            candidate.birth_counts,
+                        )
+                        for candidate in base_candidates
+                        if candidate.current_selected
+                        or candidate.on_robustness
+                        or candidate.on_proper_time
+                        or candidate.on_geometry
+                        or candidate.on_mixed
+                    )
+                )
+
+                for variant_name, perturbed_nodes, node_delta in deterministic_topology_perturbations(
+                    nodes,
+                    wrap_y,
+                ):
+                    perturbed_raw_pool = collect_restricted_frontier_pool(
+                        perturbed_nodes,
+                        wrap_y,
+                        count_options,
+                        base_palette_rule_pairs,
+                    )
+                    perturbed_evaluation_cache = build_frontier_evaluation_cache(
+                        perturbed_nodes,
+                        wrap_y,
+                    )
+                    perturbed_row, perturbed_candidates = frontier_case_analysis(
+                        pack_name=pack_name,
+                        scenario_name=scenario_name,
+                        nodes=perturbed_nodes,
+                        wrap_y=wrap_y,
+                        rule_family=rule_family,
+                        count_options=count_options,
+                        retained_weight=retained_weight,
+                        raw_pool=perturbed_raw_pool,
+                        evaluation_cache=perturbed_evaluation_cache,
+                    )
+                    perturbed_signature_sets = frontier_signature_sets(perturbed_candidates)
+                    perturbed_frontier_union = set().union(*perturbed_signature_sets.values())
+                    selected_candidate = next(
+                        (
+                            candidate
+                            for candidate in perturbed_candidates
+                            if candidate.current_selected
+                        ),
+                        None,
+                    )
+                    case_row = PerturbationCaseRow(
+                        rule_family=rule_family,
+                        pack_name=pack_name,
+                        scenario_name=scenario_name,
+                        variant_name=variant_name,
+                        node_delta=node_delta,
+                        base_selected_rule=base_selected_rule,
+                        perturbed_selected_rule=perturbed_row.selected_rule,
+                        perturbed_status=(
+                            selected_candidate.status if selected_candidate is not None else "no pattern"
+                        ),
+                        selected_matches_base=(perturbed_row.selected_rule == base_selected_rule),
+                        base_selected_alive=(base_selected_rule in perturbed_frontier_union),
+                        robustness_overlap=bool(
+                            base_signature_sets["robustness"]
+                            & perturbed_signature_sets["robustness"]
+                        ),
+                        proper_time_overlap=bool(
+                            base_signature_sets["proper_time"]
+                            & perturbed_signature_sets["proper_time"]
+                        ),
+                        geometry_overlap=bool(
+                            base_signature_sets["geometry"]
+                            & perturbed_signature_sets["geometry"]
+                        ),
+                        mixed_overlap=bool(
+                            base_signature_sets["mixed"] & perturbed_signature_sets["mixed"]
+                        ),
+                    )
+                    case_rows.append(case_row)
+                    grouped_rows[(rule_family, variant_name)].append(case_row)
+                    grouped_rows[(rule_family, "all")].append(case_row)
+
+    aggregate_rows = [
+        PerturbationAggregateRow(
+            rule_family=rule_family,
+            variant_name=variant_name,
+            cases=len(rows),
+            survives=sum(row.perturbed_status == "survives" for row in rows),
+            selected_retained=sum(row.selected_matches_base for row in rows),
+            base_selected_alive=sum(row.base_selected_alive for row in rows),
+            robustness_overlap=sum(row.robustness_overlap for row in rows),
+            proper_time_overlap=sum(row.proper_time_overlap for row in rows),
+            geometry_overlap=sum(row.geometry_overlap for row in rows),
+            mixed_overlap=sum(row.mixed_overlap for row in rows),
+        )
+        for (rule_family, variant_name), rows in grouped_rows.items()
+    ]
+    aggregate_rows.sort(
+        key=lambda row: (
+            row.rule_family,
+            row.variant_name != "all",
+            row.variant_name,
+        )
+    )
+    return case_rows, aggregate_rows
 
 
 def frontier_hard_case_trace(
@@ -5138,6 +5581,53 @@ def render_frontier_trace_table(
     return "\n".join(lines)
 
 
+def render_perturbation_aggregate_table(
+    rows: list[PerturbationAggregateRow],
+) -> str:
+    lines = [
+        "family   | variant      | cases | survives | same sel | base alive | R ovlp | P ovlp | G ovlp | M ovlp",
+        "---------+--------------+-------+----------+----------+------------+--------+--------+--------+-------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.rule_family:<8} | "
+            f"{row.variant_name:<12} | "
+            f"{row.cases:>5} | "
+            f"{row.survives:>8} | "
+            f"{row.selected_retained:>8} | "
+            f"{row.base_selected_alive:>10} | "
+            f"{row.robustness_overlap:>6} | "
+            f"{row.proper_time_overlap:>6} | "
+            f"{row.geometry_overlap:>6} | "
+            f"{row.mixed_overlap:>5}"
+        )
+    return "\n".join(lines)
+
+
+def render_perturbation_case_table(
+    rows: list[PerturbationCaseRow],
+    limit: int = 12,
+) -> str:
+    lines = [
+        "pack   | scenario         | family   | variant      | dN | base -> perturbed   | status    | same | alive | R/P/G/M",
+        "-------+------------------+----------+--------------+----+---------------------+-----------+------+-------+--------",
+    ]
+    for row in rows[:limit]:
+        lines.append(
+            f"{row.pack_name:<6} | "
+            f"{row.scenario_name:<16} | "
+            f"{row.rule_family:<8} | "
+            f"{row.variant_name:<12} | "
+            f"{row.node_delta:>2} | "
+            f"{row.base_selected_rule:<9}->{row.perturbed_selected_rule:<9} | "
+            f"{row.perturbed_status:<9} | "
+            f"{'yes' if row.selected_matches_base else 'no ':<4} | "
+            f"{'yes' if row.base_selected_alive else 'no ':<5} | "
+            f"{('Y' if row.robustness_overlap else 'n')}/{('Y' if row.proper_time_overlap else 'n')}/{('Y' if row.geometry_overlap else 'n')}/{('Y' if row.mixed_overlap else 'n')}"
+        )
+    return "\n".join(lines)
+
+
 def main() -> None:
     print("DISCRETE EVENT-NETWORK TOY MODEL")
     print()
@@ -5798,6 +6288,64 @@ def main() -> None:
             f"{sum(row.on_mixed for row in rows)}/{len(rows)} weights."
         )
     print("- That is the cleanest selector-free version of the current result: different metric views keep different motifs alive, which is why a single scalar selector still carries real interpretive weight.")
+    print()
+
+    print("26) Deterministic topology perturbation ensemble")
+    perturbation_case_rows, perturbation_aggregate_rows = perturbation_frontier_results()
+    print(render_perturbation_aggregate_table(perturbation_aggregate_rows))
+    print()
+    print("Interpretation:")
+    print("- This is the first perturbation ensemble around the benchmark graphs themselves: instead of asking only which motifs survive the hand-authored topologies, it asks which conclusions survive small deterministic node removals and shifts at the strongest retained-weight point w = 1.0.")
+    perturbation_all_rows = [row for row in perturbation_aggregate_rows if row.variant_name == "all"]
+    for row in perturbation_all_rows:
+        print(
+            f"- In `{row.rule_family}`, the perturbed selected rule still `survives` in {row.survives}/{row.cases} cases, matches the unperturbed selected rule in {row.selected_retained}/{row.cases}, and keeps the baseline selected motif alive on some perturbed frontier in {row.base_selected_alive}/{row.cases}."
+        )
+        print(
+            f"- The baseline frontier overlaps persist in robustness/proper-time/geometry/mixed for {row.robustness_overlap}/{row.cases}, {row.proper_time_overlap}/{row.cases}, {row.geometry_overlap}/{row.cases}, and {row.mixed_overlap}/{row.cases} perturbed cases."
+        )
+    print("- So this section starts turning the frontier layer into a universality test: not 'which motif wins one graph,' but 'which motif and frontier claims survive when the graph itself is nudged.'")
+    print()
+
+    print("27) Perturbation drift cases")
+    drift_rows = [
+        row
+        for row in perturbation_case_rows
+        if not row.selected_matches_base
+        or not row.base_selected_alive
+        or not row.mixed_overlap
+        or not row.robustness_overlap
+    ]
+    drift_rows.sort(
+        key=lambda row: (
+            row.selected_matches_base,
+            row.base_selected_alive,
+            row.mixed_overlap,
+            row.robustness_overlap,
+            row.rule_family,
+            row.pack_name,
+            row.scenario_name,
+            row.variant_name,
+        )
+    )
+    print(render_perturbation_case_table(drift_rows, limit=min(16, len(drift_rows))))
+    print()
+    print("Interpretation:")
+    if drift_rows:
+        selected_drift = [row for row in drift_rows if not row.selected_matches_base]
+        fragile_drift = [row for row in drift_rows if not row.base_selected_alive]
+        print(
+            f"- There are {len(drift_rows)} perturbed cases where either the selected motif changes or one of the baseline frontier-overlap claims drops out."
+        )
+        if selected_drift:
+            print(
+                f"- In {len(selected_drift)} of them, the selected motif itself changes under perturbation, which is the cleanest sign that some current conclusions are still topology-sensitive."
+            )
+        if fragile_drift:
+            print(
+                f"- In {len(fragile_drift)} cases, the unperturbed selected motif is not even frontier-alive after perturbation, which is a stronger failure than a simple selector switch."
+            )
+    print("- This is exactly the kind of pressure test we wanted: it tells us which current stories are genuinely topology-robust and which ones are still partly artifacts of the specific benchmark graphs.")
     print()
 
     print("REMAINING CHEATS")
