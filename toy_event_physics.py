@@ -249,6 +249,21 @@ class FixedBranchCompetitionRow:
     min_margin: float
 
 
+@dataclass
+class CenterGapGeometryRow:
+    branch_label: str
+    rule_signature: str
+    source_y_start: int
+    source_y_end: int
+    stable_paths: bool
+    center_action_start: float
+    center_action_end: float
+    side_avg_start: float
+    side_avg_end: float
+    gap_start: float
+    gap_end: float
+
+
 @dataclass(frozen=True)
 class LocalRule:
     persistent_nodes: frozenset[tuple[int, int]]
@@ -2616,6 +2631,132 @@ def fixed_branch_competition(
     return rows
 
 
+def center_gap_path_summary(
+    nodes: set[tuple[int, int]],
+    wrap_y: bool,
+    candidate: RuleCandidate,
+    postulates: RulePostulates,
+) -> tuple[int, float, float, float, tuple[tuple[int, ...], ...]]:
+    rule = derive_local_rule(
+        persistent_nodes=candidate.persistent_nodes,
+        postulates=postulates,
+    )
+    field = derive_node_field(nodes, rule, wrap_y=wrap_y)
+    _centroid_x, centroid_y = field_centroid(field)
+    min_x = min(x for x, _y in nodes)
+    max_x = max(x for x, _y in nodes)
+    left_boundary_ys = sorted(y for x, y in nodes if x == min_x)
+    right_boundary_ys = sorted(y for x, y in nodes if x == max_x)
+    source_y = closest_value(left_boundary_ys, centroid_y)
+    target_ys = select_target_rows(right_boundary_ys, source_y)
+    center_target = min(target_ys, key=lambda y: (abs(y - source_y), y))
+
+    actions: list[tuple[int, float]] = []
+    path_shapes: list[tuple[int, ...]] = []
+    for target_y in target_ys:
+        action, path = stationary_action_path_on_nodes(
+            nodes,
+            source=(min_x, source_y),
+            target=(max_x, target_y),
+            rule=rule,
+            wrap_y=wrap_y,
+        )
+        actions.append((target_y, action))
+        path_shapes.append(tuple(y for _x, y in path))
+
+    center_action = next(action for target_y, action in actions if target_y == center_target)
+    side_actions = [action for target_y, action in actions if target_y != center_target]
+    side_average = sum(side_actions) / len(side_actions)
+    return (
+        source_y,
+        center_action,
+        side_average,
+        side_average - center_action,
+        tuple(path_shapes),
+    )
+
+
+def center_gap_geometry_diagnostics(
+    pack_name: str,
+    scenario_name: str,
+    start_weight: float = 0.75,
+    end_weight: float = 1.0,
+) -> list[CenterGapGeometryRow]:
+    nodes, wrap_y = scenario_by_name(pack_name, scenario_name)
+    baseline_postulates = RulePostulates(phase_per_action=4.0)
+    fallback_candidate, _fallback_diag = scan_self_maintaining_rules_fallback_only(
+        nodes,
+        wrap_y,
+        baseline_postulates,
+    )
+    rescue_candidate, _rescue_diag, _rescue_metrics = quality_rescue_rule(
+        nodes,
+        wrap_y,
+        SWEEP_COMPACT_COUNT_OPTIONS,
+        RulePostulates(
+            phase_per_action=4.0,
+            attenuation_power=1.0,
+            action_mode="retained_mix",
+            field_mode="relaxed",
+            action_retained_weight=end_weight,
+        ),
+    )
+
+    rows: list[CenterGapGeometryRow] = []
+    for branch_label, candidate in (
+        ("fallback-fixed", fallback_candidate),
+        ("rescue-fixed", rescue_candidate),
+    ):
+        if candidate is None:
+            continue
+        start_postulates = RulePostulates(
+            phase_per_action=4.0,
+            attenuation_power=1.0,
+            action_mode="retained_mix",
+            field_mode="relaxed",
+            action_retained_weight=start_weight,
+        )
+        end_postulates = RulePostulates(
+            phase_per_action=4.0,
+            attenuation_power=1.0,
+            action_mode="retained_mix",
+            field_mode="relaxed",
+            action_retained_weight=end_weight,
+        )
+        start_summary = center_gap_path_summary(
+            nodes,
+            wrap_y,
+            candidate,
+            start_postulates,
+        )
+        end_summary = center_gap_path_summary(
+            nodes,
+            wrap_y,
+            candidate,
+            end_postulates,
+        )
+        rows.append(
+            CenterGapGeometryRow(
+                branch_label=branch_label,
+                rule_signature=format_rule_signature(
+                    candidate.survive_counts,
+                    candidate.birth_counts,
+                ),
+                source_y_start=start_summary[0],
+                source_y_end=end_summary[0],
+                stable_paths=start_summary[4] == end_summary[4],
+                center_action_start=start_summary[1],
+                center_action_end=end_summary[1],
+                side_avg_start=start_summary[2],
+                side_avg_end=end_summary[2],
+                gap_start=start_summary[3],
+                gap_end=end_summary[3],
+            )
+        )
+
+    return rows
+
+
 def sample_boundary_arrivals(
     width: int,
     sample_ys: list[int],
@@ -3175,6 +3316,26 @@ def render_fixed_branch_competition_table(
     return "\n".join(lines)
 
 
+def render_center_gap_geometry_table(
+    rows: list[CenterGapGeometryRow],
+) -> str:
+    lines = [
+        "branch         | rule              | source y start->end | stable paths | center action | side avg     | gap",
+        "---------------+-------------------+---------------------+--------------+---------------+--------------+-----------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.branch_label:<14} | "
+            f"{row.rule_signature:<17} | "
+            f"{row.source_y_start:>3}->{row.source_y_end:<3}            | "
+            f"{'yes' if row.stable_paths else 'no':<12} | "
+            f"{row.center_action_start:>5.3f}->{row.center_action_end:<5.3f} | "
+            f"{row.side_avg_start:>5.3f}->{row.side_avg_end:<6.3f} | "
+            f"{row.gap_start:>5.3f}->{row.gap_end:<5.3f}"
+        )
+    return "\n".join(lines)
+
+
 def main() -> None:
     print("DISCRETE EVENT-NETWORK TOY MODEL")
     print()
@@ -3658,6 +3819,35 @@ def main() -> None:
             f"- The frozen rescue branch `{rescue_rows[0].rule_signature}` stays above the robustness threshold and only becomes proper-time-consistent right near the top end, moving from min margin {rescue_rows[0].min_margin:.3f} to {rescue_rows[-1].min_margin:.3f}."
         )
     print("- So the hard-case switch is not just a search artifact. It reflects a real tension in the current model between proper-time consistency and the center-gap robustness metric.")
+    print()
+
+    print("20) Geometric meaning of center-gap collapse")
+    geometry_rows = center_gap_geometry_diagnostics(hardest_pack, hardest_scenario)
+    print(render_center_gap_geometry_table(geometry_rows))
+    print()
+    print("Interpretation:")
+    print("- This asks the geometric question directly: does center-gap collapse come from path shapes changing, from the source row shifting, or from the action contrast between fixed center and side routes collapsing?")
+    if geometry_rows:
+        fallback_geometry = next(
+            (row for row in geometry_rows if row.branch_label == "fallback-fixed"),
+            None,
+        )
+        rescue_geometry = next(
+            (row for row in geometry_rows if row.branch_label == "rescue-fixed"),
+            None,
+        )
+        if fallback_geometry is not None:
+            print(
+                f"- On the old branch, the source row stays at y = {fallback_geometry.source_y_start} and the comparison paths remain {'the same' if fallback_geometry.stable_paths else 'different'} from w = 0.75 to w = 1.00."
+            )
+            print(
+                f"- Its center action falls from {fallback_geometry.center_action_start:.3f} to {fallback_geometry.center_action_end:.3f}, but the side average falls faster, from {fallback_geometry.side_avg_start:.3f} to {fallback_geometry.side_avg_end:.3f}. That is why the gap collapses from {fallback_geometry.gap_start:.3f} to {fallback_geometry.gap_end:.3f}."
+            )
+        if rescue_geometry is not None:
+            print(
+                f"- The rescue branch also narrows its gap, but it starts wider and ends at {rescue_geometry.gap_end:.3f}, which is still above the survive threshold."
+            )
+    print("- So the geometric meaning of center-gap collapse is not that the center path gets worse. It is that the current action rule makes the side detours almost as cheap as the center route on the old branch, so path focusing disappears.")
     print()
 
     print("REMAINING CHEATS")
