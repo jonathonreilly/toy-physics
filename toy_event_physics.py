@@ -2370,6 +2370,112 @@ def random_topology_perturbations(
     return tuple(deduped_variants)
 
 
+def column_interval_profile(
+    nodes: set[tuple[int, int]],
+) -> dict[int, tuple[int, int]]:
+    return {
+        x: (
+            min(y for node_x, y in nodes if node_x == x),
+            max(y for node_x, y in nodes if node_x == x),
+        )
+        for x in sorted({x for x, _y in nodes})
+    }
+
+
+def build_nodes_from_interval_profile(
+    profile: dict[int, tuple[int, int]],
+) -> set[tuple[int, int]]:
+    return {
+        (x, y)
+        for x, (low_y, high_y) in profile.items()
+        for y in range(low_y, high_y + 1)
+    }
+
+
+def randomized_geometry_variants(
+    pack_name: str,
+    scenario_name: str,
+    nodes: set[tuple[int, int]],
+    wrap_y: bool,
+    variant_limit: int = 2,
+) -> tuple[tuple[str, set[tuple[int, int]], int], ...]:
+    del wrap_y  # geometry generation itself is independent of wrap mode
+    base_profile = column_interval_profile(nodes)
+    xs = sorted(base_profile)
+    base_spans = [high_y - low_y for low_y, high_y in base_profile.values()]
+    min_span = max(4, min(base_spans) - 1)
+    max_shift = 2 if max(base_spans) >= 8 else 1
+
+    deduped_variants: list[tuple[str, set[tuple[int, int]], int]] = []
+    seen_node_sets: set[frozenset[tuple[int, int]]] = {frozenset(nodes)}
+
+    for attempt_index in range(variant_limit * 6):
+        rng = random.Random(
+            stable_random_seed(
+                pack_name,
+                scenario_name,
+                "geometry",
+                str(attempt_index),
+            )
+        )
+        new_profile: dict[int, tuple[int, int]] = {}
+        prev_center_delta = 0
+        prev_span_delta = 0
+
+        for x in xs:
+            base_low, base_high = base_profile[x]
+            base_center = (base_low + base_high) / 2
+            base_span = base_high - base_low
+
+            prev_center_delta = max(
+                -max_shift,
+                min(max_shift, prev_center_delta + rng.choice((-1, 0, 1))),
+            )
+            prev_span_delta = max(
+                -1,
+                min(1, prev_span_delta + rng.choice((-1, 0, 1))),
+            )
+
+            new_center = base_center + prev_center_delta
+            new_span = max(min_span, base_span + prev_span_delta)
+            low_y = math.floor(new_center - new_span / 2)
+            high_y = low_y + new_span
+
+            if new_profile:
+                prev_x = xs[xs.index(x) - 1]
+                prev_low, prev_high = new_profile[prev_x]
+                if low_y > prev_high + 1:
+                    shift = low_y - (prev_high + 1)
+                    low_y -= shift
+                    high_y -= shift
+                if high_y < prev_low - 1:
+                    shift = (prev_low - 1) - high_y
+                    low_y += shift
+                    high_y += shift
+
+            new_profile[x] = (low_y, high_y)
+
+        perturbed_nodes = build_nodes_from_interval_profile(new_profile)
+        identity = frozenset(perturbed_nodes)
+        if identity in seen_node_sets:
+            continue
+        if len(connected_components(identity, perturbed_nodes, wrap_y=False)) != 1:
+            continue
+        seen_node_sets.add(identity)
+        variant_name = f"geometry-{chr(ord('a') + len(deduped_variants))}"
+        deduped_variants.append(
+            (
+                variant_name,
+                perturbed_nodes,
+                len(perturbed_nodes) - len(nodes),
+            )
+        )
+        if len(deduped_variants) >= variant_limit:
+            break
+
+    return tuple(deduped_variants)
+
+
 def run_family_sweep(
     count_options: tuple[frozenset[int], ...],
     rule_family: str,
@@ -5279,6 +5385,34 @@ def random_rediscovery_perturbation_frontier_summary(
     )
 
 
+def geometry_randomization_frontier_summary(
+    retained_weight: float = 1.0,
+    drift_limit: int = 16,
+    variant_limit: int = 2,
+    rediscovery_limit: int = 1,
+) -> tuple[list[PerturbationAggregateRow], list[PerturbationCaseRow]]:
+    return perturbation_frontier_summary_for_factory(
+        lambda pack_name, scenario_name, nodes, wrap_y: randomized_geometry_variants(
+            pack_name,
+            scenario_name,
+            nodes,
+            wrap_y,
+            variant_limit=variant_limit,
+        ),
+        retained_weight=retained_weight,
+        drift_limit=drift_limit,
+        perturbed_pool_builder=lambda nodes, wrap_y, count_options, allowed_rule_pairs: (
+            collect_limited_rediscovery_frontier_pool(
+                nodes,
+                wrap_y,
+                count_options,
+                allowed_rule_pairs,
+                rediscovery_limit=rediscovery_limit,
+            )
+        ),
+    )
+
+
 def random_rediscovery_limit_sweep_summary(
     retained_weight: float = 1.0,
     variant_limit: int = 3,
@@ -7748,6 +7882,64 @@ def main() -> None:
             f"- In `{rule_family}`, moving from rediscovery limit {first_row.rediscovery_limit} to {last_row.rediscovery_limit} changes survives from {first_row.survives}/{first_row.cases} to {last_row.survives}/{last_row.cases}, mixed-overlap from {first_row.mixed_overlap}/{first_row.cases} to {last_row.mixed_overlap}/{last_row.cases}, and robustness-overlap from {first_row.robustness_overlap}/{first_row.cases} to {last_row.robustness_overlap}/{last_row.cases}."
         )
     print("- This is the cleanest cheat-removal readout on the random side so far: if the mixed frontier saturates while the stronger overlap claims erode, that means the selector-free family is more structural than the exact inherited frontier identity, but not completely independent of palette restrictions.")
+    print()
+
+    print("37) Geometry-randomized benchmark ensemble")
+    geometry_variant_limit = 2
+    geometry_rediscovery_limit = 1
+    geometry_aggregate_rows, geometry_drift_rows = geometry_randomization_frontier_summary(
+        variant_limit=geometry_variant_limit,
+        rediscovery_limit=geometry_rediscovery_limit,
+    )
+    print(render_perturbation_aggregate_table(geometry_aggregate_rows))
+    print()
+    print("Interpretation:")
+    print(
+        f"- This attacks the hand-authored graph-family cheat more directly: instead of only punching or shifting nodes inside the benchmark packs, it jitters the whole column profile of each graph into {geometry_variant_limit} deterministic whole-shape variants and then allows the minimal rediscovery limit {geometry_rediscovery_limit} that already repaired random fragility."
+    )
+    geometry_all_rows = [
+        row for row in geometry_aggregate_rows if row.variant_name == "all"
+    ]
+    for row in geometry_all_rows:
+        print(
+            f"- In `{row.rule_family}`, the geometry-randomized cases still `survive` in {row.survives}/{row.cases}, keep mixed-frontier overlap in {row.mixed_overlap}/{row.cases}, and keep robustness overlap in {row.robustness_overlap}/{row.cases}."
+        )
+        print(
+            f"- The unperturbed selected motif stays frontier-alive in {row.base_selected_alive}/{row.cases}, while the exact selected winner is retained in only {row.selected_retained}/{row.cases} cases."
+        )
+    print("- If this section holds up, it is stronger than the earlier node-perturbation story: it says the mixed-frontier result is surviving not just local edits to fixed graphs, but small coherent deformations of the graph family itself.")
+    print()
+
+    print("38) Geometry-randomized drift cases")
+    print(
+        render_perturbation_case_table(
+            geometry_drift_rows,
+            limit=min(16, len(geometry_drift_rows)),
+        )
+    )
+    print()
+    print("Interpretation:")
+    if geometry_drift_rows:
+        geometry_selected_drift = [
+            row for row in geometry_drift_rows if not row.selected_matches_base
+        ]
+        geometry_overlap_drift = [
+            row
+            for row in geometry_drift_rows
+            if not row.robustness_overlap or not row.base_selected_alive
+        ]
+        print(
+            f"- There are {len(geometry_drift_rows)} geometry-randomized cases where either the selected motif changes or a stronger overlap claim drops out."
+        )
+        if geometry_selected_drift:
+            print(
+                f"- In {len(geometry_selected_drift)} of them, the exact winner changes under whole-shape jitter, which keeps reinforcing that exact-winner identity is much more fragile than the selector-free mixed frontier."
+            )
+        if geometry_overlap_drift:
+            print(
+                f"- In {len(geometry_overlap_drift)} of them, stronger overlap claims also break, which tells us whole-family geometry is still a real source of fragility even after minimal rediscovery."
+            )
+    print("- This is the new pressure point on the graph-family cheat: if the mixed frontier stays strong here too, then a lot of the current result is surviving beyond the specific hand-authored pack shapes.")
     print()
 
     print("REMAINING CHEATS")

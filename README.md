@@ -75,7 +75,7 @@ What the current script implements:
 - Models `measurement` as durable record formation in a two-slit-style path network.
 - Uses one shared local edge rule for the causal-shell graph, the asynchronous continuation model, and the slit graph.
 - Makes the local rule explicit through a small set of postulates and a derived `LocalRule` object.
-- Uses bounded-memory summary passes for the deterministic, pairwise cross-weight, high-end weight-ladder, tracked-palette random, and limited-rediscovery random perturbation ensembles so the selector-free perturbation diagnostics can run without materializing every case row at once.
+- Uses bounded-memory summary passes for the deterministic, pairwise cross-weight, high-end weight-ladder, tracked-palette random, limited-rediscovery random, and geometry-randomized perturbation ensembles so the selector-free perturbation diagnostics can run without materializing every case row at once.
 - Pressure-tests two of the biggest cheats:
   - why `positive weights only` are too weak for interference
   - why the `square rule` is less arbitrary once reversible linear mixing is required
@@ -125,6 +125,9 @@ What the current script demonstrates:
 - A rediscovery-limit sweep over `0, 1, 2, 3` makes that tradeoff more precise. One extra rediscovered motif is already enough to repair the last random `fragile` cases in both families, and increasing the limit beyond `1` does not improve selected-rule retention, base selected-motif survival, or mixed-frontier overlap.
 - In `compact`, the sweep goes `survives 38 -> 39`, `mixed 38 -> 38`, and `robustness 30 -> 29` from limit `0` to `3`. In `extended`, it goes `survives 38 -> 39`, `mixed 39 -> 39`, and `robustness 30 -> 26`. So the mixed frontier saturates early, while the stricter overlap notions erode as more local novelty is allowed back in.
 - That is a strong cheat-removal clue: the mixed frontier looks like a more structural object than the exact inherited frontier identity, but the stronger overlap claims are still partly propped up by palette restriction.
+- A geometry-randomized benchmark ensemble then pushes on the graph-family cheat more directly. Instead of only punching or shifting nodes inside the existing packs, it jitters the entire column profile of each graph into two deterministic whole-shape variants and then applies the minimal rediscovery limit `1`.
+- Under that whole-shape geometry jitter, `compact` still `survives` in `25/26` cases and keeps `mixed`-frontier overlap in `25/26`, while `extended` still `survives` in `26/26` and keeps `mixed` overlap in `26/26`. By contrast, exact selected-winner retention drops to `9/26` in `compact` and `6/26` in `extended`, with robustness overlap at `17/26` and `16/26`.
+- That is one of the strongest results in the repo now: even when we stop testing only local node edits and start deforming the whole benchmark shape, the mixed frontier still looks much more stable than the exact winner.
 - With that repair in place, `extended` still produces the larger average boundary-delay span, while the reduced `compact` family keeps a slightly larger average center gap.
 - The earlier `skew-wrap` miss is now understood as a legacy reduced-family coverage bug, not as a deep compact-vs-extended ontology split.
 - The failure-mode story is still useful history: before the repair, skewed cases mostly failed by producing empty or fragmented candidate patterns, not by hitting the boundary filter, which pointed more toward pattern formation than boundary selection.
@@ -141,6 +144,7 @@ What is still cheating:
 - The current perturbation ensemble is still a first pass: it uses only two deterministic graph nudges per scenario, tracks the unperturbed frontier palette instead of doing open-ended motif rediscovery on every perturbed graph, and only evaluates the strongest retained-weight point `w = 1.0`.
 - The weight-robustness checks are still local: the current pairwise comparison uses only `w = 0.95` and `w = 1.0`, and the stronger ladder check only extends that to `w = 0.90, 0.95, 1.0`, so the model is still being tested in a narrow high-end band near the spent-delay point rather than across the whole retained-weight family.
 - The random perturbation ensemble is also intentionally small and seeded: it currently samples only three random variants per scenario, and even the rediscovery-limit sweep only tests a small `0..3` band of extra locally rediscovered motifs, so it is still a first robustness probe rather than a large-scale random-graph study.
+- The geometry-randomization layer is still narrow too: it only jitters contiguous column profiles with small deterministic shifts, so it is a first deformation test of the graph family rather than a broad random-geometry generator.
 - The robustness sweep budget is also hand-chosen: smaller graphs, reduced rule families, and shorter persistence windows trade completeness for runtime.
 - Complex amplitudes are still assumed rather than derived.
 - Consciousness is still outside the simulation; only record formation is present.
