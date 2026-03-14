@@ -491,6 +491,20 @@ class PerturbationWeightLadderAggregateRow:
 
 
 @dataclass
+class RediscoveryLimitAggregateRow:
+    rediscovery_limit: int
+    rule_family: str
+    cases: int
+    survives: int
+    selected_retained: int
+    base_selected_alive: int
+    robustness_overlap: int
+    proper_time_overlap: int
+    geometry_overlap: int
+    mixed_overlap: int
+
+
+@dataclass
 class RawFrontierPool:
     selector_candidates: dict[
         tuple[frozenset[int], frozenset[int], frozenset[tuple[int, int]]],
@@ -4466,10 +4480,24 @@ def collect_limited_rediscovery_frontier_pool(
         count_options,
         allowed_rule_pairs,
     )
+    open_pool = collect_raw_frontier_pool(nodes, wrap_y, count_options)
+    return merge_limited_rediscovery_frontier_pool(
+        nodes,
+        tracked_pool,
+        open_pool,
+        rediscovery_limit=rediscovery_limit,
+    )
+
+
+def merge_limited_rediscovery_frontier_pool(
+    nodes: set[tuple[int, int]],
+    tracked_pool: RawFrontierPool,
+    open_pool: RawFrontierPool,
+    rediscovery_limit: int = 2,
+) -> RawFrontierPool:
     if rediscovery_limit <= 0:
         return tracked_pool
 
-    open_pool = collect_raw_frontier_pool(nodes, wrap_y, count_options)
     tracked_signatures = {
         format_rule_signature(candidate.survive_counts, candidate.birth_counts)
         for candidate in tracked_pool.pooled_candidates.values()
@@ -5249,6 +5277,141 @@ def random_rediscovery_perturbation_frontier_summary(
             )
         ),
     )
+
+
+def random_rediscovery_limit_sweep_summary(
+    retained_weight: float = 1.0,
+    variant_limit: int = 3,
+    rediscovery_limits: tuple[int, ...] = (0, 1, 2, 3),
+) -> list[RediscoveryLimitAggregateRow]:
+    sorted_limits = tuple(sorted(dict.fromkeys(rediscovery_limits)))
+    grouped_rows: DefaultDict[tuple[int, str], list[PerturbationCaseRow]] = defaultdict(list)
+
+    for rule_family, count_options in family_count_options():
+        for pack_name, scenarios in benchmark_packs():
+            for scenario_name, nodes, wrap_y in scenarios:
+                base_raw_pool = collect_raw_frontier_pool(
+                    nodes,
+                    wrap_y,
+                    count_options,
+                )
+                base_evaluation_cache = build_frontier_evaluation_cache(nodes, wrap_y)
+                base_row, base_candidates = frontier_case_analysis(
+                    pack_name=pack_name,
+                    scenario_name=scenario_name,
+                    nodes=nodes,
+                    wrap_y=wrap_y,
+                    rule_family=rule_family,
+                    count_options=count_options,
+                    retained_weight=retained_weight,
+                    raw_pool=base_raw_pool,
+                    evaluation_cache=base_evaluation_cache,
+                )
+                base_signature_sets = frontier_signature_sets(base_candidates)
+                base_selected_rule = base_row.selected_rule
+                allowed_rule_pairs = base_palette_rule_pairs(base_candidates)
+
+                for variant_name, perturbed_nodes, node_delta in random_topology_perturbations(
+                    pack_name,
+                    scenario_name,
+                    nodes,
+                    wrap_y,
+                    variant_limit=variant_limit,
+                ):
+                    perturbed_evaluation_cache = build_frontier_evaluation_cache(
+                        perturbed_nodes,
+                        wrap_y,
+                    )
+                    tracked_pool = collect_restricted_frontier_pool(
+                        perturbed_nodes,
+                        wrap_y,
+                        count_options,
+                        allowed_rule_pairs,
+                    )
+                    open_pool = collect_raw_frontier_pool(
+                        perturbed_nodes,
+                        wrap_y,
+                        count_options,
+                    )
+
+                    for rediscovery_limit in sorted_limits:
+                        perturbed_raw_pool = merge_limited_rediscovery_frontier_pool(
+                            perturbed_nodes,
+                            tracked_pool,
+                            open_pool,
+                            rediscovery_limit=rediscovery_limit,
+                        )
+                        perturbed_row, perturbed_candidates = frontier_case_analysis(
+                            pack_name=pack_name,
+                            scenario_name=scenario_name,
+                            nodes=perturbed_nodes,
+                            wrap_y=wrap_y,
+                            rule_family=rule_family,
+                            count_options=count_options,
+                            retained_weight=retained_weight,
+                            raw_pool=perturbed_raw_pool,
+                            evaluation_cache=perturbed_evaluation_cache,
+                        )
+                        perturbed_signature_sets = frontier_signature_sets(perturbed_candidates)
+                        perturbed_frontier_union = set().union(*perturbed_signature_sets.values())
+                        selected_candidate = next(
+                            (
+                                candidate
+                                for candidate in perturbed_candidates
+                                if candidate.current_selected
+                            ),
+                            None,
+                        )
+                        case_row = PerturbationCaseRow(
+                            rule_family=rule_family,
+                            pack_name=pack_name,
+                            scenario_name=scenario_name,
+                            variant_name=variant_name,
+                            node_delta=node_delta,
+                            base_selected_rule=base_selected_rule,
+                            perturbed_selected_rule=perturbed_row.selected_rule,
+                            perturbed_status=(
+                                selected_candidate.status if selected_candidate is not None else "no pattern"
+                            ),
+                            selected_matches_base=(perturbed_row.selected_rule == base_selected_rule),
+                            base_selected_alive=(base_selected_rule in perturbed_frontier_union),
+                            robustness_overlap=bool(
+                                base_signature_sets["robustness"]
+                                & perturbed_signature_sets["robustness"]
+                            ),
+                            proper_time_overlap=bool(
+                                base_signature_sets["proper_time"]
+                                & perturbed_signature_sets["proper_time"]
+                            ),
+                            geometry_overlap=bool(
+                                base_signature_sets["geometry"]
+                                & perturbed_signature_sets["geometry"]
+                            ),
+                            mixed_overlap=bool(
+                                base_signature_sets["mixed"] & perturbed_signature_sets["mixed"]
+                            ),
+                        )
+                        grouped_rows[(rediscovery_limit, rule_family)].append(case_row)
+
+    aggregate_rows = [
+        RediscoveryLimitAggregateRow(
+            rediscovery_limit=rediscovery_limit,
+            rule_family=rule_family,
+            cases=len(rows),
+            survives=sum(row.perturbed_status == "survives" for row in rows),
+            selected_retained=sum(row.selected_matches_base for row in rows),
+            base_selected_alive=sum(row.base_selected_alive for row in rows),
+            robustness_overlap=sum(row.robustness_overlap for row in rows),
+            proper_time_overlap=sum(row.proper_time_overlap for row in rows),
+            geometry_overlap=sum(row.geometry_overlap for row in rows),
+            mixed_overlap=sum(row.mixed_overlap for row in rows),
+        )
+        for (rediscovery_limit, rule_family), rows in grouped_rows.items()
+    ]
+    aggregate_rows.sort(
+        key=lambda row: (row.rediscovery_limit, row.rule_family)
+    )
+    return aggregate_rows
 
 
 def perturbation_weight_stability_results(
@@ -6644,6 +6807,29 @@ def render_perturbation_weight_ladder_case_table(
     return "\n".join(lines)
 
 
+def render_rediscovery_limit_aggregate_table(
+    rows: list[RediscoveryLimitAggregateRow],
+) -> str:
+    lines = [
+        "limit | family   | cases | survives | sel kept | base alive | R ovlp | P ovlp | G ovlp | M ovlp",
+        "------+----------+-------+----------+----------+------------+--------+--------+--------+-------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.rediscovery_limit:>5} | "
+            f"{row.rule_family:<8} | "
+            f"{row.cases:>5} | "
+            f"{row.survives:>8} | "
+            f"{row.selected_retained:>8} | "
+            f"{row.base_selected_alive:>10} | "
+            f"{row.robustness_overlap:>6} | "
+            f"{row.proper_time_overlap:>6} | "
+            f"{row.geometry_overlap:>6} | "
+            f"{row.mixed_overlap:>5}"
+        )
+    return "\n".join(lines)
+
+
 def main() -> None:
     print("DISCRETE EVENT-NETWORK TOY MODEL")
     print()
@@ -7539,6 +7725,29 @@ def main() -> None:
                 f"- In {len(rediscovery_overlap_drift)} cases, stronger overlap claims still break, which tells us the remaining fragility is not only a palette-inheritance artifact."
             )
     print("- If the mixed-frontier story stays strong here, that is much better evidence that it reflects something structural in the toy model rather than just inherited motif bookkeeping.")
+    print()
+
+    print("36) Rediscovery-limit sweep on the random perturbation ensemble")
+    rediscovery_limit_rows = random_rediscovery_limit_sweep_summary(
+        variant_limit=random_variant_limit,
+        rediscovery_limits=(0, 1, 2, 3),
+    )
+    print(render_rediscovery_limit_aggregate_table(rediscovery_limit_rows))
+    print()
+    print("Interpretation:")
+    for rule_family in ("compact", "extended"):
+        family_rows = [
+            row for row in rediscovery_limit_rows if row.rule_family == rule_family
+        ]
+        family_rows.sort(key=lambda row: row.rediscovery_limit)
+        if not family_rows:
+            continue
+        first_row = family_rows[0]
+        last_row = family_rows[-1]
+        print(
+            f"- In `{rule_family}`, moving from rediscovery limit {first_row.rediscovery_limit} to {last_row.rediscovery_limit} changes survives from {first_row.survives}/{first_row.cases} to {last_row.survives}/{last_row.cases}, mixed-overlap from {first_row.mixed_overlap}/{first_row.cases} to {last_row.mixed_overlap}/{last_row.cases}, and robustness-overlap from {first_row.robustness_overlap}/{first_row.cases} to {last_row.robustness_overlap}/{last_row.cases}."
+        )
+    print("- This is the cleanest cheat-removal readout on the random side so far: if the mixed frontier saturates while the stronger overlap claims erode, that means the selector-free family is more structural than the exact inherited frontier identity, but not completely independent of palette restrictions.")
     print()
 
     print("REMAINING CHEATS")
