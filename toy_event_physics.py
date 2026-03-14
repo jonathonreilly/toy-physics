@@ -735,6 +735,17 @@ class CenterlineInvariantComparisonRow:
 
 
 @dataclass(frozen=True)
+class OrdinalScoreModel:
+    feature_names: tuple[str, ...]
+    signs: tuple[int, ...]
+    minima: tuple[float, ...]
+    spans: tuple[float, ...]
+    lower_threshold: float
+    upper_threshold: float
+    label_order: tuple[str, str, str]
+
+
+@dataclass(frozen=True)
 class TinyDecisionTree:
     label: str | None = None
     feature: str | None = None
@@ -839,6 +850,20 @@ class CrossDatasetDepthAblationRow:
     roughness_on_transfer: bool
     top_balanced_subset: str
     top_transfer_subset: str
+
+
+@dataclass
+class PredictorFamilyComparisonRow:
+    rule_family: str
+    feature_subset: str
+    model_family: str
+    train_accuracy: float
+    mode_cv_accuracy: float
+    roughness_accuracy: float
+    procedural_accuracy: float
+    mean_transfer_accuracy: float
+    worst_transfer_accuracy: float
+    description: str
 
 
 @dataclass
@@ -9207,6 +9232,178 @@ def format_tiny_decision_tree(
     )
 
 
+def fit_ordinal_score_model(
+    rows: list[CenterlineModeSweepRow] | list[GeometryPredictionRow],
+    feature_names: tuple[str, ...],
+) -> OrdinalScoreModel:
+    label_names = ("empty", "single", "multi")
+    if not feature_names:
+        counts = Counter(coarse_core_regime(row.regime) for row in rows)
+        majority_label = max(counts, key=lambda label: (counts[label], label))
+        return OrdinalScoreModel(
+            feature_names=tuple(),
+            signs=tuple(),
+            minima=tuple(),
+            spans=tuple(),
+            lower_threshold=float("-inf"),
+            upper_threshold=float("inf"),
+            label_order=(majority_label, majority_label, majority_label),
+        )
+
+    minima = tuple(min(decision_feature_value(row, feature) for row in rows) for feature in feature_names)
+    maxima = tuple(max(decision_feature_value(row, feature) for row in rows) for feature in feature_names)
+    spans = tuple(
+        (high - low) if abs(high - low) > 1e-9 else 1.0
+        for low, high in zip(minima, maxima)
+    )
+
+    label_values = [coarse_core_regime(row.regime) for row in rows]
+    best_accuracy = -1.0
+    best_complexity = math.inf
+    best_model: OrdinalScoreModel | None = None
+
+    for signs in itertools.product((-1, 1), repeat=len(feature_names)):
+        scores: list[float] = []
+        for row in rows:
+            score = 0.0
+            for index, feature in enumerate(feature_names):
+                value = decision_feature_value(row, feature)
+                normalized = (value - minima[index]) / spans[index]
+                score += signs[index] * normalized
+            scores.append(score)
+        order = sorted(range(len(rows)), key=lambda index: (scores[index], label_values[index], index))
+        sorted_scores = [scores[index] for index in order]
+        sorted_labels = [label_values[index] for index in order]
+        prefix_counts: dict[str, list[int]] = {
+            label: [0]
+            for label in label_names
+        }
+        for label in sorted_labels:
+            for current_label in label_names:
+                prefix_counts[current_label].append(
+                    prefix_counts[current_label][-1] + (1 if label == current_label else 0)
+                )
+        total_counts = {
+            label: prefix_counts[label][-1]
+            for label in label_names
+        }
+
+        for label_order in itertools.permutations(label_names):
+            for split_one in range(len(rows) + 1):
+                for split_two in range(split_one, len(rows) + 1):
+                    correct = (
+                        prefix_counts[label_order[0]][split_one]
+                        + (prefix_counts[label_order[1]][split_two] - prefix_counts[label_order[1]][split_one])
+                        + (total_counts[label_order[2]] - prefix_counts[label_order[2]][split_two])
+                    )
+                    accuracy = correct / len(rows)
+                    complexity = sum(1 for sign in signs if sign < 0)
+                    if accuracy < best_accuracy - 1e-12:
+                        continue
+                    if (
+                        abs(accuracy - best_accuracy) <= 1e-12
+                        and complexity > best_complexity
+                    ):
+                        continue
+                    if split_one == 0:
+                        lower_threshold = sorted_scores[0] - 1.0
+                    elif split_one == len(rows):
+                        lower_threshold = sorted_scores[-1]
+                    else:
+                        lower_threshold = 0.5 * (sorted_scores[split_one - 1] + sorted_scores[split_one])
+                    if split_two == 0:
+                        upper_threshold = sorted_scores[0] - 1.0
+                    elif split_two == len(rows):
+                        upper_threshold = sorted_scores[-1]
+                    else:
+                        upper_threshold = 0.5 * (sorted_scores[split_two - 1] + sorted_scores[split_two])
+                    candidate = OrdinalScoreModel(
+                        feature_names=feature_names,
+                        signs=tuple(int(sign) for sign in signs),
+                        minima=minima,
+                        spans=spans,
+                        lower_threshold=lower_threshold,
+                        upper_threshold=upper_threshold,
+                        label_order=tuple(str(label) for label in label_order),
+                    )
+                    if (
+                        accuracy > best_accuracy + 1e-12
+                        or (
+                            abs(accuracy - best_accuracy) <= 1e-12
+                            and complexity < best_complexity
+                        )
+                        or (
+                            abs(accuracy - best_accuracy) <= 1e-12
+                            and complexity == best_complexity
+                            and (best_model is None or repr(candidate) < repr(best_model))
+                        )
+                    ):
+                        best_accuracy = accuracy
+                        best_complexity = complexity
+                        best_model = candidate
+
+    if best_model is None:
+        majority_model = fit_ordinal_score_model(rows, tuple())
+        return majority_model
+    return best_model
+
+
+def predict_ordinal_score_model(
+    model: OrdinalScoreModel,
+    row: CenterlineModeSweepRow | GeometryPredictionRow,
+) -> str:
+    if not model.feature_names:
+        return model.label_order[0]
+    score = 0.0
+    for index, feature in enumerate(model.feature_names):
+        value = decision_feature_value(row, feature)
+        normalized = (value - model.minima[index]) / model.spans[index]
+        score += model.signs[index] * normalized
+    if score <= model.lower_threshold:
+        return model.label_order[0]
+    if score <= model.upper_threshold:
+        return model.label_order[1]
+    return model.label_order[2]
+
+
+def ordinal_score_accuracy(
+    model: OrdinalScoreModel,
+    rows: list[CenterlineModeSweepRow] | list[GeometryPredictionRow],
+) -> float:
+    if not rows:
+        return 0.0
+    correct = sum(
+        predict_ordinal_score_model(model, row) == coarse_core_regime(row.regime)
+        for row in rows
+    )
+    return correct / len(rows)
+
+
+def format_ordinal_score_model(
+    model: OrdinalScoreModel,
+) -> str:
+    if not model.feature_names:
+        return model.label_order[0]
+    feature_labels = {
+        "center_variation": "cvar",
+        "center_range": "crange",
+        "span_range": "srange",
+        "turning_points": "turns",
+        "max_step_fraction": "stepfrac",
+        "crosses_midline": "cross",
+    }
+    signed_terms = []
+    for feature, sign in zip(model.feature_names, model.signs):
+        prefix = "+" if sign > 0 else "-"
+        signed_terms.append(f"{prefix}{feature_labels[feature]}")
+    return (
+        f"{' '.join(signed_terms)} | "
+        f"{model.label_order[0]} <= {model.lower_threshold:.2f} < "
+        f"{model.label_order[1]} <= {model.upper_threshold:.2f} < "
+        f"{model.label_order[2]}"
+    )
+
+
 def centerline_decision_tree_benchmark(
     mode_rows: list[CenterlineModeSweepRow],
 ) -> list[CenterlineDecisionTreeRow]:
@@ -9946,6 +10143,157 @@ def cross_dataset_subset_depth_ablation(
             )
     ablation_rows.sort(key=lambda row: (row.rule_family, row.max_depth))
     return ablation_rows
+
+
+def structural_feature_subset_candidates(
+    subset_rows: list[CenterlineFeatureSubsetRow],
+    compressed_pareto_rows: list[CrossDatasetSubsetRow],
+    top_k_subset_rows: int = 3,
+) -> dict[str, list[tuple[str, ...]]]:
+    candidates: dict[str, list[tuple[str, ...]]] = {"compact": [], "extended": []}
+    for rule_family in ("compact", "extended"):
+        signatures: list[tuple[str, ...]] = []
+        family_compressed = [
+            row for row in compressed_pareto_rows if row.rule_family == rule_family
+        ]
+        family_subset_rows = [
+            row for row in subset_rows if row.rule_family == rule_family
+        ]
+        for row in family_compressed:
+            signatures.append(parse_feature_signature(row.feature_subset))
+        for row in family_subset_rows[:top_k_subset_rows]:
+            signatures.append(parse_feature_signature(row.feature_subset))
+        signatures.append(("center_variation",))
+        deduped: list[tuple[str, ...]] = []
+        seen: set[tuple[str, ...]] = set()
+        for signature in signatures:
+            if signature in seen:
+                continue
+            seen.add(signature)
+            deduped.append(signature)
+        candidates[rule_family] = deduped
+    return candidates
+
+
+def predictor_family_comparison(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    procedural_variant_limit: int = 2,
+    procedural_rediscovery_limit: int = 1,
+    max_subset_size: int = 3,
+    top_k_subset_rows: int = 3,
+) -> list[PredictorFamilyComparisonRow]:
+    (
+        mode_core_rows,
+        mode_prediction_rows,
+        roughness_prediction_rows,
+        procedural_rows,
+    ) = build_cross_dataset_prediction_context(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+        procedural_variant_limit=procedural_variant_limit,
+        procedural_rediscovery_limit=procedural_rediscovery_limit,
+    )
+    subset_rows = centerline_feature_subset_benchmark(
+        mode_core_rows,
+        max_subset_size=max_subset_size,
+        max_depth=2,
+    )
+    subset_pareto_rows = cross_dataset_subset_pareto_from_rows(
+        mode_core_rows=mode_core_rows,
+        mode_prediction_rows=mode_prediction_rows,
+        roughness_prediction_rows=roughness_prediction_rows,
+        procedural_rows=procedural_rows,
+        max_subset_size=max_subset_size,
+        max_depth=2,
+    )
+    compressed_pareto_rows = compress_redundant_subset_frontier_rows(subset_pareto_rows)
+    candidate_map = structural_feature_subset_candidates(
+        subset_rows,
+        compressed_pareto_rows,
+        top_k_subset_rows=top_k_subset_rows,
+    )
+    subset_index = {
+        (row.rule_family, row.feature_subset): row
+        for row in subset_rows
+    }
+    pareto_index = {
+        (row.rule_family, row.feature_subset): row
+        for row in subset_pareto_rows
+    }
+    comparison_rows: list[PredictorFamilyComparisonRow] = []
+    for rule_family in ("compact", "extended"):
+        family_mode_rows = [
+            row for row in mode_prediction_rows if row.rule_family == rule_family
+        ]
+        family_roughness_rows = [
+            row for row in roughness_prediction_rows if row.rule_family == rule_family
+        ]
+        family_procedural_rows = [
+            row for row in procedural_rows if row.rule_family == rule_family
+        ]
+        modes = sorted({row.source_name.split(":")[0] for row in family_mode_rows})
+        for feature_names in candidate_map[rule_family]:
+            feature_subset = ", ".join(feature_names)
+            tree_row = subset_index[(rule_family, feature_subset)]
+            tree_transfer = pareto_index[(rule_family, feature_subset)]
+            comparison_rows.append(
+                PredictorFamilyComparisonRow(
+                    rule_family=rule_family,
+                    feature_subset=feature_subset,
+                    model_family="tree-depth2",
+                    train_accuracy=tree_row.train_accuracy,
+                    mode_cv_accuracy=tree_row.cv_accuracy,
+                    roughness_accuracy=tree_transfer.roughness_accuracy,
+                    procedural_accuracy=tree_transfer.procedural_accuracy,
+                    mean_transfer_accuracy=tree_transfer.mean_transfer_accuracy,
+                    worst_transfer_accuracy=tree_transfer.worst_transfer_accuracy,
+                    description=tree_transfer.tree_description,
+                )
+            )
+
+            score_model = fit_ordinal_score_model(family_mode_rows, feature_names)
+            score_train_accuracy = ordinal_score_accuracy(score_model, family_mode_rows)
+            fold_scores: dict[str, float] = {}
+            for mode in modes:
+                train_rows = [
+                    row for row in family_mode_rows
+                    if row.source_name.split(":")[0] != mode
+                ]
+                test_rows = [
+                    row for row in family_mode_rows
+                    if row.source_name.split(":")[0] == mode
+                ]
+                fold_model = fit_ordinal_score_model(train_rows, feature_names)
+                fold_scores[mode] = ordinal_score_accuracy(fold_model, test_rows)
+            comparison_rows.append(
+                PredictorFamilyComparisonRow(
+                    rule_family=rule_family,
+                    feature_subset=feature_subset,
+                    model_family="ordinal-score",
+                    train_accuracy=score_train_accuracy,
+                    mode_cv_accuracy=sum(fold_scores.values()) / len(fold_scores),
+                    roughness_accuracy=ordinal_score_accuracy(score_model, family_roughness_rows),
+                    procedural_accuracy=ordinal_score_accuracy(score_model, family_procedural_rows),
+                    mean_transfer_accuracy=(
+                        ordinal_score_accuracy(score_model, family_roughness_rows)
+                        + ordinal_score_accuracy(score_model, family_procedural_rows)
+                    ) / 2.0,
+                    worst_transfer_accuracy=min(
+                        ordinal_score_accuracy(score_model, family_roughness_rows),
+                        ordinal_score_accuracy(score_model, family_procedural_rows),
+                    ),
+                    description=format_ordinal_score_model(score_model),
+                )
+            )
+    comparison_rows.sort(
+        key=lambda row: (
+            row.rule_family,
+            row.feature_subset,
+            row.model_family,
+        )
+    )
+    return comparison_rows
 
 
 def random_rediscovery_limit_sweep_summary(
@@ -12012,6 +12360,27 @@ def render_cross_dataset_depth_ablation_table(
             f"{('Y' if row.roughness_on_balanced else 'n')}/{('Y' if row.roughness_on_transfer else 'n'):<9} | "
             f"{row.top_balanced_subset:<27} | "
             f"{row.top_transfer_subset}"
+        )
+    return "\n".join(lines)
+
+
+def render_predictor_family_comparison_table(
+    rows: list[PredictorFamilyComparisonRow],
+) -> str:
+    lines = [
+        "family   | subset                       | model         | mode cv | rough | proc  | mean  | worst",
+        "---------+------------------------------+---------------+---------+-------+-------+-------+------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.rule_family:<8} | "
+            f"{row.feature_subset:<28} | "
+            f"{row.model_family:<13} | "
+            f"{row.mode_cv_accuracy:>7.2f} | "
+            f"{row.roughness_accuracy:>5.2f} | "
+            f"{row.procedural_accuracy:>5.2f} | "
+            f"{row.mean_transfer_accuracy:>5.2f} | "
+            f"{row.worst_transfer_accuracy:>4.2f}"
         )
     return "\n".join(lines)
 
@@ -14498,6 +14867,67 @@ def main() -> None:
     )
     print(
         f"- The stable part is sharper than the balanced-frontier counts: roughness-only stays on both fronts at all tested depths in both families, and it remains the top transfer subset throughout. What moves with depth is the in-family top balanced subset: `compact` shifts from `{compact_depth1.top_balanced_subset}` to `{compact_reference.top_balanced_subset}` to `{compact_depth3.top_balanced_subset}`, while `extended` shifts from `{extended_depth1.top_balanced_subset}` to `{extended_reference.top_balanced_subset}` to `{extended_depth3.top_balanced_subset}`."
+    )
+    print()
+
+    print("65) Predictor-family comparison on the structural subset set")
+    predictor_family_rows = predictor_family_comparison()
+    print(render_predictor_family_comparison_table(predictor_family_rows))
+    print()
+    print("Interpretation:")
+    compact_family_rows = [row for row in predictor_family_rows if row.rule_family == "compact"]
+    extended_family_rows = [row for row in predictor_family_rows if row.rule_family == "extended"]
+    compact_best_transfer = max(
+        compact_family_rows,
+        key=lambda row: (
+            row.mean_transfer_accuracy,
+            row.worst_transfer_accuracy,
+            row.mode_cv_accuracy,
+            row.model_family,
+            row.feature_subset,
+        ),
+    )
+    extended_best_transfer = max(
+        extended_family_rows,
+        key=lambda row: (
+            row.mean_transfer_accuracy,
+            row.worst_transfer_accuracy,
+            row.mode_cv_accuracy,
+            row.model_family,
+            row.feature_subset,
+        ),
+    )
+    compact_rough_tree = next(
+        row
+        for row in compact_family_rows
+        if row.feature_subset == "center_variation" and row.model_family == "tree-depth2"
+    )
+    compact_rough_score = next(
+        row
+        for row in compact_family_rows
+        if row.feature_subset == "center_variation" and row.model_family == "ordinal-score"
+    )
+    extended_rough_tree = next(
+        row
+        for row in extended_family_rows
+        if row.feature_subset == "center_variation" and row.model_family == "tree-depth2"
+    )
+    extended_rough_score = next(
+        row
+        for row in extended_family_rows
+        if row.feature_subset == "center_variation" and row.model_family == "ordinal-score"
+    )
+    print(
+        "- This is the model-family version of the same cheat-removal test: keep the structural feature subsets fixed, then ask whether the roughness-stable core survives when we swap the depth-2 tree for a tiny ordinal score model."
+    )
+    print(
+        f"- In `compact`, the best transfer model is `{compact_best_transfer.model_family}` on `{compact_best_transfer.feature_subset}` with mean transfer {compact_best_transfer.mean_transfer_accuracy:.2f}. Roughness-only scores {compact_rough_tree.mean_transfer_accuracy:.2f} as a tree and {compact_rough_score.mean_transfer_accuracy:.2f} as an ordinal score model."
+    )
+    print(
+        f"- In `extended`, the best transfer model is `{extended_best_transfer.model_family}` on `{extended_best_transfer.feature_subset}` with mean transfer {extended_best_transfer.mean_transfer_accuracy:.2f}. Roughness-only scores {extended_rough_tree.mean_transfer_accuracy:.2f} as a tree and {extended_rough_score.mean_transfer_accuracy:.2f} as an ordinal score model."
+    )
+    print(
+        "- The important result is that changing predictor family moves the non-roughness tradeoff subsets around much more than the roughness-like core. In this run, roughness-only stays at or tied for the top transfer tier in both families under both predictor classes."
     )
     print()
 
