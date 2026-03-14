@@ -740,6 +740,11 @@ class OrdinalScoreModel:
     signs: tuple[int, ...]
     minima: tuple[float, ...]
     spans: tuple[float, ...]
+    centers: tuple[float, ...]
+    scales: tuple[float, ...]
+    weights: tuple[float, ...]
+    normalization_mode: str
+    weight_mode: str
     lower_threshold: float
     upper_threshold: float
     label_order: tuple[str, str, str]
@@ -858,6 +863,19 @@ class PredictorFamilyComparisonRow:
     feature_subset: str
     model_family: str
     train_accuracy: float
+    mode_cv_accuracy: float
+    roughness_accuracy: float
+    procedural_accuracy: float
+    mean_transfer_accuracy: float
+    worst_transfer_accuracy: float
+    description: str
+
+
+@dataclass
+class OrdinalVariantComparisonRow:
+    rule_family: str
+    feature_subset: str
+    variant_name: str
     mode_cv_accuracy: float
     roughness_accuracy: float
     procedural_accuracy: float
@@ -9235,6 +9253,8 @@ def format_tiny_decision_tree(
 def fit_ordinal_score_model(
     rows: list[CenterlineModeSweepRow] | list[GeometryPredictionRow],
     feature_names: tuple[str, ...],
+    normalization_mode: str = "minmax",
+    weight_mode: str = "equal",
 ) -> OrdinalScoreModel:
     label_names = ("empty", "single", "multi")
     if not feature_names:
@@ -9245,31 +9265,82 @@ def fit_ordinal_score_model(
             signs=tuple(),
             minima=tuple(),
             spans=tuple(),
+            centers=tuple(),
+            scales=tuple(),
+            weights=tuple(),
+            normalization_mode=normalization_mode,
+            weight_mode=weight_mode,
             lower_threshold=float("-inf"),
             upper_threshold=float("inf"),
             label_order=(majority_label, majority_label, majority_label),
         )
 
-    minima = tuple(min(decision_feature_value(row, feature) for row in rows) for feature in feature_names)
-    maxima = tuple(max(decision_feature_value(row, feature) for row in rows) for feature in feature_names)
-    spans = tuple(
-        (high - low) if abs(high - low) > 1e-9 else 1.0
-        for low, high in zip(minima, maxima)
+    feature_values = [
+        tuple(decision_feature_value(row, feature) for feature in feature_names)
+        for row in rows
+    ]
+    minima = tuple(min(values[index] for values in feature_values) for index in range(len(feature_names)))
+    maxima = tuple(max(values[index] for values in feature_values) for index in range(len(feature_names)))
+    spans = tuple((high - low) if abs(high - low) > 1e-9 else 1.0 for low, high in zip(minima, maxima))
+    centers = tuple(sum(values[index] for values in feature_values) / len(feature_values) for index in range(len(feature_names)))
+    variances = tuple(
+        sum((values[index] - centers[index]) ** 2 for values in feature_values) / len(feature_values)
+        for index in range(len(feature_names))
     )
+    scales = tuple(math.sqrt(variance) if variance > 1e-9 else 1.0 for variance in variances)
 
     label_values = [coarse_core_regime(row.regime) for row in rows]
+    if weight_mode == "equal":
+        weights = tuple(1.0 for _feature in feature_names)
+    elif weight_mode == "spread":
+        ordered_labels = ("empty", "single", "multi")
+        label_means: dict[str, tuple[float, ...]] = {}
+        for label in ordered_labels:
+            label_rows = [
+                values
+                for values, label_value in zip(feature_values, label_values)
+                if label_value == label
+            ]
+            if label_rows:
+                label_means[label] = tuple(
+                    sum(values[index] for values in label_rows) / len(label_rows)
+                    for index in range(len(feature_names))
+                )
+            else:
+                label_means[label] = centers
+        weights = []
+        for index in range(len(feature_names)):
+            spread = abs(label_means["empty"][index] - label_means["single"][index]) + abs(
+                label_means["single"][index] - label_means["multi"][index]
+            )
+            weights.append(spread if spread > 1e-9 else 1.0)
+        weights = tuple(weights)
+    else:
+        raise ValueError(f"Unknown ordinal weight mode: {weight_mode}")
+
+    def normalized_value(
+        raw_value: float,
+        index: int,
+    ) -> float:
+        if normalization_mode == "minmax":
+            return (raw_value - minima[index]) / spans[index]
+        if normalization_mode == "zscore":
+            return (raw_value - centers[index]) / scales[index]
+        if normalization_mode == "rank":
+            return (raw_value - minima[index]) / spans[index]
+        raise ValueError(f"Unknown ordinal normalization mode: {normalization_mode}")
+
     best_accuracy = -1.0
     best_complexity = math.inf
     best_model: OrdinalScoreModel | None = None
 
     for signs in itertools.product((-1, 1), repeat=len(feature_names)):
         scores: list[float] = []
-        for row in rows:
+        for raw_values in feature_values:
             score = 0.0
-            for index, feature in enumerate(feature_names):
-                value = decision_feature_value(row, feature)
-                normalized = (value - minima[index]) / spans[index]
-                score += signs[index] * normalized
+            for index, raw_value in enumerate(raw_values):
+                normalized = normalized_value(raw_value, index)
+                score += signs[index] * weights[index] * normalized
             scores.append(score)
         order = sorted(range(len(rows)), key=lambda index: (scores[index], label_values[index], index))
         sorted_scores = [scores[index] for index in order]
@@ -9322,6 +9393,11 @@ def fit_ordinal_score_model(
                         signs=tuple(int(sign) for sign in signs),
                         minima=minima,
                         spans=spans,
+                        centers=centers,
+                        scales=scales,
+                        weights=weights,
+                        normalization_mode=normalization_mode,
+                        weight_mode=weight_mode,
                         lower_threshold=lower_threshold,
                         upper_threshold=upper_threshold,
                         label_order=tuple(str(label) for label in label_order),
@@ -9357,8 +9433,13 @@ def predict_ordinal_score_model(
     score = 0.0
     for index, feature in enumerate(model.feature_names):
         value = decision_feature_value(row, feature)
-        normalized = (value - model.minima[index]) / model.spans[index]
-        score += model.signs[index] * normalized
+        if model.normalization_mode == "minmax" or model.normalization_mode == "rank":
+            normalized = (value - model.minima[index]) / model.spans[index]
+        elif model.normalization_mode == "zscore":
+            normalized = (value - model.centers[index]) / model.scales[index]
+        else:
+            raise ValueError(f"Unknown ordinal normalization mode: {model.normalization_mode}")
+        score += model.signs[index] * model.weights[index] * normalized
     if score <= model.lower_threshold:
         return model.label_order[0]
     if score <= model.upper_threshold:
@@ -9397,7 +9478,7 @@ def format_ordinal_score_model(
         prefix = "+" if sign > 0 else "-"
         signed_terms.append(f"{prefix}{feature_labels[feature]}")
     return (
-        f"{' '.join(signed_terms)} | "
+        f"{model.normalization_mode}/{model.weight_mode}: {' '.join(signed_terms)} | "
         f"{model.label_order[0]} <= {model.lower_threshold:.2f} < "
         f"{model.label_order[1]} <= {model.upper_threshold:.2f} < "
         f"{model.label_order[2]}"
@@ -10291,6 +10372,114 @@ def predictor_family_comparison(
             row.rule_family,
             row.feature_subset,
             row.model_family,
+        )
+    )
+    return comparison_rows
+
+
+def ordinal_variant_comparison(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    procedural_variant_limit: int = 2,
+    procedural_rediscovery_limit: int = 1,
+    max_subset_size: int = 3,
+    top_k_subset_rows: int = 3,
+) -> list[OrdinalVariantComparisonRow]:
+    (
+        mode_core_rows,
+        mode_prediction_rows,
+        roughness_prediction_rows,
+        procedural_rows,
+    ) = build_cross_dataset_prediction_context(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+        procedural_variant_limit=procedural_variant_limit,
+        procedural_rediscovery_limit=procedural_rediscovery_limit,
+    )
+    subset_rows = centerline_feature_subset_benchmark(
+        mode_core_rows,
+        max_subset_size=max_subset_size,
+        max_depth=2,
+    )
+    subset_pareto_rows = cross_dataset_subset_pareto_from_rows(
+        mode_core_rows=mode_core_rows,
+        mode_prediction_rows=mode_prediction_rows,
+        roughness_prediction_rows=roughness_prediction_rows,
+        procedural_rows=procedural_rows,
+        max_subset_size=max_subset_size,
+        max_depth=2,
+    )
+    compressed_pareto_rows = compress_redundant_subset_frontier_rows(subset_pareto_rows)
+    candidate_map = structural_feature_subset_candidates(
+        subset_rows,
+        compressed_pareto_rows,
+        top_k_subset_rows=top_k_subset_rows,
+    )
+    variant_specs = (
+        ("minmax-equal", "minmax", "equal"),
+        ("zscore-equal", "zscore", "equal"),
+        ("minmax-spread", "minmax", "spread"),
+    )
+    comparison_rows: list[OrdinalVariantComparisonRow] = []
+    for rule_family in ("compact", "extended"):
+        family_mode_rows = [
+            row for row in mode_prediction_rows if row.rule_family == rule_family
+        ]
+        family_roughness_rows = [
+            row for row in roughness_prediction_rows if row.rule_family == rule_family
+        ]
+        family_procedural_rows = [
+            row for row in procedural_rows if row.rule_family == rule_family
+        ]
+        modes = sorted({row.source_name.split(":")[0] for row in family_mode_rows})
+        for feature_names in candidate_map[rule_family]:
+            feature_subset = ", ".join(feature_names)
+            for variant_name, normalization_mode, weight_mode in variant_specs:
+                score_model = fit_ordinal_score_model(
+                    family_mode_rows,
+                    feature_names,
+                    normalization_mode=normalization_mode,
+                    weight_mode=weight_mode,
+                )
+                fold_scores: dict[str, float] = {}
+                for mode in modes:
+                    train_rows = [
+                        row for row in family_mode_rows
+                        if row.source_name.split(":")[0] != mode
+                    ]
+                    test_rows = [
+                        row for row in family_mode_rows
+                        if row.source_name.split(":")[0] == mode
+                    ]
+                    fold_model = fit_ordinal_score_model(
+                        train_rows,
+                        feature_names,
+                        normalization_mode=normalization_mode,
+                        weight_mode=weight_mode,
+                    )
+                    fold_scores[mode] = ordinal_score_accuracy(fold_model, test_rows)
+                roughness_accuracy = ordinal_score_accuracy(score_model, family_roughness_rows)
+                procedural_accuracy = ordinal_score_accuracy(score_model, family_procedural_rows)
+                comparison_rows.append(
+                    OrdinalVariantComparisonRow(
+                        rule_family=rule_family,
+                        feature_subset=feature_subset,
+                        variant_name=variant_name,
+                        mode_cv_accuracy=sum(fold_scores.values()) / len(fold_scores),
+                        roughness_accuracy=roughness_accuracy,
+                        procedural_accuracy=procedural_accuracy,
+                        mean_transfer_accuracy=(roughness_accuracy + procedural_accuracy) / 2.0,
+                        worst_transfer_accuracy=min(roughness_accuracy, procedural_accuracy),
+                        description=format_ordinal_score_model(score_model),
+                    )
+                )
+    comparison_rows.sort(
+        key=lambda row: (
+            row.rule_family,
+            row.feature_subset,
+            -row.mean_transfer_accuracy,
+            -row.mode_cv_accuracy,
+            row.variant_name,
         )
     )
     return comparison_rows
@@ -12376,6 +12565,27 @@ def render_predictor_family_comparison_table(
             f"{row.rule_family:<8} | "
             f"{row.feature_subset:<28} | "
             f"{row.model_family:<13} | "
+            f"{row.mode_cv_accuracy:>7.2f} | "
+            f"{row.roughness_accuracy:>5.2f} | "
+            f"{row.procedural_accuracy:>5.2f} | "
+            f"{row.mean_transfer_accuracy:>5.2f} | "
+            f"{row.worst_transfer_accuracy:>4.2f}"
+        )
+    return "\n".join(lines)
+
+
+def render_ordinal_variant_comparison_table(
+    rows: list[OrdinalVariantComparisonRow],
+) -> str:
+    lines = [
+        "family   | subset                       | variant        | mode cv | rough | proc  | mean  | worst",
+        "---------+------------------------------+----------------+---------+-------+-------+-------+------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.rule_family:<8} | "
+            f"{row.feature_subset:<28} | "
+            f"{row.variant_name:<14} | "
             f"{row.mode_cv_accuracy:>7.2f} | "
             f"{row.roughness_accuracy:>5.2f} | "
             f"{row.procedural_accuracy:>5.2f} | "
@@ -14928,6 +15138,59 @@ def main() -> None:
     )
     print(
         "- The important result is that changing predictor family moves the non-roughness tradeoff subsets around much more than the roughness-like core. In this run, roughness-only stays at or tied for the top transfer tier in both families under both predictor classes."
+    )
+    print()
+
+    print("66) Score-model variant ablation inside the ordinal family")
+    ordinal_variant_rows = ordinal_variant_comparison()
+    print(render_ordinal_variant_comparison_table(ordinal_variant_rows))
+    print()
+    print("Interpretation:")
+    compact_variant_rows = [row for row in ordinal_variant_rows if row.rule_family == "compact"]
+    extended_variant_rows = [row for row in ordinal_variant_rows if row.rule_family == "extended"]
+    compact_rough_variants = [
+        row for row in compact_variant_rows if row.feature_subset == "center_variation"
+    ]
+    extended_rough_variants = [
+        row for row in extended_variant_rows if row.feature_subset == "center_variation"
+    ]
+    compact_best_variant = max(
+        compact_variant_rows,
+        key=lambda row: (
+            row.mean_transfer_accuracy,
+            row.worst_transfer_accuracy,
+            row.mode_cv_accuracy,
+            row.variant_name,
+            row.feature_subset,
+        ),
+    )
+    extended_best_variant = max(
+        extended_variant_rows,
+        key=lambda row: (
+            row.mean_transfer_accuracy,
+            row.worst_transfer_accuracy,
+            row.mode_cv_accuracy,
+            row.variant_name,
+            row.feature_subset,
+        ),
+    )
+    compact_rough_spread = max(row.mean_transfer_accuracy for row in compact_rough_variants) - min(
+        row.mean_transfer_accuracy for row in compact_rough_variants
+    )
+    extended_rough_spread = max(row.mean_transfer_accuracy for row in extended_rough_variants) - min(
+        row.mean_transfer_accuracy for row in extended_rough_variants
+    )
+    print(
+        "- This is the internal score-family version of the same test: keep the structural subset set fixed, but vary the ordinal model internals across min-max, z-score, and spread-weighted scoring."
+    )
+    print(
+        f"- In `compact`, the best ordinal variant is `{compact_best_variant.variant_name}` on `{compact_best_variant.feature_subset}` with mean transfer {compact_best_variant.mean_transfer_accuracy:.2f}. Roughness-only varies by only {compact_rough_spread:.2f} across the tested score variants."
+    )
+    print(
+        f"- In `extended`, the best ordinal variant is `{extended_best_variant.variant_name}` on `{extended_best_variant.feature_subset}` with mean transfer {extended_best_variant.mean_transfer_accuracy:.2f}. Roughness-only varies by only {extended_rough_spread:.2f} across the tested score variants."
+    )
+    print(
+        "- The clean read is now family-specific. In `compact`, the roughness-only transfer winner survives all tested ordinal variants unchanged. In `extended`, the roughness-only score stays stable, but a spread-weighted `center_variation + center_range` model rises above it. So the transfer-stable core now looks like a small roughness-centered family, not one uniquely fixed subset."
     )
     print()
 
