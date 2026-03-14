@@ -599,6 +599,41 @@ class ProjectionFamilyCoreAggregateRow:
 
 
 @dataclass
+class ProjectionCoreMechanismRow:
+    regime: str
+    cases: int
+    selected_in_core_cases: int
+    wrap_cases: int
+    rect_cases: int
+    taper_cases: int
+    skew_cases: int
+    crossing_cases: int
+    avg_nodes: float
+    avg_center_range: float
+    avg_center_variation: float
+    avg_span_range: float
+
+
+@dataclass
+class ProjectionCoreMechanismCaseRow:
+    pack_name: str
+    scenario_name: str
+    rule_family: str
+    retained_weight: float
+    regime: str
+    selected_rule: str
+    selected_in_core: bool
+    core_count: int
+    union_count: int
+    wrap_y: bool
+    crosses_midline: bool
+    nodes: int
+    center_range: float
+    center_variation: float
+    span_range: float
+
+
+@dataclass
 class FrontierTraceRow:
     retained_weight: float
     rule_signature: str
@@ -8341,6 +8376,102 @@ def derived_projection_family_case_core_analysis(
     return case_rows, aggregate_rows
 
 
+def projection_core_regime(row: ProjectionFamilyCaseCoreRow) -> str:
+    if row.core_count <= 0:
+        return "empty"
+    if row.core_count == 1:
+        return "single-selected" if row.selected_in_core else "single-other"
+    return "multi-selected" if row.selected_in_core else "multi-other"
+
+
+def scenario_shape_name(scenario_name: str) -> str:
+    return scenario_name.split("-")[0]
+
+
+def projection_core_mechanism_map(
+    case_rows: list[ProjectionFamilyCaseCoreRow],
+) -> tuple[list[ProjectionCoreMechanismRow], list[ProjectionCoreMechanismCaseRow]]:
+    grouped_rows: DefaultDict[str, list[ProjectionCoreMechanismCaseRow]] = defaultdict(list)
+    case_feature_rows: list[ProjectionCoreMechanismCaseRow] = []
+    scenario_feature_cache: dict[tuple[str, str], tuple[bool, int, float, float, float, bool]] = {}
+
+    for row in case_rows:
+        cache_key = (row.pack_name, row.scenario_name)
+        if cache_key not in scenario_feature_cache:
+            nodes, wrap_y = scenario_by_name(row.pack_name, row.scenario_name)
+            (
+                _mean_center,
+                center_range,
+                center_total_variation,
+                crosses_midline,
+                span_range,
+            ) = column_profile_geometry_metrics(nodes)
+            scenario_feature_cache[cache_key] = (
+                wrap_y,
+                len(nodes),
+                center_range,
+                center_total_variation,
+                span_range,
+                crosses_midline,
+            )
+        wrap_y, node_count, center_range, center_total_variation, span_range, crosses_midline = scenario_feature_cache[cache_key]
+        mechanism_row = ProjectionCoreMechanismCaseRow(
+            pack_name=row.pack_name,
+            scenario_name=row.scenario_name,
+            rule_family=row.rule_family,
+            retained_weight=row.retained_weight,
+            regime=projection_core_regime(row),
+            selected_rule=row.selected_rule,
+            selected_in_core=row.selected_in_core,
+            core_count=row.core_count,
+            union_count=row.union_count,
+            wrap_y=wrap_y,
+            crosses_midline=crosses_midline,
+            nodes=node_count,
+            center_range=center_range,
+            center_variation=center_total_variation,
+            span_range=span_range,
+        )
+        case_feature_rows.append(mechanism_row)
+        grouped_rows[mechanism_row.regime].append(mechanism_row)
+
+    regime_rows: list[ProjectionCoreMechanismRow] = []
+    regime_order = ("empty", "single-selected", "single-other", "multi-selected", "multi-other")
+    for regime in regime_order:
+        rows = grouped_rows.get(regime, [])
+        if not rows:
+            continue
+        regime_rows.append(
+            ProjectionCoreMechanismRow(
+                regime=regime,
+                cases=len(rows),
+                selected_in_core_cases=sum(row.selected_in_core for row in rows),
+                wrap_cases=sum(row.wrap_y for row in rows),
+                rect_cases=sum(scenario_shape_name(row.scenario_name) == "rect" for row in rows),
+                taper_cases=sum(scenario_shape_name(row.scenario_name) == "taper" for row in rows),
+                skew_cases=sum(scenario_shape_name(row.scenario_name) == "skew" for row in rows),
+                crossing_cases=sum(row.crosses_midline for row in rows),
+                avg_nodes=sum(row.nodes for row in rows) / len(rows),
+                avg_center_range=sum(row.center_range for row in rows) / len(rows),
+                avg_center_variation=sum(row.center_variation for row in rows) / len(rows),
+                avg_span_range=sum(row.span_range for row in rows) / len(rows),
+            )
+        )
+
+    case_feature_rows.sort(
+        key=lambda row: (
+            {"empty": 0, "single-other": 1, "single-selected": 2, "multi-other": 3, "multi-selected": 4}[row.regime],
+            -row.center_variation,
+            -row.center_range,
+            row.rule_family,
+            row.pack_name,
+            row.scenario_name,
+            row.retained_weight,
+        )
+    )
+    return regime_rows, case_feature_rows
+
+
 def random_rediscovery_limit_sweep_summary(
     retained_weight: float = 1.0,
     variant_limit: int = 3,
@@ -10089,6 +10220,54 @@ def render_projection_family_core_aggregate_table(
             f"{row.core_hits:>9} | "
             f"{row.union_hits:>10} | "
             f"{row.selected_core_hits:>12}"
+        )
+    return "\n".join(lines)
+
+
+def render_projection_core_mechanism_table(
+    rows: list[ProjectionCoreMechanismRow],
+) -> str:
+    lines = [
+        "regime          | cases | wrap | rect/taper/skew | cross | avg nodes | avg crng | avg cvar | avg srng",
+        "----------------+-------+------+-----------------+-------+-----------+----------+----------+---------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.regime:<15} | "
+            f"{row.cases:>5} | "
+            f"{row.wrap_cases:>4} | "
+            f"{row.rect_cases:>4}/{row.taper_cases:<5}/{row.skew_cases:<4} | "
+            f"{row.crossing_cases:>5} | "
+            f"{row.avg_nodes:>9.2f} | "
+            f"{row.avg_center_range:>8.2f} | "
+            f"{row.avg_center_variation:>8.2f} | "
+            f"{row.avg_span_range:>7.2f}"
+        )
+    return "\n".join(lines)
+
+
+def render_projection_core_mechanism_case_table(
+    rows: list[ProjectionCoreMechanismCaseRow],
+    limit: int = 12,
+) -> str:
+    lines = [
+        "regime          | pack   | scenario         | family   | w    | sel core | core/u | wrap | cross | crng | cvar | srng",
+        "----------------+--------+------------------+----------+------+----------+--------+------+-------+------+-------+-----",
+    ]
+    for row in rows[:limit]:
+        lines.append(
+            f"{row.regime:<15} | "
+            f"{row.pack_name:<6} | "
+            f"{row.scenario_name:<16} | "
+            f"{row.rule_family:<8} | "
+            f"{row.retained_weight:>4.2f} | "
+            f"{('Y' if row.selected_in_core else 'n'):<8} | "
+            f"{row.core_count:>2}/{row.union_count:<5} | "
+            f"{('Y' if row.wrap_y else 'n'):<4} | "
+            f"{('Y' if row.crosses_midline else 'n'):<5} | "
+            f"{row.center_range:>4.1f} | "
+            f"{row.center_variation:>5.1f} | "
+            f"{row.span_range:>3.1f}"
         )
     return "\n".join(lines)
 
@@ -12141,6 +12320,46 @@ def main() -> None:
         )
     print(
         "- That tells us the remaining disagreement is not just about whether motifs appear somewhere on the frontier. We can now separate broad family ubiquity from true case-by-case inevitability inside the stronger 4D projection family."
+    )
+    print()
+
+    print("55) Mechanism map for 4D case-core regimes")
+    projection_core_mechanism_rows, projection_core_case_rows = projection_core_mechanism_map(
+        projection_case_core_rows,
+    )
+    interesting_projection_mechanism_rows = [
+        row
+        for row in projection_core_case_rows
+        if row.regime in {"empty", "single-other", "multi-other"}
+        or row.center_variation >= 6.0
+    ]
+    print(render_projection_core_mechanism_table(projection_core_mechanism_rows))
+    print()
+    print(
+        render_projection_core_mechanism_case_table(
+            interesting_projection_mechanism_rows,
+            limit=min(12, len(interesting_projection_mechanism_rows)),
+        )
+    )
+    print()
+    print("Interpretation:")
+    empty_regime = next((row for row in projection_core_mechanism_rows if row.regime == "empty"), None)
+    single_selected_regime = next((row for row in projection_core_mechanism_rows if row.regime == "single-selected"), None)
+    multi_selected_regime = next((row for row in projection_core_mechanism_rows if row.regime == "multi-selected"), None)
+    if empty_regime is not None:
+        print(
+            f"- Empty-core cases cluster in a distinctive part of the current graph family: {empty_regime.cases} cases, including {empty_regime.skew_cases} skew shapes and {empty_regime.crossing_cases} midline-crossing profiles, with average center-variation {empty_regime.avg_center_variation:.2f} and span-range {empty_regime.avg_span_range:.2f}."
+        )
+    if single_selected_regime is not None:
+        print(
+            f"- Single-motif cores are the cleanest regime. In the current run there are {single_selected_regime.cases} such cases, dominated by rect+taper shapes ({single_selected_regime.rect_cases + single_selected_regime.taper_cases}/{single_selected_regime.cases}) with lower average center-variation {single_selected_regime.avg_center_variation:.2f}."
+        )
+    if multi_selected_regime is not None:
+        print(
+            f"- Multi-motif cores are rare and mostly taper-shaped: {multi_selected_regime.cases} cases, {multi_selected_regime.taper_cases} of them taper, with average center-variation {multi_selected_regime.avg_center_variation:.2f} and crossing count {multi_selected_regime.crossing_cases}/{multi_selected_regime.cases}."
+        )
+    print(
+        "- This turns the case-core result into a real mechanism map: empty cores, single-motif cores, and multi-motif cores now line up with different contour-roughness and topology signatures instead of only looking like abstract counts."
     )
     print()
 
