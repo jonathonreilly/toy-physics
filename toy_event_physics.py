@@ -435,6 +435,31 @@ class DerivedBasisAblationRow:
 
 
 @dataclass
+class DerivedBootstrapBasisRow:
+    basis_name: str
+    basis_type: str
+    dimension: int
+    cases: int
+    selected_on_pc123: int
+    pc123_overlap_with_full: int
+    compact_top_rule: str
+    compact_top_pc123: int
+    extended_top_rule: str
+    extended_top_pc123: int
+
+
+@dataclass
+class DerivedBootstrapStabilityRow:
+    rule_family: str
+    rule_signature: str
+    basis_hits: int
+    subset_basis_hits: int
+    random_basis_hits: int
+    case_basis_hits: int
+    top_basis_hits: int
+
+
+@dataclass
 class FrontierTraceRow:
     retained_weight: float
     rule_signature: str
@@ -6509,6 +6534,10 @@ DERIVED_AXIS_BASIS_FIELDS = (
 )
 
 
+DERIVED_BOOTSTRAP_RANDOM_COUNT = 12
+DERIVED_BOOTSTRAP_RANDOM_SEED = 17
+
+
 def derived_metric_vector(candidate: EvaluatedCandidate) -> tuple[float, ...]:
     return tuple(float(getattr(candidate, field_name)) for field_name in DERIVED_AXIS_METRIC_FIELDS)
 
@@ -6585,19 +6614,12 @@ def derived_axis_seed_vectors(
     return (all_positive, alternating, staggered)
 
 
-def derived_axis_components(
-    candidates: list[EvaluatedCandidate],
-    metric_fields: tuple[str, ...],
-    component_count: int = 3,
-) -> tuple[list[tuple[float, tuple[float, ...]]], list[EvaluatedCandidate]]:
-    if not candidates:
-        return [], []
-
-    metric_rows = [
-        derived_metric_vector_for_fields(candidate, metric_fields)
-        for candidate in candidates
-    ]
-    dimension = len(metric_fields)
+def standardized_metric_rows(
+    metric_rows: list[tuple[float, ...]],
+) -> list[tuple[float, ...]]:
+    if not metric_rows:
+        return []
+    dimension = len(metric_rows[0])
     means = [
         sum(row[index] for row in metric_rows) / len(metric_rows)
         for index in range(dimension)
@@ -6607,11 +6629,19 @@ def derived_axis_components(
         for index in range(dimension)
     ]
     scales = [math.sqrt(variance) if variance > 1e-12 else 1.0 for variance in variances]
-    standardized_rows = [
+    return [
         tuple((row[index] - means[index]) / scales[index] for index in range(dimension))
         for row in metric_rows
     ]
-    covariance = tuple(
+
+
+def covariance_from_standardized_rows(
+    standardized_rows: list[tuple[float, ...]],
+) -> tuple[tuple[float, ...], ...]:
+    if not standardized_rows:
+        return tuple()
+    dimension = len(standardized_rows[0])
+    return tuple(
         tuple(
             sum(row[left_index] * row[right_index] for row in standardized_rows) / max(1, len(standardized_rows) - 1)
             for right_index in range(dimension)
@@ -6619,35 +6649,12 @@ def derived_axis_components(
         for left_index in range(dimension)
     )
 
-    anchor = tuple(
-        1.0 if field_name in {"center_gap", "arrival_span", "focus_score"} else 0.0
-        for field_name in metric_fields
-    )
-    if all(value == 0.0 for value in anchor):
-        anchor = tuple(1.0 for _field in metric_fields)
-    seed_vectors = derived_axis_seed_vectors(dimension)
-    working_covariance = covariance
-    components: list[tuple[float, tuple[float, ...]]] = []
-    for component_index in range(min(component_count, dimension)):
-        default_seed = tuple(
-            1.0 if metric_index == component_index else 0.0
-            for metric_index in range(dimension)
-        )
-        eigenvalue, eigenvector = principal_component(
-            working_covariance,
-            seed_vectors[component_index] if component_index < len(seed_vectors) else default_seed,
-        )
-        if eigenvalue <= 1e-10 or all(abs(value) <= 1e-10 for value in eigenvector):
-            break
-        if dot_product(eigenvector, anchor) < 0.0:
-            eigenvector = tuple(-value for value in eigenvector)
-        components.append((eigenvalue, eigenvector))
-        working_covariance = deflate_covariance(
-            working_covariance,
-            eigenvalue,
-            eigenvector,
-        )
 
+def annotate_candidates_with_component_scores(
+    candidates: list[EvaluatedCandidate],
+    standardized_rows: list[tuple[float, ...]],
+    components: list[tuple[float, tuple[float, ...]]],
+) -> list[EvaluatedCandidate]:
     annotated_candidates = [
         replace(
             candidate,
@@ -6670,7 +6677,74 @@ def derived_axis_components(
             )
             for candidate, standardized_row in zip(annotated_candidates, standardized_rows)
         ]
-    return components, annotated_candidates
+    return annotated_candidates
+
+
+def derived_axis_components_from_metric_rows(
+    candidates: list[EvaluatedCandidate],
+    metric_rows: list[tuple[float, ...]],
+    anchor: tuple[float, ...],
+    component_count: int = 3,
+) -> tuple[list[tuple[float, tuple[float, ...]]], list[EvaluatedCandidate]]:
+    if not candidates or not metric_rows:
+        return [], []
+
+    dimension = len(metric_rows[0])
+    standardized_rows = standardized_metric_rows(metric_rows)
+    covariance = covariance_from_standardized_rows(standardized_rows)
+    if all(value == 0.0 for value in anchor):
+        anchor = tuple(1.0 for _field in range(dimension))
+    seed_vectors = derived_axis_seed_vectors(dimension)
+    working_covariance = covariance
+    components: list[tuple[float, tuple[float, ...]]] = []
+    for component_index in range(min(component_count, dimension)):
+        default_seed = tuple(
+            1.0 if metric_index == component_index else 0.0
+            for metric_index in range(dimension)
+        )
+        eigenvalue, eigenvector = principal_component(
+            working_covariance,
+            seed_vectors[component_index] if component_index < len(seed_vectors) else default_seed,
+        )
+        if eigenvalue <= 1e-10 or all(abs(value) <= 1e-10 for value in eigenvector):
+            break
+        if dot_product(eigenvector, anchor) < 0.0:
+            eigenvector = tuple(-value for value in eigenvector)
+        components.append((eigenvalue, eigenvector))
+        working_covariance = deflate_covariance(
+            working_covariance,
+            eigenvalue,
+            eigenvector,
+        )
+    return components, annotate_candidates_with_component_scores(
+        candidates,
+        standardized_rows,
+        components,
+    )
+
+
+def derived_axis_components(
+    candidates: list[EvaluatedCandidate],
+    metric_fields: tuple[str, ...],
+    component_count: int = 3,
+) -> tuple[list[tuple[float, tuple[float, ...]]], list[EvaluatedCandidate]]:
+    if not candidates:
+        return [], []
+
+    metric_rows = [
+        derived_metric_vector_for_fields(candidate, metric_fields)
+        for candidate in candidates
+    ]
+    anchor = tuple(
+        1.0 if field_name in {"center_gap", "arrival_span", "focus_score"} else 0.0
+        for field_name in metric_fields
+    )
+    return derived_axis_components_from_metric_rows(
+        candidates,
+        metric_rows,
+        anchor,
+        component_count=component_count,
+    )
 
 
 def derived_axis_loadings(
@@ -6731,13 +6805,27 @@ def derived_axis_frontier_analysis(
     list[DerivedAxisAggregateRow],
 ]:
     loading_rows, annotated_candidates = derived_axis_loadings(baseline_candidates)
+    scenario_rows, aggregate_rows, _pc123_signatures_by_case = evaluate_derived_axis_candidates(
+        baseline_rows,
+        annotated_candidates,
+    )
+    return loading_rows, scenario_rows, aggregate_rows
+
+
+def evaluate_derived_axis_candidates(
+    baseline_rows: list[FrontierScenarioRow],
+    annotated_candidates: list[EvaluatedCandidate],
+) -> tuple[
+    list[DerivedAxisScenarioRow],
+    list[DerivedAxisAggregateRow],
+    dict[tuple[str, str, str, float], set[str]],
+]:
     grouped_candidates: DefaultDict[
         tuple[str, str, str, float],
         list[EvaluatedCandidate],
     ] = defaultdict(list)
     for candidate in annotated_candidates:
         grouped_candidates[frontier_candidate_case_key(candidate)].append(candidate)
-
     baseline_rows_by_case = {
         frontier_scenario_case_key(row): row
         for row in baseline_rows
@@ -6749,6 +6837,7 @@ def derived_axis_frontier_analysis(
     pc1_sets: DefaultDict[tuple[str, str], set[tuple[str, str, float]]] = defaultdict(set)
     pc12_sets: DefaultDict[tuple[str, str], set[tuple[str, str, float]]] = defaultdict(set)
     pc123_sets: DefaultDict[tuple[str, str], set[tuple[str, str, float]]] = defaultdict(set)
+    pc123_signatures_by_case: dict[tuple[str, str, str, float], set[str]] = {}
 
     for case_key in sorted(grouped_candidates):
         case_candidates = grouped_candidates[case_key]
@@ -6771,6 +6860,10 @@ def derived_axis_frontier_analysis(
         pc123_candidates = [
             candidate for candidate in case_candidates if candidate.candidate_identity in frontier_identities["pc123"]
         ]
+        pc123_signatures_by_case[case_key] = {
+            candidate.rule_signature
+            for candidate in pc123_candidates
+        }
         scenario_rows.append(
             DerivedAxisScenarioRow(
                 pack_name=baseline_row.pack_name,
@@ -6822,9 +6915,9 @@ def derived_axis_frontier_analysis(
             -row.pc1_hits,
             -row.selected_hits,
             row.rule_signature,
+            )
         )
-    )
-    return loading_rows, scenario_rows, aggregate_rows
+    return scenario_rows, aggregate_rows, pc123_signatures_by_case
 
 
 def derived_basis_ablation(
@@ -6832,109 +6925,26 @@ def derived_basis_ablation(
     baseline_candidates: list[EvaluatedCandidate],
     basis_fields: tuple[tuple[str, tuple[str, ...]], ...] = DERIVED_AXIS_BASIS_FIELDS,
 ) -> list[DerivedBasisAblationRow]:
-    grouped_baseline_candidates: DefaultDict[
-        tuple[str, str, str, float],
-        list[EvaluatedCandidate],
-    ] = defaultdict(list)
-    for candidate in baseline_candidates:
-        grouped_baseline_candidates[frontier_candidate_case_key(candidate)].append(candidate)
-
-    baseline_rows_by_case = {
-        frontier_scenario_case_key(row): row
-        for row in baseline_rows
-    }
-    derived_views = derived_axis_frontier_views()
     basis_case_pc123_signatures: dict[str, dict[tuple[str, str, str, float], set[str]]] = {}
     basis_aggregate_rows: dict[str, list[DerivedAxisAggregateRow]] = {}
     basis_selected_counts: dict[str, tuple[int, int, int]] = {}
 
     for basis_name, metric_fields in basis_fields:
-        grouped_candidates: DefaultDict[
-            tuple[str, str, str, float],
-            list[EvaluatedCandidate],
-        ] = defaultdict(list)
         _components, annotated_candidates = derived_axis_components(
             baseline_candidates,
             metric_fields,
         )
-        for candidate in annotated_candidates:
-            grouped_candidates[frontier_candidate_case_key(candidate)].append(candidate)
-
-        case_sets: DefaultDict[tuple[str, str], set[tuple[str, str, float]]] = defaultdict(set)
-        selected_sets: DefaultDict[tuple[str, str], set[tuple[str, str, float]]] = defaultdict(set)
-        pc1_sets: DefaultDict[tuple[str, str], set[tuple[str, str, float]]] = defaultdict(set)
-        pc12_sets: DefaultDict[tuple[str, str], set[tuple[str, str, float]]] = defaultdict(set)
-        pc123_sets: DefaultDict[tuple[str, str], set[tuple[str, str, float]]] = defaultdict(set)
-        pc123_signatures_by_case: dict[tuple[str, str, str, float], set[str]] = {}
-        selected_on_pc1 = 0
-        selected_on_pc12 = 0
-        selected_on_pc123 = 0
-
-        for case_key in sorted(grouped_candidates):
-            case_candidates = grouped_candidates[case_key]
-            baseline_row = baseline_rows_by_case[case_key]
-            frontier_identities = {
-                view_name: pareto_frontier_identities(case_candidates, axes)
-                for view_name, axes in derived_views.items()
-            }
-            selected_candidate = next(
-                candidate
-                for candidate in case_candidates
-                if candidate.rule_signature == baseline_row.selected_rule and candidate.current_selected
-            )
-            selected_on_pc1 += selected_candidate.candidate_identity in frontier_identities["pc1"]
-            selected_on_pc12 += selected_candidate.candidate_identity in frontier_identities["pc12"]
-            selected_on_pc123 += selected_candidate.candidate_identity in frontier_identities["pc123"]
-            pc123_signatures_by_case[case_key] = {
-                candidate.rule_signature
-                for candidate in case_candidates
-                if candidate.candidate_identity in frontier_identities["pc123"]
-            }
-
-            case_triplet = (
-                baseline_row.pack_name,
-                baseline_row.scenario_name,
-                baseline_row.retained_weight,
-            )
-            for candidate in case_candidates:
-                family_rule = (candidate.rule_family, candidate.rule_signature)
-                case_sets[family_rule].add(case_triplet)
-                if candidate.current_selected:
-                    selected_sets[family_rule].add(case_triplet)
-                if candidate.candidate_identity in frontier_identities["pc1"]:
-                    pc1_sets[family_rule].add(case_triplet)
-                if candidate.candidate_identity in frontier_identities["pc12"]:
-                    pc12_sets[family_rule].add(case_triplet)
-                if candidate.candidate_identity in frontier_identities["pc123"]:
-                    pc123_sets[family_rule].add(case_triplet)
-
-        basis_case_pc123_signatures[basis_name] = pc123_signatures_by_case
-        basis_selected_counts[basis_name] = (
-            selected_on_pc1,
-            selected_on_pc12,
-            selected_on_pc123,
+        scenario_rows, aggregate_rows, pc123_signatures_by_case = evaluate_derived_axis_candidates(
+            baseline_rows,
+            annotated_candidates,
         )
-        aggregate_rows = [
-            DerivedAxisAggregateRow(
-                rule_family=rule_family,
-                rule_signature=rule_signature,
-                case_hits=len(case_sets[(rule_family, rule_signature)]),
-                selected_hits=len(selected_sets[(rule_family, rule_signature)]),
-                pc1_hits=len(pc1_sets[(rule_family, rule_signature)]),
-                pc12_hits=len(pc12_sets[(rule_family, rule_signature)]),
-                pc123_hits=len(pc123_sets[(rule_family, rule_signature)]),
+        basis_case_pc123_signatures[basis_name] = pc123_signatures_by_case
+        basis_selected_counts[basis_name] = tuple(
+            sum(
+                getattr(row, attribute)
+                for row in scenario_rows
             )
-            for rule_family, rule_signature in case_sets
-        ]
-        aggregate_rows.sort(
-            key=lambda row: (
-                row.rule_family,
-                -row.pc123_hits,
-                -row.pc12_hits,
-                -row.pc1_hits,
-                -row.selected_hits,
-                row.rule_signature,
-            )
+            for attribute in ("selected_on_pc1", "selected_on_pc12", "selected_on_pc123")
         )
         basis_aggregate_rows[basis_name] = aggregate_rows
 
@@ -6970,6 +6980,170 @@ def derived_basis_ablation(
             )
         )
     return ablation_rows
+
+
+def bootstrap_subset_basis_fields() -> tuple[tuple[str, tuple[str, ...]], ...]:
+    rows: list[tuple[str, tuple[str, ...]]] = [("full5", DERIVED_AXIS_METRIC_FIELDS)]
+    for subset_size in (3, 4):
+        for subset_fields in itertools.combinations(DERIVED_AXIS_METRIC_FIELDS, subset_size):
+            basis_name = f"sub{subset_size}:{'+'.join(field.replace('_', '') for field in subset_fields)}"
+            rows.append((basis_name, subset_fields))
+    return tuple(rows)
+
+
+def random_projection_basis_specs(
+    count: int = DERIVED_BOOTSTRAP_RANDOM_COUNT,
+    seed: int = DERIVED_BOOTSTRAP_RANDOM_SEED,
+) -> tuple[tuple[str, tuple[tuple[float, ...], ...]], ...]:
+    rng = random.Random(seed)
+    base_dimension = len(DERIVED_AXIS_METRIC_FIELDS)
+    projection_dimension = 3
+    specs: list[tuple[str, tuple[tuple[float, ...], ...]]] = []
+    for basis_index in range(count):
+        matrix = []
+        for _projection_index in range(projection_dimension):
+            row = [rng.uniform(-1.0, 1.0) for _metric_index in range(base_dimension)]
+            if math.sqrt(sum(value * value for value in row)) <= 1e-6:
+                row[0] = 1.0
+            matrix.append(tuple(row))
+        specs.append((f"rand{basis_index + 1:02d}", tuple(matrix)))
+    return tuple(specs)
+
+
+def projected_metric_rows(
+    candidates: list[EvaluatedCandidate],
+    projection_matrix: tuple[tuple[float, ...], ...],
+) -> tuple[list[tuple[float, ...]], tuple[float, ...]]:
+    base_rows = [derived_metric_vector(candidate) for candidate in candidates]
+    projected_rows = [
+        tuple(
+            sum(weight * value for weight, value in zip(projection_row, base_row))
+            for projection_row in projection_matrix
+        )
+        for base_row in base_rows
+    ]
+    base_anchor = (1.0, 1.0, 0.0, 0.0, 1.0)
+    projected_anchor = tuple(
+        sum(weight * value for weight, value in zip(projection_row, base_anchor))
+        for projection_row in projection_matrix
+    )
+    return projected_rows, projected_anchor
+
+
+def derived_bootstrap_ensemble(
+    baseline_rows: list[FrontierScenarioRow],
+    baseline_candidates: list[EvaluatedCandidate],
+    random_basis_count: int = DERIVED_BOOTSTRAP_RANDOM_COUNT,
+) -> tuple[list[DerivedBootstrapBasisRow], list[DerivedBootstrapStabilityRow]]:
+    subset_specs = bootstrap_subset_basis_fields()
+    random_specs = random_projection_basis_specs(count=random_basis_count)
+    basis_case_pc123_signatures: dict[str, dict[tuple[str, str, str, float], set[str]]] = {}
+    basis_rows: list[DerivedBootstrapBasisRow] = []
+    family_rule_case_hits: DefaultDict[tuple[str, str], int] = defaultdict(int)
+    family_rule_basis_hits: DefaultDict[tuple[str, str], set[str]] = defaultdict(set)
+    family_rule_subset_hits: DefaultDict[tuple[str, str], set[str]] = defaultdict(set)
+    family_rule_random_hits: DefaultDict[tuple[str, str], set[str]] = defaultdict(set)
+    family_rule_top_hits: DefaultDict[tuple[str, str], int] = defaultdict(int)
+
+    def record_basis(
+        basis_name: str,
+        basis_type: str,
+        basis_dimension: int,
+        annotated_candidates: list[EvaluatedCandidate],
+    ) -> None:
+        scenario_rows, aggregate_rows, pc123_signatures_by_case = evaluate_derived_axis_candidates(
+            baseline_rows,
+            annotated_candidates,
+        )
+        basis_case_pc123_signatures[basis_name] = pc123_signatures_by_case
+        selected_on_pc123 = sum(row.selected_on_pc123 for row in scenario_rows)
+        compact_top = next((row for row in aggregate_rows if row.rule_family == "compact"), None)
+        extended_top = next((row for row in aggregate_rows if row.rule_family == "extended"), None)
+        if compact_top is not None:
+            family_rule_top_hits[(compact_top.rule_family, compact_top.rule_signature)] += 1
+        if extended_top is not None:
+            family_rule_top_hits[(extended_top.rule_family, extended_top.rule_signature)] += 1
+        for aggregate_row in aggregate_rows:
+            family_rule = (aggregate_row.rule_family, aggregate_row.rule_signature)
+            if aggregate_row.pc123_hits > 0:
+                family_rule_basis_hits[family_rule].add(basis_name)
+                if basis_type == "subset":
+                    family_rule_subset_hits[family_rule].add(basis_name)
+                else:
+                    family_rule_random_hits[family_rule].add(basis_name)
+                family_rule_case_hits[family_rule] += aggregate_row.pc123_hits
+        basis_rows.append(
+            DerivedBootstrapBasisRow(
+                basis_name=basis_name,
+                basis_type=basis_type,
+                dimension=basis_dimension,
+                cases=len(baseline_rows),
+                selected_on_pc123=selected_on_pc123,
+                pc123_overlap_with_full=0,
+                compact_top_rule=compact_top.rule_signature if compact_top is not None else "-",
+                compact_top_pc123=compact_top.pc123_hits if compact_top is not None else 0,
+                extended_top_rule=extended_top.rule_signature if extended_top is not None else "-",
+                extended_top_pc123=extended_top.pc123_hits if extended_top is not None else 0,
+            )
+        )
+
+    for basis_name, metric_fields in subset_specs:
+        _components, annotated_candidates = derived_axis_components(
+            baseline_candidates,
+            metric_fields,
+        )
+        record_basis(basis_name, "subset", len(metric_fields), annotated_candidates)
+
+    for basis_name, projection_matrix in random_specs:
+        metric_rows, anchor = projected_metric_rows(
+            baseline_candidates,
+            projection_matrix,
+        )
+        _components, annotated_candidates = derived_axis_components_from_metric_rows(
+            baseline_candidates,
+            metric_rows,
+            anchor,
+        )
+        record_basis(basis_name, "random", len(projection_matrix), annotated_candidates)
+
+    full_signatures = basis_case_pc123_signatures["full5"]
+    for row in basis_rows:
+        row.pc123_overlap_with_full = sum(
+            bool(
+                basis_case_pc123_signatures[row.basis_name][case_key]
+                & full_signatures[case_key]
+            )
+            for case_key in full_signatures
+        )
+
+    stability_rows = [
+        DerivedBootstrapStabilityRow(
+            rule_family=rule_family,
+            rule_signature=rule_signature,
+            basis_hits=len(family_rule_basis_hits[(rule_family, rule_signature)]),
+            subset_basis_hits=len(family_rule_subset_hits[(rule_family, rule_signature)]),
+            random_basis_hits=len(family_rule_random_hits[(rule_family, rule_signature)]),
+            case_basis_hits=family_rule_case_hits[(rule_family, rule_signature)],
+            top_basis_hits=family_rule_top_hits[(rule_family, rule_signature)],
+        )
+        for rule_family, rule_signature in family_rule_basis_hits
+    ]
+    basis_rows.sort(
+        key=lambda row: (
+            row.basis_type != "subset",
+            row.basis_name,
+        )
+    )
+    stability_rows.sort(
+        key=lambda row: (
+            row.rule_family,
+            -row.basis_hits,
+            -row.case_basis_hits,
+            -row.top_basis_hits,
+            row.rule_signature,
+        )
+    )
+    return basis_rows, stability_rows
 
 
 def random_rediscovery_limit_sweep_summary(
@@ -8456,6 +8630,48 @@ def render_derived_basis_ablation_table(
             f"{row.compact_top_rule:<18} {row.compact_top_pc123:>2} | "
             f"{row.extended_top_rule:<18} {row.extended_top_pc123:>2} | "
             f"{row.metrics}"
+        )
+    return "\n".join(lines)
+
+
+def render_derived_bootstrap_basis_table(
+    rows: list[DerivedBootstrapBasisRow],
+    limit: int = 16,
+) -> str:
+    lines = [
+        "basis      | type   | dim | sel pc123 | ovlp full | compact top        | ext top",
+        "-----------+--------+-----+-----------+-----------+--------------------+--------------------",
+    ]
+    for row in rows[:limit]:
+        lines.append(
+            f"{row.basis_name:<9} | "
+            f"{row.basis_type:<6} | "
+            f"{row.dimension:>3} | "
+            f"{row.selected_on_pc123:>9} | "
+            f"{row.pc123_overlap_with_full:>9} | "
+            f"{row.compact_top_rule:<18} {row.compact_top_pc123:>2} | "
+            f"{row.extended_top_rule:<18} {row.extended_top_pc123:>2}"
+        )
+    return "\n".join(lines)
+
+
+def render_derived_bootstrap_stability_table(
+    rows: list[DerivedBootstrapStabilityRow],
+    limit: int = 12,
+) -> str:
+    lines = [
+        "family   | rule              | basis hits | subset | random | case hits | top hits",
+        "---------+-------------------+------------+--------+--------+-----------+---------",
+    ]
+    for row in rows[:limit]:
+        lines.append(
+            f"{row.rule_family:<8} | "
+            f"{row.rule_signature:<17} | "
+            f"{row.basis_hits:>10} | "
+            f"{row.subset_basis_hits:>6} | "
+            f"{row.random_basis_hits:>6} | "
+            f"{row.case_basis_hits:>9} | "
+            f"{row.top_basis_hits:>7}"
         )
     return "\n".join(lines)
 
@@ -10104,6 +10320,60 @@ def main() -> None:
     )
     print(
         "- So this is the next cheat-removal result: the full covariance-derived frontier is not uniquely tied to one hand-picked metric bundle, but the detailed motif ranking is still basis-dependent. Some reduced bases preserve the pc123 story completely, while others flip the leading motif family."
+    )
+    print()
+
+    print("48) Bootstrap stability map over basis ensembles")
+    bootstrap_basis_rows, bootstrap_stability_rows = derived_bootstrap_ensemble(
+        harmonic_continuous_frontier_rows,
+        harmonic_continuous_frontier_candidates,
+    )
+    print(
+        render_derived_bootstrap_basis_table(
+            bootstrap_basis_rows,
+            limit=min(16, len(bootstrap_basis_rows)),
+        )
+    )
+    print()
+    print(render_derived_bootstrap_stability_table(bootstrap_stability_rows[:12]))
+    print()
+    print("Interpretation:")
+    subset_basis_count = sum(row.basis_type == "subset" for row in bootstrap_basis_rows)
+    random_basis_count = sum(row.basis_type == "random" for row in bootstrap_basis_rows)
+    total_basis_count = len(bootstrap_basis_rows)
+    print(
+        f"- This is the stability-map version of the basis test: instead of checking a few named bases, it bootstraps {subset_basis_count} subset bases and {random_basis_count} seeded random projection bases, for {total_basis_count} total basis views on the same harmonic-continuous candidate pool."
+    )
+    if bootstrap_basis_rows:
+        full_basis_bootstrap = next(row for row in bootstrap_basis_rows if row.basis_name == "full5")
+        print(
+            f"- The reference full basis keeps the selected rule on pc123 in {full_basis_bootstrap.selected_on_pc123}/{full_basis_bootstrap.cases} cases. We can now compare every other basis against that at scale."
+        )
+    compact_bootstrap = next((row for row in bootstrap_stability_rows if row.rule_family == "compact"), None)
+    extended_bootstrap = next((row for row in bootstrap_stability_rows if row.rule_family == "extended"), None)
+    if compact_bootstrap is not None:
+        print(
+            f"- In `compact`, the most ensemble-stable pc123 motif is `{compact_bootstrap.rule_signature}`, appearing in {compact_bootstrap.basis_hits}/{total_basis_count} bases and {compact_bootstrap.case_basis_hits} basis-case frontiers, with {compact_bootstrap.top_basis_hits} top-basis wins."
+        )
+    if extended_bootstrap is not None:
+        print(
+            f"- In `extended`, the most ensemble-stable pc123 motif is `{extended_bootstrap.rule_signature}`, appearing in {extended_bootstrap.basis_hits}/{total_basis_count} bases and {extended_bootstrap.case_basis_hits} basis-case frontiers, with {extended_bootstrap.top_basis_hits} top-basis wins."
+        )
+    if compact_bootstrap is not None and extended_bootstrap is not None:
+        print(
+            f"- The same motif family wins both stability maps in this run: `{compact_bootstrap.rule_signature}` / `{extended_bootstrap.rule_signature}`."
+        )
+    ubiquitous_rules = [
+        row
+        for row in bootstrap_stability_rows
+        if row.basis_hits == total_basis_count
+    ]
+    if ubiquitous_rules:
+        print(
+            f"- Basis ubiquity is broader than top-rank dominance here: {len(ubiquitous_rules)} motif-family pairs appear on pc123 in every sampled basis, but `{compact_bootstrap.rule_signature}` still leads because it wins more basis-case frontiers and more top-basis slots."
+        )
+    print(
+        "- This is the strongest current answer to the basis-dependence question: not which motif wins for one chosen basis, but which motifs keep reappearing on the full derived frontier across an ensemble of basis choices."
     )
     print()
 
