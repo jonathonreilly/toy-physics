@@ -810,6 +810,24 @@ class CrossDatasetTransferRow:
 
 
 @dataclass
+class CrossDatasetSubsetRow:
+    rule_family: str
+    feature_subset: str
+    subset_size: int
+    uses_roughness: bool
+    train_accuracy: float
+    mode_cv_accuracy: float
+    min_mode_accuracy: float
+    roughness_accuracy: float
+    procedural_accuracy: float
+    mean_transfer_accuracy: float
+    worst_transfer_accuracy: float
+    on_balanced_frontier: bool = False
+    on_transfer_frontier: bool = False
+    tree_description: str = ""
+
+
+@dataclass
 class FrontierTraceRow:
     retained_weight: float
     rule_signature: str
@@ -9229,14 +9247,7 @@ def centerline_feature_subset_benchmark(
     mode_rows: list[CenterlineModeSweepRow],
     max_subset_size: int = 3,
 ) -> list[CenterlineFeatureSubsetRow]:
-    candidate_features = (
-        "center_variation",
-        "center_range",
-        "span_range",
-        "turning_points",
-        "max_step_fraction",
-        "crosses_midline",
-    )
+    candidate_features = geometry_candidate_features()
     benchmark_rows: list[CenterlineFeatureSubsetRow] = []
     for rule_family in ("compact", "extended"):
         family_rows = [row for row in mode_rows if row.rule_family == rule_family]
@@ -9283,14 +9294,7 @@ def centerline_feature_selection_stability(
     mode_rows: list[CenterlineModeSweepRow],
     max_subset_size: int = 3,
 ) -> list[CenterlineFeatureSelectionRow]:
-    candidate_features = (
-        "center_variation",
-        "center_range",
-        "span_range",
-        "turning_points",
-        "max_step_fraction",
-        "crosses_midline",
-    )
+    candidate_features = geometry_candidate_features()
     selection_rows: list[CenterlineFeatureSelectionRow] = []
     for rule_family in ("compact", "extended"):
         family_rows = [row for row in mode_rows if row.rule_family == rule_family]
@@ -9357,6 +9361,17 @@ def parse_feature_signature(
     if not stripped or stripped == "-":
         return tuple()
     return tuple(part.strip() for part in stripped.split(","))
+
+
+def geometry_candidate_features() -> tuple[str, ...]:
+    return (
+        "center_variation",
+        "center_range",
+        "span_range",
+        "turning_points",
+        "max_step_fraction",
+        "crosses_midline",
+    )
 
 
 def geometry_prediction_rows_from_mode(
@@ -9600,6 +9615,167 @@ def cross_dataset_transfer_benchmark(
         )
     )
     return benchmark_rows
+
+
+def dominates_subset_row(
+    left: CrossDatasetSubsetRow,
+    right: CrossDatasetSubsetRow,
+    axes: tuple[str, ...],
+) -> bool:
+    left_values = [getattr(left, axis) for axis in axes]
+    right_values = [getattr(right, axis) for axis in axes]
+    return all(left_value >= right_value for left_value, right_value in zip(left_values, right_values)) and any(
+        left_value > right_value for left_value, right_value in zip(left_values, right_values)
+    )
+
+
+def cross_dataset_subset_pareto_benchmark(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    procedural_variant_limit: int = 2,
+    procedural_rediscovery_limit: int = 1,
+    max_subset_size: int = 3,
+) -> list[CrossDatasetSubsetRow]:
+    if mode_retained_weight is None:
+        mode_core_rows, _mode_aggregate = centerline_mode_core_sweep()
+    else:
+        mode_core_rows, _mode_aggregate = centerline_mode_core_sweep(
+            retained_weights=(mode_retained_weight,),
+        )
+    roughness_rows, _roughness_aggregate = roughness_core_sweep(
+        retained_weights=(retained_weight,),
+    )
+    procedural_rows = procedural_geometry_prediction_rows(
+        retained_weight=retained_weight,
+        variant_limit=procedural_variant_limit,
+        rediscovery_limit=procedural_rediscovery_limit,
+    )
+    mode_prediction_rows = geometry_prediction_rows_from_mode(
+        mode_core_rows,
+        retained_weight=mode_retained_weight,
+    )
+    roughness_prediction_rows = geometry_prediction_rows_from_roughness(
+        roughness_rows,
+        retained_weight=retained_weight,
+    )
+    subset_rows = centerline_feature_subset_benchmark(
+        mode_core_rows,
+        max_subset_size=max_subset_size,
+    )
+    subset_index = {
+        (row.rule_family, row.feature_subset): row
+        for row in subset_rows
+    }
+    candidate_features = geometry_candidate_features()
+    benchmark_rows: list[CrossDatasetSubsetRow] = []
+    for rule_family in ("compact", "extended"):
+        family_mode_rows = [
+            row for row in mode_prediction_rows if row.rule_family == rule_family
+        ]
+        family_roughness_rows = [
+            row for row in roughness_prediction_rows if row.rule_family == rule_family
+        ]
+        family_procedural_rows = [
+            row for row in procedural_rows if row.rule_family == rule_family
+        ]
+        family_rows: list[CrossDatasetSubsetRow] = []
+        for subset_size in range(1, max_subset_size + 1):
+            for feature_names in itertools.combinations(candidate_features, subset_size):
+                feature_subset = ", ".join(feature_names)
+                subset_row = subset_index[(rule_family, feature_subset)]
+                tree = learn_tiny_decision_tree(family_mode_rows, feature_names, 2)
+                roughness_accuracy = decision_tree_accuracy(tree, family_roughness_rows)
+                procedural_accuracy = decision_tree_accuracy(tree, family_procedural_rows)
+                family_rows.append(
+                    CrossDatasetSubsetRow(
+                        rule_family=rule_family,
+                        feature_subset=feature_subset,
+                        subset_size=subset_size,
+                        uses_roughness="center_variation" in feature_names,
+                        train_accuracy=subset_row.train_accuracy,
+                        mode_cv_accuracy=subset_row.cv_accuracy,
+                        min_mode_accuracy=subset_row.min_mode_accuracy,
+                        roughness_accuracy=roughness_accuracy,
+                        procedural_accuracy=procedural_accuracy,
+                        mean_transfer_accuracy=(roughness_accuracy + procedural_accuracy) / 2.0,
+                        worst_transfer_accuracy=min(roughness_accuracy, procedural_accuracy),
+                        tree_description=format_tiny_decision_tree(tree),
+                    )
+                )
+        balanced_axes = ("mode_cv_accuracy", "mean_transfer_accuracy", "worst_transfer_accuracy")
+        transfer_axes = ("roughness_accuracy", "procedural_accuracy")
+        for row in family_rows:
+            row.on_balanced_frontier = not any(
+                dominates_subset_row(other_row, row, balanced_axes)
+                for other_row in family_rows
+                if other_row.feature_subset != row.feature_subset
+            )
+            row.on_transfer_frontier = not any(
+                dominates_subset_row(other_row, row, transfer_axes)
+                for other_row in family_rows
+                if other_row.feature_subset != row.feature_subset
+            )
+        benchmark_rows.extend(family_rows)
+
+    benchmark_rows.sort(
+        key=lambda row: (
+            row.rule_family,
+            -int(row.on_balanced_frontier),
+            -int(row.on_transfer_frontier),
+            -row.mode_cv_accuracy,
+            -row.mean_transfer_accuracy,
+            -row.worst_transfer_accuracy,
+            row.subset_size,
+            row.feature_subset,
+        )
+    )
+    return benchmark_rows
+
+
+def compress_redundant_subset_frontier_rows(
+    rows: list[CrossDatasetSubsetRow],
+) -> list[CrossDatasetSubsetRow]:
+    best_by_key: dict[
+        tuple[str, bool, bool, float, float, float, float, float, str],
+        CrossDatasetSubsetRow,
+    ] = {}
+    for row in rows:
+        if not row.on_balanced_frontier and not row.on_transfer_frontier:
+            continue
+        key = (
+            row.rule_family,
+            row.on_balanced_frontier,
+            row.on_transfer_frontier,
+            row.mode_cv_accuracy,
+            row.roughness_accuracy,
+            row.procedural_accuracy,
+            row.mean_transfer_accuracy,
+            row.worst_transfer_accuracy,
+            row.tree_description,
+        )
+        incumbent = best_by_key.get(key)
+        if incumbent is None or (
+            row.subset_size < incumbent.subset_size
+            or (
+                row.subset_size == incumbent.subset_size
+                and row.feature_subset < incumbent.feature_subset
+            )
+        ):
+            best_by_key[key] = row
+    compressed_rows = list(best_by_key.values())
+    compressed_rows.sort(
+        key=lambda row: (
+            row.rule_family,
+            -int(row.on_balanced_frontier),
+            -int(row.on_transfer_frontier),
+            -row.mode_cv_accuracy,
+            -row.mean_transfer_accuracy,
+            -row.worst_transfer_accuracy,
+            row.subset_size,
+            row.feature_subset,
+        )
+    )
+    return compressed_rows
 
 
 def random_rediscovery_limit_sweep_summary(
@@ -11616,6 +11792,35 @@ def render_cross_dataset_transfer_table(
             f"{row.mean_transfer_accuracy:>5.2f} | "
             f"{row.worst_transfer_accuracy:>5.2f} | "
             f"{row.features}"
+        )
+    return "\n".join(lines)
+
+
+def render_cross_dataset_subset_pareto_table(
+    rows: list[CrossDatasetSubsetRow],
+    limit_per_family: int = 10,
+) -> str:
+    lines = [
+        "family   | B/T | subset | mode cv | rough | proc  | mean  | worst | features",
+        "---------+-----+--------+---------+-------+-------+-------+-------+--------------------------------------------------------",
+    ]
+    seen_per_family: DefaultDict[str, int] = defaultdict(int)
+    for row in rows:
+        if seen_per_family[row.rule_family] >= limit_per_family:
+            continue
+        if not row.on_balanced_frontier and not row.on_transfer_frontier:
+            continue
+        seen_per_family[row.rule_family] += 1
+        lines.append(
+            f"{row.rule_family:<8} | "
+            f"{('Y' if row.on_balanced_frontier else 'n')}/{('Y' if row.on_transfer_frontier else 'n'):<3} | "
+            f"{row.subset_size:>6} | "
+            f"{row.mode_cv_accuracy:>7.2f} | "
+            f"{row.roughness_accuracy:>5.2f} | "
+            f"{row.procedural_accuracy:>5.2f} | "
+            f"{row.mean_transfer_accuracy:>5.2f} | "
+            f"{row.worst_transfer_accuracy:>5.2f} | "
+            f"{row.feature_subset}"
         )
     return "\n".join(lines)
 
@@ -14035,6 +14240,46 @@ def main() -> None:
     )
     print(
         "- So the out-of-family answer is narrower and better: some of the extra in-family predictive lift was mode-family-specific. Under distribution shift, roughness-like summaries are the most stable ones we have so far, especially in `compact`."
+    )
+    print()
+
+    print("63) Pareto map of in-family vs transfer-stable feature subsets")
+    subset_pareto_rows = cross_dataset_subset_pareto_benchmark()
+    compressed_subset_pareto_rows = compress_redundant_subset_frontier_rows(
+        subset_pareto_rows
+    )
+    print(render_cross_dataset_subset_pareto_table(compressed_subset_pareto_rows))
+    print()
+    print("Interpretation:")
+    compact_pareto_rows = [row for row in subset_pareto_rows if row.rule_family == "compact"]
+    extended_pareto_rows = [row for row in subset_pareto_rows if row.rule_family == "extended"]
+    compact_compressed_rows = [
+        row for row in compressed_subset_pareto_rows if row.rule_family == "compact"
+    ]
+    extended_compressed_rows = [
+        row for row in compressed_subset_pareto_rows if row.rule_family == "extended"
+    ]
+    compact_balanced = [row for row in compact_pareto_rows if row.on_balanced_frontier]
+    compact_transfer = [row for row in compact_pareto_rows if row.on_transfer_frontier]
+    extended_balanced = [row for row in extended_pareto_rows if row.on_balanced_frontier]
+    extended_transfer = [row for row in extended_pareto_rows if row.on_transfer_frontier]
+    compact_roughness_pareto = next(
+        row for row in compact_pareto_rows if row.feature_subset == "center_variation"
+    )
+    extended_roughness_pareto = next(
+        row for row in extended_pareto_rows if row.feature_subset == "center_variation"
+    )
+    print(
+        "- This is the clean selector-free version of the predictor story: every 1-, 2-, and 3-feature subset is scored by both in-family CV and out-of-family transfer, then we keep only the nondominated subsets."
+    )
+    print(
+        f"- In `compact`, there are {len(compact_balanced)} raw balanced-frontier subsets and {len(compact_transfer)} raw transfer-frontier subsets, which compress to {len(compact_compressed_rows)} distinct frontier behaviors. Roughness-only is {'on' if compact_roughness_pareto.on_balanced_frontier else 'off'} the balanced frontier and {'on' if compact_roughness_pareto.on_transfer_frontier else 'off'} the transfer frontier."
+    )
+    print(
+        f"- In `extended`, there are {len(extended_balanced)} raw balanced-frontier subsets and {len(extended_transfer)} raw transfer-frontier subsets, but those compress to {len(extended_compressed_rows)} distinct frontier behaviors because many supersets reproduce the same roughness split. Roughness-only is {'on' if extended_roughness_pareto.on_balanced_frontier else 'off'} the balanced frontier and {'on' if extended_roughness_pareto.on_transfer_frontier else 'off'} the transfer frontier."
+    )
+    print(
+        "- This is the current best predictor-level summary in the repo: it separates subsets that only win by in-family fit from subsets that remain nondominated once transfer matters too, while collapsing away redundant supersets that add no new behavior."
     )
     print()
 
