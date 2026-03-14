@@ -896,6 +896,35 @@ class GeneratedGeometryPredictorRow:
     description: str
 
 
+_cross_dataset_prediction_context_cache: dict[
+    tuple[float, float | None, int, int],
+    tuple[
+        tuple["CenterlineModeSweepRow", ...],
+        tuple["GeometryPredictionRow", ...],
+        tuple["GeometryPredictionRow", ...],
+        tuple["GeometryPredictionRow", ...],
+    ],
+] = {}
+_procedural_geometry_prediction_rows_cache: dict[
+    tuple[float, int, int],
+    tuple["GeometryPredictionRow", ...],
+] = {}
+_geometry_randomization_prediction_rows_cache: dict[
+    tuple[float, int],
+    tuple["GeometryPredictionRow", ...],
+] = {}
+_generated_geometry_prediction_context_cache: dict[
+    tuple[float, float | None, int, int, int],
+    tuple[
+        tuple["CenterlineModeSweepRow", ...],
+        tuple["GeometryPredictionRow", ...],
+        tuple["GeometryPredictionRow", ...],
+        tuple["GeometryPredictionRow", ...],
+        tuple["GeometryPredictionRow", ...],
+    ],
+] = {}
+
+
 @dataclass
 class FrontierTraceRow:
     retained_weight: float
@@ -9744,6 +9773,27 @@ def build_cross_dataset_prediction_context(
     list[GeometryPredictionRow],
     list[GeometryPredictionRow],
 ]:
+    cache_key = (
+        retained_weight,
+        mode_retained_weight,
+        procedural_variant_limit,
+        procedural_rediscovery_limit,
+    )
+    cached_context = _cross_dataset_prediction_context_cache.get(cache_key)
+    if cached_context is not None:
+        (
+            mode_core_rows,
+            mode_prediction_rows,
+            roughness_prediction_rows,
+            procedural_rows,
+        ) = cached_context
+        return (
+            list(mode_core_rows),
+            list(mode_prediction_rows),
+            list(roughness_prediction_rows),
+            list(procedural_rows),
+        )
+
     if mode_retained_weight is None:
         mode_core_rows, _mode_aggregate = centerline_mode_core_sweep()
     else:
@@ -9766,11 +9816,18 @@ def build_cross_dataset_prediction_context(
         roughness_rows,
         retained_weight=retained_weight,
     )
+    cached_value = (
+        tuple(mode_core_rows),
+        tuple(mode_prediction_rows),
+        tuple(roughness_prediction_rows),
+        tuple(procedural_rows),
+    )
+    _cross_dataset_prediction_context_cache[cache_key] = cached_value
     return (
-        mode_core_rows,
-        mode_prediction_rows,
-        roughness_prediction_rows,
-        procedural_rows,
+        list(cached_value[0]),
+        list(cached_value[1]),
+        list(cached_value[2]),
+        list(cached_value[3]),
     )
 
 
@@ -9779,6 +9836,11 @@ def procedural_geometry_prediction_rows(
     variant_limit: int = 2,
     rediscovery_limit: int = 1,
 ) -> list[GeometryPredictionRow]:
+    cache_key = (retained_weight, variant_limit, rediscovery_limit)
+    cached_rows = _procedural_geometry_prediction_rows_cache.get(cache_key)
+    if cached_rows is not None:
+        return list(cached_rows)
+
     prediction_rows: list[GeometryPredictionRow] = []
     for pack_name, scenarios in benchmark_packs():
         for scenario_name, nodes, wrap_y in scenarios:
@@ -9835,13 +9897,20 @@ def procedural_geometry_prediction_rows(
                         )
                     )
     prediction_rows.sort(key=lambda row: (row.rule_family, row.source_name))
-    return prediction_rows
+    cached_value = tuple(prediction_rows)
+    _procedural_geometry_prediction_rows_cache[cache_key] = cached_value
+    return list(cached_value)
 
 
 def geometry_randomization_prediction_rows(
     retained_weight: float = 1.0,
     variant_limit: int = 2,
 ) -> list[GeometryPredictionRow]:
+    cache_key = (retained_weight, variant_limit)
+    cached_rows = _geometry_randomization_prediction_rows_cache.get(cache_key)
+    if cached_rows is not None:
+        return list(cached_rows)
+
     prediction_rows: list[GeometryPredictionRow] = []
     for pack_name, scenarios in benchmark_packs():
         for scenario_name, nodes, wrap_y in scenarios:
@@ -9898,7 +9967,78 @@ def geometry_randomization_prediction_rows(
                         )
                     )
     prediction_rows.sort(key=lambda row: (row.rule_family, row.source_name))
-    return prediction_rows
+    cached_value = tuple(prediction_rows)
+    _geometry_randomization_prediction_rows_cache[cache_key] = cached_value
+    return list(cached_value)
+
+
+def build_generated_geometry_prediction_context(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    geometry_variant_limit: int = 3,
+    procedural_variant_limit: int = 3,
+    procedural_rediscovery_limit: int = 1,
+) -> tuple[
+    list[CenterlineModeSweepRow],
+    list[GeometryPredictionRow],
+    list[GeometryPredictionRow],
+    list[GeometryPredictionRow],
+    list[GeometryPredictionRow],
+]:
+    cache_key = (
+        retained_weight,
+        mode_retained_weight,
+        geometry_variant_limit,
+        procedural_variant_limit,
+        procedural_rediscovery_limit,
+    )
+    cached_context = _generated_geometry_prediction_context_cache.get(cache_key)
+    if cached_context is not None:
+        (
+            mode_core_rows,
+            mode_prediction_rows,
+            roughness_prediction_rows,
+            procedural_rows,
+            geometry_rows,
+        ) = cached_context
+        return (
+            list(mode_core_rows),
+            list(mode_prediction_rows),
+            list(roughness_prediction_rows),
+            list(procedural_rows),
+            list(geometry_rows),
+        )
+
+    (
+        mode_core_rows,
+        mode_prediction_rows,
+        roughness_prediction_rows,
+        procedural_rows,
+    ) = build_cross_dataset_prediction_context(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+        procedural_variant_limit=procedural_variant_limit,
+        procedural_rediscovery_limit=procedural_rediscovery_limit,
+    )
+    geometry_rows = geometry_randomization_prediction_rows(
+        retained_weight=retained_weight,
+        variant_limit=geometry_variant_limit,
+    )
+    cached_value = (
+        tuple(mode_core_rows),
+        tuple(mode_prediction_rows),
+        tuple(roughness_prediction_rows),
+        tuple(procedural_rows),
+        tuple(geometry_rows),
+    )
+    _generated_geometry_prediction_context_cache[cache_key] = cached_value
+    return (
+        list(cached_value[0]),
+        list(cached_value[1]),
+        list(cached_value[2]),
+        list(cached_value[3]),
+        list(cached_value[4]),
+    )
 
 
 def cross_dataset_transfer_benchmark(
@@ -10563,8 +10703,8 @@ def ordinal_variant_comparison(
 def generated_geometry_predictor_comparison(
     retained_weight: float = 1.0,
     mode_retained_weight: float | None = None,
-    geometry_variant_limit: int = 2,
-    procedural_variant_limit: int = 2,
+    geometry_variant_limit: int = 3,
+    procedural_variant_limit: int = 3,
     procedural_rediscovery_limit: int = 1,
     max_subset_size: int = 3,
     top_k_subset_rows: int = 3,
@@ -10574,15 +10714,13 @@ def generated_geometry_predictor_comparison(
         mode_prediction_rows,
         roughness_prediction_rows,
         procedural_rows,
-    ) = build_cross_dataset_prediction_context(
+        geometry_rows,
+    ) = build_generated_geometry_prediction_context(
         retained_weight=retained_weight,
         mode_retained_weight=mode_retained_weight,
+        geometry_variant_limit=geometry_variant_limit,
         procedural_variant_limit=procedural_variant_limit,
         procedural_rediscovery_limit=procedural_rediscovery_limit,
-    )
-    geometry_rows = geometry_randomization_prediction_rows(
-        retained_weight=retained_weight,
-        variant_limit=geometry_variant_limit,
     )
     subset_rows = centerline_feature_subset_benchmark(
         mode_core_rows,
@@ -15398,7 +15536,7 @@ def main() -> None:
     )
     print()
 
-    print("67) Generated-geometry ensemble benchmark")
+    print("67) Wider generated-geometry ensemble benchmark")
     generated_geometry_rows = generated_geometry_predictor_comparison()
     print(render_generated_geometry_predictor_table(generated_geometry_rows))
     print()
@@ -15416,16 +15554,16 @@ def main() -> None:
         if row.feature_subset == "center_variation" and row.model_family == "tree-depth2"
     )
     print(
-        "- This is the broader graph-side test: instead of only roughness plus procedural transfer, the predictors are now scored on a generated-geometry ensemble that combines whole-shape jitter and procedural regeneration."
+        "- This is the broader graph-side test: instead of only roughness plus procedural transfer, the predictors are now scored on a wider generated-geometry ensemble that combines three whole-shape jitter variants and three procedural regenerations per scenario."
     )
     print(
-        f"- In `compact`, the best generated-ensemble model is `{compact_generated_best.model_family}` on `{compact_generated_best.feature_subset}` with mean accuracy {compact_generated_best.generated_mean_accuracy:.2f}. Roughness-only as the reference tree gets {compact_generated_rough.generated_mean_accuracy:.2f}, so the broader graph-side test now favors a different member of the roughness-centered family."
+        f"- In `compact`, the widened generated-ensemble winner is `{compact_generated_best.model_family}` on `{compact_generated_best.feature_subset}` with mean accuracy {compact_generated_best.generated_mean_accuracy:.2f}. Roughness-only as the reference tree gets {compact_generated_rough.generated_mean_accuracy:.2f}, so the broader graph-side test swings back toward roughness-only ordinal scores."
     )
     print(
-        f"- In `extended`, the best generated-ensemble model is `{extended_generated_best.model_family}` on `{extended_generated_best.feature_subset}` with mean accuracy {extended_generated_best.generated_mean_accuracy:.2f}. Roughness-only as the reference tree gets {extended_generated_rough.generated_mean_accuracy:.2f}, and several roughness-centered models tie at that top level."
+        f"- In `extended`, the widened generated-ensemble winner is `{extended_generated_best.model_family}` on `{extended_generated_best.feature_subset}` with mean accuracy {extended_generated_best.generated_mean_accuracy:.2f}. Roughness-only as the reference tree gets {extended_generated_rough.generated_mean_accuracy:.2f}, and the lead shifts to a `max_step_fraction` family rather than the old roughness-only tie set."
     )
     print(
-        "- So the broader graph-side answer is again family-level rather than single-winner. The generated-geometry ensemble does not preserve one unique predictor; it still favors a small roughness-centered family, but different members of that family can win once the contour generation is broadened."
+        "- So the broader graph-side answer is tougher than before. The generated-geometry ensemble still does not preserve one unique predictor, but widening the sample changes which roughness-adjacent summaries survive. The stable claim is no longer 'roughness-only wins'; it is that a small geometry-gradient family remains competitive while the exact winner keeps moving."
     )
     print()
 

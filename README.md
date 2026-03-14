@@ -76,6 +76,7 @@ What the current script implements:
 - Uses one shared local edge rule for the causal-shell graph, the asynchronous continuation model, and the slit graph.
 - Makes the local rule explicit through a small set of postulates and a derived `LocalRule` object.
 - Uses bounded-memory summary passes for the deterministic, pairwise cross-weight, high-end weight-ladder, tracked-palette random, limited-rediscovery random, and geometry-randomized perturbation ensembles so the selector-free perturbation diagnostics can run without materializing every case row at once.
+- Reuses cached generated-geometry prediction contexts within a single run so repeated graph-side predictor diagnostics do not rebuild the same procedural and whole-shape frontier rows from scratch.
 - Pressure-tests two of the biggest cheats:
   - why `positive weights only` are too weak for interference
   - why the `square rule` is less arbitrary once reversible linear mixing is required
@@ -251,10 +252,10 @@ What the current script demonstrates:
 - In `compact`, roughness-only is extremely stable under those internal changes: all three variants keep the same mean transfer `0.77`.
 - In `extended`, roughness-only also stays stable at `0.56`, but it is no longer unique. A spread-weighted `center_variation + center_range` score rises to `0.62`, which beats the roughness-only ordinal score.
 - So the current predictor claim needs one more refinement: the transfer-stable core is not just one roughness-only rule. It now looks like a small roughness-centered family, especially in `extended`, where a roughness-plus-range score can outperform the simpler roughness summary inside the ordinal family.
-- A twenty-fourth diagnostic then pushes on the graph-side cheat again. It scores the structural predictor family on a broader generated-geometry ensemble that combines whole-shape jitter with the procedural family.
-- In `compact`, that broader graph-side test no longer prefers roughness-only. The best model becomes an ordinal `center_range + turning_points` score at `0.58`, while the roughness-only tree falls to `0.50`.
-- In `extended`, the generated-geometry ensemble broadens the top tier rather than selecting one winner. `center_variation` trees and ordinal scores, plus a `center_variation + center_range` tree, all tie at `0.62`.
-- So the current graph-side read is even more specific: the generated ensemble still favors a small roughness-centered predictor family, but not a uniquely fixed summary. Different members of that family win under different geometry-generation schemes.
+- A twenty-fourth diagnostic then pushes on the graph-side cheat again with a wider generated-geometry ensemble: three whole-shape jitter variants and three procedural regenerations per scenario.
+- In `compact`, that wider graph-side test swings back toward roughness-only ordinal scores. The best models are the ordinal `center_variation` variants at mean `0.59`, while the roughness-only tree reaches `0.56`.
+- In `extended`, the widened generated ensemble shifts the lead to `max_step_fraction` at mean `0.63`, while the roughness-only tree lands at `0.60`.
+- So the current graph-side read is tougher and more honest than before: the generated ensemble still favors a small geometry-gradient family, but widening the sample keeps moving the exact winner. The stable claim is no longer “roughness-only wins”; it is that a small roughness-adjacent family remains competitive while the exact top summary is still generation-sensitive.
 - With that repair in place, `extended` still produces the larger average boundary-delay span, while the reduced `compact` family keeps a slightly larger average center gap.
 - The earlier `skew-wrap` miss is now understood as a legacy reduced-family coverage bug, not as a deep compact-vs-extended ontology split.
 - The failure-mode story is still useful history: before the repair, skewed cases mostly failed by producing empty or fragmented candidate patterns, not by hitting the boundary filter, which pointed more toward pattern formation than boundary selection.
