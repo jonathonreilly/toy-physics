@@ -505,6 +505,22 @@ class RediscoveryLimitAggregateRow:
 
 
 @dataclass
+class ProceduralFailureDiagnosticRow:
+    scenario_name: str
+    variant_name: str
+    selected_rule: str
+    status: str
+    mixed_overlap: bool
+    center_gap: float
+    arrival_span: float
+    mean_center: float
+    center_range: float
+    center_total_variation: float
+    crosses_midline: bool
+    span_range: int
+
+
+@dataclass
 class RawFrontierPool:
     selector_candidates: dict[
         tuple[frozenset[int], frozenset[int], frozenset[tuple[int, int]]],
@@ -2566,6 +2582,30 @@ def procedural_geometry_variants(
             break
 
     return tuple(deduped_variants)
+
+
+def column_profile_geometry_metrics(
+    nodes: set[tuple[int, int]],
+) -> tuple[float, float, float, bool, int]:
+    profile = column_interval_profile(nodes)
+    xs = sorted(profile)
+    centers = [(profile[x][0] + profile[x][1]) / 2 for x in xs]
+    spans = [profile[x][1] - profile[x][0] for x in xs]
+    mean_center = sum(centers) / len(centers)
+    center_range = max(centers) - min(centers)
+    center_total_variation = sum(
+        abs(centers[index + 1] - centers[index])
+        for index in range(len(centers) - 1)
+    )
+    crosses_midline = min(centers) < 0.0 < max(centers)
+    span_range = max(spans) - min(spans)
+    return (
+        mean_center,
+        center_range,
+        center_total_variation,
+        crosses_midline,
+        span_range,
+    )
 
 
 def run_family_sweep(
@@ -5533,6 +5573,109 @@ def procedural_geometry_frontier_summary(
     )
 
 
+def procedural_compact_failure_diagnostics(
+    retained_weight: float = 1.0,
+    variant_limit: int = 2,
+    rediscovery_limit: int = 1,
+) -> list[ProceduralFailureDiagnosticRow]:
+    compact_count_options = dict(family_count_options())["compact"]
+    rows: list[ProceduralFailureDiagnosticRow] = []
+
+    for pack_name, scenarios in benchmark_packs():
+        for scenario_name, nodes, wrap_y in scenarios:
+            base_raw_pool = collect_raw_frontier_pool(
+                nodes,
+                wrap_y,
+                compact_count_options,
+            )
+            base_evaluation_cache = build_frontier_evaluation_cache(nodes, wrap_y)
+            _base_row, base_candidates = frontier_case_analysis(
+                pack_name=pack_name,
+                scenario_name=scenario_name,
+                nodes=nodes,
+                wrap_y=wrap_y,
+                rule_family="compact",
+                count_options=compact_count_options,
+                retained_weight=retained_weight,
+                raw_pool=base_raw_pool,
+                evaluation_cache=base_evaluation_cache,
+            )
+            base_mixed_rules = {
+                candidate.rule_signature
+                for candidate in base_candidates
+                if candidate.on_mixed
+            }
+            allowed_rule_pairs = base_palette_rule_pairs(base_candidates)
+            scenario_variant_rows: list[ProceduralFailureDiagnosticRow] = []
+
+            for variant_name, perturbed_nodes, _node_delta in procedural_geometry_variants(
+                pack_name,
+                scenario_name,
+                nodes,
+                wrap_y,
+                variant_limit=variant_limit,
+            ):
+                perturbed_pool = collect_limited_rediscovery_frontier_pool(
+                    perturbed_nodes,
+                    wrap_y,
+                    compact_count_options,
+                    allowed_rule_pairs,
+                    rediscovery_limit=rediscovery_limit,
+                )
+                perturbed_evaluation_cache = build_frontier_evaluation_cache(
+                    perturbed_nodes,
+                    wrap_y,
+                )
+                _perturbed_row, perturbed_candidates = frontier_case_analysis(
+                    pack_name=pack_name,
+                    scenario_name=scenario_name,
+                    nodes=perturbed_nodes,
+                    wrap_y=wrap_y,
+                    rule_family="compact",
+                    count_options=compact_count_options,
+                    retained_weight=retained_weight,
+                    raw_pool=perturbed_pool,
+                    evaluation_cache=perturbed_evaluation_cache,
+                )
+                selected_candidate = next(
+                    candidate for candidate in perturbed_candidates if candidate.current_selected
+                )
+                perturbed_mixed_rules = {
+                    candidate.rule_signature
+                    for candidate in perturbed_candidates
+                    if candidate.on_mixed
+                }
+                (
+                    mean_center,
+                    center_range,
+                    center_total_variation,
+                    crosses_midline,
+                    span_range,
+                ) = column_profile_geometry_metrics(perturbed_nodes)
+                scenario_variant_rows.append(
+                    ProceduralFailureDiagnosticRow(
+                        scenario_name=f"{pack_name}:{scenario_name}",
+                        variant_name=variant_name,
+                        selected_rule=selected_candidate.rule_signature,
+                        status=selected_candidate.status,
+                        mixed_overlap=bool(base_mixed_rules & perturbed_mixed_rules),
+                        center_gap=selected_candidate.center_gap,
+                        arrival_span=selected_candidate.arrival_span,
+                        mean_center=mean_center,
+                        center_range=center_range,
+                        center_total_variation=center_total_variation,
+                        crosses_midline=crosses_midline,
+                        span_range=span_range,
+                    )
+                )
+
+            if any(row.status != "survives" for row in scenario_variant_rows):
+                rows.extend(scenario_variant_rows)
+
+    rows.sort(key=lambda row: (row.scenario_name, row.variant_name))
+    return rows
+
+
 def random_rediscovery_limit_sweep_summary(
     retained_weight: float = 1.0,
     variant_limit: int = 3,
@@ -7084,6 +7227,30 @@ def render_rediscovery_limit_aggregate_table(
     return "\n".join(lines)
 
 
+def render_procedural_failure_diagnostic_table(
+    rows: list[ProceduralFailureDiagnosticRow],
+) -> str:
+    lines = [
+        "scenario         | variant      | selected rule        | status    | mixed | gap/span      | mean c | c-range | c-var | cross | s-range",
+        "-----------------+--------------+----------------------+-----------+-------+---------------+--------+---------+-------+-------+--------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.scenario_name:<15} | "
+            f"{row.variant_name:<12} | "
+            f"{row.selected_rule:<20} | "
+            f"{row.status:<9} | "
+            f"{'yes' if row.mixed_overlap else 'no ':<5} | "
+            f"{row.center_gap:>5.3f}/{row.arrival_span:<5.3f} | "
+            f"{row.mean_center:>6.2f} | "
+            f"{row.center_range:>7.2f} | "
+            f"{row.center_total_variation:>5.2f} | "
+            f"{'yes' if row.crosses_midline else 'no ':<5} | "
+            f"{row.span_range:>6}"
+        )
+    return "\n".join(lines)
+
+
 def main() -> None:
     print("DISCRETE EVENT-NETWORK TOY MODEL")
     print()
@@ -8118,6 +8285,43 @@ def main() -> None:
                 f"- In {len(procedural_overlap_drift)} of them, stronger overlap claims also break, which is where the graph-family cheat is still showing through most clearly."
             )
     print("- If the mixed frontier survives this too, then we are getting close to the limit of what the current benchmark machinery can tell us without moving to a broader graph-generator study.")
+    print()
+
+    print("41) Focused diagnostic on the compact procedural miss")
+    procedural_failure_rows = procedural_compact_failure_diagnostics(
+        variant_limit=procedural_variant_limit,
+        rediscovery_limit=procedural_rediscovery_limit,
+    )
+    print(render_procedural_failure_diagnostic_table(procedural_failure_rows))
+    print()
+    print("Interpretation:")
+    if procedural_failure_rows:
+        failed_rows = [
+            row for row in procedural_failure_rows if row.status != "survives"
+        ]
+        if failed_rows:
+            failed_row = failed_rows[0]
+            comparison_row = next(
+                (
+                    row
+                    for row in procedural_failure_rows
+                    if row.scenario_name == failed_row.scenario_name
+                    and row.status == "survives"
+                ),
+                None,
+            )
+            print(
+                f"- The lone compact procedural survive miss is `{failed_row.scenario_name}:{failed_row.variant_name}`. It still keeps mixed-frontier overlap, but it drops from `survives` to `{failed_row.status}` because its arrival span falls to {failed_row.arrival_span:.3f} even though its center gap stays high at {failed_row.center_gap:.3f}."
+            )
+            if comparison_row is not None:
+                print(
+                    f"- Compared with the nearby surviving sibling `{comparison_row.variant_name}`, the miss has much larger centerline swing ({failed_row.center_range:.2f} vs {comparison_row.center_range:.2f}) and total centerline variation ({failed_row.center_total_variation:.2f} vs {comparison_row.center_total_variation:.2f})."
+                )
+            if failed_row.crosses_midline:
+                print(
+                    "- So the current evidence points to one specific sensitivity: a cross-midline, high-variation centerline can preserve local focusing while flattening far-boundary delay distortion enough to miss the current `survives` threshold."
+                )
+    print("- That is a useful narrowing of the remaining cheat: the model does not look generically fragile here; it looks specifically sensitive to shapes that keep local geodesic focusing but stop imprinting a strong boundary-delay signature.")
     print()
 
     print("REMAINING CHEATS")
