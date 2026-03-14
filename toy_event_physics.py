@@ -26,6 +26,7 @@ import cmath
 import heapq
 import itertools
 import math
+import random
 from typing import Callable, DefaultDict
 
 
@@ -2234,6 +2235,64 @@ def deterministic_topology_perturbations(
         seen_node_sets.add(identity)
         deduped_variants.append((variant_name, perturbed_nodes, node_delta))
     return tuple(deduped_variants[:2])
+
+
+def stable_random_seed(*parts: str) -> int:
+    seed = 0
+    for part in parts:
+        for character in part:
+            seed = ((seed * 131) + ord(character)) % (2**32)
+    return seed
+
+
+def random_topology_perturbations(
+    pack_name: str,
+    scenario_name: str,
+    nodes: set[tuple[int, int]],
+    wrap_y: bool,
+) -> tuple[tuple[str, set[tuple[int, int]], int], ...]:
+    removable_nodes = removable_perturbation_nodes(nodes, wrap_y)
+    addable_nodes = addable_perturbation_nodes(nodes, wrap_y)
+    if not removable_nodes:
+        return ()
+
+    rng = random.Random(
+        stable_random_seed(
+            pack_name,
+            scenario_name,
+            "wrap" if wrap_y else "hard",
+        )
+    )
+    shuffled_removals = list(removable_nodes)
+    rng.shuffle(shuffled_removals)
+    shuffled_additions = list(addable_nodes)
+    rng.shuffle(shuffled_additions)
+
+    variants: list[tuple[str, set[tuple[int, int]], int]] = []
+    first_remove = shuffled_removals[0]
+    variants.append(("random-punch-a", set(nodes) - {first_remove}, -1))
+
+    if shuffled_additions:
+        second_remove = shuffled_removals[1] if len(shuffled_removals) > 1 else first_remove
+        variants.append(
+            (
+                "random-shift-a",
+                (set(nodes) - {second_remove}) | {shuffled_additions[0]},
+                0,
+            )
+        )
+    elif len(shuffled_removals) > 1:
+        variants.append(("random-punch-b", set(nodes) - {shuffled_removals[1]}, -1))
+
+    deduped_variants: list[tuple[str, set[tuple[int, int]], int]] = []
+    seen_node_sets: set[frozenset[tuple[int, int]]] = set()
+    for variant_name, perturbed_nodes, node_delta in variants:
+        identity = frozenset(perturbed_nodes)
+        if identity in seen_node_sets:
+            continue
+        seen_node_sets.add(identity)
+        deduped_variants.append((variant_name, perturbed_nodes, node_delta))
+    return tuple(deduped_variants)
 
 
 def run_family_sweep(
@@ -4641,7 +4700,30 @@ def frontier_signature_sets(
     }
 
 
-def perturbation_frontier_results(
+def base_palette_rule_pairs(
+    candidates: list[EvaluatedCandidate],
+) -> tuple[tuple[frozenset[int], frozenset[int]], ...]:
+    return tuple(
+        dict.fromkeys(
+            (
+                candidate.survive_counts,
+                candidate.birth_counts,
+            )
+            for candidate in candidates
+            if candidate.current_selected
+            or candidate.on_robustness
+            or candidate.on_proper_time
+            or candidate.on_geometry
+            or candidate.on_mixed
+        )
+    )
+
+
+def perturbation_frontier_results_for_factory(
+    perturbation_factory: Callable[
+        [str, str, set[tuple[int, int]], bool],
+        tuple[tuple[str, set[tuple[int, int]], int], ...],
+    ],
     retained_weight: float = 1.0,
 ) -> tuple[list[PerturbationCaseRow], list[PerturbationAggregateRow]]:
     case_rows: list[PerturbationCaseRow] = []
@@ -4669,22 +4751,11 @@ def perturbation_frontier_results(
                 )
                 base_signature_sets = frontier_signature_sets(base_candidates)
                 base_selected_rule = base_row.selected_rule
-                base_palette_rule_pairs = tuple(
-                    dict.fromkeys(
-                        (
-                            candidate.survive_counts,
-                            candidate.birth_counts,
-                        )
-                        for candidate in base_candidates
-                        if candidate.current_selected
-                        or candidate.on_robustness
-                        or candidate.on_proper_time
-                        or candidate.on_geometry
-                        or candidate.on_mixed
-                    )
-                )
+                allowed_rule_pairs = base_palette_rule_pairs(base_candidates)
 
-                for variant_name, perturbed_nodes, node_delta in deterministic_topology_perturbations(
+                for variant_name, perturbed_nodes, node_delta in perturbation_factory(
+                    pack_name,
+                    scenario_name,
                     nodes,
                     wrap_y,
                 ):
@@ -4692,7 +4763,7 @@ def perturbation_frontier_results(
                         perturbed_nodes,
                         wrap_y,
                         count_options,
-                        base_palette_rule_pairs,
+                        allowed_rule_pairs,
                     )
                     perturbed_evaluation_cache = build_frontier_evaluation_cache(
                         perturbed_nodes,
@@ -4775,6 +4846,27 @@ def perturbation_frontier_results(
         )
     )
     return case_rows, aggregate_rows
+
+
+def perturbation_frontier_results(
+    retained_weight: float = 1.0,
+) -> tuple[list[PerturbationCaseRow], list[PerturbationAggregateRow]]:
+    return perturbation_frontier_results_for_factory(
+        lambda _pack_name, _scenario_name, nodes, wrap_y: deterministic_topology_perturbations(
+            nodes,
+            wrap_y,
+        ),
+        retained_weight=retained_weight,
+    )
+
+
+def random_perturbation_frontier_results(
+    retained_weight: float = 1.0,
+) -> tuple[list[PerturbationCaseRow], list[PerturbationAggregateRow]]:
+    return perturbation_frontier_results_for_factory(
+        random_topology_perturbations,
+        retained_weight=retained_weight,
+    )
 
 
 def perturbation_weight_stability_results(
@@ -6564,6 +6656,64 @@ def main() -> None:
                 f"- In {len(overlap_weight_drift)} cases, even a stronger selector-free overlap claim drops out across the two weights, so those are the places where the current model still looks weight-fragile rather than merely selector-fragile."
             )
     print("- This is the current frontier of rigor in the toy model: the mixed-frontier family looks substantially more stable than the exact winner, but the winner is still the piece most easily knocked around by both topology and retained-weight changes.")
+    print()
+
+    print("30) Small random perturbation ensemble")
+    random_case_rows, random_aggregate_rows = random_perturbation_frontier_results()
+    print(render_perturbation_aggregate_table(random_aggregate_rows))
+    print()
+    print("Interpretation:")
+    print("- This widens the perturbation test in the other direction: instead of only using hand-picked center and upper nudges, it samples a small deterministic-random perturbation ensemble from the same removable/addable node sets for each benchmark graph.")
+    random_all_rows = [row for row in random_aggregate_rows if row.variant_name == "all"]
+    for row in random_all_rows:
+        print(
+            f"- In `{row.rule_family}`, the random perturbations still `survive` in {row.survives}/{row.cases} cases, keep the unperturbed selected motif frontier-alive in {row.base_selected_alive}/{row.cases}, and preserve mixed-frontier overlap in {row.mixed_overlap}/{row.cases}."
+        )
+        print(
+            f"- The exact selected winner is retained in {row.selected_retained}/{row.cases} random perturbation cases, while robustness overlap survives in {row.robustness_overlap}/{row.cases}."
+        )
+    print("- So this is the direct check we wanted: if the same mixed-frontier robust, exact-winner fragile split survives random nudges as well, it is much less likely to be an artifact of the hand-picked perturbation shapes.")
+    print()
+
+    print("31) Random perturbation drift cases")
+    random_drift_rows = [
+        row
+        for row in random_case_rows
+        if not row.selected_matches_base
+        or not row.base_selected_alive
+        or not row.robustness_overlap
+        or not row.mixed_overlap
+    ]
+    random_drift_rows.sort(
+        key=lambda row: (
+            row.selected_matches_base,
+            row.base_selected_alive,
+            row.mixed_overlap,
+            row.robustness_overlap,
+            row.rule_family,
+            row.pack_name,
+            row.scenario_name,
+            row.variant_name,
+        )
+    )
+    print(render_perturbation_case_table(random_drift_rows, limit=min(16, len(random_drift_rows))))
+    print()
+    print("Interpretation:")
+    if random_drift_rows:
+        random_selected_drift = [row for row in random_drift_rows if not row.selected_matches_base]
+        random_overlap_drift = [row for row in random_drift_rows if not row.robustness_overlap or not row.base_selected_alive]
+        print(
+            f"- There are {len(random_drift_rows)} random perturbation cases where either the selected motif changes or a stronger baseline-overlap claim drops out."
+        )
+        if random_selected_drift:
+            print(
+                f"- In {len(random_selected_drift)} of them, the exact winner changes under random nudges, which is the cleanest continuation of the earlier selector-fragility story."
+            )
+        if random_overlap_drift:
+            print(
+                f"- In {len(random_overlap_drift)} random cases, a stronger overlap claim also breaks, which marks the places where even the selector-free story is not yet fully perturbation-robust."
+            )
+    print("- This is now a stronger statement than before: we are no longer only showing that the split survives curated perturbations; we are checking that it still appears under seeded random graph nudges.")
     print()
 
     print("REMAINING CHEATS")
