@@ -906,7 +906,7 @@ _cross_dataset_prediction_context_cache: dict[
     ],
 ] = {}
 _procedural_geometry_prediction_rows_cache: dict[
-    tuple[float, int, int],
+    tuple[float, int, int, tuple[str, ...]],
     tuple["GeometryPredictionRow", ...],
 ] = {}
 _geometry_randomization_prediction_rows_cache: dict[
@@ -914,7 +914,7 @@ _geometry_randomization_prediction_rows_cache: dict[
     tuple["GeometryPredictionRow", ...],
 ] = {}
 _generated_geometry_prediction_context_cache: dict[
-    tuple[float, float | None, int, int, int],
+    tuple[float, float | None, int, int, int, tuple[str, ...]],
     tuple[
         tuple["CenterlineModeSweepRow", ...],
         tuple["GeometryPredictionRow", ...],
@@ -3133,9 +3133,10 @@ def procedural_geometry_variants(
     nodes: set[tuple[int, int]],
     wrap_y: bool,
     variant_limit: int = 2,
+    style: str = "walk",
 ) -> tuple[tuple[str, set[tuple[int, int]], int], ...]:
     del wrap_y  # profile generation itself is independent of wrap mode
-    xs = sorted({x for x, _y in nodes})
+    xs, base_centers, base_spans = ordered_profile_centers_and_spans(nodes)
     min_y = min(y for _x, y in nodes)
     max_y = max(y for _x, y in nodes)
     full_span = max_y - min_y
@@ -3144,59 +3145,123 @@ def procedural_geometry_variants(
     low_floor = min_y - 1
     high_ceiling = max_y + 1
     max_center_shift = max(1, (high_ceiling - low_floor) // 4)
+    mode_basis = centerline_mode_basis(tuple(xs))
+    mode_names = tuple(mode_basis)
 
     deduped_variants: list[tuple[str, set[tuple[int, int]], int]] = []
     seen_node_sets: set[frozenset[tuple[int, int]]] = {frozenset(nodes)}
 
-    for attempt_index in range(variant_limit * 8):
+    if style == "walk":
+        attempt_multiplier = 8
+    elif style == "mode-mix":
+        attempt_multiplier = 10
+    else:
+        raise ValueError(f"Unknown procedural geometry style: {style}")
+
+    for attempt_index in range(variant_limit * attempt_multiplier):
         rng = random.Random(
             stable_random_seed(
                 pack_name,
                 scenario_name,
-                "procedural-geometry",
+                f"procedural-geometry-{style}",
                 str(attempt_index),
             )
         )
         profile: dict[int, tuple[int, int]] = {}
-        center_shift = rng.randint(-1, 1)
-        span = rng.randint(min_span, max_span)
 
-        for index, x in enumerate(xs):
-            if index > 0:
-                center_shift = max(
-                    -max_center_shift,
-                    min(max_center_shift, center_shift + rng.choice((-1, 0, 1))),
+        if style == "walk":
+            center_shift = rng.randint(-1, 1)
+            span = rng.randint(min_span, max_span)
+
+            for index, x in enumerate(xs):
+                if index > 0:
+                    center_shift = max(
+                        -max_center_shift,
+                        min(max_center_shift, center_shift + rng.choice((-1, 0, 1))),
+                    )
+                    span = max(
+                        min_span,
+                        min(max_span, span + rng.choice((-1, 0, 1))),
+                    )
+
+                center = center_shift + rng.choice((0.0, 0.0, -0.5, 0.5))
+                low_y = math.floor(center - span / 2)
+                high_y = low_y + span
+
+                if low_y < low_floor:
+                    shift = low_floor - low_y
+                    low_y += shift
+                    high_y += shift
+                if high_y > high_ceiling:
+                    shift = high_y - high_ceiling
+                    low_y -= shift
+                    high_y -= shift
+
+                if index > 0:
+                    prev_low, prev_high = profile[xs[index - 1]]
+                    if low_y > prev_high + 1:
+                        shift = low_y - (prev_high + 1)
+                        low_y -= shift
+                        high_y -= shift
+                    if high_y < prev_low - 1:
+                        shift = (prev_low - 1) - high_y
+                        low_y += shift
+                        high_y += shift
+
+                profile[x] = (low_y, high_y)
+        else:
+            primary_name = mode_names[attempt_index % len(mode_names)]
+            secondary_name = mode_names[(attempt_index // len(mode_names)) % len(mode_names)]
+            span_mode_name = mode_names[(attempt_index // (len(mode_names) ** 2)) % len(mode_names)]
+            primary_scale = rng.choice((0.5, 1.0, 1.5, 2.0))
+            secondary_scale = rng.choice((0.0, 0.5, 1.0))
+            span_scale = rng.choice((0.0, 0.5, 1.0))
+            center_bias = rng.choice((-0.5, 0.0, 0.5))
+
+            primary_mode = mode_basis[primary_name]
+            secondary_mode = mode_basis[secondary_name]
+            span_mode = mode_basis[span_mode_name]
+
+            for index, x in enumerate(xs):
+                base_center = base_centers[index]
+                base_span = base_spans[index]
+                center = (
+                    base_center
+                    + center_bias
+                    + primary_scale * primary_mode[index]
+                    + secondary_scale * secondary_mode[index]
                 )
                 span = max(
                     min_span,
-                    min(max_span, span + rng.choice((-1, 0, 1))),
+                    min(
+                        max_span,
+                        int(round(base_span + span_scale * span_mode[index])),
+                    ),
                 )
+                low_y = math.floor(center - span / 2)
+                high_y = low_y + span
 
-            center = center_shift + rng.choice((0.0, 0.0, -0.5, 0.5))
-            low_y = math.floor(center - span / 2)
-            high_y = low_y + span
-
-            if low_y < low_floor:
-                shift = low_floor - low_y
-                low_y += shift
-                high_y += shift
-            if high_y > high_ceiling:
-                shift = high_y - high_ceiling
-                low_y -= shift
-                high_y -= shift
-
-            if index > 0:
-                prev_low, prev_high = profile[xs[index - 1]]
-                if low_y > prev_high + 1:
-                    shift = low_y - (prev_high + 1)
-                    low_y -= shift
-                    high_y -= shift
-                if high_y < prev_low - 1:
-                    shift = (prev_low - 1) - high_y
+                if low_y < low_floor:
+                    shift = low_floor - low_y
                     low_y += shift
                     high_y += shift
+                if high_y > high_ceiling:
+                    shift = high_y - high_ceiling
+                    low_y -= shift
+                    high_y -= shift
 
-            profile[x] = (low_y, high_y)
+                if index > 0:
+                    prev_low, prev_high = profile[xs[index - 1]]
+                    if low_y > prev_high + 1:
+                        shift = low_y - (prev_high + 1)
+                        low_y -= shift
+                        high_y -= shift
+                    if high_y < prev_low - 1:
+                        shift = (prev_low - 1) - high_y
+                        low_y += shift
+                        high_y += shift
+
+                profile[x] = (low_y, high_y)
 
         perturbed_nodes = build_nodes_from_interval_profile(profile)
         identity = frozenset(perturbed_nodes)
@@ -3205,7 +3270,10 @@ def procedural_geometry_variants(
         if len(connected_components(identity, perturbed_nodes, wrap_y=False)) != 1:
             continue
         seen_node_sets.add(identity)
-        variant_name = f"procedural-{chr(ord('a') + len(deduped_variants))}"
+        if style == "walk":
+            variant_name = f"procedural-{chr(ord('a') + len(deduped_variants))}"
+        else:
+            variant_name = f"{style}-{chr(ord('a') + len(deduped_variants))}"
         deduped_variants.append(
             (
                 variant_name,
@@ -9835,8 +9903,10 @@ def procedural_geometry_prediction_rows(
     retained_weight: float = 1.0,
     variant_limit: int = 2,
     rediscovery_limit: int = 1,
+    styles: tuple[str, ...] = ("walk",),
 ) -> list[GeometryPredictionRow]:
-    cache_key = (retained_weight, variant_limit, rediscovery_limit)
+    normalized_styles = tuple(dict.fromkeys(styles))
+    cache_key = (retained_weight, variant_limit, rediscovery_limit, normalized_styles)
     cached_rows = _procedural_geometry_prediction_rows_cache.get(cache_key)
     if cached_rows is not None:
         return list(cached_rows)
@@ -9844,58 +9914,60 @@ def procedural_geometry_prediction_rows(
     prediction_rows: list[GeometryPredictionRow] = []
     for pack_name, scenarios in benchmark_packs():
         for scenario_name, nodes, wrap_y in scenarios:
-            for variant_name, perturbed_nodes, _node_delta in procedural_geometry_variants(
-                pack_name,
-                scenario_name,
-                nodes,
-                wrap_y,
-                variant_limit=variant_limit,
-            ):
-                xs, centers, _spans = ordered_profile_centers_and_spans(perturbed_nodes)
-                if not xs:
-                    continue
-                _signature, turning_points, max_step_fraction = centerline_mode_invariants(
-                    centers,
-                )
-                (
-                    _mean_center,
-                    center_range,
-                    center_variation,
-                    crosses_midline,
-                    span_range,
-                ) = column_profile_geometry_metrics(perturbed_nodes)
-                for rule_family, count_options in family_count_options():
-                    harmonic_cont_row, harmonic_cont_candidates = harmonic_continuous_case_analysis(
-                        pack_name=pack_name,
-                        scenario_name=f"{scenario_name}:{variant_name}",
-                        nodes=perturbed_nodes,
-                        wrap_y=wrap_y,
-                        rule_family=rule_family,
-                        count_options=count_options,
-                        retained_weight=retained_weight,
+            for style in normalized_styles:
+                for variant_name, perturbed_nodes, _node_delta in procedural_geometry_variants(
+                    pack_name,
+                    scenario_name,
+                    nodes,
+                    wrap_y,
+                    variant_limit=variant_limit,
+                    style=style,
+                ):
+                    xs, centers, _spans = ordered_profile_centers_and_spans(perturbed_nodes)
+                    if not xs:
+                        continue
+                    _signature, turning_points, max_step_fraction = centerline_mode_invariants(
+                        centers,
                     )
-                    case_core_rows, _aggregate_rows = derived_projection_family_case_core_analysis(
-                        [harmonic_cont_row],
-                        harmonic_cont_candidates,
-                        projection_dimension=4,
-                        generator="orthonormal",
-                    )
-                    case_core_row = case_core_rows[0]
-                    prediction_rows.append(
-                        GeometryPredictionRow(
-                            dataset_name="procedural",
-                            source_name=f"{pack_name}:{scenario_name}:{variant_name}",
+                    (
+                        _mean_center,
+                        center_range,
+                        center_variation,
+                        crosses_midline,
+                        span_range,
+                    ) = column_profile_geometry_metrics(perturbed_nodes)
+                    for rule_family, count_options in family_count_options():
+                        harmonic_cont_row, harmonic_cont_candidates = harmonic_continuous_case_analysis(
+                            pack_name=pack_name,
+                            scenario_name=f"{scenario_name}:{variant_name}",
+                            nodes=perturbed_nodes,
+                            wrap_y=wrap_y,
                             rule_family=rule_family,
+                            count_options=count_options,
                             retained_weight=retained_weight,
-                            regime=projection_core_regime(case_core_row),
-                            center_range=center_range,
-                            center_variation=center_variation,
-                            span_range=span_range,
-                            turning_points=turning_points,
-                            max_step_fraction=max_step_fraction,
-                            crosses_midline=crosses_midline,
                         )
-                    )
+                        case_core_rows, _aggregate_rows = derived_projection_family_case_core_analysis(
+                            [harmonic_cont_row],
+                            harmonic_cont_candidates,
+                            projection_dimension=4,
+                            generator="orthonormal",
+                        )
+                        case_core_row = case_core_rows[0]
+                        prediction_rows.append(
+                            GeometryPredictionRow(
+                                dataset_name="procedural",
+                                source_name=f"{pack_name}:{scenario_name}:{variant_name}",
+                                rule_family=rule_family,
+                                retained_weight=retained_weight,
+                                regime=projection_core_regime(case_core_row),
+                                center_range=center_range,
+                                center_variation=center_variation,
+                                span_range=span_range,
+                                turning_points=turning_points,
+                                max_step_fraction=max_step_fraction,
+                                crosses_midline=crosses_midline,
+                            )
+                        )
     prediction_rows.sort(key=lambda row: (row.rule_family, row.source_name))
     cached_value = tuple(prediction_rows)
     _procedural_geometry_prediction_rows_cache[cache_key] = cached_value
@@ -9976,8 +10048,9 @@ def build_generated_geometry_prediction_context(
     retained_weight: float = 1.0,
     mode_retained_weight: float | None = None,
     geometry_variant_limit: int = 3,
-    procedural_variant_limit: int = 3,
+    procedural_variant_limit: int = 2,
     procedural_rediscovery_limit: int = 1,
+    procedural_styles: tuple[str, ...] = ("walk", "mode-mix"),
 ) -> tuple[
     list[CenterlineModeSweepRow],
     list[GeometryPredictionRow],
@@ -9991,6 +10064,7 @@ def build_generated_geometry_prediction_context(
         geometry_variant_limit,
         procedural_variant_limit,
         procedural_rediscovery_limit,
+        tuple(dict.fromkeys(procedural_styles)),
     )
     cached_context = _generated_geometry_prediction_context_cache.get(cache_key)
     if cached_context is not None:
@@ -10020,6 +10094,14 @@ def build_generated_geometry_prediction_context(
         procedural_variant_limit=procedural_variant_limit,
         procedural_rediscovery_limit=procedural_rediscovery_limit,
     )
+    normalized_styles = tuple(dict.fromkeys(procedural_styles))
+    if normalized_styles != ("walk",):
+        procedural_rows = procedural_geometry_prediction_rows(
+            retained_weight=retained_weight,
+            variant_limit=procedural_variant_limit,
+            rediscovery_limit=procedural_rediscovery_limit,
+            styles=normalized_styles,
+        )
     geometry_rows = geometry_randomization_prediction_rows(
         retained_weight=retained_weight,
         variant_limit=geometry_variant_limit,
@@ -10704,8 +10786,9 @@ def generated_geometry_predictor_comparison(
     retained_weight: float = 1.0,
     mode_retained_weight: float | None = None,
     geometry_variant_limit: int = 3,
-    procedural_variant_limit: int = 3,
+    procedural_variant_limit: int = 2,
     procedural_rediscovery_limit: int = 1,
+    procedural_styles: tuple[str, ...] = ("walk", "mode-mix"),
     max_subset_size: int = 3,
     top_k_subset_rows: int = 3,
 ) -> list[GeneratedGeometryPredictorRow]:
@@ -10721,6 +10804,7 @@ def generated_geometry_predictor_comparison(
         geometry_variant_limit=geometry_variant_limit,
         procedural_variant_limit=procedural_variant_limit,
         procedural_rediscovery_limit=procedural_rediscovery_limit,
+        procedural_styles=procedural_styles,
     )
     subset_rows = centerline_feature_subset_benchmark(
         mode_core_rows,
@@ -15536,7 +15620,7 @@ def main() -> None:
     )
     print()
 
-    print("67) Wider generated-geometry ensemble benchmark")
+    print("67) Multi-style generated-geometry ensemble benchmark")
     generated_geometry_rows = generated_geometry_predictor_comparison()
     print(render_generated_geometry_predictor_table(generated_geometry_rows))
     print()
@@ -15554,16 +15638,16 @@ def main() -> None:
         if row.feature_subset == "center_variation" and row.model_family == "tree-depth2"
     )
     print(
-        "- This is the broader graph-side test: instead of only roughness plus procedural transfer, the predictors are now scored on a wider generated-geometry ensemble that combines three whole-shape jitter variants and three procedural regenerations per scenario."
+        "- This is the broader graph-side test: instead of only roughness plus one procedural generator, the predictors are now scored on a multi-style generated-geometry ensemble that combines three whole-shape jitter variants with two variants from each of two procedural generator styles per scenario."
     )
     print(
-        f"- In `compact`, the widened generated-ensemble winner is `{compact_generated_best.model_family}` on `{compact_generated_best.feature_subset}` with mean accuracy {compact_generated_best.generated_mean_accuracy:.2f}. Roughness-only as the reference tree gets {compact_generated_rough.generated_mean_accuracy:.2f}, so the broader graph-side test swings back toward roughness-only ordinal scores."
+        f"- In `compact`, the multi-style generated winner is `{compact_generated_best.model_family}` on `{compact_generated_best.feature_subset}` with mean accuracy {compact_generated_best.generated_mean_accuracy:.2f}. Roughness-only as the reference tree gets {compact_generated_rough.generated_mean_accuracy:.2f}, so the best compact summary now couples roughness with a crossing signal."
     )
     print(
-        f"- In `extended`, the widened generated-ensemble winner is `{extended_generated_best.model_family}` on `{extended_generated_best.feature_subset}` with mean accuracy {extended_generated_best.generated_mean_accuracy:.2f}. Roughness-only as the reference tree gets {extended_generated_rough.generated_mean_accuracy:.2f}, and the lead shifts to a `max_step_fraction` family rather than the old roughness-only tie set."
+        f"- In `extended`, the multi-style generated winner is `{extended_generated_best.model_family}` on `{extended_generated_best.feature_subset}` with mean accuracy {extended_generated_best.generated_mean_accuracy:.2f}. Roughness-only as the reference tree gets {extended_generated_rough.generated_mean_accuracy:.2f}, and the top tier broadens around crossing and step-fraction summaries."
     )
     print(
-        "- So the broader graph-side answer is tougher than before. The generated-geometry ensemble still does not preserve one unique predictor, but widening the sample changes which roughness-adjacent summaries survive. The stable claim is no longer 'roughness-only wins'; it is that a small geometry-gradient family remains competitive while the exact winner keeps moving."
+        "- So the broader graph-side answer is tougher again. The multi-style generated ensemble still does not preserve one unique predictor, but the stable family is now clearer: roughness alone is not enough, while roughness-plus-crossing or roughness-adjacent step summaries keep resurfacing once the generator class changes."
     )
     print()
 
