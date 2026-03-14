@@ -21,7 +21,7 @@ Toy primitives:
 from __future__ import annotations
 
 from collections import Counter, defaultdict
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 import cmath
 import heapq
 import itertools
@@ -438,6 +438,67 @@ class RawFrontierPool:
         ],
         ...,
     ]
+
+
+@dataclass
+class FrontierCandidateProfile:
+    field: dict[tuple[int, int], float]
+    centroid_y: float
+    source_y: int
+    target_ys: tuple[int, ...]
+    center_target: int
+    distorted_arrivals: dict[tuple[int, int], float]
+
+
+@dataclass
+class FrontierMetricSnapshot:
+    centroid_y: float
+    center_gap: float
+    arrival_span: float
+    status: str
+    status_rank: int
+    min_margin: float
+    min_wrapped_margin: float
+    geometric_focus_gap: float
+    stiffness: float
+
+
+@dataclass
+class FrontierEvaluationCache:
+    min_x: int
+    max_x: int
+    left_boundary_ys: tuple[int, ...]
+    right_boundary_ys: tuple[int, ...]
+    free_field: dict[tuple[int, int], float]
+    free_arrivals_by_source: dict[int, dict[tuple[int, int], float]] = field(default_factory=dict)
+    free_action_trees: dict[
+        tuple[int, float],
+        tuple[
+            dict[tuple[int, int], float],
+            dict[tuple[int, int], tuple[int, int]],
+        ],
+    ] = field(default_factory=dict)
+    candidate_profiles: dict[
+        tuple[frozenset[int], frozenset[int], frozenset[tuple[int, int]]],
+        FrontierCandidateProfile,
+    ] = field(default_factory=dict)
+    distorted_action_trees: dict[
+        tuple[
+            tuple[frozenset[int], frozenset[int], frozenset[tuple[int, int]]],
+            float,
+        ],
+        tuple[
+            dict[tuple[int, int], float],
+            dict[tuple[int, int], tuple[int, int]],
+        ],
+    ] = field(default_factory=dict)
+    metric_snapshots: dict[
+        tuple[
+            tuple[frozenset[int], frozenset[int], frozenset[tuple[int, int]]],
+            float,
+        ],
+        FrontierMetricSnapshot,
+    ] = field(default_factory=dict)
 
 
 @dataclass(frozen=True)
@@ -1341,6 +1402,22 @@ def infer_arrival_times_from_source(
     wrap_y: bool = False,
 ) -> dict[tuple[int, int], float]:
     node_field = derive_node_field(nodes, rule, wrap_y=wrap_y)
+    return infer_arrival_times_with_field(
+        nodes,
+        source,
+        rule,
+        node_field,
+        wrap_y=wrap_y,
+    )
+
+
+def infer_arrival_times_with_field(
+    nodes: set[tuple[int, int]],
+    source: tuple[int, int],
+    rule: LocalRule,
+    node_field: dict[tuple[int, int], float],
+    wrap_y: bool = False,
+) -> dict[tuple[int, int], float]:
     arrival_times: dict[tuple[int, int], float] = {source: 0.0}
     frontier: list[tuple[float, tuple[int, int]]] = [(0.0, source)]
 
@@ -3291,6 +3368,293 @@ def family_count_options() -> tuple[tuple[str, tuple[frozenset[int], ...]], ...]
     )
 
 
+def build_frontier_evaluation_cache(
+    nodes: set[tuple[int, int]],
+    wrap_y: bool,
+) -> FrontierEvaluationCache:
+    min_x = min(x for x, _y in nodes)
+    max_x = max(x for x, _y in nodes)
+    free_rule = LocalRule(
+        persistent_nodes=frozenset(),
+        phase_wavenumber=4.0,
+        field_mode="relaxed",
+    )
+    return FrontierEvaluationCache(
+        min_x=min_x,
+        max_x=max_x,
+        left_boundary_ys=tuple(sorted(y for x, y in nodes if x == min_x)),
+        right_boundary_ys=tuple(sorted(y for x, y in nodes if x == max_x)),
+        free_field=derive_node_field(nodes, free_rule, wrap_y=wrap_y),
+    )
+
+
+def frontier_candidate_profile(
+    candidate: RuleCandidate,
+    nodes: set[tuple[int, int]],
+    wrap_y: bool,
+    evaluation_cache: FrontierEvaluationCache,
+) -> FrontierCandidateProfile:
+    identity = candidate_identity_key(candidate)
+    cached_profile = evaluation_cache.candidate_profiles.get(identity)
+    if cached_profile is not None:
+        return cached_profile
+
+    distorted_rule = LocalRule(
+        persistent_nodes=candidate.persistent_nodes,
+        phase_wavenumber=4.0,
+        field_mode="relaxed",
+    )
+    field = derive_node_field(nodes, distorted_rule, wrap_y=wrap_y)
+    _centroid_x, centroid_y = field_centroid(field)
+    source_y = closest_value(list(evaluation_cache.left_boundary_ys), centroid_y)
+    target_ys = tuple(select_target_rows(list(evaluation_cache.right_boundary_ys), source_y))
+    center_target = min(target_ys, key=lambda y: (abs(y - source_y), y))
+    distorted_arrivals = infer_arrival_times_with_field(
+        nodes,
+        source=(evaluation_cache.min_x, source_y),
+        rule=distorted_rule,
+        node_field=field,
+        wrap_y=wrap_y,
+    )
+    profile = FrontierCandidateProfile(
+        field=field,
+        centroid_y=centroid_y,
+        source_y=source_y,
+        target_ys=target_ys,
+        center_target=center_target,
+        distorted_arrivals=distorted_arrivals,
+    )
+    evaluation_cache.candidate_profiles[identity] = profile
+    return profile
+
+
+def frontier_free_arrivals(
+    nodes: set[tuple[int, int]],
+    wrap_y: bool,
+    source_y: int,
+    evaluation_cache: FrontierEvaluationCache,
+) -> dict[tuple[int, int], float]:
+    cached_arrivals = evaluation_cache.free_arrivals_by_source.get(source_y)
+    if cached_arrivals is not None:
+        return cached_arrivals
+
+    free_rule = LocalRule(
+        persistent_nodes=frozenset(),
+        phase_wavenumber=4.0,
+        field_mode="relaxed",
+    )
+    arrivals = infer_arrival_times_with_field(
+        nodes,
+        source=(evaluation_cache.min_x, source_y),
+        rule=free_rule,
+        node_field=evaluation_cache.free_field,
+        wrap_y=wrap_y,
+    )
+    evaluation_cache.free_arrivals_by_source[source_y] = arrivals
+    return arrivals
+
+
+def frontier_free_action_tree(
+    nodes: set[tuple[int, int]],
+    wrap_y: bool,
+    source_y: int,
+    postulates: RulePostulates,
+    evaluation_cache: FrontierEvaluationCache,
+) -> tuple[
+    dict[tuple[int, int], float],
+    dict[tuple[int, int], tuple[int, int]],
+]:
+    cache_key = (source_y, postulates.action_retained_weight)
+    cached_tree = evaluation_cache.free_action_trees.get(cache_key)
+    if cached_tree is not None:
+        return cached_tree
+
+    free_rule = derive_local_rule(
+        persistent_nodes=frozenset(),
+        postulates=postulates,
+    )
+    action_tree = stationary_action_tree_on_nodes(
+        nodes,
+        source=(evaluation_cache.min_x, source_y),
+        rule=free_rule,
+        wrap_y=wrap_y,
+        node_field=evaluation_cache.free_field,
+    )
+    evaluation_cache.free_action_trees[cache_key] = action_tree
+    return action_tree
+
+
+def frontier_distorted_action_tree(
+    candidate: RuleCandidate,
+    nodes: set[tuple[int, int]],
+    wrap_y: bool,
+    postulates: RulePostulates,
+    profile: FrontierCandidateProfile,
+    evaluation_cache: FrontierEvaluationCache,
+) -> tuple[
+    dict[tuple[int, int], float],
+    dict[tuple[int, int], tuple[int, int]],
+]:
+    identity = candidate_identity_key(candidate)
+    cache_key = (identity, postulates.action_retained_weight)
+    cached_tree = evaluation_cache.distorted_action_trees.get(cache_key)
+    if cached_tree is not None:
+        return cached_tree
+
+    distorted_rule = derive_local_rule(
+        persistent_nodes=candidate.persistent_nodes,
+        postulates=postulates,
+    )
+    action_tree = stationary_action_tree_on_nodes(
+        nodes,
+        source=(evaluation_cache.min_x, profile.source_y),
+        rule=distorted_rule,
+        wrap_y=wrap_y,
+        node_field=profile.field,
+    )
+    evaluation_cache.distorted_action_trees[cache_key] = action_tree
+    return action_tree
+
+
+def frontier_metric_snapshot(
+    candidate: RuleCandidate,
+    nodes: set[tuple[int, int]],
+    wrap_y: bool,
+    postulates: RulePostulates,
+    evaluation_cache: FrontierEvaluationCache,
+) -> FrontierMetricSnapshot:
+    identity = candidate_identity_key(candidate)
+    cache_key = (identity, postulates.action_retained_weight)
+    cached_snapshot = evaluation_cache.metric_snapshots.get(cache_key)
+    if cached_snapshot is not None:
+        return cached_snapshot
+
+    profile = frontier_candidate_profile(
+        candidate,
+        nodes,
+        wrap_y,
+        evaluation_cache,
+    )
+    free_rule = derive_local_rule(
+        persistent_nodes=frozenset(),
+        postulates=postulates,
+    )
+    distorted_rule = derive_local_rule(
+        persistent_nodes=candidate.persistent_nodes,
+        postulates=postulates,
+    )
+    free_arrivals = frontier_free_arrivals(
+        nodes,
+        wrap_y,
+        profile.source_y,
+        evaluation_cache,
+    )
+    free_costs, free_previous = frontier_free_action_tree(
+        nodes,
+        wrap_y,
+        profile.source_y,
+        postulates,
+        evaluation_cache,
+    )
+    distorted_costs, distorted_previous = frontier_distorted_action_tree(
+        candidate,
+        nodes,
+        wrap_y,
+        postulates,
+        profile,
+        evaluation_cache,
+    )
+
+    center_action = distorted_costs[(evaluation_cache.max_x, profile.center_target)]
+    side_actions = [
+        distorted_costs[(evaluation_cache.max_x, target_y)]
+        for target_y in profile.target_ys
+        if target_y != profile.center_target
+    ]
+    center_gap = sum(side_actions) / len(side_actions) - center_action
+
+    arrival_shifts = [
+        profile.distorted_arrivals[(evaluation_cache.max_x, y)] - free_arrivals[(evaluation_cache.max_x, y)]
+        for y in evaluation_cache.right_boundary_ys
+        if (evaluation_cache.max_x, y) in free_arrivals
+        and (evaluation_cache.max_x, y) in profile.distorted_arrivals
+    ]
+    arrival_span = max(arrival_shifts) - min(arrival_shifts)
+    _survived, status = classify_robustness(center_gap, arrival_span)
+
+    path_distances: list[tuple[int, float]] = []
+    for target_y in profile.target_ys:
+        path = reconstruct_path(
+            (evaluation_cache.min_x, profile.source_y),
+            (evaluation_cache.max_x, target_y),
+            distorted_previous,
+        )
+        path_distances.append(
+            (
+                target_y,
+                sum(abs(y - profile.centroid_y) for _x, y in path) / len(path),
+            )
+        )
+
+    center_distance = next(
+        distance
+        for target_y, distance in path_distances
+        if target_y == profile.center_target
+    )
+    side_average = (
+        sum(distance for target_y, distance in path_distances if target_y != profile.center_target)
+        / len(side_actions)
+    )
+    geometric_focus_gap = side_average - center_distance
+
+    margins: list[float] = []
+    for target_y in all_off_center_targets(list(evaluation_cache.right_boundary_ys), profile.source_y):
+        free_path = reconstruct_path(
+            (evaluation_cache.min_x, profile.source_y),
+            (evaluation_cache.max_x, target_y),
+            free_previous,
+        )
+        distorted_path = reconstruct_path(
+            (evaluation_cache.min_x, profile.source_y),
+            (evaluation_cache.max_x, target_y),
+            distorted_previous,
+        )
+        free_delay = path_delay_total(
+            free_path,
+            free_rule,
+            evaluation_cache.free_field,
+        )
+        distorted_delay = path_delay_total(
+            distorted_path,
+            distorted_rule,
+            profile.field,
+        )
+        retained_total = path_retained_total(
+            distorted_path,
+            distorted_rule,
+            profile.field,
+        )
+        margins.append(
+            postulates.action_retained_weight * retained_total
+            - 2.0 * (distorted_delay - free_delay)
+        )
+    min_margin = min(margins)
+    stiffness = center_gap / geometric_focus_gap if geometric_focus_gap != 0.0 else math.inf
+    snapshot = FrontierMetricSnapshot(
+        centroid_y=profile.centroid_y,
+        center_gap=center_gap,
+        arrival_span=arrival_span,
+        status=status,
+        status_rank=robustness_rank(status),
+        min_margin=min_margin,
+        min_wrapped_margin=min_margin,
+        geometric_focus_gap=geometric_focus_gap,
+        stiffness=stiffness,
+    )
+    evaluation_cache.metric_snapshots[cache_key] = snapshot
+    return snapshot
+
+
 def build_frontier_postulates(retained_weight: float) -> RulePostulates:
     return RulePostulates(
         phase_per_action=4.0,
@@ -3312,26 +3676,46 @@ def evaluate_frontier_candidate(
     wrap_y: bool,
     postulates: RulePostulates,
     current_selected: bool,
+    evaluation_cache: FrontierEvaluationCache | None = None,
 ) -> EvaluatedCandidate:
-    center_gap, arrival_span, centroid_y, _survived, status = evaluate_rule_candidate(
-        nodes,
-        wrap_y,
-        candidate,
-        postulates,
-    )
-    min_margin, min_wrapped_margin = minimum_proper_time_margin(
-        nodes,
-        wrap_y,
-        candidate,
-        postulates,
-    )
-    _source_y, _center_distance, _side_average, geometric_focus_gap, _path_shapes = geometric_focus_summary(
-        nodes,
-        wrap_y,
-        candidate,
-        postulates,
-    )
-    stiffness = center_gap / geometric_focus_gap if geometric_focus_gap != 0.0 else math.inf
+    if evaluation_cache is None:
+        center_gap, arrival_span, centroid_y, _survived, status = evaluate_rule_candidate(
+            nodes,
+            wrap_y,
+            candidate,
+            postulates,
+        )
+        min_margin, min_wrapped_margin = minimum_proper_time_margin(
+            nodes,
+            wrap_y,
+            candidate,
+            postulates,
+        )
+        _source_y, _center_distance, _side_average, geometric_focus_gap, _path_shapes = geometric_focus_summary(
+            nodes,
+            wrap_y,
+            candidate,
+            postulates,
+        )
+        stiffness = center_gap / geometric_focus_gap if geometric_focus_gap != 0.0 else math.inf
+        status_rank = robustness_rank(status)
+    else:
+        snapshot = frontier_metric_snapshot(
+            candidate,
+            nodes,
+            wrap_y,
+            postulates,
+            evaluation_cache,
+        )
+        center_gap = snapshot.center_gap
+        arrival_span = snapshot.arrival_span
+        centroid_y = snapshot.centroid_y
+        status = snapshot.status
+        status_rank = snapshot.status_rank
+        min_margin = snapshot.min_margin
+        min_wrapped_margin = snapshot.min_wrapped_margin
+        geometric_focus_gap = snapshot.geometric_focus_gap
+        stiffness = snapshot.stiffness
     return EvaluatedCandidate(
         rule_family=rule_family,
         pack_name=pack_name,
@@ -3351,7 +3735,7 @@ def evaluate_frontier_candidate(
         arrival_span=arrival_span,
         centroid_y=centroid_y,
         status=status,
-        status_rank=robustness_rank(status),
+        status_rank=status_rank,
         min_margin=min_margin,
         min_wrapped_margin=min_wrapped_margin,
         geometric_focus_gap=geometric_focus_gap,
@@ -3623,6 +4007,7 @@ def choose_current_selected_signature(
     nodes: set[tuple[int, int]],
     wrap_y: bool,
     postulates: RulePostulates,
+    evaluation_cache: FrontierEvaluationCache | None = None,
     selector_mode: str = "always_compare",
 ) -> str | None:
     selector_metric_cache: dict[
@@ -3635,12 +4020,25 @@ def choose_current_selected_signature(
     ) -> tuple[tuple[float, ...], str, str]:
         if identity not in selector_metric_cache:
             candidate = raw_pool.selector_candidates[identity]
-            center_gap, arrival_span, centroid_y, _survived, status = evaluate_rule_candidate(
-                nodes,
-                wrap_y,
-                candidate,
-                postulates,
-            )
+            if evaluation_cache is None:
+                center_gap, arrival_span, centroid_y, _survived, status = evaluate_rule_candidate(
+                    nodes,
+                    wrap_y,
+                    candidate,
+                    postulates,
+                )
+            else:
+                snapshot = frontier_metric_snapshot(
+                    candidate,
+                    nodes,
+                    wrap_y,
+                    postulates,
+                    evaluation_cache,
+                )
+                center_gap = snapshot.center_gap
+                arrival_span = snapshot.arrival_span
+                centroid_y = snapshot.centroid_y
+                status = snapshot.status
             selector_metric_cache[identity] = (
                 candidate_quality_key(
                     candidate,
@@ -3700,6 +4098,7 @@ def collect_candidate_pool(
     count_options: tuple[frozenset[int], ...],
     retained_weight: float,
     raw_pool: RawFrontierPool | None = None,
+    evaluation_cache: FrontierEvaluationCache | None = None,
 ) -> list[EvaluatedCandidate]:
     postulates = build_frontier_postulates(retained_weight)
     current_raw_pool = raw_pool or collect_raw_frontier_pool(
@@ -3707,6 +4106,7 @@ def collect_candidate_pool(
         wrap_y,
         count_options,
     )
+    current_evaluation_cache = evaluation_cache or build_frontier_evaluation_cache(nodes, wrap_y)
 
     evaluated_candidates = [
         evaluate_frontier_candidate(
@@ -3720,6 +4120,7 @@ def collect_candidate_pool(
             wrap_y=wrap_y,
             postulates=postulates,
             current_selected=False,
+            evaluation_cache=current_evaluation_cache,
         )
         for identity, candidate in current_raw_pool.pooled_candidates.items()
     ]
@@ -3728,6 +4129,7 @@ def collect_candidate_pool(
         nodes,
         wrap_y,
         postulates,
+        current_evaluation_cache,
         selector_mode="always_compare",
     )
     for candidate in evaluated_candidates:
@@ -3767,6 +4169,7 @@ def frontier_case_analysis(
     count_options: tuple[frozenset[int], ...],
     retained_weight: float,
     raw_pool: RawFrontierPool | None = None,
+    evaluation_cache: FrontierEvaluationCache | None = None,
 ) -> tuple[FrontierScenarioRow, list[EvaluatedCandidate]]:
     candidates = collect_candidate_pool(
         pack_name=pack_name,
@@ -3777,6 +4180,7 @@ def frontier_case_analysis(
         count_options=count_options,
         retained_weight=retained_weight,
         raw_pool=raw_pool,
+        evaluation_cache=evaluation_cache,
     )
     selected_candidates = [candidate for candidate in candidates if candidate.current_selected]
     selected_candidate = selected_candidates[0] if selected_candidates else None
@@ -3812,9 +4216,15 @@ def frontier_sweep_results(
 ) -> tuple[list[FrontierScenarioRow], list[EvaluatedCandidate]]:
     scenario_rows: list[FrontierScenarioRow] = []
     candidates: list[EvaluatedCandidate] = []
+    evaluation_caches: dict[tuple[str, str], FrontierEvaluationCache] = {}
     for rule_family, count_options in family_count_options():
         for pack_name, scenarios in benchmark_packs():
             for scenario_name, nodes, wrap_y in scenarios:
+                scenario_key = (pack_name, scenario_name)
+                current_evaluation_cache = evaluation_caches.get(scenario_key)
+                if current_evaluation_cache is None:
+                    current_evaluation_cache = build_frontier_evaluation_cache(nodes, wrap_y)
+                    evaluation_caches[scenario_key] = current_evaluation_cache
                 raw_pool = collect_raw_frontier_pool(
                     nodes,
                     wrap_y,
@@ -3830,6 +4240,7 @@ def frontier_sweep_results(
                         count_options=count_options,
                         retained_weight=retained_weight,
                         raw_pool=raw_pool,
+                        evaluation_cache=current_evaluation_cache,
                     )
                     scenario_rows.append(scenario_row)
                     candidates.extend(case_candidates)
@@ -3911,6 +4322,7 @@ def frontier_hard_case_trace(
         wrap_y,
         SWEEP_COMPACT_COUNT_OPTIONS,
     )
+    evaluation_cache = build_frontier_evaluation_cache(nodes, wrap_y)
     traced_signatures = [
         format_rule_signature(
             fallback_candidate.survive_counts,
@@ -3937,6 +4349,7 @@ def frontier_hard_case_trace(
             count_options=SWEEP_COMPACT_COUNT_OPTIONS,
             retained_weight=retained_weight,
             raw_pool=raw_pool,
+            evaluation_cache=evaluation_cache,
         )
         candidates_by_signature: dict[str, EvaluatedCandidate] = {}
         for candidate in case_candidates:
