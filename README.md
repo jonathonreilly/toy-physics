@@ -231,6 +231,10 @@ What the current script demonstrates:
 - In `compact`, there is no repeat fold winner at all: each held-out mode picks a different 2-feature subset.
 - In `extended`, the fold winners narrow to a 2-way split: `center_range` wins `2/4` held-out modes and `center_variation` wins the other `2/4`.
 - So the predictive lift now looks real, but it still comes from a small family of simple geometry summaries rather than one locked minimal law.
+- A nineteenth diagnostic then asks the harder transfer question: train those same geometry predictors on the full mode sweep, then test them unchanged on the roughness sweep and the independently generated procedural family at `w = 1.0`.
+- That reverses part of the in-family story. In `compact`, roughness-only transfers best with mean accuracy `0.77`, including perfect accuracy on the roughness family itself, while the in-family winner `turning_points + crosses_midline` drops to `0.40`.
+- In `extended`, roughness-only and `mixed` tie for best transfer at `0.56`, while the in-family best subset `center_range` falls to `0.50`.
+- So the current out-of-family read is narrower and better: some of the extra in-family predictive lift was mode-family-specific, while roughness-like summaries are the most transfer-stable predictors found so far.
 - With that repair in place, `extended` still produces the larger average boundary-delay span, while the reduced `compact` family keeps a slightly larger average center gap.
 - The earlier `skew-wrap` miss is now understood as a legacy reduced-family coverage bug, not as a deep compact-vs-extended ontology split.
 - The failure-mode story is still useful history: before the repair, skewed cases mostly failed by producing empty or fragmented candidate patterns, not by hitting the boundary filter, which pointed more toward pattern formation than boundary selection.

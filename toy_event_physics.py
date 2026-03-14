@@ -638,6 +638,9 @@ class RoughnessCoreSweepRow:
     alpha: float
     rule_family: str
     retained_weight: float
+    signature: str
+    turning_points: int
+    max_step_fraction: float
     regime: str
     selected_rule: str
     selected_in_core: bool
@@ -774,6 +777,35 @@ class CenterlineFeatureSelectionRow:
     subset_size: int
     train_accuracy: float
     test_accuracy: float
+    tree_description: str
+
+
+@dataclass
+class GeometryPredictionRow:
+    dataset_name: str
+    source_name: str
+    rule_family: str
+    retained_weight: float
+    regime: str
+    center_range: float
+    center_variation: float
+    span_range: float
+    turning_points: int
+    max_step_fraction: float
+    crosses_midline: bool
+
+
+@dataclass
+class CrossDatasetTransferRow:
+    rule_family: str
+    model_name: str
+    features: str
+    train_accuracy: float
+    mode_cv_accuracy: float
+    roughness_accuracy: float
+    procedural_accuracy: float
+    mean_transfer_accuracy: float
+    worst_transfer_accuracy: float
     tree_description: str
 
 
@@ -8679,6 +8711,9 @@ def roughness_core_sweep(
             survivor_center + alpha * (miss_center - survivor_center)
             for survivor_center, miss_center in zip(survivor_centers, miss_centers)
         )
+        signature, turning_points, max_step_fraction = centerline_mode_invariants(
+            centers,
+        )
         profile = build_profile_from_centers_and_spans(xs, centers, miss_spans)
         sweep_nodes = build_nodes_from_interval_profile(profile)
         (
@@ -8711,6 +8746,9 @@ def roughness_core_sweep(
                         alpha=alpha,
                         rule_family=rule_family,
                         retained_weight=retained_weight,
+                        signature=signature,
+                        turning_points=turning_points,
+                        max_step_fraction=max_step_fraction,
                         regime=projection_core_regime(case_core_row),
                         selected_rule=case_core_row.selected_rule,
                         selected_in_core=case_core_row.selected_in_core,
@@ -9310,6 +9348,258 @@ def centerline_feature_selection_stability(
             )
     selection_rows.sort(key=lambda row: (row.rule_family, row.held_out_mode))
     return selection_rows
+
+
+def parse_feature_signature(
+    feature_signature: str,
+) -> tuple[str, ...]:
+    stripped = feature_signature.strip()
+    if not stripped or stripped == "-":
+        return tuple()
+    return tuple(part.strip() for part in stripped.split(","))
+
+
+def geometry_prediction_rows_from_mode(
+    mode_rows: list[CenterlineModeSweepRow],
+    retained_weight: float | None = None,
+) -> list[GeometryPredictionRow]:
+    rows: list[GeometryPredictionRow] = []
+    for row in mode_rows:
+        if retained_weight is not None and abs(row.retained_weight - retained_weight) > 1e-9:
+            continue
+        rows.append(
+            GeometryPredictionRow(
+                dataset_name="mode",
+                source_name=f"{row.mode}:{row.amplitude:.2f}",
+                rule_family=row.rule_family,
+                retained_weight=row.retained_weight,
+                regime=row.regime,
+                center_range=row.center_range,
+                center_variation=row.center_variation,
+                span_range=row.span_range,
+                turning_points=row.turning_points,
+                max_step_fraction=row.max_step_fraction,
+                crosses_midline=row.crosses_midline,
+            )
+        )
+    rows.sort(key=lambda row: (row.rule_family, row.source_name))
+    return rows
+
+
+def geometry_prediction_rows_from_roughness(
+    roughness_rows: list[RoughnessCoreSweepRow],
+    retained_weight: float = 1.0,
+) -> list[GeometryPredictionRow]:
+    rows: list[GeometryPredictionRow] = []
+    for row in roughness_rows:
+        if abs(row.retained_weight - retained_weight) > 1e-9:
+            continue
+        rows.append(
+            GeometryPredictionRow(
+                dataset_name="roughness",
+                source_name=f"alpha={row.alpha:.2f}",
+                rule_family=row.rule_family,
+                retained_weight=row.retained_weight,
+                regime=row.regime,
+                center_range=row.center_range,
+                center_variation=row.center_variation,
+                span_range=row.span_range,
+                turning_points=row.turning_points,
+                max_step_fraction=row.max_step_fraction,
+                crosses_midline=row.crosses_midline,
+            )
+        )
+    rows.sort(key=lambda row: (row.rule_family, row.source_name))
+    return rows
+
+
+def procedural_geometry_prediction_rows(
+    retained_weight: float = 1.0,
+    variant_limit: int = 2,
+    rediscovery_limit: int = 1,
+) -> list[GeometryPredictionRow]:
+    prediction_rows: list[GeometryPredictionRow] = []
+    for pack_name, scenarios in benchmark_packs():
+        for scenario_name, nodes, wrap_y in scenarios:
+            for variant_name, perturbed_nodes, _node_delta in procedural_geometry_variants(
+                pack_name,
+                scenario_name,
+                nodes,
+                wrap_y,
+                variant_limit=variant_limit,
+            ):
+                xs, centers, _spans = ordered_profile_centers_and_spans(perturbed_nodes)
+                if not xs:
+                    continue
+                _signature, turning_points, max_step_fraction = centerline_mode_invariants(
+                    centers,
+                )
+                (
+                    _mean_center,
+                    center_range,
+                    center_variation,
+                    crosses_midline,
+                    span_range,
+                ) = column_profile_geometry_metrics(perturbed_nodes)
+                for rule_family, count_options in family_count_options():
+                    harmonic_cont_row, harmonic_cont_candidates = harmonic_continuous_case_analysis(
+                        pack_name=pack_name,
+                        scenario_name=f"{scenario_name}:{variant_name}",
+                        nodes=perturbed_nodes,
+                        wrap_y=wrap_y,
+                        rule_family=rule_family,
+                        count_options=count_options,
+                        retained_weight=retained_weight,
+                    )
+                    case_core_rows, _aggregate_rows = derived_projection_family_case_core_analysis(
+                        [harmonic_cont_row],
+                        harmonic_cont_candidates,
+                        projection_dimension=4,
+                        generator="orthonormal",
+                    )
+                    case_core_row = case_core_rows[0]
+                    prediction_rows.append(
+                        GeometryPredictionRow(
+                            dataset_name="procedural",
+                            source_name=f"{pack_name}:{scenario_name}:{variant_name}",
+                            rule_family=rule_family,
+                            retained_weight=retained_weight,
+                            regime=projection_core_regime(case_core_row),
+                            center_range=center_range,
+                            center_variation=center_variation,
+                            span_range=span_range,
+                            turning_points=turning_points,
+                            max_step_fraction=max_step_fraction,
+                            crosses_midline=crosses_midline,
+                        )
+                    )
+    prediction_rows.sort(key=lambda row: (row.rule_family, row.source_name))
+    return prediction_rows
+
+
+def cross_dataset_transfer_benchmark(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    procedural_variant_limit: int = 2,
+    procedural_rediscovery_limit: int = 1,
+) -> list[CrossDatasetTransferRow]:
+    if mode_retained_weight is None:
+        mode_core_rows, _mode_aggregate = centerline_mode_core_sweep()
+    else:
+        mode_core_rows, _mode_aggregate = centerline_mode_core_sweep(
+            retained_weights=(mode_retained_weight,),
+        )
+    roughness_rows, _roughness_aggregate = roughness_core_sweep(
+        retained_weights=(retained_weight,),
+    )
+    procedural_rows = procedural_geometry_prediction_rows(
+        retained_weight=retained_weight,
+        variant_limit=procedural_variant_limit,
+        rediscovery_limit=procedural_rediscovery_limit,
+    )
+    mode_prediction_rows = geometry_prediction_rows_from_mode(
+        mode_core_rows,
+        retained_weight=mode_retained_weight,
+    )
+    roughness_prediction_rows = geometry_prediction_rows_from_roughness(
+        roughness_rows,
+        retained_weight=retained_weight,
+    )
+    decision_rows = centerline_decision_tree_benchmark(mode_core_rows)
+    subset_rows = centerline_feature_subset_benchmark(mode_core_rows)
+
+    benchmark_rows: list[CrossDatasetTransferRow] = []
+    named_specs = {
+        "majority": tuple(),
+        "roughness-tree": ("center_variation",),
+        "invariant-tree": ("turning_points", "crosses_midline", "max_step_fraction"),
+        "mixed-tree": ("center_variation", "turning_points", "crosses_midline", "max_step_fraction"),
+    }
+    for rule_family in ("compact", "extended"):
+        family_mode_rows = [
+            row for row in mode_prediction_rows if row.rule_family == rule_family
+        ]
+        family_roughness_rows = [
+            row for row in roughness_prediction_rows if row.rule_family == rule_family
+        ]
+        family_procedural_rows = [
+            row for row in procedural_rows if row.rule_family == rule_family
+        ]
+        family_decision_rows = [
+            row for row in decision_rows if row.rule_family == rule_family
+        ]
+        family_subset_rows = [
+            row for row in subset_rows if row.rule_family == rule_family
+        ]
+        decision_index = {row.model_name: row for row in family_decision_rows}
+        subset_best = family_subset_rows[0]
+        subset_best_no_roughness = next(
+            row for row in family_subset_rows if not row.uses_roughness
+        )
+
+        model_specs: list[tuple[str, tuple[str, ...], float, float]] = []
+        for model_name, features in named_specs.items():
+            decision_row = decision_index[model_name]
+            model_specs.append(
+                (
+                    model_name,
+                    features,
+                    decision_row.train_accuracy,
+                    decision_row.cv_accuracy,
+                )
+            )
+        dynamic_specs = [
+            ("best-subset", parse_feature_signature(subset_best.feature_subset), subset_best.train_accuracy, subset_best.cv_accuracy),
+        ]
+        if subset_best_no_roughness.feature_subset != subset_best.feature_subset:
+            dynamic_specs.append(
+                (
+                    "best-no-roughness",
+                    parse_feature_signature(subset_best_no_roughness.feature_subset),
+                    subset_best_no_roughness.train_accuracy,
+                    subset_best_no_roughness.cv_accuracy,
+                )
+            )
+        for dynamic_spec in dynamic_specs:
+            model_specs.append(dynamic_spec)
+
+        seen_feature_sets: set[tuple[str, ...]] = set()
+        deduped_specs: list[tuple[str, tuple[str, ...], float, float]] = []
+        for model_name, features, train_accuracy, cv_accuracy in model_specs:
+            if features in seen_feature_sets:
+                continue
+            seen_feature_sets.add(features)
+            deduped_specs.append((model_name, features, train_accuracy, cv_accuracy))
+
+        for model_name, feature_names, train_accuracy, mode_cv_accuracy in deduped_specs:
+            tree = learn_tiny_decision_tree(family_mode_rows, feature_names, 2)
+            roughness_accuracy = decision_tree_accuracy(tree, family_roughness_rows)
+            procedural_accuracy = decision_tree_accuracy(tree, family_procedural_rows)
+            benchmark_rows.append(
+                CrossDatasetTransferRow(
+                    rule_family=rule_family,
+                    model_name=model_name,
+                    features=", ".join(feature_names) if feature_names else "-",
+                    train_accuracy=train_accuracy,
+                    mode_cv_accuracy=mode_cv_accuracy,
+                    roughness_accuracy=roughness_accuracy,
+                    procedural_accuracy=procedural_accuracy,
+                    mean_transfer_accuracy=(roughness_accuracy + procedural_accuracy) / 2.0,
+                    worst_transfer_accuracy=min(roughness_accuracy, procedural_accuracy),
+                    tree_description=format_tiny_decision_tree(tree),
+                )
+            )
+
+    benchmark_rows.sort(
+        key=lambda row: (
+            row.rule_family,
+            -row.mean_transfer_accuracy,
+            -row.worst_transfer_accuracy,
+            -row.mode_cv_accuracy,
+            row.model_name,
+        )
+    )
+    return benchmark_rows
 
 
 def random_rediscovery_limit_sweep_summary(
@@ -11305,6 +11595,27 @@ def render_centerline_feature_selection_table(
             f"{row.test_accuracy:>5.2f} | "
             f"{row.train_accuracy:>5.2f} | "
             f"{row.winning_subset}"
+        )
+    return "\n".join(lines)
+
+
+def render_cross_dataset_transfer_table(
+    rows: list[CrossDatasetTransferRow],
+) -> str:
+    lines = [
+        "family   | model            | mode cv | rough | proc  | mean  | worst | features",
+        "---------+------------------+---------+-------+-------+-------+-------+--------------------------------------------------------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.rule_family:<8} | "
+            f"{row.model_name:<16} | "
+            f"{row.mode_cv_accuracy:>7.2f} | "
+            f"{row.roughness_accuracy:>5.2f} | "
+            f"{row.procedural_accuracy:>5.2f} | "
+            f"{row.mean_transfer_accuracy:>5.2f} | "
+            f"{row.worst_transfer_accuracy:>5.2f} | "
+            f"{row.features}"
         )
     return "\n".join(lines)
 
@@ -13689,6 +14000,41 @@ def main() -> None:
         )
     print(
         "- So the subset search is informative, but not yet a single locked law. The current predictive lift comes from a small family of simple geometry summaries rather than one perfectly stable minimal feature rule."
+    )
+    print()
+
+    print("62) Out-of-family transfer of mode-trained geometry predictors")
+    transfer_rows = cross_dataset_transfer_benchmark()
+    print(render_cross_dataset_transfer_table(transfer_rows))
+    print()
+    print("Interpretation:")
+    compact_transfer_rows = [row for row in transfer_rows if row.rule_family == "compact"]
+    extended_transfer_rows = [row for row in transfer_rows if row.rule_family == "extended"]
+    compact_transfer_best = compact_transfer_rows[0]
+    extended_transfer_best = extended_transfer_rows[0]
+    compact_transfer_roughness = next(
+        row for row in compact_transfer_rows if row.model_name == "roughness-tree"
+    )
+    extended_transfer_roughness = next(
+        row for row in extended_transfer_rows if row.model_name == "roughness-tree"
+    )
+    print(
+        "- This is the first real transfer test for the learned geometry summaries: each tree is trained on the mode sweep alone, then evaluated unchanged on the roughness sweep and the independently generated procedural family."
+    )
+    print(
+        f"- In `compact`, transfer flips the in-family ranking. Roughness-only is best at mean transfer accuracy {compact_transfer_best.mean_transfer_accuracy:.2f}, with perfect roughness accuracy {compact_transfer_best.roughness_accuracy:.2f} and procedural accuracy {compact_transfer_best.procedural_accuracy:.2f}. The in-family best subset drops to mean {next(row.mean_transfer_accuracy for row in compact_transfer_rows if row.model_name == 'best-subset'):.2f}."
+    )
+    print(
+        f"- In `extended`, roughness-only and mixed tie for best transfer at mean {extended_transfer_best.mean_transfer_accuracy:.2f} with worst-target accuracy {extended_transfer_best.worst_transfer_accuracy:.2f}, while the in-family best subset `{next(row.features for row in extended_transfer_rows if row.model_name == 'best-subset')}` falls to mean {next(row.mean_transfer_accuracy for row in extended_transfer_rows if row.model_name == 'best-subset'):.2f}."
+    )
+    print(
+        f"- The best `compact` transfer tree is: `{compact_transfer_best.tree_description}`."
+    )
+    print(
+        f"- The best `extended` transfer tree is: `{extended_transfer_best.tree_description}`."
+    )
+    print(
+        "- So the out-of-family answer is narrower and better: some of the extra in-family predictive lift was mode-family-specific. Under distribution shift, roughness-like summaries are the most stable ones we have so far, especially in `compact`."
     )
     print()
 
