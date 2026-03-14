@@ -495,6 +495,65 @@ class DerivedTransformStabilityRow:
 
 
 @dataclass
+class DerivedProjectionBootstrapRow:
+    mode: str
+    strength: float
+    projections: int
+    overlap_min: int
+    overlap_avg: float
+    selected_min: int
+    selected_avg: float
+    compact_dominant_rule: str
+    compact_dominant_basis_hits: int
+    compact_dominant_top_hits: int
+    extended_dominant_rule: str
+    extended_dominant_basis_hits: int
+    extended_dominant_top_hits: int
+
+
+@dataclass
+class DerivedProjectionStabilityRow:
+    rule_family: str
+    rule_signature: str
+    basis_hits: int
+    top_hits: int
+
+
+@dataclass
+class ProjectionGeneratorAblationRow:
+    generator: str
+    bases: int
+    weakest_basis_name: str
+    overlap_min: int
+    overlap_avg: float
+    selected_min: int
+    selected_avg: float
+    compact_dominant_rule: str
+    compact_dominant_basis_hits: int
+    compact_dominant_top_hits: int
+    extended_dominant_rule: str
+    extended_dominant_basis_hits: int
+    extended_dominant_top_hits: int
+
+
+@dataclass
+class ProjectionDimensionAblationRow:
+    dimension: int
+    bases: int
+    weakest_basis_name: str
+    overlap_min: int
+    overlap_avg: float
+    selected_min: int
+    selected_avg: float
+    compact_dominant_rule: str
+    compact_dominant_basis_hits: int
+    compact_dominant_top_hits: int
+    extended_dominant_rule: str
+    extended_dominant_basis_hits: int
+    extended_dominant_top_hits: int
+
+
+@dataclass
 class FrontierTraceRow:
     retained_weight: float
     rule_signature: str
@@ -6579,6 +6638,11 @@ DERIVED_BOOTSTRAP_TRANSFORM_MODES = (
 DERIVED_TRANSFORM_STRENGTHS = (0.0, 0.25, 0.5, 0.75, 1.0)
 DERIVED_BOOTSTRAP_TRANSFORM_RANDOM_COUNT = 2
 DERIVED_BOOTSTRAP_TRANSFORM_RANDOM_SEED = 71
+DERIVED_TRANSFORM_PROJECTION_BOOTSTRAP_COUNT = 8
+DERIVED_TRANSFORM_PROJECTION_BOOTSTRAP_SEED = 211
+DERIVED_PROJECTION_GENERATOR_TYPES = ("raw", "row_norm", "orthonormal")
+DERIVED_PROJECTION_GENERATOR_COUNT = 4
+DERIVED_PROJECTION_DIMENSIONS = (2, 3, 4, 5)
 
 
 def derived_metric_vector(candidate: EvaluatedCandidate) -> tuple[float, ...]:
@@ -7037,10 +7101,10 @@ def bootstrap_subset_basis_fields() -> tuple[tuple[str, tuple[str, ...]], ...]:
 def random_projection_basis_specs(
     count: int = DERIVED_BOOTSTRAP_RANDOM_COUNT,
     seed: int = DERIVED_BOOTSTRAP_RANDOM_SEED,
+    projection_dimension: int = 3,
 ) -> tuple[tuple[str, tuple[tuple[float, ...], ...]], ...]:
     rng = random.Random(seed)
     base_dimension = len(DERIVED_AXIS_METRIC_FIELDS)
-    projection_dimension = 3
     specs: list[tuple[str, tuple[tuple[float, ...], ...]]] = []
     for basis_index in range(count):
         matrix = []
@@ -7051,6 +7115,64 @@ def random_projection_basis_specs(
             matrix.append(tuple(row))
         specs.append((f"rand{basis_index + 1:02d}", tuple(matrix)))
     return tuple(specs)
+
+
+def normalize_projection_row(row: tuple[float, ...]) -> tuple[float, ...]:
+    norm = math.sqrt(sum(value * value for value in row))
+    if norm <= 1e-9:
+        normalized = [0.0] * len(row)
+        normalized[0] = 1.0
+        return tuple(normalized)
+    return tuple(value / norm for value in row)
+
+
+def orthonormalize_projection_matrix(
+    projection_matrix: tuple[tuple[float, ...], ...],
+) -> tuple[tuple[float, ...], ...]:
+    vectors: list[list[float]] = []
+    base_dimension = len(projection_matrix[0]) if projection_matrix else 0
+    for row in projection_matrix:
+        vector = [float(value) for value in row]
+        for prior in vectors:
+            dot = sum(value * prior_value for value, prior_value in zip(vector, prior))
+            for index, prior_value in enumerate(prior):
+                vector[index] -= dot * prior_value
+        norm = math.sqrt(sum(value * value for value in vector))
+        if norm <= 1e-9:
+            fallback_axis = None
+            best_remaining = -1.0
+            for axis_index in range(base_dimension):
+                basis = [0.0] * base_dimension
+                basis[axis_index] = 1.0
+                for prior in vectors:
+                    dot = sum(value * prior_value for value, prior_value in zip(basis, prior))
+                    for index, prior_value in enumerate(prior):
+                        basis[index] -= dot * prior_value
+                basis_norm = math.sqrt(sum(value * value for value in basis))
+                if basis_norm > best_remaining:
+                    best_remaining = basis_norm
+                    fallback_axis = [value / basis_norm for value in basis] if basis_norm > 1e-9 else None
+            if fallback_axis is None:
+                fallback_axis = [0.0] * base_dimension
+                if base_dimension:
+                    fallback_axis[0] = 1.0
+            vectors.append(fallback_axis)
+            continue
+        vectors.append([value / norm for value in vector])
+    return tuple(tuple(vector) for vector in vectors)
+
+
+def projection_matrix_variant(
+    projection_matrix: tuple[tuple[float, ...], ...],
+    generator: str,
+) -> tuple[tuple[float, ...], ...]:
+    if generator == "raw":
+        return projection_matrix
+    if generator == "row_norm":
+        return tuple(normalize_projection_row(row) for row in projection_matrix)
+    if generator == "orthonormal":
+        return orthonormalize_projection_matrix(projection_matrix)
+    raise ValueError(f"Unknown projection generator: {generator}")
 
 
 def projected_metric_rows(
@@ -7496,6 +7618,420 @@ def derived_transform_strength_sweep(
         )
     )
     return break_rows, strength_rows, stability_rows
+
+
+def derived_transform_projection_bootstrap(
+    baseline_rows: list[FrontierScenarioRow],
+    baseline_candidates: list[EvaluatedCandidate],
+    strengths: tuple[float, ...] = DERIVED_TRANSFORM_STRENGTHS,
+    projection_count: int = DERIVED_TRANSFORM_PROJECTION_BOOTSTRAP_COUNT,
+) -> tuple[list[DerivedProjectionBootstrapRow], list[DerivedProjectionStabilityRow]]:
+    base_metric_rows = [derived_metric_vector(candidate) for candidate in baseline_candidates]
+    base_anchor = (1.0, 1.0, 0.0, 0.0, 1.0)
+    _full_components, full_candidates = derived_axis_components(
+        baseline_candidates,
+        DERIVED_AXIS_METRIC_FIELDS,
+    )
+    _full_scenario_rows, _full_aggregate_rows, full_pc123_signatures = evaluate_derived_axis_candidates(
+        baseline_rows,
+        full_candidates,
+    )
+
+    basis_hits: DefaultDict[tuple[str, str], set[str]] = defaultdict(set)
+    top_hits: DefaultDict[tuple[str, str], int] = defaultdict(int)
+    bootstrap_rows: list[DerivedProjectionBootstrapRow] = []
+
+    for transform_index, transform_mode in enumerate(DERIVED_BOOTSTRAP_TRANSFORM_MODES):
+        for strength in strengths:
+            transformed_rows = transform_metric_rows(
+                base_metric_rows,
+                transform_mode,
+                strength=strength,
+            )
+            transformed_anchor = transform_anchor(
+                base_anchor,
+                transform_mode,
+                strength=strength,
+            )
+            random_specs = random_projection_basis_specs(
+                count=projection_count,
+                seed=(
+                    DERIVED_TRANSFORM_PROJECTION_BOOTSTRAP_SEED
+                    + 100 * transform_index
+                    + int(round(strength * 100))
+                ),
+            )
+
+            projection_overlaps: list[int] = []
+            projection_selected: list[int] = []
+            compact_basis_counts: Counter[str] = Counter()
+            compact_top_counts: Counter[str] = Counter()
+            extended_basis_counts: Counter[str] = Counter()
+            extended_top_counts: Counter[str] = Counter()
+
+            for random_name, projection_matrix in random_specs:
+                projected_rows, projected_anchor = project_metric_rows_and_anchor(
+                    transformed_rows,
+                    transformed_anchor,
+                    projection_matrix,
+                )
+                _components, annotated_candidates = derived_axis_components_from_metric_rows(
+                    baseline_candidates,
+                    projected_rows,
+                    projected_anchor,
+                )
+                scenario_rows, aggregate_rows, pc123_signatures_by_case = evaluate_derived_axis_candidates(
+                    baseline_rows,
+                    annotated_candidates,
+                )
+                basis_name = f"{transform_mode}:s{strength:.2f}:{random_name}"
+                overlap = sum(
+                    bool(pc123_signatures_by_case[case_key] & full_pc123_signatures[case_key])
+                    for case_key in full_pc123_signatures
+                )
+                projection_overlaps.append(overlap)
+                projection_selected.append(sum(row.selected_on_pc123 for row in scenario_rows))
+
+                compact_top = next((row for row in aggregate_rows if row.rule_family == "compact"), None)
+                extended_top = next((row for row in aggregate_rows if row.rule_family == "extended"), None)
+                if compact_top is not None:
+                    compact_top_counts[compact_top.rule_signature] += 1
+                    top_hits[(compact_top.rule_family, compact_top.rule_signature)] += 1
+                if extended_top is not None:
+                    extended_top_counts[extended_top.rule_signature] += 1
+                    top_hits[(extended_top.rule_family, extended_top.rule_signature)] += 1
+
+                for aggregate_row in aggregate_rows:
+                    if aggregate_row.pc123_hits <= 0:
+                        continue
+                    family_rule = (aggregate_row.rule_family, aggregate_row.rule_signature)
+                    basis_hits[family_rule].add(basis_name)
+                    if aggregate_row.rule_family == "compact":
+                        compact_basis_counts[aggregate_row.rule_signature] += 1
+                    else:
+                        extended_basis_counts[aggregate_row.rule_signature] += 1
+
+            compact_dominant_rule = max(
+                compact_basis_counts,
+                key=lambda signature: (
+                    compact_basis_counts[signature],
+                    compact_top_counts[signature],
+                    signature,
+                ),
+            )
+            extended_dominant_rule = max(
+                extended_basis_counts,
+                key=lambda signature: (
+                    extended_basis_counts[signature],
+                    extended_top_counts[signature],
+                    signature,
+                ),
+            )
+            bootstrap_rows.append(
+                DerivedProjectionBootstrapRow(
+                    mode=transform_mode,
+                    strength=strength,
+                    projections=len(random_specs),
+                    overlap_min=min(projection_overlaps),
+                    overlap_avg=sum(projection_overlaps) / len(projection_overlaps),
+                    selected_min=min(projection_selected),
+                    selected_avg=sum(projection_selected) / len(projection_selected),
+                    compact_dominant_rule=compact_dominant_rule,
+                    compact_dominant_basis_hits=compact_basis_counts[compact_dominant_rule],
+                    compact_dominant_top_hits=compact_top_counts[compact_dominant_rule],
+                    extended_dominant_rule=extended_dominant_rule,
+                    extended_dominant_basis_hits=extended_basis_counts[extended_dominant_rule],
+                    extended_dominant_top_hits=extended_top_counts[extended_dominant_rule],
+                )
+            )
+
+    stability_rows = [
+        DerivedProjectionStabilityRow(
+            rule_family=rule_family,
+            rule_signature=rule_signature,
+            basis_hits=len(basis_hits[(rule_family, rule_signature)]),
+            top_hits=top_hits[(rule_family, rule_signature)],
+        )
+        for rule_family, rule_signature in basis_hits
+    ]
+    bootstrap_rows.sort(key=lambda row: (row.mode, row.strength))
+    stability_rows.sort(
+        key=lambda row: (
+            row.rule_family,
+            -row.basis_hits,
+            -row.top_hits,
+            row.rule_signature,
+        )
+    )
+    return bootstrap_rows, stability_rows
+
+
+def derived_projection_generator_ablation(
+    baseline_rows: list[FrontierScenarioRow],
+    baseline_candidates: list[EvaluatedCandidate],
+    strengths: tuple[float, ...] = DERIVED_TRANSFORM_STRENGTHS,
+    generator_types: tuple[str, ...] = DERIVED_PROJECTION_GENERATOR_TYPES,
+    projection_count: int = DERIVED_PROJECTION_GENERATOR_COUNT,
+) -> list[ProjectionGeneratorAblationRow]:
+    base_metric_rows = [derived_metric_vector(candidate) for candidate in baseline_candidates]
+    base_anchor = (1.0, 1.0, 0.0, 0.0, 1.0)
+    _full_components, full_candidates = derived_axis_components(
+        baseline_candidates,
+        DERIVED_AXIS_METRIC_FIELDS,
+    )
+    _full_scenario_rows, _full_aggregate_rows, full_pc123_signatures = evaluate_derived_axis_candidates(
+        baseline_rows,
+        full_candidates,
+    )
+
+    rows: list[ProjectionGeneratorAblationRow] = []
+    for generator in generator_types:
+        overlaps: list[int] = []
+        selecteds: list[int] = []
+        weakest_basis_name = "-"
+        weakest_pair: tuple[int, int] | None = None
+        compact_basis_counts: Counter[str] = Counter()
+        compact_top_counts: Counter[str] = Counter()
+        extended_basis_counts: Counter[str] = Counter()
+        extended_top_counts: Counter[str] = Counter()
+
+        for transform_index, transform_mode in enumerate(DERIVED_BOOTSTRAP_TRANSFORM_MODES):
+            for strength in strengths:
+                transformed_rows = transform_metric_rows(
+                    base_metric_rows,
+                    transform_mode,
+                    strength=strength,
+                )
+                transformed_anchor = transform_anchor(
+                    base_anchor,
+                    transform_mode,
+                    strength=strength,
+                )
+                random_specs = random_projection_basis_specs(
+                    count=projection_count,
+                    seed=(
+                        DERIVED_TRANSFORM_PROJECTION_BOOTSTRAP_SEED
+                        + 100 * transform_index
+                        + int(round(strength * 100))
+                    ),
+                )
+                for random_name, projection_matrix in random_specs:
+                    basis_name = f"{generator}:{transform_mode}:s{strength:.2f}:{random_name}"
+                    adjusted_projection = projection_matrix_variant(
+                        projection_matrix,
+                        generator,
+                    )
+                    projected_rows, projected_anchor = project_metric_rows_and_anchor(
+                        transformed_rows,
+                        transformed_anchor,
+                        adjusted_projection,
+                    )
+                    _components, annotated_candidates = derived_axis_components_from_metric_rows(
+                        baseline_candidates,
+                        projected_rows,
+                        projected_anchor,
+                    )
+                    scenario_rows, aggregate_rows, pc123_signatures_by_case = evaluate_derived_axis_candidates(
+                        baseline_rows,
+                        annotated_candidates,
+                    )
+                    overlap = sum(
+                        bool(pc123_signatures_by_case[case_key] & full_pc123_signatures[case_key])
+                        for case_key in full_pc123_signatures
+                    )
+                    selected_on_pc123 = sum(row.selected_on_pc123 for row in scenario_rows)
+                    overlaps.append(overlap)
+                    selecteds.append(selected_on_pc123)
+                    pair = (overlap, selected_on_pc123)
+                    if weakest_pair is None or pair < weakest_pair:
+                        weakest_pair = pair
+                        weakest_basis_name = basis_name
+
+                    compact_top = next((row for row in aggregate_rows if row.rule_family == "compact"), None)
+                    extended_top = next((row for row in aggregate_rows if row.rule_family == "extended"), None)
+                    if compact_top is not None:
+                        compact_top_counts[compact_top.rule_signature] += 1
+                    if extended_top is not None:
+                        extended_top_counts[extended_top.rule_signature] += 1
+                    for aggregate_row in aggregate_rows:
+                        if aggregate_row.pc123_hits <= 0:
+                            continue
+                        if aggregate_row.rule_family == "compact":
+                            compact_basis_counts[aggregate_row.rule_signature] += 1
+                        else:
+                            extended_basis_counts[aggregate_row.rule_signature] += 1
+
+        compact_dominant_rule = max(
+            compact_basis_counts,
+            key=lambda signature: (
+                compact_basis_counts[signature],
+                compact_top_counts[signature],
+                signature,
+            ),
+        )
+        extended_dominant_rule = max(
+            extended_basis_counts,
+            key=lambda signature: (
+                extended_basis_counts[signature],
+                extended_top_counts[signature],
+                signature,
+            ),
+        )
+        rows.append(
+            ProjectionGeneratorAblationRow(
+                generator=generator,
+                bases=len(overlaps),
+                weakest_basis_name=weakest_basis_name,
+                overlap_min=min(overlaps),
+                overlap_avg=sum(overlaps) / len(overlaps),
+                selected_min=min(selecteds),
+                selected_avg=sum(selecteds) / len(selecteds),
+                compact_dominant_rule=compact_dominant_rule,
+                compact_dominant_basis_hits=compact_basis_counts[compact_dominant_rule],
+                compact_dominant_top_hits=compact_top_counts[compact_dominant_rule],
+                extended_dominant_rule=extended_dominant_rule,
+                extended_dominant_basis_hits=extended_basis_counts[extended_dominant_rule],
+                extended_dominant_top_hits=extended_top_counts[extended_dominant_rule],
+            )
+        )
+
+    rows.sort(key=lambda row: row.generator)
+    return rows
+
+
+def derived_projection_dimension_ablation(
+    baseline_rows: list[FrontierScenarioRow],
+    baseline_candidates: list[EvaluatedCandidate],
+    strengths: tuple[float, ...] = DERIVED_TRANSFORM_STRENGTHS,
+    projection_dimensions: tuple[int, ...] = DERIVED_PROJECTION_DIMENSIONS,
+    projection_count: int = DERIVED_PROJECTION_GENERATOR_COUNT,
+    generator: str = "orthonormal",
+) -> list[ProjectionDimensionAblationRow]:
+    base_metric_rows = [derived_metric_vector(candidate) for candidate in baseline_candidates]
+    base_anchor = (1.0, 1.0, 0.0, 0.0, 1.0)
+    _full_components, full_candidates = derived_axis_components(
+        baseline_candidates,
+        DERIVED_AXIS_METRIC_FIELDS,
+    )
+    _full_scenario_rows, _full_aggregate_rows, full_pc123_signatures = evaluate_derived_axis_candidates(
+        baseline_rows,
+        full_candidates,
+    )
+
+    rows: list[ProjectionDimensionAblationRow] = []
+    for projection_dimension in projection_dimensions:
+        overlaps: list[int] = []
+        selecteds: list[int] = []
+        weakest_basis_name = "-"
+        weakest_pair: tuple[int, int] | None = None
+        compact_basis_counts: Counter[str] = Counter()
+        compact_top_counts: Counter[str] = Counter()
+        extended_basis_counts: Counter[str] = Counter()
+        extended_top_counts: Counter[str] = Counter()
+
+        for transform_index, transform_mode in enumerate(DERIVED_BOOTSTRAP_TRANSFORM_MODES):
+            for strength in strengths:
+                transformed_rows = transform_metric_rows(
+                    base_metric_rows,
+                    transform_mode,
+                    strength=strength,
+                )
+                transformed_anchor = transform_anchor(
+                    base_anchor,
+                    transform_mode,
+                    strength=strength,
+                )
+                random_specs = random_projection_basis_specs(
+                    count=projection_count,
+                    seed=(
+                        DERIVED_TRANSFORM_PROJECTION_BOOTSTRAP_SEED
+                        + 100 * transform_index
+                        + int(round(strength * 100))
+                    ),
+                    projection_dimension=projection_dimension,
+                )
+                for random_name, projection_matrix in random_specs:
+                    basis_name = f"d{projection_dimension}:{transform_mode}:s{strength:.2f}:{random_name}"
+                    adjusted_projection = projection_matrix_variant(
+                        projection_matrix,
+                        generator,
+                    )
+                    projected_rows, projected_anchor = project_metric_rows_and_anchor(
+                        transformed_rows,
+                        transformed_anchor,
+                        adjusted_projection,
+                    )
+                    _components, annotated_candidates = derived_axis_components_from_metric_rows(
+                        baseline_candidates,
+                        projected_rows,
+                        projected_anchor,
+                    )
+                    scenario_rows, aggregate_rows, pc123_signatures_by_case = evaluate_derived_axis_candidates(
+                        baseline_rows,
+                        annotated_candidates,
+                    )
+                    overlap = sum(
+                        bool(pc123_signatures_by_case[case_key] & full_pc123_signatures[case_key])
+                        for case_key in full_pc123_signatures
+                    )
+                    selected_on_pc123 = sum(row.selected_on_pc123 for row in scenario_rows)
+                    overlaps.append(overlap)
+                    selecteds.append(selected_on_pc123)
+                    pair = (overlap, selected_on_pc123)
+                    if weakest_pair is None or pair < weakest_pair:
+                        weakest_pair = pair
+                        weakest_basis_name = basis_name
+
+                    compact_top = next((row for row in aggregate_rows if row.rule_family == "compact"), None)
+                    extended_top = next((row for row in aggregate_rows if row.rule_family == "extended"), None)
+                    if compact_top is not None:
+                        compact_top_counts[compact_top.rule_signature] += 1
+                    if extended_top is not None:
+                        extended_top_counts[extended_top.rule_signature] += 1
+                    for aggregate_row in aggregate_rows:
+                        if aggregate_row.pc123_hits <= 0:
+                            continue
+                        if aggregate_row.rule_family == "compact":
+                            compact_basis_counts[aggregate_row.rule_signature] += 1
+                        else:
+                            extended_basis_counts[aggregate_row.rule_signature] += 1
+
+        compact_dominant_rule = max(
+            compact_basis_counts,
+            key=lambda signature: (
+                compact_basis_counts[signature],
+                compact_top_counts[signature],
+                signature,
+            ),
+        )
+        extended_dominant_rule = max(
+            extended_basis_counts,
+            key=lambda signature: (
+                extended_basis_counts[signature],
+                extended_top_counts[signature],
+                signature,
+            ),
+        )
+        rows.append(
+            ProjectionDimensionAblationRow(
+                dimension=projection_dimension,
+                bases=len(overlaps),
+                weakest_basis_name=weakest_basis_name,
+                overlap_min=min(overlaps),
+                overlap_avg=sum(overlaps) / len(overlaps),
+                selected_min=min(selecteds),
+                selected_avg=sum(selecteds) / len(selecteds),
+                compact_dominant_rule=compact_dominant_rule,
+                compact_dominant_basis_hits=compact_basis_counts[compact_dominant_rule],
+                compact_dominant_top_hits=compact_top_counts[compact_dominant_rule],
+                extended_dominant_rule=extended_dominant_rule,
+                extended_dominant_basis_hits=extended_basis_counts[extended_dominant_rule],
+                extended_dominant_top_hits=extended_top_counts[extended_dominant_rule],
+            )
+        )
+
+    rows.sort(key=lambda row: row.dimension)
+    return rows
 
 
 def random_rediscovery_limit_sweep_summary(
@@ -9087,6 +9623,85 @@ def render_derived_transform_stability_table(
             f"{row.direct_hits:>6} | "
             f"{row.projected_hits:>9} | "
             f"{row.top_hits:>7}"
+        )
+    return "\n".join(lines)
+
+
+def render_derived_projection_bootstrap_table(
+    rows: list[DerivedProjectionBootstrapRow],
+    limit: int = 15,
+) -> str:
+    lines = [
+        "mode         | s    | proj | ovlp min/avg | sel min/avg | compact dom       | ext dom",
+        "-------------+------+------|--------------+-------------+-------------------+-------------------",
+    ]
+    for row in rows[:limit]:
+        lines.append(
+            f"{row.mode:<11} | "
+            f"{row.strength:>4.2f} | "
+            f"{row.projections:>4} | "
+            f"{row.overlap_min:>3}/{row.overlap_avg:>7.2f} | "
+            f"{row.selected_min:>3}/{row.selected_avg:>7.2f} | "
+            f"{row.compact_dominant_rule:<17} {row.compact_dominant_basis_hits:>1}/{row.projections:<1} | "
+            f"{row.extended_dominant_rule:<17} {row.extended_dominant_basis_hits:>1}/{row.projections:<1}"
+        )
+    return "\n".join(lines)
+
+
+def render_derived_projection_stability_table(
+    rows: list[DerivedProjectionStabilityRow],
+    limit: int = 12,
+) -> str:
+    lines = [
+        "family   | rule              | basis hits | top hits",
+        "---------+-------------------+------------+---------",
+    ]
+    for row in rows[:limit]:
+        lines.append(
+            f"{row.rule_family:<8} | "
+            f"{row.rule_signature:<17} | "
+            f"{row.basis_hits:>10} | "
+            f"{row.top_hits:>7}"
+        )
+    return "\n".join(lines)
+
+
+def render_projection_generator_ablation_table(
+    rows: list[ProjectionGeneratorAblationRow],
+) -> str:
+    lines = [
+        "generator    | bases | ovlp min/avg | sel min/avg | weakest basis                       | compact dom       | ext dom",
+        "-------------+-------+--------------+-------------+------------------------------------+-------------------+-------------------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.generator:<12} | "
+            f"{row.bases:>5} | "
+            f"{row.overlap_min:>3}/{row.overlap_avg:>7.2f} | "
+            f"{row.selected_min:>3}/{row.selected_avg:>7.2f} | "
+            f"{row.weakest_basis_name:<34} | "
+            f"{row.compact_dominant_rule:<17} {row.compact_dominant_basis_hits:>2}/{row.bases:<2} | "
+            f"{row.extended_dominant_rule:<17} {row.extended_dominant_basis_hits:>2}/{row.bases:<2}"
+        )
+    return "\n".join(lines)
+
+
+def render_projection_dimension_ablation_table(
+    rows: list[ProjectionDimensionAblationRow],
+) -> str:
+    lines = [
+        "dim | bases | ovlp min/avg | sel min/avg | weakest basis                    | compact dom       | ext dom",
+        "----+-------+--------------+-------------+---------------------------------+-------------------+-------------------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.dimension:>3} | "
+            f"{row.bases:>5} | "
+            f"{row.overlap_min:>3}/{row.overlap_avg:>7.2f} | "
+            f"{row.selected_min:>3}/{row.selected_avg:>7.2f} | "
+            f"{row.weakest_basis_name:<31} | "
+            f"{row.compact_dominant_rule:<17} {row.compact_dominant_basis_hits:>2}/{row.bases:<2} | "
+            f"{row.extended_dominant_rule:<17} {row.extended_dominant_basis_hits:>2}/{row.bases:<2}"
         )
     return "\n".join(lines)
 
@@ -10882,6 +11497,138 @@ def main() -> None:
         )
     print(
         "- So this turns the nonlinear family into a proper stress test: we can now say not just that some mild transforms work, but where overlap first starts to break and which motifs remain stable across the whole transform-strength sweep."
+    )
+    print()
+
+    print("50) Projection-bootstrap sweep inside the transformed basis family")
+    projection_bootstrap_rows, projection_stability_rows = derived_transform_projection_bootstrap(
+        harmonic_continuous_frontier_rows,
+        harmonic_continuous_frontier_candidates,
+    )
+    print(
+        render_derived_projection_bootstrap_table(
+            projection_bootstrap_rows,
+            limit=min(15, len(projection_bootstrap_rows)),
+        )
+    )
+    print()
+    print(render_derived_projection_stability_table(projection_stability_rows[:12]))
+    print()
+    print("Interpretation:")
+    total_projection_bases = len(projection_bootstrap_rows) * (
+        projection_bootstrap_rows[0].projections if projection_bootstrap_rows else 0
+    )
+    print(
+        f"- This removes the next hand-choice after the transform-strength sweep: instead of only two seeded projected variants per transform, it samples {total_projection_bases} projected bases across mode/strength combinations."
+    )
+    weakest_projection_row = min(
+        projection_bootstrap_rows,
+        key=lambda row: (
+            row.overlap_min,
+            row.selected_min,
+            row.mode,
+            row.strength,
+        ),
+    )
+    print(
+        f"- The weakest projection family on the current grid is `{weakest_projection_row.mode}` at strength {weakest_projection_row.strength:.2f}, with minimum overlap {weakest_projection_row.overlap_min}/{len(harmonic_continuous_frontier_rows)} and minimum selected-on-pc123 {weakest_projection_row.selected_min}/{len(harmonic_continuous_frontier_rows)} across its {weakest_projection_row.projections} projected bases."
+    )
+    compact_projection = next((row for row in projection_stability_rows if row.rule_family == "compact"), None)
+    extended_projection = next((row for row in projection_stability_rows if row.rule_family == "extended"), None)
+    if compact_projection is not None:
+        print(
+            f"- In `compact`, the most projection-stable motif is `{compact_projection.rule_signature}`, appearing in {compact_projection.basis_hits}/{total_projection_bases} projected bases with {compact_projection.top_hits} top-basis wins."
+        )
+    if extended_projection is not None:
+        print(
+            f"- In `extended`, the most projection-stable motif is `{extended_projection.rule_signature}`, appearing in {extended_projection.basis_hits}/{total_projection_bases} projected bases with {extended_projection.top_hits} top-basis wins."
+        )
+    print(
+        "- The important twist is that the first strong variation now comes from projection choice itself, not from transform intensity alone. Even so, the same dominant motif still resurfaces across the full broadened projection family."
+    )
+    print()
+
+    print("51) Projection-generator ablation")
+    projection_generator_rows = derived_projection_generator_ablation(
+        harmonic_continuous_frontier_rows,
+        harmonic_continuous_frontier_candidates,
+    )
+    print(render_projection_generator_ablation_table(projection_generator_rows))
+    print()
+    print("Interpretation:")
+    best_projection_generator = max(
+        projection_generator_rows,
+        key=lambda row: (
+            row.overlap_min,
+            row.selected_min,
+            row.overlap_avg,
+            row.selected_avg,
+            row.generator,
+        ),
+    )
+    weakest_projection_generator = min(
+        projection_generator_rows,
+        key=lambda row: (
+            row.overlap_min,
+            row.selected_min,
+            row.overlap_avg,
+            row.selected_avg,
+            row.generator,
+        ),
+    )
+    print(
+        f"- This asks whether the new projection sensitivity is structural or mostly an artifact of the current random-projection generator. The strongest generator in the current run is `{best_projection_generator.generator}`, while the weakest is `{weakest_projection_generator.generator}`."
+    )
+    print(
+        f"- `{best_projection_generator.generator}` reaches minimum overlap {best_projection_generator.overlap_min}/{len(harmonic_continuous_frontier_rows)} and minimum selected-on-pc123 {best_projection_generator.selected_min}/{len(harmonic_continuous_frontier_rows)}. `{weakest_projection_generator.generator}` drops to {weakest_projection_generator.overlap_min}/{len(harmonic_continuous_frontier_rows)} and {weakest_projection_generator.selected_min}/{len(harmonic_continuous_frontier_rows)}."
+    )
+    print(
+        f"- The compact dominant motif under the best generator is `{best_projection_generator.compact_dominant_rule}` with {best_projection_generator.compact_dominant_basis_hits}/{best_projection_generator.bases} basis hits; in extended it is `{best_projection_generator.extended_dominant_rule}` with {best_projection_generator.extended_dominant_basis_hits}/{best_projection_generator.bases}."
+    )
+    print(
+        "- If normalization or orthonormalization materially improves the weak cells, then part of the earlier instability was coming from projection scaling rather than from the toy model’s motif structure itself."
+    )
+    print()
+
+    print("52) Projection-dimension ablation")
+    projection_dimension_rows = derived_projection_dimension_ablation(
+        harmonic_continuous_frontier_rows,
+        harmonic_continuous_frontier_candidates,
+    )
+    print(render_projection_dimension_ablation_table(projection_dimension_rows))
+    print()
+    print("Interpretation:")
+    best_dimension = max(
+        projection_dimension_rows,
+        key=lambda row: (
+            row.overlap_min,
+            row.selected_min,
+            row.overlap_avg,
+            row.selected_avg,
+            row.dimension,
+        ),
+    )
+    weakest_dimension = min(
+        projection_dimension_rows,
+        key=lambda row: (
+            row.overlap_min,
+            row.selected_min,
+            row.overlap_avg,
+            row.selected_avg,
+            row.dimension,
+        ),
+    )
+    print(
+        f"- This asks whether the current projection instability is mostly about the random generator or about compressing the metric space too aggressively. On the current sweep, the strongest dimension is `{best_dimension.dimension}` and the weakest is `{weakest_dimension.dimension}`."
+    )
+    print(
+        f"- Dimension {best_dimension.dimension} reaches minimum overlap {best_dimension.overlap_min}/{len(harmonic_continuous_frontier_rows)} and minimum selected-on-pc123 {best_dimension.selected_min}/{len(harmonic_continuous_frontier_rows)}. Dimension {weakest_dimension.dimension} falls to {weakest_dimension.overlap_min}/{len(harmonic_continuous_frontier_rows)} and {weakest_dimension.selected_min}/{len(harmonic_continuous_frontier_rows)}."
+    )
+    print(
+        f"- The compact dominant motif at the strongest dimension is `{best_dimension.compact_dominant_rule}` with {best_dimension.compact_dominant_basis_hits}/{best_dimension.bases} basis hits; in extended it is `{best_dimension.extended_dominant_rule}` with {best_dimension.extended_dominant_basis_hits}/{best_dimension.bases}."
+    )
+    print(
+        "- If higher dimensions materially restore overlap, then some of the remaining instability is compression-driven rather than a failure of the underlying motif family."
     )
     print()
 
