@@ -1,6 +1,8 @@
-# Discrete Octopus-Physics Toy Model
+# Discrete Event-Network Toy Model
 
-This workspace contains a small runnable prototype for an event-network octopus-physics ontology.
+This workspace contains a small runnable prototype for a discrete event-network model.
+
+`Octopus physics` is a lightweight project nickname; the claims in this README are about the event-network toy model itself.
 
 ## How To Read This README
 
@@ -11,7 +13,7 @@ This workspace contains a small runnable prototype for an event-network octopus-
 
 ## Model Axioms
 
-This toy model is built around a compact "octopus physics" ontology:
+This toy model is built around a compact event-network ontology:
 
 - Reality is an evolving network of events and influence relations.
 - Stable objects are persistent self-maintaining patterns in that network.
@@ -98,6 +100,7 @@ What the current script demonstrates:
 - In the current hardest observed targets, the largest critical weights are all in `large:skew-wrap-large`, clustered around `w* ~= 0.953..0.955`.
 - The key subtlety is that the hardest scenario does not stay on one branch all the way through the scan. At `w = 0.75..0.90`, the active winner is `S[2,3]/B[3,4]` with source row `-1` and a much easier threshold around `w* ~= 0.794`; near the crossing, the optimizer switches to `S[3,4]/B[1,3]` with source row `0`, and that new branch carries the tighter threshold `w* ~= 0.955`.
 - The new selection diagnostic makes the cause of that switch explicit: the fallback branch is structurally stable across the scan, but its `center gap` degrades from `0.241` to `0.013` as `w` rises, so it drops from `survives` to `mixed/fragile`; the rescue branch stays `survives` throughout and takes over once the old branch no longer clears the robustness threshold.
+- A frozen-branch comparison then removes another layer of heuristic freedom: when those two competing persistent patterns are held fixed and only `w` is varied, the same qualitative crossover remains. The old branch becomes more proper-time-consistent as `w` rises, but its `center gap` collapses; the rescue branch stays robust and only becomes proper-time-consistent near the top end. So the switch reflects a real tension between the current robustness metric and the proper-time benchmark, not just search churn.
 - So the retained-weight benchmark is best understood as a piecewise-linear lower envelope of active rule/path branches, not as a single line in `w`. That is why `w = 0.95` still fails while `w = 1.0` passes.
 - With that repair in place, `extended` still produces the larger average boundary-delay span, while the reduced `compact` family keeps a slightly larger average center gap.
 - The earlier `skew-wrap` miss is now understood as a legacy reduced-family coverage bug, not as a deep compact-vs-extended ontology split.

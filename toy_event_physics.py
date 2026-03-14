@@ -238,6 +238,17 @@ class RuleSelectionDiagnosticRow:
     switched: bool
 
 
+@dataclass
+class FixedBranchCompetitionRow:
+    retained_weight: float
+    branch_label: str
+    rule_signature: str
+    center_gap: float
+    arrival_span: float
+    status: str
+    min_margin: float
+
+
 @dataclass(frozen=True)
 class LocalRule:
     persistent_nodes: frozenset[tuple[int, int]]
@@ -2521,6 +2532,90 @@ def rule_selection_diagnostics(
     return rows
 
 
+def fixed_branch_competition(
+    pack_name: str,
+    scenario_name: str,
+    retained_weights: tuple[float, ...] = (0.75, 0.8, 0.85, 0.9, 0.95, 1.0),
+) -> list[FixedBranchCompetitionRow]:
+    nodes, wrap_y = scenario_by_name(pack_name, scenario_name)
+    baseline_postulates = RulePostulates(phase_per_action=4.0)
+    fallback_candidate, _fallback_diag = scan_self_maintaining_rules_fallback_only(
+        nodes,
+        wrap_y,
+        baseline_postulates,
+    )
+    rescue_candidate, _rescue_diag, _rescue_metrics = quality_rescue_rule(
+        nodes,
+        wrap_y,
+        SWEEP_COMPACT_COUNT_OPTIONS,
+        RulePostulates(
+            phase_per_action=4.0,
+            attenuation_power=1.0,
+            action_mode="retained_mix",
+            field_mode="relaxed",
+            action_retained_weight=1.0,
+        ),
+    )
+
+    candidates = [
+        ("fallback-fixed", fallback_candidate),
+        ("rescue-fixed", rescue_candidate),
+    ]
+    rows: list[FixedBranchCompetitionRow] = []
+
+    for retained_weight in retained_weights:
+        postulates = RulePostulates(
+            phase_per_action=4.0,
+            attenuation_power=1.0,
+            action_mode="retained_mix",
+            field_mode="relaxed",
+            action_retained_weight=retained_weight,
+        )
+        for branch_label, candidate in candidates:
+            if candidate is None:
+                rows.append(
+                    FixedBranchCompetitionRow(
+                        retained_weight=retained_weight,
+                        branch_label=branch_label,
+                        rule_signature="none",
+                        center_gap=float("nan"),
+                        arrival_span=float("nan"),
+                        status="no pattern",
+                        min_margin=float("nan"),
+                    )
+                )
+                continue
+
+            metrics = evaluate_rule_candidate(
+                nodes,
+                wrap_y,
+                candidate,
+                postulates,
+            )
+            min_margin, _min_wrapped = minimum_proper_time_margin(
+                nodes,
+                wrap_y,
+                candidate,
+                postulates,
+            )
+            rows.append(
+                FixedBranchCompetitionRow(
+                    retained_weight=retained_weight,
+                    branch_label=branch_label,
+                    rule_signature=format_rule_signature(
+                        candidate.survive_counts,
+                        candidate.birth_counts,
+                    ),
+                    center_gap=metrics[0],
+                    arrival_span=metrics[1],
+                    status=metrics[4],
+                    min_margin=min_margin,
+                )
+            )
+
+    return rows
+
+
 def sample_boundary_arrivals(
     width: int,
     sample_ys: list[int],
@@ -3060,8 +3155,28 @@ def render_rule_selection_diagnostic_table(
     return "\n".join(lines)
 
 
+def render_fixed_branch_competition_table(
+    rows: list[FixedBranchCompetitionRow],
+) -> str:
+    lines = [
+        "weight | branch         | rule              | center gap | arrival span | status   | min margin",
+        "-------+----------------+-------------------+------------+--------------+----------+-----------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.retained_weight:>6.2f} | "
+            f"{row.branch_label:<14} | "
+            f"{row.rule_signature:<17} | "
+            f"{row.center_gap:>10.3f} | "
+            f"{row.arrival_span:>12.3f} | "
+            f"{row.status:<8} | "
+            f"{row.min_margin:>9.3f}"
+        )
+    return "\n".join(lines)
+
+
 def main() -> None:
-    print("OCTOPUS PHYSICS TOY MODEL")
+    print("DISCRETE EVENT-NETWORK TOY MODEL")
     print()
     derived_nodes = build_rectangular_nodes(width=12, height=8)
     flat_postulates = RulePostulates(
@@ -3521,6 +3636,28 @@ def main() -> None:
             f"- So the switch is not caused by the seed/rule search discovering a brand-new structure at high w; it is caused by the rescue scorer preferring a different winner motif once the old branch no longer satisfies the robustness quality thresholds."
         )
     print("- That gives a cleaner internal explanation of the crossing: first the active envelope changes branch because robustness quality changes, then the final branch crosses zero near its own critical weight.")
+    print()
+
+    print("19) Frozen-branch competition on the hardest case")
+    frozen_rows = fixed_branch_competition(hardest_pack, hardest_scenario)
+    print(render_fixed_branch_competition_table(frozen_rows))
+    print()
+    print("Interpretation:")
+    print("- This removes one more layer of heuristic freedom: the two competing persistent patterns are frozen, and only the action weight w is varied.")
+    print("- That means any crossover we still see is coming from the dynamics and robustness metrics, not from the search rediscovering different patterns at each weight.")
+    fallback_rows = [row for row in frozen_rows if row.branch_label == 'fallback-fixed']
+    rescue_rows = [row for row in frozen_rows if row.branch_label == 'rescue-fixed']
+    if fallback_rows and rescue_rows:
+        print(
+            f"- The frozen fallback branch `{fallback_rows[0].rule_signature}` actually becomes more proper-time-consistent as w rises: its minimum margin goes from {fallback_rows[0].min_margin:.3f} to {fallback_rows[-1].min_margin:.3f}."
+        )
+        print(
+            f"- But its center gap collapses from {fallback_rows[0].center_gap:.3f} to {fallback_rows[-1].center_gap:.3f}, so it drops from `{fallback_rows[0].status}` to `{fallback_rows[-1].status}` under the current robustness criterion."
+        )
+        print(
+            f"- The frozen rescue branch `{rescue_rows[0].rule_signature}` stays above the robustness threshold and only becomes proper-time-consistent right near the top end, moving from min margin {rescue_rows[0].min_margin:.3f} to {rescue_rows[-1].min_margin:.3f}."
+        )
+    print("- So the hard-case switch is not just a search artifact. It reflects a real tension in the current model between proper-time consistency and the center-gap robustness metric.")
     print()
 
     print("REMAINING CHEATS")
