@@ -949,6 +949,31 @@ class NeighborhoodBasisBenchmarkRow:
     description: str
 
 
+@dataclass
+class NeighborhoodBasisResidualRow:
+    rule_family: str
+    basis_size: int
+    pocket_model_family: str
+    pocket_mean_accuracy: float
+    pocket_worst_accuracy: float
+    basis_candidate_name: str
+    basis_feature_subset: str
+    basis_model_family: str
+    basis_mean_accuracy: float
+    basis_worst_accuracy: float
+    combo_candidate_name: str
+    combo_feature_subset: str
+    combo_model_family: str
+    combo_mean_accuracy: float
+    combo_worst_accuracy: float
+    basis_minus_pocket_mean: float
+    basis_minus_pocket_worst: float
+    combo_minus_pocket_mean: float
+    combo_minus_pocket_worst: float
+    combo_minus_basis_mean: float
+    combo_minus_basis_worst: float
+
+
 _cross_dataset_prediction_context_cache: dict[
     tuple[float, float | None, int, int],
     tuple[
@@ -11463,6 +11488,107 @@ def neighborhood_basis_benchmark(
     return basis_rows, benchmark_rows
 
 
+def neighborhood_basis_residual_benchmark(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    geometry_variant_limit: int = 5,
+    procedural_variant_limit: int = 3,
+    procedural_rediscovery_limit: int = 1,
+    procedural_styles: tuple[str, ...] = ("walk", "mode-mix", "local-morph"),
+    basis_sizes: tuple[int, ...] = (3, 4, 5, 6, 7, 8),
+) -> list[NeighborhoodBasisResidualRow]:
+    residual_rows: list[NeighborhoodBasisResidualRow] = []
+    for basis_size in basis_sizes:
+        _basis_rows, benchmark_rows = neighborhood_basis_benchmark(
+            retained_weight=retained_weight,
+            mode_retained_weight=mode_retained_weight,
+            geometry_variant_limit=geometry_variant_limit,
+            procedural_variant_limit=procedural_variant_limit,
+            procedural_rediscovery_limit=procedural_rediscovery_limit,
+            procedural_styles=procedural_styles,
+            basis_size=basis_size,
+        )
+        for rule_family in ("compact", "extended"):
+            family_rows = [row for row in benchmark_rows if row.rule_family == rule_family]
+            pocket_row = max(
+                (row for row in family_rows if row.candidate_name == "pocket"),
+                key=lambda row: (
+                    row.generated_mean_accuracy,
+                    row.generated_worst_accuracy,
+                    row.model_family,
+                ),
+            )
+            basis_row = max(
+                (
+                    row
+                    for row in family_rows
+                    if row.candidate_name != "pocket"
+                    and "pocket_fraction" not in row.feature_subset
+                ),
+                key=lambda row: (
+                    row.generated_mean_accuracy,
+                    row.generated_worst_accuracy,
+                    row.candidate_name,
+                    row.feature_subset,
+                    row.model_family,
+                ),
+            )
+            combo_row = max(
+                (
+                    row
+                    for row in family_rows
+                    if row.candidate_name != "pocket"
+                    and "pocket_fraction" in row.feature_subset
+                ),
+                key=lambda row: (
+                    row.generated_mean_accuracy,
+                    row.generated_worst_accuracy,
+                    row.candidate_name,
+                    row.feature_subset,
+                    row.model_family,
+                ),
+            )
+            residual_rows.append(
+                NeighborhoodBasisResidualRow(
+                    rule_family=rule_family,
+                    basis_size=basis_size,
+                    pocket_model_family=pocket_row.model_family,
+                    pocket_mean_accuracy=pocket_row.generated_mean_accuracy,
+                    pocket_worst_accuracy=pocket_row.generated_worst_accuracy,
+                    basis_candidate_name=basis_row.candidate_name,
+                    basis_feature_subset=basis_row.feature_subset,
+                    basis_model_family=basis_row.model_family,
+                    basis_mean_accuracy=basis_row.generated_mean_accuracy,
+                    basis_worst_accuracy=basis_row.generated_worst_accuracy,
+                    combo_candidate_name=combo_row.candidate_name,
+                    combo_feature_subset=combo_row.feature_subset,
+                    combo_model_family=combo_row.model_family,
+                    combo_mean_accuracy=combo_row.generated_mean_accuracy,
+                    combo_worst_accuracy=combo_row.generated_worst_accuracy,
+                    basis_minus_pocket_mean=(
+                        basis_row.generated_mean_accuracy - pocket_row.generated_mean_accuracy
+                    ),
+                    basis_minus_pocket_worst=(
+                        basis_row.generated_worst_accuracy - pocket_row.generated_worst_accuracy
+                    ),
+                    combo_minus_pocket_mean=(
+                        combo_row.generated_mean_accuracy - pocket_row.generated_mean_accuracy
+                    ),
+                    combo_minus_pocket_worst=(
+                        combo_row.generated_worst_accuracy - pocket_row.generated_worst_accuracy
+                    ),
+                    combo_minus_basis_mean=(
+                        combo_row.generated_mean_accuracy - basis_row.generated_mean_accuracy
+                    ),
+                    combo_minus_basis_worst=(
+                        combo_row.generated_worst_accuracy - basis_row.generated_worst_accuracy
+                    ),
+                )
+            )
+    residual_rows.sort(key=lambda row: (row.rule_family, row.basis_size))
+    return residual_rows
+
+
 def random_rediscovery_limit_sweep_summary(
     retained_weight: float = 1.0,
     variant_limit: int = 3,
@@ -13658,6 +13784,26 @@ def render_neighborhood_basis_benchmark_table(
                 f"{row.generated_mean_accuracy:>5.2f} | "
                 f"{row.generated_worst_accuracy:>4.2f}"
             )
+    return "\n".join(lines)
+
+
+def render_neighborhood_basis_residual_table(
+    rows: list[NeighborhoodBasisResidualRow],
+) -> str:
+    lines = [
+        "family   | size | pocket     | best basis                    | best combo                         | b-p mean/w | c-b mean/w",
+        "---------+------+------------+-------------------------------+------------------------------------+------------+-----------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.rule_family:<8} | "
+            f"{row.basis_size:>4} | "
+            f"{row.pocket_mean_accuracy:>4.2f}/{row.pocket_worst_accuracy:<4.2f} | "
+            f"{row.basis_candidate_name}:{row.basis_feature_subset:<21.21} | "
+            f"{row.combo_candidate_name}:{row.combo_feature_subset:<26.26} | "
+            f"{row.basis_minus_pocket_mean:>+4.2f}/{row.basis_minus_pocket_worst:+4.2f} | "
+            f"{row.combo_minus_basis_mean:>+4.2f}/{row.combo_minus_basis_worst:+4.2f}"
+        )
     return "\n".join(lines)
 
 
@@ -16400,6 +16546,98 @@ def main() -> None:
     )
     print(
         "- The key comparison is whether a learned neighborhood coordinate can replace `pocket_fraction` cleanly. In the current run, `pocket_fraction` beats the best single learned basis feature in both families, so it does not look like an arbitrary hand-picked proxy for an easier degree-based coordinate."
+    )
+    print()
+
+    print("70) Pocket residual gain vs learned basis size")
+    neighborhood_residual_rows = neighborhood_basis_residual_benchmark()
+    print(render_neighborhood_basis_residual_table(neighborhood_residual_rows))
+    print()
+    print("Interpretation:")
+    compact_residual_rows = [
+        row for row in neighborhood_residual_rows if row.rule_family == "compact"
+    ]
+    extended_residual_rows = [
+        row for row in neighborhood_residual_rows if row.rule_family == "extended"
+    ]
+    compact_subsume_row = next(
+        (
+            row
+            for row in compact_residual_rows
+            if row.basis_minus_pocket_mean >= 0.0 and row.combo_minus_basis_mean <= 0.0
+        ),
+        None,
+    )
+    extended_subsume_row = next(
+        (
+            row
+            for row in extended_residual_rows
+            if row.basis_minus_pocket_mean >= 0.0 and row.combo_minus_basis_mean <= 0.0
+        ),
+        None,
+    )
+    compact_best_combo_row = max(
+        compact_residual_rows,
+        key=lambda row: (
+            row.combo_mean_accuracy,
+            row.combo_worst_accuracy,
+            -row.basis_size,
+        ),
+    )
+    extended_best_combo_row = max(
+        extended_residual_rows,
+        key=lambda row: (
+            row.combo_mean_accuracy,
+            row.combo_worst_accuracy,
+            -row.basis_size,
+        ),
+    )
+    compact_prethreshold_rows = (
+        [row for row in compact_residual_rows if row.basis_size < compact_subsume_row.basis_size]
+        if compact_subsume_row is not None
+        else compact_residual_rows
+    )
+    extended_prethreshold_rows = (
+        [row for row in extended_residual_rows if row.basis_size < extended_subsume_row.basis_size]
+        if extended_subsume_row is not None
+        else extended_residual_rows
+    )
+    compact_prethreshold_best = max(
+        compact_prethreshold_rows,
+        key=lambda row: (
+            row.basis_minus_pocket_mean,
+            row.basis_minus_pocket_worst,
+            row.basis_size,
+        ),
+    )
+    extended_prethreshold_best = max(
+        extended_prethreshold_rows,
+        key=lambda row: (
+            row.basis_minus_pocket_mean,
+            row.basis_minus_pocket_worst,
+            row.basis_size,
+        ),
+    )
+    print(
+        f"- In `compact`, the learned neighborhood basis first reaches parity with `pocket_fraction` at basis size {compact_subsume_row.basis_size} on `{compact_subsume_row.basis_feature_subset}`."
+        if compact_subsume_row is not None
+        else f"- In `compact`, the strongest learned-basis-only row still trails `pocket_fraction` by {compact_prethreshold_best.basis_minus_pocket_mean:+.2f} mean accuracy points."
+    )
+    if compact_subsume_row is None:
+        print(
+            "- So under the current stronger generated ensemble, `compact` does not show a clean basis-size threshold where the learned neighborhood basis subsumes `pocket_fraction`."
+        )
+    else:
+        print(
+            f"- Before that threshold, the best `compact` learned-basis-only row still trails `pocket_fraction` by {compact_prethreshold_best.basis_minus_pocket_mean:+.2f} mean accuracy points. The strongest `pocket+basis` row appears at basis size {compact_best_combo_row.basis_size} on `{compact_best_combo_row.combo_feature_subset}` with combo-over-basis gain {compact_best_combo_row.combo_minus_basis_mean:+.2f}."
+        )
+    print(
+        f"- In `extended`, the first clean subsumption row appears at basis size {extended_subsume_row.basis_size} on `{extended_subsume_row.basis_feature_subset}`."
+        if extended_subsume_row is not None
+        else f"- In `extended`, even the strongest learned-basis-only row still trails `pocket_fraction` by {extended_prethreshold_best.basis_minus_pocket_mean:+.2f}, so there is no clean subsumption threshold in the tested range."
+    )
+    print(
+        f"- The residual-gain story is now asymmetric but cleaner. In `extended`, the pre-threshold best learned-basis row misses `pocket_fraction` by only {extended_prethreshold_best.basis_minus_pocket_mean:+.2f}, and once the basis reaches size {extended_subsume_row.basis_size}, adding `pocket_fraction` back buys {extended_best_combo_row.combo_minus_basis_mean:+.2f} additional mean accuracy. In `compact`, the learned basis needs a much larger size before it catches up."
     )
     print()
 
