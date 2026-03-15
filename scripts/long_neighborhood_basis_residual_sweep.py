@@ -12,10 +12,28 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from toy_event_physics import neighborhood_basis_benchmark
+from toy_event_physics import (
+    degree_basis_feature_names,
+    neighborhood_basis_benchmark,
+    rich_neighborhood_basis_feature_names,
+)
 
 
 BASIS_SIZES = (3, 4, 5, 6, 7, 8)
+
+
+def basis_feature_mode() -> str:
+    if len(sys.argv) <= 1:
+        return "degree"
+    return sys.argv[1].strip().lower()
+
+
+def basis_feature_names_for_mode(mode: str) -> tuple[str, ...]:
+    if mode == "degree":
+        return degree_basis_feature_names()
+    if mode == "rich":
+        return rich_neighborhood_basis_feature_names()
+    raise ValueError(f"Unknown basis feature mode: {mode}")
 
 
 def best_rows(bench_rows, rule_family: str):
@@ -78,8 +96,12 @@ def summarize(rule_family: str, bench_rows) -> str:
 
 
 def main() -> None:
+    mode = basis_feature_mode()
+    feature_names = basis_feature_names_for_mode(mode)
     started = datetime.now().isoformat(timespec="seconds")
     print(f"residual sweep started {started}", flush=True)
+    print(f"basis_feature_mode: {mode}", flush=True)
+    print(f"feature_count: {len(feature_names)}", flush=True)
     print("basis_sizes:", BASIS_SIZES, flush=True)
     total_start = time.time()
     for basis_size in BASIS_SIZES:
@@ -89,6 +111,7 @@ def main() -> None:
             geometry_variant_limit=5,
             procedural_variant_limit=3,
             basis_size=basis_size,
+            basis_feature_names=feature_names,
         )
         print(f"elapsed={time.time() - basis_start:.1f}s", flush=True)
         for rule_family in ("compact", "extended"):

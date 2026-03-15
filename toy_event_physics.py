@@ -655,6 +655,7 @@ class RoughnessCoreSweepRow:
     boundary_roughness: float
     deep_pocket_fraction: float
     degree_fractions: tuple[float, ...]
+    motif_fractions: tuple[float, ...]
 
 
 @dataclass
@@ -698,6 +699,7 @@ class CenterlineModeSweepRow:
     boundary_roughness: float
     deep_pocket_fraction: float
     degree_fractions: tuple[float, ...]
+    motif_fractions: tuple[float, ...]
 
 
 @dataclass
@@ -824,6 +826,7 @@ class GeometryPredictionRow:
     boundary_roughness: float
     deep_pocket_fraction: float
     degree_fractions: tuple[float, ...]
+    motif_fractions: tuple[float, ...]
 
 
 @dataclass
@@ -3473,21 +3476,35 @@ def local_node_shape_metrics(
     nodes: set[tuple[int, int]],
     wrap_y: bool = False,
 ) -> tuple[float, float, float, float]:
-    total_nodes = max(1, len(nodes))
-    neighbor_deficits = [
-        (8 - len(graph_neighbors(node, nodes, wrap_y=wrap_y))) / 8.0
-        for node in nodes
-    ]
-    boundary_nodes_count = sum(deficit > 0.0 for deficit in neighbor_deficits)
-    boundary_fraction = boundary_nodes_count / total_nodes
-    boundary_roughness = sum(neighbor_deficits) / total_nodes
+    (
+        boundary_fraction,
+        pocket_fraction,
+        boundary_roughness,
+        deep_pocket_fraction,
+        _degree_fractions,
+        _motif_fractions,
+    ) = local_shape_feature_bundle(nodes, wrap_y=wrap_y)
+    return (
+        boundary_fraction,
+        pocket_fraction,
+        boundary_roughness,
+        deep_pocket_fraction,
+    )
+
+
+def pocket_candidate_cells(
+    nodes: set[tuple[int, int]],
+    wrap_y: bool = False,
+) -> tuple[set[tuple[int, int]], set[tuple[int, int]]]:
+    if not nodes:
+        return set(), set()
 
     min_x = min(x for x, _y in nodes)
     max_x = max(x for x, _y in nodes)
     min_y = min(y for _x, y in nodes)
     max_y = max(y for _x, y in nodes)
-    pocket_count = 0
-    deep_pocket_count = 0
+    pocket_cells: set[tuple[int, int]] = set()
+    deep_pocket_cells: set[tuple[int, int]] = set()
     for x in range(min_x + 1, max_x):
         for y in range(min_y + 1, max_y):
             candidate = (x, y)
@@ -3501,15 +3518,115 @@ def local_node_shape_metrics(
             has_lower = any(neighbor_y < y for _neighbor_x, neighbor_y in neighbors)
             has_upper = any(neighbor_y > y for _neighbor_x, neighbor_y in neighbors)
             if has_left and has_right and has_lower and has_upper:
-                pocket_count += 1
+                pocket_cells.add(candidate)
                 if len(neighbors) >= 7:
-                    deep_pocket_count += 1
+                    deep_pocket_cells.add(candidate)
+    return pocket_cells, deep_pocket_cells
+
+
+def local_neighborhood_motif_feature_names() -> tuple[str, ...]:
+    return (
+        "motif_pocket_adjacent_fraction",
+        "motif_deep_pocket_adjacent_fraction",
+        "motif_low_degree_neighbor_fraction",
+        "motif_high_degree_neighbor_fraction",
+        "motif_mean_neighbor_degree",
+        "motif_neighbor_degree_variation",
+        "motif_two_hop_occupied_fraction",
+        "motif_two_hop_open_fraction",
+    )
+
+
+def degree_basis_feature_names() -> tuple[str, ...]:
+    return tuple(f"degree_{degree}_fraction" for degree in range(9))
+
+
+def rich_neighborhood_basis_feature_names() -> tuple[str, ...]:
+    return degree_basis_feature_names() + local_neighborhood_motif_feature_names()
+
+
+def local_shape_feature_bundle(
+    nodes: set[tuple[int, int]],
+    wrap_y: bool = False,
+) -> tuple[float, float, float, float, tuple[float, ...], tuple[float, ...]]:
+    total_nodes = max(1, len(nodes))
+    degree_map = {
+        node: len(graph_neighbors(node, nodes, wrap_y=wrap_y))
+        for node in nodes
+    }
+    total_nodes = max(1, len(nodes))
+    neighbor_deficits = [
+        (8 - degree_map[node]) / 8.0 for node in nodes
+    ]
+    boundary_nodes_count = sum(deficit > 0.0 for deficit in neighbor_deficits)
+    boundary_fraction = boundary_nodes_count / total_nodes
+    boundary_roughness = sum(neighbor_deficits) / total_nodes
+
+    counts = [0 for _ in range(9)]
+    for degree in degree_map.values():
+        counts[min(8, degree)] += 1
+    degree_fractions = tuple(count / total_nodes for count in counts)
+
+    pocket_cells, deep_pocket_cells = pocket_candidate_cells(nodes, wrap_y=wrap_y)
+    pocket_adjacent_nodes: set[tuple[int, int]] = set()
+    deep_pocket_adjacent_nodes: set[tuple[int, int]] = set()
+    for candidate in pocket_cells:
+        pocket_adjacent_nodes.update(
+            graph_neighbors(candidate, nodes | {candidate}, wrap_y=wrap_y)
+        )
+    for candidate in deep_pocket_cells:
+        deep_pocket_adjacent_nodes.update(
+            graph_neighbors(candidate, nodes | {candidate}, wrap_y=wrap_y)
+        )
+
+    low_degree_neighbor_count = 0
+    high_degree_neighbor_count = 0
+    mean_neighbor_degree_total = 0.0
+    neighbor_degree_variation_total = 0.0
+    two_hop_occupied_total = 0.0
+    two_hop_open_total = 0.0
+    for node in nodes:
+        neighbors = graph_neighbors(node, nodes, wrap_y=wrap_y)
+        neighbor_degrees = [degree_map[neighbor] for neighbor in neighbors]
+        if any(degree <= 3 for degree in neighbor_degrees):
+            low_degree_neighbor_count += 1
+        if any(degree >= 7 for degree in neighbor_degrees):
+            high_degree_neighbor_count += 1
+        if neighbor_degrees:
+            neighbor_degree_mean = sum(neighbor_degrees) / len(neighbor_degrees)
+            mean_neighbor_degree_total += neighbor_degree_mean / 8.0
+            neighbor_degree_variation_total += (
+                sum(abs(degree - neighbor_degree_mean) for degree in neighbor_degrees)
+                / len(neighbor_degrees)
+                / 8.0
+            )
+
+        second_hop_nodes: set[tuple[int, int]] = set()
+        for neighbor in neighbors:
+            second_hop_nodes.update(graph_neighbors(neighbor, nodes, wrap_y=wrap_y))
+        second_hop_nodes.discard(node)
+        second_hop_nodes.difference_update(neighbors)
+        two_hop_occupied_total += len(second_hop_nodes) / 16.0
+        two_hop_open_total += max(0.0, (16.0 - len(second_hop_nodes)) / 16.0)
+
+    motif_fractions = (
+        len(pocket_adjacent_nodes) / total_nodes,
+        len(deep_pocket_adjacent_nodes) / total_nodes,
+        low_degree_neighbor_count / total_nodes,
+        high_degree_neighbor_count / total_nodes,
+        mean_neighbor_degree_total / total_nodes,
+        neighbor_degree_variation_total / total_nodes,
+        two_hop_occupied_total / total_nodes,
+        two_hop_open_total / total_nodes,
+    )
 
     return (
         boundary_fraction,
-        pocket_count / total_nodes,
+        len(pocket_cells) / total_nodes,
         boundary_roughness,
-        deep_pocket_count / total_nodes,
+        len(deep_pocket_cells) / total_nodes,
+        degree_fractions,
+        motif_fractions,
     )
 
 
@@ -3517,12 +3634,7 @@ def neighborhood_degree_fractions(
     nodes: set[tuple[int, int]],
     wrap_y: bool = False,
 ) -> tuple[float, ...]:
-    counts = [0 for _ in range(9)]
-    total_nodes = max(1, len(nodes))
-    for node in nodes:
-        degree = len(graph_neighbors(node, nodes, wrap_y=wrap_y))
-        counts[min(8, degree)] += 1
-    return tuple(count / total_nodes for count in counts)
+    return local_shape_feature_bundle(nodes, wrap_y=wrap_y)[4]
 
 
 def ordered_profile_centers_and_spans(
@@ -9126,8 +9238,9 @@ def roughness_core_sweep(
             pocket_fraction,
             boundary_roughness,
             deep_pocket_fraction,
-        ) = local_node_shape_metrics(sweep_nodes)
-        degree_fractions = neighborhood_degree_fractions(sweep_nodes)
+            degree_fractions,
+            motif_fractions,
+        ) = local_shape_feature_bundle(sweep_nodes)
         for rule_family, count_options in family_count_options():
             for retained_weight in retained_weights:
                 harmonic_cont_row, harmonic_cont_candidates = harmonic_continuous_case_analysis(
@@ -9168,6 +9281,7 @@ def roughness_core_sweep(
                         boundary_roughness=boundary_roughness,
                         deep_pocket_fraction=deep_pocket_fraction,
                         degree_fractions=degree_fractions,
+                        motif_fractions=motif_fractions,
                     )
                 )
 
@@ -9300,8 +9414,9 @@ def centerline_mode_core_sweep(
                 pocket_fraction,
                 boundary_roughness,
                 deep_pocket_fraction,
-            ) = local_node_shape_metrics(sweep_nodes)
-            degree_fractions = neighborhood_degree_fractions(sweep_nodes)
+                degree_fractions,
+                motif_fractions,
+            ) = local_shape_feature_bundle(sweep_nodes)
             for rule_family, count_options in family_count_options():
                 for retained_weight in retained_weights:
                     harmonic_cont_row, harmonic_cont_candidates = harmonic_continuous_case_analysis(
@@ -9343,6 +9458,7 @@ def centerline_mode_core_sweep(
                             boundary_roughness=boundary_roughness,
                             deep_pocket_fraction=deep_pocket_fraction,
                             degree_fractions=degree_fractions,
+                            motif_fractions=motif_fractions,
                         )
                     )
 
@@ -9478,6 +9594,9 @@ def decision_feature_value(
     if feature.startswith("degree_") and feature.endswith("_fraction"):
         degree = int(feature[len("degree_") : -len("_fraction")])
         return row.degree_fractions[degree]
+    if feature in local_neighborhood_motif_feature_names():
+        motif_index = local_neighborhood_motif_feature_names().index(feature)
+        return row.motif_fractions[motif_index]
     raise ValueError(f"Unknown decision-tree feature: {feature}")
 
 
@@ -9606,6 +9725,14 @@ def format_tiny_decision_tree(
         "pocket_fraction": "pocket",
         "boundary_roughness": "brough",
         "deep_pocket_fraction": "dpocket",
+        "motif_pocket_adjacent_fraction": "padj",
+        "motif_deep_pocket_adjacent_fraction": "dpadj",
+        "motif_low_degree_neighbor_fraction": "lowdegN",
+        "motif_high_degree_neighbor_fraction": "highdegN",
+        "motif_mean_neighbor_degree": "mdegN",
+        "motif_neighbor_degree_variation": "vdegN",
+        "motif_two_hop_occupied_fraction": "hop2occ",
+        "motif_two_hop_open_fraction": "hop2open",
     }
     if tree.feature.startswith("degree_") and tree.feature.endswith("_fraction"):
         feature_labels[tree.feature] = f"deg{tree.feature[len('degree_'):-len('_fraction')]}"
@@ -9843,6 +9970,14 @@ def format_ordinal_score_model(
         "pocket_fraction": "pocket",
         "boundary_roughness": "brough",
         "deep_pocket_fraction": "dpocket",
+        "motif_pocket_adjacent_fraction": "padj",
+        "motif_deep_pocket_adjacent_fraction": "dpadj",
+        "motif_low_degree_neighbor_fraction": "lowdegN",
+        "motif_high_degree_neighbor_fraction": "highdegN",
+        "motif_mean_neighbor_degree": "mdegN",
+        "motif_neighbor_degree_variation": "vdegN",
+        "motif_two_hop_occupied_fraction": "hop2occ",
+        "motif_two_hop_open_fraction": "hop2open",
     }
     for feature in model.feature_names:
         if feature.startswith("degree_") and feature.endswith("_fraction"):
@@ -10076,6 +10211,7 @@ def geometry_prediction_rows_from_mode(
                 boundary_roughness=row.boundary_roughness,
                 deep_pocket_fraction=row.deep_pocket_fraction,
                 degree_fractions=row.degree_fractions,
+                motif_fractions=row.motif_fractions,
             )
         )
     rows.sort(key=lambda row: (row.rule_family, row.source_name))
@@ -10108,6 +10244,7 @@ def geometry_prediction_rows_from_roughness(
                 boundary_roughness=row.boundary_roughness,
                 deep_pocket_fraction=row.deep_pocket_fraction,
                 degree_fractions=row.degree_fractions,
+                motif_fractions=row.motif_fractions,
             )
         )
     rows.sort(key=lambda row: (row.rule_family, row.source_name))
@@ -10225,11 +10362,9 @@ def procedural_geometry_prediction_rows(
                         pocket_fraction,
                         boundary_roughness,
                         deep_pocket_fraction,
-                    ) = local_node_shape_metrics(
-                        perturbed_nodes,
-                        wrap_y=wrap_y,
-                    )
-                    degree_fractions = neighborhood_degree_fractions(
+                        degree_fractions,
+                        motif_fractions,
+                    ) = local_shape_feature_bundle(
                         perturbed_nodes,
                         wrap_y=wrap_y,
                     )
@@ -10268,6 +10403,7 @@ def procedural_geometry_prediction_rows(
                                 boundary_roughness=boundary_roughness,
                                 deep_pocket_fraction=deep_pocket_fraction,
                                 degree_fractions=degree_fractions,
+                                motif_fractions=motif_fractions,
                             )
                         )
     prediction_rows.sort(key=lambda row: (row.rule_family, row.source_name))
@@ -10313,11 +10449,9 @@ def geometry_randomization_prediction_rows(
                     pocket_fraction,
                     boundary_roughness,
                     deep_pocket_fraction,
-                ) = local_node_shape_metrics(
-                    perturbed_nodes,
-                    wrap_y=wrap_y,
-                )
-                degree_fractions = neighborhood_degree_fractions(
+                    degree_fractions,
+                    motif_fractions,
+                ) = local_shape_feature_bundle(
                     perturbed_nodes,
                     wrap_y=wrap_y,
                 )
@@ -10356,6 +10490,7 @@ def geometry_randomization_prediction_rows(
                             boundary_roughness=boundary_roughness,
                             deep_pocket_fraction=deep_pocket_fraction,
                             degree_fractions=degree_fractions,
+                            motif_fractions=motif_fractions,
                         )
                     )
     prediction_rows.sort(key=lambda row: (row.rule_family, row.source_name))
@@ -11323,8 +11458,10 @@ def generated_geometry_feature_expansion_benchmark(
 def learned_neighborhood_basis_features(
     rows: list[GeometryPredictionRow],
     basis_size: int = 3,
+    feature_names: tuple[str, ...] | None = None,
 ) -> list[NeighborhoodBasisFeatureRow]:
-    degree_features = tuple(f"degree_{degree}_fraction" for degree in range(9))
+    if feature_names is None:
+        feature_names = degree_basis_feature_names()
     basis_rows: list[NeighborhoodBasisFeatureRow] = []
     for rule_family in ("compact", "extended"):
         family_rows = [row for row in rows if row.rule_family == rule_family]
@@ -11333,7 +11470,7 @@ def learned_neighborhood_basis_features(
             for label in ("empty", "single", "multi")
         }
         ranked_features: list[NeighborhoodBasisFeatureRow] = []
-        for feature_name in degree_features:
+        for feature_name in feature_names:
             means = {
                 label: (
                     sum(decision_feature_value(row, feature_name) for row in label_rows) / len(label_rows)
@@ -11389,6 +11526,7 @@ def neighborhood_basis_benchmark(
     procedural_rediscovery_limit: int = 1,
     procedural_styles: tuple[str, ...] = ("walk", "mode-mix", "local-morph"),
     basis_size: int = 3,
+    basis_feature_names: tuple[str, ...] | None = None,
 ) -> tuple[list[NeighborhoodBasisFeatureRow], list[NeighborhoodBasisBenchmarkRow]]:
     (
         _mode_core_rows,
@@ -11407,6 +11545,7 @@ def neighborhood_basis_benchmark(
     basis_rows = learned_neighborhood_basis_features(
         mode_prediction_rows,
         basis_size=basis_size,
+        feature_names=basis_feature_names,
     )
     basis_by_family = {
         rule_family: [row.feature_name for row in basis_rows if row.rule_family == rule_family]
@@ -11496,6 +11635,7 @@ def neighborhood_basis_residual_benchmark(
     procedural_rediscovery_limit: int = 1,
     procedural_styles: tuple[str, ...] = ("walk", "mode-mix", "local-morph"),
     basis_sizes: tuple[int, ...] = (3, 4, 5, 6, 7, 8),
+    basis_feature_names: tuple[str, ...] | None = None,
 ) -> list[NeighborhoodBasisResidualRow]:
     residual_rows: list[NeighborhoodBasisResidualRow] = []
     for basis_size in basis_sizes:
@@ -11507,6 +11647,7 @@ def neighborhood_basis_residual_benchmark(
             procedural_rediscovery_limit=procedural_rediscovery_limit,
             procedural_styles=procedural_styles,
             basis_size=basis_size,
+            basis_feature_names=basis_feature_names,
         )
         for rule_family in ("compact", "extended"):
             family_rows = [row for row in benchmark_rows if row.rule_family == rule_family]
@@ -16638,6 +16779,59 @@ def main() -> None:
     )
     print(
         f"- The residual-gain story is now asymmetric but cleaner. In `extended`, the pre-threshold best learned-basis row misses `pocket_fraction` by only {extended_prethreshold_best.basis_minus_pocket_mean:+.2f}, and once the basis reaches size {extended_subsume_row.basis_size}, adding `pocket_fraction` back buys {extended_best_combo_row.combo_minus_basis_mean:+.2f} additional mean accuracy. In `compact`, the learned basis needs a much larger size before it catches up."
+    )
+    print()
+
+    print("71) Rich local-motif basis residual gain")
+    rich_neighborhood_residual_rows = neighborhood_basis_residual_benchmark(
+        basis_feature_names=rich_neighborhood_basis_feature_names(),
+    )
+    print(render_neighborhood_basis_residual_table(rich_neighborhood_residual_rows))
+    print()
+    print("Interpretation:")
+    compact_rich_rows = [
+        row for row in rich_neighborhood_residual_rows if row.rule_family == "compact"
+    ]
+    extended_rich_rows = [
+        row for row in rich_neighborhood_residual_rows if row.rule_family == "extended"
+    ]
+    compact_rich_subsume_row = next(
+        row for row in compact_rich_rows if row.basis_minus_pocket_mean >= 0.0
+    )
+    extended_rich_subsume_row = next(
+        row for row in extended_rich_rows if row.basis_minus_pocket_mean >= 0.0
+    )
+    compact_rich_best_combo_row = max(
+        compact_rich_rows,
+        key=lambda row: (
+            row.combo_mean_accuracy,
+            row.combo_worst_accuracy,
+            -row.basis_size,
+        ),
+    )
+    extended_rich_prethreshold_best = max(
+        (
+            row
+            for row in extended_rich_rows
+            if row.basis_size < extended_rich_subsume_row.basis_size
+        ),
+        key=lambda row: (
+            row.basis_minus_pocket_mean,
+            row.basis_minus_pocket_worst,
+            row.basis_size,
+        ),
+    )
+    print(
+        f"- This is the same residual test, but the learned basis can now draw from richer automatic local motifs as well as degree fractions, still without giving it `pocket_fraction` directly."
+    )
+    print(
+        f"- In `compact`, the richer automatic basis reaches parity immediately at basis size {compact_rich_subsume_row.basis_size}: `{compact_rich_subsume_row.basis_feature_subset}` matches `pocket_fraction` at {compact_rich_subsume_row.basis_mean_accuracy:.2f}/{compact_rich_subsume_row.basis_worst_accuracy:.2f}. The best combo row adds {compact_rich_best_combo_row.combo_minus_basis_mean:+.2f} mean accuracy over that."
+    )
+    print(
+        f"- In `extended`, the richer basis first reaches parity at basis size {extended_rich_subsume_row.basis_size} on `{extended_rich_subsume_row.basis_feature_subset}`. Even before that threshold, the best learned-basis-only row misses `pocket_fraction` by only {extended_rich_prethreshold_best.basis_minus_pocket_mean:+.2f} mean accuracy."
+    )
+    print(
+        "- So the automatic-basis story is sharper again. The old degree-only threshold in `compact` was a basis-vocabulary artifact, not a deep need for a large basis size. Once the basis can express richer local motifs, it recovers the `pocket` signal with a very small learned coordinate set."
     )
     print()
 
