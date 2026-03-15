@@ -977,6 +977,21 @@ class NeighborhoodBasisResidualRow:
     combo_minus_basis_worst: float
 
 
+@dataclass
+class NeighborhoodBasisAblationRow:
+    ablation_name: str
+    feature_count: int
+    removed_features: str
+    compact_parity_size: int | None
+    compact_parity_feature_subset: str
+    compact_best_prethreshold_gap: float
+    compact_best_prethreshold_worst_gap: float
+    extended_parity_size: int | None
+    extended_parity_feature_subset: str
+    extended_best_prethreshold_gap: float
+    extended_best_prethreshold_worst_gap: float
+
+
 _cross_dataset_prediction_context_cache: dict[
     tuple[float, float | None, int, int],
     tuple[
@@ -3543,6 +3558,48 @@ def degree_basis_feature_names() -> tuple[str, ...]:
 
 def rich_neighborhood_basis_feature_names() -> tuple[str, ...]:
     return degree_basis_feature_names() + local_neighborhood_motif_feature_names()
+
+
+def rich_neighborhood_basis_ablation_sets() -> tuple[tuple[str, tuple[str, ...]], ...]:
+    motif_groups = (
+        (
+            "full-rich",
+            tuple(),
+        ),
+        (
+            "degree-only",
+            local_neighborhood_motif_feature_names(),
+        ),
+        (
+            "no-pocket-adj",
+            (
+                "motif_pocket_adjacent_fraction",
+                "motif_deep_pocket_adjacent_fraction",
+            ),
+        ),
+        (
+            "no-degree-extremes",
+            (
+                "motif_low_degree_neighbor_fraction",
+                "motif_high_degree_neighbor_fraction",
+            ),
+        ),
+        (
+            "no-neighbor-moments",
+            (
+                "motif_mean_neighbor_degree",
+                "motif_neighbor_degree_variation",
+            ),
+        ),
+        (
+            "no-two-hop",
+            (
+                "motif_two_hop_occupied_fraction",
+                "motif_two_hop_open_fraction",
+            ),
+        ),
+    )
+    return motif_groups
 
 
 def local_shape_feature_bundle(
@@ -11730,6 +11787,93 @@ def neighborhood_basis_residual_benchmark(
     return residual_rows
 
 
+def parity_threshold_from_residual_rows(
+    rows: list[NeighborhoodBasisResidualRow],
+) -> tuple[NeighborhoodBasisResidualRow | None, NeighborhoodBasisResidualRow]:
+    parity_row = next(
+        (
+            row
+            for row in rows
+            if row.basis_minus_pocket_mean >= -1e-9
+            and row.basis_minus_pocket_worst >= -1e-9
+        ),
+        None,
+    )
+    prethreshold_rows = (
+        [row for row in rows if parity_row is None or row.basis_size < parity_row.basis_size]
+        or rows
+    )
+    best_prethreshold = max(
+        prethreshold_rows,
+        key=lambda row: (
+            row.basis_minus_pocket_mean,
+            row.basis_minus_pocket_worst,
+            row.basis_size,
+        ),
+    )
+    return parity_row, best_prethreshold
+
+
+def neighborhood_basis_ablation_benchmark(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    geometry_variant_limit: int = 5,
+    procedural_variant_limit: int = 3,
+    procedural_rediscovery_limit: int = 1,
+    procedural_styles: tuple[str, ...] = ("walk", "mode-mix", "local-morph"),
+    basis_sizes: tuple[int, ...] = (3, 4, 5, 6, 7, 8),
+) -> list[NeighborhoodBasisAblationRow]:
+    all_rich_features = rich_neighborhood_basis_feature_names()
+    ablation_rows: list[NeighborhoodBasisAblationRow] = []
+    for ablation_name, removed_features in rich_neighborhood_basis_ablation_sets():
+        feature_names = tuple(
+            feature for feature in all_rich_features if feature not in set(removed_features)
+        )
+        residual_rows = neighborhood_basis_residual_benchmark(
+            retained_weight=retained_weight,
+            mode_retained_weight=mode_retained_weight,
+            geometry_variant_limit=geometry_variant_limit,
+            procedural_variant_limit=procedural_variant_limit,
+            procedural_rediscovery_limit=procedural_rediscovery_limit,
+            procedural_styles=procedural_styles,
+            basis_sizes=basis_sizes,
+            basis_feature_names=feature_names,
+        )
+        compact_rows = [row for row in residual_rows if row.rule_family == "compact"]
+        extended_rows = [row for row in residual_rows if row.rule_family == "extended"]
+        compact_parity, compact_best_prethreshold = parity_threshold_from_residual_rows(
+            compact_rows
+        )
+        extended_parity, extended_best_prethreshold = parity_threshold_from_residual_rows(
+            extended_rows
+        )
+        ablation_rows.append(
+            NeighborhoodBasisAblationRow(
+                ablation_name=ablation_name,
+                feature_count=len(feature_names),
+                removed_features=", ".join(removed_features) if removed_features else "-",
+                compact_parity_size=(
+                    compact_parity.basis_size if compact_parity is not None else None
+                ),
+                compact_parity_feature_subset=(
+                    compact_parity.basis_feature_subset if compact_parity is not None else "-"
+                ),
+                compact_best_prethreshold_gap=compact_best_prethreshold.basis_minus_pocket_mean,
+                compact_best_prethreshold_worst_gap=compact_best_prethreshold.basis_minus_pocket_worst,
+                extended_parity_size=(
+                    extended_parity.basis_size if extended_parity is not None else None
+                ),
+                extended_parity_feature_subset=(
+                    extended_parity.basis_feature_subset if extended_parity is not None else "-"
+                ),
+                extended_best_prethreshold_gap=extended_best_prethreshold.basis_minus_pocket_mean,
+                extended_best_prethreshold_worst_gap=extended_best_prethreshold.basis_minus_pocket_worst,
+            )
+        )
+    ablation_rows.sort(key=lambda row: row.ablation_name)
+    return ablation_rows
+
+
 def random_rediscovery_limit_sweep_summary(
     retained_weight: float = 1.0,
     variant_limit: int = 3,
@@ -13944,6 +14088,36 @@ def render_neighborhood_basis_residual_table(
             f"{row.combo_candidate_name}:{row.combo_feature_subset:<26.26} | "
             f"{row.basis_minus_pocket_mean:>+4.2f}/{row.basis_minus_pocket_worst:+4.2f} | "
             f"{row.combo_minus_basis_mean:>+4.2f}/{row.combo_minus_basis_worst:+4.2f}"
+        )
+    return "\n".join(lines)
+
+
+def render_neighborhood_basis_ablation_table(
+    rows: list[NeighborhoodBasisAblationRow],
+) -> str:
+    lines = [
+        "ablation           | nfeat | removed                | compact parity | compact pre-gap | extended parity | extended pre-gap",
+        "-------------------+-------+------------------------+----------------+-----------------+-----------------+-----------------",
+    ]
+    for row in rows:
+        compact_parity = (
+            f"{row.compact_parity_size}:{row.compact_parity_feature_subset}"
+            if row.compact_parity_size is not None
+            else "-"
+        )
+        extended_parity = (
+            f"{row.extended_parity_size}:{row.extended_parity_feature_subset}"
+            if row.extended_parity_size is not None
+            else "-"
+        )
+        lines.append(
+            f"{row.ablation_name:<19} | "
+            f"{row.feature_count:>5} | "
+            f"{row.removed_features:<22.22} | "
+            f"{compact_parity:<14.14} | "
+            f"{row.compact_best_prethreshold_gap:+.2f}/{row.compact_best_prethreshold_worst_gap:+.2f} | "
+            f"{extended_parity:<15.15} | "
+            f"{row.extended_best_prethreshold_gap:+.2f}/{row.extended_best_prethreshold_worst_gap:+.2f}"
         )
     return "\n".join(lines)
 
@@ -16832,6 +17006,43 @@ def main() -> None:
     )
     print(
         "- So the automatic-basis story is sharper again. The old degree-only threshold in `compact` was a basis-vocabulary artifact, not a deep need for a large basis size. Once the basis can express richer local motifs, it recovers the `pocket` signal with a very small learned coordinate set."
+    )
+    print()
+
+    print("72) Rich motif-family ablation")
+    rich_motif_ablation_rows = neighborhood_basis_ablation_benchmark()
+    print(render_neighborhood_basis_ablation_table(rich_motif_ablation_rows))
+    print()
+    print("Interpretation:")
+    degree_only_row = next(
+        row for row in rich_motif_ablation_rows if row.ablation_name == "degree-only"
+    )
+    no_pocket_adj_row = next(
+        row for row in rich_motif_ablation_rows if row.ablation_name == "no-pocket-adj"
+    )
+    no_degree_extremes_row = next(
+        row for row in rich_motif_ablation_rows if row.ablation_name == "no-degree-extremes"
+    )
+    no_neighbor_moments_row = next(
+        row for row in rich_motif_ablation_rows if row.ablation_name == "no-neighbor-moments"
+    )
+    no_two_hop_row = next(
+        row for row in rich_motif_ablation_rows if row.ablation_name == "no-two-hop"
+    )
+    print(
+        f"- This is the first direct mechanism ablation on the richer automatic basis. In the full-rich reference, `compact` parity happens at basis size {next(row for row in rich_motif_ablation_rows if row.ablation_name == 'full-rich').compact_parity_size} and `extended` parity at size {next(row for row in rich_motif_ablation_rows if row.ablation_name == 'full-rich').extended_parity_size}."
+    )
+    print(
+        f"- Removing every richer motif drops the model back to the old degree-only story: `compact` parity retreats to size {degree_only_row.compact_parity_size}, while `extended` stays at {degree_only_row.extended_parity_size}."
+    )
+    print(
+        f"- Removing pocket-adjacency motifs does not hurt `compact` at all and actually makes `extended` parity earlier ({no_pocket_adj_row.extended_parity_size}). Removing neighbor-moment or two-hop motifs also leaves the `compact` threshold at {no_neighbor_moments_row.compact_parity_size} and {no_two_hop_row.compact_parity_size} respectively."
+    )
+    print(
+        f"- The load-bearing family is degree extremes. When `motif_low_degree_neighbor_fraction` and `motif_high_degree_neighbor_fraction` are removed together, `compact` parity slips to size {no_degree_extremes_row.compact_parity_size}, and `extended` loses clean parity entirely in the tested `3..8` range."
+    )
+    print(
+        "- So the current mechanism read is much tighter: the fast rich-basis collapse is not really about pocket-adjacency. It is primarily carried by local degree-extremes information, with pocket-adjacent motifs acting more like alternative proxies than the main driver."
     )
     print()
 
