@@ -11399,16 +11399,18 @@ def neighborhood_basis_benchmark(
         family_geometry_rows = [row for row in geometry_rows if row.rule_family == rule_family]
         family_procedural_rows = [row for row in procedural_rows if row.rule_family == rule_family]
         basis_features = basis_by_family[rule_family]
-        candidate_sets: list[tuple[str, tuple[str, ...]]] = [
-            ("pocket", ("pocket_fraction",)),
-            ("basis-1", (basis_features[0],)),
-            ("basis-2", (basis_features[1],)),
-            ("basis-3", (basis_features[2],)),
-            ("basis-prefix-2", tuple(basis_features[:2])),
-            ("basis-prefix-3", tuple(basis_features[:3])),
-            ("pocket+basis-1", ("pocket_fraction", basis_features[0])),
-            ("pocket+basis-prefix-2", ("pocket_fraction",) + tuple(basis_features[:2])),
-        ]
+        candidate_sets: list[tuple[str, tuple[str, ...]]] = [("pocket", ("pocket_fraction",))]
+        for index, feature_name in enumerate(basis_features, start=1):
+            candidate_sets.append((f"basis-{index}", (feature_name,)))
+            candidate_sets.append(
+                (f"pocket+basis-{index}", ("pocket_fraction", feature_name))
+            )
+        for prefix_size in range(2, len(basis_features) + 1):
+            prefix = tuple(basis_features[:prefix_size])
+            candidate_sets.append((f"basis-prefix-{prefix_size}", prefix))
+            candidate_sets.append(
+                (f"pocket+basis-prefix-{prefix_size}", ("pocket_fraction",) + prefix)
+            )
         seen_feature_sets: set[tuple[str, ...]] = set()
         deduped_sets: list[tuple[str, tuple[str, ...]]] = []
         for candidate_name, feature_names in candidate_sets:
@@ -16361,7 +16363,9 @@ def main() -> None:
         (
             row
             for row in neighborhood_benchmark_rows
-            if row.rule_family == "compact" and row.candidate_name in {"basis-1", "basis-2", "basis-3"}
+            if row.rule_family == "compact"
+            and row.candidate_name.startswith("basis-")
+            and "," not in row.feature_subset
         ),
         key=lambda row: (
             row.generated_mean_accuracy,
@@ -16374,7 +16378,9 @@ def main() -> None:
         (
             row
             for row in neighborhood_benchmark_rows
-            if row.rule_family == "extended" and row.candidate_name in {"basis-1", "basis-2", "basis-3"}
+            if row.rule_family == "extended"
+            and row.candidate_name.startswith("basis-")
+            and "," not in row.feature_subset
         ),
         key=lambda row: (
             row.generated_mean_accuracy,

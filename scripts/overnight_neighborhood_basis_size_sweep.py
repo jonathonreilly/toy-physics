@@ -56,7 +56,7 @@ def summarize_family(bench_rows, basis_rows, rule_family: str) -> str:
         (
             row
             for row in family_bench
-            if row.candidate_name not in {"pocket", "basis-1", "basis-2", "basis-3"}
+            if row.candidate_name != "pocket" and "," in row.feature_subset
         ),
         key=lambda row: (
             row.generated_mean_accuracy,
