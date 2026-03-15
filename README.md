@@ -76,7 +76,7 @@ What the current script implements:
 - Uses one shared local edge rule for the causal-shell graph, the asynchronous continuation model, and the slit graph.
 - Makes the local rule explicit through a small set of postulates and a derived `LocalRule` object.
 - Uses bounded-memory summary passes for the deterministic, pairwise cross-weight, high-end weight-ladder, tracked-palette random, limited-rediscovery random, and geometry-randomized perturbation ensembles so the selector-free perturbation diagnostics can run without materializing every case row at once.
-- Reuses cached generated-geometry prediction contexts within a single run so repeated graph-side predictor diagnostics do not rebuild the same procedural and whole-shape frontier rows from scratch.
+- Reuses cached generated-geometry prediction contexts within a single run so repeated graph-side predictor diagnostics do not rebuild the same procedural, graph-local morph, and whole-shape frontier rows from scratch.
 - Pressure-tests two of the biggest cheats:
   - why `positive weights only` are too weak for interference
   - why the `square rule` is less arbitrary once reversible linear mixing is required
@@ -252,10 +252,10 @@ What the current script demonstrates:
 - In `compact`, roughness-only is extremely stable under those internal changes: all three variants keep the same mean transfer `0.77`.
 - In `extended`, roughness-only also stays stable at `0.56`, but it is no longer unique. A spread-weighted `center_variation + center_range` score rises to `0.62`, which beats the roughness-only ordinal score.
 - So the current predictor claim needs one more refinement: the transfer-stable core is not just one roughness-only rule. It now looks like a small roughness-centered family, especially in `extended`, where a roughness-plus-range score can outperform the simpler roughness summary inside the ordinal family.
-- A twenty-fourth diagnostic then pushes on the graph-side cheat again with a multi-style generated-geometry ensemble: three whole-shape jitter variants plus two variants from each of two procedural generator styles per scenario.
-- In `compact`, that stronger graph-side test no longer prefers roughness-only by itself. The best model becomes a depth-2 tree on `center_variation + crosses_midline` at mean `0.62`, while the roughness-only tree reaches `0.59`.
-- In `extended`, the multi-style generated ensemble shifts the lead again: `crosses_midline` ordinal scores and `max_step_fraction` models tie at mean `0.68`, while the roughness-only tree lands at `0.63`.
-- So the current graph-side read is tougher and more specific than before: the generated ensemble still does not preserve one unique predictor, but the stable family is clearer. Roughness alone is no longer the right summary; the recurring winners combine roughness-adjacent gradient features with crossing or step-fraction structure once the generator class changes.
+- A twenty-fourth diagnostic then pushes on the graph-side cheat again with a multi-style generated-geometry ensemble: three whole-shape jitter variants plus one variant from each of three procedural generator styles per scenario, including a new graph-local morph generator.
+- In `compact`, that stronger graph-side test no longer prefers roughness-only by itself. The best model becomes an ordinal `center_variation + center_range` score at mean `0.59`, while the roughness-only tree reaches `0.58`.
+- In `extended`, the multi-style generated ensemble shifts the lead again: `crosses_midline` ordinal scores tie at mean `0.68`, while the roughness-only tree lands at `0.62` and a `span_range` tree joins the top tier.
+- So the current graph-side read is tougher and more specific than before: the generated ensemble still does not preserve one unique predictor, but the stable family is clearer. Roughness alone is no longer the right summary; the recurring winners live in a small centerline-shape family built from roughness, range, crossing, and span summaries once the generator class changes.
 - With that repair in place, `extended` still produces the larger average boundary-delay span, while the reduced `compact` family keeps a slightly larger average center gap.
 - The earlier `skew-wrap` miss is now understood as a legacy reduced-family coverage bug, not as a deep compact-vs-extended ontology split.
 - The failure-mode story is still useful history: before the repair, skewed cases mostly failed by producing empty or fragmented candidate patterns, not by hitting the boundary filter, which pointed more toward pattern formation than boundary selection.

@@ -3155,6 +3155,8 @@ def procedural_geometry_variants(
         attempt_multiplier = 8
     elif style == "mode-mix":
         attempt_multiplier = 10
+    elif style == "local-morph":
+        attempt_multiplier = 12
     else:
         raise ValueError(f"Unknown procedural geometry style: {style}")
 
@@ -3209,7 +3211,7 @@ def procedural_geometry_variants(
                         high_y += shift
 
                 profile[x] = (low_y, high_y)
-        else:
+        elif style == "mode-mix":
             primary_name = mode_names[attempt_index % len(mode_names)]
             secondary_name = mode_names[(attempt_index // len(mode_names)) % len(mode_names)]
             span_mode_name = mode_names[(attempt_index // (len(mode_names) ** 2)) % len(mode_names)]
@@ -3262,6 +3264,84 @@ def procedural_geometry_variants(
                         high_y += shift
 
                 profile[x] = (low_y, high_y)
+        else:
+            current_nodes = set(nodes)
+            target_columns = set(xs)
+            min_x = min(target_columns)
+            max_x = max(target_columns)
+            step_count = rng.randint(2, 4)
+            for _step in range(step_count):
+                column_counts = Counter(node_x for node_x, _node_y in current_nodes)
+                removable_nodes = [
+                    node
+                    for node in removable_perturbation_nodes(current_nodes, wrap_y=False)
+                    if column_counts[node[0]] > 1
+                ]
+                if not removable_nodes:
+                    break
+
+                focus_remove = rng.choice(removable_nodes)
+                remove_node = min(
+                    removable_nodes,
+                    key=lambda node: (
+                        (node[0] - focus_remove[0]) ** 2 + (node[1] - focus_remove[1]) ** 2,
+                        -len(graph_neighbors(node, current_nodes, wrap_y=False)),
+                        node[0],
+                        node[1],
+                    ),
+                )
+                shifted_nodes = set(current_nodes)
+                shifted_nodes.remove(remove_node)
+
+                addable_nodes = [
+                    candidate
+                    for candidate in (
+                        (x, y)
+                        for x in range(min_x + 1, max_x)
+                        for y in range(low_floor, high_ceiling + 1)
+                    )
+                    if candidate not in shifted_nodes
+                    and candidate != remove_node
+                    and len(graph_neighbors(candidate, shifted_nodes | {candidate}, wrap_y=False)) >= 2
+                ]
+                if not addable_nodes:
+                    current_nodes = shifted_nodes
+                    continue
+
+                focus_add = rng.choice(addable_nodes)
+                add_node = min(
+                    addable_nodes,
+                    key=lambda node: (
+                        (node[0] - focus_add[0]) ** 2 + (node[1] - focus_add[1]) ** 2,
+                        (node[0] - remove_node[0]) ** 2 + (node[1] - remove_node[1]) ** 2,
+                        -len(graph_neighbors(node, shifted_nodes | {node}, wrap_y=False)),
+                        node[0],
+                        node[1],
+                    ),
+                )
+                shifted_nodes.add(add_node)
+                if {node_x for node_x, _node_y in shifted_nodes} != target_columns:
+                    continue
+                if len(connected_components(frozenset(shifted_nodes), shifted_nodes, wrap_y=False)) != 1:
+                    continue
+                current_nodes = shifted_nodes
+
+            perturbed_nodes = current_nodes
+            identity = frozenset(perturbed_nodes)
+            if identity in seen_node_sets:
+                continue
+            seen_node_sets.add(identity)
+            variant_name = f"{style}-{chr(ord('a') + len(deduped_variants))}"
+            deduped_variants.append(
+                (
+                    variant_name,
+                    perturbed_nodes,
+                    len(perturbed_nodes) - len(nodes),
+                )
+            )
+            if len(deduped_variants) >= variant_limit:
+                break
+            continue
 
         perturbed_nodes = build_nodes_from_interval_profile(profile)
         identity = frozenset(perturbed_nodes)
@@ -10048,9 +10128,9 @@ def build_generated_geometry_prediction_context(
     retained_weight: float = 1.0,
     mode_retained_weight: float | None = None,
     geometry_variant_limit: int = 3,
-    procedural_variant_limit: int = 2,
+    procedural_variant_limit: int = 1,
     procedural_rediscovery_limit: int = 1,
-    procedural_styles: tuple[str, ...] = ("walk", "mode-mix"),
+    procedural_styles: tuple[str, ...] = ("walk", "mode-mix", "local-morph"),
 ) -> tuple[
     list[CenterlineModeSweepRow],
     list[GeometryPredictionRow],
@@ -10786,9 +10866,9 @@ def generated_geometry_predictor_comparison(
     retained_weight: float = 1.0,
     mode_retained_weight: float | None = None,
     geometry_variant_limit: int = 3,
-    procedural_variant_limit: int = 2,
+    procedural_variant_limit: int = 1,
     procedural_rediscovery_limit: int = 1,
-    procedural_styles: tuple[str, ...] = ("walk", "mode-mix"),
+    procedural_styles: tuple[str, ...] = ("walk", "mode-mix", "local-morph"),
     max_subset_size: int = 3,
     top_k_subset_rows: int = 3,
 ) -> list[GeneratedGeometryPredictorRow]:
@@ -15638,16 +15718,16 @@ def main() -> None:
         if row.feature_subset == "center_variation" and row.model_family == "tree-depth2"
     )
     print(
-        "- This is the broader graph-side test: instead of only roughness plus one procedural generator, the predictors are now scored on a multi-style generated-geometry ensemble that combines three whole-shape jitter variants with two variants from each of two procedural generator styles per scenario."
+        "- This is the broader graph-side test: instead of only roughness plus one procedural generator, the predictors are now scored on a multi-style generated-geometry ensemble that combines three whole-shape jitter variants with one variant from each of three procedural generator styles per scenario, including a new graph-local morph generator."
     )
     print(
-        f"- In `compact`, the multi-style generated winner is `{compact_generated_best.model_family}` on `{compact_generated_best.feature_subset}` with mean accuracy {compact_generated_best.generated_mean_accuracy:.2f}. Roughness-only as the reference tree gets {compact_generated_rough.generated_mean_accuracy:.2f}, so the best compact summary now couples roughness with a crossing signal."
+        f"- In `compact`, the multi-style generated winner is `{compact_generated_best.model_family}` on `{compact_generated_best.feature_subset}` with mean accuracy {compact_generated_best.generated_mean_accuracy:.2f}. Roughness-only as the reference tree gets {compact_generated_rough.generated_mean_accuracy:.2f}, so the best compact summary now couples roughness with center-range structure rather than relying on roughness alone."
     )
     print(
-        f"- In `extended`, the multi-style generated winner is `{extended_generated_best.model_family}` on `{extended_generated_best.feature_subset}` with mean accuracy {extended_generated_best.generated_mean_accuracy:.2f}. Roughness-only as the reference tree gets {extended_generated_rough.generated_mean_accuracy:.2f}, and the top tier broadens around crossing and step-fraction summaries."
+        f"- In `extended`, the multi-style generated winner is `{extended_generated_best.model_family}` on `{extended_generated_best.feature_subset}` with mean accuracy {extended_generated_best.generated_mean_accuracy:.2f}. Roughness-only as the reference tree gets {extended_generated_rough.generated_mean_accuracy:.2f}, and the top tier now clusters around crossing and span summaries."
     )
     print(
-        "- So the broader graph-side answer is tougher again. The multi-style generated ensemble still does not preserve one unique predictor, but the stable family is now clearer: roughness alone is not enough, while roughness-plus-crossing or roughness-adjacent step summaries keep resurfacing once the generator class changes."
+        "- So the broader graph-side answer is tougher again. The multi-style generated ensemble still does not preserve one unique predictor, but the stable family is now clearer: the recurring winners live in a small centerline-shape family built from roughness, range, crossing, and span summaries, while any one exact winner remains generator-sensitive."
     )
     print()
 
