@@ -650,6 +650,8 @@ class RoughnessCoreSweepRow:
     center_variation: float
     span_range: float
     crosses_midline: bool
+    boundary_fraction: float
+    pocket_fraction: float
 
 
 @dataclass
@@ -688,6 +690,8 @@ class CenterlineModeSweepRow:
     center_variation: float
     span_range: float
     crosses_midline: bool
+    boundary_fraction: float
+    pocket_fraction: float
 
 
 @dataclass
@@ -809,6 +813,8 @@ class GeometryPredictionRow:
     turning_points: int
     max_step_fraction: float
     crosses_midline: bool
+    boundary_fraction: float
+    pocket_fraction: float
 
 
 @dataclass
@@ -888,6 +894,20 @@ class OrdinalVariantComparisonRow:
 class GeneratedGeometryPredictorRow:
     rule_family: str
     feature_subset: str
+    model_family: str
+    geometry_accuracy: float
+    procedural_accuracy: float
+    generated_mean_accuracy: float
+    generated_worst_accuracy: float
+    description: str
+
+
+@dataclass
+class GeneratedFeatureExpansionRow:
+    rule_family: str
+    feature_subset: str
+    subset_size: int
+    uses_local_shape: bool
     model_family: str
     geometry_accuracy: float
     procedural_accuracy: float
@@ -3389,6 +3409,40 @@ def column_profile_geometry_metrics(
         crosses_midline,
         span_range,
     )
+
+
+def local_node_shape_metrics(
+    nodes: set[tuple[int, int]],
+    wrap_y: bool = False,
+) -> tuple[float, float]:
+    total_nodes = max(1, len(nodes))
+    boundary_nodes_count = sum(
+        len(graph_neighbors(node, nodes, wrap_y=wrap_y)) < 8
+        for node in nodes
+    )
+    boundary_fraction = boundary_nodes_count / total_nodes
+
+    min_x = min(x for x, _y in nodes)
+    max_x = max(x for x, _y in nodes)
+    min_y = min(y for _x, y in nodes)
+    max_y = max(y for _x, y in nodes)
+    pocket_count = 0
+    for x in range(min_x + 1, max_x):
+        for y in range(min_y + 1, max_y):
+            candidate = (x, y)
+            if candidate in nodes:
+                continue
+            neighbors = graph_neighbors(candidate, nodes | {candidate}, wrap_y=wrap_y)
+            if len(neighbors) < 5:
+                continue
+            has_left = any(neighbor_x < x for neighbor_x, _neighbor_y in neighbors)
+            has_right = any(neighbor_x > x for neighbor_x, _neighbor_y in neighbors)
+            has_lower = any(neighbor_y < y for _neighbor_x, neighbor_y in neighbors)
+            has_upper = any(neighbor_y > y for _neighbor_x, neighbor_y in neighbors)
+            if has_left and has_right and has_lower and has_upper:
+                pocket_count += 1
+
+    return boundary_fraction, pocket_count / total_nodes
 
 
 def ordered_profile_centers_and_spans(
@@ -8987,6 +9041,7 @@ def roughness_core_sweep(
             crosses_midline,
             span_range,
         ) = column_profile_geometry_metrics(sweep_nodes)
+        boundary_fraction, pocket_fraction = local_node_shape_metrics(sweep_nodes)
         for rule_family, count_options in family_count_options():
             for retained_weight in retained_weights:
                 harmonic_cont_row, harmonic_cont_candidates = harmonic_continuous_case_analysis(
@@ -9022,6 +9077,8 @@ def roughness_core_sweep(
                         center_variation=center_variation,
                         span_range=span_range,
                         crosses_midline=crosses_midline,
+                        boundary_fraction=boundary_fraction,
+                        pocket_fraction=pocket_fraction,
                     )
                 )
 
@@ -9149,6 +9206,7 @@ def centerline_mode_core_sweep(
                 crosses_midline,
                 span_range,
             ) = column_profile_geometry_metrics(sweep_nodes)
+            boundary_fraction, pocket_fraction = local_node_shape_metrics(sweep_nodes)
             for rule_family, count_options in family_count_options():
                 for retained_weight in retained_weights:
                     harmonic_cont_row, harmonic_cont_candidates = harmonic_continuous_case_analysis(
@@ -9185,6 +9243,8 @@ def centerline_mode_core_sweep(
                             center_variation=center_variation,
                             span_range=span_range,
                             crosses_midline=crosses_midline,
+                            boundary_fraction=boundary_fraction,
+                            pocket_fraction=pocket_fraction,
                         )
                     )
 
@@ -9293,7 +9353,10 @@ def coarse_core_regime(regime: str) -> str:
     return "multi"
 
 
-def decision_feature_value(row: CenterlineModeSweepRow, feature: str) -> float:
+def decision_feature_value(
+    row: CenterlineModeSweepRow | GeometryPredictionRow,
+    feature: str,
+) -> float:
     if feature == "center_variation":
         return row.center_variation
     if feature == "center_range":
@@ -9306,6 +9369,10 @@ def decision_feature_value(row: CenterlineModeSweepRow, feature: str) -> float:
         return row.max_step_fraction
     if feature == "crosses_midline":
         return 1.0 if row.crosses_midline else 0.0
+    if feature == "boundary_fraction":
+        return row.boundary_fraction
+    if feature == "pocket_fraction":
+        return row.pocket_fraction
     raise ValueError(f"Unknown decision-tree feature: {feature}")
 
 
@@ -9430,6 +9497,8 @@ def format_tiny_decision_tree(
         "turning_points": "turns",
         "max_step_fraction": "stepfrac",
         "crosses_midline": "cross",
+        "boundary_fraction": "bfrac",
+        "pocket_fraction": "pocket",
     }
     threshold = f"{tree.threshold:.2f}" if tree.feature != "crosses_midline" else "0.5"
     return (
@@ -9661,6 +9730,8 @@ def format_ordinal_score_model(
         "turning_points": "turns",
         "max_step_fraction": "stepfrac",
         "crosses_midline": "cross",
+        "boundary_fraction": "bfrac",
+        "pocket_fraction": "pocket",
     }
     signed_terms = []
     for feature, sign in zip(model.feature_names, model.signs):
@@ -9856,6 +9927,13 @@ def geometry_candidate_features() -> tuple[str, ...]:
     )
 
 
+def expanded_geometry_candidate_features() -> tuple[str, ...]:
+    return geometry_candidate_features() + (
+        "boundary_fraction",
+        "pocket_fraction",
+    )
+
+
 def geometry_prediction_rows_from_mode(
     mode_rows: list[CenterlineModeSweepRow],
     retained_weight: float | None = None,
@@ -9877,6 +9955,8 @@ def geometry_prediction_rows_from_mode(
                 turning_points=row.turning_points,
                 max_step_fraction=row.max_step_fraction,
                 crosses_midline=row.crosses_midline,
+                boundary_fraction=row.boundary_fraction,
+                pocket_fraction=row.pocket_fraction,
             )
         )
     rows.sort(key=lambda row: (row.rule_family, row.source_name))
@@ -9904,6 +9984,8 @@ def geometry_prediction_rows_from_roughness(
                 turning_points=row.turning_points,
                 max_step_fraction=row.max_step_fraction,
                 crosses_midline=row.crosses_midline,
+                boundary_fraction=row.boundary_fraction,
+                pocket_fraction=row.pocket_fraction,
             )
         )
     rows.sort(key=lambda row: (row.rule_family, row.source_name))
@@ -10016,6 +10098,10 @@ def procedural_geometry_prediction_rows(
                         crosses_midline,
                         span_range,
                     ) = column_profile_geometry_metrics(perturbed_nodes)
+                    boundary_fraction, pocket_fraction = local_node_shape_metrics(
+                        perturbed_nodes,
+                        wrap_y=wrap_y,
+                    )
                     for rule_family, count_options in family_count_options():
                         harmonic_cont_row, harmonic_cont_candidates = harmonic_continuous_case_analysis(
                             pack_name=pack_name,
@@ -10046,6 +10132,8 @@ def procedural_geometry_prediction_rows(
                                 turning_points=turning_points,
                                 max_step_fraction=max_step_fraction,
                                 crosses_midline=crosses_midline,
+                                boundary_fraction=boundary_fraction,
+                                pocket_fraction=pocket_fraction,
                             )
                         )
     prediction_rows.sort(key=lambda row: (row.rule_family, row.source_name))
@@ -10086,6 +10174,10 @@ def geometry_randomization_prediction_rows(
                     crosses_midline,
                     span_range,
                 ) = column_profile_geometry_metrics(perturbed_nodes)
+                boundary_fraction, pocket_fraction = local_node_shape_metrics(
+                    perturbed_nodes,
+                    wrap_y=wrap_y,
+                )
                 for rule_family, count_options in family_count_options():
                     harmonic_cont_row, harmonic_cont_candidates = harmonic_continuous_case_analysis(
                         pack_name=pack_name,
@@ -10116,6 +10208,8 @@ def geometry_randomization_prediction_rows(
                             turning_points=turning_points,
                             max_step_fraction=max_step_fraction,
                             crosses_midline=crosses_midline,
+                            boundary_fraction=boundary_fraction,
+                            pocket_fraction=pocket_fraction,
                         )
                     )
     prediction_rows.sort(key=lambda row: (row.rule_family, row.source_name))
@@ -10964,6 +11058,110 @@ def generated_geometry_predictor_comparison(
             row.rule_family,
             -row.generated_mean_accuracy,
             -row.generated_worst_accuracy,
+            row.feature_subset,
+            row.model_family,
+        )
+    )
+    return comparison_rows
+
+
+def generated_geometry_feature_expansion_benchmark(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    geometry_variant_limit: int = 3,
+    procedural_variant_limit: int = 1,
+    procedural_rediscovery_limit: int = 1,
+    procedural_styles: tuple[str, ...] = ("walk", "mode-mix", "local-morph"),
+    max_subset_size: int = 3,
+) -> list[GeneratedFeatureExpansionRow]:
+    (
+        _mode_core_rows,
+        mode_prediction_rows,
+        _roughness_prediction_rows,
+        procedural_rows,
+        geometry_rows,
+    ) = build_generated_geometry_prediction_context(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+        geometry_variant_limit=geometry_variant_limit,
+        procedural_variant_limit=procedural_variant_limit,
+        procedural_rediscovery_limit=procedural_rediscovery_limit,
+        procedural_styles=procedural_styles,
+    )
+    candidate_features = expanded_geometry_candidate_features()
+    variant_specs = (
+        ("ordinal-minmax-equal", "minmax", "equal"),
+        ("ordinal-zscore-equal", "zscore", "equal"),
+        ("ordinal-minmax-spread", "minmax", "spread"),
+    )
+    local_shape_features = {"boundary_fraction", "pocket_fraction"}
+
+    comparison_rows: list[GeneratedFeatureExpansionRow] = []
+    for rule_family in ("compact", "extended"):
+        family_mode_rows = [
+            row for row in mode_prediction_rows if row.rule_family == rule_family
+        ]
+        family_geometry_rows = [
+            row for row in geometry_rows if row.rule_family == rule_family
+        ]
+        family_procedural_rows = [
+            row for row in procedural_rows if row.rule_family == rule_family
+        ]
+        for subset_size in range(1, max_subset_size + 1):
+            for feature_names in itertools.combinations(candidate_features, subset_size):
+                feature_subset = ", ".join(feature_names)
+                uses_local_shape = any(
+                    feature_name in local_shape_features
+                    for feature_name in feature_names
+                )
+                tree = learn_tiny_decision_tree(family_mode_rows, feature_names, 2)
+                geometry_accuracy = decision_tree_accuracy(tree, family_geometry_rows)
+                procedural_accuracy = decision_tree_accuracy(tree, family_procedural_rows)
+                comparison_rows.append(
+                    GeneratedFeatureExpansionRow(
+                        rule_family=rule_family,
+                        feature_subset=feature_subset,
+                        subset_size=subset_size,
+                        uses_local_shape=uses_local_shape,
+                        model_family="tree-depth2",
+                        geometry_accuracy=geometry_accuracy,
+                        procedural_accuracy=procedural_accuracy,
+                        generated_mean_accuracy=(geometry_accuracy + procedural_accuracy) / 2.0,
+                        generated_worst_accuracy=min(geometry_accuracy, procedural_accuracy),
+                        description=format_tiny_decision_tree(tree),
+                    )
+                )
+                for variant_name, normalization_mode, weight_mode in variant_specs:
+                    score_model = fit_ordinal_score_model(
+                        family_mode_rows,
+                        feature_names,
+                        normalization_mode=normalization_mode,
+                        weight_mode=weight_mode,
+                    )
+                    geometry_accuracy = ordinal_score_accuracy(score_model, family_geometry_rows)
+                    procedural_accuracy = ordinal_score_accuracy(score_model, family_procedural_rows)
+                    comparison_rows.append(
+                        GeneratedFeatureExpansionRow(
+                            rule_family=rule_family,
+                            feature_subset=feature_subset,
+                            subset_size=subset_size,
+                            uses_local_shape=uses_local_shape,
+                            model_family=variant_name,
+                            geometry_accuracy=geometry_accuracy,
+                            procedural_accuracy=procedural_accuracy,
+                            generated_mean_accuracy=(geometry_accuracy + procedural_accuracy) / 2.0,
+                            generated_worst_accuracy=min(geometry_accuracy, procedural_accuracy),
+                            description=format_ordinal_score_model(score_model),
+                        )
+                    )
+
+    comparison_rows.sort(
+        key=lambda row: (
+            row.rule_family,
+            -row.generated_mean_accuracy,
+            -row.generated_worst_accuracy,
+            row.subset_size,
+            -int(row.uses_local_shape),
             row.feature_subset,
             row.model_family,
         )
@@ -13098,6 +13296,30 @@ def render_generated_geometry_predictor_table(
             f"{row.generated_mean_accuracy:>5.2f} | "
             f"{row.generated_worst_accuracy:>4.2f}"
         )
+    return "\n".join(lines)
+
+
+def render_generated_feature_expansion_table(
+    rows: list[GeneratedFeatureExpansionRow],
+    top_k_per_family: int = 8,
+) -> str:
+    lines = [
+        "family   | subset                            | local | model                 | geom  | proc  | mean  | worst",
+        "---------+-----------------------------------+-------+-----------------------+-------+-------+-------+------",
+    ]
+    for rule_family in ("compact", "extended"):
+        family_rows = [row for row in rows if row.rule_family == rule_family][:top_k_per_family]
+        for row in family_rows:
+            lines.append(
+                f"{row.rule_family:<8} | "
+                f"{row.feature_subset:<33} | "
+                f"{('yes' if row.uses_local_shape else 'no'):<5} | "
+                f"{row.model_family:<21} | "
+                f"{row.geometry_accuracy:>5.2f} | "
+                f"{row.procedural_accuracy:>5.2f} | "
+                f"{row.generated_mean_accuracy:>5.2f} | "
+                f"{row.generated_worst_accuracy:>4.2f}"
+            )
     return "\n".join(lines)
 
 
@@ -15728,6 +15950,47 @@ def main() -> None:
     )
     print(
         "- So the broader graph-side answer is tougher again. The multi-style generated ensemble still does not preserve one unique predictor, but the stable family is now clearer: the recurring winners live in a small centerline-shape family built from roughness, range, crossing, and span summaries, while any one exact winner remains generator-sensitive."
+    )
+    print()
+
+    print("68) Generated-geometry feature-vocabulary expansion")
+    generated_feature_rows = generated_geometry_feature_expansion_benchmark()
+    print(render_generated_feature_expansion_table(generated_feature_rows))
+    print()
+    print("Interpretation:")
+    compact_feature_rows = [row for row in generated_feature_rows if row.rule_family == "compact"]
+    extended_feature_rows = [row for row in generated_feature_rows if row.rule_family == "extended"]
+    compact_feature_best = compact_feature_rows[0]
+    extended_feature_best = extended_feature_rows[0]
+    compact_local_top = sum(
+        abs(row.generated_mean_accuracy - compact_feature_best.generated_mean_accuracy) <= 1e-9
+        and abs(row.generated_worst_accuracy - compact_feature_best.generated_worst_accuracy) <= 1e-9
+        and row.uses_local_shape
+        for row in compact_feature_rows
+    )
+    extended_local_top = sum(
+        abs(row.generated_mean_accuracy - extended_feature_best.generated_mean_accuracy) <= 1e-9
+        and abs(row.generated_worst_accuracy - extended_feature_best.generated_worst_accuracy) <= 1e-9
+        and row.uses_local_shape
+        for row in extended_feature_rows
+    )
+    compact_best_without_local = next(
+        row for row in compact_feature_rows if not row.uses_local_shape
+    )
+    extended_best_without_local = next(
+        row for row in extended_feature_rows if not row.uses_local_shape
+    )
+    print(
+        "- This is the feature-vocabulary version of the same graph-side test: keep the multi-style generated ensemble fixed, but expand the predictor inputs beyond interval-profile summaries by adding cheap node-set features for boundary exposure and local pockets."
+    )
+    print(
+        f"- In `compact`, the best expanded-vocabulary model is `{compact_feature_best.model_family}` on `{compact_feature_best.feature_subset}` with mean {compact_feature_best.generated_mean_accuracy:.2f}. The best old-vocabulary-only model reaches {compact_best_without_local.generated_mean_accuracy:.2f}, and {compact_local_top} top-tier compact models now use at least one new local-shape feature."
+    )
+    print(
+        f"- In `extended`, the best expanded-vocabulary model is `{extended_feature_best.model_family}` on `{extended_feature_best.feature_subset}` with mean {extended_feature_best.generated_mean_accuracy:.2f}. The best old-vocabulary-only model reaches {extended_best_without_local.generated_mean_accuracy:.2f}, and {extended_local_top} top-tier extended models now use at least one new local-shape feature."
+    )
+    print(
+        "- The honest read is now asymmetric. In `compact`, widening the vocabulary does not dislodge the old centerline-shape family at all. In `extended`, the new local-shape feature `pocket_fraction` becomes genuinely top-tier, but it only ties the best old-vocabulary models instead of dominating them. So the old vocabulary was missing real signal, but it was not missing the whole story."
     )
     print()
 
