@@ -656,6 +656,7 @@ class RoughnessCoreSweepRow:
     deep_pocket_fraction: float
     degree_fractions: tuple[float, ...]
     motif_fractions: tuple[float, ...]
+    high_degree_decomposition: tuple[float, ...]
 
 
 @dataclass
@@ -700,6 +701,7 @@ class CenterlineModeSweepRow:
     deep_pocket_fraction: float
     degree_fractions: tuple[float, ...]
     motif_fractions: tuple[float, ...]
+    high_degree_decomposition: tuple[float, ...]
 
 
 @dataclass
@@ -827,6 +829,7 @@ class GeometryPredictionRow:
     deep_pocket_fraction: float
     degree_fractions: tuple[float, ...]
     motif_fractions: tuple[float, ...]
+    high_degree_decomposition: tuple[float, ...]
 
 
 @dataclass
@@ -981,6 +984,22 @@ class NeighborhoodBasisResidualRow:
 class NeighborhoodBasisAblationRow:
     ablation_name: str
     feature_count: int
+    removed_features: str
+    compact_parity_size: int | None
+    compact_parity_feature_subset: str
+    compact_best_prethreshold_gap: float
+    compact_best_prethreshold_worst_gap: float
+    extended_parity_size: int | None
+    extended_parity_feature_subset: str
+    extended_best_prethreshold_gap: float
+    extended_best_prethreshold_worst_gap: float
+
+
+@dataclass
+class HighDegreeDecompositionRow:
+    decomposition_name: str
+    feature_count: int
+    added_features: str
     removed_features: str
     compact_parity_size: int | None
     compact_parity_feature_subset: str
@@ -3498,6 +3517,7 @@ def local_node_shape_metrics(
         deep_pocket_fraction,
         _degree_fractions,
         _motif_fractions,
+        _high_degree_decomposition,
     ) = local_shape_feature_bundle(nodes, wrap_y=wrap_y)
     return (
         boundary_fraction,
@@ -3552,12 +3572,24 @@ def local_neighborhood_motif_feature_names() -> tuple[str, ...]:
     )
 
 
+def high_degree_decomposition_feature_names() -> tuple[str, ...]:
+    return (
+        "motif_high_degree_neighbor_share",
+        "motif_high_degree_neighbor_count_mean",
+        "motif_max_neighbor_degree",
+    )
+
+
 def degree_basis_feature_names() -> tuple[str, ...]:
     return tuple(f"degree_{degree}_fraction" for degree in range(9))
 
 
 def rich_neighborhood_basis_feature_names() -> tuple[str, ...]:
     return degree_basis_feature_names() + local_neighborhood_motif_feature_names()
+
+
+def rich_plus_high_degree_decomposition_feature_names() -> tuple[str, ...]:
+    return rich_neighborhood_basis_feature_names() + high_degree_decomposition_feature_names()
 
 
 def rich_neighborhood_basis_ablation_sets() -> tuple[tuple[str, tuple[str, ...]], ...]:
@@ -3617,10 +3649,38 @@ def rich_degree_extreme_ablation_sets() -> tuple[tuple[str, tuple[str, ...]], ..
     )
 
 
+def high_degree_decomposition_sets() -> tuple[tuple[str, tuple[str, ...], tuple[str, ...]], ...]:
+    removed = ("motif_high_degree_neighbor_fraction",)
+    return (
+        ("full-rich", tuple(), tuple()),
+        ("no-high-degree", removed, tuple()),
+        (
+            "replace-high-with-share",
+            removed,
+            ("motif_high_degree_neighbor_share",),
+        ),
+        (
+            "replace-high-with-count-mean",
+            removed,
+            ("motif_high_degree_neighbor_count_mean",),
+        ),
+        (
+            "replace-high-with-max",
+            removed,
+            ("motif_max_neighbor_degree",),
+        ),
+        (
+            "replace-high-with-bundle",
+            removed,
+            high_degree_decomposition_feature_names(),
+        ),
+    )
+
+
 def local_shape_feature_bundle(
     nodes: set[tuple[int, int]],
     wrap_y: bool = False,
-) -> tuple[float, float, float, float, tuple[float, ...], tuple[float, ...]]:
+) -> tuple[float, float, float, float, tuple[float, ...], tuple[float, ...], tuple[float, ...]]:
     total_nodes = max(1, len(nodes))
     degree_map = {
         node: len(graph_neighbors(node, nodes, wrap_y=wrap_y))
@@ -3653,6 +3713,9 @@ def local_shape_feature_bundle(
 
     low_degree_neighbor_count = 0
     high_degree_neighbor_count = 0
+    high_degree_neighbor_share_total = 0.0
+    high_degree_neighbor_count_total = 0.0
+    max_neighbor_degree_total = 0.0
     mean_neighbor_degree_total = 0.0
     neighbor_degree_variation_total = 0.0
     two_hop_occupied_total = 0.0
@@ -3665,6 +3728,12 @@ def local_shape_feature_bundle(
         if any(degree >= 7 for degree in neighbor_degrees):
             high_degree_neighbor_count += 1
         if neighbor_degrees:
+            high_degree_neighbor_hits = sum(degree >= 7 for degree in neighbor_degrees)
+            high_degree_neighbor_share_total += (
+                high_degree_neighbor_hits / len(neighbor_degrees)
+            )
+            high_degree_neighbor_count_total += high_degree_neighbor_hits / 8.0
+            max_neighbor_degree_total += max(neighbor_degrees) / 8.0
             neighbor_degree_mean = sum(neighbor_degrees) / len(neighbor_degrees)
             mean_neighbor_degree_total += neighbor_degree_mean / 8.0
             neighbor_degree_variation_total += (
@@ -3691,6 +3760,11 @@ def local_shape_feature_bundle(
         two_hop_occupied_total / total_nodes,
         two_hop_open_total / total_nodes,
     )
+    high_degree_decomposition = (
+        high_degree_neighbor_share_total / total_nodes,
+        high_degree_neighbor_count_total / total_nodes,
+        max_neighbor_degree_total / total_nodes,
+    )
 
     return (
         boundary_fraction,
@@ -3699,6 +3773,7 @@ def local_shape_feature_bundle(
         len(deep_pocket_cells) / total_nodes,
         degree_fractions,
         motif_fractions,
+        high_degree_decomposition,
     )
 
 
@@ -9312,6 +9387,7 @@ def roughness_core_sweep(
             deep_pocket_fraction,
             degree_fractions,
             motif_fractions,
+            high_degree_decomposition,
         ) = local_shape_feature_bundle(sweep_nodes)
         for rule_family, count_options in family_count_options():
             for retained_weight in retained_weights:
@@ -9354,6 +9430,7 @@ def roughness_core_sweep(
                         deep_pocket_fraction=deep_pocket_fraction,
                         degree_fractions=degree_fractions,
                         motif_fractions=motif_fractions,
+                        high_degree_decomposition=high_degree_decomposition,
                     )
                 )
 
@@ -9488,6 +9565,7 @@ def centerline_mode_core_sweep(
                 deep_pocket_fraction,
                 degree_fractions,
                 motif_fractions,
+                high_degree_decomposition,
             ) = local_shape_feature_bundle(sweep_nodes)
             for rule_family, count_options in family_count_options():
                 for retained_weight in retained_weights:
@@ -9531,6 +9609,7 @@ def centerline_mode_core_sweep(
                             deep_pocket_fraction=deep_pocket_fraction,
                             degree_fractions=degree_fractions,
                             motif_fractions=motif_fractions,
+                            high_degree_decomposition=high_degree_decomposition,
                         )
                     )
 
@@ -9669,6 +9748,9 @@ def decision_feature_value(
     if feature in local_neighborhood_motif_feature_names():
         motif_index = local_neighborhood_motif_feature_names().index(feature)
         return row.motif_fractions[motif_index]
+    if feature in high_degree_decomposition_feature_names():
+        decomposition_index = high_degree_decomposition_feature_names().index(feature)
+        return row.high_degree_decomposition[decomposition_index]
     raise ValueError(f"Unknown decision-tree feature: {feature}")
 
 
@@ -9801,6 +9883,9 @@ def format_tiny_decision_tree(
         "motif_deep_pocket_adjacent_fraction": "dpadj",
         "motif_low_degree_neighbor_fraction": "lowdegN",
         "motif_high_degree_neighbor_fraction": "highdegN",
+        "motif_high_degree_neighbor_share": "highshare",
+        "motif_high_degree_neighbor_count_mean": "highcount",
+        "motif_max_neighbor_degree": "maxNdeg",
         "motif_mean_neighbor_degree": "mdegN",
         "motif_neighbor_degree_variation": "vdegN",
         "motif_two_hop_occupied_fraction": "hop2occ",
@@ -10046,6 +10131,9 @@ def format_ordinal_score_model(
         "motif_deep_pocket_adjacent_fraction": "dpadj",
         "motif_low_degree_neighbor_fraction": "lowdegN",
         "motif_high_degree_neighbor_fraction": "highdegN",
+        "motif_high_degree_neighbor_share": "highshare",
+        "motif_high_degree_neighbor_count_mean": "highcount",
+        "motif_max_neighbor_degree": "maxNdeg",
         "motif_mean_neighbor_degree": "mdegN",
         "motif_neighbor_degree_variation": "vdegN",
         "motif_two_hop_occupied_fraction": "hop2occ",
@@ -10284,6 +10372,7 @@ def geometry_prediction_rows_from_mode(
                 deep_pocket_fraction=row.deep_pocket_fraction,
                 degree_fractions=row.degree_fractions,
                 motif_fractions=row.motif_fractions,
+                high_degree_decomposition=row.high_degree_decomposition,
             )
         )
     rows.sort(key=lambda row: (row.rule_family, row.source_name))
@@ -10317,6 +10406,7 @@ def geometry_prediction_rows_from_roughness(
                 deep_pocket_fraction=row.deep_pocket_fraction,
                 degree_fractions=row.degree_fractions,
                 motif_fractions=row.motif_fractions,
+                high_degree_decomposition=row.high_degree_decomposition,
             )
         )
     rows.sort(key=lambda row: (row.rule_family, row.source_name))
@@ -10436,6 +10526,7 @@ def procedural_geometry_prediction_rows(
                         deep_pocket_fraction,
                         degree_fractions,
                         motif_fractions,
+                        high_degree_decomposition,
                     ) = local_shape_feature_bundle(
                         perturbed_nodes,
                         wrap_y=wrap_y,
@@ -10476,6 +10567,7 @@ def procedural_geometry_prediction_rows(
                                 deep_pocket_fraction=deep_pocket_fraction,
                                 degree_fractions=degree_fractions,
                                 motif_fractions=motif_fractions,
+                                high_degree_decomposition=high_degree_decomposition,
                             )
                         )
     prediction_rows.sort(key=lambda row: (row.rule_family, row.source_name))
@@ -10523,6 +10615,7 @@ def geometry_randomization_prediction_rows(
                     deep_pocket_fraction,
                     degree_fractions,
                     motif_fractions,
+                    high_degree_decomposition,
                 ) = local_shape_feature_bundle(
                     perturbed_nodes,
                     wrap_y=wrap_y,
@@ -10563,6 +10656,7 @@ def geometry_randomization_prediction_rows(
                             deep_pocket_fraction=deep_pocket_fraction,
                             degree_fractions=degree_fractions,
                             motif_fractions=motif_fractions,
+                            high_degree_decomposition=high_degree_decomposition,
                         )
                     )
     prediction_rows.sort(key=lambda row: (row.rule_family, row.source_name))
@@ -11890,6 +11984,72 @@ def neighborhood_basis_ablation_benchmark(
         )
     ablation_rows.sort(key=lambda row: row.ablation_name)
     return ablation_rows
+
+
+def high_degree_decomposition_benchmark(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    geometry_variant_limit: int = 5,
+    procedural_variant_limit: int = 3,
+    procedural_rediscovery_limit: int = 1,
+    procedural_styles: tuple[str, ...] = ("walk", "mode-mix", "local-morph"),
+    basis_sizes: tuple[int, ...] = (3, 4, 5, 6, 7, 8),
+    decomposition_sets: tuple[tuple[str, tuple[str, ...], tuple[str, ...]], ...] | None = None,
+) -> list[HighDegreeDecompositionRow]:
+    base_features = rich_neighborhood_basis_feature_names()
+    if decomposition_sets is None:
+        decomposition_sets = high_degree_decomposition_sets()
+    decomposition_rows: list[HighDegreeDecompositionRow] = []
+    for decomposition_name, removed_features, added_features in decomposition_sets:
+        feature_names = [
+            feature for feature in base_features if feature not in set(removed_features)
+        ]
+        for feature in added_features:
+            if feature not in feature_names:
+                feature_names.append(feature)
+        residual_rows = neighborhood_basis_residual_benchmark(
+            retained_weight=retained_weight,
+            mode_retained_weight=mode_retained_weight,
+            geometry_variant_limit=geometry_variant_limit,
+            procedural_variant_limit=procedural_variant_limit,
+            procedural_rediscovery_limit=procedural_rediscovery_limit,
+            procedural_styles=procedural_styles,
+            basis_sizes=basis_sizes,
+            basis_feature_names=tuple(feature_names),
+        )
+        compact_rows = [row for row in residual_rows if row.rule_family == "compact"]
+        extended_rows = [row for row in residual_rows if row.rule_family == "extended"]
+        compact_parity, compact_best_prethreshold = parity_threshold_from_residual_rows(
+            compact_rows
+        )
+        extended_parity, extended_best_prethreshold = parity_threshold_from_residual_rows(
+            extended_rows
+        )
+        decomposition_rows.append(
+            HighDegreeDecompositionRow(
+                decomposition_name=decomposition_name,
+                feature_count=len(feature_names),
+                added_features=", ".join(added_features) if added_features else "-",
+                removed_features=", ".join(removed_features) if removed_features else "-",
+                compact_parity_size=(
+                    compact_parity.basis_size if compact_parity is not None else None
+                ),
+                compact_parity_feature_subset=(
+                    compact_parity.basis_feature_subset if compact_parity is not None else "-"
+                ),
+                compact_best_prethreshold_gap=compact_best_prethreshold.basis_minus_pocket_mean,
+                compact_best_prethreshold_worst_gap=compact_best_prethreshold.basis_minus_pocket_worst,
+                extended_parity_size=(
+                    extended_parity.basis_size if extended_parity is not None else None
+                ),
+                extended_parity_feature_subset=(
+                    extended_parity.basis_feature_subset if extended_parity is not None else "-"
+                ),
+                extended_best_prethreshold_gap=extended_best_prethreshold.basis_minus_pocket_mean,
+                extended_best_prethreshold_worst_gap=extended_best_prethreshold.basis_minus_pocket_worst,
+            )
+        )
+    return decomposition_rows
 
 
 def random_rediscovery_limit_sweep_summary(
@@ -14132,6 +14292,37 @@ def render_neighborhood_basis_ablation_table(
             f"{row.ablation_name:<19} | "
             f"{row.feature_count:>5} | "
             f"{row.removed_features:<22.22} | "
+            f"{compact_parity:<14.14} | "
+            f"{row.compact_best_prethreshold_gap:+.2f}/{row.compact_best_prethreshold_worst_gap:+.2f} | "
+            f"{extended_parity:<15.15} | "
+            f"{row.extended_best_prethreshold_gap:+.2f}/{row.extended_best_prethreshold_worst_gap:+.2f}"
+        )
+    return "\n".join(lines)
+
+
+def render_high_degree_decomposition_table(
+    rows: list[HighDegreeDecompositionRow],
+) -> str:
+    lines = [
+        "decomposition                | nfeat | remove                 | add                    | compact parity | compact pre-gap | extended parity | extended pre-gap",
+        "-----------------------------+-------+------------------------+------------------------+----------------+-----------------+-----------------+-----------------",
+    ]
+    for row in rows:
+        compact_parity = (
+            f"{row.compact_parity_size}:{row.compact_parity_feature_subset}"
+            if row.compact_parity_size is not None
+            else "-"
+        )
+        extended_parity = (
+            f"{row.extended_parity_size}:{row.extended_parity_feature_subset}"
+            if row.extended_parity_size is not None
+            else "-"
+        )
+        lines.append(
+            f"{row.decomposition_name:<27} | "
+            f"{row.feature_count:>5} | "
+            f"{row.removed_features:<22.22} | "
+            f"{row.added_features:<22.22} | "
             f"{compact_parity:<14.14} | "
             f"{row.compact_best_prethreshold_gap:+.2f}/{row.compact_best_prethreshold_worst_gap:+.2f} | "
             f"{extended_parity:<15.15} | "
