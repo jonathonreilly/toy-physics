@@ -652,6 +652,8 @@ class RoughnessCoreSweepRow:
     crosses_midline: bool
     boundary_fraction: float
     pocket_fraction: float
+    boundary_roughness: float
+    deep_pocket_fraction: float
 
 
 @dataclass
@@ -692,6 +694,8 @@ class CenterlineModeSweepRow:
     crosses_midline: bool
     boundary_fraction: float
     pocket_fraction: float
+    boundary_roughness: float
+    deep_pocket_fraction: float
 
 
 @dataclass
@@ -815,6 +819,8 @@ class GeometryPredictionRow:
     crosses_midline: bool
     boundary_fraction: float
     pocket_fraction: float
+    boundary_roughness: float
+    deep_pocket_fraction: float
 
 
 @dataclass
@@ -3414,19 +3420,22 @@ def column_profile_geometry_metrics(
 def local_node_shape_metrics(
     nodes: set[tuple[int, int]],
     wrap_y: bool = False,
-) -> tuple[float, float]:
+) -> tuple[float, float, float, float]:
     total_nodes = max(1, len(nodes))
-    boundary_nodes_count = sum(
-        len(graph_neighbors(node, nodes, wrap_y=wrap_y)) < 8
+    neighbor_deficits = [
+        (8 - len(graph_neighbors(node, nodes, wrap_y=wrap_y))) / 8.0
         for node in nodes
-    )
+    ]
+    boundary_nodes_count = sum(deficit > 0.0 for deficit in neighbor_deficits)
     boundary_fraction = boundary_nodes_count / total_nodes
+    boundary_roughness = sum(neighbor_deficits) / total_nodes
 
     min_x = min(x for x, _y in nodes)
     max_x = max(x for x, _y in nodes)
     min_y = min(y for _x, y in nodes)
     max_y = max(y for _x, y in nodes)
     pocket_count = 0
+    deep_pocket_count = 0
     for x in range(min_x + 1, max_x):
         for y in range(min_y + 1, max_y):
             candidate = (x, y)
@@ -3441,8 +3450,15 @@ def local_node_shape_metrics(
             has_upper = any(neighbor_y > y for _neighbor_x, neighbor_y in neighbors)
             if has_left and has_right and has_lower and has_upper:
                 pocket_count += 1
+                if len(neighbors) >= 7:
+                    deep_pocket_count += 1
 
-    return boundary_fraction, pocket_count / total_nodes
+    return (
+        boundary_fraction,
+        pocket_count / total_nodes,
+        boundary_roughness,
+        deep_pocket_count / total_nodes,
+    )
 
 
 def ordered_profile_centers_and_spans(
@@ -9041,7 +9057,12 @@ def roughness_core_sweep(
             crosses_midline,
             span_range,
         ) = column_profile_geometry_metrics(sweep_nodes)
-        boundary_fraction, pocket_fraction = local_node_shape_metrics(sweep_nodes)
+        (
+            boundary_fraction,
+            pocket_fraction,
+            boundary_roughness,
+            deep_pocket_fraction,
+        ) = local_node_shape_metrics(sweep_nodes)
         for rule_family, count_options in family_count_options():
             for retained_weight in retained_weights:
                 harmonic_cont_row, harmonic_cont_candidates = harmonic_continuous_case_analysis(
@@ -9079,6 +9100,8 @@ def roughness_core_sweep(
                         crosses_midline=crosses_midline,
                         boundary_fraction=boundary_fraction,
                         pocket_fraction=pocket_fraction,
+                        boundary_roughness=boundary_roughness,
+                        deep_pocket_fraction=deep_pocket_fraction,
                     )
                 )
 
@@ -9206,7 +9229,12 @@ def centerline_mode_core_sweep(
                 crosses_midline,
                 span_range,
             ) = column_profile_geometry_metrics(sweep_nodes)
-            boundary_fraction, pocket_fraction = local_node_shape_metrics(sweep_nodes)
+            (
+                boundary_fraction,
+                pocket_fraction,
+                boundary_roughness,
+                deep_pocket_fraction,
+            ) = local_node_shape_metrics(sweep_nodes)
             for rule_family, count_options in family_count_options():
                 for retained_weight in retained_weights:
                     harmonic_cont_row, harmonic_cont_candidates = harmonic_continuous_case_analysis(
@@ -9245,6 +9273,8 @@ def centerline_mode_core_sweep(
                             crosses_midline=crosses_midline,
                             boundary_fraction=boundary_fraction,
                             pocket_fraction=pocket_fraction,
+                            boundary_roughness=boundary_roughness,
+                            deep_pocket_fraction=deep_pocket_fraction,
                         )
                     )
 
@@ -9373,6 +9403,10 @@ def decision_feature_value(
         return row.boundary_fraction
     if feature == "pocket_fraction":
         return row.pocket_fraction
+    if feature == "boundary_roughness":
+        return row.boundary_roughness
+    if feature == "deep_pocket_fraction":
+        return row.deep_pocket_fraction
     raise ValueError(f"Unknown decision-tree feature: {feature}")
 
 
@@ -9499,6 +9533,8 @@ def format_tiny_decision_tree(
         "crosses_midline": "cross",
         "boundary_fraction": "bfrac",
         "pocket_fraction": "pocket",
+        "boundary_roughness": "brough",
+        "deep_pocket_fraction": "dpocket",
     }
     threshold = f"{tree.threshold:.2f}" if tree.feature != "crosses_midline" else "0.5"
     return (
@@ -9732,6 +9768,8 @@ def format_ordinal_score_model(
         "crosses_midline": "cross",
         "boundary_fraction": "bfrac",
         "pocket_fraction": "pocket",
+        "boundary_roughness": "brough",
+        "deep_pocket_fraction": "dpocket",
     }
     signed_terms = []
     for feature, sign in zip(model.feature_names, model.signs):
@@ -9931,6 +9969,8 @@ def expanded_geometry_candidate_features() -> tuple[str, ...]:
     return geometry_candidate_features() + (
         "boundary_fraction",
         "pocket_fraction",
+        "boundary_roughness",
+        "deep_pocket_fraction",
     )
 
 
@@ -9957,6 +9997,8 @@ def geometry_prediction_rows_from_mode(
                 crosses_midline=row.crosses_midline,
                 boundary_fraction=row.boundary_fraction,
                 pocket_fraction=row.pocket_fraction,
+                boundary_roughness=row.boundary_roughness,
+                deep_pocket_fraction=row.deep_pocket_fraction,
             )
         )
     rows.sort(key=lambda row: (row.rule_family, row.source_name))
@@ -9986,6 +10028,8 @@ def geometry_prediction_rows_from_roughness(
                 crosses_midline=row.crosses_midline,
                 boundary_fraction=row.boundary_fraction,
                 pocket_fraction=row.pocket_fraction,
+                boundary_roughness=row.boundary_roughness,
+                deep_pocket_fraction=row.deep_pocket_fraction,
             )
         )
     rows.sort(key=lambda row: (row.rule_family, row.source_name))
@@ -10098,7 +10142,12 @@ def procedural_geometry_prediction_rows(
                         crosses_midline,
                         span_range,
                     ) = column_profile_geometry_metrics(perturbed_nodes)
-                    boundary_fraction, pocket_fraction = local_node_shape_metrics(
+                    (
+                        boundary_fraction,
+                        pocket_fraction,
+                        boundary_roughness,
+                        deep_pocket_fraction,
+                    ) = local_node_shape_metrics(
                         perturbed_nodes,
                         wrap_y=wrap_y,
                     )
@@ -10134,6 +10183,8 @@ def procedural_geometry_prediction_rows(
                                 crosses_midline=crosses_midline,
                                 boundary_fraction=boundary_fraction,
                                 pocket_fraction=pocket_fraction,
+                                boundary_roughness=boundary_roughness,
+                                deep_pocket_fraction=deep_pocket_fraction,
                             )
                         )
     prediction_rows.sort(key=lambda row: (row.rule_family, row.source_name))
@@ -10174,7 +10225,12 @@ def geometry_randomization_prediction_rows(
                     crosses_midline,
                     span_range,
                 ) = column_profile_geometry_metrics(perturbed_nodes)
-                boundary_fraction, pocket_fraction = local_node_shape_metrics(
+                (
+                    boundary_fraction,
+                    pocket_fraction,
+                    boundary_roughness,
+                    deep_pocket_fraction,
+                ) = local_node_shape_metrics(
                     perturbed_nodes,
                     wrap_y=wrap_y,
                 )
@@ -10210,6 +10266,8 @@ def geometry_randomization_prediction_rows(
                             crosses_midline=crosses_midline,
                             boundary_fraction=boundary_fraction,
                             pocket_fraction=pocket_fraction,
+                            boundary_roughness=boundary_roughness,
+                            deep_pocket_fraction=deep_pocket_fraction,
                         )
                     )
     prediction_rows.sort(key=lambda row: (row.rule_family, row.source_name))
@@ -11094,7 +11152,12 @@ def generated_geometry_feature_expansion_benchmark(
         ("ordinal-zscore-equal", "zscore", "equal"),
         ("ordinal-minmax-spread", "minmax", "spread"),
     )
-    local_shape_features = {"boundary_fraction", "pocket_fraction"}
+    local_shape_features = {
+        "boundary_fraction",
+        "pocket_fraction",
+        "boundary_roughness",
+        "deep_pocket_fraction",
+    }
 
     comparison_rows: list[GeneratedFeatureExpansionRow] = []
     for rule_family in ("compact", "extended"):
@@ -15990,7 +16053,7 @@ def main() -> None:
         f"- In `extended`, the best expanded-vocabulary model is `{extended_feature_best.model_family}` on `{extended_feature_best.feature_subset}` with mean {extended_feature_best.generated_mean_accuracy:.2f}. The best old-vocabulary-only model reaches {extended_best_without_local.generated_mean_accuracy:.2f}, and {extended_local_top} top-tier extended models now use at least one new local-shape feature."
     )
     print(
-        "- The honest read is now asymmetric. In `compact`, widening the vocabulary does not dislodge the old centerline-shape family at all. In `extended`, the new local-shape feature `pocket_fraction` becomes genuinely top-tier, but it only ties the best old-vocabulary models instead of dominating them. So the old vocabulary was missing real signal, but it was not missing the whole story."
+        "- The honest read is now sharper. In `compact`, widening the vocabulary still does not dislodge the old centerline-shape family at all. In `extended`, `pocket_fraction` remains the simplest genuinely top-tier local-shape feature, while the newer local-shape summaries only enter the top tier in combinations. So the old vocabulary was missing real local signal, but `pocket_fraction` still looks closer to the underlying mechanism than a broader grab bag of local-shape proxies."
     )
     print()
 
