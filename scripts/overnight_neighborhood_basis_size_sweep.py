@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run a broader overnight sweep of the learned neighborhood-basis benchmark."""
+"""Run a broader overnight sweep over learned neighborhood-basis size."""
 
 from __future__ import annotations
 
@@ -27,6 +27,8 @@ CONFIGS = (
     (5, 3),
 )
 
+BASIS_SIZES = (3, 4, 5)
+
 
 def summarize_family(bench_rows, basis_rows, rule_family: str) -> str:
     family_basis = [row for row in basis_rows if row.rule_family == rule_family]
@@ -41,7 +43,20 @@ def summarize_family(bench_rows, basis_rows, rule_family: str) -> str:
         (
             row
             for row in family_bench
-            if row.candidate_name in {"basis-1", "basis-2", "basis-3"}
+            if row.candidate_name.startswith("basis-")
+            and "," not in row.feature_subset
+        ),
+        key=lambda row: (
+            row.generated_mean_accuracy,
+            row.generated_worst_accuracy,
+            row.feature_subset,
+        ),
+    )
+    best_combo = max(
+        (
+            row
+            for row in family_bench
+            if row.candidate_name not in {"pocket", "basis-1", "basis-2", "basis-3"}
         ),
         key=lambda row: (
             row.generated_mean_accuracy,
@@ -59,30 +74,41 @@ def summarize_family(bench_rows, basis_rows, rule_family: str) -> str:
         f"{best.generated_mean_accuracy:.2f}/{best.generated_worst_accuracy:.2f} | "
         f"pocket={pocket.generated_mean_accuracy:.2f}/{pocket.generated_worst_accuracy:.2f} | "
         f"best_single={best_single.feature_subset}/{best_single.model_family}/"
-        f"{best_single.generated_mean_accuracy:.2f}/{best_single.generated_worst_accuracy:.2f}"
+        f"{best_single.generated_mean_accuracy:.2f}/{best_single.generated_worst_accuracy:.2f} | "
+        f"best_combo={best_combo.candidate_name}/{best_combo.feature_subset}/"
+        f"{best_combo.model_family}/{best_combo.generated_mean_accuracy:.2f}/"
+        f"{best_combo.generated_worst_accuracy:.2f}"
     )
 
 
 def main() -> None:
     started = datetime.now().isoformat(timespec="seconds")
-    print(f"overnight neighborhood basis sweep started {started}", flush=True)
+    print(f"overnight neighborhood basis-size sweep started {started}", flush=True)
     print("configs:", CONFIGS, flush=True)
+    print("basis_sizes:", BASIS_SIZES, flush=True)
     total_start = time.time()
 
-    for geometry_limit, procedural_limit in CONFIGS:
-        config_start = time.time()
-        print(
-            f"\n=== geometry_variant_limit={geometry_limit} procedural_variant_limit={procedural_limit} ===",
-            flush=True,
-        )
-        basis_rows, bench_rows = neighborhood_basis_benchmark(
-            geometry_variant_limit=geometry_limit,
-            procedural_variant_limit=procedural_limit,
-        )
-        elapsed = time.time() - config_start
-        print(f"elapsed={elapsed:.1f}s", flush=True)
-        for rule_family in ("compact", "extended"):
-            print(summarize_family(bench_rows, basis_rows, rule_family), flush=True)
+    for basis_size in BASIS_SIZES:
+        basis_start = time.time()
+        print(f"\n### basis_size={basis_size} ###", flush=True)
+        for geometry_limit, procedural_limit in CONFIGS:
+            config_start = time.time()
+            print(
+                f"\n=== geometry_variant_limit={geometry_limit} "
+                f"procedural_variant_limit={procedural_limit} ===",
+                flush=True,
+            )
+            basis_rows, bench_rows = neighborhood_basis_benchmark(
+                geometry_variant_limit=geometry_limit,
+                procedural_variant_limit=procedural_limit,
+                basis_size=basis_size,
+            )
+            elapsed = time.time() - config_start
+            print(f"elapsed={elapsed:.1f}s", flush=True)
+            for rule_family in ("compact", "extended"):
+                print(summarize_family(bench_rows, basis_rows, rule_family), flush=True)
+        basis_elapsed = time.time() - basis_start
+        print(f"basis_size_elapsed={basis_elapsed:.1f}s", flush=True)
 
     total_elapsed = time.time() - total_start
     finished = datetime.now().isoformat(timespec="seconds")
