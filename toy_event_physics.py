@@ -3602,6 +3602,21 @@ def rich_neighborhood_basis_ablation_sets() -> tuple[tuple[str, tuple[str, ...]]
     return motif_groups
 
 
+def rich_degree_extreme_ablation_sets() -> tuple[tuple[str, tuple[str, ...]], ...]:
+    return (
+        ("full-rich", tuple()),
+        ("no-low-degree", ("motif_low_degree_neighbor_fraction",)),
+        ("no-high-degree", ("motif_high_degree_neighbor_fraction",)),
+        (
+            "no-degree-extremes",
+            (
+                "motif_low_degree_neighbor_fraction",
+                "motif_high_degree_neighbor_fraction",
+            ),
+        ),
+    )
+
+
 def local_shape_feature_bundle(
     nodes: set[tuple[int, int]],
     wrap_y: bool = False,
@@ -11822,10 +11837,13 @@ def neighborhood_basis_ablation_benchmark(
     procedural_rediscovery_limit: int = 1,
     procedural_styles: tuple[str, ...] = ("walk", "mode-mix", "local-morph"),
     basis_sizes: tuple[int, ...] = (3, 4, 5, 6, 7, 8),
+    ablation_sets: tuple[tuple[str, tuple[str, ...]], ...] | None = None,
 ) -> list[NeighborhoodBasisAblationRow]:
     all_rich_features = rich_neighborhood_basis_feature_names()
+    if ablation_sets is None:
+        ablation_sets = rich_neighborhood_basis_ablation_sets()
     ablation_rows: list[NeighborhoodBasisAblationRow] = []
-    for ablation_name, removed_features in rich_neighborhood_basis_ablation_sets():
+    for ablation_name, removed_features in ablation_sets:
         feature_names = tuple(
             feature for feature in all_rich_features if feature not in set(removed_features)
         )
@@ -17043,6 +17061,39 @@ def main() -> None:
     )
     print(
         "- So the current mechanism read is much tighter: the fast rich-basis collapse is not really about pocket-adjacency. It is primarily carried by local degree-extremes information, with pocket-adjacent motifs acting more like alternative proxies than the main driver."
+    )
+    print()
+
+    print("73) Degree-extreme split ablation")
+    degree_extreme_split_rows = neighborhood_basis_ablation_benchmark(
+        ablation_sets=rich_degree_extreme_ablation_sets(),
+    )
+    print(render_neighborhood_basis_ablation_table(degree_extreme_split_rows))
+    print()
+    print("Interpretation:")
+    split_full_row = next(
+        row for row in degree_extreme_split_rows if row.ablation_name == "full-rich"
+    )
+    no_low_degree_row = next(
+        row for row in degree_extreme_split_rows if row.ablation_name == "no-low-degree"
+    )
+    no_high_degree_row = next(
+        row for row in degree_extreme_split_rows if row.ablation_name == "no-high-degree"
+    )
+    split_no_both_row = next(
+        row for row in degree_extreme_split_rows if row.ablation_name == "no-degree-extremes"
+    )
+    print(
+        f"- This splits the load-bearing degree-extremes family apart. In the full-rich reference, `compact` parity sits at size {split_full_row.compact_parity_size} and `extended` at size {split_full_row.extended_parity_size}."
+    )
+    print(
+        f"- Removing only `motif_low_degree_neighbor_fraction` barely changes the picture: `compact` stays at parity size {no_low_degree_row.compact_parity_size}, and `extended` actually improves to {no_low_degree_row.extended_parity_size}."
+    )
+    print(
+        f"- Removing only `motif_high_degree_neighbor_fraction` is the real hit. `compact` parity retreats to size {no_high_degree_row.compact_parity_size}, and `extended` loses clean parity entirely in the tested range, matching the stronger failure pattern seen when both degree-extreme motifs are removed."
+    )
+    print(
+        f"- So the degree-extreme family is not symmetric. The current load-bearing coordinate is mostly `motif_high_degree_neighbor_fraction`, while `motif_low_degree_neighbor_fraction` acts more like a weak helper or redundant proxy."
     )
     print()
 
