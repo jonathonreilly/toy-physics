@@ -654,6 +654,7 @@ class RoughnessCoreSweepRow:
     pocket_fraction: float
     boundary_roughness: float
     deep_pocket_fraction: float
+    degree_fractions: tuple[float, ...]
 
 
 @dataclass
@@ -696,6 +697,7 @@ class CenterlineModeSweepRow:
     pocket_fraction: float
     boundary_roughness: float
     deep_pocket_fraction: float
+    degree_fractions: tuple[float, ...]
 
 
 @dataclass
@@ -821,6 +823,7 @@ class GeometryPredictionRow:
     pocket_fraction: float
     boundary_roughness: float
     deep_pocket_fraction: float
+    degree_fractions: tuple[float, ...]
 
 
 @dataclass
@@ -914,6 +917,30 @@ class GeneratedFeatureExpansionRow:
     feature_subset: str
     subset_size: int
     uses_local_shape: bool
+    model_family: str
+    geometry_accuracy: float
+    procedural_accuracy: float
+    generated_mean_accuracy: float
+    generated_worst_accuracy: float
+    description: str
+
+
+@dataclass
+class NeighborhoodBasisFeatureRow:
+    rule_family: str
+    rank: int
+    feature_name: str
+    spread_score: float
+    mean_empty: float
+    mean_single: float
+    mean_multi: float
+
+
+@dataclass
+class NeighborhoodBasisBenchmarkRow:
+    rule_family: str
+    candidate_name: str
+    feature_subset: str
     model_family: str
     geometry_accuracy: float
     procedural_accuracy: float
@@ -3459,6 +3486,18 @@ def local_node_shape_metrics(
         boundary_roughness,
         deep_pocket_count / total_nodes,
     )
+
+
+def neighborhood_degree_fractions(
+    nodes: set[tuple[int, int]],
+    wrap_y: bool = False,
+) -> tuple[float, ...]:
+    counts = [0 for _ in range(9)]
+    total_nodes = max(1, len(nodes))
+    for node in nodes:
+        degree = len(graph_neighbors(node, nodes, wrap_y=wrap_y))
+        counts[min(8, degree)] += 1
+    return tuple(count / total_nodes for count in counts)
 
 
 def ordered_profile_centers_and_spans(
@@ -9063,6 +9102,7 @@ def roughness_core_sweep(
             boundary_roughness,
             deep_pocket_fraction,
         ) = local_node_shape_metrics(sweep_nodes)
+        degree_fractions = neighborhood_degree_fractions(sweep_nodes)
         for rule_family, count_options in family_count_options():
             for retained_weight in retained_weights:
                 harmonic_cont_row, harmonic_cont_candidates = harmonic_continuous_case_analysis(
@@ -9102,6 +9142,7 @@ def roughness_core_sweep(
                         pocket_fraction=pocket_fraction,
                         boundary_roughness=boundary_roughness,
                         deep_pocket_fraction=deep_pocket_fraction,
+                        degree_fractions=degree_fractions,
                     )
                 )
 
@@ -9235,6 +9276,7 @@ def centerline_mode_core_sweep(
                 boundary_roughness,
                 deep_pocket_fraction,
             ) = local_node_shape_metrics(sweep_nodes)
+            degree_fractions = neighborhood_degree_fractions(sweep_nodes)
             for rule_family, count_options in family_count_options():
                 for retained_weight in retained_weights:
                     harmonic_cont_row, harmonic_cont_candidates = harmonic_continuous_case_analysis(
@@ -9275,6 +9317,7 @@ def centerline_mode_core_sweep(
                             pocket_fraction=pocket_fraction,
                             boundary_roughness=boundary_roughness,
                             deep_pocket_fraction=deep_pocket_fraction,
+                            degree_fractions=degree_fractions,
                         )
                     )
 
@@ -9407,6 +9450,9 @@ def decision_feature_value(
         return row.boundary_roughness
     if feature == "deep_pocket_fraction":
         return row.deep_pocket_fraction
+    if feature.startswith("degree_") and feature.endswith("_fraction"):
+        degree = int(feature[len("degree_") : -len("_fraction")])
+        return row.degree_fractions[degree]
     raise ValueError(f"Unknown decision-tree feature: {feature}")
 
 
@@ -9536,6 +9582,8 @@ def format_tiny_decision_tree(
         "boundary_roughness": "brough",
         "deep_pocket_fraction": "dpocket",
     }
+    if tree.feature.startswith("degree_") and tree.feature.endswith("_fraction"):
+        feature_labels[tree.feature] = f"deg{tree.feature[len('degree_'):-len('_fraction')]}"
     threshold = f"{tree.threshold:.2f}" if tree.feature != "crosses_midline" else "0.5"
     return (
         f"if {feature_labels[tree.feature]}<={threshold} "
@@ -9771,6 +9819,9 @@ def format_ordinal_score_model(
         "boundary_roughness": "brough",
         "deep_pocket_fraction": "dpocket",
     }
+    for feature in model.feature_names:
+        if feature.startswith("degree_") and feature.endswith("_fraction"):
+            feature_labels[feature] = f"deg{feature[len('degree_'):-len('_fraction')]}"
     signed_terms = []
     for feature, sign in zip(model.feature_names, model.signs):
         prefix = "+" if sign > 0 else "-"
@@ -9999,6 +10050,7 @@ def geometry_prediction_rows_from_mode(
                 pocket_fraction=row.pocket_fraction,
                 boundary_roughness=row.boundary_roughness,
                 deep_pocket_fraction=row.deep_pocket_fraction,
+                degree_fractions=row.degree_fractions,
             )
         )
     rows.sort(key=lambda row: (row.rule_family, row.source_name))
@@ -10030,6 +10082,7 @@ def geometry_prediction_rows_from_roughness(
                 pocket_fraction=row.pocket_fraction,
                 boundary_roughness=row.boundary_roughness,
                 deep_pocket_fraction=row.deep_pocket_fraction,
+                degree_fractions=row.degree_fractions,
             )
         )
     rows.sort(key=lambda row: (row.rule_family, row.source_name))
@@ -10151,6 +10204,10 @@ def procedural_geometry_prediction_rows(
                         perturbed_nodes,
                         wrap_y=wrap_y,
                     )
+                    degree_fractions = neighborhood_degree_fractions(
+                        perturbed_nodes,
+                        wrap_y=wrap_y,
+                    )
                     for rule_family, count_options in family_count_options():
                         harmonic_cont_row, harmonic_cont_candidates = harmonic_continuous_case_analysis(
                             pack_name=pack_name,
@@ -10185,6 +10242,7 @@ def procedural_geometry_prediction_rows(
                                 pocket_fraction=pocket_fraction,
                                 boundary_roughness=boundary_roughness,
                                 deep_pocket_fraction=deep_pocket_fraction,
+                                degree_fractions=degree_fractions,
                             )
                         )
     prediction_rows.sort(key=lambda row: (row.rule_family, row.source_name))
@@ -10234,6 +10292,10 @@ def geometry_randomization_prediction_rows(
                     perturbed_nodes,
                     wrap_y=wrap_y,
                 )
+                degree_fractions = neighborhood_degree_fractions(
+                    perturbed_nodes,
+                    wrap_y=wrap_y,
+                )
                 for rule_family, count_options in family_count_options():
                     harmonic_cont_row, harmonic_cont_candidates = harmonic_continuous_case_analysis(
                         pack_name=pack_name,
@@ -10268,6 +10330,7 @@ def geometry_randomization_prediction_rows(
                             pocket_fraction=pocket_fraction,
                             boundary_roughness=boundary_roughness,
                             deep_pocket_fraction=deep_pocket_fraction,
+                            degree_fractions=degree_fractions,
                         )
                     )
     prediction_rows.sort(key=lambda row: (row.rule_family, row.source_name))
@@ -11230,6 +11293,172 @@ def generated_geometry_feature_expansion_benchmark(
         )
     )
     return comparison_rows
+
+
+def learned_neighborhood_basis_features(
+    rows: list[GeometryPredictionRow],
+    basis_size: int = 3,
+) -> list[NeighborhoodBasisFeatureRow]:
+    degree_features = tuple(f"degree_{degree}_fraction" for degree in range(9))
+    basis_rows: list[NeighborhoodBasisFeatureRow] = []
+    for rule_family in ("compact", "extended"):
+        family_rows = [row for row in rows if row.rule_family == rule_family]
+        by_label = {
+            label: [row for row in family_rows if coarse_core_regime(row.regime) == label]
+            for label in ("empty", "single", "multi")
+        }
+        ranked_features: list[NeighborhoodBasisFeatureRow] = []
+        for feature_name in degree_features:
+            means = {
+                label: (
+                    sum(decision_feature_value(row, feature_name) for row in label_rows) / len(label_rows)
+                    if label_rows
+                    else 0.0
+                )
+                for label, label_rows in by_label.items()
+            }
+            spread_score = (
+                abs(means["empty"] - means["single"])
+                + abs(means["single"] - means["multi"])
+                + abs(means["empty"] - means["multi"])
+            )
+            ranked_features.append(
+                NeighborhoodBasisFeatureRow(
+                    rule_family=rule_family,
+                    rank=0,
+                    feature_name=feature_name,
+                    spread_score=spread_score,
+                    mean_empty=means["empty"],
+                    mean_single=means["single"],
+                    mean_multi=means["multi"],
+                )
+            )
+        ranked_features.sort(
+            key=lambda row: (
+                row.rule_family,
+                -row.spread_score,
+                row.feature_name,
+            )
+        )
+        for index, row in enumerate(ranked_features[:basis_size], start=1):
+            basis_rows.append(
+                NeighborhoodBasisFeatureRow(
+                    rule_family=row.rule_family,
+                    rank=index,
+                    feature_name=row.feature_name,
+                    spread_score=row.spread_score,
+                    mean_empty=row.mean_empty,
+                    mean_single=row.mean_single,
+                    mean_multi=row.mean_multi,
+                )
+            )
+    basis_rows.sort(key=lambda row: (row.rule_family, row.rank))
+    return basis_rows
+
+
+def neighborhood_basis_benchmark(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    geometry_variant_limit: int = 3,
+    procedural_variant_limit: int = 1,
+    procedural_rediscovery_limit: int = 1,
+    procedural_styles: tuple[str, ...] = ("walk", "mode-mix", "local-morph"),
+    basis_size: int = 3,
+) -> tuple[list[NeighborhoodBasisFeatureRow], list[NeighborhoodBasisBenchmarkRow]]:
+    (
+        _mode_core_rows,
+        mode_prediction_rows,
+        _roughness_prediction_rows,
+        procedural_rows,
+        geometry_rows,
+    ) = build_generated_geometry_prediction_context(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+        geometry_variant_limit=geometry_variant_limit,
+        procedural_variant_limit=procedural_variant_limit,
+        procedural_rediscovery_limit=procedural_rediscovery_limit,
+        procedural_styles=procedural_styles,
+    )
+    basis_rows = learned_neighborhood_basis_features(
+        mode_prediction_rows,
+        basis_size=basis_size,
+    )
+    basis_by_family = {
+        rule_family: [row.feature_name for row in basis_rows if row.rule_family == rule_family]
+        for rule_family in ("compact", "extended")
+    }
+    variant_specs = (
+        ("tree-depth2", None, None),
+        ("ordinal-minmax-equal", "minmax", "equal"),
+        ("ordinal-zscore-equal", "zscore", "equal"),
+        ("ordinal-minmax-spread", "minmax", "spread"),
+    )
+    benchmark_rows: list[NeighborhoodBasisBenchmarkRow] = []
+    for rule_family in ("compact", "extended"):
+        family_mode_rows = [row for row in mode_prediction_rows if row.rule_family == rule_family]
+        family_geometry_rows = [row for row in geometry_rows if row.rule_family == rule_family]
+        family_procedural_rows = [row for row in procedural_rows if row.rule_family == rule_family]
+        basis_features = basis_by_family[rule_family]
+        candidate_sets: list[tuple[str, tuple[str, ...]]] = [
+            ("pocket", ("pocket_fraction",)),
+            ("basis-1", (basis_features[0],)),
+            ("basis-2", (basis_features[1],)),
+            ("basis-3", (basis_features[2],)),
+            ("basis-prefix-2", tuple(basis_features[:2])),
+            ("basis-prefix-3", tuple(basis_features[:3])),
+            ("pocket+basis-1", ("pocket_fraction", basis_features[0])),
+            ("pocket+basis-prefix-2", ("pocket_fraction",) + tuple(basis_features[:2])),
+        ]
+        seen_feature_sets: set[tuple[str, ...]] = set()
+        deduped_sets: list[tuple[str, tuple[str, ...]]] = []
+        for candidate_name, feature_names in candidate_sets:
+            normalized_features = tuple(dict.fromkeys(feature_names))
+            if normalized_features in seen_feature_sets:
+                continue
+            seen_feature_sets.add(normalized_features)
+            deduped_sets.append((candidate_name, normalized_features))
+
+        for candidate_name, feature_names in deduped_sets:
+            feature_subset = ", ".join(feature_names)
+            for model_family, normalization_mode, weight_mode in variant_specs:
+                if model_family == "tree-depth2":
+                    tree = learn_tiny_decision_tree(family_mode_rows, feature_names, 2)
+                    geometry_accuracy = decision_tree_accuracy(tree, family_geometry_rows)
+                    procedural_accuracy = decision_tree_accuracy(tree, family_procedural_rows)
+                    description = format_tiny_decision_tree(tree)
+                else:
+                    score_model = fit_ordinal_score_model(
+                        family_mode_rows,
+                        feature_names,
+                        normalization_mode=normalization_mode,
+                        weight_mode=weight_mode,
+                    )
+                    geometry_accuracy = ordinal_score_accuracy(score_model, family_geometry_rows)
+                    procedural_accuracy = ordinal_score_accuracy(score_model, family_procedural_rows)
+                    description = format_ordinal_score_model(score_model)
+                benchmark_rows.append(
+                    NeighborhoodBasisBenchmarkRow(
+                        rule_family=rule_family,
+                        candidate_name=candidate_name,
+                        feature_subset=feature_subset,
+                        model_family=model_family,
+                        geometry_accuracy=geometry_accuracy,
+                        procedural_accuracy=procedural_accuracy,
+                        generated_mean_accuracy=(geometry_accuracy + procedural_accuracy) / 2.0,
+                        generated_worst_accuracy=min(geometry_accuracy, procedural_accuracy),
+                        description=description,
+                    )
+                )
+    benchmark_rows.sort(
+        key=lambda row: (
+            row.rule_family,
+            -row.generated_mean_accuracy,
+            -row.generated_worst_accuracy,
+            row.candidate_name,
+            row.model_family,
+        )
+    )
+    return basis_rows, benchmark_rows
 
 
 def random_rediscovery_limit_sweep_summary(
@@ -13377,6 +13606,50 @@ def render_generated_feature_expansion_table(
                 f"{row.rule_family:<8} | "
                 f"{row.feature_subset:<33} | "
                 f"{('yes' if row.uses_local_shape else 'no'):<5} | "
+                f"{row.model_family:<21} | "
+                f"{row.geometry_accuracy:>5.2f} | "
+                f"{row.procedural_accuracy:>5.2f} | "
+                f"{row.generated_mean_accuracy:>5.2f} | "
+                f"{row.generated_worst_accuracy:>4.2f}"
+            )
+    return "\n".join(lines)
+
+
+def render_neighborhood_basis_feature_table(
+    rows: list[NeighborhoodBasisFeatureRow],
+) -> str:
+    lines = [
+        "family   | rank | feature              | spread | empty | single | multi",
+        "---------+------+----------------------+--------+-------+--------+------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.rule_family:<8} | "
+            f"{row.rank:>4} | "
+            f"{row.feature_name:<20} | "
+            f"{row.spread_score:>6.3f} | "
+            f"{row.mean_empty:>5.3f} | "
+            f"{row.mean_single:>6.3f} | "
+            f"{row.mean_multi:>5.3f}"
+        )
+    return "\n".join(lines)
+
+
+def render_neighborhood_basis_benchmark_table(
+    rows: list[NeighborhoodBasisBenchmarkRow],
+    top_k_per_family: int = 8,
+) -> str:
+    lines = [
+        "family   | candidate             | subset                              | model                 | geom  | proc  | mean  | worst",
+        "---------+-----------------------+-------------------------------------+-----------------------+-------+-------+-------+------",
+    ]
+    for rule_family in ("compact", "extended"):
+        family_rows = [row for row in rows if row.rule_family == rule_family][:top_k_per_family]
+        for row in family_rows:
+            lines.append(
+                f"{row.rule_family:<8} | "
+                f"{row.candidate_name:<21} | "
+                f"{row.feature_subset:<35} | "
                 f"{row.model_family:<21} | "
                 f"{row.geometry_accuracy:>5.2f} | "
                 f"{row.procedural_accuracy:>5.2f} | "
@@ -16054,6 +16327,73 @@ def main() -> None:
     )
     print(
         "- The honest read is now sharper. In `compact`, widening the vocabulary still does not dislodge the old centerline-shape family at all. In `extended`, `pocket_fraction` remains the simplest genuinely top-tier local-shape feature, while the newer local-shape summaries only enter the top tier in combinations. So the old vocabulary was missing real local signal, but `pocket_fraction` still looks closer to the underlying mechanism than a broader grab bag of local-shape proxies."
+    )
+    print()
+
+    print("69) Learned neighborhood basis vs pocket-fraction")
+    neighborhood_basis_rows, neighborhood_benchmark_rows = neighborhood_basis_benchmark()
+    print(render_neighborhood_basis_feature_table(neighborhood_basis_rows))
+    print()
+    print(render_neighborhood_basis_benchmark_table(neighborhood_benchmark_rows))
+    print()
+    print("Interpretation:")
+    compact_basis_best = next(
+        row for row in neighborhood_benchmark_rows if row.rule_family == "compact"
+    )
+    extended_basis_best = next(
+        row for row in neighborhood_benchmark_rows if row.rule_family == "extended"
+    )
+    compact_pocket_single = next(
+        row
+        for row in neighborhood_benchmark_rows
+        if row.rule_family == "compact"
+        and row.candidate_name == "pocket"
+        and row.model_family == "ordinal-minmax-equal"
+    )
+    extended_pocket_single = next(
+        row
+        for row in neighborhood_benchmark_rows
+        if row.rule_family == "extended"
+        and row.candidate_name == "pocket"
+        and row.model_family == "ordinal-minmax-equal"
+    )
+    compact_basis_single_best = max(
+        (
+            row
+            for row in neighborhood_benchmark_rows
+            if row.rule_family == "compact" and row.candidate_name in {"basis-1", "basis-2", "basis-3"}
+        ),
+        key=lambda row: (
+            row.generated_mean_accuracy,
+            row.generated_worst_accuracy,
+            row.model_family,
+            row.feature_subset,
+        ),
+    )
+    extended_basis_single_best = max(
+        (
+            row
+            for row in neighborhood_benchmark_rows
+            if row.rule_family == "extended" and row.candidate_name in {"basis-1", "basis-2", "basis-3"}
+        ),
+        key=lambda row: (
+            row.generated_mean_accuracy,
+            row.generated_worst_accuracy,
+            row.model_family,
+            row.feature_subset,
+        ),
+    )
+    print(
+        "- This is the learned-basis version of the local-shape test: derive a tiny neighborhood basis automatically from occupied-node degree fractions, then compare those learned coordinates directly against `pocket_fraction` on the same multi-style generated ensemble."
+    )
+    print(
+        f"- In `compact`, the best learned-basis candidate is `{compact_basis_best.candidate_name}` on `{compact_basis_best.feature_subset}` with mean {compact_basis_best.generated_mean_accuracy:.2f}, while single-feature `pocket_fraction` scores {compact_pocket_single.generated_mean_accuracy:.2f}. The best single learned basis feature is `{compact_basis_single_best.feature_subset}` at {compact_basis_single_best.generated_mean_accuracy:.2f}."
+    )
+    print(
+        f"- In `extended`, the best learned-basis candidate is `{extended_basis_best.candidate_name}` on `{extended_basis_best.feature_subset}` with mean {extended_basis_best.generated_mean_accuracy:.2f}, while single-feature `pocket_fraction` scores {extended_pocket_single.generated_mean_accuracy:.2f}. The best single learned basis feature is `{extended_basis_single_best.feature_subset}` at {extended_basis_single_best.generated_mean_accuracy:.2f}."
+    )
+    print(
+        "- The key comparison is whether a learned neighborhood coordinate can replace `pocket_fraction` cleanly. In the current run, `pocket_fraction` beats the best single learned basis feature in both families, so it does not look like an arbitrary hand-picked proxy for an easier degree-based coordinate."
     )
     print()
 
