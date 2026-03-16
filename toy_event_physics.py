@@ -1051,6 +1051,29 @@ class MechanismSplitAggregateRow:
     cases: int
 
 
+@dataclass
+class ExtendedProxyRouteRow:
+    route_name: str
+    feature_count: int
+    removed_features: str
+    compact_parity_size: int | None
+    compact_parity_feature_subset: str
+    compact_best_prethreshold_gap: float
+    compact_best_prethreshold_worst_gap: float
+    extended_parity_size: int | None
+    extended_parity_feature_subset: str
+    extended_proxy_family: str
+    extended_proxy_signature: str
+    extended_best_prethreshold_gap: float
+    extended_best_prethreshold_worst_gap: float
+
+
+@dataclass
+class ExtendedProxyRouteAggregateRow:
+    proxy_family: str
+    cases: int
+
+
 _cross_dataset_prediction_context_cache: dict[
     tuple[float, float | None, int, int],
     tuple[
@@ -3772,6 +3795,43 @@ def rich_degree_extreme_ablation_sets() -> tuple[tuple[str, tuple[str, ...]], ..
             (
                 "motif_low_degree_neighbor_fraction",
                 "motif_high_degree_neighbor_fraction",
+            ),
+        ),
+    )
+
+
+def extended_proxy_route_sets() -> tuple[tuple[str, tuple[str, ...]], ...]:
+    return (
+        ("full-rich", tuple()),
+        ("no-deep-pocket", ("motif_deep_pocket_adjacent_fraction",)),
+        (
+            "no-pocket-family",
+            (
+                "motif_pocket_adjacent_fraction",
+                "motif_deep_pocket_adjacent_fraction",
+            ),
+        ),
+        ("no-high-degree", ("motif_high_degree_neighbor_fraction",)),
+        (
+            "no-high-no-deep-pocket",
+            (
+                "motif_high_degree_neighbor_fraction",
+                "motif_deep_pocket_adjacent_fraction",
+            ),
+        ),
+        (
+            "no-high-no-pocket",
+            (
+                "motif_high_degree_neighbor_fraction",
+                "motif_pocket_adjacent_fraction",
+            ),
+        ),
+        (
+            "no-high-no-pocket-family",
+            (
+                "motif_high_degree_neighbor_fraction",
+                "motif_pocket_adjacent_fraction",
+                "motif_deep_pocket_adjacent_fraction",
             ),
         ),
     )
@@ -12573,6 +12633,101 @@ def neighborhood_basis_ablation_benchmark(
     return ablation_rows
 
 
+def classify_extended_proxy_family(feature_subset: str) -> tuple[str, str]:
+    if not feature_subset or feature_subset == "-":
+        return "none", "-"
+    features = tuple(part.strip() for part in feature_subset.split(",") if part.strip())
+    has_deep = any("deep_pocket" in feature for feature in features)
+    has_pocket = any(
+        "pocket_adjacent" in feature or feature == "pocket_fraction"
+        for feature in features
+    )
+    has_hub = any(
+        "high_degree" in feature
+        or feature.startswith("motif_neighbor_reach_ge_")
+        or feature.startswith("motif_neighbor_leverage_")
+        for feature in features
+    )
+    if has_deep and has_hub:
+        return "deep-pocket+hub", ", ".join(features)
+    if has_deep:
+        return "deep-pocket", ", ".join(features)
+    if has_pocket and has_hub:
+        return "pocket+hub", ", ".join(features)
+    if has_pocket:
+        return "pocket", ", ".join(features)
+    if has_hub:
+        return "hub", ", ".join(features)
+    return "other", ", ".join(features)
+
+
+def extended_proxy_route_benchmark(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    geometry_variant_limit: int = 5,
+    procedural_variant_limit: int = 3,
+    procedural_rediscovery_limit: int = 1,
+    procedural_styles: tuple[str, ...] = ("walk", "mode-mix", "local-morph"),
+    basis_sizes: tuple[int, ...] = (3, 4, 5, 6, 7, 8),
+    route_sets: tuple[tuple[str, tuple[str, ...]], ...] | None = None,
+) -> tuple[list[ExtendedProxyRouteRow], list[ExtendedProxyRouteAggregateRow]]:
+    if route_sets is None:
+        route_sets = extended_proxy_route_sets()
+    all_rich_features = rich_neighborhood_basis_feature_names()
+    route_rows: list[ExtendedProxyRouteRow] = []
+    for route_name, removed_features in route_sets:
+        feature_names = tuple(
+            feature for feature in all_rich_features if feature not in set(removed_features)
+        )
+        residual_rows = neighborhood_basis_residual_benchmark(
+            retained_weight=retained_weight,
+            mode_retained_weight=mode_retained_weight,
+            geometry_variant_limit=geometry_variant_limit,
+            procedural_variant_limit=procedural_variant_limit,
+            procedural_rediscovery_limit=procedural_rediscovery_limit,
+            procedural_styles=procedural_styles,
+            basis_sizes=basis_sizes,
+            basis_feature_names=feature_names,
+        )
+        compact_rows = [row for row in residual_rows if row.rule_family == "compact"]
+        extended_rows = [row for row in residual_rows if row.rule_family == "extended"]
+        compact_parity, compact_best_prethreshold = parity_threshold_from_residual_rows(
+            compact_rows
+        )
+        extended_parity, extended_best_prethreshold = parity_threshold_from_residual_rows(
+            extended_rows
+        )
+        proxy_family, proxy_signature = classify_extended_proxy_family(
+            extended_parity.basis_feature_subset if extended_parity is not None else "-"
+        )
+        route_rows.append(
+            ExtendedProxyRouteRow(
+                route_name=route_name,
+                feature_count=len(feature_names),
+                removed_features=", ".join(removed_features) if removed_features else "-",
+                compact_parity_size=compact_parity.basis_size if compact_parity is not None else None,
+                compact_parity_feature_subset=compact_parity.basis_feature_subset if compact_parity is not None else "-",
+                compact_best_prethreshold_gap=compact_best_prethreshold.basis_minus_pocket_mean,
+                compact_best_prethreshold_worst_gap=compact_best_prethreshold.basis_minus_pocket_worst,
+                extended_parity_size=extended_parity.basis_size if extended_parity is not None else None,
+                extended_parity_feature_subset=extended_parity.basis_feature_subset if extended_parity is not None else "-",
+                extended_proxy_family=proxy_family,
+                extended_proxy_signature=proxy_signature,
+                extended_best_prethreshold_gap=extended_best_prethreshold.basis_minus_pocket_mean,
+                extended_best_prethreshold_worst_gap=extended_best_prethreshold.basis_minus_pocket_worst,
+            )
+        )
+    route_rows.sort(key=lambda row: row.route_name)
+    counts: DefaultDict[str, int] = defaultdict(int)
+    for row in route_rows:
+        counts[row.extended_proxy_family] += 1
+    aggregate_rows = [
+        ExtendedProxyRouteAggregateRow(proxy_family=proxy_family, cases=cases)
+        for proxy_family, cases in sorted(counts.items())
+    ]
+    return route_rows, aggregate_rows
+
+
 def high_degree_decomposition_benchmark(
     retained_weight: float = 1.0,
     mode_retained_weight: float | None = None,
@@ -15617,6 +15772,49 @@ def render_mechanism_split_aggregate_table(
             f"{row.split_class:<13} | "
             f"{row.cases:>4}"
         )
+    return "\n".join(lines)
+
+
+def render_extended_proxy_route_table(
+    rows: list[ExtendedProxyRouteRow],
+) -> str:
+    lines = [
+        "route                    | nfeat | removed                | compact       | extended      | proxy fam       | compact pre    | extended pre",
+        "-------------------------+-------+------------------------+---------------+---------------+-----------------+----------------+---------------",
+    ]
+    for row in rows:
+        compact_label = (
+            f"{row.compact_parity_size}:{abbreviate_feature_subset(row.compact_parity_feature_subset)}"
+            if row.compact_parity_size is not None
+            else "-"
+        )
+        extended_label = (
+            f"{row.extended_parity_size}:{abbreviate_feature_subset(row.extended_parity_feature_subset)}"
+            if row.extended_parity_size is not None
+            else "-"
+        )
+        lines.append(
+            f"{row.route_name:<24} | "
+            f"{row.feature_count:>5} | "
+            f"{row.removed_features:<22.22} | "
+            f"{compact_label:<13.13} | "
+            f"{extended_label:<13.13} | "
+            f"{row.extended_proxy_family:<15} | "
+            f"{row.compact_best_prethreshold_gap:+.2f}/{row.compact_best_prethreshold_worst_gap:+.2f} | "
+            f"{row.extended_best_prethreshold_gap:+.2f}/{row.extended_best_prethreshold_worst_gap:+.2f}"
+        )
+    return "\n".join(lines)
+
+
+def render_extended_proxy_route_aggregate_table(
+    rows: list[ExtendedProxyRouteAggregateRow],
+) -> str:
+    lines = [
+        "proxy family     | cases",
+        "-----------------+------",
+    ]
+    for row in rows:
+        lines.append(f"{row.proxy_family:<15} | {row.cases:>4}")
     return "\n".join(lines)
 
 
