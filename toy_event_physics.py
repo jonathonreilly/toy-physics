@@ -659,6 +659,7 @@ class RoughnessCoreSweepRow:
     high_degree_decomposition: tuple[float, ...]
     high_degree_threshold_fractions: tuple[float, ...]
     soft_hub_exposure: tuple[float, ...]
+    neighbor_reach_threshold_fractions: tuple[float, ...]
 
 
 @dataclass
@@ -706,6 +707,7 @@ class CenterlineModeSweepRow:
     high_degree_decomposition: tuple[float, ...]
     high_degree_threshold_fractions: tuple[float, ...]
     soft_hub_exposure: tuple[float, ...]
+    neighbor_reach_threshold_fractions: tuple[float, ...]
 
 
 @dataclass
@@ -836,6 +838,7 @@ class GeometryPredictionRow:
     high_degree_decomposition: tuple[float, ...]
     high_degree_threshold_fractions: tuple[float, ...]
     soft_hub_exposure: tuple[float, ...]
+    neighbor_reach_threshold_fractions: tuple[float, ...]
 
 
 @dataclass
@@ -3526,6 +3529,7 @@ def local_node_shape_metrics(
         _high_degree_decomposition,
         _high_degree_threshold_fractions,
         _soft_hub_exposure,
+        _neighbor_reach_threshold_fractions,
     ) = local_shape_feature_bundle(nodes, wrap_y=wrap_y)
     return (
         boundary_fraction,
@@ -3600,6 +3604,17 @@ def soft_hub_exposure_feature_names() -> tuple[str, ...]:
     )
 
 
+def neighbor_reach_thresholds() -> tuple[int, ...]:
+    return (14, 16, 19, 24)
+
+
+def neighbor_reach_threshold_feature_names() -> tuple[str, ...]:
+    return tuple(
+        f"motif_neighbor_reach_ge_{threshold}_fraction"
+        for threshold in neighbor_reach_thresholds()
+    )
+
+
 def high_degree_decomposition_feature_names() -> tuple[str, ...]:
     return (
         "motif_high_degree_neighbor_share",
@@ -3626,6 +3641,10 @@ def rich_plus_high_degree_threshold_feature_names() -> tuple[str, ...]:
 
 def rich_plus_soft_hub_exposure_feature_names() -> tuple[str, ...]:
     return rich_neighborhood_basis_feature_names() + soft_hub_exposure_feature_names()
+
+
+def rich_plus_neighbor_reach_threshold_feature_names() -> tuple[str, ...]:
+    return rich_neighborhood_basis_feature_names() + neighbor_reach_threshold_feature_names()
 
 
 def rich_neighborhood_basis_ablation_sets() -> tuple[tuple[str, tuple[str, ...]], ...]:
@@ -3766,6 +3785,33 @@ def soft_hub_exposure_sets() -> tuple[tuple[str, tuple[str, ...], tuple[str, ...
     return tuple(rows)
 
 
+def neighbor_reach_threshold_sets() -> tuple[tuple[str, tuple[str, ...], tuple[str, ...]], ...]:
+    removed = ("motif_high_degree_neighbor_fraction",)
+    rows: list[tuple[str, tuple[str, ...], tuple[str, ...]]] = [
+        ("full-rich", tuple(), tuple()),
+        ("no-high-degree", removed, tuple()),
+    ]
+    for threshold, feature_name in zip(
+        neighbor_reach_thresholds(),
+        neighbor_reach_threshold_feature_names(),
+    ):
+        rows.append(
+            (
+                f"replace-high-with-reach-{threshold}",
+                removed,
+                (feature_name,),
+            )
+        )
+    rows.append(
+        (
+            "replace-high-with-reach-bundle",
+            removed,
+            neighbor_reach_threshold_feature_names(),
+        )
+    )
+    return tuple(rows)
+
+
 def local_shape_feature_bundle(
     nodes: set[tuple[int, int]],
     wrap_y: bool = False,
@@ -3779,12 +3825,21 @@ def local_shape_feature_bundle(
     tuple[float, ...],
     tuple[float, ...],
     tuple[float, ...],
+    tuple[float, ...],
 ]:
     total_nodes = max(1, len(nodes))
     degree_map = {
         node: len(graph_neighbors(node, nodes, wrap_y=wrap_y))
         for node in nodes
     }
+    reach_map: dict[tuple[int, int], int] = {}
+    for node in nodes:
+        node_neighbors = set(graph_neighbors(node, nodes, wrap_y=wrap_y))
+        reach_nodes = set(node_neighbors)
+        for neighbor in node_neighbors:
+            reach_nodes.update(graph_neighbors(neighbor, nodes, wrap_y=wrap_y))
+        reach_nodes.discard(node)
+        reach_map[node] = len(reach_nodes)
     total_nodes = max(1, len(nodes))
     neighbor_deficits = [
         (8 - degree_map[node]) / 8.0 for node in nodes
@@ -3820,6 +3875,7 @@ def local_shape_feature_bundle(
     soft_linear_6_8_total = 0.0
     soft_quadratic_5_8_total = 0.0
     soft_quadratic_6_8_total = 0.0
+    neighbor_reach_threshold_counts = [0 for _threshold in neighbor_reach_thresholds()]
     mean_neighbor_degree_total = 0.0
     neighbor_degree_variation_total = 0.0
     two_hop_occupied_total = 0.0
@@ -3834,6 +3890,9 @@ def local_shape_feature_bundle(
         for index, threshold in enumerate(high_degree_thresholds()):
             if any(degree >= threshold for degree in neighbor_degrees):
                 high_degree_threshold_counts[index] += 1
+        for index, threshold in enumerate(neighbor_reach_thresholds()):
+            if any(reach_map[neighbor] >= threshold for neighbor in neighbors):
+                neighbor_reach_threshold_counts[index] += 1
         if neighbor_degrees:
             linear_5_8_values = [
                 max(0.0, min(1.0, (degree - 5.0) / 3.0))
@@ -3899,6 +3958,9 @@ def local_shape_feature_bundle(
         soft_quadratic_5_8_total / total_nodes,
         soft_quadratic_6_8_total / total_nodes,
     )
+    neighbor_reach_threshold_fractions = tuple(
+        count / total_nodes for count in neighbor_reach_threshold_counts
+    )
 
     return (
         boundary_fraction,
@@ -3910,6 +3972,7 @@ def local_shape_feature_bundle(
         high_degree_decomposition,
         high_degree_threshold_fractions,
         soft_hub_exposure,
+        neighbor_reach_threshold_fractions,
     )
 
 
@@ -9526,6 +9589,7 @@ def roughness_core_sweep(
             high_degree_decomposition,
             high_degree_threshold_fractions,
             soft_hub_exposure,
+            neighbor_reach_threshold_fractions,
         ) = local_shape_feature_bundle(sweep_nodes)
         for rule_family, count_options in family_count_options():
             for retained_weight in retained_weights:
@@ -9571,6 +9635,7 @@ def roughness_core_sweep(
                         high_degree_decomposition=high_degree_decomposition,
                         high_degree_threshold_fractions=high_degree_threshold_fractions,
                         soft_hub_exposure=soft_hub_exposure,
+                        neighbor_reach_threshold_fractions=neighbor_reach_threshold_fractions,
                     )
                 )
 
@@ -9708,6 +9773,7 @@ def centerline_mode_core_sweep(
                 high_degree_decomposition,
                 high_degree_threshold_fractions,
                 soft_hub_exposure,
+                neighbor_reach_threshold_fractions,
             ) = local_shape_feature_bundle(sweep_nodes)
             for rule_family, count_options in family_count_options():
                 for retained_weight in retained_weights:
@@ -9754,6 +9820,7 @@ def centerline_mode_core_sweep(
                             high_degree_decomposition=high_degree_decomposition,
                             high_degree_threshold_fractions=high_degree_threshold_fractions,
                             soft_hub_exposure=soft_hub_exposure,
+                            neighbor_reach_threshold_fractions=neighbor_reach_threshold_fractions,
                         )
                     )
 
@@ -9901,6 +9968,9 @@ def decision_feature_value(
     if feature in soft_hub_exposure_feature_names():
         soft_index = soft_hub_exposure_feature_names().index(feature)
         return row.soft_hub_exposure[soft_index]
+    if feature in neighbor_reach_threshold_feature_names():
+        reach_index = neighbor_reach_threshold_feature_names().index(feature)
+        return row.neighbor_reach_threshold_fractions[reach_index]
     raise ValueError(f"Unknown decision-tree feature: {feature}")
 
 
@@ -10054,6 +10124,11 @@ def format_tiny_decision_tree(
             "motif_hub_exposure_quadratic_6_8": "hubquad68",
         }
     )
+    for threshold, feature_name in zip(
+        neighbor_reach_thresholds(),
+        neighbor_reach_threshold_feature_names(),
+    ):
+        feature_labels[feature_name] = f"reach{threshold}"
     if tree.feature.startswith("degree_") and tree.feature.endswith("_fraction"):
         feature_labels[tree.feature] = f"deg{tree.feature[len('degree_'):-len('_fraction')]}"
     threshold = f"{tree.threshold:.2f}" if tree.feature != "crosses_midline" else "0.5"
@@ -10315,6 +10390,11 @@ def format_ordinal_score_model(
             "motif_hub_exposure_quadratic_6_8": "hubquad68",
         }
     )
+    for threshold, feature_name in zip(
+        neighbor_reach_thresholds(),
+        neighbor_reach_threshold_feature_names(),
+    ):
+        feature_labels[feature_name] = f"reach{threshold}"
     for feature in model.feature_names:
         if feature.startswith("degree_") and feature.endswith("_fraction"):
             feature_labels[feature] = f"deg{feature[len('degree_'):-len('_fraction')]}"
@@ -10551,6 +10631,7 @@ def geometry_prediction_rows_from_mode(
                 high_degree_decomposition=row.high_degree_decomposition,
                 high_degree_threshold_fractions=row.high_degree_threshold_fractions,
                 soft_hub_exposure=row.soft_hub_exposure,
+                neighbor_reach_threshold_fractions=row.neighbor_reach_threshold_fractions,
             )
         )
     rows.sort(key=lambda row: (row.rule_family, row.source_name))
@@ -10587,6 +10668,7 @@ def geometry_prediction_rows_from_roughness(
                 high_degree_decomposition=row.high_degree_decomposition,
                 high_degree_threshold_fractions=row.high_degree_threshold_fractions,
                 soft_hub_exposure=row.soft_hub_exposure,
+                neighbor_reach_threshold_fractions=row.neighbor_reach_threshold_fractions,
             )
         )
     rows.sort(key=lambda row: (row.rule_family, row.source_name))
@@ -10709,6 +10791,7 @@ def procedural_geometry_prediction_rows(
                         high_degree_decomposition,
                         high_degree_threshold_fractions,
                         soft_hub_exposure,
+                        neighbor_reach_threshold_fractions,
                     ) = local_shape_feature_bundle(
                         perturbed_nodes,
                         wrap_y=wrap_y,
@@ -10752,6 +10835,7 @@ def procedural_geometry_prediction_rows(
                                 high_degree_decomposition=high_degree_decomposition,
                                 high_degree_threshold_fractions=high_degree_threshold_fractions,
                                 soft_hub_exposure=soft_hub_exposure,
+                                neighbor_reach_threshold_fractions=neighbor_reach_threshold_fractions,
                             )
                         )
     prediction_rows.sort(key=lambda row: (row.rule_family, row.source_name))
@@ -10802,6 +10886,7 @@ def geometry_randomization_prediction_rows(
                     high_degree_decomposition,
                     high_degree_threshold_fractions,
                     soft_hub_exposure,
+                    neighbor_reach_threshold_fractions,
                 ) = local_shape_feature_bundle(
                     perturbed_nodes,
                     wrap_y=wrap_y,
@@ -10845,6 +10930,7 @@ def geometry_randomization_prediction_rows(
                             high_degree_decomposition=high_degree_decomposition,
                             high_degree_threshold_fractions=high_degree_threshold_fractions,
                             soft_hub_exposure=soft_hub_exposure,
+                            neighbor_reach_threshold_fractions=neighbor_reach_threshold_fractions,
                         )
                     )
     prediction_rows.sort(key=lambda row: (row.rule_family, row.source_name))
@@ -12370,6 +12456,72 @@ def soft_hub_exposure_benchmark(
             )
         )
     return exposure_rows
+
+
+def neighbor_reach_threshold_benchmark(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    geometry_variant_limit: int = 5,
+    procedural_variant_limit: int = 3,
+    procedural_rediscovery_limit: int = 1,
+    procedural_styles: tuple[str, ...] = ("walk", "mode-mix", "local-morph"),
+    basis_sizes: tuple[int, ...] = (3, 4, 5, 6, 7, 8),
+    reach_sets: tuple[tuple[str, tuple[str, ...], tuple[str, ...]], ...] | None = None,
+) -> list[HighDegreeDecompositionRow]:
+    base_features = rich_neighborhood_basis_feature_names()
+    if reach_sets is None:
+        reach_sets = neighbor_reach_threshold_sets()
+    reach_rows: list[HighDegreeDecompositionRow] = []
+    for reach_name, removed_features, added_features in reach_sets:
+        feature_names = [
+            feature for feature in base_features if feature not in set(removed_features)
+        ]
+        for feature in added_features:
+            if feature not in feature_names:
+                feature_names.append(feature)
+        residual_rows = neighborhood_basis_residual_benchmark(
+            retained_weight=retained_weight,
+            mode_retained_weight=mode_retained_weight,
+            geometry_variant_limit=geometry_variant_limit,
+            procedural_variant_limit=procedural_variant_limit,
+            procedural_rediscovery_limit=procedural_rediscovery_limit,
+            procedural_styles=procedural_styles,
+            basis_sizes=basis_sizes,
+            basis_feature_names=tuple(feature_names),
+        )
+        compact_rows = [row for row in residual_rows if row.rule_family == "compact"]
+        extended_rows = [row for row in residual_rows if row.rule_family == "extended"]
+        compact_parity, compact_best_prethreshold = parity_threshold_from_residual_rows(
+            compact_rows
+        )
+        extended_parity, extended_best_prethreshold = parity_threshold_from_residual_rows(
+            extended_rows
+        )
+        reach_rows.append(
+            HighDegreeDecompositionRow(
+                decomposition_name=reach_name,
+                feature_count=len(feature_names),
+                added_features=", ".join(added_features) if added_features else "-",
+                removed_features=", ".join(removed_features) if removed_features else "-",
+                compact_parity_size=(
+                    compact_parity.basis_size if compact_parity is not None else None
+                ),
+                compact_parity_feature_subset=(
+                    compact_parity.basis_feature_subset if compact_parity is not None else "-"
+                ),
+                compact_best_prethreshold_gap=compact_best_prethreshold.basis_minus_pocket_mean,
+                compact_best_prethreshold_worst_gap=compact_best_prethreshold.basis_minus_pocket_worst,
+                extended_parity_size=(
+                    extended_parity.basis_size if extended_parity is not None else None
+                ),
+                extended_parity_feature_subset=(
+                    extended_parity.basis_feature_subset if extended_parity is not None else "-"
+                ),
+                extended_best_prethreshold_gap=extended_best_prethreshold.basis_minus_pocket_mean,
+                extended_best_prethreshold_worst_gap=extended_best_prethreshold.basis_minus_pocket_worst,
+            )
+        )
+    return reach_rows
 
 
 def random_rediscovery_limit_sweep_summary(
