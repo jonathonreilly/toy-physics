@@ -3834,6 +3834,35 @@ def extended_proxy_route_sets() -> tuple[tuple[str, tuple[str, ...]], ...]:
                 "motif_deep_pocket_adjacent_fraction",
             ),
         ),
+        (
+            "no-high-no-pocket-family-no-low-degree",
+            (
+                "motif_high_degree_neighbor_fraction",
+                "motif_pocket_adjacent_fraction",
+                "motif_deep_pocket_adjacent_fraction",
+                "motif_low_degree_neighbor_fraction",
+            ),
+        ),
+        (
+            "no-high-no-pocket-family-no-two-hop",
+            (
+                "motif_high_degree_neighbor_fraction",
+                "motif_pocket_adjacent_fraction",
+                "motif_deep_pocket_adjacent_fraction",
+                "motif_two_hop_occupied_fraction",
+                "motif_two_hop_open_fraction",
+            ),
+        ),
+        (
+            "no-high-no-pocket-family-no-neighbor-moments",
+            (
+                "motif_high_degree_neighbor_fraction",
+                "motif_pocket_adjacent_fraction",
+                "motif_deep_pocket_adjacent_fraction",
+                "motif_mean_neighbor_degree",
+                "motif_neighbor_degree_variation",
+            ),
+        ),
     )
 
 
@@ -12637,6 +12666,15 @@ def classify_extended_proxy_family(feature_subset: str) -> tuple[str, str]:
     if not feature_subset or feature_subset == "-":
         return "none", "-"
     features = tuple(part.strip() for part in feature_subset.split(",") if part.strip())
+    has_low = any("low_degree" in feature for feature in features)
+    has_degree_profile = any(
+        feature.startswith("degree_")
+        or feature in {
+            "motif_mean_neighbor_degree",
+            "motif_neighbor_degree_variation",
+        }
+        for feature in features
+    )
     has_deep = any("deep_pocket" in feature for feature in features)
     has_pocket = any(
         "pocket_adjacent" in feature or feature == "pocket_fraction"
@@ -12652,6 +12690,12 @@ def classify_extended_proxy_family(feature_subset: str) -> tuple[str, str]:
         return "deep-pocket+hub", ", ".join(features)
     if has_deep:
         return "deep-pocket", ", ".join(features)
+    if has_low and has_pocket:
+        return "low-degree+pocket", ", ".join(features)
+    if has_low:
+        return "low-degree", ", ".join(features)
+    if has_degree_profile:
+        return "degree-profile", ", ".join(features)
     if has_pocket and has_hub:
         return "pocket+hub", ", ".join(features)
     if has_pocket:
