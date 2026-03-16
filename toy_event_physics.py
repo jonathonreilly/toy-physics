@@ -660,6 +660,8 @@ class RoughnessCoreSweepRow:
     high_degree_threshold_fractions: tuple[float, ...]
     soft_hub_exposure: tuple[float, ...]
     neighbor_reach_threshold_fractions: tuple[float, ...]
+    neighbor_leverage_threshold_fractions: tuple[float, ...]
+    threshold_exposure_decomposition: tuple[float, ...]
 
 
 @dataclass
@@ -708,6 +710,8 @@ class CenterlineModeSweepRow:
     high_degree_threshold_fractions: tuple[float, ...]
     soft_hub_exposure: tuple[float, ...]
     neighbor_reach_threshold_fractions: tuple[float, ...]
+    neighbor_leverage_threshold_fractions: tuple[float, ...]
+    threshold_exposure_decomposition: tuple[float, ...]
 
 
 @dataclass
@@ -839,6 +843,8 @@ class GeometryPredictionRow:
     high_degree_threshold_fractions: tuple[float, ...]
     soft_hub_exposure: tuple[float, ...]
     neighbor_reach_threshold_fractions: tuple[float, ...]
+    neighbor_leverage_threshold_fractions: tuple[float, ...]
+    threshold_exposure_decomposition: tuple[float, ...]
 
 
 @dataclass
@@ -3530,6 +3536,8 @@ def local_node_shape_metrics(
         _high_degree_threshold_fractions,
         _soft_hub_exposure,
         _neighbor_reach_threshold_fractions,
+        _neighbor_leverage_threshold_fractions,
+        _threshold_exposure_decomposition,
     ) = local_shape_feature_bundle(nodes, wrap_y=wrap_y)
     return (
         boundary_fraction,
@@ -3615,6 +3623,38 @@ def neighbor_reach_threshold_feature_names() -> tuple[str, ...]:
     )
 
 
+def neighbor_leverage_threshold_specs() -> tuple[tuple[str, float], ...]:
+    return (
+        ("linear85", 0.85),
+        ("linear90", 0.90),
+        ("product70", 0.70),
+        ("product80", 0.80),
+    )
+
+
+def neighbor_leverage_threshold_feature_names() -> tuple[str, ...]:
+    return tuple(
+        f"motif_neighbor_leverage_{label}_fraction"
+        for label, _threshold in neighbor_leverage_threshold_specs()
+    )
+
+
+def threshold_exposure_decomposition_specs() -> tuple[tuple[str, int, str], ...]:
+    return (
+        ("share6", 6, "share"),
+        ("count6", 6, "count"),
+        ("share7", 7, "share"),
+        ("count7", 7, "count"),
+    )
+
+
+def threshold_exposure_decomposition_feature_names() -> tuple[str, ...]:
+    return tuple(
+        f"motif_high_degree_neighbor_{label}_fraction"
+        for label, _threshold, _kind in threshold_exposure_decomposition_specs()
+    )
+
+
 def high_degree_decomposition_feature_names() -> tuple[str, ...]:
     return (
         "motif_high_degree_neighbor_share",
@@ -3645,6 +3685,14 @@ def rich_plus_soft_hub_exposure_feature_names() -> tuple[str, ...]:
 
 def rich_plus_neighbor_reach_threshold_feature_names() -> tuple[str, ...]:
     return rich_neighborhood_basis_feature_names() + neighbor_reach_threshold_feature_names()
+
+
+def rich_plus_neighbor_leverage_threshold_feature_names() -> tuple[str, ...]:
+    return rich_neighborhood_basis_feature_names() + neighbor_leverage_threshold_feature_names()
+
+
+def rich_plus_threshold_exposure_decomposition_feature_names() -> tuple[str, ...]:
+    return rich_neighborhood_basis_feature_names() + threshold_exposure_decomposition_feature_names()
 
 
 def rich_neighborhood_basis_ablation_sets() -> tuple[tuple[str, tuple[str, ...]], ...]:
@@ -3812,6 +3860,56 @@ def neighbor_reach_threshold_sets() -> tuple[tuple[str, tuple[str, ...], tuple[s
     return tuple(rows)
 
 
+def neighbor_leverage_threshold_sets() -> tuple[tuple[str, tuple[str, ...], tuple[str, ...]], ...]:
+    removed = ("motif_high_degree_neighbor_fraction",)
+    rows: list[tuple[str, tuple[str, ...], tuple[str, ...]]] = [
+        ("full-rich", tuple(), tuple()),
+        ("no-high-degree", removed, tuple()),
+    ]
+    for feature_name in neighbor_leverage_threshold_feature_names():
+        label = feature_name[len("motif_neighbor_leverage_") : -len("_fraction")]
+        rows.append(
+            (
+                f"replace-high-with-{label}",
+                removed,
+                (feature_name,),
+            )
+        )
+    rows.append(
+        (
+            "replace-high-with-leverage-bundle",
+            removed,
+            neighbor_leverage_threshold_feature_names(),
+        )
+    )
+    return tuple(rows)
+
+
+def threshold_exposure_decomposition_sets() -> tuple[tuple[str, tuple[str, ...], tuple[str, ...]], ...]:
+    removed = ("motif_high_degree_neighbor_fraction",)
+    rows: list[tuple[str, tuple[str, ...], tuple[str, ...]]] = [
+        ("full-rich", tuple(), tuple()),
+        ("no-high-degree", removed, tuple()),
+    ]
+    for feature_name in threshold_exposure_decomposition_feature_names():
+        label = feature_name[len("motif_high_degree_neighbor_") : -len("_fraction")]
+        rows.append(
+            (
+                f"replace-high-with-{label}",
+                removed,
+                (feature_name,),
+            )
+        )
+    rows.append(
+        (
+            "replace-high-with-threshold-exposure-bundle",
+            removed,
+            threshold_exposure_decomposition_feature_names(),
+        )
+    )
+    return tuple(rows)
+
+
 def local_shape_feature_bundle(
     nodes: set[tuple[int, int]],
     wrap_y: bool = False,
@@ -3820,6 +3918,8 @@ def local_shape_feature_bundle(
     float,
     float,
     float,
+    tuple[float, ...],
+    tuple[float, ...],
     tuple[float, ...],
     tuple[float, ...],
     tuple[float, ...],
@@ -3876,6 +3976,8 @@ def local_shape_feature_bundle(
     soft_quadratic_5_8_total = 0.0
     soft_quadratic_6_8_total = 0.0
     neighbor_reach_threshold_counts = [0 for _threshold in neighbor_reach_thresholds()]
+    neighbor_leverage_threshold_counts = [0 for _spec in neighbor_leverage_threshold_specs()]
+    threshold_exposure_totals = [0.0 for _spec in threshold_exposure_decomposition_specs()]
     mean_neighbor_degree_total = 0.0
     neighbor_degree_variation_total = 0.0
     two_hop_occupied_total = 0.0
@@ -3902,12 +4004,37 @@ def local_shape_feature_bundle(
                 max(0.0, min(1.0, (degree - 6.0) / 2.0))
                 for degree in neighbor_degrees
             ]
+            neighbor_linear_leverage = [
+                0.5 * ((degree_map[neighbor] / 8.0) + (reach_map[neighbor] / 24.0))
+                for neighbor in neighbors
+            ]
+            neighbor_product_leverage = [
+                (degree_map[neighbor] / 8.0) * (reach_map[neighbor] / 24.0)
+                for neighbor in neighbors
+            ]
             high_degree_neighbor_hits = sum(degree >= 7 for degree in neighbor_degrees)
             high_degree_neighbor_share_total += (
                 high_degree_neighbor_hits / len(neighbor_degrees)
             )
             high_degree_neighbor_count_total += high_degree_neighbor_hits / 8.0
             max_neighbor_degree_total += max(neighbor_degrees) / 8.0
+            leverage_values_by_label = {
+                "linear85": neighbor_linear_leverage,
+                "linear90": neighbor_linear_leverage,
+                "product70": neighbor_product_leverage,
+                "product80": neighbor_product_leverage,
+            }
+            for index, (label, threshold) in enumerate(neighbor_leverage_threshold_specs()):
+                if any(value >= threshold for value in leverage_values_by_label[label]):
+                    neighbor_leverage_threshold_counts[index] += 1
+            for index, (_label, threshold, kind) in enumerate(
+                threshold_exposure_decomposition_specs()
+            ):
+                hits = sum(degree >= threshold for degree in neighbor_degrees)
+                if kind == "share":
+                    threshold_exposure_totals[index] += hits / len(neighbor_degrees)
+                else:
+                    threshold_exposure_totals[index] += hits / 8.0
             soft_linear_5_8_total += sum(linear_5_8_values) / len(linear_5_8_values)
             soft_linear_6_8_total += sum(linear_6_8_values) / len(linear_6_8_values)
             soft_quadratic_5_8_total += (
@@ -3961,6 +4088,12 @@ def local_shape_feature_bundle(
     neighbor_reach_threshold_fractions = tuple(
         count / total_nodes for count in neighbor_reach_threshold_counts
     )
+    neighbor_leverage_threshold_fractions = tuple(
+        count / total_nodes for count in neighbor_leverage_threshold_counts
+    )
+    threshold_exposure_decomposition = tuple(
+        total / total_nodes for total in threshold_exposure_totals
+    )
 
     return (
         boundary_fraction,
@@ -3973,6 +4106,8 @@ def local_shape_feature_bundle(
         high_degree_threshold_fractions,
         soft_hub_exposure,
         neighbor_reach_threshold_fractions,
+        neighbor_leverage_threshold_fractions,
+        threshold_exposure_decomposition,
     )
 
 
@@ -9590,6 +9725,8 @@ def roughness_core_sweep(
             high_degree_threshold_fractions,
             soft_hub_exposure,
             neighbor_reach_threshold_fractions,
+            neighbor_leverage_threshold_fractions,
+            threshold_exposure_decomposition,
         ) = local_shape_feature_bundle(sweep_nodes)
         for rule_family, count_options in family_count_options():
             for retained_weight in retained_weights:
@@ -9636,6 +9773,8 @@ def roughness_core_sweep(
                         high_degree_threshold_fractions=high_degree_threshold_fractions,
                         soft_hub_exposure=soft_hub_exposure,
                         neighbor_reach_threshold_fractions=neighbor_reach_threshold_fractions,
+                        neighbor_leverage_threshold_fractions=neighbor_leverage_threshold_fractions,
+                        threshold_exposure_decomposition=threshold_exposure_decomposition,
                     )
                 )
 
@@ -9774,6 +9913,8 @@ def centerline_mode_core_sweep(
                 high_degree_threshold_fractions,
                 soft_hub_exposure,
                 neighbor_reach_threshold_fractions,
+                neighbor_leverage_threshold_fractions,
+                threshold_exposure_decomposition,
             ) = local_shape_feature_bundle(sweep_nodes)
             for rule_family, count_options in family_count_options():
                 for retained_weight in retained_weights:
@@ -9821,6 +9962,8 @@ def centerline_mode_core_sweep(
                             high_degree_threshold_fractions=high_degree_threshold_fractions,
                             soft_hub_exposure=soft_hub_exposure,
                             neighbor_reach_threshold_fractions=neighbor_reach_threshold_fractions,
+                            neighbor_leverage_threshold_fractions=neighbor_leverage_threshold_fractions,
+                            threshold_exposure_decomposition=threshold_exposure_decomposition,
                         )
                     )
 
@@ -9971,6 +10114,12 @@ def decision_feature_value(
     if feature in neighbor_reach_threshold_feature_names():
         reach_index = neighbor_reach_threshold_feature_names().index(feature)
         return row.neighbor_reach_threshold_fractions[reach_index]
+    if feature in neighbor_leverage_threshold_feature_names():
+        leverage_index = neighbor_leverage_threshold_feature_names().index(feature)
+        return row.neighbor_leverage_threshold_fractions[leverage_index]
+    if feature in threshold_exposure_decomposition_feature_names():
+        exposure_index = threshold_exposure_decomposition_feature_names().index(feature)
+        return row.threshold_exposure_decomposition[exposure_index]
     raise ValueError(f"Unknown decision-tree feature: {feature}")
 
 
@@ -10129,6 +10278,12 @@ def format_tiny_decision_tree(
         neighbor_reach_threshold_feature_names(),
     ):
         feature_labels[feature_name] = f"reach{threshold}"
+    for feature_name in neighbor_leverage_threshold_feature_names():
+        label = feature_name[len("motif_neighbor_leverage_") : -len("_fraction")]
+        feature_labels[feature_name] = label
+    for feature_name in threshold_exposure_decomposition_feature_names():
+        label = feature_name[len("motif_high_degree_neighbor_") : -len("_fraction")]
+        feature_labels[feature_name] = label
     if tree.feature.startswith("degree_") and tree.feature.endswith("_fraction"):
         feature_labels[tree.feature] = f"deg{tree.feature[len('degree_'):-len('_fraction')]}"
     threshold = f"{tree.threshold:.2f}" if tree.feature != "crosses_midline" else "0.5"
@@ -10395,6 +10550,12 @@ def format_ordinal_score_model(
         neighbor_reach_threshold_feature_names(),
     ):
         feature_labels[feature_name] = f"reach{threshold}"
+    for feature_name in neighbor_leverage_threshold_feature_names():
+        label = feature_name[len("motif_neighbor_leverage_") : -len("_fraction")]
+        feature_labels[feature_name] = label
+    for feature_name in threshold_exposure_decomposition_feature_names():
+        label = feature_name[len("motif_high_degree_neighbor_") : -len("_fraction")]
+        feature_labels[feature_name] = label
     for feature in model.feature_names:
         if feature.startswith("degree_") and feature.endswith("_fraction"):
             feature_labels[feature] = f"deg{feature[len('degree_'):-len('_fraction')]}"
@@ -10632,6 +10793,8 @@ def geometry_prediction_rows_from_mode(
                 high_degree_threshold_fractions=row.high_degree_threshold_fractions,
                 soft_hub_exposure=row.soft_hub_exposure,
                 neighbor_reach_threshold_fractions=row.neighbor_reach_threshold_fractions,
+                neighbor_leverage_threshold_fractions=row.neighbor_leverage_threshold_fractions,
+                threshold_exposure_decomposition=row.threshold_exposure_decomposition,
             )
         )
     rows.sort(key=lambda row: (row.rule_family, row.source_name))
@@ -10669,6 +10832,8 @@ def geometry_prediction_rows_from_roughness(
                 high_degree_threshold_fractions=row.high_degree_threshold_fractions,
                 soft_hub_exposure=row.soft_hub_exposure,
                 neighbor_reach_threshold_fractions=row.neighbor_reach_threshold_fractions,
+                neighbor_leverage_threshold_fractions=row.neighbor_leverage_threshold_fractions,
+                threshold_exposure_decomposition=row.threshold_exposure_decomposition,
             )
         )
     rows.sort(key=lambda row: (row.rule_family, row.source_name))
@@ -10792,6 +10957,8 @@ def procedural_geometry_prediction_rows(
                         high_degree_threshold_fractions,
                         soft_hub_exposure,
                         neighbor_reach_threshold_fractions,
+                        neighbor_leverage_threshold_fractions,
+                        threshold_exposure_decomposition,
                     ) = local_shape_feature_bundle(
                         perturbed_nodes,
                         wrap_y=wrap_y,
@@ -10836,6 +11003,8 @@ def procedural_geometry_prediction_rows(
                                 high_degree_threshold_fractions=high_degree_threshold_fractions,
                                 soft_hub_exposure=soft_hub_exposure,
                                 neighbor_reach_threshold_fractions=neighbor_reach_threshold_fractions,
+                                neighbor_leverage_threshold_fractions=neighbor_leverage_threshold_fractions,
+                                threshold_exposure_decomposition=threshold_exposure_decomposition,
                             )
                         )
     prediction_rows.sort(key=lambda row: (row.rule_family, row.source_name))
@@ -10887,6 +11056,8 @@ def geometry_randomization_prediction_rows(
                     high_degree_threshold_fractions,
                     soft_hub_exposure,
                     neighbor_reach_threshold_fractions,
+                    neighbor_leverage_threshold_fractions,
+                    threshold_exposure_decomposition,
                 ) = local_shape_feature_bundle(
                     perturbed_nodes,
                     wrap_y=wrap_y,
@@ -10931,6 +11102,8 @@ def geometry_randomization_prediction_rows(
                             high_degree_threshold_fractions=high_degree_threshold_fractions,
                             soft_hub_exposure=soft_hub_exposure,
                             neighbor_reach_threshold_fractions=neighbor_reach_threshold_fractions,
+                            neighbor_leverage_threshold_fractions=neighbor_leverage_threshold_fractions,
+                            threshold_exposure_decomposition=threshold_exposure_decomposition,
                         )
                     )
     prediction_rows.sort(key=lambda row: (row.rule_family, row.source_name))
@@ -12522,6 +12695,138 @@ def neighbor_reach_threshold_benchmark(
             )
         )
     return reach_rows
+
+
+def neighbor_leverage_threshold_benchmark(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    geometry_variant_limit: int = 5,
+    procedural_variant_limit: int = 3,
+    procedural_rediscovery_limit: int = 1,
+    procedural_styles: tuple[str, ...] = ("walk", "mode-mix", "local-morph"),
+    basis_sizes: tuple[int, ...] = (3, 4, 5, 6, 7, 8),
+    leverage_sets: tuple[tuple[str, tuple[str, ...], tuple[str, ...]], ...] | None = None,
+) -> list[HighDegreeDecompositionRow]:
+    base_features = rich_neighborhood_basis_feature_names()
+    if leverage_sets is None:
+        leverage_sets = neighbor_leverage_threshold_sets()
+    leverage_rows: list[HighDegreeDecompositionRow] = []
+    for leverage_name, removed_features, added_features in leverage_sets:
+        feature_names = [
+            feature for feature in base_features if feature not in set(removed_features)
+        ]
+        for feature in added_features:
+            if feature not in feature_names:
+                feature_names.append(feature)
+        residual_rows = neighborhood_basis_residual_benchmark(
+            retained_weight=retained_weight,
+            mode_retained_weight=mode_retained_weight,
+            geometry_variant_limit=geometry_variant_limit,
+            procedural_variant_limit=procedural_variant_limit,
+            procedural_rediscovery_limit=procedural_rediscovery_limit,
+            procedural_styles=procedural_styles,
+            basis_sizes=basis_sizes,
+            basis_feature_names=tuple(feature_names),
+        )
+        compact_rows = [row for row in residual_rows if row.rule_family == "compact"]
+        extended_rows = [row for row in residual_rows if row.rule_family == "extended"]
+        compact_parity, compact_best_prethreshold = parity_threshold_from_residual_rows(
+            compact_rows
+        )
+        extended_parity, extended_best_prethreshold = parity_threshold_from_residual_rows(
+            extended_rows
+        )
+        leverage_rows.append(
+            HighDegreeDecompositionRow(
+                decomposition_name=leverage_name,
+                feature_count=len(feature_names),
+                added_features=", ".join(added_features) if added_features else "-",
+                removed_features=", ".join(removed_features) if removed_features else "-",
+                compact_parity_size=(
+                    compact_parity.basis_size if compact_parity is not None else None
+                ),
+                compact_parity_feature_subset=(
+                    compact_parity.basis_feature_subset if compact_parity is not None else "-"
+                ),
+                compact_best_prethreshold_gap=compact_best_prethreshold.basis_minus_pocket_mean,
+                compact_best_prethreshold_worst_gap=compact_best_prethreshold.basis_minus_pocket_worst,
+                extended_parity_size=(
+                    extended_parity.basis_size if extended_parity is not None else None
+                ),
+                extended_parity_feature_subset=(
+                    extended_parity.basis_feature_subset if extended_parity is not None else "-"
+                ),
+                extended_best_prethreshold_gap=extended_best_prethreshold.basis_minus_pocket_mean,
+                extended_best_prethreshold_worst_gap=extended_best_prethreshold.basis_minus_pocket_worst,
+            )
+        )
+    return leverage_rows
+
+
+def threshold_exposure_decomposition_benchmark(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    geometry_variant_limit: int = 5,
+    procedural_variant_limit: int = 3,
+    procedural_rediscovery_limit: int = 1,
+    procedural_styles: tuple[str, ...] = ("walk", "mode-mix", "local-morph"),
+    basis_sizes: tuple[int, ...] = (3, 4, 5, 6, 7, 8),
+    exposure_sets: tuple[tuple[str, tuple[str, ...], tuple[str, ...]], ...] | None = None,
+) -> list[HighDegreeDecompositionRow]:
+    base_features = rich_neighborhood_basis_feature_names()
+    if exposure_sets is None:
+        exposure_sets = threshold_exposure_decomposition_sets()
+    exposure_rows: list[HighDegreeDecompositionRow] = []
+    for exposure_name, removed_features, added_features in exposure_sets:
+        feature_names = [
+            feature for feature in base_features if feature not in set(removed_features)
+        ]
+        for feature in added_features:
+            if feature not in feature_names:
+                feature_names.append(feature)
+        residual_rows = neighborhood_basis_residual_benchmark(
+            retained_weight=retained_weight,
+            mode_retained_weight=mode_retained_weight,
+            geometry_variant_limit=geometry_variant_limit,
+            procedural_variant_limit=procedural_variant_limit,
+            procedural_rediscovery_limit=procedural_rediscovery_limit,
+            procedural_styles=procedural_styles,
+            basis_sizes=basis_sizes,
+            basis_feature_names=tuple(feature_names),
+        )
+        compact_rows = [row for row in residual_rows if row.rule_family == "compact"]
+        extended_rows = [row for row in residual_rows if row.rule_family == "extended"]
+        compact_parity, compact_best_prethreshold = parity_threshold_from_residual_rows(
+            compact_rows
+        )
+        extended_parity, extended_best_prethreshold = parity_threshold_from_residual_rows(
+            extended_rows
+        )
+        exposure_rows.append(
+            HighDegreeDecompositionRow(
+                decomposition_name=exposure_name,
+                feature_count=len(feature_names),
+                added_features=", ".join(added_features) if added_features else "-",
+                removed_features=", ".join(removed_features) if removed_features else "-",
+                compact_parity_size=(
+                    compact_parity.basis_size if compact_parity is not None else None
+                ),
+                compact_parity_feature_subset=(
+                    compact_parity.basis_feature_subset if compact_parity is not None else "-"
+                ),
+                compact_best_prethreshold_gap=compact_best_prethreshold.basis_minus_pocket_mean,
+                compact_best_prethreshold_worst_gap=compact_best_prethreshold.basis_minus_pocket_worst,
+                extended_parity_size=(
+                    extended_parity.basis_size if extended_parity is not None else None
+                ),
+                extended_parity_feature_subset=(
+                    extended_parity.basis_feature_subset if extended_parity is not None else "-"
+                ),
+                extended_best_prethreshold_gap=extended_best_prethreshold.basis_minus_pocket_mean,
+                extended_best_prethreshold_worst_gap=extended_best_prethreshold.basis_minus_pocket_worst,
+            )
+        )
+    return exposure_rows
 
 
 def random_rediscovery_limit_sweep_summary(

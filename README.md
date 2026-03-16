@@ -301,6 +301,13 @@ What the current script demonstrates:
 - That graph-native centrality family does not reproduce the shared degree-threshold result. `reach-14` recovers `extended` parity at `5` but leaves `compact` back at `7`; `reach-24` does something different again, improving `extended` to `4` while still leaving `compact` only at `6`.
 - The full reach bundle also fails to recover the original mechanism, never regaining clean `compact` parity and only reaching `extended` parity at `6`.
 - So the current best claim is narrower again: the load-bearing signal is not just “some graph-native local centrality.” Immediate near-hub degree thresholds around `6..7` still explain the behavior better than thresholded second-hop reach.
+- A thirty-sixth diagnostic then tests a mixed `degree + reach` leverage family, using both linear and product scores on neighboring nodes.
+- That family fails cleanly. None of the leverage variants recover either family, and even the full leverage bundle never regains clean parity in `compact` or `extended`.
+- So the mechanism does not look like a smooth first-hop-plus-second-hop blend either. The immediate thresholded near-hub signal still explains the behavior better than these mixed leverage proxies.
+- A thirty-seventh diagnostic then asks the sharper existential question directly: if `ge_6` and `ge_7` work, is the important part the threshold itself, or the binary “any such neighbor exists” form?
+- The answer is now quite crisp. Thresholded `share` and `count` features at both `6` and `7` fail to recover the shared result: `share6` preserves `extended` but leaves `compact` at `7`, while `count6`, `share7`, and `count7` all lose clean `extended` parity as well.
+- Even the full threshold-exposure bundle fails to restore the original behavior, never regaining clean `compact` parity and only recovering `extended` through a proxy-style mixed subset.
+- So the current strongest mechanism claim is: the load-bearing coordinate is not just “near-hub exposure around thresholds 6..7.” It is specifically a binary near-hub existence condition in the immediate neighborhood.
 - With that repair in place, `extended` still produces the larger average boundary-delay span, while the reduced `compact` family keeps a slightly larger average center gap.
 - The earlier `skew-wrap` miss is now understood as a legacy reduced-family coverage bug, not as a deep compact-vs-extended ontology split.
 - The failure-mode story is still useful history: before the repair, skewed cases mostly failed by producing empty or fragmented candidate patterns, not by hitting the boundary filter, which pointed more toward pattern formation than boundary selection.
