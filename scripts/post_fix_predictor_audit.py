@@ -14,6 +14,7 @@ if str(REPO_ROOT) not in sys.path:
 
 from toy_event_physics import (  # noqa: E402
     cross_dataset_subset_pareto_benchmark,
+    cross_dataset_subset_depth_ablation,
     cross_dataset_transfer_benchmark,
     generated_geometry_feature_expansion_benchmark,
     generated_geometry_predictor_comparison,
@@ -25,6 +26,7 @@ from toy_event_physics import (  # noqa: E402
     neighborhood_basis_residual_benchmark,
     ordinal_variant_comparison,
     predictor_family_comparison,
+    render_cross_dataset_depth_ablation_table,
     render_cross_dataset_subset_pareto_table,
     render_cross_dataset_transfer_table,
     render_generated_feature_expansion_table,
@@ -165,6 +167,12 @@ def main() -> None:
         cross_dataset_subset_pareto_benchmark,
     )
     print(render_cross_dataset_subset_pareto_table(subset_rows, limit_per_family=8))
+
+    depth_rows = timed_section(
+        "Cross-Dataset Depth Ablation",
+        cross_dataset_subset_depth_ablation,
+    )
+    print(render_cross_dataset_depth_ablation_table(depth_rows))
 
     predictor_rows = timed_section(
         "Predictor Family Comparison",
