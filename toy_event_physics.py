@@ -10851,9 +10851,12 @@ def build_cross_dataset_prediction_context(
     list[GeometryPredictionRow],
     list[GeometryPredictionRow],
 ]:
+    effective_mode_retained_weight = (
+        retained_weight if mode_retained_weight is None else mode_retained_weight
+    )
     cache_key = (
         retained_weight,
-        mode_retained_weight,
+        effective_mode_retained_weight,
         procedural_variant_limit,
         procedural_rediscovery_limit,
     )
@@ -10872,12 +10875,9 @@ def build_cross_dataset_prediction_context(
             list(procedural_rows),
         )
 
-    if mode_retained_weight is None:
-        mode_core_rows, _mode_aggregate = centerline_mode_core_sweep()
-    else:
-        mode_core_rows, _mode_aggregate = centerline_mode_core_sweep(
-            retained_weights=(mode_retained_weight,),
-        )
+    mode_core_rows, _mode_aggregate = centerline_mode_core_sweep(
+        retained_weights=(effective_mode_retained_weight,),
+    )
     roughness_rows, _roughness_aggregate = roughness_core_sweep(
         retained_weights=(retained_weight,),
     )
@@ -10888,7 +10888,7 @@ def build_cross_dataset_prediction_context(
     )
     mode_prediction_rows = geometry_prediction_rows_from_mode(
         mode_core_rows,
-        retained_weight=mode_retained_weight,
+        retained_weight=effective_mode_retained_weight,
     )
     roughness_prediction_rows = geometry_prediction_rows_from_roughness(
         roughness_rows,
@@ -11476,6 +11476,73 @@ def compress_redundant_subset_frontier_rows(
     return compressed_rows
 
 
+def mode_only_subset_frontier_rows(
+    subset_rows: list[CenterlineFeatureSubsetRow],
+) -> list[CenterlineFeatureSubsetRow]:
+    frontier_rows: list[CenterlineFeatureSubsetRow] = []
+    mode_axes = ("cv_accuracy", "min_mode_accuracy", "train_accuracy")
+    for rule_family in ("compact", "extended"):
+        family_rows = [
+            row for row in subset_rows if row.rule_family == rule_family
+        ]
+        for row in family_rows:
+            if not any(
+                dominates_subset_row(other_row, row, mode_axes)
+                for other_row in family_rows
+                if other_row.feature_subset != row.feature_subset
+            ):
+                frontier_rows.append(row)
+    frontier_rows.sort(
+        key=lambda row: (
+            row.rule_family,
+            -row.cv_accuracy,
+            -row.min_mode_accuracy,
+            -row.train_accuracy,
+            row.subset_size,
+            row.feature_subset,
+        )
+    )
+    return frontier_rows
+
+
+def compress_redundant_mode_subset_frontier_rows(
+    rows: list[CenterlineFeatureSubsetRow],
+) -> list[CenterlineFeatureSubsetRow]:
+    best_by_key: dict[
+        tuple[str, float, float, float, str],
+        CenterlineFeatureSubsetRow,
+    ] = {}
+    for row in rows:
+        key = (
+            row.rule_family,
+            row.cv_accuracy,
+            row.min_mode_accuracy,
+            row.train_accuracy,
+            row.tree_description,
+        )
+        incumbent = best_by_key.get(key)
+        if incumbent is None or (
+            row.subset_size < incumbent.subset_size
+            or (
+                row.subset_size == incumbent.subset_size
+                and row.feature_subset < incumbent.feature_subset
+            )
+        ):
+            best_by_key[key] = row
+    compressed_rows = list(best_by_key.values())
+    compressed_rows.sort(
+        key=lambda row: (
+            row.rule_family,
+            -row.cv_accuracy,
+            -row.min_mode_accuracy,
+            -row.train_accuracy,
+            row.subset_size,
+            row.feature_subset,
+        )
+    )
+    return compressed_rows
+
+
 def subset_frontier_behavior_key(
     row: CrossDatasetSubsetRow,
 ) -> tuple[bool, bool, float, float, float, float, float, str]:
@@ -11593,19 +11660,19 @@ def cross_dataset_subset_depth_ablation(
 
 def structural_feature_subset_candidates(
     subset_rows: list[CenterlineFeatureSubsetRow],
-    compressed_pareto_rows: list[CrossDatasetSubsetRow],
+    mode_frontier_rows: list[CenterlineFeatureSubsetRow],
     top_k_subset_rows: int = 3,
 ) -> dict[str, list[tuple[str, ...]]]:
     candidates: dict[str, list[tuple[str, ...]]] = {"compact": [], "extended": []}
     for rule_family in ("compact", "extended"):
         signatures: list[tuple[str, ...]] = []
-        family_compressed = [
-            row for row in compressed_pareto_rows if row.rule_family == rule_family
+        family_frontier = [
+            row for row in mode_frontier_rows if row.rule_family == rule_family
         ]
         family_subset_rows = [
             row for row in subset_rows if row.rule_family == rule_family
         ]
-        for row in family_compressed:
+        for row in family_frontier:
             signatures.append(parse_feature_signature(row.feature_subset))
         for row in family_subset_rows[:top_k_subset_rows]:
             signatures.append(parse_feature_signature(row.feature_subset))
@@ -11653,10 +11720,12 @@ def predictor_family_comparison(
         max_subset_size=max_subset_size,
         max_depth=2,
     )
-    compressed_pareto_rows = compress_redundant_subset_frontier_rows(subset_pareto_rows)
+    mode_frontier_rows = compress_redundant_mode_subset_frontier_rows(
+        mode_only_subset_frontier_rows(subset_rows)
+    )
     candidate_map = structural_feature_subset_candidates(
         subset_rows,
-        compressed_pareto_rows,
+        mode_frontier_rows,
         top_k_subset_rows=top_k_subset_rows,
     )
     subset_index = {
@@ -11766,18 +11835,12 @@ def ordinal_variant_comparison(
         max_subset_size=max_subset_size,
         max_depth=2,
     )
-    subset_pareto_rows = cross_dataset_subset_pareto_from_rows(
-        mode_core_rows=mode_core_rows,
-        mode_prediction_rows=mode_prediction_rows,
-        roughness_prediction_rows=roughness_prediction_rows,
-        procedural_rows=procedural_rows,
-        max_subset_size=max_subset_size,
-        max_depth=2,
+    mode_frontier_rows = compress_redundant_mode_subset_frontier_rows(
+        mode_only_subset_frontier_rows(subset_rows)
     )
-    compressed_pareto_rows = compress_redundant_subset_frontier_rows(subset_pareto_rows)
     candidate_map = structural_feature_subset_candidates(
         subset_rows,
-        compressed_pareto_rows,
+        mode_frontier_rows,
         top_k_subset_rows=top_k_subset_rows,
     )
     variant_specs = (
@@ -11887,10 +11950,12 @@ def generated_geometry_predictor_comparison(
         max_subset_size=max_subset_size,
         max_depth=2,
     )
-    compressed_pareto_rows = compress_redundant_subset_frontier_rows(subset_pareto_rows)
+    mode_frontier_rows = compress_redundant_mode_subset_frontier_rows(
+        mode_only_subset_frontier_rows(subset_rows)
+    )
     candidate_map = structural_feature_subset_candidates(
         subset_rows,
-        compressed_pareto_rows,
+        mode_frontier_rows,
         top_k_subset_rows=top_k_subset_rows,
     )
     variant_specs = (
