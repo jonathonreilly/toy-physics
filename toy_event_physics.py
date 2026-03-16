@@ -1026,6 +1026,31 @@ class HighDegreeDecompositionRow:
     extended_best_prethreshold_worst_gap: float
 
 
+@dataclass
+class MechanismSplitRow:
+    benchmark_name: str
+    mechanism_name: str
+    compact_parity_size: int | None
+    compact_parity_feature_subset: str
+    extended_parity_size: int | None
+    extended_parity_feature_subset: str
+    compact_fast: bool
+    extended_fast: bool
+    same_feature_signature: bool
+    split_class: str
+    compact_best_prethreshold_gap: float
+    compact_best_prethreshold_worst_gap: float
+    extended_best_prethreshold_gap: float
+    extended_best_prethreshold_worst_gap: float
+
+
+@dataclass
+class MechanismSplitAggregateRow:
+    benchmark_name: str
+    split_class: str
+    cases: int
+
+
 _cross_dataset_prediction_context_cache: dict[
     tuple[float, float | None, int, int],
     tuple[
@@ -10294,6 +10319,56 @@ def format_tiny_decision_tree(
     )
 
 
+def abbreviate_feature_subset(feature_subset: str) -> str:
+    if not feature_subset or feature_subset == "-":
+        return "-"
+    feature_labels = {
+        "center_variation": "cvar",
+        "center_range": "crange",
+        "span_range": "srange",
+        "turning_points": "turns",
+        "max_step_fraction": "stepfrac",
+        "crosses_midline": "cross",
+        "boundary_fraction": "bfrac",
+        "pocket_fraction": "pocket",
+        "boundary_roughness": "brough",
+        "deep_pocket_fraction": "dpocket",
+        "motif_pocket_adjacent_fraction": "padj",
+        "motif_deep_pocket_adjacent_fraction": "dpadj",
+        "motif_low_degree_neighbor_fraction": "lowdegN",
+        "motif_high_degree_neighbor_fraction": "highdegN",
+        "motif_high_degree_neighbor_share": "highshare",
+        "motif_high_degree_neighbor_count_mean": "highcount",
+        "motif_max_neighbor_degree": "maxNdeg",
+        "motif_mean_neighbor_degree": "mdegN",
+        "motif_neighbor_degree_variation": "vdegN",
+        "motif_two_hop_occupied_fraction": "hop2occ",
+        "motif_two_hop_open_fraction": "hop2open",
+    }
+    for threshold, feature_name in zip(
+        high_degree_thresholds(),
+        high_degree_threshold_feature_names(),
+    ):
+        feature_labels[feature_name] = f"highge{threshold}"
+    for feature_name in neighbor_reach_threshold_feature_names():
+        threshold = feature_name[len("motif_neighbor_reach_ge_") : -len("_fraction")]
+        feature_labels[feature_name] = f"reach{threshold}"
+    for feature_name in neighbor_leverage_threshold_feature_names():
+        label = feature_name[len("motif_neighbor_leverage_") : -len("_fraction")]
+        feature_labels[feature_name] = label
+    for feature_name in threshold_exposure_decomposition_feature_names():
+        label = feature_name[len("motif_high_degree_neighbor_") : -len("_fraction")]
+        feature_labels[feature_name] = label
+    parts = [part.strip() for part in feature_subset.split(",") if part.strip()]
+    abbreviations = []
+    for part in parts:
+        if part.startswith("degree_") and part.endswith("_fraction"):
+            abbreviations.append(f"deg{part[len('degree_'):-len('_fraction')]}")
+        else:
+            abbreviations.append(feature_labels.get(part, part))
+    return ", ".join(abbreviations)
+
+
 def fit_ordinal_score_model(
     rows: list[CenterlineModeSweepRow] | list[GeometryPredictionRow],
     feature_names: tuple[str, ...],
@@ -12894,6 +12969,325 @@ def threshold_exposure_decomposition_benchmark(
     return exposure_rows
 
 
+def _normalized_feature_signature(feature_subset: str) -> tuple[str, ...]:
+    if not feature_subset or feature_subset == "-":
+        return tuple()
+    return tuple(sorted(part.strip() for part in feature_subset.split(",") if part.strip()))
+
+
+def _mechanism_split_class(
+    compact_parity_size: int | None,
+    compact_feature_subset: str,
+    extended_parity_size: int | None,
+    extended_feature_subset: str,
+    fast_parity_size: int = 3,
+) -> tuple[bool, bool, bool, str]:
+    compact_fast = compact_parity_size is not None and compact_parity_size <= fast_parity_size
+    extended_fast = extended_parity_size is not None and extended_parity_size <= fast_parity_size
+    same_feature_signature = (
+        compact_fast
+        and extended_fast
+        and _normalized_feature_signature(compact_feature_subset)
+        == _normalized_feature_signature(extended_feature_subset)
+    )
+    if compact_fast and extended_fast:
+        split_class = "shared-same" if same_feature_signature else "shared-proxy"
+    elif compact_fast:
+        split_class = "compact-only"
+    elif extended_fast:
+        split_class = "extended-only"
+    else:
+        split_class = "neither"
+    return compact_fast, extended_fast, same_feature_signature, split_class
+
+
+def broader_hub_mechanism_rows(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    geometry_variant_limit: int = 7,
+    procedural_variant_limit: int = 4,
+    procedural_rediscovery_limit: int = 1,
+    procedural_styles: tuple[str, ...] = ("walk", "mode-mix", "local-morph"),
+) -> list[tuple[str, HighDegreeDecompositionRow]]:
+    row_specs = [
+        (
+            "degree:full-rich",
+            high_degree_threshold_benchmark,
+            {"threshold_sets": (("full-rich", tuple(), tuple()),)},
+        ),
+        (
+            "degree:ge-6",
+            high_degree_threshold_benchmark,
+            {
+                "threshold_sets": (
+                    (
+                        "replace-high-with-ge-6",
+                        ("motif_high_degree_neighbor_fraction",),
+                        ("motif_high_degree_neighbor_ge_6_fraction",),
+                    ),
+                )
+            },
+        ),
+        (
+            "degree:ge-7",
+            high_degree_threshold_benchmark,
+            {
+                "threshold_sets": (
+                    (
+                        "replace-high-with-ge-7",
+                        ("motif_high_degree_neighbor_fraction",),
+                        ("motif_high_degree_neighbor_ge_7_fraction",),
+                    ),
+                )
+            },
+        ),
+        (
+            "exposure:share6",
+            threshold_exposure_decomposition_benchmark,
+            {
+                "exposure_sets": (
+                    (
+                        "replace-high-with-share6",
+                        ("motif_high_degree_neighbor_fraction",),
+                        ("motif_high_degree_neighbor_share6_fraction",),
+                    ),
+                )
+            },
+        ),
+        (
+            "exposure:bundle",
+            threshold_exposure_decomposition_benchmark,
+            {
+                "exposure_sets": (
+                    (
+                        "replace-high-with-threshold-exposure-bundle",
+                        ("motif_high_degree_neighbor_fraction",),
+                        (
+                            "motif_high_degree_neighbor_share6_fraction",
+                            "motif_high_degree_neighbor_count6_fraction",
+                            "motif_high_degree_neighbor_share7_fraction",
+                            "motif_high_degree_neighbor_count7_fraction",
+                        ),
+                    ),
+                )
+            },
+        ),
+        (
+            "soft:linear6",
+            soft_hub_exposure_benchmark,
+            {
+                "exposure_sets": (
+                    (
+                        "replace-high-with-soft-linear-6",
+                        ("motif_high_degree_neighbor_fraction",),
+                        ("motif_hub_exposure_linear_6_8",),
+                    ),
+                )
+            },
+        ),
+        (
+            "reach:14",
+            neighbor_reach_threshold_benchmark,
+            {
+                "reach_sets": (
+                    (
+                        "replace-high-with-reach-14",
+                        ("motif_high_degree_neighbor_fraction",),
+                        ("motif_neighbor_reach_ge_14_fraction",),
+                    ),
+                )
+            },
+        ),
+        (
+            "reach:24",
+            neighbor_reach_threshold_benchmark,
+            {
+                "reach_sets": (
+                    (
+                        "replace-high-with-reach-24",
+                        ("motif_high_degree_neighbor_fraction",),
+                        ("motif_neighbor_reach_ge_24_fraction",),
+                    ),
+                )
+            },
+        ),
+        (
+            "leverage:linear90",
+            neighbor_leverage_threshold_benchmark,
+            {
+                "leverage_sets": (
+                    (
+                        "replace-high-with-linear90",
+                        ("motif_high_degree_neighbor_fraction",),
+                        ("motif_neighbor_leverage_linear90_fraction",),
+                    ),
+                )
+            },
+        ),
+        (
+            "leverage:bundle",
+            neighbor_leverage_threshold_benchmark,
+            {
+                "leverage_sets": (
+                    (
+                        "replace-high-with-leverage-bundle",
+                        ("motif_high_degree_neighbor_fraction",),
+                        (
+                            "motif_neighbor_leverage_linear85_fraction",
+                            "motif_neighbor_leverage_linear90_fraction",
+                            "motif_neighbor_leverage_product70_fraction",
+                            "motif_neighbor_leverage_product80_fraction",
+                        ),
+                    ),
+                )
+            },
+        ),
+    ]
+    broader_rows: list[tuple[str, HighDegreeDecompositionRow]] = []
+    for mechanism_name, benchmark_fn, extra_kwargs in row_specs:
+        row = benchmark_fn(
+            retained_weight=retained_weight,
+            mode_retained_weight=mode_retained_weight,
+            geometry_variant_limit=geometry_variant_limit,
+            procedural_variant_limit=procedural_variant_limit,
+            procedural_rediscovery_limit=procedural_rediscovery_limit,
+            procedural_styles=procedural_styles,
+            **extra_kwargs,
+        )[0]
+        broader_rows.append((mechanism_name, row))
+    return broader_rows
+
+
+def mechanism_family_split_benchmark(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    fast_parity_size: int = 3,
+) -> tuple[list[MechanismSplitRow], list[MechanismSplitAggregateRow]]:
+    split_rows: list[MechanismSplitRow] = []
+
+    def append_rows(
+        benchmark_name: str,
+        rows: list[NeighborhoodBasisAblationRow] | list[HighDegreeDecompositionRow],
+        name_attr: str,
+    ) -> None:
+        for row in rows:
+            mechanism_name = getattr(row, name_attr)
+            compact_fast, extended_fast, same_feature_signature, split_class = (
+                _mechanism_split_class(
+                    row.compact_parity_size,
+                    row.compact_parity_feature_subset,
+                    row.extended_parity_size,
+                    row.extended_parity_feature_subset,
+                    fast_parity_size=fast_parity_size,
+                )
+            )
+            split_rows.append(
+                MechanismSplitRow(
+                    benchmark_name=benchmark_name,
+                    mechanism_name=mechanism_name,
+                    compact_parity_size=row.compact_parity_size,
+                    compact_parity_feature_subset=row.compact_parity_feature_subset,
+                    extended_parity_size=row.extended_parity_size,
+                    extended_parity_feature_subset=row.extended_parity_feature_subset,
+                    compact_fast=compact_fast,
+                    extended_fast=extended_fast,
+                    same_feature_signature=same_feature_signature,
+                    split_class=split_class,
+                    compact_best_prethreshold_gap=row.compact_best_prethreshold_gap,
+                    compact_best_prethreshold_worst_gap=row.compact_best_prethreshold_worst_gap,
+                    extended_best_prethreshold_gap=row.extended_best_prethreshold_gap,
+                    extended_best_prethreshold_worst_gap=row.extended_best_prethreshold_worst_gap,
+                )
+            )
+
+    append_rows(
+        "rich-ablation",
+        neighborhood_basis_ablation_benchmark(
+            retained_weight=retained_weight,
+            mode_retained_weight=mode_retained_weight,
+        ),
+        "ablation_name",
+    )
+    append_rows(
+        "high-degree-decomp",
+        high_degree_decomposition_benchmark(
+            retained_weight=retained_weight,
+            mode_retained_weight=mode_retained_weight,
+        ),
+        "decomposition_name",
+    )
+    append_rows(
+        "high-degree-threshold",
+        high_degree_threshold_benchmark(
+            retained_weight=retained_weight,
+            mode_retained_weight=mode_retained_weight,
+        ),
+        "decomposition_name",
+    )
+    append_rows(
+        "soft-hub",
+        soft_hub_exposure_benchmark(
+            retained_weight=retained_weight,
+            mode_retained_weight=mode_retained_weight,
+        ),
+        "decomposition_name",
+    )
+    append_rows(
+        "neighbor-reach",
+        neighbor_reach_threshold_benchmark(
+            retained_weight=retained_weight,
+            mode_retained_weight=mode_retained_weight,
+        ),
+        "decomposition_name",
+    )
+    append_rows(
+        "neighbor-leverage",
+        neighbor_leverage_threshold_benchmark(
+            retained_weight=retained_weight,
+            mode_retained_weight=mode_retained_weight,
+        ),
+        "decomposition_name",
+    )
+    append_rows(
+        "threshold-exposure",
+        threshold_exposure_decomposition_benchmark(
+            retained_weight=retained_weight,
+            mode_retained_weight=mode_retained_weight,
+        ),
+        "decomposition_name",
+    )
+    broader_rows = broader_hub_mechanism_rows(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+    )
+    append_rows(
+        "broader-hub",
+        [row for _name, row in broader_rows],
+        "decomposition_name",
+    )
+    # Replace broader-hub mechanism names with the external labels for readability.
+    broader_names = [name for name, _row in broader_rows]
+    broader_index = 0
+    for row in split_rows:
+        if row.benchmark_name == "broader-hub":
+            row.mechanism_name = broader_names[broader_index]
+            broader_index += 1
+
+    aggregate_counts: DefaultDict[tuple[str, str], int] = defaultdict(int)
+    for row in split_rows:
+        aggregate_counts[(row.benchmark_name, row.split_class)] += 1
+    aggregate_rows = [
+        MechanismSplitAggregateRow(
+            benchmark_name=benchmark_name,
+            split_class=split_class,
+            cases=cases,
+        )
+        for (benchmark_name, split_class), cases in sorted(aggregate_counts.items())
+    ]
+    split_rows.sort(key=lambda row: (row.benchmark_name, row.split_class, row.mechanism_name))
+    return split_rows, aggregate_rows
+
+
 def random_rediscovery_limit_sweep_summary(
     retained_weight: float = 1.0,
     variant_limit: int = 3,
@@ -15169,6 +15563,59 @@ def render_high_degree_decomposition_table(
             f"{row.compact_best_prethreshold_gap:+.2f}/{row.compact_best_prethreshold_worst_gap:+.2f} | "
             f"{extended_parity:<15.15} | "
             f"{row.extended_best_prethreshold_gap:+.2f}/{row.extended_best_prethreshold_worst_gap:+.2f}"
+        )
+    return "\n".join(lines)
+
+
+def render_mechanism_split_table(
+    rows: list[MechanismSplitRow],
+    limit_per_benchmark: int = 16,
+) -> str:
+    lines = [
+        "benchmark            | class         | mechanism            | compact       | extended      | same | compact pre    | extended pre",
+        "---------------------+---------------+----------------------+---------------+---------------+------+----------------+---------------",
+    ]
+    counts: DefaultDict[str, int] = defaultdict(int)
+    for row in rows:
+        seen = counts[row.benchmark_name]
+        if seen >= limit_per_benchmark:
+            continue
+        counts[row.benchmark_name] = seen + 1
+        compact_label = (
+            f"{row.compact_parity_size}:{abbreviate_feature_subset(row.compact_parity_feature_subset)}"
+            if row.compact_parity_size is not None
+            else "-"
+        )
+        extended_label = (
+            f"{row.extended_parity_size}:{abbreviate_feature_subset(row.extended_parity_feature_subset)}"
+            if row.extended_parity_size is not None
+            else "-"
+        )
+        lines.append(
+            f"{row.benchmark_name:<20} | "
+            f"{row.split_class:<13} | "
+            f"{row.mechanism_name:<20.20} | "
+            f"{compact_label:<13.13} | "
+            f"{extended_label:<13.13} | "
+            f"{'yes' if row.same_feature_signature else 'no ':<4} | "
+            f"{row.compact_best_prethreshold_gap:+.2f}/{row.compact_best_prethreshold_worst_gap:+.2f} | "
+            f"{row.extended_best_prethreshold_gap:+.2f}/{row.extended_best_prethreshold_worst_gap:+.2f}"
+        )
+    return "\n".join(lines)
+
+
+def render_mechanism_split_aggregate_table(
+    rows: list[MechanismSplitAggregateRow],
+) -> str:
+    lines = [
+        "benchmark            | class         | cases",
+        "---------------------+---------------+------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.benchmark_name:<20} | "
+            f"{row.split_class:<13} | "
+            f"{row.cases:>4}"
         )
     return "\n".join(lines)
 
