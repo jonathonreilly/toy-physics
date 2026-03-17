@@ -1074,6 +1074,23 @@ class ExtendedProxyRouteAggregateRow:
     cases: int
 
 
+@dataclass
+class DegreeProfileFallbackRow:
+    route_name: str
+    feature_count: int
+    removed_features: str
+    compact_parity_size: int | None
+    compact_parity_feature_subset: str
+    compact_best_prethreshold_gap: float
+    compact_best_prethreshold_worst_gap: float
+    extended_parity_size: int | None
+    extended_parity_feature_subset: str
+    extended_proxy_family: str
+    extended_proxy_signature: str
+    extended_best_prethreshold_gap: float
+    extended_best_prethreshold_worst_gap: float
+
+
 _cross_dataset_prediction_context_cache: dict[
     tuple[float, float | None, int, int],
     tuple[
@@ -3862,6 +3879,40 @@ def extended_proxy_route_sets() -> tuple[tuple[str, tuple[str, ...]], ...]:
                 "motif_mean_neighbor_degree",
                 "motif_neighbor_degree_variation",
             ),
+        ),
+    )
+
+
+def degree_profile_fallback_sets() -> tuple[tuple[str, tuple[str, ...]], ...]:
+    base_removed = (
+        "motif_high_degree_neighbor_fraction",
+        "motif_pocket_adjacent_fraction",
+        "motif_deep_pocket_adjacent_fraction",
+        "motif_low_degree_neighbor_fraction",
+    )
+    return (
+        ("fallback-base", base_removed),
+        ("fallback-no-degree-8", base_removed + ("degree_8_fraction",)),
+        ("fallback-no-neighbor-mean", base_removed + ("motif_mean_neighbor_degree",)),
+        (
+            "fallback-no-neighbor-moments",
+            base_removed
+            + (
+                "motif_mean_neighbor_degree",
+                "motif_neighbor_degree_variation",
+            ),
+        ),
+        (
+            "fallback-no-degree-profile-pair",
+            base_removed
+            + (
+                "degree_8_fraction",
+                "motif_mean_neighbor_degree",
+            ),
+        ),
+        (
+            "fallback-no-degree-basis",
+            base_removed + degree_basis_feature_names(),
         ),
     )
 
@@ -12772,6 +12823,66 @@ def extended_proxy_route_benchmark(
     return route_rows, aggregate_rows
 
 
+def degree_profile_fallback_benchmark(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    geometry_variant_limit: int = 5,
+    procedural_variant_limit: int = 3,
+    procedural_rediscovery_limit: int = 1,
+    procedural_styles: tuple[str, ...] = ("walk", "mode-mix", "local-morph"),
+    basis_sizes: tuple[int, ...] = (3, 4, 5, 6, 7, 8),
+    route_sets: tuple[tuple[str, tuple[str, ...]], ...] | None = None,
+) -> list[DegreeProfileFallbackRow]:
+    if route_sets is None:
+        route_sets = degree_profile_fallback_sets()
+    all_rich_features = rich_neighborhood_basis_feature_names()
+    rows: list[DegreeProfileFallbackRow] = []
+    for route_name, removed_features in route_sets:
+        feature_names = tuple(
+            feature for feature in all_rich_features if feature not in set(removed_features)
+        )
+        residual_rows = neighborhood_basis_residual_benchmark(
+            retained_weight=retained_weight,
+            mode_retained_weight=mode_retained_weight,
+            geometry_variant_limit=geometry_variant_limit,
+            procedural_variant_limit=procedural_variant_limit,
+            procedural_rediscovery_limit=procedural_rediscovery_limit,
+            procedural_styles=procedural_styles,
+            basis_sizes=basis_sizes,
+            basis_feature_names=feature_names,
+        )
+        compact_rows = [row for row in residual_rows if row.rule_family == "compact"]
+        extended_rows = [row for row in residual_rows if row.rule_family == "extended"]
+        compact_parity, compact_best_prethreshold = parity_threshold_from_residual_rows(
+            compact_rows
+        )
+        extended_parity, extended_best_prethreshold = parity_threshold_from_residual_rows(
+            extended_rows
+        )
+        proxy_family, proxy_signature = classify_extended_proxy_family(
+            extended_parity.basis_feature_subset if extended_parity is not None else "-"
+        )
+        rows.append(
+            DegreeProfileFallbackRow(
+                route_name=route_name,
+                feature_count=len(feature_names),
+                removed_features=", ".join(removed_features) if removed_features else "-",
+                compact_parity_size=compact_parity.basis_size if compact_parity is not None else None,
+                compact_parity_feature_subset=compact_parity.basis_feature_subset if compact_parity is not None else "-",
+                compact_best_prethreshold_gap=compact_best_prethreshold.basis_minus_pocket_mean,
+                compact_best_prethreshold_worst_gap=compact_best_prethreshold.basis_minus_pocket_worst,
+                extended_parity_size=extended_parity.basis_size if extended_parity is not None else None,
+                extended_parity_feature_subset=extended_parity.basis_feature_subset if extended_parity is not None else "-",
+                extended_proxy_family=proxy_family,
+                extended_proxy_signature=proxy_signature,
+                extended_best_prethreshold_gap=extended_best_prethreshold.basis_minus_pocket_mean,
+                extended_best_prethreshold_worst_gap=extended_best_prethreshold.basis_minus_pocket_worst,
+            )
+        )
+    rows.sort(key=lambda row: row.route_name)
+    return rows
+
+
 def high_degree_decomposition_benchmark(
     retained_weight: float = 1.0,
     mode_retained_weight: float | None = None,
@@ -15859,6 +15970,37 @@ def render_extended_proxy_route_aggregate_table(
     ]
     for row in rows:
         lines.append(f"{row.proxy_family:<15} | {row.cases:>4}")
+    return "\n".join(lines)
+
+
+def render_degree_profile_fallback_table(
+    rows: list[DegreeProfileFallbackRow],
+) -> str:
+    lines = [
+        "route                         | nfeat | removed                | compact       | extended      | proxy fam       | compact pre    | extended pre",
+        "------------------------------+-------+------------------------+---------------+---------------+-----------------+----------------+---------------",
+    ]
+    for row in rows:
+        compact_label = (
+            f"{row.compact_parity_size}:{abbreviate_feature_subset(row.compact_parity_feature_subset)}"
+            if row.compact_parity_size is not None
+            else "-"
+        )
+        extended_label = (
+            f"{row.extended_parity_size}:{abbreviate_feature_subset(row.extended_parity_feature_subset)}"
+            if row.extended_parity_size is not None
+            else "-"
+        )
+        lines.append(
+            f"{row.route_name:<29} | "
+            f"{row.feature_count:>5} | "
+            f"{row.removed_features:<22.22} | "
+            f"{compact_label:<13.13} | "
+            f"{extended_label:<13.13} | "
+            f"{row.extended_proxy_family:<15} | "
+            f"{row.compact_best_prethreshold_gap:+.2f}/{row.compact_best_prethreshold_worst_gap:+.2f} | "
+            f"{row.extended_best_prethreshold_gap:+.2f}/{row.extended_best_prethreshold_worst_gap:+.2f}"
+        )
     return "\n".join(lines)
 
 
