@@ -1119,6 +1119,56 @@ class SparseFallbackAccessAggregateRow:
     extended_fast_sparse_cases: int
 
 
+@dataclass
+class SparseFallbackResidualTraceRow:
+    ensemble_name: str
+    geometry_variant_limit: int
+    procedural_variant_limit: int
+    route_name: str
+    rule_family: str
+    basis_size: int
+    basis_feature_subset: str
+    basis_proxy_family: str
+    basis_mean_accuracy: float
+    basis_worst_accuracy: float
+    pocket_mean_accuracy: float
+    pocket_worst_accuracy: float
+    basis_minus_pocket_mean: float
+    basis_minus_pocket_worst: float
+    reached_parity: bool
+
+
+@dataclass
+class SparseFallbackResidualAggregateRow:
+    ensemble_name: str
+    route_name: str
+    rule_family: str
+    parity_size: int | None
+    closest_size: int
+    closest_feature_subset: str
+    closest_proxy_family: str
+    closest_gap_mean: float
+    closest_gap_worst: float
+
+
+@dataclass
+class SparseFallbackBridgeRow:
+    ensemble_name: str
+    geometry_variant_limit: int
+    procedural_variant_limit: int
+    addback_name: str
+    added_features: str
+    compact_parity_size: int | None
+    compact_parity_feature_subset: str
+    compact_best_prethreshold_gap: float
+    compact_best_prethreshold_worst_gap: float
+    extended_parity_size: int | None
+    extended_parity_feature_subset: str
+    extended_proxy_family: str
+    extended_best_prethreshold_gap: float
+    extended_best_prethreshold_worst_gap: float
+
+
 _cross_dataset_prediction_context_cache: dict[
     tuple[float, float | None, int, int],
     tuple[
@@ -13002,6 +13052,211 @@ def sparse_fallback_access_benchmark(
     return rows, aggregate_rows
 
 
+def sparse_fallback_residual_trace_benchmark(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    ensembles: tuple[tuple[str, int, int, tuple[str, ...]], ...] = (
+        ("default", 5, 3, ("walk", "mode-mix", "local-morph")),
+        ("broader", 7, 4, ("walk", "mode-mix", "local-morph")),
+    ),
+    procedural_rediscovery_limit: int = 1,
+    basis_sizes: tuple[int, ...] = (3, 4, 5, 6, 7, 8),
+    route_sets: tuple[tuple[str, tuple[str, ...]], ...] | None = None,
+) -> tuple[list[SparseFallbackResidualTraceRow], list[SparseFallbackResidualAggregateRow]]:
+    if route_sets is None:
+        route_sets = degree_profile_fallback_sets()
+    all_rich_features = rich_neighborhood_basis_feature_names()
+    detail_rows: list[SparseFallbackResidualTraceRow] = []
+    aggregate_rows: list[SparseFallbackResidualAggregateRow] = []
+
+    for (
+        ensemble_name,
+        geometry_variant_limit,
+        procedural_variant_limit,
+        procedural_styles,
+    ) in ensembles:
+        for route_name, removed_features in route_sets:
+            feature_names = tuple(
+                feature for feature in all_rich_features if feature not in set(removed_features)
+            )
+            residual_rows = neighborhood_basis_residual_benchmark(
+                retained_weight=retained_weight,
+                mode_retained_weight=mode_retained_weight,
+                geometry_variant_limit=geometry_variant_limit,
+                procedural_variant_limit=procedural_variant_limit,
+                procedural_rediscovery_limit=procedural_rediscovery_limit,
+                procedural_styles=procedural_styles,
+                basis_sizes=basis_sizes,
+                basis_feature_names=feature_names,
+            )
+            for row in residual_rows:
+                basis_proxy_family, _basis_proxy_signature = classify_extended_proxy_family(
+                    row.basis_feature_subset
+                )
+                detail_rows.append(
+                    SparseFallbackResidualTraceRow(
+                        ensemble_name=ensemble_name,
+                        geometry_variant_limit=geometry_variant_limit,
+                        procedural_variant_limit=procedural_variant_limit,
+                        route_name=route_name,
+                        rule_family=row.rule_family,
+                        basis_size=row.basis_size,
+                        basis_feature_subset=row.basis_feature_subset,
+                        basis_proxy_family=basis_proxy_family,
+                        basis_mean_accuracy=row.basis_mean_accuracy,
+                        basis_worst_accuracy=row.basis_worst_accuracy,
+                        pocket_mean_accuracy=row.pocket_mean_accuracy,
+                        pocket_worst_accuracy=row.pocket_worst_accuracy,
+                        basis_minus_pocket_mean=row.basis_minus_pocket_mean,
+                        basis_minus_pocket_worst=row.basis_minus_pocket_worst,
+                        reached_parity=(
+                            row.basis_minus_pocket_mean >= -1e-9
+                            and row.basis_minus_pocket_worst >= -1e-9
+                        ),
+                    )
+                )
+            for rule_family in ("compact", "extended"):
+                family_rows = [
+                    row for row in residual_rows if row.rule_family == rule_family
+                ]
+                parity_row, _best_prethreshold = parity_threshold_from_residual_rows(family_rows)
+                closest_row = max(
+                    family_rows,
+                    key=lambda row: (
+                        row.basis_minus_pocket_mean,
+                        row.basis_minus_pocket_worst,
+                        -row.basis_size,
+                        row.basis_feature_subset,
+                    ),
+                )
+                closest_proxy_family, _closest_proxy_signature = classify_extended_proxy_family(
+                    closest_row.basis_feature_subset
+                )
+                aggregate_rows.append(
+                    SparseFallbackResidualAggregateRow(
+                        ensemble_name=ensemble_name,
+                        route_name=route_name,
+                        rule_family=rule_family,
+                        parity_size=parity_row.basis_size if parity_row is not None else None,
+                        closest_size=closest_row.basis_size,
+                        closest_feature_subset=closest_row.basis_feature_subset,
+                        closest_proxy_family=closest_proxy_family,
+                        closest_gap_mean=closest_row.basis_minus_pocket_mean,
+                        closest_gap_worst=closest_row.basis_minus_pocket_worst,
+                    )
+                )
+
+    detail_rows.sort(
+        key=lambda row: (
+            row.ensemble_name,
+            row.route_name,
+            row.rule_family,
+            row.basis_size,
+        )
+    )
+    aggregate_rows.sort(
+        key=lambda row: (
+            row.ensemble_name,
+            row.route_name,
+            row.rule_family,
+        )
+    )
+    return detail_rows, aggregate_rows
+
+
+def compact_sparse_bridge_sets() -> tuple[tuple[str, tuple[str, ...]], ...]:
+    return (
+        ("baseline", tuple()),
+        ("add-high-degree", ("motif_high_degree_neighbor_fraction",)),
+        ("add-pocket", ("motif_pocket_adjacent_fraction",)),
+        ("add-deep-pocket", ("motif_deep_pocket_adjacent_fraction",)),
+        ("add-low-degree", ("motif_low_degree_neighbor_fraction",)),
+        (
+            "add-pocket-family",
+            (
+                "motif_pocket_adjacent_fraction",
+                "motif_deep_pocket_adjacent_fraction",
+            ),
+        ),
+    )
+
+
+def compact_sparse_bridge_benchmark(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    ensembles: tuple[tuple[str, int, int, tuple[str, ...]], ...] = (
+        ("default", 5, 3, ("walk", "mode-mix", "local-morph")),
+        ("broader", 7, 4, ("walk", "mode-mix", "local-morph")),
+    ),
+    procedural_rediscovery_limit: int = 1,
+    basis_sizes: tuple[int, ...] = (3, 4, 5, 6, 7, 8),
+    removed_features: tuple[str, ...] | None = None,
+    addback_sets: tuple[tuple[str, tuple[str, ...]], ...] | None = None,
+) -> list[SparseFallbackBridgeRow]:
+    if removed_features is None:
+        removed_features = degree_profile_fallback_sets()[0][1]
+    if addback_sets is None:
+        addback_sets = compact_sparse_bridge_sets()
+    all_rich_features = rich_neighborhood_basis_feature_names()
+    bridge_rows: list[SparseFallbackBridgeRow] = []
+
+    for (
+        ensemble_name,
+        geometry_variant_limit,
+        procedural_variant_limit,
+        procedural_styles,
+    ) in ensembles:
+        for addback_name, added_features in addback_sets:
+            active_removed = tuple(
+                feature for feature in removed_features if feature not in set(added_features)
+            )
+            feature_names = tuple(
+                feature for feature in all_rich_features if feature not in set(active_removed)
+            )
+            residual_rows = neighborhood_basis_residual_benchmark(
+                retained_weight=retained_weight,
+                mode_retained_weight=mode_retained_weight,
+                geometry_variant_limit=geometry_variant_limit,
+                procedural_variant_limit=procedural_variant_limit,
+                procedural_rediscovery_limit=procedural_rediscovery_limit,
+                procedural_styles=procedural_styles,
+                basis_sizes=basis_sizes,
+                basis_feature_names=feature_names,
+            )
+            compact_rows = [row for row in residual_rows if row.rule_family == "compact"]
+            extended_rows = [row for row in residual_rows if row.rule_family == "extended"]
+            compact_parity, compact_best_prethreshold = parity_threshold_from_residual_rows(
+                compact_rows
+            )
+            extended_parity, extended_best_prethreshold = parity_threshold_from_residual_rows(
+                extended_rows
+            )
+            extended_proxy_family, _extended_proxy_signature = classify_extended_proxy_family(
+                extended_parity.basis_feature_subset if extended_parity is not None else "-"
+            )
+            bridge_rows.append(
+                SparseFallbackBridgeRow(
+                    ensemble_name=ensemble_name,
+                    geometry_variant_limit=geometry_variant_limit,
+                    procedural_variant_limit=procedural_variant_limit,
+                    addback_name=addback_name,
+                    added_features=", ".join(added_features) if added_features else "-",
+                    compact_parity_size=compact_parity.basis_size if compact_parity is not None else None,
+                    compact_parity_feature_subset=compact_parity.basis_feature_subset if compact_parity is not None else "-",
+                    compact_best_prethreshold_gap=compact_best_prethreshold.basis_minus_pocket_mean,
+                    compact_best_prethreshold_worst_gap=compact_best_prethreshold.basis_minus_pocket_worst,
+                    extended_parity_size=extended_parity.basis_size if extended_parity is not None else None,
+                    extended_parity_feature_subset=extended_parity.basis_feature_subset if extended_parity is not None else "-",
+                    extended_proxy_family=extended_proxy_family,
+                    extended_best_prethreshold_gap=extended_best_prethreshold.basis_minus_pocket_mean,
+                    extended_best_prethreshold_worst_gap=extended_best_prethreshold.basis_minus_pocket_worst,
+                )
+            )
+
+    bridge_rows.sort(key=lambda row: (row.ensemble_name, row.addback_name))
+    return bridge_rows
+
+
 def high_degree_decomposition_benchmark(
     retained_weight: float = 1.0,
     mode_retained_weight: float | None = None,
@@ -16170,6 +16425,80 @@ def render_sparse_fallback_access_aggregate_table(
             f"{row.extended_any_parity_cases:>12} | "
             f"{row.extended_sparse_cases:>15} | "
             f"{row.extended_fast_sparse_cases:>12}"
+        )
+    return "\n".join(lines)
+
+
+def render_sparse_fallback_residual_trace_table(
+    rows: list[SparseFallbackResidualTraceRow],
+) -> str:
+    lines = [
+        "ensemble | route                         | family   | size | basis               | proxy           | b-p mean/w",
+        "---------+-------------------------------+----------+------+---------------------+-----------------+------------",
+    ]
+    for row in rows:
+        basis_label = abbreviate_feature_subset(row.basis_feature_subset)
+        lines.append(
+            f"{row.ensemble_name:<8} | "
+            f"{row.route_name:<29} | "
+            f"{row.rule_family:<8} | "
+            f"{row.basis_size:>4} | "
+            f"{basis_label:<19.19} | "
+            f"{row.basis_proxy_family:<15} | "
+            f"{row.basis_minus_pocket_mean:>+4.2f}/{row.basis_minus_pocket_worst:+4.2f}"
+        )
+    return "\n".join(lines)
+
+
+def render_sparse_fallback_residual_aggregate_table(
+    rows: list[SparseFallbackResidualAggregateRow],
+) -> str:
+    lines = [
+        "ensemble | route                         | family   | parity | closest             | proxy           | gap mean/w",
+        "---------+-------------------------------+----------+--------+---------------------+-----------------+-----------",
+    ]
+    for row in rows:
+        parity_label = str(row.parity_size) if row.parity_size is not None else "-"
+        closest_label = f"{row.closest_size}:{abbreviate_feature_subset(row.closest_feature_subset)}"
+        lines.append(
+            f"{row.ensemble_name:<8} | "
+            f"{row.route_name:<29} | "
+            f"{row.rule_family:<8} | "
+            f"{parity_label:>6} | "
+            f"{closest_label:<19.19} | "
+            f"{row.closest_proxy_family:<15} | "
+            f"{row.closest_gap_mean:>+4.2f}/{row.closest_gap_worst:+4.2f}"
+        )
+    return "\n".join(lines)
+
+
+def render_compact_sparse_bridge_table(
+    rows: list[SparseFallbackBridgeRow],
+) -> str:
+    lines = [
+        "ensemble | addback          | added               | compact       | compact pre   | extended      | e fam           | extended pre",
+        "---------+------------------+---------------------+---------------+---------------+---------------+-----------------+-------------",
+    ]
+    for row in rows:
+        compact_label = (
+            f"{row.compact_parity_size}:{abbreviate_feature_subset(row.compact_parity_feature_subset)}"
+            if row.compact_parity_size is not None
+            else "-"
+        )
+        extended_label = (
+            f"{row.extended_parity_size}:{abbreviate_feature_subset(row.extended_parity_feature_subset)}"
+            if row.extended_parity_size is not None
+            else "-"
+        )
+        lines.append(
+            f"{row.ensemble_name:<8} | "
+            f"{row.addback_name:<16} | "
+            f"{row.added_features:<19.19} | "
+            f"{compact_label:<13.13} | "
+            f"{row.compact_best_prethreshold_gap:+.2f}/{row.compact_best_prethreshold_worst_gap:+.2f} | "
+            f"{extended_label:<13.13} | "
+            f"{row.extended_proxy_family:<15} | "
+            f"{row.extended_best_prethreshold_gap:+.2f}/{row.extended_best_prethreshold_worst_gap:+.2f}"
         )
     return "\n".join(lines)
 
