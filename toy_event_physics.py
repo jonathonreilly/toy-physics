@@ -1091,6 +1091,34 @@ class DegreeProfileFallbackRow:
     extended_best_prethreshold_worst_gap: float
 
 
+@dataclass
+class SparseFallbackAccessRow:
+    ensemble_name: str
+    geometry_variant_limit: int
+    procedural_variant_limit: int
+    route_name: str
+    compact_parity_size: int | None
+    compact_parity_feature_subset: str
+    compact_proxy_family: str
+    compact_proxy_signature: str
+    extended_parity_size: int | None
+    extended_parity_feature_subset: str
+    extended_proxy_family: str
+    extended_proxy_signature: str
+
+
+@dataclass
+class SparseFallbackAccessAggregateRow:
+    ensemble_name: str
+    cases: int
+    compact_any_parity_cases: int
+    compact_sparse_cases: int
+    compact_fast_sparse_cases: int
+    extended_any_parity_cases: int
+    extended_sparse_cases: int
+    extended_fast_sparse_cases: int
+
+
 _cross_dataset_prediction_context_cache: dict[
     tuple[float, float | None, int, int],
     tuple[
@@ -12883,6 +12911,97 @@ def degree_profile_fallback_benchmark(
     return rows
 
 
+def sparse_fallback_access_benchmark(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    ensembles: tuple[tuple[str, int, int, tuple[str, ...]], ...] = (
+        ("default", 5, 3, ("walk", "mode-mix", "local-morph")),
+        ("broader", 7, 4, ("walk", "mode-mix", "local-morph")),
+    ),
+    procedural_rediscovery_limit: int = 1,
+    basis_sizes: tuple[int, ...] = (3, 4, 5, 6, 7, 8),
+    route_sets: tuple[tuple[str, tuple[str, ...]], ...] | None = None,
+) -> tuple[list[SparseFallbackAccessRow], list[SparseFallbackAccessAggregateRow]]:
+    if route_sets is None:
+        route_sets = degree_profile_fallback_sets()
+    rows: list[SparseFallbackAccessRow] = []
+    aggregate_rows: list[SparseFallbackAccessAggregateRow] = []
+
+    for (
+        ensemble_name,
+        geometry_variant_limit,
+        procedural_variant_limit,
+        procedural_styles,
+    ) in ensembles:
+        degree_rows = degree_profile_fallback_benchmark(
+            retained_weight=retained_weight,
+            mode_retained_weight=mode_retained_weight,
+            geometry_variant_limit=geometry_variant_limit,
+            procedural_variant_limit=procedural_variant_limit,
+            procedural_rediscovery_limit=procedural_rediscovery_limit,
+            procedural_styles=procedural_styles,
+            basis_sizes=basis_sizes,
+            route_sets=route_sets,
+        )
+        compact_any = 0
+        compact_sparse = 0
+        compact_fast_sparse = 0
+        extended_any = 0
+        extended_sparse = 0
+        extended_fast_sparse = 0
+        for row in degree_rows:
+            compact_proxy_family, compact_proxy_signature = classify_extended_proxy_family(
+                row.compact_parity_feature_subset
+            )
+            extended_proxy_family, extended_proxy_signature = classify_extended_proxy_family(
+                row.extended_parity_feature_subset
+            )
+            if row.compact_parity_size is not None:
+                compact_any += 1
+            if compact_proxy_family == "degree-profile":
+                compact_sparse += 1
+                if row.compact_parity_size == 3:
+                    compact_fast_sparse += 1
+            if row.extended_parity_size is not None:
+                extended_any += 1
+            if extended_proxy_family == "degree-profile":
+                extended_sparse += 1
+                if row.extended_parity_size == 3:
+                    extended_fast_sparse += 1
+            rows.append(
+                SparseFallbackAccessRow(
+                    ensemble_name=ensemble_name,
+                    geometry_variant_limit=geometry_variant_limit,
+                    procedural_variant_limit=procedural_variant_limit,
+                    route_name=row.route_name,
+                    compact_parity_size=row.compact_parity_size,
+                    compact_parity_feature_subset=row.compact_parity_feature_subset,
+                    compact_proxy_family=compact_proxy_family,
+                    compact_proxy_signature=compact_proxy_signature,
+                    extended_parity_size=row.extended_parity_size,
+                    extended_parity_feature_subset=row.extended_parity_feature_subset,
+                    extended_proxy_family=extended_proxy_family,
+                    extended_proxy_signature=extended_proxy_signature,
+                )
+            )
+        aggregate_rows.append(
+            SparseFallbackAccessAggregateRow(
+                ensemble_name=ensemble_name,
+                cases=len(degree_rows),
+                compact_any_parity_cases=compact_any,
+                compact_sparse_cases=compact_sparse,
+                compact_fast_sparse_cases=compact_fast_sparse,
+                extended_any_parity_cases=extended_any,
+                extended_sparse_cases=extended_sparse,
+                extended_fast_sparse_cases=extended_fast_sparse,
+            )
+        )
+
+    rows.sort(key=lambda row: (row.ensemble_name, row.route_name))
+    aggregate_rows.sort(key=lambda row: row.ensemble_name)
+    return rows, aggregate_rows
+
+
 def high_degree_decomposition_benchmark(
     retained_weight: float = 1.0,
     mode_retained_weight: float | None = None,
@@ -16000,6 +16119,57 @@ def render_degree_profile_fallback_table(
             f"{row.extended_proxy_family:<15} | "
             f"{row.compact_best_prethreshold_gap:+.2f}/{row.compact_best_prethreshold_worst_gap:+.2f} | "
             f"{row.extended_best_prethreshold_gap:+.2f}/{row.extended_best_prethreshold_worst_gap:+.2f}"
+        )
+    return "\n".join(lines)
+
+
+def render_sparse_fallback_access_table(
+    rows: list[SparseFallbackAccessRow],
+) -> str:
+    lines = [
+        "ensemble | g/p  | route                         | compact             | c fam           | extended            | e fam",
+        "---------+------+-------------------------------+---------------------+-----------------+---------------------+----------------",
+    ]
+    for row in rows:
+        compact_label = (
+            f"{row.compact_parity_size}:{abbreviate_feature_subset(row.compact_parity_feature_subset)}"
+            if row.compact_parity_size is not None
+            else "-"
+        )
+        extended_label = (
+            f"{row.extended_parity_size}:{abbreviate_feature_subset(row.extended_parity_feature_subset)}"
+            if row.extended_parity_size is not None
+            else "-"
+        )
+        lines.append(
+            f"{row.ensemble_name:<8} | "
+            f"{row.geometry_variant_limit}/{row.procedural_variant_limit:<3} | "
+            f"{row.route_name:<29} | "
+            f"{compact_label:<19.19} | "
+            f"{row.compact_proxy_family:<15} | "
+            f"{extended_label:<19.19} | "
+            f"{row.extended_proxy_family:<15}"
+        )
+    return "\n".join(lines)
+
+
+def render_sparse_fallback_access_aggregate_table(
+    rows: list[SparseFallbackAccessAggregateRow],
+) -> str:
+    lines = [
+        "ensemble | cases | compact any | compact sparse | compact fast | extended any | extended sparse | extended fast",
+        "---------+-------+-------------+----------------+--------------+--------------+-----------------+--------------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.ensemble_name:<8} | "
+            f"{row.cases:>5} | "
+            f"{row.compact_any_parity_cases:>11} | "
+            f"{row.compact_sparse_cases:>14} | "
+            f"{row.compact_fast_sparse_cases:>12} | "
+            f"{row.extended_any_parity_cases:>12} | "
+            f"{row.extended_sparse_cases:>15} | "
+            f"{row.extended_fast_sparse_cases:>12}"
         )
     return "\n".join(lines)
 
