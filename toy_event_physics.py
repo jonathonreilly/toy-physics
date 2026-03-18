@@ -13181,6 +13181,64 @@ def compact_sparse_bridge_sets() -> tuple[tuple[str, tuple[str, ...]], ...]:
     )
 
 
+def compact_nonhub_bridge_sets() -> tuple[tuple[str, tuple[str, ...]], ...]:
+    return (
+        ("baseline", tuple()),
+        ("add-pocket", ("motif_pocket_adjacent_fraction",)),
+        ("add-deep-pocket", ("motif_deep_pocket_adjacent_fraction",)),
+        ("add-low-degree", ("motif_low_degree_neighbor_fraction",)),
+        (
+            "add-pocket+deep-pocket",
+            (
+                "motif_pocket_adjacent_fraction",
+                "motif_deep_pocket_adjacent_fraction",
+            ),
+        ),
+        (
+            "add-pocket+low-degree",
+            (
+                "motif_pocket_adjacent_fraction",
+                "motif_low_degree_neighbor_fraction",
+            ),
+        ),
+        (
+            "add-deep-pocket+low-degree",
+            (
+                "motif_deep_pocket_adjacent_fraction",
+                "motif_low_degree_neighbor_fraction",
+            ),
+        ),
+        (
+            "add-pocket+deep-pocket+low-degree",
+            (
+                "motif_pocket_adjacent_fraction",
+                "motif_deep_pocket_adjacent_fraction",
+                "motif_low_degree_neighbor_fraction",
+            ),
+        ),
+    )
+
+
+def compact_threshold_proxy_bridge_sets() -> tuple[tuple[str, tuple[str, ...]], ...]:
+    return (
+        ("baseline", tuple()),
+        ("add-high-degree", ("motif_high_degree_neighbor_fraction",)),
+        ("add-ge-6", ("motif_high_degree_neighbor_ge_6_fraction",)),
+        ("add-ge-7", ("motif_high_degree_neighbor_ge_7_fraction",)),
+        ("add-share6", ("motif_high_degree_neighbor_share6_fraction",)),
+        ("add-count6", ("motif_high_degree_neighbor_count6_fraction",)),
+        (
+            "add-threshold-bundle",
+            (
+                "motif_high_degree_neighbor_share6_fraction",
+                "motif_high_degree_neighbor_count6_fraction",
+                "motif_high_degree_neighbor_share7_fraction",
+                "motif_high_degree_neighbor_count7_fraction",
+            ),
+        ),
+    )
+
+
 def compact_sparse_bridge_benchmark(
     retained_weight: float = 1.0,
     mode_retained_weight: float | None = None,
