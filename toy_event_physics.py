@@ -1221,6 +1221,21 @@ class ThresholdCoreModelRow:
     tree_description: str
 
 
+@dataclass
+class ThresholdScalingRow:
+    ensemble_name: str
+    threshold_name: str
+    active_fraction: float
+    share_support_match_fraction: float
+    count_support_match_fraction: float
+    low_degree_active_fraction: float
+    single_hit_active_fraction: float
+    mean_active_degree: float
+    mean_positive_share: float
+    mean_positive_count: float
+    mean_share_count_ratio: float
+
+
 _cross_dataset_prediction_context_cache: dict[
     tuple[float, float | None, int, int],
     tuple[
@@ -13725,6 +13740,95 @@ def threshold_core_overlap_analysis(
     return overlap_rows, model_rows
 
 
+def threshold_scaling_explanation_analysis(
+    ensembles: tuple[tuple[str, int, int, tuple[str, ...]], ...] = (
+        ("default", 5, 3, ("walk", "mode-mix", "local-morph")),
+        ("broader", 7, 4, ("walk", "mode-mix", "local-morph")),
+    ),
+) -> list[ThresholdScalingRow]:
+    scaling_rows: list[ThresholdScalingRow] = []
+    for (
+        ensemble_name,
+        geometry_variant_limit,
+        procedural_variant_limit,
+        procedural_styles,
+    ) in ensembles:
+        graph_rows = generated_geometry_node_sets(
+            geometry_variant_limit=geometry_variant_limit,
+            procedural_variant_limit=procedural_variant_limit,
+            procedural_styles=procedural_styles,
+        )
+        for threshold in (6, 7):
+            total_nodes = 0
+            active_nodes = 0
+            share_support_match = 0
+            count_support_match = 0
+            low_degree_active = 0
+            single_hit_active = 0
+            active_degrees: list[int] = []
+            share_values: list[float] = []
+            count_values: list[float] = []
+            share_count_ratios: list[float] = []
+            ge_key = f"ge{threshold}"
+            share_key = f"share{threshold}"
+            count_key = f"count{threshold}"
+
+            for _graph_name, nodes, wrap_y in graph_rows:
+                profiles = node_threshold_core_profiles(nodes, wrap_y=wrap_y)
+                for node, values in profiles.items():
+                    total_nodes += 1
+                    ge_flag = values[ge_key] > 0.5
+                    share_flag = values[share_key] > 0.0
+                    count_flag = values[count_key] > 0.0
+                    if ge_flag == share_flag:
+                        share_support_match += 1
+                    if ge_flag == count_flag:
+                        count_support_match += 1
+                    if not ge_flag:
+                        continue
+                    active_nodes += 1
+                    local_degree = len(graph_neighbors(node, nodes, wrap_y=wrap_y))
+                    active_degrees.append(local_degree)
+                    if local_degree < 8:
+                        low_degree_active += 1
+                    hits = int(round(values[share_key] * local_degree))
+                    if hits == 1:
+                        single_hit_active += 1
+                    share_values.append(values[share_key])
+                    count_values.append(values[count_key])
+                    if values[count_key] > 0.0:
+                        share_count_ratios.append(values[share_key] / values[count_key])
+
+            scaling_rows.append(
+                ThresholdScalingRow(
+                    ensemble_name=ensemble_name,
+                    threshold_name=f"{threshold}+",
+                    active_fraction=active_nodes / max(1, total_nodes),
+                    share_support_match_fraction=share_support_match / max(1, total_nodes),
+                    count_support_match_fraction=count_support_match / max(1, total_nodes),
+                    low_degree_active_fraction=low_degree_active / max(1, active_nodes),
+                    single_hit_active_fraction=single_hit_active / max(1, active_nodes),
+                    mean_active_degree=(
+                        sum(active_degrees) / len(active_degrees) if active_degrees else 0.0
+                    ),
+                    mean_positive_share=(
+                        sum(share_values) / len(share_values) if share_values else 0.0
+                    ),
+                    mean_positive_count=(
+                        sum(count_values) / len(count_values) if count_values else 0.0
+                    ),
+                    mean_share_count_ratio=(
+                        sum(share_count_ratios) / len(share_count_ratios)
+                        if share_count_ratios
+                        else 0.0
+                    ),
+                )
+            )
+
+    scaling_rows.sort(key=lambda row: (row.ensemble_name, row.threshold_name))
+    return scaling_rows
+
+
 def high_degree_decomposition_benchmark(
     retained_weight: float = 1.0,
     mode_retained_weight: float | None = None,
@@ -17047,6 +17151,29 @@ def render_threshold_core_model_table(
             f"{row.generated_mean_accuracy:>5.2f} | "
             f"{row.generated_worst_accuracy:>5.2f} | "
             f"{row.tree_description}"
+        )
+    return "\n".join(lines)
+
+
+def render_threshold_scaling_table(
+    rows: list[ThresholdScalingRow],
+) -> str:
+    lines = [
+        "ensemble | thr | active | share~ge | count~ge | lowdeg<8 | one-hit | mean deg | mean share/count | share:count",
+        "---------+-----+--------+----------+----------+----------+---------+----------+------------------+------------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.ensemble_name:<8} | "
+            f"{row.threshold_name:<3} | "
+            f"{row.active_fraction:>6.2f} | "
+            f"{row.share_support_match_fraction:>8.2f} | "
+            f"{row.count_support_match_fraction:>8.2f} | "
+            f"{row.low_degree_active_fraction:>8.2f} | "
+            f"{row.single_hit_active_fraction:>7.2f} | "
+            f"{row.mean_active_degree:>8.2f} | "
+            f"{row.mean_positive_share:>5.2f}/{row.mean_positive_count:>5.2f} | "
+            f"{row.mean_share_count_ratio:>5.2f}"
         )
     return "\n".join(lines)
 
