@@ -11,6 +11,7 @@ if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
 from toy_event_physics import (  # noqa: E402
+    classify_extended_route_role,
     classify_extended_proxy_family,
     extended_route_components,
 )
@@ -30,12 +31,13 @@ EXAMPLES = (
 def main() -> None:
     print("Extended Route Classification Examples")
     print("======================================")
-    print("example            | family            | components                | signature")
-    print("-------------------+-------------------+---------------------------+----------------------------------------------")
+    print("example            | family            | role                | components                | signature")
+    print("-------------------+-------------------+---------------------+---------------------------+----------------------------------------------")
     for name, feature_subset in EXAMPLES:
         family, signature = classify_extended_proxy_family(feature_subset)
+        role = classify_extended_route_role(feature_subset)
         components = ", ".join(extended_route_components(feature_subset))
-        print(f"{name:<19} | {family:<17} | {components:<25.25} | {signature}")
+        print(f"{name:<19} | {family:<17} | {role:<19} | {components:<25.25} | {signature}")
 
 
 if __name__ == "__main__":

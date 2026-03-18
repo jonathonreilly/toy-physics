@@ -13007,6 +13007,19 @@ def extended_route_components(feature_subset: str) -> tuple[str, ...]:
     return tuple(components)
 
 
+def classify_extended_route_role(feature_subset: str) -> str:
+    if not feature_subset or feature_subset == "-":
+        return "none"
+    components = extended_route_components(feature_subset)
+    if components == ("none",):
+        return "none"
+    if len(components) > 1:
+        return "coexistence"
+    if feature_subset_cardinality(feature_subset) == 1:
+        return "atomic-standalone"
+    return "family-composite"
+
+
 def classify_extended_proxy_family(feature_subset: str) -> tuple[str, str]:
     if not feature_subset or feature_subset == "-":
         return "none", "-"
