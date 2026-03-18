@@ -12956,9 +12956,20 @@ def classify_extended_proxy_family(feature_subset: str) -> tuple[str, str]:
         return "none", "-"
     features = tuple(part.strip() for part in feature_subset.split(",") if part.strip())
     has_low = any("low_degree" in feature for feature in features)
-    has_degree_profile = any(
-        feature.startswith("degree_")
-        or feature in {
+    has_degree_basis = any(feature.startswith("degree_") for feature in features)
+    has_neighbor_moment = any(
+        feature in {
+            "motif_mean_neighbor_degree",
+            "motif_neighbor_degree_variation",
+        }
+        for feature in features
+    )
+    has_two_hop = any(feature.startswith("motif_two_hop_") for feature in features)
+    has_degree_profile = has_degree_basis or has_neighbor_moment
+    has_sparse = has_two_hop or any(
+        feature in {
+            "degree_1_fraction",
+            "degree_8_fraction",
             "motif_mean_neighbor_degree",
             "motif_neighbor_degree_variation",
         }
@@ -12981,16 +12992,22 @@ def classify_extended_proxy_family(feature_subset: str) -> tuple[str, str]:
         return "deep-pocket", ", ".join(features)
     if has_low and has_pocket:
         return "low-degree+pocket", ", ".join(features)
+    if has_low and has_sparse:
+        return "low-degree+sparse", ", ".join(features)
+    if has_sparse and has_pocket:
+        return "pocket+sparse", ", ".join(features)
+    if has_sparse:
+        return "sparse-structure", ", ".join(features)
     if has_low:
         return "low-degree", ", ".join(features)
-    if has_degree_profile:
-        return "degree-profile", ", ".join(features)
     if has_pocket and has_hub:
         return "pocket+hub", ", ".join(features)
     if has_pocket:
         return "pocket", ", ".join(features)
     if has_hub:
         return "hub", ", ".join(features)
+    if has_degree_profile:
+        return "degree-profile", ", ".join(features)
     return "other", ", ".join(features)
 
 
