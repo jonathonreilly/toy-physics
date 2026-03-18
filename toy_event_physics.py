@@ -1196,6 +1196,30 @@ class CompactPredicateReconstructionAggregateRow:
     best_compact_gap_worst: float
 
 
+@dataclass
+class ThresholdCoreOverlapRow:
+    ensemble_name: str
+    graph_count: int
+    total_nodes: int
+    ge6_active_fraction: float
+    ge7_active_fraction: float
+    share6_positive_fraction: float
+    ge6_share6_support_match_fraction: float
+    ge7_subset_of_ge6_fraction: float
+    ge6_without_ge7_fraction: float
+    min_positive_share6: float
+    mean_positive_share6: float
+
+
+@dataclass
+class ThresholdCoreModelRow:
+    ensemble_name: str
+    feature_name: str
+    generated_mean_accuracy: float
+    generated_worst_accuracy: float
+    tree_description: str
+
+
 _cross_dataset_prediction_context_cache: dict[
     tuple[float, float | None, int, int],
     tuple[
@@ -4379,6 +4403,79 @@ def local_shape_feature_bundle(
         neighbor_leverage_threshold_fractions,
         threshold_exposure_decomposition,
     )
+
+
+def node_threshold_core_profiles(
+    nodes: set[tuple[int, int]],
+    wrap_y: bool = False,
+) -> dict[tuple[int, int], dict[str, float]]:
+    degree_map = {
+        node: len(graph_neighbors(node, nodes, wrap_y=wrap_y))
+        for node in nodes
+    }
+    profiles: dict[tuple[int, int], dict[str, float]] = {}
+    for node in nodes:
+        neighbors = graph_neighbors(node, nodes, wrap_y=wrap_y)
+        neighbor_degrees = [degree_map[neighbor] for neighbor in neighbors]
+        if not neighbor_degrees:
+            profiles[node] = {
+                "ge6": 0.0,
+                "ge7": 0.0,
+                "share6": 0.0,
+                "count6": 0.0,
+                "share7": 0.0,
+                "count7": 0.0,
+            }
+            continue
+        hits6 = sum(degree >= 6 for degree in neighbor_degrees)
+        hits7 = sum(degree >= 7 for degree in neighbor_degrees)
+        profiles[node] = {
+            "ge6": 1.0 if hits6 > 0 else 0.0,
+            "ge7": 1.0 if hits7 > 0 else 0.0,
+            "share6": hits6 / len(neighbor_degrees),
+            "count6": hits6 / 8.0,
+            "share7": hits7 / len(neighbor_degrees),
+            "count7": hits7 / 8.0,
+        }
+    return profiles
+
+
+def generated_geometry_node_sets(
+    geometry_variant_limit: int,
+    procedural_variant_limit: int,
+    procedural_styles: tuple[str, ...],
+) -> list[tuple[str, set[tuple[int, int]], bool]]:
+    graph_rows: list[tuple[str, set[tuple[int, int]], bool]] = []
+    for pack_name, scenarios in benchmark_packs():
+        for scenario_name, nodes, wrap_y in scenarios:
+            graph_rows.append((f"{pack_name}:{scenario_name}:base", nodes, wrap_y))
+            for variant_name, perturbed_nodes, _node_delta in randomized_geometry_variants(
+                pack_name,
+                scenario_name,
+                nodes,
+                wrap_y,
+                variant_limit=geometry_variant_limit,
+            ):
+                graph_rows.append(
+                    (f"{pack_name}:{scenario_name}:{variant_name}", perturbed_nodes, wrap_y)
+                )
+            for style in tuple(dict.fromkeys(procedural_styles)):
+                for variant_name, perturbed_nodes, _node_delta in procedural_geometry_variants(
+                    pack_name,
+                    scenario_name,
+                    nodes,
+                    wrap_y,
+                    variant_limit=procedural_variant_limit,
+                    style=style,
+                ):
+                    graph_rows.append(
+                        (
+                            f"{pack_name}:{scenario_name}:{style}:{variant_name}",
+                            perturbed_nodes,
+                            wrap_y,
+                        )
+                    )
+    return graph_rows
 
 
 def neighborhood_degree_fractions(
@@ -13472,6 +13569,127 @@ def compact_threshold_predicate_reconstruction_benchmark(
     return rows, aggregate_rows
 
 
+def threshold_core_overlap_analysis(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    ensembles: tuple[tuple[str, int, int, tuple[str, ...]], ...] = (
+        ("default", 5, 3, ("walk", "mode-mix", "local-morph")),
+        ("broader", 7, 4, ("walk", "mode-mix", "local-morph")),
+    ),
+) -> tuple[list[ThresholdCoreOverlapRow], list[ThresholdCoreModelRow]]:
+    overlap_rows: list[ThresholdCoreOverlapRow] = []
+    model_rows: list[ThresholdCoreModelRow] = []
+    core_features = (
+        "motif_high_degree_neighbor_ge_6_fraction",
+        "motif_high_degree_neighbor_ge_7_fraction",
+        "motif_high_degree_neighbor_share6_fraction",
+        "motif_high_degree_neighbor_count6_fraction",
+        "motif_high_degree_neighbor_share7_fraction",
+        "motif_high_degree_neighbor_count7_fraction",
+    )
+
+    for (
+        ensemble_name,
+        geometry_variant_limit,
+        procedural_variant_limit,
+        procedural_styles,
+    ) in ensembles:
+        total_nodes = 0
+        ge6_active = 0
+        ge7_active = 0
+        share6_positive = 0
+        ge6_share6_support_match = 0
+        ge7_subset_hits = 0
+        ge7_active_nodes = 0
+        ge6_without_ge7 = 0
+        positive_share6_values: list[float] = []
+        graph_rows = generated_geometry_node_sets(
+            geometry_variant_limit=geometry_variant_limit,
+            procedural_variant_limit=procedural_variant_limit,
+            procedural_styles=procedural_styles,
+        )
+        for _graph_name, nodes, wrap_y in graph_rows:
+            profiles = node_threshold_core_profiles(nodes, wrap_y=wrap_y)
+            for values in profiles.values():
+                total_nodes += 1
+                ge6_flag = values["ge6"] > 0.5
+                ge7_flag = values["ge7"] > 0.5
+                share6_flag = values["share6"] > 0.0
+                if ge6_flag:
+                    ge6_active += 1
+                if ge7_flag:
+                    ge7_active += 1
+                    ge7_active_nodes += 1
+                    if ge6_flag:
+                        ge7_subset_hits += 1
+                if share6_flag:
+                    share6_positive += 1
+                    positive_share6_values.append(values["share6"])
+                if ge6_flag and not ge7_flag:
+                    ge6_without_ge7 += 1
+                if ge6_flag == share6_flag:
+                    ge6_share6_support_match += 1
+
+        overlap_rows.append(
+            ThresholdCoreOverlapRow(
+                ensemble_name=ensemble_name,
+                graph_count=len(graph_rows),
+                total_nodes=total_nodes,
+                ge6_active_fraction=ge6_active / max(1, total_nodes),
+                ge7_active_fraction=ge7_active / max(1, total_nodes),
+                share6_positive_fraction=share6_positive / max(1, total_nodes),
+                ge6_share6_support_match_fraction=(
+                    ge6_share6_support_match / max(1, total_nodes)
+                ),
+                ge7_subset_of_ge6_fraction=(
+                    ge7_subset_hits / max(1, ge7_active_nodes)
+                    if ge7_active_nodes
+                    else 1.0
+                ),
+                ge6_without_ge7_fraction=ge6_without_ge7 / max(1, total_nodes),
+                min_positive_share6=(
+                    min(positive_share6_values) if positive_share6_values else 0.0
+                ),
+                mean_positive_share6=(
+                    sum(positive_share6_values) / len(positive_share6_values)
+                    if positive_share6_values
+                    else 0.0
+                ),
+            )
+        )
+
+        for feature_name in core_features:
+            _basis_rows, benchmark_rows = neighborhood_basis_benchmark(
+                retained_weight=retained_weight,
+                mode_retained_weight=mode_retained_weight,
+                geometry_variant_limit=geometry_variant_limit,
+                procedural_variant_limit=procedural_variant_limit,
+                procedural_styles=procedural_styles,
+                basis_size=1,
+                basis_feature_names=(feature_name,),
+            )
+            feature_row = next(
+                row
+                for row in benchmark_rows
+                if row.rule_family == "compact"
+                and row.candidate_name == "basis-1"
+                and row.model_family == "tree-depth2"
+            )
+            model_rows.append(
+                ThresholdCoreModelRow(
+                    ensemble_name=ensemble_name,
+                    feature_name=feature_name,
+                    generated_mean_accuracy=feature_row.generated_mean_accuracy,
+                    generated_worst_accuracy=feature_row.generated_worst_accuracy,
+                    tree_description=feature_row.description,
+                )
+            )
+
+    overlap_rows.sort(key=lambda row: row.ensemble_name)
+    model_rows.sort(key=lambda row: (row.ensemble_name, row.feature_name))
+    return overlap_rows, model_rows
+
+
 def high_degree_decomposition_benchmark(
     retained_weight: float = 1.0,
     mode_retained_weight: float | None = None,
@@ -16763,6 +16981,47 @@ def render_compact_predicate_reconstruction_aggregate_table(
             f"{row.fast_restored_cases:>4} | "
             f"{row.best_compact_subset:<21.21} | "
             f"{row.best_compact_gap_mean:+.2f}/{row.best_compact_gap_worst:+.2f}"
+        )
+    return "\n".join(lines)
+
+
+def render_threshold_core_overlap_table(
+    rows: list[ThresholdCoreOverlapRow],
+) -> str:
+    lines = [
+        "ensemble | graphs | nodes  | ge6 act | ge7 act | share6+ | ge6==share6>0 | ge7<=ge6 | ge6-only | min+/mean+ share6",
+        "---------+-------+--------+---------+---------+---------+----------------+----------+----------+------------------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.ensemble_name:<8} | "
+            f"{row.graph_count:>5} | "
+            f"{row.total_nodes:>6} | "
+            f"{row.ge6_active_fraction:>7.2f} | "
+            f"{row.ge7_active_fraction:>7.2f} | "
+            f"{row.share6_positive_fraction:>7.2f} | "
+            f"{row.ge6_share6_support_match_fraction:>14.2f} | "
+            f"{row.ge7_subset_of_ge6_fraction:>8.2f} | "
+            f"{row.ge6_without_ge7_fraction:>8.2f} | "
+            f"{row.min_positive_share6:>5.2f}/{row.mean_positive_share6:>5.2f}"
+        )
+    return "\n".join(lines)
+
+
+def render_threshold_core_model_table(
+    rows: list[ThresholdCoreModelRow],
+) -> str:
+    lines = [
+        "ensemble | feature                     | mean  | worst | tree",
+        "---------+-----------------------------+-------+-------+----------------------------------------------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.ensemble_name:<8} | "
+            f"{abbreviate_feature_subset(row.feature_name):<27.27} | "
+            f"{row.generated_mean_accuracy:>5.2f} | "
+            f"{row.generated_worst_accuracy:>5.2f} | "
+            f"{row.tree_description}"
         )
     return "\n".join(lines)
 
