@@ -12951,9 +12951,9 @@ def neighborhood_basis_ablation_benchmark(
     return ablation_rows
 
 
-def classify_extended_proxy_family(feature_subset: str) -> tuple[str, str]:
+def extended_route_components(feature_subset: str) -> tuple[str, ...]:
     if not feature_subset or feature_subset == "-":
-        return "none", "-"
+        return ("none",)
     features = tuple(part.strip() for part in feature_subset.split(",") if part.strip())
     has_low = any("low_degree" in feature for feature in features)
     has_degree_basis = any(feature.startswith("degree_") for feature in features)
@@ -12977,7 +12977,10 @@ def classify_extended_proxy_family(feature_subset: str) -> tuple[str, str]:
     )
     has_deep = any("deep_pocket" in feature for feature in features)
     has_pocket = any(
-        "pocket_adjacent" in feature or feature == "pocket_fraction"
+        feature in {
+            "motif_pocket_adjacent_fraction",
+            "pocket_fraction",
+        }
         for feature in features
     )
     has_hub = any(
@@ -12986,6 +12989,35 @@ def classify_extended_proxy_family(feature_subset: str) -> tuple[str, str]:
         or feature.startswith("motif_neighbor_leverage_")
         for feature in features
     )
+    components: list[str] = []
+    if has_hub:
+        components.append("hub")
+    if has_deep:
+        components.append("deep-pocket")
+    if has_pocket:
+        components.append("pocket")
+    if has_low:
+        components.append("low-degree")
+    if has_sparse:
+        components.append("sparse-structure")
+    if not components and has_degree_profile:
+        components.append("degree-profile")
+    if not components:
+        components.append("other")
+    return tuple(components)
+
+
+def classify_extended_proxy_family(feature_subset: str) -> tuple[str, str]:
+    if not feature_subset or feature_subset == "-":
+        return "none", "-"
+    features = tuple(part.strip() for part in feature_subset.split(",") if part.strip())
+    components = extended_route_components(feature_subset)
+    has_hub = "hub" in components
+    has_deep = "deep-pocket" in components
+    has_pocket = "pocket" in components
+    has_low = "low-degree" in components
+    has_sparse = "sparse-structure" in components
+    has_degree_profile = "degree-profile" in components
     if has_deep and has_hub:
         return "deep-pocket+hub", ", ".join(features)
     if has_deep:
