@@ -13419,6 +13419,24 @@ def compact_threshold_predicate_reconstruction_sets(
     return tuple(predicate_sets)
 
 
+def resolve_sparse_bridge_feature_names(
+    removed_features: tuple[str, ...],
+    added_features: tuple[str, ...],
+) -> tuple[str, ...]:
+    active_removed = tuple(
+        feature for feature in removed_features if feature not in set(added_features)
+    )
+    feature_names_list = [
+        feature
+        for feature in rich_neighborhood_basis_feature_names()
+        if feature not in set(active_removed)
+    ]
+    for feature in added_features:
+        if feature not in feature_names_list:
+            feature_names_list.append(feature)
+    return tuple(feature_names_list)
+
+
 def compact_sparse_bridge_benchmark(
     retained_weight: float = 1.0,
     mode_retained_weight: float | None = None,
@@ -13435,7 +13453,6 @@ def compact_sparse_bridge_benchmark(
         removed_features = degree_profile_fallback_sets()[0][1]
     if addback_sets is None:
         addback_sets = compact_sparse_bridge_sets()
-    all_rich_features = rich_neighborhood_basis_feature_names()
     bridge_rows: list[SparseFallbackBridgeRow] = []
 
     for (
@@ -13445,16 +13462,10 @@ def compact_sparse_bridge_benchmark(
         procedural_styles,
     ) in ensembles:
         for addback_name, added_features in addback_sets:
-            active_removed = tuple(
-                feature for feature in removed_features if feature not in set(added_features)
+            feature_names = resolve_sparse_bridge_feature_names(
+                removed_features,
+                added_features,
             )
-            feature_names_list = [
-                feature for feature in all_rich_features if feature not in set(active_removed)
-            ]
-            for feature in added_features:
-                if feature not in feature_names_list:
-                    feature_names_list.append(feature)
-            feature_names = tuple(feature_names_list)
             residual_rows = neighborhood_basis_residual_benchmark(
                 retained_weight=retained_weight,
                 mode_retained_weight=mode_retained_weight,
