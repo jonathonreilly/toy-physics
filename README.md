@@ -266,6 +266,7 @@ What the current script demonstrates:
 - In `extended`, the best small learned basis (`degree_1_fraction`) already beats `pocket_fraction` strongly, at `0.60 / 0.59` versus `0.25 / 0.20`.
 - So the current claim is no longer that `pocket_fraction` is uniquely special. On the corrected generated-geometry benchmark, even the tiny learned degree basis can match or beat it, especially in `extended`.
 - A twenty-eighth diagnostic then asks the sharper residual question on the stronger generated-geometry ensemble: as the learned neighborhood basis grows, does `pocket_fraction` still add anything once the automatic basis is allowed to catch up?
+- In the residual/bridge diagnostics below, `parity size N` means the first scanned basis-window size that reaches the pocket row; the actual winning subset can be smaller, and the current tables now show that as `Nw/Mf`.
 - In `compact`, the degree-only basis still trails the pocket row through basis sizes `3..6`, then first reaches parity at size `7`.
 - In `extended`, the learned basis already exceeds the pocket row at size `3` and keeps a large margin through size `6`; only the larger `pocket + basis` combinations catch back up near size `7`.
 - So the corrected local-shape claim is again asymmetric, but differently so: `pocket_fraction` still helps compact small bases, while extended is already dominated by the learned basis very early.

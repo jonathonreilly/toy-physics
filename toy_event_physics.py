@@ -1144,6 +1144,7 @@ class SparseFallbackResidualAggregateRow:
     route_name: str
     rule_family: str
     parity_size: int | None
+    parity_feature_subset: str
     closest_size: int
     closest_feature_subset: str
     closest_proxy_family: str
@@ -10711,6 +10712,26 @@ def abbreviate_feature_subset(feature_subset: str) -> str:
     return ", ".join(abbreviations)
 
 
+def feature_subset_cardinality(feature_subset: str) -> int:
+    if not feature_subset or feature_subset == "-":
+        return 0
+    return len([part.strip() for part in feature_subset.split(",") if part.strip()])
+
+
+def format_parity_window_label(
+    window_size: int | None,
+    feature_subset: str,
+    abbreviate: bool = True,
+) -> str:
+    if window_size is None:
+        return "-"
+    feature_count = feature_subset_cardinality(feature_subset)
+    subset_label = (
+        abbreviate_feature_subset(feature_subset) if abbreviate else feature_subset
+    )
+    return f"{window_size}w/{feature_count}f:{subset_label}"
+
+
 def fit_ordinal_score_model(
     rows: list[CenterlineModeSweepRow] | list[GeometryPredictionRow],
     feature_names: tuple[str, ...],
@@ -13262,6 +13283,9 @@ def sparse_fallback_residual_trace_benchmark(
                         route_name=route_name,
                         rule_family=rule_family,
                         parity_size=parity_row.basis_size if parity_row is not None else None,
+                        parity_feature_subset=(
+                            parity_row.basis_feature_subset if parity_row is not None else "-"
+                        ),
                         closest_size=closest_row.basis_size,
                         closest_feature_subset=closest_row.basis_feature_subset,
                         closest_proxy_family=closest_proxy_family,
@@ -16627,27 +16651,25 @@ def render_neighborhood_basis_ablation_table(
     rows: list[NeighborhoodBasisAblationRow],
 ) -> str:
     lines = [
-        "ablation           | nfeat | removed                | compact parity | compact pre-gap | extended parity | extended pre-gap",
-        "-------------------+-------+------------------------+----------------+-----------------+-----------------+-----------------",
+        "ablation           | nfeat | removed                | compact parity     | compact pre-gap | extended parity    | extended pre-gap",
+        "-------------------+-------+------------------------+--------------------+-----------------+--------------------+-----------------",
     ]
     for row in rows:
-        compact_parity = (
-            f"{row.compact_parity_size}:{row.compact_parity_feature_subset}"
-            if row.compact_parity_size is not None
-            else "-"
+        compact_parity = format_parity_window_label(
+            row.compact_parity_size,
+            row.compact_parity_feature_subset,
         )
-        extended_parity = (
-            f"{row.extended_parity_size}:{row.extended_parity_feature_subset}"
-            if row.extended_parity_size is not None
-            else "-"
+        extended_parity = format_parity_window_label(
+            row.extended_parity_size,
+            row.extended_parity_feature_subset,
         )
         lines.append(
             f"{row.ablation_name:<19} | "
             f"{row.feature_count:>5} | "
             f"{row.removed_features:<22.22} | "
-            f"{compact_parity:<14.14} | "
+            f"{compact_parity:<18.18} | "
             f"{row.compact_best_prethreshold_gap:+.2f}/{row.compact_best_prethreshold_worst_gap:+.2f} | "
-            f"{extended_parity:<15.15} | "
+            f"{extended_parity:<18.18} | "
             f"{row.extended_best_prethreshold_gap:+.2f}/{row.extended_best_prethreshold_worst_gap:+.2f}"
         )
     return "\n".join(lines)
@@ -16657,28 +16679,26 @@ def render_high_degree_decomposition_table(
     rows: list[HighDegreeDecompositionRow],
 ) -> str:
     lines = [
-        "decomposition                | nfeat | remove                 | add                    | compact parity | compact pre-gap | extended parity | extended pre-gap",
-        "-----------------------------+-------+------------------------+------------------------+----------------+-----------------+-----------------+-----------------",
+        "decomposition                | nfeat | remove                 | add                    | compact parity     | compact pre-gap | extended parity    | extended pre-gap",
+        "-----------------------------+-------+------------------------+------------------------+--------------------+-----------------+--------------------+-----------------",
     ]
     for row in rows:
-        compact_parity = (
-            f"{row.compact_parity_size}:{row.compact_parity_feature_subset}"
-            if row.compact_parity_size is not None
-            else "-"
+        compact_parity = format_parity_window_label(
+            row.compact_parity_size,
+            row.compact_parity_feature_subset,
         )
-        extended_parity = (
-            f"{row.extended_parity_size}:{row.extended_parity_feature_subset}"
-            if row.extended_parity_size is not None
-            else "-"
+        extended_parity = format_parity_window_label(
+            row.extended_parity_size,
+            row.extended_parity_feature_subset,
         )
         lines.append(
             f"{row.decomposition_name:<27} | "
             f"{row.feature_count:>5} | "
             f"{row.removed_features:<22.22} | "
             f"{row.added_features:<22.22} | "
-            f"{compact_parity:<14.14} | "
+            f"{compact_parity:<18.18} | "
             f"{row.compact_best_prethreshold_gap:+.2f}/{row.compact_best_prethreshold_worst_gap:+.2f} | "
-            f"{extended_parity:<15.15} | "
+            f"{extended_parity:<18.18} | "
             f"{row.extended_best_prethreshold_gap:+.2f}/{row.extended_best_prethreshold_worst_gap:+.2f}"
         )
     return "\n".join(lines)
@@ -16689,8 +16709,8 @@ def render_mechanism_split_table(
     limit_per_benchmark: int = 16,
 ) -> str:
     lines = [
-        "benchmark            | class         | mechanism            | compact       | extended      | same | compact pre    | extended pre",
-        "---------------------+---------------+----------------------+---------------+---------------+------+----------------+---------------",
+        "benchmark            | class         | mechanism            | compact            | extended           | same | compact pre    | extended pre",
+        "---------------------+---------------+----------------------+--------------------+--------------------+------+----------------+---------------",
     ]
     counts: DefaultDict[str, int] = defaultdict(int)
     for row in rows:
@@ -16698,22 +16718,20 @@ def render_mechanism_split_table(
         if seen >= limit_per_benchmark:
             continue
         counts[row.benchmark_name] = seen + 1
-        compact_label = (
-            f"{row.compact_parity_size}:{abbreviate_feature_subset(row.compact_parity_feature_subset)}"
-            if row.compact_parity_size is not None
-            else "-"
+        compact_label = format_parity_window_label(
+            row.compact_parity_size,
+            row.compact_parity_feature_subset,
         )
-        extended_label = (
-            f"{row.extended_parity_size}:{abbreviate_feature_subset(row.extended_parity_feature_subset)}"
-            if row.extended_parity_size is not None
-            else "-"
+        extended_label = format_parity_window_label(
+            row.extended_parity_size,
+            row.extended_parity_feature_subset,
         )
         lines.append(
             f"{row.benchmark_name:<20} | "
             f"{row.split_class:<13} | "
             f"{row.mechanism_name:<20.20} | "
-            f"{compact_label:<13.13} | "
-            f"{extended_label:<13.13} | "
+            f"{compact_label:<18.18} | "
+            f"{extended_label:<18.18} | "
             f"{'yes' if row.same_feature_signature else 'no ':<4} | "
             f"{row.compact_best_prethreshold_gap:+.2f}/{row.compact_best_prethreshold_worst_gap:+.2f} | "
             f"{row.extended_best_prethreshold_gap:+.2f}/{row.extended_best_prethreshold_worst_gap:+.2f}"
@@ -16741,26 +16759,24 @@ def render_extended_proxy_route_table(
     rows: list[ExtendedProxyRouteRow],
 ) -> str:
     lines = [
-        "route                    | nfeat | removed                | compact       | extended      | proxy fam       | compact pre    | extended pre",
-        "-------------------------+-------+------------------------+---------------+---------------+-----------------+----------------+---------------",
+        "route                    | nfeat | removed                | compact            | extended           | proxy fam       | compact pre    | extended pre",
+        "-------------------------+-------+------------------------+--------------------+--------------------+-----------------+----------------+---------------",
     ]
     for row in rows:
-        compact_label = (
-            f"{row.compact_parity_size}:{abbreviate_feature_subset(row.compact_parity_feature_subset)}"
-            if row.compact_parity_size is not None
-            else "-"
+        compact_label = format_parity_window_label(
+            row.compact_parity_size,
+            row.compact_parity_feature_subset,
         )
-        extended_label = (
-            f"{row.extended_parity_size}:{abbreviate_feature_subset(row.extended_parity_feature_subset)}"
-            if row.extended_parity_size is not None
-            else "-"
+        extended_label = format_parity_window_label(
+            row.extended_parity_size,
+            row.extended_parity_feature_subset,
         )
         lines.append(
             f"{row.route_name:<24} | "
             f"{row.feature_count:>5} | "
             f"{row.removed_features:<22.22} | "
-            f"{compact_label:<13.13} | "
-            f"{extended_label:<13.13} | "
+            f"{compact_label:<18.18} | "
+            f"{extended_label:<18.18} | "
             f"{row.extended_proxy_family:<15} | "
             f"{row.compact_best_prethreshold_gap:+.2f}/{row.compact_best_prethreshold_worst_gap:+.2f} | "
             f"{row.extended_best_prethreshold_gap:+.2f}/{row.extended_best_prethreshold_worst_gap:+.2f}"
@@ -16784,26 +16800,24 @@ def render_degree_profile_fallback_table(
     rows: list[DegreeProfileFallbackRow],
 ) -> str:
     lines = [
-        "route                         | nfeat | removed                | compact       | extended      | proxy fam       | compact pre    | extended pre",
-        "------------------------------+-------+------------------------+---------------+---------------+-----------------+----------------+---------------",
+        "route                         | nfeat | removed                | compact            | extended           | proxy fam       | compact pre    | extended pre",
+        "------------------------------+-------+------------------------+--------------------+--------------------+-----------------+----------------+---------------",
     ]
     for row in rows:
-        compact_label = (
-            f"{row.compact_parity_size}:{abbreviate_feature_subset(row.compact_parity_feature_subset)}"
-            if row.compact_parity_size is not None
-            else "-"
+        compact_label = format_parity_window_label(
+            row.compact_parity_size,
+            row.compact_parity_feature_subset,
         )
-        extended_label = (
-            f"{row.extended_parity_size}:{abbreviate_feature_subset(row.extended_parity_feature_subset)}"
-            if row.extended_parity_size is not None
-            else "-"
+        extended_label = format_parity_window_label(
+            row.extended_parity_size,
+            row.extended_parity_feature_subset,
         )
         lines.append(
             f"{row.route_name:<29} | "
             f"{row.feature_count:>5} | "
             f"{row.removed_features:<22.22} | "
-            f"{compact_label:<13.13} | "
-            f"{extended_label:<13.13} | "
+            f"{compact_label:<18.18} | "
+            f"{extended_label:<18.18} | "
             f"{row.extended_proxy_family:<15} | "
             f"{row.compact_best_prethreshold_gap:+.2f}/{row.compact_best_prethreshold_worst_gap:+.2f} | "
             f"{row.extended_best_prethreshold_gap:+.2f}/{row.extended_best_prethreshold_worst_gap:+.2f}"
@@ -16815,27 +16829,25 @@ def render_sparse_fallback_access_table(
     rows: list[SparseFallbackAccessRow],
 ) -> str:
     lines = [
-        "ensemble | g/p  | route                         | compact             | c fam           | extended            | e fam",
-        "---------+------+-------------------------------+---------------------+-----------------+---------------------+----------------",
+        "ensemble | g/p  | route                         | compact                  | c fam           | extended                 | e fam",
+        "---------+------+-------------------------------+--------------------------+-----------------+--------------------------+----------------",
     ]
     for row in rows:
-        compact_label = (
-            f"{row.compact_parity_size}:{abbreviate_feature_subset(row.compact_parity_feature_subset)}"
-            if row.compact_parity_size is not None
-            else "-"
+        compact_label = format_parity_window_label(
+            row.compact_parity_size,
+            row.compact_parity_feature_subset,
         )
-        extended_label = (
-            f"{row.extended_parity_size}:{abbreviate_feature_subset(row.extended_parity_feature_subset)}"
-            if row.extended_parity_size is not None
-            else "-"
+        extended_label = format_parity_window_label(
+            row.extended_parity_size,
+            row.extended_parity_feature_subset,
         )
         lines.append(
             f"{row.ensemble_name:<8} | "
             f"{row.geometry_variant_limit}/{row.procedural_variant_limit:<3} | "
             f"{row.route_name:<29} | "
-            f"{compact_label:<19.19} | "
+            f"{compact_label:<24.24} | "
             f"{row.compact_proxy_family:<15} | "
-            f"{extended_label:<19.19} | "
+            f"{extended_label:<24.24} | "
             f"{row.extended_proxy_family:<15}"
         )
     return "\n".join(lines)
@@ -16887,18 +16899,24 @@ def render_sparse_fallback_residual_aggregate_table(
     rows: list[SparseFallbackResidualAggregateRow],
 ) -> str:
     lines = [
-        "ensemble | route                         | family   | parity | closest             | proxy           | gap mean/w",
-        "---------+-------------------------------+----------+--------+---------------------+-----------------+-----------",
+        "ensemble | route                         | family   | parity       | closest                | proxy           | gap mean/w",
+        "---------+-------------------------------+----------+--------------+------------------------+-----------------+-----------",
     ]
     for row in rows:
-        parity_label = str(row.parity_size) if row.parity_size is not None else "-"
-        closest_label = f"{row.closest_size}:{abbreviate_feature_subset(row.closest_feature_subset)}"
+        parity_label = format_parity_window_label(
+            row.parity_size,
+            row.parity_feature_subset,
+        )
+        closest_label = format_parity_window_label(
+            row.closest_size,
+            row.closest_feature_subset,
+        )
         lines.append(
             f"{row.ensemble_name:<8} | "
             f"{row.route_name:<29} | "
             f"{row.rule_family:<8} | "
-            f"{parity_label:>6} | "
-            f"{closest_label:<19.19} | "
+            f"{parity_label:<12.12} | "
+            f"{closest_label:<22.22} | "
             f"{row.closest_proxy_family:<15} | "
             f"{row.closest_gap_mean:>+4.2f}/{row.closest_gap_worst:+4.2f}"
         )
@@ -16909,27 +16927,25 @@ def render_compact_sparse_bridge_table(
     rows: list[SparseFallbackBridgeRow],
 ) -> str:
     lines = [
-        "ensemble | addback          | added               | compact       | compact pre   | extended      | e fam           | extended pre",
-        "---------+------------------+---------------------+---------------+---------------+---------------+-----------------+-------------",
+        "ensemble | addback          | added               | compact            | compact pre   | extended           | e fam           | extended pre",
+        "---------+------------------+---------------------+--------------------+---------------+--------------------+-----------------+-------------",
     ]
     for row in rows:
-        compact_label = (
-            f"{row.compact_parity_size}:{abbreviate_feature_subset(row.compact_parity_feature_subset)}"
-            if row.compact_parity_size is not None
-            else "-"
+        compact_label = format_parity_window_label(
+            row.compact_parity_size,
+            row.compact_parity_feature_subset,
         )
-        extended_label = (
-            f"{row.extended_parity_size}:{abbreviate_feature_subset(row.extended_parity_feature_subset)}"
-            if row.extended_parity_size is not None
-            else "-"
+        extended_label = format_parity_window_label(
+            row.extended_parity_size,
+            row.extended_parity_feature_subset,
         )
         lines.append(
             f"{row.ensemble_name:<8} | "
             f"{row.addback_name:<16} | "
             f"{row.added_features:<19.19} | "
-            f"{compact_label:<13.13} | "
+            f"{compact_label:<18.18} | "
             f"{row.compact_best_prethreshold_gap:+.2f}/{row.compact_best_prethreshold_worst_gap:+.2f} | "
-            f"{extended_label:<13.13} | "
+            f"{extended_label:<18.18} | "
             f"{row.extended_proxy_family:<15} | "
             f"{row.extended_best_prethreshold_gap:+.2f}/{row.extended_best_prethreshold_worst_gap:+.2f}"
         )
@@ -16940,27 +16956,25 @@ def render_compact_predicate_reconstruction_table(
     rows: list[CompactPredicateReconstructionRow],
 ) -> str:
     lines = [
-        "ensemble | n | predicates            | compact       | compact pre   | extended      | e fam",
-        "---------+---+-----------------------+---------------+---------------+---------------+-----------------",
+        "ensemble | n | predicates            | compact            | compact pre   | extended           | e fam",
+        "---------+---+-----------------------+--------------------+---------------+--------------------+-----------------",
     ]
     for row in rows:
-        compact_label = (
-            f"{row.compact_parity_size}:{abbreviate_feature_subset(row.compact_parity_feature_subset)}"
-            if row.compact_parity_size is not None
-            else "-"
+        compact_label = format_parity_window_label(
+            row.compact_parity_size,
+            row.compact_parity_feature_subset,
         )
-        extended_label = (
-            f"{row.extended_parity_size}:{abbreviate_feature_subset(row.extended_parity_feature_subset)}"
-            if row.extended_parity_size is not None
-            else "-"
+        extended_label = format_parity_window_label(
+            row.extended_parity_size,
+            row.extended_parity_feature_subset,
         )
         lines.append(
             f"{row.ensemble_name:<8} | "
             f"{row.predicate_count:>1} | "
             f"{row.predicate_subset:<21.21} | "
-            f"{compact_label:<13.13} | "
+            f"{compact_label:<18.18} | "
             f"{row.compact_best_prethreshold_gap:+.2f}/{row.compact_best_prethreshold_worst_gap:+.2f} | "
-            f"{extended_label:<13.13} | "
+            f"{extended_label:<18.18} | "
             f"{row.extended_proxy_family:<15}"
         )
     return "\n".join(lines)
