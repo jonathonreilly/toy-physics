@@ -1169,6 +1169,33 @@ class SparseFallbackBridgeRow:
     extended_best_prethreshold_worst_gap: float
 
 
+@dataclass
+class CompactPredicateReconstructionRow:
+    ensemble_name: str
+    geometry_variant_limit: int
+    procedural_variant_limit: int
+    predicate_count: int
+    predicate_subset: str
+    compact_parity_size: int | None
+    compact_parity_feature_subset: str
+    compact_best_prethreshold_gap: float
+    compact_best_prethreshold_worst_gap: float
+    extended_parity_size: int | None
+    extended_parity_feature_subset: str
+    extended_proxy_family: str
+
+
+@dataclass
+class CompactPredicateReconstructionAggregateRow:
+    ensemble_name: str
+    cases: int
+    restored_cases: int
+    fast_restored_cases: int
+    best_compact_subset: str
+    best_compact_gap_mean: float
+    best_compact_gap_worst: float
+
+
 _cross_dataset_prediction_context_cache: dict[
     tuple[float, float | None, int, int],
     tuple[
@@ -13239,6 +13266,38 @@ def compact_threshold_proxy_bridge_sets() -> tuple[tuple[str, tuple[str, ...]], 
     )
 
 
+def compact_threshold_predicate_features() -> tuple[str, ...]:
+    return (
+        "motif_high_degree_neighbor_ge_6_fraction",
+        "motif_high_degree_neighbor_ge_7_fraction",
+        "motif_high_degree_neighbor_share6_fraction",
+        "motif_high_degree_neighbor_count6_fraction",
+        "motif_high_degree_neighbor_share7_fraction",
+        "motif_high_degree_neighbor_count7_fraction",
+    )
+
+
+def compact_threshold_predicate_reconstruction_sets(
+    max_predicate_count: int = 3,
+) -> tuple[tuple[str, tuple[str, ...]], ...]:
+    features = compact_threshold_predicate_features()
+    label_map = {
+        "motif_high_degree_neighbor_ge_6_fraction": "ge6",
+        "motif_high_degree_neighbor_ge_7_fraction": "ge7",
+        "motif_high_degree_neighbor_share6_fraction": "share6",
+        "motif_high_degree_neighbor_count6_fraction": "count6",
+        "motif_high_degree_neighbor_share7_fraction": "share7",
+        "motif_high_degree_neighbor_count7_fraction": "count7",
+    }
+    predicate_sets: list[tuple[str, tuple[str, ...]]] = [("baseline", tuple())]
+    for subset_size in range(1, max_predicate_count + 1):
+        for feature_subset in itertools.combinations(features, subset_size):
+            predicate_sets.append(
+                ("+".join(label_map[feature] for feature in feature_subset), feature_subset)
+            )
+    return tuple(predicate_sets)
+
+
 def compact_sparse_bridge_benchmark(
     retained_weight: float = 1.0,
     mode_retained_weight: float | None = None,
@@ -13268,9 +13327,13 @@ def compact_sparse_bridge_benchmark(
             active_removed = tuple(
                 feature for feature in removed_features if feature not in set(added_features)
             )
-            feature_names = tuple(
+            feature_names_list = [
                 feature for feature in all_rich_features if feature not in set(active_removed)
-            )
+            ]
+            for feature in added_features:
+                if feature not in feature_names_list:
+                    feature_names_list.append(feature)
+            feature_names = tuple(feature_names_list)
             residual_rows = neighborhood_basis_residual_benchmark(
                 retained_weight=retained_weight,
                 mode_retained_weight=mode_retained_weight,
@@ -13313,6 +13376,100 @@ def compact_sparse_bridge_benchmark(
 
     bridge_rows.sort(key=lambda row: (row.ensemble_name, row.addback_name))
     return bridge_rows
+
+
+def compact_threshold_predicate_reconstruction_benchmark(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    ensembles: tuple[tuple[str, int, int, tuple[str, ...]], ...] = (
+        ("default", 5, 3, ("walk", "mode-mix", "local-morph")),
+        ("broader", 7, 4, ("walk", "mode-mix", "local-morph")),
+    ),
+    procedural_rediscovery_limit: int = 1,
+    basis_sizes: tuple[int, ...] = (3, 4, 5, 6, 7, 8),
+    removed_features: tuple[str, ...] | None = None,
+    predicate_sets: tuple[tuple[str, tuple[str, ...]], ...] | None = None,
+) -> tuple[
+    list[CompactPredicateReconstructionRow],
+    list[CompactPredicateReconstructionAggregateRow],
+]:
+    if removed_features is None:
+        removed_features = degree_profile_fallback_sets()[0][1]
+    if predicate_sets is None:
+        predicate_sets = compact_threshold_predicate_reconstruction_sets()
+
+    rows: list[CompactPredicateReconstructionRow] = []
+    aggregate_rows: list[CompactPredicateReconstructionAggregateRow] = []
+    for (
+        ensemble_name,
+        geometry_variant_limit,
+        procedural_variant_limit,
+        procedural_styles,
+    ) in ensembles:
+        family_rows: list[CompactPredicateReconstructionRow] = []
+        for predicate_name, added_features in predicate_sets:
+            bridge_row = compact_sparse_bridge_benchmark(
+                retained_weight=retained_weight,
+                mode_retained_weight=mode_retained_weight,
+                ensembles=(
+                    (
+                        ensemble_name,
+                        geometry_variant_limit,
+                        procedural_variant_limit,
+                        procedural_styles,
+                    ),
+                ),
+                procedural_rediscovery_limit=procedural_rediscovery_limit,
+                basis_sizes=basis_sizes,
+                removed_features=removed_features,
+                addback_sets=((predicate_name, added_features),),
+            )[0]
+            row = CompactPredicateReconstructionRow(
+                ensemble_name=ensemble_name,
+                geometry_variant_limit=geometry_variant_limit,
+                procedural_variant_limit=procedural_variant_limit,
+                predicate_count=len(added_features),
+                predicate_subset=", ".join(added_features) if added_features else "-",
+                compact_parity_size=bridge_row.compact_parity_size,
+                compact_parity_feature_subset=bridge_row.compact_parity_feature_subset,
+                compact_best_prethreshold_gap=bridge_row.compact_best_prethreshold_gap,
+                compact_best_prethreshold_worst_gap=bridge_row.compact_best_prethreshold_worst_gap,
+                extended_parity_size=bridge_row.extended_parity_size,
+                extended_parity_feature_subset=bridge_row.extended_parity_feature_subset,
+                extended_proxy_family=bridge_row.extended_proxy_family,
+            )
+            rows.append(row)
+            family_rows.append(row)
+        best_compact_row = max(
+            family_rows,
+            key=lambda row: (
+                row.compact_best_prethreshold_gap,
+                row.compact_best_prethreshold_worst_gap,
+                -(row.predicate_count if row.predicate_count > 0 else 99),
+                row.predicate_subset,
+            ),
+        )
+        aggregate_rows.append(
+            CompactPredicateReconstructionAggregateRow(
+                ensemble_name=ensemble_name,
+                cases=len(family_rows),
+                restored_cases=sum(row.compact_parity_size is not None for row in family_rows),
+                fast_restored_cases=sum(row.compact_parity_size == 3 for row in family_rows),
+                best_compact_subset=best_compact_row.predicate_subset,
+                best_compact_gap_mean=best_compact_row.compact_best_prethreshold_gap,
+                best_compact_gap_worst=best_compact_row.compact_best_prethreshold_worst_gap,
+            )
+        )
+
+    rows.sort(
+        key=lambda row: (
+            row.ensemble_name,
+            row.predicate_count,
+            row.predicate_subset,
+        )
+    )
+    aggregate_rows.sort(key=lambda row: row.ensemble_name)
+    return rows, aggregate_rows
 
 
 def high_degree_decomposition_benchmark(
@@ -16557,6 +16714,55 @@ def render_compact_sparse_bridge_table(
             f"{extended_label:<13.13} | "
             f"{row.extended_proxy_family:<15} | "
             f"{row.extended_best_prethreshold_gap:+.2f}/{row.extended_best_prethreshold_worst_gap:+.2f}"
+        )
+    return "\n".join(lines)
+
+
+def render_compact_predicate_reconstruction_table(
+    rows: list[CompactPredicateReconstructionRow],
+) -> str:
+    lines = [
+        "ensemble | n | predicates            | compact       | compact pre   | extended      | e fam",
+        "---------+---+-----------------------+---------------+---------------+---------------+-----------------",
+    ]
+    for row in rows:
+        compact_label = (
+            f"{row.compact_parity_size}:{abbreviate_feature_subset(row.compact_parity_feature_subset)}"
+            if row.compact_parity_size is not None
+            else "-"
+        )
+        extended_label = (
+            f"{row.extended_parity_size}:{abbreviate_feature_subset(row.extended_parity_feature_subset)}"
+            if row.extended_parity_size is not None
+            else "-"
+        )
+        lines.append(
+            f"{row.ensemble_name:<8} | "
+            f"{row.predicate_count:>1} | "
+            f"{row.predicate_subset:<21.21} | "
+            f"{compact_label:<13.13} | "
+            f"{row.compact_best_prethreshold_gap:+.2f}/{row.compact_best_prethreshold_worst_gap:+.2f} | "
+            f"{extended_label:<13.13} | "
+            f"{row.extended_proxy_family:<15}"
+        )
+    return "\n".join(lines)
+
+
+def render_compact_predicate_reconstruction_aggregate_table(
+    rows: list[CompactPredicateReconstructionAggregateRow],
+) -> str:
+    lines = [
+        "ensemble | cases | restored | fast | best subset           | best gap",
+        "---------+-------+----------+------+-----------------------+----------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.ensemble_name:<8} | "
+            f"{row.cases:>5} | "
+            f"{row.restored_cases:>8} | "
+            f"{row.fast_restored_cases:>4} | "
+            f"{row.best_compact_subset:<21.21} | "
+            f"{row.best_compact_gap_mean:+.2f}/{row.best_compact_gap_worst:+.2f}"
         )
     return "\n".join(lines)
 
