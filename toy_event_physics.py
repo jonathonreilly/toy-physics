@@ -11579,9 +11579,12 @@ def build_generated_geometry_prediction_context(
     list[GeometryPredictionRow],
     list[GeometryPredictionRow],
 ]:
+    effective_mode_retained_weight = (
+        retained_weight if mode_retained_weight is None else mode_retained_weight
+    )
     cache_key = (
         retained_weight,
-        mode_retained_weight,
+        effective_mode_retained_weight,
         geometry_variant_limit,
         procedural_variant_limit,
         procedural_rediscovery_limit,
@@ -11611,7 +11614,7 @@ def build_generated_geometry_prediction_context(
         procedural_rows,
     ) = build_cross_dataset_prediction_context(
         retained_weight=retained_weight,
-        mode_retained_weight=mode_retained_weight,
+        mode_retained_weight=effective_mode_retained_weight,
         procedural_variant_limit=procedural_variant_limit,
         procedural_rediscovery_limit=procedural_rediscovery_limit,
     )
