@@ -12,9 +12,15 @@ if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
 from toy_event_physics import (  # noqa: E402
+    build_cross_dataset_prediction_context,
     build_generated_geometry_prediction_context,
+    centerline_feature_subset_benchmark,
     compact_threshold_proxy_bridge_sets,
+    compress_redundant_mode_subset_frontier_rows,
     feature_subset_cardinality,
+    generated_geometry_predictor_comparison,
+    mode_only_subset_frontier_rows,
+    predictor_family_comparison,
     resolve_sparse_bridge_feature_names,
 )
 
@@ -88,9 +94,114 @@ def check_sparse_bridge_addback_visibility() -> None:
     ), "ge_6 addback should still be a one-feature predicate"
 
 
+def _parse_feature_signature(feature_subset: str) -> tuple[str, ...]:
+    stripped = feature_subset.strip()
+    if not stripped or stripped == "-":
+        return tuple()
+    return tuple(part.strip() for part in stripped.split(","))
+
+
+def _manual_mode_only_candidate_map(
+    top_k_subset_rows: int = 2,
+) -> dict[str, list[tuple[str, ...]]]:
+    mode_core_rows, _mode_rows, _roughness_rows, _procedural_rows = (
+        build_cross_dataset_prediction_context(
+            retained_weight=1.0,
+            mode_retained_weight=1.0,
+            procedural_variant_limit=1,
+            procedural_rediscovery_limit=1,
+        )
+    )
+    subset_rows = centerline_feature_subset_benchmark(
+        mode_core_rows,
+        max_subset_size=2,
+        max_depth=2,
+    )
+    mode_frontier_rows = compress_redundant_mode_subset_frontier_rows(
+        mode_only_subset_frontier_rows(subset_rows)
+    )
+
+    candidate_map: dict[str, list[tuple[str, ...]]] = {"compact": [], "extended": []}
+    for rule_family in ("compact", "extended"):
+        signatures: list[tuple[str, ...]] = []
+        family_frontier = [
+            row for row in mode_frontier_rows if row.rule_family == rule_family
+        ]
+        family_subset_rows = [
+            row for row in subset_rows if row.rule_family == rule_family
+        ]
+        for row in family_frontier:
+            signatures.append(_parse_feature_signature(row.feature_subset))
+        for row in family_subset_rows[:top_k_subset_rows]:
+            signatures.append(_parse_feature_signature(row.feature_subset))
+        signatures.append(("center_variation",))
+
+        deduped: list[tuple[str, ...]] = []
+        seen: set[tuple[str, ...]] = set()
+        for signature in signatures:
+            if signature in seen:
+                continue
+            seen.add(signature)
+            deduped.append(signature)
+        candidate_map[rule_family] = deduped
+    return candidate_map
+
+
+def check_mode_only_candidate_isolation() -> None:
+    expected = {
+        rule_family: {", ".join(signature) if signature else "-" for signature in signatures}
+        for rule_family, signatures in _manual_mode_only_candidate_map().items()
+    }
+
+    predictor_rows = predictor_family_comparison(
+        retained_weight=1.0,
+        mode_retained_weight=1.0,
+        procedural_variant_limit=1,
+        procedural_rediscovery_limit=1,
+        max_subset_size=2,
+        top_k_subset_rows=2,
+    )
+    generated_rows = generated_geometry_predictor_comparison(
+        retained_weight=1.0,
+        mode_retained_weight=1.0,
+        geometry_variant_limit=1,
+        procedural_variant_limit=1,
+        procedural_rediscovery_limit=1,
+        procedural_styles=("walk",),
+        max_subset_size=2,
+        top_k_subset_rows=2,
+    )
+
+    predictor_feature_sets = {
+        rule_family: {
+            row.feature_subset
+            for row in predictor_rows
+            if row.rule_family == rule_family
+        }
+        for rule_family in ("compact", "extended")
+    }
+    generated_feature_sets = {
+        rule_family: {
+            row.feature_subset
+            for row in generated_rows
+            if row.rule_family == rule_family
+        }
+        for rule_family in ("compact", "extended")
+    }
+
+    assert (
+        predictor_feature_sets == expected
+    ), "predictor_family_comparison candidate subsets diverged from the intended mode-only candidate map"
+    assert (
+        generated_feature_sets == expected
+    ), "generated_geometry_predictor_comparison candidate subsets diverged from the intended mode-only candidate map"
+
+
 def main() -> None:
     print("benchmark regression audit: checking same-weight default", flush=True)
     check_same_weight_default()
+    print("benchmark regression audit: checking mode-only candidate isolation", flush=True)
+    check_mode_only_candidate_isolation()
     print("benchmark regression audit: checking sparse bridge addback visibility", flush=True)
     check_sparse_bridge_addback_visibility()
     print("benchmark regression audit: ok", flush=True)
