@@ -66,6 +66,14 @@ Run it with:
 python3 /Users/jonreilly/Projects/Physics/toy_event_physics.py
 ```
 
+For a single corrected-base verification pass, run:
+
+```bash
+python3 /Users/jonreilly/Projects/Physics/scripts/base_confidence_check.py
+```
+
+Add `--full` if you also want the slower helper-backed overlap, route-map, and mechanism-split reruns.
+
 What the current script implements:
 
 - Extracts a classical-looking limit from the same shared local rule by following stationary-action geodesics on the async graph.
