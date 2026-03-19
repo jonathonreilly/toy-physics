@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Test whether the final extended degree-profile fallback is a real separate route."""
+"""Test whether the final extended sparse-structure fallback is a real separate route."""
 
 from __future__ import annotations
 
@@ -22,7 +22,7 @@ from toy_event_physics import (  # noqa: E402
 
 def main() -> None:
     started = datetime.now().isoformat(timespec="seconds")
-    print(f"degree-profile fallback analysis started {started}", flush=True)
+    print(f"sparse-structure fallback analysis started {started}", flush=True)
     total_start = time.time()
 
     rows = []
@@ -48,12 +48,12 @@ def main() -> None:
 
     rows.sort(key=lambda row: row.route_name)
     print()
-    print("Degree-Profile Fallback Detail")
-    print("==============================")
+    print("Sparse-Structure Fallback Detail")
+    print("================================")
     print(render_degree_profile_fallback_table(rows))
     print()
     print(
-        "degree-profile fallback analysis completed "
+        "sparse-structure fallback analysis completed "
         + datetime.now().isoformat(timespec="seconds")
         + f" total_elapsed={time.time() - total_start:.1f}s",
         flush=True,

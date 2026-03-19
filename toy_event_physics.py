@@ -1052,6 +1052,40 @@ class MechanismSplitAggregateRow:
 
 
 @dataclass
+class ExtendedAtomicRouteScoreRow:
+    ensemble_name: str
+    route_label: str
+    feature_name: str
+    support_fraction: float
+    tree_generated_mean: float
+    tree_generated_worst: float
+    ordinal_generated_mean: float
+    ordinal_generated_worst: float
+
+
+@dataclass
+class ExtendedAtomicRouteOverlapRow:
+    ensemble_name: str
+    left_label: str
+    right_label: str
+    left_support_fraction: float
+    right_support_fraction: float
+    left_implies_right: float
+    right_implies_left: float
+    jaccard: float
+
+
+@dataclass
+class RouteMapRow:
+    family: str
+    route_label: str
+    route_role: str
+    family_scope: str
+    canonical_feature_expression: str
+    evidence_benchmarks: str
+
+
+@dataclass
 class ExtendedProxyRouteRow:
     route_name: str
     feature_count: int
@@ -13017,7 +13051,7 @@ def classify_extended_route_role(feature_subset: str) -> str:
     if components == ("none",):
         return "none"
     if len(components) > 1:
-        return "coexistence"
+        return "coexistence-only"
     if feature_subset_cardinality(feature_subset) == 1:
         return "atomic-standalone"
     return "family-composite"
@@ -13057,6 +13091,177 @@ def classify_extended_proxy_family(feature_subset: str) -> tuple[str, str]:
     if has_degree_profile:
         return "degree-profile", ", ".join(features)
     return "other", ", ".join(features)
+
+
+def extended_atomic_route_feature_specs() -> tuple[tuple[str, str], ...]:
+    return (
+        ("deep-pocket", "motif_deep_pocket_adjacent_fraction"),
+        ("pocket", "motif_pocket_adjacent_fraction"),
+        ("low-degree", "motif_low_degree_neighbor_fraction"),
+    )
+
+
+def _extended_atomic_route_generated_rows(
+    ensemble_name: str,
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+) -> tuple[
+    list[GeometryPredictionRow],
+    list[GeometryPredictionRow],
+    list[GeometryPredictionRow],
+]:
+    if ensemble_name == "default":
+        context = build_generated_geometry_prediction_context(
+            retained_weight=retained_weight,
+            mode_retained_weight=mode_retained_weight,
+            geometry_variant_limit=5,
+            procedural_variant_limit=3,
+            procedural_rediscovery_limit=1,
+            procedural_styles=("walk", "mode-mix", "local-morph"),
+        )
+    elif ensemble_name == "broader":
+        context = build_generated_geometry_prediction_context(
+            retained_weight=retained_weight,
+            mode_retained_weight=mode_retained_weight,
+            geometry_variant_limit=7,
+            procedural_variant_limit=4,
+            procedural_rediscovery_limit=1,
+            procedural_styles=("walk", "mode-mix", "local-morph"),
+        )
+    else:
+        raise ValueError(f"unknown ensemble {ensemble_name}")
+    _mode_core_rows, mode_prediction_rows, _roughness_rows, procedural_rows, geometry_rows = (
+        context
+    )
+    mode_extended = [row for row in mode_prediction_rows if row.rule_family == "extended"]
+    geometry_extended = [row for row in geometry_rows if row.rule_family == "extended"]
+    procedural_extended = [row for row in procedural_rows if row.rule_family == "extended"]
+    return mode_extended, geometry_extended, procedural_extended
+
+
+def _extended_atomic_route_generated_only_rows(
+    ensemble_name: str,
+    retained_weight: float = 1.0,
+) -> tuple[list[GeometryPredictionRow], list[GeometryPredictionRow]]:
+    if ensemble_name == "default":
+        geometry_rows = geometry_randomization_prediction_rows(
+            retained_weight=retained_weight,
+            variant_limit=5,
+        )
+        procedural_rows = procedural_geometry_prediction_rows(
+            retained_weight=retained_weight,
+            variant_limit=3,
+            rediscovery_limit=1,
+            styles=("walk", "mode-mix", "local-morph"),
+        )
+    elif ensemble_name == "broader":
+        geometry_rows = geometry_randomization_prediction_rows(
+            retained_weight=retained_weight,
+            variant_limit=7,
+        )
+        procedural_rows = procedural_geometry_prediction_rows(
+            retained_weight=retained_weight,
+            variant_limit=4,
+            rediscovery_limit=1,
+            styles=("walk", "mode-mix", "local-morph"),
+        )
+    else:
+        raise ValueError(f"unknown ensemble {ensemble_name}")
+    geometry_extended = [row for row in geometry_rows if row.rule_family == "extended"]
+    procedural_extended = [row for row in procedural_rows if row.rule_family == "extended"]
+    return geometry_extended, procedural_extended
+
+
+def extended_atomic_route_overlap_benchmark(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    ensembles: tuple[str, ...] = ("default", "broader"),
+    include_scores: bool = True,
+) -> tuple[list[ExtendedAtomicRouteScoreRow], list[ExtendedAtomicRouteOverlapRow]]:
+    score_rows: list[ExtendedAtomicRouteScoreRow] = []
+    overlap_rows: list[ExtendedAtomicRouteOverlapRow] = []
+    route_specs = extended_atomic_route_feature_specs()
+
+    for ensemble_name in ensembles:
+        if include_scores:
+            mode_extended, geometry_extended, procedural_extended = (
+                _extended_atomic_route_generated_rows(
+                    ensemble_name,
+                    retained_weight=retained_weight,
+                    mode_retained_weight=mode_retained_weight,
+                )
+            )
+        else:
+            geometry_extended, procedural_extended = (
+                _extended_atomic_route_generated_only_rows(
+                    ensemble_name,
+                    retained_weight=retained_weight,
+                )
+            )
+            mode_extended = []
+        generated_extended = [*geometry_extended, *procedural_extended]
+        support_sets: dict[str, set[int]] = {}
+
+        for route_label, feature_name in route_specs:
+            support_set = {
+                index
+                for index, row in enumerate(generated_extended)
+                if decision_feature_value(row, feature_name) > 0.0
+            }
+            support_sets[route_label] = support_set
+
+            if include_scores:
+                tree = learn_tiny_decision_tree(mode_extended, (feature_name,), 2)
+                tree_geometry = decision_tree_accuracy(tree, geometry_extended)
+                tree_procedural = decision_tree_accuracy(tree, procedural_extended)
+
+                ordinal = fit_ordinal_score_model(mode_extended, (feature_name,))
+                ordinal_geometry = ordinal_score_accuracy(ordinal, geometry_extended)
+                ordinal_procedural = ordinal_score_accuracy(ordinal, procedural_extended)
+
+                score_rows.append(
+                    ExtendedAtomicRouteScoreRow(
+                        ensemble_name=ensemble_name,
+                        route_label=route_label,
+                        feature_name=feature_name,
+                        support_fraction=len(support_set) / max(1, len(generated_extended)),
+                        tree_generated_mean=(tree_geometry + tree_procedural) / 2.0,
+                        tree_generated_worst=min(tree_geometry, tree_procedural),
+                        ordinal_generated_mean=(ordinal_geometry + ordinal_procedural) / 2.0,
+                        ordinal_generated_worst=min(ordinal_geometry, ordinal_procedural),
+                    )
+                )
+
+        for left_index, (left_label, _left_feature) in enumerate(route_specs):
+            for right_label, _right_feature in route_specs[left_index + 1 :]:
+                left_support = support_sets[left_label]
+                right_support = support_sets[right_label]
+                intersection = left_support & right_support
+                union = left_support | right_support
+                overlap_rows.append(
+                    ExtendedAtomicRouteOverlapRow(
+                        ensemble_name=ensemble_name,
+                        left_label=left_label,
+                        right_label=right_label,
+                        left_support_fraction=len(left_support)
+                        / max(1, len(generated_extended)),
+                        right_support_fraction=len(right_support)
+                        / max(1, len(generated_extended)),
+                        left_implies_right=(
+                            len(intersection) / len(left_support) if left_support else 1.0
+                        ),
+                        right_implies_left=(
+                            len(intersection) / len(right_support)
+                            if right_support
+                            else 1.0
+                        ),
+                        jaccard=(len(intersection) / len(union)) if union else 1.0,
+                    )
+                )
+
+    score_rows.sort(key=lambda row: (row.ensemble_name, row.route_label))
+    overlap_rows.sort(key=lambda row: (row.ensemble_name, row.left_label, row.right_label))
+    return score_rows, overlap_rows
 
 
 def extended_proxy_route_benchmark(
@@ -14607,6 +14812,357 @@ def mechanism_family_split_benchmark(
     ]
     split_rows.sort(key=lambda row: (row.benchmark_name, row.split_class, row.mechanism_name))
     return split_rows, aggregate_rows
+
+
+def _named_bridge_row(
+    rows: list[SparseFallbackBridgeRow],
+    ensemble_name: str,
+    addback_name: str,
+) -> SparseFallbackBridgeRow:
+    return next(
+        row
+        for row in rows
+        if row.ensemble_name == ensemble_name and row.addback_name == addback_name
+    )
+
+
+def _named_extended_proxy_row(
+    rows: list[ExtendedProxyRouteRow],
+    route_name: str,
+) -> ExtendedProxyRouteRow:
+    return next(row for row in rows if row.route_name == route_name)
+
+
+def _named_fallback_row(
+    rows: list[DegreeProfileFallbackRow],
+    route_name: str,
+) -> DegreeProfileFallbackRow:
+    return next(row for row in rows if row.route_name == route_name)
+
+
+def _named_overlap_row(
+    rows: list[ExtendedAtomicRouteOverlapRow],
+    ensemble_name: str,
+    left_label: str,
+    right_label: str,
+) -> ExtendedAtomicRouteOverlapRow:
+    ordered_left, ordered_right = sorted((left_label, right_label))
+    row = next(
+        row
+        for row in rows
+        if row.ensemble_name == ensemble_name
+        and row.left_label == ordered_left
+        and row.right_label == ordered_right
+    )
+    if ordered_left == left_label:
+        return row
+    return ExtendedAtomicRouteOverlapRow(
+        ensemble_name=row.ensemble_name,
+        left_label=left_label,
+        right_label=right_label,
+        left_support_fraction=row.right_support_fraction,
+        right_support_fraction=row.left_support_fraction,
+        left_implies_right=row.right_implies_left,
+        right_implies_left=row.left_implies_right,
+        jaccard=row.jaccard,
+    )
+
+
+def _extended_atomic_alias_groups(
+    overlap_rows: list[ExtendedAtomicRouteOverlapRow],
+    implication_threshold: float = 0.98,
+) -> list[tuple[str, ...]]:
+    labels = [route_label for route_label, _feature_name in extended_atomic_route_feature_specs()]
+    parent = {label: label for label in labels}
+
+    def find(label: str) -> str:
+        while parent[label] != label:
+            parent[label] = parent[parent[label]]
+            label = parent[label]
+        return label
+
+    def union(left: str, right: str) -> None:
+        left_root = find(left)
+        right_root = find(right)
+        if left_root != right_root:
+            parent[right_root] = left_root
+
+    for left_index, left_label in enumerate(labels):
+        for right_label in labels[left_index + 1 :]:
+            pair_rows = [
+                _named_overlap_row(overlap_rows, ensemble_name, left_label, right_label)
+                for ensemble_name in ("default", "broader")
+            ]
+            if all(
+                row.left_implies_right >= implication_threshold
+                and row.right_implies_left >= implication_threshold
+                for row in pair_rows
+            ):
+                union(left_label, right_label)
+
+    order = {label: index for index, label in enumerate(labels)}
+    grouped: DefaultDict[str, list[str]] = defaultdict(list)
+    for label in labels:
+        grouped[find(label)].append(label)
+    return [
+        tuple(sorted(group, key=lambda label: order[label]))
+        for _root, group in sorted(
+            grouped.items(), key=lambda item: min(order[label] for label in item[1])
+        )
+    ]
+
+
+def compact_route_map_summary(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+) -> list[RouteMapRow]:
+    overlap_rows, _model_rows = threshold_core_overlap_analysis(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+    )
+    bridge_rows = compact_sparse_bridge_benchmark(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+        addback_sets=(
+            ("add-ge-6", ("motif_high_degree_neighbor_ge_6_fraction",)),
+            ("add-ge-7", ("motif_high_degree_neighbor_ge_7_fraction",)),
+            ("add-share6", ("motif_high_degree_neighbor_share6_fraction",)),
+            ("add-count6", ("motif_high_degree_neighbor_count6_fraction",)),
+        ),
+    )
+    residual_detail_rows, residual_aggregate_rows = sparse_fallback_residual_trace_benchmark(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+        route_sets=(degree_profile_fallback_sets()[0],),
+    )
+    _ = residual_detail_rows
+
+    ge6_share6_match = min(
+        row.ge6_share6_support_match_fraction for row in overlap_rows
+    )
+    ge7_subset_fraction = min(row.ge7_subset_of_ge6_fraction for row in overlap_rows)
+    ge6_default = _named_bridge_row(bridge_rows, "default", "add-ge-6")
+    share6_default = _named_bridge_row(bridge_rows, "default", "add-share6")
+    ge7_default = _named_bridge_row(bridge_rows, "default", "add-ge-7")
+    count6_default = _named_bridge_row(bridge_rows, "default", "add-count6")
+    compact_residual = next(
+        row
+        for row in residual_aggregate_rows
+        if row.ensemble_name == "default"
+        and row.route_name == "fallback-base"
+        and row.rule_family == "compact"
+    )
+
+    return [
+        RouteMapRow(
+            family="compact",
+            route_label="6+ threshold core",
+            route_role="primary",
+            family_scope="shared",
+            canonical_feature_expression=(
+                "motif_high_degree_neighbor_ge_6_fraction ~= "
+                "motif_high_degree_neighbor_share6_fraction"
+            ),
+            evidence_benchmarks=(
+                "threshold_core_overlap_analysis"
+                f"(ge6<=>share6={ge6_share6_match:.2f}); "
+                "compact_sparse_bridge_benchmark"
+                f"(ge6={format_parity_window_label(ge6_default.compact_parity_size, ge6_default.compact_parity_feature_subset, abbreviate=False)}, "
+                f"share6={format_parity_window_label(share6_default.compact_parity_size, share6_default.compact_parity_feature_subset, abbreviate=False)})"
+            ),
+        ),
+        RouteMapRow(
+            family="compact",
+            route_label="7+ sufficient subroute",
+            route_role="atomic-standalone",
+            family_scope="shared",
+            canonical_feature_expression="motif_high_degree_neighbor_ge_7_fraction",
+            evidence_benchmarks=(
+                "threshold_core_overlap_analysis"
+                f"(ge7⊂ge6={ge7_subset_fraction:.2f}); "
+                "compact_sparse_bridge_benchmark"
+                f"(ge7={format_parity_window_label(ge7_default.compact_parity_size, ge7_default.compact_parity_feature_subset, abbreviate=False)}, "
+                f"count6={format_parity_window_label(count6_default.compact_parity_size, count6_default.compact_parity_feature_subset, abbreviate=False)})"
+            ),
+        ),
+        RouteMapRow(
+            family="compact",
+            route_label="sparse near-miss residue",
+            route_role="sparse-residue",
+            family_scope="family-specific",
+            canonical_feature_expression=compact_residual.closest_feature_subset,
+            evidence_benchmarks=(
+                "sparse_fallback_residual_trace_benchmark"
+                f"(default fallback-base best={format_parity_window_label(compact_residual.parity_size, compact_residual.parity_feature_subset, abbreviate=False)}, "
+                f"closest={format_parity_window_label(compact_residual.closest_size, compact_residual.closest_feature_subset, abbreviate=False)}, "
+                f"gap={compact_residual.closest_gap_mean:+.2f}/{compact_residual.closest_gap_worst:+.2f})"
+            ),
+        ),
+    ]
+
+
+def extended_route_map_summary(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+) -> list[RouteMapRow]:
+    proxy_rows, _proxy_aggregate_rows = extended_proxy_route_benchmark(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+    )
+    fallback_rows = degree_profile_fallback_benchmark(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+    )
+    _score_rows, overlap_rows = extended_atomic_route_overlap_benchmark(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+        include_scores=False,
+    )
+
+    route_specs = dict(extended_atomic_route_feature_specs())
+    route_order = {label: index for index, label in enumerate(route_specs)}
+    alias_groups = _extended_atomic_alias_groups(overlap_rows)
+    route_rows: list[RouteMapRow] = [
+        RouteMapRow(
+            family="extended",
+            route_label="hub",
+            route_role="primary",
+            family_scope="shared",
+            canonical_feature_expression="motif_high_degree_neighbor_fraction",
+            evidence_benchmarks=(
+                "extended_proxy_route_benchmark"
+                f"(full-rich={format_parity_window_label(_named_extended_proxy_row(proxy_rows, 'full-rich').extended_parity_size, _named_extended_proxy_row(proxy_rows, 'full-rich').extended_parity_feature_subset, abbreviate=False)})"
+            ),
+        )
+    ]
+
+    atomic_rows = {
+        route_name: [
+            row
+            for row in proxy_rows
+            if row.extended_proxy_family == route_name
+            and row.extended_parity_size is not None
+            and row.extended_parity_size <= 3
+            and classify_extended_route_role(row.extended_parity_feature_subset)
+            == "atomic-standalone"
+        ]
+        for route_name in route_specs
+    }
+
+    for group in alias_groups:
+        group_atomic_rows = [
+            row
+            for route_name in group
+            for row in atomic_rows[route_name]
+        ]
+        if not group_atomic_rows:
+            continue
+        representative = min(
+            group_atomic_rows,
+            key=lambda row: (
+                row.extended_parity_size if row.extended_parity_size is not None else 99,
+                route_order.get(group[0], 99),
+                row.route_name,
+            ),
+        )
+        route_label = "/".join(group)
+        feature_expression = " ~= ".join(route_specs[route_name] for route_name in group)
+        if len(group) == 1:
+            evidence = (
+                "extended_proxy_route_benchmark"
+                f"({representative.route_name}={format_parity_window_label(representative.extended_parity_size, representative.extended_parity_feature_subset, abbreviate=False)})"
+            )
+        else:
+            pair_summaries = []
+            for left_index, left_label in enumerate(group):
+                for right_label in group[left_index + 1 :]:
+                    pair_rows = [
+                        _named_overlap_row(overlap_rows, ensemble_name, left_label, right_label)
+                        for ensemble_name in ("default", "broader")
+                    ]
+                    pair_summaries.append(
+                        f"{left_label}<=>{right_label}="
+                        f"{min(min(row.left_implies_right, row.right_implies_left) for row in pair_rows):.2f}"
+                    )
+            evidence = (
+                "extended_atomic_route_overlap_benchmark"
+                f"({'; '.join(pair_summaries)}); "
+                "extended_proxy_route_benchmark"
+                f"({representative.route_name}={format_parity_window_label(representative.extended_parity_size, representative.extended_parity_feature_subset, abbreviate=False)})"
+            )
+        route_rows.append(
+            RouteMapRow(
+                family="extended",
+                route_label=route_label,
+                route_role="atomic-standalone",
+                family_scope="family-specific",
+                canonical_feature_expression=feature_expression,
+                evidence_benchmarks=evidence,
+            )
+        )
+
+    coexistence_row = next(
+        (
+            row
+            for row in proxy_rows
+            if row.extended_proxy_family == "low-degree+pocket"
+            and row.extended_parity_size is not None
+            and row.extended_parity_size <= 3
+            and classify_extended_route_role(row.extended_parity_feature_subset)
+            == "coexistence-only"
+        ),
+        None,
+    )
+    if coexistence_row is not None:
+        route_rows.append(
+            RouteMapRow(
+                family="extended",
+                route_label="low-degree/pocket coexistence",
+                route_role="coexistence-only",
+                family_scope="family-specific",
+                canonical_feature_expression=coexistence_row.extended_parity_feature_subset,
+                evidence_benchmarks=(
+                    "extended_proxy_route_benchmark"
+                    f"({coexistence_row.route_name}={format_parity_window_label(coexistence_row.extended_parity_size, coexistence_row.extended_parity_feature_subset, abbreviate=False)})"
+                ),
+            )
+        )
+
+    sparse_row = _named_fallback_row(fallback_rows, "fallback-base")
+    sparse_role = classify_extended_route_role(sparse_row.extended_parity_feature_subset)
+    route_rows.append(
+        RouteMapRow(
+            family="extended",
+            route_label="sparse-structure fallback",
+            route_role=(
+                sparse_role
+                if sparse_role in {"atomic-standalone", "family-composite"}
+                else "family-composite"
+            ),
+            family_scope="family-specific",
+            canonical_feature_expression=sparse_row.extended_parity_feature_subset,
+            evidence_benchmarks=(
+                "degree_profile_fallback_benchmark"
+                f"(fallback-base={format_parity_window_label(sparse_row.extended_parity_size, sparse_row.extended_parity_feature_subset, abbreviate=False)})"
+            ),
+        )
+    )
+    return route_rows
+
+
+def route_map_summary(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+) -> tuple[list[RouteMapRow], list[RouteMapRow]]:
+    compact_rows = compact_route_map_summary(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+    )
+    extended_rows = extended_route_map_summary(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+    )
+    return compact_rows, extended_rows
 
 
 def random_rediscovery_limit_sweep_summary(
@@ -16931,6 +17487,58 @@ def render_mechanism_split_aggregate_table(
             f"{row.benchmark_name:<20} | "
             f"{row.split_class:<13} | "
             f"{row.cases:>4}"
+        )
+    return "\n".join(lines)
+
+
+def render_extended_atomic_route_score_table(
+    rows: list[ExtendedAtomicRouteScoreRow],
+) -> str:
+    lines = [
+        "ensemble | route       | support | tree mean/w | ordinal mean/w",
+        "---------+-------------+---------+-------------+----------------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.ensemble_name:<8} | "
+            f"{row.route_label:<11} | "
+            f"{row.support_fraction:>7.2f} | "
+            f"{row.tree_generated_mean:>4.2f}/{row.tree_generated_worst:<4.2f} | "
+            f"{row.ordinal_generated_mean:>6.2f}/{row.ordinal_generated_worst:<6.2f}"
+        )
+    return "\n".join(lines)
+
+
+def render_extended_atomic_route_overlap_table(
+    rows: list[ExtendedAtomicRouteOverlapRow],
+) -> str:
+    lines = [
+        "ensemble | pair                | left=>right | right=>left | jaccard",
+        "---------+---------------------+-------------+-------------+--------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.ensemble_name:<8} | "
+            f"{row.left_label + ' vs ' + row.right_label:<19} | "
+            f"{row.left_implies_right:>11.2f} | "
+            f"{row.right_implies_left:>11.2f} | "
+            f"{row.jaccard:>6.2f}"
+        )
+    return "\n".join(lines)
+
+
+def render_route_map_table(rows: list[RouteMapRow]) -> str:
+    lines = [
+        "label                     | role               | scope            | canonical expression                 | evidence",
+        "--------------------------+--------------------+------------------+--------------------------------------+----------------------------------------------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.route_label:<24.24} | "
+            f"{row.route_role:<18} | "
+            f"{row.family_scope:<16} | "
+            f"{row.canonical_feature_expression:<36.36} | "
+            f"{row.evidence_benchmarks}"
         )
     return "\n".join(lines)
 
@@ -20187,13 +20795,13 @@ def main() -> None:
         row for row in degree_extreme_split_rows if row.ablation_name == "no-degree-extremes"
     )
     print(
-        f"- This splits the load-bearing degree-extremes family apart. In the full-rich reference, `compact` parity sits at size {split_full_row.compact_parity_size} and `extended` at size {split_full_row.extended_parity_size}."
+        f"- This splits the load-bearing degree-extremes family apart. In the full-rich reference, `compact` sits at {format_parity_window_label(split_full_row.compact_parity_size, split_full_row.compact_parity_feature_subset)} and `extended` at {format_parity_window_label(split_full_row.extended_parity_size, split_full_row.extended_parity_feature_subset)}."
     )
     print(
-        f"- Removing only `motif_low_degree_neighbor_fraction` barely changes the picture: `compact` stays at parity size {no_low_degree_row.compact_parity_size}, and `extended` actually improves to {no_low_degree_row.extended_parity_size}."
+        f"- Removing only `motif_low_degree_neighbor_fraction` barely changes the picture: `compact` stays at {format_parity_window_label(no_low_degree_row.compact_parity_size, no_low_degree_row.compact_parity_feature_subset)}, and `extended` actually improves to {format_parity_window_label(no_low_degree_row.extended_parity_size, no_low_degree_row.extended_parity_feature_subset)}."
     )
     print(
-        f"- Removing only `motif_high_degree_neighbor_fraction` is the real hit. `compact` parity retreats to size {no_high_degree_row.compact_parity_size}, and `extended` loses clean parity entirely in the tested range, matching the stronger failure pattern seen when both degree-extreme motifs are removed."
+        f"- Removing only `motif_high_degree_neighbor_fraction` is the real hit. `compact` retreats to {format_parity_window_label(no_high_degree_row.compact_parity_size, no_high_degree_row.compact_parity_feature_subset)}, and `extended` loses clean parity entirely in the tested range, matching the stronger failure pattern seen when both degree-extreme motifs are removed."
     )
     print(
         f"- So the degree-extreme family is not symmetric. The current load-bearing coordinate is mostly `motif_high_degree_neighbor_fraction`, while `motif_low_degree_neighbor_fraction` acts more like a weak helper or redundant proxy."

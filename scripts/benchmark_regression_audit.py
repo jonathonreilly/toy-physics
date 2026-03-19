@@ -197,6 +197,24 @@ def check_mode_only_candidate_isolation() -> None:
     ), "generated_geometry_predictor_comparison candidate subsets diverged from the intended mode-only candidate map"
 
 
+def check_live_mechanism_split_driver() -> None:
+    driver_source = (
+        REPO_ROOT / "scripts" / "long_mechanism_family_split_analysis.py"
+    ).read_text()
+    assert (
+        "mechanism_family_split_benchmark" in driver_source
+    ), "mechanism split driver no longer calls the live helper"
+    for stale_marker in (
+        "AUDIT_LOG_PATH",
+        "BROADER_LOG_PATH",
+        "parse_parity_cell",
+        "read_text(",
+    ):
+        assert (
+            stale_marker not in driver_source
+        ), f"mechanism split driver still contains stale log-parsing marker {stale_marker}"
+
+
 def main() -> None:
     print("benchmark regression audit: checking same-weight default", flush=True)
     check_same_weight_default()
@@ -204,6 +222,8 @@ def main() -> None:
     check_mode_only_candidate_isolation()
     print("benchmark regression audit: checking sparse bridge addback visibility", flush=True)
     check_sparse_bridge_addback_visibility()
+    print("benchmark regression audit: checking live mechanism split driver", flush=True)
+    check_live_mechanism_split_driver()
     print("benchmark regression audit: ok", flush=True)
 
 
