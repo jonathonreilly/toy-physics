@@ -15020,8 +15020,6 @@ def extended_route_map_summary(
     )
 
     route_specs = dict(extended_atomic_route_feature_specs())
-    route_order = {label: index for index, label in enumerate(route_specs)}
-    alias_groups = _extended_atomic_alias_groups(overlap_rows)
     route_rows: list[RouteMapRow] = [
         RouteMapRow(
             family="extended",
@@ -15036,68 +15034,85 @@ def extended_route_map_summary(
         )
     ]
 
-    atomic_rows = {
-        route_name: [
-            row
-            for row in proxy_rows
-            if row.extended_proxy_family == route_name
-            and row.extended_parity_size is not None
-            and row.extended_parity_size <= 3
-            and classify_extended_route_role(row.extended_parity_feature_subset)
-            == "atomic-standalone"
-        ]
-        for route_name in route_specs
-    }
-
-    for group in alias_groups:
-        group_atomic_rows = [
-            row
-            for route_name in group
-            for row in atomic_rows[route_name]
-        ]
-        if not group_atomic_rows:
-            continue
-        representative = min(
-            group_atomic_rows,
-            key=lambda row: (
-                row.extended_parity_size if row.extended_parity_size is not None else 99,
-                route_order.get(group[0], 99),
-                row.route_name,
+    atomic_rows = {}
+    for route_name in route_specs:
+        atomic_rows[route_name] = next(
+            (
+                row
+                for row in proxy_rows
+                if row.extended_proxy_family == route_name
+                and row.extended_parity_size is not None
+                and row.extended_parity_size <= 3
+                and classify_extended_route_role(row.extended_parity_feature_subset)
+                == "atomic-standalone"
             ),
+            None,
         )
-        route_label = "/".join(group)
-        feature_expression = " ~= ".join(route_specs[route_name] for route_name in group)
-        if len(group) == 1:
-            evidence = (
-                "extended_proxy_route_benchmark"
-                f"({representative.route_name}={format_parity_window_label(representative.extended_parity_size, representative.extended_parity_feature_subset, abbreviate=False)})"
-            )
-        else:
-            pair_summaries = []
-            for left_index, left_label in enumerate(group):
-                for right_label in group[left_index + 1 :]:
-                    pair_rows = [
-                        _named_overlap_row(overlap_rows, ensemble_name, left_label, right_label)
-                        for ensemble_name in ("default", "broader")
-                    ]
-                    pair_summaries.append(
-                        f"{left_label}<=>{right_label}="
-                        f"{min(min(row.left_implies_right, row.right_implies_left) for row in pair_rows):.2f}"
-                    )
-            evidence = (
-                "extended_atomic_route_overlap_benchmark"
-                f"({'; '.join(pair_summaries)}); "
-                "extended_proxy_route_benchmark"
-                f"({representative.route_name}={format_parity_window_label(representative.extended_parity_size, representative.extended_parity_feature_subset, abbreviate=False)})"
-            )
+
+    deep_into_pocket = [
+        _named_overlap_row(overlap_rows, ensemble_name, "deep-pocket", "pocket")
+        for ensemble_name in ("default", "broader")
+    ]
+    pocket_into_low = [
+        _named_overlap_row(overlap_rows, ensemble_name, "pocket", "low-degree")
+        for ensemble_name in ("default", "broader")
+    ]
+    deep_into_low = [
+        _named_overlap_row(overlap_rows, ensemble_name, "deep-pocket", "low-degree")
+        for ensemble_name in ("default", "broader")
+    ]
+
+    low_row = atomic_rows["low-degree"]
+    if low_row is not None:
         route_rows.append(
             RouteMapRow(
                 family="extended",
-                route_label=route_label,
+                route_label="low-degree backup envelope",
                 route_role="atomic-standalone",
                 family_scope="family-specific",
-                canonical_feature_expression=feature_expression,
-                evidence_benchmarks=evidence,
+                canonical_feature_expression=route_specs["low-degree"],
+                evidence_benchmarks=(
+                    "extended_proxy_route_benchmark"
+                    f"({low_row.route_name}={format_parity_window_label(low_row.extended_parity_size, low_row.extended_parity_feature_subset, abbreviate=False)}); "
+                    "extended_atomic_route_overlap_benchmark"
+                    f"(pocket=>low-degree>={min(row.left_implies_right for row in pocket_into_low):.2f}; "
+                    f"deep-pocket=>low-degree>={min(row.left_implies_right for row in deep_into_low):.2f})"
+                ),
+            )
+        )
+    pocket_row = atomic_rows["pocket"]
+    if pocket_row is not None:
+        route_rows.append(
+            RouteMapRow(
+                family="extended",
+                route_label="pocket nested subroute",
+                route_role="atomic-standalone",
+                family_scope="family-specific",
+                canonical_feature_expression=route_specs["pocket"],
+                evidence_benchmarks=(
+                    "extended_proxy_route_benchmark"
+                    f"({pocket_row.route_name}={format_parity_window_label(pocket_row.extended_parity_size, pocket_row.extended_parity_feature_subset, abbreviate=False)}); "
+                    "extended_atomic_route_overlap_benchmark"
+                    f"(pocket=>low-degree>={min(row.left_implies_right for row in pocket_into_low):.2f})"
+                ),
+            )
+        )
+    deep_row = atomic_rows["deep-pocket"]
+    if deep_row is not None:
+        route_rows.append(
+            RouteMapRow(
+                family="extended",
+                route_label="deep-pocket nested subroute",
+                route_role="atomic-standalone",
+                family_scope="family-specific",
+                canonical_feature_expression=route_specs["deep-pocket"],
+                evidence_benchmarks=(
+                    "extended_proxy_route_benchmark"
+                    f"({deep_row.route_name}={format_parity_window_label(deep_row.extended_parity_size, deep_row.extended_parity_feature_subset, abbreviate=False)}); "
+                    "extended_atomic_route_overlap_benchmark"
+                    f"(deep-pocket=>pocket>={min(row.left_implies_right for row in deep_into_pocket):.2f}; "
+                    f"deep-pocket=>low-degree>={min(row.left_implies_right for row in deep_into_low):.2f})"
+                ),
             )
         )
 
