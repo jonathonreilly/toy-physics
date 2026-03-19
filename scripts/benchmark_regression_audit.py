@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 from dataclasses import astuple
+import inspect
 from pathlib import Path
 import sys
 
@@ -22,6 +23,7 @@ from toy_event_physics import (  # noqa: E402
     mode_only_subset_frontier_rows,
     predictor_family_comparison,
     resolve_sparse_bridge_feature_names,
+    sparse_fallback_access_benchmark,
 )
 
 
@@ -215,6 +217,16 @@ def check_live_mechanism_split_driver() -> None:
         ), f"mechanism split driver still contains stale log-parsing marker {stale_marker}"
 
 
+def check_sparse_fallback_access_labels() -> None:
+    helper_source = inspect.getsource(sparse_fallback_access_benchmark)
+    assert (
+        '== "sparse-structure"' in helper_source
+    ), "sparse fallback access helper no longer keys off the corrected sparse-structure label"
+    assert (
+        '== "degree-profile"' not in helper_source
+    ), "sparse fallback access helper regressed to the stale degree-profile label"
+
+
 def main() -> None:
     print("benchmark regression audit: checking same-weight default", flush=True)
     check_same_weight_default()
@@ -222,6 +234,8 @@ def main() -> None:
     check_mode_only_candidate_isolation()
     print("benchmark regression audit: checking sparse bridge addback visibility", flush=True)
     check_sparse_bridge_addback_visibility()
+    print("benchmark regression audit: checking sparse fallback access labels", flush=True)
+    check_sparse_fallback_access_labels()
     print("benchmark regression audit: checking live mechanism split driver", flush=True)
     check_live_mechanism_split_driver()
     print("benchmark regression audit: ok", flush=True)

@@ -13438,13 +13438,15 @@ def sparse_fallback_access_benchmark(
             )
             if row.compact_parity_size is not None:
                 compact_any += 1
-            if compact_proxy_family == "degree-profile":
+            # Only count rows that actually land on the corrected sparse route;
+            # compact degree-profile near-misses should not be treated as access.
+            if compact_proxy_family == "sparse-structure":
                 compact_sparse += 1
                 if row.compact_parity_size == 3:
                     compact_fast_sparse += 1
             if row.extended_parity_size is not None:
                 extended_any += 1
-            if extended_proxy_family == "degree-profile":
+            if extended_proxy_family == "sparse-structure":
                 extended_sparse += 1
                 if row.extended_parity_size == 3:
                     extended_fast_sparse += 1
@@ -17660,8 +17662,8 @@ def render_sparse_fallback_access_aggregate_table(
     rows: list[SparseFallbackAccessAggregateRow],
 ) -> str:
     lines = [
-        "ensemble | cases | compact any | compact sparse | compact fast | extended any | extended sparse | extended fast",
-        "---------+-------+-------------+----------------+--------------+--------------+-----------------+--------------",
+        "ensemble | cases | compact any | compact sparse-route | compact fast | extended any | extended sparse-route | extended fast",
+        "---------+-------+-------------+----------------------+--------------+--------------+-----------------------+--------------",
     ]
     for row in rows:
         lines.append(
@@ -20678,7 +20680,7 @@ def main() -> None:
         ),
     )
     print(
-        f"- In `compact`, the learned neighborhood basis first reaches parity with `pocket_fraction` at basis size {compact_subsume_row.basis_size} on `{compact_subsume_row.basis_feature_subset}`."
+        f"- In `compact`, the learned neighborhood basis first reaches parity with `pocket_fraction` at {format_parity_window_label(compact_subsume_row.basis_size, compact_subsume_row.basis_feature_subset)}."
         if compact_subsume_row is not None
         else f"- In `compact`, the strongest learned-basis-only row still trails `pocket_fraction` by {compact_prethreshold_best.basis_minus_pocket_mean:+.2f} mean accuracy points."
     )
@@ -20688,15 +20690,15 @@ def main() -> None:
         )
     else:
         print(
-            f"- Before that threshold, the best `compact` learned-basis-only row still trails `pocket_fraction` by {compact_prethreshold_best.basis_minus_pocket_mean:+.2f} mean accuracy points. The strongest `pocket+basis` row appears at basis size {compact_best_combo_row.basis_size} on `{compact_best_combo_row.combo_feature_subset}` with combo-over-basis gain {compact_best_combo_row.combo_minus_basis_mean:+.2f}."
+            f"- Before that threshold, the best `compact` learned-basis-only row still trails `pocket_fraction` by {compact_prethreshold_best.basis_minus_pocket_mean:+.2f} mean accuracy points. The strongest `pocket+basis` row appears at {format_parity_window_label(compact_best_combo_row.basis_size, compact_best_combo_row.combo_feature_subset)} with combo-over-basis gain {compact_best_combo_row.combo_minus_basis_mean:+.2f}."
         )
     print(
-        f"- In `extended`, the first clean subsumption row appears at basis size {extended_subsume_row.basis_size} on `{extended_subsume_row.basis_feature_subset}`."
+        f"- In `extended`, the first clean subsumption row appears at {format_parity_window_label(extended_subsume_row.basis_size, extended_subsume_row.basis_feature_subset)}."
         if extended_subsume_row is not None
         else f"- In `extended`, even the strongest learned-basis-only row still trails `pocket_fraction` by {extended_prethreshold_best.basis_minus_pocket_mean:+.2f}, so there is no clean subsumption threshold in the tested range."
     )
     print(
-        f"- The residual-gain story is now asymmetric but cleaner. In `extended`, the pre-threshold best learned-basis row misses `pocket_fraction` by only {extended_prethreshold_best.basis_minus_pocket_mean:+.2f}, and once the basis reaches size {extended_subsume_row.basis_size}, adding `pocket_fraction` back buys {extended_best_combo_row.combo_minus_basis_mean:+.2f} additional mean accuracy. In `compact`, the learned basis needs a much larger size before it catches up."
+        f"- The residual-gain story is now asymmetric but cleaner. In `extended`, the pre-threshold best learned-basis row misses `pocket_fraction` by only {extended_prethreshold_best.basis_minus_pocket_mean:+.2f}, and once the basis reaches {format_parity_window_label(extended_subsume_row.basis_size, extended_subsume_row.basis_feature_subset)}, adding `pocket_fraction` back buys {extended_best_combo_row.combo_minus_basis_mean:+.2f} additional mean accuracy. In `compact`, the learned basis needs a much larger window before it catches up."
     )
     print()
 
@@ -20743,10 +20745,10 @@ def main() -> None:
         f"- This is the same residual test, but the learned basis can now draw from richer automatic local motifs as well as degree fractions, still without giving it `pocket_fraction` directly."
     )
     print(
-        f"- In `compact`, the richer automatic basis reaches parity immediately at basis size {compact_rich_subsume_row.basis_size}: `{compact_rich_subsume_row.basis_feature_subset}` matches `pocket_fraction` at {compact_rich_subsume_row.basis_mean_accuracy:.2f}/{compact_rich_subsume_row.basis_worst_accuracy:.2f}. The best combo row adds {compact_rich_best_combo_row.combo_minus_basis_mean:+.2f} mean accuracy over that."
+        f"- In `compact`, the richer automatic basis reaches parity immediately at {format_parity_window_label(compact_rich_subsume_row.basis_size, compact_rich_subsume_row.basis_feature_subset)} with {compact_rich_subsume_row.basis_mean_accuracy:.2f}/{compact_rich_subsume_row.basis_worst_accuracy:.2f}. The best combo row adds {compact_rich_best_combo_row.combo_minus_basis_mean:+.2f} mean accuracy over that."
     )
     print(
-        f"- In `extended`, the richer basis first reaches parity at basis size {extended_rich_subsume_row.basis_size} on `{extended_rich_subsume_row.basis_feature_subset}`. Even before that threshold, the best learned-basis-only row misses `pocket_fraction` by only {extended_rich_prethreshold_best.basis_minus_pocket_mean:+.2f} mean accuracy."
+        f"- In `extended`, the richer basis first reaches parity at {format_parity_window_label(extended_rich_subsume_row.basis_size, extended_rich_subsume_row.basis_feature_subset)}. Even before that threshold, the best learned-basis-only row misses `pocket_fraction` by only {extended_rich_prethreshold_best.basis_minus_pocket_mean:+.2f} mean accuracy."
     )
     print(
         "- So the automatic-basis story is sharper again. The old degree-only threshold in `compact` was a basis-vocabulary artifact, not a deep need for a large basis size. Once the basis can express richer local motifs, it recovers the `pocket` signal with a very small learned coordinate set."
@@ -20774,16 +20776,16 @@ def main() -> None:
         row for row in rich_motif_ablation_rows if row.ablation_name == "no-two-hop"
     )
     print(
-        f"- This is the first direct mechanism ablation on the richer automatic basis. In the full-rich reference, `compact` parity happens at basis size {next(row for row in rich_motif_ablation_rows if row.ablation_name == 'full-rich').compact_parity_size} and `extended` parity at size {next(row for row in rich_motif_ablation_rows if row.ablation_name == 'full-rich').extended_parity_size}."
+        f"- This is the first direct mechanism ablation on the richer automatic basis. In the full-rich reference, `compact` sits at {format_parity_window_label(next(row for row in rich_motif_ablation_rows if row.ablation_name == 'full-rich').compact_parity_size, next(row for row in rich_motif_ablation_rows if row.ablation_name == 'full-rich').compact_parity_feature_subset)} and `extended` at {format_parity_window_label(next(row for row in rich_motif_ablation_rows if row.ablation_name == 'full-rich').extended_parity_size, next(row for row in rich_motif_ablation_rows if row.ablation_name == 'full-rich').extended_parity_feature_subset)}."
     )
     print(
-        f"- Removing every richer motif drops the model back to the old degree-only story: `compact` parity retreats to size {degree_only_row.compact_parity_size}, while `extended` stays at {degree_only_row.extended_parity_size}."
+        f"- Removing every richer motif drops the model back to the old degree-only story: `compact` retreats to {format_parity_window_label(degree_only_row.compact_parity_size, degree_only_row.compact_parity_feature_subset)}, while `extended` stays at {format_parity_window_label(degree_only_row.extended_parity_size, degree_only_row.extended_parity_feature_subset)}."
     )
     print(
-        f"- Removing pocket-adjacency motifs does not hurt `compact` at all and actually makes `extended` parity earlier ({no_pocket_adj_row.extended_parity_size}). Removing neighbor-moment or two-hop motifs also leaves the `compact` threshold at {no_neighbor_moments_row.compact_parity_size} and {no_two_hop_row.compact_parity_size} respectively."
+        f"- Removing pocket-adjacency motifs does not hurt `compact` at all and actually makes `extended` earlier ({format_parity_window_label(no_pocket_adj_row.extended_parity_size, no_pocket_adj_row.extended_parity_feature_subset)}). Removing neighbor-moment or two-hop motifs also leaves `compact` at {format_parity_window_label(no_neighbor_moments_row.compact_parity_size, no_neighbor_moments_row.compact_parity_feature_subset)} and {format_parity_window_label(no_two_hop_row.compact_parity_size, no_two_hop_row.compact_parity_feature_subset)} respectively."
     )
     print(
-        f"- The load-bearing family is degree extremes. When `motif_low_degree_neighbor_fraction` and `motif_high_degree_neighbor_fraction` are removed together, `compact` parity slips to size {no_degree_extremes_row.compact_parity_size}, and `extended` loses clean parity entirely in the tested `3..8` range."
+        f"- The load-bearing family is degree extremes. When `motif_low_degree_neighbor_fraction` and `motif_high_degree_neighbor_fraction` are removed together, `compact` slips to {format_parity_window_label(no_degree_extremes_row.compact_parity_size, no_degree_extremes_row.compact_parity_feature_subset)}, and `extended` loses clean parity entirely in the tested `3..8` range."
     )
     print(
         "- So the current mechanism read is much tighter: the fast rich-basis collapse is not really about pocket-adjacency. It is primarily carried by local degree-extremes information, with pocket-adjacent motifs acting more like alternative proxies than the main driver."
