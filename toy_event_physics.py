@@ -4528,6 +4528,23 @@ def generated_geometry_node_sets(
     return graph_rows
 
 
+def canonical_generated_ensemble_specs() -> tuple[tuple[str, int, int, tuple[str, ...]], ...]:
+    return (
+        ("default", 5, 3, ("walk", "mode-mix", "local-morph")),
+        ("broader", 7, 4, ("walk", "mode-mix", "local-morph")),
+        ("wider", 9, 5, ("walk", "mode-mix", "local-morph")),
+    )
+
+
+def generated_ensemble_spec(
+    ensemble_name: str,
+) -> tuple[str, int, int, tuple[str, ...]]:
+    for spec in canonical_generated_ensemble_specs():
+        if spec[0] == ensemble_name:
+            return spec
+    raise ValueError(f"unknown ensemble {ensemble_name}")
+
+
 def neighborhood_degree_fractions(
     nodes: set[tuple[int, int]],
     wrap_y: bool = False,
@@ -13110,26 +13127,17 @@ def _extended_atomic_route_generated_rows(
     list[GeometryPredictionRow],
     list[GeometryPredictionRow],
 ]:
-    if ensemble_name == "default":
-        context = build_generated_geometry_prediction_context(
-            retained_weight=retained_weight,
-            mode_retained_weight=mode_retained_weight,
-            geometry_variant_limit=5,
-            procedural_variant_limit=3,
-            procedural_rediscovery_limit=1,
-            procedural_styles=("walk", "mode-mix", "local-morph"),
-        )
-    elif ensemble_name == "broader":
-        context = build_generated_geometry_prediction_context(
-            retained_weight=retained_weight,
-            mode_retained_weight=mode_retained_weight,
-            geometry_variant_limit=7,
-            procedural_variant_limit=4,
-            procedural_rediscovery_limit=1,
-            procedural_styles=("walk", "mode-mix", "local-morph"),
-        )
-    else:
-        raise ValueError(f"unknown ensemble {ensemble_name}")
+    _ensemble_name, geometry_variant_limit, procedural_variant_limit, procedural_styles = (
+        generated_ensemble_spec(ensemble_name)
+    )
+    context = build_generated_geometry_prediction_context(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+        geometry_variant_limit=geometry_variant_limit,
+        procedural_variant_limit=procedural_variant_limit,
+        procedural_rediscovery_limit=1,
+        procedural_styles=procedural_styles,
+    )
     _mode_core_rows, mode_prediction_rows, _roughness_rows, procedural_rows, geometry_rows = (
         context
     )
@@ -13143,30 +13151,19 @@ def _extended_atomic_route_generated_only_rows(
     ensemble_name: str,
     retained_weight: float = 1.0,
 ) -> tuple[list[GeometryPredictionRow], list[GeometryPredictionRow]]:
-    if ensemble_name == "default":
-        geometry_rows = geometry_randomization_prediction_rows(
-            retained_weight=retained_weight,
-            variant_limit=5,
-        )
-        procedural_rows = procedural_geometry_prediction_rows(
-            retained_weight=retained_weight,
-            variant_limit=3,
-            rediscovery_limit=1,
-            styles=("walk", "mode-mix", "local-morph"),
-        )
-    elif ensemble_name == "broader":
-        geometry_rows = geometry_randomization_prediction_rows(
-            retained_weight=retained_weight,
-            variant_limit=7,
-        )
-        procedural_rows = procedural_geometry_prediction_rows(
-            retained_weight=retained_weight,
-            variant_limit=4,
-            rediscovery_limit=1,
-            styles=("walk", "mode-mix", "local-morph"),
-        )
-    else:
-        raise ValueError(f"unknown ensemble {ensemble_name}")
+    _ensemble_name, geometry_variant_limit, procedural_variant_limit, procedural_styles = (
+        generated_ensemble_spec(ensemble_name)
+    )
+    geometry_rows = geometry_randomization_prediction_rows(
+        retained_weight=retained_weight,
+        variant_limit=geometry_variant_limit,
+    )
+    procedural_rows = procedural_geometry_prediction_rows(
+        retained_weight=retained_weight,
+        variant_limit=procedural_variant_limit,
+        rediscovery_limit=1,
+        styles=procedural_styles,
+    )
     geometry_extended = [row for row in geometry_rows if row.rule_family == "extended"]
     procedural_extended = [row for row in procedural_rows if row.rule_family == "extended"]
     return geometry_extended, procedural_extended
@@ -13898,6 +13895,7 @@ def threshold_core_overlap_analysis(
         ("default", 5, 3, ("walk", "mode-mix", "local-morph")),
         ("broader", 7, 4, ("walk", "mode-mix", "local-morph")),
     ),
+    include_models: bool = True,
 ) -> tuple[list[ThresholdCoreOverlapRow], list[ThresholdCoreModelRow]]:
     overlap_rows: list[ThresholdCoreOverlapRow] = []
     model_rows: list[ThresholdCoreModelRow] = []
@@ -13980,32 +13978,33 @@ def threshold_core_overlap_analysis(
             )
         )
 
-        for feature_name in core_features:
-            _basis_rows, benchmark_rows = neighborhood_basis_benchmark(
-                retained_weight=retained_weight,
-                mode_retained_weight=mode_retained_weight,
-                geometry_variant_limit=geometry_variant_limit,
-                procedural_variant_limit=procedural_variant_limit,
-                procedural_styles=procedural_styles,
-                basis_size=1,
-                basis_feature_names=(feature_name,),
-            )
-            feature_row = next(
-                row
-                for row in benchmark_rows
-                if row.rule_family == "compact"
-                and row.candidate_name == "basis-1"
-                and row.model_family == "tree-depth2"
-            )
-            model_rows.append(
-                ThresholdCoreModelRow(
-                    ensemble_name=ensemble_name,
-                    feature_name=feature_name,
-                    generated_mean_accuracy=feature_row.generated_mean_accuracy,
-                    generated_worst_accuracy=feature_row.generated_worst_accuracy,
-                    tree_description=feature_row.description,
+        if include_models:
+            for feature_name in core_features:
+                _basis_rows, benchmark_rows = neighborhood_basis_benchmark(
+                    retained_weight=retained_weight,
+                    mode_retained_weight=mode_retained_weight,
+                    geometry_variant_limit=geometry_variant_limit,
+                    procedural_variant_limit=procedural_variant_limit,
+                    procedural_styles=procedural_styles,
+                    basis_size=1,
+                    basis_feature_names=(feature_name,),
                 )
-            )
+                feature_row = next(
+                    row
+                    for row in benchmark_rows
+                    if row.rule_family == "compact"
+                    and row.candidate_name == "basis-1"
+                    and row.model_family == "tree-depth2"
+                )
+                model_rows.append(
+                    ThresholdCoreModelRow(
+                        ensemble_name=ensemble_name,
+                        feature_name=feature_name,
+                        generated_mean_accuracy=feature_row.generated_mean_accuracy,
+                        generated_worst_accuracy=feature_row.generated_worst_accuracy,
+                        tree_description=feature_row.description,
+                    )
+                )
 
     overlap_rows.sort(key=lambda row: row.ensemble_name)
     model_rows.sort(key=lambda row: (row.ensemble_name, row.feature_name))
@@ -14529,15 +14528,10 @@ def _mechanism_split_class(
     return compact_fast, extended_fast, same_feature_signature, split_class
 
 
-def broader_hub_mechanism_rows(
-    retained_weight: float = 1.0,
-    mode_retained_weight: float | None = None,
-    geometry_variant_limit: int = 7,
-    procedural_variant_limit: int = 4,
-    procedural_rediscovery_limit: int = 1,
-    procedural_styles: tuple[str, ...] = ("walk", "mode-mix", "local-morph"),
-) -> list[tuple[str, HighDegreeDecompositionRow]]:
-    row_specs = [
+def broader_hub_mechanism_specs(
+    mechanism_names: tuple[str, ...] | None = None,
+) -> list[tuple[str, object, dict[str, object]]]:
+    row_specs: list[tuple[str, object, dict[str, object]]] = [
         (
             "degree:full-rich",
             high_degree_threshold_benchmark,
@@ -14671,6 +14665,22 @@ def broader_hub_mechanism_rows(
             },
         ),
     ]
+    if mechanism_names is not None:
+        allowed_names = set(mechanism_names)
+        row_specs = [spec for spec in row_specs if spec[0] in allowed_names]
+    return row_specs
+
+
+def broader_hub_mechanism_rows(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    geometry_variant_limit: int = 7,
+    procedural_variant_limit: int = 4,
+    procedural_rediscovery_limit: int = 1,
+    procedural_styles: tuple[str, ...] = ("walk", "mode-mix", "local-morph"),
+    mechanism_names: tuple[str, ...] | None = None,
+) -> list[tuple[str, HighDegreeDecompositionRow]]:
+    row_specs = broader_hub_mechanism_specs(mechanism_names=mechanism_names)
     broader_rows: list[tuple[str, HighDegreeDecompositionRow]] = []
     for mechanism_name, benchmark_fn, extra_kwargs in row_specs:
         row = benchmark_fn(
@@ -14684,6 +14694,74 @@ def broader_hub_mechanism_rows(
         )[0]
         broader_rows.append((mechanism_name, row))
     return broader_rows
+
+
+def hub_mechanism_split_rows(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    fast_parity_size: int = 3,
+    benchmark_name: str = "broader-hub",
+    geometry_variant_limit: int = 7,
+    procedural_variant_limit: int = 4,
+    procedural_rediscovery_limit: int = 1,
+    procedural_styles: tuple[str, ...] = ("walk", "mode-mix", "local-morph"),
+    mechanism_names: tuple[str, ...] | None = None,
+) -> list[MechanismSplitRow]:
+    split_rows: list[MechanismSplitRow] = []
+    for mechanism_name, row in broader_hub_mechanism_rows(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+        geometry_variant_limit=geometry_variant_limit,
+        procedural_variant_limit=procedural_variant_limit,
+        procedural_rediscovery_limit=procedural_rediscovery_limit,
+        procedural_styles=procedural_styles,
+        mechanism_names=mechanism_names,
+    ):
+        compact_fast, extended_fast, same_feature_signature, split_class = (
+            _mechanism_split_class(
+                row.compact_parity_size,
+                row.compact_parity_feature_subset,
+                row.extended_parity_size,
+                row.extended_parity_feature_subset,
+                fast_parity_size=fast_parity_size,
+            )
+        )
+        split_rows.append(
+            MechanismSplitRow(
+                benchmark_name=benchmark_name,
+                mechanism_name=mechanism_name,
+                compact_parity_size=row.compact_parity_size,
+                compact_parity_feature_subset=row.compact_parity_feature_subset,
+                extended_parity_size=row.extended_parity_size,
+                extended_parity_feature_subset=row.extended_parity_feature_subset,
+                compact_fast=compact_fast,
+                extended_fast=extended_fast,
+                same_feature_signature=same_feature_signature,
+                split_class=split_class,
+                compact_best_prethreshold_gap=row.compact_best_prethreshold_gap,
+                compact_best_prethreshold_worst_gap=row.compact_best_prethreshold_worst_gap,
+                extended_best_prethreshold_gap=row.extended_best_prethreshold_gap,
+                extended_best_prethreshold_worst_gap=row.extended_best_prethreshold_worst_gap,
+            )
+        )
+    split_rows.sort(key=lambda row: (row.benchmark_name, row.split_class, row.mechanism_name))
+    return split_rows
+
+
+def aggregate_mechanism_split_rows(
+    split_rows: list[MechanismSplitRow],
+) -> list[MechanismSplitAggregateRow]:
+    aggregate_counts: DefaultDict[tuple[str, str], int] = defaultdict(int)
+    for row in split_rows:
+        aggregate_counts[(row.benchmark_name, row.split_class)] += 1
+    return [
+        MechanismSplitAggregateRow(
+            benchmark_name=benchmark_name,
+            split_class=split_class,
+            cases=cases,
+        )
+        for (benchmark_name, split_class), cases in sorted(aggregate_counts.items())
+    ]
 
 
 def mechanism_family_split_benchmark(
@@ -14801,17 +14879,7 @@ def mechanism_family_split_benchmark(
             row.mechanism_name = broader_names[broader_index]
             broader_index += 1
 
-    aggregate_counts: DefaultDict[tuple[str, str], int] = defaultdict(int)
-    for row in split_rows:
-        aggregate_counts[(row.benchmark_name, row.split_class)] += 1
-    aggregate_rows = [
-        MechanismSplitAggregateRow(
-            benchmark_name=benchmark_name,
-            split_class=split_class,
-            cases=cases,
-        )
-        for (benchmark_name, split_class), cases in sorted(aggregate_counts.items())
-    ]
+    aggregate_rows = aggregate_mechanism_split_rows(split_rows)
     split_rows.sort(key=lambda row: (row.benchmark_name, row.split_class, row.mechanism_name))
     return split_rows, aggregate_rows
 
