@@ -14918,16 +14918,26 @@ def _named_overlap_row(
     left_label: str,
     right_label: str,
 ) -> ExtendedAtomicRouteOverlapRow:
-    ordered_left, ordered_right = sorted((left_label, right_label))
+    direct_row = next(
+        (
+            row
+            for row in rows
+            if row.ensemble_name == ensemble_name
+            and row.left_label == left_label
+            and row.right_label == right_label
+        ),
+        None,
+    )
+    if direct_row is not None:
+        return direct_row
+
     row = next(
         row
         for row in rows
         if row.ensemble_name == ensemble_name
-        and row.left_label == ordered_left
-        and row.right_label == ordered_right
+        and row.left_label == right_label
+        and row.right_label == left_label
     )
-    if ordered_left == left_label:
-        return row
     return ExtendedAtomicRouteOverlapRow(
         ensemble_name=row.ensemble_name,
         left_label=left_label,
@@ -14991,6 +15001,7 @@ def compact_route_map_summary(
     overlap_rows, _model_rows = threshold_core_overlap_analysis(
         retained_weight=retained_weight,
         mode_retained_weight=mode_retained_weight,
+        include_models=False,
     )
     bridge_rows = compact_sparse_bridge_benchmark(
         retained_weight=retained_weight,

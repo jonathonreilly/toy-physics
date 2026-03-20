@@ -13,6 +13,8 @@ if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
 from toy_event_physics import (  # noqa: E402
+    ExtendedAtomicRouteOverlapRow,
+    _named_overlap_row,
     build_cross_dataset_prediction_context,
     build_generated_geometry_prediction_context,
     centerline_feature_subset_benchmark,
@@ -21,6 +23,7 @@ from toy_event_physics import (  # noqa: E402
     feature_subset_cardinality,
     generated_geometry_predictor_comparison,
     mode_only_subset_frontier_rows,
+    compact_route_map_summary,
     predictor_family_comparison,
     resolve_sparse_bridge_feature_names,
     sparse_fallback_access_benchmark,
@@ -227,6 +230,35 @@ def check_sparse_fallback_access_labels() -> None:
     ), "sparse fallback access helper regressed to the stale degree-profile label"
 
 
+def check_overlap_row_lookup_reversal() -> None:
+    rows = [
+        ExtendedAtomicRouteOverlapRow(
+            ensemble_name="default",
+            left_label="pocket",
+            right_label="low-degree",
+            left_support_fraction=0.40,
+            right_support_fraction=0.60,
+            left_implies_right=0.99,
+            right_implies_left=0.66,
+            jaccard=0.50,
+        )
+    ]
+    direct = _named_overlap_row(rows, "default", "pocket", "low-degree")
+    reversed_row = _named_overlap_row(rows, "default", "low-degree", "pocket")
+    assert direct.left_implies_right == 0.99, "direct overlap lookup drifted"
+    assert (
+        reversed_row.left_implies_right == 0.66
+        and reversed_row.right_implies_left == 0.99
+    ), "reversed overlap lookup no longer swaps implication directions correctly"
+
+
+def check_route_map_summary_avoids_threshold_models() -> None:
+    helper_source = inspect.getsource(compact_route_map_summary)
+    assert (
+        "include_models=False" in helper_source
+    ), "compact route-map summary regressed to building unused threshold-core model rows"
+
+
 def main() -> None:
     print("benchmark regression audit: checking same-weight default", flush=True)
     check_same_weight_default()
@@ -236,6 +268,10 @@ def main() -> None:
     check_sparse_bridge_addback_visibility()
     print("benchmark regression audit: checking sparse fallback access labels", flush=True)
     check_sparse_fallback_access_labels()
+    print("benchmark regression audit: checking overlap-row lookup reversal", flush=True)
+    check_overlap_row_lookup_reversal()
+    print("benchmark regression audit: checking route-map threshold-model avoidance", flush=True)
+    check_route_map_summary_avoids_threshold_models()
     print("benchmark regression audit: checking live mechanism split driver", flush=True)
     check_live_mechanism_split_driver()
     print("benchmark regression audit: ok", flush=True)
