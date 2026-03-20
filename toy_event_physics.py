@@ -4537,6 +4537,7 @@ def canonical_generated_ensemble_specs() -> tuple[tuple[str, int, int, tuple[str
         ("mega", 13, 7, ("walk", "mode-mix", "local-morph")),
         ("giga", 15, 8, ("walk", "mode-mix", "local-morph")),
         ("tera", 17, 9, ("walk", "mode-mix", "local-morph")),
+        ("peta", 19, 10, ("walk", "mode-mix", "local-morph")),
     )
 
 

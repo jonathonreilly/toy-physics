@@ -11,7 +11,7 @@ import time
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 CHECKER = REPO_ROOT / "scripts" / "wider_generated_family_mechanism_check.py"
-ENSEMBLES = ("ultra", "mega", "giga")
+ENSEMBLES = ("ultra", "mega", "giga", "tera")
 
 
 def banner(title: str) -> None:
