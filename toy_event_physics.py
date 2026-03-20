@@ -4533,6 +4533,8 @@ def canonical_generated_ensemble_specs() -> tuple[tuple[str, int, int, tuple[str
         ("default", 5, 3, ("walk", "mode-mix", "local-morph")),
         ("broader", 7, 4, ("walk", "mode-mix", "local-morph")),
         ("wider", 9, 5, ("walk", "mode-mix", "local-morph")),
+        ("ultra", 11, 6, ("walk", "mode-mix", "local-morph")),
+        ("mega", 13, 7, ("walk", "mode-mix", "local-morph")),
     )
 
 
@@ -15071,6 +15073,33 @@ def compact_route_map_summary(
     ]
 
 
+def _best_extended_proxy_route_row(
+    proxy_rows: list[ExtendedProxyRouteRow],
+    proxy_family: str,
+    route_role: str,
+) -> ExtendedProxyRouteRow | None:
+    matching_rows = [
+        row
+        for row in proxy_rows
+        if row.extended_proxy_family == proxy_family
+        and row.extended_parity_size is not None
+        and row.extended_parity_size <= 3
+        and classify_extended_route_role(row.extended_parity_feature_subset) == route_role
+    ]
+    if not matching_rows:
+        return None
+    return min(
+        matching_rows,
+        key=lambda row: (
+            row.extended_parity_size,
+            feature_subset_cardinality(row.extended_parity_feature_subset),
+            -row.extended_best_prethreshold_gap,
+            -row.extended_best_prethreshold_worst_gap,
+            row.route_name,
+        ),
+    )
+
+
 def extended_route_map_summary(
     retained_weight: float = 1.0,
     mode_retained_weight: float | None = None,
@@ -15104,20 +15133,14 @@ def extended_route_map_summary(
         )
     ]
 
-    atomic_rows = {}
-    for route_name in route_specs:
-        atomic_rows[route_name] = next(
-            (
-                row
-                for row in proxy_rows
-                if row.extended_proxy_family == route_name
-                and row.extended_parity_size is not None
-                and row.extended_parity_size <= 3
-                and classify_extended_route_role(row.extended_parity_feature_subset)
-                == "atomic-standalone"
-            ),
-            None,
+    atomic_rows = {
+        route_name: _best_extended_proxy_route_row(
+            proxy_rows,
+            route_name,
+            "atomic-standalone",
         )
+        for route_name in route_specs
+    }
 
     deep_into_pocket = [
         _named_overlap_row(overlap_rows, ensemble_name, "deep-pocket", "pocket")
@@ -15186,17 +15209,10 @@ def extended_route_map_summary(
             )
         )
 
-    coexistence_row = next(
-        (
-            row
-            for row in proxy_rows
-            if row.extended_proxy_family == "low-degree+pocket"
-            and row.extended_parity_size is not None
-            and row.extended_parity_size <= 3
-            and classify_extended_route_role(row.extended_parity_feature_subset)
-            == "coexistence-only"
-        ),
-        None,
+    coexistence_row = _best_extended_proxy_route_row(
+        proxy_rows,
+        "low-degree+pocket",
+        "coexistence-only",
     )
     if coexistence_row is not None:
         route_rows.append(

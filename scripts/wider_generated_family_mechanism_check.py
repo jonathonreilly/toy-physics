@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import argparse
 from datetime import datetime
 from pathlib import Path
 import sys
@@ -34,15 +35,13 @@ from toy_event_physics import (  # noqa: E402
 )
 
 
-WIDER_ENSEMBLE = (generated_ensemble_spec("wider"),)
-_WIDER_NAME, WIDER_GEOMETRY_LIMIT, WIDER_PROCEDURAL_LIMIT, WIDER_STYLES = WIDER_ENSEMBLE[0]
-WIDER_FAST_HUB_ANCHORS = (
+FAST_HUB_ANCHORS = (
     "degree:ge-6",
     "degree:ge-7",
     "exposure:share6",
     "exposure:bundle",
 )
-WIDER_SLOW_HUB_ANCHORS = ("degree:full-rich",)
+SLOW_HUB_ANCHORS = ("degree:full-rich",)
 
 
 def banner(title: str) -> None:
@@ -52,13 +51,26 @@ def banner(title: str) -> None:
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--ensemble",
+        default="wider",
+        help="named generated ensemble from canonical_generated_ensemble_specs()",
+    )
+    args = parser.parse_args()
+
+    active_ensemble = (generated_ensemble_spec(args.ensemble),)
+    ensemble_name, geometry_limit, procedural_limit, procedural_styles = active_ensemble[0]
     started = datetime.now().isoformat(timespec="seconds")
-    print(f"wider generated-family mechanism check started {started}", flush=True)
     print(
-        f"ensemble={_WIDER_NAME} "
-        f"geometry_variant_limit={WIDER_GEOMETRY_LIMIT} "
-        f"procedural_variant_limit={WIDER_PROCEDURAL_LIMIT} "
-        f"styles={WIDER_STYLES}",
+        f"{ensemble_name} generated-family mechanism check started {started}",
+        flush=True,
+    )
+    print(
+        f"ensemble={ensemble_name} "
+        f"geometry_variant_limit={geometry_limit} "
+        f"procedural_variant_limit={procedural_limit} "
+        f"styles={procedural_styles}",
         flush=True,
     )
     total_start = time.time()
@@ -66,7 +78,7 @@ def main() -> None:
     banner("Threshold Core Overlap")
     overlap_rows, model_rows = threshold_core_overlap_analysis(
         mode_retained_weight=1.0,
-        ensembles=WIDER_ENSEMBLE,
+        ensembles=active_ensemble,
         include_models=False,
     )
     print(render_threshold_core_overlap_table(overlap_rows))
@@ -93,9 +105,9 @@ def main() -> None:
             )
             row = benchmark_fn(
                 mode_retained_weight=1.0,
-                geometry_variant_limit=WIDER_GEOMETRY_LIMIT,
-                procedural_variant_limit=WIDER_PROCEDURAL_LIMIT,
-                procedural_styles=WIDER_STYLES,
+                geometry_variant_limit=geometry_limit,
+                procedural_variant_limit=procedural_limit,
+                procedural_styles=procedural_styles,
                 basis_sizes=(3,),
                 **extra_kwargs,
             )[0]
@@ -140,17 +152,17 @@ def main() -> None:
         return split_rows
 
     run_hub_section(
-        "Wider Hub Mechanism Split",
-        "wider-hub-fast",
-        WIDER_FAST_HUB_ANCHORS,
+        f"{ensemble_name.title()} Hub Mechanism Split",
+        f"{ensemble_name}-hub-fast",
+        FAST_HUB_ANCHORS,
     )
 
     banner("Extended Proxy Routes")
     proxy_rows, proxy_aggregate_rows = extended_proxy_route_benchmark(
         mode_retained_weight=1.0,
-        geometry_variant_limit=WIDER_GEOMETRY_LIMIT,
-        procedural_variant_limit=WIDER_PROCEDURAL_LIMIT,
-        procedural_styles=WIDER_STYLES,
+        geometry_variant_limit=geometry_limit,
+        procedural_variant_limit=procedural_limit,
+        procedural_styles=procedural_styles,
     )
     print(render_extended_proxy_route_aggregate_table(proxy_aggregate_rows))
     print()
@@ -159,7 +171,7 @@ def main() -> None:
     banner("Extended Atomic Overlap")
     _score_rows, atomic_overlap_rows = extended_atomic_route_overlap_benchmark(
         mode_retained_weight=1.0,
-        ensembles=("wider",),
+        ensembles=(ensemble_name,),
         include_scores=False,
     )
     print(render_extended_atomic_route_overlap_table(atomic_overlap_rows))
@@ -167,21 +179,21 @@ def main() -> None:
     banner("Sparse Fallback")
     fallback_rows = degree_profile_fallback_benchmark(
         mode_retained_weight=1.0,
-        geometry_variant_limit=WIDER_GEOMETRY_LIMIT,
-        procedural_variant_limit=WIDER_PROCEDURAL_LIMIT,
-        procedural_styles=WIDER_STYLES,
+        geometry_variant_limit=geometry_limit,
+        procedural_variant_limit=procedural_limit,
+        procedural_styles=procedural_styles,
     )
     print(render_degree_profile_fallback_table(fallback_rows))
 
     run_hub_section(
-        "Wider Full-Rich Anchor",
-        "wider-hub-full-rich",
-        WIDER_SLOW_HUB_ANCHORS,
+        f"{ensemble_name.title()} Full-Rich Anchor",
+        f"{ensemble_name}-hub-full-rich",
+        SLOW_HUB_ANCHORS,
     )
 
     print()
     print(
-        "wider generated-family mechanism check completed "
+        f"{ensemble_name} generated-family mechanism check completed "
         + datetime.now().isoformat(timespec="seconds")
         + f" total_elapsed={time.time() - total_start:.1f}s",
         flush=True,
