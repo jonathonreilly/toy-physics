@@ -1256,6 +1256,33 @@ class ThresholdCoreModelRow:
 
 
 @dataclass
+class ThresholdCoreShellRow:
+    ensemble_name: str
+    graph_count: int
+    total_nodes: int
+    ge7_core_fraction: float
+    ge6_only_fraction: float
+    other_fraction: float
+    shell_deep_fraction: float
+    core_deep_fraction: float
+    other_deep_fraction: float
+    shell_deep_implies_fraction: float
+    deep_in_shell_fraction: float
+    shell_pocket_fraction: float
+    core_pocket_fraction: float
+    other_pocket_fraction: float
+    shell_low_degree_fraction: float
+    core_low_degree_fraction: float
+    other_low_degree_fraction: float
+    shell_boundary_deficit_mean: float
+    core_boundary_deficit_mean: float
+    other_boundary_deficit_mean: float
+    shell_mean_neighbor_degree: float
+    core_mean_neighbor_degree: float
+    other_mean_neighbor_degree: float
+
+
+@dataclass
 class ThresholdScalingRow:
     ensemble_name: str
     threshold_name: str
@@ -4486,6 +4513,46 @@ def node_threshold_core_profiles(
             "count6": hits6 / 8.0,
             "share7": hits7 / len(neighbor_degrees),
             "count7": hits7 / 8.0,
+        }
+    return profiles
+
+
+def node_local_motif_profiles(
+    nodes: set[tuple[int, int]],
+    wrap_y: bool = False,
+) -> dict[tuple[int, int], dict[str, float]]:
+    degree_map = {
+        node: len(graph_neighbors(node, nodes, wrap_y=wrap_y))
+        for node in nodes
+    }
+    pocket_cells, deep_pocket_cells = pocket_candidate_cells(nodes, wrap_y=wrap_y)
+    pocket_adjacent_nodes: set[tuple[int, int]] = set()
+    deep_pocket_adjacent_nodes: set[tuple[int, int]] = set()
+    for candidate in pocket_cells:
+        pocket_adjacent_nodes.update(
+            graph_neighbors(candidate, nodes | {candidate}, wrap_y=wrap_y)
+        )
+    for candidate in deep_pocket_cells:
+        deep_pocket_adjacent_nodes.update(
+            graph_neighbors(candidate, nodes | {candidate}, wrap_y=wrap_y)
+        )
+
+    profiles: dict[tuple[int, int], dict[str, float]] = {}
+    for node in nodes:
+        neighbors = graph_neighbors(node, nodes, wrap_y=wrap_y)
+        neighbor_degrees = [degree_map[neighbor] for neighbor in neighbors]
+        if neighbor_degrees:
+            mean_neighbor_degree = sum(neighbor_degrees) / len(neighbor_degrees) / 8.0
+        else:
+            mean_neighbor_degree = 0.0
+        profiles[node] = {
+            "boundary_deficit": (8 - degree_map[node]) / 8.0,
+            "pocket_adjacent": 1.0 if node in pocket_adjacent_nodes else 0.0,
+            "deep_pocket_adjacent": 1.0 if node in deep_pocket_adjacent_nodes else 0.0,
+            "low_degree_neighbor": 1.0
+            if any(degree <= 3 for degree in neighbor_degrees)
+            else 0.0,
+            "mean_neighbor_degree": mean_neighbor_degree,
         }
     return profiles
 
@@ -14017,6 +14084,118 @@ def threshold_core_overlap_analysis(
     return overlap_rows, model_rows
 
 
+def threshold_core_shell_mechanism_analysis(
+    ensembles: tuple[tuple[str, int, int, tuple[str, ...]], ...] = (
+        ("default", 5, 3, ("walk", "mode-mix", "local-morph")),
+        ("broader", 7, 4, ("walk", "mode-mix", "local-morph")),
+    ),
+) -> list[ThresholdCoreShellRow]:
+    shell_rows: list[ThresholdCoreShellRow] = []
+    ensemble_order = {ensemble_name: index for index, (ensemble_name, *_rest) in enumerate(ensembles)}
+    for (
+        ensemble_name,
+        geometry_variant_limit,
+        procedural_variant_limit,
+        procedural_styles,
+    ) in ensembles:
+        graph_rows = generated_geometry_node_sets(
+            geometry_variant_limit=geometry_variant_limit,
+            procedural_variant_limit=procedural_variant_limit,
+            procedural_styles=procedural_styles,
+        )
+        group_counts = {"shell": 0, "core": 0, "other": 0}
+        deep_counts = {"shell": 0, "core": 0, "other": 0}
+        pocket_counts = {"shell": 0, "core": 0, "other": 0}
+        low_degree_counts = {"shell": 0, "core": 0, "other": 0}
+        boundary_sums = {"shell": 0.0, "core": 0.0, "other": 0.0}
+        neighbor_degree_sums = {"shell": 0.0, "core": 0.0, "other": 0.0}
+        deep_total = 0
+
+        for _graph_name, nodes, wrap_y in graph_rows:
+            threshold_profiles = node_threshold_core_profiles(nodes, wrap_y=wrap_y)
+            local_profiles = node_local_motif_profiles(nodes, wrap_y=wrap_y)
+            for node in nodes:
+                threshold_values = threshold_profiles[node]
+                local_values = local_profiles[node]
+                if threshold_values["ge7"] > 0.5:
+                    group = "core"
+                elif threshold_values["ge6"] > 0.5:
+                    group = "shell"
+                else:
+                    group = "other"
+                group_counts[group] += 1
+                boundary_sums[group] += local_values["boundary_deficit"]
+                neighbor_degree_sums[group] += local_values["mean_neighbor_degree"]
+                if local_values["deep_pocket_adjacent"] > 0.5:
+                    deep_counts[group] += 1
+                    deep_total += 1
+                if local_values["pocket_adjacent"] > 0.5:
+                    pocket_counts[group] += 1
+                if local_values["low_degree_neighbor"] > 0.5:
+                    low_degree_counts[group] += 1
+
+        total_nodes = sum(group_counts.values())
+
+        def frac(numerator: int, denominator: int) -> float:
+            return numerator / denominator if denominator else 0.0
+
+        def mean(total: float, count: int) -> float:
+            return total / count if count else 0.0
+
+        shell_rows.append(
+            ThresholdCoreShellRow(
+                ensemble_name=ensemble_name,
+                graph_count=len(graph_rows),
+                total_nodes=total_nodes,
+                ge7_core_fraction=frac(group_counts["core"], total_nodes),
+                ge6_only_fraction=frac(group_counts["shell"], total_nodes),
+                other_fraction=frac(group_counts["other"], total_nodes),
+                shell_deep_fraction=frac(deep_counts["shell"], group_counts["shell"]),
+                core_deep_fraction=frac(deep_counts["core"], group_counts["core"]),
+                other_deep_fraction=frac(deep_counts["other"], group_counts["other"]),
+                shell_deep_implies_fraction=frac(deep_counts["shell"], group_counts["shell"]),
+                deep_in_shell_fraction=frac(deep_counts["shell"], deep_total),
+                shell_pocket_fraction=frac(
+                    pocket_counts["shell"], group_counts["shell"]
+                ),
+                core_pocket_fraction=frac(pocket_counts["core"], group_counts["core"]),
+                other_pocket_fraction=frac(
+                    pocket_counts["other"], group_counts["other"]
+                ),
+                shell_low_degree_fraction=frac(
+                    low_degree_counts["shell"], group_counts["shell"]
+                ),
+                core_low_degree_fraction=frac(
+                    low_degree_counts["core"], group_counts["core"]
+                ),
+                other_low_degree_fraction=frac(
+                    low_degree_counts["other"], group_counts["other"]
+                ),
+                shell_boundary_deficit_mean=mean(
+                    boundary_sums["shell"], group_counts["shell"]
+                ),
+                core_boundary_deficit_mean=mean(
+                    boundary_sums["core"], group_counts["core"]
+                ),
+                other_boundary_deficit_mean=mean(
+                    boundary_sums["other"], group_counts["other"]
+                ),
+                shell_mean_neighbor_degree=mean(
+                    neighbor_degree_sums["shell"], group_counts["shell"]
+                ),
+                core_mean_neighbor_degree=mean(
+                    neighbor_degree_sums["core"], group_counts["core"]
+                ),
+                other_mean_neighbor_degree=mean(
+                    neighbor_degree_sums["other"], group_counts["other"]
+                ),
+            )
+        )
+
+    shell_rows.sort(key=lambda row: ensemble_order[row.ensemble_name])
+    return shell_rows
+
+
 def threshold_scaling_explanation_analysis(
     ensembles: tuple[tuple[str, int, int, tuple[str, ...]], ...] = (
         ("default", 5, 3, ("walk", "mode-mix", "local-morph")),
@@ -17922,6 +18101,45 @@ def render_threshold_core_overlap_table(
             f"{row.ge7_subset_of_ge6_fraction:>8.2f} | "
             f"{row.ge6_without_ge7_fraction:>8.2f} | "
             f"{row.min_positive_share6:>5.2f}/{row.mean_positive_share6:>5.2f}"
+        )
+    return "\n".join(lines)
+
+
+def render_threshold_core_shell_table(
+    rows: list[ThresholdCoreShellRow],
+) -> str:
+    lines = [
+        "ensemble | graphs | nodes  | core  | shell | other | deep@S/C/O   | pocket@S/C/O | lowdeg@S/C/O | deep<-shell",
+        "---------+-------+--------+-------+-------+-------+--------------+--------------+--------------+------------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.ensemble_name:<8} | "
+            f"{row.graph_count:>5} | "
+            f"{row.total_nodes:>6} | "
+            f"{row.ge7_core_fraction:>5.2f} | "
+            f"{row.ge6_only_fraction:>5.2f} | "
+            f"{row.other_fraction:>5.2f} | "
+            f"{row.shell_deep_fraction:>4.2f}/{row.core_deep_fraction:>4.2f}/{row.other_deep_fraction:>4.2f} | "
+            f"{row.shell_pocket_fraction:>4.2f}/{row.core_pocket_fraction:>4.2f}/{row.other_pocket_fraction:>4.2f} | "
+            f"{row.shell_low_degree_fraction:>4.2f}/{row.core_low_degree_fraction:>4.2f}/{row.other_low_degree_fraction:>4.2f} | "
+            f"{row.deep_in_shell_fraction:>10.2f}"
+        )
+    return "\n".join(lines)
+
+
+def render_threshold_core_shell_context_table(
+    rows: list[ThresholdCoreShellRow],
+) -> str:
+    lines = [
+        "ensemble | boundary deficit S/C/O | mean neighbor deg S/C/O",
+        "---------+------------------------+------------------------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.ensemble_name:<8} | "
+            f"{row.shell_boundary_deficit_mean:>5.2f}/{row.core_boundary_deficit_mean:>5.2f}/{row.other_boundary_deficit_mean:>5.2f} | "
+            f"{row.shell_mean_neighbor_degree:>5.2f}/{row.core_mean_neighbor_degree:>5.2f}/{row.other_mean_neighbor_degree:>5.2f}"
         )
     return "\n".join(lines)
 
