@@ -1410,6 +1410,48 @@ class TaperWrapOffenderInterpolationAggregateRow:
 
 
 @dataclass
+class TaperWrapEndpointJumpRow:
+    target_variant: str
+    prior_alpha: float
+    prior_outcome: str
+    endpoint_outcome: str
+    endpoint_matches_target: bool
+    changed_columns: int
+    added_nodes: int
+    removed_nodes: int
+    changed_xs: str
+    prior_boundary_gap: float
+    endpoint_boundary_gap: float
+    prior_low_degree_gap: float
+    endpoint_low_degree_gap: float
+    prior_pocket_gap: float
+    endpoint_pocket_gap: float
+    prior_crosses_midline: bool
+    endpoint_crosses_midline: bool
+    prior_center_variation: float
+    endpoint_center_variation: float
+    added_boundary_deficit_mean: float
+    added_low_degree_fraction: float
+    added_pocket_fraction: float
+    added_deep_fraction: float
+    added_mean_neighbor_degree: float
+
+
+@dataclass
+class TaperWrapEndpointJumpColumnRow:
+    target_variant: str
+    x: int
+    prior_low_y: int
+    prior_high_y: int
+    endpoint_low_y: int
+    endpoint_high_y: int
+    low_delta: int
+    high_delta: int
+    center_delta: float
+    span_delta: int
+
+
+@dataclass
 class ThresholdScalingRow:
     ensemble_name: str
     threshold_name: str
@@ -15168,6 +15210,142 @@ def taper_wrap_offender_interpolation_sweep(
     return rows, aggregate_rows
 
 
+def taper_wrap_endpoint_jump_analysis(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    target_variants: tuple[str, ...] = ("geometry-c", "geometry-e"),
+    alphas: tuple[float, ...] = (0.0, 0.25, 0.5, 0.75, 1.0),
+) -> tuple[list[TaperWrapEndpointJumpRow], list[TaperWrapEndpointJumpColumnRow]]:
+    interpolation_rows, _aggregate_rows = taper_wrap_offender_interpolation_sweep(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+        target_variants=target_variants,
+        alphas=alphas,
+    )
+    rows_by_target = {
+        target_variant: [row for row in interpolation_rows if row.target_variant == target_variant]
+        for target_variant in target_variants
+    }
+
+    pack_name = "base"
+    scenario_name = "taper-wrap"
+    nodes, wrap_y = scenario_by_name(pack_name, scenario_name)
+    xs, base_centers, base_spans = ordered_profile_centers_and_spans(nodes)
+    variant_nodes = {
+        variant_name: perturbed_nodes
+        for variant_name, perturbed_nodes, _node_delta in randomized_geometry_variants(
+            pack_name,
+            scenario_name,
+            nodes,
+            wrap_y,
+            variant_limit=5,
+        )
+    }
+
+    summary_rows: list[TaperWrapEndpointJumpRow] = []
+    column_rows: list[TaperWrapEndpointJumpColumnRow] = []
+
+    for target_variant in target_variants:
+        target_rows = rows_by_target[target_variant]
+        endpoint_row = next(row for row in target_rows if row.outcome == "dpadj-only")
+        prior_row = max(
+            (row for row in target_rows if row.alpha < endpoint_row.alpha),
+            key=lambda row: row.alpha,
+        )
+        target_nodes = variant_nodes[target_variant]
+        target_xs, target_centers, target_spans = ordered_profile_centers_and_spans(target_nodes)
+        if target_xs != xs:
+            raise RuntimeError("taper-wrap endpoint jump analysis requires aligned x columns.")
+
+        prior_centers = tuple(
+            base_center + prior_row.alpha * (target_center - base_center)
+            for base_center, target_center in zip(base_centers, target_centers)
+        )
+        prior_spans = tuple(
+            int(round(base_span + prior_row.alpha * (target_span - base_span)))
+            for base_span, target_span in zip(base_spans, target_spans)
+        )
+        prior_profile = build_profile_from_centers_and_spans(xs, prior_centers, prior_spans)
+        prior_nodes = build_nodes_from_interval_profile(prior_profile)
+
+        endpoint_profile = column_interval_profile(target_nodes)
+        endpoint_nodes = build_nodes_from_interval_profile(endpoint_profile)
+        endpoint_matches_target = endpoint_nodes == target_nodes
+        prior_local_profiles = node_local_motif_profiles(prior_nodes, wrap_y=wrap_y)
+        endpoint_local_profiles = node_local_motif_profiles(endpoint_nodes, wrap_y=wrap_y)
+
+        changed_columns: list[TaperWrapEndpointJumpColumnRow] = []
+        for x in xs:
+            prior_low_y, prior_high_y = prior_profile[x]
+            endpoint_low_y, endpoint_high_y = endpoint_profile[x]
+            if (prior_low_y, prior_high_y) == (endpoint_low_y, endpoint_high_y):
+                continue
+            changed_columns.append(
+                TaperWrapEndpointJumpColumnRow(
+                    target_variant=target_variant,
+                    x=x,
+                    prior_low_y=prior_low_y,
+                    prior_high_y=prior_high_y,
+                    endpoint_low_y=endpoint_low_y,
+                    endpoint_high_y=endpoint_high_y,
+                    low_delta=endpoint_low_y - prior_low_y,
+                    high_delta=endpoint_high_y - prior_high_y,
+                    center_delta=((endpoint_low_y + endpoint_high_y) - (prior_low_y + prior_high_y)) / 2.0,
+                    span_delta=(endpoint_high_y - endpoint_low_y) - (prior_high_y - prior_low_y),
+                )
+            )
+        column_rows.extend(changed_columns)
+
+        added_nodes = sorted(endpoint_nodes - prior_nodes)
+        removed_nodes = sorted(prior_nodes - endpoint_nodes)
+
+        def mean(values: list[float]) -> float:
+            return sum(values) / len(values) if values else 0.0
+
+        summary_rows.append(
+            TaperWrapEndpointJumpRow(
+                target_variant=target_variant,
+                prior_alpha=prior_row.alpha,
+                prior_outcome=prior_row.outcome,
+                endpoint_outcome=endpoint_row.outcome,
+                endpoint_matches_target=endpoint_matches_target,
+                changed_columns=len(changed_columns),
+                added_nodes=len(added_nodes),
+                removed_nodes=len(removed_nodes),
+                changed_xs=",".join(str(row.x) for row in changed_columns),
+                prior_boundary_gap=prior_row.boundary_gap,
+                endpoint_boundary_gap=endpoint_row.boundary_gap,
+                prior_low_degree_gap=prior_row.low_degree_gap,
+                endpoint_low_degree_gap=endpoint_row.low_degree_gap,
+                prior_pocket_gap=prior_row.pocket_gap,
+                endpoint_pocket_gap=endpoint_row.pocket_gap,
+                prior_crosses_midline=prior_row.crosses_midline,
+                endpoint_crosses_midline=endpoint_row.crosses_midline,
+                prior_center_variation=prior_row.center_variation,
+                endpoint_center_variation=endpoint_row.center_variation,
+                added_boundary_deficit_mean=mean(
+                    [endpoint_local_profiles[node]["boundary_deficit"] for node in added_nodes]
+                ),
+                added_low_degree_fraction=mean(
+                    [endpoint_local_profiles[node]["low_degree_neighbor"] for node in added_nodes]
+                ),
+                added_pocket_fraction=mean(
+                    [endpoint_local_profiles[node]["pocket_adjacent"] for node in added_nodes]
+                ),
+                added_deep_fraction=mean(
+                    [endpoint_local_profiles[node]["deep_pocket_adjacent"] for node in added_nodes]
+                ),
+                added_mean_neighbor_degree=mean(
+                    [endpoint_local_profiles[node]["mean_neighbor_degree"] for node in added_nodes]
+                ),
+            )
+        )
+
+    summary_rows.sort(key=lambda row: row.target_variant)
+    column_rows.sort(key=lambda row: (row.target_variant, row.x))
+    return summary_rows, column_rows
+
+
 def threshold_scaling_explanation_analysis(
     ensembles: tuple[tuple[str, int, int, tuple[str, ...]], ...] = (
         ("default", 5, 3, ("walk", "mode-mix", "local-morph")),
@@ -19281,6 +19459,51 @@ def render_taper_wrap_offender_interpolation_table(
             f"{row.center_variation:>4.1f} | "
             f"{row.span_range:>4.1f} | "
             f"{('Y' if row.crosses_midline else 'n'):<4}"
+        )
+    return "\n".join(lines)
+
+
+def render_taper_wrap_endpoint_jump_table(
+    rows: list[TaperWrapEndpointJumpRow],
+) -> str:
+    lines = [
+        "target     | prior | prior->end | cols | nodes | xs        | bdef     | low      | pocket   | cross | cvar | add b/low/p/deep/mdeg",
+        "-----------+-------+------------+------+-------+-----------+----------+----------+----------+-------+------+----------------------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.target_variant:<10} | "
+            f"{row.prior_alpha:>5.2f} | "
+            f"{row.prior_outcome:<10.10} | "
+            f"{row.changed_columns:>4} | "
+            f"{row.added_nodes:>2}/{row.removed_nodes:<2} | "
+            f"{row.changed_xs:<9.9} | "
+            f"{row.prior_boundary_gap:+4.2f}->{row.endpoint_boundary_gap:+4.2f} | "
+            f"{row.prior_low_degree_gap:+4.2f}->{row.endpoint_low_degree_gap:+4.2f} | "
+            f"{row.prior_pocket_gap:+4.2f}->{row.endpoint_pocket_gap:+4.2f} | "
+            f"{('n' if not row.prior_crosses_midline else 'Y')}->{('n' if not row.endpoint_crosses_midline else 'Y')}   | "
+            f"{row.prior_center_variation:>3.1f}->{row.endpoint_center_variation:>3.1f} | "
+            f"{row.added_boundary_deficit_mean:>4.2f}/{row.added_low_degree_fraction:>4.2f}/{row.added_pocket_fraction:>4.2f}/{row.added_deep_fraction:>4.2f}/{row.added_mean_neighbor_degree:>4.2f}"
+        )
+    return "\n".join(lines)
+
+
+def render_taper_wrap_endpoint_jump_columns(
+    rows: list[TaperWrapEndpointJumpColumnRow],
+) -> str:
+    lines = [
+        "target     | x | prior y   | end y     | dlow/dhigh | dcenter | dspan",
+        "-----------+---+-----------+-----------+------------+---------+------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.target_variant:<10} | "
+            f"{row.x:>1} | "
+            f"{row.prior_low_y:>3}/{row.prior_high_y:<3} | "
+            f"{row.endpoint_low_y:>3}/{row.endpoint_high_y:<3} | "
+            f"{row.low_delta:>+3}/{row.high_delta:<+3} | "
+            f"{row.center_delta:>+5.1f} | "
+            f"{row.span_delta:>+4}"
         )
     return "\n".join(lines)
 
