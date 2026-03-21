@@ -1503,6 +1503,39 @@ class TaperWrapCrossContextJumpAggregateRow:
 
 
 @dataclass
+class TaperWrapJumpContextRow:
+    target_variant: str
+    mode: str
+    amplitude: float
+    outcome: str
+    signature: str
+    mean_center: float
+    center_range: float
+    center_variation: float
+    crosses_midline: bool
+    boundary_roughness: float
+    mirror_center_asymmetry: float
+    mirror_span_asymmetry: float
+    changed_band_center_mean: float
+    changed_band_high_mean: float
+
+
+@dataclass
+class TaperWrapJumpContextAggregateRow:
+    target_variant: str
+    outcome: str
+    cases: int
+    modes: str
+    amplitudes: str
+    mean_center_variation: float
+    mean_boundary_roughness: float
+    mean_mirror_center_asymmetry: float
+    mean_changed_band_center: float
+    mean_changed_band_high: float
+    crossing_cases: int
+
+
+@dataclass
 class ThresholdScalingRow:
     ensemble_name: str
     threshold_name: str
@@ -15548,6 +15581,24 @@ def _apply_column_vertical_shift(
     return shifted_profile
 
 
+def _profile_symmetry_metrics(
+    centers: tuple[float, ...],
+    spans: tuple[int, ...],
+) -> tuple[float, float]:
+    center_terms: list[float] = []
+    span_terms: list[float] = []
+    for left_index in range(len(centers) // 2):
+        right_index = len(centers) - 1 - left_index
+        center_terms.append(abs(centers[left_index] + centers[right_index]))
+        span_terms.append(abs(spans[left_index] - spans[right_index]))
+    if not center_terms:
+        return 0.0, 0.0
+    return (
+        sum(center_terms) / len(center_terms),
+        sum(span_terms) / len(span_terms),
+    )
+
+
 def taper_wrap_jump_transplant_analysis(
     retained_weight: float = 1.0,
     mode_retained_weight: float | None = None,
@@ -15823,6 +15874,137 @@ def taper_wrap_cross_context_jump_analysis(
 
     rows.sort(key=lambda row: (row.target_variant, row.mode, row.amplitude))
     aggregate_rows.sort(key=lambda row: (row.target_variant, row.mode))
+    return rows, aggregate_rows
+
+
+def taper_wrap_jump_context_analysis(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    target_variants: tuple[str, ...] = ("geometry-c", "geometry-e"),
+    amplitudes: tuple[float, ...] = (-2.0, -1.5, -1.0, -0.5, 0.0, 0.5, 1.0, 1.5, 2.0),
+) -> tuple[list[TaperWrapJumpContextRow], list[TaperWrapJumpContextAggregateRow]]:
+    jump_rows, _jump_aggregate_rows = taper_wrap_cross_context_jump_analysis(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+        target_variants=target_variants,
+        amplitudes=amplitudes,
+    )
+    outcome_lookup = {
+        (row.target_variant, row.mode, row.amplitude): row.outcome
+        for row in jump_rows
+    }
+    _endpoint_rows, endpoint_column_rows = taper_wrap_endpoint_jump_analysis(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+        target_variants=target_variants,
+    )
+    changed_xs_by_target: dict[str, set[int]] = {
+        target_variant: {
+            row.x
+            for row in endpoint_column_rows
+            if row.target_variant == target_variant
+        }
+        for target_variant in target_variants
+    }
+
+    pack_name = "base"
+    scenario_name = "taper-wrap"
+    nodes, _wrap_y = scenario_by_name(pack_name, scenario_name)
+    xs, base_centers, base_spans = ordered_profile_centers_and_spans(nodes)
+    mode_basis = centerline_mode_basis(xs)
+
+    rows: list[TaperWrapJumpContextRow] = []
+    grouped: DefaultDict[tuple[str, str], list[TaperWrapJumpContextRow]] = defaultdict(list)
+    for mode_name, mode_vector in mode_basis.items():
+        for amplitude in amplitudes:
+            centers = tuple(
+                center + amplitude * mode_component
+                for center, mode_component in zip(base_centers, mode_vector)
+            )
+            signature, _turning_points, _max_step_fraction = centerline_mode_invariants(
+                centers,
+            )
+            profile = build_profile_from_centers_and_spans(xs, centers, base_spans)
+            sweep_nodes = build_nodes_from_interval_profile(profile)
+            (
+                mean_center,
+                center_range,
+                center_variation,
+                crosses_midline,
+                _span_range,
+            ) = column_profile_geometry_metrics(sweep_nodes)
+            (
+                _boundary_fraction,
+                _pocket_fraction,
+                boundary_roughness,
+                _deep_pocket_fraction,
+                *_rest,
+            ) = local_shape_feature_bundle(sweep_nodes)
+            mirror_center_asymmetry, mirror_span_asymmetry = _profile_symmetry_metrics(
+                centers,
+                base_spans,
+            )
+            for target_variant in target_variants:
+                changed_xs = changed_xs_by_target[target_variant]
+                band_centers = [
+                    (profile[x][0] + profile[x][1]) / 2.0
+                    for x in xs
+                    if x in changed_xs
+                ]
+                band_highs = [
+                    profile[x][1]
+                    for x in xs
+                    if x in changed_xs
+                ]
+                row = TaperWrapJumpContextRow(
+                    target_variant=target_variant,
+                    mode=mode_name,
+                    amplitude=amplitude,
+                    outcome=outcome_lookup[(target_variant, mode_name, amplitude)],
+                    signature=signature,
+                    mean_center=mean_center,
+                    center_range=center_range,
+                    center_variation=center_variation,
+                    crosses_midline=crosses_midline,
+                    boundary_roughness=boundary_roughness,
+                    mirror_center_asymmetry=mirror_center_asymmetry,
+                    mirror_span_asymmetry=mirror_span_asymmetry,
+                    changed_band_center_mean=(
+                        sum(band_centers) / len(band_centers) if band_centers else 0.0
+                    ),
+                    changed_band_high_mean=(
+                        sum(band_highs) / len(band_highs) if band_highs else 0.0
+                    ),
+                )
+                rows.append(row)
+                grouped[(target_variant, row.outcome)].append(row)
+
+    aggregate_rows: list[TaperWrapJumpContextAggregateRow] = []
+    for (target_variant, outcome), outcome_rows in grouped.items():
+        aggregate_rows.append(
+            TaperWrapJumpContextAggregateRow(
+                target_variant=target_variant,
+                outcome=outcome,
+                cases=len(outcome_rows),
+                modes=",".join(sorted({row.mode for row in outcome_rows})),
+                amplitudes=",".join(f"{row.amplitude:+.2f}" for row in outcome_rows[:6]),
+                mean_center_variation=sum(row.center_variation for row in outcome_rows) / len(outcome_rows),
+                mean_boundary_roughness=sum(row.boundary_roughness for row in outcome_rows) / len(outcome_rows),
+                mean_mirror_center_asymmetry=sum(
+                    row.mirror_center_asymmetry for row in outcome_rows
+                ) / len(outcome_rows),
+                mean_changed_band_center=sum(
+                    row.changed_band_center_mean for row in outcome_rows
+                ) / len(outcome_rows),
+                mean_changed_band_high=sum(
+                    row.changed_band_high_mean for row in outcome_rows
+                ) / len(outcome_rows),
+                crossing_cases=sum(row.crosses_midline for row in outcome_rows),
+            )
+        )
+
+    rows.sort(key=lambda row: (row.target_variant, row.mode, row.amplitude))
+    aggregate_rows.sort(key=lambda row: (row.target_variant, row.outcome))
     return rows, aggregate_rows
 
 
@@ -20030,6 +20212,28 @@ def render_taper_wrap_cross_context_jump_aggregate_table(
             f"{row.neither_cases:>7} | "
             f"{first_dpadj:>11} | "
             f"{row.max_low_degree_gap:+4.2f}/{row.max_boundary_gap:+4.2f}"
+        )
+    return "\n".join(lines)
+
+
+def render_taper_wrap_jump_context_aggregate_table(
+    rows: list[TaperWrapJumpContextAggregateRow],
+) -> str:
+    lines = [
+        "target     | outcome    | cases | modes              | cvar | brough | asym | band c/h | cross",
+        "-----------+------------+-------+--------------------+------+--------+------+----------+------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.target_variant:<10} | "
+            f"{row.outcome:<10} | "
+            f"{row.cases:>5} | "
+            f"{row.modes:<18.18} | "
+            f"{row.mean_center_variation:>4.1f} | "
+            f"{row.mean_boundary_roughness:>6.2f} | "
+            f"{row.mean_mirror_center_asymmetry:>4.2f} | "
+            f"{row.mean_changed_band_center:+4.2f}/{row.mean_changed_band_high:+4.2f} | "
+            f"{row.crossing_cases:>4}"
         )
     return "\n".join(lines)
 
