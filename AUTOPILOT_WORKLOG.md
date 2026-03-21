@@ -8,6 +8,39 @@ Each autopilot run should:
 - append a new timestamped entry at the top
 - keep all paths canonical to this repository, not worktree-local paths
 
+## 2026-03-21 17:12 America/New_York
+
+### Current state
+- `main` is still synced to `origin/main` at run start; this loop continued the same pocket-wrap suppressor overlap-context mechanism thread.
+- Executed the pending deeper overlap-context rule sweeps at:
+  - `variant_limit = 72`
+  - `variant_limit = 80`
+- Both runs produced the same three overlap-positive rows and the same exact-rule counts as the `64` rung.
+- Updated README mechanism language to mark those shell/profile separators as stable across `64/72/80`.
+
+### Strongest confirmed conclusion
+- The pocket-wrap suppressor split is still a single overwrite-trigger family, and the canonical pocket-signature branch remains exactly separable by shell/profile context alone.
+- The one-feature separators `boundary_roughness <= 0.288`, `center_total_variation <= 2.500`, and `shell_pocket_fraction >= 0.812` now hold exactly (`0` FP, `0` FN) not only at `64` but also at `72` and `80`.
+
+### Files and results changed in this run
+- Updated narrative:
+  - [README.md](/Users/jonreilly/Projects/Physics/README.md)
+- Updated run tracking:
+  - [AUTOPILOT_WORKLOG.md](/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md)
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- New logs:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-21-pocket-wrap-suppressor-overlap-context-rules-72.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-21-pocket-wrap-suppressor-overlap-context-rules-80.txt`
+- Commit status:
+  - No new commit yet in this run.
+
+### Exact next step
+- Probe the first deeper rung where overlap-positive membership might change, then re-check whether the same exact shell/profile separators survive that membership expansion.
+
+### First concrete action
+- Run `scripts/pocket_wrap_suppressor_overlap_context_rules.py --variant-limit 96`, inspect whether any new overlap-positive row appears, and if yes, recompute which one-feature separators remain exact.
+
 ## 2026-03-21 16:53 America/New_York
 
 ### Current state
