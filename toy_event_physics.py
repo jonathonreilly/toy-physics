@@ -1550,6 +1550,51 @@ class TaperWrapJumpRuleRow:
 
 
 @dataclass
+class SecondaryOffenderRuleRow:
+    ensemble_name: str
+    scenario_name: str
+    source_name: str
+    style: str
+    outcome: str
+    signature: str
+    center_variation: float
+    boundary_roughness: float
+    mirror_center_asymmetry: float
+    crosses_midline: bool
+    matches_taper_e_rule: bool
+    matches_taper_c_rule: bool
+
+
+@dataclass
+class SecondaryOffenderRuleAggregateRow:
+    ensemble_name: str
+    scenario_name: str
+    outcome: str
+    cases: int
+    styles: str
+    match_taper_e_rule_cases: int
+    match_taper_c_rule_cases: int
+    mean_center_variation: float
+    mean_boundary_roughness: float
+    mean_mirror_center_asymmetry: float
+    crossing_cases: int
+
+
+@dataclass
+class SecondaryOffenderRuleSearchRow:
+    ensemble_name: str
+    scenario_name: str
+    rule_text: str
+    term_count: int
+    tp: int
+    fp: int
+    fn: int
+    precision: float
+    recall: float
+    f1: float
+
+
+@dataclass
 class ThresholdScalingRow:
     ensemble_name: str
     threshold_name: str
@@ -16131,6 +16176,231 @@ def taper_wrap_jump_context_rule_analysis(
     return rule_rows
 
 
+def secondary_offender_rule_generalization_analysis(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    scenario_names: tuple[str, ...] = ("skew-wrap",),
+    ensembles: tuple[tuple[str, int, int, tuple[str, ...]], ...] = (
+        ("default", 5, 3, ("walk", "mode-mix", "local-morph")),
+        ("broader", 7, 4, ("walk", "mode-mix", "local-morph")),
+    ),
+) -> tuple[list[SecondaryOffenderRuleRow], list[SecondaryOffenderRuleAggregateRow]]:
+    ge6_tree, dpadj_tree = _extended_ge6_dpadj_trees(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+    )
+    row_list: list[SecondaryOffenderRuleRow] = []
+    grouped: DefaultDict[tuple[str, str, str], list[SecondaryOffenderRuleRow]] = defaultdict(list)
+
+    for (
+        ensemble_name,
+        geometry_variant_limit,
+        procedural_variant_limit,
+        procedural_styles,
+    ) in ensembles:
+        for scenario_name in scenario_names:
+            nodes, wrap_y = scenario_by_name("base", scenario_name)
+            variant_entries: list[tuple[str, set[tuple[int, int]], str]] = []
+            for variant_name, perturbed_nodes, _node_delta in randomized_geometry_variants(
+                "base",
+                scenario_name,
+                nodes,
+                wrap_y,
+                variant_limit=geometry_variant_limit,
+            ):
+                variant_entries.append((variant_name, perturbed_nodes, "geometry"))
+            for style in tuple(dict.fromkeys(procedural_styles)):
+                for variant_name, perturbed_nodes, _node_delta in procedural_geometry_variants(
+                    "base",
+                    scenario_name,
+                    nodes,
+                    wrap_y,
+                    variant_limit=procedural_variant_limit,
+                    style=style,
+                ):
+                    variant_entries.append((f"{style}:{variant_name}", perturbed_nodes, style))
+
+            for variant_name, variant_nodes, style in variant_entries:
+                source_name = f"base:{scenario_name}:{variant_name}"
+                xs, centers, spans = ordered_profile_centers_and_spans(variant_nodes)
+                signature, _turning_points, _max_step_fraction = centerline_mode_invariants(
+                    centers,
+                )
+                (
+                    _mean_center,
+                    _center_range,
+                    center_variation,
+                    crosses_midline,
+                    _span_range,
+                ) = column_profile_geometry_metrics(variant_nodes)
+                (
+                    _boundary_fraction,
+                    _pocket_fraction,
+                    boundary_roughness,
+                    _deep_pocket_fraction,
+                    *_rest,
+                ) = local_shape_feature_bundle(variant_nodes, wrap_y=wrap_y)
+                mirror_center_asymmetry, _mirror_span_asymmetry = _profile_symmetry_metrics(
+                    centers,
+                    spans,
+                )
+                (
+                    actual_label,
+                    outcome,
+                    _ge6_prediction,
+                    _dpadj_prediction,
+                    _ge6_only_fraction,
+                    _ge7_core_fraction,
+                    _deep_gap,
+                    _pocket_gap,
+                    _low_degree_gap,
+                    _boundary_gap,
+                    _crosses_midline_eval,
+                    _center_variation_eval,
+                    _span_range_eval,
+                ) = _evaluate_extended_ge6_dpadj_nodes(
+                    nodes=variant_nodes,
+                    wrap_y=wrap_y,
+                    ge6_tree=ge6_tree,
+                    dpadj_tree=dpadj_tree,
+                    pack_name="base",
+                    scenario_name=source_name,
+                    retained_weight=retained_weight,
+                )
+                del actual_label
+                row = SecondaryOffenderRuleRow(
+                    ensemble_name=ensemble_name,
+                    scenario_name=scenario_name,
+                    source_name=source_name,
+                    style=style,
+                    outcome=outcome,
+                    signature=signature,
+                    center_variation=center_variation,
+                    boundary_roughness=boundary_roughness,
+                    mirror_center_asymmetry=mirror_center_asymmetry,
+                    crosses_midline=crosses_midline,
+                    matches_taper_e_rule=(
+                        boundary_roughness <= 0.24 + 1e-9
+                    ),
+                    matches_taper_c_rule=(
+                        boundary_roughness <= 0.26 + 1e-9
+                        and mirror_center_asymmetry >= 0.37 - 1e-9
+                    ),
+                )
+                row_list.append(row)
+                grouped[(ensemble_name, scenario_name, outcome)].append(row)
+
+    aggregate_rows: list[SecondaryOffenderRuleAggregateRow] = []
+    for (ensemble_name, scenario_name, outcome), rows in grouped.items():
+        aggregate_rows.append(
+            SecondaryOffenderRuleAggregateRow(
+                ensemble_name=ensemble_name,
+                scenario_name=scenario_name,
+                outcome=outcome,
+                cases=len(rows),
+                styles=",".join(sorted({row.style for row in rows})),
+                match_taper_e_rule_cases=sum(row.matches_taper_e_rule for row in rows),
+                match_taper_c_rule_cases=sum(row.matches_taper_c_rule for row in rows),
+                mean_center_variation=sum(row.center_variation for row in rows) / len(rows),
+                mean_boundary_roughness=sum(row.boundary_roughness for row in rows) / len(rows),
+                mean_mirror_center_asymmetry=sum(
+                    row.mirror_center_asymmetry for row in rows
+                ) / len(rows),
+                crossing_cases=sum(row.crosses_midline for row in rows),
+            )
+        )
+
+    row_list.sort(key=lambda row: (row.ensemble_name, row.scenario_name, row.source_name))
+    aggregate_rows.sort(key=lambda row: (row.scenario_name, row.ensemble_name, row.outcome))
+    return row_list, aggregate_rows
+
+
+def secondary_offender_rule_search_analysis(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    scenario_names: tuple[str, ...] = ("skew-wrap",),
+) -> list[SecondaryOffenderRuleSearchRow]:
+    rows, _aggregate_rows = secondary_offender_rule_generalization_analysis(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+        scenario_names=scenario_names,
+    )
+    search_rows: list[SecondaryOffenderRuleSearchRow] = []
+    predicate_bank: list[tuple[str, callable]] = [
+        ("crosses_midline", lambda row: row.crosses_midline),
+        ("not crosses_midline", lambda row: not row.crosses_midline),
+        ("boundary_roughness>=0.28", lambda row: row.boundary_roughness >= 0.28 - 1e-9),
+        ("boundary_roughness<=0.24", lambda row: row.boundary_roughness <= 0.24 + 1e-9),
+        ("center_variation>=3.0", lambda row: row.center_variation >= 3.0 - 1e-9),
+        ("center_variation>=5.0", lambda row: row.center_variation >= 5.0 - 1e-9),
+        ("mirror_center_asymmetry>=0.67", lambda row: row.mirror_center_asymmetry >= 0.67 - 1e-9),
+        ("signature=curved", lambda row: row.signature == "curved"),
+        ("signature=oscillatory", lambda row: row.signature == "oscillatory"),
+    ]
+
+    for scenario_name in scenario_names:
+        for ensemble_name in sorted({row.ensemble_name for row in rows}):
+            target_rows = [
+                row
+                for row in rows
+                if row.scenario_name == scenario_name and row.ensemble_name == ensemble_name
+            ]
+            if not target_rows:
+                continue
+            positives = [row for row in target_rows if row.outcome == "dpadj-only"]
+            scored_rows: list[SecondaryOffenderRuleSearchRow] = []
+            for index, first_predicate in enumerate(predicate_bank):
+                predicate_sets = [[first_predicate]]
+                predicate_sets.extend(
+                    [first_predicate, second_predicate]
+                    for second_predicate in predicate_bank[index + 1 :]
+                )
+                for predicates in predicate_sets:
+                    matched = [
+                        row
+                        for row in target_rows
+                        if all(predicate(row) for _label, predicate in predicates)
+                    ]
+                    tp = sum(row.outcome == "dpadj-only" for row in matched)
+                    fp = sum(row.outcome != "dpadj-only" for row in matched)
+                    fn = len(positives) - tp
+                    precision = tp / max(1, tp + fp)
+                    recall = tp / max(1, tp + fn)
+                    f1 = (
+                        0.0
+                        if precision + recall == 0.0
+                        else 2 * precision * recall / (precision + recall)
+                    )
+                    scored_rows.append(
+                        SecondaryOffenderRuleSearchRow(
+                            ensemble_name=ensemble_name,
+                            scenario_name=scenario_name,
+                            rule_text=" and ".join(label for label, _predicate in predicates),
+                            term_count=len(predicates),
+                            tp=tp,
+                            fp=fp,
+                            fn=fn,
+                            precision=precision,
+                            recall=recall,
+                            f1=f1,
+                        )
+                    )
+            scored_rows.sort(
+                key=lambda row: (-row.f1, row.fp, row.fn, row.term_count, -row.tp, row.rule_text)
+            )
+            seen_rule_texts: set[str] = set()
+            for row in scored_rows:
+                if row.rule_text in seen_rule_texts:
+                    continue
+                seen_rule_texts.add(row.rule_text)
+                search_rows.append(row)
+                if len([r for r in search_rows if r.ensemble_name == ensemble_name and r.scenario_name == scenario_name]) >= 5:
+                    break
+
+    search_rows.sort(key=lambda row: (row.scenario_name, row.ensemble_name, -row.f1, row.fp, row.rule_text))
+    return search_rows
+
+
 def threshold_scaling_explanation_analysis(
     ensembles: tuple[tuple[str, int, int, tuple[str, ...]], ...] = (
         ("default", 5, 3, ("walk", "mode-mix", "local-morph")),
@@ -20372,6 +20642,50 @@ def render_taper_wrap_jump_rule_table(
         lines.append(
             f"{row.target_variant:<10} | "
             f"{row.rule_text:<41.41} | "
+            f"{row.tp:>2}/{row.fp:<2}/{row.fn:<2} | "
+            f"{row.precision:>4.2f} | "
+            f"{row.recall:>4.2f} | "
+            f"{row.f1:>3.2f}"
+        )
+    return "\n".join(lines)
+
+
+def render_secondary_offender_rule_aggregate_table(
+    rows: list[SecondaryOffenderRuleAggregateRow],
+) -> str:
+    lines = [
+        "ensemble | scenario  | outcome    | cases | styles              | taper-e | taper-c | cvar | brough | asym | cross",
+        "---------+-----------+------------+-------+---------------------+---------+---------+------+--------+------+------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.ensemble_name:<8} | "
+            f"{row.scenario_name:<9} | "
+            f"{row.outcome:<10} | "
+            f"{row.cases:>5} | "
+            f"{row.styles:<19.19} | "
+            f"{row.match_taper_e_rule_cases:>7} | "
+            f"{row.match_taper_c_rule_cases:>7} | "
+            f"{row.mean_center_variation:>4.1f} | "
+            f"{row.mean_boundary_roughness:>6.2f} | "
+            f"{row.mean_mirror_center_asymmetry:>4.2f} | "
+            f"{row.crossing_cases:>4}"
+        )
+    return "\n".join(lines)
+
+
+def render_secondary_offender_rule_search_table(
+    rows: list[SecondaryOffenderRuleSearchRow],
+) -> str:
+    lines = [
+        "ensemble | scenario  | rule                                 | tp/fp/fn | prec | rec  | f1",
+        "---------+-----------+--------------------------------------+----------+------+------+-----",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.ensemble_name:<8} | "
+            f"{row.scenario_name:<9} | "
+            f"{row.rule_text:<36.36} | "
             f"{row.tp:>2}/{row.fp:<2}/{row.fn:<2} | "
             f"{row.precision:>4.2f} | "
             f"{row.recall:>4.2f} | "
