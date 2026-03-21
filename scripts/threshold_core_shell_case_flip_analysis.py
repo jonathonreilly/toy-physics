@@ -18,7 +18,9 @@ from toy_event_physics import (  # noqa: E402
     generated_ensemble_spec,
     render_threshold_core_shell_case_aggregate_table,
     render_threshold_core_shell_case_table,
+    render_threshold_core_shell_offender_table,
     threshold_core_case_shell_flip_analysis,
+    threshold_core_shell_offender_analysis,
 )
 
 
@@ -40,6 +42,7 @@ def main() -> None:
     print(f"threshold core shell case analysis started {started}", flush=True)
     total_start = time.time()
     case_rows, aggregate_rows = threshold_core_case_shell_flip_analysis(ensembles=ensembles)
+    offender_rows = threshold_core_shell_offender_analysis(case_rows)
 
     print()
     print("Threshold Core Shell Case Groups")
@@ -49,6 +52,10 @@ def main() -> None:
     print("Case Examples")
     print("=============")
     print(render_threshold_core_shell_case_table(case_rows))
+    print()
+    print("Recurring Offenders")
+    print("===================")
+    print(render_threshold_core_shell_offender_table(offender_rows))
     print()
     print("Interpretation")
     print("==============")
@@ -62,6 +69,18 @@ def main() -> None:
             f"deep gap {deep_gap:+.2f}, pocket gap {pocket_gap:+.2f}, "
             f"low-degree gap {low_gap:+.2f}, boundary gap "
             f"{row.mean_shell_boundary_deficit - row.mean_core_boundary_deficit:+.2f}."
+        )
+    top_dpadj = next((row for row in offender_rows if row.outcome == "dpadj-only"), None)
+    top_ge6 = next((row for row in offender_rows if row.outcome == "ge6-only"), None)
+    if top_dpadj is not None:
+        print(
+            f"- Top dpadj-only offender: {top_dpadj.scenario_key} via {top_dpadj.styles}, "
+            f"with gaps d/p/l={top_dpadj.mean_deep_gap:+.2f}/{top_dpadj.mean_pocket_gap:+.2f}/{top_dpadj.mean_low_degree_gap:+.2f}."
+        )
+    if top_ge6 is not None:
+        print(
+            f"- Top ge6-only offender: {top_ge6.scenario_key} via {top_ge6.styles}, "
+            f"with gaps d/p/l={top_ge6.mean_deep_gap:+.2f}/{top_ge6.mean_pocket_gap:+.2f}/{top_ge6.mean_low_degree_gap:+.2f}."
         )
 
     print()

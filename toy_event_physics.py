@@ -1323,6 +1323,22 @@ class ThresholdCoreShellCaseAggregateRow:
 
 
 @dataclass
+class ThresholdCoreShellOffenderRow:
+    outcome: str
+    scenario_key: str
+    styles: str
+    ensembles: str
+    cases: int
+    mean_ge6_only_fraction: float
+    mean_ge7_core_fraction: float
+    mean_deep_gap: float
+    mean_pocket_gap: float
+    mean_low_degree_gap: float
+    mean_boundary_gap: float
+    example_sources: str
+
+
+@dataclass
 class ThresholdScalingRow:
     ensemble_name: str
     threshold_name: str
@@ -14586,6 +14602,77 @@ def threshold_core_case_shell_flip_analysis(
     return case_rows, aggregate_rows
 
 
+def threshold_core_shell_offender_analysis(
+    case_rows: list[ThresholdCoreShellCaseRow],
+) -> list[ThresholdCoreShellOffenderRow]:
+    grouped_rows: DefaultDict[tuple[str, str], list[ThresholdCoreShellCaseRow]] = defaultdict(list)
+
+    def style_group(row: ThresholdCoreShellCaseRow) -> str:
+        if row.dataset_name == "geometry-randomized":
+            return "geometry"
+        variant_name = row.source_name.split(":", 2)[2]
+        if variant_name.startswith("local-morph"):
+            return "local-morph"
+        if variant_name.startswith("mode-mix"):
+            return "mode-mix"
+        if variant_name.startswith("procedural"):
+            return "walk"
+        return row.dataset_name
+
+    for row in case_rows:
+        if row.outcome not in {"dpadj-only", "ge6-only"}:
+            continue
+        scenario_key = ":".join(row.source_name.split(":", 2)[:2])
+        grouped_rows[(row.outcome, scenario_key)].append(row)
+
+    offender_rows: list[ThresholdCoreShellOffenderRow] = []
+    for (outcome, scenario_key), rows in grouped_rows.items():
+        styles = ", ".join(sorted({style_group(row) for row in rows}))
+        ensembles = ", ".join(sorted({row.ensemble_name for row in rows}))
+        example_sources = ", ".join(sorted(row.source_name for row in rows)[:3])
+        offender_rows.append(
+            ThresholdCoreShellOffenderRow(
+                outcome=outcome,
+                scenario_key=scenario_key,
+                styles=styles,
+                ensembles=ensembles,
+                cases=len(rows),
+                mean_ge6_only_fraction=sum(row.ge6_only_fraction for row in rows) / len(rows),
+                mean_ge7_core_fraction=sum(row.ge7_core_fraction for row in rows) / len(rows),
+                mean_deep_gap=sum(
+                    row.shell_deep_fraction - row.core_deep_fraction for row in rows
+                )
+                / len(rows),
+                mean_pocket_gap=sum(
+                    row.shell_pocket_fraction - row.core_pocket_fraction for row in rows
+                )
+                / len(rows),
+                mean_low_degree_gap=sum(
+                    row.shell_low_degree_fraction - row.core_low_degree_fraction
+                    for row in rows
+                )
+                / len(rows),
+                mean_boundary_gap=sum(
+                    row.shell_boundary_deficit_mean - row.core_boundary_deficit_mean
+                    for row in rows
+                )
+                / len(rows),
+                example_sources=example_sources,
+            )
+        )
+
+    offender_rows.sort(
+        key=lambda row: (
+            row.outcome,
+            -row.cases,
+            -row.mean_low_degree_gap,
+            -row.mean_pocket_gap,
+            row.scenario_key,
+        )
+    )
+    return offender_rows
+
+
 def threshold_scaling_explanation_analysis(
     ensembles: tuple[tuple[str, int, int, tuple[str, ...]], ...] = (
         ("default", 5, 3, ("walk", "mode-mix", "local-morph")),
@@ -18579,6 +18666,33 @@ def render_threshold_core_shell_case_table(
             f"{row.shell_deep_fraction:>4.2f}-{row.core_deep_fraction:>4.2f} | "
             f"{row.shell_pocket_fraction:>4.2f}-{row.core_pocket_fraction:>4.2f} | "
             f"{row.shell_low_degree_fraction:>4.2f}-{row.core_low_degree_fraction:>4.2f}"
+        )
+    return "\n".join(lines)
+
+
+def render_threshold_core_shell_offender_table(
+    rows: list[ThresholdCoreShellOffenderRow],
+    limit_per_outcome: int = 6,
+) -> str:
+    lines = [
+        "outcome    | scenario            | styles               | ens             | cases | shell/core | d/p/l gaps        | bdef | examples",
+        "-----------+---------------------+----------------------+-----------------+-------+------------+-------------------+------+----------------------------------",
+    ]
+    seen: DefaultDict[str, int] = defaultdict(int)
+    for row in rows:
+        if seen[row.outcome] >= limit_per_outcome:
+            continue
+        seen[row.outcome] += 1
+        lines.append(
+            f"{row.outcome:<10} | "
+            f"{row.scenario_key:<19.19} | "
+            f"{row.styles:<20.20} | "
+            f"{row.ensembles:<15.15} | "
+            f"{row.cases:>5} | "
+            f"{row.mean_ge6_only_fraction:>4.2f}/{row.mean_ge7_core_fraction:>4.2f} | "
+            f"{row.mean_deep_gap:+4.2f}/{row.mean_pocket_gap:+4.2f}/{row.mean_low_degree_gap:+4.2f} | "
+            f"{row.mean_boundary_gap:+4.2f} | "
+            f"{row.example_sources:<32.32}"
         )
     return "\n".join(lines)
 
