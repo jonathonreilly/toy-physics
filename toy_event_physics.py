@@ -1452,6 +1452,57 @@ class TaperWrapEndpointJumpColumnRow:
 
 
 @dataclass
+class TaperWrapJumpTransplantRow:
+    target_variant: str
+    alpha: float
+    jump_label: str
+    outcome: str
+    regime: str
+    ge6_prediction: str
+    dpadj_prediction: str
+    ge6_only_fraction: float
+    ge7_core_fraction: float
+    deep_gap: float
+    pocket_gap: float
+    low_degree_gap: float
+    boundary_gap: float
+    center_variation: float
+    span_range: float
+    crosses_midline: bool
+    matches_endpoint: bool
+
+
+@dataclass
+class TaperWrapCrossContextJumpRow:
+    target_variant: str
+    mode: str
+    amplitude: float
+    outcome: str
+    regime: str
+    ge6_only_fraction: float
+    ge7_core_fraction: float
+    deep_gap: float
+    pocket_gap: float
+    low_degree_gap: float
+    boundary_gap: float
+    center_variation: float
+    crosses_midline: bool
+
+
+@dataclass
+class TaperWrapCrossContextJumpAggregateRow:
+    target_variant: str
+    mode: str
+    dpadj_only_cases: int
+    ge6_only_cases: int
+    both_cases: int
+    neither_cases: int
+    first_dpadj_amplitude: float | None
+    max_low_degree_gap: float
+    max_boundary_gap: float
+
+
+@dataclass
 class ThresholdScalingRow:
     ensemble_name: str
     threshold_name: str
@@ -14837,6 +14888,143 @@ def _extended_ge6_dpadj_outcome(
     return actual_label, ge6_prediction, dpadj_prediction, ge6_correct, dpadj_correct
 
 
+def _evaluate_extended_ge6_dpadj_nodes(
+    *,
+    nodes: set[tuple[int, int]],
+    wrap_y: bool,
+    ge6_tree: TinyDecisionTree,
+    dpadj_tree: TinyDecisionTree,
+    pack_name: str,
+    scenario_name: str,
+    retained_weight: float,
+) -> tuple[
+    str,
+    str,
+    str,
+    str,
+    float,
+    float,
+    float,
+    float,
+    float,
+    float,
+    bool,
+]:
+    extended_count_options = next(
+        count_options
+        for rule_family, count_options in family_count_options()
+        if rule_family == "extended"
+    )
+    (
+        _mean_center,
+        center_range,
+        center_variation,
+        crosses_midline,
+        span_range,
+    ) = column_profile_geometry_metrics(nodes)
+    (
+        boundary_fraction,
+        pocket_fraction,
+        boundary_roughness,
+        deep_pocket_fraction,
+        degree_fractions,
+        motif_fractions,
+        high_degree_decomposition,
+        high_degree_threshold_fractions,
+        soft_hub_exposure,
+        neighbor_reach_threshold_fractions,
+        neighbor_leverage_threshold_fractions,
+        threshold_exposure_decomposition,
+    ) = local_shape_feature_bundle(
+        nodes,
+        wrap_y=wrap_y,
+    )
+    harmonic_cont_row, harmonic_cont_candidates = harmonic_continuous_case_analysis(
+        pack_name=pack_name,
+        scenario_name=scenario_name,
+        nodes=nodes,
+        wrap_y=wrap_y,
+        rule_family="extended",
+        count_options=extended_count_options,
+        retained_weight=retained_weight,
+    )
+    case_core_rows, _aggregate_rows = derived_projection_family_case_core_analysis(
+        [harmonic_cont_row],
+        harmonic_cont_candidates,
+        projection_dimension=4,
+        generator="orthonormal",
+    )
+    case_core_row = case_core_rows[0]
+    actual_regime = projection_core_regime(case_core_row)
+    prediction_row = GeometryPredictionRow(
+        dataset_name="taper-wrap-jump",
+        source_name=scenario_name,
+        rule_family="extended",
+        retained_weight=retained_weight,
+        regime=actual_regime,
+        center_range=center_range,
+        center_variation=center_variation,
+        span_range=span_range,
+        turning_points=0,
+        max_step_fraction=0.0,
+        crosses_midline=crosses_midline,
+        boundary_fraction=boundary_fraction,
+        pocket_fraction=pocket_fraction,
+        boundary_roughness=boundary_roughness,
+        deep_pocket_fraction=deep_pocket_fraction,
+        degree_fractions=degree_fractions,
+        motif_fractions=motif_fractions,
+        high_degree_decomposition=high_degree_decomposition,
+        high_degree_threshold_fractions=high_degree_threshold_fractions,
+        soft_hub_exposure=soft_hub_exposure,
+        neighbor_reach_threshold_fractions=neighbor_reach_threshold_fractions,
+        neighbor_leverage_threshold_fractions=neighbor_leverage_threshold_fractions,
+        threshold_exposure_decomposition=threshold_exposure_decomposition,
+    )
+    actual_label, ge6_prediction, dpadj_prediction, ge6_correct, dpadj_correct = (
+        _extended_ge6_dpadj_outcome(
+            prediction_row,
+            ge6_tree,
+            dpadj_tree,
+        )
+    )
+    if dpadj_correct and not ge6_correct:
+        outcome = "dpadj-only"
+    elif dpadj_correct and ge6_correct:
+        outcome = "both"
+    elif ge6_correct and not dpadj_correct:
+        outcome = "ge6-only"
+    else:
+        outcome = "neither"
+    totals = _threshold_core_shell_group_totals(nodes, wrap_y=wrap_y)
+    shell_summary = _threshold_core_shell_summary_from_totals(
+        ensemble_name=scenario_name,
+        graph_count=1,
+        total_nodes=int(totals["total_nodes"]),
+        group_counts=totals["group_counts"],  # type: ignore[arg-type]
+        deep_counts=totals["deep_counts"],  # type: ignore[arg-type]
+        pocket_counts=totals["pocket_counts"],  # type: ignore[arg-type]
+        low_degree_counts=totals["low_degree_counts"],  # type: ignore[arg-type]
+        boundary_sums=totals["boundary_sums"],  # type: ignore[arg-type]
+        neighbor_degree_sums=totals["neighbor_degree_sums"],  # type: ignore[arg-type]
+    )
+    return (
+        actual_label,
+        outcome,
+        ge6_prediction,
+        dpadj_prediction,
+        shell_summary.ge6_only_fraction,
+        shell_summary.ge7_core_fraction,
+        shell_summary.shell_deep_fraction - shell_summary.core_deep_fraction,
+        shell_summary.shell_pocket_fraction - shell_summary.core_pocket_fraction,
+        shell_summary.shell_low_degree_fraction - shell_summary.core_low_degree_fraction,
+        shell_summary.shell_boundary_deficit_mean - shell_summary.core_boundary_deficit_mean,
+        crosses_midline,
+        center_variation,
+        span_range,
+    )
+
+
 def taper_wrap_shell_mode_sweep(
     retained_weight: float = 1.0,
     mode_retained_weight: float | None = None,
@@ -15344,6 +15532,298 @@ def taper_wrap_endpoint_jump_analysis(
     summary_rows.sort(key=lambda row: row.target_variant)
     column_rows.sort(key=lambda row: (row.target_variant, row.x))
     return summary_rows, column_rows
+
+
+def _apply_column_vertical_shift(
+    profile: dict[int, tuple[int, int]],
+    xs_to_shift: set[int],
+    delta_y: int,
+) -> dict[int, tuple[int, int]]:
+    shifted_profile: dict[int, tuple[int, int]] = {}
+    for x, (low_y, high_y) in profile.items():
+        if x in xs_to_shift:
+            shifted_profile[x] = (low_y + delta_y, high_y + delta_y)
+        else:
+            shifted_profile[x] = (low_y, high_y)
+    return shifted_profile
+
+
+def taper_wrap_jump_transplant_analysis(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    target_variants: tuple[str, ...] = ("geometry-c", "geometry-e"),
+    alphas: tuple[float, ...] = (0.0, 0.25, 0.5, 0.75),
+) -> list[TaperWrapJumpTransplantRow]:
+    ge6_tree, dpadj_tree = _extended_ge6_dpadj_trees(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+    )
+    endpoint_rows, endpoint_column_rows = taper_wrap_endpoint_jump_analysis(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+        target_variants=target_variants,
+    )
+    endpoint_by_target = {row.target_variant: row for row in endpoint_rows}
+    changed_xs_by_target: dict[str, tuple[int, ...]] = {
+        target_variant: tuple(
+            row.x
+            for row in endpoint_column_rows
+            if row.target_variant == target_variant
+        )
+        for target_variant in target_variants
+    }
+
+    pack_name = "base"
+    scenario_name = "taper-wrap"
+    nodes, wrap_y = scenario_by_name(pack_name, scenario_name)
+    xs, base_centers, base_spans = ordered_profile_centers_and_spans(nodes)
+    variant_nodes = {
+        variant_name: perturbed_nodes
+        for variant_name, perturbed_nodes, _node_delta in randomized_geometry_variants(
+            pack_name,
+            scenario_name,
+            nodes,
+            wrap_y,
+            variant_limit=5,
+        )
+    }
+
+    rows: list[TaperWrapJumpTransplantRow] = []
+    for target_variant in target_variants:
+        target_nodes = variant_nodes[target_variant]
+        _target_xs, target_centers, target_spans = ordered_profile_centers_and_spans(target_nodes)
+        endpoint_profile = column_interval_profile(target_nodes)
+        shifted_xs = set(changed_xs_by_target[target_variant])
+        for alpha in alphas:
+            centers = tuple(
+                base_center + alpha * (target_center - base_center)
+                for base_center, target_center in zip(base_centers, target_centers)
+            )
+            spans = tuple(
+                int(round(base_span + alpha * (target_span - base_span)))
+                for base_span, target_span in zip(base_spans, target_spans)
+            )
+            base_profile = build_profile_from_centers_and_spans(xs, centers, spans)
+            transplanted_profile = _apply_column_vertical_shift(
+                base_profile,
+                shifted_xs,
+                delta_y=1,
+            )
+            transplanted_nodes = build_nodes_from_interval_profile(transplanted_profile)
+            (
+                actual_label,
+                outcome,
+                ge6_prediction,
+                dpadj_prediction,
+                ge6_only_fraction,
+                ge7_core_fraction,
+                deep_gap,
+                pocket_gap,
+                low_degree_gap,
+                boundary_gap,
+                crosses_midline,
+                center_variation,
+                span_range,
+            ) = _evaluate_extended_ge6_dpadj_nodes(
+                nodes=transplanted_nodes,
+                wrap_y=wrap_y,
+                ge6_tree=ge6_tree,
+                dpadj_tree=dpadj_tree,
+                pack_name=pack_name,
+                scenario_name=f"{scenario_name}:{target_variant}:jump:{alpha:.2f}",
+                retained_weight=retained_weight,
+            )
+            rows.append(
+                TaperWrapJumpTransplantRow(
+                    target_variant=target_variant,
+                    alpha=alpha,
+                    jump_label="full-band+1",
+                    outcome=outcome,
+                    regime=actual_label,
+                    ge6_prediction=ge6_prediction,
+                    dpadj_prediction=dpadj_prediction,
+                    ge6_only_fraction=ge6_only_fraction,
+                    ge7_core_fraction=ge7_core_fraction,
+                    deep_gap=deep_gap,
+                    pocket_gap=pocket_gap,
+                    low_degree_gap=low_degree_gap,
+                    boundary_gap=boundary_gap,
+                    center_variation=center_variation,
+                    span_range=span_range,
+                    crosses_midline=crosses_midline,
+                    matches_endpoint=transplanted_profile == endpoint_profile,
+                )
+            )
+
+        prior_alpha = endpoint_by_target[target_variant].prior_alpha
+        prior_centers = tuple(
+            base_center + prior_alpha * (target_center - base_center)
+            for base_center, target_center in zip(base_centers, target_centers)
+        )
+        prior_spans = tuple(
+            int(round(base_span + prior_alpha * (target_span - base_span)))
+            for base_span, target_span in zip(base_spans, target_spans)
+        )
+        prior_profile = build_profile_from_centers_and_spans(xs, prior_centers, prior_spans)
+        for omitted_x in changed_xs_by_target[target_variant]:
+            subset_profile = _apply_column_vertical_shift(
+                prior_profile,
+                shifted_xs - {omitted_x},
+                delta_y=1,
+            )
+            subset_nodes = build_nodes_from_interval_profile(subset_profile)
+            (
+                actual_label,
+                outcome,
+                ge6_prediction,
+                dpadj_prediction,
+                ge6_only_fraction,
+                ge7_core_fraction,
+                deep_gap,
+                pocket_gap,
+                low_degree_gap,
+                boundary_gap,
+                crosses_midline,
+                center_variation,
+                span_range,
+            ) = _evaluate_extended_ge6_dpadj_nodes(
+                nodes=subset_nodes,
+                wrap_y=wrap_y,
+                ge6_tree=ge6_tree,
+                dpadj_tree=dpadj_tree,
+                pack_name=pack_name,
+                scenario_name=f"{scenario_name}:{target_variant}:omit:{omitted_x}",
+                retained_weight=retained_weight,
+            )
+            rows.append(
+                TaperWrapJumpTransplantRow(
+                    target_variant=target_variant,
+                    alpha=prior_alpha,
+                    jump_label=f"omit-x{omitted_x}",
+                    outcome=outcome,
+                    regime=actual_label,
+                    ge6_prediction=ge6_prediction,
+                    dpadj_prediction=dpadj_prediction,
+                    ge6_only_fraction=ge6_only_fraction,
+                    ge7_core_fraction=ge7_core_fraction,
+                    deep_gap=deep_gap,
+                    pocket_gap=pocket_gap,
+                    low_degree_gap=low_degree_gap,
+                    boundary_gap=boundary_gap,
+                    center_variation=center_variation,
+                    span_range=span_range,
+                    crosses_midline=crosses_midline,
+                    matches_endpoint=subset_profile == endpoint_profile,
+                )
+            )
+
+    rows.sort(key=lambda row: (row.target_variant, row.jump_label, row.alpha))
+    return rows
+
+
+def taper_wrap_cross_context_jump_analysis(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    target_variants: tuple[str, ...] = ("geometry-c", "geometry-e"),
+    amplitudes: tuple[float, ...] = (-2.0, -1.5, -1.0, -0.5, 0.0, 0.5, 1.0, 1.5, 2.0),
+) -> tuple[list[TaperWrapCrossContextJumpRow], list[TaperWrapCrossContextJumpAggregateRow]]:
+    ge6_tree, dpadj_tree = _extended_ge6_dpadj_trees(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+    )
+    _endpoint_rows, endpoint_column_rows = taper_wrap_endpoint_jump_analysis(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+        target_variants=target_variants,
+    )
+    changed_xs_by_target: dict[str, set[int]] = {
+        target_variant: {
+            row.x
+            for row in endpoint_column_rows
+            if row.target_variant == target_variant
+        }
+        for target_variant in target_variants
+    }
+
+    pack_name = "base"
+    scenario_name = "taper-wrap"
+    nodes, wrap_y = scenario_by_name(pack_name, scenario_name)
+    xs, base_centers, base_spans = ordered_profile_centers_and_spans(nodes)
+    mode_basis = centerline_mode_basis(xs)
+
+    rows: list[TaperWrapCrossContextJumpRow] = []
+    aggregate_rows: list[TaperWrapCrossContextJumpAggregateRow] = []
+    for target_variant in target_variants:
+        changed_xs = changed_xs_by_target[target_variant]
+        for mode_name, mode_vector in mode_basis.items():
+            mode_rows: list[TaperWrapCrossContextJumpRow] = []
+            for amplitude in amplitudes:
+                centers = tuple(
+                    center + amplitude * mode_component
+                    for center, mode_component in zip(base_centers, mode_vector)
+                )
+                profile = build_profile_from_centers_and_spans(xs, centers, base_spans)
+                jumped_profile = _apply_column_vertical_shift(profile, changed_xs, delta_y=1)
+                jumped_nodes = build_nodes_from_interval_profile(jumped_profile)
+                (
+                    actual_label,
+                    outcome,
+                    _ge6_prediction,
+                    _dpadj_prediction,
+                    ge6_only_fraction,
+                    ge7_core_fraction,
+                    deep_gap,
+                    pocket_gap,
+                    low_degree_gap,
+                    boundary_gap,
+                    crosses_midline,
+                    center_variation,
+                    _span_range,
+                ) = _evaluate_extended_ge6_dpadj_nodes(
+                    nodes=jumped_nodes,
+                    wrap_y=wrap_y,
+                    ge6_tree=ge6_tree,
+                    dpadj_tree=dpadj_tree,
+                    pack_name=pack_name,
+                    scenario_name=f"{scenario_name}:{mode_name}:{amplitude:+.2f}:{target_variant}:jump",
+                    retained_weight=retained_weight,
+                )
+                mode_rows.append(
+                    TaperWrapCrossContextJumpRow(
+                        target_variant=target_variant,
+                        mode=mode_name,
+                        amplitude=amplitude,
+                        outcome=outcome,
+                        regime=actual_label,
+                        ge6_only_fraction=ge6_only_fraction,
+                        ge7_core_fraction=ge7_core_fraction,
+                        deep_gap=deep_gap,
+                        pocket_gap=pocket_gap,
+                        low_degree_gap=low_degree_gap,
+                        boundary_gap=boundary_gap,
+                        center_variation=center_variation,
+                        crosses_midline=crosses_midline,
+                    )
+                )
+            rows.extend(mode_rows)
+            dpadj_amplitudes = [row.amplitude for row in mode_rows if row.outcome == "dpadj-only"]
+            aggregate_rows.append(
+                TaperWrapCrossContextJumpAggregateRow(
+                    target_variant=target_variant,
+                    mode=mode_name,
+                    dpadj_only_cases=sum(row.outcome == "dpadj-only" for row in mode_rows),
+                    ge6_only_cases=sum(row.outcome == "ge6-only" for row in mode_rows),
+                    both_cases=sum(row.outcome == "both" for row in mode_rows),
+                    neither_cases=sum(row.outcome == "neither" for row in mode_rows),
+                    first_dpadj_amplitude=min(dpadj_amplitudes) if dpadj_amplitudes else None,
+                    max_low_degree_gap=max(row.low_degree_gap for row in mode_rows),
+                    max_boundary_gap=max(row.boundary_gap for row in mode_rows),
+                )
+            )
+
+    rows.sort(key=lambda row: (row.target_variant, row.mode, row.amplitude))
+    aggregate_rows.sort(key=lambda row: (row.target_variant, row.mode))
+    return rows, aggregate_rows
 
 
 def threshold_scaling_explanation_analysis(
@@ -19504,6 +19984,52 @@ def render_taper_wrap_endpoint_jump_columns(
             f"{row.low_delta:>+3}/{row.high_delta:<+3} | "
             f"{row.center_delta:>+5.1f} | "
             f"{row.span_delta:>+4}"
+        )
+    return "\n".join(lines)
+
+
+def render_taper_wrap_jump_transplant_table(
+    rows: list[TaperWrapJumpTransplantRow],
+) -> str:
+    lines = [
+        "target     | alpha | jump       | outcome    | regime  | shell/core | d/p/l gaps        | bdef | cvar | cross | end",
+        "-----------+-------+------------+------------+---------+------------+-------------------+------+------+-------+-----",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.target_variant:<10} | "
+            f"{row.alpha:>5.2f} | "
+            f"{row.jump_label:<10.10} | "
+            f"{row.outcome:<10} | "
+            f"{row.regime:<7} | "
+            f"{row.ge6_only_fraction:>4.2f}/{row.ge7_core_fraction:>4.2f} | "
+            f"{row.deep_gap:+4.2f}/{row.pocket_gap:+4.2f}/{row.low_degree_gap:+4.2f} | "
+            f"{row.boundary_gap:+4.2f} | "
+            f"{row.center_variation:>4.1f} | "
+            f"{('Y' if row.crosses_midline else 'n'):<5} | "
+            f"{('Y' if row.matches_endpoint else 'n'):<3}"
+        )
+    return "\n".join(lines)
+
+
+def render_taper_wrap_cross_context_jump_aggregate_table(
+    rows: list[TaperWrapCrossContextJumpAggregateRow],
+) -> str:
+    lines = [
+        "target     | mode   | dpadj | ge6 | both | neither | first dpadj | max low/bdef",
+        "-----------+--------+-------+-----+------+---------+-------------+-------------",
+    ]
+    for row in rows:
+        first_dpadj = "-" if row.first_dpadj_amplitude is None else f"{row.first_dpadj_amplitude:+.2f}"
+        lines.append(
+            f"{row.target_variant:<10} | "
+            f"{row.mode:<6} | "
+            f"{row.dpadj_only_cases:>5} | "
+            f"{row.ge6_only_cases:>3} | "
+            f"{row.both_cases:>4} | "
+            f"{row.neither_cases:>7} | "
+            f"{first_dpadj:>11} | "
+            f"{row.max_low_degree_gap:+4.2f}/{row.max_boundary_gap:+4.2f}"
         )
     return "\n".join(lines)
 
