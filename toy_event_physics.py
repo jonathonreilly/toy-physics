@@ -1536,6 +1536,20 @@ class TaperWrapJumpContextAggregateRow:
 
 
 @dataclass
+class TaperWrapJumpRuleRow:
+    target_variant: str
+    rule_text: str
+    term_count: int
+    tp: int
+    fp: int
+    fn: int
+    tn: int
+    precision: float
+    recall: float
+    f1: float
+
+
+@dataclass
 class ThresholdScalingRow:
     ensemble_name: str
     threshold_name: str
@@ -16008,6 +16022,115 @@ def taper_wrap_jump_context_analysis(
     return rows, aggregate_rows
 
 
+def taper_wrap_jump_context_rule_analysis(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    target_variants: tuple[str, ...] = ("geometry-c", "geometry-e"),
+) -> list[TaperWrapJumpRuleRow]:
+    rows, _aggregate_rows = taper_wrap_jump_context_analysis(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+        target_variants=target_variants,
+    )
+    rule_rows: list[TaperWrapJumpRuleRow] = []
+
+    def score_rule(target_rows: list[TaperWrapJumpContextRow], predicates: list[tuple[str, callable]]) -> TaperWrapJumpRuleRow:
+        matched = [
+            row for row in target_rows if all(predicate(row) for _label, predicate in predicates)
+        ]
+        tp = sum(row.outcome == "dpadj-only" for row in matched)
+        fp = sum(row.outcome != "dpadj-only" for row in matched)
+        fn = sum(row.outcome == "dpadj-only" for row in target_rows) - tp
+        tn = len(target_rows) - tp - fp - fn
+        precision = tp / max(1, tp + fp)
+        recall = tp / max(1, tp + fn)
+        f1 = 0.0 if precision + recall == 0 else 2 * precision * recall / (precision + recall)
+        return TaperWrapJumpRuleRow(
+            target_variant=target_rows[0].target_variant,
+            rule_text=" and ".join(label for label, _predicate in predicates),
+            term_count=len(predicates),
+            tp=tp,
+            fp=fp,
+            fn=fn,
+            tn=tn,
+            precision=precision,
+            recall=recall,
+            f1=f1,
+        )
+
+    for target_variant in target_variants:
+        target_rows = [row for row in rows if row.target_variant == target_variant]
+        signatures = sorted({row.signature for row in target_rows})
+        numeric_thresholds = {
+            "center_variation": sorted({row.center_variation for row in target_rows}),
+            "boundary_roughness": sorted({row.boundary_roughness for row in target_rows}),
+            "mirror_center_asymmetry": sorted({row.mirror_center_asymmetry for row in target_rows}),
+            "changed_band_center_mean": sorted({row.changed_band_center_mean for row in target_rows}),
+            "changed_band_high_mean": sorted({row.changed_band_high_mean for row in target_rows}),
+        }
+        candidate_predicates: list[tuple[str, callable]] = [
+            ("not crosses_midline", lambda row: not row.crosses_midline),
+            ("crosses_midline", lambda row: row.crosses_midline),
+        ]
+        for signature in signatures:
+            candidate_predicates.append(
+                (
+                    f"signature={signature}",
+                    lambda row, signature=signature: row.signature == signature,
+                )
+            )
+        for feature_name, thresholds in numeric_thresholds.items():
+            for threshold in thresholds:
+                candidate_predicates.append(
+                    (
+                        f"{feature_name}<={threshold:.2f}",
+                        lambda row, feature_name=feature_name, threshold=threshold: (
+                            getattr(row, feature_name) <= threshold + 1e-9
+                        ),
+                    )
+                )
+                candidate_predicates.append(
+                    (
+                        f"{feature_name}>={threshold:.2f}",
+                        lambda row, feature_name=feature_name, threshold=threshold: (
+                            getattr(row, feature_name) >= threshold - 1e-9
+                        ),
+                    )
+                )
+
+        scored_rules: list[TaperWrapJumpRuleRow] = []
+        for predicate in candidate_predicates:
+            scored_rules.append(score_rule(target_rows, [predicate]))
+        for first_index, first_predicate in enumerate(candidate_predicates):
+            for second_predicate in candidate_predicates[first_index + 1 :]:
+                scored_rules.append(score_rule(target_rows, [first_predicate, second_predicate]))
+
+        best_rows = sorted(
+            scored_rules,
+            key=lambda row: (
+                -row.f1,
+                row.fp,
+                row.fn,
+                row.term_count,
+                -row.tp,
+                row.rule_text,
+            ),
+        )
+        seen_rule_texts: set[str] = set()
+        unique_best_rows: list[TaperWrapJumpRuleRow] = []
+        for row in best_rows:
+            if row.rule_text in seen_rule_texts:
+                continue
+            seen_rule_texts.add(row.rule_text)
+            unique_best_rows.append(row)
+            if len(unique_best_rows) >= 6:
+                break
+        rule_rows.extend(unique_best_rows)
+
+    rule_rows.sort(key=lambda row: (row.target_variant, -row.f1, row.fp, row.term_count, row.rule_text))
+    return rule_rows
+
+
 def threshold_scaling_explanation_analysis(
     ensembles: tuple[tuple[str, int, int, tuple[str, ...]], ...] = (
         ("default", 5, 3, ("walk", "mode-mix", "local-morph")),
@@ -20234,6 +20357,25 @@ def render_taper_wrap_jump_context_aggregate_table(
             f"{row.mean_mirror_center_asymmetry:>4.2f} | "
             f"{row.mean_changed_band_center:+4.2f}/{row.mean_changed_band_high:+4.2f} | "
             f"{row.crossing_cases:>4}"
+        )
+    return "\n".join(lines)
+
+
+def render_taper_wrap_jump_rule_table(
+    rows: list[TaperWrapJumpRuleRow],
+) -> str:
+    lines = [
+        "target     | rule                                      | tp/fp/fn | prec | rec  | f1",
+        "-----------+-------------------------------------------+----------+------+------+-----",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.target_variant:<10} | "
+            f"{row.rule_text:<41.41} | "
+            f"{row.tp:>2}/{row.fp:<2}/{row.fn:<2} | "
+            f"{row.precision:>4.2f} | "
+            f"{row.recall:>4.2f} | "
+            f"{row.f1:>3.2f}"
         )
     return "\n".join(lines)
 
