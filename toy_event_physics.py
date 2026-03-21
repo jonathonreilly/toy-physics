@@ -1804,6 +1804,26 @@ class PocketWrapSuppressorCellRow:
 
 
 @dataclass
+class PocketWrapSuppressorCoverageRow:
+    source_name: str
+    base_outcome: str
+    full_outcome: str
+    drop_1_0_outcome: str
+    drop_4_0_outcome: str
+    drop_both_outcome: str
+    full_deep_gap: float
+    full_pocket_gap: float
+    full_low_degree_gap: float
+    drop_both_deep_gap: float
+    drop_both_pocket_gap: float
+    drop_both_low_degree_gap: float
+    pair_present: bool
+    single_drop_rescue: bool
+    pair_rescue: bool
+    target_gap_match: bool
+
+
+@dataclass
 class PocketWrapLocalMorphTransplantContextRow:
     row_kind: str
     source_name: str
@@ -18474,6 +18494,195 @@ def pocket_wrap_suppressor_cell_analysis(
     return rows
 
 
+def pocket_wrap_suppressor_coverage_analysis(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    variant_limit: int = 16,
+    suppressor_nodes: tuple[tuple[int, int], ...] = ((1, 0), (4, 0)),
+) -> list[PocketWrapSuppressorCoverageRow]:
+    ge6_tree, dpadj_tree = _extended_ge6_dpadj_trees(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+    )
+    nodes, wrap_y = scenario_by_name("base", "taper-wrap")
+    variant_rows: list[
+        tuple[
+            str,
+            set[tuple[int, int]],
+            PocketWrapLocalMorphRow,
+            tuple[int, ...],
+            dict[int, tuple[int, int]],
+        ]
+    ] = []
+
+    for variant_name, perturbed_nodes, _node_delta in procedural_geometry_variants(
+        "base",
+        "taper-wrap",
+        nodes,
+        wrap_y,
+        variant_limit=variant_limit,
+        style="local-morph",
+    ):
+        source_name = f"base:taper-wrap:{variant_name}"
+        xs, centers, spans = ordered_profile_centers_and_spans(perturbed_nodes)
+        interval_profile = column_interval_profile(perturbed_nodes)
+        mirror_center_asymmetry, _mirror_span_asymmetry = _profile_symmetry_metrics(
+            centers,
+            spans,
+        )
+        (
+            _actual_label,
+            outcome,
+            _ge6_prediction,
+            _dpadj_prediction,
+            _ge6_only_fraction,
+            _ge7_core_fraction,
+            deep_gap,
+            pocket_gap,
+            low_degree_gap,
+            _boundary_gap,
+            crosses_midline,
+            _center_variation,
+            _span_range,
+        ) = _evaluate_extended_ge6_dpadj_nodes(
+            nodes=perturbed_nodes,
+            wrap_y=wrap_y,
+            ge6_tree=ge6_tree,
+            dpadj_tree=dpadj_tree,
+            pack_name="base",
+            scenario_name=source_name,
+            retained_weight=retained_weight,
+        )
+        (
+            _boundary_fraction,
+            _pocket_fraction,
+            boundary_roughness,
+            _deep_pocket_fraction,
+            *_rest,
+        ) = local_shape_feature_bundle(perturbed_nodes, wrap_y=wrap_y)
+        row = PocketWrapLocalMorphRow(
+            variant_limit=variant_limit,
+            source_name=source_name,
+            outcome=outcome,
+            pocket_positive=pocket_gap > 0.0,
+            pocket_signature=(pocket_gap > 0.0 and deep_gap <= 0.0 and low_degree_gap <= 0.0),
+            deep_gap=deep_gap,
+            pocket_gap=pocket_gap,
+            low_degree_gap=low_degree_gap,
+            boundary_roughness=boundary_roughness,
+            mirror_center_asymmetry=mirror_center_asymmetry,
+            crosses_midline=crosses_midline,
+        )
+        variant_rows.append((source_name, perturbed_nodes, row, xs, interval_profile))
+
+    target_entry = next(
+        entry
+        for entry in variant_rows
+        if entry[2].outcome == "dpadj-only" and entry[2].pocket_signature
+    )
+    _target_source, _target_nodes, target_row, target_xs, target_profile = target_entry
+
+    def evaluate_nodes(
+        analysis_nodes: set[tuple[int, int]],
+        scenario_name: str,
+    ) -> tuple[str, float, float, float]:
+        (
+            _actual_label,
+            outcome,
+            _ge6_prediction,
+            _dpadj_prediction,
+            _ge6_only_fraction,
+            _ge7_core_fraction,
+            deep_gap,
+            pocket_gap,
+            low_degree_gap,
+            _boundary_gap,
+            _crosses_midline,
+            _center_variation,
+            _span_range,
+        ) = _evaluate_extended_ge6_dpadj_nodes(
+            nodes=analysis_nodes,
+            wrap_y=wrap_y,
+            ge6_tree=ge6_tree,
+            dpadj_tree=dpadj_tree,
+            pack_name="base",
+            scenario_name=scenario_name,
+            retained_weight=retained_weight,
+        )
+        return outcome, deep_gap, pocket_gap, low_degree_gap
+
+    rows: list[PocketWrapSuppressorCoverageRow] = []
+    for source_name, compare_nodes, compare_row, _compare_xs, compare_profile in variant_rows:
+        if source_name == target_row.source_name or not compare_row.pocket_signature:
+            continue
+
+        changed_columns = [x for x in target_xs if target_profile[x] != compare_profile[x]]
+        full_profile = dict(compare_profile)
+        for x in changed_columns:
+            full_profile[x] = target_profile[x]
+        full_nodes = build_nodes_from_interval_profile(full_profile)
+        full_outcome, full_deep_gap, full_pocket_gap, full_low_degree_gap = evaluate_nodes(
+            full_nodes,
+            f"{source_name}:full",
+        )
+
+        drop_1_nodes = set(full_nodes)
+        if suppressor_nodes[0] in drop_1_nodes:
+            drop_1_nodes.remove(suppressor_nodes[0])
+        drop_1_outcome, _drop_1_deep_gap, _drop_1_pocket_gap, _drop_1_low_degree_gap = evaluate_nodes(
+            drop_1_nodes,
+            f"{source_name}:drop-1-0",
+        )
+
+        drop_4_nodes = set(full_nodes)
+        if suppressor_nodes[1] in drop_4_nodes:
+            drop_4_nodes.remove(suppressor_nodes[1])
+        drop_4_outcome, _drop_4_deep_gap, _drop_4_pocket_gap, _drop_4_low_degree_gap = evaluate_nodes(
+            drop_4_nodes,
+            f"{source_name}:drop-4-0",
+        )
+
+        drop_both_nodes = set(full_nodes)
+        for node in suppressor_nodes:
+            if node in drop_both_nodes:
+                drop_both_nodes.remove(node)
+        (
+            drop_both_outcome,
+            drop_both_deep_gap,
+            drop_both_pocket_gap,
+            drop_both_low_degree_gap,
+        ) = evaluate_nodes(drop_both_nodes, f"{source_name}:drop-both")
+
+        pair_present = all(node in full_nodes for node in suppressor_nodes)
+        rows.append(
+            PocketWrapSuppressorCoverageRow(
+                source_name=source_name,
+                base_outcome=compare_row.outcome,
+                full_outcome=full_outcome,
+                drop_1_0_outcome=drop_1_outcome,
+                drop_4_0_outcome=drop_4_outcome,
+                drop_both_outcome=drop_both_outcome,
+                full_deep_gap=full_deep_gap,
+                full_pocket_gap=full_pocket_gap,
+                full_low_degree_gap=full_low_degree_gap,
+                drop_both_deep_gap=drop_both_deep_gap,
+                drop_both_pocket_gap=drop_both_pocket_gap,
+                drop_both_low_degree_gap=drop_both_low_degree_gap,
+                pair_present=pair_present,
+                single_drop_rescue=(drop_1_outcome == "dpadj-only" or drop_4_outcome == "dpadj-only"),
+                pair_rescue=drop_both_outcome == "dpadj-only",
+                target_gap_match=(
+                    abs(drop_both_deep_gap - target_row.deep_gap) <= 1e-9
+                    and abs(drop_both_pocket_gap - target_row.pocket_gap) <= 1e-9
+                    and abs(drop_both_low_degree_gap - target_row.low_degree_gap) <= 1e-9
+                ),
+            )
+        )
+
+    rows.sort(key=lambda row: row.source_name)
+    return rows
+
+
 def pocket_wrap_local_morph_transplant_context_analysis(
     retained_weight: float = 1.0,
     mode_retained_weight: float | None = None,
@@ -23920,6 +24129,29 @@ def render_pocket_wrap_suppressor_cell_table(
             f"{row.pocket_cells:<19.19} | "
             f"{row.deep_cells:<15.15} | "
             f"{row.suppressor_overlap:<15.15}"
+        )
+    return "\n".join(lines)
+
+
+def render_pocket_wrap_suppressor_coverage_table(
+    rows: list[PocketWrapSuppressorCoverageRow],
+) -> str:
+    lines = [
+        "source                                 | base      | full       | drop1/drop4/both        | full gaps          | both gaps          | pair | 1x | 2x | tgt",
+        "---------------------------------------+-----------+------------+-------------------------+--------------------+--------------------+------+------+------+----",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.source_name:<39.39} | "
+            f"{row.base_outcome:<9.9} | "
+            f"{row.full_outcome:<10.10} | "
+            f"{row.drop_1_0_outcome:<7.7}/{row.drop_4_0_outcome:<7.7}/{row.drop_both_outcome:<7.7} | "
+            f"{row.full_deep_gap:+4.2f}/{row.full_pocket_gap:+4.2f}/{row.full_low_degree_gap:+4.2f} | "
+            f"{row.drop_both_deep_gap:+4.2f}/{row.drop_both_pocket_gap:+4.2f}/{row.drop_both_low_degree_gap:+4.2f} | "
+            f"{('Y' if row.pair_present else 'n'):<4} | "
+            f"{('Y' if row.single_drop_rescue else 'n'):<4} | "
+            f"{('Y' if row.pair_rescue else 'n'):<4} | "
+            f"{('Y' if row.target_gap_match else 'n'):<3}"
         )
     return "\n".join(lines)
 
