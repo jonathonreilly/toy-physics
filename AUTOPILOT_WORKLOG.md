@@ -11,9 +11,11 @@ Each autopilot run should:
 ## 2026-03-21 16:53 America/New_York
 
 ### Current state
-- `main` is ahead of `origin/main` by the local suppressor-context commits:
+- `main` is now synced to `origin/main`.
+- This loop reconciled and pushed the previously local suppressor-context commits:
   - `1efe351` `Compare suppressor pair-kill rows by context`
   - `4497b08` `Update autopilot worklog with commit status`
+  - `b126b11` `Isolate pocket-wrap overlap-context separators`
 - The active mechanism thread is still the pocket-wrap suppressor specificity line inside `base:taper-wrap` `local-morph`.
 - Added a new overlap-context rule runner:
   - [scripts/pocket_wrap_suppressor_overlap_context_rules.py](/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_overlap_context_rules.py)
@@ -39,6 +41,10 @@ Each autopilot run should:
   - [AUTOPILOT_WORKLOG.md](/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md)
   - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
   - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- Pushed commits:
+  - `1efe351`
+  - `4497b08`
+  - `b126b11`
 - New logs:
   - `/Users/jonreilly/Projects/Physics/logs/2026-03-21-pocket-wrap-suppressor-pair-kill-row-compare-64.txt`
   - `/Users/jonreilly/Projects/Physics/logs/2026-03-21-pocket-wrap-suppressor-overlap-context-rules-64.txt`
