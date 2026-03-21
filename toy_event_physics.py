@@ -1595,6 +1595,45 @@ class SecondaryOffenderRuleSearchRow:
 
 
 @dataclass
+class ExtendedDefectionTriggerRow:
+    ensemble_name: str
+    source_name: str
+    scenario_key: str
+    style: str
+    trigger_class: str
+    center_variation: float
+    boundary_roughness: float
+    mirror_center_asymmetry: float
+    crosses_midline: bool
+
+
+@dataclass
+class ExtendedDefectionTriggerAggregateRow:
+    ensemble_name: str
+    trigger_class: str
+    cases: int
+    scenarios: str
+    styles: str
+    mean_center_variation: float
+    mean_boundary_roughness: float
+    mean_mirror_center_asymmetry: float
+    crossing_cases: int
+
+
+@dataclass
+class KnownDefectionTriggerCoverageRow:
+    ensemble_name: str
+    scenario_name: str
+    trigger_class: str
+    cases: int
+    styles: str
+    mean_center_variation: float
+    mean_boundary_roughness: float
+    mean_mirror_center_asymmetry: float
+    crossing_cases: int
+
+
+@dataclass
 class ThresholdScalingRow:
     ensemble_name: str
     threshold_name: str
@@ -1635,6 +1674,14 @@ _generated_geometry_prediction_context_cache: dict[
         tuple["GeometryPredictionRow", ...],
         tuple["GeometryPredictionRow", ...],
     ],
+] = {}
+_generated_prediction_node_sets_cache: dict[
+    tuple[int, int, tuple[str, ...]],
+    tuple[tuple[str, tuple[str, frozenset[tuple[int, int]], bool]], ...],
+] = {}
+_generated_extended_prediction_rows_cache: dict[
+    tuple[float, int, int, tuple[str, ...]],
+    tuple["GeometryPredictionRow", ...],
 ] = {}
 
 
@@ -5022,8 +5069,20 @@ def generated_prediction_node_sets(
     procedural_variant_limit: int,
     procedural_styles: tuple[str, ...],
 ) -> dict[str, tuple[str, set[tuple[int, int]], bool]]:
-    graph_rows: dict[str, tuple[str, set[tuple[int, int]], bool]] = {}
     normalized_styles = tuple(dict.fromkeys(procedural_styles))
+    cache_key = (
+        geometry_variant_limit,
+        procedural_variant_limit,
+        normalized_styles,
+    )
+    cached_rows = _generated_prediction_node_sets_cache.get(cache_key)
+    if cached_rows is not None:
+        return {
+            source_name: (dataset_name, set(nodes), wrap_y)
+            for source_name, (dataset_name, nodes, wrap_y) in cached_rows
+        }
+
+    graph_rows: dict[str, tuple[str, set[tuple[int, int]], bool]] = {}
     for pack_name, scenarios in benchmark_packs():
         for scenario_name, nodes, wrap_y in scenarios:
             for variant_name, perturbed_nodes, _node_delta in randomized_geometry_variants(
@@ -5046,7 +5105,18 @@ def generated_prediction_node_sets(
                 ):
                     source_name = f"{pack_name}:{scenario_name}:{variant_name}"
                     graph_rows[source_name] = ("procedural", perturbed_nodes, wrap_y)
-    return graph_rows
+    cached_value = tuple(
+        (
+            source_name,
+            (dataset_name, frozenset(nodes), wrap_y),
+        )
+        for source_name, (dataset_name, nodes, wrap_y) in sorted(graph_rows.items())
+    )
+    _generated_prediction_node_sets_cache[cache_key] = cached_value
+    return {
+        source_name: (dataset_name, set(nodes), wrap_y)
+        for source_name, (dataset_name, nodes, wrap_y) in cached_value
+    }
 
 
 def generated_extended_prediction_rows(
@@ -5055,11 +5125,22 @@ def generated_extended_prediction_rows(
     procedural_variant_limit: int = 1,
     procedural_styles: tuple[str, ...] = ("walk", "mode-mix", "local-morph"),
 ) -> list[GeometryPredictionRow]:
+    normalized_styles = tuple(dict.fromkeys(procedural_styles))
+    cache_key = (
+        retained_weight,
+        geometry_variant_limit,
+        procedural_variant_limit,
+        normalized_styles,
+    )
+    cached_rows = _generated_extended_prediction_rows_cache.get(cache_key)
+    if cached_rows is not None:
+        return list(cached_rows)
+
     prediction_rows: list[GeometryPredictionRow] = []
     graph_rows = generated_prediction_node_sets(
         geometry_variant_limit=geometry_variant_limit,
         procedural_variant_limit=procedural_variant_limit,
-        procedural_styles=procedural_styles,
+        procedural_styles=normalized_styles,
     )
     extended_count_options = next(
         count_options
@@ -5142,7 +5223,9 @@ def generated_extended_prediction_rows(
             )
         )
     prediction_rows.sort(key=lambda row: (row.dataset_name, row.source_name))
-    return prediction_rows
+    cached_value = tuple(prediction_rows)
+    _generated_extended_prediction_rows_cache[cache_key] = cached_value
+    return list(cached_value)
 
 
 def canonical_generated_ensemble_specs() -> tuple[tuple[str, int, int, tuple[str, ...]], ...]:
@@ -14858,22 +14941,23 @@ def threshold_core_case_shell_flip_analysis(
     return case_rows, aggregate_rows
 
 
+def _generated_style_group(dataset_name: str, source_name: str) -> str:
+    if dataset_name == "geometry-randomized":
+        return "geometry"
+    variant_name = source_name.split(":", 2)[2]
+    if variant_name.startswith("local-morph"):
+        return "local-morph"
+    if variant_name.startswith("mode-mix"):
+        return "mode-mix"
+    if variant_name.startswith("procedural"):
+        return "walk"
+    return dataset_name
+
+
 def threshold_core_shell_offender_analysis(
     case_rows: list[ThresholdCoreShellCaseRow],
 ) -> list[ThresholdCoreShellOffenderRow]:
     grouped_rows: DefaultDict[tuple[str, str], list[ThresholdCoreShellCaseRow]] = defaultdict(list)
-
-    def style_group(row: ThresholdCoreShellCaseRow) -> str:
-        if row.dataset_name == "geometry-randomized":
-            return "geometry"
-        variant_name = row.source_name.split(":", 2)[2]
-        if variant_name.startswith("local-morph"):
-            return "local-morph"
-        if variant_name.startswith("mode-mix"):
-            return "mode-mix"
-        if variant_name.startswith("procedural"):
-            return "walk"
-        return row.dataset_name
 
     for row in case_rows:
         if row.outcome not in {"dpadj-only", "ge6-only"}:
@@ -14883,7 +14967,9 @@ def threshold_core_shell_offender_analysis(
 
     offender_rows: list[ThresholdCoreShellOffenderRow] = []
     for (outcome, scenario_key), rows in grouped_rows.items():
-        styles = ", ".join(sorted({style_group(row) for row in rows}))
+        styles = ", ".join(
+            sorted({_generated_style_group(row.dataset_name, row.source_name) for row in rows})
+        )
         ensembles = ", ".join(sorted({row.ensemble_name for row in rows}))
         example_sources = ", ".join(sorted(row.source_name for row in rows)[:3])
         offender_rows.append(
@@ -16399,6 +16485,243 @@ def secondary_offender_rule_search_analysis(
 
     search_rows.sort(key=lambda row: (row.scenario_name, row.ensemble_name, -row.f1, row.fp, row.rule_text))
     return search_rows
+
+
+def _extended_defection_trigger_class(
+    *,
+    boundary_roughness: float,
+    center_variation: float,
+    mirror_center_asymmetry: float,
+) -> str:
+    if boundary_roughness >= 0.28 - 1e-9:
+        return "roughness-floor"
+    if center_variation <= 0.0 + 1e-9 or boundary_roughness <= 0.24 + 1e-9:
+        return "jump-flat"
+    if boundary_roughness <= 0.26 + 1e-9 and mirror_center_asymmetry >= 0.37 - 1e-9:
+        return "jump-asymmetric"
+    return "residual"
+
+
+def extended_defection_trigger_class_analysis(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    ensembles: tuple[tuple[str, int, int, tuple[str, ...]], ...] = (
+        ("default", 5, 3, ("walk", "mode-mix", "local-morph")),
+        ("broader", 7, 4, ("walk", "mode-mix", "local-morph")),
+    ),
+) -> tuple[list[ExtendedDefectionTriggerRow], list[ExtendedDefectionTriggerAggregateRow]]:
+    ge6_tree, dpadj_tree = _extended_ge6_dpadj_trees(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+    )
+    row_list: list[ExtendedDefectionTriggerRow] = []
+    grouped: DefaultDict[tuple[str, str], list[ExtendedDefectionTriggerRow]] = defaultdict(list)
+
+    for (
+        ensemble_name,
+        geometry_variant_limit,
+        procedural_variant_limit,
+        procedural_styles,
+    ) in ensembles:
+        prediction_rows = generated_extended_prediction_rows(
+            retained_weight=retained_weight,
+            geometry_variant_limit=geometry_variant_limit,
+            procedural_variant_limit=procedural_variant_limit,
+            procedural_styles=procedural_styles,
+        )
+        node_sets = generated_prediction_node_sets(
+            geometry_variant_limit=geometry_variant_limit,
+            procedural_variant_limit=procedural_variant_limit,
+            procedural_styles=procedural_styles,
+        )
+        for prediction_row in prediction_rows:
+            actual_label, ge6_prediction, dpadj_prediction, ge6_correct, dpadj_correct = (
+                _extended_ge6_dpadj_outcome(
+                    prediction_row,
+                    ge6_tree,
+                    dpadj_tree,
+                )
+            )
+            del actual_label, ge6_prediction, dpadj_prediction
+            if not (dpadj_correct and not ge6_correct):
+                continue
+            node_entry = node_sets.get(prediction_row.source_name)
+            if node_entry is None:
+                continue
+            dataset_name, nodes, _wrap_y = node_entry
+            _xs, centers, spans = ordered_profile_centers_and_spans(nodes)
+            mirror_center_asymmetry, _mirror_span_asymmetry = _profile_symmetry_metrics(
+                centers,
+                spans,
+            )
+            trigger_class = _extended_defection_trigger_class(
+                boundary_roughness=prediction_row.boundary_roughness,
+                center_variation=prediction_row.center_variation,
+                mirror_center_asymmetry=mirror_center_asymmetry,
+            )
+            row = ExtendedDefectionTriggerRow(
+                ensemble_name=ensemble_name,
+                source_name=prediction_row.source_name,
+                scenario_key=":".join(prediction_row.source_name.split(":", 2)[:2]),
+                style=_generated_style_group(dataset_name, prediction_row.source_name),
+                trigger_class=trigger_class,
+                center_variation=prediction_row.center_variation,
+                boundary_roughness=prediction_row.boundary_roughness,
+                mirror_center_asymmetry=mirror_center_asymmetry,
+                crosses_midline=prediction_row.crosses_midline,
+            )
+            row_list.append(row)
+            grouped[(ensemble_name, trigger_class)].append(row)
+
+    aggregate_rows: list[ExtendedDefectionTriggerAggregateRow] = []
+    for (ensemble_name, trigger_class), rows in grouped.items():
+        aggregate_rows.append(
+            ExtendedDefectionTriggerAggregateRow(
+                ensemble_name=ensemble_name,
+                trigger_class=trigger_class,
+                cases=len(rows),
+                scenarios=",".join(sorted({row.scenario_key for row in rows})),
+                styles=",".join(sorted({row.style for row in rows})),
+                mean_center_variation=sum(row.center_variation for row in rows) / len(rows),
+                mean_boundary_roughness=sum(row.boundary_roughness for row in rows) / len(rows),
+                mean_mirror_center_asymmetry=sum(
+                    row.mirror_center_asymmetry for row in rows
+                ) / len(rows),
+                crossing_cases=sum(row.crosses_midline for row in rows),
+            )
+        )
+
+    class_order = {
+        "jump-flat": 0,
+        "jump-asymmetric": 1,
+        "roughness-floor": 2,
+        "residual": 3,
+    }
+    row_list.sort(key=lambda row: (row.ensemble_name, class_order.get(row.trigger_class, 99), row.source_name))
+    aggregate_rows.sort(key=lambda row: (row.ensemble_name, class_order.get(row.trigger_class, 99)))
+    return row_list, aggregate_rows
+
+
+def known_defection_trigger_coverage_analysis(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    scenario_names: tuple[str, ...] = ("taper-wrap", "skew-wrap"),
+    ensembles: tuple[tuple[str, int, int, tuple[str, ...]], ...] = (
+        ("default", 5, 3, ("walk", "mode-mix", "local-morph")),
+        ("broader", 7, 4, ("walk", "mode-mix", "local-morph")),
+    ),
+) -> list[KnownDefectionTriggerCoverageRow]:
+    ge6_tree, dpadj_tree = _extended_ge6_dpadj_trees(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+    )
+    grouped: DefaultDict[tuple[str, str, str], list[tuple[float, float, float, bool, str]]] = defaultdict(list)
+
+    for (
+        ensemble_name,
+        geometry_variant_limit,
+        procedural_variant_limit,
+        procedural_styles,
+    ) in ensembles:
+        for scenario_name in scenario_names:
+            nodes, wrap_y = scenario_by_name("base", scenario_name)
+            variant_entries: list[tuple[str, set[tuple[int, int]], str]] = []
+            for variant_name, perturbed_nodes, _node_delta in randomized_geometry_variants(
+                "base",
+                scenario_name,
+                nodes,
+                wrap_y,
+                variant_limit=geometry_variant_limit,
+            ):
+                variant_entries.append((f"base:{scenario_name}:{variant_name}", perturbed_nodes, "geometry"))
+            for style in tuple(dict.fromkeys(procedural_styles)):
+                for variant_name, perturbed_nodes, _node_delta in procedural_geometry_variants(
+                    "base",
+                    scenario_name,
+                    nodes,
+                    wrap_y,
+                    variant_limit=procedural_variant_limit,
+                    style=style,
+                ):
+                    variant_entries.append((f"base:{scenario_name}:{variant_name}", perturbed_nodes, style))
+
+            for source_name, variant_nodes, style in variant_entries:
+                xs, centers, spans = ordered_profile_centers_and_spans(variant_nodes)
+                mirror_center_asymmetry, _mirror_span_asymmetry = _profile_symmetry_metrics(
+                    centers,
+                    spans,
+                )
+                (
+                    actual_label,
+                    outcome,
+                    _ge6_prediction,
+                    _dpadj_prediction,
+                    _ge6_only_fraction,
+                    _ge7_core_fraction,
+                    _deep_gap,
+                    _pocket_gap,
+                    _low_degree_gap,
+                    _boundary_gap,
+                    crosses_midline,
+                    center_variation,
+                    _span_range,
+                ) = _evaluate_extended_ge6_dpadj_nodes(
+                    nodes=variant_nodes,
+                    wrap_y=wrap_y,
+                    ge6_tree=ge6_tree,
+                    dpadj_tree=dpadj_tree,
+                    pack_name="base",
+                    scenario_name=source_name,
+                    retained_weight=retained_weight,
+                )
+                del actual_label
+                (
+                    _boundary_fraction,
+                    _pocket_fraction,
+                    boundary_roughness,
+                    _deep_pocket_fraction,
+                    *_rest,
+                ) = local_shape_feature_bundle(variant_nodes, wrap_y=wrap_y)
+                if outcome != "dpadj-only":
+                    continue
+                trigger_class = _extended_defection_trigger_class(
+                    boundary_roughness=boundary_roughness,
+                    center_variation=center_variation,
+                    mirror_center_asymmetry=mirror_center_asymmetry,
+                )
+                grouped[(ensemble_name, scenario_name, trigger_class)].append(
+                    (
+                        center_variation,
+                        boundary_roughness,
+                        mirror_center_asymmetry,
+                        crosses_midline,
+                        style,
+                    )
+                )
+
+    rows: list[KnownDefectionTriggerCoverageRow] = []
+    class_order = {
+        "jump-flat": 0,
+        "jump-asymmetric": 1,
+        "roughness-floor": 2,
+        "residual": 3,
+    }
+    for (ensemble_name, scenario_name, trigger_class), grouped_rows in grouped.items():
+        rows.append(
+            KnownDefectionTriggerCoverageRow(
+                ensemble_name=ensemble_name,
+                scenario_name=scenario_name,
+                trigger_class=trigger_class,
+                cases=len(grouped_rows),
+                styles=",".join(sorted({style for *_prefix, style in grouped_rows})),
+                mean_center_variation=sum(row[0] for row in grouped_rows) / len(grouped_rows),
+                mean_boundary_roughness=sum(row[1] for row in grouped_rows) / len(grouped_rows),
+                mean_mirror_center_asymmetry=sum(row[2] for row in grouped_rows) / len(grouped_rows),
+                crossing_cases=sum(row[3] for row in grouped_rows),
+            )
+        )
+    rows.sort(key=lambda row: (row.ensemble_name, row.scenario_name, class_order.get(row.trigger_class, 99)))
+    return rows
 
 
 def threshold_scaling_explanation_analysis(
@@ -20690,6 +21013,50 @@ def render_secondary_offender_rule_search_table(
             f"{row.precision:>4.2f} | "
             f"{row.recall:>4.2f} | "
             f"{row.f1:>3.2f}"
+        )
+    return "\n".join(lines)
+
+
+def render_extended_defection_trigger_table(
+    rows: list[ExtendedDefectionTriggerAggregateRow],
+) -> str:
+    lines = [
+        "ensemble | class            | cases | scenarios                  | styles              | cvar | brough | asym | cross",
+        "---------+------------------+-------+----------------------------+---------------------+------+--------+------+------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.ensemble_name:<8} | "
+            f"{row.trigger_class:<16} | "
+            f"{row.cases:>5} | "
+            f"{row.scenarios:<26.26} | "
+            f"{row.styles:<19.19} | "
+            f"{row.mean_center_variation:>4.1f} | "
+            f"{row.mean_boundary_roughness:>6.2f} | "
+            f"{row.mean_mirror_center_asymmetry:>4.2f} | "
+            f"{row.crossing_cases:>4}"
+        )
+    return "\n".join(lines)
+
+
+def render_known_defection_trigger_coverage_table(
+    rows: list[KnownDefectionTriggerCoverageRow],
+) -> str:
+    lines = [
+        "ensemble | scenario   | class            | cases | styles              | cvar | brough | asym | cross",
+        "---------+------------+------------------+-------+---------------------+------+--------+------+------+",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.ensemble_name:<8} | "
+            f"{row.scenario_name:<10} | "
+            f"{row.trigger_class:<16} | "
+            f"{row.cases:>5} | "
+            f"{row.styles:<19.19} | "
+            f"{row.mean_center_variation:>4.1f} | "
+            f"{row.mean_boundary_roughness:>6.2f} | "
+            f"{row.mean_mirror_center_asymmetry:>4.2f} | "
+            f"{row.crossing_cases:>4}"
         )
     return "\n".join(lines)
 
