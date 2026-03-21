@@ -8,10 +8,74 @@ Each autopilot run should:
 - append a new timestamped entry at the top
 - keep all paths canonical to this repository, not worktree-local paths
 
+## 2026-03-21 19:18 America/New_York
+
+### Current state
+- `main` started this run at `b914026` with local uncommitted `README.md` and `AUTOPILOT_WORKLOG.md` edits from the prior `96` rung documentation pass.
+- Continued the same pocket-wrap suppressor overlap-context mechanism thread and executed the planned deeper rung:
+  - `python3 scripts/pocket_wrap_suppressor_overlap_context_rules.py --variant-limit 112`
+- The `112` rung completed successfully and produced the expected overlap-context/rule table log (`total_elapsed=371.6s`).
+- Updated README mechanism language to include the `112` rung stability result.
+
+### Strongest confirmed conclusion
+- Overlap-positive membership still does not expand at `variant_limit = 112`; it remains exactly `local-morph-a`, `local-morph-v`, and `local-morph-\\x8e`.
+- The shell/profile separators remain exact one rung deeper: `boundary_roughness <= 0.288`, `center_total_variation <= 2.500`, and `shell_pocket_fraction >= 0.812` still isolate the canonical pocket-signature branch with `0` FP and `0` FN.
+- The strongest mechanism read is unchanged but now verified through `112`: `local-morph-a` remains the low-roughness, low-total-variation, shell-pocket-saturated tip of the same coordinate-exact overwrite-trigger family.
+
+### Files and results changed in this run
+- Updated narrative:
+  - [README.md](/Users/jonreilly/Projects/Physics/README.md)
+- Updated run tracking:
+  - [AUTOPILOT_WORKLOG.md](/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md)
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- New log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-21-pocket-wrap-suppressor-overlap-context-rules-112.txt`
+- Commit status:
+  - Pending in working tree (not committed yet in this run).
+
+### Exact next step
+- Probe the next deeper ladder rung to find the first point where overlap-positive membership changes or exact one-feature separator behavior degrades.
+
+### First concrete action
+- Run `python3 scripts/pocket_wrap_suppressor_overlap_context_rules.py --variant-limit 128`, then check whether overlap-positive rows remain `3` and whether `boundary_roughness <= 0.288`, `center_total_variation <= 2.500`, and `shell_pocket_fraction >= 0.812` remain `0` FP / `0` FN.
+
+## 2026-03-21 18:09 America/New_York
+
+### Current state
+- `main` started this run at `b914026` with a local uncommitted worklog edit.
+- Continued the same pocket-wrap suppressor overlap-context mechanism thread and executed the planned deeper rung:
+  - `scripts/pocket_wrap_suppressor_overlap_context_rules.py --variant-limit 96`
+- The `96` rung completed and produced the expected overlap-context/rule table log.
+- Updated README mechanism language to include the `96` rung stability result.
+
+### Strongest confirmed conclusion
+- Overlap-positive membership did not expand at `variant_limit = 96`; it is still exactly the same three rows (`local-morph-a`, `local-morph-v`, `local-morph-\x8e`).
+- The shell/profile separators remain exact at this deeper rung: `boundary_roughness <= 0.288`, `center_total_variation <= 2.500`, and `shell_pocket_fraction >= 0.812` still isolate the canonical pocket-signature branch with `0` FP and `0` FN.
+- So the strongest mechanism read is unchanged but now verified one rung deeper: `local-morph-a` remains the low-roughness, low-total-variation, shell-pocket-saturated tip of the same coordinate-exact overwrite-trigger family.
+
+### Files and results changed in this run
+- Updated narrative:
+  - [README.md](/Users/jonreilly/Projects/Physics/README.md)
+- Updated run tracking:
+  - [AUTOPILOT_WORKLOG.md](/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md)
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- New log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-21-pocket-wrap-suppressor-overlap-context-rules-96.txt`
+- Commit status:
+  - Pending in working tree (not committed yet in this run).
+
+### Exact next step
+- Probe the next deeper ladder rung to find the first point where overlap-positive membership or exact separator behavior changes.
+
+### First concrete action
+- Run `python3 scripts/pocket_wrap_suppressor_overlap_context_rules.py --variant-limit 112` and check whether overlap-positive rows stay at `3` and whether the same one-feature exact separators remain `0` FP / `0` FN.
+
 ## 2026-03-21 17:12 America/New_York
 
 ### Current state
-- `main` is still synced to `origin/main` at run start; this loop continued the same pocket-wrap suppressor overlap-context mechanism thread.
+- `main` was synced to `origin/main` at run start; this loop continued the same pocket-wrap suppressor overlap-context mechanism thread.
 - Executed the pending deeper overlap-context rule sweeps at:
   - `variant_limit = 72`
   - `variant_limit = 80`
@@ -33,7 +97,8 @@ Each autopilot run should:
   - `/Users/jonreilly/Projects/Physics/logs/2026-03-21-pocket-wrap-suppressor-overlap-context-rules-72.txt`
   - `/Users/jonreilly/Projects/Physics/logs/2026-03-21-pocket-wrap-suppressor-overlap-context-rules-80.txt`
 - Commit status:
-  - No new commit yet in this run.
+  - Committed and pushed: `b914026` (`Validate overlap-context separators through variant limit 80`).
+  - `main` now matches `origin/main` at `b914026`.
 
 ### Exact next step
 - Probe the first deeper rung where overlap-positive membership might change, then re-check whether the same exact shell/profile separators survive that membership expansion.
