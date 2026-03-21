@@ -1650,6 +1650,31 @@ class KnownDefectionGapSignatureRow:
 
 
 @dataclass
+class PocketWrapSubtypeScanRow:
+    ensemble_name: str
+    scenario_key: str
+    style: str
+    source_name: str
+    pocket_signature: bool
+    deep_gap: float
+    pocket_gap: float
+    low_degree_gap: float
+    boundary_roughness: float
+    mirror_center_asymmetry: float
+    crosses_midline: bool
+
+
+@dataclass
+class PocketWrapSubtypeAggregateRow:
+    ensemble_name: str
+    scenario_key: str
+    dpadj_only_cases: int
+    pocket_signature_cases: int
+    styles: str
+    examples: str
+
+
+@dataclass
 class ThresholdScalingRow:
     ensemble_name: str
     threshold_name: str
@@ -16848,6 +16873,138 @@ def known_defection_gap_signature_analysis(
     return rows
 
 
+def pocket_wrap_subtype_scan_analysis(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    ensembles: tuple[tuple[str, int, int, tuple[str, ...]], ...] = (
+        ("default", 5, 3, ("walk", "mode-mix", "local-morph")),
+        ("broader", 7, 4, ("walk", "mode-mix", "local-morph")),
+    ),
+) -> tuple[list[PocketWrapSubtypeScanRow], list[PocketWrapSubtypeAggregateRow]]:
+    ge6_tree, dpadj_tree = _extended_ge6_dpadj_trees(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+    )
+    rows: list[PocketWrapSubtypeScanRow] = []
+    grouped: DefaultDict[tuple[str, str], list[PocketWrapSubtypeScanRow]] = defaultdict(list)
+
+    for (
+        ensemble_name,
+        geometry_variant_limit,
+        procedural_variant_limit,
+        procedural_styles,
+    ) in ensembles:
+        for pack_name, scenarios in benchmark_packs():
+            for scenario_name, nodes, wrap_y in scenarios:
+                if not wrap_y:
+                    continue
+                scenario_key = f"{pack_name}:{scenario_name}"
+                variant_entries: list[tuple[str, set[tuple[int, int]], str]] = []
+                for variant_name, perturbed_nodes, _node_delta in randomized_geometry_variants(
+                    pack_name,
+                    scenario_name,
+                    nodes,
+                    wrap_y,
+                    variant_limit=geometry_variant_limit,
+                ):
+                    variant_entries.append(
+                        (f"{pack_name}:{scenario_name}:{variant_name}", perturbed_nodes, "geometry")
+                    )
+                for style in tuple(dict.fromkeys(procedural_styles)):
+                    for (
+                        variant_name,
+                        perturbed_nodes,
+                        _node_delta,
+                    ) in procedural_geometry_variants(
+                        pack_name,
+                        scenario_name,
+                        nodes,
+                        wrap_y,
+                        variant_limit=procedural_variant_limit,
+                        style=style,
+                    ):
+                        variant_entries.append(
+                            (f"{pack_name}:{scenario_name}:{variant_name}", perturbed_nodes, style)
+                        )
+
+                for source_name, variant_nodes, style in variant_entries:
+                    xs, centers, spans = ordered_profile_centers_and_spans(variant_nodes)
+                    mirror_center_asymmetry, _mirror_span_asymmetry = _profile_symmetry_metrics(
+                        centers,
+                        spans,
+                    )
+                    (
+                        _actual_label,
+                        outcome,
+                        _ge6_prediction,
+                        _dpadj_prediction,
+                        _ge6_only_fraction,
+                        _ge7_core_fraction,
+                        deep_gap,
+                        pocket_gap,
+                        low_degree_gap,
+                        _boundary_gap,
+                        crosses_midline,
+                        _center_variation,
+                        _span_range,
+                    ) = _evaluate_extended_ge6_dpadj_nodes(
+                        nodes=variant_nodes,
+                        wrap_y=wrap_y,
+                        ge6_tree=ge6_tree,
+                        dpadj_tree=dpadj_tree,
+                        pack_name=pack_name,
+                        scenario_name=source_name,
+                        retained_weight=retained_weight,
+                    )
+                    if outcome != "dpadj-only":
+                        continue
+                    (
+                        _boundary_fraction,
+                        _pocket_fraction,
+                        boundary_roughness,
+                        _deep_pocket_fraction,
+                        *_rest,
+                    ) = local_shape_feature_bundle(variant_nodes, wrap_y=wrap_y)
+                    pocket_signature = (
+                        pocket_gap > 0.0
+                        and deep_gap <= 0.0
+                        and low_degree_gap <= 0.0
+                    )
+                    row = PocketWrapSubtypeScanRow(
+                        ensemble_name=ensemble_name,
+                        scenario_key=scenario_key,
+                        style=style,
+                        source_name=source_name,
+                        pocket_signature=pocket_signature,
+                        deep_gap=deep_gap,
+                        pocket_gap=pocket_gap,
+                        low_degree_gap=low_degree_gap,
+                        boundary_roughness=boundary_roughness,
+                        mirror_center_asymmetry=mirror_center_asymmetry,
+                        crosses_midline=crosses_midline,
+                    )
+                    rows.append(row)
+                    grouped[(ensemble_name, scenario_key)].append(row)
+
+    aggregate_rows: list[PocketWrapSubtypeAggregateRow] = []
+    for (ensemble_name, scenario_key), grouped_rows in grouped.items():
+        pocket_rows = [row for row in grouped_rows if row.pocket_signature]
+        aggregate_rows.append(
+            PocketWrapSubtypeAggregateRow(
+                ensemble_name=ensemble_name,
+                scenario_key=scenario_key,
+                dpadj_only_cases=len(grouped_rows),
+                pocket_signature_cases=len(pocket_rows),
+                styles=",".join(sorted({row.style for row in grouped_rows})),
+                examples=",".join(row.source_name for row in pocket_rows[:3]) or "-",
+            )
+        )
+
+    rows.sort(key=lambda row: (row.ensemble_name, row.scenario_key, row.style, row.source_name))
+    aggregate_rows.sort(key=lambda row: (row.ensemble_name, row.scenario_key))
+    return rows, aggregate_rows
+
+
 def threshold_scaling_explanation_analysis(
     ensembles: tuple[tuple[str, int, int, tuple[str, ...]], ...] = (
         ("default", 5, 3, ("walk", "mode-mix", "local-morph")),
@@ -21204,6 +21361,47 @@ def render_known_defection_gap_signature_table(
             f"{row.deep_gap:+4.2f}/{row.pocket_gap:+4.2f}/{row.low_degree_gap:+4.2f} | "
             f"{('Y' if row.crosses_midline else 'n'):<5} | "
             f"{row.source_name:<25.25}"
+        )
+    return "\n".join(lines)
+
+
+def render_pocket_wrap_subtype_scan_table(
+    rows: list[PocketWrapSubtypeScanRow],
+) -> str:
+    lines = [
+        "ensemble | scenario            | style       | pocket | deep/pocket/low | brough | asym | cross | source",
+        "---------+---------------------+-------------+--------+-----------------+--------+------+-------+---------------------------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.ensemble_name:<8} | "
+            f"{row.scenario_key:<19.19} | "
+            f"{row.style:<11} | "
+            f"{('Y' if row.pocket_signature else 'n'):<6} | "
+            f"{row.deep_gap:+4.2f}/{row.pocket_gap:+4.2f}/{row.low_degree_gap:+4.2f} | "
+            f"{row.boundary_roughness:>6.2f} | "
+            f"{row.mirror_center_asymmetry:>4.2f} | "
+            f"{('Y' if row.crosses_midline else 'n'):<5} | "
+            f"{row.source_name:<25.25}"
+        )
+    return "\n".join(lines)
+
+
+def render_pocket_wrap_subtype_aggregate_table(
+    rows: list[PocketWrapSubtypeAggregateRow],
+) -> str:
+    lines = [
+        "ensemble | scenario            | dpadj | pocket | styles              | examples",
+        "---------+---------------------+-------+--------+---------------------+-----------------------------------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.ensemble_name:<8} | "
+            f"{row.scenario_key:<19.19} | "
+            f"{row.dpadj_only_cases:>5} | "
+            f"{row.pocket_signature_cases:>6} | "
+            f"{row.styles:<19.19} | "
+            f"{row.examples:<35.35}"
         )
     return "\n".join(lines)
 
