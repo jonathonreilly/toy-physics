@@ -1,3 +1,29 @@
+## 2026-03-21 16:13 America/New_York
+
+### Current state
+- `main` is synced to `origin/main` at commit `16e8fe7`; this run is currently uncommitted with one README update and one new suppressor comparison script.
+- The active mechanism thread remains the pocket-wrap suppressor specificity line inside `base:taper-wrap` `local-morph`.
+- Added a focused row-compare runner for the pair-kill rows and logged the `variant_limit = 64` comparison for `local-morph-a`, `local-morph-v`, and `local-morph-\\x8e`.
+
+### Strongest confirmed conclusion
+- The kill trigger remains coordinate-exact deep-support overwrite, but the non-pocket pair-kill rows are not just `local-morph-a` with pocket signal removed.
+- `local-morph-v` keeps pair-kill with both overlaps while starting from positive deep/low gaps (`+0.09/+0.24`) and an extra surviving deep cell `(2,-1)`.
+- `local-morph-\\x8e` keeps pair-kill with one overlap while starting from negative pocket gap (`-0.07`), a different surviving deep cell `(2,2)`, and a wider span profile (`span=4`).
+- Shell/core context also shifts between these rows (notably shell deep/low enrichment for `local-morph-v` and lower shell pocket share for `local-morph-\\x8e`), so pocket-signature vs non-pocket presentation depends on broader shell/profile context, not a one-bit pocket toggle.
+
+### Files and results changed in this run
+- New script: [scripts/pocket_wrap_suppressor_pair_kill_row_compare.py](/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_pair_kill_row_compare.py)
+- Updated narrative: [README.md](/Users/jonreilly/Projects/Physics/README.md)
+- New log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-21-pocket-wrap-suppressor-pair-kill-row-compare-64.txt`
+
+### Exact next step
+- Quantify which shell/profile context features separate pocket-signature pair-kill (`local-morph-a`) from non-pocket pair-kill (`local-morph-v`, `local-morph-\\x8e`) while holding the same deep-overwrite trigger.
+
+### First concrete action
+- Build a small `variant_limit = 64` table over all overlap-positive `dpadj-only` rows with baseline and post-add-both shell/profile metrics, then run a tiny rule search for predicates that isolate the pocket-signature branch from the non-pocket branch.
+
+
 # Physics Autopilot Worklog
 
 This is the tracked loop-by-loop status ledger for the Physics autopilot.
