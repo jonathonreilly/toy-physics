@@ -1,7 +1,8 @@
 ## 2026-03-21 16:13 America/New_York
 
 ### Current state
-- `main` is synced to `origin/main` at commit `16e8fe7`; this run is currently uncommitted with one README update and one new suppressor comparison script.
+- This run produced commit `1efe351` on `main` (`Compare suppressor pair-kill rows by context`).
+- Push to `origin/main` failed in this environment due DNS/network restriction (`Could not resolve host: github.com`), so local `main` is now ahead until push succeeds.
 - The active mechanism thread remains the pocket-wrap suppressor specificity line inside `base:taper-wrap` `local-morph`.
 - Added a focused row-compare runner for the pair-kill rows and logged the `variant_limit = 64` comparison for `local-morph-a`, `local-morph-v`, and `local-morph-\\x8e`.
 
@@ -14,6 +15,7 @@
 ### Files and results changed in this run
 - New script: [scripts/pocket_wrap_suppressor_pair_kill_row_compare.py](/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_pair_kill_row_compare.py)
 - Updated narrative: [README.md](/Users/jonreilly/Projects/Physics/README.md)
+- Commit: `1efe351` (local on `main`, not pushed from this environment)
 - New log:
   - `/Users/jonreilly/Projects/Physics/logs/2026-03-21-pocket-wrap-suppressor-pair-kill-row-compare-64.txt`
 
