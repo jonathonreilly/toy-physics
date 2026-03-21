@@ -1760,6 +1760,19 @@ class PocketWrapLocalMorphColumnComparisonRow:
 
 
 @dataclass
+class PocketWrapLocalMorphTransplantRow:
+    comparison_kind: str
+    transplant_kind: str
+    outcome: str
+    pocket_signature: bool
+    deep_gap: float
+    pocket_gap: float
+    low_degree_gap: float
+    boundary_roughness: float
+    crosses_midline: bool
+
+
+@dataclass
 class ThresholdScalingRow:
     ensemble_name: str
     threshold_name: str
@@ -17675,6 +17688,202 @@ def pocket_wrap_local_morph_column_comparison_analysis(
     return rows
 
 
+def pocket_wrap_local_morph_transplant_analysis(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    variant_limit: int = 16,
+) -> list[PocketWrapLocalMorphTransplantRow]:
+    ge6_tree, dpadj_tree = _extended_ge6_dpadj_trees(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+    )
+    nodes, wrap_y = scenario_by_name("base", "taper-wrap")
+    variant_rows: list[
+        tuple[
+            str,
+            set[tuple[int, int]],
+            PocketWrapLocalMorphRow,
+            tuple[int, ...],
+            dict[int, tuple[int, int]],
+        ]
+    ] = []
+
+    for variant_name, perturbed_nodes, _node_delta in procedural_geometry_variants(
+        "base",
+        "taper-wrap",
+        nodes,
+        wrap_y,
+        variant_limit=variant_limit,
+        style="local-morph",
+    ):
+        source_name = f"base:taper-wrap:{variant_name}"
+        xs, centers, spans = ordered_profile_centers_and_spans(perturbed_nodes)
+        interval_profile = column_interval_profile(perturbed_nodes)
+        mirror_center_asymmetry, _mirror_span_asymmetry = _profile_symmetry_metrics(
+            centers,
+            spans,
+        )
+        (
+            _actual_label,
+            outcome,
+            _ge6_prediction,
+            _dpadj_prediction,
+            _ge6_only_fraction,
+            _ge7_core_fraction,
+            deep_gap,
+            pocket_gap,
+            low_degree_gap,
+            _boundary_gap,
+            crosses_midline,
+            _center_variation,
+            _span_range,
+        ) = _evaluate_extended_ge6_dpadj_nodes(
+            nodes=perturbed_nodes,
+            wrap_y=wrap_y,
+            ge6_tree=ge6_tree,
+            dpadj_tree=dpadj_tree,
+            pack_name="base",
+            scenario_name=source_name,
+            retained_weight=retained_weight,
+        )
+        (
+            _boundary_fraction,
+            _pocket_fraction,
+            boundary_roughness,
+            _deep_pocket_fraction,
+            *_rest,
+        ) = local_shape_feature_bundle(perturbed_nodes, wrap_y=wrap_y)
+        row = PocketWrapLocalMorphRow(
+            variant_limit=variant_limit,
+            source_name=source_name,
+            outcome=outcome,
+            pocket_positive=pocket_gap > 0.0,
+            pocket_signature=(pocket_gap > 0.0 and deep_gap <= 0.0 and low_degree_gap <= 0.0),
+            deep_gap=deep_gap,
+            pocket_gap=pocket_gap,
+            low_degree_gap=low_degree_gap,
+            boundary_roughness=boundary_roughness,
+            mirror_center_asymmetry=mirror_center_asymmetry,
+            crosses_midline=crosses_midline,
+        )
+        variant_rows.append((source_name, perturbed_nodes, row, xs, interval_profile))
+
+    target_entry = next(
+        entry
+        for entry in variant_rows
+        if entry[2].outcome == "dpadj-only" and entry[2].pocket_signature
+    )
+    _target_source, target_nodes, target_row, target_xs, target_profile = target_entry
+
+    def comparison_key(
+        entry: tuple[str, set[tuple[int, int]], PocketWrapLocalMorphRow, tuple[int, ...], dict[int, tuple[int, int]]],
+    ) -> tuple[float, int, str]:
+        _source_name, compare_nodes, compare_row, _xs, _profile = entry
+        metric_distance = (
+            abs(compare_row.deep_gap - target_row.deep_gap)
+            + abs(compare_row.pocket_gap - target_row.pocket_gap)
+            + abs(compare_row.low_degree_gap - target_row.low_degree_gap)
+            + abs(compare_row.boundary_roughness - target_row.boundary_roughness)
+            + abs(compare_row.mirror_center_asymmetry - target_row.mirror_center_asymmetry)
+        )
+        node_distance = len(target_nodes.symmetric_difference(compare_nodes))
+        return (metric_distance, node_distance, compare_row.source_name)
+
+    comparison_groups: list[tuple[str, Callable[[PocketWrapLocalMorphRow], bool]]] = [
+        (
+            "same-brough-asym noncross pocket-sig",
+            lambda row: row.source_name != target_row.source_name
+            and row.pocket_signature
+            and not row.crosses_midline
+            and abs(row.boundary_roughness - target_row.boundary_roughness) <= 1e-9
+            and abs(row.mirror_center_asymmetry - target_row.mirror_center_asymmetry) <= 1e-9,
+        ),
+        (
+            "crossing pocket-sig near-miss",
+            lambda row: row.source_name != target_row.source_name
+            and row.pocket_signature
+            and row.crosses_midline
+            and row.outcome != "dpadj-only",
+        ),
+    ]
+
+    rows: list[PocketWrapLocalMorphTransplantRow] = []
+    for comparison_kind, predicate in comparison_groups:
+        matching_entries = [entry for entry in variant_rows if predicate(entry[2])]
+        if not matching_entries:
+            continue
+        _source_name, _compare_nodes, _compare_row, compare_xs, compare_profile = min(
+            matching_entries,
+            key=comparison_key,
+        )
+        changed_columns = [
+            x
+            for x in target_xs
+            if target_profile[x] != compare_profile[x]
+        ]
+        transplant_profiles: list[tuple[str, dict[int, tuple[int, int]]]] = []
+        full_profile = dict(compare_profile)
+        for x in changed_columns:
+            full_profile[x] = target_profile[x]
+        transplant_profiles.append(("full", full_profile))
+        for omit_x in changed_columns:
+            partial_profile = dict(compare_profile)
+            for x in changed_columns:
+                if x == omit_x:
+                    continue
+                partial_profile[x] = target_profile[x]
+            transplant_profiles.append((f"omit-x{omit_x}", partial_profile))
+
+        for transplant_kind, profile in transplant_profiles:
+            transplanted_nodes = build_nodes_from_interval_profile(profile)
+            (
+                _actual_label,
+                outcome,
+                _ge6_prediction,
+                _dpadj_prediction,
+                _ge6_only_fraction,
+                _ge7_core_fraction,
+                deep_gap,
+                pocket_gap,
+                low_degree_gap,
+                _boundary_gap,
+                crosses_midline,
+                _center_variation,
+                _span_range,
+            ) = _evaluate_extended_ge6_dpadj_nodes(
+                nodes=transplanted_nodes,
+                wrap_y=wrap_y,
+                ge6_tree=ge6_tree,
+                dpadj_tree=dpadj_tree,
+                pack_name="base",
+                scenario_name=f"{comparison_kind}:{transplant_kind}",
+                retained_weight=retained_weight,
+            )
+            (
+                _boundary_fraction,
+                _pocket_fraction,
+                boundary_roughness,
+                _deep_pocket_fraction,
+                *_rest,
+            ) = local_shape_feature_bundle(transplanted_nodes, wrap_y=wrap_y)
+            rows.append(
+                PocketWrapLocalMorphTransplantRow(
+                    comparison_kind=comparison_kind,
+                    transplant_kind=transplant_kind,
+                    outcome=outcome,
+                    pocket_signature=(pocket_gap > 0.0 and deep_gap <= 0.0 and low_degree_gap <= 0.0),
+                    deep_gap=deep_gap,
+                    pocket_gap=pocket_gap,
+                    low_degree_gap=low_degree_gap,
+                    boundary_roughness=boundary_roughness,
+                    crosses_midline=crosses_midline,
+                )
+            )
+
+    rows.sort(key=lambda row: (row.comparison_kind, row.transplant_kind))
+    return rows
+
+
 def threshold_scaling_explanation_analysis(
     ensembles: tuple[tuple[str, int, int, tuple[str, ...]], ...] = (
         ("default", 5, 3, ("walk", "mode-mix", "local-morph")),
@@ -22202,6 +22411,26 @@ def render_pocket_wrap_local_morph_column_comparison_table(
             f"{row.high_delta:>6} | "
             f"{row.center_delta:>8.1f} | "
             f"{row.span_delta:>5}"
+        )
+    return "\n".join(lines)
+
+
+def render_pocket_wrap_local_morph_transplant_table(
+    rows: list[PocketWrapLocalMorphTransplantRow],
+) -> str:
+    lines = [
+        "comparison                   | transplant | outcome     | psig | deep/pocket/low | brough | cross",
+        "-----------------------------+------------+-------------+------+-----------------+--------+------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.comparison_kind:<27.27} | "
+            f"{row.transplant_kind:<10.10} | "
+            f"{row.outcome:<11} | "
+            f"{('Y' if row.pocket_signature else 'n'):<4} | "
+            f"{row.deep_gap:+4.2f}/{row.pocket_gap:+4.2f}/{row.low_degree_gap:+4.2f} | "
+            f"{row.boundary_roughness:>6.2f} | "
+            f"{('Y' if row.crosses_midline else 'n'):<4}"
         )
     return "\n".join(lines)
 
