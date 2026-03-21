@@ -1824,6 +1824,19 @@ class PocketWrapSuppressorCoverageRow:
 
 
 @dataclass
+class PocketWrapSuppressorInjectionRow:
+    state_kind: str
+    outcome: str
+    deep_gap: float
+    pocket_gap: float
+    low_degree_gap: float
+    pocket_cells: str
+    deep_cells: str
+    suppressor_overlap: str
+    suppressor_count: int
+
+
+@dataclass
 class PocketWrapLocalMorphTransplantContextRow:
     row_kind: str
     source_name: str
@@ -18683,6 +18696,134 @@ def pocket_wrap_suppressor_coverage_analysis(
     return rows
 
 
+def pocket_wrap_suppressor_injection_analysis(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    variant_limit: int = 16,
+    suppressor_nodes: tuple[tuple[int, int], ...] = ((1, 0), (4, 0)),
+) -> list[PocketWrapSuppressorInjectionRow]:
+    ge6_tree, dpadj_tree = _extended_ge6_dpadj_trees(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+    )
+    nodes, wrap_y = scenario_by_name("base", "taper-wrap")
+    variant_rows: list[tuple[str, set[tuple[int, int]], PocketWrapLocalMorphRow]] = []
+
+    for variant_name, perturbed_nodes, _node_delta in procedural_geometry_variants(
+        "base",
+        "taper-wrap",
+        nodes,
+        wrap_y,
+        variant_limit=variant_limit,
+        style="local-morph",
+    ):
+        source_name = f"base:taper-wrap:{variant_name}"
+        xs, centers, spans = ordered_profile_centers_and_spans(perturbed_nodes)
+        mirror_center_asymmetry, _mirror_span_asymmetry = _profile_symmetry_metrics(
+            centers,
+            spans,
+        )
+        (
+            _actual_label,
+            outcome,
+            _ge6_prediction,
+            _dpadj_prediction,
+            _ge6_only_fraction,
+            _ge7_core_fraction,
+            deep_gap,
+            pocket_gap,
+            low_degree_gap,
+            _boundary_gap,
+            crosses_midline,
+            _center_variation,
+            _span_range,
+        ) = _evaluate_extended_ge6_dpadj_nodes(
+            nodes=perturbed_nodes,
+            wrap_y=wrap_y,
+            ge6_tree=ge6_tree,
+            dpadj_tree=dpadj_tree,
+            pack_name="base",
+            scenario_name=source_name,
+            retained_weight=retained_weight,
+        )
+        (
+            _boundary_fraction,
+            _pocket_fraction,
+            boundary_roughness,
+            _deep_pocket_fraction,
+            *_rest,
+        ) = local_shape_feature_bundle(perturbed_nodes, wrap_y=wrap_y)
+        row = PocketWrapLocalMorphRow(
+            variant_limit=variant_limit,
+            source_name=source_name,
+            outcome=outcome,
+            pocket_positive=pocket_gap > 0.0,
+            pocket_signature=(pocket_gap > 0.0 and deep_gap <= 0.0 and low_degree_gap <= 0.0),
+            deep_gap=deep_gap,
+            pocket_gap=pocket_gap,
+            low_degree_gap=low_degree_gap,
+            boundary_roughness=boundary_roughness,
+            mirror_center_asymmetry=mirror_center_asymmetry,
+            crosses_midline=crosses_midline,
+        )
+        variant_rows.append((source_name, perturbed_nodes, row))
+
+    _target_source, target_nodes, target_row = next(
+        entry
+        for entry in variant_rows
+        if entry[2].outcome == "dpadj-only" and entry[2].pocket_signature
+    )
+
+    def evaluate_state(state_kind: str, analysis_nodes: set[tuple[int, int]]) -> PocketWrapSuppressorInjectionRow:
+        (
+            _actual_label,
+            outcome,
+            _ge6_prediction,
+            _dpadj_prediction,
+            _ge6_only_fraction,
+            _ge7_core_fraction,
+            deep_gap,
+            pocket_gap,
+            low_degree_gap,
+            _boundary_gap,
+            _crosses_midline,
+            _center_variation,
+            _span_range,
+        ) = _evaluate_extended_ge6_dpadj_nodes(
+            nodes=analysis_nodes,
+            wrap_y=wrap_y,
+            ge6_tree=ge6_tree,
+            dpadj_tree=dpadj_tree,
+            pack_name="base",
+            scenario_name=state_kind,
+            retained_weight=retained_weight,
+        )
+        pocket_cells, deep_cells = pocket_candidate_cells(analysis_nodes, wrap_y=wrap_y)
+        suppressor_overlap = sorted(set(suppressor_nodes).intersection(pocket_cells))
+        return PocketWrapSuppressorInjectionRow(
+            state_kind=state_kind,
+            outcome=outcome,
+            deep_gap=deep_gap,
+            pocket_gap=pocket_gap,
+            low_degree_gap=low_degree_gap,
+            pocket_cells=",".join(f"({x},{y})" for x, y in sorted(pocket_cells)) or "-",
+            deep_cells=",".join(f"({x},{y})" for x, y in sorted(deep_cells)) or "-",
+            suppressor_overlap=",".join(f"({x},{y})" for x, y in suppressor_overlap) or "-",
+            suppressor_count=sum(1 for node in suppressor_nodes if node in analysis_nodes),
+        )
+
+    states: list[tuple[str, set[tuple[int, int]]]] = [("target-base", set(target_nodes))]
+    for node in suppressor_nodes:
+        add_single = set(target_nodes)
+        add_single.add(node)
+        states.append((f"target-add-{node[0]}-{node[1]}", add_single))
+    add_both = set(target_nodes)
+    add_both.update(suppressor_nodes)
+    states.append(("target-add-both", add_both))
+
+    return [evaluate_state(state_kind, analysis_nodes) for state_kind, analysis_nodes in states]
+
+
 def pocket_wrap_local_morph_transplant_context_analysis(
     retained_weight: float = 1.0,
     mode_retained_weight: float | None = None,
@@ -24152,6 +24293,26 @@ def render_pocket_wrap_suppressor_coverage_table(
             f"{('Y' if row.single_drop_rescue else 'n'):<4} | "
             f"{('Y' if row.pair_rescue else 'n'):<4} | "
             f"{('Y' if row.target_gap_match else 'n'):<3}"
+        )
+    return "\n".join(lines)
+
+
+def render_pocket_wrap_suppressor_injection_table(
+    rows: list[PocketWrapSuppressorInjectionRow],
+) -> str:
+    lines = [
+        "state                         | outcome     | deep/pocket/low | pocket cells        | deep cells        | overlap         | n",
+        "------------------------------+-------------+-----------------+---------------------+-------------------+-----------------+---",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.state_kind:<28.28} | "
+            f"{row.outcome:<11} | "
+            f"{row.deep_gap:+4.2f}/{row.pocket_gap:+4.2f}/{row.low_degree_gap:+4.2f} | "
+            f"{row.pocket_cells:<19.19} | "
+            f"{row.deep_cells:<17.17} | "
+            f"{row.suppressor_overlap:<15.15} | "
+            f"{row.suppressor_count:>1}"
         )
     return "\n".join(lines)
 
