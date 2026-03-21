@@ -1634,6 +1634,22 @@ class KnownDefectionTriggerCoverageRow:
 
 
 @dataclass
+class KnownDefectionGapSignatureRow:
+    ensemble_name: str
+    scenario_name: str
+    style: str
+    source_name: str
+    trigger_family: str
+    center_variation: float
+    boundary_roughness: float
+    mirror_center_asymmetry: float
+    deep_gap: float
+    pocket_gap: float
+    low_degree_gap: float
+    crosses_midline: bool
+
+
+@dataclass
 class ThresholdScalingRow:
     ensemble_name: str
     threshold_name: str
@@ -16724,6 +16740,114 @@ def known_defection_trigger_coverage_analysis(
     return rows
 
 
+def known_defection_gap_signature_analysis(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    scenario_names: tuple[str, ...] = ("taper-wrap", "skew-wrap"),
+    ensembles: tuple[tuple[str, int, int, tuple[str, ...]], ...] = (
+        ("default", 5, 3, ("walk", "mode-mix", "local-morph")),
+        ("broader", 7, 4, ("walk", "mode-mix", "local-morph")),
+    ),
+) -> list[KnownDefectionGapSignatureRow]:
+    ge6_tree, dpadj_tree = _extended_ge6_dpadj_trees(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+    )
+    rows: list[KnownDefectionGapSignatureRow] = []
+
+    for (
+        ensemble_name,
+        geometry_variant_limit,
+        procedural_variant_limit,
+        procedural_styles,
+    ) in ensembles:
+        for scenario_name in scenario_names:
+            nodes, wrap_y = scenario_by_name("base", scenario_name)
+            variant_entries: list[tuple[str, set[tuple[int, int]], str]] = []
+            for variant_name, perturbed_nodes, _node_delta in randomized_geometry_variants(
+                "base",
+                scenario_name,
+                nodes,
+                wrap_y,
+                variant_limit=geometry_variant_limit,
+            ):
+                variant_entries.append((f"base:{scenario_name}:{variant_name}", perturbed_nodes, "geometry"))
+            for style in tuple(dict.fromkeys(procedural_styles)):
+                for variant_name, perturbed_nodes, _node_delta in procedural_geometry_variants(
+                    "base",
+                    scenario_name,
+                    nodes,
+                    wrap_y,
+                    variant_limit=procedural_variant_limit,
+                    style=style,
+                ):
+                    variant_entries.append((f"base:{scenario_name}:{variant_name}", perturbed_nodes, style))
+
+            for source_name, variant_nodes, style in variant_entries:
+                xs, centers, spans = ordered_profile_centers_and_spans(variant_nodes)
+                mirror_center_asymmetry, _mirror_span_asymmetry = _profile_symmetry_metrics(
+                    centers,
+                    spans,
+                )
+                (
+                    _actual_label,
+                    outcome,
+                    _ge6_prediction,
+                    _dpadj_prediction,
+                    _ge6_only_fraction,
+                    _ge7_core_fraction,
+                    deep_gap,
+                    pocket_gap,
+                    low_degree_gap,
+                    _boundary_gap,
+                    crosses_midline,
+                    center_variation,
+                    _span_range,
+                ) = _evaluate_extended_ge6_dpadj_nodes(
+                    nodes=variant_nodes,
+                    wrap_y=wrap_y,
+                    ge6_tree=ge6_tree,
+                    dpadj_tree=dpadj_tree,
+                    pack_name="base",
+                    scenario_name=source_name,
+                    retained_weight=retained_weight,
+                )
+                if outcome != "dpadj-only":
+                    continue
+                (
+                    _boundary_fraction,
+                    _pocket_fraction,
+                    boundary_roughness,
+                    _deep_pocket_fraction,
+                    *_rest,
+                ) = local_shape_feature_bundle(variant_nodes, wrap_y=wrap_y)
+                if scenario_name == "taper-wrap" and style == "geometry":
+                    trigger_family = "jump-asymmetric"
+                elif scenario_name == "taper-wrap":
+                    trigger_family = "pocket-wrap"
+                else:
+                    trigger_family = "roughness-floor"
+                rows.append(
+                    KnownDefectionGapSignatureRow(
+                        ensemble_name=ensemble_name,
+                        scenario_name=scenario_name,
+                        style=style,
+                        source_name=source_name,
+                        trigger_family=trigger_family,
+                        center_variation=center_variation,
+                        boundary_roughness=boundary_roughness,
+                        mirror_center_asymmetry=mirror_center_asymmetry,
+                        deep_gap=deep_gap,
+                        pocket_gap=pocket_gap,
+                        low_degree_gap=low_degree_gap,
+                        crosses_midline=crosses_midline,
+                    )
+                )
+
+    rows.sort(key=lambda row: (row.ensemble_name, row.scenario_name, row.style, row.source_name))
+    return rows
+
+
 def threshold_scaling_explanation_analysis(
     ensembles: tuple[tuple[str, int, int, tuple[str, ...]], ...] = (
         ("default", 5, 3, ("walk", "mode-mix", "local-morph")),
@@ -21057,6 +21181,29 @@ def render_known_defection_trigger_coverage_table(
             f"{row.mean_boundary_roughness:>6.2f} | "
             f"{row.mean_mirror_center_asymmetry:>4.2f} | "
             f"{row.crossing_cases:>4}"
+        )
+    return "\n".join(lines)
+
+
+def render_known_defection_gap_signature_table(
+    rows: list[KnownDefectionGapSignatureRow],
+) -> str:
+    lines = [
+        "ensemble | scenario   | style       | family          | cvar | brough | asym | deep/pocket/low | cross | source",
+        "---------+------------+-------------+-----------------+------+--------+------+-----------------+-------+---------------------------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.ensemble_name:<8} | "
+            f"{row.scenario_name:<10} | "
+            f"{row.style:<11} | "
+            f"{row.trigger_family:<15} | "
+            f"{row.center_variation:>4.1f} | "
+            f"{row.boundary_roughness:>6.2f} | "
+            f"{row.mirror_center_asymmetry:>4.2f} | "
+            f"{row.deep_gap:+4.2f}/{row.pocket_gap:+4.2f}/{row.low_degree_gap:+4.2f} | "
+            f"{('Y' if row.crosses_midline else 'n'):<5} | "
+            f"{row.source_name:<25.25}"
         )
     return "\n".join(lines)
 
