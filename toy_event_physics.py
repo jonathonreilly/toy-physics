@@ -27,7 +27,7 @@ import heapq
 import itertools
 import math
 import random
-from typing import Callable, DefaultDict
+from typing import Callable, DefaultDict, cast
 
 
 @dataclass
@@ -1770,6 +1770,31 @@ class PocketWrapLocalMorphTransplantRow:
     low_degree_gap: float
     boundary_roughness: float
     crosses_midline: bool
+
+
+@dataclass
+class PocketWrapLocalMorphTransplantContextRow:
+    row_kind: str
+    source_name: str
+    comparison_kind: str
+    outcome: str
+    deep_gap: float
+    pocket_gap: float
+    low_degree_gap: float
+    ge6_only_fraction: float
+    ge7_core_fraction: float
+    shell_deep_fraction: float
+    core_deep_fraction: float
+    shell_pocket_fraction: float
+    core_pocket_fraction: float
+    shell_low_degree_fraction: float
+    core_low_degree_fraction: float
+    shell_boundary_deficit_mean: float
+    core_boundary_deficit_mean: float
+    shell_node_count: int
+    core_node_count: int
+    deep_shell_count: int
+    deep_core_count: int
 
 
 @dataclass
@@ -17884,6 +17909,313 @@ def pocket_wrap_local_morph_transplant_analysis(
     return rows
 
 
+def pocket_wrap_local_morph_transplant_context_analysis(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    variant_limit: int = 16,
+) -> list[PocketWrapLocalMorphTransplantContextRow]:
+    ge6_tree, dpadj_tree = _extended_ge6_dpadj_trees(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+    )
+    nodes, wrap_y = scenario_by_name("base", "taper-wrap")
+    variant_rows: list[
+        tuple[
+            str,
+            set[tuple[int, int]],
+            PocketWrapLocalMorphRow,
+            tuple[int, ...],
+            dict[int, tuple[int, int]],
+        ]
+    ] = []
+
+    for variant_name, perturbed_nodes, _node_delta in procedural_geometry_variants(
+        "base",
+        "taper-wrap",
+        nodes,
+        wrap_y,
+        variant_limit=variant_limit,
+        style="local-morph",
+    ):
+        source_name = f"base:taper-wrap:{variant_name}"
+        xs, centers, spans = ordered_profile_centers_and_spans(perturbed_nodes)
+        interval_profile = column_interval_profile(perturbed_nodes)
+        mirror_center_asymmetry, _mirror_span_asymmetry = _profile_symmetry_metrics(
+            centers,
+            spans,
+        )
+        (
+            _actual_label,
+            outcome,
+            _ge6_prediction,
+            _dpadj_prediction,
+            ge6_only_fraction,
+            ge7_core_fraction,
+            deep_gap,
+            pocket_gap,
+            low_degree_gap,
+            _boundary_gap,
+            crosses_midline,
+            _center_variation,
+            _span_range,
+        ) = _evaluate_extended_ge6_dpadj_nodes(
+            nodes=perturbed_nodes,
+            wrap_y=wrap_y,
+            ge6_tree=ge6_tree,
+            dpadj_tree=dpadj_tree,
+            pack_name="base",
+            scenario_name=source_name,
+            retained_weight=retained_weight,
+        )
+        (
+            _boundary_fraction,
+            _pocket_fraction,
+            boundary_roughness,
+            _deep_pocket_fraction,
+            *_rest,
+        ) = local_shape_feature_bundle(perturbed_nodes, wrap_y=wrap_y)
+        row = PocketWrapLocalMorphRow(
+            variant_limit=variant_limit,
+            source_name=source_name,
+            outcome=outcome,
+            pocket_positive=pocket_gap > 0.0,
+            pocket_signature=(pocket_gap > 0.0 and deep_gap <= 0.0 and low_degree_gap <= 0.0),
+            deep_gap=deep_gap,
+            pocket_gap=pocket_gap,
+            low_degree_gap=low_degree_gap,
+            boundary_roughness=boundary_roughness,
+            mirror_center_asymmetry=mirror_center_asymmetry,
+            crosses_midline=crosses_midline,
+        )
+        variant_rows.append((source_name, perturbed_nodes, row, xs, interval_profile))
+
+    target_entry = next(
+        entry
+        for entry in variant_rows
+        if entry[2].outcome == "dpadj-only" and entry[2].pocket_signature
+    )
+    _target_source, target_nodes, target_row, target_xs, target_profile = target_entry
+
+    def comparison_key(
+        entry: tuple[str, set[tuple[int, int]], PocketWrapLocalMorphRow, tuple[int, ...], dict[int, tuple[int, int]]],
+    ) -> tuple[float, int, str]:
+        _source_name, compare_nodes, compare_row, _xs, _profile = entry
+        metric_distance = (
+            abs(compare_row.deep_gap - target_row.deep_gap)
+            + abs(compare_row.pocket_gap - target_row.pocket_gap)
+            + abs(compare_row.low_degree_gap - target_row.low_degree_gap)
+            + abs(compare_row.boundary_roughness - target_row.boundary_roughness)
+            + abs(compare_row.mirror_center_asymmetry - target_row.mirror_center_asymmetry)
+        )
+        node_distance = len(target_nodes.symmetric_difference(compare_nodes))
+        return (metric_distance, node_distance, compare_row.source_name)
+
+    comparison_groups: list[tuple[str, Callable[[PocketWrapLocalMorphRow], bool]]] = [
+        (
+            "same-brough-asym noncross pocket-sig",
+            lambda row: row.source_name != target_row.source_name
+            and row.pocket_signature
+            and not row.crosses_midline
+            and abs(row.boundary_roughness - target_row.boundary_roughness) <= 1e-9
+            and abs(row.mirror_center_asymmetry - target_row.mirror_center_asymmetry) <= 1e-9,
+        ),
+        (
+            "crossing pocket-sig near-miss",
+            lambda row: row.source_name != target_row.source_name
+            and row.pocket_signature
+            and row.crosses_midline
+            and row.outcome != "dpadj-only",
+        ),
+    ]
+
+    def context_row(
+        *,
+        row_kind: str,
+        source_name: str,
+        comparison_kind: str,
+        outcome: str,
+        ge6_only_fraction: float,
+        ge7_core_fraction: float,
+        deep_gap: float,
+        pocket_gap: float,
+        low_degree_gap: float,
+        analysis_nodes: set[tuple[int, int]],
+    ) -> PocketWrapLocalMorphTransplantContextRow:
+        totals = _threshold_core_shell_group_totals(analysis_nodes, wrap_y=wrap_y)
+        shell_summary = _threshold_core_shell_summary_from_totals(
+            ensemble_name=source_name,
+            graph_count=1,
+            total_nodes=int(totals["total_nodes"]),
+            group_counts=totals["group_counts"],  # type: ignore[arg-type]
+            deep_counts=totals["deep_counts"],  # type: ignore[arg-type]
+            pocket_counts=totals["pocket_counts"],  # type: ignore[arg-type]
+            low_degree_counts=totals["low_degree_counts"],  # type: ignore[arg-type]
+            boundary_sums=totals["boundary_sums"],  # type: ignore[arg-type]
+            neighbor_degree_sums=totals["neighbor_degree_sums"],  # type: ignore[arg-type]
+        )
+        group_counts = cast(dict[str, int], totals["group_counts"])
+        deep_counts = cast(dict[str, int], totals["deep_counts"])
+        return PocketWrapLocalMorphTransplantContextRow(
+            row_kind=row_kind,
+            source_name=source_name,
+            comparison_kind=comparison_kind,
+            outcome=outcome,
+            deep_gap=deep_gap,
+            pocket_gap=pocket_gap,
+            low_degree_gap=low_degree_gap,
+            ge6_only_fraction=ge6_only_fraction,
+            ge7_core_fraction=ge7_core_fraction,
+            shell_deep_fraction=shell_summary.shell_deep_fraction,
+            core_deep_fraction=shell_summary.core_deep_fraction,
+            shell_pocket_fraction=shell_summary.shell_pocket_fraction,
+            core_pocket_fraction=shell_summary.core_pocket_fraction,
+            shell_low_degree_fraction=shell_summary.shell_low_degree_fraction,
+            core_low_degree_fraction=shell_summary.core_low_degree_fraction,
+            shell_boundary_deficit_mean=shell_summary.shell_boundary_deficit_mean,
+            core_boundary_deficit_mean=shell_summary.core_boundary_deficit_mean,
+            shell_node_count=group_counts["shell"],
+            core_node_count=group_counts["core"],
+            deep_shell_count=deep_counts["shell"],
+            deep_core_count=deep_counts["core"],
+        )
+
+    rows: list[PocketWrapLocalMorphTransplantContextRow] = []
+
+    (
+        _target_label,
+        _target_outcome,
+        _target_ge6_prediction,
+        _target_dpadj_prediction,
+        target_ge6_only_fraction,
+        target_ge7_core_fraction,
+        _target_deep_gap,
+        _target_pocket_gap,
+        _target_low_degree_gap,
+        _target_boundary_gap,
+        _target_crosses,
+        _target_center_variation,
+        _target_span_range,
+    ) = _evaluate_extended_ge6_dpadj_nodes(
+        nodes=target_nodes,
+        wrap_y=wrap_y,
+        ge6_tree=ge6_tree,
+        dpadj_tree=dpadj_tree,
+        pack_name="base",
+        scenario_name=target_row.source_name,
+        retained_weight=retained_weight,
+    )
+    rows.append(
+        context_row(
+            row_kind="target",
+            source_name=target_row.source_name,
+            comparison_kind="target",
+            outcome=target_row.outcome,
+            ge6_only_fraction=target_ge6_only_fraction,
+            ge7_core_fraction=target_ge7_core_fraction,
+            deep_gap=target_row.deep_gap,
+            pocket_gap=target_row.pocket_gap,
+            low_degree_gap=target_row.low_degree_gap,
+            analysis_nodes=target_nodes,
+        )
+    )
+
+    for comparison_kind, predicate in comparison_groups:
+        matching_entries = [entry for entry in variant_rows if predicate(entry[2])]
+        if not matching_entries:
+            continue
+        source_name, compare_nodes, compare_row, compare_xs, compare_profile = min(
+            matching_entries,
+            key=comparison_key,
+        )
+        (
+            _actual_label,
+            _outcome,
+            _ge6_prediction,
+            _dpadj_prediction,
+            compare_ge6_only_fraction,
+            compare_ge7_core_fraction,
+            _deep_gap,
+            _pocket_gap,
+            _low_degree_gap,
+            _boundary_gap,
+            _crosses_midline,
+            _center_variation,
+            _span_range,
+        ) = _evaluate_extended_ge6_dpadj_nodes(
+            nodes=compare_nodes,
+            wrap_y=wrap_y,
+            ge6_tree=ge6_tree,
+            dpadj_tree=dpadj_tree,
+            pack_name="base",
+            scenario_name=source_name,
+            retained_weight=retained_weight,
+        )
+        rows.append(
+            context_row(
+                row_kind="near-miss",
+                source_name=source_name,
+                comparison_kind=comparison_kind,
+                outcome=compare_row.outcome,
+                ge6_only_fraction=compare_ge6_only_fraction,
+                ge7_core_fraction=compare_ge7_core_fraction,
+                deep_gap=compare_row.deep_gap,
+                pocket_gap=compare_row.pocket_gap,
+                low_degree_gap=compare_row.low_degree_gap,
+                analysis_nodes=compare_nodes,
+            )
+        )
+
+        changed_columns = [
+            x
+            for x in target_xs
+            if target_profile[x] != compare_profile[x]
+        ]
+        full_profile = dict(compare_profile)
+        for x in changed_columns:
+            full_profile[x] = target_profile[x]
+        transplanted_nodes = build_nodes_from_interval_profile(full_profile)
+        (
+            _actual_label,
+            transplanted_outcome,
+            _ge6_prediction,
+            _dpadj_prediction,
+            transplanted_ge6_only_fraction,
+            transplanted_ge7_core_fraction,
+            transplanted_deep_gap,
+            transplanted_pocket_gap,
+            transplanted_low_degree_gap,
+            _boundary_gap,
+            _crosses_midline,
+            _center_variation,
+            _span_range,
+        ) = _evaluate_extended_ge6_dpadj_nodes(
+            nodes=transplanted_nodes,
+            wrap_y=wrap_y,
+            ge6_tree=ge6_tree,
+            dpadj_tree=dpadj_tree,
+            pack_name="base",
+            scenario_name=f"{comparison_kind}:full",
+            retained_weight=retained_weight,
+        )
+        rows.append(
+            context_row(
+                row_kind="transplant-full",
+                source_name=f"{source_name}:full",
+                comparison_kind=comparison_kind,
+                outcome=transplanted_outcome,
+                ge6_only_fraction=transplanted_ge6_only_fraction,
+                ge7_core_fraction=transplanted_ge7_core_fraction,
+                deep_gap=transplanted_deep_gap,
+                pocket_gap=transplanted_pocket_gap,
+                low_degree_gap=transplanted_low_degree_gap,
+                analysis_nodes=transplanted_nodes,
+            )
+        )
+
+    rows.sort(key=lambda row: (row.comparison_kind, row.row_kind, row.source_name))
+    return rows
+
+
 def threshold_scaling_explanation_analysis(
     ensembles: tuple[tuple[str, int, int, tuple[str, ...]], ...] = (
         ("default", 5, 3, ("walk", "mode-mix", "local-morph")),
@@ -22431,6 +22763,29 @@ def render_pocket_wrap_local_morph_transplant_table(
             f"{row.deep_gap:+4.2f}/{row.pocket_gap:+4.2f}/{row.low_degree_gap:+4.2f} | "
             f"{row.boundary_roughness:>6.2f} | "
             f"{('Y' if row.crosses_midline else 'n'):<4}"
+        )
+    return "\n".join(lines)
+
+
+def render_pocket_wrap_local_morph_transplant_context_table(
+    rows: list[PocketWrapLocalMorphTransplantContextRow],
+) -> str:
+    lines = [
+        "kind            | comparison                   | outcome     | deep/pocket/low | ge6/ge7 | shell/core nodes | shell/core deep | shell/core pocket | shell/core low | source",
+        "----------------+-----------------------------+-------------+-----------------+---------+------------------+-----------------+-------------------+----------------+---------------------------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.row_kind:<14.14} | "
+            f"{row.comparison_kind:<27.27} | "
+            f"{row.outcome:<11} | "
+            f"{row.deep_gap:+4.2f}/{row.pocket_gap:+4.2f}/{row.low_degree_gap:+4.2f} | "
+            f"{row.ge6_only_fraction:>4.2f}/{row.ge7_core_fraction:>4.2f} | "
+            f"{row.shell_node_count:>4}/{row.core_node_count:<4} | "
+            f"{row.deep_shell_count:>3}/{row.deep_core_count:<3} | "
+            f"{row.shell_pocket_fraction:>4.2f}/{row.core_pocket_fraction:>4.2f} | "
+            f"{row.shell_low_degree_fraction:>4.2f}/{row.core_low_degree_fraction:>4.2f} | "
+            f"{row.source_name:<25.25}"
         )
     return "\n".join(lines)
 
