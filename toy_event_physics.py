@@ -1339,6 +1339,77 @@ class ThresholdCoreShellOffenderRow:
 
 
 @dataclass
+class TaperWrapShellSweepRow:
+    mode: str
+    amplitude: float
+    signature: str
+    turning_points: int
+    max_step_fraction: float
+    regime: str
+    outcome: str
+    ge6_prediction: str
+    dpadj_prediction: str
+    ge6_correct: bool
+    dpadj_correct: bool
+    ge7_core_fraction: float
+    ge6_only_fraction: float
+    deep_gap: float
+    pocket_gap: float
+    low_degree_gap: float
+    boundary_gap: float
+    center_range: float
+    center_variation: float
+    span_range: float
+    crosses_midline: bool
+
+
+@dataclass
+class TaperWrapShellSweepAggregateRow:
+    mode: str
+    cases: int
+    dpadj_only_cases: int
+    ge6_only_cases: int
+    both_cases: int
+    neither_cases: int
+    dpadj_amplitudes: str
+    max_low_degree_gap: float
+    max_pocket_gap: float
+    max_deep_gap: float
+
+
+@dataclass
+class TaperWrapOffenderInterpolationRow:
+    target_variant: str
+    alpha: float
+    regime: str
+    outcome: str
+    ge6_prediction: str
+    dpadj_prediction: str
+    ge6_only_fraction: float
+    ge7_core_fraction: float
+    deep_gap: float
+    pocket_gap: float
+    low_degree_gap: float
+    boundary_gap: float
+    center_variation: float
+    span_range: float
+    crosses_midline: bool
+
+
+@dataclass
+class TaperWrapOffenderInterpolationAggregateRow:
+    target_variant: str
+    dpadj_only_cases: int
+    ge6_only_cases: int
+    both_cases: int
+    neither_cases: int
+    first_dpadj_alpha: float | None
+    max_low_degree_gap: float
+    max_pocket_gap: float
+    max_deep_gap: float
+
+
+@dataclass
 class ThresholdScalingRow:
     ensemble_name: str
     threshold_name: str
@@ -14673,6 +14744,430 @@ def threshold_core_shell_offender_analysis(
     return offender_rows
 
 
+def _extended_ge6_dpadj_trees(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+) -> tuple[TinyDecisionTree, TinyDecisionTree]:
+    effective_mode_retained_weight = (
+        retained_weight if mode_retained_weight is None else mode_retained_weight
+    )
+    mode_core_rows, _mode_aggregate = centerline_mode_core_sweep(
+        retained_weights=(effective_mode_retained_weight,),
+    )
+    mode_prediction_rows = geometry_prediction_rows_from_mode(
+        mode_core_rows,
+        retained_weight=effective_mode_retained_weight,
+    )
+    extended_mode_rows = [
+        row for row in mode_prediction_rows if row.rule_family == "extended"
+    ]
+    ge6_tree = learn_tiny_decision_tree(
+        extended_mode_rows,
+        ("motif_high_degree_neighbor_ge_6_fraction",),
+        2,
+    )
+    dpadj_tree = learn_tiny_decision_tree(
+        extended_mode_rows,
+        ("motif_deep_pocket_adjacent_fraction",),
+        2,
+    )
+    return ge6_tree, dpadj_tree
+
+
+def _extended_ge6_dpadj_outcome(
+    prediction_row: GeometryPredictionRow,
+    ge6_tree: TinyDecisionTree,
+    dpadj_tree: TinyDecisionTree,
+) -> tuple[str, str, str, bool, bool]:
+    actual_label = coarse_core_regime(prediction_row.regime)
+    ge6_prediction = decision_tree_predict(ge6_tree, prediction_row)
+    dpadj_prediction = decision_tree_predict(dpadj_tree, prediction_row)
+    ge6_correct = ge6_prediction == actual_label
+    dpadj_correct = dpadj_prediction == actual_label
+    if dpadj_correct and not ge6_correct:
+        outcome = "dpadj-only"
+    elif dpadj_correct and ge6_correct:
+        outcome = "both"
+    elif ge6_correct and not dpadj_correct:
+        outcome = "ge6-only"
+    else:
+        outcome = "neither"
+    return actual_label, ge6_prediction, dpadj_prediction, ge6_correct, dpadj_correct
+
+
+def taper_wrap_shell_mode_sweep(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    amplitudes: tuple[float, ...] = (-2.0, -1.5, -1.0, -0.5, 0.0, 0.5, 1.0, 1.5, 2.0),
+) -> tuple[list[TaperWrapShellSweepRow], list[TaperWrapShellSweepAggregateRow]]:
+    ge6_tree, dpadj_tree = _extended_ge6_dpadj_trees(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+    )
+
+    pack_name = "base"
+    scenario_name = "taper-wrap"
+    nodes, wrap_y = scenario_by_name(pack_name, scenario_name)
+    xs, base_centers, base_spans = ordered_profile_centers_and_spans(nodes)
+    mode_basis = centerline_mode_basis(xs)
+    extended_count_options = next(
+        count_options
+        for rule_family, count_options in family_count_options()
+        if rule_family == "extended"
+    )
+
+    rows: list[TaperWrapShellSweepRow] = []
+    aggregate_rows: list[TaperWrapShellSweepAggregateRow] = []
+    for mode_name, mode_vector in mode_basis.items():
+        mode_rows: list[TaperWrapShellSweepRow] = []
+        for amplitude in amplitudes:
+            centers = tuple(
+                center + amplitude * mode_component
+                for center, mode_component in zip(base_centers, mode_vector)
+            )
+            signature, turning_points, max_step_fraction = centerline_mode_invariants(
+                centers,
+            )
+            profile = build_profile_from_centers_and_spans(xs, centers, base_spans)
+            sweep_nodes = build_nodes_from_interval_profile(profile)
+            (
+                _mean_center,
+                center_range,
+                center_variation,
+                crosses_midline,
+                span_range,
+            ) = column_profile_geometry_metrics(sweep_nodes)
+            (
+                boundary_fraction,
+                pocket_fraction,
+                boundary_roughness,
+                deep_pocket_fraction,
+                degree_fractions,
+                motif_fractions,
+                high_degree_decomposition,
+                high_degree_threshold_fractions,
+                soft_hub_exposure,
+                neighbor_reach_threshold_fractions,
+                neighbor_leverage_threshold_fractions,
+                threshold_exposure_decomposition,
+            ) = local_shape_feature_bundle(
+                sweep_nodes,
+                wrap_y=wrap_y,
+            )
+            harmonic_cont_row, harmonic_cont_candidates = harmonic_continuous_case_analysis(
+                pack_name=pack_name,
+                scenario_name=f"{scenario_name}:{mode_name}:{amplitude:+.2f}",
+                nodes=sweep_nodes,
+                wrap_y=wrap_y,
+                rule_family="extended",
+                count_options=extended_count_options,
+                retained_weight=retained_weight,
+            )
+            case_core_rows, _aggregate_rows = derived_projection_family_case_core_analysis(
+                [harmonic_cont_row],
+                harmonic_cont_candidates,
+                projection_dimension=4,
+                generator="orthonormal",
+            )
+            case_core_row = case_core_rows[0]
+            actual_regime = projection_core_regime(case_core_row)
+            prediction_row = GeometryPredictionRow(
+                dataset_name="taper-wrap-sweep",
+                source_name=f"{pack_name}:{scenario_name}:{mode_name}:{amplitude:+.2f}",
+                rule_family="extended",
+                retained_weight=retained_weight,
+                regime=actual_regime,
+                center_range=center_range,
+                center_variation=center_variation,
+                span_range=span_range,
+                turning_points=turning_points,
+                max_step_fraction=max_step_fraction,
+                crosses_midline=crosses_midline,
+                boundary_fraction=boundary_fraction,
+                pocket_fraction=pocket_fraction,
+                boundary_roughness=boundary_roughness,
+                deep_pocket_fraction=deep_pocket_fraction,
+                degree_fractions=degree_fractions,
+                motif_fractions=motif_fractions,
+                high_degree_decomposition=high_degree_decomposition,
+                high_degree_threshold_fractions=high_degree_threshold_fractions,
+                soft_hub_exposure=soft_hub_exposure,
+                neighbor_reach_threshold_fractions=neighbor_reach_threshold_fractions,
+                neighbor_leverage_threshold_fractions=neighbor_leverage_threshold_fractions,
+                threshold_exposure_decomposition=threshold_exposure_decomposition,
+            )
+            (
+                actual_label,
+                ge6_prediction,
+                dpadj_prediction,
+                ge6_correct,
+                dpadj_correct,
+            ) = _extended_ge6_dpadj_outcome(
+                prediction_row,
+                ge6_tree,
+                dpadj_tree,
+            )
+            if dpadj_correct and not ge6_correct:
+                outcome = "dpadj-only"
+            elif dpadj_correct and ge6_correct:
+                outcome = "both"
+            elif ge6_correct and not dpadj_correct:
+                outcome = "ge6-only"
+            else:
+                outcome = "neither"
+            totals = _threshold_core_shell_group_totals(sweep_nodes, wrap_y=wrap_y)
+            shell_summary = _threshold_core_shell_summary_from_totals(
+                ensemble_name="taper-wrap",
+                graph_count=1,
+                total_nodes=int(totals["total_nodes"]),
+                group_counts=totals["group_counts"],  # type: ignore[arg-type]
+                deep_counts=totals["deep_counts"],  # type: ignore[arg-type]
+                pocket_counts=totals["pocket_counts"],  # type: ignore[arg-type]
+                low_degree_counts=totals["low_degree_counts"],  # type: ignore[arg-type]
+                boundary_sums=totals["boundary_sums"],  # type: ignore[arg-type]
+                neighbor_degree_sums=totals["neighbor_degree_sums"],  # type: ignore[arg-type]
+            )
+            mode_rows.append(
+                TaperWrapShellSweepRow(
+                    mode=mode_name,
+                    amplitude=amplitude,
+                    signature=signature,
+                    turning_points=turning_points,
+                    max_step_fraction=max_step_fraction,
+                    regime=actual_label,
+                    outcome=outcome,
+                    ge6_prediction=ge6_prediction,
+                    dpadj_prediction=dpadj_prediction,
+                    ge6_correct=ge6_correct,
+                    dpadj_correct=dpadj_correct,
+                    ge7_core_fraction=shell_summary.ge7_core_fraction,
+                    ge6_only_fraction=shell_summary.ge6_only_fraction,
+                    deep_gap=shell_summary.shell_deep_fraction - shell_summary.core_deep_fraction,
+                    pocket_gap=shell_summary.shell_pocket_fraction - shell_summary.core_pocket_fraction,
+                    low_degree_gap=shell_summary.shell_low_degree_fraction - shell_summary.core_low_degree_fraction,
+                    boundary_gap=(
+                        shell_summary.shell_boundary_deficit_mean
+                        - shell_summary.core_boundary_deficit_mean
+                    ),
+                    center_range=center_range,
+                    center_variation=center_variation,
+                    span_range=span_range,
+                    crosses_midline=crosses_midline,
+                )
+            )
+        rows.extend(mode_rows)
+        dpadj_amplitudes = ", ".join(
+            f"{row.amplitude:+.2f}" for row in mode_rows if row.outcome == "dpadj-only"
+        )
+        aggregate_rows.append(
+            TaperWrapShellSweepAggregateRow(
+                mode=mode_name,
+                cases=len(mode_rows),
+                dpadj_only_cases=sum(row.outcome == "dpadj-only" for row in mode_rows),
+                ge6_only_cases=sum(row.outcome == "ge6-only" for row in mode_rows),
+                both_cases=sum(row.outcome == "both" for row in mode_rows),
+                neither_cases=sum(row.outcome == "neither" for row in mode_rows),
+                dpadj_amplitudes=dpadj_amplitudes if dpadj_amplitudes else "-",
+                max_low_degree_gap=max(row.low_degree_gap for row in mode_rows),
+                max_pocket_gap=max(row.pocket_gap for row in mode_rows),
+                max_deep_gap=max(row.deep_gap for row in mode_rows),
+            )
+        )
+
+    rows.sort(key=lambda row: (row.mode, row.amplitude))
+    aggregate_rows.sort(key=lambda row: row.mode)
+    return rows, aggregate_rows
+
+
+def taper_wrap_offender_interpolation_sweep(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    target_variants: tuple[str, ...] = ("geometry-c", "geometry-e"),
+    alphas: tuple[float, ...] = (0.0, 0.25, 0.5, 0.75, 1.0),
+) -> tuple[list[TaperWrapOffenderInterpolationRow], list[TaperWrapOffenderInterpolationAggregateRow]]:
+    ge6_tree, dpadj_tree = _extended_ge6_dpadj_trees(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+    )
+    pack_name = "base"
+    scenario_name = "taper-wrap"
+    nodes, wrap_y = scenario_by_name(pack_name, scenario_name)
+    xs, base_centers, base_spans = ordered_profile_centers_and_spans(nodes)
+    variant_nodes = {
+        variant_name: perturbed_nodes
+        for variant_name, perturbed_nodes, _node_delta in randomized_geometry_variants(
+            pack_name,
+            scenario_name,
+            nodes,
+            wrap_y,
+            variant_limit=5,
+        )
+    }
+    extended_count_options = next(
+        count_options
+        for rule_family, count_options in family_count_options()
+        if rule_family == "extended"
+    )
+
+    rows: list[TaperWrapOffenderInterpolationRow] = []
+    aggregate_rows: list[TaperWrapOffenderInterpolationAggregateRow] = []
+    for target_variant in target_variants:
+        target_nodes = variant_nodes[target_variant]
+        target_xs, target_centers, target_spans = ordered_profile_centers_and_spans(target_nodes)
+        if target_xs != xs:
+            raise RuntimeError("taper-wrap offender interpolation requires aligned x columns.")
+        target_rows: list[TaperWrapOffenderInterpolationRow] = []
+        for alpha in alphas:
+            centers = tuple(
+                base_center + alpha * (target_center - base_center)
+                for base_center, target_center in zip(base_centers, target_centers)
+            )
+            spans = tuple(
+                int(round(base_span + alpha * (target_span - base_span)))
+                for base_span, target_span in zip(base_spans, target_spans)
+            )
+            profile = build_profile_from_centers_and_spans(xs, centers, spans)
+            sweep_nodes = build_nodes_from_interval_profile(profile)
+            (
+                _mean_center,
+                center_range,
+                center_variation,
+                crosses_midline,
+                span_range,
+            ) = column_profile_geometry_metrics(sweep_nodes)
+            (
+                boundary_fraction,
+                pocket_fraction,
+                boundary_roughness,
+                deep_pocket_fraction,
+                degree_fractions,
+                motif_fractions,
+                high_degree_decomposition,
+                high_degree_threshold_fractions,
+                soft_hub_exposure,
+                neighbor_reach_threshold_fractions,
+                neighbor_leverage_threshold_fractions,
+                threshold_exposure_decomposition,
+            ) = local_shape_feature_bundle(
+                sweep_nodes,
+                wrap_y=wrap_y,
+            )
+            harmonic_cont_row, harmonic_cont_candidates = harmonic_continuous_case_analysis(
+                pack_name=pack_name,
+                scenario_name=f"{scenario_name}:{target_variant}:{alpha:.2f}",
+                nodes=sweep_nodes,
+                wrap_y=wrap_y,
+                rule_family="extended",
+                count_options=extended_count_options,
+                retained_weight=retained_weight,
+            )
+            case_core_rows, _aggregate_rows = derived_projection_family_case_core_analysis(
+                [harmonic_cont_row],
+                harmonic_cont_candidates,
+                projection_dimension=4,
+                generator="orthonormal",
+            )
+            case_core_row = case_core_rows[0]
+            actual_regime = projection_core_regime(case_core_row)
+            prediction_row = GeometryPredictionRow(
+                dataset_name="taper-wrap-interp",
+                source_name=f"{pack_name}:{scenario_name}:{target_variant}:{alpha:.2f}",
+                rule_family="extended",
+                retained_weight=retained_weight,
+                regime=actual_regime,
+                center_range=center_range,
+                center_variation=center_variation,
+                span_range=span_range,
+                turning_points=0,
+                max_step_fraction=0.0,
+                crosses_midline=crosses_midline,
+                boundary_fraction=boundary_fraction,
+                pocket_fraction=pocket_fraction,
+                boundary_roughness=boundary_roughness,
+                deep_pocket_fraction=deep_pocket_fraction,
+                degree_fractions=degree_fractions,
+                motif_fractions=motif_fractions,
+                high_degree_decomposition=high_degree_decomposition,
+                high_degree_threshold_fractions=high_degree_threshold_fractions,
+                soft_hub_exposure=soft_hub_exposure,
+                neighbor_reach_threshold_fractions=neighbor_reach_threshold_fractions,
+                neighbor_leverage_threshold_fractions=neighbor_leverage_threshold_fractions,
+                threshold_exposure_decomposition=threshold_exposure_decomposition,
+            )
+            (
+                actual_label,
+                ge6_prediction,
+                dpadj_prediction,
+                ge6_correct,
+                dpadj_correct,
+            ) = _extended_ge6_dpadj_outcome(
+                prediction_row,
+                ge6_tree,
+                dpadj_tree,
+            )
+            if dpadj_correct and not ge6_correct:
+                outcome = "dpadj-only"
+            elif dpadj_correct and ge6_correct:
+                outcome = "both"
+            elif ge6_correct and not dpadj_correct:
+                outcome = "ge6-only"
+            else:
+                outcome = "neither"
+            totals = _threshold_core_shell_group_totals(sweep_nodes, wrap_y=wrap_y)
+            shell_summary = _threshold_core_shell_summary_from_totals(
+                ensemble_name=target_variant,
+                graph_count=1,
+                total_nodes=int(totals["total_nodes"]),
+                group_counts=totals["group_counts"],  # type: ignore[arg-type]
+                deep_counts=totals["deep_counts"],  # type: ignore[arg-type]
+                pocket_counts=totals["pocket_counts"],  # type: ignore[arg-type]
+                low_degree_counts=totals["low_degree_counts"],  # type: ignore[arg-type]
+                boundary_sums=totals["boundary_sums"],  # type: ignore[arg-type]
+                neighbor_degree_sums=totals["neighbor_degree_sums"],  # type: ignore[arg-type]
+            )
+            target_rows.append(
+                TaperWrapOffenderInterpolationRow(
+                    target_variant=target_variant,
+                    alpha=alpha,
+                    regime=actual_label,
+                    outcome=outcome,
+                    ge6_prediction=ge6_prediction,
+                    dpadj_prediction=dpadj_prediction,
+                    ge6_only_fraction=shell_summary.ge6_only_fraction,
+                    ge7_core_fraction=shell_summary.ge7_core_fraction,
+                    deep_gap=shell_summary.shell_deep_fraction - shell_summary.core_deep_fraction,
+                    pocket_gap=shell_summary.shell_pocket_fraction - shell_summary.core_pocket_fraction,
+                    low_degree_gap=shell_summary.shell_low_degree_fraction - shell_summary.core_low_degree_fraction,
+                    boundary_gap=(
+                        shell_summary.shell_boundary_deficit_mean
+                        - shell_summary.core_boundary_deficit_mean
+                    ),
+                    center_variation=center_variation,
+                    span_range=span_range,
+                    crosses_midline=crosses_midline,
+                )
+            )
+        rows.extend(target_rows)
+        dpadj_alphas = [row.alpha for row in target_rows if row.outcome == "dpadj-only"]
+        aggregate_rows.append(
+            TaperWrapOffenderInterpolationAggregateRow(
+                target_variant=target_variant,
+                dpadj_only_cases=sum(row.outcome == "dpadj-only" for row in target_rows),
+                ge6_only_cases=sum(row.outcome == "ge6-only" for row in target_rows),
+                both_cases=sum(row.outcome == "both" for row in target_rows),
+                neither_cases=sum(row.outcome == "neither" for row in target_rows),
+                first_dpadj_alpha=min(dpadj_alphas) if dpadj_alphas else None,
+                max_low_degree_gap=max(row.low_degree_gap for row in target_rows),
+                max_pocket_gap=max(row.pocket_gap for row in target_rows),
+                max_deep_gap=max(row.deep_gap for row in target_rows),
+            )
+        )
+
+    rows.sort(key=lambda row: (row.target_variant, row.alpha))
+    aggregate_rows.sort(key=lambda row: row.target_variant)
+    return rows, aggregate_rows
+
+
 def threshold_scaling_explanation_analysis(
     ensembles: tuple[tuple[str, int, int, tuple[str, ...]], ...] = (
         ("default", 5, 3, ("walk", "mode-mix", "local-morph")),
@@ -18693,6 +19188,99 @@ def render_threshold_core_shell_offender_table(
             f"{row.mean_deep_gap:+4.2f}/{row.mean_pocket_gap:+4.2f}/{row.mean_low_degree_gap:+4.2f} | "
             f"{row.mean_boundary_gap:+4.2f} | "
             f"{row.example_sources:<32.32}"
+        )
+    return "\n".join(lines)
+
+
+def render_taper_wrap_shell_sweep_aggregate_table(
+    rows: list[TaperWrapShellSweepAggregateRow],
+) -> str:
+    lines = [
+        "mode   | cases | dpadj | ge6 | both | neither | dpadj amps                 | max gaps d/p/l",
+        "-------+-------+-------+-----+------+---------+----------------------------+----------------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.mode:<5} | "
+            f"{row.cases:>5} | "
+            f"{row.dpadj_only_cases:>5} | "
+            f"{row.ge6_only_cases:>3} | "
+            f"{row.both_cases:>4} | "
+            f"{row.neither_cases:>7} | "
+            f"{row.dpadj_amplitudes:<26.26} | "
+            f"{row.max_deep_gap:+4.2f}/{row.max_pocket_gap:+4.2f}/{row.max_low_degree_gap:+4.2f}"
+        )
+    return "\n".join(lines)
+
+
+def render_taper_wrap_shell_sweep_table(
+    rows: list[TaperWrapShellSweepRow],
+    limit_per_mode: int = 12,
+) -> str:
+    lines = [
+        "mode   | amp   | outcome    | regime  | sig           | shell/core | d/p/l gaps        | bdef | cvar | cross",
+        "-------+-------+------------+---------+---------------+------------+-------------------+------+------|------",
+    ]
+    seen: DefaultDict[str, int] = defaultdict(int)
+    for row in rows:
+        if seen[row.mode] >= limit_per_mode:
+            continue
+        seen[row.mode] += 1
+        lines.append(
+            f"{row.mode:<5} | "
+            f"{row.amplitude:>+5.2f} | "
+            f"{row.outcome:<10} | "
+            f"{row.regime:<7} | "
+            f"{row.signature:<13} | "
+            f"{row.ge6_only_fraction:>4.2f}/{row.ge7_core_fraction:>4.2f} | "
+            f"{row.deep_gap:+4.2f}/{row.pocket_gap:+4.2f}/{row.low_degree_gap:+4.2f} | "
+            f"{row.boundary_gap:+4.2f} | "
+            f"{row.center_variation:>4.1f} | "
+            f"{('Y' if row.crosses_midline else 'n'):<4}"
+        )
+    return "\n".join(lines)
+
+
+def render_taper_wrap_offender_interpolation_aggregate_table(
+    rows: list[TaperWrapOffenderInterpolationAggregateRow],
+) -> str:
+    lines = [
+        "target     | dpadj | ge6 | both | neither | first dpadj | max gaps d/p/l",
+        "-----------+-------+-----+------+---------+-------------+----------------",
+    ]
+    for row in rows:
+        first_dpadj = "-" if row.first_dpadj_alpha is None else f"{row.first_dpadj_alpha:0.2f}"
+        lines.append(
+            f"{row.target_variant:<10} | "
+            f"{row.dpadj_only_cases:>5} | "
+            f"{row.ge6_only_cases:>3} | "
+            f"{row.both_cases:>4} | "
+            f"{row.neither_cases:>7} | "
+            f"{first_dpadj:>11} | "
+            f"{row.max_deep_gap:+4.2f}/{row.max_pocket_gap:+4.2f}/{row.max_low_degree_gap:+4.2f}"
+        )
+    return "\n".join(lines)
+
+
+def render_taper_wrap_offender_interpolation_table(
+    rows: list[TaperWrapOffenderInterpolationRow],
+) -> str:
+    lines = [
+        "target     | alpha | outcome    | regime  | shell/core | d/p/l gaps        | bdef | cvar | span | cross",
+        "-----------+-------+------------+---------+------------+-------------------+------+------+------+------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.target_variant:<10} | "
+            f"{row.alpha:>5.2f} | "
+            f"{row.outcome:<10} | "
+            f"{row.regime:<7} | "
+            f"{row.ge6_only_fraction:>4.2f}/{row.ge7_core_fraction:>4.2f} | "
+            f"{row.deep_gap:+4.2f}/{row.pocket_gap:+4.2f}/{row.low_degree_gap:+4.2f} | "
+            f"{row.boundary_gap:+4.2f} | "
+            f"{row.center_variation:>4.1f} | "
+            f"{row.span_range:>4.1f} | "
+            f"{('Y' if row.crosses_midline else 'n'):<4}"
         )
     return "\n".join(lines)
 
