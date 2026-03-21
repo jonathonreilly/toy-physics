@@ -1699,6 +1699,33 @@ class LocalMorphPocketLadderAggregateRow:
 
 
 @dataclass
+class PocketWrapLocalMorphRow:
+    variant_limit: int
+    source_name: str
+    outcome: str
+    pocket_positive: bool
+    pocket_signature: bool
+    deep_gap: float
+    pocket_gap: float
+    low_degree_gap: float
+    boundary_roughness: float
+    mirror_center_asymmetry: float
+    crosses_midline: bool
+
+
+@dataclass
+class PocketWrapLocalMorphRuleRow:
+    rule_text: str
+    term_count: int
+    tp: int
+    fp: int
+    fn: int
+    precision: float
+    recall: float
+    f1: float
+
+
+@dataclass
 class ThresholdScalingRow:
     ensemble_name: str
     threshold_name: str
@@ -17129,6 +17156,161 @@ def local_morph_pocket_ladder_analysis(
     return rows, aggregate_rows
 
 
+def pocket_wrap_local_morph_context_analysis(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    variant_limits: tuple[int, ...] = (4, 8, 12, 16),
+) -> tuple[list[PocketWrapLocalMorphRow], list[PocketWrapLocalMorphRuleRow]]:
+    ge6_tree, dpadj_tree = _extended_ge6_dpadj_trees(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+    )
+    nodes, wrap_y = scenario_by_name("base", "taper-wrap")
+    rows: list[PocketWrapLocalMorphRow] = []
+
+    for variant_limit in variant_limits:
+        for variant_name, perturbed_nodes, _node_delta in procedural_geometry_variants(
+            "base",
+            "taper-wrap",
+            nodes,
+            wrap_y,
+            variant_limit=variant_limit,
+            style="local-morph",
+        ):
+            source_name = f"base:taper-wrap:{variant_name}"
+            xs, centers, spans = ordered_profile_centers_and_spans(perturbed_nodes)
+            mirror_center_asymmetry, _mirror_span_asymmetry = _profile_symmetry_metrics(
+                centers,
+                spans,
+            )
+            (
+                _actual_label,
+                outcome,
+                _ge6_prediction,
+                _dpadj_prediction,
+                _ge6_only_fraction,
+                _ge7_core_fraction,
+                deep_gap,
+                pocket_gap,
+                low_degree_gap,
+                _boundary_gap,
+                crosses_midline,
+                _center_variation,
+                _span_range,
+            ) = _evaluate_extended_ge6_dpadj_nodes(
+                nodes=perturbed_nodes,
+                wrap_y=wrap_y,
+                ge6_tree=ge6_tree,
+                dpadj_tree=dpadj_tree,
+                pack_name="base",
+                scenario_name=source_name,
+                retained_weight=retained_weight,
+            )
+            (
+                _boundary_fraction,
+                _pocket_fraction,
+                boundary_roughness,
+                _deep_pocket_fraction,
+                *_rest,
+            ) = local_shape_feature_bundle(perturbed_nodes, wrap_y=wrap_y)
+            rows.append(
+                PocketWrapLocalMorphRow(
+                    variant_limit=variant_limit,
+                    source_name=source_name,
+                    outcome=outcome,
+                    pocket_positive=pocket_gap > 0.0,
+                    pocket_signature=(
+                        pocket_gap > 0.0 and deep_gap <= 0.0 and low_degree_gap <= 0.0
+                    ),
+                    deep_gap=deep_gap,
+                    pocket_gap=pocket_gap,
+                    low_degree_gap=low_degree_gap,
+                    boundary_roughness=boundary_roughness,
+                    mirror_center_asymmetry=mirror_center_asymmetry,
+                    crosses_midline=crosses_midline,
+                )
+            )
+
+    candidate_rows = [row for row in rows if row.pocket_positive]
+    positive_rows = [row for row in candidate_rows if row.outcome == "dpadj-only"]
+
+    feature_extractors: tuple[tuple[str, Callable[[PocketWrapLocalMorphRow], float]], ...] = (
+        ("crosses_midline", lambda row: 1.0 if row.crosses_midline else 0.0),
+        ("brough", lambda row: row.boundary_roughness),
+        ("pocket", lambda row: row.pocket_gap),
+        ("deep", lambda row: row.deep_gap),
+        ("low", lambda row: row.low_degree_gap),
+        ("asym", lambda row: row.mirror_center_asymmetry),
+    )
+
+    def classify_rule(
+        row: PocketWrapLocalMorphRow,
+        rule_terms: tuple[tuple[str, str, float], ...],
+    ) -> bool:
+        for feature_name, direction, threshold in rule_terms:
+            feature_value = next(
+                extractor(row)
+                for current_name, extractor in feature_extractors
+                if current_name == feature_name
+            )
+            if direction == "<=" and not (feature_value <= threshold + 1e-9):
+                return False
+            if direction == ">=" and not (feature_value >= threshold - 1e-9):
+                return False
+        return True
+
+    rule_rows: list[PocketWrapLocalMorphRuleRow] = []
+    if candidate_rows and positive_rows:
+        threshold_map: dict[str, list[float]] = {}
+        for feature_name, extractor in feature_extractors:
+            values = sorted({extractor(row) for row in candidate_rows})
+            threshold_map[feature_name] = values
+
+        evaluated_rules: dict[tuple[tuple[str, str, float], ...], PocketWrapLocalMorphRuleRow] = {}
+        for term_count in (1, 2):
+            for feature_subset in itertools.combinations(feature_extractors, term_count):
+                feature_names = [feature_name for feature_name, _extractor in feature_subset]
+                for directions in itertools.product(("<=", ">="), repeat=term_count):
+                    threshold_lists = [threshold_map[feature_name] for feature_name in feature_names]
+                    for thresholds in itertools.product(*threshold_lists):
+                        rule_terms = tuple(
+                            (feature_name, direction, threshold)
+                            for feature_name, direction, threshold in zip(
+                                feature_names, directions, thresholds
+                            )
+                        )
+                        predicted = [row for row in candidate_rows if classify_rule(row, rule_terms)]
+                        tp = sum(row.outcome == "dpadj-only" for row in predicted)
+                        fp = sum(row.outcome != "dpadj-only" for row in predicted)
+                        fn = sum(row.outcome == "dpadj-only" for row in candidate_rows) - tp
+                        if tp == 0:
+                            continue
+                        precision = tp / max(1, tp + fp)
+                        recall = tp / max(1, tp + fn)
+                        f1 = 2 * precision * recall / max(1e-12, precision + recall)
+                        rule_text = " and ".join(
+                            f"{feature_name}{direction}{threshold:.2f}"
+                            for feature_name, direction, threshold in rule_terms
+                        )
+                        evaluated_rules[rule_terms] = PocketWrapLocalMorphRuleRow(
+                            rule_text=rule_text,
+                            term_count=term_count,
+                            tp=tp,
+                            fp=fp,
+                            fn=fn,
+                            precision=precision,
+                            recall=recall,
+                            f1=f1,
+                        )
+        rule_rows = sorted(
+            evaluated_rules.values(),
+            key=lambda row: (-row.f1, row.fp, row.fn, row.term_count, row.rule_text),
+        )[:8]
+
+    rows.sort(key=lambda row: (row.variant_limit, row.source_name))
+    return rows, rule_rows
+
+
 def threshold_scaling_explanation_analysis(
     ensembles: tuple[tuple[str, int, int, tuple[str, ...]], ...] = (
         ("default", 5, 3, ("walk", "mode-mix", "local-morph")),
@@ -21566,6 +21748,49 @@ def render_local_morph_pocket_ladder_aggregate_table(
             f"{row.dpadj_only_cases:>5} | "
             f"{row.pocket_signature_cases:>6} | "
             f"{row.examples:<35.35}"
+        )
+    return "\n".join(lines)
+
+
+def render_pocket_wrap_local_morph_table(
+    rows: list[PocketWrapLocalMorphRow],
+) -> str:
+    lines = [
+        "limit | outcome     | p+ | psig | deep/pocket/low | brough | asym | cross | source",
+        "------+-------------+----+------+-----------------+--------+------+-------+---------------------------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.variant_limit:>5} | "
+            f"{row.outcome:<11} | "
+            f"{('Y' if row.pocket_positive else 'n'):<2} | "
+            f"{('Y' if row.pocket_signature else 'n'):<4} | "
+            f"{row.deep_gap:+4.2f}/{row.pocket_gap:+4.2f}/{row.low_degree_gap:+4.2f} | "
+            f"{row.boundary_roughness:>6.2f} | "
+            f"{row.mirror_center_asymmetry:>4.2f} | "
+            f"{('Y' if row.crosses_midline else 'n'):<5} | "
+            f"{row.source_name:<25.25}"
+        )
+    return "\n".join(lines)
+
+
+def render_pocket_wrap_local_morph_rule_table(
+    rows: list[PocketWrapLocalMorphRuleRow],
+) -> str:
+    lines = [
+        "rule                         | terms | tp | fp | fn | prec | rec  | f1",
+        "-----------------------------+-------+----+----+----+------+------+------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.rule_text:<29.29} | "
+            f"{row.term_count:>5} | "
+            f"{row.tp:>2} | "
+            f"{row.fp:>2} | "
+            f"{row.fn:>2} | "
+            f"{row.precision:>4.2f} | "
+            f"{row.recall:>4.2f} | "
+            f"{row.f1:>4.2f}"
         )
     return "\n".join(lines)
 
