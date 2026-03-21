@@ -1860,6 +1860,42 @@ class PocketWrapSuppressorSpecificityRow:
 
 
 @dataclass
+class PocketWrapSuppressorOverlapContextRow:
+    source_name: str
+    pocket_signature: bool
+    deep_overlap_count: int
+    boundary_fraction: float
+    pocket_fraction: float
+    boundary_roughness: float
+    deep_pocket_fraction: float
+    mean_center: float
+    center_range: float
+    center_total_variation: float
+    crosses_midline: bool
+    span_range: int
+    shell_deep_fraction: float
+    core_deep_fraction: float
+    shell_pocket_fraction: float
+    core_pocket_fraction: float
+    shell_low_degree_fraction: float
+    core_low_degree_fraction: float
+    shell_boundary_deficit_mean: float
+    core_boundary_deficit_mean: float
+
+
+@dataclass
+class PocketWrapSuppressorOverlapContextRuleRow:
+    rule_text: str
+    term_count: int
+    tp: int
+    fp: int
+    fn: int
+    precision: float
+    recall: float
+    f1: float
+
+
+@dataclass
 class PocketWrapLocalMorphTransplantContextRow:
     row_kind: str
     source_name: str
@@ -19004,6 +19040,197 @@ def pocket_wrap_suppressor_specificity_analysis(
     return rows
 
 
+def pocket_wrap_suppressor_overlap_context_analysis(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    variant_limit: int = 64,
+    suppressor_nodes: tuple[tuple[int, int], ...] = ((1, 0), (4, 0)),
+) -> list[PocketWrapSuppressorOverlapContextRow]:
+    specificity_rows = pocket_wrap_suppressor_specificity_analysis(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+        variant_limit=variant_limit,
+        suppressor_nodes=suppressor_nodes,
+    )
+    specificity_by_source = {
+        row.source_name: row
+        for row in specificity_rows
+        if row.base_outcome == "dpadj-only" and row.deep_overlap_count > 0
+    }
+    if not specificity_by_source:
+        return []
+
+    nodes, wrap_y = scenario_by_name("base", "taper-wrap")
+    rows: list[PocketWrapSuppressorOverlapContextRow] = []
+    for variant_name, perturbed_nodes, _node_delta in procedural_geometry_variants(
+        "base",
+        "taper-wrap",
+        nodes,
+        wrap_y,
+        variant_limit=variant_limit,
+        style="local-morph",
+    ):
+        source_name = f"base:taper-wrap:{variant_name}"
+        specificity = specificity_by_source.get(source_name)
+        if specificity is None:
+            continue
+
+        boundary_fraction, pocket_fraction, boundary_roughness, deep_pocket_fraction, *_rest = (
+            local_shape_feature_bundle(perturbed_nodes, wrap_y=wrap_y)
+        )
+        mean_center, center_range, center_total_variation, crosses_midline, span_range = (
+            column_profile_geometry_metrics(perturbed_nodes)
+        )
+        totals = _threshold_core_shell_group_totals(perturbed_nodes, wrap_y=wrap_y)
+        shell_summary = _threshold_core_shell_summary_from_totals(
+            ensemble_name=source_name,
+            graph_count=1,
+            total_nodes=int(totals["total_nodes"]),
+            group_counts=totals["group_counts"],  # type: ignore[arg-type]
+            deep_counts=totals["deep_counts"],  # type: ignore[arg-type]
+            pocket_counts=totals["pocket_counts"],  # type: ignore[arg-type]
+            low_degree_counts=totals["low_degree_counts"],  # type: ignore[arg-type]
+            boundary_sums=totals["boundary_sums"],  # type: ignore[arg-type]
+            neighbor_degree_sums=totals["neighbor_degree_sums"],  # type: ignore[arg-type]
+        )
+        rows.append(
+            PocketWrapSuppressorOverlapContextRow(
+                source_name=source_name,
+                pocket_signature=specificity.pocket_signature,
+                deep_overlap_count=specificity.deep_overlap_count,
+                boundary_fraction=boundary_fraction,
+                pocket_fraction=pocket_fraction,
+                boundary_roughness=boundary_roughness,
+                deep_pocket_fraction=deep_pocket_fraction,
+                mean_center=mean_center,
+                center_range=center_range,
+                center_total_variation=center_total_variation,
+                crosses_midline=crosses_midline,
+                span_range=span_range,
+                shell_deep_fraction=shell_summary.shell_deep_fraction,
+                core_deep_fraction=shell_summary.core_deep_fraction,
+                shell_pocket_fraction=shell_summary.shell_pocket_fraction,
+                core_pocket_fraction=shell_summary.core_pocket_fraction,
+                shell_low_degree_fraction=shell_summary.shell_low_degree_fraction,
+                core_low_degree_fraction=shell_summary.core_low_degree_fraction,
+                shell_boundary_deficit_mean=shell_summary.shell_boundary_deficit_mean,
+                core_boundary_deficit_mean=shell_summary.core_boundary_deficit_mean,
+            )
+        )
+
+    rows.sort(key=lambda row: row.source_name)
+    return rows
+
+
+def pocket_wrap_suppressor_overlap_context_rule_search(
+    rows: list[PocketWrapSuppressorOverlapContextRow],
+) -> list[PocketWrapSuppressorOverlapContextRuleRow]:
+    if not rows:
+        return []
+
+    numeric_features = (
+        "boundary_fraction",
+        "pocket_fraction",
+        "boundary_roughness",
+        "deep_pocket_fraction",
+        "mean_center",
+        "center_range",
+        "center_total_variation",
+        "span_range",
+        "shell_deep_fraction",
+        "core_deep_fraction",
+        "shell_pocket_fraction",
+        "core_pocket_fraction",
+        "shell_low_degree_fraction",
+        "core_low_degree_fraction",
+        "shell_boundary_deficit_mean",
+        "core_boundary_deficit_mean",
+    )
+    preferred_order = {
+        "shell_pocket_fraction": 0,
+        "center_total_variation": 1,
+        "boundary_roughness": 2,
+        "shell_low_degree_fraction": 3,
+        "span_range": 4,
+    }
+
+    labels = {row.source_name: row.pocket_signature for row in rows}
+
+    predicates: list[tuple[str, Callable[[PocketWrapSuppressorOverlapContextRow], bool], tuple[int, str, float]]] = []
+    for feature_name in numeric_features:
+        values = sorted({float(getattr(row, feature_name)) for row in rows})
+        thresholds: list[float] = []
+        for left, right in zip(values, values[1:]):
+            thresholds.append((left + right) / 2.0)
+        if len(values) == 1:
+            thresholds.append(values[0])
+        for threshold in thresholds:
+            predicates.append(
+                (
+                    f"{feature_name} <= {threshold:.3f}",
+                    lambda row, feature_name=feature_name, threshold=threshold: float(getattr(row, feature_name)) <= threshold,
+                    (preferred_order.get(feature_name, 99), feature_name, threshold),
+                )
+            )
+            predicates.append(
+                (
+                    f"{feature_name} >= {threshold:.3f}",
+                    lambda row, feature_name=feature_name, threshold=threshold: float(getattr(row, feature_name)) >= threshold,
+                    (preferred_order.get(feature_name, 99), feature_name, threshold),
+                )
+            )
+
+    rules: list[PocketWrapSuppressorOverlapContextRuleRow] = []
+    seen_rule_texts: set[str] = set()
+    predicate_sets: list[tuple[tuple[str, Callable[[PocketWrapSuppressorOverlapContextRow], bool], tuple[int, str, float]], ...]] = [
+        (predicate,) for predicate in predicates
+    ]
+    predicate_sets.extend(itertools.combinations(predicates, 2))
+
+    for predicate_tuple in predicate_sets:
+        sorted_terms = tuple(sorted(predicate_tuple, key=lambda item: item[2]))
+        rule_text = " and ".join(term[0] for term in sorted_terms)
+        if rule_text in seen_rule_texts:
+            continue
+        seen_rule_texts.add(rule_text)
+
+        tp = fp = fn = 0
+        for row in rows:
+            prediction = all(term[1](row) for term in sorted_terms)
+            actual = labels[row.source_name]
+            if prediction and actual:
+                tp += 1
+            elif prediction and not actual:
+                fp += 1
+            elif (not prediction) and actual:
+                fn += 1
+        precision = tp / (tp + fp) if (tp + fp) else 0.0
+        recall = tp / (tp + fn) if (tp + fn) else 0.0
+        f1 = (2.0 * precision * recall / (precision + recall)) if (precision + recall) else 0.0
+        rules.append(
+            PocketWrapSuppressorOverlapContextRuleRow(
+                rule_text=rule_text,
+                term_count=len(sorted_terms),
+                tp=tp,
+                fp=fp,
+                fn=fn,
+                precision=precision,
+                recall=recall,
+                f1=f1,
+            )
+        )
+
+    rules.sort(
+        key=lambda row: (
+            row.fp + row.fn,
+            -row.f1,
+            row.term_count,
+            row.rule_text,
+        )
+    )
+    return rules
+
+
 def pocket_wrap_local_morph_transplant_context_analysis(
     retained_weight: float = 1.0,
     mode_retained_weight: float | None = None,
@@ -24520,6 +24747,49 @@ def render_pocket_wrap_suppressor_specificity_table(
             f"{('Y' if row.single_add_kills else 'n'):<4} | "
             f"{('Y' if row.pair_add_kills else 'n'):<4} | "
             f"{('Y' if row.pair_matches_collapse else 'n'):<7}"
+        )
+    return "\n".join(lines)
+
+
+def render_pocket_wrap_suppressor_overlap_context_table(
+    rows: list[PocketWrapSuppressorOverlapContextRow],
+) -> str:
+    def safe_label(text: str) -> str:
+        return text.encode("unicode_escape").decode("ascii")
+
+    lines = [
+        "source                                 | psig | dov | rough | tv   | span | shell p/l | core p/l  | shell/core bdef",
+        "---------------------------------------+------+-----+-------+------+------|-----------+-----------+----------------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{safe_label(row.source_name):<39.39} | "
+            f"{('Y' if row.pocket_signature else 'n'):<4} | "
+            f"{row.deep_overlap_count:>3} | "
+            f"{row.boundary_roughness:>5.3f} | "
+            f"{row.center_total_variation:>4.2f} | "
+            f"{row.span_range:>4} | "
+            f"{row.shell_pocket_fraction:>4.2f}/{row.shell_low_degree_fraction:>4.2f} | "
+            f"{row.core_pocket_fraction:>4.2f}/{row.core_low_degree_fraction:>4.2f} | "
+            f"{row.shell_boundary_deficit_mean:>4.2f}/{row.core_boundary_deficit_mean:>4.2f}"
+        )
+    return "\n".join(lines)
+
+
+def render_pocket_wrap_suppressor_overlap_context_rule_table(
+    rows: list[PocketWrapSuppressorOverlapContextRuleRow],
+    limit: int = 8,
+) -> str:
+    lines = [
+        "rule                                             | terms | tp/fp/fn | f1",
+        "-------------------------------------------------+-------+----------+------",
+    ]
+    for row in rows[:limit]:
+        lines.append(
+            f"{row.rule_text:<49.49} | "
+            f"{row.term_count:>5} | "
+            f"{row.tp:>2}/{row.fp:<2}/{row.fn:<2}     | "
+            f"{row.f1:>4.2f}"
         )
     return "\n".join(lines)
 

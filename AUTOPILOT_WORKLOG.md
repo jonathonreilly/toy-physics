@@ -1,31 +1,3 @@
-## 2026-03-21 16:13 America/New_York
-
-### Current state
-- This run produced commit `1efe351` on `main` (`Compare suppressor pair-kill rows by context`).
-- Push to `origin/main` failed in this environment due DNS/network restriction (`Could not resolve host: github.com`), so local `main` is now ahead until push succeeds.
-- The active mechanism thread remains the pocket-wrap suppressor specificity line inside `base:taper-wrap` `local-morph`.
-- Added a focused row-compare runner for the pair-kill rows and logged the `variant_limit = 64` comparison for `local-morph-a`, `local-morph-v`, and `local-morph-\\x8e`.
-
-### Strongest confirmed conclusion
-- The kill trigger remains coordinate-exact deep-support overwrite, but the non-pocket pair-kill rows are not just `local-morph-a` with pocket signal removed.
-- `local-morph-v` keeps pair-kill with both overlaps while starting from positive deep/low gaps (`+0.09/+0.24`) and an extra surviving deep cell `(2,-1)`.
-- `local-morph-\\x8e` keeps pair-kill with one overlap while starting from negative pocket gap (`-0.07`), a different surviving deep cell `(2,2)`, and a wider span profile (`span=4`).
-- Shell/core context also shifts between these rows (notably shell deep/low enrichment for `local-morph-v` and lower shell pocket share for `local-morph-\\x8e`), so pocket-signature vs non-pocket presentation depends on broader shell/profile context, not a one-bit pocket toggle.
-
-### Files and results changed in this run
-- New script: [scripts/pocket_wrap_suppressor_pair_kill_row_compare.py](/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_pair_kill_row_compare.py)
-- Updated narrative: [README.md](/Users/jonreilly/Projects/Physics/README.md)
-- Commit: `1efe351` (local on `main`, not pushed from this environment)
-- New log:
-  - `/Users/jonreilly/Projects/Physics/logs/2026-03-21-pocket-wrap-suppressor-pair-kill-row-compare-64.txt`
-
-### Exact next step
-- Quantify which shell/profile context features separate pocket-signature pair-kill (`local-morph-a`) from non-pocket pair-kill (`local-morph-v`, `local-morph-\\x8e`) while holding the same deep-overwrite trigger.
-
-### First concrete action
-- Build a small `variant_limit = 64` table over all overlap-positive `dpadj-only` rows with baseline and post-add-both shell/profile metrics, then run a tiny rule search for predicates that isolate the pocket-signature branch from the non-pocket branch.
-
-
 # Physics Autopilot Worklog
 
 This is the tracked loop-by-loop status ledger for the Physics autopilot.
@@ -35,6 +7,47 @@ Each autopilot run should:
 - finish the highest-signal unfinished step before widening scope
 - append a new timestamped entry at the top
 - keep all paths canonical to this repository, not worktree-local paths
+
+## 2026-03-21 16:53 America/New_York
+
+### Current state
+- `main` is ahead of `origin/main` by the local suppressor-context commits:
+  - `1efe351` `Compare suppressor pair-kill rows by context`
+  - `4497b08` `Update autopilot worklog with commit status`
+- The active mechanism thread is still the pocket-wrap suppressor specificity line inside `base:taper-wrap` `local-morph`.
+- Added a new overlap-context rule runner:
+  - [scripts/pocket_wrap_suppressor_overlap_context_rules.py](/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_overlap_context_rules.py)
+- Logged the `variant_limit = 64` overlap-context sweep to:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-21-pocket-wrap-suppressor-overlap-context-rules-64.txt`
+
+### Strongest confirmed conclusion
+- Pair-kill is still the same coordinate-exact deep-support overwrite mechanism across all overlap-positive rows.
+- The pocket-signature branch (`local-morph-a`) is not separated from the non-pocket overlap-positive rows by the overwrite trigger itself, but by broader shell/profile context.
+- On the current `variant_limit = 64` overlap-positive set, exact one-feature separators already exist in shell/profile space alone:
+  - `boundary_roughness <= 0.288`
+  - `center_total_variation <= 2.500`
+  - `shell_pocket_fraction >= 0.812`
+- So the clean current read is: `local-morph-a` is the low-roughness, low-total-variation, shell-pocket-saturated tip of the same overwrite-trigger family, while `local-morph-v` and `local-morph-\x8e` are rougher or more internally varied contexts of that same mechanism.
+
+### Files and results changed in this run
+- Code:
+  - [toy_event_physics.py](/Users/jonreilly/Projects/Physics/toy_event_physics.py)
+  - [scripts/pocket_wrap_suppressor_overlap_context_rules.py](/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_overlap_context_rules.py)
+- Updated narrative:
+  - [README.md](/Users/jonreilly/Projects/Physics/README.md)
+- Updated run tracking:
+  - [AUTOPILOT_WORKLOG.md](/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md)
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- New logs:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-21-pocket-wrap-suppressor-pair-kill-row-compare-64.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-21-pocket-wrap-suppressor-overlap-context-rules-64.txt`
+
+### Exact next step
+- Test whether those exact shell/profile separators survive a deeper local-morph ladder, rather than only the current `variant_limit = 64` overlap-positive set.
+
+### First concrete action
+- Sweep the overlap-context rule analysis at `variant_limit = 72` and `80`, then check whether `boundary_roughness <= 0.288`, `center_total_variation <= 2.500`, or `shell_pocket_fraction >= 0.812` remain exact separators of the pocket-signature branch.
 
 ## 2026-03-21 16:18 America/New_York
 
@@ -46,7 +59,7 @@ Each autopilot run should:
 ### Strongest confirmed conclusion
 - The paired suppressors `(1,0)` and `(4,0)` are not a generic kill switch. On the tested `40/48/56` local-morph ladders, pair-kill occurs exactly when the added suppressor nodes overwrite active deep support.
 - Full two-cell overlap is sufficient but not necessary: one deeper partial-overlap row appears by `variant_limit = 48`, so the tighter current rule is `deep_overlap_count > 0 => pair_kill` on the tested ladder.
-- The focused pair-kill diagnostic confirms that this is coordinate-exact rather than just count-based: at `variant_limit = 56` and `64`, the kill coordinates match the overlapping deep-support coordinates for all `3/3` pair-kill rows, including the partial-overlap row `local-morph-\\x8e`.
+- The focused pair-kill diagnostic confirms that this is coordinate-exact rather than just count-based: at `variant_limit = 56` and `64`, the kill coordinates match the overlapping deep-support coordinates for all `3/3` pair-kill rows, including the partial-overlap row `local-morph-\x8e`.
 
 ### Files and results already documented
 - Narrative conclusions: [README.md](/Users/jonreilly/Projects/Physics/README.md)
@@ -63,7 +76,7 @@ Each autopilot run should:
   - `/Users/jonreilly/Projects/Physics/logs/2026-03-21-pocket-wrap-suppressor-pair-kill-diagnostic-64.txt`
 
 ### Exact next step
-- Compare the non-pocket pair-kill rows (`local-morph-v` and `local-morph-\\x8e`) against canonical `local-morph-a` to isolate what changes the route from pocket-signature to non-pocket while keeping the same deep-support overwrite mechanism.
+- Compare the non-pocket pair-kill rows (`local-morph-v` and `local-morph-\x8e`) against canonical `local-morph-a` to isolate what changes the route from pocket-signature to non-pocket while keeping the same deep-support overwrite mechanism.
 
 ### First concrete action
-- Diff the baseline deep/pocket/low gaps and candidate-cell sets for `local-morph-a`, `local-morph-v`, and `local-morph-\\x8e`, then check whether the non-pocket rows are missing only pocket signal or a larger shell/context property.
+- Diff the baseline deep/pocket/low gaps and candidate-cell sets for `local-morph-a`, `local-morph-v`, and `local-morph-\x8e`, then check whether the non-pocket rows are missing only pocket signal or a larger shell/context property.
