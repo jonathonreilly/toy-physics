@@ -1726,6 +1726,40 @@ class PocketWrapLocalMorphRuleRow:
 
 
 @dataclass
+class PocketWrapLocalMorphComparisonRow:
+    comparison_kind: str
+    source_name: str
+    outcome: str
+    pocket_signature: bool
+    deep_gap: float
+    pocket_gap: float
+    low_degree_gap: float
+    boundary_roughness: float
+    mirror_center_asymmetry: float
+    crosses_midline: bool
+    same_boundary_roughness: bool
+    same_asymmetry: bool
+    node_symmetric_diff: int
+    changed_columns: int
+    center_delta_l1: float
+    span_delta_l1: int
+
+
+@dataclass
+class PocketWrapLocalMorphColumnComparisonRow:
+    comparison_kind: str
+    x: int
+    target_low_y: int
+    target_high_y: int
+    compare_low_y: int
+    compare_high_y: int
+    low_delta: int
+    high_delta: int
+    center_delta: float
+    span_delta: int
+
+
+@dataclass
 class ThresholdScalingRow:
     ensemble_name: str
     threshold_name: str
@@ -17311,6 +17345,336 @@ def pocket_wrap_local_morph_context_analysis(
     return rows, rule_rows
 
 
+def pocket_wrap_local_morph_comparison_analysis(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    variant_limit: int = 16,
+) -> list[PocketWrapLocalMorphComparisonRow]:
+    ge6_tree, dpadj_tree = _extended_ge6_dpadj_trees(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+    )
+    nodes, wrap_y = scenario_by_name("base", "taper-wrap")
+    variant_rows: list[
+        tuple[
+            str,
+            set[tuple[int, int]],
+            PocketWrapLocalMorphRow,
+            tuple[float, ...],
+            tuple[int, ...],
+            tuple[int, ...],
+        ]
+    ] = []
+
+    for variant_name, perturbed_nodes, _node_delta in procedural_geometry_variants(
+        "base",
+        "taper-wrap",
+        nodes,
+        wrap_y,
+        variant_limit=variant_limit,
+        style="local-morph",
+    ):
+        source_name = f"base:taper-wrap:{variant_name}"
+        xs, centers, spans = ordered_profile_centers_and_spans(perturbed_nodes)
+        mirror_center_asymmetry, _mirror_span_asymmetry = _profile_symmetry_metrics(
+            centers,
+            spans,
+        )
+        (
+            _actual_label,
+            outcome,
+            _ge6_prediction,
+            _dpadj_prediction,
+            _ge6_only_fraction,
+            _ge7_core_fraction,
+            deep_gap,
+            pocket_gap,
+            low_degree_gap,
+            _boundary_gap,
+            crosses_midline,
+            _center_variation,
+            _span_range,
+        ) = _evaluate_extended_ge6_dpadj_nodes(
+            nodes=perturbed_nodes,
+            wrap_y=wrap_y,
+            ge6_tree=ge6_tree,
+            dpadj_tree=dpadj_tree,
+            pack_name="base",
+            scenario_name=source_name,
+            retained_weight=retained_weight,
+        )
+        (
+            _boundary_fraction,
+            _pocket_fraction,
+            boundary_roughness,
+            _deep_pocket_fraction,
+            *_rest,
+        ) = local_shape_feature_bundle(perturbed_nodes, wrap_y=wrap_y)
+        row = PocketWrapLocalMorphRow(
+            variant_limit=variant_limit,
+            source_name=source_name,
+            outcome=outcome,
+            pocket_positive=pocket_gap > 0.0,
+            pocket_signature=(pocket_gap > 0.0 and deep_gap <= 0.0 and low_degree_gap <= 0.0),
+            deep_gap=deep_gap,
+            pocket_gap=pocket_gap,
+            low_degree_gap=low_degree_gap,
+            boundary_roughness=boundary_roughness,
+            mirror_center_asymmetry=mirror_center_asymmetry,
+            crosses_midline=crosses_midline,
+        )
+        variant_rows.append((source_name, perturbed_nodes, row, xs, centers, spans))
+
+    target_entry = next(
+        entry
+        for entry in variant_rows
+        if entry[2].outcome == "dpadj-only" and entry[2].pocket_signature
+    )
+    _target_source, target_nodes, target_row, target_xs, target_centers, target_spans = target_entry
+
+    def comparison_key(
+        entry: tuple[str, set[tuple[int, int]], PocketWrapLocalMorphRow, tuple[float, ...], tuple[int, ...], tuple[int, ...]],
+    ) -> tuple[float, int, str]:
+        _source_name, compare_nodes, compare_row, _xs, _centers, _spans = entry
+        metric_distance = (
+            abs(compare_row.deep_gap - target_row.deep_gap)
+            + abs(compare_row.pocket_gap - target_row.pocket_gap)
+            + abs(compare_row.low_degree_gap - target_row.low_degree_gap)
+            + abs(compare_row.boundary_roughness - target_row.boundary_roughness)
+            + abs(compare_row.mirror_center_asymmetry - target_row.mirror_center_asymmetry)
+        )
+        node_distance = len(target_nodes.symmetric_difference(compare_nodes))
+        return (metric_distance, node_distance, compare_row.source_name)
+
+    candidate_groups: list[tuple[str, Callable[[PocketWrapLocalMorphRow], bool]]] = [
+        (
+            "same-brough-asym noncross pocket-sig",
+            lambda row: row.source_name != target_row.source_name
+            and row.pocket_signature
+            and not row.crosses_midline
+            and abs(row.boundary_roughness - target_row.boundary_roughness) <= 1e-9
+            and abs(row.mirror_center_asymmetry - target_row.mirror_center_asymmetry) <= 1e-9,
+        ),
+        (
+            "crossing pocket-sig near-miss",
+            lambda row: row.source_name != target_row.source_name
+            and row.pocket_signature
+            and row.crosses_midline
+            and row.outcome != "dpadj-only",
+        ),
+        (
+            "nearest pocket-positive near-miss",
+            lambda row: row.source_name != target_row.source_name
+            and row.pocket_positive
+            and row.outcome != "dpadj-only",
+        ),
+    ]
+
+    comparison_rows: list[PocketWrapLocalMorphComparisonRow] = []
+    for comparison_kind, predicate in candidate_groups:
+        matching_entries = [entry for entry in variant_rows if predicate(entry[2])]
+        if not matching_entries:
+            continue
+        selected_entry = min(matching_entries, key=comparison_key)
+        _source_name, compare_nodes, compare_row, compare_xs, compare_centers, compare_spans = selected_entry
+        changed_columns = sum(
+            1
+            for index in range(min(len(target_xs), len(compare_xs)))
+            if abs(target_centers[index] - compare_centers[index]) > 1e-9
+            or target_spans[index] != compare_spans[index]
+        )
+        comparison_rows.append(
+            PocketWrapLocalMorphComparisonRow(
+                comparison_kind=comparison_kind,
+                source_name=compare_row.source_name,
+                outcome=compare_row.outcome,
+                pocket_signature=compare_row.pocket_signature,
+                deep_gap=compare_row.deep_gap,
+                pocket_gap=compare_row.pocket_gap,
+                low_degree_gap=compare_row.low_degree_gap,
+                boundary_roughness=compare_row.boundary_roughness,
+                mirror_center_asymmetry=compare_row.mirror_center_asymmetry,
+                crosses_midline=compare_row.crosses_midline,
+                same_boundary_roughness=abs(compare_row.boundary_roughness - target_row.boundary_roughness) <= 1e-9,
+                same_asymmetry=abs(compare_row.mirror_center_asymmetry - target_row.mirror_center_asymmetry) <= 1e-9,
+                node_symmetric_diff=len(target_nodes.symmetric_difference(compare_nodes)),
+                changed_columns=changed_columns,
+                center_delta_l1=sum(
+                    abs(target_center - compare_center)
+                    for target_center, compare_center in zip(target_centers, compare_centers)
+                ),
+                span_delta_l1=sum(
+                    abs(target_span - compare_span)
+                    for target_span, compare_span in zip(target_spans, compare_spans)
+                ),
+            )
+        )
+
+    comparison_rows.sort(key=lambda row: row.comparison_kind)
+    return comparison_rows
+
+
+def pocket_wrap_local_morph_column_comparison_analysis(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    variant_limit: int = 16,
+) -> list[PocketWrapLocalMorphColumnComparisonRow]:
+    ge6_tree, dpadj_tree = _extended_ge6_dpadj_trees(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+    )
+    nodes, wrap_y = scenario_by_name("base", "taper-wrap")
+    variant_rows: list[
+        tuple[
+            str,
+            set[tuple[int, int]],
+            PocketWrapLocalMorphRow,
+            tuple[int, ...],
+            tuple[float, ...],
+            tuple[int, ...],
+            dict[int, tuple[int, int]],
+        ]
+    ] = []
+
+    for variant_name, perturbed_nodes, _node_delta in procedural_geometry_variants(
+        "base",
+        "taper-wrap",
+        nodes,
+        wrap_y,
+        variant_limit=variant_limit,
+        style="local-morph",
+    ):
+        source_name = f"base:taper-wrap:{variant_name}"
+        xs, centers, spans = ordered_profile_centers_and_spans(perturbed_nodes)
+        interval_profile = column_interval_profile(perturbed_nodes)
+        mirror_center_asymmetry, _mirror_span_asymmetry = _profile_symmetry_metrics(
+            centers,
+            spans,
+        )
+        (
+            _actual_label,
+            outcome,
+            _ge6_prediction,
+            _dpadj_prediction,
+            _ge6_only_fraction,
+            _ge7_core_fraction,
+            deep_gap,
+            pocket_gap,
+            low_degree_gap,
+            _boundary_gap,
+            crosses_midline,
+            _center_variation,
+            _span_range,
+        ) = _evaluate_extended_ge6_dpadj_nodes(
+            nodes=perturbed_nodes,
+            wrap_y=wrap_y,
+            ge6_tree=ge6_tree,
+            dpadj_tree=dpadj_tree,
+            pack_name="base",
+            scenario_name=source_name,
+            retained_weight=retained_weight,
+        )
+        (
+            _boundary_fraction,
+            _pocket_fraction,
+            boundary_roughness,
+            _deep_pocket_fraction,
+            *_rest,
+        ) = local_shape_feature_bundle(perturbed_nodes, wrap_y=wrap_y)
+        row = PocketWrapLocalMorphRow(
+            variant_limit=variant_limit,
+            source_name=source_name,
+            outcome=outcome,
+            pocket_positive=pocket_gap > 0.0,
+            pocket_signature=(pocket_gap > 0.0 and deep_gap <= 0.0 and low_degree_gap <= 0.0),
+            deep_gap=deep_gap,
+            pocket_gap=pocket_gap,
+            low_degree_gap=low_degree_gap,
+            boundary_roughness=boundary_roughness,
+            mirror_center_asymmetry=mirror_center_asymmetry,
+            crosses_midline=crosses_midline,
+        )
+        variant_rows.append((source_name, perturbed_nodes, row, xs, centers, spans, interval_profile))
+
+    target_entry = next(
+        entry
+        for entry in variant_rows
+        if entry[2].outcome == "dpadj-only" and entry[2].pocket_signature
+    )
+    _target_source, target_nodes, target_row, target_xs, _target_centers, _target_spans, target_profile = target_entry
+
+    def comparison_key(
+        entry: tuple[str, set[tuple[int, int]], PocketWrapLocalMorphRow, tuple[int, ...], tuple[float, ...], tuple[int, ...], dict[int, tuple[int, int]]],
+    ) -> tuple[float, int, str]:
+        _source_name, compare_nodes, compare_row, _xs, _centers, _spans, _profile = entry
+        metric_distance = (
+            abs(compare_row.deep_gap - target_row.deep_gap)
+            + abs(compare_row.pocket_gap - target_row.pocket_gap)
+            + abs(compare_row.low_degree_gap - target_row.low_degree_gap)
+            + abs(compare_row.boundary_roughness - target_row.boundary_roughness)
+            + abs(compare_row.mirror_center_asymmetry - target_row.mirror_center_asymmetry)
+        )
+        node_distance = len(target_nodes.symmetric_difference(compare_nodes))
+        return (metric_distance, node_distance, compare_row.source_name)
+
+    comparison_groups: list[tuple[str, Callable[[PocketWrapLocalMorphRow], bool]]] = [
+        (
+            "same-brough-asym noncross pocket-sig",
+            lambda row: row.source_name != target_row.source_name
+            and row.pocket_signature
+            and not row.crosses_midline
+            and abs(row.boundary_roughness - target_row.boundary_roughness) <= 1e-9
+            and abs(row.mirror_center_asymmetry - target_row.mirror_center_asymmetry) <= 1e-9,
+        ),
+        (
+            "crossing pocket-sig near-miss",
+            lambda row: row.source_name != target_row.source_name
+            and row.pocket_signature
+            and row.crosses_midline
+            and row.outcome != "dpadj-only",
+        ),
+    ]
+
+    rows: list[PocketWrapLocalMorphColumnComparisonRow] = []
+    for comparison_kind, predicate in comparison_groups:
+        matching_entries = [entry for entry in variant_rows if predicate(entry[2])]
+        if not matching_entries:
+            continue
+        _source_name, _compare_nodes, _compare_row, compare_xs, _compare_centers, _compare_spans, compare_profile = min(
+            matching_entries,
+            key=comparison_key,
+        )
+        for x in target_xs:
+            target_low_y, target_high_y = target_profile[x]
+            compare_low_y, compare_high_y = compare_profile[x]
+            target_center = 0.5 * (target_low_y + target_high_y)
+            compare_center = 0.5 * (compare_low_y + compare_high_y)
+            target_span = target_high_y - target_low_y
+            compare_span = compare_high_y - compare_low_y
+            if (
+                target_low_y == compare_low_y
+                and target_high_y == compare_high_y
+            ):
+                continue
+            rows.append(
+                PocketWrapLocalMorphColumnComparisonRow(
+                    comparison_kind=comparison_kind,
+                    x=x,
+                    target_low_y=target_low_y,
+                    target_high_y=target_high_y,
+                    compare_low_y=compare_low_y,
+                    compare_high_y=compare_high_y,
+                    low_delta=target_low_y - compare_low_y,
+                    high_delta=target_high_y - compare_high_y,
+                    center_delta=target_center - compare_center,
+                    span_delta=target_span - compare_span,
+                )
+            )
+
+    rows.sort(key=lambda row: (row.comparison_kind, row.x))
+    return rows
+
+
 def threshold_scaling_explanation_analysis(
     ensembles: tuple[tuple[str, int, int, tuple[str, ...]], ...] = (
         ("default", 5, 3, ("walk", "mode-mix", "local-morph")),
@@ -21791,6 +22155,53 @@ def render_pocket_wrap_local_morph_rule_table(
             f"{row.precision:>4.2f} | "
             f"{row.recall:>4.2f} | "
             f"{row.f1:>4.2f}"
+        )
+    return "\n".join(lines)
+
+
+def render_pocket_wrap_local_morph_comparison_table(
+    rows: list[PocketWrapLocalMorphComparisonRow],
+) -> str:
+    lines = [
+        "comparison                   | outcome     | psig | deep/pocket/low | brough | asym | cross | same br/as | node d | col d | cL1 | sL1 | source",
+        "-----------------------------+-------------+------+-----------------+--------+------+-------+------------+--------+-------+-----+-----+---------------------------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.comparison_kind:<27.27} | "
+            f"{row.outcome:<11} | "
+            f"{('Y' if row.pocket_signature else 'n'):<4} | "
+            f"{row.deep_gap:+4.2f}/{row.pocket_gap:+4.2f}/{row.low_degree_gap:+4.2f} | "
+            f"{row.boundary_roughness:>6.2f} | "
+            f"{row.mirror_center_asymmetry:>4.2f} | "
+            f"{('Y' if row.crosses_midline else 'n'):<5} | "
+            f"{('YY' if row.same_boundary_roughness and row.same_asymmetry else 'n'):<10} | "
+            f"{row.node_symmetric_diff:>6} | "
+            f"{row.changed_columns:>5} | "
+            f"{row.center_delta_l1:>3.1f} | "
+            f"{row.span_delta_l1:>3} | "
+            f"{row.source_name:<25.25}"
+        )
+    return "\n".join(lines)
+
+
+def render_pocket_wrap_local_morph_column_comparison_table(
+    rows: list[PocketWrapLocalMorphColumnComparisonRow],
+) -> str:
+    lines = [
+        "comparison                   | x | target low/high | compare low/high | low d | high d | center d | span d",
+        "-----------------------------+---+-----------------+------------------+-------+--------+----------+-------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.comparison_kind:<27.27} | "
+            f"{row.x:>1} | "
+            f"{row.target_low_y:>3}/{row.target_high_y:<3} | "
+            f"{row.compare_low_y:>4}/{row.compare_high_y:<4} | "
+            f"{row.low_delta:>5} | "
+            f"{row.high_delta:>6} | "
+            f"{row.center_delta:>8.1f} | "
+            f"{row.span_delta:>5}"
         )
     return "\n".join(lines)
 
