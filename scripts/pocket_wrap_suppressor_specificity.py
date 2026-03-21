@@ -36,6 +36,9 @@ def main() -> None:
 
     psig_single, psig_pair, psig_collapse = count_kills(psig)
     non_single, non_pair, non_collapse = count_kills(non_psig)
+    tp = sum(1 for row in rows if row.pair_targets_deep_cells and row.pair_add_kills)
+    fp = sum(1 for row in rows if row.pair_targets_deep_cells and not row.pair_add_kills)
+    fn = sum(1 for row in rows if not row.pair_targets_deep_cells and row.pair_add_kills)
 
     print()
     print("Pocket-Wrap Suppressor Specificity")
@@ -47,6 +50,7 @@ def main() -> None:
         f"psig(single/pair/collapse)={psig_single}/{psig_pair}/{psig_collapse} "
         f"non(single/pair/collapse)={non_single}/{non_pair}/{non_collapse}"
     )
+    print(f"rule(pair_targets_deep_cells=>pair_kill) tp/fp/fn={tp}/{fp}/{fn}")
     print(render_pocket_wrap_suppressor_specificity_table(rows))
     print()
     print(

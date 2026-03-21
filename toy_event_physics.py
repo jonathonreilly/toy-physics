@@ -1850,6 +1850,10 @@ class PocketWrapSuppressorSpecificityRow:
     add_both_deep_gap: float
     add_both_pocket_gap: float
     add_both_low_degree_gap: float
+    base_has_1_0: bool
+    base_has_4_0: bool
+    deep_overlap_count: int
+    pair_targets_deep_cells: bool
     single_add_kills: bool
     pair_add_kills: bool
     pair_matches_collapse: bool
@@ -18950,6 +18954,9 @@ def pocket_wrap_suppressor_specificity_analysis(
         if row.outcome != "dpadj-only":
             continue
 
+        _base_pocket_cells, base_deep_cells = pocket_candidate_cells(analysis_nodes, wrap_y=wrap_y)
+        deep_overlap_count = len(set(suppressor_nodes).intersection(base_deep_cells))
+
         add_1_nodes = set(analysis_nodes)
         add_1_nodes.add(suppressor_nodes[0])
         add_1_outcome, _a1_deep, _a1_pocket, _a1_low = evaluate_nodes(add_1_nodes, f"{source_name}:add-1-0")
@@ -18979,6 +18986,10 @@ def pocket_wrap_suppressor_specificity_analysis(
                 add_both_deep_gap=add_both_deep,
                 add_both_pocket_gap=add_both_pocket,
                 add_both_low_degree_gap=add_both_low,
+                base_has_1_0=(suppressor_nodes[0] in analysis_nodes),
+                base_has_4_0=(suppressor_nodes[1] in analysis_nodes),
+                deep_overlap_count=deep_overlap_count,
+                pair_targets_deep_cells=(deep_overlap_count == 2),
                 single_add_kills=(add_1_outcome != "dpadj-only" or add_4_outcome != "dpadj-only"),
                 pair_add_kills=(add_both_outcome != "dpadj-only"),
                 pair_matches_collapse=(
@@ -24493,8 +24504,8 @@ def render_pocket_wrap_suppressor_specificity_table(
         return text.encode("unicode_escape").decode("ascii")
 
     lines = [
-        "source                                 | psig | base      | add1/add4/both          | base gaps          | both gaps          | 1x | 2x | collapse",
-        "---------------------------------------+------+-----------+-------------------------+--------------------+--------------------+------+------+---------",
+        "source                                 | psig | base      | add1/add4/both          | base gaps          | both gaps          | has14 | dov | 1x | 2x | collapse",
+        "---------------------------------------+------+-----------+-------------------------+--------------------+--------------------+-------+-----+------+------+---------",
     ]
     for row in rows:
         lines.append(
@@ -24504,6 +24515,8 @@ def render_pocket_wrap_suppressor_specificity_table(
             f"{row.add_1_0_outcome:<7.7}/{row.add_4_0_outcome:<7.7}/{row.add_both_outcome:<7.7} | "
             f"{row.base_deep_gap:+4.2f}/{row.base_pocket_gap:+4.2f}/{row.base_low_degree_gap:+4.2f} | "
             f"{row.add_both_deep_gap:+4.2f}/{row.add_both_pocket_gap:+4.2f}/{row.add_both_low_degree_gap:+4.2f} | "
+            f"{('Y' if row.base_has_1_0 else 'n')}{('Y' if row.base_has_4_0 else 'n'):<5} | "
+            f"{row.deep_overlap_count:>3} | "
             f"{('Y' if row.single_add_kills else 'n'):<4} | "
             f"{('Y' if row.pair_add_kills else 'n'):<4} | "
             f"{('Y' if row.pair_matches_collapse else 'n'):<7}"
