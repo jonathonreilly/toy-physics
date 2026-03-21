@@ -1837,6 +1837,25 @@ class PocketWrapSuppressorInjectionRow:
 
 
 @dataclass
+class PocketWrapSuppressorSpecificityRow:
+    source_name: str
+    pocket_signature: bool
+    base_outcome: str
+    add_1_0_outcome: str
+    add_4_0_outcome: str
+    add_both_outcome: str
+    base_deep_gap: float
+    base_pocket_gap: float
+    base_low_degree_gap: float
+    add_both_deep_gap: float
+    add_both_pocket_gap: float
+    add_both_low_degree_gap: float
+    single_add_kills: bool
+    pair_add_kills: bool
+    pair_matches_collapse: bool
+
+
+@dataclass
 class PocketWrapLocalMorphTransplantContextRow:
     row_kind: str
     source_name: str
@@ -18824,6 +18843,156 @@ def pocket_wrap_suppressor_injection_analysis(
     return [evaluate_state(state_kind, analysis_nodes) for state_kind, analysis_nodes in states]
 
 
+def pocket_wrap_suppressor_specificity_analysis(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    variant_limit: int = 40,
+    suppressor_nodes: tuple[tuple[int, int], ...] = ((1, 0), (4, 0)),
+) -> list[PocketWrapSuppressorSpecificityRow]:
+    ge6_tree, dpadj_tree = _extended_ge6_dpadj_trees(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+    )
+    nodes, wrap_y = scenario_by_name("base", "taper-wrap")
+    variant_rows: list[tuple[str, set[tuple[int, int]], PocketWrapLocalMorphRow]] = []
+
+    for variant_name, perturbed_nodes, _node_delta in procedural_geometry_variants(
+        "base",
+        "taper-wrap",
+        nodes,
+        wrap_y,
+        variant_limit=variant_limit,
+        style="local-morph",
+    ):
+        source_name = f"base:taper-wrap:{variant_name}"
+        xs, centers, spans = ordered_profile_centers_and_spans(perturbed_nodes)
+        mirror_center_asymmetry, _mirror_span_asymmetry = _profile_symmetry_metrics(
+            centers,
+            spans,
+        )
+        (
+            _actual_label,
+            outcome,
+            _ge6_prediction,
+            _dpadj_prediction,
+            _ge6_only_fraction,
+            _ge7_core_fraction,
+            deep_gap,
+            pocket_gap,
+            low_degree_gap,
+            _boundary_gap,
+            crosses_midline,
+            _center_variation,
+            _span_range,
+        ) = _evaluate_extended_ge6_dpadj_nodes(
+            nodes=perturbed_nodes,
+            wrap_y=wrap_y,
+            ge6_tree=ge6_tree,
+            dpadj_tree=dpadj_tree,
+            pack_name="base",
+            scenario_name=source_name,
+            retained_weight=retained_weight,
+        )
+        (
+            _boundary_fraction,
+            _pocket_fraction,
+            boundary_roughness,
+            _deep_pocket_fraction,
+            *_rest,
+        ) = local_shape_feature_bundle(perturbed_nodes, wrap_y=wrap_y)
+        row = PocketWrapLocalMorphRow(
+            variant_limit=variant_limit,
+            source_name=source_name,
+            outcome=outcome,
+            pocket_positive=pocket_gap > 0.0,
+            pocket_signature=(pocket_gap > 0.0 and deep_gap <= 0.0 and low_degree_gap <= 0.0),
+            deep_gap=deep_gap,
+            pocket_gap=pocket_gap,
+            low_degree_gap=low_degree_gap,
+            boundary_roughness=boundary_roughness,
+            mirror_center_asymmetry=mirror_center_asymmetry,
+            crosses_midline=crosses_midline,
+        )
+        variant_rows.append((source_name, perturbed_nodes, row))
+
+    def evaluate_nodes(
+        analysis_nodes: set[tuple[int, int]],
+        scenario_name: str,
+    ) -> tuple[str, float, float, float]:
+        (
+            _actual_label,
+            outcome,
+            _ge6_prediction,
+            _dpadj_prediction,
+            _ge6_only_fraction,
+            _ge7_core_fraction,
+            deep_gap,
+            pocket_gap,
+            low_degree_gap,
+            _boundary_gap,
+            _crosses_midline,
+            _center_variation,
+            _span_range,
+        ) = _evaluate_extended_ge6_dpadj_nodes(
+            nodes=analysis_nodes,
+            wrap_y=wrap_y,
+            ge6_tree=ge6_tree,
+            dpadj_tree=dpadj_tree,
+            pack_name="base",
+            scenario_name=scenario_name,
+            retained_weight=retained_weight,
+        )
+        return outcome, deep_gap, pocket_gap, low_degree_gap
+
+    collapse_signature = (0.00, 0.91, -0.14)
+    rows: list[PocketWrapSuppressorSpecificityRow] = []
+    for source_name, analysis_nodes, row in variant_rows:
+        if row.outcome != "dpadj-only":
+            continue
+
+        add_1_nodes = set(analysis_nodes)
+        add_1_nodes.add(suppressor_nodes[0])
+        add_1_outcome, _a1_deep, _a1_pocket, _a1_low = evaluate_nodes(add_1_nodes, f"{source_name}:add-1-0")
+
+        add_4_nodes = set(analysis_nodes)
+        add_4_nodes.add(suppressor_nodes[1])
+        add_4_outcome, _a4_deep, _a4_pocket, _a4_low = evaluate_nodes(add_4_nodes, f"{source_name}:add-4-0")
+
+        add_both_nodes = set(analysis_nodes)
+        add_both_nodes.update(suppressor_nodes)
+        add_both_outcome, add_both_deep, add_both_pocket, add_both_low = evaluate_nodes(
+            add_both_nodes,
+            f"{source_name}:add-both",
+        )
+
+        rows.append(
+            PocketWrapSuppressorSpecificityRow(
+                source_name=source_name,
+                pocket_signature=row.pocket_signature,
+                base_outcome=row.outcome,
+                add_1_0_outcome=add_1_outcome,
+                add_4_0_outcome=add_4_outcome,
+                add_both_outcome=add_both_outcome,
+                base_deep_gap=row.deep_gap,
+                base_pocket_gap=row.pocket_gap,
+                base_low_degree_gap=row.low_degree_gap,
+                add_both_deep_gap=add_both_deep,
+                add_both_pocket_gap=add_both_pocket,
+                add_both_low_degree_gap=add_both_low,
+                single_add_kills=(add_1_outcome != "dpadj-only" or add_4_outcome != "dpadj-only"),
+                pair_add_kills=(add_both_outcome != "dpadj-only"),
+                pair_matches_collapse=(
+                    abs(add_both_deep - collapse_signature[0]) <= 1e-9
+                    and abs(add_both_pocket - collapse_signature[1]) <= 1e-9
+                    and abs(add_both_low - collapse_signature[2]) <= 1e-9
+                ),
+            )
+        )
+
+    rows.sort(key=lambda row: row.source_name)
+    return rows
+
+
 def pocket_wrap_local_morph_transplant_context_analysis(
     retained_weight: float = 1.0,
     mode_retained_weight: float | None = None,
@@ -24313,6 +24482,31 @@ def render_pocket_wrap_suppressor_injection_table(
             f"{row.deep_cells:<17.17} | "
             f"{row.suppressor_overlap:<15.15} | "
             f"{row.suppressor_count:>1}"
+        )
+    return "\n".join(lines)
+
+
+def render_pocket_wrap_suppressor_specificity_table(
+    rows: list[PocketWrapSuppressorSpecificityRow],
+) -> str:
+    def safe_label(text: str) -> str:
+        return text.encode("unicode_escape").decode("ascii")
+
+    lines = [
+        "source                                 | psig | base      | add1/add4/both          | base gaps          | both gaps          | 1x | 2x | collapse",
+        "---------------------------------------+------+-----------+-------------------------+--------------------+--------------------+------+------+---------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{safe_label(row.source_name):<39.39} | "
+            f"{('Y' if row.pocket_signature else 'n'):<4} | "
+            f"{row.base_outcome:<9.9} | "
+            f"{row.add_1_0_outcome:<7.7}/{row.add_4_0_outcome:<7.7}/{row.add_both_outcome:<7.7} | "
+            f"{row.base_deep_gap:+4.2f}/{row.base_pocket_gap:+4.2f}/{row.base_low_degree_gap:+4.2f} | "
+            f"{row.add_both_deep_gap:+4.2f}/{row.add_both_pocket_gap:+4.2f}/{row.add_both_low_degree_gap:+4.2f} | "
+            f"{('Y' if row.single_add_kills else 'n'):<4} | "
+            f"{('Y' if row.pair_add_kills else 'n'):<4} | "
+            f"{('Y' if row.pair_matches_collapse else 'n'):<7}"
         )
     return "\n".join(lines)
 
