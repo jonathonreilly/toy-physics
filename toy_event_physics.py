@@ -1675,6 +1675,30 @@ class PocketWrapSubtypeAggregateRow:
 
 
 @dataclass
+class LocalMorphPocketLadderRow:
+    scenario_key: str
+    variant_limit: int
+    source_name: str
+    outcome: str
+    pocket_signature: bool
+    deep_gap: float
+    pocket_gap: float
+    low_degree_gap: float
+    boundary_roughness: float
+    mirror_center_asymmetry: float
+    crosses_midline: bool
+
+
+@dataclass
+class LocalMorphPocketLadderAggregateRow:
+    scenario_key: str
+    variant_limit: int
+    dpadj_only_cases: int
+    pocket_signature_cases: int
+    examples: str
+
+
+@dataclass
 class ThresholdScalingRow:
     ensemble_name: str
     threshold_name: str
@@ -17005,6 +17029,106 @@ def pocket_wrap_subtype_scan_analysis(
     return rows, aggregate_rows
 
 
+def local_morph_pocket_ladder_analysis(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    scenario_keys: tuple[tuple[str, str], ...] = (("base", "taper-wrap"), ("base", "skew-wrap")),
+    variant_limits: tuple[int, ...] = (4, 8, 12, 16),
+) -> tuple[list[LocalMorphPocketLadderRow], list[LocalMorphPocketLadderAggregateRow]]:
+    ge6_tree, dpadj_tree = _extended_ge6_dpadj_trees(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+    )
+    rows: list[LocalMorphPocketLadderRow] = []
+    aggregate_rows: list[LocalMorphPocketLadderAggregateRow] = []
+
+    for pack_name, scenario_name in scenario_keys:
+        nodes, wrap_y = scenario_by_name(pack_name, scenario_name)
+        scenario_key = f"{pack_name}:{scenario_name}"
+        for variant_limit in variant_limits:
+            current_rows: list[LocalMorphPocketLadderRow] = []
+            for variant_name, perturbed_nodes, _node_delta in procedural_geometry_variants(
+                pack_name,
+                scenario_name,
+                nodes,
+                wrap_y,
+                variant_limit=variant_limit,
+                style="local-morph",
+            ):
+                source_name = f"{pack_name}:{scenario_name}:{variant_name}"
+                xs, centers, spans = ordered_profile_centers_and_spans(perturbed_nodes)
+                mirror_center_asymmetry, _mirror_span_asymmetry = _profile_symmetry_metrics(
+                    centers,
+                    spans,
+                )
+                (
+                    _actual_label,
+                    outcome,
+                    _ge6_prediction,
+                    _dpadj_prediction,
+                    _ge6_only_fraction,
+                    _ge7_core_fraction,
+                    deep_gap,
+                    pocket_gap,
+                    low_degree_gap,
+                    _boundary_gap,
+                    crosses_midline,
+                    _center_variation,
+                    _span_range,
+                ) = _evaluate_extended_ge6_dpadj_nodes(
+                    nodes=perturbed_nodes,
+                    wrap_y=wrap_y,
+                    ge6_tree=ge6_tree,
+                    dpadj_tree=dpadj_tree,
+                    pack_name=pack_name,
+                    scenario_name=source_name,
+                    retained_weight=retained_weight,
+                )
+                (
+                    _boundary_fraction,
+                    _pocket_fraction,
+                    boundary_roughness,
+                    _deep_pocket_fraction,
+                    *_rest,
+                ) = local_shape_feature_bundle(perturbed_nodes, wrap_y=wrap_y)
+                pocket_signature = (
+                    pocket_gap > 0.0
+                    and deep_gap <= 0.0
+                    and low_degree_gap <= 0.0
+                )
+                row = LocalMorphPocketLadderRow(
+                    scenario_key=scenario_key,
+                    variant_limit=variant_limit,
+                    source_name=source_name,
+                    outcome=outcome,
+                    pocket_signature=pocket_signature,
+                    deep_gap=deep_gap,
+                    pocket_gap=pocket_gap,
+                    low_degree_gap=low_degree_gap,
+                    boundary_roughness=boundary_roughness,
+                    mirror_center_asymmetry=mirror_center_asymmetry,
+                    crosses_midline=crosses_midline,
+                )
+                rows.append(row)
+                current_rows.append(row)
+
+            dpadj_only_rows = [row for row in current_rows if row.outcome == "dpadj-only"]
+            pocket_rows = [row for row in dpadj_only_rows if row.pocket_signature]
+            aggregate_rows.append(
+                LocalMorphPocketLadderAggregateRow(
+                    scenario_key=scenario_key,
+                    variant_limit=variant_limit,
+                    dpadj_only_cases=len(dpadj_only_rows),
+                    pocket_signature_cases=len(pocket_rows),
+                    examples=",".join(row.source_name for row in pocket_rows[:3]) or "-",
+                )
+            )
+
+    rows.sort(key=lambda row: (row.scenario_key, row.variant_limit, row.source_name))
+    aggregate_rows.sort(key=lambda row: (row.scenario_key, row.variant_limit))
+    return rows, aggregate_rows
+
+
 def threshold_scaling_explanation_analysis(
     ensembles: tuple[tuple[str, int, int, tuple[str, ...]], ...] = (
         ("default", 5, 3, ("walk", "mode-mix", "local-morph")),
@@ -21401,6 +21525,46 @@ def render_pocket_wrap_subtype_aggregate_table(
             f"{row.dpadj_only_cases:>5} | "
             f"{row.pocket_signature_cases:>6} | "
             f"{row.styles:<19.19} | "
+            f"{row.examples:<35.35}"
+        )
+    return "\n".join(lines)
+
+
+def render_local_morph_pocket_ladder_table(
+    rows: list[LocalMorphPocketLadderRow],
+) -> str:
+    lines = [
+        "scenario            | limit | outcome     | pocket | deep/pocket/low | brough | asym | cross | source",
+        "--------------------+-------+-------------+--------+-----------------+--------+------+-------+---------------------------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.scenario_key:<20.20} | "
+            f"{row.variant_limit:>5} | "
+            f"{row.outcome:<11} | "
+            f"{('Y' if row.pocket_signature else 'n'):<6} | "
+            f"{row.deep_gap:+4.2f}/{row.pocket_gap:+4.2f}/{row.low_degree_gap:+4.2f} | "
+            f"{row.boundary_roughness:>6.2f} | "
+            f"{row.mirror_center_asymmetry:>4.2f} | "
+            f"{('Y' if row.crosses_midline else 'n'):<5} | "
+            f"{row.source_name:<25.25}"
+        )
+    return "\n".join(lines)
+
+
+def render_local_morph_pocket_ladder_aggregate_table(
+    rows: list[LocalMorphPocketLadderAggregateRow],
+) -> str:
+    lines = [
+        "scenario            | limit | dpadj | pocket | examples",
+        "--------------------+-------+-------+--------+-----------------------------------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.scenario_key:<20.20} | "
+            f"{row.variant_limit:>5} | "
+            f"{row.dpadj_only_cases:>5} | "
+            f"{row.pocket_signature_cases:>6} | "
             f"{row.examples:<35.35}"
         )
     return "\n".join(lines)
