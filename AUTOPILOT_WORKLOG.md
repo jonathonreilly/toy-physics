@@ -8,6 +8,42 @@ Each autopilot run should:
 - append a new timestamped entry at the top
 - keep all paths canonical to this repository, not worktree-local paths
 
+## 2026-03-21 20:59 America/New_York
+
+### Current state
+- Continued the overlap-context ladder through the next two queued rungs:
+  - `python3 scripts/pocket_wrap_suppressor_overlap_context_rules.py --variant-limit 176`
+  - `python3 scripts/pocket_wrap_suppressor_overlap_context_rules.py --variant-limit 192`
+- No new helper code was needed in this pass; this was a pure ladder-extension and interpretation step.
+
+### Strongest confirmed conclusion
+- `176` adds one more non-pocket overlap-positive row: `local-morph-\\u0103`.
+- `192` is identical to `176`, so the broadened overlap-positive family appears stable at least through `192`.
+- Current stabilized family through `192`:
+  - pocket-signature rows: `local-morph-a`, `local-morph-\\xf6`
+  - non-pocket rows: `local-morph-v`, `local-morph-\\x8e`, `local-morph-\\xe7`, `local-morph-\\xe9`, `local-morph-\\u0103`
+- The robust exact one-feature separators in that stabilized band are still:
+  - `boundary_roughness <= 0.288`
+  - `pocket_fraction <= 0.081`
+- So the current best read is that the broadened family is real, but the pocket-signature subset remains a compact low-roughness / low-pocket-fraction edge of the same overwrite-trigger family.
+
+### Files and results changed in this run
+- Updated narrative:
+  - [README.md](/Users/jonreilly/Projects/Physics/README.md)
+- Updated run tracking:
+  - [AUTOPILOT_WORKLOG.md](/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md)
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- New logs:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-21-pocket-wrap-suppressor-overlap-context-rules-176.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-21-pocket-wrap-suppressor-overlap-context-rules-192.txt`
+
+### Exact next step
+- Explain the new stabilized non-pocket branch internally: identify whether the added rows `\\xe7`, `\\xe9`, and `\\u0103` split into one coherent non-pocket subtype or multiple subtypes under the same overwrite trigger.
+
+### First concrete action
+- Run a focused row compare at `variant_limit = 192` for `local-morph-v`, `local-morph-\\x8e`, `local-morph-\\xe7`, `local-morph-\\xe9`, and `local-morph-\\u0103`, then search for small exact predicates that separate those non-pocket rows into stable subgroups.
+
 ## 2026-03-21 20:15 America/New_York
 
 ### Current state
