@@ -641,8 +641,8 @@ Each autopilot run should:
   - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-224.txt`
   - `/tmp/2026-03-22-nonpocket-subtype-rules-8-post256-smoke.txt`
 - Commit status:
-  - Pending commit for README + tracking updates from this run.
-  - Local head before committing this run: `676c438`.
+  - Committed and pushed: `5a29129` (`Document nonpocket subtype plateau through variant limit 256`).
+  - Repository sync at end of run: `main` == `origin/main` at `5a29129`.
 
 ### Exact next step
 - Run one deeper rung (`variant_limit = 272`) to test whether the add4-sensitive crossing branch remains plateaued after the `256` hold or resumes growth.
