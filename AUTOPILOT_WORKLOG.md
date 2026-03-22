@@ -1,3 +1,42 @@
+## 2026-03-22 07:51 America/New_York
+
+### Current state
+- Continued the active non-pocket subtype stability thread by executing two deeper rungs in canonical repo context:
+  - `python3 scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 368 > /Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-368.txt`
+  - `python3 scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 384 > /Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-384.txt`
+- Both runs completed successfully and matched each other exactly.
+- Updated the mechanism narrative in `/Users/jonreilly/Projects/Physics/README.md` to capture the first post-`352` breakpoint.
+
+### Strongest confirmed conclusion
+- The long `240..352` plateau ends at `368/384` with the first new row after that band:
+  - non-pocket overlap-positive rows rise from `8` to `9`;
+  - subtype count remains `3`;
+  - new row: `base:taper-wrap:local-morph-\u01cd` (add1-sensitive, non-crossing branch);
+  - the exact one-term add1-sensitive separator still holds via `crosses_midline = n`, now with `3` true positives and `0` errors.
+- So the new growth is inside the existing add1-sensitive non-crossing branch, not a new subtype family.
+
+### Files and results changed in this run
+- Narrative:
+  - [README.md](/Users/jonreilly/Projects/Physics/README.md)
+- Updated run tracking:
+  - [AUTOPILOT_WORKLOG.md](/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md)
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- Logs generated/used:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-368.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-384.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-352.txt`
+
+### Exact next step
+- Run one deeper rung (`variant_limit = 400`) to test whether the new add1-sensitive branch growth persists beyond `384`.
+
+### First concrete action
+- Execute:
+  - `python3 scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 400 > /Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-400.txt`
+- Then diff subtype context/rule sections versus:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-384.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-368.txt`
+
 ## 2026-03-22 07:27 America/New_York
 
 ### Current state
