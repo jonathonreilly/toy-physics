@@ -1,3 +1,40 @@
+## 2026-03-22 16:30 America/New_York
+
+### Current state
+- Resumed the active non-pocket subtype frontier thread and executed one bounded deeper rung in canonical repo context:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 832 > /Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-832.txt`
+- Run completed successfully (`total_elapsed=814.3s`) and extended the active growth frontier.
+- Updated `/Users/jonreilly/Projects/Physics/README.md` to reflect the new rung and unchanged exact-rule behavior.
+
+### Strongest confirmed conclusion
+- The accelerating non-pocket growth phase continues at `832` rather than settling:
+  - non-pocket overlap-positive rows increase from `23` to `25`;
+  - two new rows appear: `local-morph-\u0399` (add1-sensitive, `neither/dpadj-only`) and `local-morph-\u03a0` (add4-sensitive, `dpadj-only/neither`);
+  - subtype count remains `4`;
+  - both-sensitive exact-rule family remains unchanged and still anchored by `deep_overlap_count >= 1.500` (`2` true positives).
+
+### Files and results changed in this run
+- Narrative:
+  - [README.md](/Users/jonreilly/Projects/Physics/README.md)
+- Updated run tracking:
+  - [AUTOPILOT_WORKLOG.md](/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md)
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- Logs generated/used:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-832.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-816.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-800.txt`
+
+### Exact next step
+- Run one deeper rung (`variant_limit = 848`) to test whether this accelerating phase continues immediately or starts to plateau.
+
+### First concrete action
+- Execute:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 848 > /Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-848.txt`
+- Then diff subtype context/rule sections versus:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-832.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-816.txt`
+
 ## 2026-03-22 15:45 America/New_York
 
 ### Current state
