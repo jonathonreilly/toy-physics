@@ -23,7 +23,10 @@ This file is the stable operating protocol for the background janitor automation
    - `git log --oneline --decorate -n 8`
 
 ## Default Work
-1. If the repo is ahead of `origin/main`, try to push before doing anything else.
+1. If the repo is ahead of `origin/main`, try to push before doing anything else with:
+   - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+   - if the helper reports a transient network or DNS failure, record it once and stop
+   - if the helper reports auth or non-fast-forward failure, stop for manual follow-up
 2. If work log, handoff, and memory disagree, repair them from the real repo/log state.
 3. If the latest science change touched benchmark code or scripts, run a cheap confidence pass:
    - `python3 scripts/base_confidence_check.py`
@@ -42,7 +45,8 @@ This file is the stable operating protocol for the background janitor automation
 
 ## Commit and Push Rules
 - Prefer one small janitor commit if a real repo-facing fix was needed.
-- Push at the end if there was any new local commit or if the repo was ahead.
-- If push fails, record it once and stop.
+- Push at the end if there was any new local commit or if the repo was ahead, using:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+- If push fails, record the helper result once and stop.
 - Release the worker lock before ending:
   - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py release --owner physics-janitor`

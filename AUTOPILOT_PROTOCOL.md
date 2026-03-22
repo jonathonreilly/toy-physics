@@ -21,7 +21,10 @@ This file is the stable operating protocol for the hourly science automation.
    - `git status --short --branch`
    - `git rev-list --left-right --count origin/main...main` if `origin/main` exists locally
    - `git log --oneline --decorate -n 8`
-4. If the repo is already ahead of `origin/main`, attempt to push that work before doing new science. If push is unavailable, note it and avoid piling on extra metadata-only commits.
+4. If the repo is already ahead of `origin/main`, attempt to push that work before doing new science with:
+   - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+   - if the helper reports a transient network or DNS failure, note it once and avoid piling on extra metadata-only commits
+   - if the helper reports auth or non-fast-forward failure, stop and leave the repo for janitor/manual reconciliation
 5. If tracked work log, runtime handoff, and memory disagree, reconcile them first from the real repo/log state before new work.
 
 ## Step Selection
@@ -58,9 +61,10 @@ This file is the stable operating protocol for the hourly science automation.
 
 ## Commit and Push Rules
 1. Prefer one clean commit per loop that includes the real science/integrity change plus its README/work-log updates.
-2. Push at the end of the loop.
+2. Push at the end of the loop with:
+   - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
 3. If push fails:
-   - record the failure once in the work log/handoff/memory,
+   - record the helper result once in the work log/handoff/memory,
    - do not keep emitting repeated “still ahead” commits on later loops,
    - next loop should try to reconcile/push before doing more work.
 4. Release the worker lock before ending:
