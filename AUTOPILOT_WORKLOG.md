@@ -1,3 +1,45 @@
+## 2026-03-22 01:26 America/New_York
+
+### Current state
+- Continued the same highest-signal blocked rung (`variant_limit = 224` non-pocket subtype-rule stability) and applied targeted runtime reductions in the specificity pipeline path.
+- Patched `toy_event_physics.py` to reuse per-graph neighbor adjacency in the self-maintenance search stack:
+  - added `build_graph_neighbor_lookup(...)`
+  - threaded optional `neighbor_lookup` reuse through `evolve_self_maintaining_pattern`, `derive_emergent_persistent_nodes`, `connected_components`, and `derive_persistence_support`
+  - precomputed one lookup per `collect_self_maintenance_candidates(...)` call and reused it across all seed/rule trials.
+- Revalidated behavior with smoke runs:
+  - `python3 scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 8`
+  - `python3 scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 32`
+- Retried `variant_limit = 224` with log redirection to `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-224.txt`; run still did not complete in this cycle.
+
+### Strongest confirmed conclusion
+- Mechanism conclusions remain unchanged: non-pocket subtype membership/exact separators are still fully confirmed through `variant_limit = 208` only.
+- The new optimization is materially effective at lower rungs (same outputs, faster runtime):
+  - `8`: `35.8s -> 26.6s`
+  - `32`: `69.2s -> 48.3s`
+- The unresolved `224` blocker remains in the specificity/candidate-pool path; subtype rule search itself is no longer the dominant issue.
+
+### Files and results changed in this run
+- Code:
+  - [toy_event_physics.py](/Users/jonreilly/Projects/Physics/toy_event_physics.py)
+- Updated run tracking:
+  - [AUTOPILOT_WORKLOG.md](/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md)
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- Logs touched/generated:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-224.txt` (start marker only; incomplete rerun)
+  - `/tmp/nonpocket8_after.txt` (smoke timing/output check)
+  - `/tmp/nonpocket32_after.txt` (smoke timing/output check)
+- Commit status:
+  - Committed in this run: `d7e7606` (`Cache graph neighbors in self-maintenance candidate search`).
+  - Tracking update commit/push status pending at this point in the run.
+
+### Exact next step
+- Reduce the remaining `variant_limit = 224` candidate search runtime by pruning repeated seed evaluations in `collect_self_maintenance_candidates(...)` (seed-builder de-dup and/or memoization of per-seed evolution outcomes), then rerun one full `224` rung.
+
+### First concrete action
+- Add a per-call memo in `collect_self_maintenance_candidates(...)` keyed by `(seed_nodes, survive_counts, birth_counts)` and skip duplicate seed-builder expansions before `derive_emergent_persistent_nodes(...)`, then run:
+  - `python3 scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 224 > /Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-224.txt`
+
 ## 2026-03-22 00:27 America/New_York
 
 ### Current state
@@ -21,8 +63,8 @@
 - Attempted (incomplete) log target:
   - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-224.txt` (start marker only)
 - Commit status:
-  - Committed and pushed: `04a60a1` (`Speed up nonpocket subtype rule search`), `99f0c73` (`Log 224 subtype runtime blocker and next profiling step`).
-  - Repository is synced: `main` == `origin/main` at `99f0c73`.
+  - Committed and pushed: `04a60a1` (`Speed up nonpocket subtype rule search`), `99f0c73` (`Log 224 subtype runtime blocker and next profiling step`), `8410de1` (`Correct commit sync state in latest worklog entry`).
+  - Repository is synced: `main` == `origin/main` at `8410de1`.
 
 ### Exact next step
 - Isolate and reduce `variant_limit = 224` specificity runtime in `toy_event_physics.py` enough to complete one full non-pocket subtype run, then compare subtype rows/rules against `192/208`.
