@@ -2641,10 +2641,11 @@ def derive_emergent_persistent_nodes(
         neighbor_lookup=neighbor_lookup,
     )
     late_window = history[-sample_window:]
-    occupancy = {node: 0.0 for node in nodes}
+    occupancy: dict[tuple[int, int], float] = {}
+    increment = 1.0 / len(late_window)
     for active_nodes in late_window:
         for node in active_nodes:
-            occupancy[node] += 1.0 / len(late_window)
+            occupancy[node] = occupancy.get(node, 0.0) + increment
 
     persistent_nodes = frozenset(
         node for node, fraction in occupancy.items() if fraction >= occupancy_threshold
@@ -2875,23 +2876,40 @@ def collect_self_maintenance_candidates(
         tuple[frozenset[int], frozenset[int], frozenset[tuple[int, int]]],
         tuple[float, ...],
     ] = {}
+    emergent_cache: dict[
+        tuple[frozenset[tuple[int, int]], frozenset[int], frozenset[int]],
+        tuple[
+            frozenset[tuple[int, int]],
+            dict[tuple[int, int], float],
+            list[int],
+        ],
+    ] = {}
 
     for seed_node in interior_nodes:
+        seen_seed_nodes: set[frozenset[tuple[int, int]]] = set()
         for seed_builder in seed_builders:
             seed_nodes = seed_builder(seed_node, nodes, wrap_y)
+            if seed_nodes in seen_seed_nodes:
+                continue
+            seen_seed_nodes.add(seed_nodes)
             for survive_counts, birth_counts in rule_pairs:
                 total_trials += 1
-                persistent_nodes, occupancy, orbit_sizes = derive_emergent_persistent_nodes(
-                    nodes,
-                    seed_nodes=seed_nodes,
-                    survive_counts=survive_counts,
-                    birth_counts=birth_counts,
-                    steps=evolution_steps,
-                    sample_window=sample_window,
-                    occupancy_threshold=occupancy_threshold,
-                    wrap_y=wrap_y,
-                    neighbor_lookup=neighbor_lookup,
-                )
+                evolution_key = (seed_nodes, survive_counts, birth_counts)
+                cached_result = emergent_cache.get(evolution_key)
+                if cached_result is None:
+                    cached_result = derive_emergent_persistent_nodes(
+                        nodes,
+                        seed_nodes=seed_nodes,
+                        survive_counts=survive_counts,
+                        birth_counts=birth_counts,
+                        steps=evolution_steps,
+                        sample_window=sample_window,
+                        occupancy_threshold=occupancy_threshold,
+                        wrap_y=wrap_y,
+                        neighbor_lookup=neighbor_lookup,
+                    )
+                    emergent_cache[evolution_key] = cached_result
+                persistent_nodes, occupancy, orbit_sizes = cached_result
                 if not persistent_nodes:
                     rejection_counts["empty"] += 1
                     continue
@@ -2928,11 +2946,11 @@ def collect_self_maintenance_candidates(
                     neighbor_lookup=neighbor_lookup,
                 )
                 support_sum = sum(support[node] for node in largest_component)
-                average_occupancy = sum(occupancy[node] for node in largest_component) / len(
+                average_occupancy = sum(occupancy.get(node, 0.0) for node in largest_component) / len(
                     largest_component
                 )
                 component_occupancy = {
-                    node: occupancy[node] if node in largest_component else 0.0
+                    node: occupancy.get(node, 0.0) if node in largest_component else 0.0
                     for node in nodes
                 }
 
@@ -9541,28 +9559,21 @@ def annotate_candidates_with_component_scores(
     standardized_rows: list[tuple[float, ...]],
     components: list[tuple[float, tuple[float, ...]]],
 ) -> list[EvaluatedCandidate]:
-    annotated_candidates = [
-        replace(
-            candidate,
-            pc1_score=0.0,
-            pc2_score=0.0,
-            pc3_score=0.0,
-        )
-        for candidate in candidates
-    ]
-    for component_index, (_eigenvalue, eigenvector) in enumerate(components[:3]):
-        annotated_candidates = [
+    component_vectors = [eigenvector for _eigenvalue, eigenvector in components[:3]]
+    annotated_candidates: list[EvaluatedCandidate] = []
+    for candidate, standardized_row in zip(candidates, standardized_rows):
+        scores = [
+            dot_product(standardized_row, eigenvector)
+            for eigenvector in component_vectors
+        ]
+        annotated_candidates.append(
             replace(
                 candidate,
-                **{
-                    f"pc{component_index + 1}_score": dot_product(
-                        standardized_row,
-                        eigenvector,
-                    )
-                },
+                pc1_score=scores[0] if len(scores) > 0 else 0.0,
+                pc2_score=scores[1] if len(scores) > 1 else 0.0,
+                pc3_score=scores[2] if len(scores) > 2 else 0.0,
             )
-            for candidate, standardized_row in zip(annotated_candidates, standardized_rows)
-        ]
+        )
     return annotated_candidates
 
 
@@ -10015,13 +10026,21 @@ def project_metric_rows_and_anchor(
     anchor: tuple[float, ...],
     projection_matrix: tuple[tuple[float, ...], ...],
 ) -> tuple[list[tuple[float, ...]], tuple[float, ...]]:
-    projected_rows = [
-        tuple(
-            sum(weight * value for weight, value in zip(projection_row, row))
-            for projection_row in projection_matrix
-        )
-        for row in metric_rows
-    ]
+    projected_row_cache: dict[
+        tuple[tuple[float, ...], tuple[tuple[float, ...], ...]],
+        tuple[float, ...],
+    ] = {}
+    projected_rows: list[tuple[float, ...]] = []
+    for row in metric_rows:
+        cache_key = (row, projection_matrix)
+        projected_row = projected_row_cache.get(cache_key)
+        if projected_row is None:
+            projected_row = tuple(
+                sum(weight * value for weight, value in zip(projection_row, row))
+                for projection_row in projection_matrix
+            )
+            projected_row_cache[cache_key] = projected_row
+        projected_rows.append(projected_row)
     projected_anchor = tuple(
         sum(weight * value for weight, value in zip(projection_row, anchor))
         for projection_row in projection_matrix
