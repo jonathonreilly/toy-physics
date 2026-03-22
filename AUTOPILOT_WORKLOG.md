@@ -1,3 +1,137 @@
+## 2026-03-22 04:19 America/New_York
+
+### Current state
+- Continued the active non-pocket subtype stability thread by executing the queued deeper rung:
+  - `python3 scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 240 > /Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-240.txt`
+- Run completed successfully in canonical repo context:
+  - `real 234.85s`, `user 234.49s`, `sys 0.25s`.
+- Compared `240` output against completed `224` and `208` logs and updated the mechanism narrative in `/Users/jonreilly/Projects/Physics/README.md`.
+
+### Strongest confirmed conclusion
+- The `224` add4-sensitive expansion is persistent and continues at `240`:
+  - non-pocket subtype rows increase from `6` to `8` (`224 -> 240`);
+  - `local-morph-\u0133` persists;
+  - two additional add4-sensitive crossing rows appear: `local-morph-\u014c` and `local-morph-\u014f`.
+- Subtype count remains `3` and the add1-sensitive separator remains exact (`crosses_midline = n`, `0` FP / `0` FN).
+- Equivalent 2-term add1 rule variants shift at `240` (e.g., shell-deep predicates replace prior core-deep/core-low-degree alternates), but the core subtype split structure is unchanged.
+
+### Files and results changed in this run
+- Narrative:
+  - [README.md](/Users/jonreilly/Projects/Physics/README.md)
+- Updated run tracking:
+  - [AUTOPILOT_WORKLOG.md](/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md)
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- Logs generated/used:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-240.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-224.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-21-pocket-wrap-suppressor-nonpocket-subtype-rules-208.txt`
+- Commit status:
+  - Pending commit for README + tracking updates in this run.
+  - Current local head before committing this run: `676c438`.
+
+### Exact next step
+- Run one deeper rung (`variant_limit = 256`) to test whether add4-sensitive crossing expansion continues linearly and whether the add1 exact-rule table remains structurally stable.
+
+### First concrete action
+- Execute:
+  - `python3 scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 256 > /Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-256.txt`
+- Then diff subtype context/rule sections versus:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-240.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-224.txt`
+## 2026-03-22 03:20 America/New_York
+
+### Current state
+- Finished the previously blocked `variant_limit = 224` non-pocket subtype rung after adding per-call projection memoization in `/Users/jonreilly/Projects/Physics/toy_event_physics.py` (`project_metric_rows_and_anchor(...)`, cache keyed by `(metric_row, projection_matrix)`).
+- Re-ran cheap audits and confirmed output stability:
+  - `python3 scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 8` (`real 25.16s`)
+  - `python3 scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 32` (`real 45.32s`)
+  - diffs vs prior runs are timestamp/elapsed-only.
+- Completed the canonical blocked run:
+  - `python3 scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 224 > /Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-224.txt`
+  - runtime: `real 221.79s`.
+
+### Strongest confirmed conclusion
+- The `224` rung is now completed and introduces the first post-`208` non-pocket expansion:
+  - non-pocket subtype rows increase from `5` to `6`;
+  - new row: `base:taper-wrap:local-morph-\u0133` (add4-sensitive, crossing branch);
+  - subtype count remains `3`.
+- The add1-sensitive separator remains exact and unchanged (`crosses_midline = n` still isolates `local-morph-\xe7` and `local-morph-\xe9` with `0` FP / `0` FN).
+- So the mechanism state updates from “stable through `208`” to “breakpoint at `224` via add4-sensitive branch growth, with core add1 rule intact.”
+
+### Files and results changed in this run
+- Code:
+  - [toy_event_physics.py](/Users/jonreilly/Projects/Physics/toy_event_physics.py)
+- Narrative:
+  - [README.md](/Users/jonreilly/Projects/Physics/README.md)
+- Updated run tracking:
+  - [AUTOPILOT_WORKLOG.md](/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md)
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- Logs touched/generated:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-224.txt` (completed run)
+  - `/tmp/nonpocket8_after_projection_cache.txt`
+  - `/tmp/nonpocket32_after_projection_cache.txt`
+- Commit status:
+  - Committed and pushed: `676c438` (`Unblock nonpocket 224 rung with projection caching`).
+  - Repository sync is current at this checkpoint: `main` == `origin/main` at `676c438`.
+
+### Exact next step
+- Determine whether the new `224` add4-sensitive row (`local-morph-\u0133`) persists at the next rung or is transient by running and diffing one deeper rung (`variant_limit = 240`).
+
+### First concrete action
+- Run:
+  - `python3 scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 240 > /Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-240.txt`
+- Then compare row membership/rule table against:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-224.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-21-pocket-wrap-suppressor-nonpocket-subtype-rules-208.txt`
+
+## 2026-03-22 02:33 America/New_York
+
+### Current state
+- Resumed the same highest-signal blocked rung (`variant_limit = 224` non-pocket subtype-rule stability) and focused on `collect_self_maintenance_candidates(...)` / downstream derived-axis hotspots.
+- Landed two runtime-oriented code changes in `/Users/jonreilly/Projects/Physics/toy_event_physics.py`:
+  - added per-call seed/result dedup plumbing in `collect_self_maintenance_candidates(...)`:
+    - `seen_seed_nodes` guard per interior seed node
+    - `emergent_cache` memo keyed by `(seed_nodes, survive_counts, birth_counts)`
+  - reduced object churn in `annotate_candidates_with_component_scores(...)` by replacing repeated multi-pass dataclass `replace(...)` calls with single-pass score assignment per candidate.
+- Also switched `derive_emergent_persistent_nodes(...)` occupancy accumulation to sparse updates and `.get(..., 0.0)` downstream reads.
+- Revalidated behavior with cheap audits (canonical repo):
+  - `python3 scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 8` (`real 26.09s`)
+  - `python3 scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 32` (`real 47.02s`)
+  - Output parity checks vs previous canonical runs were clean (timestamp/elapsed-only diffs).
+- Re-ran `variant_limit = 224` multiple times with canonical log redirection; run still did not complete in this cycle.
+
+### Strongest confirmed conclusion
+- Mechanism conclusions remain unchanged: non-pocket subtype membership/exact-rule mapping is still fully confirmed only through `variant_limit = 208`.
+- Runtime state did improve in where the interrupted `224` run reaches:
+  - prior blocked interrupts were in self-maintenance collection / candidate scoring setup;
+  - this run reached deeper derived-axis projection code (`project_metric_rows_and_anchor`) before interruption.
+- The blocker has shifted downstream, but a fully completed `224` rung is still pending.
+
+### Files and results changed in this run
+- Code:
+  - [toy_event_physics.py](/Users/jonreilly/Projects/Physics/toy_event_physics.py)
+- Updated run tracking:
+  - [AUTOPILOT_WORKLOG.md](/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md)
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- Logs touched/generated:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-224.txt` (start marker only; incomplete reruns)
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-nonpocket-subtype-224-interrupt-traces.txt`
+  - `/tmp/nonpocket8_after_hotfix.txt`
+  - `/tmp/nonpocket32_after_hotfix.txt`
+- Commit status:
+  - Pending commit in this run for runtime optimizations + tracking updates.
+  - Last known relation before this run: `origin/main...main = 0 behind / 6 ahead`.
+
+### Exact next step
+- Target the now-dominant derived-axis projection overhead (`project_metric_rows_and_anchor` / projection matrix applications) so a single full `variant_limit = 224` rung can complete.
+
+### First concrete action
+- Add a small per-call cache in `project_metric_rows_and_anchor(...)` for repeated row projections keyed by the metric row tuple and projection basis, then rerun:
+  - `python3 scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 224 > /Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-224.txt`
+
 ## 2026-03-22 01:26 America/New_York
 
 ### Current state
@@ -30,9 +164,9 @@
   - `/tmp/nonpocket8_after.txt` (smoke timing/output check)
   - `/tmp/nonpocket32_after.txt` (smoke timing/output check)
 - Commit status:
-  - Committed in this run: `d7e7606` (`Cache graph neighbors in self-maintenance candidate search`), `fab9f3f` (`Log neighbor-cache runtime progress for 224 subtype rung`), `766f207` (`Record push-blocked state for neighbor-cache run`), `7a7362e` (`Fix ahead count in latest autopilot worklog entry`), and `3f5f31d` (`Sync latest worklog commit list and ahead count`).
+  - Committed in this run: `d7e7606` (`Cache graph neighbors in self-maintenance candidate search`), `fab9f3f` (`Log neighbor-cache runtime progress for 224 subtype rung`), `766f207` (`Record push-blocked state for neighbor-cache run`), `7a7362e` (`Fix ahead count in latest autopilot worklog entry`), `3f5f31d` (`Sync latest worklog commit list and ahead count`), and `0b374ed` (`Align worklog commit metadata with final local state`).
   - Push attempt failed in sandbox (`Could not resolve host: github.com`), so remote sync could not be refreshed from this run context.
-  - Last known local/remote relation in git metadata: `origin/main...main = 0 behind / 5 ahead`.
+  - Last known local/remote relation in git metadata: `origin/main...main = 0 behind / 6 ahead`.
 
 ### Exact next step
 - Reduce the remaining `variant_limit = 224` candidate search runtime by pruning repeated seed evaluations in `collect_self_maintenance_candidates(...)` (seed-builder de-dup and/or memoization of per-seed evolution outcomes), then rerun one full `224` rung.
@@ -474,3 +608,48 @@ Each autopilot run should:
 
 ### First concrete action
 - Diff the baseline deep/pocket/low gaps and candidate-cell sets for `local-morph-a`, `local-morph-v`, and `local-morph-\x8e`, then check whether the non-pocket rows are missing only pocket signal or a larger shell/context property.
+
+## 2026-03-22 05:19 America/New_York
+
+### Current state
+- Resumed the active non-pocket subtype stability thread and executed the queued deeper rung in canonical repo context:
+  - `python3 scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 256 > /Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-256.txt`
+- Run completed successfully:
+  - `real 246.81s`, `user 246.46s`, `sys 0.25s`.
+- Compared `256` against `240`/`224` and updated mechanism narrative in `/Users/jonreilly/Projects/Physics/README.md`.
+- Ran a cheap audit smoke check after updates:
+  - `python3 scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 8 > /tmp/2026-03-22-nonpocket-subtype-rules-8-post256-smoke.txt`
+  - `real 24.51s`, `user 24.40s`, `sys 0.03s`.
+
+### Strongest confirmed conclusion
+- The post-`208` add4-sensitive crossing expansion does not extend immediately at `256`:
+  - non-pocket subtype rows are unchanged from `240` (`8` rows, subtype count `3`);
+  - add1-sensitive separation remains exact via `crosses_midline = n` (`2/2`, `0` FP, `0` FN);
+  - `256` and `240` differ only in run metadata (`variant_limit`/timestamps/elapsed).
+- The strongest mechanism read is now: expansion occurred at `224/240`, then stabilized through at least `256`.
+
+### Files and results changed in this run
+- Narrative:
+  - [README.md](/Users/jonreilly/Projects/Physics/README.md)
+- Updated run tracking:
+  - [AUTOPILOT_WORKLOG.md](/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md)
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- Logs generated/used:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-256.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-240.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-224.txt`
+  - `/tmp/2026-03-22-nonpocket-subtype-rules-8-post256-smoke.txt`
+- Commit status:
+  - Pending commit for README + tracking updates from this run.
+  - Local head before committing this run: `676c438`.
+
+### Exact next step
+- Run one deeper rung (`variant_limit = 272`) to test whether the add4-sensitive crossing branch remains plateaued after the `256` hold or resumes growth.
+
+### First concrete action
+- Execute:
+  - `python3 scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 272 > /Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-272.txt`
+- Then diff subtype context/exact-rule sections versus:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-256.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-240.txt`
