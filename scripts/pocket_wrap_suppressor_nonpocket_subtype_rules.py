@@ -218,12 +218,21 @@ def search_exact_rules(
     predicates: list[Predicate] = []
 
     for feature_name in numeric_features:
-        values = sorted({float(getattr(row, feature_name)) for row in rows})
+        value_to_labels: dict[float, set[bool]] = {}
+        for row in rows:
+            value = float(getattr(row, feature_name))
+            labels = value_to_labels.setdefault(value, set())
+            labels.add(row.subtype == target_subtype)
+
+        values = sorted(value_to_labels)
         thresholds: list[float] = []
-        for left, right in zip(values, values[1:]):
-            thresholds.append((left + right) / 2.0)
         if len(values) == 1:
             thresholds.append(values[0])
+        else:
+            for left, right in zip(values, values[1:]):
+                # Only keep boundaries where target/non-target membership can change.
+                if value_to_labels[left] != value_to_labels[right]:
+                    thresholds.append((left + right) / 2.0)
         for threshold in thresholds:
             predicates.append(
                 (
@@ -263,25 +272,47 @@ def search_exact_rules(
 
     seen_rule_texts: set[str] = set()
     exact_rows: list[SubtypeRuleRow] = []
-    predicate_sets = [(predicate,) for predicate in predicates]
-    predicate_sets.extend(itertools.combinations(predicates, 2))
+    row_count = len(rows)
+    full_mask = (1 << row_count) - 1
+    target_mask = 0
+    for index, row in enumerate(rows):
+        if row.subtype == target_subtype:
+            target_mask |= 1 << index
+    non_target_mask = full_mask ^ target_mask
+
+    # Many threshold predicates collapse to the same prediction set.
+    # Keep one canonical text form per mask to avoid redundant combinations.
+    predicate_by_mask: dict[int, Predicate] = {}
+    for predicate in predicates:
+        mask = 0
+        for index, row in enumerate(rows):
+            if predicate[1](row):
+                mask |= 1 << index
+        chosen = predicate_by_mask.get(mask)
+        if chosen is None or (predicate[2], predicate[0]) < (chosen[2], chosen[0]):
+            predicate_by_mask[mask] = predicate
+
+    predicate_with_masks = [(predicate, mask) for mask, predicate in predicate_by_mask.items()]
+
+    predicate_sets = [(item,) for item in predicate_with_masks]
+    predicate_sets.extend(itertools.combinations(predicate_with_masks, 2))
     for predicate_tuple in predicate_sets:
-        sorted_terms = tuple(sorted(predicate_tuple, key=lambda item: item[2]))
+        sorted_terms = tuple(
+            sorted((item[0] for item in predicate_tuple), key=lambda item: item[2])
+        )
         rule_text = " and ".join(term[0] for term in sorted_terms)
         if rule_text in seen_rule_texts:
             continue
         seen_rule_texts.add(rule_text)
 
-        tp = fp = fn = 0
-        for row in rows:
-            prediction = all(term[1](row) for term in sorted_terms)
-            actual = row.subtype == target_subtype
-            if prediction and actual:
-                tp += 1
-            elif prediction and not actual:
-                fp += 1
-            elif (not prediction) and actual:
-                fn += 1
+        predicted_mask = full_mask
+        for _predicate, mask in predicate_tuple:
+            predicted_mask &= mask
+            if predicted_mask == 0:
+                break
+        tp = (predicted_mask & target_mask).bit_count()
+        fp = (predicted_mask & non_target_mask).bit_count()
+        fn = (target_mask & (full_mask ^ predicted_mask)).bit_count()
         if fp == 0 and fn == 0:
             exact_rows.append(
                 SubtypeRuleRow(
