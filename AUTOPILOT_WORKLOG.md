@@ -1,3 +1,49 @@
+## 2026-03-22 14:14 America/New_York
+
+### Current state
+- Continued the active non-pocket subtype stability thread by executing five deeper rungs in canonical repo context:
+  - `python3 scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 720 > /Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-720.txt`
+  - `python3 scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 736 > /Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-736.txt`
+  - `python3 scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 752 > /Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-752.txt`
+  - `python3 scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 768 > /Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-768.txt`
+- `720` and `736` exactly matched the `688/704` breakpoint band.
+- `752` and `768` then each introduced one new row beyond that band.
+- Updated the mechanism narrative in `/Users/jonreilly/Projects/Physics/README.md` to record the stable `688..736` band and the new `752/768` growth phase.
+
+### Strongest confirmed conclusion
+- The next stable band after `528..672` now runs through `688..736`:
+  - non-pocket overlap-positive rows remain `16` across `688`, `704`, `720`, and `736`;
+  - subtype count remains `4`;
+  - new row `local-morph-\u0310` persists as an add1-sensitive case with response `neither/dpadj-only`;
+  - the old exact add1-sensitive rule remains absent from the exact-rule table, while the both-sensitive rule `deep_overlap_count >= 1.500` still holds.
+- `752` and `768` then mark the next live growth phase:
+  - `752` adds `local-morph-\u034b`, raising non-pocket overlap-positive rows from `16` to `17`;
+  - `768` adds `local-morph-\u035b`, raising them again from `17` to `18`;
+  - subtype count still remains `4`.
+
+### Files and results changed in this run
+- Narrative:
+  - [README.md](/Users/jonreilly/Projects/Physics/README.md)
+- Updated run tracking:
+  - [AUTOPILOT_WORKLOG.md](/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md)
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- Logs generated/used:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-720.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-736.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-752.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-768.txt`
+
+### Exact next step
+- Run one deeper rung (`variant_limit = 784`) to test whether the new `752/768` growth phase persists immediately or settles into another stable band.
+
+### First concrete action
+- Execute:
+  - `python3 scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 784 > /Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-784.txt`
+- Then diff subtype context/rule sections versus:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-768.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-752.txt`
+
 ## 2026-03-22 13:22 America/New_York
 
 ### Current state
