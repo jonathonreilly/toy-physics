@@ -1,3 +1,44 @@
+## 2026-03-22 08:48 America/New_York
+
+### Current state
+- Continued the active non-pocket subtype stability thread by executing three deeper rungs in canonical repo context:
+  - `python3 scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 400 > /Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-400.txt`
+  - `python3 scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 416 > /Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-416.txt`
+  - `python3 scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 432 > /Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-432.txt`
+- All three runs completed successfully and matched the new `368/384` breakpoint band exactly.
+- Updated the mechanism narrative in `/Users/jonreilly/Projects/Physics/README.md`.
+
+### Strongest confirmed conclusion
+- The new add1-sensitive branch growth is now stable through `432`:
+  - non-pocket overlap-positive rows remain `9` across `368`, `384`, `400`, `416`, and `432`;
+  - subtype count remains `3`;
+  - the exact one-term add1-sensitive separator still holds via `crosses_midline = n`, now with `3` true positives and `0` errors.
+- So the long `240..352` plateau has given way to a new stable band at `368..432`, and the change is still branch growth inside the existing add1-sensitive non-crossing family rather than a new subtype split.
+
+### Files and results changed in this run
+- Narrative:
+  - [README.md](/Users/jonreilly/Projects/Physics/README.md)
+- Updated run tracking:
+  - [AUTOPILOT_WORKLOG.md](/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md)
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- Logs generated/used:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-400.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-416.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-432.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-384.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-368.txt`
+
+### Exact next step
+- Run one deeper rung (`variant_limit = 448`) to test whether the new `368..432` stable band still holds.
+
+### First concrete action
+- Execute:
+  - `python3 scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 448 > /Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-448.txt`
+- Then diff subtype context/rule sections versus:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-432.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-416.txt`
+
 ## 2026-03-22 07:51 America/New_York
 
 ### Current state
