@@ -1,3 +1,43 @@
+## 2026-03-22 09:43 America/New_York
+
+### Current state
+- Continued the active non-pocket subtype stability thread by executing two deeper rungs in canonical repo context:
+  - `python3 scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 480 > /Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-480.txt`
+  - `python3 scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 496 > /Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-496.txt`
+- Both runs completed successfully and matched each other exactly.
+- Updated the mechanism narrative in `/Users/jonreilly/Projects/Physics/README.md` to capture the new subtype-count regime.
+
+### Strongest confirmed conclusion
+- `480/496` marks the start of a new four-subtype regime:
+  - non-pocket overlap-positive rows rise from `11` to `13`;
+  - subtype count rises from `3` to `4`;
+  - new rows include `local-morph-\u0232` and `local-morph-\u0236`;
+  - the new fourth subtype is `pair-only-sensitive`, represented by `local-morph-\u0236`.
+- The old crossing-based one-term add1 separator is no longer sufficient in this regime. Exact add1-sensitive rules are now low-degree-gated 2-term cuts, such as `pocket_fraction <= 0.128 and core_low_degree_fraction >= 0.275`.
+
+### Files and results changed in this run
+- Narrative:
+  - [README.md](/Users/jonreilly/Projects/Physics/README.md)
+- Updated run tracking:
+  - [AUTOPILOT_WORKLOG.md](/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md)
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- Logs generated/used:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-480.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-496.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-464.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-448.txt`
+
+### Exact next step
+- Run one deeper rung (`variant_limit = 512`) to test whether the new four-subtype regime persists beyond `496`.
+
+### First concrete action
+- Execute:
+  - `python3 scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 512 > /Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-512.txt`
+- Then diff subtype context/rule sections versus:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-496.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-480.txt`
+
 ## 2026-03-22 08:48 America/New_York
 
 ### Current state
