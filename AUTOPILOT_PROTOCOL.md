@@ -1,6 +1,6 @@
-# Physics Autopilot Protocol
+# Physics Science Worker Protocol
 
-This file is the stable operating protocol for the hourly automation.
+This file is the stable operating protocol for the hourly science automation.
 
 ## Goal
 - Make one bounded, genuine forward step each loop.
