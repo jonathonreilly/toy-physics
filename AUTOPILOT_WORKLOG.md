@@ -1,3 +1,49 @@
+## 2026-03-22 19:01 America/New_York
+
+### Current state
+- Reconciled the synced `848` frontier first, then continued the active non-pocket subtype thread by executing four deeper rungs in canonical repo context:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 864 > /Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-864.txt`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 880 > /Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-880.txt`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 896 > /Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-896.txt`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 912 > /Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-912.txt`
+- `864` and `880` exactly matched the `832/848` frontier behavior.
+- `896` introduced two new rows, and `912` exactly matched that expanded frontier.
+- Updated the mechanism narrative in `/Users/jonreilly/Projects/Physics/README.md` to record the stable `832..880` band and the new `896/912` hold.
+
+### Strongest confirmed conclusion
+- `832..880` is now a real stable band:
+  - non-pocket overlap-positive rows remain `25` across `832`, `848`, `864`, and `880`;
+  - subtype count remains `4`;
+  - the both-sensitive exact-rule family stays unchanged and still isolates `2` rows via `deep_overlap_count >= 1.500`.
+- `896` and `912` then form the next confirmed hold:
+  - non-pocket overlap-positive rows rise from `25` to `27` by adding `local-morph-\u03d4` and `local-morph-\u03d8`;
+  - subtype count still remains `4`;
+  - `pair-only-sensitive` expands to `4` rows;
+  - the both-sensitive exact-rule family remains unchanged.
+
+### Files and results changed in this run
+- Narrative:
+  - [README.md](/Users/jonreilly/Projects/Physics/README.md)
+- Updated run tracking:
+  - [AUTOPILOT_WORKLOG.md](/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md)
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- Logs generated/used:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-864.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-880.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-896.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-912.txt`
+
+### Exact next step
+- Run one deeper rung (`variant_limit = 928`) to test whether `896/912` is another short stable band or whether the next growth phase resumes immediately.
+
+### First concrete action
+- Execute:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 928 > /Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-928.txt`
+- Then diff subtype context/rule sections versus:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-912.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-896.txt`
+
 ## 2026-03-22 17:30 America/New_York
 
 ### Current state
