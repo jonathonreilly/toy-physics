@@ -2575,11 +2575,13 @@ def derive_persistence_support(
     nodes: set[tuple[int, int]],
     persistent_nodes: frozenset[tuple[int, int]],
     wrap_y: bool = False,
+    neighbor_lookup: dict[tuple[int, int], tuple[tuple[int, int], ...]] | None = None,
 ) -> dict[tuple[int, int], float]:
     support = {node: 0.0 for node in nodes}
     active_nodes = persistent_nodes & nodes
+    lookup = neighbor_lookup or build_graph_neighbor_lookup(nodes, wrap_y=wrap_y)
     for node in active_nodes:
-        neighbors = graph_neighbors(node, nodes, wrap_y=wrap_y)
+        neighbors = lookup[node]
         support[node] = sum(neighbor in active_nodes for neighbor in neighbors) / len(neighbors)
     return support
 
@@ -2591,17 +2593,19 @@ def evolve_self_maintaining_pattern(
     birth_counts: frozenset[int] = frozenset({3, 4}),
     steps: int = 12,
     wrap_y: bool = False,
+    neighbor_lookup: dict[tuple[int, int], tuple[tuple[int, int], ...]] | None = None,
 ) -> list[frozenset[tuple[int, int]]]:
     """Run a local self-maintenance rule and keep the full orbit."""
 
     active_nodes = set(seed_nodes & nodes)
     history: list[frozenset[tuple[int, int]]] = []
+    lookup = neighbor_lookup or build_graph_neighbor_lookup(nodes, wrap_y=wrap_y)
 
     for _ in range(steps):
         history.append(frozenset(active_nodes))
         neighbor_counts: Counter[tuple[int, int]] = Counter({node: 0 for node in active_nodes})
         for node in active_nodes:
-            for neighbor in graph_neighbors(node, nodes, wrap_y=wrap_y):
+            for neighbor in lookup[node]:
                 neighbor_counts[neighbor] += 1
 
         active_nodes = {
@@ -2623,6 +2627,7 @@ def derive_emergent_persistent_nodes(
     sample_window: int = 6,
     occupancy_threshold: float = 2 / 3,
     wrap_y: bool = False,
+    neighbor_lookup: dict[tuple[int, int], tuple[tuple[int, int], ...]] | None = None,
 ) -> tuple[frozenset[tuple[int, int]], dict[tuple[int, int], float], list[int]]:
     """Turn a local orbit into a time-thick persistent pattern."""
 
@@ -2633,6 +2638,7 @@ def derive_emergent_persistent_nodes(
         birth_counts=birth_counts,
         steps=steps,
         wrap_y=wrap_y,
+        neighbor_lookup=neighbor_lookup,
     )
     late_window = history[-sample_window:]
     occupancy = {node: 0.0 for node in nodes}
@@ -2651,9 +2657,11 @@ def connected_components(
     active_nodes: frozenset[tuple[int, int]],
     nodes: set[tuple[int, int]],
     wrap_y: bool = False,
+    neighbor_lookup: dict[tuple[int, int], tuple[tuple[int, int], ...]] | None = None,
 ) -> list[frozenset[tuple[int, int]]]:
     remaining = set(active_nodes)
     components: list[frozenset[tuple[int, int]]] = []
+    lookup = neighbor_lookup or build_graph_neighbor_lookup(nodes, wrap_y=wrap_y)
 
     while remaining:
         start = remaining.pop()
@@ -2661,7 +2669,7 @@ def connected_components(
         frontier = [start]
         while frontier:
             node = frontier.pop()
-            for neighbor in graph_neighbors(node, nodes, wrap_y=wrap_y):
+            for neighbor in lookup[node]:
                 if neighbor in remaining:
                     remaining.remove(neighbor)
                     component.add(neighbor)
@@ -2854,6 +2862,7 @@ def collect_self_maintenance_candidates(
     rule_pairs = filter_rule_pairs(count_options, exact_rule_pairs)
     if not rule_pairs:
         rule_pairs = ordered_rule_pairs(count_options, preferred_rule_pairs)
+    neighbor_lookup = build_graph_neighbor_lookup(nodes, wrap_y=wrap_y)
 
     total_trials = 0
     rejection_counts: Counter[str] = Counter()
@@ -2881,13 +2890,19 @@ def collect_self_maintenance_candidates(
                     sample_window=sample_window,
                     occupancy_threshold=occupancy_threshold,
                     wrap_y=wrap_y,
+                    neighbor_lookup=neighbor_lookup,
                 )
                 if not persistent_nodes:
                     rejection_counts["empty"] += 1
                     continue
 
                 largest_component = max(
-                    connected_components(persistent_nodes, nodes, wrap_y=wrap_y),
+                    connected_components(
+                        persistent_nodes,
+                        nodes,
+                        wrap_y=wrap_y,
+                        neighbor_lookup=neighbor_lookup,
+                    ),
                     key=len,
                 )
                 component_fraction = len(largest_component) / len(persistent_nodes)
@@ -2906,7 +2921,12 @@ def collect_self_maintenance_candidates(
 
                 accepted_candidates += 1
                 area = component_area(largest_component)
-                support = derive_persistence_support(nodes, largest_component, wrap_y=wrap_y)
+                support = derive_persistence_support(
+                    nodes,
+                    largest_component,
+                    wrap_y=wrap_y,
+                    neighbor_lookup=neighbor_lookup,
+                )
                 support_sum = sum(support[node] for node in largest_component)
                 average_occupancy = sum(occupancy[node] for node in largest_component) / len(
                     largest_component
@@ -3238,6 +3258,45 @@ def graph_neighbors(
         if neighbor in nodes:
             neighbors.add(neighbor)
     return sorted(neighbors)
+
+
+def build_graph_neighbor_lookup(
+    nodes: set[tuple[int, int]],
+    wrap_y: bool = False,
+) -> dict[tuple[int, int], tuple[tuple[int, int], ...]]:
+    if not wrap_y:
+        return {
+            node: tuple(graph_neighbors(node, nodes, wrap_y=False))
+            for node in nodes
+        }
+
+    offsets = (
+        (-1, 0),
+        (1, 0),
+        (0, -1),
+        (0, 1),
+        (-1, -1),
+        (-1, 1),
+        (1, -1),
+        (1, 1),
+    )
+    min_y = min(node_y for _node_x, node_y in nodes)
+    max_y = max(node_y for _node_x, node_y in nodes)
+    neighbor_lookup: dict[tuple[int, int], tuple[tuple[int, int], ...]] = {}
+    for node_x, node_y in nodes:
+        neighbors: set[tuple[int, int]] = set()
+        for dx, dy in offsets:
+            neighbor_x = node_x + dx
+            neighbor_y = node_y + dy
+            if neighbor_y < min_y:
+                neighbor_y = max_y
+            elif neighbor_y > max_y:
+                neighbor_y = min_y
+            neighbor = (neighbor_x, neighbor_y)
+            if neighbor in nodes:
+                neighbors.add(neighbor)
+        neighbor_lookup[(node_x, node_y)] = tuple(sorted(neighbors))
+    return neighbor_lookup
 
 
 def cluster_seed_builder(
