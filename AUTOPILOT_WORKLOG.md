@@ -1,3 +1,47 @@
+## 2026-03-22 07:16 America/New_York
+
+### Current state
+- Continued the active non-pocket subtype stability thread by validating and diffing the completed deeper rung in canonical repo context:
+  - `python3 scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 288 > /Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-288.txt`
+- Confirmed the `288` run is complete (`total_elapsed=279.9s`) and compared against `272` and `256`; no subtype-membership or exact-rule-table changes were found.
+- Updated mechanism narrative in `/Users/jonreilly/Projects/Physics/README.md` to carry conclusions through `288`.
+- Ran cheap audit smoke check after updates:
+  - `python3 scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 8 > /tmp/2026-03-22-nonpocket-subtype-rules-8-post288-smoke.txt`
+  - `real 27.110s`, `user 26.57s`, `sys 0.18s`.
+
+### Strongest confirmed conclusion
+- The post-`208` add4-sensitive crossing expansion is still plateaued through `288`:
+  - non-pocket overlap-positive rows remain `8` (same as `240`/`256`/`272`);
+  - subtype count remains `3`;
+  - add1-sensitive separator remains exact via `crosses_midline = n` (`0` FP / `0` FN).
+- Diffs versus `272` and `256` are metadata-only (start/end timestamps, elapsed runtime, and `variant_limit`).
+
+### Files and results changed in this run
+- Narrative:
+  - [README.md](/Users/jonreilly/Projects/Physics/README.md)
+- Updated run tracking:
+  - [AUTOPILOT_WORKLOG.md](/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md)
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- Logs generated/used:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-288.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-272.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-256.txt`
+  - `/tmp/2026-03-22-nonpocket-subtype-rules-8-post288-smoke.txt`
+- Commit status:
+  - Pending commit in this run for README + tracking updates.
+  - Current local head before committing this run: `e25c121`.
+
+### Exact next step
+- Run one deeper rung (`variant_limit = 304`) to test whether the `240..288` plateau continues unchanged.
+
+### First concrete action
+- Execute:
+  - `python3 scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 304 > /Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-304.txt`
+- Then diff subtype context/rule sections versus:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-288.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-272.txt`
+
 ## 2026-03-22 06:19 America/New_York
 
 ### Current state
@@ -27,8 +71,8 @@
   - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-240.txt`
   - `/tmp/2026-03-22-nonpocket-subtype-rules-8-post272-smoke.txt`
 - Commit status:
-  - Committed and pushed: `e67a152` (`Document nonpocket subtype plateau through variant limit 272`).
-  - Repository sync is current at this checkpoint: `main` == `origin/main` at `e67a152`.
+  - Committed and pushed: `e67a152` (`Document nonpocket subtype plateau through variant limit 272`), `e25c121` (`Sync worklog with pushed 272 plateau commit state`).
+  - Repository sync is current at this checkpoint: `main` == `origin/main` at `e25c121`.
 
 ### Exact next step
 - Run one deeper rung (`variant_limit = 288`) to test whether the `240..272` plateau continues unchanged.
