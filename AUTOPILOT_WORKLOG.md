@@ -1,3 +1,50 @@
+## 2026-03-22 13:22 America/New_York
+
+### Current state
+- Continued the active non-pocket subtype stability thread by executing four deeper rungs in canonical repo context:
+  - `python3 scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 656 > /Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-656.txt`
+  - `python3 scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 672 > /Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-672.txt`
+  - `python3 scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 688 > /Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-688.txt`
+  - `python3 scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 704 > /Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-704.txt`
+- The first two runs exactly matched the `528/544/560/576/592/608/624/640` band.
+- The next two runs matched each other and introduced the same new row `local-morph-\u0310`.
+- Updated the mechanism narrative in `/Users/jonreilly/Projects/Physics/README.md` to extend the stable four-subtype checkpoint through `672` and record the new `688/704` breakpoint.
+
+### Strongest confirmed conclusion
+- The four-subtype regime is now stable through `672`:
+  - non-pocket overlap-positive rows remain `15` across `528`, `544`, `560`, `576`, `592`, `608`, `624`, `640`, `656`, and `672`;
+  - subtype count remains `4`;
+  - the `pair-only-sensitive` subtype persists with two rows (`local-morph-\u0236`, `local-morph-\u026e`);
+  - the exact add1-sensitive rule remains the 2-term low-degree cut `span_range >= 2.500 and core_low_degree_fraction >= 0.275`.
+- `688` and `704` then mark the next confirmed breakpoint:
+  - non-pocket overlap-positive rows rise from `15` to `16`;
+  - new row `local-morph-\u0310` joins as an add1-sensitive case with response `neither/dpadj-only`;
+  - subtype count stays `4`;
+  - the old exact add1-sensitive rule drops out of the exact-rule table, while the both-sensitive rule `deep_overlap_count >= 1.500` still holds.
+
+### Files and results changed in this run
+- Narrative:
+  - [README.md](/Users/jonreilly/Projects/Physics/README.md)
+- Updated run tracking:
+  - [AUTOPILOT_WORKLOG.md](/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md)
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- Logs generated/used:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-656.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-672.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-688.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-704.txt`
+
+### Exact next step
+- Run one deeper rung (`variant_limit = 720`) to test whether the new `688/704` breakpoint persists as a stable band or expands again immediately.
+
+### First concrete action
+- Execute:
+  - `python3 scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 720 > /Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-720.txt`
+- Then diff subtype context/rule sections versus:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-704.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-688.txt`
+
 ## 2026-03-22 12:21 America/New_York
 
 ### Current state
