@@ -21,8 +21,8 @@
 - Attempted (incomplete) log target:
   - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-224.txt` (start marker only)
 - Commit status:
-  - Committed and pushed: `04a60a1` (`Speed up nonpocket subtype rule search`).
-  - Repository is synced: `main` == `origin/main` at `04a60a1`.
+  - Committed and pushed: `04a60a1` (`Speed up nonpocket subtype rule search`), `99f0c73` (`Log 224 subtype runtime blocker and next profiling step`).
+  - Repository is synced: `main` == `origin/main` at `99f0c73`.
 
 ### Exact next step
 - Isolate and reduce `variant_limit = 224` specificity runtime in `toy_event_physics.py` enough to complete one full non-pocket subtype run, then compare subtype rows/rules against `192/208`.
