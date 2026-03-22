@@ -16,8 +16,8 @@
   - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
   - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
 - Commit status:
-  - No new commit in this run.
-  - Repository remains synced: `main` == `origin/main` at `982d32e`.
+  - Committed and pushed: `905375a` (`Log blocked variant-limit 224 subtype rung attempt`).
+  - Repository is synced: `main` == `origin/main` at `905375a`.
 
 ### Exact next step
 - Complete a single successful `variant_limit = 224` non-pocket subtype-rule rung and compare subtype membership plus exact-rule tables against the completed `192/208` baselines.
