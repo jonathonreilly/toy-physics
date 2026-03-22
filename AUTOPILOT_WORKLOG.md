@@ -5,7 +5,7 @@
   - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 832 > /Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-832.txt`
 - Run completed successfully (`total_elapsed=814.3s`) and extended the active growth frontier.
 - Updated `/Users/jonreilly/Projects/Physics/README.md` to reflect the new rung and unchanged exact-rule behavior.
-- Committed the repo updates as `ad91b08`, but push failed once due network/DNS (`Could not resolve host: github.com`), so `main` is currently ahead of `origin/main` by 1 commit.
+- Committed the repo updates locally, but push failed due network/DNS (`Could not resolve host: github.com`), so `main` remains ahead of `origin/main`.
 
 ### Strongest confirmed conclusion
 - The accelerating non-pocket growth phase continues at `832` rather than settling:
