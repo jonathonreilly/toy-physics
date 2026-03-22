@@ -1,3 +1,43 @@
+## 2026-03-22 17:30 America/New_York
+
+### Current state
+- Resumed the active non-pocket subtype frontier thread and executed one bounded deeper rung in canonical repo context:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 848 > /Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-848.txt`
+- Run completed successfully (`total_elapsed=817.7s`).
+- Reconciled git before new work and retried push first; push remains unavailable in this environment (`Could not resolve host: github.com`).
+- Updated `/Users/jonreilly/Projects/Physics/README.md` to reflect the newly confirmed `832/848` hold.
+
+### Strongest confirmed conclusion
+- `848` is an exact replication of the `832` frontier behavior except for the header limit value:
+  - non-pocket overlap-positive rows remain `25` (no new rows);
+  - subtype count remains `4`;
+  - both-sensitive exact-rule family is unchanged and still anchored by `deep_overlap_count >= 1.500` (`2` true positives).
+- So `752..832` remains the accelerating growth phase, and `832/848` is now the first confirmed hold at that new `25`-row level.
+
+### Files and results changed in this run
+- Narrative:
+  - [README.md](/Users/jonreilly/Projects/Physics/README.md)
+- Updated run tracking:
+  - [AUTOPILOT_WORKLOG.md](/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md)
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- Logs generated/used:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-848.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-832.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-816.txt`
+
+### Exact next step
+- Reconcile/push `main` first, then run one deeper rung (`variant_limit = 864`) to test whether `832/848` is a stable band or the next growth step resumes immediately.
+
+### First concrete action
+- Execute:
+  - `git -C /Users/jonreilly/Projects/Physics push`
+  - If push succeeds:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 864 > /Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-864.txt`
+- Then diff subtype context/rule sections versus:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-848.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-832.txt`
+
 ## 2026-03-22 16:30 America/New_York
 
 ### Current state
