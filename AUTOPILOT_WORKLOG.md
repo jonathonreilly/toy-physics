@@ -30,9 +30,9 @@
   - `/tmp/nonpocket8_after.txt` (smoke timing/output check)
   - `/tmp/nonpocket32_after.txt` (smoke timing/output check)
 - Commit status:
-  - Committed in this run: `d7e7606` (`Cache graph neighbors in self-maintenance candidate search`), `fab9f3f` (`Log neighbor-cache runtime progress for 224 subtype rung`), `766f207` (`Record push-blocked state for neighbor-cache run`), and `7a7362e` (`Fix ahead count in latest autopilot worklog entry`).
+  - Committed in this run: `d7e7606` (`Cache graph neighbors in self-maintenance candidate search`), `fab9f3f` (`Log neighbor-cache runtime progress for 224 subtype rung`), `766f207` (`Record push-blocked state for neighbor-cache run`), `7a7362e` (`Fix ahead count in latest autopilot worklog entry`), and `3f5f31d` (`Sync latest worklog commit list and ahead count`).
   - Push attempt failed in sandbox (`Could not resolve host: github.com`), so remote sync could not be refreshed from this run context.
-  - Last known local/remote relation in git metadata: `origin/main...main = 0 behind / 4 ahead`.
+  - Last known local/remote relation in git metadata: `origin/main...main = 0 behind / 5 ahead`.
 
 ### Exact next step
 - Reduce the remaining `variant_limit = 224` candidate search runtime by pruning repeated seed evaluations in `collect_self_maintenance_candidates(...)` (seed-builder de-dup and/or memoization of per-seed evolution outcomes), then rerun one full `224` rung.
