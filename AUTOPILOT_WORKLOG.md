@@ -30,6 +30,9 @@ Each autopilot run should:
   - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
 - New log:
   - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-pair-kill-row-compare-192-nonpocket.txt`
+- Commit status:
+  - Committed and pushed: `b7c0ce2` (`Document non-pocket suppressor subtypes at variant limit 192`).
+  - `main` now matches `origin/main` at `b7c0ce2`.
 
 ### Exact next step
 - Convert the non-pocket subtype split from qualitative to exact-rule form on the stabilized `192` family, then check whether that rule remains exact at `variant_limit = 208`.
