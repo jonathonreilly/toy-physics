@@ -12,12 +12,17 @@ This file is the stable operating protocol for the hourly science automation.
    - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
    - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md` if it exists
    - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` if it exists
-2. Reconcile git state before new work:
+2. Check the cooperative worker lock:
+   - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status`
+   - if another live owner holds the lock, stop without doing new work
+   - otherwise acquire it with:
+     - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 6`
+3. Reconcile git state before new work:
    - `git status --short --branch`
    - `git rev-list --left-right --count origin/main...main` if `origin/main` exists locally
    - `git log --oneline --decorate -n 8`
-3. If the repo is already ahead of `origin/main`, attempt to push that work before doing new science. If push is unavailable, note it and avoid piling on extra metadata-only commits.
-4. If tracked work log, runtime handoff, and memory disagree, reconcile them first from the real repo/log state before new work.
+4. If the repo is already ahead of `origin/main`, attempt to push that work before doing new science. If push is unavailable, note it and avoid piling on extra metadata-only commits.
+5. If tracked work log, runtime handoff, and memory disagree, reconcile them first from the real repo/log state before new work.
 
 ## Step Selection
 1. Continue the highest-signal unfinished thread from the top work-log entry.
@@ -58,3 +63,5 @@ This file is the stable operating protocol for the hourly science automation.
    - record the failure once in the work log/handoff/memory,
    - do not keep emitting repeated “still ahead” commits on later loops,
    - next loop should try to reconcile/push before doing more work.
+4. Release the worker lock before ending:
+   - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py release --owner physics-science`

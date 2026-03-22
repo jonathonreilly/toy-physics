@@ -12,7 +12,12 @@ This file is the stable operating protocol for the background janitor automation
    - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
    - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md` if it exists
    - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` if it exists
-2. Reconcile git state:
+2. Check the cooperative worker lock:
+   - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status`
+   - if a live lock is held by another owner, stop instead of mutating shared state
+   - otherwise acquire it with:
+     - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-janitor --purpose "janitor pass" --ttl-hours 1`
+3. Reconcile git state:
    - `git status --short --branch`
    - `git rev-list --left-right --count origin/main...main` if `origin/main` exists locally
    - `git log --oneline --decorate -n 8`
@@ -39,3 +44,5 @@ This file is the stable operating protocol for the background janitor automation
 - Prefer one small janitor commit if a real repo-facing fix was needed.
 - Push at the end if there was any new local commit or if the repo was ahead.
 - If push fails, record it once and stop.
+- Release the worker lock before ending:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py release --owner physics-janitor`

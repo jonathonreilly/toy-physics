@@ -12,6 +12,10 @@ Read, in order:
 2. `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md` if it exists
 3. `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` if it exists
 4. `git log --oneline --decorate -n 20`
+5. `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status`
+   - if another live owner holds the lock, skip this cycle rather than competing for shared state
+   - otherwise acquire it with:
+     - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-summary --purpose "summary pass" --ttl-hours 1`
 
 ## Output
 - Append a timestamped section to:
@@ -30,3 +34,5 @@ Read, in order:
 
 ## Fallback
 - If there were no new commits or no substantive changes since the last summary, write a short “no material change” summary entry instead of repeating the whole history.
+- Release the worker lock before ending:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py release --owner physics-summary`
