@@ -32,7 +32,8 @@ Each autopilot run should:
 - New log:
   - `/Users/jonreilly/Projects/Physics/logs/2026-03-21-pocket-wrap-suppressor-overlap-context-rules-128.txt`
 - Commit status:
-  - Pending in working tree (not committed yet in this run).
+  - Committed and pushed: `5b8fb7c` (`Validate overlap-context separators through variant limit 128`).
+  - `main` now matches `origin/main` at `5b8fb7c`.
 
 ### Exact next step
 - Probe the next deeper ladder rung to find the first point where overlap-positive membership changes or exact one-feature separator behavior degrades.
@@ -72,6 +73,50 @@ Each autopilot run should:
 
 ### First concrete action
 - Run `python3 scripts/pocket_wrap_suppressor_overlap_context_rules.py --variant-limit 128`, then check whether overlap-positive rows remain `3` and whether `boundary_roughness <= 0.288`, `center_total_variation <= 2.500`, and `shell_pocket_fraction >= 0.812` remain `0` FP / `0` FN.
+
+## 2026-03-21 20:33 America/New_York
+
+### Current state
+- Continued the same pocket-wrap suppressor overlap-context mechanism ladder and executed three deeper rungs:
+  - `python3 scripts/pocket_wrap_suppressor_overlap_context_rules.py --variant-limit 128`
+  - `python3 scripts/pocket_wrap_suppressor_overlap_context_rules.py --variant-limit 144`
+  - `python3 scripts/pocket_wrap_suppressor_overlap_context_rules.py --variant-limit 160`
+- Added one focused follow-up compare at the first broadened pocket-signature rung:
+  - `python3 scripts/pocket_wrap_suppressor_pair_kill_row_compare.py --variant-limit 160 --targets local-morph-a local-morph-v local-morph-\\x8e local-morph-\\xf6`
+
+### Strongest confirmed conclusion
+- `128` stays identical to the earlier ladder: still exactly `3` overlap-positive rows and the same exact one-feature separators.
+- `144` is the first real breakpoint:
+  - overlap-positive membership expands from `3` to `5`
+  - two new non-pocket rows appear: `local-morph-\\xe7`, `local-morph-\\xe9`
+  - the exact one-feature separator set shrinks from three older favorites to a different surviving pair/core, especially `boundary_roughness <= 0.288` and `pocket_fraction <= 0.081`
+- `160` adds the first second pocket-signature row:
+  - new row: `local-morph-\\xf6`
+  - pocket-signature branch broadens from `1` to `2`
+  - exact one-feature separators still exist, but the robust ones are now `boundary_roughness <= 0.288` and `pocket_fraction <= 0.081`
+- The 160 row compare shows `local-morph-\\xf6` is not a different trigger. It is another anti-deep pocket branch of the same overwrite family, but even more compact than `local-morph-a`: lower roughness (`0.244`), lower total variation (`1.00`), no crossing, span `2`, and only one overlapping suppressor/deep coordinate `(4,0)`.
+
+### Files and results changed in this run
+- Updated narrative:
+  - [README.md](/Users/jonreilly/Projects/Physics/README.md)
+- Updated run tracking:
+  - [AUTOPILOT_WORKLOG.md](/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md)
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- New logs:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-21-pocket-wrap-suppressor-overlap-context-rules-128.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-21-pocket-wrap-suppressor-overlap-context-rules-144.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-21-pocket-wrap-suppressor-overlap-context-rules-160.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-21-pocket-wrap-suppressor-pair-kill-row-compare-160.txt`
+
+### Exact next step
+- Determine whether the new `144/160` rows are the start of a stable broadened family or just a sparse transient band, and whether `boundary_roughness <= 0.288` plus `pocket_fraction <= 0.081` remains the right compact separator pair above `160`.
+
+### First concrete action
+- Run `python3 scripts/pocket_wrap_suppressor_overlap_context_rules.py --variant-limit 176` and `--variant-limit 192`, then check:
+  - whether overlap-positive membership expands again
+  - whether pocket-signature membership stays at `2`
+  - whether `boundary_roughness <= 0.288` and `pocket_fraction <= 0.081` remain exact one-feature separators.
 
 ## 2026-03-21 18:09 America/New_York
 
