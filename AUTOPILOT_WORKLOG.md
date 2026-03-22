@@ -7,6 +7,7 @@
 - Run completed successfully (`total_elapsed=867.8s`).
 - `928` exactly matched `912` and `896` for non-pocket subtype membership and the exact-rule table.
 - Updated `/Users/jonreilly/Projects/Physics/README.md` to extend the confirmed `27`-row hold through `928`.
+- End-of-loop push via `automation_push.py` failed with transient DNS resolution (`failure_kind=dns_failure`, `Could not resolve github.com`), so `main` remains ahead locally.
 
 ### Strongest confirmed conclusion
 - `896..928` is now a confirmed stable hold at `27` non-pocket overlap-positive rows:
