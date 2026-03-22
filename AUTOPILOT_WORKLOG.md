@@ -25,9 +25,10 @@
   - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-272.txt`
   - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-256.txt`
   - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-240.txt`
+  - `/tmp/2026-03-22-nonpocket-subtype-rules-8-post272-smoke.txt`
 - Commit status:
-  - Pending commit for README + tracking updates in this run.
-  - Local head before committing this run: `a2c0c49`.
+  - Committed and pushed: `e67a152` (`Document nonpocket subtype plateau through variant limit 272`).
+  - Repository sync is current at this checkpoint: `main` == `origin/main` at `e67a152`.
 
 ### Exact next step
 - Run one deeper rung (`variant_limit = 288`) to test whether the `240..272` plateau continues unchanged.
