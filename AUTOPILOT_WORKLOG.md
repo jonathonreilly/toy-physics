@@ -1,3 +1,55 @@
+## 2026-03-23 19:37 America/New_York
+
+### Current state
+- Reconciled protocol preflight in canonical repo context:
+  - read `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` in required order.
+  - lock status was `free`, then acquired via `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 2`.
+- Reconciled git before new work:
+  - `git status --short --branch` -> `main...origin/main [ahead 1]` with local `AUTOPILOT_WORKLOG.md` modification.
+  - `git rev-list --left-right --count origin/main...main` -> `0 1`
+  - `HEAD=0f74b0f`, `origin/main=1b176af`.
+- Per protocol, ran push-first helper before new science:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - helper result: `status=failed`, `failure_kind=dns_failure`, `error=DNS lookup failed for github.com`, `attempts_used=4`, `ahead=1`, `behind=0`.
+- Executed one bounded same-thread sparse-sentinel continuation step on the active thread:
+  - command: `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 1232`
+  - bounded via wrapper timeout `2400s`
+  - output: `/Users/jonreilly/Projects/Physics/logs/2026-03-23-pocket-wrap-suppressor-nonpocket-subtype-rules-1232.txt`
+  - diagnostic meta: `/Users/jonreilly/Projects/Physics/logs/2026-03-23-pocket-wrap-suppressor-nonpocket-subtype-rules-1232.meta.json`
+  - outcome: `status=completed`, `exit_code=0`, `elapsed_s=1156.333` (no timeout)
+
+### Strongest confirmed conclusion
+- The blocked `1232` rung is now completed with explicit bounded diagnostics.
+- Non-pocket subtype frontier grows from `36` rows at `1168` to `40` rows at `1232` while subtype count remains `4`.
+- New rows at `1232` are:
+  - `local-morph-\u04f2` (add4-sensitive)
+  - `local-morph-\u0522` (pair-only-sensitive)
+  - `local-morph-\u0523` (pair-only-sensitive)
+  - `local-morph-\u0528` (both-sensitive)
+- The both-sensitive exact one-term anchor remains stable:
+  - `deep_overlap_count >= 1.500`
+  - true positives rise from `2` (`1168`) to `3` (`1232`)
+- So the current frontier read is updated to active growth at `1232`, not a hold.
+
+### Files and results changed in this run
+- Narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- Logs generated/updated:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-23-pocket-wrap-suppressor-nonpocket-subtype-rules-1232.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-23-pocket-wrap-suppressor-nonpocket-subtype-rules-1232.meta.json`
+
+### Exact next step
+- Retry helper push first on the next loop if still ahead.
+- If sync is available, run one deeper same-thread sparse-sentinel rung at `variant_limit = 1296`, then diff non-pocket row/subtype/exact-rule sections against `1232` and `1168`.
+
+### First concrete action
+- Execute:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status`
+
 ## 2026-03-23 18:33 America/New_York
 
 ### Current state
@@ -14,6 +66,10 @@
 - In this environment the `1232` rung did not finish within the bounded interactive window; run was interrupted manually to prevent overlap with future loops:
   - partial log is start-marker only (`non-pocket suppressor subtype rules started ...`)
   - interrupt traceback shows active frontier evaluation stack (no crash signature prior to interrupt).
+- Committed run tracking update:
+  - `0f74b0f` (`Record blocked 1232 sparse-sentinel attempt`)
+- End-of-loop helper push retry after commit failed with transient DNS:
+  - `status=failed`, `failure_kind=dns_failure`, `error=DNS lookup failed for github.com`, `attempts_used=4`, `ahead=1`, `behind=0`.
 
 ### Strongest confirmed conclusion
 - No mechanism conclusion changed in this run.
