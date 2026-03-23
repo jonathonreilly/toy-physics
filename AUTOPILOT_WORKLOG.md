@@ -12,6 +12,8 @@
   - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 1040 > /Users/jonreilly/Projects/Physics/logs/2026-03-23-pocket-wrap-suppressor-nonpocket-subtype-rules-1040.txt`
 - `1040` completed successfully (`total_elapsed=952.4s`) and introduced one new non-pocket row relative to `1024`/`1008`.
 - Updated `/Users/jonreilly/Projects/Physics/README.md` to record the new frontier expansion at `1040`.
+- Committed tracked science updates as `527e22b` (`Record nonpocket frontier expansion at variant limit 1040`).
+- End-of-loop helper push retry failed again with transient DNS resolution (`failure_kind=dns_failure`, `DNS lookup failed for github.com`, `attempts_used=4`), leaving `main` ahead of `origin/main` by `10`.
 
 ### Strongest confirmed conclusion
 - `976..1024` was a short hold and growth resumes at `1040`:
