@@ -1,3 +1,47 @@
+## 2026-03-22 20:31 America/New_York
+
+### Current state
+- Reconciled git and lock state first in canonical repo context:
+  - lock was free, then acquired via `automation_lock.py acquire --owner physics-science`.
+  - branch state before science: `main` ahead of `origin/main` by `2` commits.
+- Retried required pre-science sync with:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+- Push helper returned transient DNS failure again (`failure_kind=dns_failure`, `DNS lookup failed for github.com`, `attempts_used=4`), so proceeded with one bounded same-thread science step.
+- Executed one deeper non-pocket subtype rung:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 944 > /Users/jonreilly/Projects/Physics/logs/2026-03-23-pocket-wrap-suppressor-nonpocket-subtype-rules-944.txt`
+- `944` completed successfully (`total_elapsed=886.5s`) and introduced one new non-pocket row relative to `928/912`.
+- Updated `/Users/jonreilly/Projects/Physics/README.md` to record the new frontier behavior at `944`.
+
+### Strongest confirmed conclusion
+- `896..928` was a real short stable hold at `27` rows, but `944` starts the next growth phase:
+  - non-pocket overlap-positive rows rise from `27` to `28`;
+  - the only new row at this rung is `local-morph-\u040f`;
+  - subtype count remains `4`;
+  - `pair-only-sensitive` expands from `4` to `5` rows;
+  - the both-sensitive exact-rule family remains unchanged and still isolates `2` rows via `deep_overlap_count >= 1.500`.
+
+### Files and results changed in this run
+- Narrative:
+  - [README.md](/Users/jonreilly/Projects/Physics/README.md)
+- Updated run tracking:
+  - [AUTOPILOT_WORKLOG.md](/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md)
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- Logs generated/used:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-23-pocket-wrap-suppressor-nonpocket-subtype-rules-944.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-928.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-912.txt`
+
+### Exact next step
+- Run one deeper rung (`variant_limit = 960`) to determine whether `944` is a one-row bump or the start of another accelerating band.
+
+### First concrete action
+- Execute:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 960 > /Users/jonreilly/Projects/Physics/logs/2026-03-23-pocket-wrap-suppressor-nonpocket-subtype-rules-960.txt`
+- Then diff subtype context/rule sections versus:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-23-pocket-wrap-suppressor-nonpocket-subtype-rules-944.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-928.txt`
+
 ## 2026-03-22 19:30 America/New_York
 
 ### Current state
