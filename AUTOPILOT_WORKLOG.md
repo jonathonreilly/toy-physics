@@ -1,3 +1,47 @@
+## 2026-03-23 02:32 America/New_York
+
+### Current state
+- Reconciled protocol preflight in canonical repo context:
+  - read worklog, handoff, and autopilot memory in required order.
+  - lock status was free, then acquired via `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 6`.
+  - branch state before science: `main` ahead of `origin/main` by `9` commits (`behind=0`).
+- Retried required pre-science sync with:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - helper returned transient DNS failure (`failure_kind=dns_failure`, `DNS lookup failed for github.com`, `attempts_used=4`), so continued with one bounded same-thread science step.
+- Executed one deeper non-pocket subtype rung:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 1040 > /Users/jonreilly/Projects/Physics/logs/2026-03-23-pocket-wrap-suppressor-nonpocket-subtype-rules-1040.txt`
+- `1040` completed successfully (`total_elapsed=952.4s`) and introduced one new non-pocket row relative to `1024`/`1008`.
+- Updated `/Users/jonreilly/Projects/Physics/README.md` to record the new frontier expansion at `1040`.
+
+### Strongest confirmed conclusion
+- `976..1024` was a short hold and growth resumes at `1040`:
+  - non-pocket overlap-positive rows rise from `30` to `31`;
+  - subtype count remains `4`;
+  - the only new row is `local-morph-\u0461` (`add1-sensitive`, `neither/dpadj-only`, `cross=Y`);
+  - both-sensitive exact-rule anchor is unchanged and still isolates `2` rows via `deep_overlap_count >= 1.500`.
+- Strongest current frontier read: `976` was a two-row expansion, `976..1024` held, and `1040` starts the next add1-sensitive growth step.
+
+### Files and results changed in this run
+- Narrative:
+  - [README.md](/Users/jonreilly/Projects/Physics/README.md)
+- Updated run tracking:
+  - [AUTOPILOT_WORKLOG.md](/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md)
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- Logs generated/used:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-23-pocket-wrap-suppressor-nonpocket-subtype-rules-1040.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-23-pocket-wrap-suppressor-nonpocket-subtype-rules-1024.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-23-pocket-wrap-suppressor-nonpocket-subtype-rules-1008.txt`
+
+### Exact next step
+- Retry helper push first; if sync is available, run one deeper rung (`variant_limit = 1056`) and diff subtype context/rule sections versus `1040` and `1024`.
+
+### First concrete action
+- Execute:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+- If push succeeds, then run:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 1056 > /Users/jonreilly/Projects/Physics/logs/2026-03-23-pocket-wrap-suppressor-nonpocket-subtype-rules-1056.txt`
+
 ## 2026-03-23 01:32 America/New_York
 
 ### Current state
