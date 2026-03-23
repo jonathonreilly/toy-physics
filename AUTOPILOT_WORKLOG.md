@@ -1,3 +1,58 @@
+## 2026-03-23 15:31 America/New_York
+
+### Current state
+- Manual follow-up resumed from the completed `1168` latent continuation and collision summary.
+- Fixed a real automation issue in `/Users/jonreilly/Projects/Physics/scripts/automation_lock.py`:
+  - the lock now behaves as TTL-based shared state again instead of treating the short-lived `acquire` helper PID as the live worker,
+  - which was allowing duplicate long science jobs to start in parallel.
+- Updated worker protocols so the science/janitor/summary loops treat the lock as TTL-based shared state and rely on explicit release:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_PROTOCOL.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_JANITOR_PROTOCOL.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_SUMMARY_PROTOCOL.md`
+- Took the next same-thread science step after the `1168` latent continuation:
+  - added `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_mixed_bucket_axes.py`
+  - added shared mixed-bucket analysis helpers in `/Users/jonreilly/Projects/Physics/toy_event_physics.py`
+  - ran the targeted mixed-bucket split pass at `variant_limit=1168`
+
+### Strongest confirmed conclusion
+- The `1168` collision mass is narrower than “all mixed buckets.”
+- There are three add1-vs-add4 mixed coarse signatures at `1168`.
+- Two already split exactly on the current finer observable family:
+  - `cross=Y|span=3+|low=L|pocket=H|overlap=1|rough=H`
+    - exact 1-term split via `shell_low_degree_fraction >= 0.817`
+  - `cross=n|span<3|low=L|pocket=L|overlap=1|rough=L`
+    - exact 2-term split via a `boundary_roughness + mean_center` rule
+- So the unresolved latent problem is now localized to one remaining mixed coarse bucket:
+  - `cross=n|span=3+|low=L|pocket=H|overlap=1|rough=H`
+- That means the next search should stay inside that one bucket instead of spending more compute on broad ladder growth.
+
+### Files and results changed in this run
+- Narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Code/helpers:
+  - `/Users/jonreilly/Projects/Physics/scripts/automation_lock.py`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_PROTOCOL.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_JANITOR_PROTOCOL.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_SUMMARY_PROTOCOL.md`
+  - `/Users/jonreilly/Projects/Physics/toy_event_physics.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_mixed_bucket_axes.py`
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+
+### Exact next step
+- Push the local backlog first.
+- If sync is available, run one bounded same-thread unresolved-bucket extraction step inside:
+  - `cross=n|span=3+|low=L|pocket=H|overlap=1|rough=H`
+- Search for the next latent separator family on that bucket only, prioritizing:
+  - finer low-degree geometry
+  - shell/core boundary placement
+  - centerline asymmetry/profile observables
+
+### First concrete action
+- Execute:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+
 ## 2026-03-23 14:34 America/New_York
 
 ### Current state

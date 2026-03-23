@@ -17,6 +17,7 @@ This file is the stable operating protocol for the background janitor automation
    - if a live lock is held by another owner, stop instead of mutating shared state
    - otherwise acquire it with:
      - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-janitor --purpose "janitor pass" --ttl-hours 1`
+   - treat the lock as TTL-based shared state; always release it explicitly at the end of the loop
 3. Reconcile git state:
    - `git status --short --branch`
    - `git rev-list --left-right --count origin/main...main` if `origin/main` exists locally

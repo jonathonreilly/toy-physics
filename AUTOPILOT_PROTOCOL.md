@@ -16,7 +16,8 @@ This file is the stable operating protocol for the hourly science automation.
    - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status`
    - if another live owner holds the lock, stop without doing new work
    - otherwise acquire it with:
-     - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 6`
+     - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 2`
+   - treat the lock as TTL-based shared state, not a process-liveness probe; always release it explicitly at the end of the loop
 3. Reconcile git state before new work:
    - `git status --short --branch`
    - `git rev-list --left-right --count origin/main...main` if `origin/main` exists locally

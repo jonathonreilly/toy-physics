@@ -16,6 +16,7 @@ Read, in order:
    - if another live owner holds the lock, skip this cycle rather than competing for shared state
    - otherwise acquire it with:
      - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-summary --purpose "summary pass" --ttl-hours 1`
+   - treat the lock as TTL-based shared state; always release it explicitly at the end of the loop
 
 ## Output
 - Append a timestamped section to:

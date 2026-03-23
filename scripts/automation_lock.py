@@ -46,27 +46,13 @@ def load_lock(path: str) -> dict[str, Any] | None:
         return json.load(handle)
 
 
-def pid_is_live(pid: Any) -> bool:
-    if not isinstance(pid, int) or pid <= 0:
-        return False
-    try:
-        os.kill(pid, 0)
-    except ProcessLookupError:
-        return False
-    except PermissionError:
-        return True
-    return True
-
-
 def lock_is_live(payload: dict[str, Any] | None) -> bool:
     if not payload:
         return False
     expires_at = parse_iso8601(payload.get("expires_at"))
     if not expires_at:
         return False
-    if expires_at <= utc_now():
-        return False
-    return pid_is_live(payload.get("pid"))
+    return expires_at > utc_now()
 
 
 def build_payload(owner: str, purpose: str, ttl_hours: float) -> dict[str, Any]:
