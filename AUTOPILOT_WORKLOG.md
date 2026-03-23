@@ -1,3 +1,31 @@
+## 2026-03-22 23:36 America/New_York
+
+### Current state
+- Ran janitor protocol preflight in canonical repo context (worklog, handoff, and autopilot memory reconciled first).
+- Acquired cooperative lock with `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-janitor --purpose "janitor pass" --ttl-hours 1`.
+- Re-ran required helper push first:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - helper reported transient DNS failure (`failure_kind=dns_failure`, `DNS lookup failed for github.com`, `attempts_used=4`), so janitor stopped science advancement and only repaired state drift.
+- Reconciled tracked state mismatch:
+  - prior top worklog entry still reported `ahead ... by 4`, while real git state was already one commit further ahead (`4d2d4bb`) from same-loop bookkeeping.
+  - refreshed handoff + autopilot memory to match real HEAD/sync condition and preserve correct next action.
+- No benchmark or semantics change was introduced in this janitor pass, so no confidence check was required.
+
+### Strongest confirmed conclusion
+- Science frontier conclusions are unchanged: `variant_limit=992` still matches `976` (30 non-pocket rows, 4 subtypes, unchanged both-sensitive exact-rule anchor at `deep_overlap_count >= 1.500`).
+
+### Files and results changed in this run
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- Retry helper push first; if sync is available, continue with one bounded deeper rung at `variant_limit=1008` and compare against `992`/`976`.
+
+### First concrete action
+- Execute:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+
 ## 2026-03-22 23:31 America/New_York
 
 ### Current state
