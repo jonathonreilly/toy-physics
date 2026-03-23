@@ -12,6 +12,8 @@
   - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 1008 > /Users/jonreilly/Projects/Physics/logs/2026-03-23-pocket-wrap-suppressor-nonpocket-subtype-rules-1008.txt`
 - `1008` completed successfully (`total_elapsed=931.7s`) and exactly matched `992` and `976` subtype membership/exact-rule behavior.
 - Updated `/Users/jonreilly/Projects/Physics/README.md` to record the newly confirmed `976..1008` short hold.
+- Committed tracked science updates as `5b2730f` (`Confirm nonpocket hold through variant limit 1008`).
+- End-of-loop helper push retry failed again with transient DNS resolution (`failure_kind=dns_failure`, `DNS lookup failed for github.com`, `attempts_used=4`), leaving `main` ahead of `origin/main` by `7`.
 
 ### Strongest confirmed conclusion
 - `976` remains a two-row bump, not immediate further growth:
