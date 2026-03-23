@@ -11,6 +11,10 @@
   - added `/Users/jonreilly/Projects/Physics/logs/2026-03-23-pocket-wrap-suppressor-unresolved-bucket-decomposition-1168.txt`
   - decomposed the previously unresolved coarse bucket using the completed collision-axes output and confirmed an exact pair-only peel.
 - Updated narrative/state tracking to match this tighter unresolved-target read.
+- Committed the run update:
+  - `4dfab91` (`Narrow unresolved 1168 mixed-bucket target`).
+- End-of-loop helper push retry after commit failed with transient DNS:
+  - `status=failed`, `failure_kind=dns_failure`, `error=DNS lookup failed for github.com`, `attempts_used=4`, `ahead=1`, `behind=0`.
 
 ### Strongest confirmed conclusion
 - The unresolved `1168` coarse bucket (`cross=n|span=3+|low=L|pocket=H|overlap=1|rough=H`) is not fully unresolved in subtype terms.
@@ -28,12 +32,13 @@
   - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
 
 ### Exact next step
-- Run one bounded residual-bucket mechanism pass on only the 3-row add1-vs-add4 remainder inside `cross=n|span=3+|low=L|pocket=H|overlap=1|rough=H`.
+- Retry helper push first on the next loop.
+- If sync is available, run one bounded residual-bucket mechanism pass on only the 3-row add1-vs-add4 remainder inside `cross=n|span=3+|low=L|pocket=H|overlap=1|rough=H`.
 - Prioritize compact separators on finer low-degree-shell/core placement and centerline profile asymmetry features.
 
 ### First concrete action
 - Execute:
-  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
 
 ## 2026-03-23 15:31 America/New_York
 
