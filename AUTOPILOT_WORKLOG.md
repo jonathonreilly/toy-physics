@@ -11,6 +11,9 @@
   - `/Users/jonreilly/Projects/Physics/toy_event_physics.py`
   - `pocket_wrap_suppressor_mixed_bucket_axis_analysis()` now searches both target directions (`add1-sensitive` and `add4-sensitive`) instead of only the add1 side.
 - Updated `/Users/jonreilly/Projects/Physics/README.md` to replace the stale “one unresolved mixed bucket remains” claim with the corrected exact split.
+- Committed and pushed the repo-facing update:
+  - `15c5100` (`Resolve the last 1168 residual bucket`)
+  - helper push status: `pushed`, `ahead=0`, `behind=0`
 
 ### Strongest confirmed conclusion
 - The last `1168` add1-vs-add4 residual is not unresolved on the current finer observable family after all.
@@ -32,14 +35,13 @@
   - `/Users/jonreilly/Projects/Physics/logs/2026-03-23-pocket-wrap-suppressor-residual-bucket-rules-1168.txt`
 
 ### Exact next step
-- Push this synced residual-bucket closeout first if needed.
-- Then return to the sparse-sentinel ladder instead of more bucket archaeology:
+- Return to the sparse-sentinel ladder instead of more bucket archaeology:
   - run `variant_limit = 1232`
 - Only rerun mixed-bucket or residual-bucket analysis if the `1232` frontier changes the collision summary or introduces a new mixed signature.
 
 ### First concrete action
 - Execute:
-  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status`
 
 ## 2026-03-23 16:19 America/New_York
 
