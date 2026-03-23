@@ -12,13 +12,13 @@
   - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 1168 > /Users/jonreilly/Projects/Physics/logs/2026-03-23-pocket-wrap-suppressor-nonpocket-subtype-rules-1168.txt`
 - The sentinel command did not complete in-run and produced only a start marker line in the log file; no frontier summary was emitted in this loop.
 - Recorded this blocked integrity outcome in tracked state and committed:
-  - `706c322` (`Record blocked 1168 sentinel attempt`)
+  - `5a758d5` (`Update blocked-run sync state after push retry`)
 - Retried helper push after commit:
-  - helper reported transient DNS failure (`failure_kind=dns_failure`, `ahead=1`, `behind=0`, `attempts_used=4`).
+  - helper reported transient DNS failure (`failure_kind=dns_failure`, `ahead=2`, `behind=0`, `attempts_used=4`).
 
 ### Strongest confirmed conclusion
 - No mechanism conclusion changed in this run because the `1168` sentinel did not complete.
-- Repo integrity remains clean; remote sync is temporarily blocked by DNS (`ahead=1`, `behind=0`).
+- Repo integrity remains clean; remote sync is temporarily blocked by DNS (`ahead=2`, `behind=0`).
 
 ### Files and results changed in this run
 - Updated run tracking:
