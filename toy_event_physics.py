@@ -1896,6 +1896,83 @@ class PocketWrapSuppressorOverlapContextRuleRow:
 
 
 @dataclass
+class PocketWrapSuppressorSubtypeRow:
+    variant_limit: int
+    source_name: str
+    subtype: str
+    deep_overlap_count: int
+    add_1_0_outcome: str
+    add_4_0_outcome: str
+    boundary_fraction: float
+    pocket_fraction: float
+    boundary_roughness: float
+    deep_pocket_fraction: float
+    mean_center: float
+    center_range: float
+    center_total_variation: float
+    crosses_midline: bool
+    span_range: int
+    shell_deep_fraction: float
+    core_deep_fraction: float
+    shell_pocket_fraction: float
+    core_pocket_fraction: float
+    shell_low_degree_fraction: float
+    core_low_degree_fraction: float
+    shell_boundary_deficit_mean: float
+    core_boundary_deficit_mean: float
+    nodes: frozenset[tuple[int, int]]
+
+
+@dataclass
+class PocketWrapSuppressorSignatureTrajectoryRow:
+    variant_limit: int
+    row_count: int
+    subtype_count: int
+    signature_count: int
+    new_row_count: int
+    new_signature_count: int
+    reused_signature_new_rows: int
+
+
+@dataclass
+class PocketWrapSuppressorNoveltyRow:
+    variant_limit: int
+    source_name: str
+    subtype: str
+    coarse_signature: str
+    is_new_signature: bool
+    nearest_source_name: str
+    nearest_subtype: str
+    nearest_signature: str
+    nearest_feature_distance: float
+    nearest_edit_distance: int
+    same_signature: bool
+    same_subtype: bool
+
+
+@dataclass
+class PocketWrapSuppressorSignatureBucketRow:
+    variant_limit: int
+    coarse_signature: str
+    cases: int
+    subtypes: str
+
+
+@dataclass
+class PocketWrapSuppressorOrderParameterRow:
+    model_kind: str
+    exact: bool
+    correct: int
+    total: int
+    leaf_count: int
+    pure_leaf_count: int
+    predicate_1: str
+    predicate_2: str
+    predicate_3: str
+    leaf_signature: str
+
+
+@dataclass
 class PocketWrapLocalMorphTransplantContextRow:
     row_kind: str
     source_name: str
@@ -19309,6 +19386,498 @@ def pocket_wrap_suppressor_overlap_context_rule_search(
     return rules
 
 
+def pocket_wrap_suppressor_subtype_from_outcomes(
+    add_1_0_outcome: str,
+    add_4_0_outcome: str,
+) -> str:
+    add1_sensitive = add_1_0_outcome != "dpadj-only"
+    add4_sensitive = add_4_0_outcome != "dpadj-only"
+    if add1_sensitive and not add4_sensitive:
+        return "add1-sensitive"
+    if add4_sensitive and not add1_sensitive:
+        return "add4-sensitive"
+    if add1_sensitive and add4_sensitive:
+        return "both-sensitive"
+    return "pair-only-sensitive"
+
+
+def pocket_wrap_suppressor_nonpocket_subtype_analysis(
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    variant_limit: int = 192,
+    suppressor_nodes: tuple[tuple[int, int], ...] = ((1, 0), (4, 0)),
+) -> list[PocketWrapSuppressorSubtypeRow]:
+    context_rows = pocket_wrap_suppressor_overlap_context_analysis(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+        variant_limit=variant_limit,
+        suppressor_nodes=suppressor_nodes,
+    )
+    if not context_rows:
+        return []
+
+    base_nodes, wrap_y = scenario_by_name("base", "taper-wrap")
+    variant_nodes_by_source: dict[str, frozenset[tuple[int, int]]] = {}
+    for variant_name, perturbed_nodes, _node_delta in procedural_geometry_variants(
+        "base",
+        "taper-wrap",
+        base_nodes,
+        wrap_y,
+        variant_limit=variant_limit,
+        style="local-morph",
+    ):
+        variant_nodes_by_source[f"base:taper-wrap:{variant_name}"] = frozenset(perturbed_nodes)
+
+    ge6_tree, dpadj_tree = _extended_ge6_dpadj_trees(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+    )
+
+    def evaluate_outcome(source_name: str, nodes: frozenset[tuple[int, int]]) -> str:
+        (
+            _actual_label,
+            outcome,
+            _ge6_prediction,
+            _dpadj_prediction,
+            _ge6_only_fraction,
+            _ge7_core_fraction,
+            _deep_gap,
+            _pocket_gap,
+            _low_degree_gap,
+            _boundary_gap,
+            _crosses_midline,
+            _center_variation,
+            _span_range,
+        ) = _evaluate_extended_ge6_dpadj_nodes(
+            nodes=set(nodes),
+            wrap_y=wrap_y,
+            ge6_tree=ge6_tree,
+            dpadj_tree=dpadj_tree,
+            pack_name="base",
+            scenario_name=source_name,
+            retained_weight=retained_weight,
+        )
+        return outcome
+
+    rows: list[PocketWrapSuppressorSubtypeRow] = []
+    for row in context_rows:
+        if row.pocket_signature:
+            continue
+        source_nodes = variant_nodes_by_source.get(row.source_name)
+        if source_nodes is None:
+            continue
+        add1_nodes = frozenset(set(source_nodes).union({suppressor_nodes[0]}))
+        add4_nodes = frozenset(set(source_nodes).union({suppressor_nodes[1]}))
+        add_1_0_outcome = evaluate_outcome(f"{row.source_name}:add-1-0", add1_nodes)
+        add_4_0_outcome = evaluate_outcome(f"{row.source_name}:add-4-0", add4_nodes)
+        rows.append(
+            PocketWrapSuppressorSubtypeRow(
+                variant_limit=variant_limit,
+                source_name=row.source_name,
+                subtype=pocket_wrap_suppressor_subtype_from_outcomes(
+                    add_1_0_outcome=add_1_0_outcome,
+                    add_4_0_outcome=add_4_0_outcome,
+                ),
+                deep_overlap_count=row.deep_overlap_count,
+                add_1_0_outcome=add_1_0_outcome,
+                add_4_0_outcome=add_4_0_outcome,
+                boundary_fraction=row.boundary_fraction,
+                pocket_fraction=row.pocket_fraction,
+                boundary_roughness=row.boundary_roughness,
+                deep_pocket_fraction=row.deep_pocket_fraction,
+                mean_center=row.mean_center,
+                center_range=row.center_range,
+                center_total_variation=row.center_total_variation,
+                crosses_midline=row.crosses_midline,
+                span_range=row.span_range,
+                shell_deep_fraction=row.shell_deep_fraction,
+                core_deep_fraction=row.core_deep_fraction,
+                shell_pocket_fraction=row.shell_pocket_fraction,
+                core_pocket_fraction=row.core_pocket_fraction,
+                shell_low_degree_fraction=row.shell_low_degree_fraction,
+                core_low_degree_fraction=row.core_low_degree_fraction,
+                shell_boundary_deficit_mean=row.shell_boundary_deficit_mean,
+                core_boundary_deficit_mean=row.core_boundary_deficit_mean,
+                nodes=source_nodes,
+            )
+        )
+
+    rows.sort(key=lambda item: item.source_name)
+    return rows
+
+
+def pocket_wrap_suppressor_coarse_signature(
+    row: PocketWrapSuppressorSubtypeRow,
+) -> str:
+    return "|".join(
+        (
+            f"cross={'Y' if row.crosses_midline else 'n'}",
+            f"span={'3+' if row.span_range >= 3 else '<3'}",
+            f"low={'H' if row.core_low_degree_fraction >= 0.275 else 'L'}",
+            f"pocket={'L' if row.pocket_fraction <= 0.081 else 'H'}",
+            f"overlap={'2+' if row.deep_overlap_count >= 2 else '1'}",
+            f"rough={'L' if row.boundary_roughness <= 0.288 else 'H'}",
+        )
+    )
+
+
+def _pocket_wrap_suppressor_feature_vector(
+    row: PocketWrapSuppressorSubtypeRow,
+) -> tuple[float, ...]:
+    return (
+        1.0 if row.crosses_midline else 0.0,
+        float(row.span_range),
+        row.core_low_degree_fraction,
+        row.pocket_fraction,
+        float(row.deep_overlap_count),
+        row.boundary_roughness,
+    )
+
+
+def _pocket_wrap_suppressor_feature_distance(
+    left: PocketWrapSuppressorSubtypeRow,
+    right: PocketWrapSuppressorSubtypeRow,
+    ranges: tuple[float, ...],
+) -> float:
+    left_vector = _pocket_wrap_suppressor_feature_vector(left)
+    right_vector = _pocket_wrap_suppressor_feature_vector(right)
+    total = 0.0
+    for left_value, right_value, scale in zip(left_vector, right_vector, ranges):
+        total += abs(left_value - right_value) / scale
+    return total / len(left_vector)
+
+
+def _pocket_wrap_suppressor_candidate_predicates(
+    rows: list[PocketWrapSuppressorSubtypeRow],
+) -> list[tuple[str, int]]:
+    if not rows:
+        return []
+
+    numeric_features = (
+        "deep_overlap_count",
+        "boundary_roughness",
+        "pocket_fraction",
+        "core_low_degree_fraction",
+        "span_range",
+    )
+    preferred_order = {
+        "deep_overlap_count": 0,
+        "crosses_midline": 1,
+        "core_low_degree_fraction": 2,
+        "span_range": 3,
+        "boundary_roughness": 4,
+        "pocket_fraction": 5,
+    }
+
+    predicate_masks: dict[int, tuple[tuple[int, str, float], str]] = {}
+    full_mask = (1 << len(rows)) - 1
+    for feature_name in numeric_features:
+        value_to_labels: dict[float, set[str]] = {}
+        for row in rows:
+            value = float(getattr(row, feature_name))
+            value_to_labels.setdefault(value, set()).add(row.subtype)
+        values = sorted(value_to_labels)
+        thresholds: list[float] = []
+        if len(values) == 1:
+            thresholds.append(values[0])
+        else:
+            for left, right in zip(values, values[1:]):
+                if value_to_labels[left] != value_to_labels[right]:
+                    thresholds.append((left + right) / 2.0)
+        for threshold in thresholds:
+            for operator in ("<=", ">="):
+                mask = 0
+                for index, row in enumerate(rows):
+                    value = float(getattr(row, feature_name))
+                    if (operator == "<=" and value <= threshold) or (
+                        operator == ">=" and value >= threshold
+                    ):
+                        mask |= 1 << index
+                if mask in (0, full_mask):
+                    continue
+                text = f"{feature_name} {operator} {threshold:.3f}"
+                sort_key = (preferred_order.get(feature_name, 99), feature_name, threshold)
+                chosen = predicate_masks.get(mask)
+                if chosen is None or (sort_key, text) < (chosen[0], chosen[1]):
+                    predicate_masks[mask] = (sort_key, text)
+
+    for value, label in ((True, "crosses_midline = Y"), (False, "crosses_midline = n")):
+        mask = 0
+        for index, row in enumerate(rows):
+            if row.crosses_midline == value:
+                mask |= 1 << index
+        if mask in (0, full_mask):
+            continue
+        sort_key = (preferred_order["crosses_midline"], "crosses_midline", 1.0 if value else 0.0)
+        chosen = predicate_masks.get(mask)
+        if chosen is None or (sort_key, label) < (chosen[0], chosen[1]):
+            predicate_masks[mask] = (sort_key, label)
+
+    predicates = [(text, mask) for mask, (_sort_key, text) in predicate_masks.items()]
+    predicates.sort(key=lambda item: item[0])
+    return predicates
+
+
+def _pocket_wrap_suppressor_leaf_summary(
+    rows: list[PocketWrapSuppressorSubtypeRow],
+    leaves: list[tuple[str, int]],
+) -> tuple[int, int, str]:
+    correct = 0
+    pure_leaf_count = 0
+    parts: list[str] = []
+    for leaf_name, mask in leaves:
+        if mask == 0:
+            continue
+        leaf_rows = [row for index, row in enumerate(rows) if mask & (1 << index)]
+        subtype_counts = Counter(row.subtype for row in leaf_rows)
+        majority_subtype, majority_count = subtype_counts.most_common(1)[0]
+        correct += majority_count
+        if len(subtype_counts) == 1:
+            pure_leaf_count += 1
+        parts.append(f"{leaf_name}:{majority_subtype}({len(leaf_rows)})")
+    return correct, pure_leaf_count, "; ".join(parts)
+
+
+def _pocket_wrap_suppressor_best_pair_rules(
+    rows: list[PocketWrapSuppressorSubtypeRow],
+    limit: int = 5,
+) -> list[PocketWrapSuppressorOrderParameterRow]:
+    if not rows:
+        return []
+    full_mask = (1 << len(rows)) - 1
+    predicates = _pocket_wrap_suppressor_candidate_predicates(rows)
+    results: list[PocketWrapSuppressorOrderParameterRow] = []
+    for left_index in range(len(predicates)):
+        left_text, left_mask = predicates[left_index]
+        for right_index in range(left_index + 1, len(predicates)):
+            right_text, right_mask = predicates[right_index]
+            leaves = [
+                ("00", (full_mask ^ left_mask) & (full_mask ^ right_mask)),
+                ("01", (full_mask ^ left_mask) & right_mask),
+                ("10", left_mask & (full_mask ^ right_mask)),
+                ("11", left_mask & right_mask),
+            ]
+            correct, pure_leaf_count, leaf_signature = _pocket_wrap_suppressor_leaf_summary(
+                rows,
+                leaves,
+            )
+            leaf_count = sum(mask != 0 for _name, mask in leaves)
+            results.append(
+                PocketWrapSuppressorOrderParameterRow(
+                    model_kind="pair",
+                    exact=(correct == len(rows) and pure_leaf_count == leaf_count),
+                    correct=correct,
+                    total=len(rows),
+                    leaf_count=leaf_count,
+                    pure_leaf_count=pure_leaf_count,
+                    predicate_1=left_text,
+                    predicate_2=right_text,
+                    predicate_3="-",
+                    leaf_signature=leaf_signature,
+                )
+            )
+    results.sort(
+        key=lambda row: (
+            not row.exact,
+            -(row.correct / row.total if row.total else 0.0),
+            -row.pure_leaf_count,
+            row.leaf_count,
+            row.predicate_1,
+            row.predicate_2,
+        )
+    )
+    return results[:limit]
+
+
+def _pocket_wrap_suppressor_best_small_trees(
+    rows: list[PocketWrapSuppressorSubtypeRow],
+    limit: int = 5,
+) -> list[PocketWrapSuppressorOrderParameterRow]:
+    if not rows:
+        return []
+    full_mask = (1 << len(rows)) - 1
+    predicates = _pocket_wrap_suppressor_candidate_predicates(rows)
+    results: list[PocketWrapSuppressorOrderParameterRow] = []
+    for root_text, root_mask in predicates:
+        left_branch_mask = full_mask ^ root_mask
+        right_branch_mask = root_mask
+        for left_text, left_mask in predicates:
+            for right_text, right_mask in predicates:
+                leaves = [
+                    ("L0", left_branch_mask & (full_mask ^ left_mask)),
+                    ("L1", left_branch_mask & left_mask),
+                    ("R0", right_branch_mask & (full_mask ^ right_mask)),
+                    ("R1", right_branch_mask & right_mask),
+                ]
+                correct, pure_leaf_count, leaf_signature = _pocket_wrap_suppressor_leaf_summary(
+                    rows,
+                    leaves,
+                )
+                leaf_count = sum(mask != 0 for _name, mask in leaves)
+                results.append(
+                    PocketWrapSuppressorOrderParameterRow(
+                        model_kind="tree",
+                        exact=(correct == len(rows) and pure_leaf_count == leaf_count),
+                        correct=correct,
+                        total=len(rows),
+                        leaf_count=leaf_count,
+                        pure_leaf_count=pure_leaf_count,
+                        predicate_1=root_text,
+                        predicate_2=left_text,
+                        predicate_3=right_text,
+                        leaf_signature=leaf_signature,
+                    )
+                )
+    results.sort(
+        key=lambda row: (
+            not row.exact,
+            -(row.correct / row.total if row.total else 0.0),
+            -row.pure_leaf_count,
+            row.leaf_count,
+            row.predicate_1,
+            row.predicate_2,
+            row.predicate_3,
+        )
+    )
+    return results[:limit]
+
+
+def pocket_wrap_suppressor_latent_structure_analysis(
+    variant_limits: tuple[int, ...] = (480, 672, 912, 1104),
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+) -> tuple[
+    list[PocketWrapSuppressorSignatureTrajectoryRow],
+    list[PocketWrapSuppressorNoveltyRow],
+    list[PocketWrapSuppressorSignatureBucketRow],
+    list[PocketWrapSuppressorOrderParameterRow],
+    list[PocketWrapSuppressorOrderParameterRow],
+]:
+    sampled_limits = tuple(sorted({int(limit) for limit in variant_limits}))
+    rows_by_limit = {
+        limit: pocket_wrap_suppressor_nonpocket_subtype_analysis(
+            retained_weight=retained_weight,
+            mode_retained_weight=mode_retained_weight,
+            variant_limit=limit,
+        )
+        for limit in sampled_limits
+    }
+    all_rows = [row for limit in sampled_limits for row in rows_by_limit[limit]]
+    if not all_rows:
+        return [], [], [], [], []
+
+    vectors = [_pocket_wrap_suppressor_feature_vector(row) for row in all_rows]
+    ranges = tuple(
+        max(max(values) - min(values), 1.0)
+        for values in zip(*vectors)
+    )
+
+    trajectory_rows: list[PocketWrapSuppressorSignatureTrajectoryRow] = []
+    novelty_rows: list[PocketWrapSuppressorNoveltyRow] = []
+    signature_rows: list[PocketWrapSuppressorSignatureBucketRow] = []
+    seen_sources: set[str] = set()
+    seen_signatures: set[str] = set()
+    prior_rows: list[PocketWrapSuppressorSubtypeRow] = []
+
+    for limit in sampled_limits:
+        rows = rows_by_limit[limit]
+        signature_by_source = {
+            row.source_name: pocket_wrap_suppressor_coarse_signature(row)
+            for row in rows
+        }
+        current_signatures = set(signature_by_source.values())
+        new_rows = [row for row in rows if row.source_name not in seen_sources]
+        new_signature_count = len(current_signatures - seen_signatures)
+        reused_signature_new_rows = sum(
+            signature_by_source[row.source_name] in seen_signatures for row in new_rows
+        )
+        trajectory_rows.append(
+            PocketWrapSuppressorSignatureTrajectoryRow(
+                variant_limit=limit,
+                row_count=len(rows),
+                subtype_count=len({row.subtype for row in rows}),
+                signature_count=len(current_signatures),
+                new_row_count=len(new_rows),
+                new_signature_count=new_signature_count,
+                reused_signature_new_rows=reused_signature_new_rows,
+            )
+        )
+
+        buckets: dict[str, list[PocketWrapSuppressorSubtypeRow]] = {}
+        for row in rows:
+            buckets.setdefault(signature_by_source[row.source_name], []).append(row)
+        for signature, bucket_rows in sorted(buckets.items()):
+            signature_rows.append(
+                PocketWrapSuppressorSignatureBucketRow(
+                    variant_limit=limit,
+                    coarse_signature=signature,
+                    cases=len(bucket_rows),
+                    subtypes=",".join(sorted({row.subtype for row in bucket_rows})),
+                )
+            )
+
+        for row in new_rows:
+            coarse_signature = signature_by_source[row.source_name]
+            if prior_rows:
+                nearest = min(
+                    prior_rows,
+                    key=lambda previous: (
+                        _pocket_wrap_suppressor_feature_distance(row, previous, ranges),
+                        len(row.nodes.symmetric_difference(previous.nodes)),
+                        previous.source_name,
+                    ),
+                )
+                novelty_rows.append(
+                    PocketWrapSuppressorNoveltyRow(
+                        variant_limit=limit,
+                        source_name=row.source_name,
+                        subtype=row.subtype,
+                        coarse_signature=coarse_signature,
+                        is_new_signature=coarse_signature not in seen_signatures,
+                        nearest_source_name=nearest.source_name,
+                        nearest_subtype=nearest.subtype,
+                        nearest_signature=pocket_wrap_suppressor_coarse_signature(nearest),
+                        nearest_feature_distance=_pocket_wrap_suppressor_feature_distance(
+                            row,
+                            nearest,
+                            ranges,
+                        ),
+                        nearest_edit_distance=len(row.nodes.symmetric_difference(nearest.nodes)),
+                        same_signature=(
+                            coarse_signature
+                            == pocket_wrap_suppressor_coarse_signature(nearest)
+                        ),
+                        same_subtype=(row.subtype == nearest.subtype),
+                    )
+                )
+            else:
+                novelty_rows.append(
+                    PocketWrapSuppressorNoveltyRow(
+                        variant_limit=limit,
+                        source_name=row.source_name,
+                        subtype=row.subtype,
+                        coarse_signature=coarse_signature,
+                        is_new_signature=True,
+                        nearest_source_name="-",
+                        nearest_subtype="-",
+                        nearest_signature="-",
+                        nearest_feature_distance=0.0,
+                        nearest_edit_distance=0,
+                        same_signature=False,
+                        same_subtype=False,
+                    )
+                )
+
+        seen_sources.update(row.source_name for row in rows)
+        seen_signatures.update(current_signatures)
+        prior_rows.extend(rows)
+
+    latest_rows = rows_by_limit[sampled_limits[-1]]
+    pair_rows = _pocket_wrap_suppressor_best_pair_rules(latest_rows)
+    tree_rows = _pocket_wrap_suppressor_best_small_trees(latest_rows)
+    return trajectory_rows, novelty_rows, signature_rows, pair_rows, tree_rows
+
+
 def pocket_wrap_local_morph_transplant_context_analysis(
     retained_weight: float = 1.0,
     mode_retained_weight: float | None = None,
@@ -24868,6 +25437,94 @@ def render_pocket_wrap_suppressor_overlap_context_rule_table(
             f"{row.term_count:>5} | "
             f"{row.tp:>2}/{row.fp:<2}/{row.fn:<2}     | "
             f"{row.f1:>4.2f}"
+        )
+    return "\n".join(lines)
+
+
+def render_pocket_wrap_suppressor_signature_trajectory_table(
+    rows: list[PocketWrapSuppressorSignatureTrajectoryRow],
+) -> str:
+    lines = [
+        "limit | rows | subtypes | signatures | new rows | new sigs | new rows on old sigs",
+        "------+------|----------+------------+----------+----------+---------------------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{row.variant_limit:>5} | "
+            f"{row.row_count:>4} | "
+            f"{row.subtype_count:>8} | "
+            f"{row.signature_count:>10} | "
+            f"{row.new_row_count:>8} | "
+            f"{row.new_signature_count:>8} | "
+            f"{row.reused_signature_new_rows:>19}"
+        )
+    return "\n".join(lines)
+
+
+def render_pocket_wrap_suppressor_signature_bucket_table(
+    rows: list[PocketWrapSuppressorSignatureBucketRow],
+    variant_limit: int | None = None,
+) -> str:
+    filtered_rows = [
+        row for row in rows if variant_limit is None or row.variant_limit == variant_limit
+    ]
+    lines = [
+        "limit | coarse signature                                              | cases | subtypes",
+        "------+----------------------------------------------------------------+-------+----------------------------",
+    ]
+    for row in filtered_rows:
+        lines.append(
+            f"{row.variant_limit:>5} | "
+            f"{row.coarse_signature:<62.62} | "
+            f"{row.cases:>5} | "
+            f"{row.subtypes:<26.26}"
+        )
+    return "\n".join(lines)
+
+
+def render_pocket_wrap_suppressor_novelty_table(
+    rows: list[PocketWrapSuppressorNoveltyRow],
+    limit: int = 16,
+) -> str:
+    def variant_label(text: str) -> str:
+        return text.rsplit(":", 1)[-1].encode("unicode_escape").decode("ascii")
+
+    lines = [
+        "limit | source                 | subtype          | new sig | nearest prior          | same sig/sub | feat | edit",
+        "------+------------------------+------------------+---------+------------------------+--------------+------+-----",
+    ]
+    for row in rows[:limit]:
+        lines.append(
+            f"{row.variant_limit:>5} | "
+            f"{variant_label(row.source_name):<22.22} | "
+            f"{row.subtype:<16.16} | "
+            f"{('Y' if row.is_new_signature else 'n'):<7} | "
+            f"{variant_label(row.nearest_source_name) if row.nearest_source_name != '-' else '-':<22.22} | "
+            f"{('Y' if row.same_signature else 'n')}/{('Y' if row.same_subtype else 'n'):<11} | "
+            f"{row.nearest_feature_distance:>4.2f} | "
+            f"{row.nearest_edit_distance:>3}"
+        )
+    return "\n".join(lines)
+
+
+def render_pocket_wrap_suppressor_order_parameter_table(
+    rows: list[PocketWrapSuppressorOrderParameterRow],
+    limit: int = 5,
+) -> str:
+    lines = [
+        "kind | exact | correct | leaves | pure | pred1                               | pred2                               | pred3",
+        "-----+-------+---------+--------+------+-------------------------------------+-------------------------------------+-------------------------------------",
+    ]
+    for row in rows[:limit]:
+        lines.append(
+            f"{row.model_kind:<4} | "
+            f"{('Y' if row.exact else 'n'):<5} | "
+            f"{row.correct:>3}/{row.total:<3} | "
+            f"{row.leaf_count:>6} | "
+            f"{row.pure_leaf_count:>4} | "
+            f"{row.predicate_1:<35.35} | "
+            f"{row.predicate_2:<35.35} | "
+            f"{row.predicate_3:<35.35}"
         )
     return "\n".join(lines)
 

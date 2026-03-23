@@ -17,11 +17,7 @@ if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
 from toy_event_physics import (  # noqa: E402
-    _evaluate_extended_ge6_dpadj_nodes,
-    _extended_ge6_dpadj_trees,
-    pocket_wrap_suppressor_overlap_context_analysis,
-    procedural_geometry_variants,
-    scenario_by_name,
+    pocket_wrap_suppressor_nonpocket_subtype_analysis,
 )
 
 
@@ -65,18 +61,6 @@ def _safe_label(text: str) -> str:
     return text.encode("unicode_escape").decode("ascii")
 
 
-def subtype_from_outcomes(add_1_0_outcome: str, add_4_0_outcome: str) -> str:
-    add1_sensitive = add_1_0_outcome != "dpadj-only"
-    add4_sensitive = add_4_0_outcome != "dpadj-only"
-    if add1_sensitive and not add4_sensitive:
-        return "add1-sensitive"
-    if add4_sensitive and not add1_sensitive:
-        return "add4-sensitive"
-    if add1_sensitive and add4_sensitive:
-        return "both-sensitive"
-    return "pair-only-sensitive"
-
-
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser()
     parser.add_argument("--variant-limit", type=int, default=192)
@@ -85,77 +69,18 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 def label_rows(variant_limit: int) -> list[LabeledNonPocketRow]:
-    context_rows = pocket_wrap_suppressor_overlap_context_analysis(variant_limit=variant_limit)
-    if not context_rows:
-        return []
-
-    base_nodes, wrap_y = scenario_by_name("base", "taper-wrap")
-    variant_nodes_by_source: dict[str, set[tuple[int, int]]] = {}
-    for variant_name, perturbed_nodes, _node_delta in procedural_geometry_variants(
-        "base",
-        "taper-wrap",
-        base_nodes,
-        wrap_y,
+    analysis_rows = pocket_wrap_suppressor_nonpocket_subtype_analysis(
         variant_limit=variant_limit,
-        style="local-morph",
-    ):
-        variant_nodes_by_source[f"base:taper-wrap:{variant_name}"] = set(perturbed_nodes)
-
-    ge6_tree, dpadj_tree = _extended_ge6_dpadj_trees(
-        retained_weight=1.0,
-        mode_retained_weight=None,
     )
-
-    def evaluate_outcome(source_name: str, nodes: set[tuple[int, int]]) -> str:
-        (
-            _actual_label,
-            outcome,
-            _ge6_prediction,
-            _dpadj_prediction,
-            _ge6_only_fraction,
-            _ge7_core_fraction,
-            _deep_gap,
-            _pocket_gap,
-            _low_degree_gap,
-            _boundary_gap,
-            _crosses_midline,
-            _center_variation,
-            _span_range,
-        ) = _evaluate_extended_ge6_dpadj_nodes(
-            nodes=nodes,
-            wrap_y=wrap_y,
-            ge6_tree=ge6_tree,
-            dpadj_tree=dpadj_tree,
-            pack_name="base",
-            scenario_name=source_name,
-            retained_weight=1.0,
-        )
-        return outcome
-
     labeled_rows: list[LabeledNonPocketRow] = []
-    for row in context_rows:
-        if row.pocket_signature:
-            continue
-        source_nodes = variant_nodes_by_source.get(row.source_name)
-        if source_nodes is None:
-            continue
-        add1_nodes = set(source_nodes)
-        add1_nodes.add((1, 0))
-        add4_nodes = set(source_nodes)
-        add4_nodes.add((4, 0))
-        add_1_0_outcome = evaluate_outcome(f"{row.source_name}:add-1-0", add1_nodes)
-        add_4_0_outcome = evaluate_outcome(f"{row.source_name}:add-4-0", add4_nodes)
-        subtype = subtype_from_outcomes(
-            add_1_0_outcome=add_1_0_outcome,
-            add_4_0_outcome=add_4_0_outcome,
-        )
+    for row in analysis_rows:
         labeled_rows.append(
             LabeledNonPocketRow(
                 source_name=row.source_name,
-                subtype=subtype,
+                subtype=row.subtype,
                 deep_overlap_count=row.deep_overlap_count,
-                add_1_0_outcome=add_1_0_outcome,
-                add_4_0_outcome=add_4_0_outcome,
+                add_1_0_outcome=row.add_1_0_outcome,
+                add_4_0_outcome=row.add_4_0_outcome,
                 boundary_fraction=row.boundary_fraction,
                 pocket_fraction=row.pocket_fraction,
                 boundary_roughness=row.boundary_roughness,

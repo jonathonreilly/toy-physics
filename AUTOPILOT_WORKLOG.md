@@ -1,3 +1,57 @@
+## 2026-03-23 09:08 America/New_York
+
+### Current state
+- Manual analysis session took the active non-pocket suppressor thread off dense laddering and onto latent-structure analysis.
+- Repo-side helper drift was reduced:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py` now uses shared model-layer subtype labeling from `/Users/jonreilly/Projects/Physics/toy_event_physics.py`.
+  - new analysis driver added at `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_latent_structure.py`.
+- Completed a reduced smoke run at `variant_limits=480,512` and a representative broader run at `variant_limits=512,672,912,1104`.
+- Validation passed:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/check_feature_registry_alignment.py`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 64 --rule-limit 3`
+
+### Strongest confirmed conclusion
+- The four-subtype map is behaving like a stable taxonomy with expanding membership, not a new mechanism family every rung.
+- Across representative four-subtype checkpoints (`512`, `672`, `912`, `1104`):
+  - non-pocket rows grow `14 -> 15 -> 27 -> 34`
+  - coarse signatures grow only `8 -> 9 -> 13 -> 14`
+  - at `912`, `7/12` new rows land on already-seen signatures
+  - at `1104`, `6/7` new rows land on already-seen signatures
+- So late frontier growth is mostly support-filling inside existing signature basins.
+- But the current coarse observable set is not yet the hidden exact law:
+  - best two-axis partition at `1104` gets only `22/34`
+  - best depth-2 small tree gets only `23/34`
+  - best predicates are built from `core_low_degree_fraction`, `deep_overlap_count`, and `span_range`
+  - so there is a finite core, but not an exact two-axis collapse on the present six coarse observables
+
+### Files and results changed in this run
+- Narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Code/helpers:
+  - `/Users/jonreilly/Projects/Physics/toy_event_physics.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_latent_structure.py`
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- Logs generated/used:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-23-pocket-wrap-suppressor-latent-structure-512-672-912-1104.txt`
+
+### Exact next step
+- Retry helper push first.
+- If sync is available, stop dense rung-by-rung laddering and use the ladder as a sparse sentinel:
+  - run `variant_limit = 1168`
+  - compare non-pocket row count, subtype count, and coarse signature count against `1104`
+- If `1168` changes any of those frontier summaries, rerun latent-structure analysis on `512,672,912,1168`.
+- If `1168` does not change them, stay off dense laddering and do focused collision analysis inside the shared `1104` coarse signatures instead.
+
+### First concrete action
+- Execute:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+- If push succeeds, then run:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 1168 > /Users/jonreilly/Projects/Physics/logs/2026-03-23-pocket-wrap-suppressor-nonpocket-subtype-rules-1168.txt`
+
 ## 2026-03-23 07:35 America/New_York
 
 ### Current state
