@@ -12,6 +12,10 @@
 - Performed one bounded same-thread collision/integrity step using completed `1168` latent output (without recomputing the full latent sweep):
   - parsed `/Users/jonreilly/Projects/Physics/logs/2026-03-23-pocket-wrap-suppressor-latent-structure-512-672-912-1168.txt` into `/Users/jonreilly/Projects/Physics/logs/2026-03-23-pocket-wrap-suppressor-latent-collision-summary-1168.txt`.
   - updated `/Users/jonreilly/Projects/Physics/README.md` and run-state files with the new collision concentration conclusion.
+- Committed the run update:
+  - `562c8fc` (`Summarize 1168 latent collision concentration`).
+- End-of-loop helper push retry after commit also failed with transient DNS:
+  - `status=failed`, `failure_kind=dns_failure`, `error=DNS lookup failed for github.com`, `attempts_used=4`, `ahead=9`, `behind=0`.
 
 ### Strongest confirmed conclusion
 - At `1168`, subtype collisions are concentrated in a small subset of coarse signatures: `4/14` buckets are mixed but they contain `20/36` rows.
