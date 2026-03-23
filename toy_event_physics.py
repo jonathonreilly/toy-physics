@@ -1990,6 +1990,21 @@ class PocketWrapSuppressorMixedBucketRuleRow:
 
 
 @dataclass
+class PocketWrapSuppressorResidualRuleRow:
+    variant_limit: int
+    coarse_signature: str
+    target_subtype: str
+    exact: bool
+    correct: int
+    total: int
+    term_count: int
+    tp: int
+    fp: int
+    fn: int
+    rule_text: str
+
+
+@dataclass
 class PocketWrapLocalMorphTransplantContextRow:
     row_kind: str
     source_name: str
@@ -20007,22 +20022,210 @@ def pocket_wrap_suppressor_mixed_bucket_axis_analysis(
             continue
         predicates = _pocket_wrap_suppressor_mixed_bucket_predicates(bucket_rows)
         full_mask = (1 << len(bucket_rows)) - 1
-        target_mask = 0
-        for index, row in enumerate(bucket_rows):
-            if row.subtype == "add1-sensitive":
-                target_mask |= 1 << index
-        non_target_mask = full_mask ^ target_mask
-        best_rows: list[PocketWrapSuppressorMixedBucketRuleRow] = []
-
         predicate_sets = [(item,) for item in predicates]
         predicate_sets.extend(itertools.combinations(predicates, 2))
-        seen_rule_texts: set[str] = set()
+        best_rows: list[PocketWrapSuppressorMixedBucketRuleRow] = []
+
+        for target_subtype in sorted(subtype_set):
+            target_mask = 0
+            for index, row in enumerate(bucket_rows):
+                if row.subtype == target_subtype:
+                    target_mask |= 1 << index
+            non_target_mask = full_mask ^ target_mask
+            seen_rule_texts: set[str] = set()
+            for predicate_tuple in predicate_sets:
+                sorted_terms = tuple(sorted(predicate_tuple, key=lambda item: item[0]))
+                rule_text = " and ".join(term[0] for term in sorted_terms)
+                if rule_text in seen_rule_texts:
+                    continue
+                seen_rule_texts.add(rule_text)
+                predicted_mask = full_mask
+                for _predicate_text, mask in sorted_terms:
+                    predicted_mask &= mask
+                    if predicted_mask == 0:
+                        break
+                tp = (predicted_mask & target_mask).bit_count()
+                fp = (predicted_mask & non_target_mask).bit_count()
+                fn = (target_mask & (full_mask ^ predicted_mask)).bit_count()
+                tn = (non_target_mask & (full_mask ^ predicted_mask)).bit_count()
+                correct = tp + tn
+                best_rows.append(
+                    PocketWrapSuppressorMixedBucketRuleRow(
+                        variant_limit=variant_limit,
+                        coarse_signature=coarse_signature,
+                        cases=len(bucket_rows),
+                        subtype_signature="add1-sensitive,add4-sensitive",
+                        target_subtype=target_subtype,
+                        exact=(fp == 0 and fn == 0),
+                        correct=correct,
+                        total=len(bucket_rows),
+                        term_count=len(sorted_terms),
+                        tp=tp,
+                        fp=fp,
+                        fn=fn,
+                        rule_text=rule_text,
+                    )
+                )
+
+        best_rows.sort(
+            key=lambda row: (
+                not row.exact,
+                -row.correct,
+                row.term_count,
+                row.fp + row.fn,
+                row.target_subtype,
+                row.rule_text,
+            )
+        )
+        if best_rows:
+            results.append(best_rows[0])
+
+    return results[:limit]
+
+
+def _pocket_wrap_suppressor_residual_bucket_predicates(
+    rows: list[PocketWrapSuppressorSubtypeRow],
+) -> list[tuple[str, int]]:
+    if not rows:
+        return []
+
+    feature_defs: tuple[tuple[str, Callable[[PocketWrapSuppressorSubtypeRow], float]], ...] = (
+        ("boundary_fraction", lambda row: row.boundary_fraction),
+        ("pocket_fraction", lambda row: row.pocket_fraction),
+        ("boundary_roughness", lambda row: row.boundary_roughness),
+        ("deep_pocket_fraction", lambda row: row.deep_pocket_fraction),
+        ("mean_center", lambda row: row.mean_center),
+        ("abs_mean_center", lambda row: abs(row.mean_center)),
+        ("center_range", lambda row: row.center_range),
+        ("center_total_variation", lambda row: row.center_total_variation),
+        ("span_range", lambda row: float(row.span_range)),
+        ("deep_overlap_count", lambda row: float(row.deep_overlap_count)),
+        ("shell_deep_fraction", lambda row: row.shell_deep_fraction),
+        ("core_deep_fraction", lambda row: row.core_deep_fraction),
+        ("shell_pocket_fraction", lambda row: row.shell_pocket_fraction),
+        ("core_pocket_fraction", lambda row: row.core_pocket_fraction),
+        ("shell_low_degree_fraction", lambda row: row.shell_low_degree_fraction),
+        ("core_low_degree_fraction", lambda row: row.core_low_degree_fraction),
+        (
+            "low_degree_gap",
+            lambda row: row.shell_low_degree_fraction - row.core_low_degree_fraction,
+        ),
+        (
+            "pocket_gap",
+            lambda row: row.shell_pocket_fraction - row.core_pocket_fraction,
+        ),
+        (
+            "deep_gap",
+            lambda row: row.shell_deep_fraction - row.core_deep_fraction,
+        ),
+        (
+            "boundary_gap",
+            lambda row: row.shell_boundary_deficit_mean - row.core_boundary_deficit_mean,
+        ),
+        ("shell_boundary_deficit_mean", lambda row: row.shell_boundary_deficit_mean),
+        ("core_boundary_deficit_mean", lambda row: row.core_boundary_deficit_mean),
+    )
+    preferred_order = {
+        "core_low_degree_fraction": 0,
+        "low_degree_gap": 1,
+        "span_range": 2,
+        "center_total_variation": 3,
+        "mean_center": 4,
+        "abs_mean_center": 5,
+        "boundary_roughness": 6,
+        "pocket_fraction": 7,
+        "pocket_gap": 8,
+        "boundary_gap": 9,
+        "deep_overlap_count": 10,
+        "deep_gap": 11,
+    }
+
+    predicate_masks: dict[int, tuple[tuple[int, str, float], str]] = {}
+    full_mask = (1 << len(rows)) - 1
+    for feature_name, getter in feature_defs:
+        value_to_labels: dict[float, set[str]] = {}
+        for row in rows:
+            value = float(getter(row))
+            value_to_labels.setdefault(value, set()).add(row.subtype)
+        values = sorted(value_to_labels)
+        thresholds: list[float] = []
+        if len(values) == 1:
+            thresholds.append(values[0])
+        else:
+            for left, right in zip(values, values[1:]):
+                if value_to_labels[left] != value_to_labels[right]:
+                    thresholds.append((left + right) / 2.0)
+        for threshold in thresholds:
+            for operator in ("<=", ">="):
+                mask = 0
+                for index, row in enumerate(rows):
+                    value = float(getter(row))
+                    if (operator == "<=" and value <= threshold) or (
+                        operator == ">=" and value >= threshold
+                    ):
+                        mask |= 1 << index
+                if mask in (0, full_mask):
+                    continue
+                text = f"{feature_name} {operator} {threshold:.3f}"
+                sort_key = (preferred_order.get(feature_name, 99), feature_name, threshold)
+                chosen = predicate_masks.get(mask)
+                if chosen is None or (sort_key, text) < (chosen[0], chosen[1]):
+                    predicate_masks[mask] = (sort_key, text)
+
+    predicates = [(text, mask) for mask, (_sort_key, text) in predicate_masks.items()]
+    predicates.sort(key=lambda item: item[0])
+    return predicates
+
+
+def pocket_wrap_suppressor_residual_bucket_analysis(
+    variant_limit: int = 1168,
+    retained_weight: float = 1.0,
+    mode_retained_weight: float | None = None,
+    coarse_signature: str = "cross=n|span=3+|low=L|pocket=H|overlap=1|rough=H",
+    limit: int = 8,
+) -> tuple[str, list[PocketWrapSuppressorSubtypeRow], list[PocketWrapSuppressorResidualRuleRow]]:
+    rows = pocket_wrap_suppressor_nonpocket_subtype_analysis(
+        retained_weight=retained_weight,
+        mode_retained_weight=mode_retained_weight,
+        variant_limit=variant_limit,
+    )
+    bucket_rows = [
+        row
+        for row in rows
+        if pocket_wrap_suppressor_coarse_signature(row) == coarse_signature
+    ]
+    residual_rows = [
+        row
+        for row in bucket_rows
+        if row.subtype in {"add1-sensitive", "add4-sensitive"}
+    ]
+    if not residual_rows:
+        return coarse_signature, [], []
+
+    full_mask = (1 << len(residual_rows)) - 1
+    predicates = _pocket_wrap_suppressor_residual_bucket_predicates(residual_rows)
+    results: list[PocketWrapSuppressorResidualRuleRow] = []
+    seen_rule_texts: set[tuple[str, str]] = set()
+    predicate_sets = [(item,) for item in predicates]
+    predicate_sets.extend(itertools.combinations(predicates, 2))
+    predicate_sets.extend(itertools.combinations(predicates, 3))
+    target_subtypes = tuple(sorted({row.subtype for row in residual_rows}))
+
+    for target_subtype in target_subtypes:
+        target_mask = 0
+        for index, row in enumerate(residual_rows):
+            if row.subtype == target_subtype:
+                target_mask |= 1 << index
+        non_target_mask = full_mask ^ target_mask
+
+        best_rows: list[PocketWrapSuppressorResidualRuleRow] = []
         for predicate_tuple in predicate_sets:
             sorted_terms = tuple(sorted(predicate_tuple, key=lambda item: item[0]))
             rule_text = " and ".join(term[0] for term in sorted_terms)
-            if rule_text in seen_rule_texts:
+            seen_key = (target_subtype, rule_text)
+            if seen_key in seen_rule_texts:
                 continue
-            seen_rule_texts.add(rule_text)
+            seen_rule_texts.add(seen_key)
             predicted_mask = full_mask
             for _predicate_text, mask in sorted_terms:
                 predicted_mask &= mask
@@ -20032,17 +20235,14 @@ def pocket_wrap_suppressor_mixed_bucket_axis_analysis(
             fp = (predicted_mask & non_target_mask).bit_count()
             fn = (target_mask & (full_mask ^ predicted_mask)).bit_count()
             tn = (non_target_mask & (full_mask ^ predicted_mask)).bit_count()
-            correct = tp + tn
             best_rows.append(
-                PocketWrapSuppressorMixedBucketRuleRow(
+                PocketWrapSuppressorResidualRuleRow(
                     variant_limit=variant_limit,
                     coarse_signature=coarse_signature,
-                    cases=len(bucket_rows),
-                    subtype_signature="add1-sensitive,add4-sensitive",
-                    target_subtype="add1-sensitive",
+                    target_subtype=target_subtype,
                     exact=(fp == 0 and fn == 0),
-                    correct=correct,
-                    total=len(bucket_rows),
+                    correct=tp + tn,
+                    total=len(residual_rows),
                     term_count=len(sorted_terms),
                     tp=tp,
                     fp=fp,
@@ -20061,9 +20261,18 @@ def pocket_wrap_suppressor_mixed_bucket_axis_analysis(
             )
         )
         if best_rows:
-            results.append(best_rows[0])
+            results.extend(best_rows[:limit])
 
-    return results[:limit]
+    results.sort(
+        key=lambda row: (
+            row.target_subtype,
+            not row.exact,
+            -row.correct,
+            row.term_count,
+            row.rule_text,
+        )
+    )
+    return coarse_signature, residual_rows, results[: limit * max(len(target_subtypes), 1)]
 
 
 def pocket_wrap_local_morph_transplant_context_analysis(
@@ -25733,6 +25942,54 @@ def render_pocket_wrap_suppressor_mixed_bucket_rule_table(
             f"{row.term_count:>5} | "
             f"{row.tp:>2}/{row.fp:<2}/{row.fn:<2}     | "
             f"{row.rule_text:<35.35}"
+        )
+    return "\n".join(lines)
+
+
+def render_pocket_wrap_suppressor_residual_bucket_case_table(
+    rows: list[PocketWrapSuppressorSubtypeRow],
+) -> str:
+    def short_name(source_name: str) -> str:
+        return source_name.split(":")[-1].encode("unicode_escape").decode("ascii")
+
+    lines = [
+        "source                 | subtype          | add1/add4            | low core/shell | pocket | rough | mean | abs(mean) | ctv  | span | pocket gap | low gap",
+        "-----------------------+------------------+----------------------+----------------+--------+-------+------+-----------+------+------|------------+--------",
+    ]
+    for row in rows:
+        lines.append(
+            f"{short_name(row.source_name):<23.23} | "
+            f"{row.subtype:<16.16} | "
+            f"{(row.add_1_0_outcome + '/' + row.add_4_0_outcome):<20.20} | "
+            f"{row.core_low_degree_fraction:>4.3f}/{row.shell_low_degree_fraction:<4.3f} | "
+            f"{row.pocket_fraction:>4.3f} | "
+            f"{row.boundary_roughness:>4.3f} | "
+            f"{row.mean_center:+4.2f} | "
+            f"{abs(row.mean_center):>5.3f}     | "
+            f"{row.center_total_variation:>4.2f} | "
+            f"{row.span_range:>4} | "
+            f"{(row.shell_pocket_fraction - row.core_pocket_fraction):+5.3f}      | "
+            f"{(row.shell_low_degree_fraction - row.core_low_degree_fraction):+5.3f}"
+        )
+    return "\n".join(lines)
+
+
+def render_pocket_wrap_suppressor_residual_bucket_rule_table(
+    rows: list[PocketWrapSuppressorResidualRuleRow],
+    limit: int = 12,
+) -> str:
+    lines = [
+        "target            | exact | correct | terms | tp/fp/fn | rule",
+        "------------------+-------+---------+-------+----------+---------------------------------------------",
+    ]
+    for row in rows[:limit]:
+        lines.append(
+            f"{row.target_subtype:<16.16} | "
+            f"{('Y' if row.exact else 'n'):<5} | "
+            f"{row.correct:>3}/{row.total:<3} | "
+            f"{row.term_count:>5} | "
+            f"{row.tp:>2}/{row.fp:<2}/{row.fn:<2}     | "
+            f"{row.rule_text:<45.45}"
         )
     return "\n".join(lines)
 

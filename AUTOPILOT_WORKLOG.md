@@ -1,3 +1,46 @@
+## 2026-03-23 17:20 America/New_York
+
+### Current state
+- Reconciled canonical repo state, verified the worker lock was free, and acquired a manual interactive lock for one bounded same-thread residual-bucket step.
+- Added a focused residual-bucket extractor:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_residual_bucket_rules.py`
+  - supporting helpers and renderers in `/Users/jonreilly/Projects/Physics/toy_event_physics.py`
+- Ran the full `1168` residual-bucket pass and saved the output to:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-23-pocket-wrap-suppressor-residual-bucket-rules-1168.txt`
+- Fixed a helper drift issue uncovered by the result:
+  - `/Users/jonreilly/Projects/Physics/toy_event_physics.py`
+  - `pocket_wrap_suppressor_mixed_bucket_axis_analysis()` now searches both target directions (`add1-sensitive` and `add4-sensitive`) instead of only the add1 side.
+- Updated `/Users/jonreilly/Projects/Physics/README.md` to replace the stale “one unresolved mixed bucket remains” claim with the corrected exact split.
+
+### Strongest confirmed conclusion
+- The last `1168` add1-vs-add4 residual is not unresolved on the current finer observable family after all.
+- Inside `cross=n|span=3+|low=L|pocket=H|overlap=1|rough=H`, the residual 3-row add1-vs-add4 set splits exactly via:
+  - `core_low_degree_fraction >= 0.208`
+- The exact row set is:
+  - `local-morph-\u0428` add1-sensitive
+  - `local-morph-\u04ab` add1-sensitive
+  - `local-morph-\u04cc` add4-sensitive
+- So at `1168`, all three add1-vs-add4 mixed coarse buckets are now exactly resolved by the current finer observable family. The missing signal remains low-degree shell/core geometry, not a fifth mechanism family.
+
+### Files and results changed in this run
+- Code/helpers:
+  - `/Users/jonreilly/Projects/Physics/toy_event_physics.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_residual_bucket_rules.py`
+- Narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- New log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-23-pocket-wrap-suppressor-residual-bucket-rules-1168.txt`
+
+### Exact next step
+- Push this synced residual-bucket closeout first if needed.
+- Then return to the sparse-sentinel ladder instead of more bucket archaeology:
+  - run `variant_limit = 1232`
+- Only rerun mixed-bucket or residual-bucket analysis if the `1232` frontier changes the collision summary or introduces a new mixed signature.
+
+### First concrete action
+- Execute:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+
 ## 2026-03-23 16:19 America/New_York
 
 ### Current state
