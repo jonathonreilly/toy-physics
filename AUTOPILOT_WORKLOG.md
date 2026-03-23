@@ -11,6 +11,8 @@
   - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 944 > /Users/jonreilly/Projects/Physics/logs/2026-03-23-pocket-wrap-suppressor-nonpocket-subtype-rules-944.txt`
 - `944` completed successfully (`total_elapsed=886.5s`) and introduced one new non-pocket row relative to `928/912`.
 - Updated `/Users/jonreilly/Projects/Physics/README.md` to record the new frontier behavior at `944`.
+- Committed tracked science updates as `2a01cd5` (`Record nonpocket frontier expansion at variant limit 944`).
+- End-of-loop helper push retry failed again with transient DNS resolution (`failure_kind=dns_failure`, `DNS lookup failed for github.com`, `attempts_used=4`), leaving `main` ahead of `origin/main` by `3`.
 
 ### Strongest confirmed conclusion
 - `896..928` was a real short stable hold at `27` rows, but `944` starts the next growth phase:
