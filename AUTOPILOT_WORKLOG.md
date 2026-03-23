@@ -13,16 +13,18 @@
   - continuation exited abnormally in this environment and wrote only a start marker line.
 - Committed the science update:
   - `3f83ac2` (`Extend sparse sentinel frontier through variant limit 1168`)
-- End-of-loop helper push failed with transient DNS:
+- Recorded DNS-blocked sync status in tracked state:
+  - `d0232bd` (`Record DNS-blocked push state after 1168 run`)
+- Final end-of-loop helper push still failed with transient DNS:
   - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
-  - helper result: `status=failed`, `failure_kind=dns_failure`, `ahead=1`, `behind=0`, `attempts_used=4`.
+  - helper result: `status=failed`, `failure_kind=dns_failure`, `ahead=2`, `behind=0`, `attempts_used=4`.
 - Updated `/Users/jonreilly/Projects/Physics/README.md` with the new `1168` frontier conclusion.
 
 ### Strongest confirmed conclusion
 - The sparse sentinel at `1168` changes the active frontier: non-pocket overlap-positive membership rises from `34` to `36` while subtype count remains `4` and the both-sensitive exact-rule anchor stays unchanged (`deep_overlap_count >= 1.500`, `tp=2`).
 - New rows at this rung are `local-morph-\u04cc` (add4-sensitive) and `local-morph-\u04cd` (add1-sensitive), so growth is continuing inside the same four-subtype regime.
 - The latent-structure continuation on `512,672,912,1168` is still pending because this run produced only a start marker.
-- Remote sync is temporarily blocked by DNS (`ahead=1`, `behind=0`) despite the successful science commit.
+- Remote sync is temporarily blocked by DNS while the branch remains ahead of `origin/main`.
 
 ### Files and results changed in this run
 - Narrative:
