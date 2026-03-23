@@ -1,3 +1,40 @@
+## 2026-03-23 16:19 America/New_York
+
+### Current state
+- Reconciled required preflight in canonical repo context (worklog, handoff, memory), verified lock free, and acquired `physics-science` lock.
+- Reconciled git before new work:
+  - `git status --short --branch` -> `main...origin/main` (clean)
+  - `git rev-list --left-right --count origin/main...main` -> `0 0`
+  - `HEAD` matched `origin/main` at `878ce72` before this run.
+- Per protocol, no push-first action was needed because the branch was not ahead.
+- Performed one bounded same-thread integrity/conclusion step on the active `1168` mixed-bucket thread:
+  - added `/Users/jonreilly/Projects/Physics/logs/2026-03-23-pocket-wrap-suppressor-unresolved-bucket-decomposition-1168.txt`
+  - decomposed the previously unresolved coarse bucket using the completed collision-axes output and confirmed an exact pair-only peel.
+- Updated narrative/state tracking to match this tighter unresolved-target read.
+
+### Strongest confirmed conclusion
+- The unresolved `1168` coarse bucket (`cross=n|span=3+|low=L|pocket=H|overlap=1|rough=H`) is not fully unresolved in subtype terms.
+- Inside that bucket, `pair-only-sensitive` peels exactly via `core_low_degree_fraction >= 0.269` (`tp=1`, `fp=0`, `fn=0`, `4/4` accuracy).
+- So the remaining latent separator problem is now the 3-row add1-vs-add4 residual only, which is the narrowest same-thread next target.
+
+### Files and results changed in this run
+- Narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- New log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-23-pocket-wrap-suppressor-unresolved-bucket-decomposition-1168.txt`
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- Run one bounded residual-bucket mechanism pass on only the 3-row add1-vs-add4 remainder inside `cross=n|span=3+|low=L|pocket=H|overlap=1|rough=H`.
+- Prioritize compact separators on finer low-degree-shell/core placement and centerline profile asymmetry features.
+
+### First concrete action
+- Execute:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status`
+
 ## 2026-03-23 15:31 America/New_York
 
 ### Current state
