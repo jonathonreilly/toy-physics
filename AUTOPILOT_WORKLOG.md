@@ -17,8 +17,9 @@
   - result: `status=completed`, `exit_code=0`, `elapsed_s=1643.1`
 - Committed run updates:
   - `3c123af` (`Advance sparse sentinel frontier through variant limit 1808`)
+  - `1183303` (`Record 1808 run push retry status`)
 - End-of-loop helper push retries failed with transient DNS:
-  - helper result remained `status=failed`, `failure_kind=dns_failure`, `error=DNS lookup failed for github.com`, `ahead=4`, `behind=0` (no remote sync in this run)
+  - helper result remained `status=failed`, `failure_kind=dns_failure`, `error=DNS lookup failed for github.com`, `ahead=5`, `behind=0` (no remote sync in this run)
 
 ### Strongest confirmed conclusion
 - `1808` extends the active sparse-sentinel growth phase without subtype-map or exact-rule drift.
