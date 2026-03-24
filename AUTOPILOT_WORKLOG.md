@@ -1,3 +1,58 @@
+## 2026-03-24 17:15 America/New_York
+
+### Current state
+- Reconciled required preflight context in canonical order:
+  - read `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`.
+- Lock flow executed per protocol:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` -> `free`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 2` -> `acquired`
+- Git reconciled before science:
+  - `git status --short --branch` -> `main...origin/main [ahead 3]`
+  - `git rev-list --left-right --count origin/main...main` -> `0 3`
+  - `HEAD=1350c7c`, `origin/main=9f879df`.
+- Push-first helper run before science:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - helper result: `status=failed`, `failure_kind=dns_failure`, `error=DNS lookup failed for github.com`, `attempts_used=4`, `ahead=3`, `behind=0`.
+- Executed one bounded same-thread sparse-sentinel continuation step:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 3856 --max-seconds 4200 > /Users/jonreilly/Projects/Physics/logs/2026-03-24-pocket-wrap-suppressor-nonpocket-subtype-rules-3856.txt`
+  - result: `status=completed`, `exit_code=0`, `elapsed_s=3427.2`.
+
+### Strongest confirmed conclusion
+- `3856` continues active sparse-sentinel growth while preserving subtype count but rotating the both-sensitive two-term family.
+- Frontier state at `3856`:
+  - non-pocket subtype membership rises from `89` to `97`
+  - subtype count remains `4`
+  - both-sensitive one-term anchor remains exact: `deep_overlap_count >= 1.500` (`tp=5`)
+  - both-sensitive two-term family pivots from boundary-fraction/center-variation conditions to core/shell-deficit and center-location conditions, still anchored on `deep_overlap_count >= 1.500`.
+- New rows at `3856`:
+  - `local-morph-\u0f11` (`pair-only-sensitive`, `dpadj-only/dpadj-only`, `cross=Y`)
+  - `local-morph-\u0f20` (`add4-sensitive`, `dpadj-only/ge6-only`, `cross=Y`)
+  - `local-morph-\u0f37` (`add1-sensitive`, `neither/dpadj-only`, `cross=Y`)
+  - `local-morph-\u0f38` (`add4-sensitive`, `dpadj-only/neither`, `cross=Y`)
+  - `local-morph-\u0f54` (`add1-sensitive`, `neither/dpadj-only`, `cross=Y`)
+  - `local-morph-\u0f57` (`add1-sensitive`, `neither/dpadj-only`, `cross=Y`)
+  - `local-morph-\u0f65` (`pair-only-sensitive`, `dpadj-only/dpadj-only`, `cross=Y`)
+  - `local-morph-\u0f6d` (`add1-sensitive`, `neither/dpadj-only`, `cross=n`)
+
+### Files and results changed in this run
+- Narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- Log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-24-pocket-wrap-suppressor-nonpocket-subtype-rules-3856.txt`
+
+### Exact next step
+- Retry helper push first on the next loop if still ahead.
+- If sync is available, continue sparse-sentinel with `variant_limit = 3984` using the same `--max-seconds` guard.
+- Diff `3984` row/subtype/exact-rule sections against `3856` and `3728`.
+
+### First concrete action
+- Execute:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status`
+
 ## 2026-03-24 16:13 America/New_York
 
 ### Current state
