@@ -1,3 +1,57 @@
+## 2026-03-24 10:05 America/New_York
+
+### Current state
+- Reconciled required preflight context in canonical order:
+  - read `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`.
+- Lock flow executed per protocol:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` -> `free`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 2` -> `acquired`
+- Git reconciled before science:
+  - `git status --short --branch` -> `main...origin/main [ahead 3]`
+  - `git rev-list --left-right --count origin/main...main` -> `0 3`
+  - `HEAD=d85ea36`, `origin/main=2df2f78`.
+- Push-first helper run before science:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - helper result: `status=failed`, `failure_kind=dns_failure`, `error=DNS lookup failed for github.com`, `attempts_used=4`, `ahead=3`, `behind=0`.
+- Executed one bounded same-thread sparse-sentinel continuation step:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 2960 --max-seconds 4200 > /Users/jonreilly/Projects/Physics/logs/2026-03-24-pocket-wrap-suppressor-nonpocket-subtype-rules-2960.txt`
+  - result: `status=completed`, `exit_code=0`, `elapsed_s=2669.1`
+- Committed run updates:
+  - `59d16ed` (`Advance sparse sentinel frontier through variant limit 2960`)
+- End-of-loop helper push retry failed with transient DNS:
+  - helper result: `status=failed`, `failure_kind=dns_failure`, `error=DNS lookup failed for github.com`, `attempts_used=4`, `ahead=4`, `behind=0`.
+- Released cooperative lock:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py release --owner physics-science` -> `status=released`
+
+### Strongest confirmed conclusion
+- `2960` extends the `2832` sparse-sentinel frontier by one row while preserving the same four-subtype law.
+- Frontier state at `2960`:
+  - non-pocket subtype membership rises from `72` to `73`
+  - subtype count remains `4`
+  - both-sensitive one-term anchor remains exact: `deep_overlap_count >= 1.500` (`tp=5`)
+  - both-sensitive 2-term family is unchanged versus `2832`, `2704`, `2576`, `2448`, and `2320`.
+- New row at `2960` is:
+  - `local-morph-\u0be5` (`add1-sensitive`)
+
+### Files and results changed in this run
+- Narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- Log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-24-pocket-wrap-suppressor-nonpocket-subtype-rules-2960.txt`
+
+### Exact next step
+- Retry helper push first on the next loop if still ahead.
+- If sync is available, continue sparse-sentinel with `variant_limit = 3088` using `--max-seconds` guard.
+- If `3088` changes the frontier, diff row/subtype/exact-rule sections against `2960` and `2832`.
+- If `3088` matches exactly, treat `2960..3088` as the next short hold and widen again.
+
+### First concrete action
+- Execute:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status`
 ## 2026-03-24 10:02 America/New_York
 
 ### Current state
