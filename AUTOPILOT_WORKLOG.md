@@ -1,3 +1,46 @@
+## 2026-03-23 23:16 America/New_York
+
+### Current state
+- Continued the active sparse-sentinel thread under the same manual lock after the completed `1488` bump.
+- Confirmed `1488` introduced one new `add4-sensitive` row:
+  - `local-morph-\u0614`
+- Ran one follow-up rung to decide whether that was a one-step bump or a continuing band:
+  - command: `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 1552`
+  - output: `/Users/jonreilly/Projects/Physics/logs/2026-03-23-pocket-wrap-suppressor-nonpocket-subtype-rules-1552.txt`
+  - result: `status=completed`, `exit_code=0`, `elapsed_s=1450.1`
+- One earlier `1552` attempt dropped after writing only a start marker, so the rung was rerun cleanly with direct file redirection and completed successfully.
+
+### Strongest confirmed conclusion
+- `1552` exactly matches `1488`.
+- Current frontier state:
+  - non-pocket subtype membership stays at `44`
+  - subtype count stays at `4`
+  - exact-rule table is unchanged
+  - both-sensitive anchor remains `deep_overlap_count >= 1.500` (`tp=3`)
+- So the current frontier read is:
+  - `1488` was a one-row add4-sensitive expansion
+  - `1488..1552` is now the next confirmed short hold
+
+### Files and results changed in this run
+- Narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- New log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-23-pocket-wrap-suppressor-nonpocket-subtype-rules-1552.txt`
+
+### Exact next step
+- Do not keep stepping by `64` indefinitely.
+- Widen the next sparse sentinel to `variant_limit = 1680`.
+- If `1680` changes the frontier, diff row/subtype/exact-rule sections against `1552` and `1488`.
+- If `1680` still matches exactly, treat `1488..1680` as the next stable band and widen again.
+
+### First concrete action
+- Execute:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status`
+
 ## 2026-03-23 22:54 America/New_York
 
 ### Current state
