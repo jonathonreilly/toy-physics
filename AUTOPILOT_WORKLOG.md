@@ -18,7 +18,7 @@
 - Committed run updates:
   - `c194b0c` (`Confirm sparse sentinel hold through variant limit 2064`)
 - End-of-loop helper push retries failed with transient DNS:
-  - helper result: `status=failed`, `failure_kind=dns_failure`, `error=DNS lookup failed for github.com`, `attempts_used=4`, `ahead=9`, `behind=0`.
+  - helper result: `status=failed`, `failure_kind=dns_failure`, `error=DNS lookup failed for github.com`, `attempts_used=4`.
 
 ### Strongest confirmed conclusion
 - `2064` is an exact hold of `1936`.
