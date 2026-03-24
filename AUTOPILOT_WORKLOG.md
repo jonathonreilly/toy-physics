@@ -1,3 +1,51 @@
+## 2026-03-24 13:06 America/New_York
+
+### Current state
+- Reconciled required preflight context in canonical order:
+  - read `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`.
+- Lock flow executed per protocol:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` -> `free`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 2` -> `acquired`
+- Git reconciled before science:
+  - `git status --short --branch` -> `main...origin/main [ahead 8]`
+  - `git rev-list --left-right --count origin/main...main` -> `0 8`
+  - `HEAD=fc54868`.
+- Push-first helper run before new thread work:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - helper result: `status=failed`, `failure_kind=dns_failure`, `error=DNS lookup failed for github.com`, `attempts_used=4`, `ahead=8`, `behind=0`.
+- Attempted sparse-sentinel continuation rung:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 3344 --max-seconds 4200 > /Users/jonreilly/Projects/Physics/logs/2026-03-24-pocket-wrap-suppressor-nonpocket-subtype-rules-3344.txt`
+  - run started and currently keeps the output file open; this sandbox disallows signaling that process (`kill` not permitted).
+- Completed one bounded same-thread integrity step instead:
+  - generated `/Users/jonreilly/Projects/Physics/logs/2026-03-24-pocket-wrap-sparse-sentinel-frontier-integrity-audit.txt`
+  - audited completed logs across the non-pocket subtype frontier.
+
+### Strongest confirmed conclusion
+- The sparse-sentinel frontier remains mechanism-stable through the latest confirmed completed rung (`3216`):
+  - subtype count remains `4` from `2320` through `3216`
+  - both-sensitive one-term anchor remains exact wherever present: `deep_overlap_count >= 1.500`
+  - non-pocket membership rises monotonically across that frontier (`65` at `2320` -> `78` at `3216`).
+- Integrity anomaly to carry forward:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-24-pocket-wrap-suppressor-nonpocket-subtype-rules-2448.txt` is missing its final `completed` trailer line even though context/rule sections are present.
+
+### Files and results changed in this run
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- New integrity log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-24-pocket-wrap-sparse-sentinel-frontier-integrity-audit.txt`
+- In-progress bounded rung log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-24-pocket-wrap-suppressor-nonpocket-subtype-rules-3344.txt`
+
+### Exact next step
+- Re-check whether the in-progress `3344` rung has completed/timed out and capture its terminal line.
+- If it did not finish cleanly, rerun `3344` in a kill-capable/manual shell and then diff row/subtype/exact-rule sections against `3216`.
+
+### First concrete action
+- Execute:
+  - `lsof /Users/jonreilly/Projects/Physics/logs/2026-03-24-pocket-wrap-suppressor-nonpocket-subtype-rules-3344.txt`
+
 ## 2026-03-24 12:06 America/New_York
 
 ### Current state
