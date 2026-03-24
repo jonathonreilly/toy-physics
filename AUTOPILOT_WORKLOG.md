@@ -1,3 +1,61 @@
+## 2026-03-24 08:02 America/New_York
+
+### Current state
+- Reconciled required preflight context in canonical order:
+  - read `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`.
+- Lock flow executed per protocol:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` -> `free`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 2` -> `acquired`
+- Git reconciled before science:
+  - initial `git status --short --branch` -> `main...origin/main [ahead 17]`
+  - initial `git rev-list --left-right --count origin/main...main` -> `0 17`
+- Push-first helper run before science:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - helper result: `status=failed`, `failure_kind=dns_failure`, `error=DNS lookup failed for github.com`, `attempts_used=4`.
+- Executed bounded same-thread mechanism continuation:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 2704 > /Users/jonreilly/Projects/Physics/logs/2026-03-24-pocket-wrap-suppressor-nonpocket-subtype-rules-2704.txt`
+  - result: `status=completed`, `exit_code=0`, `elapsed_s=2457.7`
+- Obvious same-thread integrity continuation (bounded-run guard):
+  - added `--max-seconds` wall-clock guard to `scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py`
+  - smoke: `--variant-limit 8 --max-seconds 60` completed (`26.1s`)
+  - timebox probe: `--variant-limit 2704 --max-seconds 120` cleanly exited with `code=124` and timeout marker log.
+- Reconciled git again after steps:
+  - `git status --short --branch` -> `main...origin/main`
+  - `git rev-list --left-right --count origin/main...main` -> `0 0`
+
+### Strongest confirmed conclusion
+- `2704` extends the `2576` sparse-sentinel frontier by two rows while preserving the same four-subtype law.
+- Frontier state at `2704`:
+  - non-pocket subtype membership rises from `69` to `71`
+  - subtype count remains `4`
+  - both-sensitive one-term anchor remains exact: `deep_overlap_count >= 1.500` (`tp=5`)
+  - both-sensitive 2-term family is unchanged versus `2576`, `2448`, and `2320`.
+- New rows at `2704` are:
+  - `local-morph-\u0ada` (`add4-sensitive`)
+  - `local-morph-\u0aea` (`add1-sensitive`)
+- Runner integrity is improved for future high-limit rungs: timeout-guarded runs now fail fast with explicit timeout output and exit code `124` instead of indefinite blocking.
+
+### Files and results changed in this run
+- Code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py`
+- Narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- Logs:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-24-pocket-wrap-suppressor-nonpocket-subtype-rules-2704.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-24-pocket-wrap-suppressor-nonpocket-subtype-rules-2704-timebox120.txt`
+  - `/tmp/2026-03-24-nonpocket-subtype-rules-8-timeout-guard-smoke.txt`
+
+### Exact next step
+- Continue the same sparse-sentinel thread at `variant_limit = 2832`, using `--max-seconds` for bounded automation safety while checking whether frontier growth persists or enters a short hold band after `2704`.
+
+### First concrete action
+- Execute:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status`
+
 ## 2026-03-24 06:57 America/New_York
 
 ### Current state

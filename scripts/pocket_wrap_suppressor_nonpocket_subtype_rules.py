@@ -8,6 +8,7 @@ from dataclasses import dataclass
 from datetime import datetime
 import itertools
 from pathlib import Path
+import signal
 import sys
 import time
 from typing import Callable
@@ -57,6 +58,10 @@ class SubtypeRuleRow:
     fn: int
 
 
+class RunTimedOutError(RuntimeError):
+    """Raised when the optional wall-clock guard expires."""
+
+
 def _safe_label(text: str) -> str:
     return text.encode("unicode_escape").decode("ascii")
 
@@ -65,6 +70,12 @@ def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser()
     parser.add_argument("--variant-limit", type=int, default=192)
     parser.add_argument("--rule-limit", type=int, default=6)
+    parser.add_argument(
+        "--max-seconds",
+        type=float,
+        default=None,
+        help="Optional wall-clock timeout for bounded automation runs.",
+    )
     return parser
 
 
@@ -302,12 +313,36 @@ def main() -> None:
     started = datetime.now().isoformat(timespec="seconds")
     print(f"non-pocket suppressor subtype rules started {started}", flush=True)
     total_start = time.time()
+    timer_enabled = args.max_seconds is not None and args.max_seconds > 0
 
-    rows = label_rows(variant_limit=args.variant_limit)
-    subtypes = sorted({row.subtype for row in rows})
-    exact_rules: list[SubtypeRuleRow] = []
-    for subtype in subtypes:
-        exact_rules.extend(search_exact_rules(rows, subtype))
+    def _on_alarm(_signum: int, _frame: object) -> None:
+        raise RunTimedOutError
+
+    previous_handler = signal.getsignal(signal.SIGALRM)
+    try:
+        if timer_enabled:
+            signal.signal(signal.SIGALRM, _on_alarm)
+            signal.setitimer(signal.ITIMER_REAL, float(args.max_seconds))
+
+        rows = label_rows(variant_limit=args.variant_limit)
+        subtypes = sorted({row.subtype for row in rows})
+        exact_rules: list[SubtypeRuleRow] = []
+        for subtype in subtypes:
+            exact_rules.extend(search_exact_rules(rows, subtype))
+    except RunTimedOutError:
+        print(
+            "non-pocket suppressor subtype rules timed out "
+            + datetime.now().isoformat(timespec="seconds")
+            + f" elapsed={time.time() - total_start:.1f}s"
+            + f" variant_limit={args.variant_limit}"
+            + f" max_seconds={args.max_seconds}",
+            flush=True,
+        )
+        raise SystemExit(124)
+    finally:
+        if timer_enabled:
+            signal.setitimer(signal.ITIMER_REAL, 0.0)
+            signal.signal(signal.SIGALRM, previous_handler)
 
     print()
     print("Non-Pocket Suppressor Subtype Context")
