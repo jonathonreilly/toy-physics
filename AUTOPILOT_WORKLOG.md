@@ -10,41 +10,56 @@
   - `git status --short --branch` -> `main...origin/main [ahead 8]`
   - `git rev-list --left-right --count origin/main...main` -> `0 8`
   - `HEAD=fc54868`.
-- Push-first helper run before new thread work:
+- Push-first helper run before science:
   - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
   - helper result: `status=failed`, `failure_kind=dns_failure`, `error=DNS lookup failed for github.com`, `attempts_used=4`, `ahead=8`, `behind=0`.
-- Attempted sparse-sentinel continuation rung:
+- Executed one bounded sparse-sentinel mechanism rung on the active thread:
   - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 3344 --max-seconds 4200 > /Users/jonreilly/Projects/Physics/logs/2026-03-24-pocket-wrap-suppressor-nonpocket-subtype-rules-3344.txt`
-  - run started and currently keeps the output file open; this sandbox disallows signaling that process (`kill` not permitted).
-- Completed one bounded same-thread integrity step instead:
+  - result: `status=completed`, `exit_code=0`, `elapsed_s=3004.7`.
+- Obvious same-thread continuation (integrity):
   - generated `/Users/jonreilly/Projects/Physics/logs/2026-03-24-pocket-wrap-sparse-sentinel-frontier-integrity-audit.txt`
-  - audited completed logs across the non-pocket subtype frontier.
+  - confirmed frontier-wide row/subtype/anchor consistency and flagged one historical trailer anomaly (`2448` completion line missing).
+- Committed intermediate tracked update:
+  - `832d8ea` (`Record sparse sentinel frontier integrity audit`).
+- End-of-loop helper push retry still failed with transient DNS:
+  - helper result: `status=failed`, `failure_kind=dns_failure`, `error=DNS lookup failed for github.com`, `attempts_used=4`, `ahead=9`, `behind=0`.
+- Released cooperative lock at end of loop after `3344` completion was confirmed:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py release --owner physics-science` -> `status=released`.
 
 ### Strongest confirmed conclusion
-- The sparse-sentinel frontier remains mechanism-stable through the latest confirmed completed rung (`3216`):
-  - subtype count remains `4` from `2320` through `3216`
-  - both-sensitive one-term anchor remains exact wherever present: `deep_overlap_count >= 1.500`
-  - non-pocket membership rises monotonically across that frontier (`65` at `2320` -> `78` at `3216`).
-- Integrity anomaly to carry forward:
-  - `/Users/jonreilly/Projects/Physics/logs/2026-03-24-pocket-wrap-suppressor-nonpocket-subtype-rules-2448.txt` is missing its final `completed` trailer line even though context/rule sections are present.
+- `3344` extends the `3216` sparse-sentinel frontier by six rows while preserving the same four-subtype law.
+- Frontier state at `3344`:
+  - non-pocket subtype membership rises from `78` to `84`
+  - subtype count remains `4`
+  - both-sensitive one-term anchor remains exact: `deep_overlap_count >= 1.500` (`tp=5`)
+  - both-sensitive two-term family is unchanged versus `3216`, `3088`, `2960`, `2832`, `2704`, `2576`, `2448`, and `2320`.
+- New rows at `3344`:
+  - `local-morph-\u0cf7` (`add1-sensitive`)
+  - `local-morph-\u0d07` (`add1-sensitive`)
+  - `local-morph-\u0d12` (`add4-sensitive`)
+  - `local-morph-\u0d31` (`add4-sensitive`)
+  - `local-morph-\u0d3b` (`add4-sensitive`)
+  - `local-morph-\u0d40` (`pair-only-sensitive`)
 
 ### Files and results changed in this run
+- Narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
 - Updated run tracking:
   - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
   - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
   - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
-- New integrity log:
-  - `/Users/jonreilly/Projects/Physics/logs/2026-03-24-pocket-wrap-sparse-sentinel-frontier-integrity-audit.txt`
-- In-progress bounded rung log:
+- Logs:
   - `/Users/jonreilly/Projects/Physics/logs/2026-03-24-pocket-wrap-suppressor-nonpocket-subtype-rules-3344.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-24-pocket-wrap-sparse-sentinel-frontier-integrity-audit.txt`
 
 ### Exact next step
-- Re-check whether the in-progress `3344` rung has completed/timed out and capture its terminal line.
-- If it did not finish cleanly, rerun `3344` in a kill-capable/manual shell and then diff row/subtype/exact-rule sections against `3216`.
+- Retry helper push first on the next loop if still ahead.
+- If sync is available, continue sparse-sentinel with `variant_limit = 3472` using `--max-seconds` guard.
+- Diff `3472` row/subtype/exact-rule sections against `3344` and `3216`.
 
 ### First concrete action
 - Execute:
-  - `lsof /Users/jonreilly/Projects/Physics/logs/2026-03-24-pocket-wrap-suppressor-nonpocket-subtype-rules-3344.txt`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status`
 
 ## 2026-03-24 12:06 America/New_York
 
