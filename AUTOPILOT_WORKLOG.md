@@ -1,3 +1,43 @@
+## 2026-03-23 22:54 America/New_York
+
+### Current state
+- Picked up from the synced `1424` sparse-sentinel checkpoint with the manual lock already held for `interactive sparse sentinels 1488+`.
+- First `1488` launch only wrote a start marker to the log, so the rung was rerun directly in the same repo context and the final output was written back into the canonical log path:
+  - command: `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 1488`
+  - output: `/Users/jonreilly/Projects/Physics/logs/2026-03-24-pocket-wrap-suppressor-nonpocket-subtype-rules-1488.txt`
+  - result: `status=completed`, `exit_code=0`, `elapsed_s=1447.2`
+- While `1488` was running, a duplicate `1552` sparse-sentinel job started in parallel and was explicitly killed so the intended rung could finish without overlap.
+
+### Strongest confirmed conclusion
+- The frontier grows again at `1488`, but only inside the existing law:
+  - non-pocket subtype membership rises from `43` to `44`
+  - subtype count remains `4`
+  - exact-rule table is unchanged
+  - both-sensitive anchor remains `deep_overlap_count >= 1.500` (`tp=3`)
+- The lone new row is `local-morph-\u0614`, which enters as `add4-sensitive` (`dpadj-only/neither`, `cross=n`).
+- So the frontier read is now:
+  - `1360..1424` was a short hold
+  - `1488` starts the next growth phase
+  - but still without subtype-map drift or exact-rule drift
+
+### Files and results changed in this run
+- Narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- New/rewritten log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-24-pocket-wrap-suppressor-nonpocket-subtype-rules-1488.txt`
+
+### Exact next step
+- Do not keep micro-laddering by default.
+- If we continue this thread, widen the next sparse sentinel materially rather than stepping immediately to `1552`.
+- Prefer latent-structure work unless a later sentinel shows subtype-count or exact-rule drift.
+
+### First concrete action
+- Execute:
+  - `git status --short --branch`
+
 ## 2026-03-23 22:21 America/New_York
 
 ### Current state
