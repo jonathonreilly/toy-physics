@@ -15,8 +15,8 @@
   - result: `status=completed`, `exit_code=0`, `elapsed_s=1528.6`
 - Committed run updates:
   - `86814e3` (`Advance sparse sentinel frontier through variant limit 1680`)
-- End-of-loop helper push retry after commit failed with transient DNS:
-  - `status=failed`, `failure_kind=dns_failure`, `error=DNS lookup failed for github.com`, `attempts_used=4`, `ahead=1`, `behind=0`
+- End-of-loop helper push retries failed with transient DNS:
+  - helper result remained `status=failed`, `failure_kind=dns_failure`, `error=DNS lookup failed for github.com` (no remote sync in this run)
 
 ### Strongest confirmed conclusion
 - `1680` breaks the `1488..1552` hold by one row but keeps the same 4-subtype map.
