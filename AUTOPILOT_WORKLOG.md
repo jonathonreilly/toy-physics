@@ -1,3 +1,48 @@
+## 2026-03-23 22:21 America/New_York
+
+### Current state
+- Picked up from the latest sparse-sentinel worker state after confirming:
+  - `git status --short --branch` -> `main...origin/main [ahead 5]`
+  - the worker lock was `free`
+  - `git ls-remote origin HEAD` succeeded immediately
+- Re-ran the helper push manually in the same repo context:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - helper result: `status=pushed`, `ahead=0`, `behind=0`, `attempts_used=1`
+- Then executed the next bounded same-thread sparse-sentinel step:
+  - command: `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 1424`
+  - output: `/Users/jonreilly/Projects/Physics/logs/2026-03-23-pocket-wrap-suppressor-nonpocket-subtype-rules-1424.txt`
+  - result: `status=completed`, `exit_code=0`, `elapsed_s=1316.8`
+
+### Strongest confirmed conclusion
+- The active sparse-sentinel frontier does not grow at `1424`.
+- `1424` exactly matches `1360`:
+  - non-pocket subtype membership stays at `43`
+  - subtype count stays at `4`
+  - exact-rule table is unchanged
+  - both-sensitive anchor remains `deep_overlap_count >= 1.500` (`tp=3`)
+- So the current frontier read tightens to:
+  - `1232/1296/1360` was the last growth phase
+  - `1360..1424` is now the next confirmed short hold
+
+### Files and results changed in this run
+- Narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- New log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-23-pocket-wrap-suppressor-nonpocket-subtype-rules-1424.txt`
+
+### Exact next step
+- Resume sparse-sentinel laddering at `variant_limit = 1488`.
+- If `1488` changes the frontier, diff row/subtype/exact-rule sections against `1424` and `1360`.
+- If `1488` matches exactly, treat `1360..1488` as the next stable band and widen the next sentinel gap.
+
+### First concrete action
+- Execute:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status`
+
 ## 2026-03-23 21:38 America/New_York
 
 ### Current state
