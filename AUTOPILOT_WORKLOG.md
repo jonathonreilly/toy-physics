@@ -1,3 +1,47 @@
+## 2026-03-24 14:08 America/New_York
+
+### Current state
+- Reconciled required preflight context in canonical order:
+  - read `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`.
+- Lock flow executed per protocol:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` -> `free`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 2` -> `acquired`
+- Git reconciled before science:
+  - `git status --short --branch` -> `main...origin/main`
+  - `git rev-list --left-right --count origin/main...main` -> `0 0`
+  - `HEAD=9f879df`.
+- Push-first helper was not needed before science because repo was not ahead.
+- Executed one bounded same-thread sparse-sentinel continuation step:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 3472 --max-seconds 4200 > /Users/jonreilly/Projects/Physics/logs/2026-03-24-pocket-wrap-suppressor-nonpocket-subtype-rules-3472.txt`
+  - result: `status=completed`, `exit_code=0`, `elapsed_s=3069.9`.
+
+### Strongest confirmed conclusion
+- `3472` is an exact hold of the `3344` frontier (aside from metadata):
+  - non-pocket subtype membership remains `84`
+  - subtype count remains `4`
+  - both-sensitive one-term anchor remains exact: `deep_overlap_count >= 1.500` (`tp=5`)
+  - both-sensitive two-term family is unchanged versus `3344` and `3216`.
+- No new non-pocket rows appear at `3472`; this confirms `3344..3472` as a short stability band after the six-row `3344` expansion.
+
+### Files and results changed in this run
+- Narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- Log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-24-pocket-wrap-suppressor-nonpocket-subtype-rules-3472.txt`
+
+### Exact next step
+- Continue sparse-sentinel with `variant_limit = 3600` using the existing `--max-seconds` guard.
+- Diff `3600` row/subtype/exact-rule sections against `3472` and `3344`.
+- If `3600` matches exactly, treat `3344..3600` as the next widened hold before probing deeper.
+
+### First concrete action
+- Execute:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status`
+
 ## 2026-03-24 13:06 America/New_York
 
 ### Current state
