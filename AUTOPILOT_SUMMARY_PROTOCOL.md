@@ -14,6 +14,7 @@ Read, in order:
 4. `git log --oneline --decorate -n 20`
 5. `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status`
    - if another live owner holds the lock, skip this cycle rather than competing for shared state
+   - if `physics-science` holds the lock and the latest handoff shows an active science child, prefer a short skip note over trying to summarize an in-progress rerun as completed work
    - otherwise acquire it with:
      - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-summary --purpose "summary pass" --ttl-hours 1`
    - treat the lock as TTL-based shared state; always release it explicitly at the end of the loop

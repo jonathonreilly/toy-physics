@@ -1,3 +1,40 @@
+## 2026-03-25 08:03 America/New_York
+
+### Current state
+- Reviewed the overnight worker transcript and confirmed a real automation-flow bug:
+  - a detached `5504` rerun was launched,
+  - the worker then released the cooperative lock,
+  - and tracked metadata commits were created while the rerun was still in progress.
+- Patched the worker protocols so detached science children now keep the lock, in-progress runs update only runtime handoff/memory, and tracked work-log commits are reserved for finished stable results or real repo-facing integrity fixes.
+
+### Strongest confirmed conclusion
+- No mechanism conclusion changed in this fix.
+- The strongest confirmed frontier is still `4992`: subtype count `4`, non-pocket membership `127`, and the same rotated exact both-sensitive 2-term family anchored on `deep_overlap_count >= 1.500`.
+- The important change is operational: hourly workers should no longer advertise the repo as `free` while a detached science child is still running, and they should stop generating tracked metadata-only commits for in-progress reruns.
+
+### Files and results changed in this run
+- Repo-facing protocol fixes:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_PROTOCOL.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_JANITOR_PROTOCOL.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_SUMMARY_PROTOCOL.md`
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- Installed automation prompt fixes:
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/automation.toml`
+  - `/Users/jonreilly/.codex/automations/physics-janitor/automation.toml`
+  - `/Users/jonreilly/.codex/automations/physics-summary/automation.toml`
+
+### Exact next step
+- Resume the sparse-sentinel thread from a clean state.
+- Re-run `variant_limit = 5504` under the corrected worker protocol.
+- If the rerun completes, classify hold vs transition relative to `4992`.
+
+### First concrete action
+- Execute:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status`
+
 ## 2026-03-25 07:18 America/New_York
 
 ### Current state
