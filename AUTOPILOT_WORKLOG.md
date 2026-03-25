@@ -17,8 +17,8 @@
     - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 5504 --max-seconds 900 > /Users/jonreilly/Projects/Physics/logs/2026-03-25-pocket-wrap-suppressor-nonpocket-subtype-rules-5504-max900-rerun.txt`
   - rerun is active at handoff time (`lsof` shows `Python PID 23406` holding the rerun log).
 - End-of-loop checkpointing:
-  - committed run-state updates as `3b27c18` (`Record active 5504 bounded rerun state`) and `54641d0` (`Finalize 5504 rerun checkpoint state`).
-  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics` -> `status=failed`, `failure_kind=dns_failure`, `error=DNS lookup failed for github.com`, `attempts_used=4`, `ahead=2`, `behind=0`.
+  - committed run-state updates as `3b27c18` (`Record active 5504 bounded rerun state`), `54641d0` (`Finalize 5504 rerun checkpoint state`), and `88c100d` (`Reconcile rerun checkpoint push state`).
+  - final helper push attempt: `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics` -> `status=failed`, `failure_kind=dns_failure`, `error=DNS lookup failed for github.com`, `attempts_used=4`, `ahead=3`, `behind=0`.
   - released cooperative lock (`python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py release --owner physics-science`) and verified final status `free`.
 
 ### Strongest confirmed conclusion
