@@ -1,3 +1,45 @@
+## 2026-03-25 13:32 America/New_York
+
+### Current state
+- Reconciled required preflight context in canonical order:
+  - read `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`.
+- Reconciled active-child and lock state before any new work:
+  - `lsof /Users/jonreilly/Projects/Physics/logs/2026-03-25-pocket-wrap-suppressor-mixed-bucket-axes-5504.txt` reports no active writer (detached child completed).
+  - completion trailer confirmed in log: `pocket-wrap suppressor mixed-bucket axes completed 2026-03-25T12:26:28 total_elapsed=5865.8s`.
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` -> `free`.
+  - acquired lock per protocol: `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 2` -> `acquired`.
+- Reconciled git state before finalization:
+  - `git status --short --branch` -> `main...origin/main`
+  - `git rev-list --left-right --count origin/main...main` -> `0 0`
+  - `HEAD=ed10550`, `origin/main=ed10550`.
+- One bounded same-thread completion/finalization step was executed:
+  - parsed the finished mixed-bucket `5504` log and classified outcome.
+  - result table reports `rows=1` mixed add1/add4 bucket and an exact 2-term separator (`7/7`, `tp/fp/fn = 4/0/0`) for `cross=n|span=<3|low=L|pocket=L|overlap=1|rough=L`, anchored on `boundary_fraction <= 0.895` plus one additional boundary-threshold term.
+  - no detached child remains active after this step.
+
+### Strongest confirmed conclusion
+- The primary sparse-sentinel frontier conclusion is unchanged: strongest confirmed frontier remains `4992` with subtype count `4`, non-pocket membership `127`, and the rotated both-sensitive exact 2-term family anchored on `deep_overlap_count >= 1.500`.
+- Mixed-bucket thread conclusion advanced: at `5504`, the active mixed add1/add4 bucket count is `1` and that remaining bucket is exactly separable, so the earlier mixed-bucket collision is not an exactness blocker at this wider rung.
+
+### Files and results changed in this run
+- Narrative update:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Completed log analyzed:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-25-pocket-wrap-suppressor-mixed-bucket-axes-5504.txt`
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- Stay on the same mixed-bucket thread and run a bounded residual-bucket rule search at `variant_limit = 5504` for the historically unresolved `cross=n|span=3+|low=L|pocket=H|overlap=1|rough=H` coarse signature.
+- If it is now exact with 1-2 terms, close the latent-collision thread and return to widening sparse-sentinel rungs.
+- If still non-exact, capture the best residual predicates and queue a targeted feature-axis follow-up.
+
+### First concrete action
+- Execute:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_residual_bucket_rules.py --variant-limit 5504 --coarse-signature 'cross=n|span=3+|low=L|pocket=H|overlap=1|rough=H'`
+
 ## 2026-03-25 08:10 America/New_York
 
 ### Current state
