@@ -14,6 +14,9 @@
 - Executed one bounded same-thread sparse-sentinel continuation step:
   - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 4992 --max-seconds 4200 > /Users/jonreilly/Projects/Physics/logs/2026-03-25-pocket-wrap-suppressor-nonpocket-subtype-rules-4992.txt`
   - result: `status=timed_out`, `exit_code=124`, `elapsed_s=4200.0`.
+- End-of-loop push helper after commit:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - helper result: `status=failed`, `failure_kind=dns_failure`, `error=DNS lookup failed for github.com`, `attempts_used=4`, `ahead=1`, `behind=0`.
 
 ### Strongest confirmed conclusion
 - No new mechanism conclusion is confirmed from `4992` yet because the bounded run hit the `--max-seconds 4200` guard before producing analysis tables.
