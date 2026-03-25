@@ -1,3 +1,47 @@
+## 2026-03-24 21:44 America/New_York
+
+### Current state
+- Picked up from the synced overnight frontier at `3984`, with the manual lock held for an interactive sparse-sentinel continuation.
+- Completed one bounded sparse-sentinel rung at `4112`:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 4112 --max-seconds 4200 > /Users/jonreilly/Projects/Physics/logs/2026-03-24-pocket-wrap-suppressor-nonpocket-subtype-rules-4112.txt`
+  - result: `status=completed`, `exit_code=0`, `elapsed_s=3661.3`
+- Because `4112` changed the exact both-sensitive family, ran an immediate verification rung at `4240`:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 4240 --max-seconds 4200 > /Users/jonreilly/Projects/Physics/logs/2026-03-24-pocket-wrap-suppressor-nonpocket-subtype-rules-4240.txt`
+  - result: `status=completed`, `exit_code=0`, `elapsed_s=3766.0`
+
+### Strongest confirmed conclusion
+- The frontier is still growing, but the important change is structural rather than taxonomic.
+- `4112` and `4240` both preserve:
+  - `4` subtypes
+  - active non-pocket membership growth (`101 -> 106 -> 109`)
+  - a rotated exact both-sensitive family that is now stably 2-term only
+- The old one-term both-sensitive anchor (`deep_overlap_count >= 1.500`) is no longer sufficient by itself.
+- The new stable regime is:
+  - exact both-sensitive rules still anchored on `deep_overlap_count >= 1.500`
+  - plus a second boundary/core observable
+  - four of the five best exact rules are unchanged between `4112` and `4240`
+
+### Files and results changed in this run
+- Narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- New logs:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-24-pocket-wrap-suppressor-nonpocket-subtype-rules-4112.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-24-pocket-wrap-suppressor-nonpocket-subtype-rules-4240.txt`
+
+### Exact next step
+- Do not resume tight `128`-step laddering immediately.
+- The next best sparse sentinel is a wider jump to `4480`.
+- If `4480` preserves the same 2-term both-sensitive family, treat the post-`3984` rule rotation as a stable new regime and widen again.
+- If `4480` changes the family again, switch from laddering to a focused both-sensitive rule-transition analysis.
+
+### First concrete action
+- Execute:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status`
+
 ## 2026-03-24 18:18 America/New_York
 
 ### Current state
