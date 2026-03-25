@@ -1,3 +1,44 @@
+## 2026-03-25 00:27 America/New_York
+
+### Current state
+- Reconciled required preflight context in canonical order:
+  - read `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`.
+- Lock flow executed per protocol:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` -> `free`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 2` -> `acquired`
+- Git reconciled before science:
+  - `git status --short --branch` -> `main...origin/main`
+  - `git rev-list --left-right --count origin/main...main` -> `0 0`
+  - `HEAD=0388355`, `origin/main=0388355`.
+- Push-first helper was not needed before science because repo was not ahead.
+- Executed one bounded same-thread sparse-sentinel continuation step:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 4992 --max-seconds 4200 > /Users/jonreilly/Projects/Physics/logs/2026-03-25-pocket-wrap-suppressor-nonpocket-subtype-rules-4992.txt`
+  - result: `status=timed_out`, `exit_code=124`, `elapsed_s=4200.0`.
+
+### Strongest confirmed conclusion
+- No new mechanism conclusion is confirmed from `4992` yet because the bounded run hit the `--max-seconds 4200` guard before producing analysis tables.
+- The strongest confirmed frontier read remains the prior `4480` result:
+  - `4` subtypes
+  - non-pocket membership `115`
+  - stable rotated both-sensitive exact family (2-term only, anchored on `deep_overlap_count >= 1.500` plus a second boundary/core observable).
+
+### Files and results changed in this run
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- New log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-25-pocket-wrap-suppressor-nonpocket-subtype-rules-4992.txt`
+
+### Exact next step
+- Retry the same sparse sentinel at `variant_limit = 4992` with a slightly larger time guard so the run can finish and emit subtype/rule tables.
+- If `4992` then preserves the same 2-term both-sensitive family, widen again.
+- If `4992` changes the family, switch to focused both-sensitive rule-transition analysis.
+
+### First concrete action
+- Execute:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status`
+
 ## 2026-03-24 22:51 America/New_York
 
 ### Current state
