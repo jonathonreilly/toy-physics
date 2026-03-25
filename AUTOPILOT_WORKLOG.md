@@ -1,3 +1,40 @@
+## 2026-03-24 22:51 America/New_York
+
+### Current state
+- Picked up from the synced `4240` frontier with the manual lock still held.
+- Completed one wider sparse-sentinel rung at `4480`:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 4480 --max-seconds 4200 > /Users/jonreilly/Projects/Physics/logs/2026-03-24-pocket-wrap-suppressor-nonpocket-subtype-rules-4480.txt`
+  - result: `status=completed`, `exit_code=0`, `elapsed_s=3989.5`
+
+### Strongest confirmed conclusion
+- The post-`3984` both-sensitive rule rotation is now confirmed as a stable higher-frontier regime rather than a transitional shoulder.
+- `4480` preserves:
+  - `4` subtypes
+  - continued non-pocket membership growth (`109 -> 115`)
+  - the same rotated both-sensitive exact family: 2-term only, anchored on `deep_overlap_count >= 1.500` plus a second boundary/core observable
+- Four of the five best exact both-sensitive rules are unchanged versus `4240`, and the fifth only relaxes slightly (`core_deep_fraction <= 0.443` instead of `<= 0.433`).
+- The exact both-sensitive family now covers `tp=7`.
+
+### Files and results changed in this run
+- Narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- New logs:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-24-pocket-wrap-suppressor-nonpocket-subtype-rules-4480.txt`
+
+### Exact next step
+- Continue sparse sentinels rather than returning to tight laddering.
+- The next best rung is a wider jump to `variant_limit = 4992`.
+- If `4992` preserves the same 2-term both-sensitive family, widen again.
+- If `4992` changes the family, switch from sentinel growth tracking to focused both-sensitive rule-transition analysis.
+
+### First concrete action
+- Execute:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status`
+
 ## 2026-03-24 21:44 America/New_York
 
 ### Current state
