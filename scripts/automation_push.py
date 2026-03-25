@@ -5,7 +5,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import socket
 import subprocess
 import sys
 import time
@@ -70,14 +69,6 @@ def ahead_behind_counts(workdir: Path, branch: str) -> tuple[int, int] | None:
     return int(left), int(right)
 
 
-def dns_reachable(host: str) -> bool:
-    try:
-        socket.getaddrinfo(host, 443, type=socket.SOCK_STREAM)
-        return True
-    except OSError:
-        return False
-
-
 def classify_failure(stderr: str) -> str:
     for pattern in DNS_PATTERNS:
         if pattern in stderr:
@@ -119,31 +110,30 @@ def push_if_ahead(workdir: Path, attempts: int, backoffs: list[int]) -> int:
 
     last_error = ""
     for attempt in range(1, attempts + 1):
-        if not dns_reachable(host):
-            last_error = f"DNS lookup failed for {host}"
-            failure_kind = "dns_failure"
+        probe = run_git(workdir, "ls-remote", "origin", "HEAD")
+        if probe.returncode != 0:
+            last_error = probe.stderr.strip() or probe.stdout.strip() or f"ls-remote failed for {host}"
+            failure_kind = classify_failure(last_error)
         else:
-            probe = run_git(workdir, "ls-remote", "origin", "HEAD")
-            if probe.returncode != 0:
-                last_error = probe.stderr.strip() or probe.stdout.strip()
-                failure_kind = classify_failure(last_error)
-            else:
-                push = run_git(workdir, "push", "origin", branch)
-                if push.returncode == 0:
-                    final_counts = ahead_behind_counts(workdir, branch)
-                    return emit(
-                        {
-                            "ahead": final_counts[1] if final_counts else None,
-                            "attempts_used": attempt,
-                            "behind": final_counts[0] if final_counts else None,
-                            "branch": branch,
-                            "host": host,
-                            "status": "pushed",
-                            "exit_code": 0,
-                        }
-                    )
-                last_error = push.stderr.strip() or push.stdout.strip()
-                failure_kind = classify_failure(last_error)
+            push = run_git(workdir, "push", "origin", branch)
+            if push.returncode == 0:
+                final_counts = ahead_behind_counts(workdir, branch)
+                return emit(
+                    {
+                        "ahead": final_counts[1] if final_counts else None,
+                        "attempts_used": attempt,
+                        "behind": final_counts[0] if final_counts else None,
+                        "branch": branch,
+                        "host": host,
+                        "status": "pushed",
+                        "exit_code": 0,
+                    }
+                )
+            last_error = push.stderr.strip() or push.stdout.strip()
+            failure_kind = classify_failure(last_error)
+
+        if failure_kind == "unknown_failure" and "github.com" in last_error.lower():
+            failure_kind = "dns_failure"
 
         if failure_kind in {"auth_failure", "non_fast_forward"}:
             return emit(
@@ -184,8 +174,8 @@ def parse_args() -> argparse.Namespace:
 
     push_parser = subparsers.add_parser("push-if-ahead")
     push_parser.add_argument("--workdir", default=".")
-    push_parser.add_argument("--attempts", type=int, default=4)
-    push_parser.add_argument("--backoff-seconds", default="2,5,15,30")
+    push_parser.add_argument("--attempts", type=int, default=5)
+    push_parser.add_argument("--backoff-seconds", default="2,5,15,30,60")
     return parser.parse_args()
 
 

@@ -1,3 +1,42 @@
+## 2026-03-25 08:10 America/New_York
+
+### Current state
+- Investigated whether the automation-flow fix also solved the repeated `dns_failure` push reports.
+- Confirmed the lock/protocol fix was necessary but not sufficient:
+  - it prevents overlapping workers and metadata churn,
+  - but it does not by itself remove intermittent background resolver failures.
+- Found one additional setup issue in `/Users/jonreilly/Projects/Physics/scripts/automation_push.py`:
+  - the helper was doing its own preflight DNS lookup before attempting `git ls-remote`,
+  - which could create false early `dns_failure` results in flaky network conditions.
+- Patched the helper to:
+  - remove the separate preflight DNS gate,
+  - rely on real `git ls-remote` / `git push` attempts for classification,
+  - and use a slightly longer retry ladder (`5` attempts, `2,5,15,30,60` seconds).
+
+### Strongest confirmed conclusion
+- No mechanism conclusion changed in this fix.
+- The strongest confirmed frontier is still `4992`: subtype count `4`, non-pocket membership `127`, and the same rotated exact both-sensitive 2-term family anchored on `deep_overlap_count >= 1.500`.
+- The DNS issue now looks like two layers:
+  - fixed setup issue: premature helper-side DNS gating
+  - remaining likely environment issue: intermittent background resolver/network instability during unattended runs
+
+### Files and results changed in this run
+- Repo-facing helper fix:
+  - `/Users/jonreilly/Projects/Physics/scripts/automation_push.py`
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- Re-run `variant_limit = 5504` under the corrected worker protocol and hardened push helper.
+- If the rerun completes, classify hold vs transition relative to `4992`.
+- If higher bounded runs still die after startup, switch to debugging the runner lifecycle rather than the push path.
+
+### First concrete action
+- Execute:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status`
+
 ## 2026-03-25 08:03 America/New_York
 
 ### Current state
