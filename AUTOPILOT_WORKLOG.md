@@ -16,6 +16,10 @@
 - One bounded same-thread mechanism/integrity step completed:
   - verified the in-flight `4992-max5600` run had completed (`lsof` no longer reports an active writer on `/Users/jonreilly/Projects/Physics/logs/2026-03-25-pocket-wrap-suppressor-nonpocket-subtype-rules-4992-max5600.txt`).
   - parsed and compared the completed `4992` table against `4480` to classify frontier behavior.
+- End-of-loop checkpointing:
+  - committed updates as `5f13636` (`Record sparse-sentinel frontier extension through 4992`).
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics` -> `status=failed`, `failure_kind=dns_failure`, `error=DNS lookup failed for github.com`, `attempts_used=4`, `ahead=4`, `behind=0`.
+  - released cooperative lock (`python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py release --owner physics-science`) and verified final status `free`.
 
 ### Strongest confirmed conclusion
 - `4992` confirms continuation of the same post-`3984` rotated both-sensitive regime.
