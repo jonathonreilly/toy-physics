@@ -1,3 +1,131 @@
+## 2026-03-25 05:19 America/New_York
+
+### Current state
+- Reconciled required preflight context in canonical order:
+  - read `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`.
+- Lock flow executed per protocol:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` -> `free`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 2` -> `acquired`
+- Git reconciled before new work:
+  - `git status --short --branch` -> `main...origin/main [ahead 3]` with local worklog edit pending
+  - `git rev-list --left-right --count origin/main...main` -> `0 3`
+  - `HEAD=602393e`, `origin/main=0388355`.
+- Required push-first helper attempt before new work:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - helper result: `status=failed`, `failure_kind=dns_failure`, `error=DNS lookup failed for github.com`, `attempts_used=4`, `ahead=3`, `behind=0`.
+- One bounded same-thread mechanism/integrity step completed:
+  - verified the in-flight `4992-max5600` run had completed (`lsof` no longer reports an active writer on `/Users/jonreilly/Projects/Physics/logs/2026-03-25-pocket-wrap-suppressor-nonpocket-subtype-rules-4992-max5600.txt`).
+  - parsed and compared the completed `4992` table against `4480` to classify frontier behavior.
+
+### Strongest confirmed conclusion
+- `4992` confirms continuation of the same post-`3984` rotated both-sensitive regime.
+- Frontier summary at `4992`:
+  - subtype count remains `4`
+  - non-pocket membership grows `115 -> 127`
+  - exact both-sensitive family remains 2-term and anchored on `deep_overlap_count >= 1.500` with `tp=7`
+  - four of five best exact both-sensitive rules are unchanged versus `4480`; one shell term tightens slightly (`shell_boundary_deficit_mean >= 0.358` vs `>= 0.352`).
+
+### Files and results changed in this run
+- Narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- Completed log analyzed:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-25-pocket-wrap-suppressor-nonpocket-subtype-rules-4992-max5600.txt`
+
+### Exact next step
+- Retry push helper first on the next loop while ahead.
+- If push remains blocked only by transient DNS, run the next sparse sentinel rung at `variant_limit = 5504` with the same bounded guard and classify hold vs transition against `4992`.
+
+### First concrete action
+- Execute:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status`
+
+## 2026-03-25 04:18 America/New_York
+
+### Current state
+- Reconciled required preflight context in canonical order:
+  - read `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`.
+- Lock flow executed per protocol:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` -> `held` (`owner=physics-science`)
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 2` -> `acquired`
+- Git reconciled before new work:
+  - `git status --short --branch` -> `main...origin/main [ahead 3]` with local worklog edit pending
+  - `git rev-list --left-right --count origin/main...main` -> `0 3`
+  - `HEAD=602393e`, `origin/main=0388355`.
+- Required push-first helper attempt before new work:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - helper result: `status=failed`, `failure_kind=dns_failure`, `error=DNS lookup failed for github.com`, `attempts_used=4`, `ahead=3`, `behind=0`.
+- One bounded same-thread integrity step completed:
+  - verified in-flight `4992` status without overlap by checking open-handle/process ownership and log growth:
+    - `lsof /Users/jonreilly/Projects/Physics/logs/2026-03-25-pocket-wrap-suppressor-nonpocket-subtype-rules-4992-max5600.txt` -> `Python PID 97603` still holding the log
+    - `wc -c` + `tail` on the same log -> file remains `64` bytes with only startup line (`non-pocket suppressor subtype rules started 2026-03-25T03:18:15`).
+  - skipped launching any second science run to avoid overlapping the active thread.
+
+### Strongest confirmed conclusion
+- No mechanism conclusion changed in this run.
+- The strongest confirmed frontier remains `4480`: `4` subtypes, non-pocket membership `115`, and the same stable rotated 2-term both-sensitive exact family anchored on `deep_overlap_count >= 1.500` plus one boundary/core term.
+
+### Files and results changed in this run
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- Active log path (unchanged, still in-flight):
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-25-pocket-wrap-suppressor-nonpocket-subtype-rules-4992-max5600.txt`
+
+### Exact next step
+- Re-enter from lock preflight and re-check completion of the active `4992-max5600` process.
+- If complete, parse subtype/rule tables and classify hold vs transition relative to `4480`.
+- If still active, continue to skip overlap and defer launching new science.
+
+### First concrete action
+- Execute:
+  - `lsof /Users/jonreilly/Projects/Physics/logs/2026-03-25-pocket-wrap-suppressor-nonpocket-subtype-rules-4992-max5600.txt`
+
+## 2026-03-25 03:27 America/New_York
+
+### Current state
+- Reconciled required preflight context in canonical order:
+  - read `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`.
+- Lock flow executed per protocol:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` -> `free`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 2` -> `acquired`
+- Git reconciled before science:
+  - `git status --short --branch` -> `main...origin/main [ahead 3]`
+  - `git rev-list --left-right --count origin/main...main` -> `0 3`
+  - `HEAD=602393e`, `origin/main=0388355`.
+- Push-first helper run before new work:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - helper result: `status=failed`, `failure_kind=dns_failure`, `error=DNS lookup failed for github.com`, `attempts_used=4`, `ahead=3`, `behind=0`.
+- One bounded same-thread mechanism step was started:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py --variant-limit 4992 --max-seconds 5600 > /Users/jonreilly/Projects/Physics/logs/2026-03-25-pocket-wrap-suppressor-nonpocket-subtype-rules-4992-max5600.txt`
+  - run is still active at handoff time (`lsof` shows `Python PID 97603` holding the log).
+  - this sandbox denies process termination (`kill` not permitted), so final status/tables were not yet observable in this loop.
+
+### Strongest confirmed conclusion
+- No mechanism conclusion changed in this run.
+- The strongest confirmed frontier remains `4480`: `4` subtypes, non-pocket membership `115`, and the same stable rotated 2-term both-sensitive exact family anchored on `deep_overlap_count >= 1.500` plus one boundary/core term.
+
+### Files and results changed in this run
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- Active log path:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-25-pocket-wrap-suppressor-nonpocket-subtype-rules-4992-max5600.txt`
+
+### Exact next step
+- Re-enter from lock preflight and check whether the active `4992-max5600` process has completed.
+- If completed, parse subtype/rule tables from the emitted log and classify hold vs transition against `4480`.
+- If still active, avoid overlap and skip starting new science until that run exits.
+
+### First concrete action
+- Execute:
+  - `lsof /Users/jonreilly/Projects/Physics/logs/2026-03-25-pocket-wrap-suppressor-nonpocket-subtype-rules-4992-max5600.txt`
+
 ## 2026-03-25 02:20 America/New_York
 
 ### Current state
