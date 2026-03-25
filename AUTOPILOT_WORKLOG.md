@@ -1,3 +1,44 @@
+## 2026-03-25 02:20 America/New_York
+
+### Current state
+- Reconciled required preflight context in canonical order:
+  - read `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`.
+- Lock flow executed per protocol:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` -> `free`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 2` -> `acquired`
+- Git reconciled before science:
+  - `git status --short --branch` -> `main...origin/main [ahead 2]`
+  - `git rev-list --left-right --count origin/main...main` -> `0 2`
+  - `HEAD=c05f815`, `origin/main=0388355`.
+- Push-first helper run before new work:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - helper result: `status=failed`, `failure_kind=dns_failure`, `error=DNS lookup failed for github.com`, `attempts_used=4`, `ahead=2`, `behind=0`.
+- One bounded same-thread integrity step completed:
+  - hardened interrupt teardown in `scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py` so manual cancellation reports a single `interrupted` status and does not emit secondary teardown tracebacks.
+  - verified syntax with `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py`.
+- A manual bounded `4992` retry was started then intentionally interrupted after `147.8s` to avoid leaving an unattended long-running process under lock.
+
+### Strongest confirmed conclusion
+- No mechanism conclusion changed in this run.
+- The strongest confirmed frontier remains `4480`: `4` subtypes, non-pocket membership `115`, and the same stable rotated 2-term both-sensitive exact family anchored on `deep_overlap_count >= 1.500` plus one boundary/core term.
+
+### Files and results changed in this run
+- Integrity code update:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py`
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- Retry helper push first while ahead.
+- Then execute one full bounded sparse-sentinel rerun at `variant_limit = 4992` with a larger `--max-seconds` guard and let it finish to obtain subtype/rule tables.
+- If `4992` preserves the same 2-term both-sensitive family, widen again; if it changes, switch to focused both-sensitive rule-transition analysis.
+
+### First concrete action
+- Execute:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status`
+
 ## 2026-03-25 00:27 America/New_York
 
 ### Current state

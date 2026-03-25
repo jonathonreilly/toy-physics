@@ -339,10 +339,25 @@ def main() -> None:
             flush=True,
         )
         raise SystemExit(124)
+    except KeyboardInterrupt:
+        print(
+            "non-pocket suppressor subtype rules interrupted "
+            + datetime.now().isoformat(timespec="seconds")
+            + f" elapsed={time.time() - total_start:.1f}s"
+            + f" variant_limit={args.variant_limit}",
+            flush=True,
+        )
+        raise SystemExit(130)
     finally:
         if timer_enabled:
-            signal.setitimer(signal.ITIMER_REAL, 0.0)
-            signal.signal(signal.SIGALRM, previous_handler)
+            try:
+                signal.setitimer(signal.ITIMER_REAL, 0.0)
+            except KeyboardInterrupt:
+                pass
+            try:
+                signal.signal(signal.SIGALRM, previous_handler)
+            except KeyboardInterrupt:
+                pass
 
     print()
     print("Non-Pocket Suppressor Subtype Context")
