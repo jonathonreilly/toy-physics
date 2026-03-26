@@ -1,3 +1,39 @@
+## 2026-03-26 18:43 America/New_York
+
+### Current state
+- Reconciled required preflight context in canonical order:
+  - read `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`.
+- Reconciled child/lock/git state before bounded work:
+  - latest handoff reported no active detached science child.
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` -> `free`.
+  - acquired worker lock: `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 2` -> `acquired`.
+  - git preflight showed clean sync (`main...origin/main`, ahead/behind `0/0`).
+- Completed one bounded same-thread continuation on the frozen `5504` low-overlap add1-vs-add4 mixed core:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_residual_bucket.py`
+
+### Strongest confirmed conclusion
+- Restricting to the translated central-spine regime (`bridge_center_spine_pair >= 0.500`) sharpens the residual target but still does **not** close it.
+- The central-spine residual bucket has `54` rows (`48` add1, `6` add4).
+- Best compact rows on joined identity+lobe+support features are still non-exact:
+  - add4-side best: `50/54` with `tp/fp/fn = 2/0/4`
+  - add1-side best: `43/54` with `tp/fp/fn = 37/0/11`
+- So the bridge-language compression is stable, but the remaining add4 island inside that central-spine regime is still not closed by bounded scalar threshold recombination.
+
+### Files and results changed in this run
+- Repo-facing science/code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_residual_bucket.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-low-overlap-center-spine-residual-bucket-5504-add1-vs-add4.txt`
+
+### Exact next step
+- Stay on the same frozen `5504` low-overlap core and keep the central-spine regime fixed.
+- Run one bounded residual-boundary continuation that tests a micro-bucket decomposition of the six central-spine add4 rows against nearby add1 neighbors (instead of global threshold recombination).
+
+### First concrete action
+- Add a residual micro-bucket decomposer keyed by central-spine add4 exception prototypes and rerun compact local closure per micro-bucket.
+
 ## 2026-03-26 17:43 America/New_York
 
 ### Current state
