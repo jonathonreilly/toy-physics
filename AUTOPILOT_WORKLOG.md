@@ -1,3 +1,38 @@
+## 2026-03-26 16:30 America/New_York
+
+### Current state
+- Repo was clean and synced at start of this continuation (`main...origin/main`, ahead/behind `0/0`).
+- No live worker was actually running; the remaining work was a synced handoff gap, not an active process.
+- Acquired a manual lock and completed one bounded same-thread continuation on the frozen `5504` low-overlap add1-vs-add4 mixed core:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_identity_lobe_two_clause_closure.py`
+
+### Strongest confirmed conclusion
+- Candidate identity remains the main low-overlap signal; lobe-topology interactions only weakly refine it.
+- Joining identity and lobe topology still does **not** produce an exact add1/add4 split on the frozen `87`-row core.
+- Best rows are:
+  - add1-side: `69/87` via `deep_left_fraction >= 0.292 and event_present_count >= 1.500 and pocket_left_component_count <= 3.500`
+  - add4-side: unchanged zero-FP identity anchor `event_present_count <= 1.500` (`16/0/23`)
+- So the likely remaining signal is no longer “more scalar lobe topology.”
+  - It is more explicit candidate-support subgraph structure or event-topology interactions.
+
+### Files and results changed in this run
+- Repo-facing science/code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_identity_lobe_two_clause_closure.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-low-overlap-identity-lobe-two-clause-closure-5504-add1-vs-add4.txt`
+
+### Exact next step
+- Stay on the same frozen `5504` low-overlap `87`-row core.
+- Add one bounded candidate-support subgraph runner:
+  - explicit pocket/deep candidate-support adjacency graph motifs,
+  - per-event bridge participation rather than only aggregate bridge fractions,
+  - small subgraph/lobe interaction signatures,
+  - then rerun compact bucket-local closure on add1-vs-add4.
+
+### First concrete action
+- Implement a bucket-local candidate-support subgraph runner keyed off the completed `5504` log and the existing `00` mixed bucket split.
+
 ## 2026-03-26 14:41 America/New_York
 
 ### Current state
