@@ -1,3 +1,36 @@
+## 2026-03-26 14:41 America/New_York
+
+### Current state
+- Repo was clean and synced at start (`main...origin/main`, ahead/behind `0/0`) with no active detached science child in handoff state.
+- Acquired the cooperative `physics-science` lock and completed exactly one bounded same-thread continuation on the frozen `5504` low-overlap add1-vs-add4 mixed core:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_candidate_lobe_topology_bucket.py`
+
+### Strongest confirmed conclusion
+- Candidate-lobe / support-graph topology is not the standalone missing law for the hard `87`-row mixed core.
+- On this bounded lobe-topology family alone, best rows are weaker than the prior candidate-identity pass:
+  - add1-side best: `56/87` with `tp/fp/fn = 23/6/25`
+  - add4-side best: `62/87` with `tp/fp/fn = 32/18/7`
+- Bridge-like means (`pocket~0.183`, `deep~0.233`, `support~0.407`) indicate real structure, but do not deliver compact closure by themselves.
+- So the updated read is sharper: lobe topology contributes interpretable signal, but the unresolved separator likely requires bounded interaction terms between candidate-identity events and lobe-bridge topology, not either family in isolation.
+
+### Files and results changed in this run
+- Repo-facing science/code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_candidate_lobe_topology_bucket.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-low-overlap-candidate-lobe-topology-bucket-5504-add1-vs-add4.txt`
+
+### Exact next step
+- Stay on the same frozen `5504` low-overlap `87`-row core.
+- Run one bounded closure continuation that joins:
+  - existing candidate-identity features/events,
+  - the new lobe/topology bridge/component features,
+  - and compact local motif/visible terms,
+  then test whether a small bounded two-clause family improves beyond the current `70/87` add1-side and `64/87` add4-side frontier.
+
+### First concrete action
+- Add a bounded identity-plus-lobe joined closure runner by extending the existing two-clause closure pipeline with the new candidate-lobe topology feature block.
+
 ## 2026-03-26 13:38 America/New_York
 
 ### Current state
