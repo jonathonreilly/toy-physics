@@ -1,3 +1,38 @@
+## 2026-03-26 13:25 America/New_York
+
+### Current state
+- Repo was clean and synced at start (`main...origin/main`, ahead/behind `0/0`) with no active worker lock.
+- Continued on the same frozen `5504` low-overlap add1-vs-add4 core instead of widening the ladder.
+- Added and ran one bounded same-thread closure probe:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_local_two_clause_closure.py`
+  - log: `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-low-overlap-local-two-clause-closure-5504-add1-vs-add4.txt`
+
+### Strongest confirmed conclusion
+- The hard `87`-row low-overlap mixed bucket is **not** just waiting for a tiny disjunctive rewrite on the observables already in hand.
+- On the joined bucket-local visible + motif + support-topology feature family, a bounded two-clause closure search over the top `24` single predicates still finds no exact zero-FP add1/add4 closure.
+- Best rows remain partial:
+  - add1-sensitive: `66/87` via `boundary_deep_fraction >= 0.392 and boundary_low_degree_fraction >= 0.309`
+  - add4-sensitive: `62/87` via `boundary_deep_fraction <= 0.413 and core_deep_fraction <= 0.367`
+- The surviving signal is still concentrated on local deep-boundary loading rather than on a new compact union-of-rules description.
+
+### Files and results changed in this run
+- Repo-facing science/code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_local_two_clause_closure.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-low-overlap-local-two-clause-closure-5504-add1-vs-add4.txt`
+
+### Exact next step
+- Stay on the same frozen `5504` low-overlap `87`-row core.
+- Add one bounded candidate-identity / lobe-placement runner:
+  - side-resolved pocket/deep candidate-cell identity bits,
+  - column-band candidate occupancy / suppression structure,
+  - small lobe-connectivity or mirrored-placement descriptors,
+  - then rerun compact bucket-local closure on add1-vs-add4.
+
+### First concrete action
+- Implement a bucket-local candidate-identity runner keyed off the completed `5504` log and the existing `00` mixed bucket split.
+
 ## 2026-03-26 12:36 America/New_York
 
 ### Current state
