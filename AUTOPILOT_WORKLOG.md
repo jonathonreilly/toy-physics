@@ -1,3 +1,42 @@
+## 2026-03-26 00:33 America/New_York
+
+### Current state
+- Reconciled required preflight context in canonical order:
+  - read `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`.
+- Reconciled active-child/lock/git state before new work:
+  - `lsof /Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-residual-bucket-rules-5504-cross-n-span3plus-lowL-pocketH-overlap1-roughH.txt` shows no active writer, so the detached child finished.
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` -> `free`.
+  - acquired lock per protocol: `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 2` -> `acquired`.
+  - `git status --short --branch` -> `main...origin/main` and `git rev-list --left-right --count origin/main...main` -> `0 0`.
+- One bounded same-thread completion step was executed:
+  - parsed the completed residual-bucket run at `variant_limit=5504` for `cross=n|span=3+|low=L|pocket=H|overlap=1|rough=H`.
+  - residual table reports `13` rows and no exact small separator for add1-vs-add4 on the current observable family.
+
+### Strongest confirmed conclusion
+- Sparse-sentinel frontier conclusion remains unchanged: strongest confirmed frontier is still `4992` with subtype count `4`, non-pocket membership `127`, and rotated both-sensitive exact 2-term family anchored on `deep_overlap_count >= 1.500`.
+- Mixed-bucket `5504` conclusion remains unchanged: one mixed add1/add4 bucket remains there and it is exactly separable.
+- The residual follow-up adds a new bounded conclusion: the specific residual bucket `cross=n|span=3+|low=L|pocket=H|overlap=1|rough=H` is still non-exact at `5504` (`13` rows; best `12/13`; no exact 1-3 term rule).
+
+### Files and results changed in this run
+- Narrative update:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Completed log analyzed:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-residual-bucket-rules-5504-cross-n-span3plus-lowL-pocketH-overlap1-roughH.txt`
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- Stay on the same residual thread and run one targeted latent-axis or feature-augmentation probe inside this single unresolved `5504` coarse bucket to test whether exact add1-vs-add4 separation can be restored.
+- If a candidate axis yields exact separation, record the compact rule and close the residual collision thread.
+- If it remains non-exact, capture the best residual family and treat this as current observable-limit behavior at `5504`.
+
+### First concrete action
+- Execute:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_residual_bucket_rules.py --variant-limit 5504 --coarse-signature 'cross=n|span=3+|low=L|pocket=H|overlap=1|rough=H'`
+  - with one added latent-axis candidate set (same thread) to test for exact closure.
+
 ## 2026-03-25 21:47 America/New_York
 
 ### Current state
