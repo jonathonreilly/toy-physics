@@ -1,3 +1,50 @@
+## 2026-03-26 19:14 America/New_York
+
+### Current state
+- Re-entered manually from the center-spine residual thread with repo sync intact and the cooperative lock acquired as `manual-codex`.
+- Confirmed the new center-spine micro-bucket decomposition on the frozen `5504` low-overlap add1-vs-add4 core and then replaced the too-slow drafted hardest-bucket runner with a fast visible-field analyzer plus a nearest-neighbor pass.
+- New repo-facing scripts:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_micro_buckets.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_hardest_bucket_rules.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_hardest_bucket_neighbors.py`
+
+### Strongest confirmed conclusion
+- The `54`-row center-spine residual is already mostly decomposed:
+  - `00`: `42` add1, `3` add4
+  - `10`: `3` add1, `1` add4
+  - `11`: pure add4 (`2`)
+  - `01`: pure add1 (`3`)
+- The tiny `10` bucket is actually solved on visible fields:
+  - exact add4 rule: `id_deep_left_fraction >= 0.584`
+- The dominant `00` bucket is the only truly hard residual:
+  - best visible add1 row: `37/45`
+  - no positive-recall exact visible add4 rule
+- The three `00` add4 rows sit close to ordinary `00` add1 rows in the same visible space (nearest-neighbor distances `0.508`, `0.938`, `1.550`), so the remaining separator now looks like hidden support-cell / candidate-topology structure rather than one more missed visible threshold.
+- A direct support-topology rerun on that same `00` core did not improve the frontier at all:
+  - best add1 row is still `37/45`
+  - add4 still has no positive-recall compact rule
+  - `bridge_node_dx0_dy3` and `bridge_node_dx0_dy4` are already saturated across essentially the entire bucket
+- So the residual target is now narrower and sharper: the missing separator is probably finer support-cell identity / candidate-topology interaction, not more bridge-density or bridge-event thresholding.
+
+### Files and results changed in this run
+- Repo-facing files:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_micro_buckets.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_hardest_bucket_rules.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_hardest_bucket_neighbors.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- New result logs:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-low-overlap-center-spine-micro-buckets-5504-add1-vs-add4.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-low-overlap-center-spine-hardest-bucket-rules-5504-add1-vs-add4.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-low-overlap-center-spine-hardest-bucket-neighbors-5504-add1-vs-add4.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-topology-5504-add1-vs-add4.txt`
+
+### Exact next step
+- Keep the center-spine filter fixed and drop the already-solved tiny buckets from the main thread.
+- Stay only on the dominant `00` mixed core, and move past aggregate support-topology summaries into explicit support-cell identity / candidate-topology interaction structure.
+
+### First concrete action
+- Build a `00`-bucket runner keyed off the frozen center-spine micro-bucket membership that compares explicit support-cell identity patterns or candidate-cell interaction motifs for the three add4 rows against their nearest add1 neighbors.
+
 ## 2026-03-26 18:43 America/New_York
 
 ### Current state
