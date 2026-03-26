@@ -1,3 +1,44 @@
+## 2026-03-26 02:36 America/New_York
+
+### Current state
+- Reconciled required preflight context in canonical order:
+  - read `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`.
+- Reconciled lock/git/push-first state before bounded work:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` -> `free`.
+  - acquired lock: `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 2` -> `acquired`.
+  - git preflight: `main...origin/main [ahead 2]`; ahead/behind `2/0`.
+  - required push-first helper attempt: `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics` -> `status=failed`, `failure_kind=dns_failure`, `ahead=2`, `behind=0`, `attempts_used=5`.
+- One bounded same-thread mechanism step was executed:
+  - isolated the lone false-negative row from the best add4-sensitive `12/13` latent-axis rule on the frozen `5504` residual table.
+  - tested one additional deterministic disambiguation clause using existing observables (`low_core + low_shell` and `mean_center`) without rerunning the frontier.
+  - result: the two-clause disjunctive add4 rule is exact on this table (`tp/fp/fn = 4/0/0`, `remaining_add4_misses=0`).
+
+### Strongest confirmed conclusion
+- Primary sparse-sentinel frontier conclusion remains unchanged (`4992`, subtype count `4`, non-pocket membership `127`, rotated exact both-sensitive 2-term family anchored on `deep_overlap_count >= 1.500`).
+- Mixed-bucket `5504` conclusion remains unchanged (one mixed add1/add4 bucket, exactly separable).
+- Residual-thread conclusion advances: for `cross=n|span=3+|low=L|pocket=H|overlap=1|rough=H` at `5504`, no exact single-conjunction 1-3 term separator was found, but the frozen `13`-row table is closed exactly by a compact two-clause disjunctive add4 rule after isolating the lone miss.
+
+### Files and results changed in this run
+- Added bounded same-thread disambiguation probe utility:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_residual_bucket_fn_disambiguation.py`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-residual-bucket-fn-disambiguation-5504-cross-n-span3plus-lowL-pocketH-overlap1-roughH.txt`
+- Narrative update:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- Keep the same residual thread and test whether an analogous compact disjunctive closure exists for the add1 side on this same frozen `5504` table.
+- If no similarly compact add1 closure appears, treat the add4 closure as the bounded endpoint and return to widening sparse-sentinel rungs from the `4992` anchor.
+
+### First concrete action
+- Execute:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_residual_bucket_fn_disambiguation.py --residual-log /Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-residual-bucket-rules-5504-cross-n-span3plus-lowL-pocketH-overlap1-roughH.txt`
+  - then mirror that bounded check for an add1-targeted disambiguation clause on the same residual table.
+
 ## 2026-03-26 01:36 America/New_York
 
 ### Current state
