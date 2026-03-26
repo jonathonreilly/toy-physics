@@ -1,3 +1,41 @@
+## 2026-03-26 10:33 America/New_York
+
+### Current state
+- Reconciled required preflight context in canonical order:
+  - read `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`.
+- Reconciled child/lock/git state before bounded work:
+  - latest handoff reported no active detached science child; lock status was `free`.
+  - git preflight was clean and synced (`main...origin/main`, ahead/behind `0/0`).
+  - acquired worker lock: `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 2` -> `acquired`.
+- One bounded same-thread science step was executed:
+  - ran a new coarse physical-family translation pass on the completed `5504` subtype log:
+    - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_physical_family_map.py --log /Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-nonpocket-subtype-rules-5504-max5600.txt`
+
+### Strongest confirmed conclusion
+- The stable four-family/two-regime read is now directly quantified in physical-language form at `5504`:
+  - `both-sensitive` remains a compact exact loaded branch with `boundary_roughness >= 0.267 and deep_overlap_count >= 1.500` (`tp/fp/fn = 7/0/0`).
+  - the other three families occupy the shared low-overlap boundary regime and still do not have compact exact pairwise splits on current coarse observables (best pairwise rows remain partial, topping out at `60/96`, `58/92`, and `47/74`).
+- So the active unresolved target is unchanged but sharper: identify the smallest extra boundary variables that close add1/add4/pair-only separation inside that low-overlap regime.
+
+### Files and results changed in this run
+- Repo-facing science/integrity/code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_physical_family_map.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-physical-family-map-5504.txt`
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- Stay on the same compression/order-parameter thread.
+- Run one bounded low-overlap closure step using the `5504` table to test whether one additional boundary observable can exactly split one concrete low-overlap pair (start with add1 vs add4).
+
+### First concrete action
+- Execute:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_physical_family_map.py --log /Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-nonpocket-subtype-rules-5504-max5600.txt --max-terms 4 --rule-limit 4`
+
 ## 2026-03-26 09:48 America/New_York
 
 ### Current state
