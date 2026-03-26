@@ -1,3 +1,44 @@
+## 2026-03-26 13:38 America/New_York
+
+### Current state
+- Repo was clean and synced at start of this continuation (`main...origin/main`, ahead/behind `0/0`) with no active worker lock.
+- Stayed on the same frozen `5504` low-overlap add1-vs-add4 core and completed two bounded same-thread follow-ups:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_candidate_identity_bucket.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_candidate_identity_two_clause_closure.py`
+
+### Strongest confirmed conclusion
+- Candidate identity is real signal, but still not the whole hidden law.
+- Side-resolved candidate-cell identity bits and mirrored-occupancy events improve the add1/add4 split:
+  - candidate-identity best add1: `68/87` with `48/19/0`
+  - candidate-identity best add4: `64/87` with `16/0/23`
+- The strongest identity events are asymmetric placements like:
+  - `deep_cell:dx1:dy4` / `pocket_cell:dx1:dy4` (add1-heavy)
+  - `deep_cell:dx4:dy3` / `pocket_cell:dx4:dy3` (add4-heavier)
+- Folding those identity bits back into a bounded two-clause closure still does **not** produce an exact add1/add4 split:
+  - best add1-side row rises to `70/87`
+  - best add4-side row stays the zero-FP identity cut `event_present_count <= 1.500` (`16/0/23`)
+- So the hard low-overlap core still does not collapse into a tiny rule family even after adding candidate identity; the next likely missing class is explicit lobe/topology structure on the candidate support graph.
+
+### Files and results changed in this run
+- Repo-facing science/code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_candidate_identity_bucket.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_candidate_identity_two_clause_closure.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- New result logs:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-low-overlap-candidate-identity-bucket-5504-add1-vs-add4.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-low-overlap-candidate-identity-two-clause-closure-5504-add1-vs-add4.txt`
+
+### Exact next step
+- Stay on the same frozen `5504` low-overlap `87`-row core.
+- Add one bounded candidate-lobe / support-graph topology runner:
+  - connected-component count on candidate-support neighborhoods,
+  - left/right lobe symmetry and occupancy per candidate family,
+  - bridge vs split support structure between pocket and deep candidate sets,
+  - then rerun compact bucket-local closure on add1-vs-add4.
+
+### First concrete action
+- Implement a bucket-local candidate-lobe topology runner keyed off the completed `5504` log and the existing `00` mixed bucket split.
+
 ## 2026-03-26 13:25 America/New_York
 
 ### Current state
