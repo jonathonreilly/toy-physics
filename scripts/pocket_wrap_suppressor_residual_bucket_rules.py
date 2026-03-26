@@ -14,7 +14,8 @@ if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
 from toy_event_physics import (  # noqa: E402
-    pocket_wrap_suppressor_residual_bucket_analysis,
+    pocket_wrap_suppressor_residual_bucket_rows,
+    pocket_wrap_suppressor_residual_bucket_rule_rows,
     render_pocket_wrap_suppressor_residual_bucket_case_table,
     render_pocket_wrap_suppressor_residual_bucket_rule_table,
 )
@@ -37,10 +38,9 @@ def main() -> None:
     print(f"pocket-wrap suppressor residual-bucket rules started {started}", flush=True)
     total_start = time.time()
 
-    coarse_signature, residual_rows, rule_rows = pocket_wrap_suppressor_residual_bucket_analysis(
+    coarse_signature, residual_rows = pocket_wrap_suppressor_residual_bucket_rows(
         variant_limit=args.variant_limit,
         coarse_signature=args.coarse_signature,
-        limit=args.rule_limit,
     )
 
     print()
@@ -50,6 +50,14 @@ def main() -> None:
     print(f"coarse_signature={coarse_signature}")
     print(f"residual_rows={len(residual_rows)}")
     print(render_pocket_wrap_suppressor_residual_bucket_case_table(residual_rows))
+    print(flush=True)
+
+    rule_rows = pocket_wrap_suppressor_residual_bucket_rule_rows(
+        residual_rows,
+        variant_limit=args.variant_limit,
+        coarse_signature=coarse_signature,
+        limit=args.rule_limit,
+    )
     print()
     print("Residual Bucket Rules")
     print("=====================")

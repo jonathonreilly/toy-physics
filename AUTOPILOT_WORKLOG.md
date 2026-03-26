@@ -1,3 +1,43 @@
+## 2026-03-25 21:47 America/New_York
+
+### Current state
+- Investigated the seemingly stuck `5504` residual-bucket worker and confirmed it was CPU-bound inside the residual-rule search, not dead.
+- Replaced that path with a repo-facing integrity/performance fix:
+  - split residual-bucket row collection from rule search,
+  - made the script print the residual case table before searching rules,
+  - and changed the rule search to stop once the top exact rules are settled instead of exhaustively enumerating all 1/2/3-term combinations.
+- Validated the change with:
+  - `python3 -m py_compile /Users/jonreilly/Projects/Physics/toy_event_physics.py /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_residual_bucket_rules.py`
+  - a synthetic helper sanity check for `pocket_wrap_suppressor_residual_bucket_rule_rows(...)`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py`
+- Intentionally stopped the manual `5504` rerun after validating the fix so the repo would not be left with an unmanaged long-running child under a manual lock.
+
+### Strongest confirmed conclusion
+- No mechanism conclusion changed in this integrity fix.
+- The strongest confirmed sparse-sentinel frontier remains `4992`: subtype count `4`, non-pocket membership `127`, and the rotated both-sensitive exact 2-term family anchored on `deep_overlap_count >= 1.500`.
+- The wider `5504` mixed-bucket conclusion also remains in force: exactly one mixed add1/add4 bucket remains there, and it is exactly separable.
+
+### Files and results changed in this run
+- Repo-facing integrity/performance fix:
+  - `/Users/jonreilly/Projects/Physics/toy_event_physics.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_residual_bucket_rules.py`
+- Partial rerun log intentionally abandoned after validation:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-25-pocket-wrap-suppressor-residual-bucket-rules-5504-cross-n-span3plus-lowL-pocketH-overlap1-roughH-optimized.txt`
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- Re-run the `5504` residual-bucket search under the optimized flow:
+  - `cross=n|span=3+|low=L|pocket=H|overlap=1|rough=H`
+- If that residual bucket is now exactly separable with 1-2 terms, close the latent-collision thread at this rung and return to sparse sentinels.
+- If it still needs 3 terms or remains non-exact, record the best residual rule family and then decide whether that bucket is a genuine remaining hidden-driver exception.
+
+### First concrete action
+- Execute:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_residual_bucket_rules.py --variant-limit 5504 --coarse-signature 'cross=n|span=3+|low=L|pocket=H|overlap=1|rough=H'`
+
 ## 2026-03-25 13:32 America/New_York
 
 ### Current state
