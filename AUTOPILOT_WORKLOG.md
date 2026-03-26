@@ -1,3 +1,46 @@
+## 2026-03-26 19:35 America/New_York
+
+### Current state
+- Continued manually on the center-spine `00` hard core with the cooperative lock held as `manual-codex`.
+- Completed a bounded bucket-specific cell-identity / candidate-layout block on the frozen `5504` low-overlap add1-vs-add4 core.
+- New repo-facing scripts:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_candidate_identity.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_candidate_neighbors.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_identity_support_joined.py`
+
+### Strongest confirmed conclusion
+- The dominant `00` center-spine bucket (`42` add1, `3` add4) still does not close under the current summary families, but explicit candidate-cell identity is now the strongest family tested on that hard core.
+- Bucket-specific candidate identity improves the add4 side to:
+  - `43/45` with `tp/fp/fn = 1/0/2`
+  - best rule: `deep_mirror_occ_dx4_dy3 >= 0.500 and pocket_mirror_void_right_fraction >= 0.292`
+- The nearest-neighbor candidate-layout pass sharpens the mechanism:
+  - all three add4 rows have `deep_only = []`
+  - one add4 row has `pocket == deep`
+  - the other two have `deep` as a strict subset of `pocket`
+  - their nearest add1 neighbors instead retain larger or shifted deep/overlap layouts
+- Joining the two strongest current families does **not** solve it:
+  - joined add4 best falls back to `41/45`
+  - joined add1 best stays `37/45`
+- So the missing separator now looks specifically like explicit support-cell / candidate-cell interaction structure, not another threshold over current identity or support summaries.
+
+### Files and results changed in this run
+- Repo-facing files:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_candidate_identity.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_candidate_neighbors.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_identity_support_joined.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- New result logs:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-candidate-identity-5504-add1-vs-add4.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-candidate-neighbors-5504-add1-vs-add4.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-identity-support-joined-5504-add1-vs-add4.txt`
+
+### Exact next step
+- Stay on the frozen `5504` center-spine `00` hard core.
+- Move past unary candidate/support summaries and probe explicit candidate-cell interaction structure between support cells and pocket/deep candidate cells.
+
+### First concrete action
+- Build a `00`-bucket runner that tests pairwise or small-subgraph support-cell / candidate-cell interaction motifs for the three add4 rows against their nearest add1 neighbors.
+
 ## 2026-03-26 19:14 America/New_York
 
 ### Current state
