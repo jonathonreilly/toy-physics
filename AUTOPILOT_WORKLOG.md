@@ -1,3 +1,48 @@
+## 2026-03-26 10:44 America/New_York
+
+### Current state
+- Stayed on the compression/order-parameter thread and avoided another ladder rung.
+- Added a new frozen-row low-overlap boundary runner:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_boundary_axes.py`
+- The runner reuses the completed `5504` subtype log for labels, reconstructs the corresponding geometries directly, and recomputes richer boundary observables without rerunning the expensive classifier sweep.
+- Saved the result at:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-low-overlap-boundary-axes-5504.txt`
+
+### Strongest confirmed conclusion
+- The `5504` loaded-vs-boundary split is now stronger, not weaker:
+  - `both-sensitive` remains the clean high-overlap loaded family
+  - `add1`, `add4`, and `pair-only` remain the shared low-overlap boundary basin
+- Adding richer visible boundary observables still does not collapse the three low-overlap families into compact exact 1-3 term pairwise rules:
+  - add1 vs add4: best `71/96`
+  - add1 vs pair-only: best `70/92`
+  - add4 vs pair-only: best `61/74`
+- The richer variables are informative, though:
+  - `add1` carries the strongest low-degree and boundary-gap pressure
+  - `pair-only` carries the strongest pocket gap
+  - `add4` sits between them
+- So the next hidden-driver target is now sharper again:
+  - not more overlap-style observables
+  - but profile/asymmetry variables that might resolve the low-overlap basin internally
+
+### Files and results changed in this run
+- Repo-facing science/code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_boundary_axes.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-low-overlap-boundary-axes-5504.txt`
+
+### Exact next step
+- Stay on the same frozen `5504` low-overlap thread.
+- Build a profile/asymmetry follow-up:
+  - mirror asymmetry
+  - left/right endpoint imbalance
+  - centerline variation / span skew
+  - any compact profile variable that can separate the low-overlap families once shell/core load is held fixed
+- Keep sparse sentinels demoted to guardrails only.
+
+### First concrete action
+- Implement a focused low-overlap profile/asymmetry runner on top of the completed `5504` log and compare it against the current richer boundary-axis baseline.
+
 ## 2026-03-26 10:33 America/New_York
 
 ### Current state
