@@ -1,3 +1,47 @@
+## 2026-03-26 12:36 America/New_York
+
+### Current state
+- Reconciled required preflight context in canonical order:
+  - read `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and confirmed automation memory was absent at `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`.
+- Reconciled child/lock/git state before bounded work:
+  - latest handoff reported no active detached science child.
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` -> `free`.
+  - git preflight was clean and synced (`main...origin/main`, ahead/behind `0/0`).
+  - acquired worker lock: `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 2` -> `acquired`.
+- One bounded same-thread science step was executed:
+  - added and ran `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_local_support_topology_bucket.py` on the completed `5504` subtype log for `add1-sensitive` vs `add4-sensitive` inside the dominant `00` mixed bucket.
+
+### Strongest confirmed conclusion
+- The support-cell / candidate-topology family is now tested directly on the frozen `87`-row mixed core and remains non-closing under compact 1-3 term thresholds.
+- The same dominant mixed bucket signature is unchanged:
+  - `core_boundary_deficit_mean <= 0.222`
+  - `boundary_fraction <= 0.826`
+  - mixed bucket `00` with `87` rows (`48` add1, `39` add4)
+- Bucket-local support-topology best rows are still partial:
+  - add1 support-topology best: `66/87` (`41/14/7`)
+  - add4 support-topology best: `63/87` (`19/4/20`)
+- The envelope split is physically suggestive but not sufficient for closure:
+  - add4 shows higher mirror-occupied candidate rates (`pmocc~0.750`, `dmocc~1.000`)
+  - add1 keeps slightly higher boundary-neighbor overlap (`pbound~0.579`, `dbound~0.462`)
+- So the remaining collision now points to finer candidate placement/identity structure rather than aggregate candidate-load or overlap fractions.
+
+### Files and results changed in this run
+- Repo-facing science/code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_local_support_topology_bucket.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-low-overlap-local-support-topology-bucket-5504-add1-vs-add4.txt`
+
+### Exact next step
+- Stay on the same frozen `5504` low-overlap core.
+- Add one bounded candidate-identity refinement inside the dominant `00` mixed bucket:
+  - candidate-cell column-band and side-resolved occupancy/suppression coordinates,
+  - candidate-neighborhood identity features (which candidate cells are active, not just how many),
+  - then rerun compact bucket-local closure for add1-vs-add4.
+
+### First concrete action
+- Implement a bucket-local candidate-identity runner keyed off the completed `5504` log and the existing `00` mixed bucket split.
+
 ## 2026-03-26 11:52 America/New_York
 
 ### Current state
