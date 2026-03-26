@@ -1,3 +1,46 @@
+## 2026-03-26 11:52 America/New_York
+
+### Current state
+- Continued on the localized `5504` low-overlap add1-vs-add4 thread without widening scope.
+- Added two more bounded bucket-local probes:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_local_motif_bucket.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_local_combined_bucket.py`
+- Both runs stayed inside the dominant mixed residual bucket from the prior split:
+  - signature `core_boundary_deficit_mean <= 0.222`
+  - `boundary_fraction <= 0.826`
+  - mixed bucket `00` with `87` rows (`48` add1, `39` add4)
+
+### Strongest confirmed conclusion
+- The remaining low-overlap add1-vs-add4 collision is now sharply localized and still resistant to the current observable family.
+- Bucket-local node-motif observables help a bit:
+  - add1 local motif best improves to `69/87` (`35/5/13`)
+  - add4 local motif best reaches `65/87`
+- But even combining the strongest visible basin variables with the strongest bucket-local motif variables still does **not** close the core:
+  - add1 local-combined best: `69/87`
+  - add4 local-combined best: `66/87`
+- So the next likely missing observable class is not “one more threshold on current summaries.”
+  - It is more explicit support-cell / candidate-topology structure inside the mixed core.
+
+### Files and results changed in this run
+- Repo-facing science/code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_local_motif_bucket.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_local_combined_bucket.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- New result logs:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-low-overlap-local-motif-bucket-5504-add1-vs-add4.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-low-overlap-local-combined-bucket-5504-add1-vs-add4.txt`
+
+### Exact next step
+- Stay on the same frozen `5504` low-overlap core.
+- Add a support-cell / candidate-topology feature block inside the dominant mixed bucket:
+  - pocket/deep-pocket candidate-cell counts
+  - overlap of occupied nodes with pocket/deep candidate neighborhoods
+  - mirrored candidate-cell occupancy / suppression structure
+- Then rerun the bucket-local closure search on that same `87`-row core.
+
+### First concrete action
+- Implement a bucket-local support-topology runner keyed off the completed `5504` log and the existing `00` mixed bucket split.
+
 ## 2026-03-26 11:35 America/New_York
 
 ### Current state
