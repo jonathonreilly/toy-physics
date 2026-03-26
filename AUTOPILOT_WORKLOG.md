@@ -66,6 +66,53 @@
 ### First concrete action
 - Extend the existing identity+lobe two-clause closure runner with the new candidate-support bridge-event/subgraph feature block and rerun on the same `00` mixed bucket.
 
+## 2026-03-26 18:04 America/New_York
+
+### Current state
+- Checked and reconciled worker state before new work:
+  - there was no live worker after all
+  - repo had two unpushed science commits from the worker and those are now pushed
+  - `main...origin/main`, ahead/behind `0/0`
+- Acquired a manual lock and completed three bounded same-thread continuations on the frozen `5504` low-overlap add1-vs-add4 mixed core:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_bridge_event_translation.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_identity_bridge_language_closure.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_bridge_language_exceptions.py`
+
+### Strongest confirmed conclusion
+- The strongest support-subgraph signal compresses cleanly into a coarse bridge-language law.
+- The dominant separator is a `center bridge spine`:
+  - `bridge_node_dx0_dy3` and `bridge_node_dx0_dy4`
+  - `add1` rows have that central spine essentially all the time (`center_pair~1.000`)
+  - `add4` rows usually do not (`center_pair~0.154`)
+- The translated bridge language retains almost all of the raw support-subgraph strength:
+  - best add1 translated row: `82/87` via `bridge_center_spine_pair >= 0.500 and identity_deep_left_fraction >= 0.292`
+  - best add4 translated row: `81/87` via `bridge_center_spine_pair <= 0.500`
+- The residual structure is now sharply localized:
+  - there are no add1 false negatives under the add1 translated rule
+  - the remaining failures are a small island of add4 rows that already carry the full central bridge spine
+- So the next science target is no longer the whole mixed bucket; it is the small add4 island inside the central-spine regime.
+
+### Files and results changed in this run
+- Repo-facing science/code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_bridge_event_translation.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_identity_bridge_language_closure.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_bridge_language_exceptions.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- New result logs:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-low-overlap-bridge-event-translation-5504-add1-vs-add4.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-low-overlap-identity-bridge-language-closure-5504-add1-vs-add4.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-low-overlap-bridge-language-exceptions-5504-add1-vs-add4.txt`
+
+### Exact next step
+- Stay on the same frozen `5504` low-overlap `87`-row core.
+- Restrict to the residual add4 island inside the central-bridge-spine regime and run one bounded micro-bucket probe:
+  - central-spine-present rows only
+  - compare the small add4 island against the dominant add1 set
+  - test whether one extra subgraph or identity-topology clause closes just that island
+
+### First concrete action
+- Build a central-spine residual bucket runner keyed off `bridge_center_spine_pair >= 0.500` and classify the surviving add4 exceptions against the add1 core.
+
 ## 2026-03-26 16:30 America/New_York
 
 ### Current state
