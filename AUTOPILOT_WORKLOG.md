@@ -1,3 +1,39 @@
+## 2026-03-26 17:43 America/New_York
+
+### Current state
+- Reconciled required preflight context in canonical order:
+  - read `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`.
+- Reconciled child/lock/git state before bounded work:
+  - latest handoff reported no active detached science child.
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` -> `free`.
+  - acquired worker lock: `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 2` -> `acquired`.
+  - git preflight showed `main...origin/main` ahead by `1`.
+  - push reconcile attempt via helper failed with transient DNS (`Could not resolve host: github.com`).
+- Completed one bounded same-thread continuation on the frozen `5504` low-overlap add1-vs-add4 mixed core:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_identity_lobe_support_joined_closure.py`
+
+### Strongest confirmed conclusion
+- Joining candidate identity, lobe topology, and candidate-support bridge-event/subgraph features in one bounded closure pass still does **not** close the hard `87`-row mixed core.
+- Best rows are unchanged from the support-subgraph step:
+  - add1-side best: `82/87` with `tp/fp/fn = 48/5/0`
+  - add4-side best: `75/87` with `tp/fp/fn = 27/0/12`
+- The winning rows remain anchored by the same support bridge-event thresholds (`bridge_node_dx0_dy3`/`bridge_node_dx0_dy4`), so joined scalar recombination of current identity+lobe+support features appears saturated on this core.
+
+### Files and results changed in this run
+- Repo-facing science/code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_identity_lobe_support_joined_closure.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-low-overlap-identity-lobe-support-joined-closure-5504-add1-vs-add4.txt`
+
+### Exact next step
+- Stay on the same frozen `5504` low-overlap `87`-row core.
+- Run one bounded residual-language continuation that translates the dominant support bridge-event thresholds into compact residual buckets and tests whether those buckets admit exact local closure beyond `82/87` and `75/87`.
+
+### First concrete action
+- Add a mixed-bucket residual translator keyed on `bridge_node_dx0_dy3` / `bridge_node_dx0_dy4` event states and rerun bucket-local closure within each residual bucket.
+
+
 ## 2026-03-26 16:40 America/New_York
 
 ### Current state
