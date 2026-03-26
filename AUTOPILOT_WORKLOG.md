@@ -1,3 +1,45 @@
+## 2026-03-26 01:36 America/New_York
+
+### Current state
+- Reconciled required preflight context in canonical order:
+  - read `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`.
+- Reconciled lock/git/push-first state before new science:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` -> `free`.
+  - acquired lock per protocol: `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 2` -> `acquired`.
+  - `git status --short --branch` -> `main...origin/main [ahead 1]`; `git rev-list --left-right --count origin/main...main` -> `0 1`.
+  - required push-first helper attempt: `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics` -> `status=failed`, `failure_kind=dns_failure`, `ahead=1`, `behind=0`, `attempts_used=5`.
+- One bounded same-thread mechanism step was executed:
+  - added a targeted latent-axis probe script that operates on the completed `5504` residual case table rather than re-running the full frontier sweep.
+  - executed the probe on `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-residual-bucket-rules-5504-cross-n-span3plus-lowL-pocketH-overlap1-roughH.txt`.
+  - result: no exact 1-3 term add1/add4 separator on engineered thresholdable axes; best add4-sensitive row reaches `12/13` (`tp/fp/fn=3/0/1`) with `3` terms.
+
+### Strongest confirmed conclusion
+- No change to the primary sparse-sentinel frontier conclusion (`4992`, subtype count `4`, non-pocket membership `127`, rotated exact both-sensitive 2-term family anchored on `deep_overlap_count >= 1.500`).
+- No change to mixed-bucket `5504` conclusion (one mixed add1/add4 bucket, exactly separable).
+- Residual-thread conclusion tightened but unchanged: the unresolved coarse bucket `cross=n|span=3+|low=L|pocket=H|overlap=1|rough=H` remains non-exact at `5504`, and straightforward engineered latent axes on the frozen residual rows still do not yield an exact small separator.
+
+### Files and results changed in this run
+- Added same-thread latent-axis probe utility:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_residual_bucket_latent_axes.py`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-residual-bucket-latent-axes-5504-cross-n-span3plus-lowL-pocketH-overlap1-roughH.txt`
+- Narrative update:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- Stay on the same residual thread and run one bounded row-level disambiguation step on the lone remaining miss from the best `12/13` add4-sensitive latent-axis rule.
+- If that miss can be isolated by one additional deterministic observable already present in the generator state, fold it into a compact exact rule and close the residual collision.
+- If not, record this bucket as persistent non-exact behavior at `5504` under current thresholdable observables.
+
+### First concrete action
+- Execute:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_residual_bucket_latent_axes.py --residual-log /Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-residual-bucket-rules-5504-cross-n-span3plus-lowL-pocketH-overlap1-roughH.txt --max-terms 3 --rule-limit 12`
+- Then inspect the single false-negative row under the best add4-sensitive `12/13` rule and test one extra bounded axis candidate on that same frozen table.
+
 ## 2026-03-26 00:33 America/New_York
 
 ### Current state
