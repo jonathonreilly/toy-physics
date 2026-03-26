@@ -1,3 +1,49 @@
+## 2026-03-26 11:18 America/New_York
+
+### Current state
+- Stayed on the frozen `5504` low-overlap thread and took two more bounded latent-structure steps:
+  - added `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_profile_axes.py`
+  - added `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_combined_axes.py`
+- Both runs reused the completed `5504` subtype log and avoided another classifier/frontier sweep.
+- New result logs:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-low-overlap-profile-axes-5504.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-low-overlap-combined-axes-5504.txt`
+
+### Strongest confirmed conclusion
+- The low-overlap basin is now better characterized, but still not compactly closed.
+- Profile/asymmetry observables alone are informative but not sufficient:
+  - best pairwise rows stay partial (`65/96`, `64/92`, `48/74`)
+  - `pair-only` has the lowest profile asymmetry
+  - `add4` has the strongest half-center imbalance / profile slope
+- Combining the strongest visible boundary variables with the strongest visible profile variables still does **not** produce compact exact 1-3 term pairwise closures:
+  - add1 vs add4: `71/96`
+  - add1 vs pair-only: `70/92`
+  - add4 vs pair-only: `61/74`
+- So the best current hidden-driver read is:
+  - `both-sensitive` is already a compactly solved loaded family
+  - the low-overlap three-family basin is real
+  - but it is not the shadow of a tiny single-conjunction rule family on the present observable set
+
+### Files and results changed in this run
+- Repo-facing science/code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_profile_axes.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_combined_axes.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- New result logs:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-low-overlap-profile-axes-5504.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-low-overlap-combined-axes-5504.txt`
+
+### Exact next step
+- Stay on the frozen `5504` low-overlap thread.
+- Stop trying broader global threshold searches.
+- Do a bucketwise residual decomposition inside the low-overlap basin:
+  - split low-overlap rows by a small visible signature
+  - then ask whether each bucket closes under compact exact rules
+  - or identify which bucket is the real remaining collision
+
+### First concrete action
+- Implement a low-overlap residual-bucket runner keyed off the completed `5504` log, starting from the strongest mixed low-overlap pair.
+
 ## 2026-03-26 10:44 America/New_York
 
 ### Current state
