@@ -1,3 +1,46 @@
+## 2026-03-26 11:35 America/New_York
+
+### Current state
+- Reconciled required preflight context in canonical order:
+  - read `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`.
+- Reconciled child/lock/git state before bounded work:
+  - latest handoff reported no active detached science child.
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` -> `free`.
+  - git preflight was clean and synced (`main...origin/main`, ahead/behind `0/0`).
+  - acquired worker lock: `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 2` -> `acquired`.
+- One bounded same-thread science step was executed:
+  - added and ran `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_residual_buckets.py` on the completed `5504` subtype log for `add1-sensitive` vs `add4-sensitive`.
+
+### Strongest confirmed conclusion
+- The low-overlap unresolved boundary is now sharply localized rather than diffuse.
+- On the frozen `5504` add1-vs-add4 table (`96` rows), the best 2-feature visible signature split is:
+  - `core_boundary_deficit_mean <= 0.222`
+  - `boundary_fraction <= 0.826`
+- That split yields three buckets total:
+  - two small pure add1 buckets (`7` rows and `2` rows)
+  - one dominant mixed bucket (`87` rows: `48` add1, `39` add4)
+- Inside that dominant mixed bucket, compact local closures remain partial:
+  - best add1 local rule: `63/87` (`tp/fp/fn = 38/14/10`)
+  - best add4 local rule: `64/87` (`tp/fp/fn = 18/2/21`)
+- So the thread now tightens to a concrete target: the remaining collision is concentrated in one large low-overlap core bucket that likely needs more local/topological observables rather than more global threshold recombination.
+
+### Files and results changed in this run
+- Repo-facing science/code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_residual_buckets.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-low-overlap-residual-buckets-5504-add1-vs-add4.txt`
+
+### Exact next step
+- Stay on the frozen `5504` low-overlap thread.
+- Do one bounded refinement inside the dominant mixed bucket only:
+  - add a genuinely local/topological observable family (for example local support-neighborhood motifs or pocket-boundary adjacency micro-structure),
+  - then rerun the bucket-local closure search on those `87` rows.
+
+### First concrete action
+- Extend `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_residual_buckets.py` with a mixed-bucket-only feature block and rerun on `signature_key=00`.
+
 ## 2026-03-26 11:18 America/New_York
 
 ### Current state
