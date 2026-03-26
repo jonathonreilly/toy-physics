@@ -118,6 +118,7 @@ def label_rows(variant_limit: int) -> list[LabeledNonPocketRow]:
 def search_exact_rules(
     rows: list[LabeledNonPocketRow],
     target_subtype: str,
+    limit: int | None = None,
 ) -> list[SubtypeRuleRow]:
     if not rows:
         return []
@@ -229,37 +230,57 @@ def search_exact_rules(
             predicate_by_mask[mask] = predicate
 
     predicate_with_masks = [(predicate, mask) for mask, predicate in predicate_by_mask.items()]
+    predicate_with_masks.sort(key=lambda item: (item[0][2], item[0][0], item[1]))
 
-    predicate_sets = [(item,) for item in predicate_with_masks]
-    predicate_sets.extend(itertools.combinations(predicate_with_masks, 2))
-    for predicate_tuple in predicate_sets:
-        sorted_terms = tuple(
-            sorted((item[0] for item in predicate_tuple), key=lambda item: item[2])
-        )
-        rule_text = " and ".join(term[0] for term in sorted_terms)
-        if rule_text in seen_rule_texts:
-            continue
-        seen_rule_texts.add(rule_text)
+    seen_predicted_masks: set[int] = set()
+    for term_count in (1, 2):
+        if term_count == 1:
+            predicate_sets = ((item,) for item in predicate_with_masks)
+        else:
+            predicate_sets = itertools.combinations(predicate_with_masks, 2)
 
-        predicted_mask = full_mask
-        for _predicate, mask in predicate_tuple:
-            predicted_mask &= mask
-            if predicted_mask == 0:
-                break
-        tp = (predicted_mask & target_mask).bit_count()
-        fp = (predicted_mask & non_target_mask).bit_count()
-        fn = (target_mask & (full_mask ^ predicted_mask)).bit_count()
-        if fp == 0 and fn == 0:
-            exact_rows.append(
-                SubtypeRuleRow(
-                    target_subtype=target_subtype,
-                    rule_text=rule_text,
-                    term_count=len(sorted_terms),
-                    tp=tp,
-                    fp=fp,
-                    fn=fn,
-                )
+        for predicate_tuple in predicate_sets:
+            sorted_terms = tuple(
+                sorted((item[0] for item in predicate_tuple), key=lambda item: item[2])
             )
+            rule_text = " and ".join(term[0] for term in sorted_terms)
+            if rule_text in seen_rule_texts:
+                continue
+
+            predicted_mask = full_mask
+            for _predicate, mask in predicate_tuple:
+                predicted_mask &= mask
+                if predicted_mask == 0:
+                    break
+            if predicted_mask == 0 or predicted_mask in seen_predicted_masks:
+                continue
+
+            seen_rule_texts.add(rule_text)
+            seen_predicted_masks.add(predicted_mask)
+
+            tp = (predicted_mask & target_mask).bit_count()
+            fp = (predicted_mask & non_target_mask).bit_count()
+            fn = (target_mask & (full_mask ^ predicted_mask)).bit_count()
+            if fp == 0 and fn == 0:
+                exact_rows.append(
+                    SubtypeRuleRow(
+                        target_subtype=target_subtype,
+                        rule_text=rule_text,
+                        term_count=term_count,
+                        tp=tp,
+                        fp=fp,
+                        fn=fn,
+                    )
+                )
+
+        exact_rows.sort(
+            key=lambda row: (
+                row.term_count,
+                row.rule_text,
+            )
+        )
+        if limit is not None and len(exact_rows) >= limit and term_count == 1:
+            return exact_rows[:limit]
 
     exact_rows.sort(
         key=lambda row: (
@@ -267,6 +288,8 @@ def search_exact_rules(
             row.rule_text,
         )
     )
+    if limit is not None:
+        return exact_rows[:limit]
     return exact_rows
 
 
@@ -326,9 +349,6 @@ def main() -> None:
 
         rows = label_rows(variant_limit=args.variant_limit)
         subtypes = sorted({row.subtype for row in rows})
-        exact_rules: list[SubtypeRuleRow] = []
-        for subtype in subtypes:
-            exact_rules.extend(search_exact_rules(rows, subtype))
     except RunTimedOutError:
         print(
             "non-pocket suppressor subtype rules timed out "
@@ -366,6 +386,12 @@ def main() -> None:
         f"variant_limit={args.variant_limit} nonpocket_rows={len(rows)} subtype_count={len(subtypes)}"
     )
     print(render_rows(rows))
+    print(flush=True)
+
+    exact_rules: list[SubtypeRuleRow] = []
+    for subtype in subtypes:
+        exact_rules.extend(search_exact_rules(rows, subtype, limit=args.rule_limit))
+
     print()
     print("Non-Pocket Suppressor Subtype Exact Rules")
     print("=========================================")

@@ -6,6 +6,7 @@ This file is the stable operating protocol for the hourly science automation.
 - Make one bounded, genuine forward step each loop.
 - Leave the repo, tracked work log, runtime handoff, and automation memory in a mutually consistent state.
 - Prefer a pushed, synced checkpoint over a long chain of local-only metadata commits.
+- Prefer latent compression, order-parameter discovery, and physical-language translation over dense frontier laddering once subtype taxonomy is stable.
 
 ## Preflight
 1. Read, in order:
@@ -37,8 +38,13 @@ This file is the stable operating protocol for the hourly science automation.
 ## Step Selection
 1. Continue the highest-signal unfinished thread from the top work-log entry.
 2. Prefer finishing the current thread over widening scope.
-3. Do exactly one bounded science or integrity step by default.
-4. A second step is allowed only if:
+3. If the current thread is in a stable-taxonomy / expanding-membership regime, prioritize in this order:
+   - log-backed latent compression and order-parameter analysis
+   - boundary or residual-bucket closure on already completed frontier tables
+   - translation of current rules into coarser physical language
+   - sparse sentinels only as guardrails at wide jumps or after a real rule-family change
+4. Do exactly one bounded science or integrity step by default.
+5. A second step is allowed only if:
    - the first step finished cleanly,
    - it stays on the same thread,
    - and the second step is the obvious immediate continuation.
@@ -47,6 +53,7 @@ This file is the stable operating protocol for the hourly science automation.
 - Use canonical repo paths only.
 - Update `README.md` when a conclusion changes.
 - Run cheap audits only when code or benchmark semantics changed.
+- Do not keep dense laddering as the default frontier activity when existing evidence already says the taxonomy is stable; use sparse sentinels only to guard against regime changes.
 - Do not create metadata-only commits just to refresh status unless that status is the only unresolved item blocking the next run.
 - Do not detach a long-running science child and then release the lock.
 - If a science child is intentionally left running after the loop ends:

@@ -1,3 +1,65 @@
+## 2026-03-26 09:48 America/New_York
+
+### Current state
+- Checked the overnight/early-morning worker state, released the stale `physics-science` lock from the finished `6016` timeout, and pushed the prior local backlog so `main` matched `origin/main` before new work.
+- Tightened the widening runner itself:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py` now prints the parsed context before searching exact rules and no longer does an unbounded duplicate-heavy sweep of 1-2 term rule masks.
+- Added a new log-backed compression/order-parameter pass:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_frontier_compression.py`
+  - run on the completed `1232`, `3344`, `4992`, and `5504` frontier logs
+  - saved at `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-frontier-compression-1232-3344-4992-5504.txt`
+- Updated the automation plan so workers stop defaulting back to dense ladder chasing:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_PROTOCOL.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_JANITOR_PROTOCOL.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_SUMMARY_PROTOCOL.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/automation.toml`
+  - `/Users/jonreilly/.codex/automations/physics-janitor/automation.toml`
+  - `/Users/jonreilly/.codex/automations/physics-summary/automation.toml`
+
+### Strongest confirmed conclusion
+- The current phase is now much clearer:
+  - stable four-family taxonomy
+  - open and expanding membership boundary
+  - frontier row count is mostly a coverage statistic, not the right scientific object
+- The new compression pass makes that explicit:
+  - rows `40 -> 84 -> 127 -> 138`
+  - coarse signatures `17 -> 23 -> 25 -> 25`
+  - after `3344`, almost every new row reuses an already-seen signature (`37/44`, `41/43`, `11/11`)
+- The `5504` residual closure is therefore scientifically interesting, not just a system artifact:
+  - the messy bucket collapsed into compact closures instead of forcing a fifth family
+  - so the unresolved complexity looks like boundary structure inside the existing taxonomy, not a new mechanism family
+- The visible frontier observables are still not the hidden exact law:
+  - best two-axis compression on the `5504` logs reaches only `66/138`
+  - best depth-2 tree reaches only `67/138`
+  - both are anchored first on `deep_overlap_count`, then only weakly split by roughness/pocket/span
+
+### Files and results changed in this run
+- Repo-facing science/integrity/code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_nonpocket_subtype_rules.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_frontier_compression.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_PROTOCOL.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_JANITOR_PROTOCOL.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_SUMMARY_PROTOCOL.md`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-frontier-compression-1232-3344-4992-5504.txt`
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- Stay in compression/order-parameter mode.
+- Build a coarse physical family map for the stable `5504` regime:
+  - translate `both-sensitive` as the high-overlap loaded family
+  - translate the other three as low-overlap boundary families
+  - then identify the smallest extra boundary variables needed to split `add1`, `add4`, and `pair-only`
+- Use sparse sentinels only as guardrails after that translation step, not as the main thread.
+
+### First concrete action
+- Execute:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_frontier_compression.py`
+
 ## 2026-03-26 07:33 America/New_York
 
 ### Current state

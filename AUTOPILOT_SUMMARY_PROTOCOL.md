@@ -27,6 +27,7 @@ Read, in order:
   - commits since the last summary, grouped into science vs janitor/automation changes
   - strongest current confirmed conclusion
   - current active thread
+  - whether the repo is in `latent-compression / order-parameter` mode or `sparse-sentinel guardrail` mode
   - exact next step
 
 ## Boundaries

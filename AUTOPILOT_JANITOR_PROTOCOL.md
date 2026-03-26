@@ -38,6 +38,7 @@ This file is the stable operating protocol for the background janitor automation
 ## Boundaries
 - Do not widen science scope.
 - Do not start a new benchmark ladder by default.
+- Treat sparse sentinels as guardrails, not the main science thread, unless the work log explicitly says the latent/compression thread is closed and a new regime check is needed.
 - Only patch code if the janitor loop finds a real drift/integrity issue.
 
 ## State Update Rules
