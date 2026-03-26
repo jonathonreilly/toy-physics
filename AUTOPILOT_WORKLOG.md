@@ -1,3 +1,35 @@
+## 2026-03-26 16:40 America/New_York
+
+### Current state
+- Repo was clean and synced at start (`main...origin/main`, ahead/behind `0/0`) with no active detached science child in handoff state.
+- Acquired the cooperative `physics-science` lock and completed exactly one bounded same-thread continuation on the frozen `5504` low-overlap add1-vs-add4 mixed core:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_candidate_support_subgraph_bucket.py`
+
+### Strongest confirmed conclusion
+- Candidate-support subgraph/event topology adds real bounded signal but still does **not** close the hard `87`-row mixed core.
+- Best rows on this new family are:
+  - add1-side best: `82/87` with `tp/fp/fn = 48/5/0`
+  - add4-side best: `75/87` with `tp/fp/fn = 27/0/12`
+- So the read tightens again: per-event bridge participation and bridge-subgraph structure substantially improve separation (especially add1-side recall), but the unresolved boundary remains and likely needs a bounded joined closure with the existing identity+lobe features rather than this family in isolation.
+
+### Files and results changed in this run
+- Repo-facing science/code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_candidate_support_subgraph_bucket.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-low-overlap-candidate-support-subgraph-bucket-5504-add1-vs-add4.txt`
+
+### Exact next step
+- Stay on the same frozen `5504` low-overlap `87`-row core.
+- Run one bounded joined closure continuation that combines:
+  - candidate-identity event bits,
+  - lobe/component bridge summaries,
+  - and the new candidate-support bridge-event/subgraph features,
+  then test whether compact 1-3 term clauses improve beyond `82/87` (add1) and `75/87` (add4).
+
+### First concrete action
+- Extend the existing identity+lobe two-clause closure runner with the new candidate-support bridge-event/subgraph feature block and rerun on the same `00` mixed bucket.
+
 ## 2026-03-26 16:30 America/New_York
 
 ### Current state
