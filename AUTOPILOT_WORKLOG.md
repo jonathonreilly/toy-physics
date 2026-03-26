@@ -1,3 +1,45 @@
+## 2026-03-26 03:35 America/New_York
+
+### Current state
+- Reconciled required preflight context in canonical order:
+  - read `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`.
+- Reconciled lock/git/push-first state before bounded work:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` -> `free`.
+  - git preflight: `main...origin/main [ahead 3]`; ahead/behind `3/0`.
+  - required push-first helper attempt before new work: `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics` -> `status=failed`, `failure_kind=dns_failure`, `ahead=3`, `behind=0`, `attempts_used=5`.
+  - acquired lock: `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 2` -> `acquired`.
+- One bounded same-thread mechanism step was executed:
+  - added and ran a focused add1-side disambiguation probe on the same frozen `5504` residual table for `cross=n|span=3+|low=L|pocket=H|overlap=1|rough=H`.
+  - used a zero-FP add1 base clause (`abs_pocket_gap >= 0.058 and mean_center >= -0.035`) and tested one extra deterministic clause (`center_total_variation >= 1.5 and abs_low_gap in [0.145, 0.23] and mean_center <= -0.14`).
+  - result: combined disjunctive add1 rule is exact on the frozen table (`tp/fp/fn = 9/0/0`, `remaining_add1_misses=0`).
+
+### Strongest confirmed conclusion
+- Primary sparse-sentinel frontier conclusion remains unchanged (`4992`, subtype count `4`, non-pocket membership `127`, rotated exact both-sensitive 2-term family anchored on `deep_overlap_count >= 1.500`).
+- Mixed-bucket `5504` conclusion remains unchanged (one mixed add1/add4 bucket, exactly separable).
+- Residual-thread conclusion advances: for `cross=n|span=3+|low=L|pocket=H|overlap=1|rough=H` at `5504`, compact two-clause disjunctive closures now exactly separate both sides on the frozen `13`-row table (`add4: 4/0/0`, `add1: 9/0/0`).
+
+### Files and results changed in this run
+- Added bounded same-thread add1 disambiguation probe utility:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_residual_bucket_add1_disambiguation.py`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-residual-bucket-add1-disambiguation-5504-cross-n-span3plus-lowL-pocketH-overlap1-roughH.txt`
+- Narrative update:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- Re-enter from lock/git preflight and retry helper push first (`ahead` expected to increase by one commit).
+- If push succeeds, return to the sparse-sentinel ladder and run one bounded wider rung beyond `4992`.
+- If push remains DNS-blocked, avoid stacking extra metadata-only commits and continue with one bounded same-thread rung only when the repo state is otherwise reconciled.
+
+### First concrete action
+- Execute:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+
 ## 2026-03-26 02:36 America/New_York
 
 ### Current state
