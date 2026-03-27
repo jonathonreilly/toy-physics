@@ -7,6 +7,7 @@ from dataclasses import astuple
 import inspect
 from pathlib import Path
 import sys
+import tempfile
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 if str(REPO_ROOT) not in sys.path:
@@ -32,6 +33,9 @@ from toy_event_physics import (  # noqa: E402
 )
 from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_add1_selector import (  # noqa: E402
     edge_identity_signature,
+)
+from pocket_wrap_suppressor_low_overlap_boundary_axes import (  # noqa: E402
+    parse_variant_limit as parse_low_overlap_variant_limit,
 )
 from pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_add4_exception_scan import (  # noqa: E402
     FEATURE_NAMES as ADD4_EXCEPTION_FEATURE_NAMES,
@@ -360,6 +364,22 @@ def check_add4_exception_scan_rule_eval_consistency() -> None:
     ), "add4 exception rule-text matcher diverged from evaluate_rules confusion counts"
 
 
+def check_low_overlap_variant_limit_parser_handles_renamed_logs() -> None:
+    source_log = (
+        REPO_ROOT
+        / "logs"
+        / "2026-03-26-pocket-wrap-suppressor-nonpocket-subtype-rules-5504-max5600.txt"
+    )
+    text = source_log.read_text(encoding="utf-8")
+    with tempfile.TemporaryDirectory() as tmpdir:
+        renamed_log = Path(tmpdir) / "frozen_frontier_snapshot.txt"
+        renamed_log.write_text(text, encoding="utf-8")
+        parsed_limit = parse_low_overlap_variant_limit(renamed_log)
+    assert (
+        parsed_limit == 5504
+    ), "low-overlap boundary parser regressed to filename-only variant-limit inference"
+
+
 def main() -> None:
     print("benchmark regression audit: checking same-weight default", flush=True)
     check_same_weight_default()
@@ -381,6 +401,8 @@ def main() -> None:
     check_add4_exception_scan_uses_live_rule()
     print("benchmark regression audit: checking add4 exception rule-eval consistency", flush=True)
     check_add4_exception_scan_rule_eval_consistency()
+    print("benchmark regression audit: checking low-overlap variant-limit parser on renamed logs", flush=True)
+    check_low_overlap_variant_limit_parser_handles_renamed_logs()
     print("benchmark regression audit: checking live mechanism split driver", flush=True)
     check_live_mechanism_split_driver()
     print("benchmark regression audit: ok", flush=True)

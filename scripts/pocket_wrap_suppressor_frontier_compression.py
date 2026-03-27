@@ -105,12 +105,10 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 def parse_variant_limit(path: Path) -> int:
-    match = re.search(r"nonpocket_rows=.*", path.read_text(encoding="utf-8"))
-    if match:
-        text = match.group(0)
-        limit_match = re.search(r"variant_limit=(\d+)", text)
-        if limit_match:
-            return int(limit_match.group(1))
+    text = path.read_text(encoding="utf-8")
+    limit_match = re.search(r"variant_limit=(\d+)", text)
+    if limit_match:
+        return int(limit_match.group(1))
     fallback = re.search(r"subtype-rules-(\d+)", path.name)
     if fallback:
         return int(fallback.group(1))

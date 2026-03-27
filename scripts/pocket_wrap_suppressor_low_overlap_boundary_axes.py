@@ -8,7 +8,6 @@ from dataclasses import dataclass
 from datetime import datetime
 import itertools
 from pathlib import Path
-import re
 import statistics
 import sys
 import time
@@ -20,7 +19,11 @@ if str(SCRIPTS_DIR) not in sys.path:
 if str(PROJECT_DIR) not in sys.path:
     sys.path.insert(0, str(PROJECT_DIR))
 
-from pocket_wrap_suppressor_frontier_compression import FrontierRow, parse_rows  # noqa: E402
+from pocket_wrap_suppressor_frontier_compression import (  # noqa: E402
+    FrontierRow,
+    parse_rows,
+    parse_variant_limit,
+)
 from toy_event_physics import (  # noqa: E402
     PocketWrapSuppressorSubtypeRow,
     _threshold_core_shell_group_totals,
@@ -56,15 +59,6 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--max-terms", type=int, default=3)
     parser.add_argument("--rule-limit", type=int, default=2)
     return parser
-
-
-def parse_variant_limit(path: Path) -> int:
-    match = re.search(r"subtype-rules-(\d+)", path.name)
-    if match:
-        return int(match.group(1))
-    raise ValueError(f"could not infer variant limit from {path}")
-
-
 def decode_source_name(source_name: str) -> str:
     if "\\u" not in source_name and "\\x" not in source_name:
         return source_name

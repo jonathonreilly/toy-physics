@@ -32,6 +32,43 @@
 
 ### First concrete action
 - Inspect scripts that reconstruct bucket-local slices or parse rendered rule text in the `support_family_transfer` lane and add one more execution-backed guard where a helper/script semantic mismatch could still pass string-presence checks.
+## 2026-03-27 18:35 America/New_York
+
+### Current state
+- Continued the deep review thread through the shared frozen-frontier reconstruction and summary helpers.
+- Confirmed a real shared-parser drift:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_boundary_axes.py` still had its own weaker filename-only `variant_limit` parser
+  - while `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_frontier_compression.py` had the shared parser used by the frontier-compression and physical-family-map layer
+- When I added a renamed-log regression check, that surfaced a broader bug in the shared parser too:
+  - it was only looking for `variant_limit=` on lines starting with `nonpocket_rows=...`
+  - so renamed copies of valid frozen logs could still fail if filename fallback was unavailable
+- Fixed the shared parser in `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_frontier_compression.py` to read `variant_limit=` directly from log text
+- Then removed the duplicate weak parser from `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_boundary_axes.py` and reused the shared parser there
+- Added a cheap audit guard so renamed frozen logs must still parse correctly
+
+### Strongest confirmed conclusion
+- The science interpretation did not change.
+- The frozen-log helper layer is now materially safer:
+  - the same `variant_limit` parser is shared across compression, physical-family reporting, and low-overlap reconstruction
+  - renamed copies of valid frozen subtype logs now parse correctly without depending on filename shape
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_frontier_compression.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_boundary_axes.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- Validation:
+  - `python3 -m py_compile` on the touched parser/audit scripts passed
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py` passed, including the new renamed-log parser check
+
+### Exact next step
+- Stay in deep review mode.
+- Continue reviewing the remaining frozen-`5504` summary/render layer for helper/report drift, especially places where one script still duplicates logic that should now live in shared helpers.
+
+### First concrete action
+- Search the active frozen-`5504` review surface for any remaining duplicated parsing or reconstruction helpers, then compare them against the shared frontier-compression / low-overlap boundary helper path.
+
 ## 2026-03-27 17:36 America/New_York
 
 ### Current state
