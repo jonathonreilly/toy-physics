@@ -303,6 +303,17 @@ The important correction is that the rescue side is not actually “single-thres
     - `delta_count_pocket_joined_pocket_only__pocket_only__present0 <= -6.500`
     - `delta_count_pocket_role_pocket_only__pocket_only <= -11.500`
   - so role-level corridor language remains useful as interpretation, but joined-level low-tail coordinates already carry sufficient exact rescue separation on this core
+- a bounded robustness pass then separates “minimal exact” from “structurally roomy”:
+  - the top 1-term corridor clauses are not brittle under row drops; they survive `45/45` single-row removals
+  - the interpretable 2-term role clause also survives `45/45`
+  - the real difference is threshold slack:
+    - 1-term corridor widths stay around `1.000`
+    - the 2-term role clause keeps width `7.000`
+- and a visible-basis nearest-neighbor pass shows why the rescue side is still not the final discriminator:
+  - there are baseline-covered add1 neighbors at basis distance `0.000` from the rescued rows
+  - `local-morph-Ǎ` and `local-morph-఩` share the same visible pocket-basis coordinates as the rescued rows
+  - but they differ by concrete node-layout edits and are already captured by the baseline density clause
+  - so the remaining discriminating information is no longer on the rescue-side pocket basis itself; it now lives on the baseline-density / finer support-layout side
 - other exact rescues also have real positive width:
   - `pair_selected_event_present_count >= 6.000` with width `2.000`
   - `abs_delta_edge_identity_open_pair_count <= 22.500` with width `1.000`
@@ -317,6 +328,8 @@ So the current read is:
 - and the exact rescue mask is not unique inside that visible pocket basis, because the rescued rows occupy an isolated low-tail corner whose concrete geometry is a missing bridge-to-pocket / pocket-only support corridor
 - and this corridor now has an explicit compact role-level clause family that reproduces the exact rescue mask on the frozen core
 - and canonical corridor equivalence confirms the closure is highly degenerate: one-feature joined/role corridor cuts already reproduce the exact family rescue mask
+- but those minimal corridor clauses are only narrow exact cuts, while the 2-term role clause remains the wider and more interpretable representative
+- and because baseline-covered add1 neighbors already sit at visible-basis distance `0.000`, the remaining unresolved structure now sits with the baseline-density / finer layout side rather than the rescue-side pocket coordinates alone
 - the remaining tight part is the baseline density cut, which still only has a narrow local interval
 
 ### What the Current Mechanism Story Looks Like

@@ -1,3 +1,52 @@
+## 2026-03-27 11:55 America/New_York
+
+### Current state
+- Checked the worker state before continuing:
+  - no detached Physics worker was active
+  - worker had left real local science progress on the same frozen `5504` thread
+  - pushed that backlog first so remote matched the real current state
+- Then stayed on the frozen `5504` center-spine `00` hard core under the manual lock.
+- Added:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_pocket_corridor_clause_robustness.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_pocket_neighbor_differences.py`
+- Ran:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-pocket-corridor-clause-robustness-5504.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-pocket-neighbor-differences-5504.txt`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py` -> `ok`
+
+### Strongest confirmed conclusion
+- The canonical corridor-equivalence degeneracy is real, but not because the 1-term corridor clauses are row-drop fragile.
+- The top 1-term corridor clauses all survive `45/45` single-row removals, and so does the interpretable 2-term role clause.
+- The real difference is threshold slack:
+  - 1-term corridor widths stay around `1.000`
+  - the 2-term role clause keeps width `7.000`
+- The neighbor-difference pass then sharpened the unresolved part:
+  - there are baseline-covered add1 neighbors with **identical** visible pocket-basis coordinates to the rescued rows
+  - `local-morph-Ǎ` and `local-morph-఩` are both at basis distance `0.000`
+  - but they differ by concrete node-layout edits and are already captured by the baseline density clause
+- So the current best read is:
+  - rescue-side pocket/corridor laws are robust but highly non-unique
+  - the visible rescue basis alone is not enough to explain rescued geometry
+  - the remaining discriminating structure now lives on the baseline-density / finer support-layout side
+
+### Files and results changed in this run
+- Repo-facing science/code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_pocket_corridor_clause_robustness.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_pocket_neighbor_differences.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- New result logs:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-pocket-corridor-clause-robustness-5504.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-pocket-neighbor-differences-5504.txt`
+
+### Exact next step
+- Stay on the frozen `5504` center-spine `00` hard core.
+- Stop searching for a unique rescue-side corridor law.
+- Move the mechanism hunt to the discriminating baseline/finer-layout side.
+
+### First concrete action
+- Add one bounded baseline-side neighbor-difference pass comparing the rescued rows to the baseline-covered add1 neighbors at visible pocket-basis distance `0.000`, then identify which concrete support-edge density or layout edits separate them.
+
 ## 2026-03-27 11:41 America/New_York
 
 ### Current state
