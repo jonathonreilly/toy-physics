@@ -1,3 +1,47 @@
+## 2026-03-27 00:44 America/New_York
+
+### Current state
+- Reconciled protocol preflight in required order:
+  - read `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`.
+- Reconciled lock/git state before mutation:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` -> `free`.
+  - acquired worker lock: `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 2` -> `acquired`.
+  - git preflight showed `main...origin/main [ahead 4]` and clean tree.
+  - required push reconcile before new science failed once with transient DNS via helper:
+    - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+    - failure: `Could not resolve host: github.com`.
+- Completed one bounded same-thread continuation on the frozen `5504` low-overlap center-spine `00` hard core:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_twohop_cooccurrence_deltas.py`
+
+### Strongest confirmed conclusion
+- Nearest-opposite two-hop support/candidate cooccurrence deltas improve the add4-side frontier but still do **not** close the dominant `00` center-spine hard core.
+- Best compact rows on this new family are:
+  - add4-side best: `44/45` with `tp/fp/fn = 2/0/1`
+    - `delta_twohop_pair_count <= -2.500 and pair_distance_z <= 0.952`.
+  - add4-side single-feature best: `43/45` with `tp/fp/fn = 1/0/2`
+    - `delta_twohop_event_count <= -6.500`.
+  - strongest zero-FP one-feature add4 row remains `41/45` with `0/1/3`
+    - `abs_delta_twohop_candidate_touch_mean <= 0.133`.
+  - add1-side best: `37/45` with `tp/fp/fn = 34/0/8`
+    - `pair_distance_z >= 1.554`.
+- The nearest-opposite anchors remain the same close triplet (`0.508`, `0.938`, `1.550`), while selected motifs now include higher-order candidate-local support-role cooccurrences (for example `twohop:pocket:bridge:pocket_only`) alongside support-touch count deltas.
+- So the residual separator tightens again: two-hop matched interaction context is higher-signal than prior unary pair-delta summaries on add4 recall, but one add4 exception still survives; the likely missing class is third-order interaction context rather than additional scalar recombination.
+
+### Files and results changed in this run
+- Repo-facing science/code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_twohop_cooccurrence_deltas.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-twohop-cooccurrence-deltas-5504-add1-vs-add4.txt`
+
+### Exact next step
+- Stay on the frozen `5504` center-spine `00` hard core.
+- Move from two-hop candidate-local support-role cooccurrence deltas to bounded third-order interaction context that joins those two-hop motifs with local support-support adjacency state.
+
+### First concrete action
+- Add one bounded `00`-bucket analyzer that emits nearest-opposite third-order motif deltas (two-hop candidate cooccurrence motifs gated by support-support edge co-presence) and reruns compact rule search to test whether the last add4 exception closes beyond the current `44/45` frontier.
+
 ## 2026-03-26 23:42 America/New_York
 
 ### Current state
