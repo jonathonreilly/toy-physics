@@ -1,3 +1,42 @@
+## 2026-03-27 03:40 America/New_York
+
+### Current state
+- Reconciled protocol preflight in required order:
+  - read `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`.
+- Reconciled lock/git state before mutation:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` -> `free`.
+  - git preflight showed `main...origin/main [ahead 7]` and clean tree.
+  - required push reconcile before new science via helper failed with transient DNS:
+    - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+    - failure: `failure_kind=dns_failure`, `Could not resolve host: github.com`.
+  - acquired worker lock: `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 2` -> `acquired`.
+- Completed one bounded same-thread continuation on the frozen `5504` low-overlap center-spine `00` hard core:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_add1_selector.py`
+
+### Strongest confirmed conclusion
+- Add1-focused selector retuning on the same nearest-opposite edge-identity family does **not** close the remaining add1 misses.
+- Best compact rows on this focused family are:
+  - add1-side best remains `43/45` with `tp/fp/fn = 40/0/2`
+    - `delta_edge_identity_support_edge_density <= 0.018`.
+  - add4-side remains exact at `45/45` with `tp/fp/fn = 3/0/0`
+    - `delta_edge_identity_support_edge_density >= 0.018 and pair_selected_event_present_count <= 6.000`.
+- So the residual map stays one-sided: add4 closure is stable under selector-budget changes, but the add1-side two-row residual persists and likely needs explicit exception-local clause structure rather than more selector tuning.
+
+### Files and results changed in this run
+- Repo-facing science/code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_add1_selector.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-add1-selector-5504-add1-vs-add4.txt`
+
+### Exact next step
+- Stay on the frozen `5504` center-spine `00` hard core.
+- Run one bounded exception-local add1 residual-closure pass that explicitly constructs clause candidates around the two surviving add1 misses against their nearest add4 anchors.
+
+### First concrete action
+- Add one bounded residual helper that materializes the two add1-miss neighborhoods in nearest-opposite edge-identity coordinates and tests whether a compact 1-2 clause disjunction can close `43/45` to exact without creating add4 false positives.
+
 ## 2026-03-27 02:43 America/New_York
 
 ### Current state
