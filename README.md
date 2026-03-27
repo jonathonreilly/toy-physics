@@ -251,6 +251,16 @@ The important correction is that the rescue side is not actually “single-thres
   - which exactly matches the width of the broader `delta_edge_identity_event_count <= -14.500` rescue
   - interval `[−18.000, −11.000)` with width `7.000`
 - so the wide rescue is not just an abstract event-count delta; it is already mostly a pocket-family support-edge identity deficit
+- one more bounded pocket-subfamily pass shows that this does **not** collapse all the way to one tiny micro-cause
+  - best exact single micro-rescue is `delta_count_pocket_present0 <= -8.000`
+  - interval `[−10.000, −6.000)` with width `4.000`
+  - so the full width-`7.000` rescue still lives at the broader pocket-family level
+- the rescued rows themselves are not heterogeneous exceptions:
+  - both rescued rows share the same pocket-loss profile
+  - `delta_count_pocket_total = -18`
+  - `delta_count_pocket_present0 = -10`
+  - `delta_count_pocket_present1 = -8`
+  - `delta_count_pocket_role_pocket_only__pocket_only = -12`
 - other exact rescues also have real positive width:
   - `pair_selected_event_present_count >= 6.000` with width `2.000`
   - `abs_delta_edge_identity_open_pair_count <= 22.500` with width `1.000`
@@ -261,6 +271,7 @@ So the current read is:
 - the mechanism closure is probably touching something real
 - the rescue family is genuinely robust on the current frozen core
 - the rescue family already compresses one level further into a pocket-family deficit law
+- but the robust rescue is still a composite pocket deficit, not one tiny pocket subfamily
 - the remaining tight part is the baseline density cut, which still only has a narrow local interval
 
 ### What the Current Mechanism Story Looks Like

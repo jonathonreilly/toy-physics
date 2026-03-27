@@ -1,3 +1,56 @@
+## 2026-03-27 08:21 America/New_York
+
+### Current state
+- Continued the frozen `5504` center-spine `00` thread under the manual lock.
+- Added:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_pocket_subfamily_decomposition.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_pocket_subfamily_rescue_profiles.py`
+- Ran both bounded passes plus the cheap audit:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-pocket-subfamily-decomposition-5504.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-pocket-subfamily-rescue-profiles-5504.txt`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py` -> `ok`
+
+### Strongest confirmed conclusion
+- The wide exact rescue already compresses to a pocket-family deficit law:
+  - `delta_count_family_pocket <= -14.500`
+  - interval `[−18.000, −11.000)`, width `7.000`
+- But it does not fully collapse to one tiny pocket micro-subfamily:
+  - best exact single pocket-subfamily rescue is `delta_count_pocket_present0 <= -8.000`
+  - interval `[−10.000, −6.000)`, width `4.000`
+- The two rescued rows are not complementary edge cases; they share the same pocket-loss profile:
+  - `delta_count_pocket_total = -18`
+  - `delta_count_pocket_present0 = -10`
+  - `delta_count_pocket_present1 = -8`
+  - `delta_count_pocket_role_pocket_only__pocket_only = -12`
+  - `delta_count_pocket_joined_pocket_only__pocket_only__present0 = -7`
+- So the current best read is:
+  - the rescue side is genuinely robust
+  - it compresses to a pocket-family deficit
+  - but the width-`7.000` rescue remains a stable composite pocket-loss pattern, not a single tiny micro-cause
+
+### Files and results changed in this run
+- Repo-facing science/code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_pocket_subfamily_decomposition.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_pocket_subfamily_rescue_profiles.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- New result logs:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-pocket-subfamily-decomposition-5504.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-pocket-subfamily-rescue-profiles-5504.txt`
+
+### Exact next step
+- Stay on the frozen `5504` center-spine `00` hard core.
+- Keep the rescue-side target narrowed to the composite pocket-loss law rather than the whole event family.
+- Test whether that composite pocket-loss profile is already expressible as a small signed linear family over `present0/present1` and `pocket_only__pocket_only` counts, or whether it genuinely needs the broader `delta_count_family_pocket` aggregate.
+
+### First concrete action
+- Add one bounded composite-pocket profile pass that evaluates exact rescue predicates built from the small visible pocket basis:
+  - `delta_count_pocket_present0`
+  - `delta_count_pocket_present1`
+  - `delta_count_pocket_role_pocket_only__pocket_only`
+  - `delta_count_pocket_joined_pocket_only__pocket_only__present0`
+then compare their exact-mask reach against `delta_count_family_pocket <= -14.500`.
+
 ## 2026-03-27 07:39 America/New_York
 
 ### Current state
