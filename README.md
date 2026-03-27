@@ -427,6 +427,12 @@ So the current read is:
       - add1: left-loaded, lower-density branch
       - add4: mid-loaded, more closed-support branch
       - pair-only: lower-support, more open-support branch
+  - one bounded interaction-motif continuation on the same `rc0|ml0|c2` bucket added parsed candidate/support event motifs (deep vs pocket event family, bridge-role pairing, edge-length bins, and far-offset ratios) on top of the previous topology basis:
+    - add1 and pair-only best partial rules stayed effectively unchanged
+    - add4 still does not close exactly, and best partial rules stayed anchored to the same closed-pair plus mid-loading branch:
+      - `edge_identity_closed_pair_count >= 57.500 and edge_identity_closed_pair_ratio >= 0.452` (`2/8` TP, `0` FP)
+      - `edge_identity_closed_pair_count >= 57.500 and high_bridge_mid_count >= 0.500` (`4/8` TP, `2` FP)
+    - so this richer event-motif basis sharpens confidence in the existing read but does not supply a new compact separator for add4 inside `rc0|ml0|c2`
 
 ### What the Current Mechanism Story Looks Like
 

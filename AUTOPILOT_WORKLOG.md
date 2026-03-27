@@ -1,3 +1,39 @@
+## 2026-03-27 16:44 America/New_York
+
+### Current state
+- Reconciled protocol preflight in required order:
+  - read `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`.
+- Reconciled lock/git state before mutation:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` -> `free`.
+  - acquired worker lock: `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 2` -> `acquired`.
+  - repo preflight showed `main...origin/main` and `ahead 0 / behind 0`.
+- Completed one bounded same-thread continuation on the frozen `5504` low-overlap transfer thread:
+  - added `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_interaction_motif_scan.py`
+  - ran it to produce `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-support-family-transfer-rc0-ml0-c2-interaction-motif-scan-5504.txt`.
+
+### Strongest confirmed conclusion
+- In the largest mixed shared bucket (`rc0|ml0|c2`), enriching the basis with parsed candidate/support interaction motifs did **not** produce a new compact add4 separator.
+- Added motifs included deep-vs-pocket event family ratios, bridge-role pairing present ratios, edge-length bins, and far-offset ratios.
+- Best partial add4 behavior remained on the same branch already seen in the prior pass:
+  - `edge_identity_closed_pair_count >= 57.500 and edge_identity_closed_pair_ratio >= 0.452` (`2/8` TP, `0` FP)
+  - `edge_identity_closed_pair_count >= 57.500 and high_bridge_mid_count >= 0.500` (`4/8` TP, `2` FP)
+- So the current read is sharper: bucket-local topology and interaction motifs are informative, but this motif family still does not close add4 inside the shared `rc0|ml0|c2` bucket.
+
+### Files and results changed in this run
+- Repo-facing science/code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_interaction_motif_scan.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-support-family-transfer-rc0-ml0-c2-interaction-motif-scan-5504.txt`
+
+### Exact next step
+- Stay on the frozen `5504` low-overlap basin and keep `rc0|ml0|c2` as the active mixed bucket.
+- Move from aggregate motif counts toward candidate-anchored subtype contrasts inside the bucket, with emphasis on finding add4-specific closed-mid motifs that remain sparse in add1/pair-only.
+
+### First concrete action
+- Add one bounded `rc0|ml0|c2` candidate-anchored contrast pass that scores per-candidate bridge-neighborhood closures (mid vs left loading at matched closed-pair levels), then test compact subtype rules on those anchored contrasts.
+
 ## 2026-03-27 16:06 America/New_York
 
 ### Current state
