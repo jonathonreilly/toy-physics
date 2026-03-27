@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Probe the final 1168 residual bucket for compact add1-vs-add4 separators."""
+"""Probe the frozen residual bucket for compact add1-vs-add4 separators."""
 
 from __future__ import annotations
 
@@ -23,7 +23,7 @@ from toy_event_physics import (  # noqa: E402
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--variant-limit", type=int, default=1168)
+    parser.add_argument("--variant-limit", type=int, default=5504)
     parser.add_argument(
         "--coarse-signature",
         default="cross=n|span=3+|low=L|pocket=H|overlap=1|rough=H",

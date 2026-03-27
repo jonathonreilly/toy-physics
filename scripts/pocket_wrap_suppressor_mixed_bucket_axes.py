@@ -21,7 +21,7 @@ from toy_event_physics import (  # noqa: E402
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--variant-limit", type=int, default=1168)
+    parser.add_argument("--variant-limit", type=int, default=5504)
     parser.add_argument("--rule-limit", type=int, default=12)
     return parser
 

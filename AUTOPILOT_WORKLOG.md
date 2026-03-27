@@ -32,6 +32,44 @@
 
 ### First concrete action
 - Inspect scripts that reconstruct bucket-local slices or parse rendered rule text in the `support_family_transfer` lane and add one more execution-backed guard where a helper/script semantic mismatch could still pass string-presence checks.
+## 2026-03-27 18:42 America/New_York
+
+### Current state
+- Continued the deep review thread and found one more stale-default issue in the active suppressor entrypoints.
+- The model helpers and script runners for the old mixed-bucket/residual-bucket path were still defaulting to the historical `1168` checkpoint even though the current frozen analysis surface is `5504`.
+- Normalized these active defaults to `5504` in:
+  - `/Users/jonreilly/Projects/Physics/toy_event_physics.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_mixed_bucket_axes.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_residual_bucket_rules.py`
+- Added a cheap audit guard so those active defaults cannot silently drift back to `1168`.
+- I also manually started the two no-arg script runs once to confirm they now enter the `5504` path, then stopped them after startup because they are much heavier at the frozen checkpoint and I did not want to leave unmanaged long jobs behind.
+
+### Strongest confirmed conclusion
+- The science interpretation did not change.
+- The active suppressor entrypoint defaults are now aligned with the repo’s current frozen `5504` checkpoint instead of an old intermediate rung.
+- Practical validation:
+  - `py_compile` passed on the touched helper/script files
+  - `benchmark_regression_audit.py` passed, including the new default-target guard
+  - the two no-arg runners now start on the `5504` path, but they are runtime-heavy enough that the cheap audit should remain the confidence gate for this default-normalization fix
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/toy_event_physics.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_mixed_bucket_axes.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_residual_bucket_rules.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+
+### Exact next step
+- Stay in deep review mode.
+- Review whether the older live latent-structure entrypoint should remain a historical live sampler or be redirected/clarified, since its defaults are still on an older representative ladder while the current compression-first science uses later frozen-frontier summaries.
+
+### First concrete action
+- Read:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_latent_structure.py`
+  - `/Users/jonreilly/Projects/Physics/toy_event_physics.py`
+  around `pocket_wrap_suppressor_latent_structure_analysis(...)`, then compare that live default path against the current frozen-frontier compression workflow.
+
 ## 2026-03-27 18:35 America/New_York
 
 ### Current state

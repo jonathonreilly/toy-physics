@@ -25,6 +25,8 @@ from toy_event_physics import (  # noqa: E402
     generated_geometry_predictor_comparison,
     mode_only_subset_frontier_rows,
     compact_route_map_summary,
+    pocket_wrap_suppressor_mixed_bucket_axis_analysis,
+    pocket_wrap_suppressor_residual_bucket_rows,
     predictor_family_comparison,
     procedural_geometry_variants,
     resolve_sparse_bridge_feature_names,
@@ -380,6 +382,31 @@ def check_low_overlap_variant_limit_parser_handles_renamed_logs() -> None:
     ), "low-overlap boundary parser regressed to filename-only variant-limit inference"
 
 
+def check_active_suppressor_defaults_target_frozen_5504() -> None:
+    boundary_source = inspect.getsource(pocket_wrap_suppressor_mixed_bucket_axis_analysis)
+    assert (
+        "variant_limit: int = 5504" in boundary_source
+    ), "mixed-bucket helper default regressed away from the frozen 5504 checkpoint"
+    residual_source = inspect.getsource(pocket_wrap_suppressor_residual_bucket_rows)
+    assert (
+        "variant_limit: int = 5504" in residual_source
+    ), "residual-bucket helper default regressed away from the frozen 5504 checkpoint"
+
+    mixed_script = (
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_mixed_bucket_axes.py"
+    ).read_text()
+    assert (
+        'default=5504' in mixed_script
+    ), "mixed-bucket runner default no longer points at the frozen 5504 checkpoint"
+
+    residual_script = (
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_residual_bucket_rules.py"
+    ).read_text()
+    assert (
+        'default=5504' in residual_script
+    ), "residual-bucket runner default no longer points at the frozen 5504 checkpoint"
+
+
 def main() -> None:
     print("benchmark regression audit: checking same-weight default", flush=True)
     check_same_weight_default()
@@ -403,6 +430,8 @@ def main() -> None:
     check_add4_exception_scan_rule_eval_consistency()
     print("benchmark regression audit: checking low-overlap variant-limit parser on renamed logs", flush=True)
     check_low_overlap_variant_limit_parser_handles_renamed_logs()
+    print("benchmark regression audit: checking active suppressor defaults target frozen 5504", flush=True)
+    check_active_suppressor_defaults_target_frozen_5504()
     print("benchmark regression audit: checking live mechanism split driver", flush=True)
     check_live_mechanism_split_driver()
     print("benchmark regression audit: ok", flush=True)

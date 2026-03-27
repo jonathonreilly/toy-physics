@@ -20001,7 +20001,7 @@ def _pocket_wrap_suppressor_mixed_bucket_predicates(
 
 
 def pocket_wrap_suppressor_mixed_bucket_axis_analysis(
-    variant_limit: int = 1168,
+    variant_limit: int = 5504,
     retained_weight: float = 1.0,
     mode_retained_weight: float | None = None,
     limit: int = 8,
@@ -20178,7 +20178,7 @@ def _pocket_wrap_suppressor_residual_bucket_predicates(
 
 
 def pocket_wrap_suppressor_residual_bucket_rows(
-    variant_limit: int = 1168,
+    variant_limit: int = 5504,
     retained_weight: float = 1.0,
     mode_retained_weight: float | None = None,
     coarse_signature: str = "cross=n|span=3+|low=L|pocket=H|overlap=1|rough=H",
@@ -20300,7 +20300,7 @@ def pocket_wrap_suppressor_residual_bucket_rule_rows(
 
 
 def pocket_wrap_suppressor_residual_bucket_analysis(
-    variant_limit: int = 1168,
+    variant_limit: int = 5504,
     retained_weight: float = 1.0,
     mode_retained_weight: float | None = None,
     coarse_signature: str = "cross=n|span=3+|low=L|pocket=H|overlap=1|rough=H",
