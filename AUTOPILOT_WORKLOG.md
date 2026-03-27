@@ -1,3 +1,40 @@
+## 2026-03-27 12:42 America/New_York
+
+### Current state
+- Reconciled protocol preflight in required order:
+  - read `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`.
+- Reconciled lock/git state before mutation:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` -> `free`.
+  - acquired worker lock: `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 2` -> `acquired`.
+  - git preflight showed `main...origin/main` with ahead/behind `0/0`.
+- Completed one bounded same-thread continuation on the frozen `5504` center-spine `00` hard core:
+  - added `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_branch_decomposition.py`
+  - ran it to produce `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-baseline-add1-branch-decomposition-5504.txt`.
+
+### Strongest confirmed conclusion
+- The broader baseline-covered add1 family does not close exactly under the seeded coarse basis (`edge_identity_closed_pair_count`, `support_role_bridge_count`) plus sparse branch-cell motifs.
+- On the baseline-covered add1 pool (`40` rows), the `(1, -2)` peer branch is `5` rows and the complement is `35` rows.
+- Using only support totals and non-target motif indicators (`(2, 1)`, `(4, 2)`, `(5, 0)`), the best predicates are partial (no exact separator):
+  - best peer-branch rule reaches only `2/5` true positives (`motif_count >= 1.5`) with one false positive
+  - support-total-only cuts are weaker (`edge_identity_closed_pair_count`/`support_role_bridge_count` each miss most peer rows)
+- Current best read: the zero-distance peer branch marker `(1, -2)` is real but broader baseline-side closure now needs richer support-layout topology or additional coordinates beyond these sparse seeds.
+
+### Files and results changed in this run
+- Repo-facing science/code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_branch_decomposition.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-baseline-add1-branch-decomposition-5504.txt`
+
+### Exact next step
+- Stay on the frozen `5504` center-spine `00` hard core.
+- Keep dense laddering paused.
+- Move from sparse motif checks to richer baseline-side support-layout topology for the broader baseline-covered add1 family.
+
+### First concrete action
+- Add one bounded baseline-covered add1 topology-residual pass that augments the current seed basis with support-edge layout signatures (e.g., bridge-bridge span/orientation bins or two-hop support motifs), then test whether any compact zero-FP closure appears for the `(1, -2)` peer branch.
+
 ## 2026-03-27 12:30 America/New_York
 
 ### Current state

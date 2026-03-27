@@ -347,6 +347,12 @@ So the current read is:
   - but a broader baseline-covered add1 scan shows this is only a local branch marker:
     - `pocket/deep cell (1, -2)` appears in only `5/40` baseline-covered add1 rows
     - so the `(1, -2)` motif is not the whole baseline-side law
+  - a bounded broader-family decomposition seeded by
+    - `edge_identity_closed_pair_count`
+    - `support_role_bridge_count`
+    - motif presence for `(2, 1)`, `(4, 2)`, `(5, 0)`
+    confirms that support totals plus this small motif set do **not** close the `(1, -2)` peer branch exactly (`5` peer rows vs `35` non-peers; best rules are partial, no exact separator)
+  - so the broader baseline-covered add1 side now appears to require richer support-layout topology (or additional coordinates) beyond these coarse totals and sparse branch-cell motifs
 - the remaining tight part is therefore no longer the rescue side; it is the broader baseline-covered add1 family beyond that zero-distance peer branch
 
 ### What the Current Mechanism Story Looks Like
