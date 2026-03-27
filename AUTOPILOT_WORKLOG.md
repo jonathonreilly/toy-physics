@@ -1,3 +1,61 @@
+## 2026-03-27 14:57 America/New_York
+
+### Current state
+- Checked worker/lock state before continuing:
+  - worker had left real local science progress on the same frozen `5504` thread
+  - that backlog was pushed first so remote matched the real current state
+  - no active Physics worker was running
+- Then manual continuation completed several bounded same-thread steps on the frozen `5504` center-spine `00` hard core.
+- Added:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_agnostic_local_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_agnostic_residual_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_agnostic_top_cell_generalization.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_band_scan.py`
+
+### Strongest confirmed conclusion
+- The broader baseline-covered add1 peer branch now has both an exact anchor-local law and an exact coarse-band translation.
+- Worker result that is now synced:
+  - exact anchor-local closure on the `40` baseline-covered add1 rows:
+    - `anchor_adj_bridge_count >= 3.500` (`5/5` TP, `0` FP)
+- Manual continuation then tested whether that law was really coordinate-agnostic:
+  - it is not
+  - `max_candidate_adj_bridge_count >= 6.500` hits all `40/40` baseline-covered add1 rows
+  - so dense candidate-local bridge neighborhoods are ubiquitous across this pool, not specific to the peer branch
+- But one bounded coarse-band scan *does* recover an exact non-anchor statement:
+  - `high_bridge_left_low_count >= 0.500` (`5/5` TP, `0` FP)
+  - complement: `high_bridge_left_low_count <= 0.500` (`35/35` non-peer TP, `0` FP)
+- Current best physical read:
+  - dense local bridge neighborhoods are common across the whole baseline-covered add1 pool
+  - the peer branch is the subset where that dense high-bridge local neighborhood appears in the left/lower candidate band
+
+### Files and results changed in this run
+- Repo-facing science/code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_agnostic_local_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_agnostic_residual_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_agnostic_top_cell_generalization.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_band_scan.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- New result logs:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-baseline-add1-coordinate-agnostic-local-scan-5504.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-baseline-add1-coordinate-agnostic-residual-scan-5504.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-baseline-add1-coordinate-agnostic-top-cell-generalization-5504.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-baseline-add1-coordinate-band-scan-5504.txt`
+
+### Exact next step
+- Stay on the frozen `5504` center-spine `00` hard core.
+- Keep dense laddering paused.
+- Treat the baseline-covered add1 peer branch as solved at the coarse-band level.
+- Move on to the remaining `35`-row non-peer baseline core and test whether it has a comparable small family decomposition.
+
+### First concrete action
+- Add one bounded non-peer baseline-core decomposition pass seeded by:
+  - `edge_identity_closed_pair_count`
+  - `support_role_bridge_count`
+  - `high_bridge_left_count`
+  - `high_bridge_mid_low_count`
+  - `high_bridge_right_center_count`
+
 ## 2026-03-27 14:41 America/New_York
 
 ### Current state

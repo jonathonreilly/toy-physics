@@ -360,7 +360,18 @@ So the current read is:
     - exact peer rule: `anchor_adj_bridge_count >= 3.500` (`5/5` TP, `0` FP)
     - equivalent complement: `anchor_adj_bridge_count <= 3.500` (`35/35` non-peer TP, `0` FP)
   - physical translation: the peer branch is exactly the subset where the `(1, -2)` anchor cell is coupled to a dense local bridge neighborhood (at least four adjacent bridge supports)
-  - this is a real closure upgrade for the broader baseline-covered add1 branch, though it still leaves open whether a coarser non-anchor law exists for the full low-overlap basin
+  - a bounded coordinate-agnostic local-neighborhood pass then shows this is **not** a generic “any dense local bridge cell” invariant:
+    - `max_candidate_adj_bridge_count >= 6.500` hits all `40/40` baseline-covered add1 rows
+    - so dense candidate-local bridge neighborhoods are ubiquitous across this pool, not specific to the peer branch
+  - but one more bounded coarse-band translation does recover an exact non-anchor statement for the peer branch:
+    - `high_bridge_left_low_count >= 0.500` (`5/5` TP, `0` FP)
+    - complement: `high_bridge_left_low_count <= 0.500` (`35/35` non-peer TP, `0` FP)
+  - so the broader baseline-covered add1 peer branch does compress beyond the fixed cell:
+    - not “any dense local bridge candidate”
+    - but “at least one dense high-bridge candidate in the left/lower band”
+  - current best physical read:
+    - broad baseline-covered add1 pool: dense local bridge neighborhoods are common
+    - peer branch: the same local bridge density appears in a specific left/lower candidate band
 - the remaining tight part is therefore no longer the rescue side; it is the broader baseline-covered add1 family beyond that zero-distance peer branch
 
 ### What the Current Mechanism Story Looks Like
