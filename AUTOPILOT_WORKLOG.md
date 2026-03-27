@@ -1,3 +1,37 @@
+## 2026-03-27 19:43 America/New_York
+
+### Current state
+- Continued the deep review thread on the frozen `5504` support-family transfer / baseline follow-on layer under the `physics-science` lock.
+- Completed one bounded integrity step on the immediate baseline follow-on surface:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_nonpeer_core_high_support_ml0_split.py` was still hard-coding residual-bucket threshold literals (`19.0`, `71.0`) in `_is_target_branch(...)`.
+- Repointed that script to shared helper constants from:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_common.py`
+- Extended the cheap audit so this follow-on script cannot silently regress to local threshold literals.
+
+### Strongest confirmed conclusion
+- Science conclusions did not change; this is another integrity cleanup.
+- The active support-family transfer lane now keeps residual-bucket threshold definitions shared not only in transfer/reconstruction helpers but also in the high-support ml0 split follow-on.
+- This closes one more threshold-drift seam in the frozen-frontier `5504` transfer stack.
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_nonpeer_core_high_support_ml0_split.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- Validation:
+  - `python3 -m py_compile` on touched scripts passed.
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py` passed (`benchmark regression audit: ok`).
+
+### Exact next step
+- Stay in deep review mode on the frozen-frontier transfer / baseline follow-on layer.
+- Continue searching immediate follow-on scripts for duplicated bucket-bin logic (`_mid_low_bin` / `_cell_bin`) that should use shared helper surfaces.
+
+### First concrete action
+- Inspect:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_nonpeer_core_buckets.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_nonpeer_core_family_rules.py`
+- Then compare their local bucket-key builders against the shared transfer helper key functions.
+
 ## 2026-03-27 23:48 America/New_York
 
 ### Current state

@@ -469,6 +469,18 @@ def check_primary_support_family_buckets_shared() -> None:
     assert (
         ">= 19.0" not in residual_text and ">= 71.0" not in residual_text
     ), "baseline non-peer residual follow-on regressed to hard-coded residual bucket thresholds"
+    high_support_text = (
+        REPO_ROOT
+        / "scripts"
+        / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_nonpeer_core_high_support_ml0_split.py"
+    ).read_text()
+    assert (
+        "SUPPORT_ROLE_BRIDGE_HIGH_THRESHOLD" in high_support_text
+        and "EDGE_IDENTITY_CLOSED_PAIR_HIGH_THRESHOLD" in high_support_text
+    ), "high-support ml0 split no longer uses shared residual-bucket thresholds"
+    assert (
+        ">= 19.0" not in high_support_text and ">= 71.0" not in high_support_text
+    ), "high-support ml0 split regressed to hard-coded residual bucket thresholds"
 
 
 def main() -> None:

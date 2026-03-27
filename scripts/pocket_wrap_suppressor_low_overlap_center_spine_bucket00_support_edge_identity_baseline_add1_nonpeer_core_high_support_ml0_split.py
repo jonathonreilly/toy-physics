@@ -30,6 +30,10 @@ from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_topology i
 from pocket_wrap_suppressor_low_overlap_center_spine_hardest_bucket_rules import (  # noqa: E402
     load_bucket_rows,
 )
+from pocket_wrap_suppressor_low_overlap_support_family_transfer_common import (  # noqa: E402
+    EDGE_IDENTITY_CLOSED_PAIR_HIGH_THRESHOLD,
+    SUPPORT_ROLE_BRIDGE_HIGH_THRESHOLD,
+)
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -56,8 +60,8 @@ def _is_target_branch(row: object) -> bool:
         getattr(row, "subtype") == "non_peer"
         and float(getattr(row, "high_bridge_right_center_count")) <= 0.5
         and float(getattr(row, "high_bridge_mid_low_count")) <= 0.5
-        and float(getattr(row, "support_role_bridge_count")) >= 19.0
-        and float(getattr(row, "edge_identity_closed_pair_count")) >= 71.0
+        and float(getattr(row, "support_role_bridge_count")) >= SUPPORT_ROLE_BRIDGE_HIGH_THRESHOLD
+        and float(getattr(row, "edge_identity_closed_pair_count")) >= EDGE_IDENTITY_CLOSED_PAIR_HIGH_THRESHOLD
         and float(getattr(row, "high_bridge_cell_count")) >= 3.0
     )
 
