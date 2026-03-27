@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Probe the non-pocket suppressor frontier for latent structure, not just new rows."""
+"""Historical live latent-structure sampler for representative non-pocket checkpoints."""
 
 from __future__ import annotations
 
@@ -14,6 +14,7 @@ if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
 from toy_event_physics import (  # noqa: E402
+    POCKET_WRAP_SUPPRESSOR_HISTORICAL_LIVE_VARIANT_LIMITS,
     pocket_wrap_suppressor_latent_structure_analysis,
     render_pocket_wrap_suppressor_novelty_table,
     render_pocket_wrap_suppressor_order_parameter_table,
@@ -30,8 +31,29 @@ def parse_variant_limits(text: str) -> tuple[int, ...]:
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--variant-limits", default="480,672,912,1104")
+    parser = argparse.ArgumentParser(
+        description=(
+            "Run the historical live latent-structure sampler over representative "
+            "non-pocket suppressor checkpoints."
+        ),
+        epilog=(
+            "This runner is a live historical sampler, not the canonical frozen-frontier "
+            "compression workflow. For the current compression-first analysis use "
+            "/Users/jonreilly/Projects/Physics/scripts/"
+            "pocket_wrap_suppressor_frontier_compression.py."
+        ),
+    )
+    parser.add_argument(
+        "--variant-limits",
+        default=",".join(
+            str(limit) for limit in POCKET_WRAP_SUPPRESSOR_HISTORICAL_LIVE_VARIANT_LIMITS
+        ),
+        help=(
+            "Representative live checkpoints to sample. The canonical current "
+            "frozen-frontier compression workflow lives in "
+            "scripts/pocket_wrap_suppressor_frontier_compression.py."
+        ),
+    )
     parser.add_argument("--novelty-limit", type=int, default=24)
     parser.add_argument("--order-limit", type=int, default=5)
     return parser
@@ -42,6 +64,13 @@ def main() -> None:
     variant_limits = parse_variant_limits(args.variant_limits)
     started = datetime.now().isoformat(timespec="seconds")
     print(f"pocket-wrap suppressor latent-structure started {started}", flush=True)
+    print(
+        "mode=historical-live-sampler "
+        "canonical_frozen_workflow="
+        "/Users/jonreilly/Projects/Physics/scripts/"
+        "pocket_wrap_suppressor_frontier_compression.py",
+        flush=True,
+    )
     total_start = time.time()
 
     trajectory_rows, novelty_rows, signature_rows, pair_rows, tree_rows = (

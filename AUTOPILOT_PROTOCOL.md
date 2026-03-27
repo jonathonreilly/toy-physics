@@ -43,6 +43,7 @@ This file is the stable operating protocol for the hourly science automation.
    - boundary or residual-bucket closure on already completed frontier tables
    - translation of current rules into coarser physical language
    - sparse sentinels only as guardrails at wide jumps or after a real rule-family change
+   - for the non-pocket suppressor compression-first thread, treat `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_frontier_compression.py` as the canonical current entrypoint and use `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_latent_structure.py` only as a historical live sampler or helper sanity check
 4. Do exactly one bounded science or integrity step by default.
 5. A second step is allowed only if:
    - the first step finished cleanly,

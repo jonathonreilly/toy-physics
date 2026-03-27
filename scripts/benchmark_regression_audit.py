@@ -15,6 +15,7 @@ if str(REPO_ROOT) not in sys.path:
 
 from toy_event_physics import (  # noqa: E402
     ExtendedAtomicRouteOverlapRow,
+    POCKET_WRAP_SUPPRESSOR_HISTORICAL_LIVE_VARIANT_LIMITS,
     _named_overlap_row,
     build_cross_dataset_prediction_context,
     build_generated_geometry_prediction_context,
@@ -26,6 +27,7 @@ from toy_event_physics import (  # noqa: E402
     mode_only_subset_frontier_rows,
     compact_route_map_summary,
     pocket_wrap_suppressor_mixed_bucket_axis_analysis,
+    pocket_wrap_suppressor_latent_structure_analysis,
     pocket_wrap_suppressor_residual_bucket_rows,
     predictor_family_comparison,
     procedural_geometry_variants,
@@ -407,6 +409,26 @@ def check_active_suppressor_defaults_target_frozen_5504() -> None:
     ), "residual-bucket runner default no longer points at the frozen 5504 checkpoint"
 
 
+def check_latent_structure_entrypoint_is_historical_live_sampler() -> None:
+    helper_source = inspect.getsource(pocket_wrap_suppressor_latent_structure_analysis)
+    assert (
+        POCKET_WRAP_SUPPRESSOR_HISTORICAL_LIVE_VARIANT_LIMITS == (512, 672, 912, 1168)
+    ), "historical live latent-structure checkpoints drifted from the intended representative sample"
+    assert (
+        "POCKET_WRAP_SUPPRESSOR_HISTORICAL_LIVE_VARIANT_LIMITS" in helper_source
+    ), "latent-structure helper no longer uses the shared historical live sample constant"
+
+    latent_script = (
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_latent_structure.py"
+    ).read_text()
+    assert (
+        "historical live latent-structure sampler" in latent_script
+    ), "latent-structure runner no longer identifies itself as a historical live sampler"
+    assert (
+        "pocket_wrap_suppressor_frontier_compression.py" in latent_script
+    ), "latent-structure runner no longer points to the canonical frozen-frontier compression workflow"
+
+
 def main() -> None:
     print("benchmark regression audit: checking same-weight default", flush=True)
     check_same_weight_default()
@@ -432,6 +454,8 @@ def main() -> None:
     check_low_overlap_variant_limit_parser_handles_renamed_logs()
     print("benchmark regression audit: checking active suppressor defaults target frozen 5504", flush=True)
     check_active_suppressor_defaults_target_frozen_5504()
+    print("benchmark regression audit: checking latent-structure entrypoint role", flush=True)
+    check_latent_structure_entrypoint_is_historical_live_sampler()
     print("benchmark regression audit: checking live mechanism split driver", flush=True)
     check_live_mechanism_split_driver()
     print("benchmark regression audit: ok", flush=True)

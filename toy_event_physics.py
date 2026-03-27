@@ -19774,8 +19774,14 @@ def _pocket_wrap_suppressor_best_small_trees(
     return results[:limit]
 
 
+# Historical live sampler checkpoints for representative latent-structure runs.
+# The current canonical compression-first workflow is log-backed from frozen frontier
+# checkpoints and lives in scripts/pocket_wrap_suppressor_frontier_compression.py.
+POCKET_WRAP_SUPPRESSOR_HISTORICAL_LIVE_VARIANT_LIMITS = (512, 672, 912, 1168)
+
+
 def pocket_wrap_suppressor_latent_structure_analysis(
-    variant_limits: tuple[int, ...] = (480, 672, 912, 1104),
+    variant_limits: tuple[int, ...] = POCKET_WRAP_SUPPRESSOR_HISTORICAL_LIVE_VARIANT_LIMITS,
     retained_weight: float = 1.0,
     mode_retained_weight: float | None = None,
 ) -> tuple[

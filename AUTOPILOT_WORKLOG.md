@@ -1,3 +1,40 @@
+## 2026-03-27 23:07 America/New_York
+
+### Current state
+- Continued the deep review thread from the stable frozen `5504` checkpoint after reconciling git and worker state under the manual lock.
+- Fixed one more stale-entrypoint issue in the suppressor latent-compression layer:
+  - the older live latent-structure runner and helper were still defaulting to the older `480,672,912,1104` representative sample
+  - but the repo’s current canonical compression-first workflow is now the frozen-frontier log-backed path
+- Normalized the live sampler to the later completed representative sample `512,672,912,1168`, made its role explicit, and pointed it at the canonical frozen-frontier runner in:
+  - `/Users/jonreilly/Projects/Physics/toy_event_physics.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_latent_structure.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_PROTOCOL.md`
+- Added a cheap audit guard so the live latent-structure entrypoint cannot silently drift back into pretending it is the canonical frozen-frontier workflow.
+
+### Strongest confirmed conclusion
+- Science conclusions did not change; this is a review/integrity cleanup.
+- The suppressor compression-first workflow is now explicit:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_frontier_compression.py` is the canonical current frozen-frontier entrypoint
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_latent_structure.py` is a historical live sampler with the later representative sample `512,672,912,1168`
+- That closes one more stale-path ambiguity in the frozen-frontier review surface.
+
+### Files and results changed in this run
+- Repo-facing code/docs:
+  - `/Users/jonreilly/Projects/Physics/toy_event_physics.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_latent_structure.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_PROTOCOL.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+
+### Exact next step
+- Stay in deep review mode on the frozen-frontier suppressor summary/render layer.
+- Review whether any remaining active entrypoints or summary helpers still describe old intermediate checkpoints as if they were canonical current workflow.
+
+### First concrete action
+- Search the frozen-frontier suppressor runner surface for older “representative” / “current” wording and compare each remaining live entrypoint against the now-explicit frontier-compression path.
+
 ## 2026-03-27 17:41 America/New_York
 
 ### Current state

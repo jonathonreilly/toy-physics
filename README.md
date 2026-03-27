@@ -165,6 +165,19 @@ For the deeper helper-backed verification pass:
 python3 /Users/jonreilly/Projects/Physics/scripts/base_confidence_check.py --full
 ```
 
+For the current frozen-frontier compression-first suppressor workflow:
+
+```bash
+python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_frontier_compression.py
+```
+
+The older live latent-structure runner is still available, but it is now treated as a
+historical representative sampler rather than the canonical current workflow:
+
+```bash
+python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_latent_structure.py
+```
+
 ### What the Strongest Current Results Are
 
 #### 1. Gravity-like continuation survives the benchmark cleanup
