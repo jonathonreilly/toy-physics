@@ -1,3 +1,47 @@
+## 2026-03-26 23:42 America/New_York
+
+### Current state
+- Reconciled protocol preflight in required order:
+  - read `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`.
+- Reconciled lock/git state before mutation:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` -> `free`.
+  - git preflight showed `main...origin/main [ahead 3]`.
+  - required push reconcile before new science failed with transient DNS via helper:
+    - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+    - failure: `Could not resolve host: github.com`.
+  - acquired worker lock: `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 2` -> `acquired`.
+- Completed one bounded same-thread continuation on the frozen `5504` low-overlap center-spine `00` hard core:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_pair_deltas.py`
+
+### Strongest confirmed conclusion
+- Nearest-opposite matched pair-delta support motifs add interpretable structure but still do **not** close the dominant `00` center-spine hard core.
+- Best compact rows on this family are:
+  - add4-side best: `43/45` with `tp/fp/fn = 1/0/2`
+    - `delta_support_degree_mean >= 0.505`.
+  - add4-side near-tie: `42/45` with `tp/fp/fn = 1/1/2`
+    - `pair_distance_z <= 0.952 and pair_selected_event_present_count <= 4.500`.
+  - strongest zero-FP add4 row remains `41/45` with `0/1/3`
+    - `abs_delta_support_degree_mean <= 0.011`.
+  - add1-side best: `40/45` with `tp/fp/fn = 37/0/5`
+    - `pair_selected_event_present_count >= 4.500`.
+- Nearest-opposite anchors stay the same close triplet for add4 rows (`0.508`, `0.938`, `1.550`), and selected signed-delta motifs are dominated by small `count_bridge_p2_d*` and local `pocket_only` offset swaps.
+- So the residual separator tightens again: pair-conditioned nearest-opposite motif deltas add signal but still do not isolate the three add4 exceptions; the likely missing class is higher-order matched interaction context (for example two-hop support/candidate motif-cooccurrence deltas) rather than additional scalar recombination over current delta summaries.
+
+### Files and results changed in this run
+- Repo-facing science/code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_pair_deltas.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-pair-deltas-5504-add1-vs-add4.txt`
+
+### Exact next step
+- Stay on the frozen `5504` center-spine `00` hard core.
+- Move from single signed motif deltas to higher-order matched interaction context (two-hop support/candidate motif-cooccurrence deltas) between each add4 row and its nearest add1 neighbor.
+
+### First concrete action
+- Add one bounded `00`-bucket analyzer that materializes nearest-opposite two-hop support/candidate cooccurrence-delta features and reruns compact rule search to test whether those higher-order deltas isolate the remaining three add4 exceptions beyond the current `43/45` frontier.
+
 ## 2026-03-26 22:40 America/New_York
 
 ### Current state
