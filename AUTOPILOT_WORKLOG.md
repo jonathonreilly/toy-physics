@@ -1,3 +1,42 @@
+## 2026-03-27 04:40 America/New_York
+
+### Current state
+- Reconciled protocol preflight in required order:
+  - read `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`.
+- Reconciled lock/git state before mutation:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` -> `free`.
+  - acquired worker lock: `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 2` -> `acquired`.
+  - git preflight showed `main...origin/main [ahead 8]` and clean tree.
+- Required push-before-science reconcile attempted via helper and failed with transient DNS:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - result: `failure_kind=dns_failure`, `Could not resolve host: github.com`.
+- Completed one bounded same-thread continuation on the frozen `5504` low-overlap center-spine `00` hard core:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_add1_residual_closure.py`
+
+### Strongest confirmed conclusion
+- Exception-local add1 residual closure now succeeds on the same nearest-opposite edge-identity family.
+- Baseline add1 zero-FP rule remains:
+  - `delta_edge_identity_support_edge_density <= 0.018` with `tp/fp/fn = 40/0/2` (`43/45`).
+- A single bounded rescue clause closes both misses without add4 leakage:
+  - `pair_distance_z >= 1.554` (equivalently `abs_delta_edge_identity_open_pair_count <= 22.500`).
+  - Combined disjunction (`baseline OR rescue`) yields add1 exact closure `tp/fp/fn = 42/0/0` (`45/45` overall).
+- So the dominant center-spine `00` hard core now has a compact symmetric closure in the current physical language.
+
+### Files and results changed in this run
+- Repo-facing science/code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_add1_residual_closure.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-add1-residual-closure-5504-add1-vs-add4.txt`
+
+### Exact next step
+- Stay on the frozen `5504` center-spine `00` hard core.
+- Translate the exact disjunction into a compact physical-language rule card and verify equivalent threshold variants remain stable under bounded predicate windows.
+
+### First concrete action
+- Add one small translation helper that emits a normalized two-clause rule card for the exact add1 closure (`density baseline + distance/open-pair rescue`) and runs a bounded threshold-equivalence check over neighboring cutpoints.
+
 ## 2026-03-27 03:40 America/New_York
 
 ### Current state
