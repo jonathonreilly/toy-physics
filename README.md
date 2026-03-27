@@ -395,6 +395,38 @@ So the current read is:
     - two dominant non-peer families
     - a few small satellite branches
 - the remaining tight part is therefore no longer “what are the baseline add1 families?”; it is whether this now-solved baseline family map transfers into the broader low-overlap basin
+  - a bounded transfer pass on the frozen `5504` low-overlap rows now says “yes, mostly” at the family level:
+    - all three low-overlap subtypes (`add1`, `add4`, `pair-only`) occupy the same two dominant support buckets:
+      - `rc0|ml0|c2`
+      - `rc0|ml1|c3`
+    - they also all appear in the same left/lower `peer-band` (`high_bridge_left_low_count >= 0.500`)
+    - shared primary-bucket occupancy is substantial, not anecdotal:
+      - `rc0|ml0|c2`: `15` add1, `8` add4, `9` pair-only
+      - `rc0|ml1|c3`: `12` add1, `9` add4, `7` pair-only
+    - so the solved add1 map does transfer at the coarse support-family level; the low-overlap subtypes are not living in disjoint support-bucket worlds
+  - what does **not** transfer is a tiny exact subtype rule inside those shared buckets:
+    - `rc0|ml0|c2` remains mixed, with only partial subtype rules
+    - `rc0|ml1|c3` remains mixed, with only partial subtype rules
+    - a few subtype-exclusive satellites exist, but they are small and no longer look like the main scientific object
+  - the current physical read is therefore:
+    - the coarse support-family map is shared across low-overlap subtypes
+    - subtype identity now lives in how those shared buckets are populated internally
+    - the next missing signal is bucket-local support-layout / topology, not a brand-new global family axis
+  - bucket-local profile summaries already show distinct internal loading patterns:
+    - in `rc0|ml0|c2`, add4 is more mid-loaded, add1 is more left-loaded, and pair-only is the lower-support branch
+    - in `rc0|ml1|c3`, add4 is the strongest mid-loaded subtype, add1 keeps the stronger left-loading, and pair-only is the higher-support / more right-loaded branch
+  - one bounded bucket-local topology pass on the largest mixed shared bucket (`rc0|ml0|c2`) sharpens that read further:
+    - add1 improves when support-edge density is low and left-loading is retained:
+      - `edge_identity_support_edge_density <= 0.188 and high_bridge_left_count >= 0.500` (`12/15` TP, `2` FP)
+    - pair-only improves when support is lower and the local edge-identity structure stays more open:
+      - `edge_identity_open_pair_count <= 62.500 and support_role_bridge_count <= 14.500` (`6/9` TP, `2` FP)
+    - add4 remains the hardest branch there, but the best partial rules are now clearly the more mid-loaded / more internally closed rows:
+      - `edge_identity_closed_pair_count >= 57.500 and high_bridge_mid_count >= 0.500`
+      - or equivalently high closed-pair ratio plus mid-loading
+    - so even inside the biggest shared bucket, subtype drift is already physical:
+      - add1: left-loaded, lower-density branch
+      - add4: mid-loaded, more closed-support branch
+      - pair-only: lower-support, more open-support branch
 
 ### What the Current Mechanism Story Looks Like
 
@@ -402,8 +434,9 @@ At the highest level:
 
 - `both-sensitive` is the compact loaded high-overlap family
 - `add1`, `add4`, and `pair-only` share a lower-overlap boundary basin
+- that lower-overlap basin also shares a coarse support-family map, not just a vague phenomenological label
 - the visible boundary/profile variables are informative, but not sufficient to regenerate that low-overlap basin with a tiny exact rule family
-- inside that low-overlap basin, the hard center-spine residual is now narrowed to a tiny frozen core whose missing signal looks increasingly like support-cell identity or candidate-topology interaction
+- inside that low-overlap basin, the remaining unresolved structure now sits mostly inside shared primary support buckets, where the missing signal looks increasingly like bucket-local support-layout or candidate-topology interaction
 
 That is the most honest current summary:
 

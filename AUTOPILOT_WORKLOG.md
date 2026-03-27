@@ -1,3 +1,71 @@
+## 2026-03-27 16:06 America/New_York
+
+### Current state
+- Checked worker/lock state before continuing:
+  - repo was synced
+  - no active Physics science child was running
+  - a fresh manual lock was acquired for this continuation
+- Added a reusable frozen-row transfer helper:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_common.py`
+- Then ran several bounded same-thread transfer steps on the frozen `5504` low-overlap rows:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_bucket_rules.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_satellites.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_primary_bucket_profiles.py`
+
+### Strongest confirmed conclusion
+- The solved baseline-covered add1 family map does transfer into the broader frozen `5504` low-overlap basin at the coarse support-family level.
+- All three low-overlap subtypes (`add1`, `add4`, `pair-only`) occupy the same main support buckets:
+  - `rc0|ml0|c2`
+  - `rc0|ml1|c3`
+- They also all appear in the same left/lower `peer-band`:
+  - `high_bridge_left_low_count >= 0.500`
+- Shared primary-bucket occupancy is substantial:
+  - `rc0|ml0|c2`: `15` add1, `8` add4, `9` pair-only
+  - `rc0|ml1|c3`: `12` add1, `9` add4, `7` pair-only
+- So the main transfer answer is now:
+  - yes, the family map transfers
+  - no, subtype identity does not collapse to a tiny exact rule **inside** those shared buckets
+- The remaining divergence now lives inside shared primary buckets, not in subtype-exclusive branches.
+- Bucket-local profile summaries already show the internal drift:
+  - `rc0|ml0|c2`: add4 is more mid-loaded, add1 is more left-loaded, pair-only is the lower-support branch
+  - `rc0|ml1|c3`: add4 is the strongest mid-loaded subtype, add1 keeps the stronger left-loading, pair-only is the higher-support / more right-loaded branch
+- One bounded bucket-local topology scan on the largest mixed shared bucket (`rc0|ml0|c2`) now sharpens that drift:
+  - add1 improves when support-edge density is low and left-loading is retained:
+    - `edge_identity_support_edge_density <= 0.188 and high_bridge_left_count >= 0.500`
+  - pair-only improves when support is lower and the local edge-identity layout stays more open:
+    - `edge_identity_open_pair_count <= 62.500 and support_role_bridge_count <= 14.500`
+  - add4 is still the hardest branch there, but its best partial rules are now clearly the more mid-loaded / more internally closed rows:
+    - `edge_identity_closed_pair_count >= 57.500 and high_bridge_mid_count >= 0.500`
+- So the next unresolved structure is no longer “does the family map transfer?”; it is “can the shared-bucket subtype drift be closed by richer bucket-local support-layout topology?”
+
+### Files and results changed in this run
+- Repo-facing science/code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_common.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_bucket_rules.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_satellites.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_primary_bucket_profiles.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- New result logs:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-support-family-transfer-scan-5504.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-support-family-transfer-bucket-rules-5504.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-support-family-transfer-satellites-5504.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-support-family-transfer-primary-bucket-profiles-5504.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-support-family-transfer-rc0-ml0-c2-topology-scan-5504.txt`
+
+### Exact next step
+- Stay on the frozen `5504` low-overlap basin.
+- Treat global family transfer as answered at the coarse support-bucket level.
+- Move to the largest mixed shared bucket first:
+  - `rc0|ml0|c2`
+- Keep `rc0|ml0|c2` as the active mixed bucket.
+- Move beyond scalar edge-density/open-ratio summaries and test richer bucket-local support-layout / topology features there.
+
+### First concrete action
+- Add one bounded `rc0|ml0|c2` continuation that augments the current topology scan with richer support-edge layout summaries or candidate/support interaction motifs, then test whether add4 can be separated more cleanly than the current partial mid-loaded/closed-support rules.
+
 ## 2026-03-27 15:47 America/New_York
 
 ### Current state
