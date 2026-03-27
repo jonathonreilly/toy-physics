@@ -1,3 +1,40 @@
+## 2026-03-27 13:41 America/New_York
+
+### Current state
+- Reconciled protocol preflight in required order:
+  - read `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`.
+- Reconciled lock/git state before mutation:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` -> `free`.
+  - acquired worker lock: `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 2` -> `acquired`.
+  - git preflight showed `main...origin/main` ahead by `1`.
+  - pre-step helper push attempt failed with transient DNS resolution (`failure_kind=dns_failure`, host `github.com`), so run continued with one bounded same-thread science step.
+- Completed one bounded same-thread continuation on the frozen `5504` center-spine `00` hard core:
+  - added `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_topology_residual_scan.py`
+  - ran it to produce `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-baseline-add1-topology-residual-scan-5504.txt`.
+
+### Strongest confirmed conclusion
+- The broader baseline-covered add1 `(1, -2)` peer branch still has no exact closure under a richer bounded support-layout topology basis.
+- On the same `40` baseline-covered add1 rows (`5` peer vs `35` non-peer), adding bridge-degree bins plus support-edge span/orientation bins (including bridge-bridge-only variants) leaves the best peer rule partial (`2/5` TP with `1` FP) and no exact separator appears.
+- The newly tested coarse layout bins are mostly collapsed across this pool (`span>=4` and `skew` support-edge counts stay `0`), so these signatures do not supply the missing discriminator.
+- Current best read: the peer marker `(1, -2)` is still real but broader baseline-side closure needs finer topology coordinates than support totals + sparse motifs + coarse span/orientation bins.
+
+### Files and results changed in this run
+- Repo-facing science/code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_topology_residual_scan.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-baseline-add1-topology-residual-scan-5504.txt`
+
+### Exact next step
+- Stay on the frozen `5504` center-spine `00` hard core.
+- Keep dense laddering paused.
+- Preserve sparse sentinels as guardrails only.
+- Probe finer baseline-side support topology descriptors beyond coarse span/orientation bins (for example candidate-anchored edge-identity subevents or local two-hop bridge motifs).
+
+### First concrete action
+- Add one bounded candidate-anchored local-topology residual pass over the same baseline-covered add1 pool, then retest compact zero-FP closure for the `(1, -2)` peer branch.
+
 ## 2026-03-27 12:42 America/New_York
 
 ### Current state

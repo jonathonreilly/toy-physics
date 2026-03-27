@@ -352,6 +352,9 @@ So the current read is:
     - `support_role_bridge_count`
     - motif presence for `(2, 1)`, `(4, 2)`, `(5, 0)`
     confirms that support totals plus this small motif set do **not** close the `(1, -2)` peer branch exactly (`5` peer rows vs `35` non-peers; best rules are partial, no exact separator)
+  - a bounded topology-residual follow-up added support-layout signatures (bridge-degree bins plus support-edge span/orientation bins, including bridge-bridge-only variants) on the same `40` baseline-covered add1 rows
+  - this richer layout basis still gives no exact `(1, -2)` peer-branch closure (best remains partial at `2/5` true positives with one false positive)
+  - measured span/orientation coordinates are largely collapsed across this pool (`span>=4` and `skew` support-edge bins are all `0`), so these coarse topology bins do not provide the missing discriminator
   - so the broader baseline-covered add1 side now appears to require richer support-layout topology (or additional coordinates) beyond these coarse totals and sparse branch-cell motifs
 - the remaining tight part is therefore no longer the rescue side; it is the broader baseline-covered add1 family beyond that zero-distance peer branch
 
