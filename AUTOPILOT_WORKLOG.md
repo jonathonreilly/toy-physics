@@ -1,3 +1,45 @@
+## 2026-03-26 21:45 America/New_York
+
+### Current state
+- Reconciled protocol preflight in required order:
+  - read `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`.
+- Reconciled lock/git state before mutation:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` -> `free`.
+  - acquired worker lock: `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 2` -> `acquired`.
+  - git preflight showed `main...origin/main [ahead 1]`.
+  - required push reconcile before new science failed with transient DNS via helper:
+    - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+    - failure: `Could not resolve host: github.com`.
+- Completed one bounded same-thread continuation on the frozen `5504` low-overlap center-spine `00` hard core:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_pair_context.py`
+
+### Strongest confirmed conclusion
+- Oriented support-pair and candidate-anchored support-subgraph context adds bounded structure but still does **not** close the dominant `00` center-spine hard core.
+- Best compact rows on this new family are:
+  - add4-side best: `42/45` with `tp/fp/fn = 1/1/2`
+    - `candidate_shared_edge_fraction <= 0.684`
+  - strongest zero-FP add4 rows remain at `41/45` with `0/1/3`.
+  - add1-side best: `20/45` with `tp/fp/fn = 17/0/25`
+    - `candidate_support_edge_mean >= 9.708`
+- Nearest-neighbor oriented support-pair deltas remain narrow and mostly positional:
+  - each add4 row differs from nearest add1 neighbors by one or a few oriented bridge-bridge events with shifted anchor coordinates.
+- So the residual separator tightens again: oriented support-pair/subgraph context is informative but still too coarse to isolate the three add4 exceptions; the likely missing class is finer role-conditioned support-cell identity tied to specific candidate layouts.
+
+### Files and results changed in this run
+- Repo-facing science/code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_pair_context.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-pair-context-5504-add1-vs-add4.txt`
+
+### Exact next step
+- Stay on the frozen `5504` center-spine `00` hard core.
+- Move from coarse oriented-pair summaries to role-conditioned support-cell identity anchored to matched candidate layouts for the three add4 exceptions versus nearest add1 neighbors.
+
+### First concrete action
+- Add a bounded `00`-bucket analyzer that keys support-cell identity by `(role, local anchor cell, adjacent candidate-family pattern)` and tests whether those identity-conditioned motifs isolate the add4 exception rows beyond the current `42/45` frontier.
+
 ## 2026-03-26 20:43 America/New_York
 
 ### Current state
