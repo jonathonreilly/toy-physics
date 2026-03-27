@@ -1,3 +1,37 @@
+## 2026-03-27 17:41 America/New_York
+
+### Current state
+- Resumed the deep review thread from the stable frozen `5504` checkpoint after protocol preflight, lock acquisition, and git reconciliation (`ahead 0 / behind 0`).
+- Completed one bounded integrity step on the active low-overlap transfer review surface:
+  - strengthened `/Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py` with an execution-backed consistency check for the add4 exception scan path
+- The new check now verifies that applying the live top add4 `rule_text` through the exception scan matcher reproduces the same `tp/fp/fn` confusion counts reported by `evaluate_rules(...)`.
+- Ran the full audit after the change:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py`
+  - result: `benchmark regression audit: ok`
+
+### Strongest confirmed conclusion
+- Science conclusions did not change; this is an integrity hardening step.
+- The add4 exception scan is now guarded at two levels:
+  - it derives the current best rule from the live helper path
+  - and the audit now enforces that rule-text evaluation semantics stay consistent with the helper’s confusion counts
+- This closes a remaining drift surface where parser/evaluator semantics could diverge silently even when both were still “live”.
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- Runtime state docs:
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- Verification:
+  - full `benchmark_regression_audit.py` run passed after patch
+
+### Exact next step
+- Stay in deep review mode on the same low-overlap transfer helper surface.
+- Continue searching for stale reconstruction/rendering assumptions that can drift away from live helper semantics without tripping current guards.
+
+### First concrete action
+- Inspect scripts that reconstruct bucket-local slices or parse rendered rule text in the `support_family_transfer` lane and add one more execution-backed guard where a helper/script semantic mismatch could still pass string-presence checks.
 ## 2026-03-27 17:33 America/New_York
 
 ### Current state

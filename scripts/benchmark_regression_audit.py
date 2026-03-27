@@ -33,6 +33,14 @@ from toy_event_physics import (  # noqa: E402
 from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_add1_selector import (  # noqa: E402
     edge_identity_signature,
 )
+from pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_add4_exception_scan import (  # noqa: E402
+    FEATURE_NAMES as ADD4_EXCEPTION_FEATURE_NAMES,
+    _matches_rule_text as add4_exception_matches_rule_text,
+    build_bucket_rows as build_add4_exception_rows,
+)
+from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_topology import (  # noqa: E402
+    evaluate_rules as evaluate_support_topology_rules,
+)
 
 
 def context_signature(
@@ -311,6 +319,47 @@ def check_add4_exception_scan_uses_live_rule() -> None:
     ), "add4 exception scan still contains the stale hard-coded rule path"
 
 
+def check_add4_exception_scan_rule_eval_consistency() -> None:
+    rows = build_add4_exception_rows(
+        Path(
+            "/Users/jonreilly/Projects/Physics/logs/"
+            "2026-03-26-pocket-wrap-suppressor-nonpocket-subtype-rules-5504-max5600.txt"
+        )
+    )
+    rules = evaluate_support_topology_rules(
+        rows,
+        target_subtype="add4-sensitive",
+        feature_names=ADD4_EXCEPTION_FEATURE_NAMES,
+        predicate_limit=22,
+        max_terms=3,
+        row_limit=1,
+    )
+    assert rules, "add4 exception scan produced no live add4 rules"
+    top = rules[0]
+
+    tp = sum(
+        1
+        for row in rows
+        if getattr(row, "subtype") == "add4-sensitive"
+        and add4_exception_matches_rule_text(row, top.rule_text)
+    )
+    fp = sum(
+        1
+        for row in rows
+        if getattr(row, "subtype") != "add4-sensitive"
+        and add4_exception_matches_rule_text(row, top.rule_text)
+    )
+    fn = sum(
+        1
+        for row in rows
+        if getattr(row, "subtype") == "add4-sensitive"
+        and not add4_exception_matches_rule_text(row, top.rule_text)
+    )
+    assert (
+        tp == top.tp and fp == top.fp and fn == top.fn
+    ), "add4 exception rule-text matcher diverged from evaluate_rules confusion counts"
+
+
 def main() -> None:
     print("benchmark regression audit: checking same-weight default", flush=True)
     check_same_weight_default()
@@ -330,6 +379,8 @@ def main() -> None:
     check_edge_identity_candidate_fraction_bounds()
     print("benchmark regression audit: checking add4 exception scan live-rule path", flush=True)
     check_add4_exception_scan_uses_live_rule()
+    print("benchmark regression audit: checking add4 exception rule-eval consistency", flush=True)
+    check_add4_exception_scan_rule_eval_consistency()
     print("benchmark regression audit: checking live mechanism split driver", flush=True)
     check_live_mechanism_split_driver()
     print("benchmark regression audit: ok", flush=True)
