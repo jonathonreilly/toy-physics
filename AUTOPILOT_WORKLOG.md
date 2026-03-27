@@ -1,3 +1,46 @@
+## 2026-03-27 11:41 America/New_York
+
+### Current state
+- Reconciled protocol preflight in required order:
+  - read `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`.
+- Reconciled lock/git state before mutation:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` -> `free`.
+  - acquired worker lock: `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 2` -> `acquired`.
+  - git preflight showed `main...origin/main` ahead by `2`.
+  - pre-step helper push attempt failed with transient DNS resolution (`failure_kind=dns_failure`, host `github.com`), so run continued with one bounded same-thread science step.
+- Completed one bounded same-thread continuation on the frozen `5504` center-spine `00` hard core:
+  - added `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_pocket_corridor_equivalence_scan.py`
+  - ran it to produce `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-pocket-corridor-equivalence-scan-5504.txt`.
+
+### Strongest confirmed conclusion
+- The bounded canonical corridor-equivalence pass settles minimality/non-uniqueness on this frozen core.
+- Under scale/sign canonicalization over the corridor basis (weights in `{−2,−1,1,2}`, up to 3 terms):
+  - `canonical_weight_classes_scanned = 656`
+  - `exact_clauses_found = 796`
+  - `exact_family_mask_matches = 796`
+- Minimal exact family-mask closure is non-unique at one term (`minimal_term_count = 1`, `minimal_term_match_count = 5`), so the prior two-term role clause is interpretable but not minimal.
+- Representative exact 1-term family-mask cuts include:
+  - `delta_count_pocket_joined_bridge__pocket_only__present1 <= -2.500`
+  - `delta_count_pocket_joined_pocket_only__pocket_only__present0 <= -6.500`
+  - `delta_count_pocket_role_pocket_only__pocket_only <= -11.500`
+- The current rescue closure therefore remains highly degenerate: joined-level corridor coordinates already carry exact rescue separation on the frozen core.
+
+### Files and results changed in this run
+- Repo-facing science/code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_pocket_corridor_equivalence_scan.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-pocket-corridor-equivalence-scan-5504.txt`
+
+### Exact next step
+- Stay on the frozen `5504` center-spine `00` hard core.
+- Keep dense laddering paused.
+- Test whether the one-term exact corridor closures are structural or accidental by requiring support under small perturbations (e.g., leave-one-row-out / near-threshold stress) while preserving zero-FP add1 closure.
+
+### First concrete action
+- Add one bounded robustness pass that re-evaluates the top canonical 1-term corridor cuts under row-drop and ±0.5 threshold perturbation checks, then compare survival against the two-term role clause family.
+
 ## 2026-03-27 10:41 America/New_York
 
 ### Current state

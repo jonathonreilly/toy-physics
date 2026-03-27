@@ -295,6 +295,14 @@ The important correction is that the rescue side is not actually “single-thres
     - `2*delta_count_pocket_role_bridge__pocket_only + delta_count_pocket_role_pocket_only__pocket_only <= -19.000`
     - interval `[−24.000, −14.000)` (width `10.000`)
   - this keeps the non-uniqueness result but sharpens the physical-language translation: the rescue side is expressible directly as a bridge-to-pocket plus pocket-only support deficit, not only as aggregate pocket totals
+- a bounded canonical corridor-equivalence pass then settles the minimality question for this frozen core:
+  - after scale/sign canonicalization, every bounded exact corridor clause found (`796/796`) reproduces the same family rescue mask
+  - minimal exact family-mask closure is not the two-term role law; it is already non-unique at one term (`5` distinct one-feature cuts)
+  - representative 1-term exact cuts include:
+    - `delta_count_pocket_joined_bridge__pocket_only__present1 <= -2.500`
+    - `delta_count_pocket_joined_pocket_only__pocket_only__present0 <= -6.500`
+    - `delta_count_pocket_role_pocket_only__pocket_only <= -11.500`
+  - so role-level corridor language remains useful as interpretation, but joined-level low-tail coordinates already carry sufficient exact rescue separation on this core
 - other exact rescues also have real positive width:
   - `pair_selected_event_present_count >= 6.000` with width `2.000`
   - `abs_delta_edge_identity_open_pair_count <= 22.500` with width `1.000`
@@ -308,6 +316,7 @@ So the current read is:
 - the robust rescue still does not collapse to one tiny pocket subfamily
 - and the exact rescue mask is not unique inside that visible pocket basis, because the rescued rows occupy an isolated low-tail corner whose concrete geometry is a missing bridge-to-pocket / pocket-only support corridor
 - and this corridor now has an explicit compact role-level clause family that reproduces the exact rescue mask on the frozen core
+- and canonical corridor equivalence confirms the closure is highly degenerate: one-feature joined/role corridor cuts already reproduce the exact family rescue mask
 - the remaining tight part is the baseline density cut, which still only has a narrow local interval
 
 ### What the Current Mechanism Story Looks Like
