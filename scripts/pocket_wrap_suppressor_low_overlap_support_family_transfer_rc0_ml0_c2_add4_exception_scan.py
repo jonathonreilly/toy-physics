@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 from datetime import datetime
 from pathlib import Path
+import re
 import sys
 import time
 
@@ -17,7 +18,11 @@ if str(PROJECT_DIR) not in sys.path:
     sys.path.insert(0, str(PROJECT_DIR))
 
 from pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_candidate_anchor_contrast import (  # noqa: E402
+    FEATURE_NAMES,
     build_bucket_rows,
+)
+from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_topology import (  # noqa: E402
+    evaluate_rules,
 )
 
 
@@ -27,14 +32,29 @@ def build_parser() -> argparse.ArgumentParser:
         "--frontier-log",
         default="/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-nonpocket-subtype-rules-5504-max5600.txt",
     )
+    parser.add_argument("--predicate-limit", type=int, default=22)
+    parser.add_argument("--max-terms", type=int, default=3)
+    parser.add_argument("--row-limit", type=int, default=8)
     return parser
 
 
-def _matches_add4_rule(row: object) -> bool:
-    return (
-        float(getattr(row, "delta_mid_left_bridge_bridge_closed_pair_max")) >= -1.0
-        and float(getattr(row, "mid_candidate_bridge_bridge_closed_pair_max")) >= 9.0
-    )
+RULE_TERM_RE = re.compile(r"^(?P<feature>[A-Za-z0-9_]+) (?P<operator><=|>=) (?P<threshold>-?\d+(?:\.\d+)?)$")
+
+
+def _matches_rule_text(row: object, rule_text: str) -> bool:
+    for term in rule_text.split(" and "):
+        match = RULE_TERM_RE.fullmatch(term.strip())
+        if match is None:
+            raise ValueError(f"unsupported rule term: {term}")
+        feature = match.group("feature")
+        operator = match.group("operator")
+        threshold = float(match.group("threshold"))
+        value = float(getattr(row, feature))
+        if operator == "<=" and value > threshold:
+            return False
+        if operator == ">=" and value < threshold:
+            return False
+    return True
 
 
 def main() -> None:
@@ -45,20 +65,37 @@ def main() -> None:
 
     frontier_log = Path(args.frontier_log).resolve()
     rows = build_bucket_rows(frontier_log)
+    add4_rules = evaluate_rules(
+        rows,
+        target_subtype="add4-sensitive",
+        feature_names=FEATURE_NAMES,
+        predicate_limit=args.predicate_limit,
+        max_terms=args.max_terms,
+        row_limit=args.row_limit,
+    )
+    best_rule = add4_rules[0]
 
-    tp = [row for row in rows if getattr(row, "subtype") == "add4-sensitive" and _matches_add4_rule(row)]
-    fp = [row for row in rows if getattr(row, "subtype") != "add4-sensitive" and _matches_add4_rule(row)]
-    fn = [row for row in rows if getattr(row, "subtype") == "add4-sensitive" and not _matches_add4_rule(row)]
+    tp = [
+        row
+        for row in rows
+        if getattr(row, "subtype") == "add4-sensitive" and _matches_rule_text(row, best_rule.rule_text)
+    ]
+    fp = [
+        row
+        for row in rows
+        if getattr(row, "subtype") != "add4-sensitive" and _matches_rule_text(row, best_rule.rule_text)
+    ]
+    fn = [
+        row
+        for row in rows
+        if getattr(row, "subtype") == "add4-sensitive" and not _matches_rule_text(row, best_rule.rule_text)
+    ]
 
     print()
     print("Support Family Transfer rc0|ml0|c2 Add4 Exception Scan")
     print("======================================================")
     print(f"frontier_log={frontier_log}")
-    print(
-        "rule="
-        "delta_mid_left_bridge_bridge_closed_pair_max >= -1.0 and "
-        "mid_candidate_bridge_bridge_closed_pair_max >= 9.0"
-    )
+    print(f"rule={best_rule.rule_text}")
     print(f"tp={len(tp)} fp={len(fp)} fn={len(fn)}")
     print()
 

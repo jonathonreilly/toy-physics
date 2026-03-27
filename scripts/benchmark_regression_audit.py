@@ -297,6 +297,20 @@ def check_edge_identity_candidate_fraction_bounds() -> None:
     assert checked == 8, "expected to check the first 8 local-morph variants for fraction bounds"
 
 
+def check_add4_exception_scan_uses_live_rule() -> None:
+    script_source = (
+        REPO_ROOT
+        / "scripts"
+        / "pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_add4_exception_scan.py"
+    ).read_text()
+    assert (
+        "evaluate_rules(" in script_source and "_matches_rule_text" in script_source
+    ), "add4 exception scan regressed to a frozen rule instead of deriving the live add4 rule"
+    assert (
+        "def _matches_add4_rule" not in script_source
+    ), "add4 exception scan still contains the stale hard-coded rule path"
+
+
 def main() -> None:
     print("benchmark regression audit: checking same-weight default", flush=True)
     check_same_weight_default()
@@ -314,6 +328,8 @@ def main() -> None:
     check_support_family_transfer_bucket_rules_exclude_peer_band()
     print("benchmark regression audit: checking edge-identity candidate fraction bounds", flush=True)
     check_edge_identity_candidate_fraction_bounds()
+    print("benchmark regression audit: checking add4 exception scan live-rule path", flush=True)
+    check_add4_exception_scan_uses_live_rule()
     print("benchmark regression audit: checking live mechanism split driver", flush=True)
     check_live_mechanism_split_driver()
     print("benchmark regression audit: ok", flush=True)

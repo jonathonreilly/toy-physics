@@ -1,3 +1,36 @@
+## 2026-03-27 17:33 America/New_York
+
+### Current state
+- Continued the queued deep review thread from the stable `5504` checkpoint after reconciling worker state and refreshing the manual lock.
+- Confirmed one more real helper/driver drift issue in the active low-overlap transfer layer:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_add4_exception_scan.py` claimed to inspect the current best add4 anchored-contrast rule, but it was actually hard-coded to one old conjunction instead of deriving the live top rule from the current bucket helper output
+- Fixed the exception scan to derive the current best add4 rule via the live `evaluate_rules(...)` path and match rows from the returned `rule_text`, then added an audit guard so it cannot silently regress back to a frozen rule
+
+### Strongest confirmed conclusion
+- The science interpretation did **not** change, but the add4 exception scan is now trustworthy against future helper drift.
+- After the fix, the live top add4 rule on the frozen `5504` `rc0|ml0|c2` bucket is still:
+  - `delta_mid_left_bridge_bridge_closed_pair_max >= -1.000 and mid_candidate_bridge_bridge_closed_pair_max >= 9.000`
+- The important change is operational:
+  - the exception scan now recomputes that rule from the current helper output instead of silently assuming it
+  - the benchmark audit now guards against the scan slipping back to a stale hard-coded conjunction
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_add4_exception_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- Refreshed result:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-support-family-transfer-rc0-ml0-c2-add4-exception-scan-5504.txt`
+
+### Exact next step
+- Stay in deep review mode.
+- Continue reviewing shared helper/render drift in the active low-overlap transfer layer, especially:
+  - scripts that claim to inspect the “current best” rule but may still be pinning old thresholds or subsets
+  - shared reconstruction / rendering helpers that can silently drift from the frozen `5504` checkpoint interpretation
+
+### First concrete action
+- Search the active low-overlap review surface for any remaining stale “current best” or hard-coded exception/closure drivers, then compare their output path against the live helper they are supposed to summarize.
+
 ## 2026-03-27 17:23 America/New_York
 
 ### Current state
