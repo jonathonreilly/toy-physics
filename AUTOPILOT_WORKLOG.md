@@ -1,3 +1,68 @@
+## 2026-03-27 12:30 America/New_York
+
+### Current state
+- Checked worker/lock state before continuing:
+  - no active Physics worker was running
+  - stale manual lock from the previous baseline-side pass was released and reacquired cleanly for this session
+- Stayed on the frozen `5504` center-spine `00` hard core and finished the baseline-side zero-distance continuation.
+- Added:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_zero_distance_features.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_zero_distance_layout_diff.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_zero_distance_equivalence_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_zero_distance_physical_rule_card.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_zero_distance_candidate_cell_rules.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_candidate_cell_generalization.py`
+- Re-ran:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-baseline-zero-distance-features-5504.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-baseline-zero-distance-layout-diff-5504.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-baseline-zero-distance-equivalence-scan-5504.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-baseline-zero-distance-physical-rule-card-5504.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-baseline-zero-distance-candidate-cell-rules-5504.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-baseline-candidate-cell-generalization-5504.txt`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py` -> `ok`
+
+### Strongest confirmed conclusion
+- The baseline-side zero-distance branch is now compressed to a clear local family:
+  - the rescued rows are a smaller all-bridge support graph than the basis-identical baseline peers
+  - strongest exact local separator:
+    - `edge_identity_closed_pair_count <= 62.000`
+    - interval `[56.000, 68.000)`, width `12.000`
+  - equivalent exact local cuts include:
+    - `support_node_count <= 18.500`
+    - `support_role_bridge_count <= 18.500`
+    - `support_edge_count <= 31.500`
+    - `support_edge_role_bridge__bridge_count <= 31.500`
+- The candidate-cell side is narrower:
+  - on the zero-distance subset, rescued rows exactly lack `pocket/deep cell (1, -2)`
+  - but on the broader baseline-covered add1 pool that motif appears in only `5/40` rows
+  - so `(1, -2)` is a local baseline-peer branch marker, not the broader baseline-side law
+- Current best read:
+  - broad baseline-side family: smaller, denser all-bridge support graph
+  - local peer branch: extra `(1, -2)` plus occasional `(2, 1)`, `(4, 2)`, `(5, 0)` candidate cells
+
+### Files and results changed in this run
+- Repo-facing science/code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_zero_distance_features.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_zero_distance_layout_diff.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_zero_distance_equivalence_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_zero_distance_physical_rule_card.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_zero_distance_candidate_cell_rules.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_candidate_cell_generalization.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+
+### Exact next step
+- Stay on the frozen `5504` center-spine `00` hard core.
+- Keep dense laddering paused.
+- Move from the zero-distance branch to the broader baseline-covered add1 family.
+- Test whether that broader family still compresses on support-graph totals plus a small number of branch-cell motifs, or whether it needs a richer support-layout topology basis.
+
+### First concrete action
+- Add one bounded baseline-covered add1 branch decomposition pass seeded by:
+  - `edge_identity_closed_pair_count`
+  - `support_role_bridge_count`
+  - presence/absence of `(1, -2)`, `(2, 1)`, `(4, 2)`, `(5, 0)` candidate cells
+
 ## 2026-03-27 11:55 America/New_York
 
 ### Current state

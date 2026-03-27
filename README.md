@@ -330,7 +330,24 @@ So the current read is:
 - and canonical corridor equivalence confirms the closure is highly degenerate: one-feature joined/role corridor cuts already reproduce the exact family rescue mask
 - but those minimal corridor clauses are only narrow exact cuts, while the 2-term role clause remains the wider and more interpretable representative
 - and because baseline-covered add1 neighbors already sit at visible-basis distance `0.000`, the remaining unresolved structure now sits with the baseline-density / finer layout side rather than the rescue-side pocket coordinates alone
-- the remaining tight part is the baseline density cut, which still only has a narrow local interval
+- a bounded baseline-side zero-distance pass now makes that local branch much more concrete:
+  - on the rescued rows versus the two basis-distance-`0.000` baseline peers, the exact split is already a degenerate one-mask family on simple support counts
+  - strongest exact local separator:
+    - `edge_identity_closed_pair_count <= 62.000`
+    - interval `[56.000, 68.000)` with width `12.000`
+  - equivalent exact local cuts include:
+    - `support_node_count <= 18.500`
+    - `support_role_bridge_count <= 18.500`
+    - `support_edge_count <= 31.500`
+    - `support_edge_role_bridge__bridge_count <= 31.500`
+  - so the local baseline branch is not “one special density trick”; it is a smaller all-bridge support graph with fewer closed pairs and fewer bridge-bridge edges
+  - the same zero-distance pass also finds an exact local candidate-cell motif:
+    - rescued rows lack `pocket/deep cell (1, -2)`
+    - both basis-identical baseline peers carry that cell
+  - but a broader baseline-covered add1 scan shows this is only a local branch marker:
+    - `pocket/deep cell (1, -2)` appears in only `5/40` baseline-covered add1 rows
+    - so the `(1, -2)` motif is not the whole baseline-side law
+- the remaining tight part is therefore no longer the rescue side; it is the broader baseline-covered add1 family beyond that zero-distance peer branch
 
 ### What the Current Mechanism Story Looks Like
 
