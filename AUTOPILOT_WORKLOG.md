@@ -1,3 +1,60 @@
+## 2026-03-27 17:02 America/New_York
+
+### Current state
+- Reconciled worker state before continuing:
+  - there was one unpushed local science commit (`7225b17`) from the hourly worker
+  - reviewed it, pushed it, then acquired a clean manual lock for this continuation
+- Completed two more bounded same-thread steps on the frozen `5504` low-overlap transfer thread:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_candidate_anchor_contrast.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_add4_exception_scan.py`
+
+### Strongest confirmed conclusion
+- In the shared `rc0|ml0|c2` bucket, candidate-anchored contrasts make the subtype drift substantially clearer even though they still do not fully close the bucket.
+- add1 is now the left-dominant branch:
+  - `delta_mid_left_bridge_bridge_closed_pair_max <= -1.000 and support_role_bridge_count >= 14.500`
+  - `10/15` TP, `0` FP
+- add4 is now the mid-dominant closed-bridge branch:
+  - `delta_mid_left_bridge_bridge_closed_pair_max >= -1.000 and mid_candidate_bridge_bridge_closed_pair_max >= 9.000`
+  - `8/8` TP, `5` FP
+  - so this contrast removes all add4 false negatives
+- pair-only remains the lower-support branch:
+  - `support_role_bridge_count <= 13.500`
+  - `8/9` TP, `5` FP
+- The add4 exception scan then showed the remaining `5` false positives are structured, not noisy:
+  - `3` are pair-only rows with the same strong mid-dominant closed-bridge signature but lower total support (`support_role_bridge_count = 13`)
+  - `2` are add1 rows with balanced mid/left bridge-bridge closure (`delta_mid_left_bridge_bridge_closed_pair_max = 0`) at higher support (`support_role_bridge_count = 16`)
+- Current best read:
+  - the largest mixed shared bucket is no longer a vague residual
+  - it is now a three-way overlap of:
+    - true add4 mid-dominant closed-bridge rows
+    - lower-support pair-only mimics
+    - higher-support balanced add1 mimics
+
+### Files and results changed in this run
+- Repo-facing science/code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_candidate_anchor_contrast.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_add4_exception_scan.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- New result logs:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-support-family-transfer-rc0-ml0-c2-candidate-anchor-contrast-5504.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-support-family-transfer-rc0-ml0-c2-add4-exception-scan-5504.txt`
+
+### Exact next step
+- Stay on the frozen `5504` low-overlap basin.
+- Keep `rc0|ml0|c2` as the active mixed bucket.
+- Split the remaining add4 false-positive set into its two nuisance branches:
+  - lower-support pair-only mimics
+  - higher-support balanced add1 mimics
+- Then test whether a compact bucket-local rule family can separate true add4 rows from those two nuisance branches.
+
+### First concrete action
+- Add one bounded `rc0|ml0|c2` nuisance-branch contrast pass that compares:
+  - true add4 rows
+  - pair-only false positives
+  - add1 false positives
+  using the candidate-anchored bridge-bridge closure features already identified.
+
 ## 2026-03-27 16:44 America/New_York
 
 ### Current state

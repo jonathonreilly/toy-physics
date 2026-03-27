@@ -433,6 +433,21 @@ So the current read is:
       - `edge_identity_closed_pair_count >= 57.500 and edge_identity_closed_pair_ratio >= 0.452` (`2/8` TP, `0` FP)
       - `edge_identity_closed_pair_count >= 57.500 and high_bridge_mid_count >= 0.500` (`4/8` TP, `2` FP)
     - so this richer event-motif basis sharpens confidence in the existing read but does not supply a new compact separator for add4 inside `rc0|ml0|c2`
+  - one bounded candidate-anchored contrast continuation on the same `rc0|ml0|c2` bucket then made the subtype drift more explicit:
+    - add1 is the left-dominant branch:
+      - `delta_mid_left_bridge_bridge_closed_pair_max <= -1.000 and support_role_bridge_count >= 14.500` (`10/15` TP, `0` FP)
+    - add4 is the mid-dominant closed-bridge branch:
+      - `delta_mid_left_bridge_bridge_closed_pair_max >= -1.000 and mid_candidate_bridge_bridge_closed_pair_max >= 9.000` (`8/8` TP, `5` FP)
+      - so the anchored contrast removes all add4 false negatives, but it still picks up a small nuisance set
+    - pair-only remains the lower-support branch:
+      - `support_role_bridge_count <= 13.500` (`8/9` TP, `5` FP)
+  - an immediate add4 exception scan shows the remaining `5` false positives are not random:
+    - `3` are pair-only rows with the same strong mid-dominant closed-bridge signature but lower total support (`support_role_bridge_count = 13`)
+    - `2` are add1 rows with balanced mid/left bridge-bridge closure (`delta_mid_left_bridge_bridge_closed_pair_max = 0`) at higher support (`support_role_bridge_count = 16`)
+    - so the current add4 obstacle is now very specific:
+      - separate true mid-dominant add4 rows from
+      - lower-support pair-only mimics and
+      - higher-support balanced add1 mimics
 
 ### What the Current Mechanism Story Looks Like
 
