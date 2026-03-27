@@ -280,6 +280,13 @@ The important correction is that the rescue side is not actually “single-thres
     - `pocket_only__pocket_only = -11`
     - `pocket_only__pocket_only__present0 = -6`
   - so many different visible-basis thresholds recover the same two-row rescue mask
+- a bounded nearest-neighbor geometry-difference pass localizes the concrete edit bundle above those cutoffs:
+  - the exact nearest non-rescued anchor is `base:taper-wrap:local-morph-௥` with `(-6, -5, -11)` on `(present0, present1, pocket_only__pocket_only)`
+  - both rescued rows are missing the same own-side pocket-support family relative to that anchor:
+    - `+6` `count_pocket_role_bridge__pocket_only`
+    - `+1` `count_pocket_role_pocket_only__pocket_only`
+    - joined split: `+4` `bridge__pocket_only__present0`, `+2` `bridge__pocket_only__present1`, `+1` `pocket_only__pocket_only__present1`
+  - both rescued rows currently carry only `bridge__bridge` pocket-role activity, so the low-tail corner is a specific missing bridge-to-pocket / pocket-only support corridor, not a diffuse basis artifact
 - other exact rescues also have real positive width:
   - `pair_selected_event_present_count >= 6.000` with width `2.000`
   - `abs_delta_edge_identity_open_pair_count <= 22.500` with width `1.000`
@@ -291,7 +298,7 @@ So the current read is:
 - the rescue family is genuinely robust on the current frozen core
 - the rescue family compresses to a pocket-family deficit law and now also to a small signed visible pocket basis
 - the robust rescue still does not collapse to one tiny pocket subfamily
-- and the exact rescue mask is not unique inside that visible pocket basis, because the rescued rows occupy an isolated low-tail corner across several pocket coordinates
+- and the exact rescue mask is not unique inside that visible pocket basis, because the rescued rows occupy an isolated low-tail corner whose concrete geometry is a missing bridge-to-pocket / pocket-only support corridor
 - the remaining tight part is the baseline density cut, which still only has a narrow local interval
 
 ### What the Current Mechanism Story Looks Like

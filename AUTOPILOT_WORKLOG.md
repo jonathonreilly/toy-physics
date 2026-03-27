@@ -1,3 +1,43 @@
+## 2026-03-27 09:43 America/New_York
+
+### Current state
+- Reconciled protocol preflight in required order:
+  - read `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`.
+- Reconciled lock/git state before mutation:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` -> `free`.
+  - acquired worker lock: `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 2` -> `acquired`.
+  - git preflight showed `main...origin/main` with ahead/behind `0/0`.
+- Completed one bounded same-thread continuation on the frozen `5504` center-spine `00` hard core:
+  - added `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_pocket_basis_geometry_diff.py`
+  - ran it to produce `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-pocket-basis-geometry-diff-5504.txt`.
+
+### Strongest confirmed conclusion
+- The low-tail geometry is now explicit rather than just basis-level.
+- The exact nearest non-rescued cutoff anchor above the rescued corner is:
+  - `base:taper-wrap:local-morph-௥`
+  - with `(delta_count_pocket_present0, delta_count_pocket_present1, delta_count_pocket_role_pocket_only__pocket_only) = (-6, -5, -11)`.
+- For both rescued rows (`base:taper-wrap:local-morph-ር`, `base:taper-wrap:local-morph-ᕚ`), the same concrete own-side pocket-support edit bundle closes that gap:
+  - `+6` `count_pocket_role_bridge__pocket_only`
+  - `+1` `count_pocket_role_pocket_only__pocket_only`
+  - joined split: `+4` `count_pocket_joined_bridge__pocket_only__present0`, `+2` `count_pocket_joined_bridge__pocket_only__present1`, `+1` `count_pocket_joined_pocket_only__pocket_only__present1`
+- Both rescued rows currently have only `bridge__bridge` pocket-role activity, so the non-uniqueness of visible-basis rescue masks is grounded in a specific missing bridge-to-pocket / pocket-only support corridor.
+
+### Files and results changed in this run
+- Repo-facing science/code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_pocket_basis_geometry_diff.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-pocket-basis-geometry-diff-5504.txt`
+
+### Exact next step
+- Stay on the frozen `5504` center-spine `00` hard core.
+- Keep dense laddering paused.
+- Test whether the newly localized missing bridge-to-pocket / pocket-only support corridor can be captured by one compact signed corridor clause that keeps the same exact rescue mask without widening baseline leakage.
+
+### First concrete action
+- Add one bounded corridor-clause scan over `bridge__pocket_only` and `pocket_only__pocket_only` joined counts (present0/present1 split) and compare exact-mask reach and interval width against `delta_count_pocket_total <= -14.500`.
+
 ## 2026-03-27 08:51 America/New_York
 
 ### Current state
