@@ -1,3 +1,55 @@
+## 2026-03-27 08:51 America/New_York
+
+### Current state
+- Reconciled the worker’s signed-basis compression step before continuing:
+  - local worker commit `436d724` (`Compress center-spine rescue into signed pocket basis`) was pushed successfully before new analysis
+- Stayed on the same frozen `5504` center-spine `00` hard core under the manual lock.
+- Added:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_pocket_basis_weight_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_pocket_basis_margin_profiles.py`
+- Ran:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-pocket-basis-weight-scan-5504-canonical.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-pocket-basis-margin-profiles-5504.txt`
+
+### Strongest confirmed conclusion
+- The worker’s signed-basis result was real:
+  - `delta_count_pocket_present0 + delta_count_pocket_present1 <= -14.500`
+  - same rescue mask as `delta_count_pocket_total <= -14.500`
+  - same width `7.000`
+- But the canonical bounded weight scan showed that this two-term law is **not** unique.
+- After removing coefficient-rescaling duplicates, the same exact family-mask match already appears in several visible-basis cuts, including 1-term laws:
+  - `delta_count_pocket_present0 <= -8.000` with width `4.000`
+  - `delta_count_pocket_present1 <= -6.500` with width `3.000`
+- The margin-profile pass explains why:
+  - the two rescued rows are isolated low-tail outliers on several pocket coordinates
+  - next non-rescued values are already:
+    - `present0 = -6`
+    - `present1 = -5`
+    - `pocket_only__pocket_only = -11`
+    - `pocket_only__pocket_only__present0 = -6`
+- So the current best read is:
+  - the rescue side is genuinely robust
+  - it compresses to the visible pocket basis
+  - but the exact rescue mask is not unique there, because the rescued rows occupy an isolated low-tail corner across several pocket coordinates
+
+### Files and results changed in this run
+- Repo-facing science/code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_pocket_basis_weight_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_pocket_basis_margin_profiles.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- New result logs:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-pocket-basis-weight-scan-5504-canonical.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-pocket-basis-margin-profiles-5504.txt`
+
+### Exact next step
+- Stay on the frozen `5504` center-spine `00` hard core.
+- Treat the visible pocket-basis rescue mask as non-unique.
+- Shift the question from “which basis law is minimal?” to “what geometric condition makes the rescued rows simultaneous low-tail outliers across several pocket coordinates?”
+
+### First concrete action
+- Add one bounded nearest-neighbor / geometry-difference pass comparing the two rescued rows to the nearest non-rescued rows just above the low-tail cutoffs, then identify which concrete pocket-support edits move `present0`, `present1`, and `pocket_only__pocket_only` together.
+
 ## 2026-03-27 08:41 America/New_York
 
 ### Current state

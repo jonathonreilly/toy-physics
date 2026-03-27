@@ -267,6 +267,19 @@ The important correction is that the rescue side is not actually “single-thres
   - and an even wider exact matching composite exists:
     - `delta_count_pocket_present0 + delta_count_pocket_present1 + delta_count_pocket_role_pocket_only__pocket_only <= -26.000`
     - interval `[−30.000, −22.000)`, width `8.000`
+- a canonical bounded weight scan then tightened the interpretation:
+  - the two-term `present0 + present1` law is not unique
+  - several exact family-mask matches already exist in the same visible pocket basis, including 1-term cuts:
+    - `delta_count_pocket_present0 <= -8.000`
+    - `delta_count_pocket_present1 <= -6.500`
+- a margin-profile pass explains why:
+  - the two rescued rows are isolated low-tail outliers across several pocket coordinates
+  - next non-rescued rows are already at:
+    - `present0 = -6`
+    - `present1 = -5`
+    - `pocket_only__pocket_only = -11`
+    - `pocket_only__pocket_only__present0 = -6`
+  - so many different visible-basis thresholds recover the same two-row rescue mask
 - other exact rescues also have real positive width:
   - `pair_selected_event_present_count >= 6.000` with width `2.000`
   - `abs_delta_edge_identity_open_pair_count <= 22.500` with width `1.000`
@@ -278,6 +291,7 @@ So the current read is:
 - the rescue family is genuinely robust on the current frozen core
 - the rescue family compresses to a pocket-family deficit law and now also to a small signed visible pocket basis
 - the robust rescue still does not collapse to one tiny pocket subfamily
+- and the exact rescue mask is not unique inside that visible pocket basis, because the rescued rows occupy an isolated low-tail corner across several pocket coordinates
 - the remaining tight part is the baseline density cut, which still only has a narrow local interval
 
 ### What the Current Mechanism Story Looks Like
