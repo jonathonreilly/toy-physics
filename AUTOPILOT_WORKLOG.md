@@ -1,3 +1,47 @@
+## 2026-03-27 08:41 America/New_York
+
+### Current state
+- Reconciled protocol preflight and state before mutation:
+  - read `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`.
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` -> `free`.
+  - acquired worker lock: `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 2` -> `acquired`.
+  - git preflight showed `main...origin/main` with ahead/behind `0/0`.
+- Completed one bounded same-thread continuation on the frozen `5504` center-spine `00` hard core:
+  - added `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_pocket_basis_composite_scan.py`
+  - ran it to produce `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-pocket-basis-composite-scan-5504.txt`.
+
+### Strongest confirmed conclusion
+- The wide exact rescue law is already expressible in a small signed visible pocket basis on the same frozen core.
+- The family-law reference remains:
+  - `delta_count_pocket_total <= -14.500`
+  - interval `[−18.000, −11.000)`, width `7.000`
+- A compact two-term basis match achieves the same exact rescue mask and width:
+  - `delta_count_pocket_present0 + delta_count_pocket_present1 <= -14.500`
+  - same rescued rows, same interval `[−18.000, −11.000)`, width `7.000`
+- A three-term composite from the bounded basis is exact with even larger interval slack:
+  - `delta_count_pocket_present0 + delta_count_pocket_present1 + delta_count_pocket_role_pocket_only__pocket_only <= -26.000`
+  - interval `[−30.000, −22.000)`, width `8.000`
+- So the rescue side now compresses one level further into a small signed pocket basis, while the unresolved tight part remains the baseline density clause.
+
+### Files and results changed in this run
+- Repo-facing science/code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_pocket_basis_composite_scan.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-pocket-basis-composite-scan-5504.txt`
+
+### Exact next step
+- Stay on the frozen `5504` center-spine `00` hard core.
+- Keep the rescue side in compressed mode and test minimal signed-basis closure rather than widening frontier scans.
+- Determine whether the `present0 + present1` exact rescue is the unique minimal two-term representation or one member of a small equivalent class under bounded coefficient choices.
+
+### First concrete action
+- Add one bounded minimality/equivalence pass over the same four pocket-basis features that:
+  - includes integer weights in `{−2, −1, 1, 2}`,
+  - limits to at most two nonzero terms,
+  - and reports all exact zero-FP rescue forms that match the family-law rescue mask, ranked by term count then interval width.
+
 ## 2026-03-27 08:21 America/New_York
 
 ### Current state

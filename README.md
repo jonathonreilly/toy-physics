@@ -261,6 +261,12 @@ The important correction is that the rescue side is not actually “single-thres
   - `delta_count_pocket_present0 = -10`
   - `delta_count_pocket_present1 = -8`
   - `delta_count_pocket_role_pocket_only__pocket_only = -12`
+- a bounded signed-basis scan now shows the wide family-law rescue is already expressible in a smaller visible pocket basis:
+  - `delta_count_pocket_present0 + delta_count_pocket_present1 <= -14.500`
+  - same rescued rows, same interval `[−18.000, −11.000)`, same width `7.000`
+  - and an even wider exact matching composite exists:
+    - `delta_count_pocket_present0 + delta_count_pocket_present1 + delta_count_pocket_role_pocket_only__pocket_only <= -26.000`
+    - interval `[−30.000, −22.000)`, width `8.000`
 - other exact rescues also have real positive width:
   - `pair_selected_event_present_count >= 6.000` with width `2.000`
   - `abs_delta_edge_identity_open_pair_count <= 22.500` with width `1.000`
@@ -270,8 +276,8 @@ So the current read is:
 
 - the mechanism closure is probably touching something real
 - the rescue family is genuinely robust on the current frozen core
-- the rescue family already compresses one level further into a pocket-family deficit law
-- but the robust rescue is still a composite pocket deficit, not one tiny pocket subfamily
+- the rescue family compresses to a pocket-family deficit law and now also to a small signed visible pocket basis
+- the robust rescue still does not collapse to one tiny pocket subfamily
 - the remaining tight part is the baseline density cut, which still only has a narrow local interval
 
 ### What the Current Mechanism Story Looks Like
