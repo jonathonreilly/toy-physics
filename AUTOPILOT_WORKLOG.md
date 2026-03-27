@@ -1,3 +1,43 @@
+## 2026-03-27 10:41 America/New_York
+
+### Current state
+- Reconciled protocol preflight in required order:
+  - read `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`.
+- Reconciled lock/git state before mutation:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` -> `free`.
+  - acquired worker lock: `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 2` -> `acquired`.
+  - git preflight showed `main...origin/main` ahead by `1`.
+  - pre-step helper push attempt failed with transient DNS resolution (`failure_kind=dns_failure`, host `github.com`), so run continued with one bounded same-thread science step.
+- Completed one bounded same-thread continuation on the frozen `5504` center-spine `00` hard core:
+  - added `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_pocket_corridor_clause_scan.py`
+  - ran it to produce `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-pocket-corridor-clause-scan-5504.txt`.
+
+### Strongest confirmed conclusion
+- The localized bridge-to-pocket / pocket-only deficit from the geometry-difference pass now closes directly in compact corridor language.
+- On the same frozen core, an exact two-term role-level corridor clause matches the family-law rescue mask and width:
+  - `delta_count_pocket_role_bridge__pocket_only + delta_count_pocket_role_pocket_only__pocket_only <= -14.500`
+  - same rescued rows and same interval `[−18.000, −11.000)` (width `7.000`) as `delta_count_pocket_total <= -14.500`.
+- Wider exact corridor clauses also exist within the bounded scan, for example:
+  - `2*delta_count_pocket_role_bridge__pocket_only + delta_count_pocket_role_pocket_only__pocket_only <= -19.000`
+  - interval `[−24.000, −14.000)` (width `10.000`).
+- So the current rescue non-uniqueness remains, but the physical-language translation is stronger: the exact rescue family is expressible directly as a bridge-to-pocket plus pocket-only support deficit corridor.
+
+### Files and results changed in this run
+- Repo-facing science/code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_pocket_corridor_clause_scan.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-pocket-corridor-clause-scan-5504.txt`
+
+### Exact next step
+- Stay on the frozen `5504` center-spine `00` hard core.
+- Keep dense laddering paused.
+- Test whether the role-level corridor closure can be made unique/minimal under canonical coefficient classes, or whether equivalent joined-level clauses remain unavoidable.
+
+### First concrete action
+- Add one bounded corridor minimality/equivalence pass that deduplicates scale/sign classes and reports exact family-mask matches ranked by term count then interval width for the corridor-only feature set.
+
 ## 2026-03-27 09:43 America/New_York
 
 ### Current state

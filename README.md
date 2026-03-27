@@ -287,6 +287,14 @@ The important correction is that the rescue side is not actually “single-thres
     - `+1` `count_pocket_role_pocket_only__pocket_only`
     - joined split: `+4` `bridge__pocket_only__present0`, `+2` `bridge__pocket_only__present1`, `+1` `pocket_only__pocket_only__present1`
   - both rescued rows currently carry only `bridge__bridge` pocket-role activity, so the low-tail corner is a specific missing bridge-to-pocket / pocket-only support corridor, not a diffuse basis artifact
+- a bounded corridor-clause scan over exactly those role/joined corridor coordinates confirms the same rescue mask is already reachable in compact corridor language:
+  - exact two-term role clause:
+    - `delta_count_pocket_role_bridge__pocket_only + delta_count_pocket_role_pocket_only__pocket_only <= -14.500`
+    - same rescued rows and same interval `[−18.000, −11.000)` (width `7.000`) as the family-law reference
+  - weighted corridor clauses can be even wider while still exact on this frozen core, e.g.:
+    - `2*delta_count_pocket_role_bridge__pocket_only + delta_count_pocket_role_pocket_only__pocket_only <= -19.000`
+    - interval `[−24.000, −14.000)` (width `10.000`)
+  - this keeps the non-uniqueness result but sharpens the physical-language translation: the rescue side is expressible directly as a bridge-to-pocket plus pocket-only support deficit, not only as aggregate pocket totals
 - other exact rescues also have real positive width:
   - `pair_selected_event_present_count >= 6.000` with width `2.000`
   - `abs_delta_edge_identity_open_pair_count <= 22.500` with width `1.000`
@@ -299,6 +307,7 @@ So the current read is:
 - the rescue family compresses to a pocket-family deficit law and now also to a small signed visible pocket basis
 - the robust rescue still does not collapse to one tiny pocket subfamily
 - and the exact rescue mask is not unique inside that visible pocket basis, because the rescued rows occupy an isolated low-tail corner whose concrete geometry is a missing bridge-to-pocket / pocket-only support corridor
+- and this corridor now has an explicit compact role-level clause family that reproduces the exact rescue mask on the frozen core
 - the remaining tight part is the baseline density cut, which still only has a narrow local interval
 
 ### What the Current Mechanism Story Looks Like
