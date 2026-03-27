@@ -1,3 +1,45 @@
+## 2026-03-26 22:40 America/New_York
+
+### Current state
+- Reconciled protocol preflight in required order:
+  - read `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`.
+- Reconciled lock/git state before mutation:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` -> `free`.
+  - git preflight showed `main...origin/main [ahead 2]`.
+  - required push reconcile before new science failed with transient DNS via helper:
+    - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+    - failure: `Could not resolve host: github.com`.
+  - acquired worker lock: `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 2` -> `acquired`.
+- Completed one bounded same-thread continuation on the frozen `5504` low-overlap center-spine `00` hard core:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_role_identity.py`
+
+### Strongest confirmed conclusion
+- Role-conditioned support-cell identity anchored to local candidate-family offset patterns adds interpretable local structure but still does **not** close the dominant `00` center-spine hard core.
+- Best compact rows on this family are:
+  - add4-side best: `41/45` with `tp/fp/fn = 0/1/3`
+    - `identity_event_present_count >= 23.500` (equivalently `support_role_bridge_fraction <= 0.572` / `support_degree_mean >= 4.333`).
+  - add1-side best: `19/45` with `tp/fp/fn = 16/0/26`
+    - `identity_event_present_count <= 15.500`.
+- Nearest-neighbor role-identity deltas remain narrow and local:
+  - one add4 row differs by `count_bridge_p2_d2` versus nearby `pocket_only` signatures;
+  - the other two are mostly swaps among a few anchored `bridge`/`pocket_only` offset signatures.
+- So the residual separator tightens again: identity-conditioned support patterns are informative but still too coarse to isolate the three add4 exceptions; the likely missing class is finer matched-layout interaction identity across add4 rows and their nearest add1 neighbors.
+
+### Files and results changed in this run
+- Repo-facing science/code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_role_identity.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-role-identity-5504-add1-vs-add4.txt`
+
+### Exact next step
+- Stay on the frozen `5504` center-spine `00` hard core.
+- Move from unary support-cell identity events to matched-pair interaction identity deltas keyed jointly to `(support role, support anchor, candidate-layout-difference signature)` for each add4 row versus its nearest add1 neighbor.
+
+### First concrete action
+- Add a bounded `00`-bucket analyzer that materializes pair-conditioned add4-vs-nearest-add1 motif-delta features and tests whether those delta motifs isolate add4 exceptions beyond the current `41/45` frontier.
+
 ## 2026-03-26 21:45 America/New_York
 
 ### Current state
