@@ -63,6 +63,8 @@ def main() -> None:
     rows = build_rows(frontier_log)
     grouped: dict[str, list[object]] = {}
     for row in rows:
+        if row.high_bridge_left_low_count >= 0.5:
+            continue
         grouped.setdefault(row.family_bucket_key, []).append(row)
 
     kept = [

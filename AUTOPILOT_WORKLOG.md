@@ -1,3 +1,50 @@
+## 2026-03-27 17:23 America/New_York
+
+### Current state
+- Started the queued deep review thread from the stable `5504` checkpoint.
+- Reconciled worker/lock state first, then reviewed the active low-overlap / transfer helper path before making changes.
+- Confirmed and fixed two real review issues:
+  - duplicate edge-identity helpers were allowing `edge_identity_candidate_closed_fraction` / `open_fraction` to exceed `1.0`
+  - shared support-family bucket rules were mixing peer-band rows back into the very buckets the rest of the analysis explicitly treats as non-peer-band
+
+### Strongest confirmed conclusion
+- The current science story did **not** change, but the helper layer is now more trustworthy.
+- Review finding 1:
+  - the edge-identity candidate fraction metrics were overcounting candidates because pocket and deep family passes incremented the same candidate cell separately
+  - fixed in:
+    - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_add1_selector.py`
+    - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_deltas.py`
+  - regression guard added:
+    - `/Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py`
+- Review finding 2:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_bucket_rules.py` was grouping raw family buckets without excluding `peer-band` rows, even though the transfer interpretation and follow-on scans explicitly excluded them
+  - fixed so shared bucket scans now stay on the same non-peer-band slice as the rest of the bucket analysis
+  - regression guard added in the audit
+- After reruns:
+  - the fixed `rc0|ml0|c2` topology scan still supports the same qualitative read
+  - the fixed shared-bucket rules are now aligned with the non-peer-band interpretation used elsewhere
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_add1_selector.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_deltas.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_bucket_rules.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- Refreshed logs:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-support-family-transfer-bucket-rules-5504.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-support-family-transfer-rc0-ml0-c2-topology-scan-5504.txt`
+
+### Exact next step
+- Continue the deep review thread rather than extending the bucket science thread.
+- Review the shared helper path in `/Users/jonreilly/Projects/Physics/toy_event_physics.py` and the active transfer scripts for:
+  - duplicated logic that can silently drift again
+  - stale rendering/reporting helpers
+  - helper/script mismatches that are not yet covered by cheap guards
+
+### First concrete action
+- Read the active low-overlap helper sections in `/Users/jonreilly/Projects/Physics/toy_event_physics.py`, then compare them against the current transfer scripts and README conclusions before deciding whether more fixes are needed.
+
 ## 2026-03-27 17:02 America/New_York
 
 ### Current state

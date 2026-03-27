@@ -162,8 +162,8 @@ def edge_identity_signature(nodes: set[tuple[int, int]]) -> tuple[set[str], dict
     events: set[str] = set()
     closed_pairs = 0
     open_pairs = 0
-    candidate_with_closed = 0
-    candidate_with_open = 0
+    candidates_with_closed: set[tuple[int, int]] = set()
+    candidates_with_open: set[tuple[int, int]] = set()
     candidate_edge_span_total = 0.0
     candidate_edge_span_count = 0
 
@@ -196,16 +196,17 @@ def edge_identity_signature(nodes: set[tuple[int, int]]) -> tuple[set[str], dict
                     local_open = True
 
             if local_closed:
-                candidate_with_closed += 1
+                candidates_with_closed.add(candidate)
             if local_open:
-                candidate_with_open += 1
+                candidates_with_open.add(candidate)
 
     numeric = {
         "edge_identity_event_count": float(len(events)),
         "edge_identity_closed_pair_count": float(closed_pairs),
         "edge_identity_open_pair_count": float(open_pairs),
-        "edge_identity_candidate_closed_fraction": _fraction(candidate_with_closed, len(all_candidates)),
-        "edge_identity_candidate_open_fraction": _fraction(candidate_with_open, len(all_candidates)),
+        # Fractions should be over unique candidate cells, not family-pass visits.
+        "edge_identity_candidate_closed_fraction": _fraction(len(candidates_with_closed), len(all_candidates)),
+        "edge_identity_candidate_open_fraction": _fraction(len(candidates_with_open), len(all_candidates)),
         "edge_identity_closed_pair_ratio": _fraction(closed_pairs, closed_pairs + open_pairs),
         "edge_identity_closed_span_mean": _fraction(candidate_edge_span_total, candidate_edge_span_count),
         "edge_identity_support_edge_density": _fraction(2 * len(support_edges), len(support_set) * (len(support_set) - 1)),

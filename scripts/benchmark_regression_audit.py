@@ -25,8 +25,13 @@ from toy_event_physics import (  # noqa: E402
     mode_only_subset_frontier_rows,
     compact_route_map_summary,
     predictor_family_comparison,
+    procedural_geometry_variants,
     resolve_sparse_bridge_feature_names,
+    scenario_by_name,
     sparse_fallback_access_benchmark,
+)
+from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_add1_selector import (  # noqa: E402
+    edge_identity_signature,
 )
 
 
@@ -259,6 +264,39 @@ def check_route_map_summary_avoids_threshold_models() -> None:
     ), "compact route-map summary regressed to building unused threshold-core model rows"
 
 
+def check_support_family_transfer_bucket_rules_exclude_peer_band() -> None:
+    script_source = (
+        REPO_ROOT
+        / "scripts"
+        / "pocket_wrap_suppressor_low_overlap_support_family_transfer_bucket_rules.py"
+    ).read_text()
+    assert (
+        "if row.high_bridge_left_low_count >= 0.5:" in script_source
+    ), "support-family bucket rules regressed to mixing peer-band rows back into shared bucket scans"
+
+
+def check_edge_identity_candidate_fraction_bounds() -> None:
+    base_nodes, wrap_y = scenario_by_name("base", "taper-wrap")
+    checked = 0
+    for variant_name, nodes, _delta in procedural_geometry_variants(
+        "base",
+        "taper-wrap",
+        base_nodes,
+        wrap_y,
+        variant_limit=8,
+        style="local-morph",
+    ):
+        _events, numeric = edge_identity_signature(set(nodes))
+        for metric_name in (
+            "edge_identity_candidate_closed_fraction",
+            "edge_identity_candidate_open_fraction",
+        ):
+            value = float(numeric[metric_name])
+            assert 0.0 <= value <= 1.0, f"{metric_name} escaped [0,1]: {value}"
+        checked += 1
+    assert checked == 8, "expected to check the first 8 local-morph variants for fraction bounds"
+
+
 def main() -> None:
     print("benchmark regression audit: checking same-weight default", flush=True)
     check_same_weight_default()
@@ -272,6 +310,10 @@ def main() -> None:
     check_overlap_row_lookup_reversal()
     print("benchmark regression audit: checking route-map threshold-model avoidance", flush=True)
     check_route_map_summary_avoids_threshold_models()
+    print("benchmark regression audit: checking support-family bucket peer-band exclusion", flush=True)
+    check_support_family_transfer_bucket_rules_exclude_peer_band()
+    print("benchmark regression audit: checking edge-identity candidate fraction bounds", flush=True)
+    check_edge_identity_candidate_fraction_bounds()
     print("benchmark regression audit: checking live mechanism split driver", flush=True)
     check_live_mechanism_split_driver()
     print("benchmark regression audit: ok", flush=True)
