@@ -1,3 +1,43 @@
+## 2026-03-27 06:46 America/New_York
+
+### Current state
+- Reconciled protocol preflight in required order:
+  - read `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`.
+- Reconciled lock/git state before mutation:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` -> `free`.
+  - acquired worker lock: `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 2` -> `acquired`.
+  - git preflight showed `main...origin/main [ahead 10]` and clean tree.
+- Required push-before-science reconcile attempted via helper and failed with transient DNS:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - result: `failure_kind=dns_failure`, `Could not resolve host: github.com`.
+- Completed one bounded same-thread continuation on the frozen `5504` low-overlap center-spine `00` hard core:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_rule_card_rescue_window_scan.py`
+
+### Strongest confirmed conclusion
+- With baseline fixed at `delta_edge_identity_support_edge_density <= 0.018` (`tp/fp/fn = 40/0/2`), there are multiple exact rescue-coordinate formulations that close add1 without add4 leakage (`42/0/0` add1, `45/45` overall), including:
+  - `pair_distance_z >= {1.554, 1.584, 1.641, ...}`
+  - `abs_delta_edge_identity_open_pair_count <= {19.000, 20.500, 21.500, 22.500, 24.000}`
+- The best exact two-clause alternates therefore form a broader equivalent-family than one published cutpoint pair.
+- But robustness remains locally brittle at this tested resolution:
+  - every exact rescue clause has only one mask-stable threshold (`stable_thresholds=1`, width `0.000`);
+  - no non-fragile multi-cutpoint exact interval was found.
+- So the closure family is equivalent-but-fragile: exactness is preserved across many alternate rescue cutpoints, but each individual cutpoint remains locally tight.
+
+### Files and results changed in this run
+- Repo-facing science/code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_rule_card_rescue_window_scan.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-rule-card-rescue-window-scan-5504-add1-vs-add4.txt`
+
+### Exact next step
+- Stay on the frozen `5504` center-spine `00` hard core.
+- Run one bounded residual-boundary closure pass that searches for a compact two-clause closure where at least one clause has a genuinely non-fragile multi-cutpoint mask-stable interval (rather than a family of isolated exact cutpoints).
+
+### First concrete action
+- Add one bounded interval-aware clause scanner that treats threshold robustness as a first-class objective (maximize exact-closure mask stability window size before tie-breaking on rule simplicity), then re-evaluate rescue-coordinate and event-clause alternatives on the same fixed baseline.
+
 ## 2026-03-27 05:41 America/New_York
 
 ### Current state
