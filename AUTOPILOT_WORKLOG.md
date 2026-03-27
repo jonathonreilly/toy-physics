@@ -1,3 +1,45 @@
+## 2026-03-27 01:42 America/New_York
+
+### Current state
+- Reconciled protocol preflight in required order:
+  - read `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`.
+- Reconciled lock/git state before mutation:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` -> `free`.
+  - acquired worker lock: `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 2` -> `acquired`.
+  - git preflight showed `main...origin/main [ahead 5]` and clean tree.
+- Required push-before-science reconcile attempted via helper and failed with transient DNS:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - result: `failure_kind=dns_failure`, `Could not resolve host: github.com`.
+- Completed one bounded same-thread continuation on the frozen `5504` low-overlap center-spine `00` hard core:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_third_order_gated_deltas.py`
+
+### Strongest confirmed conclusion
+- Nearest-opposite third-order gated motif deltas (two-hop role motifs joined to local support-support edge co-presence) give a cleaner physical separator language but still do **not** close the dominant `00` hard core.
+- Best compact rows on this family are:
+  - add4-side best: `44/45` with `tp/fp/fn = 2/0/1`
+    - `delta_third_order_gated_pair_count <= -2.500 and delta_third_order_support_edge_density >= 0.018`.
+  - add4-side single-feature best: `43/45` with `tp/fp/fn = 1/0/2`
+    - `delta_third_order_gated_pair_count <= -4.500`.
+  - add1-side best: `43/45` with `tp/fp/fn = 40/0/2`
+    - `delta_third_order_support_edge_density <= 0.018`.
+- Nearest-opposite anchors remain the same close triplet (`0.508`, `0.938`, `1.550`), and selected motifs explicitly include gated third-order events like `tri:pocket:bridge:pocket_only:edge1`.
+- So the residual separator tightens again: third-order gating improves physical interpretability (gated-pair deficit plus local support-edge-density contrast) but one add4 exception remains; the likely missing class is exception-focused local edge-pattern identity rather than more global scalar recombination.
+
+### Files and results changed in this run
+- Repo-facing science/code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_third_order_gated_deltas.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-third-order-gated-deltas-5504-add1-vs-add4.txt`
+
+### Exact next step
+- Stay on the frozen `5504` center-spine `00` hard core.
+- Run a bounded single-exception closure pass that isolates the surviving add4 row against its nearest add1 neighbors using candidate-local support-edge identity motifs (not global delta scalars).
+
+### First concrete action
+- Add one `00`-bucket analyzer that emits per-candidate support-edge identity events around the nearest-opposite pair anchors (including explicit edge-presence/absence signatures for the final add4 survivor) and reruns compact closure search to test whether the last add4 exception closes beyond `44/45`.
+
 ## 2026-03-27 00:44 America/New_York
 
 ### Current state
