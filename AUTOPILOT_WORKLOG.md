@@ -1,3 +1,37 @@
+## 2026-03-27 23:48 America/New_York
+
+### Current state
+- Continued the deep review thread on the frozen `5504` support-family transfer / baseline follow-on layer under the manual lock.
+- Fixed the next duplicated classification seam after centralizing the primary bucket set:
+  - the baseline non-peer residual follow-on was still rebuilding the same support-family bucket keys and residual-bucket thresholds locally
+  - instead of consuming them from the shared transfer helper
+- Centralized the remaining shared bucket-key logic and thresholds in:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_common.py`
+- Repointed the baseline residual follow-on to those shared key builders in:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_nonpeer_core_residual_families.py`
+- Extended the cheap audit so this script cannot silently regress to local hard-coded residual bucket thresholds later.
+
+### Strongest confirmed conclusion
+- Science conclusions did not change; this is another transfer-layer integrity cleanup.
+- The active support-family transfer and baseline follow-on layer now shares:
+  - one source of truth for the primary family buckets
+  - one source of truth for the residual bucket thresholds and key builders
+- That removes another classification-drift surface in the frozen-frontier `5504` review stack.
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_common.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_nonpeer_core_residual_families.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+
+### Exact next step
+- Stay in deep review mode on the frozen-frontier suppressor transfer/follow-on layer.
+- Review whether any remaining active follow-on scripts still duplicate other shared family-threshold constants or bucket builders instead of importing them from the transfer common helper.
+
+### First concrete action
+- Search the `support_family_transfer` lane and the immediate baseline/add4/pair follow-on scripts for local threshold literals like `3.5`, `19.0`, `71.0`, or repeated bucket-key reconstruction logic, then compare them against the shared helper surface.
+
 ## 2026-03-27 23:35 America/New_York
 
 ### Current state

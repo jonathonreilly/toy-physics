@@ -36,7 +36,9 @@ from toy_event_physics import (  # noqa: E402
     sparse_fallback_access_benchmark,
 )
 from pocket_wrap_suppressor_low_overlap_support_family_transfer_common import (  # noqa: E402
+    EDGE_IDENTITY_CLOSED_PAIR_HIGH_THRESHOLD,
     PRIMARY_SUPPORT_FAMILY_BUCKETS,
+    SUPPORT_ROLE_BRIDGE_HIGH_THRESHOLD,
 )
 from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_add1_selector import (  # noqa: E402
     edge_identity_signature,
@@ -436,6 +438,10 @@ def check_primary_support_family_buckets_shared() -> None:
     assert (
         PRIMARY_SUPPORT_FAMILY_BUCKETS == ("rc0|ml0|c2", "rc0|ml1|c3")
     ), "shared primary support-family bucket set drifted"
+    assert (
+        SUPPORT_ROLE_BRIDGE_HIGH_THRESHOLD == 19.0
+        and EDGE_IDENTITY_CLOSED_PAIR_HIGH_THRESHOLD == 71.0
+    ), "shared residual-bucket thresholds drifted"
     scripts = (
         REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_scan.py",
         REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_primary_bucket_profiles.py",
@@ -451,6 +457,18 @@ def check_primary_support_family_buckets_shared() -> None:
             'PRIMARY_BUCKETS = ("rc0|ml0|c2", "rc0|ml1|c3")' not in text
             and 'PRIMARY_BUCKETS = {"rc0|ml0|c2", "rc0|ml1|c3"}' not in text
         ), f"{script.name} regressed to duplicating the primary support-family bucket literals"
+    residual_text = (
+        REPO_ROOT
+        / "scripts"
+        / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_nonpeer_core_residual_families.py"
+    ).read_text()
+    assert (
+        "family_bucket_key_like" in residual_text
+        and "residual_bucket_key_like" in residual_text
+    ), "baseline non-peer residual follow-on no longer uses shared bucket-key helpers"
+    assert (
+        ">= 19.0" not in residual_text and ">= 71.0" not in residual_text
+    ), "baseline non-peer residual follow-on regressed to hard-coded residual bucket thresholds"
 
 
 def main() -> None:

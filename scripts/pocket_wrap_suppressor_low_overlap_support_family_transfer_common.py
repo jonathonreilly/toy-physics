@@ -27,6 +27,8 @@ from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_ident
 
 
 PRIMARY_SUPPORT_FAMILY_BUCKETS = ("rc0|ml0|c2", "rc0|ml1|c3")
+SUPPORT_ROLE_BRIDGE_HIGH_THRESHOLD = 19.0
+EDGE_IDENTITY_CLOSED_PAIR_HIGH_THRESHOLD = 71.0
 
 
 @dataclass(frozen=True)
@@ -69,6 +71,10 @@ def _cell_bin(value: float) -> str:
     return "c4p"
 
 
+def _bucket_metric(row: object, name: str) -> float:
+    return float(getattr(row, name))
+
+
 def family_bucket_key(row: SupportFamilyTransferRow) -> str:
     return "|".join(
         [
@@ -83,10 +89,32 @@ def residual_bucket_key(row: SupportFamilyTransferRow) -> str:
     return "|".join(
         [
             f"rc{int(row.high_bridge_right_center_count >= 0.5)}",
-            f"sbh{int(row.support_role_bridge_count >= 19.0)}",
-            f"cp_hi{int(row.edge_identity_closed_pair_count >= 71.0)}",
+            f"sbh{int(row.support_role_bridge_count >= SUPPORT_ROLE_BRIDGE_HIGH_THRESHOLD)}",
+            f"cp_hi{int(row.edge_identity_closed_pair_count >= EDGE_IDENTITY_CLOSED_PAIR_HIGH_THRESHOLD)}",
             _mid_low_bin(row.high_bridge_mid_low_count),
             _cell_bin(row.high_bridge_cell_count),
+        ]
+    )
+
+
+def family_bucket_key_like(row: object) -> str:
+    return "|".join(
+        [
+            f"rc{int(_bucket_metric(row, 'high_bridge_right_center_count') >= 0.5)}",
+            _mid_low_bin(_bucket_metric(row, "high_bridge_mid_low_count")),
+            _cell_bin(_bucket_metric(row, "high_bridge_cell_count")),
+        ]
+    )
+
+
+def residual_bucket_key_like(row: object) -> str:
+    return "|".join(
+        [
+            f"rc{int(_bucket_metric(row, 'high_bridge_right_center_count') >= 0.5)}",
+            f"sbh{int(_bucket_metric(row, 'support_role_bridge_count') >= SUPPORT_ROLE_BRIDGE_HIGH_THRESHOLD)}",
+            f"cp_hi{int(_bucket_metric(row, 'edge_identity_closed_pair_count') >= EDGE_IDENTITY_CLOSED_PAIR_HIGH_THRESHOLD)}",
+            _mid_low_bin(_bucket_metric(row, "high_bridge_mid_low_count")),
+            _cell_bin(_bucket_metric(row, "high_bridge_cell_count")),
         ]
     )
 
