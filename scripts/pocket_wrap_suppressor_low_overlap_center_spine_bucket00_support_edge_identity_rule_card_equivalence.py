@@ -58,6 +58,17 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--event-limit", type=int, default=28)
     parser.add_argument("--predicate-limit", type=int, default=36)
     parser.add_argument("--window", type=int, default=2)
+    parser.add_argument("--baseline-name")
+    parser.add_argument("--baseline-op", choices=("<=", ">="))
+    parser.add_argument("--baseline-threshold", type=float)
+    parser.add_argument("--baseline-label", default="density stays low")
+    parser.add_argument("--rescue-name")
+    parser.add_argument("--rescue-op", choices=("<=", ">="))
+    parser.add_argument("--rescue-threshold", type=float)
+    parser.add_argument(
+        "--rescue-label",
+        default="wide pair distance (or low open-pair mismatch)",
+    )
     return parser
 
 
@@ -75,6 +86,25 @@ def _critical_thresholds(rows: list[object], name: str) -> list[float]:
     if len(values) == 1:
         return [values[0]]
     return [(left + right) / 2.0 for left, right in zip(values, values[1:])]
+
+
+def _stable_interval(rows: list[object], pred: Predicate) -> tuple[float, float, float, str]:
+    values = sorted({float(getattr(row, pred.name)) for row in rows})
+    if pred.op == "<=":
+        included = [value for value in values if value <= pred.threshold]
+        excluded = [value for value in values if value > pred.threshold]
+        if not included or not excluded:
+            return pred.threshold, pred.threshold, 0.0, f"[{pred.threshold:.3f}, {pred.threshold:.3f}]"
+        lower = max(included)
+        upper = min(excluded)
+        return lower, upper, upper - lower, f"[{lower:.3f}, {upper:.3f})"
+    included = [value for value in values if value >= pred.threshold]
+    excluded = [value for value in values if value < pred.threshold]
+    if not included or not excluded:
+        return pred.threshold, pred.threshold, 0.0, f"[{pred.threshold:.3f}, {pred.threshold:.3f}]"
+    lower = max(excluded)
+    upper = min(included)
+    return lower, upper, upper - lower, f"({lower:.3f}, {upper:.3f}]"
 
 
 def candidate_predicates(rows: list[object], names: list[str]) -> list[Predicate]:
@@ -103,6 +133,21 @@ def _metrics(mask: int, target_mask: int, non_target_mask: int, total: int) -> t
 
 def _mask_names(rows: list[object], mask: int) -> list[str]:
     return [getattr(row, "source_name") for idx, row in enumerate(rows) if mask & (1 << idx)]
+
+
+def _find_predicate(
+    predicates: list[Predicate],
+    *,
+    name: str | None,
+    op: str | None,
+    threshold: float | None,
+) -> Predicate | None:
+    if name is None or op is None or threshold is None:
+        return None
+    for pred in predicates:
+        if pred.name == name and pred.op == op and abs(pred.threshold - threshold) < 1e-9:
+            return pred
+    return None
 
 
 def _equivalent_threshold_window(
@@ -179,14 +224,19 @@ def main() -> None:
     ranked.sort(key=lambda item: item[:4])
     top_predicates = [item[4] for item in ranked[: min(args.predicate_limit, len(ranked))]]
 
-    baseline: Predicate | None = None
+    baseline = _find_predicate(
+        predicates_all,
+        name=args.baseline_name,
+        op=args.baseline_op,
+        threshold=args.baseline_threshold,
+    )
     baseline_tp = -1
-    for pred in top_predicates:
-        tp, fp, _fn, _correct = _metrics(pred.mask, left_mask, right_mask, len(rows))
-        if fp == 0 and tp > baseline_tp:
-            baseline = pred
-            baseline_tp = tp
-
+    if baseline is None:
+        for pred in top_predicates:
+            tp, fp, _fn, _correct = _metrics(pred.mask, left_mask, right_mask, len(rows))
+            if fp == 0 and tp > baseline_tp:
+                baseline = pred
+                baseline_tp = tp
     if baseline is None:
         raise RuntimeError("no zero-FP baseline predicate found")
 
@@ -195,23 +245,37 @@ def main() -> None:
     )
     miss_mask = left_mask & (((1 << len(rows)) - 1) ^ baseline.mask)
 
-    best_clause: Predicate | None = None
+    best_clause = _find_predicate(
+        predicates_all,
+        name=args.rescue_name,
+        op=args.rescue_op,
+        threshold=args.rescue_threshold,
+    )
     best_key: tuple[int, int, str] | None = None
     best_combined_mask = baseline.mask
-    for pred in top_predicates:
-        if pred.mask & right_mask:
-            continue
-        if (pred.mask & miss_mask) == 0:
-            continue
-        combined = baseline.mask | pred.mask
-        tp, fp, fn, _correct = _metrics(combined, left_mask, right_mask, len(rows))
-        if fp != 0:
-            continue
-        key = (fn, -tp, pred.text)
-        if best_key is None or key < best_key:
-            best_key = key
-            best_clause = pred
-            best_combined_mask = combined
+    if best_clause is None:
+        for pred in top_predicates:
+            if pred.mask & right_mask:
+                continue
+            if (pred.mask & miss_mask) == 0:
+                continue
+            combined = baseline.mask | pred.mask
+            tp, fp, fn, _correct = _metrics(combined, left_mask, right_mask, len(rows))
+            if fp != 0:
+                continue
+            key = (fn, -tp, pred.text)
+            if best_key is None or key < best_key:
+                best_key = key
+                best_clause = pred
+                best_combined_mask = combined
+    else:
+        best_combined_mask = baseline.mask | best_clause.mask
+        tp, fp, fn, _correct = _metrics(best_combined_mask, left_mask, right_mask, len(rows))
+        if fp != 0 or fn != 0:
+            raise RuntimeError(
+                "requested rescue clause does not produce exact zero-FP closure "
+                f"(tp/fp/fn={tp}/{fp}/{fn})"
+            )
 
     if best_clause is None:
         raise RuntimeError("no rescue clause found for baseline residual")
@@ -229,10 +293,8 @@ def main() -> None:
         if combined == best_combined_mask:
             equivalent_pairs += 1
 
-    base_low = min(pred.threshold for pred in base_window)
-    base_high = max(pred.threshold for pred in base_window)
-    rescue_low = min(pred.threshold for pred in rescue_window)
-    rescue_high = max(pred.threshold for pred in rescue_window)
+    base_interval = _stable_interval(rows, baseline)
+    rescue_interval = _stable_interval(rows, best_clause)
 
     rescued_names = _mask_names(rows, best_clause.mask & miss_mask)
 
@@ -247,9 +309,9 @@ def main() -> None:
     print("Physical-language closure card")
     print("------------------------------")
     print("state: nearest-opposite support-edge identity closure")
-    print("baseline_clause: density stays low")
+    print(f"baseline_clause: {args.baseline_label}")
     print(f"  {baseline.text}")
-    print("rescue_clause: wide pair distance (or low open-pair mismatch)")
+    print(f"rescue_clause: {args.rescue_label}")
     print(f"  {best_clause.text}")
     print(
         "closure: baseline OR rescue"
@@ -263,12 +325,12 @@ def main() -> None:
     print("Bounded threshold-equivalence windows")
     print("-------------------------------------")
     print(
-        f"baseline_window ({len(base_window)} thresholds, mask-stable): "
-        + f"{baseline.op} [{base_low:.3f}, {base_high:.3f}]"
+        f"baseline_window ({len(base_window)} sampled thresholds, mask-stable): "
+        + f"{baseline.op} interval={base_interval[3]} width={base_interval[2]:.3f}"
     )
     print(
-        f"rescue_window ({len(rescue_window)} thresholds, mask-stable): "
-        + f"{best_clause.op} [{rescue_low:.3f}, {rescue_high:.3f}]"
+        f"rescue_window ({len(rescue_window)} sampled thresholds, mask-stable): "
+        + f"{best_clause.op} interval={rescue_interval[3]} width={rescue_interval[2]:.3f}"
     )
     print(
         f"cross_window_equivalence: {equivalent_pairs}/{total_pairs} pairs preserve exact closure mask"

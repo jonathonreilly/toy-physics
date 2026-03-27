@@ -1,3 +1,60 @@
+## 2026-03-27 07:39 America/New_York
+
+### Current state
+- Reconciled lock/git state under the manual continuation session:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` showed the lock held by `manual-codex`.
+  - git preflight showed `main...origin/main` with only the intended interval-fix edits in the working tree.
+- Corrected the center-spine robustness method itself:
+  - patched `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_rule_card_rescue_window_scan.py`
+  - patched `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_rule_card_equivalence.py`
+  - added `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_interval_priority_scan.py`
+- Ran the corrected scans plus a bounded rule-card comparison against three exact rescues on the frozen `5504` center-spine `00` core.
+
+### Strongest confirmed conclusion
+- The overnight “exact-but-fragile” conclusion was overstated by a measurement bug.
+- The old code counted sampled midpoint thresholds, not the actual mask-stable interval on the raw value axis, so binary event rescues and several numeric rescues were being misclassified as width `0`.
+- After correction:
+  - baseline remains `delta_edge_identity_support_edge_density <= 0.018`
+  - exact add1 closure remains `42/0/0`, `45/45` overall
+  - the strongest exact rescue is now clearly `delta_edge_identity_event_count <= -14.500`
+    - interval `[−18.000, −11.000)`, width `7.000`
+  - one more bounded decomposition step showed that this wide rescue already compresses to:
+    - `delta_count_family_pocket <= -14.500`
+    - same interval `[−18.000, −11.000)`, same rescued rows
+  - other exact rescues also have real width:
+    - `pair_selected_event_present_count >= 6.000` -> width `2.000`
+    - `abs_delta_edge_identity_open_pair_count <= 22.500` -> width `1.000`
+    - exact event predicates `ev_* >= 0.500` -> width `1.000`
+- So the current best read is:
+  - the closure family on the frozen `5504` center-spine `00` core is genuinely robust on the rescue side
+  - the rescue family already compresses one level further into a pocket-family event deficit
+  - the remaining locally tight part is the baseline density cut, not the rescue family
+
+### Files and results changed in this run
+- Repo-facing science/code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_rule_card_rescue_window_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_rule_card_equivalence.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_interval_priority_scan.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- New result logs:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-rule-card-rescue-window-scan-5504-add1-vs-add4-corrected.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-rule-card-equivalence-5504-add1-vs-add4-corrected.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-interval-priority-5504-add1-vs-add4.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-rule-card-open-pair-5504.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-rule-card-event-delta-5504.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-rule-card-selected-events-5504.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-event-family-decomposition-5504.txt`
+
+### Exact next step
+- Stay on the frozen `5504` center-spine `00` hard core.
+- Treat dense laddering as paused for this thread.
+- Keep the broad-rescue question narrowed to the pocket-family deficit law rather than the full event-count scalar.
+- Decompose `delta_count_family_pocket <= -14.500` into smaller pocket-family role/presence subfamilies so we can see whether the same wide interval survives one more compression step.
+
+### First concrete action
+- Add one bounded pocket-family decomposition pass that splits the exact `delta_count_family_pocket <= -14.500` rescue into role-pair and `present0/present1` subfamilies on the same frozen `5504` bucket `00` rows, then test whether a still-smaller family-level summary preserves the exact width-`7.000` rescue mask.
+
 ## 2026-03-27 06:46 America/New_York
 
 ### Current state

@@ -82,6 +82,25 @@ def _critical_thresholds(rows: list[object], name: str) -> list[float]:
     return [(left + right) / 2.0 for left, right in zip(values, values[1:])]
 
 
+def _stable_interval(rows: list[object], pred: Predicate) -> tuple[float, float, float, str]:
+    values = sorted({float(getattr(row, pred.name)) for row in rows})
+    if pred.op == "<=":
+        included = [value for value in values if value <= pred.threshold]
+        excluded = [value for value in values if value > pred.threshold]
+        if not included or not excluded:
+            return pred.threshold, pred.threshold, 0.0, f"[{pred.threshold:.3f}, {pred.threshold:.3f}]"
+        lower = max(included)
+        upper = min(excluded)
+        return lower, upper, upper - lower, f"[{lower:.3f}, {upper:.3f})"
+    included = [value for value in values if value >= pred.threshold]
+    excluded = [value for value in values if value < pred.threshold]
+    if not included or not excluded:
+        return pred.threshold, pred.threshold, 0.0, f"[{pred.threshold:.3f}, {pred.threshold:.3f}]"
+    lower = max(excluded)
+    upper = min(included)
+    return lower, upper, upper - lower, f"({lower:.3f}, {upper:.3f}]"
+
+
 def candidate_predicates(rows: list[object], names: list[str]) -> list[Predicate]:
     full_mask = (1 << len(rows)) - 1
     unique_by_mask: dict[int, Predicate] = {}
@@ -106,7 +125,7 @@ def _metrics(mask: int, target_mask: int, non_target_mask: int, total: int) -> t
     return tp, fp, fn
 
 
-def _stable_window(rows: list[object], pred: Predicate) -> list[float]:
+def _sampled_mask_stable_thresholds(rows: list[object], pred: Predicate) -> list[float]:
     thresholds = _critical_thresholds(rows, pred.name)
     out = []
     for threshold in thresholds:
@@ -185,7 +204,7 @@ def main() -> None:
     miss_mask = left_mask & (((1 << len(rows)) - 1) ^ baseline.mask)
     miss_names = _mask_names(rows, miss_mask)
 
-    exact_rescues: list[tuple[int, float, str, Predicate, int, list[float]]] = []
+    exact_rescues: list[tuple[float, int, str, Predicate, int, tuple[float, float, float, str], list[float]]] = []
     for pred in top_predicates:
         if (pred.mask & right_mask) != 0:
             continue
@@ -195,9 +214,9 @@ def main() -> None:
         tp, fp, fn = _metrics(combined, left_mask, right_mask, len(rows))
         if not (fp == 0 and fn == 0):
             continue
-        window = _stable_window(rows, pred)
-        width = max(window) - min(window)
-        exact_rescues.append((len(window), width, pred.text, pred, tp, window))
+        interval = _stable_interval(rows, pred)
+        sampled = _sampled_mask_stable_thresholds(rows, pred)
+        exact_rescues.append((interval[2], len(sampled), pred.text, pred, tp, interval, sampled))
 
     exact_rescues.sort(key=lambda item: (-item[0], -item[1], item[2]))
     named_rescues = [row for row in exact_rescues if row[3].name in set(args.rescue_names)]
@@ -221,11 +240,11 @@ def main() -> None:
     if not named_rescues:
         print("none")
     else:
-        for count, width, _text, pred, tp, window in named_rescues:
+        for width, sampled_count, _text, pred, tp, interval, sampled in named_rescues:
             print(
                 f"{pred.text} -> closure tp/fp/fn={tp}/0/0 "
-                + f"stable_thresholds={count} width={width:.3f} "
-                + f"window=[{min(window):.3f}, {max(window):.3f}]"
+                + f"sampled_thresholds={sampled_count} width={width:.3f} "
+                + f"interval={interval[3]}"
             )
     print()
     print("Best exact two-clause alternates (baseline OR rescue)")
@@ -233,23 +252,23 @@ def main() -> None:
     if not exact_rescues:
         print("none")
     else:
-        for idx, (count, width, _text, pred, tp, window) in enumerate(exact_rescues[:8], start=1):
+        for idx, (width, sampled_count, _text, pred, tp, interval, sampled) in enumerate(exact_rescues[:8], start=1):
             print(
                 f"{idx}. {pred.text} -> closure tp/fp/fn={tp}/0/0 "
-                + f"stable_thresholds={count} width={width:.3f} "
-                + f"window=[{min(window):.3f}, {max(window):.3f}]"
+                + f"sampled_thresholds={sampled_count} width={width:.3f} "
+                + f"interval={interval[3]}"
             )
     print()
-    non_fragile = [item for item in exact_rescues if item[0] > 1]
+    non_fragile = [item for item in exact_rescues if item[0] > 0.0]
     print("Non-fragile exact closures")
     print("--------------------------")
     if not non_fragile:
-        print("none (all exact rescue windows are single-threshold)")
+        print("none (all exact rescue intervals collapse to a point)")
     else:
-        for count, width, _text, pred, _tp, window in non_fragile:
+        for width, sampled_count, _text, pred, _tp, interval, sampled in non_fragile[:16]:
             print(
-                f"{pred.text} stable_thresholds={count} width={width:.3f} "
-                + f"window=[{min(window):.3f}, {max(window):.3f}]"
+                f"{pred.text} sampled_thresholds={sampled_count} width={width:.3f} "
+                + f"interval={interval[3]}"
             )
     print()
     print(
