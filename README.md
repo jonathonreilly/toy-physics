@@ -107,7 +107,7 @@ Inside that frozen case, the hardest remaining low-overlap residual has been nar
 - first to a low-overlap basin
 - then to a center-spine residual
 - then to a tiny `00` bucket
-- and now to an exact-but-fragile closure family
+- and now to an exact closure family with a broad rescue side and a locally tight baseline cut
 
 That is a good sign. It means the unresolved part is becoming smaller and more concrete, not fuzzier.
 

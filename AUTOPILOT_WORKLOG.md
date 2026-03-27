@@ -32,6 +32,34 @@
 
 ### First concrete action
 - Inspect scripts that reconstruct bucket-local slices or parse rendered rule text in the `support_family_transfer` lane and add one more execution-backed guard where a helper/script semantic mismatch could still pass string-presence checks.
+## 2026-03-27 17:36 America/New_York
+
+### Current state
+- Continued the deep review thread after pushing the live-rule exception-scan fix.
+- Confirmed one more reporting-only drift in `/Users/jonreilly/Projects/Physics/README.md`:
+  - the lay summary still described the frozen `5504` `00` core as ending in an “exact-but-fragile” closure family
+  - that wording is stale relative to the current helper-backed result, where the rescue side is broad and only the baseline density cut remains locally tight
+
+### Strongest confirmed conclusion
+- The science read did not change.
+- The honest current summary for the frozen `5504` center-spine `00` core is:
+  - exact closure family
+  - broad rescue side
+  - locally tight baseline cut
+- So the README now matches the technical section instead of understating the stability of the rescue family.
+
+### Files and results changed in this run
+- Repo-facing docs:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+
+### Exact next step
+- Stay in deep review mode.
+- Continue looking for stale summary/rendering language or small helper drift in the frozen `5504` low-overlap review surface, especially where older intermediate interpretations may still be present.
+
+### First concrete action
+- Search the README and active low-overlap scripts for remaining stale terms like `fragile`, `current best`, `residual`, or other older intermediate mechanism language, then compare them against the current helper-backed result.
+
 ## 2026-03-27 17:33 America/New_York
 
 ### Current state
