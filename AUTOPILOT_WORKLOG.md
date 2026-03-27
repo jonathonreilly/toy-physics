@@ -1,3 +1,41 @@
+## 2026-03-26 20:43 America/New_York
+
+### Current state
+- Reconciled protocol preflight in required order:
+  - read `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`.
+- Reconciled lock/git state before mutation:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` -> `free`.
+  - acquired worker lock: `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 2` -> `acquired`.
+  - git preflight showed clean sync (`main...origin/main`, ahead/behind `0/0`).
+- Completed one bounded same-thread continuation on the frozen `5504` low-overlap center-spine `00` hard core:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_candidate_interactions.py`
+
+### Strongest confirmed conclusion
+- Explicit support-role/candidate-family interaction motifs (pair motifs plus local support `star` motifs) add bounded structure but still do **not** close the dominant `00` center-spine hard core.
+- Best compact interaction rows are:
+  - add4-side best: `41/45` with `tp/fp/fn = 0/1/3`
+    - `bridge_pair_fraction <= 0.740` (or equivalent `pair_density` edge row)
+  - add1-side best: `30/45` with `tp/fp/fn = 27/0/15`
+    - `pair_density >= 1.047`
+- Nearest-neighbor motif deltas are now explicit and small:
+  - one add4 row has unique `star_bridge_p2_d2` vs nearest add1,
+  - the other two add4 rows differ from nearest add1 neighbors by only one or two local `star` motifs.
+- So the residual separator tightens again: pairwise support-candidate adjacency motifs are informative but still too coarse; the next likely missing class is finer support-cell interaction identity/context (oriented support-pair motifs or small support-subgraph context around matched candidate cells), not another scalar threshold recombination.
+
+### Files and results changed in this run
+- Repo-facing science/code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_candidate_interactions.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-candidate-interactions-5504-add1-vs-add4.txt`
+
+### Exact next step
+- Stay on the frozen `5504` center-spine `00` hard core.
+- Move from pairwise support-candidate adjacency motifs to finer support-cell interaction identity/context around the matched candidate cells.
+
+### First concrete action
+- Build a bounded `00`-bucket runner that adds oriented support-pair / small support-subgraph context features anchored to the matched candidate layouts for the three add4 rows and their nearest add1 neighbors.
+
 ## 2026-03-26 19:35 America/New_York
 
 ### Current state
