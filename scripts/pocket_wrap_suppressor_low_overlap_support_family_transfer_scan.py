@@ -18,12 +18,10 @@ if str(PROJECT_DIR) not in sys.path:
     sys.path.insert(0, str(PROJECT_DIR))
 
 from pocket_wrap_suppressor_low_overlap_support_family_transfer_common import (  # noqa: E402
+    PRIMARY_SUPPORT_FAMILY_BUCKETS,
     SupportFamilyTransferRow,
     build_rows,
 )
-
-
-PRIMARY_BUCKETS = ("rc0|ml0|c2", "rc0|ml1|c3")
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -43,7 +41,7 @@ def _peer_band(row: SupportFamilyTransferRow) -> bool:
 def _family_label(row: SupportFamilyTransferRow) -> str:
     if _peer_band(row):
         return "peer-band"
-    if row.family_bucket_key in PRIMARY_BUCKETS:
+    if row.family_bucket_key in PRIMARY_SUPPORT_FAMILY_BUCKETS:
         return f"primary:{row.family_bucket_key}"
     return f"satellite:{row.residual_bucket_key}"
 
@@ -83,11 +81,13 @@ def main() -> None:
     print()
 
     shared_primary_rows = [
-        row for row in rows if row.family_bucket_key in PRIMARY_BUCKETS and not _peer_band(row)
+        row
+        for row in rows
+        if row.family_bucket_key in PRIMARY_SUPPORT_FAMILY_BUCKETS and not _peer_band(row)
     ]
     print("Shared primary-bucket occupancy")
     print("-------------------------------")
-    for bucket_key in PRIMARY_BUCKETS:
+    for bucket_key in PRIMARY_SUPPORT_FAMILY_BUCKETS:
         bucket_rows = [row for row in shared_primary_rows if row.family_bucket_key == bucket_key]
         counter = Counter(row.subtype for row in bucket_rows)
         print(f"{bucket_key}: count={len(bucket_rows)} subtype_counts={dict(counter)}")
@@ -112,7 +112,7 @@ def main() -> None:
     print("---------------------------")
     family_counts: dict[str, Counter[str]] = defaultdict(Counter)
     for row in rows:
-        if _peer_band(row) or row.family_bucket_key in PRIMARY_BUCKETS:
+        if _peer_band(row) or row.family_bucket_key in PRIMARY_SUPPORT_FAMILY_BUCKETS:
             continue
         family_counts[row.residual_bucket_key][row.subtype] += 1
     for key, counts in sorted(

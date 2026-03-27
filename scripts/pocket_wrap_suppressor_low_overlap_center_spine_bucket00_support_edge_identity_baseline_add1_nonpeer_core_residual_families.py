@@ -31,9 +31,9 @@ from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_topology i
 from pocket_wrap_suppressor_low_overlap_center_spine_hardest_bucket_rules import (  # noqa: E402
     load_bucket_rows,
 )
-
-
-PRIMARY_BUCKETS = {"rc0|ml0|c2", "rc0|ml1|c3"}
+from pocket_wrap_suppressor_low_overlap_support_family_transfer_common import (  # noqa: E402
+    PRIMARY_SUPPORT_FAMILY_BUCKETS,
+)
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -117,7 +117,8 @@ def main() -> None:
     non_peer_rows = [
         row
         for row in rows
-        if getattr(row, "subtype") == "non_peer" and _primary_key(row) not in PRIMARY_BUCKETS
+        if getattr(row, "subtype") == "non_peer"
+        and _primary_key(row) not in PRIMARY_SUPPORT_FAMILY_BUCKETS
     ]
 
     grouped: dict[str, list[object]] = defaultdict(list)
@@ -128,7 +129,7 @@ def main() -> None:
     print("Center-Spine Bucket 00 Baseline Add1 Non-Peer Residual Families")
     print("================================================================")
     print(f"residual_rows={len(non_peer_rows)}")
-    print(f"primary_buckets={sorted(PRIMARY_BUCKETS)}")
+    print(f"primary_buckets={sorted(PRIMARY_SUPPORT_FAMILY_BUCKETS)}")
     print()
     for idx, (key, bucket_rows0) in enumerate(sorted(grouped.items(), key=lambda item: (-len(item[1]), item[0])), start=1):
         print(f"{idx}. bucket={key} count={len(bucket_rows0)}")

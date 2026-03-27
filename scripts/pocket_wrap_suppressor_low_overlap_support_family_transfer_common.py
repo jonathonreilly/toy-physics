@@ -26,6 +26,9 @@ from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_ident
 )
 
 
+PRIMARY_SUPPORT_FAMILY_BUCKETS = ("rc0|ml0|c2", "rc0|ml1|c3")
+
+
 @dataclass(frozen=True)
 class SupportFamilyTransferRow:
     source_name: str

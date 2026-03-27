@@ -18,11 +18,9 @@ if str(PROJECT_DIR) not in sys.path:
     sys.path.insert(0, str(PROJECT_DIR))
 
 from pocket_wrap_suppressor_low_overlap_support_family_transfer_common import (  # noqa: E402
+    PRIMARY_SUPPORT_FAMILY_BUCKETS,
     build_rows,
 )
-
-
-PRIMARY_BUCKETS = {"rc0|ml0|c2", "rc0|ml1|c3"}
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -46,7 +44,8 @@ def main() -> None:
     satellites = [
         row
         for row in rows
-        if row.high_bridge_left_low_count < 0.5 and row.family_bucket_key not in PRIMARY_BUCKETS
+        if row.high_bridge_left_low_count < 0.5
+        and row.family_bucket_key not in PRIMARY_SUPPORT_FAMILY_BUCKETS
     ]
     grouped: dict[str, list[object]] = defaultdict(list)
     for row in satellites:

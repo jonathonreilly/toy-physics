@@ -1,3 +1,43 @@
+## 2026-03-27 23:35 America/New_York
+
+### Current state
+- Continued the deep review thread on the frozen `5504` support-family transfer layer after reconciling git and worker state under the manual lock.
+- Fixed one more shared-helper drift surface:
+  - the active transfer scripts were each carrying their own copy of the “shared primary support-family buckets” set
+  - instead of importing it from the shared transfer helper
+- Centralized that bucket set in:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_common.py`
+- Repointed the active transfer/follow-on scripts to that shared constant:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_primary_bucket_profiles.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_satellites.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_nonpeer_core_residual_families.py`
+- Added a cheap audit guard so those scripts cannot silently fork the primary-bucket definition later.
+
+### Strongest confirmed conclusion
+- Science conclusions did not change; this is another integrity cleanup.
+- The shared support-family interpretation is now less brittle:
+  - the primary bucket set `("rc0|ml0|c2", "rc0|ml1|c3")` now lives in one shared helper location
+  - the main transfer scan, its primary-bucket profiles, the satellite summary, and the baseline non-peer residual follow-on all consume the same source of truth
+- That closes one more low-grade drift surface in the active frozen-frontier transfer review layer.
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_common.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_primary_bucket_profiles.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_satellites.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_nonpeer_core_residual_families.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+
+### Exact next step
+- Stay in deep review mode on the frozen-frontier suppressor summary/reconstruction layer.
+- Review whether any remaining active transfer/follow-on scripts still duplicate shared bucket logic or other classification constants instead of importing them from the shared helper path.
+
+### First concrete action
+- Search the `support_family_transfer` and immediate downstream baseline follow-on scripts for duplicated bucket literals or threshold constants, then compare them against the shared helper surface.
+
 ## 2026-03-27 23:07 America/New_York
 
 ### Current state

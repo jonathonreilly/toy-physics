@@ -35,6 +35,9 @@ from toy_event_physics import (  # noqa: E402
     scenario_by_name,
     sparse_fallback_access_benchmark,
 )
+from pocket_wrap_suppressor_low_overlap_support_family_transfer_common import (  # noqa: E402
+    PRIMARY_SUPPORT_FAMILY_BUCKETS,
+)
 from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_add1_selector import (  # noqa: E402
     edge_identity_signature,
 )
@@ -429,6 +432,27 @@ def check_latent_structure_entrypoint_is_historical_live_sampler() -> None:
     ), "latent-structure runner no longer points to the canonical frozen-frontier compression workflow"
 
 
+def check_primary_support_family_buckets_shared() -> None:
+    assert (
+        PRIMARY_SUPPORT_FAMILY_BUCKETS == ("rc0|ml0|c2", "rc0|ml1|c3")
+    ), "shared primary support-family bucket set drifted"
+    scripts = (
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_scan.py",
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_primary_bucket_profiles.py",
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_satellites.py",
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_nonpeer_core_residual_families.py",
+    )
+    for script in scripts:
+        text = script.read_text()
+        assert (
+            "PRIMARY_SUPPORT_FAMILY_BUCKETS" in text
+        ), f"{script.name} no longer uses the shared primary support-family bucket set"
+        assert (
+            'PRIMARY_BUCKETS = ("rc0|ml0|c2", "rc0|ml1|c3")' not in text
+            and 'PRIMARY_BUCKETS = {"rc0|ml0|c2", "rc0|ml1|c3"}' not in text
+        ), f"{script.name} regressed to duplicating the primary support-family bucket literals"
+
+
 def main() -> None:
     print("benchmark regression audit: checking same-weight default", flush=True)
     check_same_weight_default()
@@ -456,6 +480,8 @@ def main() -> None:
     check_active_suppressor_defaults_target_frozen_5504()
     print("benchmark regression audit: checking latent-structure entrypoint role", flush=True)
     check_latent_structure_entrypoint_is_historical_live_sampler()
+    print("benchmark regression audit: checking shared primary support-family buckets", flush=True)
+    check_primary_support_family_buckets_shared()
     print("benchmark regression audit: checking live mechanism split driver", flush=True)
     check_live_mechanism_split_driver()
     print("benchmark regression audit: ok", flush=True)

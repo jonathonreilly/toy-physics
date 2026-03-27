@@ -19,11 +19,9 @@ if str(PROJECT_DIR) not in sys.path:
     sys.path.insert(0, str(PROJECT_DIR))
 
 from pocket_wrap_suppressor_low_overlap_support_family_transfer_common import (  # noqa: E402
+    PRIMARY_SUPPORT_FAMILY_BUCKETS,
     build_rows,
 )
-
-
-PRIMARY_BUCKETS = ("rc0|ml0|c2", "rc0|ml1|c3")
 FEATURES = (
     "edge_identity_closed_pair_count",
     "support_role_bridge_count",
@@ -57,7 +55,7 @@ def main() -> None:
     print("===============================================")
     print(f"frontier_log={frontier_log}")
     print()
-    for bucket_key in PRIMARY_BUCKETS:
+    for bucket_key in PRIMARY_SUPPORT_FAMILY_BUCKETS:
         bucket_rows = [
             row
             for row in rows
