@@ -1,3 +1,43 @@
+## 2026-03-27 14:41 America/New_York
+
+### Current state
+- Reconciled protocol preflight in required order:
+  - read `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`.
+- Reconciled lock/git state before mutation:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` -> `free`.
+  - acquired worker lock: `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 2` -> `acquired`.
+  - git preflight showed `main...origin/main` ahead by `2`.
+  - pre-step helper push attempt failed with transient DNS resolution (`failure_kind=dns_failure`, host `github.com`), so run continued with one bounded same-thread science step.
+- Completed one bounded same-thread continuation on the frozen `5504` center-spine `00` hard core:
+  - added `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_candidate_anchor_residual_scan.py`
+  - ran it to produce `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-baseline-add1-candidate-anchor-residual-scan-5504.txt`.
+
+### Strongest confirmed conclusion
+- The broader baseline-covered add1 `(1, -2)` peer branch now has an exact closure on the same `40`-row pool (`5` peer vs `35` non-peer) under a bounded candidate-anchored local topology basis.
+- Exact peer separator:
+  - `anchor_adj_bridge_count >= 3.500` (`5/5` TP, `0` FP).
+- Exact complement separator:
+  - `anchor_adj_bridge_count <= 3.500` (`35/35` TP, `0` FP).
+- Physical read:
+  - peer rows are exactly those where anchor cell `(1, -2)` exists and is adjacent to a dense bridge neighborhood (at least four bridge support nodes; observed `7-8`), whereas non-peer rows keep this anchor-local bridge count at `0`.
+
+### Files and results changed in this run
+- Repo-facing science/code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_candidate_anchor_residual_scan.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-baseline-add1-candidate-anchor-residual-scan-5504.txt`
+
+### Exact next step
+- Stay on the frozen `5504` center-spine `00` hard core.
+- Keep dense laddering paused.
+- Test whether the new anchor-local exact branch law compresses further into a translation-invariant local support-neighborhood rule (without naming fixed candidate coordinates).
+
+### First concrete action
+- Add one bounded coordinate-agnostic local-neighborhood scan that searches for the same peer/non-peer closure pattern over all candidate cells, then check whether `(1, -2)` is uniquely singled out or part of a broader invariant class.
+
+
 ## 2026-03-27 13:41 America/New_York
 
 ### Current state

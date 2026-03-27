@@ -356,6 +356,11 @@ So the current read is:
   - this richer layout basis still gives no exact `(1, -2)` peer-branch closure (best remains partial at `2/5` true positives with one false positive)
   - measured span/orientation coordinates are largely collapsed across this pool (`span>=4` and `skew` support-edge bins are all `0`), so these coarse topology bins do not provide the missing discriminator
   - so the broader baseline-covered add1 side now appears to require richer support-layout topology (or additional coordinates) beyond these coarse totals and sparse branch-cell motifs
+  - a bounded candidate-anchored residual pass then closes the `(1, -2)` peer branch exactly on the same broader pool (`40` rows):
+    - exact peer rule: `anchor_adj_bridge_count >= 3.500` (`5/5` TP, `0` FP)
+    - equivalent complement: `anchor_adj_bridge_count <= 3.500` (`35/35` non-peer TP, `0` FP)
+  - physical translation: the peer branch is exactly the subset where the `(1, -2)` anchor cell is coupled to a dense local bridge neighborhood (at least four adjacent bridge supports)
+  - this is a real closure upgrade for the broader baseline-covered add1 branch, though it still leaves open whether a coarser non-anchor law exists for the full low-overlap basin
 - the remaining tight part is therefore no longer the rescue side; it is the broader baseline-covered add1 family beyond that zero-distance peer branch
 
 ### What the Current Mechanism Story Looks Like
