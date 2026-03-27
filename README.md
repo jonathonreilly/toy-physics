@@ -372,7 +372,29 @@ So the current read is:
   - current best physical read:
     - broad baseline-covered add1 pool: dense local bridge neighborhoods are common
     - peer branch: the same local bridge density appears in a specific left/lower candidate band
-- the remaining tight part is therefore no longer the rescue side; it is the broader baseline-covered add1 family beyond that zero-distance peer branch
+  - a bounded non-peer-core decomposition now shows the remaining `35` baseline-covered add1 rows are not one amorphous residual:
+    - two dominant non-peer families already occupy `20/35` rows
+    - dominant buckets:
+      - `rc0|ml0|c2` (`12` rows): no right-center high-bridge cell, no mid-low branch, exactly `2` high-bridge cells
+      - `rc0|ml1|c3` (`8` rows): no right-center high-bridge cell, one mid-low branch, exactly `3` high-bridge cells
+    - on that dominant `20`-row subset, the split is exact on `high_bridge_cell_count` alone:
+      - `<= 2.500` isolates the compact `c2` family
+      - `>= 2.500` isolates the `c3` / mid-low family
+  - the remaining `15` rows then break into a small set of satellites rather than a diffuse cloud:
+    - right-center low-support `c2` triplet:
+      - exact via `edge_identity_closed_pair_count <= 61.000`
+    - low-support `ml2p` `c3` pair:
+      - exact via `high_bridge_low_count >= 1.500`
+    - high-support `ml0` branch:
+      - `c3` triplet and `c4p` pair
+      - exact size split on the branch-local `5` rows via `high_bridge_cell_count <= 3.500` vs `>= 3.500`
+    - high-support `ml1` `c4p` pair:
+      - exact via `edge_identity_closed_pair_count >= 83.000 and high_bridge_mid_low_count >= 0.500`
+  - so the broader baseline-covered add1 side now looks like:
+    - solved peer branch: left/lower dense high-bridge band
+    - two dominant non-peer families
+    - a few small satellite branches
+- the remaining tight part is therefore no longer “what are the baseline add1 families?”; it is whether this now-solved baseline family map transfers into the broader low-overlap basin
 
 ### What the Current Mechanism Story Looks Like
 

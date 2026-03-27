@@ -28,6 +28,9 @@ from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_ident
     MOTIF_CELLS,
     _has_motif,
 )
+from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_zero_distance_features import (  # noqa: E402
+    _own_metrics,
+)
 from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_pocket_subfamily_decomposition import (  # noqa: E402
     build_rows as build_pocket_rows,
 )
@@ -107,37 +110,31 @@ def _band_metrics(cells: list[tuple[int, int]]) -> dict[str, float]:
     }
 
 
-def main() -> None:
-    args = build_parser().parse_args()
-    started = datetime.now().isoformat(timespec="seconds")
-    print(f"baseline add1 coordinate band scan started {started}", flush=True)
-    total_start = time.time()
-
-    frontier_log = Path(args.frontier_log).resolve()
-    bucket_log = Path(args.bucket_log).resolve()
-    bucket_rows = [row for row in load_bucket_rows(bucket_log) if row.bucket_key == args.bucket_key]
-    selected_sources = {row.source_name for row in bucket_rows}
-    frontier_rows = {
-        row.source_name: row
-        for row in reconstruct_low_overlap_rows(frontier_log)
-        if row.source_name in selected_sources
-    }
+def build_rows(
+    frontier_rows: dict[str, object],
+    bucket_rows: list[object],
+    *,
+    left_subtype: str,
+    right_subtype: str,
+) -> list[object]:
     pocket_rows = build_pocket_rows(
         frontier_rows,
         bucket_rows,
-        left_subtype=args.left_subtype,
-        right_subtype=args.right_subtype,
+        left_subtype=left_subtype,
+        right_subtype=right_subtype,
     )
     baseline_rows = [
         row
         for row in pocket_rows
-        if getattr(row, "subtype") == args.left_subtype
+        if getattr(row, "subtype") == left_subtype
         and float(getattr(row, "delta_edge_identity_support_edge_density")) <= 0.018
     ]
 
     row_cls = make_dataclass(
         "BaselineAdd1CoordinateBandRow",
         [("source_name", str), ("subtype", str)] + [
+            ("edge_identity_closed_pair_count", float),
+            ("support_role_bridge_count", float),
             ("high_bridge_cell_count", float),
             ("high_bridge_left_count", float),
             ("high_bridge_right_count", float),
@@ -159,15 +156,43 @@ def main() -> None:
     rows = []
     for row in baseline_rows:
         source_name = getattr(row, "source_name")
-        cells = _high_bridge_cells(set(frontier_rows[source_name].nodes))
+        nodes = set(frontier_rows[source_name].nodes)
+        cells = _high_bridge_cells(nodes)
+        core_metrics = _own_metrics(nodes)
         rows.append(
             row_cls(
                 source_name=source_name,
-                subtype="peer_motif" if _has_motif(set(frontier_rows[source_name].nodes), MOTIF_CELLS[0]) else "non_peer",
+                subtype="peer_motif" if _has_motif(nodes, MOTIF_CELLS[0]) else "non_peer",
+                edge_identity_closed_pair_count=core_metrics["edge_identity_closed_pair_count"],
+                support_role_bridge_count=core_metrics["support_role_bridge_count"],
                 **_band_metrics(cells),
             )
         )
     rows.sort(key=lambda item: getattr(item, "source_name"))
+    return rows
+
+
+def main() -> None:
+    args = build_parser().parse_args()
+    started = datetime.now().isoformat(timespec="seconds")
+    print(f"baseline add1 coordinate band scan started {started}", flush=True)
+    total_start = time.time()
+
+    frontier_log = Path(args.frontier_log).resolve()
+    bucket_log = Path(args.bucket_log).resolve()
+    bucket_rows = [row for row in load_bucket_rows(bucket_log) if row.bucket_key == args.bucket_key]
+    selected_sources = {row.source_name for row in bucket_rows}
+    frontier_rows = {
+        row.source_name: row
+        for row in reconstruct_low_overlap_rows(frontier_log)
+        if row.source_name in selected_sources
+    }
+    rows = build_rows(
+        frontier_rows,
+        bucket_rows,
+        left_subtype=args.left_subtype,
+        right_subtype=args.right_subtype,
+    )
 
     feature_names = [name for name in rows[0].__dataclass_fields__ if name not in ("source_name", "subtype")]
     peer_rules = evaluate_rules(

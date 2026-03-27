@@ -1,3 +1,70 @@
+## 2026-03-27 15:47 America/New_York
+
+### Current state
+- Checked worker/lock state before continuing:
+  - repo was synced
+  - stale worker lock was released and replaced with a clean manual lock for this continuation
+- Treated the baseline-covered add1 peer branch as solved at the coarse-band level and moved on to the remaining `35`-row non-peer baseline core.
+- Added:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_nonpeer_core_buckets.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_nonpeer_core_family_rules.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_nonpeer_core_residual_families.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_nonpeer_core_high_support_ml0_split.py`
+- Also patched:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_band_scan.py`
+  so it exports reusable baseline-band rows for follow-on decomposition work.
+
+### Strongest confirmed conclusion
+- The remaining non-peer baseline core is not one amorphous residual.
+- Two dominant families already occupy `20/35` rows:
+  - `rc0|ml0|c2` (`12` rows)
+  - `rc0|ml1|c3` (`8` rows)
+- On that dominant `20`-row subset, the split is exact on `high_bridge_cell_count` alone:
+  - `<= 2.500` isolates the compact `c2` family
+  - `>= 2.500` isolates the `c3` / mid-low family
+- The remaining `15` rows then break into a few small satellites instead of a diffuse cloud:
+  - right-center low-support `c2` triplet:
+    - exact via `edge_identity_closed_pair_count <= 61.000`
+  - low-support `ml2p` `c3` pair:
+    - exact via `high_bridge_low_count >= 1.500`
+  - high-support `ml0` branch:
+    - `c3` triplet and `c4p` pair
+    - exact branch-local size split via `high_bridge_cell_count <= 3.500` vs `>= 3.500`
+  - high-support `ml1` `c4p` pair:
+    - exact via `edge_identity_closed_pair_count >= 83.000 and high_bridge_mid_low_count >= 0.500`
+- Current best read:
+  - the baseline-covered add1 side now has a real solved family map:
+    - peer branch
+    - two dominant non-peer families
+    - a few small satellites
+
+### Files and results changed in this run
+- Repo-facing science/code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_band_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_nonpeer_core_buckets.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_nonpeer_core_family_rules.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_nonpeer_core_residual_families.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_nonpeer_core_high_support_ml0_split.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- New result logs:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-baseline-add1-nonpeer-core-buckets-5504.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-baseline-add1-nonpeer-core-family-rules-5504.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-baseline-add1-nonpeer-core-residual-families-5504.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-baseline-add1-nonpeer-core-high-support-ml0-split-5504.txt`
+
+### Exact next step
+- Stay on the frozen `5504` center-spine `00` hard core.
+- Keep dense laddering paused.
+- Treat the baseline-covered add1 family map as solved enough locally.
+- Test whether the same family structure transfers into the broader low-overlap basin or is specific to the baseline-covered add1 slice.
+
+### First concrete action
+- Add one bounded transfer scan that compares:
+  - the solved baseline-covered add1 families
+  - against add4-sensitive and pair-only rows on the same frozen `5504` core
+  - using the same baseline-band / closed-pair / support-bridge coordinates
+
 ## 2026-03-27 14:57 America/New_York
 
 ### Current state
