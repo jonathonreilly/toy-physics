@@ -41,19 +41,20 @@
   - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-support-family-transfer-rc0-ml0-c2-add4-exception-scan-5504.txt`
 
 ### Exact next step
-- Stay on the frozen `5504` low-overlap basin.
-- Keep `rc0|ml0|c2` as the active mixed bucket.
-- Split the remaining add4 false-positive set into its two nuisance branches:
-  - lower-support pair-only mimics
-  - higher-support balanced add1 mimics
-- Then test whether a compact bucket-local rule family can separate true add4 rows from those two nuisance branches.
+- Natural stopping point reached on the active `5504` bucket thread.
+- Switch the main thread to a deep code review of the model and analysis layer.
+- Treat the current `rc0|ml0|c2` result as the stable science checkpoint to review against, not the immediate next extension target.
 
 ### First concrete action
-- Add one bounded `rc0|ml0|c2` nuisance-branch contrast pass that compares:
-  - true add4 rows
-  - pair-only false positives
-  - add1 false positives
-  using the candidate-anchored bridge-bridge closure features already identified.
+- Run a findings-first deep review pass over:
+  - `/Users/jonreilly/Projects/Physics/toy_event_physics.py`
+  - the active low-overlap / transfer scripts under `/Users/jonreilly/Projects/Physics/scripts`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Focus on:
+  - silent helper drift
+  - duplicated analysis logic
+  - stale conclusions or mismatched summaries
+  - places where the current stable bucket/taxonomy read is not reflected honestly in code or docs
 
 ## 2026-03-27 16:44 America/New_York
 
