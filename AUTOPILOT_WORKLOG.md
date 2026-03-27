@@ -1,3 +1,45 @@
+## 2026-03-27 02:43 America/New_York
+
+### Current state
+- Reconciled protocol preflight in required order:
+  - read `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`.
+- Reconciled lock/git state before mutation:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` -> `free`.
+  - acquired worker lock: `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 2` -> `acquired`.
+  - git preflight showed `main...origin/main [ahead 6]` and clean tree.
+- Required push-before-science reconcile attempted via helper and failed with transient DNS:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - result: `failure_kind=dns_failure`, `Could not resolve host: github.com`.
+- Completed one bounded same-thread continuation on the frozen `5504` low-overlap center-spine `00` hard core:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_deltas.py`
+
+### Strongest confirmed conclusion
+- Nearest-opposite candidate-local support-edge identity deltas close the add4 side of the `00` hard core exactly.
+- Best compact rows on this family are:
+  - add4-side exact best: `45/45` with `tp/fp/fn = 3/0/0`
+    - `delta_edge_identity_support_edge_density >= 0.018 and pair_selected_event_present_count <= 3.500`.
+  - add4-side single-feature near-best: `44/45` with `tp/fp/fn = 2/0/1`
+    - `delta_edge_identity_closed_pair_count <= -20.500`.
+  - add1-side best: `43/45` with `tp/fp/fn = 40/0/2`
+    - `delta_edge_identity_support_edge_density <= 0.018`.
+- Nearest-opposite anchors remain the same close triplet (`0.508`, `0.938`, `1.550`), but selected motifs now explicitly encode candidate-local pocket support-edge identity/presence signatures.
+- So the residual map updates: the last add4 exception in the frozen `00` core is closed by local edge-pattern identity; the remaining non-exactness is now on the add1-side complement.
+
+### Files and results changed in this run
+- Repo-facing science/code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_deltas.py`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-27-pocket-wrap-suppressor-low-overlap-center-spine-bucket00-support-edge-identity-deltas-5504-add1-vs-add4.txt`
+
+### Exact next step
+- Stay on the frozen `5504` center-spine `00` hard core.
+- Run one bounded complementary closure pass focused on the remaining two add1 misses against nearest add4 anchors using the same edge-identity language.
+
+### First concrete action
+- Re-run the new edge-identity analyzer with a bounded add1-focused selector (same nearest-opposite map, same motif family) and test whether one compact add1-side clause lifts `43/45` toward exact closure without introducing add4 false positives.
+
 ## 2026-03-27 01:42 America/New_York
 
 ### Current state
