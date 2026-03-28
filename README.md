@@ -1,274 +1,228 @@
 # Discrete Event-Network Toy Model
 
-This repository is a toy model built around one simple idea:
+This repository is an attempt to build a toy physics model while stripping away as much human observational bias as possible from the starting assumptions.
 
-physics-like behavior might be recoverable from a discrete network of local events and influence links, rather than being imposed inside a pre-given smooth spacetime.
+The motivating question is:
 
-`Octopus physics` is just a nickname. The claims here are about the toy model in this repository.
+> If we do **not** start by assuming smooth space, continuous time, point particles, or measurement as primitive, how much physics-like structure can still be recovered from a much smaller event-and-relation ontology?
 
-## Who This Is For
+## Why This Project Exists
 
-Honest answer:
+Most physical theories are written in a language that is already heavily shaped by human perception:
 
-- If you send this cold to random theorists, the response will probably be weak.
-- If you send it to carefully chosen foundations, complex-systems, or network-dynamics people, a meaningful fraction should find it worth reading and reacting to.
+- we naturally think in terms of objects moving in space
+- we picture time as a universal flowing background
+- we often treat geometry as given before anything happens inside it
+- we describe measurement using concepts that already assume observers, apparatus, and stable classical records
 
-The project is now beyond “private weird toy” status, but it is still not a standard physics result. The best audience right now is people who already care about:
+This project started by trying to remove some of that built-in bias.
 
-- emergent spacetime / foundations
-- discrete local-rule systems
-- graph / network mechanism structure
-- phase-like regime maps in combinatorial systems
+So instead of beginning with particles in a pre-existing spacetime, the toy begins with a much thinner picture:
 
-## Five-Minute Version
+- discrete events
+- local influence links between events
+- persistence
+- compatibility
+- durable records
 
-The project starts from a few compact axioms:
+From there, the question is whether anything recognizably physics-like can emerge:
 
-- reality is represented as a network of discrete events and local influence links
-- stable objects are persistent patterns in that network
-- geometry is inferred from local delay/load structure rather than assumed first
-- measurement-like behavior comes from durable record formation
+- effective geometry
+- causal order
+- inertial continuation
+- gravity-like path bending
+- measurement-like suppression of alternatives
 
-From those ideas, the code builds a small toy world in which:
+## Core Axioms
 
-- a delay field can emerge from stable local patterns
-- causal order can be inferred from that delay field
-- path selection can produce gravity-like bending
-- durable record sectors can suppress interference
-- the system develops repeatable mechanism families rather than behaving randomly
+These are the conceptual axioms the toy is built around.
 
-The strongest current high-level story is:
+1. **Reality is an evolving network of events and influence relations.**  
+   The primitive layer is not particles in a container. It is a changing relational graph of events and allowed local influences.
 
-- `compact` has a cleaner threshold-core structure
-- `extended` is more permissive and uses fallback structure
-- later frontier growth mostly fills out already-known families instead of inventing new ones
-- the active unresolved work is now in the topology/latent structure of a small frozen hard core, not in endlessly pushing the ladder
+2. **Stable objects are persistent self-maintaining patterns in that network.**  
+   What looks object-like at larger scales is modeled as a pattern that keeps reproducing its own local structure over time.
 
-## Lay Version
+3. **Space is inferred, not assumed.**  
+   Spatial structure is reconstructed from influence neighborhoods and signal-delay structure rather than taken as fundamental.
 
-### The basic picture
+4. **Duration is local update count, not universal background time.**  
+   Time is treated as something measured along histories and persistent patterns, not as a globally imposed external clock.
 
-Instead of starting with particles moving through a fixed background space, this toy starts with a graph-like network:
+5. **The arrow of time is tied to durable record formation.**  
+   Time-asymmetry is connected to the growth of persistent, non-erasable records rather than inserted as a separate metaphysical primitive.
 
-- nodes are events
-- links are allowed local influences
-- links carry delay-like and compatibility-like quantities
+6. **Free systems follow the locally simplest admissible continuation.**  
+   In the absence of strong disturbances, the system prefers locally coherent continuations rather than arbitrary jumps.
 
-If some local patterns become stable, they change the delay/load structure around them. That changes which routes through the network are easiest. In that sense:
+7. **Inertia is undisturbed natural continuation.**  
+   What looks like inertial motion is the toy version of persistence of local continuation when nothing distorts the surrounding continuation structure.
 
-- stable patterns distort continuation
-- distorted continuation looks like effective geometry
+8. **Gravity is natural continuation in a distorted continuation structure.**  
+   Gravity-like behavior is modeled not as a force added by hand, but as path selection through a locally altered delay/load landscape.
 
-That is the core intuition of the project.
+9. **Measurement is durable record formation that separates alternatives.**  
+   Alternatives may coexist or combine when no durable record separates them; once a durable record forms, those alternatives are no longer treated the same way.
 
-### What the toy has actually shown
+10. **Observed large-scale structure should be explained by persistent local mechanisms wherever possible.**  
+    If a geometry-like or measurement-like effect appears, the preferred explanation is that it emerged from local network structure rather than being imposed from outside.
 
-So far, the toy has done several nontrivial things:
+## What The Toy Actually Is
 
-- it can recover gravity-like path bending from a locally generated delay field
-- it can produce measurement-like interference loss when alternatives are separated by durable records
-- it shows a stable split between two mechanism families, `compact` and `extended`
+The implemented model uses:
 
-That last point matters most. It means the model is not just generating a pile of unrelated cases. It has a real internal mechanism map.
+- events as nodes
+- directed local influence links
+- delay-like and compatibility-like quantities on those links
+- persistent patterns that act as local sources of structure
+- admissible histories through the resulting network
+- path-selection rules defined on the continuation landscape
+- durable-record sectors in interference-style toy setups
 
-### What the long benchmark work taught us
+In this formulation, geometry-like behavior is associated with the continuation structure induced by persistence and delay, rather than with a fixed background geometry.
 
-For a while, the project kept widening generated families and rerunning the same checks. That was useful early on, because it showed the mechanism map was not a shallow artifact.
+## Analysis Program
 
-But later the pattern changed:
+The analysis layer measures:
 
-- row count kept growing
-- mechanism-family count mostly stopped growing
+- geometry and profile observables
+- boundary roughness and cavity structure
+- degree and neighborhood structure
+- local bridge/support topology
+- overlap, suppressor, and transfer behavior
 
-That means the main scientific object is no longer the raw frontier size. It is the family structure underneath it.
+These observables are used to compare mechanisms across benchmark scenarios, generated families, perturbation ensembles, and frozen-frontier subsets.
 
-In plain terms:
+The current analysis path has been hardened against:
 
-- we are no longer mainly discovering brand-new kinds of behavior
-- we are mostly discovering more examples of the same kinds of behavior
+- benchmark/reporting mismatches
+- stale helper logic
+- duplicated selectors
+- duplicated rule evaluators
+- transfer scripts using slightly different input slices
+- feature helpers that were silently double-counting
 
-That is why the project shifted away from dense ladder chasing and toward latent structure, support topology, and branch decomposition.
+The current mechanism claims are based on that corrected analysis layer.
 
-## Technical Version
+## Current Results
 
-### Core Axioms
+The model presently supports the following claims.
 
-The toy is built around a compact event-network ontology:
+### 1. Effective delay structure
 
-- reality is an evolving network of events and influence relations
-- stable objects are persistent self-maintaining patterns in that network
-- space is inferred from neighborhoods and delays
-- duration is local update count, not a universal background clock
-- the arrow of time is tied to durable record formation
-- measurement is modeled as durable record formation that separates alternatives
+Persistent patterns can generate a local delay field in the toy. Histories evaluated against that field do not behave as if they were propagating on an undistorted fixed background.
 
-### What the code implements
+### 2. Gravity-like continuation
 
-The runnable model currently:
+Path selection through the derived delay field produces inward-bending, gravity-like continuation on the benchmark suite. This is a toy mechanism result, not a derivation of general relativity.
 
-- derives a local delay field from stable patterns on a graph
-- infers causal order from positive local delays instead of imposing one global step order
-- runs path-selection / continuation dynamics on top of that inferred causal structure
-- models durable-record sectors in a two-slit-style interference toy
-- runs corrected benchmark, overlap, and mechanism diagnostics through helper-backed scripts
+### 3. Record-based interference suppression
 
-Practical entry points:
+Alternatives can coexist when no durable record separates them, and durable-record sectors suppress that coexistence in the slit-style interference toy.
 
-```bash
-python3 /Users/jonreilly/Projects/Physics/toy_event_physics.py
-```
+### 4. Stable mechanism families
 
-```bash
-python3 /Users/jonreilly/Projects/Physics/scripts/base_confidence_check.py
-```
+The broadest recurring split is:
 
-Deeper helper-backed verification:
+- `compact`, with a cleaner threshold-core structure
+- `extended`, with more permissive and fallback-heavy behavior
 
-```bash
-python3 /Users/jonreilly/Projects/Physics/scripts/base_confidence_check.py --full
-```
+This split persists across reruns and generated families.
 
-### Current strongest claims
+### 5. Family growth without comparable family proliferation
 
-#### 1. Gravity-like continuation survives benchmark cleanup
+As generated families widened:
 
-The toy still supports a gravity-like story after the benchmark hardening:
+- membership kept growing
+- the number of main mechanism families changed much more slowly
 
-- a local delay field can emerge from stable patterns
-- path selection through that field can bend inward
-- the high-retained-update / spent-delay end of the tested action family still performs best on the corrected benchmark
+The resulting picture is a stable mechanism map with expanding support, rather than continual creation of new families at each deeper frontier.
 
-This is not a derivation of general relativity. It is a toy demonstration that geometry-like path bending can emerge from local network structure plus a derived delay field.
+### 6. Shared structure in the low-overlap basin
 
-#### 2. Measurement-like record sectors still matter
+Fine-grained mechanism work is currently concentrated on a fixed frontier snapshot at `variant_limit = 5504`. On that controlled sample:
 
-The model still supports the core record story:
+- the hardest low-overlap center-spine `00` core has an exact closure family with a broad rescue side and a tighter, more local baseline cut
+- the low-overlap support-family map transfers across the three main low-overlap branches:
+  - `add1-sensitive`
+  - `add4-sensitive`
+  - `pair-only-sensitive`
+- the dominant shared bucket already shows interpretable subtype drift:
+  - `add1`: left-dominant, higher-support branch
+  - `add4`: mid-dominant, more internally closed branch
+  - `pair-only`: lower-support, more open-support branch
 
-- alternatives can combine when no durable record separates them
-- durable record sectors suppress that combination
+The open problem in this basin is no longer whether the family structure exists. It is how subtype competition is organized within shared structural buckets.
 
-This is a toy measurement story, not a full quantum formalism.
+## Active Technical Problem
 
-#### 3. The compact/extended split is real
+The main active technical problem is compression of the low-overlap basin into a cleaner structural law.
 
-The strongest stable mechanism picture is:
+The relevant questions are:
 
-- `compact` has a cleaner threshold-core story
-- `extended` is more permissive and uses fallback structure
-
-Compressed version:
-
-- broad `6+` support is still the main compact support story
-- the stricter `7+` route is the clean shared fast anchor
-- `extended` can defect through fallback structure where `compact` stays more tightly thresholded
-
-#### 4. Frontier growth is mostly support-filling
-
-The later non-pocket frontier work now looks like:
-
-- stable taxonomy
-- expanding membership
-- flattening coarse-signature growth
-
-So the late ladder is now mostly populating already-seen basins. It is no longer the main discovery engine.
-
-#### 5. The frozen `5504` hard core is the right microscope slide
-
-The project now uses `variant_limit = 5504` as a frozen analysis snapshot.
-
-That does **not** mean `5504` is the biggest or final rung. It means it is the best fixed specimen:
-
-- late enough that the broad taxonomy is already mature
-- small enough that the unresolved residual can be inspected directly
-- hard enough to still be scientifically meaningful
-
-#### 6. The frozen `5504` center-spine `00` core has an exact closure family
-
-On the frozen `5504` low-overlap center-spine `00` core, the add1-side closure is now compact and interpretable.
-
-Baseline clause:
-
-- `delta_edge_identity_support_edge_density <= 0.018`
-
-The rescue side is now genuinely broad, not just a lucky one-point threshold. A representative exact rescue family is:
-
-- `delta_count_family_pocket <= -14.500`
-
-with a real mask-stable interval:
-
-- `[-18.000, -11.000)`
-
-So the current honest read is:
-
-- exact closure family
-- broad rescue side
-- locally tight baseline cut
-
-#### 7. The support-family map transfers across the low-overlap basin
-
-One of the most important recent advances is that the solved baseline-covered add1 family map is no longer add1-specific.
-
-Across the frozen `5504` low-overlap basin, all three active low-overlap subtypes:
-
-- `add1-sensitive`
-- `add4-sensitive`
-- `pair-only-sensitive`
-
-share the same main coarse support buckets:
-
-- `rc0|ml0|c2`
-- `rc0|ml1|c3`
-- plus the left/lower `peer-band`
-
-So the current question is no longer whether the family map is real. It is what separates subtype realizations **inside** those shared buckets.
-
-#### 8. The biggest shared bucket now has a readable subtype drift
-
-Inside the biggest shared mixed bucket, `rc0|ml0|c2`, the subtype differences are now readable in coarse physical language:
-
-- `add1`: left-dominant, higher-support branch
-- `add4`: mid-dominant, more internally closed branch
-- `pair-only`: lower-support, more open-support branch
-
-The add4 exceptions in that bucket are also structured rather than noisy:
-
-- some are lower-support pair-only mimics
-- some are higher-support balanced add1 mimics
-
-That is not yet a final law, but it is much better than a generic feature soup.
+- how subtype competition works inside shared low-overlap support buckets
+- whether that competition can be expressed more cleanly in support-layout or topological language
+- which parts of the present explanation are stable structure and which depend on the current observable basis
 
 ## What Is Still Unresolved
 
-The honest unresolved list is:
+The main unresolved points are:
 
-- the spent-delay action is benchmark-favored, but not yet uniquely derived from first principles
-- there is still no continuum limit or standard field-theory bridge
-- there is still no clean empirical prediction in ordinary physics language
-- shared low-overlap buckets are real, but the subtype competition inside them is not yet compressed to a final structural law
-- the deepest current open question is support-layout / candidate-support interaction inside shared buckets, not whether the taxonomy exists
+- the spent-delay action family is favored in the benchmark, but not derived from deeper first principles
+- the low-overlap subtype competition inside shared support buckets is not yet compressed to one final clean structural law
+- the present mechanism language is more geometric and topological than it was earlier, but it is not yet a clean bridge to standard continuum physics
+- the strongest fine-grained mechanism results are on a frozen frontier snapshot, not yet a general theorem over every wider generated family
 
-So the project should currently be read as:
+## What Is Still Cheating
 
-- a serious, mechanism-rich toy model
-- not yet a finished physical theory
+This is the explicit "do not flatter ourselves" block.
 
-## What A Good Short Note Should Say
+1. **The benchmark geometries are still partly hand-authored.**  
+   The project now has procedural and randomized families, but the core benchmark worlds are still chosen by hand.
 
-If this is shared with outside readers, the strongest short version is:
+2. **The gravity-like classical limit is still assumed rather than derived.**  
+   The spent-delay-style accounting rule is still selected because it works best in the current toy benchmark, not because it has been forced out of deeper dynamics.
 
-- here are the axioms
-- here is the toy
-- here is the stable taxonomy
-- here is the solved hard-core branch structure
-- here is what is still unresolved
+3. **The delay field chooser is still hand-chosen.**  
+   The delay field is derived from persistent patterns, but the rule family and locality preferences used to choose among candidate patterns are still designed rather than derived.
 
-That presentation is much better for this project than a chronological task log.
+4. **Winner-level robustness still depends on hand-chosen criteria.**  
+   Center gap, arrival span, selector policy, and the choice of combined status observable can still change which surviving branch wins on the same candidate pool.  
+   Family-level structure is more stable than exact winner identity.
+
+5. **The perturbation ensembles are still modest and structured.**  
+   They are broader than they were early on, but they are still first-pass ensembles rather than exhaustive robustness studies.
+
+6. **Weight robustness is still tested in a narrow high-end band.**  
+   The current checks concentrate near the spent-delay end of the retained-weight family rather than exploring the whole space evenly.
+
+7. **The random perturbation ensembles are still small and seeded.**  
+   They are useful probes, but not yet large-scale random-graph studies.
+
+8. **The geometry-randomization layer is still narrow.**  
+   It currently jitters existing graph families rather than exploring a broad random geometry generator.
+
+9. **The procedural graph generator is still small and structured.**  
+   It is a useful independent-family probe, not a broad generator of arbitrary graph worlds.
+
+10. **The sweep budgets are still hand-chosen runtime compromises.**  
+    Smaller graphs, reduced rule families, and shorter persistence windows still trade completeness for tractability.
+
+11. **Complex amplitudes are still assumed rather than derived.**  
+    The toy has a measurement-like story, but not a derivation of the full complex-amplitude machinery.
+
+12. **The strongest current hard-core mechanism results are still frozen-snapshot results.**  
+    They may generalize, and some parts already transfer well, but the finest-grained structure is still being studied on a controlled frozen frontier.
+
+13. **The project is still much stronger as toy mechanism science than as a bridge to known physics.**  
+    The internal map is real enough to be interesting; the translation to standard physical law is still unfinished.
 
 ## Where The Detailed History Lives
 
 This README is intentionally not the full research diary.
 
-For detailed chronology, worker state, and exact next steps, use:
+If you want the detailed chronology, active work queue, and worker handoff state, use:
 
 - [AUTOPILOT_WORKLOG.md](/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md)
 - [physics_autopilot_handoff.md](/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md)
+- [memory.md](/Users/jonreilly/.codex/automations/physics-autopilot/memory.md)
