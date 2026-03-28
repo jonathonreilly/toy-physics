@@ -26,7 +26,9 @@
   - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_topology_residual_scan.py`
   - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_scan.py`
   - `/Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py`
-- Repo-facing state is pending final commit/push in this loop for the files above plus `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`.
+- Repo-facing state is synced after validation and push:
+  - pushed commit `8ba7708` (`Share baseline add1 peer motif selector`)
+  - pushed commit `78b2155` (`Refresh review worklog`)
 
 ### Exact next step
 - Stay in deep review mode.
