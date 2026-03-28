@@ -66,7 +66,7 @@ def main() -> None:
             max_terms=args.max_terms,
             row_limit=args.row_limit,
         )
-        print(render_rules(f"Best rules for {RC0_ML0_C2_BUCKET} -> {subtype}", rules))
+        print(render_rules(f"Candidate rules for {RC0_ML0_C2_BUCKET} -> {subtype}", rules))
         print()
     print(
         "support family transfer rc0|ml0|c2 candidate-anchor contrast completed "

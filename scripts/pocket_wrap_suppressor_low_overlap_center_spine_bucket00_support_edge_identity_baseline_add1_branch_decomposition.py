@@ -267,9 +267,9 @@ def main() -> None:
     print()
     print(render_rows(rows))
     print()
-    print(render_rules("Best peer-motif branch rules", branch_rules))
+    print(render_rules("Candidate peer-motif branch rules", branch_rules))
     print()
-    print(render_rules("Best non-peer rules", core_rules))
+    print(render_rules("Candidate non-peer rules", core_rules))
     print()
     print(
         "baseline add1 branch decomposition completed "

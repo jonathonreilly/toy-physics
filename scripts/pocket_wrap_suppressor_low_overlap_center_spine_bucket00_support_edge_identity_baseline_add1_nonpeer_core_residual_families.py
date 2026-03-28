@@ -150,7 +150,7 @@ def main() -> None:
                 row_limit=args.row_limit,
             )
             print(f"Bucket {key}")
-            print(render_rules(f"Best rules for {key}", rules))
+            print(render_rules(f"Candidate rules for {key}", rules))
             print()
 
     print(

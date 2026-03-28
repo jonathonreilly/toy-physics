@@ -322,9 +322,9 @@ def main() -> None:
     print()
     print(render_rows(rows))
     print()
-    print(render_rules("Best peer-motif candidate-anchor residual rules", branch_rules))
+    print(render_rules("Candidate peer-motif candidate-anchor residual rules", branch_rules))
     print()
-    print(render_rules("Best non-peer candidate-anchor residual rules", core_rules))
+    print(render_rules("Candidate non-peer candidate-anchor residual rules", core_rules))
     print()
     print(
         "baseline add1 candidate-anchor residual scan completed "

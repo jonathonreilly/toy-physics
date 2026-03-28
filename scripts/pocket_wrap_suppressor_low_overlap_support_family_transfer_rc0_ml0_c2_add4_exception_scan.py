@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Inspect false positives and misses for the current best add4 anchored-contrast rule."""
+"""Inspect false positives and misses for the derived add4 anchored-contrast rule."""
 
 from __future__ import annotations
 

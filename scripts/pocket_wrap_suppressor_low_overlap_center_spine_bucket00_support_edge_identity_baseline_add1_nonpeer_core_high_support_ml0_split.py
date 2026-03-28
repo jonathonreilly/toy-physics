@@ -125,7 +125,7 @@ def main() -> None:
     print(f"target_rows={len(rule_rows)}")
     print("rows=" + ", ".join(f"{getattr(row, 'source_name')}:{getattr(row, 'subtype')}" for row in rule_rows))
     print()
-    print(render_rules("Best rules for c3", evaluate_rules(
+    print(render_rules("Candidate rules for c3", evaluate_rules(
         rule_rows,
         target_subtype="c3",
         feature_names=feature_names,
@@ -134,7 +134,7 @@ def main() -> None:
         row_limit=args.row_limit,
     )))
     print()
-    print(render_rules("Best rules for c4p", evaluate_rules(
+    print(render_rules("Candidate rules for c4p", evaluate_rules(
         rule_rows,
         target_subtype="c4p",
         feature_names=feature_names,

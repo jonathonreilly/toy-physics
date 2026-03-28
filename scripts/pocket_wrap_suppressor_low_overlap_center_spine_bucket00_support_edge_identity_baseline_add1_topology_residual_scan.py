@@ -372,9 +372,9 @@ def main() -> None:
     print()
     print(render_rows(rows))
     print()
-    print(render_rules("Best peer-motif topology residual rules", branch_rules))
+    print(render_rules("Candidate peer-motif topology residual rules", branch_rules))
     print()
-    print(render_rules("Best non-peer topology residual rules", core_rules))
+    print(render_rules("Candidate non-peer topology residual rules", core_rules))
     print()
     print(
         "baseline add1 topology residual scan completed "

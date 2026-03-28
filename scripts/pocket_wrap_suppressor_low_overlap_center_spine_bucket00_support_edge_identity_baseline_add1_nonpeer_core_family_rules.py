@@ -142,7 +142,7 @@ def main() -> None:
             max_terms=args.max_terms,
             row_limit=args.row_limit,
         )
-        print(render_rules(f"Best rules for {key}", rules))
+        print(render_rules(f"Candidate rules for {key}", rules))
         print()
     print(
         "baseline add1 non-peer core family rules completed "

@@ -93,7 +93,7 @@ def main() -> None:
                 max_terms=args.max_terms,
                 row_limit=args.row_limit,
             )
-            print(render_rules(f"Best rules for {bucket_key} -> {subtype}", rules))
+            print(render_rules(f"Candidate rules for {bucket_key} -> {subtype}", rules))
             print()
     print(
         "support family transfer bucket rules completed "

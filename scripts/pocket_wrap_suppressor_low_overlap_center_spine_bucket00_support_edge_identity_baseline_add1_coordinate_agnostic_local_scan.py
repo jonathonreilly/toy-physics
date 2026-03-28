@@ -148,9 +148,9 @@ def main() -> None:
     print()
     print(render_rows(rows))
     print()
-    print(render_rules("Best peer-motif coordinate-agnostic local rules", peer_rules))
+    print(render_rules("Candidate peer-motif coordinate-agnostic local rules", peer_rules))
     print()
-    print(render_rules("Best non-peer coordinate-agnostic local rules", non_peer_rules))
+    print(render_rules("Candidate non-peer coordinate-agnostic local rules", non_peer_rules))
     print()
     print(
         "baseline add1 coordinate-agnostic local scan completed "
