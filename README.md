@@ -151,6 +151,11 @@ Fine-grained mechanism work is currently concentrated on a fixed frontier snapsh
   - `add1`: left-dominant, higher-support branch
   - `add4`: mid-dominant, more internally closed branch
   - `pair-only`: lower-support, more open-support branch
+- the outside-gate residual for `pair-only-sensitive` now exact-closes under a branch-aware second pass:
+  - baseline low-closure pocket: `closure_load <= 46.500`
+  - spillover carve-out: `mid_anchor_closure_peak <= 0 and high_bridge_right_count <= 0`
+  - recovered right-low side branch: `high_bridge_right_low_count >= 1 and support_load <= 14.500 and mid_anchor_closure_peak <= 1`
+  - combined outside-gate result: `26/26` for `pair-only-sensitive` (`6/0/0`)
 
 The open problem in this basin is no longer whether the family structure exists. It is how subtype competition is organized within shared structural buckets.
 
@@ -169,7 +174,7 @@ The relevant questions are:
 The main unresolved points are:
 
 - the spent-delay action family is favored in the benchmark, but not derived from deeper first principles
-- the low-overlap subtype competition inside shared support buckets is not yet compressed to one final clean structural law
+- low-overlap subtype competition is now much more compressed on the frozen `5504` bucket, but not yet a single minimal law that is proven stable on wider fronts
 - the present mechanism language is more geometric and topological than it was earlier, but it is not yet a clean bridge to standard continuum physics
 - the strongest fine-grained mechanism results are on a frozen frontier snapshot, not yet a general theorem over every wider generated family
 

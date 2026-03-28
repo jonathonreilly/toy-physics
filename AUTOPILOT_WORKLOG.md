@@ -1,3 +1,47 @@
+## 2026-03-28 14:12 America/New_York
+
+### Seam class
+- outside-gate branch closure
+
+### Science impact
+- science advanced; outside-gate residual exact-closed on frozen bucket
+
+### Current state
+- Reconciled protocol preflight first: no active detached child in handoff, lock was free, acquired `physics-science`, and confirmed `main == origin/main` before new science.
+- Added and ran `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_outside_gate_branch_second_pass.py` as one bounded continuation of the active frozen `5504` `rc0|ml0|c2` compression thread.
+- The step explicitly tested a branch-aware second pass over the outside-gate residual by combining:
+  - baseline low-closure pocket membership,
+  - a bounded low-closure spillover carve-out,
+  - and a bounded right-low high-bridge recovery branch.
+
+### Strongest confirmed conclusion
+- The outside-gate `pair-only-sensitive` residual now exact-closes under one compact branch-aware rule:
+  - `(closure_load <= 46.500 and not (mid_anchor_closure_peak <= 0 and high_bridge_right_count <= 0))`
+  - `or (high_bridge_right_low_count >= 1 and support_load <= 14.500 and mid_anchor_closure_peak <= 1)`
+- On outside-gate rows (`26` total), this gives `26/26` for `pair-only-sensitive` (`6/0/0`) versus the baseline `23/26` (`5/2/1`).
+- The two low-closure spillover rows are isolated cleanly (`add1-sensitive` only), and the missed higher-closure `pair-only-sensitive` row is recovered cleanly as a right-low side branch.
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_outside_gate_branch_second_pass.py`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Validation:
+  - `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_outside_gate_branch_second_pass.py`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_outside_gate_branch_second_pass.py > /Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-outside-gate-branch-second-pass.txt`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py` (`benchmark regression audit: ok`)
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-outside-gate-branch-second-pass.txt`
+
+### Exact next step
+- Keep compression/translation mode and test the combined frozen-bucket law by projecting the exact high-closure gate rules together with the new exact outside-gate branch rule in one unified evaluator.
+
+### First concrete action
+- Add one tiny projection checker that applies:
+  - the high-closure gated exact rules for `add4-sensitive` and `pair-only-sensitive`, and
+  - the outside-gate branch-aware `pair-only-sensitive` rule,
+- then reports full-bucket (`rc0|ml0|c2`) misclassifications/unmatched rows as the next closure sanity pass.
+
 ## 2026-03-28 13:34 America/New_York
 
 ### Seam class
