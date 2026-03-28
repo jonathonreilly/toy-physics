@@ -36,6 +36,7 @@ from toy_event_physics import (  # noqa: E402
     sparse_fallback_access_benchmark,
 )
 from pocket_wrap_suppressor_low_overlap_support_family_transfer_common import (  # noqa: E402
+    build_rc0_ml0_c2_core_inputs,
     EDGE_IDENTITY_CLOSED_PAIR_HIGH_THRESHOLD,
     HIGH_SUPPORT_ML0_C4P_SPLIT_THRESHOLD,
     HIGH_SUPPORT_ML0_MIN_CELL_COUNT,
@@ -528,11 +529,13 @@ def check_primary_support_family_buckets_shared() -> None:
         text = script.read_text()
         assert (
             "RC0_ML0_C2_BUCKET" in text
-            and "is_rc0_ml0_c2_core_like" in text
-        ), f"{script.name} no longer uses the shared rc0|ml0|c2 core selector"
+            and "build_rc0_ml0_c2_core_inputs" in text
+        ), f"{script.name} no longer uses the shared rc0|ml0|c2 core loader"
         assert (
             'TARGET_BUCKET = "rc0|ml0|c2"' not in text
             and "high_bridge_left_low_count < 0.5" not in text
+            and "allowed = {" not in text
+            and "reconstruct_low_overlap_rows(frontier_log)" not in text
         ), f"{script.name} regressed to duplicating the rc0|ml0|c2 core selector"
     peer_scripts = (
         REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_scan.py",
@@ -621,6 +624,7 @@ def check_shared_transfer_metric_helpers() -> None:
         "def support_edge_identity_own_metrics(",
         "def high_bridge_cells(",
         "def high_bridge_band_metrics(",
+        "def build_rc0_ml0_c2_core_inputs(",
     ):
         assert (
             marker in common_text
@@ -684,6 +688,30 @@ def check_shared_transfer_metric_helpers() -> None:
         assert (
             " _has_motif," not in text
         ), f"{script.name} regressed to importing the private motif helper"
+    rc0_loader_scripts = (
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_candidate_anchor_contrast.py",
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_topology_scan.py",
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_interaction_motif_scan.py",
+    )
+    for script in rc0_loader_scripts:
+        text = script.read_text()
+        assert (
+            "build_rc0_ml0_c2_core_inputs" in text
+        ), f"{script.name} no longer uses the shared rc0|ml0|c2 core loader"
+        assert (
+            "allowed = {" not in text
+            and "reconstruct_low_overlap_rows(frontier_log)" not in text
+        ), f"{script.name} regressed to rebuilding the rc0|ml0|c2 core inputs locally"
+    coarse_by_source, frontier_rows = build_rc0_ml0_c2_core_inputs(
+        Path(
+            "/Users/jonreilly/Projects/Physics/logs/"
+            "2026-03-26-pocket-wrap-suppressor-nonpocket-subtype-rules-5504-max5600.txt"
+        )
+    )
+    assert coarse_by_source, "shared rc0|ml0|c2 core loader returned no coarse rows"
+    assert set(coarse_by_source) == set(frontier_rows), (
+        "shared rc0|ml0|c2 core loader drifted between coarse/frontier source sets"
+    )
 
 
 def check_shared_current_best_rule_selection() -> None:

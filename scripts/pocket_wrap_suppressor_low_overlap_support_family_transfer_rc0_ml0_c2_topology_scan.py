@@ -25,11 +25,9 @@ from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_topology i
     render_rules,
 )
 from pocket_wrap_suppressor_low_overlap_support_family_transfer_common import (  # noqa: E402
-    build_rows,
-    is_rc0_ml0_c2_core_like,
+    build_rc0_ml0_c2_core_inputs,
     RC0_ML0_C2_BUCKET,
 )
-from pocket_wrap_suppressor_low_overlap_boundary_axes import reconstruct_low_overlap_rows  # noqa: E402
 
 FEATURE_NAMES = [
     "edge_identity_closed_pair_count",
@@ -60,17 +58,7 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 def build_bucket_rows(frontier_log: Path) -> list[object]:
-    coarse_rows = build_rows(frontier_log)
-    allowed = {
-        row.source_name
-        for row in coarse_rows
-        if is_rc0_ml0_c2_core_like(row)
-    }
-    frontier_rows = {
-        row.source_name: row
-        for row in reconstruct_low_overlap_rows(frontier_log)
-        if row.source_name in allowed
-    }
+    coarse_by_source, frontier_rows = build_rc0_ml0_c2_core_inputs(frontier_log)
 
     row_cls = make_dataclass(
         "TransferTopologyRow",
@@ -93,10 +81,9 @@ def build_bucket_rows(frontier_log: Path) -> list[object]:
         frozen=True,
     )
 
-    by_source = {row.source_name: row for row in coarse_rows}
     out = []
-    for source_name in sorted(allowed):
-        coarse = by_source[source_name]
+    for source_name in sorted(coarse_by_source):
+        coarse = coarse_by_source[source_name]
         _events, numeric = edge_identity_signature(set(frontier_rows[source_name].nodes))
         out.append(
             row_cls(

@@ -264,3 +264,25 @@ def build_rows(frontier_log: Path) -> list[SupportFamilyTransferRow]:
         )
     out.sort(key=lambda item: item.source_name)
     return out
+
+
+def build_rc0_ml0_c2_core_inputs(
+    frontier_log: Path,
+) -> tuple[dict[str, SupportFamilyTransferRow], dict[str, object]]:
+    coarse_rows = build_rows(frontier_log)
+    allowed = {
+        row.source_name
+        for row in coarse_rows
+        if is_rc0_ml0_c2_core_like(row)
+    }
+    coarse_by_source = {
+        row.source_name: row
+        for row in coarse_rows
+        if row.source_name in allowed
+    }
+    frontier_rows = {
+        row.source_name: row
+        for row in reconstruct_low_overlap_rows(frontier_log)
+        if row.source_name in allowed
+    }
+    return coarse_by_source, frontier_rows
