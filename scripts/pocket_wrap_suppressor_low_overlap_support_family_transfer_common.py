@@ -224,6 +224,34 @@ def is_peer_band_like(row: object) -> bool:
     return float(getattr(row, "high_bridge_left_low_count")) >= RC0_ML0_C2_MAX_LEFT_LOW
 
 
+def support_family_label(row: SupportFamilyTransferRow) -> str:
+    if is_peer_band_like(row):
+        return "peer-band"
+    if row.family_bucket_key in PRIMARY_SUPPORT_FAMILY_BUCKETS:
+        return f"primary:{row.family_bucket_key}"
+    return f"satellite:{row.residual_bucket_key}"
+
+
+def shared_primary_support_rows(
+    rows: list[SupportFamilyTransferRow],
+) -> list[SupportFamilyTransferRow]:
+    return [
+        row
+        for row in rows
+        if row.family_bucket_key in PRIMARY_SUPPORT_FAMILY_BUCKETS and not is_peer_band_like(row)
+    ]
+
+
+def satellite_support_rows(
+    rows: list[SupportFamilyTransferRow],
+) -> list[SupportFamilyTransferRow]:
+    return [
+        row
+        for row in rows
+        if not is_peer_band_like(row) and row.family_bucket_key not in PRIMARY_SUPPORT_FAMILY_BUCKETS
+    ]
+
+
 def build_rows(frontier_log: Path) -> list[SupportFamilyTransferRow]:
     rows = reconstruct_low_overlap_rows(frontier_log)
     out: list[SupportFamilyTransferRow] = []

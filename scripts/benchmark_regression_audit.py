@@ -44,7 +44,10 @@ from pocket_wrap_suppressor_low_overlap_support_family_transfer_common import ( 
     PRIMARY_SUPPORT_FAMILY_BUCKETS,
     RC0_ML0_C2_BUCKET,
     RC0_ML0_C2_MAX_LEFT_LOW,
+    satellite_support_rows,
+    shared_primary_support_rows,
     SUPPORT_ROLE_BRIDGE_HIGH_THRESHOLD,
+    support_family_label,
 )
 from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_add1_selector import (  # noqa: E402
     edge_identity_signature,
@@ -462,13 +465,12 @@ def check_primary_support_family_buckets_shared() -> None:
     assert is_peer_band_like(type("Row", (), {"high_bridge_left_low_count": 0.5})()), (
         "shared peer-band selector drifted at the boundary"
     )
-    scripts = (
+    primary_bucket_scripts = (
         REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_scan.py",
         REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_primary_bucket_profiles.py",
-        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_satellites.py",
         REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_nonpeer_core_residual_families.py",
     )
-    for script in scripts:
+    for script in primary_bucket_scripts:
         text = script.read_text()
         assert (
             "PRIMARY_SUPPORT_FAMILY_BUCKETS" in text
@@ -477,6 +479,15 @@ def check_primary_support_family_buckets_shared() -> None:
             'PRIMARY_BUCKETS = ("rc0|ml0|c2", "rc0|ml1|c3")' not in text
             and 'PRIMARY_BUCKETS = {"rc0|ml0|c2", "rc0|ml1|c3"}' not in text
         ), f"{script.name} regressed to duplicating the primary support-family bucket literals"
+    satellites_text = (
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_satellites.py"
+    ).read_text()
+    assert (
+        "satellite_support_rows" in satellites_text
+    ), "satellites runner no longer uses the shared satellite-row selector"
+    assert (
+        "PRIMARY_SUPPORT_FAMILY_BUCKETS" not in satellites_text
+    ), "satellites runner regressed to duplicating primary-bucket filtering instead of using the shared satellite selector"
     residual_text = (
         REPO_ROOT
         / "scripts"
@@ -537,27 +548,95 @@ def check_primary_support_family_buckets_shared() -> None:
             and "allowed = {" not in text
             and "reconstruct_low_overlap_rows(frontier_log)" not in text
         ), f"{script.name} regressed to duplicating the rc0|ml0|c2 core selector"
-    peer_scripts = (
-        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_scan.py",
-        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_primary_bucket_profiles.py",
-        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_satellites.py",
-    )
-    for script in peer_scripts:
-        text = script.read_text()
-        assert (
-            "is_peer_band_like" in text
-        ), f"{script.name} no longer uses the shared peer-band selector"
-        assert (
-            "def _peer_band" not in text
-            and "high_bridge_left_low_count < 0.5" not in text
-            and "high_bridge_left_low_count >= 0.5" not in text
-        ), f"{script.name} regressed to duplicating the peer-band selector"
     transfer_scan_text = (
         REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_scan.py"
     ).read_text()
     assert (
         "def _peer_band" not in transfer_scan_text
     ), "support family transfer scan still carries a local peer-band wrapper"
+    assert (
+        "is_peer_band_like" in transfer_scan_text
+    ), "support family transfer scan no longer uses the shared peer-band selector"
+    assert (
+        support_family_label(
+            type(
+                "Row",
+                (),
+                {
+                    "family_bucket_key": RC0_ML0_C2_BUCKET,
+                    "high_bridge_left_low_count": 0.0,
+                    "residual_bucket_key": "ignored",
+                },
+            )()
+        )
+        == f"primary:{RC0_ML0_C2_BUCKET}"
+    ), "shared support-family label helper drifted on primary rows"
+    sample_rows = [
+        type(
+            "Row",
+            (),
+            {
+                "family_bucket_key": RC0_ML0_C2_BUCKET,
+                "high_bridge_left_low_count": 0.0,
+                "residual_bucket_key": "ignored",
+            },
+        )(),
+        type(
+            "Row",
+            (),
+            {
+                "family_bucket_key": "satellite",
+                "high_bridge_left_low_count": 0.0,
+                "residual_bucket_key": "r1",
+            },
+        )(),
+        type(
+            "Row",
+            (),
+            {
+                "family_bucket_key": RC0_ML0_C2_BUCKET,
+                "high_bridge_left_low_count": 1.0,
+                "residual_bucket_key": "ignored",
+            },
+        )(),
+    ]
+    assert len(shared_primary_support_rows(sample_rows)) == 1, (
+        "shared primary-support selector drifted on peer/non-peer filtering"
+    )
+    assert len(satellite_support_rows(sample_rows)) == 1, (
+        "shared satellite selector drifted on peer/non-peer filtering"
+    )
+    transfer_scan_text = (
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_scan.py"
+    ).read_text()
+    assert (
+        "support_family_label" in transfer_scan_text
+        and "shared_primary_support_rows" in transfer_scan_text
+        and "satellite_support_rows" in transfer_scan_text
+    ), "support family transfer scan no longer uses the shared selector helpers"
+    assert (
+        "def _family_label" not in transfer_scan_text
+    ), "support family transfer scan regressed to a local family-label helper"
+    profile_text = (
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_primary_bucket_profiles.py"
+    ).read_text()
+    assert (
+        "shared_primary_support_rows" in profile_text
+    ), "primary bucket profiles no longer uses the shared primary-row selector"
+    assert (
+        "high_bridge_left_low_count < 0.5" not in profile_text
+        and "high_bridge_left_low_count >= 0.5" not in profile_text
+    ), "primary bucket profiles regressed to local peer-band thresholding"
+    satellite_text = (
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_satellites.py"
+    ).read_text()
+    assert (
+        "satellite_support_rows" in satellite_text
+    ), "satellites runner no longer uses the shared satellite-row selector"
+    assert (
+        "high_bridge_left_low_count < 0.5" not in satellite_text
+        and "high_bridge_left_low_count >= 0.5" not in satellite_text
+    ), "satellites runner regressed to local peer-band thresholding"
 
 
 def check_baseline_add1_peer_motif_selector_shared() -> None:

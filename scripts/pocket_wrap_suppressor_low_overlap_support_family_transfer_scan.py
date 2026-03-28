@@ -22,6 +22,9 @@ from pocket_wrap_suppressor_low_overlap_support_family_transfer_common import ( 
     SupportFamilyTransferRow,
     build_rows,
     is_peer_band_like,
+    satellite_support_rows,
+    shared_primary_support_rows,
+    support_family_label,
 )
 
 
@@ -33,14 +36,6 @@ def build_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument("--show-limit", type=int, default=8)
     return parser
-
-def _family_label(row: SupportFamilyTransferRow) -> str:
-    if is_peer_band_like(row):
-        return "peer-band"
-    if row.family_bucket_key in PRIMARY_SUPPORT_FAMILY_BUCKETS:
-        return f"primary:{row.family_bucket_key}"
-    return f"satellite:{row.residual_bucket_key}"
-
 
 def main() -> None:
     args = build_parser().parse_args()
@@ -65,7 +60,7 @@ def main() -> None:
     print("Family-label transfer")
     print("---------------------")
     for subtype in sorted(by_subtype):
-        counter = Counter(_family_label(row) for row in by_subtype[subtype])
+        counter = Counter(support_family_label(row) for row in by_subtype[subtype])
         print(f"{subtype}: {dict(counter.most_common())}")
     print()
 
@@ -76,11 +71,7 @@ def main() -> None:
         print(f"{subtype}: {dict(counter.most_common(args.show_limit))}")
     print()
 
-    shared_primary_rows = [
-        row
-        for row in rows
-        if row.family_bucket_key in PRIMARY_SUPPORT_FAMILY_BUCKETS and not is_peer_band_like(row)
-    ]
+    shared_primary_rows = shared_primary_support_rows(rows)
     print("Shared primary-bucket occupancy")
     print("-------------------------------")
     for bucket_key in PRIMARY_SUPPORT_FAMILY_BUCKETS:
@@ -107,9 +98,7 @@ def main() -> None:
     print("Subtype-exclusive satellites")
     print("---------------------------")
     family_counts: dict[str, Counter[str]] = defaultdict(Counter)
-    for row in rows:
-        if is_peer_band_like(row) or row.family_bucket_key in PRIMARY_SUPPORT_FAMILY_BUCKETS:
-            continue
+    for row in satellite_support_rows(rows):
         family_counts[row.residual_bucket_key][row.subtype] += 1
     for key, counts in sorted(
         family_counts.items(),

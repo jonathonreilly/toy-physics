@@ -18,9 +18,8 @@ if str(PROJECT_DIR) not in sys.path:
     sys.path.insert(0, str(PROJECT_DIR))
 
 from pocket_wrap_suppressor_low_overlap_support_family_transfer_common import (  # noqa: E402
-    PRIMARY_SUPPORT_FAMILY_BUCKETS,
     build_rows,
-    is_peer_band_like,
+    satellite_support_rows,
 )
 
 
@@ -42,12 +41,7 @@ def main() -> None:
 
     frontier_log = Path(args.frontier_log).resolve()
     rows = build_rows(frontier_log)
-    satellites = [
-        row
-        for row in rows
-        if not is_peer_band_like(row)
-        and row.family_bucket_key not in PRIMARY_SUPPORT_FAMILY_BUCKETS
-    ]
+    satellites = satellite_support_rows(rows)
     grouped: dict[str, list[object]] = defaultdict(list)
     for row in satellites:
         grouped[row.residual_bucket_key].append(row)
