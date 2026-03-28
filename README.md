@@ -171,17 +171,21 @@ Fine-grained mechanism work is currently concentrated on a fixed frontier snapsh
   - a direct branch combiner with the earlier zero-false-positive residual clause does not improve on that branch:
     - `anchor_closure_intensity_gap >= -6.500 and mid_anchor_closure_peak >= 9.000` is a strict subset of the density-qualified branch
     - the combined `A or B` law is identical to branch `A`
+  - one bounded branch-A leakage carve closes most remaining leakage without recall loss:
+    - `edge_identity_event_count <= 78.000 and edge_identity_support_edge_density >= 0.166667 and mid_anchor_closure_peak >= 1.000`
+    - full residual result: `5/5` add4 recovered, `1` add1 false positive (precision `0.833`, recall `1.000`)
+    - the remaining overlap is concentrated in `base:taper-wrap:local-morph-͋`
   - this is improved residual compression, but still not a full residual closure law
 
 The open problem in this basin is no longer whether the family structure exists. It is trimming the eight `add1` leak rows inside the best high-mid residual `add4` branch into a cleaner structural law.
 
 ## Active Technical Problem
 
-The main active technical problem is compression of the low-overlap basin into a cleaner structural law, with the frozen `5504` frontier now focused on the outside-gate `add4` tail.
+The main active technical problem is compression of the low-overlap basin into a cleaner structural law, with the frozen `5504` frontier now focused on the final outside-gate `add4` vs `add1` overlap row.
 
 The relevant questions are:
 
-- how to trim the remaining eight `add1-sensitive` leak rows inside the best outside-gate `add4-sensitive` residual branch after `pair-only-sensitive` exact closure
+- how to trim the remaining single `add1-sensitive` leak row inside the best outside-gate `add4-sensitive` residual branch after `pair-only-sensitive` exact closure
 - whether that competition can be expressed more cleanly in support-layout or topological language
 - which parts of the present explanation are stable structure and which depend on the current observable basis
 

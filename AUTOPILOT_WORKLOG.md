@@ -1,3 +1,50 @@
+## 2026-03-28 17:06 America/New_York
+
+### Seam class
+- residual-boundary closure
+- branch-A leakage carve
+
+### Science impact
+- science advanced; one bounded closure-bias carve reduced branch-A leakage from eight rows to one while preserving full residual `add4` recall
+
+### Current state
+- Reconciled protocol preflight first:
+  - read tracked work log, runtime handoff, and automation memory in required order
+  - found no active detached child in latest handoff
+  - lock was free and acquired as `physics-science`
+  - git reconciled cleanly with `main == origin/main` (`ahead/behind = 0/0`)
+  - required pre-step helper push reconciliation returned `nothing_to_push`
+- Added and ran `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_branch_a_leakage_carve_scan.py` as one bounded continuation of the active frozen `5504` `rc0|ml0|c2` outside-gate residual thread.
+- Scanned exactly one extra carve clause inside the current best branch-A residual rule:
+  - base branch A: `edge_identity_event_count <= 78.000 and edge_identity_support_edge_density >= 0.166667`
+  - extra bounded clause family: support-layout and closure-bias features already on the residual basis
+
+### Strongest confirmed conclusion
+- A single closure-bias carve inside branch A dramatically improves residual compression without recall loss:
+  - `edge_identity_event_count <= 78.000 and edge_identity_support_edge_density >= 0.166667 and mid_anchor_closure_peak >= 1.000`
+  - full residual result: `tp/fp/fn = 5/1/0`, precision `0.833`, recall `1.000`
+- This dominates the prior best branch-A baseline:
+  - previous: `tp/fp/fn = 5/8/0`, precision `0.385`, recall `1.000`
+- Remaining overlap is now one row (`base:taper-wrap:local-morph-͋`), so the frontier has narrowed from an eight-row leak bundle to a single add1/add4 competition point.
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_branch_a_leakage_carve_scan.py`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Validation:
+  - `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_branch_a_leakage_carve_scan.py`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_branch_a_leakage_carve_scan.py > /Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-branch-a-leakage-carve-scan.txt`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py` (`benchmark regression audit: ok`)
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-branch-a-leakage-carve-scan.txt`
+
+### Exact next step
+- Stay in compression/translation mode and isolate the single remaining add1 leak row against the five retained residual add4 rows to test whether one tiny fourth clause can exact-close residual add4 without reopening prior leakage.
+
+### First concrete action
+- Add one tiny row-level residual comparer centered on `base:taper-wrap:local-morph-͋` versus the five rows matched by the new three-clause branch, then test one bounded split over closure-intensity or bridge-side support asymmetry.
+
 ## 2026-03-28 16:46 America/New_York
 
 ### Seam class
