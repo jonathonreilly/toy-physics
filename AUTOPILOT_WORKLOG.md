@@ -1,3 +1,47 @@
+## 2026-03-27 20:28 America/New_York
+
+### Current state
+- Continued the deep review thread on the frozen `5504` support-family transfer / baseline follow-on layer immediately after the shared `rc0|ml0|c2` selector cleanup passed validation.
+- Closed one more duplicated-selector seam in the active transfer layer:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_primary_bucket_profiles.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_satellites.py`
+  were still spelling the `peer-band` split locally through `high_bridge_left_low_count >= 0.5` / `< 0.5`.
+- Centralized that split in:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_common.py`
+  via shared `is_peer_band_like(...)`, which now also lines up explicitly with the shared `rc0|ml0|c2` core threshold.
+- Extended the cheap audit so those active transfer scripts cannot silently drift back to local `peer-band` threshold literals.
+
+### Strongest confirmed conclusion
+- Science conclusions did not change; this is another transfer-layer integrity cleanup.
+- The active transfer layer now shares one source of truth for:
+  - the primary support-family bucket set
+  - the residual bucket thresholds/key builders
+  - the non-peer core primary bucket-key helper
+  - the `high-support ml0` branch thresholds
+  - the `rc0|ml0|c2` core selector
+  - the `peer-band` selector
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_common.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_primary_bucket_profiles.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_satellites.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- Validation:
+  - `python3 -m py_compile` on touched scripts passed.
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py` passed (`benchmark regression audit: ok`).
+
+### Exact next step
+- Stay in deep review mode on the frozen `5504` transfer/follow-on lane.
+- Review whether any remaining active transfer/follow-on scripts still duplicate small branch selectors or live-rule selection logic instead of importing them from the shared helper surface.
+
+### First concrete action
+- Search:
+  - `rg -n 'anchor_adj_bridge_count >= 3\\.5|def _peer_band|TARGET_BUCKET = \"rc0\\|ml0\\|c2\"|matches_rule_text|rule_text' /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_*`
+
 ## 2026-03-27 20:24 America/New_York
 
 ### Current state

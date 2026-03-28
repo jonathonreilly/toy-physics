@@ -21,6 +21,7 @@ from pocket_wrap_suppressor_low_overlap_support_family_transfer_common import ( 
     PRIMARY_SUPPORT_FAMILY_BUCKETS,
     SupportFamilyTransferRow,
     build_rows,
+    is_peer_band_like,
 )
 
 
@@ -35,7 +36,7 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 def _peer_band(row: SupportFamilyTransferRow) -> bool:
-    return row.high_bridge_left_low_count >= 0.5
+    return is_peer_band_like(row)
 
 
 def _family_label(row: SupportFamilyTransferRow) -> str:

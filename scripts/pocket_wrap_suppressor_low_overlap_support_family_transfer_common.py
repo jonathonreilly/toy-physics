@@ -130,6 +130,10 @@ def is_rc0_ml0_c2_core_like(row: object) -> bool:
     )
 
 
+def is_peer_band_like(row: object) -> bool:
+    return float(getattr(row, "high_bridge_left_low_count")) >= RC0_ML0_C2_MAX_LEFT_LOW
+
+
 def build_rows(frontier_log: Path) -> list[SupportFamilyTransferRow]:
     rows = reconstruct_low_overlap_rows(frontier_log)
     out: list[SupportFamilyTransferRow] = []

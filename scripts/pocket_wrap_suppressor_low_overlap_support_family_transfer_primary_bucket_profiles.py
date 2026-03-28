@@ -21,6 +21,7 @@ if str(PROJECT_DIR) not in sys.path:
 from pocket_wrap_suppressor_low_overlap_support_family_transfer_common import (  # noqa: E402
     PRIMARY_SUPPORT_FAMILY_BUCKETS,
     build_rows,
+    is_peer_band_like,
 )
 FEATURES = (
     "edge_identity_closed_pair_count",
@@ -59,7 +60,7 @@ def main() -> None:
         bucket_rows = [
             row
             for row in rows
-            if row.family_bucket_key == bucket_key and row.high_bridge_left_low_count < 0.5
+            if row.family_bucket_key == bucket_key and not is_peer_band_like(row)
         ]
         grouped: dict[str, list[object]] = defaultdict(list)
         for row in bucket_rows:

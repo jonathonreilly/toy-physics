@@ -39,6 +39,7 @@ from pocket_wrap_suppressor_low_overlap_support_family_transfer_common import ( 
     EDGE_IDENTITY_CLOSED_PAIR_HIGH_THRESHOLD,
     HIGH_SUPPORT_ML0_C4P_SPLIT_THRESHOLD,
     HIGH_SUPPORT_ML0_MIN_CELL_COUNT,
+    is_peer_band_like,
     PRIMARY_SUPPORT_FAMILY_BUCKETS,
     RC0_ML0_C2_BUCKET,
     RC0_ML0_C2_MAX_LEFT_LOW,
@@ -453,6 +454,9 @@ def check_primary_support_family_buckets_shared() -> None:
     assert (
         RC0_ML0_C2_BUCKET == "rc0|ml0|c2" and RC0_ML0_C2_MAX_LEFT_LOW == 0.5
     ), "shared rc0|ml0|c2 core selector drifted"
+    assert is_peer_band_like(type("Row", (), {"high_bridge_left_low_count": 0.5})()), (
+        "shared peer-band selector drifted at the boundary"
+    )
     scripts = (
         REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_scan.py",
         REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_primary_bucket_profiles.py",
@@ -526,6 +530,20 @@ def check_primary_support_family_buckets_shared() -> None:
             'TARGET_BUCKET = "rc0|ml0|c2"' not in text
             and "high_bridge_left_low_count < 0.5" not in text
         ), f"{script.name} regressed to duplicating the rc0|ml0|c2 core selector"
+    peer_scripts = (
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_scan.py",
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_primary_bucket_profiles.py",
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_satellites.py",
+    )
+    for script in peer_scripts:
+        text = script.read_text()
+        assert (
+            "is_peer_band_like" in text
+        ), f"{script.name} no longer uses the shared peer-band selector"
+        assert (
+            "high_bridge_left_low_count < 0.5" not in text
+            and "high_bridge_left_low_count >= 0.5" not in text
+        ), f"{script.name} regressed to duplicating the peer-band threshold"
 
 
 def main() -> None:
