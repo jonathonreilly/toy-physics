@@ -1,3 +1,52 @@
+## 2026-03-28 16:46 America/New_York
+
+### Seam class
+- residual-branch combination
+- threshold reconciliation
+
+### Science impact
+- science refined; attempted branch merge collapsed to the existing density-qualified high-mid branch
+
+### Current state
+- Picked up the latest automated continuation state first:
+  - found `main` ahead of `origin/main` by two local science commits (`7b953b6`, `f5f9ffa`) plus a tracked handoff note describing the prior DNS push failure
+  - acquired `manual-codex`, fetched, and pushed those two commits successfully before new science
+- Added and ran `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_residual_branch_combiner.py` as the direct continuation of the active frozen `5504` `rc0|ml0|c2` outside-gate `add4` residual thread.
+- Rechecked the density-qualified branch against the previously reported rounded threshold and found that the winning support-edge density cut must be treated as the exact row-value threshold `1/6`, not the rounded display text `0.167`.
+
+### Strongest confirmed conclusion
+- With the exact density threshold restored, the best high-mid residual branch remains:
+  - `edge_identity_event_count <= 78.000 and edge_identity_support_edge_density >= 0.166667`
+  - full residual result: `tp/fp/fn = 5/8/0`, precision `0.385`, recall `1.000`
+- The earlier zero-false-positive residual clause is a strict subset of that branch:
+  - `anchor_closure_intensity_gap >= -6.500 and mid_anchor_closure_peak >= 9.000`
+  - branch result: `tp/fp/fn = 3/0/2`
+  - overlap result: `b_only = 0`
+- Therefore the attempted branch combiner adds nothing:
+  - `(A or B)` is identical to branch `A`
+  - the real remaining frontier is trimming the eight `add1-sensitive` leak rows already inside branch `A`, not merging branch families
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_residual_branch_combiner.py`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Validation:
+  - `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_residual_branch_combiner.py`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_residual_branch_combiner.py > /Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-residual-branch-combiner.txt`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-residual-branch-combiner.txt`
+
+### Exact next step
+- Stay in compression/translation mode and trim the eight `add1-sensitive` leak rows inside the best high-mid residual branch while preserving all five residual `add4-sensitive` rows.
+
+### First concrete action
+- Add one tiny branch-A leakage scan that filters to:
+  - `edge_identity_event_count <= 78.000`
+  - `edge_identity_support_edge_density >= 0.166667`
+- Then test one bounded carve-out clause over the existing support-layout or closure-bias basis and report whether any exclusion improves precision without dropping `add4-sensitive` recall.
+
 ## 2026-03-28 15:59 America/New_York
 
 ### Seam class

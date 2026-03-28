@@ -166,11 +166,14 @@ Fine-grained mechanism work is currently concentrated on a fixed frontier snapsh
   - the cleanest zero-false-positive residual `add4` clause is `anchor_closure_intensity_gap >= -6.500 and mid_anchor_closure_peak >= 9.000`, which captures `3/5`
   - the stubborn high-mid four-row knot (`local-morph-а`, `local-morph-༸` vs `local-morph-छ`, `local-morph-గ`) exact-closes in a slightly richer transfer basis with `edge_identity_event_count <= 78.000` (`2/2` add4, `0` false positives inside that cluster)
   - one bounded two-clause follow-on keeps that knot exactness and improves full-residual `add4` precision without recall loss:
-    - `edge_identity_event_count <= 78.000 and edge_identity_support_edge_density >= 0.167`
+    - `edge_identity_event_count <= 78.000 and edge_identity_support_edge_density >= 0.166667` (exact threshold `1/6`, rounded as `0.167` in earlier logs)
     - full residual result: `5/5` add4 recovered, `8` add1 false positives (precision `0.385`, baseline seed precision `0.312`)
+  - a direct branch combiner with the earlier zero-false-positive residual clause does not improve on that branch:
+    - `anchor_closure_intensity_gap >= -6.500 and mid_anchor_closure_peak >= 9.000` is a strict subset of the density-qualified branch
+    - the combined `A or B` law is identical to branch `A`
   - this is improved residual compression, but still not a full residual closure law
 
-The open problem in this basin is no longer whether the family structure exists. It is compression of the remaining outside-gate `add4` tail against `add1` into a cleaner structural law.
+The open problem in this basin is no longer whether the family structure exists. It is trimming the eight `add1` leak rows inside the best high-mid residual `add4` branch into a cleaner structural law.
 
 ## Active Technical Problem
 
@@ -178,7 +181,7 @@ The main active technical problem is compression of the low-overlap basin into a
 
 The relevant questions are:
 
-- how the remaining outside-gate `add4-sensitive` rows compete with the larger `add1-sensitive` residual after `pair-only-sensitive` exact closure
+- how to trim the remaining eight `add1-sensitive` leak rows inside the best outside-gate `add4-sensitive` residual branch after `pair-only-sensitive` exact closure
 - whether that competition can be expressed more cleanly in support-layout or topological language
 - which parts of the present explanation are stable structure and which depend on the current observable basis
 
