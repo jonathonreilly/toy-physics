@@ -1,3 +1,38 @@
+## 2026-03-28 11:54 America/New_York
+
+### Seam class
+- physical-language translation
+
+### Science impact
+- science refined; headline accuracy unchanged
+
+### Current state
+- Reconciled protocol preflight first: no active child marker in handoff, acquired `physics-science`, confirmed `main == origin/main`, and ran `automation_push.py` pre-step reconciliation (`nothing_to_push`).
+- Reconciled partially-complete local state by validating and finalizing `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_closure_regime_scan.py` as the queued bounded continuation of the active frozen `5504` `rc0|ml0|c2` compression thread.
+- Ran the closure-regime projection on the canonical `5504-max5600` frontier log and refreshed the scan output.
+
+### Strongest confirmed conclusion
+- Coarse closure-regime conditioning compresses subtype structure into a readable physical-language map while confirming the unresolved `add4` vs `pair-only` overlap is concentrated in high-closure positive-asymmetry cells.
+- `mid_anchor_closure_peak <= 9` is strongly `add1`-dominant (`12/18`) but still includes all `pair-only` low-closure residuals (`6/18`).
+- `mid_anchor_closure_peak >= 11` is `add4`-dominant (`7/12`) yet carries mixed residuals in the positive asymmetry band (`>=11` & `positive`: `0/3/3`), so boundary closure remains partial.
+- The sign-only marginal remains mixed (`positive`: `0/4/4`), supporting the same interpretation: closure regime context is necessary before any single asymmetry cut can reduce subtype leakage.
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_closure_regime_scan.py`
+- Validation:
+  - `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_closure_regime_scan.py`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_closure_regime_scan.py > /Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-closure-regime-scan.txt`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py` (`benchmark regression audit: ok`)
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-closure-regime-scan.txt`
+
+### Exact next step
+- Stay in compression/translation mode and test one bounded within-regime separator for the residual high-closure positive-asymmetry cell (`mid_anchor_closure_peak >= 11` and `anchor_closure_intensity_gap > 0`) using a single support-load style cut.
+
+### First concrete action
+- Add a tiny scanner that filters to `>=11` and `positive`, then reports subtype counts under one-threshold cuts over `{support_load, anchor_deep_share_gap}` to identify the cleanest one-cut residual reducer.
+
 ## 2026-03-28 10:57 America/New_York
 
 ### Seam class
