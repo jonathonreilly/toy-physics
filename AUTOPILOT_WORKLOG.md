@@ -1,3 +1,59 @@
+## 2026-03-28 17:48 America/New_York
+
+### Seam class
+- final-overlap closure
+- full-bucket exact projection
+
+### Science impact
+- science advanced; the frozen low-overlap bucket now exact-closes end-to-end
+
+### Current state
+- Picked up the latest local continuation state first:
+  - found `main` ahead of `origin/main` by local commit `79581ee` plus a tracked handoff note describing the earlier DNS push failure
+  - acquired `manual-codex`, fetched, and pushed `79581ee` successfully before new science
+- Added and ran `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_final_overlap_row_compare.py` as the direct continuation of the outside-gate `add4` residual thread.
+- Added and ran `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_full_bucket_exact_projection.py` as the follow-through full-bucket sanity pass on frozen `5504` `rc0|ml0|c2`.
+
+### Strongest confirmed conclusion
+- The final single-row overlap exact-closes inside the best branch-A carve:
+  - base carve: `edge_identity_event_count <= 78.000 and edge_identity_support_edge_density >= 0.166667 and mid_anchor_closure_peak >= 1.000`
+  - exact exclusion: `closure_load <= 50.500 and edge_identity_support_edge_density <= 0.182`
+  - refined outside-gate residual `add4-sensitive` result: `tp/fp/fn = 5/0/0`
+- Projected together with the earlier high-closure and `pair-only-sensitive` branches, the full frozen bucket exact-closes:
+  - high-closure `add4-sensitive`: `3`
+  - outside-gate `add4-sensitive`: `5`
+  - `pair-only-sensitive`: `9`
+  - default `add1-sensitive`: `15`
+  - full-bucket result: `32/32`, `0` misclassifications, `0` ambiguity, `0` unmatched
+- The active frontier therefore shifts from frozen-bucket compression to transfer/translation:
+  - test whether this exact branch-aware law survives beyond frozen `5504`
+  - express the law more cleanly in support-layout or topological language
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_final_overlap_row_compare.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_full_bucket_exact_projection.py`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Validation:
+  - `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_final_overlap_row_compare.py`
+  - `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_full_bucket_exact_projection.py`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_final_overlap_row_compare.py > /Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-final-overlap-row-compare.txt`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_full_bucket_exact_projection.py > /Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-full-bucket-exact-projection.txt`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py`
+- New result logs:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-final-overlap-row-compare.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-full-bucket-exact-projection.txt`
+
+### Exact next step
+- Stay in transfer/translation mode and test whether the exact frozen-bucket law survives beyond frozen `5504`.
+
+### First concrete action
+- Add one tiny transfer checker that projects the exact branch-aware law onto:
+  - a nearby generated-family slice, or
+  - an adjacent low-overlap frontier bucket,
+- then report which clauses transfer unchanged and where any failures first appear.
+
 ## 2026-03-28 17:06 America/New_York
 
 ### Seam class
