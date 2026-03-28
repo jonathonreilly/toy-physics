@@ -1,56 +1,49 @@
 # Physics Autopilot Handoff
 
-## 2026-03-28 07:55 America/New_York
+## 2026-03-28 08:35 America/New_York
 
 ### Seam class
-- wording/render cleanup
+- phase pivot
 
 ### Science impact
-- science unchanged; integrity cleanup only
+- science result materially changed
 
 ### Current state
-- Reconciled lock and git state first; lock became free during this loop and was acquired as `physics-science` before edits.
-- Completed one bounded wording/render cleanup pass on the active frozen `5504` transfer/follow-on lane.
-- Normalized `Best ...` rule headings to `Candidate ...` and replaced one stale `current best` wording string in the add4 exception scan module docstring.
-- No helper structure, rule evaluation, or loader behavior changed.
-- Validation passed:
-  - `python3 -m py_compile` on touched scripts
-  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py` (`benchmark regression audit: ok`)
-- Unrelated local `README.md` changes remain and were left untouched.
+- Closed the frozen `5504` deep-review lane with one final wording/render cleanup only, then pivoted into the next science phase from the cleaned base.
+- Added `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_map.py` and ran it on the frozen `5504` shared low-overlap bucket `rc0|ml0|c2`.
+- Review stop rule is now satisfied:
+  - last bounded seam scan found no remaining real helper drift
+  - final follow-up pass was cosmetic wording only
+- Repo should be pushed after the repo-facing phase-pivot commit; manual lock should return to `free`.
 
 ### Strongest confirmed conclusion
-- Science conclusions remain unchanged.
-- This frozen-`5504` lane appears to be in cosmetic wording/render cleanup only; no new non-cosmetic seam surfaced.
+- The cleaned `rc0|ml0|c2` bucket compresses into a readable coarse order-parameter story even though it still does not collapse to exact tiny rules.
+- Current coarse subtype read:
+  - `add1-sensitive`: left-loaded, low-mid anchor branch
+  - `add4-sensitive`: mid-loaded, high-closure branch
+  - `pair-only-sensitive`: lower-support, lower-closure branch
+- Best current coarse rules are partial, not exact:
+  - `add1-sensitive`: `anchor_bridge_gap <= -0.500 and support_load >= 14.500` -> `27/32` (`10/0/5`)
+  - `add4-sensitive`: `anchor_bridge_gap >= -0.500 and mid_anchor_closure_peak >= 9.000` -> `27/32` (`8/5/0`)
+  - `pair-only-sensitive`: `support_load <= 13.500` -> `26/32` (`8/5/1`)
 
 ### Files/logs changed
-- Repo-facing code (wording only):
-  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_branch_decomposition.py`
-  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_candidate_anchor_residual_scan.py`
-  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_agnostic_local_scan.py`
-  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_band_scan.py`
-  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_nonpeer_core_family_rules.py`
-  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_nonpeer_core_high_support_ml0_split.py`
-  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_nonpeer_core_residual_families.py`
-  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_topology_residual_scan.py`
-  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_bucket_rules.py`
-  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_add4_exception_scan.py`
-  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_candidate_anchor_contrast.py`
-  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_interaction_motif_scan.py`
-  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_topology_scan.py`
-- Runtime state:
-  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
-  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
-  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_map.py`
+  - final wording/render cleanup in active baseline-add1 review runners
+- Validation:
+  - `python3 -m py_compile` on touched scripts passed
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py` passed (`benchmark regression audit: ok`)
 
 ### Remote sync status
-- Pending commit/push for this bounded wording cleanup.
+- Push the repo-facing phase-pivot commit after writing this handoff.
 
 ### Remaining review seams
-- open: possible residual cosmetic wording only
-- stop rule: leave deep-review mode if the next bounded cosmetic sentinel sweep is clean
+- closed: deep-review mode complete for the active frozen `5504` transfer/follow-on lane
 
 ### Exact next step
-- Run one final cosmetic sentinel sweep on the active frozen `5504` lane; if clean, exit deep-review mode and resume normal science/monitoring.
+- Stay off the review lane.
+- Continue the order-parameter phase on the cleaned `rc0|ml0|c2` bucket by adding one small family of support-layout asymmetry variables and rerunning subtype separation on the same frozen `5504` specimen.
 
 ### First concrete action
-- `rg -n 'Best rules|Best peer|Best non-peer|current best|fragile|historical' /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_* /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_*`
+- Build a bounded follow-on runner that augments `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_map.py` with support-layout asymmetry features.

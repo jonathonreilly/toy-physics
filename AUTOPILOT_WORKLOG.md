@@ -42,6 +42,56 @@
 - Run a final cosmetic sentinel scan for stale wording tags on the active lane:
   - `rg -n 'Best rules|Best peer|Best non-peer|current best|fragile|historical' /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_* /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_*`
 
+## 2026-03-28 08:35 America/New_York
+
+### Seam class
+- phase pivot
+
+### Science impact
+- science result materially changed
+
+### Current state
+- Closed the frozen `5504` deep-review lane with one final wording/render cleanup only:
+  - normalized active baseline-add1 runner output from raw `peer_motif` / `non_peer` wording toward `peer-branch` / `non-peer-core`
+  - no subtype logic, helper surfaces, or rule evaluation changed
+- Then pivoted out of review mode and started the next science phase from the cleaned shared low-overlap bucket.
+- Added `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_map.py` and ran it on the frozen `5504` `rc0|ml0|c2` specimen.
+- Review stop rule is now satisfied:
+  - the last bounded seam scan found no remaining real helper drift
+  - the final follow-up pass was cosmetic wording only
+
+### Strongest confirmed conclusion
+- The cleaned `rc0|ml0|c2` bucket does compress into a readable coarse order-parameter story even though it still does not collapse to exact tiny rules.
+- Current coarse subtype read:
+  - `add1-sensitive`: left-loaded, low-mid anchor branch
+  - `add4-sensitive`: mid-loaded, high-closure branch
+  - `pair-only-sensitive`: lower-support, lower-closure branch
+- Best current coarse rules on the shared bucket are still partial rather than exact:
+  - `add1-sensitive`: `anchor_bridge_gap <= -0.500 and support_load >= 14.500` gives `27/32` (`10/0/5`)
+  - `add4-sensitive`: `anchor_bridge_gap >= -0.500 and mid_anchor_closure_peak >= 9.000` gives `27/32` (`8/5/0`)
+  - `pair-only-sensitive`: `support_load <= 13.500` gives `26/32` (`8/5/1`)
+- So the next science object is now clear: not more review, and not dense laddering, but coarse order-parameter refinement inside the stable shared low-overlap basin.
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_map.py`
+  - final wording/render cleanup in active baseline-add1 review runners
+- Validation:
+  - `python3 -m py_compile` on touched scripts passed
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py` passed (`benchmark regression audit: ok`)
+- New result log:
+  - live terminal run of `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_map.py` on frozen `5504`
+
+### Exact next step
+- Stay off the review lane.
+- Continue the order-parameter phase on the cleaned `rc0|ml0|c2` bucket by testing whether the three partial subtype rules become cleaner after adding one small family of support-layout asymmetry variables, rather than more broad feature soup.
+
+### First concrete action
+- Build one bounded follow-on runner that augments the new order-parameter map with support-layout asymmetry features and reruns subtype separation on the same frozen `5504` bucket.
+
+### Remaining review seams
+- closed: deep-review mode complete for the active frozen `5504` transfer/follow-on lane
+
 ## 2026-03-28 10:13 America/New_York
 
 ### Seam class
