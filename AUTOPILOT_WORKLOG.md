@@ -1,3 +1,49 @@
+## 2026-03-28 13:07 America/New_York
+
+### Seam class
+- outside-gate residual split
+
+### Science impact
+- science refined; headline accuracy unchanged
+
+### Current state
+- Picked up local continuation state first:
+  - found an unpushed local science commit (`873a6fa`, `Project high-closure gate rules across frozen bucket`) plus tracked handoff/worklog notes explaining the earlier helper DNS failure
+  - acquired `manual-codex`, pushed `873a6fa` successfully, and continued from the updated outside-gate next step with `main == origin/main`
+- Added and ran `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_outside_gate_low_closure_scan.py` as the bounded continuation of the active frozen `5504` `rc0|ml0|c2` compression thread.
+- Filtered to rows outside the exact high-closure positive gate and searched the existing asymmetry/order-parameter basis for the best compact low-closure separator of the remaining `pair-only-sensitive` residual.
+
+### Strongest confirmed conclusion
+- Outside the exact high-closure gate, the strongest compact residual separator is a pure low-closure cut:
+  - `closure_load <= 46.500`
+- On the outside-gate residual (`26` rows), that rule gives `23/26` for `pair-only-sensitive` (`5/2/1`):
+  - true positives: `5`
+  - false positives: `2` low-closure `add1-sensitive` rows
+  - false negatives: `1` higher-closure `pair-only-sensitive` row
+- So the remaining residual picture is now sharper:
+  - high-closure positive branch exact-closes under the gated law
+  - outside that gate, most `pair-only-sensitive` structure is a low-closure pocket
+  - the unresolved remainder is small and row-level rather than basin-wide
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_outside_gate_low_closure_scan.py`
+- Validation:
+  - `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_outside_gate_low_closure_scan.py`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_outside_gate_low_closure_scan.py > /Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-outside-gate-low-closure-scan.txt`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py` (`benchmark regression audit: ok`)
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-outside-gate-low-closure-scan.txt`
+
+### Exact next step
+- Stay in compression/translation mode and inspect the three outside-gate exceptions to the compact low-closure split.
+
+### First concrete action
+- Add one tiny outside-gate exception comparer for:
+  - the two low-closure `add1-sensitive` false positives
+  - the one higher-closure `pair-only-sensitive` false negative
+- Then test whether one additional bounded structural feature turns the `23/26` low-closure split into an exact or near-exact outside-gate rule.
+
 ## 2026-03-28 12:55 America/New_York
 
 ### Seam class
@@ -10,6 +56,7 @@
 - Reconciled protocol preflight first: no active detached science child in handoff, lock was free, acquired `physics-science`, confirmed `main == origin/main`, and ran required pre-step push reconciliation via `automation_push.py` (`nothing_to_push`).
 - Added and ran `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_high_closure_gate_projection.py` as the bounded continuation of the active frozen `5504` `rc0|ml0|c2` compression thread.
 - Projected the exact high-closure positive-asymmetry cell rules back onto the full frozen bucket under the existing gate (`mid_anchor_closure_peak >= 11` and `anchor_closure_intensity_gap > 0`) and reported gated misclassifications/unmatched rows explicitly.
+- Committed repo-facing results as `873a6fa`, attempted required end-of-loop helper push, and observed DNS failure after retries (`Could not resolve host: github.com`); lock was then released (no detached child).
 
 ### Strongest confirmed conclusion
 - The microcase-derived rules survive as an exact gated law on the full frozen `rc0|ml0|c2` bucket.
