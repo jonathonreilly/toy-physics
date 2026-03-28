@@ -16,9 +16,9 @@ if str(SCRIPTS_DIR) not in sys.path:
 if str(PROJECT_DIR) not in sys.path:
     sys.path.insert(0, str(PROJECT_DIR))
 
-from pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_candidate_anchor_contrast import (  # noqa: E402
+from pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_candidate_anchor_common import (  # noqa: E402
     FEATURE_NAMES,
-    build_bucket_rows,
+    build_candidate_anchor_rows,
 )
 from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_topology import (  # noqa: E402
     best_rule_for_target,
@@ -45,7 +45,7 @@ def main() -> None:
     total_start = time.time()
 
     frontier_log = Path(args.frontier_log).resolve()
-    rows = build_bucket_rows(frontier_log)
+    rows = build_candidate_anchor_rows(frontier_log)
     best_rule = best_rule_for_target(
         rows,
         target_subtype="add4-sensitive",

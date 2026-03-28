@@ -55,9 +55,9 @@ from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_ident
 from pocket_wrap_suppressor_low_overlap_boundary_axes import (  # noqa: E402
     parse_variant_limit as parse_low_overlap_variant_limit,
 )
-from pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_add4_exception_scan import (  # noqa: E402
+from pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_candidate_anchor_common import (  # noqa: E402
     FEATURE_NAMES as ADD4_EXCEPTION_FEATURE_NAMES,
-    build_bucket_rows as build_add4_exception_rows,
+    build_candidate_anchor_rows as build_add4_exception_rows,
 )
 from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_topology import (  # noqa: E402
     best_rule_for_target as best_support_topology_rule,
@@ -534,7 +534,6 @@ def check_primary_support_family_buckets_shared() -> None:
     rc0_scripts = (
         REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_topology_scan.py",
         REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_interaction_motif_scan.py",
-        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_candidate_anchor_contrast.py",
     )
     for script in rc0_scripts:
         text = script.read_text()
@@ -548,6 +547,24 @@ def check_primary_support_family_buckets_shared() -> None:
             and "allowed = {" not in text
             and "reconstruct_low_overlap_rows(frontier_log)" not in text
         ), f"{script.name} regressed to duplicating the rc0|ml0|c2 core selector"
+    candidate_anchor_common_text = (
+        REPO_ROOT
+        / "scripts"
+        / "pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_candidate_anchor_common.py"
+    ).read_text()
+    candidate_anchor_contrast_text = (
+        REPO_ROOT
+        / "scripts"
+        / "pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_candidate_anchor_contrast.py"
+    ).read_text()
+    assert (
+        "RC0_ML0_C2_BUCKET" not in candidate_anchor_common_text
+        or "build_rc0_ml0_c2_core_inputs" in candidate_anchor_common_text
+    ), "shared candidate-anchor helper no longer uses the shared rc0|ml0|c2 core loader"
+    assert (
+        "build_candidate_anchor_rows" in candidate_anchor_contrast_text
+        and "candidate_anchor_common import" in candidate_anchor_contrast_text
+    ), "candidate-anchor contrast no longer uses the shared candidate-anchor helper surface"
     transfer_scan_text = (
         REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_scan.py"
     ).read_text()
@@ -645,14 +662,20 @@ def check_baseline_add1_peer_motif_selector_shared() -> None:
         / "scripts"
         / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_branch_decomposition.py"
     ).read_text()
+    row_builder_source = (
+        REPO_ROOT
+        / "scripts"
+        / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_row_builders.py"
+    ).read_text()
     assert (
         "PEER_MOTIF_CELL" in branch_source and "is_peer_motif_like" in branch_source
     ), "baseline add1 branch decomposition no longer exposes the shared peer_motif selector"
+    assert (
+        "is_peer_motif_like" in row_builder_source
+    ), "shared baseline add1 row builders no longer uses the shared peer_motif selector"
     scripts = (
         REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_candidate_anchor_residual_scan.py",
         REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_topology_residual_scan.py",
-        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_agnostic_local_scan.py",
-        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_band_scan.py",
     )
     for script in scripts:
         text = script.read_text()
@@ -671,16 +694,22 @@ def check_baseline_add1_rescue_split_shared() -> None:
         / "scripts"
         / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_branch_decomposition.py"
     ).read_text()
+    row_builder_source = (
+        REPO_ROOT
+        / "scripts"
+        / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_row_builders.py"
+    ).read_text()
     assert (
         "BASELINE_ADD1_RESCUE_EDGE_DENSITY" in branch_source
         and "BASELINE_ADD1_RESCUE_POCKET_TOTAL" in branch_source
         and "split_baseline_add1_pocket_rows" in branch_source
     ), "baseline add1 branch decomposition no longer exposes the shared rescue split helper"
+    assert (
+        "split_baseline_add1_pocket_rows" in row_builder_source
+    ), "shared baseline add1 row builders no longer uses the shared rescue split helper"
     scripts = (
         REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_candidate_anchor_residual_scan.py",
         REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_topology_residual_scan.py",
-        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_agnostic_local_scan.py",
-        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_band_scan.py",
     )
     for script in scripts:
         text = script.read_text()
@@ -759,6 +788,11 @@ def check_shared_transfer_metric_helpers() -> None:
         / "scripts"
         / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_branch_decomposition.py"
     ).read_text()
+    row_builder_text = (
+        REPO_ROOT
+        / "scripts"
+        / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_row_builders.py"
+    ).read_text()
     assert (
         "has_candidate_motif_like" in branch_text
         and "support_edge_identity_own_metrics" in branch_text
@@ -767,13 +801,22 @@ def check_shared_transfer_metric_helpers() -> None:
         "from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_zero_distance_features import" not in branch_text
         and "def _has_motif" not in branch_text
     ), "baseline add1 branch decomposition regressed to private local motif/metric helpers"
+    assert (
+        "support_edge_identity_own_metrics" in row_builder_text
+        and "high_bridge_cells" in row_builder_text
+    ), "shared baseline-add1 row builders no longer uses the shared/public transfer metric helpers"
+    candidate_anchor_common_text = (
+        REPO_ROOT
+        / "scripts"
+        / "pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_candidate_anchor_common.py"
+    ).read_text()
+    assert (
+        "support_edges" in candidate_anchor_common_text
+    ), "shared candidate-anchor helper no longer uses the shared/public transfer metric helpers"
 
     metric_scripts = (
-        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_band_scan.py",
-        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_agnostic_local_scan.py",
         REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_candidate_anchor_residual_scan.py",
         REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_topology_residual_scan.py",
-        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_candidate_anchor_contrast.py",
     )
     for script in metric_scripts:
         text = script.read_text()
@@ -804,7 +847,6 @@ def check_shared_transfer_metric_helpers() -> None:
             " _has_motif," not in text
         ), f"{script.name} regressed to importing the private motif helper"
     rc0_loader_scripts = (
-        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_candidate_anchor_contrast.py",
         REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_topology_scan.py",
         REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_interaction_motif_scan.py",
     )
@@ -817,6 +859,18 @@ def check_shared_transfer_metric_helpers() -> None:
             "allowed = {" not in text
             and "reconstruct_low_overlap_rows(frontier_log)" not in text
         ), f"{script.name} regressed to rebuilding the rc0|ml0|c2 core inputs locally"
+    candidate_anchor_common_text = (
+        REPO_ROOT
+        / "scripts"
+        / "pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_candidate_anchor_common.py"
+    ).read_text()
+    assert (
+        "build_rc0_ml0_c2_core_inputs" in candidate_anchor_common_text
+    ), "shared candidate-anchor helper no longer uses the shared rc0|ml0|c2 core loader"
+    assert (
+        "allowed = {" not in candidate_anchor_common_text
+        and "reconstruct_low_overlap_rows(frontier_log)" not in candidate_anchor_common_text
+    ), "shared candidate-anchor helper regressed to rebuilding the rc0|ml0|c2 core inputs locally"
     coarse_by_source, frontier_rows = build_rc0_ml0_c2_core_inputs(
         Path(
             "/Users/jonreilly/Projects/Physics/logs/"
@@ -827,6 +881,121 @@ def check_shared_transfer_metric_helpers() -> None:
     assert set(coarse_by_source) == set(frontier_rows), (
         "shared rc0|ml0|c2 core loader drifted between coarse/frontier source sets"
     )
+
+
+def check_shared_baseline_add1_row_builders() -> None:
+    helper_path = (
+        REPO_ROOT
+        / "scripts"
+        / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_row_builders.py"
+    )
+    assert helper_path.exists(), "shared baseline-add1 row-builder helper is missing"
+
+    coordinate_agnostic_local = (
+        REPO_ROOT
+        / "scripts"
+        / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_agnostic_local_scan.py"
+    ).read_text()
+    coordinate_agnostic_residual = (
+        REPO_ROOT
+        / "scripts"
+        / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_agnostic_residual_scan.py"
+    ).read_text()
+    coordinate_agnostic_top = (
+        REPO_ROOT
+        / "scripts"
+        / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_agnostic_top_cell_generalization.py"
+    ).read_text()
+    coordinate_band = (
+        REPO_ROOT
+        / "scripts"
+        / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_band_scan.py"
+    ).read_text()
+    nonpeer_buckets = (
+        REPO_ROOT
+        / "scripts"
+        / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_nonpeer_core_buckets.py"
+    ).read_text()
+    nonpeer_rules = (
+        REPO_ROOT
+        / "scripts"
+        / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_nonpeer_core_family_rules.py"
+    ).read_text()
+    nonpeer_residual = (
+        REPO_ROOT
+        / "scripts"
+        / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_nonpeer_core_residual_families.py"
+    ).read_text()
+    nonpeer_ml0 = (
+        REPO_ROOT
+        / "scripts"
+        / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_nonpeer_core_high_support_ml0_split.py"
+    ).read_text()
+
+    assert (
+        "build_coordinate_agnostic_rows" in coordinate_agnostic_local
+    ), "coordinate-agnostic local scan no longer uses the shared baseline-add1 row builder"
+    assert (
+        "build_coordinate_agnostic_rows" in coordinate_agnostic_residual
+        and "coordinate_agnostic_local_scan import" not in coordinate_agnostic_residual
+    ), "coordinate-agnostic residual scan regressed to sibling build_rows coupling"
+    assert (
+        "build_coordinate_agnostic_rows" in coordinate_agnostic_top
+        and "coordinate_agnostic_local_scan import" not in coordinate_agnostic_top
+    ), "coordinate-agnostic top-cell scan regressed to sibling build_rows coupling"
+    assert (
+        "build_coordinate_band_rows" in coordinate_band
+    ), "coordinate-band scan no longer uses the shared baseline-add1 band-row builder"
+
+    for source_text, label in (
+        (nonpeer_buckets, "non-peer core buckets"),
+        (nonpeer_rules, "non-peer core family rules"),
+        (nonpeer_residual, "non-peer core residual families"),
+        (nonpeer_ml0, "non-peer high-support ml0 split"),
+    ):
+        assert (
+            "build_coordinate_band_rows" in source_text
+            and "coordinate_band_scan import" not in source_text
+        ), f"{label} regressed to sibling build_rows coupling"
+
+
+def check_shared_candidate_anchor_loader() -> None:
+    common_text = (
+        REPO_ROOT
+        / "scripts"
+        / "pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_candidate_anchor_common.py"
+    ).read_text()
+    contrast_text = (
+        REPO_ROOT
+        / "scripts"
+        / "pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_candidate_anchor_contrast.py"
+    ).read_text()
+    exception_text = (
+        REPO_ROOT
+        / "scripts"
+        / "pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_add4_exception_scan.py"
+    ).read_text()
+
+    assert (
+        "def build_candidate_anchor_rows(" in common_text
+        and "def candidate_anchor_metrics(" in common_text
+        and "FEATURE_NAMES = [" in common_text
+    ), "shared candidate-anchor helper no longer exposes the canonical rc0|ml0|c2 anchor-row surface"
+    assert (
+        "build_candidate_anchor_rows" in contrast_text
+        and "candidate_anchor_common import" in contrast_text
+        and "def build_bucket_rows(" not in contrast_text
+        and "def candidate_anchor_metrics(" not in contrast_text
+    ), "candidate-anchor contrast regressed to local rc0|ml0|c2 anchor-row construction"
+    assert (
+        "build_candidate_anchor_rows" in exception_text
+        and "candidate_anchor_common import" in exception_text
+        and "candidate_anchor_contrast import" not in exception_text
+    ), "add4 exception scan regressed to private candidate-anchor script coupling"
+    assert (
+        "TARGET_BUCKET" not in contrast_text
+        and "RC0_ML0_C2_BUCKET" in contrast_text
+    ), "candidate-anchor contrast regressed to the stale undefined bucket render constant"
 
 
 def check_shared_current_best_rule_selection() -> None:
@@ -892,6 +1061,10 @@ def main() -> None:
     check_shared_baseline_add1_bucket_loader()
     print("benchmark regression audit: checking shared transfer metric helpers", flush=True)
     check_shared_transfer_metric_helpers()
+    print("benchmark regression audit: checking shared baseline add1 row builders", flush=True)
+    check_shared_baseline_add1_row_builders()
+    print("benchmark regression audit: checking shared candidate-anchor loader", flush=True)
+    check_shared_candidate_anchor_loader()
     print("benchmark regression audit: checking shared current-best rule selection", flush=True)
     check_shared_current_best_rule_selection()
     print("benchmark regression audit: checking live mechanism split driver", flush=True)

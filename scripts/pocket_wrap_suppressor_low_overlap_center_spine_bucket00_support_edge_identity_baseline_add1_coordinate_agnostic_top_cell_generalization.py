@@ -17,8 +17,8 @@ if str(SCRIPTS_DIR) not in sys.path:
 if str(PROJECT_DIR) not in sys.path:
     sys.path.insert(0, str(PROJECT_DIR))
 
-from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_agnostic_local_scan import (  # noqa: E402
-    build_rows,
+from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_row_builders import (  # noqa: E402
+    build_coordinate_agnostic_rows,
 )
 from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_branch_decomposition import (  # noqa: E402
     load_bucket_frontier_inputs,
@@ -55,7 +55,7 @@ def main() -> None:
         bucket_log,
         bucket_key=args.bucket_key,
     )
-    rows, _rescued_names = build_rows(
+    rows, _rescued_names = build_coordinate_agnostic_rows(
         frontier_rows,
         bucket_rows,
         left_subtype=args.left_subtype,

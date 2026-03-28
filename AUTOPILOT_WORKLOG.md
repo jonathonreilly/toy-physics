@@ -1,3 +1,69 @@
+## 2026-03-28 10:13 America/New_York
+
+### Seam class
+- shared helper surface
+
+### Science impact
+- science unchanged; integrity cleanup only
+
+### Current state
+- Continued the frozen `5504` transfer/follow-on deep-review thread with two tightly related helper-surface cleanups after the selector pass:
+  - centralized the baseline-add1 coordinate row construction in `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_row_builders.py`
+  - centralized the `rc0|ml0|c2` candidate-anchor row construction in `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_candidate_anchor_common.py`
+- Repointed the active follow-ons away from sibling-script `build_rows(...)`/`build_bucket_rows(...)` imports and onto those shared helper surfaces.
+- Fixed one real runner bug while doing that cleanup:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_candidate_anchor_contrast.py` was still rendering with stale undefined `TARGET_BUCKET`; it now uses `RC0_ML0_C2_BUCKET`.
+- This batch hit several audit failures, and they were stale guards only:
+  - peer-motif selector guard still expected direct calls in scripts that now intentionally go through the shared row-builder helper
+  - rescue-split guard still expected direct calls in those same scripts
+  - transfer-metric and primary-bucket guards still expected `candidate_anchor_contrast.py` to own the direct metric/core-loader calls after the new shared candidate-anchor helper was introduced
+  - audit import drift still pointed at the stale add4-exception row-builder name
+- I patched only those guards/imports and reran validation.
+- A bounded seam scan at the end found no remaining real helper drift in the active frozen `5504` transfer/follow-on lane.
+- There is still one unrelated local working-tree change in `/Users/jonreilly/Projects/Physics/README.md`; I left it untouched and did not include it in this review batch.
+
+### Strongest confirmed conclusion
+- Science conclusions still did not change; this remains a frozen-`5504` review-layer integrity cleanup.
+- The active follow-on stack now appears to be out of real helper drift on the current review surface:
+  - shared metric surface
+  - shared loaders
+  - shared selectors
+  - shared baseline-add1 row builders
+  - shared candidate-anchor row loader
+- The next pass should be wording/render cleanup only unless a new non-cosmetic seam appears.
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_row_builders.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_agnostic_local_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_agnostic_residual_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_agnostic_top_cell_generalization.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_band_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_nonpeer_core_buckets.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_nonpeer_core_family_rules.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_nonpeer_core_high_support_ml0_split.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_nonpeer_core_residual_families.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_candidate_anchor_common.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_candidate_anchor_contrast.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_add4_exception_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py`
+- Validation:
+  - `python3 -m py_compile` on touched scripts passed.
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py` passed (`benchmark regression audit: ok`).
+  - bounded seam scan for remaining private-helper drift returned no hits on the active frozen-`5504` transfer/follow-on lane.
+
+### Exact next step
+- Treat the next pass as wording/render cleanup, not more helper-structure review.
+- If that pass finds no non-cosmetic issue, stop deep-review mode and hand the repo back to normal science/monitoring work.
+
+### First concrete action
+- Search active frozen-`5504` follow-ons for stale wording/render labels only, while avoiding the unrelated local `README.md` rewrite:
+  - `rg -n 'fragile|current best|historical|frozen 5504|render_rules\\(|print\\(\"Best rules' /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_* /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_*`
+
+### Remaining review seams
+- open: stale summary/render wording only
+- stop rule: leave deep review mode once the wording/render pass finds no non-cosmetic issue
+
 ## 2026-03-28 07:24 America/New_York
 
 ### Seam class

@@ -4,7 +4,6 @@
 from __future__ import annotations
 
 import argparse
-from dataclasses import make_dataclass
 from datetime import datetime
 from pathlib import Path
 import sys
@@ -18,21 +17,14 @@ if str(PROJECT_DIR) not in sys.path:
     sys.path.insert(0, str(PROJECT_DIR))
 
 from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_branch_decomposition import (  # noqa: E402
-    is_peer_motif_like,
     load_bucket_frontier_inputs,
-    split_baseline_add1_pocket_rows,
 )
-from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_pocket_subfamily_decomposition import (  # noqa: E402
-    build_rows as build_pocket_rows,
+from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_row_builders import (  # noqa: E402
+    build_coordinate_band_rows,
 )
 from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_topology import (  # noqa: E402
     evaluate_rules,
     render_rules,
-)
-from pocket_wrap_suppressor_low_overlap_support_family_transfer_common import (  # noqa: E402
-    high_bridge_band_metrics,
-    high_bridge_cells,
-    support_edge_identity_own_metrics,
 )
 
 
@@ -55,66 +47,6 @@ def build_parser() -> argparse.ArgumentParser:
     return parser
 
 
-def build_rows(
-    frontier_rows: dict[str, object],
-    bucket_rows: list[object],
-    *,
-    left_subtype: str,
-    right_subtype: str,
-) -> list[object]:
-    pocket_rows = build_pocket_rows(
-        frontier_rows,
-        bucket_rows,
-        left_subtype=left_subtype,
-        right_subtype=right_subtype,
-    )
-    baseline_rows, _rescued_names = split_baseline_add1_pocket_rows(
-        pocket_rows,
-        left_subtype=left_subtype,
-    )
-
-    row_cls = make_dataclass(
-        "BaselineAdd1CoordinateBandRow",
-        [("source_name", str), ("subtype", str)] + [
-            ("edge_identity_closed_pair_count", float),
-            ("support_role_bridge_count", float),
-            ("high_bridge_cell_count", float),
-            ("high_bridge_left_count", float),
-            ("high_bridge_right_count", float),
-            ("high_bridge_mid_count", float),
-            ("high_bridge_low_count", float),
-            ("high_bridge_center_count", float),
-            ("high_bridge_high_count", float),
-            ("high_bridge_left_low_count", float),
-            ("high_bridge_left_center_count", float),
-            ("high_bridge_right_low_count", float),
-            ("high_bridge_right_center_count", float),
-            ("high_bridge_mid_low_count", float),
-            ("high_bridge_mid_center_count", float),
-            ("high_bridge_mid_high_count", float),
-        ],
-        frozen=True,
-    )
-
-    rows = []
-    for row in baseline_rows:
-        source_name = getattr(row, "source_name")
-        nodes = set(frontier_rows[source_name].nodes)
-        cells = high_bridge_cells(nodes)
-        core_metrics = support_edge_identity_own_metrics(nodes)
-        rows.append(
-            row_cls(
-                source_name=source_name,
-                subtype="peer_motif" if is_peer_motif_like(nodes) else "non_peer",
-                edge_identity_closed_pair_count=core_metrics["edge_identity_closed_pair_count"],
-                support_role_bridge_count=core_metrics["support_role_bridge_count"],
-                **high_bridge_band_metrics(cells),
-            )
-        )
-    rows.sort(key=lambda item: getattr(item, "source_name"))
-    return rows
-
-
 def main() -> None:
     args = build_parser().parse_args()
     started = datetime.now().isoformat(timespec="seconds")
@@ -128,7 +60,7 @@ def main() -> None:
         bucket_log,
         bucket_key=args.bucket_key,
     )
-    rows = build_rows(
+    rows = build_coordinate_band_rows(
         frontier_rows,
         bucket_rows,
         left_subtype=args.left_subtype,
