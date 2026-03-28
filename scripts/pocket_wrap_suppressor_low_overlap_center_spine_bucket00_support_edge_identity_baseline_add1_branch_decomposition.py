@@ -99,6 +99,22 @@ def split_baseline_add1_pocket_rows(
     return baseline_rows, rescued_names
 
 
+def load_bucket_frontier_inputs(
+    frontier_log: Path,
+    bucket_log: Path,
+    *,
+    bucket_key: str,
+) -> tuple[list[object], dict[str, object]]:
+    bucket_rows = [row for row in load_bucket_rows(bucket_log) if row.bucket_key == bucket_key]
+    selected_sources = {row.source_name for row in bucket_rows}
+    frontier_rows = {
+        row.source_name: row
+        for row in reconstruct_low_overlap_rows(frontier_log)
+        if row.source_name in selected_sources
+    }
+    return bucket_rows, frontier_rows
+
+
 def build_rows(
     frontier_rows: dict[str, object],
     bucket_rows: list[object],
@@ -197,13 +213,11 @@ def main() -> None:
 
     frontier_log = Path(args.frontier_log).resolve()
     bucket_log = Path(args.bucket_log).resolve()
-    bucket_rows = [row for row in load_bucket_rows(bucket_log) if row.bucket_key == args.bucket_key]
-    selected_sources = {row.source_name for row in bucket_rows}
-    frontier_rows = {
-        row.source_name: row
-        for row in reconstruct_low_overlap_rows(frontier_log)
-        if row.source_name in selected_sources
-    }
+    bucket_rows, frontier_rows = load_bucket_frontier_inputs(
+        frontier_log,
+        bucket_log,
+        bucket_key=args.bucket_key,
+    )
     rows, rescued_names = build_rows(
         frontier_rows,
         bucket_rows,

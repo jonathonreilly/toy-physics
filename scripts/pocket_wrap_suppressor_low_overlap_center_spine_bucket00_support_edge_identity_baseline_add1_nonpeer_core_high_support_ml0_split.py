@@ -17,9 +17,6 @@ if str(SCRIPTS_DIR) not in sys.path:
 if str(PROJECT_DIR) not in sys.path:
     sys.path.insert(0, str(PROJECT_DIR))
 
-from pocket_wrap_suppressor_low_overlap_boundary_axes import (  # noqa: E402
-    reconstruct_low_overlap_rows,
-)
 from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_band_scan import (  # noqa: E402
     build_rows,
 )
@@ -27,8 +24,8 @@ from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_topology i
     evaluate_rules,
     render_rules,
 )
-from pocket_wrap_suppressor_low_overlap_center_spine_hardest_bucket_rules import (  # noqa: E402
-    load_bucket_rows,
+from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_branch_decomposition import (  # noqa: E402
+    load_bucket_frontier_inputs,
 )
 from pocket_wrap_suppressor_low_overlap_support_family_transfer_common import (  # noqa: E402
     EDGE_IDENTITY_CLOSED_PAIR_HIGH_THRESHOLD,
@@ -76,13 +73,11 @@ def main() -> None:
 
     frontier_log = Path(args.frontier_log).resolve()
     bucket_log = Path(args.bucket_log).resolve()
-    bucket_rows = [row for row in load_bucket_rows(bucket_log) if row.bucket_key == args.bucket_key]
-    selected_sources = {row.source_name for row in bucket_rows}
-    frontier_rows = {
-        row.source_name: row
-        for row in reconstruct_low_overlap_rows(frontier_log)
-        if row.source_name in selected_sources
-    }
+    bucket_rows, frontier_rows = load_bucket_frontier_inputs(
+        frontier_log,
+        bucket_log,
+        bucket_key=args.bucket_key,
+    )
     rows = build_rows(
         frontier_rows,
         bucket_rows,

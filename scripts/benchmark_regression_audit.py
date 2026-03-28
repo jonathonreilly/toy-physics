@@ -615,6 +615,42 @@ def check_baseline_add1_rescue_split_shared() -> None:
         ), f"{script.name} regressed to duplicating the baseline add1 rescue split literals"
 
 
+def check_shared_baseline_add1_bucket_loader() -> None:
+    branch_source = (
+        REPO_ROOT
+        / "scripts"
+        / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_branch_decomposition.py"
+    ).read_text()
+    assert (
+        "def load_bucket_frontier_inputs(" in branch_source
+    ), "baseline add1 branch decomposition no longer exposes the shared bucket/frontier loader"
+    assert (
+        "bucket_rows, frontier_rows = load_bucket_frontier_inputs(" in branch_source
+    ), "baseline add1 branch decomposition no longer uses its own shared bucket/frontier loader in main()"
+    consumer_scripts = (
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_candidate_anchor_residual_scan.py",
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_agnostic_local_scan.py",
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_agnostic_residual_scan.py",
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_agnostic_top_cell_generalization.py",
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_band_scan.py",
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_nonpeer_core_buckets.py",
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_nonpeer_core_family_rules.py",
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_nonpeer_core_high_support_ml0_split.py",
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_nonpeer_core_residual_families.py",
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_topology_residual_scan.py",
+    )
+    for script in consumer_scripts:
+        text = script.read_text()
+        assert (
+            "load_bucket_frontier_inputs" in text
+        ), f"{script.name} no longer uses the shared baseline add1 bucket/frontier loader"
+        assert (
+            "selected_sources = {row.source_name for row in bucket_rows}" not in text
+            and "reconstruct_low_overlap_rows(frontier_log)" not in text
+            and "load_bucket_rows(bucket_log)" not in text
+        ), f"{script.name} regressed to rebuilding bucket/frontier inputs locally"
+
+
 def check_shared_transfer_metric_helpers() -> None:
     common_text = (
         REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_common.py"
@@ -773,6 +809,8 @@ def main() -> None:
     check_baseline_add1_peer_motif_selector_shared()
     print("benchmark regression audit: checking baseline add1 rescue split sharing", flush=True)
     check_baseline_add1_rescue_split_shared()
+    print("benchmark regression audit: checking shared baseline add1 bucket loader", flush=True)
+    check_shared_baseline_add1_bucket_loader()
     print("benchmark regression audit: checking shared transfer metric helpers", flush=True)
     check_shared_transfer_metric_helpers()
     print("benchmark regression audit: checking shared current-best rule selection", flush=True)
