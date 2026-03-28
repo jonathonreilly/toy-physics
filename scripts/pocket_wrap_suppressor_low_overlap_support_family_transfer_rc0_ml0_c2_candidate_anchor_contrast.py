@@ -27,11 +27,13 @@ from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_topology i
     evaluate_rules,
     render_rules,
 )
-from pocket_wrap_suppressor_low_overlap_support_family_transfer_common import build_rows  # noqa: E402
+from pocket_wrap_suppressor_low_overlap_support_family_transfer_common import (  # noqa: E402
+    build_rows,
+    is_rc0_ml0_c2_core_like,
+    RC0_ML0_C2_BUCKET,
+)
 from toy_event_physics import graph_neighbors, pocket_candidate_cells  # noqa: E402
 
-
-TARGET_BUCKET = "rc0|ml0|c2"
 FEATURE_NAMES = [
     "edge_identity_closed_pair_count",
     "support_role_bridge_count",
@@ -183,7 +185,7 @@ def build_bucket_rows(frontier_log: Path) -> list[object]:
     allowed = {
         row.source_name
         for row in coarse_rows
-        if row.family_bucket_key == TARGET_BUCKET and row.high_bridge_left_low_count < 0.5
+        if is_rc0_ml0_c2_core_like(row)
     }
     frontier_rows = {
         row.source_name: row
@@ -237,7 +239,7 @@ def main() -> None:
     print("Support Family Transfer rc0|ml0|c2 Candidate-Anchor Contrast")
     print("============================================================")
     print(f"frontier_log={frontier_log}")
-    print(f"bucket={TARGET_BUCKET}")
+    print(f"bucket={RC0_ML0_C2_BUCKET}")
     print(f"bucket_rows={len(rows)}")
     print()
     for subtype in sorted({row.subtype for row in rows}):

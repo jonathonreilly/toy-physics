@@ -27,6 +27,8 @@ from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_ident
 
 
 PRIMARY_SUPPORT_FAMILY_BUCKETS = ("rc0|ml0|c2", "rc0|ml1|c3")
+RC0_ML0_C2_BUCKET = "rc0|ml0|c2"
+RC0_ML0_C2_MAX_LEFT_LOW = 0.5
 SUPPORT_ROLE_BRIDGE_HIGH_THRESHOLD = 19.0
 EDGE_IDENTITY_CLOSED_PAIR_HIGH_THRESHOLD = 71.0
 HIGH_SUPPORT_ML0_MIN_CELL_COUNT = 3.0
@@ -118,6 +120,13 @@ def residual_bucket_key_like(row: object) -> str:
             _mid_low_bin(_bucket_metric(row, "high_bridge_mid_low_count")),
             _cell_bin(_bucket_metric(row, "high_bridge_cell_count")),
         ]
+    )
+
+
+def is_rc0_ml0_c2_core_like(row: object) -> bool:
+    return (
+        getattr(row, "family_bucket_key") == RC0_ML0_C2_BUCKET
+        and float(getattr(row, "high_bridge_left_low_count")) < RC0_ML0_C2_MAX_LEFT_LOW
     )
 
 

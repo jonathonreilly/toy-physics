@@ -1,3 +1,46 @@
+## 2026-03-27 20:24 America/New_York
+
+### Current state
+- Continued the deep review thread on the frozen `5504` support-family transfer / baseline follow-on layer after confirming the worker lock was free and there was no conflicting active science job.
+- Closed another duplicated-selector seam in the active `rc0|ml0|c2` transfer lane:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_topology_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_interaction_motif_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_candidate_anchor_contrast.py`
+  were each rebuilding the same target bucket string and `high_bridge_left_low_count < 0.5` slice locally.
+- Centralized that selector in:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_common.py`
+  via shared `RC0_ML0_C2_BUCKET`, `RC0_ML0_C2_MAX_LEFT_LOW`, and `is_rc0_ml0_c2_core_like(...)`.
+- Extended the cheap audit so those three active `rc0|ml0|c2` scripts cannot silently drift back to local selector literals.
+
+### Strongest confirmed conclusion
+- Science conclusions did not change; this is another transfer-layer integrity cleanup.
+- The active `rc0|ml0|c2` transfer lane now shares one source of truth for:
+  - the primary support-family bucket set
+  - the residual bucket thresholds/key builders
+  - the non-peer core bucket-key helper
+  - the `high-support ml0` branch thresholds
+  - the `rc0|ml0|c2` core selector
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_common.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_topology_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_interaction_motif_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_candidate_anchor_contrast.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- Validation:
+  - `python3 -m py_compile` on touched scripts passed.
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py` passed (`benchmark regression audit: ok`).
+
+### Exact next step
+- Stay in deep review mode on the frozen `5504` transfer/follow-on lane.
+- Review whether any remaining active transfer/follow-on scripts still duplicate local target-bucket constants, peer-band selectors, or small branch selectors instead of importing them from the shared helper surface.
+
+### First concrete action
+- Search:
+  - `rg -n 'TARGET_BUCKET = \"rc0\\|ml0\\|c2\"|high_bridge_left_low_count < 0\\.5|peer-band|anchor_adj_bridge_count >= 3\\.5' /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_*`
+
 ## 2026-03-28 00:14 America/New_York
 
 ### Current state

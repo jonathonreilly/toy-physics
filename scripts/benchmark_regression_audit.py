@@ -40,6 +40,8 @@ from pocket_wrap_suppressor_low_overlap_support_family_transfer_common import ( 
     HIGH_SUPPORT_ML0_C4P_SPLIT_THRESHOLD,
     HIGH_SUPPORT_ML0_MIN_CELL_COUNT,
     PRIMARY_SUPPORT_FAMILY_BUCKETS,
+    RC0_ML0_C2_BUCKET,
+    RC0_ML0_C2_MAX_LEFT_LOW,
     SUPPORT_ROLE_BRIDGE_HIGH_THRESHOLD,
 )
 from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_add1_selector import (  # noqa: E402
@@ -448,6 +450,9 @@ def check_primary_support_family_buckets_shared() -> None:
         HIGH_SUPPORT_ML0_MIN_CELL_COUNT == 3.0
         and HIGH_SUPPORT_ML0_C4P_SPLIT_THRESHOLD == 3.5
     ), "shared high-support ml0 split thresholds drifted"
+    assert (
+        RC0_ML0_C2_BUCKET == "rc0|ml0|c2" and RC0_ML0_C2_MAX_LEFT_LOW == 0.5
+    ), "shared rc0|ml0|c2 core selector drifted"
     scripts = (
         REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_scan.py",
         REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_primary_bucket_profiles.py",
@@ -506,6 +511,21 @@ def check_primary_support_family_buckets_shared() -> None:
         and ">= 3.0" not in high_support_text
         and ">= 3.5" not in high_support_text
     ), "high-support ml0 split regressed to hard-coded branch thresholds"
+    rc0_scripts = (
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_topology_scan.py",
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_interaction_motif_scan.py",
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_candidate_anchor_contrast.py",
+    )
+    for script in rc0_scripts:
+        text = script.read_text()
+        assert (
+            "RC0_ML0_C2_BUCKET" in text
+            and "is_rc0_ml0_c2_core_like" in text
+        ), f"{script.name} no longer uses the shared rc0|ml0|c2 core selector"
+        assert (
+            'TARGET_BUCKET = "rc0|ml0|c2"' not in text
+            and "high_bridge_left_low_count < 0.5" not in text
+        ), f"{script.name} regressed to duplicating the rc0|ml0|c2 core selector"
 
 
 def main() -> None:

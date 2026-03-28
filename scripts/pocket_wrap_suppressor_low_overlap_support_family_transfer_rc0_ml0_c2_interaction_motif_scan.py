@@ -27,10 +27,11 @@ from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_topology i
     evaluate_rules,
     render_rules,
 )
-from pocket_wrap_suppressor_low_overlap_support_family_transfer_common import build_rows  # noqa: E402
-
-
-TARGET_BUCKET = "rc0|ml0|c2"
+from pocket_wrap_suppressor_low_overlap_support_family_transfer_common import (  # noqa: E402
+    build_rows,
+    is_rc0_ml0_c2_core_like,
+    RC0_ML0_C2_BUCKET,
+)
 EVENT_RE = re.compile(
     r"^cedge:(?P<family>deep|pocket):(?P<role_pair>[^:]+:[^:]+):"
     r"cand\\((?P<x1>-?\\d+),(?P<y1>-?\\d+)\\)-\\((?P<x2>-?\\d+),(?P<y2>-?\\d+)\\):"
@@ -129,7 +130,7 @@ def build_bucket_rows(frontier_log: Path) -> list[object]:
     allowed = {
         row.source_name
         for row in coarse_rows
-        if row.family_bucket_key == TARGET_BUCKET and row.high_bridge_left_low_count < 0.5
+        if is_rc0_ml0_c2_core_like(row)
     }
     frontier_rows = {
         row.source_name: row
@@ -208,7 +209,7 @@ def main() -> None:
     print("Support Family Transfer rc0|ml0|c2 Interaction Motif Scan")
     print("=========================================================")
     print(f"frontier_log={frontier_log}")
-    print(f"bucket={TARGET_BUCKET}")
+    print(f"bucket={RC0_ML0_C2_BUCKET}")
     print(f"bucket_rows={len(rows)}")
     print()
     for subtype in sorted({row.subtype for row in rows}):
@@ -220,7 +221,7 @@ def main() -> None:
             max_terms=args.max_terms,
             row_limit=args.row_limit,
         )
-        print(render_rules(f"Best rules for {TARGET_BUCKET} -> {subtype}", rules))
+        print(render_rules(f"Best rules for {RC0_ML0_C2_BUCKET} -> {subtype}", rules))
         print()
     print(
         "support family transfer rc0|ml0|c2 interaction motif scan completed "
