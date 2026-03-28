@@ -21,7 +21,7 @@ from pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_candi
     build_bucket_rows,
 )
 from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_topology import (  # noqa: E402
-    evaluate_rules,
+    best_rule_for_target,
     matches_rule_text,
 )
 
@@ -46,15 +46,13 @@ def main() -> None:
 
     frontier_log = Path(args.frontier_log).resolve()
     rows = build_bucket_rows(frontier_log)
-    add4_rules = evaluate_rules(
+    best_rule = best_rule_for_target(
         rows,
         target_subtype="add4-sensitive",
         feature_names=FEATURE_NAMES,
         predicate_limit=args.predicate_limit,
         max_terms=args.max_terms,
-        row_limit=args.row_limit,
     )
-    best_rule = add4_rules[0]
 
     tp = [
         row

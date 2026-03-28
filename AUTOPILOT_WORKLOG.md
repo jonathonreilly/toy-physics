@@ -73,6 +73,45 @@
 - Search:
   - `rg -n 'evaluate_rules\\(|rule_text|selected_rule|best_rule|anchor_adj_bridge_count >= 3\\.5|def _peer_band' /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_*`
 
+## 2026-03-27 21:29 America/New_York
+
+### Current state
+- Continued the deep review thread on the frozen `5504` transfer/follow-on lane after the larger branch-sharing batch stayed green.
+- Closed one more small live-rule seam in the active `rc0|ml0|c2` exception path:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_add4_exception_scan.py`
+  was still selecting the current best add4 rule with a local `rules[0]` pattern.
+- Centralized that current-best selection in:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_topology.py`
+  via shared `best_rule_for_target(...)`.
+- Repointed the add4 exception scan and the audit to that helper so the current-best live-rule path is explicit and shared.
+
+### Strongest confirmed conclusion
+- Science conclusions did not change; this is another frozen-`5504` review-layer integrity cleanup.
+- The active transfer/follow-on lane now shares:
+  - the compact rule-text evaluator
+  - the current-best rule selector for the active add4 exception path
+  - the baseline add1 peer-motif selector
+  - the baseline add1 rescue/baseline split
+  - the transfer-layer peer-band selector
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_topology.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_add4_exception_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- Validation:
+  - `python3 -m py_compile` on the touched scripts passed.
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py` passed (`benchmark regression audit: ok`).
+
+### Exact next step
+- Stay in deep review mode on the frozen `5504` transfer/follow-on lane.
+- Review whether any remaining active transfer/follow-on scripts still duplicate small live-rule selection wrappers or current-best-rule logic instead of importing them from the shared helper surface.
+
+### First concrete action
+- Search:
+  - `rg -n 'best_rule = .*\\[0\\]|selected_rule|top = rules\\[0\\]|evaluate_rules\\(' /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_* /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_*`
+
 ## 2026-03-27 21:13 America/New_York
 
 ### Current state

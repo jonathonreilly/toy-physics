@@ -56,6 +56,7 @@ from pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_add4_
     build_bucket_rows as build_add4_exception_rows,
 )
 from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_topology import (  # noqa: E402
+    best_rule_for_target as best_support_topology_rule,
     evaluate_rules as evaluate_support_topology_rules,
     matches_rule_text as support_topology_matches_rule_text,
 )
@@ -333,7 +334,7 @@ def check_add4_exception_scan_uses_live_rule() -> None:
         / "pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_add4_exception_scan.py"
     ).read_text()
     assert (
-        "evaluate_rules(" in script_source and "matches_rule_text" in script_source
+        "best_rule_for_target" in script_source and "matches_rule_text" in script_source
     ), "add4 exception scan regressed to a frozen rule instead of deriving the live add4 rule"
     assert (
         "def _matches_add4_rule" not in script_source
@@ -350,16 +351,13 @@ def check_add4_exception_scan_rule_eval_consistency() -> None:
             "2026-03-26-pocket-wrap-suppressor-nonpocket-subtype-rules-5504-max5600.txt"
         )
     )
-    rules = evaluate_support_topology_rules(
+    top = best_support_topology_rule(
         rows,
         target_subtype="add4-sensitive",
         feature_names=ADD4_EXCEPTION_FEATURE_NAMES,
         predicate_limit=22,
         max_terms=3,
-        row_limit=1,
     )
-    assert rules, "add4 exception scan produced no live add4 rules"
-    top = rules[0]
 
     tp = sum(
         1

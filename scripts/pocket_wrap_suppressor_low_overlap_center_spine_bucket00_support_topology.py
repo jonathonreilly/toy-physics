@@ -187,6 +187,27 @@ def evaluate_rules(
     return results[:row_limit]
 
 
+def best_rule_for_target(
+    rows: list[object],
+    *,
+    target_subtype: str,
+    feature_names: list[str],
+    predicate_limit: int,
+    max_terms: int,
+) -> RuleRow:
+    rules = evaluate_rules(
+        rows,
+        target_subtype=target_subtype,
+        feature_names=feature_names,
+        predicate_limit=predicate_limit,
+        max_terms=max_terms,
+        row_limit=1,
+    )
+    if not rules:
+        raise ValueError(f"no rules found for target subtype {target_subtype}")
+    return rules[0]
+
+
 def render_rows(rows: list[object], feature_names: list[str]) -> str:
     shown = [
         "source_name",
