@@ -612,6 +612,80 @@ def check_baseline_add1_rescue_split_shared() -> None:
         ), f"{script.name} regressed to duplicating the baseline add1 rescue split literals"
 
 
+def check_shared_transfer_metric_helpers() -> None:
+    common_text = (
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_common.py"
+    ).read_text()
+    for marker in (
+        "def support_edges(",
+        "def support_edge_identity_own_metrics(",
+        "def high_bridge_cells(",
+        "def high_bridge_band_metrics(",
+    ):
+        assert (
+            marker in common_text
+        ), f"shared transfer helper no longer exposes {marker.strip()}"
+    for stale_marker in (
+        " _band_metrics,",
+        " _high_bridge_cells,",
+        " _own_metrics,",
+        " _support_edges,",
+    ):
+        assert (
+            stale_marker not in common_text
+        ), "shared transfer helper regressed to importing private cross-script metric helpers"
+
+    branch_text = (
+        REPO_ROOT
+        / "scripts"
+        / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_branch_decomposition.py"
+    ).read_text()
+    assert (
+        "has_candidate_motif_like" in branch_text
+        and "support_edge_identity_own_metrics" in branch_text
+    ), "baseline add1 branch decomposition no longer uses shared/public motif and metric helpers"
+    assert (
+        "from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_zero_distance_features import" not in branch_text
+        and "def _has_motif" not in branch_text
+    ), "baseline add1 branch decomposition regressed to private local motif/metric helpers"
+
+    metric_scripts = (
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_band_scan.py",
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_agnostic_local_scan.py",
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_candidate_anchor_residual_scan.py",
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_topology_residual_scan.py",
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_candidate_anchor_contrast.py",
+    )
+    for script in metric_scripts:
+        text = script.read_text()
+        assert (
+            "support_edges" in text
+            or "high_bridge_cells" in text
+            or "support_edge_identity_own_metrics" in text
+        ), f"{script.name} no longer uses the shared/public transfer metric helpers"
+        for stale_marker in (
+            " _support_edges,",
+            " _own_metrics,",
+            " _high_bridge_cells,",
+            " _band_metrics,",
+        ):
+            assert (
+                stale_marker not in text
+            ), f"{script.name} regressed to importing private cross-script metric helpers"
+    motif_scripts = (
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_candidate_anchor_residual_scan.py",
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_topology_residual_scan.py",
+    )
+    for script in motif_scripts:
+        text = script.read_text()
+        assert (
+            "has_candidate_motif_like" in text
+        ), f"{script.name} no longer uses the shared/public candidate motif helper"
+        assert (
+            " _has_motif," not in text
+        ), f"{script.name} regressed to importing the private motif helper"
+
+
 def check_shared_current_best_rule_selection() -> None:
     script_dir = REPO_ROOT / "scripts"
     active_patterns = (
@@ -671,6 +745,8 @@ def main() -> None:
     check_baseline_add1_peer_motif_selector_shared()
     print("benchmark regression audit: checking baseline add1 rescue split sharing", flush=True)
     check_baseline_add1_rescue_split_shared()
+    print("benchmark regression audit: checking shared transfer metric helpers", flush=True)
+    check_shared_transfer_metric_helpers()
     print("benchmark regression audit: checking shared current-best rule selection", flush=True)
     check_shared_current_best_rule_selection()
     print("benchmark regression audit: checking live mechanism split driver", flush=True)

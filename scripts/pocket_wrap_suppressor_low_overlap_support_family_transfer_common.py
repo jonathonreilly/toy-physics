@@ -17,13 +17,11 @@ if str(PROJECT_DIR) not in sys.path:
 from pocket_wrap_suppressor_low_overlap_boundary_axes import (  # noqa: E402
     reconstruct_low_overlap_rows,
 )
-from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_band_scan import (  # noqa: E402
-    _band_metrics,
-    _high_bridge_cells,
+from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_add1_selector import (  # noqa: E402
+    edge_identity_signature,
+    support_roles,
 )
-from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_zero_distance_features import (  # noqa: E402
-    _own_metrics,
-)
+from toy_event_physics import graph_neighbors, pocket_candidate_cells  # noqa: E402
 
 
 PRIMARY_SUPPORT_FAMILY_BUCKETS = ("rc0|ml0|c2", "rc0|ml1|c3")
@@ -33,6 +31,7 @@ SUPPORT_ROLE_BRIDGE_HIGH_THRESHOLD = 19.0
 EDGE_IDENTITY_CLOSED_PAIR_HIGH_THRESHOLD = 71.0
 HIGH_SUPPORT_ML0_MIN_CELL_COUNT = 3.0
 HIGH_SUPPORT_ML0_C4P_SPLIT_THRESHOLD = 3.5
+HIGH_BRIDGE_THRESHOLD = 7.0
 
 
 @dataclass(frozen=True)
@@ -77,6 +76,97 @@ def _cell_bin(value: float) -> str:
 
 def _bucket_metric(row: object, name: str) -> float:
     return float(getattr(row, name))
+
+
+def support_edges(
+    support_nodes: set[tuple[int, int]],
+) -> set[tuple[tuple[int, int], tuple[int, int]]]:
+    edges: set[tuple[tuple[int, int], tuple[int, int]]] = set()
+    for left in sorted(support_nodes):
+        for right in graph_neighbors(left, support_nodes, wrap_y=False):
+            if right not in support_nodes or right <= left:
+                continue
+            edges.add((left, right))
+    return edges
+
+
+def support_edge_identity_own_metrics(nodes: set[tuple[int, int]]) -> dict[str, float]:
+    pocket_cells, deep_cells = pocket_candidate_cells(nodes, wrap_y=False)
+    roles = support_roles(nodes, pocket_cells, deep_cells)
+    support_nodes = set(roles)
+    support_edge_set = support_edges(support_nodes)
+    _events, numeric = edge_identity_signature(nodes)
+
+    metrics: dict[str, float] = {
+        "pocket_candidate_count": float(len(pocket_cells)),
+        "deep_candidate_count": float(len(deep_cells)),
+        "candidate_count": float(len(pocket_cells | deep_cells)),
+        "support_node_count": float(len(support_nodes)),
+        "support_edge_count": float(len(support_edge_set)),
+        "support_role_bridge_count": float(sum(1 for role in roles.values() if role == "bridge")),
+        "support_role_pocket_only_count": float(sum(1 for role in roles.values() if role == "pocket_only")),
+        "support_role_deep_only_count": float(sum(1 for role in roles.values() if role == "deep_only")),
+        "edge_identity_event_count": numeric["edge_identity_event_count"],
+        "edge_identity_closed_pair_count": numeric["edge_identity_closed_pair_count"],
+        "edge_identity_open_pair_count": numeric["edge_identity_open_pair_count"],
+        "edge_identity_candidate_closed_fraction": numeric["edge_identity_candidate_closed_fraction"],
+        "edge_identity_candidate_open_fraction": numeric["edge_identity_candidate_open_fraction"],
+        "edge_identity_closed_pair_ratio": numeric["edge_identity_closed_pair_ratio"],
+        "edge_identity_closed_span_mean": numeric["edge_identity_closed_span_mean"],
+        "edge_identity_support_edge_density": numeric["edge_identity_support_edge_density"],
+    }
+
+    role_edge_counts: dict[str, float] = {}
+    for left, right in support_edge_set:
+        key = "__".join(sorted((roles[left], roles[right])))
+        role_edge_counts[key] = role_edge_counts.get(key, 0.0) + 1.0
+    for key, value in role_edge_counts.items():
+        metrics[f"support_edge_role_{key}_count"] = value
+    return metrics
+
+
+def high_bridge_cells(nodes: set[tuple[int, int]]) -> list[tuple[int, int]]:
+    pocket_cells, deep_cells = pocket_candidate_cells(nodes, wrap_y=False)
+    candidate_cells = pocket_cells | deep_cells
+    roles = support_roles(nodes, pocket_cells, deep_cells)
+    support_nodes = set(roles)
+
+    candidate_to_supports: dict[tuple[int, int], set[tuple[int, int]]] = {}
+    for support in support_nodes:
+        adjacent = set(graph_neighbors(support, support_nodes | candidate_cells, wrap_y=False))
+        attached = adjacent & candidate_cells
+        for cell in attached:
+            candidate_to_supports.setdefault(cell, set()).add(support)
+
+    out = []
+    for cell in sorted(candidate_cells):
+        attached = candidate_to_supports.get(cell, set())
+        bridge_count = float(sum(1 for node in attached if roles.get(node) == "bridge"))
+        if bridge_count >= HIGH_BRIDGE_THRESHOLD:
+            out.append(cell)
+    return out
+
+
+def high_bridge_band_metrics(cells: list[tuple[int, int]]) -> dict[str, float]:
+    def count(fn) -> float:
+        return float(sum(1 for cell in cells if fn(cell)))
+
+    return {
+        "high_bridge_cell_count": float(len(cells)),
+        "high_bridge_left_count": count(lambda cell: cell[0] <= 1),
+        "high_bridge_right_count": count(lambda cell: cell[0] >= 5),
+        "high_bridge_mid_count": count(lambda cell: 2 <= cell[0] <= 4),
+        "high_bridge_low_count": count(lambda cell: cell[1] <= -1),
+        "high_bridge_center_count": count(lambda cell: cell[1] == 0),
+        "high_bridge_high_count": count(lambda cell: cell[1] >= 1),
+        "high_bridge_left_low_count": count(lambda cell: cell[0] <= 1 and cell[1] <= -1),
+        "high_bridge_left_center_count": count(lambda cell: cell[0] <= 1 and cell[1] == 0),
+        "high_bridge_right_low_count": count(lambda cell: cell[0] >= 5 and cell[1] <= -1),
+        "high_bridge_right_center_count": count(lambda cell: cell[0] >= 5 and cell[1] == 0),
+        "high_bridge_mid_low_count": count(lambda cell: 2 <= cell[0] <= 4 and cell[1] <= -1),
+        "high_bridge_mid_center_count": count(lambda cell: 2 <= cell[0] <= 4 and cell[1] == 0),
+        "high_bridge_mid_high_count": count(lambda cell: 2 <= cell[0] <= 4 and cell[1] >= 1),
+    }
 
 
 def family_bucket_key(row: SupportFamilyTransferRow) -> str:
@@ -139,8 +229,8 @@ def build_rows(frontier_log: Path) -> list[SupportFamilyTransferRow]:
     out: list[SupportFamilyTransferRow] = []
     for row in rows:
         nodes = set(row.nodes)
-        core_metrics = _own_metrics(nodes)
-        band_metrics = _band_metrics(_high_bridge_cells(nodes))
+        core_metrics = support_edge_identity_own_metrics(nodes)
+        band_metrics = high_bridge_band_metrics(high_bridge_cells(nodes))
         out_row = SupportFamilyTransferRow(
             source_name=row.source_name,
             subtype=row.subtype,

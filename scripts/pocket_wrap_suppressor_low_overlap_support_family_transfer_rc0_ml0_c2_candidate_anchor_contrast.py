@@ -19,10 +19,6 @@ if str(PROJECT_DIR) not in sys.path:
     sys.path.insert(0, str(PROJECT_DIR))
 
 from pocket_wrap_suppressor_low_overlap_boundary_axes import reconstruct_low_overlap_rows  # noqa: E402
-from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_add1_selector import (  # noqa: E402
-    _support_edges,
-    support_roles,
-)
 from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_topology import (  # noqa: E402
     evaluate_rules,
     render_rules,
@@ -31,6 +27,10 @@ from pocket_wrap_suppressor_low_overlap_support_family_transfer_common import ( 
     build_rows,
     is_rc0_ml0_c2_core_like,
     RC0_ML0_C2_BUCKET,
+    support_edges,
+)
+from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_add1_selector import (  # noqa: E402
+    support_roles,
 )
 from toy_event_physics import graph_neighbors, pocket_candidate_cells  # noqa: E402
 
@@ -105,7 +105,7 @@ def candidate_anchor_metrics(nodes: set[tuple[int, int]]) -> dict[str, float]:
     candidate_cells = pocket_cells | deep_cells
     roles = support_roles(nodes, pocket_cells, deep_cells)
     support_nodes = set(roles)
-    support_edges = _support_edges(support_nodes)
+    support_edge_set = support_edges(support_nodes)
 
     band_metrics: dict[str, dict[str, float]] = defaultdict(_band_defaults)
     for candidate in sorted(candidate_cells):
@@ -132,7 +132,7 @@ def candidate_anchor_metrics(nodes: set[tuple[int, int]]) -> dict[str, float]:
             for right in attached[idx + 1 :]:
                 total_pairs += 1.0
                 edge = (left, right) if left < right else (right, left)
-                if edge not in support_edges:
+                if edge not in support_edge_set:
                     continue
                 closed_pairs += 1.0
                 if roles.get(left) == "bridge" and roles.get(right) == "bridge":

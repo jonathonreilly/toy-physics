@@ -20,8 +20,8 @@ if str(PROJECT_DIR) not in sys.path:
 from pocket_wrap_suppressor_low_overlap_boundary_axes import (  # noqa: E402
     reconstruct_low_overlap_rows,
 )
-from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_zero_distance_features import (  # noqa: E402
-    _own_metrics,
+from pocket_wrap_suppressor_low_overlap_support_family_transfer_common import (  # noqa: E402
+    support_edge_identity_own_metrics,
 )
 from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_pocket_subfamily_decomposition import (  # noqa: E402
     build_rows as build_pocket_rows,
@@ -66,13 +66,13 @@ def build_parser() -> argparse.ArgumentParser:
     return parser
 
 
-def _has_motif(nodes: set[tuple[int, int]], cell: tuple[int, int]) -> bool:
+def has_candidate_motif_like(nodes: set[tuple[int, int]], cell: tuple[int, int]) -> bool:
     pocket_cells, deep_cells = pocket_candidate_cells(nodes, wrap_y=False)
     return cell in pocket_cells or cell in deep_cells
 
 
 def is_peer_motif_like(nodes: set[tuple[int, int]]) -> bool:
-    return _has_motif(nodes, PEER_MOTIF_CELL)
+    return has_candidate_motif_like(nodes, PEER_MOTIF_CELL)
 
 
 def split_baseline_add1_pocket_rows(
@@ -138,8 +138,8 @@ def build_rows(
     for row in baseline_rows:
         source_name = getattr(row, "source_name")
         nodes = set(frontier_rows[source_name].nodes)
-        metrics = _own_metrics(nodes)
-        motif_hits = [float(_has_motif(nodes, cell)) for cell in MOTIF_CELLS]
+        metrics = support_edge_identity_own_metrics(nodes)
+        motif_hits = [float(has_candidate_motif_like(nodes, cell)) for cell in MOTIF_CELLS]
         peer_motif = is_peer_motif_like(nodes)
         out_rows.append(
             row_cls(

@@ -20,11 +20,6 @@ if str(PROJECT_DIR) not in sys.path:
 from pocket_wrap_suppressor_low_overlap_boundary_axes import (  # noqa: E402
     reconstruct_low_overlap_rows,
 )
-from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_add1_selector import (  # noqa: E402
-    _support_edges,
-    edge_identity_signature,
-    support_roles,
-)
 from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_topology import (  # noqa: E402
     evaluate_rules,
     render_rules,
@@ -35,7 +30,9 @@ from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_ident
 from pocket_wrap_suppressor_low_overlap_center_spine_hardest_bucket_rules import (  # noqa: E402
     load_bucket_rows,
 )
-from toy_event_physics import pocket_candidate_cells  # noqa: E402
+from pocket_wrap_suppressor_low_overlap_support_family_transfer_common import (  # noqa: E402
+    support_edge_identity_own_metrics,
+)
 
 
 BASIS = [
@@ -69,43 +66,8 @@ def _feature_distance(left: object, right: object, names: list[str]) -> float:
     return sum(abs(float(getattr(left, name)) - float(getattr(right, name))) for name in names)
 
 
-def _role_pair(a: str, b: str) -> str:
-    return "__".join(sorted((a, b)))
-
-
 def _own_metrics(nodes: set[tuple[int, int]]) -> dict[str, float]:
-    pocket_cells, deep_cells = pocket_candidate_cells(nodes, wrap_y=False)
-    roles = support_roles(nodes, pocket_cells, deep_cells)
-    support_nodes = set(roles)
-    support_edges = _support_edges(support_nodes)
-    _events, numeric = edge_identity_signature(nodes)
-
-    metrics: dict[str, float] = {
-        "pocket_candidate_count": float(len(pocket_cells)),
-        "deep_candidate_count": float(len(deep_cells)),
-        "candidate_count": float(len(pocket_cells | deep_cells)),
-        "support_node_count": float(len(support_nodes)),
-        "support_edge_count": float(len(support_edges)),
-        "support_role_bridge_count": float(sum(1 for role in roles.values() if role == "bridge")),
-        "support_role_pocket_only_count": float(sum(1 for role in roles.values() if role == "pocket_only")),
-        "support_role_deep_only_count": float(sum(1 for role in roles.values() if role == "deep_only")),
-        "edge_identity_event_count": numeric["edge_identity_event_count"],
-        "edge_identity_closed_pair_count": numeric["edge_identity_closed_pair_count"],
-        "edge_identity_open_pair_count": numeric["edge_identity_open_pair_count"],
-        "edge_identity_candidate_closed_fraction": numeric["edge_identity_candidate_closed_fraction"],
-        "edge_identity_candidate_open_fraction": numeric["edge_identity_candidate_open_fraction"],
-        "edge_identity_closed_pair_ratio": numeric["edge_identity_closed_pair_ratio"],
-        "edge_identity_closed_span_mean": numeric["edge_identity_closed_span_mean"],
-        "edge_identity_support_edge_density": numeric["edge_identity_support_edge_density"],
-    }
-
-    role_edge_counts: dict[str, float] = {}
-    for left, right in support_edges:
-        key = _role_pair(roles[left], roles[right])
-        role_edge_counts[key] = role_edge_counts.get(key, 0.0) + 1.0
-    for key, value in role_edge_counts.items():
-        metrics[f"support_edge_role_{key}_count"] = value
-    return metrics
+    return support_edge_identity_own_metrics(nodes)
 
 
 def dataclass_feature_names(row: object) -> list[str]:

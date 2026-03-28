@@ -20,17 +20,10 @@ if str(PROJECT_DIR) not in sys.path:
 from pocket_wrap_suppressor_low_overlap_boundary_axes import (  # noqa: E402
     reconstruct_low_overlap_rows,
 )
-from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_add1_selector import (  # noqa: E402
-    _support_edges,
-    support_roles,
-)
 from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_branch_decomposition import (  # noqa: E402
     MOTIF_CELLS,
     is_peer_motif_like,
     split_baseline_add1_pocket_rows,
-)
-from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_zero_distance_features import (  # noqa: E402
-    _own_metrics,
 )
 from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_pocket_subfamily_decomposition import (  # noqa: E402
     build_rows as build_pocket_rows,
@@ -41,6 +34,13 @@ from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_topology i
 )
 from pocket_wrap_suppressor_low_overlap_center_spine_hardest_bucket_rules import (  # noqa: E402
     load_bucket_rows,
+)
+from pocket_wrap_suppressor_low_overlap_support_family_transfer_common import (  # noqa: E402
+    support_edge_identity_own_metrics,
+    support_edges,
+)
+from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_add1_selector import (  # noqa: E402
+    support_roles,
 )
 from toy_event_physics import graph_neighbors, pocket_candidate_cells  # noqa: E402
 
@@ -86,7 +86,7 @@ def _candidate_local_metrics(nodes: set[tuple[int, int]]) -> tuple[dict[str, flo
     candidate_cells = pocket_cells | deep_cells
     roles = support_roles(nodes, pocket_cells, deep_cells)
     support_nodes = set(roles)
-    support_edges = _support_edges(support_nodes)
+    support_edge_set = support_edges(support_nodes)
 
     candidate_to_supports: dict[tuple[int, int], set[tuple[int, int]]] = {}
     for support in support_nodes:
@@ -95,7 +95,7 @@ def _candidate_local_metrics(nodes: set[tuple[int, int]]) -> tuple[dict[str, flo
         for cell in attached:
             candidate_to_supports.setdefault(cell, set()).add(support)
 
-    support_edge_set = {tuple(sorted((left, right))) for left, right in support_edges}
+    support_edge_set = {tuple(sorted((left, right))) for left, right in support_edge_set}
 
     per_cell: list[dict[str, float | tuple[int, int]]] = []
     for cell in sorted(candidate_cells):
@@ -226,7 +226,7 @@ def build_rows(
     for row in baseline_rows:
         source_name = getattr(row, "source_name")
         nodes = set(frontier_rows[source_name].nodes)
-        core_metrics = _own_metrics(nodes)
+        core_metrics = support_edge_identity_own_metrics(nodes)
         local_metrics, _top = _candidate_local_metrics(nodes)
         peer_motif = is_peer_motif_like(nodes)
         rows.append(
