@@ -6,7 +6,6 @@ from __future__ import annotations
 import argparse
 from datetime import datetime
 from pathlib import Path
-import re
 import sys
 import time
 
@@ -23,6 +22,7 @@ from pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_candi
 )
 from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_topology import (  # noqa: E402
     evaluate_rules,
+    matches_rule_text,
 )
 
 
@@ -36,25 +36,6 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--max-terms", type=int, default=3)
     parser.add_argument("--row-limit", type=int, default=8)
     return parser
-
-
-RULE_TERM_RE = re.compile(r"^(?P<feature>[A-Za-z0-9_]+) (?P<operator><=|>=) (?P<threshold>-?\d+(?:\.\d+)?)$")
-
-
-def _matches_rule_text(row: object, rule_text: str) -> bool:
-    for term in rule_text.split(" and "):
-        match = RULE_TERM_RE.fullmatch(term.strip())
-        if match is None:
-            raise ValueError(f"unsupported rule term: {term}")
-        feature = match.group("feature")
-        operator = match.group("operator")
-        threshold = float(match.group("threshold"))
-        value = float(getattr(row, feature))
-        if operator == "<=" and value > threshold:
-            return False
-        if operator == ">=" and value < threshold:
-            return False
-    return True
 
 
 def main() -> None:
@@ -78,17 +59,20 @@ def main() -> None:
     tp = [
         row
         for row in rows
-        if getattr(row, "subtype") == "add4-sensitive" and _matches_rule_text(row, best_rule.rule_text)
+        if getattr(row, "subtype") == "add4-sensitive"
+        and matches_rule_text(row, best_rule.rule_text)
     ]
     fp = [
         row
         for row in rows
-        if getattr(row, "subtype") != "add4-sensitive" and _matches_rule_text(row, best_rule.rule_text)
+        if getattr(row, "subtype") != "add4-sensitive"
+        and matches_rule_text(row, best_rule.rule_text)
     ]
     fn = [
         row
         for row in rows
-        if getattr(row, "subtype") == "add4-sensitive" and not _matches_rule_text(row, best_rule.rule_text)
+        if getattr(row, "subtype") == "add4-sensitive"
+        and not matches_rule_text(row, best_rule.rule_text)
     ]
 
     print()

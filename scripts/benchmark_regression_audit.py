@@ -53,11 +53,11 @@ from pocket_wrap_suppressor_low_overlap_boundary_axes import (  # noqa: E402
 )
 from pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_add4_exception_scan import (  # noqa: E402
     FEATURE_NAMES as ADD4_EXCEPTION_FEATURE_NAMES,
-    _matches_rule_text as add4_exception_matches_rule_text,
     build_bucket_rows as build_add4_exception_rows,
 )
 from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_topology import (  # noqa: E402
     evaluate_rules as evaluate_support_topology_rules,
+    matches_rule_text as support_topology_matches_rule_text,
 )
 
 
@@ -333,11 +333,14 @@ def check_add4_exception_scan_uses_live_rule() -> None:
         / "pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_add4_exception_scan.py"
     ).read_text()
     assert (
-        "evaluate_rules(" in script_source and "_matches_rule_text" in script_source
+        "evaluate_rules(" in script_source and "matches_rule_text" in script_source
     ), "add4 exception scan regressed to a frozen rule instead of deriving the live add4 rule"
     assert (
         "def _matches_add4_rule" not in script_source
     ), "add4 exception scan still contains the stale hard-coded rule path"
+    assert (
+        "def _matches_rule_text" not in script_source and "RULE_TERM_RE" not in script_source
+    ), "add4 exception scan regressed to a local rule-text parser instead of the shared helper"
 
 
 def check_add4_exception_scan_rule_eval_consistency() -> None:
@@ -362,19 +365,19 @@ def check_add4_exception_scan_rule_eval_consistency() -> None:
         1
         for row in rows
         if getattr(row, "subtype") == "add4-sensitive"
-        and add4_exception_matches_rule_text(row, top.rule_text)
+        and support_topology_matches_rule_text(row, top.rule_text)
     )
     fp = sum(
         1
         for row in rows
         if getattr(row, "subtype") != "add4-sensitive"
-        and add4_exception_matches_rule_text(row, top.rule_text)
+        and support_topology_matches_rule_text(row, top.rule_text)
     )
     fn = sum(
         1
         for row in rows
         if getattr(row, "subtype") == "add4-sensitive"
-        and not add4_exception_matches_rule_text(row, top.rule_text)
+        and not support_topology_matches_rule_text(row, top.rule_text)
     )
     assert (
         tp == top.tp and fp == top.fp and fn == top.fn

@@ -7,6 +7,7 @@ import argparse
 from datetime import datetime
 import itertools
 from pathlib import Path
+import re
 import sys
 import time
 
@@ -23,6 +24,10 @@ from pocket_wrap_suppressor_low_overlap_candidate_support_subgraph_bucket import
 from pocket_wrap_suppressor_low_overlap_center_spine_hardest_bucket_rules import (  # noqa: E402
     RuleRow,
     load_bucket_rows,
+)
+
+RULE_TERM_RE = re.compile(
+    r"^(?P<feature>[A-Za-z0-9_]+) (?P<operator><=|>=) (?P<threshold>-?\d+(?:\.\d+)?)$"
 )
 
 
@@ -92,6 +97,22 @@ def candidate_predicates(rows: list[object], feature_names: list[str]) -> list[t
     predicates = [(text, mask) for mask, text in predicate_masks.items()]
     predicates.sort(key=lambda item: item[0])
     return predicates
+
+
+def matches_rule_text(row: object, rule_text: str) -> bool:
+    for term in rule_text.split(" and "):
+        match = RULE_TERM_RE.fullmatch(term.strip())
+        if match is None:
+            raise ValueError(f"unsupported rule term: {term}")
+        feature = match.group("feature")
+        operator = match.group("operator")
+        threshold = float(match.group("threshold"))
+        value = float(getattr(row, feature))
+        if operator == "<=" and value > threshold:
+            return False
+        if operator == ">=" and value < threshold:
+            return False
+    return True
 
 
 def evaluate_rules(
