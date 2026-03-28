@@ -32,6 +32,8 @@ from pocket_wrap_suppressor_low_overlap_center_spine_hardest_bucket_rules import
 )
 from pocket_wrap_suppressor_low_overlap_support_family_transfer_common import (  # noqa: E402
     EDGE_IDENTITY_CLOSED_PAIR_HIGH_THRESHOLD,
+    HIGH_SUPPORT_ML0_C4P_SPLIT_THRESHOLD,
+    HIGH_SUPPORT_ML0_MIN_CELL_COUNT,
     SUPPORT_ROLE_BRIDGE_HIGH_THRESHOLD,
 )
 
@@ -62,7 +64,7 @@ def _is_target_branch(row: object) -> bool:
         and float(getattr(row, "high_bridge_mid_low_count")) <= 0.5
         and float(getattr(row, "support_role_bridge_count")) >= SUPPORT_ROLE_BRIDGE_HIGH_THRESHOLD
         and float(getattr(row, "edge_identity_closed_pair_count")) >= EDGE_IDENTITY_CLOSED_PAIR_HIGH_THRESHOLD
-        and float(getattr(row, "high_bridge_cell_count")) >= 3.0
+        and float(getattr(row, "high_bridge_cell_count")) >= HIGH_SUPPORT_ML0_MIN_CELL_COUNT
     )
 
 
@@ -106,7 +108,11 @@ def main() -> None:
     rule_rows = [
         row_cls(
             source_name=getattr(row, "source_name"),
-            subtype="c4p" if float(getattr(row, "high_bridge_cell_count")) >= 3.5 else "c3",
+            subtype=(
+                "c4p"
+                if float(getattr(row, "high_bridge_cell_count")) >= HIGH_SUPPORT_ML0_C4P_SPLIT_THRESHOLD
+                else "c3"
+            ),
             edge_identity_closed_pair_count=float(getattr(row, "edge_identity_closed_pair_count")),
             support_role_bridge_count=float(getattr(row, "support_role_bridge_count")),
             high_bridge_cell_count=float(getattr(row, "high_bridge_cell_count")),

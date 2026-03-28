@@ -29,6 +29,8 @@ from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_ident
 PRIMARY_SUPPORT_FAMILY_BUCKETS = ("rc0|ml0|c2", "rc0|ml1|c3")
 SUPPORT_ROLE_BRIDGE_HIGH_THRESHOLD = 19.0
 EDGE_IDENTITY_CLOSED_PAIR_HIGH_THRESHOLD = 71.0
+HIGH_SUPPORT_ML0_MIN_CELL_COUNT = 3.0
+HIGH_SUPPORT_ML0_C4P_SPLIT_THRESHOLD = 3.5
 
 
 @dataclass(frozen=True)

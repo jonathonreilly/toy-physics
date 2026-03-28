@@ -1,3 +1,42 @@
+## 2026-03-28 00:14 America/New_York
+
+### Current state
+- Continued the deep review thread on the frozen `5504` support-family transfer / baseline follow-on layer under the manual lock.
+- Closed the next remaining local-threshold seam in the immediate follow-on stack:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_nonpeer_core_high_support_ml0_split.py`
+  was already using the shared `19.0`/`71.0` residual thresholds
+  - but it still carried its own local `3.0` target-branch cutoff and `3.5` `c3/c4p` split threshold
+- Centralized those branch constants in:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_common.py`
+- Repointed the `high-support ml0` split follow-on to those shared constants and extended the cheap audit so it cannot silently drift back to local `3.0`/`3.5` branch literals.
+
+### Strongest confirmed conclusion
+- Science conclusions did not change; this is another transfer-layer integrity cleanup.
+- The immediate baseline non-peer follow-on stack now shares one source of truth for:
+  - the primary support-family bucket set
+  - the residual bucket thresholds/key builders
+  - the non-peer core primary bucket-key helper
+  - the `high-support ml0` branch thresholds
+- That closes another classification/branch-threshold drift seam in the frozen `5504` review layer.
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_common.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_nonpeer_core_high_support_ml0_split.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- Validation:
+  - `python3 -m py_compile` on touched scripts passed.
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py` passed (`benchmark regression audit: ok`).
+
+### Exact next step
+- Stay in deep review mode on the frozen `5504` transfer/follow-on lane.
+- Review whether any remaining immediate follow-on scripts still duplicate local split constants or small branch selectors that should move into the shared helper surface.
+
+### First concrete action
+- Search:
+  - `rg -n "3\\.0|3\\.5|SUPPORT_ROLE_BRIDGE_HIGH_THRESHOLD|EDGE_IDENTITY_CLOSED_PAIR_HIGH_THRESHOLD|HIGH_SUPPORT_ML0_MIN_CELL_COUNT|HIGH_SUPPORT_ML0_C4P_SPLIT_THRESHOLD" /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_nonpeer_core_*`
+
 ## 2026-03-28 00:04 America/New_York
 
 ### Current state

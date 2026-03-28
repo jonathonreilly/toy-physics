@@ -37,6 +37,8 @@ from toy_event_physics import (  # noqa: E402
 )
 from pocket_wrap_suppressor_low_overlap_support_family_transfer_common import (  # noqa: E402
     EDGE_IDENTITY_CLOSED_PAIR_HIGH_THRESHOLD,
+    HIGH_SUPPORT_ML0_C4P_SPLIT_THRESHOLD,
+    HIGH_SUPPORT_ML0_MIN_CELL_COUNT,
     PRIMARY_SUPPORT_FAMILY_BUCKETS,
     SUPPORT_ROLE_BRIDGE_HIGH_THRESHOLD,
 )
@@ -442,6 +444,10 @@ def check_primary_support_family_buckets_shared() -> None:
         SUPPORT_ROLE_BRIDGE_HIGH_THRESHOLD == 19.0
         and EDGE_IDENTITY_CLOSED_PAIR_HIGH_THRESHOLD == 71.0
     ), "shared residual-bucket thresholds drifted"
+    assert (
+        HIGH_SUPPORT_ML0_MIN_CELL_COUNT == 3.0
+        and HIGH_SUPPORT_ML0_C4P_SPLIT_THRESHOLD == 3.5
+    ), "shared high-support ml0 split thresholds drifted"
     scripts = (
         REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_scan.py",
         REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_primary_bucket_profiles.py",
@@ -491,10 +497,15 @@ def check_primary_support_family_buckets_shared() -> None:
     assert (
         "SUPPORT_ROLE_BRIDGE_HIGH_THRESHOLD" in high_support_text
         and "EDGE_IDENTITY_CLOSED_PAIR_HIGH_THRESHOLD" in high_support_text
-    ), "high-support ml0 split no longer uses shared residual-bucket thresholds"
+        and "HIGH_SUPPORT_ML0_MIN_CELL_COUNT" in high_support_text
+        and "HIGH_SUPPORT_ML0_C4P_SPLIT_THRESHOLD" in high_support_text
+    ), "high-support ml0 split no longer uses shared branch thresholds"
     assert (
-        ">= 19.0" not in high_support_text and ">= 71.0" not in high_support_text
-    ), "high-support ml0 split regressed to hard-coded residual bucket thresholds"
+        ">= 19.0" not in high_support_text
+        and ">= 71.0" not in high_support_text
+        and ">= 3.0" not in high_support_text
+        and ">= 3.5" not in high_support_text
+    ), "high-support ml0 split regressed to hard-coded branch thresholds"
 
 
 def main() -> None:
