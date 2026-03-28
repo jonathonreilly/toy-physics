@@ -1,3 +1,38 @@
+## 2026-03-28 10:57 America/New_York
+
+### Seam class
+- residual-boundary closure
+
+### Science impact
+- science refined; headline accuracy unchanged
+
+### Current state
+- Reconciled lock/git first, acquired `physics-science`, and ran pre-step push reconciliation via `automation_push.py`; repo remained `ahead 1` due transient DNS failure (`Could not resolve host: github.com`).
+- Added and ran `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_two_clause_residuals.py` as the bounded continuation of the active `rc0|ml0|c2` compression thread on frozen `5504`.
+- Restricted rule search to two-clause separators on `{support_load, mid_anchor_closure_peak, anchor_closure_intensity_gap, anchor_deep_share_gap}` and logged residual subtype membership for each candidate separator.
+
+### Strongest confirmed conclusion
+- The bounded two-clause evaluator did not reduce `add4` vs `pair-only` confusion on this frozen bucket.
+- `add4-sensitive` top two-clause candidate (`anchor_closure_intensity_gap >= -6.500 and mid_anchor_closure_peak >= 9.000`) remains `27/32` but still matches `pair-only` rows (`6/3/2`), so closure is still partial.
+- `pair-only-sensitive` top two-clause candidates stay at `26/32` and continue to carry mixed residuals with both `add1` and `add4` present.
+- `add1-sensitive` remains best at `27/32`; the highest-accuracy two-clause split keeps the asymmetry-plus-closure form (`anchor_closure_intensity_gap <= -5.583 and mid_anchor_closure_peak <= 11.000`, `11/1/4`).
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_two_clause_residuals.py`
+- Validation:
+  - `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_two_clause_residuals.py`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_two_clause_residuals.py`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py` (`benchmark regression audit: ok`)
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-two-clause-residuals.txt`
+
+### Exact next step
+- Stay in compression/translation mode and test a one-dimensional physical-language projection that bins `mid_anchor_closure_peak` into coarse regimes, then measures whether subtype residuals collapse after conditioning on closure regime before applying a single asymmetry cut.
+
+### First concrete action
+- Add one bounded closure-regime scanner on the same frozen `5504` bucket that reports subtype counts for `{mid_anchor_closure_peak <= 9, 9-11, >=11}` crossed with `anchor_closure_intensity_gap` sign bands.
+
 ## 2026-03-28 08:55 America/New_York
 
 ### Seam class
