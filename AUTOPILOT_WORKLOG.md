@@ -73,6 +73,46 @@
 - Search:
   - `rg -n 'evaluate_rules\\(|rule_text|selected_rule|best_rule|anchor_adj_bridge_count >= 3\\.5|def _peer_band' /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_*`
 
+## 2026-03-27 21:13 America/New_York
+
+### Current state
+- Continued the deep review thread on the frozen `5504` transfer/follow-on lane through a larger branch-sharing batch.
+- Closed three connected drift seams without reopening the science branch:
+  - centralized the baseline add1 `peer_motif` branch classifier via shared `is_peer_motif_like(...)`
+  - centralized the baseline add1 rescue/baseline split via shared `split_baseline_add1_pocket_rows(...)`
+  - removed the last local `_peer_band(...)` wrapper from the main transfer scan so it now uses shared `is_peer_band_like(...)`
+- Extended the cheap audit so these active follow-ons cannot silently drift back to local branch or rescue-split literals.
+
+### Strongest confirmed conclusion
+- Science conclusions did not change; this is another frozen-`5504` review-layer integrity cleanup.
+- The active baseline add1 follow-on stack now shares one source of truth for:
+  - the `peer_motif` branch selector
+  - the baseline add1 rescue/baseline split
+  - the transfer-layer peer-band selector
+  - the shared compact support-topology rule matcher
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_branch_decomposition.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_candidate_anchor_residual_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_agnostic_local_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_band_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_topology_residual_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- Validation:
+  - `python3 -m py_compile` on touched scripts passed.
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py` passed (`benchmark regression audit: ok`).
+
+### Exact next step
+- Stay in deep review mode on the frozen `5504` transfer/follow-on lane.
+- Review whether any remaining active transfer/follow-on scripts still duplicate small live-rule selection wrappers or current-best-rule selection logic instead of importing them from the shared helper surface.
+
+### First concrete action
+- Search:
+  - `rg -n 'best_rule = .*\\[0\\]|selected_rule|rule_text|evaluate_rules\\(' /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_* /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_*`
+
 ## 2026-03-27 20:40 America/New_York
 
 ### Current state
