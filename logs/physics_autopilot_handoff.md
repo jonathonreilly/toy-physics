@@ -1,29 +1,44 @@
 # Physics Autopilot Handoff
 
-## 2026-03-27 21:42 America/New_York
+## 2026-03-28 06:39 America/New_York
 
 ### Current state
-- Continued the deep review thread on the frozen `5504` transfer/follow-on lane.
-- Added a bounded integrity guard in `benchmark_regression_audit.py` to keep current-best rule selection centralized in the shared support-topology helper.
-- New check `check_shared_current_best_rule_selection()` now fails if active transfer/follow-on scripts reintroduce local `rules[0]` current-best selection patterns.
-- Validation passed:
-  - `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py`
-  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py`
+- Reconciled the overnight review backlog first and pushed the previously-stuck review guard commit `0ce01fe`.
+- Continued the frozen `5504` transfer/follow-on deep-review thread with one bounded shared-helper cleanup:
+  - promoted shared/public support metric helpers in `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_common.py`
+  - repointed the active baseline-add1 and `rc0|ml0|c2` follow-ons to use those helpers instead of importing private underscore helpers from sibling analysis scripts
+  - promoted public `has_candidate_motif_like(...)` in the baseline add1 branch helper and repointed the active residual follow-ons to use it
+- Validation passed and no detached science child was left active.
 
 ### Strongest confirmed conclusion
-- Science conclusions did not change; this is a frozen-`5504` review-layer integrity hardening step.
-- The active transfer/follow-on lane now has explicit audit coverage against drift back to local current-best rule selectors outside shared `best_rule_for_target(...)`.
+- No science conclusion changed.
+- The active frozen `5504` transfer/follow-on lane no longer depends on private underscore support/band/core metric helpers from sibling analysis scripts for its shared metric surface.
 
 ### Files/logs changed
-- Repo-facing files:
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_common.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_zero_distance_features.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_branch_decomposition.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_band_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_agnostic_local_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_candidate_anchor_residual_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_topology_residual_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_candidate_anchor_contrast.py`
   - `/Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py`
+- Runtime state files:
   - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
   - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Remote sync status
+- Repo-facing review fix `72233a9` (`Share frozen 5504 support metric helpers`) is pushed.
+- Current git state: `main == origin/main`.
+- Cooperative lock state at handoff: `free`.
 
 ### Exact next step
-- Stay in deep review mode.
-- Inspect for remaining small duplicated live-rule helper logic in active transfer/follow-on scripts that should be centralized.
+- Stay in deep review mode on the frozen `5504` transfer/follow-on lane.
+- Inspect the remaining active follow-ons for any last private-helper coupling or duplicate live-rule wrappers outside the now-cleaned shared metric surface.
 
 ### First concrete action
 - Execute:
-  - `rg -n 'def _[a-z_]*rule|rule_text\.split\(" and "\)|>= 3\.5|<= 0\.018|high_bridge_left_low_count [<>]=? 0\.5' /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_*`
+  - `rg -n 'from .* import .*_[A-Za-z0-9_]+|def best_rule_for_target|def evaluate_rules|rule_text\\.split\\(\" and \"\\)' /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_*`

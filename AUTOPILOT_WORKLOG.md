@@ -1,3 +1,42 @@
+## 2026-03-28 06:39 America/New_York
+
+### Current state
+- Reconciled the overnight review backlog first and pushed the previously-stuck review guard commit `0ce01fe` after confirming the repo and remote were healthy.
+- Continued the deep review thread on the frozen `5504` transfer/follow-on lane with one bounded shared-helper cleanup:
+  - promoted `support_edges(...)`, `support_edge_identity_own_metrics(...)`, `high_bridge_cells(...)`, and `high_bridge_band_metrics(...)` into `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_common.py`
+  - repointed the active baseline-add1 and `rc0|ml0|c2` follow-ons to use those shared/public helpers instead of importing private underscore helpers from sibling analysis scripts
+  - promoted public `has_candidate_motif_like(...)` in the baseline add1 branch helper and repointed the active residual follow-ons to use it
+- Added one more cheap integrity guard in `/Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py` so the active frozen-`5504` lane fails fast if those private cross-script metric imports reappear.
+
+### Strongest confirmed conclusion
+- Science conclusions still did not change; this was another review-layer integrity cleanup.
+- The active frozen `5504` transfer/follow-on lane no longer depends on private underscore metric helpers from sibling analysis scripts for its shared support/band/core metric surface.
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_common.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_zero_distance_features.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_branch_decomposition.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_band_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_agnostic_local_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_candidate_anchor_residual_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_topology_residual_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_rc0_ml0_c2_candidate_anchor_contrast.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py`
+- Validation:
+  - `python3 -m py_compile` on touched scripts passed.
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py` passed (`benchmark regression audit: ok`).
+- Commit/push:
+  - pushed repo-facing review fix `72233a9` (`Share frozen 5504 support metric helpers`).
+
+### Exact next step
+- Stay in deep review mode on the frozen `5504` transfer/follow-on lane.
+- Inspect the remaining active follow-ons for any last private-helper coupling or duplicate live-rule wrappers outside the now-cleaned shared metric surface.
+
+### First concrete action
+- Search:
+  - `rg -n 'from .* import .*_[A-Za-z0-9_]+|def best_rule_for_target|def evaluate_rules|rule_text\\.split\\(\" and \"\\)' /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_*`
+
 ## 2026-03-27 21:42 America/New_York
 
 ### Current state
@@ -15,6 +54,9 @@
 - Validation:
   - `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py` passed.
   - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py` passed (`benchmark regression audit: ok`).
+- Commit/push:
+  - local commit `0ce01fe` (`Guard shared current-best selector drift`) created.
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics` failed after retries with DNS resolution error (`Could not resolve host: github.com`), leaving repo `ahead 1, behind 0`.
 
 ### Exact next step
 - Stay in deep review mode on the frozen `5504` transfer/follow-on lane.
