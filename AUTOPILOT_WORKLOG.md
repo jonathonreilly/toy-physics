@@ -1,3 +1,49 @@
+## 2026-03-28 12:25 America/New_York
+
+### Seam class
+- microcase closure
+
+### Science impact
+- science refined; headline accuracy unchanged
+
+### Current state
+- Reconciled lock/git for manual continuation:
+  - the cooperative lock was free, so I acquired `manual-codex` for this bounded step
+  - `main == origin/main` before new science
+- Added and ran `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_high_closure_microcase_closure.py` as the direct continuation of the active frozen `5504` `rc0|ml0|c2` compression thread.
+- Merged the high-closure positive-asymmetry cell with one tiny set of coarse transfer features, compared the previously shared `support_load = 13.0` / `anchor_deep_share_gap = 0.333` micro-case rows directly, and reran bounded separator search on the expanded six-row cell.
+
+### Strongest confirmed conclusion
+- The previously unresolved high-closure positive-asymmetry residual cell exact-closes once the basis is expanded slightly beyond the compressed order-parameter view.
+- Exact `add4-sensitive` within-cell separator:
+  - `anchor_deep_share_gap <= 0.450 and high_bridge_high_count >= 0.500`
+- Exact `pair-only-sensitive` within-cell separator:
+  - `edge_identity_closed_pair_count <= 56.000 and support_load <= 13.500`
+- The earlier “shared micro-case” was only shared in the reduced basis. At row level, the `add4-sensitive` / `pair-only-sensitive` pair already differs in:
+  - `edge_identity_closed_pair_count`
+  - `mid_candidate_closed_ratio_max`
+  - `high_bridge_low_count`
+  - `high_bridge_high_count`
+  - `high_bridge_right_low_count`
+  - plus a four-node support-layout swap between the two rows
+- So the last within-cell ambiguity was a basis-compression artifact, not unresolved subtype competition inside that cell.
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_high_closure_microcase_closure.py`
+- Validation:
+  - `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_high_closure_microcase_closure.py`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_high_closure_microcase_closure.py > /Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-high-closure-microcase-closure.txt`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py` (`benchmark regression audit: ok`)
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-high-closure-microcase-closure.txt`
+
+### Exact next step
+- Stay in compression/translation mode and test whether the exact within-cell closure rules survive as a gated law on the full frozen `rc0|ml0|c2` bucket.
+
+### First concrete action
+- Add one small gated-rule scanner that applies the exact add4/pair-only rules after the existing `mid_anchor_closure_peak >= 11` and `anchor_closure_intensity_gap > 0` gate, then reports which rows remain unmatched or misclassified elsewhere in the frozen `5504` bucket.
+
 ## 2026-03-28 12:07 America/New_York
 
 ### Seam class
