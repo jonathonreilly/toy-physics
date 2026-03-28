@@ -1,3 +1,38 @@
+## 2026-03-28 08:55 America/New_York
+
+### Seam class
+- order-parameter refinement
+
+### Science impact
+- science refined; headline accuracy unchanged
+
+### Current state
+- Reconciled lock/git state first, confirmed `main == origin/main`, and ran push reconciliation via `automation_push.py` (`nothing_to_push`) before new science.
+- Added `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_asymmetry_map.py` as the bounded follow-on runner requested by the active thread.
+- The runner augments the existing `rc0|ml0|c2` order-parameter map with a small support-layout asymmetry family (`anchor_count_*`, pocket/deep/dense share gaps, closure-intensity gap) and reruns subtype rule search on the same frozen `5504` bucket.
+
+### Strongest confirmed conclusion
+- The asymmetry family sharpened subtype interpretation but did not raise top-line exactness: rules remain partial.
+- For `add1-sensitive`, the new asymmetry variable `anchor_closure_intensity_gap` enters the top rule and reduces false negatives relative to the earlier clean split while keeping `27/32` accuracy (`11/1/4` on the best asymmetric two-clause rule).
+- For `add4-sensitive`, the prior coarse separator remains dominant (`anchor_bridge_gap >= -0.500 and mid_anchor_closure_peak >= 9.000`, `27/32`, `8/5/0`).
+- For `pair-only-sensitive`, support-load remains the best broad separator (`26/32`), while `anchor_deep_share_gap >= 0.450` appears as a narrower high-purity sentinel (`3/0/6`).
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_asymmetry_map.py`
+- Validation:
+  - `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_asymmetry_map.py`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_asymmetry_map.py`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py` (`benchmark regression audit: ok`)
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-asymmetry-map.txt`
+
+### Exact next step
+- Keep the thread in compression/translation mode and test whether a compact two-clause asymmetric physical-language rule can reduce `add4` vs `pair-only` confusion without widening feature soup.
+
+### First concrete action
+- Build a bounded evaluator on the same frozen `5504` bucket that restricts to `{support_load, mid_anchor_closure_peak, anchor_closure_intensity_gap, anchor_deep_share_gap}` and reports residual membership by subtype for each candidate two-clause separator.
+
 ## 2026-03-28 07:55 America/New_York
 
 ### Seam class
