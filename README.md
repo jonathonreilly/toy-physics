@@ -184,16 +184,21 @@ Fine-grained mechanism work is currently concentrated on a fixed frontier snapsh
     - `pair-only`: `9`
     - default `add1`: `15`
     - full-bucket result: `32/32`, `0` misclassifications, `0` ambiguity
+  - the exact branch-aware law also transfers unchanged across the nearby frontier ladder we tested:
+    - `variant_limit = 4112`: `25/25`, `0` misclassifications
+    - `variant_limit = 4992`: `28/28`, `0` misclassifications
+    - `variant_limit = 5504`: `32/32`, `0` misclassifications
+    - no first failure appeared within the tested `4112 -> 5504` slice
 
-The open problem in this basin is no longer whether the family structure exists or even whether the frozen bucket exact-closes. It is whether this branch-aware law transfers beyond the frozen `5504` snapshot and how to express it in cleaner physical language.
+The open problem in this basin is no longer whether the family structure exists, whether the frozen bucket exact-closes, or even whether the law survives on the nearest frontier neighbors. It is how far that law transfers and how to express it in cleaner physical language.
 
 ## Active Technical Problem
 
-The main active technical problem is transfer and translation of the exact low-overlap frozen-bucket law.
+The main active technical problem is widening and translating the exact low-overlap law beyond the nearby `4112 -> 5504` frontier ladder.
 
 The relevant questions are:
 
-- whether the exact frozen-bucket branch law transfers to nearby generated families or wider fronts
+- whether the exact branch-aware law survives on wider fronts beyond the tested `4112 -> 5504` slice or on nearby generated-family ensembles
 - whether that competition can be expressed more cleanly in support-layout or topological language
 - which parts of the present explanation are stable structure and which depend on the current observable basis
 

@@ -1,3 +1,53 @@
+## 2026-03-28 18:10 America/New_York
+
+### Seam class
+- exact-law transfer
+- nearby frontier ladder
+
+### Science impact
+- science advanced; the exact low-overlap law transfers unchanged across the nearby `4112 -> 5504` frontier slice
+
+### Current state
+- Reconciled protocol preflight cleanly:
+  - lock was free and acquired as `manual-codex`
+  - `main == origin/main` before new science
+- Added and ran `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_exact_law_transfer_check.py` as the direct continuation of the new transfer/translation phase.
+- Projected the exact `rc0|ml0|c2` branch-aware law onto the nearby frontier ladder:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-24-pocket-wrap-suppressor-nonpocket-subtype-rules-4112.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-25-pocket-wrap-suppressor-nonpocket-subtype-rules-4992-max5600.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-nonpocket-subtype-rules-5504-max5600.txt`
+
+### Strongest confirmed conclusion
+- The exact law transfers unchanged across the full tested nearby slice:
+  - `variant_limit = 4112`: `25/25`, `0` misclassifications, `0` ambiguity, `0` unmatched
+  - `variant_limit = 4992`: `28/28`, `0` misclassifications, `0` ambiguity, `0` unmatched
+  - `variant_limit = 5504`: `32/32`, `0` misclassifications, `0` ambiguity, `0` unmatched
+- No first failure appears within the tested `4112 -> 5504` ladder.
+- Branch occupancy evolves smoothly rather than changing mechanism family:
+  - high-closure `add4-sensitive`: `2 -> 2 -> 3`
+  - outside-gate `add4-sensitive`: `3 -> 4 -> 5`
+  - total `pair-only-sensitive`: `8 -> 9 -> 9`
+  - default `add1-sensitive`: `12 -> 13 -> 15`
+- So the frozen exact-close is not just a one-frontier coincidence; it already survives across the nearest available frontier neighborhood.
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_exact_law_transfer_check.py`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Validation:
+  - `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_exact_law_transfer_check.py`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_exact_law_transfer_check.py > /Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-exact-law-transfer-check.txt`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-exact-law-transfer-check.txt`
+
+### Exact next step
+- Stay in transfer/translation mode and widen beyond the nearby frontier ladder until the first real failure appears, or switch to a nearby generated-family ensemble check if that gives faster discriminatory value.
+
+### First concrete action
+- Add one tiny widened transfer sweep that extends the current checker to earlier frontier logs such as `3344` and `1232`, then report the earliest failure limit if one appears.
+
 ## 2026-03-28 17:48 America/New_York
 
 ### Seam class
