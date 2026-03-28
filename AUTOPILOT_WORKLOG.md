@@ -1,3 +1,39 @@
+## 2026-03-28 12:55 America/New_York
+
+### Seam class
+- residual-boundary closure
+
+### Science impact
+- science refined; headline accuracy unchanged
+
+### Current state
+- Reconciled protocol preflight first: no active detached science child in handoff, lock was free, acquired `physics-science`, confirmed `main == origin/main`, and ran required pre-step push reconciliation via `automation_push.py` (`nothing_to_push`).
+- Added and ran `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_high_closure_gate_projection.py` as the bounded continuation of the active frozen `5504` `rc0|ml0|c2` compression thread.
+- Projected the exact high-closure positive-asymmetry cell rules back onto the full frozen bucket under the existing gate (`mid_anchor_closure_peak >= 11` and `anchor_closure_intensity_gap > 0`) and reported gated misclassifications/unmatched rows explicitly.
+
+### Strongest confirmed conclusion
+- The microcase-derived rules survive as an exact gated law on the full frozen `rc0|ml0|c2` bucket.
+- Under the gate (`mid_anchor_closure_peak >= 11` and `anchor_closure_intensity_gap > 0`), all 6 rows classify exactly with zero ambiguity:
+  - `add4-sensitive`: `anchor_deep_share_gap <= 0.450 and high_bridge_high_count >= 0.500` (`3/3`)
+  - `pair-only-sensitive`: `edge_identity_closed_pair_count <= 56.000 and support_load <= 13.500` (`3/3`)
+- There are zero gated misclassifications and zero gated unmatched rows; the unresolved structure now lives outside this high-closure positive gate (`26` rows).
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_high_closure_gate_projection.py`
+- Validation:
+  - `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_high_closure_gate_projection.py`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_high_closure_gate_projection.py > /Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-high-closure-gate-projection.txt`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py` (`benchmark regression audit: ok`)
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-high-closure-gate-projection.txt`
+
+### Exact next step
+- Keep compression/translation mode and map the remaining outside-gate (`26`-row) residuals into one compact physical-language partition that isolates `add1-sensitive` from the mixed low-closure tail.
+
+### First concrete action
+- Add one bounded outside-gate scanner that filters to `not (mid_anchor_closure_peak >= 11 and anchor_closure_intensity_gap > 0)` and tests single/two-clause cuts over the existing coarse asymmetry set to identify the cleanest low-closure residual boundary.
+
 ## 2026-03-28 12:25 America/New_York
 
 ### Seam class
