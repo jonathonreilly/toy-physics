@@ -1,3 +1,50 @@
+## 2026-03-28 15:05 America/New_York
+
+### Seam class
+- residual-boundary closure
+- high-mid cluster translation
+
+### Science impact
+- science advanced; the stubborn four-row outside-gate high-mid knot now exact-closes in a slightly richer transfer basis
+
+### Current state
+- Reconciled protocol preflight first: no active detached child in handoff, lock was free, acquired `physics-science`, and confirmed `main == origin/main` before new science.
+- Added and ran `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_high_mid_cluster_compare.py` as one bounded continuation of the active frozen `5504` `rc0|ml0|c2` outside-gate `add4` tail thread.
+- Compared the planned four-row knot directly:
+  - `base:taper-wrap:local-morph-а`
+  - `base:taper-wrap:local-morph-༸`
+  - `base:taper-wrap:local-morph-छ`
+  - `base:taper-wrap:local-morph-గ`
+- Extended the basis beyond the coarse combined-law residual view with shared support-edge identity transfer metrics and reran compact rule search on only that high-mid knot.
+
+### Strongest confirmed conclusion
+- The high-mid four-row knot exact-closes under one compact richer-basis rule:
+  - `edge_identity_event_count <= 78.000`
+  - cluster performance: `4/4` (`2/0/0` for `add4-sensitive`)
+- The same cluster is also readable in physical-language terms:
+  - the two `add4-sensitive` rows have lower support-edge event load (`74`, `77`)
+  - the two nearest `add1-sensitive` neighbors sit just above that event-load boundary (`79`, `80`)
+- This is local residual compression, not full residual closure by itself:
+  - projected onto the full 20-row residual it matches `16` rows (`5 add4-sensitive`, `11 add1-sensitive`).
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_high_mid_cluster_compare.py`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Validation:
+  - `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_high_mid_cluster_compare.py`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_high_mid_cluster_compare.py > /Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-high-mid-cluster-compare.txt`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py` (`benchmark regression audit: ok`)
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-high-mid-cluster-compare.txt`
+
+### Exact next step
+- Stay in compression/translation mode and test whether the high-mid event-load signal can be tightened into a branch that captures only outside-gate residual `add4-sensitive` rows while excluding the high-mid `add1-sensitive` shoulder.
+
+### First concrete action
+- Add one tiny residual follow-on that starts from `edge_identity_event_count <= 78.000` and scans one additional bounded support-layout clause (for example `support_role_pocket_only_count` or edge-density range) on the same residual set, then report whether any two-clause branch improves full-residual add4 precision without dropping the four-row knot closure.
+
 ## 2026-03-28 14:36 America/New_York
 
 ### Seam class
