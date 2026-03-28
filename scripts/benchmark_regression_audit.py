@@ -612,6 +612,32 @@ def check_baseline_add1_rescue_split_shared() -> None:
         ), f"{script.name} regressed to duplicating the baseline add1 rescue split literals"
 
 
+def check_shared_current_best_rule_selection() -> None:
+    script_dir = REPO_ROOT / "scripts"
+    active_patterns = (
+        "pocket_wrap_suppressor_low_overlap_support_family_transfer_*.py",
+        "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_*.py",
+    )
+    shared_helper = (
+        script_dir
+        / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_topology.py"
+    )
+
+    helper_text = shared_helper.read_text()
+    assert (
+        "return rules[0]" in helper_text
+    ), "shared support-topology helper no longer exposes the centralized current-best rule selector"
+
+    for pattern in active_patterns:
+        for script in sorted(script_dir.glob(pattern)):
+            text = script.read_text()
+            assert (
+                "rules[0]" not in text
+                and "top = rules[0]" not in text
+                and "best_rule = rules[0]" not in text
+            ), f"{script.name} regressed to local current-best rule selection instead of shared best_rule_for_target"
+
+
 def main() -> None:
     print("benchmark regression audit: checking same-weight default", flush=True)
     check_same_weight_default()
@@ -645,6 +671,8 @@ def main() -> None:
     check_baseline_add1_peer_motif_selector_shared()
     print("benchmark regression audit: checking baseline add1 rescue split sharing", flush=True)
     check_baseline_add1_rescue_split_shared()
+    print("benchmark regression audit: checking shared current-best rule selection", flush=True)
+    check_shared_current_best_rule_selection()
     print("benchmark regression audit: checking live mechanism split driver", flush=True)
     check_live_mechanism_split_driver()
     print("benchmark regression audit: ok", flush=True)

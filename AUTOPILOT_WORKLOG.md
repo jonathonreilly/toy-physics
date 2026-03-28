@@ -1,3 +1,29 @@
+## 2026-03-27 21:42 America/New_York
+
+### Current state
+- Continued the deep review thread on the frozen `5504` transfer/follow-on lane.
+- Added one bounded integrity guard in `/Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py` to keep current-best rule selection centralized in the shared support-topology helper.
+- New audit check `check_shared_current_best_rule_selection()` now scans active transfer and baseline-add1 follow-on scripts and fails if local `rules[0]` current-best selection patterns reappear.
+
+### Strongest confirmed conclusion
+- Science conclusions did not change; this is a review-layer integrity hardening step.
+- The frozen `5504` transfer/follow-on lane now has an explicit cheap-audit guardrail that prevents drift back to local current-best rule selectors outside shared `best_rule_for_target(...)`.
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py`
+- Validation:
+  - `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py` passed.
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py` passed (`benchmark regression audit: ok`).
+
+### Exact next step
+- Stay in deep review mode on the frozen `5504` transfer/follow-on lane.
+- Inspect whether any active transfer/follow-on scripts still duplicate other small live-rule helper behaviors that can be pulled into shared support-topology or transfer-common helpers.
+
+### First concrete action
+- Search:
+  - `rg -n 'def _[a-z_]*rule|rule_text\.split\(" and "\)|>= 3\.5|<= 0\.018|high_bridge_left_low_count [<>]=? 0\.5' /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_*`
+
 ## 2026-03-27 21:12 America/New_York
 
 ### Current state
