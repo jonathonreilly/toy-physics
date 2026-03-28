@@ -1,3 +1,46 @@
+## 2026-03-28 13:34 America/New_York
+
+### Seam class
+- outside-gate exception map
+
+### Science impact
+- science refined; headline accuracy unchanged
+
+### Current state
+- Reconciled lock/git for manual continuation:
+  - the cooperative lock was free, so I acquired `manual-codex` for this bounded step
+  - `main == origin/main` before new science
+- Added and ran `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_outside_gate_exception_compare.py` as the direct continuation of the outside-gate residual thread on frozen `5504` `rc0|ml0|c2`.
+- Compared the two low-closure `add1-sensitive` false positives and the one higher-closure `pair-only-sensitive` false negative against the baseline outside-gate rule `closure_load <= 46.500`, then reran one tiny follow-on rule probe over a small added structural feature set.
+
+### Strongest confirmed conclusion
+- No tiny follow-on rule in the added structural feature set beats the current compact outside-gate rule `closure_load <= 46.500`; the residual still tops out at `23/26`.
+- The remaining exceptions now have a clearer branch-like shape:
+  - the two false-positive `add1-sensitive` rows are both low-closure, have no right-side high-bridge structure, and stay on the left/low side of the support layout
+  - the one false-negative `pair-only-sensitive` row is the only exception with explicit right-side low high-bridge structure (`high_bridge_right_count = 1`, `high_bridge_low_count = 1`, `high_bridge_right_low_count = 1`)
+  - one false-positive `add1-sensitive` row is additionally extreme in left-only candidate concentration (`mid_candidate_count = 0`)
+- So the outside-gate residual no longer looks like one missing global threshold. It looks more like:
+  - a compact low-closure `pair-only` pocket already captured by `closure_load <= 46.500`
+  - plus two small exception-side branches: low-closure `add1` spillover and a right-low `pair-only` side branch
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_outside_gate_exception_compare.py`
+- Validation:
+  - `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_outside_gate_exception_compare.py`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_outside_gate_exception_compare.py > /Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-outside-gate-exception-compare.txt`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py` (`benchmark regression audit: ok`)
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-outside-gate-exception-compare.txt`
+
+### Exact next step
+- Stay in compression/translation mode and test a branch-aware second pass for the three outside-gate exceptions instead of searching for one better global low-closure cut.
+
+### First concrete action
+- Add one tiny outside-gate branch scan that checks:
+  - whether right-low high-bridge presence cleanly recovers the missed `pair-only-sensitive` side branch
+  - whether left-only candidate concentration isolates the two low-closure `add1-sensitive` spillover rows
+
 ## 2026-03-28 13:07 America/New_York
 
 ### Seam class
