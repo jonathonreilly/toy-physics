@@ -156,16 +156,24 @@ Fine-grained mechanism work is currently concentrated on a fixed frontier snapsh
   - spillover carve-out: `mid_anchor_closure_peak <= 0 and high_bridge_right_count <= 0`
   - recovered right-low side branch: `high_bridge_right_low_count >= 1 and support_load <= 14.500 and mid_anchor_closure_peak <= 1`
   - combined outside-gate result: `26/26` for `pair-only-sensitive` (`6/0/0`)
+- projected back onto the full frozen bucket, the combined law now exact-closes every `pair-only-sensitive` row with no leakage:
+  - high-closure gated branch: `3/3`
+  - outside-gate branch-aware branch: `6/6`
+  - full-bucket `pair-only-sensitive` result: `9/9` with `0` false positives
+- the remaining unmatched residue is now much narrower:
+  - `20` rows total
+  - exactly `15 add1-sensitive` plus `5 outside-gate add4-sensitive`
+  - the cleanest zero-false-positive residual `add4` clause is `anchor_closure_intensity_gap >= -6.500 and mid_anchor_closure_peak >= 9.000`, which captures `3/5`
 
-The open problem in this basin is no longer whether the family structure exists. It is how subtype competition is organized within shared structural buckets.
+The open problem in this basin is no longer whether the family structure exists. It is compression of the remaining outside-gate `add4` tail against `add1` into a cleaner structural law.
 
 ## Active Technical Problem
 
-The main active technical problem is compression of the low-overlap basin into a cleaner structural law.
+The main active technical problem is compression of the low-overlap basin into a cleaner structural law, with the frozen `5504` frontier now focused on the outside-gate `add4` tail.
 
 The relevant questions are:
 
-- how subtype competition works inside shared low-overlap support buckets
+- how the remaining outside-gate `add4-sensitive` rows compete with the larger `add1-sensitive` residual after `pair-only-sensitive` exact closure
 - whether that competition can be expressed more cleanly in support-layout or topological language
 - which parts of the present explanation are stable structure and which depend on the current observable basis
 

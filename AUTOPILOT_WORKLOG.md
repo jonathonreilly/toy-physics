@@ -1,3 +1,58 @@
+## 2026-03-28 14:36 America/New_York
+
+### Seam class
+- combined-law projection
+- residual add4 scan
+
+### Science impact
+- science advanced; `pair-only-sensitive` exact-closed on the full frozen bucket
+
+### Current state
+- Picked up the latest automated continuation state first:
+  - found `main` ahead of `origin/main` by automated commit `36ec1ec` plus tracked handoff/worklog notes describing the earlier DNS push failure
+  - acquired `manual-codex`, fetched, and pushed `36ec1ec` successfully before starting new science
+- Added and ran `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_combined_law_projection.py` as the direct continuation of the frozen `5504` `rc0|ml0|c2` compression thread.
+- Added and ran `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_combined_residual_add4_scan.py` as one bounded follow-on pass over the unmatched combined-law residual.
+
+### Strongest confirmed conclusion
+- The combined frozen-bucket law exact-closes every `pair-only-sensitive` row with zero leakage:
+  - high-closure gated branch: `3/3`
+  - outside-gate branch-aware branch: `6/6`
+  - full-bucket result: `9/9` with `0` false positives and `0` misclassifications
+- The combined-law unmatched pool is now exactly `20` rows:
+  - `15 add1-sensitive`
+  - `5 add4-sensitive`
+- Inside that residual, the strongest compact zero-false-positive `add4-sensitive` clause is:
+  - `anchor_closure_intensity_gap >= -6.500 and mid_anchor_closure_peak >= 9.000`
+- That clause captures `3/5` residual `add4-sensitive` rows and leaves a stubborn two-row `add4-sensitive` tail, so the active frontier has shifted from `pair-only` closure to outside-gate `add4` vs `add1` compression.
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_combined_law_projection.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_combined_residual_add4_scan.py`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Validation:
+  - `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_combined_law_projection.py`
+  - `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_combined_residual_add4_scan.py`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_combined_law_projection.py > /Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-combined-law-projection.txt`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_combined_residual_add4_scan.py > /Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-combined-residual-add4-scan.txt`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py`
+- New result logs:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-combined-law-projection.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-combined-residual-add4-scan.txt`
+
+### Exact next step
+- Stay in compression/translation mode and compare the stubborn two-row outside-gate `add4-sensitive` tail against its nearest high-mid `add1-sensitive` neighbors.
+
+### First concrete action
+- Add one tiny row-level comparer for:
+  - `base:taper-wrap:local-morph-а`
+  - `base:taper-wrap:local-morph-༸`
+  - `base:taper-wrap:local-morph-छ`
+  - `base:taper-wrap:local-morph-గ`
+- Then test whether a slightly richer transfer basis cleanly closes that four-row high-mid cluster without reopening `pair-only-sensitive`.
+
 ## 2026-03-28 14:12 America/New_York
 
 ### Seam class
@@ -13,6 +68,7 @@
   - baseline low-closure pocket membership,
   - a bounded low-closure spillover carve-out,
   - and a bounded right-low high-bridge recovery branch.
+- Committed repo-facing results as `36ec1ec`, then attempted required helper push and observed DNS failure after retries (`Could not resolve host: github.com`).
 
 ### Strongest confirmed conclusion
 - The outside-gate `pair-only-sensitive` residual now exact-closes under one compact branch-aware rule:
