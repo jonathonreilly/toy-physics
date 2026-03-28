@@ -1,3 +1,40 @@
+## 2026-03-28 12:07 America/New_York
+
+### Seam class
+- within-regime residual probe
+
+### Science impact
+- science refined; headline accuracy unchanged
+
+### Current state
+- Reconciled lock/git state for manual continuation:
+  - the cooperative worker lock had cleared, so I acquired `manual-codex` for this bounded step
+  - pushed the previously DNS-blocked closure-regime commit (`d9f6d8a`, `Add low-overlap closure-regime scan`) so `main` was synced before new science
+- Added and ran `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_high_closure_positive_scan.py` as the exact follow-on to the active frozen `5504` `rc0|ml0|c2` compression thread.
+- Restricted the scan to the unresolved high-closure positive-asymmetry residual cell (`mid_anchor_closure_peak >= 11` and `anchor_closure_intensity_gap > 0`) and tested one-threshold cuts over `{support_load, anchor_deep_share_gap}`.
+
+### Strongest confirmed conclusion
+- The high-closure positive-asymmetry residual cell does get cleaner under a one-threshold within-regime read, but it still does not collapse to an exact law.
+- Best `add4-sensitive` one-threshold cut is `support_load >= 13.500`, which gives `5/6` with zero false positives (`2/0/1`).
+- Best `pair-only-sensitive` one-threshold cut is `anchor_deep_share_gap >= 0.450`, which also gives `5/6` with zero false positives (`2/0/1`).
+- The remaining ambiguity is now highly localized rather than basin-wide: one `add4-sensitive` row and one `pair-only-sensitive` row share the same visible coarse coordinates (`support_load = 13.0`, `anchor_deep_share_gap = 0.333`, `mid_anchor_closure_peak = 12.0`, `anchor_closure_intensity_gap = 4.0`).
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_high_closure_positive_scan.py`
+- Validation:
+  - `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_high_closure_positive_scan.py`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_high_closure_positive_scan.py > /Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-high-closure-positive-scan.txt`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py` (`benchmark regression audit: ok`)
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-high-closure-positive-scan.txt`
+
+### Exact next step
+- Stay in compression/translation mode and inspect the single shared micro-case left inside the high-closure positive-asymmetry cell.
+
+### First concrete action
+- Add one tiny row-level comparer for the two rows at `support_load = 13.0` and `anchor_deep_share_gap = 0.333` to diff their deeper candidate-layout and local support-topology fields, then test whether one additional bounded structural feature resolves that last overlap.
+
 ## 2026-03-28 11:54 America/New_York
 
 ### Seam class
