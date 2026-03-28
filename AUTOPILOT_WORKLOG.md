@@ -1,3 +1,47 @@
+## 2026-03-28 15:59 America/New_York
+
+### Seam class
+- residual-boundary closure
+- high-mid branch compression
+
+### Science impact
+- science advanced; one bounded support-layout clause improves full-residual `add4` precision while preserving high-mid knot exactness
+
+### Current state
+- Reconciled protocol preflight first: no active detached child in handoff, lock was free, acquired `physics-science`, and confirmed repo state was `ahead 1` before new science.
+- Ran required pre-step helper push reconciliation with `/Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`; helper retried and failed with DNS (`Could not resolve host: github.com`).
+- Added and ran `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_high_mid_two_clause_branch_scan.py` as one bounded continuation of the active frozen `5504` `rc0|ml0|c2` outside-gate residual thread.
+- Seeded from `edge_identity_event_count <= 78.000`, scanned exactly one additional support-layout clause (`support_role_pocket_only_count` or `edge_identity_support_edge_density`), and kept only candidates that preserve exact `add4` separation on the four-row high-mid knot.
+
+### Strongest confirmed conclusion
+- The best bounded two-clause branch that preserves four-row knot exactness is:
+  - `edge_identity_event_count <= 78.000 and edge_identity_support_edge_density >= 0.167`
+- Projected onto the full 20-row residual, that branch improves `add4-sensitive` precision without recall loss:
+  - seed baseline (`edge_identity_event_count <= 78.000`): `tp/fp/fn = 5/11/0`, precision `0.312`, recall `1.000`
+  - bounded two-clause branch: `tp/fp/fn = 5/8/0`, precision `0.385`, recall `1.000`
+- Physical-language translation: within the low-event high-mid regime, higher support-edge identity density behaves like a useful structural discriminator that trims three `add1-sensitive` leakage rows while retaining all five residual `add4-sensitive` rows.
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_high_mid_two_clause_branch_scan.py`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Validation:
+  - `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_high_mid_two_clause_branch_scan.py`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_high_mid_two_clause_branch_scan.py > /Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-high-mid-two-clause-branch-scan.txt`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py` (`benchmark regression audit: ok`)
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-high-mid-two-clause-branch-scan.txt`
+
+### Exact next step
+- Keep compression/translation mode and test whether this density-qualified event-load branch can be merged with the earlier zero-false-positive residual `add4` clause (`anchor_closure_intensity_gap >= -6.500 and mid_anchor_closure_peak >= 9.000`) into a compact branch-aware residual law with lower `add1` leakage.
+
+### First concrete action
+- Add one tiny residual branch combiner that evaluates:
+  - branch A: `edge_identity_event_count <= 78.000 and edge_identity_support_edge_density >= 0.167`
+  - branch B: `anchor_closure_intensity_gap >= -6.500 and mid_anchor_closure_peak >= 9.000`
+- Then report full residual `tp/fp/fn` for `add4-sensitive` versus the current best single-branch baseline.
+
 ## 2026-03-28 15:05 America/New_York
 
 ### Seam class

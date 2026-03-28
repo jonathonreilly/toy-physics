@@ -164,7 +164,11 @@ Fine-grained mechanism work is currently concentrated on a fixed frontier snapsh
   - `20` rows total
   - exactly `15 add1-sensitive` plus `5 outside-gate add4-sensitive`
   - the cleanest zero-false-positive residual `add4` clause is `anchor_closure_intensity_gap >= -6.500 and mid_anchor_closure_peak >= 9.000`, which captures `3/5`
-  - the stubborn high-mid four-row knot (`local-morph-а`, `local-morph-༸` vs `local-morph-छ`, `local-morph-గ`) now exact-closes in a slightly richer transfer basis with `edge_identity_event_count <= 78.000` (`2/2` add4, `0` false positives inside that cluster), but this is still local compression rather than a full residual closure law
+  - the stubborn high-mid four-row knot (`local-morph-а`, `local-morph-༸` vs `local-morph-छ`, `local-morph-గ`) exact-closes in a slightly richer transfer basis with `edge_identity_event_count <= 78.000` (`2/2` add4, `0` false positives inside that cluster)
+  - one bounded two-clause follow-on keeps that knot exactness and improves full-residual `add4` precision without recall loss:
+    - `edge_identity_event_count <= 78.000 and edge_identity_support_edge_density >= 0.167`
+    - full residual result: `5/5` add4 recovered, `8` add1 false positives (precision `0.385`, baseline seed precision `0.312`)
+  - this is improved residual compression, but still not a full residual closure law
 
 The open problem in this basin is no longer whether the family structure exists. It is compression of the remaining outside-gate `add4` tail against `add1` into a cleaner structural law.
 
