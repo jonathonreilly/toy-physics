@@ -74,7 +74,7 @@ def main() -> None:
     print()
     print("Center-Spine Bucket 00 Baseline Add1 Non-Peer Core Buckets")
     print("==========================================================")
-    print(f"non_peer_rows={len(non_peer_rows)}")
+    print(f"non_peer_core_rows={len(non_peer_rows)}")
     print()
     for idx, (key, bucket_rows0) in enumerate(ordered[: args.show_limit], start=1):
         closed = [float(getattr(row, "edge_identity_closed_pair_count")) for row in bucket_rows0]

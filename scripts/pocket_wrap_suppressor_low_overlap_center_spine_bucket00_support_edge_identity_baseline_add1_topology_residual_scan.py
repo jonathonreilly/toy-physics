@@ -367,14 +367,14 @@ def main() -> None:
     print(f"bucket_key={args.bucket_key}")
     print(f"rescued_sources={', '.join(sorted(rescued_names))}")
     print(f"baseline_add1_rows={len(rows)}")
-    print(f"peer_motif_rows={branch_count}")
-    print(f"non_peer_rows={core_count}")
+    print(f"peer_branch_rows={branch_count}")
+    print(f"non_peer_core_rows={core_count}")
     print()
     print(render_rows(rows))
     print()
-    print(render_rules("Candidate peer-motif topology residual rules", branch_rules))
+    print(render_rules("Candidate peer-branch topology residual rules", branch_rules))
     print()
-    print(render_rules("Candidate non-peer topology residual rules", core_rules))
+    print(render_rules("Candidate non-peer-core topology residual rules", core_rules))
     print()
     print(
         "baseline add1 topology residual scan completed "

@@ -86,7 +86,7 @@ def main() -> None:
     print()
     print("Center-Spine Bucket 00 Baseline Add1 Non-Peer Residual Families")
     print("================================================================")
-    print(f"residual_rows={len(non_peer_rows)}")
+    print(f"non_peer_core_residual_rows={len(non_peer_rows)}")
     print(f"primary_buckets={sorted(PRIMARY_SUPPORT_FAMILY_BUCKETS)}")
     print()
     for idx, (key, bucket_rows0) in enumerate(sorted(grouped.items(), key=lambda item: (-len(item[1]), item[0])), start=1):

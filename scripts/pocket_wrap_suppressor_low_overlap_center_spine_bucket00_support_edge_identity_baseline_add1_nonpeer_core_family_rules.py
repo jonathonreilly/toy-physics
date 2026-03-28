@@ -119,7 +119,7 @@ def main() -> None:
     print()
     print("Center-Spine Bucket 00 Baseline Add1 Non-Peer Core Family Rules")
     print("===============================================================")
-    print(f"non_peer_rows={len(non_peer_rows)}")
+    print(f"non_peer_core_rows={len(non_peer_rows)}")
     print(
         "kept_buckets="
         + str(

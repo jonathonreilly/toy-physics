@@ -143,14 +143,14 @@ def main() -> None:
     print(f"bucket_key={args.bucket_key}")
     print(f"rescued_sources={', '.join(sorted(rescued_names))}")
     print(f"baseline_add1_rows={len(rows)}")
-    print(f"peer_motif_rows={peer_count}")
-    print(f"non_peer_rows={non_peer_count}")
+    print(f"peer_branch_rows={peer_count}")
+    print(f"non_peer_core_rows={non_peer_count}")
     print()
     print(render_rows(rows))
     print()
-    print(render_rules("Candidate peer-motif coordinate-agnostic local rules", peer_rules))
+    print(render_rules("Candidate peer-branch coordinate-agnostic local rules", peer_rules))
     print()
-    print(render_rules("Candidate non-peer coordinate-agnostic local rules", non_peer_rules))
+    print(render_rules("Candidate non-peer-core coordinate-agnostic local rules", non_peer_rules))
     print()
     print(
         "baseline add1 coordinate-agnostic local scan completed "
