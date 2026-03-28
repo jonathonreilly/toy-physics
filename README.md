@@ -194,16 +194,20 @@ Fine-grained mechanism work is currently concentrated on a fixed frontier snapsh
     - `variant_limit = 1488`: `12/12`, `0` misclassifications
     - `variant_limit = 3344`: `20/20`, `0` misclassifications
     - together with the later limits, no first failure appears anywhere in the tested `1232 -> 5504` slice
+  - a full backward historical sweep also shows no failure:
+    - `59` tested checkpoints below `1232`, with `lowest_exact_limit = 192`
+    - the only duplicate hazard was `variant_limit = 192`, where the sweep skipped a malformed `2026-03-22` log and fell back to the valid `2026-03-21` log
+    - together with the widened and nearby ladders, no first failure appears anywhere in the full available historical `192 -> 5504` slice
 
-The open problem in this basin is no longer whether the family structure exists, whether the frozen bucket exact-closes, or whether the law survives on the nearby frontier ladder. It is how far that law transfers beyond the tested `1232 -> 5504` slice and how to express it in cleaner physical language.
+The open problem in this basin is no longer whether the family structure exists, whether the frozen bucket exact-closes, or whether the law survives on the available historical frontier ladder. It is how that law transfers beyond the historical `192 -> 5504` slice, especially onto nearby generated-family ensembles, and how to express it in cleaner physical language.
 
 ## Active Technical Problem
 
-The main active technical problem is widening and translating the exact low-overlap law beyond the tested `1232 -> 5504` frontier ladder.
+The main active technical problem is projecting and translating the exact low-overlap law beyond the full available historical `192 -> 5504` frontier ladder.
 
 The relevant questions are:
 
-- whether the exact branch-aware law survives on wider fronts beyond the tested `1232 -> 5504` slice or on nearby generated-family ensembles
+- whether the exact branch-aware law survives on nearby generated-family ensembles now that the full available historical `192 -> 5504` frontier slice stays exact
 - whether that competition can be expressed more cleanly in support-layout or topological language
 - which parts of the present explanation are stable structure and which depend on the current observable basis
 
@@ -212,9 +216,9 @@ The relevant questions are:
 The main unresolved points are:
 
 - the spent-delay action family is favored in the benchmark, but not derived from deeper first principles
-- low-overlap subtype competition is now much more compressed on the frozen `5504` bucket, but not yet a single minimal law that is proven stable on wider fronts
+- low-overlap subtype competition is now much more compressed on the frozen `5504` bucket and exact across the available historical frontier ladder, but not yet tested on nearby generated-family ensembles
 - the present mechanism language is more geometric and topological than it was earlier, but it is not yet a clean bridge to standard continuum physics
-- the strongest fine-grained mechanism results are on a frozen frontier snapshot, not yet a general theorem over every wider generated family
+- the strongest fine-grained mechanism results are exact on the available historical frontier ladder, but not yet a general theorem over nearby generated families
 
 ## What Is Still Cheating
 

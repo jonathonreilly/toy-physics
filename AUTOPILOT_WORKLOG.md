@@ -1,3 +1,47 @@
+## 2026-03-28 19:16 America/New_York
+
+### Seam class
+- exact-law transfer
+- full historical backward sweep
+
+### Science impact
+- science advanced; no failure appears anywhere in the full available historical `192 -> 5504` frontier slice
+
+### Current state
+- Pushed the widened transfer checkpoint first, then added `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_exact_law_backward_sweep.py` to scan every older discovered subtype-rule checkpoint below `1232`.
+- The backward sweep deduplicates by `variant_limit`, prefers the cleanest candidate log per limit, and falls back across malformed duplicates instead of treating the whole limit as failed.
+- Ran the canonical backward sweep and recorded it at `/Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-exact-law-backward-sweep.txt`.
+
+### Strongest confirmed conclusion
+- The exact `rc0|ml0|c2` branch-aware law still shows no failure anywhere in the full available historical ladder:
+  - `59` tested limits below `1232`
+  - `tested_variant_limits = 1168, 1104, 1088, 1072, 1056, 1040, 1024, 1008, 992, 976, 960, 944, 928, 912, 896, 880, 864, 848, 832, 816, 800, 784, 768, 752, 736, 720, 704, 688, 672, 656, 640, 624, 608, 592, 576, 560, 544, 528, 512, 496, 480, 464, 448, 432, 416, 400, 384, 368, 352, 336, 320, 304, 288, 272, 256, 240, 224, 208, 192`
+  - `lowest_exact_limit = 192`
+  - `first_failure_limit = none within tested slice`
+- The only duplicate hazard was `variant_limit = 192`:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-22-pocket-wrap-suppressor-nonpocket-subtype-rules-192.txt` was malformed
+  - the sweep fell back to `/Users/jonreilly/Projects/Physics/logs/2026-03-21-pocket-wrap-suppressor-nonpocket-subtype-rules-192.txt`, which still exact-closes at `2/2`
+- Same-frontier widening is therefore exhausted across the currently available historical logs; the frontier shifts to nearby generated-family ensemble transfer and translation.
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_exact_law_backward_sweep.py`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Validation:
+  - `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_exact_law_backward_sweep.py`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_exact_law_backward_sweep.py > /Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-exact-law-backward-sweep.txt`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_exact_law_transfer_check.py --logs /Users/jonreilly/Projects/Physics/logs/2026-03-21-pocket-wrap-suppressor-nonpocket-subtype-rules-192.txt`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-exact-law-backward-sweep.txt`
+
+### Exact next step
+- Stay in transfer/translation mode, but stop spending time on same-frontier historical widening and project the exact branch-aware law onto nearby generated-family ensembles instead.
+
+### First concrete action
+- Build one tiny generated-family transfer checker that applies the existing branch law unchanged on the canonical ensemble ladder, starting with `default`, `broader`, and `wider`.
+
 ## 2026-03-28 18:32 America/New_York
 
 ### Seam class
