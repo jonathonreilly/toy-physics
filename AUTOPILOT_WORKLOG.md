@@ -1,3 +1,55 @@
+## 2026-03-28 18:32 America/New_York
+
+### Seam class
+- exact-law transfer
+- widened frontier ladder
+
+### Science impact
+- science advanced; no failure appears anywhere in the tested `1232 -> 5504` frontier slice
+
+### Current state
+- Reused the exact transfer checker and widened the tested frontier ladder backward beyond the earlier nearby slice.
+- Updated `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_exact_law_transfer_check.py` so its default logs now match the widened tested slice:
+  - `1232`
+  - `1488`
+  - `3344`
+  - `4112`
+  - `4992`
+  - `5504`
+- Ran the widened sweep and recorded it at `/Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-exact-law-transfer-widened-check.txt`.
+
+### Strongest confirmed conclusion
+- The exact `rc0|ml0|c2` branch-aware law still shows no failure anywhere in the widened tested slice:
+  - `variant_limit = 1232`: `10/10`, `0` misclassifications, `0` ambiguity, `0` unmatched
+  - `variant_limit = 1488`: `12/12`, `0` misclassifications, `0` ambiguity, `0` unmatched
+  - `variant_limit = 3344`: `20/20`, `0` misclassifications, `0` ambiguity, `0` unmatched
+  - `variant_limit = 4112`: `25/25`, `0` misclassifications, `0` ambiguity, `0` unmatched
+  - `variant_limit = 4992`: `28/28`, `0` misclassifications, `0` ambiguity, `0` unmatched
+  - `variant_limit = 5504`: `32/32`, `0` misclassifications, `0` ambiguity, `0` unmatched
+- No first failure appears anywhere in the tested `1232 -> 5504` ladder.
+- The active frontier therefore shifts again:
+  - either extend farther back until a real break appears
+  - or pivot to nearby generated-family ensembles to see whether transfer survives beyond this same-frontier regime
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_exact_law_transfer_check.py`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Validation:
+  - `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_exact_law_transfer_check.py`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_exact_law_transfer_check.py > /Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-exact-law-transfer-check.txt`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_exact_law_transfer_check.py --logs /Users/jonreilly/Projects/Physics/logs/2026-03-23-pocket-wrap-suppressor-nonpocket-subtype-rules-1232.txt /Users/jonreilly/Projects/Physics/logs/2026-03-23-pocket-wrap-suppressor-nonpocket-subtype-rules-1488.txt /Users/jonreilly/Projects/Physics/logs/2026-03-24-pocket-wrap-suppressor-nonpocket-subtype-rules-3344.txt /Users/jonreilly/Projects/Physics/logs/2026-03-24-pocket-wrap-suppressor-nonpocket-subtype-rules-4112.txt /Users/jonreilly/Projects/Physics/logs/2026-03-25-pocket-wrap-suppressor-nonpocket-subtype-rules-4992-max5600.txt /Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-nonpocket-subtype-rules-5504-max5600.txt > /Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-exact-law-transfer-widened-check.txt`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-exact-law-transfer-widened-check.txt`
+
+### Exact next step
+- Stay in transfer/translation mode and find the first genuine failure beyond the tested `1232 -> 5504` slice, or switch to nearby generated-family ensembles if same-frontier widening keeps staying exact.
+
+### First concrete action
+- Add one tiny older-frontier sweep that probes the next earlier checkpoints below `1232` (for example `1072`, `976`, `928`, `848`) and reports the earliest failure limit if one appears.
+
 ## 2026-03-28 18:10 America/New_York
 
 ### Seam class

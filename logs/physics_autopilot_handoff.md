@@ -1,5 +1,56 @@
 # Physics Autopilot Handoff
 
+## 2026-03-28 18:32 America/New_York
+
+### Seam class
+- exact-law transfer
+- widened frontier ladder
+
+### Science impact
+- science advanced; no failure appears anywhere in the tested `1232 -> 5504` frontier slice
+
+### Current state
+- Reused `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_exact_law_transfer_check.py` and widened the tested frontier ladder backward.
+- Updated that script so its default logs now match the widened tested slice:
+  - `1232`
+  - `1488`
+  - `3344`
+  - `4112`
+  - `4992`
+  - `5504`
+- Ran the widened sweep and recorded it at `/Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-exact-law-transfer-widened-check.txt`.
+
+### Strongest confirmed conclusion
+- The exact `rc0|ml0|c2` branch-aware law still shows no failure anywhere in the widened tested slice:
+  - `variant_limit = 1232`: `10/10`, `0` misclassifications, `0` ambiguity, `0` unmatched
+  - `variant_limit = 1488`: `12/12`, `0` misclassifications, `0` ambiguity, `0` unmatched
+  - `variant_limit = 3344`: `20/20`, `0` misclassifications, `0` ambiguity, `0` unmatched
+  - `variant_limit = 4112`: `25/25`, `0` misclassifications, `0` ambiguity, `0` unmatched
+  - `variant_limit = 4992`: `28/28`, `0` misclassifications, `0` ambiguity, `0` unmatched
+  - `variant_limit = 5504`: `32/32`, `0` misclassifications, `0` ambiguity, `0` unmatched
+- No first failure appears anywhere in the tested `1232 -> 5504` ladder.
+
+### Files/logs changed
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_exact_law_transfer_check.py`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- New log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-exact-law-transfer-widened-check.txt`
+- Validation:
+  - `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_exact_law_transfer_check.py`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py` (`benchmark regression audit: ok`)
+
+### Remaining review seams
+- closed: widened same-frontier transfer sweep through `1232`
+- open: earliest failure before `1232`, or transfer to nearby generated-family ensembles
+
+### Exact next step
+- Stay in transfer/translation mode and probe older frontier checkpoints until the first real failure appears, or pivot to a nearby generated-family ensemble if same-frontier widening continues to stay exact.
+
+### First concrete action
+- Test the next older checkpoints below `1232` (for example `1072`, `976`, `928`, `848`) and report the earliest failure limit if one appears.
+
 ## 2026-03-28 18:10 America/New_York
 
 ### Seam class
