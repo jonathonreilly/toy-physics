@@ -23,6 +23,7 @@ from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_topology i
 )
 from pocket_wrap_suppressor_low_overlap_support_family_transfer_common import (  # noqa: E402
     build_rows,
+    is_peer_band_like,
 )
 
 
@@ -63,7 +64,7 @@ def main() -> None:
     rows = build_rows(frontier_log)
     grouped: dict[str, list[object]] = {}
     for row in rows:
-        if row.high_bridge_left_low_count >= 0.5:
+        if is_peer_band_like(row):
             continue
         grouped.setdefault(row.family_bucket_key, []).append(row)
 

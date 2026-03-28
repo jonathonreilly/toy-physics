@@ -297,8 +297,11 @@ def check_support_family_transfer_bucket_rules_exclude_peer_band() -> None:
         / "pocket_wrap_suppressor_low_overlap_support_family_transfer_bucket_rules.py"
     ).read_text()
     assert (
-        "if row.high_bridge_left_low_count >= 0.5:" in script_source
-    ), "support-family bucket rules regressed to mixing peer-band rows back into shared bucket scans"
+        "is_peer_band_like" in script_source
+    ), "support-family bucket rules no longer uses the shared peer-band selector"
+    assert (
+        "high_bridge_left_low_count >= 0.5" not in script_source
+    ), "support-family bucket rules regressed to duplicating the peer-band threshold"
 
 
 def check_edge_identity_candidate_fraction_bounds() -> None:

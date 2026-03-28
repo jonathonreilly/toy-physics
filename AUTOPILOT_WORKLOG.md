@@ -1,3 +1,36 @@
+## 2026-03-27 20:40 America/New_York
+
+### Current state
+- Continued the deep review thread on the frozen `5504` support-family transfer / baseline follow-on layer under the `physics-science` worker lock.
+- Closed one more duplicated selector seam in the active transfer lane:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_bucket_rules.py`
+  was still excluding peer-band rows with a local `high_bridge_left_low_count >= 0.5` threshold literal.
+- Repointed that exclusion to the shared helper in:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_common.py`
+  via `is_peer_band_like(...)`.
+- Updated the cheap audit so this script cannot silently drift back to the local threshold literal.
+
+### Strongest confirmed conclusion
+- Science conclusions did not change; this is another transfer-layer integrity cleanup.
+- The support-family transfer bucket-rule scan now uses the same shared peer-band selector as the rest of the active transfer surface.
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_bucket_rules.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- Validation:
+  - `python3 -m py_compile` on touched scripts passed.
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py` passed (`benchmark regression audit: ok`).
+
+### Exact next step
+- Stay in deep review mode on the frozen `5504` transfer/follow-on lane.
+- Review whether remaining active transfer scripts still carry single-use wrappers or local rule-text evaluators that should be centralized into the shared helper surface.
+
+### First concrete action
+- Search:
+  - `rg -n 'def _peer_band|def _matches_rule_text|rule_text\.split\(" and "\)' /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_*`
+
 ## 2026-03-27 20:28 America/New_York
 
 ### Current state
