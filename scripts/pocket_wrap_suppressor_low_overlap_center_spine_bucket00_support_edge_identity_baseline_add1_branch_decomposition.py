@@ -42,6 +42,9 @@ MOTIF_CELLS = [
     (4, 2),
     (5, 0),
 ]
+PEER_MOTIF_CELL = MOTIF_CELLS[0]
+BASELINE_ADD1_RESCUE_EDGE_DENSITY = 0.018
+BASELINE_ADD1_RESCUE_POCKET_TOTAL = -14.5
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -68,6 +71,34 @@ def _has_motif(nodes: set[tuple[int, int]], cell: tuple[int, int]) -> bool:
     return cell in pocket_cells or cell in deep_cells
 
 
+def is_peer_motif_like(nodes: set[tuple[int, int]]) -> bool:
+    return _has_motif(nodes, PEER_MOTIF_CELL)
+
+
+def split_baseline_add1_pocket_rows(
+    pocket_rows: list[object],
+    *,
+    left_subtype: str,
+) -> tuple[list[object], list[str]]:
+    rescued_names = [
+        getattr(row, "source_name")
+        for row in pocket_rows
+        if getattr(row, "subtype") == left_subtype
+        and float(getattr(row, "delta_edge_identity_support_edge_density"))
+        > BASELINE_ADD1_RESCUE_EDGE_DENSITY
+        and float(getattr(row, "delta_count_pocket_total"))
+        <= BASELINE_ADD1_RESCUE_POCKET_TOTAL
+    ]
+    baseline_rows = [
+        row
+        for row in pocket_rows
+        if getattr(row, "subtype") == left_subtype
+        and float(getattr(row, "delta_edge_identity_support_edge_density"))
+        <= BASELINE_ADD1_RESCUE_EDGE_DENSITY
+    ]
+    return baseline_rows, rescued_names
+
+
 def build_rows(
     frontier_rows: dict[str, object],
     bucket_rows: list[object],
@@ -81,19 +112,10 @@ def build_rows(
         left_subtype=left_subtype,
         right_subtype=right_subtype,
     )
-    rescued_names = [
-        getattr(row, "source_name")
-        for row in pocket_rows
-        if getattr(row, "subtype") == left_subtype
-        and float(getattr(row, "delta_edge_identity_support_edge_density")) > 0.018
-        and float(getattr(row, "delta_count_pocket_total")) <= -14.5
-    ]
-    baseline_rows = [
-        row
-        for row in pocket_rows
-        if getattr(row, "subtype") == left_subtype
-        and float(getattr(row, "delta_edge_identity_support_edge_density")) <= 0.018
-    ]
+    baseline_rows, rescued_names = split_baseline_add1_pocket_rows(
+        pocket_rows,
+        left_subtype=left_subtype,
+    )
 
     row_cls = make_dataclass(
         "BaselineAdd1BranchRow",
@@ -118,7 +140,7 @@ def build_rows(
         nodes = set(frontier_rows[source_name].nodes)
         metrics = _own_metrics(nodes)
         motif_hits = [float(_has_motif(nodes, cell)) for cell in MOTIF_CELLS]
-        peer_motif = motif_hits[0] > 0.0
+        peer_motif = is_peer_motif_like(nodes)
         out_rows.append(
             row_cls(
                 source_name=source_name,

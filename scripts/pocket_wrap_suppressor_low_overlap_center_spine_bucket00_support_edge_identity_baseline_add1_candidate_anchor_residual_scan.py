@@ -27,6 +27,8 @@ from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_ident
 from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_branch_decomposition import (  # noqa: E402
     MOTIF_CELLS,
     _has_motif,
+    is_peer_motif_like,
+    split_baseline_add1_pocket_rows,
 )
 from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_zero_distance_features import (  # noqa: E402
     _own_metrics,
@@ -159,19 +161,10 @@ def build_rows(
         left_subtype=left_subtype,
         right_subtype=right_subtype,
     )
-    rescued_names = [
-        getattr(row, "source_name")
-        for row in pocket_rows
-        if getattr(row, "subtype") == left_subtype
-        and float(getattr(row, "delta_edge_identity_support_edge_density")) > 0.018
-        and float(getattr(row, "delta_count_pocket_total")) <= -14.5
-    ]
-    baseline_rows = [
-        row
-        for row in pocket_rows
-        if getattr(row, "subtype") == left_subtype
-        and float(getattr(row, "delta_edge_identity_support_edge_density")) <= 0.018
-    ]
+    baseline_rows, rescued_names = split_baseline_add1_pocket_rows(
+        pocket_rows,
+        left_subtype=left_subtype,
+    )
 
     row_cls = make_dataclass(
         "BaselineAdd1CandidateAnchorResidualRow",
@@ -208,7 +201,7 @@ def build_rows(
         core_metrics = _own_metrics(nodes)
         anchor_metrics = _anchor_local_metrics(nodes)
         motif_hits = [float(_has_motif(nodes, cell)) for cell in MOTIF_CELLS]
-        peer_motif = motif_hits[0] > 0.0
+        peer_motif = is_peer_motif_like(nodes)
 
         out_rows.append(
             row_cls(

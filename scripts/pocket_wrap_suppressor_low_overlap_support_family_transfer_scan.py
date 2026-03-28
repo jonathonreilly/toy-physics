@@ -34,13 +34,8 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--show-limit", type=int, default=8)
     return parser
 
-
-def _peer_band(row: SupportFamilyTransferRow) -> bool:
-    return is_peer_band_like(row)
-
-
 def _family_label(row: SupportFamilyTransferRow) -> str:
-    if _peer_band(row):
+    if is_peer_band_like(row):
         return "peer-band"
     if row.family_bucket_key in PRIMARY_SUPPORT_FAMILY_BUCKETS:
         return f"primary:{row.family_bucket_key}"
@@ -84,7 +79,7 @@ def main() -> None:
     shared_primary_rows = [
         row
         for row in rows
-        if row.family_bucket_key in PRIMARY_SUPPORT_FAMILY_BUCKETS and not _peer_band(row)
+        if row.family_bucket_key in PRIMARY_SUPPORT_FAMILY_BUCKETS and not is_peer_band_like(row)
     ]
     print("Shared primary-bucket occupancy")
     print("-------------------------------")
@@ -96,7 +91,7 @@ def main() -> None:
 
     print("Peer-band transfer rows")
     print("-----------------------")
-    peer_rows = [row for row in rows if _peer_band(row)]
+    peer_rows = [row for row in rows if is_peer_band_like(row)]
     for row in peer_rows[: args.show_limit]:
         print(
             f"{row.source_name} subtype={row.subtype} "
@@ -113,7 +108,7 @@ def main() -> None:
     print("---------------------------")
     family_counts: dict[str, Counter[str]] = defaultdict(Counter)
     for row in rows:
-        if _peer_band(row) or row.family_bucket_key in PRIMARY_SUPPORT_FAMILY_BUCKETS:
+        if is_peer_band_like(row) or row.family_bucket_key in PRIMARY_SUPPORT_FAMILY_BUCKETS:
             continue
         family_counts[row.residual_bucket_key][row.subtype] += 1
     for key, counts in sorted(

@@ -1,3 +1,44 @@
+## 2026-03-27 21:12 America/New_York
+
+### Current state
+- Continued the deep review thread on the frozen `5504` transfer/follow-on lane after the prior shared matcher cleanup.
+- Closed two remaining duplicated-selector seams without reopening the science branch:
+  - centralized the baseline add1 `peer_motif` branch classifier in
+    `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_branch_decomposition.py`
+    as shared `is_peer_motif_like(...)`
+  - removed the last local `_peer_band(...)` wrapper from
+    `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_scan.py`
+    so it now uses shared `is_peer_band_like(...)`
+- Extended `/Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py` to guard both seams.
+
+### Strongest confirmed conclusion
+- Science conclusions did not change; this was another review-layer integrity cleanup.
+- The active frozen `5504` transfer/follow-on lane now shares:
+  - one `peer_motif` branch selector for the baseline add1 follow-ons
+  - one `peer-band` selector for the transfer scan surface
+- This removes two more drift surfaces where active scripts could silently diverge while still looking “conceptually the same” in the README/handoff.
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_branch_decomposition.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_candidate_anchor_residual_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_agnostic_local_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_band_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_topology_residual_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_support_family_transfer_scan.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py`
+- Validation:
+  - `python3 -m py_compile` on touched scripts passed
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py` passed (`benchmark regression audit: ok`)
+
+### Exact next step
+- Stay in deep review mode on the frozen `5504` transfer/follow-on lane.
+- Review whether any remaining active transfer/follow-on scripts still duplicate live-rule selection logic or one-off branch selectors instead of importing them from the shared helper surface.
+
+### First concrete action
+- Search:
+  - `rg -n 'evaluate_rules\\(|selected_rule|best_rule|anchor_adj_bridge_count >= 3\\.5|rule_text|def _peer_band|motif_hits\\[0\\] > 0\\.0' /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_*`
+
 ## 2026-03-27 21:00 America/New_York
 
 ### Current state

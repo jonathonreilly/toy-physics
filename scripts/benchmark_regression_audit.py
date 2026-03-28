@@ -547,9 +547,71 @@ def check_primary_support_family_buckets_shared() -> None:
             "is_peer_band_like" in text
         ), f"{script.name} no longer uses the shared peer-band selector"
         assert (
-            "high_bridge_left_low_count < 0.5" not in text
+            "def _peer_band" not in text
+            and "high_bridge_left_low_count < 0.5" not in text
             and "high_bridge_left_low_count >= 0.5" not in text
-        ), f"{script.name} regressed to duplicating the peer-band threshold"
+        ), f"{script.name} regressed to duplicating the peer-band selector"
+    transfer_scan_text = (
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_support_family_transfer_scan.py"
+    ).read_text()
+    assert (
+        "def _peer_band" not in transfer_scan_text
+    ), "support family transfer scan still carries a local peer-band wrapper"
+
+
+def check_baseline_add1_peer_motif_selector_shared() -> None:
+    branch_source = (
+        REPO_ROOT
+        / "scripts"
+        / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_branch_decomposition.py"
+    ).read_text()
+    assert (
+        "PEER_MOTIF_CELL" in branch_source and "is_peer_motif_like" in branch_source
+    ), "baseline add1 branch decomposition no longer exposes the shared peer_motif selector"
+    scripts = (
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_candidate_anchor_residual_scan.py",
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_topology_residual_scan.py",
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_agnostic_local_scan.py",
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_band_scan.py",
+    )
+    for script in scripts:
+        text = script.read_text()
+        assert (
+            "is_peer_motif_like" in text
+        ), f"{script.name} no longer uses the shared peer_motif selector"
+        assert (
+            "motif_hits[0] > 0.0" not in text
+            and "_has_motif(nodes, MOTIF_CELLS[0])" not in text
+        ), f"{script.name} regressed to duplicating the peer_motif branch selector"
+
+
+def check_baseline_add1_rescue_split_shared() -> None:
+    branch_source = (
+        REPO_ROOT
+        / "scripts"
+        / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_branch_decomposition.py"
+    ).read_text()
+    assert (
+        "BASELINE_ADD1_RESCUE_EDGE_DENSITY" in branch_source
+        and "BASELINE_ADD1_RESCUE_POCKET_TOTAL" in branch_source
+        and "split_baseline_add1_pocket_rows" in branch_source
+    ), "baseline add1 branch decomposition no longer exposes the shared rescue split helper"
+    scripts = (
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_candidate_anchor_residual_scan.py",
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_topology_residual_scan.py",
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_agnostic_local_scan.py",
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_coordinate_band_scan.py",
+    )
+    for script in scripts:
+        text = script.read_text()
+        assert (
+            "split_baseline_add1_pocket_rows" in text
+        ), f"{script.name} no longer uses the shared baseline add1 rescue split"
+        assert (
+            "> 0.018" not in text
+            and "<= 0.018" not in text
+            and "<= -14.5" not in text
+        ), f"{script.name} regressed to duplicating the baseline add1 rescue split literals"
 
 
 def main() -> None:
@@ -581,6 +643,10 @@ def main() -> None:
     check_latent_structure_entrypoint_is_historical_live_sampler()
     print("benchmark regression audit: checking shared primary support-family buckets", flush=True)
     check_primary_support_family_buckets_shared()
+    print("benchmark regression audit: checking baseline add1 peer_motif selector sharing", flush=True)
+    check_baseline_add1_peer_motif_selector_shared()
+    print("benchmark regression audit: checking baseline add1 rescue split sharing", flush=True)
+    check_baseline_add1_rescue_split_shared()
     print("benchmark regression audit: checking live mechanism split driver", flush=True)
     check_live_mechanism_split_driver()
     print("benchmark regression audit: ok", flush=True)

@@ -25,8 +25,8 @@ from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_ident
     support_roles,
 )
 from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_branch_decomposition import (  # noqa: E402
-    MOTIF_CELLS,
-    _has_motif,
+    is_peer_motif_like,
+    split_baseline_add1_pocket_rows,
 )
 from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_zero_distance_features import (  # noqa: E402
     _own_metrics,
@@ -123,12 +123,10 @@ def build_rows(
         left_subtype=left_subtype,
         right_subtype=right_subtype,
     )
-    baseline_rows = [
-        row
-        for row in pocket_rows
-        if getattr(row, "subtype") == left_subtype
-        and float(getattr(row, "delta_edge_identity_support_edge_density")) <= 0.018
-    ]
+    baseline_rows, _rescued_names = split_baseline_add1_pocket_rows(
+        pocket_rows,
+        left_subtype=left_subtype,
+    )
 
     row_cls = make_dataclass(
         "BaselineAdd1CoordinateBandRow",
@@ -162,7 +160,7 @@ def build_rows(
         rows.append(
             row_cls(
                 source_name=source_name,
-                subtype="peer_motif" if _has_motif(nodes, MOTIF_CELLS[0]) else "non_peer",
+                subtype="peer_motif" if is_peer_motif_like(nodes) else "non_peer",
                 edge_identity_closed_pair_count=core_metrics["edge_identity_closed_pair_count"],
                 support_role_bridge_count=core_metrics["support_role_bridge_count"],
                 **_band_metrics(cells),
