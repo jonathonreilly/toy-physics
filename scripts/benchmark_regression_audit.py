@@ -469,6 +469,20 @@ def check_primary_support_family_buckets_shared() -> None:
     assert (
         ">= 19.0" not in residual_text and ">= 71.0" not in residual_text
     ), "baseline non-peer residual follow-on regressed to hard-coded residual bucket thresholds"
+    nonpeer_scripts = (
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_nonpeer_core_buckets.py",
+        REPO_ROOT / "scripts" / "pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_identity_baseline_add1_nonpeer_core_family_rules.py",
+    )
+    for script in nonpeer_scripts:
+        text = script.read_text()
+        assert (
+            "family_bucket_key_like" in text
+        ), f"{script.name} no longer uses the shared primary family bucket-key helper"
+        assert (
+            "def _mid_low_bin" not in text
+            and "def _cell_bin" not in text
+            and "def _bucket_key" not in text
+        ), f"{script.name} regressed to duplicating local bucket-bin builders"
     high_support_text = (
         REPO_ROOT
         / "scripts"

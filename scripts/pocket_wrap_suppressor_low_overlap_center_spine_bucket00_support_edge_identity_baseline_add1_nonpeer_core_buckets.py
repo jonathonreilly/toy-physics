@@ -26,6 +26,9 @@ from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_edge_ident
 from pocket_wrap_suppressor_low_overlap_center_spine_hardest_bucket_rules import (  # noqa: E402
     load_bucket_rows,
 )
+from pocket_wrap_suppressor_low_overlap_support_family_transfer_common import (  # noqa: E402
+    family_bucket_key_like,
+)
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -43,33 +46,6 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--right-subtype", default="add4-sensitive")
     parser.add_argument("--show-limit", type=int, default=12)
     return parser
-
-
-def _mid_low_bin(value: float) -> str:
-    if value <= 0.5:
-        return "ml0"
-    if value <= 1.5:
-        return "ml1"
-    return "ml2p"
-
-
-def _cell_bin(value: float) -> str:
-    if value <= 2.5:
-        return "c2"
-    if value <= 3.5:
-        return "c3"
-    return "c4p"
-
-
-def _bucket_key(row: object) -> str:
-    return "|".join(
-        [
-            f"rc{int(float(getattr(row, 'high_bridge_right_center_count')) >= 0.5)}",
-            _mid_low_bin(float(getattr(row, "high_bridge_mid_low_count"))),
-            _cell_bin(float(getattr(row, "high_bridge_cell_count"))),
-        ]
-    )
-
 
 def main() -> None:
     args = build_parser().parse_args()
@@ -96,7 +72,7 @@ def main() -> None:
 
     buckets: dict[str, list[object]] = defaultdict(list)
     for row in non_peer_rows:
-        buckets[_bucket_key(row)].append(row)
+        buckets[family_bucket_key_like(row)].append(row)
 
     ordered = sorted(buckets.items(), key=lambda item: (-len(item[1]), item[0]))
 

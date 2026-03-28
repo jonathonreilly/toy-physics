@@ -31,6 +31,9 @@ from pocket_wrap_suppressor_low_overlap_center_spine_bucket00_support_topology i
 from pocket_wrap_suppressor_low_overlap_center_spine_hardest_bucket_rules import (  # noqa: E402
     load_bucket_rows,
 )
+from pocket_wrap_suppressor_low_overlap_support_family_transfer_common import (  # noqa: E402
+    family_bucket_key_like,
+)
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -51,33 +54,6 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--max-terms", type=int, default=3)
     parser.add_argument("--row-limit", type=int, default=8)
     return parser
-
-
-def _mid_low_bin(value: float) -> str:
-    if value <= 0.5:
-        return "ml0"
-    if value <= 1.5:
-        return "ml1"
-    return "ml2p"
-
-
-def _cell_bin(value: float) -> str:
-    if value <= 2.5:
-        return "c2"
-    if value <= 3.5:
-        return "c3"
-    return "c4p"
-
-
-def _bucket_key(row: object) -> str:
-    return "|".join(
-        [
-            f"rc{int(float(getattr(row, 'high_bridge_right_center_count')) >= 0.5)}",
-            _mid_low_bin(float(getattr(row, "high_bridge_mid_low_count"))),
-            _cell_bin(float(getattr(row, "high_bridge_cell_count"))),
-        ]
-    )
-
 
 def main() -> None:
     args = build_parser().parse_args()
@@ -104,7 +80,7 @@ def main() -> None:
 
     grouped: dict[str, list[object]] = defaultdict(list)
     for row in non_peer_rows:
-        grouped[_bucket_key(row)].append(row)
+        grouped[family_bucket_key_like(row)].append(row)
     kept_keys = {
         key
         for key, bucket_rows0 in grouped.items()
@@ -130,7 +106,7 @@ def main() -> None:
     rule_rows = [
         row_cls(
             source_name=getattr(row, "source_name"),
-            subtype=_bucket_key(row),
+            subtype=family_bucket_key_like(row),
             edge_identity_closed_pair_count=float(getattr(row, "edge_identity_closed_pair_count")),
             support_role_bridge_count=float(getattr(row, "support_role_bridge_count")),
             high_bridge_left_count=float(getattr(row, "high_bridge_left_count")),
@@ -141,7 +117,7 @@ def main() -> None:
             high_bridge_low_count=float(getattr(row, "high_bridge_low_count")),
         )
         for row in non_peer_rows
-        if _bucket_key(row) in kept_keys
+        if family_bucket_key_like(row) in kept_keys
     ]
     feature_names = [name for name in rule_rows[0].__dataclass_fields__ if name not in ("source_name", "subtype")]
 
@@ -149,7 +125,16 @@ def main() -> None:
     print("Center-Spine Bucket 00 Baseline Add1 Non-Peer Core Family Rules")
     print("===============================================================")
     print(f"non_peer_rows={len(non_peer_rows)}")
-    print(f"kept_buckets={Counter(_bucket_key(row) for row in non_peer_rows if _bucket_key(row) in kept_keys)}")
+    print(
+        "kept_buckets="
+        + str(
+            Counter(
+                family_bucket_key_like(row)
+                for row in non_peer_rows
+                if family_bucket_key_like(row) in kept_keys
+            )
+        )
+    )
     print()
     for key in sorted(kept_keys):
         target_rows = [row for row in rule_rows if getattr(row, "subtype") == key]
