@@ -1,3 +1,53 @@
+## 2026-03-28 23:54 America/New_York
+
+### Seam class
+- generated-family transfer
+- anchor-band projection
+
+### Science impact
+- science advanced; the surviving generated pair-only failures keep their exact moderate anchor-balance boundary after the queued historical `add1-sensitive` projection, and the immediate nearby generated basin yields no guard-surviving correctly classified counterexamples
+
+### Current state
+- Resumed the active generated-family transfer thread while `main` was still locally ahead at `7c446d8` after the prior DNS-blocked helper push.
+- Refactored `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_exact_law_generated_ensemble_transfer_check.py` to expose a tree-reusing generated row builder for bounded nearby scans.
+- Extended `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_non_guarded_pair_compare.py` to add historical frozen `add1-sensitive` rows plus a bounded immediate generated scan over `taper-wrap`, `skew-wrap`, `taper-hard`, and `skew-hard` through `mega`.
+- Ran the comparer to:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-generated-anchor-band-nearby-projection-v3.txt`
+
+### Strongest confirmed conclusion
+- The same anchor-balance band still exact-separates the `11` surviving generated failures on the broadened historical basis:
+  - `anchor_closure_intensity_gap >= -2.000 and anchor_closure_intensity_gap <= 2.333`
+  - generated failures hit the band at `11/11`
+  - historical frozen `pair-only-sensitive` rows hit it at `0/9`
+  - historical frozen `add1-sensitive` rows hit it at `0/15`
+- The historical frozen `add1-sensitive` branch sits entirely on the negative side of that boundary:
+  - `anchor_closure_intensity_gap = -12.000 -> -2.667`
+- The immediate nearby generated basin does not yet provide an in-domain non-failure contrast:
+  - the bounded scan over `taper-wrap`, `skew-wrap`, `taper-hard`, and `skew-hard` through `mega` found `generated_stable_nearby_rows = 0`
+  - every guard-surviving non-collapse row in that local basin is itself another transfer failure, so the anchor-balance boundary currently marks a local failure-only regime rather than a split against stable nearby generated rows
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_exact_law_generated_ensemble_transfer_check.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_non_guarded_pair_compare.py`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- New log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-generated-anchor-band-nearby-projection-v3.txt`
+- Validation:
+  - `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_exact_law_generated_ensemble_transfer_check.py /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_non_guarded_pair_compare.py`
+  - `python3 -u /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_non_guarded_pair_compare.py > /Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-generated-anchor-band-nearby-projection-v3.txt`
+
+### Exact next step
+- Test whether the anchor-balance band is only a `pair-only`/`add1` exclusion or a broader subtype basin by projecting it onto the frozen `add4-sensitive` rows, starting with the few in-band cases.
+
+### First concrete action
+- Extend `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_non_guarded_pair_compare.py` to add the frozen `add4-sensitive` cohort, then check whether one compact support-layout clause separates those in-band `add4` rows from the generated pair-only basin without reopening the historical `pair-only`/`add1` boundary.
+
 ## 2026-03-28 22:07 America/New_York
 
 ### Seam class
@@ -42,6 +92,10 @@
 - Validation:
   - `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_non_guarded_pair_compare.py`
   - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_non_guarded_pair_compare.py > /Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-generated-non-guarded-pair-compare.txt`
+
+### Commit status
+- Committed locally as `7c446d8` (`Isolate anchor-balance boundary in generated transfer`).
+- End-of-loop helper push failed after retries with DNS (`Could not resolve host: github.com`); repository state is `ahead 1, behind 0`.
 
 ### Exact next step
 - Test whether the new anchor-balance band is a true generated-domain boundary or only a contrast against historical frozen `pair-only-sensitive` rows by projecting it onto nearby generated non-failures and historical `add1-sensitive` rows.

@@ -159,8 +159,14 @@ def _variant_entries(
     return wrap_y, entries
 
 
-def build_rows(ensemble_name: str, pack_name: str, scenario_name: str) -> list[object]:
-    ge6_tree, dpadj_tree = _extended_ge6_dpadj_trees(retained_weight=1.0)
+def build_rows_with_trees(
+    ensemble_name: str,
+    pack_name: str,
+    scenario_name: str,
+    *,
+    ge6_tree: object,
+    dpadj_tree: object,
+) -> list[object]:
     wrap_y, entries = _variant_entries(ensemble_name, pack_name, scenario_name)
     row_cls = make_dataclass(
         "GeneratedEnsembleExactLawRow",
@@ -256,6 +262,17 @@ def build_rows(ensemble_name: str, pack_name: str, scenario_name: str) -> list[o
 
     rows.sort(key=lambda item: (item.style, item.source_name))
     return rows
+
+
+def build_rows(ensemble_name: str, pack_name: str, scenario_name: str) -> list[object]:
+    ge6_tree, dpadj_tree = _extended_ge6_dpadj_trees(retained_weight=1.0)
+    return build_rows_with_trees(
+        ensemble_name,
+        pack_name,
+        scenario_name,
+        ge6_tree=ge6_tree,
+        dpadj_tree=dpadj_tree,
+    )
 
 
 def _format_counts(rows: list[object], attr: str = "subtype") -> str:
