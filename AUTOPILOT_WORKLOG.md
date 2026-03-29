@@ -1,3 +1,122 @@
+## 2026-03-29 16:34 America/New_York
+
+### Seam class
+- generated-family transfer
+- exhausted-wall anchor compare
+
+### Science impact
+- science advanced; the late-branch translation now survives on the full exhausted wall, not just on the closest `large` miss
+
+### Current state
+- Kept the manual lock and widened the new mid-anchor translation comparer to a full-wall mode instead of adding another near-duplicate script.
+- Updated and ran:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_late_branch_mid_anchor_translation_compare.py --mode full-wall`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-late-branch-mid-anchor-translation-compare-full-wall.txt`
+- The widened compare now covers:
+  - all five observed late base rows
+  - `large:exa:large:taper-wrap-large:local-morph-g`
+  - `mirror:exa:mirror:skew-hard-mirror:local-morph-f`
+
+### Strongest confirmed conclusion
+- The full exhausted wall keeps the same ceiling:
+  - both exhausted-wall misses stop at `mid_candidate_bridge_bridge_closed_pair_max = 8.000`
+  - every observed late row sits at `mid_candidate_bridge_bridge_closed_pair_max = 12.000`
+- So the strongest stable structural separator is now:
+  - `mid_candidate_bridge_bridge_closed_pair_max >= 10.000`
+  - `tp/fp/fn = 5/0/0`
+- The focused `large` compare is still useful locally:
+  - it shows the same `12.000` bridge-bridge closure packet can survive on the wrong anchor band
+  - but across the whole exhausted wall the cleaner invariant is simply whether the mid-anchor band ever reaches `10+`
+- The remaining subtlety is now concentrated in the neutral-balance pair:
+  - late `base:exa:skew-wrap:local-morph-k` has `delta_mid_left_bridge_bridge_closed_pair_max = 0.000` but `mid_candidate_bridge_bridge_closed_pair_max = 12.000`
+  - `mirror:exa:skew-hard-mirror:local-morph-f` also has `delta_mid_left_bridge_bridge_closed_pair_max = 0.000` but only `8.000`
+
+### Files and results changed in this run
+- Updated script:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_late_branch_mid_anchor_translation_compare.py`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-late-branch-mid-anchor-translation-compare-full-wall.txt`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+
+### Validation
+- `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_late_branch_mid_anchor_translation_compare.py`
+
+### Exact next step
+- Compare the neutral-balance pair directly:
+  - `base:exa:base:skew-wrap:local-morph-k`
+  - `mirror:exa:mirror:skew-hard-mirror:local-morph-f`
+- to isolate what lifts `mid_candidate_bridge_bridge_closed_pair_max` from `8.000` to `12.000` when the signed left-vs-mid balance is no longer the differentiator.
+
+### First concrete action
+- Build one small skew-vs-mirror structural comparer focused on:
+  - mid candidate closed-pair geometry
+  - candidate closed-ratio maxima
+  - local dense candidate counts
+  - high-bridge left/mid/right placement
+
+## 2026-03-29 16:24 America/New_York
+
+### Seam class
+- generated-family transfer
+- late-branch structural translation
+
+### Science impact
+- science advanced; the closest `large` exhausted-wall miss is now translated into an anchor-placement failure rather than just a lower mid-anchor-closure summary
+
+### Current state
+- Picked up from synced `dcce1fe`, kept the manual lock, and executed the next bounded row-level compare queued in the handoff.
+- Added and ran:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_late_branch_mid_anchor_translation_compare.py`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-late-branch-mid-anchor-translation-compare.txt`
+- The compare targets exactly:
+  - `base:peta|exa:base:rect-wrap:local-morph-f`
+  - `base:peta|exa:base:taper-hard:local-morph-f`
+  - `large:exa:large:taper-wrap-large:local-morph-g`
+
+### Strongest confirmed conclusion
+- The closest `large:exa` miss is not missing absolute bridge-bridge closure scale:
+  - it still realizes `left_candidate_bridge_bridge_closed_pair_max = 12.000`
+  - but its mid-anchor maximum drops to `mid_candidate_bridge_bridge_closed_pair_max = 8.000`
+- The observed late `rect-wrap` and `taper-hard` rows realize the same `12.000` maximum on the mid anchor band instead:
+  - `mid_candidate_bridge_bridge_closed_pair_max = 12.000`
+  - `left_candidate_bridge_bridge_closed_pair_max = 8.000` for `rect-wrap`
+  - `left_candidate_bridge_bridge_closed_pair_max = 0.000` for `taper-hard`
+- So the sharper structural read is:
+  - the late branch does not need more closure in absolute terms than the closest `large` miss
+  - it needs the same `12.000` bridge-bridge closure packet to move from the left anchor band into the mid anchor band
+- The focused structural separator is exact on this compare:
+  - `delta_mid_left_bridge_bridge_closed_pair_max >= 0.000`
+  - where `delta = mid - left`
+  - `tp/fp/fn = 4/0/0`
+
+### Files and results changed in this run
+- Added script:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_late_branch_mid_anchor_translation_compare.py`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-late-branch-mid-anchor-translation-compare.txt`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+
+### Validation
+- `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_late_branch_mid_anchor_translation_compare.py`
+
+### Exact next step
+- Check whether that same left-to-mid closure-packet story survives when the compare is widened from the closest `large` miss to the whole exhausted wall, especially the `mirror:exa` miss and the late `skew-wrap` branch.
+
+### First concrete action
+- Build one compact exhausted-wall anchor comparer over:
+  - all five observed late base rows
+  - `large:exa:large:taper-wrap-large:local-morph-g`
+  - `mirror:exa:mirror:skew-hard-mirror:local-morph-f`
+- Then test whether a structural clause around `mid_candidate_bridge_bridge_closed_pair_max` or `delta_mid_left_bridge_bridge_closed_pair_max` exact-separates the whole late branch from the full exhausted wall.
+
 ## 2026-03-29 15:58 America/New_York
 
 ### Seam class
