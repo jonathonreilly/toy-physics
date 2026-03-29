@@ -1,0 +1,234 @@
+late branch mid-anchor translation compare started 2026-03-29T17:23:12
+
+Late Branch Mid-Anchor Translation Compare
+==========================================
+mode=focused
+rows_total=5 (large-exhausted-miss:1, late-base:4)
+late_mid_anchor_closure_peaks=12.000,12.000,12.000,12.000
+late_delta_mid_left_bridge_bridge_closed_pair_max=4.000,12.000,4.000,12.000
+large_exhausted_mid_anchor_closure_peak=8.000
+large_exhausted_left_mid_bridge_bridge_closed_pair_max=12.000/8.000
+large_exhausted_delta_mid_left_bridge_bridge_closed_pair_max=-4.000
+best_any_rule=closure_load <= 83.500 tp/fp/fn=4/0/0 exact=Y
+best_structural_rule=delta_mid_left_attached_max >= 0.000 tp/fp/fn=4/0/0 exact=Y
+translation_summary=the closest large miss preserves the same 12 closed-pair maximum, but keeps it on the left anchor band instead of the mid anchor band
+
+Late base rows
+==============
+exa:base:rect-wrap:local-morph-f cohort=late-base actual=pair-only-sensitive
+  support_load=26.000
+  closure_load=80.000
+  mid_anchor_closure_peak=12.000
+  anchor_closure_intensity_gap=-2.000
+  anchor_deep_share_gap=0.000
+  high_bridge_left_count=1.000
+  high_bridge_mid_count=2.000
+  high_bridge_right_count=1.000
+  high_bridge_right_low_count=1.000
+  left_candidate_count=1.000
+  mid_candidate_count=2.000
+  left_candidate_attached_max=7.000
+  mid_candidate_attached_max=8.000
+  left_candidate_bridge_max=7.000
+  mid_candidate_bridge_max=8.000
+  left_candidate_closed_pair_max=8.000
+  mid_candidate_closed_pair_max=12.000
+  left_candidate_bridge_bridge_closed_pair_max=8.000
+  mid_candidate_bridge_bridge_closed_pair_max=12.000
+  left_candidate_closed_ratio_max=0.381
+  mid_candidate_closed_ratio_max=0.429
+  left_candidate_dense_count=1.000
+  mid_candidate_dense_count=2.000
+  delta_mid_left_attached_max=1.000
+  delta_mid_left_bridge_max=1.000
+  delta_mid_left_closed_pair_max=4.000
+  delta_mid_left_bridge_bridge_closed_pair_max=4.000
+  delta_mid_left_dense_count=1.000
+  edge_identity_event_count=56.000
+  edge_identity_support_edge_density=0.145
+exa:base:taper-hard:local-morph-f cohort=late-base actual=pair-only-sensitive
+  support_load=22.000
+  closure_load=76.000
+  mid_anchor_closure_peak=12.000
+  anchor_closure_intensity_gap=4.000
+  anchor_deep_share_gap=0.667
+  high_bridge_left_count=0.000
+  high_bridge_mid_count=2.000
+  high_bridge_right_count=2.000
+  high_bridge_right_low_count=0.000
+  left_candidate_count=0.000
+  mid_candidate_count=3.000
+  left_candidate_attached_max=0.000
+  mid_candidate_attached_max=8.000
+  left_candidate_bridge_max=0.000
+  mid_candidate_bridge_max=8.000
+  left_candidate_closed_pair_max=0.000
+  mid_candidate_closed_pair_max=12.000
+  left_candidate_bridge_bridge_closed_pair_max=0.000
+  mid_candidate_bridge_bridge_closed_pair_max=12.000
+  left_candidate_closed_ratio_max=0.000
+  mid_candidate_closed_ratio_max=0.429
+  left_candidate_dense_count=0.000
+  mid_candidate_dense_count=3.000
+  delta_mid_left_attached_max=8.000
+  delta_mid_left_bridge_max=8.000
+  delta_mid_left_closed_pair_max=12.000
+  delta_mid_left_bridge_bridge_closed_pair_max=12.000
+  delta_mid_left_dense_count=3.000
+  edge_identity_event_count=60.000
+  edge_identity_support_edge_density=0.178
+peta:base:rect-wrap:local-morph-f cohort=late-base actual=pair-only-sensitive
+  support_load=26.000
+  closure_load=80.000
+  mid_anchor_closure_peak=12.000
+  anchor_closure_intensity_gap=-2.000
+  anchor_deep_share_gap=0.000
+  high_bridge_left_count=1.000
+  high_bridge_mid_count=2.000
+  high_bridge_right_count=1.000
+  high_bridge_right_low_count=1.000
+  left_candidate_count=1.000
+  mid_candidate_count=2.000
+  left_candidate_attached_max=7.000
+  mid_candidate_attached_max=8.000
+  left_candidate_bridge_max=7.000
+  mid_candidate_bridge_max=8.000
+  left_candidate_closed_pair_max=8.000
+  mid_candidate_closed_pair_max=12.000
+  left_candidate_bridge_bridge_closed_pair_max=8.000
+  mid_candidate_bridge_bridge_closed_pair_max=12.000
+  left_candidate_closed_ratio_max=0.381
+  mid_candidate_closed_ratio_max=0.429
+  left_candidate_dense_count=1.000
+  mid_candidate_dense_count=2.000
+  delta_mid_left_attached_max=1.000
+  delta_mid_left_bridge_max=1.000
+  delta_mid_left_closed_pair_max=4.000
+  delta_mid_left_bridge_bridge_closed_pair_max=4.000
+  delta_mid_left_dense_count=1.000
+  edge_identity_event_count=56.000
+  edge_identity_support_edge_density=0.145
+peta:base:taper-hard:local-morph-f cohort=late-base actual=pair-only-sensitive
+  support_load=22.000
+  closure_load=76.000
+  mid_anchor_closure_peak=12.000
+  anchor_closure_intensity_gap=4.000
+  anchor_deep_share_gap=0.667
+  high_bridge_left_count=0.000
+  high_bridge_mid_count=2.000
+  high_bridge_right_count=2.000
+  high_bridge_right_low_count=0.000
+  left_candidate_count=0.000
+  mid_candidate_count=3.000
+  left_candidate_attached_max=0.000
+  mid_candidate_attached_max=8.000
+  left_candidate_bridge_max=0.000
+  mid_candidate_bridge_max=8.000
+  left_candidate_closed_pair_max=0.000
+  mid_candidate_closed_pair_max=12.000
+  left_candidate_bridge_bridge_closed_pair_max=0.000
+  mid_candidate_bridge_bridge_closed_pair_max=12.000
+  left_candidate_closed_ratio_max=0.000
+  mid_candidate_closed_ratio_max=0.429
+  left_candidate_dense_count=0.000
+  mid_candidate_dense_count=3.000
+  delta_mid_left_attached_max=8.000
+  delta_mid_left_bridge_max=8.000
+  delta_mid_left_closed_pair_max=12.000
+  delta_mid_left_bridge_bridge_closed_pair_max=12.000
+  delta_mid_left_dense_count=3.000
+  edge_identity_event_count=60.000
+  edge_identity_support_edge_density=0.178
+
+Exhausted-wall rows
+===================
+exa:large:taper-wrap-large:local-morph-g cohort=large-exhausted-miss actual=pair-only-sensitive
+  support_load=26.000
+  closure_load=87.000
+  mid_anchor_closure_peak=8.000
+  anchor_closure_intensity_gap=2.000
+  anchor_deep_share_gap=0.000
+  high_bridge_left_count=2.000
+  high_bridge_mid_count=1.000
+  high_bridge_right_count=1.000
+  high_bridge_right_low_count=0.000
+  left_candidate_count=2.000
+  mid_candidate_count=1.000
+  left_candidate_attached_max=8.000
+  mid_candidate_attached_max=7.000
+  left_candidate_bridge_max=8.000
+  mid_candidate_bridge_max=7.000
+  left_candidate_closed_pair_max=12.000
+  mid_candidate_closed_pair_max=8.000
+  left_candidate_bridge_bridge_closed_pair_max=12.000
+  mid_candidate_bridge_bridge_closed_pair_max=8.000
+  left_candidate_closed_ratio_max=0.429
+  mid_candidate_closed_ratio_max=0.381
+  left_candidate_dense_count=2.000
+  mid_candidate_dense_count=1.000
+  delta_mid_left_attached_max=-1.000
+  delta_mid_left_bridge_max=-1.000
+  delta_mid_left_closed_pair_max=-4.000
+  delta_mid_left_bridge_bridge_closed_pair_max=-4.000
+  delta_mid_left_dense_count=-1.000
+  edge_identity_event_count=71.000
+  edge_identity_support_edge_density=0.091
+
+Late-vs-Large Deltas
+====================
+exa:base:rect-wrap:local-morph-f
+  delta_support_load=0.000
+  delta_closure_load=-7.000
+  delta_mid_anchor_closure_peak=4.000
+  delta_left_candidate_bridge_bridge_closed_pair_max=-4.000
+  delta_mid_candidate_bridge_bridge_closed_pair_max=4.000
+  delta_delta_mid_left_bridge_bridge_closed_pair_max=8.000
+  delta_left_candidate_closed_ratio_max=-0.048
+  delta_mid_candidate_closed_ratio_max=0.048
+exa:base:taper-hard:local-morph-f
+  delta_support_load=-4.000
+  delta_closure_load=-11.000
+  delta_mid_anchor_closure_peak=4.000
+  delta_left_candidate_bridge_bridge_closed_pair_max=-12.000
+  delta_mid_candidate_bridge_bridge_closed_pair_max=4.000
+  delta_delta_mid_left_bridge_bridge_closed_pair_max=16.000
+  delta_left_candidate_closed_ratio_max=-0.429
+  delta_mid_candidate_closed_ratio_max=0.048
+peta:base:rect-wrap:local-morph-f
+  delta_support_load=0.000
+  delta_closure_load=-7.000
+  delta_mid_anchor_closure_peak=4.000
+  delta_left_candidate_bridge_bridge_closed_pair_max=-4.000
+  delta_mid_candidate_bridge_bridge_closed_pair_max=4.000
+  delta_delta_mid_left_bridge_bridge_closed_pair_max=8.000
+  delta_left_candidate_closed_ratio_max=-0.048
+  delta_mid_candidate_closed_ratio_max=0.048
+peta:base:taper-hard:local-morph-f
+  delta_support_load=-4.000
+  delta_closure_load=-11.000
+  delta_mid_anchor_closure_peak=4.000
+  delta_left_candidate_bridge_bridge_closed_pair_max=-12.000
+  delta_mid_candidate_bridge_bridge_closed_pair_max=4.000
+  delta_delta_mid_left_bridge_bridge_closed_pair_max=16.000
+  delta_left_candidate_closed_ratio_max=-0.429
+  delta_mid_candidate_closed_ratio_max=0.048
+
+Best any-feature rules
+======================
+closure_load <= 83.500 | exact=Y | correct=5/5 | tp/fp/fn=4/0/0
+anchor_closure_intensity_gap <= 0.000 | exact=n | correct=3/5 | tp/fp/fn=2/0/2
+anchor_closure_intensity_gap >= 3.000 | exact=n | correct=3/5 | tp/fp/fn=2/0/2
+anchor_closure_intensity_gap <= 3.000 | exact=n | correct=2/5 | tp/fp/fn=2/1/2
+anchor_closure_intensity_gap >= 0.000 | exact=n | correct=2/5 | tp/fp/fn=2/1/2
+closure_load >= 83.500 | exact=n | correct=0/5 | tp/fp/fn=0/1/4
+
+Best structural rules
+=====================
+delta_mid_left_attached_max >= 0.000 | exact=Y | correct=5/5 | tp/fp/fn=4/0/0
+anchor_closure_intensity_gap <= 0.000 | exact=n | correct=3/5 | tp/fp/fn=2/0/2
+anchor_closure_intensity_gap >= 3.000 | exact=n | correct=3/5 | tp/fp/fn=2/0/2
+anchor_closure_intensity_gap <= 3.000 | exact=n | correct=2/5 | tp/fp/fn=2/1/2
+anchor_closure_intensity_gap >= 0.000 | exact=n | correct=2/5 | tp/fp/fn=2/1/2
+delta_mid_left_attached_max <= 0.000 | exact=n | correct=0/5 | tp/fp/fn=0/1/4
+
+late branch mid-anchor translation compare completed 2026-03-29T17:28:33 total_elapsed=321.1s

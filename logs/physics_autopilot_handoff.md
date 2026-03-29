@@ -1,5 +1,59 @@
 # Physics Autopilot Handoff
 
+## 2026-03-29 17:23 America/New_York
+
+### Seam class
+- generated-family transfer
+- attached-packet wall generalization
+
+### Science impact
+- science advanced; the attached-packet lift now generalizes beyond the neutral pair and appears to be the cleanest structural separator across the whole exhausted wall
+
+### Current state
+- Promoted the local neutral-pair checkpoint by pushing `ae6a372`, then kept the manual lock and ran the queued focused/full-wall reruns with the richer packet metrics already present in the comparer.
+- Ran:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_late_branch_mid_anchor_translation_compare.py --mode focused`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_late_branch_mid_anchor_translation_compare.py --mode full-wall`
+- New logs:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-late-branch-mid-anchor-translation-compare-focused-v2.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-late-branch-mid-anchor-translation-compare-full-wall-v2.txt`
+
+### Strongest confirmed conclusion
+- The packet-strengthening clause does extend beyond the neutral pair.
+- On the focused `rect-wrap/taper-hard` vs closest `large:exa` miss compare, the cleanest structural separator is:
+  - `delta_mid_left_attached_max >= 0.000`
+  - `tp/fp/fn = 4/0/0`
+- On the full exhausted wall, the cleaner stable separator is:
+  - `mid_candidate_attached_max >= 7.500`
+  - `tp/fp/fn = 5/0/0`
+- The physical packet lift is consistent across the wall:
+  - every observed late row reaches `mid_candidate_attached_max = 8.000`
+  - both exhausted-wall misses stop at `7.000`
+  - the matching dominant packet lift remains `7/8 -> 8/12` in attached bridges / bridge-bridge closed pairs
+- So the `large:exa` miss no longer needs a separate structural law. The focused left-to-mid placement story is still descriptively useful, but the attached-packet threshold already absorbs both the `large` and `mirror` exhausted-wall misses.
+
+### Files/logs changed
+- New result logs:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-late-branch-mid-anchor-translation-compare-focused-v2.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-late-branch-mid-anchor-translation-compare-full-wall-v2.txt`
+- Updated runtime state:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+
+### Remaining review seams
+- open: isolate what specific local neighborhood change adds the eighth attached bridge and the extra four bridge-bridge closed pairs
+
+### Exact next step
+- Compare the dominant packet cells themselves between:
+  - `base:exa:base:skew-wrap:local-morph-k`
+  - `mirror:exa:mirror:skew-hard-mirror:local-morph-f`
+  - `large:exa:large:taper-wrap-large:local-morph-g`
+- focusing on support-neighbor membership instead of only packet counts.
+
+### First concrete action
+- Build one packet-neighborhood comparer that lists the support nodes attached to the dominant left and mid packet cells for those three rows, then check which missing support edge prevents the `7 -> 8` attached-bridge lift on the exhausted-wall side.
+
 ## 2026-03-29 17:10 America/New_York
 
 ### Seam class
@@ -14,6 +68,10 @@
 - Updated and ran:
   - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_late_branch_mid_anchor_translation_compare.py --mode neutral-pair`
   - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-late-branch-mid-anchor-translation-compare-neutral-pair.txt`
+- Committed the stable repo-facing result as `ae6a372` (`Resolve neutral late packet lift`).
+- Push status:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - failed with `dns_failure` after `5` attempts, so the canonical repo is currently `ahead 1, behind 0`
 - The existing comparer now includes:
   - `neutral-pair` mode
   - candidate-cell geometry output
