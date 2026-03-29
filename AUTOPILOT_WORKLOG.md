@@ -55,8 +55,8 @@
   - `python3 -u /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_non_guarded_pair_compare.py > /Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-anchor-band-beyond-ceiling-followon.txt`
 
 ### Commit status
-- Pending local commit for the widened beyond-ceiling follow-on guardrail step.
-- The required pre-step push helper already failed with DNS (`Could not resolve host: github.com`); repository state stayed `ahead 7, behind 0` before this science result.
+- Committed locally as `9a52504` (`Probe widened beyond-ceiling guardrail`).
+- The required end-of-loop push helper failed with DNS (`Could not resolve host: github.com`); repository state finished `ahead 8, behind 0`.
 
 ### Exact next step
 - Identify one slightly wider or differently placed beyond-ceiling guardrail that yields the first non-rect non-collapse row, then test whether `closure_load >= 75.000` survives there or collapses back to the current outer rect tail.
