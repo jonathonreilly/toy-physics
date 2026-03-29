@@ -56,8 +56,8 @@ SHOULDER_RULE = "anchor_deep_share_gap >= 0.250"
 THROAT_RULE = "closure_load <= 24.500"
 DEFAULT_NEARBY_ENSEMBLES = ("default", "broader", "wider", "ultra", "mega")
 SPARSE_GUARDRAIL_SPECS = (
-    ("rect-wrap", ("ultra", "mega")),
-    ("rect-hard", ("ultra", "mega")),
+    ("rect-wrap", ("wider", "ultra", "mega")),
+    ("rect-hard", ("wider", "ultra", "mega")),
 )
 FEATURES = (
     "support_load",
@@ -91,6 +91,7 @@ FOCUSED_MODE_MIX_F_SOURCE = "base:taper-wrap:mode-mix-f"
 FOCUSED_MODE_MIX_F_CLASS = "generated-mode-mix-f-focus"
 FOCUSED_OUTER_RECT_SOURCE = "base:rect-wrap:local-morph-f"
 FOCUSED_OUTER_RECT_CLASS = "generated-outer-rect-focus"
+FOCUSED_BEYOND_CEILING_CLASS = "generated-beyond-ceiling-followon"
 FOCUSED_SUPPORT_LAYOUT_FEATURES = (
     "anchor_deep_share_gap",
     "high_bridge_right_count",
@@ -175,6 +176,14 @@ def _format_membership(rows: list[object]) -> str:
     return f"{len(rows)} ({', '.join(f'{key}:{counts[key]}' for key in sorted(counts))})"
 
 
+def _format_row_names(rows: list[object]) -> str:
+    if not rows:
+        return "none"
+    return ",".join(
+        f"{getattr(row, 'ensemble_name')}:{getattr(row, 'source_name')}" for row in rows
+    )
+
+
 def _feature_ranges(rows: list[object]) -> dict[str, tuple[float, float]]:
     return {
         feature: (
@@ -220,6 +229,10 @@ def _predicted_branch(row: object) -> str:
     if hasattr(row, "predicted_branch"):
         return getattr(row, "predicted_branch")
     return guarded_predict_branch(row)
+
+
+def _is_beyond_refined_ceiling(row: object) -> bool:
+    return float(getattr(row, "mid_anchor_closure_peak")) > 10.0
 
 
 def _pick_representative_rows(
@@ -1017,6 +1030,38 @@ def main() -> None:
         max_terms=3,
         row_limit=args.row_limit,
     )
+    beyond_ceiling_followon_rows = [
+        row for row in outer_guardrail_noncollapse_rows if _is_beyond_refined_ceiling(row)
+    ]
+    beyond_ceiling_non_rect_rows = [
+        row
+        for row in beyond_ceiling_followon_rows
+        if getattr(row, "source_name") != FOCUSED_OUTER_RECT_SOURCE
+    ]
+    focused_beyond_ceiling_focus_rows: list[object] = []
+    focused_beyond_ceiling_one_feature_rules: list[object] = []
+    focused_beyond_ceiling_compact_rules: list[object] = []
+    if beyond_ceiling_non_rect_rows:
+        focused_beyond_ceiling_focus_rows = [
+            replace(row, subtype=FOCUSED_BEYOND_CEILING_CLASS)
+            for row in beyond_ceiling_non_rect_rows
+        ] + focused_generated_rows + focused_add4_rows + focused_mode_mix_f_rows
+        focused_beyond_ceiling_one_feature_rules = evaluate_rules(
+            focused_beyond_ceiling_focus_rows,
+            target_subtype=FOCUSED_BEYOND_CEILING_CLASS,
+            feature_names=list(FOCUSED_OUTER_RECT_FEATURES),
+            predicate_limit=args.predicate_limit,
+            max_terms=1,
+            row_limit=args.row_limit,
+        )
+        focused_beyond_ceiling_compact_rules = evaluate_rules(
+            focused_beyond_ceiling_focus_rows,
+            target_subtype=FOCUSED_BEYOND_CEILING_CLASS,
+            feature_names=list(FOCUSED_OUTER_RECT_FEATURES),
+            predicate_limit=args.predicate_limit,
+            max_terms=3,
+            row_limit=args.row_limit,
+        )
 
     print()
     print("Generated Non-Guarded Pair Compare")
@@ -1038,6 +1083,14 @@ def main() -> None:
         f"from_noncollapse={outer_guardrail_noncollapse_total}"
     )
     print("generated_outer_guardrail_scanned=" + ",".join(outer_guardrail_scanned))
+    print(
+        "generated_outer_guardrail_beyond_ceiling="
+        + _format_row_names(beyond_ceiling_followon_rows)
+    )
+    print(
+        "generated_outer_guardrail_beyond_ceiling_outside_rect="
+        + _format_row_names(beyond_ceiling_non_rect_rows)
+    )
     print(
         "generated_targets="
         + ",".join(
@@ -1080,6 +1133,14 @@ def main() -> None:
     if outer_guardrail_rows:
         print()
         print(render_feature_ranges("Generated outer guardrail ranges", outer_guardrail_rows))
+    if beyond_ceiling_followon_rows:
+        print()
+        print(
+            render_feature_ranges(
+                "Generated outer guardrail beyond-ceiling ranges",
+                beyond_ceiling_followon_rows,
+            )
+        )
     print()
     print(render_rule_projection("Anchor-band projection", rows, ANCHOR_BAND_RULE))
     print()
@@ -1122,6 +1183,17 @@ def main() -> None:
             render_translation_rows(
                 "Generated outer guardrail shoulder/throat translation",
                 outer_guardrail_rows,
+            )
+        )
+    if beyond_ceiling_followon_rows:
+        print()
+        print(
+            render_rows(
+                "Generated outer guardrail beyond-ceiling rows",
+                beyond_ceiling_followon_rows,
+                reference_rows=generated_rows,
+                reference_label="target",
+                band_rule=REFINED_ANCHOR_BAND_RULE,
             )
         )
     if anchor_band_false_positives:
@@ -1230,6 +1302,32 @@ def main() -> None:
                 focused_outer_rect_compact_rules,
             )
         )
+    if focused_beyond_ceiling_focus_rows:
+        print()
+        print(
+            render_pairwise_deltas(
+                "Beyond-ceiling follow-on vs representative shoulder/throat/knot deltas",
+                beyond_ceiling_non_rect_rows,
+                focused_generated_rows + focused_add4_rows + focused_mode_mix_f_rows,
+                delta_features=FOCUSED_OUTER_RECT_DELTA_FEATURES,
+            )
+        )
+        print()
+        print(
+            render_rule_table(
+                f"Beyond-ceiling follow-on one-feature separators for {FOCUSED_BEYOND_CEILING_CLASS}",
+                focused_beyond_ceiling_focus_rows,
+                focused_beyond_ceiling_one_feature_rules,
+            )
+        )
+        print()
+        print(
+            render_rule_table(
+                f"Beyond-ceiling follow-on compact separators for {FOCUSED_BEYOND_CEILING_CLASS}",
+                focused_beyond_ceiling_focus_rows,
+                focused_beyond_ceiling_compact_rules,
+            )
+        )
     print()
     print(
         render_rule_table(
@@ -1281,6 +1379,14 @@ def main() -> None:
         (rule for rule in focused_outer_rect_compact_rules if rule.exact),
         None,
     )
+    exact_focused_beyond_ceiling_one_feature = next(
+        (rule for rule in focused_beyond_ceiling_one_feature_rules if rule.exact),
+        None,
+    )
+    exact_focused_beyond_ceiling_compact = next(
+        (rule for rule in focused_beyond_ceiling_compact_rules if rule.exact),
+        None,
+    )
     outer_guardrail_escape_rows = [
         row
         for row in outer_guardrail_rows
@@ -1295,6 +1401,17 @@ def main() -> None:
         row
         for row in outer_guardrail_rows
         if _translation_label(row) == "low-support-throat"
+    ]
+    focused_outer_rect_rule_text = None
+    if exact_focused_outer_rect_one_feature is not None:
+        focused_outer_rect_rule_text = exact_focused_outer_rect_one_feature.rule_text
+    elif exact_focused_outer_rect_compact is not None:
+        focused_outer_rect_rule_text = exact_focused_outer_rect_compact.rule_text
+    beyond_ceiling_same_rule_rows = [
+        row
+        for row in beyond_ceiling_non_rect_rows
+        if focused_outer_rect_rule_text is not None
+        and matches_rule_text(row, focused_outer_rect_rule_text)
     ]
     print("Conclusion")
     print("==========")
@@ -1384,6 +1501,55 @@ def main() -> None:
             )
             print(
                 f"focused_exact_outer_rect={exact_focused_outer_rect_compact.rule_text}"
+            )
+        if beyond_ceiling_non_rect_rows:
+            if len(beyond_ceiling_same_rule_rows) == len(beyond_ceiling_non_rect_rows):
+                print(
+                    "The nearest widened beyond-ceiling follow-on outside rect-wrap still satisfies the same high-load clause, so the continuation is no longer rect-only on this bounded sparse guardrail."
+                )
+                print(
+                    "beyond_ceiling_followon="
+                    + f"outside_rect:{len(beyond_ceiling_non_rect_rows)} "
+                    + f"same_rule_hits:{len(beyond_ceiling_same_rule_rows)} "
+                    + f"rows:{_format_row_names(beyond_ceiling_non_rect_rows)}"
+                )
+            else:
+                print(
+                    "The nearest widened beyond-ceiling follow-on outside rect-wrap breaks the current rect-derived high-load clause, so the broader continuation needs a different or larger sparse guardrail."
+                )
+                print(
+                    "beyond_ceiling_followon="
+                    + f"outside_rect:{len(beyond_ceiling_non_rect_rows)} "
+                    + f"same_rule_hits:{len(beyond_ceiling_same_rule_rows)} "
+                    + f"rows:{_format_row_names(beyond_ceiling_non_rect_rows)}"
+                )
+                if exact_focused_beyond_ceiling_one_feature is not None:
+                    print(
+                        "followon_exact_rule="
+                        + exact_focused_beyond_ceiling_one_feature.rule_text
+                    )
+                elif exact_focused_beyond_ceiling_compact is not None:
+                    print(
+                        "followon_exact_rule="
+                        + exact_focused_beyond_ceiling_compact.rule_text
+                    )
+        elif len(beyond_ceiling_followon_rows) > len(focused_outer_rect_rows):
+            print(
+                "The nearest widened sparse guardrail adds beyond-ceiling noncollapse rows only from the same rect-wrap source, so the high-load continuation still has no outside-rect support."
+            )
+            print(
+                "beyond_ceiling_followon="
+                + f"outside_rect:0 total:{len(beyond_ceiling_followon_rows)} "
+                + f"rows:{_format_row_names(beyond_ceiling_followon_rows)}"
+            )
+        else:
+            print(
+                "The nearest widened sparse guardrail still finds no beyond-ceiling noncollapse row outside the current rect-wrap pair, so the broader-family claim remains open."
+            )
+            print(
+                "beyond_ceiling_followon="
+                + f"outside_rect:0 total:{len(beyond_ceiling_followon_rows)} "
+                + f"rows:{_format_row_names(beyond_ceiling_followon_rows)}"
             )
     elif (
         len(anchor_band_false_positives) == len(anchor_band_add4_rows)
@@ -1476,6 +1642,55 @@ def main() -> None:
             )
             print(
                 f"focused_exact_outer_rect={exact_focused_outer_rect_compact.rule_text}"
+            )
+        if beyond_ceiling_non_rect_rows:
+            if len(beyond_ceiling_same_rule_rows) == len(beyond_ceiling_non_rect_rows):
+                print(
+                    "The nearest widened beyond-ceiling follow-on outside rect-wrap still satisfies the same high-load clause, so the continuation is no longer rect-only on this bounded sparse guardrail."
+                )
+                print(
+                    "beyond_ceiling_followon="
+                    + f"outside_rect:{len(beyond_ceiling_non_rect_rows)} "
+                    + f"same_rule_hits:{len(beyond_ceiling_same_rule_rows)} "
+                    + f"rows:{_format_row_names(beyond_ceiling_non_rect_rows)}"
+                )
+            else:
+                print(
+                    "The nearest widened beyond-ceiling follow-on outside rect-wrap breaks the current rect-derived high-load clause, so the broader continuation needs a different or larger sparse guardrail."
+                )
+                print(
+                    "beyond_ceiling_followon="
+                    + f"outside_rect:{len(beyond_ceiling_non_rect_rows)} "
+                    + f"same_rule_hits:{len(beyond_ceiling_same_rule_rows)} "
+                    + f"rows:{_format_row_names(beyond_ceiling_non_rect_rows)}"
+                )
+                if exact_focused_beyond_ceiling_one_feature is not None:
+                    print(
+                        "followon_exact_rule="
+                        + exact_focused_beyond_ceiling_one_feature.rule_text
+                    )
+                elif exact_focused_beyond_ceiling_compact is not None:
+                    print(
+                        "followon_exact_rule="
+                        + exact_focused_beyond_ceiling_compact.rule_text
+                    )
+        elif len(beyond_ceiling_followon_rows) > len(focused_outer_rect_rows):
+            print(
+                "The nearest widened sparse guardrail adds beyond-ceiling noncollapse rows only from the same rect-wrap source, so the high-load continuation still has no outside-rect support."
+            )
+            print(
+                "beyond_ceiling_followon="
+                + f"outside_rect:0 total:{len(beyond_ceiling_followon_rows)} "
+                + f"rows:{_format_row_names(beyond_ceiling_followon_rows)}"
+            )
+        else:
+            print(
+                "The nearest widened sparse guardrail still finds no beyond-ceiling noncollapse row outside the current rect-wrap pair, so the broader-family claim remains open."
+            )
+            print(
+                "beyond_ceiling_followon="
+                + f"outside_rect:0 total:{len(beyond_ceiling_followon_rows)} "
+                + f"rows:{_format_row_names(beyond_ceiling_followon_rows)}"
             )
     elif exact_one_feature is not None:
         print(

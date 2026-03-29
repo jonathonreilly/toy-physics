@@ -1,3 +1,69 @@
+## 2026-03-29 06:14 America/New_York
+
+### Seam class
+- generated-family transfer
+- beyond-ceiling follow-on guardrail
+
+### Science impact
+- science advanced; the nearest widened sparse rect guardrail still produces no beyond-ceiling non-collapse row outside the same `rect-wrap:local-morph-f` pair, so `closure_load >= 75.000` remains a rect-local tail signal on this bounded slice rather than a confirmed broader continuation
+
+### Current state
+- Resumed the active generated-family transfer thread while `main` was still locally ahead at `9633fea`, with tracked post-push status dirt from the prior loop still present in the runtime handoff.
+- Read the required preflight artifacts in order, confirmed the prior handoff had no active child, acquired `physics-science`, reconciled the canonical repo at `main...origin/main [ahead 7]`, and retried the required pre-step push helper.
+- The required pre-step push helper again failed with DNS (`Could not resolve host: github.com`), so the repo stayed locally ahead before the new science step.
+- Extended `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_non_guarded_pair_compare.py` with one wider sparse rect guardrail follow-on over `rect-wrap`/`rect-hard` at `wider|ultra|mega`, plus explicit beyond-ceiling follow-on reporting, then ran it to:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-anchor-band-beyond-ceiling-followon.txt`
+- The widened sparse guardrail still contributes no refined-band generated rows and still produces only the same two beyond-ceiling non-collapse rows:
+  - `generated_outer_guardrail_rows = 0`
+  - `generated_outer_guardrail_beyond_ceiling = mega:base:rect-wrap:local-morph-f, ultra:base:rect-wrap:local-morph-f`
+  - `generated_outer_guardrail_beyond_ceiling_outside_rect = none`
+
+### Strongest confirmed conclusion
+- The refined anchor-balance basin remains exact on the current bounded basis:
+  - `anchor_closure_intensity_gap >= -2.000 and anchor_closure_intensity_gap <= 2.333 and mid_anchor_closure_peak <= 10.000`
+  - generated failures: `11/11`
+  - historical frozen `pair-only-sensitive`: `0/9`
+  - historical frozen `add1-sensitive`: `0/15`
+  - historical frozen `add4-sensitive`: `0/8`
+- On the focused outer-rect versus representative shoulder/throat/knot set, the same compact load observable still exact-separates the outer pair:
+  - `closure_load >= 75.000`
+  - outer rect pair: `2/2`
+  - representative shoulder + throat + frozen knot rows: `0/5`
+- The nearest widened sparse rect guardrail does not broaden that clause:
+  - beyond-ceiling non-collapse rows outside `rect-wrap`: `0`
+  - total beyond-ceiling follow-on rows on `rect-wrap`/`rect-hard` at `wider|ultra|mega`: `2`
+  - both remain the same `base:rect-wrap:local-morph-f` outer pair at `ultra` and `mega`
+- So the present physical read is unchanged in kind but sharper in scope:
+  - in-band generated failures: right/deep bridge shoulder + low-support throat
+  - frozen `add4` pocket: mid-anchor knot outside the refined ceiling
+  - sparse outer `rect-wrap:local-morph-f`: heavier knot-side continuation beyond that ceiling
+  - current bounded sparse evidence keeps the beyond-ceiling continuation local to the outer rect pair rather than confirming a broader generated family
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_non_guarded_pair_compare.py`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- New log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-anchor-band-beyond-ceiling-followon.txt`
+- Validation:
+  - `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_non_guarded_pair_compare.py`
+  - `python3 -u /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_non_guarded_pair_compare.py > /Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-anchor-band-beyond-ceiling-followon.txt`
+
+### Commit status
+- Pending local commit for the widened beyond-ceiling follow-on guardrail step.
+- The required pre-step push helper already failed with DNS (`Could not resolve host: github.com`); repository state stayed `ahead 7, behind 0` before this science result.
+
+### Exact next step
+- Identify one slightly wider or differently placed beyond-ceiling guardrail that yields the first non-rect non-collapse row, then test whether `closure_load >= 75.000` survives there or collapses back to the current outer rect tail.
+
+### First concrete action
+- Extend the same comparer with one sparse beyond-ceiling follow-on outside the current `rect-wrap`/`rect-hard` slice, prioritizing the nearest scenario family that can still produce non-collapse rows beyond the refined ceiling.
+
 ## 2026-03-29 05:27 America/New_York
 
 ### Seam class
