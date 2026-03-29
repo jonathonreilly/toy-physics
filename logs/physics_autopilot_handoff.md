@@ -1,26 +1,32 @@
 # Physics Autopilot Handoff
 
-## 2026-03-29 08:54 America/New_York
+## 2026-03-29 10:52 America/New_York
 
 ### Seam class
 - generated-family transfer
-- manual-frontier guard
+- beyond-ceiling non-rect late guardrails
 
 ### Science impact
-- no new science conclusion; integrity advanced by reconciling the tracked ahead-state to the already-synced repo and by refusing to overlap newer untracked beyond-ceiling probe artifacts on the exact next thread
+- science advanced; the next tested late non-rect guardrails are both empty, so the beyond-ceiling `closure_load >= 75.000` continuation remains rect-local on every tested `ultra|mega` follow-on so far
 
 ### Current state
-- Read the required preflight artifacts in order, confirmed the prior handoff had no active child, acquired `physics-science`, and reconciled the canonical repo at `main...origin/main` with `88b9b01` on both refs before any new step.
-- The tracked automation state was stale relative to the real repo: the tracked work log and handoff still described the pre-push `ahead 8` condition even though the canonical repo is already synced.
-- Found newer untracked beyond-ceiling frontier artifacts on the exact next thread:
-  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_beyond_ceiling_nonrect_sweep.py`
-  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_beyond_ceiling_first_nonrect_probe.py`
-  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-beyond-ceiling-nonrect-sweep.txt`
-  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-beyond-ceiling-nonrect-large-guardrail.txt`
-  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-beyond-ceiling-first-nonrect-probe.txt`
+- Resumed from the finished overnight automation state at `ff2bbd2` with `main...origin/main [ahead 1]`, confirmed the completed large-guardrail probe logs were no longer live, and released the stale `physics-science` lock before taking over manually.
+- Promoted the completed `large` late-slice result:
   - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-beyond-ceiling-first-nonrect-probe-large-ultra-mega.txt`
-- `lsof` found no active holder on those logs, but because the artifacts are newer than the tracked automation state and target the exact next non-rect guardrail follow-on, this loop performed only the guarded repo/manual-state reconciliation.
-- No active science child remains from this loop; no new frontier computation was started.
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-beyond-ceiling-nonrect-large-guardrail.txt`
+- The finished `large` result is fully negative:
+  - `packs = large`
+  - `ensembles = ultra, mega`
+  - `scanned_nonrect_combinations = 6`
+  - `first_nonrect_row = none`
+  - `nonrect_beyond_ceiling_rows = 0`
+- Ran the same first-hit late-slice probe on `mirror`:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-beyond-ceiling-first-nonrect-probe-mirror-ultra-mega.txt`
+- The finished `mirror` result is also fully negative:
+  - `packs = mirror`
+  - `ensembles = ultra, mega`
+  - `scanned_nonrect_combinations = 4`
+  - `first_nonrect_row = none`
 
 ### Strongest confirmed conclusion
 - The refined anchor-balance basin remains exact on the current bounded basis:
@@ -37,28 +43,34 @@
   - refined-band hits: `0`
   - beyond-ceiling non-collapse rows: `mega:base:rect-wrap:local-morph-f`, `ultra:base:rect-wrap:local-morph-f`
   - beyond-ceiling non-collapse rows outside `rect-wrap`: `none`
-- So the outer `rect-wrap:local-morph-f` pair remains the only bounded evidence for the beyond-ceiling continuation on the current sparse guardrail:
-  - same knot-side ceiling as the frozen `add4` pocket: `mid_anchor_closure_peak = 12.000`, `anchor_deep_share_gap = 0.000`
-  - still keeps `high_bridge_right_count = 1.000` and much heavier load: `support_load = 26.000`, `closure_load = 80.000`
-  - current sparse evidence keeps that continuation local to the outer rect pair rather than confirming a broader generated family
+- The next tested late non-rect guardrails also stay empty:
+  - `large` `ultra|mega`: no non-rect beyond-ceiling non-collapse row in `6` scanned combinations
+  - `mirror` `ultra|mega`: no non-rect beyond-ceiling non-collapse row in `4` scanned combinations
+- So the outer `rect-wrap:local-morph-f` pair remains the only bounded confirmed evidence for the beyond-ceiling continuation on all tested late guardrails so far.
 
 ### Files/logs changed
-- Updated run tracking:
+- New result logs:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-beyond-ceiling-nonrect-large-guardrail.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-beyond-ceiling-first-nonrect-probe-large-ultra-mega.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-beyond-ceiling-first-nonrect-probe-mirror-ultra-mega.txt`
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_beyond_ceiling_nonrect_sweep.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_beyond_ceiling_first_nonrect_probe.py`
+- Updated runtime state:
+  - `/Users/jonreilly/Projects/Physics/README.md`
   - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
   - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
-  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
 
 ### Commit status
-- Pre-step canonical repo sync: `88b9b01` on both `main` and `origin/main`.
-- This loop records one tracked integrity commit to align the work log and handoff with the real repo/manual frontier state.
-- The end-of-loop push helper result is recorded in automation memory.
+- HEAD remains `ff2bbd2` (`Guard manual beyond-ceiling frontier state`).
+- Pending local commit to promote the finished `large` and `mirror` late-guardrail negative results.
+- Remote sync status remains `ahead 1, behind 0` until that local commit is pushed.
 
 ### Remaining review seams
-- closed: reconcile the stale tracked ahead-state left after the widened guardrail chain was pushed
-- open: resolve the newer untracked beyond-ceiling non-rect probe artifacts before starting another automated science step
+- open: identify a more distant late guardrail, if any, that can still produce the first non-rect beyond-ceiling non-collapse row now that the nearest `large` and `mirror` `ultra|mega` slices are empty
 
 ### Exact next step
-- Reconcile the untracked beyond-ceiling non-rect probe artifacts, then decide from that resolved state whether the first non-rect beyond-ceiling row preserves `closure_load >= 75.000` or breaks it.
+- Reuse the first-hit probe on the next more distant candidate late slice rather than another broad sweep, and stop as soon as a non-rect beyond-ceiling row appears.
 
 ### First concrete action
-- Inspect the untracked probe scripts and zero-byte logs, then either promote that work into a tracked run or clear it before automation resumes the beyond-ceiling frontier.
+- Pick the next late guardrail beyond the exhausted `large` and `mirror` `ultra|mega` slices and rerun the first-hit probe there.

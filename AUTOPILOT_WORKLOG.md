@@ -1,3 +1,81 @@
+## 2026-03-29 10:52 America/New_York
+
+### Seam class
+- generated-family transfer
+- beyond-ceiling non-rect late guardrails
+
+### Science impact
+- science advanced; the next tested late non-rect guardrails stay empty, so the beyond-ceiling `closure_load >= 75.000` continuation remains rect-local not only on the base sparse rect slice but also on the `large` and `mirror` `ultra|mega` follow-ons
+
+### Current state
+- Resumed from the finished overnight automation state at `ff2bbd2` with `main...origin/main [ahead 1]`, confirmed the two large-guardrail probe logs were complete and no longer had live holders, then released the stale `physics-science` lock and acquired `manual-codex` to continue the thread.
+- Promoted the completed late-slice `large` result from:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-beyond-ceiling-first-nonrect-probe-large-ultra-mega.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-beyond-ceiling-nonrect-large-guardrail.txt`
+- The finished `large` late-slice result is fully negative:
+  - `packs = large`
+  - `ensembles = ultra, mega`
+  - `scanned_nonrect_combinations = 6`
+  - `first_nonrect_row = none`
+  - `nonrect_beyond_ceiling_rows = 0`
+- Ran the same first-hit probe on the differently placed mirror slice:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-beyond-ceiling-first-nonrect-probe-mirror-ultra-mega.txt`
+- The finished `mirror` late-slice result is also fully negative:
+  - `packs = mirror`
+  - `ensembles = ultra, mega`
+  - `scanned_nonrect_combinations = 4`
+  - `first_nonrect_row = none`
+
+### Strongest confirmed conclusion
+- The refined anchor-balance basin remains exact on the current bounded basis:
+  - `anchor_closure_intensity_gap >= -2.000 and anchor_closure_intensity_gap <= 2.333 and mid_anchor_closure_peak <= 10.000`
+  - generated failures: `11/11`
+  - historical frozen `pair-only-sensitive`: `0/9`
+  - historical frozen `add1-sensitive`: `0/15`
+  - historical frozen `add4-sensitive`: `0/8`
+- The focused outer-rect pair still exact-separates from the representative shoulder/throat/knot set with the same compact load observable:
+  - `closure_load >= 75.000`
+  - outer rect pair: `2/2`
+  - representative shoulder + throat + frozen knot rows: `0/5`
+- The beyond-ceiling continuation remains rect-local on every tested late guardrail so far:
+  - base sparse rect slice `rect-wrap/rect-hard` at `ultra|mega`: only `base:rect-wrap:local-morph-f`
+  - slightly wider `large` late non-rect slice at `ultra|mega`: `0` non-rect beyond-ceiling non-collapse rows
+  - differently placed `mirror` late non-rect slice at `ultra|mega`: `0` non-rect beyond-ceiling non-collapse rows
+- So the current physical read is sharper again:
+  - in-band generated failures: right/deep bridge shoulder + low-support throat
+  - frozen `add4` pocket: mid-anchor knot outside the refined ceiling
+  - sparse outer `rect-wrap:local-morph-f`: heavier knot-side continuation beyond that ceiling
+  - no tested late non-rect guardrail has yet produced a comparable beyond-ceiling non-collapse row
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_beyond_ceiling_nonrect_sweep.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_beyond_ceiling_first_nonrect_probe.py`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- New logs:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-beyond-ceiling-first-nonrect-probe-large-ultra-mega.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-beyond-ceiling-nonrect-large-guardrail.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-beyond-ceiling-first-nonrect-probe-mirror-ultra-mega.txt`
+
+### Validation
+- `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_beyond_ceiling_nonrect_sweep.py`
+- `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_beyond_ceiling_first_nonrect_probe.py`
+- `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_beyond_ceiling_first_nonrect_probe.py --packs mirror --ensembles ultra mega > /Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-beyond-ceiling-first-nonrect-probe-mirror-ultra-mega.txt`
+
+### Commit status
+- Pre-step canonical repo state: `ff2bbd2` on local `main`, `88b9b01` on `origin/main`.
+- Pending local commit to promote the finished `large` and `mirror` late-guardrail negative results plus the supporting probe scripts.
+
+### Exact next step
+- Test a more distant guardrail beyond the exhausted `large` and `mirror` `ultra|mega` slices, or move one ensemble tier later on a family that can still plausibly produce a non-rect beyond-ceiling non-collapse row.
+
+### First concrete action
+- Reuse the first-hit probe on the next candidate late slice rather than broad full-family sweeps, so the next continuation check exits as soon as the first qualifying non-rect row appears.
+
 ## 2026-03-29 08:54 America/New_York
 
 ### Seam class
