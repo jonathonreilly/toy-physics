@@ -38,6 +38,18 @@ NON_BASE_GUARDRAIL_LOGS = (
         ),
     ),
     (
+        "large:peta",
+        Path(
+            "/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-beyond-ceiling-first-nonrect-probe-large-peta.txt"
+        ),
+    ),
+    (
+        "large:exa",
+        Path(
+            "/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-beyond-ceiling-first-nonrect-probe-large-exa.txt"
+        ),
+    ),
+    (
         "mirror:ultra|mega",
         Path(
             "/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-beyond-ceiling-first-nonrect-probe-mirror-ultra-mega.txt"
@@ -146,7 +158,7 @@ def main() -> None:
     else:
         print(
             "conclusion=outside the observed base peta|exa branch, no finished non-base late guardrail "
-            "through large tera and mirror exa has produced any non-rect beyond-ceiling non-collapse row, "
+            "through large exa and mirror exa has produced any non-rect beyond-ceiling non-collapse row, "
             "so the current late-branch law has no broader-family transfer evidence and no non-base counterexample yet"
         )
     print()

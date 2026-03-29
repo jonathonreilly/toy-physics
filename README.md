@@ -240,7 +240,7 @@ Fine-grained mechanism work is currently concentrated on a fixed frontier snapsh
         - widening that same sparse rect guardrail one ensemble step to `wider|ultra|mega` still produces no beyond-ceiling non-collapse row outside the same `rect-wrap:local-morph-f` pair, so the present high-load continuation remains rect-local on that immediate bounded sparse slice
       - the next tested non-rect late guardrails also stay empty:
         - on the slightly wider `large` family at `ultra|mega`, the non-rect late slice (`taper-hard-large`, `taper-wrap-large`, `skew-wrap-large`) yields `scanned_nonrect_combinations = 6` and `first_nonrect_row = none`
-        - one tier later, that wider late slice still stays empty: on `large` at `giga` and `tera`, the same non-rect late slice yields `scanned_nonrect_combinations = 3` at each tier and `first_nonrect_row = none` at both
+	        - one tier later, that wider late slice still stays empty all the way through the tested deeper ladder: on `large` at `giga`, `tera`, `peta`, and `exa`, the same non-rect late slice yields `scanned_nonrect_combinations = 3` at each tier and `first_nonrect_row = none` at all four
         - on the differently placed `mirror` family at `ultra|mega`, the non-rect late slice (`skew-hard-mirror`, `skew-wrap-mirror`) yields `scanned_nonrect_combinations = 4` and `first_nonrect_row = none`
         - the mirrored late slice stays empty all the way through the tested deeper ladder: on `mirror` at `giga|tera`, the same non-rect late slice yields `scanned_nonrect_combinations = 4` and `first_nonrect_row = none`, and at `peta|exa` it yields `scanned_nonrect_combinations = 2` at each tier with `first_nonrect_row = none`
 	      - but the more distant base late slice now shows a broader persistent non-rect beyond-ceiling branch:
@@ -258,7 +258,7 @@ Fine-grained mechanism work is currently concentrated on a fixed frontier snapsh
 	          - skew-wrap branch: `anchor_deep_share_gap <= -0.334`
 	        - so `closure_load >= 75.000` still survives on the whole observed late non-rect branch, but the sharper current read is that it is one shared late high-load continuation with three distinct support-layout realizations rather than one undifferentiated tail
 	      - on the already finished non-base late guardrails, there is still no broader-family transfer evidence for that branch:
-	        - across `large` through `tera` and `mirror` through `exa`, the finished first-hit probes cover `24` non-rect combinations total and every one of those guardrails still reports `first_nonrect_row = none`
+	        - across `large` through `exa` and `mirror` through `exa`, the finished first-hit probes cover `30` non-rect combinations total and every one of those guardrails still reports `first_nonrect_row = none`
 	        - so outside the observed `base` `peta|exa` slice, the current late-branch law has no non-base counterexample yet, but also no new late-family realization to test
 	    - so the post-guard transfer break is now best read as a second nearby domain boundary: a moderate anchor-balance regime with one high-mid-anchor frozen `add4` pocket plus two generated realizations inside the refined band, a skew-wrap right/deep shoulder and a `mode-mix-f` low-support throat, while the sparse outer `rect-wrap` failures and the broader distant `base` late branch form a heavier beyond-ceiling continuation beyond that refined ceiling
 
