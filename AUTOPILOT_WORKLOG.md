@@ -1,3 +1,70 @@
+## 2026-03-29 15:58 America/New_York
+
+### Seam class
+- generated-family transfer
+- exhausted-wall translation
+
+### Science impact
+- science advanced; the empty non-base late wall now compresses to a concrete missing observable rather than just an absence of hits
+
+### Current state
+- Picked up from synced `36d24b4`, kept the manual lock, and stayed on the bounded base-side translation seam suggested by the frontier-closure audit.
+- Added and ran:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_large_exa_exhausted_slice_compare.py`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-large-exa-exhausted-slice-compare.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-mirror-exa-exhausted-slice-compare.txt`
+- Added and ran the follow-on translation check:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_late_branch_exhausted_wall_compare.py`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-late-branch-exhausted-wall-compare.txt`
+
+### Strongest confirmed conclusion
+- The deepest exhausted non-base slices do not fail the late branch in the same way:
+  - `large:exa` nearest miss = `large:taper-wrap-large:local-morph-g`
+    - `support_load = 26.000`
+    - `closure_load = 87.000`
+    - `mid_anchor_closure_peak = 8.000`
+    - so it already clears the observed late-branch load floors and misses only on concentrated mid-anchor closure
+  - `mirror:exa` nearest miss = `mirror:skew-hard-mirror:local-morph-f`
+    - `support_load = 17.000`
+    - `closure_load = 59.000`
+    - `mid_anchor_closure_peak = 8.000`
+    - so it misses both load and concentrated mid-anchor closure
+- Comparing the five observed base late rows against those two nearest exhausted-wall misses exact-separates with one scalar clause:
+  - `mid_anchor_closure_peak >= 10.000`
+  - `tp/fp/fn = 5/0/0`
+- So the sharper transfer read is:
+  - the current non-base generator family can approach or even exceed the late branch on gross load
+  - but the nearest exhausted non-base rows still ceiling at `mid_anchor_closure_peak = 8.000`
+  - while every observed base late row sits at `12.000`
+
+### Files and results changed in this run
+- Added scripts:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_large_exa_exhausted_slice_compare.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_late_branch_exhausted_wall_compare.py`
+- New result logs:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-large-exa-exhausted-slice-compare.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-mirror-exa-exhausted-slice-compare.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-late-branch-exhausted-wall-compare.txt`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+
+### Validation
+- `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_large_exa_exhausted_slice_compare.py`
+- `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_late_branch_exhausted_wall_compare.py`
+
+### Exact next step
+- Directly compare the observed late `base` rows against the closest `large:exa` miss to explain what structural change keeps closure broad instead of concentrating it at the mid anchor.
+
+### First concrete action
+- Build one small row-level structural comparer for:
+  - `base:peta|exa:base:taper-hard:local-morph-f`
+  - `base:peta|exa:base:rect-wrap:local-morph-f`
+  - `large:exa:large:taper-wrap-large:local-morph-g`
+- Then ask which anchor/candidate-closure placement feature distinguishes `mid_anchor_closure_peak = 12.000` from `8.000` at otherwise similar load.
+
 ## 2026-03-29 15:02 America/New_York
 
 ### Seam class
