@@ -1,3 +1,51 @@
+## 2026-03-28 21:03 America/New_York
+
+### Seam class
+- generated-family transfer
+- support-collapse domain edge
+
+### Science impact
+- science advanced; the first canonical generated-family transfer failure is now localized as an all-zero support-collapse edge rather than a historical pair-only branch extension
+
+### Current state
+- Reconciled protocol preflight cleanly:
+  - lock was free and acquired as `physics-science`
+  - `main == origin/main` at `5361bd4` before new science
+- Added and ran `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_zero_support_compare.py` as the direct continuation of the generated `geometry-c/e` failure thread.
+- The comparer reuses the repaired generated transfer row builder plus the frozen exact-law historical row builder, then contrasts the canonical generated failure rows against historical `pair-only-sensitive` and `add1-sensitive` support/order-parameter ranges.
+- New log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-generated-zero-support-compare.txt`
+
+### Strongest confirmed conclusion
+- The repeated generated transfer failures are a support-collapse edge, not a near-miss historical branch:
+  - across `default`, `broader`, and `wider`, the full failing set is still only the six repeated `geometry-c/e` rows
+  - all six rows are identically zero across the current support/order-parameter surface:
+    - `support_load = 0`
+    - `closure_load = 0`
+    - `mid_anchor_closure_peak = 0`
+    - `edge_identity_event_count = 0`
+    - `edge_identity_support_edge_density = 0`
+- The historical frozen bucket has no comparable zero-support rows in either nearby subtype family:
+  - historical `pair-only-sensitive`: `support_load 7 -> 14`, `closure_load 38 -> 54`, `edge_identity_event_count 65 -> 89`
+  - historical `add1-sensitive`: `support_load 7 -> 16`, `closure_load 34 -> 64`, `edge_identity_event_count 54 -> 95`
+- So the immediate generated-family transfer break should currently be treated as a support-collapse domain edge that needs an explicit domain guard, rather than as evidence that the historical `pair-only-sensitive` law transfers to a new zero-support branch.
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_zero_support_compare.py`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Validation:
+  - `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_zero_support_compare.py`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_zero_support_compare.py > /Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-generated-zero-support-compare.txt`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py`
+
+### Exact next step
+- Stay on the generated-family transfer thread and test one explicit domain guard for all-zero support-collapse rows before attempting any broader generated-law extension.
+
+### First concrete action
+- Add one tiny guarded transfer projection that labels rows with `support_load = closure_load = edge_identity_event_count = 0` as out-of-domain, then verify that this guard cleanly isolates the canonical `geometry-c/e` failures without touching the historical exact-close.
+
 ## 2026-03-28 20:34 America/New_York
 
 ### Seam class

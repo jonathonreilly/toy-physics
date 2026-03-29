@@ -202,8 +202,14 @@ Fine-grained mechanism work is currently concentrated on a fixed frontier snapsh
     - the first non-pocket generated cohort already appears at `base:taper-wrap:default`, with `2` geometry rows (`geometry-c`, `geometry-e`), both `pair-only-sensitive`
     - after fixing the transfer checker to treat undefined support-edge metrics as zero-valued rather than skipping the row, the canonical `default/broader/wider` ladder gives `rows_total = 6`, `misclassified_total = 6`, `first_failure_ensemble = default`
     - all six failures are the repeated `geometry-c/e` rows, predicted as `add1-sensitive` by the fallback branch because their support metrics collapse to zero (`closure_load = 0`, `mid_anchor_closure_peak = 0`)
+  - a direct generated-vs-historical comparer shows those failures are not just weak versions of the historical branch but a genuine support-collapse edge:
+    - across `default`, `broader`, and `wider`, all `6` failing rows are still just `geometry-c/e`, and every current support/order-parameter observable is exactly zero (`support_load = 0`, `closure_load = 0`, `edge_identity_event_count = 0`, `edge_identity_support_edge_density = 0`)
+    - the historical frozen bucket contains no `pair-only-sensitive` or `add1-sensitive` row with zero support activity:
+      - historical `pair-only`: `support_load 7 -> 14`, `closure_load 38 -> 54`, `edge_identity_event_count 65 -> 89`
+      - historical `add1`: `support_load 7 -> 16`, `closure_load 34 -> 64`, `edge_identity_event_count 54 -> 95`
+    - so the first generated-family transfer break is best read as a support-collapse domain edge rather than an in-family continuation of the historical `pair-only-sensitive` mechanism
 
-The open problem in this basin is no longer whether the family structure exists, whether the frozen bucket exact-closes, or whether the law survives on the available historical frontier ladder. It is explaining the generated-family zero-support `pair-only-sensitive` branch that appears immediately on nearby `taper-wrap` ensembles, deciding whether it should be treated as an out-of-family degeneracy or a real extension of the law, and then expressing that mechanism in cleaner physical language.
+The open problem in this basin is no longer whether the family structure exists, whether the frozen bucket exact-closes, or whether the law survives on the available historical frontier ladder. It is explaining the generated-family zero-support `pair-only-sensitive` branch that appears immediately on nearby `taper-wrap` ensembles, now with evidence that it is a support-collapse out-of-domain edge rather than a simple extension of the historical law, and then expressing that mechanism in cleaner physical language.
 
 ## Active Technical Problem
 
@@ -212,7 +218,7 @@ The main active technical problem is projecting and translating the exact low-ov
 The relevant questions are:
 
 - why the canonical generated `taper-wrap` ladder introduces a repeated zero-support `pair-only-sensitive` branch (`geometry-c/e`) that is absent from the historical frontier ladder
-- whether the exact branch-aware law should be extended or explicitly gated when those support metrics collapse to zero
+- how the exact branch-aware law should be explicitly domain-gated when the generated support/order-parameter surface collapses to all zeros
 - whether that competition can be expressed more cleanly in support-layout or topological language
 - which parts of the present explanation are stable structure and which depend on the current observable basis
 
@@ -221,7 +227,7 @@ The relevant questions are:
 The main unresolved points are:
 
 - the spent-delay action family is favored in the benchmark, but not derived from deeper first principles
-- low-overlap subtype competition is now much more compressed on the frozen `5504` bucket and exact across the available historical frontier ladder, but nearby generated-family `taper-wrap` transfer fails immediately on a repeated zero-support `pair-only-sensitive` branch (`geometry-c/e`)
+- low-overlap subtype competition is now much more compressed on the frozen `5504` bucket and exact across the available historical frontier ladder, but nearby generated-family `taper-wrap` transfer still fails immediately on a repeated zero-support `pair-only-sensitive` branch (`geometry-c/e`) that now looks like a support-collapse domain edge rather than an in-family historical branch
 - the present mechanism language is more geometric and topological than it was earlier, but it is not yet a clean bridge to standard continuum physics
 - the strongest fine-grained mechanism results are exact on the available historical frontier ladder, but not yet a general theorem over nearby generated families because the first canonical generated-family stress test already breaks
 
