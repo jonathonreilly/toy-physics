@@ -1,3 +1,55 @@
+## 2026-03-29 18:02 America/New_York
+
+### Seam class
+- generated-family transfer
+- packet-neighborhood closure
+
+### Science impact
+- science advanced; the exhausted-wall `7/8 -> 8/12` packet gap now localizes to one missing mid-packet support node instead of another unresolved layout family
+
+### Current state
+- Picked up from synced `4e900ca`, acquired the `physics-science` lock, and stayed on the active exhausted-wall packet-strengthening thread from the handoff.
+- Added and ran:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_late_branch_packet_neighborhood_compare.py`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-late-branch-packet-neighborhood-compare.txt`
+- The bounded compare covers exactly:
+  - `base:exa:base:skew-wrap:local-morph-k`
+  - `large:exa:large:taper-wrap-large:local-morph-g`
+  - `mirror:exa:mirror:skew-hard-mirror:local-morph-f`
+
+### Strongest confirmed conclusion
+- The dominant late left and mid packets are the same full eight-support octagon:
+  - `attached = 8`
+  - `bridge_bridge_closed_pairs = 12`
+- Both exhausted-wall misses share the same dominant mid-packet defect relative to that late template:
+  - missing relative support node `(-1, 0)`
+  - missing support-closure edges `(-1,-1)->(-1,0)`, `(-1,0)->(-1,1)`, `(-1,0)->(0,-1)`, `(-1,0)->(0,1)`
+- So the exhausted wall does not miss the late packet by another broad layout change; it misses one inward left-flank support node, and that one local hole is exactly what keeps the dominant mid packet at `7` attached bridges / `8` bridge-bridge closed pairs instead of `8/12`.
+- The closest `large:exa` miss still keeps the full octagon on the left anchor band, so its failure is specifically that the completed packet never transfers into the mid band.
+- The `mirror:exa` miss is stricter still:
+  - it shares the same depleted seven-support mid packet
+  - and its dominant left packet is also one support short
+
+### Files and results changed in this run
+- Added script:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_late_branch_packet_neighborhood_compare.py`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-late-branch-packet-neighborhood-compare.txt`
+
+### Validation
+- `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_late_branch_packet_neighborhood_compare.py`
+
+### Exact next step
+- Test whether that same one-node inward-left-flank mid-packet completion persists across all five observed late rows, or whether some late rows reach `8/12` through a different local neighborhood.
+
+### First concrete action
+- Extend the packet-neighborhood compare from the current `skew-wrap`/`large`/`mirror` triplet to every observed late row and normalize each dominant mid packet against the shared exhausted-wall seven-support template before widening the physical-language summary again.
+
 ## 2026-03-29 17:23 America/New_York
 
 ### Seam class
