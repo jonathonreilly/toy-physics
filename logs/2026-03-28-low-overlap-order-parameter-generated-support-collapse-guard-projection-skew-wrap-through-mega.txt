@@ -1,0 +1,132 @@
+generated support-collapse guard projection started 2026-03-28T21:22:57
+
+Generated Support-Collapse Guard Projection
+===========================================
+target=base:skew-wrap
+ensembles=default,broader,wider,ultra,mega
+generated_rows_total=9
+generated_guarded_total=0
+generated_modeled_rows_total=9
+generated_modeled_misclassified_total=9
+generated_modeled_ambiguous_total=0
+generated_modeled_unmatched_total=0
+first_modeled_failure_ensemble=default
+historical_guarded_total=0
+historical_modeled_misclassified_total=0
+
+ensemble=default
+----------------
+rows=1 (pair-only-sensitive:1)
+styles=local-morph:1
+guarded=0 (none)
+modeled_rows=1 (pair-only-sensitive:1)
+modeled_misclassified=1 (pair-only-sensitive:1)
+modeled_ambiguous=0 (none)
+modeled_unmatched=0 (none)
+guarded_branches:
+  guarded-support-collapse: 0 (none)
+  high-closure-add4: 0 (none)
+  high-closure-pair-only: 0 (none)
+  outside-gate-pair-only: 0 (none)
+  outside-gate-add4: 0 (none)
+  outside-gate-add1-default: 1 (pair-only-sensitive:1)
+guarded_rows: none
+modeled_misclassified_rows:
+  local-morph:base:skew-wrap:local-morph-c actual=pair-only-sensitive predicted=add1-sensitive branch=outside-gate-add1-default
+
+ensemble=broader
+----------------
+rows=2 (pair-only-sensitive:2)
+styles=local-morph:1, mode-mix:1
+guarded=0 (none)
+modeled_rows=2 (pair-only-sensitive:2)
+modeled_misclassified=2 (pair-only-sensitive:2)
+modeled_ambiguous=0 (none)
+modeled_unmatched=0 (none)
+guarded_branches:
+  guarded-support-collapse: 0 (none)
+  high-closure-add4: 0 (none)
+  high-closure-pair-only: 0 (none)
+  outside-gate-pair-only: 0 (none)
+  outside-gate-add4: 0 (none)
+  outside-gate-add1-default: 2 (pair-only-sensitive:2)
+guarded_rows: none
+modeled_misclassified_rows:
+  local-morph:base:skew-wrap:local-morph-c actual=pair-only-sensitive predicted=add1-sensitive branch=outside-gate-add1-default
+  mode-mix:base:skew-wrap:mode-mix-d actual=pair-only-sensitive predicted=add1-sensitive branch=outside-gate-add1-default
+
+ensemble=wider
+--------------
+rows=2 (pair-only-sensitive:2)
+styles=local-morph:1, mode-mix:1
+guarded=0 (none)
+modeled_rows=2 (pair-only-sensitive:2)
+modeled_misclassified=2 (pair-only-sensitive:2)
+modeled_ambiguous=0 (none)
+modeled_unmatched=0 (none)
+guarded_branches:
+  guarded-support-collapse: 0 (none)
+  high-closure-add4: 0 (none)
+  high-closure-pair-only: 0 (none)
+  outside-gate-pair-only: 0 (none)
+  outside-gate-add4: 0 (none)
+  outside-gate-add1-default: 2 (pair-only-sensitive:2)
+guarded_rows: none
+modeled_misclassified_rows:
+  local-morph:base:skew-wrap:local-morph-c actual=pair-only-sensitive predicted=add1-sensitive branch=outside-gate-add1-default
+  mode-mix:base:skew-wrap:mode-mix-d actual=pair-only-sensitive predicted=add1-sensitive branch=outside-gate-add1-default
+
+ensemble=ultra
+--------------
+rows=2 (pair-only-sensitive:2)
+styles=local-morph:1, mode-mix:1
+guarded=0 (none)
+modeled_rows=2 (pair-only-sensitive:2)
+modeled_misclassified=2 (pair-only-sensitive:2)
+modeled_ambiguous=0 (none)
+modeled_unmatched=0 (none)
+guarded_branches:
+  guarded-support-collapse: 0 (none)
+  high-closure-add4: 0 (none)
+  high-closure-pair-only: 0 (none)
+  outside-gate-pair-only: 0 (none)
+  outside-gate-add4: 0 (none)
+  outside-gate-add1-default: 2 (pair-only-sensitive:2)
+guarded_rows: none
+modeled_misclassified_rows:
+  local-morph:base:skew-wrap:local-morph-c actual=pair-only-sensitive predicted=add1-sensitive branch=outside-gate-add1-default
+  mode-mix:base:skew-wrap:mode-mix-d actual=pair-only-sensitive predicted=add1-sensitive branch=outside-gate-add1-default
+
+ensemble=mega
+-------------
+rows=2 (pair-only-sensitive:2)
+styles=local-morph:1, mode-mix:1
+guarded=0 (none)
+modeled_rows=2 (pair-only-sensitive:2)
+modeled_misclassified=2 (pair-only-sensitive:2)
+modeled_ambiguous=0 (none)
+modeled_unmatched=0 (none)
+guarded_branches:
+  guarded-support-collapse: 0 (none)
+  high-closure-add4: 0 (none)
+  high-closure-pair-only: 0 (none)
+  outside-gate-pair-only: 0 (none)
+  outside-gate-add4: 0 (none)
+  outside-gate-add1-default: 2 (pair-only-sensitive:2)
+guarded_rows: none
+modeled_misclassified_rows:
+  local-morph:base:skew-wrap:local-morph-c actual=pair-only-sensitive predicted=add1-sensitive branch=outside-gate-add1-default
+  mode-mix:base:skew-wrap:mode-mix-d actual=pair-only-sensitive predicted=add1-sensitive branch=outside-gate-add1-default
+
+historical_frozen_bucket
+=======================
+rows=32 (add1-sensitive:15, add4-sensitive:8, pair-only-sensitive:9)
+guarded=0 (none)
+modeled_misclassified=0 (none)
+guarded_rows: none
+
+Conclusion
+==========
+The minimal zero-support guard does not cleanly isolate the generated failures or it disturbs the historical exact-close.
+
+generated support-collapse guard projection completed 2026-03-28T21:28:11 total_elapsed=313.4s

@@ -1,3 +1,101 @@
+## 2026-03-28 21:28 America/New_York
+
+### Seam class
+- generated-family transfer
+- first non-guarded generated failures
+
+### Science impact
+- science advanced; the zero-support guard isolates the first generated edge, but nearby generated transfer still fails immediately on new non-guarded pair-only rows
+
+### Current state
+- Reused `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_support_collapse_guard_projection.py` for the queued follow-on sweeps instead of adding more machinery.
+- Ran the guarded projection on:
+  - `base:taper-wrap` through `default, broader, wider, ultra, mega`
+  - `base:skew-wrap` through `default, broader, wider, ultra, mega`
+- New logs:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-generated-support-collapse-guard-projection-taper-wrap-through-mega.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-generated-support-collapse-guard-projection-skew-wrap-through-mega.txt`
+
+### Strongest confirmed conclusion
+- The minimal support-collapse guard isolates the original `geometry-c/e` edge but does not close nearby generated transfer.
+- On `base:taper-wrap` through `mega`:
+  - `generated_rows_total = 12`
+  - `generated_guarded_total = 10`
+  - `generated_modeled_rows_total = 2`
+  - `generated_modeled_misclassified_total = 2`
+  - `first_modeled_failure_ensemble = ultra`
+  - the first non-guarded failure is `base:taper-wrap:mode-mix-f`, repeated at `ultra` and `mega`, actual `pair-only-sensitive` but still predicted `add1-sensitive`
+- On neighboring `base:skew-wrap` through `mega`:
+  - `generated_rows_total = 9`
+  - `generated_guarded_total = 0`
+  - `generated_modeled_misclassified_total = 9`
+  - `first_modeled_failure_ensemble = default`
+  - failures start immediately with `base:skew-wrap:local-morph-c`, and `base:skew-wrap:mode-mix-d` joins from `broader` onward
+- In both sweeps, the historical frozen bucket remains untouched:
+  - `historical_guarded_total = 0`
+  - `historical_modeled_misclassified_total = 0`
+- So the active generated-family frontier is no longer the zero-support guard itself; it is the new non-guarded pair-only generated branch that survives after that guard is applied.
+
+### Files and results changed in this run
+- Repo-facing code reused:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_support_collapse_guard_projection.py`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Validation:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_support_collapse_guard_projection.py --ensembles default broader wider ultra mega > /Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-generated-support-collapse-guard-projection-taper-wrap-through-mega.txt`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_support_collapse_guard_projection.py --scenario-name skew-wrap --ensembles default broader wider ultra mega > /Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-generated-support-collapse-guard-projection-skew-wrap-through-mega.txt`
+
+### Exact next step
+- Stay on the generated-family transfer thread and compare the new non-guarded generated failures against the historical `pair-only-sensitive` branch.
+
+### First concrete action
+- Add one tiny row-level comparer for `base:taper-wrap:mode-mix-f`, `base:skew-wrap:local-morph-c`, and `base:skew-wrap:mode-mix-d`, then test whether they share a compact nonzero-support mechanism that the current law is missing.
+
+## 2026-03-28 21:18 America/New_York
+
+### Seam class
+- generated-family transfer
+- support-collapse domain guard
+
+### Science impact
+- science advanced; the canonical generated-family transfer break now cleanly isolates under a minimal explicit support-collapse guard without disturbing the historical exact-close
+
+### Current state
+- Picked up the pushed zero-support compare checkpoint and continued the queued next step rather than widening the generated ladder blindly.
+- Added `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_support_collapse_guard_projection.py` as a guarded transfer projection on top of the repaired generated row builder and the frozen exact-law historical projector.
+- The guarded projection marks rows with `support_load = 0`, `closure_load = 0`, and `edge_identity_event_count = 0` as `out-of-domain`, then checks both the canonical generated ladder and the historical frozen bucket under that guard.
+- New log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-generated-support-collapse-guard-projection.txt`
+
+### Strongest confirmed conclusion
+- The minimal support-collapse guard cleanly isolates the canonical generated failure set:
+  - `generated_rows_total = 6`
+  - `generated_guarded_total = 6`
+  - `generated_modeled_rows_total = 0`
+  - `generated_modeled_misclassified_total = 0`
+- The guarded rows are still only the repeated `geometry-c/e` cases across `default`, `broader`, and `wider`; no new modeled generated failure appears once those rows are treated as out-of-domain.
+- The historical frozen bucket is untouched by the guard:
+  - `historical_guarded_total = 0`
+  - `historical_modeled_misclassified_total = 0`
+  - so the frozen `32/32` exact-close survives unchanged under the guarded projection
+- That means the current nearby generated-family break is now a bounded domain-boundary issue, not evidence that the historical law itself is already wrong on in-domain nearby analogs.
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_support_collapse_guard_projection.py`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Validation:
+  - `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_support_collapse_guard_projection.py`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_support_collapse_guard_projection.py > /Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-generated-support-collapse-guard-projection.txt`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py`
+
+### Exact next step
+- Stay on the generated-family transfer thread and search for the first non-guarded generated failure beyond the isolated `geometry-c/e` support-collapse edge.
+
+### First concrete action
+- Extend the guarded projection to the next nearby ensembles or neighboring scenarios (`ultra`, `mega`, then `skew-wrap`) and stop at the first generated row that is neither guarded nor correctly classified.
+
 ## 2026-03-28 21:03 America/New_York
 
 ### Seam class
