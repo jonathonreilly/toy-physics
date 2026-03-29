@@ -89,6 +89,8 @@ FOCUSED_GENERATED_SOURCES = (
 )
 FOCUSED_MODE_MIX_F_SOURCE = "base:taper-wrap:mode-mix-f"
 FOCUSED_MODE_MIX_F_CLASS = "generated-mode-mix-f-focus"
+FOCUSED_OUTER_RECT_SOURCE = "base:rect-wrap:local-morph-f"
+FOCUSED_OUTER_RECT_CLASS = "generated-outer-rect-focus"
 FOCUSED_SUPPORT_LAYOUT_FEATURES = (
     "anchor_deep_share_gap",
     "high_bridge_right_count",
@@ -99,6 +101,14 @@ FOCUSED_SUPPORT_LAYOUT_FEATURES = (
 FOCUSED_MODE_MIX_F_FEATURES = (
     "support_load",
     "closure_load",
+    "edge_identity_event_count",
+)
+FOCUSED_OUTER_RECT_FEATURES = (
+    "support_load",
+    "closure_load",
+    "mid_anchor_closure_peak",
+    "anchor_deep_share_gap",
+    "high_bridge_right_count",
     "edge_identity_event_count",
 )
 FOCUSED_DELTA_FEATURES = (
@@ -120,6 +130,15 @@ FOCUSED_MODE_MIX_F_DELTA_FEATURES = (
     "high_bridge_right_count",
     "edge_identity_event_count",
     "edge_identity_support_edge_density",
+)
+FOCUSED_OUTER_RECT_DELTA_FEATURES = (
+    "support_load",
+    "closure_load",
+    "mid_anchor_closure_peak",
+    "anchor_closure_intensity_gap",
+    "anchor_deep_share_gap",
+    "high_bridge_right_count",
+    "edge_identity_event_count",
 )
 ENSEMBLE_ORDER = {name: index for index, name in enumerate(DEFAULT_NEARBY_ENSEMBLES)}
 
@@ -330,8 +349,9 @@ def build_sparse_guardrail_rows(
     *,
     ge6_tree: object,
     dpadj_tree: object,
-) -> tuple[list[object], list[str], int]:
+) -> tuple[list[object], list[object], list[str], int]:
     selected_rows: list[object] = []
+    noncollapse_rows: list[object] = []
     scanned_specs: list[str] = []
     noncollapse_total = 0
 
@@ -349,6 +369,7 @@ def build_sparse_guardrail_rows(
                 if is_support_collapse(row):
                     continue
                 noncollapse_total += 1
+                noncollapse_rows.append(row)
                 if matches_rule_text(row, REFINED_ANCHOR_BAND_RULE):
                     selected_rows.append(row)
 
@@ -358,7 +379,13 @@ def build_sparse_guardrail_rows(
             getattr(row, "ensemble_name"),
         )
     )
-    return selected_rows, scanned_specs, noncollapse_total
+    noncollapse_rows.sort(
+        key=lambda row: (
+            getattr(row, "source_name"),
+            getattr(row, "ensemble_name"),
+        )
+    )
+    return selected_rows, noncollapse_rows, scanned_specs, noncollapse_total
 
 
 def build_comparison_rows(
@@ -802,7 +829,12 @@ def main() -> None:
             limit=args.nearby_limit,
         )
     )
-    outer_guardrail_rows, outer_guardrail_scanned, outer_guardrail_noncollapse_total = (
+    (
+        outer_guardrail_rows,
+        outer_guardrail_noncollapse_rows,
+        outer_guardrail_scanned,
+        outer_guardrail_noncollapse_total,
+    ) = (
         build_sparse_guardrail_rows(
             args.pack_name,
             ge6_tree=ge6_tree,
@@ -956,6 +988,31 @@ def main() -> None:
         focused_mode_mix_f_focus_rows,
         target_subtype=FOCUSED_MODE_MIX_F_CLASS,
         feature_names=list(FOCUSED_MODE_MIX_F_FEATURES),
+        predicate_limit=args.predicate_limit,
+        max_terms=3,
+        row_limit=args.row_limit,
+    )
+    focused_outer_rect_rows = [
+        row
+        for row in outer_guardrail_noncollapse_rows
+        if getattr(row, "source_name") == FOCUSED_OUTER_RECT_SOURCE
+    ]
+    focused_outer_rect_focus_rows = [
+        replace(row, subtype=FOCUSED_OUTER_RECT_CLASS)
+        for row in focused_outer_rect_rows
+    ] + focused_generated_rows + focused_add4_rows + focused_mode_mix_f_rows
+    focused_outer_rect_one_feature_rules = evaluate_rules(
+        focused_outer_rect_focus_rows,
+        target_subtype=FOCUSED_OUTER_RECT_CLASS,
+        feature_names=list(FOCUSED_OUTER_RECT_FEATURES),
+        predicate_limit=args.predicate_limit,
+        max_terms=1,
+        row_limit=args.row_limit,
+    )
+    focused_outer_rect_compact_rules = evaluate_rules(
+        focused_outer_rect_focus_rows,
+        target_subtype=FOCUSED_OUTER_RECT_CLASS,
+        feature_names=list(FOCUSED_OUTER_RECT_FEATURES),
         predicate_limit=args.predicate_limit,
         max_terms=3,
         row_limit=args.row_limit,
@@ -1147,6 +1204,32 @@ def main() -> None:
                 focused_mode_mix_f_compact_rules,
             )
         )
+    if focused_outer_rect_focus_rows:
+        print()
+        print(
+            render_pairwise_deltas(
+                "Focused outer rect vs representative shoulder/throat/knot deltas",
+                focused_outer_rect_rows,
+                focused_generated_rows + focused_add4_rows + focused_mode_mix_f_rows,
+                delta_features=FOCUSED_OUTER_RECT_DELTA_FEATURES,
+            )
+        )
+        print()
+        print(
+            render_rule_table(
+                f"Focused outer rect one-feature separators for {FOCUSED_OUTER_RECT_CLASS}",
+                focused_outer_rect_focus_rows,
+                focused_outer_rect_one_feature_rules,
+            )
+        )
+        print()
+        print(
+            render_rule_table(
+                f"Focused outer rect compact separators for {FOCUSED_OUTER_RECT_CLASS}",
+                focused_outer_rect_focus_rows,
+                focused_outer_rect_compact_rules,
+            )
+        )
     print()
     print(
         render_rule_table(
@@ -1188,6 +1271,14 @@ def main() -> None:
     )
     exact_focused_mode_mix_f_compact = next(
         (rule for rule in focused_mode_mix_f_compact_rules if rule.exact),
+        None,
+    )
+    exact_focused_outer_rect_one_feature = next(
+        (rule for rule in focused_outer_rect_one_feature_rules if rule.exact),
+        None,
+    )
+    exact_focused_outer_rect_compact = next(
+        (rule for rule in focused_outer_rect_compact_rules if rule.exact),
         None,
     )
     outer_guardrail_escape_rows = [
@@ -1273,6 +1364,27 @@ def main() -> None:
                     + f"throat:{len(outer_guardrail_throat_rows)} "
                     + f"outside:{len(outer_guardrail_escape_rows)}"
                 )
+        if exact_focused_outer_rect_one_feature is not None:
+            print(
+                "On the focused outer rect versus shoulder/throat/knot set, one compact load observable exact-separates the outer rect pair from the current representatives."
+            )
+            print(
+                f"focused_exact_outer_rect={exact_focused_outer_rect_one_feature.rule_text}"
+            )
+            print(
+                "outer_rect_translation=the outer rect pair shares the knot-side ceiling "
+                "(mid_anchor_closure_peak=12.000, anchor_deep_share_gap=0.000) with the frozen add4 pocket, "
+                "but it keeps high_bridge_right_count=1.000 and rises to a much heavier load "
+                "(support_load=26.000, closure_load=80.000), so it reads as a loaded knot-side continuation "
+                "beyond the refined ceiling rather than as the same frozen knot pocket."
+            )
+        elif exact_focused_outer_rect_compact is not None:
+            print(
+                "On the focused outer rect versus shoulder/throat/knot set, a compact load-sensitive clause exact-separates the outer rect pair from the current representatives."
+            )
+            print(
+                f"focused_exact_outer_rect={exact_focused_outer_rect_compact.rule_text}"
+            )
     elif (
         len(anchor_band_false_positives) == len(anchor_band_add4_rows)
         and not anchor_band_false_negatives
@@ -1344,6 +1456,27 @@ def main() -> None:
                     + f"throat:{len(outer_guardrail_throat_rows)} "
                     + f"outside:{len(outer_guardrail_escape_rows)}"
                 )
+        if exact_focused_outer_rect_one_feature is not None:
+            print(
+                "On the focused outer rect versus shoulder/throat/knot set, one compact load observable exact-separates the outer rect pair from the current representatives."
+            )
+            print(
+                f"focused_exact_outer_rect={exact_focused_outer_rect_one_feature.rule_text}"
+            )
+            print(
+                "outer_rect_translation=the outer rect pair shares the knot-side ceiling "
+                "(mid_anchor_closure_peak=12.000, anchor_deep_share_gap=0.000) with the frozen add4 pocket, "
+                "but it keeps high_bridge_right_count=1.000 and rises to a much heavier load "
+                "(support_load=26.000, closure_load=80.000), so it reads as a loaded knot-side continuation "
+                "beyond the refined ceiling rather than as the same frozen knot pocket."
+            )
+        elif exact_focused_outer_rect_compact is not None:
+            print(
+                "On the focused outer rect versus shoulder/throat/knot set, a compact load-sensitive clause exact-separates the outer rect pair from the current representatives."
+            )
+            print(
+                f"focused_exact_outer_rect={exact_focused_outer_rect_compact.rule_text}"
+            )
     elif exact_one_feature is not None:
         print(
             "The prior anchor-balance band leaks on the broadened comparison set, but an exact one-feature separator still exists on the full bounded basis."
