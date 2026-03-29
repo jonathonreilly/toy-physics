@@ -1,3 +1,63 @@
+## 2026-03-29 19:16 America/New_York
+
+### Seam class
+- generated-family transfer
+- exhausted-wall packet completion closure
+
+### Science impact
+- science advanced; the inward-left-flank packet completion now exact-marks all five observed late rows rather than only the earlier skew-wrap slice
+
+### Current state
+- Picked up from local `f60ddf0` with the canonical repo still `ahead 1, behind 0`; the required preflight push retry again failed with `dns_failure`, so the loop stayed local and held the `physics-science` lock.
+- Updated and ran:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_late_branch_packet_neighborhood_compare.py`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-late-branch-packet-neighborhood-compare-full-wall.txt`
+- The widened compare covers exactly:
+  - `peta:base:rect-wrap:local-morph-f`
+  - `exa:base:rect-wrap:local-morph-f`
+  - `peta:base:taper-hard:local-morph-f`
+  - `exa:base:taper-hard:local-morph-f`
+  - `exa:base:skew-wrap:local-morph-k`
+  - `exa:large:taper-wrap-large:local-morph-g`
+  - `exa:mirror:skew-hard-mirror:local-morph-f`
+- No detached science child was launched.
+
+### Strongest confirmed conclusion
+- All five observed late rows share the same dominant mid packet:
+  - full eight-support octagon
+  - `attached = 8`
+  - `bridge_bridge_closed_pairs = 12`
+- Both exhausted-wall misses share the same depleted dominant mid packet:
+  - `attached = 7`
+  - `bridge_bridge_closed_pairs = 8`
+  - missing relative support node `(-1, 0)`
+  - missing support-closure edges `(-1,-1)->(-1,0)`, `(-1,0)->(-1,1)`, `(-1,0)->(0,-1)`, `(-1,0)->(0,1)`
+- Every observed late row completes that same exhausted-wall template in the same way:
+  - add relative support node `(-1, 0)`
+  - restore those same four incident bridge-bridge support closures
+- The closest `large:exa` miss still keeps the full octagon on the left anchor band, while the `mirror:exa` miss also leaves its strongest left packet one support short.
+- So the current late-vs-exhausted transfer law is now a stable local mid-packet completion across the whole observed late branch, not another anchor-layout change.
+
+### Files and results changed in this run
+- Updated script:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_late_branch_packet_neighborhood_compare.py`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-late-branch-packet-neighborhood-compare-full-wall.txt`
+
+### Validation
+- `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_late_branch_packet_neighborhood_compare.py`
+
+### Exact next step
+- Translate the now-confirmed `(-1, 0)` completion into support-role or topological language and test whether any nearby generated family breaks that coordinate-free read.
+
+### First concrete action
+- Compare the exhausted seven-support mid template and the five late completions in support-role terms, starting from the missing node's bridge and closure-incidence pattern rather than raw relative coordinates.
+
 ## 2026-03-29 18:02 America/New_York
 
 ### Seam class

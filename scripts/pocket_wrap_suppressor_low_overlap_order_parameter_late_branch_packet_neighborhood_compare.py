@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+from collections import Counter
 from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
@@ -37,6 +38,10 @@ LATE_CLASS = "late-base"
 LARGE_MISS_CLASS = "large-exhausted-miss"
 MIRROR_MISS_CLASS = "mirror-exhausted-miss"
 TARGET_SPECS = (
+    ("peta", "base", "rect-wrap", "base:rect-wrap:local-morph-f", LATE_CLASS),
+    ("exa", "base", "rect-wrap", "base:rect-wrap:local-morph-f", LATE_CLASS),
+    ("peta", "base", "taper-hard", "base:taper-hard:local-morph-f", LATE_CLASS),
+    ("exa", "base", "taper-hard", "base:taper-hard:local-morph-f", LATE_CLASS),
     ("exa", "base", "skew-wrap", "base:skew-wrap:local-morph-k", LATE_CLASS),
     (
         "exa",
@@ -251,6 +256,33 @@ def _format_rel_edges(
     return "[" + ", ".join(f"{left}->{right}" for left, right in edges) + "]"
 
 
+def _same_template(
+    left: CandidateNeighborhood,
+    right: CandidateNeighborhood,
+) -> bool:
+    return (
+        left.relative_support_nodes == right.relative_support_nodes
+        and left.relative_closed_edges == right.relative_closed_edges
+    )
+
+
+def _reference_late_left(rows: list[CompareRow]) -> CandidateNeighborhood:
+    late_lefts = [
+        neighborhood
+        for row in rows
+        if row.cohort == LATE_CLASS
+        for neighborhood in row.dominant_left_neighborhoods
+    ]
+    late_lefts.sort(
+        key=lambda neighborhood: (
+            -neighborhood.attached_count,
+            -neighborhood.bridge_bridge_closed_pair_count,
+            neighborhood.cell,
+        )
+    )
+    return late_lefts[0]
+
+
 def _render_row_summary(rows: list[CompareRow]) -> str:
     lines = ["Row summary", "==========="]
     for row in rows:
@@ -306,41 +338,95 @@ def _missing_edges(
     return tuple(sorted(set(late.relative_closed_edges) - set(other.relative_closed_edges)))
 
 
-def _render_template_deltas(rows: list[CompareRow]) -> str:
-    late_row = next(row for row in rows if row.cohort == LATE_CLASS)
-    late_left = late_row.dominant_left_neighborhoods[0]
-    late_mid = late_row.dominant_mid_neighborhoods[0]
-    lines = ["Late-template deltas", "===================="]
-    for row in rows:
-        if row.cohort == LATE_CLASS:
-            continue
-        left = row.dominant_left_neighborhoods[0]
+def _render_late_mid_template_consistency(rows: list[CompareRow]) -> str:
+    late_rows = [row for row in rows if row.cohort == LATE_CLASS]
+    reference_mid = late_rows[0].dominant_mid_neighborhoods[0]
+    lines = ["Late Mid-Template Consistency", "============================="]
+    for row in late_rows:
         mid = row.dominant_mid_neighborhoods[0]
         lines.append(f"{row.ensemble_name}:{row.source_name}")
         lines.append(
-            "  left_missing_relative_support_nodes="
+            "  matches_reference_mid_template="
+            + ("Y" if _same_template(reference_mid, mid) else "n")
+        )
+        lines.append(
+            "  missing_relative_support_nodes="
+            + _format_rel_nodes(_missing_nodes(reference_mid, mid))
+        )
+        lines.append(
+            "  missing_relative_closed_edges="
+            + _format_rel_edges(_missing_edges(reference_mid, mid))
+        )
+        lines.append(
+            "  extra_relative_support_nodes="
+            + _format_rel_nodes(_missing_nodes(mid, reference_mid))
+        )
+        lines.append(
+            "  extra_relative_closed_edges="
+            + _format_rel_edges(_missing_edges(mid, reference_mid))
+        )
+    return "\n".join(lines)
+
+
+def _render_exhausted_template_completion(rows: list[CompareRow]) -> str:
+    exhausted_rows = [row for row in rows if row.cohort != LATE_CLASS]
+    exhausted_mid = exhausted_rows[0].dominant_mid_neighborhoods[0]
+    lines = ["Exhausted Mid-Template Completion", "================================"]
+    for row in exhausted_rows:
+        mid = row.dominant_mid_neighborhoods[0]
+        lines.append(f"{row.ensemble_name}:{row.source_name}")
+        lines.append(
+            "  matches_reference_exhausted_mid_template="
+            + ("Y" if _same_template(exhausted_mid, mid) else "n")
+        )
+        lines.append(
+            "  missing_relative_support_nodes="
+            + _format_rel_nodes(_missing_nodes(exhausted_mid, mid))
+        )
+        lines.append(
+            "  missing_relative_closed_edges="
+            + _format_rel_edges(_missing_edges(exhausted_mid, mid))
+        )
+    for row in (current for current in rows if current.cohort == LATE_CLASS):
+        mid = row.dominant_mid_neighborhoods[0]
+        lines.append(f"{row.ensemble_name}:{row.source_name}")
+        lines.append(
+            "  added_relative_support_nodes="
+            + _format_rel_nodes(_missing_nodes(mid, exhausted_mid))
+        )
+        lines.append(
+            "  added_relative_closed_edges="
+            + _format_rel_edges(_missing_edges(mid, exhausted_mid))
+        )
+    return "\n".join(lines)
+
+
+def _render_exhausted_left_deltas(rows: list[CompareRow]) -> str:
+    late_left = _reference_late_left(rows)
+    lines = ["Exhausted Left-Packet Deltas", "============================"]
+    for row in (current for current in rows if current.cohort != LATE_CLASS):
+        left = row.dominant_left_neighborhoods[0]
+        lines.append(f"{row.ensemble_name}:{row.source_name}")
+        lines.append(
+            "  missing_relative_support_nodes="
             + _format_rel_nodes(_missing_nodes(late_left, left))
         )
         lines.append(
-            "  left_missing_relative_closed_edges="
+            "  missing_relative_closed_edges="
             + _format_rel_edges(_missing_edges(late_left, left))
-        )
-        lines.append(
-            "  mid_missing_relative_support_nodes="
-            + _format_rel_nodes(_missing_nodes(late_mid, mid))
-        )
-        lines.append(
-            "  mid_missing_relative_closed_edges="
-            + _format_rel_edges(_missing_edges(late_mid, mid))
         )
     return "\n".join(lines)
 
 
 def _render_conclusion(rows: list[CompareRow]) -> str:
-    late_row = next(row for row in rows if row.cohort == LATE_CLASS)
+    late_rows = [row for row in rows if row.cohort == LATE_CLASS]
+    exhausted_rows = [row for row in rows if row.cohort != LATE_CLASS]
+    late_row = late_rows[0]
     mirror_row = next(row for row in rows if row.cohort == MIRROR_MISS_CLASS)
     large_row = next(row for row in rows if row.cohort == LARGE_MISS_CLASS)
     late_mid = late_row.dominant_mid_neighborhoods[0]
+    late_left = _reference_late_left(rows)
+    exhausted_mid = exhausted_rows[0].dominant_mid_neighborhoods[0]
     mirror_mid = mirror_row.dominant_mid_neighborhoods[0]
     large_mid = large_row.dominant_mid_neighborhoods[0]
     shared_mid_missing_nodes = tuple(
@@ -355,16 +441,56 @@ def _render_conclusion(rows: list[CompareRow]) -> str:
             & set(_missing_edges(late_mid, large_mid))
         )
     )
+    late_completion_node_sets = [
+        set(_missing_nodes(row.dominant_mid_neighborhoods[0], exhausted_mid))
+        for row in late_rows
+    ]
+    late_completion_edge_sets = [
+        set(_missing_edges(row.dominant_mid_neighborhoods[0], exhausted_mid))
+        for row in late_rows
+    ]
+    shared_late_completion_nodes = tuple(
+        sorted(set.intersection(*late_completion_node_sets))
+    )
+    shared_late_completion_edges = tuple(
+        sorted(set.intersection(*late_completion_edge_sets))
+    )
+    late_mid_uniform = all(
+        _same_template(late_mid, row.dominant_mid_neighborhoods[0]) for row in late_rows
+    )
+    exhausted_mid_uniform = all(
+        _same_template(exhausted_mid, row.dominant_mid_neighborhoods[0])
+        for row in exhausted_rows
+    )
+    late_completion_uniform = (
+        len({frozenset(node_set) for node_set in late_completion_node_sets}) == 1
+        and len({frozenset(edge_set) for edge_set in late_completion_edge_sets}) == 1
+    )
     large_left_matches_late = (
         large_row.dominant_left_neighborhoods[0].relative_support_nodes
-        == late_row.dominant_left_neighborhoods[0].relative_support_nodes
+        == late_left.relative_support_nodes
     )
 
     lines = ["Conclusion", "=========="]
     lines.append(
-        "late_packet_template="
-        "the dominant late left and mid packets are the same full eight-support octagon "
-        "with 12 bridge-bridge closed pairs"
+        "late_mid_template_uniform_across_observed_rows="
+        + ("Y" if late_mid_uniform else "n")
+    )
+    lines.append(
+        "shared_exhausted_mid_template_across_wall="
+        + ("Y" if exhausted_mid_uniform else "n")
+    )
+    lines.append(
+        "shared_late_completion_relative_support_nodes="
+        + _format_rel_nodes(shared_late_completion_nodes)
+    )
+    lines.append(
+        "shared_late_completion_relative_closed_edges="
+        + _format_rel_edges(shared_late_completion_edges)
+    )
+    lines.append(
+        "late_rows_complete_same_exhausted_gap="
+        + ("Y" if late_completion_uniform else "n")
     )
     lines.append(
         "large_left_packet_matches_late_octagon="
@@ -380,10 +506,10 @@ def _render_conclusion(rows: list[CompareRow]) -> str:
     )
     lines.append(
         "packet_translation_summary="
-        "the exhausted-wall side keeps a seven-support mid packet because it never fills "
-        "the inward left-flank support node at relative (-1, 0); that one local hole removes "
-        "exactly four bridge-bridge closure edges and keeps the packet at 7 attached bridges / "
-        "8 closed pairs instead of the late branch's 8 / 12"
+        "all five observed late rows complete the same exhausted-wall seven-support mid packet "
+        "by filling the inward left-flank support node at relative (-1, 0) and its four incident "
+        "bridge-bridge closure edges; that one local packet completion is the whole current "
+        "difference between the exhausted-wall 7/8 packet and the late-branch 8/12 packet"
     )
     lines.append(
         "mirror_addendum="
@@ -399,17 +525,27 @@ def main() -> None:
     print(f"late branch packet neighborhood compare started {started}")
 
     rows = build_rows()
+    counts = Counter(row.cohort for row in rows)
+    counts_summary = ", ".join(
+        f"{cohort}:{counts[cohort]}"
+        for cohort in (LATE_CLASS, LARGE_MISS_CLASS, MIRROR_MISS_CLASS)
+        if counts[cohort]
+    )
 
     print()
     print("Late Branch Packet Neighborhood Compare")
     print("======================================")
-    print("rows_total=3 (late-base:1, large-exhausted-miss:1, mirror-exhausted-miss:1)")
+    print(f"rows_total={len(rows)} ({counts_summary})")
     print()
     print(_render_row_summary(rows))
     print()
     print(_render_dominant_neighborhoods(rows))
     print()
-    print(_render_template_deltas(rows))
+    print(_render_late_mid_template_consistency(rows))
+    print()
+    print(_render_exhausted_template_completion(rows))
+    print()
+    print(_render_exhausted_left_deltas(rows))
     print()
     print(_render_conclusion(rows))
     print()
