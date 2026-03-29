@@ -1,3 +1,74 @@
+## 2026-03-29 12:42 America/New_York
+
+### Seam class
+- generated-family transfer
+- persistent base late beyond-ceiling branch
+
+### Science impact
+- science advanced; the new non-rect beyond-ceiling `base` onset is not isolated, because the same `taper-hard:local-morph-f` row reappears unchanged at `exa`, so the heavier continuation now persists across `peta|exa`
+
+### Current state
+- Picked up the finished automation checkpoint, found local `main` ahead of `origin/main` by the unpushed `d5efe50` base-`peta` onset commit, synced it cleanly to GitHub, then took the next bounded seam under the manual lock.
+- Reused the stable first-hit probe on the adjacent late tier:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_beyond_ceiling_first_nonrect_probe.py --packs base --ensembles exa`
+- The `exa` result immediately reproduces the same non-rect beyond-ceiling row:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-beyond-ceiling-first-nonrect-probe-base-exa.txt`
+  - `scanned_nonrect_combinations = 1`
+  - `first_nonrect_row = base:exa:base:taper-hard:local-morph-f`
+  - `actual_subtype = pair-only-sensitive`
+  - `predicted_branch = high-closure-unmatched`
+- The repeated late hit keeps the same observables as `peta`:
+  - `support_load = 22.000`
+  - `closure_load = 76.000`
+  - `mid_anchor_closure_peak = 12.000`
+  - `anchor_closure_intensity_gap = 4.000`
+  - `anchor_deep_share_gap = 0.667`
+  - `high_bridge_right_count = 2.000`
+- I also attempted a bespoke row-level comparer for the new onset against the outer-rect tail, but dropped that local helper before commit when it proved too expensive for this tranche; no compare artifact remains in the repo.
+
+### Strongest confirmed conclusion
+- The refined anchor-balance basin remains exact on the current bounded basis:
+  - `anchor_closure_intensity_gap >= -2.000 and anchor_closure_intensity_gap <= 2.333 and mid_anchor_closure_peak <= 10.000`
+  - generated failures: `11/11`
+  - historical frozen `pair-only-sensitive`: `0/9`
+  - historical frozen `add1-sensitive`: `0/15`
+  - historical frozen `add4-sensitive`: `0/8`
+- The focused outer-rect pair still exact-separates from the representative shoulder/throat/knot set with the same compact load observable:
+  - `closure_load >= 75.000`
+  - outer rect pair: `2/2`
+  - representative shoulder + throat + frozen knot rows: `0/5`
+- The late guardrail picture is now sharper:
+  - wider `large` late non-rect slices stay empty through `tera`
+  - mirrored `mirror` late non-rect slices stay empty through `exa`
+  - the more distant `base` late slice at `peta` produces the first non-rect beyond-ceiling non-collapse row: `base:peta:base:taper-hard:local-morph-f`
+  - the adjacent `base` late slice at `exa` reproduces the same row with the same metrics: `base:exa:base:taper-hard:local-morph-f`
+  - both rows still satisfy `closure_load >= 75.000`, so the beyond-ceiling continuation now persists across the tested `base` late branch rather than appearing as a one-tier onset
+- So the current physical read changes again:
+  - the heavier beyond-ceiling continuation is not purely rect-local
+  - it also is not a one-tier non-rect blip; it persists on a late `taper-hard` branch with the same ceiling breach and stronger right/deep shoulder
+
+### Files and results changed in this run
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- New log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-beyond-ceiling-first-nonrect-probe-base-exa.txt`
+
+### Validation
+- `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_beyond_ceiling_first_nonrect_probe.py --packs base --ensembles exa > /Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-beyond-ceiling-first-nonrect-probe-base-exa.txt`
+
+### Commit status
+- Pre-step canonical repo state: `d5efe50` on both local `main` and `origin/main`.
+- Pending local commit to promote the persistent `base` late-branch result and refresh the research narrative.
+
+### Exact next step
+- Run the broader non-rect beyond-ceiling sweep on `base` at `peta|exa` to test whether the repeated `taper-hard` row is the whole late branch or just the first visible member.
+
+### First concrete action
+- Reuse `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_beyond_ceiling_nonrect_sweep.py` on the `base` `peta|exa` slice and report whether all non-rect beyond-ceiling rows still satisfy `closure_load >= 75.000`.
+
 ## 2026-03-29 11:55 America/New_York
 
 ### Seam class

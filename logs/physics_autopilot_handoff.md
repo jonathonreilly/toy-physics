@@ -1,5 +1,76 @@
 # Physics Autopilot Handoff
 
+## 2026-03-29 12:42 America/New_York
+
+### Seam class
+- generated-family transfer
+- persistent base late beyond-ceiling branch
+
+### Science impact
+- science advanced; the new non-rect beyond-ceiling `base` onset is not isolated, because the same `taper-hard:local-morph-f` row reappears unchanged at `exa`, so the heavier continuation now persists across `peta|exa`
+
+### Current state
+- Picked up the finished automation checkpoint, found local `main` ahead of `origin/main` by the unpushed `d5efe50` base-`peta` onset commit, synced it cleanly to GitHub, then took the next bounded seam under the manual lock.
+- Reused the stable first-hit probe on the adjacent late tier:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_beyond_ceiling_first_nonrect_probe.py --packs base --ensembles exa`
+- The `exa` result immediately reproduces the same non-rect beyond-ceiling row:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-beyond-ceiling-first-nonrect-probe-base-exa.txt`
+  - `scanned_nonrect_combinations = 1`
+  - `first_nonrect_row = base:exa:base:taper-hard:local-morph-f`
+  - `actual_subtype = pair-only-sensitive`
+  - `predicted_branch = high-closure-unmatched`
+- The repeated late hit keeps the same observables as `peta`:
+  - `support_load = 22.000`
+  - `closure_load = 76.000`
+  - `mid_anchor_closure_peak = 12.000`
+  - `anchor_closure_intensity_gap = 4.000`
+  - `anchor_deep_share_gap = 0.667`
+  - `high_bridge_right_count = 2.000`
+- I also attempted a bespoke row-level comparer for the new onset against the outer-rect tail, but dropped that local helper before commit when it proved too expensive for this tranche; no compare artifact remains in the repo.
+
+### Strongest confirmed conclusion
+- The refined anchor-balance basin remains exact on the current bounded basis:
+  - `anchor_closure_intensity_gap >= -2.000 and anchor_closure_intensity_gap <= 2.333 and mid_anchor_closure_peak <= 10.000`
+  - generated failures: `11/11`
+  - historical frozen `pair-only-sensitive`: `0/9`
+  - historical frozen `add1-sensitive`: `0/15`
+  - historical frozen `add4-sensitive`: `0/8`
+- The focused outer-rect pair still exact-separates from the representative shoulder/throat/knot set with the same compact load observable:
+  - `closure_load >= 75.000`
+  - outer rect pair: `2/2`
+  - representative shoulder + throat + frozen knot rows: `0/5`
+- The late guardrail picture is now sharper:
+  - wider `large` late non-rect slices stay empty through `tera`
+  - mirrored `mirror` late non-rect slices stay empty through `exa`
+  - the more distant `base` late slice at `peta` produces the first non-rect beyond-ceiling non-collapse row: `base:peta:base:taper-hard:local-morph-f`
+  - the adjacent `base` late slice at `exa` reproduces the same row with the same metrics: `base:exa:base:taper-hard:local-morph-f`
+  - both rows still satisfy `closure_load >= 75.000`, so the beyond-ceiling continuation now persists across the tested `base` late branch rather than appearing as a one-tier onset
+- So the current physical read changes again:
+  - the heavier beyond-ceiling continuation is not purely rect-local
+  - it also is not a one-tier non-rect blip; it persists on a late `taper-hard` branch with the same ceiling breach and stronger right/deep shoulder
+
+### Files/logs changed
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-beyond-ceiling-first-nonrect-probe-base-exa.txt`
+- Updated runtime state:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+
+### Commit status
+- HEAD remains `d5efe50` (`Find first non-rect beyond-ceiling late hit`).
+- Pending local commit to promote the persistent `base` late-branch result and the refreshed narrative.
+- Remote sync status remains `ahead 0, behind 0` until that local commit is created.
+
+### Remaining review seams
+- open: determine whether the repeated `base:taper-hard:local-morph-f` row is the whole late non-rect beyond-ceiling branch or just the first visible member on `peta|exa`
+
+### Exact next step
+- Reuse the broader non-rect beyond-ceiling sweep on `base` at `peta|exa` and check whether all such rows still satisfy `closure_load >= 75.000`.
+
+### First concrete action
+- Run `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_beyond_ceiling_nonrect_sweep.py` on the `base` `peta|exa` slice.
+
 ## 2026-03-29 11:55 America/New_York
 
 ### Seam class
@@ -27,6 +98,7 @@
   - `anchor_closure_intensity_gap = 4.000`
   - `anchor_deep_share_gap = 0.667`
   - `high_bridge_right_count = 2.000`
+- Promoted the README/work-log/handoff refresh as local commit `d5efe50` (`Find first non-rect beyond-ceiling late hit`), then the required push helper failed with DNS after five attempts instead of syncing the checkpoint.
 
 ### Strongest confirmed conclusion
 - The refined anchor-balance basin remains exact on the current bounded basis:
@@ -57,14 +129,15 @@
   - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
 
 ### Commit status
-- Pre-step canonical repo state: `d32a3f8` on both local `main` and `origin/main`.
-- No active child remains; this loop's finished base-`peta` result should be kept as one clean checkpoint and pushed via the automation helper before any new science.
+- Current local HEAD is `d5efe50` (`Find first non-rect beyond-ceiling late hit`).
+- Remote sync status is `main...origin/main [ahead 1, behind 0]` because `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics` failed with `dns_failure` (`Could not resolve host: github.com`) after `5` attempts.
+- No active child remains; retry the helper push before any new science.
 
 ### Remaining review seams
 - open: translate whether the new `base:peta:base:taper-hard:local-morph-f` onset is the same mechanism as the outer `rect-wrap` tail or the start of a broader late non-rect branch
 
 ### Exact next step
-- Translate the new `base:peta:base:taper-hard:local-morph-f` hit against the existing outer-rect pair and shoulder/throat/knot representatives before chasing deeper ladders, so the widened beyond-ceiling continuation is explained in the same compact physical language as the current basin split.
+- Retry the automation helper push for `d5efe50`; if the repo syncs cleanly, then translate the new `base:peta:base:taper-hard:local-morph-f` hit against the existing outer-rect pair and shoulder/throat/knot representatives before chasing deeper ladders.
 
 ### First concrete action
-- Build one focused comparison table for the new `base` `peta` `taper-hard` hit plus the outer `rect-wrap:local-morph-f` pair and the representative shoulder/throat/knot rows, using the current load and anchor observables as the first candidate basis.
+- Run `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`, then only after sync resumes build one focused comparison table for the new `base` `peta` `taper-hard` hit plus the outer `rect-wrap:local-morph-f` pair and the representative shoulder/throat/knot rows.
