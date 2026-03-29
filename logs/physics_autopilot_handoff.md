@@ -1,5 +1,73 @@
 # Physics Autopilot Handoff
 
+## 2026-03-29 13:49 America/New_York
+
+### Seam class
+- generated-family transfer
+- base late beyond-ceiling branch translation
+
+### Science impact
+- science advanced; the broadened `base` late branch now exact-splits into one shared high-load continuation plus three one-feature late subbranches
+
+### Current state
+- Picked up from synced `021cea0`, kept the manual lock, and replaced the slow ad hoc row regenerator with a tiny direct comparer over recorded row blocks from the finished March 29 logs.
+- Added and ran:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_base_late_branch_direct_compare.py`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-base-late-branch-direct-compare.txt`
+- The comparer uses the five observed late rows:
+  - `base:peta:base:rect-wrap:local-morph-f`
+  - `base:exa:base:rect-wrap:local-morph-f`
+  - `base:peta:base:taper-hard:local-morph-f`
+  - `base:exa:base:taper-hard:local-morph-f`
+  - `base:exa:base:skew-wrap:local-morph-k`
+- against the five earlier representatives:
+  - `default:base:skew-wrap:local-morph-c`
+  - `broader:base:skew-wrap:mode-mix-d`
+  - `ultra:base:taper-wrap:mode-mix-f`
+  - `historical:base:taper-wrap:local-morph-ዦ`
+  - `historical:base:taper-wrap:local-morph-ᓭ`
+- Every late row still lands nearest to the skew-wrap shoulder rather than to the low-support throat or the frozen knot rows, so the broadened branch reads as a loaded shoulder-side continuation rather than a throat/knot hybrid.
+
+### Strongest confirmed conclusion
+- The whole observed late branch exact-separates from the earlier shoulder/throat/knot representatives with one tighter high-load clause:
+  - `closure_load >= 73.000`
+  - late branch: `5/5`
+  - reference set: `0/5`
+- The older coarse guard still survives on the same rows:
+  - `closure_load >= 75.000`
+  - late branch high-load hits: `5/5`
+  - reference high-load hits: `0/5`
+- Inside the observed late branch, the current three realized forms exact-split with one feature each:
+  - outer rect tail: `support_load >= 24.000`
+  - taper-hard branch: `anchor_closure_intensity_gap >= 3.000`
+  - skew-wrap branch: `anchor_deep_share_gap <= -0.334`
+- So the current physical read sharpens again:
+  - the beyond-ceiling continuation is not just a collection of late anomalies; on the current observed slice it is one shared high-load branch
+  - that branch already resolves into three distinct support-layout realizations: loaded outer-rect, positive-intensity taper-hard, and negative-deep skew-wrap
+
+### Files/logs changed
+- Added script:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_base_late_branch_direct_compare.py`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-base-late-branch-direct-compare.txt`
+- Updated runtime state:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+
+### Commit status
+- HEAD is still `021cea0` (`Broaden base late beyond-ceiling branch`) until the direct-compare result is committed.
+- Remote sync status remains `ahead 0, behind 0` until that local commit is created.
+
+### Remaining review seams
+- open: determine whether the current late-branch gate `closure_load >= 73.000` and the three one-feature late subbranch clauses survive beyond the current five observed rows
+
+### Exact next step
+- Run the first transfer check for the new late-branch gate and subbranch clauses on the next broader late slice rather than doing more retrospective translation.
+
+### First concrete action
+- Reuse the direct comparer basis on the next finished late sweep, checking whether new rows stay inside the same high-load branch and whether they fall into the outer-rect, taper-hard, or skew-wrap subbranch clauses without retuning.
+
 ## 2026-03-29 13:07 America/New_York
 
 ### Seam class
