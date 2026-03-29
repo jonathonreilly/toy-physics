@@ -1,0 +1,33 @@
+late branch frontier closure audit started 2026-03-29T15:01:22
+
+Late Branch Frontier Closure Audit
+=================================
+benchmark_pack_names=base,large,mirror
+benchmark_non_base_pack_names=large,mirror
+current_late_frontier_ensembles=ultra,mega,giga,tera,peta,exa
+finished_non_base_guardrail_logs=9
+finished_non_base_scanned_nonrect_combinations=30
+target_non_base_pack_ensemble_pairs=12
+covered_non_base_pack_ensemble_pairs=12
+covered_non_base_pairs=large:ultra,large:mega,large:giga,large:tera,large:peta,large:exa,mirror:ultra,mirror:mega,mirror:giga,mirror:tera,mirror:peta,mirror:exa
+missing_non_base_pairs=none
+extra_non_base_pairs=none
+missing_non_base_packs=none
+finished_non_base_first_hits=0
+remaining_current_non_base_guardrails=0
+
+Finished non-base guardrail coverage
+===================================
+large:ultra|mega packs=large ensembles=ultra,mega scanned_nonrect_combinations=6 first_nonrect_row=none
+large:giga packs=large ensembles=giga scanned_nonrect_combinations=3 first_nonrect_row=none
+large:tera packs=large ensembles=tera scanned_nonrect_combinations=3 first_nonrect_row=none
+large:peta packs=large ensembles=peta scanned_nonrect_combinations=3 first_nonrect_row=none
+large:exa packs=large ensembles=exa scanned_nonrect_combinations=3 first_nonrect_row=none
+mirror:ultra|mega packs=mirror ensembles=ultra,mega scanned_nonrect_combinations=4 first_nonrect_row=none
+mirror:giga|tera packs=mirror ensembles=giga,tera scanned_nonrect_combinations=4 first_nonrect_row=none
+mirror:peta packs=mirror ensembles=peta scanned_nonrect_combinations=2 first_nonrect_row=none
+mirror:exa packs=mirror ensembles=exa scanned_nonrect_combinations=2 first_nonrect_row=none
+
+conclusion=within the current benchmark lattice, the non-base late guardrail frontier is exhausted through exa: every available large/mirror late slice in the current ultra..exa frontier is covered, every finished guardrail still reports first_nonrect_row=none, and no additional current-family non-base sentinel remains; the next transfer step must therefore come from base-side translation/compression or from introducing a genuinely new generator family rather than scanning another current pack
+
+late branch frontier closure audit completed 2026-03-29T15:01:22 total_elapsed=0.0s
