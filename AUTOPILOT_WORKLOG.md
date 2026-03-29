@@ -1,3 +1,54 @@
+## 2026-03-28 22:07 America/New_York
+
+### Seam class
+- generated-family transfer
+- non-guarded anchor-balance boundary
+
+### Science impact
+- science advanced; the surviving generated pair-only failures now exact-separate from historical frozen `pair-only-sensitive` rows through a moderate anchor-balance band, so the post-guard frontier is a second domain boundary rather than a shifted load/density branch
+
+### Current state
+- Resumed the active generated-family transfer thread from synced `main` at `8bd72db` under the `physics-science` lock instead of widening the ladder again.
+- Added `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_non_guarded_pair_compare.py` as the queued tiny row-level comparer between the first non-guarded generated failures and the frozen historical `pair-only-sensitive` branch.
+- Ran the comparer to:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-generated-non-guarded-pair-compare.txt`
+- The target set is the full current surviving generated failure family after the zero-support guard:
+  - `base:taper-wrap:mode-mix-f` at `ultra` and `mega`
+  - `base:skew-wrap:local-morph-c` at `default/broader/wider/ultra/mega`
+  - `base:skew-wrap:mode-mix-d` at `broader/wider/ultra/mega`
+
+### Strongest confirmed conclusion
+- The non-guarded generated failures do not exact-separate from historical frozen `pair-only-sensitive` rows with any single load, closure, or density threshold:
+  - the best one-feature separators (`closure_load >= 58.500` and `edge_identity_support_edge_density <= 0.161`) isolate the `skew-wrap` family but still miss `taper-wrap:mode-mix-f`
+- The surviving generated failures split across opposite load regimes:
+  - `skew-wrap:local-morph-c` and `mode-mix-d` are over-supported/high-closure but low-density (`support_load = 20`, `closure_load = 63 -> 70`, `edge_identity_support_edge_density = 0.103 -> 0.140`)
+  - `taper-wrap:mode-mix-f` is sparse and low-closure but high-density (`support_load = 0`, `closure_load = 5`, `edge_identity_event_count = 10`, `edge_identity_support_edge_density = 0.500`)
+- But all `11` surviving generated failures do exact-separate from the `9` historical frozen `pair-only-sensitive` rows through one compact anchor-balance band:
+  - `anchor_closure_intensity_gap >= -2.000 and anchor_closure_intensity_gap <= 2.333`
+  - empirically the generated failures sit only at `0/1/2`, while the historical frozen `pair-only-sensitive` rows live only outside that band (`-9.667 -> -4.000` or `2.667 -> 6.000`)
+- So the post-guard transfer break is now best read as a second nearby domain boundary: a moderate anchor-balance regime absent from the historical frozen `pair-only-sensitive` branch, not a simple continuation of either the sparse or overloaded historical load families.
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_non_guarded_pair_compare.py`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- New log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-generated-non-guarded-pair-compare.txt`
+- Validation:
+  - `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_non_guarded_pair_compare.py`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_non_guarded_pair_compare.py > /Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-generated-non-guarded-pair-compare.txt`
+
+### Exact next step
+- Test whether the new anchor-balance band is a true generated-domain boundary or only a contrast against historical frozen `pair-only-sensitive` rows by projecting it onto nearby generated non-failures and historical `add1-sensitive` rows.
+
+### First concrete action
+- Extend `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_non_guarded_pair_compare.py` to include historical frozen `add1-sensitive` rows plus the nearby generated rows that remain correctly classified after the zero-support guard, then check whether the `anchor_closure_intensity_gap` band stays exact or needs one additional physical clause.
+
 ## 2026-03-28 21:28 America/New_York
 
 ### Seam class

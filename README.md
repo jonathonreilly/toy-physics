@@ -215,8 +215,15 @@ Fine-grained mechanism work is currently concentrated on a fixed frontier snapsh
     - on `base:taper-wrap`, the first non-guarded generated failure appears at `ultra` and repeats at `mega` as `mode-mix-f` (`pair-only-sensitive` actual, `add1-sensitive` predicted)
     - on neighboring `base:skew-wrap`, non-guarded generated failures already appear at `default` (`local-morph-c`) and broaden at `broader+` (`mode-mix-d`)
     - so support-collapse is only the first nearby generated-family boundary, not the whole transfer failure story
+  - a direct comparer against the historical frozen `pair-only-sensitive` rows shows those surviving generated failures are not just a single shifted load or density branch:
+    - the `skew-wrap` failures are over-supported and high-closure but sparse on support-edge density (`support_load = 20`, `closure_load = 63 -> 70`, `edge_identity_support_edge_density = 0.103 -> 0.140`)
+    - the surviving `taper-wrap:mode-mix-f` failures are the opposite extreme (`support_load = 0`, `closure_load = 5`, `edge_identity_event_count = 10`, `edge_identity_support_edge_density = 0.500`)
+    - so no single load, closure, or density threshold exact-separates all surviving generated failures from the historical frozen `pair-only-sensitive` branch
+    - but all `11` surviving generated failures do exact-close into one compact anchor-balance band: `anchor_closure_intensity_gap` always stays between `-2.000` and `2.333` (empirically `0 -> 2`)
+    - every historical frozen `pair-only-sensitive` row lies outside that band (`-9.667 -> -4.000` or `2.667 -> 6.000`)
+    - so the post-guard transfer break is now best read as a second nearby domain boundary: a moderate anchor-balance regime that does not appear anywhere in the historical frozen `pair-only-sensitive` branch
 
-The open problem in this basin is no longer whether the family structure exists, whether the frozen bucket exact-closes, or whether the law survives on the available historical frontier ladder. It is explaining the first non-guarded generated-family failures that remain after the zero-support guard is applied, deciding whether they are generated analogs of the historical `pair-only-sensitive` branch or a second domain-boundary phenomenon, and then expressing that boundary in cleaner physical language.
+The open problem in this basin is no longer whether the family structure exists, whether the frozen bucket exact-closes, or whether the law survives on the available historical frontier ladder. It is translating the two nearby generated-family boundaries that now appear after transfer: the zero-support collapse edge, and the later moderate anchor-balance band in the surviving non-guarded `pair-only-sensitive` failures.
 
 ## Active Technical Problem
 
@@ -224,8 +231,8 @@ The main active technical problem is projecting and translating the exact low-ov
 
 The relevant questions are:
 
-- what structural property makes `base:taper-wrap:mode-mix-f`, `base:skew-wrap:local-morph-c`, and `base:skew-wrap:mode-mix-d` remain `pair-only-sensitive` after the zero-support edge is removed
-- how the exact branch-aware law should be physically interpreted at both the zero-support collapse boundary and the new non-guarded generated failures
+- why `base:taper-wrap:mode-mix-f`, `base:skew-wrap:local-morph-c`, and `base:skew-wrap:mode-mix-d` all stay inside the same moderate `anchor_closure_intensity_gap` band even though one family is near-supportless and the other is over-supported/high-closure
+- how the exact branch-aware law should be physically interpreted at both the zero-support collapse boundary and the new anchor-balance boundary in the surviving generated failures
 - whether that competition can be expressed more cleanly in support-layout or topological language
 - which parts of the present explanation are stable structure and which depend on the current observable basis
 
@@ -234,7 +241,7 @@ The relevant questions are:
 The main unresolved points are:
 
 - the spent-delay action family is favored in the benchmark, but not derived from deeper first principles
-- low-overlap subtype competition is now much more compressed on the frozen `5504` bucket and exact across the available historical frontier ladder; the first nearby generated edge (`geometry-c/e`) isolates cleanly under a support-collapse guard, but non-guarded generated pair-only failures still appear immediately beyond it (`mode-mix-f`, `local-morph-c`, `mode-mix-d`)
+- low-overlap subtype competition is now much more compressed on the frozen `5504` bucket and exact across the available historical frontier ladder; the first nearby generated edge (`geometry-c/e`) isolates cleanly under a support-collapse guard, and the surviving non-guarded generated pair-only failures (`mode-mix-f`, `local-morph-c`, `mode-mix-d`) now exact-separate from historical frozen `pair-only-sensitive` rows through a moderate anchor-balance band, but that new boundary is not yet projected across the broader nearby generated basin
 - the present mechanism language is more geometric and topological than it was earlier, but it is not yet a clean bridge to standard continuum physics
 - the strongest fine-grained mechanism results are exact on the available historical frontier ladder, but not yet a general theorem over nearby generated families because nearby generated transfer still shows in-domain failures after the empirical support-collapse guard is applied
 
