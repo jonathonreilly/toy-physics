@@ -1,3 +1,69 @@
+## 2026-03-29 04:19 America/New_York
+
+### Seam class
+- generated-family transfer
+- anchor-band outer guardrail
+
+### Science impact
+- science advanced; one sparse wider generated guardrail adds no new row inside the refined anchor band, so the shoulder/throat picture survives beyond the immediate taper/skew basin and the only outer failures already sit on the knot side of the mid-anchor ceiling
+
+### Current state
+- Resumed the active generated-family transfer thread while `main` was still locally ahead at `433f470` after the prior DNS-blocked helper pushes.
+- Extended `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_non_guarded_pair_compare.py` with a sparse outer `rect-wrap`/`rect-hard` `ultra|mega` guardrail slice, then ran it to:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-anchor-band-outer-guardrail.txt`
+- Added a focused outer guardrail probe to resolve the zero-hit refined-band count into explicit row identities and features:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-anchor-band-outer-guardrail-probe.txt`
+- The bounded immediate generated basin still contributes no guard-surviving correctly classified comparison rows:
+  - `generated_stable_nearby_rows = 0`
+- The sparse outer guardrail contributes two non-collapse generated failures but no refined-band hits:
+  - `generated_outer_guardrail_rows = 0`
+  - `outer_noncollapse_failures = 2`
+
+### Strongest confirmed conclusion
+- The refined anchor-balance basin remains exact on the current bounded basis:
+  - `anchor_closure_intensity_gap >= -2.000 and anchor_closure_intensity_gap <= 2.333 and mid_anchor_closure_peak <= 10.000`
+  - generated failures: `11/11`
+  - historical frozen `pair-only-sensitive`: `0/9`
+  - historical frozen `add1-sensitive`: `0/15`
+  - historical frozen `add4-sensitive`: `0/8`
+- One sparse outer generated guardrail slice over `rect-wrap`/`rect-hard` at `ultra` and `mega` adds no new generated row inside that refined band:
+  - refined-band hits: `0/2` non-collapse outer failures
+  - the only outer failures are `base:rect-wrap:local-morph-f` at `ultra` and `mega`
+- Those outer failures already live on the knot side of the refined ceiling rather than inside the shoulder/throat basin:
+  - actual `pair-only-sensitive`, predicted `add1-sensitive`
+  - `support_load = 26.000`, `closure_load = 80.000`, `mid_anchor_closure_peak = 12.000`
+  - `anchor_closure_intensity_gap = -2.000`, `anchor_deep_share_gap = 0.000`, `high_bridge_right_count = 1.000`
+- So the present physical read survives one sparse wider guardrail:
+  - skew-wrap generated failures: right/deep bridge shoulder
+  - representative `mode-mix-f`: low-support throat
+  - frozen `add4` pocket plus outer `rect-wrap:local-morph-f`: knot side of the `mid_anchor_closure_peak <= 10.000` ceiling
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_non_guarded_pair_compare.py`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- New logs:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-anchor-band-outer-guardrail.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-anchor-band-outer-guardrail-probe.txt`
+- Validation:
+  - `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_non_guarded_pair_compare.py`
+  - `python3 -u /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_non_guarded_pair_compare.py > /Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-anchor-band-outer-guardrail.txt`
+  - `python3 -u - <<'PY' > /Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-anchor-band-outer-guardrail-probe.txt`
+
+### Commit status
+- Pending local commit for the sparse outer guardrail step.
+
+### Exact next step
+- Determine whether the outer `rect-wrap:local-morph-f` pair is physically the same mid-anchor knot mechanism as the frozen `add4` pocket or a distinct knot-side generated continuation beyond the refined ceiling.
+
+### First concrete action
+- Add one tiny focused comparison between `rect-wrap:local-morph-f` (`ultra`/`mega`) and the current shoulder/throat/knot representatives, then test whether one compact observable explains why the outer rect row crosses the same `mid_anchor_closure_peak = 12.000` ceiling while retaining `high_bridge_right_count = 1.000`.
+
 ## 2026-03-29 03:08 America/New_York
 
 ### Seam class
@@ -50,7 +116,8 @@
   - `python3 -u /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_non_guarded_pair_compare.py > /Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-anchor-band-mode-mix-f-translation.txt`
 
 ### Commit status
-- Pending local commit for the `mode-mix-f` anchor-band translation step.
+- Committed locally as `433f470` (`Translate mode-mix-f anchor-band throat`).
+- End-of-loop helper push failed after retries with DNS (`Could not resolve host: github.com`); repository state is `ahead 5, behind 0`.
 
 ### Exact next step
 - Test whether the new shoulder-versus-throat split inside the refined anchor band survives one sparse wider generated guardrail outside the current failure-only immediate taper/skew neighborhood.

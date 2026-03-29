@@ -47,10 +47,18 @@ HISTORICAL_PAIR_CLASS = "historical-pair-only"
 HISTORICAL_ADD1_CLASS = "historical-add1"
 HISTORICAL_ADD4_CLASS = "historical-add4"
 GENERATED_STABLE_CLASS = "generated-stable-nearby"
+OUTER_GUARDRAIL_CLASS = "generated-outer-guardrail"
 ANCHOR_BAND_RULE = (
     "anchor_closure_intensity_gap <= 2.333 and anchor_closure_intensity_gap >= -2.000"
 )
+REFINED_ANCHOR_BAND_RULE = f"{ANCHOR_BAND_RULE} and mid_anchor_closure_peak <= 10.000"
+SHOULDER_RULE = "anchor_deep_share_gap >= 0.250"
+THROAT_RULE = "closure_load <= 24.500"
 DEFAULT_NEARBY_ENSEMBLES = ("default", "broader", "wider", "ultra", "mega")
+SPARSE_GUARDRAIL_SPECS = (
+    ("rect-wrap", ("ultra", "mega")),
+    ("rect-hard", ("ultra", "mega")),
+)
 FEATURES = (
     "support_load",
     "closure_load",
@@ -317,12 +325,49 @@ def build_generated_stable_rows(
     return selected_rows, scenarios_scanned, len(candidate_rows)
 
 
+def build_sparse_guardrail_rows(
+    pack_name: str,
+    *,
+    ge6_tree: object,
+    dpadj_tree: object,
+) -> tuple[list[object], list[str], int]:
+    selected_rows: list[object] = []
+    scanned_specs: list[str] = []
+    noncollapse_total = 0
+
+    for scenario_name, ensembles in SPARSE_GUARDRAIL_SPECS:
+        scanned_specs.append(f"{scenario_name}:{'/'.join(ensembles)}")
+        for ensemble_name in ensembles:
+            rows = build_rows_with_trees(
+                ensemble_name,
+                pack_name,
+                scenario_name,
+                ge6_tree=ge6_tree,
+                dpadj_tree=dpadj_tree,
+            )
+            for row in rows:
+                if is_support_collapse(row):
+                    continue
+                noncollapse_total += 1
+                if matches_rule_text(row, REFINED_ANCHOR_BAND_RULE):
+                    selected_rows.append(row)
+
+    selected_rows.sort(
+        key=lambda row: (
+            getattr(row, "source_name"),
+            getattr(row, "ensemble_name"),
+        )
+    )
+    return selected_rows, scanned_specs, noncollapse_total
+
+
 def build_comparison_rows(
     generated_rows: list[object],
     historical_pair_rows: list[object],
     historical_add1_rows: list[object],
     historical_add4_rows: list[object],
     generated_stable_rows: list[object],
+    outer_guardrail_rows: list[object],
 ) -> list[object]:
     row_cls = make_dataclass(
         "GeneratedHistoricalPairCompareRow",
@@ -505,6 +550,37 @@ def build_comparison_rows(
                 ),
             )
         )
+    for row in outer_guardrail_rows:
+        rows.append(
+            row_cls(
+                origin="generated-outer-guardrail",
+                source_name=getattr(row, "source_name"),
+                subtype=OUTER_GUARDRAIL_CLASS,
+                actual_subtype=getattr(row, "subtype"),
+                predicted_subtype=guarded_predict_subtype(row),
+                predicted_branch=guarded_predict_branch(row),
+                ensemble_name=getattr(row, "ensemble_name"),
+                style=getattr(row, "style"),
+                support_load=float(getattr(row, "support_load")),
+                closure_load=float(getattr(row, "closure_load")),
+                mid_anchor_closure_peak=float(getattr(row, "mid_anchor_closure_peak")),
+                anchor_closure_intensity_gap=float(
+                    getattr(row, "anchor_closure_intensity_gap")
+                ),
+                anchor_deep_share_gap=float(getattr(row, "anchor_deep_share_gap")),
+                high_bridge_high_count=float(getattr(row, "high_bridge_high_count")),
+                high_bridge_right_count=float(getattr(row, "high_bridge_right_count")),
+                high_bridge_right_low_count=float(
+                    getattr(row, "high_bridge_right_low_count")
+                ),
+                edge_identity_event_count=float(
+                    getattr(row, "edge_identity_event_count")
+                ),
+                edge_identity_support_edge_density=float(
+                    getattr(row, "edge_identity_support_edge_density")
+                ),
+            )
+        )
     return rows
 
 
@@ -584,6 +660,7 @@ def render_rule_projection(title: str, rows: list[object], rule_text: str) -> st
         HISTORICAL_ADD1_CLASS,
         HISTORICAL_ADD4_CLASS,
         GENERATED_STABLE_CLASS,
+        OUTER_GUARDRAIL_CLASS,
     ):
         cohort_rows = [row for row in rows if getattr(row, "subtype") == cohort]
         if not cohort_rows:
@@ -652,6 +729,43 @@ def render_pairwise_deltas(
     return "\n".join(lines)
 
 
+def _translation_label(row: object) -> str:
+    if matches_rule_text(row, THROAT_RULE):
+        return "low-support-throat"
+    if matches_rule_text(row, SHOULDER_RULE):
+        return "right/deep-shoulder"
+    return "outside-current-translation"
+
+
+def render_translation_rows(title: str, rows: list[object]) -> str:
+    lines = [title, "=" * len(title)]
+    if not rows:
+        lines.append("none")
+        return "\n".join(lines)
+    counts = Counter(_translation_label(row) for row in rows)
+    lines.append(
+        "translation_counts="
+        + ", ".join(f"{label}:{counts[label]}" for label in sorted(counts))
+    )
+    for row in rows:
+        lines.append(
+            f"{getattr(row, 'ensemble_name')}:{getattr(row, 'source_name')} "
+            f"actual={_actual_subtype(row)} predicted={_predicted_subtype(row)} "
+            f"translation={_translation_label(row)}"
+        )
+        for feature in (
+            "support_load",
+            "closure_load",
+            "mid_anchor_closure_peak",
+            "anchor_closure_intensity_gap",
+            "anchor_deep_share_gap",
+            "high_bridge_right_count",
+            "edge_identity_event_count",
+        ):
+            lines.append(f"  {feature}={float(getattr(row, feature)):.3f}")
+    return "\n".join(lines)
+
+
 def main() -> None:
     args = build_parser().parse_args()
     started = datetime.now().isoformat(timespec="seconds")
@@ -688,12 +802,20 @@ def main() -> None:
             limit=args.nearby_limit,
         )
     )
+    outer_guardrail_rows, outer_guardrail_scanned, outer_guardrail_noncollapse_total = (
+        build_sparse_guardrail_rows(
+            args.pack_name,
+            ge6_tree=ge6_tree,
+            dpadj_tree=dpadj_tree,
+        )
+    )
     rows = build_comparison_rows(
         generated_rows,
         historical_pair_rows,
         historical_add1_rows,
         historical_add4_rows,
         generated_stable_rows,
+        outer_guardrail_rows,
     )
     historical_pair_ranges = _feature_ranges(historical_pair_rows)
     generated_ranges = _feature_ranges(generated_rows)
@@ -855,6 +977,11 @@ def main() -> None:
     print("generated_nearby_ensembles=" + ",".join(dict.fromkeys(args.nearby_ensembles)))
     print("generated_nearby_scenarios_scanned=" + ",".join(nearby_scenarios_scanned))
     print(
+        f"generated_outer_guardrail_rows={len(outer_guardrail_rows)} "
+        f"from_noncollapse={outer_guardrail_noncollapse_total}"
+    )
+    print("generated_outer_guardrail_scanned=" + ",".join(outer_guardrail_scanned))
+    print(
         "generated_targets="
         + ",".join(
             f"{scenario}:{'/'.join(ensembles)}:{'/'.join(source_names)}"
@@ -893,8 +1020,13 @@ def main() -> None:
     if generated_stable_rows:
         print()
         print(render_feature_ranges("Generated stable nearby ranges", generated_stable_rows))
+    if outer_guardrail_rows:
+        print()
+        print(render_feature_ranges("Generated outer guardrail ranges", outer_guardrail_rows))
     print()
     print(render_rule_projection("Anchor-band projection", rows, ANCHOR_BAND_RULE))
+    print()
+    print(render_rule_projection("Refined anchor-band projection", rows, REFINED_ANCHOR_BAND_RULE))
     print()
     print(
         render_rows(
@@ -915,6 +1047,24 @@ def main() -> None:
                 reference_rows=generated_rows,
                 reference_label="target",
                 band_rule=ANCHOR_BAND_RULE,
+            )
+        )
+    if outer_guardrail_rows:
+        print()
+        print(
+            render_rows(
+                "Generated outer guardrail rows",
+                outer_guardrail_rows,
+                reference_rows=generated_rows,
+                reference_label="target",
+                band_rule=REFINED_ANCHOR_BAND_RULE,
+            )
+        )
+        print()
+        print(
+            render_translation_rows(
+                "Generated outer guardrail shoulder/throat translation",
+                outer_guardrail_rows,
             )
         )
     if anchor_band_false_positives:
@@ -1040,6 +1190,21 @@ def main() -> None:
         (rule for rule in focused_mode_mix_f_compact_rules if rule.exact),
         None,
     )
+    outer_guardrail_escape_rows = [
+        row
+        for row in outer_guardrail_rows
+        if _translation_label(row) == "outside-current-translation"
+    ]
+    outer_guardrail_shoulder_rows = [
+        row
+        for row in outer_guardrail_rows
+        if _translation_label(row) == "right/deep-shoulder"
+    ]
+    outer_guardrail_throat_rows = [
+        row
+        for row in outer_guardrail_rows
+        if _translation_label(row) == "low-support-throat"
+    ]
     print("Conclusion")
     print("==========")
     if not generated_stable_rows:
@@ -1087,6 +1252,27 @@ def main() -> None:
                 "the refined band therefore admits two generated realizations, a right/deep bridge shoulder and a nearly empty low-support throat, "
                 "both distinct from the frozen add4 mid-anchor knot (mid_anchor_closure_peak=12.000)."
             )
+        if outer_guardrail_rows:
+            if not outer_guardrail_escape_rows:
+                print(
+                    "One sparse outer guardrail slice adds only in-band generated rows that still fit the current shoulder/throat translation."
+                )
+                print(
+                    "outer_guardrail_translation="
+                    + f"shoulder:{len(outer_guardrail_shoulder_rows)} "
+                    + f"throat:{len(outer_guardrail_throat_rows)} "
+                    + f"outside:{len(outer_guardrail_escape_rows)}"
+                )
+            else:
+                print(
+                    "One sparse outer guardrail slice reveals in-band generated rows outside the current shoulder/throat translation."
+                )
+                print(
+                    "outer_guardrail_translation="
+                    + f"shoulder:{len(outer_guardrail_shoulder_rows)} "
+                    + f"throat:{len(outer_guardrail_throat_rows)} "
+                    + f"outside:{len(outer_guardrail_escape_rows)}"
+                )
     elif (
         len(anchor_band_false_positives) == len(anchor_band_add4_rows)
         and not anchor_band_false_negatives
@@ -1137,6 +1323,27 @@ def main() -> None:
             print(
                 f"focused_exact_mode_mix_f={exact_focused_mode_mix_f_compact.rule_text}"
             )
+        if outer_guardrail_rows:
+            if not outer_guardrail_escape_rows:
+                print(
+                    "One sparse outer guardrail slice adds only in-band generated rows that still fit the current shoulder/throat translation."
+                )
+                print(
+                    "outer_guardrail_translation="
+                    + f"shoulder:{len(outer_guardrail_shoulder_rows)} "
+                    + f"throat:{len(outer_guardrail_throat_rows)} "
+                    + f"outside:{len(outer_guardrail_escape_rows)}"
+                )
+            else:
+                print(
+                    "One sparse outer guardrail slice reveals in-band generated rows outside the current shoulder/throat translation."
+                )
+                print(
+                    "outer_guardrail_translation="
+                    + f"shoulder:{len(outer_guardrail_shoulder_rows)} "
+                    + f"throat:{len(outer_guardrail_throat_rows)} "
+                    + f"outside:{len(outer_guardrail_escape_rows)}"
+                )
     elif exact_one_feature is not None:
         print(
             "The prior anchor-balance band leaks on the broadened comparison set, but an exact one-feature separator still exists on the full bounded basis."
