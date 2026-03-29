@@ -1,3 +1,57 @@
+## 2026-03-29 01:15 America/New_York
+
+### Seam class
+- generated-family transfer
+- anchor-band add4 pocket
+
+### Science impact
+- science advanced; the moderate anchor-balance band is not by itself exact against frozen `add4-sensitive`, but one added mid-anchor closure ceiling restores exact separation of the generated pair-only basin across all frozen historical cohorts
+
+### Current state
+- Resumed the active generated-family transfer thread while `main` was still locally ahead at `e1bc955` after the prior DNS-blocked helper pushes.
+- Extended `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_non_guarded_pair_compare.py` to add the frozen `add4-sensitive` cohort plus an in-band overlap search, then ran it to:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-anchor-band-add4-projection.txt`
+- The bounded immediate generated basin still contributes no guard-surviving correctly classified comparison rows:
+  - `generated_stable_nearby_rows = 0`
+
+### Strongest confirmed conclusion
+- The prior anchor-balance band still exact-hits all `11` surviving generated failures and still excludes the frozen historical `pair-only-sensitive` and `add1-sensitive` cohorts, but it now catches one small frozen `add4-sensitive` pocket:
+  - `anchor_closure_intensity_gap >= -2.000 and anchor_closure_intensity_gap <= 2.333`
+  - generated failures: `11/11`
+  - historical frozen `pair-only-sensitive`: `0/9`
+  - historical frozen `add1-sensitive`: `0/15`
+  - historical frozen `add4-sensitive`: `2/8` (`base:taper-wrap:local-morph-ዦ`, `base:taper-wrap:local-morph-ᓭ`)
+- Those in-band frozen `add4-sensitive` rows are otherwise inside the generated target ranges and differ cleanly on one order parameter:
+  - `mid_anchor_closure_peak = 12.000` for both add4 overlaps
+  - generated failure range: `mid_anchor_closure_peak = 0.000 -> 8.000`
+- Adding one in-band ceiling restores exact generated-vs-historical separation without reopening the earlier boundaries:
+  - `anchor_closure_intensity_gap >= -2.000 and anchor_closure_intensity_gap <= 2.333 and mid_anchor_closure_peak <= 10.000`
+  - generated failures: `11/11`
+  - historical frozen `pair-only-sensitive`: `0/9`
+  - historical frozen `add1-sensitive`: `0/15`
+  - historical frozen `add4-sensitive`: `0/8`
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_non_guarded_pair_compare.py`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- New log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-anchor-band-add4-projection.txt`
+- Validation:
+  - `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_non_guarded_pair_compare.py`
+  - `python3 -u /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_non_guarded_pair_compare.py > /Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-anchor-band-add4-projection.txt`
+
+### Exact next step
+- Translate the refined `anchor_closure_intensity_gap` plus `mid_anchor_closure_peak <= 10.000` basin into more physical support-layout language by comparing the two in-band frozen `add4-sensitive` rows against their nearest generated failures.
+
+### First concrete action
+- Add one tiny nearest-neighbor/delta comparison for `base:taper-wrap:local-morph-ዦ` and `base:taper-wrap:local-morph-ᓭ` versus `base:skew-wrap:mode-mix-d` and `base:skew-wrap:local-morph-c`, then test whether one compact support-layout observable explains the added `mid_anchor_closure_peak` ceiling.
+
 ## 2026-03-28 23:54 America/New_York
 
 ### Seam class
@@ -41,6 +95,10 @@
 - Validation:
   - `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_exact_law_generated_ensemble_transfer_check.py /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_non_guarded_pair_compare.py`
   - `python3 -u /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_non_guarded_pair_compare.py > /Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-generated-anchor-band-nearby-projection-v3.txt`
+
+### Commit status
+- Committed locally as `e1bc955` (`Project generated anchor band onto add1 history`).
+- End-of-loop helper push failed after retries with DNS (`Could not resolve host: github.com`); repository state is `ahead 2, behind 0`.
 
 ### Exact next step
 - Test whether the anchor-balance band is only a `pair-only`/`add1` exclusion or a broader subtype basin by projecting it onto the frozen `add4-sensitive` rows, starting with the few in-band cases.

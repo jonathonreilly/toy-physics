@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Project the generated anchor-balance boundary onto broader historical and nearby generated cohorts."""
+"""Project the generated anchor-balance boundary onto broader historical cohorts."""
 
 from __future__ import annotations
 
@@ -45,6 +45,7 @@ from toy_event_physics import _extended_ge6_dpadj_trees, benchmark_packs  # noqa
 TARGET_CLASS = "generated-transfer-failure"
 HISTORICAL_PAIR_CLASS = "historical-pair-only"
 HISTORICAL_ADD1_CLASS = "historical-add1"
+HISTORICAL_ADD4_CLASS = "historical-add4"
 GENERATED_STABLE_CLASS = "generated-stable-nearby"
 ANCHOR_BAND_RULE = (
     "anchor_closure_intensity_gap <= 2.333 and anchor_closure_intensity_gap >= -2.000"
@@ -253,6 +254,7 @@ def build_comparison_rows(
     generated_rows: list[object],
     historical_pair_rows: list[object],
     historical_add1_rows: list[object],
+    historical_add4_rows: list[object],
     generated_stable_rows: list[object],
 ) -> list[object]:
     row_cls = make_dataclass(
@@ -374,6 +376,37 @@ def build_comparison_rows(
                 ),
             )
         )
+    for row in historical_add4_rows:
+        rows.append(
+            row_cls(
+                origin="historical-add4",
+                source_name=getattr(row, "source_name"),
+                subtype=HISTORICAL_ADD4_CLASS,
+                actual_subtype=getattr(row, "subtype"),
+                predicted_subtype=predict_subtype(row),
+                predicted_branch=predict_branch(row),
+                ensemble_name="historical",
+                style="historical",
+                support_load=float(getattr(row, "support_load")),
+                closure_load=float(getattr(row, "closure_load")),
+                mid_anchor_closure_peak=float(getattr(row, "mid_anchor_closure_peak")),
+                anchor_closure_intensity_gap=float(
+                    getattr(row, "anchor_closure_intensity_gap")
+                ),
+                anchor_deep_share_gap=float(getattr(row, "anchor_deep_share_gap")),
+                high_bridge_high_count=float(getattr(row, "high_bridge_high_count")),
+                high_bridge_right_count=float(getattr(row, "high_bridge_right_count")),
+                high_bridge_right_low_count=float(
+                    getattr(row, "high_bridge_right_low_count")
+                ),
+                edge_identity_event_count=float(
+                    getattr(row, "edge_identity_event_count")
+                ),
+                edge_identity_support_edge_density=float(
+                    getattr(row, "edge_identity_support_edge_density")
+                ),
+            )
+        )
     for row in generated_stable_rows:
         rows.append(
             row_cls(
@@ -439,7 +472,7 @@ def render_shared_out_of_range(
     return "\n".join(lines)
 
 
-def render_generated_rows(
+def render_rows(
     title: str,
     rows: list[object],
     *,
@@ -482,6 +515,7 @@ def render_rule_projection(title: str, rows: list[object], rule_text: str) -> st
         TARGET_CLASS,
         HISTORICAL_PAIR_CLASS,
         HISTORICAL_ADD1_CLASS,
+        HISTORICAL_ADD4_CLASS,
         GENERATED_STABLE_CLASS,
     ):
         cohort_rows = [row for row in rows if getattr(row, "subtype") == cohort]
@@ -535,6 +569,9 @@ def main() -> None:
     historical_add1_rows = [
         row for row in historical_rows if getattr(row, "subtype") == "add1-sensitive"
     ]
+    historical_add4_rows = [
+        row for row in historical_rows if getattr(row, "subtype") == "add4-sensitive"
+    ]
 
     ge6_tree, dpadj_tree = _extended_ge6_dpadj_trees(retained_weight=1.0)
     generated_rows = build_generated_target_rows(
@@ -556,9 +593,11 @@ def main() -> None:
         generated_rows,
         historical_pair_rows,
         historical_add1_rows,
+        historical_add4_rows,
         generated_stable_rows,
     )
     historical_pair_ranges = _feature_ranges(historical_pair_rows)
+    generated_ranges = _feature_ranges(generated_rows)
 
     one_feature_rules = evaluate_rules(
         rows,
@@ -585,6 +624,9 @@ def main() -> None:
     hist_add1_hits = [
         row for row in historical_add1_rows if predict_subtype(row) == "add1-sensitive"
     ]
+    hist_add4_hits = [
+        row for row in historical_add4_rows if predict_subtype(row) == "add4-sensitive"
+    ]
     generated_pair_hits = [
         row
         for row in generated_rows
@@ -605,6 +647,34 @@ def main() -> None:
         if getattr(row, "subtype") == TARGET_CLASS
         and not matches_rule_text(row, ANCHOR_BAND_RULE)
     ]
+    anchor_band_add4_rows = [
+        row
+        for row in rows
+        if getattr(row, "subtype") == HISTORICAL_ADD4_CLASS
+        and matches_rule_text(row, ANCHOR_BAND_RULE)
+    ]
+    anchor_band_focus_rows = [
+        row
+        for row in rows
+        if matches_rule_text(row, ANCHOR_BAND_RULE)
+        and getattr(row, "subtype") in (TARGET_CLASS, HISTORICAL_ADD4_CLASS)
+    ]
+    anchor_band_focus_one_feature_rules = evaluate_rules(
+        anchor_band_focus_rows,
+        target_subtype=TARGET_CLASS,
+        feature_names=list(FEATURES),
+        predicate_limit=args.predicate_limit,
+        max_terms=1,
+        row_limit=args.row_limit,
+    )
+    anchor_band_focus_compact_rules = evaluate_rules(
+        anchor_band_focus_rows,
+        target_subtype=TARGET_CLASS,
+        feature_names=list(FEATURES),
+        predicate_limit=args.predicate_limit,
+        max_terms=3,
+        row_limit=args.row_limit,
+    )
 
     print()
     print("Generated Non-Guarded Pair Compare")
@@ -613,6 +683,7 @@ def main() -> None:
     print(f"bucket={RC0_ML0_C2_BUCKET}")
     print(f"historical_pair_rows={len(historical_pair_rows)}")
     print(f"historical_add1_rows={len(historical_add1_rows)}")
+    print(f"historical_add4_rows={len(historical_add4_rows)}")
     print(f"generated_target_rows={len(generated_rows)} ({_format_counts(generated_rows)})")
     print(
         f"generated_stable_nearby_rows={len(generated_stable_rows)} "
@@ -631,10 +702,12 @@ def main() -> None:
     print(
         f"historical_pair_rule_hits={len(hist_pair_hits)}/{len(historical_pair_rows)} "
         f"historical_add1_rule_hits={len(hist_add1_hits)}/{len(historical_add1_rows)} "
+        f"historical_add4_rule_hits={len(hist_add4_hits)}/{len(historical_add4_rows)} "
         f"generated_pair_rule_hits={len(generated_pair_hits)}/{len(generated_rows)}"
     )
     print(
         f"anchor_band_hits={len(anchor_band_hits)}/{len(rows)} "
+        f"anchor_band_add4_hits={len(anchor_band_add4_rows)}/{len(historical_add4_rows)} "
         f"anchor_band_false_positives={len(anchor_band_false_positives)} "
         f"anchor_band_false_negatives={len(anchor_band_false_negatives)}"
     )
@@ -642,6 +715,8 @@ def main() -> None:
     print(render_feature_ranges("Historical pair-only ranges", historical_pair_rows))
     print()
     print(render_feature_ranges("Historical add1 ranges", historical_add1_rows))
+    print()
+    print(render_feature_ranges("Historical add4 ranges", historical_add4_rows))
     print()
     print(render_feature_ranges("Generated non-guarded target ranges", generated_rows))
     print()
@@ -659,7 +734,7 @@ def main() -> None:
     print(render_rule_projection("Anchor-band projection", rows, ANCHOR_BAND_RULE))
     print()
     print(
-        render_generated_rows(
+        render_rows(
             "Generated target rows",
             generated_rows,
             reference_rows=historical_pair_rows,
@@ -671,7 +746,7 @@ def main() -> None:
     if generated_stable_rows:
         print()
         print(
-            render_generated_rows(
+            render_rows(
                 "Generated stable nearby rows",
                 generated_stable_rows,
                 reference_rows=generated_rows,
@@ -682,12 +757,29 @@ def main() -> None:
     if anchor_band_false_positives:
         print()
         print(
-            render_generated_rows(
+            render_rows(
                 "Anchor-band false positives",
                 anchor_band_false_positives,
                 reference_rows=generated_rows,
                 reference_label="target",
                 band_rule=ANCHOR_BAND_RULE,
+                historical_ranges=generated_ranges,
+            )
+        )
+        print()
+        print(
+            render_rule_table(
+                f"Anchor-band overlap one-feature separators for {TARGET_CLASS}",
+                anchor_band_focus_rows,
+                anchor_band_focus_one_feature_rules,
+            )
+        )
+        print()
+        print(
+            render_rule_table(
+                f"Anchor-band overlap compact separators for {TARGET_CLASS}",
+                anchor_band_focus_rows,
+                anchor_band_focus_compact_rules,
             )
         )
     print()
@@ -709,20 +801,46 @@ def main() -> None:
     print()
     exact_one_feature = next((rule for rule in one_feature_rules if rule.exact), None)
     exact_compact = next((rule for rule in compact_rules if rule.exact), None)
+    exact_anchor_band_focus_one_feature = next(
+        (rule for rule in anchor_band_focus_one_feature_rules if rule.exact),
+        None,
+    )
+    exact_anchor_band_focus_compact = next(
+        (rule for rule in anchor_band_focus_compact_rules if rule.exact),
+        None,
+    )
     print("Conclusion")
     print("==========")
     if not generated_stable_rows:
         print(
-            "The bounded nearby generated scan found no guard-surviving correctly classified comparison rows before the scan budget ended, so this pass mainly tests the anchor band against historical add1 rows."
+            "The bounded nearby generated scan again found no guard-surviving correctly classified comparison rows, so this pass mainly tests the anchor band against the historical add1/add4 cohorts."
         )
     if not anchor_band_false_positives and not anchor_band_false_negatives:
         print(
-            "The anchor-balance band remains exact after adding the historical frozen add1 cohort and the bounded nearby generated comparison basin."
+            "The anchor-balance band remains exact after adding the historical frozen add1 and add4 cohorts plus the bounded nearby generated comparison basin."
         )
         print(f"best_exact_compact={ANCHOR_BAND_RULE}")
+    elif (
+        len(anchor_band_false_positives) == len(anchor_band_add4_rows)
+        and not anchor_band_false_negatives
+        and exact_anchor_band_focus_one_feature is not None
+    ):
+        print(
+            "The anchor-balance band broadens only onto a small historical add4 pocket, and one extra in-band clause exact-separates those add4 rows from the generated failures without reopening the pair-only/add1 boundary."
+        )
+        print(f"best_exact_compact={ANCHOR_BAND_RULE} and {exact_anchor_band_focus_one_feature.rule_text}")
+    elif (
+        len(anchor_band_false_positives) == len(anchor_band_add4_rows)
+        and not anchor_band_false_negatives
+        and exact_anchor_band_focus_compact is not None
+    ):
+        print(
+            "The anchor-balance band broadens only onto a small historical add4 pocket, and a compact in-band clause exact-separates those add4 rows from the generated failures without reopening the pair-only/add1 boundary."
+        )
+        print(f"best_exact_compact={ANCHOR_BAND_RULE} and {exact_anchor_band_focus_compact.rule_text}")
     elif exact_one_feature is not None:
         print(
-            "The prior anchor-balance band leaks on the broadened comparison set, but an exact one-feature separator still exists on the current bounded basis."
+            "The prior anchor-balance band leaks on the broadened comparison set, but an exact one-feature separator still exists on the full bounded basis."
         )
         print(f"best_exact_one_feature={exact_one_feature.rule_text}")
     elif exact_compact is not None:
