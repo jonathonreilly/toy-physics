@@ -5,7 +5,7 @@ from __future__ import annotations
 
 import argparse
 from collections import Counter
-from dataclasses import make_dataclass
+from dataclasses import make_dataclass, replace
 from datetime import datetime
 from pathlib import Path
 import sys
@@ -79,12 +79,19 @@ FOCUSED_GENERATED_SOURCES = (
     "base:skew-wrap:local-morph-c",
     "base:skew-wrap:mode-mix-d",
 )
+FOCUSED_MODE_MIX_F_SOURCE = "base:taper-wrap:mode-mix-f"
+FOCUSED_MODE_MIX_F_CLASS = "generated-mode-mix-f-focus"
 FOCUSED_SUPPORT_LAYOUT_FEATURES = (
     "anchor_deep_share_gap",
     "high_bridge_right_count",
     "high_bridge_right_low_count",
     "high_bridge_high_count",
     "edge_identity_support_edge_density",
+)
+FOCUSED_MODE_MIX_F_FEATURES = (
+    "support_load",
+    "closure_load",
+    "edge_identity_event_count",
 )
 FOCUSED_DELTA_FEATURES = (
     "support_load",
@@ -94,6 +101,16 @@ FOCUSED_DELTA_FEATURES = (
     "anchor_deep_share_gap",
     "high_bridge_right_count",
     "high_bridge_right_low_count",
+    "edge_identity_support_edge_density",
+)
+FOCUSED_MODE_MIX_F_DELTA_FEATURES = (
+    "support_load",
+    "closure_load",
+    "mid_anchor_closure_peak",
+    "anchor_closure_intensity_gap",
+    "anchor_deep_share_gap",
+    "high_bridge_right_count",
+    "edge_identity_event_count",
     "edge_identity_support_edge_density",
 )
 ENSEMBLE_ORDER = {name: index for index, name in enumerate(DEFAULT_NEARBY_ENSEMBLES)}
@@ -775,6 +792,15 @@ def main() -> None:
         ],
         FOCUSED_ADD4_SOURCES,
     )
+    focused_mode_mix_f_rows = _pick_representative_rows(
+        [
+            row
+            for row in rows
+            if getattr(row, "subtype") == TARGET_CLASS
+            and getattr(row, "source_name") == FOCUSED_MODE_MIX_F_SOURCE
+        ],
+        (FOCUSED_MODE_MIX_F_SOURCE,),
+    )
     focused_support_layout_rows = focused_generated_rows + focused_add4_rows
     focused_support_layout_one_feature_rules = evaluate_rules(
         focused_support_layout_rows,
@@ -788,6 +814,26 @@ def main() -> None:
         focused_support_layout_rows,
         target_subtype=TARGET_CLASS,
         feature_names=list(FOCUSED_SUPPORT_LAYOUT_FEATURES),
+        predicate_limit=args.predicate_limit,
+        max_terms=3,
+        row_limit=args.row_limit,
+    )
+    focused_mode_mix_f_focus_rows = [
+        replace(row, subtype=FOCUSED_MODE_MIX_F_CLASS)
+        for row in focused_mode_mix_f_rows
+    ] + focused_generated_rows + focused_add4_rows
+    focused_mode_mix_f_one_feature_rules = evaluate_rules(
+        focused_mode_mix_f_focus_rows,
+        target_subtype=FOCUSED_MODE_MIX_F_CLASS,
+        feature_names=list(FOCUSED_MODE_MIX_F_FEATURES),
+        predicate_limit=args.predicate_limit,
+        max_terms=1,
+        row_limit=args.row_limit,
+    )
+    focused_mode_mix_f_compact_rules = evaluate_rules(
+        focused_mode_mix_f_focus_rows,
+        target_subtype=FOCUSED_MODE_MIX_F_CLASS,
+        feature_names=list(FOCUSED_MODE_MIX_F_FEATURES),
         predicate_limit=args.predicate_limit,
         max_terms=3,
         row_limit=args.row_limit,
@@ -925,6 +971,32 @@ def main() -> None:
                 focused_support_layout_compact_rules,
             )
         )
+    if focused_mode_mix_f_focus_rows:
+        print()
+        print(
+            render_pairwise_deltas(
+                "Focused mode-mix-f vs representative shoulder/knot deltas",
+                focused_mode_mix_f_rows,
+                focused_generated_rows + focused_add4_rows,
+                delta_features=FOCUSED_MODE_MIX_F_DELTA_FEATURES,
+            )
+        )
+        print()
+        print(
+            render_rule_table(
+                f"Focused mode-mix-f low-support one-feature separators for {FOCUSED_MODE_MIX_F_CLASS}",
+                focused_mode_mix_f_focus_rows,
+                focused_mode_mix_f_one_feature_rules,
+            )
+        )
+        print()
+        print(
+            render_rule_table(
+                f"Focused mode-mix-f low-support compact separators for {FOCUSED_MODE_MIX_F_CLASS}",
+                focused_mode_mix_f_focus_rows,
+                focused_mode_mix_f_compact_rules,
+            )
+        )
     print()
     print(
         render_rule_table(
@@ -960,6 +1032,14 @@ def main() -> None:
         (rule for rule in focused_support_layout_compact_rules if rule.exact),
         None,
     )
+    exact_focused_mode_mix_f_one_feature = next(
+        (rule for rule in focused_mode_mix_f_one_feature_rules if rule.exact),
+        None,
+    )
+    exact_focused_mode_mix_f_compact = next(
+        (rule for rule in focused_mode_mix_f_compact_rules if rule.exact),
+        None,
+    )
     print("Conclusion")
     print("==========")
     if not generated_stable_rows:
@@ -993,6 +1073,20 @@ def main() -> None:
                 "(0.000, 0.000), so anchor balance stays similar while the frozen add4 rows trap more closure at the mid anchor "
                 "(mid_anchor_closure_peak=12.000 versus 8.000)."
             )
+        if exact_focused_mode_mix_f_one_feature is not None:
+            print(
+                "On the same representative row set, one compact low-support observable exact-separates mode-mix-f from both the skew-wrap shoulder and the in-band add4 knot."
+            )
+            print(
+                f"focused_exact_mode_mix_f={exact_focused_mode_mix_f_one_feature.rule_text}"
+            )
+            print(
+                "mode_mix_f_translation=mode-mix-f stays inside the anchor band by collapsing to a zero-support, low-closure floor "
+                "(support_load=0.000, closure_load=5.000, edge_identity_event_count=10.000) rather than by carrying the skew-wrap "
+                "right/deep bridge shoulder (anchor_deep_share_gap=0.500, high_bridge_right_count=1.000); on the current bounded basis "
+                "the refined band therefore admits two generated realizations, a right/deep bridge shoulder and a nearly empty low-support throat, "
+                "both distinct from the frozen add4 mid-anchor knot (mid_anchor_closure_peak=12.000)."
+            )
     elif (
         len(anchor_band_false_positives) == len(anchor_band_add4_rows)
         and not anchor_band_false_negatives
@@ -1021,6 +1115,27 @@ def main() -> None:
             )
             print(
                 f"focused_exact_support_layout={exact_focused_support_layout_compact.rule_text}"
+            )
+        if exact_focused_mode_mix_f_one_feature is not None:
+            print(
+                "On the same representative row set, one compact low-support observable exact-separates mode-mix-f from both the skew-wrap shoulder and the in-band add4 knot."
+            )
+            print(
+                f"focused_exact_mode_mix_f={exact_focused_mode_mix_f_one_feature.rule_text}"
+            )
+            print(
+                "mode_mix_f_translation=mode-mix-f stays inside the anchor band by collapsing to a zero-support, low-closure floor "
+                "(support_load=0.000, closure_load=5.000, edge_identity_event_count=10.000) rather than by carrying the skew-wrap "
+                "right/deep bridge shoulder (anchor_deep_share_gap=0.500, high_bridge_right_count=1.000); on the current bounded basis "
+                "the refined band therefore admits two generated realizations, a right/deep bridge shoulder and a nearly empty low-support throat, "
+                "both distinct from the frozen add4 mid-anchor knot (mid_anchor_closure_peak=12.000)."
+            )
+        elif exact_focused_mode_mix_f_compact is not None:
+            print(
+                "On the same representative row set, a compact low-support clause exact-separates mode-mix-f from both the skew-wrap shoulder and the in-band add4 knot."
+            )
+            print(
+                f"focused_exact_mode_mix_f={exact_focused_mode_mix_f_compact.rule_text}"
             )
     elif exact_one_feature is not None:
         print(
