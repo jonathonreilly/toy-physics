@@ -1,3 +1,67 @@
+## 2026-03-29 11:18 America/New_York
+
+### Seam class
+- generated-family transfer
+- beyond-ceiling mirrored late guardrail
+
+### Science impact
+- science advanced; the mirrored late non-rect route stays empty one ensemble tier later, so the beyond-ceiling continuation remains rect-local not just through `mirror` `ultra|mega` but through `mirror` `giga|tera` as well
+
+### Current state
+- Checked the finished automation state first, confirmed `main` was already synced with `origin/main`, found the cooperative lock free, and resumed from the documented next seam rather than replaying older local probe attempts.
+- Reused the first-hit probe on the next cheaper more-distant late slice:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_beyond_ceiling_first_nonrect_probe.py --packs mirror --ensembles giga tera`
+  - result log: `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-beyond-ceiling-first-nonrect-probe-mirror-giga-tera.txt`
+- The mirrored `giga|tera` result is fully negative:
+  - `packs = mirror`
+  - `ensembles = giga, tera`
+  - `scanned_nonrect_combinations = 4`
+  - `first_nonrect_row = none`
+- Also launched the matching wider `large` `giga|tera` probe, but after an extended run it was still unresolved and produced no finished log, so it was stopped rather than being misreported as a result:
+  - stopped unfinished path: `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-beyond-ceiling-first-nonrect-probe-large-giga-tera.txt`
+
+### Strongest confirmed conclusion
+- The refined anchor-balance basin remains exact on the current bounded basis:
+  - `anchor_closure_intensity_gap >= -2.000 and anchor_closure_intensity_gap <= 2.333 and mid_anchor_closure_peak <= 10.000`
+  - generated failures: `11/11`
+  - historical frozen `pair-only-sensitive`: `0/9`
+  - historical frozen `add1-sensitive`: `0/15`
+  - historical frozen `add4-sensitive`: `0/8`
+- The focused outer-rect pair still exact-separates from the representative shoulder/throat/knot set with the same compact load observable:
+  - `closure_load >= 75.000`
+  - outer rect pair: `2/2`
+  - representative shoulder + throat + frozen knot rows: `0/5`
+- The beyond-ceiling continuation remains rect-local on every finished late guardrail test so far:
+  - base sparse rect slice `rect-wrap/rect-hard` at `ultra|mega`: only `base:rect-wrap:local-morph-f`
+  - wider `large` late non-rect slice at `ultra|mega`: `0` rows
+  - mirrored `mirror` late non-rect slice at `ultra|mega`: `0` rows
+  - mirrored `mirror` late non-rect slice at `giga|tera`: `0` rows
+- So the current physical read is narrower again:
+  - the heavier beyond-ceiling continuation is still only observed on the rect tail
+  - mirrored non-rect late families do not furnish an alternative continuation even one ensemble tier later
+
+### Files and results changed in this run
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- New log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-beyond-ceiling-first-nonrect-probe-mirror-giga-tera.txt`
+
+### Validation
+- `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_beyond_ceiling_first_nonrect_probe.py --packs mirror --ensembles giga tera > /Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-beyond-ceiling-first-nonrect-probe-mirror-giga-tera.txt`
+
+### Commit status
+- Pre-step canonical repo state: `8da1fc1` on both local `main` and `origin/main`.
+- Pending local commit to promote the mirrored `giga|tera` negative result and refresh the research narrative.
+
+### Exact next step
+- Resume the still-open wider-family branch with a bounded `large` `giga|tera` first-hit probe, or choose an even more distant late slice if that wider branch remains too expensive to settle cleanly.
+
+### First concrete action
+- Reuse the first-hit probe on `large` with `giga tera`, but keep it as the only heavy process and stop immediately once a finished result exists.
+
 ## 2026-03-29 10:52 America/New_York
 
 ### Seam class
