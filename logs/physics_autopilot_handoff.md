@@ -1,19 +1,26 @@
 # Physics Autopilot Handoff
 
-## 2026-03-29 06:55 America/New_York
+## 2026-03-29 08:54 America/New_York
 
 ### Seam class
 - generated-family transfer
-- repo-state reconciliation
+- manual-frontier guard
 
 ### Science impact
-- no new science conclusion; integrity advanced by reconciling the stale tracked work-log and handoff tail to the already-committed widened guardrail result so the next loop can resume the beyond-ceiling thread from consistent repo state
+- no new science conclusion; integrity advanced by reconciling the tracked ahead-state to the already-synced repo and by refusing to overlap newer untracked beyond-ceiling probe artifacts on the exact next thread
 
 ### Current state
-- Read the required preflight artifacts in order, confirmed the prior handoff had no active child, acquired `physics-science`, reconciled the canonical repo at `main...origin/main [ahead 8]` with one tracked dirty runtime handoff file, and retried the required pre-step push helper.
-- The required pre-step push helper again failed with DNS (`Could not resolve host: github.com`), so the repo stayed locally ahead before the bounded integrity step.
-- Reconciled `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md` to the real `9a52504` (`Probe widened beyond-ceiling guardrail`) commit state and refreshed this runtime handoff to match the committed science result plus the current push status.
-- No active science child remains from this loop; the reconciliation ran in foreground, and the next loop should resume the beyond-ceiling follow-on directly from repo state.
+- Read the required preflight artifacts in order, confirmed the prior handoff had no active child, acquired `physics-science`, and reconciled the canonical repo at `main...origin/main` with `88b9b01` on both refs before any new step.
+- The tracked automation state was stale relative to the real repo: the tracked work log and handoff still described the pre-push `ahead 8` condition even though the canonical repo is already synced.
+- Found newer untracked beyond-ceiling frontier artifacts on the exact next thread:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_beyond_ceiling_nonrect_sweep.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_beyond_ceiling_first_nonrect_probe.py`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-beyond-ceiling-nonrect-sweep.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-beyond-ceiling-nonrect-large-guardrail.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-beyond-ceiling-first-nonrect-probe.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-beyond-ceiling-first-nonrect-probe-large-ultra-mega.txt`
+- `lsof` found no active holder on those logs, but because the artifacts are newer than the tracked automation state and target the exact next non-rect guardrail follow-on, this loop performed only the guarded repo/manual-state reconciliation.
+- No active science child remains from this loop; no new frontier computation was started.
 
 ### Strongest confirmed conclusion
 - The refined anchor-balance basin remains exact on the current bounded basis:
@@ -42,16 +49,16 @@
   - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
 
 ### Commit status
-- The latest science result remains committed locally as `9a52504` (`Probe widened beyond-ceiling guardrail`).
-- This loop adds one repo-state reconciliation commit on top of that science chain.
-- Required push helper still fails with DNS, so local `main` remains ahead of `origin/main`.
+- Pre-step canonical repo sync: `88b9b01` on both `main` and `origin/main`.
+- This loop records one tracked integrity commit to align the work log and handoff with the real repo/manual frontier state.
+- The end-of-loop push helper result is recorded in automation memory.
 
 ### Remaining review seams
-- closed: reconcile the stale tracked commit-status tail left after the widened guardrail run
-- open: identify the next smallest beyond-ceiling guardrail that yields a non-rect non-collapse row and test whether `closure_load >= 75.000` survives there
+- closed: reconcile the stale tracked ahead-state left after the widened guardrail chain was pushed
+- open: resolve the newer untracked beyond-ceiling non-rect probe artifacts before starting another automated science step
 
 ### Exact next step
-- Identify one slightly wider or differently placed beyond-ceiling guardrail that yields the first non-rect non-collapse row, then test whether the current high-load clause survives there.
+- Reconcile the untracked beyond-ceiling non-rect probe artifacts, then decide from that resolved state whether the first non-rect beyond-ceiling row preserves `closure_load >= 75.000` or breaks it.
 
 ### First concrete action
-- Extend the same comparer with one sparse beyond-ceiling follow-on outside the current `rect-wrap`/`rect-hard` slice, prioritizing the nearest scenario family that can still produce non-collapse rows beyond the refined ceiling.
+- Inspect the untracked probe scripts and zero-byte logs, then either promote that work into a tracked run or clear it before automation resumes the beyond-ceiling frontier.
