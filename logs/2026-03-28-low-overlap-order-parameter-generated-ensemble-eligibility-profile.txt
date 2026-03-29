@@ -1,0 +1,20 @@
+generated ensemble eligibility profile started 2026-03-28T20:29:45
+
+scenario=taper-wrap ensemble=default
+------------------------------------
+eligible_nonpocket_total=2
+  geometry: variants=5 dpadj_only=2 pocket_signature=0 eligible_nonpocket=2 other_base_outcome=3 subtypes=pair-only-sensitive:2 examples=base:taper-wrap:geometry-c, base:taper-wrap:geometry-e
+  walk: variants=3 dpadj_only=0 pocket_signature=0 eligible_nonpocket=0 other_base_outcome=3 subtypes=none examples=none
+  mode-mix: variants=3 dpadj_only=0 pocket_signature=0 eligible_nonpocket=0 other_base_outcome=3 subtypes=none examples=none
+  local-morph: variants=3 dpadj_only=1 pocket_signature=1 eligible_nonpocket=0 other_base_outcome=2 subtypes=none examples=none
+
+Generated Ensemble Eligibility Profile
+====================================
+pack_name=base
+scenarios=taper-wrap,skew-wrap
+ensembles=default,broader,wider,ultra,mega,giga,tera,peta,exa
+eligible_nonpocket_total=2
+first_nonempty_target=base:taper-wrap:default
+targets_scanned=taper-wrap:default:2
+
+generated ensemble eligibility profile completed 2026-03-28T20:30:07 total_elapsed=21.7s

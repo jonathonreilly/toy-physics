@@ -1,0 +1,64 @@
+exact low-overlap generated-ensemble transfer check started 2026-03-28T20:30:53
+
+Exact Low-Overlap Law Generated-Ensemble Transfer Check
+=======================================================
+target=base:taper-wrap
+ensembles=default,broader,wider
+rows_total=6
+misclassified_total=6
+ambiguous_total=0
+unmatched_total=0
+first_failure_ensemble=default
+
+ensemble=default
+----------------
+rows=2 (pair-only-sensitive:2)
+styles=geometry:2
+misclassified=2 (pair-only-sensitive:2)
+ambiguous=0 (none)
+unmatched=0 (none)
+predicted_branches:
+  high-closure-add4: 0 (none)
+  high-closure-pair-only: 0 (none)
+  outside-gate-pair-only: 0 (none)
+  outside-gate-add4: 0 (none)
+  outside-gate-add1-default: 2 (pair-only-sensitive:2)
+misclassified_rows:
+  geometry:base:taper-wrap:geometry-c actual=pair-only-sensitive predicted=add1-sensitive branch=outside-gate-add1-default mid_peak=0.000 intensity_gap=0.000 closure_load=0.000
+  geometry:base:taper-wrap:geometry-e actual=pair-only-sensitive predicted=add1-sensitive branch=outside-gate-add1-default mid_peak=0.000 intensity_gap=0.000 closure_load=0.000
+
+ensemble=broader
+----------------
+rows=2 (pair-only-sensitive:2)
+styles=geometry:2
+misclassified=2 (pair-only-sensitive:2)
+ambiguous=0 (none)
+unmatched=0 (none)
+predicted_branches:
+  high-closure-add4: 0 (none)
+  high-closure-pair-only: 0 (none)
+  outside-gate-pair-only: 0 (none)
+  outside-gate-add4: 0 (none)
+  outside-gate-add1-default: 2 (pair-only-sensitive:2)
+misclassified_rows:
+  geometry:base:taper-wrap:geometry-c actual=pair-only-sensitive predicted=add1-sensitive branch=outside-gate-add1-default mid_peak=0.000 intensity_gap=0.000 closure_load=0.000
+  geometry:base:taper-wrap:geometry-e actual=pair-only-sensitive predicted=add1-sensitive branch=outside-gate-add1-default mid_peak=0.000 intensity_gap=0.000 closure_load=0.000
+
+ensemble=wider
+--------------
+rows=2 (pair-only-sensitive:2)
+styles=geometry:2
+misclassified=2 (pair-only-sensitive:2)
+ambiguous=0 (none)
+unmatched=0 (none)
+predicted_branches:
+  high-closure-add4: 0 (none)
+  high-closure-pair-only: 0 (none)
+  outside-gate-pair-only: 0 (none)
+  outside-gate-add4: 0 (none)
+  outside-gate-add1-default: 2 (pair-only-sensitive:2)
+misclassified_rows:
+  geometry:base:taper-wrap:geometry-c actual=pair-only-sensitive predicted=add1-sensitive branch=outside-gate-add1-default mid_peak=0.000 intensity_gap=0.000 closure_load=0.000
+  geometry:base:taper-wrap:geometry-e actual=pair-only-sensitive predicted=add1-sensitive branch=outside-gate-add1-default mid_peak=0.000 intensity_gap=0.000 closure_load=0.000
+
+exact low-overlap generated-ensemble transfer check completed 2026-03-28T20:32:08 total_elapsed=74.6s

@@ -1,3 +1,100 @@
+## 2026-03-28 20:34 America/New_York
+
+### Seam class
+- generated-family transfer
+- zero-support branch exposure
+
+### Science impact
+- science advanced; canonical generated-family transfer fails immediately once zero-support eligible rows are counted instead of being skipped
+
+### Current state
+- Picked up the local generated-transfer thread, removed the stray bucket-based checker branch, and kept the narrower non-pocket `dpadj-only` transfer path.
+- Generalized `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_exact_law_generated_ensemble_transfer_check.py` so it can target arbitrary generated pack/scenario pairs, then repaired it to treat undefined support-edge metrics as zero-valued instead of silently dropping the row.
+- Added `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_ensemble_eligibility_profile.py` to locate the first generated ensemble/scenario with an eligible non-pocket suppressor cohort.
+- New logs:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-generated-ensemble-eligibility-profile.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-exact-law-generated-ensemble-transfer-check.txt`
+
+### Strongest confirmed conclusion
+- The earlier "vacuous canonical transfer" result was a checker artifact, not a science conclusion.
+- Eligibility appears immediately on the canonical nearby ladder:
+  - `first_nonempty_target = base:taper-wrap:default`
+  - `eligible_nonpocket_total = 2`
+  - both eligible rows are geometry variants `geometry-c` and `geometry-e`, both `pair-only-sensitive`
+- With zero-capable support metrics, the repaired exact-law transfer check fails immediately across the canonical `default/broader/wider` ladder:
+  - `rows_total = 6`
+  - `misclassified_total = 6`
+  - `ambiguous_total = 0`, `unmatched_total = 0`
+  - `first_failure_ensemble = default`
+- All six failures are the repeated `geometry-c/e` rows, each routed to `outside-gate-add1-default` because the generated branch collapses the current support basis:
+  - `closure_load = 0`
+  - `mid_anchor_closure_peak = 0`
+  - `anchor_closure_intensity_gap = 0`
+- So the exact historical law does not transfer unchanged even to the nearest canonical generated `taper-wrap` ensembles; the break is concentrated in a tiny zero-support pair-only branch rather than a diffuse failure.
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_exact_law_generated_ensemble_transfer_check.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_ensemble_eligibility_profile.py`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Validation:
+  - `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_exact_law_generated_ensemble_transfer_check.py /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_ensemble_eligibility_profile.py`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_ensemble_eligibility_profile.py --stop-on-first-nonempty > /Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-generated-ensemble-eligibility-profile.txt`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_exact_law_generated_ensemble_transfer_check.py --ensembles default broader wider > /Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-exact-law-generated-ensemble-transfer-check.txt`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py`
+
+### Exact next step
+- Stay in generated-family transfer mode and isolate what makes `geometry-c/e` pair-only-sensitive despite the complete collapse of the current support basis.
+
+### First concrete action
+- Add one tiny row-level comparer for the repeated generated failures `base:taper-wrap:geometry-c` and `base:taper-wrap:geometry-e`, then contrast them against the historical pair-only branch to see whether zero-support generated transfer needs a new clause or an explicit domain guard.
+
+## 2026-03-28 19:57 America/New_York
+
+### Seam class
+- generated-family transfer
+- eligibility-boundary closure
+
+### Science impact
+- science refined; the canonical generated-ensemble transfer pass is currently vacuous because no eligible non-pocket `dpadj-only` rows appeared
+
+### Current state
+- Reconciled protocol preflight first:
+  - lock was free and acquired as `physics-science`
+  - `main == origin/main` (`ahead/behind = 0/0`) before new science
+- Added and ran `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_exact_law_generated_ensemble_transfer_check.py` as the direct continuation of the generated-family transfer thread.
+- The checker projects the existing exact branch-aware law unchanged onto canonical generated ensembles `default`, `broader`, and `wider` for `base:taper-wrap` variants, then evaluates misclassification/ambiguity against subtype labels induced by suppressor injections.
+- Canonical run log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-exact-law-generated-ensemble-transfer-check.txt`
+
+### Strongest confirmed conclusion
+- The canonical generated-ensemble transfer sweep produced no eligible non-pocket cohort rows to classify:
+  - `ensembles = default, broader, wider`
+  - `rows_total = 0`
+  - `misclassified_total = 0`, `ambiguous_total = 0`, `unmatched_total = 0`
+  - `first_failure_ensemble = none within tested ensembles`
+- So no contradiction to the exact law appears yet, but this is a vacuous pass rather than a genuine generated-family stress test.
+- The active frontier tightens to finding the first generated-family configuration that yields a non-empty non-pocket `dpadj-only` suppressor cohort.
+
+### Files and results changed in this run
+- Repo-facing code:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_exact_law_generated_ensemble_transfer_check.py`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Validation:
+  - `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_exact_law_generated_ensemble_transfer_check.py`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_exact_law_generated_ensemble_transfer_check.py > /Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-exact-law-generated-ensemble-transfer-check.txt`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-exact-law-generated-ensemble-transfer-check.txt`
+
+### Exact next step
+- Stay in generated-family transfer mode and find the first non-empty generated cohort before attempting further law-failure search.
+
+### First concrete action
+- Add one tiny generated-family eligibility profiler that reports, per `default/broader/wider` style, counts of `dpadj-only`, pocket-signature, and non-pocket rows after suppressor injections, then pick the first ensemble/limit/style that yields a non-zero non-pocket cohort for the next exact-law transfer pass.
+
 ## 2026-03-28 19:16 America/New_York
 
 ### Seam class

@@ -198,8 +198,12 @@ Fine-grained mechanism work is currently concentrated on a fixed frontier snapsh
     - `59` tested checkpoints below `1232`, with `lowest_exact_limit = 192`
     - the only duplicate hazard was `variant_limit = 192`, where the sweep skipped a malformed `2026-03-22` log and fell back to the valid `2026-03-21` log
     - together with the widened and nearby ladders, no first failure appears anywhere in the full available historical `192 -> 5504` slice
+  - a generated-family eligibility profile plus repaired canonical transfer check shows the law fails immediately on nearby `taper-wrap` ensembles:
+    - the first non-pocket generated cohort already appears at `base:taper-wrap:default`, with `2` geometry rows (`geometry-c`, `geometry-e`), both `pair-only-sensitive`
+    - after fixing the transfer checker to treat undefined support-edge metrics as zero-valued rather than skipping the row, the canonical `default/broader/wider` ladder gives `rows_total = 6`, `misclassified_total = 6`, `first_failure_ensemble = default`
+    - all six failures are the repeated `geometry-c/e` rows, predicted as `add1-sensitive` by the fallback branch because their support metrics collapse to zero (`closure_load = 0`, `mid_anchor_closure_peak = 0`)
 
-The open problem in this basin is no longer whether the family structure exists, whether the frozen bucket exact-closes, or whether the law survives on the available historical frontier ladder. It is how that law transfers beyond the historical `192 -> 5504` slice, especially onto nearby generated-family ensembles, and how to express it in cleaner physical language.
+The open problem in this basin is no longer whether the family structure exists, whether the frozen bucket exact-closes, or whether the law survives on the available historical frontier ladder. It is explaining the generated-family zero-support `pair-only-sensitive` branch that appears immediately on nearby `taper-wrap` ensembles, deciding whether it should be treated as an out-of-family degeneracy or a real extension of the law, and then expressing that mechanism in cleaner physical language.
 
 ## Active Technical Problem
 
@@ -207,7 +211,8 @@ The main active technical problem is projecting and translating the exact low-ov
 
 The relevant questions are:
 
-- whether the exact branch-aware law survives on nearby generated-family ensembles now that the full available historical `192 -> 5504` frontier slice stays exact
+- why the canonical generated `taper-wrap` ladder introduces a repeated zero-support `pair-only-sensitive` branch (`geometry-c/e`) that is absent from the historical frontier ladder
+- whether the exact branch-aware law should be extended or explicitly gated when those support metrics collapse to zero
 - whether that competition can be expressed more cleanly in support-layout or topological language
 - which parts of the present explanation are stable structure and which depend on the current observable basis
 
@@ -216,9 +221,9 @@ The relevant questions are:
 The main unresolved points are:
 
 - the spent-delay action family is favored in the benchmark, but not derived from deeper first principles
-- low-overlap subtype competition is now much more compressed on the frozen `5504` bucket and exact across the available historical frontier ladder, but not yet tested on nearby generated-family ensembles
+- low-overlap subtype competition is now much more compressed on the frozen `5504` bucket and exact across the available historical frontier ladder, but nearby generated-family `taper-wrap` transfer fails immediately on a repeated zero-support `pair-only-sensitive` branch (`geometry-c/e`)
 - the present mechanism language is more geometric and topological than it was earlier, but it is not yet a clean bridge to standard continuum physics
-- the strongest fine-grained mechanism results are exact on the available historical frontier ladder, but not yet a general theorem over nearby generated families
+- the strongest fine-grained mechanism results are exact on the available historical frontier ladder, but not yet a general theorem over nearby generated families because the first canonical generated-family stress test already breaks
 
 ## What Is Still Cheating
 
