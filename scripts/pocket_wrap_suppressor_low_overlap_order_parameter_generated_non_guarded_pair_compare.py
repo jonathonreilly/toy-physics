@@ -71,6 +71,32 @@ TARGET_SPECS = (
         ("base:skew-wrap:local-morph-c", "base:skew-wrap:mode-mix-d"),
     ),
 )
+FOCUSED_ADD4_SOURCES = (
+    "base:taper-wrap:local-morph-ዦ",
+    "base:taper-wrap:local-morph-ᓭ",
+)
+FOCUSED_GENERATED_SOURCES = (
+    "base:skew-wrap:local-morph-c",
+    "base:skew-wrap:mode-mix-d",
+)
+FOCUSED_SUPPORT_LAYOUT_FEATURES = (
+    "anchor_deep_share_gap",
+    "high_bridge_right_count",
+    "high_bridge_right_low_count",
+    "high_bridge_high_count",
+    "edge_identity_support_edge_density",
+)
+FOCUSED_DELTA_FEATURES = (
+    "support_load",
+    "closure_load",
+    "mid_anchor_closure_peak",
+    "anchor_closure_intensity_gap",
+    "anchor_deep_share_gap",
+    "high_bridge_right_count",
+    "high_bridge_right_low_count",
+    "edge_identity_support_edge_density",
+)
+ENSEMBLE_ORDER = {name: index for index, name in enumerate(DEFAULT_NEARBY_ENSEMBLES)}
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -150,6 +176,30 @@ def _predicted_branch(row: object) -> str:
     if hasattr(row, "predicted_branch"):
         return getattr(row, "predicted_branch")
     return guarded_predict_branch(row)
+
+
+def _pick_representative_rows(
+    rows: list[object],
+    source_names: tuple[str, ...],
+) -> list[object]:
+    selected: list[object] = []
+    for source_name in source_names:
+        source_rows = [
+            row for row in rows if getattr(row, "source_name") == source_name
+        ]
+        if not source_rows:
+            continue
+        source_rows.sort(
+            key=lambda row: (
+                ENSEMBLE_ORDER.get(
+                    getattr(row, "ensemble_name"),
+                    len(ENSEMBLE_ORDER),
+                ),
+                getattr(row, "ensemble_name"),
+            )
+        )
+        selected.append(source_rows[0])
+    return selected
 
 
 def generated_scenarios(pack_name: str) -> list[str]:
@@ -553,6 +603,38 @@ def render_rule_table(title: str, rows: list[object], rules: list[object]) -> st
     return "\n".join(lines)
 
 
+def render_pairwise_deltas(
+    title: str,
+    left_rows: list[object],
+    right_rows: list[object],
+    *,
+    delta_features: tuple[str, ...],
+) -> str:
+    lines = [title, "=" * len(title)]
+    if not left_rows or not right_rows:
+        lines.append("none")
+        return "\n".join(lines)
+    for left in left_rows:
+        for right in right_rows:
+            distance = sum(
+                abs(float(getattr(left, feature)) - float(getattr(right, feature)))
+                for feature in FEATURES
+            )
+            lines.append(
+                f"{getattr(left, 'ensemble_name')}:{getattr(left, 'source_name')} "
+                f"minus {getattr(right, 'ensemble_name')}:{getattr(right, 'source_name')} "
+                f"distance={distance:.3f}"
+            )
+            for feature in delta_features:
+                left_value = float(getattr(left, feature))
+                right_value = float(getattr(right, feature))
+                lines.append(
+                    f"  {feature}={left_value - right_value:+.3f} "
+                    f"({left_value:.3f} vs {right_value:.3f})"
+                )
+    return "\n".join(lines)
+
+
 def main() -> None:
     args = build_parser().parse_args()
     started = datetime.now().isoformat(timespec="seconds")
@@ -675,6 +757,41 @@ def main() -> None:
         max_terms=3,
         row_limit=args.row_limit,
     )
+    focused_generated_rows = _pick_representative_rows(
+        [
+            row
+            for row in rows
+            if getattr(row, "subtype") == TARGET_CLASS
+            and getattr(row, "source_name") in FOCUSED_GENERATED_SOURCES
+        ],
+        FOCUSED_GENERATED_SOURCES,
+    )
+    focused_add4_rows = _pick_representative_rows(
+        [
+            row
+            for row in rows
+            if getattr(row, "subtype") == HISTORICAL_ADD4_CLASS
+            and getattr(row, "source_name") in FOCUSED_ADD4_SOURCES
+        ],
+        FOCUSED_ADD4_SOURCES,
+    )
+    focused_support_layout_rows = focused_generated_rows + focused_add4_rows
+    focused_support_layout_one_feature_rules = evaluate_rules(
+        focused_support_layout_rows,
+        target_subtype=TARGET_CLASS,
+        feature_names=list(FOCUSED_SUPPORT_LAYOUT_FEATURES),
+        predicate_limit=args.predicate_limit,
+        max_terms=1,
+        row_limit=args.row_limit,
+    )
+    focused_support_layout_compact_rules = evaluate_rules(
+        focused_support_layout_rows,
+        target_subtype=TARGET_CLASS,
+        feature_names=list(FOCUSED_SUPPORT_LAYOUT_FEATURES),
+        predicate_limit=args.predicate_limit,
+        max_terms=3,
+        row_limit=args.row_limit,
+    )
 
     print()
     print("Generated Non-Guarded Pair Compare")
@@ -782,6 +899,32 @@ def main() -> None:
                 anchor_band_focus_compact_rules,
             )
         )
+    if focused_support_layout_rows:
+        print()
+        print(
+            render_pairwise_deltas(
+                "Focused add4 vs skew-wrap representative deltas",
+                focused_add4_rows,
+                focused_generated_rows,
+                delta_features=FOCUSED_DELTA_FEATURES,
+            )
+        )
+        print()
+        print(
+            render_rule_table(
+                f"Focused support-layout one-feature separators for {TARGET_CLASS}",
+                focused_support_layout_rows,
+                focused_support_layout_one_feature_rules,
+            )
+        )
+        print()
+        print(
+            render_rule_table(
+                f"Focused support-layout compact separators for {TARGET_CLASS}",
+                focused_support_layout_rows,
+                focused_support_layout_compact_rules,
+            )
+        )
     print()
     print(
         render_rule_table(
@@ -809,6 +952,14 @@ def main() -> None:
         (rule for rule in anchor_band_focus_compact_rules if rule.exact),
         None,
     )
+    exact_focused_support_layout_one_feature = next(
+        (rule for rule in focused_support_layout_one_feature_rules if rule.exact),
+        None,
+    )
+    exact_focused_support_layout_compact = next(
+        (rule for rule in focused_support_layout_compact_rules if rule.exact),
+        None,
+    )
     print("Conclusion")
     print("==========")
     if not generated_stable_rows:
@@ -829,6 +980,19 @@ def main() -> None:
             "The anchor-balance band broadens only onto a small historical add4 pocket, and one extra in-band clause exact-separates those add4 rows from the generated failures without reopening the pair-only/add1 boundary."
         )
         print(f"best_exact_compact={ANCHOR_BAND_RULE} and {exact_anchor_band_focus_one_feature.rule_text}")
+        if exact_focused_support_layout_one_feature is not None:
+            print(
+                "Within the two-row add4 pocket versus the representative skew-wrap generated failures, one compact support-layout observable already exact-separates the rows."
+            )
+            print(
+                f"focused_exact_support_layout={exact_focused_support_layout_one_feature.rule_text}"
+            )
+            print(
+                "support_layout_translation=the generated skew-wrap failures carry a right/deep bridge shoulder "
+                "(anchor_deep_share_gap=0.500, high_bridge_right_count=1.000) that the in-band add4 pocket lacks "
+                "(0.000, 0.000), so anchor balance stays similar while the frozen add4 rows trap more closure at the mid anchor "
+                "(mid_anchor_closure_peak=12.000 versus 8.000)."
+            )
     elif (
         len(anchor_band_false_positives) == len(anchor_band_add4_rows)
         and not anchor_band_false_negatives
@@ -838,6 +1002,26 @@ def main() -> None:
             "The anchor-balance band broadens only onto a small historical add4 pocket, and a compact in-band clause exact-separates those add4 rows from the generated failures without reopening the pair-only/add1 boundary."
         )
         print(f"best_exact_compact={ANCHOR_BAND_RULE} and {exact_anchor_band_focus_compact.rule_text}")
+        if exact_focused_support_layout_one_feature is not None:
+            print(
+                "Within the two-row add4 pocket versus the representative skew-wrap generated failures, one compact support-layout observable already exact-separates the rows."
+            )
+            print(
+                f"focused_exact_support_layout={exact_focused_support_layout_one_feature.rule_text}"
+            )
+            print(
+                "support_layout_translation=the generated skew-wrap failures carry a right/deep bridge shoulder "
+                "(anchor_deep_share_gap=0.500, high_bridge_right_count=1.000) that the in-band add4 pocket lacks "
+                "(0.000, 0.000), so anchor balance stays similar while the frozen add4 rows trap more closure at the mid anchor "
+                "(mid_anchor_closure_peak=12.000 versus 8.000)."
+            )
+        elif exact_focused_support_layout_compact is not None:
+            print(
+                "Within the two-row add4 pocket versus the representative skew-wrap generated failures, a compact support-layout separator already exact-separates the rows."
+            )
+            print(
+                f"focused_exact_support_layout={exact_focused_support_layout_compact.rule_text}"
+            )
     elif exact_one_feature is not None:
         print(
             "The prior anchor-balance band leaks on the broadened comparison set, but an exact one-feature separator still exists on the full bounded basis."

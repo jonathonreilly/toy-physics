@@ -227,10 +227,12 @@ Fine-grained mechanism work is currently concentrated on a fixed frontier snapsh
       - those in-band `add4` rows are otherwise inside the generated target ranges but sit at `mid_anchor_closure_peak = 12`, above the generated-failure maximum `8`
       - adding one compact in-band ceiling restores exact separation across all frozen historical cohorts: `anchor_closure_intensity_gap >= -2.000 and anchor_closure_intensity_gap <= 2.333 and mid_anchor_closure_peak <= 10.000`
       - under that refined clause the generated failures stay `11/11`, while frozen historical `pair-only-sensitive`, `add1-sensitive`, and `add4-sensitive` rows fall to `0/9`, `0/15`, and `0/8`
+      - on a four-row focused comparison against representative `base:skew-wrap:local-morph-c` and `base:skew-wrap:mode-mix-d`, one compact support-layout observable already exact-separates the skew-wrap generated failures from the in-band `add4` pocket: `anchor_deep_share_gap >= 0.250`
+      - physically, those skew-wrap generated failures carry a right/deep bridge shoulder (`anchor_deep_share_gap = 0.500`, `high_bridge_right_count = 1`) that the in-band `add4` rows lack (`0`, `0`), so the generated rows spread closure away from the mid anchor (`mid_anchor_closure_peak = 8`) while the frozen `add4` pocket traps it at `12`
       - the bounded immediate generated basin (`taper-wrap`, `skew-wrap`, `taper-hard`, `skew-hard` through `mega`) contains no guard-surviving correctly classified comparison rows at all; every non-collapse row there is itself another transfer failure
     - so the post-guard transfer break is now best read as a second nearby domain boundary: a moderate anchor-balance regime with one high-mid-anchor frozen `add4` pocket, while the generated pair-only basin itself exact-closes under the added `mid_anchor_closure_peak <= 10.000` ceiling and the immediate taper/skew neighborhood remains failure-only after the zero-support guard
 
-The open problem in this basin is no longer whether the family structure exists, whether the frozen bucket exact-closes, or whether the law survives on the available historical frontier ladder. It is translating the two nearby generated-family boundaries that now appear after transfer: the zero-support collapse edge, and the later moderate anchor-balance band plus `mid_anchor_closure_peak <= 10.000` ceiling in the surviving non-guarded `pair-only-sensitive` failures, including why the immediate taper/skew neighborhood that survives the support-collapse guard is failure-only.
+The open problem in this basin is no longer whether the family structure exists, whether the frozen bucket exact-closes, or whether the law survives on the available historical frontier ladder. It is translating the two nearby generated-family boundaries that now appear after transfer: the zero-support collapse edge, and the later moderate anchor-balance band plus `mid_anchor_closure_peak <= 10.000` ceiling in the surviving non-guarded `pair-only-sensitive` failures, now partly reduced to a right/deep-bridge versus mid-anchor-knot split on the skew-wrap side, while the immediate taper/skew neighborhood that survives the support-collapse guard remains failure-only.
 
 ## Active Technical Problem
 
@@ -238,9 +240,9 @@ The main active technical problem is projecting and translating the exact low-ov
 
 The relevant questions are:
 
-- why `base:taper-wrap:mode-mix-f`, `base:skew-wrap:local-morph-c`, and `base:skew-wrap:mode-mix-d` all stay inside the same moderate `anchor_closure_intensity_gap` band even though one family is near-supportless and the other is over-supported/high-closure, while the only frozen in-band `add4` rows differ mainly by a higher `mid_anchor_closure_peak`
-- how the exact branch-aware law should be physically interpreted at both the zero-support collapse boundary and the new anchor-balance-plus-mid-anchor ceiling boundary in the surviving generated failures
-- whether that competition can be expressed more cleanly in support-layout or topological language
+- why `base:taper-wrap:mode-mix-f` stays inside the same moderate `anchor_closure_intensity_gap` band even though the representative skew-wrap failures already exact-separate from the in-band `add4` pocket by a right/deep-share shoulder (`anchor_deep_share_gap >= 0.250`)
+- how the exact branch-aware law should be physically interpreted at both the zero-support collapse boundary and the new anchor-balance basin split between right/deep bridge shoulder and mid-anchor knot
+- whether the remaining `mode-mix-f` versus skew-wrap competition can be expressed more cleanly in support-layout or topological language
 - which parts of the present explanation are stable structure and which depend on the current observable basis
 
 ## What Is Still Unresolved
@@ -248,7 +250,7 @@ The relevant questions are:
 The main unresolved points are:
 
 - the spent-delay action family is favored in the benchmark, but not derived from deeper first principles
-- low-overlap subtype competition is now much more compressed on the frozen `5504` bucket and exact across the available historical frontier ladder; the first nearby generated edge (`geometry-c/e`) isolates cleanly under a support-collapse guard, and the surviving non-guarded generated pair-only failures (`mode-mix-f`, `local-morph-c`, `mode-mix-d`) now exact-separate from frozen historical `pair-only-sensitive`, `add1-sensitive`, and `add4-sensitive` rows once the moderate anchor-balance band is tightened with `mid_anchor_closure_peak <= 10.000`, but the broader generated story is still incomplete because the immediate `taper/skew wrap/hard` basin supplies no guard-surviving correctly classified counterexample rows
+- low-overlap subtype competition is now much more compressed on the frozen `5504` bucket and exact across the available historical frontier ladder; the first nearby generated edge (`geometry-c/e`) isolates cleanly under a support-collapse guard, and the surviving non-guarded generated pair-only failures (`mode-mix-f`, `local-morph-c`, `mode-mix-d`) now exact-separate from frozen historical `pair-only-sensitive`, `add1-sensitive`, and `add4-sensitive` rows once the moderate anchor-balance band is tightened with `mid_anchor_closure_peak <= 10.000`; the nearest skew-wrap representatives further reduce to a right/deep bridge shoulder absent from the in-band `add4` pocket, but the broader generated story is still incomplete because the immediate `taper/skew wrap/hard` basin supplies no guard-surviving correctly classified counterexample rows and `mode-mix-f` still sits outside that focused translation
 - the present mechanism language is more geometric and topological than it was earlier, but it is not yet a clean bridge to standard continuum physics
 - the strongest fine-grained mechanism results are exact on the available historical frontier ladder, but not yet a general theorem over nearby generated families because nearby generated transfer still shows in-domain failures after the empirical support-collapse guard is applied
 

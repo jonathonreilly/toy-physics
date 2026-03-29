@@ -1,52 +1,68 @@
 # Physics Autopilot Handoff
 
-## 2026-03-28 23:54 America/New_York
+## 2026-03-29 02:11 America/New_York
 
 ### Seam class
 - generated-family transfer
-- anchor-band projection
+- anchor-band support-layout translation
 
 ### Science impact
-- science advanced; the moderate anchor-balance band now survives the queued historical `add1-sensitive` projection, and the immediate taper/skew generated neighborhood remains failure-only after the support-collapse guard
+- science advanced; the refined anchor-band ceiling now has a compact support-layout translation on the nearest skew-wrap-vs-add4 representatives, narrowing the remaining question to the low-support `mode-mix-f` member
 
 ### Current state
-- Resumed the active generated-family transfer thread while the repo was still locally ahead at `7c446d8` after the earlier DNS-blocked helper push.
-- Refactored and reran:
-  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_exact_law_generated_ensemble_transfer_check.py`
+- Reconciled protocol preflight, acquired `physics-science`, retried the required pre-step push helper (same DNS failure), completed one bounded generated-family transfer step by extending and running:
   - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_non_guarded_pair_compare.py`
 - Canonical log:
-  - `/Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-generated-anchor-band-nearby-projection-v3.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-anchor-band-support-layout-translation.txt`
+- Updated `/Users/jonreilly/Projects/Physics/README.md` and prepended the finished science entry to `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`.
+- The comparer finished in foreground; no active science child remains from this loop.
+- Local commit for this loop is still pending; end-of-loop push is still pending.
 
 ### Strongest confirmed conclusion
-- The same moderate anchor-balance band still exact-separates the surviving generated failures from the two frozen historical cohorts now tested on this thread:
-  - `anchor_closure_intensity_gap >= -2.000 and anchor_closure_intensity_gap <= 2.333`
-  - generated failures: `11/11` hits
-  - historical frozen `pair-only-sensitive`: `0/9` hits
-  - historical frozen `add1-sensitive`: `0/15` hits
-- Historical frozen `add1-sensitive` rows sit entirely on the negative side of that boundary:
-  - `anchor_closure_intensity_gap = -12.000 -> -2.667`
-- The bounded immediate generated basin (`taper-wrap`, `skew-wrap`, `taper-hard`, `skew-hard` through `mega`) contributes no guard-surviving correctly classified counterexample rows:
+- The refined anchor-balance basin remains exact on the current bounded basis:
+  - `anchor_closure_intensity_gap >= -2.000 and anchor_closure_intensity_gap <= 2.333 and mid_anchor_closure_peak <= 10.000`
+  - generated failures: `11/11`
+  - historical frozen `pair-only-sensitive`: `0/9`
+  - historical frozen `add1-sensitive`: `0/15`
+  - historical frozen `add4-sensitive`: `0/8`
+- On the focused four-row comparison, one compact support-layout observable exact-separates the representative skew-wrap generated failures from the in-band frozen `add4` pocket:
+  - `anchor_deep_share_gap >= 0.250`
+  - representative skew-wrap failures: `2/2`
+  - in-band frozen `add4` rows: `0/2`
+- The physical read is now a right/deep bridge shoulder versus mid-anchor knot:
+  - representative skew-wrap failures: `anchor_deep_share_gap = 0.500`, `high_bridge_right_count = 1.000`, `mid_anchor_closure_peak = 8.000`
+  - in-band frozen `add4` rows: `anchor_deep_share_gap = 0.000`, `high_bridge_right_count = 0.000`, `mid_anchor_closure_peak = 12.000`
+  - so anchor balance stays similar while the frozen `add4` pocket traps more closure at the mid anchor
+- The bounded immediate generated basin still yields no guard-surviving correctly classified comparison rows:
   - `generated_stable_nearby_rows = 0`
-  - every non-collapse row in that basin is itself another transfer failure
 
 ### Files/logs changed
 - Repo-facing code:
-  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_exact_law_generated_ensemble_transfer_check.py`
   - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_non_guarded_pair_compare.py`
 - Updated narrative:
   - `/Users/jonreilly/Projects/Physics/README.md`
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
 - New log:
-  - `/Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-generated-anchor-band-nearby-projection-v3.txt`
-- Validation:
-  - `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_exact_law_generated_ensemble_transfer_check.py /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_non_guarded_pair_compare.py`
-  - `python3 -u /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_non_guarded_pair_compare.py > /Users/jonreilly/Projects/Physics/logs/2026-03-28-low-overlap-order-parameter-generated-anchor-band-nearby-projection-v3.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-anchor-band-support-layout-translation.txt`
+
+### Commit status
+- Pending local commit for the support-layout translation step on top of:
+  - `4c4223e` (`Resolve generated anchor band add4 pocket`)
+  - `e1bc955` (`Project generated anchor band onto add1 history`)
+  - `7c446d8` (`Isolate anchor-balance boundary in generated transfer`)
+- Required end-of-loop push helper is still pending; repo is currently `ahead 3, behind 0`.
 
 ### Remaining review seams
-- closed: determine whether the anchor-balance band is only a contrast against frozen historical `pair-only-sensitive` rows
-- open: determine whether the band is a broader subtype basin that also captures frozen `add4-sensitive` structure, or whether one extra support-layout clause restores a more specific pair-only boundary
+- closed: determine whether the anchor-balance band is only a contrast against frozen historical `pair-only-sensitive` and `add1-sensitive` rows
+- closed: determine whether frozen `add4-sensitive` rows broadly inhabit the same band
+- closed: translate the nearest skew-wrap generated failures versus the in-band frozen `add4-sensitive` pocket into one compact support-layout observable
+- open: determine whether `base:taper-wrap:mode-mix-f` needs a separate low-support clause inside the same anchor-balance basin
 
 ### Exact next step
-- Project the anchor-balance band onto the frozen `add4-sensitive` cohort, starting with the few in-band cases, to test whether the current band is a subtype-specific boundary or a broader basin marker.
+- Test whether `base:taper-wrap:mode-mix-f` needs its own low-support clause inside the same anchor-balance basin or can be translated into the same shoulder-vs-knot language with one added observable.
 
 ### First concrete action
-- Extend `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_non_guarded_pair_compare.py` to add frozen `add4-sensitive` rows, then test whether one compact support-layout clause separates those rows from the generated pair-only basin without reopening the historical `pair-only`/`add1` boundary.
+- Add one tiny focused comparison between `base:taper-wrap:mode-mix-f` and the representative skew-wrap/add4 rows, then check whether one compact low-support observable explains why `mode-mix-f` stays inside the anchor band while missing the skew-wrap right/deep shoulder.
