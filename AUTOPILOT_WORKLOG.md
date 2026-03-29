@@ -1,3 +1,56 @@
+## 2026-03-29 17:10 America/New_York
+
+### Seam class
+- generated-family transfer
+- neutral-balance packet compare
+
+### Science impact
+- science advanced; the neutral-balance `skew-wrap` vs `mirror:exa` pair now reduces the `12.000 -> 8.000` mid-anchor ceiling gap to local packet strengthening rather than another anchor-band transfer
+
+### Current state
+- Picked up from synced `9095fa6`, acquired the `physics-science` lock, and kept the active late-branch translation thread on the handoff's neutral-balance pair.
+- Reused and extended the existing mid-anchor translation comparer with a `neutral-pair` mode plus candidate-cell geometry output instead of creating another near-duplicate helper.
+- Updated and ran:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_late_branch_mid_anchor_translation_compare.py --mode neutral-pair`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-late-branch-mid-anchor-translation-compare-neutral-pair.txt`
+
+### Strongest confirmed conclusion
+- The late `base:exa:base:skew-wrap:local-morph-k` row and the `mirror:exa:mirror:skew-hard-mirror:local-morph-f` miss keep the same coarse packet layout:
+  - `high_bridge_left/mid/right = 2/1/0`
+  - `left_candidate_count = 2`
+  - `mid_candidate_count = 3`
+  - `left_candidate_dense_count = 2`
+  - `mid_candidate_dense_count = 2`
+  - `mid_candidate_closed_ratio_max = 0.500`
+- So the `mid_candidate_bridge_bridge_closed_pair_max 12.000 -> 8.000` drop is not another band-placement, density, or ratio effect.
+- The remaining lift is a stronger same-layout packet:
+  - best packet-family structural separator on the pair: `left_candidate_attached_max >= 7.500`
+  - late skew row: `left_candidate_attached_max = 8.000`, `mid_candidate_attached_max = 8.000`, `left_candidate_bridge_bridge_closed_pair_max = 12.000`, `mid_candidate_bridge_bridge_closed_pair_max = 12.000`
+  - mirror miss: `left_candidate_attached_max = 7.000`, `mid_candidate_attached_max = 7.000`, `left_candidate_bridge_bridge_closed_pair_max = 8.000`, `mid_candidate_bridge_bridge_closed_pair_max = 8.000`
+- Candidate-cell geometry makes the physical read explicit:
+  - the dominant left and mid packets stay in the same bands
+  - each packet loses one attached bridge and four bridge-bridge closed pairs on the mirror side
+
+### Files and results changed in this run
+- Updated script:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_late_branch_mid_anchor_translation_compare.py`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-late-branch-mid-anchor-translation-compare-neutral-pair.txt`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- Updated run tracking:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+
+### Validation
+- `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_late_branch_mid_anchor_translation_compare.py`
+
+### Exact next step
+- Test whether that same packet-strengthening read survives outside the neutral pair, especially whether the closest `large:exa` miss still needs a separate left-to-mid placement story or can be absorbed into the same attached-packet language.
+
+### First concrete action
+- Run the updated comparer on `--mode focused` and `--mode full-wall` so the new `*_candidate_attached_max` packet metric can be compared directly across the late rows, the `large:exa` miss, and the `mirror:exa` miss.
+
 ## 2026-03-29 16:34 America/New_York
 
 ### Seam class
