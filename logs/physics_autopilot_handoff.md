@@ -1,5 +1,81 @@
 # Physics Autopilot Handoff
 
+## 2026-03-29 11:36 America/New_York
+
+### Seam class
+- generated-family transfer
+- exhausted wider and mirrored late guardrails
+
+### Science impact
+- science advanced; the beyond-ceiling continuation still stays rect-local after exhausting the currently tested `large` and `mirror` late non-rect ladders, with `large` empty through `tera` and `mirror` empty through `exa`
+
+### Current state
+- Resumed from synced `c103bc7` with the mirrored `giga|tera` checkpoint already on `origin/main`, kept the lock, and finished the previously unresolved wider late branch before pushing farther out on the cheaper mirrored branch.
+- Ran the first-hit probe on the remaining `large` late tiers:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_beyond_ceiling_first_nonrect_probe.py --packs large --ensembles giga`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_beyond_ceiling_first_nonrect_probe.py --packs large --ensembles tera`
+- Both finished `large` results are fully negative:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-beyond-ceiling-first-nonrect-probe-large-giga.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-beyond-ceiling-first-nonrect-probe-large-tera.txt`
+  - `scanned_nonrect_combinations = 3` at each tier
+  - `first_nonrect_row = none` at both tiers
+- Then pushed the cheaper mirrored branch farther out:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_beyond_ceiling_first_nonrect_probe.py --packs mirror --ensembles peta`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_beyond_ceiling_first_nonrect_probe.py --packs mirror --ensembles exa`
+- Those deeper mirrored results are also fully negative:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-beyond-ceiling-first-nonrect-probe-mirror-peta.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-beyond-ceiling-first-nonrect-probe-mirror-exa.txt`
+  - `scanned_nonrect_combinations = 2` at each tier
+  - `first_nonrect_row = none` at both tiers
+
+### Strongest confirmed conclusion
+- The refined anchor-balance basin remains exact on the current bounded basis:
+  - `anchor_closure_intensity_gap >= -2.000 and anchor_closure_intensity_gap <= 2.333 and mid_anchor_closure_peak <= 10.000`
+  - generated failures: `11/11`
+  - historical frozen `pair-only-sensitive`: `0/9`
+  - historical frozen `add1-sensitive`: `0/15`
+  - historical frozen `add4-sensitive`: `0/8`
+- The focused outer-rect pair still exact-separates from the representative shoulder/throat/knot set with the same compact load observable:
+  - `closure_load >= 75.000`
+  - outer rect pair: `2/2`
+  - representative shoulder + throat + frozen knot rows: `0/5`
+- The beyond-ceiling continuation remains rect-local on every finished late guardrail test so far:
+  - base sparse rect slice `rect-wrap/rect-hard` at `ultra|mega`: only `base:rect-wrap:local-morph-f`
+  - wider `large` late non-rect slice at `ultra|mega`: `0` rows
+  - wider `large` late non-rect slice at `giga`: `0` rows
+  - wider `large` late non-rect slice at `tera`: `0` rows
+  - mirrored `mirror` late non-rect slice at `ultra|mega`: `0` rows
+  - mirrored `mirror` late non-rect slice at `giga|tera`: `0` rows
+  - mirrored `mirror` late non-rect slice at `peta|exa`: `0` rows
+- So the current physical read is tighter again:
+  - the heavier beyond-ceiling continuation is still only observed on the rect tail
+  - none of the tested `large` or `mirror` late non-rect guardrails broaden it
+
+### Files/logs changed
+- New result logs:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-beyond-ceiling-first-nonrect-probe-large-giga.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-beyond-ceiling-first-nonrect-probe-large-tera.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-beyond-ceiling-first-nonrect-probe-mirror-peta.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-beyond-ceiling-first-nonrect-probe-mirror-exa.txt`
+- Updated runtime state:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+
+### Commit status
+- HEAD remains `c103bc7` (`Extend mirrored late beyond-ceiling guardrail`).
+- Pending local commit to promote the exhausted `large` and `mirror` late-guardrail negatives and the refreshed narrative.
+- Remote sync status remains `ahead 0, behind 0` until that local commit is created.
+
+### Remaining review seams
+- open: identify whether any genuinely new late guardrail, starting with the base non-rect slice at `peta|exa`, yields the first non-rect beyond-ceiling non-collapse row now that `large` is exhausted through `tera` and `mirror` through `exa`
+
+### Exact next step
+- Reuse the first-hit probe on `base` with `peta`, then `exa`, and stop once the first non-rect beyond-ceiling non-collapse row appears.
+
+### First concrete action
+- Run `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_beyond_ceiling_first_nonrect_probe.py --packs base --ensembles peta`.
+
 ## 2026-03-29 11:18 America/New_York
 
 ### Seam class
