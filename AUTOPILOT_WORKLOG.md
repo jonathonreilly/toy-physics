@@ -1,3 +1,27 @@
+## 2026-03-30 18:15 America/New_York
+
+### Seam class
+- fixed-DAG Sorkin test
+- Born rule confirmation
+
+### Science impact
+- **Born rule confirmed:** Fixed-DAG Sorkin test gives I₃ = 0 to machine precision (10⁻¹⁶) at all 4 slit configurations. The model's path-sum is exactly pairwise — standard quantum-like interference, no higher-order terms.
+- **DAG reconfiguration identified:** The original I₃ ≠ 0 (up to 10⁹ × P) was entirely caused by the causal DAG changing topology when barrier nodes are added/removed. This is a real discrete-network effect but is NOT interference — it's topological coupling.
+- These two results together cleanly separate the model's interference mechanism (Born-rule-compliant, amplitude-linear) from its discrete-topology effects (DAG reconfiguration, nonlinear in slit configuration).
+
+### Strongest confirmed conclusion
+The model produces standard quantum-like interference: amplitudes add linearly, probabilities are |sum|², and the Sorkin inclusion-exclusion identity holds exactly on a fixed DAG. No post-quantum higher-order interference.
+
+### Files and results changed
+- New: `scripts/interference_sorkin_fixed_dag.py`, `logs/2026-03-30-interference-sorkin-fixed-dag.txt`
+
+### Exact next step
+- Study DAG reconfiguration as its own phenomenon: quantify how much the causal structure changes when barrier nodes are added/removed, and whether this has physical significance
+- Or: return to gravity lane — fit action falloff to discrete harmonic theory
+
+### First concrete action
+- Write a DAG-diff script that counts how many causal edges change between two slit configurations
+
 ## 2026-03-30 17:45 America/New_York
 
 ### Seam class
