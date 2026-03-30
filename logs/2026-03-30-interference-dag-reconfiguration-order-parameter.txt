@@ -1,0 +1,76 @@
+========================================================================================
+INTERFERENCE DAG RECONFIGURATION ORDER PARAMETER
+========================================================================================
+Join the open/closed-slit Sorkin spike size to compact DAG-reconfiguration scalars.
+All ratios below are max |I_3| / max |P_ABC| on the original open/closed DAG.
+
+========================================================================================
+SYMMETRIC: slits=(-4, 0, 4)
+========================================================================================
+  closed slit   post_edges   post_nodes   max_post_dt   sum_post_dt   detector_max_dt   detector_sum_dt
+  ------------------------------------------------------------------------------
+           -4           59           71      2.343146     74.152237           0.000000           0.000000
+           +0          181           68      5.071068    136.749350           3.313708          13.254834
+           +4           59           71      2.343146     74.152237           0.000000           0.000000
+
+  max |I_3| / max |P_ABC| = 1.670589e+06
+  aggregates: sum_post_edge_delta=299, sum_post_delay=285.053824, sum_detector_max_delay=3.313708, sum_detector_delay=13.254834, max_post_delay=5.071068
+
+========================================================================================
+CLOSE: slits=(-2, 0, 2)
+========================================================================================
+  closed slit   post_edges   post_nodes   max_post_dt   sum_post_dt   detector_max_dt   detector_sum_dt
+  ------------------------------------------------------------------------------
+           -2           35           86      1.171573     47.448701           0.000000           0.000000
+           +0           85           30      2.242641     33.722871           1.656854           3.313708
+           +2           35           86      1.171573     47.448701           0.000000           0.000000
+
+  max |I_3| / max |P_ABC| = 9.186603e+01
+  aggregates: sum_post_edge_delta=155, sum_post_delay=128.620274, sum_detector_max_delay=1.656854, sum_detector_delay=3.313708, max_post_delay=2.242641
+
+========================================================================================
+WIDE: slits=(-6, 0, 6)
+========================================================================================
+  closed slit   post_edges   post_nodes   max_post_dt   sum_post_dt   detector_max_dt   detector_sum_dt
+  ------------------------------------------------------------------------------
+           -6           73           53      3.514719     81.867966           0.000000           0.000000
+           +0          297          104      7.899495    312.594155           4.970563          29.823376
+           +6           73           53      3.514719     81.867966           0.000000           0.000000
+
+  max |I_3| / max |P_ABC| = 4.608175e+09
+  aggregates: sum_post_edge_delta=443, sum_post_delay=476.330086, sum_detector_max_delay=4.970563, sum_detector_delay=29.823376, max_post_delay=7.899495
+
+========================================================================================
+ASYMMETRIC: slits=(-4, 1, 6)
+========================================================================================
+  closed slit   post_edges   post_nodes   max_post_dt   sum_post_dt   detector_max_dt   detector_sum_dt
+  ------------------------------------------------------------------------------
+           -4           97           80      3.757359    164.017244           1.414214           6.384776
+           +1          197           78      5.656854    176.330086           3.313708          16.568542
+           +6           57           52      2.928932     59.850722           0.000000           0.000000
+
+  max |I_3| / max |P_ABC| = 4.205765e+09
+  aggregates: sum_post_edge_delta=351, sum_post_delay=400.198052, sum_detector_max_delay=4.727922, sum_detector_delay=22.953319, max_post_delay=5.656854
+
+========================================================================================
+CANDIDATE RANKING
+========================================================================================
+Ranked by |Pearson corr(log10(candidate), log10(max |I_3| / max |P_ABC|))|.
+  sum_detector_max_delay  corr=0.9948
+  sum_post_delay          corr=0.9879
+  sum_detector_delay      corr=0.9870
+  sum_post_edge_delta     corr=0.9663
+  max_post_delay          corr=0.9481
+
+Best single scalar on the tested four-geometry set:
+  sum_detector_max_delay  (corr=0.9948)
+  fit: log10(max |I_3| / max |P_ABC|) = -1.830 + 16.484 * log10(sum_detector_max_delay)
+
+Per-geometry best-scalar fit:
+  SYMMETRIC   actual=  6.223  predicted=  6.747  residual= -0.524
+  CLOSE       actual=  1.963  predicted=  1.785  residual= +0.178
+  WIDE        actual=  9.664  predicted=  9.650  residual= +0.014
+  ASYMMETRIC  actual=  9.624  predicted=  9.292  residual= +0.332
+
+PHYSICAL READING
+  The large open/closed-slit Sorkin spike is best compressed by detector-side retiming, not by raw edge rewiring counts. Post-barrier topology changes matter because they retime the detector boundary, and that retiming is what the path-sum amplifies into the huge apparent higher-order signal.
