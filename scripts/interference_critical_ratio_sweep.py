@@ -1,199 +1,128 @@
 #!/usr/bin/env python3
-"""Refine the off-center interference threshold.
+"""Fine sweep of the critical width/slit_sep ratio for off-center visibility.
 
-The coarse sweep suggested a geometry threshold in the width/slit-separation
-ratio. A first pass at a simple detector-side reachability law explains most of
-the boundary, but the narrow-slit/high-offset corner needs one extra regime.
-
-This script samples even widths densely enough to determine the exact onset law
-for off-center visibility on the current rectangular-grid toy.
+Determines the exact threshold where V(y) transitions from 0 to nonzero.
+PStack experiment: critical-ratio-threshold
 """
 
 from __future__ import annotations
-
-import math
-import os
-import sys
-
+import math, sys, os
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
 from scripts.interference_geometry_sweep import parameterized_two_slit_distribution
-from scripts.interference_offcenter_fringe_sweep import visibility
 
 
-def offcenter_visibility_by_y(
-    width: int,
-    slit_half: int,
-    screen_ys: list[int],
-    *,
-    height: int = 10,
-    n_phases: int = 24,
-) -> dict[int, float]:
-    """Return V(y) for a geometry using a shared phase sweep."""
-
-    phase_samples = {y: [] for y in screen_ys}
-    phases = [2 * math.pi * i / n_phases for i in range(n_phases)]
-    barrier_x = width // 2
-
-    for phase in phases:
-        distribution = parameterized_two_slit_distribution(
-            screen_positions=screen_ys,
-            record_created=False,
-            width=width,
-            height=height,
-            barrier_x=barrier_x,
-            slit_ys={-slit_half, slit_half},
-            phase_shift_upper=phase,
-            normalize=False,
-        )
-        for y in screen_ys:
-            phase_samples[y].append(distribution[y])
-
-    return {y: visibility(samples) for y, samples in phase_samples.items()}
-
-
-def critical_width(slit_half: int, screen_y: int) -> int:
-    """Exact even-width onset for off-center visibility on the sampled grid."""
-
-    return 2 * min(slit_half + abs(screen_y), 2 * slit_half + 1)
-
-
-def predicted_visibility_onset(width: int, slit_half: int, screen_y: int) -> bool:
-    """Two-regime onset law for coherent off-center visibility."""
-
-    return width >= critical_width(slit_half, screen_y)
+def visibility(probs: list[float]) -> float:
+    p_max, p_min = max(probs), min(probs)
+    denom = p_max + p_min
+    return (p_max - p_min) / denom if denom > 0 else 0.0
 
 
 def main() -> None:
-    widths = list(range(4, 33, 2))
-    slit_halves = list(range(1, 9))
-    screen_ys = [1, 2, 3, 4, 5, 6, 7, 8]
+    n_phases = 24
+    phases = [2 * math.pi * i / n_phases for i in range(n_phases)]
     height = 10
-    epsilon = 1e-6
+    test_ys = [1, 2, 3, 5]
+
+    # Fine sweep: width 4-40 step 2, slit_half 1-12 step 1
+    widths = list(range(4, 42, 2))
+    slit_halves = list(range(1, 13))
 
     print("=" * 72)
-    print("INTERFERENCE CRITICAL-RATIO SWEEP")
+    print("CRITICAL RATIO FINE SWEEP")
     print("=" * 72)
-    print(f"even_widths: {widths}")
-    print(f"slit_half_separations: {slit_halves}")
-    print(f"screen_positions: {screen_ys}")
-    print(f"height: {height}")
-    print(f"visibility_epsilon: {epsilon}")
+    print(f"widths: {widths}")
+    print(f"slit_half_seps: {slit_halves}")
+    print(f"test_positions: y = {test_ys}")
     print()
 
-    rows: list[dict[str, float | int | bool]] = []
+    # Collect: for each (width, slit_half, y), is V > 0?
+    results = []
 
-    for width in widths:
-        for slit_half in slit_halves:
-            if slit_half >= height:
+    for w in widths:
+        for sh in slit_halves:
+            if sh >= height:
                 continue
+            barrier_x = w // 2
+            if barrier_x < 2:
+                continue
+            slit_ys_set = {-sh, sh}
+            ratio = w / (2 * sh)
 
-            vis_by_y = offcenter_visibility_by_y(
-                width,
-                slit_half,
-                screen_ys,
-                height=height,
+            vis_row = {"width": w, "slit_half": sh, "ratio": ratio}
+            for y in test_ys:
+                if y > height:
+                    vis_row[f"V_{y}"] = None
+                    continue
+                probs = []
+                for phase in phases:
+                    dist = parameterized_two_slit_distribution(
+                        screen_positions=[y],
+                        record_created=False,
+                        width=w, height=height,
+                        barrier_x=barrier_x, slit_ys=slit_ys_set,
+                        phase_shift_upper=phase, normalize=False,
+                    )
+                    probs.append(dist[y])
+                vis_row[f"V_{y}"] = visibility(probs)
+            results.append(vis_row)
+
+            v_strs = "  ".join(
+                f"V(y={y})={vis_row[f'V_{y}']:.6f}" if vis_row[f"V_{y}"] is not None else f"V(y={y})=N/A"
+                for y in test_ys
             )
+            print(f"w={w:3d} sh={sh:2d} R={ratio:5.2f}  {v_strs}")
 
-            for screen_y in screen_ys:
-                vis = vis_by_y[screen_y]
-                predicted = predicted_visibility_onset(width, slit_half, screen_y)
-                observed = vis > epsilon
-                rows.append(
-                    {
-                        "width": width,
-                        "slit_half": slit_half,
-                        "slit_sep": 2 * slit_half,
-                        "screen_y": screen_y,
-                        "visibility": vis,
-                        "predicted": predicted,
-                        "observed": observed,
-                    }
-                )
-
-    mismatches = [row for row in rows if row["predicted"] != row["observed"]]
-
-    print("SUMMARY")
-    print("-" * 72)
-    print(f"sample_count: {len(rows)}")
-    print(f"prediction_mismatches: {len(mismatches)}")
-    if mismatches:
-        print("mismatch_samples:")
-        for row in mismatches[:20]:
-            print(
-                f"  width={row['width']:2d} slit_sep={row['slit_sep']:2d} "
-                f"y={row['screen_y']:2d} V={row['visibility']:.6f} "
-                f"predicted={int(bool(row['predicted']))} observed={int(bool(row['observed']))}"
-            )
+    # Threshold analysis: for each y, find the critical ratio
+    print()
+    print("=" * 72)
+    print("THRESHOLD ANALYSIS: first nonzero V by ratio")
+    print("=" * 72)
     print()
 
-    print("CRITICAL WIDTH TABLE")
-    print("-" * 72)
-    print(
-        f"{'slit_sep':>8s}  {'y':>3s}  {'w_pred':>6s}  {'w_obs':>6s}  "
-        f"{'V@w_pred':>10s}  {'ratio_pred':>10s}"
-    )
-    print("-" * 72)
-
-    for slit_half in slit_halves:
-        slit_sep = 2 * slit_half
-        for screen_y in screen_ys:
-            predicted_width = critical_width(slit_half, screen_y)
-            observed_rows = [
-                row
-                for row in rows
-                if row["slit_half"] == slit_half and row["screen_y"] == screen_y and row["observed"]
-            ]
-            observed_width = min(int(row["width"]) for row in observed_rows)
-            onset_row = next(
-                row
-                for row in rows
-                if row["slit_half"] == slit_half
-                and row["screen_y"] == screen_y
-                and row["width"] == predicted_width
-            )
-            print(
-                f"{slit_sep:8d}  {screen_y:3d}  {predicted_width:6d}  {observed_width:6d}  "
-                f"{float(onset_row['visibility']):10.6f}  {predicted_width / slit_sep:10.3f}"
-            )
+    for y in test_ys:
+        # Group by slit_half, find first width where V > 0
+        print(f"--- y = {y} ---")
+        for sh in slit_halves:
+            rows = [r for r in results if r["slit_half"] == sh and r[f"V_{y}"] is not None]
+            rows.sort(key=lambda r: r["width"])
+            first_nz = None
+            last_zero = None
+            for r in rows:
+                if r[f"V_{y}"] == 0.0:
+                    last_zero = r
+                elif first_nz is None:
+                    first_nz = r
+            if first_nz and last_zero:
+                print(f"  slit_half={sh:2d}: last_zero w={last_zero['width']:3d} R={last_zero['ratio']:.2f}"
+                      f"  first_nz w={first_nz['width']:3d} R={first_nz['ratio']:.2f}"
+                      f"  V_jump={first_nz[f'V_{y}']:.6f}")
+            elif first_nz:
+                print(f"  slit_half={sh:2d}: always nonzero from w={first_nz['width']:3d} R={first_nz['ratio']:.2f}")
+            else:
+                print(f"  slit_half={sh:2d}: always zero in tested range")
         print()
 
-    print("Y=1 RATIO REINTERPRETATION")
-    print("-" * 72)
-    print("For the first off-center position, the observed threshold is not universal.")
-    print("It is the low-|y| edge of the exact two-regime law, so:")
+    # Summary: is the transition sharp?
+    print("=" * 72)
+    print("TRANSITION SHARPNESS: V value at first nonzero point")
+    print("=" * 72)
     print()
-    print(f"{'slit_sep':>8s}  {'critical_width':>14s}  {'critical_ratio':>14s}")
-    print("-" * 72)
-    for slit_half in slit_halves:
-        slit_sep = 2 * slit_half
-        onset_width = critical_width(slit_half, 1)
-        print(f"{slit_sep:8d}  {onset_width:14d}  {onset_width / slit_sep:14.3f}")
-    print()
+    print(f"{'slit_half':>9s}  {'y':>3s}  {'R_threshold':>11s}  {'V_at_threshold':>14s}  {'sharp?':>6s}")
+    print("-" * 52)
+    for sh in slit_halves:
+        for y in test_ys:
+            rows = [r for r in results if r["slit_half"] == sh and r[f"V_{y}"] is not None]
+            rows.sort(key=lambda r: r["width"])
+            first_nz = None
+            for r in rows:
+                if r[f"V_{y}"] > 0:
+                    first_nz = r
+                    break
+            if first_nz:
+                v = first_nz[f"V_{y}"]
+                sharp = "YES" if v > 0.01 else "gradual"
+                print(f"{sh:9d}  {y:3d}  {first_nz['ratio']:11.2f}  {v:14.6f}  {sharp:>6s}")
 
-    print("PHYSICAL TRANSLATION")
-    print("-" * 72)
-    print("The onset splits into two detector-side regimes.")
-    print()
-    print("1. Straight-transfer regime:")
-    print("   while |y| <= slit_half + 1, the onset grows linearly with offset")
-    print("   because the visible boundary is still set by direct detector-side reach:")
-    print()
-    print("     width >= slit_sep + 2|y|")
-    print()
-    print("2. Zig-zag saturation regime:")
-    print("   once |y| exceeds slit_half + 1, narrow-slit sectors can still climb higher")
-    print("   through longer causal zig-zag paths after the barrier, so the threshold")
-    print("   stops moving and saturates at:")
-    print()
-    print("     width >= 2*slit_sep + 2")
-    print()
-    print("Combined exact law for the even-width sweep:")
-    print()
-    print("  width_crit = min(slit_sep + 2|y|, 2*slit_sep + 2)")
-    print()
-    print("So the old ratio band is only the y=1 edge of this two-regime boundary, not a")
-    print("standalone critical ratio.")
     print()
     print("SWEEP COMPLETE")
 

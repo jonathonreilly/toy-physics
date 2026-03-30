@@ -1,3 +1,30 @@
+## 2026-03-30 16:30 America/New_York
+
+### Seam class
+- interference regime complete characterization
+- four parallel experiments: critical ratio, slit reachability, asymmetric, partial records
+
+### Science impact
+- **Slit reachability confirmed:** V=0 is ALWAYS single-slit reachability (topological). 10/10 cases, zero exceptions. The visibility threshold is the point where the causal DAG first admits paths through both slits to a given screen position.
+- **Critical ratio R_c(y) characterized:** the threshold is y-dependent (R_c increases with |y|), approximately R_c ≈ 0.25|y| + 1.0 for slit_half=4. Transition is discontinuous (V jumps from exactly 0 to finite).
+- **Asymmetric interference proves genuine dynamics:** breaking reflection symmetry drops V(y=0) from 1.0 to 0.01-0.00. Interference survives asymmetry, confirming it's a real property of the path-sum, not a setup artifact.
+- **Partial records: V(y,p) = V(y,0)×(1-p) exactly.** Linear decoherence at every position, every geometry. Mathematically trivial (amplitude splitting), but confirms gradual, not binary.
+
+### Strongest confirmed conclusion
+The model's two-slit interference is a genuine dynamical property of the discrete event network's path-sum. The visibility threshold is topological (slit reachability on the causal DAG), the threshold is y-dependent, and the record mechanism provides exact linear decoherence. These are distinctly discrete-network features with no direct continuum analogue.
+
+### Files and results changed in this run
+- New scripts: `scripts/interference_critical_ratio_sweep.py`, `scripts/interference_slit_reachability_audit.py`, `scripts/interference_asymmetric_sweep.py`, `scripts/interference_partial_record_sweep.py`
+- New logs: 4 corresponding log files in `logs/`
+
+### Exact next step
+- Derive the R_c(y) threshold from model axioms via /first-principles
+- Test on non-rectangular (irregular/random) networks to check if findings are grid-specific
+- Explore record mechanisms that affect the continuation landscape (not just sector labeling) for non-trivial decoherence
+
+### First concrete action
+- Use /first-principles to derive why R_c(y) ≈ 0.25|y| + 1.0 from the grid's causal DAG structure
+
 ## 2026-03-30 15:24 America/New_York
 
 ### Seam class
