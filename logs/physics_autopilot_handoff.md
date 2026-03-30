@@ -1,52 +1,49 @@
 # Physics Autopilot Handoff
 
-## 2026-03-30 01:59 America/New_York
+## 2026-03-30 03:06 America/New_York
 
 ### Seam class
-- paired wider sentinel guardrail
 - packet-gated taper-hard closure
+- physical branch translation
 
 ### Science impact
-- science advanced; the paired wider shoulder `wider:base:skew-wrap:mode-mix-d` repeats the same depleted `7/8` packet stall as `wider:base:skew-wrap:local-morph-c`, so the current three-way beyond-ceiling shared-packet split stays closed across both nearest wider base shoulders
-- narrative advanced; the taper-hard intensity leak is now a stable wider-shoulder effect, so the next closure step should rewrite that separator in packet-gated language rather than keep sampling adjacent shoulders
+- science advanced; the taper-hard residual exact-closes on the seven-row logged control set once the shared `8/12` packet gate is made explicit, and the same target mask now has a cleaner exact physical clause `high_bridge_right_count >= 1.500` that already rejects both wider shoulders without the gate
+- narrative advanced; the beyond-ceiling taper-hard branch is now best read as the two-right-bridge arm of the shared packet regime, with positive anchor intensity demoted to a coordinate-equivalent but less stable wording
 
 ### Current state
-- Started from local `16b7c2f` with the canonical repo still `ahead 2`; the required preflight push retry again failed with `dns_failure`, so the loop stayed local and continued on the active beyond-ceiling guardrail thread.
-- Reused and ran:
-  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_subbranch_wider_sentinel_guardrail.py`
-  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-subbranch-wider-sentinel-guardrail-mode-mix-d.txt`
-- The bounded guardrail reused the finished five-row shared-packet baseline and switched the sentinel source to:
-  - `wider:base:skew-wrap:mode-mix-d`
+- Started from local `9b755ac` with the canonical repo still `ahead 3`; the required preflight push retry again failed with `dns_failure`, so the loop stayed local and continued on the active beyond-ceiling compression / translation thread.
+- Added and ran:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_packet_gated_taper_hard_closure.py`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-packet-gated-taper-hard-closure.txt`
+- The bounded log-backed closure reused the five shared-packet rows plus both completed wider-shoulder guardrail logs.
 - No detached science child was launched.
 
 ### Strongest confirmed conclusion
-- The paired wider shoulder stalls below the shared packet law at:
-  - `mid_anchor_closure_peak = 8.000`
-  - `mid_candidate_attached_max = 7.000`
-  - `mid_candidate_bridge_bridge_closed_pair_max = 8.000`
-  - `mid_has_four_incident_flank_hinge = n`
-- So both nearest wider base shoulders do not add a fourth shared-packet subbranch.
-- On the extended six-row set:
-  - `outer-rect`: `edge_identity_event_count <= 58.000` stays exact
-  - `taper-hard`: `anchor_closure_intensity_gap >= 1.000` fails first by also matching the paired wider shoulder
-  - `skew-wrap`: `anchor_deep_share_gap <= -0.334` stays exact
-- So the taper-hard positive-intensity split needs the shared packet gate and now leaks stably across both nearest wider shoulders.
+- The shared packet gate still exact-isolates the five in-family beyond-ceiling rows and rejects both wider shoulders.
+- The taper-hard pair exact-separates inside that gate under several one-feature clauses, but the strongest physical exact clause is:
+  - `high_bridge_right_count >= 1.500`
+- The older coordinate clause:
+  - `anchor_closure_intensity_gap >= 1.000`
+  still leaks on both wider shoulders unless the shared packet gate is written explicitly.
+- So the current beyond-ceiling continuation is best read as one shared packet regime with taper-hard realized as the two-right-bridge subbranch rather than as a merely positive-intensity branch.
 
 ### Files/logs changed
+- Added script:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_packet_gated_taper_hard_closure.py`
 - New result log:
-  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-subbranch-wider-sentinel-guardrail-mode-mix-d.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-packet-gated-taper-hard-closure.txt`
 - Updated narrative:
   - `/Users/jonreilly/Projects/Physics/README.md`
   - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
   - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
 
 ### Remaining review seams
-- open: whether a packet-gated taper-hard clause exact-closes on the five shared-packet rows while rejecting both wider shoulders
+- open: whether the two-right-bridge taper-hard clause survives one sparse deeper-base or nearby non-base control beyond the current paired wider shoulders
 - open: whether any deeper base or nearby non-base generated family ever rejoins the shared `8/12` packet regime
 
 ### Exact next step
-- Stay on regime compression, not more adjacent shoulder scouting.
-- Close the taper-hard residual inside the shared packet family by finding the smallest exact packet-gated separator that stays exact when both wider shoulders are included as outside-family controls.
+- Stay on regime compression / physical translation, not more adjacent shoulder scouting.
+- Test whether the cleaner two-right-bridge taper-hard clause survives one sparse outside-family control beyond the current paired wider shoulders without reopening a fourth shared-packet subbranch.
 
 ### First concrete action
-- Build a small log-backed comparer over the five shared-packet rows plus `wider:base:skew-wrap:local-morph-c` and `wider:base:skew-wrap:mode-mix-d`, then scan for the smallest exact taper-hard clause after explicitly gating on the shared `8/12` packet law.
+- Reuse the new log-backed taper-hard closure comparer with one additional sparse outside-family control, preferably a deeper base sentinel first, and check whether `high_bridge_right_count >= 1.500` still exact-closes taper-hard while the shared packet gate continues to reject the added control.
