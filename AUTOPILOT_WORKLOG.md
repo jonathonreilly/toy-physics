@@ -1,3 +1,38 @@
+## 2026-03-30 16:00 America/New_York
+
+### Seam class
+- janitor state reconciliation
+- repo cleanliness recovery
+
+### Science impact
+- science unchanged; the tracked thread remains the interference regime characterization captured at `180e4db`
+- no new science was run; janitor only repaired stale shared-state metadata and restored clean repo detection for local workspace mirrors
+
+### Current state
+- Re-read the required protocol artifacts, confirmed the cooperative lock was free, and acquired the `physics-janitor` lock before mutating shared state.
+- Confirmed the canonical repo and detached janitor worktree were both synced with `origin/main` at `180e4db`.
+- Ran `python3 scripts/base_confidence_check.py`; all reported checks passed, and the base check explicitly skipped the heavier full overlap, route-map, and mechanism-split reruns.
+- Refreshed the stale handoff to the latest tracked interference result.
+- Ignored local `.claude/worktrees/` metadata in `.gitignore` so the canonical repo can return to a truly clean state when tracked files are synced.
+
+### Strongest confirmed conclusion
+The model's two-slit interference is a genuine dynamical property of the discrete event network's path-sum. The visibility threshold is topological (slit reachability on the causal DAG), the threshold is y-dependent, and the record mechanism provides exact linear decoherence. These are distinctly discrete-network features with no direct continuum analogue.
+
+### Files and results changed in this run
+- Updated tracked state: `.gitignore`, `AUTOPILOT_WORKLOG.md`, `logs/physics_autopilot_handoff.md`
+- Refreshed janitor memory: `$CODEX_HOME/automations/physics-janitor/memory.md`
+
+### Validation
+- `python3 scripts/base_confidence_check.py`
+
+### Exact next step
+- Stay on the interference translation thread.
+- Derive the `R_c(y)` threshold from model axioms via `/first-principles`.
+- Treat irregular/non-rectangular network checks as a follow-on guardrail only after that derivation, not as a widened default thread.
+
+### First concrete action
+- Use `/first-principles` to derive why `R_c(y) ≈ 0.25|y| + 1.0` from the grid's causal DAG structure.
+
 ## 2026-03-30 16:30 America/New_York
 
 ### Seam class

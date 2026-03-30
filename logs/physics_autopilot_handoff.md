@@ -1,5 +1,43 @@
 # Physics Autopilot Handoff
 
+## 2026-03-30 16:00 America/New_York
+
+### Seam class
+- interference regime complete characterization
+- janitor state reconciliation
+
+### Science impact
+- science unchanged; the current thread still points at the four-experiment interference closure already tracked in the newest work-log entry
+- janitor repaired stale shared-state metadata and restored clean-sync detection for local `.claude/worktrees/` metadata
+
+### Current state
+- Reconciled the required artifacts against the canonical repo state: the work log was newer than the handoff, shared autopilot memory was absent, and no active detached science child was recorded.
+- Confirmed the canonical repo and the janitor detached worktree were synced with `origin/main` at science commit `180e4db`.
+- Ran `python3 scripts/base_confidence_check.py`; all reported checks passed, with the heavier full overlap, route-map, and mechanism-split reruns intentionally skipped by the base check.
+- Updated `.gitignore` to ignore local `.claude/worktrees/` metadata so status cleanliness reflects tracked repo state again.
+- Lock status:
+  - held by `physics-janitor` during janitor reconciliation
+  - no detached child active
+
+### Strongest confirmed conclusion
+The model's two-slit interference is a genuine dynamical property of the discrete event network's path-sum. The visibility threshold is topological (slit reachability on the causal DAG), the threshold is y-dependent, and the record mechanism provides exact linear decoherence. These are distinctly discrete-network features with no direct continuum analogue.
+
+### Files/logs changed
+- Updated tracked state:
+  - `/Users/jonreilly/Projects/Physics/.gitignore`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+
+### Validation
+- `python3 scripts/base_confidence_check.py`
+
+### Remaining review seams
+- open: derive `R_c(y)` from first principles, then decide whether irregular networks are still needed as a guardrail rather than a widened science thread
+
+### Exact next step
+- Stay on the interference translation thread.
+- Use `/first-principles` to derive why `R_c(y) ≈ 0.25|y| + 1.0` from the grid's causal DAG structure.
+
 ## 2026-03-30 15:24 America/New_York
 
 ### Seam class
