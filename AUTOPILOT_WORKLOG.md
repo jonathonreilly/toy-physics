@@ -1,3 +1,100 @@
+## 2026-03-30 15:40 America/New_York
+
+### Seam class
+- interference off-center fringe visibility sweep
+- PStack science pipeline (promoted from worktree branch)
+
+### Science impact
+- science advanced; first systematic sweep of fringe visibility V(y) across all screen positions and geometry parameters
+- off-center visibility (y != 0) depends on network geometry with two clean monotonic trends:
+  - wider grids spread phase sensitivity to more screen positions
+  - narrower slit separations concentrate it near center
+- sharp visibility threshold: below a critical width/slit_sep ratio (~1.25-2.0), off-center interference vanishes entirely — a topological property of the discrete grid (paths through only one slit reach the detector)
+- record mechanism kills interference at ALL positions with zero leakage to 10-digit precision
+- sanity check: CLEAN on all six dimensions; not a symmetry artifact
+
+### Current state
+- Promoted from worktree branch `claude/intelligent-jepsen` after full PStack pipeline:
+  /frontier -> /hypothesis -> /theory-review -> /design-experiment -> execute -> /analyze -> /sanity
+- PStack science skills installed in `.claude/commands/` (14 skills)
+
+### Strongest confirmed conclusion
+- Off-center fringe visibility V(y) at y != 0 is geometry-dependent, monotonically increasing with grid width and decreasing with slit separation
+- Mean screen visibility at width=24, slit_sep=4: 0.572; at width=8, slit_sep=16: 0.048
+- Sharp threshold: V(y=1) = 0.000 at width=8/slit_sep=8 but V(y=1) = 0.927 at width=12/slit_sep=8
+
+### Files and results changed in this run
+- New scripts: `scripts/interference_geometry_sweep.py`, `scripts/interference_offcenter_fringe_sweep.py`
+- New logs: `logs/2026-03-30-interference-geometry-sweep.txt`, `logs/2026-03-30-interference-offcenter-fringe-sweep.txt`
+- New PStack skills: `.claude/commands/` (14 skills)
+
+### Exact next step
+- Pin down the critical width/slit_sep ratio with a finer sweep around 1.0-2.5
+- Fit V(y) envelope to a functional form (Gaussian, Lorentzian, sinc²)
+- Derive the geometry-visibility relationship from model axioms via /first-principles
+
+### First concrete action
+- Write `scripts/interference_critical_ratio_sweep.py` sweeping width/slit_sep from 1.0 to 3.0 in steps of 0.1 to determine the exact threshold
+
+## 2026-03-30 15:02 America/New_York
+
+### Seam class
+- beyond-ceiling finished-boundary closure-deficit summary
+- one-node ladder versus throat collapse
+
+### Science impact
+- science advanced; the beyond-ceiling family plus one-node outside boundary now exact-closes as a local closure-deficit ladder rather than just a coarse `8/10/12` completion story
+- narrative sharpened; the low-support throats are not the next ladder rung and should remain outside that one-node regime as deeper multi-node collapse rows
+
+### Current state
+- Picked up after syncing the queued automation checkpoint `0240fe4` to `origin/main`, acquired the `manual-codex` lock on clean local `main`, and continued the beyond-ceiling translation thread rather than widening the frontier.
+- Added and ran one bounded analyzer with parallel row capture across the finished family/outside boundary:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_finished_boundary_closure_deficit_summary.py`
+- Generated:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-finished-boundary-closure-deficit-summary.txt`
+
+### Strongest confirmed conclusion
+- The closure-deficit equivalence is exact for the realized family and the one-node outside ladder:
+  - family rows: `12/0` with `5` rows
+  - corner near miss `exa:base:skew-hard:local-morph-k`: `10/2`
+  - side-or-hinge outside rows: `8/4` with `6` rows
+- So the clean beyond-ceiling one-node boundary is now:
+  - full family completion
+  - two-edge corner depletion
+  - four-edge side-or-hinge depletion
+- The low-support throats do not continue that ladder:
+  - `ultra|mega:base:taper-wrap:mode-mix-f` lands at `0` bridge-bridge closed edges with a `12`-edge completion gap
+  - but the best aligned family-packet comparison only exposes `7` explicit lost closed edges
+  - so those rows remain deeper multi-node collapse outside the clean one-node closure-deficit regime
+- The exact family law still stays:
+  - `mid_candidate_attached_max >= 7.500`
+
+### Files and results changed in this run
+- New analyzer:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_finished_boundary_closure_deficit_summary.py`
+- New log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-finished-boundary-closure-deficit-summary.txt`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+
+### Validation
+- `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_finished_boundary_closure_deficit_summary.py`
+
+### Exact next step
+- Stay on the beyond-ceiling translation thread.
+- Compare the low-support throats directly against the one-node ladder representatives to isolate what additional structural collapse zeroes the bridge-bridge closure count and makes the throat rows fall off the clean `12/0 -> 10/2 -> 8/4` ladder.
+
+### First concrete action
+- Build one bounded throat-collapse compare across:
+  - `ultra:base:taper-wrap:mode-mix-f`
+  - `mega:base:taper-wrap:mode-mix-f`
+  - one side row
+  - one hinge row
+  - the corner near miss
+  so we can test whether the throat failure is best explained by multi-node support loss, broken inward bridge pairing, or another local collapse observable.
+
 ## 2026-03-30 11:27 America/New_York
 
 ### Seam class

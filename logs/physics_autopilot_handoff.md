@@ -1,64 +1,54 @@
 # Physics Autopilot Handoff
 
-## 2026-03-30 11:27 America/New_York
+## 2026-03-30 15:02 America/New_York
 
 ### Seam class
-- beyond-ceiling ladder translation
-- representative closure compression
+- beyond-ceiling finished-boundary closure-deficit summary
+- one-node ladder versus throat collapse
 
 ### Science impact
-- science advanced; the new side-vs-hinge-vs-corner deletion ladder now compresses cleanly under one scalar already visible at row level, rather than needing node-position casework
-- narrative advanced; the beyond-ceiling outside ladder is now best read physically as local shared-packet closure completion: four lost closures, then two lost closures, then full completion
+- science advanced; the beyond-ceiling family plus one-node outside boundary now exact-closes as a local closure-deficit ladder
+- narrative sharpened; the low-support throats do not continue that ladder and should remain outside it as deeper multi-node collapse rows
 
 ### Current state
-- Re-read the required protocol artifacts, confirmed the latest handoff named no active detached child, checked the lock as free, reconciled the canonical repo clean and synced at `4123638`, and acquired the `physics-science` lock before doing new work.
-- Added and ran one bounded analyzer:
-  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_deletion_ladder_representative_compare.py`
+- Picked up from synced `0240fe4` on clean `main`, pushed that queued checkpoint to `origin/main`, and acquired the `manual-codex` lock before continuing the beyond-ceiling translation thread.
+- Added and ran one bounded analyzer with parallel row capture:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_finished_boundary_closure_deficit_summary.py`
 - Generated:
-  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-deletion-ladder-representative-compare.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-finished-boundary-closure-deficit-summary.txt`
 - Lock status:
-  - no active detached child
-  - release allowed after commit and push attempt
+  - held by `manual-codex` during write-up
+  - release pending after commit/push if no child remains active
 
 ### Strongest confirmed conclusion
-- Missing-node position is still the right mechanism label, but it is not the cleanest ladder scalar:
-  - `default:base:skew-wrap:local-morph-c` deletes a side node and lands at `7` attachments / `8` closed edges
-  - `exa:large:taper-wrap-large:local-morph-g` deletes the hinge node and also lands at `7` attachments / `8` closed edges
-  - so side vs hinge over-splits one shared harsher rung
-- Simple directional attachment tallies are not stable enough either:
-  - the corner near miss `exa:base:skew-hard:local-morph-k` keeps `10` closed edges across all three tied dominant mids
-  - but its dominant orientations reuse one hinge-style column tally and one side-style row tally
-- The cleanest scalar compression is local shared-packet closure completion, already visible as row-level `mid_candidate_bridge_bridge_closed_pair_max`:
-  - side / hinge depletion: `8.000`
-  - corner depletion: `10.000`
-  - realized shared family: `12.000`
-- So the beyond-ceiling ladder is now best read as:
-  - four lost local closures
-  - two lost local closures
-  - full twelve-edge completion
-- The exact family law itself still stays:
-  - `mid_candidate_attached_max >= 7.500`
+- The closure-deficit equivalence is exact on the realized family plus one-node outside ladder:
+  - family rows: `12/0`
+  - corner near miss: `10/2`
+  - side-or-hinge outside rows: `8/4`
+- The low-support throats are qualitatively different:
+  - `ultra|mega:base:taper-wrap:mode-mix-f` falls to `0` bridge-bridge closed edges with a `12`-edge completion gap
+  - but only `7` explicit lost closed edges appear under the best aligned family-packet comparison
+- So the finished beyond-ceiling picture now splits in two:
+  - a clean one-node closure-deficit ladder
+  - deeper throat collapse outside that ladder
+- The exact family law still stays `mid_candidate_attached_max >= 7.500`.
 
 ### Files/logs changed
 - New analyzer:
-  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_deletion_ladder_representative_compare.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_finished_boundary_closure_deficit_summary.py`
 - New log:
-  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-deletion-ladder-representative-compare.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-finished-boundary-closure-deficit-summary.txt`
 - Updated narrative:
   - `/Users/jonreilly/Projects/Physics/README.md`
   - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
   - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
 
 ### Validation
-- `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_deletion_ladder_representative_compare.py`
+- `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_finished_boundary_closure_deficit_summary.py`
 
 ### Remaining review seams
-- open: whether the `8/10/12` closure-completion ladder can be restated in even cleaner local closure-deficit language over the whole already-finished outside boundary without reintroducing packet-template casework
+- open: what additional structural collapse makes the low-support throats fall off the otherwise clean one-node closure-deficit ladder
 
 ### Exact next step
 - Stay on the beyond-ceiling translation thread.
-- Build one bounded finished-boundary summary of:
-  - row-level `mid_candidate_bridge_bridge_closed_pair_max`
-  - best-aligned lost-closure count
-  - missing-node role
-  across the already-logged outside rows, so we can tell whether the closure-completion read stays physically clean once the deeper multi-node throats are included.
+- Compare the low-support throats directly against the side, hinge, and corner representatives to isolate the extra collapse beyond one-node packet depletion.
