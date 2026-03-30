@@ -19,6 +19,7 @@ from typing import Any
 
 DEFAULT_LOCK_PATH = "/Users/jonreilly/Projects/Physics/logs/physics_worker_lock.json"
 DEFAULT_META_LOCK_PATH = "/Users/jonreilly/Projects/Physics/logs/.physics_worker_lock.guard"
+DEFAULT_HOLDER_ENV = "CODEX_THREAD_ID"
 
 
 def utc_now() -> dt.datetime:
@@ -55,16 +56,40 @@ def lock_is_live(payload: dict[str, Any] | None) -> bool:
     return expires_at > utc_now()
 
 
-def build_payload(owner: str, purpose: str, ttl_hours: float) -> dict[str, Any]:
+def resolve_holder_id(explicit_holder_id: str | None) -> str | None:
+    if explicit_holder_id:
+        return explicit_holder_id
+    return os.environ.get(DEFAULT_HOLDER_ENV)
+
+
+def build_payload(
+    owner: str,
+    purpose: str,
+    ttl_hours: float,
+    holder_id: str | None,
+) -> dict[str, Any]:
     now = utc_now()
     expires_at = now + dt.timedelta(hours=ttl_hours)
-    return {
+    payload = {
         "owner": owner,
         "purpose": purpose,
         "pid": os.getpid(),
         "started_at": now.isoformat(),
         "expires_at": expires_at.isoformat(),
     }
+    if holder_id:
+        payload["holder_id"] = holder_id
+    return payload
+
+
+def holder_matches(payload: dict[str, Any] | None, owner: str, holder_id: str | None) -> bool:
+    if not payload or payload.get("owner") != owner:
+        return False
+
+    payload_holder_id = payload.get("holder_id")
+    if payload_holder_id or holder_id:
+        return payload_holder_id == holder_id
+    return True
 
 
 def print_payload(status: str, payload: dict[str, Any] | None) -> None:
@@ -83,25 +108,31 @@ def run_with_guard(args: argparse.Namespace) -> int:
 def dispatch_locked(args: argparse.Namespace) -> int:
     payload = load_lock(args.lock_path)
     live = lock_is_live(payload)
+    holder_id = resolve_holder_id(getattr(args, "holder_id", None))
 
     if args.command == "status":
         print_payload("held" if live else "free", payload if live else None)
         return 0
 
     if args.command == "acquire":
-        if live and payload and payload.get("owner") != args.owner:
+        if live and payload and not holder_matches(payload, args.owner, holder_id):
             print_payload("held", payload)
             return 2
-        new_payload = build_payload(args.owner, args.purpose, args.ttl_hours)
+        new_payload = build_payload(args.owner, args.purpose, args.ttl_hours, holder_id)
         dump_json(args.lock_path, new_payload)
         print_payload("acquired", new_payload)
         return 0
 
     if args.command == "refresh":
-        if not live or not payload or payload.get("owner") != args.owner:
+        if not live or not holder_matches(payload, args.owner, holder_id):
             print_payload("not-owned", payload if live else None)
             return 2
-        refreshed = build_payload(args.owner, payload.get("purpose", args.purpose), args.ttl_hours)
+        refreshed = build_payload(
+            args.owner,
+            payload.get("purpose", args.purpose),
+            args.ttl_hours,
+            holder_id,
+        )
         dump_json(args.lock_path, refreshed)
         print_payload("refreshed", refreshed)
         return 0
@@ -110,7 +141,7 @@ def dispatch_locked(args: argparse.Namespace) -> int:
         if not payload:
             print_payload("free", None)
             return 0
-        if payload.get("owner") != args.owner:
+        if not holder_matches(payload, args.owner, holder_id):
             print_payload("not-owned", payload)
             return 2
         os.remove(args.lock_path)
@@ -134,10 +165,12 @@ def build_parser() -> argparse.ArgumentParser:
         sub.add_argument("--owner", required=True)
         sub.add_argument("--purpose", default="")
         sub.add_argument("--ttl-hours", type=float, required=True)
+        sub.add_argument("--holder-id")
         sub.set_defaults(command=name)
 
     release = subparsers.add_parser("release")
     release.add_argument("--owner", required=True)
+    release.add_argument("--holder-id")
     release.set_defaults(command="release")
     return parser
 

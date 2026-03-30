@@ -9,31 +9,37 @@ This file is the stable operating protocol for the hourly science automation.
 - Prefer latent compression, order-parameter discovery, and physical-language translation over dense frontier laddering once subtype taxonomy is stable.
 
 ## Preflight
-1. Read, in order:
+0. Run the duplicate-run guard before reading or mutating shared state:
+   - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_run_guard.py preflight --automation-id physics-autopilot`
+   - the helper uses the current `CODEX_THREAD_ID` automatically
+   - if it returns `status = skip`, do not touch the repo, cooperative lock, tracked work log, runtime handoff, or shared memory; emit a duplicate-skip inbox item and archive the thread
+   - policy: the newest unresolved `physics-autopilot` run is the only run eligible to continue; older unresolved runs should self-archive instead of piling on more state
+1. Check the cooperative worker lock before reading shared artifacts:
+   - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status`
+   - if another live owner holds the lock, stop and archive without doing new work
+   - if a live `physics-science` lock already exists under another `CODEX_THREAD_ID`, do not treat that as free; stop and archive instead of overlapping it
+   - the lock helper now records `holder_id` from `CODEX_THREAD_ID` and only permits same-thread reacquire/refresh/release
+   - otherwise acquire it with:
+     - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 2`
+   - treat the lock as TTL-based shared state, not a process-liveness probe
+2. Read, in order:
    - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
    - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md` if it exists
    - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` if it exists
-2. Before any new work, inspect the latest handoff for an already-launched science child.
+3. Before any new work, inspect the latest handoff for an already-launched science child.
    - If the latest handoff names an active log path or active child run, check that path first with `lsof`.
    - If the child is still running, do not start another science step.
    - If the child is still running and the current lock owner is `physics-science`, leave the lock held and exit after refreshing handoff/memory only.
    - If the child finished, treat parsing/finalizing that completed run as this loop's bounded step.
-2. Check the cooperative worker lock:
-   - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status`
-   - if another live owner holds the lock, stop without doing new work
-   - if a live `physics-science` lock already exists, do not treat that as free; reconcile the handoff/active-child state first
-   - otherwise acquire it with:
-     - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 2`
-   - treat the lock as TTL-based shared state, not a process-liveness probe
-3. Reconcile git state before new work:
+4. Reconcile git state before new work:
    - `git status --short --branch`
    - `git rev-list --left-right --count origin/main...main` if `origin/main` exists locally
    - `git log --oneline --decorate -n 8`
-4. If the repo is already ahead of `origin/main`, attempt to push that work before doing new science with:
+5. If the repo is already ahead of `origin/main`, attempt to push that work before doing new science with:
    - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
    - if the helper reports a transient network or DNS failure, note it once and avoid piling on extra metadata-only commits
    - if the helper reports auth or non-fast-forward failure, stop and leave the repo for janitor/manual reconciliation
-5. If tracked work log, runtime handoff, and memory disagree, reconcile them first from the real repo/log state before new work.
+6. If tracked work log, runtime handoff, and memory disagree, reconcile them first from the real repo/log state before new work.
 
 ## Step Selection
 1. Continue the highest-signal unfinished thread from the top work-log entry.

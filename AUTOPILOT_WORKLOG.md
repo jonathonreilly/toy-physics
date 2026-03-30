@@ -1,3 +1,66 @@
+## 2026-03-30 19:00 America/New_York
+
+### Seam class
+- gravity scaling sweep
+- self-maintenance viability boundary
+
+### Science impact
+- Gravity decay rate α plateaus at ~0.10 for grids > 60 units. Does NOT approach 1/L (continuum limit). Finite-range gravity is a model prediction.
+- Self-maintenance requires adjacent nodes. Support = persistent_neighbors / total_neighbors.
+
+### Strongest confirmed conclusion
+The model's gravity is intrinsically finite-range (~10 grid units). The continuum ln(r) Green's function is not recovered at tested scales.
+
+### Files changed
+- New: `scripts/gravity_scaling_sweep.py`, `logs/2026-03-30-gravity-scaling-sweep.txt`
+
+### Exact next step
+- Non-trivial decoherence: records that modify the delay field (not just sector labels)
+
+## 2026-03-30 18:17 America/New_York
+
+### Seam class
+- interference DAG reconfiguration order-parameter discovery
+- multi-slit topology-change physical-language translation
+
+### Science impact
+- science advanced; the topology-change thread now compresses the open/closed-slit spike into a compact physical scalar family rather than only listing raw rewiring counts
+- across the four tested three-slit geometries, cumulative detector-boundary retiming over the three one-slit closures is the best single predictor of `max |I_3| / max |P_ABC|` on a log scale
+- the best scalar on the tested set is `sum_detector_max_delay` with correlation `0.9948`; raw post-barrier edge-change totals are weaker (`0.9663`)
+- wide and asymmetric geometries spike together because both generate about `4.7..5.0` units of detector-boundary retiming under slit closure, whereas the close geometry only reaches `1.656854`
+
+### Current state
+- Re-read the required protocol artifacts, then reconciled against the real canonical repo state: `main` and `origin/main` were already synced at `ebd7642`, the prior synced DAG-reconfiguration result had not been reflected in the tracked work log, the runtime handoff still carried a stale failed-push note, and autopilot memory was absent.
+- Acquired the `physics-science` lock on clean synced `main`, refreshed the runtime narrative to the real repo state, and continued the same multi-slit topology-change thread.
+- Added and ran one bounded analyzer:
+  - `/Users/jonreilly/Projects/Physics/scripts/interference_dag_reconfiguration_order_parameter.py`
+- Generated:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-interference-dag-reconfiguration-order-parameter.txt`
+
+### Strongest confirmed conclusion
+The giant open/closed-slit Sorkin spike is governed more by detector-side retiming than by raw edge rewiring. On the tested four-geometry set, the cleanest one-number compression is cumulative detector-boundary delay across the three one-slit closures, with total downstream delay mass as a close second.
+
+### Files and results changed in this run
+- New analyzer:
+  - `/Users/jonreilly/Projects/Physics/scripts/interference_dag_reconfiguration_order_parameter.py`
+- New log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-interference-dag-reconfiguration-order-parameter.txt`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+
+### Validation
+- `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/interference_dag_reconfiguration_order_parameter.py`
+- `python3 /Users/jonreilly/Projects/Physics/scripts/interference_dag_reconfiguration_order_parameter.py | tee /Users/jonreilly/Projects/Physics/logs/2026-03-30-interference-dag-reconfiguration-order-parameter.txt`
+
+### Exact next step
+- Stay on the multi-slit topology-change thread.
+- Test whether the detector-retiming order parameter can be derived from post-barrier cone geometry or path-multiplicity amplification, instead of treated as a purely empirical fit.
+
+### First concrete action
+- Write one bounded amplifier audit that compares symmetric vs wide/asymmetric slit closures and measures how detector-boundary delay couples to detector-side path multiplicity or boundary amplitude growth.
+
 ## 2026-03-30 17:23 America/New_York
 
 ### Seam class
