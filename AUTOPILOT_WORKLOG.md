@@ -1,3 +1,31 @@
+## 2026-03-30 17:45 America/New_York
+
+### Seam class
+- gravity falloff functional form + angular deflection sweep
+- irregular network interference robustness
+- Sorkin inclusion-exclusion test (I₃)
+- three-slit overclaim correction
+
+### Science impact
+- **Gravity angular sweep:** gravitational lensing pattern confirmed — paths on both sides of persistent-node mass bend inward. Action falloff is steeper than power-law, consistent with discrete harmonic relaxation. Anti-lensing artifact at close range (discrete grid effect).
+- **Irregular networks:** interference and record suppression BOTH survive grid perturbation up to ±40%. V(y=0) drops from 1.0 (confirming it was symmetry-protected). Record leak stays exactly 0.000000 at all perturbations.
+- **Sorkin test:** I₃ ≠ 0 at all configurations, but analysis shows this is DAG reconfiguration (topology change when barrier nodes open/close), NOT Born rule violation. The discrete causal DAG changes nonlinearly with slit configuration — a genuine discrete-network effect with no continuum analogue, but not "higher-order interference" in the standard sense. Sanity: SUSPICIOUS.
+- **Three-slit correction (per Codex review):** the earlier claim "more slits = higher mean_V" was overclaimed. Data shows 3-slit symmetric (0.405) > 3-slit asymmetric (0.298) > 4-slit (0.270) > 2-slit (0.246). Slit geometry matters more than slit count. Corrected conclusion: multi-slit configurations produce qualitatively different visibility structure, not a monotonic slit-count law.
+
+### Strongest confirmed conclusion
+- The model's interference regime is robust to grid irregularity. Record suppression is absolute at all perturbations. The Sorkin I₃ ≠ 0 is real but measures DAG reconfiguration, not Born rule violation — an important distinction that needs a refined test (fixed-DAG, amplitude-only slit control).
+
+### Files and results changed in this run
+- New scripts: `scripts/gravity_falloff_and_deflection_sweep.py`, `scripts/interference_irregular_network.py`, `scripts/interference_sorkin_test.py`
+- New logs: `logs/2026-03-30-gravity-falloff-and-deflection-sweep.txt`, `logs/2026-03-30-interference-irregular-network.txt`, `logs/2026-03-30-interference-sorkin-test.txt`
+
+### Exact next step
+- Refine the Sorkin test with a FIXED DAG (keep all barrier nodes, vary amplitude transmission 0/1 at each slit position) to isolate genuine higher-order interference from DAG reconfiguration
+- Fit the gravity action falloff to a discrete-harmonic functional form
+
+### First concrete action
+- Write `scripts/interference_sorkin_fixed_dag.py` that keeps all barrier nodes unblocked but sets amplitude transmission to zero at non-slit positions (instead of removing nodes)
+
 ## 2026-03-30 16:00 America/New_York
 
 ### Seam class
