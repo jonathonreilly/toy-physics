@@ -1,46 +1,40 @@
 # Physics Autopilot Handoff
 
-## 2026-03-30 18:23 America/New_York
+## 2026-03-30 19:19 America/New_York
 
 ### Seam class
-- interference DAG reconfiguration order-parameter discovery
-- multi-slit topology-change physical-language translation
+- repo-state reconciliation after multi-commit science burst
+- gravity / kinematics physical-language sync
 
 ### Science impact
-- science advanced; the post-fixed-DAG thread now compresses the open/closed-slit spike into a compact physical scalar family rather than only listing rewiring counts
-- across the four tested three-slit geometries, cumulative detector-boundary retiming over the three one-slit closures is the strongest single predictor of `max |I_3| / max |P_ABC|`
-- the best tested scalar is `sum_detector_max_delay` with correlation `0.9948`; raw post-barrier edge totals trail it at `0.9663`
+- no new analyzer was run; this loop synced the work log, README, handoff, and automation memory to the current canonical repo state
+- the canonical science state now reflects: fixed-DAG interference is Born-like, topology-changing record operators can reshape visibility, the default self-maintenance rule is oscillatory rather than fixed-point, oscillating persistent sources still bend trajectories, the tested gravity field does not superpose linearly, and the retained update `sqrt(dt^2-dx^2)` is the exact tested Lorentz / proper-time scalar
+- the older “finite-range gravity confirmed” wording has been retired; the gravity asymptotic law is still unsettled
 
 ### Current state
-- Reconciled the required artifacts against the real canonical repo state: while this loop was in progress, `main` and `origin/main` advanced through unrelated gravity commits to `7415988`; the tracked work log already carried the 18:17 DAG order-parameter entry, but `README.md`, this runtime handoff, and the analyzer/log pair for that thread were still missing from `HEAD`.
-- Kept the `physics-science` lock on synced `main`, preserved the unrelated gravity thread unchanged, and completed the remaining DAG order-parameter repo-facing artifacts on top of the newer canonical state.
-- Added and ran one bounded analyzer:
-  - `/Users/jonreilly/Projects/Physics/scripts/interference_dag_reconfiguration_order_parameter.py`
-- Generated:
-  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-interference-dag-reconfiguration-order-parameter.txt`
+- Passed the duplicate-run guard, acquired the `physics-science` lock, and found canonical `main` synced with `origin/main` at `2849c57`.
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` were stale against the committed repo state, while `README.md` already carried newer untracked conclusion updates.
+- This loop performed the repo-facing integrity reconciliation only; no detached child is active.
 - Lock status:
   - held by `physics-science` during write-up
   - no detached child active
 
 ### Strongest confirmed conclusion
-The giant open/closed-slit Sorkin signal is governed more by detector-side retiming than by raw edge rewiring. On the tested four-geometry set, cumulative detector-boundary delay across the three one-slit closures is the cleanest one-number compression of the spike size.
+The toy's kinematics and gravity dynamics now separate more cleanly: `sqrt(dt^2-dx^2)` is an exact tested Lorentz / proper-time scalar, while gravity is a genuinely nonlinear continuation effect whose two-source combination fails simple superposition by about `48..52%`, and whose large-grid asymptotic law is still unresolved.
 
 ### Files/logs changed
-- New analyzer:
-  - `/Users/jonreilly/Projects/Physics/scripts/interference_dag_reconfiguration_order_parameter.py`
-- New log:
-  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-interference-dag-reconfiguration-order-parameter.txt`
-- Updated narrative:
+- Updated narrative/state:
   - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
   - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
 
 ### Validation
-- `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/interference_dag_reconfiguration_order_parameter.py`
-- `python3 /Users/jonreilly/Projects/Physics/scripts/interference_dag_reconfiguration_order_parameter.py | tee /Users/jonreilly/Projects/Physics/logs/2026-03-30-interference-dag-reconfiguration-order-parameter.txt`
+- `git diff --check`
 
 ### Remaining review seams
-- open: derive the detector-retiming order parameter from post-barrier cone geometry or path-multiplicity amplification instead of treating it as a purely empirical fit
+- open: translate the two-source gravity nonlinearity into retained-update / proper-time language instead of leaving it as separate empirical field and path-optimization failures
 
 ### Exact next step
-- Stay on the multi-slit topology-change thread.
-- Write one bounded amplifier audit that compares symmetric vs wide/asymmetric slit closures and measures how detector-boundary delay couples to detector-side path multiplicity or boundary amplitude growth.
+- Stay on the gravity / kinematics translation thread.
+- Write one bounded analyzer that evaluates single-mass and two-mass trajectories on matched fixed paths and compares retained-update accumulation, raw delay accumulation, and action deviation.

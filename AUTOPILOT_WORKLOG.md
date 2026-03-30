@@ -1,3 +1,36 @@
+## 2026-03-30 19:19 America/New_York
+
+### Seam class
+- repo-state reconciliation after multi-commit science burst
+- gravity / kinematics physical-language sync
+
+### Science impact
+- no new analyzer was run; this loop reconciled tracked state to the already-committed canonical repo results at `2849c57`
+- the shared narrative now matches the committed science burst: fixed-DAG interference is still Born-like, topology-changing record operators can reshape visibility, the default self-maintenance rule is oscillatory rather than fixed-point, oscillating persistent sources still bend trajectories, the tested gravity field does not superpose linearly, and the retained update `sqrt(dt^2-dx^2)` is the exact tested Lorentz / proper-time scalar
+- the earlier “finite-range gravity confirmed” wording is retired; the current gravity asymptotic law remains unsettled and is better read as a finite-size / boundary question
+
+### Current state
+- Re-read the protocol artifacts, passed the duplicate-run guard, acquired the `physics-science` lock, and reconciled canonical `main` after finding stale shared metadata.
+- The canonical repo was synced with `origin/main` at `2849c57`, but `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` still described an older interference branch while `README.md` had newer untracked conclusion updates.
+- This bounded loop performed the repo-facing integrity fix only: updated the narrative and runtime artifacts to the actual committed repo state; no detached child is active.
+
+### Strongest confirmed conclusion
+The toy's kinematics and gravity dynamics now separate more cleanly: `sqrt(dt^2-dx^2)` is an exact tested Lorentz / proper-time scalar, while gravity is a genuinely nonlinear continuation effect whose two-source combination fails simple superposition by about `48..52%`, and whose large-grid asymptotic law is still unresolved.
+
+### Files changed
+- Updated narrative/state:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- Stay on the gravity / kinematics translation thread.
+- Derive whether the observed two-source gravity nonlinearity can be written directly in retained-update / proper-time language rather than as separate empirical field and path-optimization failures.
+
+### First concrete action
+- Write one bounded analyzer that evaluates single-mass and two-mass trajectories on matched fixed paths and compares retained-update accumulation, raw delay accumulation, and action deviation to see which quantity best compresses the `48..52%` superposition failure.
+
 ## 2026-03-30 19:00 America/New_York
 
 ### Seam class

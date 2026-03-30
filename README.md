@@ -110,18 +110,26 @@ The model presently supports the following claims.
 
 ### 1. Effective delay structure
 
-Persistent patterns can generate a local delay field in the toy. Histories evaluated against that field do not behave as if they were propagating on an undistorted fixed background.
+Persistent patterns can generate a local delay field in the toy. Histories evaluated against that field do not behave as if they were propagating on an undistorted fixed background. On the tested boost transformations, the retained update `sqrt(dt^2-dx^2)` is the exact invariant scalar, while coordinate delay, Euclidean edge length, and spent delay all drift. So the toy now has a proper-time-like kinematic scalar even though its gravity dynamics remain nonlinear.
 
 ### 2. Gravity-like continuation
 
-Path selection through the derived delay field produces inward-bending, gravity-like continuation on the benchmark suite. This is a toy mechanism result, not a derivation of general relativity.
+Path selection through the derived delay field produces inward-bending, gravity-like continuation on the benchmark suite. Small quantitative sweeps also show a two-node onset and directional asymmetry. Oscillating persistent sources still bend trajectories robustly, but two-source tests show the gravity sector is not linear: `field(A+B)` differs from `field(A)+field(B)`, and the combined optimal action differs from the sum of the single-source actions by about `48..52%` on the tested geometry. This is a toy mechanism result, not a derivation of general relativity. The present field picture is compatible with a discrete harmonic / Green-function interpretation on the tested grids, but the large-grid asymptotic law is not yet settled: the earlier apparent range plateau is not explained by the local damping term and is better read as an unresolved finite-size or boundary effect than as an established finite-range law.
 
-### 3. Record-based interference suppression
+### 3. Fixed-DAG interference
 
-Alternatives can coexist when no durable record separates them, and durable-record sectors suppress that coexistence in the slit-style interference toy. In coherent mode, off-center visibility is geometry-dependent and the sampled even-width onset boundary closes exactly as
-`width_crit = min(slit_sep + 2|y|, 2*slit_sep + 2)`, so the earlier `y=1` “critical ratio” is only one edge of a broader two-regime detector-side law. On a fixed DAG, the tested three-slit configurations still satisfy the Sorkin inclusion-exclusion identity to machine precision, so the interference law itself remains pairwise/Born-like. The large open/closed-slit Sorkin signal comes from DAG reconfiguration instead: in the tested geometries, removing a single barrier slit node rewires `38..300` causal edges and delays `30..104` downstream shared nodes, almost entirely on the post-barrier side. Across the four tested three-slit geometries, the best compact predictor of that spike is cumulative detector-boundary retiming across the three one-slit closures; it tracks `max |I_3| / max |P_ABC|` more cleanly than raw post-barrier edge-count changes.
+In coherent mode, off-center visibility is geometry-dependent and the sampled even-width onset boundary closes exactly as
+`width_crit = min(slit_sep + 2|y|, 2*slit_sep + 2)`, so the earlier `y=1` “critical ratio” is only one edge of a broader two-regime detector-side law. On a fixed DAG, the tested three-slit configurations satisfy the Sorkin inclusion-exclusion identity to machine precision, so the interference law itself remains pairwise/Born-like. The same coherent interference pattern also survives tested geometric embedding perturbations while exact record suppression still holds. Under both symmetric and asymmetric delay-field distortions that leave the DAG fixed, the tested visibility curves remain unchanged to numerical precision; field-only record effects do not produce decoherence in that setup.
 
-### 4. Stable mechanism families
+### 4. Topology-changing record effects
+
+The large open/closed-slit Sorkin signal comes from DAG reconfiguration rather than higher-order interference: in the tested geometries, removing a single barrier slit node rewires `38..300` causal edges and delays `30..104` downstream shared nodes, almost entirely on the post-barrier side. Across the four tested three-slit geometries, the best compact predictor of that spike is cumulative detector-boundary retiming across the three one-slit closures; it tracks `max |I_3| / max |P_ABC|` more cleanly than raw post-barrier edge-count changes. A first topology-changing record operator that adds post-barrier shortcut structure then produces non-trivial visibility reshaping instead of the trivial `V_0(1-p)` law: the effect can either enhance or suppress visibility depending on detector position because the retimed DAG prunes edges and rebalances the slit amplitudes.
+
+### 5. Oscillatory persistence under the default self-maintenance rule
+
+Under the current default self-maintenance rule `S={3,4}, B={3,4}`, the tested seeds do not settle to static fixed points; they either die or enter period-2/3 orbits. In that sense, default persistence is periodic renewal rather than stasis. Broader rule sweeps still contain fixed-point rules, growing rules, and other oscillator families, so this is a statement about the current default dynamics rather than the whole rule space.
+
+### 6. Stable mechanism families
 
 The broadest recurring split is:
 
@@ -130,7 +138,7 @@ The broadest recurring split is:
 
 This split persists across reruns and generated families.
 
-### 5. Family growth without comparable family proliferation
+### 7. Family growth without comparable family proliferation
 
 As generated families widened:
 
@@ -139,7 +147,7 @@ As generated families widened:
 
 The resulting picture is a stable mechanism map with expanding support, rather than continual creation of new families at each deeper frontier.
 
-### 6. Shared structure in the low-overlap basin
+### 8. Shared structure in the low-overlap basin
 
 Fine-grained mechanism work is currently concentrated on a fixed frontier snapshot at `variant_limit = 5504`. On that controlled sample:
 
@@ -328,6 +336,10 @@ The relevant questions are:
 The main unresolved points are:
 
 - the spent-delay action family is favored in the benchmark, but not derived from deeper first principles
+- the model now has an exact retained-update / proper-time scalar kinematically, but its relation to the nonlinear gravity action and the observed two-source superposition failure has not yet been reduced to one clean dynamical law
+- the gravity field has a quantitative shape on the tested grids, but its large-grid asymptotic law is still unsettled; the earlier apparent range plateau is not explained by the local damping term, so the present data do not yet justify a clean continuum limit or a clean intrinsic finite-range law
+- the current record story is mechanistically sharper than it was earlier, but not yet unified into one derived law: fixed-DAG field distortions leave the tested visibility curves unchanged, while topology-changing record operators can reshape visibility strongly, including both enhancement and suppression depending on detector position
+- the default self-maintenance rule now looks oscillatory rather than fixed-point, but the wider rule space still contains stable and growing regimes, so the minimal rule-level principle behind persistent identity has not yet been reduced to one clean law
 - low-overlap subtype competition is now much more compressed on the frozen `5504` bucket and exact across the available historical frontier ladder; the first nearby generated edge (`geometry-c/e`) isolates cleanly under a support-collapse guard, and the surviving non-guarded generated pair-only failures (`mode-mix-f`, `local-morph-c`, `mode-mix-d`) now exact-separate from frozen historical `pair-only-sensitive`, `add1-sensitive`, and `add4-sensitive` rows once the moderate anchor-balance band is tightened with `mid_anchor_closure_peak <= 10.000`. Above that ceiling, the current coarse continuation is now cleaner: the held-out `outer-rect` pair at `ultra|mega` shares the same `8/12` mid-packet lift and four-incident flank hinge as the five observed late rows, so the packet-completion law should now be read as the common beyond-ceiling mechanism rather than as a late-only signature. The bounded within-family compare closes the immediate separator on the present basis: the shared packet family already splits into an `outer-rect` low-right-bridge tail, a `taper-hard` two-right-bridge branch, and a `skew-wrap` negative-deep no-right-bridge branch. A paired wider-base guardrail now says the immediate answer is still no fourth shared-packet branch: both `wider:base:skew-wrap:local-morph-c` and `wider:base:skew-wrap:mode-mix-d` drop back to `mid_anchor_closure_peak = 8.000`, `mid_candidate_attached_max = 7.000`, and no flank hinge. A follow-on log-backed closure then sharpens the taper-hard branch itself: the positive-intensity clause still leaks on both wider shoulders unless the shared packet gate is written explicitly, but the cleaner physical clause `high_bridge_right_count >= 1.500` already stays exact across the whole seven-row control set. So the present beyond-ceiling split is now best read as one shared packet regime whose taper-hard arm is specifically the two-right-bridge branch. A finished-log audit then closes the current already-computed outside-family boundary: the exhausted-wall misses, low-support throats, nearby shoulders, and paired wider sentinels all miss the shared packet laws and stay below two right bridges, while the helper-fixed non-base first-hit frontier remains empty. The paired farther `ultra` shoulders now say the same thing one step deeper too: both `ultra:base:skew-wrap:local-morph-c` and `ultra:base:skew-wrap:mode-mix-d` again miss every shared packet law, stay at one right bridge, and still leak only the weaker intensity clause. A fresh scenario-sharded base scan over `ultra|mega|peta|exa` then finds exactly one genuinely new nearby control beyond that paired-shoulder boundary, `exa:base:skew-hard:local-morph-k`. A three-chunk follow-on now resolves what that near miss means. On the six-row family-plus-near-miss set, the old four-rule packet equivalence splits into two layers: `mid_candidate_attached_max >= 7.500` is the only exact separator that survives unchanged, while `mid_anchor_closure_peak` and `mid_candidate_bridge_bridge_closed_pair_max` become exact again only after tightening from `>= 10.000` to `>= 11.000`. A full already-finished boundary audit shows all three of those rules exact against every current outside-family control. The dominant-packet alignment compare then closes the remaining wording seam. The fresh near miss is not one family-like packet competing with an unrelated rotated packet; it is three tied seven-support one-node deletions of the shared family packet:
   - cell `(2, -3)` misses support node `(-1, -1)` and its two incident closed edges
   - cell `(2, 1)` misses support node `(-1, 1)` and its two incident closed edges
