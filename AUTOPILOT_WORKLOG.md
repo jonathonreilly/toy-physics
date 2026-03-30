@@ -1,3 +1,59 @@
+## 2026-03-30 01:04 America/New_York
+
+### Seam class
+- wider sentinel guardrail
+- subbranch clause stability
+
+### Science impact
+- science advanced; the nearest wider base sentinel stays below the shared beyond-ceiling `8/12` packet law, so the current three-way split does not immediately open into a fourth shared-packet subbranch
+- narrative advanced; the taper-hard positive-intensity clause now reads as a separator inside the shared-packet family, not as a globally exact branch law by itself
+
+### Current state
+- Acquired the `physics-science` lock on local `ee08947` with the canonical repo still `ahead 1`; the required preflight push retry again failed with `dns_failure`, so the loop stayed local and continued on the active beyond-ceiling guardrail thread.
+- Added and ran:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_subbranch_wider_sentinel_guardrail.py`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-subbranch-wider-sentinel-guardrail.txt`
+- The bounded guardrail reused the finished five-row shared-packet baseline from:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-anchor-band-beyond-ceiling-followon.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-beyond-ceiling-nonrect-sweep-base-peta-exa.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-late-branch-law-confirmation.txt`
+- Added one directly recomputed wider base sentinel outside the current `ultra|mega|peta|exa` slice:
+  - `wider:base:skew-wrap:local-morph-c`
+- No detached science child was launched.
+
+### Strongest confirmed conclusion
+- The wider sentinel does not join the shared beyond-ceiling packet regime:
+  - `mid_anchor_closure_peak = 8.000`
+  - `mid_candidate_attached_max = 7.000`
+  - `mid_candidate_bridge_bridge_closed_pair_max = 8.000`
+  - `mid_has_four_incident_flank_hinge = n`
+- So it misses all four shared packet laws and does not add a fourth shared-packet subbranch at the nearest wider base guardrail.
+- On the extended six-row set the current one-feature branch clauses behave as follows:
+  - `outer-rect`: `edge_identity_event_count <= 58.000` stays exact
+  - `taper-hard`: `anchor_closure_intensity_gap >= 1.000` fails first by also matching the wider sentinel
+  - `skew-wrap`: `anchor_deep_share_gap <= -0.334` stays exact
+- So the present beyond-ceiling continuation still reads as a three-way shared-packet split, but the taper-hard positive-intensity clause now needs the shared packet gate rather than standing as a global separator by itself.
+
+### Files and results changed in this run
+- Added script:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_subbranch_wider_sentinel_guardrail.py`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-subbranch-wider-sentinel-guardrail.txt`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+
+### Validation
+- `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_subbranch_wider_sentinel_guardrail.py`
+
+### Exact next step
+- Stay on sparse guardrails, not broad scouting.
+- Test the paired wider shoulder `wider:base:skew-wrap:mode-mix-d` to see whether the taper-hard intensity leak is a stable wider-shoulder effect or only the `local-morph-c` representative.
+
+### First concrete action
+- Re-run the same guardrail script with the sentinel source switched to `base:skew-wrap:mode-mix-d` and check whether it again fails all four shared packet laws while still lighting up the taper-hard intensity clause.
+
 ## 2026-03-30 00:04 America/New_York
 
 ### Seam class
