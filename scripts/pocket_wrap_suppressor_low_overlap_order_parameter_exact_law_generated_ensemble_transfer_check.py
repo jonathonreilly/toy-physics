@@ -95,6 +95,7 @@ def _evaluate_outcome(
     wrap_y: bool,
     ge6_tree: object,
     dpadj_tree: object,
+    pack_name: str,
     scenario_name: str,
 ) -> tuple[str, float, float, float]:
     (
@@ -116,7 +117,7 @@ def _evaluate_outcome(
         wrap_y=wrap_y,
         ge6_tree=ge6_tree,
         dpadj_tree=dpadj_tree,
-        pack_name="base",
+        pack_name=pack_name,
         scenario_name=scenario_name,
         retained_weight=1.0,
     )
@@ -196,6 +197,7 @@ def build_rows_with_trees(
             wrap_y=wrap_y,
             ge6_tree=ge6_tree,
             dpadj_tree=dpadj_tree,
+            pack_name=pack_name,
             scenario_name=f"{ensemble_name}:{source_name}:base",
         )
         if base_outcome != "dpadj-only":
@@ -213,6 +215,7 @@ def build_rows_with_trees(
             wrap_y=wrap_y,
             ge6_tree=ge6_tree,
             dpadj_tree=dpadj_tree,
+            pack_name=pack_name,
             scenario_name=f"{ensemble_name}:{source_name}:add-1-0",
         )
         add4_outcome, _d4, _p4, _l4 = _evaluate_outcome(
@@ -220,6 +223,7 @@ def build_rows_with_trees(
             wrap_y=wrap_y,
             ge6_tree=ge6_tree,
             dpadj_tree=dpadj_tree,
+            pack_name=pack_name,
             scenario_name=f"{ensemble_name}:{source_name}:add-4-0",
         )
         subtype = pocket_wrap_suppressor_subtype_from_outcomes(
