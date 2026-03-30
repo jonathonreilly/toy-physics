@@ -1,0 +1,140 @@
+========================================================================
+SELF-MAINTENANCE RULE SWEEP
+========================================================================
+Grid: 30x25, steps=40
+
+             survive            birth     3x3_block     5_cross      line_5    2x3_rect  glider_try
+----------------------------------------------------------------------------------------------------
+               {2,3}              {3}     PERIO(12)   PERIO(12)   PERIO(12)    STABL(6)    COMPL(5)
+               {2,3}            {3,4}    GROWI(160)  GROWI(124)  GROWI(128)    STABL(6)    STABL(6)
+               {2,3}            {2,3}    GROWI(342)  GROWI(218)  GROWI(323)  GROWI(296)  GROWI(294)
+               {2,3}          {3,4,5}    GROWI(145)  GROWI(208)  GROWI(208)  GROWI(112)  GROWI(112)
+               {2,3}              {2}    GROWI(278)  GROWI(282)  GROWI(308)  GROWI(289)  GROWI(273)
+               {2,3}              {4}       DEAD(0)    PERIO(4)     DEAD(0)     DEAD(0)    STABL(3)
+               {2,3}            {3,6}       DEAD(0)     DEAD(0)     DEAD(0)    STABL(6)    COMPL(5)
+               {2,3}          {2,3,4}    GROWI(304)  GROWI(274)  GROWI(337)  GROWI(305)  GROWI(334)
+               {3,4}              {3}       DEAD(0)     DEAD(0)     DEAD(0)     DEAD(0)     DEAD(0)
+               {3,4}            {3,4}      PERIO(9)    PERIO(5)     DEAD(0)     DEAD(0)    PERIO(5)
+               {3,4}            {2,3}    GROWI(304)  GROWI(375)  GROWI(364)  GROWI(398)  GROWI(355)
+               {3,4}          {3,4,5}      PERIO(9)    PERIO(5)     DEAD(0)     DEAD(0)    PERIO(5)
+               {3,4}              {2}       DEAD(0)    STABL(5)  GROWI(271)  GROWI(226)  GROWI(215)
+               {3,4}              {4}       DEAD(0)    STABL(5)     DEAD(0)     DEAD(0)     DEAD(0)
+               {3,4}            {3,6}       DEAD(0)     DEAD(0)     DEAD(0)     DEAD(0)     DEAD(0)
+               {3,4}          {2,3,4}    GROWI(411)  GROWI(326)  GROWI(382)  GROWI(368)  GROWI(413)
+             {2,3,4}              {3}       DEAD(0)     DEAD(0)     DEAD(0)    STABL(6)  GROWI(257)
+             {2,3,4}            {3,4}    GROWI(293)  GROWI(382)  GROWI(368)    STABL(6)  GROWI(323)
+             {2,3,4}            {2,3}    GROWI(406)  GROWI(423)  GROWI(417)  GROWI(410)  GROWI(411)
+             {2,3,4}          {3,4,5}    GROWI(418)  GROWI(372)  GROWI(371)  GROWI(392)  GROWI(366)
+             {2,3,4}              {2}    GROWI(372)    STABL(5)  GROWI(363)  GROWI(368)  GROWI(377)
+             {2,3,4}              {4}       DEAD(0)    STABL(5)     DEAD(0)     DEAD(0)    STABL(3)
+             {2,3,4}            {3,6}       DEAD(0)     DEAD(0)     DEAD(0)    STABL(6)  GROWI(196)
+             {2,3,4}          {2,3,4}    GROWI(355)  GROWI(432)  GROWI(412)  GROWI(348)  GROWI(384)
+             {1,2,3}              {3}    GROWI(190)  GROWI(248)  GROWI(184)    STABL(6)   STABL(20)
+             {1,2,3}            {3,4}    GROWI(218)  GROWI(242)  GROWI(128)    STABL(6)  GROWI(248)
+             {1,2,3}            {2,3}    GROWI(292)  GROWI(326)  GROWI(304)  GROWI(377)  GROWI(352)
+             {1,2,3}          {3,4,5}    GROWI(303)  GROWI(272)  GROWI(333)  GROWI(167)  GROWI(197)
+             {1,2,3}              {2}    GROWI(366)  GROWI(358)  PERIO(371)  STABL(368)  GROWI(359)
+             {1,2,3}              {4}       DEAD(0)    PERIO(4)    STABL(5)    PERIO(4)    STABL(5)
+             {1,2,3}            {3,6}    GROWI(188)  GROWI(192)  GROWI(184)    STABL(6)  GROWI(135)
+             {1,2,3}          {2,3,4}    GROWI(368)  GROWI(320)  GROWI(383)  GROWI(344)  GROWI(308)
+             {3,4,5}              {3}     GROWI(44)   GROWI(52)     DEAD(0)     DEAD(0)     DEAD(0)
+             {3,4,5}            {3,4}    GROWI(425)  GROWI(405)     DEAD(0)  GROWI(366)    PERIO(5)
+             {3,4,5}            {2,3}    GROWI(422)  GROWI(430)  GROWI(433)  GROWI(439)  GROWI(438)
+             {3,4,5}          {3,4,5}    GROWI(426)  GROWI(392)     DEAD(0)  GROWI(305)    PERIO(5)
+             {3,4,5}              {2}       DEAD(0)    STABL(5)  GROWI(337)  GROWI(374)  GROWI(310)
+             {3,4,5}              {4}       DEAD(0)    STABL(5)     DEAD(0)    STABL(6)     DEAD(0)
+             {3,4,5}            {3,6}       DEAD(0)     DEAD(0)     DEAD(0)   STABL(32)     DEAD(0)
+             {3,4,5}          {2,3,4}    GROWI(382)  GROWI(481)  GROWI(453)  GROWI(453)  GROWI(469)
+           {2,3,4,5}              {3}     STABL(24)   STABL(24)   STABL(24)  GROWI(330)  GROWI(219)
+           {2,3,4,5}            {3,4}    GROWI(468)  GROWI(446)  GROWI(454)  GROWI(473)  GROWI(464)
+           {2,3,4,5}            {2,3}    STABL(444)  STABL(444)  PERIO(451)  STABL(453)  PERIO(452)
+           {2,3,4,5}          {3,4,5}    GROWI(446)  GROWI(494)  GROWI(484)  GROWI(452)  GROWI(467)
+           {2,3,4,5}              {2}    STABL(448)    STABL(5)  STABL(421)  PERIO(447)  GROWI(447)
+           {2,3,4,5}              {4}      STABL(8)    STABL(5)     DEAD(0)    STABL(6)    STABL(3)
+           {2,3,4,5}            {3,6}     STABL(24)   STABL(24)   STABL(24)  GROWI(276)  GROWI(343)
+           {2,3,4,5}          {2,3,4}    GROWI(447)  GROWI(447)  GROWI(456)  GROWI(446)  GROWI(451)
+             {4,5,6}              {3}       DEAD(0)    PERIO(5)     DEAD(0)     DEAD(0)     DEAD(0)
+             {4,5,6}            {3,4}      PERIO(5)    PERIO(5)     DEAD(0)     DEAD(0)     DEAD(0)
+             {4,5,6}            {2,3}    GROWI(386)  GROWI(356)  GROWI(379)  GROWI(360)  GROWI(348)
+             {4,5,6}          {3,4,5}      PERIO(5)    PERIO(5)     DEAD(0)     DEAD(0)     DEAD(0)
+             {4,5,6}              {2}      PERIO(8)     DEAD(0)  GROWI(195)  GROWI(180)  GROWI(149)
+             {4,5,6}              {4}       DEAD(0)     DEAD(0)     DEAD(0)     DEAD(0)     DEAD(0)
+             {4,5,6}            {3,6}       DEAD(0)    PERIO(5)     DEAD(0)     DEAD(0)     DEAD(0)
+             {4,5,6}          {2,3,4}    GROWI(452)  GROWI(508)  GROWI(486)  GROWI(472)  GROWI(463)
+               {1,2}              {3}       DEAD(0)     DEAD(0)     DEAD(0)     DEAD(0)    STABL(5)
+               {1,2}            {3,4}       DEAD(0)     DEAD(0)     DEAD(0)     DEAD(0)     DEAD(0)
+               {1,2}            {2,3}    GROWI(256)  GROWI(348)  GROWI(301)  GROWI(302)  GROWI(269)
+               {1,2}          {3,4,5}       DEAD(0)     DEAD(0)     DEAD(0)     DEAD(0)     DEAD(0)
+               {1,2}              {2}    GROWI(254)     DEAD(0)  GROWI(237)  GROWI(254)  GROWI(235)
+               {1,2}              {4}       DEAD(0)     DEAD(0)    STABL(5)     DEAD(0)     DEAD(0)
+               {1,2}            {3,6}       DEAD(0)     DEAD(0)     DEAD(0)     DEAD(0)    STABL(5)
+               {1,2}          {2,3,4}    GROWI(311)  GROWI(310)  GROWI(356)  GROWI(315)  GROWI(273)
+                 {3}              {3}       DEAD(0)     DEAD(0)     DEAD(0)     DEAD(0)     DEAD(0)
+                 {3}            {3,4}       DEAD(0)     DEAD(0)     DEAD(0)     DEAD(0)    COMPL(5)
+                 {3}            {2,3}    GROWI(278)  GROWI(260)  GROWI(249)  GROWI(291)  GROWI(287)
+                 {3}          {3,4,5}       DEAD(0)     DEAD(0)     DEAD(0)     DEAD(0)    COMPL(4)
+                 {3}              {2}       DEAD(0)   GROWI(20)  GROWI(234)  GROWI(199)  GROWI(201)
+                 {3}              {4}       DEAD(0)     DEAD(0)     DEAD(0)     DEAD(0)     DEAD(0)
+                 {3}            {3,6}       DEAD(0)     DEAD(0)     DEAD(0)     DEAD(0)     DEAD(0)
+                 {3}          {2,3,4}    GROWI(372)  GROWI(286)  GROWI(331)  GROWI(325)  GROWI(323)
+                 {2}              {3}       DEAD(0)     DEAD(0)     DEAD(0)     DEAD(0)     DEAD(0)
+                 {2}            {3,4}       DEAD(0)     DEAD(0)     DEAD(0)     DEAD(0)     DEAD(0)
+                 {2}            {2,3}    GROWI(278)  GROWI(276)  GROWI(296)  GROWI(280)  GROWI(273)
+                 {2}          {3,4,5}       DEAD(0)     DEAD(0)     DEAD(0)     DEAD(0)     DEAD(0)
+                 {2}              {2}       DEAD(0)     DEAD(0)     DEAD(0)  GROWI(126)  GROWI(207)
+                 {2}              {4}       DEAD(0)     DEAD(0)     DEAD(0)     DEAD(0)     DEAD(0)
+                 {2}            {3,6}       DEAD(0)     DEAD(0)     DEAD(0)     DEAD(0)     DEAD(0)
+                 {2}          {2,3,4}    GROWI(392)  GROWI(354)  GROWI(338)  GROWI(340)  GROWI(312)
+
+========================================================================
+RULES PRODUCING STABLE PATTERNS (>= 2 seeds)
+========================================================================
+
+  S={2,3,4,5} B={4}: 4 stable seeds
+    3x3_block: 8 nodes
+    5_cross: 5 nodes
+    2x3_rect: 6 nodes
+    glider_try: 3 nodes
+  S={2,3,4,5} B={3}: 3 stable seeds
+    3x3_block: 24 nodes
+    5_cross: 24 nodes
+    line_5: 24 nodes
+  S={2,3,4,5} B={2,3}: 3 stable seeds
+    3x3_block: 444 nodes
+    5_cross: 444 nodes
+    2x3_rect: 453 nodes
+  S={2,3,4,5} B={2}: 3 stable seeds
+    3x3_block: 448 nodes
+    5_cross: 5 nodes
+    line_5: 421 nodes
+  S={2,3,4,5} B={3,6}: 3 stable seeds
+    3x3_block: 24 nodes
+    5_cross: 24 nodes
+    line_5: 24 nodes
+  S={2,3} B={3,4}: 2 stable seeds
+    2x3_rect: 6 nodes
+    glider_try: 6 nodes
+  S={2,3,4} B={4}: 2 stable seeds
+    5_cross: 5 nodes
+    glider_try: 3 nodes
+  S={1,2,3} B={3}: 2 stable seeds
+    2x3_rect: 6 nodes
+    glider_try: 20 nodes
+  S={1,2,3} B={4}: 2 stable seeds
+    line_5: 5 nodes
+    glider_try: 5 nodes
+  S={3,4,5} B={4}: 2 stable seeds
+    5_cross: 5 nodes
+    2x3_rect: 6 nodes
+
+========================================================================
+MODEL DEFAULT RULE S={3,4} B={3,4}: Detailed orbit
+========================================================================
+
+  3x3_block: PERIOD-3, sizes = [9, 8, 5, 9, 8, 5, 9, 8, 5, 9, 8, 5, 9, 8, 5]...
+  5_cross: PERIOD-3, sizes = [5, 9, 8, 5, 9, 8, 5, 9, 8, 5, 9, 8, 5, 9, 8]...
+  line_5: DEAD, sizes = [5, 6, 4, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]...
+  2x3_rect: DEAD, sizes = [6, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]...
+  glider_try: PERIOD-2, sizes = [5, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]...
+
+SWEEP COMPLETE
