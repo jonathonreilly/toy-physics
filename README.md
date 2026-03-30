@@ -118,7 +118,8 @@ Path selection through the derived delay field produces inward-bending, gravity-
 
 ### 3. Record-based interference suppression
 
-Alternatives can coexist when no durable record separates them, and durable-record sectors suppress that coexistence in the slit-style interference toy.
+Alternatives can coexist when no durable record separates them, and durable-record sectors suppress that coexistence in the slit-style interference toy. In coherent mode, off-center visibility is geometry-dependent and the sampled even-width onset boundary closes exactly as
+`width_crit = min(slit_sep + 2|y|, 2*slit_sep + 2)`, so the earlier `y=1` “critical ratio” is only one edge of a broader two-regime detector-side law.
 
 ### 4. Stable mechanism families
 

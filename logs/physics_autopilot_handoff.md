@@ -1,54 +1,51 @@
 # Physics Autopilot Handoff
 
-## 2026-03-30 15:02 America/New_York
+## 2026-03-30 15:24 America/New_York
 
 ### Seam class
-- beyond-ceiling finished-boundary closure-deficit summary
-- one-node ladder versus throat collapse
+- interference critical-threshold closure
+- off-center visibility physical-language translation
 
 ### Science impact
-- science advanced; the beyond-ceiling family plus one-node outside boundary now exact-closes as a local closure-deficit ladder
-- narrative sharpened; the low-support throats do not continue that ladder and should remain outside it as deeper multi-node collapse rows
+- science advanced; the off-center interference onset now exact-closes on the sampled even-width grid as a two-regime width boundary rather than a loose ratio band
+- narrative sharpened; the `y=1` critical ratios are only the low-offset edge of that broader law
 
 ### Current state
-- Picked up from synced `0240fe4` on clean `main`, pushed that queued checkpoint to `origin/main`, and acquired the `manual-codex` lock before continuing the beyond-ceiling translation thread.
-- Added and ran one bounded analyzer with parallel row capture:
-  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_finished_boundary_closure_deficit_summary.py`
+- Re-read the protocol artifacts, confirmed no active detached science child, found the canonical repo synced at `cae2168`, and acquired the `physics-science` lock before new work.
+- Reconciled stale runtime metadata to the tracked interference thread.
+- Added and ran one bounded analyzer:
+  - `/Users/jonreilly/Projects/Physics/scripts/interference_critical_ratio_sweep.py`
 - Generated:
-  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-finished-boundary-closure-deficit-summary.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-interference-critical-ratio-sweep.txt`
 - Lock status:
-  - held by `manual-codex` during write-up
-  - release pending after commit/push if no child remains active
+  - held by `physics-science` during write-up
+  - no detached child active
 
 ### Strongest confirmed conclusion
-- The closure-deficit equivalence is exact on the realized family plus one-node outside ladder:
-  - family rows: `12/0`
-  - corner near miss: `10/2`
-  - side-or-hinge outside rows: `8/4`
-- The low-support throats are qualitatively different:
-  - `ultra|mega:base:taper-wrap:mode-mix-f` falls to `0` bridge-bridge closed edges with a `12`-edge completion gap
-  - but only `7` explicit lost closed edges appear under the best aligned family-packet comparison
-- So the finished beyond-ceiling picture now splits in two:
-  - a clean one-node closure-deficit ladder
-  - deeper throat collapse outside that ladder
-- The exact family law still stays `mid_candidate_attached_max >= 7.500`.
+- Over `width = 4..32`, `slit_sep = 2..16`, `|y| = 1..8`, coherent off-center onset exact-closes with zero mismatches as:
+  - `width_crit = min(slit_sep + 2|y|, 2*slit_sep + 2)`
+- Physical reading:
+  - straight-transfer regime: `width >= slit_sep + 2|y|`
+  - zig-zag saturation regime: `width >= 2*slit_sep + 2`
+- The earlier `y=1` “critical ratio” is only the edge case of that law.
+- Durable records still suppress visibility at all positions to machine precision.
 
 ### Files/logs changed
 - New analyzer:
-  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_finished_boundary_closure_deficit_summary.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/interference_critical_ratio_sweep.py`
 - New log:
-  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-finished-boundary-closure-deficit-summary.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-interference-critical-ratio-sweep.txt`
 - Updated narrative:
   - `/Users/jonreilly/Projects/Physics/README.md`
   - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
   - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
 
 ### Validation
-- `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_finished_boundary_closure_deficit_summary.py`
+- `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/interference_critical_ratio_sweep.py`
 
 ### Remaining review seams
-- open: what additional structural collapse makes the low-support throats fall off the otherwise clean one-node closure-deficit ladder
+- open: derive the zig-zag saturation term directly from sector-resolved causal paths and extend the law cleanly to odd widths
 
 ### Exact next step
-- Stay on the beyond-ceiling translation thread.
-- Compare the low-support throats directly against the side, hinge, and corner representatives to isolate the extra collapse beyond one-node packet depletion.
+- Stay on the interference translation thread.
+- Build one bounded sector-reachability audit comparing a narrow-slit saturated case against a straight-transfer case to expose the post-barrier paths behind the `2*slit_sep + 2` plateau.

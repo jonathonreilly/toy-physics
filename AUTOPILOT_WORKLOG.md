@@ -1,3 +1,51 @@
+## 2026-03-30 15:24 America/New_York
+
+### Seam class
+- interference critical-threshold closure
+- off-center visibility physical-language translation
+
+### Science impact
+- science advanced; the earlier `y=1` critical-ratio story now exact-closes as a two-regime width boundary on the sampled even-width interference grid
+- narrative sharpened; the ratio band is not a standalone law but the low-offset edge of a broader detector-side onset rule
+
+### Current state
+- Re-read the protocol artifacts, reconciled stale runtime metadata to the tracked interference thread, confirmed the canonical repo synced at `cae2168`, and acquired the `physics-science` lock before new work.
+- Added and ran one bounded analyzer:
+  - `/Users/jonreilly/Projects/Physics/scripts/interference_critical_ratio_sweep.py`
+- Generated:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-interference-critical-ratio-sweep.txt`
+
+### Strongest confirmed conclusion
+- Over the sampled even-width grid `width = 4..32`, `slit_sep = 2..16`, `|y| = 1..8`, off-center coherent visibility onset exact-closes with zero mismatches as:
+  - `width_crit = min(slit_sep + 2|y|, 2*slit_sep + 2)`
+- So the old `V(y=1)` threshold ratios are just the `|y| = 1` edge of that law:
+  - slit_sep `2 -> 16` gives critical ratios `2.000, 1.500, 1.333, 1.250, 1.200, 1.167, 1.143, 1.125`
+- Physical translation:
+  - straight-transfer regime: `width >= slit_sep + 2|y|`
+  - zig-zag saturation regime for narrow slits / larger offsets: threshold saturates at `width >= 2*slit_sep + 2`
+- The prior record conclusion remains unchanged:
+  - durable records still kill visibility everywhere to machine precision
+
+### Files and results changed in this run
+- New analyzer:
+  - `/Users/jonreilly/Projects/Physics/scripts/interference_critical_ratio_sweep.py`
+- New log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-interference-critical-ratio-sweep.txt`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+
+### Validation
+- `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/interference_critical_ratio_sweep.py`
+
+### Exact next step
+- Stay on the interference translation thread.
+- Derive the zig-zag saturation term directly from sector-resolved causal paths, and check whether odd widths obey the expected `ceil(width/2)` generalization of the same law.
+
+### First concrete action
+- Build one bounded sector-reachability audit comparing a narrow-slit saturated case (`slit_sep=2`, `width=6`) against a straight-transfer case (`slit_sep=8`, `width=14`) to expose which post-barrier causal paths create the plateau at `2*slit_sep + 2`.
+
 ## 2026-03-30 15:40 America/New_York
 
 ### Seam class
