@@ -1,3 +1,57 @@
+## 2026-03-30 07:10 America/New_York
+
+### Seam class
+- ultra companion guardrail
+- beyond-ceiling packet boundary
+
+### Science impact
+- science advanced; the companion `ultra` shoulder repeats the same depleted `7/8` packet stall, so the current three-way shared-packet split now survives across the full checked `ultra` shoulder pair
+- narrative advanced; the live open seam moves beyond the paired `ultra` shoulders to still deeper base or nearby non-base fresh controls
+
+### Current state
+- Picked up from the synced overnight queue on clean `main`, acquired the `manual-codex` lock, and continued directly from the latest handoff instead of reopening the finished confirmation/regime-map lane.
+- Pushed the queued local automation chain to `origin/main` first, then ran the queued companion guardrail:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_subbranch_wider_sentinel_guardrail.py --sentinel-ensemble ultra --sentinel-source base:skew-wrap:mode-mix-d > /Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-subbranch-ultra-sentinel-guardrail-mode-mix-d.txt`
+- No repo-facing code changed in this tranche; only the new log and narrative state moved.
+
+### Strongest confirmed conclusion
+- `ultra:base:skew-wrap:mode-mix-d` matches the earlier `ultra:base:skew-wrap:local-morph-c` shoulder in substance:
+  - misses all four shared `8/12` packet laws
+  - `mid_anchor_closure_peak = 8.000`
+  - `mid_candidate_attached_max = 7.000`
+  - `mid_candidate_bridge_bridge_closed_pair_max = 8.000`
+  - no four-incident flank hinge
+  - only one right bridge
+- The weaker within-family shadow still leaks there:
+  - `anchor_closure_intensity_gap >= 1.000` lights up again
+- The cleaner taper-hard clause still does not:
+  - `high_bridge_right_count >= 1.500` stays off
+- So both checked `ultra` shoulders now sit outside the shared beyond-ceiling packet regime, and the only logged two-right-bridge rows remain the known `base` `peta|exa` taper-hard pair.
+
+### Files and results changed in this run
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-subbranch-ultra-sentinel-guardrail-mode-mix-d.txt`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+
+### Validation
+- `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_subbranch_wider_sentinel_guardrail.py --sentinel-ensemble ultra --sentinel-source base:skew-wrap:mode-mix-d > /Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-subbranch-ultra-sentinel-guardrail-mode-mix-d.txt`
+
+### Exact next step
+- Stay on sparse beyond-boundary controls.
+- Do not rerun the same `base:skew-wrap:{local-morph-c,mode-mix-d}` shoulders deeper by ensemble alone; a cheap direct lookup shows those exact sources repeat unchanged through `mega|peta|exa` with the same depleted `7/8` packet and one-right-bridge profile.
+- Choose one different still-deeper base source or nearest nearby non-base fresh control beyond the paired `ultra` shoulders and test whether the depleted `7/8` packet finally lifts.
+
+### First concrete action
+- Enumerate the nearest still-unchecked beyond-boundary candidates after:
+  - `wider:base:skew-wrap:local-morph-c`
+  - `wider:base:skew-wrap:mode-mix-d`
+  - `ultra:base:skew-wrap:local-morph-c`
+  - `ultra:base:skew-wrap:mode-mix-d`
+  while excluding deeper repeats of those same two source names, then run the smallest fresh sentinel guardrail on the nearest genuinely new candidate.
+
 ## 2026-03-30 06:59 America/New_York
 
 ### Seam class
