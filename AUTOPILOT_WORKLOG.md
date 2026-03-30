@@ -1,3 +1,45 @@
+## 2026-03-30 12:48 America/New_York
+
+### Seam class
+- interference geometry sweep
+- two-slit fringe contrast vs network geometry
+- PStack pipeline inaugural run
+
+### Science impact
+- science advanced; the first systematic geometry sweep of the two-slit interference setup reveals that fringe contrast at y=0 is exactly 1.0 in coherent mode and exactly 0.0 in record mode, independent of grid width (8-28) and slit separation (4-16)
+- sanity check caught that this result is trivially explained by the grid's discrete reflection symmetry at y=0, not by model dynamics — the skeptic's audit downgraded the finding to SUSPICIOUS
+- the dynamically interesting observable is the full screen distribution shape, which DOES depend on geometry: narrow slits push probability to screen edges, wide slits concentrate it at center, and longer grids develop richer multi-fringe structure
+- new PStack science skills installed and tested end-to-end: /frontier, /hypothesis, /theory-review, /design-experiment, /analyze, /sanity
+
+### Current state
+- Ran the full PStack pipeline on the highest-value frontier gap identified by `/frontier`: the interference regime, which had no parameter sweeps despite `two_slit_distribution()` existing in the simulator
+- Created `scripts/interference_geometry_sweep.py` — parameterized version of `two_slit_distribution()` accepting arbitrary width, height, slit positions
+- Generated `logs/2026-03-30-interference-geometry-sweep.txt` with 1,152 probability evaluations across 48 geometry x record combinations
+- All PStack science documents written to `.claude/science/` (hypothesis, theory-review, experiment design, analysis, sanity check)
+- Frontier map written to `.claude/science/frontier/2026-03-30-frontier-map.md`
+
+### Strongest confirmed conclusion
+- Fringe contrast at the center detector (y=0) is EXACTLY 1.0 in coherent mode at all tested geometries, but this is a symmetry property of the setup (equal path lengths to center from symmetric slits), not a dynamical property of the model
+- The record mechanism provides all-or-nothing suppression: binary toggle, no partial suppression, geometry-independent
+- Distribution SHAPE varies dramatically with geometry and is the dynamically interesting observable for follow-up
+
+### Files and results changed in this run
+- New script: `scripts/interference_geometry_sweep.py`
+- New result log: `logs/2026-03-30-interference-geometry-sweep.txt`
+- New PStack skill files: `.claude/commands/` (14 skills)
+- New PStack science documents: `.claude/science/` (frontier, hypotheses, experiments, analyses, sanity, theory-reviews)
+
+### Validation
+- Baseline validation passed: default geometry (width=16, slit_sep=8) reproduces existing `center_detector_phase_scan()` response curve
+- Sanity check: SUSPICIOUS — central finding is trivial (symmetry), but distribution shape findings are dynamically interesting
+
+### Exact next step
+- Investigate the geometry dependence of the FULL fringe pattern (not just center contrast): measure fringe count, fringe spacing, and fringe envelope as functions of slit separation and grid width across the full detector screen
+- Alternatively, explore partial record mechanisms: modify `two_slit_distribution()` to allow probabilistic (not binary) record creation, sweeping record probability from 0 to 1
+
+### First concrete action
+- Write a follow-up script that measures off-center fringe visibility V(y) for y != 0 across the same geometry grid, since the symmetry protection only applies at y=0
+
 ## 2026-03-30 07:10 America/New_York
 
 ### Seam class
