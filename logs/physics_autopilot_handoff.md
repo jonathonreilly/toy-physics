@@ -1,5 +1,78 @@
 # Physics Autopilot Handoff
 
+## 2026-03-30 08:52 America/New_York
+
+### Seam class
+- dominant-packet alignment compare
+- dominant-packet semantics audit
+
+### Science impact
+- science advanced; the fresh `skew-hard` near miss is now resolved internally as three tied one-node deletions of the shared family packet, not as a family packet competing with an unrelated rotated packet
+- narrative advanced; the family law should still be stated at row level, because `any dominant packet has hinge` leaks on the near miss while the unchanged attachment rule stays exact and simpler
+
+### Current state
+- Picked up from the synced `f241e27` checkpoint on clean `main`, reacquired the `manual-codex` lock, and stayed on the beyond-ceiling translation thread.
+- Added and ran two new analyzers in parallel:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_dominant_packet_alignment_compare.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_dominant_packet_semantics_audit.py`
+- Generated:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-dominant-packet-alignment-compare.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-dominant-packet-semantics-audit.txt`
+- Lock status:
+  - held by `manual-codex` during write-up; release pending after commit/push
+
+### Strongest confirmed conclusion
+- The three tied dominant mids in `exa:base:skew-hard:local-morph-k` are three distinct seven-support one-node deletions of the shared family packet:
+  - cell `(2, -3)` is the best family-aligned packet:
+    - missing support node `(-1, -1)`
+    - missing closed edges `(-1, -1)->(-1, 0)` and `(-1, -1)->(0, -1)`
+  - cell `(2, 1)` is another one-node deletion:
+    - missing support node `(-1, 1)`
+    - missing closed edges `(-1, 0)->(-1, 1)` and `(-1, 1)->(0, 1)`
+  - cell `(4, 1)` preserves the hinge but is still only another one-node deletion:
+    - missing support node `(1, -1)`
+    - missing closed edges `(0, -1)->(1, -1)` and `(1, -1)->(1, 0)`
+- So the near miss is not a family packet plus a qualitatively different competitor. It is one shared seven-support deletion class realized in three tied dominant mids.
+- The semantics audit then settles the law wording:
+  - `any_dominant_hinge`: leaks on the near miss (`1/9` outside hits), so not a clean family law
+  - `any_dominant_exact_family_template`: exact, but too brittle / combinatorial
+  - `best_aligned_missing_support_nodes <= 0`: exact, but again more combinatorial than needed
+  - `row_mid_attached_max >= 7.500`: exact and still the cleanest scalar family law
+- So the present best read is:
+  - mechanism language: one-node completion from `7/10` to `8/12`
+  - law language: `mid_candidate_attached_max >= 7.500`
+
+### Files/logs changed
+- New analyzers:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_dominant_packet_alignment_compare.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_dominant_packet_semantics_audit.py`
+- New logs:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-dominant-packet-alignment-compare.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-dominant-packet-semantics-audit.txt`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+
+### Validation
+- `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_dominant_packet_alignment_compare.py`
+- `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_dominant_packet_semantics_audit.py`
+
+### Remaining review seams
+- open: whether the one-node deletion class seen in the fresh near miss appears anywhere else on the already-finished nearby boundary
+- open: whether different outside-family rows cluster by which family support node is missing best
+
+### Exact next step
+- Stay on the beyond-ceiling translation thread.
+- Scan the finished outside-family rows for which deleted family support node they realize best:
+  - `(-1, -1)`
+  - `(-1, 1)`
+  - `(1, -1)`
+  or something more degraded.
+
+### First concrete action
+- Build one bounded deletion-class scan over the already-finished outside-family rows and ask which family support node, if any, each row best deletes relative to the shared family packet.
+
 ## 2026-03-30 08:27 America/New_York
 
 ### Seam class
