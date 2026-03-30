@@ -1,102 +1,52 @@
 # Physics Autopilot Handoff
 
-## 2026-03-30 07:10 America/New_York
+## 2026-03-30 12:48 America/New_York
 
 ### Seam class
-- ultra companion guardrail
-- beyond-ceiling packet boundary
+- interference geometry sweep
+- two-slit fringe contrast vs network geometry
+- PStack pipeline inaugural run
 
 ### Science impact
-- science advanced; the companion `ultra` shoulder repeats the same depleted `7/8` packet stall, so the current three-way shared-packet split now survives across the full checked `ultra` shoulder pair
-- narrative advanced; the live open seam moves beyond the paired `ultra` shoulders to still deeper base or nearby non-base fresh controls
+- First systematic geometry sweep of the two-slit interference setup
+- Fringe contrast at y=0 is exactly 1.0 (coherent) / 0.0 (record) at all geometries — a symmetry property, not dynamics
+- Distribution SHAPE varies dramatically with geometry and is the dynamically interesting observable
 
 ### Current state
-- Picked up from the synced overnight queue on clean `main`, then ran:
-  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_subbranch_wider_sentinel_guardrail.py --sentinel-ensemble ultra --sentinel-source base:skew-wrap:mode-mix-d`
-  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-subbranch-ultra-sentinel-guardrail-mode-mix-d.txt`
-- Updated the narrative in:
-  - `/Users/jonreilly/Projects/Physics/README.md`
-  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
-  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
-- Lock status:
-  - held by `manual-codex` during write-up; release pending after push
-
-### Strongest confirmed conclusion
-- `ultra:base:skew-wrap:mode-mix-d` matches the earlier `ultra:base:skew-wrap:local-morph-c` shoulder in substance:
-  - misses all four shared `8/12` packet laws
-  - `mid_anchor_closure_peak = 8.000`
-  - `mid_candidate_attached_max = 7.000`
-  - `mid_candidate_bridge_bridge_closed_pair_max = 8.000`
-  - no four-incident flank hinge
-  - one right bridge only
-- The weaker intensity shadow still leaks there:
-  - `anchor_closure_intensity_gap >= 1.000`
-- The cleaner taper-hard clause still does not:
-  - `high_bridge_right_count >= 1.500`
-- So both checked `ultra` shoulders now sit outside the shared beyond-ceiling packet regime, and the only logged two-right-bridge rows remain the known `base` `peta|exa` taper-hard pair.
-
-### Files/logs changed
-- New result log:
-  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-subbranch-ultra-sentinel-guardrail-mode-mix-d.txt`
-- Updated narrative:
-  - `/Users/jonreilly/Projects/Physics/README.md`
-  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
-  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
-
-### Remaining review seams
-- open: nearest still-fresh base or nearby non-base control beyond the paired `ultra` shoulders
-- open: whether any such control ever realizes the shared `8/12` packet and the two-right-bridge taper-hard arm
-
-### Exact next step
-- Stay on sparse beyond-boundary controls.
-- Do not rerun the same `base:skew-wrap:{local-morph-c,mode-mix-d}` shoulders deeper by ensemble alone; a cheap direct lookup shows those exact sources repeat unchanged through `mega|peta|exa` with the same depleted `7/8` packet and one-right-bridge profile.
-- Choose the nearest still-unchecked genuinely new candidate after the paired `ultra` shoulders and run one fresh sentinel guardrail.
-
-### First concrete action
-- Enumerate the nearest viable candidate beyond:
-  - `wider:base:skew-wrap:local-morph-c`
-  - `wider:base:skew-wrap:mode-mix-d`
-  - `ultra:base:skew-wrap:local-morph-c`
-  - `ultra:base:skew-wrap:mode-mix-d`
-  while excluding deeper repeats of those same two source names, then run the smallest fresh guardrail on that candidate.
-
-## 2026-03-30 06:59 America/New_York
-
-### Seam class
-- ultra guardrail extension
-- beyond-ceiling packet boundary
-
-### Science impact
-- science advanced; the first fresh beyond-boundary base shoulder repeats the depleted `7/8` packet stall, so the current three-way shared-packet split survives one step past the finished `wider` pair
-- narrative advanced; the live open seam narrows to the companion `ultra` shoulder or still deeper fresh controls, not the already-tested `ultra:base:skew-wrap:local-morph-c` arm
-
-### Current state
-- The canonical repo started this loop clean on local `main` with an unpushed local queue still ahead of `origin/main`.
-- The required preflight push retry via `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics` again failed with `dns_failure` after 5 attempts (`Could not resolve host: github.com`), so the loop stayed local.
-- Added and ran:
-  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-subbranch-ultra-sentinel-guardrail.txt`
+- PStack science skills installed in `.claude/commands/` (14 skills)
+- Science documents in `.claude/science/` (frontier map, hypothesis, theory-review, experiment design, analysis, sanity check)
+- New script: `scripts/interference_geometry_sweep.py`
+- New log: `logs/2026-03-30-interference-geometry-sweep.txt`
+- Branch `claude/intelligent-jepsen` pushed to GitHub
 - No detached science child is active.
+- Lock: released.
+
+### Active thread
+- Interference regime geometry dependence — specifically the OFF-CENTER fringe pattern
+- The center detector (y=0) contrast is trivially 1.0 by grid reflection symmetry
+- The dynamically interesting measurement is fringe visibility V(y) at y != 0
 
 ### Strongest confirmed conclusion
-- `ultra:base:skew-wrap:local-morph-c` still hits none of the shared `8/12` packet laws and stalls at `mid_anchor_closure_peak = 8.000`, `mid_candidate_attached_max = 7.000`, `mid_candidate_bridge_bridge_closed_pair_max = 8.000`, and no four-incident flank hinge.
-- It also stays below the cleaner taper-hard branch law with `high_bridge_right_count = 1.000`, while the weaker within-family shadow `anchor_closure_intensity_gap >= 1.000` still leaks there.
-- So the beyond-ceiling shared-packet family still does not widen at the first checked `ultra` shoulder; the only logged two-right-bridge rows remain the known `base` `peta|exa` taper-hard pair.
+- Fringe contrast at y=0 is EXACTLY 1.0 in coherent mode at all tested geometries, but this is a symmetry property of the setup (equal path lengths to center from symmetric slits), not a dynamical property of the model
+- The record mechanism provides all-or-nothing suppression: binary toggle, no partial suppression, geometry-independent
+- Distribution SHAPE varies dramatically with geometry and is the dynamically interesting observable for follow-up
 
 ### Files/logs changed
-- New result log:
-  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-subbranch-ultra-sentinel-guardrail.txt`
-- Updated narrative:
-  - `/Users/jonreilly/Projects/Physics/README.md`
-  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
-  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- New script: `scripts/interference_geometry_sweep.py`
+- New result log: `logs/2026-03-30-interference-geometry-sweep.txt`
+- New PStack skill files: `.claude/commands/` (14 skills)
+- New PStack science documents: `.claude/science/` (frontier, hypotheses, experiments, analyses, sanity, theory-reviews)
+- Updated: `AUTOPILOT_WORKLOG.md`, `logs/physics_autopilot_handoff.md`
 
 ### Remaining review seams
-- open: whether the companion farther shoulder `ultra:base:skew-wrap:mode-mix-d` also stays outside the shared `8/12` packet regime
-- open: whether any still deeper base control or nearby non-base generated family beyond the current boundary ever realizes the same packet completion and two-right-bridge arm
+- open: off-center fringe visibility V(y) for y != 0 — does it depend on geometry?
+- open: partial record mechanisms — probabilistic record creation sweeping probability 0→1
+- open: attenuation_power sweep — could create partial decoherence-like effects
+- open (prior thread): nearest still-fresh base or nearby non-base control beyond the paired ultra shoulders
 
 ### Exact next step
-- Stay on sparse beyond-boundary guardrails instead of returning to the finished logs.
-- Test the companion farther shoulder `ultra:base:skew-wrap:mode-mix-d` to see whether the same depleted `7/8` packet persists across the paired `ultra` base shoulders.
+- Write a follow-up script measuring off-center fringe visibility V(y) for y != 0 across the geometry grid
+- The symmetry protection only applies at y=0; off-center positions test the model's actual path-selection dynamics
 
 ### First concrete action
-- Run `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_subbranch_wider_sentinel_guardrail.py --sentinel-ensemble ultra --sentinel-source base:skew-wrap:mode-mix-d > /Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-subbranch-ultra-sentinel-guardrail-mode-mix-d.txt`
+- Create `scripts/interference_offcenter_fringe_sweep.py` that computes V(y) = (P_max(y) - P_min(y)) / (P_max(y) + P_min(y)) across the full phase sweep for each screen position y, at each geometry point
