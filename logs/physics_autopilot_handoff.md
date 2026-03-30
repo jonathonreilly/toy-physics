@@ -1,204 +1,61 @@
 # Physics Autopilot Handoff
 
-## 2026-03-29 23:22 America/New_York
+## 2026-03-30 00:04 America/New_York
 
 ### Seam class
-- late-branch confirmation
-- regime architecture
+- beyond-ceiling subbranch compare
+- within-family physical translation
 
 ### Science impact
-- science advanced; the bounded adjacent confirmation pass shows the coarse late-wall clauses and the finer packet / hinge clauses are equivalent on the discovery wall plus the named nearby holdout
-- narrative advanced; the packet-lift / hinge law now reads as the common coarse law of the broader beyond-ceiling continuation, not as a unique late-nonrect signature
+- science advanced; the active within-continuation separator closes on the current five-row shared-packet basis, so the broader beyond-ceiling continuation now splits cleanly into `outer-rect`, `taper-hard`, and `skew-wrap` subbranches above the common `8/12` packet law
+- narrative advanced; the held-out `outer-rect` pair and the later non-rect rows now read as one regime with different branch coordinates, not as separate packet mechanisms
 
 ### Current state
 - Added and ran:
-  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_late_branch_law_confirmation.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_subbranch_compare.py`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-subbranch-compare.txt`
+- The bounded compare reused the recorded row blocks from:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-anchor-band-beyond-ceiling-followon.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-beyond-ceiling-nonrect-sweep-base-peta-exa.txt`
   - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-late-branch-law-confirmation.txt`
-- The confirmation set is intentionally bounded:
-  - discovery late rows: the five observed `base` late rows
-  - exhausted wall: `large:exa:taper-wrap-large:local-morph-g` and `mirror:exa:skew-hard-mirror:local-morph-f`
-  - named nearby holdout: shoulder (`default/broader` skew-wrap), throat (`ultra/mega` taper-wrap), and held-out outer-rect (`ultra/mega` rect-wrap)
-- Updated `/Users/jonreilly/Projects/Physics/README.md` to write the regime architecture explicitly:
-  - historical exact law
-  - support-collapse domain guard
-  - moderate anchor-balance basin
-  - beyond-ceiling continuation
-  - current domain boundaries
-- Lock status:
-  - still held by `manual-codex` during write-up; release pending after validation/push
+- The target set stayed exactly within the shared beyond-ceiling packet family:
+  - held-out `outer-rect`: `ultra|mega:base:rect-wrap:local-morph-f`
+  - later non-rect rows: `peta|exa:base:taper-hard:local-morph-f` and `exa:base:skew-wrap:local-morph-k`
+- No detached science child was launched.
 
 ### Strongest confirmed conclusion
-- All four candidate laws remain exact on the discovery wall against the exhausted wall:
-  - `mid_anchor_closure_peak >= 10.000`
-  - `mid_candidate_bridge_bridge_closed_pair_max >= 10.000`
-  - `mid_candidate_attached_max >= 7.500`
+- All five target rows already share:
+  - `mid_anchor_closure_peak = 12.000`
+  - `mid_candidate_attached_max = 8.000`
+  - `mid_candidate_bridge_bridge_closed_pair_max = 12.000`
   - `mid_has_four_incident_flank_hinge = Y`
-  - each stays at `tp/fp/fn = 5/0/0`
-- On the bounded adjacent holdout, those same four laws are still equivalent:
-  - they match neither shoulder nor throat rows
-  - they all match the held-out `outer-rect` pair at `ultra|mega`
-  - the finer law family therefore does not outrun the coarse law family on present nearby evidence
-  - divergence checks collapse:
-    - `bridge_without_attached_total = 0`
-    - `attached_without_hinge_total = 0`
-- So the clean read is now:
-  - the `8/12` packet lift and four-incident flank hinge are the common coarse law of the broader beyond-ceiling continuation
-  - the later `base` non-rect branch is a subbranch inside that continuation
-  - the active separator problem is now the within-continuation split between the held-out outer-rect pair and the later `taper-hard` / `skew-wrap` rows
+- So the shared `8/12` packet lift is not the active separator.
+- On the current five-row basis the branch split exact-closes with one feature per subbranch:
+  - `outer-rect`: `edge_identity_event_count <= 58.000`, with the more physical exact clauses `support_load >= 24.000` and `high_bridge_right_low_count >= 0.500`
+  - `taper-hard`: `anchor_closure_intensity_gap >= 1.000`, equivalently `high_bridge_right_count >= 1.500`
+  - `skew-wrap`: `anchor_deep_share_gap <= -0.334`, equivalently `high_bridge_right_count <= 0.500`
+- So the present beyond-ceiling continuation is best read as one shared packet regime already split into:
+  - a held-out `outer-rect` low-right-bridge / low-event tail
+  - a `taper-hard` positive-intensity two-right-bridge branch
+  - a `skew-wrap` negative-deep no-right-bridge branch
 
 ### Files/logs changed
 - Added script:
-  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_late_branch_law_confirmation.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_subbranch_compare.py`
 - New result log:
-  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-late-branch-law-confirmation.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-subbranch-compare.txt`
 - Updated narrative:
   - `/Users/jonreilly/Projects/Physics/README.md`
   - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
   - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
 
 ### Remaining review seams
-- open: smallest stable subbranch separator between held-out `outer-rect` and later `taper-hard` / `skew-wrap` rows inside the shared beyond-ceiling packet family
-- open: whether any non-base family ever realizes that same beyond-ceiling packet completion above the current exhausted wall
+- open: whether the present three-way beyond-ceiling split stays exact on the nearest wider base sentinel outside the current `ultra|mega|peta|exa` slice
+- open: whether any nearby non-base generated family ever realizes the same shared `8/12` packet completion and branch coordinates
 
 ### Exact next step
-- Stay on regime compression, not broader scouting.
-- Compare the held-out `outer-rect` pair directly against the later `taper-hard` and `skew-wrap` rows inside the shared beyond-ceiling packet family.
+- Stay on sparse guardrails, not dense laddering.
+- Extend the log-backed subbranch compare by one wider base sentinel row beyond the current five-row set.
 
 ### First concrete action
-- Build one bounded within-family comparer over:
-  - `ultra|mega:base:rect-wrap:local-morph-f`
-  - `peta|exa:base:taper-hard:local-morph-f`
-  - `exa:base:skew-wrap:local-morph-k`
-  and search for the smallest exact split above the already-confirmed common `8/12` packet / flank-hinge law.
-
-## 2026-03-29 21:17 America/New_York
-
-### Seam class
-- generated-family helper validation
-- late-branch topology translation
-
-### Science impact
-- integrity advanced without changing the finished non-base late-wall result; the stale helper seam was real, but the current empty non-base wall and exhausted-wall packet mechanism survive the fix in substance
-- science advanced; the shared packet completion now has a cleaner topology-language read as one four-incident flank hinge
-
-### Current state
-- Fixed the shared non-base generated-family seam in `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_exact_law_generated_ensemble_transfer_check.py`:
-  - `_evaluate_outcome(...)` now threads the real `pack_name` into `_evaluate_extended_ge6_dpadj_nodes(...)`
-- Completed helper-fixed reruns for the science-bearing non-base set:
-  - all nine finished non-base first-hit probes on `large`/`mirror` through `exa`
-  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_large_exa_exhausted_slice_compare.py`
-  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_late_branch_mid_anchor_translation_compare.py --mode full-wall`
-  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_late_branch_packet_neighborhood_compare.py`
-- Stopped two lower-value controls once the non-base reruns had already matched in substance:
-  - aggregate non-base beyond-ceiling sweep
-  - base-only generated non-guarded pair compare
-- Added and ran:
-  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_late_branch_packet_topology_translation.py`
-  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-late-branch-packet-topology-translation.txt`
-- Lock status:
-  - held by `manual-codex` during this tranche; release still pending at handoff write time
-
-### Strongest confirmed conclusion
-- The helper seam was real but did not move the current non-base science:
-  - all nine finished non-base first-hit probes kept the same scanned-combination counts and still `first_nonrect_row = none`
-  - the helper-fixed `large:exa` exhausted-slice compare matches the previous result in substance:
-    - same nearest miss `large:taper-wrap-large:local-morph-g`
-    - same `total_gap = 4.000`
-    - same `support_gap = 0.000`, `closure_gap = 0.000`, `mid_peak_gap = 4.000`
-  - the helper-fixed full exhausted-wall translation compare still exact-separates with:
-    - `best_any_rule = mid_anchor_closure_peak >= 10.000`
-    - `best_structural_rule = mid_candidate_attached_max >= 7.500`
-  - the helper-fixed packet-neighborhood compare still has:
-    - `late_rows_complete_same_exhausted_gap = Y`
-    - `large_left_packet_matches_late_octagon = Y`
-- So the finished empty non-base late wall and the exhausted-wall packet-completion mechanism do not depend on the stale helper path.
-- The new topology translation compresses that packet completion:
-  - shared completion node = `(-1, 0)`
-  - shared completion edges = `4`
-  - the coordinate-free read is one four-incident flank hinge
-  - that hinge touches:
-    - two same-column neighbors
-    - two inward neighbors
-  - so the late branch repairs the exhausted wall by restoring one local vertical flank ladder plus two inward bridge-bridge closures into the packet interior
-
-### Files/logs changed
-- Fixed helper:
-  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_exact_law_generated_ensemble_transfer_check.py`
-- Added script:
-  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_late_branch_packet_topology_translation.py`
-- Key new logs:
-  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-helper-fix-delta-summary.txt`
-  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-large-exa-exhausted-slice-compare-helper-fix.txt`
-  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-late-branch-mid-anchor-translation-compare-full-wall-helper-fix.txt`
-  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-late-branch-packet-neighborhood-compare-full-wall-helper-fix.txt`
-  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-late-branch-packet-topology-translation.txt`
-- Updated runtime state:
-  - `/Users/jonreilly/Projects/Physics/README.md`
-  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
-  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
-
-### Remaining review seams
-- open: test whether any nearby generated family can realize the same four-incident flank hinge without reaching the full late `8/12` packet
-
-### Exact next step
-- Search the finished late-wall rows and nearest generated misses for any case that restores the same two same-column plus two inward hinge incidence pattern while still failing the late branch on another packet observable.
-
-### First concrete action
-- Build one bounded hinge-pattern scanner over the current exhausted-wall and nearby generated-family rows, then report whether the new flank-hinge language is already equivalent to the `mid_candidate_attached_max >= 7.500` separator or still hides a finer residual split.
-
-## 2026-03-29 19:16 America/New_York
-
-### Seam class
-- generated-family transfer
-- exhausted-wall packet completion closure
-
-### Science impact
-- science advanced; the inward-left-flank packet completion now exact-marks all five observed late rows, so the late-vs-exhausted transfer is locally one shared mid-packet completion rather than another layout change
-
-### Current state
-- Picked up from local `f60ddf0` with the canonical repo already `ahead 1, behind 0`; the required preflight push retry failed again with `dns_failure`, so the loop proceeded locally on the active packet-completion thread.
-- Updated and ran:
-  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_late_branch_packet_neighborhood_compare.py`
-  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-late-branch-packet-neighborhood-compare-full-wall.txt`
-- No detached science child was launched.
-- Committed the stable repo-facing result as `ca47b38` (`Confirm late packet completion across wall`).
-- Push status:
-  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
-  - failed with `dns_failure` after `5` attempts, so the canonical repo is currently `ahead 2, behind 0`
-- Lock status:
-  - no child remains active; the `physics-science` lock was released at loop end
-
-### Strongest confirmed conclusion
-- All five observed late rows share the same dominant mid packet:
-  - full eight-support octagon
-  - `attached = 8`
-  - `bridge_bridge_closed_pairs = 12`
-- Both exhausted-wall misses share the same depleted dominant mid packet:
-  - `attached = 7`
-  - `bridge_bridge_closed_pairs = 8`
-  - missing relative support node `(-1, 0)`
-  - missing support-closure edges `(-1,-1)->(-1,0)`, `(-1,0)->(-1,1)`, `(-1,0)->(0,-1)`, `(-1,0)->(0,1)`
-- Every observed late row completes that same exhausted-wall template in the same way:
-  - add relative support node `(-1, 0)`
-  - restore those same four incident bridge-bridge support closures
-- The closest `large:exa` miss still keeps the full octagon on the left anchor band, while the `mirror:exa` miss also leaves its strongest left packet one support short.
-- So the current late-vs-exhausted transfer law is now a stable local mid-packet completion across the whole observed late branch, not another anchor-layout change.
-
-### Files/logs changed
-- Updated script:
-  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_late_branch_packet_neighborhood_compare.py`
-- New result log:
-  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-late-branch-packet-neighborhood-compare-full-wall.txt`
-- Updated runtime state:
-  - `/Users/jonreilly/Projects/Physics/README.md`
-  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
-  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
-
-### Remaining review seams
-- open: translate the now-confirmed local packet-completion law into support-role or topological language and test whether any nearby generated family breaks it
-
-### Exact next step
-- Translate the now-confirmed `(-1, 0)` completion into support-role or topological language and check whether any nearby generated family breaks that coordinate-free read.
-
-### First concrete action
-- Compare the exhausted seven-support mid template and the five late completions in support-role terms, starting from the missing node's bridge and closure-incidence pattern rather than raw relative coordinates.
+- Add one wider base sentinel outside the current five-row basis and check which, if any, of the three exact branch clauses fails first.
