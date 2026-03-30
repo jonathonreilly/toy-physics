@@ -1,3 +1,47 @@
+## 2026-03-30 17:23 America/New_York
+
+### Seam class
+- interference DAG reconfiguration quantification
+- multi-slit topology-change translation
+
+### Science impact
+- science advanced; the post-fixed-DAG thread now exact-quantifies the open/closed-slit topology effect instead of just naming it
+- removing a single barrier slit node rewires a large downstream causal cone: across the tested three-slit geometries, one node removal changes `38..300` causal edges and retimes `30..104` shared nodes
+- the reconfiguration is one-sided and post-barrier: all shared-node arrival shifts are delays, none are accelerations, and every changed shared node lies at or beyond the barrier
+- central-slit closures are the strongest cases; in the wide geometry `(-6, 0, 6) -> (-6, 6)`, one removed node changes `300` edges and delays `104` downstream shared nodes, with max local arrival shift `+7.899495`
+
+### Current state
+- Re-read the protocol artifacts, then reconciled against the real canonical repo state: `main` and `origin/main` had already advanced to `95077b7`, the tracked work log already contained later March 30, 2026 entries at 5:45 PM and 6:15 PM America/New_York, the runtime handoff was stale, and no active detached science child was recorded.
+- Acquired the `physics-science` lock on clean synced `main` and continued the new top-thread next step instead of the older open/closed-slit interpretation.
+- Added and ran one bounded analyzer:
+  - `/Users/jonreilly/Projects/Physics/scripts/interference_dag_reconfiguration_diff.py`
+- Generated:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-interference-dag-reconfiguration-diff.txt`
+
+### Strongest confirmed conclusion
+The large slit-open/closed Sorkin signal is a pure DAG-reconfiguration effect. In the tested three-slit geometries, removing one barrier slit node does not create upstream retiming or faster arrivals; it rewires a post-barrier causal cone and only delays downstream shared nodes.
+
+### Files and results changed in this run
+- New analyzer:
+  - `/Users/jonreilly/Projects/Physics/scripts/interference_dag_reconfiguration_diff.py`
+- New log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-interference-dag-reconfiguration-diff.txt`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+
+### Validation
+- `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/interference_dag_reconfiguration_diff.py`
+- `python3 /Users/jonreilly/Projects/Physics/scripts/interference_dag_reconfiguration_diff.py | tee /Users/jonreilly/Projects/Physics/logs/2026-03-30-interference-dag-reconfiguration-diff.txt`
+
+### Exact next step
+- Stay on the multi-slit topology-change thread.
+- Compress the reconfiguration into one scalar or small family of scalars that predicts the open/closed-slit Sorkin magnitude, rather than just the existence of rewiring.
+
+### First concrete action
+- Write one bounded comparer that joins the existing open/closed-slit Sorkin ratios with the new DAG-diff observables (`post_edge_delta`, `changed_post_nodes`, `max_delay`) across the tested geometries and checks which observable best tracks the large `wide` and `asymmetric` spikes.
+
 ## 2026-03-30 18:15 America/New_York
 
 ### Seam class
