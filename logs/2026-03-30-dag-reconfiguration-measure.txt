@@ -1,0 +1,74 @@
+================================================================================
+DAG RECONFIGURATION MEASUREMENT
+================================================================================
+width=20, height=10
+
+
+======================================================================
+CONFIG: SYMMETRIC (A=-4, B=0, C=4)
+======================================================================
+
+                 comparison   Δnodes   Δedges  edge_chg%    max_Δt   mean_Δt  shifted%
+  -------------------------------------------------------------------------------------
+           AB → ABC (add C)        1        8      2.09%    2.3431    0.1757    10.19%
+           AC → ABC (add B)        1        8      6.22%    5.0711    0.3241    16.11%
+           BC → ABC (add A)        1        8      2.09%    2.3431    0.1757    10.19%
+             A → AB (add B)        1        4      5.36%    5.6569    1.3687    33.02%
+          A → ABC (add B,C)        2       12      7.44%    8.0000    1.5449    33.02%
+
+  DAG statistics:
+      ABC: 423 nodes, 1484 edges, mean_degree=7.02
+        A: 421 nodes, 1472 edges, mean_degree=6.99
+        B: 421 nodes, 1468 edges, mean_degree=6.97
+
+======================================================================
+CONFIG: CLOSE (A=-2, B=0, C=2)
+======================================================================
+
+                 comparison   Δnodes   Δedges  edge_chg%    max_Δt   mean_Δt  shifted%
+  -------------------------------------------------------------------------------------
+           AB → ABC (add C)        1        8      1.28%    1.1716    0.1124    10.66%
+           AC → ABC (add B)        1        8      2.97%    2.2426    0.0799     7.11%
+           BC → ABC (add A)        1        8      1.28%    1.1716    0.1124    10.66%
+             A → AB (add B)        1        6      2.78%    2.8284    0.6196    28.50%
+          A → ABC (add B,C)        2       14      4.06%    4.0000    0.7323    28.50%
+
+  DAG statistics:
+      ABC: 423 nodes, 1484 edges, mean_degree=7.02
+        A: 421 nodes, 1470 edges, mean_degree=6.98
+        B: 421 nodes, 1468 edges, mean_degree=6.97
+
+======================================================================
+CONFIG: WIDE (A=-6, B=0, C=6)
+======================================================================
+
+                 comparison   Δnodes   Δedges  edge_chg%    max_Δt   mean_Δt  shifted%
+  -------------------------------------------------------------------------------------
+           AB → ABC (add C)        1        8      2.57%    3.5147    0.1940     9.00%
+           AC → ABC (add B)        1        8     10.14%    7.8995    0.7407    24.64%
+           BC → ABC (add A)        1        8      2.57%    3.5147    0.1940     9.00%
+             A → AB (add B)        1        2      8.00%    8.4853    2.2406    37.29%
+          A → ABC (add B,C)        2       10     10.55%   12.0000    2.4350    37.29%
+
+  DAG statistics:
+      ABC: 423 nodes, 1484 edges, mean_degree=7.02
+        A: 421 nodes, 1474 edges, mean_degree=7.00
+        B: 421 nodes, 1468 edges, mean_degree=6.97
+
+
+======================================================================
+CROSS-CONFIG COMPARISON: DAG change vs I_3 magnitude
+======================================================================
+
+From original Sorkin test:
+  Symmetric: I_3/P = 1.67e+06
+  Close:     I_3/P = 9.19e+01
+  Wide:      I_3/P = 4.61e+09
+
+DAG change when adding third slit (AB → ABC):
+     SYMMETRIC: edge_change=2.09%, max_Δt=2.3431, shifted_nodes=10.2%
+         CLOSE: edge_change=1.28%, max_Δt=1.1716, shifted_nodes=10.7%
+          WIDE: edge_change=2.57%, max_Δt=3.5147, shifted_nodes=9.0%
+
+
+MEASUREMENT COMPLETE
