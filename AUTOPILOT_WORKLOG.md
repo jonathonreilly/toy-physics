@@ -1,3 +1,69 @@
+## 2026-03-29 23:22 America/New_York
+
+### Seam class
+- late-branch confirmation
+- regime architecture
+
+### Science impact
+- science advanced; a bounded adjacent-row confirmation shows the coarse late-wall clauses and the finer packet / hinge clauses are equivalent on the discovery wall plus a named nearby holdout
+- narrative advanced; the packet-lift / hinge law now reads as the common coarse law of the broader beyond-ceiling continuation, not as a unique late-nonrect marker by itself
+
+### Current state
+- Picked up from the helper-fixed topology checkpoint and kept the same `manual-codex` lock.
+- Added and ran:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_late_branch_law_confirmation.py`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-late-branch-law-confirmation.txt`
+- The confirmation set was intentionally bounded rather than broad:
+  - discovery late rows: the five observed `base` late rows
+  - exhausted wall: `large:exa:taper-wrap-large:local-morph-g` and `mirror:exa:skew-hard-mirror:local-morph-f`
+  - named nearby holdout: `default/broader` skew-wrap shoulder rows, `ultra/mega` taper-wrap throat rows, and the held-out `ultra/mega` outer-rect pair
+- Updated the repo narrative to write the regime architecture explicitly in `/Users/jonreilly/Projects/Physics/README.md`.
+
+### Strongest confirmed conclusion
+- All four candidate late-wall laws stay exact on the discovery wall:
+  - `mid_anchor_closure_peak >= 10.000`
+  - `mid_candidate_bridge_bridge_closed_pair_max >= 10.000`
+  - `mid_candidate_attached_max >= 7.500`
+  - `mid_has_four_incident_flank_hinge = Y`
+  - each remains `tp/fp/fn = 5/0/0` against the exhausted wall
+- On the bounded adjacent holdout, those same four laws are still equivalent:
+  - none match the shoulder rows
+  - none match the throat rows
+  - all four match the held-out `outer-rect` pair at `ultra|mega`
+  - divergence checks therefore collapse to zero:
+    - `bridge_without_attached_total = 0`
+    - `attached_without_hinge_total = 0`
+- So the finer packet / hinge language is real, but it is not a stricter late-only classifier on the present nearby generated evidence.
+- The cleaner read is now:
+  - the `8/12` packet lift and four-incident flank hinge are the common coarse law of the broader beyond-ceiling continuation
+  - the later `base` non-rect branch is a subbranch of that continuation, not the entire continuation
+  - the remaining open separator is what distinguishes the held-out `outer-rect` pair from the later `taper-hard` and `skew-wrap` late rows inside that shared packet family
+
+### Files and results changed in this run
+- Added script:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_late_branch_law_confirmation.py`
+- New log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-late-branch-law-confirmation.txt`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+
+### Validation
+- `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_late_branch_law_confirmation.py`
+- `python3 /Users/jonreilly/Projects/Physics/scripts/benchmark_regression_audit.py` (`benchmark regression audit: ok`)
+
+### Exact next step
+- Stay on the same regime-compression lane, not broad scouting.
+- Compare the held-out `outer-rect` pair directly against the later `taper-hard` and `skew-wrap` rows inside the shared beyond-ceiling packet family, and look for the smallest stable subbranch separator above the now-confirmed common packet-lift law.
+
+### First concrete action
+- Build one bounded within-family comparer over:
+  - `ultra|mega:base:rect-wrap:local-morph-f`
+  - `peta|exa:base:taper-hard:local-morph-f`
+  - `exa:base:skew-wrap:local-morph-k`
+  and scan for the smallest exact split that survives the already-confirmed common `8/12` packet / flank-hinge continuation.
+
 ## 2026-03-29 21:17 America/New_York
 
 ### Seam class

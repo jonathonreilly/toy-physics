@@ -1,5 +1,76 @@
 # Physics Autopilot Handoff
 
+## 2026-03-29 23:22 America/New_York
+
+### Seam class
+- late-branch confirmation
+- regime architecture
+
+### Science impact
+- science advanced; the bounded adjacent confirmation pass shows the coarse late-wall clauses and the finer packet / hinge clauses are equivalent on the discovery wall plus the named nearby holdout
+- narrative advanced; the packet-lift / hinge law now reads as the common coarse law of the broader beyond-ceiling continuation, not as a unique late-nonrect signature
+
+### Current state
+- Added and ran:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_late_branch_law_confirmation.py`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-late-branch-law-confirmation.txt`
+- The confirmation set is intentionally bounded:
+  - discovery late rows: the five observed `base` late rows
+  - exhausted wall: `large:exa:taper-wrap-large:local-morph-g` and `mirror:exa:skew-hard-mirror:local-morph-f`
+  - named nearby holdout: shoulder (`default/broader` skew-wrap), throat (`ultra/mega` taper-wrap), and held-out outer-rect (`ultra/mega` rect-wrap)
+- Updated `/Users/jonreilly/Projects/Physics/README.md` to write the regime architecture explicitly:
+  - historical exact law
+  - support-collapse domain guard
+  - moderate anchor-balance basin
+  - beyond-ceiling continuation
+  - current domain boundaries
+- Lock status:
+  - still held by `manual-codex` during write-up; release pending after validation/push
+
+### Strongest confirmed conclusion
+- All four candidate laws remain exact on the discovery wall against the exhausted wall:
+  - `mid_anchor_closure_peak >= 10.000`
+  - `mid_candidate_bridge_bridge_closed_pair_max >= 10.000`
+  - `mid_candidate_attached_max >= 7.500`
+  - `mid_has_four_incident_flank_hinge = Y`
+  - each stays at `tp/fp/fn = 5/0/0`
+- On the bounded adjacent holdout, those same four laws are still equivalent:
+  - they match neither shoulder nor throat rows
+  - they all match the held-out `outer-rect` pair at `ultra|mega`
+  - the finer law family therefore does not outrun the coarse law family on present nearby evidence
+  - divergence checks collapse:
+    - `bridge_without_attached_total = 0`
+    - `attached_without_hinge_total = 0`
+- So the clean read is now:
+  - the `8/12` packet lift and four-incident flank hinge are the common coarse law of the broader beyond-ceiling continuation
+  - the later `base` non-rect branch is a subbranch inside that continuation
+  - the active separator problem is now the within-continuation split between the held-out outer-rect pair and the later `taper-hard` / `skew-wrap` rows
+
+### Files/logs changed
+- Added script:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_late_branch_law_confirmation.py`
+- New result log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-late-branch-law-confirmation.txt`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+
+### Remaining review seams
+- open: smallest stable subbranch separator between held-out `outer-rect` and later `taper-hard` / `skew-wrap` rows inside the shared beyond-ceiling packet family
+- open: whether any non-base family ever realizes that same beyond-ceiling packet completion above the current exhausted wall
+
+### Exact next step
+- Stay on regime compression, not broader scouting.
+- Compare the held-out `outer-rect` pair directly against the later `taper-hard` and `skew-wrap` rows inside the shared beyond-ceiling packet family.
+
+### First concrete action
+- Build one bounded within-family comparer over:
+  - `ultra|mega:base:rect-wrap:local-morph-f`
+  - `peta|exa:base:taper-hard:local-morph-f`
+  - `exa:base:skew-wrap:local-morph-k`
+  and search for the smallest exact split above the already-confirmed common `8/12` packet / flank-hinge law.
+
 ## 2026-03-29 21:17 America/New_York
 
 ### Seam class
