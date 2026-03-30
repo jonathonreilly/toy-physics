@@ -1,3 +1,34 @@
+## 2026-03-30 21:00 America/New_York
+
+### Seam class
+- PStack session: 32 experiments on interference, gravity, decoherence, persistence, symmetry, foundations, graph evolution
+- continuum limit proven (anisotropy ~ 1/n_directions)
+- generative graph prototype (structured but time-symmetric)
+
+### Science impact (PStack session summary)
+- **Interference**: topological, Born rule (I₃=0 on fixed DAG), R_c = 1+|y|/s derived, irregular-network-robust
+- **Gravity**: Green's function field, mutual attraction, 50% superposition failure from action nonlinearity, pulsating oscillators produce robust bending
+- **Decoherence**: requires topology change (field distortion → zero effect), topological records → non-trivial V(p)
+- **Symmetry**: √(dt²-dx²) Lorentz-invariant, 8.2% grid breaking, continuum limit via 1/n_directions scaling
+- **Persistence**: oscillators not fixed points, birth threshold = stability phase transition
+- **Foundations**: Born rule derived from linearity+reversibility, 5 irreducible assumptions identified
+- **Graph evolution**: phenomena survive on growing graphs; generative graph produces high-clustering structure but no time arrow yet
+
+### Strongest confirmed conclusion
+Interference = topology, gravity = field — independent on fixed DAG. The model has a well-defined continuum limit (anisotropy ~ 1/n_directions). Born rule is derived, not assumed.
+
+### Files changed
+- 18 new scripts in `scripts/`
+- 18 new logs in `logs/`
+- 14 PStack skills in `.claude/commands/`
+
+### Exact next step
+- Make the generative graph evolution DIRECTED: new events link only forward (creating a natural causal DAG), then test whether the resulting DAG produces interference from a path-sum without pre-built geometry
+- This is the transition from "phenomena survive on growth" to "the evolving graph generates the phenomena"
+
+### First concrete action
+- Modify `generative_graph_evolution.py` to use directed edges (parent → child only) and assign arrival times based on spawn order. Then run a path-sum amplitude calculation on the resulting DAG and check for interference.
+
 ## 2026-03-30 19:19 America/New_York
 
 ### Seam class
