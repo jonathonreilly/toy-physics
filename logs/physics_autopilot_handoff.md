@@ -1,5 +1,95 @@
 # Physics Autopilot Handoff
 
+## 2026-03-30 07:52 America/New_York
+
+### Seam class
+- fresh beyond-ceiling candidate ranking
+- skew-hard sentinel guardrail
+
+### Science impact
+- science advanced; the nearest genuinely fresh base control beyond the paired `ultra` shoulders is not a new shared-packet member but a `3/4` packet-law near miss
+- narrative advanced; the present beyond-ceiling boundary now sharpens from a generic depleted-shoulder wall to one specific missing ingredient: the eighth mid-packet attachment
+
+### Current state
+- Picked up from the completed `ultra` companion guardrail on clean synced `main`, kept the `manual-codex` lock, and stayed on the bounded beyond-boundary control lane.
+- Added and ran the sharded candidate-ranking helper:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_fresh_candidate_scan.py`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-fresh-candidate-scan-base-rect-hard.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-fresh-candidate-scan-base-rect-wrap.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-fresh-candidate-scan-base-taper-hard.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-fresh-candidate-scan-base-taper-wrap.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-fresh-candidate-scan-base-skew-hard.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-fresh-candidate-scan-base-skew-wrap.txt`
+- The scan found exactly one genuinely fresh nearby control, then the smallest fresh guardrail was run on it:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_subbranch_wider_sentinel_guardrail.py --sentinel-ensemble exa --sentinel-scenario skew-hard --sentinel-source base:skew-hard:local-morph-k > /Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-subbranch-exa-skew-hard-sentinel-guardrail.txt`
+- After the mid-flight CPU split and a compaction drop, reran the six base shards in parallel plus the `exa:base:skew-hard:local-morph-k` guardrail and got the same science result in substance.
+- Lock status:
+  - held by `manual-codex` during wrap-up; release pending after commit/push
+
+### Strongest confirmed conclusion
+- The sharded fresh-candidate scan closes almost all nearby base controls immediately:
+  - `base:rect-hard`, `base:rect-wrap`, `base:skew-wrap`, and `base:taper-wrap` contribute no fresh candidate at all
+  - `base:taper-hard` contributes only zero-support / zero-packet junk controls (`geometry-s`, `geometry-t`, `mode-mix-b`, `mode-mix-e`)
+- The only genuinely fresh nearby control is:
+  - `exa:base:skew-hard:local-morph-k`
+- That row is a partial shared-packet near miss, not a new branch:
+  - `mid_anchor_closure_peak = 10.000`
+  - `mid_candidate_bridge_bridge_closed_pair_max = 10.000`
+  - `mid_candidate_attached_max = 7.000`
+  - four-incident flank hinge = `Y`
+  - shared packet membership = `3/4`
+  - no current exact branch clause lights up
+- So the current beyond-ceiling boundary is now sharper:
+  - hinge presence alone is not enough
+  - `10.000` mid-anchor closure scale alone is not enough
+  - the missing ingredient is the eighth mid-packet attachment (`7 -> 8`)
+
+### Files/logs changed
+- New helper:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_fresh_candidate_scan.py`
+- New logs:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-fresh-candidate-scan-base-rect-hard.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-fresh-candidate-scan-base-rect-wrap.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-fresh-candidate-scan-base-taper-hard.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-fresh-candidate-scan-base-taper-wrap.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-fresh-candidate-scan-base-skew-hard.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-fresh-candidate-scan-base-skew-wrap.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-subbranch-exa-skew-hard-sentinel-guardrail.txt`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+
+### Validation
+- `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_fresh_candidate_scan.py`
+- `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_subbranch_wider_sentinel_guardrail.py`
+- parallel rerun audit matched the original batch:
+  - `base:rect-hard`, `base:rect-wrap`, `base:skew-wrap`, and `base:taper-wrap` again returned `rows_total=0`
+  - `base:taper-hard` again returned only zero-support / zero-packet junk controls
+  - `base:skew-hard` again returned exactly one fresh candidate, `exa:base:skew-hard:local-morph-k`, with `shared_packet_membership=3/4`
+  - the rerun guardrail again showed `mid_anchor_closure_peak >= 10.000`, `mid_candidate_bridge_bridge_closed_pair_max >= 10.000`, and hinge `Y`, but `mid_candidate_attached_max >= 7.500` still failed
+
+### Remaining review seams
+- open: whether `mid_candidate_attached_max >= 7.500` is already the cleanest stable family law once the fresh `exa:base:skew-hard:local-morph-k` near miss is added explicitly to the compare set
+- open: whether the `3/4` skew-hard near miss hides a finer residual inside the current packet metrics or simply confirms the eighth attachment as the real family boundary
+
+### Exact next step
+- Stay on the beyond-ceiling translation thread, not broad scouting.
+- Compare the fresh `exa:base:skew-hard:local-morph-k` near miss directly against the current realized shared-packet rows:
+  - `ultra|mega:base:rect-wrap:local-morph-f`
+  - `peta|exa:base:taper-hard:local-morph-f`
+  - `exa:base:skew-wrap:local-morph-k`
+- The live question is now whether the missing eighth attachment is already the cleanest exact family law, or whether the new `skew-hard` near miss exposes a finer residual split.
+
+### First concrete action
+- Build one bounded row-level compare centered on:
+  - `exa:base:skew-hard:local-morph-k`
+  - `exa:base:skew-wrap:local-morph-k`
+  - `peta:base:taper-hard:local-morph-f`
+  - `exa:base:taper-hard:local-morph-f`
+  - `ultra|mega:base:rect-wrap:local-morph-f`
+  and test whether `mid_candidate_attached_max >= 7.500` remains the cleanest exact family law after adding this fresh `3/4` near miss.
+
 ## 2026-03-30 07:10 America/New_York
 
 ### Seam class
