@@ -1,3 +1,76 @@
+## 2026-03-30 08:27 America/New_York
+
+### Seam class
+- beyond-ceiling family law compression
+- near-miss topology translation
+- finished-boundary confirmation
+
+### Science impact
+- science advanced; the fresh `skew-hard` near miss does not reopen the family, but it splits the old four-rule packet equivalence into an unchanged-law layer and a retuned-threshold layer
+- narrative advanced; the cleanest current family read is now: the eighth attachment is the only exact separator that survives unchanged, while `mid_peak` and `mid_bb` only recover exactness after tightening to `>= 11.000`
+
+### Current state
+- Picked up from the synced `9190604` checkpoint on clean `main`, acquired the `manual-codex` lock, and stayed on the beyond-ceiling translation thread.
+- Added and ran three bounded analyzers, using parallel runs where independent:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_family_near_miss_compare.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_near_miss_topology_compare.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_family_boundary_audit.py`
+- Generated:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-family-near-miss-compare.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-near-miss-topology-compare.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-family-boundary-audit.txt`
+
+### Strongest confirmed conclusion
+- The fresh `exa:base:skew-hard:local-morph-k` row does not break the realized shared family, but it changes how the coarse packet law should be stated:
+  - unchanged exact family rule:
+    - `mid_candidate_attached_max >= 7.500`
+  - retuned exact family rules on the current six-row family-plus-near-miss set:
+    - `mid_anchor_closure_peak >= 11.000`
+    - `mid_candidate_bridge_bridge_closed_pair_max >= 11.000`
+    - `mid_candidate_attached_max >= 7.500`
+- So the missing eighth attachment is the only exact separator that survives unchanged from the old packet-law quartet; `mid_peak` and `mid_bb` recover exactness only after the threshold moves from `10` to `11`.
+- The topology compare sharpens why:
+  - the near miss has `3` tied dominant mid packets
+  - one of them still carries the same hinge node `(-1, 0)`
+  - but the best family-aligned dominant packet is missing exactly one support node, `(-1, -1)`, and the two closed edges incident to it:
+    - `(-1, -1) -> (-1, 0)`
+    - `(-1, -1) -> (0, -1)`
+- So hinge presence alone is not enough; the live family boundary is the missing packet completion that lifts the realized family from `7/10` to `8/12`.
+- A whole-boundary confirmation pass then shows the current law really is stable on the finished control set:
+  - across the `9` already-finished outside-family controls, `mid_candidate_attached_max >= 7.500`, `mid_anchor_closure_peak >= 11.000`, and `mid_candidate_bridge_bridge_closed_pair_max >= 11.000` all stay exact against the current realized family
+  - the fresh near miss is the only outside row at `10/7/10` with hinge `Y`
+
+### Files and results changed in this run
+- New analyzers:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_family_near_miss_compare.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_near_miss_topology_compare.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_family_boundary_audit.py`
+- New logs:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-family-near-miss-compare.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-near-miss-topology-compare.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-family-boundary-audit.txt`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+
+### Validation
+- `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_family_near_miss_compare.py`
+- `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_near_miss_topology_compare.py`
+- `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_family_boundary_audit.py`
+
+### Exact next step
+- Stay on the beyond-ceiling translation thread.
+- The next seam is internal to the fresh near miss, not another wider guardrail:
+  - explain why the hinged dominant packet at cell `(4, 1)` coexists with the best family-aligned but incomplete packet at cell `(2, -3)`
+  - decide whether the family law should be stated on `any` dominant mid packet or specifically on the family-aligned dominant packet
+
+### First concrete action
+- Build one bounded dominant-packet alignment compare inside `exa:base:skew-hard:local-morph-k`, then contrast those three tied dominant mids against:
+  - the shared family template
+  - `exa:base:skew-wrap:local-morph-k`
+  so we can tell whether the near miss is a rotated packet competition effect or a cleaner one-node-deletion of the family packet.
+
 ## 2026-03-30 07:52 America/New_York
 
 ### Seam class
