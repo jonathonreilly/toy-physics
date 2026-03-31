@@ -1,5 +1,70 @@
 # Physics Autopilot Handoff
 
+## 2026-03-31 04:25 America/New_York
+
+### Seam class
+- generated-DAG floor residual-pair stop-rule check
+- final bridge compression guard
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/generative_causal_dag_visibility_floor_residual_pair_compare.py`
+- the remaining pair around the near-floor balance cut do not support another retained global clause
+- the pair are opposite endpoint exceptions:
+  - `default:63` is load-heavy and almost perfectly retimed despite weak balance-share
+  - `denser-radius:86` has moderate balance but remains below the balanced-load floor
+- the tempting pair-only exact closers do not generalize:
+  - best non-floor pair separator: `center_upper_log_paths > 17.568570`
+  - full-crossover accuracy only `0.7500`
+
+### Current state
+- cooperative lock is held by the manual Codex worker for this bounded write-up
+- canonical `main` / `origin/main` are synced at `e49673c` before this uncommitted local checkpoint
+- retained bridge language after the stop-rule check:
+  - packet completion / closure-load sets the floor
+  - balance decides near-floor crossover
+  - no extra residual clause survives the pair check
+
+### Strongest confirmed conclusion
+The generated-DAG bridge is compressed enough for now. The residual pair is real, but not stable enough to justify one more global rule.
+
+### Exact next step
+- stop compressing this specific branch
+- carry the retained packet-completion / balance crosswalk into the broader regime architecture work
+
+## 2026-03-31 04:20 America/New_York
+
+### Seam class
+- generated-DAG balanced-load floor crossover compare
+- geometry-language transfer compression
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/generative_causal_dag_visibility_floor_crossover_compare.py`
+- the within-family compare is now closed at `/Users/jonreilly/Projects/Physics/logs/2026-03-31-generative-causal-dag-visibility-floor-crossover-compare.txt`
+- the generated-DAG bridge should now be treated as a retained two-branch packet regime:
+  - `center_balanced_log_paths` sets the balanced-load / packet-completion floor
+  - near the floor, what moves rows across is balance rather than extra retimed slit load
+- the key crossover fact is:
+  - `default-high` crossover rows have slightly *lower* mean `center_slit_load_retimed` than `denser-low` crossover rows (`16.0984` vs `16.9372`)
+  - but much *higher* mean `center_path_balance` (`0.4770` vs `0.1262`) and `center_balance_share` (`0.2376` vs `0.0588`)
+- best residual cut:
+  - `center_path_balance > 0.222271` at `11/12`
+  - `center_balance_share > 0.133447` is essentially tied and is the cleaner physical summary
+
+### Current state
+- cooperative lock is held by the manual Codex worker for this bounded write-up
+- canonical `main` / `origin/main` are synced at `e49673c` before this uncommitted local checkpoint
+- the strongest compact bridge wording now is:
+  - generated-DAG `center_balanced_log_paths` <-> geometry packet completion / closure-load
+  - generated-DAG `center_path_balance` / `center_balance_share` <-> geometry bridge-balance / anchor-balance
+  - retiming / slit-share as detector-side bottleneck modifiers
+
+### Strongest confirmed conclusion
+The generated-DAG bridge no longer needs to search for one magic scalar. The compact regime architecture is: packet completion sets the floor, and balance decides the near-floor crossover.
+
+### Exact next step
+- compare the single residual false-positive / false-negative pair around the near-floor balance cut
+- if no tiny exact closer appears, treat the current bridge language as the retained result and move on
+
 ## 2026-03-31 04:11 America/New_York
 
 ### Seam class

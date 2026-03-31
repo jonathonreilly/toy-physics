@@ -1,3 +1,68 @@
+## 2026-03-31 04:25 America/New_York
+
+### Seam class
+- generated-DAG floor residual-pair stop-rule check
+- final compression guard on the bridge language
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/generative_causal_dag_visibility_floor_residual_pair_compare.py`
+- closed the “one more tiny clause?” question in `/Users/jonreilly/Projects/Physics/logs/2026-03-31-generative-causal-dag-visibility-floor-residual-pair-compare.txt`
+- the last residual pair are opposite endpoint exceptions:
+  - the missed `default` row (`seed=63`) is very load-heavy and near-perfectly retimed despite weak balance-share
+  - the leaked `denser-radius` row (`seed=86`) keeps moderate balance but stays below the balanced-load floor
+- pair-only exact closers do not generalize:
+  - the best non-floor pair separator is `center_upper_log_paths > 17.568570`
+  - but it only scores `0.7500` on the full 12-row crossover set
+- so the stop rule now triggers:
+  - keep the current bridge language
+  - do not add another global clause for this branch
+
+### Current state
+- canonical `main` / `origin/main` are synced at `e49673c` before this local Codex checkpoint
+- the retained generated-DAG bridge language is now:
+  - packet completion / closure-load sets the floor
+  - balance decides the near-floor crossover
+  - no stable extra residual clause survived the pair check
+
+### Strongest confirmed conclusion
+The generated-DAG bridge is compressed enough. The remaining residual pair is real but not structurally stable enough to deserve a new retained law.
+
+### Exact next step
+- stop compressing this branch further
+- carry the retained crosswalk forward into the broader regime architecture: generated packet completion / balance vs geometry closure-load / bridge-balance
+
+## 2026-03-31 04:20 America/New_York
+
+### Seam class
+- generated-DAG balanced-load floor crossover compare
+- geometry-language transfer wording
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/generative_causal_dag_visibility_floor_crossover_compare.py`
+- the immediate within-family follow-on is now closed in `/Users/jonreilly/Projects/Physics/logs/2026-03-31-generative-causal-dag-visibility-floor-crossover-compare.txt`
+- the generated-DAG bridge should now be treated as a two-branch packet regime, not as a one-scalar hunt:
+  - packet completion / closure-load sets the balanced-load floor `center_balanced_log_paths <= 17.671`
+  - near that floor, crossing is decided mainly by balance rather than by extra retimed slit load
+- the crucial near-floor comparison is:
+  - `default-high` crossover rows actually have slightly lower mean `center_slit_load_retimed` than the `denser-low` crossover rows (`16.0984` vs `16.9372`)
+  - but they have much higher mean `center_path_balance` (`0.4770` vs `0.1262`) and `center_balance_share` (`0.2376` vs `0.0588`)
+- the cleanest residual discriminator is `center_path_balance > 0.222271` at `11/12`; `center_balance_share > 0.133447` is essentially tied and cleaner as a physical summary because it encodes shared load rather than raw one-side dominance
+- this is the cleanest current crosswalk to the older geometry lane:
+  - generated-DAG `center_balanced_log_paths` <-> geometry packet completion / closure-load
+  - generated-DAG `center_path_balance` / `center_balance_share` <-> geometry bridge-balance / anchor-balance
+  - retiming / slit-share stay as detector-side bottleneck modifiers, not the primary branch split
+
+### Current state
+- canonical `main` / `origin/main` are synced at `e49673c` before this local Codex checkpoint, which already includes the stronger opaque-oscillation decoherence result from the generated-graph lane
+- this Codex loop stayed on compression/transfer language and did not branch into new generated-graph experiments
+
+### Strongest confirmed conclusion
+The generated-DAG bridge now has a compact regime architecture and a compact geometry crosswalk. Packet completion sets the branch floor; balance decides which near-floor rows actually cross it.
+
+### Exact next step
+- compare the single false-positive / false-negative residual pair around the near-floor balance cut and see whether one more tiny packet-side observable closes it
+- if it does not, keep the current bridge language as-is and stop compressing this branch further
+
 ## 2026-03-31 04:30 America/New_York
 
 ### Seam class
