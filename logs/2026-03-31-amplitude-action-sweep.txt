@@ -1,0 +1,139 @@
+================================================================================
+AMPLITUDE PACKET ACTION SWEEP
+Which action formula produces gravitational ATTRACTION?
+================================================================================
+Grid: 40x31, source=(0, 0)
+Mass: column at x=20, y=4..8 (centroid y=6.0)
+Phase wavenumber k=4.0, attenuation power=1.0
+
+  ACTION: spent_delay (default)
+     det_x   free_cy   mass_cy     shift  toward?
+    --------------------------------------------
+        10      0.00    -14.57    -14.57       no
+        20      0.00    -13.90    -13.90       no
+        30      0.00    -14.20    -14.20       no
+        40      0.00    -14.32    -14.32       no
+    → Average shift: -14.25 (AWAY from mass)
+
+  ACTION: retained_update
+     det_x   free_cy   mass_cy     shift  toward?
+    --------------------------------------------
+        10      0.00    -14.88    -14.88       no
+        20      0.00    -13.76    -13.76       no
+        30      0.00    -14.60    -14.60       no
+        40      0.00    -14.57    -14.57       no
+    → Average shift: -14.45 (AWAY from mass)
+
+  ACTION: -retained_update
+     det_x   free_cy   mass_cy     shift  toward?
+    --------------------------------------------
+        10      0.00    -14.88    -14.88       no
+        20      0.00    -13.76    -13.76       no
+        30      0.00    -14.60    -14.60       no
+        40      0.00    -14.57    -14.57       no
+    → Average shift: -14.45 (AWAY from mass)
+
+  ACTION: L/delay
+     det_x   free_cy   mass_cy     shift  toward?
+    --------------------------------------------
+        10      0.00    -11.14    -11.14       no
+        20      0.00    -10.85    -10.85       no
+        30      0.00     -8.55     -8.55       no
+        40      0.00     -0.21     -0.21       no
+    → Average shift: -7.69 (AWAY from mass)
+
+  ACTION: link_length (ctrl)
+     det_x   free_cy   mass_cy     shift  toward?
+    --------------------------------------------
+        10      0.00     -4.70     -4.70       no
+        20      0.00    -13.51    -13.51       no
+        30      0.00    -14.26    -14.26       no
+        40      0.00    -14.25    -14.25       no
+    → Average shift: -11.68 (AWAY from mass)
+
+  ACTION: coordinate_delay
+     det_x   free_cy   mass_cy     shift  toward?
+    --------------------------------------------
+        10      0.00     -9.32     -9.32       no
+        20      0.00    -12.74    -12.74       no
+        30      0.00    -14.37    -14.37       no
+        40      0.00    -14.34    -14.34       no
+    → Average shift: -12.69 (AWAY from mass)
+
+  ACTION: spent_fraction
+     det_x   free_cy   mass_cy     shift  toward?
+    --------------------------------------------
+        10      0.00     -5.34     -5.34       no
+        20      0.00      9.11     +9.11      YES
+        30      0.00      6.72     +6.72      YES
+        40      0.00     -0.34     -0.34       no
+    → Average shift: +2.54 (TOWARD mass)
+
+  ACTION: retained_fraction
+     det_x   free_cy   mass_cy     shift  toward?
+    --------------------------------------------
+        10      0.00    -14.75    -14.75       no
+        20      0.00    -13.88    -13.88       no
+        30      0.00    -12.96    -12.96       no
+        40      0.00    -14.45    -14.45       no
+    → Average shift: -14.01 (AWAY from mass)
+
+  ACTION: log(delay/L)
+     det_x   free_cy   mass_cy     shift  toward?
+    --------------------------------------------
+        10      0.00     -8.09     -8.09       no
+        20      0.00    -14.36    -14.36       no
+        30      0.00    -14.57    -14.57       no
+        40      0.00    -14.54    -14.54       no
+    → Average shift: -12.89 (AWAY from mass)
+
+================================================================================
+TEST 2: Phase wavenumber sweep for L/delay and -retained_update
+================================================================================
+
+  ACTION: L/delay
+         k   shift@10   shift@20   shift@30   shift@40       avg
+    --------------------------------------------------------
+       0.5      -4.23     -13.40     -14.43     -14.44    -11.63
+       1.0      -4.21     -13.53     -14.39     -14.37    -11.63
+       2.0      -5.04     -12.24      +1.89      -5.85     -5.31
+       4.0     -11.14     -10.85      -8.55      -0.21     -7.69
+       8.0      +2.17     -13.09     +13.88     +13.88     +4.21
+      16.0     +11.04      +5.08      +9.44     +13.10     +9.66
+
+  ACTION: -retained_update
+         k   shift@10   shift@20   shift@30   shift@40       avg
+    --------------------------------------------------------
+       0.5      -5.62     -14.20     -14.51     -14.51    -12.21
+       1.0      -8.82     -14.21     -14.54     -14.57    -13.03
+       2.0     -14.12     -14.37     -14.60     -14.54    -14.41
+       4.0     -14.88     -13.76     -14.60     -14.57    -14.45
+       8.0     -14.69     -11.72     -14.36     -14.55    -13.83
+      16.0      +6.39      -4.56     -10.95     -14.61     -5.93
+
+  ACTION: retained_fraction
+         k   shift@10   shift@20   shift@30   shift@40       avg
+    --------------------------------------------------------
+       0.5      -5.11     -13.86     -14.48     -14.49    -11.98
+       1.0      -7.42     -14.18     -14.50     -14.47    -12.64
+       2.0     -12.61     -14.37     -14.63     -14.30    -13.98
+       4.0     -14.75     -13.88     -12.96     -14.45    -14.01
+       8.0     -14.34     -13.79     -14.03     -14.50    -14.17
+      16.0      +9.98     -12.07      -2.84     -11.69     -4.16
+
+================================================================================
+TEST 3: Mass below (y=-4..-8) — does shift reverse?
+================================================================================
+
+  L/delay, k=2.0: above_shift=-5.31, below_shift=+5.31, flips=YES
+  L/delay, k=4.0: above_shift=-7.69, below_shift=+7.69, flips=YES
+  -retained_update, k=2.0: above_shift=-14.41, below_shift=+14.41, flips=YES
+  -retained_update, k=4.0: above_shift=-14.45, below_shift=+14.45, flips=YES
+  retained_fraction, k=2.0: above_shift=-13.98, below_shift=+13.98, flips=YES
+  retained_fraction, k=4.0: above_shift=-14.01, below_shift=+14.01, flips=YES
+
+ATTRACTION = positive shift (toward mass at y>0)
+REPULSION = negative shift (away from mass at y>0)
+FLIP = shift reverses when mass moves to opposite side (= genuine gravity)
+
+TEST COMPLETE
