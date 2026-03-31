@@ -1,0 +1,42 @@
+======================================================================
+EVOLVING ENVIRONMENT: purity vs graph size
+  env accumulates phase at every edge
+  stronger coupling at mass, weaker elsewhere
+======================================================================
+
+  env_coupling = 0.1:
+    n_layers  pur_node  pur_evol  n_valid
+    ------------------------------------
+           6    0.5698    1.0000        7
+           8    0.7060    1.0000        7
+          10    0.7088    1.0000        8
+          12    0.7738    1.0000        8
+          15    0.8094    1.0000        8
+          20    0.8304    1.0000        7
+          25    0.8858    1.0000        8
+
+  env_coupling = 0.5:
+    n_layers  pur_node  pur_evol  n_valid
+    ------------------------------------
+           6    0.5698    1.0000        7
+           8    0.7060    1.0000        7
+          10    0.7088    1.0000        8
+          12    0.7738    1.0000        8
+          15    0.8094    1.0000        8
+          20    0.8304    1.0000        7
+          25    0.8858    1.0000        8
+
+  env_coupling = 1.0:
+    n_layers  pur_node  pur_evol  n_valid
+    ------------------------------------
+           6    0.5698    0.7294        7
+           8    0.7060    0.8067        7
+          10    0.7088    0.8440        8
+          12    0.7738    0.8184        8
+          15    0.8094    0.8386        8
+          20    0.8304    0.8569        7
+          25    0.8858    0.8867        8
+
+If pur_evol DECREASES with n_layers: evolving env fixes scaling
+
+TEST COMPLETE
