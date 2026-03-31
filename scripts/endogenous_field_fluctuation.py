@@ -212,8 +212,8 @@ def main():
                         avg_free_g[d] += fp.get(d, 0)
                         avg_mass_g[d] += mp.get(d, 0)
 
-                    # Interference baseline (no mass field)
-                    pb = pathsum_corrected(positions, adj, free_f, src, det, k, bi, si)
+                    # Interference baseline (mass present, no fluctuation)
+                    pb = pathsum_corrected(positions, adj, base_field, src, det, k, bi, si)
                     for d in det:
                         avg_slit_base[d] += pb.get(d, 0)
 

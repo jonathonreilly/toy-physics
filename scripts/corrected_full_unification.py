@@ -221,16 +221,16 @@ def main():
             attracts = (toward > 0 and grav_shift > 0.05) or (toward < 0 and grav_shift < -0.05)
 
             # ---- INTERFERENCE: ensemble-averaged V through slits ----
-            avg_slit_0 = {d: 0.0 for d in det}  # baseline (η=0)
-            avg_slit_n = {d: 0.0 for d in det}  # noisy
+            avg_slit_0 = {d: 0.0 for d in det}  # baseline (mass present, η=0)
+            avg_slit_n = {d: 0.0 for d in det}  # noisy (mass present, η>0)
 
             for i in range(N_real):
                 rng_0 = random.Random(i*31+seed*7+1000)
                 rng_n = random.Random(i*31+seed*7+1000)
                 for k in k_band:
-                    p0 = pathsum_noisy(positions, adj, free_f, src, det, k, 0.0,
+                    p0 = pathsum_noisy(positions, adj, field, src, det, k, 0.0,
                                         rng_0, bi, si)
-                    pn = pathsum_noisy(positions, adj, free_f, src, det, k, eta,
+                    pn = pathsum_noisy(positions, adj, field, src, det, k, eta,
                                         rng_n, bi, si)
                     for d in det:
                         avg_slit_0[d] += p0.get(d, 0)

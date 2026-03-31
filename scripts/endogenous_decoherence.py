@@ -246,10 +246,10 @@ def main():
             attracts = (toward > 0 and grav_shift > 0.05)
 
             # ---- INTERFERENCE + DECOHERENCE ----
-            # Baseline: no oscillation (transparent mass)
+            # Baseline: mass present, but no opaque oscillation
             avg_base = {d: 0.0 for d in det}
             for k in k_band:
-                pb = pathsum_with_opaque(positions, adj, free_f, src, det, k,
+                pb = pathsum_with_opaque(positions, adj, field, src, det, k,
                                          set(), bi, si)
                 for d in det:
                     avg_base[d] += pb.get(d, 0)

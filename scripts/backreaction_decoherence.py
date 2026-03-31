@@ -225,11 +225,11 @@ def main():
             avg_grav = sum(grav_shifts)/len(grav_shifts)
             attracts = (mass_cy-cy > 0 and avg_grav > 0.05)
 
-            # Interference: baseline (no backreaction)
+            # Interference: baseline (mass present, no backreaction)
             avg_base = {d: 0.0 for d in det}
             avg_br = {d: 0.0 for d in det}
             for k in k_band:
-                pb = pathsum_standard(positions, adj, free_f, src, det, k, bi, si)
+                pb = pathsum_standard(positions, adj, field, src, det, k, bi, si)
                 pr = pathsum_with_backreaction(positions, adj, field, src, det, k,
                                                mass_set, epsilon, bi, si)
                 for d in det:

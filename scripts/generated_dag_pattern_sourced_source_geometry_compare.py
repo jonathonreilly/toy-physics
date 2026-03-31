@@ -39,6 +39,7 @@ from scripts.generated_dag_pattern_mobility import (  # noqa: E402
 )
 from scripts.generated_dag_pattern_sourced_mover_probe import (  # noqa: E402
     SOURCE_RULE,
+    _signed_shift_at_shared_x,
     _source_summary,
     choose_seed_nodes,
 )
@@ -174,10 +175,11 @@ def _evaluate_trial(
     _, _, _, _, _, coupled_tracked = _classify_outcome(positions, neighbors, coupled_history)
     coupled_live = [entry for entry in coupled_tracked if entry[1] is not None]
     if coupled_live:
-        compare_step = min(len(free_live), len(coupled_live)) - 1
-        signed_toward_shift = (
-            coupled_live[compare_step][2][1] - free_live[compare_step][2][1]
-        ) * (1.0 if source_offset_y > 0.0 else -1.0)
+        signed_toward_shift = _signed_shift_at_shared_x(
+            free_live,
+            coupled_live,
+            1.0 if source_offset_y > 0.0 else -1.0,
+        )
     else:
         signed_toward_shift = float("nan")
 

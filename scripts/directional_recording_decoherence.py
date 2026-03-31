@@ -235,9 +235,9 @@ def main():
                         avg_free_g[d] += fp.get(d, 0)
                         avg_mass_g[d] += mp.get(d, 0)
 
-                    # Interference: baseline (no recording)
-                    pb = pathsum_directional(positions, adj, free_f, src, det, k,
-                                             set(), null_phases, bi, si)
+                    # Interference: baseline (mass present, no recording)
+                    pb = pathsum_directional(positions, adj, field, src, det, k,
+                                             mass_set, null_phases, bi, si)
                     for d in det:
                         avg_slit_base[d] += pb.get(d, 0)
 

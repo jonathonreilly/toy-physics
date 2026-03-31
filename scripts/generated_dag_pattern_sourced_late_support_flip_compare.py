@@ -45,6 +45,8 @@ from scripts.generated_dag_pattern_sourced_field_bias_compare import (  # noqa: 
 )
 from scripts.generated_dag_pattern_sourced_mover_probe import (  # noqa: E402
     SOURCE_RULE,
+    _signed_shift_at_shared_x,
+    _union_last_steps,
     choose_seed_nodes,
 )
 from scripts.generative_causal_dag_interference import generate_causal_dag  # noqa: E402
@@ -159,13 +161,6 @@ def _radius(
     return max(math.dist(positions[idx], center) for idx in state)
 
 
-def _late_footprint(late_live_states: list[frozenset[int]], window: int) -> frozenset[int]:
-    subset = late_live_states[-window:]
-    if not subset:
-        return frozenset()
-    return frozenset().union(*subset)
-
-
 def _run_coupled_shift(
     positions: list[tuple[float, float]],
     neighbors: dict[int, list[int]],
@@ -194,8 +189,7 @@ def _run_coupled_shift(
     coupled_live = [entry for entry in coupled_tracked if entry[1] is not None]
     if not coupled_live:
         return float("nan")
-    compare_step = min(len(free_live), len(coupled_live)) - 1
-    return (coupled_live[compare_step][2][1] - free_live[compare_step][2][1]) * side_sign
+    return _signed_shift_at_shared_x(free_live, coupled_live, side_sign)
 
 
 def _threshold_predictions(
@@ -405,6 +399,8 @@ def _evaluate_task(
         target_x=anchor_centroid[0] + 2.0,
         target_y=anchor_centroid[1] + source_offset_y,
     )
+    # Pre-evolve the nearby source before launching the mover, then freeze its
+    # late-time footprint into a static field for the probe.
     source_history = evolve_on_graph(
         n_nodes=len(positions),
         neighbors=neighbors,
@@ -413,12 +409,11 @@ def _evaluate_task(
         birth=SOURCE_RULE.birth,
         steps=source_steps,
     )
-    late_live_states = [state for state in source_history[-6:] if state]
-    if len(late_live_states) < 3:
+    if sum(1 for state in source_history[-6:] if state) < 3:
         return None
 
-    last3_union = _late_footprint(late_live_states, 3)
-    last6_union = _late_footprint(late_live_states, 6)
+    last3_union = _union_last_steps(source_history, 3)
+    last6_union = _union_last_steps(source_history, 6)
     if len(last3_union) < 3 or len(last6_union) < 3:
         return None
 

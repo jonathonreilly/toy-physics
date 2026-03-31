@@ -118,6 +118,58 @@ def _source_summary(
     return status, source_union, live_fraction, mean_size, peak_size
 
 
+def _union_last_steps(
+    history: list[frozenset[int]],
+    window: int,
+) -> frozenset[int]:
+    subset = history[-window:]
+    if not subset:
+        return frozenset()
+    return frozenset().union(*(state for state in subset if state))
+
+
+def _y_at_x(
+    tracked_live: list[tuple[int, frozenset[int] | None, tuple[float, float] | None, float | None]],
+    target_x: float,
+) -> float | None:
+    points = [entry[2] for entry in tracked_live if entry[2] is not None]
+    if not points:
+        return None
+    points = sorted(points, key=lambda point: point[0])
+    if target_x <= points[0][0]:
+        return points[0][1]
+    if target_x >= points[-1][0]:
+        return points[-1][1]
+    for (x1, y1), (x2, y2) in zip(points, points[1:]):
+        if x1 <= target_x <= x2:
+            if abs(x2 - x1) < 1e-12:
+                return 0.5 * (y1 + y2)
+            weight = (target_x - x1) / (x2 - x1)
+            return y1 + weight * (y2 - y1)
+    nearest = min(points, key=lambda point: abs(point[0] - target_x))
+    return nearest[1]
+
+
+def _signed_shift_at_shared_x(
+    free_live: list[tuple[int, frozenset[int] | None, tuple[float, float] | None, float | None]],
+    coupled_live: list[tuple[int, frozenset[int] | None, tuple[float, float] | None, float | None]],
+    side_sign: float,
+) -> float:
+    free_points = [entry[2] for entry in free_live if entry[2] is not None]
+    coupled_points = [entry[2] for entry in coupled_live if entry[2] is not None]
+    if not free_points or not coupled_points:
+        return float("nan")
+    target_x = min(
+        max(point[0] for point in free_points),
+        max(point[0] for point in coupled_points),
+    )
+    free_y = _y_at_x(free_live, target_x)
+    coupled_y = _y_at_x(coupled_live, target_x)
+    if free_y is None or coupled_y is None:
+        return float("nan")
+    return (coupled_y - free_y) * side_sign
+
+
 def _evaluate_trial(
     task: tuple[
         GraphConfig,
@@ -174,6 +226,7 @@ def _evaluate_trial(
         target_x=anchor[2][0] + 2.0,
         target_y=anchor[2][1] + source_offset_y,
     )
+    # Pre-evolve the nearby source before launching the coupled mover run.
     source_history = evolve_on_graph(
         n_nodes=len(positions),
         neighbors=neighbors,
@@ -207,10 +260,11 @@ def _evaluate_trial(
     coupled_live = [entry for entry in coupled_tracked if entry[1] is not None]
 
     if coupled_live:
-        compare_step = min(len(free_live), len(coupled_live)) - 1
-        signed_toward_shift = (
-            coupled_live[compare_step][2][1] - free_live[compare_step][2][1]
-        ) * (1.0 if source_offset_y > 0.0 else -1.0)
+        signed_toward_shift = _signed_shift_at_shared_x(
+            free_live,
+            coupled_live,
+            1.0 if source_offset_y > 0.0 else -1.0,
+        )
     else:
         signed_toward_shift = float("nan")
 

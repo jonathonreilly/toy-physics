@@ -61,7 +61,7 @@ def signed_direction(pos_from, pos_to):
 
 def pathsum_dir_recording(positions_or_nodes, adj_or_dag, field,
                           src, det, k, mass_set, dir_phases,
-                          blocked=None, is_dag=True):
+                          blocked=None, is_dag=True, normalize=True):
     """Corrected propagator with direction-dependent recording.
 
     Works for both DAGs (indexed by int) and grids (indexed by tuple).
@@ -121,15 +121,22 @@ def pathsum_dir_recording(positions_or_nodes, adj_or_dag, field,
         # Grid mode
         nodes = positions_or_nodes
         dag = adj_or_dag
-
-        order = sorted(field.keys(), key=lambda n: field.get(n, 0))
-        # Need arrival times for ordering
-        post = RulePostulates(phase_per_action=k, attenuation_power=1.0,
-                              attenuation_mode="geometry")
-        rule = derive_local_rule(persistent_nodes=frozenset(), postulates=post)
-        arrival = infer_arrival_times_from_source(nodes, src[0] if isinstance(src, list) else src, rule)
-        grid_dag = build_causal_dag(nodes, arrival)
-        order = sorted(arrival, key=arrival.get)
+        in_deg = defaultdict(int)
+        all_nodes = set(nodes)
+        for node in all_nodes:
+            in_deg[node] = 0
+        for node, nbs in dag.items():
+            for nb in nbs:
+                in_deg[nb] += 1
+        q = deque(node for node in all_nodes if in_deg[node] == 0)
+        order = []
+        while q:
+            node = q.popleft()
+            order.append(node)
+            for nb in dag.get(node, []):
+                in_deg[nb] -= 1
+                if in_deg[nb] == 0:
+                    q.append(nb)
 
         amps = {}
         s = src[0] if isinstance(src, list) else src
@@ -139,7 +146,7 @@ def pathsum_dir_recording(positions_or_nodes, adj_or_dag, field,
             if node not in amps or node in blocked:
                 continue
             a = amps[node]
-            for nb in grid_dag.get(node, []):
+            for nb in dag.get(node, []):
                 if nb in blocked:
                     continue
                 L = math.dist(node, nb)
@@ -161,7 +168,7 @@ def pathsum_dir_recording(positions_or_nodes, adj_or_dag, field,
         probs = {d: abs(amps.get(d, 0.0))**2 for d in det}
 
     total = sum(probs.values())
-    if total > 0:
+    if normalize and total > 0:
         probs = {d: p/total for d, p in probs.items()}
     return probs
 
@@ -243,16 +250,18 @@ def main():
     mass_mn = frozenset((25, y) for y in range(4, 9))
     mass_rule = derive_local_rule(persistent_nodes=mass_mn, postulates=post)
     mass_field_grid = derive_node_field(nodes, mass_rule)
+    mass_arrival = infer_arrival_times_from_source(nodes, source, mass_rule)
+    mass_dag = build_causal_dag(nodes, mass_arrival)
     mass_set_grid = set(mass_mn)
 
     arrival = infer_arrival_times_from_source(nodes, source, rule)
     dag = build_causal_dag(nodes, arrival)
     det_nodes = [(det_x, y) for y in screen_ys]
 
-    # Baseline
+    # Baseline: mass present, no directional recording
     p_base = pathsum_dir_recording(
-        nodes, dag, free_field_grid, [source], det_nodes, 2.0,
-        set(), {}, blocked, is_dag=False)
+        nodes, mass_dag, mass_field_grid, [source], det_nodes, 2.0,
+        mass_set_grid, {}, blocked, is_dag=False)
     v_base = visibility_from_probs(p_base, lambda d: d[1])
 
     # With recording
@@ -265,10 +274,10 @@ def main():
         dp_s = gen_env_shuffled(list(mass_set_grid), None, sigma, rng2)
 
         pr = pathsum_dir_recording(
-            nodes, dag, mass_field_grid, [source], det_nodes, 2.0,
+            nodes, mass_dag, mass_field_grid, [source], det_nodes, 2.0,
             mass_set_grid, dp, blocked, is_dag=False)
         ps = pathsum_dir_recording(
-            nodes, dag, mass_field_grid, [source], det_nodes, 2.0,
+            nodes, mass_dag, mass_field_grid, [source], det_nodes, 2.0,
             mass_set_grid, dp_s, blocked, is_dag=False)
 
         for d in det_nodes:
@@ -284,7 +293,7 @@ def main():
     v_rec = visibility_from_probs(avg_rec, lambda d: d[1])
     v_shuf = visibility_from_probs(avg_shuf, lambda d: d[1])
 
-    print(f"  V_baseline (no mass):    {v_base:.4f}")
+    print(f"  V_baseline (mass, no recording): {v_base:.4f}")
     print(f"  V_recording (σ={sigma}):   {v_rec:.4f}  (drop: {v_base-v_rec:+.4f})")
     print(f"  V_shuffled (control):    {v_shuf:.4f}  (drop: {v_base-v_shuf:+.4f})")
     print()
@@ -344,8 +353,8 @@ def main():
         blocked_dag = set(bi) - set(si)
 
         # Baseline
-        pb = pathsum_dir_recording(positions, adj_d, free_f, src, det, 5.0,
-                                    set(), {}, blocked_dag)
+        pb = pathsum_dir_recording(positions, adj_d, field, src, det, 5.0,
+                                    mass_set, {}, blocked_dag)
         vb = visibility_from_probs(pb, lambda d: positions[d][1])
         v_bases.append(vb)
 
@@ -413,7 +422,7 @@ def main():
         bl = barrier_3 - open_nodes
         return pathsum_dir_recording(
             nodes, dag, free_field_grid, [source], det_nodes, 2.0,
-            set(), {}, bl, is_dag=False)
+            set(), {}, bl, is_dag=False, normalize=False)
 
     p = {}
     for r in range(4):

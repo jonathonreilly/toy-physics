@@ -45,6 +45,8 @@ from scripts.generated_dag_pattern_mobility import (  # noqa: E402
 )
 from scripts.generated_dag_pattern_sourced_mover_probe import (  # noqa: E402
     SOURCE_RULE,
+    _signed_shift_at_shared_x,
+    _union_last_steps,
     choose_seed_nodes,
 )
 from scripts.generative_causal_dag_interference import generate_causal_dag  # noqa: E402
@@ -104,16 +106,6 @@ class FootprintSummary:
 def _mean(values: Iterable[float]) -> float:
     values = list(values)
     return statistics.fmean(values) if values else 0.0
-
-
-def _late_footprint(
-    late_live_states: list[frozenset[int]],
-    window: int,
-) -> frozenset[int]:
-    subset = late_live_states[-window:]
-    if not subset:
-        return frozenset()
-    return frozenset().union(*subset)
 
 
 def _evaluate_task(
@@ -178,14 +170,13 @@ def _evaluate_task(
         birth=SOURCE_RULE.birth,
         steps=source_steps,
     )
-    late_live_states = [state for state in source_history[-6:] if state]
-    if not late_live_states:
+    if not any(source_history[-6:]):
         return []
 
     rows: list[FootprintTrialRow] = []
     side_sign = 1.0 if source_offset_y > 0.0 else -1.0
     for footprint_label, footprint_window in FOOTPRINT_WINDOWS:
-        source_footprint = _late_footprint(late_live_states, footprint_window)
+        source_footprint = _union_last_steps(source_history, footprint_window)
         if len(source_footprint) < 3:
             continue
 
@@ -206,10 +197,11 @@ def _evaluate_task(
         )
         coupled_live = [entry for entry in coupled_tracked if entry[1] is not None]
         if coupled_live:
-            compare_step = min(len(free_live), len(coupled_live)) - 1
-            signed_toward_shift = (
-                coupled_live[compare_step][2][1] - free_live[compare_step][2][1]
-            ) * side_sign
+            signed_toward_shift = _signed_shift_at_shared_x(
+                free_live,
+                coupled_live,
+                side_sign,
+            )
         else:
             signed_toward_shift = float("nan")
 
