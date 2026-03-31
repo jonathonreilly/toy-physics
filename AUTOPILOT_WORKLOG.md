@@ -1,3 +1,38 @@
+## 2026-03-31 15:40 America/New_York
+
+### Seam class
+- generated-DAG field coupling
+- self sparse-25 config-local flip compare
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/generated_dag_pattern_sourced_config_local_flip_compare.py`
+- rendered the sparse self slice at `/Users/jonreilly/Projects/Physics/logs/2026-03-31-generated-dag-config-local-late-support-flip-compare-self-sparse-25.txt`
+- the noisiest self config does tighten beyond the pooled self rule:
+  - `8` retained rows total
+  - `4` stay toward-source
+  - `4` flip away under `last6_union`
+- the pooled self rule only touches one row here:
+  - pooled separator `extra_packet_side_gap <= -0.0962` matches `1/8`
+  - that matched row does flip, but it clearly does not explain the whole slice
+- the config-local picture is simpler and more corridor-led:
+  - stable rows keep much more added forward corridor support (`0.4527` vs `0.0439`)
+  - flip rows carry stronger negative added packet-side and fringe-side gaps
+- on this slice, the cleanest local single-feature rules all point to the same story:
+  - `extra_support_corridor_share <= 0.0000`
+  - `extra_packet_side_gap <= 0.0000`
+  - `extra_support_forward_share <= 0.1429`
+  - each reaches `0.8750` accuracy on the `8` rows
+
+### Current state
+- this loop stayed strictly on the noisiest self residual slice
+- the unrelated local `README.md` edit is still intentionally untouched
+
+### Strongest confirmed conclusion
+The self residual is not one pooled wrong-side-bias law. On the noisiest `sparse-25` slice it looks more like a forward-corridor collapse: when the added `last4-6` support stops contributing forward corridor support, the sign flips.
+
+### Exact next step
+- test whether the wide-local low-added-field rule and the self:sparse-25 corridor-collapse rule can be compressed into one smaller forward-packet-retiming language, or promote them explicitly as separate residual mechanisms
+
 ## 2026-03-31 15:14 America/New_York
 
 ### Seam class
