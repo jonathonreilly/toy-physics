@@ -1,0 +1,74 @@
+======================================================================
+WHY IS DEFLECTION THRESHOLD-LIKE?
+======================================================================
+
+TEST 1: Shift vs k (find saturation)
+
+       k       shift    shift/k²        regime
+  ------------------------------------------
+   0.010      +0.003      +34.85        linear
+   0.020      +0.014      +34.87        linear
+   0.050      +0.088      +35.01        linear
+   0.100      +0.355      +35.53        linear
+   0.150      +0.819      +36.40        linear
+   0.200      +1.504      +37.60     nonlinear
+   0.300      +3.688      +40.98     nonlinear
+   0.500     +12.408      +49.63     nonlinear
+   0.700     +22.356      +45.62     SATURATED
+   1.000     +24.220      +24.22     SATURATED
+   1.500     +24.044      +10.69     SATURATED
+   2.000     +23.530       +5.88     SATURATED
+   3.000     -24.086       -2.68     SATURATED
+
+TEST 2: Phase gradient ∂(kS)/∂y at mass region (x=30)
+  S = action per edge, k × S = phase per edge
+
+     y     f(30,y)    S(y→y+1)          dS
+  --------------------------------------
+    -5    0.137533     0.58611    -0.41389
+    -4    0.154739     0.56777    -0.43223
+    -3    0.174314     0.54873    -0.45127
+    -2    0.196800     0.52884    -0.47116
+    -1    0.222966     0.50785    -0.49215
+     0    0.253983     0.48534    -0.51466
+     1    0.291764     0.46058    -0.53942
+     2    0.339982     0.43232    -0.56768
+     3    0.405439     0.39194    -0.60806
+     4    0.537923     0.35350    -0.64650
+     5    0.644462     0.33666    -0.66334
+     6    0.662519     0.33676    -0.66324
+     7    0.643687     0.35388    -0.64612
+     8    0.536012     0.39291    -0.60709
+     9    0.401986     0.43424    -0.56576
+    10    0.335127     0.46362    -0.53638
+    11    0.285446     0.48977    -0.51023
+    12    0.246100     0.51401    -0.48599
+    13    0.213386     0.53718    -0.46282
+    14    0.185361     0.55978    -0.44022
+
+TEST 3: Saturation analysis
+
+  Phase gradient at beam center:
+    f(30,0) = 0.253983
+    f(30,1) = 0.291764
+    S(y=0→1) = 0.497363
+    S(y=1→2) = 0.474051
+    ΔS = -0.023312
+
+  Critical k (where k×ΔS = π): 134.76
+  At k < 134.8: shift ∝ k² (linear regime)
+  At k > 134.8: shift saturates (beam flips to one side)
+
+  Edges with nonzero field at y=0: 59
+  Total action deficit at y=0: -18.6375
+  Total phase at k=1: 18.6375 rad
+  At k=134.8: total phase = 2511.6 rad
+
+CONCLUSION:
+  The shift saturates when k × (action gradient per step) ≈ π.
+  Below this: shift ∝ k² × gradient (perturbative, could scale).
+  Above this: shift = ±height (beam width limit, b-independent).
+  The 'threshold' behavior is just SATURATION at moderate k.
+  To get 1/b scaling: stay in the PERTURBATIVE regime (small k).
+
+TEST COMPLETE
