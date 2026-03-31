@@ -1,7 +1,7 @@
 # Frontier Map: 2026-03-31 (Session Close)
 
 ## Session Summary
-- **60 experiments** over one extended session
+- **63 experiments** over one extended session
 - **4 code review bugs fixed** (two_register env, mass_scaling label, between_slit geometry, constant_deflection field)
 - **Key breakthrough**: corrected propagator (1/L^p) + two-register decoherence at proper geometry
 
@@ -25,6 +25,9 @@
 | 14 | Fringes survive mass on lattice | V_mass=1.0 across k=0.5..8.0 |
 | 15 | Dual mass clusters worse than single | D=1/15 vs D=5/15 |
 | 16 | Δky mass-independent | Threshold effect, not F∝M |
+| 17 | Decoherence universal (purity < 0.99 for all seeds) | Mean purity=0.80, density matrix |
+| 18 | Purity INCREASES with graph size | 0.57→0.89 from 6→25 layers |
+| 19 | Cumulative env also wrong-scaling | Same trend as node-label |
 
 ## Dead Ends (do not revisit)
 
@@ -41,11 +44,11 @@
 
 ## Open Frontiers (ranked by expected value)
 
-### 1. Increase decoherence rate beyond 40%
-The two-register mechanism works but is geometry-sensitive. Can we find a configuration with D > 50% and G > 80%? Candidates: vary n_layers, y_range, mass size, try multiple mass clusters. **Effort: 1-2 experiments.**
+### 1. Decoherence scaling problem (THE open frontier)
+Two-register decoherence is universal (0/20 pure) but purity INCREASES with graph size (0.57→0.89 from 6→25 layers). Both node-label and cumulative-action env architectures have wrong scaling. Path multiplicity makes both slits equivalent through mass on large graphs. Need: continuous (infinite-dim) environment or qualitatively different architecture. **This is the model's sharpest remaining problem.** Effort: theoretical work + new implementation.
 
-### 2. Why is decoherence phase-emergent?
-The ALL THREE outcome isn't predicted by structure (r < 0.25). Understanding WHY specific graph realizations decohere while others don't would be a theoretical advance. Candidate: compute the full density matrix at the detector and identify which matrix elements determine the outcome. **Effort: 1 experiment, moderate complexity.**
+### 2. Density matrix as diagnostic (DONE)
+Purity Tr(ρ²) is the best predictor (r=-0.40) of decoherence outcome. Mean purity=0.80 at 12 layers. Most seeds decohere sub-threshold. V_drop threshold (0.02) misses widespread weak decoherence.
 
 ### 3. Integrate with Codex pattern-sourced mover results
 Codex's mover/steering experiments test whether persistent patterns steer amplitude at the CA level. Our corrected propagator tests the same question at the path-sum level. Cross-comparison could unify the two investigation threads. **Effort: 1-2 experiments.**
