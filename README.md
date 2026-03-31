@@ -138,18 +138,9 @@ So the mover-side bridge now matches the same abstract vocabulary as the visibil
 
 A first bounded field-coupled probe now says that this substrate is actually usable. Starting only from the coherent free movers in that same canonical family (`248` coupled trials per tested coupling), a static localized field placed a little ahead of the free packet path can steer those movers without collapsing the substrate. The best retained coupling in the bounded sweep is not the weakest one: at coupling `3.000`, `224/248` packets remain coherent survivors, only `18` diffuse, only `6` die, and the signed toward-mass shift rises to `+0.9556` (median `+0.6294`). The clearest steering lives on the denser forward neighborhoods (`neighbor_radius = 2.5`, mean signed shift `+1.1842`).
 
-A direct pattern-sourced follow-on sharpens that story rather than simply extending it. On the retained `neighbor_radius = 2.5` mover substrate (`170` coherent free mover trials), the nearby self-rule source is usually viable: `149` rows are fully persistent in the late window, `150` rows keep a usable late union (`>= 3` nodes), and the coupled mover still remains mostly coherent on those viable-source rows (`135/150` survive, `15` diffuse, `0` die). But the net directional story first flipped. Using the broad `last6_union` footprint, the viable-source subset had mean signed shift `-0.3947`, not toward-source steering.
+A direct pattern-sourced follow-on still sharpens that story, but the current repaired scripts change which source footprint survives. On the retained `neighbor_radius = 2.5` mover substrate (`170` coherent free mover trials), the nearby self-rule source is usually viable: `149` rows are fully persistent in the late window, `150` rows keep a usable late union (`>= 3` nodes), and the coupled mover still remains mostly coherent on those viable-source rows. Under the current code, the broad `last6_union` footprint is now the positive frozen baseline rather than the failure mode: `135/150` viable-source rows survive with mean signed shift `+0.4736`. The narrower `last3_union` footprint no longer gives a retained toward-source branch even as a frozen surrogate: `136/150` survive, but mean signed shift is only `-0.0811`.
 
-A bounded source-geometry compare showed that this was not a simple placement failure: positive-shift and nonpositive-shift rows both keep the late source centroid on the intended side with forward lead, and no raw source-size or centroid scalar separates them much better than about `0.61` holdout accuracy. The first retained hint was local instead: rows with weaker or nonpositive intended-side forward fringe bias (`forward_side_field_gap <= 0`) form a smaller subfamily with a better positive-shift fraction (`0.5758` vs `0.3846`) and a much less negative mean shift (`-0.1394` vs `-0.4667`). That points to source-field retiming geometry rather than source viability or gross placement.
-
-The next bounded footprint sweep then closed the main ambiguity. The problem is not that pattern-sourced steering fails in general; it is that the `last6_union` footprint is too broad. Holding the same source rule, substrate, and coupling fixed, narrowing the field footprint to the recent `last3_union` restores toward-source steering while preserving the mover substrate:
-
-- `last_state`: `129/149` survive, mean signed shift `-0.3883`
-- `last2_union`: `135/150` survive, mean signed shift `+0.0947`
-- `last3_union`: `135/150` survive, mean signed shift `+0.7612`
-- `last6_union`: `135/150` survive, mean signed shift `-0.3947`
-
-So the retained source-side bridge is now a recent-footprint law, not a viability law. Pattern-sourced deflection does work on coherent generated-DAG movers, but it wants a compressed recent packet footprint rather than the whole broad late union. The active frontier is to compress what the extra `last4-6` support contributes that flips the field from attractive steering to away-shift / retiming.
+A stronger live-vs-frozen source compare then says the field-to-pattern arrow is partly real already, but only on that broader late-source branch. Letting the same mature source keep evolving during the mover run weakens both footprints, but asymmetrically. The live sliding `last6` source stays net toward-source in substance (`126/150` survive, mean signed shift `+0.4420`), while the live sliding `last3` source weakens further (`124/150` survive, mean signed shift `-0.5125`). So the retained source-side bridge is no longer a narrow recent-footprint law. The current positive branch is the broader late `last6` source window, and the active frontier is to compress which late-support geometry keeps that live regenerated field attractive instead of flipping into retiming / away-shift on specific mover-rule slices.
 
 ### 6. Stable mechanism families
 
@@ -367,7 +358,7 @@ The relevant questions are:
   - exhausted-wall boundary
 - which observables should be retained as branch selectors versus demoted to detector-side or placement modifiers
 - what the smallest confirmation-style holdout pass is that can test the retained architecture without reopening broad ladder growth
-- why the `last3_union` source footprint on the `neighbor_radius = 2.5` mover substrate steers toward the source while the broader `last6_union` flips back to away-shift, and which smallest extra late-support observable causes that sign change
+- why the broader `last6_union` source footprint on the `neighbor_radius = 2.5` mover substrate remains net toward-source even under live regeneration while the narrower `last3_union` collapses, and which smallest late-support geometry sets that reversal
 
 ## What Is Still Unresolved
 
