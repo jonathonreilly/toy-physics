@@ -1,5 +1,34 @@
 # Physics Autopilot Handoff
 
+## 2026-03-31 04:35 America/New_York
+
+### Seam class
+- common mechanism crosswalk
+- regime architecture compression across geometry and generated DAGs
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/mechanism_regime_crosswalk.py`
+- rendered the retained crosswalk at `/Users/jonreilly/Projects/Physics/logs/2026-03-31-mechanism-regime-crosswalk.txt`
+- the current common mechanism map is now explicit:
+  - completion/load sets the regime floor
+  - balance selects the near-floor branch or subbranch
+  - bottleneck / placement terms modulate the readout
+- retained axis mapping:
+  - geometry `closure_load`, shared `8/12` packet completion <-> generated `center_balanced_log_paths`, `center_slit_load_retimed`
+  - geometry `anchor_closure_intensity_gap`, `anchor_deep_share_gap`, `high_bridge_right_count` <-> generated `center_path_balance`, `center_balance_share`
+  - geometry `mid_anchor_closure_peak` <-> generated `center_retiming_alignment`, `center_slit_share`
+
+### Current state
+- cooperative lock is held by the manual Codex worker for this bounded write-up
+- canonical `main` / `origin/main` are synced at `90986f6` before this uncommitted local checkpoint
+- no new generated-graph experiment was run; this loop stayed entirely on cross-domain mechanism compression
+
+### Strongest confirmed conclusion
+The geometry ladder and generated-DAG bridge are now written in one shared vocabulary. The retained common theme is: completion first, balance second, bottleneck terms third.
+
+### Exact next step
+- if continuing the architecture lane, shorten the geometry-side regime map itself by rewriting the moderate anchor-balance basin and beyond-ceiling packet regime into one tighter regime card
+
 ## 2026-03-31 04:25 America/New_York
 
 ### Seam class

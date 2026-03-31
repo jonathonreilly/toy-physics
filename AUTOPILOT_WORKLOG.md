@@ -1,3 +1,37 @@
+## 2026-03-31 04:35 America/New_York
+
+### Seam class
+- common mechanism crosswalk
+- regime architecture compression across geometry and generated DAGs
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/mechanism_regime_crosswalk.py`
+- wrote the smallest retained crosswalk to `/Users/jonreilly/Projects/Physics/logs/2026-03-31-mechanism-regime-crosswalk.txt`
+- the shared mechanism map is now explicit rather than implicit:
+  - completion/load axis
+    - geometry: `closure_load`, shared `8/12` packet completion (`mid_candidate_attached_max >= 7.500`)
+    - generated DAG: `center_balanced_log_paths`, `center_slit_load_retimed`
+  - balance axis
+    - geometry: `anchor_closure_intensity_gap`, `anchor_deep_share_gap`, `high_bridge_right_count`
+    - generated DAG: `center_path_balance`, `center_balance_share`
+  - bottleneck / placement axis
+    - geometry: `mid_anchor_closure_peak`
+    - generated DAG: `center_retiming_alignment`, `center_slit_share`
+- this compresses the current regime architecture to one common theme:
+  - completion/load sets the floor
+  - balance selects the near-floor branch or subbranch
+  - bottleneck/placement terms modulate readout but are not the primary retained split
+
+### Current state
+- canonical `main` / `origin/main` are synced at `90986f6` before this local crosswalk checkpoint
+- no new frontier search was reopened; this loop was purely cross-domain mechanism compression
+
+### Strongest confirmed conclusion
+The geometry ladder and the generated-DAG bridge now share one retained abstract language instead of two parallel vocabularies. The common structure is completion first, balance second, bottleneck terms third.
+
+### Exact next step
+- if we keep pushing this lane, the next bounded task is to fold the moderate anchor-balance basin and beyond-ceiling packet regime into one shorter regime card in the README instead of extending the generated-DAG side further
+
 ## 2026-03-31 04:25 America/New_York
 
 ### Seam class
