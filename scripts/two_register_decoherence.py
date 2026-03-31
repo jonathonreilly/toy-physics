@@ -8,15 +8,20 @@ of freedom that entangles with passing amplitude.
 Architecture:
 - System register: amplitude ψ(node) propagates source → detector
 - Environment register: at each mass node, a local state |e⟩ that
-  couples to the system.
+  couples to the system. Different arrival directions create
+  different environment states.
 - The full state is ψ(node, env). At the detector, we trace over env:
   P(det) = Σ_env |ψ(det, env)|²
 
+If slit-A and slit-B create orthogonal environment states at the mass,
+the cross-term vanishes → full decoherence. If the states overlap,
+partial decoherence.
+
 Implementation:
-- env is the LAST mass node encountered along the path
-- This is a bounded approximation to richer environment histories
-- Different slits can decohere only if they preferentially traverse
-  different mass nodes
+- env is labeled by a tuple of (mass_node, direction) pairs encountered
+- This is exponential in path length, so we approximate:
+  env = hash of the LAST mass node + direction encountered
+- Different slits produce different last-mass-interaction → different env
 - Trace = sum |ψ(det, env)|² over all env labels
 
 PStack experiment: two-register-decoherence
@@ -54,11 +59,15 @@ def compute_field(positions, adj, mass_idx, iterations=50):
 
 
 def pathsum_two_register(positions, adj, field, src, det, k, mass_set,
-                         barrier_idx=None, slit_idx=None):
+                         barrier_idx=None, slit_idx=None, env_mode="fine"):
     """Two-register propagation: system amplitude tagged by environment state.
 
-    Each amplitude carries an 'env' label = last mass node encountered.
-    At the detector, trace over env: P(det) = Σ_env |Σ_paths_with_env a|²
+    env_mode controls the environment granularity:
+      "fine"   — env = exact last mass node index (most decoherence, fragments gravity)
+      "binary" — env = 1 if ever hit mass, -1 if not (least decoherence, preserves gravity)
+      "ybin"   — env = sign of (mass_y - mass_center) (intermediate)
+
+    At the detector, partial trace: P(det) = Σ_env |ψ(det,env)|²
 
     Returns: {det_node: probability} after partial trace.
     """
@@ -103,8 +112,20 @@ def pathsum_two_register(positions, adj, field, src, det, k, mass_set,
 
         # Propagate each env state to neighbors (don't delete — det nodes need to keep their amp)
         for env, amp in entries.items():
-            # Fine env: retain the exact last mass node encountered.
-            new_env = i if i in mass_set else env
+            # Update environment label based on env_mode
+            if i in mass_set:
+                if env_mode == "fine":
+                    new_env = i  # exact mass node index
+                elif env_mode == "binary":
+                    new_env = 1  # hit mass at least once
+                elif env_mode == "ybin":
+                    all_my = [positions[m][1] for m in mass_set]
+                    mc = sum(all_my) / len(all_my)
+                    new_env = 1 if positions[i][1] > mc else -1
+                else:
+                    raise ValueError(f"Unknown env_mode: {env_mode}")
+            else:
+                new_env = env
 
             for j in adj.get(i, []):
                 if j in blocked:
@@ -221,110 +242,113 @@ def main():
 
     print("=" * 70)
     print("TWO-REGISTER DECOHERENCE")
-    print(f"  System + environment at mass nodes")
-    print(f"  env_label = last mass node encountered")
     print(f"  P(det) = Σ_env |ψ(det,env)|² (partial trace)")
     print("=" * 70)
     print()
 
-    print(f"  {'seed':>4s}  {'grav':>7s}  {'V_2reg':>7s}  {'V_coh':>7s}  "
-          f"{'V_drop':>7s}  {'attr':>4s}  {'dcoh':>4s}  {'all3':>4s}")
-    print(f"  {'-' * 52}")
+    for env_mode in ["fine", "binary", "ybin"]:
+        print(f"  env_mode = '{env_mode}':")
+        print(f"    {'seed':>4s}  {'grav':>7s}  {'V_2reg':>7s}  {'V_coh':>7s}  "
+              f"{'V_drop':>7s}  {'attr':>4s}  {'dcoh':>4s}  {'all3':>4s}")
+        print(f"    {'-' * 52}")
 
-    gy = iy = dy = a3 = nv = 0
+        gy = iy = dy = a3 = nv = 0
 
-    for seed in range(n_seeds):
-        positions, adj, arrival = generate_causal_dag(
-            n_layers=n_layers, nodes_per_layer=npl,
-            y_range=y_range, connect_radius=radius,
-            rng_seed=seed*11+7,
-        )
-        n = len(positions)
-        by_layer = defaultdict(list)
-        for idx, (x, y) in enumerate(positions):
-            by_layer[round(x)].append(idx)
-        layers = sorted(by_layer.keys())
-        if len(layers) < 5:
-            continue
+        for seed in range(n_seeds):
+            positions, adj, arrival = generate_causal_dag(
+                n_layers=n_layers, nodes_per_layer=npl,
+                y_range=y_range, connect_radius=radius,
+                rng_seed=seed*11+7,
+            )
+            n = len(positions)
+            by_layer = defaultdict(list)
+            for idx, (x, y) in enumerate(positions):
+                by_layer[round(x)].append(idx)
+            layers = sorted(by_layer.keys())
+            if len(layers) < 5:
+                continue
 
-        src = by_layer[layers[0]]
-        det_set = set(by_layer[layers[-1]])
-        det = list(det_set)
-        if not det:
-            continue
+            src = by_layer[layers[0]]
+            det_set = set(by_layer[layers[-1]])
+            det = list(det_set)
+            if not det:
+                continue
 
-        mid = len(layers)//2
-        all_ys = [y for _, y in positions]
-        cy = sum(all_ys)/len(all_ys)
+            mid = len(layers)//2
+            all_ys = [y for _, y in positions]
+            cy = sum(all_ys)/len(all_ys)
 
-        mass_layers = [layers[mid-1], layers[mid], layers[mid+1]]
-        mass_idx = [i for i in sum((by_layer[l] for l in mass_layers), [])
-                    if positions[i][1] > cy+1]
-        if len(mass_idx) < 3:
-            continue
-        mass_set = set(mass_idx)
-        mass_cy = sum(positions[i][1] for i in mass_idx)/len(mass_idx)
-        field = compute_field(positions, adj, mass_idx)
-        free_f = [0.0]*n
+            mass_layers = [layers[mid-1], layers[mid], layers[mid+1]]
+            mass_idx = [i for i in sum((by_layer[l] for l in mass_layers), [])
+                        if positions[i][1] > cy+1]
+            if len(mass_idx) < 3:
+                continue
+            mass_set = set(mass_idx)
+            mass_cy = sum(positions[i][1] for i in mass_idx)/len(mass_idx)
+            field = compute_field(positions, adj, mass_idx)
+            free_f = [0.0]*n
 
-        if mid < 2:
-            continue
-        bl = layers[mid-2]
-        bi = by_layer[bl]
-        sa = [i for i in bi if positions[i][1] > cy+2][:3]
-        sb = [i for i in bi if positions[i][1] < cy-2][:3]
-        if not sa or not sb:
-            continue
-        si = sa + sb
+            if mid < 2:
+                continue
+            bl = layers[mid-2]
+            bi = by_layer[bl]
+            sa = [i for i in bi if positions[i][1] > cy+2][:3]
+            sb = [i for i in bi if positions[i][1] < cy-2][:3]
+            if not sa or not sb:
+                continue
+            si = sa + sb
 
-        # Gravity: k-averaged
-        grav_shifts = []
-        for k in k_band:
-            fp = pathsum_coherent(positions, adj, free_f, src, det_set, k)
-            mp = pathsum_two_register(positions, adj, field, src, det_set, k, mass_set)
-            grav_shifts.append(centroid_y(mp, positions) - centroid_y(fp, positions))
-        avg_grav = sum(grav_shifts)/len(grav_shifts)
-        attracts = (mass_cy-cy > 0 and avg_grav > 0.05)
+            # Gravity: k-averaged
+            grav_shifts = []
+            for k in k_band:
+                fp = pathsum_coherent(positions, adj, free_f, src, det_set, k)
+                mp = pathsum_two_register(positions, adj, field, src, det_set, k,
+                                         mass_set, env_mode=env_mode)
+                grav_shifts.append(centroid_y(mp, positions) - centroid_y(fp, positions))
+            avg_grav = sum(grav_shifts)/len(grav_shifts)
+            attracts = (mass_cy-cy > 0 and avg_grav > 0.05)
 
-        # Interference: coherent baseline (mass present, no environment)
-        avg_coh = defaultdict(float)
-        avg_2reg = defaultdict(float)
-        for k in k_band:
-            pc = pathsum_coherent(positions, adj, field, src, det_set, k, bi, si)
-            p2 = pathsum_two_register(positions, adj, field, src, det_set, k,
-                                       mass_set, bi, si)
-            for d in det:
-                avg_coh[d] += pc.get(d, 0)
-                avg_2reg[d] += p2.get(d, 0)
+            # Interference: coherent baseline (mass present, no environment)
+            avg_coh = defaultdict(float)
+            avg_2reg = defaultdict(float)
+            for k in k_band:
+                pc = pathsum_coherent(positions, adj, field, src, det_set, k, bi, si)
+                p2 = pathsum_two_register(positions, adj, field, src, det_set, k,
+                                           mass_set, bi, si, env_mode=env_mode)
+                for d in det:
+                    avg_coh[d] += pc.get(d, 0)
+                    avg_2reg[d] += p2.get(d, 0)
 
-        for avg in [avg_coh, avg_2reg]:
-            t = sum(avg.values())
-            if t > 0:
-                for d in avg:
-                    avg[d] /= t
+            for avg in [avg_coh, avg_2reg]:
+                t = sum(avg.values())
+                if t > 0:
+                    for d in avg:
+                        avg[d] /= t
 
-        v_coh = visibility(dict(avg_coh), positions, det)
-        v_2reg = visibility(dict(avg_2reg), positions, det)
-        v_drop = v_coh - v_2reg
-        has_interf = v_2reg > 0.05
-        has_decoh = v_drop > 0.02
-        has_all3 = attracts and has_interf and has_decoh
+            v_coh = visibility(dict(avg_coh), positions, det)
+            v_2reg = visibility(dict(avg_2reg), positions, det)
+            v_drop = v_coh - v_2reg
+            has_interf = v_2reg > 0.05
+            has_decoh = v_drop > 0.02
+            has_all3 = attracts and has_interf and has_decoh
 
-        if attracts: gy += 1
-        if has_interf: iy += 1
-        if has_decoh: dy += 1
-        if has_all3: a3 += 1
-        nv += 1
+            if attracts: gy += 1
+            if has_interf: iy += 1
+            if has_decoh: dy += 1
+            if has_all3: a3 += 1
+            nv += 1
 
-        print(f"  {seed:4d}  {avg_grav:+7.2f}  {v_2reg:7.3f}  {v_coh:7.3f}  "
-              f"{v_drop:+7.3f}  "
-              f"{'Y' if attracts else 'n':>4s}  "
-              f"{'Y' if has_decoh else 'n':>4s}  "
-              f"{'Y' if has_all3 else 'n':>4s}")
+            print(f"    {seed:4d}  {avg_grav:+7.2f}  {v_2reg:7.3f}  {v_coh:7.3f}  "
+                  f"{v_drop:+7.3f}  "
+                  f"{'Y' if attracts else 'n':>4s}  "
+                  f"{'Y' if has_decoh else 'n':>4s}  "
+                  f"{'Y' if has_all3 else 'n':>4s}")
 
-    if nv > 0:
-        print(f"  ---")
-        print(f"  G:{gy}/{nv} I:{iy}/{nv} D:{dy}/{nv} ALL:{a3}/{nv}")
+        if nv > 0:
+            print(f"    ---")
+            print(f"    G:{gy}/{nv} I:{iy}/{nv} D:{dy}/{nv} ALL:{a3}/{nv}")
+        print()
+        print()
 
     print()
     print("=" * 70)

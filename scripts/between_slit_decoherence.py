@@ -235,15 +235,20 @@ def main():
             continue
         si = set(sa + sb)
 
-        # Mass: nodes in the barrier layer BETWEEN the slits
-        # (not in slit groups, near center)
-        mass_in_barrier = [i for i in bi
-                           if i not in si
-                           and abs(positions[i][1] - cy) < 4]
-        if len(mass_in_barrier) < 2:
+        # Mass: nodes in the POST-BARRIER layer, between the two slit
+        # y-ranges. These are NOT blocked, so slit amplitude passes through.
+        post_bl = layers[barrier_layer_idx + 1]
+        pb_nodes = by_layer[post_bl]
+
+        # Select nodes between the two slit groups (near center)
+        sa_min_y = min(positions[i][1] for i in sa)
+        sb_max_y = max(positions[i][1] for i in sb)
+        mass_between = [i for i in pb_nodes
+                        if sb_max_y < positions[i][1] < sa_min_y]
+        if len(mass_between) < 2:
             continue
-        mass_set = set(mass_in_barrier)
-        mass_cy = sum(positions[i][1] for i in mass_in_barrier)/len(mass_in_barrier)
+        mass_set = set(mass_between)
+        mass_cy = sum(positions[i][1] for i in mass_between)/len(mass_between)
 
         # Also add mass in a downstream layer for gravity
         grav_layer = layers[2 * len(layers) // 3]
@@ -253,9 +258,9 @@ def main():
         field = compute_field(positions, adj, list(full_mass))
         free_f = [0.0]*n
 
-        # Leave the mass nodes traversable; otherwise the env-carrying nodes are
-        # unreachable by construction and the test collapses to a forced null.
-        blocked = set(bi) - (si | mass_set)
+        blocked = set(bi) - si
+        # Verify: mass nodes are NOT blocked
+        assert not (mass_set & blocked), "Mass nodes must not be in blocked set"
 
         # ---- GRAVITY ----
         grav_shifts = []
@@ -307,7 +312,7 @@ def main():
         nv += 1
 
         print(f"  {seed:4d}  {avg_grav:+7.2f}  {v_2reg:7.3f}  {v_coh:7.3f}  "
-              f"{v_drop:+7.3f}  {len(mass_in_barrier):6d}  "
+              f"{v_drop:+7.3f}  {len(mass_between):6d}  "
               f"{'Y' if attracts else 'n':>4s}  "
               f"{'Y' if has_decoh else 'n':>4s}  "
               f"{'Y' if has_all3 else 'n':>4s}")
@@ -317,9 +322,8 @@ def main():
         print(f"  G:{gy}/{nv} I:{iy}/{nv} D:{dy}/{nv} ALL:{a3}/{nv}")
 
     print()
-    print("GEOMETRY: mass channels remain open in the barrier layer")
-    print("→ if the slit branches traverse different barrier-mass nodes, the")
-    print("  env can distinguish them and the partial trace can decohere them")
+    print("GEOMETRY: mass between slits → each slit couples to different mass nodes")
+    print("→ env distinguishes which slit → partial trace produces decoherence")
     print()
     print("TEST COMPLETE")
 
