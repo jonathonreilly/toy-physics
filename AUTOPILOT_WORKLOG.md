@@ -1,3 +1,36 @@
+## 2026-03-31 13:06 America/New_York
+
+### Seam class
+- generated-DAG field coupling
+- last3 vs last6 sign-flip compare
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/generated_dag_pattern_sourced_late_support_flip_compare.py`
+- rendered the paired flip compare at `/Users/jonreilly/Projects/Physics/logs/2026-03-31-generated-dag-late-support-flip-compare.txt`
+- isolated the exact paired question: among rows where `last3_union` already steers toward-source, what added `last4-6` support flips `last6_union` back away?
+- the answer is partly compressed but not fully closed:
+  - `76` rows keep `last3_union > 0`
+  - `41` stay toward-source under `last6_union`
+  - `35` flip back away under `last6_union`
+- the broad qualitative trend is real:
+  - flip rows carry somewhat broader added support (`extra_support_share = 0.3186` vs `0.2924`)
+  - and a stronger extra local fringe-side bias (`extra_fringe_side_gap = 0.0275` vs `0.0043`)
+- but no clean universal flip scalar held up well:
+  - best discovery singles top out around `0.6286`, and the cleaner size/radius rules only hold out at about `0.5854`
+  - the best two-feature discovery rule (`extra_support_share` plus corridor share) rises to `0.7143` on discovery but falls to `0.4634` on holdout
+- the flip is also not concentrated in one config; the config-level flip rate stays in a narrow `0.42..0.50` band
+- the noisiest residual is mover-rule-local: the `wide` rule flips most often (`14/24`, `0.5833`)
+
+### Current state
+- this loop stayed exactly on the retained `last3_union` vs `last6_union` seam
+- no broader source-rule or graph-family widening was opened
+
+### Strongest confirmed conclusion
+The sign flip is genuinely caused by the added `last4-6` support, and the broad direction is now clear: more extra support and more extra fringe-side bias make flip-to-away more likely. But the smallest universal flip observable is still unresolved on the current pooled basis.
+
+### Exact next step
+- split the sign-flip compare by mover rule, starting with the noisier `wide` branch, and test whether the extra-support geometry closes more cleanly there than on the pooled rows
+
 ## 2026-03-31 12:15 America/New_York
 
 ### Seam class

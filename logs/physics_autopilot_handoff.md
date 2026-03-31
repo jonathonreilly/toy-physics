@@ -1,5 +1,38 @@
 # Physics Autopilot Handoff
 
+## 2026-03-31 13:06 America/New_York
+
+### Seam class
+- generated-DAG field coupling
+- last3 vs last6 sign-flip compare
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/generated_dag_pattern_sourced_late_support_flip_compare.py`
+- wrote the paired flip compare to `/Users/jonreilly/Projects/Physics/logs/2026-03-31-generated-dag-late-support-flip-compare.txt`
+- isolated the exact retained question: among rows where `last3_union` already steers toward-source, what extra `last4-6` support makes `last6_union` flip back away?
+- the paired counts are:
+  - `76` rows with `last3_shift > 0`
+  - `41` stable-toward under `last6_union`
+  - `35` flip-to-away under `last6_union`
+- broad direction is visible but not yet exact:
+  - flip rows have somewhat larger added-support share (`0.3186` vs `0.2924`)
+  - and a stronger extra fringe-side field gap (`0.0275` vs `0.0043`)
+- but the smallest universal law is still open:
+  - best discovery singles reach about `0.6286`, with the cleaner size/radius rules holding out only around `0.5854`
+  - the best two-feature discovery rule does not transfer (`0.7143 -> 0.4634`)
+- the effect is not owned by one config; flip rates stay in the `0.42..0.50` range across configs
+- the widest mover-rule residual is on the `wide` branch (`14/24` flips)
+
+### Current state
+- this loop stayed strictly on the retained `last3_union` vs `last6_union` seam
+- no broader source search or family widening was opened
+
+### Strongest confirmed conclusion
+The sign flip really does come from the added `last4-6` support, and the broad mechanism direction is now clearer: more added support and more extra fringe-side bias make away-shift more likely. But the smallest universal flip observable is still not closed on the pooled rows.
+
+### Exact next step
+- split the sign-flip compare by mover rule, starting with the noisier `wide` branch, and test whether the extra-support geometry closes more cleanly there than in the pooled aggregate
+
 ## 2026-03-31 12:15 America/New_York
 
 ### Seam class
