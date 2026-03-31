@@ -1,3 +1,79 @@
+## 2026-03-31 18:08 America/New_York
+
+### Seam class
+- corrected-propagator decoherence
+- measurement repair / rerun
+
+### Science impact
+- fixed four exposed measurement/implementation issues in:
+  - `/Users/jonreilly/Projects/Physics/scripts/two_register_decoherence.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/between_slit_decoherence.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/mass_scaling_momentum.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/constant_deflection_derivation.py`
+- the main science correction is on the endogenous node-environment lane:
+  - the old `D=0% at all connectivities` read does **not** survive once the shared two-register helper really keeps the last mass node as the env label and the between-slit mass nodes are left traversable
+  - current reruns now say the node-env mechanism is weak and geometry-sensitive, not impossible:
+    - downstream two-register: `G:3/12 I:12/12 D:4/12 ALL:1/12`
+    - slit-adjacent mass: `G:8/12 I:12/12 D:1/12 ALL:1/12`
+    - between-slit mass: `G:9/12 I:12/12 D:1/12 ALL:1/12`
+    - connectivity sweep: decoherence rises from `0%` on sparse slices to `50%` on the densest tested slice
+- two other narrative cleanups landed too:
+  - the generated-DAG half of `mass_scaling_momentum.py` is now labeled honestly as detector-centroid shift rather than `Δky`
+  - `constant_deflection_derivation.py` now probes a real compact-source field and nonzero transverse gradient instead of leaving the first two checks trivially zero
+
+### Current state
+- the corrected unitary core still stands
+- the non-unitary side is now narrower in a more precise way:
+  - no retained strong endogenous decoherence law yet
+  - but also no longer a theorem-like universal `0%` null for the node-env architecture
+
+### Strongest confirmed conclusion
+The right current read is not “endogenous decoherence is impossible.” It is: the simple node-environment register is real but weak, geometry-sensitive, and still not a retained all-three mechanism.
+
+### Exact next step
+- refresh the canonical narrative around decoherence:
+  - keep the unitary/non-unitary split
+  - retract the old universal-null theorem wording
+  - treat node-env decoherence as a weak surviving branch rather than a closed dead end
+
+## 2026-03-31 16:56 America/New_York
+
+### Seam class
+- generated-DAG field coupling
+- live-vs-frozen source compare
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/generated_dag_live_source_field_compare.py`
+- rendered:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-31-generated-dag-live-source-field-compare-last3.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-31-generated-dag-live-source-field-compare-last6.txt`
+- this directly targets the field-to-pattern gap from the axiom audit by comparing the same mature source packet under:
+  - frozen recent footprint
+  - live sliding recent footprint during the mover run
+- the current same-framework read is now sharper than before:
+  - on current code, the narrow `last3` footprint no longer carries a positive retained steering mean even in the frozen surrogate (`mean_signed_shift = -0.0811`)
+  - making that narrow source live weakens it further (`mean_delta = -0.4315`, live `mean_signed_shift = -0.5125`)
+  - the broad `last6` footprint is now the positive current frozen baseline (`mean_signed_shift = +0.4736`)
+  - crucially, that broad retained branch mostly survives the stronger same-framework version:
+    - live `last6` stays positive at `+0.4420`
+    - paired mean delta is only `-0.0317`
+    - directional score drops only modestly (`0.4263 -> 0.3713`)
+- so the live-source result is not “everything collapses when unfrozen”; it is more specific:
+  - narrow recent-footprint steering is still living on a frozen-source surrogate
+  - the current broad retained source branch already survives a live-field version in substance
+
+### Current state
+- this stayed on one bounded gap-3 question and did not reopen broad scanning
+- the unrelated local `README.md` edit remains intentionally untouched
+
+### Strongest confirmed conclusion
+The field-to-pattern arrow is stronger than the frozen-source criticism alone would suggest, but only on the current broad source branch. In current code, `last6` survives live regeneration in substance while `last3` does not.
+
+### Exact next step
+- compress what the broad live `last6` branch is actually doing that the narrow live `last3` branch loses:
+  - compare live `last6` positive rows against live `last3` failures
+  - isolate whether the retained difference is extra corridor support, extra on-packet field, or a broader retiming envelope
+
 ## 2026-03-31 16:34 America/New_York
 
 ### Seam class

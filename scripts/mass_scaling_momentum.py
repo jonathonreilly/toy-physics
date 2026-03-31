@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Does Δky scale linearly with mass (number of persistent nodes)?
+"""Does the gravity response scale linearly with mass (number of persistent nodes)?
 
-Real gravity: F ∝ M. If Δky ∝ n_mass, the model produces mass-proportional
-gravitational deflection — a key bridge to known physics.
+On the rectangular grid we can measure the response in momentum space via Δky.
+On generated DAGs, detector nodes are irregularly spaced, so this script falls
+back to the detector-centroid shift as a geometry-side proxy.
 
 Test on rectangular grid (clean geometry) and generated DAGs.
 
@@ -148,10 +149,10 @@ def main():
     # TEST 3: On generated DAGs
     # ================================================================
     print()
-    print("TEST 3: Δky vs n_mass on generated DAGs (5 seeds)")
+    print("TEST 3: detector centroid shift vs n_mass on generated DAGs (5 seeds)")
     print()
 
-    def dag_dky(positions, adj, mass_idx, src, det_idx, k_val):
+    def dag_detector_centroid(positions, adj, mass_idx, src, det_idx, k_val):
         n = len(positions)
         field_m = [0.0]*n
         if mass_idx:
@@ -204,7 +205,7 @@ def main():
                 ea = cmath.exp(1j*k_val*act)/(L**1.0)
                 amps[j] += amps[i]*ea
 
-        # Centroid y at detector
+        # Position-space detector centroid on the irregular detector set.
         probs = {d: abs(amps[d])**2 for d in det_idx}
         total = sum(probs.values())
         if total > 0:
@@ -242,8 +243,8 @@ def main():
                 continue
 
             for kv in [3.0, 5.0, 7.0]:
-                cy_free = dag_dky(positions, adj, [], src, det, kv)
-                cy_mass = dag_dky(positions, adj, mass, src, det, kv)
+                cy_free = dag_detector_centroid(positions, adj, [], src, det, kv)
+                cy_mass = dag_detector_centroid(positions, adj, mass, src, det, kv)
                 shifts.append(cy_mass - cy_free)
 
         if shifts:
@@ -252,7 +253,9 @@ def main():
             print(f"  {target_n:6d}  {mean:+10.4f}  {per_n:+10.4f}")
 
     print()
-    print("If Δky/n_mass ≈ constant: gravitational deflection ∝ mass (F ∝ M)")
+    print("Grid-side Δky is a momentum observable.")
+    print("Generated-DAG side here reports detector-centroid shift as a proxy,")
+    print("not a true momentum-space Δky.")
     print()
     print("TEST COMPLETE")
 

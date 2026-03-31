@@ -2,7 +2,6 @@
 """Why is Δky independent of impact parameter?
 
 Observation: Δky ≈ +10.5 for b=2..20 (nearly constant).
-Real 2D gravity: deflection angle θ ~ M/b.
 
 Hypothesis: On a 2D lattice, the Laplacian Green's function is
 logarithmic: field ~ log(r_max/r). The gradient ~ 1/r.
@@ -13,8 +12,8 @@ This predicts: Δky = const (confirmed) and the constant depends on
 the mass strength (number of mass nodes) but not on b.
 
 Tests:
-1. Verify field ~ log(r) around point mass
-2. Verify gradient ~ 1/r
+1. Probe the field shape around a compact source
+2. Probe the transverse gradient falloff
 3. Compute total action deficit along beam at various b
 4. Check: does action deficit × phase wavenumber predict Δky?
 
@@ -40,9 +39,9 @@ def main():
     nodes = build_rectangular_nodes(width=width, height=height)
     postulates = RulePostulates(phase_per_action=2.0, attenuation_power=1.0)
 
-    # Point mass at center
+    # Compact source at center
     mass_x, mass_y = 40, 0
-    mass_nodes = frozenset([(mass_x, mass_y)])
+    mass_nodes = frozenset((mass_x, y) for y in range(-2, 3))
     rule = derive_local_rule(persistent_nodes=mass_nodes, postulates=postulates)
     field = derive_node_field(nodes, rule)
 
@@ -54,8 +53,8 @@ def main():
     # ================================================================
     # TEST 1: Field vs distance from point mass
     # ================================================================
-    print("TEST 1: Field f(r) around single mass node")
-    print(f"  Mass at ({mass_x}, {mass_y})")
+    print("TEST 1: Field f(r) around compact 5-node source")
+    print(f"  Source centered at ({mass_x}, {mass_y})")
     print()
 
     print(f"  {'r':>4s}  {'f(r)':>10s}  {'log(R/r)':>10s}  {'f/log':>8s}")
@@ -72,19 +71,18 @@ def main():
     # TEST 2: Field gradient (df/dy) along beam at y=0
     # ================================================================
     print()
-    print("TEST 2: Field gradient ∂f/∂y at y=0, various x")
+    print("TEST 2: Field gradient ∂f/∂y at x=mass_x, various impact parameters b")
     print()
 
-    print(f"  {'x':>4s}  {'r':>4s}  {'df/dy':>12s}  {'1/r':>8s}  {'df×r':>8s}")
+    print(f"  {'b':>4s}  {'df/dy':>12s}  {'1/b':>8s}  {'df×b':>8s}")
     print(f"  {'-' * 40}")
 
-    for x_off in [1, 2, 3, 5, 8, 10, 15, 20, 25, 30]:
-        x = mass_x + x_off
-        f_above = field.get((x, 1), 0.0)
-        f_below = field.get((x, -1), 0.0)
+    for b in [2, 3, 4, 5, 6, 8, 10, 12, 15, 20]:
+        f_above = field.get((mass_x, b + 1), 0.0)
+        f_below = field.get((mass_x, b - 1), 0.0)
         grad = (f_above - f_below) / 2.0
-        inv_r = 1.0 / x_off if x_off > 0 else 0
-        print(f"  {x:4d}  {x_off:4d}  {grad:+12.6f}  {inv_r:8.4f}  {grad*x_off:+8.4f}")
+        inv_b = 1.0 / b if b > 0 else 0
+        print(f"  {b:4d}  {grad:+12.6f}  {inv_b:8.4f}  {grad*b:+8.4f}")
 
     # ================================================================
     # TEST 3: Total action deficit along beam at impact parameter b
@@ -94,10 +92,7 @@ def main():
     print("  Action deficit per edge: ΔS = S(f) - S(0) ≈ -L√(2f)")
     print()
 
-    # Multi-node mass for stronger signal
-    mass_5 = frozenset((mass_x, y) for y in range(-2, 3))
-    rule_5 = derive_local_rule(persistent_nodes=mass_5, postulates=postulates)
-    field_5 = derive_node_field(nodes, rule_5)
+    field_5 = field
 
     print(f"  {'b':>4s}  {'total_ΔS':>12s}  {'n_edges':>8s}  {'ΔS/edge':>10s}  {'ΔS×const':>10s}")
     print(f"  {'-' * 48}")
@@ -147,8 +142,8 @@ def main():
     print("=" * 70)
     print()
     print("On a 2D lattice with Laplacian relaxation:")
-    print("  field f(r) ~ C × log(R/r)  for point mass")
-    print("  gradient ∂f/∂y ~ C/r  at distance r from mass")
+    print("  a compact source is expected to generate an approximately")
+    print("  logarithmic far field with roughly 1/r transverse gradient")
     print()
     print("Action deficit per edge at field f:")
     print("  ΔS = L(1+f) - L√((1+f)²-1) - L ≈ -L√(2f)  for f<<1")
@@ -178,9 +173,8 @@ def main():
     print("Observed: Δky varies from +10.7 (b=4) to +9.0 (b=20) = 1.2× ratio")
     print("Predicted: ~2.1× ratio from √(log(R/b))")
     print()
-    print("The weak b-dependence is explained by the logarithmic field profile:")
-    print("the 2D Laplacian Green's function concentrates the field change")
-    print("near the mass, making the deflection nearly b-independent.")
+    print("The weak b-dependence is consistent with a slowly varying")
+    print("log-like field profile plus path averaging near the source.")
     print()
     print("TEST COMPLETE")
 

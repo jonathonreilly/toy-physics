@@ -8,20 +8,15 @@ of freedom that entangles with passing amplitude.
 Architecture:
 - System register: amplitude ψ(node) propagates source → detector
 - Environment register: at each mass node, a local state |e⟩ that
-  couples to the system. Different arrival directions create
-  different environment states.
+  couples to the system.
 - The full state is ψ(node, env). At the detector, we trace over env:
   P(det) = Σ_env |ψ(det, env)|²
 
-If slit-A and slit-B create orthogonal environment states at the mass,
-the cross-term vanishes → full decoherence. If the states overlap,
-partial decoherence.
-
 Implementation:
-- env is labeled by a tuple of (mass_node, direction) pairs encountered
-- This is exponential in path length, so we approximate:
-  env = hash of the LAST mass node + direction encountered
-- Different slits produce different last-mass-interaction → different env
+- env is the LAST mass node encountered along the path
+- This is a bounded approximation to richer environment histories
+- Different slits can decohere only if they preferentially traverse
+  different mass nodes
 - Trace = sum |ψ(det, env)|² over all env labels
 
 PStack experiment: two-register-decoherence
@@ -108,14 +103,8 @@ def pathsum_two_register(positions, adj, field, src, det, k, mass_set,
 
         # Propagate each env state to neighbors (don't delete — det nodes need to keep their amp)
         for env, amp in entries.items():
-            # If this is a mass node, update the environment label
-            # Y-BIN env: label = sign of (mass_y - mass_center)
-            if i in mass_set:
-                all_my = [positions[m][1] for m in mass_set]
-                mc = sum(all_my)/len(all_my)
-                new_env = 1 if positions[i][1] > mc else -1
-            else:
-                new_env = env
+            # Fine env: retain the exact last mass node encountered.
+            new_env = i if i in mass_set else env
 
             for j in adj.get(i, []):
                 if j in blocked:

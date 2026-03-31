@@ -253,7 +253,9 @@ def main():
         field = compute_field(positions, adj, list(full_mass))
         free_f = [0.0]*n
 
-        blocked = set(bi) - si
+        # Leave the mass nodes traversable; otherwise the env-carrying nodes are
+        # unreachable by construction and the test collapses to a forced null.
+        blocked = set(bi) - (si | mass_set)
 
         # ---- GRAVITY ----
         grav_shifts = []
@@ -315,8 +317,9 @@ def main():
         print(f"  G:{gy}/{nv} I:{iy}/{nv} D:{dy}/{nv} ALL:{a3}/{nv}")
 
     print()
-    print("GEOMETRY: mass between slits → each slit couples to different mass nodes")
-    print("→ env distinguishes which slit → partial trace produces decoherence")
+    print("GEOMETRY: mass channels remain open in the barrier layer")
+    print("→ if the slit branches traverse different barrier-mass nodes, the")
+    print("  env can distinguish them and the partial trace can decohere them")
     print()
     print("TEST COMPLETE")
 
