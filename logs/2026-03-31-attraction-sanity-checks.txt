@@ -1,0 +1,87 @@
+================================================================================
+SANITY CHECKS: (1+field)^p attenuation-based attraction
+================================================================================
+
+TEST 1: Amplitude stability
+  Does (1+field)^p cause exponential blow-up?
+
+     x         |amp|    |amp|_free     ratio
+  ------------------------------------------
+     5    6.2898e+00    5.5633e+00      1.13
+    10    1.6156e+03    4.5903e+01     35.20
+    15    3.5554e+05    1.7823e+03    199.48
+    20    5.9599e+08    9.7621e+04   6105.15
+    25    3.0876e+12    6.1048e+06  505770.06
+    30    1.4304e+16    4.0065e+08  35702200.95
+    35    3.0093e+18    2.7019e+10  111375891.58
+    40    1.2946e+20    1.8411e+12  70316632.08
+
+  Max |amp| with mass: 8.1126e+23
+  Max |amp| free:     1.1161e+14
+  Ratio:              7268868607.43
+  Blow-up? YES — UNSTABLE
+
+TEST 2: Distance falloff — attraction vs mass distance
+
+  y_center  distance   avg_shift
+  --------------------------------
+         2         2      +6.758
+         3         3      +6.605
+         4         4      +6.916
+         5         5      +7.664
+         6         6      +8.286
+         8         8      +9.082
+        10        10     +12.041
+        12        12     +13.176
+        14        14     +13.123
+
+  Checking 1/r falloff:
+    d= 3: shift_ratio=0.977, 1/r_expected=0.667
+    d= 4: shift_ratio=1.023, 1/r_expected=0.500
+    d= 5: shift_ratio=1.134, 1/r_expected=0.400
+    d= 6: shift_ratio=1.226, 1/r_expected=0.333
+    d= 8: shift_ratio=1.344, 1/r_expected=0.250
+    d=10: shift_ratio=1.782, 1/r_expected=0.200
+    d=12: shift_ratio=1.950, 1/r_expected=0.167
+    d=14: shift_ratio=1.942, 1/r_expected=0.143
+
+TEST 3: Sorkin I₃ with boosted attenuation (Born rule)
+  I₃=0 → Born rule preserved, I₃≠0 → violated
+
+  Max |I₃|:  3.92e+22
+  Mean |I₃|: 1.16e+22
+  Max P:     8.48e+22
+  |I₃|/P:   4.62e-01
+  Born rule: VIOLATED
+
+TEST 4: Two-slit interference visibility (does boost kill fringes?)
+
+  Peaks: 2, Troughs: 1
+  Max peak: 0.109504, Min trough: 0.000052
+  Visibility V = 0.9991
+  Interference: YES
+
+TEST 5: Does mass attract AND produce interference simultaneously?
+
+  Pattern shift (attraction): +13.556
+  Interference visibility: V = 0.0000
+  Attraction: YES
+  Interference: no
+  BOTH gravity + interference: no
+
+================================================================================
+PHYSICAL INTERPRETATION
+================================================================================
+
+In GR, the path integral measure includes sqrt(-g), which is
+enhanced in regions of higher gravitational field. The discrete
+analog is (1+field)^p: higher field → more paths 'count' → more
+amplitude survives → probability concentrates near mass.
+
+This is NOT a hack — it's the discrete analog of the metric
+determinant in the path integral measure.
+
+Key: attraction comes from the MEASURE, not the phase.
+Phase determines interference; measure determines localization.
+
+TEST COMPLETE
