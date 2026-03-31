@@ -1,3 +1,43 @@
+## 2026-03-31 16:34 America/New_York
+
+### Seam class
+- architecture audit
+- axiom status matrix
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/model_axiom_audit.py`
+- rendered the canonical audit at `/Users/jonreilly/Projects/Physics/logs/2026-03-31-model-axiom-audit.txt`
+- converted the current project state into four explicit architecture artifacts:
+  - axiom status matrix
+  - layer / coupling map
+  - retained core vs provisional branches
+  - top frontier gaps
+- the main retained zoom-out read is now explicit:
+  - the project is no longer bottlenecked mainly by one more local phenomenon
+  - the retained core is already strong enough to state a viable Born-safe path-sum sector, a retained phase-driven gravity sector, and a shared completion/balance mechanism language bridging geometry and generated DAGs
+  - the real frontier is to make more of that architecture endogenous
+- the newest decoherence merge sharpens the same architecture story rather than changing it:
+  - the unitary sector is comparatively well constrained
+  - the non-unitary sector is now better read as an axiom-level gap than as a missing small tweak inside the current propagator
+- the newest momentum-space merge sharpens the retained core in the opposite direction:
+  - the 2D gravity side is cleaner, with the near-constant `Δky` read now explained as log-field plus path averaging rather than left as a loose anomaly
+- top axiom-level gaps now recorded directly:
+  - graph evolution should generate more of the physics
+  - durable record formation needs a true endogenous mechanism
+  - persistent movers need to feel the field in the same framework
+
+### Current state
+- this was a zoom-out architecture pass, not a new broad experiment burst
+- the unrelated local `README.md` edit remains intentionally untouched
+
+### Strongest confirmed conclusion
+The theory bottleneck is architectural clarity. The repo now has an explicit audit showing what is implemented and retained, what is only partly tested, what is still selected rather than derived, and where the next month of work should actually go. The newest decoherence lane strengthens that read by constraining the current non-unitary side instead of broadening it.
+
+### Exact next step
+- use the audit as the decision map before reopening local sweeps:
+  - either push graph-growth-generated physics harder
+  - or target one of the two weaker arrows directly: endogenous records, or full field-to-pattern coupling
+
 ## 2026-03-31 16:16 America/New_York
 
 ### Seam class

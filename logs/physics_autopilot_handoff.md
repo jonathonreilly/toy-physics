@@ -1,5 +1,38 @@
 # Physics Autopilot Handoff
 
+## 2026-03-31 16:34 America/New_York
+
+### Seam class
+- architecture audit
+- axiom status matrix
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/model_axiom_audit.py`
+- wrote the canonical audit to `/Users/jonreilly/Projects/Physics/logs/2026-03-31-model-axiom-audit.txt`
+- the repo now has one explicit zoom-out artifact with:
+  - axiom status matrix
+  - layer / coupling map
+  - retained core vs provisional branches
+  - top frontier gaps
+- the retained architecture read is:
+  - core retained sectors: Born-safe path-sum, corrected phase-driven gravity, shared completion/balance mechanism language
+  - main weak arrows: graph growth generating more of the physics, durable endogenous records, full field-to-pattern coupling
+  - latest decoherence merges sharpen the same split: the unitary sector is comparatively retained, while the non-unitary sector still lacks a retained endogenous mechanism
+  - latest momentum-space merge sharpens the retained gravity side too: the current 2D momentum kick is now better read as log-field plus path averaging than as an unresolved artifact
+
+### Current state
+- this pass intentionally did not reopen a broad experiment search
+- the unrelated local `README.md` edit remains intentionally untouched
+
+### Strongest confirmed conclusion
+The project is currently bottlenecked more by architectural clarity than by one more local sweep. The right next month-scale frontier is now explicit at the axiom/layer level, and the newest decoherence results reinforce that by constraining the current non-unitary side rather than expanding it.
+
+### Exact next step
+- use the audit to choose the next deep lane deliberately:
+  - graph-growth-first generation of later physics
+  - endogenous durable record formation
+  - stronger shared field-to-pattern dynamics on the coherent mover substrate
+
 ## 2026-03-31 16:16 America/New_York
 
 ### Seam class
