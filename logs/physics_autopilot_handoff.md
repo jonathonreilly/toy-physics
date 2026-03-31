@@ -1,5 +1,38 @@
 # Physics Autopilot Handoff
 
+## 2026-03-31 13:18 America/New_York
+
+### Seam class
+- generated-DAG field coupling
+- wide-rule local sign-flip compare
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/generated_dag_pattern_sourced_rule_local_flip_compare.py`
+- wrote the wide-branch rule-local compare to `/Users/jonreilly/Projects/Physics/logs/2026-03-31-generated-dag-rule-local-late-support-flip-compare-wide.txt`
+- the pooled residual really does sharpen on the `wide` mover rule:
+  - `24` retained rows total
+  - `14` flip to away under `last6_union`
+  - `10` stay toward-source
+- the cleanest practical wide-local separator is now:
+  - `extra_field_mean_on_packet <= 0.0010`
+  - discovery `0.7500`, holdout `0.7500`
+  - matched side: `13/20` flips, mean `last6_shift = -0.5887`
+  - unmatched side: `1/4` flips, mean `last6_shift = +1.0485`
+- the same separator does not carry the same meaning on the `self` contrast branch:
+  - matched side: `14/32` flips
+  - unmatched side: `5/15` flips
+- so the retained read is mover-rule-local: on `wide`, the problem is not just more extra support, but extra support that fails to project enough added field onto the tracked packet
+
+### Current state
+- this loop stayed bounded to the `wide` residual branch
+- the unrelated local `README.md` edit was left untouched on purpose
+
+### Strongest confirmed conclusion
+The `wide` branch now has a cleaner mechanism story than the pooled residual: added-support geometry matters mainly through how much extra field actually lands on the packet. Low added packet-field is the live wide-rule flip condition.
+
+### Exact next step
+- run the same rule-local compare on the `self` branch to see whether its remaining residual obeys a different late-support geometry or whether the wide-rule-local added-field story is the only retained exception class
+
 ## 2026-03-31 13:06 America/New_York
 
 ### Seam class

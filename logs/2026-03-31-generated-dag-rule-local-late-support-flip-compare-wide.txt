@@ -1,0 +1,33 @@
+================================================================================
+GENERATED DAG RULE-LOCAL LATE-SUPPORT FLIP COMPARE
+================================================================================
+mover_rule=wide rows=24 neighbor_radius=2.5 coupling=3.000
+Discovery configs: ['dense-25', 'sparse-25']; holdout configs: ['long-30', 'wide-15']
+
+stable_toward: total=10 mean_last3_shift=7.5209 mean_last6_shift=5.1469 extra_share=0.3381 extra_corridor=0.4310 extra_forward_gap=0.0177 extra_fringe_gap=0.0235
+flip_to_away: total=14 mean_last3_shift=3.6722 mean_last6_shift=-4.2177 extra_share=0.3409 extra_corridor=0.3069 extra_forward_gap=0.0096 extra_fringe_gap=0.0098
+
+Rule-local config breakdown:
+  dense-25: total=5 flips=3 stays=2 flip_fraction=0.6000 mean_last6_shift=-1.5582
+  long-30: total=4 flips=3 stays=1 flip_fraction=0.7500 mean_last6_shift=-2.6873
+  sparse-25: total=7 flips=4 stays=3 flip_fraction=0.5714 mean_last6_shift=-1.2498
+  wide-15: total=8 flips=4 stays=4 flip_fraction=0.5000 mean_last6_shift=2.4637
+
+Top single-threshold discovery rules for the sign flip:
+  extra_support_share >= 0.2363 (discovery=0.8333, holdout=0.5000)
+  extra_field_mean_on_packet <= 0.0010 (discovery=0.7500, holdout=0.7500)
+  extra_support_signed_side <= 1.0183 (discovery=0.7500, holdout=0.6667)
+  extra_field_range_on_packet <= 0.0021 (discovery=0.7500, holdout=0.6667)
+  extra_field_range_on_packet <= 0.0048 (discovery=0.7500, holdout=0.5833)
+
+Best single-rule split on the target branch:
+  matched: total=20 flips=13 stays=7 flip_fraction=0.6500 mean_last6_shift=-0.5887 | unmatched: total=4 flips=1 stays=3 flip_fraction=0.2500 mean_last6_shift=1.0485
+
+Best two-feature discovery rule for the sign flip:
+  extra_support_share >= 0.2363 and extra_support_corridor_share <= 0.6835 (discovery=0.9167, holdout=0.5833)
+
+Same best single rule on contrast branch (self):
+  matched: total=32 flips=14 stays=18 flip_fraction=0.4375 mean_last6_shift=0.3548 | unmatched: total=15 flips=5 stays=10 flip_fraction=0.3333 mean_last6_shift=1.0264
+
+Interpretation:
+  This rule-local compare asks whether the pooled residual was hiding a cleaner mover-rule-specific added-support geometry. The main target is the wide-rule branch, where the pooled flip fraction was largest.

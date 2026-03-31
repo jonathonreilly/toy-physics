@@ -1,3 +1,36 @@
+## 2026-03-31 13:18 America/New_York
+
+### Seam class
+- generated-DAG field coupling
+- wide-rule local sign-flip compare
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/generated_dag_pattern_sourced_rule_local_flip_compare.py`
+- rendered the wide-branch rule-local compare at `/Users/jonreilly/Projects/Physics/logs/2026-03-31-generated-dag-rule-local-late-support-flip-compare-wide.txt`
+- the pooled residual really does sharpen on the `wide` mover branch:
+  - `24` retained rows total
+  - `14` flip to away under `last6_union`
+  - `10` stay toward-source
+- the cleanest practical branch-local separator is no longer raw added-support size:
+  - `extra_field_mean_on_packet <= 0.0010` gives `0.7500` discovery accuracy and `0.7500` holdout accuracy
+  - branch-local split under that rule: `13/20` flips on the low-added-field side vs `1/4` flips on the higher-added-field side
+- the same rule does not behave comparably on the `self` contrast branch:
+  - `14/32` flips on the matched side vs `5/15` on the unmatched side
+  - so this is a real wide-rule-local effect, not a universal late-support law
+- the physical read is sharper too:
+  - on `wide`, stable rows carry more corridor-focused added support and more added field actually landing on the tracked packet
+  - flip rows carry comparable added-support share but weaker added field on the packet itself
+
+### Current state
+- this loop stayed bounded to the retained `wide` residual branch rather than reopening pooled threshold hunting
+- the unrelated local `README.md` edit was intentionally left alone
+
+### Strongest confirmed conclusion
+The `wide` mover-rule residual is not mainly “too much extra support.” It is “extra support that fails to project enough additional field onto the tracked packet.” That closes the next mechanism step more cleanly than the pooled compare.
+
+### Exact next step
+- mirror the same rule-local compare on the `self` branch to determine whether its remaining residual is governed by a different late-support geometry, or whether the wide-rule-local added-field story is the only retained exception class
+
 ## 2026-03-31 13:06 America/New_York
 
 ### Seam class
