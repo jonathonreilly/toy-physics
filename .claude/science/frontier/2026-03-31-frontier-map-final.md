@@ -1,7 +1,7 @@
 # Frontier Map: 2026-03-31 (Session Close)
 
 ## Session Summary
-- **56 experiments** over one extended session
+- **60 experiments** over one extended session
 - **4 code review bugs fixed** (two_register env, mass_scaling label, between_slit geometry, constant_deflection field)
 - **Key breakthrough**: corrected propagator (1/L^p) + two-register decoherence at proper geometry
 
@@ -21,6 +21,10 @@
 | 10 | ALL THREE not structurally predictable | Best predictor r=0.24 (slit_mass_asym) |
 | 11 | Attraction corridor | deg ∈ [2,14] × gradient ∈ [0.09, 0.67] |
 | 12 | mass_overlap predicts decoherence susceptibility | R²=0.50 |
+| 13 | Regular lattice: D=0% (symmetry blocks env selectivity) | V_coh=0.997 but V_2reg=0.997 |
+| 14 | Fringes survive mass on lattice | V_mass=1.0 across k=0.5..8.0 |
+| 15 | Dual mass clusters worse than single | D=1/15 vs D=5/15 |
+| 16 | Δky mass-independent | Threshold effect, not F∝M |
 
 ## Dead Ends (do not revisit)
 
