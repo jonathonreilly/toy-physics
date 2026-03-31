@@ -1,0 +1,96 @@
+================================================================================
+PERTURBATIVE ATTRACTION DERIVATION
+  Grid: 50x41, mass at x=25 y=4..8
+================================================================================
+
+TEST 1: Shift vs k — is it linear?
+
+       k       shift     shift/k    shift/k²
+  ------------------------------------------
+   0.010    +0.00208      +0.208       +20.8
+   0.020    +0.00834      +0.417       +20.9
+   0.050    +0.05231      +1.046       +20.9
+   0.100    +0.21163      +2.116       +21.2
+   0.150    +0.48493      +3.233       +21.6
+   0.200    +0.88308      +4.415       +22.1
+   0.300    +2.10831      +7.028       +23.4
+   0.500    +6.46201     +12.924       +25.8
+   0.700   +11.97155     +17.102       +24.4
+   1.000   +17.18639     +17.186       +17.2
+
+  shift/k: mean=6.568, std=6.393, CV=0.973
+  → shift ∝ k² better fit (CV=0.103)
+
+TEST 2: Action asymmetry vs measured shift
+
+  Mean action asymmetry (above - below): -0.093651
+  Edges above: 4000, below: 4000
+  Measured shift at k=0.1: +0.211631
+  Predicted direction: away from mass
+  Actual direction: toward mass
+  Match: NO
+
+TEST 3: Does shift track action asymmetry across mass positions?
+  k=0.1, mass = 3 nodes at x=25, varying y-center
+
+  y_center     Δaction       shift       ratio
+  --------------------------------------------
+       -10   +0.117484   -0.303151      -2.580
+        -6   +0.083379   -0.161197      -1.933
+        -3   +0.045521   -0.062345      -1.370
+         0   -0.000000   +0.000000      +0.000
+         3   -0.045521   +0.062345      -1.370
+         6   -0.083379   +0.161197      -1.933
+        10   -0.117484   +0.303151      -2.580
+
+================================================================================
+ANALYTICAL DERIVATION
+================================================================================
+
+For weak field (f << 1), spent_delay action per edge:
+  S = L(1+f) - sqrt(L²(1+f)² - L²)
+  S = L(1+f) - L*sqrt((1+f)² - 1)
+  S = L(1+f) - L*sqrt(2f + f²)
+  S ≈ L(1+f) - L*sqrt(2f)  (for f << 1)
+  S ≈ L + Lf - L*sqrt(2f)
+
+At f=0: S₀ = L - 0 = L (wait, that's wrong)
+At f=0: delay=L, retained=0, S=L. But this means ALL edges
+have action=L at zero field, and the field creates a PERTURBATION.
+
+Numerical check: action vs field for L=1 (axial hop):
+         f     delay  retained         S       S-L
+  --------------------------------------------
+     0.000    1.0000    0.0000   1.00000  +0.00000
+     0.010    1.0100    0.1418   0.86823  -0.13177
+     0.020    1.0200    0.2010   0.81900  -0.18100
+     0.050    1.0500    0.3202   0.72984  -0.27016
+     0.100    1.1000    0.4583   0.64174  -0.35826
+     0.200    1.2000    0.6633   0.53668  -0.46332
+     0.500    1.5000    1.1180   0.38197  -0.61803
+     1.000    2.0000    1.7321   0.26795  -0.73205
+
+For L=sqrt(2) (diagonal hop):
+         f         S       S-L
+  ----------------------------
+     0.000   1.41421  +0.00000
+     0.010   1.22786  -0.18636
+     0.050   1.03215  -0.38206
+     0.100   0.90756  -0.50665
+     0.200   0.75897  -0.65524
+
+KEY INSIGHT: action DECREASES with field (ΔS < 0 for f > 0)
+  S(f) = L(1+f) - L*sqrt(2f+f²)
+  ΔS = S(f) - S(0) = Lf - L*sqrt(2f+f²)
+  For f<<1: ΔS ≈ -L*sqrt(2f) < 0
+
+This means: edges in HIGH-field regions have LESS action → LESS phase.
+The mass creates a 'phase valley' — paths through it accumulate less phase.
+The beam concentrates WHERE phase accumulation is LESS (constructive
+interference in the low-phase-accumulation region = near the mass).
+
+This is the OPPOSITE of what I assumed earlier!
+The attraction isn't from 'more phase on one side creates gradient.'
+It's from 'less phase near mass → constructive interference there.'
+
+TEST COMPLETE
