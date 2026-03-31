@@ -168,8 +168,15 @@ def main():
     free_rule = derive_local_rule(persistent_nodes=frozenset(), postulates=postulates)
     free_field = derive_node_field(nodes, free_rule)
 
-    arrival = infer_arrival_times_from_source(nodes, source, free_rule)
-    dag = build_causal_dag(nodes, arrival)
+    # Use MASS rule for arrival times so DAG matches the field
+    mass_arrival = infer_arrival_times_from_source(nodes, source, rule)
+    mass_dag = build_causal_dag(nodes, mass_arrival)
+    # Also keep free versions for gravity comparison
+    free_arrival = infer_arrival_times_from_source(nodes, source, free_rule)
+    free_dag = build_causal_dag(nodes, free_arrival)
+    # Use mass DAG for interference tests (mass present)
+    arrival = mass_arrival
+    dag = mass_dag
 
     print("=" * 70)
     print("TWO-REGISTER DECOHERENCE ON RECTANGULAR LATTICE")
@@ -200,10 +207,10 @@ def main():
     # Gravity check
     print()
     p_free = propagate_coherent_grid(
-        nodes, source, free_field, free_rule, dag, arrival,
+        nodes, source, free_field, free_rule, free_dag, free_arrival,
         set(), screen_ys, det_x)
     p_mass = propagate_two_register_grid(
-        nodes, source, mass_field, rule, dag, arrival,
+        nodes, source, mass_field, rule, mass_dag, mass_arrival,
         set(), mass_set, screen_ys, det_x, "fine")
 
     fcy = sum(y * p for y, p in p_free.items())
@@ -222,11 +229,13 @@ def main():
         mr = derive_local_rule(persistent_nodes=mn, postulates=postulates)
         mf = derive_node_field(nodes, mr)
 
+        sweep_arrival = infer_arrival_times_from_source(nodes, source, mr)
+        sweep_dag = build_causal_dag(nodes, sweep_arrival)
         pc = propagate_coherent_grid(
-            nodes, source, mf, mr, dag, arrival,
+            nodes, source, mf, mr, sweep_dag, sweep_arrival,
             blocked, screen_ys, det_x)
         p2 = propagate_two_register_grid(
-            nodes, source, mf, mr, dag, arrival,
+            nodes, source, mf, mr, sweep_dag, sweep_arrival,
             blocked, ms, screen_ys, det_x, "fine")
 
         vc = visibility(pc)
