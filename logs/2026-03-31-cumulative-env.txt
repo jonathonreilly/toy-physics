@@ -1,0 +1,22 @@
+======================================================================
+CUMULATIVE PHASE ENVIRONMENT: purity vs graph size
+  env = binned cumulative action through mass
+======================================================================
+
+  n_layers  n_nodes  pur_node   pur_cum  n_valid
+  --------------------------------------------
+         6      126    0.5698    0.6268        7
+         8      176    0.7060    0.7531        7
+        10      226    0.7088    0.7658        8
+        12      276    0.7738    0.8066        8
+        15      351    0.8094    0.8259        8
+        18      426    0.8148    0.8438        7
+        20      476    0.8304    0.8462        7
+        25      601    0.8858    0.8856        8
+
+pur_node = node-label env (original)
+pur_cum = cumulative action env (new)
+
+If pur_cum decreases with n_layers: cumulative env fixes the scaling
+
+TEST COMPLETE
