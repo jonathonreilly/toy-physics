@@ -1,3 +1,37 @@
+## 2026-03-30 22:00 America/New_York
+
+### Seam class
+- PStack session revalidation after Codex P1/P2/P3 bug fixes
+- corrected topological decoherence: genuine V-decrease with per-slit recording
+- corrected generative graph: dag_ratio=1.0 (perfect causal order, not 0.5)
+
+### Science impact (post-revalidation corrections)
+- **Topological decoherence CORRECTED**: per-slit recording produces genuine decoherence (V decreases monotonically for 0<p<1), with non-monotonic jump at p=1.0 (single branch, enhanced V from shortcuts). Maximum decoherence at intermediate p, not at full recording. Functional form much flatter than trivial V₀(1-p).
+- **Generative graph CORRECTED**: dag_ratio = 1.0 (all edges forward in spawn order). The graph has PERFECT causal order — the original "no time arrow" conclusion was from a double-counting bug.
+- **Three conclusions CONFIRMED unchanged**: gravity damping exonerated (fixed geometry, same answer), period-3 oscillators (stricter classifier), mutual gravitation (path resampling didn't affect these geometries).
+
+### Session totals (PStack pipeline)
+- 33 experiments + 5 revalidation reruns
+- 20 new scripts, 20+ new logs
+- 14 PStack skills installed in .claude/commands/
+- All on origin/main
+
+### Strongest confirmed conclusions (post-revalidation)
+1. Interference = topology, gravity = field — independent on fixed DAG
+2. Born rule derived from linearity + reversibility (5 irreducible assumptions)
+3. Continuum limit via connectivity (anisotropy ~ 1/n_directions)
+4. Interference emerges on randomly generated causal DAGs
+5. Topological decoherence is genuine but non-monotonic (max decoherence at intermediate p)
+6. Generative graphs have perfect causal order from spawn dynamics
+
+### Exact next step
+- Characterize the corrected decoherence curve's functional form analytically
+- Test gravity on the generated causal DAG (does the randomly grown graph also produce gravitational lensing?)
+- Three-slit topological decoherence (more environment states → different decoherence profile)
+
+### First concrete action
+- Run gravity on the generative DAG from experiment #33 — place persistent nodes and measure path bending on the random graph
+
 ## 2026-03-30 20:02 America/New_York
 
 ### Seam class
