@@ -1,3 +1,39 @@
+## 2026-03-31 15:14 America/New_York
+
+### Seam class
+- generated-DAG field coupling
+- self-rule local sign-flip compare
+
+### Science impact
+- hardened `/Users/jonreilly/Projects/Physics/scripts/generated_dag_pattern_sourced_late_support_flip_compare.py` so the row runner falls back to serial execution when multiprocessing is denied by the sandbox
+- generalized `/Users/jonreilly/Projects/Physics/scripts/generated_dag_pattern_sourced_rule_local_flip_compare.py` so non-`wide` target branches describe the selected branch correctly
+- rendered the self-branch rule-local compare at `/Users/jonreilly/Projects/Physics/logs/2026-03-31-generated-dag-rule-local-late-support-flip-compare-self.txt`
+- the `self` branch does not inherit the `wide` mechanism:
+  - `39` retained rows total
+  - `11` flip to away under `last6_union`
+  - `28` stay toward-source
+- the cleanest retained self-local separator is side-placement on the tracked packet, not raw packet-field magnitude:
+  - `extra_packet_side_gap <= -0.0962` gives `0.8235` discovery accuracy and `0.6818` holdout accuracy
+  - matched side: `2/3` flips with mean `last6_shift = -4.3651`
+  - unmatched side: `9/36` flips with mean `last6_shift = +2.7135`
+- unlike `wide`, the self-local residual is weaker and more config-local:
+  - `sparse-25` is the noisiest self config (`4/8` flips)
+  - the `wide` low-`extra_field_mean_on_packet` rule does not transfer here
+- the physical read is now branch-local:
+  - on `wide`, flips come from extra support that fails to land enough field on the packet
+  - on `self`, the retained flip signal is extra field landing more on the opposite packet side than the intended side
+
+### Current state
+- this loop stayed bounded to the `self` residual branch and included a small runner hardening needed to execute the compare inside the sandbox
+- the unrelated local `README.md` edit was intentionally left alone
+
+### Strongest confirmed conclusion
+The late-support residual is genuinely mover-rule-local. `wide` and `self` do not share one universal added-field law: `wide` flips when extra support fails to land field on the packet at all, while `self` flips more weakly when the added field lands on the wrong side of the packet.
+
+### Exact next step
+- split the `self` branch by config, starting with `sparse-25`, and test whether negative packet-side gap closes more cleanly there than on the pooled self rows
+- first concrete action: extend the rule-local compare with a config-local self summary and render the `sparse-25` self slice
+
 ## 2026-03-31 13:18 America/New_York
 
 ### Seam class

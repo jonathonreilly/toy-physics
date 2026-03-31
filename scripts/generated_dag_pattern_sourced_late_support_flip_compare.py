@@ -523,9 +523,12 @@ def run_rows(
     if workers <= 1:
         return [row for row in (_evaluate_task(task) for task in tasks) if row is not None]
 
-    ctx = mp.get_context("fork")
-    with ProcessPoolExecutor(max_workers=workers, mp_context=ctx) as pool:
-        return [row for row in pool.map(_evaluate_task, tasks) if row is not None]
+    try:
+        ctx = mp.get_context("fork")
+        with ProcessPoolExecutor(max_workers=workers, mp_context=ctx) as pool:
+            return [row for row in pool.map(_evaluate_task, tasks) if row is not None]
+    except PermissionError:
+        return [row for row in (_evaluate_task(task) for task in tasks) if row is not None]
 
 
 def main() -> None:

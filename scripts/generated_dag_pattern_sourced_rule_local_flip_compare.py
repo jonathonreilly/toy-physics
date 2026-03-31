@@ -151,8 +151,9 @@ def main() -> None:
     print("Interpretation:")
     print(
         "  This rule-local compare asks whether the pooled residual was hiding a "
-        "cleaner mover-rule-specific added-support geometry. The main target is the "
-        "wide-rule branch, where the pooled flip fraction was largest."
+        "cleaner mover-rule-specific added-support geometry on the "
+        f"{args.mover_rule}-rule branch. The {args.contrast_rule}-rule branch is "
+        "reported only as a contrast guardrail for the same best single rule."
     )
 
 
