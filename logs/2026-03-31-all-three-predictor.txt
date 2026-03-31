@@ -9,6 +9,10 @@ STRUCTURAL PREDICTOR FOR ALL THREE SEEDS
                predictor   all3_mean  other_mean     ratio      corr
   ----------------------------------------------------------------
           slit_mass_asym     798.400     540.583      1.48   +0.1981
+    last_mass_divergence       1.000       1.000      1.00   +0.0000
+    last_mass_mean_y_gap       2.101       2.392      0.88   -0.0684
+       last_mass_overlap       0.000       0.000      0.00   +0.0000
+     last_mass_same_prob       0.000       0.000      0.00   +0.0000
            mean_mass_deg       9.627      10.658      0.90   -0.1541
            mass_y_spread       4.307       4.382      0.98   -0.0244
                   n_mass       6.800       6.292      1.08   +0.0805

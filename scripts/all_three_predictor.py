@@ -14,6 +14,10 @@ Candidate predictors (measured per seed before running the path-sum):
 6. mass_field_gradient: field gradient at mass region
 7. slit_to_det_path_count: number of distinct paths from slits to detector
 
+This pass also tests a sharper hypothesis: perhaps decoherence depends on
+which mass node each slit's paths exit from last, rather than on coarse
+reachability alone.
+
 PStack experiment: all-three-predictor
 """
 
@@ -66,6 +70,114 @@ def graph_distance(adj, src_nodes, target_nodes, blocked=None):
     return sum(distances)/len(distances) if distances else 999
 
 
+def topological_order(adj, n):
+    """Return a topological order for the DAG."""
+    in_deg = [0] * n
+    for i, nbs in adj.items():
+        for j in nbs:
+            in_deg[j] += 1
+    queue = deque(i for i in range(n) if in_deg[i] == 0)
+    order = []
+    while queue:
+        node = queue.popleft()
+        order.append(node)
+        for nb in adj.get(node, []):
+            in_deg[nb] -= 1
+            if in_deg[nb] == 0:
+                queue.append(nb)
+    return order
+
+
+def reverse_adjacency(adj):
+    """Build reverse adjacency for dynamic path counting."""
+    rev = defaultdict(list)
+    for i, nbs in adj.items():
+        for j in nbs:
+            rev[j].append(i)
+    return rev
+
+
+def path_counts_from_sources(rev_adj, order, sources, blocked=None):
+    """Count distinct paths from a source set to every node."""
+    blocked = blocked or set()
+    source_set = set(sources)
+    counts = defaultdict(int)
+    for s in source_set:
+        if s not in blocked:
+            counts[s] += 1
+    for node in order:
+        if node in blocked or node in source_set:
+            continue
+        total = 0
+        for parent in rev_adj.get(node, []):
+            if parent not in blocked:
+                total += counts[parent]
+        if total:
+            counts[node] = total
+    return counts
+
+
+def path_counts_to_targets(adj, order, targets, blocked=None):
+    """Count distinct paths from every node to a target set."""
+    blocked = blocked or set()
+    target_set = set(targets)
+    counts = defaultdict(int)
+    for t in target_set:
+        if t not in blocked:
+            counts[t] = 1
+    for node in reversed(order):
+        if node in blocked or node in target_set:
+            continue
+        total = 0
+        for nb in adj.get(node, []):
+            if nb not in blocked:
+                total += counts[nb]
+        if total:
+            counts[node] = total
+    return counts
+
+
+def last_mass_distribution(adj, rev_adj, order, slit_nodes, det_nodes, mass_set, blocked=None):
+    """Distribution over the last mass node reached by slit->detector paths."""
+    blocked = blocked or set()
+    to_mass = path_counts_from_sources(rev_adj, order, slit_nodes, blocked)
+
+    weights = {}
+    for mass_node in mass_set:
+        if mass_node in blocked:
+            continue
+        blocked_after = set(blocked) | (set(mass_set) - {mass_node})
+        to_det = path_counts_to_targets(adj, order, det_nodes, blocked_after)
+        weight = to_mass[mass_node] * to_det[mass_node]
+        if weight:
+            weights[mass_node] = weight
+
+    total = sum(weights.values())
+    if total == 0:
+        return {}
+    return {node: weight / total for node, weight in weights.items()}
+
+
+def distribution_overlap(dist_a, dist_b):
+    """Overlap between two discrete distributions."""
+    keys = set(dist_a) | set(dist_b)
+    return sum(min(dist_a.get(k, 0.0), dist_b.get(k, 0.0)) for k in keys)
+
+
+def independent_same_prob(dist_a, dist_b):
+    """Probability two independently sampled paths share the same last mass node."""
+    keys = set(dist_a) | set(dist_b)
+    return sum(dist_a.get(k, 0.0) * dist_b.get(k, 0.0) for k in keys)
+
+
+def mean_y(dist, positions):
+    """Mean y-value of a node distribution."""
+    total = sum(dist.values())
+    if total == 0:
+        return 0.0
+    return sum(positions[node][1] * weight for node, weight in dist.items()) / total
+
+
 def main():
     n_layers = 15
     npl = 25
@@ -90,6 +202,8 @@ def main():
             rng_seed=seed*11+7,
         )
         n = len(positions)
+        order = topological_order(adj, n)
+        rev_adj = reverse_adjacency(adj)
         by_layer = defaultdict(list)
         for idx, (x, y) in enumerate(positions):
             by_layer[round(x)].append(idx)
@@ -181,6 +295,15 @@ def main():
         mass_exclusive = mass_a_only + mass_b_only
         mass_exclusive_frac = mass_exclusive / n_mass if n_mass > 0 else 0
 
+        # 7. Last-mass-node divergence: do slit-A and slit-B exit the mass region
+        # through different final mass nodes?
+        last_a = last_mass_distribution(adj, rev_adj, order, sa, det, mass_set, blocked)
+        last_b = last_mass_distribution(adj, rev_adj, order, sb, det, mass_set, blocked)
+        last_mass_overlap = distribution_overlap(last_a, last_b)
+        last_mass_same_prob = independent_same_prob(last_a, last_b)
+        last_mass_divergence = 1.0 - last_mass_same_prob
+        last_mass_mean_y_gap = abs(mean_y(last_a, positions) - mean_y(last_b, positions))
+
         # --- Run path-sum ---
         grav_shifts = []
         for k in k_band:
@@ -229,6 +352,10 @@ def main():
             'n_mass': n_mass,
             'field_grad': field_grad,
             'mass_exclusive_frac': mass_exclusive_frac,
+            'last_mass_overlap': last_mass_overlap,
+            'last_mass_same_prob': last_mass_same_prob,
+            'last_mass_divergence': last_mass_divergence,
+            'last_mass_mean_y_gap': last_mass_mean_y_gap,
         })
 
     # --- Correlation analysis ---
@@ -238,8 +365,9 @@ def main():
     print(f"  ALL THREE: {len(all3_seeds)}/{len(data)} seeds")
     print()
 
-    predictors = ['slit_mass_asym', 'mean_mass_deg', 'mass_y_spread',
-                  'n_mass', 'field_grad', 'mass_exclusive_frac',
+    predictors = ['slit_mass_asym', 'last_mass_divergence', 'last_mass_mean_y_gap',
+                  'last_mass_overlap', 'last_mass_same_prob', 'mean_mass_deg',
+                  'mass_y_spread', 'n_mass', 'field_grad', 'mass_exclusive_frac',
                   'dist_a_mass', 'dist_b_mass']
 
     print(f"  {'predictor':>22s}  {'all3_mean':>10s}  {'other_mean':>10s}  {'ratio':>8s}  {'corr':>8s}")
