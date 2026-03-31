@@ -21,7 +21,7 @@ import os
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from scripts.generative_causal_dag_interference import generate_causal_dag
+from scripts.generative_causal_dag_interference import causal_order, generate_causal_dag
 
 
 def find_bottleneck(positions, adj, n_layers):
@@ -72,7 +72,7 @@ def pathsum_natural_barrier(
     use this specific crossing edge (the "upper slit").
     """
     n = len(positions)
-    order = sorted(range(n), key=lambda i: arrival[i])
+    order = causal_order(positions, arrival)
 
     # Set of crossing edge parent nodes for phase tracking
     crossing_parents = {i for i, j, _, _ in crossing_edges}

@@ -25,6 +25,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from toy_event_physics import (
     build_rectangular_nodes,
     build_graph_neighbor_lookup,
+    connected_components,
     RulePostulates,
     derive_local_rule,
     derive_node_field,
@@ -94,6 +95,25 @@ def centroid(state):
             sum(y for _, y in state) / len(state))
 
 
+def track_packet_component(state, expected_centroid, nodes, lookup):
+    components = connected_components(
+        frozenset(state),
+        nodes,
+        neighbor_lookup=lookup,
+    )
+    candidates = [component for component in components if 3 <= len(component) <= 12]
+    if not candidates:
+        return None
+    ex, ey = expected_centroid
+    return min(
+        candidates,
+        key=lambda component: (
+            math.dist(centroid(component), (ex, ey)),
+            abs(len(component) - 5),
+        ),
+    )
+
+
 def main() -> None:
     width = 60
     height = 25
@@ -118,6 +138,7 @@ def main() -> None:
         nodes, set(glider), survive, birth, lookup, zero_field, 0.0, steps
     )
     ctrl_c = [centroid(s) for s in control]
+    ctrl_sizes = [len(s) for s in control]
     print(f"CONTROL: ({ctrl_c[0][0]:.1f},{ctrl_c[0][1]:.1f}) → "
           f"({ctrl_c[-1][0]:.1f},{ctrl_c[-1][1]:.1f}), size={len(control[-1])}")
 
@@ -135,31 +156,42 @@ def main() -> None:
 
     for coupling in [0.0, 1.0, 5.0, 10.0]:
         print(f"\n  Coupling = {coupling}:")
-        print(f"  {'mass':>30s}  {'final_x':>8s}  {'final_y':>8s}  {'size':>6s}  "
-              f"{'dy_from_ctrl':>12s}  {'toward?':>7s}")
+        print(f"  {'mass':>30s}  {'pkt_x':>8s}  {'pkt_y':>8s}  {'pkt_sz':>6s}  "
+              f"{'dy_at_mass':>12s}  {'toward?':>7s}")
         print(f"  {'-' * 76}")
 
         for label, mass_nodes in mass_configs:
             rule = derive_local_rule(persistent_nodes=mass_nodes, postulates=postulates)
             field = derive_node_field(nodes, rule)
+            mass_cx = sum(x for x, _ in mass_nodes) / len(mass_nodes)
+            mass_cy = sum(y for _, y in mass_nodes) / len(mass_nodes)
+            interaction_step = min(
+                range(len(ctrl_c)),
+                key=lambda i: abs(ctrl_c[i][0] - mass_cx),
+            )
 
             history = evolve_gradient_coupled(
                 nodes, set(glider), survive, birth, lookup,
                 field, coupling, steps,
             )
-            c_final = centroid(history[-1])
-            size = len(history[-1])
+            tracked = [
+                track_packet_component(state, ctrl_c[i], nodes, lookup)
+                for i, state in enumerate(history)
+            ]
+            packet = tracked[interaction_step]
+            total_size = len(history[-1])
 
-            if size > 0:
-                dy = c_final[1] - ctrl_c[-1][1]
-                # Is the mass above or below the control path endpoint?
-                mass_cy = sum(y for _, y in mass_nodes) / len(mass_nodes)
-                toward = "YES" if (mass_cy > ctrl_c[-1][1] and dy > 0.5) or \
-                                  (mass_cy < ctrl_c[-1][1] and dy < -0.5) else "NO"
-                print(f"  {label:>30s}  {c_final[0]:8.1f}  {c_final[1]:8.1f}  {size:6d}  "
-                      f"{dy:+12.1f}  {toward:>7s}")
+            if packet is not None and ctrl_sizes[interaction_step] > 0:
+                packet_c = centroid(packet)
+                dy = packet_c[1] - ctrl_c[interaction_step][1]
+                toward = "YES" if (mass_cy > ctrl_c[interaction_step][1] and dy > 0.5) or \
+                                  (mass_cy < ctrl_c[interaction_step][1] and dy < -0.5) else "NO"
+                print(
+                    f"  {label:>30s}  {packet_c[0]:8.1f}  {packet_c[1]:8.1f}  "
+                    f"{len(packet):6d}  {dy:+12.1f}  {toward:>7s}"
+                )
             else:
-                print(f"  {label:>30s}  {'DEAD':>8s}  {'':>8s}  {0:6d}")
+                print(f"  {label:>30s}  {'LOST':>8s}  {'':>8s}  {total_size:6d}")
 
     print()
     print("TEST COMPLETE")

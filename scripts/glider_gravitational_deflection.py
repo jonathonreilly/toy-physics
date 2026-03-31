@@ -33,6 +33,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from toy_event_physics import (
     build_rectangular_nodes,
     build_graph_neighbor_lookup,
+    connected_components,
     evolve_self_maintaining_pattern,
 )
 
@@ -42,6 +43,29 @@ def pattern_centroid(state):
         return (0.0, 0.0)
     return (sum(x for x, _ in state) / len(state),
             sum(y for _, y in state) / len(state))
+
+
+def nearest_non_mass_component(state, mass_nodes, expected_centroid, nodes, lookup):
+    components = connected_components(
+        frozenset(state),
+        nodes,
+        neighbor_lookup=lookup,
+    )
+    candidates = [
+        component
+        for component in components
+        if component.isdisjoint(mass_nodes) and 3 <= len(component) <= 8
+    ]
+    if not candidates:
+        return None
+    ex, ey = expected_centroid
+    return min(
+        candidates,
+        key=lambda component: (
+            math.dist(pattern_centroid(component), (ex, ey)),
+            abs(len(component) - 5),
+        ),
+    )
 
 
 def main() -> None:
@@ -107,37 +131,49 @@ def main() -> None:
             steps=steps, neighbor_lookup=lookup,
         )
 
-        # Separate the glider from the mass in the evolved state
-        # (track which component is the glider by proximity to initial position)
-        centroids = [pattern_centroid(s) for s in history]
         sizes = [len(s) for s in history]
+        tracked = [
+            nearest_non_mass_component(state, mass_nodes, control_centroids[i], nodes, lookup)
+            for i, state in enumerate(history)
+        ]
 
-        # Compute deflection from control trajectory
-        max_deflection = 0
+        # Compute deviation only while a glider-like component is still separate.
+        max_deflection = 0.0
         deflections_at_20 = []
-        for i in range(min(len(centroids), len(control_centroids))):
-            if control_sizes[i] > 0 and sizes[i] > 0:
-                dx = centroids[i][0] - control_centroids[i][0]
-                dy = centroids[i][1] - control_centroids[i][1]
-                defl = math.sqrt(dx**2 + dy**2)
-                max_deflection = max(max_deflection, defl)
-                if i % 20 == 0:
-                    deflections_at_20.append((i, dx, dy, defl))
+        last_separate_step = -1
+        for i, component in enumerate(tracked):
+            if component is None or control_sizes[i] == 0:
+                continue
+            cx, cy = pattern_centroid(component)
+            dx = cx - control_centroids[i][0]
+            dy = cy - control_centroids[i][1]
+            defl = math.sqrt(dx**2 + dy**2)
+            max_deflection = max(max_deflection, defl)
+            last_separate_step = i
+            if i % 20 == 0:
+                deflections_at_20.append((i, dx, dy, defl, len(component)))
 
         print(f"  {mass_label}:")
         print(f"    Final size: {sizes[-1]} (control: {control_sizes[-1]})")
-        print(f"    Max deflection from control: {max_deflection:.2f}")
-        for step, dx, dy, d in deflections_at_20:
-            print(f"      Step {step:3d}: delta=({dx:+.1f}, {dy:+.1f}), |d|={d:.2f}")
+        if last_separate_step >= 0:
+            print(f"    Max separate-glider deviation: {max_deflection:.2f}")
+            print(f"    Last step with separate glider component: {last_separate_step}")
+            for step, dx, dy, d, comp_size in deflections_at_20:
+                print(
+                    f"      Step {step:3d}: delta=({dx:+.1f}, {dy:+.1f}), "
+                    f"|d|={d:.2f}, comp_size={comp_size}"
+                )
+        else:
+            print(f"    No separate glider component survived tracking")
 
         # Did the glider survive or get absorbed/destroyed?
         if sizes[-1] == 0:
             print(f"    OUTCOME: Pattern died")
-        elif sizes[-1] == len(mass_nodes):
+        elif tracked[-1] is None and sizes[-1] == len(mass_nodes):
             print(f"    OUTCOME: Glider absorbed, only mass remains")
-        elif sizes[-1] > len(mass_nodes) + 10:
+        elif tracked[-1] is None and sizes[-1] > len(mass_nodes) + 10:
             print(f"    OUTCOME: Interaction produced growth")
-        elif abs(sizes[-1] - control_sizes[-1] - len(mass_nodes)) < 3:
+        elif tracked[-1] is not None and abs(len(tracked[-1]) - control_sizes[-1]) < 3:
             print(f"    OUTCOME: Glider + mass coexist")
         else:
             print(f"    OUTCOME: Complex interaction")

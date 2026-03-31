@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
-"""Field-coupled CA: birth/survival depends on local delay field.
+"""Field-coupled CA: discrete threshold-shift probe.
 
 The current model has two uncoupled layers:
   CA rule (pattern evolution) ← does NOT see the field
   Field (delay/gravity)       ← IS sourced by the CA pattern
 
-This prototype couples them: the CA rule's effective birth/survival
-thresholds shift based on the local field value. In a high-field
-region (near a mass), nodes need fewer neighbors to survive and
-more neighbors to be born (or vice versa).
+This prototype couples them by shifting the integer neighbor-count
+thresholds with the local field. It is intentionally discrete and
+therefore only tests one stepwise threshold-coupling mechanism,
+not all possible smooth field-to-CA couplings.
 
 If this coupling produces gravitational deflection of moving
 patterns, the model's two dynamics layers become ONE.
@@ -114,7 +114,7 @@ def main() -> None:
     postulates = RulePostulates(phase_per_action=4.0, attenuation_power=1.0)
 
     print("=" * 80)
-    print("FIELD-COUPLED CA: Gravity affects pattern evolution")
+    print("FIELD-COUPLED CA: Discrete threshold-shift coupling probe")
     print("=" * 80)
     print()
 

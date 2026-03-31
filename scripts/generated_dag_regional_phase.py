@@ -24,7 +24,7 @@ import os
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from scripts.generative_causal_dag_interference import generate_causal_dag
+from scripts.generative_causal_dag_interference import causal_order, generate_causal_dag
 from scripts.generated_dag_natural_bottleneck import find_bottleneck
 
 
@@ -39,7 +39,7 @@ def pathsum_regional_phase(
     with y > phase_boundary_y get a phase shift.
     """
     n = len(positions)
-    order = sorted(range(n), key=lambda i: arrival[i])
+    order = causal_order(positions, arrival)
     amplitudes: dict[int, complex] = {source_idx: 1.0 + 0.0j}
     detector_amps: dict[float, complex] = defaultdict(complex)
 

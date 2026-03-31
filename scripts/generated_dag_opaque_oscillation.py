@@ -25,7 +25,7 @@ import os
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from scripts.generative_causal_dag_interference import generate_causal_dag
+from scripts.generative_causal_dag_interference import causal_order, generate_causal_dag
 from scripts.generated_dag_oscillation_decoherence import evolve_on_generated_dag
 
 
@@ -36,7 +36,7 @@ def pathsum_with_opaque_nodes(
 ):
     """Path-sum where opaque_nodes have amplitude zeroed (topology change)."""
     n = len(positions)
-    order = sorted(range(n), key=lambda i: arrival[i])
+    order = causal_order(positions, arrival)
     amplitudes: dict[int, complex] = {source_idx: 1.0 + 0.0j}
     detector_amps: dict[float, complex] = defaultdict(complex)
 

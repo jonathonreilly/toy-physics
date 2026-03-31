@@ -23,7 +23,7 @@ import os
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from scripts.generative_causal_dag_interference import generate_causal_dag
+from scripts.generative_causal_dag_interference import causal_order, generate_causal_dag
 from scripts.generative_dag_gravity import compute_field_on_dag
 from scripts.generated_dag_gravity_induced_phase import pathsum_with_field
 from scripts.generated_dag_opaque_oscillation import pathsum_with_opaque_nodes
@@ -37,7 +37,7 @@ def pathsum_gravity_and_opaque(
 ):
     """Path-sum with BOTH gravity (field) AND opacity (topology change)."""
     n = len(positions)
-    order = sorted(range(n), key=lambda i: arrival[i])
+    order = causal_order(positions, arrival)
     amplitudes: dict[int, complex] = {source_idx: 1.0 + 0.0j}
     detector_amps: dict[float, complex] = defaultdict(complex)
 

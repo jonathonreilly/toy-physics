@@ -103,18 +103,15 @@ def classify_motion(positions, history):
     if disp < 1.0:
         return "STATIC", disp, 0.0
 
-    # Check persistence: does displacement grow over time?
+    # Check persistence: do both halves move in the same direction?
     mid = len(centroids) // 2
-    first_disp = math.sqrt(
-        (centroids[mid][0] - centroids[0][0])**2 +
-        (centroids[mid][1] - centroids[0][1])**2
-    )
-    second_disp = math.sqrt(
-        (centroids[-1][0] - centroids[mid][0])**2 +
-        (centroids[-1][1] - centroids[mid][1])**2
-    )
+    first_dx = centroids[mid][0] - centroids[0][0]
+    first_dy = centroids[mid][1] - centroids[0][1]
+    second_dx = centroids[-1][0] - centroids[mid][0]
+    second_dy = centroids[-1][1] - centroids[mid][1]
+    dot = first_dx * second_dx + first_dy * second_dy
 
-    if first_disp > 1.0 and second_disp > 1.0:
+    if dot > 0 and disp > 3.0:
         speed = disp / len(history)
         return "TRANSLATING", disp, speed
     elif disp > 2.0:

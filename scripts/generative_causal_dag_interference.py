@@ -75,14 +75,31 @@ def generate_causal_dag(
                             adj[prev_idx].append(idx)
                             # Arrival time = parent arrival + edge distance
                             candidate = arrival[prev_idx] + dist
-                            if candidate < best_arrival:
+                            if math.isfinite(candidate) and candidate < best_arrival:
                                 best_arrival = candidate
 
-                arrival.append(best_arrival if best_arrival < float("inf") else x)
+                arrival.append(best_arrival)
 
         layer_indices.append(layer_nodes)
 
     return positions, dict(adj), arrival
+
+
+def causal_order(
+    positions: list[tuple[float, float]],
+    arrival: list[float],
+) -> list[int]:
+    """Return a topological processing order for generated DAGs.
+
+    The layer/x coordinate is the true causal order. Arrival times are only a
+    secondary tie-breaker inside a layer and should never reorder nodes across
+    layers.
+    """
+
+    return sorted(
+        range(len(positions)),
+        key=lambda i: (positions[i][0], math.isinf(arrival[i]), arrival[i], i),
+    )
 
 
 def path_sum_on_dag(
@@ -118,7 +135,7 @@ def path_sum_on_dag(
                 blocked.add(i)
 
     # Propagate amplitudes
-    order = sorted(range(n), key=lambda i: arrival[i])
+    order = causal_order(positions, arrival)
     amplitudes: dict[int, complex] = {source_idx: 1.0 + 0.0j}
     detector_amps: defaultdict[float, complex] = defaultdict(complex)
 

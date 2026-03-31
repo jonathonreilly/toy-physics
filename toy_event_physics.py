@@ -2691,6 +2691,9 @@ def derive_persistence_support(
     lookup = neighbor_lookup or build_graph_neighbor_lookup(nodes, wrap_y=wrap_y)
     for node in active_nodes:
         neighbors = lookup[node]
+        if not neighbors:
+            support[node] = 0.0
+            continue
         support[node] = sum(neighbor in active_nodes for neighbor in neighbors) / len(neighbors)
     return support
 

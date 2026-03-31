@@ -29,14 +29,9 @@ import os
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from scripts.generative_causal_dag_interference import (
+    causal_order,
     generate_causal_dag,
     path_sum_on_dag,
-)
-from toy_event_physics import (
-    RulePostulates,
-    derive_local_rule,
-    derive_node_field,
-    local_edge_properties,
 )
 
 
@@ -47,13 +42,7 @@ def per_slit_amplitude(
 ) -> dict[str, complex]:
     """Decompose detector amplitude by which slit the path used."""
     n = len(positions)
-    rule = derive_local_rule(
-        persistent_nodes=frozenset(),
-        postulates=RulePostulates(phase_per_action=4.0, attenuation_power=1.0),
-    )
-    node_field = {i: 0.0 for i in range(n)}
-
-    order = sorted(range(n), key=lambda i: arrival[i])
+    order = causal_order(positions, arrival)
     # state: (node_idx, slit_label) -> amplitude
     states: dict[tuple[int, str], complex] = {(source_idx, "pre"): 1.0 + 0.0j}
     result: dict[str, complex] = defaultdict(complex)
@@ -101,7 +90,7 @@ def per_slit_amplitude(
 def count_barrier_paths(adj, positions, arrival, barrier_x, slit_ys, slit_width):
     """Count nodes reachable through each slit region."""
     n = len(positions)
-    order = sorted(range(n), key=lambda i: arrival[i])
+    order = causal_order(positions, arrival)
     # Track which slit each node was reached through
     slit_reach: dict[int, set] = defaultdict(set)
     slit_reach[0] = {"source"}

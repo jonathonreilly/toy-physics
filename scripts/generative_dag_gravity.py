@@ -21,7 +21,7 @@ import os
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from scripts.generative_causal_dag_interference import generate_causal_dag
+from scripts.generative_causal_dag_interference import causal_order, generate_causal_dag
 
 
 def compute_field_on_dag(
@@ -99,7 +99,7 @@ def find_path_on_dag(
     where delay = link_length * (1 + avg_field).
     """
     n = len(positions)
-    order = sorted(range(n), key=lambda i: arrival[i])
+    order = causal_order(positions, arrival)
 
     # DP: best action and predecessor for each node
     best_action: dict[int, float] = {source_idx: 0.0}
