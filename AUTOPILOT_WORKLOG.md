@@ -1,3 +1,35 @@
+## 2026-03-31 12:15 America/New_York
+
+### Seam class
+- generated-DAG field coupling
+- pattern-sourced footprint compression
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/generated_dag_pattern_sourced_field_bias_compare.py`
+- added `/Users/jonreilly/Projects/Physics/scripts/generated_dag_pattern_sourced_footprint_probe.py`
+- rendered the bounded source-field compare at `/Users/jonreilly/Projects/Physics/logs/2026-03-31-generated-dag-pattern-sourced-field-bias-compare.txt`
+- rendered the bounded footprint sweep at `/Users/jonreilly/Projects/Physics/logs/2026-03-31-generated-dag-pattern-sourced-footprint-probe.txt`
+- the source-side story is now much sharper:
+  - compactness / centroid placement alone do not close the steering split
+  - the first retained clue is local: weaker intended-side forward fringe bias helps (`forward_side_field_gap <= 0` gives positive fraction `0.5758` vs `0.3846`)
+  - the real closure is footprint width, not source viability
+- holding the same source rule, substrate, and coupling fixed:
+  - `last_state` still bends away on average (`-0.3883`)
+  - `last2_union` is slightly positive (`+0.0947`)
+  - `last3_union` cleanly restores toward-source steering (`+0.7612`) while preserving `135/150` coherent survivors
+  - `last6_union` flips back to away-shift (`-0.3947`)
+- this means pattern-sourced deflection is real on coherent movers, but only after compressing the source footprint to a recent three-step packet family
+
+### Current state
+- this loop stayed on the retained `neighbor_radius = 2.5` substrate and retained coupling `3.0`
+- no broad new source-rule or graph-family search was opened
+
+### Strongest confirmed conclusion
+The pattern-sourced mover problem is now a field-footprint compression problem, not a source-survival problem. A recent `last3_union` source footprint restores toward-source steering on the coherent mover substrate, while the broader `last6_union` over-broadens the field and flips the sign back to away-shift.
+
+### Exact next step
+- compare the extra `last4-6` support added on top of the retained `last3_union` footprint and identify the smallest late-support observable that causes the steering sign flip
+
 ## 2026-03-31 11:59 America/New_York
 
 ### Seam class

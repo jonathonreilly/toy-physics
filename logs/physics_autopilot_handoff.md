@@ -1,5 +1,37 @@
 # Physics Autopilot Handoff
 
+## 2026-03-31 12:15 America/New_York
+
+### Seam class
+- generated-DAG field coupling
+- pattern-sourced footprint compression
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/generated_dag_pattern_sourced_field_bias_compare.py`
+- added `/Users/jonreilly/Projects/Physics/scripts/generated_dag_pattern_sourced_footprint_probe.py`
+- wrote the bounded source-field compare to `/Users/jonreilly/Projects/Physics/logs/2026-03-31-generated-dag-pattern-sourced-field-bias-compare.txt`
+- wrote the bounded footprint sweep to `/Users/jonreilly/Projects/Physics/logs/2026-03-31-generated-dag-pattern-sourced-footprint-probe.txt`
+- the source-side result now closes much more cleanly:
+  - raw source size / centroid placement still do not explain the split
+  - the first retained local clue is weaker intended-side forward fringe bias (`forward_side_field_gap <= 0`)
+  - the real selector is footprint width, not viability
+- holding the same source rule, substrate, and coupling fixed:
+  - `last_state`: mean signed shift `-0.3883`
+  - `last2_union`: mean signed shift `+0.0947`
+  - `last3_union`: mean signed shift `+0.7612` with `135/150` coherent survivors
+  - `last6_union`: mean signed shift `-0.3947`
+- so pattern-sourced steering does work on the coherent mover substrate, but only after compressing the source field to a recent three-step packet footprint
+
+### Current state
+- this loop stayed bounded to the retained mover substrate, retained coupling, and one source rule
+- no broad source-rule hunt or graph-family widening was opened
+
+### Strongest confirmed conclusion
+The live bottleneck is now the sign flip between `last3_union` and `last6_union`. Pattern-sourced deflection on coherent movers is real, but broad late support over-broadens the field and turns attraction into away-shift / retiming.
+
+### Exact next step
+- compare the extra `last4-6` support added by `last6_union` beyond the retained `last3_union` footprint and isolate the smallest late-support observable that causes the steering sign flip
+
 ## 2026-03-31 11:59 America/New_York
 
 ### Seam class
