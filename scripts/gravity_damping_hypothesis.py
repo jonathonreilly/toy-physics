@@ -126,6 +126,10 @@ def measure_alpha(field: dict, mass_x: int, measure_y: int, width: int) -> float
     return -(n * srlnf - sr * slnf) / denom
 
 
+def make_mass_column(mass_x: int, mass_y: int, half_height: int = 2) -> frozenset[tuple[int, int]]:
+    return frozenset((mass_x, y) for y in range(mass_y - half_height, mass_y + half_height + 1))
+
+
 def main() -> None:
     print("=" * 72)
     print("GRAVITY DAMPING HYPOTHESIS TEST")
@@ -145,27 +149,29 @@ def main() -> None:
         (140, 56),
     ]
 
-    n_mass = 5
+    measure_y = 0
+    impact_parameter = 6
 
     print(f"{'width':>6s}  {'height':>6s}  {'L':>4s}  "
           f"{'α_damped':>10s}  {'α_undamped':>12s}  "
           f"{'αL_damped':>10s}  {'αL_undamped':>12s}  "
           f"{'π/L':>8s}")
     print("-" * 82)
+    print(f"Fixed geometry: source column at y={impact_parameter}, measurement line y={measure_y}")
+    print()
 
     for w, h in configs:
         mass_x = w // 2
-        mass_y = h // 2
-        ys = list(range(mass_y - 2, mass_y + 3))
-        pnodes = frozenset((mass_x, y) for y in ys)
+        mass_y = min(h - 2, impact_parameter)
+        pnodes = make_mass_column(mass_x, mass_y)
         nodes = build_rectangular_nodes(width=w, height=h)
         L = min(w, 2 * h)
 
         damped = derive_damped_field(nodes, pnodes)
         undamped = derive_undamped_field(nodes, pnodes)
 
-        alpha_d = measure_alpha(damped, mass_x, 0, w)
-        alpha_u = measure_alpha(undamped, mass_x, 0, w)
+        alpha_d = measure_alpha(damped, mass_x, measure_y, w)
+        alpha_u = measure_alpha(undamped, mass_x, measure_y, w)
 
         pi_L = math.pi / L
 
@@ -183,9 +189,8 @@ def main() -> None:
 
     w, h = 60, 24
     mass_x = w // 2
-    mass_y = h // 2
-    ys = list(range(mass_y - 2, mass_y + 3))
-    pnodes = frozenset((mass_x, y) for y in ys)
+    mass_y = min(h - 2, impact_parameter)
+    pnodes = make_mass_column(mass_x, mass_y)
     nodes = build_rectangular_nodes(width=w, height=h)
 
     damped = derive_damped_field(nodes, pnodes)
@@ -196,8 +201,8 @@ def main() -> None:
 
     for step in range(1, 30):
         x = mass_x + step
-        fd = damped.get((x, 0), 0.0)
-        fu = undamped.get((x, 0), 0.0)
+        fd = damped.get((x, measure_y), 0.0)
+        fu = undamped.get((x, measure_y), 0.0)
         if fd > 0 and fu > 0:
             print(f"  {step:4d}  {fd:12.8f}  {fu:12.8f}  {fu/fd:10.4f}  "
                   f"{math.log(fd):10.4f}  {math.log(fu):10.4f}")

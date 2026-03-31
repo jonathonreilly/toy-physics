@@ -25,6 +25,7 @@ import sys
 import os
 import heapq
 from collections import defaultdict
+from itertools import combinations
 from typing import DefaultDict
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -142,8 +143,8 @@ def topological_decoherence_two_slit(
 ) -> float:
     """Compute probability at screen_y with topological record mechanism.
 
-    With probability p: use DAG with record shortcuts (topology changed)
-    With probability 1-p: use normal DAG (topology unchanged)
+    Each slit independently records with probability p. Every record pattern
+    defines its own DAG branch, and the branch probabilities add incoherently.
 
     Probabilities from the two branches add incoherently (the record
     creates a which-path marker that prevents interference between branches).
@@ -216,16 +217,27 @@ def topological_decoherence_two_slit(
                         normal_dag[node] = []
                     normal_dag[node].append(nb)
 
-    # Record DAG (with shortcuts)
-    record_dag, record_times = build_dag_with_record_nodes(
-        nodes, source, rule, node_field, slit_ys, barrier_x
-    )
+    dag_cache: dict[frozenset[int], tuple[dict, dict]] = {
+        frozenset(): (normal_dag, normal_times),
+    }
+    ordered_slits = tuple(sorted(slit_ys))
 
-    p_normal = run_pathsum(normal_dag, normal_times)
-    p_record = run_pathsum(record_dag, record_times)
+    def branch_weight(recorded_slits: frozenset[int]) -> float:
+        recorded = len(recorded_slits)
+        unrecorded = len(ordered_slits) - recorded
+        return (record_probability ** recorded) * ((1.0 - record_probability) ** unrecorded)
 
-    # Incoherent sum: p * P_record + (1-p) * P_normal
-    return record_probability * p_record + (1 - record_probability) * p_normal
+    total_probability = branch_weight(frozenset()) * run_pathsum(normal_dag, normal_times)
+    for count in range(1, len(ordered_slits) + 1):
+        for subset in combinations(ordered_slits, count):
+            recorded_slits = frozenset(subset)
+            dag, arrival_times = build_dag_with_record_nodes(
+                nodes, source, rule, node_field, set(recorded_slits), barrier_x
+            )
+            dag_cache[recorded_slits] = (dag, arrival_times)
+            total_probability += branch_weight(recorded_slits) * run_pathsum(dag, arrival_times)
+
+    return total_probability
 
 
 def visibility(probs: list[float]) -> float:
@@ -246,7 +258,7 @@ def main() -> None:
     print("TOPOLOGICAL DECOHERENCE: Records That Change the DAG")
     print("=" * 72)
     print(f"width={width}, height={height}, slits at y={sorted(slit_ys)}")
-    print("Record mechanism: shortcut edges past barrier (changes arrival times)")
+    print("Record mechanism: each slit independently adds shortcut edges past barrier")
     print()
 
     # Get baseline V at p=0
