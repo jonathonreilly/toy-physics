@@ -15,23 +15,24 @@ Pooled late-support geometry
   weak retained hint: extra_packet_side_gap <= -0.0080
 
 Retained mover-rule-local branches
-  branch A: self-rule dominant carrier
-    mechanism: most retained last6 rows live here, but the slice still does not compress to one sharp local scalar
-    current state: best local single-feature accuracy only 0.6386
-  branch B: wide-rule late corridor branch
+  branch A: wide-rule late corridor branch
     mechanism: the broad source window works when the late source keeps strong forward corridor occupancy
     retained hint: last6_corridor_share >= 0.7762
+  branch B: self-rule config-local residual
+    mechanism: broad live last6 steering is real here, but neither discovery pair nor held-out pair closes as one retained law
+    current state: dense+sparse and long+wide each form only weak local families that fail to transfer to the other pair
 
 What did not retain
   the old retained last3-source card is no longer current
   no universal pooled late-support scalar closes the broad live branch cleanly
-  pooled packet-landing hints exist, but they stay weaker than the rule-local stories
+  no retained shared self-family survives across dense/sparse and long/wide
+  pooled packet-landing hints exist, but they stay weaker than the real stop rule
 
 Current architecture
   one real broad live source branch: last6
   one weak pooled hint: packet landing from added last4-6 support
   one sharper local branch: wide late corridor support
-  one unresolved dominant branch: self
+  one config-local residual branch: self
 
 Next step
-  use wide as the control branch and compress the dominant self slice next
+  keep the self stop rule explicit and move back up to the common field-to-pattern architecture

@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Render the current mover-lane late-support mechanism card.
+"""Render the current field-to-pattern mechanism card.
 
-This is the compact architecture artifact after the live last3-vs-last6 source
-window compare. It preserves the retained source-side branch and the remaining
-rule-local residual structure without reopening search.
+This is the compact architecture artifact after the self-branch stop-rule pass.
+It preserves the retained source-side branch, the one clean local clause, and
+the point where further self-branch shaving should stop on the current basis.
 """
 
 from __future__ import annotations
@@ -27,26 +27,27 @@ def main() -> None:
     print("  weak retained hint: extra_packet_side_gap <= -0.0080")
     print()
     print("Retained mover-rule-local branches")
-    print("  branch A: self-rule dominant carrier")
-    print("    mechanism: most retained last6 rows live here, but the slice still does not compress to one sharp local scalar")
-    print("    current state: best local single-feature accuracy only 0.6386")
-    print("  branch B: wide-rule late corridor branch")
+    print("  branch A: wide-rule late corridor branch")
     print("    mechanism: the broad source window works when the late source keeps strong forward corridor occupancy")
     print("    retained hint: last6_corridor_share >= 0.7762")
+    print("  branch B: self-rule config-local residual")
+    print("    mechanism: broad live last6 steering is real here, but neither discovery pair nor held-out pair closes as one retained law")
+    print("    current state: dense+sparse and long+wide each form only weak local families that fail to transfer to the other pair")
     print()
     print("What did not retain")
     print("  the old retained last3-source card is no longer current")
     print("  no universal pooled late-support scalar closes the broad live branch cleanly")
-    print("  pooled packet-landing hints exist, but they stay weaker than the rule-local stories")
+    print("  no retained shared self-family survives across dense/sparse and long/wide")
+    print("  pooled packet-landing hints exist, but they stay weaker than the real stop rule")
     print()
     print("Current architecture")
     print("  one real broad live source branch: last6")
     print("  one weak pooled hint: packet landing from added last4-6 support")
     print("  one sharper local branch: wide late corridor support")
-    print("  one unresolved dominant branch: self")
+    print("  one config-local residual branch: self")
     print()
     print("Next step")
-    print("  use wide as the control branch and compress the dominant self slice next")
+    print("  keep the self stop rule explicit and move back up to the common field-to-pattern architecture")
 
 
 if __name__ == "__main__":

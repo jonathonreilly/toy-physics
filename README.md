@@ -144,6 +144,8 @@ A stronger live-vs-frozen source compare then says the field-to-pattern arrow is
 
 A paired live-window geometry compare then closed the next seam without reopening any broader search. Keeping the source evolution fixed and widening only the live source window from `3` to `6` on the same `146` viable paired rows, the broad window beats the narrow one on `80/146` rows and lifts the mean signed shift from `-0.6000` to `+0.5040`. But that broad live branch does not collapse to one universal late-support scalar. The retained `last6` subset (`52/146` rows that stay coherent and toward-source) is the subset where the added `last4-6` support actually lands on the packet more strongly (`extra_field_mean_on_packet = 0.1006` versus `0.0249` on the nonretained rows), and the best pooled rule is only moderate: `extra_packet_side_gap <= -0.0080` reaches `0.7286` discovery accuracy and `0.6579` holdout accuracy. The remaining split is mover-rule-local. `self` carries most retained rows (`40/83`) but still does not close sharply, while `wide` already tightens under one clearer late-source corridor clause, `last6_corridor_share >= 0.7762` (`0.8113` local accuracy). So the current field-to-pattern read is now sharper: the broad live `last6` branch is real, the pooled packet-landing hint is real but weak, and the unresolved residue sits mostly inside mover-rule-local geometry rather than at the existence of the branch itself.
 
+The self-branch follow-on now gives a clean stop rule on that residue. The dominant `self` slice still does not reduce to one retained shared law. On the present basis, neither `dense-25 + sparse-25` nor `long-30 + wide-15` forms a stable transferable self-family. Each pair only supports weak local hints, and those hints fail when transferred to the other pair. So the honest current architecture is: one real broad live `last6` source branch; one sharper local `wide` corridor clause; and one `self` branch that remains config-local rather than cleanly compressible. That means the next value is not more self-clause shaving, but keeping that stop rule explicit while moving back up to the common field-to-pattern architecture.
+
 ### 6. Stable mechanism families
 
 The broadest recurring split is:
@@ -360,7 +362,7 @@ The relevant questions are:
   - exhausted-wall boundary
 - which observables should be retained as branch selectors versus demoted to detector-side or placement modifiers
 - what the smallest confirmation-style holdout pass is that can test the retained architecture without reopening broad ladder growth
-- whether the dominant `self` share of the live `last6` source branch compresses beyond the current weak pooled packet-landing hint, or whether mover-rule-local closure is the real retained boundary there now that `wide` already sharpens under a late-source corridor clause
+- how to write the stop rule on the field-to-pattern lane most cleanly now that `wide` has a retained local corridor clause, the broad live `last6` branch itself is real, and the remaining `self` residue is best read as config-local rather than further compressible on the current basis
 
 ## What Is Still Unresolved
 

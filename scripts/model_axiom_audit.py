@@ -177,7 +177,7 @@ COUPLINGS = [
         "field / delay layer",
         "persistence layer",
         "P",
-        "static and broad live-window pattern-sourced fields can steer movers, but the feedback law is still branch-local and incomplete",
+        "static and broad live-window pattern-sourced fields can steer movers, with one retained wide-rule corridor clause but a still config-local self residual",
     ),
     Coupling(
         "record / topology layer",
@@ -194,7 +194,7 @@ RETAINED_CORE = [
     "Linear reversible path-sum propagation with Born-safe interference, machine-precision Sorkin zero on the tested fixed-DAG family, and generated-DAG interference onset under growth.",
     "A comparatively clean unitary sector: Born-safe interference, corrected phase-driven gravity, pure-phase `k=0` limit, weak-coupling `k^2` response, and a near-constant 2D momentum kick from log-field plus path averaging all survive together.",
     "Shared mechanism language across geometry and generated DAGs: completion/load sets the floor, balance selects the branch, bottleneck or placement terms sharpen the readout.",
-    "Coherent mover substrate on generated DAGs and viable pattern-sourced steering on the retained `neighbor_radius = 2.5`, `coupling = 3.0`, broad live `last6` source window.",
+    "Coherent mover substrate on generated DAGs, viable broad live `last6` pattern-sourced steering, and one retained wide-rule corridor clause on the `neighbor_radius = 2.5`, `coupling = 3.0` substrate.",
 ]
 
 
@@ -225,7 +225,7 @@ TOP_GAPS = [
         "Gap 3",
         "Axioms 2 + 7 + 8",
         "Persistent movers need to feel the field in the same framework.",
-        "Coherent movers, static steering, and pattern-sourced steering all exist, but the field-to-pattern feedback law is still partial and branch-local rather than one retained dynamics.",
+        "Coherent movers, static steering, and broad live pattern-sourced steering all exist, but the field-to-pattern feedback law is still partial: wide already has one retained local corridor clause, while self remains config-local rather than one retained dynamics.",
     ),
 ]
 
