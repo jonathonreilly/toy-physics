@@ -1,8 +1,8 @@
 # Corrected Propagator: From Amplitude Repulsion to Gravitational Attraction
 
 **Date:** 2026-03-31
-**Experiments:** 30 (amplitude-packet-action-sweep through force-law-delta-q3)
-**Scripts:** 20 files in `scripts/`
+**Experiments:** 43 (amplitude-packet-action-sweep through backreaction-decoherence)
+**Scripts:** 30+ files in `scripts/`
 
 ---
 
@@ -179,14 +179,32 @@ The corrected propagator preserves all established results (interference fringes
 
 The force law's failure to transfer from rectangular grids to random DAGs indicates that the coupling between field and amplitude depends on graph topology in ways not captured by simple field observables. The k² scaling IS universal — only the proportionality constant varies.
 
-The weak decoherence is the most significant limitation. With uniform attenuation, all paths have similar amplitudes, improving coherence and making decoherence harder. This suggests that decoherence in the model may require a mechanism beyond the propagator — possibly the topology-changing process (node creation/destruction) that was already shown to produce I₃≠0 in earlier work.
+The weak decoherence is the most significant limitation. With uniform attenuation, all paths have similar amplitudes, improving coherence and making decoherence harder.
+
+### Endogenous Decoherence Search (experiments 31-43)
+
+Five endogenous mechanisms tested, none produce decoherence without damaging gravity:
+
+| mechanism | V_drop | gravity preserved? | why it fails |
+|---|---|---|---|
+| Oscillating opacity | 7-15% (some seeds) | NO (4-6/12) | Blocks phase-valley paths |
+| Field fluctuation | 0% (= baseline) | YES (10/12) | Spatially uniform modulation |
+| Directional recording | = shuffled control | YES (9/12) | Direction doesn't matter |
+| Backreaction (field += ε|a|²) | 0% (= baseline) | YES (8/12) | Slit-indistinguishable |
+| Phase noise (exogenous) | 35% at η=1 on irreg. | YES (10/12) | Works but NOT endogenous |
+
+Source: `endogenous-opacity.txt`, `endogenous-field-fluct.txt`, `directional-recording.txt`, `directional-comparison.txt`, `backreaction.txt`, `phase-noise-irregular.txt`.
+
+**Key finding**: exogenous phase noise on irregular graphs produces genuine decoherence (ensemble-averaged V drops from 0.80 to 0.52) because heterogeneous path lengths cause noise to accumulate differently across paths. On regular lattices, equal path lengths prevent decoherence. The best structural predictor for decoherence susceptibility is `mass_overlap` (fraction of edges near the mass region, R²=0.50), replacing the coarse `path_length_std` (R²=0.006). Source: `structural-predictor.txt`.
+
+**Interpretation**: the corrected propagator creates a clean separation between unitary physics (gravity + interference from phase structure) and non-unitary physics (decoherence). The unitary sector is fully solved. The non-unitary sector requires a mechanism that is not a single-pass perturbation of the propagator. Candidates: multi-pass propagation with environment degrees of freedom, branching path-sum, or explicit Hilbert space extension.
 
 ---
 
 ## Next Steps
 
-1. **Scattering observable**: Define a momentum-space or angular observable that characterizes gravitational deflection without relying on centroid shift (expected information gain: HIGH).
-2. **Topology-dependent coupling**: Characterize what graph properties determine the force law's proportionality constant C — path count, spectral gap, effective dimension (MEDIUM).
-3. **Decoherence from topology change**: Test whether dynamically growing the graph during propagation (adding/removing nodes) produces stronger decoherence than field-only or opacity mechanisms (HIGH).
-4. **Continuum limit**: Does the corrected propagator change the anisotropy scaling (1/n_directions)? Is 1/L^p the natural attenuation in the continuum? (MEDIUM).
-5. **Integrate with simulator**: Add `action_attenuation_mode` parameter to `toy_event_physics.py` so the corrected propagator can be used in all existing experiments (LOW effort, HIGH utility).
+1. **Multi-pass decoherence**: Implement a two-step propagation where (a) amplitude propagates forward creating a record at mass nodes, then (b) the record's backreaction modifies a SECOND propagation. The environment is the record itself. (Expected information gain: HIGH.)
+2. **Scattering observable**: Define a momentum-space or angular observable for gravitational deflection without relying on centroid shift (HIGH).
+3. **Topology-dependent coupling**: Characterize what graph properties determine the force law's proportionality constant C (MEDIUM).
+4. **Continuum limit**: Does the corrected propagator change the anisotropy scaling (1/n_directions)? (MEDIUM).
+5. ~~**Integrate with simulator**~~: DONE — `attenuation_mode="geometry"` added to `RulePostulates`.
