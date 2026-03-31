@@ -1,5 +1,41 @@
 # Physics Autopilot Handoff
 
+## 2026-03-30 20:02 America/New_York
+
+### Seam class
+- janitor reconciliation after synced dynamic-graph advance
+- runtime handoff / narrative repair
+
+### Science impact
+- No new science was run beyond the cheap confidence gate.
+- Canonical `main` / `origin/main` are synced at `712d44f`, which adds `/Users/jonreilly/Projects/Physics/scripts/generative_causal_dag_interference.py` and shows that a randomly generated causal DAG can produce `V(y=0)` up to `0.988188` while the no-barrier control stays exactly `0.000000`.
+- This loop repaired the stale runtime-only handoff, corrected the work-log drift that still pointed at the already-completed directed-graph follow-on, and refreshed `README.md` plus the tracked/runtime repo state to the actual synced head.
+
+### Current state
+- Cooperative lock held by `physics-janitor` during repair; no detached science child is active.
+- `/Users/jonreilly/Projects/Physics/README.md`, `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, and this handoff now describe the same synced baseline.
+- The shared science memory file could not be refreshed from this sandbox, so it still lags the repo state.
+- `python3 scripts/base_confidence_check.py` passed; the base check again skipped the heavier full reruns by design.
+
+### Strongest confirmed conclusion
+The synced baseline now supports a tighter dynamic-graph statement: richer connectivity suppresses kinematic anisotropy roughly as `1/n_directions`, linear reversible propagation singles out Born's `p=2` norm, and once the graph is causally oriented it can generate high-visibility interference without a pre-built grid.
+
+### Files/logs changed
+- Updated narrative/runtime state:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+
+### Validation
+- `python3 scripts/base_confidence_check.py`
+- `git diff --check`
+
+### Remaining review seams
+- open: stay on dynamic-graph compression/order-parameter mode and explain what graph observable controls the seed-to-seed visibility spread on generated causal DAGs
+
+### Exact next step
+- Write one bounded comparer that relates generated-DAG visibility to post-barrier path multiplicity and detector-retiming proxies, then keep the cleanest scalar as the next order parameter.
+
 ## 2026-03-30 19:19 America/New_York
 
 ### Seam class

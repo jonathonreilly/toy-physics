@@ -1,4 +1,62 @@
-## 2026-03-30 21:00 America/New_York
+## 2026-03-30 20:02 America/New_York
+
+### Seam class
+- janitor state reconciliation after synced dynamic-graph advance
+- runtime handoff / narrative repair
+
+### Science impact
+- no new analyzer was added beyond the cheap confidence gate; this loop repaired stale shared-state drift against the already-synced canonical head `712d44f`
+- corrected the future-dated PStack summary entry, backfilled the synced generated-causal-DAG interference result into the tracked work log, and refreshed the README plus runtime handoff to the actual canonical state
+- `python3 scripts/base_confidence_check.py` passed; the base check again skipped the heavier full overlap, route-map, and mechanism-split reruns by design
+
+### Current state
+- canonical `main` and `origin/main` are synced at `712d44f`; no detached science child is active
+- the dynamic-graph thread now has three aligned headline claims in tracked state: richer-connectivity anisotropy falls roughly as `1/n_directions`, Born rule follows from linear reversible propagation, and a randomly generated causal DAG can generate high-visibility interference without a pre-built grid
+
+### Strongest confirmed conclusion
+The current synced baseline no longer just says that interference survives on a graph: once the graph is given a causal orientation, the graph itself can generate interference, while the kinematic sector's anisotropy shrinks under richer connectivity and the amplitude law still singles out Born's `p=2` norm.
+
+### Files changed
+- Updated narrative/state:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+
+### Validation
+- `python3 scripts/base_confidence_check.py`
+
+### Exact next step
+- Stay on the dynamic-graph compression/order-parameter thread instead of widening scope.
+- Quantify which generated-DAG structural observable best predicts the spread in `V(y=0)` / `mean_V` across seeds and nearby parameter changes.
+
+### First concrete action
+- Write one bounded analyzer that joins generated-DAG visibility against simple structural observables such as post-barrier path multiplicity, detector-side bottleneck counts, and arrival-retiming proxies, then rank which scalar compresses the seed-to-seed spread best.
+
+## 2026-03-30 19:58 America/New_York
+
+### Seam class
+- generative causal DAG interference
+- evolving-graph foundations
+
+### Science impact
+- completed the tracked follow-on from the time-symmetric generative-graph prototype: orienting the generated graph into a causal DAG and running a path sum produced detector visibility without any pre-built grid
+- across five tested seeds, `481`-node generated DAGs gave `V(y=0)=0.078046..0.988188` and `mean_V=0.169162..0.619900`
+- the no-barrier control remained exactly `V(y=0)=0.000000`, so the signal is tied to the barrier/slit structure rather than a generic generated-graph artifact
+
+### Strongest confirmed conclusion
+A randomly generated causal DAG can generate high-visibility interference on its own, so the model's interference mechanism is graph-generative rather than something that only rides on a pre-imposed lattice.
+
+### Files changed
+- New: `scripts/generative_causal_dag_interference.py`, `logs/2026-03-30-generative-causal-dag-interference.txt`
+
+### Exact next step
+- Stay on compression / order-parameter mode inside the dynamic-graph thread.
+- Identify which generated-DAG structural scalar best predicts visibility across seeds instead of branching into new phenomena.
+
+### First concrete action
+- Write one bounded comparer that records per-seed visibility alongside edge count, barrier reachability, post-barrier path multiplicity, and simple detector-retiming proxies, then checks which observable best tracks `V(y=0)` and `mean_V`.
+
+## 2026-03-30 19:49 America/New_York
 
 ### Seam class
 - PStack session: 32 experiments on interference, gravity, decoherence, persistence, symmetry, foundations, graph evolution
