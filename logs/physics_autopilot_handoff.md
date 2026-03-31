@@ -1,5 +1,33 @@
 # Physics Autopilot Handoff
 
+## 2026-03-31 19:57 America/New_York
+
+### Seam class
+- gravity theory refinement
+- near-mass action saturation diagnostic
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/phase_valley_action_saturation_compare.py`
+- wrote `/Users/jonreilly/Projects/Physics/logs/2026-03-31-phase-valley-action-saturation-compare.txt`
+- reran the same three bounded valley probes from the earlier phase checkpoint, but replaced node phase with cumulative path-action deficit:
+  - `detector_y0`: `x = 45`, `y >= 0`
+  - `detector_half_b`: `x = 45`, `y >= b/2`
+  - `near_mass_b`: `x = 34`, `y >= b`
+- fit summary:
+  - best overall: `near_mass_b action_gap`, `R^2 = 0.4213`, `MAE = 0.3545`
+  - next: `near_mass_b action_q`, `R^2 = 0.3983`, `MAE = 0.3528`
+  - previous best phase proxy remains lower: `near_mass_b phase_gap`, `R^2 = 0.3459`
+- interpretation:
+  - replacing node phase with cumulative action deficit really does sharpen the bounded gravity reduction
+  - the improvement is local to the near-mass skirt probe, not the downstream detector probes
+  - normalized action `Q` still does not beat raw action gap, so the toy saturation law remains provisional
+
+### Strongest confirmed conclusion
+The strongest current plateau diagnostic is now near-mass raw action-deficit gap. The gravity lane has a better local observable than node phase, but not yet a retained normalized `Q_sat` law.
+
+### Exact next step
+- keep the same retained probe family, then test one tighter spread term for action `Q`: use a more local within-valley action spread around the dominant near-mass packet rather than the current pooled node-level spread
+
 ## 2026-03-31 19:44 America/New_York
 
 ### Seam class

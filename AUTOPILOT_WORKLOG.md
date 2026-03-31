@@ -1,3 +1,30 @@
+## 2026-03-31 19:57 America/New_York
+
+### Seam class
+- gravity theory refinement
+- near-mass action saturation diagnostic
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/phase_valley_action_saturation_compare.py`
+- wrote `/Users/jonreilly/Projects/Physics/logs/2026-03-31-phase-valley-action-saturation-compare.txt`
+- kept the corrected propagator and downstream `Δky` readout fixed, then replaced node phase with cumulative path-action deficit on the same three bounded probes:
+  - `detector_y0`: `x = 45`, split `y >= 0`
+  - `detector_half_b`: `x = 45`, split `y >= b/2`
+  - `near_mass_b`: `x = 34`, split `y >= b`
+- result:
+  - the strongest retained bounded diagnostic is now `near_mass_b` raw `action_gap`
+  - fit ranking on the retained family:
+    - `near_mass_b action_gap`: `R^2 = 0.4213`, `MAE = 0.3545`
+    - `near_mass_b action_q`: `R^2 = 0.3983`, `MAE = 0.3528`
+    - `near_mass_b phase_gap`: `R^2 = 0.3459`, `MAE = 0.3242`
+  - detector-side action diagnostics stay weak; the improvement is localized to the near-mass skirt probe
+- retained interpretation:
+  - a truer near-mass action statistic does improve the bounded saturation picture
+  - but the normalization step still trails the raw action gap, so `Q_sat` remains provisional rather than promoted
+
+### Strongest confirmed conclusion
+Near-mass cumulative action deficit is the strongest current diagnostic of the plateau-like momentum kick. The gravity lane now has a better local observable, but not yet a closed normalized saturation law.
+
 ## 2026-03-31 19:44 America/New_York
 
 ### Seam class
