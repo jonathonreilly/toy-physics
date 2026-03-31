@@ -2478,6 +2478,7 @@ class LocalRule:
     action_mode: str = "spent_delay"
     field_mode: str = "relaxed"
     action_retained_weight: float = 1.0
+    attenuation_mode: str = "delay"
 
 
 @dataclass(frozen=True)
@@ -2487,6 +2488,7 @@ class RulePostulates:
     action_mode: str = "spent_delay"
     field_mode: str = "relaxed"
     action_retained_weight: float = 1.0
+    attenuation_mode: str = "delay"
 
 
 COMPACT_COUNT_OPTIONS = (
@@ -2563,6 +2565,7 @@ def derive_local_rule(
         action_mode=postulates.action_mode,
         field_mode=postulates.field_mode,
         action_retained_weight=postulates.action_retained_weight,
+        attenuation_mode=postulates.attenuation_mode,
     )
 
 
@@ -3260,8 +3263,15 @@ def local_edge_properties(
         rule.action_retained_weight,
     )
 
+    if rule.attenuation_mode == "delay":
+        denominator = delay
+    elif rule.attenuation_mode == "geometry":
+        denominator = link_length
+    else:
+        raise ValueError(f"Unknown attenuation mode: {rule.attenuation_mode}")
+
     amplitude = cmath.exp(1j * rule.phase_wavenumber * action_increment) / (
-        delay ** rule.attenuation_power
+        denominator ** rule.attenuation_power
     )
     return delay, action_increment, amplitude
 
