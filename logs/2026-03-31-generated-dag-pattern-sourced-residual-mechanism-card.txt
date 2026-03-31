@@ -1,0 +1,33 @@
+================================================================================
+GENERATED DAG PATTERN-SOURCED RESIDUAL MECHANISM CARD
+================================================================================
+
+Base mover substrate
+  coherent mover substrate: neighbor_radius = 2.5
+  retained static coupling: 3.0
+  retained source footprint: last3_union
+  effect: pattern-sourced steering is viable and toward-source on average
+
+Over-broad source footprint failure
+  failure trigger: replacing last3_union with last6_union
+  generic effect: sign can flip from toward-source to away-shift / retiming
+  shared abstract language: forward-packet retiming
+
+Retained residual branches
+  branch A: wide-rule low-added-packet-field
+    mechanism: added last4-6 support exists but does not project enough extra field onto the tracked packet
+    retained hint: extra_field_mean_on_packet <= 0.0010
+  branch B: self:sparse-25 forward-corridor collapse
+    mechanism: added last4-6 support stops contributing forward corridor support and forward-side balance
+    retained hints: extra_support_corridor_share <= 0.0000, extra_support_forward_share <= 0.1429, extra_packet_side_gap <= 0.0000
+
+What did not retain
+  no universal late-support scalar closes both residual branches cleanly
+  pooled forward-family rules exist, but they stay weaker than the branch-local stories
+
+Current architecture
+  one shared family: forward-packet retiming
+  two residual mechanisms: wide low packet-field, self:sparse corridor collapse
+
+Next step
+  use this card as the retained map before any further local threshold shaving

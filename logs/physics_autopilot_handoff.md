@@ -1,5 +1,65 @@
 # Physics Autopilot Handoff
 
+## 2026-03-31 16:16 America/New_York
+
+### Seam class
+- generated-DAG field coupling
+- residual mechanism card
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/generated_dag_pattern_sourced_residual_mechanism_card.py`
+- wrote the retained card to `/Users/jonreilly/Projects/Physics/logs/2026-03-31-generated-dag-pattern-sourced-residual-mechanism-card.txt`
+- the mover-lane residual map is now explicitly compressed:
+  - base viable source-driven substrate: `neighbor_radius = 2.5`, coupling `3.0`, `last3_union`
+  - over-broad failure trigger: `last6_union`
+  - shared abstract family: forward-packet retiming
+  - retained residual branches:
+    - `wide`: low added field reaching the packet
+    - `self:sparse-25`: collapse of forward corridor / forward-side support
+
+### Current state
+- this step was architecture-only and did not reopen any search
+- the unrelated local `README.md` edit is still intentionally untouched
+
+### Strongest confirmed conclusion
+The mover-lane residual architecture is now small enough to retain honestly: one shared forward-retiming family, two residual mechanisms, no fake universal late-support scalar.
+
+### Exact next step
+- treat the residual card as the stop-rule map and only resume local threshold work when a new experiment directly targets one retained branch
+
+## 2026-03-31 16:10 America/New_York
+
+### Seam class
+- generated-DAG field coupling
+- residual branch crosswalk compare
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/generated_dag_pattern_sourced_residual_branch_crosswalk_compare.py`
+- wrote the residual branch crosswalk to `/Users/jonreilly/Projects/Physics/logs/2026-03-31-generated-dag-residual-branch-crosswalk-compare.txt`
+- the current wide and self:sparse-25 residuals do not reduce to one retained universal rule:
+  - wide-local rule `extra_field_mean_on_packet <= 0.0010` transfers at only `0.2500` on `self:sparse-25`
+  - self:sparse-25 local rule `extra_support_corridor_share <= 0.0000` transfers at only `0.4583` on `wide`
+- pooled forward-family rules exist but stay weaker than the branch-local stories:
+  - best pooled single: `extra_forward_side_gap <= -0.0001`, pooled `0.6562`
+  - best pooled deficit-only OR: `extra_support_forward_share <= 0.1429 or extra_forward_side_gap <= -0.0001`, pooled `0.6875`
+  - branch accuracies for that retained pooled deficit family: `0.6250` on `wide`, `0.8750` on `self:sparse-25`
+  - the best unconstrained pooled OR reaches `0.7500`, but only by mixing opposite directions in a way that is not physically clean enough to retain
+- retained read:
+  - one shared abstract forward-packet-retiming family
+  - two separate residual mechanisms inside it
+
+### Current state
+- this loop stayed strictly on the branch-crosswalk question
+- the unrelated local `README.md` edit remains intentionally untouched
+
+### Strongest confirmed conclusion
+The mover-lane residual does not have one universal late-support law. The right architecture is:
+- `wide`: low added field actually landing on the packet
+- `self:sparse-25`: collapse of added forward corridor support / forward-side balance
+
+### Exact next step
+- write the compact residual-mechanism card for the mover lane so the repo retains the correct branch architecture before any more local threshold shaving
+
 ## 2026-03-31 15:40 America/New_York
 
 ### Seam class
