@@ -142,6 +142,8 @@ A direct pattern-sourced follow-on still sharpens that story, but the current re
 
 A stronger live-vs-frozen source compare then says the field-to-pattern arrow is partly real already, but only on that broader late-source branch. Letting the same mature source keep evolving during the mover run weakens both footprints, but asymmetrically. The live sliding `last6` source stays net toward-source in substance (`126/150` survive, mean signed shift `+0.4420`), while the live sliding `last3` source weakens further (`124/150` survive, mean signed shift `-0.5125`). So the retained source-side bridge is no longer a narrow recent-footprint law. The current positive branch is the broader late `last6` source window, and the active frontier is to compress which late-support geometry keeps that live regenerated field attractive instead of flipping into retiming / away-shift on specific mover-rule slices.
 
+A paired live-window geometry compare then closed the next seam without reopening any broader search. Keeping the source evolution fixed and widening only the live source window from `3` to `6` on the same `146` viable paired rows, the broad window beats the narrow one on `80/146` rows and lifts the mean signed shift from `-0.6000` to `+0.5040`. But that broad live branch does not collapse to one universal late-support scalar. The retained `last6` subset (`52/146` rows that stay coherent and toward-source) is the subset where the added `last4-6` support actually lands on the packet more strongly (`extra_field_mean_on_packet = 0.1006` versus `0.0249` on the nonretained rows), and the best pooled rule is only moderate: `extra_packet_side_gap <= -0.0080` reaches `0.7286` discovery accuracy and `0.6579` holdout accuracy. The remaining split is mover-rule-local. `self` carries most retained rows (`40/83`) but still does not close sharply, while `wide` already tightens under one clearer late-source corridor clause, `last6_corridor_share >= 0.7762` (`0.8113` local accuracy). So the current field-to-pattern read is now sharper: the broad live `last6` branch is real, the pooled packet-landing hint is real but weak, and the unresolved residue sits mostly inside mover-rule-local geometry rather than at the existence of the branch itself.
+
 ### 6. Stable mechanism families
 
 The broadest recurring split is:
@@ -358,7 +360,7 @@ The relevant questions are:
   - exhausted-wall boundary
 - which observables should be retained as branch selectors versus demoted to detector-side or placement modifiers
 - what the smallest confirmation-style holdout pass is that can test the retained architecture without reopening broad ladder growth
-- why the broader `last6_union` source footprint on the `neighbor_radius = 2.5` mover substrate remains net toward-source even under live regeneration while the narrower `last3_union` collapses, and which smallest late-support geometry sets that reversal
+- whether the dominant `self` share of the live `last6` source branch compresses beyond the current weak pooled packet-landing hint, or whether mover-rule-local closure is the real retained boundary there now that `wide` already sharpens under a late-source corridor clause
 
 ## What Is Still Unresolved
 

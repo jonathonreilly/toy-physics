@@ -5,29 +5,33 @@ GENERATED DAG PATTERN-SOURCED RESIDUAL MECHANISM CARD
 Base mover substrate
   coherent mover substrate: neighbor_radius = 2.5
   retained static coupling: 3.0
-  retained source footprint: last3_union
-  effect: pattern-sourced steering is viable and toward-source on average
+  retained live source branch: broad last6 sliding source window
+  effect: pattern-sourced steering stays net toward-source in substance under live regeneration
 
-Over-broad source footprint failure
-  failure trigger: replacing last3_union with last6_union
-  generic effect: sign can flip from toward-source to away-shift / retiming
-  shared abstract language: forward-packet retiming
+Pooled late-support geometry
+  paired live-window result: last6 beats last3 on 80/146 rows
+  retained live last6 rows: 52/146
+  leading pooled hint: added late support must actually land on the packet
+  weak retained hint: extra_packet_side_gap <= -0.0080
 
-Retained residual branches
-  branch A: wide-rule low-added-packet-field
-    mechanism: added last4-6 support exists but does not project enough extra field onto the tracked packet
-    retained hint: extra_field_mean_on_packet <= 0.0010
-  branch B: self:sparse-25 forward-corridor collapse
-    mechanism: added last4-6 support stops contributing forward corridor support and forward-side balance
-    retained hints: extra_support_corridor_share <= 0.0000, extra_support_forward_share <= 0.1429, extra_packet_side_gap <= 0.0000
+Retained mover-rule-local branches
+  branch A: self-rule dominant carrier
+    mechanism: most retained last6 rows live here, but the slice still does not compress to one sharp local scalar
+    current state: best local single-feature accuracy only 0.6386
+  branch B: wide-rule late corridor branch
+    mechanism: the broad source window works when the late source keeps strong forward corridor occupancy
+    retained hint: last6_corridor_share >= 0.7762
 
 What did not retain
-  no universal late-support scalar closes both residual branches cleanly
-  pooled forward-family rules exist, but they stay weaker than the branch-local stories
+  the old retained last3-source card is no longer current
+  no universal pooled late-support scalar closes the broad live branch cleanly
+  pooled packet-landing hints exist, but they stay weaker than the rule-local stories
 
 Current architecture
-  one shared family: forward-packet retiming
-  two residual mechanisms: wide low packet-field, self:sparse corridor collapse
+  one real broad live source branch: last6
+  one weak pooled hint: packet landing from added last4-6 support
+  one sharper local branch: wide late corridor support
+  one unresolved dominant branch: self
 
 Next step
-  use this card as the retained map before any further local threshold shaving
+  use wide as the control branch and compress the dominant self slice next

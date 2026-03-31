@@ -1,3 +1,45 @@
+## 2026-03-31 21:01 America/New_York
+
+### Seam class
+- generated-DAG field coupling
+- live-window late-support geometry compare
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/generated_dag_live_source_window_geometry_compare.py`
+- rendered:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-31-generated-dag-live-source-window-geometry-compare.txt`
+- kept the source evolution fixed and widened only the live source window from `3` to `6` on the same paired tasks
+- this closes the next source-side seam cleanly:
+  - `146` paired live-window rows remain analyzable
+  - the broad live `last6` window beats the narrow live `last3` window on `80/146`
+  - mean signed shift lifts from `-0.6000` to `+0.5040`
+  - the retained live `last6` subset is `52/146`
+- the current positive broad branch is real, but the closure is not universal:
+  - retained `last6` rows carry much more added field landing on the packet than nonretained rows (`0.1006` vs `0.0249`)
+  - the best pooled rule is only moderate:
+    - `extra_packet_side_gap <= -0.0080`
+    - `0.7286` discovery / `0.6579` holdout
+  - the remaining split is mover-rule-local
+- mover-rule-local read:
+  - `self` carries most retained rows: `40/83`
+  - but `self` still does not compress sharply; best local scalar only reaches `0.6386`
+  - `wide` already tightens under a clearer late-source corridor clause:
+    - `last6_corridor_share >= 0.7762`
+    - local accuracy `0.8113`
+
+### Current state
+- the old “narrow recent footprint is the retained branch” story is no longer current
+- the broad live `last6` branch is the retained source-side existence claim
+- the remaining uncertainty is inside mover-rule-local late-support geometry, not at branch existence
+
+### Strongest confirmed conclusion
+The current field-to-pattern arrow is real on the broad live `last6` source branch. What remains open is not whether that branch exists, but how to compress its mover-rule-local late-support geometry, especially inside the dominant `self` slice.
+
+### Exact next step
+- stay on the same bounded seam and split the current live `last6` branch by mover rule:
+  - use `wide` as the clean corridor-share control branch
+  - focus the real compression effort on the dominant `self` branch, which still carries most retained rows but has no sharp local scalar yet
+
 ## 2026-03-31 18:08 America/New_York
 
 ### Seam class

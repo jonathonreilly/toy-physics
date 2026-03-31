@@ -1,5 +1,40 @@
 # Physics Autopilot Handoff
 
+## 2026-03-31 21:01 America/New_York
+
+### Seam class
+- generated-DAG field coupling
+- live-window late-support geometry compare
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/generated_dag_live_source_window_geometry_compare.py`
+- wrote:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-31-generated-dag-live-source-window-geometry-compare.txt`
+- kept the source evolution fixed and widened only the live source window from `3` to `6` on the same paired tasks
+- result:
+  - `146` paired live-window rows
+  - `last6` beats `last3` on `80/146`
+  - mean shift moves from `-0.6000` to `+0.5040`
+  - retained live `last6` subset is `52/146`
+- the broad branch is real, but pooled closure is only moderate:
+  - retained rows carry much more added field on the packet (`0.1006` vs `0.0249`)
+  - best pooled rule: `extra_packet_side_gap <= -0.0080`
+  - pooled accuracy: `0.7286` discovery / `0.6579` holdout
+- the remaining split is mover-rule-local:
+  - `self` carries most retained rows (`40/83`) but still has no strong local scalar (`0.6386`)
+  - `wide` already tightens under `last6_corridor_share >= 0.7762` (`0.8113` local accuracy)
+
+### Current state
+- the broad live `last6` branch is now the retained source-side existence claim
+- the residual question is inside mover-rule-local late-support geometry, not at the existence of live pattern-sourced steering itself
+
+### Strongest confirmed conclusion
+The field-to-pattern arrow is now stronger than a simple frozen-source surrogate claim. Broad live `last6` steering is real, and the main unresolved work is compressing its mover-rule-local residual, especially on `self`.
+
+### Exact next step
+- use `wide` as the clean control branch
+- focus the next compression pass on the dominant `self` slice of the live `last6` branch
+
 ## 2026-03-31 18:08 America/New_York
 
 ### Seam class

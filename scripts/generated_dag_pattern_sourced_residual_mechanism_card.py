@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Render the retained mover-lane residual mechanism card.
+"""Render the current mover-lane late-support mechanism card.
 
-This is the compact architecture artifact after the wide / self:sparse-25
-crosswalk. It is intentionally small and declarative: the goal is to preserve
-the retained mechanism map, not to reopen search.
+This is the compact architecture artifact after the live last3-vs-last6 source
+window compare. It preserves the retained source-side branch and the remaining
+rule-local residual structure without reopening search.
 """
 
 from __future__ import annotations
@@ -17,32 +17,36 @@ def main() -> None:
     print("Base mover substrate")
     print("  coherent mover substrate: neighbor_radius = 2.5")
     print("  retained static coupling: 3.0")
-    print("  retained source footprint: last3_union")
-    print("  effect: pattern-sourced steering is viable and toward-source on average")
+    print("  retained live source branch: broad last6 sliding source window")
+    print("  effect: pattern-sourced steering stays net toward-source in substance under live regeneration")
     print()
-    print("Over-broad source footprint failure")
-    print("  failure trigger: replacing last3_union with last6_union")
-    print("  generic effect: sign can flip from toward-source to away-shift / retiming")
-    print("  shared abstract language: forward-packet retiming")
+    print("Pooled late-support geometry")
+    print("  paired live-window result: last6 beats last3 on 80/146 rows")
+    print("  retained live last6 rows: 52/146")
+    print("  leading pooled hint: added late support must actually land on the packet")
+    print("  weak retained hint: extra_packet_side_gap <= -0.0080")
     print()
-    print("Retained residual branches")
-    print("  branch A: wide-rule low-added-packet-field")
-    print("    mechanism: added last4-6 support exists but does not project enough extra field onto the tracked packet")
-    print("    retained hint: extra_field_mean_on_packet <= 0.0010")
-    print("  branch B: self:sparse-25 forward-corridor collapse")
-    print("    mechanism: added last4-6 support stops contributing forward corridor support and forward-side balance")
-    print("    retained hints: extra_support_corridor_share <= 0.0000, extra_support_forward_share <= 0.1429, extra_packet_side_gap <= 0.0000")
+    print("Retained mover-rule-local branches")
+    print("  branch A: self-rule dominant carrier")
+    print("    mechanism: most retained last6 rows live here, but the slice still does not compress to one sharp local scalar")
+    print("    current state: best local single-feature accuracy only 0.6386")
+    print("  branch B: wide-rule late corridor branch")
+    print("    mechanism: the broad source window works when the late source keeps strong forward corridor occupancy")
+    print("    retained hint: last6_corridor_share >= 0.7762")
     print()
     print("What did not retain")
-    print("  no universal late-support scalar closes both residual branches cleanly")
-    print("  pooled forward-family rules exist, but they stay weaker than the branch-local stories")
+    print("  the old retained last3-source card is no longer current")
+    print("  no universal pooled late-support scalar closes the broad live branch cleanly")
+    print("  pooled packet-landing hints exist, but they stay weaker than the rule-local stories")
     print()
     print("Current architecture")
-    print("  one shared family: forward-packet retiming")
-    print("  two residual mechanisms: wide low packet-field, self:sparse corridor collapse")
+    print("  one real broad live source branch: last6")
+    print("  one weak pooled hint: packet landing from added last4-6 support")
+    print("  one sharper local branch: wide late corridor support")
+    print("  one unresolved dominant branch: self")
     print()
     print("Next step")
-    print("  use this card as the retained map before any further local threshold shaving")
+    print("  use wide as the control branch and compress the dominant self slice next")
 
 
 if __name__ == "__main__":

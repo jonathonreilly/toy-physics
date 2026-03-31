@@ -177,7 +177,7 @@ COUPLINGS = [
         "field / delay layer",
         "persistence layer",
         "P",
-        "static and recent-footprint pattern-sourced fields can steer movers, but the feedback law is still branch-local and incomplete",
+        "static and broad live-window pattern-sourced fields can steer movers, but the feedback law is still branch-local and incomplete",
     ),
     Coupling(
         "record / topology layer",
@@ -194,7 +194,7 @@ RETAINED_CORE = [
     "Linear reversible path-sum propagation with Born-safe interference, machine-precision Sorkin zero on the tested fixed-DAG family, and generated-DAG interference onset under growth.",
     "A comparatively clean unitary sector: Born-safe interference, corrected phase-driven gravity, pure-phase `k=0` limit, weak-coupling `k^2` response, and a near-constant 2D momentum kick from log-field plus path averaging all survive together.",
     "Shared mechanism language across geometry and generated DAGs: completion/load sets the floor, balance selects the branch, bottleneck or placement terms sharpen the readout.",
-    "Coherent mover substrate on generated DAGs and viable pattern-sourced steering on the retained `neighbor_radius = 2.5`, `coupling = 3.0`, `last3_union` footprint.",
+    "Coherent mover substrate on generated DAGs and viable pattern-sourced steering on the retained `neighbor_radius = 2.5`, `coupling = 3.0`, broad live `last6` source window.",
 ]
 
 
