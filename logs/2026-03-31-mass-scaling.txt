@@ -37,7 +37,8 @@ TEST 2: Δky vs mass x-position (5 nodes, y=4..8)
       45    +10.9075
       50    +11.0224
 
-TEST 3: Δky vs n_mass on generated DAGs (5 seeds)
+TEST 3: Centroid shift vs n_mass on generated DAGs (5 seeds)
+  NOTE: this measures position-space centroid, not momentum-space Δky
 
   n_mass  mean_shift     shift/n
   ------------------------------
@@ -47,6 +48,7 @@ TEST 3: Δky vs n_mass on generated DAGs (5 seeds)
        8     +1.7397     +0.2175
       12     +1.7249     +0.1437
 
-If Δky/n_mass ≈ constant: gravitational deflection ∝ mass (F ∝ M)
+If shift/n_mass ≈ constant: gravitational deflection ∝ mass (F ∝ M)
+NOTE: DAG test uses position-space centroid; grid tests 1-2 use Fourier Δky
 
 TEST COMPLETE

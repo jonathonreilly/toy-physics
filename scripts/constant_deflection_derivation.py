@@ -40,11 +40,15 @@ def main():
     nodes = build_rectangular_nodes(width=width, height=height)
     postulates = RulePostulates(phase_per_action=2.0, attenuation_power=1.0)
 
-    # Point mass at center
+    # Mass cluster at center (5 nodes — single node doesn't produce field)
     mass_x, mass_y = 40, 0
-    mass_nodes = frozenset([(mass_x, mass_y)])
+    mass_nodes = frozenset((mass_x, y) for y in range(-2, 3))
     rule = derive_local_rule(persistent_nodes=mass_nodes, postulates=postulates)
     field = derive_node_field(nodes, rule)
+
+    # Verify field is nonzero
+    f_check = field.get((mass_x + 5, 0), 0.0)
+    assert f_check > 0, f"Field should be nonzero near mass, got {f_check}"
 
     print("=" * 70)
     print("WHY IS Δky INDEPENDENT OF IMPACT PARAMETER?")
@@ -54,7 +58,7 @@ def main():
     # ================================================================
     # TEST 1: Field vs distance from point mass
     # ================================================================
-    print("TEST 1: Field f(r) around single mass node")
+    print("TEST 1: Field f(r) around 5-node mass cluster")
     print(f"  Mass at ({mass_x}, {mass_y})")
     print()
 

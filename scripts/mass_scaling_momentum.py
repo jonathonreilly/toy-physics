@@ -148,10 +148,11 @@ def main():
     # TEST 3: On generated DAGs
     # ================================================================
     print()
-    print("TEST 3: Δky vs n_mass on generated DAGs (5 seeds)")
+    print("TEST 3: Centroid shift vs n_mass on generated DAGs (5 seeds)")
+    print("  NOTE: this measures position-space centroid, not momentum-space Δky")
     print()
 
-    def dag_dky(positions, adj, mass_idx, src, det_idx, k_val):
+    def dag_centroid_y(positions, adj, mass_idx, src, det_idx, k_val):
         n = len(positions)
         field_m = [0.0]*n
         if mass_idx:
@@ -242,8 +243,8 @@ def main():
                 continue
 
             for kv in [3.0, 5.0, 7.0]:
-                cy_free = dag_dky(positions, adj, [], src, det, kv)
-                cy_mass = dag_dky(positions, adj, mass, src, det, kv)
+                cy_free = dag_centroid_y(positions, adj, [], src, det, kv)
+                cy_mass = dag_centroid_y(positions, adj, mass, src, det, kv)
                 shifts.append(cy_mass - cy_free)
 
         if shifts:
@@ -252,7 +253,8 @@ def main():
             print(f"  {target_n:6d}  {mean:+10.4f}  {per_n:+10.4f}")
 
     print()
-    print("If Δky/n_mass ≈ constant: gravitational deflection ∝ mass (F ∝ M)")
+    print("If shift/n_mass ≈ constant: gravitational deflection ∝ mass (F ∝ M)")
+    print("NOTE: DAG test uses position-space centroid; grid tests 1-2 use Fourier Δky")
     print()
     print("TEST COMPLETE")
 
