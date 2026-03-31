@@ -1,3 +1,74 @@
+## 2026-03-31 03:52 America/New_York
+
+### Seam class
+- generated-DAG visibility order-parameter bridge
+- bounded transfer check against raw edge-count / density baselines
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/generative_causal_dag_visibility_order_parameter_compare.py` and ran the first bounded bridge from geometry-language observables into the generated causal DAG lane
+- the bridge is not premature: on the default 64-seed sample (`/Users/jonreilly/Projects/Physics/logs/2026-03-31-generative-causal-dag-visibility-order-parameter-compare-default.txt`), the best local analogue is `center_path_balance`, which beats the best raw baselines `edge_count` / `edge_density` on the combined `V(y=0)` / `mean_V` ranking
+- the nearest holdout stays in the same family but changes which member wins: on the denser-radius sample (`/Users/jonreilly/Projects/Physics/logs/2026-03-31-generative-causal-dag-visibility-order-parameter-compare-denser-radius.txt`), `center_balanced_log_paths` beats raw edge size/density more strongly than the default winner
+- so the cleanest current statement is not one universal generated-DAG scalar; it is a small detector-side packet-completion family:
+  - balance of upper/lower center paths
+  - balanced center slit-load
+  - smaller supporting terms for slit share / retiming
+
+### Current state
+- canonical `main` / `origin/main` are still synced at `79e2dfc` before this local Codex checkpoint
+- repo work in this loop is intentionally bounded to:
+  - one new comparer script
+  - two generated-DAG comparer logs
+  - README / worklog / handoff updates once the result was stable
+
+### Strongest confirmed conclusion
+Generated-DAG visibility spread now has a credible mechanism-language bridge: local detector-side packet completion beats raw edge count / density, but the retained observable is a small family rather than a single universal scalar. Default seeds are balance-led; the nearby denser-radius holdout is balanced-load-led.
+
+### Exact next step
+- stay on this compression lane instead of widening the generated ladder
+- do one bounded within-family compare on the generated-DAG rows to see whether `center_path_balance` and `center_balanced_log_paths` collapse to a smaller shared observable or define a genuine two-branch regime
+- only after that, attempt transfer of the retained family onto broader generated-DAG parameter changes
+
+## 2026-03-31 02:54 America/New_York
+
+### Seam class
+- track split clarification after revalidation + dynamic-graph advance
+- Codex geometry/regime-compression lane vs Claude generative-graph lane
+
+### Science impact
+- no new analyzer was added in this loop; this is a coordination / narrative update so the active threads stop drifting back into the same search space
+- the current repo state now supports a clean split:
+  - **Claude track**: generated / evolving graphs, causal DAG emergence, endogenous interference / gravity on generated substrates, and Axiom 1 follow-through
+  - **Codex track**: geometry / ladder / order-parameter compression, low-overlap regime architecture, beyond-ceiling packet / hinge language, and small structural observables that can later be tested against generated-DAG behavior
+- the point of the split is not "old thread vs new thread"; it is "graph generation" vs "mechanism language." The geometry lane remains valuable because it is still the cleanest source of compact local observables and regime boundaries.
+
+### Current state
+- canonical `main` and `origin/main` are synced at `77958ec`
+- the strongest dynamic-graph claims now live on Claude's side:
+  - generated causal DAGs can produce interference
+  - revalidation corrected the generative graph to perfect causal order (`dag_ratio = 1.0`)
+  - topological decoherence is genuine at intermediate record probability
+- the strongest compact regime language still lives on the geometry / low-overlap side:
+  - shared low-overlap branch map
+  - support-collapse guard
+  - anchor-balance basin
+  - beyond-ceiling shared packet regime and its current subbranches
+
+### Strongest confirmed conclusion
+The project now has two complementary active lanes: generated graphs are beginning to produce physics-like behavior, while the geometry / ladder thread still provides the sharpest compact language for which local structures separate regimes. The next value is in linking those two, not in having both lanes rediscover the same facts independently.
+
+### Exact next step
+- **Claude**: stay on generated / evolving graphs and test whether more of the phenomena arise endogenously from the graph dynamics rather than from hand-imposed benchmark geometry.
+- **Codex**: stay on geometry / regime compression and avoid broad new ladder growth unless it is needed for one bounded discriminator.
+- For Codex specifically, prioritize observables that could plausibly transfer onto generated-DAG data:
+  - packet / closure-completion proxies
+  - detector-side bottlenecks / retiming-style scalars
+  - bridge-balance or anchor-balance analogues
+  - small branch/domain guards rather than big clause piles
+
+### First concrete action
+- Codex should write one bounded comparer that asks whether ladder-style local observables, or close analogues of them, compress the seed-to-seed spread in generated-causal-DAG visibility better than raw edge count / density summaries.
+- If that bridge looks premature, the fallback Codex step is one more bounded geometry-language cleanup: tighten the beyond-ceiling / exhausted-wall summary into the smallest current observable family without widening the ladder.
+
 ## 2026-03-30 22:00 America/New_York
 
 ### Seam class

@@ -1,5 +1,32 @@
 # Physics Autopilot Handoff
 
+## 2026-03-31 03:52 America/New_York
+
+### Seam class
+- generated-DAG visibility order-parameter bridge
+- bounded local-family vs raw-baseline compression
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/generative_causal_dag_visibility_order_parameter_compare.py`
+- the bounded default comparer at `/Users/jonreilly/Projects/Physics/logs/2026-03-31-generative-causal-dag-visibility-order-parameter-compare-default.txt` shows the bridge is real: `center_path_balance` beats raw `edge_count` / `edge_density` on the combined `V(y=0)` / `mean_V` ranking
+- the nearby denser-radius holdout at `/Users/jonreilly/Projects/Physics/logs/2026-03-31-generative-causal-dag-visibility-order-parameter-compare-denser-radius.txt` keeps the same mechanism family but shifts the best member to `center_balanced_log_paths`
+- this means the generated-DAG visibility spread currently compresses best as a small detector-side packet-completion family rather than as one universal raw-size scalar
+
+### Current state
+- cooperative lock is held by the manual Codex worker for this bounded write-up
+- canonical `main` / `origin/main` are synced at `79e2dfc` before this uncommitted local checkpoint
+- the only science files added in this loop are:
+  - `/Users/jonreilly/Projects/Physics/scripts/generative_causal_dag_visibility_order_parameter_compare.py`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-31-generative-causal-dag-visibility-order-parameter-compare-default.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-31-generative-causal-dag-visibility-order-parameter-compare-denser-radius.txt`
+
+### Strongest confirmed conclusion
+Generated-DAG visibility is no longer compressed best by raw edge count or edge density. The best current mechanism language is detector-side packet completion, with a default balance-led branch and a nearby denser-radius balanced-load-led branch.
+
+### Exact next step
+- stay local and bounded
+- compare the generated-DAG rows behind `center_path_balance` vs `center_balanced_log_paths` directly to see whether they collapse to one smaller shared observable or define a genuine two-branch regime
+
 ## 2026-03-30 20:02 America/New_York
 
 ### Seam class
