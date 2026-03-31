@@ -1,3 +1,29 @@
+## 2026-03-31 19:44 America/New_York
+
+### Seam class
+- gravity theory refinement
+- phase-valley saturation diagnostic
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/phase_valley_saturation_qsat_compare.py`
+- wrote `/Users/jonreilly/Projects/Physics/logs/2026-03-31-phase-valley-saturation-qsat-compare.txt`
+- kept the retained propagator and downstream `Δky` readout fixed, then compared three bounded valley probes on the canonical impact-parameter family:
+  - downstream continuation split: `x = 45`, `y >= 0`
+  - downstream mass-aware split: `x = 45`, `y >= b/2`
+  - near-mass skirt split: `x = 34`, `y >= b`
+- result:
+  - the best retained bounded diagnostic is still raw `phase_gap`, not normalized `Q_sat`
+  - geometry-aware cuts do help:
+    - downstream `y >= b/2` improves raw-gap fit to `R^2 = 0.2905`
+    - near-mass `x = 34`, `y >= b` improves raw-gap fit further to `R^2 = 0.3459`
+  - `Q_sat` still trails raw gap on every retained bounded probe (`R^2 = 0.2157` at best)
+- the current toy saturation law therefore stays provisional on the present measurement basis:
+  - best empirical proxy = near-mass raw phase gap
+  - next clean refinement = replace node phase by a truer near-mass path/action statistic
+
+### Strongest confirmed conclusion
+The plateau-like `Δky` response does admit a cleaner geometry-aware valley proxy, but the current normalization step is not yet the reduction. The right retained read is phase-valley geometry first, `Q_sat` still provisional.
+
 ## 2026-03-31 18:56 America/New_York
 
 ### Seam class

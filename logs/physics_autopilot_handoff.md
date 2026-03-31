@@ -1,5 +1,33 @@
 # Physics Autopilot Handoff
 
+## 2026-03-31 19:44 America/New_York
+
+### Seam class
+- gravity theory refinement
+- phase-valley saturation diagnostic
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/phase_valley_saturation_qsat_compare.py`
+- wrote `/Users/jonreilly/Projects/Physics/logs/2026-03-31-phase-valley-saturation-qsat-compare.txt`
+- compared three bounded valley probes on the retained impact-parameter family while keeping the propagator and downstream `Δky` readout fixed:
+  - `detector_y0`: `x = 45`, split `y >= 0`
+  - `detector_half_b`: `x = 45`, split `y >= b/2`
+  - `near_mass_b`: `x = 34`, split `y >= b`
+- fit summary:
+  - `near_mass_b` raw `phase_gap`: `R^2 = 0.3459`, `MAE = 0.3242`
+  - `detector_half_b` raw `phase_gap`: `R^2 = 0.2905`, `MAE = 0.3853`
+  - best `Q_sat`: `detector_half_b`, `R^2 = 0.2157`
+- interpretation:
+  - the best retained bounded diagnostic is still raw phase gap, not normalized `Q_sat`
+  - geometry-aware valley cuts help, especially just downstream of the mass
+  - the toy saturation law remains provisional until we replace node phase with a truer near-mass path/action statistic
+
+### Strongest confirmed conclusion
+The plateau-like gravity kick is better captured by phase-valley geometry than by the current normalized `Q_sat` proxy. Near-mass raw phase separation is the retained diagnostic; normalization has not yet earned a retained claim.
+
+### Exact next step
+- keep the corrected propagator and `Δky` readout fixed, then replace node phase with a truer near-mass action statistic on the same three bounded valley probes
+
 ## 2026-03-31 18:56 America/New_York
 
 ### Seam class
