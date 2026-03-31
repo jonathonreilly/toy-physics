@@ -1,0 +1,44 @@
+================================================================================
+OSCILLATION DECOHERENCE (fully endogenous)
+  Persistent pattern oscillates → different fields per phase →
+  slow detector averages → decoherence from dynamics alone.
+================================================================================
+
+
+============================================================
+SEED = 42
+============================================================
+  Pattern evolution: sizes = [24, 18, 27, 14, 19, 18, 15, 21, 17]
+  Using phases 6-8: sizes = [15, 21, 17]
+  Phase shifts from free: ['0.0813', '0.0915', '0.0839']
+  Phase variability (max variation across phases): 0.015143
+  Fast-vs-slow diff: 0.004691
+
+  If phase_variability > 0: oscillation changes the interference pattern
+  If fast-vs-slow > 0: slow detector sees different pattern = decoherence
+
+============================================================
+SEED = 123
+============================================================
+  Pattern evolution: sizes = [32, 27, 30, 21, 26, 26, 31, 22, 42]
+  Using phases 6-8: sizes = [31, 22, 42]
+  Phase shifts from free: ['0.1322', '0.1313', '0.1345']
+  Phase variability (max variation across phases): 0.003112
+  Fast-vs-slow diff: 0.000342
+
+  If phase_variability > 0: oscillation changes the interference pattern
+  If fast-vs-slow > 0: slow detector sees different pattern = decoherence
+
+============================================================
+SEED = 456
+============================================================
+  Pattern evolution: sizes = [26, 10, 23, 14, 20, 10, 16, 11, 12]
+  Using phases 6-8: sizes = [16, 11, 12]
+  Phase shifts from free: ['0.1991', '0.1957', '0.1988']
+  Phase variability (max variation across phases): 0.006101
+  Fast-vs-slow diff: 0.002576
+
+  If phase_variability > 0: oscillation changes the interference pattern
+  If fast-vs-slow > 0: slow detector sees different pattern = decoherence
+
+TEST COMPLETE
