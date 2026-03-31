@@ -1,8 +1,8 @@
 # Corrected Propagator: From Amplitude Repulsion to Gravitational Attraction
 
 **Date:** 2026-03-31
-**Experiments:** 54 (amplitude-packet-action-sweep through between-slit-geometry-sweep)
-**Scripts:** 40+ files in `scripts/`
+**Experiments:** 61 (amplitude-packet-action-sweep through density-matrix-analysis)
+**Scripts:** 45+ files in `scripts/`
 
 ---
 
@@ -162,6 +162,23 @@ A code review revealed the between-slit test was placing mass nodes in the block
 
 The mechanism: mass nodes in the first layer past the barrier carry an environment register (fine-grained: last mass node index). Paths from different slits traverse different mass nodes → different env labels → partial trace removes cross-slit interference. Decoherence is slit-separation-independent (mass proximity to barrier matters, not slit geometry).
 
+### 10. Density Matrix Analysis — Decoherence is Universal (experiment 61)
+
+The V_drop threshold (0.02) masks widespread sub-threshold decoherence. Computing the reduced density matrix purity Tr(ρ²) reveals:
+
+| Purity range | Count | Interpretation |
+|---|---|---|
+| < 0.60 | 2/20 (10%) | Strongly decohered |
+| 0.60–0.80 | 9/20 (45%) | Moderately decohered |
+| 0.80–0.95 | 7/20 (35%) | Weakly decohered |
+| > 0.99 | **0/20 (0%)** | None are genuinely pure |
+
+Mean purity = 0.80. Purity correlates with ALL THREE outcome at r=-0.40 (2× better than any structural observable). Source: `density-matrix.txt`.
+
+**This changes the model's decoherence from "geometry-tuned" to "universal on irregular DAGs."** The two-register mechanism creates mixed states for every graph realization. The 40% V_drop rate measures threshold-crossing, not mechanism presence.
+
+On the regular lattice, purity = 1.0 (no decoherence) because 8-fold symmetry gives both slits identical env labels (`two-register-lattice.txt`). Graph irregularity is essential.
+
 ---
 
 ## Validation Summary
@@ -175,11 +192,11 @@ The mechanism: mass nodes in the first layer past the barrier carry an environme
 | k=0 → no gravity | PASS | shift = 0.000000 |
 | Gravity attraction | PASS | 11/12 on DAGs |
 | Record suppression | MARGINAL | ΔV = 0.002 |
-| Endogenous decoherence | **PASS** | D=40%, ALL THREE=30% (two-register, post-barrier mass) |
+| Endogenous decoherence | **PASS** | Universal: 0/20 pure, mean purity=0.80 (two-register) |
 | Distance scaling | UNCLEAR | Not clean ray-optics |
 | Universal force law | FAIL | R²=0.20 on DAGs |
 
-**Overall confidence**: HIGH for the corrected propagator as an improvement over standard. MODERATE for the attraction mechanism's universality. LOW for distance scaling. MODERATE for endogenous decoherence (geometry-dependent, 30-40% rate).
+**Overall confidence**: HIGH for the corrected propagator as an improvement over standard. MODERATE for the attraction mechanism's universality. LOW for distance scaling. HIGH for endogenous decoherence (universal on irregular DAGs, mean purity=0.80).
 
 **Known fragilities**: k-dependence (attraction fails at k≈3.5-4.7 on lattice, though this is a lattice resonance absent on DAGs); decoherence requires larger effect size or different mechanism.
 
@@ -215,14 +232,14 @@ Source: `endogenous-opacity.txt`, `endogenous-field-fluct.txt`, `directional-rec
 
 **Interpretation**: the corrected propagator creates a clean separation between unitary physics (gravity + interference from phase structure) and non-unitary physics (decoherence). The unitary sector is fully solved. Single-pass perturbations (noise, opacity, field fluctuation) fail for decoherence. However, the two-register architecture with fine-grained environment at properly positioned mass nodes produces genuine endogenous decoherence at 40% rate. The key geometric requirement: mass must be traversable by slit paths (post-barrier, not blocked). All three phenomena coexist at 30% of seeds.
 
-Additional findings (experiments 44-54): Δky is nearly b-independent (2D log field + multi-path averaging) and mass-independent (threshold effect). The field profile is steeper than pure log(R/r) on finite grids. The critical ratio R_c = 1+|y|/s is exactly identical for both propagators at zero field (13/13 match).
+Additional findings (experiments 44-61): Δky is nearly b-independent (2D log field + multi-path averaging) and mass-independent (threshold effect). The field profile is steeper than pure log(R/r) on finite grids. The critical ratio R_c = 1+|y|/s is exactly identical for both propagators at zero field (13/13 match). The reduced density matrix reveals universal decoherence (0/20 seeds pure, mean purity=0.80) — the two-register mechanism works on every irregular graph, with purity as the best predictor of the ALL THREE outcome (r=-0.40). Regular lattices have purity=1.0 (no decoherence due to symmetry).
 
 ---
 
 ## Next Steps
 
-1. **Increase decoherence rate**: The 40% D rate at fine env comes with a gravity trade-off (env fragmentation). Find an intermediate env granularity that achieves D>30% with G>70%. (HIGH)
-2. **Decoherence on lattice**: The two-register mechanism was tested on DAGs. Does it also work on the rectangular grid? (MEDIUM)
+1. **Decoherence rate engineering**: Mean purity=0.80 is universal but V_drop threshold-crossing is only 40%. Can purity be pushed below 0.60 with optimized geometry? (MEDIUM)
+2. **Purity on larger graphs**: Do larger DAGs (more layers/nodes) have lower purity? If purity→0 with graph size, decoherence becomes complete in the large-graph limit. (HIGH)
 3. **Topology-dependent coupling**: Characterize what graph properties determine the force law's proportionality constant C (MEDIUM).
 4. **Integrate with Codex pattern-sourced results**: Cross-compare mover steering with corrected propagator attraction (MEDIUM).
 5. ~~**Integrate with simulator**~~: DONE — `attenuation_mode="geometry"` added to `RulePostulates`.
