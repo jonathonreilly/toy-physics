@@ -134,6 +134,8 @@ Under the current default self-maintenance rule `S={3,4}, B={3,4}`, the tested s
 
 So the mover-side bridge now matches the same abstract vocabulary as the visibility bridge and the geometry card: completion/load first, bottleneck second. Here the completion/load term is local forward frontier support around the tracked packet, and the bottleneck term is how narrowly that support stays focused in the forward band. That is the real substrate needed for the next frontier: field-to-pattern coupling on coherent translating packets rather than on patterns that merely oscillate, diffuse, or die.
 
+A first bounded field-coupled probe now says that this substrate is actually usable. Starting only from the coherent free movers in that same canonical family (`248` coupled trials per tested coupling), a static localized field placed a little ahead of the free packet path can steer those movers without collapsing the substrate. The best retained coupling in the bounded sweep is not the weakest one: at coupling `3.000`, `224/248` packets remain coherent survivors, only `18` diffuse, only `6` die, and the signed toward-mass shift rises to `+0.9556` (median `+0.6294`). The clearest steering lives on the denser forward neighborhoods (`neighbor_radius = 2.5`, mean signed shift `+1.1842`). So the mover lane has now crossed the basic feasibility threshold: field-to-pattern coupling no longer needs to be tested on oscillators or dying packets. The clean next step is pattern-sourced deflection of one coherent mover by another pattern on the same generated-DAG substrate.
+
 ### 6. Stable mechanism families
 
 The broadest recurring split is:
@@ -350,7 +352,7 @@ The relevant questions are:
   - exhausted-wall boundary
 - which observables should be retained as branch selectors versus demoted to detector-side or placement modifiers
 - what the smallest confirmation-style holdout pass is that can test the retained architecture without reopening broad ladder growth
-- whether field-to-pattern coupling can now be tested on coherent translating generated-DAG packets instead of on substrates that only oscillate, diffuse, or die
+- whether a pattern-sourced field can now deflect another coherent generated-DAG mover on the `neighbor_radius = 2.5` substrate, rather than only under the current hand-placed static-mass proxy
 
 ## What Is Still Unresolved
 

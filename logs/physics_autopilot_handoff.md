@@ -1,5 +1,31 @@
 # Physics Autopilot Handoff
 
+## 2026-03-31 11:20 America/New_York
+
+### Seam class
+- generated-DAG field coupling
+- coherent mover substrate probe
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/generated_dag_field_coupled_mover_probe.py`
+- wrote the canonical coupled sweep to `/Users/jonreilly/Projects/Physics/logs/2026-03-31-generated-dag-field-coupled-mover-probe.txt`
+- the coherent mover substrate now survives a real field-coupling proxy:
+  - retained coupling is `3.000`
+  - `224/248` coupled trials remain coherent survivors, `18` diffuse, `6` die
+  - mean signed toward-mass shift is `+0.9556`
+  - the strongest steering lives on `neighbor_radius = 2.5` with mean signed shift `+1.1842`
+- this is the first bounded result showing field-to-pattern coupling on movers rather than only on oscillators or dying packets
+
+### Current state
+- this loop stayed bounded to a static-mass proxy on the canonical mover substrate
+- no broader rule sweep or fresh frontier growth was opened
+
+### Strongest confirmed conclusion
+Generated-DAG coherent movers are now a viable coupling substrate. A localized field can steer them without collapsing most packets.
+
+### Exact next step
+- replace the current hand-placed static mass with a pattern-sourced field and test whether one coherent mover or persistent source can deflect another coherent translating packet on the `neighbor_radius = 2.5` substrate
+
 ## 2026-03-31 11:05 America/New_York
 
 ### Seam class
