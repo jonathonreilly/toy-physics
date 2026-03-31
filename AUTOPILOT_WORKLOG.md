@@ -1,3 +1,32 @@
+## 2026-03-31 11:05 America/New_York
+
+### Seam class
+- generated-DAG mover bridge
+- packet-tracking regime compression
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/generated_dag_packet_tracking_bridge_compare.py`
+- rendered the canonical mover compare at `/Users/jonreilly/Projects/Physics/logs/2026-03-31-generated-dag-packet-tracking-bridge-compare.txt`
+- the generated-DAG mover lane now has a retained two-stage packet law instead of a vague motion/no-motion split:
+  - opening survival guard: `early_live_fraction >= 0.625 and early_front_load >= 1.447`
+  - coherent-vs-diffuse mover split among live rows: `early_front_load >= 0.962 and early_band_share <= 0.776`
+- the holdout picture is still qualitatively stable:
+  - live-vs-die rule transfers at `0.6889`
+  - survive-vs-diffuse rule transfers at `0.7857`
+- the mover bridge now fits the same abstract vocabulary as the existing geometry card and detector-balance bridge:
+  - completion/load first
+  - bottleneck second
+
+### Current state
+- this loop stayed bounded on the canonical mover family from the existing mobility lane rather than reopening broad new rule archaeology
+- the repo’s active problem wording now points naturally toward field-to-pattern coupling on coherent movers, not just more detector-side compression
+
+### Strongest confirmed conclusion
+Generated-DAG movers are now compressed enough to use as a real substrate. The current mover-side bridge is: enough forward local packet load keeps the packet alive, and narrower forward-band concentration separates coherent translating packets from diffuse alive-but-smeared rows.
+
+### Exact next step
+- use this mover-side packet bridge to test field-to-pattern coupling on coherent generated-DAG movers, starting with whether a local field can bend or retime packets that already satisfy the retained survival/load guard
+
 ## 2026-03-31 10:30 America/New_York
 
 ### Seam class

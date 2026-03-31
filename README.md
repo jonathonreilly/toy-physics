@@ -127,7 +127,12 @@ The large open/closed-slit Sorkin signal comes from DAG reconfiguration rather t
 
 ### 5. Oscillatory persistence under the default self-maintenance rule
 
-Under the current default self-maintenance rule `S={3,4}, B={3,4}`, the tested seeds do not settle to static fixed points; they either die or enter period-2/3 orbits. In that sense, default persistence is periodic renewal rather than stasis. Broader rule sweeps still contain fixed-point rules, growing rules, and other oscillator families, so this is a statement about the current default dynamics rather than the whole rule space.
+Under the current default self-maintenance rule `S={3,4}, B={3,4}`, the tested seeds do not settle to static fixed points; they either die or enter period-2/3 orbits. In that sense, default persistence is periodic renewal rather than stasis. Broader rule sweeps still contain fixed-point rules, growing rules, and other oscillator families, so this is a statement about the current default dynamics rather than the whole rule space. A bounded packet-tracking bridge on generated-DAG movers now sharpens the next step beyond that static persistence language. On the canonical mover family (`540` rows across four graph configs, three neighbor radii, three seed positions, and the canonical rule trio), coherent translating packets do exist (`124` rows), but they do not live on one magic scalar. The retained mover map is two-stage:
+
+- opening survival guard: on the discovery pair (`dense-25` / `sparse-25`), the best compact live-vs-die clause is `early_live_fraction >= 0.625 and early_front_load >= 1.447`, with `0.8000` discovery accuracy and `0.6889` holdout accuracy on `wide-15` / `long-30`
+- coherent-vs-diffuse splitter among live rows: the best compact mover clause is `early_front_load >= 0.962 and early_band_share <= 0.776`, with `0.8250` discovery accuracy and `0.7857` holdout accuracy
+
+So the mover-side bridge now matches the same abstract vocabulary as the visibility bridge and the geometry card: completion/load first, bottleneck second. Here the completion/load term is local forward frontier support around the tracked packet, and the bottleneck term is how narrowly that support stays focused in the forward band. That is the real substrate needed for the next frontier: field-to-pattern coupling on coherent translating packets rather than on patterns that merely oscillate, diffuse, or die.
 
 ### 6. Stable mechanism families
 
@@ -337,6 +342,7 @@ The relevant questions are:
 
 - whether the generated-DAG bridge is stably a two-branch packet regime rather than a one-scalar story
 - whether `center_balanced_log_paths` and `center_path_balance` are best read as the same completion/load-plus-balance architecture already retained on the geometry side
+- whether the new mover-side packet bridge and the detector-side visibility bridge are already the same smaller completion/load-plus-bottleneck language in two readout channels
 - whether the current geometry card is the right smallest domain map:
   - support-collapse guard
   - subcritical balance basin
@@ -344,6 +350,7 @@ The relevant questions are:
   - exhausted-wall boundary
 - which observables should be retained as branch selectors versus demoted to detector-side or placement modifiers
 - what the smallest confirmation-style holdout pass is that can test the retained architecture without reopening broad ladder growth
+- whether field-to-pattern coupling can now be tested on coherent translating generated-DAG packets instead of on substrates that only oscillate, diffuse, or die
 
 ## What Is Still Unresolved
 

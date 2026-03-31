@@ -1,5 +1,34 @@
 # Physics Autopilot Handoff
 
+## 2026-03-31 11:05 America/New_York
+
+### Seam class
+- generated-DAG mover bridge
+- packet-tracking regime compression
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/generated_dag_packet_tracking_bridge_compare.py`
+- wrote the canonical mover compare to `/Users/jonreilly/Projects/Physics/logs/2026-03-31-generated-dag-packet-tracking-bridge-compare.txt`
+- the mover lane now has a retained two-stage packet bridge:
+  - opening survival guard: `early_live_fraction >= 0.625 and early_front_load >= 1.447`
+  - coherent-vs-diffuse splitter among live rows: `early_front_load >= 0.962 and early_band_share <= 0.776`
+- holdout transfer stayed qualitatively intact on `wide-15` / `long-30`:
+  - live-vs-die rule: `0.6889`
+  - survive-vs-diffuse rule: `0.7857`
+- abstractly this matches the current crosswalk vocabulary:
+  - completion/load first
+  - bottleneck second
+
+### Current state
+- this loop stayed on the canonical mover family rather than reopening broader rule or frontier growth
+- the README now points the frontier toward field-to-pattern coupling on coherent movers
+
+### Strongest confirmed conclusion
+Generated-DAG mover outcomes are no longer just a loose motion taxonomy. The current retained law is: enough local forward packet load keeps the packet alive, and tighter forward-band concentration is what keeps the live packet coherent instead of diffuse.
+
+### Exact next step
+- test field-to-pattern coupling on movers that already satisfy the retained survival/load bridge, rather than on oscillators or dying packets
+
 ## 2026-03-31 10:30 America/New_York
 
 ### Seam class
