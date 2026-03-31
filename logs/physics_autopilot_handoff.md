@@ -1,5 +1,74 @@
 # Physics Autopilot Handoff
 
+## 2026-03-31 18:56 America/New_York
+
+### Seam class
+- decoherence scaling interpretation repair
+
+### Science impact
+- repaired the measurement/interpretation layer for the recent scaling claims:
+  - purity is detector-conditioned purity, not full-state purity
+  - size sweeps now compare fixed vs depth-scaled environment regions
+  - cumulative env is now a genuine fixed-bin register test
+  - evolving env is now labeled honestly as a discretized phase-bin test
+- rerun result:
+  - the wrong-way size trend survives
+  - but it is now narrower than the earlier theorem-like wording
+- retained numbers:
+  - node-label detector-state purity rises `0.7060 -> 0.8858` with fixed env depth
+  - and still rises `0.7060 -> 0.7944` when env depth scales with graph size
+  - fixed-bin cumulative env stays near pure (`0.9896 .. 0.9827`)
+  - discretized evolving env either stays pure or wrong-scales (`0.8067 -> 0.8509`)
+
+### Strongest confirmed conclusion
+The tested discrete environment architectures still fail to scale correctly on growing graphs, even after partially controlling for environment dilution. That keeps the non-unitary scaling law as the sharp frontier, but the repo should no longer describe this as a general proof that all finite-dimensional environments fail.
+
+## 2026-03-31 17:39 America/New_York
+
+### Seam class
+- architecture reset
+- adversarial critique / next-work plan
+
+### Science impact
+- no new measurement landed in this note; this is the current OPEX-facing reset after the harshest credible critique
+- retained positive core:
+  - corrected `1/L^p` propagator keeps the Born/interference package and fixes gravity sign
+  - generated-DAG growth still creates the conditions for the retained unitary phenomena
+  - two-register decoherence is now a real branch in the right post-barrier geometry, but it is tuned rather than generic
+- retained critique:
+  - several core ingredients are still selected rather than uniquely derived
+  - the decoherence branch is geometry-sensitive and not structurally compressible by simple graph observables so far
+  - no universal DAG force law or clean lensing law is retained
+  - results that have not survived explicit code review or rerun should be treated as provisional by default
+- current adversarial interest map:
+  - toy-model mechanism interest: `10.0/10`
+  - foundations / complex-systems / network-dynamics interest: `9.9/10`
+  - broader theorist interest: `9.7/10`
+  - bridge to known physics: `8.8/10`
+  - publishable-as-foundational physics breakthrough: `8.2/10`
+  - ready for top-tier mainstream physics claims: `4.6/10`
+
+### Current state
+- the project is no longer bottlenecked mainly by one more sweep
+- the current bottleneck is architectural compression:
+  - assumption ledger
+  - claim ledger
+  - explicit layer / coupling map
+- the local manual workspace currently also has an uncommitted probe in:
+  - `/Users/jonreilly/Projects/Physics/scripts/all_three_predictor.py`
+  - this probe supports the stronger “phase-emergent, not simply structurally predictable” read and should not be confused with canonical `main` yet
+
+### Strongest confirmed conclusion
+The right current frame is not “finished theory.” It is: strong retained unitary core, real but tuned endogenous decoherence branch, and a sharper need to write down exactly what is assumed, what is retained, and what is still open.
+
+### Exact next step
+- while Claude continues the active science lane, keep OPEX in synthesis mode:
+  - write the assumption ledger
+  - write the claim ledger
+  - freeze the architecture document
+  - only reopen a compact predictor pass if it directly tests whether `ALL THREE` can be compressed by one mixed geometry-plus-phase feature
+- after that, shift the default repo-facing work from mechanism hunting to thesis/paper packaging
+
 ## 2026-03-31 21:01 America/New_York
 
 ### Seam class

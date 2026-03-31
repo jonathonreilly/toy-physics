@@ -1,3 +1,83 @@
+## 2026-03-31 18:56 America/New_York
+
+### Seam class
+- decoherence scaling interpretation repair
+
+### Science impact
+- fixed the recent over-strong decoherence-scaling read without weakening the core negative result
+- code/log repair landed in:
+  - `/Users/jonreilly/Projects/Physics/scripts/density_matrix_analysis.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/purity_vs_graph_size.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/cumulative_phase_env.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/evolving_env_decoherence.py`
+- the corrected interpretation is now:
+  - the measured purity is detector-conditioned purity, not full-state purity
+  - the wrong-way size trend is not just a fixed-env-region artifact
+  - but the current repo does **not** prove a blanket theorem that all finite-dimensional environments fail
+- key rerun numbers:
+  - fixed one-layer node-label env: `0.7060 -> 0.8858`
+  - depth-scaled node-label env: `0.7060 -> 0.7944`
+  - fixed-bin cumulative env: stays near pure `0.9896 .. 0.9827`
+  - discretized evolving env: either `1.0000` or wrong-scales (`0.8067 -> 0.8509`)
+
+### Strongest confirmed conclusion
+The current tested discrete environment architectures still scale the wrong way on growing graphs, even after partially controlling for environment dilution. The non-unitary frontier remains real and sharp, but the strongest supported claim is now narrower and more honest.
+
+## 2026-03-31 17:39 America/New_York
+
+### Seam class
+- architecture reset
+- adversarial critique / next-work plan
+
+### Science impact
+- no new experiment was added in this step; this is a deliberate zoom-out note for OPEX while the science lane continues elsewhere
+- recorded the current adversarial read after the corrected-propagator and two-register progress:
+  - the project now has a strong retained unitary core:
+    - corrected `1/L^p` propagator
+    - gravity sign fixed
+    - Born-safe interference package retained
+    - `k=0 -> 0` pure-phase gravity test
+    - growth-emergent onset on generated DAGs
+  - the project also has a real but tuned endogenous non-unitary branch:
+    - two-register decoherence works in the right post-barrier geometry
+    - best current envelope is about `G=90-93%`, `I=100%`, `D=33-40%`, `ALL=27-30%`
+- recorded the strongest current critique too:
+  - the model is still selected/tuned rather than uniquely derived in several crucial places
+  - the decoherence branch is geometry-sensitive rather than universal
+  - no universal DAG force law or clean lensing law is retained
+  - several earlier claims were narrowed by code review, so anything not stress-tested should be discounted by default
+- updated the working interest map under that adversarial read:
+  - toy-model mechanism interest: `10.0/10`
+  - foundations / complex-systems / network-dynamics interest: `9.9/10`
+  - broader theorist interest: `9.7/10`
+  - bridge to known physics: `8.8/10`
+  - publishable-as-foundational physics breakthrough: `8.2/10`
+  - ready for top-tier mainstream physics claims: `4.6/10`
+
+### Current state
+- the main bottleneck is no longer “find one more phenomenon”
+- the main bottleneck is architectural clarity:
+  - which assumptions are essential, selected, or provisional
+  - which claims are retained vs provisional vs retracted
+  - which weak couplings remain open between graph growth, pattern dynamics, unitary propagation, and records
+
+### Strongest confirmed conclusion
+The project survives the harsh critique as a serious toy-model / foundations program, but not as a finished or uniquely derived theory. The right current framing is: strong retained unitary core, real but geometry-tuned non-unitary branch, and a need to compress assumptions and claims before widening the search further.
+
+### Exact next step
+- do not widen the phenomenon list while Claude keeps pushing the active science lane
+- for OPEX / synthesis, prioritize:
+  - an assumption ledger: what is derived, selected, tuned, or still unexplained
+  - a claim ledger: one canonical script/log plus one caveat per major claim
+  - an architecture note: graph-growth layer, unitary propagator layer, pattern layer, environment/decoherence layer, and the real coupling arrows
+  - one final compact sufficiency pass only if needed:
+    - test whether `ALL THREE` can be compressed by a small mixed feature involving geometry plus a phase/retiming term
+    - if not, promote the stronger conclusion that the success/failure split is phase-emergent rather than structurally compressible
+- after that, switch the default mode from discovery to writing:
+  - thesis chapter structure
+  - paper split
+  - limitations / open problems
+
 ## 2026-03-31 21:01 America/New_York
 
 ### Seam class
