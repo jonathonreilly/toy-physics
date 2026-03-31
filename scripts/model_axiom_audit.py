@@ -80,7 +80,7 @@ AXIOMS = [
         "P",
         "N",
         "Y",
-        "true endogenous durable records are still missing; the current propagator cleanly preserves the unitary sector but has not yet produced a retained non-unitary mechanism",
+        "true endogenous durable records are still missing; current finite-bin partial-trace environments wrong-scale on growing DAGs, so the non-unitary lane likely needs a different system-environment relation or a new axiom",
     ),
     AxiomStatus(
         6,
@@ -116,7 +116,7 @@ AXIOMS = [
         "P",
         "N",
         "Y",
-        "record separation is real in operators and topology changes, but durable record formation is not yet endogenous",
+        "record separation is real in selected operators and topology changes, but durable endogenous record formation is not retained and current finite-environment closures do not scale",
     ),
     AxiomStatus(
         10,
@@ -171,7 +171,7 @@ COUPLINGS = [
         "persistence layer",
         "record / topology layer",
         "P",
-        "oscillatory, opaque, and node-environment probes exist, but durable endogenous records still do not retain as core",
+        "oscillatory, opaque, node-label, cumulative-action, and evolving-env probes exist, but durable endogenous records still do not retain as core and the tested finite-env variants wrong-scale on growing DAGs",
     ),
     Coupling(
         "field / delay layer",
@@ -193,6 +193,7 @@ RETAINED_CORE = [
     "Local update count plus a retained proper-time-like scalar `sqrt(dt^2-dx^2)` in the kinematic sector.",
     "Linear reversible path-sum propagation with Born-safe interference, machine-precision Sorkin zero on the tested fixed-DAG family, and generated-DAG interference onset under growth.",
     "A comparatively clean unitary sector: Born-safe interference, corrected phase-driven gravity, pure-phase `k=0` limit, weak-coupling `k^2` response, and a near-constant 2D momentum kick from log-field plus path averaging all survive together.",
+    "A retained non-unitary constraint: tested finite-bin partial-trace environment architectures can decohere small generated DAGs a little, but they all wrong-scale as the graph grows.",
     "Shared mechanism language across geometry and generated DAGs: completion/load sets the floor, balance selects the branch, bottleneck or placement terms sharpen the readout.",
     "Coherent mover substrate on generated DAGs, viable broad live `last6` pattern-sourced steering, and one retained wide-rule corridor clause on the `neighbor_radius = 2.5`, `coupling = 3.0` substrate.",
 ]
@@ -201,7 +202,7 @@ RETAINED_CORE = [
 PROVISIONAL_BRANCHES = [
     "Detailed gravity transfer beyond the retained 2D picture, especially any 3D/continuum response law or scattering interpretation.",
     "Durable record formation as a fully endogenous mechanism rather than topology-changing or otherwise selected surrogate operators.",
-    "A unified non-unitary law: the current search strongly constrains simple endogenous decoherence mechanisms, but does not yet produce a retained one.",
+    "A unified non-unitary law: the current search now strongly suggests that better finite-bin environment labels are not enough, but still does not produce the replacement mechanism.",
     "Full field-to-pattern coupling in one clean framework: mover steering is real, but the residual branch architecture is still not universal.",
     "Graph evolution as the source of more of the physics, rather than as a hand-designed substrate on which later layers are placed.",
     "Continuum interpretation: lensing, scattering, and any large-scale force analogue remain provisional or retracted.",
@@ -219,7 +220,7 @@ TOP_GAPS = [
         "Gap 2",
         "Axioms 5 + 9",
         "Durable record formation needs a true endogenous mechanism.",
-        "Record effects exist, but the current propagator architecture now cleanly separates unitary from non-unitary behavior: tested endogenous node-label, topology, oscillatory, and opaque mechanisms constrain the space without yet yielding one strong local process that reliably turns coexistence into stable, history-carrying separation.",
+        "Record effects exist, but the current propagator architecture now cleanly separates unitary from non-unitary behavior: tested node-label, cumulative-action, and evolving-phase environment tags can yield some small-graph decoherence yet all wrong-scale on growing DAGs, while topology, oscillatory, and opaque branches still fail to close into one retained endogenous record mechanism.",
     ),
     (
         "Gap 3",
@@ -310,12 +311,12 @@ def _render_bottom_line() -> None:
         "phase-driven gravity sector, and a shared completion/balance mechanism "
         "language that bridges geometry and generated DAGs. The latest decoherence "
         "lane sharpens the same picture rather than broadening it: the unitary sector "
-        "is comparatively well constrained, while the non-unitary sector still needs "
-        "a new endogenous mechanism or a new axiom. The main frontier is therefore to "
-        "make more of the architecture endogenous: graph growth should generate more "
-        "of the physics, durable records should be real local products of the model, "
-        "and movers should feel fields in the same framework that already gives them "
-        "coherent persistence."
+        "is comparatively well constrained, while the non-unitary sector now looks "
+        "like a scaling-limited theory gap rather than a missing finite environment "
+        "register. The main frontier is therefore to make more of the architecture "
+        "endogenous: graph growth should generate more of the physics, durable "
+        "records should be real local products of the model, and movers should feel "
+        "fields in the same framework that already gives them coherent persistence."
     )
 
 
