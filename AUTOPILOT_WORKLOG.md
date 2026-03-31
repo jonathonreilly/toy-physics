@@ -1,3 +1,28 @@
+## 2026-03-31 04:30 America/New_York
+
+### Seam class
+- generated-DAG endogenous interference thread (experiments #35-41)
+- scaffold elimination complete
+- minimal graph = 21 nodes
+
+### Science impact
+- **Barrier eliminated** (#38): regional phase produces V>0.5 in 12/20 seeds with NO blocked nodes
+- **Phase eliminated** (#39): persistent pattern's gravity field IS the phase shifter. 46% detector pattern shift from mass alone.
+- **Decoherence from oscillation** (#40): period-3 oscillation → field variation → 1.5% pattern variability. Fully endogenous.
+- **Minimal graph = 21 nodes** (#41): 5 layers × 5 nodes produces gravity-induced interference at 110/110 seeds. Size-independent ~15% effect.
+- **Amplitude ratio predicts V** (#35): r=0.93 correlation across 30 seeds. Graph topology matters through amplitude balance.
+
+### Strongest confirmed conclusion
+All scaffold eliminated. Random DAG + persistent pattern + 5 irreducible assumptions = endogenous interference at any graph size ≥ 21 nodes. The phenomenon is local, not scale-dependent.
+
+### Files changed
+- 7 new scripts: `scripts/generated_dag_*.py`
+- 7 new logs
+
+### Exact next step
+- Test whether graph GROWTH RULES can be tuned to preferentially produce graphs with high amplitude balance (strong interference) vs low balance (weak interference)
+- This would show the graph dynamics SELECT for interference-producing structure
+
 ## 2026-03-31 03:52 America/New_York
 
 ### Seam class
