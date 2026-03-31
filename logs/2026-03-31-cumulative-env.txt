@@ -1,22 +1,22 @@
 ======================================================================
-CUMULATIVE PHASE ENVIRONMENT: purity vs graph size
-  env = binned cumulative action through mass
+FIXED-BIN CUMULATIVE PHASE ENVIRONMENT: purity vs graph size
+  compares node-label vs fixed-bin cumulative env with scaled env depth
 ======================================================================
 
-  n_layers  n_nodes  pur_node   pur_cum  n_valid
-  --------------------------------------------
-         6      126    0.5698    0.6268        7
-         8      176    0.7060    0.7531        7
-        10      226    0.7088    0.7658        8
-        12      276    0.7738    0.8066        8
-        15      351    0.8094    0.8259        8
-        18      426    0.8148    0.8438        7
-        20      476    0.8304    0.8462        7
-        25      601    0.8858    0.8856        8
+  n_layers  depth  pur_node  hit_node   pur_cum   hit_cum  n_valid
+  --------------------------------------------------------------------
+         8      1    0.7060  40064.1239    0.9896  177250.2164        7
+        10      2    0.6459  18190875.5151    0.9927  31318630.7659        8
+        12      2    0.7523  3622400725.6778    0.9960  7976271057.0768        8
+        15      2    0.7889  7313614752285.9844    0.9872  11971993405327.2520        8
+        18      3    0.8146  6544203989691474.0000    0.9856  17265080469361646.0000        8
+        20      3    0.8083  614334110920108160.0000    0.9856  1430980816084594944.0000        8
+        25      4    0.7944  70569773025822368595968.0000    0.9827  113681768162850678767616.0000        8
 
-pur_node = node-label env (original)
-pur_cum = cumulative action env (new)
+pur_* = detector-state purity conditioned on detector hits
+hit_* = detector hit probability before conditioning
+env depth scales ~ n_layers/6 to avoid simple env-region dilution
 
-If pur_cum decreases with n_layers: cumulative env fixes the scaling
+If pur_cum decreases with n_layers: fixed-bin cumulative env fixes scaling
 
 TEST COMPLETE

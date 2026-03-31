@@ -1,17 +1,19 @@
 #!/usr/bin/env python3
-"""Evolving environment: env state propagates between mass interactions.
+"""Discretized evolving phase-bin environment.
 
 The scaling problem: passive env labels (node-label, cumulative) become
-shared as graphs grow. Fix: give the env its own dynamics.
+shared as graphs grow. Here we test a discretized evolving phase register
+that updates at every edge and is re-binned after each step.
 
 Between mass nodes, the env state picks up phase from the local graph
 structure. Different paths between mass nodes → different env phases →
 env states become more orthogonal on larger graphs.
 
-Implementation: env is a complex phase that evolves along the path.
+Implementation: env is an underlying phase variable represented by a
+discrete phase bin.
 At each edge, env_phase += edge_action * coupling_strength.
 At mass nodes, the env is "measured" (binned into discrete labels).
-Between mass nodes, the env evolves freely (continuous phase).
+Between mass nodes, the env evolves freely before being re-quantized.
 
 The partial trace bins by the final env phase.
 
@@ -27,13 +29,15 @@ import os
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scripts.generative_causal_dag_interference import generate_causal_dag
-from scripts.two_register_decoherence import compute_field
-from scripts.density_matrix_analysis import compute_purity
+from scripts.density_matrix_analysis import (
+    compute_detector_metrics,
+    build_post_barrier_setup,
+)
 
 
 def propagate_evolving_env(positions, adj, field, src, det, k, mass_set,
                            blocked=None, env_coupling=0.5, n_bins=12):
-    """Two-register with evolving environment phase.
+    """Two-register with discretized evolving environment phase.
 
     The env accumulates phase at EVERY edge (not just mass edges).
     At mass edges, the coupling is stronger (env_coupling).
@@ -114,20 +118,23 @@ def main():
     k_band = [3.0, 5.0, 7.0]
 
     print("=" * 70)
-    print("EVOLVING ENVIRONMENT: purity vs graph size")
-    print(f"  env accumulates phase at every edge")
-    print(f"  stronger coupling at mass, weaker elsewhere")
+    print("DISCRETIZED EVOLVING ENVIRONMENT: purity vs graph size")
+    print("  12-bin phase register accumulates phase at every edge")
+    print("  env depth scales ~ n_layers/6 to avoid simple env-region dilution")
     print("=" * 70)
     print()
 
     for coupling in [0.1, 0.5, 1.0]:
         print(f"  env_coupling = {coupling}:")
-        print(f"    {'n_layers':>8s}  {'pur_node':>8s}  {'pur_evol':>8s}  {'n_valid':>7s}")
-        print(f"    {'-' * 36}")
+        print(f"    {'n_layers':>8s}  {'depth':>5s}  {'pur_node':>8s}  {'hit_node':>8s}  {'pur_evol':>8s}  {'hit_evol':>8s}  {'n_valid':>7s}")
+        print(f"    {'-' * 69}")
 
         for n_layers in [6, 8, 10, 12, 15, 20, 25]:
             pur_node_list = []
+            hit_node_list = []
             pur_evol_list = []
+            hit_evol_list = []
+            scaled_depth = max(1, round(n_layers / 6))
 
             for seed in range(n_seeds):
                 positions, adj, _ = generate_causal_dag(
@@ -135,72 +142,49 @@ def main():
                     y_range=y_range, connect_radius=radius,
                     rng_seed=seed*11+7,
                 )
-                n = len(positions)
-                by_layer = defaultdict(list)
-                for idx, (x, y) in enumerate(positions):
-                    by_layer[round(x)].append(idx)
-                layers = sorted(by_layer.keys())
-                if len(layers) < 5:
+                setup = build_post_barrier_setup(positions, adj, env_depth_layers=scaled_depth)
+                if setup is None:
                     continue
-
-                src = by_layer[layers[0]]
-                det = set(by_layer[layers[-1]])
-                det_list = list(det)
-                if not det:
-                    continue
-
-                all_ys = [y for _, y in positions]
-                cy = sum(all_ys)/len(all_ys)
-
-                bl_idx = len(layers)//3
-                bl = layers[bl_idx]
-                bi = by_layer[bl]
-                sa = [i for i in bi if positions[i][1] > cy+3][:3]
-                sb = [i for i in bi if positions[i][1] < cy-3][:3]
-                if not sa or not sb:
-                    continue
-                si = set(sa+sb)
-                blocked = set(bi) - si
-
-                post_bl = layers[bl_idx+1]
-                mass_nodes = [i for i in by_layer[post_bl] if abs(positions[i][1]-cy) <= 3]
-                if len(mass_nodes) < 2:
-                    continue
-                mass_set = set(mass_nodes)
-
-                grav_layer = layers[2*len(layers)//3]
-                grav_mass = [i for i in by_layer[grav_layer] if positions[i][1] > cy+1]
-                full_mass = mass_set | set(grav_mass)
-                field = compute_field(positions, adj, list(full_mass))
 
                 from scripts.density_matrix_analysis import propagate_two_register_full
                 node_purs = []
+                node_hits = []
                 evol_purs = []
+                evol_hits = []
 
                 for k_val in k_band:
                     ds_node = propagate_two_register_full(
-                        positions, adj, field, src, det, k_val, mass_set, blocked)
-                    p_node, _, _ = compute_purity(ds_node, det_list)
+                        positions, adj, setup["field"], setup["src"], setup["det"], k_val,
+                        setup["mass_set"], setup["blocked"])
+                    p_node, _, _, hit_node = compute_detector_metrics(ds_node, setup["det_list"])
                     node_purs.append(p_node)
+                    node_hits.append(hit_node)
 
                     ds_evol = propagate_evolving_env(
-                        positions, adj, field, src, det, k_val, mass_set,
-                        blocked, coupling, n_bins=12)
-                    p_evol, _, _ = compute_purity(ds_evol, det_list)
+                        positions, adj, setup["field"], setup["src"], setup["det"], k_val,
+                        setup["mass_set"], setup["blocked"], coupling, n_bins=12)
+                    p_evol, _, _, hit_evol = compute_detector_metrics(ds_evol, setup["det_list"])
                     evol_purs.append(p_evol)
+                    evol_hits.append(hit_evol)
 
                 pur_node_list.append(sum(node_purs)/len(node_purs))
+                hit_node_list.append(sum(node_hits)/len(node_hits))
                 pur_evol_list.append(sum(evol_purs)/len(evol_purs))
+                hit_evol_list.append(sum(evol_hits)/len(evol_hits))
 
             if pur_node_list:
                 mn = sum(pur_node_list)/len(pur_node_list)
+                hn = sum(hit_node_list)/len(hit_node_list)
                 me = sum(pur_evol_list)/len(pur_evol_list)
-                print(f"    {n_layers:8d}  {mn:8.4f}  {me:8.4f}  {len(pur_node_list):7d}")
+                he = sum(hit_evol_list)/len(hit_evol_list)
+                print(f"    {n_layers:8d}  {scaled_depth:5d}  {mn:8.4f}  {hn:8.4f}  {me:8.4f}  {he:8.4f}  {len(pur_node_list):7d}")
 
         # Check trend
         print()
 
-    print("If pur_evol DECREASES with n_layers: evolving env fixes scaling")
+    print("pur_* = detector-state purity conditioned on detector hits")
+    print("hit_* = detector hit probability before conditioning")
+    print("If pur_evol DECREASES with n_layers: this discretized evolving env fixes scaling")
     print()
     print("TEST COMPLETE")
 

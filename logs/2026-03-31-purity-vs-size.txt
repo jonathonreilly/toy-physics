@@ -1,20 +1,20 @@
 ======================================================================
 PURITY vs GRAPH SIZE
-  Does decoherence increase with more layers?
+  detector-state purity with fixed vs depth-scaled env region
 ======================================================================
 
-  n_layers  n_nodes  mean_pur   min_pur   max_pur  n_valid
-  ----------------------------------------------------
-         6      126    0.5698    0.4230    0.7512        7
-         8      176    0.7060    0.5525    0.8632        7
-        10      226    0.7088    0.5062    0.9419        8
-        12      276    0.7738    0.5901    0.9983        8
-        15      351    0.8094    0.5530    0.9893        8
-        18      426    0.8148    0.5802    0.9746        7
-        20      476    0.8304    0.5802    0.9854        7
-        25      601    0.8858    0.6235    0.9988        8
+  n_layers  n_nodes  depth   pur_fix   hit_fix   pur_scl   hit_scl  n_valid
+  -------------------------------------------------------------------------------
+         8      176      1    0.7060  40064.1239    0.7060  40064.1239        7
+        10      226      2    0.7088  14240508.0586    0.6459  18190875.5151        8
+        12      276      2    0.7738  4283809896.7982    0.7523  3622400725.6778        8
+        15      351      2    0.8094  6502815354154.8545    0.7889  7313614752285.9844        8
+        18      426      3    0.8148  8123747884927009.0000    0.7921  7281001395469437.0000        7
+        20      476      3    0.8304  534185197604932032.0000    0.7836  683924881005877888.0000        7
+        25      601      4    0.8858  26564165672899807543296.0000    0.7944  70569773025822368595968.0000        8
 
-If mean_purity decreases with n_layers: decoherence grows with graph size
-If mean_purity is constant: decoherence saturates
+pur_fix/hit_fix: fixed one-layer post-barrier environment region
+pur_scl/hit_scl: post-barrier environment depth scales ~ n_layers/6
+All purities are detector-state purities conditioned on detector hits
 
 TEST COMPLETE

@@ -2,12 +2,11 @@
 """Density matrix analysis: what distinguishes ALL THREE seeds?
 
 Instead of predicting from structure, examine the AMPLITUDE-LEVEL
-difference. Compute the reduced density matrix at the detector:
-  ρ_coherent(y1,y2) = Σ_env ψ*(y1,env) ψ(y2,env)  [two-register]
-  ρ_full(y1,y2) = ψ*(y1) ψ(y2)                     [coherent]
+difference. Compute the detector-conditioned reduced density matrix:
+  ρ_det(y1,y2) = Σ_env ψ*(y1,env) ψ(y2,env)  [two-register, detector-only]
 
 Decoherence = suppression of off-diagonal elements.
-The purity Tr(ρ²) measures how mixed the state is.
+The purity Tr(ρ²) measures how mixed the detector-conditioned state is.
   Purity = 1 → pure (no decoherence)
   Purity < 1 → mixed (decoherence)
 
@@ -86,39 +85,107 @@ def propagate_two_register_full(positions, adj, field, src, det, k, mass_set,
     return det_state
 
 
+def build_post_barrier_setup(positions, adj, env_depth_layers=1, mass_y_half=3.0):
+    """Build the standard source/slit/mass/detector geometry for a graph.
+
+    `env_depth_layers` controls how many post-barrier layers carry the
+    environment-coupling mass nodes. This lets size sweeps keep the environment
+    region fixed or scale it with graph depth.
+    """
+    n = len(positions)
+    by_layer = defaultdict(list)
+    for idx, (x, y) in enumerate(positions):
+        by_layer[round(x)].append(idx)
+    layers = sorted(by_layer.keys())
+    if len(layers) < 7:
+        return None
+
+    src = by_layer[layers[0]]
+    det = set(by_layer[layers[-1]])
+    det_list = list(det)
+    if not det:
+        return None
+
+    all_ys = [y for _, y in positions]
+    cy = sum(all_ys) / len(all_ys)
+
+    bl_idx = len(layers) // 3
+    bl = layers[bl_idx]
+    bi = by_layer[bl]
+    sa = [i for i in bi if positions[i][1] > cy + 3][:3]
+    sb = [i for i in bi if positions[i][1] < cy - 3][:3]
+    if not sa or not sb:
+        return None
+    si = set(sa + sb)
+    blocked = set(bi) - si
+
+    start = bl_idx + 1
+    stop = min(len(layers), start + max(1, env_depth_layers))
+    mass_nodes = []
+    for layer in layers[start:stop]:
+        mass_nodes.extend(
+            i for i in by_layer[layer]
+            if abs(positions[i][1] - cy) <= mass_y_half
+        )
+    if len(mass_nodes) < 2:
+        return None
+    mass_set = set(mass_nodes)
+
+    grav_layer = layers[2 * len(layers) // 3]
+    grav_mass = [i for i in by_layer[grav_layer] if positions[i][1] > cy + 1]
+    full_mass = mass_set | set(grav_mass)
+    field = compute_field(positions, adj, list(full_mass))
+
+    return {
+        "n": n,
+        "by_layer": by_layer,
+        "layers": layers,
+        "src": src,
+        "det": det,
+        "det_list": det_list,
+        "cy": cy,
+        "blocked": blocked,
+        "mass_set": mass_set,
+        "grav_mass": grav_mass,
+        "field": field,
+        "env_depth_layers": max(1, env_depth_layers),
+    }
+
+
+def compute_detector_metrics(det_state, det_nodes):
+    """Return detector-conditioned purity metrics plus detector hit fraction."""
+    envs = set(env for (d, env) in det_state.keys())
+
+    rho = {}
+    for d1 in det_nodes:
+        for d2 in det_nodes:
+            val = 0.0 + 0.0j
+            for env in envs:
+                a1 = det_state.get((d1, env), 0.0 + 0.0j)
+                a2 = det_state.get((d2, env), 0.0 + 0.0j)
+                val += a1.conjugate() * a2
+            rho[(d1, d2)] = val
+
+    trace = sum(rho.get((d, d), 0.0) for d in det_nodes).real
+    if trace <= 1e-30:
+        return math.nan, math.nan, math.nan, 0.0
+
+    for key in rho:
+        rho[key] /= trace
+
+    purity = sum(abs(v) ** 2 for v in rho.values()).real
+    diag_total = sum(abs(rho.get((d, d), 0.0)) ** 2 for d in det_nodes).real
+    offdiag_total = purity - diag_total
+    return purity, diag_total, offdiag_total, trace
+
+
 def compute_purity(det_state, det_nodes):
-    """Compute purity Tr(ρ²) of the reduced density matrix.
+    """Compute detector-conditioned purity Tr(ρ²).
 
     ρ(d1, d2) = Σ_env ψ*(d1,env) ψ(d2,env)
     Tr(ρ²) = Σ_{d1,d2} |ρ(d1,d2)|²
     """
-    # Collect env labels
-    envs = set(env for (d, env) in det_state.keys())
-
-    # Compute ρ
-    rho = {}
-    for d1 in det_nodes:
-        for d2 in det_nodes:
-            val = 0.0+0.0j
-            for env in envs:
-                a1 = det_state.get((d1, env), 0.0+0.0j)
-                a2 = det_state.get((d2, env), 0.0+0.0j)
-                val += a1.conjugate() * a2
-            rho[(d1, d2)] = val
-
-    # Normalize: Tr(ρ) should be 1
-    trace = sum(rho.get((d, d), 0.0) for d in det_nodes)
-    if abs(trace) > 1e-30:
-        for key in rho:
-            rho[key] /= trace
-
-    # Purity = Tr(ρ²) = Σ_{d1,d2} |ρ(d1,d2)|²
-    purity = sum(abs(v)**2 for v in rho.values()).real
-
-    # Number of significant off-diagonal elements
-    diag_total = sum(abs(rho.get((d, d), 0.0))**2 for d in det_nodes).real
-    offdiag_total = purity - diag_total
-
+    purity, diag_total, offdiag_total, _ = compute_detector_metrics(det_state, det_nodes)
     return purity, diag_total, offdiag_total
 
 
@@ -132,7 +199,7 @@ def main():
 
     print("=" * 70)
     print("DENSITY MATRIX ANALYSIS")
-    print(f"  Purity Tr(ρ²): 1=pure (no decoh), <1=mixed (decoh)")
+    print("  detector-state purity Tr(rho_det^2): 1=pure, <1=mixed")
     print("=" * 70)
     print()
 
@@ -144,53 +211,32 @@ def main():
             y_range=y_range, connect_radius=radius,
             rng_seed=seed*11+7,
         )
-        n = len(positions)
-        by_layer = defaultdict(list)
-        for idx, (x, y) in enumerate(positions):
-            by_layer[round(x)].append(idx)
-        layers = sorted(by_layer.keys())
-        if len(layers) < 7:
+        setup = build_post_barrier_setup(positions, adj, env_depth_layers=1)
+        if setup is None:
             continue
 
-        src = by_layer[layers[0]]
-        det = set(by_layer[layers[-1]])
-        det_list = list(det)
-        if not det:
-            continue
-
-        all_ys = [y for _, y in positions]
-        cy = sum(all_ys)/len(all_ys)
-
-        bl_idx = len(layers)//3
-        bl = layers[bl_idx]
-        bi = by_layer[bl]
-        sa = [i for i in bi if positions[i][1] > cy+3][:3]
-        sb = [i for i in bi if positions[i][1] < cy-3][:3]
-        if not sa or not sb:
-            continue
-        si = set(sa+sb)
-        blocked = set(bi) - si
-
-        post_bl = layers[bl_idx+1]
-        mass_nodes = [i for i in by_layer[post_bl] if abs(positions[i][1]-cy) <= 3]
-        if len(mass_nodes) < 2:
-            continue
-        mass_set = set(mass_nodes)
-
-        grav_layer = layers[2*len(layers)//3]
-        grav_mass = [i for i in by_layer[grav_layer] if positions[i][1] > cy+1]
-        full_mass = mass_set | set(grav_mass)
-        field = compute_field(positions, adj, list(full_mass))
+        n = setup["n"]
+        src = setup["src"]
+        det = setup["det"]
+        det_list = setup["det_list"]
+        cy = setup["cy"]
+        blocked = setup["blocked"]
+        mass_set = setup["mass_set"]
+        grav_mass = setup["grav_mass"]
+        field = setup["field"]
 
         # k-averaged purity
         purities = []
+        det_probs = []
         for k in k_band:
             det_state = propagate_two_register_full(
                 positions, adj, field, src, det, k, mass_set, blocked)
-            purity, diag, offdiag = compute_purity(det_state, det_list)
+            purity, diag, offdiag, det_prob = compute_detector_metrics(det_state, det_list)
             purities.append(purity)
+            det_probs.append(det_prob)
 
         avg_purity = sum(purities)/len(purities)
+        avg_det_prob = sum(det_probs)/len(det_probs)
 
         # Check ALL THREE (gravity + interference + decoherence)
         from scripts.two_register_decoherence import (
@@ -231,15 +277,15 @@ def main():
         has_all3 = attracts and v2 > 0.05 and vd > 0.02
 
         data.append({
-            'seed': seed, 'purity': avg_purity, 'all3': has_all3,
+            'seed': seed, 'det_purity': avg_purity, 'det_prob': avg_det_prob, 'all3': has_all3,
             'V_drop': vd, 'grav': avg_grav,
         })
 
     # Results
-    print(f"  {'seed':>4s}  {'purity':>8s}  {'V_drop':>8s}  {'grav':>7s}  {'all3':>4s}")
-    print(f"  {'-' * 36}")
+    print(f"  {'seed':>4s}  {'det_pur':>8s}  {'det_P':>8s}  {'V_drop':>8s}  {'grav':>7s}  {'all3':>4s}")
+    print(f"  {'-' * 47}")
     for d in data:
-        print(f"  {d['seed']:4d}  {d['purity']:8.4f}  {d['V_drop']:+8.4f}  "
+        print(f"  {d['seed']:4d}  {d['det_purity']:8.4f}  {d['det_prob']:8.4f}  {d['V_drop']:+8.4f}  "
               f"{d['grav']:+7.2f}  {'Y' if d['all3'] else 'n':>4s}")
 
     # Compare purity
@@ -248,12 +294,12 @@ def main():
 
     print()
     if a3:
-        print(f"  ALL THREE purity: {sum(d['purity'] for d in a3)/len(a3):.4f}")
+        print(f"  ALL THREE detector-state purity: {sum(d['det_purity'] for d in a3)/len(a3):.4f}")
     if non:
-        print(f"  Non-ALL3 purity:  {sum(d['purity'] for d in non)/len(non):.4f}")
+        print(f"  Non-ALL3 detector-state purity:  {sum(d['det_purity'] for d in non)/len(non):.4f}")
 
     # Correlation
-    purities = [d['purity'] for d in data]
+    purities = [d['det_purity'] for d in data]
     labels = [1 if d['all3'] else 0 for d in data]
     n_tot = len(data)
     mx = sum(purities)/n_tot
@@ -263,9 +309,10 @@ def main():
     sy = (sum((l-my)**2 for l in labels)/n_tot)**0.5
     corr = cov/(sx*sy) if sx > 0 and sy > 0 else 0
 
-    print(f"  Corr(purity, all3): {corr:+.4f}")
+    print(f"  Corr(detector-state purity, all3): {corr:+.4f}")
     print()
-    print("Lower purity = more decoherence = more likely ALL THREE")
+    print("det_P = detector hit probability before conditioning")
+    print("Lower detector-state purity = more detector-side decoherence")
     print()
     print("TEST COMPLETE")
 

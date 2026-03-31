@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
-"""Cumulative phase environment: env grows with mass interactions.
+"""Fixed-bin cumulative phase environment.
 
 The discrete node-label env weakens with graph size because both slits
-reach all mass nodes. Fix: env = binned cumulative action through mass.
+reach all mass nodes. Here we test a genuinely fixed-bin cumulative phase
+register rather than an ever-growing label.
 
 Each path accumulates action_at_mass = Σ S(edge) for edges at mass nodes.
 Paths from different slits accumulate different total action (different
 routes through mass) → different binned env labels → decoherence.
 
-Key property: more mass interactions → more diverse cumulative action
-→ MORE slit-discriminating → decoherence should INCREASE with graph size.
+This is still a discretized detector-conditioned purity test, but now the
+environment state space remains fixed at `n_bins`.
 
 PStack experiment: cumulative-phase-env
 """
@@ -23,18 +24,15 @@ import os
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scripts.generative_causal_dag_interference import generate_causal_dag
-from scripts.two_register_decoherence import compute_field
-from scripts.density_matrix_analysis import compute_purity
+from scripts.density_matrix_analysis import (
+    compute_detector_metrics,
+    build_post_barrier_setup,
+)
 
 
 def propagate_cumulative_env(positions, adj, field, src, det, k, mass_set,
                              blocked=None, n_bins=8):
-    """Two-register with cumulative action environment.
-
-    env = binned cumulative action through mass nodes.
-    Each time a path crosses a mass node edge, the cumulative action grows.
-    The env label = floor(cumulative_action * n_bins / max_expected_action).
-    """
+    """Two-register with fixed-bin cumulative phase at mass interactions."""
     n = len(positions)
     blocked = blocked or set()
 
@@ -52,8 +50,7 @@ def propagate_cumulative_env(positions, adj, field, src, det, k, mass_set,
             if in_deg[j] == 0:
                 q.append(j)
 
-    # State: (node, env_bin) → amplitude
-    # env_bin is an integer representing binned cumulative action at mass
+    # State: (node, env_bin) → amplitude with env_bin in [0, n_bins).
     state = {}
     for s in src:
         state[(s, 0)] = 1.0/len(src) + 0.0j
@@ -83,12 +80,11 @@ def propagate_cumulative_env(positions, adj, field, src, det, k, mass_set,
                 act = dl-ret
                 ea = cmath.exp(1j*k*act)/(L**1.0)
 
-                # Cumulative env: if this edge touches mass, increment bin
+                # Fixed-bin cumulative env: update the phase register modulo 2π
                 if i in mass_set or j in mass_set:
-                    # Action at this mass edge contributes to env
-                    # Bin by quantizing the action contribution
-                    action_contrib = act  # could also use field strength
-                    new_bin = env_bin + int(action_contrib * n_bins) % n_bins + 1
+                    current_phase = env_bin * 2 * math.pi / n_bins
+                    new_phase = current_phase + act
+                    new_bin = int((new_phase % (2 * math.pi)) * n_bins / (2 * math.pi))
                 else:
                     new_bin = env_bin
 
@@ -110,17 +106,23 @@ def main():
     k_band = [3.0, 5.0, 7.0]
 
     print("=" * 70)
-    print("CUMULATIVE PHASE ENVIRONMENT: purity vs graph size")
-    print(f"  env = binned cumulative action through mass")
+    print("FIXED-BIN CUMULATIVE PHASE ENVIRONMENT: purity vs graph size")
+    print("  compares node-label vs fixed-bin cumulative env with scaled env depth")
     print("=" * 70)
     print()
 
-    print(f"  {'n_layers':>8s}  {'n_nodes':>7s}  {'pur_node':>8s}  {'pur_cum':>8s}  {'n_valid':>7s}")
-    print(f"  {'-' * 44}")
+    print(
+        f"  {'n_layers':>8s}  {'depth':>5s}  "
+        f"{'pur_node':>8s}  {'hit_node':>8s}  {'pur_cum':>8s}  {'hit_cum':>8s}  {'n_valid':>7s}"
+    )
+    print(f"  {'-' * 68}")
 
     for n_layers in [6, 8, 10, 12, 15, 18, 20, 25]:
         pur_node_list = []
+        hit_node_list = []
         pur_cum_list = []
+        hit_cum_list = []
+        scaled_depth = max(1, round(n_layers / 6))
 
         for seed in range(n_seeds):
             positions, adj, _ = generate_causal_dag(
@@ -128,78 +130,52 @@ def main():
                 y_range=y_range, connect_radius=radius,
                 rng_seed=seed*11+7,
             )
-            n = len(positions)
-            by_layer = defaultdict(list)
-            for idx, (x, y) in enumerate(positions):
-                by_layer[round(x)].append(idx)
-            layers = sorted(by_layer.keys())
-            if len(layers) < 5:
+            setup = build_post_barrier_setup(positions, adj, env_depth_layers=scaled_depth)
+            if setup is None:
                 continue
-
-            src = by_layer[layers[0]]
-            det = set(by_layer[layers[-1]])
-            det_list = list(det)
-            if not det:
-                continue
-
-            all_ys = [y for _, y in positions]
-            cy = sum(all_ys)/len(all_ys)
-
-            bl_idx = len(layers)//3
-            bl = layers[bl_idx]
-            bi = by_layer[bl]
-            sa = [i for i in bi if positions[i][1] > cy+3][:3]
-            sb = [i for i in bi if positions[i][1] < cy-3][:3]
-            if not sa or not sb:
-                continue
-            si = set(sa+sb)
-            blocked = set(bi) - si
-
-            post_bl = layers[bl_idx+1]
-            mass_nodes = [i for i in by_layer[post_bl] if abs(positions[i][1]-cy) <= 3]
-            if len(mass_nodes) < 2:
-                continue
-            mass_set = set(mass_nodes)
-
-            grav_layer = layers[2*len(layers)//3]
-            grav_mass = [i for i in by_layer[grav_layer] if positions[i][1] > cy+1]
-            full_mass = mass_set | set(grav_mass)
-            field = compute_field(positions, adj, list(full_mass))
 
             # Node-label env (original)
             from scripts.density_matrix_analysis import propagate_two_register_full
             node_purs = []
+            node_hits = []
             cum_purs = []
+            cum_hits = []
 
             for k in k_band:
                 # Node-label
                 ds_node = propagate_two_register_full(
-                    positions, adj, field, src, det, k, mass_set, blocked)
-                p_node, _, _ = compute_purity(ds_node, det_list)
+                    positions, adj, setup["field"], setup["src"], setup["det"], k,
+                    setup["mass_set"], setup["blocked"])
+                p_node, _, _, hit_node = compute_detector_metrics(ds_node, setup["det_list"])
                 node_purs.append(p_node)
+                node_hits.append(hit_node)
 
                 # Cumulative
                 ds_cum = propagate_cumulative_env(
-                    positions, adj, field, src, det, k, mass_set, blocked, n_bins=8)
-                p_cum, _, _ = compute_purity(ds_cum, det_list)
+                    positions, adj, setup["field"], setup["src"], setup["det"], k,
+                    setup["mass_set"], setup["blocked"], n_bins=8)
+                p_cum, _, _, hit_cum = compute_detector_metrics(ds_cum, setup["det_list"])
                 cum_purs.append(p_cum)
+                cum_hits.append(hit_cum)
 
             pur_node_list.append(sum(node_purs)/len(node_purs))
+            hit_node_list.append(sum(node_hits)/len(node_hits))
             pur_cum_list.append(sum(cum_purs)/len(cum_purs))
+            hit_cum_list.append(sum(cum_hits)/len(cum_hits))
 
         if pur_node_list:
             mn = sum(pur_node_list)/len(pur_node_list)
+            hn = sum(hit_node_list)/len(hit_node_list)
             mc = sum(pur_cum_list)/len(pur_cum_list)
-            positions, _, _ = generate_causal_dag(
-                n_layers=n_layers, nodes_per_layer=npl,
-                y_range=y_range, connect_radius=radius, rng_seed=7)
-            print(f"  {n_layers:8d}  {len(positions):7d}  {mn:8.4f}  {mc:8.4f}  {len(pur_node_list):7d}")
+            hc = sum(hit_cum_list)/len(hit_cum_list)
+            print(f"  {n_layers:8d}  {scaled_depth:5d}  {mn:8.4f}  {hn:8.4f}  {mc:8.4f}  {hc:8.4f}  {len(pur_node_list):7d}")
 
     print()
-    print("pur_node = node-label env (original)")
-    print("pur_cum = cumulative action env (new)")
+    print("pur_* = detector-state purity conditioned on detector hits")
+    print("hit_* = detector hit probability before conditioning")
+    print("env depth scales ~ n_layers/6 to avoid simple env-region dilution")
     print()
-    print("If pur_cum decreases with n_layers: cumulative env fixes the scaling")
+    print("If pur_cum decreases with n_layers: fixed-bin cumulative env fixes scaling")
     print()
     print("TEST COMPLETE")
 
