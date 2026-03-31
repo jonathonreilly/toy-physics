@@ -1,5 +1,38 @@
 # Physics Autopilot Handoff
 
+## 2026-03-31 04:11 America/New_York
+
+### Seam class
+- generated-DAG visibility family-regime compression
+- bounded within-family compare after the initial bridge
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/generative_causal_dag_visibility_family_regime_compare.py`
+- the combined default + denser visibility family does not collapse to one cleaner universal scalar
+- the retained map from `/Users/jonreilly/Projects/Physics/logs/2026-03-31-generative-causal-dag-visibility-family-regime-compare.txt` is a genuine two-branch packet-completion regime:
+  - split on `center_balanced_log_paths <= 17.671`
+  - below the floor, `center_path_balance` is the better observable
+  - above the floor, `center_balanced_log_paths` itself is the better observable
+  - weighted split summary `0.3541`, better than the best combined single-scalar summary `0.2680`
+- this is not just the scenario label:
+  - low branch: `58 default + 6 denser-radius`
+  - high branch: `6 default + 26 denser-radius`
+
+### Current state
+- cooperative lock is held by the manual Codex worker for this bounded write-up
+- canonical `main` / `origin/main` are synced at `ed297ec` before this uncommitted local checkpoint
+- generated-DAG compression now has three retained pieces on disk:
+  - `/Users/jonreilly/Projects/Physics/scripts/generative_causal_dag_visibility_order_parameter_compare.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/generative_causal_dag_visibility_family_regime_compare.py`
+  - the three March 31 generated-DAG visibility compare logs
+
+### Strongest confirmed conclusion
+Generated-DAG visibility is now best read as a two-branch detector-side packet-completion regime. The order parameter is not raw edge size, and it is not one magic local scalar either: balance leads below the balanced-load floor, and balanced slit-load leads above it.
+
+### Exact next step
+- stay on the current compression lane
+- compare the crossover rows on either side of the `17.671` balanced-load floor to identify what concrete local packet feature moves a row between the balance-led and load-led branches
+
 ## 2026-03-31 03:52 America/New_York
 
 ### Seam class

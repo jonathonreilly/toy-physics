@@ -23,6 +23,39 @@ All scaffold eliminated. Random DAG + persistent pattern + 5 irreducible assumpt
 - Test whether graph GROWTH RULES can be tuned to preferentially produce graphs with high amplitude balance (strong interference) vs low balance (weak interference)
 - This would show the graph dynamics SELECT for interference-producing structure
 
+## 2026-03-31 04:11 America/New_York
+
+### Seam class
+- generated-DAG visibility family-regime compression
+- bounded within-family compare after the first bridge result
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/generative_causal_dag_visibility_family_regime_compare.py`
+- closed the immediate follow-on from the first bridge check: the generated-DAG visibility family does not collapse to one cleaner shared scalar on the combined default + denser rows
+- instead, `/Users/jonreilly/Projects/Physics/logs/2026-03-31-generative-causal-dag-visibility-family-regime-compare.txt` shows a genuine two-branch packet-completion regime:
+  - low balanced-load branch: `center_balanced_log_paths <= 17.671`
+  - low branch winner: `center_path_balance` with summary `0.3740`
+  - high branch winner: `center_balanced_log_paths` with summary `0.3141`
+  - weighted split summary `0.3541`, better than the best combined single scalar `center_path_balance` at `0.2680`
+- the split is not just scenario identity:
+  - low branch: `58 default + 6 denser-radius`
+  - high branch: `6 default + 26 denser-radius`
+
+### Current state
+- canonical `main` / `origin/main` are synced at `ed297ec` before this local follow-on checkpoint
+- the generated-DAG compression lane now has:
+  - first bridge comparer
+  - nearby denser holdout
+  - retained two-branch packet-completion regime
+
+### Strongest confirmed conclusion
+Generated-DAG visibility now has a compact mechanism map instead of a loose candidate list. The retained structure is a two-branch detector-side packet-completion regime: below the balanced-load floor the signal is balance-led, and above it the balanced slit-load itself becomes the better order parameter.
+
+### Exact next step
+- stay local and bounded
+- compare the crossover rows (`6` default rows above the floor, `6` denser rows below it) directly to see what structural feature pushes a row across the `17.671` balanced-load floor
+- keep the next observable hunt inside the existing packet-completion family rather than reopening broader scenario growth
+
 ## 2026-03-31 03:52 America/New_York
 
 ### Seam class
