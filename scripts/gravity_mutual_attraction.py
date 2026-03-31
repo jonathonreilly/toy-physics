@@ -17,7 +17,6 @@ PStack experiment: mutual-gravitation
 """
 
 from __future__ import annotations
-import ast
 import math
 import sys
 import os
@@ -26,11 +25,43 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from toy_event_physics import (
     RulePostulates,
-    build_rectangular_nodes,
     derive_local_rule,
-    derive_node_field,
     stationary_action_path,
 )
+
+
+def resample_profile(values: list[int], target_len: int) -> list[float]:
+    """Resample a path profile so different-length paths remain comparable."""
+    if not values:
+        return [0.0] * target_len
+    if target_len <= 1:
+        return [float(values[0])]
+    if len(values) == 1:
+        return [float(values[0])] * target_len
+
+    result: list[float] = []
+    scale = (len(values) - 1) / (target_len - 1)
+    for index in range(target_len):
+        position = index * scale
+        lower = int(math.floor(position))
+        upper = int(math.ceil(position))
+        if lower == upper:
+            result.append(float(values[lower]))
+            continue
+        frac = position - lower
+        result.append((1.0 - frac) * values[lower] + frac * values[upper])
+    return result
+
+
+def path_shift_metrics(free_ys: list[int], dist_ys: list[int]) -> tuple[float, float]:
+    """Compare two paths even when gravity changes the number of steps."""
+    target_len = max(len(free_ys), len(dist_ys))
+    free_profile = resample_profile(free_ys, target_len)
+    dist_profile = resample_profile(dist_ys, target_len)
+    deltas = [dist - free for free, dist in zip(free_profile, dist_profile)]
+    max_deflection = max(abs(delta) for delta in deltas) if deltas else 0.0
+    net_deflection = sum(deltas)
+    return max_deflection, net_deflection
 
 
 def measure_bending(
@@ -39,9 +70,9 @@ def measure_bending(
     source: tuple[int, int],
     target: tuple[int, int],
     postulates: RulePostulates,
-) -> tuple[float, float, list[int], list[int]]:
+) -> tuple[float, float, float, int, list[int], list[int]]:
     """Measure path bending from source to target with given persistent nodes.
-    Returns (action_diff, max_deflection, free_path_ys, distorted_path_ys)."""
+    Returns (action_diff, max_deflection, net_deflection, step_delta, free_path_ys, distorted_path_ys)."""
     free_rule = derive_local_rule(persistent_nodes=frozenset(), postulates=postulates)
     dist_rule = derive_local_rule(persistent_nodes=persistent_nodes, postulates=postulates)
 
@@ -54,15 +85,17 @@ def measure_bending(
 
     free_ys = [y for _, y in free_path]
     dist_ys = [y for _, y in dist_path]
-    max_defl = max(abs(d - f) for f, d in zip(free_ys, dist_ys)) if len(free_ys) == len(dist_ys) else 0
+    max_defl, net_defl = path_shift_metrics(free_ys, dist_ys)
+    step_delta = len(dist_ys) - len(free_ys)
     action_diff = dist_action - free_action
 
-    return action_diff, max_defl, free_ys, dist_ys
+    return action_diff, max_defl, net_defl, step_delta, free_ys, dist_ys
 
 
 def net_deflection(free_ys: list[int], dist_ys: list[int]) -> float:
     """Positive = path moved upward, negative = downward."""
-    return sum(d - f for f, d in zip(free_ys, dist_ys))
+    _, net = path_shift_metrics(free_ys, dist_ys)
+    return net
 
 
 def main() -> None:
@@ -96,9 +129,9 @@ def main() -> None:
                            ("Mass A only", mass_A),
                            ("Mass B only", mass_B),
                            ("Both masses", both)]:
-        ad, md, fy, dy = measure_bending(width, height, pnodes, source_A, target_B, postulates)
-        nd = net_deflection(fy, dy)
-        print(f"  {label:>15s}: action_diff={ad:10.4f}  max_defl={md:.0f}  net_defl={nd:+.0f}  "
+        ad, md, nd, step_delta, fy, dy = measure_bending(width, height, pnodes, source_A, target_B, postulates)
+        print(f"  {label:>15s}: action_diff={ad:10.4f}  max_defl={md:.2f}  net_defl={nd:+.2f}  "
+              f"step_delta={step_delta:+d}  "
               f"path_y[mid]={dy[len(dy)//2]:+d}")
 
     print()
@@ -112,9 +145,9 @@ def main() -> None:
                            ("Mass A only", mass_A),
                            ("Mass B only", mass_B),
                            ("Both masses", both)]:
-        ad, md, fy, dy = measure_bending(width, height, pnodes, source_B, target_A, postulates)
-        nd = net_deflection(fy, dy)
-        print(f"  {label:>15s}: action_diff={ad:10.4f}  max_defl={md:.0f}  net_defl={nd:+.0f}  "
+        ad, md, nd, step_delta, fy, dy = measure_bending(width, height, pnodes, source_B, target_A, postulates)
+        print(f"  {label:>15s}: action_diff={ad:10.4f}  max_defl={md:.2f}  net_defl={nd:+.2f}  "
+              f"step_delta={step_delta:+d}  "
               f"path_y[mid]={dy[len(dy)//2]:+d}")
 
     # =========================================================
@@ -137,10 +170,10 @@ def main() -> None:
                                ("Upper only", mass_upper),
                                ("Lower only", mass_lower),
                                ("Both masses", both_sym)]:
-            ad, md, fy, dy = measure_bending(width, height, pnodes, (0, start_y), (width, start_y), postulates)
-            nd = net_deflection(fy, dy)
+            ad, md, nd, step_delta, fy, dy = measure_bending(width, height, pnodes, (0, start_y), (width, start_y), postulates)
             toward = "toward upper" if nd > 0 else ("toward lower" if nd < 0 else "none")
-            print(f"    {label:>15s}: ad={ad:10.4f}  max_d={md:.0f}  net={nd:+5.0f}  bend={toward}")
+            print(f"    {label:>15s}: ad={ad:10.4f}  max_d={md:6.2f}  net={nd:+7.2f}  "
+                  f"step_delta={step_delta:+d}  bend={toward}")
         print()
 
     # =========================================================
@@ -153,17 +186,16 @@ def main() -> None:
 
     # Fixed test path from (0,0) to (40,0), mass at (20, 6)
     # Vary the mass size from 2 to 10 nodes
-    print(f"  {'n_nodes':>8s}  {'action_diff':>12s}  {'max_defl':>10s}  {'net_defl':>10s}")
-    print(f"  {'-' * 45}")
+    print(f"  {'n_nodes':>8s}  {'action_diff':>12s}  {'max_defl':>10s}  {'net_defl':>10s}  {'step_Δ':>7s}")
+    print(f"  {'-' * 57}")
 
     for n in range(2, 11):
         center_y = 6
         ys = list(range(center_y - (n-1)//2, center_y + n//2 + 1))[:n]
         ys = [y for y in ys if -height <= y <= height]
         pnodes = frozenset((20, y) for y in ys)
-        ad, md, fy, dy = measure_bending(width, height, pnodes, (0, 0), (width, 0), postulates)
-        nd = net_deflection(fy, dy)
-        print(f"  {n:8d}  {ad:12.4f}  {md:10.0f}  {nd:+10.0f}")
+        ad, md, nd, step_delta, fy, dy = measure_bending(width, height, pnodes, (0, 0), (width, 0), postulates)
+        print(f"  {n:8d}  {ad:12.4f}  {md:10.2f}  {nd:+10.2f}  {step_delta:+7d}")
 
     # =========================================================
     # TEST 4: Superposition — does bending from both masses
@@ -179,14 +211,15 @@ def main() -> None:
     mass_2 = frozenset((25, y) for y in [-9, -8, -7, -6, -5])
 
     for ty in [-5, -2, 0, 2, 5]:
-        ad_1, _, _, _ = measure_bending(width, height, mass_1, (0, ty), (width, ty), postulates)
-        ad_2, _, _, _ = measure_bending(width, height, mass_2, (0, ty), (width, ty), postulates)
-        ad_both, md_b, _, dy_b = measure_bending(width, height, mass_1 | mass_2, (0, ty), (width, ty), postulates)
+        ad_1, _, _, _, _, _ = measure_bending(width, height, mass_1, (0, ty), (width, ty), postulates)
+        ad_2, _, _, _, _, _ = measure_bending(width, height, mass_2, (0, ty), (width, ty), postulates)
+        ad_both, md_b, nd_b, step_delta_b, _, dy_b = measure_bending(width, height, mass_1 | mass_2, (0, ty), (width, ty), postulates)
         ad_sum = ad_1 + ad_2
         deviation = ad_both - ad_sum
         print(f"  target_y={ty:+2d}: ad_1={ad_1:8.4f}  ad_2={ad_2:8.4f}  "
               f"ad_sum={ad_sum:8.4f}  ad_both={ad_both:8.4f}  "
-              f"deviation={deviation:8.4f}  ({deviation/ad_both*100 if ad_both else 0:+.1f}%)")
+              f"deviation={deviation:8.4f}  ({deviation/ad_both*100 if ad_both else 0:+.1f}%)  "
+              f"max_d={md_b:5.2f}  net={nd_b:+6.2f}  step_delta={step_delta_b:+d}")
 
     print()
     print("SWEEP COMPLETE")

@@ -44,7 +44,12 @@ def classify_orbit(history: list[frozenset]) -> tuple[str, int, int]:
         return "PERIOD-2", sizes[-1], sizes[-2]
 
     # Check for period-3
-    if len(history) >= 6 and history[-1] == history[-4]:
+    if (
+        len(history) >= 6
+        and history[-1] == history[-4]
+        and history[-2] == history[-5]
+        and history[-3] == history[-6]
+    ):
         return "PERIOD-3", sizes[-1], 0
 
     # Check if growing

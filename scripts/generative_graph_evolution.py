@@ -105,22 +105,28 @@ def analyze_graph(positions, adjacency, spawn_step):
     if n == 0:
         return {}
 
+    unique_edges = {
+        (min(i, j), max(i, j))
+        for i, neighbors in adjacency.items()
+        for j in neighbors
+        if i != j
+    }
+
     # Degree distribution
     degrees = [len(adjacency.get(i, [])) for i in range(n)]
 
     # Is there a natural causal order? (spawn_step gives one)
-    # Count "forward" edges (from earlier to later spawn_step)
+    # Count each undirected edge once, then orient it by spawn order.
     forward = 0
     backward = 0
     same = 0
-    for i in range(n):
-        for j in adjacency.get(i, []):
-            if spawn_step[j] > spawn_step[i]:
-                forward += 1
-            elif spawn_step[j] < spawn_step[i]:
-                backward += 1
-            else:
-                same += 1
+    for i, j in unique_edges:
+        if spawn_step[j] > spawn_step[i]:
+            forward += 1
+        elif spawn_step[j] < spawn_step[i]:
+            backward += 1
+        else:
+            same += 1
 
     # Clustering coefficient
     clustering = []
@@ -144,14 +150,14 @@ def analyze_graph(positions, adjacency, spawn_step):
 
     return {
         "n_nodes": n,
-        "n_edges": sum(len(v) for v in adjacency.values()) // 2,
+        "n_edges": len(unique_edges),
         "mean_degree": sum(degrees) / n,
         "max_degree": max(degrees),
         "min_degree": min(degrees),
-        "forward_edges": forward // 2,
-        "backward_edges": backward // 2,
-        "same_step_edges": same // 2,
-        "dag_ratio": forward / max(forward + backward + same, 1),
+        "forward_edges": forward,
+        "backward_edges": backward,
+        "same_step_edges": same,
+        "dag_ratio": forward / max(len(unique_edges), 1),
         "mean_clustering": sum(clustering) / len(clustering) if clustering else 0,
         "x_range": max(xs) - min(xs),
         "y_range": max(ys) - min(ys),
