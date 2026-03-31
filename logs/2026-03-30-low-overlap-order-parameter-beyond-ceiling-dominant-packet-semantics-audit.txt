@@ -1,0 +1,29 @@
+dominant packet semantics audit started 2026-03-30T08:39:32
+
+Dominant Packet Semantics Audit
+================================
+label | family | any_hinge | any_exact_family_template | best_aligned_missing_support_nodes | best_aligned_missing_closed_edges | row_mid_attached_max
+-----+--------+-----------+---------------------------+------------------------------------+-----------------------------------+---------------------
+ultra:base:rect-wrap:local-morph-f | shared-family | Y | Y | 0 | 0 | 8.000
+mega:base:rect-wrap:local-morph-f | shared-family | Y | Y | 0 | 0 | 8.000
+peta:base:taper-hard:local-morph-f | shared-family | Y | Y | 0 | 0 | 8.000
+exa:base:taper-hard:local-morph-f | shared-family | Y | Y | 0 | 0 | 8.000
+exa:base:skew-wrap:local-morph-k | shared-family | Y | Y | 0 | 0 | 8.000
+default:base:skew-wrap:local-morph-c | nearby-shoulder | n | n | 1 | 4 | 7.000
+broader:base:skew-wrap:mode-mix-d | nearby-shoulder | n | n | 1 | 4 | 7.000
+ultra:base:taper-wrap:mode-mix-f | low-support-throat | n | n | 3 | 7 | 5.000
+mega:base:taper-wrap:mode-mix-f | low-support-throat | n | n | 3 | 7 | 5.000
+wider:base:skew-wrap:local-morph-c | wider-sentinel | n | n | 1 | 4 | 7.000
+wider:base:skew-wrap:mode-mix-d | wider-sentinel | n | n | 1 | 4 | 7.000
+exa:large:taper-wrap-large:local-morph-g | exhausted-wall | n | n | 1 | 4 | 7.000
+exa:mirror:skew-hard-mirror:local-morph-f | exhausted-wall | n | n | 1 | 4 | 7.000
+exa:base:skew-hard:local-morph-k | near-miss | Y | n | 1 | 2 | 7.000
+
+any_dominant_hinge: family=5/5 outside=1/9 exact=n outside_matches=exa:base:skew-hard:local-morph-k
+any_dominant_exact_family_template: family=5/5 outside=0/9 exact=Y
+best_aligned_missing_support_nodes <= 0: family=5/5 outside=0/9 exact=Y
+best_aligned_missing_closed_edges <= 0: family=5/5 outside=0/9 exact=Y
+row_mid_attached_max >= 7.500: family=5/5 outside=0/9 exact=Y
+
+semantics_summary=the row-level attachment law remains the cleanest family statement. An `any dominant packet has hinge` reading leaks on the fresh near miss, while exact family-template or zero-missing-node formulations also stay exact but are more brittle and more combinatorial than the unchanged scalar attachment rule.
+dominant packet semantics audit completed 2026-03-30T08:51:45 total_elapsed=732.9s

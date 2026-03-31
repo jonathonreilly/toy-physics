@@ -1,0 +1,30 @@
+beyond-ceiling fresh candidate scan started 2026-03-30T07:37:11
+
+Beyond-Ceiling Fresh Candidate Scan
+===================================
+ensembles=ultra,mega,peta,exa
+packs=base
+scenario_specs=base:skew-hard
+excluded_sources=base:rect-wrap:local-morph-f,base:skew-wrap:local-morph-c,base:skew-wrap:local-morph-k,base:skew-wrap:mode-mix-d,base:taper-hard:local-morph-f,base:taper-wrap:mode-mix-f,large:taper-wrap-large:local-morph-g,mirror:skew-hard-mirror:local-morph-f
+rows_total=1
+top_candidate=exa:base:base:skew-hard:local-morph-k
+top_candidate_summary=shared_packet_membership=3/4, high_bridge_right_count=1.000, mid_anchor_closure_peak=10.000, mid_candidate_attached_max=7.000, closure_load=105.000
+
+Top Fresh Candidates
+====================
+base:skew-hard:base:skew-hard:local-morph-k
+  ensembles=exa
+  style=local-morph
+  actual=pair-only-sensitive
+  support_load=28.000
+  closure_load=105.000
+  mid_anchor_closure_peak=10.000
+  mid_candidate_attached_max=7.000
+  mid_candidate_bridge_bridge_closed_pair_max=10.000
+  mid_has_four_incident_flank_hinge=Y
+  shared_packet_membership=3/4
+  high_bridge_right_count=1.000
+  anchor_closure_intensity_gap=-7.500
+  anchor_deep_share_gap=-0.250
+
+beyond-ceiling fresh candidate scan completed 2026-03-30T07:39:31 total_elapsed=140.6s

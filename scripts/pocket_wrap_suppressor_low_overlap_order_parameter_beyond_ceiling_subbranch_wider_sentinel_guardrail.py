@@ -208,21 +208,53 @@ def _render_conclusion(sentinel: CompareRow) -> str:
         packet_status = ", ".join(packet_hits)
     else:
         packet_status = "none"
+    if packet_hits:
+        if len(packet_hits) == len(PACKET_LAW_RULES):
+            translation = (
+                "the wider sentinel reaches the full shared packet law and should be treated "
+                "as a family member under the current coarse regime map."
+            )
+        else:
+            translation = (
+                "the wider sentinel realizes only a partial packet lift at "
+                f"`mid_anchor_closure_peak = {sentinel.mid_anchor_closure_peak:.3f}`, "
+                f"`mid_candidate_attached_max = {sentinel.mid_candidate_attached_max:.3f}`, "
+                f"`mid_candidate_bridge_bridge_closed_pair_max = "
+                f"{sentinel.mid_candidate_bridge_bridge_closed_pair_max:.3f}`, and "
+                f"four-incident flank hinge = "
+                f"{'Y' if sentinel.mid_has_four_incident_flank_hinge >= 0.5 else 'n'}."
+            )
+    else:
+        translation = (
+            "the wider sentinel stays below the shared packet lift at "
+            f"`mid_anchor_closure_peak = {sentinel.mid_anchor_closure_peak:.3f}`, "
+            f"`mid_candidate_attached_max = {sentinel.mid_candidate_attached_max:.3f}`, "
+            f"`mid_candidate_bridge_bridge_closed_pair_max = "
+            f"{sentinel.mid_candidate_bridge_bridge_closed_pair_max:.3f}`, and "
+            f"four-incident flank hinge = "
+            f"{'Y' if sentinel.mid_has_four_incident_flank_hinge >= 0.5 else 'n'}."
+        )
+    if leaking_rules:
+        branch_read = (
+            "at least one current exact branch clause lights up before full shared-packet "
+            "membership, so this sentinel is better read as a leaking boundary control than as "
+            "a new branch."
+        )
+    else:
+        branch_read = (
+            "none of the current exact branch clauses light up, so this sentinel stays outside "
+            "the realized branch split and only sharpens the shared-packet boundary."
+        )
     return "\n".join(
         [
             "Conclusion",
             "==========",
             "conclusion=the nearest wider base sentinel does not join the shared beyond-ceiling "
             "8/12 packet regime, so this guardrail does not add a fourth shared-packet subbranch.",
-            "sentinel_translation=the wider skew-wrap shoulder keeps the same broader base family "
-            "but stalls below the common packet lift at `mid_anchor_closure_peak = 8.000`, "
-            f"`mid_candidate_attached_max = {sentinel.mid_candidate_attached_max:.3f}`, and "
-            f"four-incident flank hinge = {'Y' if sentinel.mid_has_four_incident_flank_hinge >= 0.5 else 'n'}.",
+            f"sentinel_translation={translation}",
             f"shared_packet_rules_hit={packet_status}.",
             f"first_clause_failure={first_failure}.",
-            "branch_guardrail_read=the current taper-hard intensity clause is only exact inside "
-            "the shared-packet family; once the compare steps out to the nearest wider base shoulder, "
-            "that clause lights up before the packet law itself does.",
+            f"branch_guardrail_read={branch_read}",
         ]
     )
 

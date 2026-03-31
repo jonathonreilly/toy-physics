@@ -1,44 +1,1149 @@
-## 2026-03-30 12:48 America/New_York
+## 2026-03-31 10:30 America/New_York
 
 ### Seam class
-- interference geometry sweep
-- two-slit fringe contrast vs network geometry
-- PStack pipeline inaugural run
+- active problem compression
+- regime architecture cleanup
 
 ### Science impact
-- science advanced; the first systematic geometry sweep of the two-slit interference setup reveals that fringe contrast at y=0 is exactly 1.0 in coherent mode and exactly 0.0 in record mode, independent of grid width (8-28) and slit separation (4-16)
-- sanity check caught that this result is trivially explained by the grid's discrete reflection symmetry at y=0, not by model dynamics — the skeptic's audit downgraded the finding to SUSPICIOUS
-- the dynamically interesting observable is the full screen distribution shape, which DOES depend on geometry: narrow slits push probability to screen edges, wide slits concentrate it at center, and longer grids develop richer multi-fringe structure
-- new PStack science skills installed and tested end-to-end: /frontier, /hypothesis, /theory-review, /design-experiment, /analyze, /sanity
+- kept `/Users/jonreilly/Projects/Physics/scripts/geometry_regime_card.py` as the retained geometry-side summary artifact
+- shortened the README `Active Technical Problem` so it now points at the shared mechanism-language job rather than older frontier-growth questions
+- the repo now states the current phase more cleanly:
+  - geometry-side retained card
+  - generated-DAG detector-balance bridge
+  - domain guards and branch selectors
 
 ### Current state
-- Ran the full PStack pipeline on the highest-value frontier gap identified by `/frontier`: the interference regime, which had no parameter sweeps despite `two_slit_distribution()` existing in the simulator
-- Created `scripts/interference_geometry_sweep.py` — parameterized version of `two_slit_distribution()` accepting arbitrary width, height, slit positions
-- Generated `logs/2026-03-30-interference-geometry-sweep.txt` with 1,152 probability evaluations across 48 geometry x record combinations
-- All PStack science documents written to `.claude/science/` (hypothesis, theory-review, experiment design, analysis, sanity check)
-- Frontier map written to `.claude/science/frontier/2026-03-30-frontier-map.md`
+- this checkpoint did not widen any frontier or add new exploratory scans
+- it completed the architecture cleanup that the prior geometry-card checkpoint had left as the immediate next step
 
 ### Strongest confirmed conclusion
-- Fringe contrast at the center detector (y=0) is EXACTLY 1.0 in coherent mode at all tested geometries, but this is a symmetry property of the setup (equal path lengths to center from symmetric slits), not a dynamical property of the model
-- The record mechanism provides all-or-nothing suppression: binary toggle, no partial suppression, geometry-independent
-- Distribution SHAPE varies dramatically with geometry and is the dynamically interesting observable for follow-up
-
-### Files and results changed in this run
-- New script: `scripts/interference_geometry_sweep.py`
-- New result log: `logs/2026-03-30-interference-geometry-sweep.txt`
-- New PStack skill files: `.claude/commands/` (14 skills)
-- New PStack science documents: `.claude/science/` (frontier, hypotheses, experiments, analyses, sanity, theory-reviews)
-
-### Validation
-- Baseline validation passed: default geometry (width=16, slit_sep=8) reproduces existing `center_detector_phase_scan()` response curve
-- Sanity check: SUSPICIOUS — central finding is trivial (symmetry), but distribution shape findings are dynamically interesting
+The active problem is now correctly phrased as regime compression and transfer language, not more broad ladder growth.
 
 ### Exact next step
-- Investigate the geometry dependence of the FULL fringe pattern (not just center contrast): measure fringe count, fringe spacing, and fringe envelope as functions of slit separation and grid width across the full detector screen
-- Alternatively, explore partial record mechanisms: modify `two_slit_distribution()` to allow probabilistic (not binary) record creation, sweeping record probability from 0 to 1
+- the next bounded move is a confirmation-style pass on the retained architecture: test whether the generated-DAG completion/load floor plus balance split survives on held-out rows without adding new clauses
+
+## 2026-03-31 04:42 America/New_York
+
+### Seam class
+- geometry regime card
+- shorter retained architecture map
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/geometry_regime_card.py`
+- rendered the compact card at `/Users/jonreilly/Projects/Physics/logs/2026-03-31-geometry-regime-card.txt`
+- shortened the geometry-side architecture to the retained pieces only:
+  - support-collapse guard
+  - subcritical balance basin
+  - supercritical completed-packet regime
+  - exhausted-wall boundary
+- the geometry lane now says the same thing as the generated-DAG bridge in the same order:
+  - completion/load sets the floor
+  - balance selects the branch
+  - bottleneck/placement terms sharpen the boundary
+
+### Current state
+- canonical `main` / `origin/main` are synced at `4c51805` before this local checkpoint
+- this loop did not reopen any ladder scans; it only compressed the retained map in the README to match the shared mechanism crosswalk
+
+### Strongest confirmed conclusion
+The geometry-side regime map is now short enough to function as one retained card rather than a running changelog of all earlier bounded compares.
+
+### Exact next step
+- if continuing this lane, the next bounded move is to shorten the `Active Technical Problem` wording so it references the retained regime card instead of the older long-form basin narrative
+
+## 2026-03-31 04:35 America/New_York
+
+### Seam class
+- common mechanism crosswalk
+- regime architecture compression across geometry and generated DAGs
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/mechanism_regime_crosswalk.py`
+- wrote the smallest retained crosswalk to `/Users/jonreilly/Projects/Physics/logs/2026-03-31-mechanism-regime-crosswalk.txt`
+- the shared mechanism map is now explicit rather than implicit:
+  - completion/load axis
+    - geometry: `closure_load`, shared `8/12` packet completion (`mid_candidate_attached_max >= 7.500`)
+    - generated DAG: `center_balanced_log_paths`, `center_slit_load_retimed`
+  - balance axis
+    - geometry: `anchor_closure_intensity_gap`, `anchor_deep_share_gap`, `high_bridge_right_count`
+    - generated DAG: `center_path_balance`, `center_balance_share`
+  - bottleneck / placement axis
+    - geometry: `mid_anchor_closure_peak`
+    - generated DAG: `center_retiming_alignment`, `center_slit_share`
+- this compresses the current regime architecture to one common theme:
+  - completion/load sets the floor
+  - balance selects the near-floor branch or subbranch
+  - bottleneck/placement terms modulate readout but are not the primary retained split
+
+### Current state
+- canonical `main` / `origin/main` are synced at `90986f6` before this local crosswalk checkpoint
+- no new frontier search was reopened; this loop was purely cross-domain mechanism compression
+
+### Strongest confirmed conclusion
+The geometry ladder and the generated-DAG bridge now share one retained abstract language instead of two parallel vocabularies. The common structure is completion first, balance second, bottleneck terms third.
+
+### Exact next step
+- if we keep pushing this lane, the next bounded task is to fold the moderate anchor-balance basin and beyond-ceiling packet regime into one shorter regime card in the README instead of extending the generated-DAG side further
+
+## 2026-03-31 04:25 America/New_York
+
+### Seam class
+- generated-DAG floor residual-pair stop-rule check
+- final compression guard on the bridge language
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/generative_causal_dag_visibility_floor_residual_pair_compare.py`
+- closed the “one more tiny clause?” question in `/Users/jonreilly/Projects/Physics/logs/2026-03-31-generative-causal-dag-visibility-floor-residual-pair-compare.txt`
+- the last residual pair are opposite endpoint exceptions:
+  - the missed `default` row (`seed=63`) is very load-heavy and near-perfectly retimed despite weak balance-share
+  - the leaked `denser-radius` row (`seed=86`) keeps moderate balance but stays below the balanced-load floor
+- pair-only exact closers do not generalize:
+  - the best non-floor pair separator is `center_upper_log_paths > 17.568570`
+  - but it only scores `0.7500` on the full 12-row crossover set
+- so the stop rule now triggers:
+  - keep the current bridge language
+  - do not add another global clause for this branch
+
+### Current state
+- canonical `main` / `origin/main` are synced at `e49673c` before this local Codex checkpoint
+- the retained generated-DAG bridge language is now:
+  - packet completion / closure-load sets the floor
+  - balance decides the near-floor crossover
+  - no stable extra residual clause survived the pair check
+
+### Strongest confirmed conclusion
+The generated-DAG bridge is compressed enough. The remaining residual pair is real but not structurally stable enough to deserve a new retained law.
+
+### Exact next step
+- stop compressing this branch further
+- carry the retained crosswalk forward into the broader regime architecture: generated packet completion / balance vs geometry closure-load / bridge-balance
+
+## 2026-03-31 04:20 America/New_York
+
+### Seam class
+- generated-DAG balanced-load floor crossover compare
+- geometry-language transfer wording
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/generative_causal_dag_visibility_floor_crossover_compare.py`
+- the immediate within-family follow-on is now closed in `/Users/jonreilly/Projects/Physics/logs/2026-03-31-generative-causal-dag-visibility-floor-crossover-compare.txt`
+- the generated-DAG bridge should now be treated as a two-branch packet regime, not as a one-scalar hunt:
+  - packet completion / closure-load sets the balanced-load floor `center_balanced_log_paths <= 17.671`
+  - near that floor, crossing is decided mainly by balance rather than by extra retimed slit load
+- the crucial near-floor comparison is:
+  - `default-high` crossover rows actually have slightly lower mean `center_slit_load_retimed` than the `denser-low` crossover rows (`16.0984` vs `16.9372`)
+  - but they have much higher mean `center_path_balance` (`0.4770` vs `0.1262`) and `center_balance_share` (`0.2376` vs `0.0588`)
+- the cleanest residual discriminator is `center_path_balance > 0.222271` at `11/12`; `center_balance_share > 0.133447` is essentially tied and cleaner as a physical summary because it encodes shared load rather than raw one-side dominance
+- this is the cleanest current crosswalk to the older geometry lane:
+  - generated-DAG `center_balanced_log_paths` <-> geometry packet completion / closure-load
+  - generated-DAG `center_path_balance` / `center_balance_share` <-> geometry bridge-balance / anchor-balance
+  - retiming / slit-share stay as detector-side bottleneck modifiers, not the primary branch split
+
+### Current state
+- canonical `main` / `origin/main` are synced at `e49673c` before this local Codex checkpoint, which already includes the stronger opaque-oscillation decoherence result from the generated-graph lane
+- this Codex loop stayed on compression/transfer language and did not branch into new generated-graph experiments
+
+### Strongest confirmed conclusion
+The generated-DAG bridge now has a compact regime architecture and a compact geometry crosswalk. Packet completion sets the branch floor; balance decides which near-floor rows actually cross it.
+
+### Exact next step
+- compare the single false-positive / false-negative residual pair around the near-floor balance cut and see whether one more tiny packet-side observable closes it
+- if it does not, keep the current bridge language as-is and stop compressing this branch further
+
+## 2026-03-31 04:30 America/New_York
+
+### Seam class
+- generated-DAG endogenous interference thread (experiments #35-41)
+- scaffold elimination complete
+- minimal graph = 21 nodes
+
+### Science impact
+- **Barrier eliminated** (#38): regional phase produces V>0.5 in 12/20 seeds with NO blocked nodes
+- **Phase eliminated** (#39): persistent pattern's gravity field IS the phase shifter. 46% detector pattern shift from mass alone.
+- **Decoherence from oscillation** (#40): period-3 oscillation → field variation → 1.5% pattern variability. Fully endogenous.
+- **Minimal graph = 21 nodes** (#41): 5 layers × 5 nodes produces gravity-induced interference at 110/110 seeds. Size-independent ~15% effect.
+- **Amplitude ratio predicts V** (#35): r=0.93 correlation across 30 seeds. Graph topology matters through amplitude balance.
+
+### Strongest confirmed conclusion
+All scaffold eliminated. Random DAG + persistent pattern + 5 irreducible assumptions = endogenous interference at any graph size ≥ 21 nodes. The phenomenon is local, not scale-dependent.
+
+### Files changed
+- 7 new scripts: `scripts/generated_dag_*.py`
+- 7 new logs
+
+### Exact next step
+- Test whether graph GROWTH RULES can be tuned to preferentially produce graphs with high amplitude balance (strong interference) vs low balance (weak interference)
+- This would show the graph dynamics SELECT for interference-producing structure
+
+## 2026-03-31 04:11 America/New_York
+
+### Seam class
+- generated-DAG visibility family-regime compression
+- bounded within-family compare after the first bridge result
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/generative_causal_dag_visibility_family_regime_compare.py`
+- closed the immediate follow-on from the first bridge check: the generated-DAG visibility family does not collapse to one cleaner shared scalar on the combined default + denser rows
+- instead, `/Users/jonreilly/Projects/Physics/logs/2026-03-31-generative-causal-dag-visibility-family-regime-compare.txt` shows a genuine two-branch packet-completion regime:
+  - low balanced-load branch: `center_balanced_log_paths <= 17.671`
+  - low branch winner: `center_path_balance` with summary `0.3740`
+  - high branch winner: `center_balanced_log_paths` with summary `0.3141`
+  - weighted split summary `0.3541`, better than the best combined single scalar `center_path_balance` at `0.2680`
+- the split is not just scenario identity:
+  - low branch: `58 default + 6 denser-radius`
+  - high branch: `6 default + 26 denser-radius`
+
+### Current state
+- canonical `main` / `origin/main` are synced at `ed297ec` before this local follow-on checkpoint
+- the generated-DAG compression lane now has:
+  - first bridge comparer
+  - nearby denser holdout
+  - retained two-branch packet-completion regime
+
+### Strongest confirmed conclusion
+Generated-DAG visibility now has a compact mechanism map instead of a loose candidate list. The retained structure is a two-branch detector-side packet-completion regime: below the balanced-load floor the signal is balance-led, and above it the balanced slit-load itself becomes the better order parameter.
+
+### Exact next step
+- stay local and bounded
+- compare the crossover rows (`6` default rows above the floor, `6` denser rows below it) directly to see what structural feature pushes a row across the `17.671` balanced-load floor
+- keep the next observable hunt inside the existing packet-completion family rather than reopening broader scenario growth
+
+## 2026-03-31 03:52 America/New_York
+
+### Seam class
+- generated-DAG visibility order-parameter bridge
+- bounded transfer check against raw edge-count / density baselines
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/generative_causal_dag_visibility_order_parameter_compare.py` and ran the first bounded bridge from geometry-language observables into the generated causal DAG lane
+- the bridge is not premature: on the default 64-seed sample (`/Users/jonreilly/Projects/Physics/logs/2026-03-31-generative-causal-dag-visibility-order-parameter-compare-default.txt`), the best local analogue is `center_path_balance`, which beats the best raw baselines `edge_count` / `edge_density` on the combined `V(y=0)` / `mean_V` ranking
+- the nearest holdout stays in the same family but changes which member wins: on the denser-radius sample (`/Users/jonreilly/Projects/Physics/logs/2026-03-31-generative-causal-dag-visibility-order-parameter-compare-denser-radius.txt`), `center_balanced_log_paths` beats raw edge size/density more strongly than the default winner
+- so the cleanest current statement is not one universal generated-DAG scalar; it is a small detector-side packet-completion family:
+  - balance of upper/lower center paths
+  - balanced center slit-load
+  - smaller supporting terms for slit share / retiming
+
+### Current state
+- canonical `main` / `origin/main` are still synced at `79e2dfc` before this local Codex checkpoint
+- repo work in this loop is intentionally bounded to:
+  - one new comparer script
+  - two generated-DAG comparer logs
+  - README / worklog / handoff updates once the result was stable
+
+### Strongest confirmed conclusion
+Generated-DAG visibility spread now has a credible mechanism-language bridge: local detector-side packet completion beats raw edge count / density, but the retained observable is a small family rather than a single universal scalar. Default seeds are balance-led; the nearby denser-radius holdout is balanced-load-led.
+
+### Exact next step
+- stay on this compression lane instead of widening the generated ladder
+- do one bounded within-family compare on the generated-DAG rows to see whether `center_path_balance` and `center_balanced_log_paths` collapse to a smaller shared observable or define a genuine two-branch regime
+- only after that, attempt transfer of the retained family onto broader generated-DAG parameter changes
+
+## 2026-03-31 02:54 America/New_York
+
+### Seam class
+- track split clarification after revalidation + dynamic-graph advance
+- Codex geometry/regime-compression lane vs Claude generative-graph lane
+
+### Science impact
+- no new analyzer was added in this loop; this is a coordination / narrative update so the active threads stop drifting back into the same search space
+- the current repo state now supports a clean split:
+  - **Claude track**: generated / evolving graphs, causal DAG emergence, endogenous interference / gravity on generated substrates, and Axiom 1 follow-through
+  - **Codex track**: geometry / ladder / order-parameter compression, low-overlap regime architecture, beyond-ceiling packet / hinge language, and small structural observables that can later be tested against generated-DAG behavior
+- the point of the split is not "old thread vs new thread"; it is "graph generation" vs "mechanism language." The geometry lane remains valuable because it is still the cleanest source of compact local observables and regime boundaries.
+
+### Current state
+- canonical `main` and `origin/main` are synced at `77958ec`
+- the strongest dynamic-graph claims now live on Claude's side:
+  - generated causal DAGs can produce interference
+  - revalidation corrected the generative graph to perfect causal order (`dag_ratio = 1.0`)
+  - topological decoherence is genuine at intermediate record probability
+- the strongest compact regime language still lives on the geometry / low-overlap side:
+  - shared low-overlap branch map
+  - support-collapse guard
+  - anchor-balance basin
+  - beyond-ceiling shared packet regime and its current subbranches
+
+### Strongest confirmed conclusion
+The project now has two complementary active lanes: generated graphs are beginning to produce physics-like behavior, while the geometry / ladder thread still provides the sharpest compact language for which local structures separate regimes. The next value is in linking those two, not in having both lanes rediscover the same facts independently.
+
+### Exact next step
+- **Claude**: stay on generated / evolving graphs and test whether more of the phenomena arise endogenously from the graph dynamics rather than from hand-imposed benchmark geometry.
+- **Codex**: stay on geometry / regime compression and avoid broad new ladder growth unless it is needed for one bounded discriminator.
+- For Codex specifically, prioritize observables that could plausibly transfer onto generated-DAG data:
+  - packet / closure-completion proxies
+  - detector-side bottlenecks / retiming-style scalars
+  - bridge-balance or anchor-balance analogues
+  - small branch/domain guards rather than big clause piles
 
 ### First concrete action
-- Write a follow-up script that measures off-center fringe visibility V(y) for y != 0 across the same geometry grid, since the symmetry protection only applies at y=0
+- Codex should write one bounded comparer that asks whether ladder-style local observables, or close analogues of them, compress the seed-to-seed spread in generated-causal-DAG visibility better than raw edge count / density summaries.
+- If that bridge looks premature, the fallback Codex step is one more bounded geometry-language cleanup: tighten the beyond-ceiling / exhausted-wall summary into the smallest current observable family without widening the ladder.
+
+## 2026-03-30 22:00 America/New_York
+
+### Seam class
+- PStack session revalidation after Codex P1/P2/P3 bug fixes
+- corrected topological decoherence: genuine V-decrease with per-slit recording
+- corrected generative graph: dag_ratio=1.0 (perfect causal order, not 0.5)
+
+### Science impact (post-revalidation corrections)
+- **Topological decoherence CORRECTED**: per-slit recording produces genuine decoherence (V decreases monotonically for 0<p<1), with non-monotonic jump at p=1.0 (single branch, enhanced V from shortcuts). Maximum decoherence at intermediate p, not at full recording. Functional form much flatter than trivial V₀(1-p).
+- **Generative graph CORRECTED**: dag_ratio = 1.0 (all edges forward in spawn order). The graph has PERFECT causal order — the original "no time arrow" conclusion was from a double-counting bug.
+- **Three conclusions CONFIRMED unchanged**: gravity damping exonerated (fixed geometry, same answer), period-3 oscillators (stricter classifier), mutual gravitation (path resampling didn't affect these geometries).
+
+### Session totals (PStack pipeline)
+- 33 experiments + 5 revalidation reruns
+- 20 new scripts, 20+ new logs
+- 14 PStack skills installed in .claude/commands/
+- All on origin/main
+
+### Strongest confirmed conclusions (post-revalidation)
+1. Interference = topology, gravity = field — independent on fixed DAG
+2. Born rule derived from linearity + reversibility (5 irreducible assumptions)
+3. Continuum limit via connectivity (anisotropy ~ 1/n_directions)
+4. Interference emerges on randomly generated causal DAGs
+5. Topological decoherence is genuine but non-monotonic (max decoherence at intermediate p)
+6. Generative graphs have perfect causal order from spawn dynamics
+
+### Exact next step
+- Characterize the corrected decoherence curve's functional form analytically
+- Test gravity on the generated causal DAG (does the randomly grown graph also produce gravitational lensing?)
+- Three-slit topological decoherence (more environment states → different decoherence profile)
+
+### First concrete action
+- Run gravity on the generative DAG from experiment #33 — place persistent nodes and measure path bending on the random graph
+
+## 2026-03-30 20:02 America/New_York
+
+### Seam class
+- janitor state reconciliation after synced dynamic-graph advance
+- runtime handoff / narrative repair
+
+### Science impact
+- no new analyzer was added beyond the cheap confidence gate; this loop repaired stale shared-state drift against the already-synced canonical head `712d44f`
+- corrected the future-dated PStack summary entry, backfilled the synced generated-causal-DAG interference result into the tracked work log, and refreshed the README plus runtime handoff to the actual canonical state
+- `python3 scripts/base_confidence_check.py` passed; the base check again skipped the heavier full overlap, route-map, and mechanism-split reruns by design
+
+### Current state
+- canonical `main` and `origin/main` are synced at `712d44f`; no detached science child is active
+- the dynamic-graph thread now has three aligned headline claims in tracked state: richer-connectivity anisotropy falls roughly as `1/n_directions`, Born rule follows from linear reversible propagation, and a randomly generated causal DAG can generate high-visibility interference without a pre-built grid
+
+### Strongest confirmed conclusion
+The current synced baseline no longer just says that interference survives on a graph: once the graph is given a causal orientation, the graph itself can generate interference, while the kinematic sector's anisotropy shrinks under richer connectivity and the amplitude law still singles out Born's `p=2` norm.
+
+### Files changed
+- Updated narrative/state:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+
+### Validation
+- `python3 scripts/base_confidence_check.py`
+
+### Exact next step
+- Stay on the dynamic-graph compression/order-parameter thread instead of widening scope.
+- Quantify which generated-DAG structural observable best predicts the spread in `V(y=0)` / `mean_V` across seeds and nearby parameter changes.
+
+### First concrete action
+- Write one bounded analyzer that joins generated-DAG visibility against simple structural observables such as post-barrier path multiplicity, detector-side bottleneck counts, and arrival-retiming proxies, then rank which scalar compresses the seed-to-seed spread best.
+
+## 2026-03-30 19:58 America/New_York
+
+### Seam class
+- generative causal DAG interference
+- evolving-graph foundations
+
+### Science impact
+- completed the tracked follow-on from the time-symmetric generative-graph prototype: orienting the generated graph into a causal DAG and running a path sum produced detector visibility without any pre-built grid
+- across five tested seeds, `481`-node generated DAGs gave `V(y=0)=0.078046..0.988188` and `mean_V=0.169162..0.619900`
+- the no-barrier control remained exactly `V(y=0)=0.000000`, so the signal is tied to the barrier/slit structure rather than a generic generated-graph artifact
+
+### Strongest confirmed conclusion
+A randomly generated causal DAG can generate high-visibility interference on its own, so the model's interference mechanism is graph-generative rather than something that only rides on a pre-imposed lattice.
+
+### Files changed
+- New: `scripts/generative_causal_dag_interference.py`, `logs/2026-03-30-generative-causal-dag-interference.txt`
+
+### Exact next step
+- Stay on compression / order-parameter mode inside the dynamic-graph thread.
+- Identify which generated-DAG structural scalar best predicts visibility across seeds instead of branching into new phenomena.
+
+### First concrete action
+- Write one bounded comparer that records per-seed visibility alongside edge count, barrier reachability, post-barrier path multiplicity, and simple detector-retiming proxies, then checks which observable best tracks `V(y=0)` and `mean_V`.
+
+## 2026-03-30 19:49 America/New_York
+
+### Seam class
+- PStack session: 32 experiments on interference, gravity, decoherence, persistence, symmetry, foundations, graph evolution
+- continuum limit proven (anisotropy ~ 1/n_directions)
+- generative graph prototype (structured but time-symmetric)
+
+### Science impact (PStack session summary)
+- **Interference**: topological, Born rule (I₃=0 on fixed DAG), R_c = 1+|y|/s derived, irregular-network-robust
+- **Gravity**: Green's function field, mutual attraction, 50% superposition failure from action nonlinearity, pulsating oscillators produce robust bending
+- **Decoherence**: requires topology change (field distortion → zero effect), topological records → non-trivial V(p)
+- **Symmetry**: √(dt²-dx²) Lorentz-invariant, 8.2% grid breaking, continuum limit via 1/n_directions scaling
+- **Persistence**: oscillators not fixed points, birth threshold = stability phase transition
+- **Foundations**: Born rule derived from linearity+reversibility, 5 irreducible assumptions identified
+- **Graph evolution**: phenomena survive on growing graphs; generative graph produces high-clustering structure but no time arrow yet
+
+### Strongest confirmed conclusion
+Interference = topology, gravity = field — independent on fixed DAG. The model has a well-defined continuum limit (anisotropy ~ 1/n_directions). Born rule is derived, not assumed.
+
+### Files changed
+- 18 new scripts in `scripts/`
+- 18 new logs in `logs/`
+- 14 PStack skills in `.claude/commands/`
+
+### Exact next step
+- Make the generative graph evolution DIRECTED: new events link only forward (creating a natural causal DAG), then test whether the resulting DAG produces interference from a path-sum without pre-built geometry
+- This is the transition from "phenomena survive on growth" to "the evolving graph generates the phenomena"
+
+### First concrete action
+- Modify `generative_graph_evolution.py` to use directed edges (parent → child only) and assign arrival times based on spawn order. Then run a path-sum amplitude calculation on the resulting DAG and check for interference.
+
+## 2026-03-30 19:19 America/New_York
+
+### Seam class
+- repo-state reconciliation after multi-commit science burst
+- gravity / kinematics physical-language sync
+
+### Science impact
+- no new analyzer was run; this loop reconciled tracked state to the already-committed canonical repo results at `2849c57`
+- the shared narrative now matches the committed science burst: fixed-DAG interference is still Born-like, topology-changing record operators can reshape visibility, the default self-maintenance rule is oscillatory rather than fixed-point, oscillating persistent sources still bend trajectories, the tested gravity field does not superpose linearly, and the retained update `sqrt(dt^2-dx^2)` is the exact tested Lorentz / proper-time scalar
+- the earlier “finite-range gravity confirmed” wording is retired; the current gravity asymptotic law remains unsettled and is better read as a finite-size / boundary question
+
+### Current state
+- Re-read the protocol artifacts, passed the duplicate-run guard, acquired the `physics-science` lock, and reconciled canonical `main` after finding stale shared metadata.
+- The canonical repo was synced with `origin/main` at `2849c57`, but `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` still described an older interference branch while `README.md` had newer untracked conclusion updates.
+- This bounded loop performed the repo-facing integrity fix only: updated the narrative and runtime artifacts to the actual committed repo state; no detached child is active.
+
+### Strongest confirmed conclusion
+The toy's kinematics and gravity dynamics now separate more cleanly: `sqrt(dt^2-dx^2)` is an exact tested Lorentz / proper-time scalar, while gravity is a genuinely nonlinear continuation effect whose two-source combination fails simple superposition by about `48..52%`, and whose large-grid asymptotic law is still unresolved.
+
+### Files changed
+- Updated narrative/state:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- Stay on the gravity / kinematics translation thread.
+- Derive whether the observed two-source gravity nonlinearity can be written directly in retained-update / proper-time language rather than as separate empirical field and path-optimization failures.
+
+### First concrete action
+- Write one bounded analyzer that evaluates single-mass and two-mass trajectories on matched fixed paths and compares retained-update accumulation, raw delay accumulation, and action deviation to see which quantity best compresses the `48..52%` superposition failure.
+
+## 2026-03-30 19:00 America/New_York
+
+### Seam class
+- gravity scaling sweep
+- self-maintenance viability boundary
+
+### Science impact
+- Gravity decay rate α plateaus at ~0.10 for grids > 60 units. Does NOT approach 1/L (continuum limit). Finite-range gravity is a model prediction.
+- Self-maintenance requires adjacent nodes. Support = persistent_neighbors / total_neighbors.
+
+### Strongest confirmed conclusion
+The model's gravity is intrinsically finite-range (~10 grid units). The continuum ln(r) Green's function is not recovered at tested scales.
+
+### Files changed
+- New: `scripts/gravity_scaling_sweep.py`, `logs/2026-03-30-gravity-scaling-sweep.txt`
+
+### Exact next step
+- Non-trivial decoherence: records that modify the delay field (not just sector labels)
+
+## 2026-03-30 18:17 America/New_York
+
+### Seam class
+- interference DAG reconfiguration order-parameter discovery
+- multi-slit topology-change physical-language translation
+
+### Science impact
+- science advanced; the topology-change thread now compresses the open/closed-slit spike into a compact physical scalar family rather than only listing raw rewiring counts
+- across the four tested three-slit geometries, cumulative detector-boundary retiming over the three one-slit closures is the best single predictor of `max |I_3| / max |P_ABC|` on a log scale
+- the best scalar on the tested set is `sum_detector_max_delay` with correlation `0.9948`; raw post-barrier edge-change totals are weaker (`0.9663`)
+- wide and asymmetric geometries spike together because both generate about `4.7..5.0` units of detector-boundary retiming under slit closure, whereas the close geometry only reaches `1.656854`
+
+### Current state
+- Re-read the required protocol artifacts, then reconciled against the real canonical repo state: `main` and `origin/main` were already synced at `ebd7642`, the prior synced DAG-reconfiguration result had not been reflected in the tracked work log, the runtime handoff still carried a stale failed-push note, and autopilot memory was absent.
+- Acquired the `physics-science` lock on clean synced `main`, refreshed the runtime narrative to the real repo state, and continued the same multi-slit topology-change thread.
+- Added and ran one bounded analyzer:
+  - `/Users/jonreilly/Projects/Physics/scripts/interference_dag_reconfiguration_order_parameter.py`
+- Generated:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-interference-dag-reconfiguration-order-parameter.txt`
+
+### Strongest confirmed conclusion
+The giant open/closed-slit Sorkin spike is governed more by detector-side retiming than by raw edge rewiring. On the tested four-geometry set, the cleanest one-number compression is cumulative detector-boundary delay across the three one-slit closures, with total downstream delay mass as a close second.
+
+### Files and results changed in this run
+- New analyzer:
+  - `/Users/jonreilly/Projects/Physics/scripts/interference_dag_reconfiguration_order_parameter.py`
+- New log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-interference-dag-reconfiguration-order-parameter.txt`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+
+### Validation
+- `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/interference_dag_reconfiguration_order_parameter.py`
+- `python3 /Users/jonreilly/Projects/Physics/scripts/interference_dag_reconfiguration_order_parameter.py | tee /Users/jonreilly/Projects/Physics/logs/2026-03-30-interference-dag-reconfiguration-order-parameter.txt`
+
+### Exact next step
+- Stay on the multi-slit topology-change thread.
+- Test whether the detector-retiming order parameter can be derived from post-barrier cone geometry or path-multiplicity amplification, instead of treated as a purely empirical fit.
+
+### First concrete action
+- Write one bounded amplifier audit that compares symmetric vs wide/asymmetric slit closures and measures how detector-boundary delay couples to detector-side path multiplicity or boundary amplitude growth.
+
+## 2026-03-30 17:23 America/New_York
+
+### Seam class
+- interference DAG reconfiguration quantification
+- multi-slit topology-change translation
+
+### Science impact
+- science advanced; the post-fixed-DAG thread now exact-quantifies the open/closed-slit topology effect instead of just naming it
+- removing a single barrier slit node rewires a large downstream causal cone: across the tested three-slit geometries, one node removal changes `38..300` causal edges and retimes `30..104` shared nodes
+- the reconfiguration is one-sided and post-barrier: all shared-node arrival shifts are delays, none are accelerations, and every changed shared node lies at or beyond the barrier
+- central-slit closures are the strongest cases; in the wide geometry `(-6, 0, 6) -> (-6, 6)`, one removed node changes `300` edges and delays `104` downstream shared nodes, with max local arrival shift `+7.899495`
+
+### Current state
+- Re-read the protocol artifacts, then reconciled against the real canonical repo state: `main` and `origin/main` had already advanced to `95077b7`, the tracked work log already contained later March 30, 2026 entries at 5:45 PM and 6:15 PM America/New_York, the runtime handoff was stale, and no active detached science child was recorded.
+- Acquired the `physics-science` lock on clean synced `main` and continued the new top-thread next step instead of the older open/closed-slit interpretation.
+- Added and ran one bounded analyzer:
+  - `/Users/jonreilly/Projects/Physics/scripts/interference_dag_reconfiguration_diff.py`
+- Generated:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-interference-dag-reconfiguration-diff.txt`
+
+### Strongest confirmed conclusion
+The large slit-open/closed Sorkin signal is a pure DAG-reconfiguration effect. In the tested three-slit geometries, removing one barrier slit node does not create upstream retiming or faster arrivals; it rewires a post-barrier causal cone and only delays downstream shared nodes.
+
+### Files and results changed in this run
+- New analyzer:
+  - `/Users/jonreilly/Projects/Physics/scripts/interference_dag_reconfiguration_diff.py`
+- New log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-interference-dag-reconfiguration-diff.txt`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+
+### Validation
+- `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/interference_dag_reconfiguration_diff.py`
+- `python3 /Users/jonreilly/Projects/Physics/scripts/interference_dag_reconfiguration_diff.py | tee /Users/jonreilly/Projects/Physics/logs/2026-03-30-interference-dag-reconfiguration-diff.txt`
+
+### Exact next step
+- Stay on the multi-slit topology-change thread.
+- Compress the reconfiguration into one scalar or small family of scalars that predicts the open/closed-slit Sorkin magnitude, rather than just the existence of rewiring.
+
+### First concrete action
+- Write one bounded comparer that joins the existing open/closed-slit Sorkin ratios with the new DAG-diff observables (`post_edge_delta`, `changed_post_nodes`, `max_delay`) across the tested geometries and checks which observable best tracks the large `wide` and `asymmetric` spikes.
+
+## 2026-03-30 18:15 America/New_York
+
+### Seam class
+- fixed-DAG Sorkin test
+- Born rule confirmation
+
+### Science impact
+- **Born rule confirmed:** Fixed-DAG Sorkin test gives I₃ = 0 to machine precision (10⁻¹⁶) at all 4 slit configurations. The model's path-sum is exactly pairwise — standard quantum-like interference, no higher-order terms.
+- **DAG reconfiguration identified:** The original I₃ ≠ 0 (up to 10⁹ × P) was entirely caused by the causal DAG changing topology when barrier nodes are added/removed. This is a real discrete-network effect but is NOT interference — it's topological coupling.
+- These two results together cleanly separate the model's interference mechanism (Born-rule-compliant, amplitude-linear) from its discrete-topology effects (DAG reconfiguration, nonlinear in slit configuration).
+
+### Strongest confirmed conclusion
+The model produces standard quantum-like interference: amplitudes add linearly, probabilities are |sum|², and the Sorkin inclusion-exclusion identity holds exactly on a fixed DAG. No post-quantum higher-order interference.
+
+### Files and results changed
+- New: `scripts/interference_sorkin_fixed_dag.py`, `logs/2026-03-30-interference-sorkin-fixed-dag.txt`
+
+### Exact next step
+- Study DAG reconfiguration as its own phenomenon: quantify how much the causal structure changes when barrier nodes are added/removed, and whether this has physical significance
+- Or: return to gravity lane — fit action falloff to discrete harmonic theory
+
+### First concrete action
+- Write a DAG-diff script that counts how many causal edges change between two slit configurations
+
+## 2026-03-30 17:45 America/New_York
+
+### Seam class
+- gravity falloff functional form + angular deflection sweep
+- irregular network interference robustness
+- Sorkin inclusion-exclusion test (I₃)
+- three-slit overclaim correction
+
+### Science impact
+- **Gravity angular sweep:** gravitational lensing pattern confirmed — paths on both sides of persistent-node mass bend inward. Action falloff is steeper than power-law, consistent with discrete harmonic relaxation. Anti-lensing artifact at close range (discrete grid effect).
+- **Irregular networks:** interference and record suppression BOTH survive grid perturbation up to ±40%. V(y=0) drops from 1.0 (confirming it was symmetry-protected). Record leak stays exactly 0.000000 at all perturbations.
+- **Sorkin test:** I₃ ≠ 0 at all configurations, but analysis shows this is DAG reconfiguration (topology change when barrier nodes open/close), NOT Born rule violation. The discrete causal DAG changes nonlinearly with slit configuration — a genuine discrete-network effect with no continuum analogue, but not "higher-order interference" in the standard sense. Sanity: SUSPICIOUS.
+- **Three-slit correction (per Codex review):** the earlier claim "more slits = higher mean_V" was overclaimed. Data shows 3-slit symmetric (0.405) > 3-slit asymmetric (0.298) > 4-slit (0.270) > 2-slit (0.246). Slit geometry matters more than slit count. Corrected conclusion: multi-slit configurations produce qualitatively different visibility structure, not a monotonic slit-count law.
+
+### Strongest confirmed conclusion
+- The model's interference regime is robust to grid irregularity. Record suppression is absolute at all perturbations. The Sorkin I₃ ≠ 0 is real but measures DAG reconfiguration, not Born rule violation — an important distinction that needs a refined test (fixed-DAG, amplitude-only slit control).
+
+### Files and results changed in this run
+- New scripts: `scripts/gravity_falloff_and_deflection_sweep.py`, `scripts/interference_irregular_network.py`, `scripts/interference_sorkin_test.py`
+- New logs: `logs/2026-03-30-gravity-falloff-and-deflection-sweep.txt`, `logs/2026-03-30-interference-irregular-network.txt`, `logs/2026-03-30-interference-sorkin-test.txt`
+
+### Exact next step
+- Refine the Sorkin test with a FIXED DAG (keep all barrier nodes, vary amplitude transmission 0/1 at each slit position) to isolate genuine higher-order interference from DAG reconfiguration
+- Fit the gravity action falloff to a discrete-harmonic functional form
+
+### First concrete action
+- Write `scripts/interference_sorkin_fixed_dag.py` that keeps all barrier nodes unblocked but sets amplitude transmission to zero at non-slit positions (instead of removing nodes)
+
+## 2026-03-30 16:00 America/New_York
+
+### Seam class
+- janitor state reconciliation
+- repo cleanliness recovery
+
+### Science impact
+- science unchanged; the tracked thread remains the interference regime characterization captured at `180e4db`
+- no new science was run; janitor only repaired stale shared-state metadata and restored clean repo detection for local workspace mirrors
+
+### Current state
+- Re-read the required protocol artifacts, confirmed the cooperative lock was free, and acquired the `physics-janitor` lock before mutating shared state.
+- Confirmed the canonical repo and detached janitor worktree were both synced with `origin/main` at `180e4db`.
+- Ran `python3 scripts/base_confidence_check.py`; all reported checks passed, and the base check explicitly skipped the heavier full overlap, route-map, and mechanism-split reruns.
+- Refreshed the stale handoff to the latest tracked interference result.
+- Ignored local `.claude/worktrees/` metadata in `.gitignore` so the canonical repo can return to a truly clean state when tracked files are synced.
+
+### Strongest confirmed conclusion
+The model's two-slit interference is a genuine dynamical property of the discrete event network's path-sum. The visibility threshold is topological (slit reachability on the causal DAG), the threshold is y-dependent, and the record mechanism provides exact linear decoherence. These are distinctly discrete-network features with no direct continuum analogue.
+
+### Files and results changed in this run
+- Updated tracked state: `.gitignore`, `AUTOPILOT_WORKLOG.md`, `logs/physics_autopilot_handoff.md`
+- Refreshed janitor memory: `$CODEX_HOME/automations/physics-janitor/memory.md`
+
+### Validation
+- `python3 scripts/base_confidence_check.py`
+
+### Exact next step
+- Stay on the interference translation thread.
+- Derive the `R_c(y)` threshold from model axioms via `/first-principles`.
+- Treat irregular/non-rectangular network checks as a follow-on guardrail only after that derivation, not as a widened default thread.
+
+### First concrete action
+- Use `/first-principles` to derive why `R_c(y) ≈ 0.25|y| + 1.0` from the grid's causal DAG structure.
+
+## 2026-03-30 16:30 America/New_York
+
+### Seam class
+- interference regime complete characterization
+- four parallel experiments: critical ratio, slit reachability, asymmetric, partial records
+
+### Science impact
+- **Slit reachability confirmed:** V=0 is ALWAYS single-slit reachability (topological). 10/10 cases, zero exceptions. The visibility threshold is the point where the causal DAG first admits paths through both slits to a given screen position.
+- **Critical ratio R_c(y) characterized:** the threshold is y-dependent (R_c increases with |y|), approximately R_c ≈ 0.25|y| + 1.0 for slit_half=4. Transition is discontinuous (V jumps from exactly 0 to finite).
+- **Asymmetric interference proves genuine dynamics:** breaking reflection symmetry drops V(y=0) from 1.0 to 0.01-0.00. Interference survives asymmetry, confirming it's a real property of the path-sum, not a setup artifact.
+- **Partial records: V(y,p) = V(y,0)×(1-p) exactly.** Linear decoherence at every position, every geometry. Mathematically trivial (amplitude splitting), but confirms gradual, not binary.
+
+### Strongest confirmed conclusion
+The model's two-slit interference is a genuine dynamical property of the discrete event network's path-sum. The visibility threshold is topological (slit reachability on the causal DAG), the threshold is y-dependent, and the record mechanism provides exact linear decoherence. These are distinctly discrete-network features with no direct continuum analogue.
+
+### Files and results changed in this run
+- New scripts: `scripts/interference_critical_ratio_sweep.py`, `scripts/interference_slit_reachability_audit.py`, `scripts/interference_asymmetric_sweep.py`, `scripts/interference_partial_record_sweep.py`
+- New logs: 4 corresponding log files in `logs/`
+
+### Exact next step
+- Derive the R_c(y) threshold from model axioms via /first-principles
+- Test on non-rectangular (irregular/random) networks to check if findings are grid-specific
+- Explore record mechanisms that affect the continuation landscape (not just sector labeling) for non-trivial decoherence
+
+### First concrete action
+- Use /first-principles to derive why R_c(y) ≈ 0.25|y| + 1.0 from the grid's causal DAG structure
+
+## 2026-03-30 15:24 America/New_York
+
+### Seam class
+- interference critical-threshold closure
+- off-center visibility physical-language translation
+
+### Science impact
+- science advanced; the earlier `y=1` critical-ratio story now exact-closes as a two-regime width boundary on the sampled even-width interference grid
+- narrative sharpened; the ratio band is not a standalone law but the low-offset edge of a broader detector-side onset rule
+
+### Current state
+- Re-read the protocol artifacts, reconciled stale runtime metadata to the tracked interference thread, confirmed the canonical repo synced at `cae2168`, and acquired the `physics-science` lock before new work.
+- Added and ran one bounded analyzer:
+  - `/Users/jonreilly/Projects/Physics/scripts/interference_critical_ratio_sweep.py`
+- Generated:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-interference-critical-ratio-sweep.txt`
+
+### Strongest confirmed conclusion
+- Over the sampled even-width grid `width = 4..32`, `slit_sep = 2..16`, `|y| = 1..8`, off-center coherent visibility onset exact-closes with zero mismatches as:
+  - `width_crit = min(slit_sep + 2|y|, 2*slit_sep + 2)`
+- So the old `V(y=1)` threshold ratios are just the `|y| = 1` edge of that law:
+  - slit_sep `2 -> 16` gives critical ratios `2.000, 1.500, 1.333, 1.250, 1.200, 1.167, 1.143, 1.125`
+- Physical translation:
+  - straight-transfer regime: `width >= slit_sep + 2|y|`
+  - zig-zag saturation regime for narrow slits / larger offsets: threshold saturates at `width >= 2*slit_sep + 2`
+- The prior record conclusion remains unchanged:
+  - durable records still kill visibility everywhere to machine precision
+
+### Files and results changed in this run
+- New analyzer:
+  - `/Users/jonreilly/Projects/Physics/scripts/interference_critical_ratio_sweep.py`
+- New log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-interference-critical-ratio-sweep.txt`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+
+### Validation
+- `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/interference_critical_ratio_sweep.py`
+
+### Exact next step
+- Stay on the interference translation thread.
+- Derive the zig-zag saturation term directly from sector-resolved causal paths, and check whether odd widths obey the expected `ceil(width/2)` generalization of the same law.
+
+### First concrete action
+- Build one bounded sector-reachability audit comparing a narrow-slit saturated case (`slit_sep=2`, `width=6`) against a straight-transfer case (`slit_sep=8`, `width=14`) to expose which post-barrier causal paths create the plateau at `2*slit_sep + 2`.
+
+## 2026-03-30 15:40 America/New_York
+
+### Seam class
+- interference off-center fringe visibility sweep
+- PStack science pipeline (promoted from worktree branch)
+
+### Science impact
+- science advanced; first systematic sweep of fringe visibility V(y) across all screen positions and geometry parameters
+- off-center visibility (y != 0) depends on network geometry with two clean monotonic trends:
+  - wider grids spread phase sensitivity to more screen positions
+  - narrower slit separations concentrate it near center
+- sharp visibility threshold: below a critical width/slit_sep ratio (~1.25-2.0), off-center interference vanishes entirely — a topological property of the discrete grid (paths through only one slit reach the detector)
+- record mechanism kills interference at ALL positions with zero leakage to 10-digit precision
+- sanity check: CLEAN on all six dimensions; not a symmetry artifact
+
+### Current state
+- Promoted from worktree branch `claude/intelligent-jepsen` after full PStack pipeline:
+  /frontier -> /hypothesis -> /theory-review -> /design-experiment -> execute -> /analyze -> /sanity
+- PStack science skills installed in `.claude/commands/` (14 skills)
+
+### Strongest confirmed conclusion
+- Off-center fringe visibility V(y) at y != 0 is geometry-dependent, monotonically increasing with grid width and decreasing with slit separation
+- Mean screen visibility at width=24, slit_sep=4: 0.572; at width=8, slit_sep=16: 0.048
+- Sharp threshold: V(y=1) = 0.000 at width=8/slit_sep=8 but V(y=1) = 0.927 at width=12/slit_sep=8
+
+### Files and results changed in this run
+- New scripts: `scripts/interference_geometry_sweep.py`, `scripts/interference_offcenter_fringe_sweep.py`
+- New logs: `logs/2026-03-30-interference-geometry-sweep.txt`, `logs/2026-03-30-interference-offcenter-fringe-sweep.txt`
+- New PStack skills: `.claude/commands/` (14 skills)
+
+### Exact next step
+- Pin down the critical width/slit_sep ratio with a finer sweep around 1.0-2.5
+- Fit V(y) envelope to a functional form (Gaussian, Lorentzian, sinc²)
+- Derive the geometry-visibility relationship from model axioms via /first-principles
+
+### First concrete action
+- Write `scripts/interference_critical_ratio_sweep.py` sweeping width/slit_sep from 1.0 to 3.0 in steps of 0.1 to determine the exact threshold
+
+## 2026-03-30 15:02 America/New_York
+
+### Seam class
+- beyond-ceiling finished-boundary closure-deficit summary
+- one-node ladder versus throat collapse
+
+### Science impact
+- science advanced; the beyond-ceiling family plus one-node outside boundary now exact-closes as a local closure-deficit ladder rather than just a coarse `8/10/12` completion story
+- narrative sharpened; the low-support throats are not the next ladder rung and should remain outside that one-node regime as deeper multi-node collapse rows
+
+### Current state
+- Picked up after syncing the queued automation checkpoint `0240fe4` to `origin/main`, acquired the `manual-codex` lock on clean local `main`, and continued the beyond-ceiling translation thread rather than widening the frontier.
+- Added and ran one bounded analyzer with parallel row capture across the finished family/outside boundary:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_finished_boundary_closure_deficit_summary.py`
+- Generated:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-finished-boundary-closure-deficit-summary.txt`
+
+### Strongest confirmed conclusion
+- The closure-deficit equivalence is exact for the realized family and the one-node outside ladder:
+  - family rows: `12/0` with `5` rows
+  - corner near miss `exa:base:skew-hard:local-morph-k`: `10/2`
+  - side-or-hinge outside rows: `8/4` with `6` rows
+- So the clean beyond-ceiling one-node boundary is now:
+  - full family completion
+  - two-edge corner depletion
+  - four-edge side-or-hinge depletion
+- The low-support throats do not continue that ladder:
+  - `ultra|mega:base:taper-wrap:mode-mix-f` lands at `0` bridge-bridge closed edges with a `12`-edge completion gap
+  - but the best aligned family-packet comparison only exposes `7` explicit lost closed edges
+  - so those rows remain deeper multi-node collapse outside the clean one-node closure-deficit regime
+- The exact family law still stays:
+  - `mid_candidate_attached_max >= 7.500`
+
+### Files and results changed in this run
+- New analyzer:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_finished_boundary_closure_deficit_summary.py`
+- New log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-finished-boundary-closure-deficit-summary.txt`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+
+### Validation
+- `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_finished_boundary_closure_deficit_summary.py`
+
+### Exact next step
+- Stay on the beyond-ceiling translation thread.
+- Compare the low-support throats directly against the one-node ladder representatives to isolate what additional structural collapse zeroes the bridge-bridge closure count and makes the throat rows fall off the clean `12/0 -> 10/2 -> 8/4` ladder.
+
+### First concrete action
+- Build one bounded throat-collapse compare across:
+  - `ultra:base:taper-wrap:mode-mix-f`
+  - `mega:base:taper-wrap:mode-mix-f`
+  - one side row
+  - one hinge row
+  - the corner near miss
+  so we can test whether the throat failure is best explained by multi-node support loss, broken inward bridge pairing, or another local collapse observable.
+
+## 2026-03-30 11:27 America/New_York
+
+### Seam class
+- beyond-ceiling ladder translation
+- representative closure compression
+
+### Science impact
+- science advanced; the new side-vs-hinge-vs-corner deletion ladder now compresses cleanly under one scalar already visible at row level, rather than needing node-position casework
+- narrative advanced; the beyond-ceiling outside ladder is now best read physically as local shared-packet closure completion: four lost closures, then two lost closures, then full completion
+
+### Current state
+- Re-read the required protocol artifacts, confirmed the latest handoff named no active detached child, checked the lock as free, reconciled the canonical repo clean and synced at `4123638`, and acquired the `physics-science` lock before doing new work.
+- Added and ran one bounded analyzer:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_deletion_ladder_representative_compare.py`
+- Generated:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-deletion-ladder-representative-compare.txt`
+
+### Strongest confirmed conclusion
+- Missing-node position is still the right mechanism label, but it is not the cleanest ladder scalar:
+  - `default:base:skew-wrap:local-morph-c` deletes a side node and lands at `7` attachments / `8` closed edges
+  - `exa:large:taper-wrap-large:local-morph-g` deletes the hinge node and also lands at `7` attachments / `8` closed edges
+  - so side vs hinge over-splits one shared harsher rung
+- Simple directional attachment tallies are not stable enough either:
+  - the corner near miss `exa:base:skew-hard:local-morph-k` keeps `10` closed edges across all three tied dominant mids
+  - but its dominant orientations reuse one hinge-style column tally and one side-style row tally
+- The cleanest scalar compression is local shared-packet closure completion, already visible as row-level `mid_candidate_bridge_bridge_closed_pair_max`:
+  - side / hinge depletion: `8.000`
+  - corner depletion: `10.000`
+  - realized shared family: `12.000`
+- So the beyond-ceiling ladder is now best read as:
+  - four lost local closures
+  - two lost local closures
+  - full twelve-edge completion
+- The exact family law itself still stays:
+  - `mid_candidate_attached_max >= 7.500`
+
+### Files and results changed in this run
+- New analyzer:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_deletion_ladder_representative_compare.py`
+- New log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-deletion-ladder-representative-compare.txt`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+
+### Validation
+- `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_deletion_ladder_representative_compare.py`
+
+### Exact next step
+- Stay on the beyond-ceiling translation thread.
+- Test whether this `8/10/12` closure-completion ladder can be restated in even cleaner local closure-deficit language over the full already-finished outside boundary without reintroducing packet-template casework.
+
+### First concrete action
+- Build one bounded finished-boundary summary of:
+  - row-level `mid_candidate_bridge_bridge_closed_pair_max`
+  - best-aligned lost-closure count
+  - missing-node role
+  across the already-logged outside rows, so we can tell whether the closure-completion read stays physically clean once the deeper multi-node throats are included.
+
+## 2026-03-30 09:06 America/New_York
+
+### Seam class
+- beyond-ceiling deletion-class closure
+- finished-boundary compression
+
+### Science impact
+- science advanced; the fresh `skew-hard` near miss is currently unique on the logged outside boundary as a corner `7/10` deletion rung rather than another instance of the older `7/8` depletion classes
+- narrative advanced; the already-finished outside boundary now orders cleanly as side-node deletion, hinge-node deletion, then corner deletion before full shared-family completion
+
+### Current state
+- Re-read the required protocol artifacts, confirmed the latest handoff named no active detached child, reconciled the canonical repo clean and synced at `9f0775d`, and continued on the beyond-ceiling translation thread under the live `physics-science` lock context already present for this loop.
+- Added and ran one bounded analyzer:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_deletion_class_scan.py`
+- Generated:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-deletion-class-scan.txt`
+
+### Strongest confirmed conclusion
+- `exa:base:skew-hard:local-morph-k` is the only currently logged outside-family row whose best dominant packets are corner one-node deletions of the shared family packet:
+  - `(-1, -1)`
+  - `(-1, 1)`
+  - `(1, -1)`
+- The already-finished outside rows occupy harsher depletion classes instead:
+  - nearby shoulders `default:base:skew-wrap:local-morph-c`, `broader:base:skew-wrap:mode-mix-d` and wider sentinels `wider:base:skew-wrap:local-morph-c`, `wider:base:skew-wrap:mode-mix-d` best delete side support nodes `(0, -1)` or `(0, 1)` with four missing closed edges
+  - exhausted-wall misses `exa:large:taper-wrap-large:local-morph-g` and `exa:mirror:skew-hard-mirror:local-morph-f` best delete the hinge support node `(-1, 0)` with four missing closed edges
+  - low-support throats `ultra|mega:base:taper-wrap:mode-mix-f` remain deeper multi-node misses
+- So the logged ladder is now:
+  - side/hinge `7/8` depletion
+  - corner `7/10` depletion
+  - realized family `8/12` completion
+- This leaves the row-level family law unchanged:
+  - `mid_candidate_attached_max >= 7.500`
+
+### Files and results changed in this run
+- New analyzer:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_deletion_class_scan.py`
+- New log:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-deletion-class-scan.txt`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+
+### Validation
+- `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_deletion_class_scan.py`
+
+### Exact next step
+- Stay on the beyond-ceiling translation thread.
+- Translate the new side-vs-hinge-vs-corner deletion ladder into the cleanest scalar or physical-language order parameter instead of widening the frontier again.
+
+### First concrete action
+- Build one bounded representative compare across:
+  - `default:base:skew-wrap:local-morph-c`
+  - `exa:large:taper-wrap-large:local-morph-g`
+  - `exa:base:skew-hard:local-morph-k`
+  - one realized shared-family row
+  so we can test whether missing-node position, lost closed-edge count, or a simpler directional-attachment tally best compresses the depletion ladder.
+
+## 2026-03-30 08:52 America/New_York
+
+### Seam class
+- dominant-packet alignment compare
+- dominant-packet semantics audit
+
+### Science impact
+- science advanced; the fresh `skew-hard` near miss is now resolved internally as three tied one-node deletions of the shared family packet, not as a family packet competing with an unrelated rotated packet
+- narrative advanced; the family law should still be stated at row level, because `any dominant packet has hinge` leaks on the near miss while the unchanged attachment rule stays exact and simpler
+
+### Current state
+- Picked up from the synced `f241e27` checkpoint on clean `main`, reacquired the `manual-codex` lock, and stayed on the beyond-ceiling translation thread.
+- Added and ran two new analyzers in parallel:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_dominant_packet_alignment_compare.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_dominant_packet_semantics_audit.py`
+- Generated:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-dominant-packet-alignment-compare.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-dominant-packet-semantics-audit.txt`
+
+### Strongest confirmed conclusion
+- The three tied dominant mids in `exa:base:skew-hard:local-morph-k` are three distinct seven-support one-node deletions of the shared family packet:
+  - cell `(2, -3)` is the best family-aligned packet:
+    - missing support node `(-1, -1)`
+    - missing closed edges `(-1, -1)->(-1, 0)` and `(-1, -1)->(0, -1)`
+  - cell `(2, 1)` is another one-node deletion:
+    - missing support node `(-1, 1)`
+    - missing closed edges `(-1, 0)->(-1, 1)` and `(-1, 1)->(0, 1)`
+  - cell `(4, 1)` preserves the hinge but is still only another one-node deletion:
+    - missing support node `(1, -1)`
+    - missing closed edges `(0, -1)->(1, -1)` and `(1, -1)->(1, 0)`
+- So the near miss is not a family packet plus a qualitatively different competitor. It is one shared seven-support deletion class realized in three tied dominant mids.
+- The semantics audit then settles the law wording:
+  - `any_dominant_hinge`: leaks on the near miss (`1/9` outside hits), so not a clean family law
+  - `any_dominant_exact_family_template`: exact, but too brittle / combinatorial
+  - `best_aligned_missing_support_nodes <= 0`: exact, but again more combinatorial than needed
+  - `row_mid_attached_max >= 7.500`: exact and still the cleanest scalar family law
+- So the present best read is:
+  - mechanism language: one-node completion from `7/10` to `8/12`
+  - law language: `mid_candidate_attached_max >= 7.500`
+
+### Files and results changed in this run
+- New analyzers:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_dominant_packet_alignment_compare.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_dominant_packet_semantics_audit.py`
+- New logs:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-dominant-packet-alignment-compare.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-dominant-packet-semantics-audit.txt`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+
+### Validation
+- `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_dominant_packet_alignment_compare.py`
+- `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_dominant_packet_semantics_audit.py`
+
+### Exact next step
+- Stay on the beyond-ceiling translation thread.
+- The next seam is no longer how to state the family law, but whether this one-node deletion class appears anywhere else on the already-computed nearby frontier.
+
+### First concrete action
+- Scan the finished outside-family rows for which deleted family support node they realize best:
+  - `(-1, -1)`
+  - `(-1, 1)`
+  - `(1, -1)`
+  or something more degraded,
+  so we can tell whether the fresh near miss is unique or the first visible member of a broader deletion-class ladder.
+
+## 2026-03-30 08:27 America/New_York
+
+### Seam class
+- beyond-ceiling family law compression
+- near-miss topology translation
+- finished-boundary confirmation
+
+### Science impact
+- science advanced; the fresh `skew-hard` near miss does not reopen the family, but it splits the old four-rule packet equivalence into an unchanged-law layer and a retuned-threshold layer
+- narrative advanced; the cleanest current family read is now: the eighth attachment is the only exact separator that survives unchanged, while `mid_peak` and `mid_bb` only recover exactness after tightening to `>= 11.000`
+
+### Current state
+- Picked up from the synced `9190604` checkpoint on clean `main`, acquired the `manual-codex` lock, and stayed on the beyond-ceiling translation thread.
+- Added and ran three bounded analyzers, using parallel runs where independent:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_family_near_miss_compare.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_near_miss_topology_compare.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_family_boundary_audit.py`
+- Generated:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-family-near-miss-compare.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-near-miss-topology-compare.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-family-boundary-audit.txt`
+
+### Strongest confirmed conclusion
+- The fresh `exa:base:skew-hard:local-morph-k` row does not break the realized shared family, but it changes how the coarse packet law should be stated:
+  - unchanged exact family rule:
+    - `mid_candidate_attached_max >= 7.500`
+  - retuned exact family rules on the current six-row family-plus-near-miss set:
+    - `mid_anchor_closure_peak >= 11.000`
+    - `mid_candidate_bridge_bridge_closed_pair_max >= 11.000`
+    - `mid_candidate_attached_max >= 7.500`
+- So the missing eighth attachment is the only exact separator that survives unchanged from the old packet-law quartet; `mid_peak` and `mid_bb` recover exactness only after the threshold moves from `10` to `11`.
+- The topology compare sharpens why:
+  - the near miss has `3` tied dominant mid packets
+  - one of them still carries the same hinge node `(-1, 0)`
+  - but the best family-aligned dominant packet is missing exactly one support node, `(-1, -1)`, and the two closed edges incident to it:
+    - `(-1, -1) -> (-1, 0)`
+    - `(-1, -1) -> (0, -1)`
+- So hinge presence alone is not enough; the live family boundary is the missing packet completion that lifts the realized family from `7/10` to `8/12`.
+- A whole-boundary confirmation pass then shows the current law really is stable on the finished control set:
+  - across the `9` already-finished outside-family controls, `mid_candidate_attached_max >= 7.500`, `mid_anchor_closure_peak >= 11.000`, and `mid_candidate_bridge_bridge_closed_pair_max >= 11.000` all stay exact against the current realized family
+  - the fresh near miss is the only outside row at `10/7/10` with hinge `Y`
+
+### Files and results changed in this run
+- New analyzers:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_family_near_miss_compare.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_near_miss_topology_compare.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_family_boundary_audit.py`
+- New logs:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-family-near-miss-compare.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-near-miss-topology-compare.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-family-boundary-audit.txt`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+
+### Validation
+- `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_family_near_miss_compare.py`
+- `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_near_miss_topology_compare.py`
+- `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_family_boundary_audit.py`
+
+### Exact next step
+- Stay on the beyond-ceiling translation thread.
+- The next seam is internal to the fresh near miss, not another wider guardrail:
+  - explain why the hinged dominant packet at cell `(4, 1)` coexists with the best family-aligned but incomplete packet at cell `(2, -3)`
+  - decide whether the family law should be stated on `any` dominant mid packet or specifically on the family-aligned dominant packet
+
+### First concrete action
+- Build one bounded dominant-packet alignment compare inside `exa:base:skew-hard:local-morph-k`, then contrast those three tied dominant mids against:
+  - the shared family template
+  - `exa:base:skew-wrap:local-morph-k`
+  so we can tell whether the near miss is a rotated packet competition effect or a cleaner one-node-deletion of the family packet.
+
+## 2026-03-30 07:52 America/New_York
+
+### Seam class
+- fresh beyond-ceiling candidate ranking
+- skew-hard sentinel guardrail
+
+### Science impact
+- science advanced; the nearest genuinely fresh base control beyond the paired `ultra` shoulders is not a new shared-packet member but a `3/4` packet-law near miss
+- narrative advanced; the present beyond-ceiling boundary now sharpens from a generic depleted-shoulder wall to one specific missing ingredient: the eighth mid-packet attachment
+
+### Current state
+- Picked up from the completed `ultra` companion guardrail with clean synced `main`, kept the `manual-codex` lock, and stayed on the bounded beyond-boundary control lane rather than reopening finished broader-family guardrails.
+- Added a sharded candidate-ranking helper:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_fresh_candidate_scan.py`
+- Ran the base-only scenario shards on `ultra|mega|peta|exa`:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-fresh-candidate-scan-base-rect-hard.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-fresh-candidate-scan-base-rect-wrap.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-fresh-candidate-scan-base-taper-hard.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-fresh-candidate-scan-base-taper-wrap.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-fresh-candidate-scan-base-skew-hard.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-fresh-candidate-scan-base-skew-wrap.txt`
+- Then ran the smallest fresh guardrail on the only non-junk new candidate:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_subbranch_wider_sentinel_guardrail.py --sentinel-ensemble exa --sentinel-scenario skew-hard --sentinel-source base:skew-hard:local-morph-k > /Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-subbranch-exa-skew-hard-sentinel-guardrail.txt`
+- After the mid-flight CPU split and a compaction drop, reran the six base shards in parallel plus the `exa:base:skew-hard:local-morph-k` guardrail and got the same science result in substance.
+
+### Strongest confirmed conclusion
+- The sharded fresh-candidate scan closes almost all nearby base controls immediately:
+  - `base:rect-hard`, `base:rect-wrap`, `base:skew-wrap`, and `base:taper-wrap` contribute no fresh candidate at all
+  - `base:taper-hard` contributes only zero-support / zero-packet junk controls (`geometry-s`, `geometry-t`, `mode-mix-b`, `mode-mix-e`)
+- The only genuinely fresh nearby control is:
+  - `exa:base:skew-hard:local-morph-k`
+- That row is a partial shared-packet near miss, not a new branch:
+  - `mid_anchor_closure_peak = 10.000`
+  - `mid_candidate_bridge_bridge_closed_pair_max = 10.000`
+  - `mid_candidate_attached_max = 7.000`
+  - four-incident flank hinge = `Y`
+  - shared packet membership = `3/4`
+  - no current exact branch clause lights up
+- So the current beyond-ceiling boundary is now sharper:
+  - hinge presence alone is not enough
+  - `10.000` mid-anchor closure scale alone is not enough
+  - the missing ingredient is the eighth mid-packet attachment (`7 -> 8`)
+
+### Files and results changed in this run
+- New helper:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_fresh_candidate_scan.py`
+- New result logs:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-fresh-candidate-scan-base-rect-hard.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-fresh-candidate-scan-base-rect-wrap.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-fresh-candidate-scan-base-taper-hard.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-fresh-candidate-scan-base-taper-wrap.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-fresh-candidate-scan-base-skew-hard.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-fresh-candidate-scan-base-skew-wrap.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-30-low-overlap-order-parameter-beyond-ceiling-subbranch-exa-skew-hard-sentinel-guardrail.txt`
+- Updated narrative:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+
+### Validation
+- `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_fresh_candidate_scan.py`
+- `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_beyond_ceiling_subbranch_wider_sentinel_guardrail.py`
+- parallel rerun audit matched the original batch:
+  - `base:rect-hard`, `base:rect-wrap`, `base:skew-wrap`, and `base:taper-wrap` again returned `rows_total=0`
+  - `base:taper-hard` again returned only zero-support / zero-packet junk controls
+  - `base:skew-hard` again returned exactly one fresh candidate, `exa:base:skew-hard:local-morph-k`, with `shared_packet_membership=3/4`
+  - the rerun guardrail again showed `mid_anchor_closure_peak >= 10.000`, `mid_candidate_bridge_bridge_closed_pair_max >= 10.000`, and hinge `Y`, but `mid_candidate_attached_max >= 7.500` still failed
+
+### Exact next step
+- Stay on the beyond-ceiling translation thread, not broad scouting.
+- Treat `exa:base:skew-hard:local-morph-k` as the new nearest boundary control and compare it directly against:
+  - the `base:peta|exa:taper-hard:local-morph-f` pair
+  - `base:exa:skew-wrap:local-morph-k`
+  - the held-out `outer-rect` pair
+- The question is now whether the missing eighth attachment is already the cleanest stable law for the whole shared packet family, or whether the `skew-hard` near miss exposes a finer residual inside the current packet metrics.
+
+### First concrete action
+- Build one bounded row-level compare centered on:
+  - `exa:base:skew-hard:local-morph-k`
+  - `exa:base:skew-wrap:local-morph-k`
+  - `peta:base:taper-hard:local-morph-f`
+  - `exa:base:taper-hard:local-morph-f`
+  - `ultra|mega:base:rect-wrap:local-morph-f`
+  and test whether `mid_candidate_attached_max >= 7.500` remains the cleanest exact family law after adding this fresh `3/4` near miss.
 
 ## 2026-03-30 07:10 America/New_York
 
