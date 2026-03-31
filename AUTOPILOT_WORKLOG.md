@@ -1,3 +1,33 @@
+## 2026-03-31 11:59 America/New_York
+
+### Seam class
+- generated-DAG field coupling
+- pattern-sourced mover probe
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/generated_dag_pattern_sourced_mover_probe.py`
+- added `/Users/jonreilly/Projects/Physics/scripts/generated_dag_pattern_sourced_source_geometry_compare.py`
+- rendered the bounded pattern-sourced probe at `/Users/jonreilly/Projects/Physics/logs/2026-03-31-generated-dag-pattern-sourced-mover-probe.txt`
+- rendered the source-geometry follow-up at `/Users/jonreilly/Projects/Physics/logs/2026-03-31-generated-dag-pattern-sourced-source-geometry-compare.txt`
+- the static-mass proxy does not transfer unchanged to a broad late-phase source pattern:
+  - on the retained `neighbor_radius = 2.5` mover substrate, `150/170` coherent free-mover rows keep a viable late source union (`>= 3` nodes)
+  - those viable-source rows still preserve the mover substrate well: `135/150` survive, `15/150` diffuse, `0/150` die
+  - but the mean signed shift flips away from the source side: `-0.3947` on the viable-source subset
+- the source-geometry compare says this is not a simple placement failure:
+  - positive-shift and nonpositive-shift rows both keep the source centroid on the intended side
+  - no single source-side scalar beats about `0.61` accuracy on that split
+- this moves the frontier from source viability to source-field geometry / retiming compression
+
+### Current state
+- this loop stayed bounded to the retained mover substrate and retained coupling
+- no new ladder growth, rule sweeps, or broad generated-family archaeology was opened
+
+### Strongest confirmed conclusion
+Pattern-sourced fields on the retained mover substrate are viable but not yet attractive in the same way as the static proxy. The current bottleneck is not source survival; it is understanding why a broad late-phase source field preserves movers while steering them away on average.
+
+### Exact next step
+- compress the source-field side of the mover lane: identify which smaller late-source observable or narrower source packet family flips the current away-shift back to toward-source steering without reopening a broad search
+
 ## 2026-03-31 11:20 America/New_York
 
 ### Seam class

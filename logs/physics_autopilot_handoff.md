@@ -1,5 +1,35 @@
 # Physics Autopilot Handoff
 
+## 2026-03-31 11:59 America/New_York
+
+### Seam class
+- generated-DAG field coupling
+- pattern-sourced mover probe
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/generated_dag_pattern_sourced_mover_probe.py`
+- added `/Users/jonreilly/Projects/Physics/scripts/generated_dag_pattern_sourced_source_geometry_compare.py`
+- wrote the bounded pattern-sourced mover run to `/Users/jonreilly/Projects/Physics/logs/2026-03-31-generated-dag-pattern-sourced-mover-probe.txt`
+- wrote the source-geometry follow-up to `/Users/jonreilly/Projects/Physics/logs/2026-03-31-generated-dag-pattern-sourced-source-geometry-compare.txt`
+- the pattern-sourced replacement changes the steering story:
+  - on the retained `neighbor_radius = 2.5` mover substrate, `150/170` coherent free-mover rows keep a viable late source union (`>= 3` nodes)
+  - those viable-source rows still preserve coherence well: `135/150` survive, `15/150` diffuse, `0/150` die
+  - but mean signed shift on the viable-source subset is `-0.3947`, so the net steering is away from the source side rather than toward it
+- the source-geometry follow-up says this is not a simple misplacement issue:
+  - both positive-shift and nonpositive-shift rows keep the source centroid on the intended side with forward lead
+  - no single source-side scalar separates them much better than about `0.61` accuracy
+- this means source viability is no longer the bottleneck; the active problem is compressing the broad late-phase source field into the smaller geometry that recovers toward-source steering
+
+### Current state
+- this loop stayed bounded to the retained mover substrate, retained coupling, and one source rule
+- no broad new rule search or family widening was opened
+
+### Strongest confirmed conclusion
+Pattern-sourced coupling on coherent generated-DAG movers is now real but qualitatively different from the static proxy: it preserves the mover substrate while producing net away-shift on average.
+
+### Exact next step
+- find the smallest late-source observable or narrower source packet family that flips the current away-shift back to toward-source steering on the same `neighbor_radius = 2.5` mover substrate
+
 ## 2026-03-31 11:20 America/New_York
 
 ### Seam class
