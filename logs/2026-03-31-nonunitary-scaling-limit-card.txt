@@ -5,11 +5,12 @@ Growing-DAG finite-environment architectures
 
 Architecture                           Small graph                  Large graph                  Scaling verdict
 ----------------------------------------------------------------------------------------------------------------
-node-label env (fine last-mass label)  purity 0.5698 @ 6 layers     purity 0.8858 @ 25 layers    wrong: recoheres as graph grows
-cumulative-action env (binned action through mass) purity 0.6268 @ 6 layers     purity 0.8856 @ 25 layers    wrong: recoheres as graph grows
-evolving-phase env (phase accumulated along edges) purity 0.7294 or 1.0000 @ 6 layers purity 0.8867 or 1.0000 @ 25 layers wrong or null: recoheres or stays coherent
+node-label env (fine last-mass label)  purity 0.7060 @ 8 layers     purity 0.7944 @ 25 layers    wrong: recoheres as graph grows
+cumulative-action env (binned action through mass) purity 0.9896 @ 8 layers     purity 0.9827 @ 25 layers    wrong or null: stays near pure
+evolving-phase env (phase accumulated along edges) purity 0.8067 or 1.0000 @ 8 layers purity 0.8509 or 1.0000 @ 25 layers wrong or null: recoheres or stays coherent
 
 Retained read
 - Finite-bin partial-trace environments can produce some decoherence on small generated DAGs, but all tested growing-DAG variants scale the wrong way.
 - The problem is no longer best described as 'find a better environment register'. The current evidence says the system-environment relation itself must change, or the model needs a new non-unitary axiom.
+- A direct env-support diagnosis points to the shared mechanism: upper-only and lower-only slit branches already land on almost the same effective env support, so the partial trace loses branch-distinguishing power.
 - This leaves the unitary sector comparatively clean: interference, Born behavior, and phase-driven gravity survive growth, while scalable endogenous decoherence does not yet.

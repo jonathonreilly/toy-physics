@@ -27,22 +27,22 @@ class ScalingRow:
 ROWS = [
     ScalingRow(
         architecture="node-label env (fine last-mass label)",
-        small_graph="purity 0.5698 @ 6 layers",
-        large_graph="purity 0.8858 @ 25 layers",
+        small_graph="purity 0.7060 @ 8 layers",
+        large_graph="purity 0.7944 @ 25 layers",
         scaling="wrong: recoheres as graph grows",
         verdict="small-graph effect only; does not scale",
     ),
     ScalingRow(
         architecture="cumulative-action env (binned action through mass)",
-        small_graph="purity 0.6268 @ 6 layers",
-        large_graph="purity 0.8856 @ 25 layers",
-        scaling="wrong: recoheres as graph grows",
-        verdict="better small-graph decoherence, same scaling wall",
+        small_graph="purity 0.9896 @ 8 layers",
+        large_graph="purity 0.9827 @ 25 layers",
+        scaling="wrong or null: stays near pure",
+        verdict="fixed-bin action label does not produce scalable mixing",
     ),
     ScalingRow(
         architecture="evolving-phase env (phase accumulated along edges)",
-        small_graph="purity 0.7294 or 1.0000 @ 6 layers",
-        large_graph="purity 0.8867 or 1.0000 @ 25 layers",
+        small_graph="purity 0.8067 or 1.0000 @ 8 layers",
+        large_graph="purity 0.8509 or 1.0000 @ 25 layers",
         scaling="wrong or null: recoheres or stays coherent",
         verdict="does not rescue scaling",
     ),
@@ -76,6 +76,11 @@ def main() -> None:
         "- The problem is no longer best described as 'find a better environment "
         "register'. The current evidence says the system-environment relation itself "
         "must change, or the model needs a new non-unitary axiom."
+    )
+    print(
+        "- A direct env-support diagnosis points to the shared mechanism: upper-only "
+        "and lower-only slit branches already land on almost the same effective env "
+        "support, so the partial trace loses branch-distinguishing power."
     )
     print(
         "- This leaves the unitary sector comparatively clean: interference, Born "
