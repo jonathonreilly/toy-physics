@@ -161,7 +161,7 @@ On random DAGs: R²=0.20 for Q3, R²=0.04 for ΔQ3 (`force-law-dags.txt`). The c
 | k=0 → no gravity | PASS | shift = 0.000000 |
 | Gravity attraction | PASS | 11/12 on DAGs |
 | Record suppression | MARGINAL | ΔV = 0.002 |
-| Decoherence | WEAK | 5/12 on DAGs |
+| Decoherence | WEAK | 4/12 all-three at η=0.7 (corrected baseline) |
 | Distance scaling | UNCLEAR | Not clean ray-optics |
 | Universal force law | FAIL | R²=0.20 on DAGs |
 
@@ -187,11 +187,13 @@ Five endogenous mechanisms tested, none produce decoherence without damaging gra
 
 | mechanism | V_drop | gravity preserved? | why it fails |
 |---|---|---|---|
-| Oscillating opacity | 7-15% (some seeds) | NO (4-6/12) | Blocks phase-valley paths |
-| Field fluctuation | 0% (= baseline) | YES (10/12) | Spatially uniform modulation |
+| Oscillating opacity | weak (1-2/12 all-three) | NO (4-6/12) | Blocks phase-valley paths |
+| Field fluctuation | 0/12 | YES (10/12) | Spatially uniform modulation |
 | Directional recording | = shuffled control | YES (9/12) | Direction doesn't matter |
-| Backreaction (field += ε|a|²) | 0% (= baseline) | YES (8/12) | Slit-indistinguishable |
+| Backreaction (field += ε|a|²) | 0/12 all-three | YES (8/12) | Slit-indistinguishable |
 | Phase noise (exogenous) | 35% at η=1 on irreg. | YES (10/12) | Works but NOT endogenous |
+
+**Note (Codex measurement fix):** Original decoherence counts compared perturbed mass runs against no-mass baseline, inflating results. Corrected comparisons use unperturbed-mass baseline. Full unification weakened: ALL THREE = 4/12 at η=0.7 (was 7/12). Born rule re-confirmed: I₃/P = 4.28e-15.
 
 Source: `endogenous-opacity.txt`, `endogenous-field-fluct.txt`, `directional-recording.txt`, `directional-comparison.txt`, `backreaction.txt`, `phase-noise-irregular.txt`.
 
