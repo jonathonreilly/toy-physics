@@ -313,23 +313,37 @@ The current low-overlap map is:
 
 - Historical exact law: the branch-aware frozen `rc0|ml0|c2` law exact-closes the historical ladder from `192` through `5504`. This is the in-domain historical classifier.
 - Support-collapse out-of-domain guard: the first nearby generated failures (`geometry-c/e`) are zero-support collapse rows, so they are best treated as a domain guard rather than as an extension of the historical `pair-only-sensitive` mechanism.
-- Moderate anchor-balance basin: after that guard, the surviving nearby generated `pair-only-sensitive` failures sit in a refined anchor-balance regime with `mid_anchor_closure_peak <= 10.000`. That basin currently reduces to a right/deep skew-wrap shoulder, a low-support `mode-mix-f` throat, and the frozen mid-anchor `add4` knot.
-- Beyond-ceiling continuation: above that ceiling, the stable coarse law is the shared `8/12` mid-packet lift. On the bounded confirmation set, `mid_anchor_closure_peak >= 10.000`, `mid_candidate_bridge_bridge_closed_pair_max >= 10.000`, `mid_candidate_attached_max >= 7.500`, and the four-incident flank hinge are all equivalent. This broader continuation already includes the held-out `outer-rect` pair at `ultra|mega` as well as the later `base` `peta|exa` non-rect rows, and on the current five-row basis it already splits cleanly into an `outer-rect` low-right-bridge tail, a `taper-hard` two-right-bridge branch, and a `skew-wrap` negative-deep no-right-bridge branch. The paired wider base sentinels `wider:base:skew-wrap:local-morph-c` and `wider:base:skew-wrap:mode-mix-d` both fall back to the depleted `7/8` packet with no flank hinge, so the current three-way split does not widen immediately into a fourth shared-packet subbranch. A follow-on log-backed closure sharpens the taper-hard wording: the positive-intensity clause still needs the shared packet gate to stay exact, but the more physical two-right-bridge clause `high_bridge_right_count >= 1.500` already stays exact even on those wider controls, so taper-hard is now best read as the two-right-bridge arm of the shared packet regime. A finished-log audit closes the current already-computed outside-family boundary too: the exhausted-wall misses, low-support throats, nearby shoulders, and paired wider sentinels all miss the shared packet laws and stay below two right bridges, while the helper-fixed non-base first-hit frontier remains empty. The paired farther `ultra` shoulders `ultra:base:skew-wrap:local-morph-c` and `ultra:base:skew-wrap:mode-mix-d` now repeat that same depleted `7/8` packet with no flank hinge and only one right bridge, so the no-fourth-branch read survives across the checked `ultra` shoulder pair as well.
-- Current domain boundaries: the non-base `large`/`mirror` wall still stays empty through `exa`, and the nearest misses stall at the depleted `7/8` mid packet with no flank hinge. So the current evidence supports a base-local beyond-ceiling continuation separated from a non-base exhausted wall.
+- Subcritical balance basin: after that guard, the surviving nearby generated `pair-only-sensitive` failures sit in a refined anchor-balance regime
+  `-2.000 <= anchor_closure_intensity_gap <= 2.333 and mid_anchor_closure_peak <= 10.000`.
+  The retained generated realizations are a right/deep shoulder (`anchor_deep_share_gap >= 0.250`) and a low-support throat (`closure_load <= 24.500`). The frozen mid-anchor knot sits above this ceiling at `mid_anchor_closure_peak = 12.000` and marks the exit from the basin rather than another member inside it.
+- Supercritical completed-packet regime: above that ceiling, the stable coarse law is the shared `8/12` mid-packet lift
+  (`mid_candidate_attached_max >= 7.500`; observed rows also satisfy `closure_load >= 73.000`).
+  Inside that shared packet regime, the retained subbranches are:
+  - outer-rect tail: `support_load >= 24.000`
+  - taper-hard arm: `high_bridge_right_count >= 1.500`
+  - skew-wrap arm: `anchor_deep_share_gap <= -0.334`
+- Exhausted-wall boundary: the nearest non-base misses stall at the depleted `7/8` packet (`mid_candidate_attached_max = 7.000`, `mid_anchor_closure_peak = 8.000`) with no flank hinge, so the current beyond-ceiling continuation is still base-local against the finished non-base wall.
+- Shared reading: in the same crosswalk vocabulary as the generated-DAG bridge, completion/load sets the floor, balance selects the branch, and bottleneck/placement terms sharpen the boundary.
 
 ## Active Technical Problem
 
-The main active technical problem is projecting and translating the exact low-overlap law beyond the full available historical `192 -> 5504` frontier ladder.
+The main active technical problem is no longer widening the frontier ladder. It is compressing one shared mechanism language across:
+
+- the geometry-side retained card
+- the generated-DAG detector-balance bridge
+- the current domain guards and branch boundaries
 
 The relevant questions are:
 
-- whether the observed `base` late non-rect branch on `peta|exa` is already complete at the current three-row set or still missing more beyond-ceiling members on deeper base sweeps
-- whether any wider/deeper base sentinel beyond the checked shoulders `wider:base:skew-wrap:local-morph-c`, `wider:base:skew-wrap:mode-mix-d`, `ultra:base:skew-wrap:local-morph-c`, and `ultra:base:skew-wrap:mode-mix-d` ever rejoins the shared `8/12` packet regime, or whether the current three-way beyond-ceiling split is already the whole immediate shared-packet family
-- whether any nearby non-base generated family can realize the same `8/12` packet lift / four-incident flank hinge and thereby break the current empty exhausted wall
-- whether any genuinely new deeper base or nearby non-base control beyond the current finished-log boundary ever rejoins the shared packet regime with `high_bridge_right_count >= 1.500`, or whether taper-hard is already the whole current two-right-bridge arm
-- how the exact branch-aware law should be physically interpreted at both the zero-support collapse boundary and the new anchor-balance basin split between right/deep bridge shoulder, low-support throat, frozen mid-anchor knot, and the heavier beyond-ceiling continuation
-- whether the present shoulder/throat/knot translation can be expressed more cleanly in support-layout or topological language
-- which parts of the present explanation are stable structure and which depend on the current observable basis
+- whether the generated-DAG bridge is stably a two-branch packet regime rather than a one-scalar story
+- whether `center_balanced_log_paths` and `center_path_balance` are best read as the same completion/load-plus-balance architecture already retained on the geometry side
+- whether the current geometry card is the right smallest domain map:
+  - support-collapse guard
+  - subcritical balance basin
+  - supercritical completed-packet regime
+  - exhausted-wall boundary
+- which observables should be retained as branch selectors versus demoted to detector-side or placement modifiers
+- what the smallest confirmation-style holdout pass is that can test the retained architecture without reopening broad ladder growth
 
 ## What Is Still Unresolved
 

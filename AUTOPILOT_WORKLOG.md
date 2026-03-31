@@ -1,3 +1,56 @@
+## 2026-03-31 10:30 America/New_York
+
+### Seam class
+- active problem compression
+- regime architecture cleanup
+
+### Science impact
+- kept `/Users/jonreilly/Projects/Physics/scripts/geometry_regime_card.py` as the retained geometry-side summary artifact
+- shortened the README `Active Technical Problem` so it now points at the shared mechanism-language job rather than older frontier-growth questions
+- the repo now states the current phase more cleanly:
+  - geometry-side retained card
+  - generated-DAG detector-balance bridge
+  - domain guards and branch selectors
+
+### Current state
+- this checkpoint did not widen any frontier or add new exploratory scans
+- it completed the architecture cleanup that the prior geometry-card checkpoint had left as the immediate next step
+
+### Strongest confirmed conclusion
+The active problem is now correctly phrased as regime compression and transfer language, not more broad ladder growth.
+
+### Exact next step
+- the next bounded move is a confirmation-style pass on the retained architecture: test whether the generated-DAG completion/load floor plus balance split survives on held-out rows without adding new clauses
+
+## 2026-03-31 04:42 America/New_York
+
+### Seam class
+- geometry regime card
+- shorter retained architecture map
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/geometry_regime_card.py`
+- rendered the compact card at `/Users/jonreilly/Projects/Physics/logs/2026-03-31-geometry-regime-card.txt`
+- shortened the geometry-side architecture to the retained pieces only:
+  - support-collapse guard
+  - subcritical balance basin
+  - supercritical completed-packet regime
+  - exhausted-wall boundary
+- the geometry lane now says the same thing as the generated-DAG bridge in the same order:
+  - completion/load sets the floor
+  - balance selects the branch
+  - bottleneck/placement terms sharpen the boundary
+
+### Current state
+- canonical `main` / `origin/main` are synced at `4c51805` before this local checkpoint
+- this loop did not reopen any ladder scans; it only compressed the retained map in the README to match the shared mechanism crosswalk
+
+### Strongest confirmed conclusion
+The geometry-side regime map is now short enough to function as one retained card rather than a running changelog of all earlier bounded compares.
+
+### Exact next step
+- if continuing this lane, the next bounded move is to shorten the `Active Technical Problem` wording so it references the retained regime card instead of the older long-form basin narrative
+
 ## 2026-03-31 04:35 America/New_York
 
 ### Seam class

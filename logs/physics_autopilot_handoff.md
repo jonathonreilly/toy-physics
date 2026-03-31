@@ -1,5 +1,60 @@
 # Physics Autopilot Handoff
 
+## 2026-03-31 10:30 America/New_York
+
+### Seam class
+- active problem compression
+- regime architecture cleanup
+
+### Science impact
+- retained `/Users/jonreilly/Projects/Physics/scripts/geometry_regime_card.py` as the compact geometry-side card
+- shortened the README `Active Technical Problem` so the repo now points at the shared mechanism-language task instead of older frontier-growth wording
+- the active architecture now reads cleanly as:
+  - geometry-side retained card
+  - generated-DAG detector-balance bridge
+  - domain guards and branch selectors
+
+### Current state
+- no new scan or frontier widening was run in this follow-on step
+- this completed the immediate cleanup left by the prior geometry-card checkpoint
+- canonical `main` / `origin/main` were synced at `4c51805` before these local write-ups
+
+### Strongest confirmed conclusion
+The current science phase is now correctly framed as regime compression and transfer language, not deeper ladder archaeology.
+
+### Exact next step
+- the next bounded move is a confirmation-style holdout pass on the retained architecture: test whether the generated-DAG completion/load floor plus balance split survives on held-out rows without adding new clauses
+
+## 2026-03-31 04:42 America/New_York
+
+### Seam class
+- geometry regime card
+- shorter retained architecture map
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/geometry_regime_card.py`
+- wrote the compact geometry-side card to `/Users/jonreilly/Projects/Physics/logs/2026-03-31-geometry-regime-card.txt`
+- the retained geometry architecture is now explicitly the shorter four-step map:
+  - support-collapse guard
+  - subcritical balance basin
+  - supercritical completed-packet regime
+  - exhausted-wall boundary
+- this now matches the generated-DAG bridge and the mechanism crosswalk in ordering and vocabulary:
+  - completion/load sets the floor
+  - balance selects the branch
+  - bottleneck/placement sharpens the boundary
+
+### Current state
+- cooperative lock is held by the manual Codex worker for this bounded write-up
+- canonical `main` / `origin/main` are synced at `4c51805` before this uncommitted local checkpoint
+- no new scan or frontier widening was run; this loop was pure architecture compression
+
+### Strongest confirmed conclusion
+The geometry-side regime map is now short enough to serve as one retained card rather than a pile of legacy bounded-comparison prose.
+
+### Exact next step
+- if continuing this lane, shorten the `Active Technical Problem` section so it points at the retained regime card and shared crosswalk instead of the old long-form basin wording
+
 ## 2026-03-31 04:35 America/New_York
 
 ### Seam class
