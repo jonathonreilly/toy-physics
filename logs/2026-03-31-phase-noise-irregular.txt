@@ -1,0 +1,55 @@
+======================================================================
+PHASE NOISE ON IRREGULAR GRAPHS
+  40 realizations, 8 graph seeds
+  Corrected propagator (1/L^p)
+======================================================================
+
+  Config: compact (y=3, high deg)
+    path_length_std: 0.00
+    V_baseline: 0.9243
+    V_noisy(η=0.5): 0.7292
+    V_drop: +0.1951 (21.1% of baseline)
+
+  Config: medium (y=10, std)
+    path_length_std: 0.06
+    V_baseline: 0.9813
+    V_noisy(η=0.5): 0.9144
+    V_drop: +0.0668 (6.8% of baseline)
+
+  Config: spread (y=20, low deg)
+    path_length_std: 0.66
+    V_baseline: 0.7996
+    V_noisy(η=0.5): 0.6584
+    V_drop: +0.1412 (17.7% of baseline)
+
+  Config: sparse (r=1.5)
+    path_length_std: 0.00
+    V_baseline: 0.1640
+    V_noisy(η=0.5): 0.0336
+    V_drop: +0.1304 (79.5% of baseline)
+
+  Config: dense (r=5)
+    path_length_std: 0.00
+    V_baseline: 0.9725
+    V_noisy(η=0.5): 0.8371
+    V_drop: +0.1354 (13.9% of baseline)
+
+======================================================================
+TEST 2: η sweep on spread graph (y_range=20, most irregular)
+======================================================================
+
+     eta     V_ens     V_ind  n_valid
+  ----------------------------------
+     0.0    0.7996    0.7996        8
+     0.1    0.7948    0.8054        8
+     0.2    0.7827    0.8092        8
+     0.5    0.6584    0.8262        8
+     1.0    0.5219    0.8107        8
+     2.0    0.5676    0.8446        8
+     5.0    0.5155    0.8079        8
+
+If V_ens drops on irregular graphs but not lattice:
+  → Graph irregularity IS the decoherence mechanism
+  → Path-length heterogeneity breaks phase coherence
+
+TEST COMPLETE
