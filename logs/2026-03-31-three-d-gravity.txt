@@ -1,0 +1,43 @@
+======================================================================
+3D GRAVITY: does 3D give 1/b distance scaling?
+======================================================================
+
+TEST 1: Gravitational attraction on 3D DAGs
+
+  seed 0: shift=-0.385, mass_cy=4.1, repel/neutral
+  seed 1: shift=+1.221, mass_cy=5.1, ATTRACT
+  seed 2: shift=+0.274, mass_cy=5.5, ATTRACT
+  seed 3: shift=+1.548, mass_cy=5.6, ATTRACT
+  seed 4: shift=+0.405, mass_cy=5.3, ATTRACT
+  seed 5: shift=+2.053, mass_cy=4.9, ATTRACT
+  seed 6: shift=+1.359, mass_cy=4.5, ATTRACT
+  seed 7: shift=+0.211, mass_cy=5.7, ATTRACT
+
+  Gravity: 7/8
+
+TEST 2: Shift vs impact parameter (3D)
+
+     b     shift   shift×b   shift×b²
+  ----------------------------------
+     2   +0.1211    +0.242      +0.48
+     3   +0.7020    +2.106      +6.32
+     4   +0.4605    +1.842      +7.37
+     6   +0.5793    +3.476     +20.85
+     8   -0.0385    -0.308      -2.47
+    10   -0.1343    -1.343     -13.43
+
+TEST 3: Shift vs mass size (3D)
+
+  n_mass     shift   shift/n
+  --------------------------
+       2   +0.3971   +0.1985
+       4   +0.6304   +0.1576
+       6   +0.3049   +0.0508
+       8   +0.3439   +0.0430
+      12   +0.5368   +0.0447
+      15   +0.5406   +0.0360
+
+If shift×b ≈ const: θ ~ 1/b (correct 3D scaling)
+If shift/n ≈ const: F ~ M (correct mass scaling)
+
+TEST COMPLETE
