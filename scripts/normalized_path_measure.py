@@ -51,7 +51,7 @@ def edge_weight(dy, dx, L, beta, mode="slope"):
 
 
 def propagate_weighted(positions, adj, field, src, det, k, beta, mode,
-                       blocked=None):
+                       blocked=None, normalize=True):
     """Corrected propagator with normalized path-measure weight."""
     n = len(positions) if isinstance(positions, list) else len(positions)
     blocked = blocked or set()
@@ -133,7 +133,7 @@ def propagate_weighted(positions, adj, field, src, det, k, beta, mode,
         probs = {d: abs(amps.get(d, 0.0))**2 for d in det}
 
     total = sum(probs.values())
-    if total > 0:
+    if normalize and total > 0:
         probs = {d: p/total for d, p in probs.items()}
     return probs
 
@@ -168,7 +168,7 @@ def run_regression(beta, mode):
             open_nodes |= slits[l]
         bl = barrier - open_nodes
         return propagate_weighted(nodes, dag, field_grid, {source}, set((det_x, y) for y in screen_ys),
-                                  2.0, beta, mode, bl)
+                                  2.0, beta, mode, bl, normalize=False)
 
     p = {}
     for r in range(4):
