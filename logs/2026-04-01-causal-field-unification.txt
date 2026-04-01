@@ -1,0 +1,68 @@
+==============================================================================
+CAUSAL-FIELD UNIFICATION SANITY PASS
+  Narrow check: does the causal-field variant still preserve the
+  retained package closely enough to be interesting?
+==============================================================================
+
+DISTANCE-LAW SANITY (3D random DAGs, fixed mass count)
+  baseline Laplacian vs causal sum fields
+
+  Laplacian baseline: k=0 delta = +0.000000e+00
+  Causal sum decay=0.5: k=0 delta = +0.000000e+00
+
+[Laplacian baseline]
+    b     shift      SE   shift*b
+  ------------------------------
+  1   +0.2635  0.3986    +0.264
+  2   +0.3999  0.3635    +0.800
+  3   +0.4436  0.3408    +1.331
+  4   +0.4660  0.3267    +1.864
+  5   +0.5507  0.3297    +2.753
+  6   +0.5432  0.2787    +3.259
+  7   +0.5059  0.2691    +3.541
+  8   +0.5878  0.2961    +4.702
+ 10   +0.3685  0.2463    +3.685
+  Fit: shift ~= 0.3185 * b^0.236  (R^2=0.480)
+
+[Causal sum decay=0.5]
+    b     shift      SE   shift*b
+  ------------------------------
+  1   +0.1340  0.1403    +0.134
+  2   +0.2624  0.2403    +0.525
+  3   +0.2486  0.1695    +0.746
+  4   +0.4169  0.2557    +1.667
+  5   +0.2918  0.2134    +1.459
+  6   +0.2824  0.2075    +1.695
+  7   +0.0342  0.1765    +0.240
+  8   -0.2076  0.1907    -1.660
+ 10   +0.0407  0.0894    +0.407
+  Fit: shift ~= 0.3199 * b^-0.514  (R^2=0.161)
+
+[Causal sum decay=0.6]
+    b     shift      SE   shift*b
+  ------------------------------
+  1   +0.1862  0.1463    +0.186
+  2   +0.3484  0.2656    +0.697
+  3   +0.2013  0.1634    +0.604
+  4   +0.3692  0.2196    +1.477
+  5   +0.1691  0.2011    +0.846
+  6   +0.2958  0.2356    +1.775
+  7   +0.0357  0.2128    +0.250
+  8   -0.1457  0.2588    -1.166
+ 10   +0.0475  0.0838    +0.475
+  Fit: shift ~= 0.3846 * b^-0.652  (R^2=0.298)
+
+==============================================================================
+FIXED-DAG SANITY (regular 3D lattice with barrier masks)
+[fixed DAG sanity]
+  Born-rule |I3|/P = 0.000e+00
+  Linearity max rel err = 0.000e+00
+  Two-slit visibility gain = +0.0000
+==============================================================================
+INTERPRETATION
+  If the causal sum keeps k=0 at zero, preserves Born linearity on a
+  fixed DAG, and gives a bounded but real interference signal while
+  showing a stronger b-trend than the Laplacian baseline, then it is
+  a serious alternative gravity lane.
+  If the fixed-mass sweep stays flat or noisy, the apparent falloff in
+  the earlier causal-field runs was likely a mass-window artifact.
