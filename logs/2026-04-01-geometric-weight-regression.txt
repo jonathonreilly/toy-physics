@@ -2,6 +2,9 @@
 GEOMETRIC WEIGHT CANONICAL REGRESSION (β=0.5)
 ======================================================================
 
+Interpretation: local paraxial / directional path-measure correction
+Scale note: β is tied to the embedding scale because the weight uses raw dy
+
 TEST 1: Born rule
   [PASS] Born rule I₃
          |I₃|/P = 2.03e-15
@@ -22,11 +25,11 @@ TEST 4: Gravity scaling
   [PASS] Gravity scaling (R@25 >= R@12)
          R@12=+0.169, R@25=+0.636
 
-TEST 5: Decoherence scaling
-  N=8: purity = 0.6349
-  N=12: purity = 0.7622
-  N=18: purity = 0.8188
-  [FAIL] Decoherence scaling (pur@18 <= pur@12)
+TEST 5: Decoherence scaling (capped distributed-record model)
+  N=8: detector-state purity = 0.6349
+  N=12: detector-state purity = 0.7622
+  N=18: detector-state purity = 0.8188
+  [FAIL] Decoherence scaling in capped record model (pur@18 <= pur@12)
          pur@12=0.7622, pur@18=0.8188
 
 ======================================================================

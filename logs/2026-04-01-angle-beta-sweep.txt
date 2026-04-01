@@ -17,6 +17,7 @@ OPTIMAL: β=0.8
   R@25 = +0.51 > R@12 = +0.47 (gravity does not collapse)
   Scale-free (angle-based, embedding-independent)
 
-The V-gravity trade-off is narrow: β < 0.8 has good V but gravity
-fails; β > 1.0 has good gravity but V drops below 0.5.
-β=0.8 sits in the window where both pass simultaneously.
+The V-gravity trade-off is narrow. β=0.8 is the strongest-margin
+tradeoff: high V with gravity still passing. Several larger β values
+also satisfy the current V/gravity guards, but with much weaker
+visibility margin or weaker retained gravity response.

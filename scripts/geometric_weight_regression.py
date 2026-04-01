@@ -2,14 +2,20 @@
 """Canonical regression for the geometric weight propagator.
 
 Propagator: exp(ikS) × exp(-β×dy²) / L^p
-β=0.5, field-independent weight on edge y-displacement.
+β=0.5, field-independent local transverse-step penalty on edge y-displacement.
+
+Important interpretation notes:
+- this is a paraxial / directional path-measure correction on embedded edges
+- it is not a shortest-path-distance penalty
+- it is not a curvature penalty
+- β is embedding-scale dependent here because the weight uses raw dy
 
 Tests:
 1. Born rule (3-slit I₃ on fixed DAG)
 2. Interference visibility (2-slit V)
 3. k=0→0 (gravity = pure phase)
 4. Gravity scaling (R_grav vs N on random DAGs)
-5. Decoherence scaling (purity vs N with distributed records)
+5. Decoherence scaling (detector-state purity vs N with a capped distributed-record model)
 
 PStack experiment: geometric-weight-regression
 """
@@ -39,7 +45,12 @@ BETA = 0.5
 
 
 def propagate_geo(positions, adj, field, src, det, k, blocked=None):
-    """Corrected propagator with geometric weight exp(-β×dy²)."""
+    """Corrected propagator with geometric weight exp(-β×dy²).
+
+    The added weight suppresses edges with larger transverse displacement per
+    step. This is a local paraxial/directional bias in the path measure, not a
+    shortest-path or curvature functional.
+    """
     n = len(positions) if isinstance(positions, list) else len(positions)
     blocked = blocked or set()
 
@@ -153,6 +164,9 @@ def main():
     print("=" * 70)
     print(f"GEOMETRIC WEIGHT CANONICAL REGRESSION (β={BETA})")
     print("=" * 70)
+    print()
+    print("Interpretation: local paraxial / directional path-measure correction")
+    print("Scale note: β is tied to the embedding scale because the weight uses raw dy")
     print()
 
     passed = 0
@@ -322,7 +336,7 @@ def main():
     # TEST 5: Decoherence scaling (purity with distributed records)
     # ================================================================
     print()
-    print("TEST 5: Decoherence scaling")
+    print("TEST 5: Decoherence scaling (capped distributed-record model)")
 
     pur_results = {}
     for nl in [8, 12, 18]:
@@ -337,7 +351,8 @@ def main():
 
             pk = []
             for k in k_band:
-                # Distributed records with geometric weight
+                # Distributed records with geometric weight.
+                # This only tests the current capped edge-record architecture.
                 blocked = setup["blocked"]
                 in_deg = [0]*n
                 for i, nbs in adj.items():
@@ -389,11 +404,11 @@ def main():
 
         if purs:
             pur_results[nl] = sum(purs)/len(purs)
-            print(f"  N={nl}: purity = {pur_results[nl]:.4f}")
+            print(f"  N={nl}: detector-state purity = {pur_results[nl]:.4f}")
 
     p12 = pur_results.get(12, 1.0)
     p18 = pur_results.get(18, 1.0)
-    check("Decoherence scaling (pur@18 <= pur@12)", p18 <= p12 + 0.02,
+    check("Decoherence scaling in capped record model (pur@18 <= pur@12)", p18 <= p12 + 0.02,
           f"pur@12={p12:.4f}, pur@18={p18:.4f}")
 
     # ================================================================

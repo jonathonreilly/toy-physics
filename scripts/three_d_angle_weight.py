@@ -10,7 +10,7 @@ In 3D: θ = acos(dx/L), penalizes deviation from forward in any
 This is the natural 3D generalization: penalize the polar angle
 relative to the forward (layer) direction.
 
-Test: gravity scaling, interference, k=0→0 on 3D DAGs.
+Test: gravity scaling, gravity sign, k=0→0 on 3D DAGs.
 
 PStack experiment: three-d-angle-weight
 """

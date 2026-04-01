@@ -28,6 +28,12 @@
     - lower share `0.290 -> 0.250`
     - flow support compression stays only about `~2x`
 
+### Git / sync state
+- repo-facing science commit: `8223348` (`feat: explain gravity packet-local support split`)
+- current `HEAD` is synced merge commit `e24e17b`, which already contains `8223348`
+- `git rev-list --left-right --count origin/main...main = 0 0`
+- the managed push helper reported `dns_failure` during this loop, but the repo has since reconciled onto synced `main`, so the next loop can start the regime-score follow-up directly
+
 ### Strongest confirmed conclusion
 Packet-local flow is a real dense-route refinement because random-DAG probe support broadens and then refocuses into a narrower mass-side carrier while the opposite side diffuses. The branching-tree control never enters that regime, so the retained shared gravity observable is still the broader near-mass `action_channel`.
 
