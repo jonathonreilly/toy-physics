@@ -69,22 +69,62 @@ All tested architectures assume slits are distinguishable because their paths go
 - temporal ordering (which slit's amplitude arrives first)
 - correlation structure (how amplitude is distributed, not just where)
 
+## Additional architectures tested (2026-04-01, post-summary)
+
+| # | Architecture | Key property | Result |
+|---|---|---|---|
+| 13 | AFC (amplitude field coherence) | Complex wavefield overlap K at mass region | |K| drops 0.999→0.91, but purity Δ < 0.006 |
+| 14 | CL bath (Caldeira-Leggett y-bin) | Exponential D=exp(-λ²S), spatial bins | Correct direction N=12→18, same reversal at N=25 |
+
+### Architecture 13: AFC
+K = Σ_m ψ_A*(m) ψ_B(m) / sqrt(N_A N_B). Uses phase structure, not just magnitudes.
+K decreases with N (0.999→0.91) — the phase contrast IS present.
+But purity decoherence is only ~0.006 because a single scalar K cannot achieve
+the mixing that multi-dimensional environments produce. The single-K structure
+limits how mixed the density matrix can become.
+
+### Architecture 14: Caldeira-Leggett bath
+S_norm = Σ_bins |ψ_A(y_b) - ψ_B(y_b)|² / (N_A + N_B) INCREASES with N:
+N=12: 0.097, N=18: 0.113, N=25: 0.219. Correct direction.
+At λ=10, D≈0, bath achieves near-maximal decoherence.
+Decoh grows N=12→18 (+0.006→+0.049). FIRST approach with correct scaling direction.
+
+BUT: N=25 reverses (+0.014). Root cause: pur_min (purity of maximally decohered
+state) jumps from 0.9506 (N=18) to 0.9860 (N=25). The two single-slit patterns
+at detectors are MORE SIMILAR at N=25 — geometric convergence hits the
+DETECTOR DISTRIBUTIONS, not just the bath.
+
 ## What has NOT been tested
 
-1. **Continuous bath variable** (infinite-dim env, no binning)
-2. **Nonlinear path combination** (breaks CLT but may break Born)
-3. **Measurement-like collapse** at mass nodes (irreversible information loss)
-4. **Temporal/causal ordering** of slit interactions with mass
-5. **Entanglement with CA dynamics** (pattern oscillation as environment)
+1. **Nonlinear path combination** (breaks CLT but may break Born)
+2. **Measurement-like collapse** at mass nodes (irreversible information loss)
+3. **Temporal/causal ordering** of slit interactions with mass
+4. **Entanglement with CA dynamics** (pattern oscillation as environment)
+5. **Non-uniform graph topology** (graphs where slit paths remain structurally separated)
 
 ## Honest assessment
 
-The decoherence scaling problem is not a parameter-tuning issue. It is a structural property of linear path-sum propagation on growing graphs. The CLT guarantees that any finite-dimensional environment register will see amplitude concentration on large graphs.
+The decoherence scaling problem is not a parameter-tuning issue. It is a
+structural property of both (a) linear path-sum propagation and (b) the
+propagation GEOMETRY on uniform random DAGs.
 
-The resolution likely requires either:
-- abandoning finite-dimensional env (continuous bath)
-- abandoning linear path combination (nonlinear propagator)
-- introducing genuine measurement/collapse at mass interactions
-- coupling to a separate dynamical system (CA oscillation as bath)
+**Newly identified ceiling**: On large uniform random DAGs, the two single-slit
+diffraction patterns at detectors CONVERGE (ψ_A(det) ≈ ψ_B(det)). This means
+the maximum achievable decoherence (pur_min) approaches 1 as N grows beyond ~18.
+Any environment that can only distinguish "which slit" — regardless of its
+internal complexity — is limited by this ceiling.
 
-Each of these would be a significant architectural change, not a variant of the current approach.
+The CLT guarantees the convergence of all fixed statistics. The AFC/CL bath
+experiments show that even PHASE-DEPENDENT statistics (which are not magnitude
+statistics) suffer the same convergence above N=18.
+
+The decoherence-at-scale program is closed for uniform random DAGs.
+The problem is geometric, not architectural. A different graph family
+(non-uniform topology, scale-free, hierarchical, with topological
+slit-path separation) is needed to escape the geometric ceiling.
+
+The resolution for the current graph family likely requires one of:
+- abandoning linear path combination (nonlinear propagator — breaks Born rule)
+- introducing genuine measurement/collapse at mass interactions (irreversible)
+- using a non-uniform graph topology that maintains slit-path separation
+- rethinking what "decoherence" means in this discrete causal structure
