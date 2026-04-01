@@ -1,3 +1,118 @@
+## 2026-04-01 — Directional-measure b mass-window transfer card
+
+### Current state
+- `main` matched `origin/main` at `694e3b8` before this step
+- the directional `b` lane had already established:
+  - center-offset density as the best bounded narrow-family denominator
+  - nearest-edge density as the candidate finite-source correction
+  - support-gap as a packet-band-mixed secondary correction
+- the next bounded discriminator was whether the `b -> b - h_mass -> b - (h_mass + delta_packet)` hierarchy transferred once the mass window itself was widened
+
+### What changed
+- added `scripts/directional_b_mass_window_transfer.py`
+- wrote `logs/2026-04-01-directional-b-mass-window-transfer.txt`
+- compared the existing three-node mass family against a wider five-node mass family on the same bounded random-DAG generator
+- kept transport, graph generation, and action-style observables fixed while testing:
+  - `response / b`
+  - `response / (b - h_mass)`
+  - `response / support_gap`
+
+### Strongest confirmed conclusion
+The retained gravity hierarchy is now sharper than “`b` wins on the bounded family.”
+- on the original narrow three-node family:
+  - `response / b` still passes at `N=12` and `N=25`
+- on the wider five-node family:
+  - `response / b` fails at the low-`b`, `N=12` corner
+  - `response / (b - h_mass)` still passes across both `N=12` and `N=25`
+- support-gap remains secondary for the already-diagnosed reason:
+  - it still folds in the packet-band correction rather than isolating source width alone
+
+So the honest bridge is now:
+- `response / b` as the asymptotic leading term when `h_mass / b` is small
+- `response / (b - h_mass)` as the robust finite-source correction on bounded source-width families
+- `response / (b - h_mass - delta_packet)` as the non-promoted discrete packet-support correction
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/scripts/directional_b_mass_window_transfer.py`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-01-directional-b-mass-window-transfer.txt`
+- `/Users/jonreilly/Projects/Physics/README.md`
+- `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+
+### Exact next step
+- keep the directional-measure propagator fixed
+- stop denominator widening
+- derive the crossover between the asymptotic `b` law and the finite-source `b - h_mass` correction from one compact `h_mass / b` scaling picture
+
+### First concrete action
+- reuse the new mass-window transfer card to bin the directional-`b` density residuals against `h_mass / b` and check whether the departure from pure `1/b` collapses onto one finite-source correction curve
+
+## 2026-04-01 — Mainstream-readiness gates now explicit
+
+### Current state
+- the project's strongest remaining upside is no longer vague:
+  - the unitary lane has a retained/provisional core
+  - the non-unitary lane has a retained framework but no retained scalable law
+- the clean question is now what would need to convert before the project could
+  honestly support very strong mainstream-facing claims
+
+### Strongest conclusion
+Crossing into "`9+` mainstream-readiness" is now understood as a multi-gate
+program, not a single nice result.
+- gate A:
+  - retained non-ad hoc decoherence law
+- gate B:
+  - genuine evolving-network dynamics story
+- gate C:
+  - clean continuum / asymptotic bridge
+- gate D:
+  - stronger gravity-side law / hierarchy transfer
+- gate E:
+  - independent robustness across families and dimensions
+
+### Worker implication
+- detached workers should keep advancing gates B, C, D, and E
+- Claude should keep advancing gate A
+- do not spend detached-worker cycles on duplicative decoherence mechanism
+  search unless explicitly requested
+
+## 2026-04-01 — Directional-measure b tree-hierarchy transfer check
+
+### Current state
+- the directional `b` lane already had a retained bounded hierarchy on the random-DAG family:
+  - `b`
+  - `b - h_mass`
+  - `b - (h_mass + delta_packet)`
+- but the real next uncertainty was whether that hierarchy was only a one-family fit or whether it survived on a second asymptotic control
+
+### What changed
+- added `scripts/directional_b_tree_hierarchy_compare.py`
+- wrote `logs/2026-04-01-directional-b-tree-hierarchy-compare.txt`
+- tested the same denominator hierarchy on the branching-tree control across:
+  - `N=8,10,12`
+  - target `b = 1..5`
+- kept the same corrected directional transport fixed
+
+### Strongest confirmed conclusion
+The hierarchy transfers to the tree control, but the control also shows why the support-gap problem is really a dense-family issue rather than a universal failure.
+- on the tree family, all three denominator forms pass for both:
+  - `action_channel`
+  - `packet_flow_action`
+- the packet-support correction stays tiny and fixed:
+  - `band_high_rel` is only `-0.156`, `-0.078`, `-0.039` for `N=8,10,12`
+- so the tree control does not contradict the retained hierarchy; it sharpens it:
+  - center-offset is still the retained leading term
+  - nearest-edge stays the finite-source correction
+  - support-gap only becomes destabilizing on dense route families where `delta_packet` is large enough to matter
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/scripts/directional_b_tree_hierarchy_compare.py`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-01-directional-b-tree-hierarchy-compare.txt`
+
+### Exact next step
+- keep the propagator fixed
+- stop denominator searches
+- explain or derive why dense random-DAG families inflate the packet-support correction while tree-like families keep it small
+
 ## 2026-04-01 — IF harness cleanup while Claude owns decoherence
 
 ### Current state

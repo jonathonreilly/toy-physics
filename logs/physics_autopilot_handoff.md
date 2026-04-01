@@ -1,5 +1,76 @@
 # Physics Autopilot Handoff
 
+## 2026-04-01 10:40 America/New_York
+
+### Seam class
+- worker coordination / mainstream-readiness gates
+
+### Current state
+- the project now has an explicit set of gates between "strong toy/theory
+  program" and "very strong mainstream-facing claim"
+- the gates are:
+  - A: retained non-ad hoc decoherence law
+  - B: genuine evolving-network dynamics story
+  - C: clean continuum / asymptotic bridge
+  - D: stronger gravity-side law / hierarchy transfer
+  - E: independent robustness across families and dimensions
+
+### Worker split
+- Claude owns gate A
+- detached workers should keep advancing:
+  - gate B: bounded evolving-network dynamics prototype
+  - gate C: continuum / asymptotic bridge
+  - gate D: retained `b` hierarchy derivation / family transfer
+  - gate E: second-family / 3D / robustness support where cleanly bounded
+
+### Exact next step
+- do not redirect detached workers back into the decoherence architecture lane
+- keep them on geometry, dynamics, and asymptotic transfer until Claude either:
+  - asks for a support diagnostic
+  - or lands a decoherence result that needs independent transfer/robustness checks
+
+## 2026-04-01 14:35 America/New_York
+
+### Seam class
+- directional-measure gravity `b` lane
+- second-family hierarchy transfer
+
+### What this loop did
+- added `scripts/directional_b_tree_hierarchy_compare.py`
+- wrote `logs/2026-04-01-directional-b-tree-hierarchy-compare.txt`
+- tested the current bounded denominator hierarchy on the branching-tree control:
+  - `b`
+  - `b - h_mass`
+  - `b - (h_mass + delta_packet)`
+
+### Current state
+- no detached science child is running
+- the lead unitary layer is still fixed:
+  - corrected `1/L^p` transport
+  - directional path measure `exp(-0.8×θ²)`
+- the directional `b` lane is now split more cleanly:
+  - the hierarchy itself transfers
+  - the dense random-DAG family is where the packet-support correction becomes large enough to matter
+
+### Strongest confirmed conclusion
+The second-family control does not break the retained hierarchy. It sharpens it.
+- on the branching-tree control, all three denominator forms pass for both:
+  - `action_channel`
+  - `packet_flow_action`
+- the packet-support correction is tiny and fixed there, so support-gap never destabilizes the flow density
+
+So the open gravity question is now narrower: not “which denominator works?”, but “why do dense random-DAG families inflate `delta_packet` enough to make the secondary correction matter?”
+
+### Exact next step
+- keep the propagator fixed
+- stop denominator hunting
+- derive or explain the family dependence of the packet-support correction:
+  - why it stays tiny on tree-like controls
+  - why it becomes large and sign-sensitive on dense random DAGs
+
+### New log paths
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-01-directional-b-tree-hierarchy-compare.txt`
+
 ## 2026-04-01 10:34 America/New_York
 
 ### Seam class
