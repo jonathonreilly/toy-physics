@@ -1,0 +1,32 @@
+GEOMETRIC WEIGHT exp(-β×dy²) FULL ASSESSMENT
+
+PASS/FAIL SCORECARD:
+  Born rule (I₃):         PASS  (2.03e-15)
+  Interference (V):       PASS  (V=1.000)
+  k=0→0:                  PASS  (shift=0.000000)
+  Gravity scaling:         PASS  (R@25=+0.64 > R@12=+0.17)
+  Decoherence scaling:     FAIL  (purity 0.76→0.82, still increases)
+  R_c backward compat:     MARGINAL (9/10 match)
+  Tree family:             NEUTRAL (R=0, same as standard)
+  Connectivity transfer:   PASS  (works across r=2..5, sweet spot r=3)
+  b-dependence:            NOT FIXED (R increases with b, 1/b not achieved)
+
+THEORY INTERPRETATION:
+  exp(-β×dy²) is a paraxial path-measure correction. It penalizes paths
+  with large transverse displacement per step, corresponding to the
+  kinetic-energy term in continuum QFT. It connects to Axiom 6 (local
+  coherence preference): paths that maintain local directional coherence
+  contribute more. This is NOT an ad hoc bias — it has a clear physical
+  interpretation as a propagator measure that prefers locally smooth paths.
+
+  It is distinct from field-dependent attenuation (which we removed for
+  good reason). The weight depends on geometry (dy), not field (f).
+  This is why k=0→0 is preserved: the weight is the same with or without
+  mass.
+
+FINAL VERDICT: PROVISIONAL
+  The geometric weight is the best propagator modification found.
+  It passes 4/5 canonical tests (all unitary constraints + gravity scaling).
+  It does NOT solve decoherence scaling or b-dependence.
+  It should NOT be called a solution — it is a step forward on gravity
+  that leaves decoherence and distance scaling as open problems.
