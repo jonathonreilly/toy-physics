@@ -52,7 +52,7 @@ Changing only the graph family changed the outcome.
 On modular / gap-controlled DAGs:
 
 - the same IF / CL machinery yields stable decoherence
-- interference remains strong
+- the old both-slits-open contrast proxy remains high
 - gravity still works on the same family
 - larger imposed gap gives stronger gravity and stronger decoherence until
   connectivity breaks
@@ -66,8 +66,9 @@ broader modular-family read:
 
 One scope note still matters here:
 
-- the large-`N` interference script still measures detector-profile contrast,
-  not full single-vs-double-slit visibility
+- once the large-`N` script is upgraded to a true single-vs-double-slit
+  visibility gain, that gain is only weak at `N=12`, near-zero by `N=18`, and
+  gone or slightly negative by `N>=25`
 
 So the current repo-facing claim is:
 

@@ -30,6 +30,8 @@ So the strongest current statement is:
   the same modular topology family
 - the decisive control variable is topology
 - the remaining open issue is dynamic generation of the good topology
+- the true large-`N` single-vs-double-slit visibility gain on the retained
+  modular bath lane is weak and does not remain high
 
 ## The model
 
@@ -130,8 +132,9 @@ The strongest current large-`N` statement is more modest than some older notes:
 - dense connected families still show CLT-style convergence pressure
 - the modular family delays or softens that problem by preserving branch
   structure better
-- the large-`N` detector-contrast script is encouraging, but it is not yet a
-  full single-vs-double-slit visibility calculation
+- the old both-slits-open contrast proxy stays high, but the newer true
+  single-vs-double-slit visibility gain is only `+0.023` at `N=12`, drops to
+  `+0.002` at `N=18`, and is near zero or negative by `N>=25`
 
 ## Emergence status: local endogenous generation still open
 
@@ -154,6 +157,12 @@ distinguishability, and then pruning them. The effect is not asymptotically
 stable: by `N=80..100` the ceiling returns, and stronger or adaptive pruning
 pushes the graph toward disconnection. So it should be read as a **nonlocal
 pruning construction**, not as a solved local growth law.
+
+The first hard-gap placement-only diagnostic is also now explicitly
+`not-ready`: the best candidate (`alpha=1`) reaches a useful gap width
+(`gap ~ 2.3`) only with a badly misplaced center (`|gap_ctr| ~ 4.2`), while
+stronger placement drives the graphs toward near-disconnection and
+`pur_cl -> 1.0`.
 
 ## What is NOT established
 
@@ -182,6 +191,8 @@ seed runs. The stronger retained claim is instead:
 
 - topology materially changes the achievable decoherence floor
 - the modular family is presently the clearest joint gravity+decoherence lane
+- on the asymptotic modular bath lane, true interference gain is weak/gone
+  even though the older contrast proxy stayed high
 - the emergence question remains open because the good topology is still
   imposed; the best pruning surrogate helps only at intermediate `N` and does
   not generate a stable local hard-gap rule
