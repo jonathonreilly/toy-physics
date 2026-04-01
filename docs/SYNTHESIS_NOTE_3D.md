@@ -135,12 +135,12 @@ distinguishability via S_norm. Extra z-dimension preserves y-separation.
    field's graph-wide extent (derivation in b-independence note).
 
    A causal (forward-only) field variant showed an apparent ~1/b trend
-   at decay=0.5, but this is **CONFOUNDED**: the b-sweep uses a moving
-   mass window, so source count/geometry varies with b. The causal
-   field distance claim is unverified pending fixed-mass redesign.
-   The causal field also weakens gravity signal (t=1.3 vs 4.4) and
-   breaks mass scaling — there is a fundamental tension between
-   field localization and phase valley strength.
+   at decay=0.5, but this was **RETRACTED**: the b-sweep used a moving
+   mass window (source count/geometry varied with b), and the power law
+   fit selected only positive points. Fixed-mass verification on main
+   (causal_field_fixed_mass_verify.py) shows NO falloff once occupancy
+   is controlled — both Laplacian and causal fields give shift increasing
+   with b. The causal field avenue is closed.
 
 4. **4D strict visibility:** Gravity + decoherence + Born rule are
    confirmed in 4D, but strict interference visibility under the
@@ -170,22 +170,23 @@ fundamental limitations of the discrete path-sum approach persist.
 
 ## Open frontiers
 
-1. **Causal field distance law (unverified):** Initial tests showed
-   apparent ~1/b with causal field decay=0.5, but confounded by
-   moving mass window. Fixed-mass verification in progress. Even if
-   confirmed, causal field weakens gravity signal and breaks mass
-   scaling — architectural tension between localization and phase
-   valley strength.
+1. **Distance law is the model's hard limit.** b-independence is
+   structural in the linear path-sum + phase valley architecture.
+   Closed avenues: all propagator powers, node densities, locality
+   shells, regular lattices, AND causal field propagation (retracted
+   after fixed-mass control showed no falloff). Getting distance
+   dependence likely requires going beyond linear path-sum entirely.
+
 2. **4D strict visibility:** Gravity + decoherence + Born rule are
    confirmed in 4D, but strict interference visibility under the
-   hardest metric needs verification. "All four coexist" is fully
-   safe for 3D; for 4D, the visibility claim is weaker. Note: 4D
-   "same-graph" joint test uses a companion Born graph, not truly
-   same-graph.
+   hardest metric needs verification. "All four coexist" is safe
+   for 3D; for 4D, the visibility claim is weaker. Note: 4D joint
+   test uses companion Born graph, not truly same-graph.
+
 3. **b-independence mechanism (derived):** The Laplacian field's
    graph-wide extent makes the graph-averaged field insensitive to
-   mass position. Paths preserve transverse position (not scrambling),
-   but the extended field means all paths feel similar perturbation.
+   mass position. Causal field localizes f but doesn't rescue the
+   distance law (fixed-mass control confirms no falloff).
 
 ## Scripts delivered
 

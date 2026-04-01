@@ -112,14 +112,19 @@ architecture. Getting 1/b would require either:
   in a way that breaks the averaging
 - A fundamentally different gravity mechanism (metric emergence)
 
-## Status of causal field avenue (2026-04-01)
+## Causal field avenue: CLOSED (2026-04-01)
 
 Initial causal-field tests (decay=0.5) showed an apparent ~1/b trend,
-but this result is CONFOUNDED: the b-sweep uses a moving y-window
-to select mass nodes, so both source count and source geometry change
-with b. The apparent falloff may come from varying source occupancy
-near the spatial boundary, not genuine retarded-field distance law.
+but this was an artifact of the moving mass window — source count and
+geometry changed with b. The positive-only power law fit compounded
+the error by selecting for noise that looked like a trend.
 
-**The causal field ~1/b claim is unverified until a fixed-mass
-redesign (same source count and geometry across all b values)
-confirms or refutes it.** Worker batches are running this verification.
+**Fixed-mass verification (causal_field_fixed_mass_verify.py on main)
+shows no falloff once occupancy is controlled:**
+  - Laplacian: shift ~ b^0.461 (increases with b)
+  - Causal sum decay=0.5: shift ~ b^1.013 (increases with b)
+
+Neither shows distance falloff. The causal field does not rescue the
+distance law. b-independence is structural in the retained linear
+path-sum architecture, and no tested field propagation variant has
+beaten it under proper controls.

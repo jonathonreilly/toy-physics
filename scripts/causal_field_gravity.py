@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """Retarded (causal) field propagation: does it restore 1/b distance scaling?
 
-CONFOUND WARNING: The b-sweep in this script uses a moving y-window to
-select mass nodes (abs(y - (cy+b)) < 2.0). This means mass count and
-source geometry change with b, confounding the distance measurement.
-Results here are PRELIMINARY — fixed-mass verification is required.
+RETRACTED: The b-sweep uses a moving y-window to select mass nodes,
+so source count/geometry change with b. Fixed-mass verification on main
+(causal_field_fixed_mass_verify.py) shows NO distance falloff once
+occupancy is controlled. The ~1/b claim from this script was an artifact.
+The positive-only power law fit further inflated the apparent trend.
 
 The derivation identified the Laplacian field as the b-independence engine:
 it spreads f everywhere on the graph, making all paths feel roughly equal
