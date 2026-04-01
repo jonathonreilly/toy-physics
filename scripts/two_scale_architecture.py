@@ -148,6 +148,8 @@ def propagate_two_scale(positions, adj, field, src, det, k, mass_set,
 
 def main():
     k_band = [3.0, 5.0, 7.0]
+    tested_bins = []
+    passing_bins = []
 
     print("=" * 70)
     print("TWO-SCALE ARCHITECTURE: G2 macro + per-bin micro env")
@@ -160,6 +162,7 @@ def main():
         print(f"    {'N':>4s}  {'R_std':>7s}  {'R_g2':>7s}  {'R_2s':>7s}  "
               f"{'pur_fine':>8s}  {'pur_2s':>8s}  {'n_env':>5s}")
         print(f"    {'-' * 52}")
+        rows = {}
 
         for nl in [8, 12, 15, 20, 25]:
             rg_std, rg_g2, rg_2s = [], [], []
@@ -265,16 +268,57 @@ def main():
                     p2s_list.append(sum(p2s_k)/len(p2s_k))
 
             if rg_std:
-                print(f"    {nl:4d}  {sum(rg_std)/len(rg_std):+7.3f}  "
-                      f"{sum(rg_g2)/len(rg_g2):+7.3f}  "
-                      f"{sum(rg_2s)/len(rg_2s):+7.3f}  "
-                      f"{sum(pf_list)/len(pf_list):8.4f}  "
-                      f"{sum(p2s_list)/len(p2s_list):8.4f}  "
+                avg_rg_std = sum(rg_std) / len(rg_std)
+                avg_rg_g2 = sum(rg_g2) / len(rg_g2)
+                avg_rg_2s = sum(rg_2s) / len(rg_2s)
+                avg_pf = sum(pf_list) / len(pf_list)
+                avg_p2s = sum(p2s_list) / len(p2s_list)
+                rows[nl] = {
+                    "rg_std": avg_rg_std,
+                    "rg_g2": avg_rg_g2,
+                    "rg_2s": avg_rg_2s,
+                    "pur_fine": avg_pf,
+                    "pur_2s": avg_p2s,
+                }
+                print(f"    {nl:4d}  {avg_rg_std:+7.3f}  "
+                      f"{avg_rg_g2:+7.3f}  "
+                      f"{avg_rg_2s:+7.3f}  "
+                      f"{avg_pf:8.4f}  "
+                      f"{avg_p2s:8.4f}  "
                       f"{max_envs:5d}")
 
         print()
+        tested_bins.append(n_bins)
+        if 12 in rows and 25 in rows:
+            grav_pass = rows[25]["rg_2s"] >= rows[12]["rg_2s"]
+            deco_pass = rows[25]["pur_2s"] <= rows[12]["pur_2s"]
+            if grav_pass and deco_pass:
+                passing_bins.append(n_bins)
+                print(
+                    "    verdict: PASS — gravity stays stable and purity does not rise"
+                )
+            else:
+                print(
+                    "    verdict: FAIL — "
+                    f"R_2s(12)={rows[12]['rg_2s']:+.3f}, "
+                    f"R_2s(25)={rows[25]['rg_2s']:+.3f}; "
+                    f"pur_2s(12)={rows[12]['pur_2s']:.4f}, "
+                    f"pur_2s(25)={rows[25]['pur_2s']:.4f}"
+                )
+            print()
 
-    print("PASS: R_2s stable AND pur_2s not increasing")
+    if passing_bins:
+        print(
+            "PASS: found a two-scale configuration with stable gravity and "
+            "non-rising purity"
+        )
+    elif tested_bins:
+        print(
+            "FAIL: no tested two-scale configuration keeps gravity stable and "
+            "purity non-increasing"
+        )
+    else:
+        print("FAIL: no complete two-scale benchmark rows were produced")
     print()
     print("TEST COMPLETE")
 

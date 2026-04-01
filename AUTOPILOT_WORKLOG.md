@@ -1,3 +1,39 @@
+## 2026-04-01 04:32 America/New_York
+
+### Seam class
+- architecture integrity repair
+- scorecard reconciliation
+
+### Current state
+- repaired the tracked two-scale artifact and repo narrative so the active architecture lane matches `main`
+- no detached science child is running
+- repo and `origin/main` were in sync before this repair (`git rev-list --left-right --count origin/main...main = 0 0`)
+
+### Science impact
+- fixed `/Users/jonreilly/Projects/Physics/scripts/two_scale_architecture.py` so it computes the actual two-scale verdict instead of printing an unconditional pass
+- regenerated `/Users/jonreilly/Projects/Physics/logs/2026-03-31-two-scale.txt`
+- updated `/Users/jonreilly/Projects/Physics/README.md`
+- refreshed `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- the corrected two-scale read is now explicit:
+  - `n_ybins = 6`: gravity stays stable (`R_2s: +0.647 -> +0.775`) but purity worsens (`0.8300 -> 0.9854`)
+  - `n_ybins = 8`: gravity stays stable (`R_2s: +1.058 -> +1.276`) but purity worsens (`0.8379 -> 0.9614`)
+- with the retained G2 interference regression (`V_g2 = 0.0000` at `k = 3.0, 5.0`), the architecture scorecard now closes honestly: no tested architecture passes gravity scaling, interference, and decoherence scaling simultaneously
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/scripts/two_scale_architecture.py`
+- `/Users/jonreilly/Projects/Physics/logs/2026-03-31-two-scale.txt`
+- `/Users/jonreilly/Projects/Physics/README.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+
+### Strongest confirmed conclusion
+No tested architecture currently satisfies gravity scaling, interference, and decoherence scaling at once. G2-style coarse-graining fixes the gravity saturation guardrail, but it also destroys interference and the two-scale extension still wrong-scales on decoherence.
+
+### Exact next step
+- design one gravity-preserving compression that keeps microscopic phase contrast alive, then rerun the interference constraint before any new decoherence register variant
+
+### First concrete action
+- prototype a phase-preserving bundle rule that aggregates near-degenerate paths without averaging away their relative phases
+
 ## 2026-04-01 — Architecture candidate testing (Claude session)
 
 ### Seam class

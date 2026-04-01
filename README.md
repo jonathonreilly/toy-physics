@@ -135,20 +135,22 @@ The next frontier is therefore best treated as a scaling architecture problem, n
 
 #### Architecture scorecard (tested candidates)
 
-| candidate | target | result | mechanism |
-|---|---|---|---|
-| G1: path-multiplicity-renormalized action | gravity scaling | **FAIL** | divides action by path count; effective action → 0 on dense graphs, kills gravity entirely |
-| **G2: coarse-grained propagator** | gravity scaling | **PASS** | bins nodes by y at each layer, averages near-degenerate paths within bins; R_grav at N=25 (+1.13..+1.32) ≥ R_grav at N=12 (+1.05..+1.21) at n_ybins=8..12 |
-| D1: multi-local tensor env | decoherence scaling | **FAIL** | divides mass region into spatial cells with independent env registers; env dimension grows (9→336 states) but amplitude stays concentrated in few dominant states; purity tracks fine env at every size |
-| G2+env: coarse-grained + fine env | decoherence scaling | **FAIL** | coarse-graining reduces effective paths, which reduces env state diversity; purity rises faster than fine env |
-| D4: spatial trace over mass exit | decoherence scaling | **FAIL** | produces identical purity to fine env at every size (mass-exit node = last mass node, so D4 is a relabeling) |
+| candidate | gravity scaling | interference | decoherence scaling | mechanism |
+|---|---|---|---|---|
+| 1/L^p baseline | **FAIL** | **PASS** | **FAIL** | retained unitary core, but gravity still saturates and tested discrete env tags wrong-scale |
+| G1: path-multiplicity-renormalized action | **FAIL** | not tested | not tested | divides action by path count; effective action → 0 on dense graphs, kills gravity entirely |
+| **G2: coarse-grained propagator** | **PASS** | **FAIL** | **FAIL** | bins nodes by `y`, which keeps `R_grav` stable at large `N`, but `V_g2 = 0.0000` at `k = 3.0, 5.0` and the same coarse averaging reduces branch-distinguishing microstructure |
+| D1: multi-local tensor env | not targeted | **PASS** | **FAIL** | env dimension grows (`9 → 336` states) but amplitude stays concentrated in a few dominant states; purity tracks fine env at every size |
+| G2+env: coarse-grained + fine env | **PASS** | **FAIL** | **FAIL** | coarse-graining reduces effective paths, which reduces env state diversity |
+| D4: spatial trace over mass exit | not targeted | **PASS** | **FAIL** | produces identical purity to fine env at every size (mass-exit node = last mass node, so D4 is a relabeling) |
+| Two-scale (`G2` + per-bin micro env) | **PASS** | **FAIL** | **FAIL** | gravity stays stable, but `pur_2s` still rises from `0.8300 → 0.9854` (`n_ybins = 6`) and `0.8379 → 0.9614` (`n_ybins = 8`); it inherits the `G2` phase-averaging failure |
 
 **Retained positive results:**
-- corrected 1/L^p unitary core still stands (gravity sign, Born rule, interference, k=0→0, phase valley)
-- G2 coarse-grained propagator is the first gravity architecture that passes the scaling guardrail
-- k=0→0 remains preserved under both G1 and G2
+- corrected 1/L^p unitary core still stands (gravity sign, Born rule, interference, `k=0→0`, phase valley)
+- G2-style coarse-graining is the first tested architecture family that fixes the gravity scaling guardrail
+- `k=0→0` remains preserved under both G1 and G2
 
-**Current read:** the tested naive fixes for gravity and decoherence are architecturally opposed. Gravity wants coarse effective channels (fewer near-degenerate paths → less saturation). Decoherence wants branch-distinguishing microstructure (more slit-selective env labels → lower purity). The tested single-layer approaches cannot satisfy both simultaneously. This does not mean one path-sum architecture can never do both — it means the next hypothesis should be a genuine two-scale architecture: a macro coarse-grained propagator for gravity, with micro local environment records within each coarse bundle for decoherence.
+**Current read:** no tested architecture currently passes gravity scaling, interference, and decoherence scaling simultaneously. G2-style macro averaging is now understood as both a real gravity fix and a real failure mode: it suppresses the near-degenerate path multiplicity that causes gravity saturation, but it also washes out the phase structure that produces fringes and weakens the branch-distinguishing microstructure needed for scalable decoherence. The next good move is therefore not another single-layer env variant, and not simply “implement two-scale” again. It is to find one gravity-preserving compression that keeps microscopic phase contrast alive before adding any scalable record channel.
 
 ### 5. Oscillatory persistence under the default self-maintenance rule
 
