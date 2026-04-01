@@ -276,13 +276,13 @@ def main():
         print(f"  (Want: STABLE or INCREASING — means CL bath stays effective at scale)")
     print()
 
-    # Then: purity sweep over λ at N=12 and N=18
-    print("  PURITY VS λ AT N=12 AND N=18")
+    # Then: purity sweep over λ at N=12, N=18, and N=25
+    print("  PURITY VS λ AT N=12, N=18, AND N=25")
     print(f"  {'λ':>5s}  {'N':>4s}  {'pur_cl':>8s}  {'pur_coh':>8s}  "
           f"{'pur_min':>8s}  {'decoh':>8s}")
     print(f"  {'-' * 48}")
 
-    for nl in [12, 18]:
+    for nl in [12, 18, 25]:
         for lam in lam_sweep:
             pur_list, coh_list, min_list = [], [], []
 
