@@ -268,11 +268,11 @@ Why it matters:
 
 ## Current priority order
 
-1. strict 4D same-graph unification / binned-visibility pass
-2. 4D continuum / density-limit card
-3. 5D dense robustness map
-4. analytic / architectural distance-law note
-5. bounded evolving-network dynamics prototype
+1. 4D continuum / density-limit card
+2. 5D dense robustness map
+3. analytic / architectural distance-law note
+4. bounded evolving-network dynamics prototype
+5. any causal-field follow-up under fixed-mass / fixed-geometry controls only
 
 The assumption ledger and literature-positioning note are already the first step toward this harder backlog.
 
@@ -287,7 +287,7 @@ gates.
   - analytic derivation of why the current force law stays flat/topological, or bounded tests of genuinely deeper alternatives beyond the current linear path sum
 - non-unitary lane:
   - IF / CL framework retained on modular higher-dimensional families
-  - strict 4D same-graph visibility/unification still needs one clean retained pass
+  - strict 4D same-graph visibility/unification now has one retained companion-control row, but the broader pass is still partial
 - architecture credibility lane:
   - evolving-network dynamics
   - continuum / asymptotic bridge
