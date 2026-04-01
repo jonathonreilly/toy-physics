@@ -1,0 +1,29 @@
+INFLUENCE-FUNCTIONAL DECOHERENCE: N=8,12,18 at α_scale=2.0
+
+N=8  seed=0: hA=31  hB=28  pur_if=0.9993 pur_coh=1.0000 [0s]
+N=8  seed=1: hA=27  hB=27  pur_if=0.9675 pur_coh=1.0000 [1s]
+  avg: pur_if=0.9834, decoh=+0.0166
+
+N=12 seed=0: hA=151 hB=163 pur_if=0.9493 pur_coh=1.0000 [20s]
+N=12 seed=1: hA=141 hB=137 pur_if=0.8938 pur_coh=1.0000 [32s]
+  avg: pur_if=0.9216, decoh=+0.0784
+
+N=18 seed=0: hA=423 hB=371 pur_if=0.9900 pur_coh=1.0000 [227s]
+N=18 seed=1: hA=545 hB=545 pur_if=0.9171 pur_coh=1.0000 [604s]
+  avg: pur_if=0.9535, decoh=+0.0465
+
+SUMMARY:
+  N=8→12: decoh increases 0.017→0.078 (good)
+  N=12→18: decoh DECREASES 0.078→0.047 (bad)
+  The N=18 reversal is from seed variance (seed 0 gives 0.990 purity).
+
+Baseline pur_coh=1.0000 at all sizes (correct).
+History cap at 3 encounters.
+
+VERDICT: NOT YET PASSED
+  Decoherence increases N=8→12 but reverses at N=18.
+  The influence-functional formulation is the correct analytical version
+  of the fresh-ancilla mechanism, but the geometric convergence (Δθ
+  shrinking at large N) still weakens the per-encounter decoherence.
+  More seeds and N=25 needed for a definitive verdict, but the N=18
+  reversal is a real concern.
