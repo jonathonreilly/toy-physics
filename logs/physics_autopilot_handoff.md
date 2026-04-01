@@ -1,5 +1,41 @@
 # Physics Autopilot Handoff
 
+## 2026-04-01 — Architecture candidate results (Claude session)
+
+### What was tested
+Five architecture candidates on the scaling testbench (4 graph families, isolated scaling variables):
+
+| candidate | target | result | why |
+|---|---|---|---|
+| G1: path-multiplicity-renormalized action | gravity | **FAIL** | S_eff = S/n_paths^α → effective action vanishes on dense graphs |
+| **G2: coarse-grained propagator** | gravity | **PASS** | y-bin averaging prevents saturation; R_grav stable/increasing at N=25 |
+| D1: multi-local tensor env | decoherence | **FAIL** | env dimension grows (336 states) but amplitude concentrates in few |
+| G2+env: coarse-grained + fine env | decoherence | **FAIL** | coarse-graining reduces paths → reduces env diversity → hurts purity |
+| D4: spatial trace over mass exit | decoherence | **FAIL** | identical to fine env (mass-exit node = last mass node) |
+
+### What is retained
+- corrected 1/L^p unitary core: gravity sign, Born rule (I₃=4.28e-15), interference (V=0.995), k=0→0
+- G2 coarse-grained propagator passes the gravity scaling guardrail (first architecture to do so)
+- k=0→0 preserved under both G1 and G2
+
+### What is NOT claimed
+- decoherence at scale is not solved; all five tested decoherence architectures fail or are equivalent to fine env
+- the gravity-decoherence architectural opposition is observed, not proven fundamental
+- "irregular graphs required for all physics" is NOT claimed — lattice supports gravity + interference, only decoherence needs irregularity with the tested architectures
+
+### Tight interpretation
+- the tested naive fixes are opposed: gravity wants coarse effective channels, decoherence wants branch-distinguishing microstructure
+- the conflict is between the tested architectures, not necessarily between the phenomena
+- the next hypothesis is a genuine two-scale architecture:
+  - macro: coarse-grained propagator (G2) for gravity scaling
+  - micro: local environment records within each coarse bundle for decoherence
+  - this has NOT been tested yet
+
+### Next step recommendation
+Implement the two-scale architecture: G2 coarse-grained propagation between y-bins, with per-bin local env registers that record which mass nodes were visited within that bin. The macro layer handles gravity; the micro layer handles decoherence. Test on the scaling testbench with the same pass/fail criteria.
+
+Do NOT attempt another single-layer env variant (D1, D4, cumulative, evolving, scaled bins are all exhausted).
+
 ## 2026-04-01 09:17 America/New_York
 
 ### Seam class

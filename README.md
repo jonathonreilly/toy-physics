@@ -133,6 +133,23 @@ The next frontier is therefore best treated as a scaling architecture problem, n
 - [ARCHITECTURE_OPTIONS.md](/Users/jonreilly/Projects/Physics/ARCHITECTURE_OPTIONS.md)
 - [SCALING_BENCHMARK_TABLE.md](/Users/jonreilly/Projects/Physics/SCALING_BENCHMARK_TABLE.md)
 
+#### Architecture scorecard (tested candidates)
+
+| candidate | target | result | mechanism |
+|---|---|---|---|
+| G1: path-multiplicity-renormalized action | gravity scaling | **FAIL** | divides action by path count; effective action → 0 on dense graphs, kills gravity entirely |
+| **G2: coarse-grained propagator** | gravity scaling | **PASS** | bins nodes by y at each layer, averages near-degenerate paths within bins; R_grav at N=25 (+1.13..+1.32) ≥ R_grav at N=12 (+1.05..+1.21) at n_ybins=8..12 |
+| D1: multi-local tensor env | decoherence scaling | **FAIL** | divides mass region into spatial cells with independent env registers; env dimension grows (9→336 states) but amplitude stays concentrated in few dominant states; purity tracks fine env at every size |
+| G2+env: coarse-grained + fine env | decoherence scaling | **FAIL** | coarse-graining reduces effective paths, which reduces env state diversity; purity rises faster than fine env |
+| D4: spatial trace over mass exit | decoherence scaling | **FAIL** | produces identical purity to fine env at every size (mass-exit node = last mass node, so D4 is a relabeling) |
+
+**Retained positive results:**
+- corrected 1/L^p unitary core still stands (gravity sign, Born rule, interference, k=0→0, phase valley)
+- G2 coarse-grained propagator is the first gravity architecture that passes the scaling guardrail
+- k=0→0 remains preserved under both G1 and G2
+
+**Current read:** the tested naive fixes for gravity and decoherence are architecturally opposed. Gravity wants coarse effective channels (fewer near-degenerate paths → less saturation). Decoherence wants branch-distinguishing microstructure (more slit-selective env labels → lower purity). The tested single-layer approaches cannot satisfy both simultaneously. This does not mean one path-sum architecture can never do both — it means the next hypothesis should be a genuine two-scale architecture: a macro coarse-grained propagator for gravity, with micro local environment records within each coarse bundle for decoherence.
+
 ### 5. Oscillatory persistence under the default self-maintenance rule
 
 Under the current default self-maintenance rule `S={3,4}, B={3,4}`, the tested seeds do not settle to static fixed points; they either die or enter period-2/3 orbits. In that sense, default persistence is periodic renewal rather than stasis. Broader rule sweeps still contain fixed-point rules, growing rules, and other oscillator families, so this is a statement about the current default dynamics rather than the whole rule space. A bounded packet-tracking bridge on generated-DAG movers now sharpens the next step beyond that static persistence language. On the canonical mover family (`540` rows across four graph configs, three neighbor radii, three seed positions, and the canonical rule trio), coherent translating packets do exist (`124` rows), but they do not live on one magic scalar. The retained mover map is two-stage:

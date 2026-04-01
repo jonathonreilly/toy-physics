@@ -1,3 +1,42 @@
+## 2026-04-01 — Architecture candidate testing (Claude session)
+
+### Seam class
+- scaling architecture candidates
+- gravity fix G1, G2
+- decoherence fix D1, G2+env, D4
+
+### Architecture scorecard
+
+| candidate | target | result |
+|---|---|---|
+| G1: renormalized action | gravity | **FAIL** — kills gravity |
+| **G2: coarse-grained** | gravity | **PASS** — R stable at large N |
+| D1: multi-local tensor | decoherence | **FAIL** — purity same as fine env |
+| G2+env | decoherence | **FAIL** — fewer paths hurts env diversity |
+| D4: spatial trace | decoherence | **FAIL** — identical to fine env |
+
+### Retained conclusions
+- corrected 1/L^p unitary core stands
+- G2 is the first gravity architecture that passes the scaling guardrail
+- the tested naive gravity and decoherence fixes are architecturally opposed:
+  gravity wants coarse effective channels, decoherence wants branch-distinguishing microstructure
+- this does not prove the conflict is fundamental; it constrains the next hypothesis
+
+### Next step
+- implement a genuine two-scale architecture:
+  macro coarse-grained propagator (G2) for gravity,
+  micro local environment records within each coarse bundle for decoherence
+- do not attempt another single-layer env variant
+
+### Experiment count
+- 73 experiments total this session (67 corrected-propagator + 6 architecture candidates)
+- G1: `renormalized_action_gravity.py`
+- G2: `g2_coarse_grained_propagator.py`
+- D1: `d1_multilocal_tensor_env.py`
+- G2+env: `g2_decoherence_scaling.py`
+- D4: `d4_spatial_trace.py`
+- Testbench: `scaling_testbench.py`
+
 ## 2026-04-01 09:17 America/New_York
 
 ### Seam class
