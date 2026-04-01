@@ -121,7 +121,7 @@ def main() -> None:
     print("Interpretation target:")
     print("  mu >> 1   : tree-like / safely asymptotic source separation")
     print("  mu ~ 0    : finite-source shoulder, where low-b corners start grazing overlap")
-    print("  mu <= 0   : source-support overlap, where pure response / b is the first form to break")
+    print("  mu <= 0   : source-support overlap, where pure response / b is most fragile and finite-source corrections matter")
     print()
     print(
         f"{'family':>10s} {'N':>4s} {'lam_low':>8s} {'mu_low':>8s} {'mu_low_min':>10s} "
@@ -156,7 +156,8 @@ def main() -> None:
     print("  2. Narrow random-DAG family: the low-b corner collapses to mu ~ 0 while the bulk still sits near mu ~ 5.")
     print("     So pure response / b survives overall, but only because the near-overlap problem is still localized to a few seeds.")
     print("  3. Wide random-DAG family: the low-b corner crosses into mu <= 0 at small N and stays near the overlap shoulder at N = 25,")
-    print("     while the bulk margin is only mu ~ 1.6..1.9. That is where response / b becomes the first denominator to fail.")
+    print("     while the bulk margin is only mu ~ 1.6..1.9. That is where the finite-source correction becomes the safer read,")
+    print("     even though response / b still passes on the bounded family once singular center-offset trials are excluded.")
     print("  4. So the family dependence is local overlap geometry, not a new force law.")
     print("     The crossover variable is still lambda = h_mass / b, but the clean diagnostic form is")
     print("     mu = edge_b / h_mass = 1 / lambda - 1 because it stays finite and signed through overlap.")

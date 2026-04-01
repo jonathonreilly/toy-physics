@@ -47,6 +47,10 @@ EPS = 1e-9
 EDGE_B_MIN = 0.5
 
 
+def _safe_center_ratio(strength: float, actual_b: float) -> float:
+    return strength / actual_b if actual_b > 0.0 else float("nan")
+
+
 @dataclass(frozen=True)
 class TrialRow:
     n_layers: int
@@ -112,9 +116,9 @@ def _evaluate_geometry_trial(task: tuple[int, float, int, float, float, int]) ->
         center_edge_b=edge_b,
         action_channel=base_row.action_channel,
         packet_flow_action=base_row.packet_flow_action,
-        action_over_b=action_strength / max(actual_b, EPS),
+        action_over_b=_safe_center_ratio(action_strength, actual_b),
         action_over_edge_b=action_strength / edge_b if edge_b >= EDGE_B_MIN else float("nan"),
-        flow_over_b=flow_strength / max(actual_b, EPS),
+        flow_over_b=_safe_center_ratio(flow_strength, actual_b),
         flow_over_edge_b=flow_strength / edge_b if edge_b >= EDGE_B_MIN else float("nan"),
         visibility_guardrail=base_row.visibility_guardrail,
     )

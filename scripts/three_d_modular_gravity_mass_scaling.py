@@ -37,6 +37,7 @@ K_BAND = (3.0, 5.0, 7.0)
 GAPS = (3.0, 5.0)
 N_SEEDS = 24
 MASS_COUNTS = (2, 4, 6, 8, 12)
+MEAN_OFFSET_TOL = 1.0
 
 
 def centroid_y(probs: dict[int, float], positions: list[tuple[float, float, float]]) -> float:
@@ -125,6 +126,44 @@ def mean_se_ci(vals: list[float]) -> tuple[float, float, tuple[float, float]]:
     return mean, se, ci
 
 
+def select_target_centered_mass_nodes(
+    layer_nodes: list[int],
+    positions: list[tuple[float, float, float]],
+    center_y: float,
+    target_b: float,
+    mass_count: int,
+    mean_offset_tol: float = MEAN_OFFSET_TOL,
+) -> list[int]:
+    """Pick a same-side contiguous y-window that stays near the target impact plane."""
+    target_y = center_y + target_b
+    same_side = [i for i in layer_nodes if positions[i][1] >= center_y]
+    ordered = sorted(same_side, key=lambda i: positions[i][1])
+    if len(ordered) < mass_count:
+        return []
+
+    best_nodes: list[int] = []
+    best_score: tuple[float, float, float] | None = None
+    for start in range(len(ordered) - mass_count + 1):
+        candidate = ordered[start : start + mass_count]
+        ys = [positions[i][1] for i in candidate]
+        mean_y = statistics.fmean(ys)
+        score = (
+            abs(mean_y - target_y),
+            max(abs(y - target_y) for y in ys),
+            statistics.pstdev(ys) if len(ys) > 1 else 0.0,
+        )
+        if best_score is None or score < best_score:
+            best_score = score
+            best_nodes = candidate
+
+    if not best_nodes:
+        return []
+    mean_offset = statistics.fmean(positions[i][1] for i in best_nodes) - center_y
+    if abs(mean_offset - target_b) > mean_offset_tol:
+        return []
+    return best_nodes
+
+
 def main() -> None:
     n_layers = 25
     nodes_per_layer = 30
@@ -137,7 +176,7 @@ def main() -> None:
     print("=" * 78)
     print("  family: 3D modular DAG")
     print(f"  gap sweep: {GAPS}")
-    print(f"  fixed impact parameter b: {b}")
+    print(f"  target impact parameter b: {b}")
     print(f"  k-band: {K_BAND}")
     print(f"  seeds: {N_SEEDS}")
     print("=" * 78)
@@ -172,18 +211,16 @@ def main() -> None:
             all_ys = [y for _, y, _ in positions]
             cy = statistics.fmean(all_ys)
             grav_layer = layers[2 * len(layers) // 3]
-            candidates = [
-                i for i in by_layer[grav_layer]
-                if positions[i][1] > cy + b
-            ]
-            candidates.sort(key=lambda i: positions[i][1])
-            if not candidates:
-                continue
-
             for mcount in MASS_COUNTS:
-                if len(candidates) < mcount:
+                mass_nodes = select_target_centered_mass_nodes(
+                    by_layer[grav_layer],
+                    positions,
+                    cy,
+                    b,
+                    mcount,
+                )
+                if not mass_nodes:
                     continue
-                mass_nodes = candidates[:mcount]
                 delta = paired_seed_delta(positions, adj, src, det_list, mass_nodes)
                 if delta is not None:
                     by_mass[mcount].append(delta)
@@ -225,7 +262,7 @@ def main() -> None:
     print("  Summary:")
     print("    - paired per-seed deltas only")
     print("    - fixed modular 3D lanes")
-    print("    - fixed impact parameter b")
+    print(f"    - target-centered mass window with |actual_b - target_b| <= {MEAN_OFFSET_TOL:.1f}")
     print("    - corrected propagator unchanged")
 
 

@@ -69,6 +69,10 @@ class TrialRow:
     visibility_guardrail: float
 
 
+def _safe_center_ratio(strength: float, actual_b: float) -> float:
+    return strength / actual_b if actual_b > 0.0 else float("nan")
+
+
 def _coefficient_of_variation(values: list[float]) -> float:
     if not values:
         return float("nan")
@@ -199,11 +203,11 @@ def _evaluate_geometry_trial(task: tuple[int, float, int, float, float, int]) ->
         band_high_rel=band_high_rel,
         support_gap=support_gap,
         support_correction=support_correction,
-        action_over_b=action_strength / max(actual_b, 1e-9),
+        action_over_b=_safe_center_ratio(action_strength, actual_b),
         action_over_support_gap=(
             action_strength / support_gap if support_gap >= SUPPORT_GAP_MIN else float("nan")
         ),
-        flow_over_b=flow_strength / max(actual_b, 1e-9),
+        flow_over_b=_safe_center_ratio(flow_strength, actual_b),
         flow_over_support_gap=(
             flow_strength / support_gap if support_gap >= SUPPORT_GAP_MIN else float("nan")
         ),

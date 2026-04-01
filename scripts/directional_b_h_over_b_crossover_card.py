@@ -54,6 +54,10 @@ class CardRow:
     flow_over_edge_b: float
 
 
+def _safe_lambda_ratio(h_mass: float, actual_b: float) -> float:
+    return h_mass / actual_b if actual_b > 0.0 else float("nan")
+
+
 def _from_dag(task: tuple[int, int, float, int, float, float]) -> CardRow | None:
     row = _evaluate_transfer_trial(task)
     if row is None:
@@ -66,7 +70,7 @@ def _from_dag(task: tuple[int, int, float, int, float, float]) -> CardRow | None
         h_mass=row.mass_half_span,
         edge_b=row.edge_b,
         support_gap=row.support_gap,
-        lambda_ratio=row.mass_half_span / max(row.actual_b, 1e-9),
+        lambda_ratio=_safe_lambda_ratio(row.mass_half_span, row.actual_b),
         action_over_b=row.action_over_b,
         action_over_edge_b=row.action_over_edge_b,
         flow_over_b=row.flow_over_b,
@@ -86,7 +90,7 @@ def _from_tree(task: tuple[int, float, float, int, int, float]) -> CardRow | Non
         h_mass=row.mass_half_span,
         edge_b=row.edge_b,
         support_gap=row.support_gap,
-        lambda_ratio=row.mass_half_span / max(row.actual_b, 1e-9),
+        lambda_ratio=_safe_lambda_ratio(row.mass_half_span, row.actual_b),
         action_over_b=row.action_over_b,
         action_over_edge_b=row.action_over_edge_b,
         flow_over_b=row.flow_over_b,
@@ -95,7 +99,13 @@ def _from_tree(task: tuple[int, float, float, int, int, float]) -> CardRow | Non
 
 
 def _mean(values: list[float]) -> float:
+    values = [value for value in values if not math.isnan(value)]
     return statistics.fmean(values) if values else float("nan")
+
+
+def _median(values: list[float]) -> float:
+    values = [value for value in values if not math.isnan(value)]
+    return statistics.median(values) if values else float("nan")
 
 
 def _fmt(x: float, width: int = 8) -> str:
@@ -180,7 +190,7 @@ def main() -> None:
             edge_small = sum(1 for row in bucket if row.edge_b < 0.5)
             print(
                 f"{family:>10s} {size:4d} "
-                f"{statistics.median(lambdas):10.3f} {max(sep_lambdas) if sep_lambdas else float('nan'):12.3f} {_mean(sep_lambdas):12.3f} "
+                f"{_median(lambdas):10.3f} {max(sep_lambdas) if sep_lambdas else float('nan'):12.3f} {_mean(sep_lambdas):12.3f} "
                 f"{edge_nonpos:8d} {edge_small:9d} "
                 f"{_status(bucket, 'action_over_b'):>6s} {_status(bucket, 'action_over_edge_b'):>8s} "
                 f"{_status(bucket, 'flow_over_b'):>6s} {_status(bucket, 'flow_over_edge_b'):>8s}"
@@ -189,10 +199,11 @@ def main() -> None:
     print("Crossover reading:")
     print("  1. Tree control: lambda stays small, edge overlap never happens, and all denominators agree.")
     print("  2. Narrow random-DAG family: lambda is moderate in the bulk, but low-b corners already approach O(1); b still passes.")
-    print("  3. Wide random-DAG family: low-b corners enter the overlap regime (edge_b <= 0), and pure b is the first denominator to fail.")
+    print("  3. Wide random-DAG family: low-b corners enter the overlap regime (edge_b <= 0),")
+    print("     but pure b still passes on the bounded family once singular center-offset trials are excluded.")
     print("  4. So the practical crossover is not a new force law. It is the onset of finite source width in lambda = h_mass / b.")
     print("  5. Use response / b as the leading asymptotic term when lambda is comfortably subcritical;")
-    print("     promote response / (b - h_mass) once low-b corners push lambda toward or past O(1).")
+    print("     promote response / (b - h_mass) as the safer finite-source correction once low-b corners push lambda toward or past O(1).")
 
 
 if __name__ == "__main__":

@@ -1,3 +1,74 @@
+## 2026-04-01 — Directional-measure b review fix and overlap-onset local-density compare
+
+### Current state
+- review surfaced a real integrity bug in the directional-`b` center-offset helpers:
+  - nonpositive `actual_b` was being clamped to `1e-9`
+  - that fabricated huge `response / b` values instead of treating source-overlap cases as singular
+- the stale repo narrative therefore overstated the widened-family `response / b` failure
+- the next science seam after the fix was still the same one:
+  - explain why dense low-`b` random-DAG corners hit `mu <= 0` while tree-like controls stay safely asymptotic
+
+### What changed
+- fixed center-offset normalization in:
+  - `scripts/directional_b_geometry_normalized_compare.py`
+  - `scripts/directional_b_support_distance_compare.py`
+  - `scripts/directional_b_denominator_geometry_diagnostic.py`
+  - `scripts/directional_b_tree_hierarchy_compare.py`
+- reran the affected directional-`b` cards and logs:
+  - `logs/2026-04-01-directional-b-denominator-geometry-diagnostic.txt`
+  - `logs/2026-04-01-directional-b-mass-window-transfer.txt`
+  - `logs/2026-04-01-directional-b-h-over-b-crossover-card.txt`
+  - `logs/2026-04-01-directional-b-overlap-margin-card.txt`
+- corrected the mass-window / crossover / overlap wording in:
+  - `README.md`
+  - `docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+  - the corresponding card scripts
+- added `scripts/directional_b_overlap_onset_local_density_compare.py`
+- wrote `logs/2026-04-01-directional-b-overlap-onset-local-density-compare.txt`
+
+### Strongest confirmed conclusion
+The published widened-family `response / b` failure does not survive the denominator fix.
+- once nonpositive `actual_b` cases are treated as singular instead of being forced through `1e-9`, the five-node mass-window family still keeps a bounded `response / b` pass
+- the real retained hierarchy stays:
+  - leading term `response / b`
+  - safer finite-source correction `response / (b - h_mass)`
+  - packet-support correction secondary
+- the new low-`b` onset compare closes the next mechanism step:
+  - overlap rows have much weaker target-band fill (`0.304` vs `1.200`)
+  - much coarser same-side `y` spacing (`1.508` vs `0.809`)
+  - larger selected span per source step (`1.305` vs `0.808`)
+  - best bounded overlap rule:
+    - `same_side_mean_gap >= 0.7504 and selected_span_step >= 1.1301`
+    - `tp/fp/fn/tn = 7/0/2/14`
+    - accuracy `0.9130`
+
+So the dense-family overlap onset is now best read as sparse target-band occupancy plus coarse local spacing, not as a demonstrated collapse of pure `1/b`.
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/scripts/directional_b_geometry_normalized_compare.py`
+- `/Users/jonreilly/Projects/Physics/scripts/directional_b_support_distance_compare.py`
+- `/Users/jonreilly/Projects/Physics/scripts/directional_b_denominator_geometry_diagnostic.py`
+- `/Users/jonreilly/Projects/Physics/scripts/directional_b_tree_hierarchy_compare.py`
+- `/Users/jonreilly/Projects/Physics/scripts/directional_b_mass_window_transfer.py`
+- `/Users/jonreilly/Projects/Physics/scripts/directional_b_h_over_b_crossover_card.py`
+- `/Users/jonreilly/Projects/Physics/scripts/directional_b_overlap_margin_card.py`
+- `/Users/jonreilly/Projects/Physics/scripts/directional_b_overlap_onset_local_density_compare.py`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-01-directional-b-denominator-geometry-diagnostic.txt`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-01-directional-b-mass-window-transfer.txt`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-01-directional-b-h-over-b-crossover-card.txt`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-01-directional-b-overlap-margin-card.txt`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-01-directional-b-overlap-onset-local-density-compare.txt`
+- `/Users/jonreilly/Projects/Physics/README.md`
+- `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+
+### Exact next step
+- keep the corrected propagator and corrected directional-`b` hierarchy fixed
+- test whether the new overlap-onset observables transfer onto one second dense-family control:
+  - same-side local `y` spacing
+  - target-band fill
+  - selected span per source step
+- only if that transfers, promote the local-density explanation into the retained asymptotic architecture
+
 ## 2026-04-01 — Directional-measure b overlap-margin card
 
 ### Current state
