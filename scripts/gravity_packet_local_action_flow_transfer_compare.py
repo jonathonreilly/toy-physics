@@ -131,6 +131,7 @@ def _edge_flow_weights(
     source_layers: set[int],
     probe_layers: set[int],
     k: float,
+    angle_beta: float = 0.0,
 ) -> dict[int, float]:
     by_layer = {idx: round(pos[0]) for idx, pos in enumerate(positions)}
     flows: dict[int, float] = defaultdict(float)
@@ -143,7 +144,7 @@ def _edge_flow_weights(
         for j in nbs:
             if by_layer[j] not in probe_layers:
                 continue
-            edge_amp, _action, _length = _edge_terms(positions, field, i, j, k)
+            edge_amp, _action, _length = _edge_terms(positions, field, i, j, k, angle_beta=angle_beta)
             if edge_amp == 0:
                 continue
             flows[j] += abs(amp_i * edge_amp) ** 2
@@ -161,6 +162,7 @@ def _packet_flow_action_bias(
     center_y: float,
     k: float,
     retain_share: float,
+    angle_beta: float = 0.0,
 ) -> float:
     flow_weights = _edge_flow_weights(
         positions=positions,
@@ -170,6 +172,7 @@ def _packet_flow_action_bias(
         source_layers=source_layers,
         probe_layers=probe_layers,
         k=k,
+        angle_beta=angle_beta,
     )
     by_layer = {idx: round(pos[0]) for idx, pos in enumerate(positions)}
     upper_nodes = [

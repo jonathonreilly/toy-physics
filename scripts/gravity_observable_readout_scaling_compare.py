@@ -71,6 +71,7 @@ def _edge_terms(
     i: int,
     j: int,
     k: float,
+    angle_beta: float = 0.0,
 ) -> tuple[complex, float, float]:
     x1, y1 = positions[i]
     x2, y2 = positions[j]
@@ -81,7 +82,13 @@ def _edge_terms(
     delay = length * (1.0 + local_field)
     retained = math.sqrt(max(delay * delay - length * length, 0.0))
     action = delay - retained
-    edge_amp = cmath.exp(1j * k * action) / (length ** 1.0)
+    angle_weight = 1.0
+    if angle_beta > 0.0:
+        dx = x2 - x1
+        dy = y2 - y1
+        theta = math.atan2(abs(dy), max(dx, 1e-10))
+        angle_weight = math.exp(-angle_beta * theta * theta)
+    edge_amp = cmath.exp(1j * k * action) * angle_weight / (length ** 1.0)
     return edge_amp, action, length
 
 
@@ -91,6 +98,7 @@ def _propagate_node_amplitudes(
     field: list[float],
     src: list[int],
     k: float,
+    angle_beta: float = 0.0,
 ) -> list[complex]:
     n = len(positions)
     order = _topological_order(adj, n)
@@ -102,7 +110,7 @@ def _propagate_node_amplitudes(
         if abs(amp) < 1e-30:
             continue
         for j in adj.get(i, []):
-            edge_amp, _, _ = _edge_terms(positions, field, i, j, k)
+            edge_amp, _, _ = _edge_terms(positions, field, i, j, k, angle_beta=angle_beta)
             if edge_amp == 0:
                 continue
             amps[j] += amp * edge_amp
@@ -114,6 +122,7 @@ def _propagate_action_means(
     adj: dict[int, list[int]],
     field: list[float],
     src: list[int],
+    angle_beta: float = 0.0,
 ) -> dict[int, float]:
     n = len(positions)
     order = _topological_order(adj, n)
@@ -126,10 +135,10 @@ def _propagate_action_means(
         if w <= 1e-30:
             continue
         for j in adj.get(i, []):
-            _, action, length = _edge_terms(positions, field, i, j, 1.0)
+            edge_amp, action, length = _edge_terms(positions, field, i, j, 1.0, angle_beta=angle_beta)
             if length == 0:
                 continue
-            atten = 1.0 / (length ** 1.0)
+            atten = abs(edge_amp)
             next_weight = w * atten
             weights[j] += next_weight
             action_sum[j] += atten * (action_sum[i] + action * w)
@@ -206,6 +215,7 @@ def _packet_current_bias(
     field: list[float],
     amps: list[complex],
     source_layers: set[int],
+    angle_beta: float = 0.0,
 ) -> float:
     numerator = 0.0
     denominator = 0.0
@@ -217,7 +227,7 @@ def _packet_current_bias(
         if abs(amp_i) < 1e-30:
             continue
         for j in nbs:
-            edge_amp, _, _ = _edge_terms(positions, field, i, j, 5.0)
+            edge_amp, _, _ = _edge_terms(positions, field, i, j, 5.0, angle_beta=angle_beta)
             if edge_amp == 0:
                 continue
             flow = abs(amp_i * edge_amp) ** 2

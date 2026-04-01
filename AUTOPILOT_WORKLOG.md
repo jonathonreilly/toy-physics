@@ -1,3 +1,35 @@
+## 2026-04-01 — Directional-measure b-readout closure
+
+### Current state
+- `main` was already ahead of `origin/main` by the local worker commit `6426608` before this repo-facing step, and the last managed push helper result was still the transient `dns_failure`
+- the retained unitary layer is unchanged:
+  - corrected `1/L^p` transport
+  - directional path measure `exp(-0.8×θ²)`
+- the highest-value detached worker lane was still the open gravity `b`-dependence question under that fixed propagator
+
+### What changed
+- added `scripts/directional_b_readout_compare.py`
+- extended the existing gravity readout helpers so the same observables can be evaluated under the directional path measure without changing their baseline callers
+- hardened the new diagnostic with a sequential fallback when `ProcessPoolExecutor` is unavailable in the restricted automation sandbox
+- ran the bounded sweep logged at `/Users/jonreilly/Projects/Physics/logs/2026-04-01-directional-b-readout-compare.txt`
+
+### Strongest confirmed conclusion
+Changing only the gravity readout does **not** fix the directional-measure `b` problem on the tested random-DAG family. Across actual impact parameters `b ≈ 1.2..8.0` at both `N=12` and `N=25`, every tested readout fails the desired negative slope. Detector-side observables grow with `b`, and the near-mass action-style probes also strengthen rather than weaken, so the wrong-direction trend is already present near the mass-side response instead of being only a downstream detector-centroid artifact.
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/scripts/gravity_observable_readout_scaling_compare.py`
+- `/Users/jonreilly/Projects/Physics/scripts/gravity_packet_local_action_flow_transfer_compare.py`
+- `/Users/jonreilly/Projects/Physics/scripts/directional_b_readout_compare.py`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-01-directional-b-readout-compare.txt`
+
+### Exact next step
+- keep the directional-measure propagator fixed
+- stop spending the next cycle on detector-only or packet-only readout extraction for `b`
+- test one bounded geometry-normalized mass/support observable or mass-window construction that changes the local gravity geometry rather than only the detector readout
+
+### First concrete action
+- reuse `scripts/directional_b_readout_compare.py` with one geometry-normalized mass-side proxy or controlled mass-window family and check whether its attraction strength finally decreases with actual `b` at `N=12` and `N=25`
+
 ## 2026-04-01 — Worker retarget while Claude owns decoherence
 
 ### Current state
