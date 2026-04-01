@@ -28,7 +28,11 @@
 - **5D is currently connectivity-limited rather than decisively physics-limited.**
   - [five_d_connectivity_diagnostic.py](/Users/jonreilly/Projects/Physics/scripts/five_d_connectivity_diagnostic.py)
   - [2026-04-01-five-d-connectivity-diagnostic.txt](/Users/jonreilly/Projects/Physics/logs/2026-04-01-five-d-connectivity-diagnostic.txt)
-  - Densifying the graph improves validity, but the current bounded sweep still does not recover a robust positive exponent.
+  - Densifying the graph improves validity, but the first broad bounded sweep still does not recover a robust positive exponent.
+  - A later dense pilot does recover a narrow positive window:
+    - [five_d_dense_pilot.py](/Users/jonreilly/Projects/Physics/scripts/five_d_dense_pilot.py)
+    - [2026-04-01-five-d-dense-pilot.txt](/Users/jonreilly/Projects/Physics/logs/2026-04-01-five-d-dense-pilot.txt)
+  - Best current read: 5D is not dead, but any positive mass-law signal is still confined to a dense modular corner rather than a stable generic regime.
 
 ## Strong branch-local results that still need careful wording
 
@@ -43,10 +47,12 @@
 
 ## Metric cautions to keep explicit
 
-- **4D true visibility is not yet a settled positive.**
+- **4D true visibility is still not a settled positive.**
   - [four_d_true_visibility.py](/Users/jonreilly/Projects/Physics/scripts/four_d_true_visibility.py)
   - [2026-04-01-four-d-true-visibility.txt](/Users/jonreilly/Projects/Physics/logs/2026-04-01-four-d-true-visibility.txt)
-  - The current script reports `V_gain ~ 0`, but the detector profile is built by grouping on exact floating-point `y` values, so the metric itself should be treated as provisional until detector binning/envelope handling is improved.
+  - [four_d_true_visibility_binned.py](/Users/jonreilly/Projects/Physics/scripts/four_d_true_visibility_binned.py)
+  - [2026-04-01-four-d-true-visibility-binned.txt](/Users/jonreilly/Projects/Physics/logs/2026-04-01-four-d-true-visibility-binned.txt)
+  - The older exact-`y` profile metric was too brittle. The newer fixed-bin / envelope-smoothed check is better, and it still says the retained 4D lane has mostly weak or near-zero strict visibility gain. So the visibility caveat survives even after the metric cleanup.
 
 - **The branch-local 3D joint script still uses an interference proxy, not the strict visibility-gain metric.**
   - That means the strongest “all four pass” language is safe for the branch-local 3D joint run only if the interference clause is read as a proxy.
@@ -54,6 +60,13 @@
 - **The branch-local 3D continuum `b` test does not yet isolate impact parameter cleanly.**
   - Its distance sweep varies the mid-layer mass-node set with `b` instead of holding the source mass configuration fixed.
   - So the specific “continuum-limit `b`-independence is confirmed” wording should stay provisional until rerun with fixed mass count / geometry across `b`.
+- **The current distance-law closure is much stronger than the earlier 4D sweep alone.**
+  - [four_d_distance_scaling.py](/Users/jonreilly/Projects/Physics/scripts/four_d_distance_scaling.py)
+  - [propagator_power_sweep.py](/Users/jonreilly/Projects/Physics/scripts/propagator_power_sweep.py)
+  - [locality_shell_distance_law_fixed_mass.py](/Users/jonreilly/Projects/Physics/scripts/locality_shell_distance_law_fixed_mass.py)
+  - [nonlinear_propagation_distance_law.py](/Users/jonreilly/Projects/Physics/scripts/nonlinear_propagation_distance_law.py)
+  - [effective_metric_distance_law.py](/Users/jonreilly/Projects/Physics/scripts/effective_metric_distance_law.py)
+  - Across those fixed-mass and rescue-variant tests, the same flat/topological distance law survives. The remaining live question is no longer “which weight or shell fixes `1/b`?” but whether the flat force law can be derived analytically or only escaped by a deeper architecture change.
 
 ## Current best claim
 
@@ -67,14 +80,14 @@ The current higher-dimensional story is:
 
 ## Next frontiers
 
-1. **Locality-constrained graph architecture**
-   - test whether explicit spatial-locality shells or locality-preserving graph families can produce a real distance falloff.
+1. **Strict 4D same-graph unification pass**
+   - run gravity, decoherence, binned true visibility, and Born checks on the same retained 4D graph instances.
 
-2. **Strict 4D visibility metric**
-   - replace the current exact-`y` detector-profile handling with a binned/envelope-aware visibility computation.
-
-3. **4D continuum / density limit**
+2. **4D continuum / density limit**
    - determine whether the 4D mass exponent converges toward `1`.
 
-4. **5D density rescue**
-   - determine whether a denser 5D regime yields a stable positive exponent or whether a new limitation appears.
+3. **5D dense robustness map**
+   - determine whether the positive dense 5D window widens into a stable regime or stays connectivity-limited.
+
+4. **Analytic / architectural distance-law frontier**
+   - derive why the current linear path-sum force stays flat/topological, or test genuinely deeper alternatives such as metric emergence or stronger nonlinearity.

@@ -41,15 +41,16 @@
 
 ### Higher-dimensional visibility
 
-- The current 4D true-visibility script reports `V_gain ~ 0` on the retained modular lane.
-- That is a useful cautionary result, but the metric still groups detector weights by exact floating-point `y`, so it should be treated as provisional until the detector profile is rebinned or envelope-checked more carefully.
+- The older exact-`y` 4D visibility script reported `V_gain ~ 0` on the retained modular lane.
+- The newer fixed-bin / envelope-smoothed 4D visibility script is a better check, and it still says the retained 4D lane has mostly weak or near-zero strict visibility gain.
 - Do not yet describe 4D as having a strong strict visibility gain under the true metric.
 
 ### Higher-dimensional distance law
 
 - The current 4D distance sweep is effectively flat/topological, not `1/b`.
-- A branch-side 3D density sweep also points in the same direction, but that specific continuum-distance script still needs a stricter fixed-mass comparison before the strongest “confirmed continuum `b`-independence” wording is safe.
-- So the safe current claim is: **distance-law failure remains a structural architecture issue, not something repaired by the current higher-dimensional or propagator sweeps.**
+- Fixed-mass locality-shell sweeps, propagator-power sweeps, a minimal local saturation nonlinearity, and an induced/effective-distance readout also fail to recover a clean `1/b` law.
+- A branch-side 3D density sweep points the same way, but that specific continuum-distance script still needs a stricter fixed-mass comparison before the strongest “confirmed continuum `b`-independence” wording is safe.
+- So the safe current claim is: **distance-law failure remains a structural architecture issue, not something repaired by the current higher-dimensional, shell-based, or minimal nonlinear rescue sweeps.**
 
 ### Node-removal asymptotics
 
@@ -70,4 +71,4 @@
 
 ## One-line summary
 
-The code now supports a stronger modular-family higher-dimensional story, but the repo should keep its metric language precise: `gap=0` is the true baseline, `pur_cl` and `pur_min` are distinct, gravity SE is paired, 2D large-`N` visibility gain is weak/gone on the retained modular bath lane, dense modular 4D strongly improves decoherence, chokepoint Born-rule checks are clean, node removal is asymptotically insufficient, and the remaining hard gaps are the strict higher-dimensional visibility metric and the still-flat distance law.
+The code now supports a stronger modular-family higher-dimensional story, but the repo should keep its metric language precise: `gap=0` is the true baseline, `pur_cl` and `pur_min` are distinct, gravity SE is paired, 2D large-`N` visibility gain is weak/gone on the retained modular bath lane, dense modular 4D strongly improves decoherence, chokepoint Born-rule checks are clean, node removal is asymptotically insufficient, the 4D strict visibility metric remains weak even after binning cleanup, and the distance law stays flat/topological across the current rescue variants.

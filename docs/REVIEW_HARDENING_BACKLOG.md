@@ -268,10 +268,11 @@ Why it matters:
 
 ## Current priority order
 
-1. locality-constrained graph architecture for the distance law
-2. strict 4D visibility metric / same-graph unification pass
-3. 4D continuum / density-limit card
-4. bounded evolving-network dynamics prototype
+1. strict 4D same-graph unification / binned-visibility pass
+2. 4D continuum / density-limit card
+3. 5D dense robustness map
+4. analytic / architectural distance-law note
+5. bounded evolving-network dynamics prototype
 
 The assumption ledger and literature-positioning note are already the first step toward this harder backlog.
 
@@ -283,10 +284,10 @@ gates.
 - unitary lane:
   - directional measure retained/provisional core
   - gravity `b` hierarchy derivation / transfer
-  - locality-constrained graph families to test whether distance falloff can be restored structurally
+  - analytic derivation of why the current force law stays flat/topological, or bounded tests of genuinely deeper alternatives beyond the current linear path sum
 - non-unitary lane:
   - IF / CL framework retained on modular higher-dimensional families
-  - strict higher-dimensional visibility still needs cleaner metric treatment
+  - strict 4D same-graph visibility/unification still needs one clean retained pass
 - architecture credibility lane:
   - evolving-network dynamics
   - continuum / asymptotic bridge
