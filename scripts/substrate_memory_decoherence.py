@@ -44,14 +44,18 @@ def propagate_substrate_memory(positions, adj, field, src, det, k,
     State: (node, recorded_frozenset) → amplitude
     recorded_frozenset = set of mass nodes where a record exists.
 
-    At mass node m:
-      If m NOT in recorded set:
-        SPLIT: cos(α) × amp (no record) + sin(α) × amp (create record at m)
-      If m IS in recorded set:
-        Apply phase kick exp(i×φ_kick) — the record modifies propagation.
+    At mass node j (destination):
+      If j NOT in recorded set:
+        SPLIT: cos(α) × amp (no record) + sin(α) × amp (create record at j)
 
-    This means later amplitude through a recorded node is phase-shifted,
-    making it interfere differently from amplitude through an unrecorded node.
+    At any node i that IS in recorded set (source):
+      Apply phase kick exp(i×φ_kick) to ALL outgoing edges from i.
+      This makes later propagation FROM recorded nodes history-dependent.
+
+    On forward DAGs, nodes are never revisited. The kick fires on edges
+    LEAVING recorded nodes, which happens when later-layer paths pass
+    through a node that was recorded by earlier-layer paths in a
+    different env branch.
     """
     n = len(positions)
     blocked = blocked or set()
@@ -73,6 +77,10 @@ def propagate_substrate_memory(positions, adj, field, src, det, k,
     cos_a = math.cos(alpha)
     sin_a = math.sin(alpha)
     kick = cmath.exp(1j * phi_kick)
+
+    # Diagnostic counters
+    kick_count = [0]
+    total_mass_trans = [0]
 
     state = {}
     for s in src:
@@ -107,27 +115,27 @@ def propagate_substrate_memory(positions, adj, field, src, det, k,
                 w = math.exp(-BETA*theta*theta)
                 ea = cmath.exp(1j*k*act) * w / (L**1.0)
 
-                if j in mass_set and alpha > 0:
-                    if j in recorded:
-                        # Record EXISTS: apply phase kick, no re-splitting
-                        key = (j, recorded)
-                        if key not in state:
-                            state[key] = 0.0+0.0j
-                        state[key] += amp * ea * kick
-                    else:
-                        # No record: SPLIT
-                        # Branch 0: no record, env unchanged
-                        key_0 = (j, recorded)
-                        if key_0 not in state:
-                            state[key_0] = 0.0+0.0j
-                        state[key_0] += amp * ea * cos_a
+                # History-dependent kick: if SOURCE node i is recorded,
+                # apply phase kick to this outgoing edge
+                if i in recorded:
+                    ea = ea * kick
+                    kick_count[0] += 1
+                total_mass_trans[0] += 1 if (i in mass_set or j in mass_set) else 0
 
-                        # Branch 1: create record at j
-                        rec_1 = recorded | frozenset([j])
-                        key_1 = (j, rec_1)
-                        if key_1 not in state:
-                            state[key_1] = 0.0+0.0j
-                        state[key_1] += amp * ea * sin_a
+                if j in mass_set and alpha > 0 and j not in recorded:
+                    # Unrecorded mass destination: SPLIT
+                    # Branch 0: no record, env unchanged
+                    key_0 = (j, recorded)
+                    if key_0 not in state:
+                        state[key_0] = 0.0+0.0j
+                    state[key_0] += amp * ea * cos_a
+
+                    # Branch 1: create record at j
+                    rec_1 = recorded | frozenset([j])
+                    key_1 = (j, rec_1)
+                    if key_1 not in state:
+                        state[key_1] = 0.0+0.0j
+                    state[key_1] += amp * ea * sin_a
                 else:
                     key = (j, recorded)
                     if key not in state:
@@ -135,7 +143,7 @@ def propagate_substrate_memory(positions, adj, field, src, det, k,
                     state[key] += amp * ea
 
     det_state = {(d, rec): amp for (d, rec), amp in state.items() if d in det}
-    return det_state
+    return det_state, kick_count[0], total_mass_trans[0]
 
 
 def main():
@@ -149,14 +157,15 @@ def main():
     print("=" * 70)
     print()
 
-    print(f"  {'N':>4s}  {'n_mass':>6s}  {'n_env':>6s}  "
+    print(f"  {'N':>4s}  {'n_mass':>6s}  {'n_env':>6s}  {'kicks':>6s}  "
           f"{'pur_sub':>8s}  {'pur_node':>8s}  {'sub_off':>8s}")
-    print(f"  {'-' * 48}")
+    print(f"  {'-' * 56}")
 
     for nl in [8, 12, 18]:
         ps_list, pn_list, p0_list = [], [], []
         n_mass_count = 0
         max_envs = 0
+        total_kicks = 0
 
         for seed in range(3):
             positions, adj, _ = generate_causal_dag(
@@ -174,7 +183,7 @@ def main():
 
             for k in k_band:
                 # Substrate memory
-                ds_s = propagate_substrate_memory(
+                ds_s, n_kicks, n_mass_trans = propagate_substrate_memory(
                     positions, adj, setup["field"], setup["src"], setup["det"],
                     k, mass_set, ALPHA, PHI_KICK, setup["blocked"])
                 ps, _, _, _ = compute_detector_metrics(ds_s, setup["det_list"])
@@ -182,18 +191,19 @@ def main():
                     ps_list.append(ps)
                 envs = set(rec for (d, rec) in ds_s.keys())
                 max_envs = max(max_envs, len(envs))
+                total_kicks += n_kicks
 
-                # Node-label (comparison)
+                # Node-label (comparison — use SAME capped mass_set)
                 from scripts.density_matrix_analysis import propagate_two_register_full
                 ds_n = propagate_two_register_full(
                     positions, adj, setup["field"], setup["src"], setup["det"],
-                    k, setup["mass_set"], setup["blocked"])
+                    k, mass_set, setup["blocked"])
                 pn, _, _, _ = compute_detector_metrics(ds_n, setup["det_list"])
                 if not math.isnan(pn):
                     pn_list.append(pn)
 
                 # Off baseline (α=0)
-                ds_0 = propagate_substrate_memory(
+                ds_0, _, _ = propagate_substrate_memory(
                     positions, adj, setup["field"], setup["src"], setup["det"],
                     k, mass_set, 0.0, 0.0, setup["blocked"])
                 p0, _, _, _ = compute_detector_metrics(ds_0, setup["det_list"])
@@ -201,7 +211,7 @@ def main():
                     p0_list.append(p0)
 
         if ps_list:
-            print(f"  {nl:4d}  {n_mass_count:6d}  {max_envs:6d}  "
+            print(f"  {nl:4d}  {n_mass_count:6d}  {max_envs:6d}  {total_kicks:6d}  "
                   f"{sum(ps_list)/len(ps_list):8.4f}  "
                   f"{sum(pn_list)/len(pn_list):8.4f}  "
                   f"{sum(p0_list)/len(p0_list):8.4f}")
