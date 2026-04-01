@@ -33,7 +33,8 @@ The directional weight penalizes edges that deviate from the forward (layer) dir
 
 The flat path measure (uniform weight over all causal paths) was causing CLT saturation of gravity. Adding a directional continuation preference prevents that saturation while preserving interference, Born rule, and k=0→0.
 
-The directional weight generalizes to 3D as acos(dx/L) without modification.
+The directional weight also has a clean 3D gravity-side generalization as
+`acos(dx/L)` without modification.
 
 ## What this does not establish
 

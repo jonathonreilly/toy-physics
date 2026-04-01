@@ -1,5 +1,44 @@
 # Physics Autopilot Handoff
 
+## 2026-04-01 13:20 America/New_York
+
+### Seam class
+- documentation / architecture alignment
+- directional path measure handoff
+
+### What this loop did
+- refreshed the repo-facing docs around the current lead unitary architecture
+- aligned the angle-β sweep wording with its own table
+- narrowed the 3D angle-weight claim to gravity-side support only
+
+### Current state
+- no detached science child is running
+- lead provisional unitary architecture:
+  - corrected `1/L^p` transport
+  - directional path measure `exp(-0.8×θ²)`
+- current 2D unitary scorecard:
+  - Born PASS
+  - interference PASS
+  - `k=0→0` PASS
+  - gravity scaling guardrail PASS
+  - family transfer PASS on the bounded DAG family
+- current non-unitary read:
+  - tested record architectures still wrong-scale
+  - directional measure is not expected to solve decoherence by itself
+- 3D claim is now disciplined:
+  - supported: `k=0→0`, gravity-side scaling trend, gravity sign check
+  - not yet supported: 3D interference/Born package
+
+### Strongest confirmed conclusion
+The flat path measure was likely the wrong unitary assumption. The best current replacement is a directional continuation-weighted measure that preserves the tested 2D unitary constraints while stopping gravity collapse on the bounded scaling family. Decoherence scaling and the `b`-dependence problem remain separate frontiers.
+
+### Exact next step
+- keep the angle-weight propagator fixed as the lead unitary candidate
+- move the next architecture cycle entirely onto scalable record/environment formation
+
+### First concrete action
+- add one bounded 3D interference/Born smoke test for the angle-weight propagator so the 3D claim can move from “gravity-side only” to a fuller unitary check if the result survives
+
 ## 2026-04-01 05:37 America/New_York
 
 ### Seam class

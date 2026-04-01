@@ -1,3 +1,32 @@
+## 2026-04-01 — Docs refresh after directional measure promotion
+
+### What changed
+- refreshed the repo narrative so the live architecture state matches the current angle-weight result
+- narrowed the 3D claim to gravity-side support only
+- clarified that `β = 0.8` is the best tradeoff, not the only passing angle window
+
+### Current retained read
+- lead provisional unitary propagator:
+  - corrected `1/L^p` transport
+  - directional path measure `exp(-0.8×θ²)`
+- 2D unitary checks:
+  - Born PASS
+  - interference PASS
+  - `k=0→0` PASS
+  - gravity scaling guardrail PASS
+  - family transfer PASS on bounded DAG family
+- current caveats:
+  - decoherence scaling still fails in the tested record architecture
+  - `R_c` compatibility is marginal (`8/10`)
+  - `b`-dependence remains wrong-direction
+  - 3D support is currently gravity-side only (`k=0→0`, gravity scaling trend, gravity sign), not a full 3D unitary-package transfer
+
+### Next frontier
+- keep the directional measure as the lead unitary candidate
+- stop trying to make the propagator solve decoherence
+- focus next architecture work on scalable record/environment formation
+- run a bounded 3D interference/Born smoke test when convenient to close the biggest remaining wording gap on the 3D side
+
 ## 2026-04-01 — Directional path measure promoted (Claude session)
 
 ### What changed
@@ -15,7 +44,7 @@
 ### Next frontier
 - propagator is no longer the bottleneck
 - next work: record/non-unitary architecture for decoherence
-- 3D generalization of directional measure
+- bounded 3D interference/Born smoke test to complement the current gravity-side check
 
 ## 2026-04-01 05:37 America/New_York
 
