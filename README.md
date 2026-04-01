@@ -213,6 +213,7 @@ Reviewer-facing framing docs:
   - 2D unitary checks pass: Born, interference, `k=0→0`, gravity scaling guardrail, and bounded family transfer
   - a bounded 3D unitary smoke test now also passes on a fixed 3D DAG: zero-field coherent visibility reaches `0.9963` on the canonical `k` band, coherent-vs-incoherent detector-profile contrast stays nonzero across that full band (`TV >= 0.1104`), and source-superposition linearity holds to machine precision (`3.18e-14`)
   - 3D gravity-side smoke checks remain encouraging too: `k=0→0` passes, `R_angle` grows from `+0.29` to `+0.57` across the tested size sweep, and attraction appears on `5/8` seeds
+  - a stricter fixed-`b` 3D modular mass-scaling follow-up did not cleanly recover a power law under one retained sweep, so the earlier `sqrt(M)`-style read remains provisional rather than promoted
   - the current caveats are explicit: decoherence scaling still fails in the tested record architecture, `R_c` compatibility is only marginal (`8/10`), and the raw `b` readouts are still wrong-direction even though a bounded geometry-normalized response-density diagnostic now passes
 - G2-style coarse-graining is the first tested architecture family that fixes the gravity scaling guardrail
 - a readout-only micro-preserving gravity prototype now also clears the bounded scaling guardrail on the same `N=8..25` family: near-mass `action_channel` bias grows in stable sign and magnitude from `-0.2456` at `N=12` to `-0.8002` at `N=25`, while the baseline detector centroid still collapses from `+0.7968` to `+0.3989`
