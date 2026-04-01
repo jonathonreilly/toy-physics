@@ -1,3 +1,87 @@
+## 2026-04-01 — Directional-measure b overlap-margin card
+
+### Current state
+- `main` matched `origin/main` at `9991816` before this step
+- the directional `b` lane already had:
+  - asymptotic leading term `response / b`
+  - finite-source correction `response / (b - h_mass)`
+  - reduced crossover variable `lambda = h_mass / b`
+- the repo-tracked work log and handoff were stale, still describing the older janitor reconciliation around `4dfaa53`
+- the next bounded question was which signed geometry variable best explains why dense low-`b` random-DAG corners enter overlap while tree-like controls stay asymptotic
+
+### What changed
+- added `scripts/directional_b_overlap_margin_card.py` as a tracked science card
+- wrote `logs/2026-04-01-directional-b-overlap-margin-card.txt`
+- recast the family dependence into the signed overlap margin:
+  - `mu = edge_b / h_mass = 1 / lambda - 1`
+- refreshed the gravity-side architecture wording so the reduced-variable picture distinguishes:
+  - `lambda` as the crossover control
+  - `mu` as the directly geometric overlap diagnostic
+
+### Strongest confirmed conclusion
+The dense-family crossover is now cleaner to phrase as local overlap geometry, not as a new force law.
+- tree control:
+  - lowest-`b` corner keeps `mu = 3, 5, 11` for `N = 8, 10, 12`
+  - all denominator forms still agree
+- narrow random-DAG family:
+  - low-`b` corner collapses toward the overlap shoulder (`median mu = 0.282` at `N=12`, `0.031` at `N=25`)
+  - the bulk still sits safely positive (`median mu = 4.775`, `4.877`)
+  - `response / b` still passes overall
+- widened random-DAG family:
+  - low-`b` corner crosses into overlap (`median mu = -0.523` at `N=12`)
+  - even the bulk only has modest margin (`median mu = 1.645`, `1.935`)
+  - `response / b` is the first denominator to fail there
+
+So `lambda = h_mass / b` remains the compact crossover variable, but `mu = edge_b / h_mass` is the cleaner signed diagnostic because it stays finite through the overlap regime.
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/scripts/directional_b_overlap_margin_card.py`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-01-directional-b-overlap-margin-card.txt`
+- `/Users/jonreilly/Projects/Physics/README.md`
+- `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+
+### Exact next step
+- keep the propagator fixed
+- explain why route-rich dense random-DAG families drive low-`b` corners to `mu <= 0` while tree-like controls keep large positive overlap margin
+
+### First concrete action
+- compare `mu` against family geometry observables already in the retained cards:
+  - source half-width
+  - low-`b` support separation
+  - path multiplicity / layer occupancy
+
+## 2026-04-01 — Janitor reconciled shared repo after synthesis revision
+
+### Current state
+- the shared repo `main` matched `origin/main` at `4dfaa53`
+- the landed repo-facing change is doc-only synthesis revision:
+  - `4dfaa53` (`Merge final synthesis: honest 24-seed revision, emergence closed`)
+- the tracked work log, handoff, and automation memory still pointed at the older directional-`b` crossover lane
+- the shared checkout was otherwise clean except for untracked `scripts/directional_b_overlap_margin_card.py`
+- no live science child owned the worker lock; the lingering `physics-science` lock file was expired shared state
+
+### What changed
+- acquired the janitor lock
+- re-ran sync checks after the shared repo moved during the janitor pass; final reconciled head is `4dfaa53`
+- ran `python3 scripts/base_confidence_check.py`
+- refreshed the shared handoff and janitor memory to the current synced repo state
+- recorded that `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` is still stale because this sandbox cannot write that path
+- left the untracked overlap-margin compression card untouched
+- did not create a commit or push
+
+### Strongest confirmed conclusion
+The integrity issue was stale coordination metadata, not a broken repo. `main` is synced, the confidence gate still passes, and the only live worktree dirt is the untracked overlap-margin compression card; the remaining stale coordination state is the unwritable `physics-autopilot` memory file.
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-janitor/memory.md`
+
+### Exact next step
+- either land or clear `scripts/directional_b_overlap_margin_card.py` before any further janitor repo cleanup
+- refresh `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` from a context that can write that path before the next janitor pass
+
 ## 2026-04-01 — Directional-measure b h_mass/b crossover card
 
 ### Current state
