@@ -1,6 +1,6 @@
 # Session Summary: Topology Pivot
 **Date:** 2026-04-01
-**Status:** Architecture result locked. Dynamic emergence open.
+**Status:** Architecture result locked. Connection-feedback emergence closed; node-placement emergence open.
 
 ## The architecture story
 
@@ -9,69 +9,90 @@ On discrete causal DAGs with path-sum propagation:
 1. **Gravity works** via the corrected propagator (1/L^p attenuation,
    directional measure, spent-delay action). This is a pure phase effect.
 
-2. **Decoherence requires topology.** On uniform random DAGs, all 14
-   tested environment architectures fail due to geometric convergence
-   (CLT erases slit distinction by N~25). On modular two-channel DAGs,
-   the CL bath achieves stable decoherence through N=100.
+2. **Decoherence is topology-controlled.** On dense random / graph-local
+   lanes, the tested environment architectures converge too much as graphs
+   densify. On modular gap-controlled DAGs, the CL bath achieves stable
+   decoherence through N=100.
 
 3. **Both gravity and decoherence work on the same graph family**
-   (modular DAG with channel separation). Gravity actually improves
-   on modular DAGs because channel structure reduces phase cancellation.
+   (gap-controlled modular DAGs). With wider seed counts, the joint window is
+   broad: every tested gap `0.0..5.0` passes the current joint criteria, and
+   larger gaps strengthen both effects until connectivity breaks.
 
 ## Locked results
 
-### Decoherence on modular DAG (12 seeds, N=12..100)
+### Decoherence on modular DAG (12-seed asymptotic lane, N=12..100)
 ```
 pur_min = 0.93 +/- 0.02 for N >= 25
-(Uniform DAG baseline: 0.986 at N=25)
 Interference preserved (visibility > 0.99)
 S_norm stays in 0.2-0.5 range
 ```
 
-### Gravity on modular DAG (8 seeds, k-band [3,5,7])
+### Joint gravity + decoherence window (24 seeds)
+```
+All tested gaps 0.0..5.0 pass current joint criteria
+Larger gap => stronger gravity and stronger decoherence
+N=40, gap=5.0: gravity +3.47, pur_min 0.889, decoh +0.110
+Crosslink probability is subleading across 0.0..0.10
+```
+
+### Gravity on modular DAG
 ```
 N=25: delta = +3.20 (2.6 SE) — clear deflection toward mass
 N=40: delta = +2.50 (2.6 SE) — gravity persists
 ```
 
-### IF program closure (14 architectures on uniform random DAGs)
-All fail the same way: CLT concentration. Diagnosed in detail
-at docs/DECOHERENCE_FAILURE_ANALYSIS.md.
+### Uniform-random qualification
+The earlier one-point `pur_min = 0.986` ceiling claim at `N=25` was too
+strong for the later 24-seed read. What remains retained is not a single
+ceiling value, but the broader diagnosis that graph-local architectures on
+dense connected families still converge too much and underperform the larger-gap
+modular lane.
 
 ## What we learned about emergence
 
-Simple local growth rules (locality bias, reinforcement, repulsive
-placement, amplitude feedback) do NOT produce persistent channel
-separation. The reasons are clear:
+Simple local or feedback-style growth rules do **not** produce persistent
+channel separation. Seven approaches were tested in total. The reasons are now
+clearer:
 
 - **Probabilistic barriers** (soft locality) are not enough — CLT
   still operates on the amplitude distribution
 - **Amplitude feedback** carries source information, not slit
   information — source is y-symmetric so feedback is too
+- **Post-barrier slit-conditioned connection feedback** also fails —
+  on sufficiently connected graphs the slit asymmetry per node collapses
+  toward `0.5`
+- **Distinguishability-based placement** can create real gaps, but the first
+  tested rules make them too small, too large, or in the wrong place
 - **Topological barriers** (no nodes in gap) are needed — this is
   what the imposed modular gap provides
 
-The deep question: does the topology need to "know about" the
-quantum state to create channels? If yes, this is measurement
-back-reaction.
+The sharpened question is no longer “which connection bias works?”
+It is whether graph dynamics can create or maintain **regions with no nodes at
+the right size and location**.
 
 ## Open questions (prioritized)
 
-1. **Dynamic channel emergence via post-barrier feedback**
-   The amplitude feedback test used pre-barrier source amplitude.
-   A different approach: grow the graph layer by layer, and after
-   the barrier layer, use per-slit amplitude to guide growth.
-   This couples topology evolution to measurement outcomes.
+1. **Node-placement / node-removal growth**
+   Connection feedback is now a closed lane. The next live emergence test is a
+   rule that changes where nodes appear, disappear, or persist, so that a hard
+   gap can form dynamically at the observed good scale instead of overshooting
+   into disconnection.
 
-2. **Asymptotic floor vs drift**
+2. **Boundary-condition interpretation**
+   If no self-regulating placement/removal rule appears cleanly, the remaining
+   serious alternative is that the gap should be treated as part of the
+   effective boundary condition of the emergent geometry.
+
+3. **Asymptotic floor vs drift**
    pur_min at 0.93 could be a true floor or slow drift.
    Need O(100) seeds at each N to resolve.
 
-3. **Continuum interpretation**
+4. **Continuum interpretation**
    Channel separation = discrete analogue of spatial locality /
    branch-preserving geometry. Formalize this connection.
 
-4. **3D gravity on modular DAGs**
+5. **3D gravity on modular DAGs**
    The 3D gravity test (three_d_gravity.py) should be adapted
    to modular DAGs to check whether the deflection result
    generalizes to higher dimensions.
@@ -88,6 +109,7 @@ back-reaction.
 - `scripts/topology_asymptotics.py` — 12-seed N=100 with power law fit
 - `scripts/dynamic_channel_emergence.py` — three local growth rules
 - `scripts/amplitude_feedback_growth.py` — quantum-topology coupling
+- `scripts/slit_conditioned_growth.py` — post-barrier slit-conditioned connection feedback
 - `scripts/gravity_on_modular_dag.py` — gravity test on modular DAGs
 
 ### Updated scripts

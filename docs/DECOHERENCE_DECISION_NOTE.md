@@ -3,6 +3,20 @@
 **Status:** architecture decision point
 **Date:** 2026-04-01
 
+## Update after topology pivot
+
+This note captures the **pre-topology-pivot decision point**. It is still
+useful as a record of why the early graph-local decoherence search failed, but
+it is now superseded in one important respect:
+
+- the IF / CL reduced-description route is no longer merely hypothetical
+- it is retained on the gap-controlled modular family
+- the open question has moved from “can any decoherence route work?” to
+  **“can the good topology emerge dynamically rather than being imposed?”**
+
+So read the detailed option tree below as historical context for the failed
+uniform-random-DAG lane, not as the full current repo status.
+
 ## Current state
 
 The current model now has a much cleaner split than it did at the start of this session:
@@ -13,7 +27,9 @@ The current model now has a much cleaner split than it did at the start of this 
   - `k=0→0`
   - gravity-scaling guardrail
   - bounded family transfer
-- **Non-unitary layer:** no tested endogenous decoherence architecture scales correctly with graph size yet.
+- **Non-unitary layer:** the IF / CL reduced-description route is now retained
+  on the gap-controlled modular family, but no endogenous dynamics law yet
+  generates that good topology.
 
 So the project is no longer bottlenecked by the propagator. It is bottlenecked by the **record / environment architecture**.
 

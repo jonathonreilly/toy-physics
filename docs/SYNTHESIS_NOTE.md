@@ -1,142 +1,151 @@
-# Synthesis Note: Emergent Physics on Discrete Causal DAGs
+# Synthesis Note: Gravity, Decoherence, and Topology on Discrete Causal DAGs
 
-**Date:** 2026-04-01
-**Status:** Architecture result. Joint unification confirmed.
+**Date:** 2026-04-01  
+**Status:** architecture result; dynamic emergence still open
 
-## The claim
+## The current claim
 
-On discrete causal DAGs with path-sum amplitude propagation, both
-gravitational attraction and quantum decoherence emerge from the same
-minimal structure — but only when the graph topology has **channel
-separation** (a spatial gap that prevents cross-channel mixing).
+On discrete causal DAGs with path-sum propagation, the retained architecture is
+now:
 
-Uniform random DAGs support gravity but not scalable decoherence.
-Modular two-channel DAGs support both.
+- **unitary layer:** corrected `exp(i k S_spent) / L^p × exp(-0.8 theta^2)`
+- **non-unitary layer:** IF / CL reduced-description decoherence
+- **geometric control parameter:** channel separation / imposed gap in the graph
 
-There exists a topology parameter window (gap ~ 2.0 in units of
-y_range = 12.0) where both phenomena coexist on the same graph
-instances, with the same propagator, simultaneously.
+The big result is no longer “one clever bath works.” It is:
 
-## The model
+- **the same graph family can support both gravity and decoherence**
+- and the controlling variable is **topology**
 
-**Ontology:** Discrete events (nodes) connected by directed causal
-links (edges). No pre-existing spacetime. Geometry emerges from
-graph structure.
+## The two graph-family lessons
 
-**Propagator:** Corrected form with three ingredients:
-1. Geometric attenuation: 1/L^p (L = edge length, p = 1)
-2. Directional measure: exp(-beta * theta^2) (theta = off-axis angle)
-3. Phase from action: exp(i*k*S) where S = spent delay (field-dependent)
+### 1. Dense random families
 
-**Gravity mechanism:** Mass nodes create a scalar field f(x).
-The spent-delay action S DECREASES near mass (phase valley).
-Paths near mass accumulate less phase, creating constructive
-interference that deflects amplitude toward mass. Gravity is
-a pure phase effect — no force, no metric, just path-sum statistics.
+On the original dense random / uniform-like DAG lane:
 
-**Decoherence mechanism:** Caldeira-Leggett bath coupled to spatial
-y-bins of the per-slit amplitude. Decoherence factor D = exp(-lambda^2 * S)
-where S is the bin-resolved contrast between slit-A and slit-B
-amplitude distributions. The bath suppresses off-diagonal density
-matrix elements proportional to how distinguishable the two slits'
-amplitude patterns are.
+- the corrected propagator retains gravity and Born-safe interference
+- graph-local decoherence architectures still converge too much as graphs densify
+- connection-bias feedback rules do not create lasting separation
 
-## Results
+That lane taught the diagnosis:
 
-### Gravity
-| Graph family | N=25 delta | N=40 delta | Signal |
-|---|---|---|---|
-| Uniform random | +1.11 (3.0 SE) | +1.75 (2.8 SE) | Clear |
-| Modular gap=4 | +1.05 (2.3 SE) | +1.88 (2.7 SE) | Clear |
-| Modular gap=2 | +1.49 (N=25) | — | Clear |
+- CLT acts on amplitude flowing through any sufficiently connected graph
+- weak connection biases are not enough
 
-Gravity works on both uniform and modular DAGs. It grows with N.
+### 2. Gap-controlled modular families
 
-### Decoherence
-| Graph family | N=25 pur_min (24 seeds) | N=40 pur_min | Scaling |
-|---|---|---|---|
-| Uniform random (gap=0) | 0.951 | 0.932 | Improving |
-| Modular gap=2 | 0.937 | 0.938 | Stable |
-| Modular gap=4 | 0.952 | 0.929 | Improving |
-| Modular gap=5 | 0.942 | 0.889 | Strongest |
+On modular two-channel DAGs with an imposed gap:
 
-**Revision (24-seed data):** The earlier 12-seed tests overstated the
-uniform DAG ceiling. With 24 seeds, even gap=0 shows pur_min=0.951
-at N=25. The 14-architecture failure analysis remains valid (all
-individual bath/kernel variants fail), but the CL bath on uniform
-DAGs performs better than initial 4-seed tests suggested.
+- the IF / CL route gives stable decoherence
+- gravity remains positive
+- interference remains strong
+- larger gaps strengthen both effects until connectivity eventually breaks
 
-Channel separation helps — larger gaps give stronger decoherence
-at N=40 — but the effect is a gradient, not a threshold.
+The asymptotic modular lane now supports:
 
-### Joint test (24 seeds, same graph instances)
-| gap | gravity (N=40) | pur_min (N=40) | decoh (N=40) |
-|---|---|---|---|
-| 0.0 | +1.51 | 0.932 | +0.067 |
-| 2.0 | +1.83 | 0.938 | +0.061 |
-| 3.0 | +2.43 | 0.939 | +0.059 |
-| 5.0 | **+3.47** | **0.889** | **+0.110** |
+- `pur_min ~ 0.93 ± 0.02` through the tested `N=100` range
+- visibility still above `0.99`
 
-**The unification window is broad.** ALL gap values from 0.0 to 5.0
-pass both criteria (gravity > 2SE, pur_min < 0.96) with 24 seeds.
-Larger gaps give monotonically stronger gravity and decoherence at N=40.
-Crosslink probability has zero effect (identical results 0.0-0.10).
+So the bottleneck was not the reduced non-unitary framework itself.
+It was the graph family.
 
-## What the topology parameter controls
+## Joint unification result
 
-The gap is a monotonic dial, not a threshold:
-- More gap = stronger channel separation = better decoherence
-- More gap = more coherent in-channel propagation = stronger gravity
-- Too much gap = connectivity breaks (gap > y_range)
+The most important integrated result is the **joint gravity + decoherence**
+phase diagram on the same graph family.
 
-The tradeoff is not gravity-vs-decoherence (both improve together)
-but channel-coherence vs graph-connectivity.
+Current retained read from the wider-seed pass:
+
+- every tested gap in `0.0 .. 5.0` passes the current joint criteria
+- larger gap gives monotonically stronger gravity and stronger decoherence
+- crosslink probability is subleading across the tested `0.0 .. 0.10` range
+
+So the right language is not a narrow sweet spot anymore.
+It is:
+
+- **a broad unification window controlled by topological channel separation**
+
+## What this means physically
+
+The current architecture story is:
+
+1. **Gravity** is a pure phase effect from the corrected propagator.
+2. **Decoherence** is a reduced interaction effect that works when the graph
+   preserves branch-distinguishing structure.
+3. **Topology** controls whether those branch distinctions survive graph growth.
+
+The shared condition is no longer “a better bath” or “a better local kernel.”
+It is:
+
+- **hard topological separation**
+
+That is, branch-preserving geometry appears to be the minimal discrete
+condition for having gravity, interference, and decoherence coexist cleanly.
+
+## What failed
+
+Seven dynamic-emergence approaches now fail in the same structural way:
+
+- locality bias
+- reinforcement
+- repulsive placement
+- pre-barrier amplitude feedback
+- post-barrier slit-conditioned connection feedback
+- distinguishability placement with weak feedback
+- distinguishability placement with strong feedback
+
+The common reason is now sharper:
+
+- they all modify **connections**
+- or create **uncontrolled node gaps**
+- but the working barrier is a property of **where nodes are absent**
+- and in the retained modular family that barrier has a specific scale and
+  location, not just any amount of emptiness
+
+So the next growth question is not another connection-probability sweep.
+It is whether graph dynamics can generate a **self-regulating node-absence
+barrier** with the right size and placement.
 
 ## What is established
 
-1. Gravity: pure phase effect from path-sum on causal DAG. Born rule
-   satisfied (I_3/P = 4e-15). Works on both graph families.
+1. The corrected propagator is the retained unitary core.
+2. The IF / CL route is the retained non-unitary framework.
+3. Gap-controlled modular topology is the first family where both gravity and
+   decoherence work together.
+4. The unification window is broad in gap, not a knife-edge tuning artifact.
 
-2. Decoherence: requires topological channel separation. IF + CL bath
-   framework is validated. Stable through N=100 on modular DAGs.
+## What is still open
 
-3. Unification: both emerge from the same propagator on the same
-   graph family in the same topology parameter window.
+1. **Dynamic emergence**
+   The good topology is imposed, not generated.
 
-4. The bottleneck was geometry, not architecture: 14 bath/kernel
-   variants all fail on uniform DAGs; the simplest bath (CL y-bins)
-   works on modular DAGs.
+2. **Self-regulating node placement / node removal dynamics**
+   The natural next test is a rule that controls where nodes exist at all,
+   rather than only how existing nodes connect, and that stabilizes the gap
+   near the observed good scale instead of overshooting into disconnection.
 
-## What is NOT established
+3. **Boundary-condition interpretation**
+   If that self-regulating rule never appears cleanly, the remaining serious
+   alternative is that the gap should be treated as part of the effective
+   spacetime boundary condition rather than something derivable from a simpler
+   microscopic growth bias.
 
-1. **Dynamic emergence:** Simple local growth rules do not produce
-   channel structure. The gap is imposed, not emergent. The deep
-   question — whether quantum-topology coupling can generate channels —
-   remains open.
+4. **Asymptotics**
+   `pur_min ~ 0.93 ± 0.02` may be a true floor or a slowly drifting large-`N`
+   regime; more seeds are still needed.
 
-2. **Asymptotic behavior:** pur_min at 0.93 +/- 0.02 could be a true
-   floor or slow drift. Per-seed variance (~0.05) dominates.
-
-3. **3D generalization:** All tests are on 2D DAGs (1 spatial + 1
-   causal dimension). The channel structure needs to generalize.
-
-4. **Continuum limit:** The connection between discrete channel
-   separation and continuous spatial locality is informal.
+5. **Continuum interpretation**
+   Channel separation still needs a cleaner bridge to emergent spacetime
+   language.
 
 ## Honest assessment
 
-This is a toy model that demonstrates a structural principle:
-**topological channel separation is the minimal geometric condition
-for both gravity and decoherence to coexist in a path-sum framework
-on discrete causal structure.**
+This is now stronger than two disconnected toy wins.
 
-The result is conceptually clean — the same propagator, the same
-graph, one topology parameter — but the gap is hand-tuned, not
-emergent. The model is 2D, the graphs are small (N=25-100 layers),
-and the decoherence is moderate (pur_min ~ 0.95, not << 1).
+The repo supports a single architectural sentence:
 
-The physics claim is: in a discrete event ontology, the geometry
-that supports quantum interference and gravitational attraction
-must have a specific topological property (channel separation) to
-also support decoherence. This is a constraint on emergent spacetime
-geometry, derivable from the path-sum structure alone.
+- **on discrete causal DAGs, gravity and decoherence can coexist when topology
+  preserves branch separation**
+
+The make-or-break open problem is whether the graph can create that
+branch-preserving topology for itself at the right scale and location.

@@ -19,12 +19,12 @@ not a docs-only gap; it is a small set of major theory conversions.
 
 Goal:
 
-- move from a promising non-unitary framework to a retained scalable law
+- move from a topology-dependent retained result to a more transferable law
 
 Concrete deliverables:
 
 - one decoherence mechanism that:
-  - scales on more than one graph family
+  - scales on more than one graph family or is dynamically generated on the retained one
   - stays physically well-formed after tracing
   - is motivated as a local interaction law, not only as a fitted kernel
 
@@ -32,6 +32,11 @@ Why it matters:
 
 - without a retained decoherence law, the model still lacks one of its core
   claimed bridges from record formation to observed classicality
+
+Current state:
+
+- partly advanced: IF / CL is now retained on the gap-controlled modular family
+- still open: dynamic emergence / transfer beyond imposed good topology
 
 ### Gate B. Genuine evolving-network dynamics story
 
@@ -47,10 +52,38 @@ Concrete deliverables:
   - what is generated
   - what is still imposed
 
+Current sharp version:
+
+- connection-bias feedback is now largely a closed lane
+- first-pass node-placement rules also fail if they create gaps that are too
+  large, too small, or misplaced
+- the active dynamics question is now a **self-regulating** node placement /
+  node removal rule, because the retained barrier is a property of node absence
+  at the right scale rather than weak links
+
 Why it matters:
 
 - this is the deepest remaining substantive gap between the axioms and the
   implementation
+
+## Harder bars
+
+Beyond “ready for top-tier mainstream claims,” the project now has a clearer
+ladder of harder bars:
+
+1. **Field-shifting theory program**
+   - serious outside theorists would feel compelled to engage with the program
+   - requires stronger emergence, robustness, and independent reproduction
+
+2. **Landmark foundational breakthrough**
+   - the work changes the conceptual map of the subject rather than only adding
+     an interesting toy architecture
+   - requires durable asymptotic / continuum and dynamics closure
+
+3. **Nobel-scale breakthrough**
+   - much harder and more empirical than the bars above
+   - would require a real bridge from the theory program to nature-facing
+     discriminators or experimental traction
 
 ### Gate C. Clean continuum / asymptotic bridge
 

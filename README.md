@@ -108,6 +108,48 @@ The current mechanism claims are based on that corrected analysis layer.
 
 The model presently supports the following claims.
 
+### 0. Architecture snapshot (2026-04-01)
+
+If you only want the current high-level state, read this section first.
+
+- **Retained unitary core:** the current lead propagator is corrected
+  `exp(i k S_spent) / L^p × exp(-0.8 θ²)`. It retains the fixed-DAG Born /
+  interference package, preserves `k=0→0`, and gives a gravity response that
+  is now best read as a pure phase effect rather than field-dependent
+  attenuation.
+- **Dense-random local-architecture lane: diagnosed.** On those graph
+  families, the tested record/bath architectures still converge too much as
+  graphs densify. The influence-functional (IF) framework was retained, but
+  graph-local kernels and connection-bias growth rules do not solve the
+  scaling problem on their own.
+- **Topology pivot: positive result.** Modular / gap-controlled DAGs break the
+  earlier geometric ceiling. With the same unitary core and the same CL bath,
+  `pur_min` stays near `0.93 ± 0.02` through the tested `N=100` asymptotic
+  lane while interference remains strong (`V > 0.99`).
+- **Joint unification result:** gravity and decoherence now work on the same
+  gap-controlled graph family. On the current 24-seed joint sweep, **every
+  tested gap from `0.0` to `5.0` passes both criteria**, and larger gaps give
+  monotonically stronger gravity and decoherence until connectivity breaks.
+  Crosslink probability is subleading across the tested `0.0..0.10` range.
+- **Main open problem:** the good topology is still imposed, not generated.
+  Seven emergence attempts now fail cleanly. Connection-bias rules cannot beat
+  CLT on sufficiently connected graphs, and first-pass node-placement rules
+  create gaps that are either too weak, too strong, or in the wrong place.
+  The next make-or-break test is therefore a **self-regulating,
+  geometry-anchored node placement / node removal law**. The fallback read is
+  that the gap may itself be part of the effective physics rather than a
+  derivative of a simpler local growth rule.
+
+The most relevant notes for that current architecture state are:
+
+- [SYNTHESIS_NOTE.md](/Users/jonreilly/Projects/Physics/docs/SYNTHESIS_NOTE.md)
+- [SESSION_SUMMARY_2026-04-01_TOPOLOGY.md](/Users/jonreilly/Projects/Physics/docs/SESSION_SUMMARY_2026-04-01_TOPOLOGY.md)
+- [DECOHERENCE_FAILURE_ANALYSIS.md](/Users/jonreilly/Projects/Physics/docs/DECOHERENCE_FAILURE_ANALYSIS.md)
+- [IF_PROGRAM_CLOSING_NOTE.md](/Users/jonreilly/Projects/Physics/docs/IF_PROGRAM_CLOSING_NOTE.md)
+- [ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md](/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md)
+- [ASSUMPTION_DERIVATION_LEDGER.md](/Users/jonreilly/Projects/Physics/docs/ASSUMPTION_DERIVATION_LEDGER.md)
+- [REVIEW_HARDENING_BACKLOG.md](/Users/jonreilly/Projects/Physics/docs/REVIEW_HARDENING_BACKLOG.md)
+
 ### 1. Effective delay structure
 
 Persistent patterns can generate a local delay field in the toy. Histories evaluated against that field do not behave as if they were propagating on an undistorted fixed background. On the tested boost transformations, the retained update `sqrt(dt^2-dx^2)` is the exact invariant scalar, while coordinate delay, Euclidean edge length, and spent delay all drift. So the toy now has a proper-time-like kinematic scalar even though its gravity dynamics remain nonlinear. When local connectivity is enriched from `8` to `24` to `48` directions, the signal-speed anisotropy at radius `20` falls `8.2374% -> 2.7397% -> 1.3072%`, consistent with roughly `1/n_directions`, so the kinematic sector now has a clean richer-connectivity continuum trend even though the gravity asymptotic law is still unsettled.
@@ -414,7 +456,7 @@ The main unresolved points are:
 - the model now has an exact retained-update / proper-time scalar kinematically, but its relation to the nonlinear gravity action and the observed two-source superposition failure has not yet been reduced to one clean dynamical law
 - the corrected `1/L^p` propagator is now the best retained gravity rule, but its detailed response law is only partly universal: the sign fix, `k=0` pure-phase limit, Born compatibility, interference compatibility, and weak-coupling `k^2` scaling all survive, while the stronger lattice-side force surrogate does not transfer cleanly to generated DAGs (`R^2 ≈ 0.20`)
 - the gravity field has a quantitative shape on the tested grids, but the right large-scale response observable is still unresolved. The earlier range-plateau story was already retracted, and the newer 2D lensing interpretation has also been retracted: attraction is real, but the current scattering observable does not yet define a clean outgoing deflection angle
-- the current record story is mechanistically sharper than it was earlier, but not yet unified into one derived law: fixed-DAG field distortions leave the tested visibility curves unchanged, topology-changing record operators can reshape visibility strongly, injected phase noise decoheres irregular generated DAGs, and the repaired endogenous node-environment register is only weak and geometry-sensitive (`D = 4/12` on the best current downstream two-register slice, `1/12` on slit-adjacent and between-slit variants)
+- the current record story is now topologically split rather than uniformly open: graph-local environment variants still fail or wrong-scale on dense random families, but the IF / CL reduced-description route works on the gap-controlled modular family and strengthens as the imposed gap widens. The unresolved problem is no longer “find any decoherence architecture,” but whether the working channel-separated topology can emerge dynamically from a **self-regulating** node placement / node removal rule instead of being imposed by hand
 - the default self-maintenance rule now looks oscillatory rather than fixed-point, but the wider rule space still contains stable and growing regimes, so the minimal rule-level principle behind persistent identity has not yet been reduced to one clean law
 - low-overlap subtype competition is now much more compressed on the frozen `5504` bucket and exact across the available historical frontier ladder; the first nearby generated edge (`geometry-c/e`) isolates cleanly under a support-collapse guard, and the surviving non-guarded generated pair-only failures (`mode-mix-f`, `local-morph-c`, `mode-mix-d`) now exact-separate from frozen historical `pair-only-sensitive`, `add1-sensitive`, and `add4-sensitive` rows once the moderate anchor-balance band is tightened with `mid_anchor_closure_peak <= 10.000`. Above that ceiling, the current coarse continuation is now cleaner: the held-out `outer-rect` pair at `ultra|mega` shares the same `8/12` mid-packet lift and four-incident flank hinge as the five observed late rows, so the packet-completion law should now be read as the common beyond-ceiling mechanism rather than as a late-only signature. The bounded within-family compare closes the immediate separator on the present basis: the shared packet family already splits into an `outer-rect` low-right-bridge tail, a `taper-hard` two-right-bridge branch, and a `skew-wrap` negative-deep no-right-bridge branch. A paired wider-base guardrail now says the immediate answer is still no fourth shared-packet branch: both `wider:base:skew-wrap:local-morph-c` and `wider:base:skew-wrap:mode-mix-d` drop back to `mid_anchor_closure_peak = 8.000`, `mid_candidate_attached_max = 7.000`, and no flank hinge. A follow-on log-backed closure then sharpens the taper-hard branch itself: the positive-intensity clause still leaks on both wider shoulders unless the shared packet gate is written explicitly, but the cleaner physical clause `high_bridge_right_count >= 1.500` already stays exact across the whole seven-row control set. So the present beyond-ceiling split is now best read as one shared packet regime whose taper-hard arm is specifically the two-right-bridge branch. A finished-log audit then closes the current already-computed outside-family boundary: the exhausted-wall misses, low-support throats, nearby shoulders, and paired wider sentinels all miss the shared packet laws and stay below two right bridges, while the helper-fixed non-base first-hit frontier remains empty. The paired farther `ultra` shoulders now say the same thing one step deeper too: both `ultra:base:skew-wrap:local-morph-c` and `ultra:base:skew-wrap:mode-mix-d` again miss every shared packet law, stay at one right bridge, and still leak only the weaker intensity clause. A fresh scenario-sharded base scan over `ultra|mega|peta|exa` then finds exactly one genuinely new nearby control beyond that paired-shoulder boundary, `exa:base:skew-hard:local-morph-k`. A three-chunk follow-on now resolves what that near miss means. On the six-row family-plus-near-miss set, the old four-rule packet equivalence splits into two layers: `mid_candidate_attached_max >= 7.500` is the only exact separator that survives unchanged, while `mid_anchor_closure_peak` and `mid_candidate_bridge_bridge_closed_pair_max` become exact again only after tightening from `>= 10.000` to `>= 11.000`. A full already-finished boundary audit shows all three of those rules exact against every current outside-family control. The dominant-packet alignment compare then closes the remaining wording seam. The fresh near miss is not one family-like packet competing with an unrelated rotated packet; it is three tied seven-support one-node deletions of the shared family packet:
   - cell `(2, -3)` misses support node `(-1, -1)` and its two incident closed edges
@@ -473,6 +515,9 @@ If you want the more formal reviewer-facing version of this same issue, see:
 
 13. **The project is still much stronger as toy mechanism science than as a bridge to known physics.**  
     The internal map is real enough to be interesting; the translation to standard physical law is still unfinished.
+
+14. **The good decoherence-supporting topology is still imposed rather than generated.**  
+    Gap-controlled modular DAGs are now the first family where gravity and decoherence both work together, but the separating gap is currently built into the generator. Seven emergence attempts now fail: five feedback-style connection-growth rules plus first-pass distinguishability-placement rules. The next real theory hurdle is whether a **self-regulating** node placement or node removal law can generate the right-sized, slit-centered hard gap endogenously, or whether that gap should be treated as part of the effective physics.
 
 ## Where The Detailed History Lives
 

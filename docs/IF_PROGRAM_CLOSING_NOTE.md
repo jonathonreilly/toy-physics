@@ -1,67 +1,110 @@
-# IF Decoherence Program: Closing Note
+# IF Decoherence Program: Uniform-DAG Closure and Topology Outcome
 
 **Date:** 2026-04-01
-**Status:** Closed for uniform random DAGs. Topology pivot next.
+**Status:** uniform-architecture search closed; IF / CL route retained on gap-controlled topology
 
-## Retained framework
+## What was retained
 
-The **Influence Functional (IF)** is the retained decoherence framework.
-It is validated: hermiticity (3.6e-16), baseline (alpha=0 -> purity 1.0),
-partial equivalence with slot-resolved bitstring env (Delta=0.033).
-The IF kernel structure K = prod_encounters cos(alpha * Delta_obs) is
-algebraically clean and physically motivated.
+The **influence-functional (IF)** formulation is still the retained
+reduced-description framework for decoherence in this repo.
 
-## What the experiments showed
+What survived:
 
-14 architectures tested. Two reached correct scaling direction briefly:
+- Hermiticity checks
+- baseline recovery (`alpha = 0 -> purity = 1`)
+- partial agreement with explicit slot-resolved fresh-ancilla bookkeeping
+- clean reduced-density formulation without explicit environment-state blow-up
 
-| Architecture | Mechanism | Best result | Failure mode |
-|---|---|---|---|
-| AFC (amplitude field coherence) | scalar K from phase overlap | |K| drops 0.999->0.91 | single scalar can't mix enough |
-| CL bath (Caldeira-Leggett y-bins) | D = exp(-lambda^2 * S) | decoh grows N=12->18 | pur_min reversal at N=25 |
+The IF framework itself was **not** the bottleneck.
 
-All others (node labels, action bins, evolving phase, edge records,
-directional angles, tensor envs, neighborhood fingerprints) fail the
-same way: CLT concentration of amplitude-weighted distributions.
+## What closed on the old lane
 
-## The geometric ceiling
+The original uniform-random / dense-connected DAG search is now cleanly
+diagnosed.
 
-On uniform random DAGs, both single-slit detector distributions converge:
+What failed there:
 
-```
-pur_min (maximally decohered purity):
-  N=12: 0.9899
-  N=18: 0.9506  <-- brief dip (best decoherence window)
-  N=25: 0.9860  <-- rebounds toward 1
-```
+- node / edge / y-bin / angle labels
+- larger finite registers
+- entangling local env variants
+- fixed-kick substrate memory
+- fresh-ancilla proxies and local-observable IF kernels
+- connection-feedback growth rules meant to induce channeling
 
-Root cause: path multiplicity grows exponentially with depth.
-By N=25, both slits have paths reaching every detector node from
-every direction with similar amplitude-weighted statistics.
-The CLT guarantees this convergence for ALL fixed-dimensional
-observables on these graphs.
+Common failure:
 
-This is a property of the **graph family**, not the bath design.
-No kernel, observable, or coupling strength can escape it on
-uniform random DAGs.
+- as the graph gets sufficiently connected, both slits access almost the same
+  local interaction region
+- amplitude-weighted branch statistics converge
+- tracing removes less than expected
+- connection-bias feedback cannot rescue this, because CLT acts on amplitude
+  flowing through any sufficiently connected graph
 
-## What is NOT ruled out
+So the closed result is:
 
-The IF framework itself is fine. The bottleneck is the geometry.
-Three escape routes remain:
+- **the old local-architecture search on dense connected graph families is not
+  the right frontier anymore**
 
-1. **Non-uniform graph topology** — hierarchical, modular, or
-   scale-free families where slit paths remain structurally
-   separated as N grows. (Next step.)
+## What changed after the topology pivot
 
-2. **Irreversible collapse** — measurement-like projection at
-   mass nodes, breaking linearity of the path sum.
+Changing only the graph family changed the outcome.
 
-3. **Nonlinear propagator** — breaks CLT but likely breaks
-   Born rule too.
+On modular / gap-controlled DAGs:
+
+- the same IF / CL machinery yields stable decoherence
+- interference remains strong
+- gravity still works on the same family
+- larger imposed gap gives stronger gravity and stronger decoherence until
+  connectivity breaks
+
+The older small-sample “narrow sweet spot” story has now been replaced by a
+broader 24-seed read:
+
+- every tested gap from `0.0` to `5.0` passes the current joint criteria
+- larger gaps strengthen both phenomena
+
+So the current repo-facing claim is:
+
+- **the IF / CL route works when the topology preserves branch separation**
+
+## What remains open
+
+The remaining problem is no longer “find another bath.”
+It is:
+
+- **how to generate the right hard topological gap dynamically**
+
+Seven emergence attempts now fail for the same structural reason:
+
+- they only modify **connections**
+- or create **gaps with the wrong size / location**
+- but the retained barrier is a property of **node absence at the right place**
+
+That points to a sharper next frontier:
+
+1. self-regulating node-placement rules
+2. node-removal / non-permanence rules that can stabilize a slit-centered gap
+3. other dynamics that can create or maintain regions with no nodes at the
+   right scale
+4. or, if those fail cleanly, treating the gap as part of the effective
+   boundary condition rather than a simpler derivative growth rule
+
+That is a different class of test from the earlier connection-probability
+feedback sweeps.
 
 ## Decision
 
-Test topology first (option 1). Keep the propagator, IF kernel,
-and CL bath machinery fixed. Change only the graph generator.
-Primary metric: does pur_min stay bounded away from 1 as N grows?
+Keep:
+
+- corrected `1/L^p` transport
+- directional path measure `exp(-0.8 theta^2)`
+- IF / CL reduced-description machinery
+
+Do **not** reopen broad bath/kernel architecture search on dense connected
+random DAGs.
+
+Next decisive question:
+
+- **can graph dynamics create or maintain the node-absence barriers that the
+  working modular topology currently imposes by hand, at the right scale and
+  location?**

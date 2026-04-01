@@ -39,6 +39,13 @@ without modification. A bounded fixed-DAG smoke test now says this is not just
 gravity-side support: the same 3D rule shows a real zero-field interference
 pattern and preserves source-superposition linearity to machine precision.
 
+The role of this note is now sharper after the topology pivot:
+
+- this directional measure is the **retained unitary layer**
+- it is not, by itself, the decoherence solution
+- but it is the unitary core used in the later modular / gap-controlled DAG
+  results where **both gravity and decoherence work on the same family**
+
 ## What this does not establish
 
 - Decoherence scaling is not addressed. This is expected: the directional weight modifies the unitary propagator, and decoherence is a non-unitary (record/environment) problem.
@@ -56,6 +63,7 @@ pattern and preserves source-superposition linearity to machine precision.
 ## Next work
 
 The propagator is no longer the bottleneck. The next frontier is:
-1. Record/environment architecture for decoherence scaling (independent of propagator)
-2. b-dependence as a separate gravity-sector question, now narrowed to deriving the asymptotic `b` leading term, its `b - h_mass` finite-source correction, and explaining the `lambda = h_mass / b` crossover into overlap on dense families
-3. Principled derivation of β from graph geometry
+1. dynamic emergence of the topology that lets the retained non-unitary IF / CL route work
+2. `b`-dependence as a separate gravity-sector question, now narrowed to deriving the asymptotic `b` leading term, its `b - h_mass` finite-source correction, and explaining the `lambda = h_mass / b` crossover into overlap on dense families
+3. principled derivation of `beta` from graph geometry
+4. transfer of the joint gravity+decoherence story to dynamically generated or higher-dimensional graph families

@@ -1,7 +1,7 @@
 # Decoherence Failure Analysis
 
 **Date:** 2026-04-01
-**Experiments tested:** 12 architectures across ~25 experiments
+**Experiments tested:** 14 decoherence architectures on uniform random DAGs, plus topology-pivot and growth follow-ons
 
 ## The problem
 
@@ -9,7 +9,15 @@ Detector-state purity Tr(ρ²) increases with graph size under every tested envi
 - N=8: purity ~0.60-0.74 (good decoherence)
 - N=25: purity ~0.85-0.94 (weak decoherence)
 
-This means the model's decoherence weakens as the system grows — the opposite of physical decoherence.
+This means the model's decoherence weakens as the system grows — the opposite
+of physical decoherence.
+
+That conclusion is now **scoped**:
+
+- it remains true for the tested graph-local environment architectures on the
+  original dense random-DAG lane
+- but it is no longer the whole story once the graph family is changed into a
+  **gap-controlled modular topology**
 
 ## What was tested
 
@@ -104,37 +112,91 @@ DETECTOR DISTRIBUTIONS, not just the bath.
 
 ## Topology pivot result (2026-04-01)
 
-The non-uniform topology hypothesis was **confirmed**. Three graph families tested:
+The non-uniform-topology hypothesis was **confirmed**.
+
+### 1. Modular topology breaks the old ceiling picture
+
+Three graph families were tested in the first pivot:
 
 | Family | pur_min at N=25 | pur_min at N=40 | Verdict |
 |---|---|---|---|
-| Uniform random (baseline) | 0.944 | not tested | ceiling |
-| Hierarchical (channel leak=0.05) | 0.950 | not tested | rebounds |
-| **Modular two-channel (gap=4.0)** | **0.942** | **0.893** | **breaks ceiling** |
-| Preferential attachment | 0.996 | not tested | fails |
+| Uniform random (baseline) | 0.986 | not tested in the original pivot log | ceiling |
+| Hierarchical (channel leak) | rebounds | not retained | rebounds |
+| **Modular two-channel** | **0.942** | **0.893** | **breaks ceiling** |
+| Preferential attachment | ~1.0 | not retained | fails |
 
-The modular two-channel DAG with a y-gap between channels preserves slit-path
-structural separation as N grows. At N=40:
-- **pur_min = 0.893** (lowest ever measured at large N)
-- **decoh = +0.107** (strongest CL bath decoherence ever measured)
-- **S_norm = 0.457** (bath contrast still growing)
-- No reversal — pur_min DECREASES at N=40 after brief N=25-30 plateau
+The modular two-channel DAG with a y-gap between channels preserves
+slit-path structural separation as N grows. In the later asymptotic pass:
 
-The bottleneck was the **graph family**, not the bath design. The IF framework
-and CL bath work correctly when given topology that preserves slit distinction.
+- **pur_min stays near `0.93 ± 0.02` through the tested `N=100` lane**
+- **interference remains strong** (`V > 0.99`)
+- **CL bath contrast stays finite**
+- the old sharp reversal picture does not return on the retained modular lane
+
+So the bottleneck was the **graph family**, not the IF / CL machinery.
+
+### 2. The joint gravity+decoherence phase diagram is broad, not narrow
+
+The later 24-seed modular sweep changed the earlier small-sample read.
+Once gravity and decoherence were measured on the **same graph instances**
+with enough seeds, the result was not a narrow sweet spot but a broad
+unification window.
+
+Current retained read:
+
+- every tested gap from `0.0` to `5.0` passes the current joint criteria
+- larger gaps give **monotonically stronger gravity and stronger decoherence**
+  until connectivity eventually breaks
+- crosslink probability is subleading across the tested `0.0..0.10` range
+
+So the emerging statement is stronger than “modular helps.” It is:
+
+- **hard topological separation is a control parameter**
+- more imposed gap means stronger branch preservation, stronger decoherence,
+  and stronger gravity on the tested family
+
+### 3. Dynamic emergence is still open
+
+Simple local growth rules do **not** yet generate the good channel structure.
+The failed family is now broader and cleaner:
+
+- locality bias gives temporary clustering but recoheres by larger `N`
+- reinforcement / repulsion also fail at larger `N`
+- pre-barrier source-amplitude feedback fails because the source is y-symmetric
+  before the slit/barrier structure exists
+- post-barrier slit-conditioned connection growth also fails because on
+  sufficiently connected graphs both slits already reach almost every
+  post-barrier node, so the local asymmetry signal collapses toward `0.5`
+- first-pass distinguishability-based node placement creates real gaps, but at
+  the wrong size or location: too small does not help, too large disconnects
+  the graph
+
+So the open emergence question is now sharper:
+
+- **can node placement or node removal create persistent hard gaps at the right
+  size and midpoint location?**
+- the remaining open growth lane is no longer another connection-bias rule
+  but a rule for where nodes exist at all
 
 ## Honest assessment (updated)
 
-On **uniform random DAGs**, all 14 architectures fail due to geometric
-convergence (CLT). The decoherence-at-scale program is closed for this
-graph family.
+On the original **uniform-random / dense-connected** lanes, the tested
+graph-local environment architectures still fail by geometric convergence.
+That diagnostic remains real.
 
-On **modular two-channel DAGs**, the CL bath achieves scaling decoherence:
-pur_min stays bounded below 0.95 (and continues improving) at N=40.
-The resolution is topological, not architectural.
+But the sharper repo-facing result is now this:
+
+- the IF / CL route is retained on a broader **gap-controlled modular family**
+- the joint gravity+decoherence window is broad, not narrow
+- stronger imposed gap gives stronger effects until connectivity breaks
+
+So the resolution is **topological first**, not “find a cleverer bath.”
 
 Open questions:
-- Does the modular topology have a physical interpretation? (channel
-  separation ↔ spatial locality in emergent geometry?)
-- Can the channel structure emerge dynamically from an evolving graph?
-- What is the asymptotic pur_min as N→∞ on modular DAGs?
+
+- Does the modular channel structure have a clean physical interpretation?
+  (channel separation ↔ branch-preserving spatial locality?)
+- Can a self-regulating node-placement or node-removal rule generate the
+  channel structure dynamically instead of imposing it by hand?
+- Does `pur_min ~ 0.93 ± 0.02` represent a true floor, or a slower large-`N`
+  drift that still needs more seeds to resolve?

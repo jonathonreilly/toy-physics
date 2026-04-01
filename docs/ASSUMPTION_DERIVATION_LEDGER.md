@@ -29,9 +29,9 @@ This ledger is meant to make that separation harder to blur in future writeups.
 | Gravity sign and phase-valley mechanism | **numerically retained + partly derived** | Wrong-sign antigravity from the older attenuation was identified and removed. The phase-valley picture and weak-coupling `k²` scaling are now analytically motivated inside the current toy. |
 | Gravity distance law / `b`-dependence | **open** | Attraction is retained, but the current response still grows with `b` in the wrong direction on the tested random-DAG family. |
 | 3D transfer of the unitary package | **partly retained** | A bounded 3D smoke package exists and is encouraging, but the 3D story is still a smoke package, not a full mature transfer. |
-| Decoherence as durable-record formation | **motivated, not retained at scale** | The conceptual framing remains good, but no tested endogenous record/environment architecture scales cleanly yet on growing random DAGs. |
-| Decoherence influence-functional route | **open but promising** | This is the current most interesting non-unitary direction because it may encode the reduced effect of local interactions without explicit env bookkeeping. It is not yet retained. |
-| Genuine evolving-network dynamics | **open** | The repo still does not have a fully satisfying dynamics-first implementation of Axiom 1. This remains one of the highest-value backlog items. |
+| Decoherence as durable-record formation | **partly retained effective story** | The record-formation framing is now numerically supported on the gap-controlled modular family: the retained IF / CL route yields stable decoherence there. What is still open is dynamic emergence of the topology that makes those records effective. |
+| Decoherence influence-functional route | **retained on one topology family, not yet generic law** | The IF / CL reduced-description route is no longer merely promising: it works on modular gap-controlled DAGs and supports the current non-unitary architecture. What is still missing is transfer beyond that family and a more endogenous derivation of the good topology. |
+| Genuine evolving-network dynamics | **open** | The repo still does not have a fully satisfying dynamics-first implementation of Axiom 1. The failed feedback-based growth rules sharpened the next step: the open lane is now node placement / node removal dynamics that can create hard topological gaps. |
 | Continuum / asymptotic bridge | **open** | Some bounded scaling evidence now exists, but the continuum-limit story is still incomplete. |
 
 ## What this means
@@ -39,7 +39,7 @@ This ledger is meant to make that separation harder to blur in future writeups.
 The honest current status is:
 
 - the project has a **retained toy unitary architecture**
-- it has a **much sharper non-unitary frontier**
+- it has a **retained non-unitary framework on one good topology family**
 - but it does **not** yet derive its own core mathematics from a deeper evolving-network dynamics
 
 So the best current claim is still:
@@ -55,7 +55,7 @@ not:
 When writing papers, notes, or README summaries:
 
 - call the directional path measure a **retained effective law** or **provisional unitary architecture**
-- call the decoherence story an **open interaction-law problem**
+- call the decoherence story a **retained topology-dependent reduced law with open emergence**
 - call the delay/action/amplitude machinery **assumed or selected ingredients**, not derivations
 - reserve stronger “derived” language for:
   - fixed-DAG pairwise interference
