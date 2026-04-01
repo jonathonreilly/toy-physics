@@ -132,6 +132,7 @@ def generate_modular_dag(
     connect_radius: float = 3.0,
     rng_seed: int = 42,
     crosslink_prob: float = 0.02,
+    gap: float = 4.0,
 ) -> tuple[list[tuple[float, float]], dict[int, list[int]], list[float]]:
     """Two-channel modular DAG with sparse probabilistic crosslinks.
 
@@ -152,7 +153,6 @@ def generate_modular_dag(
     layer_indices: list[list[int]] = []
 
     barrier_layer = n_layers // 3
-    gap = 4.0  # y-gap between channels
 
     for layer in range(n_layers):
         x = float(layer)
