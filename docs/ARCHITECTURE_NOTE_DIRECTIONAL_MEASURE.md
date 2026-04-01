@@ -28,7 +28,7 @@ The directional weight penalizes edges that deviate from the forward (layer) dir
 | family transfer | r=2..5 DAGs, neutral on trees | — |
 | R_c compat | 8/10 (2 edge cases) | — |
 | decoherence scaling | FAIL (purity rises) | — |
-| b-dependence | not fixed (R increases with b) | — |
+| b-dependence | mixed: raw R increases with b, but bounded response-density diagnostics decrease with b | — |
 
 ## What this establishes
 
@@ -43,7 +43,7 @@ pattern and preserves source-superposition linearity to machine precision.
 
 - Decoherence scaling is not addressed. This is expected: the directional weight modifies the unitary propagator, and decoherence is a non-unitary (record/environment) problem.
 - The 3D support is still a smoke package, not a full 3D Sorkin / three-slit theorem.
-- The b-dependence (deflection increasing with impact parameter) is not fixed.
+- The raw b-dependence (deflection/readout increasing with impact parameter) is not fixed. A bounded geometry-normalized response-density diagnostic now decreases with b on the tested random-DAG family, but the retained physical normalization is still open.
 - β = 0.8 is empirically chosen. A derivation from the axioms or from the graph's intrinsic geometry is still needed.
 - The 2 R_c edge cases mean the weight slightly narrows the zero-field interference threshold at some geometries.
 
