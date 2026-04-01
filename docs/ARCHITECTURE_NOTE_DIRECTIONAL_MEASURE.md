@@ -28,7 +28,7 @@ The directional weight penalizes edges that deviate from the forward (layer) dir
 | family transfer | r=2..5 DAGs, neutral on trees | — |
 | R_c compat | 8/10 (2 edge cases) | — |
 | decoherence scaling | FAIL (purity rises) | — |
-| b-dependence | mixed: raw R increases with b, but bounded response-density diagnostics decrease with b; the hierarchy transfers to the tree control | — |
+| b-dependence | mixed: raw R increases with b, but bounded response-density diagnostics decrease with b; the hierarchy transfers to the tree control and the crossover reduces to `lambda = h_mass / b` | — |
 
 ## What this establishes
 
@@ -43,7 +43,7 @@ pattern and preserves source-superposition linearity to machine precision.
 
 - Decoherence scaling is not addressed. This is expected: the directional weight modifies the unitary propagator, and decoherence is a non-unitary (record/environment) problem.
 - The 3D support is still a smoke package, not a full 3D Sorkin / three-slit theorem.
-- The raw b-dependence (deflection/readout increasing with impact parameter) is not fixed. A bounded geometry-normalized response-density diagnostic now decreases with b on the tested random-DAG family, and the current bounded hierarchy is sharper than before: center-offset density is the asymptotic leading term, nearest-edge density `b - h_mass` is the robust finite-source correction once the source width is widened, and support-gap is a secondary discrete packet-support correction. The tree-control transfer check still says the hierarchy survives when `delta_packet` stays tiny; the new mass-window transfer card says the finite-source correction becomes essential once `h_mass / b` is no longer small on the dense family.
+- The raw b-dependence (deflection/readout increasing with impact parameter) is not fixed. A bounded geometry-normalized response-density diagnostic now decreases with b on the tested random-DAG family, and the current bounded hierarchy is sharper than before: center-offset density is the asymptotic leading term, nearest-edge density `b - h_mass` is the robust finite-source correction once the source width is widened, and support-gap is a secondary discrete packet-support correction. The reduced-variable picture is now `lambda = h_mass / b`: tree-like controls stay low-`lambda`, while widened dense families force the finite-source correction only once low-`b` corners enter overlap.
 - β = 0.8 is empirically chosen. A derivation from the axioms or from the graph's intrinsic geometry is still needed.
 - The 2 R_c edge cases mean the weight slightly narrows the zero-field interference threshold at some geometries.
 
@@ -57,5 +57,5 @@ pattern and preserves source-superposition linearity to machine precision.
 
 The propagator is no longer the bottleneck. The next frontier is:
 1. Record/environment architecture for decoherence scaling (independent of propagator)
-2. b-dependence as a separate gravity-sector question, now narrowed to deriving the asymptotic `b` leading term, its `b - h_mass` finite-source correction, and explaining when dense families inflate the secondary packet-support correction
+2. b-dependence as a separate gravity-sector question, now narrowed to deriving the asymptotic `b` leading term, its `b - h_mass` finite-source correction, and explaining the `lambda = h_mass / b` crossover into overlap on dense families
 3. Principled derivation of β from graph geometry

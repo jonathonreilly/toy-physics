@@ -1,3 +1,44 @@
+## 2026-04-01 — Directional-measure b h_mass/b crossover card
+
+### Current state
+- the directional `b` lane already had:
+  - asymptotic leading term `response / b`
+  - finite-source correction `response / (b - h_mass)`
+  - secondary packet-support correction `response / (b - h_mass - delta_packet)`
+- the next exact question was what reduced variable controls the crossover between the first two
+
+### What changed
+- added `scripts/directional_b_h_over_b_crossover_card.py`
+- wrote `logs/2026-04-01-directional-b-h-over-b-crossover-card.txt`
+- reused the retained random-DAG mass-window family plus the tree control
+- reduced the crossover to one bounded variable:
+  - `lambda = h_mass / b`
+
+### Strongest confirmed conclusion
+The crossover is now compact enough to phrase as one reduced-variable picture rather than as a list of special cases.
+- tree control:
+  - `lambda` stays small (`median 0.026..0.100`)
+  - all denominator forms agree
+- narrow random-DAG family:
+  - bulk `lambda` stays moderate (`median 0.233..0.307`)
+  - low-`b` corners approach `O(1)`
+  - `response / b` still passes
+- widened random-DAG family:
+  - the separated bulk still has only moderate `lambda` (`mean 0.440..0.461`)
+  - but low-`b` corners enter the overlap regime (`edge_b <= 0`)
+  - `response / b` is the first denominator to fail there while `response / (b - h_mass)` remains robust
+
+So the practical gravity crossover is the onset of finite source width in `lambda = h_mass / b`.
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/scripts/directional_b_h_over_b_crossover_card.py`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-01-directional-b-h-over-b-crossover-card.txt`
+
+### Exact next step
+- keep the propagator fixed
+- stop denominator searches
+- derive or explain why dense random-DAG low-`b` corners enter overlap while tree-like controls stay safely asymptotic
+
 ## 2026-04-01 — Directional-measure b mass-window transfer card
 
 ### Current state
