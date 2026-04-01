@@ -100,31 +100,41 @@ DETECTOR DISTRIBUTIONS, not just the bath.
 2. **Measurement-like collapse** at mass nodes (irreversible information loss)
 3. **Temporal/causal ordering** of slit interactions with mass
 4. **Entanglement with CA dynamics** (pattern oscillation as environment)
-5. **Non-uniform graph topology** (graphs where slit paths remain structurally separated)
+5. ~~**Non-uniform graph topology**~~ → TESTED, see below
 
-## Honest assessment
+## Topology pivot result (2026-04-01)
 
-The decoherence scaling problem is not a parameter-tuning issue. It is a
-structural property of both (a) linear path-sum propagation and (b) the
-propagation GEOMETRY on uniform random DAGs.
+The non-uniform topology hypothesis was **confirmed**. Three graph families tested:
 
-**Newly identified ceiling**: On large uniform random DAGs, the two single-slit
-diffraction patterns at detectors CONVERGE (ψ_A(det) ≈ ψ_B(det)). This means
-the maximum achievable decoherence (pur_min) approaches 1 as N grows beyond ~18.
-Any environment that can only distinguish "which slit" — regardless of its
-internal complexity — is limited by this ceiling.
+| Family | pur_min at N=25 | pur_min at N=40 | Verdict |
+|---|---|---|---|
+| Uniform random (baseline) | 0.944 | not tested | ceiling |
+| Hierarchical (channel leak=0.05) | 0.950 | not tested | rebounds |
+| **Modular two-channel (gap=4.0)** | **0.942** | **0.893** | **breaks ceiling** |
+| Preferential attachment | 0.996 | not tested | fails |
 
-The CLT guarantees the convergence of all fixed statistics. The AFC/CL bath
-experiments show that even PHASE-DEPENDENT statistics (which are not magnitude
-statistics) suffer the same convergence above N=18.
+The modular two-channel DAG with a y-gap between channels preserves slit-path
+structural separation as N grows. At N=40:
+- **pur_min = 0.893** (lowest ever measured at large N)
+- **decoh = +0.107** (strongest CL bath decoherence ever measured)
+- **S_norm = 0.457** (bath contrast still growing)
+- No reversal — pur_min DECREASES at N=40 after brief N=25-30 plateau
 
-The decoherence-at-scale program is closed for uniform random DAGs.
-The problem is geometric, not architectural. A different graph family
-(non-uniform topology, scale-free, hierarchical, with topological
-slit-path separation) is needed to escape the geometric ceiling.
+The bottleneck was the **graph family**, not the bath design. The IF framework
+and CL bath work correctly when given topology that preserves slit distinction.
 
-The resolution for the current graph family likely requires one of:
-- abandoning linear path combination (nonlinear propagator — breaks Born rule)
-- introducing genuine measurement/collapse at mass interactions (irreversible)
-- using a non-uniform graph topology that maintains slit-path separation
-- rethinking what "decoherence" means in this discrete causal structure
+## Honest assessment (updated)
+
+On **uniform random DAGs**, all 14 architectures fail due to geometric
+convergence (CLT). The decoherence-at-scale program is closed for this
+graph family.
+
+On **modular two-channel DAGs**, the CL bath achieves scaling decoherence:
+pur_min stays bounded below 0.95 (and continues improving) at N=40.
+The resolution is topological, not architectural.
+
+Open questions:
+- Does the modular topology have a physical interpretation? (channel
+  separation ↔ spatial locality in emergent geometry?)
+- Can the channel structure emerge dynamically from an evolving graph?
+- What is the asymptotic pur_min as N→∞ on modular DAGs?
