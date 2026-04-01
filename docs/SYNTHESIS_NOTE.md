@@ -1,22 +1,30 @@
 # Synthesis Note: Emergent Physics on Discrete Causal DAGs
 
-**Date:** 2026-04-01 (revised with 24-seed data)
-**Status:** Architecture result locked. Emergence program closed.
+**Date:** 2026-04-01 (final revision: bugfixes, corrected metrics)
+**Status:** Architecture result locked. Emergence program closed (9 approaches).
 
-## The claim (revised)
+## The claim (corrected)
 
-On discrete causal DAGs with path-sum amplitude propagation, both
-gravitational attraction and quantum decoherence emerge from the same
-minimal structure. The CL bath achieves pur_min ~ 0.93-0.95 on BOTH
-uniform and modular DAGs when averaged over sufficient seeds (16+).
+On discrete causal DAGs with path-sum amplitude propagation:
 
-Channel separation (modular DAG) improves the result — especially at
-large N where gap=5 gives pur_min=0.889 — but the uniform baseline
-is stronger than initial 4-seed tests suggested.
+1. **Gravity** (corrected propagator) produces deflection toward mass
+   on modular DAGs. Signal confirmed with paired per-seed SE:
+   gap=4, N=25: delta=+3.2 (2.5 SE). On uniform DAGs, 8 seeds
+   insufficient for significance.
 
-**Important revision:** The "geometric ceiling" (pur_min=0.986 on
-uniform DAGs) was partially a small-sample artifact. With 24 seeds,
-uniform DAGs show pur_min=0.951 at N=25, not 0.986.
+2. **Decoherence** (CL bath) achieves pur_cl ~ 0.93-0.96 at
+   intermediate N (25-50) on both uniform and modular DAGs with
+   24 seeds. The geometric ceiling returns at N=80 (pur_cl ~ 0.98)
+   on all tested topologies.
+
+3. **Topology matters**: the modular gap-controlled family has a
+   broad parameter window where both gravity and decoherence work.
+   Larger gaps improve both metrics monotonically.
+
+**Bugfix note:** gap=0 in the modular generator was NOT equivalent
+to the uniform baseline (channelized placement and edge filtering
+still active). Fixed and verified. With the fix, gap=0 IS uniform,
+and the broad-window result holds across the full range.
 
 There exists a topology parameter window (gap ~ 2.0 in units of
 y_range = 12.0) where both phenomena coexist on the same graph
@@ -115,7 +123,20 @@ but channel-coherence vs graph-connectivity.
    DAGs with 4 seeds. The CL bath (exponential D=exp(-lambda^2*S)) is
    the only architecture that works, on any graph family.
 
-## Emergence program: closed (8 approaches tested)
+## Large-N ceiling (24-seed confirmation)
+
+The geometric ceiling is real but delayed relative to initial tests:
+```
+N=25: pur_min = 0.953 (uniform), 0.948 (removal)
+N=40: pur_min = 0.945 (uniform), 0.931 (removal)  ← best window
+N=60: pur_min = 0.967 (uniform), 0.968 (removal)  ← ceiling returns
+N=80: pur_min = 0.987 (uniform), 0.982 (removal)  ← approaching 1
+```
+
+CLT convergence eventually dominates on ALL tested topologies.
+The CL bath works at intermediate N (25-50) but weakens at large N.
+
+## Emergence program: closed (9 approaches tested)
 
 | # | Approach | Type | Result |
 |---|----------|------|--------|
@@ -127,26 +148,32 @@ but channel-coherence vs graph-connectivity.
 | 6 | Distinguishability placement (mild) | Node placement | Gap ~2 but no improvement |
 | 7 | Distinguishability placement (strong) | Node placement | Gap too large, disconnects |
 | 8 | Calibrated alpha sweep | Node placement | No alpha beats uniform |
+| 9 | **Node removal (prune=0.10)** | **Node removal** | **Marginal improvement at N=40** |
 
-**Conclusion:** Local growth rules cannot produce the specific gap
-geometry needed. Connection rules fail because CLT operates on any
-connected graph. Placement rules create gaps but can't control size
-or location. The uniform baseline is stronger than initially measured.
+**Approach 9 (node removal)** is the only approach that improves on
+the uniform baseline: delta pur_min = -0.015 at N=40. But the effect
+is marginal (below 1.5 SE paired significance) and the ceiling still
+returns at N=80.
+
+Physics: "prune events that don't carry which-path information."
+This is the closest to a physically motivated emergence mechanism.
 
 ## What is NOT established
 
-1. **Dynamic emergence:** 8 approaches tested, all fail. The gap
-   may be a boundary condition on emergent spacetime, not derivable
-   from a simpler local rule.
+1. **Scalable emergence:** 9 approaches tested. Node removal shows
+   marginal improvement at intermediate N but CLT ceiling returns
+   at large N on all topologies. The fundamental issue is that
+   linear path-sum propagation on ANY sufficiently connected graph
+   leads to CLT convergence of per-slit statistics.
 
 2. **3D generalization:** All tests are 2D (1 spatial + 1 causal).
 
 3. **Continuum limit:** Discrete channel separation ↔ spatial
    locality connection is informal.
 
-4. **Strong decoherence:** pur_min ~ 0.93 is moderate, not << 1.
-   Whether this can reach physically meaningful decoherence levels
-   (pur_min < 0.5) on any topology is unknown.
+4. **Strong decoherence:** pur_min ~ 0.93 at best (N=40 with
+   removal or modular gap=5). Never reaches << 0.5. The linear
+   path-sum may fundamentally limit decoherence depth.
 
 ## Honest assessment (revised)
 
