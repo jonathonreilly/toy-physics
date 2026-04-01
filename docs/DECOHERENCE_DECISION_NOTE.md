@@ -42,12 +42,37 @@ The tested CA-oscillation / field-averaging route also failed. Rotating the acti
 
 So the tested field-mediated route failed by **Laplacian smoothing**, not by path convergence.
 
+### 3. Larger environment spaces fail if the coupling stays deterministic
+
+The most recent finite-env extensions sharpen the same point further. Qubit-per-mass and other enlarged-register variants do create much larger nominal environment spaces, but they still do **not** create enough occupied detector-state entropy to resist recoherence on larger graphs.
+
+The important distinction is:
+
+- **environment dimensionality** can be large
+- while **environment entropy under the actual coupling law** stays low
+
+In the tested architectures, the system-environment coupling is mostly a deterministic assignment:
+
+- node label
+- edge label
+- angle bin
+- qubit flip pattern
+- cumulative bin update
+
+That kind of coupling does not create a genuinely rich local superposition in the environment. It mostly routes amplitude into labels that the path sum then reconcentrates.
+
+So the sharper current diagnosis is:
+
+- the bottleneck is **not just env size**
+- it is **low-entropy environment occupation under deterministic coupling**
+
 ## The sharpened problem
 
 The decoherence architecture must live at a scale that avoids both failure modes:
 
 - **too microscopic / label-like:** gets averaged away by path convergence
 - **too macroscopic / field-like:** gets smoothed away by relaxation
+- **too deterministic / bookkeeping-like:** creates large env spaces but low occupied entropy
 
 The missing layer is probably **mesoscopic durable record formation**:
 
@@ -55,6 +80,7 @@ The missing layer is probably **mesoscopic durable record formation**:
 - extensive enough to grow with system size
 - durable enough to implement Axiom 5 / Axiom 9 seriously
 - structured enough to avoid compressing immediately into one or two dominant labels
+- coupled richly enough to create real local system-environment branching, not just deterministic tagging
 
 ## Decision options
 
@@ -71,6 +97,7 @@ Candidate directions:
 - temporal-order or local-clock records
 - local current / flux records
 - unresolved microstate ensembles attached to mass cells
+- genuinely local entangling couplings at mass interactions
 
 **Why choose this**
 
@@ -82,6 +109,7 @@ Candidate directions:
 
 - the same convergence problem may reappear in disguised form
 - a “bigger bath” may still not help if the occupied support keeps collapsing onto a few dominant states
+- an open-system model without real entangling interaction may just reproduce the old low-entropy failure in a larger state space
 
 **What would count as success**
 
@@ -100,6 +128,7 @@ Candidate directions:
 - threshold-triggered local record bits
 - region-local ancilla sheets / worldtubes with persistence
 - local CA microstate coupling at the interaction site rather than through the relaxed far field
+- substrate records that are created by a true local branching interaction rather than deterministic label assignment
 
 **Why choose this**
 
@@ -116,6 +145,7 @@ Candidate directions:
 - introduces a larger design space
 - can quietly become ad hoc if the record-writing rules are not tightly constrained
 - may still act effectively like hidden collapse if the persistence is too strong
+- a purely deterministic scar-writing rule may still fail if it does not create enough occupied record entropy
 
 **What would count as success**
 
@@ -164,6 +194,7 @@ So the recommended next architecture is:
 - keep the directional-measure propagator fixed
 - stop trying to make the propagator solve decoherence
 - prototype one **durable local record** mechanism that lives on the graph substrate itself
+- prefer a mechanism with a genuinely nontrivial local interaction law, not just a larger deterministic record map
 
 ## Brainstorm: other interesting decoherence approaches
 
@@ -178,6 +209,7 @@ Why it is interesting:
 - strongest Axiom 1 / 5 / 9 fit
 - local and durable
 - not compressed into one env label
+- best if the scar-writing itself is branching / state-creating rather than simple deterministic tagging
 
 ### 2. True region/worldtube trace
 
@@ -243,7 +275,17 @@ Why it is interesting:
 - a more realistic open-system picture
 - could be continuous or high-dimensional without global binning
 
-### 9. Multiscale record hierarchy
+### 9. Genuine local entangling coupling
+
+At each mass interaction, the system amplitude couples to a local env degree of freedom through a true branching interaction, producing local system-env superposition rather than deterministic record assignment.
+
+Why it is interesting:
+
+- directly targets the new entropy bottleneck
+- keeps the theory linear if modeled as a local unitary interaction
+- is the clearest version of “real quantum environment coupling” within the toy
+
+### 10. Multiscale record hierarchy
 
 Records form at multiple scales at once: local edge/cell records, regional summaries, and slow persistent memory. The detector only sees the coarse outcome after tracing over the full hierarchy.
 
@@ -252,7 +294,7 @@ Why it is interesting:
 - explicitly targets the “between path and field” scale gap
 - may avoid both single-label convergence and far-field smoothing
 
-### 10. Explicit local projection / collapse
+### 11. Explicit local projection / collapse
 
 Keep this as the final fallback if all substrate-memory approaches fail.
 
@@ -279,4 +321,9 @@ Do **not** reopen a broad sweep. Run one bounded prototype from the recommended 
    - trace over all histories inside a bounded interaction region
    - compare against the current D4 surrogate
 
-The key point is not to test ten new ideas. It is to test **one mesoscopic durable-record architecture** that is meaningfully different from both label-like envs and smoothed field mediation.
+4. **Local entangling-coupling prototype**
+   - one local env degree of freedom per mass interaction site
+   - interaction creates branch superposition instead of deterministic tagging
+   - test whether occupied env entropy grows enough to stop purity from rising
+
+The key point is not to test ten new ideas. It is to test **one mesoscopic durable-record or local-entangling architecture** that is meaningfully different from both label-like envs and smoothed field mediation.

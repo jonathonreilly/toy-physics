@@ -1,5 +1,35 @@
 # Physics Autopilot Handoff
 
+## 2026-04-01 16:05 America/New_York
+
+### Seam class
+- decoherence theory-frontier clarification
+- entropy-vs-dimensionality diagnosis
+
+### What this loop did
+- updated the shared decoherence decision note to reflect the newest failure-chain diagnosis
+- reframed the non-unitary bottleneck as an interaction-entropy problem, not just an env-size problem
+
+### Current state
+- no detached science child is running
+- the lead unitary layer is unchanged:
+  - corrected `1/L^p` transport
+  - directional path measure `exp(-0.8×θ²)`
+- the decoherence frontier is now sharper:
+  - larger finite env spaces still fail if the coupling stays deterministic
+  - path-level record schemes recohere by CLT-style convergence
+  - field-mediated schemes wash out by Laplacian smoothing
+  - the missing ingredient is likely a genuine local interaction that creates more occupied env entropy, not just more nominal env states
+
+### Strongest confirmed conclusion
+The next decoherence step should not be another “bigger env” variant. The right problem is how to build a mesoscopic durable-record or local-entangling interaction law that creates real branch-specific environment occupation before CLT convergence or field smoothing erase it.
+
+### Exact next step
+- keep the propagator fixed
+- prototype one bounded decoherence architecture that is qualitatively different from deterministic tagging:
+  - durable substrate memory with branching structure
+  - or a true local system-environment entangling coupling
+
 ## 2026-04-01 06:32 America/New_York
 
 ### Seam class

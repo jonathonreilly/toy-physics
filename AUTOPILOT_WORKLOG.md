@@ -1,3 +1,26 @@
+## 2026-04-01 — Decoherence entropy diagnosis update
+
+### What changed
+- incorporated the latest decoherence diagnosis into the shared architecture notes
+- sharpened the failure read from “finite env too small” to “occupied env entropy too low under deterministic coupling”
+
+### Current retained read
+- the next non-unitary frontier is not “more env states”
+- the last 15 decoherence variants now point to a narrower bottleneck:
+  - larger env dimensionality alone does not help
+  - deterministic label/flip/bin couplings still create low-entropy occupied env distributions
+  - path-level variants then recohere by CLT
+  - field-mediated variants smooth out by Laplacian relaxation
+- the meaningful next step is therefore one of:
+  - mesoscopic durable record formation with genuine local branching structure
+  - true local system-environment entangling coupling
+  - collapse/projection only as the high-cost fallback
+
+### Next frontier
+- keep the directional-measure propagator fixed
+- stop spending time on “bigger finite env” variants unless the coupling law itself is qualitatively different
+- prioritize one bounded prototype that attacks the entropy bottleneck directly
+
 ## 2026-04-01 — Qubit env scaling reconciliation
 
 ### What changed
