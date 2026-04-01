@@ -1,17 +1,22 @@
 # Synthesis Note: Emergent Physics on Discrete Causal DAGs
 
-**Date:** 2026-04-01
-**Status:** Architecture result. Joint unification confirmed.
+**Date:** 2026-04-01 (revised with 24-seed data)
+**Status:** Architecture result locked. Emergence program closed.
 
-## The claim
+## The claim (revised)
 
 On discrete causal DAGs with path-sum amplitude propagation, both
 gravitational attraction and quantum decoherence emerge from the same
-minimal structure — but only when the graph topology has **channel
-separation** (a spatial gap that prevents cross-channel mixing).
+minimal structure. The CL bath achieves pur_min ~ 0.93-0.95 on BOTH
+uniform and modular DAGs when averaged over sufficient seeds (16+).
 
-Uniform random DAGs support gravity but not scalable decoherence.
-Modular two-channel DAGs support both.
+Channel separation (modular DAG) improves the result — especially at
+large N where gap=5 gives pur_min=0.889 — but the uniform baseline
+is stronger than initial 4-seed tests suggested.
+
+**Important revision:** The "geometric ceiling" (pur_min=0.986 on
+uniform DAGs) was partially a small-sample artifact. With 24 seeds,
+uniform DAGs show pur_min=0.951 at N=25, not 0.986.
 
 There exists a topology parameter window (gap ~ 2.0 in units of
 y_range = 12.0) where both phenomena coexist on the same graph
@@ -94,49 +99,71 @@ but channel-coherence vs graph-connectivity.
 
 ## What is established
 
-1. Gravity: pure phase effect from path-sum on causal DAG. Born rule
-   satisfied (I_3/P = 4e-15). Works on both graph families.
+1. **Gravity:** Pure phase effect from path-sum on causal DAG. Born rule
+   satisfied (I_3/P = 4e-15). Works on both uniform and modular DAGs.
+   Signal grows with N.
 
-2. Decoherence: requires topological channel separation. IF + CL bath
-   framework is validated. Stable through N=100 on modular DAGs.
+2. **Decoherence:** CL bath achieves pur_min ~ 0.93-0.95 on both
+   uniform and modular DAGs with 16+ seeds. Channel separation helps
+   (gap=5 at N=40: pur_min=0.889) but is not strictly required.
 
-3. Unification: both emerge from the same propagator on the same
-   graph family in the same topology parameter window.
+3. **Unification:** Both gravity and decoherence emerge from the same
+   propagator on the same graphs simultaneously. All gap values 0-5
+   pass both criteria with 24 seeds. Larger gaps improve both.
 
-4. The bottleneck was geometry, not architecture: 14 bath/kernel
-   variants all fail on uniform DAGs; the simplest bath (CL y-bins)
-   works on modular DAGs.
+4. **Architecture:** 14 individual bath/kernel variants fail on uniform
+   DAGs with 4 seeds. The CL bath (exponential D=exp(-lambda^2*S)) is
+   the only architecture that works, on any graph family.
+
+## Emergence program: closed (8 approaches tested)
+
+| # | Approach | Type | Result |
+|---|----------|------|--------|
+| 1 | Locality bias | Connection | CLT collapses at N=40 |
+| 2 | Reinforcement | Connection | No spatial separation |
+| 3 | Repulsive placement | Connection | No persistent channels |
+| 4 | Pre-barrier amplitude feedback | Connection | Source y-symmetric |
+| 5 | Post-barrier slit-conditioned | Connection | CLT makes asymmetry ~0.5 |
+| 6 | Distinguishability placement (mild) | Node placement | Gap ~2 but no improvement |
+| 7 | Distinguishability placement (strong) | Node placement | Gap too large, disconnects |
+| 8 | Calibrated alpha sweep | Node placement | No alpha beats uniform |
+
+**Conclusion:** Local growth rules cannot produce the specific gap
+geometry needed. Connection rules fail because CLT operates on any
+connected graph. Placement rules create gaps but can't control size
+or location. The uniform baseline is stronger than initially measured.
 
 ## What is NOT established
 
-1. **Dynamic emergence:** Simple local growth rules do not produce
-   channel structure. The gap is imposed, not emergent. The deep
-   question — whether quantum-topology coupling can generate channels —
-   remains open.
+1. **Dynamic emergence:** 8 approaches tested, all fail. The gap
+   may be a boundary condition on emergent spacetime, not derivable
+   from a simpler local rule.
 
-2. **Asymptotic behavior:** pur_min at 0.93 +/- 0.02 could be a true
-   floor or slow drift. Per-seed variance (~0.05) dominates.
+2. **3D generalization:** All tests are 2D (1 spatial + 1 causal).
 
-3. **3D generalization:** All tests are on 2D DAGs (1 spatial + 1
-   causal dimension). The channel structure needs to generalize.
+3. **Continuum limit:** Discrete channel separation ↔ spatial
+   locality connection is informal.
 
-4. **Continuum limit:** The connection between discrete channel
-   separation and continuous spatial locality is informal.
+4. **Strong decoherence:** pur_min ~ 0.93 is moderate, not << 1.
+   Whether this can reach physically meaningful decoherence levels
+   (pur_min < 0.5) on any topology is unknown.
 
-## Honest assessment
+## Honest assessment (revised)
 
-This is a toy model that demonstrates a structural principle:
-**topological channel separation is the minimal geometric condition
-for both gravity and decoherence to coexist in a path-sum framework
-on discrete causal structure.**
+This is a toy model demonstrating that **path-sum propagation on
+discrete causal DAGs supports both gravity and decoherence** using
+a single propagator and CL bath environment. The result holds on
+both uniform and modular topologies, with channel separation
+improving (not enabling) decoherence.
 
-The result is conceptually clean — the same propagator, the same
-graph, one topology parameter — but the gap is hand-tuned, not
-emergent. The model is 2D, the graphs are small (N=25-100 layers),
-and the decoherence is moderate (pur_min ~ 0.95, not << 1).
+The initial claim that "uniform DAGs hit a geometric ceiling" was
+overstated due to small sample sizes. With 24 seeds, uniform DAGs
+achieve pur_min ~ 0.95, within 2% of modular DAGs.
 
-The physics claim is: in a discrete event ontology, the geometry
-that supports quantum interference and gravitational attraction
-must have a specific topological property (channel separation) to
-also support decoherence. This is a constraint on emergent spacetime
-geometry, derivable from the path-sum structure alone.
+The physics result: **gravity (corrected propagator) and decoherence
+(CL bath) coexist on the same causal DAGs.** This is a structural
+finding about discrete path-sum models, not a claim about real physics.
+
+The emergence question — can the topology that optimizes both be
+generated dynamically — is cleanly diagnosed (8 approaches, all fail)
+and remains open as a theoretical question about emergent spacetime.
