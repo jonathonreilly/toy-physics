@@ -3,6 +3,8 @@
   Question: does alpha trend toward ~1 or remain parameter-sensitive?
 ==============================================================================
 
+Current-main rerun: same qualitative result as the prior sweep.
+
   retained lane: gap=5.0, k-band=[3.0, 5.0, 7.0], seeds=16
 
   nodes  radius      <k>    alpha      SE      t     R^2  verdict
