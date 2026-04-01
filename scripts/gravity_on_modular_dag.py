@@ -117,8 +117,8 @@ def test_gravity(name, generator, n_layers_list, n_seeds=8, **gen_kwargs):
     k_band = [3.0, 5.0, 7.0]
 
     for nl in n_layers_list:
-        defl_with_mass = []
-        defl_no_mass = []
+        # Collect PER-SEED paired deltas (average over k within each seed)
+        per_seed_deltas = []
 
         for seed in range(n_seeds):
             positions, adj, _ = generator(
@@ -154,6 +154,8 @@ def test_gravity(name, generator, n_layers_list, n_seeds=8, **gen_kwargs):
             # Propagate WITHOUT mass (flat field)
             field_without = [0.0] * len(positions)
 
+            # Average delta over k-band WITHIN this seed
+            seed_deltas = []
             for k in k_band:
                 amps_with = propagate(positions, adj, field_with, src, k)
                 amps_without = propagate(positions, adj, field_without, src, k)
@@ -161,19 +163,18 @@ def test_gravity(name, generator, n_layers_list, n_seeds=8, **gen_kwargs):
                 y_with, _ = measure_deflection(positions, amps_with, det_list)
                 y_without, _ = measure_deflection(positions, amps_without, det_list)
 
-                defl_with_mass.append(y_with)
-                defl_no_mass.append(y_without)
+                seed_deltas.append(y_with - y_without)
 
-        if defl_with_mass:
-            avg_with = sum(defl_with_mass) / len(defl_with_mass)
-            avg_without = sum(defl_no_mass) / len(defl_no_mass)
-            delta = avg_with - avg_without
-            std_with = (sum((d - avg_with) ** 2 for d in defl_with_mass) / len(defl_with_mass)) ** 0.5
-            se = std_with / math.sqrt(len(defl_with_mass))
+            if seed_deltas:
+                per_seed_deltas.append(sum(seed_deltas) / len(seed_deltas))
+
+        if per_seed_deltas:
+            n_ok = len(per_seed_deltas)
+            delta = sum(per_seed_deltas) / n_ok
+            se = (sum((d - delta) ** 2 for d in per_seed_deltas) / n_ok) ** 0.5 / math.sqrt(n_ok)
 
             status = "GRAVITY" if delta > 2 * se and delta > 0 else "FLAT" if abs(delta) < se else "REPULSION?"
-            print(f"  {nl:4d}  {avg_with:+8.4f}  {avg_without:+8.4f}  "
-                  f"{delta:+8.4f}  {se:6.4f}  {len(defl_with_mass):4d}  {status}")
+            print(f"  {nl:4d}  {delta:+8.4f}  {se:6.4f}  {n_ok:4d}  {status}")
         else:
             print(f"  {nl:4d}  FAIL")
 
@@ -197,9 +198,9 @@ def main():
 
     for name, gen, kwargs in families:
         print(f"  [{name}]")
-        print(f"  {'N':>4s}  {'<y>_mass':>8s}  {'<y>_flat':>8s}  "
-              f"{'delta':>8s}  {'SE':>6s}  {'n':>4s}  {'verdict'}")
-        print(f"  {'-' * 56}")
+        print(f"  {'N':>4s}  {'delta':>8s}  {'SE':>6s}  {'n':>4s}  {'verdict'}")
+        print(f"  {'':>4s}  (paired per-seed, k-band averaged)")
+        print(f"  {'-' * 36}")
         test_gravity(name, gen, n_layers_list, **kwargs)
         print()
 
