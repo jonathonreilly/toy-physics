@@ -2,6 +2,10 @@
 **Date:** 2026-04-01
 **Status:** architecture result retained; metrics wording tightened; soft-pruning emergence lane closed asymptotically.
 
+This is the topology-pivot session note. Later higher-dimensional results are
+tracked separately in
+[HIGHER_DIMENSION_STATUS_2026-04-01.md](/Users/jonreilly/Projects/Physics/docs/HIGHER_DIMENSION_STATUS_2026-04-01.md).
+
 ## The architecture story
 
 On discrete causal DAGs with path-sum propagation:

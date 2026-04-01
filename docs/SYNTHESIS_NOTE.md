@@ -3,6 +3,10 @@
 **Date:** 2026-04-01
 **Status:** retained architecture note with metric caveats tightened and pruning lane narrowed
 
+This note is now mainly the **2D / topology-pivot synthesis**. For the current
+3D / 4D / 5D state, see
+[HIGHER_DIMENSION_STATUS_2026-04-01.md](/Users/jonreilly/Projects/Physics/docs/HIGHER_DIMENSION_STATUS_2026-04-01.md).
+
 ## The current claim
 
 On discrete causal DAGs with path-sum amplitude propagation:

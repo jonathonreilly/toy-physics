@@ -268,10 +268,10 @@ Why it matters:
 
 ## Current priority order
 
-1. bounded evolving-network dynamics prototype
-2. continuum / asymptotic bridge card
-3. prediction / discriminator card
-4. claim ladder page
+1. locality-constrained graph architecture for the distance law
+2. strict 4D visibility metric / same-graph unification pass
+3. 4D continuum / density-limit card
+4. bounded evolving-network dynamics prototype
 
 The assumption ledger and literature-positioning note are already the first step toward this harder backlog.
 
@@ -283,12 +283,14 @@ gates.
 - unitary lane:
   - directional measure retained/provisional core
   - gravity `b` hierarchy derivation / transfer
+  - locality-constrained graph families to test whether distance falloff can be restored structurally
 - non-unitary lane:
-  - influence-functional framework retained
-  - non-local or non-graph-local decoherence coupling still open
+  - IF / CL framework retained on modular higher-dimensional families
+  - strict higher-dimensional visibility still needs cleaner metric treatment
 - architecture credibility lane:
   - evolving-network dynamics
   - continuum / asymptotic bridge
+  - 5D density/connectivity rescue
   - independent robustness across families and dimensions
 
 So the project should not act as if "one more nice run" is enough. What gets

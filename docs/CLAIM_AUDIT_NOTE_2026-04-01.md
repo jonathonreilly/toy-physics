@@ -9,7 +9,7 @@
 2. The IF / CL reduced-description route still supports decoherence on the retained modular family.
 3. The modular family is the current joint gravity + decoherence lane.
 4. The emergence story is still open: local feedback and soft-pruning rules do not generate a stable hard-gap topology asymptotically.
-5. The 3D gravity lane is real, but a stricter fixed-`b` mass-scaling follow-up did not yet cleanly confirm a power law, so the earlier `sqrt(M)`-style read should stay provisional.
+5. The higher-dimensional lane is now real, but its metric discipline still matters: dense modular 4D strongly improves large-`N` decoherence and higher-dimensional chokepoint Born-rule tests are clean, while strict visibility and universal mass-law wording still need tighter handling.
 
 ## Metric caveats to keep explicit
 
@@ -39,6 +39,18 @@
 - The true visibility gain is only `+0.023` at `N=12`, drops to `+0.002` at `N=18`, and is near zero or negative by `N>=25`.
 - So do not describe the asymptotic modular bath lane as preserving strong interference gain.
 
+### Higher-dimensional visibility
+
+- The current 4D true-visibility script reports `V_gain ~ 0` on the retained modular lane.
+- That is a useful cautionary result, but the metric still groups detector weights by exact floating-point `y`, so it should be treated as provisional until the detector profile is rebinned or envelope-checked more carefully.
+- Do not yet describe 4D as having a strong strict visibility gain under the true metric.
+
+### Higher-dimensional distance law
+
+- The current 4D distance sweep is effectively flat/topological, not `1/b`.
+- A branch-side 3D density sweep also points in the same direction, but that specific continuum-distance script still needs a stricter fixed-mass comparison before the strongest “confirmed continuum `b`-independence” wording is safe.
+- So the safe current claim is: **distance-law failure remains a structural architecture issue, not something repaired by the current higher-dimensional or propagator sweeps.**
+
 ### Node-removal asymptotics
 
 - Node removal helps at intermediate `N`.
@@ -53,8 +65,9 @@
 - Use “decoherence floor `pur_min`” only where the lower-bound metric is intended.
 - Distinguish clearly between the old detector-profile contrast proxy and the new true visibility gain.
 - Use “intermediate-`N` pruning surrogate” for node removal.
-- Keep the 3D mass-scaling language provisional until a broader fixed-`b` sweep reproduces it.
+- Keep the 3D/4D dimensional-scaling language framed as: **mass-scaling strength increases with spatial dimension**, while the exact `alpha(d)` law and the strict continuum limit remain open.
+- Keep 4D visibility language narrower than 4D decoherence/Born-rule language until the detector-profile metric is improved.
 
 ## One-line summary
 
-The code now supports a modular-family joint gravity/decoherence result, but the repo should keep its metric language precise: `gap=0` is the true baseline, `pur_cl` and `pur_min` are distinct, gravity SE is paired, true large-`N` visibility gain is weak/gone on the retained modular bath lane, node removal is asymptotically insufficient, and the 3D mass-scaling read remains provisional until a broader fixed-`b` sweep reproduces it.
+The code now supports a stronger modular-family higher-dimensional story, but the repo should keep its metric language precise: `gap=0` is the true baseline, `pur_cl` and `pur_min` are distinct, gravity SE is paired, 2D large-`N` visibility gain is weak/gone on the retained modular bath lane, dense modular 4D strongly improves decoherence, chokepoint Born-rule checks are clean, node removal is asymptotically insufficient, and the remaining hard gaps are the strict higher-dimensional visibility metric and the still-flat distance law.
