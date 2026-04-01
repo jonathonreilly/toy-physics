@@ -1,3 +1,61 @@
+## 2026-04-01 — Directional-measure b occupancy-load bridge
+
+### Current state
+- the canonical checkout was on `codex/distance-law-closure-and-higher-d-status` at `8f8b8c5`, already ahead of `origin/codex/distance-law-closure-and-higher-d-status` by `2`, with many unrelated local edits in flight outside the directional-`b` lane
+- the duplicate-run guard and cooperative `physics-science` lock both passed on this thread before shared-state reads
+- the required preflight push via `automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics` did not return a clean result in this sandbox and had to be treated as another bounded timeout/hang rather than as a successful sync
+- the active tracked directional-`b` seam from the top entry was still:
+  - compress target-band occupancy into one coarser asymptotic bridge variable across the completed local-density, transfer-holdout, and midlayer-law-holdout cards
+
+### What changed
+- added `scripts/directional_b_overlap_onset_occupancy_load_bridge.py`
+- wrote `logs/2026-04-01-directional-b-overlap-onset-occupancy-load-bridge.txt`
+- pooled the completed dense-family overlap-onset rows from:
+  - the original local-density compare
+  - the denser/wider transfer holdout
+  - the mid-layer sampling-law holdout
+- compressed the transferable occupancy signal into one coarser bridge variable:
+  - `occupancy_load = mass_nodes / max(local_target_count, 1)`
+  - interpreted as the number of selected source nodes that must share each same-side target-band site
+- summarized the pooled and per-control load regimes without fitting another threshold table
+- updated the retained directional-`b` narrative in:
+  - `README.md`
+  - `docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+
+### Strongest confirmed conclusion
+The overlap-onset mechanism now has a cleaner asymptotic bridge than raw `target_fill`.
+- on the pooled dense-family rows:
+  - `occupancy_load <= 1`
+  - `0/30` overlap
+  - median `mu = 2.341`
+- shoulder regime:
+  - `1 < occupancy_load <= 2`
+  - `2/26` overlap
+  - median `mu = 0.490`
+- overloaded regime:
+  - `occupancy_load > 2`
+  - `32/44` overlap
+  - median `mu = -0.441`
+
+So the retained translation is now:
+- dense low-`b` families approach or cross `mu <= 0` when the target band can no longer supply roughly one same-side site per selected source node
+- exact same-side spacing cuts still matter, but only as family-dependent refinements on the shoulder rather than as the leading portable primitive
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/scripts/directional_b_overlap_onset_occupancy_load_bridge.py`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-01-directional-b-overlap-onset-occupancy-load-bridge.txt`
+- `/Users/jonreilly/Projects/Physics/README.md`
+- `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+
+### Exact next step
+- keep the corrected propagator and corrected directional-`b` hierarchy fixed
+- translate `occupancy_load` into one continuum-style same-side target-band density or crowding variable on the completed dense-family cards without reopening a wider frontier search
+- only widen back out if that continuum translation fails to preserve the safe / shoulder / overlap ordering
+
+### First concrete action
+- define one local target-band density observable on the existing pooled rows and test whether it reproduces the `occupancy_load` regime ordering of `mu` without using family labels
+
 ## 2026-04-01 — Directional-measure b midlayer-sampling occupancy transfer
 
 ### Current state
