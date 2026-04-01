@@ -142,9 +142,12 @@ If you only want the current high-level state, read this section first.
   away from `1` through `N=100` on the current large-`N` CL-bath sweep, and
   higher-dimensional chokepoint Born-rule tests stay at machine precision. But
   the strict higher-dimensional interference story is still metric-sensitive:
-  the current 4D true-visibility script reports `V_gain ~ 0`, and that metric
-  itself still needs a cleaner detector-profile treatment before stronger
-  claims should be made. See
+  the new strict 3D same-family visibility companion is effectively flat at
+  large `N` (`V_gain ≈ +0.0049` for `N>=40`) on the retained modular lane,
+  the current 4D true-visibility scripts still report mostly weak or near-zero
+  strict visibility gain, and the newer same-family 4D Born pass is only a
+  restricted low-`N` modular subfamily result after chokepoint pruning rather
+  than a broad family closure. See
   [HIGHER_DIMENSION_STATUS_2026-04-01.md](/Users/jonreilly/Projects/Physics/docs/HIGHER_DIMENSION_STATUS_2026-04-01.md).
   The newer strict 4D unification pass is therefore intentionally narrow:
   it finds one retained coexistence row on the modular family, but it uses a
