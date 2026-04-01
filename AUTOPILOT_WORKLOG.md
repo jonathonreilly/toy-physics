@@ -1,3 +1,51 @@
+## 2026-04-01 — Directional-measure b continuum crowding bridge
+
+### Current state
+- the canonical checkout was on `codex/distance-law-closure-and-higher-d-status` at `a26e40d`, already ahead of `origin/codex/distance-law-closure-and-higher-d-status` by `3`, with many unrelated local edits in flight outside the directional-`b` lane
+- the duplicate-run guard and cooperative `physics-science` lock both passed on this thread before shared-state reads
+- the required preflight push via `automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics` did not return inside a bounded wait and had to be treated as another transient timeout/hang rather than a clean sync
+- the active tracked directional-`b` seam from the top entry was still:
+  - test whether `occupancy_load` can be translated into one continuum-style same-side target-band density or crowding variable on the completed dense-family cards without reopening a wider search
+
+### What changed
+- added `scripts/directional_b_overlap_onset_continuum_crowding_bridge.py`
+- wrote `logs/2026-04-01-directional-b-continuum-crowding-bridge.txt`
+- pooled the completed dense-family overlap-onset rows from:
+  - the original local-density compare
+  - the denser/wider transfer holdout
+  - the mid-layer sampling-law holdout
+- tested one smooth target-band crowding proxy:
+  - `continuum_crowding = mass_nodes * local_target_gap / (2 * target_band_half_width)`
+  - `local_target_gap` uses the in-band same-side mean gap when the fixed target band contains at least two sites and otherwise falls back to the nearest bracketing same-side gap
+- compared the continuum proxy against the already-retained `occupancy_load` buckets using the same coarse safe / shoulder / overlap breaks
+
+### Strongest confirmed conclusion
+The obvious smooth same-side density translation is only partial, not yet promotable.
+- the continuum proxy keeps the broad ordering of the signed overlap diagnostic:
+  - `crowd <= 1`: `5/49` overlap, median `mu = 1.718`
+  - `1 < crowd <= 2`: `5/24` overlap, median `mu = 0.246`
+  - `crowd > 2`: `24/27` overlap, median `mu = -0.467`
+- but it is materially weaker than the retained discrete bridge:
+  - `occupancy_load <= 1`: `0/30` overlap, median `mu = 2.341`
+- the leak rows explain why:
+  - all `5` continuum-safe overlaps still expose only `0-2` usable same-side target-band sites
+  - so a smooth local spacing estimate can look low-crowding even when the fixed target band itself still misses the nearby sites because of discrete phase / alignment
+
+So the retained overlap-onset bridge stays discrete target-band site availability (`occupancy_load`), not a promoted smooth density law. Any later continuum translation will need one extra phase/offset term that knows whether the fixed target band actually captures those nearby same-side sites.
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/scripts/directional_b_overlap_onset_continuum_crowding_bridge.py`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-01-directional-b-continuum-crowding-bridge.txt`
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+
+### Exact next step
+- keep the corrected propagator, corrected directional-`b` hierarchy, and retained `occupancy_load` bridge fixed
+- isolate one bounded phase/offset diagnostic on the continuum-safe overlap leaks and compare it against the clean occupancy-safe rows
+- only promote a continuum correction if that added phase term restores the clean safe / shoulder / overlap split without reopening new families
+
+### First concrete action
+- measure the nearest same-side target-band phase offset on the `5` continuum-safe overlap leaks and test whether it separates those rows from the clean `occupancy_load <= 1` bucket
+
 ## 2026-04-01 — Directional-measure b occupancy-load bridge
 
 ### Current state

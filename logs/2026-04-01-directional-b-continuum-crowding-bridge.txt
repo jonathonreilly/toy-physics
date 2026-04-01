@@ -1,0 +1,42 @@
+============================================================================================================
+DIRECTIONAL-MEASURE B CONTINUUM CROWDING BRIDGE
+============================================================================================================
+Tested continuum proxy: continuum_crowding = mass_nodes * local_target_gap / band_width,
+with local_target_gap taken from in-band same-side spacing and falling back to the nearest
+bracketing same-side gap when the fixed target band contains fewer than two sites.
+
+Dense-family cards pooled into the bridge:
+     dataset rows  ovlp   mu_med  occ_med  crowd_med safe_leaks
+----------------------------------------------------------------------------
+    baseline   20     9    0.086    2.500      1.502          2
+    transfer   40    15    0.540    1.667      0.982          1
+    midlayer   40    10    0.594    1.375      0.928          2
+
+Reference occupancy-load regimes:
+            regime rows  ovlp   ovlp%   mu_med  value_med
+----------------------------------------------------------------
+         load <= 1   30     0     0.0    2.341      0.833
+     1 < load <= 2   26     2     7.7    0.490      1.500
+          load > 2   44    32    72.7   -0.441      3.000
+
+Continuum crowding regimes:
+            regime rows  ovlp   ovlp%   mu_med  value_med
+----------------------------------------------------------------
+        crowd <= 1   49     5    10.2    1.718      0.576
+    1 < crowd <= 2   24     5    20.8    0.246      1.334
+         crowd > 2   27    24    88.9   -0.467      4.473
+
+Continuum-safe overlap leaks:
+  rows with continuum_crowding <= 1 but mu <= 0: 5/100
+  dataset counts: {'baseline': 2, 'midlayer': 2, 'transfer': 1}
+  local_target_count counts: {0: 1, 2: 4}
+  These leaks are the discrete phase/alignment failure mode: the local same-side spacing can look
+  smooth enough for low crowding even when the fixed target band itself still exposes only 0-2
+  usable same-side sites.
+
+Interpretation:
+  The smooth crowding proxy preserves the broad monotone ordering of median mu (1.718 on crowd <= 1, 0.246 on 1 < crowd <= 2, -0.467 on crowd > 2).
+  But it is not yet a clean replacement for occupancy_load: the occupancy-safe bucket has 0/30 overlap, while the continuum-safe bucket still leaks 5/49.
+  So the retained bridge stays discrete target-band site availability, not a promoted smooth
+  density law. Any later continuum translation will need one extra phase/offset term that knows
+  whether the fixed target band actually captures those nearby same-side sites.
