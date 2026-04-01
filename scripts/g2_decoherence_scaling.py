@@ -114,15 +114,10 @@ def propagate_g2_with_env(positions, adj, field, src, det, k, mass_set,
                     # Average edge amplitude within bundle
                     avg_ea = sum(ea for ea, _, _ in edges) / len(edges)
 
-                    # Update env: if any edge in bundle goes to mass node
-                    any_mass = any(is_m for _, _, is_m in edges)
-                    if any_mass:
-                        # Use the most common mass node in the bundle as env
-                        mass_nodes_in_bundle = [j for _, j, is_m in edges if is_m]
-                        if mass_nodes_in_bundle:
-                            new_env = mass_nodes_in_bundle[0]  # first mass node
-                        else:
-                            new_env = env_label
+                    # Update env: use ALL mass nodes in bundle (sorted tuple)
+                    mass_nodes_in_bundle = sorted(set(j for _, j, is_m in edges if is_m))
+                    if mass_nodes_in_bundle:
+                        new_env = tuple(mass_nodes_in_bundle) if len(mass_nodes_in_bundle) > 1 else mass_nodes_in_bundle[0]
                     else:
                         new_env = env_label
 
@@ -130,17 +125,22 @@ def propagate_g2_with_env(positions, adj, field, src, det, k, mass_set,
 
         state.update(new_state)
 
-    # Collect at detector
+    # Collect at detector: distribute bin amplitude evenly among nodes
     det_layer_idx = len(layers) - 1
-    det_state = {}
+    det_by_bin = defaultdict(list)
     for d in det:
-        yb = y_bin(positions[d][1])
-        for (l, b, env), amp in state.items():
-            if l == det_layer_idx and b == yb:
+        det_by_bin[y_bin(positions[d][1])].append(d)
+
+    det_state = {}
+    for (l, b, env), amp in state.items():
+        if l == det_layer_idx and b in det_by_bin:
+            d_nodes = det_by_bin[b]
+            amp_per_node = amp / len(d_nodes)
+            for d in d_nodes:
                 key = (d, env)
                 if key not in det_state:
                     det_state[key] = 0.0+0.0j
-                det_state[key] += amp
+                det_state[key] += amp_per_node
 
     return det_state
 
