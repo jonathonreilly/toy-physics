@@ -1,0 +1,46 @@
+================================================================================
+SCALING TESTBENCH: 4 graph families × size sweep
+================================================================================
+
+FAMILY 1: Layered random DAG (npl=25, r=3.0, y=12)
+  N_layers  N_nodes    R_grav    purity  path_mult
+  ----------------------------------------------
+         8      176    +0.377    0.7500        7.9
+        10      226    +0.501    0.6736        8.4
+        12      276    +0.795    0.7445        8.7
+        15      351    +1.268    0.7888        9.1
+        20      476    +1.203    0.8590        9.3
+        25      601    +0.412    0.8220        9.5
+        30      726    +0.311    0.9200        9.5
+
+FAMILY 2: Vary connect_radius at fixed N=15 layers
+    radius  mean_deg    R_grav    purity
+  --------------------------------------
+       1.5       2.3    +0.045    1.0000
+       2.0       3.4    +0.258    0.9594
+       2.5       6.9    +1.013    0.8485
+       3.0       9.1    +1.268    0.7888
+       3.5      10.9    +1.312    0.8778
+       4.0      12.6    +1.020    0.9138
+       5.0      16.0    +0.422    0.9519
+
+FAMILY 3: Branching tree (bf=2, minimal paths)
+  N_layers  N_nodes    R_grav                  note
+  ------------------------------------------------
+         6       63    -0.000     tree, 1 path/pair
+         8      255    -0.000     tree, 1 path/pair
+        10     1023    -0.000     tree, 1 path/pair
+        12     4095    +0.000     tree, 1 path/pair
+
+================================================================================
+BENCHMARK TABLE
+================================================================================
+
+| Family | Scaling var | R_grav trend | Purity trend | Expected | Current failure |
+|--------|-----------|-------------|-------------|----------|----------------|
+| Random DAG | N_layers | saturates | ↑ (0.71→0.89) | R↓, pur↓ | both wrong |
+| Vary radius | degree | increases | varies | R∝deg | limited range |
+| Branch tree | N_layers | to measure | n/a (no env) | R stable | test pending |
+| Depth-scaled | env_frac | n/a | plateaus 0.79 | pur↓ | plateau not ↓ |
+
+TEST COMPLETE
