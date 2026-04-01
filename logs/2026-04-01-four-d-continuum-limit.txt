@@ -1,0 +1,25 @@
+==============================================================================
+4D CONTINUUM LIMIT: density sweep on retained modular lane
+  Question: does alpha trend toward ~1 or remain parameter-sensitive?
+==============================================================================
+
+  retained lane: gap=5.0, k-band=[3.0, 5.0, 7.0], seeds=16
+
+  nodes  radius      <k>    alpha      SE      t     R^2  verdict
+  ------------------------------------------------------------------------------
+     24    4.50     2.57    0.345  0.0319  +8.07   0.245  WEAK
+     32    4.80     4.17    0.930  0.0219  +8.30   0.819  NEAR-M
+     40    5.10     6.13    1.638  0.2062  +4.06   0.890  SUPER
+     60    5.40    10.69    1.259  0.1285  +5.34   0.929  SUPER
+     80    5.80    16.79    0.810  0.1659  +5.46   0.974  NEAR-M
+
+  Alpha range across densities: 0.345 .. 1.638
+  Mean alpha across densities: 0.996
+  → alpha remains parameter-sensitive across density
+
+==============================================================================
+INTERPRETATION
+  If alpha converges near 1: the 4D mass law is approaching Newtonian
+  If alpha stays spread out: the 4D exponent remains parameter-sensitive
+  If alpha drifts away: density is not rescuing the law
+==============================================================================
