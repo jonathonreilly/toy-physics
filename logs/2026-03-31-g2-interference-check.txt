@@ -1,0 +1,22 @@
+G2 INTERFERENCE REGRESSION CHECK
+
+k=3.0: V_standard=0.9994, V_g2=0.0000
+k=5.0: V_standard=0.9954, V_g2=0.0000
+k=0 shift: 0.000000 (passes)
+
+RESULT: G2 coarse-grained propagator DESTROYS interference.
+Y-bin averaging washes out the phase structure that produces fringes.
+G2 violates the interference constraint — NOT a viable architecture.
+
+REVISED SCORECARD:
+| candidate | gravity | interference | decoherence |
+|---|---|---|---|
+| 1/L^p (baseline) | saturates | PASS | wrong-scaling |
+| G1 renormalized | FAIL | not tested | not tested |
+| G2 coarse-grained | PASS | FAIL | FAIL |
+| D1 tensor | not tested | PASS | FAIL |
+| G2+env | PASS | FAIL | FAIL |
+| D4 spatial | not tested | PASS | FAIL |
+| Two-scale | PASS | FAIL | FAIL |
+
+NO tested architecture passes all three constraints simultaneously.
