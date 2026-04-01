@@ -60,6 +60,11 @@ to classical background, not a bounded metric.
 
 **3D is superior in every metric** except distance scaling (same).
 
+**Note on 4D:** Gravity + decoherence + Born rule are confirmed in
+4D (3 spatial + 1 causal), but strict interference visibility has
+not been verified under the hardest metric. The "all four coexist"
+claim is fully established for 3D with chokepoint barriers.
+
 ## Scripts
 
 - `scripts/three_d_joint_test.py` — main joint test

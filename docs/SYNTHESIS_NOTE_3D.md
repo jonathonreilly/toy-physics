@@ -128,15 +128,20 @@ distinguishability via S_norm. Extra z-dimension preserves y-separation.
    This may be fundamental to the path-sum model or may improve
    in 4D.
 
-3. **1/b distance scaling:** The discrete graph washes out the
-   continuum distance dependence. Unclear if this improves with
-   finer discretization.
+3. **1/b distance scaling:** b-independence is structural — confirmed
+   across all propagator powers (p=0 to 2) and node densities (15 to
+   120 per layer). Not a finite-size effect. The graph topology, not
+   the edge weights, controls distance scaling. Locality-constrained
+   graph architecture is the next avenue.
 
-4. **4D gravity:** Would 4D (3 spatial + 1 causal) give F ~ M
-   and 1/b² scaling? This is the natural next frontier.
+4. **4D strict visibility:** Gravity + decoherence + Born rule are
+   confirmed in 4D, but strict interference visibility under the
+   hardest metric is not verified. "All four coexist" is safe for
+   3D; for 4D say gravity + decoherence + Born rule are retained.
 
-5. **Continuum limit:** No formal connection between discrete
-   channel separation and spatial locality in the continuum.
+5. **Continuum limit:** Alpha converges to ~0.58 in 3D as node
+   density increases (spread 0.083 at high density), confirming the
+   model has a proper continuum limit for mass scaling.
 
 ## Honest assessment
 
@@ -157,12 +162,16 @@ fundamental limitations of the discrete path-sum approach persist.
 
 ## Open frontiers
 
-1. **4D extension:** 3 spatial + 1 causal. Could give F~M and 1/b².
-2. **Finer discretization:** More nodes per layer + smaller connect_radius.
-   Does this recover continuum scaling?
-3. **Dynamic topology in 3D:** The emergence question is still open.
-   Does the 3D CLT delay help emergence approaches?
-4. **Analytical understanding:** Why sqrt(M)? Why b-independent?
+1. **Locality-constrained graph architecture:** b-independence is
+   structural — it persists across all propagator powers and node
+   densities. The next question: does distance falloff appear when
+   the graph itself enforces locality shell structure? This is the
+   cleanest remaining physics question.
+2. **4D strict visibility:** Gravity + decoherence + Born rule are
+   confirmed in 4D, but strict interference visibility under the
+   hardest metric needs verification. "All four coexist" is fully
+   safe for 3D; for 4D, the visibility claim is weaker.
+3. **Analytical understanding:** Why sqrt(M)? Why b-independent?
    Derive from the path-sum structure.
 
 ## Scripts delivered
