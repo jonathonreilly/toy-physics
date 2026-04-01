@@ -8,6 +8,11 @@ Push to N=50, 60, 80 to determine asymptotic behavior:
 
 Also tests: does the modular DAG still produce interference?
 (Decoherence is meaningless if the two-slit pattern is gone.)
+
+The interference check is now a true single-vs-double-slit comparison:
+we compute the coherent two-slit fringe contrast, the incoherent
+single-slit average contrast, and their difference as the primary
+visibility metric.
 """
 
 from __future__ import annotations
@@ -162,28 +167,65 @@ def cl_purity(amps_a, amps_b, D, det_list):
     return _pur(D), _pur(1.0), _pur(0.0)
 
 
-def interference_visibility(positions, adj, field, src, det_list, blocked_both):
-    """Check two-slit interference visibility on the modular DAG."""
+def _profile_visibility(profile):
+    """Fringe visibility from a normalized detector profile."""
+    if len(profile) < 3:
+        return 0.0
+    peaks = [
+        profile[i]
+        for i in range(1, len(profile) - 1)
+        if profile[i] > profile[i - 1] and profile[i] > profile[i + 1]
+    ]
+    troughs = [
+        profile[i]
+        for i in range(1, len(profile) - 1)
+        if profile[i] < profile[i - 1] and profile[i] < profile[i + 1]
+    ]
+    if not peaks or not troughs:
+        return 0.0
+    top = max(peaks)
+    bottom = min(troughs)
+    return (top - bottom) / (top + bottom) if top + bottom > 1e-30 else 0.0
+
+
+def _detector_probs(amps, det_list):
+    probs = {d: abs(amps[d]) ** 2 for d in det_list}
+    total = sum(probs.values())
+    if total > 0:
+        probs = {d: p / total for d, p in probs.items()}
+    return probs
+
+
+def _detector_profile(probs, positions, det_list):
+    by_y = defaultdict(float)
+    for d in det_list:
+        by_y[positions[d][1]] += probs.get(d, 0.0)
+    ys = sorted(by_y)
+    return [by_y[y] for y in ys]
+
+
+def interference_visibility(positions, adj, field, src, det_list, blocked_both, slit_a, slit_b):
+    """Compare coherent two-slit visibility against the single-slit average."""
     k = 5.0
-    # Both slits open
     amps_both = propagate(positions, adj, field, src, k, blocked_both)
-    probs_both = [abs(amps_both[d]) ** 2 for d in det_list]
+    amps_a = propagate(positions, adj, field, src, k, blocked_both | set(slit_b))
+    amps_b = propagate(positions, adj, field, src, k, blocked_both | set(slit_a))
 
-    # Single slit (slit A only — but we can't easily do this without
-    # the slit info, so just check if both-slit pattern has structure)
-    total = sum(probs_both)
-    if total < 1e-30:
-        return 0.0, 0.0
+    probs_both = _detector_probs(amps_both, det_list)
+    probs_a = _detector_probs(amps_a, det_list)
+    probs_b = _detector_probs(amps_b, det_list)
+    probs_single_avg = {
+        d: 0.5 * probs_a.get(d, 0.0) + 0.5 * probs_b.get(d, 0.0)
+        for d in det_list
+    }
 
-    probs_norm = [p / total for p in probs_both]
-    # Visibility = (max - min) / (max + min) among detectors with signal
-    active = [p for p in probs_norm if p > 1e-15]
-    if len(active) < 2:
-        return 0.0, total
-
-    pmax, pmin = max(active), min(active)
-    vis = (pmax - pmin) / (pmax + pmin) if (pmax + pmin) > 0 else 0.0
-    return vis, total
+    coh_profile = _detector_profile(probs_both, positions, det_list)
+    single_profile = _detector_profile(probs_single_avg, positions, det_list)
+    vis_coh = _profile_visibility(coh_profile)
+    vis_single = _profile_visibility(single_profile)
+    vis_gain = vis_coh - vis_single
+    total = sum(probs_both.values())
+    return vis_coh, vis_single, vis_gain, total
 
 
 def main():
@@ -199,14 +241,16 @@ def main():
     n_seeds = 4
 
     print(f"  {'N':>4s}  {'pur_min':>8s}  {'pur_cl':>8s}  {'decoh':>8s}  "
-          f"{'S_norm':>8s}  {'vis':>6s}  {'nodes':>6s}  {'time':>6s}")
+          f"{'S_norm':>8s}  {'V_coh':>6s}  {'V_sng':>6s}  {'V_gain':>7s}  "
+          f"{'nodes':>6s}  {'time':>6s}")
     print(f"  {'-' * 62}")
 
     trajectory = {}
 
     for nl in n_layers_list:
         t0 = time.time()
-        pm_all, pc_all, pcoh_all, sn_all, vis_all = [], [], [], [], []
+        pm_all, pc_all, pcoh_all, sn_all = [], [], [], []
+        vis_coh_all, vis_single_all, vis_gain_all = [], [], []
         n_nodes = 0
 
         for seed in range(n_seeds):
@@ -235,9 +279,11 @@ def main():
             sb = [i for i in bi if positions[i][1] < cy - 3][:3]
 
             # Interference check (both slits open, only barrier blocks)
-            vis, _ = interference_visibility(
-                positions, adj, field, src, det_list, blocked)
-            vis_all.append(vis)
+            vis_coh, vis_single, vis_gain, _ = interference_visibility(
+                positions, adj, field, src, det_list, blocked, sa, sb)
+            vis_coh_all.append(vis_coh)
+            vis_single_all.append(vis_single)
+            vis_gain_all.append(vis_gain)
 
             pm_k, pc_k, pcoh_k, sn_k = [], [], [], []
             for k in k_band:
@@ -279,14 +325,20 @@ def main():
             avg_pc = sum(pc_all) / len(pc_all)
             avg_pcoh = sum(pcoh_all) / len(pcoh_all)
             avg_sn = sum(sn_all) / len(sn_all)
-            avg_vis = sum(vis_all) / len(vis_all) if vis_all else 0.0
+            avg_vis_coh = sum(vis_coh_all) / len(vis_coh_all) if vis_coh_all else 0.0
+            avg_vis_single = sum(vis_single_all) / len(vis_single_all) if vis_single_all else 0.0
+            avg_vis_gain = sum(vis_gain_all) / len(vis_gain_all) if vis_gain_all else 0.0
             decoh = avg_pcoh - avg_pc
             trajectory[nl] = {
                 "pur_min": avg_pm, "decoh": decoh,
-                "s_norm": avg_sn, "vis": avg_vis,
+                "s_norm": avg_sn,
+                "vis_coh": avg_vis_coh,
+                "vis_single": avg_vis_single,
+                "vis_gain": avg_vis_gain,
             }
             print(f"  {nl:4d}  {avg_pm:8.4f}  {avg_pc:8.4f}  "
-                  f"{decoh:+8.4f}  {avg_sn:8.5f}  {avg_vis:6.3f}  "
+                  f"{decoh:+8.4f}  {avg_sn:8.5f}  {avg_vis_coh:6.3f}  "
+                  f"{avg_vis_single:6.3f}  {avg_vis_gain:+7.3f}  "
                   f"{n_nodes:6d}  {dt:5.0f}s")
         else:
             print(f"  {nl:4d}  {'FAIL':>8s}")
@@ -340,9 +392,12 @@ def main():
     print()
     print("INTERFERENCE CHECK:")
     for nl in sorted(trajectory.keys()):
-        v = trajectory[nl]["vis"]
-        status = "OK" if v > 0.1 else "WEAK" if v > 0.01 else "GONE"
-        print(f"  N={nl:3d}: visibility={v:.3f}  [{status}]")
+        v_coh = trajectory[nl]["vis_coh"]
+        v_single = trajectory[nl]["vis_single"]
+        v_gain = trajectory[nl]["vis_gain"]
+        status = "OK" if v_gain > 0.05 else "WEAK" if v_gain > 0.01 else "GONE"
+        print(f"  N={nl:3d}: V_coh={v_coh:.3f}  V_single={v_single:.3f}  "
+              f"V_gain={v_gain:+.3f}  [{status}]")
 
     print()
     print("TEST COMPLETE")
