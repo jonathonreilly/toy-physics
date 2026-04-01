@@ -1,21 +1,19 @@
 #!/usr/bin/env python3
-"""Level B: True slot-resolved fresh-ancilla model on real DAGs.
+"""Level B proxy: encounter-count fresh-ancilla model on real DAGs.
 
-Each mass encounter couples to a fresh 2-state ancilla indexed by
-encounter SLOT (1st, 2nd, 3rd...), not by node id or count.
+This is a bounded proxy for the fresh-ancilla collision idea on real DAGs.
+It does NOT replay full slot-resolved encounter histories from the DAG.
 
-The env state is a BITSTRING: (b_1, b_2, ..., b_m) where b_k ∈ {0,1}
-is the state of the k-th ancilla. With max_enc ≈ 4, the full space
-is at most 2^4 = 16 states.
+Instead, it only tracks the number of mass encounters along a branch.
+Different encounter counts are treated as orthogonal env sectors.
 
-The coupling angle α_k at encounter k depends on the LOCAL ANGLE
-of the edge crossing the mass node — making it branch-dependent.
-Different slit paths cross mass nodes at different angles →
-different α_k → different branch overlap → decoherence via Level A law.
+So this script is not yet a faithful Level B implementation of the
+Level A law. It is an encounter-count proxy for whether a fresh-ancilla
+idea might help on real DAGs.
 
-The Level A decay law:
-  overlap = ∏_k cos(α_Ak - α_Bk)
-  coherence = |overlap|² = ∏_k cos²(Δα_k)
+The detector-state purity under this proxy is computed by tracing over
+encounter-count sectors only. Slot-resolved ancilla histories and
+branch-dependent Δα_k are NOT represented here.
 
 Uses the promoted angle² β=0.8 propagator.
 
@@ -34,25 +32,29 @@ from scripts.generative_causal_dag_interference import generate_causal_dag
 from scripts.density_matrix_analysis import build_post_barrier_setup, compute_detector_metrics
 
 BETA = 0.8
-ALPHA_SCALE = 0.5  # scales the edge angle into coupling strength
+ALPHA_BASE = math.pi / 4  # base coupling strength
 
 
 def propagate_fresh_ancilla(positions, adj, field, src, det, k,
                             mass_set, blocked=None):
-    """Propagator with slot-resolved fresh ancillas at mass encounters.
+    """Encounter-count proxy for a fresh-ancilla per mass encounter idea.
 
-    State: (node, ancilla_bitstring_tuple) → amplitude
+    State: (node, encounter_count) → amplitude.
+    At each mass node: split cos(α)/sin(α), but only the encounter COUNT
+    is tracked, not the full slot-resolved ancilla history.
 
-    At each mass encounter (edge touching mass node j):
-      α_k = ALPHA_SCALE × |edge_angle|  (branch-dependent coupling)
-      Split: cos(α_k) keeps ancilla |0⟩, sin(α_k) excites to |1⟩
-      Bitstring grows by one bit.
+    This means:
+    - different encounter counts are automatically orthogonal
+    - branches with the SAME count are coherently merged here
+    - branch-dependent Δα_k from Level A are NOT implemented
 
-    The bitstring length = number of encounters. Different bit patterns
-    at the same length are orthogonal env states.
+    So this is a lossy proxy, not a faithful replay of the Level A
+    fresh-ancilla decay law.
     """
     n = len(positions)
     blocked = blocked or set()
+    cos_a = math.cos(ALPHA_BASE)
+    sin_a = math.sin(ALPHA_BASE)
 
     in_deg = [0]*n
     for i, nbs in adj.items():
@@ -68,21 +70,24 @@ def propagate_fresh_ancilla(positions, adj, field, src, det, k,
             if in_deg[j] == 0:
                 q.append(j)
 
+    # State: (node, n_encounters) → amplitude
+    # n_encounters = number of mass encounters so far
+    # Different n_encounters values are ORTHOGONAL env states
     state = {}
     for s in src:
-        state[(s, ())] = 1.0/len(src) + 0.0j
+        state[(s, 0)] = 1.0/len(src) + 0.0j
 
     processed = set()
     for i in order:
         if i in processed:
             continue
         processed.add(i)
-        entries = {bits: amp for (node, bits), amp in list(state.items())
+        entries = {enc: amp for (node, enc), amp in list(state.items())
                    if node == i and abs(amp) > 1e-30}
         if not entries or i in blocked:
             continue
 
-        for bits, amp in entries.items():
+        for n_enc, amp in entries.items():
             for j in adj.get(i, []):
                 if j in blocked:
                     continue
@@ -97,42 +102,30 @@ def propagate_fresh_ancilla(positions, adj, field, src, det, k,
                 dl = L*(1+lf)
                 ret = math.sqrt(max(dl*dl-L*L, 0))
                 act = dl-ret
-                theta_edge = math.atan2(abs(dy), max(dx, 1e-10))
-                w = math.exp(-BETA*theta_edge*theta_edge)
+                theta = math.atan2(abs(dy), max(dx, 1e-10))
+                w = math.exp(-BETA*theta*theta)
                 ea = cmath.exp(1j*k*act) * w / (L**1.0)
 
                 if j in mass_set:
-                    # Branch-dependent coupling from edge angle
-                    alpha_k = ALPHA_SCALE * theta_edge
-                    if alpha_k < 0.01:
-                        key = (j, bits)
-                        if key not in state:
-                            state[key] = 0.0+0.0j
-                        state[key] += amp * ea
-                    else:
-                        cos_a = math.cos(alpha_k)
-                        sin_a = math.sin(alpha_k)
+                    # Fresh ancilla: split, increment encounter count
+                    # Branch 0: ancilla stays |0⟩, count stays same
+                    key_0 = (j, n_enc)
+                    if key_0 not in state:
+                        state[key_0] = 0.0+0.0j
+                    state[key_0] += amp * ea * cos_a
 
-                        # Append 0 bit (ancilla unchanged)
-                        bits_0 = bits + (0,)
-                        key_0 = (j, bits_0)
-                        if key_0 not in state:
-                            state[key_0] = 0.0+0.0j
-                        state[key_0] += amp * ea * cos_a
-
-                        # Append 1 bit (ancilla excited)
-                        bits_1 = bits + (1,)
-                        key_1 = (j, bits_1)
-                        if key_1 not in state:
-                            state[key_1] = 0.0+0.0j
-                        state[key_1] += amp * ea * sin_a
+                    # Branch 1: ancilla goes to |1⟩, count increments
+                    key_1 = (j, n_enc + 1)
+                    if key_1 not in state:
+                        state[key_1] = 0.0+0.0j
+                    state[key_1] += amp * ea * sin_a
                 else:
-                    key = (j, bits)
+                    key = (j, n_enc)
                     if key not in state:
                         state[key] = 0.0+0.0j
                     state[key] += amp * ea
 
-    det_state = {(d, bits): amp for (d, bits), amp in state.items() if d in det}
+    det_state = {(d, enc): amp for (d, enc), amp in state.items() if d in det}
     return det_state
 
 
@@ -140,24 +133,23 @@ def main():
     k_band = [3.0, 5.0, 7.0]
 
     print("=" * 70)
-    print("LEVEL B: TRUE SLOT-RESOLVED FRESH ANCILLA ON DAGs")
+    print("LEVEL B PROXY: FRESH-ANCILLA ENCOUNTER-COUNT ON REAL DAGs")
     print(f"  Propagator: 1/L^p × exp(-{BETA}×θ²)")
-    print(f"  Coupling: α_k = {ALPHA_SCALE} × edge_angle (branch-dependent)")
-    print(f"  Env: ancilla bitstring (slot-resolved)")
+    print(f"  Env: encounter count only (lossy proxy, not slot-resolved ancillas)")
+    print(f"  α = {ALPHA_BASE:.2f}")
     print("=" * 70)
     print()
 
-    print(f"  {'N':>4s}  {'n_mass':>6s}  {'n_env':>6s}  {'max_len':>7s}  "
+    print(f"  {'N':>4s}  {'n_mass':>6s}  {'n_enc':>6s}  "
           f"{'pur_fa':>8s}  {'pur_node':>8s}  {'fa_off':>8s}")
-    print(f"  {'-' * 56}")
+    print(f"  {'-' * 48}")
 
-    for nl in [8, 12, 18]:
+    for nl in [8, 12, 18, 25]:
         pfa_list, pn_list, p0_list = [], [], []
         n_mass_count = 0
-        max_envs = 0
-        max_bitlen = 0
+        max_enc = 0
 
-        for seed in range(3):
+        for seed in range(4):
             positions, adj, _ = generate_causal_dag(
                 n_layers=nl, nodes_per_layer=25, y_range=12.0,
                 connect_radius=3.0, rng_seed=seed*11+7)
@@ -169,47 +161,48 @@ def main():
             mass_set = set(setup["mass_set"]) - setup["blocked"]
             n_mass_count = len(mass_set)
 
-            for k_val in k_band:
+            for k in k_band:
+                # Fresh ancilla
                 ds_fa = propagate_fresh_ancilla(
                     positions, adj, setup["field"], setup["src"], setup["det"],
-                    k_val, mass_set, setup["blocked"])
+                    k, mass_set, setup["blocked"])
                 pfa, _, _, _ = compute_detector_metrics(ds_fa, setup["det_list"])
                 if not math.isnan(pfa):
                     pfa_list.append(pfa)
-                envs = set(bits for (d, bits) in ds_fa.keys())
-                max_envs = max(max_envs, len(envs))
-                max_bitlen = max(max_bitlen, max((len(b) for b in envs), default=0))
+                encs = set(enc for (d, enc) in ds_fa.keys())
+                max_enc = max(max_enc, max(encs) if encs else 0)
 
+                # Node-label (matched)
                 from scripts.density_matrix_analysis import propagate_two_register_full
                 ds_n = propagate_two_register_full(
                     positions, adj, setup["field"], setup["src"], setup["det"],
-                    k_val, mass_set, setup["blocked"])
+                    k, mass_set, setup["blocked"])
                 pn, _, _, _ = compute_detector_metrics(ds_n, setup["det_list"])
                 if not math.isnan(pn):
                     pn_list.append(pn)
 
+                # Off baseline
                 ds_0 = propagate_fresh_ancilla(
                     positions, adj, setup["field"], setup["src"], setup["det"],
-                    k_val, set(), setup["blocked"])
+                    k, set(), setup["blocked"])
                 p0, _, _, _ = compute_detector_metrics(ds_0, setup["det_list"])
                 if not math.isnan(p0):
                     p0_list.append(p0)
 
         if pfa_list:
-            print(f"  {nl:4d}  {n_mass_count:6d}  {max_envs:6d}  {max_bitlen:7d}  "
+            print(f"  {nl:4d}  {n_mass_count:6d}  {max_enc:6d}  "
                   f"{sum(pfa_list)/len(pfa_list):8.4f}  "
                   f"{sum(pn_list)/len(pn_list):8.4f}  "
                   f"{sum(p0_list)/len(p0_list):8.4f}")
 
     print()
-    print("pur_fa = slot-resolved fresh ancilla")
+    print("pur_fa = encounter-count proxy for fresh ancillas")
     print("pur_node = node-label env (comparison)")
     print("fa_off = no coupling (should be ~1.0)")
-    print("n_env = distinct bitstrings at detector")
-    print("max_len = longest bitstring (= max encounters)")
+    print("n_enc = max encounter count reached")
     print()
-    print("PASS: pur_fa does not rise with N")
-    print("FAIL: pur_fa rises with N")
+    print("Interpret carefully: this is NOT a faithful Level B replay of")
+    print("the Level A fresh-ancilla law, only an encounter-count proxy.")
     print()
     print("TEST COMPLETE")
 

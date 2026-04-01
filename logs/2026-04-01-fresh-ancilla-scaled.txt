@@ -26,8 +26,9 @@ HIGH ABSOLUTE PURITY (0.93) because the cos/sin split distributes
 amplitude thinly. Node-label has WRONG TREND (increase) but LOW
 ABSOLUTE PURITY because deterministic assignment gives balanced states.
 
-VERDICT: PROVISIONAL
-  First architecture with non-increasing purity scaling.
-  Absolute decoherence is weak (purity ~0.93).
-  The encounter-count env is a lossy compression — full encounter
-  sequences would give stronger decoherence but exponential state space.
+VERDICT: INTERESTING PROXY, NOT YET A REAL PASS
+  The encounter-count proxy shows a non-increasing trend on this scaled-mass
+  slice, but it is not a faithful implementation of the Level A law.
+  Absolute decoherence is still weak (purity ~0.93).
+  Full slot-resolved encounter histories and branch-dependent Δα_k are
+  still unimplemented here.
