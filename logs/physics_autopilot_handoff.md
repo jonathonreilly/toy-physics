@@ -1,24 +1,18 @@
 # Physics Autopilot Handoff
 
-## 2026-04-01 15:55 America/New_York
+## 2026-04-01 17:14 America/New_York
 
 ### Seam class
 - directional-measure gravity `b` lane
-- review fix plus overlap-onset local-density compare
+- overlap-onset transfer holdout
 
 ### What this loop did
-- acquired the `physics-science` cooperative lock for a review/fix pass
-- verified that the directional-`b` center-offset helpers were clamping nonpositive `actual_b` to `1e-9`
-- fixed that normalization bug in the directional-`b` helper stack so overlap cases become singular instead of fabricating huge `response / b` values
-- reran the affected directional-`b` science cards:
-  - `directional_b_denominator_geometry_diagnostic.py`
-  - `directional_b_mass_window_transfer.py`
-  - `directional_b_h_over_b_crossover_card.py`
-  - `directional_b_overlap_margin_card.py`
-- corrected the repo narrative and card wording to match the fixed results
-- added `directional_b_overlap_onset_local_density_compare.py`
-- ran it and wrote `logs/2026-04-01-directional-b-overlap-onset-local-density-compare.txt`
-- refreshed the shared handoff and work log
+- ran the required duplicate-run guard and cooperative lock checks before reading shared state
+- reconciled the canonical repo and found that the earlier push to `origin/main` is still blocked in this sandbox by DNS (`Could not resolve host: github.com`)
+- added `scripts/directional_b_overlap_onset_transfer_holdout.py`
+- ran it and wrote `logs/2026-04-01-directional-b-overlap-onset-transfer-holdout.txt`
+- updated the retained directional-`b` narrative so the overlap-onset claim is promoted only at the feature level
+- refreshed the tracked work log and this handoff
 
 ### Current state
 - no detached science child is running
@@ -30,41 +24,33 @@
   - safer finite-source correction `response / (b - h_mass)`
   - packet-support correction secondary
 - widened dense random-DAG families do cross into `mu <= 0`, but pure `response / b` still passes on the bounded family once singular center-offset trials are excluded
-- the new low-`b` onset mechanism read is:
-  - weak target-band occupancy plus coarse local `y` spacing
-  - tree controls densify near the target plane and keep compact source windows
-  - dense random-DAG layers keep only about `1-2` nodes in the target band and therefore stretch widened source windows across larger `y` gaps
-- the new best bounded overlap rule is:
+- the second dense-family holdout keeps the same qualitative overlap-onset split:
+  - overlap rows still have much weaker target-band fill (`0.196` vs `0.885`)
+  - same-side spacing stays coarser (`1.035` vs `0.869`)
+  - selected span per source step stays larger (`1.193` vs `0.498`)
+- the exact original gap/span rule is only partial on that holdout:
   - `same_side_mean_gap >= 0.7504 and selected_span_step >= 1.1301`
-  - `tp/fp/fn/tn = 7/0/2/14`
-  - accuracy `0.9130`
+  - `tp/fp/fn/tn = 9/1/6/24`
+  - accuracy `0.8250`
+- the promoted retained statement is therefore:
+  - sparse target-band occupancy is the leading transferable overlap-onset signal
+  - same-side gap/span thresholds stay family-dependent refinements
 
 ### Git / sync state
-- review/fix edits are still local in the shared checkout at the time of this handoff
-- changed tracked files include:
-  - `README.md`
-  - `docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
-  - `AUTOPILOT_WORKLOG.md`
-  - directional-`b` helper/card scripts
-  - refreshed directional-`b` logs
-- untracked local work still exists in:
-  - `scripts/three_d_modular_gravity_mass_scaling.py`
-- that 3D mass-scaling script was corrected locally to stop drifting the source centroid while claiming fixed `b`, but it was not rerun or published in this loop
+- `main` and `codex/distance-law-closure-and-higher-d-status` both point at `6fc649f`
+- the required push helper failed earlier in the loop with DNS against `origin/main`
+- this loop's directional-`b` edits are local in the shared checkout until a later push succeeds
+- unrelated untracked local work still exists in:
+  - `scripts/five_d_dense_joint_pilot.py`
+  - `scripts/source_resolved_green_pilot.py`
 
 ### Strongest confirmed conclusion
-The widened-family `response / b` failure was a helper bug, not a retained science result. After the fix, the gravity lane is cleaner: `1/b` remains the leading bounded term, `b - h_mass` is the safer finite-source correction near overlap, and overlap onset itself is now explained by sparse target-band occupancy plus coarse local spacing.
+The overlap-onset mechanism now transfers one step beyond the original compare, but only at the feature level. Sparse target-band occupancy is the leading cross-family signal for `mu <= 0`; the spacing cuts still help, but their exact thresholds are not universal once the dense family is widened and softened.
 
 ### Exact next step
 - keep the corrected propagator and corrected directional-`b` hierarchy fixed
-- test whether the new overlap-onset observables transfer onto one second dense-family control:
-  - same-side local `y` spacing
-  - target-band fill
-  - selected span per source step
-- only if that transfers, promote the local-density explanation into the retained asymptotic architecture
+- test whether the target-band occupancy floor transfers onto one more geometry-varied control that changes the mid-layer sampling law without changing the overlap diagnostic
+- only if that still holds, translate target-band occupancy into a cleaner asymptotic bridge variable
 
 ### New log paths
-- `/Users/jonreilly/Projects/Physics/logs/2026-04-01-directional-b-denominator-geometry-diagnostic.txt`
-- `/Users/jonreilly/Projects/Physics/logs/2026-04-01-directional-b-mass-window-transfer.txt`
-- `/Users/jonreilly/Projects/Physics/logs/2026-04-01-directional-b-h-over-b-crossover-card.txt`
-- `/Users/jonreilly/Projects/Physics/logs/2026-04-01-directional-b-overlap-margin-card.txt`
-- `/Users/jonreilly/Projects/Physics/logs/2026-04-01-directional-b-overlap-onset-local-density-compare.txt`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-01-directional-b-overlap-onset-transfer-holdout.txt`
