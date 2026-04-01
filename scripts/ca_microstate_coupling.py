@@ -30,6 +30,7 @@ import os
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scripts.generative_causal_dag_interference import generate_causal_dag
 from scripts.density_matrix_analysis import build_post_barrier_setup, compute_detector_metrics
+from scripts.fresh_ancilla_slot_resolved import propagate_two_register_angle
 
 BETA = 0.8
 N_CA_PHASES = 3
@@ -176,11 +177,10 @@ def main():
                 if not math.isnan(pca):
                     pca_list.append(pca)
 
-                # Node-label env (comparison)
-                from scripts.density_matrix_analysis import propagate_two_register_full
-                ds_n = propagate_two_register_full(
+                # Angle-weighted node-label env (apples-to-apples comparison)
+                ds_n = propagate_two_register_angle(
                     positions, adj, setup["field"], setup["src"], setup["det"],
-                    k, setup["mass_set"], setup["blocked"])
+                    k, mass_set, setup["blocked"])
                 pn, _, _, _ = compute_detector_metrics(ds_n, setup["det_list"])
                 if not math.isnan(pn):
                     pn_list.append(pn)

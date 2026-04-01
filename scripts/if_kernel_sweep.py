@@ -30,49 +30,81 @@ ALPHA = 2.0
 N_CA = 3
 
 
-def propagate_with_obs(positions, adj, field, src, det, k, mass_set, blocked):
-    n = len(positions)
-    layer_of = {idx: round(x) for idx, (x, y) in enumerate(positions)}
-    in_deg = [0]*n
+def topological_order(adj, n):
+    in_deg = [0] * n
     for i, nbs in adj.items():
-        for j in nbs: in_deg[j] += 1
+        for j in nbs:
+            in_deg[j] += 1
     q = deque(i for i in range(n) if in_deg[i] == 0)
     order = []
     while q:
-        i = q.popleft(); order.append(i)
+        i = q.popleft()
+        order.append(i)
         for j in adj.get(i, []):
             in_deg[j] -= 1
-            if in_deg[j] == 0: q.append(j)
-    state = {}
-    for s in src: state[(s, ())] = 1.0/len(src)+0.0j
-    processed = set()
+            if in_deg[j] == 0:
+                q.append(j)
+    return order
+
+
+def build_edge_cache(positions, adj, field):
+    cache = {}
+    layer_of = {idx: round(x) for idx, (x, _y) in enumerate(positions)}
+    for i, nbs in adj.items():
+        terms = []
+        x1, y1 = positions[i]
+        for j in nbs:
+            x2, y2 = positions[j]
+            dx, dy = x2 - x1, y2 - y1
+            L = math.sqrt(dx * dx + dy * dy)
+            if L < 1e-10:
+                continue
+            te = math.atan2(abs(dy), max(dx, 1e-10))
+            lf = 0.5 * (field[i] + field[j])
+            dl = L * (1 + lf)
+            ret = math.sqrt(max(dl * dl - L * L, 0))
+            act = dl - ret
+            w = math.exp(-BETA * te * te)
+            pref = w / (L ** 1.0)
+            sector = int(math.atan2(dy, dx) * 4 / math.pi + 0.5) % 8
+            y_bin = int((positions[j][1] + 12) / 3)
+            ca_phase = layer_of.get(j, 0) % N_CA
+            terms.append((j, te, sector, y_bin, ca_phase, act, pref))
+        cache[i] = terms
+    return cache
+
+
+def propagate_with_obs(positions, adj, field, src, det, k, mass_set, blocked):
+    order = topological_order(adj, len(positions))
+    edge_cache = build_edge_cache(positions, adj, field)
+    state = defaultdict(dict)
+    for s in src:
+        state[s][()] = 1.0 / len(src) + 0.0j
+    det_state = {}
     for i in order:
-        if i in processed: continue
-        processed.add(i)
-        entries = {h: a for (nd,h), a in list(state.items()) if nd==i and abs(a)>1e-30}
-        if not entries or i in blocked: continue
+        entries = state.pop(i, None)
+        if not entries or i in blocked:
+            continue
+        if i in det:
+            for hist, amp in entries.items():
+                if abs(amp) > 1e-30:
+                    det_state[(i, hist)] = det_state.get((i, hist), 0.0 + 0.0j) + amp
+            continue
         for hist, amp in entries.items():
-            for j in adj.get(i, []):
-                if j in blocked: continue
-                x1,y1=positions[i]; x2,y2=positions[j]
-                dx,dy=x2-x1,y2-y1; L=math.sqrt(dx*dx+dy*dy)
-                if L<1e-10: continue
-                te=math.atan2(abs(dy),max(dx,1e-10))
-                lf=0.5*(field[i]+field[j])
-                dl=L*(1+lf); ret=math.sqrt(max(dl*dl-L*L,0)); act=dl-ret
-                w=math.exp(-BETA*te*te); ea=cmath.exp(1j*k*act)*w/(L**1.0)
+            if abs(amp) <= 1e-30:
+                continue
+            for j, te, sector, y_bin, ca_phase, act, pref in edge_cache.get(i, []):
+                if j in blocked:
+                    continue
+                ea = cmath.exp(1j * k * act) * pref
                 if j in mass_set and len(hist)<MAX_HIST:
-                    sector = int(math.atan2(dy,dx)*4/math.pi+0.5)%8
-                    y_bin = int((positions[j][1]+12)/3)
-                    ca_phase = layer_of.get(j, 0) % N_CA
                     obs = (te, sector, y_bin, ca_phase)
-                    new_hist = hist+(obs,)
+                    new_hist = hist + (obs,)
                 else:
                     new_hist = hist
-                key=(j,new_hist)
-                if key not in state: state[key]=0.0+0.0j
-                state[key] += amp*ea
-    return {(d,h): a for (d,h), a in state.items() if d in det}
+                nxt = state[j]
+                nxt[new_hist] = nxt.get(new_hist, 0.0 + 0.0j) + amp * ea
+    return det_state
 
 
 def angle_kernel(ha, hb, alpha):
@@ -121,6 +153,7 @@ def if_purity(ds_a, ds_b, det_list, kernel_fn, alpha):
     for (d,h),a in ds_a.items(): aa[d].append((h,a))
     for (d,h),a in ds_b.items(): bb[d].append((h,a))
     rho = {}
+    kernel_cache = {}
     for d1 in det_list:
         for d2 in det_list:
             v = 0.0+0.0j
@@ -130,10 +163,20 @@ def if_purity(ds_a, ds_b, det_list, kernel_fn, alpha):
                 for h2,a2 in bb.get(d2,[]): v += a1.conjugate()*a2
             for ha,aA in aa.get(d1,[]):
                 for hb,aB in bb.get(d2,[]):
-                    v += aA.conjugate()*aB*kernel_fn(ha,hb,alpha)
+                    key = (ha, hb)
+                    kval = kernel_cache.get(key)
+                    if kval is None:
+                        kval = kernel_fn(ha, hb, alpha)
+                        kernel_cache[key] = kval
+                    v += aA.conjugate()*aB*kval
             for hb,aB in bb.get(d1,[]):
                 for ha,aA in aa.get(d2,[]):
-                    v += aB.conjugate()*aA*kernel_fn(hb,ha,alpha)
+                    key = (hb, ha)
+                    kval = kernel_cache.get(key)
+                    if kval is None:
+                        kval = kernel_fn(hb, ha, alpha)
+                        kernel_cache[key] = kval
+                    v += aB.conjugate()*aA*kval
             rho[(d1,d2)] = v
     tr = sum(rho.get((d,d),0) for d in det_list).real
     if tr <= 1e-30: return math.nan

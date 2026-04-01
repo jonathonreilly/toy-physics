@@ -35,11 +35,9 @@ ALPHA_SCALE = 2.0
 MAX_HIST = 3
 
 
-def propagate_with_history(positions, adj, field, src, det, k,
-                           mass_set, blocked):
-    """Propagate tracking encounter angle history (capped at MAX_HIST)."""
-    n = len(positions)
-    in_deg = [0]*n
+def topological_order(adj, n):
+    """Return one topological order for the forward DAG."""
+    in_deg = [0] * n
     for i, nbs in adj.items():
         for j in nbs:
             in_deg[j] += 1
@@ -52,44 +50,65 @@ def propagate_with_history(positions, adj, field, src, det, k,
             in_deg[j] -= 1
             if in_deg[j] == 0:
                 q.append(j)
+    return order
 
-    state = {}
+
+def build_edge_cache(positions, adj, field):
+    """Precompute geometry/action factors shared by all branch histories."""
+    cache = {}
+    for i, nbs in adj.items():
+        terms = []
+        x1, y1 = positions[i]
+        for j in nbs:
+            x2, y2 = positions[j]
+            dx, dy = x2 - x1, y2 - y1
+            L = math.sqrt(dx * dx + dy * dy)
+            if L < 1e-10:
+                continue
+            lf = 0.5 * (field[i] + field[j])
+            dl = L * (1 + lf)
+            ret = math.sqrt(max(dl * dl - L * L, 0))
+            act = dl - ret
+            te = math.atan2(abs(dy), max(dx, 1e-10))
+            w = math.exp(-BETA * te * te)
+            pref = w / (L ** 1.0)
+            terms.append((j, te, act, pref))
+        cache[i] = terms
+    return cache
+
+
+def propagate_with_history(positions, adj, field, src, det, k,
+                           mass_set, blocked):
+    """Propagate tracking encounter angle history (capped at MAX_HIST)."""
+    order = topological_order(adj, len(positions))
+    edge_cache = build_edge_cache(positions, adj, field)
+
+    state = defaultdict(dict)
     for s in src:
-        state[(s, ())] = 1.0/len(src) + 0.0j
+        state[s][()] = 1.0 / len(src) + 0.0j
 
-    processed = set()
+    det_state = {}
     for i in order:
-        if i in processed:
-            continue
-        processed.add(i)
-        entries = {h: a for (nd, h), a in list(state.items())
-                   if nd == i and abs(a) > 1e-30}
+        entries = state.pop(i, None)
         if not entries or i in blocked:
             continue
+        if i in det:
+            for hist, amp in entries.items():
+                if abs(amp) > 1e-30:
+                    det_state[(i, hist)] = det_state.get((i, hist), 0.0 + 0.0j) + amp
+            continue
         for hist, amp in entries.items():
-            for j in adj.get(i, []):
+            if abs(amp) <= 1e-30:
+                continue
+            for j, te, act, pref in edge_cache.get(i, []):
                 if j in blocked:
                     continue
-                x1, y1 = positions[i]
-                x2, y2 = positions[j]
-                dx, dy = x2-x1, y2-y1
-                L = math.sqrt(dx*dx+dy*dy)
-                if L < 1e-10:
-                    continue
-                lf = 0.5*(field[i]+field[j])
-                dl = L*(1+lf)
-                ret = math.sqrt(max(dl*dl-L*L, 0))
-                act = dl-ret
-                te = math.atan2(abs(dy), max(dx, 1e-10))
-                w = math.exp(-BETA*te*te)
-                ea = cmath.exp(1j*k*act)*w/(L**1.0)
+                ea = cmath.exp(1j * k * act) * pref
                 nh = hist+(te,) if j in mass_set and len(hist) < MAX_HIST else hist
-                key = (j, nh)
-                if key not in state:
-                    state[key] = 0.0+0.0j
-                state[key] += amp*ea
+                nxt = state[j]
+                nxt[nh] = nxt.get(nh, 0.0 + 0.0j) + amp * ea
 
-    return {(d, h): a for (d, h), a in state.items() if d in det}
+    return det_state
 
 
 def overlap_kernel(ha, hb, alpha):
@@ -114,6 +133,7 @@ def build_if_density_matrix(ds_a, ds_b, det_list, alpha):
         bb[d].append((h, a))
 
     rho = {}
+    kernel_cache = {}
     for d1 in det_list:
         for d2 in det_list:
             v = 0.0+0.0j
@@ -125,10 +145,20 @@ def build_if_density_matrix(ds_a, ds_b, det_list, alpha):
                     v += a1.conjugate()*a2
             for ha, aA in aa.get(d1, []):
                 for hb, aB in bb.get(d2, []):
-                    v += aA.conjugate()*aB*overlap_kernel(ha, hb, alpha)
+                    key = (ha, hb)
+                    kval = kernel_cache.get(key)
+                    if kval is None:
+                        kval = overlap_kernel(ha, hb, alpha)
+                        kernel_cache[key] = kval
+                    v += aA.conjugate()*aB*kval
             for hb, aB in bb.get(d1, []):
                 for ha, aA in aa.get(d2, []):
-                    v += aB.conjugate()*aA*overlap_kernel(hb, ha, alpha)
+                    key = (hb, ha)
+                    kval = kernel_cache.get(key)
+                    if kval is None:
+                        kval = overlap_kernel(hb, ha, alpha)
+                        kernel_cache[key] = kval
+                    v += aB.conjugate()*aA*kval
             rho[(d1, d2)] = v
 
     trace_unnorm = sum(rho.get((d, d), 0) for d in det_list).real
@@ -372,8 +402,9 @@ def main():
             ds_b = propagate_with_history(positions, adj, setup["field"],
                 setup["src"], setup["det"], k, mass_set, blocked | sa)
 
-            _, tr_if, p_if = build_if_density_matrix(ds_a, ds_b, det_list, ALPHA_SCALE)
-            _, tr_0, p_0 = build_if_density_matrix(ds_a, ds_b, det_list, 0.0)
+            current_det_list = setup["det_list"]
+            _, tr_if, p_if = build_if_density_matrix(ds_a, ds_b, current_det_list, ALPHA_SCALE)
+            _, tr_0, p_0 = build_if_density_matrix(ds_a, ds_b, current_det_list, 0.0)
 
             if not math.isnan(p_if):
                 pif_list.append(p_if)
