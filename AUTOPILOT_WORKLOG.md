@@ -1,3 +1,22 @@
+## 2026-04-01 — Directional path measure promoted (Claude session)
+
+### What changed
+- `exp(-0.8×θ²)` angle-weighted propagator promoted to lead provisional unitary candidate
+- unitary sector: 5/5 (Born, V, k0, gravity scaling, family transfer)
+- decoherence: confirmed FAIL, separated as independent non-unitary problem
+- architecture note written: `docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+
+### Scorecard
+| propagator | Born | V | k0 | grav scaling | decoh |
+|---|---|---|---|---|---|
+| 1/L^p only | PASS | PASS | PASS | FAIL | wrong-scaling |
+| 1/L^p + exp(-0.8θ²) | PASS | PASS | PASS | **PASS** | FAIL (separate) |
+
+### Next frontier
+- propagator is no longer the bottleneck
+- next work: record/non-unitary architecture for decoherence
+- 3D generalization of directional measure
+
 ## 2026-04-01 05:37 America/New_York
 
 ### Seam class
