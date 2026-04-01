@@ -162,6 +162,15 @@ stable: by `N=80..100` the ceiling returns, and stronger or adaptive pruning
 pushes the graph toward disconnection. So it should be read as a **nonlocal
 pruning construction**, not as a solved local growth law.
 
+The newer 3D dynamics passes sharpen that status:
+
+- fixed-threshold self-regulation helps through `N=50`
+- adaptive-quantile pruning extends the useful window through `N=60`
+- both deletion-only rules still fail by `N=80`
+
+So Gate B is now a **bounded partial positive**, not a closed all-negative lane
+and not an asymptotic success.
+
 The first hard-gap placement-only diagnostic is also now explicitly
 `not-ready`: the best candidate (`alpha=1`) reaches a useful gap width
 (`gap ~ 2.3`) only with a badly misplaced center (`|gap_ctr| ~ 4.2`), while
@@ -174,14 +183,16 @@ stronger placement drives the graphs toward near-disconnection and
    good modular topology. Global post-hoc node removal helps only at
    intermediate `N` and is not an asymptotic fix.
 
-2. **3D generalization:** All tests are 2D (1 spatial + 1 causal).
+2. **3D/4D strict generalization:** higher-dimensional modular lanes are real,
+   but the strict joint/unification wording is now narrower than the early
+   branch story and still metric-sensitive.
 
 3. **Continuum limit:** Discrete channel separation ↔ spatial
    locality connection is informal.
 
-4. **Strong decoherence:** pur_min ~ 0.93 at best (N=40 with
-   removal or modular gap=5). Never reaches << 0.5. The linear
-   path-sum may fundamentally limit decoherence depth.
+4. **Strong decoherence:** the retained CL/IF lane reaches only moderate
+   detector-state decoherence, and the large-`N` strict visibility clause is
+   much weaker than the older contrast proxy suggested.
 
 ## Honest assessment (revised)
 
@@ -198,5 +209,5 @@ seed runs. The stronger retained claim is instead:
 - on the asymptotic modular bath lane, true interference gain is weak/gone
   even though the older contrast proxy stayed high
 - the emergence question remains open because the good topology is still
-  imposed; the best pruning surrogate helps only at intermediate `N` and does
-  not generate a stable local hard-gap rule
+  imposed; the best adaptive-quantile pruning surrogate reaches `N=60` in 3D
+  but still does not generate a stable local hard-gap rule

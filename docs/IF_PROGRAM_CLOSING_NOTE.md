@@ -92,7 +92,9 @@ That points to a sharper next frontier:
 1. self-regulating node-placement rules
 2. node-removal / non-permanence rules that can stabilize a slit-centered gap
    as a genuine local hard-gap law rather than a global pruning surrogate;
-   soft pruning on a connected graph is now a closed asymptotic lane
+   fixed-threshold and adaptive-quantile deletion are now bounded positives in
+   3D, but deletion-only pruning on a connected graph is still a closed
+   asymptotic lane
 3. other dynamics that can create or maintain regions with no nodes at the
    right scale
 4. or, if those fail cleanly, treating the gap as part of the effective
@@ -116,4 +118,4 @@ Next decisive question:
 
 - **can graph dynamics create or maintain the node-absence barriers that the
   working modular topology currently imposes by hand, at the right scale and
-  location?**
+  location, in a way that remains valid past `N=60`?**

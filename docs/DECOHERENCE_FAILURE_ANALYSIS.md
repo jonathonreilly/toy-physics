@@ -177,9 +177,13 @@ The failed family is now broader and cleaner:
   the wrong size or location: too small does not help, too large disconnects
   the graph
 - global node pruning can improve the dense-random baseline at intermediate
-  `N`, but the ceiling returns by `N=80..100`, and stronger/adaptive pruning
-  drives the graph toward disconnection. The current implementation remains a
-  nonlocal post-hoc surrogate rather than a local endogenous dynamics law
+  `N`, and the newer 3D self-regulating lanes sharpen that result:
+  fixed-threshold pruning helps through `N=50`, while adaptive-quantile
+  pruning extends the useful window through `N=60`. But the ceiling still
+  returns by `N=80`, and deletion-only dynamics still drive the graph toward
+  disconnection or low valid-seed coverage. The current implementation
+  therefore remains a nonlocal post-hoc surrogate rather than a retained local
+  endogenous dynamics law
 
 So the open emergence question is now sharper:
 
@@ -188,7 +192,8 @@ So the open emergence question is now sharper:
   surrogate?**
 - the remaining open growth lane is no longer another connection-bias rule
   but a rule for where nodes exist at all
-- simple soft pruning of a connected graph is now a closed asymptotic lane
+- simple deletion-only pruning of a connected graph is now a bounded partial
+  positive, but still a closed asymptotic lane
 
 ## Honest assessment (updated)
 
@@ -211,6 +216,8 @@ Open questions:
   (channel separation ↔ branch-preserving spatial locality?)
 - Can a self-regulating node-placement or node-removal rule generate the
   channel structure dynamically instead of imposing it by hand?
+- Can adaptive quantile pruning be stabilized with connectivity-aware or
+  birth/death updates, or is deletion-only dynamics fundamentally too weak?
 - If node non-permanence matters, does it have to create a real hard gap
   rather than merely thin the graph?
 - Does `pur_min ~ 0.93 ± 0.02` represent a true floor, or a slower large-`N`

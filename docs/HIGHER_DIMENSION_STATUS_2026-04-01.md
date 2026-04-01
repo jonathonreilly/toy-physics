@@ -44,10 +44,11 @@
   - A later dense pilot does recover a narrow positive window:
     - [five_d_dense_pilot.py](/Users/jonreilly/Projects/Physics/scripts/five_d_dense_pilot.py)
     - [2026-04-01-five-d-dense-pilot.txt](/Users/jonreilly/Projects/Physics/logs/2026-04-01-five-d-dense-pilot.txt)
-  - A denser robustness map broadens that positive window around the pilot corner, but it still stays inside the dense modular neighborhood rather than becoming a stable generic regime:
-    - [five_d_dense_robustness_map.py](/Users/jonreilly/Projects/Physics/scripts/five_d_dense_robustness_map.py)
-    - [2026-04-01-five-d-dense-robustness-map.txt](/Users/jonreilly/Projects/Physics/logs/2026-04-01-five-d-dense-robustness-map.txt)
-  - Best current read: 5D is not dead, but its positive mass-law signal remains density-sensitive and tied to a dense modular corner of parameter space.
+  - Under the corrected control pool, the rerun narrows further: the positive region stays inside a very tight dense modular corner, and the stability-aware follow-up shows that this corner spans multiple nearby rows rather than a single isolated point.
+  - Best current read: 5D is not dead, but its positive mass-law signal is a meaningful narrow dense-corner regime, not a broad stable window and not a one-row artifact.
+  - A source-aware follow-up in that same dense neighborhood is negative:
+    - [five_d_source_projected_pilot.py](/Users/jonreilly/Projects/Physics/scripts/five_d_source_projected_pilot.py)
+  - Safe wording: the narrow positive 5D corner is a Laplacian/modular mass-scaling story, not a broader source-aware rescue.
 
 - **The first causal-field alternative is not yet a retained distance-law rescue.**
   - [causal_field_fixed_mass_verify.py](/Users/jonreilly/Projects/Physics/scripts/causal_field_fixed_mass_verify.py)
@@ -58,10 +59,28 @@
   - [2026-04-01-causal-field-unification.txt](/Users/jonreilly/Projects/Physics/logs/2026-04-01-causal-field-unification.txt)
   - Once the impact-parameter sweep is rerun with fixed mass count and fixed source geometry, the earlier apparent causal-field falloff does not survive as a clean `1/b` law, and the same forward-only field weakens mass scaling relative to the retained Laplacian lane.
   - A bounded hybrid interpolation check also stays negative:
-    - [hybrid_field_fixed_mass_pilot.py](/Users/jonreilly/Projects/Physics/scripts/hybrid_field_fixed_mass_pilot.py)
-    - [2026-04-01-hybrid-field-fixed-mass-pilot.txt](/Users/jonreilly/Projects/Physics/logs/2026-04-01-hybrid-field-fixed-mass-pilot.txt)
+  - [hybrid_field_fixed_mass_pilot.py](/Users/jonreilly/Projects/Physics/scripts/hybrid_field_fixed_mass_pilot.py)
+  - [2026-04-01-hybrid-field-fixed-mass-pilot.txt](/Users/jonreilly/Projects/Physics/logs/2026-04-01-hybrid-field-fixed-mass-pilot.txt)
   - No tested hybrid mix beats the retained Laplacian endpoint on both distance trend
     and mass scaling at once; the interpolation only slides between the two endpoints.
+
+- **Geometry-clean source templates are only available in a tiny corner.**
+  - [source_template_availability_scan.py](/Users/jonreilly/Projects/Physics/scripts/source_template_availability_scan.py)
+  - [2026-04-01-source-template-availability-scan.txt](/Users/jonreilly/Projects/Physics/logs/2026-04-01-source-template-availability-scan.txt)
+  - The retained and denser fixed-layer scans both have zero clean maps at the default template choice.
+  - A later geometry search does find a narrow clean corner, and the best combo in both families is layer `6`, mass count `4`, but the clean acceptance rate is still sparse.
+  - The geometry-clean pilot therefore keeps the source-aware seam narrow rather than opening a broad rescue lane.
+
+- **Explicit fixed-template source-aware coupling is now a conditional rather than broad result.**
+  - [fixed_template_source_projected_pilot.py](/Users/jonreilly/Projects/Physics/scripts/fixed_template_source_projected_pilot.py)
+  - [2026-04-01-fixed-template-source-projected-pilot.txt](/Users/jonreilly/Projects/Physics/logs/2026-04-01-fixed-template-source-projected-pilot.txt)
+  - On the retained 3D modular family, the explicit non-overlapping template bank still improves the distance exponent relative to the Laplacian baseline and strengthens the mass exponent.
+  - On the denser 3D modular control family, the same template discipline flips back against the projected lane: the distance trend does not improve and the mass trend weakens.
+  - Safe wording: **the source-projected seam is real but family-sensitive; it is not a retained rescue across both 3D control families.**
+  - The newer detector-side purity ablation / rescue pair is also negative for the simplest mechanism story:
+    - [detector_purity_ablation.py](/Users/jonreilly/Projects/Physics/scripts/detector_purity_ablation.py)
+    - [detector_purity_rescue.py](/Users/jonreilly/Projects/Physics/scripts/detector_purity_rescue.py)
+  - Lowering purity in the retained family does not collapse the seam, and nudging purity upward in the denser family does not restore a balanced rescue. So detector purity is currently best read as a correlate, not the main causal lever.
 
 ## Strong branch-local results that still need careful wording
 
@@ -84,10 +103,11 @@
   - [2026-04-01-four-d-visibility-envelope.txt](/Users/jonreilly/Projects/Physics/logs/2026-04-01-four-d-visibility-envelope.txt)
   - The older exact-`y` profile metric was too brittle. The newer fixed-bin / envelope-smoothed checks are better, and they now support a slightly stronger but still narrow claim: strict 4D visibility is **weak and intermittent**, not strongly retained across the family. The visibility caveat therefore survives even after the metric cleanup.
 
-- **The original branch-local 3D joint script still uses an interference proxy, and the new strict 3D companion stays weak.**
+- **The original branch-local 3D joint script still uses an interference proxy, and the stricter reruns narrow the 3D joint claim further.**
   - [three_d_joint_visibility_strict.py](/Users/jonreilly/Projects/Physics/scripts/three_d_joint_visibility_strict.py)
   - [2026-04-01-three-d-joint-visibility-strict.txt](/Users/jonreilly/Projects/Physics/logs/2026-04-01-three-d-joint-visibility-strict.txt)
-  - On the retained 3D modular `gap=3` lane, the strict same-family visibility gain is effectively flat at large `N` (`V_gain ≈ +0.0049` for `N>=40`), so the stronger 3D “all four pass” language remains safe only when its fourth clause is read as a proxy/interference-surrogate statement.
+  - On the retained 3D modular `gap=3` lane, the strict same-family visibility gain is effectively flat at large `N` (`V_gain ≈ +0.0049` for `N>=40`), so the stronger 3D “all four pass” language remains unsafe under strict controls.
+  - The corrected chokepoint + fixed-mass rerun of [three_d_joint_test.py](/Users/jonreilly/Projects/Physics/scripts/three_d_joint_test.py) keeps decoherence but not a strong retained gravity clause, so the safe 3D statement is now: **3D decoherence clearly survives; the earlier broad four-way coexistence wording does not.**
 
 - **The strict 4D pass is not literally same-graph on all four columns.**
   - Gravity, decoherence, and binned visibility run on the retained modular DAGs.
@@ -105,28 +125,47 @@
   - [effective_metric_distance_law.py](/Users/jonreilly/Projects/Physics/scripts/effective_metric_distance_law.py)
   - [causal_field_fixed_mass_verify.py](/Users/jonreilly/Projects/Physics/scripts/causal_field_fixed_mass_verify.py)
   - [causal_field_unification.py](/Users/jonreilly/Projects/Physics/scripts/causal_field_unification.py)
-  - Across those fixed-mass and rescue-variant tests, the same flat/topological distance law survives. The remaining live question is no longer “which weight or shell fixes `1/b`?” but whether the flat force law can be derived analytically or only escaped by a deeper architecture change.
+  - Across those fixed-mass and rescue-variant tests, the same flat/topological distance law survives.
+  - The only remaining live seam is source-aware coupling:
+    - [source_resolved_green_pilot.py](/Users/jonreilly/Projects/Physics/scripts/source_resolved_green_pilot.py)
+    - [source_projected_field_pilot.py](/Users/jonreilly/Projects/Physics/scripts/source_projected_field_pilot.py)
+  - [source_projected_parameter_map.py](/Users/jonreilly/Projects/Physics/scripts/source_projected_parameter_map.py)
+  - [2026-04-01-source-projected-parameter-map-rerun.txt](/Users/jonreilly/Projects/Physics/logs/2026-04-01-source-projected-parameter-map-rerun.txt)
+  - [fixed_source_geometry_sanity.py](/Users/jonreilly/Projects/Physics/scripts/fixed_source_geometry_sanity.py)
+  - [2026-04-01-fixed-source-geometry-sanity-rerun.txt](/Users/jonreilly/Projects/Physics/logs/2026-04-01-fixed-source-geometry-sanity-rerun.txt)
+  - Current safe wording: **source-projected coupling is family-sensitive: the explicit non-overlapping template pilot improves the distance trend and mass scaling on the retained family, but it flips back against the denser control family, so it is not a retained rescue.**
+
+- **The 4D source-aware seam is narrow and family-sensitive.**
+  - [four_d_source_projected_pilot.py](/Users/jonreilly/Projects/Physics/scripts/four_d_source_projected_pilot.py)
+  - [2026-04-01-four-d-source-projected-pilot.txt](/Users/jonreilly/Projects/Physics/logs/2026-04-01-four-d-source-projected-pilot.txt)
+  - On the retained 4D modular family, the source-projected lane flips to a positive `b` exponent and loses the mass trend.
+  - [four_d_source_template_availability_scan.py](/Users/jonreilly/Projects/Physics/scripts/four_d_source_template_availability_scan.py)
+  - [2026-04-01-four-d-source-template-availability-scan.txt](/Users/jonreilly/Projects/Physics/logs/2026-04-01-four-d-source-template-availability-scan.txt)
+  - The retained 4D family still has no clean template maps, but the denser 4D holdout does admit a clean corner at layer=5, `M=4`.
+  - The corresponding clean-corner pilot on that denser family still does not produce a stable source-aware rescue: the projected lane has accepted maps, but its shifts stay mixed and the mass fit is not robust.
+  - Safe wording: the explicit source-aware seam is not a broad 4D rescue, but it remains a narrow geometry-sensitive corner in the denser family.
 
 ## Current best claim
 
 The current higher-dimensional story is:
 
-- gravity survives in the higher-dimensional extensions,
+- gravity survives in the higher-dimensional extensions in narrower form than the early branch story,
 - mass-scaling strength increases with spatial dimension,
 - modular 3D and especially modular 4D dramatically improve the decoherence story,
 - Born-rule compliance survives with chokepoint barriers,
-- but the distance law remains effectively topological/flat, and the strict higher-dimensional visibility story still needs cleaner metrics.
+- but the distance law remains effectively topological/flat, the strict higher-dimensional visibility story still needs cleaner metrics, and the corrected 3D joint rerun now retains decoherence more clearly than gravity. The explicit non-overlapping source-template pilots now sharpen the last source-aware seam: the retained family improves, the denser family flips back, and the result is family-sensitive rather than a stable rescue.
+- the dense 5D source-aware follow-up and the detector-purity ablation / rescue pair both keep that last seam narrow: the higher-dimensional transfer stays negative, and purity alone does not explain the surviving retained-family effect.
 
 ## Next frontiers
 
-1. **4D continuum / density limit**
-   - determine whether the 4D mass exponent converges toward `1`.
+1. **Source-aware mechanism frontier**
+   - explain why the retained 3D family improves while the denser 3D control, the retained 4D family, and the dense 5D corner all flip back or fail.
 
-2. **5D dense robustness map**
-   - determine whether the positive dense 5D window widens beyond the pilot corner or stays density-sensitive inside the modular neighborhood.
-
-3. **Analytic / architectural distance-law frontier**
+2. **Analytic / architectural distance-law frontier**
    - derive why the current linear path-sum force stays flat/topological, or test genuinely deeper alternatives such as metric emergence or stronger nonlinearity.
 
-4. **Causal-field redesign, not tweak**
-   - any further causal-field work should start from fixed-mass / fixed-geometry controls and treat the current forward-only scalar field as an exploratory negative result rather than a retained rescue.
+3. **4D continuum / density limit**
+   - determine whether the 4D mass exponent converges toward `1`.
+
+4. **5D dense robustness**
+   - the corrected-control reruns now suggest a meaningful narrow dense-corner regime rather than a one-row artifact; the remaining question is whether that corner can widen into a more stable family.

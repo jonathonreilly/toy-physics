@@ -57,10 +57,17 @@ Current sharp version:
 - connection-bias feedback is now largely a closed lane
 - first-pass node-placement rules also fail if they create gaps that are too
   large, too small, or misplaced
+- deletion-only self-regulation is now a bounded partial positive:
+  - fixed-threshold pruning helps through `N=50`
+  - adaptive-quantile pruning extends the useful window through `N=60`
+  - both still fail by `N=80`
 - the active dynamics question is now a **self-regulating hard-gap** node
   placement / node-removal rule, because the retained barrier is a property of
   node absence at the right scale rather than weak links; soft pruning of
-  already connected graphs now looks asymptotically insufficient
+  already connected graphs still looks asymptotically insufficient, so the
+  next serious variants are connectivity-aware pruning, gap maintenance on a
+  modular baseline, or coupled birth/death rules rather than another fixed
+  cutoff
 
 Why it matters:
 
