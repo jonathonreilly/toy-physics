@@ -110,13 +110,23 @@ def propagate_coarse_grained(positions, adj, field, src, det, k, n_ybins=6):
 
         state.update(new_state)
 
-    # Collect at detector layer
+    # Collect at detector layer: distribute bin amplitude evenly among
+    # detector nodes in that bin to avoid occupancy-count distortion.
     det_layer_idx = len(layers) - 1
-    probs = {}
+
+    # Group detector nodes by bin
+    det_by_bin = defaultdict(list)
     for d in det:
-        yb = y_bin(positions[d][1])
-        a = state.get((det_layer_idx, yb), 0.0+0.0j)
-        probs[d] = abs(a)**2
+        det_by_bin[y_bin(positions[d][1])].append(d)
+
+    probs = {}
+    for yb, d_nodes in det_by_bin.items():
+        bin_amp = state.get((det_layer_idx, yb), 0.0+0.0j)
+        bin_prob = abs(bin_amp)**2
+        # Distribute bin probability evenly among nodes in this bin
+        per_node = bin_prob / len(d_nodes) if d_nodes else 0
+        for d in d_nodes:
+            probs[d] = per_node
 
     total = sum(probs.values())
     if total > 0:

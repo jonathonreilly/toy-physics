@@ -117,11 +117,12 @@ def propagate_two_scale(positions, adj, field, src, det, k, mass_set,
                     # Macro: average edge amplitude within bundle (G2)
                     avg_ea = sum(ea for ea, _, _ in edges) / len(edges)
 
-                    # Micro: update per-bin env for the DESTINATION bin
-                    mass_in_dest = [j for _, j, is_m in edges if is_m]
+                    # Micro: update per-bin env with ALL mass nodes in dest bin
+                    mass_in_dest = sorted(set(j for _, j, is_m in edges if is_m))
                     if mass_in_dest:
                         new_env = list(env_tuple)
-                        new_env[nb] = mass_in_dest[0]  # first mass node in dest bin
+                        # Use sorted tuple of mass nodes as env for this bin
+                        new_env[nb] = tuple(mass_in_dest) if len(mass_in_dest) > 1 else mass_in_dest[0]
                         new_env = tuple(new_env)
                     else:
                         new_env = env_tuple
@@ -130,18 +131,25 @@ def propagate_two_scale(positions, adj, field, src, det, k, mass_set,
 
         state.update(new_state)
 
-    # Collect at detector: partial trace over env
+    # Collect at detector: distribute bin amplitude evenly among
+    # detector nodes in that bin (avoid occupancy-count distortion)
     det_layer_idx = len(layers) - 1
+
+    det_by_bin = defaultdict(list)
+    for d in det:
+        det_by_bin[y_bin(positions[d][1])].append(d)
+
     det_state = {}
     for (l, b, env), amp in state.items():
-        if l == det_layer_idx:
-            # Map bin back to detector nodes
-            for d in det:
-                if y_bin(positions[d][1]) == b:
-                    key = (d, env)
-                    if key not in det_state:
-                        det_state[key] = 0.0+0.0j
-                    det_state[key] += amp
+        if l == det_layer_idx and b in det_by_bin:
+            d_nodes = det_by_bin[b]
+            # Distribute amplitude evenly (preserves total probability)
+            amp_per_node = amp / len(d_nodes)
+            for d in d_nodes:
+                key = (d, env)
+                if key not in det_state:
+                    det_state[key] = 0.0+0.0j
+                det_state[key] += amp_per_node
 
     return det_state
 
