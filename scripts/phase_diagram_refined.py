@@ -155,7 +155,7 @@ def run_joint(positions, adj, k_band, n_layers):
     field_mass = compute_field(positions, mass_nodes, 0.1)
     field_flat = [0.0] * len(positions)
 
-    grav_d, pm_v, dec_v = [], [], []
+    grav_d, pm_v, dec_v, pc_v = [], [], [], []
 
     for k in k_band:
         # Gravity
@@ -182,12 +182,14 @@ def run_joint(positions, adj, k_band, n_layers):
         if not math.isnan(pc):
             pm_v.append(pmin)
             dec_v.append(pcoh - pc)
+            pc_v.append(pc)
 
     if not grav_d or not pm_v:
         return None
     return {
         "grav": sum(grav_d) / len(grav_d),
         "pm": sum(pm_v) / len(pm_v),
+        "pc": sum(pc_v) / len(pc_v),
         "dec": sum(dec_v) / len(dec_v),
     }
 
@@ -206,12 +208,12 @@ def main():
     for nl in [25, 40]:
         print(f"  N={nl}")
         print(f"  {'gap':>5s}  {'grav_d':>8s}  {'grav_SE':>7s}  {'pur_min':>8s}  "
-              f"{'pm_SE':>6s}  {'decoh':>8s}  {'n_ok':>4s}  {'both':>7s}")
-        print(f"  {'-' * 62}")
+              f"{'pur_cl':>8s}  {'decoh':>8s}  {'n_ok':>4s}  {'both':>7s}")
+        print(f"  {'-' * 66}")
 
         for gap in gaps:
             t0 = time.time()
-            grav_all, pm_all, dec_all = [], [], []
+            grav_all, pm_all, pc_all, dec_all = [], [], [], []
 
             for seed in range(n_seeds):
                 positions, adj, _ = generate_modular_dag(
@@ -223,6 +225,7 @@ def main():
                 if r:
                     grav_all.append(r["grav"])
                     pm_all.append(r["pm"])
+                    pc_all.append(r["pc"])
                     dec_all.append(r["dec"])
 
             if grav_all:
@@ -230,22 +233,25 @@ def main():
                 ag = sum(grav_all) / n_ok
                 se_g = (sum((g - ag) ** 2 for g in grav_all) / n_ok) ** 0.5 / math.sqrt(n_ok)
                 apm = sum(pm_all) / n_ok
-                se_pm = (sum((p - apm) ** 2 for p in pm_all) / n_ok) ** 0.5 / math.sqrt(n_ok)
+                apc = sum(pc_all) / n_ok
                 adec = sum(dec_all) / n_ok
 
+                # Use pur_cl (actual bath purity) for pass criterion, not pur_min
                 grav_ok = ag > 2 * se_g and ag > 0
-                dec_ok = apm < 0.96
+                dec_ok = apc < 0.96
                 both = "YES" if grav_ok and dec_ok else "grav" if grav_ok else "decoh" if dec_ok else "neither"
 
                 print(f"  {gap:5.1f}  {ag:+8.3f}  {se_g:7.3f}  {apm:8.4f}  "
-                      f"{se_pm:6.4f}  {adec:+8.4f}  {n_ok:4d}  {both:>7s}")
+                      f"{apc:8.4f}  {adec:+8.4f}  {n_ok:4d}  {both:>7s}")
             else:
                 print(f"  {gap:5.1f}  FAIL")
 
         print()
 
     print("=" * 78)
-    print("CRITERION: grav_delta > 2*SE AND pur_min < 0.96")
+    print("CRITERION: grav_delta > 2*SE AND pur_cl < 0.96")
+    print("  pur_cl = actual CL-bath purity (not pur_min floor)")
+    print("  gap=0 is now TRUE uniform (verified after bugfix)")
     print("The sweet spot is the gap range where both criteria are met.")
 
 

@@ -154,6 +154,9 @@ def generate_modular_dag(
 
     barrier_layer = n_layers // 3
 
+    # When gap=0, behave identically to uniform random DAG
+    use_channels = gap > 0
+
     for layer in range(n_layers):
         x = float(layer)
         layer_nodes = []
@@ -164,7 +167,7 @@ def generate_modular_dag(
             layer_nodes.append(idx)
         else:
             for node_i in range(nodes_per_layer):
-                if layer > barrier_layer:
+                if use_channels and layer > barrier_layer:
                     # Place in upper or lower channel
                     if node_i < nodes_per_layer // 2:
                         y = rng.uniform(gap / 2, y_range)
@@ -182,7 +185,7 @@ def generate_modular_dag(
                         px, py = positions[prev_idx]
                         dist = math.sqrt((x - px) ** 2 + (y - py) ** 2)
 
-                        if layer > barrier_layer and round(px) > barrier_layer:
+                        if use_channels and layer > barrier_layer and round(px) > barrier_layer:
                             same_channel = (y * py > 0)
                             if same_channel:
                                 if dist <= connect_radius:
