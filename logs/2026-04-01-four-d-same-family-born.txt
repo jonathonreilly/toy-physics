@@ -1,0 +1,37 @@
+======================================================================================
+4D SAME-FAMILY BORN PASS
+  Retained family: dense 4D modular DAGs
+  Comparison: raw modular graph vs same-family chokepoint-pruned view
+  Goal: keep the Born check inside the retained family, not a companion graph
+======================================================================================
+
+[4D modular gap=3.0] same-family Born on raw graph vs chokepoint view
+     N     raw_err    raw_I3/P      cp_err     cp_I3/P  n_ok  verdict
+  ----------------------------------------------------------------------
+    12    6.02e-01    4.84e-01    5.85e-01    6.04e-17     8  SORKIN PASS
+    20    6.93e-01    5.41e-01    6.04e-01    2.30e-16     8  SORKIN PASS
+    40    6.60e-01    6.44e-01    5.37e-01    8.09e-16     7  SORKIN PASS
+    60  FAIL
+    80  FAIL
+
+[4D modular gap=5.0] same-family Born on raw graph vs chokepoint view
+     N     raw_err    raw_I3/P      cp_err     cp_I3/P  n_ok  verdict
+  ----------------------------------------------------------------------
+    12    7.44e-01    5.83e-01    3.32e-01    6.29e-17     8  SORKIN PASS
+    20    7.93e-01    5.27e-01    5.01e-01    1.81e-16     8  SORKIN PASS
+    40    8.10e-01    6.04e-01    6.44e-01    1.57e-15     8  SORKIN PASS
+    60  FAIL
+    80  FAIL
+
+======================================================================================
+OVERALL SAFE CLAIM
+  gap=3.0, N=12: raw linearity=6.02e-01, raw |I_3|/P=4.84e-01; same-family chokepoint linearity=5.85e-01, |I_3|/P=6.04e-17
+  Narrow headline: the same-family chokepoint view restores machine-precision Sorkin I_3 on a restricted low-N modular subfamily.
+======================================================================================
+SAFE CLAIM GUIDE
+  - Use 'same-family chokepoint Born pass' only if the chokepoint view is
+    machine-precision clean and the raw modular graph is not.
+  - Do not promote companion-graph language from the older strict joint lane.
+  - If only a subset of gaps/N values pass, keep the claim restricted to
+    that subfamily.
+======================================================================================
