@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 """Causal field tuning: optimize decay rate for b-dependent gravity.
 
+CONFOUND WARNING: Inherits moving-mass-window from causal_field_gravity.py.
+The fitted gamma values are not isolating field propagation alone —
+mass_ids changes with b. Fixed-mass verification needed before trusting
+the decay=0.5 → gamma=0.85 result.
+
 The causal sum field showed shift decreasing with b. Now tune the
 decay parameter to find the sweet spot between:
   - Too little decay (field spreads everywhere → b-independent)

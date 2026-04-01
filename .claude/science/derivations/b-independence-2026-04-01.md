@@ -111,3 +111,15 @@ architecture. Getting 1/b would require either:
 - A non-linear propagation that couples the field to the amplitude
   in a way that breaks the averaging
 - A fundamentally different gravity mechanism (metric emergence)
+
+## Status of causal field avenue (2026-04-01)
+
+Initial causal-field tests (decay=0.5) showed an apparent ~1/b trend,
+but this result is CONFOUNDED: the b-sweep uses a moving y-window
+to select mass nodes, so both source count and source geometry change
+with b. The apparent falloff may come from varying source occupancy
+near the spatial boundary, not genuine retarded-field distance law.
+
+**The causal field ~1/b claim is unverified until a fixed-mass
+redesign (same source count and geometry across all b values)
+confirms or refutes it.** Worker batches are running this verification.

@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 """Retarded (causal) field propagation: does it restore 1/b distance scaling?
 
+CONFOUND WARNING: The b-sweep in this script uses a moving y-window to
+select mass nodes (abs(y - (cy+b)) < 2.0). This means mass count and
+source geometry change with b, confounding the distance measurement.
+Results here are PRELIMINARY — fixed-mass verification is required.
+
 The derivation identified the Laplacian field as the b-independence engine:
 it spreads f everywhere on the graph, making all paths feel roughly equal
 phase perturbation regardless of mass position.
