@@ -1,5 +1,31 @@
 # Physics Autopilot Handoff
 
+## 2026-04-01 14:02 America/New_York
+
+### Seam class
+- 3D angle-weight architecture validation
+- bounded unitary smoke closure
+
+### What this loop did
+- extended `/Users/jonreilly/Projects/Physics/scripts/three_d_angle_weight.py` with amplitude-level reuse
+- added `/Users/jonreilly/Projects/Physics/scripts/three_d_angle_weight_unitary_smoke.py`
+- ran one bounded fixed-DAG 3D smoke test for the angle-weight candidate
+
+### Current state
+- no detached science child is running
+- the directional path measure still stands as the lead provisional unitary architecture
+- the main 3D wording gap is now closed:
+  - zero-field coherent visibility: `max V_coh = 0.9963`
+  - coherent vs incoherent detector-profile contrast across the canonical band: `min TV = 0.1104`
+  - amplitude linearity residual: `3.178e-14`
+  - detector normalization error: `0`
+
+### Strongest confirmed conclusion
+The angle-weight candidate now has bounded 3D unitary support, not just 3D gravity-side support. The honest remaining caveat is narrower: this is still a fixed-DAG smoke package rather than a full 3D Born/Sorkin theorem.
+
+### Exact next step
+- keep the propagator fixed and move the next architecture cycle back to scalable record/environment formation instead of broadening the 3D transport search
+
 ## 2026-04-01 13:20 America/New_York
 
 ### Seam class

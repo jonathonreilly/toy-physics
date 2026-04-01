@@ -1,3 +1,36 @@
+## 2026-04-01 — 3D angle-weight unitary smoke
+
+### What changed
+- extended `scripts/three_d_angle_weight.py` with reusable amplitude propagation
+- added `scripts/three_d_angle_weight_unitary_smoke.py`
+- wrote `logs/2026-04-01-three-d-angle-weight-unitary-smoke.txt`
+- closed the open wording gap on the lead directional-measure architecture with one bounded fixed-DAG 3D smoke test
+
+### Current retained read
+- lead provisional unitary propagator:
+  - corrected `1/L^p` transport
+  - directional path measure `exp(-0.8×θ²)`
+- 2D unitary checks remain:
+  - Born PASS
+  - interference PASS
+  - `k=0→0` PASS
+  - gravity scaling guardrail PASS
+  - family transfer PASS on bounded DAG family
+- bounded 3D unitary smoke now also passes:
+  - zero-field coherent visibility: `max V_coh = 0.9963`
+  - coherent vs incoherent detector-profile contrast across the full canonical band: `min TV = 0.1104`
+  - source-superposition linearity residual: `3.178e-14`
+  - detector normalization error: `0`
+- remaining caveats:
+  - this is still a smoke package, not a full 3D Sorkin theorem
+  - decoherence scaling still fails in the tested record architecture
+  - `b`-dependence remains wrong-direction
+
+### Next frontier
+- keep the directional measure fixed as the lead unitary candidate
+- stop spending architecture effort on broad new propagator search
+- move the next cycle back onto scalable record/environment formation and the still-open gravity `b`-dependence question
+
 ## 2026-04-01 — Docs refresh after directional measure promotion
 
 ### What changed

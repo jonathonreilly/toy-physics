@@ -132,6 +132,7 @@ The next frontier is therefore best treated as a scaling architecture problem, n
 - [SCALING_FAILURE_MECHANISMS.md](/Users/jonreilly/Projects/Physics/SCALING_FAILURE_MECHANISMS.md)
 - [ARCHITECTURE_OPTIONS.md](/Users/jonreilly/Projects/Physics/ARCHITECTURE_OPTIONS.md)
 - [SCALING_BENCHMARK_TABLE.md](/Users/jonreilly/Projects/Physics/SCALING_BENCHMARK_TABLE.md)
+- [DECOHERENCE_DECISION_NOTE.md](/Users/jonreilly/Projects/Physics/docs/DECOHERENCE_DECISION_NOTE.md)
 
 #### Architecture scorecard (tested candidates)
 
@@ -150,7 +151,8 @@ The next frontier is therefore best treated as a scaling architecture problem, n
 - corrected 1/L^p unitary core still stands (gravity sign, Born rule, interference, `k=0→0`, phase valley)
 - directional path measure `exp(-0.8θ²)` is the current lead provisional unitary architecture:
   - 2D unitary checks pass: Born, interference, `k=0→0`, gravity scaling guardrail, and bounded family transfer
-  - 3D gravity-side smoke checks are encouraging: `k=0→0` passes, `R_angle` grows from `+0.29` to `+0.57` across the tested size sweep, and attraction appears on `5/8` seeds
+  - a bounded 3D unitary smoke test now also passes on a fixed 3D DAG: zero-field coherent visibility reaches `0.9963` on the canonical `k` band, coherent-vs-incoherent detector-profile contrast stays nonzero across that full band (`TV >= 0.1104`), and source-superposition linearity holds to machine precision (`3.18e-14`)
+  - 3D gravity-side smoke checks remain encouraging too: `k=0→0` passes, `R_angle` grows from `+0.29` to `+0.57` across the tested size sweep, and attraction appears on `5/8` seeds
   - the current caveats are explicit: decoherence scaling still fails in the tested record architecture, `R_c` compatibility is only marginal (`8/10`), and the `b`-dependence is still wrong-direction
 - G2-style coarse-graining is the first tested architecture family that fixes the gravity scaling guardrail
 - a readout-only micro-preserving gravity prototype now also clears the bounded scaling guardrail on the same `N=8..25` family: near-mass `action_channel` bias grows in stable sign and magnitude from `-0.2456` at `N=12` to `-0.8002` at `N=25`, while the baseline detector centroid still collapses from `+0.7968` to `+0.3989`
@@ -158,7 +160,7 @@ The next frontier is therefore best treated as a scaling architecture problem, n
 - a support-structure compare now explains that split instead of only reporting it: on the random-DAG family, the retained packet captures a growing mass-side carried-flow share while the opposite side diffuses (`0.287 -> 0.382` upper versus `0.272 -> 0.162` lower from `N=12 -> 25`), and the full flow support stays about `3x` broader than the retained packet; on the branching-tree control both sides remain nearly symmetric (`~0.25` each) with only `~2x` compression, so the broader channel stays the honest cross-family read
 - `k=0→0` remains preserved under both G1 and G2
 
-**Current read:** the best current architecture split is now cleaner. On the unitary side, the flat path measure appears to have been the wrong assumption; the lead provisional replacement is corrected `1/L^p` transport plus a directional path measure `exp(-0.8θ²)`, which preserves the tested 2D unitary constraints while stopping the gravity-side collapse on the bounded scaling family. On the non-unitary side, no tested record architecture scales correctly yet. So the next good move is not another transport coarse-graining pass. It is to treat the propagator as a provisional retained unitary layer, keep the 3D claim disciplined to gravity-side support unless a real 3D interference/Born smoke test lands, and focus the next architecture loop on scalable record/environment formation and the still-open `b`-dependence question.
+**Current read:** the best current architecture split is now cleaner. On the unitary side, the flat path measure appears to have been the wrong assumption; the lead provisional replacement is corrected `1/L^p` transport plus a directional path measure `exp(-0.8θ²)`, which preserves the tested 2D unitary constraints, passes a bounded 3D unitary smoke test, and stops the gravity-side collapse on the bounded scaling family. On the non-unitary side, no tested record architecture scales correctly yet. So the next good move is not another transport coarse-graining pass. It is to treat the propagator as a provisional retained unitary layer with a now-closed 3D smoke gap, and focus the next architecture loop on scalable record/environment formation and the still-open `b`-dependence question.
 
 ### 5. Oscillatory persistence under the default self-maintenance rule
 

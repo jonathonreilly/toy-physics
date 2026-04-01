@@ -20,7 +20,8 @@ The directional weight penalizes edges that deviate from the forward (layer) dir
 | test | 2D DAGs | 3D DAGs |
 |---|---|---|
 | Born rule (I₃) | 9.2e-16 PASS | — |
-| interference (V) | 0.998 PASS | — |
+| interference (V) | 0.998 PASS | fixed-DAG smoke PASS (`V = 0.9963`) |
+| linearity / normalization smoke | implied by path-sum form | fixed-DAG smoke PASS (`3.18e-14`, norm err `0`) |
 | k=0 → zero | 0.000000 PASS | 0.000000 PASS |
 | gravity sign | 90%+ attract | 5/8 attract |
 | gravity scaling | R@25 ≥ R@12 PASS | R increases with N |
@@ -33,12 +34,15 @@ The directional weight penalizes edges that deviate from the forward (layer) dir
 
 The flat path measure (uniform weight over all causal paths) was causing CLT saturation of gravity. Adding a directional continuation preference prevents that saturation while preserving interference, Born rule, and k=0→0.
 
-The directional weight also has a clean 3D gravity-side generalization as
-`acos(dx/L)` without modification.
+The directional weight also has a clean 3D generalization as `acos(dx/L)`
+without modification. A bounded fixed-DAG smoke test now says this is not just
+gravity-side support: the same 3D rule shows a real zero-field interference
+pattern and preserves source-superposition linearity to machine precision.
 
 ## What this does not establish
 
 - Decoherence scaling is not addressed. This is expected: the directional weight modifies the unitary propagator, and decoherence is a non-unitary (record/environment) problem.
+- The 3D support is still a smoke package, not a full 3D Sorkin / three-slit theorem.
 - The b-dependence (deflection increasing with impact parameter) is not fixed.
 - β = 0.8 is empirically chosen. A derivation from the axioms or from the graph's intrinsic geometry is still needed.
 - The 2 R_c edge cases mean the weight slightly narrows the zero-field interference threshold at some geometries.

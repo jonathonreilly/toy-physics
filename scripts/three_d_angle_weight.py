@@ -29,9 +29,7 @@ from scripts.three_d_gravity import generate_3d_causal_dag, compute_field_3d
 BETA = 0.8
 
 
-def propagate_3d_angle(positions, adj, field, src, det, k):
-    """3D propagator with directional angle weight."""
-    n = len(positions)
+def _topological_order(adj, n):
     in_deg = [0]*n
     for i, nbs in adj.items():
         for j in nbs:
@@ -45,7 +43,13 @@ def propagate_3d_angle(positions, adj, field, src, det, k):
             in_deg[j] -= 1
             if in_deg[j] == 0:
                 q.append(j)
+    return order
 
+
+def propagate_3d_angle_amplitudes(positions, adj, field, src, k):
+    """3D propagator with directional angle weight, returning node amplitudes."""
+    n = len(positions)
+    order = _topological_order(adj, n)
     amps = [0.0+0.0j]*n
     for s in src:
         amps[s] = 1.0/len(src)
@@ -72,7 +76,12 @@ def propagate_3d_angle(positions, adj, field, src, det, k):
             act = dl-ret
             ea = cmath.exp(1j*k*act) * weight / (L**1.0)
             amps[j] += amps[i]*ea
+    return amps
 
+
+def propagate_3d_angle(positions, adj, field, src, det, k):
+    """3D propagator with directional angle weight."""
+    amps = propagate_3d_angle_amplitudes(positions, adj, field, src, k)
     probs = {d: abs(amps[d])**2 for d in det}
     total = sum(probs.values())
     if total > 0:
