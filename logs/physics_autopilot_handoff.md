@@ -1,5 +1,39 @@
 # Physics Autopilot Handoff
 
+## 2026-04-01 09:25 America/New_York
+
+### Seam class
+- gravity scaling
+- packet-local readout transfer compare
+
+### What this loop did
+- added `/Users/jonreilly/Projects/Physics/scripts/gravity_packet_local_action_flow_transfer_compare.py`
+- ran a bounded transfer compare on two minimal families with unchanged transport and field law:
+  - layered random DAG scaling family
+  - branching-tree control
+- compared the retained `action_channel` against two tighter packet-local variants:
+  - `packet_action_channel`
+  - `packet_flow_action`
+
+### Current state
+- no detached science child is running
+- the readout-only gravity lane is still the active positive architecture
+- the new transfer result is sharper:
+  - on random DAGs, packet-local compression really helps:
+    - `action_channel`: `|N25/N12| = 3.2582`
+    - `packet_action_channel`: `3.4416`
+    - `packet_flow_action`: `3.9748`
+  - on the branching-tree control, the broader near-mass channel still transfers best:
+    - `action_channel`: `|N12/N6| = 2.9514`
+    - `packet_action_channel`: `2.7397`
+    - `packet_flow_action`: `2.7878`
+
+### Strongest confirmed conclusion
+Packet-local action flow is now a real dense-family refinement, but not yet the retained shared gravity observable. The cross-family law is still the coarser near-mass `action_channel`.
+
+### Exact next step
+- compare packet-support width and carried-flow share between the random-DAG and branching-tree families to explain why dense route families benefit from the tighter packet-local cut while the tree control prefers the broader channel
+
 ## 2026-04-01 09:13 America/New_York
 
 ### Seam class

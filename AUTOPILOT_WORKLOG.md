@@ -1,3 +1,42 @@
+## 2026-04-01 09:25 America/New_York
+
+### Seam class
+- gravity scaling
+- packet-local readout transfer compare
+
+### Current state
+- `main` was synced to `origin/main` before this step
+- the retained architecture reset still stands:
+  - keep corrected microscopic `1/L^p` transport fixed
+  - keep gravity work at the observable/readout layer
+  - test any tighter readout against a second minimal family before promoting it
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/gravity_packet_local_action_flow_transfer_compare.py`
+- wrote `/Users/jonreilly/Projects/Physics/logs/2026-04-01-gravity-packet-local-action-flow-transfer-compare.txt`
+- compared two tighter packet-local versions of the near-mass action readout against the existing `action_channel` baseline:
+  - adaptive packet-local node-weight readout `packet_action_channel`
+  - adaptive packet-local forward-flow readout `packet_flow_action`
+- ran the transfer compare on two bounded families with unchanged transport and field law:
+  - layered random DAG scaling family (`N = 8, 12, 15, 20, 25`, `5` seeds)
+  - branching-tree control (`N = 6, 8, 10, 12`)
+- retained results:
+  - on random DAGs, the tighter packet-local cuts really do help:
+    - `action_channel`: `|N25/N12| = 3.2582`
+    - `packet_action_channel`: `3.4416`
+    - `packet_flow_action`: `3.9748`
+  - on the branching-tree control, the coarser channel still transfers best:
+    - `action_channel`: `|N12/N6| = 2.9514`
+    - `packet_action_channel`: `2.7397`
+    - `packet_flow_action`: `2.7878`
+  - detector centroid remains nonretained on the tree control (`-0.0000 -> +0.0000`)
+
+### Strongest confirmed conclusion
+The packet-local flow refinement is real but not yet the retained cross-family gravity law. It improves the random-DAG scaling family, but the branching-tree control still prefers the broader near-mass `action_channel`. So the honest current read is: `action_channel` is the retained shared observable, and packet-local flow is a bounded dense-family refinement rather than the new global replacement.
+
+### Exact next step
+- compare packet-support width and carried-flow share between the random-DAG and branching-tree families to isolate why the tighter packet-local cut helps on dense route families but underperforms the broader channel on the tree control
+
 ## 2026-04-01 09:13 America/New_York
 
 ### Seam class
