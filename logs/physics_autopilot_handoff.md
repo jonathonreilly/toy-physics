@@ -1,5 +1,34 @@
 # Physics Autopilot Handoff
 
+## 2026-04-01 06:32 America/New_York
+
+### Seam class
+- decoherence architecture reconciliation
+- janitor integrity repair
+
+### What this loop did
+- reconciled the synced `00030df` / `04196f5` merge state into the tracked handoff
+- confirmed `docs/DECOHERENCE_DECISION_NOTE.md` now matches the retained repo direction
+- ran `python3 scripts/base_confidence_check.py` (`PASS`)
+- made `/Users/jonreilly/Projects/Physics/scripts/three_d_angle_weight_unitary_smoke.py` fall back to sequential execution when multiprocessing is unavailable
+
+### Current state
+- no detached science child is running
+- `main` is synced to `origin/main` at `788860d`
+- the directional path measure still stands as the retained unitary layer
+- the larger finite-env follow-up did **not** reopen a retained decoherence lane:
+  - qubit-per-mass env reaches `127` populated detector env states by `N=18`
+  - detector purity still wrong-scales (`0.6298 -> 0.8517` from `N=12 -> 18`)
+  - the older node-label comparison remains same-order (`0.6429 -> 0.8023`)
+- the bounded 3D smoke runner is now safe to rerun from restricted automation environments
+
+### Strongest confirmed conclusion
+More finite env states are not enough. The unitary side stays fixed on the directional measure, and the next non-unitary move should remain a mesoscopic durable-record / region-trace architecture rather than another larger discrete register.
+
+### Exact next step
+- keep the propagator fixed and prototype one durable local record or bounded region-trace mechanism
+- do not spend the next cycle on another “bigger finite env” variant unless the record mechanism is qualitatively different
+
 ## 2026-04-01 14:02 America/New_York
 
 ### Seam class

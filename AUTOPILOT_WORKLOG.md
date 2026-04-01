@@ -1,3 +1,28 @@
+## 2026-04-01 — Qubit env scaling reconciliation
+
+### What changed
+- reconciled the synced `docs/DECOHERENCE_DECISION_NOTE.md` and qubit-env merge into the tracked state
+- confirmed `scripts/qubit_env_decoherence.py` against `logs/2026-04-01-qubit-env.txt` on synced `main`
+- hardened `scripts/three_d_angle_weight_unitary_smoke.py` with a sequential fallback when multiprocessing is unavailable in restricted automation environments
+- ran `python3 scripts/base_confidence_check.py` (`PASS`)
+
+### Current retained read
+- lead provisional unitary layer is unchanged:
+  - corrected `1/L^p` transport
+  - directional path measure `exp(-0.8×θ²)`
+- larger finite environment capacity still does not fix decoherence scaling:
+  - the qubit-per-mass environment populates up to `127` detector env states by `N=18`
+  - detector purity still rises again to `0.8517` (`0.6298 -> 0.8517` from `N=12 -> 18`)
+  - the node-label comparison remains the same order (`0.6429 -> 0.8023`)
+- the durable-record decision note still stands:
+  - do not ask the propagator to solve decoherence
+  - do not treat a larger finite env register as the next retained lane
+
+### Next frontier
+- keep the directional measure fixed as the retained unitary layer
+- stop spending cycles on larger finite env variants unless a qualitatively new record mechanism is present
+- prototype one durable local record or bounded region-trace architecture that can grow with interaction-region size
+
 ## 2026-04-01 — 3D angle-weight unitary smoke
 
 ### What changed

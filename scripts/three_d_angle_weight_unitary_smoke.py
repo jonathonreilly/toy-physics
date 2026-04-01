@@ -180,6 +180,25 @@ def _evaluate_k(task: tuple[float, int, float, int, int, float]) -> SmokeRow:
     )
 
 
+def _evaluate_tasks(
+    tasks: list[tuple[float, int, float, int, int, float]],
+    workers: int,
+) -> list[SmokeRow]:
+    if workers <= 1:
+        return [_evaluate_k(task) for task in tasks]
+
+    ctx = mp.get_context("fork")
+    try:
+        with ProcessPoolExecutor(max_workers=workers, mp_context=ctx) as pool:
+            return list(pool.map(_evaluate_k, tasks))
+    except (OSError, PermissionError) as exc:
+        print(
+            f"warning: multiprocessing unavailable ({exc}); falling back to sequential execution",
+            file=sys.stderr,
+        )
+        return [_evaluate_k(task) for task in tasks]
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--workers", type=int, default=min(len(K_BAND), max(1, os.cpu_count() or 1)))
@@ -194,12 +213,7 @@ def main() -> None:
         (k, args.depth, args.slit_sep, args.max_y, args.max_z, args.radius)
         for k in K_BAND
     ]
-    ctx = mp.get_context("fork")
-    if args.workers <= 1:
-        rows = [_evaluate_k(task) for task in tasks]
-    else:
-        with ProcessPoolExecutor(max_workers=args.workers, mp_context=ctx) as pool:
-            rows = list(pool.map(_evaluate_k, tasks))
+    rows = _evaluate_tasks(tasks, args.workers)
     rows.sort(key=lambda row: row.k)
 
     max_visibility = max(row.coherent_visibility for row in rows)
