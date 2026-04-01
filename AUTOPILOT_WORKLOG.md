@@ -1,3 +1,52 @@
+## 2026-04-01 — IF harness cleanup while Claude owns decoherence
+
+### Current state
+- Claude remains the owner of the decoherence frontier.
+- The IF lane is still the retained non-unitary framework, but the latest result remains:
+  - graph-local kernels improve decoherence magnitude somewhat
+  - they still reverse at larger `N`
+  - the next scientific move stays:
+    - non-local neighborhood / worldtube kernel
+    - or a separate local dynamical subsystem
+- Detached workers should stay on non-overlapping science:
+  - gravity `b` derivation / transfer
+  - evolving-network dynamics prototype
+  - continuum / asymptotic bridge work
+
+### What changed
+- fixed the stale detector-basis bug in:
+  - `/Users/jonreilly/Projects/Physics/scripts/influence_functional_validation.py`
+- removed the repeated full-state rescan pattern from:
+  - `/Users/jonreilly/Projects/Physics/scripts/influence_functional_validation.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/if_kernel_sweep.py`
+- added kernel-pair caching in both IF scripts
+- aligned the CA microstate comparison baseline with the promoted directional propagator in:
+  - `/Users/jonreilly/Projects/Physics/scripts/ca_microstate_coupling.py`
+
+### Strongest confirmed conclusion
+The IF lane is now cleaner to iterate on, but it is still not the detached-worker target.
+- the cleanup was about:
+  - faster propagation bookkeeping
+  - cleaner validation
+  - apples-to-apples comparison baselines
+- it was **not** a new decoherence mechanism result
+
+So the worker map stays the same:
+- Claude continues the IF decoherence program
+- detached workers stay on geometry, dynamics, and asymptotic bridge tasks
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/scripts/influence_functional_validation.py`
+- `/Users/jonreilly/Projects/Physics/scripts/if_kernel_sweep.py`
+- `/Users/jonreilly/Projects/Physics/scripts/ca_microstate_coupling.py`
+
+### Exact next step
+- do not open a new detached decoherence architecture lane
+- keep detached work on:
+  - deriving / transferring the retained `b` hierarchy
+  - building one bounded evolving-network dynamics prototype
+  - strengthening the continuum / asymptotic bridge
+
 ## 2026-04-01 — Directional-measure b asymptotic bridge card
 
 ### Current state

@@ -1,5 +1,48 @@
 # Physics Autopilot Handoff
 
+## 2026-04-01 10:34 America/New_York
+
+### Seam class
+- worker coordination / IF harness cleanup
+
+### What this loop did
+- landed local IF harness cleanup in:
+  - `/Users/jonreilly/Projects/Physics/scripts/influence_functional_validation.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/if_kernel_sweep.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/ca_microstate_coupling.py`
+- fixed:
+  - stale detector-basis usage in IF validation scaling
+  - repeated full-state rescans in the IF propagators
+  - the CA comparison baseline so it now uses the directional propagator
+
+### Current state
+- no detached science child is running
+- Claude still owns the decoherence frontier
+- the IF framework remains the retained non-unitary lane, but the scientific conclusion is unchanged:
+  - graph-local kernels still fail to scale cleanly on the tested uniform random DAGs
+- detached workers should continue to avoid opening new decoherence searches unless Claude explicitly requests support
+
+### Strongest confirmed conclusion
+The repo now has a cleaner/faster IF harness, but this was an infrastructure-quality step, not a new architecture result.
+- keep detached workers on:
+  - gravity `b` derivation / transfer
+  - evolving-network dynamics prototype
+  - continuum / asymptotic bridge work
+- keep Claude on:
+  - non-local neighborhood/worldtube IF kernel
+  - or the next non-graph-local decoherence lane if the non-local kernel also converges
+
+### Exact next step
+- if you are a detached worker, do **not** reopen the decoherence search
+- resume the existing non-overlapping queue:
+  - derive or transfer the retained `b -> b - h_mass -> b - (h_mass + delta_packet)` hierarchy
+  - build one bounded evolving-network dynamics prototype
+  - extend the continuum / asymptotic bridge card to one second family if possible
+
+### New commit
+- local repo-facing commit:
+  - `816007b` `fix: streamline IF propagation and align baselines`
+
 ## 2026-04-01 14:08 America/New_York
 
 ### Seam class
