@@ -57,9 +57,10 @@ Current sharp version:
 - connection-bias feedback is now largely a closed lane
 - first-pass node-placement rules also fail if they create gaps that are too
   large, too small, or misplaced
-- the active dynamics question is now a **self-regulating** node placement /
-  node removal rule, because the retained barrier is a property of node absence
-  at the right scale rather than weak links
+- the active dynamics question is now a **self-regulating hard-gap** node
+  placement / node-removal rule, because the retained barrier is a property of
+  node absence at the right scale rather than weak links; soft pruning of
+  already connected graphs now looks asymptotically insufficient
 
 Why it matters:
 

@@ -129,7 +129,8 @@ The modular two-channel DAG with a y-gap between channels preserves
 slit-path structural separation as N grows. In the later asymptotic pass:
 
 - **pur_min stays near `0.93 ± 0.02` through the tested `N=100` lane**
-- **interference remains strong** (`V > 0.99`)
+- **both-slits-open detector contrast remains high** in the current large-`N`
+  scan
 - **CL bath contrast stays finite**
 - the old sharp reversal picture does not return on the retained modular lane
 
@@ -144,10 +145,15 @@ unification window.
 
 Current retained read:
 
-- every tested gap from `0.0` to `5.0` passes the current joint criteria
-- larger gaps give **monotonically stronger gravity and stronger decoherence**
-  until connectivity eventually breaks
+- the refined phase diagram now uses actual traced purity `pur_cl`
+  together with paired per-seed gravity significance
+- tested gaps `0.0..5.0` keep positive gravity and `pur_cl < 0.96`
+  on the audited sweep
+- larger imposed gaps generally give **stronger gravity and stronger
+  decoherence** until connectivity eventually breaks
 - crosslink probability is subleading across the tested `0.0..0.10` range
+- `gap=0` now behaves as the true uniform-style baseline in the
+  modular generator
 
 So the emerging statement is stronger than “modular helps.” It is:
 
@@ -170,13 +176,19 @@ The failed family is now broader and cleaner:
 - first-pass distinguishability-based node placement creates real gaps, but at
   the wrong size or location: too small does not help, too large disconnects
   the graph
+- global node pruning can improve the dense-random baseline at intermediate
+  `N`, but the ceiling returns by `N=80..100`, and stronger/adaptive pruning
+  drives the graph toward disconnection. The current implementation remains a
+  nonlocal post-hoc surrogate rather than a local endogenous dynamics law
 
 So the open emergence question is now sharper:
 
 - **can node placement or node removal create persistent hard gaps at the right
-  size and midpoint location?**
+  size and midpoint location as a local law, rather than a global pruning
+  surrogate?**
 - the remaining open growth lane is no longer another connection-bias rule
   but a rule for where nodes exist at all
+- simple soft pruning of a connected graph is now a closed asymptotic lane
 
 ## Honest assessment (updated)
 
@@ -187,8 +199,9 @@ That diagnostic remains real.
 But the sharper repo-facing result is now this:
 
 - the IF / CL route is retained on a broader **gap-controlled modular family**
-- the joint gravity+decoherence window is broad, not narrow
-- stronger imposed gap gives stronger effects until connectivity breaks
+- the joint gravity+decoherence window is broad inside that family
+- stronger imposed gap lowers the current decoherence floor and strengthens
+  gravity until connectivity breaks
 
 So the resolution is **topological first**, not “find a cleverer bath.”
 
@@ -198,5 +211,9 @@ Open questions:
   (channel separation ↔ branch-preserving spatial locality?)
 - Can a self-regulating node-placement or node-removal rule generate the
   channel structure dynamically instead of imposing it by hand?
+- If node non-permanence matters, does it have to create a real hard gap
+  rather than merely thin the graph?
 - Does `pur_min ~ 0.93 ± 0.02` represent a true floor, or a slower large-`N`
   drift that still needs more seeds to resolve?
+- How much of the large-`N` interference story survives once the detector
+  contrast proxy is replaced by a true single-vs-double-slit visibility metric?

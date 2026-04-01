@@ -58,10 +58,16 @@ On modular / gap-controlled DAGs:
   connectivity breaks
 
 The older small-sample “narrow sweet spot” story has now been replaced by a
-broader 24-seed read:
+broader modular-family read:
 
-- every tested gap from `0.0` to `5.0` passes the current joint criteria
-- larger gaps strengthen both phenomena
+- tested gaps `0.0..5.0` keep positive gravity and `pur_cl < 0.96`
+- larger imposed gaps generally strengthen both phenomena until connectivity
+  breaks
+
+One scope note still matters here:
+
+- the large-`N` interference script still measures detector-profile contrast,
+  not full single-vs-double-slit visibility
 
 So the current repo-facing claim is:
 
@@ -74,7 +80,7 @@ It is:
 
 - **how to generate the right hard topological gap dynamically**
 
-Seven emergence attempts now fail for the same structural reason:
+Seven local emergence attempts now fail for the same structural reason:
 
 - they only modify **connections**
 - or create **gaps with the wrong size / location**
@@ -84,6 +90,8 @@ That points to a sharper next frontier:
 
 1. self-regulating node-placement rules
 2. node-removal / non-permanence rules that can stabilize a slit-centered gap
+   as a genuine local hard-gap law rather than a global pruning surrogate;
+   soft pruning on a connected graph is now a closed asymptotic lane
 3. other dynamics that can create or maintain regions with no nodes at the
    right scale
 4. or, if those fail cleanly, treating the gap as part of the effective
