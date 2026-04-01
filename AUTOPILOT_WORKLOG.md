@@ -1,3 +1,48 @@
+## 2026-04-01 — Directional-measure b asymptotic bridge card
+
+### Current state
+- the directional `b` lane had already established:
+  - center-offset density as the retained bounded denominator
+  - nearest-edge density as a viable secondary normalization
+  - support-gap as only a partial challenger
+  - denominator geometry as the reason support-gap should stay secondary on the bounded random-DAG family
+- the next step was no longer another scan, but one compact continuum / asymptotic translation
+
+### What changed
+- added `scripts/directional_b_asymptotic_bridge_card.py`
+- wrote `logs/2026-04-01-directional-b-asymptotic-bridge-card.txt`
+- reused the same bounded random-DAG family to summarize the denominator hierarchy:
+  - `b`
+  - `b - h_mass`
+  - `b - (h_mass + delta_packet)`
+- translated those into:
+  - retained leading mass-geometry term
+  - finite-source correction
+  - discrete packet-support correction
+
+### Strongest confirmed conclusion
+The gravity response-density story is now compact enough to treat as architecture rather than a loose pile of local sweeps.
+- retained leading term:
+  - center-offset density `response / b`
+- retained secondary correction:
+  - nearest-edge density `response / (b - h_mass)`
+- non-promoted discrete correction:
+  - support-gap density `response / (b - h_mass - delta_packet)`
+
+So the active gravity frontier has shifted again. The next useful move is no longer denominator hunting; it is deriving why the retained response density should take the center-offset form, or testing that leading-term/correction hierarchy on one second asymptotic family if derivation stalls.
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/scripts/directional_b_asymptotic_bridge_card.py`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-01-directional-b-asymptotic-bridge-card.txt`
+- `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+
+### Exact next step
+- keep the propagator fixed
+- stop blind denominator scans
+- either:
+  - derive the center-offset leading term from the bounded mass-geometry picture
+  - or test the retained leading-term / correction hierarchy on one second asymptotic family
+
 ## 2026-04-01 — Directional-measure b denominator-geometry diagnosis
 
 ### Current state
