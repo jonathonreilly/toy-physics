@@ -1,78 +1,120 @@
 # Physics Autopilot Handoff
 
-## 2026-04-01 13:05 America/New_York
+## 2026-04-01 13:30 America/New_York
 
 ### Seam class
-- worker retarget
-- non-overlapping science queue
+- review-hardening retarget
+- non-overlapping worker queue
 
 ### What this loop did
-- reconciled the current division of labor after the slot-resolved fresh-ancilla follow-up
-- narrowed the worker queue so detached science children do not duplicate Claude’s decoherence lane
+- added reviewer-facing framing docs for:
+  - assumption / derivation status
+  - literature positioning
+  - review-hardening backlog
+- retargeted detached worker priorities so they strengthen the project against the older academic review without duplicating Claude’s decoherence lane
 
 ### Current state
-- Claude owns the decoherence frontier for now.
-- The fresh-ancilla story is:
-  - true slot-resolved Level B now exists
-  - it is not a proxy anymore
-  - but on wider sampling to `N=25` / `6` seeds it recoheres again
-  - so it should not currently be treated as a retained pass
-- The lead unitary layer is unchanged:
+- Claude should continue owning decoherence.
+- The lead unitary layer remains:
   - corrected `1/L^p` transport
   - directional path measure `exp(-0.8×θ²)`
+- The highest-value non-overlapping worker backlog is now:
+  1. geometry-normalized gravity `b` study
+  2. bounded evolving-network dynamics prototype
+  3. continuum / asymptotic bridge card
 
 ### Strongest confirmed conclusion
-Detached workers should not spend the next cycle on fresh decoherence architectures unless Claude explicitly requests a support diagnostic. The highest-value non-overlapping science is now:
-- gravity `b`-dependence under the fixed directional-measure propagator
-- 3D unitary consolidation beyond the current smoke package
-- directional-measure robustness / theory translation
-
-### Exact next step
-- keep the propagator fixed
-- keep Claude on decoherence
-- send the next detached worker to the gravity `b`-dependence lane first
-- after that, use a second worker for bounded 3D unitary consolidation
+The repo is better framed for reviewers now, but the strongest remaining external vulnerabilities are still:
+- no satisfying evolving-network dynamics prototype
+- weak continuum / asymptotic bridge
+- wrong-direction gravity distance law, even though geometry-normalized density reads are now promising
 
 ### Recommended worker prompts
 - Worker A:
-  - “With corrected `1/L^p` + `exp(-0.8×θ²)` fixed, investigate why `R(b)` still increases with impact parameter. Change only the gravity observable/readout and bounded family setup, not the propagator. Deliver one script, one log, and one short verdict on whether any readout gives more physical `b`-dependence without breaking current unitary checks.”
+  - “With corrected `1/L^p` + `exp(-0.8×θ²)` fixed, investigate geometry-normalized gravity observables or controlled mass-window families that might repair the wrong-direction `b` trend. Do not change the propagator. Deliver one script, one log, one verdict.”
 - Worker B:
-  - “With corrected `1/L^p` + `exp(-0.8×θ²)` fixed, extend the 3D unitary package beyond the current smoke test: 3D zero-field interference visibility, source-superposition linearity/Born-style sanity, and one bounded family-transfer check if feasible. Deliver one script, one log, and one short verdict.”
+  - “Build one bounded evolving-network dynamics prototype that actually generates the analyzed substrate: a local graph-growth / event-creation rule plus one minimal demo showing how later geometry/field structure is produced. Be explicit about what is still assumed. Deliver one script or note, one log or markdown report, one verdict.”
 - Worker C:
-  - “Write a bounded robustness/theory note for the directional path measure: sensitivity around `β=0.8`, why angle-weighting improves gravity scaling, and how to phrase it axiomatically as continuation-quality weighting rather than coarse-graining or renormalization.”
+  - “Write or compute one compact continuum/asymptotic bridge card for the retained architecture: what weakens with graph size, what appears discrete-specific, and what currently looks retained. Focus on visibility thresholds, isotropy/connectivity trend, and gravity-side scaling caveats.”
 
-## 2026-04-01 07:36 America/New_York
+## 2026-04-01 13:08 America/New_York
 
 ### Seam class
-- decoherence theory-frontier clarification
-- repo-facing physical-language translation
+- directional-measure gravity `b` lane
+- geometry-normalized response-density compare
 
 ### What this loop did
-- reconciled the pending decoherence conclusion update into the repo-facing narrative
-- committed `f5e0bbc` (`docs: narrow decoherence bottleneck to interaction law`)
-- attempted the managed push helper, which returned `dns_failure`
+- synced the queued local commits first by pushing `438c465`
+- added `scripts/directional_b_geometry_normalized_compare.py`
+- ran the bounded compare on the same generated-DAG family as the raw readout sweep
+- kept transport and mass selection fixed and normalized only the mass-side response
 
 ### Current state
 - no detached science child is running
 - the lead unitary layer is unchanged:
   - corrected `1/L^p` transport
   - directional path measure `exp(-0.8×θ²)`
-- the decoherence frontier is now narrower:
-  - larger finite env spaces still fail if the coupling stays too deterministic
-  - larger occupied env support alone is not enough
-  - simple local entangling split and repaired fixed-kick substrate memory are both clean failures in their tested forms
-  - the open problem is the interaction law that sets the traced branch-weight structure
-
-### Git / sync state
-- `main` is ahead of `origin/main` by `1`
-- repo-facing commit: `f5e0bbc` (`docs: narrow decoherence bottleneck to interaction law`)
-- managed push helper result: `dns_failure` (`Could not resolve host: github.com`)
+- the gravity `b` lane is now narrower:
+  - raw action-style reads still strengthen with actual `b`
+  - but geometry-normalized response density is the first bounded pass on the same family
 
 ### Strongest confirmed conclusion
-The next decoherence step should target one qualitatively different local interaction law, not another larger discrete environment. The missing ingredient is a mesoscopic durable-record or local-entangling mechanism that leaves the detector with a healthier traced branch-weight structure before convergence or relaxation wash the distinction out.
+The directional `b` problem is no longer “all reads fail.” On the same bounded random-DAG family, both center-offset and nearest-edge response densities now decrease with actual `b` once near-overlap edge cases are treated as singular.
+- `action_channel / b`: PASS at `N=12` and `N=25`
+- `packet_flow_action / b`: PASS at `N=12` and `N=25`
+- `action_channel / b_edge`: PASS
+- `packet_flow_action / b_edge`: PASS
+
+So the active frontier has shifted from “can any bounded read work?” to “which geometry-normalized density is the physically retained one?”
 
 ### Exact next step
 - keep the propagator fixed
-- reconcile/push `f5e0bbc` before doing more repo-facing science
-- after sync is restored, do not spend the next cycle on a bigger finite env unless the coupling law itself changes qualitatively
-- prototype one bounded substrate-memory or local-entangling architecture with genuinely branching local writes
+- keep the same bounded family
+- discriminate or derive the retained gravity response density:
+  - center-offset density
+  - nearest-edge density
+  - or one principled local support-distance normalization tied to the actual mass cluster geometry
+
+### New log paths
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-01-directional-b-geometry-normalized-compare.txt`
+
+## 2026-04-01 08:49 America/New_York
+
+### Seam class
+- directional-measure gravity `b` lane
+- readout-hypothesis closure
+
+### What this loop did
+- ran the duplicate-run guard and acquired the `physics-science` cooperative lock
+- reconciled the shared repo state, confirmed `main` was already ahead locally, and retried the managed push helper before doing new science
+- added `scripts/directional_b_readout_compare.py` plus directional-weight hooks on the existing gravity readout helpers
+- logged the bounded sweep at `/Users/jonreilly/Projects/Physics/logs/2026-04-01-directional-b-readout-compare.txt`
+- committed the stable repo-facing result as `438c465` (`feat: bound directional b-readout diagnostic`)
+- retried the managed push helper after the commit; it failed again with `dns_failure`
+
+### Current state
+- no detached science child is running
+- Claude still owns the decoherence frontier
+- the lead unitary layer is unchanged:
+  - corrected `1/L^p` transport
+  - directional path measure `exp(-0.8×θ²)`
+- the gravity `b` lane is now narrower:
+  - detector centroid/channel still strengthen with larger `b`
+  - packet-current stays near zero and does not produce a real negative slope
+  - near-mass action-style probes also strengthen with larger `b`
+
+### Git / sync state
+- `main` is ahead of `origin/main` by `2`
+- repo-facing commit: `438c465` (`feat: bound directional b-readout diagnostic`)
+- managed push helper result: `dns_failure` (`Could not resolve host: github.com`)
+
+### Strongest confirmed conclusion
+Changing only the gravity readout does not fix the directional-measure `b` problem on the tested random-DAG family. The wrong-direction trend is already present near the mass-side response, not only in downstream detector-centroid extraction.
+
+### Exact next step
+- keep the propagator fixed
+- retry the managed push helper before the next repo-facing science step if DNS is back
+- after sync is available, test one bounded geometry-normalized mass/support observable or controlled mass-window family through `scripts/directional_b_readout_compare.py`
+
+### New log paths
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-01-directional-b-readout-compare.txt`

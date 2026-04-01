@@ -1,3 +1,99 @@
+## 2026-04-01 — Directional-measure b geometry normalization
+
+### Current state
+- `main` was synced to `origin/main` before this step
+- the lead unitary layer is still fixed:
+  - corrected `1/L^p` transport
+  - directional path measure `exp(-0.8×θ²)`
+- the open gravity distance-law question had narrowed to one bounded fork:
+  - either raw readouts were fundamentally wrong-direction
+  - or the raw trend was partly a geometry-labeling issue because the mass-side response was being read as a center-offset kick rather than a response density
+
+### What changed
+- added `scripts/directional_b_geometry_normalized_compare.py`
+- wrote `logs/2026-04-01-directional-b-geometry-normalized-compare.txt`
+- kept the exact same generated-DAG family as `directional_b_readout_compare.py` (`N=12,25`, `5` seeds, target `b = 1.5..7.5`)
+- normalized the two strongest mass-side reads:
+  - `action_channel`
+  - `packet_flow_action`
+- by two bounded geometry scales:
+  - center offset `b_center`
+  - nearest-edge offset `b_edge = b_center - span/2` with near-overlap cases treated as singular rather than allowed to explode
+
+### Strongest confirmed conclusion
+The directional `b` lane is no longer just “wrong-direction.” Raw mass-side reads still strengthen with `b`, but the first bounded geometry-normalized response densities now pass on the same family at both `N=12` and `N=25`.
+- center-offset density passes cleanly:
+  - `action_channel / b`: PASS at both sizes
+  - `packet_flow_action / b`: PASS at both sizes
+- nearest-edge density also passes once the near-overlap singular cases are handled explicitly:
+  - `action_channel / b_edge`: PASS
+  - `packet_flow_action / b_edge`: PASS
+
+So the open question is now narrower and more interesting: which geometry-normalized density is the retained physical read, not whether the lane is dead.
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/scripts/directional_b_geometry_normalized_compare.py`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-01-directional-b-geometry-normalized-compare.txt`
+
+### Exact next step
+- keep the directional-measure propagator fixed
+- stop spending the next cycle on more raw readout variants
+- derive or discriminate the correct gravity response density on the same bounded family:
+  - center-offset density vs nearest-edge density
+  - or one more principled local support-distance normalization tied to the actual mass cluster geometry
+
+## 2026-04-01 — Review-hardening backlog and worker retarget
+
+### Current state
+- reviewer-facing framing docs now exist:
+  - `docs/ASSUMPTION_DERIVATION_LEDGER.md`
+  - `docs/LITERATURE_POSITIONING_NOTE.md`
+  - `docs/REVIEW_HARDENING_BACKLOG.md`
+- Claude should remain on the decoherence frontier.
+- Detached workers should stay on non-overlapping science.
+
+### Strongest backlog exposed by external review
+- genuine evolving-network dynamics is still missing
+- continuum / asymptotic bridge work is still too thin
+- the project is now much better framed, but still needs stronger reviewer-proof separation between:
+  - assumed ingredients
+  - retained effective laws
+  - open derivations
+
+### Updated worker priorities
+
+#### Worker lane A — Geometry-normalized gravity distance law
+- keep corrected `1/L^p` + `exp(-0.8×θ²)` fixed
+- do not reopen propagator search
+- focus on why `R(b)` is still wrong-direction
+- best next test:
+  - geometry-normalized mass/support observables
+  - controlled mass-window families
+
+#### Worker lane B — Minimal evolving-network dynamics prototype
+- do not touch the retained propagator
+- build one bounded graph-growth / event-creation rule that actually generates the analyzed substrate
+- goal:
+  - address the strongest “static graph” review criticism with one minimal, honest prototype
+
+#### Worker lane C — Continuum / asymptotic bridge card
+- do not reopen broad mechanism search
+- write or compute one bounded note on:
+  - which current effects weaken with graph size
+  - which look discrete-specific
+  - which look potentially retained
+- especially:
+  - visibility thresholds
+  - isotropy / connectivity trend
+  - gravity-side scaling caveats
+
+### Guidance
+- Workers should not spend cycles on fresh decoherence architecture search unless Claude explicitly asks for a supporting diagnostic.
+- The best review-hardening science now is:
+  - one better gravity-distance study
+  - one bounded evolving-network dynamics prototype
+  - one continuum/asymptotic bridge note
+
 ## 2026-04-01 — Directional-measure b-readout closure
 
 ### Current state

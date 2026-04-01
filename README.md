@@ -134,6 +134,12 @@ The next frontier is therefore best treated as a scaling architecture problem, n
 - [SCALING_BENCHMARK_TABLE.md](/Users/jonreilly/Projects/Physics/SCALING_BENCHMARK_TABLE.md)
 - [DECOHERENCE_DECISION_NOTE.md](/Users/jonreilly/Projects/Physics/docs/DECOHERENCE_DECISION_NOTE.md)
 
+Reviewer-facing framing docs:
+- [ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md](/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md)
+- [ASSUMPTION_DERIVATION_LEDGER.md](/Users/jonreilly/Projects/Physics/docs/ASSUMPTION_DERIVATION_LEDGER.md)
+- [LITERATURE_POSITIONING_NOTE.md](/Users/jonreilly/Projects/Physics/docs/LITERATURE_POSITIONING_NOTE.md)
+- [REVIEW_HARDENING_BACKLOG.md](/Users/jonreilly/Projects/Physics/docs/REVIEW_HARDENING_BACKLOG.md)
+
 #### Architecture scorecard (tested candidates)
 
 | candidate | gravity scaling | interference | decoherence scaling | mechanism |
@@ -153,14 +159,15 @@ The next frontier is therefore best treated as a scaling architecture problem, n
   - 2D unitary checks pass: Born, interference, `k=0→0`, gravity scaling guardrail, and bounded family transfer
   - a bounded 3D unitary smoke test now also passes on a fixed 3D DAG: zero-field coherent visibility reaches `0.9963` on the canonical `k` band, coherent-vs-incoherent detector-profile contrast stays nonzero across that full band (`TV >= 0.1104`), and source-superposition linearity holds to machine precision (`3.18e-14`)
   - 3D gravity-side smoke checks remain encouraging too: `k=0→0` passes, `R_angle` grows from `+0.29` to `+0.57` across the tested size sweep, and attraction appears on `5/8` seeds
-  - the current caveats are explicit: decoherence scaling still fails in the tested record architecture, `R_c` compatibility is only marginal (`8/10`), and the `b`-dependence is still wrong-direction
+  - the current caveats are explicit: decoherence scaling still fails in the tested record architecture, `R_c` compatibility is only marginal (`8/10`), and the raw `b` readouts are still wrong-direction even though a bounded geometry-normalized response-density diagnostic now passes
 - G2-style coarse-graining is the first tested architecture family that fixes the gravity scaling guardrail
 - a readout-only micro-preserving gravity prototype now also clears the bounded scaling guardrail on the same `N=8..25` family: near-mass `action_channel` bias grows in stable sign and magnitude from `-0.2456` at `N=12` to `-0.8002` at `N=25`, while the baseline detector centroid still collapses from `+0.7968` to `+0.3989`
 - a tighter packet-local refinement is now bounded but not yet promoted: on the same random-DAG family, adaptive `packet_flow_action` improves the endpoint retention again (`|N25/N12| = 3.9748` versus `3.2582` for `action_channel`), but a branching-tree control keeps the broader `action_channel` as the best cross-family read (`|N12/N6| = 2.9514` versus `2.7878` for `packet_flow_action`)
 - a support-structure compare now explains that split instead of only reporting it: on the random-DAG family, the retained packet captures a growing mass-side carried-flow share while the opposite side diffuses (`0.287 -> 0.382` upper versus `0.272 -> 0.162` lower from `N=12 -> 25`), and the full flow support stays about `3x` broader than the retained packet; on the branching-tree control both sides remain nearly symmetric (`~0.25` each) with only `~2x` compression, so the broader channel stays the honest cross-family read
+- the directional `b` lane is now narrower but not dead: raw mass-side action and flow reads still strengthen with actual `b`, but once they are normalized by simple mass geometry they flip to the expected decreasing trend on the same bounded random-DAG family. The cleanest bounded read is center-offset response density (`action_channel / b` and `packet_flow_action / b` both pass at `N=12` and `N=25`), while nearest-edge normalization also passes once near-overlap cases are treated as singular. So the open question is now which geometry-normalized density is physically retained, not whether the whole lane fails.
 - `k=0→0` remains preserved under both G1 and G2
 
-**Current read:** the best current architecture split is now cleaner. On the unitary side, the flat path measure appears to have been the wrong assumption; the lead provisional replacement is corrected `1/L^p` transport plus a directional path measure `exp(-0.8θ²)`, which preserves the tested 2D unitary constraints, passes a bounded 3D unitary smoke test, and stops the gravity-side collapse on the bounded scaling family. On the non-unitary side, no tested record architecture scales correctly yet, and the bottleneck now looks like interaction law / traced branch-weight structure rather than raw env size. So the next good move is not another transport coarse-graining pass or another larger discrete register. It is to treat the propagator as a provisional retained unitary layer with a now-closed 3D smoke gap, and focus the next architecture loop on one mesoscopic durable-record or local-entangling interaction law plus the still-open `b`-dependence question.
+**Current read:** the best current architecture split is now cleaner. On the unitary side, the flat path measure appears to have been the wrong assumption; the lead provisional replacement is corrected `1/L^p` transport plus a directional path measure `exp(-0.8θ²)`, which preserves the tested 2D unitary constraints, passes a bounded 3D unitary smoke test, and stops the gravity-side collapse on the bounded scaling family. The gravity distance-law caveat is now more specific than a blanket failure: raw readouts still grow with `b`, but bounded geometry-normalized response densities already fall with `b` on the same family. On the non-unitary side, no tested record architecture scales correctly yet, and the bottleneck now looks like interaction law / traced branch-weight structure rather than raw env size. So the next good move is not another transport coarse-graining pass or another larger discrete register. It is to treat the propagator as a provisional retained unitary layer with a now-closed 3D smoke gap, and focus the next architecture loop on one mesoscopic durable-record or local-entangling interaction law plus a more principled derivation of the retained gravity response density.
 
 ### 5. Oscillatory persistence under the default self-maintenance rule
 
@@ -420,6 +427,12 @@ The main unresolved points are:
 ## What Is Still Cheating
 
 This is the explicit "do not flatter ourselves" block.
+
+If you want the more formal reviewer-facing version of this same issue, see:
+
+- [ASSUMPTION_DERIVATION_LEDGER.md](/Users/jonreilly/Projects/Physics/docs/ASSUMPTION_DERIVATION_LEDGER.md)
+- [LITERATURE_POSITIONING_NOTE.md](/Users/jonreilly/Projects/Physics/docs/LITERATURE_POSITIONING_NOTE.md)
+- [REVIEW_HARDENING_BACKLOG.md](/Users/jonreilly/Projects/Physics/docs/REVIEW_HARDENING_BACKLOG.md)
 
 1. **The benchmark geometries are still partly hand-authored.**  
    The project now has procedural and randomized families, but the core benchmark worlds are still chosen by hand.
