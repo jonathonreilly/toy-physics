@@ -52,16 +52,23 @@ Changing only the graph family changed the outcome.
 On modular / gap-controlled DAGs:
 
 - the same IF / CL machinery yields stable decoherence
-- interference remains strong
+- the old both-slits-open contrast proxy remains high
 - gravity still works on the same family
 - larger imposed gap gives stronger gravity and stronger decoherence until
   connectivity breaks
 
 The older small-sample “narrow sweet spot” story has now been replaced by a
-broader 24-seed read:
+broader modular-family read:
 
-- every tested gap from `0.0` to `5.0` passes the current joint criteria
-- larger gaps strengthen both phenomena
+- tested gaps `0.0..5.0` keep positive gravity and `pur_cl < 0.96`
+- larger imposed gaps generally strengthen both phenomena until connectivity
+  breaks
+
+One scope note still matters here:
+
+- once the large-`N` script is upgraded to a true single-vs-double-slit
+  visibility gain, that gain is only weak at `N=12`, near-zero by `N=18`, and
+  gone or slightly negative by `N>=25`
 
 So the current repo-facing claim is:
 
@@ -74,7 +81,7 @@ It is:
 
 - **how to generate the right hard topological gap dynamically**
 
-Seven emergence attempts now fail for the same structural reason:
+Seven local emergence attempts now fail for the same structural reason:
 
 - they only modify **connections**
 - or create **gaps with the wrong size / location**
@@ -84,6 +91,8 @@ That points to a sharper next frontier:
 
 1. self-regulating node-placement rules
 2. node-removal / non-permanence rules that can stabilize a slit-centered gap
+   as a genuine local hard-gap law rather than a global pruning surrogate;
+   soft pruning on a connected graph is now a closed asymptotic lane
 3. other dynamics that can create or maintain regions with no nodes at the
    right scale
 4. or, if those fail cleanly, treating the gap as part of the effective

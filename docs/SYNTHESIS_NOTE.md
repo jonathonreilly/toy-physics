@@ -1,34 +1,41 @@
 # Synthesis Note: Emergent Physics on Discrete Causal DAGs
 
-**Date:** 2026-04-01 (final revision: bugfixes, corrected metrics)
-**Status:** Architecture result locked. Emergence program closed (9 approaches).
+**Date:** 2026-04-01
+**Status:** retained architecture note with metric caveats tightened and pruning lane narrowed
 
-## The claim (corrected)
+This note is now mainly the **2D / topology-pivot synthesis**. For the current
+3D / 4D / 5D state, see
+[HIGHER_DIMENSION_STATUS_2026-04-01.md](/Users/jonreilly/Projects/Physics/docs/HIGHER_DIMENSION_STATUS_2026-04-01.md).
+
+## The current claim
 
 On discrete causal DAGs with path-sum amplitude propagation:
 
-1. **Gravity** (corrected propagator) produces deflection toward mass
-   on modular DAGs. Signal confirmed with paired per-seed SE:
-   gap=4, N=25: delta=+3.2 (2.5 SE). On uniform DAGs, 8 seeds
-   insufficient for significance.
+1. **Gravity** from the corrected propagator produces positive deflection
+   toward mass on the retained graph families. The effect is clearest on the
+   modular / channelized family, while the exact significance numbers in older
+   notes should be treated as provisional until the paired per-seed delta
+   calculation is used everywhere.
 
-2. **Decoherence** (CL bath) achieves pur_cl ~ 0.93-0.96 at
-   intermediate N (25-50) on both uniform and modular DAGs with
-   24 seeds. The geometric ceiling returns at N=80 (pur_cl ~ 0.98)
-   on all tested topologies.
+2. **Decoherence** from the CL bath is real in the retained non-unitary lane.
+   The actual traced detector purity `pur_cl` reaches the `~0.93-0.96` range
+   in the best current runs, while `pur_min` is the lower bound achieved in
+   the fully decohered limit. Some older phase-diagram notes blurred those two
+   quantities; this note keeps them separate.
 
-3. **Topology matters**: the modular gap-controlled family has a
-   broad parameter window where both gravity and decoherence work.
-   Larger gaps improve both metrics monotonically.
+3. **Topology matters.** Within the modular / gap-controlled family, widening
+   the imposed gap generally lowers the achievable decoherence floor and
+   strengthens gravity until connectivity breaks. `gap=0` in the current
+   modular generator now behaves as the true uniform-style baseline.
 
-**Bugfix note:** gap=0 in the modular generator was NOT equivalent
-to the uniform baseline (channelized placement and edge filtering
-still active). Fixed and verified. With the fix, gap=0 IS uniform,
-and the broad-window result holds across the full range.
+So the strongest current statement is:
 
-There exists a topology parameter window (gap ~ 2.0 in units of
-y_range = 12.0) where both phenomena coexist on the same graph
-instances, with the same propagator, simultaneously.
+- the corrected unitary core and the IF / CL decoherence route can coexist on
+  the same modular topology family
+- the decisive control variable is topology
+- the remaining open issue is dynamic generation of the good topology
+- the true large-`N` single-vs-double-slit visibility gain on the retained
+  modular bath lane is weak and does not remain high
 
 ## The model
 
@@ -57,86 +64,83 @@ amplitude patterns are.
 ## Results
 
 ### Gravity
-| Graph family | N=25 delta | N=40 delta | Signal |
+| Graph family | N=25 mean delta | N=40 mean delta | Current read |
 |---|---|---|---|
-| Uniform random | +1.11 (3.0 SE) | +1.75 (2.8 SE) | Clear |
-| Modular gap=4 | +1.05 (2.3 SE) | +1.88 (2.7 SE) | Clear |
-| Modular gap=2 | +1.49 (N=25) | — | Clear |
+| Uniform random | positive | positive | works, but noisier |
+| Modular gap=4 | positive | positive | strongest retained lane |
+| Modular gap sweep | larger gap -> larger delta | larger gap -> larger delta | topology-sensitive |
 
-Gravity works on both uniform and modular DAGs. It grows with N.
+Gravity works on both uniform and modular-style families, but the modular lane
+is presently the clearest place where the effect survives alongside the
+decoherence story. Earlier `SE` numbers in repo notes were slightly optimistic
+because they were not always computed from paired per-seed deltas.
 
 ### Decoherence
-| Graph family | N=25 pur_min (24 seeds) | N=40 pur_min | Scaling |
+| Graph family / metric | N=25 | N=40 | Current read |
 |---|---|---|---|
-| Uniform random (gap=0) | 0.951 | 0.932 | Improving |
-| Modular gap=2 | 0.937 | 0.938 | Stable |
-| Modular gap=4 | 0.952 | 0.929 | Improving |
-| Modular gap=5 | 0.942 | 0.889 | Strongest |
+| Uniform random `pur_cl` | `~0.94-0.95` | `~0.94` in current best runs | moderate |
+| Modular family `pur_min` floor | below uniform | lower again at larger gaps | stronger achievable floor |
+| Modular family `pur_cl` | broadly similar or slightly better than uniform in the retained range | improves on the best modular settings | retained non-unitary lane |
 
-**Revision (24-seed data):** The earlier 12-seed tests overstated the
-uniform DAG ceiling. With 24 seeds, even gap=0 shows pur_min=0.951
-at N=25. The 14-architecture failure analysis remains valid (all
-individual bath/kernel variants fail), but the CL bath on uniform
-DAGs performs better than initial 4-seed tests suggested.
-
-Channel separation helps — larger gaps give stronger decoherence
-at N=40 — but the effect is a gradient, not a threshold.
+The 24-seed revision removed the earlier over-strong “uniform DAG ceiling at
+0.986” story. Uniform random DAGs can already reach `pur_cl ~ 0.95` in the
+current CL-bath runs. What topology changes most clearly, under the current
+audited scripts, is the **achievable decoherence floor** `pur_min` and the
+stability of the retained non-unitary lane.
 
 ### Joint test (24 seeds, same graph instances)
-| gap | gravity (N=40) | pur_min (N=40) | decoh (N=40) |
+| modular gap | gravity at N=40 | `pur_min` floor at N=40 | current read |
 |---|---|---|---|
-| 0.0 | +1.51 | 0.932 | +0.067 |
-| 2.0 | +1.83 | 0.938 | +0.061 |
-| 3.0 | +2.43 | 0.939 | +0.059 |
-| 5.0 | **+3.47** | **0.889** | **+0.110** |
+| 0.0 | positive | below 0.96 | still modular, not uniform |
+| 2.0 | stronger | lower floor | good retained regime |
+| 3.0 | stronger again | similar floor | broad window |
+| 5.0 | strongest current signal | lowest current floor | best tested modular point |
 
-**The unification window is broad.** ALL gap values from 0.0 to 5.0
-pass both criteria (gravity > 2SE, pur_min < 0.96) with 24 seeds.
-Larger gaps give monotonically stronger gravity and decoherence at N=40.
-Crosslink probability has zero effect (identical results 0.0-0.10).
+**The unification window is broad within the modular family.** Under the
+current refined phase-diagram scripts, all tested gaps `0.0..5.0` retain
+positive gravity and `pur_cl < 0.96` on the audited sweep, with stronger gaps
+generally helping until connectivity breaks.
 
 ## What the topology parameter controls
 
-The gap is a monotonic dial, not a threshold:
-- More gap = stronger channel separation = better decoherence
-- More gap = more coherent in-channel propagation = stronger gravity
-- Too much gap = connectivity breaks (gap > y_range)
+Inside the modular family, the imposed gap behaves like a control dial:
+- more gap usually means stronger channel separation
+- stronger channel separation usually improves the decoherence floor
+- the same structure also tends to strengthen gravity
+- too much gap eventually breaks connectivity
 
-The tradeoff is not gravity-vs-decoherence (both improve together)
-but channel-coherence vs graph-connectivity.
+So the retained tradeoff is not gravity versus decoherence, but branch
+preservation versus graph connectivity.
 
 ## What is established
 
-1. **Gravity:** Pure phase effect from path-sum on causal DAG. Born rule
-   satisfied (I_3/P = 4e-15). Works on both uniform and modular DAGs.
-   Signal grows with N.
+1. **Gravity:** The corrected propagator still supports positive mass-side
+   deflection and remains compatible with the fixed-DAG Born/interference
+   checks. The modular family is currently the clearest gravity lane.
 
-2. **Decoherence:** CL bath achieves pur_min ~ 0.93-0.95 on both
-   uniform and modular DAGs with 16+ seeds. Channel separation helps
-   (gap=5 at N=40: pur_min=0.889) but is not strictly required.
+2. **Decoherence:** The IF / CL route is retained. Uniform dense DAGs can show
+   moderate decoherence, but the modular family gives a better controlled
+   topology and a lower achievable decoherence floor.
 
-3. **Unification:** Both gravity and decoherence emerge from the same
-   propagator on the same graphs simultaneously. All gap values 0-5
-   pass both criteria with 24 seeds. Larger gaps improve both.
+3. **Unification:** Gravity and decoherence coexist on the same modular graph
+   instances with the same retained propagator.
 
-4. **Architecture:** 14 individual bath/kernel variants fail on uniform
-   DAGs with 4 seeds. The CL bath (exponential D=exp(-lambda^2*S)) is
-   the only architecture that works, on any graph family.
+4. **Architecture:** The earlier graph-local environment search on dense random
+   DAGs still fails as a generic route. The positive non-unitary story now runs
+   through IF / CL plus the right topology.
 
-## Large-N ceiling (24-seed confirmation)
+## Large-N read
 
-The geometric ceiling is real but delayed relative to initial tests:
-```
-N=25: pur_min = 0.953 (uniform), 0.948 (removal)
-N=40: pur_min = 0.945 (uniform), 0.931 (removal)  ← best window
-N=60: pur_min = 0.967 (uniform), 0.968 (removal)  ← ceiling returns
-N=80: pur_min = 0.987 (uniform), 0.982 (removal)  ← approaching 1
-```
+The strongest current large-`N` statement is more modest than some older notes:
 
-CLT convergence eventually dominates on ALL tested topologies.
-The CL bath works at intermediate N (25-50) but weakens at large N.
+- dense connected families still show CLT-style convergence pressure
+- the modular family delays or softens that problem by preserving branch
+  structure better
+- the old both-slits-open contrast proxy stays high, but the newer true
+  single-vs-double-slit visibility gain is only `+0.023` at `N=12`, drops to
+  `+0.002` at `N=18`, and is near zero or negative by `N>=25`
 
-## Emergence program: closed (9 approaches tested)
+## Emergence status: local endogenous generation still open
 
 | # | Approach | Type | Result |
 |---|----------|------|--------|
@@ -148,23 +152,27 @@ The CL bath works at intermediate N (25-50) but weakens at large N.
 | 6 | Distinguishability placement (mild) | Node placement | Gap ~2 but no improvement |
 | 7 | Distinguishability placement (strong) | Node placement | Gap too large, disconnects |
 | 8 | Calibrated alpha sweep | Node placement | No alpha beats uniform |
-| 9 | **Node removal (prune=0.10)** | **Node removal** | **Marginal improvement at N=40** |
+| 9 | **Node removal (prune=0.10)** | **Node removal** | **Intermediate-N improvement only** |
 
-**Approach 9 (node removal)** is the only approach that improves on
-the uniform baseline: delta pur_min = -0.015 at N=40. But the effect
-is marginal (below 1.5 SE paired significance) and the ceiling still
-returns at N=80.
+**Approach 9 (node removal)** is the first emergence-adjacent surrogate that
+improves the dense-random baseline at intermediate `N`. But it does so by
+building the full graph, globally ranking post-barrier nodes by
+distinguishability, and then pruning them. The effect is not asymptotically
+stable: by `N=80..100` the ceiling returns, and stronger or adaptive pruning
+pushes the graph toward disconnection. So it should be read as a **nonlocal
+pruning construction**, not as a solved local growth law.
 
-Physics: "prune events that don't carry which-path information."
-This is the closest to a physically motivated emergence mechanism.
+The first hard-gap placement-only diagnostic is also now explicitly
+`not-ready`: the best candidate (`alpha=1`) reaches a useful gap width
+(`gap ~ 2.3`) only with a badly misplaced center (`|gap_ctr| ~ 4.2`), while
+stronger placement drives the graphs toward near-disconnection and
+`pur_cl -> 1.0`.
 
 ## What is NOT established
 
-1. **Scalable emergence:** 9 approaches tested. Node removal shows
-   marginal improvement at intermediate N but CLT ceiling returns
-   at large N on all topologies. The fundamental issue is that
-   linear path-sum propagation on ANY sufficiently connected graph
-   leads to CLT convergence of per-slit statistics.
+1. **Scalable emergence:** no local endogenous growth law yet reproduces the
+   good modular topology. Global post-hoc node removal helps only at
+   intermediate `N` and is not an asymptotic fix.
 
 2. **3D generalization:** All tests are 2D (1 spatial + 1 causal).
 
@@ -177,20 +185,18 @@ This is the closest to a physically motivated emergence mechanism.
 
 ## Honest assessment (revised)
 
-This is a toy model demonstrating that **path-sum propagation on
-discrete causal DAGs supports both gravity and decoherence** using
-a single propagator and CL bath environment. The result holds on
-both uniform and modular topologies, with channel separation
-improving (not enabling) decoherence.
+This is a toy model demonstrating that **path-sum propagation on discrete
+causal DAGs can support gravity and decoherence under one retained
+architecture**, provided the topology preserves branch structure well enough.
 
-The initial claim that "uniform DAGs hit a geometric ceiling" was
-overstated due to small sample sizes. With 24 seeds, uniform DAGs
-achieve pur_min ~ 0.95, within 2% of modular DAGs.
+The older story that “uniform fails, modular alone works” was too sharp.
+Uniform random DAGs can already show moderate CL-bath decoherence in larger
+seed runs. The stronger retained claim is instead:
 
-The physics result: **gravity (corrected propagator) and decoherence
-(CL bath) coexist on the same causal DAGs.** This is a structural
-finding about discrete path-sum models, not a claim about real physics.
-
-The emergence question — can the topology that optimizes both be
-generated dynamically — is cleanly diagnosed (8 approaches, all fail)
-and remains open as a theoretical question about emergent spacetime.
+- topology materially changes the achievable decoherence floor
+- the modular family is presently the clearest joint gravity+decoherence lane
+- on the asymptotic modular bath lane, true interference gain is weak/gone
+  even though the older contrast proxy stayed high
+- the emergence question remains open because the good topology is still
+  imposed; the best pruning surrogate helps only at intermediate `N` and does
+  not generate a stable local hard-gap rule

@@ -1,268 +1,240 @@
 #!/usr/bin/env python3
-"""Path sampling analysis: WHY is gravity b-independent?
+"""Path-sampling diagnostic for the b-independence mechanism.
 
-Hypothesis: b-independence comes from path ensemble averaging.
-On any sufficiently connected graph, the set of high-weight paths
-to a given detector samples the full transverse extent. So the
-average field perturbation is independent of where the mass is.
+This is a review-safe companion to the distance-law closure work.
 
-Testable predictions:
-  1. The amplitude-weighted mean y of intermediate nodes should be
-     near 0 (center) for ALL detectors, regardless of detector y.
-     This means paths to y=+5 and y=-5 both sample y≈0 on average.
+The point is not to rescue a 1/b law. The point is to ask whether the
+current retained modular DAGs preserve transverse path identity locally
+while the smooth graph-wide field still acts roughly uniformly across the
+connected path ensemble.
 
-  2. The variance of the y-distribution of intermediate nodes
-     should be large compared to the mass offset b.
-     This means the path ensemble "washes out" the mass position.
+We measure two things on the retained 4D modular family:
+  1. detector-side channel preservation under upper/lower channel openings
+  2. layer-by-layer transverse spread of the amplitude distribution
 
-  3. If we RESTRICT paths to a narrow transverse band (forcing
-     locality), then b-dependence should appear.
-
-PStack experiment: path-sampling-analysis
+If the upper-channel run stays mostly on the upper side and the lower-channel
+run stays mostly on the lower side, then the flat distance law is not coming
+from a simple "paths scramble to the center" story.
 """
 
 from __future__ import annotations
+
 import math
-import cmath
-import random
-from collections import defaultdict, deque
+import os
+import statistics
+import sys
+from collections import defaultdict
 
-BETA = 0.8
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
+from scripts.four_d_distance_scaling import (  # noqa: E402
+    K_BAND,
+    compute_field_4d,
+    generate_4d_modular_dag,
+    propagate_4d,
+    select_mass_nodes,
+)
 
-def generate_3d_dag(n_layers=18, nodes_per_layer=40, yz_range=12.0,
-                    connect_radius=3.5, rng_seed=42):
-    rng = random.Random(rng_seed)
-    positions = []
-    adj = defaultdict(list)
-    layer_indices = []
-    for layer in range(n_layers):
-        x = float(layer)
-        layer_nodes = []
-        if layer == 0:
-            positions.append((x, 0.0, 0.0))
-            layer_nodes.append(len(positions)-1)
-        else:
-            for _ in range(nodes_per_layer):
-                y = rng.uniform(-yz_range, yz_range)
-                z = rng.uniform(-yz_range, yz_range)
-                idx = len(positions)
-                positions.append((x, y, z))
-                layer_nodes.append(idx)
-                for prev_layer in layer_indices[max(0, layer-2):]:
-                    for prev_idx in prev_layer:
-                        px, py, pz = positions[prev_idx]
-                        dist = math.sqrt((x-px)**2 + (y-py)**2 + (z-pz)**2)
-                        if dist <= connect_radius:
-                            adj[prev_idx].append(idx)
-        layer_indices.append(layer_nodes)
-    return positions, dict(adj), layer_indices
+N_SEEDS = 8
+N_LAYERS = 18
+NODES_PER_LAYER = 40
+SPATIAL_RANGE = 8.0
+CONNECT_RADIUS = 4.5
+GAP = 5.0
+TARGET_B = 5.0
+MASS_COUNT = 8
+FOCUS_LAYERS = 3
 
 
-def propagate_track(positions, adj, src, k):
-    """Propagate and track amplitude-weighted y distribution at each layer."""
-    n = len(positions)
-    in_deg = [0] * n
-    for nbs in adj.values():
-        for j in nbs:
-            in_deg[j] += 1
-    q = deque(i for i in range(n) if in_deg[i] == 0)
-    order = []
-    while q:
-        i = q.popleft()
-        order.append(i)
-        for j in adj.get(i, []):
-            in_deg[j] -= 1
-            if in_deg[j] == 0:
-                q.append(j)
+def _mean(values: list[float]) -> float:
+    return sum(values) / len(values) if values else math.nan
 
-    amps = [0j] * n
-    for s in src:
-        amps[s] = 1.0 / len(src)
 
-    field = [0.0] * n
-    for i in order:
-        if abs(amps[i]) < 1e-30:
+def _se(values: list[float]) -> float:
+    if len(values) < 2:
+        return math.nan
+    return statistics.stdev(values) / math.sqrt(len(values))
+
+
+def _topo_layers(positions: list[tuple[float, float, float, float]]) -> dict[int, list[int]]:
+    by_layer: dict[int, list[int]] = defaultdict(list)
+    for idx, (x, *_rest) in enumerate(positions):
+        by_layer[round(x)].append(idx)
+    return by_layer
+
+
+def _top_barrier_split(
+    positions: list[tuple[float, float, float, float]],
+    layer_nodes: list[int],
+) -> tuple[list[int], list[int]]:
+    upper = [i for i in layer_nodes if positions[i][1] >= 0.0]
+    lower = [i for i in layer_nodes if positions[i][1] < 0.0]
+    return upper, lower
+
+
+def _weighted_y_stats(
+    amps: list[complex],
+    positions: list[tuple[float, float, float, float]],
+    nodes: list[int],
+) -> tuple[float, float, float]:
+    total = 0.0
+    wy = 0.0
+    wy2 = 0.0
+    for i in nodes:
+        p = abs(amps[i]) ** 2
+        total += p
+        wy += p * positions[i][1]
+        wy2 += p * positions[i][1] ** 2
+    if total <= 1e-30:
+        return 0.0, 0.0, 0.0
+    mean_y = wy / total
+    var_y = max(wy2 / total - mean_y**2, 0.0)
+    return mean_y, math.sqrt(var_y), total
+
+
+def _same_side_fraction(
+    amps: list[complex],
+    positions: list[tuple[float, float, float, float]],
+    nodes: list[int],
+    open_sign: int,
+) -> float:
+    total = 0.0
+    same = 0.0
+    for i in nodes:
+        p = abs(amps[i]) ** 2
+        total += p
+        if open_sign > 0 and positions[i][1] >= 0.0:
+            same += p
+        elif open_sign < 0 and positions[i][1] < 0.0:
+            same += p
+    return same / total if total > 1e-30 else 0.0
+
+
+def _open_side_metrics(
+    positions: list[tuple[float, float, float, float]],
+    adj: dict[int, list[int]],
+    field: list[float],
+    src: list[int],
+    det_list: list[int],
+    upper_nodes: list[int],
+    lower_nodes: list[int],
+    open_side: str,
+) -> dict[str, float]:
+    if open_side == "upper":
+        blocked = set(lower_nodes)
+        open_sign = 1
+    else:
+        blocked = set(upper_nodes)
+        open_sign = -1
+
+    by_layer = _topo_layers(positions)
+    layers = sorted(by_layer)
+    barrier_layer = len(layers) // 3
+    post_barrier = []
+    for layer in layers[barrier_layer + 1 : barrier_layer + 1 + FOCUS_LAYERS]:
+        post_barrier.extend(by_layer[layer])
+
+    metrics: dict[str, float] = {
+        "det_same": 0.0,
+        "det_mean_y": 0.0,
+        "det_std_y": 0.0,
+        "focus_same": 0.0,
+        "focus_mean_y": 0.0,
+        "focus_std_y": 0.0,
+    }
+    n_used = 0
+    for k in K_BAND:
+        amps = propagate_4d(positions, adj, field, src, k, blocked)
+        det_mean_y, det_std_y, _ = _weighted_y_stats(amps, positions, det_list)
+        focus_mean_y, focus_std_y, _ = _weighted_y_stats(amps, positions, post_barrier)
+        metrics["det_same"] += _same_side_fraction(amps, positions, det_list, open_sign=open_sign)
+        metrics["det_mean_y"] += det_mean_y
+        metrics["det_std_y"] += det_std_y
+        metrics["focus_same"] += _same_side_fraction(amps, positions, post_barrier, open_sign=open_sign)
+        metrics["focus_mean_y"] += focus_mean_y
+        metrics["focus_std_y"] += focus_std_y
+        n_used += 1
+
+    if n_used == 0:
+        return metrics
+    for key in metrics:
+        metrics[key] /= n_used
+    return metrics
+
+
+def main() -> None:
+    print("=" * 78)
+    print("PATH SAMPLING ANALYSIS")
+    print("  Local path preservation on the retained 4D modular family")
+    print("  Goal: check whether transverse labels stay local while the")
+    print("        path ensemble still spans the graph broadly enough")
+    print("=" * 78)
+    print()
+
+    buckets = {
+        "upper:flat": {"det_same": [], "det_mean_y": [], "det_std_y": [], "focus_same": [], "focus_mean_y": [], "focus_std_y": []},
+        "lower:flat": {"det_same": [], "det_mean_y": [], "det_std_y": [], "focus_same": [], "focus_mean_y": [], "focus_std_y": []},
+        "upper:mass": {"det_same": [], "det_mean_y": [], "det_std_y": [], "focus_same": [], "focus_mean_y": [], "focus_std_y": []},
+        "lower:mass": {"det_same": [], "det_mean_y": [], "det_std_y": [], "focus_same": [], "focus_mean_y": [], "focus_std_y": []},
+    }
+
+    for seed in range(N_SEEDS):
+        positions, adj, layer_indices = generate_4d_modular_dag(
+            n_layers=N_LAYERS,
+            nodes_per_layer=NODES_PER_LAYER,
+            spatial_range=SPATIAL_RANGE,
+            connect_radius=CONNECT_RADIUS,
+            rng_seed=seed * 13 + 5,
+            gap=GAP,
+        )
+
+        by_layer = _topo_layers(positions)
+        layers = sorted(by_layer)
+        if len(layers) < 7:
             continue
-        for j in adj.get(i, []):
-            x1, y1, z1 = positions[i]
-            x2, y2, z2 = positions[j]
-            dx, dy, dz = x2-x1, y2-y1, z2-z1
-            L = math.sqrt(dx*dx + dy*dy + dz*dz)
-            if L < 1e-10:
-                continue
-            cos_theta = dx / L
-            theta = math.acos(min(max(cos_theta, -1), 1))
-            w = math.exp(-BETA * theta * theta)
-            ea = cmath.exp(1j * k * L) * w / L
-            amps[j] += amps[i] * ea
-
-    return amps
-
-
-def main():
-    print("=" * 70)
-    print("PATH SAMPLING ANALYSIS: Why is gravity b-independent?")
-    print("=" * 70)
-    print()
-
-    positions, adj, layer_indices = generate_3d_dag(
-        n_layers=18, nodes_per_layer=40, yz_range=12.0,
-        connect_radius=3.5, rng_seed=42)
-
-    src = layer_indices[0]
-    det_list = layer_indices[-1]
-    k = 5.0
-
-    amps = propagate_track(positions, adj, src, k)
-
-    # Prediction 1: amplitude-weighted <y> of intermediate nodes
-    # conditioned on detector y-position
-    print("PREDICTION 1: Path sampling is y-uniform")
-    print("  Amplitude-weighted <y> at intermediate layers, by detector y-bin")
-    print()
-
-    # Bin detectors by y
-    det_bins = {"y<-4": [], "-4<y<-1": [], "-1<y<1": [], "1<y<4": [], "y>4": []}
-    for d in det_list:
-        y = positions[d][1]
-        if y < -4:
-            det_bins["y<-4"].append(d)
-        elif y < -1:
-            det_bins["-4<y<-1"].append(d)
-        elif y < 1:
-            det_bins["-1<y<1"].append(d)
-        elif y < 4:
-            det_bins["1<y<4"].append(d)
-        else:
-            det_bins["y>4"].append(d)
-
-    # For each detector bin, compute what fraction of total probability
-    # comes from paths through different y-regions of intermediate layers
-    # We approximate this by looking at the amplitude distribution at the
-    # mid-layer, weighted by detector amplitude
-
-    mid_layer = layer_indices[len(layer_indices)//2]
-
-    # First, just look at the amplitude distribution at intermediate layers
-    print("  Amplitude-weighted <y> at each layer:")
-    print(f"  {'layer':>5s}  {'<y>':>8s}  {'std(y)':>8s}  {'n_active':>8s}")
-    print(f"  {'-'*36}")
-
-    for li, nodes in enumerate(layer_indices):
-        if li == 0 or li == len(layer_indices)-1:
+        src = by_layer[layers[0]]
+        det_list = list(by_layer[layers[-1]])
+        if not det_list:
             continue
-        total_p = 0
-        wy = 0
-        wy2 = 0
-        n_active = 0
-        for i in nodes:
-            p = abs(amps[i])**2
-            if p > 1e-30:
-                n_active += 1
-                total_p += p
-                wy += p * positions[i][1]
-                wy2 += p * positions[i][1]**2
-        if total_p > 0:
-            mean_y = wy / total_p
-            var_y = wy2 / total_p - mean_y**2
-            std_y = math.sqrt(max(var_y, 0))
-            print(f"  {li:5d}  {mean_y:+8.3f}  {std_y:8.3f}  {n_active:8d}")
 
-    print()
-    print("  If <y> ≈ 0 at all layers: paths sample y uniformly")
-    print("  If std(y) >> b_max: path ensemble covers full transverse range")
-    print()
-
-    # Prediction 2: the amplitude at detectors has WEAK correlation with
-    # the transverse position — most amplitude comes from near y=0
-    # regardless of detector position
-    print("PREDICTION 2: Detector probability vs detector y")
-    print(f"  {'y_bin':>12s}  {'mean_P':>10s}  {'n_det':>6s}")
-    print(f"  {'-'*32}")
-
-    for bin_name, det_ids in det_bins.items():
-        if not det_ids:
+        center_y = statistics.fmean(positions[i][1] for i in range(len(positions)))
+        grav_layer = layers[2 * len(layers) // 3]
+        mass_nodes = select_mass_nodes(by_layer[grav_layer], positions, center_y, TARGET_B, MASS_COUNT)
+        if not mass_nodes:
             continue
-        probs = [abs(amps[d])**2 for d in det_ids]
-        mean_p = sum(probs) / len(probs)
-        print(f"  {bin_name:>12s}  {mean_p:10.6e}  {len(det_ids):6d}")
+
+        field_mass = compute_field_4d(positions, adj, mass_nodes)
+        field_flat = [0.0] * len(positions)
+
+        barrier_nodes = by_layer[layers[len(layers) // 3]]
+        upper_nodes, lower_nodes = _top_barrier_split(positions, barrier_nodes)
+        if not upper_nodes or not lower_nodes:
+            continue
+
+        for open_side, field in (("upper", field_flat), ("lower", field_flat), ("upper", field_mass), ("lower", field_mass)):
+            metrics = _open_side_metrics(positions, adj, field, src, det_list, upper_nodes, lower_nodes, open_side)
+            key = f"{open_side}:{'mass' if field is field_mass else 'flat'}"
+            bucket = buckets[key]
+            for metric_name, value in metrics.items():
+                bucket[metric_name].append(value)
+
+    print(f"{'channel':>10s}  {'det_same':>8s}  {'det_mean_y':>10s}  {'det_std_y':>10s}  {'focus_same':>10s}")
+    print(f"{'-' * 60}")
+    for key in ("upper:flat", "lower:flat", "upper:mass", "lower:mass"):
+        det_same = _mean(buckets[key]["det_same"])
+        det_mean_y = _mean(buckets[key]["det_mean_y"])
+        det_std_y = _mean(buckets[key]["det_std_y"])
+        focus_same = _mean(buckets[key]["focus_same"])
+        print(f"{key:>10s}  {det_same:8.3f}  {det_mean_y:10.3f}  {det_std_y:10.3f}  {focus_same:10.3f}")
 
     print()
-
-    # Prediction 3: the "effective sampling width" of paths
-    # How much of the transverse range does a typical path sample?
-    # We measure this by propagating from a single detector BACKWARDS
-    # and seeing how spread the amplitude is at the source layer.
-    # (Approximation: look at correlation between detector y and mid-layer y)
-    print("PREDICTION 3: Detector-conditioned mid-layer y-distribution")
-    print("  For detectors at different y, where is the mid-layer amplitude?")
-    print()
-
-    # Reverse propagation: for each detector, what's the amplitude-weighted
-    # y at the mid-layer? Use forward amps as proxy (not exact but indicative).
-
-    # Actually, let's do something simpler: compute the two-point correlation
-    # between mid-layer y and detector y, weighted by amplitude product.
-
-    # Correlation: rho = <y_mid * y_det> / (std_mid * std_det)
-    # If rho ≈ 0: mid-layer y is uncorrelated with detector y → b-independent
-    # If rho ≈ 1: paths are geometrically local → b-dependent possible
-
-    # Approximate: for each detector d, estimate the "effective mid-layer y"
-    # by looking at which mid-layer nodes have high overlap with d's amplitude.
-
-    # Simpler: propagate from SINGLE SOURCE at different y offsets and see
-    # how the detector distribution changes. This directly tests whether
-    # the graph "remembers" transverse position.
-
-    y_offsets = [-8, -4, 0, 4, 8]
-    print(f"  Source y-offset → detector <y>")
-    print(f"  {'y_src':>6s}  {'<y_det>':>8s}  {'std_det':>8s}")
-    print(f"  {'-'*28}")
-
-    for y_off in y_offsets:
-        # Find source-layer node closest to (0, y_off, 0)
-        src_layer = layer_indices[0]
-        if len(src_layer) == 1:
-            # Only one source node — can't offset. Use layer 1 instead.
-            src_layer = layer_indices[1]
-
-        # Find closest node to y_off
-        best = min(src_layer, key=lambda i: abs(positions[i][1] - y_off))
-        src_set = [best]
-
-        amps_off = propagate_track(positions, adj, src_set, k)
-
-        total_p = 0
-        wy = 0
-        wy2 = 0
-        for d in det_list:
-            p = abs(amps_off[d])**2
-            total_p += p
-            wy += p * positions[d][1]
-            wy2 += p * positions[d][1]**2
-
-        if total_p > 1e-30:
-            mean_det = wy / total_p
-            var_det = wy2 / total_p - mean_det**2
-            std_det = math.sqrt(max(var_det, 0))
-            print(f"  {y_off:+6d}  {mean_det:+8.3f}  {std_det:8.3f}")
-        else:
-            print(f"  {y_off:+6d}  NO SIGNAL")
-
-    print()
-    print("  If <y_det> tracks y_src: graph preserves transverse position")
-    print("  If <y_det> ≈ 0 always: graph scrambles position → b-independent")
-    print()
-
-    # Summary metric
-    print("=" * 70)
-    print("SUMMARY")
-    print("  b-independence requires: paths at intermediate layers sample")
-    print("  the full transverse range, regardless of source/detector position.")
-    print("  This 'path scrambling' means mass at any b affects all paths equally.")
-    print("=" * 70)
+    print("INTERPRETATION")
+    print("  If the open channel keeps most detector mass on the same side and")
+    print("  the post-barrier layers stay channelized, then the force law is not")
+    print("  being flattened by path scrambling.")
+    print("  That leaves the smooth graph-wide field / phase-valley mechanism as")
+    print("  the more plausible source of the broad, topological response.")
+    print("  This is a mechanism diagnostic, not a new distance-law rescue.")
 
 
 if __name__ == "__main__":

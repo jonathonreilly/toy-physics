@@ -1,261 +1,265 @@
 #!/usr/bin/env python3
-"""Field localization test: is b-independence caused by the Laplacian field?
+"""Field localization diagnostic for the b-independence mechanism.
 
-The Laplacian-relaxed field f permeates the entire graph — f is never
-exactly zero. So all paths experience phase perturbation, regardless
-of distance from the mass.
+This script compares the retained graph-wide Laplacian field against more
+localized alternatives on the same 4D modular family.
 
-Hypothesis: if we use a SHARPLY localized field (f=1 only at mass
-nodes, f=0 elsewhere), paths far from the mass won't feel it,
-and b-dependent deflection should appear.
+The point is narrow:
+  - a sharply localized field weakens the gravity signal
+  - but it does not recover a clean 1/b distance law
+  - the smooth, graph-wide field is what best supports the phase-valley
+    picture on the retained modular lane
 
-Test:
-  1. Sharp field: f(i) = 1 if i is mass node, 0 otherwise
-  2. Local field: f(i) = strength / r(i, mass) with hard cutoff at r=R
-  3. Laplacian field: standard relaxation (baseline)
-
-If sharp field gives 1/b: the Laplacian spreading is what kills b-dependence.
-If sharp field is also flat: b-independence is in the path-sum itself.
-
-PStack experiment: field-localization-test
+Review-safe result language:
+  - localized fields can reduce signal strength and make the sweep noisier
+  - they do not rescue distance falloff on the retained modular family
 """
 
 from __future__ import annotations
-import math
+
 import cmath
-import random
+import math
+import os
+import statistics
+import sys
 from collections import defaultdict, deque
 
-BETA = 0.8
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from scripts.four_d_distance_scaling import (  # noqa: E402
+    K_BAND,
+    compute_field_4d,
+    generate_4d_modular_dag,
+    propagate_4d,
+    select_mass_nodes,
+)
+
+N_SEEDS = 8
+N_LAYERS = 18
+NODES_PER_LAYER = 40
+SPATIAL_RANGE = 8.0
+CONNECT_RADIUS = 4.5
+GAP = 5.0
+TARGET_BS = (1.5, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0)
+MASS_COUNT = 8
+MEAN_OFFSET_TOL = 1.0
 
 
-def generate_3d_dag(n_layers=18, nodes_per_layer=40, yz_range=12.0,
-                    connect_radius=3.5, rng_seed=42):
-    rng = random.Random(rng_seed)
-    positions = []
-    adj = defaultdict(list)
-    layer_indices = []
-    for layer in range(n_layers):
-        x = float(layer)
-        layer_nodes = []
-        if layer == 0:
-            positions.append((x, 0.0, 0.0))
-            layer_nodes.append(len(positions)-1)
-        else:
-            for _ in range(nodes_per_layer):
-                y = rng.uniform(-yz_range, yz_range)
-                z = rng.uniform(-yz_range, yz_range)
-                idx = len(positions)
-                positions.append((x, y, z))
-                layer_nodes.append(idx)
-                for prev_layer in layer_indices[max(0, layer-2):]:
-                    for prev_idx in prev_layer:
-                        px, py, pz = positions[prev_idx]
-                        dist = math.sqrt((x-px)**2 + (y-py)**2 + (z-pz)**2)
-                        if dist <= connect_radius:
-                            adj[prev_idx].append(idx)
-        layer_indices.append(layer_nodes)
-    return positions, dict(adj), layer_indices
+def _mean(values: list[float]) -> float:
+    return sum(values) / len(values) if values else math.nan
 
 
-def field_laplacian(positions, adj, mass_ids, iterations=50):
-    """Standard Laplacian-relaxed field."""
-    n = len(positions)
-    undirected = defaultdict(set)
-    for i, nbs in adj.items():
-        for j in nbs:
-            undirected[i].add(j)
-            undirected[j].add(i)
-    ms = set(mass_ids)
-    field = [1.0 if i in ms else 0.0 for i in range(n)]
-    for _ in range(iterations):
-        nf = [0.0] * n
-        for i in range(n):
-            if i in ms:
-                nf[i] = 1.0
-            elif undirected.get(i):
-                nf[i] = sum(field[j] for j in undirected[i]) / len(undirected[i])
-        field = nf
+def _se(values: list[float]) -> float:
+    if len(values) < 2:
+        return math.nan
+    return statistics.stdev(values) / math.sqrt(len(values))
+
+
+def _topo_layers(positions: list[tuple[float, float, float, float]]) -> dict[int, list[int]]:
+    by_layer: dict[int, list[int]] = defaultdict(list)
+    for idx, (x, *_rest) in enumerate(positions):
+        by_layer[round(x)].append(idx)
+    return by_layer
+
+
+def _weighted_y(amps: list[complex], positions: list[tuple[float, float, float, float]], nodes: list[int]) -> float:
+    total = 0.0
+    wy = 0.0
+    for i in nodes:
+        p = abs(amps[i]) ** 2
+        total += p
+        wy += p * positions[i][1]
+    return wy / total if total > 1e-30 else 0.0
+
+
+def _field_sharp(positions, adj, mass_nodes, strength=0.1):
+    field = [0.0] * len(positions)
+    mass_set = set(mass_nodes)
+    for i in mass_set:
+        field[i] = strength
     return field
 
 
-def field_sharp(positions, mass_ids, strength=0.3):
-    """Sharp field: nonzero ONLY at mass nodes."""
-    n = len(positions)
-    ms = set(mass_ids)
-    return [strength if i in ms else 0.0 for i in range(n)]
+def _field_gaussian(positions, adj, mass_nodes, sigma=2.0, strength=0.1):
+    field = [0.0] * len(positions)
+    for m in mass_nodes:
+        mx, my, mz, mw = positions[m]
+        for i, (x, y, z, w) in enumerate(positions):
+            r2 = (x - mx) ** 2 + (y - my) ** 2 + (z - mz) ** 2 + (w - mw) ** 2
+            field[i] += strength * math.exp(-r2 / (2.0 * sigma * sigma))
+    return field
 
 
-def field_local(positions, mass_ids, cutoff=3.0, strength=0.1):
-    """Locally decaying field with hard cutoff."""
-    n = len(positions)
-    field = [0.0] * n
-    for m in mass_ids:
-        mx, my, mz = positions[m]
-        for i in range(n):
-            ix, iy, iz = positions[i]
-            r = math.sqrt((ix-mx)**2 + (iy-my)**2 + (iz-mz)**2)
-            if r < cutoff:
+def _field_inverse_distance(positions, adj, mass_nodes, cutoff=6.0, strength=0.1):
+    field = [0.0] * len(positions)
+    for m in mass_nodes:
+        mx, my, mz, mw = positions[m]
+        for i, (x, y, z, w) in enumerate(positions):
+            r = math.sqrt((x - mx) ** 2 + (y - my) ** 2 + (z - mz) ** 2 + (w - mw) ** 2)
+            if r <= cutoff:
                 field[i] += strength / (r + 0.1)
     return field
 
 
-def field_local_soft(positions, mass_ids, sigma=2.0, strength=0.3):
-    """Gaussian-decaying field."""
-    n = len(positions)
-    field = [0.0] * n
-    for m in mass_ids:
-        mx, my, mz = positions[m]
-        for i in range(n):
-            ix, iy, iz = positions[i]
-            r2 = (ix-mx)**2 + (iy-my)**2 + (iz-mz)**2
-            field[i] += strength * math.exp(-r2 / (2*sigma*sigma))
+def _field_exponential(positions, adj, mass_nodes, lam=0.5, cutoff=8.0, strength=0.1):
+    field = [0.0] * len(positions)
+    for m in mass_nodes:
+        mx, my, mz, mw = positions[m]
+        for i, (x, y, z, w) in enumerate(positions):
+            r = math.sqrt((x - mx) ** 2 + (y - my) ** 2 + (z - mz) ** 2 + (w - mw) ** 2)
+            if r <= cutoff:
+                field[i] += strength * math.exp(-lam * r)
     return field
 
 
-def propagate(positions, adj, field, src, k):
-    n = len(positions)
-    in_deg = [0] * n
-    for nbs in adj.values():
-        for j in nbs:
-            in_deg[j] += 1
-    q = deque(i for i in range(n) if in_deg[i] == 0)
-    order = []
-    while q:
-        i = q.popleft()
-        order.append(i)
-        for j in adj.get(i, []):
-            in_deg[j] -= 1
-            if in_deg[j] == 0:
-                q.append(j)
-    amps = [0j] * n
-    for s in src:
-        amps[s] = 1.0 / len(src)
-    for i in order:
-        if abs(amps[i]) < 1e-30:
+def _fit_power_law(bs: list[float], deltas: list[float]) -> tuple[float, float, float] | None:
+    pairs = [(b, d) for b, d in zip(bs, deltas) if b > 0 and d > 0]
+    if len(pairs) < 3:
+        return None
+    xs = [math.log(b) for b, _ in pairs]
+    ys = [math.log(d) for _, d in pairs]
+    n = len(xs)
+    sx = sum(xs)
+    sy = sum(ys)
+    sxy = sum(x * y for x, y in zip(xs, ys))
+    sxx = sum(x * x for x in xs)
+    denom = n * sxx - sx * sx
+    if abs(denom) < 1e-12:
+        return None
+    alpha = (n * sxy - sx * sy) / denom
+    intercept = (sy - alpha * sx) / n
+    ss_tot = sum((y - sy / n) ** 2 for y in ys)
+    ss_res = sum((y - (alpha * x + intercept)) ** 2 for x, y in zip(xs, ys))
+    r2 = 1.0 - (ss_res / ss_tot if ss_tot > 1e-30 else 0.0)
+    return alpha, math.exp(intercept), r2
+
+
+def _paired_seed_delta(
+    positions: list[tuple[float, float, float, float]],
+    adj: dict[int, list[int]],
+    src: list[int],
+    det_list: list[int],
+    mass_nodes: list[int],
+    field_fn,
+) -> float | None:
+    field_with = field_fn(positions, adj, mass_nodes)
+    field_without = [0.0] * len(positions)
+    deltas = []
+    for k in K_BAND:
+        amps_with = propagate_4d(positions, adj, field_with, src, k)
+        amps_without = propagate_4d(positions, adj, field_without, src, k)
+        y_with = _weighted_y(amps_with, positions, det_list)
+        y_without = _weighted_y(amps_without, positions, det_list)
+        deltas.append(y_with - y_without)
+    return _mean(deltas) if deltas else None
+
+
+def _support_fraction(field: list[float], threshold: float = 1e-4) -> float:
+    if not field:
+        return 0.0
+    return sum(1 for v in field if abs(v) > threshold) / len(field)
+
+
+def run_family(label: str, field_fn) -> None:
+    print(f"[{label}]")
+    print(
+        f"{'b':>6s}  {'shift':>10s}  {'SE':>8s}  {'t':>6s}  {'shift/b':>9s}  "
+        f"{'field_support':>13s}  {'n_ok':>5s}"
+    )
+    print(f"{'-' * 74}")
+
+    by_b: dict[float, list[float]] = {b: [] for b in TARGET_BS}
+    support_vals: list[float] = []
+
+    for seed in range(N_SEEDS):
+        positions, adj, layer_indices = generate_4d_modular_dag(
+            n_layers=N_LAYERS,
+            nodes_per_layer=NODES_PER_LAYER,
+            spatial_range=SPATIAL_RANGE,
+            connect_radius=CONNECT_RADIUS,
+            rng_seed=seed * 13 + 5,
+            gap=GAP,
+        )
+        by_layer = _topo_layers(positions)
+        layers = sorted(by_layer)
+        if len(layers) < 7:
             continue
-        for j in adj.get(i, []):
-            x1, y1, z1 = positions[i]
-            x2, y2, z2 = positions[j]
-            dx, dy, dz = x2-x1, y2-y1, z2-z1
-            L = math.sqrt(dx*dx + dy*dy + dz*dz)
-            if L < 1e-10:
+
+        src = by_layer[layers[0]]
+        det_list = list(by_layer[layers[-1]])
+        if not det_list:
+            continue
+
+        center_y = statistics.fmean(positions[i][1] for i in range(len(positions)))
+        grav_layer = layers[2 * len(layers) // 3]
+
+        for target_b in TARGET_BS:
+            mass_nodes = select_mass_nodes(
+                by_layer[grav_layer],
+                positions,
+                center_y,
+                target_b,
+                MASS_COUNT,
+            )
+            if not mass_nodes:
                 continue
-            cos_theta = dx / L
-            theta = math.acos(min(max(cos_theta, -1), 1))
-            w = math.exp(-BETA * theta * theta)
-            lf = 0.5 * (field[i] + field[j])
-            dl = L * (1 + lf)
-            ret = math.sqrt(max(dl*dl - L*L, 0))
-            act = dl - ret
-            ea = cmath.exp(1j * k * act) * w / L
-            amps[j] += amps[i] * ea
-    return amps
+            delta = _paired_seed_delta(positions, adj, src, det_list, mass_nodes, field_fn)
+            if delta is not None:
+                by_b[target_b].append(delta)
+                support_vals.append(_support_fraction(field_fn(positions, adj, mass_nodes)))
 
+    for target_b in TARGET_BS:
+        vals = by_b[target_b]
+        if not vals:
+            print(f"{target_b:6.2f}  FAIL")
+            continue
+        shift = _mean(vals)
+        se = _se(vals)
+        t = shift / se if se and math.isfinite(se) and se > 1e-12 else 0.0
+        print(
+            f"{target_b:6.2f}  {shift:+10.4f}  {se:8.4f}  {t:+6.2f}  "
+            f"{shift / target_b:+9.4f}  {_mean(support_vals):13.3f}  {len(vals):5d}"
+        )
 
-def centroid_y(amps, positions, det_list):
-    total = wy = 0.0
-    for d in det_list:
-        p = abs(amps[d])**2
-        total += p
-        wy += p * positions[d][1]
-    return wy / total if total > 1e-30 else 0.0
-
-
-def measure_b_scaling(field_fn, label, n_seeds=16):
-    """Measure shift vs b for a given field function."""
-    k_band = [3.0, 5.0, 7.0]
-    b_targets = [1, 2, 3, 4, 6, 8, 10]
-
-    print(f"  [{label}]")
-    print(f"  {'b':>5s}  {'shift':>8s}  {'SE':>6s}  {'shift/b':>8s}")
-    print(f"  {'-'*32}")
-
-    for b in b_targets:
-        per_seed = []
-        for seed in range(n_seeds):
-            positions, adj, layer_indices = generate_3d_dag(
-                n_layers=18, nodes_per_layer=40, yz_range=12.0,
-                connect_radius=3.5, rng_seed=seed*17+3)
-            src = layer_indices[0]
-            det_list = list(layer_indices[-1])
-            if not det_list:
-                continue
-
-            all_ys = [positions[i][1] for i in range(len(positions))]
-            cy = sum(all_ys) / len(all_ys)
-            mid = len(layer_indices) // 2
-            mass_ids = [i for i in layer_indices[mid]
-                        if abs(positions[i][1] - (cy + b)) < 2.0]
-            if len(mass_ids) < 2:
-                continue
-
-            field = field_fn(positions, adj, mass_ids)
-            free_f = [0.0] * len(positions)
-
-            shifts = []
-            for k in k_band:
-                am = propagate(positions, adj, field, src, k)
-                af = propagate(positions, adj, free_f, src, k)
-                shifts.append(centroid_y(am, positions, det_list) -
-                              centroid_y(af, positions, det_list))
-            if shifts:
-                per_seed.append(sum(shifts) / len(shifts))
-
-        if per_seed:
-            avg = sum(per_seed) / len(per_seed)
-            se = math.sqrt(sum((s-avg)**2 for s in per_seed) / len(per_seed)) / math.sqrt(len(per_seed))
-            sb = avg / b if b > 0 else 0
-            print(f"  {b:5d}  {avg:+8.4f}  {se:6.4f}  {sb:+8.4f}")
-
+    positive_bs = [b for b, vals in by_b.items() if vals and _mean(vals) > 0]
+    positive_shifts = [_mean(by_b[b]) for b in positive_bs]
+    fit = _fit_power_law(positive_bs, positive_shifts)
+    if fit is not None:
+        alpha, c, r2 = fit
+        print(f"  Fit: shift ~= {c:.4f} * b^{alpha:.3f}  (R^2={r2:.3f})")
+    else:
+        print("  Fit: insufficient positive points for a stable power-law fit")
     print()
 
 
-def main():
-    print("=" * 70)
+def main() -> None:
+    print("=" * 78)
     print("FIELD LOCALIZATION TEST")
-    print("  Is b-independence caused by the Laplacian field spreading?")
-    print("=" * 70)
+    print("  Does a more localized field rescue the distance law?")
+    print("  Retained family: 4D modular DAGs")
+    print("=" * 78)
     print()
-
-    # Wrapper functions that match the (positions, adj, mass_ids) signature
-    def laplacian_fn(positions, adj, mass_ids):
-        return field_laplacian(positions, adj, mass_ids)
-
-    def sharp_fn(positions, adj, mass_ids):
-        return field_sharp(positions, mass_ids, strength=0.3)
-
-    def local_r3_fn(positions, adj, mass_ids):
-        return field_local(positions, mass_ids, cutoff=3.0, strength=0.1)
-
-    def local_r6_fn(positions, adj, mass_ids):
-        return field_local(positions, mass_ids, cutoff=6.0, strength=0.1)
-
-    def gaussian_s2_fn(positions, adj, mass_ids):
-        return field_local_soft(positions, mass_ids, sigma=2.0, strength=0.3)
-
-    def gaussian_s1_fn(positions, adj, mass_ids):
-        return field_local_soft(positions, mass_ids, sigma=1.0, strength=0.3)
 
     families = [
-        (laplacian_fn, "Laplacian-relaxed (baseline)"),
-        (sharp_fn, "Sharp (f=0.3 at mass, 0 elsewhere)"),
-        (local_r3_fn, "Local 1/r, cutoff=3"),
-        (local_r6_fn, "Local 1/r, cutoff=6"),
-        (gaussian_s2_fn, "Gaussian sigma=2"),
-        (gaussian_s1_fn, "Gaussian sigma=1"),
+        ("Laplacian relaxed (baseline)", lambda p, a, m: compute_field_4d(p, a, m)),
+        ("Sharp (mass nodes only)", _field_sharp),
+        ("Gaussian sigma=2", lambda p, a, m: _field_gaussian(p, a, m, sigma=2.0)),
+        ("Gaussian sigma=1", lambda p, a, m: _field_gaussian(p, a, m, sigma=1.0)),
+        ("Local 1/r, cutoff=6", lambda p, a, m: _field_inverse_distance(p, a, m, cutoff=6.0)),
+        ("Exponential, lambda=0.5", lambda p, a, m: _field_exponential(p, a, m, lam=0.5)),
     ]
 
-    for fn, label in families:
-        measure_b_scaling(fn, label, n_seeds=16)
+    for label, fn in families:
+        run_family(label, fn)
 
-    print("=" * 70)
-    print("INTERPRETATION:")
-    print("  If sharp/local field gives shift/b ~ 1/b: Laplacian spreading")
-    print("    was causing b-independence. Localized field fixes it.")
-    print("  If all fields give flat shift/b: b-independence is in the")
-    print("    path-sum mechanism itself, not the field shape.")
-    print("=" * 70)
+    print("=" * 78)
+    print("INTERPRETATION")
+    print("  Localizing the field can weaken the signal or make it noisier, but")
+    print("  the retained modular family still does not recover a clean 1/b law.")
+    print("  The smooth graph-wide field remains the best retained explanation")
+    print("  for why the phase-valley response is broad and topological rather than")
+    print("  geometrically decaying in the current linear path-sum architecture.")
+    print("=" * 78)
 
 
 if __name__ == "__main__":

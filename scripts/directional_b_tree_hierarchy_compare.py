@@ -54,6 +54,10 @@ DEFAULT_TREE_SIZES = (8, 10, 12)
 DEFAULT_IMPACT_BS = (1.0, 2.0, 3.0, 4.0, 5.0)
 
 
+def _safe_center_ratio(strength: float, actual_b: float) -> float:
+    return strength / actual_b if actual_b > 0.0 else float("nan")
+
+
 @dataclass(frozen=True)
 class TrialRow:
     n_layers: int
@@ -193,10 +197,10 @@ def _evaluate_tree_trial(task: tuple[int, float, float, int, int, float]) -> Tri
         edge_b=edge_b,
         support_gap=support_gap,
         band_high_rel=band_high_rel,
-        action_over_b=action_strength / max(actual_b, EPS),
+        action_over_b=_safe_center_ratio(action_strength, actual_b),
         action_over_edge_b=action_strength / edge_b if edge_b >= EDGE_B_MIN else float("nan"),
         action_over_support_gap=action_strength / support_gap if support_gap >= SUPPORT_GAP_MIN else float("nan"),
-        flow_over_b=flow_strength / max(actual_b, EPS),
+        flow_over_b=_safe_center_ratio(flow_strength, actual_b),
         flow_over_edge_b=flow_strength / edge_b if edge_b >= EDGE_B_MIN else float("nan"),
         flow_over_support_gap=flow_strength / support_gap if support_gap >= SUPPORT_GAP_MIN else float("nan"),
         visibility_guardrail=statistics.fmean(visibility_values),

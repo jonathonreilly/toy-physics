@@ -269,10 +269,13 @@ def main() -> None:
             "  1. In the narrow three-node family, center-offset density keeps the earlier bounded pass."
         )
         print(
-            "  2. In the wider five-node family, the low-b small-N corner pushes h_mass/b close to 1,"
+            "  2. In the wider five-node family, the low-b small-N corner pushes h_mass/b close to or past 1,"
         )
         print(
-            "     and the pure b normalization loses transfer there while b - h_mass still passes."
+            "     and a few center-offset trials become singular under source-support overlap, while"
+        )
+        print(
+            "     the bounded family-level b trend still passes and b - h_mass stays the safer finite-source read."
         )
         print(
             "  3. So b is best read as the asymptotic leading term, not the universally safest finite-family denominator."

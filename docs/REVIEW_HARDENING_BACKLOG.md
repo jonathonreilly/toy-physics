@@ -57,9 +57,10 @@ Current sharp version:
 - connection-bias feedback is now largely a closed lane
 - first-pass node-placement rules also fail if they create gaps that are too
   large, too small, or misplaced
-- the active dynamics question is now a **self-regulating** node placement /
-  node removal rule, because the retained barrier is a property of node absence
-  at the right scale rather than weak links
+- the active dynamics question is now a **self-regulating hard-gap** node
+  placement / node-removal rule, because the retained barrier is a property of
+  node absence at the right scale rather than weak links; soft pruning of
+  already connected graphs now looks asymptotically insufficient
 
 Why it matters:
 
@@ -267,10 +268,11 @@ Why it matters:
 
 ## Current priority order
 
-1. bounded evolving-network dynamics prototype
-2. continuum / asymptotic bridge card
-3. prediction / discriminator card
-4. claim ladder page
+1. strict 4D same-graph unification / binned-visibility pass
+2. 4D continuum / density-limit card
+3. 5D dense robustness map
+4. analytic / architectural distance-law note
+5. bounded evolving-network dynamics prototype
 
 The assumption ledger and literature-positioning note are already the first step toward this harder backlog.
 
@@ -282,12 +284,14 @@ gates.
 - unitary lane:
   - directional measure retained/provisional core
   - gravity `b` hierarchy derivation / transfer
+  - analytic derivation of why the current force law stays flat/topological, or bounded tests of genuinely deeper alternatives beyond the current linear path sum
 - non-unitary lane:
-  - influence-functional framework retained
-  - non-local or non-graph-local decoherence coupling still open
+  - IF / CL framework retained on modular higher-dimensional families
+  - strict 4D same-graph visibility/unification still needs one clean retained pass
 - architecture credibility lane:
   - evolving-network dynamics
   - continuum / asymptotic bridge
+  - 5D density/connectivity rescue
   - independent robustness across families and dimensions
 
 So the project should not act as if "one more nice run" is enough. What gets
