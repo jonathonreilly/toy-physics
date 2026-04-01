@@ -1,3 +1,56 @@
+## 2026-04-01 — Directional-measure b midlayer-sampling occupancy transfer
+
+### Current state
+- the canonical checkout is on `codex/distance-law-closure-and-higher-d-status` at `7b9272a`, with many unrelated local edits already in flight outside the directional-`b` lane
+- the duplicate-run guard and cooperative `physics-science` lock both passed on this thread before shared-state reads
+- `automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics` reported `nothing_to_push` before new work because the active branch matched its upstream even though `main` and `origin/main` remain divergent
+- the active tracked science seam from the top entry was still:
+  - test whether the promoted overlap-onset occupancy floor transfers onto one more geometry-varied control that changes only the mid-layer sampling law
+
+### What changed
+- added `scripts/directional_b_overlap_onset_midlayer_sampling_holdout.py`
+- wrote `logs/2026-04-01-directional-b-overlap-onset-midlayer-sampling-holdout.txt`
+- tested one bounded dense-family holdout that keeps:
+  - `25` nodes/layer
+  - `y_range = 12`
+  - `connect_radius = 3`
+  - the same `mu <= 0` overlap diagnostic
+- changed only the mid-layer `y` sampler to the mild center-biased law:
+  - `y = sign(u) |u|^1.4 * y_range`
+- evaluated the promoted occupancy floor from the previous holdout:
+  - `target_fill <= 1/3`
+- compared that direct transfer against holdout-only refits
+
+### Strongest confirmed conclusion
+The promoted occupancy floor transfers cleanly onto the one-notch mid-layer-law holdout.
+- exact occupancy-floor transfer on the new control:
+  - `target_fill <= 1/3`
+  - `tp/fp/fn/tn = 7/1/3/29`
+  - accuracy `0.9000`
+- it is also the best single holdout-only rule:
+  - overlap rows have much weaker target-band fill (`0.267` vs `1.031`)
+- the best holdout-only refinement stays within the same feature family:
+  - `target_fill <= 1/3 and selected_span_step <= 0.8452`
+  - `tp/fp/fn/tn = 7/0/3/30`
+  - accuracy `0.9250`
+
+So the retained statement can stay narrow but stronger:
+- sparse target-band occupancy still leads the overlap-onset story even when the mid-layer sampling law is perturbed
+- spacing/span act as secondary refinements, not as the promoted transferable primitive
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/scripts/directional_b_overlap_onset_midlayer_sampling_holdout.py`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-01-directional-b-overlap-onset-midlayer-sampling-holdout.txt`
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+
+### Exact next step
+- keep the corrected propagator and corrected directional-`b` hierarchy fixed
+- compress target-band occupancy into a coarser asymptotic bridge variable that predicts when `mu` approaches or crosses zero across the retained dense-family controls
+- only widen back out if that bridge variable fails to transfer across the already completed holdouts
+
+### First concrete action
+- define one normalized occupancy bridge candidate on the existing local-density, transfer-holdout, and midlayer-law-holdout logs and test whether it orders overlap vs safe rows monotonically without a new threshold table
+
 ## 2026-04-01 — Directional-measure b overlap-onset transfer holdout
 
 ### Current state
