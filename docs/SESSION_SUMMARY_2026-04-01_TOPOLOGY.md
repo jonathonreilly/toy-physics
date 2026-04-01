@@ -114,7 +114,9 @@ the right size and location**.
 5. **3D gravity on modular DAGs**
    The 3D gravity test (three_d_gravity.py) should be adapted
    to modular DAGs to check whether the deflection result
-   generalizes to higher dimensions.
+   generalizes to higher dimensions. A stricter fixed-`b` mass-scaling follow-up
+   did not yet cleanly confirm a power law, so the earlier `sqrt(M)`-style read
+   should remain provisional until a broader sweep reproduces it.
 
 ## Files delivered this session
 

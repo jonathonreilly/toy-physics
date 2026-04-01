@@ -9,6 +9,7 @@
 2. The IF / CL reduced-description route still supports decoherence on the retained modular family.
 3. The modular family is the current joint gravity + decoherence lane.
 4. The emergence story is still open: local feedback and soft-pruning rules do not generate a stable hard-gap topology asymptotically.
+5. The 3D gravity lane is real, but a stricter fixed-`b` mass-scaling follow-up did not yet cleanly confirm a power law, so the earlier `sqrt(M)`-style read should stay provisional.
 
 ## Metric caveats to keep explicit
 
@@ -52,7 +53,8 @@
 - Use “decoherence floor `pur_min`” only where the lower-bound metric is intended.
 - Distinguish clearly between the old detector-profile contrast proxy and the new true visibility gain.
 - Use “intermediate-`N` pruning surrogate” for node removal.
+- Keep the 3D mass-scaling language provisional until a broader fixed-`b` sweep reproduces it.
 
 ## One-line summary
 
-The code now supports a modular-family joint gravity/decoherence result, but the repo should keep its metric language precise: `gap=0` is the true baseline, `pur_cl` and `pur_min` are distinct, gravity SE is paired, true large-`N` visibility gain is weak/gone on the retained modular bath lane, and node removal is asymptotically insufficient.
+The code now supports a modular-family joint gravity/decoherence result, but the repo should keep its metric language precise: `gap=0` is the true baseline, `pur_cl` and `pur_min` are distinct, gravity SE is paired, true large-`N` visibility gain is weak/gone on the retained modular bath lane, node removal is asymptotically insufficient, and the 3D mass-scaling read remains provisional until a broader fixed-`b` sweep reproduces it.
