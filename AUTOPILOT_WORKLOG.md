@@ -1,3 +1,40 @@
+## 2026-04-01 04:39 America/New_York
+
+### Seam class
+- architecture integrity repair
+- merged readout reconciliation
+
+### Current state
+- `main` absorbed the readout-bug repair for G2/two-scale, and the architecture lane has been refreshed to match the merged script outputs
+- no detached science child is running
+- the two-scale tracked log now matches the current generator instead of a mixed pre/post-merge readout
+
+### Science impact
+- reran `/Users/jonreilly/Projects/Physics/scripts/two_scale_architecture.py` after the merged readout fix and refreshed `/Users/jonreilly/Projects/Physics/logs/2026-03-31-two-scale.txt`
+- updated `/Users/jonreilly/Projects/Physics/README.md`
+- refreshed `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- the repaired two-scale numbers are now:
+  - `n_ybins = 6`: `R_2s +0.577 -> +0.925`, `pur_2s 0.8401 -> 0.9806`
+  - `n_ybins = 8`: `R_2s +0.945 -> +1.195`, `pur_2s 0.8517 -> 0.9555`
+- the architecture closure is unchanged after the readout repair:
+  - G2 gravity scaling still passes
+  - G2 interference still fails (`V_g2 = 0.0000`)
+  - two-scale gravity still passes, decoherence still fails
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/logs/2026-03-31-two-scale.txt`
+- `/Users/jonreilly/Projects/Physics/README.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+
+### Strongest confirmed conclusion
+No tested architecture currently satisfies gravity scaling, interference, and decoherence scaling at once. The merged readout repair changes some magnitudes, but not the qualitative closure: G2-style coarse-graining fixes gravity saturation, still kills interference, and the two-scale extension still wrong-scales on decoherence.
+
+### Exact next step
+- design one gravity-preserving compression that keeps microscopic phase contrast alive, then rerun the interference constraint before any new decoherence register variant
+
+### First concrete action
+- prototype a phase-preserving bundle rule that aggregates near-degenerate paths without averaging away their relative phases
+
 ## 2026-04-01 04:32 America/New_York
 
 ### Seam class

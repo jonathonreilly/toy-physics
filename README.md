@@ -143,7 +143,7 @@ The next frontier is therefore best treated as a scaling architecture problem, n
 | D1: multi-local tensor env | not targeted | **PASS** | **FAIL** | env dimension grows (`9 → 336` states) but amplitude stays concentrated in a few dominant states; purity tracks fine env at every size |
 | G2+env: coarse-grained + fine env | **PASS** | **FAIL** | **FAIL** | coarse-graining reduces effective paths, which reduces env state diversity |
 | D4: spatial trace over mass exit | not targeted | **PASS** | **FAIL** | produces identical purity to fine env at every size (mass-exit node = last mass node, so D4 is a relabeling) |
-| Two-scale (`G2` + per-bin micro env) | **PASS** | **FAIL** | **FAIL** | gravity stays stable, but `pur_2s` still rises from `0.8300 → 0.9854` (`n_ybins = 6`) and `0.8379 → 0.9614` (`n_ybins = 8`); it inherits the `G2` phase-averaging failure |
+| Two-scale (`G2` + per-bin micro env) | **PASS** | **FAIL** | **FAIL** | gravity stays stable, but `pur_2s` still rises from `0.8401 → 0.9806` (`n_ybins = 6`) and `0.8517 → 0.9555` (`n_ybins = 8`); it inherits the `G2` phase-averaging failure |
 
 **Retained positive results:**
 - corrected 1/L^p unitary core still stands (gravity sign, Born rule, interference, `k=0→0`, phase valley)
