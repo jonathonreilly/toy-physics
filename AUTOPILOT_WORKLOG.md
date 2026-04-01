@@ -1,25 +1,40 @@
-## 2026-04-01 — Decoherence entropy diagnosis update
+## 2026-04-01 — Decoherence interaction-law diagnosis update
 
-### What changed
-- incorporated the latest decoherence diagnosis into the shared architecture notes
-- sharpened the failure read from “finite env too small” to “occupied env entropy too low under deterministic coupling”
-
-### Current retained read
-- the next non-unitary frontier is not “more env states”
-- the last 15 decoherence variants now point to a narrower bottleneck:
+### Current state
+- `main` was synced to `origin/main` at `70462ec` before this repo-facing update
+- no detached science child is running
+- lead unitary layer remains fixed:
+  - corrected `1/L^p` transport
+  - directional path measure `exp(-0.8×θ²)`
+- the decoherence frontier is now narrowed:
   - larger env dimensionality alone does not help
-  - deterministic label/flip/bin couplings still create low-entropy occupied env distributions
-  - path-level variants then recohere by CLT
-  - field-mediated variants smooth out by Laplacian relaxation
-- the meaningful next step is therefore one of:
-  - mesoscopic durable record formation with genuine local branching structure
-  - true local system-environment entangling coupling
-  - collapse/projection only as the high-cost fallback
+  - larger occupied env support alone also does not obviously help
+  - deterministic label/flip/bin couplings still create the wrong occupied branch structure
+  - path-level record schemes recohere by CLT
+  - field-mediated schemes wash out by Laplacian smoothing
+  - simple local entangling split and repaired fixed-kick substrate memory both fail in their tested forms
 
-### Next frontier
+### Science impact
+- updated `docs/DECOHERENCE_DECISION_NOTE.md` with the interaction-law / traced-branch-weight diagnosis
+- synced `README.md` so the repo summary matches that sharper non-unitary read
+- reconciled the tracked work log and runtime handoff with the retained conclusion
+
+### Strongest confirmed conclusion
+The next decoherence step should not be another “bigger env” variant and not just a search for more occupied env support. The bottleneck now looks like the interaction law itself: the traced detector state keeps collapsing onto the wrong branch-weight structure before any larger discrete environment can help. Fixed-kick substrate memory is a clean failure of one realization, not a proof that all substrate-memory mechanisms fail.
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/README.md`
+- `/Users/jonreilly/Projects/Physics/docs/DECOHERENCE_DECISION_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+
+### Exact next step
 - keep the directional-measure propagator fixed
-- stop spending time on “bigger finite env” variants unless the coupling law itself is qualitatively different
-- prioritize one bounded prototype that attacks the entropy bottleneck directly
+- stop spending time on larger finite env variants unless the coupling law itself changes qualitatively
+- prototype one bounded mesoscopic durable-record or local-entangling architecture that directly targets the interaction-law bottleneck
+
+### First concrete action
+- implement one substrate-memory or local-entangling prototype whose record-writing strength depends on local accumulated branch state instead of a fixed label or fixed downstream kick
 
 ## 2026-04-01 — Qubit env scaling reconciliation
 

@@ -42,7 +42,7 @@ The tested CA-oscillation / field-averaging route also failed. Rotating the acti
 
 So the tested field-mediated route failed by **Laplacian smoothing**, not by path convergence.
 
-### 3. Larger environment spaces fail if the coupling stays deterministic
+### 3. Larger environment spaces fail if the coupling stays too deterministic
 
 The most recent finite-env extensions sharpen the same point further. Qubit-per-mass and other enlarged-register variants do create much larger nominal environment spaces, but they still do **not** create enough occupied detector-state entropy to resist recoherence on larger graphs.
 
@@ -64,7 +64,22 @@ That kind of coupling does not create a genuinely rich local superposition in th
 So the sharper current diagnosis is:
 
 - the bottleneck is **not just env size**
-- it is **low-entropy environment occupation under deterministic coupling**
+- it is **the interaction law that sets the occupied env distribution**
+
+The current working hypothesis is therefore slightly narrower than a pure
+“entropy” story:
+
+- larger env dimensionality alone does not help
+- larger occupied env support alone also does not obviously help
+- what matters is whether the interaction creates the right
+  **branch-weight structure** at the detector after tracing
+
+That is, the open problem is not just “more env states” and not yet
+provably “more env entropy.” It is finding a local interaction law that
+does not collapse back into either:
+
+- deterministic bookkeeping, or
+- a very thin spread over many weak env branches
 
 ## The sharpened problem
 
@@ -72,7 +87,7 @@ The decoherence architecture must live at a scale that avoids both failure modes
 
 - **too microscopic / label-like:** gets averaged away by path convergence
 - **too macroscopic / field-like:** gets smoothed away by relaxation
-- **too deterministic / bookkeeping-like:** creates large env spaces but low occupied entropy
+- **too deterministic / bookkeeping-like:** creates large env spaces but the wrong occupied branch structure
 
 The missing layer is probably **mesoscopic durable record formation**:
 
@@ -81,6 +96,7 @@ The missing layer is probably **mesoscopic durable record formation**:
 - durable enough to implement Axiom 5 / Axiom 9 seriously
 - structured enough to avoid compressing immediately into one or two dominant labels
 - coupled richly enough to create real local system-environment branching, not just deterministic tagging
+- shaped strongly enough that the traced detector state does not revert to the same high-purity limit
 
 ## Decision options
 
@@ -109,7 +125,8 @@ Candidate directions:
 
 - the same convergence problem may reappear in disguised form
 - a “bigger bath” may still not help if the occupied support keeps collapsing onto a few dominant states
-- an open-system model without real entangling interaction may just reproduce the old low-entropy failure in a larger state space
+- even a genuinely entangling interaction may fail if it spreads amplitude too thinly across many weak env branches
+- an open-system model without the right branch-weight structure may just reproduce the old failure in a larger state space
 
 **What would count as success**
 
@@ -145,7 +162,7 @@ Candidate directions:
 - introduces a larger design space
 - can quietly become ad hoc if the record-writing rules are not tightly constrained
 - may still act effectively like hidden collapse if the persistence is too strong
-- a purely deterministic scar-writing rule may still fail if it does not create enough occupied record entropy
+- a purely deterministic scar-writing rule may still fail if it does not create the right occupied record balance after tracing
 
 **What would count as success**
 
@@ -281,7 +298,7 @@ At each mass interaction, the system amplitude couples to a local env degree of 
 
 Why it is interesting:
 
-- directly targets the new entropy bottleneck
+- directly targets the new interaction-law bottleneck
 - keeps the theory linear if modeled as a local unitary interaction
 - is the clearest version of “real quantum environment coupling” within the toy
 
@@ -324,6 +341,23 @@ Do **not** reopen a broad sweep. Run one bounded prototype from the recommended 
 4. **Local entangling-coupling prototype**
    - one local env degree of freedom per mass interaction site
    - interaction creates branch superposition instead of deterministic tagging
-   - test whether occupied env entropy grows enough to stop purity from rising
+   - test whether the traced detector state develops a better branch-weight structure instead of just more weak env support
 
-The key point is not to test ten new ideas. It is to test **one mesoscopic durable-record or local-entangling architecture** that is meaningfully different from both label-like envs and smoothed field mediation.
+## Most recent narrowing
+
+Two additional prototypes now sharpen the same conclusion:
+
+- the simple local `cos/sin` entangling split is a clean failure
+- the repaired fixed-kick substrate-memory realization is also a clean failure
+
+But the substrate-memory lane itself is **not** ruled out in general. The
+fixed-kick model only tests one realization:
+
+- split at unrecorded mass nodes
+- then apply a fixed downstream phase kick on outgoing edges from recorded nodes
+
+That failure means this **specific** interaction law does not beat the
+convergence problem. It does **not** show that all substrate-memory or
+history-dependent record mechanisms fail.
+
+The key point is not to test ten new ideas. It is to test **one mesoscopic durable-record or local-entangling architecture** whose interaction law is meaningfully different from both label-like bookkeeping and the already-failed fixed-kick entangling variants.
