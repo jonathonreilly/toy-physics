@@ -82,13 +82,19 @@ was never there.
 |---|---|---|
 | Fixed threshold (2D) | N=40 marginal | CLT kills at N=80 |
 | Fixed threshold (3D) | N=50 | Over-prunes at N=60 |
-| Adaptive quantile (3D) | N=60 | Fails at N=80 |
+| Adaptive quantile (3D uniform) | **N=80** | Fails at N=100 |
+| Adaptive quantile (3D hierarchical) | **N=80** | delta=-0.023 |
 | Imposed modular gap | N=80 (3D), N=100 (4D) | Stable in range |
 
-**Verdict: WEAKENS.** Emergent gap dynamics improve at intermediate
-N but do not solve the asymptotic problem. The CLT eventually
-narrows the distinguishability distribution enough to defeat any
-tested pruning rule.
+**Updated verdict: PARTIALLY SURVIVES through N=80.** The adaptive
+quantile rule sustains decoherence improvement through N=80 on both
+uniform and hierarchical 3D DAGs (delta=-0.010 to -0.023). Gravity
+is preserved under pruning (t=4.0 vs 3.3 unpruned). At N=100 the
+base decoherence signal vanishes (pur→1 on uniform 3D), so the
+pruning has nothing to improve.
+
+The emergence window now matches the imposed modular gap (both N=80).
+Pruning and gravity are compatible — no tradeoff observed.
 
 ### Strict visibility gain
 
@@ -128,7 +134,7 @@ distribution, not the propagator.
 | Distance law (b-indep) | No | N/A (structural) |
 | Strict visibility gain | **Yes** | **No (vanishes at large N)** |
 | Mass scaling (4D) | **Partially** | **Doesn't converge** |
-| Emergence (gap dynamics) | **Partially** | **Bounded to N≤60** |
+| Emergence (gap dynamics) | **Partially** | **Sustains to N=80, wall at N=100** |
 
 ## What this means for the model
 
@@ -142,7 +148,7 @@ The retained results are:
 The provisional/retracted results are:
 1. 4D "F~M" mass scaling (parameter-sensitive)
 2. Strict visibility gain (vanishes at large N)
-3. Asymptotic emergence (bounded to N≤60)
+3. Asymptotic emergence (N=80 on 3D, but N=100 is the wall)
 
 The structural limitations are:
 1. Distance law (b-independent, no avenue rescues it)
