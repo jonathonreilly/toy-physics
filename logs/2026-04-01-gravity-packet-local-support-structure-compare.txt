@@ -1,0 +1,59 @@
+========================================================================================================================
+GRAVITY PACKET-LOCAL SUPPORT STRUCTURE COMPARE
+========================================================================================================================
+workers=4, dag_seeds=5, retain_share=0.50, k_band=(3.0, 5.0, 7.0)
+Transport and field law are unchanged; only packet support structure is being compared.
+
+========================================================================================================================
+Family: random_dag
+========================================================================================================================
+  size   n      R_act      R_pkt     R_flow   flowC_u   flowC_l   flowS_u   flowS_l   flowGap
+--------------------------------------------------------------------------------------------------
+     8   5    -0.2007    -0.1697    -0.1477     2.550     1.960     0.246     0.331    -0.086
+    12   5    -0.2456    -0.2279    -0.1825     3.258     2.046     0.287     0.272     0.015
+    15   5    -0.3808    -0.3393    -0.3278     3.364     2.667     0.280     0.280     0.000
+    20   5    -0.6614    -0.6001    -0.5980     3.112     2.164     0.351     0.203     0.147
+    25   5    -0.8002    -0.7843    -0.7253     3.053     3.464     0.382     0.162     0.220
+
+Node-weight support compression and packet probe share
+  size   nodeC_u   nodeC_l   nodeS_u   nodeS_l   nodeGap
+----------------------------------------------------------
+     8     2.639     1.966     0.241     0.323    -0.083
+    12     2.988     1.859     0.286     0.296    -0.010
+    15     3.196     2.549     0.321     0.239     0.082
+    20     3.508     2.902     0.348     0.202     0.146
+    25     3.602     3.781     0.410     0.136     0.274
+
+========================================================================================================================
+Family: branching_tree
+========================================================================================================================
+  size   n      R_act      R_pkt     R_flow   flowC_u   flowC_l   flowS_u   flowS_l   flowGap
+--------------------------------------------------------------------------------------------------
+     6   1    -0.3447    -0.3414    -0.3338     1.978     1.718     0.263     0.290    -0.027
+     8   1    -0.5970    -0.5576    -0.5569     1.996     1.965     0.250     0.257    -0.007
+    10   1    -0.8258    -0.8037    -0.8065     2.002     2.006     0.250     0.250     0.000
+    12   1    -1.0172    -0.9354    -0.9304     2.001     2.001     0.250     0.250     0.000
+
+Node-weight support compression and packet probe share
+  size   nodeC_u   nodeC_l   nodeS_u   nodeS_l   nodeGap
+----------------------------------------------------------
+     6     1.978     2.108     0.263     0.250     0.013
+     8     1.996     2.024     0.250     0.250     0.000
+    10     1.976     1.949     0.253     0.257    -0.003
+    12     1.959     1.959     0.255     0.255     0.000
+
+========================================================================================================================
+INTERPRETATION
+========================================================================================================================
+Interpretation for random_dag:
+  flow packet share gap +0.015 -> +0.220; mass-side carried-flow share 0.287 -> 0.382; opposite-side share 0.272 -> 0.162.
+  flow support compression stays at 3.258x/2.046x -> 3.053x/3.464x (upper/lower), measuring how much broader the full support is than the retained packet.
+  readout retention over the same endpoint grows from +0.743 to +0.906 for packet_flow_action / action_channel.
+
+Interpretation for branching_tree:
+  flow packet share gap -0.027 -> +0.000; mass-side carried-flow share 0.263 -> 0.250; opposite-side share 0.290 -> 0.250.
+  flow support compression stays at 1.978x/1.718x -> 2.001x/2.001x (upper/lower), measuring how much broader the full support is than the retained packet.
+  readout retention over the same endpoint grows from +0.968 to +0.915 for packet_flow_action / action_channel.
+
+Shared read:
+  Packet-local flow is a real dense-route refinement because the random-DAG family develops a growing mass-side carried-flow packet while the opposite side diffuses. The branching-tree control does not: its two probe sides stay nearly symmetric and only weakly broader than the retained packet. So the cross-family gravity law is still the coarser action_channel, while packet_flow_action is the better regime-specific read when multi-route support broadens and then refocuses around the mass-side packet.

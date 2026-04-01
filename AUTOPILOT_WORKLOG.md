@@ -1,3 +1,54 @@
+## 2026-04-01 05:37 America/New_York
+
+### Seam class
+- gravity scaling
+- packet-local support-structure translation
+
+### Current state
+- `main` was synced to `origin/main` at `b5251b3` before this step
+- no detached science child is running
+- the readout-only gravity lane is still the active positive architecture:
+  - keep corrected microscopic `1/L^p` transport fixed
+  - keep gravity repair at the observable/readout layer
+  - treat packet-local flow as a regime refinement until a shared transfer law says otherwise
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/gravity_packet_local_support_structure_compare.py`
+- wrote `/Users/jonreilly/Projects/Physics/logs/2026-04-01-gravity-packet-local-support-structure-compare.txt`
+- updated `/Users/jonreilly/Projects/Physics/README.md`
+- measured the support geometry behind the bounded packet-local readouts on the same two-family test:
+  - layered random DAG scaling family (`N = 8, 12, 15, 20, 25`, `5` seeds)
+  - branching-tree control (`N = 6, 8, 10, 12`)
+- retained structure read:
+  - on random DAGs, the retained packet captures a growing mass-side carried-flow share while the opposite side diffuses:
+    - upper share: `0.287 -> 0.382` from `N=12 -> 25`
+    - lower share: `0.272 -> 0.162`
+    - share gap: `+0.015 -> +0.220`
+  - the same random-DAG probe support stays materially broader than the retained packet:
+    - flow support compression stays about `3.258x/2.046x -> 3.053x/3.464x` (upper/lower)
+    - node-weight support compression stays about `2.988x/1.859x -> 3.602x/3.781x`
+  - on the branching-tree control, neither asymmetry nor broad off-packet support develops:
+    - carried-flow share stays nearly symmetric (`0.263 -> 0.250` upper, `0.290 -> 0.250` lower)
+    - flow support compression stays only about `~2x`
+- readout consequence:
+  - random DAG packet-local retention sharpens from `packet_flow_action / action_channel = 0.743 -> 0.906` over `N=12 -> 25`
+  - branching tree does not show the same regime (`0.968 -> 0.915` over `N=6 -> 12`)
+
+### Strongest confirmed conclusion
+Packet-local flow is now physically translated, not just benchmark-ranked. It helps on dense random-DAG families because the probe support broadens and then refocuses into a narrower mass-side carrier while the opposite side diffuses. The branching-tree control never enters that regime, so the retained cross-family gravity law is still the broader near-mass `action_channel`.
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/scripts/gravity_packet_local_support_structure_compare.py`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-01-gravity-packet-local-support-structure-compare.txt`
+- `/Users/jonreilly/Projects/Physics/README.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+
+### Exact next step
+- compress the support-width / carried-flow split into one coarse regime observable that decides when packet-local flow should replace the broader `action_channel`, then test that switch on the existing two-family benchmark without touching transport
+
+### First concrete action
+- prototype one regime score from mass-side carried-flow share gap and packet-support compression, then compare a gated or blended readout against raw `action_channel` and `packet_flow_action`
+
 ## 2026-04-01 09:25 America/New_York
 
 ### Seam class
