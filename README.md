@@ -148,9 +148,10 @@ The next frontier is therefore best treated as a scaling architecture problem, n
 **Retained positive results:**
 - corrected 1/L^p unitary core still stands (gravity sign, Born rule, interference, `k=0→0`, phase valley)
 - G2-style coarse-graining is the first tested architecture family that fixes the gravity scaling guardrail
+- a readout-only micro-preserving gravity prototype now also clears the bounded scaling guardrail on the same `N=8..25` family: near-mass `action_channel` bias grows in stable sign and magnitude from `-0.2456` at `N=12` to `-0.8002` at `N=25`, while the baseline detector centroid still collapses from `+0.7968` to `+0.3989`
 - `k=0→0` remains preserved under both G1 and G2
 
-**Current read:** no tested architecture currently passes gravity scaling, interference, and decoherence scaling simultaneously. G2-style macro averaging is now understood as both a real gravity fix and a real failure mode: it suppresses the near-degenerate path multiplicity that causes gravity saturation, but it also washes out the phase structure that produces fringes and weakens the branch-distinguishing microstructure needed for scalable decoherence. The next good move is therefore not another single-layer env variant, and not simply “implement two-scale” again. It is to find one gravity-preserving compression that keeps microscopic phase contrast alive before adding any scalable record channel.
+**Current read:** no tested transport architecture currently passes gravity scaling, interference, and decoherence scaling simultaneously. G2-style macro averaging is now understood as both a real gravity fix and a real failure mode: it suppresses the near-degenerate path multiplicity that causes gravity saturation, but it also washes out the phase structure that produces fringes and weakens the branch-distinguishing microstructure needed for scalable decoherence. The new bounded readout prototype sharpens the alternative: the next good move is not another single-layer env variant, and not simply “implement two-scale” again. It is to preserve the microscopic corrected transport and keep pushing gravity coarse-graining at the observable/readout layer before adding any scalable record channel.
 
 ### 5. Oscillatory persistence under the default self-maintenance rule
 

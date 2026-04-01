@@ -1,3 +1,86 @@
+## 2026-04-01 09:13 America/New_York
+
+### Seam class
+- gravity scaling
+- readout-only coarse observable prototype
+
+### Current state
+- `main` is synced to `origin/main` at `1ed9c4c`
+- the architecture reset still stands:
+  - keep corrected microscopic `1/L^p` transport fixed
+  - do gravity repair at the observable/readout layer first
+  - delay any new decoherence prototype until the gravity readout question is answered on the scaling testbench
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/gravity_observable_readout_scaling_compare.py`
+- wrote `/Users/jonreilly/Projects/Physics/logs/2026-04-01-gravity-observable-readout-scaling-compare.txt`
+- kept the generated-DAG scaling family fixed (`N = 8, 12, 15, 20, 25`, `5` seeds, `k = 3, 5, 7`) and changed only the extracted gravity observable
+- compared four readouts on the same micro run:
+  - detector centroid shift `R_det`
+  - detector channel shift `R_chan`
+  - near-mass packet-current bias `R_curr`
+  - near-mass action-channel bias `R_act`
+- retained result:
+  - baseline detector centroid still collapses: `+0.7968 -> +0.3989` from `N=12 -> 25` (`|mag| ratio 0.5007`)
+  - detector channel shift also collapses: `+0.2968 -> +0.1414` (`0.4762`)
+  - packet-current bias changes sign and is not retained
+  - near-mass action-channel bias is the first readout-only bounded pass:
+    - `N=12: -0.2456`
+    - `N=25: -0.8002`
+    - `|mag| ratio 3.2582`, sign-stable
+- `V_free` stays `0.9842 .. 0.9934` on the same family because the microscopic transport was unchanged
+
+### Strongest confirmed conclusion
+The first gravity scaling fix that does not modify transport is now real on the bounded family: a near-mass action-channel readout survives where detector-level centroid and channel shifts collapse. That shifts the gravity lane from “change the propagator” toward “derive the right mesoscopic observable.”
+
+### Exact next step
+- compress the winning `action_channel` readout into one smaller physical-language observable, ideally a packet-local action-flow imbalance, and test whether it survives on one second minimal family without touching transport
+
+## 2026-04-01 04:48 America/New_York
+
+### Seam class
+- architecture work-plan reset
+- layered scaling program
+
+### Current state
+- the architecture scorecard is now stable enough to stop single-layer hunting:
+  - baseline corrected `1/L^p`: unitary core retained, gravity saturates, detector-state purity wrong-scales
+  - G1: kills gravity
+  - G2: gravity scaling pass, interference fail
+  - D1 / G2+env / D4 / two-scale: decoherence scaling fail
+- local `main` is ahead of `origin/main` by `1`
+- no detached science child is running
+
+### Science impact
+- reset the next-step program around a layered interpretation rather than another single-state architecture tweak
+- retained micro layer:
+  - keep the corrected `1/L^p` propagator fixed as the unitary transport law
+  - preserve the interference/Born package as a hard gate
+- retained gravity direction:
+  - do **not** coarse-grain propagation directly
+  - instead coarse-grain only the gravity observable/readout from the micro run
+  - target packet-current imbalance / action-flow bias / channel-level momentum observables on the existing scaling testbench
+- retained decoherence direction:
+  - do **not** try another small finite register or another global env label
+  - move to a distributed local record architecture:
+    - record sheet / worldtube across the mass region
+    - local ancillas per traversed edge/cell/sector
+    - partial trace over the distributed record, not one compressed tag
+- architectural read:
+  - one substrate
+  - one retained microscopic unitary law
+  - gravity as mesoscopic observable extraction
+  - decoherence as durable distributed record formation
+
+### Strongest confirmed conclusion
+The current scaling tension is best treated as a layered-emergence problem, not a parameter problem and not another single-layer architecture problem. The next good move is to separate microscopic transport, mesoscopic gravity readout, and distributed record formation while keeping them tied to the same event-network substrate.
+
+### Exact next step
+- after syncing the one local commit, implement one observable-level gravity coarse readout on top of the unchanged corrected micro propagator and run it on the existing scaling testbench before any new decoherence prototype
+
+### First concrete action
+- add one benchmark prototype that extracts coarse packet-current / action-flow imbalance from the baseline micro path-sum and checks whether that readout avoids the `N=12 -> N=25` collapse without reducing interference visibility
+
 ## 2026-04-01 04:39 America/New_York
 
 ### Seam class
