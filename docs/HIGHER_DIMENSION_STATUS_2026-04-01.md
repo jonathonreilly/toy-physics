@@ -32,7 +32,10 @@
   - A later dense pilot does recover a narrow positive window:
     - [five_d_dense_pilot.py](/Users/jonreilly/Projects/Physics/scripts/five_d_dense_pilot.py)
     - [2026-04-01-five-d-dense-pilot.txt](/Users/jonreilly/Projects/Physics/logs/2026-04-01-five-d-dense-pilot.txt)
-  - Best current read: 5D is not dead, but any positive mass-law signal is still confined to a dense modular corner rather than a stable generic regime.
+  - A denser robustness map broadens that positive window around the pilot corner, but it still stays inside the dense modular neighborhood rather than becoming a stable generic regime:
+    - [five_d_dense_robustness_map.py](/Users/jonreilly/Projects/Physics/scripts/five_d_dense_robustness_map.py)
+    - [2026-04-01-five-d-dense-robustness-map.txt](/Users/jonreilly/Projects/Physics/logs/2026-04-01-five-d-dense-robustness-map.txt)
+  - Best current read: 5D is not dead, but its positive mass-law signal remains density-sensitive and tied to a dense modular corner of parameter space.
 
 ## Strong branch-local results that still need careful wording
 
@@ -87,7 +90,7 @@ The current higher-dimensional story is:
    - determine whether the 4D mass exponent converges toward `1`.
 
 3. **5D dense robustness map**
-   - determine whether the positive dense 5D window widens into a stable regime or stays connectivity-limited.
+   - determine whether the positive dense 5D window widens beyond the pilot corner or stays density-sensitive inside the modular neighborhood.
 
 4. **Analytic / architectural distance-law frontier**
    - derive why the current linear path-sum force stays flat/topological, or test genuinely deeper alternatives such as metric emergence or stronger nonlinearity.
