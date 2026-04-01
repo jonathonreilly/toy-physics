@@ -1,3 +1,41 @@
+## 2026-04-01 02:38 America/New_York
+
+### Seam class
+- gravity theory refinement
+- packet-local action saturation diagnostic
+
+### Science impact
+- added `/Users/jonreilly/Projects/Physics/scripts/phase_valley_local_action_spread_compare.py`
+- wrote `/Users/jonreilly/Projects/Physics/logs/2026-04-01-phase-valley-local-action-spread-compare.txt`
+- updated `/Users/jonreilly/Projects/Physics/README.md`
+- updated `/Users/jonreilly/Projects/Physics/scripts/nonunitary_theory_frontier_card.py`
+- kept the corrected propagator, impact-parameter family, and near-mass action-gap numerator fixed, then replaced the pooled node-level action spread with packet-local windows around each valley peak on the same three bounded probes
+- result:
+  - the retained winner is now `near_mass_b local_action_q`, not raw `action_gap`
+  - fit ranking on the retained family:
+    - `near_mass_b local_action_q`: `R^2 = 0.4478`, `MAE = 0.3413`
+    - `near_mass_b action_gap`: `R^2 = 0.4213`, `MAE = 0.3545`
+    - `near_mass_b action_q`: `R^2 = 0.3983`, `MAE = 0.3528`
+  - small guardrail windows keep the same read:
+    - packet half-window `1`: `R^2 = 0.4482`, `MAE = 0.3412`
+    - packet half-window `3`: `R^2 = 0.4477`, `MAE = 0.3412`
+  - detector-side probes still do not close under any tested action normalization
+- retained interpretation:
+  - the saturation-law denominator should track packet-local near-mass action spread, not a pooled valley-wide spread
+  - the first bounded normalized-`Q` support is real, but it is still localized to the retained `near_mass_b` probe rather than promoted detector-side
+
+### Current state
+- the gravity lane now has a retained normalized reduction on the rectangular benchmark, but only after localizing the spread term near the packet peaks
+
+### Strongest confirmed conclusion
+The first bounded support for the toy gravity saturation law is now real: at the retained near-mass skirt probe, packet-local action `Q` beats both raw action gap and pooled-spread action `Q`. The law is therefore local-packet rather than valley-pooled, while detector-side probes remain unresolved.
+
+### Exact next step
+- translate the winning packet-local denominator into one adaptive coherence-width observable and test whether that single physical-language spread transfers across nearby near-mass cuts without retuning the numerator
+
+### First concrete action
+- extend the local-action compare with one adaptive peak-centered spread rule and rerender the same near-mass probe family
+
 ## 2026-03-31 19:57 America/New_York
 
 ### Seam class

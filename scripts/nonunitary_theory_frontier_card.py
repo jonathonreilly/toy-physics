@@ -28,7 +28,7 @@ def main() -> None:
     )
     print(
         "  where phi_v is the valley-mean phase/action shift and sigma_v^2 is the "
-        "within-valley phase spread after local path averaging."
+        "packet-local action spread around each valley's amplitude peak."
     )
     print()
     print(
@@ -62,7 +62,7 @@ def main() -> None:
         "  valley saturation ratio"
     )
     print(
-        "    Q_sat = signed valley-mean action gap / pooled valley action spread"
+        "    Q_sat = signed valley-mean action gap / sqrt(packet-local sigma_up^2 + packet-local sigma_down^2)"
     )
     print(
         "  Unsaturated regime: Q_sat << 1  -> near-linear response"
