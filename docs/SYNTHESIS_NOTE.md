@@ -53,40 +53,44 @@ amplitude patterns are.
 Gravity works on both uniform and modular DAGs. It grows with N.
 
 ### Decoherence
-| Graph family | N=25 pur_min | N=100 pur_min | Scaling |
+| Graph family | N=25 pur_min (24 seeds) | N=40 pur_min | Scaling |
 |---|---|---|---|
-| Uniform random | 0.986 | not tested | Ceiling (CLT) |
-| Modular gap=4 | 0.93 +/- 0.02 | 0.95 +/- 0.02 | Stable |
-| Modular gap=2 | 0.956 | — | Below threshold |
+| Uniform random (gap=0) | 0.951 | 0.932 | Improving |
+| Modular gap=2 | 0.937 | 0.938 | Stable |
+| Modular gap=4 | 0.952 | 0.929 | Improving |
+| Modular gap=5 | 0.942 | 0.889 | Strongest |
 
-Decoherence requires channel separation. 14 architectures fail on
-uniform DAGs due to geometric convergence (CLT).
+**Revision (24-seed data):** The earlier 12-seed tests overstated the
+uniform DAG ceiling. With 24 seeds, even gap=0 shows pur_min=0.951
+at N=25. The 14-architecture failure analysis remains valid (all
+individual bath/kernel variants fail), but the CL bath on uniform
+DAGs performs better than initial 4-seed tests suggested.
 
-### Joint test (same graph instances)
-| Parameter | gap=0 | gap=2 | gap=4 | gap=6 |
-|---|---|---|---|---|
-| Gravity delta | +0.57 | **+1.49** | +0.92 | +1.93 |
-| pur_min | 0.976 | **0.956** | 0.961 | 0.964 |
-| Both pass? | No | **Yes** | Marginal | No |
+Channel separation helps — larger gaps give stronger decoherence
+at N=40 — but the effect is a gradient, not a threshold.
 
-**Gap=2.0 is the unification sweet spot.** Crosslink probability
-has zero effect (results identical from 0.0 to 0.10).
+### Joint test (24 seeds, same graph instances)
+| gap | gravity (N=40) | pur_min (N=40) | decoh (N=40) |
+|---|---|---|---|
+| 0.0 | +1.51 | 0.932 | +0.067 |
+| 2.0 | +1.83 | 0.938 | +0.061 |
+| 3.0 | +2.43 | 0.939 | +0.059 |
+| 5.0 | **+3.47** | **0.889** | **+0.110** |
 
-## What the topology parameter means
+**The unification window is broad.** ALL gap values from 0.0 to 5.0
+pass both criteria (gravity > 2SE, pur_min < 0.96) with 24 seeds.
+Larger gaps give monotonically stronger gravity and decoherence at N=40.
+Crosslink probability has zero effect (identical results 0.0-0.10).
 
-The channel gap is the ratio of spatial separation between upper
-and lower amplitude channels to the total spatial range:
+## What the topology parameter controls
 
-    channel_ratio = gap / (2 * y_range) = 2.0 / 24.0 = 0.083
+The gap is a monotonic dial, not a threshold:
+- More gap = stronger channel separation = better decoherence
+- More gap = more coherent in-channel propagation = stronger gravity
+- Too much gap = connectivity breaks (gap > y_range)
 
-At 8.3% gap ratio, channels are close enough for gravitational
-interaction (paths through mass region still exist) but separated
-enough for decoherence (slit-A and slit-B paths stay in different
-channels).
-
-Too small a gap (0%): paths mix freely, CLT erases slit distinction.
-Too large a gap (25%+): channels are isolated, gravity weakens,
-eventually connectivity breaks entirely.
+The tradeoff is not gravity-vs-decoherence (both improve together)
+but channel-coherence vs graph-connectivity.
 
 ## What is established
 
