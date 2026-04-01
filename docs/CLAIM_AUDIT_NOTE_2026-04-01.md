@@ -49,8 +49,15 @@
 
 - The current 4D distance sweep is effectively flat/topological, not `1/b`.
 - Fixed-mass locality-shell sweeps, propagator-power sweeps, a minimal local saturation nonlinearity, and an induced/effective-distance readout also fail to recover a clean `1/b` law.
+- A first causal-field alternative also fails the stricter control: once the impact-parameter sweep is rerun with fixed mass count and fixed source geometry, the earlier apparent falloff does not survive as a retained `1/b` law, and the same forward-only field weakens mass scaling relative to the retained Laplacian lane.
 - A branch-side 3D density sweep points the same way, but that specific continuum-distance script still needs a stricter fixed-mass comparison before the strongest “confirmed continuum `b`-independence” wording is safe.
 - So the safe current claim is: **distance-law failure remains a structural architecture issue, not something repaired by the current higher-dimensional, shell-based, or minimal nonlinear rescue sweeps.**
+
+### 4D strict unification wording
+
+- The new 4D strict pass is useful and positive, but it is narrower than its filename suggests.
+- Gravity, `pur_cl`, and binned visibility are measured on the retained modular DAGs, while the Born-rule column comes from a companion chokepoint graph.
+- So the safe wording is: **one retained 4D companion-control coexistence row exists, but the broader strict 4D story is still partial.**
 
 ### Node-removal asymptotics
 
@@ -71,4 +78,4 @@
 
 ## One-line summary
 
-The code now supports a stronger modular-family higher-dimensional story, but the repo should keep its metric language precise: `gap=0` is the true baseline, `pur_cl` and `pur_min` are distinct, gravity SE is paired, 2D large-`N` visibility gain is weak/gone on the retained modular bath lane, dense modular 4D strongly improves decoherence, chokepoint Born-rule checks are clean, node removal is asymptotically insufficient, the 4D strict visibility metric remains weak even after binning cleanup, and the distance law stays flat/topological across the current rescue variants.
+The code now supports a stronger modular-family higher-dimensional story, but the repo should keep its metric language precise: `gap=0` is the true baseline, `pur_cl` and `pur_min` are distinct, gravity SE is paired, 2D large-`N` visibility gain is weak/gone on the retained modular bath lane, dense modular 4D strongly improves decoherence, chokepoint Born-rule checks are clean, node removal is asymptotically insufficient, the 4D strict visibility metric remains weak even after binning cleanup, and the distance law stays flat/topological across the current rescue variants including the first causal-field alternative.

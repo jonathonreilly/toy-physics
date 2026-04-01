@@ -1,0 +1,51 @@
+==============================================================================
+CAUSAL FIELD MASS SCALING
+  Retained 3D modular DAG family, gap=5
+  Compare forward-only causal field against Laplacian relaxation
+==============================================================================
+
+Setup:
+  seeds per count: 8
+  k-band: (3.0, 5.0, 7.0)
+  causal decay: 0.5
+  graph: 3D modular DAG, N_LAYERS=18, NODES_PER_LAYER=40
+  connect_radius=3.5, gap=5.0
+
+Sanity check on representative graph:
+  Laplacian shift: -0.1809
+  Causal shift:    +0.0820
+  Free shift:      +0.0000
+
+[Laplacian baseline]
+  n_mass     shift      SE      t   shift/n
+  ------------------------------------
+       2   +1.5306  0.6880  +2.22   +0.7653
+       4   +1.7652  0.8893  +1.98   +0.4413
+       6   +2.5972  1.1741  +2.21   +0.4329
+       8   +2.8155  1.2285  +2.29   +0.3519
+      12   +3.3627  1.3731  +2.45   +0.2802
+      16   +3.6295  1.3672  +2.65   +0.2268
+  Fit: shift ~= 1.0773 * n^0.450  (R^2=0.957)
+
+[Causal forward field (decay=0.5)]
+  n_mass     shift      SE      t   shift/n
+  ------------------------------------
+       2   +0.5855  0.2923  +2.00   +0.2927
+       4   +0.5835  0.2907  +2.01   +0.1459
+       6   +0.5720  0.3095  +1.85   +0.0953
+       8   +0.5444  0.3265  +1.67   +0.0681
+      12   +0.8711  0.5051  +1.72   +0.0726
+      16   +0.9579  0.4666  +2.05   +0.0599
+  Fit: shift ~= 0.4289 * n^0.237  (R^2=0.533)
+
+==============================================================================
+SIDE-BY-SIDE SUMMARY
+  Laplacian alpha = 0.450 (R^2=0.957)
+  Causal alpha    = 0.237 (R^2=0.533)
+  Causal field weakens mass scaling relative to Laplacian.
+
+INTERPRETATION
+  If the causal field shows a stable positive alpha on the retained
+  modular family, then it is a credible mass-scaling candidate.
+  If the fit is weak, noisy, or much smaller than the Laplacian lane,
+  the causal-field idea is not yet a retained improvement.

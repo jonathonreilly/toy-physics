@@ -1,3 +1,59 @@
+## 2026-04-01 — Directional-measure b overlap-onset transfer holdout
+
+### Current state
+- the canonical repo had already moved to `6fc649f` while the top tracked science entry still stopped at the first overlap-onset compare
+- the required preflight push via `automation_push.py` failed with DNS (`Could not resolve host: github.com`), so this loop stayed on one bounded science step instead of widening scope
+- the active gravity question from the top entry was still:
+  - do the new overlap-onset observables transfer onto one second dense-family control strongly enough to promote the local-density explanation
+
+### What changed
+- added `scripts/directional_b_overlap_onset_transfer_holdout.py`
+- wrote `logs/2026-04-01-directional-b-overlap-onset-transfer-holdout.txt`
+- tested one nearby second dense-family control with independent seeds:
+  - baseline DAG compare kept `25` nodes/layer with `y_range = 12`
+  - holdout DAG used `28` nodes/layer with `y_range = 13`
+- evaluated the existing bounded overlap rule on that holdout:
+  - `same_side_mean_gap >= 0.7504 and selected_span_step >= 1.1301`
+- compared exact-rule transfer against holdout-only refits
+
+### Strongest confirmed conclusion
+The overlap-onset story now transfers at the feature level, but not as one frozen threshold pair.
+- on the second dense-family control, the original two-clause rule still gives:
+  - `tp/fp/fn/tn = 9/1/6/24`
+  - accuracy `0.8250`
+- the qualitative separation survives cleanly:
+  - overlap rows have much weaker target-band fill (`0.196` vs `0.885`)
+  - coarser same-side spacing (`1.035` vs `0.869`)
+  - larger selected span per source step (`1.193` vs `0.498`)
+- but the best holdout-only separator collapses mostly to target-band occupancy alone:
+  - `target_fill <= 1/3`
+  - `tp/fp/fn/tn = 14/2/1/23`
+  - accuracy `0.9250`
+
+So the promoted statement should be narrower and cleaner:
+- sparse target-band occupancy is the leading transferable overlap-onset signal
+- same-side spacing and selected-span cuts stay useful refinements, but their exact thresholds are family-dependent, especially on the milder `N=25` wide-family shoulder
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/scripts/directional_b_overlap_onset_transfer_holdout.py`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-01-directional-b-overlap-onset-transfer-holdout.txt`
+- `/Users/jonreilly/Projects/Physics/README.md`
+- `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+
+### Exact next step
+- keep the corrected propagator and corrected directional-`b` hierarchy fixed
+- test whether the same target-band occupancy floor transfers onto one more geometry-varied control that changes the mid-layer sampling law without changing the overlap diagnostic
+- only if that still holds, translate target-band occupancy into a cleaner asymptotic bridge variable
+
+### First concrete action
+- vary the mid-layer sampling law one notch further while measuring only:
+  - `target_fill`
+  - `same_side_mean_gap`
+  - `selected_span_step`
+  - `mu`
+
 ## 2026-04-01 — Directional-measure b review fix and overlap-onset local-density compare
 
 ### Current state

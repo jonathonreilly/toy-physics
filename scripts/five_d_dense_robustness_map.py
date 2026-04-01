@@ -47,6 +47,32 @@ def _fmt_alpha(row) -> str:
     return "NA" if row["alpha"] is None else f"{row['alpha']:.3f}"
 
 
+def _positive_support_count(row) -> int:
+    return sum(1 for _n, avg, _se, t in row["mass_summaries"] if avg > 0 and t > 1.5)
+
+
+def _stable_positive_row(rows):
+    candidates = [
+        row
+        for row in rows
+        if row["alpha"] is not None
+        and row["alpha"] > 0.2
+        and row["max_t"] > 2.0
+        and row["valid_rate"] > 0.5
+    ]
+    if not candidates:
+        return None
+    return max(
+        candidates,
+        key=lambda row: (
+            _positive_support_count(row),
+            row["max_t"],
+            row["valid_rate"],
+            -(abs(row["alpha"] - 1.0)),
+        ),
+    )
+
+
 def main() -> None:
     print("=" * 78)
     print("5D DENSE ROBUSTNESS MAP")
@@ -80,6 +106,7 @@ def main() -> None:
 
     positive_rows = []
     best_alpha_row = None
+    best_stable_row = None
     best_valid_row = None
     for row in rows:
         alpha_str = _fmt_alpha(row)
@@ -96,6 +123,7 @@ def main() -> None:
             best_alpha_row = row
         if best_valid_row is None or row["valid_rate"] > best_valid_row["valid_rate"]:
             best_valid_row = row
+    best_stable_row = _stable_positive_row(rows)
 
     print()
     print("MASS-LAW DETAIL")
@@ -125,11 +153,20 @@ def main() -> None:
                 "  The positive 5D signal survives only in a narrow dense corner; the surrounding "
                 "configs weaken quickly, so the window still looks connectivity-limited."
             )
-        best = best_alpha_row or positive_rows[0]
-        print(
-            f"  Best alpha = {best['alpha']:.3f} at nodes={best['nodes_per_layer']}, "
-            f"rad={best['connect_radius']}, range={best['spatial_range']}"
-        )
+        if best_stable_row is not None:
+            print(
+                f"  Most stable positive regime = alpha {best_stable_row['alpha']:.3f} at "
+                f"nodes={best_stable_row['nodes_per_layer']}, rad={best_stable_row['connect_radius']}, "
+                f"range={best_stable_row['spatial_range']} "
+                f"(support rows={_positive_support_count(best_stable_row)}, max_t={best_stable_row['max_t']:.2f})"
+            )
+        elif best_alpha_row is not None:
+            print(
+                f"  Largest fitted alpha = {best_alpha_row['alpha']:.3f} at "
+                f"nodes={best_alpha_row['nodes_per_layer']}, rad={best_alpha_row['connect_radius']}, "
+                f"range={best_alpha_row['spatial_range']} "
+                f"(use with caution: not selected by stability)"
+            )
     else:
         print(
             "  No stable positive mass-law window emerged in the dense 5D neighborhood. "
