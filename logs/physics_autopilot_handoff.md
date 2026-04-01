@@ -1,5 +1,46 @@
 # Physics Autopilot Handoff
 
+## 2026-04-01 14:00 America/New_York
+
+### Seam class
+- directional-measure gravity `b` lane
+- local support-gap denominator discrimination
+
+### What this loop did
+- added `scripts/directional_b_support_distance_compare.py`
+- wrote `logs/2026-04-01-directional-b-support-distance-compare.txt`
+- kept the same bounded random-DAG family and the same corrected directional transport
+- tested one more principled local denominator:
+  - the nearest vertical gap between the actual mass interval and the free packet's retained probe-layer support band
+
+### Current state
+- no detached science child is running
+- the lead unitary layer is still fixed:
+  - corrected `1/L^p` transport
+  - directional path measure `exp(-0.8×θ²)`
+- the directional `b` lane is now more specific:
+  - raw reads remain wrong-direction
+  - center-offset density passes
+  - nearest-edge density passes
+  - local support-gap density is only partial
+
+### Strongest confirmed conclusion
+The local support-gap denominator does not replace center-offset density as the retained bounded gravity read.
+- `action_channel / support_gap`: PASS at `N=12` and `N=25`
+- `packet_flow_action / support_gap`: FAIL at `N=12`
+- `action_channel / b`: still the cleanest retained bounded denominator
+- `packet_flow_action / b`: still passes cleanly
+
+So the empirical discriminator has moved: the next gravity step should be derivation-style, not another blind denominator sweep.
+
+### Exact next step
+- keep the propagator and bounded family fixed
+- stop broadening denominator scans unless they are theory-motivated
+- derive or explain why center-offset density beats the more local support-gap proxy on this family
+
+### New log paths
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-01-directional-b-support-distance-compare.txt`
+
 ## 2026-04-01 13:30 America/New_York
 
 ### Seam class

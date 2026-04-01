@@ -1,3 +1,43 @@
+## 2026-04-01 — Directional-measure b local support-gap compare
+
+### Current state
+- the same bounded random-DAG family had already yielded two passing geometry-normalized denominators:
+  - center-offset density
+  - nearest-edge density
+- the next bounded discriminator was one more principled local denominator tied to actual packet geometry rather than only mass-cluster geometry
+
+### What changed
+- added `scripts/directional_b_support_distance_compare.py`
+- wrote `logs/2026-04-01-directional-b-support-distance-compare.txt`
+- kept transport, field, and mass selection fixed
+- defined `support_gap` as the nearest vertical separation between:
+  - the actual mass interval
+  - the free packet's retained probe-layer support band
+- compared:
+  - `action_channel / support_gap`
+  - `packet_flow_action / support_gap`
+against the already-passing center-offset and nearest-edge densities
+
+### Strongest confirmed conclusion
+Local support-gap normalization is real, but it does not replace center-offset density as the retained bounded denominator.
+- `action_channel / support_gap` still passes at `N=12` and `N=25`
+- `packet_flow_action / support_gap` already fails at `N=12`
+- center-offset density remains the cleanest bounded read
+- nearest-edge density remains a viable secondary normalization
+
+So the directional `b` lane is no longer waiting on one more denominator hunt. The bounded empirical discriminator now favors center-offset density over the more local support-gap alternative.
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/scripts/directional_b_support_distance_compare.py`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-01-directional-b-support-distance-compare.txt`
+
+### Exact next step
+- keep the propagator fixed
+- stop broadening the denominator sweep
+- either:
+  - derive why center-offset density is the retained bounded read on this family
+  - or test one last mass-span / support-width corrected density only if it is derivation-motivated rather than another blind scan
+
 ## 2026-04-01 — Directional-measure b geometry normalization
 
 ### Current state
