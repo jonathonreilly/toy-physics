@@ -1,3 +1,67 @@
+## 2026-04-01 — Worker retarget while Claude owns decoherence
+
+### Current state
+- Claude is actively owning the decoherence frontier.
+- The latest slot-resolved fresh-ancilla result is **not** a retained pass:
+  - the faithful Level B mechanism is now real
+  - but wider sampling to `N=25` / `6` seeds recoheres again
+  - so decoherence still fails asymptotically in the current tested form
+- The lead retained/provisional unitary layer is still:
+  - corrected `1/L^p` transport
+  - directional path measure `exp(-0.8×θ²)`
+
+### Autopilot guidance
+- Do **not** spend detached worker cycles on new decoherence architectures right now unless Claude explicitly asks for a support diagnostic.
+- Claude should keep the decoherence lane:
+  - interaction-law diagnostics
+  - traced branch-weight structure
+  - fresh-ancilla / record-architecture debugging
+- Auto workers should instead push the highest-value **non-overlapping** science:
+  1. gravity `b`-dependence under the fixed directional-measure propagator
+  2. 3D transfer of the unitary package beyond the current smoke level
+  3. robustness / theory translation of the directional path measure on bounded graph families
+
+### Highest-value worker tasks
+
+#### Worker lane A — Gravity distance law
+- Keep transport fixed.
+- Focus only on why the gravity observable still grows with `b` instead of decreasing.
+- Best targets:
+  - improved readout/observable extraction under the fixed propagator
+  - geometry-normalized gravity observables
+  - bounded family tests that isolate why `R(b)` is still wrong-direction
+- Success looks like:
+  - better graded `b` behavior without breaking the retained unitary package
+
+#### Worker lane B — 3D unitary consolidation
+- Keep transport fixed.
+- Extend the current 3D result from smoke to a tighter bounded package:
+  - 3D zero-field interference visibility
+  - 3D source-superposition linearity / Born-style sanity checks
+  - one bounded family-transfer comparison if practical
+- Success looks like:
+  - stronger evidence that the directional measure is not just a 2D artifact
+
+#### Worker lane C — Directional-measure robustness / theory note
+- Keep transport fixed.
+- Do not reopen broad propagator search.
+- Best targets:
+  - quantify sensitivity around `β = 0.8`
+  - explain why angle-weighting helps gravity scaling but only marginally shifts threshold compatibility
+  - sharpen the axiomatic interpretation:
+    - continuation-quality path measure
+    - paraxial / directional coherence preference
+- Success looks like:
+  - a tighter retained memo for why the unitary-side fix is scientifically meaningful
+
+### Strongest confirmed conclusion
+The best use of autopilot workers is now **not** more decoherence variants in parallel with Claude. The best use is to consolidate and extend the retained unitary architecture while Claude attacks the still-open non-unitary bottleneck.
+
+### Exact next step
+- keep the directional-measure propagator fixed
+- keep detached workers off broad decoherence search
+- point the next available worker at gravity `b`-dependence first, then 3D unitary consolidation
+
 ## 2026-04-01 — Decoherence interaction-law diagnosis update
 
 ### Current state

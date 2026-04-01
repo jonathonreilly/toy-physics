@@ -16,7 +16,7 @@ The Level A decay law predicts:
   overlap = ∏_k cos(α_Ak - α_Bk)
   coherence = |overlap|² = ∏_k cos²(Δα_k)
 
-Uses the promoted angle² β=0.8 propagator.
+Uses the promoted angle² beta=0.8 propagator.
 
 PStack experiment: fresh-ancilla-slot-resolved
 """
@@ -34,6 +34,9 @@ from scripts.density_matrix_analysis import build_post_barrier_setup, compute_de
 
 BETA = 0.8
 ALPHA_SCALE = 0.5  # scales the edge angle into coupling strength
+K_BAND = [3.0, 5.0, 7.0]
+N_LIST = [8, 12, 18, 25]
+N_SEEDS = 6
 
 
 def propagate_fresh_ancilla(positions, adj, field, src, det, k,
@@ -135,28 +138,86 @@ def propagate_fresh_ancilla(positions, adj, field, src, det, k,
     return det_state
 
 
-def main():
-    k_band = [3.0, 5.0, 7.0]
+def propagate_two_register_angle(positions, adj, field, src, det, k,
+                                 mass_set, blocked=None):
+    """Angle-weighted node-label baseline under the same unitary law.
 
+    This keeps the promoted directional path measure and only changes the
+    environment architecture. It is the apples-to-apples comparison for the
+    slot-resolved fresh-ancilla run above.
+    """
+    blocked = blocked or set()
+
+    in_deg = [0] * len(positions)
+    for i, nbs in adj.items():
+        for j in nbs:
+            in_deg[j] += 1
+    q = deque(i for i in range(len(positions)) if in_deg[i] == 0)
+    order = []
+    while q:
+        i = q.popleft()
+        order.append(i)
+        for j in adj.get(i, []):
+            in_deg[j] -= 1
+            if in_deg[j] == 0:
+                q.append(j)
+
+    state = {(s, -1): 1.0 / len(src) + 0.0j for s in src}
+
+    for i in order:
+        entries = {env: amp for (node, env), amp in list(state.items())
+                   if node == i and abs(amp) > 1e-30}
+        if not entries or i in blocked:
+            continue
+
+        for env, amp in entries.items():
+            new_env = i if i in mass_set else env
+            for j in adj.get(i, []):
+                if j in blocked:
+                    continue
+                x1, y1 = positions[i]
+                x2, y2 = positions[j]
+                dx = x2 - x1
+                dy = y2 - y1
+                L = math.sqrt(dx * dx + dy * dy)
+                if L < 1e-10:
+                    continue
+                lf = 0.5 * (field[i] + field[j])
+                dl = L * (1 + lf)
+                ret = math.sqrt(max(dl * dl - L * L, 0))
+                act = dl - ret
+                theta_edge = math.atan2(abs(dy), max(dx, 1e-10))
+                w = math.exp(-BETA * theta_edge * theta_edge)
+                ea = cmath.exp(1j * k * act) * w / (L ** 1.0)
+                key = (j, new_env)
+                if key not in state:
+                    state[key] = 0.0 + 0.0j
+                state[key] += amp * ea
+
+    return {(d, env): amp for (d, env), amp in state.items() if d in det}
+
+
+def main():
     print("=" * 70)
     print("LEVEL B: TRUE SLOT-RESOLVED FRESH ANCILLA ON DAGs")
     print(f"  Propagator: 1/L^p × exp(-{BETA}×θ²)")
     print(f"  Coupling: α_k = {ALPHA_SCALE} × edge_angle (branch-dependent)")
     print(f"  Env: ancilla bitstring (slot-resolved)")
+    print(f"  Seeds: {N_SEEDS}  k-band: {K_BAND}")
     print("=" * 70)
     print()
 
-    print(f"  {'N':>4s}  {'n_mass':>6s}  {'n_env':>6s}  {'max_len':>7s}  "
-          f"{'pur_fa':>8s}  {'pur_node':>8s}  {'fa_off':>8s}")
-    print(f"  {'-' * 56}")
+    print(f"  {'N':>4s}  {'runs':>5s}  {'mass_rng':>9s}  {'env_max':>7s}  "
+          f"{'len_max':>7s}  {'pur_fa':>8s}  {'pur_node':>8s}  {'fa_off':>8s}")
+    print(f"  {'-' * 72}")
 
-    for nl in [8, 12, 18]:
+    for nl in N_LIST:
         pfa_list, pn_list, p0_list = [], [], []
-        n_mass_count = 0
+        mass_counts = []
         max_envs = 0
         max_bitlen = 0
 
-        for seed in range(3):
+        for seed in range(N_SEEDS):
             positions, adj, _ = generate_causal_dag(
                 n_layers=nl, nodes_per_layer=25, y_range=12.0,
                 connect_radius=3.0, rng_seed=seed*11+7)
@@ -166,9 +227,9 @@ def main():
                 continue
 
             mass_set = set(setup["mass_set"]) - setup["blocked"]
-            n_mass_count = len(mass_set)
+            mass_counts.append(len(mass_set))
 
-            for k_val in k_band:
+            for k_val in K_BAND:
                 ds_fa = propagate_fresh_ancilla(
                     positions, adj, setup["field"], setup["src"], setup["det"],
                     k_val, mass_set, setup["blocked"])
@@ -179,8 +240,7 @@ def main():
                 max_envs = max(max_envs, len(envs))
                 max_bitlen = max(max_bitlen, max((len(b) for b in envs), default=0))
 
-                from scripts.density_matrix_analysis import propagate_two_register_full
-                ds_n = propagate_two_register_full(
+                ds_n = propagate_two_register_angle(
                     positions, adj, setup["field"], setup["src"], setup["det"],
                     k_val, mass_set, setup["blocked"])
                 pn, _, _, _ = compute_detector_metrics(ds_n, setup["det_list"])
@@ -195,20 +255,26 @@ def main():
                     p0_list.append(p0)
 
         if pfa_list:
-            print(f"  {nl:4d}  {n_mass_count:6d}  {max_envs:6d}  {max_bitlen:7d}  "
+            mass_min = min(mass_counts)
+            mass_max = max(mass_counts)
+            mass_rng = f"{mass_min}-{mass_max}" if mass_min != mass_max else f"{mass_min}"
+            print(f"  {nl:4d}  {len(pfa_list):5d}  {mass_rng:>9s}  {max_envs:7d}  {max_bitlen:7d}  "
                   f"{sum(pfa_list)/len(pfa_list):8.4f}  "
                   f"{sum(pn_list)/len(pn_list):8.4f}  "
                   f"{sum(p0_list)/len(p0_list):8.4f}")
 
     print()
     print("pur_fa = slot-resolved fresh ancilla")
-    print("pur_node = node-label env (comparison)")
+    print("pur_node = angle-weighted node-label baseline")
     print("fa_off = no coupling (should be ~1.0)")
-    print("n_env = distinct bitstrings at detector")
-    print("max_len = longest bitstring (= max encounters)")
+    print("runs = accepted seed/k combinations")
+    print("mass_rng = min-max accepted mass-set size across seeds")
+    print("env_max = max distinct bitstrings at detector over all runs")
+    print("len_max = max bitstring length (= max encounters) over all runs")
     print()
-    print("PASS: pur_fa does not rise with N")
-    print("FAIL: pur_fa rises with N")
+    print("Interpretation:")
+    print("  Encouraging if pur_fa stays flat or falls with N.")
+    print("  Failure if pur_fa recoheres at larger N.")
     print()
     print("TEST COMPLETE")
 
