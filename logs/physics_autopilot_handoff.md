@@ -1,5 +1,30 @@
 # Physics Autopilot Handoff
 
+## 2026-04-01 09:17 America/New_York
+
+### Seam class
+- architecture reset
+- scaling targets / failure mechanisms
+
+### Science impact
+- added the scaling architecture docs:
+  - `/Users/jonreilly/Projects/Physics/SCALING_TARGETS.md`
+  - `/Users/jonreilly/Projects/Physics/SCALING_FAILURE_MECHANISMS.md`
+  - `/Users/jonreilly/Projects/Physics/ARCHITECTURE_OPTIONS.md`
+  - `/Users/jonreilly/Projects/Physics/SCALING_BENCHMARK_TABLE.md`
+- updated `/Users/jonreilly/Projects/Physics/README.md` to link them
+- the repo now makes four things explicit before more science sweeps:
+  - the gravity scaling target
+  - the decoherence scaling target
+  - the current reduced failure mechanisms
+  - the minimal graph-family benchmark table for future scaling work
+
+### Strongest confirmed conclusion
+It is time to stop treating the next frontier as “one more sweep.” The right next lane is architecture-level scaling work: derive the reduced gravity saturation mechanism and replace finite/discrete environment tags with an extensive or continuous environment relation.
+
+### Exact next step
+- use the new benchmark table to design one minimal-family scaling test for gravity and one architecture proposal for decoherence before reopening the full random-DAG suite
+
 ## 2026-04-01 03:49 America/New_York
 
 ### Seam class

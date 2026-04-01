@@ -1,3 +1,30 @@
+## 2026-04-01 09:17 America/New_York
+
+### Seam class
+- architecture reset
+- scaling targets / failure mechanisms
+
+### Science impact
+- added root scaling architecture docs:
+  - `/Users/jonreilly/Projects/Physics/SCALING_TARGETS.md`
+  - `/Users/jonreilly/Projects/Physics/SCALING_FAILURE_MECHANISMS.md`
+  - `/Users/jonreilly/Projects/Physics/ARCHITECTURE_OPTIONS.md`
+  - `/Users/jonreilly/Projects/Physics/SCALING_BENCHMARK_TABLE.md`
+- updated `/Users/jonreilly/Projects/Physics/README.md` to point at those artifacts
+- the repo now states the next frontier explicitly as a scaling architecture problem, not another broad sweep problem
+- retained split:
+  - gravity scaling target: dimensionless graded response, not sign-threshold collapse
+  - decoherence scaling target: detector mixedness should stay bounded away from purity or strengthen with graph growth
+- retained failure split:
+  - gravity: path-sum averaging over many near-equivalent routes compresses local action contrast into a plateau-like kick
+  - decoherence: finite/discrete env labels get shared by both slits as branch diversity grows
+- retained next architecture directions:
+  - gravity: multiplicity-renormalized action, packet-local coarse-grained action, multiscale propagator
+  - decoherence: many local ancillas, sector/angle records, path-history histograms, continuous bath, regional coarse-graining
+
+### Strongest confirmed conclusion
+The project is now bottlenecked more by asymptotic architecture than by one more local phenomenon. The next good science move should start from the new scaling benchmark families and reduced variables, not from another broad random-DAG sweep.
+
 ## 2026-04-01 02:38 America/New_York
 
 ### Seam class
