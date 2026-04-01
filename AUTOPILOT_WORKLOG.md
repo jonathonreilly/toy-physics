@@ -1,3 +1,49 @@
+## 2026-04-01 — Directional-measure b denominator-geometry diagnosis
+
+### Current state
+- `main` was synced to `origin/main` at `f77ff21` before this repo-facing step
+- the same bounded random-DAG family had already established:
+  - center-offset density as a clean pass
+  - nearest-edge density as a secondary pass
+  - support-gap density as only a partial challenger
+- the open question was no longer another denominator hunt, but why the retained denominator should stay `b` instead of the more local support-gap proxy
+
+### What changed
+- added `scripts/directional_b_denominator_geometry_diagnostic.py`
+- wrote `logs/2026-04-01-directional-b-denominator-geometry-diagnostic.txt`
+- decomposed the support-gap denominator on the same bounded family into:
+  - mass geometry
+  - the free packet's retained probe-band geometry
+- showed that within each fixed-`N` slice the retained free probe-band edge is effectively constant across target `b`, so the extra support-gap correction is not a new mass-local law but a graph-fixed packet-support term
+
+### Strongest confirmed conclusion
+Center-offset density stays the retained bounded gravity denominator because support-gap is not a purer local geometric read on this family.
+- when the retained free probe band lies below the mass interval,
+  - `support_gap = actual_b - (mass_half_span + band_high_rel)`
+- that correction is large and size-dependent:
+  - it is negative at the `N=12` low-`b` anchor, so support-gap is larger than `b`
+  - it is positive at the `N=25` low-`b` anchor, so support-gap is smaller than `b`
+- the packet-flow density is the first casualty of that mixed denominator:
+  - `packet_flow_action / b`: still passes at `N=12` and `N=25`
+  - `packet_flow_action / support_gap`: still fails at `N=12`
+
+So the directional `b` lane is now sharper than "center-offset beats support-gap empirically." The retained reason is that center-offset isolates mass placement, while support-gap folds in graph-fixed free-packet band drift / overlap structure.
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/scripts/directional_b_denominator_geometry_diagnostic.py`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-01-directional-b-denominator-geometry-diagnostic.txt`
+- `/Users/jonreilly/Projects/Physics/README.md`
+
+### Exact next step
+- keep the directional-measure propagator fixed
+- stop broadening denominator scans
+- translate the retained gravity response density into one compact continuum / asymptotic bridge card:
+  - center-offset as the mass-geometry term that looks retained
+  - support-gap as the discrete packet-support correction that should not be promoted to the main law
+
+### First concrete action
+- reuse the three finished directional-`b` logs to draft one short bridge note on which pieces of the current response density look geometry-retained versus graph-specific
+
 ## 2026-04-01 — Directional-measure b local support-gap compare
 
 ### Current state
