@@ -1,0 +1,21 @@
+======================================================================
+SUBSTRATE MEMORY DECOHERENCE
+  Propagator: 1/L^p × exp(-0.8×θ²)
+  Split: cos(0.79)/sin(0.79) at unrecorded mass
+  Kick: exp(i×1.05) at recorded mass
+======================================================================
+
+     N  n_mass   n_env   pur_sub  pur_node   sub_off
+  ------------------------------------------------
+     8       7       8    0.9383    0.7766    1.0000
+    12       9      38    0.8700    0.8170    1.0000
+    18       7      81    0.8968    0.8325    1.0000
+
+pur_sub = substrate memory (this test)
+pur_node = node-label env (comparison)
+sub_off = α=0 (should be ~1.0, unitary baseline)
+
+PASS: pur_sub does not rise with N
+FAIL: pur_sub rises with N
+
+TEST COMPLETE
