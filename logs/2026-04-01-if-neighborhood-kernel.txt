@@ -1,0 +1,20 @@
+IF KERNEL: neighborhood fingerprint (degree, y-offset, y-spread)
+α=2.0, cap=3, k=5.0, 2 seeds
+
+     N  decoh_multi  decoh_nbr  nbr_lift
+     8      +0.0541    +0.0924   +0.0383
+    12      +0.0881    +0.1566   +0.0685
+
+The neighborhood kernel gives 1.7-1.8× more decoherence than multi-obs.
+CRITICALLY: the lift INCREASES from +0.038 to +0.069 with graph size.
+This is the first kernel where slit-discrimination grows with N.
+
+The neighborhood fingerprint captures local topology (degree, mean
+neighbor y-offset, neighbor y-spread) which varies more between slits
+than edge angle alone. On larger graphs, the neighborhoods become more
+diverse (more nodes with different local structures) → more slit-
+discriminating encounters → increasing lift.
+
+N=18 pending — will confirm whether the trend continues.
+
+VERDICT: PROVISIONAL — most promising kernel tested.
