@@ -203,16 +203,9 @@ def field_causal_forward(positions, adj, mass_nodes, decay: float = DECAY):
     return field
 
 
-def _normalize_field(field):
-    rms = math.sqrt(sum(v * v for v in field) / len(field)) if field else 0.0
-    if rms <= 1e-12:
-        return field
-    return [v / rms for v in field]
-
-
 def field_hybrid(positions, adj, mass_nodes, mix: float):
-    lap = _normalize_field(field_laplacian(positions, adj, mass_nodes))
-    causal = _normalize_field(field_causal_forward(positions, adj, mass_nodes))
+    lap = field_laplacian(positions, adj, mass_nodes)
+    causal = field_causal_forward(positions, adj, mass_nodes)
     return [(1.0 - mix) * l + mix * c for l, c in zip(lap, causal)]
 
 
