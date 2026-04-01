@@ -1,0 +1,17 @@
+IF KERNEL COMPARISON: angle-only vs combined multi-obs
+α=2.0, history cap=3, k=5.0, 3 seeds per N
+
+     N  decoh_angle  decoh_multi
+     8      +0.0166      +0.0541
+    12      +0.0524      +0.0589
+    18      +0.0373      +0.0452
+
+Multi-observable kernel (angle + sector + y_bin distance) gives
+more decoherence at every size (1.1× to 3.3× better than angle-only).
+
+But the scaling trend is the same: increases N=8→12, decreases N=12→18.
+The combined kernel is uniformly better but does not fix the scaling.
+
+VERDICT: multi-obs kernel is a quantitative improvement, not a
+qualitative fix. The geometric convergence of local observables
+between slits on uniform random DAGs limits all tested kernels.
