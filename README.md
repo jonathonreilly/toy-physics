@@ -180,7 +180,7 @@ The most relevant notes for that current architecture state are:
 - [ASSUMPTION_DERIVATION_LEDGER.md](/Users/jonreilly/Projects/Physics/docs/ASSUMPTION_DERIVATION_LEDGER.md)
 - [REVIEW_HARDENING_BACKLOG.md](/Users/jonreilly/Projects/Physics/docs/REVIEW_HARDENING_BACKLOG.md)
 
-The reopened-lane checklist is the current chase-to-conclusion map for the source-aware gravity side and the dense-prune fragility side. It should be treated as the place where “still live” becomes “closed” or “kept narrow.”
+The reopened-lane checklist is the current chase-to-conclusion map for the source-aware gravity side and the dense-prune fragility side. It should be treated as the place where “still live” becomes “closed” or “kept narrow.” The source-projected modular seam is now best read as a bounded modular class rather than a one-point accident, while source-resolved Green remains a narrower distance-side lead.
 
 ### 1. Effective delay structure
 

@@ -295,7 +295,7 @@ gates.
   - 5D density/connectivity rescue
   - independent robustness across families and dimensions
 - reopened-lane lane:
-  - source-projected / source-resolved gravity partial movers are live but narrow
+  - source-projected / source-resolved gravity partial movers are live but narrow; source-projected is now bounded within the modular family rather than a one-point accident
   - dense-prune gravity fragility is now a path-cancellation question, not a coarse reach question
   - local-continuation backreaction is closed as a retained lead
 

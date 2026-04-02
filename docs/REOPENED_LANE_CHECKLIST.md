@@ -7,7 +7,7 @@
 
 | Lane | Current status | End-state | Next action |
 |---|---|---|---|
-| Source-projected node field | Survives 32-seed full-control re-audit | Narrow partial mover, modular-specific | Keep as a live modular lead, but do not generalize beyond modular without new evidence |
+| Source-projected node field | Survives 32-seed full-control re-audit and bounded modular sensitivity sweep | Bounded modular partial mover | Keep as a live modular lead, but do not generalize beyond modular without new evidence |
 | Source-resolved Green | Survives distance-trend re-audit | Narrow partial mover, distance-only | Keep as a live distance-trend lead; do not promote as a gravity-law rescue |
 | Mass-path guard | Validated on dense same-graph control | Narrow positive | Chase to conclusion with path-resolved diagnostics and follow-up guard tests |
 | Path-cancellation diagnostic | Best current pruning-gravity mechanism lead | Live mechanism lead | Keep extending only if it improves explanation over the current guard |
