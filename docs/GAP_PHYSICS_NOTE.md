@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-02
 **Branch:** claude/distracted-napier
-**Status:** Complete. 8 experiments, 5 structural conclusions.
+**Status:** Complete. 13 experiments, 6 structural conclusions, 1 combined scaling law.
 
 ## Motivation
 
@@ -210,6 +210,25 @@ concentrates amplitude in channels where the phase valley is strongest.
 The gravity-decoherence trade-off is NOT a trade-off at moderate
 thresholds. Both phenomena benefit from channel concentration.
 
+### Exp 13: Layer normalization + |y|-removal — BEST COMBINED RESULT
+LN + |y|<2 removal gives the strongest scaling in the project:
+
+(1-pur_cl) = 1.26 x N^(-0.43), R²=0.860, N_half=85,571
+
+| N | LN+\|y\| pur_cl | linear pur_cl | joint seeds |
+|---|----------------|---------------|-------------|
+| 25 | 0.680 | 0.982 | 17/24 (71%) |
+| 40 | 0.744 | 0.969 | 18/24 (75%) |
+| 60 | 0.757 | 0.964 | 13/24 (54%) |
+| 100 | 0.811 | 0.973 | 15/24 (63%) |
+
+Gravity: grav_t=+3.09 at N=25, +2.17 at N=60 (significant).
+
+The two mechanisms are complementary:
+- |y|-removal creates channel separation (S_norm boosted)
+- Layer norm prevents CLT concentration
+- Together: ceiling shifted from N~150 to N~85,000
+
 ### Exp 7: Gap + intermittent normalization
 Intermittent amplitude normalization (K=5,10,20) has zero effect on
 CL bath purity. The CL bath formula uses S_norm = sum|ba-bb|^2/(NA+NB),
@@ -242,3 +261,4 @@ scaling exponent.
 | gap_local_asymmetry.py | Exp 10 |
 | gap_joint_coexistence.py | Exp 11 |
 | gap_y_removal_sweep.py | Exp 12 |
+| gap_layernorm_combined.py | Exp 13 |
