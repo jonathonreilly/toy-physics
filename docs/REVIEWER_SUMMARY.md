@@ -69,3 +69,12 @@ phenomena emerge from which architectural ingredients.
 - All retractions documented with root cause analysis
 - Fixed-mass and k=0 controls are now permanent requirements
 - PREDICTION_CARD.md lists 5 explicit falsification criteria
+
+## Known remaining confounds (flagged by review workers)
+
+- Hierarchical alpha=0.71 is exploratory (mass-position confounded)
+- Smart-prune vs adaptive-quantile comparison is trivial (same function)
+- Mass scaling on pruned graphs is not fixed-position clean
+- Modular-special predictor scan uses positive-only truncated fits
+
+These are documented here rather than promoted as retained results.
