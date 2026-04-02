@@ -35,8 +35,8 @@ from scripts.density_matrix_analysis import build_post_barrier_setup, compute_de
 BETA = 0.8
 ALPHA_SCALE = 0.5  # scales the edge angle into coupling strength
 K_BAND = [3.0, 5.0, 7.0]
-N_LIST = [8, 12, 18, 25]
-N_SEEDS = 6
+N_LIST = [8, 12, 18, 25, 40, 60, 80]
+N_SEEDS = 8
 
 
 def propagate_fresh_ancilla(positions, adj, field, src, det, k,
