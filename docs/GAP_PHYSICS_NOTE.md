@@ -136,6 +136,21 @@ shows this cannot be done via amplitude-based observables on uniform
 graphs. A different observable — perhaps topological (path connectivity,
 community structure) rather than amplitude-based — would be needed.
 
+## Additional experiments (post-synthesis)
+
+### Exp 7: Gap + intermittent normalization
+Intermittent amplitude normalization (K=5,10,20) has zero effect on
+CL bath purity. The CL bath formula uses S_norm = sum|ba-bb|^2/(NA+NB),
+which is invariant under global rescaling. The gap and intermittent
+norm operate on orthogonal aspects: gap controls which-path information,
+norm controls amplitude concentration.
+
+### Exp 8: Cylindrical gap scaling (N=12-60)
+cyl-r6 retains (1-pur_cl) floor ~0.05-0.07 vs no-gap ~0.02-0.03.
+But scaling is noisy (R²<0.35) with no clean 1/N power law on 3D
+modular DAGs. Z-leakage blocking helps the prefactor, not the
+scaling exponent.
+
 ## Scripts
 
 | Script | Experiment |
@@ -148,3 +163,5 @@ community structure) rather than amplitude-based — would be needed.
 | gap_node_persistence.py | Exp 6 |
 | gap_topology_variants.py | Exp 3 |
 | gap_codimension.py | Exp 4 |
+| gap_intermittent_norm.py | Exp 7 |
+| gap_cylindrical_scaling.py | Exp 8 |
