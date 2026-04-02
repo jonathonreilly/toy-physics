@@ -76,6 +76,30 @@ Larger gaps improve both metrics monotonically.
 Decoherence survives in 3D (modular gap=4, N=25: pur_min=0.942).
 Gravity present but weaker (signal diluted by extra dimension).
 
+### Gravity completions
+
+**Mass scaling:** delta = 0.13 × M^0.82 (alpha ≈ 1, consistent with F∝M).
+Saturates at M>8 when mass covers half the layer.
+
+**Distance scaling:** Peak deflection at b ≈ 6 (half beam width).
+Falloff: delta ~ b^(-1.93) in far field (near 1/b²).
+Zero at b = 30 (2.5× beam width).
+
+### Nonlinear propagator trade-off
+
+Three nonlinear variants tested at N=80:
+```
+Linear:         pur_min = 0.982  |I₃|/P ~ 0.4  (noisy baseline)
+Layer norm:     pur_min = 0.948  |I₃|/P = 1.0  (Born destroyed)
+Saturation:     pur_min = 0.902  |I₃|/P = 1.0  (Born destroyed)
+Phase equalize: pur_min = 0.893  |I₃|/P = 0.8  (Born ~destroyed)
+```
+
+**Fundamental trade-off:** CLT convergence produces BOTH the 1/N
+ceiling AND Born rule compliance. Breaking one breaks the other.
+Nonlinearity can lower pur_min to 0.89 at N=80 but at the cost of
+|I₃|/P → 1 (maximal Born rule violation).
+
 ## Emergence program: closed (9 approaches)
 
 | # | Approach | Type | Result |
