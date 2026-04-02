@@ -1,3 +1,59 @@
+## 2026-04-02 — Directional-measure b supply-load bridge card
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed:
+  - no detached science child was running
+- the canonical repo matched `origin/main` at `c09aba5` at loop start
+- the shared repo moved during the loop before this step was committed:
+  - local `main` picked up `517e8c8` (`feat: add topological path-count asymmetry probe`)
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics` then failed with `failure_kind = dns_failure`, so the repo stayed locally ahead
+- the shared checkout still carried unrelated live dirt in the nonlinear / gravity-design lane, so this loop stayed on clean directional-`b` files only
+- the open seam from the previous stable entry was:
+  - decompose the retained occupancy bridge `target_fill = local_target_count / mass_nodes` into raw target-band supply, source-window size, and same-side density factors on the same combined dense-family sample
+
+### What changed
+- added `scripts/directional_b_overlap_supply_load_bridge_card.py`
+- wrote:
+  - `logs/2026-04-02-directional-b-overlap-supply-load-bridge-card.txt`
+- promoted the sharpened physical translation in:
+  - `README.md`
+  - `docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- refreshed the tracked work log, runtime handoff, and automation memory to the current directional-`b` seam
+
+### Strongest confirmed conclusion
+The retained occupancy bridge now has a cleaner physical translation: overlap is governed by local source load, not by raw target-band sparsity alone.
+- portable bridge law:
+  - `mass_nodes / local_target_count >= 2.5`
+  - equivalently `target_fill <= 0.4`
+  - combined dense-family accuracy stays `0.8333` with `tp/fp/fn/tn = 23/9/1/27`
+- raw components are weaker or less transferable:
+  - `local_target_count <= 1` reaches `0.8000` combined accuracy but drops to `0.5500` on the baseline family
+  - `target_share_same_side <= 0.1` behaves the same way
+  - `mass_nodes >= 5` is too crude (`0.5667` combined accuracy)
+- key family read:
+  - the baseline `m5` corner is the decisive holdout against a raw-count story
+  - even two target-band nodes can still be overloaded once a five-node source window has to share them
+
+So the promoted gravity statement is now sharper: dense families cross into `mu <= 0` when local target-plane support fails to scale with widened source demand.
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/scripts/directional_b_overlap_supply_load_bridge_card.py`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-02-directional-b-overlap-supply-load-bridge-card.txt`
+- `/Users/jonreilly/Projects/Physics/README.md`
+- `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- keep the corrected directional propagator and retained `b -> b - h_mass` hierarchy fixed
+- replace the counted target-band supply with a continuous local density estimate from same-side spacing
+- test whether one continuous load-over-density variable preserves the `mass_nodes / local_target_count >= 2.5` bridge, especially on the baseline `m5` residual
+
+### First concrete action
+- estimate expected target-band supply from same-side local spacing on the same combined dense-family rows
+- compare `mass_nodes / expected_target_count` against both measured `source_load` and overlap / `mu`
+
 ## 2026-04-02 — Directional-measure b occupancy bridge card and state refresh
 
 ### Current state
