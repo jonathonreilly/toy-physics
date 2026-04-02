@@ -142,27 +142,37 @@ ABSENCE of nodes, not by node properties.
 
 ## What is established
 
-1. **Gravity** on uniform DAGs at N=18-40 (up to 5.1 SE). Distance
-   scaling ~1/b² in far field. Mass scaling F∝M (alpha=0.82).
-   Born rule I₃/P = 4e-16 (machine zero).
+1. **Gravity signal:** phase-induced deflection on uniform DAGs is
+   statistically real at intermediate `N` (up to `5.1 SE` on the
+   retained setups). The existence of the signal is established; the
+   exact distance-law exponent and a fixed-position mass law are not
+   yet review-safe.
 
-2. **Decoherence** at intermediate N with 1/N power-law decay
-   (linear propagator). CL bath framework validated. 14 alternative
-   architectures fail.
+2. **Linear ceiling:** on the clean random-DAG benchmarks, decoherence
+   capacity decays roughly like `1/N`. The CL bath and related purity
+   probes agree that finite-`N` gains exist, but linear path sums wash
+   out asymptotically.
 
-3. **Regulated propagator:** per-layer normalization shifts the
-   ceiling ~5x (pur_min 0.80 at N=40 vs 0.95 linear) while
-   preserving Born at machine precision. Extends effective range
-   from N~50 to N~80+.
+3. **Regulated propagator:** per-layer normalization is Born-clean on
+   the validated harness and materially shifts the finite-`N`
+   decoherence floor (`pur_min ~ 0.80` at `N=40` versus `~0.95`
+   linear).
 
-4. **Unification:** gravity + decoherence work simultaneously on
-   same graphs, same propagator. Broad parameter window.
+4. **Combined stacking:** layer norm and imposed modular topology are
+   complementary. The strongest retained finite-`N` result remains
+   `pur_min = 0.619` at `N=25`, with a clear gain still present at
+   `N=80`.
 
-5. **Ceiling:** asymptotically fundamental even with regulation.
-   Both linear and layer-norm propagators trend pur_min → 1 at
-   large N, but layer norm delays the onset.
+5. **Topology-native decoherence:** 3D topological path-count
+   asymmetry is a real graph-theoretic observable, and pruning low-
+   asymmetry nodes improves `pur_cl` through `N=60` on the original
+   setup and through `N=100` on denser graphs. The effect weakens with
+   `N`, but it is no longer just a branch-local curiosity.
 
-6. **3D:** decoherence transfers directly. Gravity present but weak.
+6. **Asymptotic limit:** all retained lanes still trend back toward
+   recoherence at large `N`. Regulation and topology shift the
+   prefactor and usable window, but they do not yet produce a clean
+   asymptotic escape.
 
 ### Combined propagator: layer norm + modular topology
 
@@ -186,45 +196,59 @@ from N≈235 to N≈1355 (6x extension).
 
 ## What is NOT established
 
-1. **Asymptotic escape** — all propagators (linear, regulated,
-   combined) show power-law decay toward pur_min=1. The exponent
-   doesn't change; only the prefactor shifts. Truly scalable
-   decoherence may require a fundamentally different mechanism.
+1. **Exact gravity law** — the current repo does not yet lock a
+   review-safe `1/b^p` distance law or a frozen-position `F(M)` law.
+   The gravity signal is real, but the force law is still the main
+   missing piece.
 
-2. **Dynamic emergence** — 9 approaches tested, all fail. The gap
-   may be a boundary condition on emergent spacetime.
+2. **Asymptotic escape** — all retained propagators and graph-side
+   improvements still decay back toward coherence. The best current
+   wins are finite-`N` and prefactor-based.
 
-3. **Continuum limit** — the power-law scaling suggests a connection
-   to decoherence rates in quantum gravity, but the formal bridge
-   is not built.
+3. **Dynamic hard geometry** — many soft emergence rules fail, and the
+   surviving topology-native lanes still work by removing or excluding
+   nodes rather than generating a hard gap from a local nucleation law.
+
+4. **Continuum bridge** — the discrete results are now quantitatively
+   sharper, but the formal bridge to continuum gravity/decoherence is
+   not built.
 
 ## Honest assessment
 
-This is a toy model with five publishable quantitative results:
+This is a toy model with a growing set of quantitative results, but the
+honest center of gravity is still “strong finite-`N` structure, missing
+force law”:
 
-1. **Gravity from phase:** deflection via phase valley mechanism,
-   5.1 SE on uniform DAGs, 1/b² distance scaling, F∝M.
+1. **Gravity from phase:** a statistically real deflection signal
+   survives on retained uniform-DAG setups, up to `5.1 SE`.
 
-2. **Decoherence from CL bath:** (1-pur_min) ~ C×N^(-0.7 to -0.9).
-   Clean mechanism (bin-resolved field contrast). R²=0.72-0.90.
+2. **Linear ceiling:** on random DAGs, decoherence capacity decays
+   approximately like `1/N`, making the washout problem quantitative.
 
-3. **Regulated propagator:** per-layer normalization is Born-clean
-   (|I₃|/P = 5e-16) and shifts the ceiling prefactor ~12x.
+3. **Born-clean regulation:** per-layer normalization preserves the
+   validated Sorkin test while materially lowering `pur_min` at finite
+   `N`.
 
-4. **Combined stacking:** layer norm + modular topology are
-   complementary. pur_min = 0.619 at N=25 (38% decoherence, 6x
-   over baseline). Effective range extends from N≈235 to N≈1355.
+4. **Stacked finite-`N` gain:** layer norm plus modular topology is the
+   strongest retained decoherence lane on disk (`pur_min = 0.619` at
+   `N=25`, still `0.852` at `N=80`).
 
-5. **Joint coexistence:** same propagator, same graphs, broad
-   parameter window. The first toy model (to our knowledge) where
-   gravity and decoherence emerge from a single discrete structure.
+5. **Topology-native emergence:** topological path-count asymmetry is a
+   real graph-theoretic route to decoherence and survives to larger `N`
+   once graph density is increased.
 
-The model's limitation is the asymptotic power-law ceiling — even
-the combined propagator decays as N^(-0.9). Truly scalable
-decoherence may require a mechanism beyond path-sum propagation
-(e.g., explicit collapse, non-unitary evolution).
+6. **Bounded coexistence:** there are real bounded windows where the
+   same discrete structure supports gravity-like deflection and
+   decoherence-like loss of purity, but the exact law-level gravity
+   story remains unresolved.
 
-The open question: does a growth law exist where nodes fail to
-nucleate in low-distinguishability regions? This is causal set
-dynamics, not parameter sweeping, and requires theoretical work
-beyond the computational program completed here.
+The model's limitation is now clearer than before: the finite-`N`
+structure is real and surprisingly rich, but the asymptotic ceiling
+and the missing clean gravity law remain central. Truly scalable
+decoherence or law-like gravity may require a deeper architecture
+beyond the current linear path-sum / imposed-geometry framework.
+
+The open question is no longer “is there any mechanism at all?” It is
+which deeper mechanism, if any, can generate hard geometry or a stable
+force law rather than merely shifting the prefactor of the existing
+ceiling.
