@@ -1,59 +1,53 @@
 # Physics Autopilot Handoff
 
-## 2026-04-02 04:45 America/New_York
+## 2026-04-02 10:57 America/New_York
 
 ### Seam class
-- directional-measure gravity `b` lane
-- overlap-onset transfer holdout restored
+- dense-prune gravity mechanism lane
+- routing/cancellation compression after `q=0.03` audits
 
 ### What this loop did
-- ran the duplicate-run guard, acquired the `physics-science` lock, and reconciled shared state before new work
-- found that the active next step already existed only as runtime artifacts:
-  - `logs/2026-04-01-directional-b-overlap-onset-transfer-holdout.txt`
-  - `scripts/__pycache__/directional_b_overlap_onset_transfer_holdout.cpython-313.pyc`
-- restored `scripts/directional_b_overlap_onset_transfer_holdout.py` so the second dense-family control is reproducible again
-- reran the restored card and wrote `logs/2026-04-02-directional-b-overlap-onset-transfer-holdout.txt`
-- updated the retained gravity wording in:
-  - `README.md`
-  - `docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
-  - `AUTOPILOT_WORKLOG.md`
-- committed the repo-facing change as:
-  - `9690d3a` (`feat(gravity): restore overlap-onset holdout`)
+- acquired the `physics-janitor` cooperative lock for a metadata-reconciliation pass
+- verified that the shared repo was already clean and synced at loop start:
+  - `main` matched `origin/main` at `6c332fc` (`feat: q=0.03 audits + worker reaudit scripts`)
+- found that the tracked handoff / work log / science memory were still advertising the older `9690d3a` directional-`b` transfer-holdout seam
+- ran `python3 scripts/base_confidence_check.py`
+  - all cheap checks passed
+- refreshed the tracked handoff and work-log narrative to the actual current science state
+- confirmed that `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` is not writable from this sandbox, so that one stale coordination file still needs an external refresh
 
 ### Current state
 - no detached science child is running
 - the lead unitary layer is unchanged:
   - corrected `1/L^p` transport
   - directional path measure `exp(-0.8×θ²)`
-- the retained gravity wording is now sharper:
-  - sparse target-band occupancy is the leading transferable overlap-onset signal
-  - spacing thresholds remain family-dependent refinements
-  - on the second dense-family holdout the best refit is:
-    - `target_fill <= 0.3333`
-    - `tp/fp/fn/tn = 14/2/1/23`
-    - accuracy `0.9250`
-- unrelated shared checkout dirt appeared during the loop in:
-  - `scripts/four_d_local_continuation_pilot.py`
-  - `scripts/local_continuation_backreaction_d050_confirm.py`
+- the active dense-prune mechanism read is now:
+  - `q=0.03` is gentler than `q=0.10`, but it still leaves gravity-sign flips at `N=80` (`3/14` seeds, `21%`)
+  - the same-graph strict joint log still shows weaker pruned gravity than baseline, so this is not a full repair
+  - mass-to-detector reach, path support, and weighted-flow diagnostics are flat across the audited flips
+  - the narrow guarded prune helps at `N=80` but still fails at `N=100`, so the vulnerable object is a routing / cancellation subset inside surviving mass-coupled paths
+- the local-continuation backreaction lane is closed:
+  - the retained `4D` pilot fails the full-sweep-positive gate for every tested depth weight
+  - combined with the `3D` `d=0.50` demotion, there is no stable positive `b` trend to carry forward there
+- the cheap confidence gate passed on this repo state
 
 ### Git / sync state
-- shared repo head is `9690d3a` (`feat(gravity): restore overlap-onset holdout`)
-- `main` is ahead of `origin/main` by 1
-- push helper failed again with a DNS error:
-  - `Could not resolve host: github.com`
-- remaining tracked dirt is runtime-only:
-  - `logs/physics_autopilot_handoff.md`
-  - plus unrelated shared edits in `scripts/four_d_local_continuation_pilot.py` and `scripts/local_continuation_backreaction_d050_confirm.py`
+- the shared repo was clean and synced at loop start:
+  - `6c332fc` on `main`, matching `origin/main`
+- this janitor pass changes coordination metadata only
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` remains stale because this sandbox cannot write it
 
 ### Strongest confirmed conclusion
-The second dense-family holdout closes the immediate mechanism-transfer seam. The old gap/span thresholds do not freeze across families (`0.8250` transfer accuracy), but sparse target-band occupancy does: overlap rows keep dramatically weaker fill (`0.196` vs `0.885`), and the holdout refit collapses mostly to the occupancy floor `target_fill <= 0.3333`.
+The active integrity point is not another gravity-transfer card. The retained mechanism seam is now much narrower: after the `q=0.03` strict joint, mechanism audit, weighted-flow audit, and flip-seed replay, the gravity fragility is still real but it does not show up in coarse reach/support/flow metrics. The honest read is that the flip lives in finer routing/cancellation structure inside the mass-coupled paths, while local-continuation backreaction is closed rather than reopened.
 
 ### Exact next step
-- keep the corrected propagator and corrected directional-`b` hierarchy fixed
-- build one bounded bridge card that compresses overlap / `mu` against a coarse occupancy variable across:
-  - the original dense-family card
-  - this second dense-family holdout
-- only widen back out if that occupancy bridge fails
+- stay on the compression / order-parameter thread
+- use the bounded replay / re-audit scripts already on disk to compress flip vs non-flip seeds into one routing/cancellation discriminator
+- keep dense laddering paused and use sparse sentinels only as guardrails unless the tracked plan explicitly reopens them
 
 ### New log paths
-- `/Users/jonreilly/Projects/Physics/logs/2026-04-02-directional-b-overlap-onset-transfer-holdout.txt`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-02-dense-prune-q003-joint-strict.txt`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-02-dense-prune-q003-mechanism-audit.txt`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-02-dense-prune-weighted-flow-audit.txt`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-02-dense-prune-flip-seed-replay.txt`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-02-four-d-local-continuation-pilot-fixed.txt`

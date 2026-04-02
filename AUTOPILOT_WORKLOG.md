@@ -1,3 +1,38 @@
+## 2026-04-02 — Janitor reconciled coordination state to q=0.03 mechanism audits
+
+### Current state
+- the shared repo was clean and synced at loop start:
+  - `main` matched `origin/main` at `6c332fc` (`feat: q=0.03 audits + worker reaudit scripts`)
+- no live science child held the cooperative lock:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` reported `free`
+- the tracked coordination state was stale:
+  - `AUTOPILOT_WORKLOG.md`, `logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` still pointed at the older `9690d3a` directional-`b` transfer-holdout step
+- the actual landed science state had moved on:
+  - `q=0.03` same-graph dense pruning still flips gravity at `N=80` on `3/14` seeds while remaining gentler than `q=0.10`
+  - coarse reach/support/weighted-flow metrics stay flat, so the surviving mechanism seam is routing / cancellation inside mass-coupled paths rather than raw connectivity collapse
+  - the `4D` local-continuation pilot fails every tested depth weight, so together with the `3D` `d=0.50` demotion that architecture is now closed
+
+### What changed
+- acquired the `physics-janitor` lock and reran the protocol sync checks against the canonical repo
+- ran `python3 scripts/base_confidence_check.py`
+  - all cheap checks passed
+- repaired the tracked work-log / handoff narrative so it reflects the real `q=0.03` mechanism-audit state instead of the stale directional-`b` transfer seam
+- refreshed `/Users/jonreilly/.codex/automations/physics-janitor/memory.md`
+- confirmed that `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` is still not writable from this sandbox, so that file remains stale until a context with access refreshes it
+
+### Strongest confirmed conclusion
+The integrity issue was stale coordination metadata, not broken code. The actual active thread is the dense-prune mechanism compression lane: `q=0.03` preserves the gentler same-graph prune but still leaves `N=80` gravity flips (`3/14` seeds), the guarded prune helps only partially, and the coarse reach/flow diagnostics remain flat. So the honest next science step is still a bounded routing/cancellation order-parameter compression pass, while local-continuation backreaction is closed rather than reopened.
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-janitor/memory.md`
+
+### Exact next step
+- stay on the compression / order-parameter thread
+- use the existing `q=0.03` replay and re-audit scripts to compress the flip subpopulation into one bounded routing/cancellation discriminator
+- keep dense laddering paused and treat sparse sentinels as guardrails only unless the tracked plan explicitly reopens them
+
 ## 2026-04-02 — Directional-measure b overlap-onset transfer holdout restored
 
 ### Current state

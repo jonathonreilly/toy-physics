@@ -307,7 +307,7 @@ just polishing the current repo.
 
 The current reopened lanes and their status are tracked in:
 
-- [REOPENED_LANES_CHECKLIST.md](/Users/jonreilly/Projects/Physics/docs/REOPENED_LANES_CHECKLIST.md)
+- [REOPENED_LANE_CHECKLIST.md](/Users/jonreilly/Projects/Physics/docs/REOPENED_LANE_CHECKLIST.md)
 
 Use that note as the explicit chase-to-conclusion list for:
 

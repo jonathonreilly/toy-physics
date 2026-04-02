@@ -1,26 +1,23 @@
 #!/usr/bin/env python3
-"""Source-projected stability map on the retained 3D modular family.
+"""Strict head-to-head on the retained 3D modular source-aware lanes.
 
-Question
---------
-Is the source-projected node-field lane a robust modular regime, or only a
-small parameter pocket? This map sweeps the two main source-projected controls:
-
-  - strength
-  - eps
-
-under the current control-clean standard:
-  - retained 3D modular DAGs only (gap=3.0)
-  - fixed graph geometry per seed
+This comparison keeps the control discipline aligned with the current review
+standard:
+  - retained 3D modular family only (gap=3.0)
+  - same graph geometry per seed
   - fixed mass count across the b sweep
   - fixed b across the mass sweep
-  - larger seed count than the original pilot
+  - 32 seeds
   - full-sweep-positive fit gate before reporting a power-law exponent
 
-The goal is narrow: determine whether the negative-b + positive-M result is
-robust across a bounded region, or whether it collapses to a narrow pocket.
+Modes compared:
+  - Laplacian baseline
+  - source-resolved Green
+  - source-projected node field
+  - one bounded additive combination (Laplacian + projected mix=0.25)
 
-PStack experiment: source-projected-stability-map
+The goal is narrow: rank the surviving gravity-side partial movers without
+mixing in stale pilot gates or positive-only fit truncation.
 """
 
 from __future__ import annotations
@@ -34,6 +31,7 @@ from collections import defaultdict
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 
+from scripts.hybrid_field_reaudit import field_laplacian  # type: ignore  # noqa: E402
 from scripts.source_projected_field_reaudit import (  # type: ignore  # noqa: E402
     GAP,
     K_BAND,
@@ -53,13 +51,11 @@ from scripts.source_resolved_green_pilot import (  # type: ignore  # noqa: E402
     generate_3d_modular_dag,
     propagate,
 )
+from scripts.source_resolved_green_reaudit import field_source_resolved_green  # type: ignore  # noqa: E402
 
 
 N_SEEDS = 32
-STRENGTHS = (0.04, 0.08, 0.12, 0.16)
-EPS_VALUES = (0.25, 0.50, 1.00, 2.00)
-DEFAULT_STRENGTH = 0.08
-DEFAULT_EPS = 0.50
+MIX = 0.25
 
 
 def _mean(values: list[float]) -> float:
@@ -127,10 +123,9 @@ def _paired_delta(
     src: list[int],
     det_list: list[int],
     mass_nodes: list[int],
-    strength: float,
-    eps: float,
+    field_fn,
 ) -> float | None:
-    field_with = field_source_projected(positions, adj, mass_nodes, strength=strength, eps=eps)
+    field_with = field_fn(positions, adj, mass_nodes)
     field_without = [0.0] * len(positions)
     deltas = []
     for k in K_BAND:
@@ -143,7 +138,7 @@ def _paired_delta(
     return _mean(deltas) if deltas else None
 
 
-def _measure_combo(strength: float, eps: float) -> dict[str, object]:
+def _measure_mode(label: str, field_fn) -> dict[str, object]:
     by_b: dict[float, list[float]] = {b: [] for b in TARGET_BS}
     by_m: dict[int, list[float]] = {m: [] for m in MASS_COUNTS}
     valid_seeds = 0
@@ -175,7 +170,7 @@ def _measure_combo(strength: float, eps: float) -> dict[str, object]:
             )
             if len(mass_nodes) != MASS_COUNT_FIXED:
                 continue
-            delta = _paired_delta(positions, adj, src, det_list, mass_nodes, strength, eps)
+            delta = _paired_delta(positions, adj, src, det_list, mass_nodes, field_fn)
             if delta is not None:
                 by_b[b].append(delta)
 
@@ -185,7 +180,7 @@ def _measure_combo(strength: float, eps: float) -> dict[str, object]:
         if len(ranked) == max(MASS_COUNTS):
             for m in MASS_COUNTS:
                 mass_nodes = ranked[:m]
-                delta = _paired_delta(positions, adj, src, det_list, mass_nodes, strength, eps)
+                delta = _paired_delta(positions, adj, src, det_list, mass_nodes, field_fn)
                 if delta is not None:
                     by_m[m].append(delta)
 
@@ -196,8 +191,7 @@ def _measure_combo(strength: float, eps: float) -> dict[str, object]:
     m_alpha, m_r2 = (m_fit[0], m_fit[2]) if m_fit else (None, None)
 
     return {
-        "strength": strength,
-        "eps": eps,
+        "label": label,
         "valid_seeds": valid_seeds,
         "b_alpha": b_alpha,
         "b_r2": b_r2,
@@ -208,82 +202,79 @@ def _measure_combo(strength: float, eps: float) -> dict[str, object]:
     }
 
 
+def _field_combo(positions, adj, mass_nodes):
+    lap = field_laplacian(positions, adj, mass_nodes)
+    proj = field_source_projected(positions, adj, mass_nodes)
+    return [(1.0 - MIX) * l + MIX * p for l, p in zip(lap, proj)]
+
+
 def _fmt(val: float | None, width: int = 8) -> str:
     if val is None:
         return f"{'NA':>{width}s}"
     return f"{val:+{width}.3f}"
 
 
+def _verdict(row: dict[str, object]) -> str:
+    b_alpha = row["b_alpha"]
+    m_alpha = row["m_alpha"]
+    if b_alpha is not None and m_alpha is not None and b_alpha < 0 and m_alpha > 0:
+        return "stable"
+    if b_alpha is not None and b_alpha < 0:
+        return "b-only"
+    return "fail"
+
+
 def main() -> None:
-    print("=" * 100)
-    print("SOURCE-PROJECTED STABILITY MAP")
+    print("=" * 102)
+    print("SOURCE-AWARE HEAD-TO-HEAD")
     print("  retained 3D modular family: gap=3.0")
     print(f"  seeds={N_SEEDS}, full-sweep-positive gate")
-    print(f"  strength sweep={STRENGTHS}")
-    print(f"  eps sweep={EPS_VALUES}")
-    print("=" * 100)
+    print("  modes: Laplacian, source-resolved Green, source-projected, Laplacian+projected mix=0.25")
+    print("=" * 102)
     print()
 
-    rows: list[dict[str, object]] = []
-    for eps in EPS_VALUES:
-        for strength in STRENGTHS:
-            rows.append(_measure_combo(strength, eps))
+    rows = [
+        _measure_mode("Laplacian", field_laplacian),
+        _measure_mode("Source-resolved Green", field_source_resolved_green),
+        _measure_mode("Source-projected", field_source_projected),
+        _measure_mode("Combo mix=0.25", _field_combo),
+    ]
 
     print(
-        f"{'strength':>8s}  {'eps':>5s}  {'valid':>5s}  "
-        f"{'b_alpha':>8s}  {'b_R2':>6s}  {'M_alpha':>8s}  {'M_R2':>6s}  verdict"
+        f"{'mode':>22s}  {'valid':>5s}  {'b_alpha':>8s}  {'b_R2':>6s}  "
+        f"{'M_alpha':>8s}  {'M_R2':>6s}  verdict"
     )
     print(f"{'-' * 92}")
 
-    stable_rows = []
-    distance_only_rows = []
+    ranked_rows = []
     for row in rows:
-        strength = row["strength"]
-        eps = row["eps"]
-        valid = row["valid_seeds"]
-        b_alpha = row["b_alpha"]
-        b_r2 = row["b_r2"]
-        m_alpha = row["m_alpha"]
-        m_r2 = row["m_r2"]
-
-        if b_alpha is not None and m_alpha is not None and b_alpha < 0 and m_alpha > 0:
-            verdict = "stable"
-            stable_rows.append(row)
-        elif b_alpha is not None and b_alpha < 0:
-            verdict = "b-only"
-            distance_only_rows.append(row)
-        else:
-            verdict = "fail"
-
+        verdict = _verdict(row)
+        ranked_rows.append((verdict, row))
         print(
-            f"{strength:8.2f}  {eps:5.2f}  {valid:5d}  "
-            f"{_fmt(b_alpha)}  {_fmt(b_r2, 6)}  {_fmt(m_alpha)}  {_fmt(m_r2, 6)}  {verdict}"
+            f"{row['label']:>22s}  {row['valid_seeds']:5d}  "
+            f"{_fmt(row['b_alpha'])}  {_fmt(row['b_r2'], 6)}  "
+            f"{_fmt(row['m_alpha'])}  {_fmt(row['m_r2'], 6)}  {verdict}"
         )
 
     print()
-    if stable_rows:
-        best = min(stable_rows, key=lambda r: (r["b_alpha"], -r["m_alpha"]))
-        print("BEST STABLE REGION")
+    print("RANKING")
+    def sort_key(item):
+        verdict, row = item
+        b_alpha = row["b_alpha"] if row["b_alpha"] is not None else 999.0
+        m_alpha = row["m_alpha"] if row["m_alpha"] is not None else -999.0
+        return (0 if verdict == "stable" else 1 if verdict == "b-only" else 2, b_alpha, -m_alpha)
+
+    for idx, (verdict, row) in enumerate(sorted(ranked_rows, key=sort_key), start=1):
         print(
-            f"  strength={best['strength']:.2f}, eps={best['eps']:.2f}, "
-            f"b alpha={best['b_alpha']:+.3f}, M alpha={best['m_alpha']:+.3f}, "
-            f"R^2=({best['b_r2']:.3f}, {best['m_r2']:.3f})"
+            f"  {idx}. {row['label']}: {verdict}, "
+            f"b alpha={_fmt(row['b_alpha'])}, M alpha={_fmt(row['m_alpha'])}"
         )
-    elif distance_only_rows:
-        best = min(distance_only_rows, key=lambda r: r["b_alpha"])
-        print("BEST DISTANCE-ONLY REGION")
-        print(
-            f"  strength={best['strength']:.2f}, eps={best['eps']:.2f}, "
-            f"b alpha={best['b_alpha']:+.3f}, M alpha={best['m_alpha'] if best['m_alpha'] is not None else 'NA'}"
-        )
-    else:
-        print("NO NEGATIVE-b REGION SURVIVED")
 
     print()
-    print("REVIEW-SAFE INTERPRETATION")
-    print("  Treat the source-projected lane as a bounded modular partial mover only if")
-    print("  the stable region above is non-empty. Otherwise it is a narrow pocket.")
-    print("=" * 100)
+    print("REVIEW-SAFE TAKEAWAY")
+    print("  Use the ranking above as the current order of surviving source-aware partial movers.")
+    print("  Keep anything that is only b-only or modular-specific narrow until a new mechanism changes the result.")
+    print("=" * 102)
 
 
 if __name__ == "__main__":
