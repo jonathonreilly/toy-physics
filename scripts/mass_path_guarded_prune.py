@@ -27,6 +27,7 @@ BETA = 0.8
 K_BAND = (3.0, 5.0, 7.0)
 N_YBINS = 8
 LAM = 10.0
+Q_LIST = (0.05, 0.10)
 
 
 def gen_dense_3d(n_layers=80, npl=60, yz_range=12.0, r=2.7, rng_seed=42):
@@ -291,15 +292,16 @@ def main():
 
     for nl in [80, 100]:
         print(f"  N={nl}")
-        print(f"  {'mode':>25s}  {'grav_b':>7s}  {'grav_p':>7s}  "
+        print(f"  {'mode':>25s}  {'q':>5s}  {'grav_b':>7s}  {'grav_p':>7s}  "
               f"{'pur_b':>6s}  {'pur_p':>6s}  {'flips':>5s}  {'n':>3s}")
-        print(f"  {'-'*60}")
-        for label, guarded in [("Plain adaptive q=0.10", False),
-                                ("Mass-path guarded q=0.10", True)]:
-            r = same_graph_joint(nl, 0.10, guarded, n_seeds=16)
-            print(f"  {label:>25s}  {r['grav_base']:+7.3f}  {r['grav_prune']:+7.3f}  "
-                  f"{r['pur_base']:6.4f}  {r['pur_prune']:6.4f}  "
-                  f"{r['grav_flip_count']:5d}  {r['n']:3d}")
+        print(f"  {'-'*68}")
+        for q in Q_LIST:
+            for label, guarded in [("Plain adaptive", False),
+                                    ("Mass-path guarded", True)]:
+                r = same_graph_joint(nl, q, guarded, n_seeds=16)
+                print(f"  {label:>25s}  {q:5.2f}  {r['grav_base']:+7.3f}  {r['grav_prune']:+7.3f}  "
+                      f"{r['pur_base']:6.4f}  {r['pur_prune']:6.4f}  "
+                      f"{r['grav_flip_count']:5d}  {r['n']:3d}")
         print()
 
     print("=" * 70)
