@@ -100,6 +100,30 @@ It is only saying:
 - future writeups should name them explicitly
 - doing so will make the project feel less insular and more review-ready
 
+## New results that sharpen the positioning (2026-04-01 session)
+
+### Dimensional progression
+Mass scaling exponent increases with spatial dimension: threshold (2D)
+→ alpha~0.58 converged (3D) → positive but parameter-sensitive (4D).
+This connects to CDT / Regge literature on how discrete models recover
+dimensional behavior. The 3D continuum limit is the strongest bridge.
+
+### Cross-family robustness
+Gravity + decoherence work on 4 of 5 tested 3D graph families
+(modular, hierarchical, uniform, not preferential-attachment).
+Addresses the "one-family artifact" critique. The hub-concentration
+exception is informative: gravity needs distributed path diversity.
+
+### Falsification criteria
+PREDICTION_CARD.md lists 5 explicit falsification criteria. The k=0
+control (gravity vanishes without phase) connects to quantum-measure
+distinction between physical interference and trivial amplitude bias.
+
+### Distance law as structural result
+b-independence derived and closed across 9+ avenues. Connects to
+CDT/Regge question: what discrete structures recover continuum force
+laws? Answer: linear path-sum on random DAGs does not.
+
 ## Most useful next citations / comparisons to add later
 
 If this becomes a paper or formal note, the most useful comparison targets are likely:
