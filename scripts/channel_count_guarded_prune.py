@@ -184,7 +184,7 @@ def main():
     print("=" * 74)
     print()
 
-    for nl in [80, 100]:
+    for nl in [80, 100, 120]:
         print(f"  N={nl}")
         print(f"  {'mode':>30s}  {'grav_b':>7s}  {'grav_p':>7s}  "
               f"{'pur_b':>6s}  {'pur_p':>6s}  {'eff_b':>5s}  {'eff_p':>5s}  "
