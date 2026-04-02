@@ -150,9 +150,11 @@ ABSENCE of nodes, not by node properties.
 
 ## What is established
 
-1. **Gravity** on uniform DAGs at N=18-40 (up to 5.1 SE). Distance
-   scaling ~1/b² in far field. Mass scaling F∝M (alpha=0.82).
-   Born rule I₃/P = 4e-16 (machine zero).
+1. **Gravity** on uniform DAGs at N=18-40 is statistically real (up to
+   5.1 SE). Controlled reruns retain a peaked distance response with a
+   falling tail and a positive sublinear fixed-anchor mass window, but
+   not yet a locked exact force law. Born rule I₃/P = 4e-16 (machine
+   zero) on the validated linear harness.
 
 2. **Decoherence** at intermediate N with 1/N power-law decay
    (linear propagator). CL bath framework validated. 14 alternative
@@ -163,14 +165,21 @@ ABSENCE of nodes, not by node properties.
    preserving Born at machine precision. Extends effective range
    from N~50 to N~80+.
 
-4. **Unification:** gravity + decoherence work simultaneously on
-   same graphs, same propagator. Broad parameter window.
+4. **Unification:** gravity + decoherence coexist on retained bounded
+   lanes with the same graph families and propagators, including the
+   strongest finite-`N` regulated/topology-stacked pockets.
 
-5. **Ceiling:** asymptotically fundamental even with regulation.
+5. **Topology-native hard geometry:** 3D path-count asymmetry and
+   generated asymmetry-persistence rules now both give real bounded
+   decoherence gains. On dense `N=80-100` generated graphs, the
+   persistence rule plus layer norm improves both `pur_cl` and
+   `pur_min` while keeping corrected Born at machine precision.
+
+6. **Ceiling:** asymptotically fundamental even with regulation.
    Both linear and layer-norm propagators trend pur_min → 1 at
    large N, but layer norm delays the onset.
 
-6. **3D:** decoherence transfers directly. Gravity present but weak.
+7. **3D:** decoherence transfers directly. Gravity present but weak.
 
 ### Combined propagator: layer norm + modular topology
 
@@ -271,13 +280,16 @@ with system size. Extrapolation: 30% at N=200, 37% at N=500.
 
 ## Honest assessment
 
-This is a toy model with six publishable quantitative results:
+This is a toy model with several publishable quantitative results:
 
-1. **Gravity from phase:** deflection via phase valley mechanism,
-   5.1 SE on uniform DAGs, 1/b² distance scaling, F∝M.
+1. **Gravity from phase:** a real deflection signal via the phase-valley
+   mechanism, up to 5.1 SE on retained uniform-DAG setups. The signal is
+   established; the exact force law is still being cleaned up.
 
-2. **Decoherence from CL bath:** (1-pur_min) ~ C×N^(-0.7 to -0.9).
-   Clean mechanism (bin-resolved field contrast). R²=0.72-0.90.
+2. **Decoherence scaling:** the clean linear benchmark dies roughly like
+   `1/N`, and the best bounded regulation/geometry lanes shift the
+   prefactor and usable window without yet escaping recoherence
+   asymptotically.
 
 3. **Regulated propagator:** per-layer normalization is Born-clean
    (|I₃|/P = 5e-16) and shifts the ceiling prefactor ~12x.
