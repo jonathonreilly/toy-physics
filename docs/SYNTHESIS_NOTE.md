@@ -164,45 +164,65 @@ ABSENCE of nodes, not by node properties.
 
 6. **3D:** decoherence transfers directly. Gravity present but weak.
 
+### Combined propagator: layer norm + modular topology
+
+The two mechanisms STACK (attack different aspects of CLT):
+```
+                          N=25    N=40    N=80    pur_min=0.99 at
+Linear + uniform:         0.958   0.953   0.982   N ≈ 235
+LayerNorm + uniform:      0.811   0.801   0.948   —
+Linear + modular gap=4:   0.942   0.933   0.951   —
+LayerNorm + gap=2:        0.619   0.769   0.852   N ≈ 1355
+LayerNorm + gap=4:        0.704   0.805   0.878   N ≈ 6188
+```
+
+**pur_min = 0.619 at N=25** (38% decoherence) is the strongest
+ever measured — 6x over baseline. Born = 5e-16 (machine zero).
+
+Scaling law: (1-pur_min) = C × N^(-alpha) for all configs.
+Exponents similar (~0.7-0.9) but prefactors differ by 12x.
+The combined propagator extends the model's effective range
+from N≈235 to N≈1355 (6x extension).
+
 ## What is NOT established
 
-1. **Asymptotic escape** — even the regulated propagator shows
-   ceiling return at N=80+. Whether any Born-preserving modification
-   can achieve truly scalable decoherence is unknown.
+1. **Asymptotic escape** — all propagators (linear, regulated,
+   combined) show power-law decay toward pur_min=1. The exponent
+   doesn't change; only the prefactor shifts. Truly scalable
+   decoherence may require a fundamentally different mechanism.
 
 2. **Dynamic emergence** — 9 approaches tested, all fail. The gap
    may be a boundary condition on emergent spacetime.
 
-3. **Layer norm + modular combined** — the two improvements
-   (topology and regulation) haven't been tested together yet.
-
-4. **Continuum limit** — the 1/N scaling suggests a connection to
-   decoherence rates in quantum gravity, but the formal bridge
+3. **Continuum limit** — the power-law scaling suggests a connection
+   to decoherence rates in quantum gravity, but the formal bridge
    is not built.
 
 ## Honest assessment
 
-This is a toy model with four publishable quantitative results:
+This is a toy model with five publishable quantitative results:
 
 1. **Gravity from phase:** deflection via phase valley mechanism,
    5.1 SE on uniform DAGs, 1/b² distance scaling, F∝M.
 
-2. **Decoherence from CL bath:** (1-pur_min) ~ 1/N with R²=0.83.
-   Clean mechanism (bin-resolved field contrast).
+2. **Decoherence from CL bath:** (1-pur_min) ~ C×N^(-0.7 to -0.9).
+   Clean mechanism (bin-resolved field contrast). R²=0.72-0.90.
 
 3. **Regulated propagator:** per-layer normalization is Born-clean
-   and shifts the decoherence ceiling ~5x. First Born-preserving
-   modification that substantially improves decoherence on these
-   graphs.
+   (|I₃|/P = 5e-16) and shifts the ceiling prefactor ~12x.
 
-4. **Joint coexistence:** same propagator, same graphs, broad
+4. **Combined stacking:** layer norm + modular topology are
+   complementary. pur_min = 0.619 at N=25 (38% decoherence, 6x
+   over baseline). Effective range extends from N≈235 to N≈1355.
+
+5. **Joint coexistence:** same propagator, same graphs, broad
    parameter window. The first toy model (to our knowledge) where
    gravity and decoherence emerge from a single discrete structure.
 
-The model's limitation is the asymptotic ceiling — even with
-regulation, decoherence is a finite-size effect. This is consistent
-with the model being a toy (path-sum without collapse) rather than
-a fundamental theory.
+The model's limitation is the asymptotic power-law ceiling — even
+the combined propagator decays as N^(-0.9). Truly scalable
+decoherence may require a mechanism beyond path-sum propagation
+(e.g., explicit collapse, non-unitary evolution).
 
 The open question: does a growth law exist where nodes fail to
 nucleate in low-distinguishability regions? This is causal set
