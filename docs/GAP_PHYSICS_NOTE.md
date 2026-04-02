@@ -88,7 +88,7 @@ do not break the effect.
 the best decoherence. Larger exclusion volume helps. Z-leakage
 is real but modest.
 
-## Five structural conclusions
+## Six structural conclusions
 
 ### 1. The gap is about node absence
 Edge suppression (cross-channel penalty) does not change S_norm.
@@ -115,6 +115,13 @@ cross-channel amplitude leakage.
 Filling the gap with nodes produces smooth pur_cl increase with no
 sharp transition. The gap is a quantitative mechanism: more gap
 means more decoherence.
+
+### 6. Gravity and decoherence co-improve under moderate removal
+Removing nodes near y=0 (|y|<1.5 to |y|<3) simultaneously strengthens
+both gravity (grav_t rises from +1.6 to +3.7 at N=80) and decoherence
+(pur_cl drops from 0.979 to 0.962). The amplitude concentration in
+channels helps the phase-valley mechanism. Only excessive removal
+(|y|<4, 33% nodes) weakens gravity from connectivity loss.
 
 ## Implications for the project
 
@@ -184,6 +191,25 @@ asymmetry) requires non-local information. No local self-maintenance
 rule can replicate it because the which-path distinction is determined
 by the non-local barrier/slit structure.
 
+### Exp 11: Joint gravity+decoherence coexistence (24 seeds)
+|y|<2 removal gives the best joint coexistence at N=80:
+grav_t=+3.65, pur_cl=0.963, 9/24 seeds with both positive gravity
+and pur_cl<0.98. k=0 control passes at all N.
+
+### Exp 12: |y|-removal threshold sweep
+Full sweep |y|<{0.5..4.0} at N=25..100. Key finding: **gravity and
+decoherence improve simultaneously** up to |y|<3.0. Removal
+concentrates amplitude in channels where the phase valley is strongest.
+
+| N | best thresh | grav_t | pur_cl | joint |
+|---|------------|--------|--------|-------|
+| 40 | 4.0 | +2.64 | 0.943 | 9/24 |
+| 60 | 4.0 | +2.93 | 0.971 | 10/24 |
+| 80 | 3.0 | +3.26 | 0.968 | 10/24 |
+
+The gravity-decoherence trade-off is NOT a trade-off at moderate
+thresholds. Both phenomena benefit from channel concentration.
+
 ### Exp 7: Gap + intermittent normalization
 Intermittent amplitude normalization (K=5,10,20) has zero effect on
 CL bath purity. The CL bath formula uses S_norm = sum|ba-bb|^2/(NA+NB),
@@ -214,3 +240,5 @@ scaling exponent.
 | gap_topological_asymmetry.py | Exp 9 |
 | gap_pathcount_large_n.py | Exp 9b |
 | gap_local_asymmetry.py | Exp 10 |
+| gap_joint_coexistence.py | Exp 11 |
+| gap_y_removal_sweep.py | Exp 12 |
