@@ -272,7 +272,8 @@ Why it matters:
 2. 5D dense robustness map
 3. analytic / architectural distance-law note
 4. bounded evolving-network dynamics prototype
-5. any causal-field follow-up under fixed-mass / fixed-geometry controls only
+5. mass-coupling / path-cancellation audit for dense-prune gravity fragility
+6. any causal-field follow-up under fixed-mass / fixed-geometry controls only
 
 The assumption ledger and literature-positioning note are already the first step toward this harder backlog.
 
@@ -293,7 +294,25 @@ gates.
   - continuum / asymptotic bridge
   - 5D density/connectivity rescue
   - independent robustness across families and dimensions
+- reopened-lane lane:
+  - source-projected / source-resolved gravity partial movers are live but narrow
+  - dense-prune gravity fragility is now a path-cancellation question, not a coarse reach question
+  - local-continuation backreaction is closed as a retained lead
 
 So the project should not act as if "one more nice run" is enough. What gets
 the mainstream-readiness score over `9` is crossing several of these gates, not
 just polishing the current repo.
+
+## Reopened lanes checklist
+
+The current reopened lanes and their status are tracked in:
+
+- [REOPENED_LANES_CHECKLIST.md](/Users/jonreilly/Projects/Physics/docs/REOPENED_LANES_CHECKLIST.md)
+
+Use that note as the explicit chase-to-conclusion list for:
+
+- source-projected field
+- source-resolved Green
+- dense-prune gravity fragility
+- gravity/decoherence correlation
+- 5D joint coverage

@@ -176,8 +176,11 @@ The most relevant notes for that current architecture state are:
 - [IF_PROGRAM_CLOSING_NOTE.md](/Users/jonreilly/Projects/Physics/docs/IF_PROGRAM_CLOSING_NOTE.md)
 - [CLAIM_AUDIT_NOTE_2026-04-01.md](/Users/jonreilly/Projects/Physics/docs/CLAIM_AUDIT_NOTE_2026-04-01.md)
 - [ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md](/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md)
+- [REOPENED_LANE_CHECKLIST.md](/Users/jonreilly/Projects/Physics/docs/REOPENED_LANE_CHECKLIST.md)
 - [ASSUMPTION_DERIVATION_LEDGER.md](/Users/jonreilly/Projects/Physics/docs/ASSUMPTION_DERIVATION_LEDGER.md)
 - [REVIEW_HARDENING_BACKLOG.md](/Users/jonreilly/Projects/Physics/docs/REVIEW_HARDENING_BACKLOG.md)
+
+The reopened-lane checklist is the current chase-to-conclusion map for the source-aware gravity side and the dense-prune fragility side. It should be treated as the place where “still live” becomes “closed” or “kept narrow.”
 
 ### 1. Effective delay structure
 
