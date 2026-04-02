@@ -36,9 +36,11 @@ N=60: delta/SE = 0.5  (lost to CLT)
 
 Gravity does NOT require channel separation. Signal peaks at N=30.
 
-**Distance scaling:** delta peaks at b ≈ 6 (half beam width),
-falloff in far field: delta ~ b^(-1.93) (near 1/b²).
-At b = 30: delta ≈ 0 (gravity vanishes at 2.5× beam width).
+**Controlled distance response:** on fixed-geometry reruns, the
+deflection is peaked rather than monotone, with the cleanest retained
+tail fit behaving like `delta ~ b^(-1.545)` (`R^2 = 0.943`) over the
+review-safe far-field window. The existence of a falling tail is
+established; the exact exponent is not yet locked.
 
 ### Decoherence (24 seeds)
 
@@ -78,12 +80,18 @@ Gravity present but weaker (signal diluted by extra dimension).
 
 ### Gravity completions
 
-**Mass scaling:** delta = 0.13 × M^0.82 (alpha ≈ 1, consistent with F∝M).
-Saturates at M>8 when mass covers half the layer.
+The stronger old law-like summaries were narrowed by the controlled
+cleanup sweeps:
 
-**Distance scaling:** Peak deflection at b ≈ 6 (half beam width).
-Falloff: delta ~ b^(-1.93) in far field (near 1/b²).
-Zero at b = 30 (2.5× beam width).
+- **Distance response:** fixed-geometry runs show a real peaked signal
+  with a falling tail; the best 24-seed tail fit is
+  `delta ~ b^(-1.545)` (`R^2 = 0.943`).
+- **Mass scaling:** fixed-anchor reruns show a real positive but
+  sublinear window, `delta ~ 0.2872 × M^(0.678)` (`R^2 = 0.954`) on the
+  clean retained mass range.
+
+So the gravity signal is established, but a review-safe exact force law
+is still the main missing piece.
 
 ### Regulated propagator (per-layer normalization)
 
@@ -191,10 +199,36 @@ ever measured. Born = 5e-16 (machine zero).
 | 60 | 0.972 | **0.861** | 0.786 |
 | 100 | 0.986 | **0.892** | 0.897 |
 
-Gravity survives on combined propagator:
+Gravity survives on the combined propagator, but in a pocketed rather
+than uniform way:
   LN+gap=4, N=50: delta=+1.57 (3.4 SE)
 
+The decoherence-side scaling law is the strongest clean fit in the
+program, but the gravity significance is not uniformly strong across the
+entire `N=25..100` sweep.
+
 Effective range: pur_min=0.90 at N≈101, pur_min=0.99 at N≈1375.
+
+### Best geometry lanes head-to-head
+
+On matched seeds and matched layernorm readout (`16` seeds,
+`npl=25`, `y_range=12`, `r=3.0`), no single hard-geometry lane wins at
+every `N`:
+
+- **`N=25`**: imposed modular gap is strongest on decoherence
+  (`gap=2 -> pur_min 0.619`).
+- **`N=40`**: simple central-band removal is best jointly
+  (`|y-center|<2 -> pur_min 0.736`, gravity `+1.664`, `g/SE = +2.0`).
+- **`N=60`**: modular gap=4 is strongest in the matched comparison
+  (`pur_min 0.769`, gravity `+0.819`, `g/SE = +1.9`).
+- **`N=80-100`**: central-band removal stays competitive and often has
+  cleaner positive gravity, while modular gap=2 keeps a slight edge on
+  decoherence at `N=80`.
+
+So the safe current picture is that both imposed modular gaps and
+minimal central-band removal are real bounded geometry lanes; the
+central-band rule is not a clear across-the-board winner, but it is a
+serious competing hard-geometry mechanism.
 
 ### Stochastic collapse: positive scaling exponent
 
