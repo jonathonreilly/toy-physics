@@ -1,3 +1,62 @@
+## 2026-04-02 — Directional-measure b continuous-density bridge card
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed:
+  - no detached science child was running
+- the canonical repo was already ahead of `origin/main` at loop start:
+  - `main` HEAD was `2997a01` (`feat: add asymmetry joint card and tighten synthesis`)
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics` failed again with `failure_kind = dns_failure`, so remote reconciliation was not available before new science
+- the shared checkout still carried unrelated live dirt in the topological-pathcount / gravity-design lane, so this loop stayed on clean directional-`b` files only
+- the open seam from the previous stable entry was:
+  - replace counted target-band supply with a continuous local density estimate from same-side spacing on the same combined dense-family sample
+  - test whether one continuous load-over-density variable preserves the retained supply-load bridge, especially on the baseline `m5` residual
+
+### What changed
+- added `scripts/directional_b_overlap_continuous_density_bridge_card.py`
+- wrote:
+  - `logs/2026-04-02-directional-b-continuous-density-bridge-card.txt`
+- promoted the stronger continuous-density translation in:
+  - `README.md`
+  - `docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- refreshed the tracked work log, runtime handoff, and automation memory to the current directional-`b` seam
+
+### Strongest confirmed conclusion
+The retained directional-`b` supply law now has a bounded continuous translation from same-side spacing, not just a counted occupancy version.
+- best continuous bridge:
+  - estimate target-plane support from the fourth-nearest same-side node radius:
+    - `expected_target_count_4nn = 4 / r4`
+  - the best bounded load-over-density law is:
+    - `mass_nodes / expected_target_count_4nn >= 2.7354`
+  - combined dense-family performance:
+    - `tp/fp/fn/tn = 21/2/3/34`
+    - accuracy `0.9167`
+- comparison to the previous counted law:
+  - `mass_nodes / local_target_count >= 2.5` reached `0.8333` combined accuracy
+  - the 4-NN bridge lifts both baseline dense families from `0.7000` to `0.9000`
+- physical read:
+  - the counted target-band law is now best read as a coarse discretization of a smoother local target-plane density law
+  - the baseline `m5` residual was not a failure of the supply picture, but a sign that discrete target counts were too coarse to represent continuous same-side packing
+
+So the promoted gravity statement is now sharper again: dense families cross into `mu <= 0` when widened source demand outruns a continuous local target-plane density scale, not merely when the counted target band looks sparse.
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/scripts/directional_b_overlap_continuous_density_bridge_card.py`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-02-directional-b-continuous-density-bridge-card.txt`
+- `/Users/jonreilly/Projects/Physics/README.md`
+- `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- keep the corrected directional propagator and retained `b -> b - h_mass` hierarchy fixed
+- freeze the continuous bridge `mass_nodes / expected_target_count_4nn >= 2.7354`
+- test whether that same 4-NN density-load law survives one additional non-overlapping control or asymptotic bridge without refitting the threshold
+
+### First concrete action
+- run the frozen `expected_target_count_4nn = 4 / r4` bridge on one tree-like control or one additional dense-family sentinel
+- compare the residuals directly against `mu = edge_b / h_mass` to see whether the remaining misses are geometry effects or density-estimation effects
+
 ## 2026-04-02 — Directional-measure b supply-load bridge card
 
 ### Current state
