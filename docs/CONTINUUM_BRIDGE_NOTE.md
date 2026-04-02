@@ -86,15 +86,22 @@ was never there.
 | Adaptive quantile (3D hierarchical) | **N=80** | delta=-0.023 |
 | Imposed modular gap | N=80 (3D), N=100 (4D) | Stable in range |
 
-**Updated verdict: PARTIALLY SURVIVES through N=80.** The adaptive
-quantile rule sustains decoherence improvement through N=80 on both
-uniform and hierarchical 3D DAGs (delta=-0.010 to -0.023). Gravity
-is preserved under pruning (t=4.0 vs 3.3 unpruned). At N=100 the
-base decoherence signal vanishes (pur→1 on uniform 3D), so the
-pruning has nothing to improve.
+**Updated verdict: PARTIALLY SURVIVES through N=80 (sparse base) and
+N=120 (dense base npl=60).** The adaptive quantile rule sustains
+decoherence improvement on uniform 3D DAGs. Dense+prune extends the
+window to N=120 (delta=-0.015, all seeds valid). Gravity is preserved
+under pruning (t=4.0 vs 3.3 unpruned).
 
-The emergence window now matches the imposed modular gap (both N=80).
-Pruning and gravity are compatible — no tradeoff observed.
+Birth/death and amplitude-guided growth did not improve over pruning.
+Slit-conditioned growth failed (measurement incompatible with grown
+topology). Dense+prune is the strongest retained emergence result.
+
+**Caveats from review:**
+- The smart-prune vs adaptive-quantile comparison does not actually
+  compare two distinct algorithms (both call the same function)
+- Mass scaling claims on pruned graphs are retracted (mass-position
+  confound confirmed)
+- The hierarchical alpha=0.71 is exploratory (not fixed-position clean)
 
 ### Strict visibility gain
 
