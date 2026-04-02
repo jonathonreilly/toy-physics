@@ -1,3 +1,62 @@
+## 2026-04-02 — Directional-measure b overlap-onset transfer holdout restored
+
+### Current state
+- the active gravity seam was still the next one named in the previous entry:
+  - test whether the overlap-onset observables transfer onto one second dense-family control
+- shared repo sync was not fully reconcilable at loop start:
+  - `/Users/jonreilly/Projects/Physics` was `ahead 9, behind 28` relative to `origin/main`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics` failed with a DNS error (`Could not resolve host: github.com`)
+- the finished holdout result already existed only as local runtime artifacts:
+  - `logs/2026-04-01-directional-b-overlap-onset-transfer-holdout.txt`
+  - `scripts/__pycache__/directional_b_overlap_onset_transfer_holdout.cpython-313.pyc`
+- the source card itself was missing from the repo, so the result was not yet reproducible as a stable repo-facing step
+
+### What changed
+- restored `scripts/directional_b_overlap_onset_transfer_holdout.py` from the local compiled card constants so the second dense-family control is reproducible again
+- reran the restored card and wrote:
+  - `logs/2026-04-02-directional-b-overlap-onset-transfer-holdout.txt`
+- promoted the retained gravity wording in:
+  - `README.md`
+  - `docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- refreshed the tracked work log to move the next seam from “does it transfer?” to “how do we compress the transferred occupancy signal?”
+
+### Strongest confirmed conclusion
+The local-density overlap story does transfer to one second dense-family control, but not as one universal frozen threshold pair.
+- the exact baseline pair
+  - `same_side_mean_gap >= 0.7504 and selected_span_step >= 1.1301`
+  - drops to `tp/fp/fn/tn = 9/1/6/24`
+  - accuracy `0.8250`
+- the feature-level mechanism does survive cleanly:
+  - overlap rows on the holdout still have much weaker target-band fill (`0.196` vs `0.885`)
+  - and coarser same-side spacing (`1.035` vs `0.869`)
+- the best holdout refit collapses mostly to occupancy:
+  - `target_fill <= 0.3333`
+  - `tp/fp/fn/tn = 14/2/1/23`
+  - accuracy `0.9250`
+
+So the promoted gravity statement is now sharper:
+- sparse target-band occupancy is the leading transferable overlap-onset signal
+- coarse local spacing remains real, but as a family-dependent refinement rather than the retained universal clause
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/scripts/directional_b_overlap_onset_transfer_holdout.py`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-02-directional-b-overlap-onset-transfer-holdout.txt`
+- `/Users/jonreilly/Projects/Physics/README.md`
+- `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+
+### Exact next step
+- keep the corrected propagator and corrected directional-`b` hierarchy fixed
+- compress the occupancy-first overlap result into one coarser asymptotic bridge variable across:
+  - the original dense-family card
+  - this second dense-family holdout
+- only if that bridge fails should the lane widen back out to another family-specific diagnostic
+
+### First concrete action
+- build one bounded bridge card that regresses overlap / `mu` against a coarse occupancy variable
+  - start with `target_fill` or `1 / target_fill`
+  - then test whether that one-variable floor survives both dense-family datasets better than the old gap/span clause
+
 ## 2026-04-01 — Directional-measure b review fix and overlap-onset local-density compare
 
 ### Current state
