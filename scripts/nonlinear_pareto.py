@@ -164,8 +164,9 @@ def born_test(positions, adj, field, src, det_list, k, blocked_base,
     P_a = P(set(sa))
     P_b = P(set(sb))
     P_c = P(set(sc))
+    P_empty = P(set())
 
-    I3 = P_abc - P_ab - P_ac - P_bc + P_a + P_b + P_c
+    I3 = P_abc - P_ab - P_ac - P_bc + P_a + P_b + P_c - P_empty
     return abs(I3) / P_abc if P_abc > 1e-30 else math.nan
 
 

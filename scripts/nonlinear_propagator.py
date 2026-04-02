@@ -281,8 +281,9 @@ def run_test(nl, seed, nl_type, nl_param):
             P_a = P(set(sa))
             P_b = P(set(sb))
             P_c = P(set(sc))
+            P_empty = P(set())
 
-            I3 = P_abc - P_ab - P_ac - P_bc + P_a + P_b + P_c
+            I3 = P_abc - P_ab - P_ac - P_bc + P_a + P_b + P_c - P_empty
             if P_abc > 1e-30:
                 born_vals.append(abs(I3) / P_abc)
 
