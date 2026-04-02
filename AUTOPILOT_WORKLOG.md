@@ -1,3 +1,61 @@
+## 2026-04-02 — Directional-measure b occupancy bridge card and state refresh
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed:
+  - no detached science child was running
+- the tracked coordination state was stale again:
+  - `AUTOPILOT_WORKLOG.md`, `logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` still advertised the older `6c332fc` janitor snapshot instead of the actual shared repo state
+- final reconciled repo state at handoff time:
+  - `main` matched `origin/main` at `10cef42` (`Merge: layer norm is Born-clean, pur_min=0.80 at N=40 (vs 0.95 linear)`)
+  - the shared checkout still had live dirty files from another worker in the nonlinear / gravity-design lane, so this loop stayed on clean directional-`b` files only
+- within the retained directional-`b` lane, the exact open seam from the previous stable entry was:
+  - compress the occupancy-first overlap result into one coarser asymptotic bridge variable across the original dense-family card and the second dense-family holdout
+
+### What changed
+- added `scripts/directional_b_overlap_occupancy_bridge_card.py`
+- wrote:
+  - `logs/2026-04-02-directional-b-overlap-occupancy-bridge-card.txt`
+- combined the original dense-family rows with the second dense-family holdout and tested one coarse occupancy bridge variable:
+  - `target_fill = local_target_count / mass_nodes`
+- promoted the combined bridge read in:
+  - `README.md`
+  - `docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- refreshed the tracked work log, runtime handoff, and automation memory to the current shared repo state
+
+### Strongest confirmed conclusion
+The occupancy-first overlap story now compresses into one coarse asymptotic bridge variable on the bounded dense-family evidence.
+- combined dense-family bridge rule:
+  - `target_fill <= 0.4000`
+  - `tp/fp/fn/tn = 23/9/1/27`
+  - accuracy `0.8333`
+- regime read:
+  - `target_fill <= 1/3` carries `19/26` overlap rows with median `mu = -0.457`
+  - `1/3 < target_fill <= 2/3` is the mixed shoulder (`5/17` overlap, median `mu = +0.282`)
+  - `target_fill > 2/3` has no overlap rows in the current combined sample (`0/17`, median `mu = +2.111`)
+
+So sparse target-band occupancy is now the promoted coarse bridge variable; spacing clauses still sharpen bounded family fits, but they are secondary refinements rather than the retained asymptotic statement.
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/scripts/directional_b_overlap_occupancy_bridge_card.py`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-02-directional-b-overlap-occupancy-bridge-card.txt`
+- `/Users/jonreilly/Projects/Physics/README.md`
+- `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- keep the corrected propagator and current directional-`b` hierarchy fixed
+- translate `target_fill` into a more physical layer-density / mass-geometry law on the same bounded dense-family generator
+- do not widen back out to fresh denominator families unless that translation fails
+
+### First concrete action
+- decompose `target_fill` on the same combined dense-family rows into:
+  - raw target-band node count
+  - source-window size
+  - same-side layer density near the target plane
+- test which factor actually carries the `target_fill <= 0.4` bridge with less family dependence
+
 ## 2026-04-02 — Janitor reconciled coordination state to q=0.03 mechanism audits
 
 ### Current state

@@ -1,53 +1,44 @@
 # Physics Autopilot Handoff
 
-## 2026-04-02 10:57 America/New_York
+## 2026-04-02 12:03 America/New_York
 
 ### Seam class
-- dense-prune gravity mechanism lane
-- routing/cancellation compression after `q=0.03` audits
+- directional-`b` gravity lane
+- occupancy-first asymptotic bridge under the fixed directional propagator
 
 ### What this loop did
-- acquired the `physics-janitor` cooperative lock for a metadata-reconciliation pass
-- verified that the shared repo was already clean and synced at loop start:
-  - `main` matched `origin/main` at `6c332fc` (`feat: q=0.03 audits + worker reaudit scripts`)
-- found that the tracked handoff / work log / science memory were still advertising the older `9690d3a` directional-`b` transfer-holdout seam
-- ran `python3 scripts/base_confidence_check.py`
-  - all cheap checks passed
-- refreshed the tracked handoff and work-log narrative to the actual current science state
-- confirmed that `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` is not writable from this sandbox, so that one stale coordination file still needs an external refresh
+- ran the duplicate-run guard and acquired the `physics-science` cooperative lock
+- confirmed there was no detached science child to resume
+- reconciled stale coordination metadata against the real shared repo state after the repo moved during the loop
+- stayed off the live nonlinear / gravity-design dirt and worked only in clean directional-`b` files
+- added `scripts/directional_b_overlap_occupancy_bridge_card.py`
+- wrote:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-02-directional-b-overlap-occupancy-bridge-card.txt`
+- promoted the bridge result in:
+  - `/Users/jonreilly/Projects/Physics/README.md`
+  - `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
 
 ### Current state
 - no detached science child is running
 - the lead unitary layer is unchanged:
   - corrected `1/L^p` transport
   - directional path measure `exp(-0.8×θ²)`
-- the active dense-prune mechanism read is now:
-  - `q=0.03` is gentler than `q=0.10`, but it still leaves gravity-sign flips at `N=80` (`3/14` seeds, `21%`)
-  - the same-graph strict joint log still shows weaker pruned gravity than baseline, so this is not a full repair
-  - mass-to-detector reach, path support, and weighted-flow diagnostics are flat across the audited flips
-  - the narrow guarded prune helps at `N=80` but still fails at `N=100`, so the vulnerable object is a routing / cancellation subset inside surviving mass-coupled paths
-- the local-continuation backreaction lane is closed:
-  - the retained `4D` pilot fails the full-sweep-positive gate for every tested depth weight
-  - combined with the `3D` `d=0.50` demotion, there is no stable positive `b` trend to carry forward there
-- the cheap confidence gate passed on this repo state
-
-### Git / sync state
-- the shared repo was clean and synced at loop start:
-  - `6c332fc` on `main`, matching `origin/main`
-- this janitor pass changes coordination metadata only
-- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` remains stale because this sandbox cannot write it
+- final reconciled git state during this loop:
+  - `main` matched `origin/main` at `10cef42` (`Merge: layer norm is Born-clean, pur_min=0.80 at N=40 (vs 0.95 linear)`)
+  - the shared checkout still has unrelated live dirt in the nonlinear / gravity-design lane, so future science passes should keep avoiding those files unless explicitly taking over that work
+- retained directional-`b` bridge read:
+  - `target_fill = local_target_count / mass_nodes` is now the promoted coarse occupancy variable across the original dense-family rows and the second dense-family holdout
+  - combined bridge rule `target_fill <= 0.4000` gives `tp/fp/fn/tn = 23/9/1/27` at `0.8333` accuracy
+  - once `target_fill > 2/3`, the current combined dense-family sample has no overlap rows at all
+  - coarse local spacing still sharpens family fits, but it is now secondary to occupancy shortage
 
 ### Strongest confirmed conclusion
-The active integrity point is not another gravity-transfer card. The retained mechanism seam is now much narrower: after the `q=0.03` strict joint, mechanism audit, weighted-flow audit, and flip-seed replay, the gravity fragility is still real but it does not show up in coarse reach/support/flow metrics. The honest read is that the flip lives in finer routing/cancellation structure inside the mass-coupled paths, while local-continuation backreaction is closed rather than reopened.
+The occupancy-first overlap story now compresses into one coarse asymptotic bridge variable instead of a family-specific threshold patchwork. On the bounded combined dense-family sample, overlap is overwhelmingly the low-occupancy regime: `target_fill <= 0.4` captures `23/24` overlap rows, while `target_fill > 2/3` stays fully safe. The next gravity-side question is therefore no longer another denominator search, but translating that occupancy shortage into a cleaner layer-density / mass-geometry law.
 
 ### Exact next step
-- stay on the compression / order-parameter thread
-- use the bounded replay / re-audit scripts already on disk to compress flip vs non-flip seeds into one routing/cancellation discriminator
-- keep dense laddering paused and use sparse sentinels only as guardrails unless the tracked plan explicitly reopens them
+- keep the corrected directional propagator and current `b -> b - h_mass` hierarchy fixed
+- decompose `target_fill` into raw target-band node count, source-window size, and same-side layer density
+- test which factor actually carries the `target_fill <= 0.4` bridge with the least family dependence
 
 ### New log paths
-- `/Users/jonreilly/Projects/Physics/logs/2026-04-02-dense-prune-q003-joint-strict.txt`
-- `/Users/jonreilly/Projects/Physics/logs/2026-04-02-dense-prune-q003-mechanism-audit.txt`
-- `/Users/jonreilly/Projects/Physics/logs/2026-04-02-dense-prune-weighted-flow-audit.txt`
-- `/Users/jonreilly/Projects/Physics/logs/2026-04-02-dense-prune-flip-seed-replay.txt`
-- `/Users/jonreilly/Projects/Physics/logs/2026-04-02-four-d-local-continuation-pilot-fixed.txt`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-02-directional-b-overlap-occupancy-bridge-card.txt`
