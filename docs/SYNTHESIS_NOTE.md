@@ -176,13 +176,25 @@ LayerNorm + gap=2:        0.619   0.769   0.852   N ≈ 1355
 LayerNorm + gap=4:        0.704   0.805   0.878   N ≈ 6188
 ```
 
-**pur_min = 0.619 at N=25** (38% decoherence) is the strongest
-ever measured — 6x over baseline. Born = 5e-16 (machine zero).
+**pur_min = 0.603 at N=25** (40% decoherence, 24 seeds) is the strongest
+ever measured. Born = 5e-16 (machine zero).
 
-Scaling law: (1-pur_min) = C × N^(-alpha) for all configs.
-Exponents similar (~0.7-0.9) but prefactors differ by 12x.
-The combined propagator extends the model's effective range
-from N≈235 to N≈1355 (6x extension).
+24-seed combined scaling law (R²=0.946, cleanest fit in program):
+```
+(1-pur_min) = 5.88 × N^(-0.88)
+```
+
+| N | Linear+uniform | LN+gap=2 | LN+gap=4 |
+|---|---|---|---|
+| 25 | 0.957 | **0.603** | 0.685 |
+| 40 | 0.944 | **0.777** | 0.758 |
+| 60 | 0.972 | **0.861** | 0.786 |
+| 100 | 0.986 | **0.892** | 0.897 |
+
+Gravity survives on combined propagator:
+  LN+gap=4, N=50: delta=+1.57 (3.4 SE)
+
+Effective range: pur_min=0.90 at N≈101, pur_min=0.99 at N≈1375.
 
 ## What is NOT established
 
