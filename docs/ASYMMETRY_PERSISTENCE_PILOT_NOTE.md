@@ -155,6 +155,56 @@ rather than post-hoc pruning creates a useful decoherence lane:
 - the same-graph gravity story is promising but not yet hardened into a full
   joint reviewer card
 
+## Layernorm stacking follow-up
+
+Follow-up script:
+- [asymmetry_persistence_layernorm_combo.py](/Users/jonreilly/Projects/Physics/scripts/asymmetry_persistence_layernorm_combo.py)
+
+Question:
+- does generated hard geometry stack with the Born-clean regulated propagator,
+  or do they mostly attack the same ceiling mechanism?
+
+Result: they stack strongly on dense `N=80` and `N=100`.
+
+### N = 80, dense
+
+Setting:
+- `npl=50`
+- `8 seeds`
+
+Rows:
+- baseline generated graph:
+  - linear `pur_min = 0.998 ± 0.001`
+  - layernorm `pur_min = 0.954 ± 0.013`
+- threshold `0.10`:
+  - generated hard geometry + linear: `0.981 ± 0.007`
+  - generated hard geometry + layernorm: `0.889 ± 0.046`
+- threshold `0.20`:
+  - generated hard geometry + layernorm: `0.881 ± 0.049`
+
+### N = 100, dense
+
+Setting:
+- `npl=60`
+- `6 seeds`
+
+Rows:
+- baseline generated graph:
+  - linear `pur_min = 0.999 ± 0.001`
+  - layernorm `pur_min = 0.964 ± 0.021`
+- threshold `0.10`:
+  - generated hard geometry + linear: `0.993 ± 0.004`
+  - generated hard geometry + layernorm: `0.875 ± 0.049`
+- threshold `0.20`:
+  - generated hard geometry + layernorm: `0.853 ± 0.045`
+
+Safe conclusion:
+- generated hard geometry and layer norm are **complementary**
+- the generated-geometry stack is substantially stronger than the raw
+  generated-geometry linear lane
+- this is now one of the strongest bounded decoherence lanes on disk outside
+  the imposed modular-gap family
+
 ## Why it matters
 
 This is the best current evidence that **hard geometry generation**, not just
