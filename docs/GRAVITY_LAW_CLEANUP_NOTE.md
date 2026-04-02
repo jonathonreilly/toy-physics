@@ -112,12 +112,27 @@ Current safe wording:
 
 ## Best next step
 
-If we keep pushing on the gravity-law side, the clean next discriminator is:
+Follow-up completed:
+
+- [gravity_distance_channel_observables.py](/Users/jonreilly/Projects/Physics/scripts/gravity_distance_channel_observables.py)
+  was run on the same fixed-geometry `b` sweep used above
+- channel-space observables do retain structure, but they do **not** reveal a
+  dramatically cleaner law than centroid:
+  - `corr(centroid, b) = +0.165`
+  - `corr(bundle_bias, b) = +0.289`
+  - `corr(cancellation, b) = -0.685`
+  - `corr(eff_ch, b) = -0.407`
+
+Safe conclusion from the follow-up:
+- channel observables are useful diagnostics, but on the current generated-DAG
+  gravity lane they do not yet rescue a clean promoted force law
+
+If we keep pushing on the gravity-law side, the next discriminator is:
 
 1. measure channel/bundle observables on the same fixed-geometry `b` sweeps,
-   not just centroid shift
-2. see whether a law-like trend survives more cleanly in channel space than in
-   centroid space
+   on **other** candidate gravity architectures, not just the current DAG lane
+2. see whether a law-like trend survives more cleanly in channel space there
+   than in centroid space
 
 That is now a better next move than continuing to promote centroid-only
 distance/mass exponents as final.
