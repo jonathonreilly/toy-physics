@@ -1,51 +1,51 @@
 # Physics Autopilot Handoff
 
-## 2026-04-02 12:03 America/New_York
+## 2026-04-02 19:53 America/New_York
 
 ### Seam class
-- directional-`b` gravity lane
-- occupancy-first asymptotic bridge under the fixed directional propagator
+- coordination integrity repair
+- local asymmetry-persistence head reconciled; next runnable science seam is directional-`b` density control under the fixed directional propagator
 
 ### What this loop did
 - ran the duplicate-run guard and acquired the `physics-science` cooperative lock
 - confirmed there was no detached science child to resume
-- reconciled stale coordination metadata against the real shared repo state after the repo moved during the loop
-- stayed off the live nonlinear / gravity-design dirt and worked only in clean directional-`b` files
-- added `scripts/directional_b_overlap_occupancy_bridge_card.py`
-- wrote:
-  - `/Users/jonreilly/Projects/Physics/logs/2026-04-02-directional-b-overlap-occupancy-bridge-card.txt`
-- promoted the bridge result in:
-  - `/Users/jonreilly/Projects/Physics/README.md`
-  - `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
-- committed the repo-facing step as:
-  - `9f0e528` (`feat: add directional-b occupancy bridge card`)
-- attempted the protocol push helper once:
+- reconciled git before new work:
+  - `main` was already ahead of `origin/main` at `fce4698` (`feat: add asymmetry persistence mass scaling follow-up`)
+  - `origin/main` remained `93b26b2` (`Merge: stochastic collapse reverses scaling — 6th publishable result`)
+- ran the required pre-step push helper:
   - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
-  - helper result: DNS failure resolving `github.com` after 5 attempts, so the repo remains locally ahead
+  - helper result: `status=failed`, `failure_kind=dns_failure`, `ahead=3`, `behind=0`, `attempts_used=5`, `error=fatal: unable to access 'https://github.com/jonathonreilly/toy-physics.git/': Could not resolve host: github.com`
+- inspected the landed local-head commits that were missing from the coordination files:
+  - `59363c0` (`feat: add geometry lane head-to-head note`)
+  - `fe913a5` (`feat: add asymmetry persistence joint card`)
+  - `fce4698` (`feat: add asymmetry persistence mass scaling follow-up`)
+- refreshed:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- did not start fresh science because the repo was already locally ahead and the protocol push failed on DNS
 
 ### Current state
 - no detached science child is running
-- the lead unitary layer is unchanged:
-  - corrected `1/L^p` transport
-  - directional path measure `exp(-0.8×θ²)`
-- final reconciled git state during this loop:
-  - the shared repo matched `origin/main` at `10cef42` before this step (`Merge: layer norm is Born-clean, pur_min=0.80 at N=40 (vs 0.95 linear)`)
-  - this loop then added local commit `9f0e528` (`feat: add directional-b occupancy bridge card`)
-  - push helper failed with `failure_kind = dns_failure`, so `main` is currently `ahead 1`
-  - the shared checkout still has unrelated live dirt in the nonlinear / gravity-design lane, so future science passes should keep avoiding those files unless explicitly taking over that work
-- retained directional-`b` bridge read:
-  - `target_fill = local_target_count / mass_nodes` is now the promoted coarse occupancy variable across the original dense-family rows and the second dense-family holdout
-  - combined bridge rule `target_fill <= 0.4000` gives `tp/fp/fn/tn = 23/9/1/27` at `0.8333` accuracy
-  - once `target_fill > 2/3`, the current combined dense-family sample has no overlap rows at all
-  - coarse local spacing still sharpens family fits, but it is now secondary to occupancy shortage
+- retained newest local science result:
+  - dense same-graph asymmetry persistence now has a bounded joint card through `N = 100`
+  - the fixed-anchor `N = 100` mass sweep shows generated hard geometry repairs a nearly flat baseline mass window into a cleaner positive but still sublinear response
+  - cleanest retained row is `thr = 0.10` with layernorm fit `delta ~= 0.4032 * M^0.420` and `R^2 = 0.970`
+- final git state at handoff time:
+  - local `main` contains the geometry note, asymmetry-persistence joint card, asymmetry-persistence mass-scaling follow-up, and this coordination-repair step
+  - `origin/main` is still `93b26b2`
+  - the required push helper failed with `failure_kind = dns_failure`, so the local branch remains unsynced
+  - the shared checkout still has unrelated untracked dirt in the gravity-design / topological-pathcount lane; future science passes should keep avoiding those files unless explicitly taking over that work
 
 ### Strongest confirmed conclusion
-The occupancy-first overlap story now compresses into one coarse asymptotic bridge variable instead of a family-specific threshold patchwork. On the bounded combined dense-family sample, overlap is overwhelmingly the low-occupancy regime: `target_fill <= 0.4` captures `23/24` overlap rows, while `target_fill > 2/3` stays fully safe. The next gravity-side question is therefore no longer another denominator search, but translating that occupancy shortage into a cleaner layer-density / mass-geometry law.
+The real problem was stale coordination metadata, not a missing science pass. The newest stable local head already shifted to the asymmetry-persistence lane: bounded dense same-graph coexistence is retained through `N = 100`, and the follow-up mass sweep shows generated hard geometry improves the fixed-anchor gravity mass window without yet delivering an exact mass law. Because the repo remains locally ahead and push is failing on DNS, the correct bounded action this loop was to repair shared coordination state rather than start another unsynced science branch.
 
 ### Exact next step
-- keep the corrected directional propagator and current `b -> b - h_mass` hierarchy fixed
-- decompose `target_fill` into raw target-band node count, source-window size, and same-side layer density
-- test which factor actually carries the `target_fill <= 0.4` bridge with the least family dependence
+- retry the required push helper before any new science so the local-head commits can sync or surface a non-DNS blocker
+- once sync is no longer blocked, return to the prioritized fixed-propagator directional-`b` lane
+- keep the frozen continuous bridge `mass_nodes / expected_target_count_4nn >= 2.7354`
+- test that same 4-NN density-load law on one additional geometry-normalized dense-family sentinel without refitting the threshold
 
-### New log paths
-- `/Users/jonreilly/Projects/Physics/logs/2026-04-02-directional-b-overlap-occupancy-bridge-card.txt`
+### Relevant log paths
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-02-asymmetry-persistence-joint-card.txt`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-02-asymmetry-persistence-mass-scaling.txt`

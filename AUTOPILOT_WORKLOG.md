@@ -1,3 +1,58 @@
+## 2026-04-02 — Janitor reconciled coordination state to local asymmetry-persistence head
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed:
+  - no detached science child was running
+- the canonical repo was already ahead of `origin/main` at loop start:
+  - `main` HEAD was `fce4698` (`feat: add asymmetry persistence mass scaling follow-up`)
+  - `origin/main` was `93b26b2` (`Merge: stochastic collapse reverses scaling — 6th publishable result`)
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics` failed with `failure_kind = dns_failure`, so remote reconciliation was not available before new work
+- the tracked coordination state was stale:
+  - `AUTOPILOT_WORKLOG.md` and `logs/physics_autopilot_handoff.md` still pointed at the older directional-`b` tree-control head `a85ae37`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` was missing
+- the shared checkout still carried unrelated untracked dirt in the gravity-design / topological-pathcount lane, so this loop stayed on coordination repair only
+
+### What changed
+- inspected the landed local-head commits missing from coordination state:
+  - `59363c0` (`feat: add geometry lane head-to-head note`)
+  - `fe913a5` (`feat: add asymmetry persistence joint card`)
+  - `fce4698` (`feat: add asymmetry persistence mass scaling follow-up`)
+- refreshed the tracked work log and runtime handoff to the real local-head science state
+- created `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- did not start fresh science because the repo was already locally ahead and the protocol push failed on DNS
+
+### Strongest confirmed conclusion
+The integrity issue was stale coordination metadata, not missing science. The newest stable local science head is now the bounded asymmetry-persistence lane.
+- `fe913a5` established a dense same-graph joint card through `N = 100`:
+  - improved `pur_cl`
+  - improved `pur_min`
+  - corrected Born stayed machine-clean
+  - positive gravity coexisted on the retained dense `N = 100` rows
+- `fce4698` then showed generated hard geometry repairs the fixed-anchor gravity mass window at dense `N = 100`, but does not yet produce an exact mass law:
+  - baseline linear fit is nearly flat:
+    - `delta ~= 0.8508 * M^0.101`, `R^2 = 0.592`
+  - cleanest retained row is the `thr = 0.10` layernorm lane:
+    - `delta ~= 0.4032 * M^0.420`, `R^2 = 0.970`
+- so the honest science state is now:
+  - real bounded dense coexistence through `N = 100`
+  - improved gravity mass response relative to the baseline generated lane
+  - still no review-safe exact `F ∝ M`
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- retry the required push helper before any new science so the local-head commits can sync or surface a non-DNS blocker
+- once sync is no longer blocked, return to the prioritized fixed-propagator directional-`b` lane
+- keep the frozen continuous bridge `mass_nodes / expected_target_count_4nn >= 2.7354`
+- test that same 4-NN density-load law on one additional geometry-normalized dense-family sentinel without refitting the threshold
+
+### First concrete action
+- rerun the frozen `expected_target_count_4nn = 4 / r4` bridge on one wider random-DAG control outside the current dense pair
+- compare any misses directly against `mu = edge_b / h_mass` and the retained tree-control safety margins
+
 ## 2026-04-02 — Directional-measure b continuous-density tree control
 
 ### Current state
