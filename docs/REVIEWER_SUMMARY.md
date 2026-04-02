@@ -57,11 +57,18 @@ phenomena emerge from which architectural ingredients.
 
 ## Current priority frontier
 
-1. **Evolving-network dynamics** — the deepest remaining gap between axioms and implementation. All tested local rules (9+ variants including pruning, birth/death, connectivity-aware) are bounded. The next serious approach requires qualitatively different dynamics.
+1. **Dense+prune gravity fragility** — decoherence improvement is same-graph
+   verified, but gravity under pruning is fragile (~21% seed flip rate at N=80).
+   Mechanism identified: effective detector channel count (r=0.985 at N=100)
+   tracks the flip. A channel-count-preserving guard is the next fix candidate.
 
-2. **Continuum bridge** — 3D alpha converges (0.58), 4D doesn't. Separating finite-size artifacts from retained structure is documented but incomplete.
+2. **Source-projected coupling** — mild negative b trend on modular (alpha=-0.21,
+   R²=0.62, 32 seeds) but modular-specific. Does not transfer to hierarchical
+   or uniform. Treat as a narrow partial mover, not a general rescue.
 
-3. **Cross-family transfer** — gravity and decoherence work on 4 of 5 3D families. 4D gravity doesn't transfer beyond modular.
+3. **Evolving-network dynamics** — all tested local rules are bounded. Soft
+   pruning closed asymptotically. Birth/death comparable to pruning. The next
+   serious approach requires qualitatively different dynamics.
 
 ## Repository integrity
 
@@ -72,9 +79,16 @@ phenomena emerge from which architectural ingredients.
 
 ## Known remaining confounds (flagged by review workers)
 
-- Hierarchical alpha=0.71 is exploratory (mass-position confounded)
-- Smart-prune vs adaptive-quantile comparison is trivial (same function)
+- Hierarchical alpha=0.71 is exploratory (mass-position confounded; fixed-position rerun mostly fails the strict gate)
+- Smart-prune vs adaptive-quantile: rerun shows plain adaptive beats D/degree scoring
 - Mass scaling on pruned graphs is not fixed-position clean
 - Modular-special predictor scan uses positive-only truncated fits
+- Local continuation backreaction demoted (32-seed confirm reversed b trend)
+- Source-projected coupling is modular-specific (doesn't transfer)
+
+## New mechanism findings
+
+- **Gravity fragility diagnostic**: effective detector channel count correlates r=0.985 with gravity delta at N=100. Pruning reduces channels (6.3→5.4 at N=80, 3.3→2.4 at N=100). This is the first metric that tracks the flip.
+- **Coarse metrics are flat**: reach, core support, weighted flow, and frozen-field control all show zero change under pruning. The flip is a fine-grained phase cancellation effect inside the surviving path ensemble.
 
 These are documented here rather than promoted as retained results.
