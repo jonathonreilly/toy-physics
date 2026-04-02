@@ -138,6 +138,22 @@ community structure) rather than amplitude-based — would be needed.
 
 ## Additional experiments (post-synthesis)
 
+### Exp 9: Topological path-count asymmetry — POSITIVE
+Path-count asymmetry |pA-pB|/(pA+pB) is spatially structured on
+uniform DAGs and DOES NOT CLT-converge to zero (unlike amplitudes).
+Removing low-asymmetry nodes creates decoherence:
+
+| N | thresh | pur_cl | S_norm | rem% | vs baseline |
+|---|--------|--------|--------|------|-------------|
+| 40 | 0.1 | 0.923 | 0.349 | 16% | 0.990 baseline |
+| 40 | 0.2 | 0.920 | 0.351 | 19% | beats hard-gap (0.950) |
+| 50 | 0.3 | 0.915 | 0.243 | 26% | 0.962 baseline |
+| 60 | 0.1 | 0.941 | 0.179 | 13% | beats hard-gap (0.955) |
+
+First emergence mechanism that: (1) uses graph topology not amplitudes,
+(2) works on uniform DAGs, (3) scales through N=60, (4) beats hard gap.
+Critical next test: N=80-100 scaling.
+
 ### Exp 7: Gap + intermittent normalization
 Intermittent amplitude normalization (K=5,10,20) has zero effect on
 CL bath purity. The CL bath formula uses S_norm = sum|ba-bb|^2/(NA+NB),
