@@ -175,12 +175,11 @@ def _born_sanity(positions, adj, layer_indices, field, src, det_list, k: float =
         return None
     barrier_layer, barrier, src, blocked, det_list, slit_a, slit_b, slit_c = partition
     born_adj = _prune_bypass_edges(adj, layer_indices, barrier_layer)
-    born_order = order if order is not None else None
     all_slits = set(slit_a) | set(slit_b) | set(slit_c)
 
     def prob(open_set: set[int]):
         closed = all_slits - open_set
-        amps = propagate(positions, born_adj, field, src, k, blocked | closed, born_order)
+        amps = propagate(positions, born_adj, field, src, k, blocked | closed)
         return sum(abs(amps[d]) ** 2 for d in det_list), amps
 
     p_abc, amps_abc = prob(all_slits)
@@ -409,6 +408,7 @@ def measure_config(nodes_per_layer: int, connect_radius: float, spatial_range: f
     pmin_vals = []
     snorm_vals = []
     born_vals = []
+    born_measurements = 0
     born_nonzero = 0
     alpha_vals = []
 
@@ -420,6 +420,7 @@ def measure_config(nodes_per_layer: int, connect_radius: float, spatial_range: f
         pmin_vals.append(row["pur_min"])
         snorm_vals.append(row["s_norm"])
         if row.get("born_available", False):
+            born_measurements += 1
             born_vals.append(row["born_ratio"])
             born_nonzero += row.get("born_nonzero", 0)
         if row["alpha"] is not None:
@@ -436,7 +437,7 @@ def measure_config(nodes_per_layer: int, connect_radius: float, spatial_range: f
 
     alpha_fit = _fit_power_law([n for n, _avg, _se, _t in mass_summaries], [avg for _n, avg, _se, _t in mass_summaries])
     accepted = len(rows)
-    born_coverage = accepted / accepted if accepted and born_vals else 0.0
+    born_coverage = born_measurements / accepted if accepted else 0.0
     born_ratio_mean = _mean(born_vals) if born_vals else math.nan
     grav_mean = _mean(grav_vals)
     pur_mean = _mean(pur_vals)
