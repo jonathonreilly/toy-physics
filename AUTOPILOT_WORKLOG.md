@@ -1,3 +1,63 @@
+## 2026-04-02 — Directional-measure b continuous-density tree control
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed:
+  - no detached science child was running
+- the canonical repo matched `origin/main` at loop start:
+  - `main` HEAD was `1abfb2c` (`Merge synthesis with 24-seed combined scaling law`)
+- the tracked coordination state had drifted behind the real repo:
+  - `AUTOPILOT_WORKLOG.md`, `logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` still advertised the older local directional-`b` head `85142e7` instead of the synced repo state
+- the shared checkout also carried unrelated untracked dirt in the gravity-design / topological-pathcount lane, so this loop stayed on clean directional-`b` files only
+- the open seam from the previous stable entry was:
+  - freeze the continuous bridge `mass_nodes / expected_target_count_4nn >= 2.7354`
+  - test whether that same 4-NN density-load law survives one additional non-overlapping control without refitting the threshold
+
+### What changed
+- added `scripts/directional_b_overlap_continuous_density_tree_control.py`
+- wrote:
+  - `logs/2026-04-02-directional-b-continuous-density-tree-control.txt`
+- promoted the frozen tree-control result in:
+  - `README.md`
+  - `docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- refreshed the tracked work log to the real synced repo state and advanced the active directional-`b` seam
+
+### Strongest confirmed conclusion
+The retained 4-NN directional-`b` density bridge survives the branching-tree control without refit.
+- frozen continuous law:
+  - `expected_target_count_4nn = 4 / r4`
+  - `mass_nodes / expected_target_count_4nn >= 2.7354`
+- on the non-overlapping tree control (`mass_nodes = 2`):
+  - `knn4_density_load = 0.5938`, `0.2656`, `0.1484` for `N = 8`, `10`, `12`
+  - `mu = 3`, `5`, `11`, so all tree rows stay safely on the non-overlap side
+- on the extended sample (dense families plus tree control):
+  - frozen 4-NN bridge:
+    - `tp/fp/fn/tn = 21/2/3/37`
+    - accuracy `0.9206`
+  - counted source-load law:
+    - `tp/fp/fn/tn = 23/9/1/30`
+    - accuracy `0.8413`
+- physical read:
+  - tree-like controls stay safe because target-plane support densifies as depth grows
+  - the retained overlap law is therefore behaving like a real local target-plane density control, not just a dense-family occupancy fit
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/scripts/directional_b_overlap_continuous_density_tree_control.py`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-02-directional-b-continuous-density-tree-control.txt`
+- `/Users/jonreilly/Projects/Physics/README.md`
+- `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- keep the corrected directional propagator and retained `b -> b - h_mass` hierarchy fixed
+- keep the frozen continuous bridge `mass_nodes / expected_target_count_4nn >= 2.7354`
+- test that same frozen 4-NN density-load law on one additional independent dense-family sentinel without refitting the threshold
+
+### First concrete action
+- run the frozen `expected_target_count_4nn = 4 / r4` bridge on one denser or wider random-DAG family outside the current dense pair
+- compare any residual false positives or misses directly against `mu = edge_b / h_mass` and the tree-control safety margins
+
 ## 2026-04-02 — Directional-measure b continuous-density bridge card
 
 ### Current state
