@@ -1,21 +1,21 @@
 #!/usr/bin/env python3
-"""Companion controls for the mass-path-guarded dense-prune lane.
+"""Companion controls for the channel-count-guarded dense-prune lane.
 
 This script starts from the guarded dense 3D pruning lane and asks a stricter
 question than the old reach/core checks:
 
   1. On the same dense 3D seed-generated graphs, does plain adaptive pruning
-     or mass-path-guarded pruning do better on gravity + pur_cl?
+     or channel-count-guarded pruning do better on gravity + pur_cl?
   2. On those same graphs, does the guarded lane preserve a strict visibility
      style control as well?
   3. On a matched 3D chokepoint companion family, do the usual Born/linearity
      checks remain clean?
 
 The goal is not to prove a full gravity law. The goal is to see whether the
-guarded dense-prune lane can be promoted beyond a narrow gravity+pur_cl fix
-into a broader but still careful companion-controlled claim.
+channel-count-guarded dense-prune lane can be promoted beyond a narrow
+gravity+pur_cl fix into a broader but still careful companion-controlled claim.
 
-PStack experiment: mass-path-guard-companion-controls
+PStack experiment: channel-count-guard-companion-controls
 """
 
 from __future__ import annotations
@@ -43,6 +43,9 @@ from scripts.dense_prune_q003_joint_strict import (  # type: ignore  # noqa: E40
     _layer_map,
     _select_mass_nodes,
     _score_candidates,
+)
+from scripts.channel_count_guarded_prune import (  # type: ignore  # noqa: E402
+    channel_guarded_prune,
 )
 from scripts.mass_path_guarded_prune import (  # type: ignore  # noqa: E402
     cl_purity,
@@ -410,68 +413,33 @@ def _guarded_prune(
     q: float,
     max_iter: int,
 ) -> tuple[dict[int, list[int]], int]:
-    current_adj = {i: list(nbs) for i, nbs in adj.items()}
-    total_removed = 0
-    base_grav: float | None = None
+    by_layer, layers = _layer_map(positions)
+    if len(layers) < 7:
+        return adj, 0
 
-    for _ in range(max_iter):
-        by_layer, layers = _layer_map(positions)
-        blocked_barrier, slit_upper, slit_lower, _barrier_idx, _barrier_layer, _detector_layer = _barrier_slices(
-            positions, by_layer, layers
-        )
-        if not slit_upper or not slit_lower:
-            break
+    layer_list = [by_layer[layer] for layer in layers]
+    mass_nodes = _select_mass_nodes(positions, by_layer, layers)
+    if not mass_nodes:
+        return adj, 0
 
-        if base_grav is None:
-            # Use the same mass source convention as the guarded lane itself.
-            mass_nodes = _select_mass_nodes(positions, by_layer, layers)
-            if not mass_nodes:
-                break
-            src = by_layer[layers[0]]
-            det_list = list(by_layer[layers[-1]])
-            base_grav = gravity_signal(positions, current_adj, mass_nodes, src, det_list)
-
-        candidate_scores = _score_candidates(
-            positions,
-            current_adj,
-            by_layer[layers[0]],
-            blocked_barrier,
-            slit_upper,
-            slit_lower,
-            by_layer,
-            layers,
-        )
-        if not candidate_scores:
-            break
-
-        n_remove = int(len(candidate_scores) * q)
-        if n_remove <= 0:
-            break
-
-        remove_set = {node for node, _score in candidate_scores[:n_remove]}
-        if not remove_set:
-            break
-
-        tentative_adj: dict[int, list[int]] = {}
-        for i, nbs in current_adj.items():
-            if i in remove_set:
-                continue
-            kept = [j for j in nbs if j not in remove_set]
-            tentative_adj[i] = kept
-
-        mass_nodes = _select_mass_nodes(positions, by_layer, layers)
-        if not mass_nodes:
-            break
-        src = by_layer[layers[0]]
-        det_list = list(by_layer[layers[-1]])
-        new_grav = gravity_signal(positions, tentative_adj, mass_nodes, src, det_list)
-        if base_grav > 0 and new_grav < 0:
-            break
-
-        current_adj = tentative_adj
-        total_removed += len(remove_set)
-
-    return current_adj, total_removed
+    src = by_layer[layers[0]]
+    det_nodes = list(by_layer[layers[-1]])
+    blocked_base, _slit_upper, _slit_lower, _barrier_idx, _barrier_layer, _detector_layer = _barrier_slices(
+        positions, by_layer, layers
+    )
+    pruned_adj, removed_total = channel_guarded_prune(
+        positions,
+        adj,
+        layer_list,
+        mass_nodes,
+        src,
+        det_nodes,
+        blocked_base,
+        quantile=q,
+        max_iter=max_iter,
+        min_eff_ratio=0.80,
+    )
+    return pruned_adj, removed_total
 
 
 def _same_graph_seed_summary(
@@ -576,8 +544,8 @@ def _born_companion_summary() -> list[tuple[int, float, float, str]]:
 
 def main() -> None:
     print("=" * 104)
-    print("MASS-PATH-GUARD COMPANION CONTROLS")
-    print("  Dense 3D same-graph plain adaptive vs guarded pruning")
+    print("CHANNEL-COUNT-GUARD COMPANION CONTROLS")
+    print("  Dense 3D same-graph plain adaptive vs channel-count guarded pruning")
     print("  Companion controls: strict visibility on the same dense graphs")
     print("  Companion Born/linearity on a matched 3D chokepoint family")
     print("=" * 104)
@@ -592,7 +560,7 @@ def main() -> None:
     print(f"  companion Born seeds: {N_BORN_SEEDS}")
     print()
 
-    print("[1] SAME-GRAPH DENSE 3D: plain adaptive vs mass-path guarded")
+    print("[1] SAME-GRAPH DENSE 3D: plain adaptive vs channel-count guarded")
     print(
         f"{'N':>4s}  {'q':>5s}  {'mode':>8s}  {'valid':>5s}  "
         f"{'pur_b':>8s}  {'pur_p':>8s}  {'d_pur':>8s}  "

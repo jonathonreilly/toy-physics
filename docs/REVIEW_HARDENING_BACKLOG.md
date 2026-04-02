@@ -3,6 +3,20 @@
 **Status:** repo-facing backlog note  
 **Date:** 2026-04-01
 
+## Frontier Note
+
+The review-hardening cycle is no longer the main bottleneck. The live science
+frontier now sits in:
+
+- [GRAVITY_DESIGN_BLUEPRINT.md](/Users/jonreilly/Projects/Physics/docs/GRAVITY_DESIGN_BLUEPRINT.md)
+
+That blueprint defines the next three design programs:
+
+- gravity completion via mass scaling plus channel-space observables
+- overlap-sensitive nonlinear propagators aimed at beating the `1 / N` ceiling
+- hard geometry / nucleation rules aimed at creating channel structure rather
+  than repairing it after homogenization
+
 ## Purpose
 
 This backlog is not the same as the science frontier. It is the list of work that would make the project more robust to fair external review, especially reviews that focus on circularity, lack of dynamics, weak literature positioning, or unclear derivation status.

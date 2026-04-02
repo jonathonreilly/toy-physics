@@ -17,6 +17,11 @@
 - promoted the bridge result in:
   - `/Users/jonreilly/Projects/Physics/README.md`
   - `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- committed the repo-facing step as:
+  - `9f0e528` (`feat: add directional-b occupancy bridge card`)
+- attempted the protocol push helper once:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - helper result: DNS failure resolving `github.com` after 5 attempts, so the repo remains locally ahead
 
 ### Current state
 - no detached science child is running
@@ -24,7 +29,9 @@
   - corrected `1/L^p` transport
   - directional path measure `exp(-0.8×θ²)`
 - final reconciled git state during this loop:
-  - `main` matched `origin/main` at `10cef42` (`Merge: layer norm is Born-clean, pur_min=0.80 at N=40 (vs 0.95 linear)`)
+  - the shared repo matched `origin/main` at `10cef42` before this step (`Merge: layer norm is Born-clean, pur_min=0.80 at N=40 (vs 0.95 linear)`)
+  - this loop then added local commit `9f0e528` (`feat: add directional-b occupancy bridge card`)
+  - push helper failed with `failure_kind = dns_failure`, so `main` is currently `ahead 1`
   - the shared checkout still has unrelated live dirt in the nonlinear / gravity-design lane, so future science passes should keep avoiding those files unless explicitly taking over that work
 - retained directional-`b` bridge read:
   - `target_fill = local_target_count / mass_nodes` is now the promoted coarse occupancy variable across the original dense-family rows and the second dense-family holdout

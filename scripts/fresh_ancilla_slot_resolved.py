@@ -22,6 +22,7 @@ PStack experiment: fresh-ancilla-slot-resolved
 """
 
 from __future__ import annotations
+import argparse
 import math
 import cmath
 from collections import defaultdict, deque
@@ -198,12 +199,17 @@ def propagate_two_register_angle(positions, adj, field, src, det, k,
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--n-list", nargs="+", type=int, default=N_LIST)
+    parser.add_argument("--n-seeds", type=int, default=N_SEEDS)
+    args = parser.parse_args()
+
     print("=" * 70)
     print("LEVEL B: TRUE SLOT-RESOLVED FRESH ANCILLA ON DAGs")
     print(f"  Propagator: 1/L^p × exp(-{BETA}×θ²)")
     print(f"  Coupling: α_k = {ALPHA_SCALE} × edge_angle (branch-dependent)")
     print(f"  Env: ancilla bitstring (slot-resolved)")
-    print(f"  Seeds: {N_SEEDS}  k-band: {K_BAND}")
+    print(f"  Seeds: {args.n_seeds}  k-band: {K_BAND}")
     print("=" * 70)
     print()
 
@@ -211,13 +217,13 @@ def main():
           f"{'len_max':>7s}  {'pur_fa':>8s}  {'pur_node':>8s}  {'fa_off':>8s}")
     print(f"  {'-' * 72}")
 
-    for nl in N_LIST:
+    for nl in args.n_list:
         pfa_list, pn_list, p0_list = [], [], []
         mass_counts = []
         max_envs = 0
         max_bitlen = 0
 
-        for seed in range(N_SEEDS):
+        for seed in range(args.n_seeds):
             positions, adj, _ = generate_causal_dag(
                 n_layers=nl, nodes_per_layer=25, y_range=12.0,
                 connect_radius=3.0, rng_seed=seed*11+7)
@@ -262,6 +268,7 @@ def main():
                   f"{sum(pfa_list)/len(pfa_list):8.4f}  "
                   f"{sum(pn_list)/len(pn_list):8.4f}  "
                   f"{sum(p0_list)/len(p0_list):8.4f}")
+            sys.stdout.flush()
 
     print()
     print("pur_fa = slot-resolved fresh ancilla")
