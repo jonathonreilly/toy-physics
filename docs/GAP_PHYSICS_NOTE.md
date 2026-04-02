@@ -152,7 +152,37 @@ Removing low-asymmetry nodes creates decoherence:
 
 First emergence mechanism that: (1) uses graph topology not amplitudes,
 (2) works on uniform DAGs, (3) scales through N=60, (4) beats hard gap.
-Critical next test: N=80-100 scaling.
+
+### Exp 9b: Large-N scaling (NPL=50)
+At higher node density, path-count pruning scales through N=100:
+
+| N | prune-0.05 | uniform | hard-gap |
+|---|-----------|---------|----------|
+| 40 | 0.927 | 0.960 | 0.948 |
+| 60 | 0.931 | 0.974 | 0.971 |
+| 80 | 0.960 | 0.987 | 0.973 |
+| 100 | 0.977 | 0.985 | 0.957 |
+
+Effect weakens at large N but remains present through N=100.
+S_norm stays elevated (~0.15) vs uniform (~0.04) at all N.
+
+### Exp 10: Locality test — mechanism is NOT local
+Local proxies (1-hop y-balance, 2-hop y-balance) correlate weakly
+with global path-count asymmetry (r=0.17-0.22). Pruning by local
+proxies barely improves over baseline. The global pruning requires
+full path enumeration from both slits.
+
+At N=80: global-0.10 pur_cl=0.968 >> 1hop-0.30=0.984 ≈ uniform=0.987.
+
+The simple geometric proxy |y|<3 approaches the global result at
+large N (0.963 at N=80), suggesting the mechanism converges to
+geometric node removal at scale.
+
+**Final structural conclusion:** The gap is a topological boundary
+condition. The correct observable for generating it (path-count
+asymmetry) requires non-local information. No local self-maintenance
+rule can replicate it because the which-path distinction is determined
+by the non-local barrier/slit structure.
 
 ### Exp 7: Gap + intermittent normalization
 Intermittent amplitude normalization (K=5,10,20) has zero effect on
@@ -181,3 +211,6 @@ scaling exponent.
 | gap_codimension.py | Exp 4 |
 | gap_intermittent_norm.py | Exp 7 |
 | gap_cylindrical_scaling.py | Exp 8 |
+| gap_topological_asymmetry.py | Exp 9 |
+| gap_pathcount_large_n.py | Exp 9b |
+| gap_local_asymmetry.py | Exp 10 |
