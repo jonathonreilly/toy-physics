@@ -88,6 +88,24 @@ def _fit_power_law(xs_in: list[float], ys_in: list[float]) -> tuple[float, float
     return slope, math.exp(intercept), r2
 
 
+def _fit_full_positive_means(
+    xs_in: list[float],
+    means_by_x: dict[float | int, list[float]],
+) -> tuple[float, float, float] | None:
+    xs_fit: list[float] = []
+    ys_fit: list[float] = []
+    for x in xs_in:
+        vals = means_by_x[x]
+        if not vals:
+            return None
+        mean = _mean(vals)
+        if not math.isfinite(mean) or mean <= 0.0:
+            return None
+        xs_fit.append(float(x))
+        ys_fit.append(mean)
+    return _fit_power_law(xs_fit, ys_fit)
+
+
 def _topo_order(adj: dict[int, list[int]], n: int) -> list[int]:
     in_deg = [0] * n
     for nbs in adj.values():
@@ -166,7 +184,7 @@ def make_backreaction_edge_field(
     eps: float,
     depth_weight: float,
 ):
-    """Create the normalized continuation edge field for a given strength."""
+    """Create a shape-normalized continuation field with explicit scale."""
 
     def edge_field_fn(
         positions: list[tuple[float, float, float]],
@@ -244,15 +262,14 @@ def make_backreaction_edge_field(
                     if r < 1e-12:
                         continue
                     response += (
-                        strength
-                        * source_align
+                        source_align
                         * continuity_align
                         * max(coherence, CONTINUATION_ALIGN_FLOOR)
                         / (cap * (r + eps))
                     )
                 edge_field[(i, j)] = response
-
-        return _normalize_edge_field(edge_field)
+        normalized = _normalize_edge_field(edge_field)
+        return {edge: strength * value for edge, value in normalized.items()}
 
     return edge_field_fn
 
@@ -383,14 +400,10 @@ def _measure_backreaction(
             if delta is not None:
                 by_m[m].append(delta)
 
-    b_xs = [b for b in TARGET_BS if by_b[b] and _mean(by_b[b]) > 0]
-    b_ys = [_mean(by_b[b]) for b in b_xs]
-    b_fit = _fit_power_law(b_xs, b_ys) if len(b_xs) >= 3 else None
+    b_fit = _fit_full_positive_means(list(TARGET_BS), by_b)
     b_alpha = b_fit[0] if b_fit else None
 
-    m_xs = [float(m) for m in MASS_COUNTS if by_m[m] and _mean(by_m[m]) > 0]
-    m_ys = [_mean(by_m[m]) for m in MASS_COUNTS if by_m[m] and _mean(by_m[m]) > 0]
-    m_fit = _fit_power_law(m_xs, m_ys) if len(m_xs) >= 3 else None
+    m_fit = _fit_full_positive_means(list(MASS_COUNTS), by_m)
     m_alpha = m_fit[0] if m_fit else None
 
     return b_alpha, m_alpha, {"by_b": by_b, "by_m": by_m}
@@ -488,7 +501,7 @@ def main() -> None:
         if b_alpha is not None:
             print(f"  Fit: shift ~= C * b^{b_alpha:.3f}")
         else:
-            print("  Fit: insufficient positive points for a stable power-law fit")
+            print("  Fit: full-sweep-positive power-law fit unavailable")
         print()
 
         print(f"  {'M':>4s}  {'shift':>8s}  {'SE':>6s}  {'t':>6s}  {'shift/M':>8s}  {'samples':>7s}")
@@ -505,7 +518,7 @@ def main() -> None:
         if m_alpha is not None:
             print(f"  Fit: shift ~= C * M^{m_alpha:.3f}")
         else:
-            print("  Fit: insufficient positive points for a stable power-law fit")
+            print("  Fit: full-sweep-positive power-law fit unavailable")
         print()
 
     print("=" * 82)

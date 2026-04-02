@@ -92,6 +92,26 @@ def _normalize_edge_field(edge_field: dict[tuple[int, int], float]) -> dict[tupl
     return {k: v / max_abs for k, v in edge_field.items()}
 
 
+def _fit_full_positive_curve(
+    means_by_x: dict[float, list[float]],
+) -> tuple[float | None, float | None, float | None]:
+    xs: list[float] = []
+    ys: list[float] = []
+    for b in TARGET_BS:
+        vals = means_by_x[b]
+        if not vals:
+            return None, None, None
+        mean = _mean(vals)
+        if not math.isfinite(mean) or mean <= 0.0:
+            return None, None, None
+        xs.append(float(b))
+        ys.append(mean)
+    fit = fit_power_law(xs, ys) if len(xs) >= 3 else None
+    if fit is None:
+        return None, None, None
+    return fit
+
+
 def _local_continuation_signature(
     positions: list[tuple[float, float, float, float]],
     adj: dict[int, list[int]],
@@ -193,8 +213,7 @@ def local_continuation_edge_field(
                 if r < 1e-12:
                     continue
                 response += (
-                    strength
-                    * source_align
+                    source_align
                     * continuity_align
                     * max(coherence, CONTINUATION_ALIGN_FLOOR)
                     / (cap * (r + eps))
@@ -202,7 +221,8 @@ def local_continuation_edge_field(
             if response > 0.0:
                 edge_field[(i, j)] = response
 
-    return _normalize_edge_field(edge_field)
+    normalized = _normalize_edge_field(edge_field)
+    return {edge: strength * value for edge, value in normalized.items()}
 
 
 def propagate_edge_field_4d(
@@ -274,12 +294,7 @@ def _measure_shift_continuation(
 
 
 def _fit_shift_curve(means_by_b: dict[float, list[float]]) -> tuple[float | None, float | None, float | None]:
-    xs = [b for b in TARGET_BS if means_by_b[b] and _mean(means_by_b[b]) > 0]
-    ys = [_mean(means_by_b[b]) for b in xs]
-    fit = fit_power_law(xs, ys) if len(xs) >= 3 else None
-    if fit is None:
-        return None, None, None
-    return fit
+    return _fit_full_positive_curve(means_by_b)
 
 
 def _measure_family(nodes_per_layer: int, connect_radius: float, depth_weight: float) -> dict[str, float | None]:
@@ -413,7 +428,7 @@ def main() -> None:
         cont_alpha = stats["cont_alpha"]
         cont_r2 = stats["cont_r2"]
         if cont_alpha is None or cont_r2 is None:
-            print(f"  {dw:7.2f}  {'FAIL':>8s}  {'NA':>6s}  {'NA':>8s}  insufficient positive sweep")
+            print(f"  {dw:7.2f}  {'FAIL':>8s}  {'NA':>6s}  {'NA':>8s}  full-sweep-positive fit unavailable")
             continue
         delta = None if baseline_alpha is None else cont_alpha - baseline_alpha
         if delta is None:
