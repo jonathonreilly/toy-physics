@@ -1,0 +1,272 @@
+# Unified Program Note
+
+**Date:** 2026-04-03  
+**Status:** canonical project-state and backlog note for the retained symmetry program
+
+## One-line read
+
+The project now has a single coherent direction:
+
+- **symmetry-protected hard geometry with the standard linear propagator**
+
+That is the architecture family that survives the corrected Born checks, keeps
+positive gravity, and retains nontrivial decoherence / which-slit structure on
+the same graphs.
+
+## Canonical retained lanes
+
+### 1. Flagship lane: exact mirror / `Z2`
+
+This is the main synthesis headline.
+
+- Born-clean at machine precision
+- gravity-positive on the retained window
+- nontrivial decoherence / slit separation
+- retained through `N = 100`
+- gravity wall at `N = 120`
+
+Primary artifacts:
+
+- [`docs/MIRROR_CHOKEPOINT_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/MIRROR_CHOKEPOINT_NOTE.md)
+- [`docs/MIRROR_MUTUAL_INFORMATION_CHOKEPOINT_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/MIRROR_MUTUAL_INFORMATION_CHOKEPOINT_NOTE.md)
+
+### 2. Clean validation card: exact 2D mirror
+
+This is the cleanest low-dimensional same-family card.
+
+Strongest retained row:
+
+- `N = 60`
+- `MI = 0.756118`
+- `1 - pur_min = 0.4420`
+- `d_TV = 0.8572`
+- gravity `+2.5687`
+- Born `1.08e-15`
+- `k=0 = 0.00e+00`
+
+Primary artifact:
+
+- [`docs/MIRROR_2D_VALIDATION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/MIRROR_2D_VALIDATION_NOTE.md)
+
+### 3. Range / decoherence extension: `Z2 x Z2`
+
+This is the strongest higher-symmetry extension.
+
+- Born-clean at machine precision
+- gravity-positive on the retained dense probe
+- stronger decoherence and longer retained range than exact mirror
+- retained through `N = 120`
+
+Primary artifact:
+
+- [`docs/HIGHER_SYMMETRY_JOINT_VALIDATION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/HIGHER_SYMMETRY_JOINT_VALIDATION_NOTE.md)
+
+### 4. Head-to-head result
+
+The clean tradeoff is now frozen:
+
+- **exact mirror** is the better **joint coexistence** lane
+- **`Z2 x Z2`** is the better **decoherence / range** lane
+
+Primary artifact:
+
+- [`docs/SYMMETRY_HEAD_TO_HEAD_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/SYMMETRY_HEAD_TO_HEAD_NOTE.md)
+
+## What is not retained as a core lane
+
+### Structured mirror growth
+
+This is the most important negative result from the recent audit pass.
+
+- the geometry idea is physically interesting
+- but the canonical linear validator is not Born-clean
+- the dedicated linear scan found no review-safe Born-clean pocket
+
+Primary artifacts:
+
+- [`docs/STRUCTURED_MIRROR_RECONCILIATION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/STRUCTURED_MIRROR_RECONCILIATION_NOTE.md)
+- [`docs/STRUCTURED_MIRROR_BORNSAFE_SCAN_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/STRUCTURED_MIRROR_BORNSAFE_SCAN_NOTE.md)
+
+So structured mirror is currently:
+
+- **interesting geometry result**
+- **not a retained flagship architecture**
+
+### Engineered non-symmetry lanes
+
+Dense central-band + layer norm remains the strongest engineered benchmark
+outside the symmetry program, but it is no longer the center of gravity of the
+project.
+
+## Bridge-objective scorecard
+
+| objective | current status | retained read |
+|---|---|---|
+| Born / pairwise interference | **strong** | exact mirror, exact 2D mirror, and `Z2 x Z2` are machine-clean on retained harnesses |
+| Interference + which-slit structure | **strong** | exact mirror and exact 2D mirror retain large `d_TV` / MI advantages over matched random baselines |
+| Gravity-like phase signal | **strong** | retained positive gravity on the exact mirror and exact 2D mirror families |
+| `k=0` control | **strong** | retained symmetry lanes keep `k=0` at zero |
+| Joint coexistence on one architecture | **strong** | exact mirror is the flagship same-graph coexistence lane |
+| Slower decoherence washout | **strong but bounded** | exact mirror and `Z2 x Z2` clearly soften the ceiling, but the clean retained claim is bounded-window retention rather than a finished asymptotic theorem |
+| Mass-law quality | **weak / bounded** | positive fitted windows exist, but no flagship symmetry lane has a promoted clean mass law |
+| Distance-law quality | **negative structural result** | current connected random/symmetry architecture does not retain a review-safe `1/b`-style law |
+| Generated / emergent symmetry | **open** | no retained Born-clean grown successor yet |
+
+## Distance-law closure
+
+The recent gravity-side closure matters for the roadmap.
+
+Across the latest field-shape, coupling, scattering, focused-beam, and
+waveguide-style probes, the distance-law problem now has a much cleaner read:
+
+- the issue is **not** just that the retained `1/r` field is too shallow
+- the issue is **not** fixed by `1/r^2`, localized kernels, or weaker coupling
+- the issue is **not** fixed by simple focused-slit or waveguide-style tweaks
+
+The best current mechanism reading is:
+
+- amplitude spreads transversely across connected DAGs like a random walk
+- that destroys sustained beam confinement in the mass direction
+- without confinement, the current architecture gives a topological / flat
+  gravity response rather than a clean geometric `1/b` law
+
+So the project should treat distance law on the current flagship family as:
+
+- **closed negative inside the current connected symmetry architecture**
+- **open only under a different architecture class**, such as ordered /
+  lattice-like transport or another beam-confining geometry
+
+Useful references:
+
+- [`docs/B_INDEPENDENCE_MECHANISM_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/B_INDEPENDENCE_MECHANISM_NOTE.md)
+- [`docs/MIRROR_2D_GRAVITY_LAW_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/MIRROR_2D_GRAVITY_LAW_NOTE.md)
+
+### Ordered-lattice reopening
+
+Recent lattice work changes the roadmap without changing the flagship story.
+
+- the committed lattice-mirror script already shows a real
+  **distance-dependent** effect with sign change and decaying far-field
+  magnitude on a regular ordered graph:
+  [`scripts/lattice_mirror_distance.py`](/Users/jonreilly/Projects/Physics/scripts/lattice_mirror_distance.py)
+- this supports the beam-confinement / ordered-transport explanation for why
+  the random-connected symmetry lanes fail to retain a clean distance law
+
+There is also a stronger claimed lattice result in the recent branch history:
+
+- a no-barrier ordered-lattice harness with `|delta| ~ b^(-0.91)` and
+  `R^2 ≈ 0.97`
+
+At the moment, that stronger no-barrier `1/b` claim is **not yet frozen in a
+dedicated note/log artifact chain** in this checkout. So the safe synthesis
+read is:
+
+- **distance law remains closed on the flagship connected symmetry family**
+- **ordered / lattice geometry is now the main secondary frontier for the
+  distance-law question**
+
+## Single unified approach
+
+The project no longer needs to choose between many competing stories.
+
+The retained program is:
+
+1. **Use exact imposed symmetry as the main architecture**
+2. **Use exact mirror as the flagship lane**
+3. **Use exact 2D mirror as the clean validation card**
+4. **Use `Z2 x Z2` as the stronger decoherence / retained-range extension**
+5. **Treat generated symmetry as the next open bridge problem, not as a solved lane**
+
+## Highest-value next wins
+
+### Priority 1. Flagship synthesis card
+
+Produce one compact repo-facing card for:
+
+- exact mirror
+- exact 2D mirror
+- `Z2 x Z2`
+- structured mirror as the negative/open successor
+
+Goal:
+
+- make the flagship story impossible to misread
+
+### Priority 2. Symmetry mechanism note
+
+Turn the current intuition into a tighter mechanism statement:
+
+- why exact symmetry preserves sectors
+- why that slows rank-1 convergence
+- why `Z2 x Z2` improves the decoherence side further
+
+Goal:
+
+- move the symmetry story from “good empirical architecture” toward “clear
+  transfer-product mechanism”
+
+### Priority 3. Generated-symmetry bridge
+
+This is the highest-value open science problem.
+
+Question:
+
+- can a local growth rule generate exact-enough symmetry while staying
+  Born-clean on the canonical harness?
+
+Goal:
+
+- upgrade the program from **imposed symmetry** to **generated symmetry**
+
+### Priority 4. Flagship gravity-law clarification
+
+Do not keep trying to rescue the distance law inside the current connected
+symmetry architecture.
+
+Instead:
+
+- either close the mass-law question narrowly on the flagship lane
+- or document cleanly that the flagship lane is a coexistence architecture,
+  not a law-quality gravity architecture
+
+### Priority 5. Ordered-lattice branch
+
+The recent lattice result means this is no longer just a hypothetical future
+branch. It is now the main secondary frontier if distance law remains a key
+bridge objective.
+
+Immediate goal:
+
+- freeze one canonical ordered-lattice distance-law artifact chain
+- reconcile the sign-changing barrier lattice result with the stronger
+  no-barrier `|delta| ~ 1/b` claim
+
+Longer-term goal:
+
+- test whether an ordered / lattice-like geometry can inherit enough of the
+  symmetry program to become a true extension rather than a separate side
+  branch
+
+This branch is still architecturally separate from the current flagship:
+
+- ordered / lattice-like transport
+- beam-confining waveguide or crystal geometry
+- another architecture where transverse spreading is suppressed by design
+
+This should still be treated as a **next-generation architecture**, not as a
+tweak to the current exact-mirror program.
+
+## Bottom line
+
+The project now has a real unified core:
+
+- **exact symmetry-protected linear graph physics**
+
+Within that core:
+
+- **exact mirror** is the flagship
+- **exact 2D mirror** is the cleanest validation card
+- **`Z2 x Z2`** is the best extension
+- **structured/grown symmetry** is still the main unsolved bridge
+- **distance law** is no longer an active tweak problem on the current
+  architecture; it is a separate architecture problem

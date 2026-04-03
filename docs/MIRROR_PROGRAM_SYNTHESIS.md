@@ -1,8 +1,8 @@
 # Mirror Symmetry Program: Complete Synthesis
 
 **Date:** 2026-04-03
-**Branches:** claude/distracted-napier (gap-physics + spectral program), main (structured growth)
-**Status:** Unified architecture achieved. Born-clean. Audit-verified.
+**Branches:** claude/distracted-napier (gap-physics + spectral program), main (mirror / higher-symmetry audit chain)
+**Status:** legacy mirror-program synthesis; use [`docs/UNIFIED_PROGRAM_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/UNIFIED_PROGRAM_NOTE.md) for the current canonical project state
 
 ## The Problem
 
@@ -50,9 +50,11 @@ random chokepoint baseline on the same linear propagator.
   Born=1.08e-15 — strongest retained row in the exact 2D chain.
   Mass/distance follow-up remains weak, so no clean gravity law is promoted.
 
-**Structured mirror growth** (main, linear propagator):
-npl=30, N=30: 14% decoherence, gravity +3.05 (21.1 SE), Born=8e-17.
-The GROWN geometry (not imposed) gives all four phenomena.
+**Structured mirror growth** (main, geometry result; Born depends on harness):
+the grown structured geometry still gives strong decoherence and gravity on
+the LN-based growth lane, but the canonical linear joint validator does not
+stay Born-clean on the same family. The clean 8e-17 Born claim is therefore
+not retained as a synthesis headline for the grown lane.
 
 ### Architecture comparison
 
@@ -62,7 +64,7 @@ The GROWN geometry (not imposed) gives all four phenomena.
 | Imposed modular gap | perfect | 3-7 | 5-10% | ~0.15 | no |
 | Z₂ mirror (imposed) | perfect | 4-7 | 20-40% | 0.48-0.77 | no |
 | exact 2D mirror | perfect | 2-4 | 30-44% | 0.35-0.76 | no |
-| Z₂ mirror (grown) | 8e-17 | **21.1** | **14-19%** | (not yet measured) | **yes** |
+| Z₂ mirror (grown) | harness-sensitive | **21.1** | **14-19%** | (not yet measured) | **yes** |
 
 ## How we got here
 
@@ -82,11 +84,12 @@ Mirror symmetry forces rank-2 product. Decoherence exponent -0.27
 with N on mirror DAGs (unique property).
 
 ### Phase 4: Audit and unification
-Born audit confirmed all mirror generators are Born-clean with linear
-propagator. MI audit committed as reproducible script; the new exact 2D
-validation adds a second artifact-backed mirror MI chain. Other thread
-found structured mirror growth with linear propagator: 21.1 SE gravity
-+ 14% decoherence + Born=8e-17.
+Born audit confirmed the exact mirror generators are Born-clean with the
+linear propagator. MI audit committed as reproducible script; the new exact
+2D validation adds a second artifact-backed mirror MI chain. The structured
+growth lane remains physically interesting, but the canonical linear joint
+validator is not Born-clean, so the grown-lane Born claim is left as
+harness-sensitive rather than synthesis-grade.
 
 ## Z₂ breaking robustness
 
