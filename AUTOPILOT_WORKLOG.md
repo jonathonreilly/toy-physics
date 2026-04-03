@@ -1,3 +1,64 @@
+## 2026-04-03 — Directional-b midlayer sentinel limits frozen 4-NN bridge
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed:
+  - no detached science child was running
+- the canonical repo matched `origin/main` before new science:
+  - `main` and `origin/main` both point to `51e8af8` (`Merge branch 'claude/distracted-napier'`)
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+- the shared checkout still carried unrelated modified logs plus untracked docs / scripts in the lattice, mirror, persistent-record, and gravity-design lanes, so this loop stayed strictly on the fixed-directional-measure directional-`b` seam
+- the retained directional-`b` next step was to stress-test the frozen continuous target-plane density bridge `mass_nodes / expected_target_count_4nn >= 2.7354` on one additional dense-family sentinel beyond the passing tree control
+
+### What changed
+- added `/Users/jonreilly/Projects/Physics/scripts/directional_b_overlap_continuous_density_midlayer_holdout.py`
+- generated `/Users/jonreilly/Projects/Physics/logs/2026-04-03-directional-b-continuous-density-midlayer-holdout.txt`
+- reused the retained dense-pair + tree thresholds without refit:
+  - counted `mass_nodes / local_target_count >= 2.5`
+  - continuous `mass_nodes / expected_target_count_4nn >= 2.7354`
+- applied them to one adjacent dense sentinel that changes only the gravity-layer `y` sampler:
+  - the middle layer now uses the centered law `y = sign(u) |u|^1.4 * y_range`
+  - sizes, target `b`, support width, and overlap diagnostic stayed fixed
+- updated `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md` so the directional note now records the midlayer-sentinel limit on the frozen 4-NN bridge and narrows the next step accordingly
+- refreshed:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- prepared one bounded science commit carrying the new directional-`b` sentinel result
+
+### Strongest confirmed conclusion
+The frozen continuous 4-NN target-plane density law is still the sharper smooth explanation on the original dense pair plus tree control, but it is not yet a fully portable frozen replacement for the counted bridge across dense sampler changes.
+- on the new one-notch center-biased midlayer sentinel:
+  - counted source-load rule transfers at `9/3/1/27`, accuracy `0.9000`
+  - frozen 4-NN rule transfers at `4/0/6/30`, accuracy `0.8500`
+  - the 4-NN rule stays precise (`0` false positives) but becomes conservative (`6` false negatives)
+- the same-side local-density read is still not dead:
+  - on the extended sample including the older dense pair, tree control, and new midlayer sentinel, the 4-NN rule still beats the counted rule overall:
+    - counted `32/12/2/57`, accuracy `0.8641`
+    - frozen 4-NN `25/2/9/67`, accuracy `0.8932`
+- so the portable mechanism language tightens again:
+  - occupancy shortage / source load remains the cross-dense-family primitive
+  - the 4-NN density law is best read as the current smooth refinement on the original dense pair + tree control
+  - center-biased target-plane densification is now the concrete miss mode that any promoted continuous correction must explain
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/scripts/directional_b_overlap_continuous_density_midlayer_holdout.py`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-03-directional-b-continuous-density-midlayer-holdout.txt`
+- `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- keep the corrected fixed directional propagator and retained `b -> b - h_mass` hierarchy fixed
+- stay on the same directional-`b` overlap-translation thread
+- use the six new frozen 4-NN false negatives as the bounded diagnostic seam
+- test whether one occupancy-aware continuous correction can absorb the center-biased densification misses while preserving the tree safety margin, without reopening a wider denominator search
+
+### First concrete action
+- reopen `/Users/jonreilly/Projects/Physics/logs/2026-04-03-directional-b-continuous-density-midlayer-holdout.txt`
+- compare each frozen 4-NN miss directly against `local_target_count`, `knn4_expected_target_count`, and `mu`
+- try one monotone occupancy-aware normalization on the existing dense-pair + tree + midlayer rows before touching any new families
+
 ## 2026-04-03 — Coordination reconciled to synced lattice validation head
 
 ### Current state

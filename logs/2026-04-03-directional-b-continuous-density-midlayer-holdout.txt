@@ -1,0 +1,54 @@
+============================================================================================================================
+DIRECTIONAL-MEASURE B CONTINUOUS-DENSITY MIDLAYER HOLDOUT
+============================================================================================================================
+Freeze the current counted and 4-NN overlap thresholds, then apply them to one additional dense
+sentinel that changes only the gravity-layer y sampler to y = sign(u) |u|^gamma * y_range.
+
+Frozen overlap rules:
+  counted source-load rule : mass_nodes / local_target_count >= 2.5000
+  continuous 4-NN rule    : mass_nodes / expected_target_count_4nn >= 2.7354
+  expected_target_count_4nn = 4 / r4 on the same-side target-plane slice
+
+               set rows  ovlp      count tp/fp/fn/tn acc       4-NN tp/fp/fn/tn acc
+----------------------------------------------------------------------------------------------------------------------------
+        dense-pair   60    24           23/9/1/27 0.8333           21/2/3/34 0.9167
+              tree    3     0             0/0/0/3 1.0000             0/0/0/3 1.0000
+    reference+tree   63    24           23/9/1/30 0.8413           21/2/3/37 0.9206
+ midlayer-sentinel   40    10            9/3/1/27 0.9000            4/0/6/30 0.8500
+   extended-sample  103    34          32/12/2/57 0.8641           25/2/9/67 0.8932
+
+Midlayer sentinel family summary:
+        family    N rows  ovlp   mu_med target_ct   count_ld     4NN_ld
+----------------------------------------------------------------------------
+midgamma1.4-m3   12   10     0    1.947     3.700      1.163      0.969
+midgamma1.4-m3   25   10     3    1.070     2.600      1.560      1.467
+midgamma1.4-m5   12   10     2    0.308     3.700      1.938      1.614
+midgamma1.4-m5   25   10     5   -0.016     2.600      2.600      2.446
+
+Midlayer overlap vs safe means:
+  local_target_count      : 1.200 vs 3.800
+  source_load             : 3.567 vs 1.231
+  knn4_expected_target_ct : 1.700 vs 4.271
+  knn4_density_load       : 3.267 vs 1.076
+
+Frozen 4-NN misses on the sentinel:
+        family    N seed       mu target_ct   count_ld     4NN_ld  4NN_margin
+------------------------------------------------------------------------------------
+midgamma1.4-m3   25    4   -0.006         1      3.000      1.324      -1.411
+midgamma1.4-m3   25    3   -0.179         1      3.000      1.791      -0.945
+midgamma1.4-m5   25    6   -0.203         2      2.500      2.037      -0.698
+midgamma1.4-m5   12    1   -0.098         1      5.000      2.153      -0.582
+midgamma1.4-m5   25    4   -0.079         1      5.000      2.207      -0.528
+midgamma1.4-m5   25    7   -0.306         3      1.667      2.495      -0.241
+
+Interpretation:
+  1. The frozen 4-NN density law stays cleaner on the extended sample overall, but it does not
+     transfer cleanly as a frozen replacement on the center-biased dense sentinel.
+  2. On this sentinel, the counted source-load rule still transfers better than the frozen 4-NN rule:
+     0.9000 vs 0.8500, even though the 4-NN rule keeps zero false positives.
+  3. The sentinel only changes gravity-layer y sampling, and its overlap rows keep denser same-side
+     support near the target plane; that pushes r4 down, inflates expected_target_count_4nn, and
+     makes the frozen 4-NN load conservative through false negatives rather than false positives.
+  4. So the current portable statement remains occupancy-first: the 4-NN law is still the sharper
+     smooth explanation on the original dense pair plus tree control, but it is not yet a fully
+     frozen replacement for the counted bridge across dense sampler changes.
