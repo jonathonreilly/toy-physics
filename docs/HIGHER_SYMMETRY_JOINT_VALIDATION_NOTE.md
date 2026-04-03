@@ -70,7 +70,7 @@ Using the family-mean decoherence depth
 the retained bounded fit for `Z2 x Z2` is:
 
 - direct fit: `alpha = -0.335`, `R^2 = 0.643`
-- bootstrap: `alpha = -0.336`, `95% CI [-0.512, -0.146]`
+- bootstrap: `alpha = -0.335`, `95% CI [-0.509, -0.139]`
 
 For reference on the same bounded window:
 
