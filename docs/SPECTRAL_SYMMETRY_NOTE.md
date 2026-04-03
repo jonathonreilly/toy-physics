@@ -2,7 +2,7 @@
 
 **Important:** this is a historical branch snapshot. For the current
 review-safe read on `main`, see
-[`docs/HIGHER_SYMMETRY_COMPARISON_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/HIGHER_SYMMETRY_COMPARISON_NOTE.md).
+[`docs/HIGHER_SYMMETRY_JOINT_VALIDATION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/HIGHER_SYMMETRY_JOINT_VALIDATION_NOTE.md).
 The retained takeaway from this line is only that `Z₂×Z₂` is an
 exploratory decoherence-side lead, not a Born/gravity-validated successor.
 
