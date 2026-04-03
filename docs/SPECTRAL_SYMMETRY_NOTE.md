@@ -1,5 +1,11 @@
 # Spectral Symmetry: Graph Discrete Symmetry Controls Decoherence
 
+**Important:** this is a historical branch snapshot. For the current
+review-safe read on `main`, see
+[`docs/HIGHER_SYMMETRY_COMPARISON_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/HIGHER_SYMMETRY_COMPARISON_NOTE.md).
+The retained takeaway from this line is only that `Z₂×Z₂` is an
+exploratory decoherence-side lead, not a Born/gravity-validated successor.
+
 **Date:** 2026-04-03
 **Branch:** claude/distracted-napier
 **Status:** Complete. Three-tier result: theorem, mechanism, quantitative scaling.

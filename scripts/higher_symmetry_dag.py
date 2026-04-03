@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
-"""Higher symmetry DAGs: Z₂×Z₂ and approximate rotational.
+"""Higher symmetry DAGs: exploratory symmetry comparison only.
 
-Z₂ mirror (y→-y) gives exponent -0.27 (vs -1.0 on random).
-If more symmetry = slower decay:
-  Z₂×Z₂ (y→-y AND z→-z) should give rank-4, exponent > -0.27
-  Approximate rotational (nodes on rings) should approach rank-∞
+This file compares a few symmetry families on a decoherence-side proxy.
+It does **not** establish a Born-safe or gravity-safe retained lane by
+itself, and it should not be read as a rank-theorem proof.
 
-Test: decoherence scaling comparison across symmetry groups.
+The current interesting question is narrower:
+does Z2xZ2 improve the decoherence-side proxy relative to the weaker
+mirror and random baselines on this harness?
+
+Use the hardened mirror chokepoint scripts for review-safe Born/gravity
+claims.
 """
 
 from __future__ import annotations
@@ -268,8 +272,8 @@ def main():
             else:
                 print(f"  {nl:4d}  {label:>18s}  FAIL  {dt:4.0f}s")
         print()
-    print("Prediction: more symmetry → lower pur_cl (more decoherence)")
-    print("If Z₂×Z₂ < Z₂ < random: symmetry group hierarchy confirmed")
+    print("Exploratory read: compare decoherence-side ordering only.")
+    print("Do not infer Born or gravity retention from this script alone.")
 
 
 if __name__ == "__main__":
