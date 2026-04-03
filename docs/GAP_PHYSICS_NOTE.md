@@ -178,6 +178,24 @@ What survives from this branch:
 - Co-improvement finding (Exp 12) → consistent with main
 - Pareto frontier concept → refined by main (family-specific escape)
 
+### Exp 19-20: k-band artifact + path-count bath
+**Exp 19:** LN+|y| single-k purity = 1.000000. All non-collapse
+"decoherence" from LN was k-band averaging artifact. Only collapse
+creates genuine single-k mixing.
+
+**Exp 20:** Path-count bath coupling S_path = 0.4-0.6 (10x larger
+than y-bin S_norm, doesn't CLT-converge). But purity improvement is
+modest because the CL bath saturates when D→0. The remaining purity
+floor is set by the OVERLAP OF SINGLE-SLIT DETECTOR DISTRIBUTIONS,
+not the bath coupling.
+
+**Structural insight:** The CLT convergence of single-slit detector
+distributions is the fundamental limit. It's upstream of any bath
+formula — changing the coupling (y-bin to path-count) or the
+propagator (linear to LN) cannot fix it. The only way to lower the
+floor is to make single-slit distributions genuinely different at
+the detector, which the CLT prevents on connected graphs.
+
 ## Implications for the project
 
 The gap cannot be generated from local amplitude-based rules because
