@@ -139,8 +139,10 @@ decoherence becomes truly scalable in high-dimensional graphs.
    which modifies the CLT convergence rate but not the dimensional
    scaling.
 
-4. The k-dependence (k=3 gives -0.32, k=10 gives -2.52) is not
-   captured by this argument. It likely enters through the phase
-   coherence length: at high k, destructive interference kills
-   long-range correlations faster, making the mixing zone effectively
-   larger.
+4. The old k-dependence story is now fit-sensitive. A review-safe
+   fixed-window rerun on `N=[25,30,40,60,80]` with shared seeds gives
+   overlapping bootstrap intervals across k, so the earlier `k=3` vs
+   `k=10` exponent gap should be treated as an exploratory family
+   effect rather than a clean exponent law. The likely interpretation
+   is still phase-coherence-length driven, but the evidence does not yet
+   support a hardened `alpha(k)` theorem.
