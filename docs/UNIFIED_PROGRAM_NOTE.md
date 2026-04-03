@@ -152,18 +152,30 @@ Recent lattice work changes the roadmap without changing the flagship story.
 - this supports the beam-confinement / ordered-transport explanation for why
   the random-connected symmetry lanes fail to retain a clean distance law
 
-There is also a stronger claimed lattice result in the recent branch history:
+That stronger no-barrier lattice branch is now frozen in:
 
-- a no-barrier ordered-lattice harness with `|delta| ~ b^(-0.91)` and
-  `R^2 ≈ 0.97`
+- [`docs/LATTICE_DISTANCE_LAW_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_DISTANCE_LAW_NOTE.md)
+- [`docs/LATTICE_FAMILY_VALIDATION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_FAMILY_VALIDATION_NOTE.md)
 
-At the moment, that stronger no-barrier `1/b` claim is **not yet frozen in a
-dedicated note/log artifact chain** in this checkout. So the safe synthesis
-read is:
+The retained ordered-lattice read is:
+
+- `|delta| ~= 23.5071 * b^(-1.052)`
+- `R^2 = 0.9850`
+- `k=0 = 0`
+- barrier-lattice coexistence card at `N=40`:
+  - `MI = 0.537`
+  - `1 - pur_cl = 0.057`
+  - `d_TV = 0.714`
+  - gravity `-5.740`
+  - Born `2.98e-16`
+
+So the safe synthesis read is now:
 
 - **distance law remains closed on the flagship connected symmetry family**
-- **ordered / lattice geometry is now the main secondary frontier for the
+- **ordered / lattice geometry is a retained secondary branch for the
   distance-law question**
+- **ordered lattice also has a real same-family coexistence pocket, but not yet
+  a full retained 10/10 unification card**
 
 ## Single unified approach
 
@@ -237,9 +249,10 @@ bridge objective.
 
 Immediate goal:
 
-- freeze one canonical ordered-lattice distance-law artifact chain
-- reconcile the sign-changing barrier lattice result with the stronger
-  no-barrier `|delta| ~ 1/b` claim
+- reconcile the sign-changing barrier lattice result with the retained
+  no-barrier `|delta| ~ 1/b` branch
+- decide whether the ordered branch can inherit enough symmetry structure to
+  unify distance law with the flagship coexistence story
 
 Longer-term goal:
 
