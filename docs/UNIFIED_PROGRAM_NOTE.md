@@ -156,6 +156,8 @@ That stronger no-barrier lattice branch is now frozen in:
 
 - [`docs/LATTICE_DISTANCE_LAW_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_DISTANCE_LAW_NOTE.md)
 - [`docs/LATTICE_FAMILY_VALIDATION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_FAMILY_VALIDATION_NOTE.md)
+- [`docs/LATTICE_SYMMETRY_UNIFICATION_DECISION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_SYMMETRY_UNIFICATION_DECISION_NOTE.md)
+- [`docs/LATTICE_COMPLEMENTARITY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_COMPLEMENTARITY_NOTE.md)
 
 The retained ordered-lattice read is:
 
@@ -169,13 +171,35 @@ The retained ordered-lattice read is:
   - gravity `-5.740`
   - Born `2.98e-16`
 
+### Ordered-lattice complementarity
+
+The ordered-lattice one-harness decision is now frozen as **negative** on the
+dense lattice-symmetry extension:
+
+- the same-card gravity sign does not turn attractive on the retained
+  two-slit decision sweep
+- so the ordered lattice is **not** promoted to a one-card unified architecture
+
+But the ordered-lattice branch does retain a canonical complementarity result on
+the base ordered family:
+
+- slit-width sweep gives a stable tradeoff between which-slit structure and
+  barrier-card distance-law quality
+- the bounded sweet spot is the existing `gap = 2` row:
+  - `MI = 0.537`
+  - `1 - pur_cl = 0.057`
+  - distance-law fit `R^2 = 0.930`
+  - Born companion `5.17e-16`
+  - `k = 0`
+  - gravity stays negative on that same slit card
+
 So the safe synthesis read is now:
 
 - **distance law remains closed on the flagship connected symmetry family**
 - **ordered / lattice geometry is a retained secondary branch for the
   distance-law question**
-- **ordered lattice also has a real same-family coexistence pocket, but not yet
-  a full retained 10/10 unification card**
+- **ordered lattice also has a retained same-family complementary-observables
+  branch with a bounded sweet spot, but not a full same-card unification**
 
 ## Single unified approach
 
