@@ -224,44 +224,42 @@ is increasingly mixed), not from the collapse mechanism.
 
 ### Dimensional scaling: 4D escapes the ceiling
 
-The decoherence exponent depends critically on dimension:
-```
-2D uniform:       alpha = -1.58  (rapid decay, ceiling at N~235)
-4D modular gap=3: alpha = -0.22  (near flat, ~7% decoherence persists)
-```
+The decoherence exponent depends critically on dimension (definitive):
 
-4D improvement: **+1.36 in exponent** — from rapid decay to near-plateau.
-At N=100: 2D has 1.4% decoherence remaining; 4D has 5-8%.
+| d_spatial | alpha | R² | seeds | pur_min=0.99 at N |
+|-----------|-------|-----|-------|-------------------|
+| 1 (2D) | -1.01 | 0.83 | 24 | ~156 |
+| 2 (3D) | ~-0.7 | — | limited | ~500 |
+| 3 (4D) | **-0.178** | **0.84** | **24** | **~2.4 million** |
+| 4 (5D) | **+0.11** | 0.19 | 12 | **never** |
 
-The exponent also depends on wavenumber k:
-```
-k=3:  alpha = -0.32  (shallowest — decoherence most persistent)
-k=10: alpha = -2.52  (steepest — fastest decay)
-```
+From 2D to 5D, the exponent goes from -1.0 to +0.1.
+In 5D, decoherence doesn't decay at all.
 
-Physics: decoherence persistence scales with the number of
-**independent path channels** between slits and detectors.
-Higher dimension adds channels. Lower k makes paths more
-coherent within channels. Both flatten the exponent.
+The exponent also depends on wavenumber k (2D):
+```
+k=3:  alpha = -0.32  (shallowest)
+k=10: alpha = -2.52  (steepest)
+```
 
 ### Analytical derivation: alpha ~ alpha_0 / d_spatial
 
 Semi-analytical argument (see docs/EXPONENT_DERIVATION.md):
-The fraction of shared paths between slits scales as (r/L)^d_spatial.
-This predicts alpha ~ -1.5/d_spatial:
-
 ```
-d=1 (2D): predicted -1.50, measured -1.50  (baseline)
-d=2 (3D): predicted -0.75, measured ~-0.70
-d=3 (4D): predicted -0.50, measured -0.22 to -0.53
+d=1 (2D): predicted -1.50, measured -1.01
+d=2 (3D): predicted -0.75, measured ~-0.70  ← good match
+d=3 (4D): predicted -0.50, measured -0.178  ← flatter than predicted
+d=4 (5D): predicted -0.375, measured +0.11  ← even flatter
 ```
 
-As d→∞, alpha→0: decoherence becomes truly scalable.
+The 1/d prediction captures the trend but underestimates the
+improvement. The actual dimensional effect is stronger than 1/d.
 
 ### Gravity-decoherence dimensional trade-off
 
 Born on 4D+LN: machine zero (5e-16). Clean.
-Gravity on 4D+LN: delta=+0.13 (0.2 SE). Flat — signal diluted by
+4D joint coexistence (N=25, field=0.5): gravity 4.0 SE + 16% decoherence.
+4D gravity at default field (0.1): flat — signal diluted by
 extra transverse dimensions.
 
 The extra dimensions that help decoherence (more independent path
