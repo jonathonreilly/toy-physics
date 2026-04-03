@@ -1,127 +1,78 @@
 # Higher-Symmetry Gravity Probe Note
 
 **Date:** 2026-04-03  
-**Status:** bounded gravity response, no review-safe law window
+**Status:** bounded positive, but not a clean gravity-law contender
 
-This note freezes the gravity-side follow-up for the retained higher-symmetry
-lane, using the dedicated probe in:
+This note records the gravity-side follow-up to the higher-symmetry joint
+validation.
 
+Script:
 [`scripts/higher_symmetry_gravity_probe.py`](/Users/jonreilly/Projects/Physics/scripts/higher_symmetry_gravity_probe.py)
 
 Log:
-
-[`logs/2026-04-03-higher-symmetry-gravity-probe.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-03-higher-symmetry-gravity-probe.txt)
+[`logs/2026-04-03-higher-symmetry-gravity-probe-z2z2-dense-n80-n120.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-03-higher-symmetry-gravity-probe-z2z2-dense-n80-n120.txt)
 
 ## Question
 
-The joint validation already showed that `Z2 x Z2` is Born-clean, gravity-
-positive, and decohering. The remaining question was whether that gravity
-signal has an actual mass or distance law, or whether it is only a positive
-joint pocket.
+Does the dense `Z2 x Z2` extension inherit a usable gravity-side mass window
+or distance tail, or does gravity flatten out as the symmetry lane is widened?
 
-This probe used the same `Z2 x Z2` geometry family as the joint validator and
-ran two narrow checks:
+The probe uses the same slit/detector geometry as the joint validator and
+checks:
 
-- fixed-anchor mass prefixes on the gravity layer
-- fixed-mass distance sweeps on the same retained geometry
+- fixed-anchor mass windows
+- fixed-mass distance sweeps
+- the same phase-mediated `k`-band readout used in the joint note
 
-## Setup
+## Dense Extension Setup
 
-- family: `Z2 x Z2`
+- `N = 80, 100, 120`
 - `16` seeds
-- `N = 25, 40, 60, 80, 100`
-- `z2z2_quarter = 12` (`48` total nodes per layer)
-- `connect_radius = 5.0`
+- `z2z2-quarter = 16` (`64` total nodes per layer)
+- `connect_radius = 5.2`
 - `anchor_b = 5.0`
-- fixed mass count for distance sweep: `4`
-- `k` band: `3, 5, 7`
+- `mass_count = 4`
 
 ## Fixed-Anchor Mass Window
 
-The mass window is positive, but it is not clean enough to freeze as a hardened
-law.
+The mass window stays positive, but it is weak and only moderately fit-shaped:
 
-Representative fits:
-
-### `N = 25`
-
-- window fit `M in {2,3,5,8}`
-- `delta ~= 0.2146 * M^0.404`
-- `R^2 = 0.218`
-
-### `N = 40`
-
-- window fit `M in {2,3,5,8}`
-- `delta ~= 0.3220 * M^0.490`
-- `R^2 = 0.752`
-
-### `N = 60`
-
-- window fit `M in {2,3,5,8}`
-- `delta ~= 0.0343 * M^1.828`
-- `R^2 = 0.798`
-
-### `N = 100`
-
-- window fit `M in {2,3,5,8}`
-- `delta ~= 0.3712 * M^0.500`
-- `R^2 = 0.135`
+| N | fit |
+|---|---|
+| 80 | `delta ~= 0.3668 * M^0.724`, `R^2 = 0.999` |
+| 100 | `delta ~= 0.0748 * M^1.348`, `R^2 = 0.918` |
+| 120 | `delta ~= 0.0504 * M^1.318`, `R^2 = 0.622` |
 
 ## Fixed-Distance Sweep
 
-The distance sweep does not produce a review-safe falling tail.
+The distance response remains positive, but the tail is not a clean retained
+gravity law:
 
-Observed pattern:
+| N | peak | tail fit |
+|---|---|---|
+| 80 | `b = 6.0` | `delta ~= C * b^-2.132`, `R^2 = 0.562` |
+| 100 | `b = 6.0` | `delta ~= C * b^0.751`, `R^2 = 0.014` |
+| 120 | `b = 4.0` | `delta ~= C * b^-0.563`, `R^2 = 0.151` |
 
-- the mean response is often positive
-- the curve peaks inside the tested window
-- there are not enough falling-tail points for a robust power-law fit
+## Narrow Read
 
-Representative peak rows:
+- The dense `Z2 x Z2` extension is still gravity-positive.
+- The mass response remains positive but weak, and the fit quality degrades by
+  `N = 120`.
+- The distance response is a broad bump / plateau rather than a clean retained
+  law.
+- So this lane is a real bounded gravity-side positive, but it is **not** the
+  cleanest gravity law in the project.
 
-### `N = 25`
+## Conclusion
 
-- peak mean deflection near `b = 8.0`
-- no review-safe tail fit
+The dense `Z2 x Z2` extension survives as a review-safe coexistence lane, and
+it does not lose Born safety at `N = 120`. But the gravity probe shows that the
+lane is still a bounded pocket rather than a clean asymptotic gravity law.
 
-### `N = 40`
+The best current interpretation is:
 
-- peak mean deflection near `b = 8.0`
-- no review-safe tail fit
-
-### `N = 60`
-
-- peak mean deflection near `b = 12.0`
-- no review-safe tail fit
-
-### `N = 80`
-
-- no positive falling tail
-
-### `N = 100`
-
-- peak mean deflection near `b = 8.0`
-- no review-safe tail fit
-
-## Retained Conclusion
-
-The gravity-side picture for `Z2 x Z2` is:
-
-- **positive response:** yes
-- **usable mass law window:** not yet
-- **usable distance law:** no
-- **gravity contender:** not yet
-
-The strongest supported statement is therefore:
-
-- `Z2 x Z2` is a real **decoherence lead** that stays Born-clean and keeps a
-  positive gravity signal
-- but it does **not** yet have a review-safe gravity law window comparable to
-  the retained mirror boundary probe
-
-So the current safe ranking is:
-
-1. Mirror chokepoint remains the stronger gravity-side pocket
-2. `Z2 x Z2` remains the strongest higher-symmetry decoherence lead
-3. The gravity-law question for `Z2 x Z2` is still open
+- **decoherence lead:** yes
+- **gravity-positive:** yes
+- **gravity-law contender:** not yet
 
