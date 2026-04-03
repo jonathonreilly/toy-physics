@@ -357,6 +357,28 @@ In 4D with regulation: the exponent halves to -0.53, extending the
 effective range to N≈16,500. The ceiling is a low-dimensional
 artifact, not a fundamental property of path-sum propagation.
 
+## Full Axiom Chain Closure (2026-04-03)
+
+ALL axioms now close on locally-grown geometric DAGs:
+
+| Axiom | Implementation | Status |
+|-------|---------------|--------|
+| 1 (network) | grow_geometric_dag(d_growth=3) | Closed |
+| 2 (patterns=mass) | Amplitude concentration → 1/r field | Closed (3.1 SE) |
+| 3 (space inferred) | Parent + random offset in d dims | Closed |
+| 6 (continuation) | Radius-based edges | Closed |
+| 8 (gravity) | Phase valley in emergent field | Closed (2.0 SE) |
+| 9 (records=barrier) | Amplitude-density damping | Closed |
+
+Results on fully emergent 4D grown graphs (N=30, 20 seeds):
+```
+pur_min = 0.967 (3.4% decoherence)
+gravity = +0.442
+N=18: pur_min = 0.949 (5.1% decoherence)
+```
+
+Nothing imposed. Everything from axioms.
+
 The open question: does a growth law exist where nodes fail to
 nucleate in low-distinguishability regions? This is causal set
 dynamics, not parameter sweeping, and requires theoretical work
