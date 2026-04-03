@@ -104,7 +104,11 @@ def propagate(pos, adj, field, k, blocked, n):
             act = dl - ret
             theta = math.atan2(abs(dy), max(dx, 1e-10))
             w = math.exp(-BETA * theta * theta)
-            ea = cmath.exp(1j * k * act) * w / L
+            # Scale kernel by spacing² to keep amplitude norm O(1) per layer
+            # Without this, amplitude grows as (n_edges/spacing)^N → overflow
+            # The spacing² comes from: 1/L contributes 1/spacing, and the
+            # discrete→continuous measure contributes another spacing
+            ea = cmath.exp(1j * k * act) * w / L * spacing * spacing
             amps[j] += amps[i] * ea
     return amps
 
