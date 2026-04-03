@@ -409,6 +409,27 @@ the dimension of emergent space is determined by the requirement
 that both gravity-like deflection and decoherence-like record
 formation can emerge from the same path-sum structure.
 
+## Integration with Codex Mirror Lane
+
+Two complementary approaches:
+
+| | Grown geometric (ours) | S4 mirror (Codex) |
+|---|---|---|
+| Decoherence | 7.5% | 27% |
+| Gravity | 2.5 SE | 7.2 SE |
+| Born | 4e-16 | 3e-15 |
+| Imposed? | Nothing | Graph structure |
+| Axiom chain | Fully closed | Partially closed |
+
+The gap (7.5% vs 27%) = cost of emergence. Approximate symmetry
+from growth is weaker than exact structural Z₂ symmetry.
+
+Dense grown graphs fail (npl=80 → 0.02% decoherence) because
+CLT dominates. Sweet spot: npl≈30. Exact symmetry works at
+any density because it structurally preserves slit separation.
+
+## Remaining Open Questions
+
 The open question: does a growth law exist where nodes fail to
 nucleate in low-distinguishability regions? This is causal set
 dynamics, not parameter sweeping, and requires theoretical work
