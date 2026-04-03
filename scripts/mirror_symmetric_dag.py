@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
-"""Mirror-symmetric DAGs: exploratory Z₂ lane.
+"""Mirror-symmetric DAGs: exploratory Z2 lane only.
 
-This file records the original mirror-symmetry idea, but the top-level
-claim is intentionally conservative now. The non-chokepoint lookback-2
-generator can show a strong decoherence-side effect, but the review-safe
-Born / rank-2 question belongs in the corrected chokepoint companion
-script.
+This file records the original mirror-symmetry idea on the older
+non-chokepoint lookback-2 family. It can show a strong decoherence-side
+effect, but it does not by itself establish:
 
-Use the hardened companion script for canonical small-`N` coexistence claims:
+  - Born compliance
+  - persistent rank-2 / non-convergent transfer structure
+  - a retained gravity+decoherence coexistence card
+
+Those review-safe claims belong to the corrected chokepoint companion
+script and its paired note/log chain:
 `scripts/mirror_chokepoint_joint.py`
 
 Implementation:
