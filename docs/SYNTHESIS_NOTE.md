@@ -306,18 +306,21 @@ This is a toy model with seven publishable quantitative results:
 6. **Dimensional escape:** 4D modular DAGs show exponent -0.22
    (near flat) vs 2D's -1.58. k=3 gives -0.32, k=10 gives -2.52.
 
-7. **4D + LN combined:** the strongest configuration (R²=0.961):
+7. **4D + LN combined:** the reconstructed tracked artifact is
+   [four_d_layernorm_combined.py](/Users/jonreilly/Projects/Physics/scripts/four_d_layernorm_combined.py)
+   with log [2026-04-03-four-d-layernorm-combined.txt](/Users/jonreilly/Projects/Physics/logs/2026-04-03-four-d-layernorm-combined.txt).
+   On the retained 4D modular gap=3 family with 12 seeds, the verified fit is:
    ```
-   (1-pur_min) = 1.77 × N^(-0.53)
-   pur_min=0.90 at N≈220, pur_min=0.99 at N≈16,500
+   (1-pur_min) = 0.856 × N^(-0.347)
+   pur_min=0.90 at N≈488, pur_min=0.99 at N≈372,521
    ```
-   Three improvements stack: LN (prefactor 12x), gap (prefactor 3x),
-   4D (exponent -0.53 vs -1.58). Effective range 70x over 2D baseline.
+   This is a real finite-`N` gain over the plain 4D lane, but it does **not**
+   support the older `1.77 × N^(-0.53)` / `N≈16,500` champion wording.
 
-The model's limitation in 2D: the 1/N ceiling with exponent ~-1.5.
-In 4D with regulation: the exponent halves to -0.53, extending the
-effective range to N≈16,500. The ceiling is a low-dimensional
-artifact, not a fundamental property of path-sum propagation.
+The model's limitation in 2D remains the same broad ceiling story, but the
+currently tracked 4D+LN artifact should now be read as a bounded improvement
+inside the retained modular family, not as a validated dimensional escape
+theorem.
 
 The open question: does a growth law exist where nodes fail to
 nucleate in low-distinguishability regions? This is causal set
