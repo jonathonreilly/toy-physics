@@ -3,12 +3,15 @@
 **Date:** 2026-04-03  
 **Status:** review-safe head-to-head summary
 
-This note compares the three hard-geometry lanes that are still worth
-carrying forward after the hardening pass:
+This note compares the retained hard-geometry and symmetry lanes that are
+still worth carrying forward after the hardening pass, plus the emergence-
+facing grown-graph density constraint:
 
 - dense central-band hard geometry + layer norm
 - mirror symmetry / Z2-protected transfer geometry
+- higher-symmetry `Z2 x Z2`
 - generated asymmetry-persistence hard geometry + layer norm
+- grown-graph density optimum near `npl≈30`
 
 The comparison is intentionally narrow. It uses only the retained metrics
 that are already supported on `main`:
@@ -50,25 +53,51 @@ challenger.
 
 Best retained rows:
 
-- `N = 40`, `NPL_HALF = 50`
+- dense boundary family with canonical fit
+- `N = 100` retained on the dense boundary scan
+- `NPL_HALF = 60`, `connect_radius = 5.0`
 - strict chokepoint mirror
-- Born `|I3|/P = 1.01e-15`
-- `pur_cl = 0.8764±0.03`
-- gravity: `+4.6161±0.721`
+- Born `|I3|/P = 1.13e-15`
+- `pur_cl = 0.9043±0.02`
+- gravity: `+1.3089±0.570`
+
+Canonical boundary fit:
+
+- `(1 - pur_cl) = 0.3901 × N^(-0.245)`
+- `R² = 0.126`
 
 Range check:
 
-- retained through `N = 60` on the strict `NPL_HALF = 50` probe
-- fails at `N = 80/100`
+- retained through `N = 100` on the dense boundary scan
+- `N = 120` is the gravity wall
 
 Narrow read:
 
-- stronger retained gravity than the dense central-band row
+- stronger retained gravity than the dense central-band row at `N = 40/60`
 - weaker decoherence than the dense central-band row
-- shorter retained range than the dense central-band row
+- longer retained range than the strict pocket, but still bounded
 - still Born-clean in the retained pocket
 
-## 3. Generated Asymmetry-Persistence + Layer Norm
+## 3. Higher-Symmetry `Z2 x Z2`
+
+This is the best decoherence-side symmetry lane.
+
+Best retained row:
+
+- `N = 80`
+- `pur_cl = 0.783±0.019`
+- Born `|I3|/P = 1.48e-15`
+- gravity at `k = 5`: `+2.771±0.567`
+- gravity band: `+1.736±0.337`
+
+Narrow read:
+
+- Born-clean through the full tested window
+- positive gravity signal at all tested `N`
+- slower decoherence decay than the random baseline
+- not the best gravity-side lane and not the best joint lane
+
+## 4. Generated Asymmetry-Persistence + Layer Norm
 
 This remains the strongest retained gravity-side lane.
 
@@ -93,16 +122,36 @@ Narrow read:
 - it is not the best joint coexistence lane because the gravity sign is
   density-sensitive and not uniformly positive across the dense scan
 
+## 5. Grown-Graph Density Optimum
+
+This is the best emergence-facing lane.
+
+Retained read:
+
+- grown graphs favor a density optimum near `npl≈30`
+- dense grown graphs fail because CLT dominates
+- exact symmetry works at any density because it preserves slit separation structurally
+
+Narrow read:
+
+- this is the strongest retained growth-law constraint
+- it is not a better joint lane than the hard-geometry families
+
 ## Head-To-Head Ranking
 
 1. Best joint coexistence: dense central-band + layer norm
-2. Best symmetry-protected bounded challenger: mirror chokepoint / Z2-protected transfer
-3. Best gravity side alone: generated asymmetry-persistence + layer norm
+2. Best symmetry-protected lane: mirror chokepoint / Z2-protected transfer
+3. Best decoherence-side symmetry lane: `Z2 x Z2`
+4. Best gravity side alone: generated asymmetry-persistence + layer norm
+5. Best emergence-facing lane: grown-graph density optimum near `npl≈30`
 
 ## Bottom Line
 
 Hard geometry remains the shared enabler. The cleanest retained joint lane is
 dense central-band + layer norm. The strongest symmetry-protected challenger
-is mirror chokepoint / Z2-protected transfer, which now holds through `N = 60`
-on the strict `NPL_HALF = 50` probe but remains bounded. The strongest
-retained gravity-side-alone lane is generated asymmetry-persistence + layer norm.
+is mirror chokepoint / Z2-protected transfer, which now reaches `N = 100` on
+the dense boundary scan but remains bounded with `N = 120` as the gravity
+wall. The strongest decoherence-side symmetry lane is `Z2 x Z2`, and the
+strongest retained gravity-side-alone lane is generated asymmetry-persistence
++ layer norm. The strongest emergence-facing constraint is the grown-graph
+density optimum near `npl≈30`; dense grown graphs fail once CLT dominates.

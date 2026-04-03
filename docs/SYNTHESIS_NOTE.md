@@ -50,10 +50,12 @@ claims below. The review-safe current read is:
 4. **Hard geometry is the shared enabler.** Dense central-band removal,
    generated asymmetry-persistence, and the mirror chokepoint lane all support
    Born-safe bounded coexistence pockets. Dense central-band remains the best
-   joint coexistence lane, mirror chokepoint is the strongest symmetry-
-   protected challenger through `N = 60` on the strict `NPL_HALF = 50` probe,
-   and generated asymmetry remains the strongest gravity-side-alone lane.
-   This is the most promising current architecture family.
+   joint coexistence lane. Mirror chokepoint now retains through `N = 100`
+   on the dense boundary scan, with a weak canonical boundary fit and a
+   gravity wall at `N = 120`. The higher-symmetry `Z2 x Z2` lane is the best
+   decoherence-side symmetry lead, while generated asymmetry-persistence
+   remains the strongest gravity-side-alone lane. This is the most promising
+   current architecture family.
 
 5. **Collapse is a bounded helper, not a retained asymptotic rescue.**
    After the corrected Born/collapse hardening pass, collapse still helps in
@@ -209,6 +211,19 @@ ABSENCE of nodes, not by node properties.
 
 6. **Higher-dimensional lanes:** still exploratory. The tracked 4D+LN result
    is a bounded finite-`N` improvement, not a locked dimensional escape theorem.
+
+7. **Emergence-facing growth lane:** the retained grown-graph density result
+   favors a density optimum near `npl≈30`; dense grown graphs fail because the
+   CLT dominates. This remains the best emergence-facing growth constraint,
+   but it is not a better joint lane than the hard-geometry families above.
+
+## Current lane ranking
+
+1. Best engineered joint lane: dense central-band + layer norm.
+2. Best symmetry-protected lane: mirror chokepoint / Z2-protected transfer.
+3. Best decoherence-side symmetry lane: `Z2 x Z2`.
+4. Best gravity-side lane: generated asymmetry-persistence + layer norm.
+5. Best emergence-facing lane: grown-graph density optimum near `npl≈30`.
 
 ### Combined propagator: layer norm + modular topology
 
