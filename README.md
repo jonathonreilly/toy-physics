@@ -153,6 +153,17 @@ If you only want the current high-level state, read this section first.
   it finds one retained coexistence row on the modular family, but it uses a
   companion chokepoint Born graph rather than a literal same-instance four-way
   pass, and the broader strict-visibility story is still partial.
+- **Mirror chokepoint lane: bounded and review-safe.** The strict
+  symmetry-protected mirror pocket is now Born-clean, gravity-positive, and
+  decohering through `N=100` on the dense boundary scan, but it still loses
+  gravity by `N=120`, so the lane is bounded rather than asymptotic. The new
+  mirror-only gravity probe is also positive but weakly structured: the
+  fixed-anchor mass window stays sublinear and the fixed-mass distance sweep
+  is peak-plus-plateau rather than a cleaner falling tail. So mirror remains
+  a real bounded coexistence challenger, not the best gravity-side lane. See
+  [MIRROR_CHOKEPOINT_NOTE.md](/Users/jonreilly/Projects/Physics/docs/MIRROR_CHOKEPOINT_NOTE.md)
+  and
+  [MIRROR_GRAVITY_PROBE_NOTE.md](/Users/jonreilly/Projects/Physics/docs/MIRROR_GRAVITY_PROBE_NOTE.md).
 - **Main open problem:** the good topology is still imposed, not generated.
   Seven emergence attempts now fail cleanly. Connection-bias rules cannot beat
   CLT on sufficiently connected graphs, and first-pass node-placement rules
@@ -176,6 +187,8 @@ The most relevant notes for that current architecture state are:
 - [IF_PROGRAM_CLOSING_NOTE.md](/Users/jonreilly/Projects/Physics/docs/IF_PROGRAM_CLOSING_NOTE.md)
 - [CLAIM_AUDIT_NOTE_2026-04-01.md](/Users/jonreilly/Projects/Physics/docs/CLAIM_AUDIT_NOTE_2026-04-01.md)
 - [ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md](/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md)
+- [MIRROR_CHOKEPOINT_NOTE.md](/Users/jonreilly/Projects/Physics/docs/MIRROR_CHOKEPOINT_NOTE.md)
+- [MIRROR_GRAVITY_PROBE_NOTE.md](/Users/jonreilly/Projects/Physics/docs/MIRROR_GRAVITY_PROBE_NOTE.md)
 - [ASSUMPTION_DERIVATION_LEDGER.md](/Users/jonreilly/Projects/Physics/docs/ASSUMPTION_DERIVATION_LEDGER.md)
 - [REVIEW_HARDENING_BACKLOG.md](/Users/jonreilly/Projects/Physics/docs/REVIEW_HARDENING_BACKLOG.md)
 
