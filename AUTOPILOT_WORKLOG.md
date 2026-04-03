@@ -1,3 +1,53 @@
+## 2026-04-02 — Coordination reconciled to asymmetry-persistence Born head
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed:
+  - no detached science child was running
+- the canonical repo was already ahead of `origin/main` at loop start:
+  - `main` HEAD was `5e12477` (`feat: add asymmetry persistence born calibration`)
+  - `origin/main` was `9f42776` (`feat: add dense central-band joint card`)
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics` failed with `failure_kind = dns_failure`, so remote reconciliation was not available before new work
+- the tracked coordination state had drifted behind the real local head:
+  - `AUTOPILOT_WORKLOG.md` and `logs/physics_autopilot_handoff.md` still pointed at the older asymmetry-persistence mass-scaling follow-up state instead of the newer Born-calibration head
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` still advertised the even older coordination commit `1f28bc0`
+- the shared checkout still carried unrelated untracked dirt in the gravity-design / topological-pathcount lane, so this loop stayed on coordination repair only
+
+### What changed
+- inspected the landed local-head commit missing from coordination state:
+  - `5e12477` (`feat: add asymmetry persistence born calibration`)
+- refreshed the tracked work log and runtime handoff to the real local-head science state
+- refreshed `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- did not start fresh science because the repo was already locally ahead and the required push helper failed on DNS
+
+### Strongest confirmed conclusion
+The integrity issue was stale coordination metadata, not missing science. The newest stable local science head is now the asymmetry-persistence Born-calibration note.
+- on the dense generated `N = 100` probe with corrected Sorkin `I3` including `-P(empty)`:
+  - persistence stayed Born-clean at machine precision
+  - persistence + layer normalization stayed Born-clean at machine precision
+  - persistence + layer normalization + collapse also stayed Born-clean at machine precision
+- the strongest retained rows were:
+  - `thr = 0.10`: linear `8.49e-16±1.7e-16`, persistence `8.49e-16±1.7e-16`, persistence+LN `2.78e-16±7.2e-17`, persistence+LN+collapse `2.78e-16±4.1e-17`
+  - `thr = 0.20`: linear `1.12e-15±2.5e-16`, persistence `1.12e-15±2.5e-16`, persistence+LN `2.59e-16±3.9e-17`, persistence+LN+collapse `2.59e-16±4.1e-17`
+- so the honest science state is now:
+  - the generated asymmetry-persistence lane remains Born-clean on this narrow dense `N = 100` calibration
+  - the result is strong enough to keep the lane alive
+  - it is still only a density-limited confirmation, not a review-safe asymptotic claim
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- retry the required push helper before any new science so the local-head commit can sync or surface a non-DNS blocker
+- once sync is no longer blocked, return to the prioritized fixed-propagator directional-`b` lane
+- keep the frozen continuous bridge `mass_nodes / expected_target_count_4nn >= 2.7354`
+- test that same 4-NN density-load law on one additional geometry-normalized dense-family sentinel without refitting the threshold
+
+### First concrete action
+- rerun the required push helper against `/Users/jonreilly/Projects/Physics`
+- if sync is available, run the frozen `expected_target_count_4nn = 4 / r4` bridge on one geometry-normalized dense-family sentinel outside the current dense pair
+
 ## 2026-04-02 — Janitor reconciled coordination state to local asymmetry-persistence head
 
 ### Current state
