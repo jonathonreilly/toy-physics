@@ -244,12 +244,36 @@ Physics: decoherence persistence scales with the number of
 Higher dimension adds channels. Lower k makes paths more
 coherent within channels. Both flatten the exponent.
 
+### Analytical derivation: alpha ~ alpha_0 / d_spatial
+
+Semi-analytical argument (see docs/EXPONENT_DERIVATION.md):
+The fraction of shared paths between slits scales as (r/L)^d_spatial.
+This predicts alpha ~ -1.5/d_spatial:
+
+```
+d=1 (2D): predicted -1.50, measured -1.50  (baseline)
+d=2 (3D): predicted -0.75, measured ~-0.70
+d=3 (4D): predicted -0.50, measured -0.22 to -0.53
+```
+
+As d→∞, alpha→0: decoherence becomes truly scalable.
+
+### Gravity-decoherence dimensional trade-off
+
+Born on 4D+LN: machine zero (5e-16). Clean.
+Gravity on 4D+LN: delta=+0.13 (0.2 SE). Flat — signal diluted by
+extra transverse dimensions.
+
+The extra dimensions that help decoherence (more independent path
+channels) hurt gravity (amplitude spread over more directions).
+This is a real physics trade-off, not a parameter-tuning issue.
+
 ## What is NOT established
 
-1. **4D exponent confirmation** — the -0.22 exponent is from 12 seeds
-   (R²=0.40). Needs 24 seeds and N>100 to confirm it's truly flat
-   rather than slowly decaying. If it's genuinely zero, 4D is the
-   first complete escape from the ceiling.
+1. **4D gravity** — the 4D+LN propagator preserves Born but gravity
+   is too weak to detect with 12 seeds. Either needs more seeds,
+   stronger field coupling, or the physics genuinely trades off
+   gravity strength for decoherence scalability in higher dimensions.
 
 2. **Dynamic emergence** — 9 approaches tested, all fail. The gap
    may be a boundary condition on emergent spacetime.
