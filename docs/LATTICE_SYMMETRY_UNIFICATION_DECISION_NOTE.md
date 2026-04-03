@@ -1,11 +1,11 @@
 # Lattice Symmetry Unification Decision Note
 
 **Date:** 2026-04-03  
-**Status:** negative on the dense ordered-lattice symmetry window
+**Status:** negative on the standard-strength dense ordered-lattice symmetry window
 
 This note records the canonical decision test for whether the ordered lattice +
 explicit symmetry line can move from a same-family two-harness bridge to a true
-one-family retained architecture.
+one-family retained architecture on the **standard field-strength slice**.
 
 Artifacts:
 
@@ -21,7 +21,8 @@ This decision does **not** replace the current retained family split:
 - ordered lattice remains the strongest distance-law branch
 
 The only question here is whether the dense ordered-lattice symmetry extension
-can merge those advantages on one review-safe retained setup.
+can merge those advantages on one review-safe retained setup at the standard
+field strength.
 
 ## Setup
 
@@ -31,6 +32,7 @@ can merge those advantages on one review-safe retained setup.
 - canonical mass convention: one mass node on the gravity layer at
   `top_slit + 1`
 - detector observable: final-layer centroid shift
+- field strength: implicit standard helper value (`strength = 0.1`)
 - companion Born audit: same-family 3-slit Sorkin card, **not** the exact same
   2-slit aperture card used for MI / `d_TV` / gravity
 
@@ -111,9 +113,15 @@ The narrow read is:
 
 ## Conclusion
 
-**Negative:** two-slit decoherence and same-slit attractive gravity remain
-incompatible on the ordered lattice family in the tested dense symmetry window.
+**Negative on the standard-strength slice:** two-slit decoherence and same-slit
+attractive gravity remain incompatible on the ordered lattice family in the
+tested dense symmetry window.
 
 The ordered lattice therefore remains a same-family two-harness bridge only:
 use it for the retained distance-law branch and bounded coexistence reads, but
-do not promote this lattice-symmetry line to `docs/UNIFIED_PROGRAM_NOTE.md`.
+do not promote this lattice-symmetry line to `docs/UNIFIED_PROGRAM_NOTE.md`
+based on the standard-strength slice alone.
+
+For the later weak-field reopening, see:
+
+- [`docs/LATTICE_FIELD_STRENGTH_UNIFICATION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_FIELD_STRENGTH_UNIFICATION_NOTE.md)

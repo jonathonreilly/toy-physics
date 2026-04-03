@@ -1,10 +1,10 @@
 # Lattice Family Validation Note
 
 **Date:** 2026-04-03  
-**Status:** review-safe ordered-lattice same-family two-harness bridge
+**Status:** review-safe ordered-lattice standard-strength same-family two-harness bridge
 
-This note freezes the strongest retained ordered-lattice bridge result on the
-ordered 2D lattice family.
+This note freezes the strongest retained **standard-strength** ordered-lattice
+bridge result on the ordered 2D lattice family.
 
 Artifacts:
 
@@ -12,6 +12,8 @@ Artifacts:
 - [`logs/2026-04-03-lattice-family-validation.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-03-lattice-family-validation.txt)
 - companion distance-law note:
   [`docs/LATTICE_DISTANCE_LAW_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_DISTANCE_LAW_NOTE.md)
+- weak-field reopening note:
+  [`docs/LATTICE_FIELD_STRENGTH_UNIFICATION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_FIELD_STRENGTH_UNIFICATION_NOTE.md)
 
 ## What is measured
 
@@ -32,7 +34,8 @@ measurement harnesses:
 The geometry family is the same regular 2D lattice with forward `|Δy| <= 1`
 transport. The barrier / no-barrier split is a measurement-geometry change,
 not a change of graph family. This is therefore a **same-family two-harness
-bridge**, not a promoted one-harness unification.
+bridge** on the standard-strength slice, not a promoted one-harness
+unification.
 
 ## Retained barrier-lattice card
 
@@ -86,13 +89,19 @@ That branch is frozen separately in:
 
 ## Safe conclusion
 
-The ordered lattice family now supports a real same-family two-harness bridge:
+On the standard-strength slice, the ordered lattice family supports a real
+same-family two-harness bridge:
 
 - Born-clean barrier coexistence
 - nontrivial MI / slit separation
 - real CL-bath decoherence
-- strong phase-mediated gravity
+- strong phase-mediated redistribution / lensing
 - clean `1/b`-like distance-law magnitude on the no-barrier branch
+
+A later weak-field sweep reopens a **narrow one-card pocket** on the same
+ordered family:
+
+- [`docs/LATTICE_FIELD_STRENGTH_UNIFICATION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_FIELD_STRENGTH_UNIFICATION_NOTE.md)
 
 ## Important limits
 
@@ -101,7 +110,7 @@ This is **not yet** a review-safe “all 10 properties on one family” claim.
 Still missing on the ordered-lattice family:
 
 - a same-slit attractive-gravity card on the retained two-slit coexistence
-  aperture
+  aperture **at the standard-strength slice**
 - a retained mass-law card
 - a retained large-`N` purity-scaling card
 - a retained “gravity grows with `N`” card
@@ -109,9 +118,10 @@ Still missing on the ordered-lattice family:
 So the safe statement is:
 
 - **ordered lattice is now the strongest distance-law branch**
-- **ordered lattice also supports a real Born-clean coexistence pocket**
-- **but it remains a same-family two-harness bridge because the same-slit
-  gravity-sign problem is unresolved**
+- **standard-strength ordered lattice also supports a real Born-clean
+  coexistence pocket**
+- **standard-strength ordered lattice remains a same-family two-harness bridge
+  because the same-slit gravity-sign problem is unresolved on that slice**
 
 ## Next step
 
@@ -120,4 +130,5 @@ The highest-value next move is:
 - build a lattice-mirror hybrid or ordered-symmetry extension that keeps the
   ordered-lattice distance law while strengthening the decoherence side
 
-That remains the cleanest next decision test for a true one-family unification.
+That remains the cleanest next decision test for a true one-family unification,
+alongside the weak-field reopening now frozen separately.

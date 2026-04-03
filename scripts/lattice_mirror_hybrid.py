@@ -7,9 +7,9 @@ Combines:
   - Dense connectivity (max_dy=5, 11 edges/node) → attraction
   - Linear propagator → Born compliance
 
-This script is an exploratory same-family two-harness bridge, not a promoted
-one-family unified architecture. The unresolved blocker is the same-slit
-gravity-sign problem on the ordered lattice family.
+This script is an exploratory same-family two-harness bridge on the
+standard-strength slice, not a promoted one-family unified architecture. On
+that slice the unresolved blocker is the same-slit gravity-sign problem.
 
 Bridge read: barrier coexistence card + no-barrier distance-law companion.
 """
