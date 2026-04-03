@@ -78,12 +78,14 @@ Gravity present but weaker (signal diluted by extra dimension).
 
 ### Gravity completions
 
-**Mass scaling:** delta = 0.13 × M^0.82 (alpha ≈ 1, consistent with F∝M).
-Saturates at M>8 when mass covers half the layer.
+**Mass scaling:** a positive mass-response window is real, but the clean
+fixed-anchor reruns are sublinear rather than a locked `F∝M` law.
+The strongest controlled window is closer to `delta ~ M^0.68`, and the
+response saturates once the mass occupies too much of the layer.
 
-**Distance scaling:** Peak deflection at b ≈ 6 (half beam width).
-Falloff: delta ~ b^(-1.93) in far field (near 1/b²).
-Zero at b = 30 (2.5× beam width).
+**Distance scaling:** the fixed-geometry sweep shows a real peaked response
+with a falling tail, but not a clean universal `1/b²` law. The older far-field
+fit is best treated as benchmark-specific rather than canonical.
 
 ### Regulated propagator (per-layer normalization)
 
@@ -142,9 +144,9 @@ ABSENCE of nodes, not by node properties.
 
 ## What is established
 
-1. **Gravity** on uniform DAGs at N=18-40 (up to 5.1 SE). Distance
-   scaling ~1/b² in far field. Mass scaling F∝M (alpha=0.82).
-   Born rule I₃/P = 4e-16 (machine zero).
+1. **Gravity** on uniform DAGs at `N=18..40` (up to `5.1 SE`). The signal is
+   real and Born-clean, but the exact distance law and fixed-position mass law
+   are still unresolved.
 
 2. **Decoherence** at intermediate N with 1/N power-law decay
    (linear propagator). CL bath framework validated. 14 alternative
