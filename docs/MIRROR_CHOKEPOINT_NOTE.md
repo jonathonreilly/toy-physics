@@ -115,3 +115,8 @@ The current safe statement is:
 The next step is to test whether even denser `NPL`, larger radius, or sparse
 same-side layer-2 links can extend the mirror pocket beyond `N=60` without
 breaking the chokepoint Born check.
+
+For the canonical fixed-family decoherence fit on the retained dense boundary
+mirror pocket, see:
+
+[`docs/MIRROR_CHOKEPOINT_BOUNDARY_FIT_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/MIRROR_CHOKEPOINT_BOUNDARY_FIT_NOTE.md)
