@@ -1,3 +1,54 @@
+## 2026-04-03 — Coordination reconciled to synced geometric-locality head
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed:
+  - no detached science child was running
+- the canonical repo initially reported `main...origin/main [ahead 2]`, but the required push helper refreshed the remote-tracking view and showed the real sync state:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - helper result: `status=nothing_to_push`, `ahead=0`, `behind=0`
+  - the synced science baseline before this repair was `94db4fa` (`Merge: locally-grown graphs fail — d_eff ≠ d_spatial, need geometric locality`)
+- the tracked coordination state had drifted badly behind the real synced head:
+  - `AUTOPILOT_WORKLOG.md` and `logs/physics_autopilot_handoff.md` still pointed at the older asymmetry-persistence Born-calibration head `5e12477`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` still advertised a stale local-only coordination commit `4889e8e`
+- the shared checkout still carried unrelated modified / untracked dirt in the decoherence-emergence and gravity-design lanes, so this loop stayed on coordination repair only
+
+### What changed
+- reconciled canonical git state before any new science:
+  - verified the real synced head is `94db4fa`
+  - confirmed the required push helper had nothing to push once the remote-tracking ref was current
+- inspected the synced head that had not yet been reflected in coordination state:
+  - `94db4fa` (`Merge: locally-grown graphs fail — d_eff ≠ d_spatial, need geometric locality`)
+  - `scripts/emergent_dimension.py`
+  - `scripts/emergent_graph_decoherence.py`
+- refreshed:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- did not start fresh science because protocol-required state reconciliation was itself the bounded highest-signal step, and the synced head sits on the Claude-owned decoherence / emergence frontier
+
+### Strongest confirmed conclusion
+The integrity problem was stale coordination state again, but this time against a repo head that was already synced rather than merely locally ahead. By inspection of synced head `94db4fa` and its newly merged scripts, the current repo-level conclusion on the emergence lane is negative: the tested locally grown graphs still do not supply the geometric locality / topology needed to close the gravity-plus-decoherence program automatically.
+- `scripts/emergent_dimension.py` is explicitly framed as a test of whether local growth rules can reach a large enough effective dimension to make the imposed-topology problem disappear
+- `scripts/emergent_graph_decoherence.py` is explicitly framed as a closure test of the axiom chain on a locally grown graph
+- the merged head records that this closure failed, so the honest repo state is:
+  - locally grown graph structure remains diagnostically interesting
+  - but imposed or explicitly engineered locality/topology is still doing the real work in the retained positive lanes
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- keep the synced `94db4fa` repo state as the baseline
+- return to the prioritized fixed-directional-measure directional-`b` lane instead of widening the Claude-owned decoherence frontier
+- keep the frozen continuous bridge `mass_nodes / expected_target_count_4nn >= 2.7354`
+- run one geometry-normalized dense-family sentinel outside the current dense pair without refitting the threshold
+
+### First concrete action
+- reopen the retained directional-`b` bridge / control scripts and notes
+- launch one non-refit geometry-normalized dense-family sentinel compare under the frozen `expected_target_count_4nn = 4 / r4` bridge while avoiding the unrelated dirty emergence / gravity-design files
+
 ## 2026-04-02 — Coordination reconciled to asymmetry-persistence Born head
 
 ### Current state

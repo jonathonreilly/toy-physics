@@ -1,48 +1,51 @@
 # Physics Autopilot Handoff
 
-## 2026-04-02 20:52 America/New_York
+## 2026-04-03 05:34 America/New_York
 
 ### Seam class
 - coordination integrity repair
-- local asymmetry-persistence Born head reconciled; next runnable science seam is still directional-`b` density control under the fixed directional propagator
+- synced geometric-locality head reconciled; next runnable science seam remains the fixed-directional-measure directional-`b` density-control lane
 
 ### What this loop did
 - ran the duplicate-run guard and acquired the `physics-science` cooperative lock
 - confirmed there was no detached science child to resume
-- reconciled git before new work:
-  - `main` was already ahead of `origin/main` at `5e12477` (`feat: add asymmetry persistence born calibration`)
-  - `origin/main` remained `9f42776` (`feat: add dense central-band joint card`)
-- ran the required pre-step push helper:
-  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
-  - helper result: `status=failed`, `failure_kind=dns_failure`, `ahead=1`, `behind=0`, `attempts_used=5`, `error=fatal: unable to access 'https://github.com/jonathonreilly/toy-physics.git/': Could not resolve host: github.com`
-- inspected the landed local-head commit that was missing from the coordination files:
-  - `5e12477` (`feat: add asymmetry persistence born calibration`)
+- reconciled git in the canonical repo before any new science:
+  - the first `git status` snapshot showed `main...origin/main [ahead 2]`
+  - the required push helper refreshed the real remote-tracking state and reported:
+    - `status=nothing_to_push`
+    - `ahead=0`
+    - `behind=0`
+  - the synced science baseline before this repair was `94db4fa` (`Merge: locally-grown graphs fail — d_eff ≠ d_spatial, need geometric locality`)
+- inspected the synced head missing from the coordination files:
+  - `/Users/jonreilly/Projects/Physics/scripts/emergent_dimension.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/emergent_graph_decoherence.py`
 - refreshed:
   - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
   - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
   - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
-- did not start fresh science because the repo was already locally ahead and the required push helper failed on DNS
+- did not start fresh science because the protocol-required integrity reconciliation was the bounded step for this loop, and the synced head lives on the Claude-owned decoherence / emergence frontier
 
 ### Current state
 - no detached science child is running
-- retained newest local science result:
-  - the generated asymmetry-persistence `N = 100` dense probe now has a corrected Born calibration note at local `HEAD`
-  - persistence, persistence + layer normalization, and persistence + layer normalization + collapse all stayed Born-clean at machine precision on the narrow retained rows
-  - the result keeps the lane alive but remains a density-limited confirmation rather than an asymptotic claim
-- final git state at handoff drafting time:
-  - local `main` contains `5e12477` beyond `origin/main`
-  - the required push helper failed with `failure_kind = dns_failure`, so the local branch remained unsynced before this integrity repair
-  - the shared checkout still has unrelated untracked dirt in the gravity-design / topological-pathcount lane; future science passes should keep avoiding those files unless explicitly taking over that work
+- canonical repo baseline is now clear:
+  - the earlier apparent `ahead 2` state was stale remote-tracking metadata rather than unapplied science work
+  - the last synced science head before this repair was `94db4fa`
+- coordination files had been stale:
+  - tracked work log and runtime handoff still advertised the older asymmetry-persistence Born-calibration head
+  - automation memory still advertised stale local-only coordination state
+- the shared checkout still contains unrelated modified / untracked dirt in the decoherence-emergence and gravity-design lanes; future science passes should keep avoiding those files unless explicitly taking over that work
 
 ### Strongest confirmed conclusion
-The real problem was stale coordination metadata, not missing science. The newest stable local head is the asymmetry-persistence Born-calibration note: on the dense generated `N = 100` probe with corrected Sorkin `I3`, persistence, persistence + layer normalization, and persistence + layer normalization + collapse all stay Born-clean at machine precision. Because the repo was already locally ahead and push failed on DNS, the correct bounded action this loop was to repair shared coordination state rather than start another unsynced science branch.
+The real issue was stale coordination state against a newer synced repo head. By inspection of `94db4fa` and the two merged scripts, the current emergence/locality result is negative: tested locally grown graphs still do not replace imposed or engineered geometric locality as the mechanism that keeps the retained gravity-plus-decoherence story alive. That means the correct next autonomous move is not another fresh decoherence architecture search here; it is to return to the non-overlapping directional-`b` density-control seam.
 
 ### Exact next step
-- retry the required push helper before any new science so the local-head commit can sync or surface a non-DNS blocker
-- once sync is no longer blocked, return to the prioritized fixed-propagator directional-`b` lane
+- keep the synced `94db4fa` state as the repo baseline
+- return to the prioritized fixed-directional-measure directional-`b` lane
 - keep the frozen continuous bridge `mass_nodes / expected_target_count_4nn >= 2.7354`
-- test that same 4-NN density-load law on one additional geometry-normalized dense-family sentinel without refitting the threshold
+- run one geometry-normalized dense-family sentinel outside the current dense pair without refitting the threshold
 
 ### Relevant artifact paths
-- `/Users/jonreilly/Projects/Physics/docs/ASYMMETRY_PERSISTENCE_BORN_NOTE.md`
-- `/Users/jonreilly/Projects/Physics/scripts/asymmetry_persistence_born_calibration.py`
+- `/Users/jonreilly/Projects/Physics/scripts/emergent_dimension.py`
+- `/Users/jonreilly/Projects/Physics/scripts/emergent_graph_decoherence.py`
+- `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- `/Users/jonreilly/Projects/Physics/scripts/directional_b_overlap_continuous_density_bridge_card.py`
