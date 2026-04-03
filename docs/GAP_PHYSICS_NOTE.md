@@ -137,6 +137,23 @@ The CLT produces BOTH Born compliance and the 1/N ceiling. Breaking
 one breaks the other. This is the fundamental constraint of linear
 path-sum models on connected graphs.
 
+### Exp 18: Dense pocket scaling (N=40-100)
+LN+|y| on dense chokepoint (npl=60, connect_radius=3.0):
+- Born: machine precision (2e-16 to 4e-16) at ALL N
+- Purity: stable ~0.5 through N=100 (no 1/N ceiling!)
+- Gravity: FAILS (dense geometry too narrow for phase valley)
+
+|y|-removal is what makes LN Born-safe. LN alone: Born=0.14-0.30.
+
+Connect_radius sweep reveals the architectural constraint:
+- r=3.0: Born perfect, gravity noisy/absent
+- r=3.5: Born=0.67 (destroyed)
+- r=5.0: Born=1.0 (destroyed), gravity=+1.14
+
+The Born-safe and gravity-safe radius ranges DON'T OVERLAP.
+This is the geometric CLT/Born trade-off: path multiplicity that
+enables gravity also causes LN to violate Born.
+
 ## Reconciliation with main (2026-04-03)
 
 Several branch findings have been superseded by main:
