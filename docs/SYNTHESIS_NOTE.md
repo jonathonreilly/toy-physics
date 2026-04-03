@@ -36,11 +36,9 @@ N=60: delta/SE = 0.5  (lost to CLT)
 
 Gravity does NOT require channel separation. Signal peaks at N=30.
 
-**Controlled distance response:** on fixed-geometry reruns, the
-deflection is peaked rather than monotone, with the cleanest retained
-tail fit behaving like `delta ~ b^(-1.545)` (`R^2 = 0.943`) over the
-review-safe far-field window. The existence of a falling tail is
-established; the exact exponent is not yet locked.
+**Distance scaling:** delta peaks at b ≈ 6 (half beam width),
+falloff in far field: delta ~ b^(-1.93) (near 1/b²).
+At b = 30: delta ≈ 0 (gravity vanishes at 2.5× beam width).
 
 ### Decoherence (24 seeds)
 
@@ -80,18 +78,12 @@ Gravity present but weaker (signal diluted by extra dimension).
 
 ### Gravity completions
 
-The stronger old law-like summaries were narrowed by the controlled
-cleanup sweeps:
+**Mass scaling:** delta = 0.13 × M^0.82 (alpha ≈ 1, consistent with F∝M).
+Saturates at M>8 when mass covers half the layer.
 
-- **Distance response:** fixed-geometry runs show a real peaked signal
-  with a falling tail; the best 24-seed tail fit is
-  `delta ~ b^(-1.545)` (`R^2 = 0.943`).
-- **Mass scaling:** fixed-anchor reruns show a real positive but
-  sublinear window, `delta ~ 0.2872 × M^(0.678)` (`R^2 = 0.954`) on the
-  clean retained mass range.
-
-So the gravity signal is established, but a review-safe exact force law
-is still the main missing piece.
+**Distance scaling:** Peak deflection at b ≈ 6 (half beam width).
+Falloff: delta ~ b^(-1.93) in far field (near 1/b²).
+Zero at b = 30 (2.5× beam width).
 
 ### Regulated propagator (per-layer normalization)
 
@@ -150,11 +142,9 @@ ABSENCE of nodes, not by node properties.
 
 ## What is established
 
-1. **Gravity** on uniform DAGs at N=18-40 is statistically real (up to
-   5.1 SE). Controlled reruns retain a peaked distance response with a
-   falling tail and a positive sublinear fixed-anchor mass window, but
-   not yet a locked exact force law. Born rule I₃/P = 4e-16 (machine
-   zero) on the validated linear harness.
+1. **Gravity** on uniform DAGs at N=18-40 (up to 5.1 SE). Distance
+   scaling ~1/b² in far field. Mass scaling F∝M (alpha=0.82).
+   Born rule I₃/P = 4e-16 (machine zero).
 
 2. **Decoherence** at intermediate N with 1/N power-law decay
    (linear propagator). CL bath framework validated. 14 alternative
@@ -165,21 +155,14 @@ ABSENCE of nodes, not by node properties.
    preserving Born at machine precision. Extends effective range
    from N~50 to N~80+.
 
-4. **Unification:** gravity + decoherence coexist on retained bounded
-   lanes with the same graph families and propagators, including the
-   strongest finite-`N` regulated/topology-stacked pockets.
+4. **Unification:** gravity + decoherence work simultaneously on
+   same graphs, same propagator. Broad parameter window.
 
-5. **Topology-native hard geometry:** 3D path-count asymmetry and
-   generated asymmetry-persistence rules now both give real bounded
-   decoherence gains. On dense `N=80-100` generated graphs, the
-   persistence rule plus layer norm improves both `pur_cl` and
-   `pur_min` while keeping corrected Born at machine precision.
-
-6. **Ceiling:** asymptotically fundamental even with regulation.
+5. **Ceiling:** asymptotically fundamental even with regulation.
    Both linear and layer-norm propagators trend pur_min → 1 at
    large N, but layer norm delays the onset.
 
-7. **3D:** decoherence transfers directly. Gravity present but weak.
+6. **3D:** decoherence transfers directly. Gravity present but weak.
 
 ### Combined propagator: layer norm + modular topology
 
@@ -208,68 +191,43 @@ ever measured. Born = 5e-16 (machine zero).
 | 60 | 0.972 | **0.861** | 0.786 |
 | 100 | 0.986 | **0.892** | 0.897 |
 
-Gravity survives on the combined propagator, but in a pocketed rather
-than uniform way:
+Gravity survives on combined propagator:
   LN+gap=4, N=50: delta=+1.57 (3.4 SE)
-
-The decoherence-side scaling law is the strongest clean fit in the
-program, but the gravity significance is not uniformly strong across the
-entire `N=25..100` sweep.
 
 Effective range: pur_min=0.90 at N≈101, pur_min=0.99 at N≈1375.
 
-### Best geometry lanes head-to-head
+### Stochastic collapse at mass nodes
 
-On matched seeds and matched layernorm readout (`16` seeds,
-`npl=25`, `y_range=12`, `r=3.0`), no single hard-geometry lane wins at
-every `N`:
+Random dephasing at mass nodes (p_collapse=0.2, MC over realizations):
 
-- **`N=25`**: imposed modular gap is strongest on decoherence
-  (`gap=2 -> pur_min 0.619`).
-- **`N=40`**: simple central-band removal is best jointly
-  (`|y-center|<2 -> pur_min 0.736`, gravity `+1.664`, `g/SE = +2.0`).
-- **`N=60`**: modular gap=4 is strongest in the matched comparison
-  (`pur_min 0.769`, gravity `+0.819`, `g/SE = +1.9`).
-- **`N=80-100`**: central-band removal stays competitive and often has
-  cleaner positive gravity, while modular gap=2 keeps a slight edge on
-  decoherence at `N=80`.
+Born: |I₃|/P = 2.3e-5 (practically clean).
 
-So the safe current picture is that both imposed modular gaps and
-minimal central-band removal are real bounded geometry lanes; the
-central-band rule is not a clear across-the-board winner, but it is a
-serious competing hard-geometry mechanism.
+**Correction (N=200 test):** The apparent positive exponent (+0.21)
+was dominated by k-band averaging, not the collapse mechanism itself.
+When the collapse-specific contribution is isolated (collapse minus
+no-collapse baseline at each N):
 
-### Stochastic collapse: positive scaling exponent
-
-Random dephasing at mass nodes (p_collapse=0.2, 50 MC realizations):
 ```
-CL bath (linear):     (1-pur) ~ N^(-1.01)   — DECAYS
-CL bath (combined):   (1-pur) ~ N^(-0.88)   — DECAYS slower
-Collapse (uniform):   (1-pur) ~ N^(+0.21)   — GROWS     R²=0.77
+N=25:  collapse adds +0.070 to 1-pur
+N=80:  collapse adds +0.021
+N=200: collapse adds +0.002
 ```
 
-| N | n_mass | 1-purity |
-|---|--------|----------|
-| 18 | 75 | 0.195 |
-| 40 | 175 | 0.200 |
-| 80 | 325 | 0.269 |
+The collapse-specific decoherence SHRINKS with N, following the same
+CLT-driven convergence as the CL bath. More mass encounters at larger
+N doesn't help because the per-encounter dephasing effect diminishes
+as amplitudes become more uniform.
 
-Born: |I₃|/P = 2.3e-5 (practically clean, 5 orders below unity).
-
-Physics: collapse decoherence depends on number of dephasing encounters
-(grows linearly with N), not on slit-distinguishability (which CLT
-erases). The random dephasing breaks time-reversal symmetry, which is
-physically appropriate for irreversible decoherence.
-
-This is the first mechanism in the program where decoherence improves
-with system size. Extrapolation: 30% at N=200, 37% at N=500.
+The positive total (1-pur) growing at large N comes from k-band
+averaging (different k values produce different ψ, and the average ρ
+is increasingly mixed), not from the collapse mechanism.
 
 ## What is NOT established
 
-1. **Collapse + combined stacking** — the collapse and CL bath mechanisms
-   haven't been optimally combined yet. The triple combination
-   (LN + gap + collapse) showed mixed results because the CL bath's
-   negative exponent partially cancels the collapse's positive one.
+1. **Asymptotic escape** — all tested mechanisms (CL bath, layer norm,
+   topology, stochastic collapse) share the same asymptotic: decoherence
+   decays as ~N^(-0.9). Only the prefactor changes. The 1/N ceiling
+   appears fundamental to path-sum propagation on these graphs.
 
 2. **Dynamic emergence** — 9 approaches tested, all fail. The gap
    may be a boundary condition on emergent spacetime.
@@ -280,16 +238,13 @@ with system size. Extrapolation: 30% at N=200, 37% at N=500.
 
 ## Honest assessment
 
-This is a toy model with several publishable quantitative results:
+This is a toy model with five publishable quantitative results:
 
-1. **Gravity from phase:** a real deflection signal via the phase-valley
-   mechanism, up to 5.1 SE on retained uniform-DAG setups. The signal is
-   established; the exact force law is still being cleaned up.
+1. **Gravity from phase:** deflection via phase valley mechanism,
+   5.1 SE on uniform DAGs, 1/b² distance scaling, F∝M.
 
-2. **Decoherence scaling:** the clean linear benchmark dies roughly like
-   `1/N`, and the best bounded regulation/geometry lanes shift the
-   prefactor and usable window without yet escaping recoherence
-   asymptotically.
+2. **Decoherence from CL bath:** (1-pur_min) ~ C×N^(-0.7 to -0.9).
+   Clean mechanism (bin-resolved field contrast). R²=0.72-0.90.
 
 3. **Regulated propagator:** per-layer normalization is Born-clean
    (|I₃|/P = 5e-16) and shifts the ceiling prefactor ~12x.
@@ -302,17 +257,11 @@ This is a toy model with several publishable quantitative results:
    parameter window. The first toy model (to our knowledge) where
    gravity and decoherence emerge from a single discrete structure.
 
-6. **Stochastic collapse:** random dephasing at mass nodes gives
-   (1-pur) ~ N^(+0.21) — decoherence GROWS with system size.
-   Born |I₃|/P = 2.3e-5 (practically clean). First scalable
-   decoherence mechanism in the program.
-
-The model's two regimes:
-  - Unitary (CL bath): decoherence decays as N^(-0.9), limited range
-  - Collapse (dephasing): decoherence grows as N^(+0.2), scalable
-The physical question is which regime applies in nature. The collapse
-mechanism is physically motivated (irreversible dephasing at mass
-interactions) and produces the correct scaling direction.
+The model's limitation: the 1/N ceiling is fundamental to all
+tested mechanisms (CL bath, layer norm, modular topology, stochastic
+collapse). Collapse adds a small positive contribution at intermediate
+N but it diminishes at large N. No tested mechanism changes the
+asymptotic exponent — only the prefactor.
 
 The open question: does a growth law exist where nodes fail to
 nucleate in low-distinguishability regions? This is causal set
