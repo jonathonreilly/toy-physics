@@ -47,9 +47,13 @@ claims below. The review-safe current read is:
    asymptotic direction. The strongest safe framing is “bounded ceiling shift,”
    not “ceiling escape.”
 
-4. **Hard geometry is the shared enabler.** Dense central-band removal and the
-   generated asymmetry-persistence lane both support Born-safe bounded
-   coexistence pockets. This is the most promising current architecture family.
+4. **Hard geometry is the shared enabler.** Dense central-band removal,
+   generated asymmetry-persistence, and the mirror chokepoint lane all support
+   Born-safe bounded coexistence pockets. Dense central-band remains the best
+   joint coexistence lane, mirror chokepoint is the strongest symmetry-
+   protected challenger through `N = 60` on the strict `NPL_HALF = 50` probe,
+   and generated asymmetry remains the strongest gravity-side-alone lane.
+   This is the most promising current architecture family.
 
 5. **Collapse is a bounded helper, not a retained asymptotic rescue.**
    After the corrected Born/collapse hardening pass, collapse still helps in
@@ -195,8 +199,10 @@ ABSENCE of nodes, not by node properties.
    machine-clean on the corrected harness in the retained lanes.
 
 4. **Hard geometry / channel separation:** the strongest current family.
-   Dense central-band hard geometry and generated asymmetry persistence both
-   produce bounded Born-safe coexistence pockets.
+   Dense central-band hard geometry remains the best joint coexistence pocket.
+   Mirror chokepoint now freezes a retained bounded pocket through `N = 60`.
+   Generated asymmetry persistence remains the strongest gravity-side-alone
+   lane.
 
 5. **Collapse:** retained only as a bounded helper inside hard-geometry
    pockets. It is not presently a hardened asymptotic rescue.

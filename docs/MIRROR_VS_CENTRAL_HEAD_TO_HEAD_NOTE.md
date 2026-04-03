@@ -39,7 +39,9 @@ Narrow read:
 
 ### Mirror chokepoint / Z2-protected transfer
 
-This is now a real retained bounded pocket, but it is still narrower.
+This is now a real retained bounded pocket through `N = 60` on the strict
+`NPL_HALF = 50` probe, but it is still narrower than the dense central-band
+lane.
 
 Retained row:
 
@@ -51,7 +53,7 @@ Retained row:
 
 Range check:
 
-- retained through `N = 60`
+- retained through `N = 60` on the strict `NPL_HALF = 50` probe
 - fails at `N = 80/100` on the strict pocket
 
 Narrow read:
