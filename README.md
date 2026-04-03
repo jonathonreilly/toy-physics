@@ -108,7 +108,7 @@ The current mechanism claims are based on that corrected analysis layer.
 
 The model presently supports the following claims.
 
-### 0. Architecture snapshot (2026-04-01)
+### 0. Architecture snapshot (2026-04-03)
 
 If you only want the current high-level state, read this section first.
 
@@ -117,60 +117,47 @@ If you only want the current high-level state, read this section first.
   interference package, preserves `k=0→0`, and gives a gravity response that
   is now best read as a pure phase effect rather than field-dependent
   attenuation.
-- **Dense-random local-architecture lane: diagnosed.** On those graph
-  families, the tested record/bath architectures still converge too much as
-  graphs densify. The influence-functional (IF) framework was retained, but
-  graph-local kernels and connection-bias growth rules do not solve the
-  scaling problem on their own.
-- **Topology pivot: positive result.** Within the modular / gap-controlled
-  family, the same unitary core and the same CL bath support a low
-  decoherence floor: `pur_min` stays near `0.93 ± 0.02` on the tested
-  asymptotic lane. The updated large-`N` modular script now computes a true
-  single-vs-double-slit visibility gain, and that gain is only weak at
-  `N=12`, near zero by `N=18`, and gone or slightly negative by `N>=25` even
-  while the old both-slits-open detector-profile contrast proxy stays high.
-- **Joint unification result:** gravity and decoherence now work on the same
-  modular graph family. Within that family, widening the imposed gap generally
-  lowers the achievable decoherence floor and strengthens gravity until
-  connectivity breaks. The current refined phase diagram now uses actual
-  bath-reduced purity `pur_cl` together with paired per-seed gravity error
-  bars, and `gap=0` in the modular generator now behaves as the true
-  uniform-style baseline.
-- **Higher-dimensional extension: promising but not fully frozen.** The
-  current 3D/4D picture is materially stronger than the old 2D-only story:
-  modular 3D delays the decoherence ceiling, dense modular 4D stays bounded
-  away from `1` through `N=100` on the current large-`N` CL-bath sweep, and
-  higher-dimensional chokepoint Born-rule tests stay at machine precision. But
-  the strict higher-dimensional interference story is still metric-sensitive:
-  the new strict 3D same-family visibility companion is effectively flat at
-  large `N` (`V_gain ≈ +0.0049` for `N>=40`) on the retained modular lane,
-  the current 4D true-visibility scripts still report mostly weak or near-zero
-  strict visibility gain, and the newer same-family 4D Born pass is only a
-  restricted low-`N` modular subfamily result after chokepoint pruning rather
-  than a broad family closure. See
-  [HIGHER_DIMENSION_STATUS_2026-04-01.md](/Users/jonreilly/Projects/Physics/docs/HIGHER_DIMENSION_STATUS_2026-04-01.md).
-  The newer strict 4D unification pass is therefore intentionally narrow:
-  it finds one retained coexistence row on the modular family, but it uses a
-  companion chokepoint Born graph rather than a literal same-instance four-way
-  pass, and the broader strict-visibility story is still partial.
-- **Main open problem:** the good topology is still imposed, not generated.
-  Seven emergence attempts now fail cleanly. Connection-bias rules cannot beat
-  CLT on sufficiently connected graphs, and first-pass node-placement rules
-  create gaps that are either too weak, too strong, or in the wrong place.
-  The first hard-gap placement diagnostic is now also negative in a sharper
-  way: the best run reaches the right gap width only by placing it badly
-  off-center, while stronger placement rules drive the graphs toward near
-  disconnection.
-  A global post-hoc node-removal surrogate improves decoherence only at
-  intermediate `N`; by `N=80..100` the ceiling returns, and adaptive pruning
-  pushes the graphs toward disconnection. The next make-or-break test is
-  therefore a **hard-gap, geometry-anchored node placement / node removal
-  law**, with the fallback read that the gap may itself be part of the
-  effective physics rather than a derivative of a simpler local growth rule.
+- **Gravity signal: retained; exact law: not locked.** A statistically real
+  gravity-like deflection signal survives cleanup, but the strong `1/b²` and
+  `F ∝ M` headlines were narrowed by controlled reruns. The current safe read
+  is a peaked distance response with a falling tail and a positive sublinear
+  mass window. See
+  [GRAVITY_LAW_CLEANUP_NOTE.md](/Users/jonreilly/Projects/Physics/docs/GRAVITY_LAW_CLEANUP_NOTE.md).
+- **Universal ceiling:** on the tested path-sum architectures, decoherence
+  still decays roughly like `1/N`. Layer norm, modular topology, and hard
+  geometry shift the prefactor/window strongly, but none of the retained lanes
+  changes the asymptotic direction.
+- **Strongest bounded unitary lane:** modular hard geometry plus layer norm
+  remains the cleanest bounded stack, with
+  `(1-pur_min) = 5.88 × N^-0.88` and `R² = 0.946`.
+- **Dense hard-geometry pocket:** the central-band `|y| < 2` lane now has a
+  corrected-Born-safe dense pocket. At `npl = 60`, `LN + |y|` and
+  `LN + |y| + collapse` stay machine-clean through `N = 80`, with a narrower
+  retained row at `N = 100`.
+- **Best same-graph coexistence row:** on the dense central-band lane at
+  `N = 60`, `LN + |y|` keeps gravity positive, and `LN + |y| + collapse`
+  lowers the purity floor further while keeping Born machine-clean and the
+  gravity mean positive.
+- **Generated hard geometry is still alive, but narrower.** The
+  asymmetry-persistence lane now has a corrected-Born dense `N = 100` probe
+  that passes at machine precision, but that result is still a narrow dense
+  pocket rather than a broad large-`N` closure.
+- **Main open problem:** the project still lacks a clean asymptotic escape
+  from the path-sum ceiling and still lacks a locked gravity force law. The
+  strongest current picture is therefore a bounded hard-geometry emergence
+  program with several clean coexistence windows, not a finished continuum
+  theory.
 
 The most relevant notes for that current architecture state are:
 
 - [SYNTHESIS_NOTE.md](/Users/jonreilly/Projects/Physics/docs/SYNTHESIS_NOTE.md)
+- [GRAVITY_LAW_CLEANUP_NOTE.md](/Users/jonreilly/Projects/Physics/docs/GRAVITY_LAW_CLEANUP_NOTE.md)
+- [CENTRAL_BAND_BORN_DENSE_SWEEP_NOTE.md](/Users/jonreilly/Projects/Physics/docs/CENTRAL_BAND_BORN_DENSE_SWEEP_NOTE.md)
+- [CENTRAL_BAND_BORN_LARGEN_NOTE.md](/Users/jonreilly/Projects/Physics/docs/CENTRAL_BAND_BORN_LARGEN_NOTE.md)
+- [CENTRAL_BAND_DENSE_JOINT_NOTE.md](/Users/jonreilly/Projects/Physics/docs/CENTRAL_BAND_DENSE_JOINT_NOTE.md)
+- [CENTRAL_BAND_MASS_WINDOW_NOTE.md](/Users/jonreilly/Projects/Physics/docs/CENTRAL_BAND_MASS_WINDOW_NOTE.md)
+- [BORN_LANE_COMPARISON_NOTE.md](/Users/jonreilly/Projects/Physics/docs/BORN_LANE_COMPARISON_NOTE.md)
+- [ASYMMETRY_PERSISTENCE_BORN_NOTE.md](/Users/jonreilly/Projects/Physics/docs/ASYMMETRY_PERSISTENCE_BORN_NOTE.md)
 - [SESSION_SUMMARY_2026-04-01_TOPOLOGY.md](/Users/jonreilly/Projects/Physics/docs/SESSION_SUMMARY_2026-04-01_TOPOLOGY.md)
 - [DECOHERENCE_FAILURE_ANALYSIS.md](/Users/jonreilly/Projects/Physics/docs/DECOHERENCE_FAILURE_ANALYSIS.md)
 - [IF_PROGRAM_CLOSING_NOTE.md](/Users/jonreilly/Projects/Physics/docs/IF_PROGRAM_CLOSING_NOTE.md)
