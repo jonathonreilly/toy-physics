@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-02
 **Branch:** claude/distracted-napier
-**Status:** Complete. 14 experiments, 6 structural conclusions, 1 retraction.
+**Status:** Complete. 17 experiments, 7 conclusions, 1 retraction, 1 Pareto frontier.
 
 ## Motivation
 
@@ -122,6 +122,20 @@ both gravity (grav_t rises from +1.6 to +3.7 at N=80) and decoherence
 (pur_cl drops from 0.979 to 0.962). The amplitude concentration in
 channels helps the phase-valley mechanism. Only excessive removal
 (|y|<4, 33% nodes) weakens gravity from connectivity loss.
+
+### 7. The Born/decoherence Pareto frontier
+No tested mechanism simultaneously preserves Born at machine precision
+AND breaks the 1/N decoherence ceiling:
+
+| Mechanism | Born |I₃|/P | Decoh scaling | Best use |
+|-----------|------|------|-----------|
+| Linear + \|y\| | 1e-17 | 1/N (3x better) | Born-compliant architecture |
+| Layer norm | 0.5-0.9 | N^(-0.4) | Demonstrates trade-off |
+| Collapse p=0.2 | 0.03 | N^(+0.2) | Best decoherence, marginal Born |
+
+The CLT produces BOTH Born compliance and the 1/N ceiling. Breaking
+one breaks the other. This is the fundamental constraint of linear
+path-sum models on connected graphs.
 
 ## Implications for the project
 
@@ -264,3 +278,6 @@ scaling exponent.
 | gap_y_removal_sweep.py | Exp 12 |
 | gap_layernorm_combined.py | Exp 13 (RETRACTED) |
 | gap_ln_born_check.py | Exp 14 |
+| gap_gravity_quantitative.py | Exp 15 |
+| gap_collapse_combined.py | Exp 16 |
+| gap_collapse_born_check.py | Exp 17 |
