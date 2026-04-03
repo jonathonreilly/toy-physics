@@ -175,9 +175,11 @@ The strongest audited story we can tell now is:
 1. random growth fails by a rank-1 / CLT-type mechanism
 2. exact discrete symmetry can preserve distinct sectors and delay that failure
 3. exact mirror symmetry gives a retained bounded coexistence pocket
-4. `Z2 x Z2` strengthens the decoherence side and remains Born-clean and
+4. exact 2D mirror gives a review-safe bounded coexistence pocket with strong
+   MI and dTV separation on the same family
+5. `Z2 x Z2` strengthens the decoherence side and remains Born-clean and
    gravity-positive in a bounded window
-5. structured mirror growth shows that the geometry idea is not purely an
+6. structured mirror growth shows that the geometry idea is not purely an
    imposed toy, but its **current** propagation rule is not Born-safe
 
 So the program is not yet “fully mature” in the strongest sense. The accurate
@@ -192,15 +194,15 @@ The highest-value next steps are now sharply defined:
 
 1. Replace or linearize the structured-growth propagator so the grown symmetry
    lane can be Born-audited cleanly.
-2. Add a mirror-specific mutual-information script and log before using MI in
-   the main synthesis.
-3. Retain the `Z2`-breaking fragility curve with an actual script/log pair.
-4. Keep `Z2 x Z2` as the strongest bounded coexistence lane while the grown
+2. Retain the `Z2`-breaking fragility curve with an actual script/log pair.
+3. Keep `Z2 x Z2` as the strongest bounded coexistence lane while the grown
    lane is repaired.
+4. Use exact 2D mirror as the family-level confirmation while the grown lane
+   is repaired.
 
 ## Bottom Line
 
-Proceed on solid ground by making `Z2 x Z2` and exact mirror the synthesis
-headline, and treating structured mirror growth as a promising geometry result
-that still needs a Born-safe propagator before it can become the canonical
-successor lane.
+Proceed on solid ground by making exact 2D mirror, `Z2 x Z2`, and exact
+mirror the synthesis headline, and treating structured mirror growth as a
+promising geometry result that still needs a Born-safe propagator before it
+can become the canonical successor lane.
