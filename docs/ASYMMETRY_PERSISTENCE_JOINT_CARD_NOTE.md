@@ -53,7 +53,9 @@ Parameters:
 
 ## Safe interpretation
 
-This lane is now a real same-graph joint positive.
+This lane is now a real same-graph hard-geometry decoherence aid, but the
+gravity side is density-sensitive and does not stay positive in the denser
+`npl=60` rerun.
 
 What is established:
 
@@ -61,13 +63,15 @@ What is established:
 - generated hard geometry also improves `pur_min`
 - layer norm stacks strongly on the same generated graphs
 - corrected Born remains machine-clean throughout
-- at `N=100`, gravity stays positive and is compatible with the
-  persistence rule under both linear and layer-normalized propagation
+- at dense `N=80/100`, the generated lane stays Born-clean and improves
+  decoherence, but gravity is not robustly positive across the denser
+  `npl=60` rerun
 
 Important nuance:
 
 - `N=80` is directionally encouraging but not a strong gravity
-  significance point; the main clean gravity coexistence row is `N=100`
+  significance point; the main retained same-graph result is decoherence
+  rather than a gravity win
 - `pur_cl` and `pur_min` are nearly identical on these dense generated
   graphs, suggesting the decoherence floor is doing most of the work
 
@@ -76,20 +80,29 @@ Boundary check:
 - a denser `N=120` probe (`npl=70`, `4` seeds) keeps corrected Born
   clean and still lowers `pur_min` under layer norm (`0.986 -> 0.946`),
   but gravity stays negative on all tested rows
-- so the retained same-graph coexistence claim should stop at dense
-  `N=100`, not `N=120`
+- the review-safe joint claim should stop at dense `N=100` for the
+  decoherence lane, and at that density the gravity result is not yet
+  strong enough to beat the central-band benchmark
 
 ## Bottom line
 
 Generated asymmetry persistence has moved from “interesting mechanism
-pilot” to a retained bounded joint lane.
+pilot” to a retained bounded hard-geometry lane.
 
-It is still not an asymptotic rescue, but it now supports all four of:
+It is still not an asymptotic rescue, but it now supports three of the
+four desired features:
 
 1. topology-generated geometry
 2. improved `pur_cl`
 3. improved `pur_min`
 4. Born-clean coexistence with positive gravity on dense `N=100`
+
+The fourth item is not yet review-safe on the denser rerun, so the
+current asymmetry-persistence verdict is:
+
+- strong hard-geometry decoherence aid
+- Born-clean
+- not yet the best gravity+decoherence joint lane
 
 The honest range for that claim is now: **dense `N=80-100`, bounded
 before `N=120`**.

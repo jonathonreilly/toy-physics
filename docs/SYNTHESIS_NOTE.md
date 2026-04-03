@@ -1,7 +1,8 @@
 # Synthesis Note: Emergent Physics on Discrete Causal DAGs
 
-**Date:** 2026-04-02 (final)
-**Status:** Architecture locked. Scaling laws quantified. Emergence closed.
+**Date:** 2026-04-03
+**Status:** Hardened synthesis. Several older claims below are historical snapshots; the
+retained conclusions are summarized in the next section.
 
 ## The model
 
@@ -21,7 +22,46 @@ mass via constructive interference. Pure phase effect.
 D = exp(-lambda² × S) where S is bin-resolved contrast of per-slit
 amplitude distributions.
 
-## Quantitative results
+## Current retained read
+
+This note started as a running synthesis and still contains some historical
+claims below. The review-safe current read is:
+
+1. **Gravity signal is real** on uniform DAGs at intermediate `N`, with the
+   strongest retained point at `N=30` (`5.1 SE`). What is **not** locked is a
+   final gravity law: the fixed-geometry cleanup narrowed the distance story to
+   a peaked response with a falling tail, and the fixed-anchor mass sweep
+   supports a positive **sublinear** mass window rather than a hardened `F∝M`
+   law.
+
+2. **Linear-path-sum decoherence has a real ceiling.** The retained baseline is
+   approximately
+   ```
+   (1 - pur_min) = 1.64 × N^(-1.01)
+   ```
+   with `R² = 0.83`. The most robust interpretation is that overlap convergence
+   pushes the model back toward coherence at large `N`.
+
+3. **Layer normalization is the strongest retained Born-safe regulator.**
+   It gives a large finite-`N` prefactor shift without reliably changing the
+   asymptotic direction. The strongest safe framing is “bounded ceiling shift,”
+   not “ceiling escape.”
+
+4. **Hard geometry is the shared enabler.** Dense central-band removal and the
+   generated asymmetry-persistence lane both support Born-safe bounded
+   coexistence pockets. This is the most promising current architecture family.
+
+5. **Collapse is a bounded helper, not a retained asymptotic rescue.**
+   After the corrected Born/collapse hardening pass, collapse still helps in
+   some hard-geometry pockets, but it does not presently support a clean
+   exponent-changing claim.
+
+6. **4D remains interesting but provisional.** The tracked 4D+LN artifact chain
+   supports bounded finite-`N` improvement, but the stronger “4D gravity” and
+   “4D champion coexistence” claims are not currently retained as artifact-backed
+   results.
+
+## Quantitative results (historical running summary)
 
 ### Gravity (24 seeds, paired per-seed SE)
 
@@ -142,27 +182,27 @@ ABSENCE of nodes, not by node properties.
 
 ## What is established
 
-1. **Gravity** on uniform DAGs at N=18-40 (up to 5.1 SE). Distance
-   scaling ~1/b² in far field. Mass scaling F∝M (alpha=0.82).
-   Born rule I₃/P = 4e-16 (machine zero).
+1. **Gravity signal:** retained on uniform DAGs at intermediate `N`, with the
+   strongest artifact-backed row at `N=30` (`5.1 SE`). The exact distance-law
+   and mass-law story remains narrowed by the later fixed-geometry and
+   fixed-anchor cleanup sweeps.
 
-2. **Decoherence** at intermediate N with 1/N power-law decay
-   (linear propagator). CL bath framework validated. 14 alternative
-   architectures fail.
+2. **Linear decoherence ceiling:** retained as an overlap-driven large-`N`
+   limit with baseline scaling close to `1/N`.
 
-3. **Regulated propagator:** per-layer normalization shifts the
-   ceiling ~5x (pur_min 0.80 at N=40 vs 0.95 linear) while
-   preserving Born at machine precision. Extends effective range
-   from N~50 to N~80+.
+3. **Born-safe regulation:** per-layer normalization is the strongest retained
+   bounded regulator. It improves finite-`N` decoherence while remaining
+   machine-clean on the corrected harness in the retained lanes.
 
-4. **Unification:** gravity + decoherence work simultaneously on
-   same graphs, same propagator. Broad parameter window.
+4. **Hard geometry / channel separation:** the strongest current family.
+   Dense central-band hard geometry and generated asymmetry persistence both
+   produce bounded Born-safe coexistence pockets.
 
-5. **Ceiling:** asymptotically fundamental even with regulation.
-   Both linear and layer-norm propagators trend pur_min → 1 at
-   large N, but layer norm delays the onset.
+5. **Collapse:** retained only as a bounded helper inside hard-geometry
+   pockets. It is not presently a hardened asymptotic rescue.
 
-6. **3D:** decoherence transfers directly. Gravity present but weak.
+6. **Higher-dimensional lanes:** still exploratory. The tracked 4D+LN result
+   is a bounded finite-`N` improvement, not a locked dimensional escape theorem.
 
 ### Combined propagator: layer norm + modular topology
 

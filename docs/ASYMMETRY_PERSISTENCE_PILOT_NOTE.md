@@ -145,15 +145,22 @@ rather than post-hoc pruning creates a useful decoherence lane:
 - it removes only a small fraction of candidate nodes (`~2–5%` at dense
   `N=80–100`)
 - it survives to dense `N=100`
-- and it does not obviously destroy gravity on that dense lane
+- it stays Born-clean on the corrected harness
+
+Review-safe correction:
+
+- on the denser `npl=60` rerun, gravity is not robustly positive at
+  `N=80/100`
+- so the lane should be described as a **Born-safe decoherence aid**
+  rather than a gravity-preserving same-graph champion
 
 ## Limits
 
 - this is still a bounded pilot, not an asymptotic rescue
 - the rule is not yet a strict local axiom-level law
 - sparse graphs still fail
-- the same-graph gravity story is promising but not yet hardened into a full
-  joint reviewer card
+- the same-graph gravity story is not yet hardened into a full joint
+  reviewer card
 
 ## Layernorm stacking follow-up
 
@@ -209,3 +216,5 @@ Safe conclusion:
 
 This is the best current evidence that **hard geometry generation**, not just
 repair or regulation, is still a live science frontier for the project.
+It is also the clearest evidence that asymmetry persistence is a stronger
+unitary decoherence lane than it is a gravity lane.

@@ -1,19 +1,14 @@
 #!/usr/bin/env python3
-"""Mirror-symmetric DAGs: Z₂ symmetry prevents rank-1 convergence.
+"""Mirror-symmetric DAGs: exploratory Z₂ lane.
 
-THEORETICAL PREDICTION: If the graph has exact y → -y symmetry, the
-transfer matrices T_l commute with the reflection operator R. The
-product T_N...T_1 also commutes with R, so it decomposes into even/odd
-sectors. Each sector has its own rank-1 limit, but the FULL matrix
-maintains rank-2 (one SV per sector).
+This file records the original mirror-symmetry idea, but the top-level
+claim is intentionally conservative now. The non-chokepoint lookback-2
+generator can show a strong decoherence-side effect, but the review-safe
+Born / rank-2 question belongs in the corrected chokepoint companion
+script.
 
-Slit A (y>0) maps to the odd sector under R. Slit B (y<0) maps to
-the even sector. In the Z₂ basis, the two slits are ORTHOGONAL BY
-SYMMETRY — they can never converge. This gives d_TV > 0 at all N.
-
-If this works, the decoherence ceiling is broken by SYMMETRY rather
-than by modifying the propagator or bath. The linear propagator and
-Born rule are untouched.
+Use the hardened companion script for canonical small-`N` coexistence claims:
+`scripts/mirror_chokepoint_joint.py`
 
 Implementation:
   1. Place nodes at random (x, y, z) with y > 0
