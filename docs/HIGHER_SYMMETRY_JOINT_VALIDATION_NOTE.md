@@ -116,4 +116,5 @@ The project now has a new bounded higher-symmetry coexistence lane:
 
 The most productive next move is now quantitative rather than qualitative:
 test whether the `Z2 x Z2` family also inherits a usable distance or mass law,
-not just a positive joint gravity signal.
+not just a positive joint gravity signal. Until that probe lands, the
+review-safe read is: **decoherence lead yes, gravity-law contender unproven**.
