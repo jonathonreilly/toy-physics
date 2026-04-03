@@ -1,3 +1,67 @@
+## 2026-04-03 — Coordination reconciled to synced lattice validation head
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed:
+  - no detached science child was running
+- the canonical repo already matched `origin/main` before this repair:
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - synced HEAD was `8346d37` (`feat: freeze ordered lattice distance and family validation`)
+- the tracked coordination state had drifted behind the real synced head again:
+  - `AUTOPILOT_WORKLOG.md`, `logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` still described the earlier mirror / higher-symmetry repair story around `e1f8fc2`, `8cc4af2`, and local repair commit `3150651`
+- the shared checkout still carried unrelated modified logs and untracked docs / scripts in the symmetry-generated, persistent-record, gravity-design, and mirror lanes, so this loop stayed on coordination repair / README correction only
+
+### What changed
+- reconciled canonical git state before any new science:
+  - confirmed `main` and `origin/main` were already synchronized at `8346d37`
+  - verified the latest landed synced head chain:
+    - `3caaa4d` (`feat(lattice): 10/10 ON ONE GRAPH FAMILY — lattice-mirror unification`)
+    - `8055d1a` (`Merge branch 'claude/distracted-napier'`)
+    - `8346d37` (`feat: freeze ordered lattice distance and family validation`)
+- inspected the landed lattice artifacts missing from coordination state:
+  - `/Users/jonreilly/Projects/Physics/docs/UNIFIED_PROGRAM_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/LATTICE_DISTANCE_LAW_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/LATTICE_FAMILY_VALIDATION_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/scripts/lattice_no_barrier_distance.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/lattice_family_validation.py`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-03-lattice-no-barrier-distance.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-03-lattice-family-validation.txt`
+- updated `/Users/jonreilly/Projects/Physics/README.md` so the top-level architecture snapshot now reflects the synced ordered-lattice result and links the current unified-program notes
+- refreshed:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- prepared one bounded coordination repair commit carrying the synced lattice-state refresh
+- did not start fresh science because protocol-required state reconciliation was itself the bounded highest-signal step, and the newly landed lattice / symmetry frontier remains Claude-owned and non-overlapping with this automation's next preferred directional-`b` lane
+
+### Strongest confirmed conclusion
+The integrity problem was stale coordination state again, now against a newer synced ordered-lattice validation head rather than the older mirror repair story. The landed lattice result materially changes the honest project summary without changing this automation's non-overlap rule.
+- `8346d37` freezes a retained ordered-lattice distance-law branch:
+  - on the no-barrier harness, `|delta| ~= 23.5071 * b^(-1.052)` with `R^2 = 0.9850` for `b >= 7`
+  - `k = 0` stays exactly zero on that branch
+- the same ordered-lattice family also keeps a real barrier-harness coexistence card:
+  - `MI = 0.537498`, `d_TV = 0.713772`, `1 - pur_cl = 0.0572`, gravity `-5.740317`, Born `|I3|/P = 2.98e-16`
+- so the honest repo state is now:
+  - distance law remains structurally closed on the flagship connected symmetry family
+  - ordered lattice is now the strongest retained secondary distance-law branch, not a replacement flagship architecture
+  - the correct next autonomous move here is still not a fresh lattice / decoherence architecture search; once coordination is synced, this automation should return to the non-overlapping fixed-directional-measure directional-`b` geometry-normalized density-control seam
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/README.md`
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- retry the required push helper before any new science so the coordination repair can sync or surface a non-DNS blocker
+- once sync is available again, keep the corrected fixed directional propagator and retained `b -> b - h_mass` hierarchy fixed
+- keep the frozen continuous bridge `mass_nodes / expected_target_count_4nn >= 2.7354`
+- run one geometry-normalized dense-family sentinel outside the current dense pair without refitting the threshold
+- keep avoiding the unrelated symmetry-generated / gravity-design / lattice-frontend dirt while Claude owns the active lattice / symmetry frontier
+
+### First concrete action
+- rerun the required push helper against `/Users/jonreilly/Projects/Physics`
+- if sync is available, reopen the retained directional-`b` bridge / control scripts and launch one non-refit geometry-normalized dense-family sentinel compare under the frozen `expected_target_count_4nn = 4 / r4` bridge
+
 ## 2026-04-03 — Coordination reconciled to synced mirror frontier head
 
 ### Current state

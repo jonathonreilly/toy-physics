@@ -108,7 +108,7 @@ The current mechanism claims are based on that corrected analysis layer.
 
 The model presently supports the following claims.
 
-### 0. Architecture snapshot (2026-04-01)
+### 0. Architecture snapshot (2026-04-03)
 
 If you only want the current high-level state, read this section first.
 
@@ -164,6 +164,22 @@ If you only want the current high-level state, read this section first.
   [MIRROR_CHOKEPOINT_NOTE.md](/Users/jonreilly/Projects/Physics/docs/MIRROR_CHOKEPOINT_NOTE.md)
   and
   [MIRROR_GRAVITY_PROBE_NOTE.md](/Users/jonreilly/Projects/Physics/docs/MIRROR_GRAVITY_PROBE_NOTE.md).
+- **Ordered-lattice branch: retained and now the cleanest distance-law lane.**
+  The synced lattice family now freezes two review-safe facts: on the barrier
+  harness at `N=40`, the same ordered family stays Born-clean
+  (`|I3|/P = 2.98e-16`), keeps `k=0 = 0`, retains nontrivial slit structure
+  (`MI = 0.537`, `d_TV = 0.714`), shows real CL-bath decoherence
+  (`1 - pur_cl = 0.0572`), and produces a strong gravity signal
+  (`-5.740`). On the no-barrier companion harness, the same family also gives
+  a clean far-field distance-law magnitude
+  `|delta| ~= 23.5071 * b^(-1.052)` with `R^2 = 0.9850` for `b >= 7`. So
+  distance law remains closed on the flagship connected symmetry family, but
+  ordered lattice reopens it as a retained secondary branch rather than a
+  replacement flagship. See
+  [LATTICE_DISTANCE_LAW_NOTE.md](/Users/jonreilly/Projects/Physics/docs/LATTICE_DISTANCE_LAW_NOTE.md),
+  [LATTICE_FAMILY_VALIDATION_NOTE.md](/Users/jonreilly/Projects/Physics/docs/LATTICE_FAMILY_VALIDATION_NOTE.md),
+  and
+  [UNIFIED_PROGRAM_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIFIED_PROGRAM_NOTE.md).
 - **Main open problem:** the good topology is still imposed, not generated.
   Seven emergence attempts now fail cleanly. Connection-bias rules cannot beat
   CLT on sufficiently connected graphs, and first-pass node-placement rules
@@ -181,6 +197,9 @@ If you only want the current high-level state, read this section first.
 
 The most relevant notes for that current architecture state are:
 
+- [UNIFIED_PROGRAM_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIFIED_PROGRAM_NOTE.md)
+- [LATTICE_DISTANCE_LAW_NOTE.md](/Users/jonreilly/Projects/Physics/docs/LATTICE_DISTANCE_LAW_NOTE.md)
+- [LATTICE_FAMILY_VALIDATION_NOTE.md](/Users/jonreilly/Projects/Physics/docs/LATTICE_FAMILY_VALIDATION_NOTE.md)
 - [SYNTHESIS_NOTE.md](/Users/jonreilly/Projects/Physics/docs/SYNTHESIS_NOTE.md)
 - [SESSION_SUMMARY_2026-04-01_TOPOLOGY.md](/Users/jonreilly/Projects/Physics/docs/SESSION_SUMMARY_2026-04-01_TOPOLOGY.md)
 - [DECOHERENCE_FAILURE_ANALYSIS.md](/Users/jonreilly/Projects/Physics/docs/DECOHERENCE_FAILURE_ANALYSIS.md)
