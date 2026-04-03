@@ -108,7 +108,7 @@ The current mechanism claims are based on that corrected analysis layer.
 
 The model presently supports the following claims.
 
-### 0. Architecture snapshot (2026-04-03)
+### 0. Architecture snapshot (2026-04-01)
 
 If you only want the current high-level state, read this section first.
 
@@ -117,57 +117,67 @@ If you only want the current high-level state, read this section first.
   interference package, preserves `k=0→0`, and gives a gravity response that
   is now best read as a pure phase effect rather than field-dependent
   attenuation.
-- **Gravity signal: retained; exact law: not locked.** A statistically real
-  gravity-like deflection signal survives cleanup, but the strong `1/b²` and
-  `F ∝ M` headlines were narrowed by controlled reruns. The current safe read
-  is a peaked distance response with a falling tail and a positive sublinear
-  mass window. See
-  [GRAVITY_LAW_CLEANUP_NOTE.md](/Users/jonreilly/Projects/Physics/docs/GRAVITY_LAW_CLEANUP_NOTE.md).
-- **Universal ceiling:** on the tested path-sum architectures, decoherence
-  still decays roughly like `1/N`. Layer norm, modular topology, and hard
-  geometry shift the prefactor/window strongly, but none of the retained lanes
-  changes the asymptotic direction.
-- **Strongest bounded unitary lane:** modular hard geometry plus layer norm
-  remains the cleanest bounded stack, with
-  `(1-pur_min) = 5.88 × N^-0.88` and `R² = 0.946`.
-- **Dense hard-geometry pocket:** the central-band `|y| < 2` lane now has a
-  corrected-Born-safe dense pocket. At `npl = 60`, `LN + |y|` and
-  `LN + |y| + collapse` stay machine-clean through `N = 80`, with a narrower
-  retained row at `N = 100`.
-- **Best same-graph coexistence row:** on the dense central-band lane at
-  `N = 60`, `LN + |y|` keeps gravity positive, and `LN + |y| + collapse`
-  lowers the purity floor further while keeping Born machine-clean and the
-  gravity mean positive.
-- **Generated hard geometry is still alive, but narrower.** The
-  asymmetry-persistence lane now has a corrected-Born dense `N = 100` probe
-  that passes at machine precision, but that result is still a narrow dense
-  pocket rather than a broad large-`N` closure.
-- **Main open problem:** the project still lacks a clean asymptotic escape
-  from the path-sum ceiling and still lacks a locked gravity force law. The
-  strongest current picture is therefore a bounded hard-geometry emergence
-  program with several clean coexistence windows, not a finished continuum
-  theory.
+- **Dense-random local-architecture lane: diagnosed.** On those graph
+  families, the tested record/bath architectures still converge too much as
+  graphs densify. The influence-functional (IF) framework was retained, but
+  graph-local kernels and connection-bias growth rules do not solve the
+  scaling problem on their own.
+- **Topology pivot: positive result.** Within the modular / gap-controlled
+  family, the same unitary core and the same CL bath support a low
+  decoherence floor: `pur_min` stays near `0.93 ± 0.02` on the tested
+  asymptotic lane. The updated large-`N` modular script now computes a true
+  single-vs-double-slit visibility gain, and that gain is only weak at
+  `N=12`, near zero by `N=18`, and gone or slightly negative by `N>=25` even
+  while the old both-slits-open detector-profile contrast proxy stays high.
+- **Joint unification result:** gravity and decoherence now work on the same
+  modular graph family. Within that family, widening the imposed gap generally
+  lowers the achievable decoherence floor and strengthens gravity until
+  connectivity breaks. The current refined phase diagram now uses actual
+  bath-reduced purity `pur_cl` together with paired per-seed gravity error
+  bars, and `gap=0` in the modular generator now behaves as the true
+  uniform-style baseline.
+- **Higher-dimensional extension: promising but not fully frozen.** The
+  current 3D/4D picture is materially stronger than the old 2D-only story:
+  modular 3D delays the decoherence ceiling, dense modular 4D stays bounded
+  away from `1` through `N=100` on the current large-`N` CL-bath sweep, and
+  higher-dimensional chokepoint Born-rule tests stay at machine precision. But
+  the strict higher-dimensional interference story is still metric-sensitive:
+  the new strict 3D same-family visibility companion is effectively flat at
+  large `N` (`V_gain ≈ +0.0049` for `N>=40`) on the retained modular lane,
+  the current 4D true-visibility scripts still report mostly weak or near-zero
+  strict visibility gain, and the newer same-family 4D Born pass is only a
+  restricted low-`N` modular subfamily result after chokepoint pruning rather
+  than a broad family closure. See
+  [HIGHER_DIMENSION_STATUS_2026-04-01.md](/Users/jonreilly/Projects/Physics/docs/HIGHER_DIMENSION_STATUS_2026-04-01.md).
+  The newer strict 4D unification pass is therefore intentionally narrow:
+  it finds one retained coexistence row on the modular family, but it uses a
+  companion chokepoint Born graph rather than a literal same-instance four-way
+  pass, and the broader strict-visibility story is still partial.
+- **Main open problem:** the good topology is still imposed, not generated.
+  Seven emergence attempts now fail cleanly. Connection-bias rules cannot beat
+  CLT on sufficiently connected graphs, and first-pass node-placement rules
+  create gaps that are either too weak, too strong, or in the wrong place.
+  The first hard-gap placement diagnostic is now also negative in a sharper
+  way: the best run reaches the right gap width only by placing it badly
+  off-center, while stronger placement rules drive the graphs toward near
+  disconnection.
+  A global post-hoc node-removal surrogate improves decoherence only at
+  intermediate `N`; by `N=80..100` the ceiling returns, and adaptive pruning
+  pushes the graphs toward disconnection. The next make-or-break test is
+  therefore a **hard-gap, geometry-anchored node placement / node removal
+  law**, with the fallback read that the gap may itself be part of the
+  effective physics rather than a derivative of a simpler local growth rule.
 
 The most relevant notes for that current architecture state are:
 
 - [SYNTHESIS_NOTE.md](/Users/jonreilly/Projects/Physics/docs/SYNTHESIS_NOTE.md)
-- [GRAVITY_LAW_CLEANUP_NOTE.md](/Users/jonreilly/Projects/Physics/docs/GRAVITY_LAW_CLEANUP_NOTE.md)
-- [CENTRAL_BAND_BORN_DENSE_SWEEP_NOTE.md](/Users/jonreilly/Projects/Physics/docs/CENTRAL_BAND_BORN_DENSE_SWEEP_NOTE.md)
-- [CENTRAL_BAND_BORN_LARGEN_NOTE.md](/Users/jonreilly/Projects/Physics/docs/CENTRAL_BAND_BORN_LARGEN_NOTE.md)
-- [CENTRAL_BAND_DENSE_JOINT_NOTE.md](/Users/jonreilly/Projects/Physics/docs/CENTRAL_BAND_DENSE_JOINT_NOTE.md)
-- [CENTRAL_BAND_MASS_WINDOW_NOTE.md](/Users/jonreilly/Projects/Physics/docs/CENTRAL_BAND_MASS_WINDOW_NOTE.md)
-- [BORN_LANE_COMPARISON_NOTE.md](/Users/jonreilly/Projects/Physics/docs/BORN_LANE_COMPARISON_NOTE.md)
-- [ASYMMETRY_PERSISTENCE_BORN_NOTE.md](/Users/jonreilly/Projects/Physics/docs/ASYMMETRY_PERSISTENCE_BORN_NOTE.md)
 - [SESSION_SUMMARY_2026-04-01_TOPOLOGY.md](/Users/jonreilly/Projects/Physics/docs/SESSION_SUMMARY_2026-04-01_TOPOLOGY.md)
 - [DECOHERENCE_FAILURE_ANALYSIS.md](/Users/jonreilly/Projects/Physics/docs/DECOHERENCE_FAILURE_ANALYSIS.md)
 - [IF_PROGRAM_CLOSING_NOTE.md](/Users/jonreilly/Projects/Physics/docs/IF_PROGRAM_CLOSING_NOTE.md)
 - [CLAIM_AUDIT_NOTE_2026-04-01.md](/Users/jonreilly/Projects/Physics/docs/CLAIM_AUDIT_NOTE_2026-04-01.md)
 - [ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md](/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md)
-- [REOPENED_LANE_CHECKLIST.md](/Users/jonreilly/Projects/Physics/docs/REOPENED_LANE_CHECKLIST.md)
 - [ASSUMPTION_DERIVATION_LEDGER.md](/Users/jonreilly/Projects/Physics/docs/ASSUMPTION_DERIVATION_LEDGER.md)
 - [REVIEW_HARDENING_BACKLOG.md](/Users/jonreilly/Projects/Physics/docs/REVIEW_HARDENING_BACKLOG.md)
-
-The reopened-lane checklist is the current chase-to-conclusion map for the source-aware gravity side and the dense-prune fragility side. It should be treated as the place where “still live” becomes “closed” or “kept narrow.” The source-projected modular seam is now best read as a bounded modular class rather than a one-point accident, while source-resolved Green remains a narrower distance-side lead.
 
 ### 1. Effective delay structure
 
@@ -226,10 +236,10 @@ Reviewer-facing framing docs:
 - a readout-only micro-preserving gravity prototype now also clears the bounded scaling guardrail on the same `N=8..25` family: near-mass `action_channel` bias grows in stable sign and magnitude from `-0.2456` at `N=12` to `-0.8002` at `N=25`, while the baseline detector centroid still collapses from `+0.7968` to `+0.3989`
 - a tighter packet-local refinement is now bounded but not yet promoted: on the same random-DAG family, adaptive `packet_flow_action` improves the endpoint retention again (`|N25/N12| = 3.9748` versus `3.2582` for `action_channel`), but a branching-tree control keeps the broader `action_channel` as the best cross-family read (`|N12/N6| = 2.9514` versus `2.7878` for `packet_flow_action`)
 - a support-structure compare now explains that split instead of only reporting it: on the random-DAG family, the retained packet captures a growing mass-side carried-flow share while the opposite side diffuses (`0.287 -> 0.382` upper versus `0.272 -> 0.162` lower from `N=12 -> 25`), and the full flow support stays about `3x` broader than the retained packet; on the branching-tree control both sides remain nearly symmetric (`~0.25` each) with only `~2x` compression, so the broader channel stays the honest cross-family read
-- the directional `b` lane is now narrower but not dead: raw mass-side action and flow reads still strengthen with actual `b`, but once they are normalized by simple mass geometry they flip to the expected decreasing trend on the same bounded random-DAG family. On the original narrow three-node mass family, center-offset response density (`action_channel / b` and `packet_flow_action / b`) still passes at `N=12` and `N=25`, while nearest-edge normalization also passes once near-overlap cases are treated as singular. A more local support-gap denominator tied to the free packet's retained probe band is only partial on the dense random-DAG family: `action_channel / support_gap` still passes, but `packet_flow_action / support_gap` already fails at `N=12`. A follow-on denominator-geometry diagnostic explains why: within each `N` slice the free retained probe-band edge is effectively fixed by the graph family, so `support_gap = b - (mass_half_span + band_high_rel)` mixes mass placement with a size-dependent packet-band correction that even flips sign between the `N=12` and `N=25` low-`b` anchors. The asymptotic bridge card compressed that into one hierarchy, and the corrected mass-window transfer card sharpened it further: when the mass window is widened from `3` to `5` mid-layer nodes on the same random-DAG generator, some low-`b` small-`N` seeds become singular under source-support overlap, but the bounded family-level center-offset trend still passes once those singular trials are excluded. The crossover still reduces that family dependence to one bounded variable, `lambda = h_mass / b`, and the overlap-margin card gives the cleaner signed diagnostic `mu = edge_b / h_mass = 1 / lambda - 1`. Tree-like controls stay at large positive `mu`, narrow random-DAG families only graze `mu ~ 0` at low-`b`, and widened dense families are the ones that actually cross into `mu <= 0`, where the finite-source correction matters most even though pure `1/b` still survives on the bounded family. The new low-`b` onset compare, second dense-family holdout, and occupancy bridge card now compress the mechanism one step further: sparse target-band occupancy is the promoted asymptotic bridge variable, while coarse local `y` spacing is a family-dependent refinement rather than a universal frozen threshold. Tree layers densify near the target plane, so selected mass windows stay compact and `mu` remains positive; dense random-DAG layers keep only about `1-2` nodes in that band and therefore stretch widened source windows across larger `y` gaps. On the independent holdout, the original gap/span clause softens, but across the combined dense-family rows a single occupancy floor `target_fill <= 0.4` already captures `23/24` overlap rows (`0.8333` accuracy), while no overlap rows survive above `target_fill > 2/3`. A new supply-load bridge card first made the physical translation explicit: raw target-band count or same-side target-plane share alone is too family-dependent, and source-window size alone is too crude, but the combined source load `mass_nodes / local_target_count >= 2.5` reproduces the retained bridge exactly. A bounded continuous-density follow-up now sharpens that again: estimating local target-plane support from the fourth-nearest same-side node radius (`expected_target_count_4nn = 4 / r4`) gives the smoother bridge `mass_nodes / expected_target_count_4nn >= 2.7354`, which improves combined dense-family accuracy to `0.9167` and lifts both baseline `m3` and `m5` families to `0.9000`. A frozen branching-tree control now keeps that same 4-NN law safely on the non-overlap side without refit: tree `knn4_density_load` falls from `0.5938` to `0.1484` as depth grows while `mu` rises from `3` to `11`, so the tree family stays far below the overlap threshold for the same geometric reason the dense families fail it. So the counted rule is now best read as a coarse discretization of a smoother local target-plane density law, not the final physical statement.
+- the directional `b` lane is now narrower but not dead: raw mass-side action and flow reads still strengthen with actual `b`, but once they are normalized by simple mass geometry they flip to the expected decreasing trend on the same bounded random-DAG family. On the original narrow three-node mass family, center-offset response density (`action_channel / b` and `packet_flow_action / b`) still passes at `N=12` and `N=25`, while nearest-edge normalization also passes once near-overlap cases are treated as singular. A more local support-gap denominator tied to the free packet's retained probe band is only partial on the dense random-DAG family: `action_channel / support_gap` still passes, but `packet_flow_action / support_gap` already fails at `N=12`. A follow-on denominator-geometry diagnostic explains why: within each `N` slice the free retained probe-band edge is effectively fixed by the graph family, so `support_gap = b - (mass_half_span + band_high_rel)` mixes mass placement with a size-dependent packet-band correction that even flips sign between the `N=12` and `N=25` low-`b` anchors. The asymptotic bridge card compressed that into one hierarchy, and the corrected mass-window transfer card sharpened it further: when the mass window is widened from `3` to `5` mid-layer nodes on the same random-DAG generator, some low-`b` small-`N` seeds become singular under source-support overlap, but the bounded family-level center-offset trend still passes once those singular trials are excluded. The crossover still reduces that family dependence to one bounded variable, `lambda = h_mass / b`, and the overlap-margin card gives the cleaner signed diagnostic `mu = edge_b / h_mass = 1 / lambda - 1`. Tree-like controls stay at large positive `mu`, narrow random-DAG families only graze `mu ~ 0` at low-`b`, and widened dense families are the ones that actually cross into `mu <= 0`, where the finite-source correction matters most even though pure `1/b` still survives on the bounded family. The new low-`b` onset compare closes the mechanism language another step: overlap onset tracks weak target-band occupancy plus coarse local `y` spacing. Tree layers densify near the target plane, so selected mass windows stay compact and `mu` remains positive; dense random-DAG layers keep only about `1-2` nodes in the target band, so widened source windows must stretch across large `y` gaps and are the ones that cross into `mu <= 0`.
 - `k=0→0` remains preserved under both G1 and G2
 
-**Current read:** the best current architecture split is now cleaner. On the unitary side, the flat path measure appears to have been the wrong assumption; the lead provisional replacement is corrected `1/L^p` transport plus a directional path measure `exp(-0.8θ²)`, which preserves the tested 2D unitary constraints, passes a bounded 3D unitary smoke test, and stops the gravity-side collapse on the bounded scaling family. The gravity distance-law caveat is now more specific than a blanket failure: raw readouts still grow with `b`, but bounded geometry-normalized response densities already fall with `b` on the tested families. The retained translation is now sharper: center-offset density is the asymptotic leading mass-geometry term, nearest-edge density `b - h_mass` is the robust finite-source correction once source width matters, and support-gap is a discrete packet-support correction whose stability depends on whether the family keeps `delta_packet` small. The reduced-variable picture is now two-layered: `lambda = h_mass / b` is the compact crossover control, while `mu = edge_b / h_mass = 1 / lambda - 1` is the cleaner signed overlap diagnostic. Tree-like controls keep large positive `mu`, narrow random-DAG families only graze `mu ~ 0` at low `b`, and widened dense families are the ones that actually cross into `mu <= 0`, where pure `response / b` becomes fragile but still survives on the bounded family once singular center-offset trials are excluded. The overlap-onset mechanism now has a coarser bridge result too: across the combined dense-family rows, sparse target-band occupancy is already enough to summarize the overlap seam, with `target_fill <= 0.4` capturing `23/24` overlap rows and `target_fill > 2/3` staying fully safe on the current bounded sample. The next physical translation is now stronger than the counted source-load law alone: a bounded same-side density estimate from the fourth-nearest node radius gives `expected_target_count_4nn = 4 / r4`, and the continuous bridge `mass_nodes / expected_target_count_4nn >= 2.7354` improves the combined dense-family accuracy to `0.9167`. A new tree-control pass then leaves the same frozen 4-NN law safely on the non-overlap side without refit, pushing the extended sample to `0.9206` combined accuracy and showing that the tree family stays safe because its target-plane density keeps increasing, not because it lies outside the bridge language. So the counted law `mass_nodes / local_target_count >= 2.5` now looks like a coarse discretization of a smoother local target-plane density law, rather than the final asymptotic statement. On the non-unitary side, no tested record architecture scales correctly yet, and the bottleneck now looks like interaction law / traced branch-weight structure rather than raw env size. So the next good move is not another transport coarse-graining pass or another larger discrete register. It is to treat the propagator as a provisional retained unitary layer with a now-closed 3D smoke gap, and focus the next architecture loop on one mesoscopic durable-record or local-entangling interaction law plus a compact physical translation of the retained gravity response density.
+**Current read:** the best current architecture split is now cleaner. On the unitary side, the flat path measure appears to have been the wrong assumption; the lead provisional replacement is corrected `1/L^p` transport plus a directional path measure `exp(-0.8θ²)`, which preserves the tested 2D unitary constraints, passes a bounded 3D unitary smoke test, and stops the gravity-side collapse on the bounded scaling family. The gravity distance-law caveat is now more specific than a blanket failure: raw readouts still grow with `b`, but bounded geometry-normalized response densities already fall with `b` on the tested families. The retained translation is now sharper: center-offset density is the asymptotic leading mass-geometry term, nearest-edge density `b - h_mass` is the robust finite-source correction once source width matters, and support-gap is a discrete packet-support correction whose stability depends on whether the family keeps `delta_packet` small. The reduced-variable picture is now two-layered: `lambda = h_mass / b` is the compact crossover control, while `mu = edge_b / h_mass = 1 / lambda - 1` is the cleaner signed overlap diagnostic. Tree-like controls keep large positive `mu`, narrow random-DAG families only graze `mu ~ 0` at low `b`, and widened dense families are the ones that actually cross into `mu <= 0`, where pure `response / b` becomes fragile but still survives on the bounded family once singular center-offset trials are excluded. So the open gravity question is no longer another denominator search, but explaining the family dependence of that overlap onset. On the non-unitary side, no tested record architecture scales correctly yet, and the bottleneck now looks like interaction law / traced branch-weight structure rather than raw env size. So the next good move is not another transport coarse-graining pass or another larger discrete register. It is to treat the propagator as a provisional retained unitary layer with a now-closed 3D smoke gap, and focus the next architecture loop on one mesoscopic durable-record or local-entangling interaction law plus a compact physical translation of the retained gravity response density.
 
 ### 5. Oscillatory persistence under the default self-maintenance rule
 
@@ -476,7 +486,7 @@ The main unresolved points are:
 - the model now has an exact retained-update / proper-time scalar kinematically, but its relation to the nonlinear gravity action and the observed two-source superposition failure has not yet been reduced to one clean dynamical law
 - the corrected `1/L^p` propagator is now the best retained gravity rule, but its detailed response law is only partly universal: the sign fix, `k=0` pure-phase limit, Born compatibility, interference compatibility, and weak-coupling `k^2` scaling all survive, while the stronger lattice-side force surrogate does not transfer cleanly to generated DAGs (`R^2 ≈ 0.20`)
 - the gravity field has a quantitative shape on the tested grids, but the right large-scale response observable is still unresolved. The earlier range-plateau story was already retracted, and the newer 2D lensing interpretation has also been retracted: attraction is real, but the current scattering observable does not yet define a clean outgoing deflection angle
-- the higher-dimensional story is now split more cleanly than before: modular 3D and 4D substantially improve decoherence, and the retained 4D modular channel lane is one of the strongest current large-`N` CL-bath candidates on disk; but its exponent-level interpretation is still provisional, the higher-dimensional chokepoint Born-rule checks are clean only on the tested pockets, the newer binned 4D true-visibility check is mostly weak or near-zero, and the distance law remains effectively flat/topological across the tested linear rescue lanes
+- the higher-dimensional story is now split more cleanly than before: modular 3D and 4D substantially improve decoherence, 4D modular channels currently give the strongest large-`N` CL-bath lane on disk, and higher-dimensional chokepoint Born-rule checks are clean; but even the newer binned 4D true-visibility check is mostly weak or near-zero, and the distance law remains effectively flat/topological across the tested linear rescue lanes
 - the 5D picture is still density-sensitive: a dense pilot found one positive corner, and the newer robustness map broadens that window around the pilot settings, but it still lives inside a narrow dense modular neighborhood rather than a generic regime
 - the distance-law closure is now broader than the earlier 4D sweep alone: propagator-power sweeps, fixed-mass locality-shell sweeps, a minimal local saturation nonlinearity, and an induced/effective-distance readout all fail to recover a clean `1/b` law. The remaining open lane is no longer another local-weight or shell tweak; it is either an analytic explanation of the flat/topological force law or a deeper architecture change
 - a first causal-field alternative is interesting but not retained: once the impact-parameter sweep is rerun with fixed mass count and fixed source geometry, the earlier apparent `~1/b` falloff disappears, and the same forward-only field also weakens the retained mass-scaling lane relative to the Laplacian baseline

@@ -3,20 +3,6 @@
 **Status:** repo-facing backlog note  
 **Date:** 2026-04-01
 
-## Frontier Note
-
-The review-hardening cycle is no longer the main bottleneck. The live science
-frontier now sits in:
-
-- [GRAVITY_DESIGN_BLUEPRINT.md](/Users/jonreilly/Projects/Physics/docs/GRAVITY_DESIGN_BLUEPRINT.md)
-
-That blueprint defines the next three design programs:
-
-- gravity completion via mass scaling plus channel-space observables
-- overlap-sensitive nonlinear propagators aimed at beating the `1 / N` ceiling
-- hard geometry / nucleation rules aimed at creating channel structure rather
-  than repairing it after homogenization
-
 ## Purpose
 
 This backlog is not the same as the science frontier. It is the list of work that would make the project more robust to fair external review, especially reviews that focus on circularity, lack of dynamics, weak literature positioning, or unclear derivation status.
@@ -286,8 +272,7 @@ Why it matters:
 2. 5D dense robustness map
 3. analytic / architectural distance-law note
 4. bounded evolving-network dynamics prototype
-5. mass-coupling / path-cancellation audit for dense-prune gravity fragility
-6. any causal-field follow-up under fixed-mass / fixed-geometry controls only
+5. any causal-field follow-up under fixed-mass / fixed-geometry controls only
 
 The assumption ledger and literature-positioning note are already the first step toward this harder backlog.
 
@@ -308,25 +293,7 @@ gates.
   - continuum / asymptotic bridge
   - 5D density/connectivity rescue
   - independent robustness across families and dimensions
-- reopened-lane lane:
-  - source-projected / source-resolved gravity partial movers are live but narrow; source-projected is now bounded within the modular family rather than a one-point accident
-  - dense-prune gravity fragility is now a path-cancellation question, not a coarse reach question
-  - local-continuation backreaction is closed as a retained lead
 
 So the project should not act as if "one more nice run" is enough. What gets
 the mainstream-readiness score over `9` is crossing several of these gates, not
 just polishing the current repo.
-
-## Reopened lanes checklist
-
-The current reopened lanes and their status are tracked in:
-
-- [REOPENED_LANE_CHECKLIST.md](/Users/jonreilly/Projects/Physics/docs/REOPENED_LANE_CHECKLIST.md)
-
-Use that note as the explicit chase-to-conclusion list for:
-
-- source-projected field
-- source-resolved Green
-- dense-prune gravity fragility
-- gravity/decoherence correlation
-- 5D joint coverage

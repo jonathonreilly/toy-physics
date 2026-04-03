@@ -23,7 +23,6 @@ measure decoherence on the pruned graph.
 """
 
 from __future__ import annotations
-import argparse
 import math
 import cmath
 import sys
@@ -264,101 +263,93 @@ def _mean_se(vals):
 
 
 def main():
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--n-layers", nargs="+", type=int, default=N_LAYERS_LIST)
-    parser.add_argument("--npl", type=int, default=NPL)
-    parser.add_argument("--xyz-range", type=float, default=XYZ_RANGE)
-    parser.add_argument("--connect-radius", type=float, default=CONNECT_RADIUS)
-    parser.add_argument("--n-seeds", type=int, default=N_SEEDS)
-    parser.add_argument("--thresholds", nargs="+", type=float, default=[0.1, 0.2, 0.3, 0.5, 0.7, 0.9])
-    parser.add_argument("--skip-diagnostic", action="store_true")
-    args = parser.parse_args()
-
     print("=" * 95)
     print("TOPOLOGICAL PATH ASYMMETRY: GRAPH-THEORETIC GAP EMERGENCE")
-    print(f"  CL bath lambda={LAM}, k-band={K_BAND}, {args.n_seeds} seeds")
-    print(f"  npl={args.npl}, xyz_range={args.xyz_range}, r={args.connect_radius}")
+    print(f"  CL bath lambda={LAM}, k-band={K_BAND}, {N_SEEDS} seeds")
     print("=" * 95)
     print()
 
-    seeds = [s * 7 + 3 for s in range(args.n_seeds)]
+    seeds = [s * 7 + 3 for s in range(N_SEEDS)]
 
     # Part 1: Diagnostic — is path-count asymmetry spatially structured?
-    if not args.skip_diagnostic:
-        print("PART 1: PATH-COUNT ASYMMETRY DISTRIBUTION (N=25, seed=3)")
+    print("PART 1: PATH-COUNT ASYMMETRY DISTRIBUTION (N=25, seed=3)")
+    print()
+    positions, adj, bl = generate_3d_dag_uniform(25, NPL, XYZ_RANGE, CONNECT_RADIUS, 3)
+    n = len(positions)
+    by_layer = defaultdict(list)
+    for idx, (x, y, z) in enumerate(positions):
+        by_layer[round(x)].append(idx)
+    layers = sorted(by_layer.keys())
+    bl_idx = len(layers) // 3
+    bi = by_layer[layers[bl_idx]]
+    cy = sum(positions[i][1] for i in range(n)) / n
+    sa = [i for i in bi if positions[i][1] > cy + 3][:3]
+    sb = [i for i in bi if positions[i][1] < cy - 3][:3]
+    blocked_barrier = set(bi) - set(sa + sb)
+
+    if sa and sb:
+        order = _topo_order(adj, n)
+
+        # Path counts from slit A (block slit B + barrier)
+        adj_pruned_a = {}
+        blocked_a = blocked_barrier | set(sb)
+        for i, nbs in adj.items():
+            if i not in blocked_a:
+                adj_pruned_a[i] = [j for j in nbs if j not in blocked_a]
+
+        adj_pruned_b = {}
+        blocked_b = blocked_barrier | set(sa)
+        for i, nbs in adj.items():
+            if i not in blocked_b:
+                adj_pruned_b[i] = [j for j in nbs if j not in blocked_b]
+
+        pc_a = compute_path_count(adj_pruned_a, sa, n, order)
+        pc_b = compute_path_count(adj_pruned_b, sb, n, order)
+
+        # Bin asymmetry by y
+        y_bins = defaultdict(list)
+        for idx in range(n):
+            x, y, z = positions[idx]
+            if x > bl:
+                total = pc_a[idx] + pc_b[idx]
+                if total > 0:
+                    asym = abs(pc_a[idx] - pc_b[idx]) / total
+                else:
+                    asym = 0.0
+                yb = int(y / 3) * 3
+                y_bins[yb].append((asym, pc_a[idx], pc_b[idx]))
+
+        print(f"  {'y_bin':>8s}  {'mean_asym':>10s}  {'mean_pA':>10s}  {'mean_pB':>10s}  {'n':>5s}")
+        print(f"  {'-' * 50}")
+        for yb in sorted(y_bins.keys()):
+            vals = y_bins[yb]
+            ma = sum(v[0] for v in vals) / len(vals)
+            mpa = sum(v[1] for v in vals) / len(vals)
+            mpb = sum(v[2] for v in vals) / len(vals)
+            print(f"  {yb:>5d}..{yb+3:<3d}  {ma:10.4f}  {mpa:10.0f}  {mpb:10.0f}  {len(vals):5d}")
+
+        # Also compute reachability
+        reach_a = compute_reachability(adj_pruned_a, sa, n)
+        reach_b = compute_reachability(adj_pruned_b, sb, n)
+
+        n_a_only = len(reach_a - reach_b)
+        n_b_only = len(reach_b - reach_a)
+        n_both = len(reach_a & reach_b)
+        n_neither = n - len(reach_a | reach_b)
+        post_barrier = sum(1 for idx, (x, y, z) in enumerate(positions) if x > bl)
+
         print()
-        positions, adj, bl = generate_3d_dag_uniform(25, args.npl, args.xyz_range, args.connect_radius, 3)
-        n = len(positions)
-        by_layer = defaultdict(list)
-        for idx, (x, y, z) in enumerate(positions):
-            by_layer[round(x)].append(idx)
-        layers = sorted(by_layer.keys())
-        bl_idx = len(layers) // 3
-        bi = by_layer[layers[bl_idx]]
-        cy = sum(positions[i][1] for i in range(n)) / n
-        sa = [i for i in bi if positions[i][1] > cy + 3][:3]
-        sb = [i for i in bi if positions[i][1] < cy - 3][:3]
-        blocked_barrier = set(bi) - set(sa + sb)
-
-        if sa and sb:
-            order = _topo_order(adj, n)
-            adj_pruned_a = {}
-            blocked_a = blocked_barrier | set(sb)
-            for i, nbs in adj.items():
-                if i not in blocked_a:
-                    adj_pruned_a[i] = [j for j in nbs if j not in blocked_a]
-
-            adj_pruned_b = {}
-            blocked_b = blocked_barrier | set(sa)
-            for i, nbs in adj.items():
-                if i not in blocked_b:
-                    adj_pruned_b[i] = [j for j in nbs if j not in blocked_b]
-
-            pc_a = compute_path_count(adj_pruned_a, sa, n, order)
-            pc_b = compute_path_count(adj_pruned_b, sb, n, order)
-
-            y_bins = defaultdict(list)
-            for idx in range(n):
-                x, y, z = positions[idx]
-                if x > bl:
-                    total = pc_a[idx] + pc_b[idx]
-                    if total > 0:
-                        asym = abs(pc_a[idx] - pc_b[idx]) / total
-                    else:
-                        asym = 0.0
-                    yb = int(y / 3) * 3
-                    y_bins[yb].append((asym, pc_a[idx], pc_b[idx]))
-
-            print(f"  {'y_bin':>8s}  {'mean_asym':>10s}  {'mean_pA':>10s}  {'mean_pB':>10s}  {'n':>5s}")
-            print(f"  {'-' * 50}")
-            for yb in sorted(y_bins.keys()):
-                vals = y_bins[yb]
-                ma = sum(v[0] for v in vals) / len(vals)
-                mpa = sum(v[1] for v in vals) / len(vals)
-                mpb = sum(v[2] for v in vals) / len(vals)
-                print(f"  {yb:>5d}..{yb+3:<3d}  {ma:10.4f}  {mpa:10.0f}  {mpb:10.0f}  {len(vals):5d}")
-
-            reach_a = compute_reachability(adj_pruned_a, sa, n)
-            reach_b = compute_reachability(adj_pruned_b, sb, n)
-
-            n_a_only = len(reach_a - reach_b)
-            n_b_only = len(reach_b - reach_a)
-            n_both = len(reach_a & reach_b)
-            n_neither = n - len(reach_a | reach_b)
-            post_barrier = sum(1 for idx, (x, y, z) in enumerate(positions) if x > bl)
-
-            print()
-            print(f"  Reachability (post-barrier): A-only={n_a_only}, B-only={n_b_only}, "
-                  f"both={n_both}, neither={n_neither}, total={post_barrier}")
+        print(f"  Reachability (post-barrier): A-only={n_a_only}, B-only={n_b_only}, "
+              f"both={n_both}, neither={n_neither}, total={post_barrier}")
 
     # Part 2: Remove low-asymmetry nodes and measure decoherence
     print()
     print("PART 2: REMOVE LOW-ASYMMETRY NODES (path-count based)")
     print()
 
-    asym_thresholds = [0.0, *args.thresholds]
+    ASYM_THRESHOLDS = [0.0, 0.1, 0.2, 0.3, 0.5, 0.7, 0.9]
 
-    for nl in args.n_layers:
+    for nl in N_LAYERS_LIST:
         print(f"  N_LAYERS = {nl}")
         print(f"  {'thresh':>7s}  {'pur_cl':>10s}  {'S_norm':>8s}  {'gravity':>10s}  "
               f"{'rem%':>5s}  {'ok':>3s}  {'time':>5s}")
@@ -368,7 +359,7 @@ def main():
         t0 = time.time()
         pc_all, sn_all, grav_all = [], [], []
         for seed in seeds:
-            positions, adj, _ = generate_3d_dag_uniform(nl, args.npl, args.xyz_range, args.connect_radius, seed)
+            positions, adj, _ = generate_3d_dag_uniform(nl, NPL, XYZ_RANGE, CONNECT_RADIUS, seed)
             r = measure(positions, adj, nl, K_BAND)
             if r:
                 pc_all.append(r["pur_cl"])
@@ -382,14 +373,14 @@ def main():
             print(f"  {'base':>7s}  {mpc:7.4f}±{sepc:.3f}  {msn:8.4f}  "
                   f"{mg:+7.4f}±{seg:.3f}  {'0':>5s}  {len(pc_all):3d}  {dt:4.0f}s")
 
-        for thresh in asym_thresholds:
+        for thresh in ASYM_THRESHOLDS:
             if thresh == 0.0:
                 continue
             t0 = time.time()
             pc_all, sn_all, grav_all, rem_all = [], [], [], []
 
             for seed in seeds:
-                positions, adj_raw, bl = generate_3d_dag_uniform(nl, args.npl, args.xyz_range, args.connect_radius, seed)
+                positions, adj_raw, bl = generate_3d_dag_uniform(nl, NPL, XYZ_RANGE, CONNECT_RADIUS, seed)
                 n = len(positions)
 
                 # Get barrier/slit structure
@@ -472,7 +463,6 @@ def main():
             else:
                 mrem = sum(rem_all) / len(rem_all) if rem_all else 0
                 print(f"  {thresh:7.1f}  FAIL  rem={mrem:.1f}%  {dt:4.0f}s")
-            sys.stdout.flush()
 
         print()
 
