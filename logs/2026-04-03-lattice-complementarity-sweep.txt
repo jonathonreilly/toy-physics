@@ -1,0 +1,51 @@
+==================================================================================================================
+LATTICE COMPLEMENTARITY SWEEP
+  ordered 2D lattice, standard linear propagator, barrier-card slit-width sweep
+  Born is a same-family companion Sorkin audit, not the exact same 2-slit aperture card
+==================================================================================================================
+
+SETUP
+  N=40, half_width=20, k=5.0
+  family: ordered 2D lattice with forward |dy| <= 1
+  detector observable: final-layer centroid shift
+  fit procedure: far-field |delta| fit on b >= 7 using the same barrier card
+  mass convention: one mass node at first_open_upper_row + 4
+
+TRADEOFF TABLE
+   gap  width  mass_b       MI     d_TV   pur_cl    1-pur     alpha      R^2       grav    sign        Born         k=0
+  ------------------------------------------------------------------------------------------------------------
+     1     19       6    0.405    0.610    0.939    0.061    -1.103    0.969    -4.8583    away    8.03e-16   +0.00e+00
+     2     18       7    0.537    0.714    0.943    0.057    -0.893    0.930    -5.7403    away    5.17e-16   +0.00e+00
+     3     17       8    0.664    0.803    0.946    0.054    -0.614    0.871    -6.2564    away    5.64e-16   +0.00e+00
+     4     16       9    0.779    0.878    0.950    0.050    -0.405    0.814    -6.6794    away    5.25e-16   +0.00e+00
+     5     15      10    0.868    0.930    0.954    0.046    -0.300    0.790    -7.1844    away    5.15e-16   +0.00e+00
+     6     14      11    0.926    0.962    0.954    0.046    -0.252    0.766    -7.7483    away    6.36e-16   +0.00e+00
+     7     13      12    0.963    0.982    0.953    0.047    -0.221    0.738    -8.4206    away    7.45e-16   +0.00e+00
+
+DISTANCE CURVES
+  gap=1 width=19: b=3:-4.7437  b=5:-4.9955  b=7:-4.6135  b=10:-3.6357  b=13:-2.7156  b=16:-2.0200  b=19:-1.5332
+  gap=2 width=18: b=3:-5.1248  b=5:-5.7583  b=7:-5.7403  b=10:-5.0315  b=13:-4.0083  b=16:-3.0623  b=19:-2.3397
+  gap=3 width=17: b=3:-5.3026  b=5:-6.1270  b=7:-6.2852  b=10:-5.9762  b=13:-5.1800  b=16:-4.2197  b=19:-3.3591
+  gap=4 width=16: b=3:-5.4696  b=5:-6.4490  b=7:-6.6785  b=10:-6.5901  b=13:-6.0513  b=16:-5.2408  b=19:-4.3847
+  gap=5 width=15: b=3:-5.6592  b=5:-6.9451  b=7:-7.2248  b=10:-7.1844  b=13:-6.7705  b=16:-6.0828  b=19:-5.2741
+  gap=6 width=14: b=3:-5.8445  b=5:-7.4321  b=7:-7.8201  b=10:-7.8286  b=13:-7.4555  b=16:-6.8009  b=19:-5.9944
+  gap=7 width=13: b=3:-5.9761  b=5:-7.9019  b=7:-8.5470  b=10:-8.5851  b=13:-8.2606  b=16:-7.6009  b=19:-6.7569
+
+TREND SUMMARY
+  MI rises from 0.405 to 0.963 as slits narrow
+  d_TV rises from 0.610 to 0.982 as slits narrow
+  1-pur stays nontrivial across the sweep: 0.046 to 0.061
+  distance-law R^2 falls from 0.969 to 0.738 as slits narrow
+  same-card gravity sign is constant across the sweep: ['away']
+  Born-clean companion rows: 7/7
+  k=0-clean rows: 7/7
+
+SWEET SPOT GUARD
+  Born <= 1e-12, |k0| <= 1e-09, MI >= 0.50, 1-pur >= 0.05, R^2 >= 0.90
+  retained sweet spot: gap=2, width=18, mass_b=7
+    MI=0.537, d_TV=0.714, pur_cl=0.943, 1-pur=0.057
+    alpha=-0.893, R^2=0.930, gravity=-5.7403 (away), Born=5.17e-16, k0=+0.00e+00
+
+PROMOTED WORDING RECOMMENDATION
+  best description: bounded tradeoff curve with a sweet spot
+  ordered lattice supports a continuous tradeoff between decoherence/which-slit structure and distance-law quality, with a bounded sweet spot where both are simultaneously present
