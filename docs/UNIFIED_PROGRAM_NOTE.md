@@ -205,6 +205,8 @@ So the safe synthesis read is now:
 - **ordered lattice has both:**
   - a standard-strength same-family two-harness bridge
   - a narrow weak-field one-card pocket on the same family
+  - a retained weak-field purity-scaling law on that pocket:
+    `1 - pur_cl ~= 1.0467 * N^(-0.222)` on the retained rows
 - **ordered lattice still does not displace exact mirror as the flagship
   coexistence architecture**
 
