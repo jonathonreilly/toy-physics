@@ -1,21 +1,20 @@
 #!/usr/bin/env python3
 """Mirror symmetry on grown geometric DAGs.
 
-Codex found: Z₂ mirror on imposed 3D graphs gives 27% decoherence
-+ 7.2 SE gravity (S4 mirror architecture).
+This is an exploratory successor-lane scout, not a retained result.
+The question it asks is whether a grown symmetry scaffold can approximate
+the mirror / higher-symmetry benefit without hard-coding the exact
+chokepoint geometry.
 
-Our finding: grown 4D graphs close the axiom chain with 7.5%
-decoherence + 2.5 SE gravity.
+What the current run shows is narrower:
+  - grown-mirror graphs are Born-safe where they run
+  - they do not reproduce the retained mirror-chokepoint pocket
+  - they do not approximate the `Z2xZ2` joint benefit near the density
+    optimum
 
-Can we get the best of both? Grow a geometric DAG with Z₂ mirror
-symmetry in the y-coordinate:
-  - For each node at (x, y, z1, ..., zd), also create its mirror
-    at (x, -y, z1, ..., zd) with mirrored edges.
-  - This is axiom-compatible: "the growth rule respects a symmetry"
-    is a weaker assumption than "the geometry is imposed."
-
-Tests d_growth=2 (3D with mirror, like Codex's best) and d_growth=3
-(4D with mirror).
+So the script is useful as a negative control for the emergence-facing
+story, but it should not be read as a live successor to the retained
+higher-symmetry lane.
 """
 
 from __future__ import annotations
@@ -300,9 +299,9 @@ def main():
         print()
 
     print("Compare:")
-    print("  Codex S4 mirror (imposed 3D): 27% decoh, 7.2 SE gravity")
-    print("  Our grown 4D (no mirror):     7.5% decoh, 2.5 SE gravity")
-    print("  Combined mirror+grown:        ??? (above)")
+    print("  Retained mirror chokepoint: stronger bounded coexistence than this scout")
+    print("  Retained Z2xZ2 lane: stronger decoherence-side lead than this scout")
+    print("  Grown mirror scout: exploratory only, does not approximate the retained benefit")
 
 
 if __name__ == "__main__":
