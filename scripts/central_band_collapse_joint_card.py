@@ -72,7 +72,18 @@ def add_mass_support(graph, nl):
     return graph
 
 
-def collapse_propagate(positions, adj, field, src, k, blocked, mass_set, p_collapse, rng, use_ln=False):
+def make_collapse_phase_map(mass_set, p_collapse, seed_base):
+    if p_collapse <= 0 or not mass_set:
+        return {}
+    phases = {}
+    for i in sorted(mass_set):
+        rr = random.Random(seed_base + 1000003 * (i + 1))
+        if rr.random() < p_collapse:
+            phases[i] = cmath.exp(1j * rr.uniform(0.0, 2.0 * math.pi))
+    return phases
+
+
+def collapse_propagate(positions, adj, field, src, k, blocked, collapse_phase, use_ln=False):
     n = len(positions)
     by_layer = defaultdict(list)
     for idx, (x, y) in enumerate(positions):
@@ -91,9 +102,8 @@ def collapse_propagate(positions, adj, field, src, k, blocked, mass_set, p_colla
             if a_i == 0j:
                 continue
 
-            if p_collapse > 0 and i in mass_set and rng.random() < p_collapse:
-                theta_rand = rng.uniform(0.0, 2.0 * math.pi)
-                a_i *= cmath.exp(1j * theta_rand)
+            if i in collapse_phase:
+                a_i *= collapse_phase[i]
                 amps[i] = a_i
 
             for j in adj.get(i, []):
@@ -140,12 +150,12 @@ def collapse_purity(graph, use_pruned, use_ln, p_collapse, n_realizations):
     n_total = 0
     for k in K_BAND:
         for r in range(n_realizations):
-            rng = random.Random(100000 * r + int(round(100 * k)))
+            collapse_phase = make_collapse_phase_map(mass_set, p_collapse, 100000 * r + int(round(100 * k)))
             amps_a = collapse_propagate(
-                positions, adj, field, src, k, blocked | sb, mass_set, p_collapse, rng, use_ln=use_ln
+                positions, adj, field, src, k, blocked | sb, collapse_phase, use_ln=use_ln
             )
             amps_b = collapse_propagate(
-                positions, adj, field, src, k, blocked | sa, mass_set, p_collapse, rng, use_ln=use_ln
+                positions, adj, field, src, k, blocked | sa, collapse_phase, use_ln=use_ln
             )
             psi = [amps_a[d] + amps_b[d] for d in det_list]
             norm_sq = sum(abs(p) ** 2 for p in psi)
@@ -176,12 +186,12 @@ def collapse_gravity(graph, use_pruned, use_ln, p_collapse, n_realizations):
     vals = []
     for k in K_BAND:
         for r in range(n_realizations):
-            rng = random.Random(100000 * r + int(round(100 * k)))
+            collapse_phase = make_collapse_phase_map(mass_set, p_collapse, 100000 * r + int(round(100 * k)))
             am = collapse_propagate(
-                positions, adj, field, src, k, blocked, mass_set, p_collapse, rng, use_ln=use_ln
+                positions, adj, field, src, k, blocked, collapse_phase, use_ln=use_ln
             )
             af = collapse_propagate(
-                positions, adj, field_flat, src, k, blocked, mass_set, p_collapse, rng, use_ln=use_ln
+                positions, adj, field_flat, src, k, blocked, collapse_phase, use_ln=use_ln
             )
             pm = sum(abs(am[d]) ** 2 for d in det_list)
             pf = sum(abs(af[d]) ** 2 for d in det_list)

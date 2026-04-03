@@ -25,7 +25,10 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from scripts.asymmetry_persistence_collapse_pilot import propagate_with_collapse
+from scripts.asymmetry_persistence_collapse_pilot import (
+    make_collapse_phase_map,
+    propagate_with_collapse,
+)
 from scripts.asymmetry_persistence_joint_card import build_graph
 from scripts.gap_topological_asymmetry_layernorm_combo import (
     K_BAND,
@@ -86,10 +89,9 @@ def total_prob_linear(prop, graph, k, open_set):
     return sum(abs(amps[d]) ** 2 for d in graph["det_list"])
 
 
-def total_prob_collapse(graph, k, open_set, use_ln, p_collapse, rng_seed):
+def total_prob_collapse(graph, k, open_set, use_ln, collapse_phase):
     all_three = set(graph["sa3"] + graph["sb3"] + graph["sc3"])
     blocked = graph["blocked_three"] | (all_three - set(open_set))
-    rng = random.Random(rng_seed)
     amps = propagate_with_collapse(
         graph["positions"],
         graph["adj"],
@@ -97,9 +99,7 @@ def total_prob_collapse(graph, k, open_set, use_ln, p_collapse, rng_seed):
         graph["src"],
         k,
         blocked,
-        graph["mass_set"],
-        p_collapse,
-        rng,
+        collapse_phase,
         use_ln=use_ln,
     )
     return sum(abs(amps[d]) ** 2 for d in graph["det_list"])
@@ -118,6 +118,7 @@ def born_rows_for_graph(graph, *, use_ln: bool, p_collapse: float, n_realization
             if p_collapse > 0:
                 if "mass_set" not in graph:
                     graph["mass_set"] = choose_mass_set(graph)
+                collapse_phase = make_collapse_phase_map(graph["mass_set"], p_collapse, seed_base)
 
                 def total_prob(open_set):
                     return total_prob_collapse(
@@ -125,8 +126,7 @@ def born_rows_for_graph(graph, *, use_ln: bool, p_collapse: float, n_realization
                         k,
                         open_set,
                         use_ln,
-                        p_collapse,
-                        seed_base,
+                        collapse_phase,
                     )
             else:
                 prop = propagate_3d_layernorm if use_ln else propagate_3d_linear
@@ -193,14 +193,29 @@ def main():
             valid = 0
 
             for seed in seeds:
-                graph = build_graph(nl, seed, thresh, npl, args.xyz_range, args.connect_radius)
-                if graph is None:
+                base_graph = build_graph(nl, seed, 0.0, npl, args.xyz_range, args.connect_radius)
+                if base_graph is None:
                     continue
-                keep_vals.append(100.0 * graph["keep_frac"])
+                pers_graph = base_graph if thresh == 0.0 else build_graph(
+                    nl, seed, thresh, npl, args.xyz_range, args.connect_radius
+                )
+                if pers_graph is None:
+                    continue
+                keep_vals.append(100.0 * pers_graph["keep_frac"])
 
-                for label, use_ln, p_col in configs:
+                vals = born_rows_for_graph(
+                    base_graph,
+                    use_ln=False,
+                    p_collapse=0.0,
+                    n_realizations=args.n_realizations,
+                    k_band=K_BAND,
+                )
+                if vals:
+                    rows["linear"].extend(vals)
+
+                for label, use_ln, p_col in configs[1:]:
                     vals = born_rows_for_graph(
-                        graph,
+                        pers_graph,
                         use_ln=use_ln,
                         p_collapse=p_col,
                         n_realizations=args.n_realizations,

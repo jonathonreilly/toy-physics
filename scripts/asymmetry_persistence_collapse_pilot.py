@@ -127,7 +127,18 @@ def build_graph(nl, seed, thresh, npl, xyz_range, connect_radius):
     }
 
 
-def propagate_with_collapse(positions, adj, field, src, k, blocked, mass_set, p_collapse, rng, use_ln=False):
+def make_collapse_phase_map(mass_set, p_collapse, seed_base):
+    if p_collapse <= 0 or not mass_set:
+        return {}
+    phases = {}
+    for i in sorted(mass_set):
+        rr = random.Random(seed_base + 1000003 * (i + 1))
+        if rr.random() < p_collapse:
+            phases[i] = cmath.exp(1j * rr.uniform(0.0, 2.0 * math.pi))
+    return phases
+
+
+def propagate_with_collapse(positions, adj, field, src, k, blocked, collapse_phase, use_ln=False):
     n = len(positions)
     by_layer = defaultdict(list)
     for idx, (x, y, z) in enumerate(positions):
@@ -146,9 +157,8 @@ def propagate_with_collapse(positions, adj, field, src, k, blocked, mass_set, p_
             if a_i == 0j:
                 continue
 
-            if p_collapse > 0 and i in mass_set and rng.random() < p_collapse:
-                theta_rand = rng.uniform(0.0, 2.0 * math.pi)
-                a_i *= cmath.exp(1j * theta_rand)
+            if i in collapse_phase:
+                a_i *= collapse_phase[i]
                 amps[i] = a_i
 
             for j in adj.get(i, []):
@@ -206,14 +216,14 @@ def collapse_detector_purity(graph, use_ln, p_collapse, n_realizations):
     n_total = 0
     for k in K_BAND:
         for r in range(n_realizations):
-            rng = random.Random(r * 1000 + int(k * 100))
+            collapse_phase = make_collapse_phase_map(mass_set, p_collapse, r * 1000 + int(k * 100))
             amps_a = propagate_with_collapse(
                 positions, adj, graph["field"], src, k, blocked | slit_lower,
-                mass_set, p_collapse, rng, use_ln
+                collapse_phase, use_ln
             )
             amps_b = propagate_with_collapse(
                 positions, adj, graph["field"], src, k, blocked | slit_upper,
-                mass_set, p_collapse, rng, use_ln
+                collapse_phase, use_ln
             )
             psi = [amps_a[d] + amps_b[d] for d in det_list]
             norm_sq = sum(abs(p) ** 2 for p in psi)

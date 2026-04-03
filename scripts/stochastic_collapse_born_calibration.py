@@ -120,6 +120,18 @@ def choose_mass_set(positions, layer_indices, n_layers):
     return mass_set
 
 
+def make_collapse_phase_map(mass_set, p_collapse, seed_base):
+    """Deterministic node-indexed collapse realization shared across branches."""
+    if p_collapse <= 0 or not mass_set:
+        return {}
+    phases = {}
+    for i in sorted(mass_set):
+        rr = random.Random(seed_base + 1000003 * (i + 1))
+        if rr.random() < p_collapse:
+            phases[i] = cmath.exp(1j * rr.uniform(0.0, 2.0 * math.pi))
+    return phases
+
+
 def propagate_variant(
     positions,
     adj,
@@ -128,9 +140,7 @@ def propagate_variant(
     blocked,
     *,
     use_ln: bool,
-    p_collapse: float,
-    mass_set,
-    rng,
+    collapse_phase,
 ):
     """Exact 3D propagation with optional layer norm and stochastic collapse."""
     n = len(positions)
@@ -151,9 +161,8 @@ def propagate_variant(
             if a_i == 0j:
                 continue
 
-            if p_collapse > 0 and i in mass_set and rng.random() < p_collapse:
-                theta_rand = rng.uniform(0.0, 2.0 * math.pi)
-                a_i *= cmath.exp(1j * theta_rand)
+            if i in collapse_phase:
+                a_i *= collapse_phase[i]
                 amps[i] = a_i
 
             for j in adj.get(i, []):
@@ -199,10 +208,10 @@ def born_metric_for_graph(graph, *, use_ln: bool, p_collapse: float, n_realizati
     for k in k_band:
         for r in range(n_realizations):
             seed_base = 100000 * r + int(round(100 * k))
+            collapse_phase = make_collapse_phase_map(mass_set, p_collapse, seed_base)
 
             def total_prob(open_set):
                 blocked = base_blocked | (all_slits - set(open_set))
-                rng = random.Random(seed_base)
                 amps = propagate_variant(
                     positions,
                     adj,
@@ -210,9 +219,7 @@ def born_metric_for_graph(graph, *, use_ln: bool, p_collapse: float, n_realizati
                     k,
                     blocked,
                     use_ln=use_ln,
-                    p_collapse=p_collapse,
-                    mass_set=mass_set,
-                    rng=rng,
+                    collapse_phase=collapse_phase,
                 )
                 return sum(abs(amps[d]) ** 2 for d in det_list)
 

@@ -140,7 +140,18 @@ def build_graph(nl, seed, y_cut, npl, y_range, connect_radius):
     }
 
 
-def propagate_with_collapse(positions, adj, field, src, k, blocked, mass_set, p_collapse, rng, use_ln=False):
+def make_collapse_phase_map(mass_set, p_collapse, seed_base):
+    if p_collapse <= 0 or not mass_set:
+        return {}
+    phases = {}
+    for i in sorted(mass_set):
+        rr = random.Random(seed_base + 1000003 * (i + 1))
+        if rr.random() < p_collapse:
+            phases[i] = cmath.exp(1j * rr.uniform(0.0, 2.0 * math.pi))
+    return phases
+
+
+def propagate_with_collapse(positions, adj, field, src, k, blocked, collapse_phase, use_ln=False):
     n = len(positions)
     by_layer = defaultdict(list)
     for idx, (x, y) in enumerate(positions):
@@ -159,9 +170,8 @@ def propagate_with_collapse(positions, adj, field, src, k, blocked, mass_set, p_
             if a_i == 0j:
                 continue
 
-            if p_collapse > 0 and i in mass_set and rng.random() < p_collapse:
-                theta_rand = rng.uniform(0.0, 2.0 * math.pi)
-                a_i *= cmath.exp(1j * theta_rand)
+            if i in collapse_phase:
+                a_i *= collapse_phase[i]
                 amps[i] = a_i
 
             for j in adj.get(i, []):
@@ -196,7 +206,7 @@ def measure_purity(graph, use_ln, p_collapse, n_realizations):
     vals = []
     for k in K_BAND:
         for r in range(n_realizations):
-            rng = random.Random(r * 1000 + int(k * 100))
+            collapse_phase = make_collapse_phase_map(graph["mass_set"], p_collapse, r * 1000 + int(k * 100))
             aa = propagate_with_collapse(
                 graph["positions"],
                 graph["adj"],
@@ -204,9 +214,7 @@ def measure_purity(graph, use_ln, p_collapse, n_realizations):
                 graph["src"],
                 k,
                 graph["blocked"] | set(graph["sb"]),
-                graph["mass_set"],
-                p_collapse,
-                rng,
+                collapse_phase,
                 use_ln=use_ln,
             )
             ab = propagate_with_collapse(
@@ -216,9 +224,7 @@ def measure_purity(graph, use_ln, p_collapse, n_realizations):
                 graph["src"],
                 k,
                 graph["blocked"] | set(graph["sa"]),
-                graph["mass_set"],
-                p_collapse,
-                rng,
+                collapse_phase,
                 use_ln=use_ln,
             )
             norm_a = sum(abs(aa[d]) ** 2 for d in graph["det_list"])

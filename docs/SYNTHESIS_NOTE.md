@@ -222,34 +222,46 @@ The positive total (1-pur) growing at large N comes from k-band
 averaging (different k values produce different ψ, and the average ρ
 is increasingly mixed), not from the collapse mechanism.
 
-### Dimensional scaling: 4D escapes the ceiling
+### Dimensional scaling: promising 4D flattening, not a clean escape theorem
 
-The decoherence exponent depends critically on dimension:
-```
-2D uniform:       alpha = -1.58  (rapid decay, ceiling at N~235)
-4D modular gap=3: alpha = -0.22  (near flat, ~7% decoherence persists)
-```
+The retained 4D modular large-`N` lane is still important, but the safe
+claim is narrower than the older “4D escapes the ceiling” wording.
 
-4D improvement: **+1.36 in exponent** — from rapid decay to near-plateau.
-At N=100: 2D has 1.4% decoherence remaining; 4D has 5-8%.
-
-The exponent also depends on wavenumber k:
+What is solid:
 ```
-k=3:  alpha = -0.32  (shallowest — decoherence most persistent)
-k=10: alpha = -2.52  (steepest — fastest decay)
+4D modular gap=3/5, densified large-N harness:
+pur_cl stays bounded away from 1 through N=100
 ```
 
-Physics: decoherence persistence scales with the number of
-**independent path channels** between slits and detectors.
-Higher dimension adds channels. Lower k makes paths more
-coherent within channels. Both flatten the exponent.
+What is still provisional:
+```
+2D uniform:       alpha = -1.58  (rapid decay)
+4D modular gap=3: alpha = -0.22  (12-seed provisional fit, R²=0.40)
+```
+
+That exponent comparison is not yet apples-to-apples, because the retained
+4D lane also changes topology and connectivity regime (modular channels,
+more nodes per layer, tighter spatial range, larger connect radius) in
+order to stay connected through `N=100`.
+
+The exponent also appears to depend on wavenumber `k` inside the tested 2D
+family, but that result is still fit-sensitive:
+```
+k=3:  alpha = -0.32  (shallowest in the current mean-curve fit)
+k=10: alpha = -2.52  (steepest in the current mean-curve fit)
+```
+
+So the correct current interpretation is:
+- 4D modular geometry is the strongest retained large-`N` CL-bath lane on disk
+- k likely matters inside the tested 2D family
+- neither result is yet a clean universal exponent law
 
 ## What is NOT established
 
-1. **4D exponent confirmation** — the -0.22 exponent is from 12 seeds
-   (R²=0.40). Needs 24 seeds and N>100 to confirm it's truly flat
-   rather than slowly decaying. If it's genuinely zero, 4D is the
-   first complete escape from the ceiling.
+1. **4D exponent confirmation** — the provisional `-0.22` fit is from
+   12 seeds with `R²=0.40` on a densified modular 4D harness. It still
+   needs a same-family matched comparison and more seeds / larger `N`
+   before it can be promoted as a dimensional law.
 
 2. **Dynamic emergence** — 9 approaches tested, all fail. The gap
    may be a boundary condition on emergent spacetime.
@@ -260,40 +272,41 @@ coherent within channels. Both flatten the exponent.
 
 ## Honest assessment
 
-This is a toy model with seven publishable quantitative results:
+This is a toy model with **five locked quantitative results plus two live
+frontier leads**:
 
-1. **Gravity from phase:** deflection via phase valley mechanism,
-   5.1 SE on uniform DAGs, 1/b² distance scaling, F∝M.
+1. **Gravity signal from phase:** statistically real deflection exists
+   on retained graph families, but the exact distance law and fixed-position
+   mass law are still unresolved.
 
-2. **Decoherence from CL bath:** (1-pur_min) ~ C×N^(-0.7 to -0.9).
-   Clean mechanism (bin-resolved field contrast). R²=0.72-0.90.
+2. **Decoherence from CL bath:** `(1-pur_min)` falls roughly like a power
+   law in `N`, typically around `N^(-0.7 .. -1.0)` on the retained 2D/3D
+   linear lanes. This is the cleanest current structural limit.
 
-3. **Regulated propagator:** per-layer normalization is Born-clean
-   (|I₃|/P = 5e-16) and shifts the ceiling prefactor ~12x.
+3. **Regulated propagator:** per-layer normalization can be Born-clean on
+   retained lanes and materially shifts the finite-`N` decoherence prefactor.
 
-4. **Combined stacking:** layer norm + modular topology are
-   complementary. pur_min = 0.619 at N=25 (38% decoherence, 6x
-   over baseline). Effective range extends from N≈235 to N≈1355.
+4. **Combined stacking:** layer norm + hard/modular geometry are genuinely
+   complementary. The strongest retained 2D/3D bounded lanes push the useful
+   decoherence window far beyond the linear baseline.
 
-5. **Joint coexistence:** same propagator, same graphs, broad
-   parameter window. The first toy model (to our knowledge) where
-   gravity and decoherence emerge from a single discrete structure.
+5. **Joint coexistence:** bounded same-propagator / same-family gravity +
+   decoherence pockets are real on retained hard-geometry lanes.
 
-6. **Dimensional escape:** 4D modular DAGs show exponent -0.22
-   (near flat) vs 2D's -1.58. k=3 gives -0.32, k=10 gives -2.52.
+Frontier leads that are still interesting but not locked:
 
-7. **4D + LN combined:** the strongest configuration (R²=0.961):
-   ```
-   (1-pur_min) = 1.77 × N^(-0.53)
-   pur_min=0.90 at N≈220, pur_min=0.99 at N≈16,500
-   ```
-   Three improvements stack: LN (prefactor 12x), gap (prefactor 3x),
-   4D (exponent -0.53 vs -1.58). Effective range 70x over 2D baseline.
+6. **4D modular large-`N` lane:** strong bounded decoherence through `N=100`
+   is real, but the provisional exponent flattening is not yet a clean
+   dimensional theorem.
 
-The model's limitation in 2D: the 1/N ceiling with exponent ~-1.5.
-In 4D with regulation: the exponent halves to -0.53, extending the
-effective range to N≈16,500. The ceiling is a low-dimensional
-artifact, not a fundamental property of path-sum propagation.
+7. **4D + regulation / k-dependence:** these are promising frontier hints,
+   but the current `alpha` claims are not yet hardened enough to promote as
+   canonical results without matched reruns and anchored artifacts.
+
+So the safest current summary is:
+- bounded coexistence and bounded ceiling-shifting are real
+- the asymptotic ceiling remains the main structural limit
+- 4D / k / 4D+LN are frontier leads, not yet foundation-level theorems
 
 The open question: does a growth law exist where nodes fail to
 nucleate in low-distinguishability regions? This is causal set

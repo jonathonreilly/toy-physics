@@ -57,11 +57,21 @@ def attach_field(graph):
     return graph
 
 
-def propagate_field_3d(positions, adj, field, src, k, blocked=None, *, use_ln=False, p_collapse=0.0, mass_set=None, rng=None):
+def make_collapse_phase_map(mass_set, p_collapse, seed_base):
+    if p_collapse <= 0 or not mass_set:
+        return {}
+    phases = {}
+    for i in sorted(mass_set):
+        rr = random.Random(seed_base + 1000003 * (i + 1))
+        if rr.random() < p_collapse:
+            phases[i] = cmath.exp(1j * rr.uniform(0.0, 2.0 * math.pi))
+    return phases
+
+
+def propagate_field_3d(positions, adj, field, src, k, blocked=None, *, use_ln=False, collapse_phase=None):
     n = len(positions)
     blocked = blocked or set()
-    mass_set = mass_set or set()
-    rng = rng or random.Random(0)
+    collapse_phase = collapse_phase or {}
 
     by_layer = defaultdict(list)
     for idx, (x, y, z) in enumerate(positions):
@@ -80,9 +90,8 @@ def propagate_field_3d(positions, adj, field, src, k, blocked=None, *, use_ln=Fa
             if a_i == 0j:
                 continue
 
-            if p_collapse > 0 and i in mass_set and rng.random() < p_collapse:
-                theta_rand = rng.uniform(0.0, 2.0 * math.pi)
-                a_i *= cmath.exp(1j * theta_rand)
+            if i in collapse_phase:
+                a_i *= collapse_phase[i]
                 amps[i] = a_i
 
             for j in adj.get(i, []):
@@ -151,7 +160,7 @@ def collapse_purity(graph, use_ln, p_collapse, n_realizations):
     n_total = 0
     for k in K_BAND:
         for r in range(n_realizations):
-            rng = random.Random(100000 * r + int(round(100 * k)))
+            collapse_phase = make_collapse_phase_map(mass_set, p_collapse, 100000 * r + int(round(100 * k)))
             amps_a = propagate_field_3d(
                 positions,
                 adj,
@@ -160,9 +169,7 @@ def collapse_purity(graph, use_ln, p_collapse, n_realizations):
                 k,
                 blocked | sb | sc,
                 use_ln=use_ln,
-                p_collapse=p_collapse,
-                mass_set=mass_set,
-                rng=rng,
+                collapse_phase=collapse_phase,
             )
             amps_b = propagate_field_3d(
                 positions,
@@ -172,9 +179,7 @@ def collapse_purity(graph, use_ln, p_collapse, n_realizations):
                 k,
                 blocked | sa | sc,
                 use_ln=use_ln,
-                p_collapse=p_collapse,
-                mass_set=mass_set,
-                rng=rng,
+                collapse_phase=collapse_phase,
             )
             psi = [amps_a[d] + amps_b[d] for d in det_list]
             norm_sq = sum(abs(p) ** 2 for p in psi)
@@ -205,7 +210,7 @@ def collapse_gravity(graph, use_ln, p_collapse, n_realizations):
     vals = []
     for k in K_BAND:
         for r in range(n_realizations):
-            rng = random.Random(100000 * r + int(round(100 * k)))
+            collapse_phase = make_collapse_phase_map(mass_set, p_collapse, 100000 * r + int(round(100 * k)))
             am = propagate_field_3d(
                 positions,
                 adj,
@@ -214,9 +219,7 @@ def collapse_gravity(graph, use_ln, p_collapse, n_realizations):
                 k,
                 blocked,
                 use_ln=use_ln,
-                p_collapse=p_collapse,
-                mass_set=mass_set,
-                rng=rng,
+                collapse_phase=collapse_phase,
             )
             af = propagate_field_3d(
                 positions,
@@ -226,9 +229,7 @@ def collapse_gravity(graph, use_ln, p_collapse, n_realizations):
                 k,
                 blocked,
                 use_ln=use_ln,
-                p_collapse=p_collapse,
-                mass_set=mass_set,
-                rng=rng,
+                collapse_phase=collapse_phase,
             )
             pm = sum(abs(am[d]) ** 2 for d in det_list)
             pf = sum(abs(af[d]) ** 2 for d in det_list)
