@@ -69,18 +69,13 @@ def generate_z2_dag(n_layers, npl_half, xyz_range, cr, rng_seed):
                         px, py, pz = positions[pi]
                         if math.sqrt((cx-px)**2+(cy-py)**2+(cz-pz)**2) <= cr:
                             adj[pi].append(ci)
-                            # Find mirror of pi
-                            mi = pi  # source maps to self
-                            for iu2, il2 in zip(up, lo):
-                                pass  # can't easily find mirror of prev layer
-                            # Just also connect mirrors by checking distance
-                for ci_m in lo:
-                    cx, cy, cz = positions[ci_m]
-                    for pl in layer_indices[lb:]:
-                        for pi in pl:
-                            px, py, pz = positions[pi]
-                            if math.sqrt((cx-px)**2+(cy-py)**2+(cz-pz)**2) <= cr:
-                                adj[pi].append(ci_m)
+            for ci_m in lo:
+                cx, cy, cz = positions[ci_m]
+                for pl in layer_indices[lb:]:
+                    for pi in pl:
+                        px, py, pz = positions[pi]
+                        if math.sqrt((cx-px)**2+(cy-py)**2+(cz-pz)**2) <= cr:
+                            adj[pi].append(ci_m)
         layer_indices.append(ln)
     return positions, dict(adj), bl
 
