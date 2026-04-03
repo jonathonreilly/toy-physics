@@ -1,20 +1,20 @@
 #!/usr/bin/env python3
 """Mirror-symmetric chokepoint DAGs: Born + gravity + decoherence.
 
-The mirror result (pur_cl=0.917 at N=100) needs three validations:
-  1. Born rule on chokepoint barrier (layer-1 connectivity only)
-  2. Gravity (phase valley) on the same graphs
-  3. Joint coexistence at large N
+This is the hardened mirror companion to the exploratory mirror lane.
+It generates strict chokepoint graphs with optional same-side layer-2
+edges for scaling tests, while keeping the Born check on the barrier.
 
-This script generates mirror DAGs with CHOKEPOINT barriers:
-  - Layer-to-layer connectivity only (no layer-2 edges)
-  - This prevents barrier-skipping paths
-  - Born rule should pass at machine precision
+Canonical use:
+  - strict layer-1 chokepoint connectivity
+  - Born, decoherence, and gravity measured on the same graphs
+  - optional sparse same-side layer-2 edges only for scaling probes
 
-Also: higher NPL (50 total = 25 per half) for N=80-100 scaling.
+The retained mirror pocket lives in docs/MIRROR_CHOKEPOINT_NOTE.md.
 """
 
 from __future__ import annotations
+import argparse
 import math
 import cmath
 import sys
@@ -35,6 +35,11 @@ N_YBINS = 8
 LAM = 10.0
 
 
+def _same_side_layer2_ok(layer: int, barrier_layer: int) -> bool:
+    """Allow layer-2 edges only when they do not jump across the barrier."""
+    return layer <= barrier_layer or (layer - 2) >= barrier_layer
+
+
 def _topo_order(adj, n):
     in_deg = [0] * n
     for nbs in adj.values():
@@ -52,13 +57,21 @@ def _topo_order(adj, n):
     return order
 
 
-def generate_mirror_chokepoint_dag(n_layers, npl_half, xyz_range, connect_radius, rng_seed):
+def generate_mirror_chokepoint_dag(
+    n_layers,
+    npl_half,
+    xyz_range,
+    connect_radius,
+    rng_seed,
+    layer2_prob=0.0,
+):
     """Mirror-symmetric DAG with layer-1-only connectivity (chokepoint)."""
     rng = random.Random(rng_seed)
     positions = []
     adj = defaultdict(list)
     layer_indices = []
     mirror_map = {}
+    barrier_layer = n_layers // 3
 
     for layer in range(n_layers):
         x = float(layer)
@@ -99,9 +112,75 @@ def generate_mirror_chokepoint_dag(n_layers, npl_half, xyz_range, connect_radius
                             m_curr = mirror_map[curr_idx]
                             adj[m_prev].append(m_curr)
 
+            # Optional sparse layer-2 edges, but only when they do not jump
+            # across the barrier layer.
+            if layer2_prob > 0 and len(layer_indices) >= 2 and _same_side_layer2_ok(layer, barrier_layer):
+                prev2 = layer_indices[-2]
+                for curr_idx in upper_nodes:
+                    cx, cy_val, cz = positions[curr_idx]
+                    for prev_idx in prev2:
+                        px, py, pz = positions[prev_idx]
+                        dist = math.sqrt((cx-px)**2 + (cy_val-py)**2 + (cz-pz)**2)
+                        if dist <= connect_radius and rng.random() < layer2_prob:
+                            adj[prev_idx].append(curr_idx)
+                            m_prev = mirror_map[prev_idx]
+                            m_curr = mirror_map[curr_idx]
+                            adj[m_prev].append(m_curr)
+
         layer_indices.append(layer_nodes)
 
     return positions, dict(adj), n_layers // 3, mirror_map
+
+
+def generate_random_chokepoint_dag(
+    n_layers,
+    npl_total,
+    xyz_range,
+    connect_radius,
+    rng_seed,
+    layer2_prob=0.0,
+):
+    """Strict chokepoint random DAG for baseline comparison."""
+    rng = random.Random(rng_seed)
+    positions = []
+    adj = defaultdict(list)
+    layer_indices = []
+    barrier_layer = n_layers // 3
+
+    for layer in range(n_layers):
+        x = float(layer)
+        layer_nodes = []
+        if layer == 0:
+            idx = len(positions)
+            positions.append((x, 0.0, 0.0))
+            layer_nodes.append(idx)
+        else:
+            for _ in range(npl_total):
+                y = rng.uniform(-xyz_range, xyz_range)
+                z = rng.uniform(-xyz_range, xyz_range)
+                idx = len(positions)
+                positions.append((x, y, z))
+                layer_nodes.append(idx)
+
+                if layer_indices:
+                    prev = layer_indices[-1]
+                    for prev_idx in prev:
+                        px, py, pz = positions[prev_idx]
+                        dist = math.sqrt((x - px) ** 2 + (y - py) ** 2 + (z - pz) ** 2)
+                        if dist <= connect_radius:
+                            adj[prev_idx].append(idx)
+
+                if layer2_prob > 0 and len(layer_indices) >= 2 and _same_side_layer2_ok(layer, barrier_layer):
+                    prev2 = layer_indices[-2]
+                    for prev_idx in prev2:
+                        px, py, pz = positions[prev_idx]
+                        dist = math.sqrt((x - px) ** 2 + (y - py) ** 2 + (z - pz) ** 2)
+                        if dist <= connect_radius and rng.random() < layer2_prob:
+                            adj[prev_idx].append(idx)
+
+        layer_indices.append(layer_nodes)
+
+    return positions, dict(adj), n_layers // 3
 
 
 def propagate_3d(positions, adj, field, src, k, blocked):
@@ -308,50 +387,69 @@ def _mean_se(vals):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--n-layers", nargs="+", type=int, default=[15, 25, 40, 60, 80, 100])
+    parser.add_argument("--npl-half", type=int, default=NPL_HALF)
+    parser.add_argument("--xyz-range", type=float, default=XYZ_RANGE)
+    parser.add_argument("--connect-radius", type=float, default=CONNECT_RADIUS)
+    parser.add_argument("--n-seeds", type=int, default=N_SEEDS)
+    parser.add_argument("--layer2-prob", nargs="+", type=float, default=[0.0])
+    args = parser.parse_args()
+
     print("=" * 110)
     print("MIRROR-SYMMETRIC CHOKEPOINT: Born + Gravity + Decoherence")
-    print(f"  NPL_HALF={NPL_HALF} (total {2*NPL_HALF}), k={K}, {N_SEEDS} seeds")
+    print(f"  NPL_HALF={args.npl_half} (total {2*args.npl_half}), k={K}, {args.n_seeds} seeds")
     print(f"  Chokepoint barrier (layer-1 only connectivity)")
     print("=" * 110)
     print()
 
-    seeds = [s * 7 + 3 for s in range(N_SEEDS)]
+    seeds = [s * 7 + 3 for s in range(args.n_seeds)]
 
-    print(f"  {'N':>4s}  {'d_TV':>8s}  {'pur_cl':>8s}  {'S_norm':>8s}  "
+    print(f"  {'N':>4s}  {'cfg':>10s}  {'d_TV':>8s}  {'pur_cl':>8s}  {'S_norm':>8s}  "
           f"{'gravity':>10s}  {'Born':>10s}  {'k=0':>10s}  {'ok':>3s}  {'time':>5s}")
-    print(f"  {'-' * 82}")
+    print(f"  {'-' * 96}")
 
-    for nl in [15, 25, 40, 60, 80, 100]:
-        t0 = time.time()
-        dtv_all, pur_all, sn_all, grav_all, born_all, k0_all = [], [], [], [], [], []
+    configs = [("random", None, 0.0)] + [
+        (f"mirror p2={p2:g}", "mirror", p2) for p2 in args.layer2_prob
+    ]
 
-        for seed in seeds:
-            pos, adj, bl, _ = generate_mirror_chokepoint_dag(
-                nl, NPL_HALF, XYZ_RANGE, CONNECT_RADIUS, seed)
-            r = measure_joint(pos, adj, nl, K)
-            if r:
-                dtv_all.append(r["dtv"])
-                pur_all.append(r["pur_cl"])
-                sn_all.append(r["s_norm"])
-                grav_all.append(r["gravity"])
-                if not math.isnan(r["born"]):
-                    born_all.append(r["born"])
-                k0_all.append(r["grav_k0"])
+    for nl in args.n_layers:
+        for label, kind, p2 in configs:
+            t0 = time.time()
+            dtv_all, pur_all, sn_all, grav_all, born_all, k0_all = [], [], [], [], [], []
 
-        dt = time.time() - t0
-        if dtv_all:
-            mdtv, _ = _mean_se(dtv_all)
-            mpur, sepur = _mean_se(pur_all)
-            msn, _ = _mean_se(sn_all)
-            mg, seg = _mean_se(grav_all)
-            mborn, _ = _mean_se(born_all)
-            mk0, _ = _mean_se(k0_all)
-            born_str = f"{mborn:10.2e}" if not math.isnan(mborn) else "       nan"
-            print(f"  {nl:4d}  {mdtv:8.4f}  {mpur:7.4f}±{sepur:.02f}  {msn:8.4f}  "
-                  f"{mg:+7.4f}±{seg:.3f}  {born_str}  {mk0:+10.2e}  "
-                  f"{len(dtv_all):3d}  {dt:4.0f}s")
-        else:
-            print(f"  {nl:4d}  FAIL  {dt:4.0f}s")
+            for seed in seeds:
+                if kind == "mirror":
+                    pos, adj, bl, _ = generate_mirror_chokepoint_dag(
+                        nl, args.npl_half, args.xyz_range, args.connect_radius, seed, p2)
+                else:
+                    pos, adj, bl = generate_random_chokepoint_dag(
+                        nl, 2 * args.npl_half, args.xyz_range, args.connect_radius, seed, p2)
+                r = measure_joint(pos, adj, nl, K)
+                if r:
+                    dtv_all.append(r["dtv"])
+                    pur_all.append(r["pur_cl"])
+                    sn_all.append(r["s_norm"])
+                    grav_all.append(r["gravity"])
+                    if not math.isnan(r["born"]):
+                        born_all.append(r["born"])
+                    k0_all.append(r["grav_k0"])
+
+            dt = time.time() - t0
+            if dtv_all:
+                mdtv, _ = _mean_se(dtv_all)
+                mpur, sepur = _mean_se(pur_all)
+                msn, _ = _mean_se(sn_all)
+                mg, seg = _mean_se(grav_all)
+                mborn, _ = _mean_se(born_all)
+                mk0, _ = _mean_se(k0_all)
+                born_str = f"{mborn:10.2e}" if not math.isnan(mborn) else "       nan"
+                print(f"  {nl:4d}  {label:>10s}  {mdtv:8.4f}  {mpur:7.4f}±{sepur:.02f}  {msn:8.4f}  "
+                      f"{mg:+7.4f}±{seg:.3f}  {born_str}  {mk0:+10.2e}  "
+                      f"{len(dtv_all):3d}  {dt:4.0f}s")
+            else:
+                print(f"  {nl:4d}  {label:>10s}  FAIL  {dt:4.0f}s")
+        print()
 
     print()
     print("VALIDATION CRITERIA:")
