@@ -196,37 +196,38 @@ Gravity survives on combined propagator:
 
 Effective range: pur_min=0.90 at N≈101, pur_min=0.99 at N≈1375.
 
-### Stochastic collapse: positive scaling exponent
+### Stochastic collapse at mass nodes
 
-Random dephasing at mass nodes (p_collapse=0.2, 50 MC realizations):
+Random dephasing at mass nodes (p_collapse=0.2, MC over realizations):
+
+Born: |I₃|/P = 2.3e-5 (practically clean).
+
+**Correction (N=200 test):** The apparent positive exponent (+0.21)
+was dominated by k-band averaging, not the collapse mechanism itself.
+When the collapse-specific contribution is isolated (collapse minus
+no-collapse baseline at each N):
+
 ```
-CL bath (linear):     (1-pur) ~ N^(-1.01)   — DECAYS
-CL bath (combined):   (1-pur) ~ N^(-0.88)   — DECAYS slower
-Collapse (uniform):   (1-pur) ~ N^(+0.21)   — GROWS     R²=0.77
+N=25:  collapse adds +0.070 to 1-pur
+N=80:  collapse adds +0.021
+N=200: collapse adds +0.002
 ```
 
-| N | n_mass | 1-purity |
-|---|--------|----------|
-| 18 | 75 | 0.195 |
-| 40 | 175 | 0.200 |
-| 80 | 325 | 0.269 |
+The collapse-specific decoherence SHRINKS with N, following the same
+CLT-driven convergence as the CL bath. More mass encounters at larger
+N doesn't help because the per-encounter dephasing effect diminishes
+as amplitudes become more uniform.
 
-Born: |I₃|/P = 2.3e-5 (practically clean, 5 orders below unity).
-
-Physics: collapse decoherence depends on number of dephasing encounters
-(grows linearly with N), not on slit-distinguishability (which CLT
-erases). The random dephasing breaks time-reversal symmetry, which is
-physically appropriate for irreversible decoherence.
-
-This is the first mechanism in the program where decoherence improves
-with system size. Extrapolation: 30% at N=200, 37% at N=500.
+The positive total (1-pur) growing at large N comes from k-band
+averaging (different k values produce different ψ, and the average ρ
+is increasingly mixed), not from the collapse mechanism.
 
 ## What is NOT established
 
-1. **Collapse + combined stacking** — the collapse and CL bath mechanisms
-   haven't been optimally combined yet. The triple combination
-   (LN + gap + collapse) showed mixed results because the CL bath's
-   negative exponent partially cancels the collapse's positive one.
+1. **Asymptotic escape** — all tested mechanisms (CL bath, layer norm,
+   topology, stochastic collapse) share the same asymptotic: decoherence
+   decays as ~N^(-0.9). Only the prefactor changes. The 1/N ceiling
+   appears fundamental to path-sum propagation on these graphs.
 
 2. **Dynamic emergence** — 9 approaches tested, all fail. The gap
    may be a boundary condition on emergent spacetime.
@@ -237,7 +238,7 @@ with system size. Extrapolation: 30% at N=200, 37% at N=500.
 
 ## Honest assessment
 
-This is a toy model with six publishable quantitative results:
+This is a toy model with five publishable quantitative results:
 
 1. **Gravity from phase:** deflection via phase valley mechanism,
    5.1 SE on uniform DAGs, 1/b² distance scaling, F∝M.
@@ -256,17 +257,11 @@ This is a toy model with six publishable quantitative results:
    parameter window. The first toy model (to our knowledge) where
    gravity and decoherence emerge from a single discrete structure.
 
-6. **Stochastic collapse:** random dephasing at mass nodes gives
-   (1-pur) ~ N^(+0.21) — decoherence GROWS with system size.
-   Born |I₃|/P = 2.3e-5 (practically clean). First scalable
-   decoherence mechanism in the program.
-
-The model's two regimes:
-  - Unitary (CL bath): decoherence decays as N^(-0.9), limited range
-  - Collapse (dephasing): decoherence grows as N^(+0.2), scalable
-The physical question is which regime applies in nature. The collapse
-mechanism is physically motivated (irreversible dephasing at mass
-interactions) and produces the correct scaling direction.
+The model's limitation: the 1/N ceiling is fundamental to all
+tested mechanisms (CL bath, layer norm, modular topology, stochastic
+collapse). Collapse adds a small positive contribution at intermediate
+N but it diminishes at large N. No tested mechanism changes the
+asymptotic exponent — only the prefactor.
 
 The open question: does a growth law exist where nodes fail to
 nucleate in low-distinguishability regions? This is causal set
