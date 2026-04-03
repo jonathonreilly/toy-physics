@@ -137,6 +137,30 @@ The CLT produces BOTH Born compliance and the 1/N ceiling. Breaking
 one breaks the other. This is the fundamental constraint of linear
 path-sum models on connected graphs.
 
+## Reconciliation with main (2026-04-03)
+
+Several branch findings have been superseded by main:
+
+1. **Collapse positive exponent retracted on main** — the N^(+0.21)
+   scaling was a k-band averaging artifact. At N=200, collapse
+   decoherence shrinks to ~0. The 1/N ceiling is universal.
+
+2. **Dense central-band pocket found on main** — LN+|y|+collapse
+   is Born-clean at machine precision on a specific dense geometry
+   (npl=60, y_cut=2.0, connect_radius=3.0). N=60 gives purity=0.55
+   with gravity positive. This resolves the Pareto frontier for
+   that specific family.
+
+3. **Our Born check (Exp 14) used random chokepoint DAGs** — the
+   dense central-band geometry avoids the Born violation we found.
+   Born compliance is family-dependent, not universal.
+
+What survives from this branch:
+- Gap characterization (Exps 1-6): node absence, gradual, robust
+- |y|-removal concept → adopted as y_cut in main
+- Co-improvement finding (Exp 12) → consistent with main
+- Pareto frontier concept → refined by main (family-specific escape)
+
 ## Implications for the project
 
 The gap cannot be generated from local amplitude-based rules because
