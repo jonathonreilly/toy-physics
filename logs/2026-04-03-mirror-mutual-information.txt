@@ -1,0 +1,50 @@
+==========================================================================================
+MIRROR MUTUAL INFORMATION: exact mirror vs matched random baseline
+  seeds=16, npl_half=25, r=4.0, layer2_prob=0.0
+  k-band=[3.0, 5.0, 7.0]
+==========================================================================================
+
+N = 15
+    family   MI(bits)   pur_min    1-pur   ok
+  ------------------------------------------
+    random   0.853765    0.5265   0.4735   13
+    mirror   0.923088    0.5107   0.4893   11
+
+N = 25
+    family   MI(bits)   pur_min    1-pur   ok
+  ------------------------------------------
+    random   0.470743    0.6361   0.3639   16
+    mirror   0.719153    0.5492   0.4508   13
+
+N = 40
+    family   MI(bits)   pur_min    1-pur   ok
+  ------------------------------------------
+    random  FAIL
+    mirror   0.926967    0.5022   0.4978    1
+
+N = 60
+    family   MI(bits)   pur_min    1-pur   ok
+  ------------------------------------------
+    random  FAIL
+    mirror  FAIL
+
+N = 80
+    family   MI(bits)   pur_min    1-pur   ok
+  ------------------------------------------
+    random  FAIL
+    mirror  FAIL
+
+N = 100
+    family   MI(bits)   pur_min    1-pur   ok
+  ------------------------------------------
+    random  FAIL
+    mirror  FAIL
+
+[random]
+  MI fit: insufficient data
+  1-pur fit: insufficient data
+
+[mirror]
+  MI fit: MI ~= 0.8584 * N^-0.003  (R^2=0.000)
+  1-pur fit: (1-pur_min) ~= 0.4564 * N^+0.015  (R^2=0.019)
+
