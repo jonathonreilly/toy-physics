@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Lattice-mirror hybrid: the candidate unified architecture.
+"""Lattice-symmetry bridge probe on the ordered lattice family.
 
 Combines:
   - Regular 2D lattice (integer grid) → beam confinement → 1/b
@@ -7,7 +7,11 @@ Combines:
   - Dense connectivity (max_dy=5, 11 edges/node) → attraction
   - Linear propagator → Born compliance
 
-Full joint card: Born + gravity + decoherence + MI + distance law.
+This script is an exploratory same-family two-harness bridge, not a promoted
+one-family unified architecture. The unresolved blocker is the same-slit
+gravity-sign problem on the ordered lattice family.
+
+Bridge read: barrier coexistence card + no-barrier distance-law companion.
 """
 
 from __future__ import annotations
@@ -107,7 +111,7 @@ def main():
     blocked = set(bi) - set(sa + sb)
 
     print("=" * 80)
-    print("LATTICE-MIRROR HYBRID: FULL JOINT CARD")
+    print("LATTICE-SYMMETRY HYBRID: SAME-FAMILY TWO-HARNESS BRIDGE")
     print(f"  NL={NL}, W={W}, max_dy={MAX_DY} ({2*MAX_DY+1} edges/node)")
     print(f"  k={K}, slits at y=±3,±4,±5")
     print("=" * 80)
@@ -196,7 +200,7 @@ def main():
         dtv = 0.5 * sum(abs(da[d]/na2 - db[d]/nb2) for d in det)
         print(f"  d_TV: {dtv:.4f}")
 
-    # 4. Born (3-slit Sorkin)
+    # 4. Born companion audit (same family, different aperture card)
     upper = sorted([i for i in bi if pos[i][1] > 1], key=lambda i: pos[i][1])
     lower = sorted([i for i in bi if pos[i][1] < -1], key=lambda i: -pos[i][1])
     middle = sorted([i for i in bi if abs(pos[i][1]) <= 1], key=lambda i: abs(pos[i][1]))
@@ -217,7 +221,7 @@ def main():
         born = I3/P if P > 1e-30 else float('nan')
         print(f"  Born |I3|/P: {born:.2e}")
 
-    # 5. Distance law (no barrier, full scan)
+    # 5. Distance law companion harness (no barrier)
     print()
     print("  DISTANCE LAW (no barrier):")
     flat = propagate(pos, adj, field_f, src, K, set())

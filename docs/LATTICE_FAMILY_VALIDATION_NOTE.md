@@ -1,10 +1,10 @@
 # Lattice Family Validation Note
 
 **Date:** 2026-04-03  
-**Status:** review-safe ordered-lattice coexistence + distance-law branch
+**Status:** review-safe ordered-lattice same-family two-harness bridge
 
-This note freezes the strongest retained single-family result on the ordered
-2D lattice family.
+This note freezes the strongest retained ordered-lattice bridge result on the
+ordered 2D lattice family.
 
 Artifacts:
 
@@ -19,7 +19,8 @@ The retained lattice read uses **one ordered-lattice family** with two
 measurement harnesses:
 
 1. **Barrier lattice**
-   - Born
+   - Born companion audit on a same-family 3-slit Sorkin aperture
+   - not the exact same 2-slit card used for MI / `d_TV` / gravity
    - MI
    - `d_TV`
    - CL-bath purity
@@ -30,7 +31,8 @@ measurement harnesses:
 
 The geometry family is the same regular 2D lattice with forward `|Δy| <= 1`
 transport. The barrier / no-barrier split is a measurement-geometry change,
-not a change of graph family.
+not a change of graph family. This is therefore a **same-family two-harness
+bridge**, not a promoted one-harness unification.
 
 ## Retained barrier-lattice card
 
@@ -58,7 +60,8 @@ Results:
 
 Interpretation:
 
-- Born is machine-clean
+- Born is machine-clean on the same-family companion Sorkin aperture, not on
+  the exact same 2-slit card used for the coexistence metrics
 - the `k=0` control stays exactly zero
 - MI and `d_TV` are both clearly nonzero
 - CL decoherence is real but modest on this family
@@ -83,7 +86,7 @@ That branch is frozen separately in:
 
 ## Safe conclusion
 
-The ordered lattice family now supports a real same-family bridge result:
+The ordered lattice family now supports a real same-family two-harness bridge:
 
 - Born-clean barrier coexistence
 - nontrivial MI / slit separation
@@ -97,6 +100,8 @@ This is **not yet** a review-safe “all 10 properties on one family” claim.
 
 Still missing on the ordered-lattice family:
 
+- a same-slit attractive-gravity card on the retained two-slit coexistence
+  aperture
 - a retained mass-law card
 - a retained large-`N` purity-scaling card
 - a retained “gravity grows with `N`” card
@@ -105,7 +110,8 @@ So the safe statement is:
 
 - **ordered lattice is now the strongest distance-law branch**
 - **ordered lattice also supports a real Born-clean coexistence pocket**
-- **but the full single-family unification story is still one step short**
+- **but it remains a same-family two-harness bridge because the same-slit
+  gravity-sign problem is unresolved**
 
 ## Next step
 
@@ -114,4 +120,4 @@ The highest-value next move is:
 - build a lattice-mirror hybrid or ordered-symmetry extension that keeps the
   ordered-lattice distance law while strengthening the decoherence side
 
-That is now the cleanest candidate for a true one-family unification.
+That remains the cleanest next decision test for a true one-family unification.
