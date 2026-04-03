@@ -78,12 +78,14 @@ Gravity present but weaker (signal diluted by extra dimension).
 
 ### Gravity completions
 
-**Mass scaling:** delta = 0.13 × M^0.82 (alpha ≈ 1, consistent with F∝M).
-Saturates at M>8 when mass covers half the layer.
+**Mass scaling:** a positive mass-response window is real, but the clean
+fixed-anchor reruns are sublinear rather than a locked `F∝M` law.
+The strongest controlled window is closer to `delta ~ M^0.68`, and the
+response saturates once the mass occupies too much of the layer.
 
-**Distance scaling:** Peak deflection at b ≈ 6 (half beam width).
-Falloff: delta ~ b^(-1.93) in far field (near 1/b²).
-Zero at b = 30 (2.5× beam width).
+**Distance scaling:** the fixed-geometry sweep shows a real peaked response
+with a falling tail, but not a clean universal `1/b²` law. The older far-field
+fit is best treated as benchmark-specific rather than canonical.
 
 ### Regulated propagator (per-layer normalization)
 
@@ -142,9 +144,9 @@ ABSENCE of nodes, not by node properties.
 
 ## What is established
 
-1. **Gravity** on uniform DAGs at N=18-40 (up to 5.1 SE). Distance
-   scaling ~1/b² in far field. Mass scaling F∝M (alpha=0.82).
-   Born rule I₃/P = 4e-16 (machine zero).
+1. **Gravity** on uniform DAGs at `N=18..40` (up to `5.1 SE`). The signal is
+   real and Born-clean, but the exact distance law and fixed-position mass law
+   are still unresolved.
 
 2. **Decoherence** at intermediate N with 1/N power-law decay
    (linear propagator). CL bath framework validated. 14 alternative
@@ -244,36 +246,45 @@ Physics: decoherence persistence scales with the number of
 Higher dimension adds channels. Lower k makes paths more
 coherent within channels. Both flatten the exponent.
 
-### Analytical derivation: alpha ~ alpha_0 / d_spatial
+### Analytical derivation: promising heuristic, not yet a retained theorem
 
-Semi-analytical argument (see docs/EXPONENT_DERIVATION.md):
-The fraction of shared paths between slits scales as (r/L)^d_spatial.
-This predicts alpha ~ -1.5/d_spatial:
+There is now a semi-analytical argument in
+[docs/EXPONENT_DERIVATION.md](/Users/jonreilly/Projects/Physics/docs/EXPONENT_DERIVATION.md)
+suggesting a trend like `alpha ~ -1.5 / d_spatial`, but it should still be
+treated as a heuristic rather than a locked derivation.
 
-```
-d=1 (2D): predicted -1.50, measured -1.50  (baseline)
-d=2 (3D): predicted -0.75, measured ~-0.70
-d=3 (4D): predicted -0.50, measured -0.22 to -0.53
-```
+Why it stays provisional:
+- the matched comparison in
+  [docs/MATCHED_2D_4D_DECOHERENCE_NOTE.md](/Users/jonreilly/Projects/Physics/docs/MATCHED_2D_4D_DECOHERENCE_NOTE.md)
+  does **not** support a clean dimension-only escape story
+- the retained 4D lane still changes topology and connectivity regime
+- the `k` dependence is now explicitly narrowed by
+  [docs/K_DEPENDENCE_REVIEW_SAFE_NOTE.md](/Users/jonreilly/Projects/Physics/docs/K_DEPENDENCE_REVIEW_SAFE_NOTE.md)
 
-As d→∞, alpha→0: decoherence becomes truly scalable.
+So the safe current reading is:
+- dimensionality may be part of the ceiling story
+- the `1/d`-style derivation is a useful organizing hypothesis
+- it is not yet a retained result
 
 ### Gravity-decoherence dimensional trade-off
 
-Born on 4D+LN: machine zero (5e-16). Clean.
-Gravity on 4D+LN: delta=+0.13 (0.2 SE). Flat — signal diluted by
-extra transverse dimensions.
+The currently tracked 4D+LN artifact
+([scripts/four_d_layernorm_combined.py](/Users/jonreilly/Projects/Physics/scripts/four_d_layernorm_combined.py),
+[logs/2026-04-03-four-d-layernorm-combined.txt](/Users/jonreilly/Projects/Physics/logs/2026-04-03-four-d-layernorm-combined.txt))
+is Born-clean and shows a real bounded decoherence improvement.
 
-The extra dimensions that help decoherence (more independent path
-channels) hurt gravity (amplitude spread over more directions).
-This is a real physics trade-off, not a parameter-tuning issue.
+What is **not** retained is the stronger follow-on claim that scaled-field 4D
+also has a locked same-graph gravity win. The later `4D gravity 5.0 SE` /
+`4D joint coexistence 6.2 SE` summary commits do not currently have a tracked
+script/log artifact chain on disk, so they should be treated as unretained
+until reproduced.
 
 ## What is NOT established
 
-1. **4D gravity** — the 4D+LN propagator preserves Born but gravity
-   is too weak to detect with 12 seeds. Either needs more seeds,
-   stronger field coupling, or the physics genuinely trades off
-   gravity strength for decoherence scalability in higher dimensions.
+1. **4D gravity / joint coexistence** — the retained tracked 4D+LN artifact
+   is Born-clean and shows bounded decoherence improvement, but the later
+   scaled-field `4D gravity 5.0 SE` / `4D joint coexistence 6.2 SE` claims
+   are not yet backed by a tracked script/log chain on disk.
 
 2. **Dynamic emergence** — 9 approaches tested, all fail. The gap
    may be a boundary condition on emergent spacetime.
@@ -284,7 +295,8 @@ This is a real physics trade-off, not a parameter-tuning issue.
 
 ## Honest assessment
 
-This is a toy model with seven publishable quantitative results:
+This is a toy model with five locked quantitative results and two live
+frontier leads:
 
 1. **Gravity from phase:** deflection via phase valley mechanism,
    5.1 SE on uniform DAGs, 1/b² distance scaling, F∝M.
@@ -303,8 +315,9 @@ This is a toy model with seven publishable quantitative results:
    parameter window. The first toy model (to our knowledge) where
    gravity and decoherence emerge from a single discrete structure.
 
-6. **Dimensional escape:** 4D modular DAGs show exponent -0.22
-   (near flat) vs 2D's -1.58. k=3 gives -0.32, k=10 gives -2.52.
+6. **4D modular large-`N` lane:** 4D modular DAGs remain an important
+   bounded large-`N` candidate, but the matched comparison does not yet
+   support a clean dimension-only escape theorem.
 
 7. **4D + LN combined:** the reconstructed tracked artifact is
    [four_d_layernorm_combined.py](/Users/jonreilly/Projects/Physics/scripts/four_d_layernorm_combined.py)
@@ -317,10 +330,10 @@ This is a toy model with seven publishable quantitative results:
    This is a real finite-`N` gain over the plain 4D lane, but it does **not**
    support the older `1.77 × N^(-0.53)` / `N≈16,500` champion wording.
 
-The model's limitation in 2D remains the same broad ceiling story, but the
-currently tracked 4D+LN artifact should now be read as a bounded improvement
-inside the retained modular family, not as a validated dimensional escape
-theorem.
+So the current dimensional story is:
+- 4D remains scientifically interesting
+- the best tracked 4D+LN lane is a bounded finite-`N` improvement
+- neither dimension alone nor 4D+LN has yet earned “ceiling escape” status
 
 The open question: does a growth law exist where nodes fail to
 nucleate in low-distinguishability regions? This is causal set

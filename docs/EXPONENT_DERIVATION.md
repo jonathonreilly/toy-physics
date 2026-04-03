@@ -1,7 +1,8 @@
 # Derivation: Decoherence Exponent vs Dimension
 
 **Date:** 2026-04-03
-**Status:** Semi-analytical argument, consistent with numerical data.
+**Status:** Semi-analytical argument; useful as a frontier hypothesis, not yet
+an established theorem.
 
 ## The observation
 
@@ -115,7 +116,12 @@ The prediction alpha ~ 1/d_spatial gives:
 - d=3: -0.50 (predicted) vs -0.2 to -0.5 (measured)
 
 The agreement is approximate but captures the right trend and
-the right order of magnitude.
+the right order of magnitude on the unmatched family-level summaries.
+However, the matched comparison in
+[docs/MATCHED_2D_4D_DECOHERENCE_NOTE.md](/Users/jonreilly/Projects/Physics/docs/MATCHED_2D_4D_DECOHERENCE_NOTE.md)
+does **not** support a clean dimension-only escape claim, so this derivation
+should currently be read as an organizing heuristic rather than as a retained
+mechanism.
 
 ## Prediction
 
@@ -146,3 +152,7 @@ decoherence becomes truly scalable in high-dimensional graphs.
    effect rather than a clean exponent law. The likely interpretation
    is still phase-coherence-length driven, but the evidence does not yet
    support a hardened `alpha(k)` theorem.
+
+5. The current 4D large-`N` lane is still topology- and connectivity-coupled.
+   So even if the heuristic trend turns out to be right, it is not yet
+   isolated as a pure dimensional law in the current codebase.
