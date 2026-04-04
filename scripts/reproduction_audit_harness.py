@@ -101,7 +101,7 @@ def run_cross_family_retained_comparison() -> None:
     require(mirror_row is not None, "mirror 2D retained row changed")
 
     bridge_row = re.search(
-        r"^\s*60\s+0\.6440\s+0\.8030±0\.04\s+1\.0043\s+\+5\.7613±0\.892\s+0\.0000±0\.00\s+\+0\.00e\+00\s+16$",
+        r"^\s*60\s+0\.6440\s+0\.8030±0\.04\s+1\.0043\s+\+5\.7613±0\.892\s+0\.0000±0\.00\s+\+0\.00e\+00\s+16\s+\d+s$",
         structured,
         re.MULTILINE,
     )
