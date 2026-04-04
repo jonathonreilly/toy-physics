@@ -1,9 +1,9 @@
 # Same-Family 3D Closure: Valley-Linear
 
 **Date:** 2026-04-04
-**Status:** bounded same-family multi-size closure on the retained 3D valley-linear family
+**Status:** bounded same-family multi-size closure note; script is tracked, full log refresh still pending
 
-## Frozen artifact chain
+## Current on-disk artifacts
 
 - Script: [`scripts/same_family_3d_closure.py`](/Users/jonreilly/Projects/Physics/scripts/same_family_3d_closure.py)
 - Log: [`logs/2026-04-04-same-family-3d-closure.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-04-same-family-3d-closure.txt)
@@ -17,6 +17,12 @@ This is a same-family closure on one retained family:
 
 It is not a single-instance theorem card. Properties `8-9` are same-family
 multi-`L` rows, and property `10` includes a same-family width companion.
+
+Important boundary:
+
+- the script is real and review-relevant
+- the current log capture on disk is still partial, so this note should be read
+  as a bounded closure summary, not a fully refreshed frozen replay chain yet
 
 ## Architecture
 - Action: S = L(1-f) (valley-linear)
