@@ -51,13 +51,7 @@ The nearest reusable pieces are:
   - result: the surrogate idea is family-generic enough to remain useful, but
     still only as a bounded control
 - [`scripts/quasi_persistent_relaunch_probe.py`](/Users/jonreilly/Projects/Physics/scripts/quasi_persistent_relaunch_probe.py)
-  - broader support/compression probe on the retained ordered-lattice family
-  - frozen log:
-    [`logs/2026-04-04-quasi-persistent-relaunch-probe.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-04-quasi-persistent-relaunch-probe.txt)
-  - result: the surrogate only survives relaunch cleanly if it stays fairly
-    broad; sharp compression is too lossy for an inertial-response claim
-- [`scripts/quasi_persistent_relaunch_probe.py`](/Users/jonreilly/Projects/Physics/scripts/quasi_persistent_relaunch_probe.py)
-  - smallest support-compression probe for the same surrogate idea
+  - smallest support-compression probe on the retained ordered-lattice family
   - frozen log:
     [`logs/2026-04-04-quasi-persistent-relaunch-probe.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-04-quasi-persistent-relaunch-probe.txt)
   - result: moderate compression keeps the downstream response similar, but
