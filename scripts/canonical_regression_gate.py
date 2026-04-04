@@ -36,6 +36,7 @@ def run_script(path: str) -> str:
         cwd=REPO_ROOT,
         capture_output=True,
         text=True,
+        timeout=240,
         check=False,
     )
     if proc.returncode != 0:
@@ -123,6 +124,39 @@ def check_structured_bridge() -> None:
             "structured bridge retained N=60 row changed materially")
 
 
+def check_nn_continuum() -> None:
+    out = run_script("scripts/lattice_nn_continuum.py")
+    require(
+        "SAFE CLAIM: Born-clean positive refinement trend through h = 0.25" in out,
+        "NN continuum safe-claim wording changed",
+    )
+    require(
+        re.search(
+            r"0\.250\s+25921\s+161\s+\+0\.077415\s+\+0\.00e\+00\s+0\.9470\s+0\.4989\s+0\.9878\s+3\.83e-16",
+            out,
+        )
+        is not None,
+        "NN continuum h=0.25 retained row changed materially",
+    )
+    require("0.125  FAIL" in out, "NN continuum h=0.125 failure row changed")
+
+
+def check_nn_deterministic_rescale() -> None:
+    out = run_script("scripts/lattice_nn_deterministic_rescale.py")
+    require(
+        re.search(
+            r"0\.0625\s+410881\s+641\s+\+0\.014810\s+\+0\.00e\+00\s+1\.0000\s+0\.5000\s+1\.0000\s+3\.00e-16",
+            out,
+        )
+        is not None,
+        "NN deterministic-rescale h=0.0625 retained row changed materially",
+    )
+    require(
+        "Born-safe extension works only if the Born column stays machine-clean" in out,
+        "NN deterministic-rescale interpretation changed",
+    )
+
+
 def main() -> None:
     checks = [
         ("dense 3D canonical card", check_dense_3d_card),
@@ -130,6 +164,8 @@ def main() -> None:
         ("dense 3D refinement reconciliation", check_dense_3d_reconciliation),
         ("gravity observable hierarchy", check_gravity_hierarchy),
         ("structured bridge", check_structured_bridge),
+        ("NN raw continuum", check_nn_continuum),
+        ("NN deterministic rescale", check_nn_deterministic_rescale),
     ]
 
     print("=" * 88)

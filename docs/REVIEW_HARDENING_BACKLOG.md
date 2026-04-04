@@ -24,7 +24,7 @@ The review-hardening program has two parts:
 
 Current review-hardening tooling now includes:
 
-- [`scripts/canonical_frontier_regression_gate.py`](/Users/jonreilly/Projects/Physics/scripts/canonical_frontier_regression_gate.py)
+- [`scripts/canonical_regression_gate.py`](/Users/jonreilly/Projects/Physics/scripts/canonical_regression_gate.py)
 
 That gate is intentionally modest. It does **not** prove the physics. It does
 provide a cheap code/report drift detector for the retained lattice/NN frontier,

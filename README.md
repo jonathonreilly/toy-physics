@@ -154,6 +154,10 @@ If you only want the current high-level state, read this section first.
 If you are picking up the repo fresh, start with
 [START_HERE.md](/Users/jonreilly/Projects/Physics/docs/START_HERE.md).
 
+If you want the deliberately adversarial external-reception read rather than
+the internal science map, also read
+[ADVERSARIAL_INTEREST_MAP.md](/Users/jonreilly/Projects/Physics/docs/ADVERSARIAL_INTEREST_MAP.md).
+
 If you land on older exploratory drivers, use
 [LEGACY_EXPLORATORY_DRIVERS_NOTE.md](/Users/jonreilly/Projects/Physics/docs/LEGACY_EXPLORATORY_DRIVERS_NOTE.md)
 as the off-ramp before treating any of them as canonical harnesses.
@@ -166,6 +170,7 @@ context, not the promoted claim surface.
 
 The most relevant notes for that current architecture state are:
 
+- [ADVERSARIAL_INTEREST_MAP.md](/Users/jonreilly/Projects/Physics/docs/ADVERSARIAL_INTEREST_MAP.md)
 - [UNIFIED_PROGRAM_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIFIED_PROGRAM_NOTE.md)
 - [GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md](/Users/jonreilly/Projects/Physics/docs/GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md)
 - [LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md](/Users/jonreilly/Projects/Physics/docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md)
