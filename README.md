@@ -124,8 +124,10 @@ If you only want the current high-level state, read this section first.
   one-card pocket, the 3D dense spent-delay branch now adds a bounded
   same-family attractive window that is hierarchy-clean on the retained tested
   `z = 2..6` slice, and the no-barrier branch retains the cleanest current
-  distance-law magnitude. This is a real branch, but it does not displace the
-  mirror flagship.
+  distance-law magnitude. A separate y-tapered 3D refinement branch was tested
+  and did not recover hierarchy-clean attraction under `h = 1.0` or `h = 0.5`,
+  so it stays a bounded negative topology branch. The ordered-lattice family
+  is real, but it does not displace the mirror flagship.
 - **Nearest-neighbor refinement:** strongest current continuum-side bridge.
   Raw NN is Born-clean through `h = 0.25`, deterministic rescale extends a
   bounded path to `h = 0.0625`, and the canonical notes keep continuum / RG

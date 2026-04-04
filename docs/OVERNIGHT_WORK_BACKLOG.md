@@ -25,6 +25,10 @@ before the current bridges are tightened.
    - The current canonical extension reaches `z = 6`; future passes should
      only try to push beyond that window or strengthen MI / decoherence
      without changing the action law.
+   - A separate y-tapered 3D refinement branch has now been tested and does
+     not recover hierarchy-clean attraction at `h = 1.0` or `h = 0.5`; keep
+     it separate from the dense-card extension unless a new topology is
+     introduced.
    - Deliverables:
      - one bounded geometry-extension script/log/note chain
      - one decision on whether the current hierarchy-clean window can be

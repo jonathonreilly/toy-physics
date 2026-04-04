@@ -281,6 +281,25 @@ Primary artifact:
 
 - [`docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md)
 
+### Tapered 3D refinement branch
+
+The y-tapered 3D refinement branch was tested as a separate topology change.
+It is a useful negative control, not a rescue of the dense card.
+
+The retained read is:
+
+- Born survives at machine precision on the tested spacings
+- `k=0` remains exactly zero
+- MI, `d_TV`, and decoherence improve strongly at `h = 0.5`
+- gravity remains away on both `h = 1.0` and `h = 0.5`
+- distance-law fitting has no positive support on the tested window
+
+So this branch stays bounded and negative:
+
+- **tapered 3D does not recover hierarchy-clean attraction**
+- it should not be merged back into the dense 3D story as if it were a
+  continuation
+
 ### Nearest-neighbor refinement
 
 The nearest-neighbor lattice is now the cleanest refinement-side branch.

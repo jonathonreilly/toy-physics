@@ -25,6 +25,7 @@ history or commit-message narrative.
   - narrow weak-field one-card pocket
   - retained 3D dense spent-delay branch with hierarchy-clean attraction on the tested `z = 2..6` window
   - clean distance-law magnitude on the no-barrier branch
+  - a separate y-tapered 3D refinement branch was tested and remains a bounded negative on attraction at `h = 1.0` and `h = 0.5`
 - **Nearest-neighbor refinement is a bounded refinement bridge.**
   - raw NN is Born-clean through `h = 0.25`
   - deterministic rescale extends that path to `h = 0.0625`
@@ -44,6 +45,7 @@ history or commit-message narrative.
 - **Light-cone / emergent relativity:** only a topological causal-bound read is retained
 - **Generated symmetry:** reopened by the structured chokepoint bridge, not solved
 - **Action-power Newtonian-3D claim:** interesting, bounded to a no-barrier companion, not yet a promoted core claim
+- **Tapered 3D refinement:** negative on the tested family; useful as a topology-control branch, not a rescue of the dense card
 
 ## Canonical docs
 
