@@ -58,12 +58,12 @@ What is now reopened:
   - decoherence `13.5%`
   - centroid-side distance exponent `-1.62`, `R² = 0.976`
 - under the gravity-observable hierarchy:
-  - `z = 2, 3, 4` are genuinely attractive
-  - `z = 5` is mixed / ambiguous
+  - `z = 2, 3, 4, 5` are genuinely attractive on the retained tested window
 
 So the safe 3D read is now:
 
 - **not fully negative anymore**
+- **retains a real attractive window on the current tested card**
 - **not yet a clean all-distances attraction theorem either**
 
 ## The mechanism
@@ -87,15 +87,15 @@ Above this, nonlinear disruption → depletion.
 
 What still limits the 3D dense branch?
 
-- the near-to-mid window is now attractive
-- the far tail is still mixed under the hierarchy
+- the tested `z = 2..5` window is now attractive under the hierarchy
 - MI and decoherence are present but weaker than the stronger 2D dense rows
 
 So the next question is no longer “can 3D ordered lattices ever turn toward?”
 The next question is:
 
 - can the 3D dense spent-delay geometry extend the hierarchy-clean attractive
-  window while keeping the same same-family barrier card?
+  window to larger tested distances while keeping the same same-family barrier
+  card?
 
 ## Artifact chain
 

@@ -136,18 +136,17 @@ observable hierarchy.
 
 Measured on the retained barrier card:
 
-- `z = 2`: centroid `+0.003101`, `P_near` `+0.001530`, bias `+0.003060`
-- `z = 3`: centroid `+0.001941`, `P_near` `+0.000766`, bias `+0.001532`
-- `z = 4`: centroid `+0.001157`, `P_near` `+0.000110`, bias `+0.000220`
-- `z = 5`: centroid `+0.000693`, `P_near` `-0.000313`, bias `-0.000626`
+- `z = 2`: centroid `+0.003101`, `P_near` `+0.001469`, bias `+0.107097`
+- `z = 3`: centroid `+0.001941`, `P_near` `+0.000374`, bias `+0.176381`
+- `z = 4`: centroid `+0.001157`, `P_near` `+0.000626`, bias `+0.113676`
+- `z = 5`: centroid `+0.000693`, `P_near` `+0.000715`, bias `+0.048601`
 
 Interpretation:
 
-- **genuine attraction** on the near-to-mid `z = 2, 3, 4` window
-- **mixed / ambiguous** at `z = 5`
+- **genuine attraction** on the retained tested `z = 2, 3, 4, 5` window
 
-So this branch is stronger than the earlier 3D ordered-lattice negative read,
-but it is still not a license to use centroid sign alone at the far tail.
+So this branch is stronger than the earlier 3D ordered-lattice negative read.
+The key point is that the hierarchy, not centroid alone, is what confirms it.
 
 ## What this means
 
@@ -159,8 +158,8 @@ but it is still not a license to use centroid sign alone at the far tail.
 3. On the current retained examples:
    - 2D ultra-weak dense spent-delay is **genuinely attractive**
    - 3D action-power close-slit barrier is **genuinely away**
-   - 3D dense spent-delay is **attractive on the near-to-mid window** and
-     **mixed at the far tail**
+   - 3D dense spent-delay is **genuinely attractive on the retained tested
+     window**
 
 So the hierarchy sharpens sign interpretation, but it does **not** currently
 rescue the retained 3D barrier failure.
