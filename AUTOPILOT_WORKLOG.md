@@ -1,3 +1,67 @@
+## 2026-04-04 — Coordination corrected to synced reproduction-audit head
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed:
+  - no detached science child was running
+- this loop had already landed one bounded integrity repair at `c42c5ef`, but the managed push/fetch cycle exposed newer synced ancestors before the loop ended:
+  - the final settled synced head is now `8617cda` (`docs(repro): add canonical harness index and audit entry point`)
+  - `main` and `origin/main` both point to `8617cda`
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+- the tracked coordination state had drifted again during the same loop:
+  - the earlier same-loop entry in `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md` still described the intermediate `79f70e2` theory head rather than the final reproduction-audit head that absorbed the prior repair commit
+- the canonical checkout is otherwise clean apart from one unrelated untracked side-lane file:
+  - `/Users/jonreilly/Projects/Physics/scripts/lattice_3d_valley_linear_card.py`
+
+### What changed
+- verified that the prior integrity repair commit `c42c5ef` is now already included in the synced `8617cda` history
+- inspected the final landed payload chain instead of trusting commit messages alone:
+  - `4522702` retains the new skeptical-reader audit harness path
+  - `8617cda` adds `/Users/jonreilly/Projects/Physics/docs/CANONICAL_HARNESS_INDEX.md` and `/Users/jonreilly/Projects/Physics/docs/REPRODUCTION_AUDIT_NOTE.md`
+  - the same synced head keeps `/Users/jonreilly/Projects/Physics/scripts/reproduction_audit_harness.py` on disk as the new bounded reproduction entry point
+- read:
+  - `/Users/jonreilly/Projects/Physics/docs/CANONICAL_HARNESS_INDEX.md`
+  - `/Users/jonreilly/Projects/Physics/docs/REPRODUCTION_AUDIT_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/scripts/reproduction_audit_harness.py`
+  - `/Users/jonreilly/Projects/Physics/docs/START_HERE.md` at the new reproduction-tooling references
+- ran `python3 /Users/jonreilly/Projects/Physics/scripts/reproduction_audit_harness.py`
+  - result: `REPRODUCTION AUDIT: PASS`
+  - exact 2D mirror retained row is still present
+  - structured chokepoint bridge retained row is still present
+  - the harness cleanly separates canonical entry points from exploratory drivers without reopening a broad search
+- left `/Users/jonreilly/Projects/Physics/README.md` untouched because the settled synced head adds skeptical-reader reproduction tooling and coordination repair, not a new flagship conclusion
+- refreshed:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Strongest confirmed conclusion
+The final settled synced head for this loop is a reproduction-audit / review-hygiene landing, and it works. The current repo now has a bounded skeptical-reader entry point that reproduces two distinct retained families without blurring canonical harnesses together with exploratory drivers.
+- `/Users/jonreilly/Projects/Physics/docs/CANONICAL_HARNESS_INDEX.md` now names the scripts and notes that new readers should treat as canonical harnesses
+- `/Users/jonreilly/Projects/Physics/docs/REPRODUCTION_AUDIT_NOTE.md` states the intended audit scope and explicitly says what the harness does **not** certify
+- `python3 /Users/jonreilly/Projects/Physics/scripts/reproduction_audit_harness.py` passes on the settled synced head:
+  - mirror 2D Born stays machine-clean
+  - the retained structured chokepoint row is still present and Born-clean
+  - the comparison is deliberately bounded rather than a broad frontier sweep
+- this improves reproducibility and review posture, but it does **not** change the queued non-overlapping science priority
+- with sync restored and the reproduction entry point verified, the next science step still returns to the fixed directional-measure geometry-normalized gravity-`b` seam
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- if sync still holds, resume one bounded geometry-normalized gravity-`b` diagnostic under the retained directional propagator
+- start from:
+  - `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-03-directional-b-continuous-density-midlayer-holdout.txt`
+- explain the six frozen 4-NN false negatives on the midlayer sentinel with one occupancy-aware or geometry-normalized diagnostic
+- keep avoiding the unrelated untracked side-lane file `/Users/jonreilly/Projects/Physics/scripts/lattice_3d_valley_linear_card.py`
+
+### First concrete action
+- reopen `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- compare the six frozen 4-NN misses in `/Users/jonreilly/Projects/Physics/logs/2026-04-03-directional-b-continuous-density-midlayer-holdout.txt` against `mu`, `local_target_count`, `expected_target_count_4nn`, and one occupancy-normalized `b` diagnostic before widening scope
+
 ## 2026-04-04 — Coordination reconciled to synced spent-delay distance-law head
 
 ### Current state
