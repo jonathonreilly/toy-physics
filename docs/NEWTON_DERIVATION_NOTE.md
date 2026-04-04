@@ -1,7 +1,7 @@
 # Newton's Law Derived from Four Principles
 
 **Date:** 2026-04-04
-**Status:** Derivation proposed. Numerical verification in progress.
+**Status:** Derivation proposed. Principle 3 remains open after the bounded equivalence harness.
 
 ## The Claim
 
@@ -45,6 +45,22 @@ constant s, which determines both:
 There is no separate inertial mass parameter. The coupling s is the
 only number characterizing the pattern's interaction with the network.
 
+Current bounded support:
+
+- the dedicated equivalence harness shows that global amplitude scaling cancels
+  exactly in the centroid ratio on the linear test-particle family
+- but localized packet shape still changes the response strongly
+
+Artifact chain:
+
+- [`scripts/equivalence_principle_harness.py`](/Users/jonreilly/Projects/Physics/scripts/equivalence_principle_harness.py)
+- [`logs/2026-04-04-equivalence-principle-harness.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-04-equivalence-principle-harness.txt)
+- [`docs/EQUIVALENCE_PRINCIPLE_HARNESS_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/EQUIVALENCE_PRINCIPLE_HARNESS_NOTE.md)
+
+So Principle 3 is **not** closed by linearity alone. What is still missing is a
+persistent-pattern test showing that an effective inertial response exists and
+is governed by the same parameter that sources the field.
+
 ### Principle 4: Momentum conservation → p = 1
 
 With action S = L(1-f^p), the deflection of a test particle in
@@ -78,7 +94,8 @@ In 3+1D (d=3): F ∝ M₁M₂/r. This is Newton's law.
 | Two-body momentum (p=1) | Conserved to 10⁻²⁰ |
 | Two-body momentum (p≠1) | Violated by 33-80% |
 | Distance tail (p=1) | b^(-1.07), near Newtonian |
-| Equivalence principle | Trivially true (linear model) |
+| Amplitude-level equivalence | Exact under global amplitude rescaling |
+| Packet-shape independence | Fails on the bounded localized-packet probe |
 
 ## What This Does NOT Prove
 
@@ -86,9 +103,12 @@ In 3+1D (d=3): F ∝ M₁M₂/r. This is Newton's law.
 2. It does not derive the lattice geometry (still imposed)
 3. It does not derive the specific form of g(f) — only that g must
    be linear in f at weak field
-4. Principle 3 (one-parameter mass) is an assumption about what
+4. Principle 3 (one-parameter mass) is still an assumption about what
    "persistent patterns" look like — it is not derived from the
-   model's axioms
+   current lattice code or the existing axioms
+5. The current equivalence harness only closes the amplitude-level
+   test-particle statement; it does not yet produce a persistent-pattern
+   inertial mass
 
 ## The Strongest Safe Statement
 
@@ -96,4 +116,5 @@ In 3+1D (d=3): F ∝ M₁M₂/r. This is Newton's law.
 propagator is linear, the action creates a phase valley, masses are
 characterized by a single parameter, and momentum is conserved, then
 Newton's gravitational force law F ∝ M₁M₂/r^(d-2) is the unique
-outcome."
+outcome. The open step in the current project is still the
+single-parameter mass principle for persistent patterns."
