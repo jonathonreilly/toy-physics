@@ -106,12 +106,17 @@ So the review-safe wording is:
 The branch has a real RG-style stabilization story for gravity magnitude, but
 the current safe separation is:
 
-- sign persistence under refinement
-- post-peak tail steepening
-- finite-magnitude RG control
+- sign persistence under refinement (RETAINED)
+- post-peak tail steepening: **CORRECTED** — at same width (W=10), the
+  tail from z>=5 is -0.82 at h=0.5 and -0.63 at h=0.25 (shallower, not
+  steeper). The tail from peak onward is -0.82 (h=0.5, peak z=5) vs
+  -0.52 (h=0.25, peak z=4). The exponent gets SHALLOWER with finer h.
+  The earlier “-0.35 → -0.53 steepening” compared different lattice widths.
+- finite-magnitude RG control (RETAINED)
 
 Those are related, but they are not the same claim and should not be collapsed
-into one blanket “continuum solved” statement.
+into one blanket “continuum solved” statement. The distance law direction is
+currently AWAY from Newtonian, not toward it.
 
 ### O5-style tail prediction was refuted as stated
 
