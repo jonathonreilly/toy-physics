@@ -1,7 +1,7 @@
 # Persistent Inertial-Response Readiness Note
 
 **Date:** 2026-04-04  
-**Status:** bounded readiness audit; packet re-identification control now exists, and a quasi-persistent relaunch probe is now retained, but no persistent-mass theorem yet
+**Status:** bounded readiness audit; packet re-identification control now exists, and quasi-persistent relaunch/compression probes are now retained, but no persistent-mass theorem yet
 
 ## Purpose
 
@@ -50,13 +50,19 @@ The nearest reusable pieces are:
     [`logs/2026-04-04-ordered-lattice-quasi-persistent-relaunch-2d.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-04-ordered-lattice-quasi-persistent-relaunch-2d.txt)
   - result: the surrogate idea is family-generic enough to remain useful, but
     still only as a bounded control
-- [`scripts/ordered_lattice_quasi_persistent_relaunch_2d.py`](/Users/jonreilly/Projects/Physics/scripts/ordered_lattice_quasi_persistent_relaunch_2d.py)
-  - cheapest cross-family companion control for the relaunch idea
+- [`scripts/quasi_persistent_relaunch_probe.py`](/Users/jonreilly/Projects/Physics/scripts/quasi_persistent_relaunch_probe.py)
+  - broader support/compression probe on the retained ordered-lattice family
   - frozen log:
-    [`logs/2026-04-04-ordered-lattice-quasi-persistent-relaunch-2d.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-04-ordered-lattice-quasi-persistent-relaunch-2d.txt)
-  - result: the surrogate remains recognizable on the 2D family too, but the
-    capture fraction is much weaker (`0.344`), so this stays a companion
-    sanity check rather than a primary inertial-response lane
+    [`logs/2026-04-04-quasi-persistent-relaunch-probe.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-04-quasi-persistent-relaunch-probe.txt)
+  - result: the surrogate only survives relaunch cleanly if it stays fairly
+    broad; sharp compression is too lossy for an inertial-response claim
+- [`scripts/quasi_persistent_relaunch_probe.py`](/Users/jonreilly/Projects/Physics/scripts/quasi_persistent_relaunch_probe.py)
+  - smallest support-compression probe for the same surrogate idea
+  - frozen log:
+    [`logs/2026-04-04-quasi-persistent-relaunch-probe.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-04-quasi-persistent-relaunch-probe.txt)
+  - result: moderate compression keeps the downstream response similar, but
+    sharp localization fails and the best bounded surrogate still needs a broad
+    support (roughly `196-225` sites on the frozen rows)
 
 ## Minimal blocker
 
@@ -102,11 +108,24 @@ The relaunch probe narrows the blocker further:
 - but we still do not have a self-maintaining object that carries its own
   inertial mass in the model
 
+The compression probe narrows it further:
+
+- the surrogate only remains faithful when the support is still mesoscopic
+- the best bounded surrogate is broad, not sharply localized
+- that is progress beyond the readiness note, but still not persistent-mass
+  closure
+
 The 2D control suggests this is not a one-off 3D artifact:
 
 - the compressed surrogate survives on a second ordered-lattice family too
 - that makes the control more credible
 - but it still stops short of a persistent-mass experiment
+
+The broader relaunch probe sharpens the remaining gap:
+
+- moderate compression is tolerable
+- sharp compression is not
+- so the missing inertial-response object is still not in hand
 
 ## Best next experiment
 

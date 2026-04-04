@@ -73,6 +73,9 @@ Do not force a trade where only one of those moves.
   - a 2D cross-family sanity control now says the surrogate idea is not a
     one-off 3D artifact, but it still remains a bounded control rather than a
     persistent-mass result
+  - the broader quasi-persistent relaunch probe shows the surrogate must stay
+    fairly broad to preserve downstream propagation; sharp compression is too
+    lossy for an inertial-response claim
   - a bounded same-family closure note is now artifact-backed:
     rows `1-7` stay on the fixed `h = 0.25`, `W = 10`, `L = 12` core family,
     rows `8-9` are replayed at the same `h = 0.25`, `W = 10` family across
@@ -156,6 +159,7 @@ Do not force a trade where only one of those moves.
 - [`docs/PERSISTENT_INERTIAL_RESPONSE_READINESS_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/PERSISTENT_INERTIAL_RESPONSE_READINESS_NOTE.md)
 - [`docs/ORDERED_LATTICE_PACKET_REIDENTIFICATION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ORDERED_LATTICE_PACKET_REIDENTIFICATION_NOTE.md)
 - [`docs/ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_NOTE.md)
+- [`docs/QUASI_PERSISTENT_RELAUNCH_PROBE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/QUASI_PERSISTENT_RELAUNCH_PROBE_NOTE.md)
 - [`docs/SAME_FAMILY_3D_CLOSURE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/SAME_FAMILY_3D_CLOSURE_NOTE.md)
 - [`docs/VALLEY_LINEAR_MIRROR_TRANSFER_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_MIRROR_TRANSFER_NOTE.md)
 - [`docs/VALLEY_LINEAR_CONTINUUM_SYNTHESIS_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_CONTINUUM_SYNTHESIS_NOTE.md)
