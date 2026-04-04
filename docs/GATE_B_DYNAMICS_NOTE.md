@@ -105,25 +105,22 @@ So the current safe Gate B read is:
 - the advantage is now visible in a frozen artifact chain
 - but the result is still mixed enough that Gate B remains open
 
-## Update: Gate B PASSED at h=0.5 (2026-04-04)
+## Update: pending h=0.5 structured-growth replay
 
-The earlier failures (40-67% TOWARD) were ALL at h=1.0, which is the
-coarse-lattice regime where even the FIXED lattice gives AWAY with
-the 1/L^2 kernel. At h=0.5 (the working regime):
+A newer h=0.5 structured-growth result has been reported in branch narrative:
 
-| drift | restore | TOWARD |
-|-------|---------|--------|
-| 0.3 | 0.5 | **36/36 (100%)** |
-| 0.2 | 0.7 | **36/36 (100%)** |
-| 0.1 | 0.9 | **36/36 (100%)** |
-| 0.0 | 1.0 | **36/36 (100%)** |
+- template previous layer
+- add local drift
+- restore toward the grid target
+- keep NN-style fixed-offset connectivity
 
-**100% TOWARD at every noise level, including high drift.**
+The reported headline is 100% TOWARD across a small drift/restore matrix at the
+working h=0.5 lattice spacing.
 
-The growth rule: template previous layer + random drift + restoring
-force + NN connectivity offsets. This is crystal-like growth: each
-layer is a noisy copy of the previous, with connectivity following
-the grid structure.
+That result is not retained yet in this note because the matching v6
+script/log/note chain is not on disk. Until that lands, the safe Gate B read
+remains:
 
-The Gate B requirement is met: grown geometry (not imposed) produces
-Newtonian gravity at the working lattice spacing.
+- v5 is the best frozen structured-growth result
+- the h=0.5 full-pass claim is promising
+- Gate B is not promoted from doc text alone
