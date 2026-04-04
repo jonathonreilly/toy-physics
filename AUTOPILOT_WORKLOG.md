@@ -1,3 +1,56 @@
+## 2026-04-04 — Coordination reconciled to the residual-probe commit atop the derivation head
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed:
+  - no detached science child was running
+- while this loop was running, the canonical repo absorbed a newer synced derivation chain above the earlier `0972175` momentum-harness head:
+  - `3ee7c82` adds `/Users/jonreilly/Projects/Physics/scripts/equivalence_principle_harness.py`
+  - `8d8b354` adds `/Users/jonreilly/Projects/Physics/.claude/science/derivations/two-principle-newton-2026-04-04.md`
+  - `25f002e` adds `/Users/jonreilly/Projects/Physics/docs/EQUIVALENCE_PRINCIPLE_HARNESS_NOTE.md` and updates `/Users/jonreilly/Projects/Physics/docs/NEWTON_DERIVATION_NOTE.md`
+  - `f7bea8e` adds `/Users/jonreilly/Projects/Physics/.claude/science/derivations/mass-additivity-newton-2026-04-04.md`
+- the directional-`b` science commit from this loop is still the local head result:
+  - `9034525` (`feat(direction-b): freeze residual rescue probe`) now sits on top of the synced `f7bea8e` parent rather than directly on the older `0972175` state
+- the prior same-loop work-log entry below and the earlier handoff draft had therefore drifted again:
+  - they still named `0972175` as the synced head even though the final settled synced parent for this loop is now `f7bea8e`
+
+### What changed
+- rechecked canonical git after the residual-probe commit:
+  - `git status --short --branch`
+  - `git rev-list --left-right --count origin/main...main`
+  - `git log --oneline --decorate -n 8`
+- inspected the synced derivation payload instead of trusting commit subjects alone:
+  - `git show --stat --summary --oneline 3ee7c82`
+  - `git show --stat --summary --oneline 8d8b354`
+  - `git show --stat --summary --oneline 25f002e`
+  - `git show --stat --summary --oneline f7bea8e`
+- confirmed the new synced derivation commits stay off the directional-`b` files touched by `9034525`, so the residual-probe science result remains non-overlapping and valid
+- refreshed the tracked coordination artifacts to the real post-commit chain:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Strongest confirmed conclusion
+This integrity repair does not change the new directional-`b` science result; it fixes which synced parent head that result actually lives on.
+- the final settled synced parent for this loop is the derivation head `f7bea8e`, not the older `0972175` momentum-harness head
+- the new synced chain strengthens an independent Newton-derivation lane through the equivalence-principle harness and mass-additivity notes
+- the directional-`b` conclusion from `9034525` remains unchanged:
+  - `3-NN` is still the best single frozen smooth law on the current expanded sample
+  - occupancy shortage is still the portable coarse bridge
+  - no frozen residual rescue law is ready to promote yet
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- run `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics` until the local residual-probe result and this coordination repair are no longer stranded
+- only after sync is restored, return to the directional-`b` residual lane and compare the three hybrid false positives against the rescued `midgamma1.4-m5`, `N = 25`, `seed = 7` upper-shelf row
+
+### First concrete action
+- verify whether the managed push path can sync the local head before any further science:
+  - rerun `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+
 ## 2026-04-04 — Directional-b residual probe keeps 3-NN as the leading frozen law
 
 ### Current state
