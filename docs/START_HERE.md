@@ -23,7 +23,7 @@ history or commit-message narrative.
 - **Ordered lattice is real, but secondary.**
   - standard-strength same-family two-harness bridge
   - narrow weak-field one-card pocket
-  - retained 3D dense spent-delay branch with a near-to-mid attractive window
+  - retained 3D dense spent-delay branch with hierarchy-clean attraction on the tested 3D window
   - clean distance-law magnitude on the no-barrier branch
 - **Nearest-neighbor refinement is a bounded refinement bridge.**
   - raw NN is Born-clean through `h = 0.25`

@@ -266,8 +266,8 @@ The retained dense 3D spent-delay card keeps:
 
 The gravity-observable hierarchy matters here:
 
-- `z = 2, 3, 4` are hierarchy-clean attraction
-- `z = 5` is mixed / ambiguous
+- `z = 2, 3, 4, 5` are hierarchy-clean attraction on the retained tested
+  window
 
 So the honest retained read is:
 
