@@ -15,13 +15,18 @@ script is meant to make that note real on disk.
 from __future__ import annotations
 
 import math
+import os
+import sys
 import time
 
 try:
     import numpy as np
 except ModuleNotFoundError as exc:  # pragma: no cover - environment-dependent
+    system_python = "/usr/bin/python3"
+    if os.path.exists(system_python) and sys.executable != system_python:
+        os.execv(system_python, [system_python, "-u", __file__, *sys.argv[1:]])
     raise SystemExit(
-        "numpy is required for this harness. On this machine use python3 with numpy."
+        "numpy is required for this harness. On this machine use /usr/bin/python3."
     ) from exc
 
 from lattice_3d_valley_linear_card import (
@@ -30,6 +35,7 @@ from lattice_3d_valley_linear_card import (
     N_YBINS,
     STRENGTH,
     Lattice3D,
+    decoherence_purity,
     fit_power,
     make_field,
     setup_slits,
@@ -213,21 +219,7 @@ def _core_card(lat, det, bi, sa, sb, blocked, pos, field_free):
     NB3 = float(np.sum(np.abs(bb) ** 2))
     Sn = S / (NA3 + NB3) if (NA3 + NB3) > 0 else 0
     Dcl = math.exp(-LAM**2 * Sn)
-    rho = {}
-    for d1 in det:
-        for d2 in det:
-            rho[(d1, d2)] = (
-                pa[d1].conjugate() * pa[d2]
-                + pb[d1].conjugate() * pb[d2]
-                + Dcl * pa[d1].conjugate() * pb[d2]
-                + Dcl * pb[d1].conjugate() * pa[d2]
-            )
-    tr = sum(rho[(d, d)] for d in det).real
-    pur = 1.0
-    if tr > 1e-30:
-        for key in rho:
-            rho[key] /= tr
-        pur = sum(abs(v) ** 2 for v in rho.values()).real
+    pur = decoherence_purity(pa, pb, det, Dcl)
     decoh = 100 * (1 - pur)
     print(f"  6. Decoherence = {decoh:.1f}%  [{'PASS' if decoh > 5 else 'WEAK'}]")
 
@@ -335,21 +327,7 @@ def main():
         NB4 = float(np.sum(np.abs(bb2) ** 2))
         Sn2 = S2 / (NA4 + NB4) if (NA4 + NB4) > 0 else 0
         Dcl2 = math.exp(-LAM**2 * Sn2)
-        rho2 = {}
-        for d1 in det2:
-            for d2 in det2:
-                rho2[(d1, d2)] = (
-                    pa2[d1].conjugate() * pa2[d2]
-                    + pb2[d1].conjugate() * pb2[d2]
-                    + Dcl2 * pa2[d1].conjugate() * pb2[d2]
-                    + Dcl2 * pb2[d1].conjugate() * pa2[d2]
-                )
-        tr2 = sum(rho2[(d, d)] for d in det2).real
-        pur2 = 1.0
-        if tr2 > 1e-30:
-            for key in rho2:
-                rho2[key] /= tr2
-            pur2 = sum(abs(v) ** 2 for v in rho2.values()).real
+        pur2 = decoherence_purity(pa2, pb2, det2, Dcl2)
         pur_data[pl] = 1 - pur2
         print(
             f"    L={pl}: grav={grav_data[pl]:+.6f}, 1-pur={pur_data[pl]:.4f}"

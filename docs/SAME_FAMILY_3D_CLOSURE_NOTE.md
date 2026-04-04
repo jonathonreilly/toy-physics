@@ -1,7 +1,22 @@
 # Same-Family 3D Closure: Valley-Linear
 
 **Date:** 2026-04-04
-**Status:** All 10 properties on one family at one h
+**Status:** bounded same-family multi-size closure on the retained 3D valley-linear family
+
+## Frozen artifact chain
+
+- Script: [`scripts/same_family_3d_closure.py`](/Users/jonreilly/Projects/Physics/scripts/same_family_3d_closure.py)
+- Log: [`logs/2026-04-04-same-family-3d-closure.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-04-same-family-3d-closure.txt)
+
+This is a same-family closure on one retained family:
+
+- action: `S = L(1-f)`
+- kernel: `1/L^2` with `h^2` measure
+- field: `s/r`
+- ordered 3D dense lattice
+
+It is not a single-instance theorem card. Properties `8-9` are same-family
+multi-`L` rows, and property `10` includes a same-family width companion.
 
 ## Architecture
 - Action: S = L(1-f) (valley-linear)

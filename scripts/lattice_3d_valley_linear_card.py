@@ -166,6 +166,26 @@ def fit_power(b_data, d_data):
     return slope, r2
 
 
+def decoherence_purity(pa, pb, det, dcl):
+    """Compute purity from the low-rank detector state without a full matrix."""
+
+    a = np.array([pa[d] for d in det], dtype=np.complex128)
+    b = np.array([pb[d] for d in det], dtype=np.complex128)
+    gram = np.array(
+        [
+            [np.vdot(a, a), np.vdot(a, b)],
+            [np.vdot(b, a), np.vdot(b, b)],
+        ],
+        dtype=np.complex128,
+    )
+    mix = np.array([[1.0, dcl], [dcl, 1.0]], dtype=np.complex128)
+    mg = mix @ gram
+    tr = np.trace(mg).real
+    if tr <= 1e-30:
+        return 1.0
+    return float((np.trace(mg @ mg) / (tr * tr)).real)
+
+
 def main():
     t_total = time.time()
     lat = Lattice3D(PHYS_L, PHYS_W, H)
@@ -277,15 +297,7 @@ def main():
     NA3 = float(np.sum(np.abs(ba)**2)); NB3 = float(np.sum(np.abs(bb)**2))
     Sn = S / (NA3 + NB3) if (NA3 + NB3) > 0 else 0
     Dcl = math.exp(-LAM**2 * Sn)
-    rho = {}
-    for d1 in det:
-        for d2 in det:
-            rho[(d1, d2)] = (pa[d1].conjugate() * pa[d2] + pb[d1].conjugate() * pb[d2]
-                             + Dcl * pa[d1].conjugate() * pb[d2] + Dcl * pb[d1].conjugate() * pa[d2])
-    tr = sum(rho[(d, d)] for d in det).real; pur = 1.0
-    if tr > 1e-30:
-        for key in rho: rho[key] /= tr
-        pur = sum(abs(v)**2 for v in rho.values()).real
+    pur = decoherence_purity(pa, pb, det, Dcl)
     decoh = 100 * (1 - pur)
     print(f"  6. Decoherence = {decoh:.1f}%  [{'PASS' if decoh > 5 else 'WEAK'}]")
 
@@ -351,15 +363,7 @@ def main():
         NA4 = float(np.sum(np.abs(ba2)**2)); NB4 = float(np.sum(np.abs(bb2)**2))
         Sn2 = S2/(NA4+NB4) if (NA4+NB4) > 0 else 0
         Dcl2 = math.exp(-LAM**2*Sn2)
-        rho2 = {}
-        for d1 in det2:
-            for d2 in det2:
-                rho2[(d1,d2)] = (pa2[d1].conjugate()*pa2[d2]+pb2[d1].conjugate()*pb2[d2]
-                                +Dcl2*pa2[d1].conjugate()*pb2[d2]+Dcl2*pb2[d1].conjugate()*pa2[d2])
-        tr2 = sum(rho2[(d,d)] for d in det2).real; pur2 = 1.0
-        if tr2 > 1e-30:
-            for key in rho2: rho2[key] /= tr2
-            pur2 = sum(abs(v)**2 for v in rho2.values()).real
+        pur2 = decoherence_purity(pa2, pb2, det2, Dcl2)
         pur_data[pl] = 1-pur2
 
     for pl in sorted(grav_data):

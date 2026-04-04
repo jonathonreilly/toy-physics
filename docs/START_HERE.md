@@ -52,6 +52,10 @@ Do not force a trade where only one of those moves.
   - a bounded action-universality probe now supports a narrower theory claim:
     on the fixed ordered-lattice family, weak-field-linear phase valleys share
     the same Newtonian mass-scaling class (`F~M = 1.00`)
+  - a companion bounded power sweep now shows the stronger safe law on that
+    family is `F~M = p` across `S = L(1-f^p)`; the distance tail also steepens
+    with `p`, but the exact tail formula is still only empirical on the tested
+    family
   - gravity magnitude is much smaller on the tested `z=3` slice
   - a widened `W = 12` replay now gives a stronger 3D far-tail read:
     `b^(-1.17)` on the tested `z >= 5` window, with all tested rows TOWARD
@@ -115,6 +119,7 @@ Do not force a trade where only one of those moves.
 - [`docs/ACTION_POWER_3D_GRAVITY_SIGN_CLOSURE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_3D_GRAVITY_SIGN_CLOSURE_NOTE.md)
 - [`docs/VALLEY_LINEAR_ACTION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_ACTION_NOTE.md)
 - [`docs/ACTION_UNIQUENESS_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_UNIQUENESS_NOTE.md)
+- [`docs/ACTION_POWER_SCALING_SWEEP_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_SCALING_SWEEP_NOTE.md)
 - [`docs/VALLEY_LINEAR_MIRROR_TRANSFER_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_MIRROR_TRANSFER_NOTE.md)
 - [`docs/VALLEY_LINEAR_CONTINUUM_SYNTHESIS_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_CONTINUUM_SYNTHESIS_NOTE.md)
 - [`docs/VALLEY_LINEAR_WIDE_TAIL_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_WIDE_TAIL_NOTE.md)

@@ -7,6 +7,7 @@
 
 - Script: [`scripts/action_universality_probe.py`](/Users/jonreilly/Projects/Physics/scripts/action_universality_probe.py)
 - Log: [`logs/2026-04-04-action-universality-probe.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-04-action-universality-probe.txt)
+- Companion sweep: [`docs/ACTION_POWER_SCALING_SWEEP_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_SCALING_SWEEP_NOTE.md)
 
 This is a bounded replay on one fixed retained family:
 
@@ -109,4 +110,5 @@ The clean retained statement is:
 - weak-field-linear phase valleys share a Newtonian-like mass-scaling class on
   the fixed ordered-lattice family
 - the mass-law statement is cleaner than the distance-law statement
-- broader tail universality across powers still needs its own frozen sweep
+- broader tail universality across powers is now bounded by the companion
+  fixed-family sweep, but still not promoted to a universal theorem
