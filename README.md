@@ -108,92 +108,42 @@ The current mechanism claims are based on that corrected analysis layer.
 
 The model presently supports the following claims.
 
-### 0. Architecture snapshot (2026-04-03)
+### 0. Architecture snapshot (2026-04-04)
 
 If you only want the current high-level state, read this section first.
 
-- **Retained unitary core:** the current lead propagator is corrected
-  `exp(i k S_spent) / L^p × exp(-0.8 θ²)`. It retains the fixed-DAG Born /
-  interference package, preserves `k=0→0`, and gives a gravity response that
-  is now best read as a pure phase effect rather than field-dependent
-  attenuation.
-- **Dense-random local-architecture lane: diagnosed.** On those graph
-  families, the tested record/bath architectures still converge too much as
-  graphs densify. The influence-functional (IF) framework was retained, but
-  graph-local kernels and connection-bias growth rules do not solve the
-  scaling problem on their own.
-- **Topology pivot: positive result.** Within the modular / gap-controlled
-  family, the same unitary core and the same CL bath support a low
-  decoherence floor: `pur_min` stays near `0.93 ± 0.02` on the tested
-  asymptotic lane. The updated large-`N` modular script now computes a true
-  single-vs-double-slit visibility gain, and that gain is only weak at
-  `N=12`, near zero by `N=18`, and gone or slightly negative by `N>=25` even
-  while the old both-slits-open detector-profile contrast proxy stays high.
-- **Joint unification result:** gravity and decoherence now work on the same
-  modular graph family. Within that family, widening the imposed gap generally
-  lowers the achievable decoherence floor and strengthens gravity until
-  connectivity breaks. The current refined phase diagram now uses actual
-  bath-reduced purity `pur_cl` together with paired per-seed gravity error
-  bars, and `gap=0` in the modular generator now behaves as the true
-  uniform-style baseline.
-- **Higher-dimensional extension: promising but not fully frozen.** The
-  current 3D/4D picture is materially stronger than the old 2D-only story:
-  modular 3D delays the decoherence ceiling, dense modular 4D stays bounded
-  away from `1` through `N=100` on the current large-`N` CL-bath sweep, and
-  higher-dimensional chokepoint Born-rule tests stay at machine precision. But
-  the strict higher-dimensional interference story is still metric-sensitive:
-  the new strict 3D same-family visibility companion is effectively flat at
-  large `N` (`V_gain ≈ +0.0049` for `N>=40`) on the retained modular lane,
-  the current 4D true-visibility scripts still report mostly weak or near-zero
-  strict visibility gain, and the newer same-family 4D Born pass is only a
-  restricted low-`N` modular subfamily result after chokepoint pruning rather
-  than a broad family closure. See
-  [HIGHER_DIMENSION_STATUS_2026-04-01.md](/Users/jonreilly/Projects/Physics/docs/HIGHER_DIMENSION_STATUS_2026-04-01.md).
-  The newer strict 4D unification pass is therefore intentionally narrow:
-  it finds one retained coexistence row on the modular family, but it uses a
-  companion chokepoint Born graph rather than a literal same-instance four-way
-  pass, and the broader strict-visibility story is still partial.
-- **Mirror chokepoint lane: bounded and review-safe.** The strict
-  symmetry-protected mirror pocket is now Born-clean, gravity-positive, and
-  decohering through `N=100` on the dense boundary scan, but it still loses
-  gravity by `N=120`, so the lane is bounded rather than asymptotic. The new
-  mirror-only gravity probe is also positive but weakly structured: the
-  fixed-anchor mass window stays sublinear and the fixed-mass distance sweep
-  is peak-plus-plateau rather than a cleaner falling tail. So mirror remains
-  a real bounded coexistence challenger, not the best gravity-side lane. See
-  [MIRROR_CHOKEPOINT_NOTE.md](/Users/jonreilly/Projects/Physics/docs/MIRROR_CHOKEPOINT_NOTE.md)
+- **Flagship program:** exact mirror / exact 2D mirror / `Z2 x Z2`. This is
+  the retained same-graph coexistence story: Born-clean at machine precision,
+  positive gravity on bounded windows, and nontrivial MI / decoherence on the
+  same graphs. Mirror remains the main architecture to lead with. See
+  [UNIFIED_PROGRAM_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIFIED_PROGRAM_NOTE.md)
   and
-  [MIRROR_GRAVITY_PROBE_NOTE.md](/Users/jonreilly/Projects/Physics/docs/MIRROR_GRAVITY_PROBE_NOTE.md).
-- **Ordered-lattice branch: retained and now the cleanest distance-law lane.**
-  The synced lattice family now freezes two review-safe facts: on the barrier
-  harness at `N=40`, the same ordered family stays Born-clean
-  (`|I3|/P = 2.98e-16`), keeps `k=0 = 0`, retains nontrivial slit structure
-  (`MI = 0.537`, `d_TV = 0.714`), shows real CL-bath decoherence
-  (`1 - pur_cl = 0.0572`), and produces a strong gravity signal
-  (`-5.740`). On the no-barrier companion harness, the same family also gives
-  a clean far-field distance-law magnitude
-  `|delta| ~= 23.5071 * b^(-1.052)` with `R^2 = 0.9850` for `b >= 7`. So
-  distance law remains closed on the flagship connected symmetry family, but
-  ordered lattice reopens it as a retained secondary branch rather than a
-  replacement flagship. See
-  [LATTICE_DISTANCE_LAW_NOTE.md](/Users/jonreilly/Projects/Physics/docs/LATTICE_DISTANCE_LAW_NOTE.md),
-  [LATTICE_FAMILY_VALIDATION_NOTE.md](/Users/jonreilly/Projects/Physics/docs/LATTICE_FAMILY_VALIDATION_NOTE.md),
-  and
-  [UNIFIED_PROGRAM_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIFIED_PROGRAM_NOTE.md).
-- **Main open problem:** the good topology is still imposed, not generated.
-  Seven emergence attempts now fail cleanly. Connection-bias rules cannot beat
-  CLT on sufficiently connected graphs, and first-pass node-placement rules
-  create gaps that are either too weak, too strong, or in the wrong place.
-  The first hard-gap placement diagnostic is now also negative in a sharper
-  way: the best run reaches the right gap width only by placing it badly
-  off-center, while stronger placement rules drive the graphs toward near
-  disconnection.
-  A global post-hoc node-removal surrogate improves decoherence only at
-  intermediate `N`; by `N=80..100` the ceiling returns, and adaptive pruning
-  pushes the graphs toward disconnection. The next make-or-break test is
-  therefore a **hard-gap, geometry-anchored node placement / node removal
-  law**, with the fallback read that the gap may itself be part of the
-  effective physics rather than a derivative of a simpler local growth rule.
+  [MIRROR_VS_LATTICE_PROGRAM_NOTE.md](/Users/jonreilly/Projects/Physics/docs/MIRROR_VS_LATTICE_PROGRAM_NOTE.md).
+- **Ordered lattice:** retained secondary branch. The standard-strength branch
+  is a same-family two-harness bridge, the weak-field reopening gives a narrow
+  one-card pocket, and the no-barrier branch retains the cleanest current
+  distance-law magnitude. This is a real branch, but it does not displace the
+  mirror flagship.
+- **Nearest-neighbor refinement:** strongest current continuum-side bridge.
+  Raw NN is Born-clean through `h = 0.25`, deterministic rescale extends a
+  bounded path to `h = 0.0625`, and the canonical notes keep continuum / RG
+  claims narrow. This is a refinement bridge, not a finished theorem.
+- **Generated-symmetry bridge:** reopened in a bounded way. The new
+  structured chokepoint bridge shows that structured placement can survive the
+  canonical mirror readout while staying Born-clean and gravity-positive on a
+  narrow retained slice. That is a real bridge result, but not yet a
+  replacement flagship.
+- **Action-power branch:** exploratory axiom fork. It has a same-harness 2D
+  comparison and a promising 3D no-barrier distance / mass-response result,
+  but it does not inherit flagship claims and is not yet a full retained
+  replacement for the spent-delay lane.
+- **Main open problem:** generated symmetry and stronger continuum closure.
+  The project now has a cleaner map, but the highest-value unresolved work is
+  still to generate the good geometry more naturally and to tighten the
+  continuum / RG side without overclaiming it.
+
+If you are picking up the repo fresh, start with
+[START_HERE.md](/Users/jonreilly/Projects/Physics/docs/START_HERE.md).
 
 The most relevant notes for that current architecture state are:
 

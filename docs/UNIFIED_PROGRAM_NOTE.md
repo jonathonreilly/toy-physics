@@ -1,6 +1,6 @@
 # Unified Program Note
 
-**Date:** 2026-04-03  
+**Date:** 2026-04-04  
 **Status:** canonical project-state and backlog note for the retained symmetry program
 
 ## One-line read
@@ -92,6 +92,40 @@ So structured mirror is currently:
 - **interesting geometry result**
 - **not a retained flagship architecture**
 
+### Structured chokepoint bridge
+
+This is the most important recent generated-symmetry reopening.
+
+- structured placement now survives the canonical mirror-harness readout on a
+  narrow retained slice
+- Born stays machine-clean
+- `k=0` stays at zero
+- gravity stays positive on the retained rows
+- decoherence remains below the ceiling on the largest retained row
+
+Primary artifact:
+
+- [`docs/STRUCTURED_CHOKEPOINT_BRIDGE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/STRUCTURED_CHOKEPOINT_BRIDGE_NOTE.md)
+
+So the safe read is:
+
+- **generated symmetry is no longer purely negative/open**
+- **the reopened bridge is bounded, not solved**
+
+### Action-power branch
+
+This is an explicit **axiom fork**, not an extension of the spent-delay
+flagship.
+
+- the same-harness 2D comparison is real
+- the 3D no-barrier distance / mass-response result is promising
+- the 3D barrier card is not retained yet
+- no flagship claims are inherited automatically
+
+Primary artifact:
+
+- [`docs/ACTION_POWER_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_NOTE.md)
+
 ### Engineered non-symmetry lanes
 
 Dense central-band + layer norm remains the strongest engineered benchmark
@@ -111,7 +145,7 @@ project.
 | Mass-law quality | **weak / bounded** | positive fitted windows exist, but no flagship symmetry lane has a promoted clean mass law |
 | Distance-law quality | **negative structural result** | current connected random/symmetry architecture does not retain a review-safe `1/b`-style law |
 | Continuum / refinement bridge | **promising but bounded** | raw NN is Born-clean through `h = 0.25`; deterministic rescale extends to `h = 0.0625`; RG-style gravity remains open |
-| Generated / emergent symmetry | **open** | no retained Born-clean grown successor yet |
+| Generated / emergent symmetry | **reopened / bounded** | structured chokepoint bridge is retained on a narrow canonical slice, but no broad generated successor is promoted |
 
 ## Distance-law closure
 
@@ -226,6 +260,8 @@ This is a real refinement branch, but it is still a **bounded** one:
 - the raw kernel overflows at `h = 0.125`
 - RG-style strength scalings are suggestive but still ambiguous
 - a finished continuum / renormalization theorem is not retained yet
+- `k=0 = 0` on this branch should be read as a sanity property of the pure
+  phase coupling path, not as strong independent evidence by itself
 
 ## Single unified approach
 
@@ -238,7 +274,7 @@ The retained program is:
 3. **Use exact 2D mirror as the clean validation card**
 4. **Use `Z2 x Z2` as the stronger decoherence / retained-range extension**
 5. **Use raw nearest-neighbor refinement as the current continuum-side bridge**
-6. **Treat generated symmetry as the next open bridge problem, not as a solved lane**
+6. **Treat generated symmetry as a reopened but bounded bridge problem, not as a solved lane**
 
 ## Highest-value next wins
 

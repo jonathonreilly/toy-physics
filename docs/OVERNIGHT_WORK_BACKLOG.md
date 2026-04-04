@@ -1,6 +1,6 @@
 # Overnight Work Backlog
 
-**Date:** 2026-04-03  
+**Date:** 2026-04-04  
 **Status:** conservative overnight priority note
 
 This note is the short-horizon backlog for the next pass through the science
@@ -10,61 +10,53 @@ before the current bridges are tightened.
 
 ## Priority order
 
-1. **Mirror-vs-lattice synthesis**
-   - Keep the exact mirror lane as the flagship program line.
-   - Treat lattice as the strongest secondary branch, not the primary story.
-   - Use this synthesis to keep the repo narrative aligned before adding more
-     frontier claims.
-   - Deliverable:
-     - one canonical comparison note that uses only retained artifact chains
-     - one short recommended wording block for project-level synthesis
-
-2. **NN continuum hardening**
-   - Tighten the NN continuum story so the retained behavior is less tied to a
-     single discrete regime.
-   - Focus on the cleanest scaling and robustness checks first.
-   - Keep this in the secondary/frontier bucket unless the evidence clearly
-     graduates.
+1. **Structured bridge extension**
+   - Keep the canonical mirror readout fixed.
+   - Extend the retained structured chokepoint bridge without broadening into
+     a new generator search.
    - Deliverables:
-     - freeze the raw-NN vs deterministic-rescale comparison cleanly
+     - one bounded extension script/log/note chain
+     - one clear decision on whether the bridge widens beyond the current
+       narrow slice
+
+2. **Action-power 3D barrier signal**
+   - Treat the action-power lane as a new branch with no inherited claims.
+   - Focus only on the blocker: getting enough 3D barrier signal to measure
+     Born / MI / decoherence on the same family.
+   - Deliverables:
+     - one canonical 3D barrier harness script/log/note
+     - one explicit pass/fail on whether the 3D power branch can support a
+       full card instead of only no-barrier properties
+
+3. **NN continuum hardening**
+   - Keep the NN story narrow and artifact-backed.
+   - Prefer cleanup of companion-audit wording and stale claim surfaces over
+     new speculative physics.
+   - Deliverables:
+     - tighten any remaining places where `k=0`, Born, or MI/purity are
+       described too strongly on the NN branch
      - reconcile any mismatch between branch-history claims and on-disk notes
      - do not promote a continuum theorem unless the RG side is also canonical
 
-3. **RG reconciliation**
-   - Reconcile the RG-facing interpretation with the retained observables.
-   - Prefer the smallest consistent bridge over speculative extrapolation.
-   - Flag any mismatch explicitly rather than smoothing it over.
+4. **Repo claim-surface cleanup**
+   - Reduce the gap between canonical notes and nearby exploratory files.
+   - Focus on filenames and top-level docs that a new reader will see first.
    - Deliverables:
-     - one alpha-sweep reconciliation note
-     - one decision on whether `alpha = 1.5` or `alpha = 2.0` is actually
-       artifact-backed in this checkout
-     - one narrow recommendation on whether RG is "open", "suggestive", or
-       "retained on a bounded window"
+     - retire or relabel stale exploratory `*_test.py` files where practical
+     - keep `README`, `START_HERE`, and the program notes synchronized
 
-4. **Light-cone follow-up**
-   - Continue only the follow-up pieces that sharpen the existing light-cone
-     picture.
-   - Keep the work bounded and diagnostic.
-   - Do not widen the scope into a new subprogram unless a clear retained gap
-     demands it.
+5. **Mirror-vs-lattice synthesis**
+   - Keep mirror as the flagship line.
+   - Keep lattice / NN as secondary and frontier branches unless a stronger
+     retained comparison note truly changes the ranking.
    - Deliverables:
-     - one script/log/note chain or one clean negative closure
-     - explicit distinction between topological light-cone claims and any
-       stronger emergent-relativity language
-
-5. **Generated-symmetry bridge**
-   - Push the generated-symmetry line only as a bridge, not as a replacement
-     for the flagship mirror story.
-   - Treat it as frontier work that should remain grounded in the retained
-     mirror/lattice evidence.
-   - Deliverables:
-     - only bounded Born-safe probes
-     - no broad search unless a specific local rule is being tested
+     - one short wording pass whenever a new branch is promoted or demoted
 
 ## Program stance
 
 - **Flagship:** mirror
-- **Secondary / frontier:** lattice and NN
+- **Secondary:** ordered lattice
+- **Frontier:** NN refinement and bounded axiom forks
 - **Overnight bias:** harden what is already retained before expanding the
   claim surface
 
@@ -74,6 +66,8 @@ before the current bridges are tightened.
 - Every promoted claim needs one script, one log, and one note.
 - If a result only exists in commit-message narrative, treat it as unretained
   until the artifact chain exists on disk.
+- If a branch changes the action law, treat it as a new branch with no
+  inherited flagship claims.
 - Do not let lattice/NN wording displace the flagship mirror lane unless a
   stronger retained comparison note actually supports it.
 
