@@ -14,12 +14,13 @@ Run:
 
 Default behavior:
 
-1. run the bounded canonical regression gate
+1. print a short canonical-vs-exploratory inventory
 2. run one bounded cross-family retained comparison
-3. print a short canonical-vs-exploratory inventory
+3. optionally run the full canonical regression gate when requested
 
 Optional:
 
+- `--include-gate` runs the full canonical regression gate first
 - `--full-cross-family` adds the heavier 3D family sweep from the exploratory
   robustness lane
 
@@ -27,8 +28,6 @@ Optional:
 
 The default audit checks are intentionally modest:
 
-- mirror / lattice / structured-bridge retained scripts still pass the cheap
-  regression gate
 - exact 2D mirror and structured chokepoint bridge still provide machine-clean
   Born-safe retained rows
 - the two retained families are distinct but both still satisfy their own
@@ -41,6 +40,8 @@ The default cross-family comparison is:
 
 That is enough to tell a skeptical reader that the project is not a one-script
 story, without turning the audit into a broad search.
+
+If you need the full retained-frontier replay, use `--include-gate`.
 
 ## What it does not certify
 

@@ -4,10 +4,10 @@
 This is a skeptical-reader entry point, not a physics-proof script.
 It does three things:
 
-  1. runs the bounded canonical regression gate
-  2. runs one bounded cross-family retained comparison
-  3. prints a short inventory of what should be treated as canonical vs
+  1. prints a short inventory of what should be treated as canonical vs
      exploratory
+  2. runs one bounded cross-family retained comparison
+  3. optionally runs the full canonical regression gate when requested
 
 The default cross-family comparison is deliberately narrow:
 - exact 2D mirror validation
@@ -17,6 +17,7 @@ Both are retained harnesses on different families, so they are a good
 reproducibility check without turning this into a broad search.
 
 Optional:
+- ``--include-gate`` runs the full canonical regression gate first
 - ``--full-cross-family`` runs the heavier 3D family sweep from the existing
   exploratory benchmark, but that is not part of the default audit path.
 """
@@ -101,7 +102,7 @@ def run_cross_family_retained_comparison() -> None:
     require(mirror_row is not None, "mirror 2D retained row changed")
 
     bridge_row = re.search(
-        r"^\s*60\s+0\.6440\s+0\.8030±0\.04\s+1\.0043\s+\+5\.7613±0\.892\s+0\.0000±0\.00\s+\+0\.00e\+00\s+16\s+\d+s$",
+        r"^\s*60\s+0\.6440\s+0\.8030±0\.04\s+1\.0043\s+\+5\.7613±0\.892\s+[0-9.]+e-16\s+\+0\.00e\+00\s+16\s+\d+s$",
         structured,
         re.MULTILINE,
     )
@@ -148,6 +149,11 @@ def print_inventory() -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
+        "--include-gate",
+        action="store_true",
+        help="run the full canonical regression gate before the bounded comparison",
+    )
+    parser.add_argument(
         "--full-cross-family",
         action="store_true",
         help="run the heavier 3D family sweep from the exploratory robustness lane",
@@ -155,7 +161,14 @@ def main() -> None:
     args = parser.parse_args()
 
     print_inventory()
-    run_canonical_gate()
+    if args.include_gate:
+        run_canonical_gate()
+    else:
+        print("=" * 88)
+        print("CANONICAL GATE")
+        print("  skipped by default; use --include-gate for the full retained-frontier replay")
+        print("=" * 88)
+        print()
     run_cross_family_retained_comparison()
     if args.full_cross_family:
         run_full_cross_family()

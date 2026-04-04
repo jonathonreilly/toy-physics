@@ -48,6 +48,14 @@ thing a new reader should treat as canonical proof of the current story:
 - [`scripts/cross_family_robustness.py`](/Users/jonreilly/Projects/Physics/scripts/cross_family_robustness.py)
 - [`scripts/evolving_network_prototype.py`](/Users/jonreilly/Projects/Physics/scripts/evolving_network_prototype.py)
 
+## How to use them
+
+- Start with `scripts/reproduction_audit_harness.py` for a quick skeptical
+  replay.
+- Add `--include-gate` when you want the full retained-frontier gate replay.
+- Add `--full-cross-family` only when you specifically want the heavier 3D
+  family sweep from the exploratory robustness lane.
+
 ## Legacy exploratory drivers
 
 Treat these as historical experiments unless a newer note explicitly promotes
