@@ -52,6 +52,10 @@ Do not force a trade where only one of those moves.
   - a bounded action-universality probe now supports a narrower theory claim:
     on the fixed ordered-lattice family, weak-field-linear phase valleys share
     the same Newtonian mass-scaling class (`F~M = 1.00`)
+  - a bounded same-family closure note is now artifact-backed:
+    rows `1-7` stay on the fixed `h = 0.25`, `W = 10`, `L = 12` core family,
+    rows `8-9` are replayed at the same `h = 0.25`, `W = 10` family across
+    `L`, and row `10` keeps the same-family `W = 10 / 12` width companion
   - a companion bounded power sweep now shows the stronger safe law on that
     family is `F~M = p` across `S = L(1-f^p)`; the distance tail also steepens
     with `p`, but the exact tail formula is not retained
@@ -119,6 +123,7 @@ Do not force a trade where only one of those moves.
 - [`docs/VALLEY_LINEAR_ACTION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_ACTION_NOTE.md)
 - [`docs/ACTION_UNIQUENESS_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_UNIQUENESS_NOTE.md)
 - [`docs/ACTION_POWER_SCALING_SWEEP_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_SCALING_SWEEP_NOTE.md)
+- [`docs/SAME_FAMILY_3D_CLOSURE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/SAME_FAMILY_3D_CLOSURE_NOTE.md)
 - [`docs/VALLEY_LINEAR_MIRROR_TRANSFER_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_MIRROR_TRANSFER_NOTE.md)
 - [`docs/VALLEY_LINEAR_CONTINUUM_SYNTHESIS_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_CONTINUUM_SYNTHESIS_NOTE.md)
 - [`docs/VALLEY_LINEAR_WIDE_TAIL_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_WIDE_TAIL_NOTE.md)

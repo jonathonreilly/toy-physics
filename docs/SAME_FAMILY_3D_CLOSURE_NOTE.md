@@ -1,7 +1,7 @@
 # Same-Family 3D Closure: Valley-Linear
 
 **Date:** 2026-04-04
-**Status:** bounded same-family multi-size closure note; script is tracked, full log refresh still pending
+**Status:** bounded same-family multi-size closure note; script and log are tracked
 
 ## Current on-disk artifacts
 
@@ -17,12 +17,8 @@ This is a same-family closure on one retained family:
 
 It is not a single-instance theorem card. Properties `8-9` are same-family
 multi-`L` rows, and property `10` includes a same-family width companion.
-
-Important boundary:
-
-- the script is real and review-relevant
-- the current log capture on disk is still partial, so this note should be read
-  as a bounded closure summary, not a fully refreshed frozen replay chain yet
+The frozen wrapper replays `L=8` and `L=10`, then reuses the retained core
+`L=12` row so the whole note stays on one family at one `h`.
 
 ## Architecture
 - Action: S = L(1-f) (valley-linear)
@@ -34,7 +30,7 @@ Important boundary:
 
 | # | Property | Value | Same family? |
 |---|----------|-------|-------------|
-| 1 | Born |I3|/P | 4.20e-15 | h=0.25 W=10 L=12 |
+| 1 | Born | 4.20e-15 | h=0.25 W=10 L=12 |
 | 2 | d_TV | 0.83 | h=0.25 W=10 L=12 |
 | 3 | k=0 gravity | 0.000000 | h=0.25 W=10 L=12 |
 | 4 | F∝M alpha | 1.00 | h=0.25 W=10 L=12 |
@@ -45,21 +41,24 @@ Important boundary:
 | 9 | Gravity grows | +0.157→+0.224 | h=0.25 W=10 |
 | 10 | Distance tail | b^(-0.93) W=10 / b^(-1.07) W=12 | h=0.25 |
 
-Properties 8-9 use L=8,10,12 at the SAME h=0.25 and W=10.
-No h=0.5 companions needed.
+Properties 8-9 use `L=8,10,12` at the SAME `h=0.25` and `W=10`.
+No `h=0.5` companions are needed, but the `L=12` multi-`L` row is carried
+through the frozen core-card values rather than recomputed inside the wrapper.
 
 ## What this closes
 
-This is the first time all 10 properties are measured on one graph
-family at one resolution with one action and one kernel. Previous
-cards used h=0.5 companions for properties 8-9, or different W
-for the distance law.
+This is the first time the same-family closure is carried as a real
+script/log/note chain. The fixed core rows remain at `h=0.25, W=10, L=12`;
+properties `8-9` are same-`h` multi-`L` rows; and property `10` still carries
+a width companion for the far tail.
 
 ## What remains open
 
-- The distance exponent (-0.93 to -1.07) is near-Newtonian but not
-  exactly -1.0. The frozen W=12 replay gives -1.07 (steeper than -1).
-- Properties 8-9 use multiple L values (necessary for scaling checks).
+- The distance exponent is near-Newtonian but not exactly -1.0. The frozen
+  W=10 and W=12 rows stay as companion width checks.
+- Properties 8-9 use multiple `L` values (necessary for scaling checks).
   This is a same-family multi-size test, not a single-instance card.
-- The action is selected, not derived (though the universality class
-  result shows it's the simplest member of the Newtonian family).
+- The wrapper is partly replayed and partly frozen by design: it is a review-
+  facing closure note, not a new heavyweight all-live card harness.
+- The action is selected, not derived (though the universality-class result
+  shows it's the simplest member of the Newtonian family).

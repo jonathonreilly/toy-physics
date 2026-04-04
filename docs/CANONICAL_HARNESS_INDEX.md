@@ -66,6 +66,7 @@ thing a new reader should treat as canonical proof of the current story:
 - [`scripts/action_regularity_crossover.py`](/Users/jonreilly/Projects/Physics/scripts/action_regularity_crossover.py)
 - [`scripts/action_universality_probe.py`](/Users/jonreilly/Projects/Physics/scripts/action_universality_probe.py)
 - [`scripts/action_power_scaling_sweep.py`](/Users/jonreilly/Projects/Physics/scripts/action_power_scaling_sweep.py)
+- [`scripts/same_family_3d_closure.py`](/Users/jonreilly/Projects/Physics/scripts/same_family_3d_closure.py)
 - [`scripts/gate_b_connectivity_tolerance.py`](/Users/jonreilly/Projects/Physics/scripts/gate_b_connectivity_tolerance.py)
 - [`scripts/lattice_3d_valley_linear_card.py`](/Users/jonreilly/Projects/Physics/scripts/lattice_3d_valley_linear_card.py)
 - [`scripts/dimensional_gravity_card.py`](/Users/jonreilly/Projects/Physics/scripts/dimensional_gravity_card.py)

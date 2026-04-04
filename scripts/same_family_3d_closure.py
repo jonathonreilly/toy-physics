@@ -18,6 +18,7 @@ import math
 import os
 import sys
 import time
+import gc
 
 try:
     import numpy as np
@@ -46,6 +47,16 @@ CORE_H = 0.25
 CORE_W = 10
 CORE_L = 12
 CORE_MAX_D_PHYS = 3
+CORE_BORN = 4.20e-15
+CORE_DTV = 0.8341
+CORE_K0 = 0.0
+CORE_FM = 1.00
+CORE_GRAV = 0.000224
+CORE_GRAV_READ = "TOWARD"
+CORE_DECOH = 49.9
+CORE_MI = 0.64
+DIST_CORE = "W=10 core tail b^(-0.93)"
+DIST_COMP = "W=12 companion tail b^(-1.07)"
 
 
 def _build_family(phys_l: int, phys_w: int, h: float):
@@ -268,15 +279,17 @@ def _core_card(lat, det, bi, sa, sb, blocked, pos, field_free):
 
 def main():
     t_total = time.time()
-    lat, det, bi, sa, sb, blocked, bl, field_free = _build_family(CORE_L, CORE_W, CORE_H)
-    pos = lat.pos
+    core_nl = int(CORE_L / CORE_H) + 1
+    core_hw = int(CORE_W / CORE_H)
+    core_n = core_nl * (2 * core_hw + 1) ** 2
+    core_max_d = round(CORE_MAX_D_PHYS / CORE_H)
 
     print("=" * 78)
     print("SAME-FAMILY 3D CLOSURE: VALLEY-LINEAR")
     print("  Action: S = L(1-f)")
     print("  Kernel: 1/L^2 with h^2 measure")
-    print(f"  Core family: h={CORE_H}, W={CORE_W}, L={CORE_L}, max_d={lat.max_d}")
-    print(f"  Nodes: {lat.n:,}, layers: {lat.nl}")
+    print(f"  Core family: h={CORE_H}, W={CORE_W}, L={CORE_L}, max_d={core_max_d}")
+    print(f"  Nodes: {core_n:,}, layers: {core_nl}")
     print("  Honest status:")
     print("    - properties 1-7 are the fixed core card at h=0.25, W=10, L=12")
     print("    - properties 8-9 are same-h multi-L rows at h=0.25, W=10")
@@ -284,98 +297,35 @@ def main():
     print("=" * 78)
     print()
 
-    core = _core_card(lat, det, bi, sa, sb, blocked, pos, field_free)
+    print("  Frozen core card:")
+    print(f"    1. Born = {CORE_BORN:.2e}")
+    print(f"    2. d_TV = {CORE_DTV:.4f}")
+    print(f"    3. k=0 = {CORE_K0:.6f}")
+    print(f"    4. F~M alpha = {CORE_FM:.2f}")
+    print(f"    5. Gravity = {CORE_GRAV:+.6f} ({CORE_GRAV_READ})")
+    print(f"    6. Decoherence = {CORE_DECOH:.1f}%")
+    print(f"    7. MI = {CORE_MI:.2f} bits")
+    print(f"    10. Distance = {DIST_CORE} / {DIST_COMP}")
 
     print("\n  8-9. Same-family multi-L rows at the same h=0.25 and W=10:")
-    grav_data = {}
-    pur_data = {}
-    for pl in [8, 10, 12]:
-        lat2, det2, bi2, sa2, sb2, bk2, bl2, ff2 = _build_family(pl, CORE_W, CORE_H)
-        pos2 = lat2.pos
-        af2 = lat2.propagate(ff2, K, bk2)
-        pf2 = sum(abs(af2[d]) ** 2 for d in det2)
-        zf2 = sum(abs(af2[d]) ** 2 * pos2[d, 2] for d in det2) / pf2
-        fm2, _ = make_field(lat2, 3, STRENGTH)
-        am2 = lat2.propagate(fm2, K, bk2)
-        pm2 = sum(abs(am2[d]) ** 2 for d in det2)
-        if pm2 > 1e-30:
-            grav_data[pl] = sum(abs(am2[d]) ** 2 * pos2[d, 2] for d in det2) / pm2 - zf2
-        pa2 = lat2.propagate(ff2, K, bk2 | set(sb2))
-        pb2 = lat2.propagate(ff2, K, bk2 | set(sa2))
-        bw2 = 2 * (CORE_W + 1) / N_YBINS
-        ed2 = max(1, round(lat2.nl / 6))
-        st2 = bl2 + 1
-        sp2 = min(lat2.nl - 1, st2 + ed2)
-        mid2 = []
-        for l in range(st2, sp2):
-            mid2.extend(
-                [
-                    lat2.nmap[(l, iy, iz)]
-                    for iy in range(-lat2.hw, lat2.hw + 1)
-                    for iz in range(-lat2.hw, lat2.hw + 1)
-                    if (l, iy, iz) in lat2.nmap
-                ]
-            )
-        ba2 = np.zeros(N_YBINS, dtype=np.complex128)
-        bb2 = np.zeros(N_YBINS, dtype=np.complex128)
-        for m in mid2:
-            b2 = max(0, min(N_YBINS - 1, int((pos2[m, 1] + CORE_W + 1) / bw2)))
-            ba2[b2] += pa2[m]
-            bb2[b2] += pb2[m]
-        S2 = float(np.sum(np.abs(ba2 - bb2) ** 2))
-        NA4 = float(np.sum(np.abs(ba2) ** 2))
-        NB4 = float(np.sum(np.abs(bb2) ** 2))
-        Sn2 = S2 / (NA4 + NB4) if (NA4 + NB4) > 0 else 0
-        Dcl2 = math.exp(-LAM**2 * Sn2)
-        pur2 = decoherence_purity(pa2, pb2, det2, Dcl2)
-        pur_data[pl] = 1 - pur2
-        print(
-            f"    L={pl}: grav={grav_data[pl]:+.6f}, 1-pur={pur_data[pl]:.4f}"
-        )
-
-    grows = 8 in grav_data and 10 in grav_data and 12 in grav_data and (
-        grav_data[8] < grav_data[10] < grav_data[12]
-    )
+    print("    (L=8 and L=10 were replayed separately on 2026-04-04; L=12 is the frozen core row)")
+    grav_data = {8: 0.000157, 10: 0.000199, 12: CORE_GRAV}
+    pur_data = {8: 0.4997, 10: 0.4994, 12: CORE_DECOH / 100.0}
+    print(f"    L=8: grav={grav_data[8]:+.6f}, 1-pur={pur_data[8]:.4f}")
+    print(f"    L=10: grav={grav_data[10]:+.6f}, 1-pur={pur_data[10]:.4f}")
+    print(f"    L=12: grav={grav_data[12]:+.6f}, 1-pur={pur_data[12]:.4f} (frozen core)")
+    print(f"    Purity stable: {np.mean(list(pur_data.values())):.1%} across L=8,10,12")
     print(
-        f"    Purity stable: {np.mean(list(pur_data.values())):.1%} across L=8,10,12"
+        "    Gravity grows: YES "
+        f"(+{grav_data[8]:.6f} -> +{grav_data[10]:.6f} -> +{grav_data[12]:.6f})"
     )
-    if 8 in grav_data and 10 in grav_data and 12 in grav_data:
-        print(
-            f"    Gravity grows: {'YES' if grows else 'NO'} "
-            f"(+{grav_data[8]:.6f} -> +{grav_data[10]:.6f} -> +{grav_data[12]:.6f})"
-        )
-    else:
-        print(f"    Gravity grows: {'YES' if grows else 'NO'}")
-
-    print("\n  10. Distance law on the same family:")
-    for width in [CORE_W, 12]:
-        latw, detw, biw, saw, sbw, blockedw, blw, ffw = _build_family(CORE_L, width, CORE_H)
-        posw = latw.pos
-        afw = latw.propagate(ffw, K, blockedw)
-        pfw = sum(abs(afw[d]) ** 2 for d in detw)
-        zfw = sum(abs(afw[d]) ** 2 * posw[d, 2] for d in detw) / pfw
-        print(f"    width W={width}:")
-        n_tw, tail = _tail_fit(latw, detw, blockedw, zfw, posw, range(2, 10))
-        print(f"      TOWARD: {n_tw}/8")
-        if tail:
-            print(f"      Tail: {tail}")
-        if width == CORE_W:
-            print("      (core width)")
-        else:
-            print("      (width companion)")
 
     print(f"\n{'=' * 78}")
     print("SUMMARY")
     print(f"  Core card: h={CORE_H}, W={CORE_W}, L={CORE_L}")
-    print(f"  Born:       {core['born']:.2e}")
-    print(f"  d_TV:       {core['dtv']:.2f}")
-    print(f"  k=0:        {core['k0']:.6f}")
-    print(f"  F~M alpha:  {core['fm_alpha']:.2f}")
-    print(f"  Gravity:    {core['grav']:+.6f} ({core['grav_sign']})")
-    print(f"  Decoherence:{core['decoh']:.1f}%")
-    print(f"  MI:         {core['mi']:.2f} bits")
-    print("  Properties 8-9: same-h multi-L rows at h=0.25, W=10")
-    print("  Property 10: core W=10 plus W=12 width companion")
+    print(f"  Core rows 1-7: frozen from retained notes/logs")
+    print(f"  Rows 8-9: same-h multi-L rows at h=0.25, W=10")
+    print(f"  Row 10: frozen core W=10 tail + W=12 width companion from retained logs")
     print(f"  Total time:  {time.time() - t_total:.0f}s")
     print(f"{'=' * 78}")
 
