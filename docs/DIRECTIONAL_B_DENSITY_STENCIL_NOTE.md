@@ -71,6 +71,15 @@ It does sharpen the continuous-law story:
 - 3-NN is now the better frozen smooth-density candidate on the current
   expanded sample that includes the midlayer sentinel
 
-So the next bounded continuous-law step, if one is needed, should start from the
-3-NN stencil or another equally local occupancy-aware correction, not from a
-broader denominator search.
+A bounded residual probe sharpens the limit of that claim:
+
+- the last two frozen 3-NN misses split into a sparse one-node shoulder and an
+  asymmetric upper-shelf row
+- a miss-local hybrid can close the current midlayer sentinel, but it degrades
+  the old reference+tree control from `22/5/2/34` to `24/8/0/31`
+
+So no frozen residual rescue law is promoted yet. The current portable
+statement remains occupancy-first, and the next bounded continuous-law step, if
+one is still needed, should start from the 3-NN stencil's residual anatomy or
+another equally local occupancy-aware correction, not from a broader
+denominator search.

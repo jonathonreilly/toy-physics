@@ -1,3 +1,70 @@
+## 2026-04-04 — Directional-b residual probe keeps 3-NN as the leading frozen law
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed:
+  - no detached science child was running
+- the canonical repo is synced again:
+  - `git status --short --branch` reported `## main...origin/main`
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 8` put `0972175` (`feat: dedicated two-body momentum harness — valley 0.0%, spent 38.9%`) at `HEAD`
+- the tracked coordination state had drifted behind the real synced head again:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md` and `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md` still described the older stranded-local `7462541` state even though the canonical repo had already absorbed `d305cbc` and the newer synced science head `0972175`
+- with sync restored, this loop returned to the highest-priority non-overlapping science seam:
+  - one bounded geometry-normalized gravity-`b` residual probe under the fixed directional-measure propagator
+  - no fresh decoherence architecture or broader denominator search was started
+
+### What changed
+- reconciled canonical state before new science:
+  - reread `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and automation memory in protocol order
+  - rechecked `git status --short --branch`, `git rev-list --left-right --count origin/main...main`, and `git log --oneline --decorate -n 8`
+  - inspected `git show --stat --summary --oneline d305cbc` and `git show --stat --summary --oneline 0972175`
+  - read `/Users/jonreilly/Projects/Physics/logs/2026-04-04-two-body-momentum-harness.txt` to anchor the synced head in real artifact content instead of stale coordination text
+- added `/Users/jonreilly/Projects/Physics/scripts/directional_b_density_residual_probe.py`
+- generated `/Users/jonreilly/Projects/Physics/logs/2026-04-04-directional-b-density-residual-probe.txt`
+- updated:
+  - `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_DENSITY_STENCIL_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- the new bounded probe froze the old dense-reference `3-NN` threshold and inspected only the two remaining midlayer-sentinel overlap misses:
+  - `midgamma1.4-m3`, `N = 25`, `seed = 4`
+  - `midgamma1.4-m5`, `N = 25`, `seed = 7`
+- the residual anatomy now splits cleanly:
+  - a sparse shoulder with one in-band node (`d1 = 0.7085`)
+  - an asymmetric upper shelf with two nodes above the target plane and `local_gap_density_load = 1.8982`
+- a miss-local combined hybrid closes the midlayer sentinel (`10/0/0/30`) and the full extended sample overlap rows (`34/8/0/61`), but it is not portable:
+  - the old reference+tree control degrades from frozen `3-NN` `22/5/2/34` to `24/8/0/31`
+  - the new safe-side false positives are `holdout-m3 N=12 seed=1`, `holdout-m3 N=25 seed=1`, and `holdout-m5 N=25 seed=6`
+- left `/Users/jonreilly/Projects/Physics/README.md` untouched because this loop sharpened a bounded continuous-law residual and repaired coordination truthfulness rather than changing a flagship conclusion
+
+### Strongest confirmed conclusion
+Two independent conclusions now hold on the synced head:
+- `0972175` lands a real dedicated momentum harness, and its artifact confirms the valley-linear vs spent-delay split more sharply than the older note chain:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-two-body-momentum-harness.txt` keeps valley-linear momentum violation at `0.0-0.1%` while spent-delay reaches mean `38.9%`, max `55.4%`
+- on the fixed directional-measure gravity-`b` seam, the residual gap is no longer a fourth-neighbor problem, but it is also not solved by a clean frozen rescue law:
+  - `3-NN` remains the best **single** frozen smooth law on the current extended sample
+  - occupancy shortage remains the portable coarse bridge
+  - any current miss-local hybrid that closes the two remaining midlayer `3-NN` misses also imports safe-side false positives into the older controls, so no sampler-robust residual closure is promoted yet
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- `/Users/jonreilly/Projects/Physics/scripts/directional_b_density_residual_probe.py`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-04-directional-b-density-residual-probe.txt`
+- `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_DENSITY_STENCIL_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+
+### Exact next step
+- keep the fixed directional propagator, frozen `3-NN` threshold, and occupancy-first bridge statement fixed
+- compare the three new hybrid false positives against the rescued `midgamma1.4-m5`, `N = 25`, `seed = 7` upper-shelf row
+- test one side-balanced local correction only if it rescues that upper-shelf miss without triggering:
+  - `holdout-m3`, `N = 12`, `seed = 1`
+  - `holdout-m3`, `N = 25`, `seed = 1`
+  - `holdout-m5`, `N = 25`, `seed = 6`
+
+### First concrete action
+- reopen `/Users/jonreilly/Projects/Physics/logs/2026-04-04-directional-b-density-residual-probe.txt`
+- start from the three new safe-side false positives and the rescued upper-shelf row before proposing any further local clause
+
 ## 2026-04-04 — Coordination reconciled to the local valley-linear integrity head
 
 ### Current state
