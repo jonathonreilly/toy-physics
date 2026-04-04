@@ -10,7 +10,7 @@
 |---|--------|-----|---------------|------|-------|--------|
 | 2 | 1/L | **1.00** | varies (2D = log) | <6e-16 | →50% | 7/7 at h≤0.5 |
 | 3 | 1/L² | **1.00** | **b^(-0.93)** | <4e-15 | →50% | 8/8 at h≤0.5 |
-| 4 | 1/L³ | **0.99** | TBD (W too narrow) | 1.5e-15 | TBD | 3/3 at h=0.5 |
+| 4 | 1/L³ | **0.99-1.00** | bounded, width-limited (`W=7:-0.96`, `W=8:-0.54` companions) | 1.5e-15 .. 4.4e-15 | TBD | `3/3 .. 6/6` at h=0.5 |
 
 ## Newtonian predictions
 
@@ -18,7 +18,7 @@
 |---|---------------------|----------------------|--------|
 | 2 | ln(b) | varies with h | consistent |
 | 3 | 1/b | b^(-0.93) | **yes (~7% off)** |
-| 4 | 1/b² | TBD | needs wider lattice |
+| 4 | 1/b² | supportive but width-limited | needs wider lattice |
 
 ## Key properties
 
@@ -56,9 +56,9 @@ The field profile must also scale with dimension:
 | 3 | s/r | 1/b | b^(-0.93) |
 | 4 | s/r² | 1/b² | b^(-0.29) (early, W=7) |
 
-The 4D tail is at early stage (3-point fit, small W). The 3D
-measurement at the same stage was -0.35, which later improved
-to -0.93 at W=10. The 4D tail should steepen similarly.
+The 4D tail is still at an early stage. The current frozen width note keeps
+`W = 5..7`, and a heavier raw `W = 8` companion strengthens the support but
+does not yet close the asymptotic law.
 
 The complete dimensional prescription:
   Kernel: 1/L^(d-1)
@@ -90,3 +90,13 @@ W>=10 (~3M nodes in 4D) for a definitive measurement.
 The honest read: 4D gravity is TOWARD with the correct field
 profile and near-Newtonian mass scaling (F∝M=0.99), but the
 distance exponent is unresolved due to lattice width limits.
+
+Heavier same-family raw companion:
+
+- `W = 8`, `L = 15`, `h = 0.5`
+- Born: `4.43e-15`
+- `F∝M = 1.00`
+- `6/6` TOWARD on `z = 2..7`
+- early tail from `z >= 4`: `b^(-0.54)`
+
+That row is supportive, but still width-limited.

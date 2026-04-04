@@ -52,6 +52,13 @@ Do not force a trade where only one of those moves.
   - a bounded action-universality probe now supports a narrower theory claim:
     on the fixed ordered-lattice family, weak-field-linear phase valleys share
     the same Newtonian mass-scaling class (`F~M = 1.00`)
+  - bounded derivation-side harnesses are now artifact-backed on that family:
+    - global amplitude scaling cancels exactly in the centroid ratio
+    - two-body momentum distinguishes valley-linear from spent-delay sharply
+    - composite-source response is additive for valley-linear and non-additive
+      for spent-delay on the weak-field test-particle family
+  - those derivation-side harnesses strengthen the one-parameter-mass route,
+    but they do **not** yet close persistent-pattern inertia
   - a bounded same-family closure note is now artifact-backed:
     rows `1-7` stay on the fixed `h = 0.25`, `W = 10`, `L = 12` core family,
     rows `8-9` are replayed at the same `h = 0.25`, `W = 10` family across
@@ -93,6 +100,10 @@ Do not force a trade where only one of those moves.
   - the earlier v5 cross-growth row remains useful as the matched-control
     comparison against KNN on the same grown positions
 - **Action-power Newtonian-3D claim:** interesting, bounded to a no-barrier companion, not yet a promoted core claim
+- **Newton-derivation lane:** stronger, but still open
+  - additivity and momentum now support a bounded characterization theorem on
+    the fixed ordered-lattice family
+  - persistent-pattern / inertial-mass closure is still missing
 - **Tapered 3D refinement:** negative on the tested family; useful as a topology-control branch, not a rescue of the dense card
 - **3D `1/L^2` kernel branch:** active bounded propagator fork under validation; do not treat branch-history or chat narrative as canonical
   - if `h = 0.125` or an `h^2` measure factor is part of the claim, the
@@ -123,11 +134,15 @@ Do not force a trade where only one of those moves.
 - [`docs/VALLEY_LINEAR_ACTION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_ACTION_NOTE.md)
 - [`docs/ACTION_UNIQUENESS_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_UNIQUENESS_NOTE.md)
 - [`docs/ACTION_POWER_SCALING_SWEEP_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_SCALING_SWEEP_NOTE.md)
+- [`docs/EQUIVALENCE_PRINCIPLE_HARNESS_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/EQUIVALENCE_PRINCIPLE_HARNESS_NOTE.md)
+- [`docs/COMPOSITE_SOURCE_ADDITIVITY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/COMPOSITE_SOURCE_ADDITIVITY_NOTE.md)
+- [`docs/NEWTON_DERIVATION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/NEWTON_DERIVATION_NOTE.md)
 - [`docs/SAME_FAMILY_3D_CLOSURE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/SAME_FAMILY_3D_CLOSURE_NOTE.md)
 - [`docs/VALLEY_LINEAR_MIRROR_TRANSFER_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_MIRROR_TRANSFER_NOTE.md)
 - [`docs/VALLEY_LINEAR_CONTINUUM_SYNTHESIS_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_CONTINUUM_SYNTHESIS_NOTE.md)
 - [`docs/VALLEY_LINEAR_WIDE_TAIL_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_WIDE_TAIL_NOTE.md)
 - [`docs/VALLEY_LINEAR_ASYMPTOTIC_BRIDGE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_ASYMPTOTIC_BRIDGE_NOTE.md)
+- [`docs/FOUR_D_DISTANCE_WIDTH_PROBE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/FOUR_D_DISTANCE_WIDTH_PROBE_NOTE.md)
 - [`docs/ACTION_ARCHITECTURE_MATRIX_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_ARCHITECTURE_MATRIX_NOTE.md)
 - [`docs/EVOLVING_NETWORK_PROTOTYPE_V3_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/EVOLVING_NETWORK_PROTOTYPE_V3_NOTE.md)
 - [`docs/EVOLVING_NETWORK_PROTOTYPE_V4_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/EVOLVING_NETWORK_PROTOTYPE_V4_NOTE.md)
@@ -172,4 +187,5 @@ Exploratory but useful branch docs:
 2. Add skeptical-reader reproduction tooling that distinguishes canonical harnesses from exploratory drivers.
 3. Extend the 3D dense spent-delay attractive window without dropping the same-family barrier card.
 4. Keep the `1/L^(d-1)` kernel branch bounded unless transfer-norm, asymptotic, and frozen-artifact wording all reconcile.
-5. Push Gate B toward one structured-connectivity growth rule, and keep new geometry/noise or dimensional-field claims unpromoted until they land as real script/log/note chains.
+5. Push the derivation lane by testing whether the persistent-pattern / inertial-mass step can be made real, and keep additivity / Newton-selection claims bounded until that happens.
+6. Push Gate B toward one structured-connectivity growth rule, and keep new geometry/noise or dimensional-field claims unpromoted until they land as real script/log/note chains.

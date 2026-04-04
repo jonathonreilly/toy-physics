@@ -151,7 +151,11 @@ If you only want the current high-level state, read this section first.
   artifact-backed on `main`: on the retained `h = 0.25` family it improves the
   tested mass-law exponent and distance-tail slope while preserving Born and
   the TOWARD sign, but the gravity magnitude is much smaller on the tested
-  `z=3` slice and convergence remains open.
+  `z=3` slice and convergence remains open. The theory-side read for this lane
+  is also sharper now: bounded equivalence, momentum, and composite-source
+  harnesses support a conditional `p = 1` selection story on the fixed 3D
+  family, but persistent-pattern inertial mass remains open, so this is still
+  a characterization result rather than a closed first-principles derivation.
 - **Dimension-dependent kernel branch:** exploratory propagator fork on the
   ordered-lattice family. The imported `1/L^(d-1)` results are scientifically
   interesting and now live on `main`, including a frozen `h = 0.25`

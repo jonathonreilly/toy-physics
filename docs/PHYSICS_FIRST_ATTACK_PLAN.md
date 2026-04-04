@@ -18,6 +18,14 @@ one or more of these three closures:
 
 Those are the physics bottlenecks that matter most now.
 
+With Gate B actively being pushed elsewhere, the cleanest **parallel**
+physics lane is now:
+
+4. a real one-parameter-mass / additivity closure beyond the current
+   test-particle family
+
+That is the next place where the theory can either harden or fail honestly.
+
 ## Batch 1: Generated Geometry Closure
 
 **Question**
@@ -117,6 +125,15 @@ lattice lane?
 2. Architecture / action unification
 3. 3D continuum / asymptotic closure
 
+## Recommended Parallel Non-Gate-B Order
+
+1. One-parameter mass / additivity closure
+2. 3D continuum / asymptotic closure
+3. 4D asymptotic support only after the first two are tighter
+
+This is the best order when generated geometry is already being worked in
+parallel elsewhere.
+
 That order improves the physics position fastest:
 
 - generated geometry closes the biggest mechanistic gap
@@ -133,4 +150,3 @@ That order improves the physics position fastest:
 ## Operating Rule
 
 If a task does not clearly improve one of the three closures above, defer it.
-

@@ -24,6 +24,31 @@ has a dual mandate:
 
 The highest-value tasks are the ones that do both.
 
+## Current non-Gate-B physics bottleneck
+
+Outside the live generated-geometry lane, the cleanest next physics target is
+now the one-parameter-mass / additivity gap in the Newton-selection story.
+
+What is now frozen:
+
+- amplitude-level equivalence on the ordered-lattice test-particle family
+- two-body momentum conservation for valley-linear and large unequal-mass
+  violation for spent-delay
+- composite-source additivity for valley-linear on the same weak-field family
+
+What is still missing:
+
+- a persistent or quasi-persistent localized pattern with a measurable inertial
+  response
+- a beyond-fixed-family additivity cross-check that says whether the
+  composition law is special to the retained ordered family or not
+
+Best next deliverables on this lane:
+
+1. one bounded beyond-fixed-family additivity/composition cross-check
+2. one smallest viable persistent-pattern or quasi-persistent inertial-response experiment
+3. one note separating test-particle additivity from any stronger inertial-mass theorem
+
 ## Highest-leverage score improvers
 
 These are the backlog items most likely to improve the adversarial external
@@ -87,6 +112,17 @@ interest map rather than just broaden the science search.
      - one compact comparison note against the most relevant prior frameworks
      - one toy-level prediction / falsifier note
      - one paper-scope note saying exactly what should and should not be claimed
+
+6. **One-parameter mass / additivity closure**
+   - Best score impact:
+     - bridge to known physics
+     - broader theorist interest
+     - careful-paper publishability
+   - Deliverables:
+     - one beyond-fixed-family composition test
+     - one bounded persistent-pattern readiness experiment
+     - one note saying exactly what the momentum/additivity lane does and does
+       not prove
 
 ## Priority order
 
@@ -208,6 +244,19 @@ interest map rather than just broaden the science search.
      retained comparison note truly changes the ranking.
    - Deliverables:
      - one short wording pass whenever a new branch is promoted or demoted
+
+10. **Newton-selection lane hardening**
+   - Keep the derivation wording bounded.
+   - The current retained objects are:
+     - amplitude-level equivalence
+     - same-family momentum harness
+     - same-family composite-source additivity harness
+   - Do not promote “Newton derived from first principles” unless the
+     persistent-pattern / inertial-mass step is closed by a real artifact.
+   - Deliverables:
+     - one beyond-fixed-family additivity cross-check
+     - one persistent-pattern readiness decision
+     - one explicit retained-vs-unretained wording pass in the derivation note
 
 ## Program stance
 

@@ -35,12 +35,12 @@ The best next steps are the ones that improve both at once.
 |---|---:|---|
 | Toy-model mechanism interest | `9.5/10` | high intrinsic curiosity value |
 | Foundations / complex-systems / network-dynamics interest | `9.2/10` | real likely interest in the right subcommunities |
-| Broader theorist interest | `8.0/10` | selective interest, with better bounded replays, architecture synthesis, and cleaner review scaffolding |
-| Bridge to known physics | `7.9/10` | somewhat stronger than before, with a cleaner continuum/action split and a slightly better bounded Gate B story |
-| Publishable as a careful computational toy-model paper | `8.8/10` | increasingly plausible with bounded replay chains, better reproduction, and tighter scope control |
+| Broader theorist interest | `8.1/10` | selective interest, with better bounded replays, cleaner theory-side harnesses, and stronger review scaffolding |
+| Bridge to known physics | `8.0/10` | somewhat stronger than before, with a cleaner continuum/action split, a bounded momentum/additivity lane, and a slightly better Gate B story |
+| Publishable as a careful computational toy-model paper | `8.9/10` | increasingly plausible with bounded replay chains, better reproduction, tighter scope control, and a more explicit derivation-side limitation map |
 | Publishable as a foundational-physics breakthrough claim | `4.0/10` | still too early for that framing |
 | Ready for top-tier mainstream physics claims | `2.7/10` | improved credibility, but still far below the required bar |
-| Field-shifting theory program | `5.8/10` | stronger than before, but still not at forced-engagement level |
+| Field-shifting theory program | `5.9/10` | stronger than before, but still not at forced-engagement level |
 | Landmark foundational breakthrough | `3.2/10` | current evidence base is improving, but still too branch-sensitive |
 | Nobel-scale breakthrough | `0.4/10` | not a realistic present-tense read |
 
@@ -103,6 +103,12 @@ The main upward pressures since the first adversarial cut are:
   does not close the dynamics gap
 - the architecture/action matrix now gives reviewers one bounded place to read
   the split without forcing a unification claim
+- the derivation-side lane is now better bounded:
+  - amplitude-level equivalence is frozen
+  - same-family momentum conservation is frozen
+  - same-family composite-source additivity is frozen
+  - the remaining open step is now much more specific: persistent-pattern
+    inertia, not generic theory vagueness
 - the imported `1/L^(d-1)` kernel lane is now scientifically more interesting
   and does live on `main`, but it is still **bounded / unreconciled** rather
   than promoted in the top-line canonical story
@@ -143,7 +149,15 @@ The biggest score movers are:
    - because confidence rises sharply once retained claims stop looking like
      one-family / one-script / one-observable stories
 
-5. **Sharper literature positioning + prediction/discriminator card**
+5. **Persistent-pattern / inertial-mass closure**
+   - strongest improvement to:
+     - bridge to known physics
+     - broader theorist interest
+     - careful-paper credibility
+   - because the momentum/additivity lane is now sharp enough that the
+     remaining open step is no longer diffuse
+
+6. **Sharper literature positioning + prediction/discriminator card**
    - strongest improvement to:
      - publishability
      - broader theorist interest
@@ -159,6 +173,8 @@ external-score movers right now:
 - stronger chat or commit-message narrative
 - extra 4D or dimension-dependent-kernel claims without a clearer 3D
   asymptotic bridge and a reconciled `main`-branch artifact chain
+- stronger “Newton derived” language before the persistent-pattern / inertial-
+  mass step is actually closed
 
 ## Working interpretation
 

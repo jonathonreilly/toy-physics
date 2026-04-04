@@ -1,3 +1,35 @@
+## 2026-04-04 — Additivity harness frozen; derivation wording tightened
+
+### Current state
+- the ordered-lattice derivation lane is materially sharper than the earlier
+  one-parameter-mass version, but it is still not a closed first-principles
+  proof
+- the new bounded artifact chain now exists:
+  - `/Users/jonreilly/Projects/Physics/scripts/composite_source_additivity_harness.py`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-composite-source-additivity-harness.txt`
+  - `/Users/jonreilly/Projects/Physics/docs/COMPOSITE_SOURCE_ADDITIVITY_NOTE.md`
+- the current fixed-family read is:
+  - valley-linear same-site and disjoint-source response is additive to the
+    printed resolution on the weak-field test-particle family
+  - spent-delay misses the same additivity checks by roughly `24-29%`
+
+### Strongest confirmed conclusion
+- the derivation lane is now cleanly split into:
+  - what is frozen:
+    - amplitude-level equivalence
+    - same-family two-body momentum
+    - same-family composite-source additivity
+  - what is still open:
+    - persistent-pattern / inertial-mass closure
+- the strongest safe statement is now a bounded characterization theorem on the
+  retained ordered family, not “Newton derived from first principles”
+
+### Exact next step
+- test whether the same additivity / composition story survives beyond the
+  retained fixed 3D ordered family
+- then build the smallest viable persistent-pattern or quasi-persistent
+  inertial-response experiment
+
 ## 2026-04-04 — Coordination reconciled to the residual-probe commit atop the derivation head
 
 ### Current state

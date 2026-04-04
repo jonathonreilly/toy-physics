@@ -22,7 +22,13 @@ import math
 import os
 import sys
 
-import numpy as np
+try:
+    import numpy as np
+except ModuleNotFoundError:
+    system_python = "/usr/bin/python3"
+    if os.path.exists(system_python) and sys.executable != system_python:
+        os.execv(system_python, [system_python, "-u", __file__, *sys.argv[1:]])
+    raise SystemExit("numpy is required for this harness. On this machine use /usr/bin/python3.")
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)

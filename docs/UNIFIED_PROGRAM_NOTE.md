@@ -145,6 +145,12 @@ Current safe read:
   read on the same family
 - on the same comparison, gravity magnitude is much smaller on the tested
   `z=3` slice
+- bounded derivation-side harnesses are now also frozen on the ordered family:
+  - amplitude-level equivalence
+  - two-body momentum with `m ∝ s`
+  - composite-source additivity on the weak-field test-particle family
+- those strengthen the Newton-selection lane, but they do **not** close the
+  persistent-pattern / inertial-mass step
 - the branch does not inherit flagship claims automatically
 - convergence / asymptotic promotion remains open
 
