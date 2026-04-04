@@ -23,7 +23,7 @@ history or commit-message narrative.
 - **Ordered lattice is real, but secondary.**
   - standard-strength same-family two-harness bridge
   - narrow weak-field one-card pocket
-  - retained 3D dense spent-delay branch with hierarchy-clean attraction on the tested 3D window
+  - retained 3D dense spent-delay branch with hierarchy-clean attraction on the tested `z = 2..6` window
   - clean distance-law magnitude on the no-barrier branch
 - **Nearest-neighbor refinement is a bounded refinement bridge.**
   - raw NN is Born-clean through `h = 0.25`
@@ -57,6 +57,7 @@ history or commit-message narrative.
 - [`docs/GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md)
 - [`docs/LEGACY_EXPLORATORY_DRIVERS_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LEGACY_EXPLORATORY_DRIVERS_NOTE.md)
 - [`docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md)
+- [`docs/LATTICE_3D_DENSE_WINDOW_EXTENSION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_3D_DENSE_WINDOW_EXTENSION_NOTE.md)
 
 ## Working rules
 

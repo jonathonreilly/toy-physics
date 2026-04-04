@@ -57,10 +57,11 @@ On this exact retained barrier card, the gravity sign is:
 | `3` | `+0.001941` | `+0.000374` | `+0.176381` | attractive |
 | `4` | `+0.001157` | `+0.000626` | `+0.113676` | attractive |
 | `5` | `+0.000693` | `+0.000715` | `+0.048601` | attractive |
+| `6` | `+0.000572` | `+0.000536` | `+0.000112` | attractive |
 
 So the retained 3D dense spent-delay read is:
 
-- **genuine attraction on the retained tested window** (`z = 2, 3, 4, 5`)
+- **genuine attraction on the retained tested window** (`z = 2, 3, 4, 5, 6`)
 
 That is stronger than the older 3D ordered-lattice negative read, but it is
 still not the same thing as an all-distances or asymptotic theorem.
@@ -74,7 +75,7 @@ still not the same thing as an all-distances or asymptotic theorem.
 - the branch keeps a positive sub-linear mass response
 - the branch keeps a strong centroid-side distance decay
 - the gravity hierarchy confirms a real attractive window on the retained
-  tested `z = 2..5` range
+  tested `z = 2..6` range
 
 ## What is not retained
 
@@ -103,7 +104,7 @@ But the project ranking does not change:
 ## Next highest-value work
 
 1. Improve the 3D dense spent-delay slit geometry so the attractive window
-   extends to larger tested distances while preserving MI / decoherence.
+   extends beyond `z = 6` while preserving MI / decoherence.
 2. Strengthen MI / decoherence on the same retained 3D dense family.
 3. Keep the gravity-observable hierarchy attached to all future 3D dense
    gravity claims so centroid-only sign does not overstate the result.
