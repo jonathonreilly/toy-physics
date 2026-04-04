@@ -1,87 +1,84 @@
-# Valley-Linear Action Robustness Note
+# Valley-Linear Robustness Note
 
 **Date:** 2026-04-04
-**Status:** exploratory robustness memo pending a dedicated frozen sweep harness
+**Status:** artifact-backed bounded replay on the 3D ordered-lattice family
 
-## Action
+## What is frozen here
 
-`S = L(1-f)` — phase valley, linear in field `f`
+This note is the conservative readout for the dedicated sweep harness:
 
-This note records branch-side sweep results that are scientifically useful, but
-it should not yet be read as a fully retained proof of robustness.
+- [scripts/valley_linear_robustness_sweep.py](/Users/jonreilly/Projects/Physics/scripts/valley_linear_robustness_sweep.py)
+- [logs/2026-04-04-valley-linear-robustness-sweep.txt](/Users/jonreilly/Projects/Physics/logs/2026-04-04-valley-linear-robustness-sweep.txt)
 
-At the moment, the missing piece is a dedicated **script + log + note** chain
-for the full sweep itself. Until that exists, the same-family comparison in
-[`VALLEY_LINEAR_ACTION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_ACTION_NOTE.md)
-is the stronger retained artifact.
+The replay uses:
 
-## Reported robustness sweeps (all at h=0.5, 3D dense lattice, 1/L^2 kernel)
+- action `S = L(1-f)`
+- kernel `1/L^2` with `h^2` measure
+- `h = 0.5`
+- the 3D ordered-lattice family only
 
-### Width sweep (L=12, max_d=3)
+It measures the same observables that matter for the current valley-linear branch:
 
-| W | nodes | Born | d_TV | MI | Decoh | Gravity | F∝M | Tail |
-|---|-------|------|------|-----|-------|---------|-----|------|
-| 4 | 7,225 | 2.1e-15 | 0.76 | 0.57 | 49.2% | +0.000114 T | 1.00 | n/a |
-| 6 | 15,625 | 2.5e-15 | 0.78 | 0.61 | 49.5% | +0.000136 T | 1.00 | n/a |
-| 8 | 27,225 | 2.5e-15 | 0.79 | 0.59 | 49.4% | +0.000144 T | 1.00 | -1.46 |
-| 10 | 42,025 | 2.2e-15 | 0.79 | 0.57 | 49.4% | +0.000150 T | 1.00 | -1.08 |
+- Born
+- d_TV
+- MI
+- decoherence
+- gravity sign / magnitude
+- `F~M`
+- distance tail when there are enough post-peak points
 
-### Connectivity sweep (L=12, W=8)
+## Width sweep
 
-| max_d | Born | d_TV | MI | Decoh | Gravity | F∝M | Tail |
-|-------|------|------|-----|-------|---------|-----|------|
-| 1 (NN) | 6.9e-16 | 0.91 | 0.83 | 50.0% | +0.000229 T | 1.00 | -0.64 |
-| 2 | 1.6e-15 | 0.77 | 0.60 | 48.4% | +0.000165 T | 1.00 | -0.36 |
-| 3 | 2.5e-15 | 0.79 | 0.59 | 49.4% | +0.000144 T | 1.00 | -1.46 |
+Fixed `L=12`, `max_d=3`, `h=0.5`.
 
-### Length sweep (W=8, max_d=3)
+| W | Born | d_TV | MI | Decoh | Gravity | F~M | Tail |
+|---|------|------|----|-------|---------|-----|------|
+| 4 | `2.1e-15` | `0.76` | `0.57` | `49.2%` | `+0.000114` T | `1.00` | n/a |
+| 6 | `2.5e-15` | `0.78` | `0.61` | `49.5%` | `+0.000136` T | `1.00` | n/a |
+| 8 | `2.5e-15` | `0.79` | `0.59` | `49.4%` | `+0.000144` T | `1.00` | `b^(-1.47)`, `R²=0.996` |
+| 10 | `2.2e-15` | `0.79` | `0.57` | `49.4%` | `+0.000150` T | `1.00` | `b^(-1.08)`, `R²=0.941` |
 
-| L | Gravity | F∝M |
-|---|---------|-----|
-| 8 | +0.000114 T | 1.00 |
-| 10 | +0.000133 T | 1.00 |
-| 12 | +0.000144 T | 1.00 |
-| 15 | +0.000164 T | 1.00 |
-| 18 | +0.000178 T | 1.00 |
+## Connectivity sweep
 
-Gravity monotonically increases with L — persistent and strengthening.
+Fixed `L=12`, `W=8`, `h=0.5`.
 
-## 2D comparison (branch-side read)
+| max_d | Born | d_TV | MI | Decoh | Gravity | F~M | Tail |
+|-------|------|------|----|-------|---------|-----|------|
+| 1 | `6.9e-16` | `0.91` | `0.83` | `50.0%` | `+0.000229` T | `1.00` | `b^(-0.85)`, `R²=0.931` |
+| 2 | `1.6e-15` | `0.77` | `0.60` | `48.4%` | `+0.000165` T | `1.00` | `b^(-0.47)`, `R²=0.888` |
+| 3 | `2.5e-15` | `0.79` | `0.59` | `49.4%` | `+0.000144` T | `1.00` | `b^(-1.47)`, `R²=0.996` |
 
-| Action | TOWARD | Tail | F∝M |
-|--------|--------|------|-----|
-| Valley-linear | 7/7 | b^(-2.27) | 1.00 |
-| Spent-delay | 7/7 | b^(-1.08) | 0.45 |
+## Length sweep
 
-The reported 2D comparison points in the same direction: valley-linear gives a
-steeper distance read and linear `F∝M` on the tested slice.
+Fixed `W=8`, `max_d=3`, `h=0.5`.
 
-## Mirror DAG transfer (bounded read)
+| L | Born | d_TV | MI | Decoh | Gravity | F~M | Tail |
+|---|------|------|----|-------|---------|-----|------|
+| 8  | `2.1e-15` | `0.78` | `0.56` | `49.6%` | `+0.000114` T | `1.00` | `b^(-0.93)`, `R²=0.962` |
+| 10 | `2.2e-15` | `0.80` | `0.59` | `49.6%` | `+0.000133` T | `1.00` | `b^(-1.19)`, `R²=0.978` |
+| 12 | `2.5e-15` | `0.79` | `0.59` | `49.4%` | `+0.000144` T | `1.00` | `b^(-1.47)`, `R²=0.996` |
+| 15 | `2.7e-15` | `0.77` | `0.59` | `49.2%` | `+0.000164` T | `1.00` | `b^(-1.02)`, `R²=0.887` |
+| 18 | `2.1e-15` | `0.75` | `0.58` | `48.7%` | `+0.000178` T | `1.00` | `b^(-1.06)`, `R²=0.941` |
 
-| Action | TOWARD (8 seeds) |
-|--------|-----------------|
-| Spent-delay | 15/21 (71%) |
-| Valley-linear | 10/21 (48%) |
+## Conservative interpretation
 
-The current branch-side read is that valley-linear is lattice-optimized. On the
-tested random/mirror DAG slice, spent-delay gives more TOWARD gravity.
+The strongest safe summary from this frozen replay is:
 
-## Summary
+- the valley-linear action is **robust on the tested 3D ordered-lattice slices**
+- Born stays machine-clean on every row in the sweep
+- `F~M` stays at `1.00` on every tested row
+- gravity stays TOWARD throughout the tested width, connectivity, and length rows
+- the distance tail is real, but the fitted exponent is slice-dependent and should not be read as a universal theorem
 
-The strongest safe summary today is:
+What this note does **not** claim:
 
-- the valley-linear lane looks **promisingly robust** on the tested lattice
-  parameter slices
-- the branch-side sweeps report `F∝M = 1.00` and machine-clean Born across the
-  tested rows
-- the same branch-side memo also reports that the action does **not** transfer
-  as well to mirror/random DAGs
+- robustness across all architectures
+- universality of the tail exponent
+- that the action law is fully settled
+- that the sweep proves any continuum theorem
 
-What is **not** retained from this note yet:
+For the broader action-law comparison, use:
 
-- “robust across all parameter variations” as a canonical theorem
-- “works across architectures”
-- “the action choice is fully settled”
+- [VALLEY_LINEAR_ACTION_NOTE.md](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_ACTION_NOTE.md)
+- [ACTION_CROSSOVER_NOTE.md](/Users/jonreilly/Projects/Physics/docs/ACTION_CROSSOVER_NOTE.md)
 
-That stronger wording should wait for a dedicated frozen sweep harness and a
-separate frozen transfer test.
