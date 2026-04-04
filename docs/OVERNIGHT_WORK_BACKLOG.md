@@ -26,8 +26,8 @@ before the current bridges are tightened.
      MI / decoherence without changing the action law.
    - Deliverables:
      - one bounded geometry-extension script/log/note chain
-     - one decision on whether the mixed far-tail point can be converted into
-       a hierarchy-clean attractive point on the same family
+     - one decision on whether the current hierarchy-clean window can be
+       extended to larger tested distances on the same family
 
 3. **NN continuum hardening**
    - Keep the NN story narrow and artifact-backed.
