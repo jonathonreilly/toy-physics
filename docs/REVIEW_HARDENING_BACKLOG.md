@@ -81,6 +81,8 @@ Current state:
   - dense 3D spent-delay
   - structured bridge
   - bounded NN frontier
+- the default run is intentionally fast; use `--slow` when you need the
+  supplementary large-`N` mirror boundary replay as well
 - next step is to extend that gate carefully, not turn it into a brittle exact-value harness
 
 ## Mainstream-readiness gates

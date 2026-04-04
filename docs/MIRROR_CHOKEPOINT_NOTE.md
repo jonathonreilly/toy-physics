@@ -112,6 +112,16 @@ The current safe statement is:
 - **strict `NPL_HALF = 50` scaling probe:** retained through `N=60`, then
   fails at `N=80/100`
 
+The dense large-`N` boundary extension is reproducible directly from the live
+script with:
+
+`python3 scripts/mirror_chokepoint_joint.py --npl-half 60 --connect-radius 5.0 --n-layers 40 60 80 100 120 --layer2-prob 0.0`
+
+For review-hardening, the fast canonical regression gate keeps the strict
+baseline check separate from that slower replay; use
+[`scripts/canonical_regression_gate.py --slow`](/Users/jonreilly/Projects/Physics/scripts/canonical_regression_gate.py)
+when you want both.
+
 The next step is to test whether even denser `NPL`, larger radius, or sparse
 same-side layer-2 links can extend the mirror pocket beyond `N=60` without
 breaking the chokepoint Born check.

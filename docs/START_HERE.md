@@ -79,6 +79,9 @@ Do not force a trade where only one of those moves.
   [`scripts/canonical_regression_gate.py`](/Users/jonreilly/Projects/Physics/scripts/canonical_regression_gate.py)
   before promoting the result.
 - The current gate covers the retained mirror, lattice, structured-bridge, and bounded NN frontier scripts.
+- Use
+  [`scripts/canonical_regression_gate.py --slow`](/Users/jonreilly/Projects/Physics/scripts/canonical_regression_gate.py)
+  when you need the slower large-`N` mirror boundary replay as well.
 - If a claim exists only in commit text or chat narrative, treat it as **unretained**.
 - Treat many `*_test.py` files as **experiment drivers**, not assertion-based regression tests.
 - Treat some NN-side `k=0 = 0` results as **sanity checks**, not independent evidence.

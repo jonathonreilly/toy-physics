@@ -15,6 +15,7 @@ It does not try to re-prove the science or replace the script/log/note chain.
 
 from __future__ import annotations
 
+import argparse
 import math
 import re
 import subprocess
@@ -30,13 +31,13 @@ class GateFailure(RuntimeError):
     """Raised when a canonical regression check fails."""
 
 
-def run_script(path: str) -> str:
+def run_script(path: str, *args: str, timeout: int = 240) -> str:
     proc = subprocess.run(
-        [PYTHON, str(REPO_ROOT / path)],
+        [PYTHON, str(REPO_ROOT / path), *args],
         cwd=REPO_ROOT,
         capture_output=True,
         text=True,
-        timeout=240,
+        timeout=timeout,
         check=False,
     )
     if proc.returncode != 0:
@@ -195,6 +196,57 @@ def check_mirror_chokepoint_baseline() -> None:
     require("VALIDATION CRITERIA:" in out, "mirror chokepoint validation footer missing")
 
 
+def check_mirror_chokepoint_boundary() -> None:
+    out = run_script(
+        "scripts/mirror_chokepoint_joint.py",
+        "--npl-half",
+        "60",
+        "--connect-radius",
+        "5.0",
+        "--n-layers",
+        "40",
+        "60",
+        "80",
+        "100",
+        "120",
+        "--layer2-prob",
+        "0.0",
+        timeout=420,
+    )
+    require(
+        "NPL_HALF=60 (total 120), k=5.0, 16 seeds" in out,
+        "mirror chokepoint boundary header changed",
+    )
+    require(
+        re.search(
+            r"^\s*80\s+mirror p2=0\s+0\.4291\s+0\.8182±0\.03\s+1\.0029\s+\+3\.0551±0\.672\s+2\.43e-15\s+\+0\.00e\+00\s+16",
+            out,
+            re.MULTILINE,
+        )
+        is not None,
+        "mirror chokepoint boundary retained N=80 row changed materially",
+    )
+    require(
+        re.search(
+            r"^\s*100\s+mirror p2=0\s+0\.2308\s+0\.9043±0\.02\s+1\.0058\s+\+1\.3089±0\.570\s+1\.13e-15\s+\+0\.00e\+00\s+16",
+            out,
+            re.MULTILINE,
+        )
+        is not None,
+        "mirror chokepoint boundary retained N=100 row changed materially",
+    )
+    require(
+        re.search(
+            r"^\s*120\s+mirror p2=0\s+0\.2517\s+0\.8823±0\.04\s+0\.9984\s+\+0\.0000±0\.000\s+nan\s+\+0\.00e\+00\s+11",
+            out,
+            re.MULTILINE,
+        )
+        is not None,
+        "mirror chokepoint boundary N=120 collapse row changed",
+    )
+    require("VALIDATION CRITERIA:" in out, "mirror chokepoint boundary validation footer missing")
+
+
 def check_nn_continuum() -> None:
     out = run_script("scripts/lattice_nn_continuum.py")
     require(
@@ -228,7 +280,18 @@ def check_nn_deterministic_rescale() -> None:
     )
 
 
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--slow",
+        action="store_true",
+        help="include slower supplementary checks such as the large-N mirror boundary extension",
+    )
+    return parser.parse_args()
+
+
 def main() -> None:
+    args = parse_args()
     checks = [
         ("mirror 2D validation", check_mirror_2d_validation),
         ("mirror MI chokepoint", check_mirror_mutual_information),
@@ -245,6 +308,11 @@ def main() -> None:
     print("=" * 88)
     print("CANONICAL REGRESSION GATE")
     print("  Cheap drift checks for the current canonical frontier.")
+    if args.slow:
+        print("  Slow supplementary checks enabled.")
+        checks.append(("mirror chokepoint boundary extension", check_mirror_chokepoint_boundary))
+    else:
+        print("  Slow supplementary checks skipped. Use --slow for large-N mirror boundary replay.")
     print("=" * 88)
 
     failed = False
