@@ -11,6 +11,7 @@ The harness stays bounded to artifact-backed branches:
   1. 2D dense spent-delay, ultra-weak retained pocket
   2. 2D dense spent-delay, same card at strong field (depletion regime)
   3. 3D action-power close-slit retained barrier card
+  4. 3D dense spent-delay retained branch
 """
 
 from __future__ import annotations
@@ -27,7 +28,15 @@ from scripts.action_power_canonical_harness import (
     make_field_3d,
     propagate_3d,
 )
-from scripts.lattice_mirror_hybrid import K, generate_lattice_mirror_hybrid, propagate
+from scripts.lattice_mirror_hybrid import K, propagate
+from scripts.lattice_3d_dense_10prop import (
+    K as K_DENSE_3D,
+    detector_reads as detector_reads_3d,
+    generate as generate_dense_3d,
+    make_field as make_field_dense_3d,
+    propagate as propagate_dense_3d,
+    setup_slits as setup_slits_dense_3d,
+)
 from scripts.lattice_symmetry_unification_decision import (
     build_setup,
     aperture_for_rows,
@@ -64,7 +73,7 @@ def interpret(centroid_shift: float, near_mass_gain: float, channel_bias: float)
     if cs < 0 and ng <= 0 and cb < 0:
         return "away / depletion"
     if cs > 0 and ng <= 0:
-        return "centroid-toward but local window not enhanced"
+        return "mixed / ambiguous"
     return "mixed / ambiguous"
 
 
@@ -226,6 +235,36 @@ def three_d_power_case() -> ObservableRow:
     )
 
 
+def three_d_dense_case(mass_z: int) -> ObservableRow:
+    phys_l = 12
+    h = 1.0
+    pos, adj, nl, hw, nmap = generate_dense_3d(phys_l, h)
+    n = len(pos)
+    det = [nmap[(nl - 1, iy, iz)] for iy in range(-hw, hw + 1) for iz in range(-hw, hw + 1)]
+    _, _, _, blocked, _ = setup_slits_dense_3d(pos, nmap, nl, hw)
+    gl = 2 * nl // 3
+
+    field_zero = [0.0] * n
+    field_mass, _ = make_field_dense_3d(pos, nmap, gl, mass_z, n)
+    amps_flat = propagate_dense_3d(pos, adj, field_zero, K_DENSE_3D, blocked, n)
+    amps_mass = propagate_dense_3d(pos, adj, field_mass, K_DENSE_3D, blocked, n)
+
+    _, flat_centroid, pnear_flat, bias_flat = detector_reads_3d(amps_flat, det, pos)
+    _, mass_centroid, pnear_mass, bias_mass = detector_reads_3d(amps_mass, det, pos)
+
+    centroid_shift = mass_centroid - flat_centroid
+    near_gain = pnear_mass - pnear_flat
+    channel_bias = bias_mass - bias_flat
+    return ObservableRow(
+        label=f"retained dense z={mass_z}",
+        branch="3D dense spent-delay",
+        centroid_shift=centroid_shift,
+        near_mass_gain=near_gain,
+        channel_bias=channel_bias,
+        interpretation=interpret(centroid_shift, near_gain, channel_bias),
+    )
+
+
 def print_row(row: ObservableRow) -> None:
     print(
         f"  {row.branch:<34s}  {row.label:<22s}  "
@@ -239,6 +278,8 @@ def main() -> None:
         two_d_case("ultra-weak retained", 0.0005),
         two_d_case("strong-field depletion", 0.1),
         three_d_power_case(),
+        three_d_dense_case(3),
+        three_d_dense_case(5),
     ]
 
     print("=" * 132)

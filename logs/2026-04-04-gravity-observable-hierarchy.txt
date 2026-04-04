@@ -9,6 +9,8 @@ GRAVITY OBSERVABLE HIERARCHY
   2D dense spent-delay                ultra-weak retained     +0.162694  +0.006099  +0.888297  genuine attraction
   2D dense spent-delay                strong-field depletion  -6.538915  -0.102645  -0.796165  away / depletion
   3D power-action close-slit barrier  retained barrier card   -0.000076  -0.000000  -0.918368  away / depletion
+  3D dense spent-delay                retained dense z=3      +0.001941  +0.000766  +0.001532  genuine attraction
+  3D dense spent-delay                retained dense z=5      +0.000693  -0.000313  -0.000626  mixed / ambiguous
 
 Interpretation rules:
   - centroid>0 and P_near>0 => genuine attraction
