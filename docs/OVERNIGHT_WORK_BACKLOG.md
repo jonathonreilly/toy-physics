@@ -8,6 +8,75 @@ program. It is intentionally conservative: prefer the clearest retained
 follow-ups, keep the flagship mirror lane in front, and avoid broadening scope
 before the current bridges are tightened.
 
+External-reception calibration now lives in:
+
+- [`docs/ADVERSARIAL_INTEREST_MAP.md`](/Users/jonreilly/Projects/Physics/docs/ADVERSARIAL_INTEREST_MAP.md)
+
+That map should govern priority: prefer work that raises outside confidence,
+not just internal excitement.
+
+At the same time, this is **not** a “stop exploring” instruction. The program
+has a dual mandate:
+
+1. push the science frontier forward
+2. keep the retained story strong enough to survive outside review
+
+The highest-value tasks are the ones that do both.
+
+## Highest-leverage score improvers
+
+These are the backlog items most likely to improve the adversarial external
+interest map rather than just broaden the science search.
+
+1. **Evolving-network dynamics prototype**
+   - Best score impact:
+     - bridge to known physics
+     - broader theorist interest
+     - field-shifting theory program
+   - Deliverables:
+     - one bounded event-creation / graph-growth rule
+     - one generated-geometry demo
+     - one note separating generated structure from imposed structure
+
+2. **Continuum / asymptotic bridge**
+   - Best score impact:
+     - bridge to known physics
+     - ready-for-mainstream score
+     - landmark-breakthrough credibility
+   - Deliverables:
+     - one compact scaling note on what survives, weakens, or vanishes
+     - one retained family with a review-safe `h`-comparison artifact chain
+     - one explicit negative/positive reconciliation for any refinement claim
+
+3. **Cleaner same-family closure**
+   - Best score impact:
+     - publishability as a careful toy-model paper
+     - broader theorist interest
+     - bridge to known physics
+   - Deliverables:
+     - one retained branch where barrier-card and law-side claims are tightened
+       as much as the evidence actually allows
+     - one note explicitly separating same-harness closure from companion-harness
+       support
+
+4. **Independent robustness / reproduction**
+   - Best score impact:
+     - mainstream-readiness
+     - field-shifting program score
+   - Deliverables:
+     - one cross-family retained comparison
+     - one reproduction-friendly audit harness
+     - one note on what is robust across observables / families and what is not
+
+5. **Literature positioning + discriminator card**
+   - Best score impact:
+     - publishability
+     - broader theorist interest
+   - Deliverables:
+     - one compact comparison note against the most relevant prior frameworks
+     - one toy-level prediction / falsifier note
+     - one paper-scope note saying exactly what should and should not be claimed
+
 ## Priority order
 
 1. **Structured bridge extension**

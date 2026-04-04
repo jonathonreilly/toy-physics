@@ -6,6 +6,13 @@
 This is the fastest accurate way to enter the repo without absorbing branch
 history or commit-message narrative.
 
+Program stance for new work:
+
+- push the science frontier forward
+- keep the retained story honest enough to survive external review
+
+Do not force a trade where only one of those moves.
+
 ## Current ranking
 
 1. **Flagship:** exact mirror / exact 2D mirror / `Z2 x Z2`
