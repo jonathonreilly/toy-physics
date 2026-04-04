@@ -31,7 +31,8 @@ from scripts.action_power_canonical_harness import (
 from scripts.lattice_mirror_hybrid import K, propagate
 from scripts.lattice_3d_dense_10prop import (
     K as K_DENSE_3D,
-    detector_reads as detector_reads_3d,
+    detector_probs as detector_probs_3d,
+    detector_centroid as detector_centroid_3d,
     generate as generate_dense_3d,
     make_field as make_field_dense_3d,
     propagate as propagate_dense_3d,
@@ -249,12 +250,29 @@ def three_d_dense_case(mass_z: int) -> ObservableRow:
     amps_flat = propagate_dense_3d(pos, adj, field_zero, K_DENSE_3D, blocked, n)
     amps_mass = propagate_dense_3d(pos, adj, field_mass, K_DENSE_3D, blocked, n)
 
-    _, flat_centroid, pnear_flat, bias_flat = detector_reads_3d(amps_flat, det, pos)
-    _, mass_centroid, pnear_mass, bias_mass = detector_reads_3d(amps_mass, det, pos)
-
+    _, probs_flat = detector_probs_3d(amps_flat, det)
+    _, probs_mass = detector_probs_3d(amps_mass, det)
+    flat_centroid = detector_centroid_3d(probs_flat, det, pos)
+    mass_centroid = detector_centroid_3d(probs_mass, det, pos)
     centroid_shift = mass_centroid - flat_centroid
-    near_gain = pnear_mass - pnear_flat
-    channel_bias = bias_mass - bias_flat
+    near_gain = near_mass_window_gain(
+        probs_mass,
+        probs_flat,
+        pos,
+        det,
+        axis=2,
+        mass_coord=float(mass_z),
+        half_width=1.0,
+    )
+    channel_bias = mass_side_channel_bias(
+        probs_mass,
+        probs_flat,
+        pos,
+        det,
+        axis=2,
+        mass_coord=float(mass_z),
+        flat_centroid=flat_centroid,
+    )
     return ObservableRow(
         label=f"retained dense z={mass_z}",
         branch="3D dense spent-delay",

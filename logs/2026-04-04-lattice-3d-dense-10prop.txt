@@ -20,11 +20,11 @@
   8. Purity L=15: 1-pur=0.0740
      Exponent: N^(-1.76), R²=0.952, N_half=48
   9. k=0 control = 0.000000  [PASS]
- 10. Distance z=2: centroid=+0.003101, P_near=+0.001530, bias=+0.003060 [ATTRACTIVE]
- 10. Distance z=3: centroid=+0.001941, P_near=+0.000766, bias=+0.001532 [ATTRACTIVE]
- 10. Distance z=4: centroid=+0.001157, P_near=+0.000110, bias=+0.000220 [ATTRACTIVE]
- 10. Distance z=5: centroid=+0.000693, P_near=-0.000313, bias=-0.000626 [MIXED]
+ 10. Distance z=2: centroid=+0.003101, P_near=+0.001469, bias=+0.107097 [ATTRACTIVE]
+ 10. Distance z=3: centroid=+0.001941, P_near=+0.000374, bias=+0.176381 [ATTRACTIVE]
+ 10. Distance z=4: centroid=+0.001157, P_near=+0.000626, bias=+0.113676 [ATTRACTIVE]
+ 10. Distance z=5: centroid=+0.000693, P_near=+0.000715, bias=+0.048601 [ATTRACTIVE]
      Centroid law: b^(-1.62), R²=0.976
-     Hierarchy-aligned support: 3/4 points, b^(-1.40), R²=0.984
+     Hierarchy-aligned support: 4/4 points, b^(-1.62), R²=0.976
 
 ================================================================================

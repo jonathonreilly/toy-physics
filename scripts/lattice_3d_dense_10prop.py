@@ -120,18 +120,38 @@ def setup_slits(pos, nmap, nl, hw):
     return bi, sa, sb, blocked, bl
 
 
-def detector_reads(amps, det, pos):
-    ptot = sum(abs(amps[d])**2 for d in det)
+def detector_probs(amps, det):
+    raw = {d: abs(amps[d])**2 for d in det}
+    ptot = sum(raw.values())
     if ptot <= 1e-30:
-        return 0.0, math.nan, math.nan, math.nan
-    centroid = sum(abs(amps[d])**2 * pos[d][2] for d in det) / ptot
-    near = [d for d in det if pos[d][2] >= 0]
-    far = [d for d in det if pos[d][2] < 0]
-    p_near = sum(abs(amps[d])**2 for d in near) / ptot
-    channel_bias = (
-        sum(abs(amps[d])**2 for d in near) - sum(abs(amps[d])**2 for d in far)
-    ) / ptot
-    return ptot, centroid, p_near, channel_bias
+        return 0.0, {d: 0.0 for d in det}
+    return ptot, {d: p / ptot for d, p in raw.items()}
+
+
+def detector_centroid(probs, det, pos):
+    return sum(probs[d] * pos[d][2] for d in det)
+
+
+def near_mass_window_gain(probs_mass, probs_flat, det, pos, mass_z, half_width=1.0):
+    gain = 0.0
+    for d in det:
+        if abs(pos[d][2] - mass_z) <= half_width:
+            gain += probs_mass[d] - probs_flat[d]
+    return gain
+
+
+def mass_side_channel_bias(probs_mass, probs_flat, det, pos, mass_z, flat_centroid):
+    ref = mass_z - flat_centroid
+    if abs(ref) <= 1e-12:
+        return math.nan
+    numer = 0.0
+    denom = 0.0
+    for d in det:
+        side = 1.0 if (pos[d][2] - flat_centroid) * ref >= 0 else -1.0
+        delta = probs_mass[d] - probs_flat[d]
+        numer += delta * side
+        denom += abs(delta)
+    return numer / denom if denom > 1e-30 else math.nan
 
 
 def classify_sign(delta_centroid, delta_pnear, delta_bias):
@@ -160,7 +180,8 @@ def main():
     print()
 
     af = propagate(pos, adj, field_f, K, blocked, n)
-    pf, zf, pnear_f, bias_f = detector_reads(af, det, pos)
+    pf, probs_flat = detector_probs(af, det)
+    zf = detector_centroid(probs_flat, det, pos)
 
     # 1. Born
     upper = sorted([i for i in bi if pos[i][1] > 1], key=lambda i: pos[i][1])
@@ -203,8 +224,10 @@ def main():
     field_k0, _ = make_field(pos, nmap, gl, 3, n)
     af0 = propagate(pos, adj, field_f, 0.0, blocked, n)
     am0 = propagate(pos, adj, field_k0, 0.0, blocked, n)
-    _, zf0, pnear_f0, bias_f0 = detector_reads(af0, det, pos)
-    _, zm0, pnear_m0, bias_m0 = detector_reads(am0, det, pos)
+    _, probs_f0 = detector_probs(af0, det)
+    _, probs_m0 = detector_probs(am0, det)
+    zf0 = detector_centroid(probs_f0, det, pos)
+    zm0 = detector_centroid(probs_m0, det, pos)
     k0_delta = zm0 - zf0
     print(f"  3. k=0 = {k0_delta:.6f}  [{'PASS' if abs(k0_delta) < 1e-12 else 'FAIL'}]")
 
@@ -217,7 +240,8 @@ def main():
         am = propagate(pos, adj, field_s, K, blocked, n)
         pm = sum(abs(am[d])**2 for d in det)
         if pm > 1e-30:
-            _, zm, _, _ = detector_reads(am, det, pos)
+            _, probs_mass = detector_probs(am, det)
+            zm = detector_centroid(probs_mass, det, pos)
             delta = zm - zf
             if delta > 0:
                 m_data.append(s); g_data.append(delta)
@@ -242,7 +266,8 @@ def main():
         gl2 = 2 * nl2 // 3
         ff2 = [0.0] * n2
         af2 = propagate(p2, a2, ff2, K, bk2, n2)
-        pf2, zf2, _, _ = detector_reads(af2, d2, p2)
+        pf2, probs_flat2 = detector_probs(af2, d2)
+        zf2 = detector_centroid(probs_flat2, d2, p2)
         if pf2 < 1e-30:
             continue
         fm2, _ = [0.0]*n2, None
@@ -255,7 +280,8 @@ def main():
             pi = p2[i]
             fm2[i] = STRENGTH / (math.sqrt((pi[0]-mx2)**2+(pi[1]-my2)**2+(pi[2]-mz2)**2) + 0.1)
         am2 = propagate(p2, a2, fm2, K, bk2, n2)
-        pm2, zm2, _, _ = detector_reads(am2, d2, p2)
+        pm2, probs_mass2 = detector_probs(am2, d2)
+        zm2 = detector_centroid(probs_mass2, d2, p2)
         if pm2 > 1e-30:
             gravs[pl] = zm2 - zf2
     grows = False
@@ -391,7 +417,9 @@ def main():
         print(f"     Exponent: N^({slope:.2f}), R²={r2:.3f}, N_half={n_half:.0f}")
 
     # 9. k=0 control
-    k0_hierarchy = max(abs(k0_delta), abs(pnear_m0 - pnear_f0), abs(bias_m0 - bias_f0))
+    k0_near = near_mass_window_gain(probs_m0, probs_f0, det, pos, 3, half_width=1.0)
+    k0_bias = mass_side_channel_bias(probs_m0, probs_f0, det, pos, 3, zf0)
+    k0_hierarchy = max(abs(k0_delta), abs(k0_near), abs(k0_bias))
     print(f"  9. k=0 control = {k0_hierarchy:.6f}  [{'PASS' if k0_hierarchy < 1e-12 else 'FAIL'}]")
 
     # 10. Distance law
@@ -400,11 +428,12 @@ def main():
     for z_mass in [2, 3, 4, 5]:
         field_m, _ = make_field(pos, nmap, gl, z_mass, n)
         am = propagate(pos, adj, field_m, K, blocked, n)
-        pm, zm, pnear_m, bias_m = detector_reads(am, det, pos)
+        pm, probs_mass = detector_probs(am, det)
         if pm > 1e-30:
+            zm = detector_centroid(probs_mass, det, pos)
             delta = zm - zf
-            delta_pnear = pnear_m - pnear_f
-            delta_bias = bias_m - bias_f
+            delta_pnear = near_mass_window_gain(probs_mass, probs_flat, det, pos, z_mass, half_width=1.0)
+            delta_bias = mass_side_channel_bias(probs_mass, probs_flat, det, pos, z_mass, zf)
             sign = classify_sign(delta, delta_pnear, delta_bias)
             print(
                 f" 10. Distance z={z_mass}: centroid={delta:+.6f}, "
