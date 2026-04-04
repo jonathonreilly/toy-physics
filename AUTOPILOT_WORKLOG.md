@@ -1,3 +1,71 @@
+## 2026-04-04 — Coordination reconciled to synced spent-delay distance-law head
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed:
+  - no detached science child was running
+- the canonical repo is synced again:
+  - `main` and `origin/main` both point to `79f70e2` (`feat(theory): distance exponent ~-0.5 is the spent-delay prediction, not -2`)
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+- the tracked coordination state had drifted behind the real synced head again:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` still described the older gravity-observable / `8445218` janitor snapshot rather than the current theory / bridge head
+- the canonical checkout also carried unrelated modified docs / scripts in the continuum and reproduction-audit lanes, so this loop stayed on a bounded integrity repair instead of overlapping that work
+
+### What changed
+- acquired the `physics-science` lock and reran the protocol reconciliation against `/Users/jonreilly/Projects/Physics`
+- confirmed the canonical repo state before new science:
+  - `git status --short --branch` showed `main...origin/main` with unrelated dirty continuum / reproduction-audit files but no branch divergence
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 12` put `79f70e2` at `HEAD`
+- inspected the landed synced payload instead of trusting commit messages alone:
+  - `79f70e2` adds `.claude/science/derivations/distance-exponent-analysis-2026-04-04.md`
+  - `d1e6eb2` adds `/Users/jonreilly/Projects/Physics/docs/STRUCTURED_CHOKEPOINT_BRIDGE_EXTENSION_NOTE.md` plus its script / log pair
+  - `374a0df` updates `README.md`, `/Users/jonreilly/Projects/Physics/docs/CONTINUUM_BRIDGE_NOTE.md`, `/Users/jonreilly/Projects/Physics/docs/PREDICTION_CARD.md`, `/Users/jonreilly/Projects/Physics/docs/START_HERE.md`, `/Users/jonreilly/Projects/Physics/docs/UNIFIED_PROGRAM_NOTE.md`, and the imported kernel scripts
+  - `7984a47` freezes the 3D `1/L^2` canonical card script and `700f263` adds the 3D inverse-square tail statistics lane
+- read the committed theory / note artifacts directly:
+  - `.claude/science/derivations/distance-exponent-analysis-2026-04-04.md`
+  - `/Users/jonreilly/Projects/Physics/docs/STRUCTURED_CHOKEPOINT_BRIDGE_EXTENSION_NOTE.md`
+  - committed `HEAD` versions of `/Users/jonreilly/Projects/Physics/docs/PREDICTION_CARD.md` and `/Users/jonreilly/Projects/Physics/docs/CONTINUUM_BRIDGE_NOTE.md`
+- ran `python3 /Users/jonreilly/Projects/Physics/scripts/base_confidence_check.py` because the synced head since the last science handoff landed multiple scripts and benchmark-facing notes
+  - benchmark regression audit, mode-only candidate isolation, sparse bridge addback visibility, sparse fallback access labels, live mechanism-split driver, and feature registry alignment all passed
+- left `/Users/jonreilly/Projects/Physics/README.md` untouched because the current synced head already carries the theory/card updates and this loop only repaired coordination metadata
+- refreshed:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Strongest confirmed conclusion
+The repo is healthy and synced; the actual integrity problem was stale coordination metadata again. The current synced head advances the honest distance-law story, but it does **not** justify reopening a fresh continuum or decoherence architecture search from this loop.
+- `79f70e2`'s committed derivation file makes the current spent-delay claim explicit:
+  - the weak-field action naturally explains the measured `F ∝ M^0.5` scaling
+  - the current 3D lattice distance exponent is still only near `-0.5`
+  - the document explicitly marks the gap to the single-ray `-1` expectation as unresolved, so the old `-2` target claim is no longer the honest repo-facing prediction
+- `/Users/jonreilly/Projects/Physics/docs/CONTINUUM_BRIDGE_NOTE.md` and `/Users/jonreilly/Projects/Physics/docs/PREDICTION_CARD.md` now already encode that refined story in the tracked docs:
+  - lattice distance law is improving under refinement, but the retained falsifier is now that the exponent could plateau away from Newtonian behavior
+  - the kernel / continuum bridge remains exploratory and architecture-dependent
+- `/Users/jonreilly/Projects/Physics/docs/STRUCTURED_CHOKEPOINT_BRIDGE_EXTENSION_NOTE.md` adds one real bounded positive result on a non-overlapping side lane:
+  - the retained structured chokepoint pocket widens cleanly to `N = 100`
+  - Born stays at machine precision, `k = 0` stays pinned to zero, and gravity remains positive
+- `python3 /Users/jonreilly/Projects/Physics/scripts/base_confidence_check.py` passed on the settled synced head, so there is no fresh regression signal forcing a rollback or emergency follow-up
+- with Claude still owning the decoherence frontier, the highest-signal non-overlapping next science lane returns to the fixed directional-measure geometry-normalized gravity-`b` seam
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- keep the retained directional propagator fixed
+- return to one bounded geometry-normalized gravity-`b` study on the directional-measure thread
+- start from:
+  - `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-03-directional-b-continuous-density-midlayer-holdout.txt`
+- test one occupancy-aware or geometry-normalized diagnostic that addresses the six frozen 4-NN false negatives on the midlayer sentinel without reopening decoherence or wider continuum architecture work
+- keep avoiding the unrelated dirty continuum / reproduction-audit files already present in the canonical checkout
+
+### First concrete action
+- reopen `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- compare the six frozen 4-NN misses in `/Users/jonreilly/Projects/Physics/logs/2026-04-03-directional-b-continuous-density-midlayer-holdout.txt` against `mu`, `local_target_count`, `expected_target_count_4nn`, and simple occupancy-normalized `b` diagnostics before adding any new family or broader denominator search
+
 ## 2026-04-04 — Coordination corrected to synced gravity observable-hierarchy head
 
 ### Current state
