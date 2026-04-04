@@ -32,8 +32,9 @@ history or commit-message narrative.
   - canonical mirror-harness readout survives a bounded structured-placement slice
 - **Action-power is a real exploratory branch, not a promoted replacement.**
   - 2D same-harness comparison exists
-  - 3D no-barrier distance / mass-response signals are promising
-  - full 3D barrier card is not retained yet
+  - 3D close-slit barrier Born / MI / decoherence card is now retained
+  - 3D distance / mass-law behavior remains a no-barrier companion
+  - 3D barrier gravity sign is still unresolved
 
 ## What is bounded or still open
 
@@ -63,5 +64,5 @@ history or commit-message narrative.
 ## Best next pickup points
 
 1. Extend the structured chokepoint bridge without changing the canonical mirror readout.
-2. Fix the 3D action-power barrier signal issue so Born / MI / decoherence can be checked on the same family.
+2. Test whether the 3D action-power barrier card can recover gravity toward mass instead of weak beam-depletion.
 3. Keep NN continuum claims narrow unless a new artifact chain truly resolves the current RG / refinement caveats.

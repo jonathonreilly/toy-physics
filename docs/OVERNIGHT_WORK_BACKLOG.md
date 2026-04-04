@@ -19,14 +19,15 @@ before the current bridges are tightened.
      - one clear decision on whether the bridge widens beyond the current
        narrow slice
 
-2. **Action-power 3D barrier signal**
+2. **Action-power 3D barrier gravity / robustness**
    - Treat the action-power lane as a new branch with no inherited claims.
-   - Focus only on the blocker: getting enough 3D barrier signal to measure
-     Born / MI / decoherence on the same family.
+   - The 3D barrier signal issue is now improved enough to freeze a card.
+   - Focus next on the real blocker: gravity sign and nearby-geometry
+     robustness.
    - Deliverables:
-     - one canonical 3D barrier harness script/log/note
-     - one explicit pass/fail on whether the 3D power branch can support a
-       full card instead of only no-barrier properties
+     - one narrow follow-up around the retained 3D close-slit card
+     - one explicit pass/fail on whether the 3D power branch can recover
+       attraction toward mass without losing the barrier card
 
 3. **NN continuum hardening**
    - Keep the NN story narrow and artifact-backed.

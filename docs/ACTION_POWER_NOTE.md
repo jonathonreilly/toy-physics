@@ -1,7 +1,7 @@
 # Action Power Branch: Honest Status
 
 **Date:** 2026-04-04
-**Status:** Interesting but incomplete. Two properties harness-validated on 3D. Full card needs work.
+**Status:** bounded axiom-fork branch with a retained 3D barrier card and a 3D no-barrier law companion
 
 ## What this is
 
@@ -26,36 +26,45 @@ spent-delay flagship.
 | Distance | -1.33 (R²=1.0) | -2.90 (R²=1.0) |
 | F∝M | 0.64 | **0.95** |
 
-### 3D NN lattice (canonical harness, no-barrier properties only)
+### 3D NN lattice: close-slit barrier card (`L = 12`, `W = 6`)
 
 | Property | Spent-delay | Power p=0.5 |
 |----------|------------|-------------|
-| Distance | -0.66 (R²=0.96) | **-1.82 (R²=0.93)** |
-| F∝M | 0.54 | **0.99** |
-| Born | (not yet) | (no signal through barrier) |
-| MI | (not yet) | (no signal through barrier) |
+| Born | `4.24e-16` | **`2.63e-16`** |
+| k=0 | `0.0` | `0.0` |
+| MI | `0.446` | **`0.671`** |
+| d_TV | `0.676` | **`0.812`** |
+| 1-pur | **`0.449`** | `0.425` |
+| Gravity | `-0.0113` (AWAY) | `-0.000076` (AWAY) |
 
-## 3D Joint Card (L=12, W=6, close-together slits)
+Barrier geometry:
 
-| Property | Value | Status |
-|----------|-------|--------|
-| Born | 2.28e-16 | ✅ MACHINE PRECISION |
-| k=0 | 0.000000 | ✅ |
-| MI | 0.445 bits | ✅ |
-| d_TV | 0.650 | ✅ |
-| Decoherence | 30.8% | ✅ |
-| Distance | b^(-1.82), R²=0.93 | ✅ (1/b², no-barrier) |
-| F∝M | 0.99 | ✅ (linear, no-barrier) |
+- slit A: `(y, z) = (2, 0)`
+- slit B: `(y, z) = (-2, 0)`
+- Born-only third slit C: `(y, z) = (0, 1)`
+- detector: full last layer
+- MI / `d_TV` / purity use the same close two-slit barrier card
+- Born uses the same barrier plane with a genuine third slit and nonzero signal
 
-All seven properties on one graph family with one propagator.
-Born verified with genuine three-slit signal (close slits at
-y=1, y=-1, y=0/z=1 near beam center).
+### 3D NN lattice: no-barrier law companion on the same family
+
+| Property | Spent-delay | Power p=0.5 |
+|----------|------------|-------------|
+| Distance exponent | `+0.74` (`R² = 0.733`) | **`-1.84` (`R² = 0.880`)** |
+| F∝M alpha | `0.46` | **`1.00`** |
+
+So the 3D branch now has:
+
+- a **real barrier card** for Born / `k=0` / MI / `d_TV` / decoherence
+- a **real no-barrier companion** for distance law and mass response
+- but **not** a same-harness 3D gravity-toward-mass card
 
 ## What is NOT validated
 
-- Gravity toward mass (both actions give AWAY on lattice with barriers)
+- Gravity toward mass on the 3D barrier card
+- A same-harness 3D card that includes Born, MI/decoherence, and the distance / mass laws all at once
 - Continuum limit with power action
-- Multi-spacing convergence
+- Multi-spacing convergence / robustness
 
 ## Dimensional interpretation
 
@@ -69,28 +78,31 @@ and mass scaling. On the same NN lattice architecture:
 | 3 | 0.5 (power) | **-1.82** | **0.99** |
 | 3 | spent-delay | -0.66 | 0.54 |
 
-The power action on 3D gives exponent -1.82, consistent with
-1/b² (Newtonian gravity in 3 spatial dimensions). This is the
-branch's strongest claim, but it is from a no-barrier harness,
-not a full joint card.
+The power action on 3D gives exponent `-1.84` on the retained no-barrier
+companion, consistent with a `1/b²`-like falloff on the tested window, while
+also giving nearly linear mass response (`alpha = 1.00`).
 
 ## Honest assessment
 
-The power action branch has two genuinely strong results on 3D:
-1. Distance ≈ 1/b² (R²=0.93, robust across field strengths)
-2. F∝M ≈ 1.0 (R²=0.99, nearly perfect linear mass scaling)
+The branch is stronger than it was before, but the honest read is still
+bounded:
 
-These are the two properties the spent-delay flagship DOESN'T
-achieve on the lattice. The power action is a complementary
-architecture, not a replacement.
+1. the 3D close-slit barrier card is now real and Born-clean
+2. the 3D no-barrier power-action companion has the best current distance /
+   mass-law behavior on this branch
+3. the 3D barrier gravity sign is still wrong
 
-The branch is incomplete because the barrier setup (needed for
-decoherence and Born) doesn't work on the 3D NN lattice yet.
-This is a graph density issue, not an action formula issue.
+So the action-power branch is now a real complementary 3D lane, not yet a
+replacement for the spent-delay flagship and not yet a full same-harness
+Newtonian closure.
 
 ## Scripts
 
 | Script | What it tests |
 |--------|---------------|
-| action_power_canonical_harness.py | Full 2D harness, both actions |
-| (inline 3D tests) | 3D no-barrier distance + F∝M |
+| action_power_canonical_harness.py | 2D same-harness comparison plus 3D close-slit barrier card and 3D no-barrier companion |
+
+## Artifact chain
+
+- [`scripts/action_power_canonical_harness.py`](/Users/jonreilly/Projects/Physics/scripts/action_power_canonical_harness.py)
+- [`logs/2026-04-04-action-power-canonical-harness.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-04-action-power-canonical-harness.txt)

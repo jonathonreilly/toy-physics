@@ -118,8 +118,9 @@ This is an explicit **axiom fork**, not an extension of the spent-delay
 flagship.
 
 - the same-harness 2D comparison is real
-- the 3D no-barrier distance / mass-response result is promising
-- the 3D barrier card is not retained yet
+- the 3D close-slit barrier card is now retained for Born / MI / decoherence
+- the 3D no-barrier distance / mass-response companion is promising
+- the 3D barrier gravity sign is still unresolved
 - no flagship claims are inherited automatically
 
 Primary artifact:
