@@ -45,3 +45,25 @@ This is a mathematical property of the linear propagator.
 
 The ONLY difference is the mass/distance scaling. Everything else
 is the same because decoherence and Born don't depend on the action.
+
+## Update: Dimensional field profile (2026-04-04)
+
+The field profile must also scale with dimension:
+  f = s / r^(d-2) where d = number of spatial dimensions
+
+| d | f(r) | Newtonian deflection | Measured tail |
+|---|------|---------------------|---------------|
+| 3 | s/r | 1/b | b^(-0.93) |
+| 4 | s/r² | 1/b² | b^(-0.29) (early, W=7) |
+
+The 4D tail is at early stage (3-point fit, small W). The 3D
+measurement at the same stage was -0.35, which later improved
+to -0.93 at W=10. The 4D tail should steepen similarly.
+
+The complete dimensional prescription:
+  Kernel: 1/L^(d-1)
+  Field: s/r^(d-2)
+  Action: S = L(1-f)
+  Measure: h^(d-1)
+
+All four ingredients scale with dimension d.
