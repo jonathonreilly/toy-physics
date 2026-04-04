@@ -1,13 +1,18 @@
 # Decoherence is Action-Independent
 
 **Date:** 2026-04-04
-**Status:** Confirmed — exact numerical identity across actions
+**Status:** Confirmed on the frozen 3D `1/L^2` replay — exact numerical identity across actions
 
 ## Finding
 
-On the 3D 1/L^2 lattice, the decoherence observables (d_TV, MI,
-CL bath purity, S_norm) are EXACTLY IDENTICAL for the valley-linear
-and spent-delay actions at every tested lattice spacing.
+On the frozen 3D `1/L^2` lattice replay, the decoherence observables
+(d_TV, MI, CL bath purity, S_norm) are EXACTLY IDENTICAL for the
+valley-linear and spent-delay actions at every tested lattice spacing.
+
+Primary artifact:
+
+- [`scripts/decoherence_action_independence.py`](/Users/jonreilly/Projects/Physics/scripts/decoherence_action_independence.py)
+- [`logs/2026-04-04-decoherence-action-independence.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-04-decoherence-action-independence.txt)
 
 | h | d_TV (both) | MI (both) | Decoh (both) | S_norm (both) |
 |---|-------------|-----------|--------------|---------------|
@@ -32,15 +37,17 @@ The model cleanly separates:
 - **Born rule**: linearity-dependent (both actions are linear)
 
 This means the action can be optimized for gravity without affecting
-decoherence. The valley-linear action gives Newtonian gravity AND
-the same decoherence as spent-delay — no trade-off.
+decoherence on the tested family. The valley-linear action gives Newtonian
+gravity AND the same decoherence as spent-delay here, so there is no
+gravity/decoherence trade-off on the frozen replay.
 
 ## Convergence
 
-The decoherence converges as h → 0:
+The decoherence converges as h → 0 on the tested family:
 - d_TV: 0.63 → 0.79 → 0.83 (approaching 1.0)
 - MI: 0.41 → 0.59 → 0.65 (approaching ~0.7?)
 - Decoherence: 30% → 49% → 50% (converged to 50%)
 - S_norm: 0.39 → 0.70 → 0.81 (approaching 1.0)
 
-This convergence is a property of the LATTICE, not the action.
+This convergence is a property of the LATTICE, not the action, on the
+frozen 3D `1/L^2` branch.
