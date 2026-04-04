@@ -34,14 +34,14 @@ The best next steps are the ones that improve both at once.
 | category | score | read |
 |---|---:|---|
 | Toy-model mechanism interest | `9.5/10` | high intrinsic curiosity value |
-| Foundations / complex-systems / network-dynamics interest | `9.1/10` | real likely interest in the right subcommunities |
-| Broader theorist interest | `7.4/10` | selective interest, with stronger review hardening than before |
-| Bridge to known physics | `7.2/10` | suggestive but still branch-dependent and under-theorized |
-| Publishable as a careful computational toy-model paper | `8.1/10` | plausible with narrow framing and increasingly review-safe scaffolding |
-| Publishable as a foundational-physics breakthrough claim | `3.8/10` | too early for that framing |
-| Ready for top-tier mainstream physics claims | `2.6/10` | still far below the required bar |
-| Field-shifting theory program | `5.1/10` | stronger than before, but still not at forced-engagement level |
-| Landmark foundational breakthrough | `3.1/10` | current evidence base is still too branch-sensitive |
+| Foundations / complex-systems / network-dynamics interest | `9.2/10` | real likely interest in the right subcommunities |
+| Broader theorist interest | `7.5/10` | selective interest, with better bounded replays and cleaner review scaffolding |
+| Bridge to known physics | `7.4/10` | stronger than before, but still branch-dependent and under-theorized |
+| Publishable as a careful computational toy-model paper | `8.3/10` | increasingly plausible with bounded replay chains and tighter scope control |
+| Publishable as a foundational-physics breakthrough claim | `4.0/10` | still too early for that framing |
+| Ready for top-tier mainstream physics claims | `2.7/10` | improved credibility, but still far below the required bar |
+| Field-shifting theory program | `5.3/10` | stronger than before, but still not at forced-engagement level |
+| Landmark foundational breakthrough | `3.2/10` | current evidence base is improving, but still too branch-sensitive |
 | Nobel-scale breakthrough | `0.4/10` | not a realistic present-tense read |
 
 ## Why this map is lower than the old internal map
@@ -75,6 +75,12 @@ The main upward pressures since the first adversarial cut are:
   readers look for
 - the regularity-crossover replay now has a frozen script/log/note chain, which
   trims one more “chat-only” branch from the story
+- the valley-linear lane now has:
+  - a bounded same-family comparison
+  - a bounded reproduction replay
+  - a frozen robustness sweep on the tested 3D ordered-lattice family
+- Gate B now has a real bounded prototype note with a generated-geometry
+  signal, even though it remains a negative / incomplete closure attempt
 - the imported `1/L^(d-1)` kernel lane is now scientifically more interesting
   and does live on `main`, but it is still **bounded / unreconciled** rather
   than promoted in the top-line canonical story
