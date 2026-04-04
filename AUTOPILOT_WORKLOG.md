@@ -1,3 +1,62 @@
+## 2026-04-04 — Directional-b stencil transfer favors frozen 3-NN on the expanded sample
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed:
+  - no detached science child was running
+- the canonical repo started this loop synced at `7792deb` (`docs(review): harden literature and discriminator scope`)
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+- the tracked coordination state had drifted behind the real synced head again:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` still described the older `8617cda` reproduction-audit head rather than the current `7792deb` review / bridge chain
+- this loop stayed on one bounded non-overlapping science step on the fixed directional-measure gravity-`b` seam
+  - no fresh decoherence or wider continuum architecture search was started
+
+### What changed
+- reread the active directional-`b` seam inputs:
+  - `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-03-directional-b-continuous-density-midlayer-holdout.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-01-directional-b-geometry-normalized-compare.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-01-directional-b-h-over-b-crossover-card.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-01-directional-b-overlap-onset-midlayer-sampling-holdout.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_progress_summary.md`
+- added `/Users/jonreilly/Projects/Physics/scripts/directional_b_density_stencil_transfer.py`
+- generated `/Users/jonreilly/Projects/Physics/logs/2026-04-04-directional-b-density-stencil-transfer.txt`
+- added `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_DENSITY_STENCIL_NOTE.md`
+- updated `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- the new bounded diagnostic freezes the original dense-reference `3-NN` and `4-NN` density-load thresholds, then applies them without refit to the tree control and the center-biased midlayer sentinel
+- the frozen-stencil results are now sharper:
+  - reference+tree still prefers `4-NN`: `0.9206` vs `0.8889`
+  - the midlayer sentinel flips that preference to `3-NN`: `0.9500` vs `0.8500`
+  - on the current extended sample, `3-NN` now beats `4-NN`: `0.9126` vs `0.8932`
+  - `5/6` frozen `4-NN` false negatives are one-sided low-occupancy target bands, and frozen `3-NN` rescues `4/6` of them
+- left `/Users/jonreilly/Projects/Physics/README.md` untouched because this is a bounded continuous-law refinement on the retained directional lane, not a new flagship program conclusion
+
+### Strongest confirmed conclusion
+The current midlayer false-negative problem is a fourth-neighbor stencil issue, not evidence that the retained geometry-normalized directional-`b` hierarchy failed. Occupancy shortage remains the portable coarse bridge, but on the current expanded sample the frozen `3-NN` density law is now the better smooth candidate.
+- `4-NN` remains the cleaner fit on the original dense reference sample plus tree control
+- once the center-biased midlayer sentinel is included, `3-NN` transfers better than `4-NN` without refitting thresholds
+- the miss mode is mostly one-sided low-occupancy support where the fourth neighbor is the first point to jump across the target-plane gap and `r4` therefore overstates same-side support
+- so the next bounded continuous-law step should start from `3-NN` or another equally local occupancy-aware correction, not from a broader denominator search
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- `/Users/jonreilly/Projects/Physics/scripts/directional_b_density_stencil_transfer.py`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-04-directional-b-density-stencil-transfer.txt`
+- `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_DENSITY_STENCIL_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+
+### Exact next step
+- keep the retained directional propagator and occupancy-first overlap statement fixed
+- reopen `/Users/jonreilly/Projects/Physics/logs/2026-04-04-directional-b-density-stencil-transfer.txt`
+- inspect the two surviving frozen `3-NN` misses only
+- test one equally local occupancy-aware correction only if it explains those two residual rows without hurting the existing reference+tree read or reopening a wider denominator search
+
+### First concrete action
+- inspect the unrescued rows in `/Users/jonreilly/Projects/Physics/logs/2026-04-04-directional-b-density-stencil-transfer.txt`:
+  - `midgamma1.4-m3`, `N = 25`, `seed = 4`
+  - `midgamma1.4-m5`, `N = 25`, `seed = 7`
+
 ## 2026-04-04 — Coordination corrected to synced reproduction-audit head
 
 ### Current state
