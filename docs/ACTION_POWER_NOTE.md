@@ -35,10 +35,24 @@ spent-delay flagship.
 | Born | (not yet) | (no signal through barrier) |
 | MI | (not yet) | (no signal through barrier) |
 
+## 3D Joint Card (L=12, W=6, close-together slits)
+
+| Property | Value | Status |
+|----------|-------|--------|
+| Born | 2.28e-16 | ✅ MACHINE PRECISION |
+| k=0 | 0.000000 | ✅ |
+| MI | 0.445 bits | ✅ |
+| d_TV | 0.650 | ✅ |
+| Decoherence | 30.8% | ✅ |
+| Distance | b^(-1.82), R²=0.93 | ✅ (1/b², no-barrier) |
+| F∝M | 0.99 | ✅ (linear, no-barrier) |
+
+All seven properties on one graph family with one propagator.
+Born verified with genuine three-slit signal (close slits at
+y=1, y=-1, y=0/z=1 near beam center).
+
 ## What is NOT validated
 
-- Born on 3D (barrier doesn't transmit enough signal)
-- MI/decoherence on 3D (same issue)
 - Gravity toward mass (both actions give AWAY on lattice with barriers)
 - Continuum limit with power action
 - Multi-spacing convergence
