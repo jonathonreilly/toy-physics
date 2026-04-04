@@ -11,6 +11,7 @@ before the current bridges are tightened.
 External-reception calibration now lives in:
 
 - [`docs/ADVERSARIAL_INTEREST_MAP.md`](/Users/jonreilly/Projects/Physics/docs/ADVERSARIAL_INTEREST_MAP.md)
+- [`docs/PHYSICS_FIRST_ATTACK_PLAN.md`](/Users/jonreilly/Projects/Physics/docs/PHYSICS_FIRST_ATTACK_PLAN.md)
 
 That map should govern priority: prefer work that raises outside confidence,
 not just internal excitement.
@@ -38,6 +39,10 @@ interest map rather than just broaden the science search.
      - one generated-geometry demo
      - one note separating generated structure from imposed structure
 
+   - The physics-first plan now treats this as the top physics batch.
+   - Use the strongest generated-geometry candidate that can be frozen with a
+     script/log/note chain, not broad search sprawl.
+
 2. **Continuum / asymptotic bridge**
    - Best score impact:
      - bridge to known physics
@@ -47,6 +52,9 @@ interest map rather than just broaden the science search.
      - one compact scaling note on what survives, weakens, or vanishes
      - one retained family with a review-safe `h`-comparison artifact chain
      - one explicit negative/positive reconciliation for any refinement claim
+
+   - The physics-first plan treats this as the second physics batch, after the
+     generated-geometry closure attempt.
 
 3. **Cleaner same-family closure**
    - Best score impact:
@@ -58,6 +66,9 @@ interest map rather than just broaden the science search.
        as much as the evidence actually allows
      - one note explicitly separating same-harness closure from companion-harness
        support
+
+   - The physics-first plan wants this to target the strongest retained 3D
+     valley-linear family, not a fresh branch.
 
 4. **Independent robustness / reproduction**
    - Best score impact:

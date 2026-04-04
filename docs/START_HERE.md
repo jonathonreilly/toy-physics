@@ -114,6 +114,7 @@ Do not force a trade where only one of those moves.
 - [`docs/EVOLVING_NETWORK_PROTOTYPE_V4_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/EVOLVING_NETWORK_PROTOTYPE_V4_NOTE.md)
 - [`docs/EVOLVING_NETWORK_PROTOTYPE_V5_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/EVOLVING_NETWORK_PROTOTYPE_V5_NOTE.md)
 - [`docs/EVOLVING_NETWORK_PROTOTYPE_V6_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/EVOLVING_NETWORK_PROTOTYPE_V6_NOTE.md)
+- [`docs/PHYSICS_FIRST_ATTACK_PLAN.md`](/Users/jonreilly/Projects/Physics/docs/PHYSICS_FIRST_ATTACK_PLAN.md)
 - [`docs/GATE_B_CONNECTIVITY_TOLERANCE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_CONNECTIVITY_TOLERANCE_NOTE.md)
 - [`docs/DECOHERENCE_ACTION_INDEPENDENCE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/DECOHERENCE_ACTION_INDEPENDENCE_NOTE.md)
 - [`docs/GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md)
