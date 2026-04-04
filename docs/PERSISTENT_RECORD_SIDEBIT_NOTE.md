@@ -1,0 +1,101 @@
+# Persistent Record Side-Bit Note
+
+**Date:** 2026-04-03  
+**Status:** bounded refinement tested
+
+## Purpose
+
+Follow up the persistent-record overlap-kernel pilot with the smallest useful
+record-geometry refinement:
+
+- keep the same mesoscopic worldtube-count record cells
+- add one extra persistent packet-side / slit-side marker bit
+
+The goal was to test the next sharper question from the matched comparison:
+
+- can a slightly richer persistent record geometry improve the bounded
+  comparison against node-label **without** giving up the residual
+  branch-overlap structure?
+
+## Implementation
+
+The existing persistent-record script now supports:
+
+- [persistent_record_overlap_kernel.py](/Users/jonreilly/Projects/Physics/scripts/persistent_record_overlap_kernel.py)
+  with `--side-bit`
+
+The side bit is implemented as one additional persistent marker cell:
+
+- written on the first recorded mass interaction
+- chosen from the incoming packet side relative to the center line
+- retained alongside the existing worldtube-count record state
+
+The matched harness now also supports side-bit variants:
+
+- [persistent_record_matched_compare.py](/Users/jonreilly/Projects/Physics/scripts/persistent_record_matched_compare.py)
+
+Relevant log:
+
+- [2026-04-03-persistent-record-sidebit-matched-compare.txt](/Users/jonreilly/Projects/Physics/logs/2026-04-03-persistent-record-sidebit-matched-compare.txt)
+
+## Matched result (`2` seeds, `gamma = 1.0`)
+
+| N | node | persistent trace | persistent `gamma=1.0` | side-bit trace | side-bit `gamma=1.0` |
+|---|---:|---:|---:|---:|---:|
+| 8  | 0.7971 | 0.8317 | 0.8672 | 0.8323 | 0.8644 |
+| 12 | 0.5128 | 0.5349 | 0.6099 | 0.5284 | 0.5685 |
+| 18 | 0.7121 | 0.7511 | 0.7314 | 0.7702 | 0.7270 |
+
+Lower purity is better.
+
+Mean detector-sector counts:
+
+- base persistent trace / soft: `8.5, 30.0, 91.5`
+- side-bit trace / soft: `9.5, 37.5, 121.0`
+
+## What changed
+
+### Positive
+
+- the side bit improves the **soft-overlap** persistent lane on the bounded
+  slice:
+  - `N = 12`: `0.6099 -> 0.5685`
+  - `N = 18`: `0.7314 -> 0.7270`
+- so the extra side memory is not a null perturbation; it does add useful
+  branch discrimination while keeping the overlap-kernel architecture intact
+
+### Constraint
+
+- the side bit does **not** beat node-label on raw purity
+- the side bit does **not** improve the exact-trace lane uniformly:
+  - it helps at `N = 12`
+  - but worsens `N = 18` trace purity (`0.7511 -> 0.7702`)
+
+## Safe read
+
+The bounded safe wording is:
+
+- one extra persistent packet-side bit is a **real but modest improvement** to
+  the soft-overlap persistent-record lane
+- it narrows the gap to node-label on the bounded matched slice
+- but it still does **not** produce a new winner on raw decoherence
+
+So the answer to the sharper follow-up question is:
+
+- **partly yes** for the residual-connection lane
+- **not yet** for beating node-label outright
+
+## Best next move
+
+The next bounded improvement should target not just side identity, but
+**side + local packet placement** together.
+
+The clean next test is:
+
+1. keep the worldtube counts
+2. keep the single side bit
+3. add one extra bounded packet-placement bit near the retained packet band
+4. rerun the same matched `N = 8, 12, 18` table
+
+That is now more justified than sweeping larger `N` on the current side-bit
+state alone.

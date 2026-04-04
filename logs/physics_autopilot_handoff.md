@@ -1,58 +1,66 @@
 # Physics Autopilot Handoff
 
-## 2026-04-03 18:54 America/New_York
+## 2026-04-04 07:52 America/New_York
 
 ### Seam class
-- directional-b continuous-density sentinel
-- the fixed directional-measure overlap thread stayed non-overlapping and showed that the frozen 4-NN bridge is still occupancy-first under a center-biased dense holdout rather than universally frozen
+- integrity hold on moving synced head, now settled
+- compression / order-parameter thread remains queued; dense ladder stays paused
 
 ### What this loop did
-- ran the duplicate-run guard and acquired the `physics-science` cooperative lock
-- confirmed there was no detached science child to resume
-- reconciled git in the canonical repo before new science:
-  - `git rev-list --left-right --count origin/main...main` returned `0 0`
-  - initial synced HEAD was `51e8af8` (`Merge branch 'claude/distracted-napier'`)
-- kept away from the unrelated dirty lattice, mirror, persistent-record, and gravity-design files already present in the shared checkout
-- added `/Users/jonreilly/Projects/Physics/scripts/directional_b_overlap_continuous_density_midlayer_holdout.py`
-- generated `/Users/jonreilly/Projects/Physics/logs/2026-04-03-directional-b-continuous-density-midlayer-holdout.txt`
-- froze and reapplied the retained overlap rules:
-  - counted `mass_nodes / local_target_count >= 2.5`
-  - continuous `mass_nodes / expected_target_count_4nn >= 2.7354`
-- used one adjacent dense sentinel that changes only the gravity-layer `y` sampler:
-  - middle layer uses `y = sign(u) |u|^1.4 * y_range`
-  - sizes, target `b`, support width, and overlap diagnostic stayed fixed
-- updated `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md` and `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
-- prepared one bounded science commit carrying the new directional-`b` sentinel result
+- read `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and the janitor memory target before mutation
+- checked the cooperative worker lock, found it free, and acquired `physics-janitor` for this janitor pass
+- reconciled canonical git in `/Users/jonreilly/Projects/Physics` repeatedly as the synced head moved during the loop:
+  - initial synced snapshot observed: `59ca04e`
+  - later synced ancestors observed during helper refreshes: `7750047`, `151e75f`
+  - final settled synced head at loop end: `8445218` (`Merge branch 'claude/distracted-napier'`)
+- created two bounded work-log repair commits while state was moving:
+  - `2dde4ba` (`fix(autopilot): reconcile synced lattice gravity head`)
+  - `656c115` (`fix(autopilot): correct gravity observable sync head`)
+- both janitor repair commits are now already included in the synced `8445218` history
+- inspected the latest landed payloads that mattered for confidence:
+  - `7750047` added `/Users/jonreilly/Projects/Physics/scripts/gravity_observable_hierarchy.py` plus its note/log chain
+  - `9d6e90c` added `/Users/jonreilly/Projects/Physics/scripts/lattice_3d_dense_10prop.py`
+  - `743c544` (`feat(mirror-dense): mirror HURTS decoherence on dense lattice`) returned no tracked files and is only a marker commit in-tree
+- ran `python3 /Users/jonreilly/Projects/Physics/scripts/base_confidence_check.py` after the script-backed landings and reran it once more on the settled current head
+  - benchmark regression audit, mode-only candidate isolation, sparse bridge addback visibility, sparse fallback access labels, live mechanism-split driver, and feature registry alignment all passed
+- ran the required push helper twice while the remote was still moving:
+  - both helper calls reported `status=failed`, `failure_kind=dns_failure`, and `Could not resolve host: github.com`
+  - despite those failures, later synced merges absorbed the janitor repair commits and the repo resettled to `0 0`
+- refreshed `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md` and `/Users/jonreilly/.codex/automations/physics-janitor/memory.md`
+- released the cooperative `physics-janitor` lock because no detached science child was running and no janitor cleanup remained
 
 ### Current state
 - no detached science child is running
-- canonical repo started this loop fully synced at `51e8af8`
-- the strongest new result is now logged and the directional architecture note has been narrowed accordingly
-- the shared checkout still contains unrelated modified logs plus untracked docs / scripts in the lattice, mirror, persistent-record, and gravity-design lanes; future passes should keep avoiding those files unless explicitly taking over that work
+- `main` and `origin/main` both point to `8445218`
+- `git rev-list --left-right --count origin/main...main` is `0 0`
+- the canonical checkout still carries unrelated modified logs plus untracked docs / scripts in the mirror, persistent-record, gravity-design, and structured side lanes
+- there is no remaining local-ahead janitor push backlog
+- the cooperative `physics-janitor` lock is released at loop end
 
 ### Strongest confirmed conclusion
-The frozen continuous 4-NN target-plane density law is still the sharper smooth explanation on the original dense pair plus tree control, but it is not yet a fully portable frozen replacement for the counted bridge across dense sampler changes.
-- on the one-notch center-biased midlayer sentinel:
-  - counted source-load rule transfers at `9/3/1/27`, accuracy `0.9000`
-  - frozen 4-NN rule transfers at `4/0/6/30`, accuracy `0.8500`
-  - the 4-NN rule keeps zero false positives but misses six overlap rows
-- on the extended sample including the old dense pair, tree control, and new sentinel:
-  - counted rule reaches `32/12/2/57`, accuracy `0.8641`
-  - frozen 4-NN reaches `25/2/9/67`, accuracy `0.8932`
-- so the retained portable statement tightens to:
-  - occupancy shortage / source load remains the cross-dense-family primitive
-  - 4-NN density is the current smooth refinement on the original dense pair + tree control
-  - center-biased target-plane densification is now the concrete miss mode any promoted continuous correction must explain
+The janitor issue was coordination drift against a moving synced head, not a broken repo. The final repo is synced again, the script-backed landings pass the cheap confidence gate, and the newest mirror-dense commit is only a marker message in-tree.
+- the last real script-backed additions this loop were:
+  - `/Users/jonreilly/Projects/Physics/scripts/gravity_observable_hierarchy.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/lattice_3d_dense_10prop.py`
+- `743c544` carries no tracked payload, so its mirror-dense narrative should not change worker alignment by itself
+- `python3 /Users/jonreilly/Projects/Physics/scripts/base_confidence_check.py` passed on the settled current head
+- keep workers aligned to compression / order-parameter mode
+- do not reopen dense ladder work unless the tracked plan explicitly calls for a sparse guardrail sentinel
 
 ### Exact next step
-- if `main` is ahead after this loop's science commit, run the required push helper first:
-  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
-- then stay on the same directional-`b` overlap-translation thread
-- use the six frozen 4-NN false negatives as the bounded diagnostic seam
-- test whether one occupancy-aware continuous correction can absorb the center-biased densification misses while preserving the tree safety margin, without reopening a wider denominator search
+- no janitor repo fix remains while sync holds
+- if science resumes, stay on the compression / order-parameter thread
+- reuse:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_frontier_compression.py`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-frontier-compression-1232-3344-4992-5504.txt`
+- keep dense laddering paused and only revive a sparse guardrail sentinel if the tracked plan explicitly reopens it
+- keep avoiding the unrelated dirty mirror / persistent-record / gravity-design / structured side-lane files
 
 ### Relevant artifact paths
-- `/Users/jonreilly/Projects/Physics/scripts/directional_b_overlap_continuous_density_midlayer_holdout.py`
-- `/Users/jonreilly/Projects/Physics/logs/2026-04-03-directional-b-continuous-density-midlayer-holdout.txt`
-- `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
 - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-janitor/memory.md`
+- `/Users/jonreilly/Projects/Physics/scripts/gravity_observable_hierarchy.py`
+- `/Users/jonreilly/Projects/Physics/scripts/lattice_3d_dense_10prop.py`
+- `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_frontier_compression.py`
+- `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-frontier-compression-1232-3344-4992-5504.txt`
