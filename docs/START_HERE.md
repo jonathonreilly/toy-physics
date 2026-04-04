@@ -47,6 +47,7 @@ history or commit-message narrative.
 - **Generated symmetry:** reopened by the structured chokepoint bridge, not solved
 - **Action-power Newtonian-3D claim:** interesting, bounded to a no-barrier companion, not yet a promoted core claim
 - **Tapered 3D refinement:** negative on the tested family; useful as a topology-control branch, not a rescue of the dense card
+- **3D `1/L^2` kernel branch:** active unretained propagator fork under validation; do not treat branch-history or chat narrative as canonical until a script/log/note chain lands
 
 ## Canonical docs
 

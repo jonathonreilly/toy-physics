@@ -47,7 +47,18 @@ before the current bridges are tightened.
      - reconcile any mismatch between branch-history claims and on-disk notes
      - do not promote a continuum theorem unless the RG side is also canonical
 
-4. **Action-power branch claim-surface cleanup**
+4. **3D `1/L^2` kernel fork validation**
+   - Treat any `1/L^2` result as a new propagator branch with no inherited
+     claims from the retained dense spent-delay family.
+   - Do not duplicate long-running scans that are already in flight; use this
+     lane for reconciliation, same-harness validation, and bounded doc prep.
+   - Deliverables:
+     - one fixed-family barrier-card + no-barrier-companion script/log/note chain
+     - one explicit `h = 1.0 -> 0.5` comparison using the gravity hierarchy
+     - one clear retained-vs-unretained decision on whether the branch merits
+       top-level doc promotion
+
+5. **Action-power branch claim-surface cleanup**
    - Treat the action-power lane as a new branch with no inherited claims.
    - The 3D barrier signal issue is fixed enough to freeze a card, and the
      current ordered-family gravity-sign lane is now a bounded negative.
@@ -58,14 +69,14 @@ before the current bridges are tightened.
        same-harness closure
      - no new 3D sign-fishing unless the architecture changes topologically
 
-5. **Repo claim-surface cleanup**
+6. **Repo claim-surface cleanup**
    - Reduce the gap between canonical notes and nearby exploratory files.
    - Focus on filenames and top-level docs that a new reader will see first.
    - Deliverables:
      - retire or relabel stale exploratory `*_test.py` files where practical
      - keep `README`, `START_HERE`, and the program notes synchronized
 
-6. **Mirror-vs-lattice synthesis**
+7. **Mirror-vs-lattice synthesis**
    - Keep mirror as the flagship line.
    - Keep lattice / NN as secondary and frontier branches unless a stronger
      retained comparison note truly changes the ranking.

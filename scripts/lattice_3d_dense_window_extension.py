@@ -91,6 +91,7 @@ def barrier_metrics(
     nmap,
     mass_z,
     near_half_width,
+    slit_thresh,
 ):
     n = len(pos)
     field_zero = [0.0] * n
@@ -115,7 +116,7 @@ def barrier_metrics(
 
     # Born companion audit is only meaningful on the canonical slit geometry.
     born = None
-    if math.isclose(near_half_width, 1.0) and math.isclose(CANONICAL_SLIT_THRESH, 0.5):
+    if math.isclose(near_half_width, 1.0) and math.isclose(slit_thresh, CANONICAL_SLIT_THRESH):
         upper = sorted([i for i in barrier if pos[i][1] > 1], key=lambda i: pos[i][1])
         lower = sorted([i for i in barrier if pos[i][1] < -1], key=lambda i: -pos[i][1])
         middle = [i for i in barrier if abs(pos[i][1]) <= 1 and abs(pos[i][2]) <= 1]
@@ -263,7 +264,9 @@ def main() -> None:
     print("  " + "-" * 92)
     best_z = None
     for z in MASS_Z_VALUES:
-        row = barrier_metrics(pos, adj, det, barrier, sa, sb, blocked, barrier_layer, gl, nl, hw, nmap, z, 1.0)
+        row = barrier_metrics(
+            pos, adj, det, barrier, sa, sb, blocked, barrier_layer, gl, nl, hw, nmap, z, 1.0, CANONICAL_SLIT_THRESH
+        )
         print_row("  ", row)
         if row.interp == "ATTRACTIVE" and row.mi > 0.05 and row.decoh > 0.05:
             best_z = z
@@ -288,6 +291,7 @@ def main() -> None:
             nmap,
             6,
             hw_mass,
+            CANONICAL_SLIT_THRESH,
         )
         print(
             f"  {hw_mass:>9.1f}  {row.centroid:+.6f}  {row.pnear:+.6f}  "
@@ -303,12 +307,28 @@ def main() -> None:
             thresh
         )
         row = barrier_metrics(
-            pos_t, adj_t, det_t, barrier_t, sa_t, sb_t, blocked_t, barrier_layer_t, gl_t, nl_t, hw_t, nmap_t, 6, 1.0
+            pos_t,
+            adj_t,
+            det_t,
+            barrier_t,
+            sa_t,
+            sb_t,
+            blocked_t,
+            barrier_layer_t,
+            gl_t,
+            nl_t,
+            hw_t,
+            nmap_t,
+            6,
+            1.0,
+            thresh,
         )
         print(f"  {thresh:>6.1f}  {row.centroid:+.6f}  {row.pnear:+.6f}  {row.bias:+.6f}  {row.interp}")
     print()
 
-    born_row = barrier_metrics(pos, adj, det, barrier, sa, sb, blocked, barrier_layer, gl, nl, hw, nmap, 6, 1.0)
+    born_row = barrier_metrics(
+        pos, adj, det, barrier, sa, sb, blocked, barrier_layer, gl, nl, hw, nmap, 6, 1.0, CANONICAL_SLIT_THRESH
+    )
     print("Canonical Born / info read on the dense 3D extension point:")
     print(f"  Born = {born_row.born:.2e}")
     print(f"  MI = {born_row.mi:.4f} bits")

@@ -94,7 +94,7 @@ def make_field_spent_delay(pos, nmap, gl: int, mass_z_phys: float, strength: flo
     return field, mi
 
 
-def propagate_spent_delay(pos, adj, field, blocked):
+def propagate_spent_delay(pos, adj, field, blocked, k=K):
     order = sorted(range(len(pos)), key=lambda i: pos[i][0])
     amps = [0j] * len(pos)
     src = next(
@@ -123,7 +123,7 @@ def propagate_spent_delay(pos, adj, field, blocked):
             act = dl - ret
             theta = math.atan2(math.sqrt(dy * dy + dz * dz), max(dx, 1e-10))
             w = math.exp(-BETA * theta * theta)
-            amps[j] += amps[i] * cmath.exp(1j * K * act) * w / L
+            amps[j] += amps[i] * cmath.exp(1j * k * act) * w / L
     return amps
 
 
@@ -258,11 +258,16 @@ def barrier_row(
     field_mass, _ = make_field_spent_delay(pos, nmap, gl, mass_z_phys, STRENGTH, h)
     amps_flat = propagate_spent_delay(pos, adj, field_zero, blocked)
     amps_mass = propagate_spent_delay(pos, adj, field_mass, blocked)
+    amps_flat_k0 = propagate_spent_delay(pos, adj, field_zero, blocked, k=0.0)
+    amps_mass_k0 = propagate_spent_delay(pos, adj, field_mass, blocked, k=0.0)
     pf, probs_flat = detector_probs(amps_flat, det)
     pm, probs_mass = detector_probs(amps_mass, det)
+    _, probs_flat_k0 = detector_probs(amps_flat_k0, det)
+    _, probs_mass_k0 = detector_probs(amps_mass_k0, det)
     centroid = detector_centroid(probs_mass, det, pos) - detector_centroid(probs_flat, det, pos)
     pnear = near_mass_window_gain(probs_mass, probs_flat, det, pos, mass_z_phys, half_width=1.0)
     bias = mass_side_channel_bias(probs_mass, probs_flat, det, pos, mass_z_phys, detector_centroid(probs_flat, det, pos))
+    k0 = detector_centroid(probs_mass_k0, det, pos) - detector_centroid(probs_flat_k0, det, pos)
     born, born_signal = born_audit(pos, adj, det, barrier, slit_indices, blocked)
     amps_a = propagate_spent_delay(pos, adj, field_mass, blocked | {slit_indices[1]})
     amps_b = propagate_spent_delay(pos, adj, field_mass, blocked | {slit_indices[0]})
@@ -333,6 +338,7 @@ def barrier_row(
         "interp": classify_sign(centroid, pnear, bias),
         "born": born,
         "born_signal": born_signal,
+        "k0": k0,
         "mi": mi,
         "dtv": dtv,
         "decoh": 1.0 - pur if not math.isnan(pur) else math.nan,
@@ -377,7 +383,7 @@ def run_case(h: float):
     print(f"Physical mapping: mass_z and slit coordinates mapped by round(coord / h)")
     print("Barrier card at mass_z = 6.0")
     print(
-        f"  Born={row['born']:.2e}  k=0={0.0:.6f}  MI={row['mi']:.3f}  "
+        f"  Born={row['born']:.2e}  k=0={row['k0']:.6f}  MI={row['mi']:.3f}  "
         f"d_TV={row['dtv']:.3f}  decoh={100 * row['decoh']:.1f}%"
     )
     print(
