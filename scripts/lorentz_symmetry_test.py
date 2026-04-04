@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Test Lorentz symmetry of the model's local scalars.
+"""Exploratory legacy Lorentz-symmetry test.
+
+This is an experiment driver, not a canonical retained symmetry/causality
+claim. Use `docs/START_HERE.md` and the NN light-cone note before citing it.
 
 The model uses several local quantities on each edge:
 - coordinate delay dt (NOT invariant)

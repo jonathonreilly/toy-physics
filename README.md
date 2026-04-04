@@ -122,9 +122,9 @@ If you only want the current high-level state, read this section first.
 - **Ordered lattice:** retained secondary branch. The standard-strength branch
   is a same-family two-harness bridge, the weak-field reopening gives a narrow
   one-card pocket, the 3D dense spent-delay branch now adds a bounded
-  same-family attractive window, and the no-barrier branch retains the
-  cleanest current distance-law magnitude. This is a real branch, but it does
-  not displace the mirror flagship.
+  same-family **near-to-mid attractive window**, and the no-barrier branch
+  retains the cleanest current distance-law magnitude. This is a real branch,
+  but it does not displace the mirror flagship.
 - **Nearest-neighbor refinement:** strongest current continuum-side bridge.
   Raw NN is Born-clean through `h = 0.25`, deterministic rescale extends a
   bounded path to `h = 0.0625`, and the canonical notes keep continuum / RG
@@ -157,6 +157,8 @@ context, not the promoted claim surface.
 The most relevant notes for that current architecture state are:
 
 - [UNIFIED_PROGRAM_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIFIED_PROGRAM_NOTE.md)
+- [GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md](/Users/jonreilly/Projects/Physics/docs/GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md)
+- [LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md](/Users/jonreilly/Projects/Physics/docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md)
 - [LATTICE_DISTANCE_LAW_NOTE.md](/Users/jonreilly/Projects/Physics/docs/LATTICE_DISTANCE_LAW_NOTE.md)
 - [LATTICE_FAMILY_VALIDATION_NOTE.md](/Users/jonreilly/Projects/Physics/docs/LATTICE_FAMILY_VALIDATION_NOTE.md)
 - [SYNTHESIS_NOTE.md](/Users/jonreilly/Projects/Physics/docs/SYNTHESIS_NOTE.md)

@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Full characterization of causal field gravity.
+"""Exploratory legacy causal-field gravity test.
+
+This is an experiment driver, not a canonical retained harness. Use
+`docs/START_HERE.md` and `docs/UNIFIED_PROGRAM_NOTE.md` for the current
+project state before citing results from this file.
 
 The causal field (decay=0.5) gives distance falloff (gamma=0.85).
 Now test everything else:

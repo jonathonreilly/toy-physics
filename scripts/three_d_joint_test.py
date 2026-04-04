@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""3D joint gravity + decoherence test.
+"""Exploratory legacy 3D joint gravity + decoherence test.
+
+This is an experiment driver, not the current canonical 3D harness. Use
+`docs/START_HERE.md`, `docs/ACTION_POWER_NOTE.md`, and
+`docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md` for the retained 3D story.
 
 Adapts the 2D framework to 3D causal DAGs:
   - Positions are (x, y, z) with x = causal layer
