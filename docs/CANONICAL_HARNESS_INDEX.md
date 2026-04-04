@@ -43,6 +43,8 @@ Canonical notes:
 These are useful and often still review-relevant, but they are not the first
 thing a new reader should treat as canonical proof of the current story:
 
+- [`scripts/valley_linear_same_harness_compare.py`](/Users/jonreilly/Projects/Physics/scripts/valley_linear_same_harness_compare.py)
+- [`scripts/lattice_3d_valley_linear_card.py`](/Users/jonreilly/Projects/Physics/scripts/lattice_3d_valley_linear_card.py)
 - [`scripts/lattice_4d_kernel_test.py`](/Users/jonreilly/Projects/Physics/scripts/lattice_4d_kernel_test.py)
 - [`scripts/transfer_norm_and_born.py`](/Users/jonreilly/Projects/Physics/scripts/transfer_norm_and_born.py)
 - [`scripts/cross_family_robustness.py`](/Users/jonreilly/Projects/Physics/scripts/cross_family_robustness.py)

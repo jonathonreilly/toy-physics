@@ -130,6 +130,26 @@ Primary artifacts:
 - [`docs/ACTION_POWER_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_NOTE.md)
 - [`docs/ACTION_POWER_3D_GRAVITY_SIGN_CLOSURE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_3D_GRAVITY_SIGN_CLOSURE_NOTE.md)
 
+### Valley-linear action fork
+
+This is another explicit **action-law fork** on the ordered-lattice `1/L^2`
+family.
+
+Current safe read:
+
+- a bounded same-family comparison against spent-delay is now frozen on disk
+- on the retained `h = 0.25` family, valley-linear improves the tested
+  mass-law exponent and post-peak tail slope while preserving Born and the
+  TOWARD sign
+- on the same comparison, gravity magnitude is much smaller on the tested
+  `z=3` slice
+- the branch does not inherit flagship claims automatically
+- convergence / asymptotic promotion remains open
+
+Primary artifact:
+
+- [`docs/VALLEY_LINEAR_ACTION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_ACTION_NOTE.md)
+
 ### Dimension-dependent kernel branch
 
 This is an explicit **propagator fork** on the ordered-lattice family, not a

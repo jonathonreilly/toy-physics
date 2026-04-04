@@ -1,17 +1,44 @@
 #!/usr/bin/env python3
-"""CANONICAL 3D VALLEY-LINEAR CARD at h=0.25 — frozen harness.
+"""Bounded 3D valley-linear card on the ordered-lattice 1/L^2 family.
 
-Action: S = L(1-f) — phase valley, linear in field f
-Kernel: 1/L^2 with h^2 measure
-Architecture: 3D dense lattice, W=10, L=12, h=0.25
+Action:
+  - S = L(1-f) (phase valley, linear in field f)
+Kernel:
+  - 1/L^2 with h^2 measure
+Architecture:
+  - 3D dense lattice, W=10, L=12, h=0.25
 
-All 10 properties measured.
+This script is intentionally narrower than the commit-message narrative that
+introduced it.
+
+Measured directly at h=0.25 here:
+  1. Born
+  2. d_TV
+  3. k=0
+  4. F~M
+  5. gravity sign at z=3
+  6. decoherence
+  7. MI
+  8. distance law
+
+Companion multi-L checks inside this script:
+  9. purity stability vs L
+ 10. gravity growth vs L
+
+Those companion checks are run at h=0.5 for speed. So this is a same-family
+ten-property audit, but not a pure “all 10 at one fixed h=0.25” theorem card.
 """
 
 from __future__ import annotations
 import math
 import time
-import numpy as np
+
+try:
+    import numpy as np
+except ModuleNotFoundError as exc:  # pragma: no cover - environment-dependent
+    raise SystemExit(
+        "numpy is required for this harness. On this machine use /usr/bin/python3."
+    ) from exc
 
 BETA = 0.8
 K = 5.0
@@ -152,11 +179,12 @@ def main():
     field_f = np.zeros(lat.n)
 
     print("=" * 70)
-    print("CANONICAL 3D VALLEY-LINEAR CARD")
+    print("BOUNDED 3D VALLEY-LINEAR CARD")
     print(f"  Action: S = L(1-f)")
     print(f"  Kernel: 1/L^2, h^2 measure")
     print(f"  h={H}, W={PHYS_W}, L={PHYS_L}, max_d={lat.max_d}")
     print(f"  {lat.n:,} nodes, {lat.nl} layers")
+    print(f"  Fixed h=0.25 core card + h=0.5 multi-L companion checks")
     print("=" * 70)
     print()
 
@@ -279,7 +307,7 @@ def main():
     print(f"  7. MI = {MI:.4f} bits  [{'PASS' if MI > 0.05 else 'WEAK'}]")
 
     # 8. Purity scaling + 9. Gravity grows (at h=0.5 for speed)
-    print(f"  8-9. Multi-L test (h=0.5 for speed):")
+    print(f"  8-9. Multi-L companion test (h=0.5 for speed):")
     grav_data = {}; pur_data = {}
     for pl in [8, 10, 12, 15]:
         lat2 = Lattice3D(pl, 6, 0.5)
@@ -367,7 +395,9 @@ def main():
 
     # Summary
     print(f"\n{'='*70}")
-    print(f"SUMMARY — Valley-linear S=L(1-f), 1/L^2, h={H}")
+    print(f"SUMMARY — Valley-linear S=L(1-f), 1/L^2")
+    print(f"  Fixed core card: h={H}")
+    print(f"  Companion multi-L checks: h=0.5")
     print(f"  Born:         {born:.2e}")
     print(f"  d_TV:         {dtv:.4f}")
     print(f"  k=0:          {gk0:.6f}")

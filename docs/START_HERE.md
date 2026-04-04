@@ -45,6 +45,12 @@ Do not force a trade where only one of those moves.
   - 3D close-slit barrier Born / MI / decoherence card is now retained
   - 3D distance / mass-law behavior remains a no-barrier companion
   - 3D barrier gravity sign is now a bounded negative on the current ordered family
+- **Valley-linear is a bounded action fork on the ordered-lattice `1/L^2` family.**
+  - a same-family comparison against spent-delay is now artifact-backed
+  - on the retained `h = 0.25` family it improves the tested mass-law exponent
+    and distance-tail slope while preserving Born and TOWARD sign
+  - gravity magnitude is much smaller on the tested `z=3` slice
+  - convergence and asymptotic promotion remain open
 
 ## What is bounded or still open
 
@@ -76,6 +82,7 @@ Do not force a trade where only one of those moves.
 - [`docs/STRUCTURED_CHOKEPOINT_BRIDGE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/STRUCTURED_CHOKEPOINT_BRIDGE_NOTE.md)
 - [`docs/ACTION_POWER_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_NOTE.md)
 - [`docs/ACTION_POWER_3D_GRAVITY_SIGN_CLOSURE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_3D_GRAVITY_SIGN_CLOSURE_NOTE.md)
+- [`docs/VALLEY_LINEAR_ACTION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_ACTION_NOTE.md)
 - [`docs/GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md)
 - [`docs/LEGACY_EXPLORATORY_DRIVERS_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LEGACY_EXPLORATORY_DRIVERS_NOTE.md)
 - [`docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md)

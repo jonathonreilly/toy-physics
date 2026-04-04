@@ -146,6 +146,12 @@ If you only want the current high-level state, read this section first.
   ordered 3D barrier family still fails to recover attraction toward mass, so
   this remains a bounded complementary branch rather than a replacement for
   the spent-delay lane.
+- **Valley-linear action fork:** bounded action-law fork on the ordered-lattice
+  `1/L^2` family. A same-family comparison against spent-delay is now
+  artifact-backed on `main`: on the retained `h = 0.25` family it improves the
+  tested mass-law exponent and distance-tail slope while preserving Born and
+  the TOWARD sign, but the gravity magnitude is much smaller on the tested
+  `z=3` slice and convergence remains open.
 - **Dimension-dependent kernel branch:** exploratory propagator fork on the
   ordered-lattice family. The imported `1/L^(d-1)` results are scientifically
   interesting and now live on `main`, including a frozen `h = 0.25`
