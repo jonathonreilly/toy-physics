@@ -1,142 +1,145 @@
-# Continuum Convergence: Dimension-Dependent Kernel
+# Continuum Convergence Note
 
-**Date:** 2026-04-04
-**Status:** CONFIRMED across 2D/3D/4D — kernel = 1/L^(d-1)
+**Date:** 2026-04-04  
+**Status:** exploratory propagator-fork note for the ordered-lattice continuum lane
 
-## The test
+This note collects the current dimension-dependent-kernel results on the
+ordered-lattice family. It is intentionally narrower than the branch-history
+headlines that produced it.
 
-Measure gravitational deflection (centroid shift TOWARD mass) at
-lattice spacing h=1.0, 0.5, 0.25. If TOWARD survives refinement,
-it's physics. If it collapses, it's a lattice artifact.
+The safe read today is:
 
-## Results
+- the original 3D dense spent-delay `1/L` gravity signal does **not** survive
+  refinement
+- a new ordered-lattice propagator fork using `1/L^(d-1)` is a **strong
+  empirical persistence candidate** across the tested 2D / 3D / 4D lattice
+  families
+- that kernel family is still **not** a derived theorem, and it is still
+  **not** a promoted top-level canonical lane
 
-### 2D dense lattice (max_dy=5, W=20, L=40, spent-delay)
+This is frontier work on `main`, not a replacement for the flagship mirror
+story.
 
-| h | nodes | TOWARD | Peak deflection | Tail exponent | Notes |
-|---|-------|--------|-----------------|---------------|-------|
-| 1.0 | 1,681 | 2/9 | +0.11 at b=4 | too few points | Weak |
-| 0.5 | 6,561 | **9/9** | +0.75 at b=8 | b^(-1.08), R²=0.91 | **Strong** |
-| 0.25 | 25,921 | **9/9** | +1.57 at b=13 | b^(-0.63), R²=0.94 | Peak shifts |
+## What is on firm ground
 
-**2D TOWARD survives refinement and gets STRONGER.**
-The deflection magnitudes INCREASE with finer h. All 9 tested
-b values become TOWARD at h=0.5.
+### 1. 2D ordered lattice with `1/L`
 
-The distance law tail (b > b_peak) gives exponent -1.08 at h=0.5,
-close to the 2+1D Newtonian prediction of -1.0.
+The 2D lattice refinement signal is real and strong.
 
-### 3D dense lattice (max_d=3, W=6, L=12, spent-delay)
+- TOWARD gravity survives and strengthens under refinement
+- Born remains machine-clean
+- MI / decoherence / `d_TV` converge in the retained window
+- the 2D tail fit is consistent with a `1/b`-like law on the tested window
 
-| h | nodes | TOWARD (s=5e-5) | TOWARD (s=5e-6) |
-|---|-------|-----------------|-----------------|
-| 1.0 | 2,197 | **4/4** | 3/3 |
-| 0.5 | 15,625 | **0/4** (ALL AWAY) | 1/4 |
+### 2. 3D dense spent-delay with `1/L`
 
-**3D TOWARD collapses at h=0.5.**
-At h=1.0, all tested b values show TOWARD.
-At h=0.5, nearly all flip to AWAY. Even at 10x weaker field (5e-6),
-only b=2 remains barely TOWARD (+0.0002).
+The old attractive 3D dense spent-delay read was a fixed-scale artifact.
 
-RG scaling (s_eff = s0 * h) doesn't help: still 0/4 TOWARD at h=0.5.
+- at `h = 1.0`, the retained window is attractive
+- at `h = 0.5`, that same family collapses toward away/depletion
+- so the older “3D 10/10 card” does **not** survive refinement on the original
+  `1/L` transport
 
-## Why
+### 3. 3D ordered lattice with `1/L^2`
 
-The mechanism is beam depletion. The mass field creates a phase
-valley. Paths through the valley get reduced phase. At the detector,
-this creates partial destructive interference at the beam center
-(depletion), shifting the centroid AWAY from the mass.
+This is the most important new exploratory branch.
 
-The TOWARD effect (attraction) comes from the LINEAR response:
-coherent constructive interference from the phase valley on the
-mass side. This competes with depletion.
+On the tested ordered-lattice family:
 
-In **2D**, the beam spreads in 1 transverse dimension. The depletion
-is weak (confined spreading). The linear response dominates at
-ultra-weak field, and this gets STRONGER with finer h because the
-finer lattice resolves the interference pattern better.
+- TOWARD gravity survives from `h = 0.5` through the current `h = 0.125` run
+- the branch remains Born-clean at machine precision on the retained checks
+- the barrier card stays nontrivial on MI / decoherence / `d_TV`
+- a frozen `h = 0.25` eight-property card now exists on `main`
+- the no-barrier post-peak tail fit improves when the `h = 0.25` lattice is
+  widened:
+  - earlier retained read: `b^(-0.53)`
+  - wider retained read: `b^(-0.70)`, `R^2 = 0.955`
 
-In **3D**, the beam spreads in 2 transverse dimensions. The depletion
-is much stronger (spreading in both y and z). Even at ultra-weak
-field, depletion overwhelms the linear response at finer h.
+Primary branch artifacts:
 
-The key scaling: at h=0.5, the path count is 49^8 vs 49^4 at h=1.0.
-The exponentially more paths make the interference pattern more
-complex, strengthening the depletion effect.
+- [`scripts/lattice_3d_l2_fast.py`](/Users/jonreilly/Projects/Physics/scripts/lattice_3d_l2_fast.py)
+- [`scripts/lattice_3d_l2_canonical_card.py`](/Users/jonreilly/Projects/Physics/scripts/lattice_3d_l2_canonical_card.py)
+- [`scripts/lattice_3d_inverse_square_kernel.py`](/Users/jonreilly/Projects/Physics/scripts/lattice_3d_inverse_square_kernel.py)
+- [`scripts/lattice_3d_l2_tail_stats.py`](/Users/jonreilly/Projects/Physics/scripts/lattice_3d_l2_tail_stats.py)
+- [`docs/LATTICE_3D_L2_TAIL_STATS_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_3D_L2_TAIL_STATS_NOTE.md)
 
-## Implications
+### 4. 4D ordered lattice with `1/L^3`
 
-1. **The 3D 10/10 card at h=1.0 is a lattice artifact** for gravity.
-   Born, MI, decoherence, d_TV are genuine (structural). Gravity and
-   distance law do not survive refinement.
+The 4D result is useful, but it is still bounded.
 
-2. **2D gravity is genuine.** The model produces real gravitational
-   attraction in 2+1D with the correct distance law (1/b).
+Current branch evidence supports:
 
-3. **The 3D problem is specific to beam spreading**, not the action
-   formula. Any fix must suppress 3D beam spreading while maintaining
-   path diversity for attraction.
+- short 4D lattices are not discriminative
+- on the longer tested 4D windows, `1/L^3` looks stronger than lower powers
+  on persistence-with-length
+- Born remains machine-clean on the tested 4D branch
 
-## Resolution: Dimension-Dependent Kernel 1/L^(d-1)
+Current branch evidence does **not** yet support:
 
-The 3D problem is SOLVED by using the correct dimensional kernel.
+- a unique-selection theorem
+- a finished asymptotic `1/r^3` or force-law closure
+- a promoted continuum theorem
 
-### Physical argument
+## What remains unresolved
 
-The free propagator in d spatial dimensions falls as 1/r^(d-1):
-- 2D (d=2): kernel 1/L (what we've been using - works for 2D gravity)
-- 3D (d=3): kernel 1/L^2 (natural 3D generalization)
+### Transfer norm is still under reconciliation
 
-With h^2 measure factor for the continuum limit: kernel = w h^2 / L^2.
+There are currently two different transfer-style reads on `main`:
 
-### Results: 3D 1/L^2 kernel convergence
+1. the bounded local probe:
+   - [`docs/LATTICE_KERNEL_TRANSFER_NORM_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_KERNEL_TRANSFER_NORM_NOTE.md)
+   - this local measure-corrected discriminator leaned closer to `p = 1.5`
+     than `p = 2.0` in 3D
+2. the imported branch transfer story:
+   - [`scripts/transfer_norm_and_born.py`](/Users/jonreilly/Projects/Physics/scripts/transfer_norm_and_born.py)
+   - this is a different observable and should not be read as already
+     superseding the bounded local probe
 
-| h | nodes | TOWARD | Peak deflection | Tail exponent | Born |
-|---|-------|--------|-----------------|---------------|------|
-| 1.0 | 4,624 | 0/5 AWAY | n/a | n/a | 9.2e-16 |
-| 0.5 | 33,759 | **5/5** | +0.042 at z=5 | b^(-0.35) | 2.8e-15 |
-| 0.25 | 257,725 | **5/5** | +0.059 at z=5 | b^(-0.53) | 4.0e-15 |
-| 0.125 | 762,129 | **4/4** | +0.082 at z=5 | (W too narrow) | TBD |
+So the review-safe wording is:
 
-Key findings:
-1. **TOWARD gravity STRENGTHENS with refinement** (peak grows ~40% per halving)
-2. **Distance exponent steepens**: -0.35 → -0.53 (direction: toward -2.0)
-3. **Born holds at machine precision** at all tested h
-4. **MI converges**: 0.61 → 0.66 bits
-5. **Decoherence converges**: 49.5% → 50.0%
-6. **No overflow** with h^2 measure factor
+- `p = d - 1` is the **strongest empirical persistence candidate**
+- transfer-norm selection is still **under reconciliation**
+- the branch is **not yet** “derived from axioms” or “uniquely selected”
 
-The gravity peak grows as ~h^(-0.5), consistent with the field
-effect accumulating over more layers at finer spacing.
+### RG control is promising, not fully closed
 
-### Remaining question
+The branch has a real RG-style stabilization story for gravity magnitude, but
+the current safe separation is:
 
-The tail exponent steepens toward -2.0 but slowly (-0.35 → -0.53
-over two halvings). At this rate, reaching -2.0 would require many
-more halvings. Two possibilities:
-1. The convergence accelerates (nonlinear, reaching -2 at moderate h)
-2. The asymptotic exponent is not -2 (the model predicts different gravity)
+- sign persistence under refinement
+- post-peak tail steepening
+- finite-magnitude RG control
 
-### Full 10 properties on 1/L^2 at h=0.5
+Those are related, but they are not the same claim and should not be collapsed
+into one blanket “continuum solved” statement.
 
-| Property | Value | Status |
-|----------|-------|--------|
-| Born | 2.75e-15 | PASS (machine precision) |
-| d_TV | 0.78 | PASS |
-| k=0 | 0.0 | PASS |
-| F∝M alpha | 0.50 | PASS (√M scaling) |
-| Gravity | +0.028 TOWARD | PASS |
-| Decoherence | 49.5% | PASS |
-| MI | 0.61 bits | PASS |
-| Distance tail | b^(-0.35) | CONVERGING |
+### O5-style tail prediction was refuted as stated
 
-## Scripts
+The earlier prediction that the `h = 0.125` tail exponent should fall in a
+specific numerical band was refuted. The useful lesson is boundary/peak
+motion:
 
-- `lattice_2d3d_continuum_check.py` — Head-to-head 2D vs 3D gravity
-- `lattice_2d_continuum_distance.py` — 2D distance law convergence
-- `lattice_3d_continuum_convergence.py` — 3D convergence (negative result with 1/L)
-- `lattice_3d_fixes.py` — Five fix strategies tested
-- `lattice_3d_tapered_card.py` — Tapered lattice (TOWARD but breaks distance law)
-- `lattice_3d_kernel_l2.py` — 1/L^2 kernel (first test)
-- `lattice_3d_l2_numpy.py` — Numpy-optimized 1/L^2
-- `lattice_3d_l2_fast.py` — Memory-efficient layer-by-layer propagation
+- the peak shifts outward as `h` decreases
+- measuring the far tail at finer `h` requires a wider lattice
+- a failed prediction here is evidence that the falsification framework is
+  working, not that the branch is automatically dead
+
+## Clean interpretation
+
+The current best summary is:
+
+- the ordered lattice has a genuine refinement bridge in 2D
+- the original 3D `1/L` gravity signal fails under refinement
+- a new `1/L^(d-1)` propagator fork is the strongest current empirical
+  candidate for persistent gravity on the ordered-lattice family
+- that branch is stronger than it was this morning, but still bounded and
+  still under active review
+
+## What this note should not be used to claim
+
+- “kernel = `1/L^(d-1)` is derived from the axioms”
+- “transfer norm uniquely selects `p = d - 1`”
+- “Newtonian gravity is now established”
+- “the continuum theorem is complete”
+
+Those claims still outrun the retained artifact chain.

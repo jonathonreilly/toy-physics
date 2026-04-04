@@ -146,6 +146,13 @@ If you only want the current high-level state, read this section first.
   ordered 3D barrier family still fails to recover attraction toward mass, so
   this remains a bounded complementary branch rather than a replacement for
   the spent-delay lane.
+- **Dimension-dependent kernel branch:** exploratory propagator fork on the
+  ordered-lattice family. The imported `1/L^(d-1)` results are scientifically
+  interesting and now live on `main`, including a frozen `h = 0.25`
+  eight-property 3D card, but they are still bounded: persistence evidence is
+  stronger than before, while transfer-norm selection and long-range asymptotic
+  wording are still under reconciliation. This is frontier work, not yet part
+  of the canonical top-line claim surface.
 - **Main open problem:** generated symmetry and stronger continuum closure.
   The project now has a cleaner map, but the highest-value unresolved work is
   still to generate the good geometry more naturally and to tighten the

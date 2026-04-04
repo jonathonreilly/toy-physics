@@ -56,6 +56,11 @@ What it does give us is a bounded local discriminator:
 - the probe points to a shallower effective marginality near `p = 1.5`
 - that result should be treated as a review-safe warning, not a promoted law
 
+This note should also not be collapsed into the later exploratory
+[`scripts/transfer_norm_and_born.py`](/Users/jonreilly/Projects/Physics/scripts/transfer_norm_and_born.py)
+branch story. They are different observables, and the transfer-norm selection
+story remains under reconciliation on `main`.
+
 ## Why this matters
 
 The probe is useful because it separates three questions that should not be

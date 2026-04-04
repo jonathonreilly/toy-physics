@@ -130,6 +130,29 @@ Primary artifacts:
 - [`docs/ACTION_POWER_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_NOTE.md)
 - [`docs/ACTION_POWER_3D_GRAVITY_SIGN_CLOSURE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_3D_GRAVITY_SIGN_CLOSURE_NOTE.md)
 
+### Dimension-dependent kernel branch
+
+This is an explicit **propagator fork** on the ordered-lattice family, not a
+promoted extension of the retained dense spent-delay card.
+
+Current safe read:
+
+- 2D / 3D / 4D ordered-lattice persistence evidence is scientifically
+  interesting
+- the branch now has real on-disk scripts and notes on `main`, including a
+  frozen `h = 0.25` eight-property 3D card
+- the stronger selection wording is still bounded:
+  - `p = d - 1` is the strongest current empirical persistence candidate
+  - transfer-norm selection is still under reconciliation
+  - the branch is not derived from axioms
+  - it is not yet a promoted continuum theorem
+
+Useful artifacts:
+
+- [`docs/CONTINUUM_CONVERGENCE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/CONTINUUM_CONVERGENCE_NOTE.md)
+- [`docs/LATTICE_3D_L2_TAIL_STATS_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_3D_L2_TAIL_STATS_NOTE.md)
+- [`docs/LATTICE_KERNEL_TRANSFER_NORM_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_KERNEL_TRANSFER_NORM_NOTE.md)
+
 ### Engineered non-symmetry lanes
 
 Dense central-band + layer norm remains the strongest engineered benchmark

@@ -15,6 +15,13 @@ The goal is a bounded head-to-head audit:
   - corrected physical mass-position mapping
   - same gravity-observable hierarchy
   - compare h=1.0 vs h=0.5
+
+Scope note:
+  - this script is the small ratio-observable audit path
+  - the frozen `h^2`-bearing refinement path lives in
+    `scripts/lattice_3d_l2_fast.py`
+  - do not collapse those two harnesses into one claim without checking the
+    exact artifact chain
 """
 
 from __future__ import annotations

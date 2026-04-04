@@ -145,9 +145,9 @@ distribution, not the propagator.
 
 ## Lattice continuum limit (2026-04-04 update)
 
-The lattice architecture provides a genuine h→0 continuum limit that the
-random DAG architecture does not. This is a complementary lane, not a
-replacement.
+The lattice architecture provides a genuine h→0 refinement lane that the
+random DAG architecture does not. This is a complementary exploratory lane,
+not a replacement.
 
 ### Lattice results that survive refinement
 
@@ -157,24 +157,34 @@ replacement.
 | MI | → 0.95 at h=0.25 | → 0.66 at h=0.25 | 0.32 (h=1 only) |
 | Decoherence | → 50% at h=0.25 | → 50% at h=0.25 | TBD |
 | d_TV | → 0.99 at h=0.25 | → 0.83 at h=0.25 | 0.58 |
-| Gravity (TOWARD) | Strengthens | Strengthens | Strengthens |
-| Distance tail | b^(-1.08) at h=0.5 | b^(-0.53) at h=0.25 | TBD |
+| Gravity (TOWARD) | Strengthens | Strengthens on the current branch | stronger persistence candidate than lower powers |
+| Distance tail | b^(-1.08) at h=0.5 | b^(-0.70) on the wider retained `h=0.25` tail probe | TBD |
+
+The 3D column now also has a frozen `h=0.25` eight-property script-level card
+on `main`; this is a trust-building conversion, not a closed theorem.
 
 ### Dimension-dependent kernel
 
-The kernel power p = d-1 is empirically selected as the unique value
-where gravity PERSISTS and STRENGTHENS with lattice length:
-- p < d-1: beam too spread (gravity transient, eventually AWAY)
-- p = d-1: gravity persistent (logarithmically marginal transfer norm)
-- p > d-1: amplitude overflow
+The imported kernel branch currently suggests a stronger persistence rule:
 
-Verified across 2D (p=1), 3D (p=2), 4D (p=3).
+- lower powers can look attractive on short lattices
+- `p = d-1` is the strongest current empirical candidate for a kernel whose
+  gravity signal persists more cleanly as lattice length grows
+
+That is stronger than the earlier 2D-only picture, but weaker than a
+selection theorem. In particular:
+
+- the 4D evidence is still bounded
+- the local transfer-norm probe on `main` does **not** uniquely single out
+  `p = d-1`
+- the transfer-norm story is still under reconciliation
 
 ### What the lattice changes about the distance law
 
 The random DAG distance law was b-independent (structural limitation).
-The lattice distance law is b-DEPENDENT and converging:
+The lattice distance law is b-DEPENDENT and improving:
 - 3D 1/L^2 tail: b^(-0.35) at h=0.5 → b^(-0.53) at h=0.25
+- wider `h=0.25` tail stats now improve the post-peak fit to `b^(-0.70)`
 - Exponent steepens with refinement (geometric, field-independent)
 - Direction: toward -2.0 (Newtonian in 3 spatial dims)
 
@@ -203,7 +213,8 @@ The retained results are:
 3. CL bath decoherence floor (stable on DAGs, converges on lattice)
 4. 3D mass scaling continuum limit (alpha → 0.58 on DAGs)
 5. Cross-family robustness (4 of 5 DAG families)
-6. **NEW: Distance law on lattice** (b^(-0.53) steepening toward -2)
+6. **NEW: Distance law on lattice** (current exploratory 3D post-peak fit
+   improved from `b^(-0.53)` to `b^(-0.70)` on a wider `h=0.25` lattice)
 7. **NEW: Lattice continuum limit** (MI, decoherence, d_TV all converge)
 
 The provisional/retracted results are:
@@ -215,4 +226,5 @@ The provisional/retracted results are:
 The structural limitations are:
 1. Distance law on random DAGs (b-independent, structural)
 2. CLT convergence on random DAGs (defeats all emergence rules)
-3. Dimension-dependent kernel not derived from axioms (empirical)
+3. Dimension-dependent kernel not derived from axioms (empirical and still
+   under transfer-norm reconciliation)

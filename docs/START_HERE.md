@@ -54,9 +54,15 @@ Do not force a trade where only one of those moves.
 - **Generated symmetry:** reopened by the structured chokepoint bridge, not solved
 - **Action-power Newtonian-3D claim:** interesting, bounded to a no-barrier companion, not yet a promoted core claim
 - **Tapered 3D refinement:** negative on the tested family; useful as a topology-control branch, not a rescue of the dense card
-- **3D `1/L^2` kernel branch:** active unretained propagator fork under validation; do not treat branch-history or chat narrative as canonical until a script/log/note chain lands
+- **3D `1/L^2` kernel branch:** active bounded propagator fork under validation; do not treat branch-history or chat narrative as canonical
   - if `h = 0.125` or an `h^2` measure factor is part of the claim, the
     frozen on-disk script must include that exact code path
+  - current `main` now contains a frozen `h = 0.25` eight-property card plus
+    exploratory companion artifacts for this lane, but the
+    safe read is still bounded:
+    - 2D / 3D / 4D persistence evidence is interesting
+    - transfer-norm selection is still under reconciliation
+    - do not promote this branch from repo-entry docs yet
 
 ## Canonical docs
 
@@ -73,6 +79,13 @@ Do not force a trade where only one of those moves.
 - [`docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md)
 - [`docs/LATTICE_3D_DENSE_WINDOW_EXTENSION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_3D_DENSE_WINDOW_EXTENSION_NOTE.md)
 - [`scripts/canonical_regression_gate.py`](/Users/jonreilly/Projects/Physics/scripts/canonical_regression_gate.py)
+
+Exploratory but useful branch docs:
+
+- [`docs/CONTINUUM_CONVERGENCE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/CONTINUUM_CONVERGENCE_NOTE.md)
+- [`docs/LATTICE_3D_L2_TAIL_STATS_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_3D_L2_TAIL_STATS_NOTE.md)
+- [`docs/LATTICE_KERNEL_TRANSFER_NORM_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_KERNEL_TRANSFER_NORM_NOTE.md)
+- [`scripts/lattice_3d_l2_canonical_card.py`](/Users/jonreilly/Projects/Physics/scripts/lattice_3d_l2_canonical_card.py)
 
 ## Working rules
 

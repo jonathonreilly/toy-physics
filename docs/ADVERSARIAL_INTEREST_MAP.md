@@ -35,9 +35,9 @@ The best next steps are the ones that improve both at once.
 |---|---:|---|
 | Toy-model mechanism interest | `9.5/10` | high intrinsic curiosity value |
 | Foundations / complex-systems / network-dynamics interest | `8.9/10` | real likely interest in the right subcommunities |
-| Broader theorist interest | `7.1/10` | selective interest, with stronger review hardening than before |
-| Bridge to known physics | `6.9/10` | suggestive but still branch-dependent and under-theorized |
-| Publishable as a careful computational toy-model paper | `7.7/10` | plausible with narrow framing and increasingly review-safe scaffolding |
+| Broader theorist interest | `7.2/10` | selective interest, with stronger review hardening than before |
+| Bridge to known physics | `7.0/10` | suggestive but still branch-dependent and under-theorized |
+| Publishable as a careful computational toy-model paper | `7.8/10` | plausible with narrow framing and increasingly review-safe scaffolding |
 | Publishable as a foundational-physics breakthrough claim | `3.8/10` | too early for that framing |
 | Ready for top-tier mainstream physics claims | `2.6/10` | still far below the required bar |
 | Field-shifting theory program | `4.9/10` | stronger than before, but still not at forced-engagement level |
@@ -70,9 +70,12 @@ The main upward pressures since the first adversarial cut are:
 - a cleaner flagship/secondary/frontier program map
 - more explicit retained-vs-unretained separation for the lattice / NN /
   propagator-fork branches
-- the active `1/L^(d-1)` kernel lane is now scientifically more interesting,
-  but it is still **unretained** until the exact frozen artifact chain lands on
-  `main`
+- the `1/L^(d-1)` lane now has a real frozen `h=0.25` eight-property 3D card
+  on `main`, which is exactly the kind of trust-building conversion skeptical
+  readers look for
+- the imported `1/L^(d-1)` kernel lane is now scientifically more interesting
+  and does live on `main`, but it is still **bounded / unreconciled** rather
+  than promoted in the top-line canonical story
 
 ## What would most improve the scores
 
@@ -124,8 +127,8 @@ external-score movers right now:
 - broad new branch fishing
 - larger speculative kernel/action sweeps without same-harness validation
 - stronger chat or commit-message narrative
-- extra 4D or dimension-dependent-kernel claims without a frozen `main`-branch
-  artifact chain and a clearer 3D asymptotic bridge
+- extra 4D or dimension-dependent-kernel claims without a clearer 3D
+  asymptotic bridge and a reconciled `main`-branch artifact chain
 
 ## Working interpretation
 
@@ -135,14 +138,15 @@ The honest external read today is:
 - **real odds of a careful narrow paper**
 - **low current odds of broad mainstream acceptance as a breakthrough claim**
 
-The current active `1/L^(d-1)` branch could improve this map if it lands with:
+The current `1/L^(d-1)` branch could improve this map further if it hardens
+with:
 
 - the exact frozen code path that supports the claim
-- a real script/log/note chain on `main`
+- a reconciled script/log/note chain on `main`
 - same-harness wording that separates persistence, tail steepening, and RG
   magnitude control
 
-Until then, it should be treated as promising frontier work rather than a score
-multiplier in the canonical external read.
+Until then, it should be treated as promising frontier work on `main` rather
+than a full score multiplier in the canonical external read.
 
 That is the calibration the backlog should optimize against.

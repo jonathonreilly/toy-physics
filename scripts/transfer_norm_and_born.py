@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
-"""Transfer norm test + 4D Born check.
+"""Exploratory transfer-norm test + 4D Born check.
 
 Transfer norm: for each dimension d and kernel power p, measure the
 single-layer amplitude transfer norm T = Σ_j |K(i→j)| for a central
-node. If T→const as h→0: kernel is admissible. If T→0: beam dies.
-If T→∞: beam overflows.
+node on a regular lattice.
 
-The prediction: p=d-1 gives T→const (marginal). p<d-1 gives T→∞.
-p>d-1 gives T→0.
+Important scope note:
+- this script measures a *bare* transfer norm, not the bounded
+  measure-corrected local probe frozen separately on `main`
+- use it as an exploratory discriminator, not as a canonical proof that
+  `p = d-1` is uniquely selected
 
 Also: Born check on 4D 1/L^3 kernel.
 """
@@ -67,10 +69,9 @@ def transfer_norm_3d(h, max_d_phys, power):
 
 def run_transfer_norm_test():
     print("=" * 70)
-    print("TRANSFER NORM TEST: T(h) = Σ |w/L^p| for central node")
-    print("  p=d-1 should give T→const (marginal)")
-    print("  p<d-1: T→∞ (overflow)")
-    print("  p>d-1: T→0 (beam dies)")
+    print("EXPLORATORY TRANSFER NORM TEST: T(h) = Σ |w/L^p| for central node")
+    print("  Bare local sum, not the canonical measure-corrected probe on main.")
+    print("  Read this as a comparative observable, not a standalone theorem.")
     print("=" * 70)
     print()
 
@@ -89,7 +90,7 @@ def run_transfer_norm_test():
             T = transfer_norm_1d(h, max_d_phys, p)
             print(f"  {T:10.4f}", end="")
         print()
-    print(f"  Prediction: p=1 (=d-1) is marginal\n")
+    print(f"  Exploratory read: compare p=1 against neighbors\n")
 
     # 3D lattice (2 transverse dims, d_spatial=3)
     print("3D LATTICE (d=3, 2 transverse dims)")
@@ -103,7 +104,7 @@ def run_transfer_norm_test():
             T = transfer_norm_2d(h, max_d_phys, p)
             print(f"  {T:10.4f}", end="")
         print()
-    print(f"  Prediction: p=2 (=d-1) is marginal\n")
+    print(f"  Exploratory read: compare p=2 against neighbors\n")
 
     # 4D lattice (3 transverse dims, d_spatial=4)
     print("4D LATTICE (d=4, 3 transverse dims)")
@@ -118,7 +119,7 @@ def run_transfer_norm_test():
             T = transfer_norm_3d(h, max_d_phys, p)
             print(f"  {T:10.4f}", end="")
         print()
-    print(f"  Prediction: p=3 (=d-1) is marginal\n")
+    print(f"  Exploratory read: compare p=3 against neighbors\n")
 
 
 def run_4d_born():

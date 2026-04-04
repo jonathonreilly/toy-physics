@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""CANONICAL 3D 1/L^2 CARD at h=0.25 — frozen harness.
+"""Frozen 3D 1/L^2 card at h=0.25.
 
-This is the definitive 3D card for the 1/L^2 kernel. All 10 properties
-measured on ONE lattice at ONE resolution. Reviewer-safe frozen artifact.
+This is a reviewer-facing eight-property harness for the 3D ordered-lattice
+`1/L^2` branch at one fixed retained resolution. It is a useful trust-building
+artifact, but it is not a full same-family closure theorem.
 
 Architecture:
   - 3D dense lattice, W=10, L=12, h=0.25
@@ -12,7 +13,7 @@ Architecture:
   - Slits: y >= 0.5 (upper), y <= -0.5 (lower)
   - Mass: z-offset for gravity/distance
 
-Properties measured:
+Measured here:
   1. Born |I3|/P (3-slit Sorkin test)
   2. d_TV (total variation distance between slit distributions)
   3. k=0 control (gravity vanishes at k=0)
@@ -20,9 +21,12 @@ Properties measured:
   5. Gravity sign (TOWARD/AWAY at z=3)
   6. Decoherence (CL bath purity)
   7. MI (mutual information between slit choice and detector)
-  8. Purity scaling (1-pur vs lattice length)
-  9. Gravity grows with N (deflection vs lattice length)
-  10. Distance law (deflection vs mass position, z=2..9)
+  8. Distance law (deflection vs mass position, z=2..9)
+
+Intentionally not measured in this fixed-resolution card:
+  - purity scaling vs lattice length
+  - gravity growth vs lattice length
+Those require separate multi-size runs and stay in companion harnesses.
 """
 
 from __future__ import annotations
@@ -187,7 +191,7 @@ def main():
     field_f = np.zeros(lat.n)
 
     print("=" * 70)
-    print("CANONICAL 3D 1/L^2 CARD")
+    print("FROZEN 3D 1/L^2 CARD (8 measured properties)")
     print(f"  h={H}, W={PHYS_W}, L={PHYS_L}, max_d={lat.max_d}")
     print(f"  {lat.n:,} nodes, {lat.nl} layers, {lat.npl} npl")
     print(f"  Kernel: exp(ikS) * w * h^2 / L^2 (spent-delay)")
@@ -336,16 +340,15 @@ def main():
         MI = H_val - Hc
     print(f"  7. MI = {MI:.4f} bits  [{'PASS' if MI > 0.05 else 'WEAK'}]")
 
-    # ===== 8-9 skipped (would need multiple lattice sizes, too slow) =====
-    print(f"  8. Purity scaling: SKIPPED (requires multiple lattice sizes)")
-    print(f"  9. Gravity grows with N: SKIPPED (requires multiple lattice sizes)")
+    # ===== Companion-only properties =====
+    print("  Companion-only: purity scaling / gravity-vs-N require multi-size runs")
 
-    # ===== 10. Distance law =====
+    # ===== 8. Distance law =====
     t0 = time.time()
     max_z = min(int(PHYS_W * 0.9), lat.hw)
     z_values = list(range(2, max_z + 1))
     b_data = []; d_data = []
-    print(f"  10. Distance law (z={z_values[0]}..{z_values[-1]}):")
+    print(f"  8. Distance law (z={z_values[0]}..{z_values[-1]}):")
     for z_mass in z_values:
         fm, _ = make_field(lat, z_mass, STRENGTH)
         am = lat.propagate(fm, K, blocked)

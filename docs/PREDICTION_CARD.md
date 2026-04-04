@@ -92,6 +92,17 @@ The mass scaling exponent depends on spatial dimension (0 → 0.58 → positive)
 A simpler model (e.g., random phase accumulation without geometric structure)
 would not show this dimensional progression.
 
+### D5. Kernel dimension-dependence (2026-04-04)
+The current ordered-lattice probes suggest that `p = d - 1` is the strongest
+empirical candidate for a persistence-preserving kernel across 2D / 3D / 4D.
+A simpler model with one fixed kernel independent of dimension would not show
+that pattern.
+
+Important caveat:
+- this is still an empirical lattice-side result
+- the transfer-norm story is not fully reconciled yet
+- so this is a discriminating pattern, not a derived theorem
+
 ### F6. Lattice gravity reversal under refinement (2026-04-04)
 If the 3D 1/L^2 gravitational TOWARD flipped back to AWAY at h < 0.125,
 the convergence claim would be falsified. Current data: TOWARD at h=0.5,
@@ -108,40 +119,6 @@ If it flattens, the asymptotic exponent is not -2.
 At L=15 on 4D, 1/L^3 gives +0.034 (TOWARD, strengthening). If at
 L=20 or L=25 it flips to AWAY, the dimension-dependent kernel pattern
 breaks for d=4. Currently the pattern holds for d=2,3,4.
-
-## What distinguishes this model from simpler baselines
-
-### D1. Phase valley vs amplitude routing
-The k=0 diagnostic separates phase-mediated gravity from trivial
-conductance bias. Edge reweighting (1+alpha*f)^gamma gives 1/b
-distance falloff BUT the same falloff appears at k=0 — proving it's
-amplitude routing, not gravity. The phase valley mechanism produces
-b-independent gravity that requires k > 0.
-
-### D2. CL bath vs structural decoherence
-The CL bath decoherence is genuine environment-mediated (partial trace
-over bin-resolved bath). A simpler model (e.g., dephasing from random
-phases) would not show the bin-structure dependence or the scaling
-with lambda. The CL bath specifically requires S_norm > 0 (slit
-distinguishability in the spatial bins).
-
-### D3. Emergent gap vs imposed gap
-The adaptive quantile pruning creates emergent gap structure from
-uniform DAGs, improving decoherence by 5pp at N=30 and sustaining
-through N=60. A simpler model with no self-regulation would not
-show this dynamic gap formation.
-
-### D4. Dimensional dependence
-The mass scaling exponent depends on spatial dimension (0 → 0.58 → positive).
-A simpler model (e.g., random phase accumulation without geometric structure)
-would not show this dimensional progression.
-
-### D5. Kernel dimension-dependence (2026-04-04)
-The unique persistent kernel power p=d-1 across 2D/3D/4D is a
-non-trivial pattern. A simpler model (fixed kernel independent of
-dimension) would not show this. The transfer norm analysis reveals
-p=d-1 is the logarithmically marginal boundary — not an arbitrary
-choice but the unique admissible scaling.
 
 ## Open predictions (untested)
 
@@ -166,11 +143,17 @@ On a 5D lattice (4 transverse dims), the correct kernel should be
 1/L^4. Prediction: 1/L^3 will be TOWARD but weakening with L on 5D,
 while 1/L^4 will strengthen. Born should hold at machine precision.
 
-### O5. Distance exponent convergence rate (2026-04-04)
-On the 3D 1/L^2 lattice, the distance tail exponent at h=0.125 should
-be between -0.60 and -0.75 (extrapolating the -0.35 → -0.53 trend).
-If it is shallower than -0.45 or steeper than -1.0, the convergence
-rate model is wrong.
+### O5. Tail recovery beyond the moving peak (2026-04-04)
+On the 3D `1/L^2` lattice, finer spacing shifts the peak outward. The next
+useful prediction is therefore geometric rather than numerical:
+
+- if the lattice is widened enough at `h = 0.125`, a genuine post-peak tail
+  should reappear beyond the shifted peak
+- if widening still fails to recover a declining post-peak segment, the current
+  tail-steepening story is wrong
+
+This replaces the earlier numeric-band prediction for the `h = 0.125` tail
+exponent, which was explicitly refuted once the peak shift was measured.
 
 ### O6. RG exponent universality (2026-04-04)
 The RG scaling s ~ h^0.92 was measured on the 3D lattice. On the 4D

@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""4D lattice: test the dimension-dependent kernel prediction.
+"""4D lattice: bounded persistence comparison for nearby kernel powers.
 
-Prediction: on a 4D lattice (3 transverse dims), the correct kernel
-is 1/L^3 (= 1/L^(d-1) where d=4 spatial dims).
+This is an exploratory 4D follow-up on the ordered-lattice kernel fork.
 
-Test: compare 1/L, 1/L^2, 1/L^3 kernels on the same 4D lattice.
-Only 1/L^3 should give TOWARD gravity that survives refinement.
+It does not prove unique selection. The goal is narrower:
+- compare 1/L, 1/L^2, 1/L^3 on the same 4D family
+- check whether higher powers look more persistent on longer tested lattices
+- keep the result bounded to the current tested windows
 
 4D lattice: nodes at (x, y, z, w) where x is propagation direction,
 y/z/w are transverse. Slits select on y, mass offset in z, gravity
@@ -189,9 +190,9 @@ def test_kernel(lat, blocked, det, gl, strength, power, label):
 
 def main():
     print("=" * 70)
-    print("4D LATTICE: DIMENSION-DEPENDENT KERNEL PREDICTION")
-    print("  Prediction: 1/L^3 (= 1/L^(d-1) for d=4) should give TOWARD")
-    print("  while 1/L and 1/L^2 should give AWAY")
+    print("4D LATTICE: EXPLORATORY KERNEL PERSISTENCE TEST")
+    print("  Compare 1/L, 1/L^2, 1/L^3 on the same 4D ordered family.")
+    print("  Use the result as bounded persistence evidence, not a theorem.")
     print("=" * 70)
     print()
 
@@ -220,8 +221,8 @@ def main():
             print()
 
     print("=" * 70)
-    print("PREDICTION: 1/L^3 TOWARD at h=0.5 (where 1/L, 1/L^2 are AWAY)")
-    print("If confirmed: dimension-dependent kernel is a 3-example pattern")
+    print("Read as a bounded persistence comparison across nearby kernel powers.")
+    print("Short lattices are not discriminative; longer tested lattices matter.")
     print("=" * 70)
 
 
