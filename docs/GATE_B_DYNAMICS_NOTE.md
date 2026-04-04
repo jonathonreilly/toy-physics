@@ -21,6 +21,12 @@ Structured-connectivity follow-up:
 - [logs/2026-04-04-evolving-network-prototype-v4.txt](/Users/jonreilly/Projects/Physics/logs/2026-04-04-evolving-network-prototype-v4.txt)
 - [docs/EVOLVING_NETWORK_PROTOTYPE_V4_NOTE.md](/Users/jonreilly/Projects/Physics/docs/EVOLVING_NETWORK_PROTOTYPE_V4_NOTE.md)
 
+Latest bounded follow-up:
+
+- [scripts/evolving_network_prototype_v5.py](/Users/jonreilly/Projects/Physics/scripts/evolving_network_prototype_v5.py)
+- [logs/2026-04-04-evolving-network-prototype-v5.txt](/Users/jonreilly/Projects/Physics/logs/2026-04-04-evolving-network-prototype-v5.txt)
+- [docs/EVOLVING_NETWORK_PROTOTYPE_V5_NOTE.md](/Users/jonreilly/Projects/Physics/docs/EVOLVING_NETWORK_PROTOTYPE_V5_NOTE.md)
+
 1. **Noisy NN lattice** (positions jittered, fixed connectivity):
    100% TOWARD at all jitter levels 0.0-0.5, F∝M=1.00, Born 0.
    Gravity degrades gracefully (~40% weaker at jitter=0.5).
@@ -85,3 +91,16 @@ The newest v4 crystal-like growth rule is the first explicit
 structured-connectivity prototype guided by that lesson. It remains mixed and
 does not close Gate B, but it is a cleaner next-step prototype than the older
 pure KNN or pruning-only lanes.
+
+The newer v5 cross-growth follow-up is the current best bounded Gate B row:
+
+- it improves the TOWARD rate over the matched KNN control on the same grown
+  positions
+- it also improves the local `F~M` slope over that control
+- it does **not** cleanly beat the KNN control on mean delta
+
+So the current safe Gate B read is:
+
+- connectivity-first growth is better than generic recomputed KNN
+- the advantage is now visible in a frozen artifact chain
+- but the result is still mixed enough that Gate B remains open

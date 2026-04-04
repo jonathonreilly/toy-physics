@@ -39,6 +39,7 @@ Canonical notes:
 - [`docs/EVOLVING_NETWORK_PROTOTYPE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/EVOLVING_NETWORK_PROTOTYPE_NOTE.md)
 - [`docs/EVOLVING_NETWORK_PROTOTYPE_V3_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/EVOLVING_NETWORK_PROTOTYPE_V3_NOTE.md)
 - [`docs/EVOLVING_NETWORK_PROTOTYPE_V4_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/EVOLVING_NETWORK_PROTOTYPE_V4_NOTE.md)
+- [`docs/EVOLVING_NETWORK_PROTOTYPE_V5_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/EVOLVING_NETWORK_PROTOTYPE_V5_NOTE.md)
 - [`docs/GATE_B_CONNECTIVITY_TOLERANCE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_CONNECTIVITY_TOLERANCE_NOTE.md)
 - [`docs/DECOHERENCE_ACTION_INDEPENDENCE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/DECOHERENCE_ACTION_INDEPENDENCE_NOTE.md)
 - [`docs/CONTINUUM_BRIDGE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/CONTINUUM_BRIDGE_NOTE.md)
@@ -62,6 +63,7 @@ thing a new reader should treat as canonical proof of the current story:
 - [`scripts/action_regularity_crossover.py`](/Users/jonreilly/Projects/Physics/scripts/action_regularity_crossover.py)
 - [`scripts/gate_b_connectivity_tolerance.py`](/Users/jonreilly/Projects/Physics/scripts/gate_b_connectivity_tolerance.py)
 - [`scripts/lattice_3d_valley_linear_card.py`](/Users/jonreilly/Projects/Physics/scripts/lattice_3d_valley_linear_card.py)
+- [`scripts/dimensional_gravity_card.py`](/Users/jonreilly/Projects/Physics/scripts/dimensional_gravity_card.py)
 - [`scripts/lattice_4d_kernel_test.py`](/Users/jonreilly/Projects/Physics/scripts/lattice_4d_kernel_test.py)
 - [`scripts/transfer_norm_and_born.py`](/Users/jonreilly/Projects/Physics/scripts/transfer_norm_and_born.py)
 - [`scripts/cross_family_robustness.py`](/Users/jonreilly/Projects/Physics/scripts/cross_family_robustness.py)
@@ -69,6 +71,7 @@ thing a new reader should treat as canonical proof of the current story:
 - [`scripts/evolving_network_prototype_v2.py`](/Users/jonreilly/Projects/Physics/scripts/evolving_network_prototype_v2.py)
 - [`scripts/evolving_network_prototype_v3.py`](/Users/jonreilly/Projects/Physics/scripts/evolving_network_prototype_v3.py)
 - [`scripts/evolving_network_prototype_v4.py`](/Users/jonreilly/Projects/Physics/scripts/evolving_network_prototype_v4.py)
+- [`scripts/evolving_network_prototype_v5.py`](/Users/jonreilly/Projects/Physics/scripts/evolving_network_prototype_v5.py)
 
 ## How to use them
 

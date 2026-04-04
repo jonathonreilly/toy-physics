@@ -167,11 +167,13 @@ interest map rather than just broaden the science search.
 7. **Gate B structured-connectivity rule**
    - The connectivity-tolerance replay now sharpens the real bottleneck:
      position noise is tolerated; connectivity construction is the failure mode.
-   - A first crystal-like structured-connectivity prototype is now frozen and
-     mixed: cleaner than KNN on slope, but still not a generated-geometry win.
+   - The v4 crystal-like structured-connectivity prototype is frozen and mixed.
+   - The newer v5 cross-growth rule is also frozen and is a modest advance:
+     better TOWARD count than the matched KNN control on the same grown
+     positions, but still not a generated-geometry win on mean delta.
    - Deliverables:
-     - one next-step growth rule that improves on the mixed v4 result without
-       broad search sprawl
+     - one next-step connectivity-first local rule that improves on the mixed
+       v5 result without broad search sprawl
      - one same-family generated-vs-imposed comparison with finite detector
        signal on both sides
      - one bounded note saying whether this materially advances Gate B or not
