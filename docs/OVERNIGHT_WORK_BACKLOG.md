@@ -19,7 +19,17 @@ before the current bridges are tightened.
      - one clear decision on whether the bridge widens beyond the current
        narrow slice
 
-2. **NN continuum hardening**
+2. **3D dense spent-delay extension**
+   - Keep the retained 3D dense spent-delay family fixed.
+   - Use the gravity-observable hierarchy, not centroid alone.
+   - Focus on extending the hierarchy-clean attractive window and improving
+     MI / decoherence without changing the action law.
+   - Deliverables:
+     - one bounded geometry-extension script/log/note chain
+     - one decision on whether the mixed far-tail point can be converted into
+       a hierarchy-clean attractive point on the same family
+
+3. **NN continuum hardening**
    - Keep the NN story narrow and artifact-backed.
    - Prefer cleanup of companion-audit wording and stale claim surfaces over
      new speculative physics.
@@ -29,7 +39,7 @@ before the current bridges are tightened.
      - reconcile any mismatch between branch-history claims and on-disk notes
      - do not promote a continuum theorem unless the RG side is also canonical
 
-3. **Action-power branch claim-surface cleanup**
+4. **Action-power branch claim-surface cleanup**
    - Treat the action-power lane as a new branch with no inherited claims.
    - The 3D barrier signal issue is fixed enough to freeze a card, and the
      current ordered-family gravity-sign lane is now a bounded negative.
@@ -40,14 +50,14 @@ before the current bridges are tightened.
        same-harness closure
      - no new 3D sign-fishing unless the architecture changes topologically
 
-4. **Repo claim-surface cleanup**
+5. **Repo claim-surface cleanup**
    - Reduce the gap between canonical notes and nearby exploratory files.
    - Focus on filenames and top-level docs that a new reader will see first.
    - Deliverables:
      - retire or relabel stale exploratory `*_test.py` files where practical
      - keep `README`, `START_HERE`, and the program notes synchronized
 
-5. **Mirror-vs-lattice synthesis**
+6. **Mirror-vs-lattice synthesis**
    - Keep mirror as the flagship line.
    - Keep lattice / NN as secondary and frontier branches unless a stronger
      retained comparison note truly changes the ranking.

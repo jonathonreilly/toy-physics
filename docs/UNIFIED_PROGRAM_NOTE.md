@@ -249,6 +249,38 @@ So the safe synthesis read is now:
 - **ordered lattice still does not displace exact mirror as the flagship
   coexistence architecture**
 
+### Ordered-lattice 3D dense spent-delay branch
+
+The ordered-lattice story is now stronger in 3D as well, but still bounded.
+
+The retained dense 3D spent-delay card keeps:
+
+- Born companion audit at machine precision
+- `d_TV = 0.3785`
+- `MI = 0.1414`
+- decoherence `13.5%`
+- positive sub-linear mass response: `alpha = 0.34`, `R² = 0.97`
+- positive centroid-side distance decay: `b^(-1.62)`, `R² = 0.976`
+- gravity-vs-length window that crosses from away to toward on the tested
+  `N = 10, 12, 15` slice
+
+The gravity-observable hierarchy matters here:
+
+- `z = 2, 3, 4` are hierarchy-clean attraction
+- `z = 5` is mixed / ambiguous
+
+So the honest retained read is:
+
+- **3D dense spent-delay is now a real bounded same-family branch**
+- **it strengthens the ordered-lattice program**
+- **it does not replace mirror as the flagship**
+- **it is still safer to describe as a bounded attractive window than as a
+  fully solved 3D theorem**
+
+Primary artifact:
+
+- [`docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md)
+
 ### Nearest-neighbor refinement
 
 The nearest-neighbor lattice is now the cleanest refinement-side branch.

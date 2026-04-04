@@ -128,6 +128,27 @@ So the retained 3D action-power barrier card also does **not** get rescued by
 a better detector observable. Its sign is genuinely away on the current
 observable hierarchy.
 
+### 3D dense spent-delay ultra-weak branch
+
+- family: retained 3D dense spent-delay ordered lattice
+- strength: `5e-5`
+- fixed geometry: `L = 12`, `W = 6`, `h = 1.0`, `max_d = 3`
+
+Measured on the retained barrier card:
+
+- `z = 2`: centroid `+0.003101`, `P_near` `+0.001530`, bias `+0.003060`
+- `z = 3`: centroid `+0.001941`, `P_near` `+0.000766`, bias `+0.001532`
+- `z = 4`: centroid `+0.001157`, `P_near` `+0.000110`, bias `+0.000220`
+- `z = 5`: centroid `+0.000693`, `P_near` `-0.000313`, bias `-0.000626`
+
+Interpretation:
+
+- **genuine attraction** on the near-to-mid `z = 2, 3, 4` window
+- **mixed / ambiguous** at `z = 5`
+
+So this branch is stronger than the earlier 3D ordered-lattice negative read,
+but it is still not a license to use centroid sign alone at the far tail.
+
 ## What this means
 
 1. We should **not** invert gravity sign by convention.
@@ -138,17 +159,14 @@ observable hierarchy.
 3. On the current retained examples:
    - 2D ultra-weak dense spent-delay is **genuinely attractive**
    - 3D action-power close-slit barrier is **genuinely away**
+   - 3D dense spent-delay is **attractive on the near-to-mid window** and
+     **mixed at the far tail**
 
 So the hierarchy sharpens sign interpretation, but it does **not** currently
 rescue the retained 3D barrier failure.
-
-## Boundary
-
-This note does **not** adjudicate the newer 3D dense spent-delay ultra-weak
-claim from branch narrative, because that result does not yet have its own
-canonical script/log/note chain in this checkout.
 
 ## Artifact chain
 
 - [`scripts/gravity_observable_hierarchy.py`](/Users/jonreilly/Projects/Physics/scripts/gravity_observable_hierarchy.py)
 - [`logs/2026-04-04-gravity-observable-hierarchy.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-04-gravity-observable-hierarchy.txt)
+- [`docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md)

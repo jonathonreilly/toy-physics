@@ -121,9 +121,10 @@ If you only want the current high-level state, read this section first.
   [MIRROR_VS_LATTICE_PROGRAM_NOTE.md](/Users/jonreilly/Projects/Physics/docs/MIRROR_VS_LATTICE_PROGRAM_NOTE.md).
 - **Ordered lattice:** retained secondary branch. The standard-strength branch
   is a same-family two-harness bridge, the weak-field reopening gives a narrow
-  one-card pocket, and the no-barrier branch retains the cleanest current
-  distance-law magnitude. This is a real branch, but it does not displace the
-  mirror flagship.
+  one-card pocket, the 3D dense spent-delay branch now adds a bounded
+  same-family attractive window, and the no-barrier branch retains the
+  cleanest current distance-law magnitude. This is a real branch, but it does
+  not displace the mirror flagship.
 - **Nearest-neighbor refinement:** strongest current continuum-side bridge.
   Raw NN is Born-clean through `h = 0.25`, deterministic rescale extends a
   bounded path to `h = 0.0625`, and the canonical notes keep continuum / RG

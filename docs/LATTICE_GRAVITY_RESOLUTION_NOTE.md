@@ -1,7 +1,7 @@
 # Lattice Gravity Resolution: Ultra-Weak Field Gives Both Attraction AND 1/b
 
 **Date:** 2026-04-04
-**Status:** 2D RESOLVED. 3D open.
+**Status:** 2D resolved. 3D reopened on a bounded dense-lattice branch.
 
 ## The breakthrough
 
@@ -41,13 +41,30 @@ Combined with prior results on the same lattice:
 
 ## 3D status
 
-3D NN lattice (9 edges/node): STILL AWAY at strength=0.0005 with
-spent-delay. The 9-edge NN lattice doesn't have enough path diversity
-for the linear response to dominate.
+The old fully negative 3D read is no longer the whole story.
 
-Dense 3D lattice (25 or 49 edges): ALSO AWAY at strength=0.0005.
-The 3D beam depletion is stronger because the beam spreads in two
-transverse dimensions.
+What remains true:
+
+- 3D NN lattice (`9` edges/node) stayed away on the earlier tested slice
+- strong-field and action-power ordered 3D barrier rows can still be genuinely
+  away / depletion
+
+What is now reopened:
+
+- the 3D **dense** spent-delay branch at ultra-weak field (`5e-5`) has a
+  retained same-family barrier card with:
+  - Born `7.39e-16`
+  - `MI = 0.1414`
+  - decoherence `13.5%`
+  - centroid-side distance exponent `-1.62`, `R² = 0.976`
+- under the gravity-observable hierarchy:
+  - `z = 2, 3, 4` are genuinely attractive
+  - `z = 5` is mixed / ambiguous
+
+So the safe 3D read is now:
+
+- **not fully negative anymore**
+- **not yet a clean all-distances attraction theorem either**
 
 ## The mechanism
 
@@ -68,13 +85,20 @@ Above this, nonlinear disruption → depletion.
 
 ## Open question
 
-Why does the transition work on the 2D dense lattice but not
-on the 3D NN lattice? The 2D lattice has 11 edges/node while
-the 3D has 9. But the dense 3D (49 edges) also fails. The
-dimensionality itself might be the issue — the 3D beam spreads
-faster, requiring even weaker field for the linear regime.
+What still limits the 3D dense branch?
 
-## Scripts
+- the near-to-mid window is now attractive
+- the far tail is still mixed under the hierarchy
+- MI and decoherence are present but weaker than the stronger 2D dense rows
 
-- `action_power_canonical_harness.py` — 2D/3D comparison
-- Various inline tests documented in commit messages
+So the next question is no longer “can 3D ordered lattices ever turn toward?”
+The next question is:
+
+- can the 3D dense spent-delay geometry extend the hierarchy-clean attractive
+  window while keeping the same same-family barrier card?
+
+## Artifact chain
+
+- [`scripts/lattice_3d_dense_10prop.py`](/Users/jonreilly/Projects/Physics/scripts/lattice_3d_dense_10prop.py)
+- [`docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md)
+- [`docs/GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md)

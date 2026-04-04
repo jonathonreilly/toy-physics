@@ -23,6 +23,7 @@ history or commit-message narrative.
 - **Ordered lattice is real, but secondary.**
   - standard-strength same-family two-harness bridge
   - narrow weak-field one-card pocket
+  - retained 3D dense spent-delay branch with a near-to-mid attractive window
   - clean distance-law magnitude on the no-barrier branch
 - **Nearest-neighbor refinement is a bounded refinement bridge.**
   - raw NN is Born-clean through `h = 0.25`
@@ -54,6 +55,7 @@ history or commit-message narrative.
 - [`docs/ACTION_POWER_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_NOTE.md)
 - [`docs/ACTION_POWER_3D_GRAVITY_SIGN_CLOSURE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_3D_GRAVITY_SIGN_CLOSURE_NOTE.md)
 - [`docs/GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md)
+- [`docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md)
 
 ## Working rules
 
@@ -67,5 +69,6 @@ history or commit-message narrative.
 ## Best next pickup points
 
 1. Extend the structured chokepoint bridge without changing the canonical mirror readout.
-2. Keep the action-power branch bounded unless a topology-changing 3D family is introduced.
-3. Keep NN continuum claims narrow unless a new artifact chain truly resolves the current RG / refinement caveats.
+2. Extend the 3D dense spent-delay attractive window without dropping the same-family barrier card.
+3. Keep the action-power branch bounded unless a topology-changing 3D family is introduced.
+4. Keep NN continuum claims narrow unless a new artifact chain truly resolves the current RG / refinement caveats.

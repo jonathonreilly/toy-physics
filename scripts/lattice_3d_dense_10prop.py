@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Canonical 10-property card: 3D dense lattice, spent-delay, ultra-weak field.
 
-This is the FROZEN harness for the 3D 10/10 result.
-All 10 properties measured on ONE graph family with ONE propagator.
+This is the retained harness for the 3D dense spent-delay branch.
+All 10 properties are evaluated on one ordered graph family with one
+propagator, while the note/log chain keeps the claim surface bounded.
 
 Graph: 3D integer lattice, max_d=3 (49 edges/node)
 Action: spent-delay S = dl - sqrt(dl² - L²)
@@ -119,6 +120,28 @@ def setup_slits(pos, nmap, nl, hw):
     return bi, sa, sb, blocked, bl
 
 
+def detector_reads(amps, det, pos):
+    ptot = sum(abs(amps[d])**2 for d in det)
+    if ptot <= 1e-30:
+        return 0.0, math.nan, math.nan, math.nan
+    centroid = sum(abs(amps[d])**2 * pos[d][2] for d in det) / ptot
+    near = [d for d in det if pos[d][2] >= 0]
+    far = [d for d in det if pos[d][2] < 0]
+    p_near = sum(abs(amps[d])**2 for d in near) / ptot
+    channel_bias = (
+        sum(abs(amps[d])**2 for d in near) - sum(abs(amps[d])**2 for d in far)
+    ) / ptot
+    return ptot, centroid, p_near, channel_bias
+
+
+def classify_sign(delta_centroid, delta_pnear, delta_bias):
+    if delta_centroid > 0 and delta_pnear > 0 and delta_bias > 0:
+        return "ATTRACTIVE"
+    if delta_centroid < 0 and delta_pnear < 0 and delta_bias < 0:
+        return "AWAY"
+    return "MIXED"
+
+
 def main():
     phys_l = 12
     h = 1.0
@@ -137,8 +160,7 @@ def main():
     print()
 
     af = propagate(pos, adj, field_f, K, blocked, n)
-    pf = sum(abs(af[d])**2 for d in det)
-    zf = sum(abs(af[d])**2 * pos[d][2] for d in det) / pf
+    pf, zf, pnear_f, bias_f = detector_reads(af, det, pos)
 
     # 1. Born
     upper = sorted([i for i in bi if pos[i][1] > 1], key=lambda i: pos[i][1])
@@ -178,7 +200,13 @@ def main():
     print(f"  2. d_TV = {dtv:.4f}  [{'PASS' if dtv > 0.1 else 'WEAK'}]")
 
     # 3. k=0
-    print(f"  3. k=0 = 0.000000  [PASS]")
+    field_k0, _ = make_field(pos, nmap, gl, 3, n)
+    af0 = propagate(pos, adj, field_f, 0.0, blocked, n)
+    am0 = propagate(pos, adj, field_k0, 0.0, blocked, n)
+    _, zf0, pnear_f0, bias_f0 = detector_reads(af0, det, pos)
+    _, zm0, pnear_m0, bias_m0 = detector_reads(am0, det, pos)
+    k0_delta = zm0 - zf0
+    print(f"  3. k=0 = {k0_delta:.6f}  [{'PASS' if abs(k0_delta) < 1e-12 else 'FAIL'}]")
 
     # 4. F∝M
     m_data = []; g_data = []
@@ -189,7 +217,7 @@ def main():
         am = propagate(pos, adj, field_s, K, blocked, n)
         pm = sum(abs(am[d])**2 for d in det)
         if pm > 1e-30:
-            zm = sum(abs(am[d])**2 * pos[d][2] for d in det) / pm
+            _, zm, _, _ = detector_reads(am, det, pos)
             delta = zm - zf
             if delta > 0:
                 m_data.append(s); g_data.append(delta)
@@ -214,10 +242,9 @@ def main():
         gl2 = 2 * nl2 // 3
         ff2 = [0.0] * n2
         af2 = propagate(p2, a2, ff2, K, bk2, n2)
-        pf2 = sum(abs(af2[d])**2 for d in d2)
+        pf2, zf2, _, _ = detector_reads(af2, d2, p2)
         if pf2 < 1e-30:
             continue
-        zf2 = sum(abs(af2[d])**2 * p2[d][2] for d in d2) / pf2
         fm2, _ = [0.0]*n2, None
         mi2 = nm2.get((gl2, 0, 3))
         if mi2 is None:
@@ -228,9 +255,8 @@ def main():
             pi = p2[i]
             fm2[i] = STRENGTH / (math.sqrt((pi[0]-mx2)**2+(pi[1]-my2)**2+(pi[2]-mz2)**2) + 0.1)
         am2 = propagate(p2, a2, fm2, K, bk2, n2)
-        pm2 = sum(abs(am2[d])**2 for d in d2)
+        pm2, zm2, _, _ = detector_reads(am2, d2, p2)
         if pm2 > 1e-30:
-            zm2 = sum(abs(am2[d])**2 * p2[d][2] for d in d2) / pm2
             gravs[pl] = zm2 - zf2
     grows = False
     if len(gravs) >= 2:
@@ -365,21 +391,29 @@ def main():
         print(f"     Exponent: N^({slope:.2f}), R²={r2:.3f}, N_half={n_half:.0f}")
 
     # 9. k=0 control
-    print(f"  9. k=0 control = 0.000000  [PASS]")
+    k0_hierarchy = max(abs(k0_delta), abs(pnear_m0 - pnear_f0), abs(bias_m0 - bias_f0))
+    print(f"  9. k=0 control = {k0_hierarchy:.6f}  [{'PASS' if k0_hierarchy < 1e-12 else 'FAIL'}]")
 
     # 10. Distance law
     b_data = []; d_data = []
+    b_hier = []; d_hier = []
     for z_mass in [2, 3, 4, 5]:
         field_m, _ = make_field(pos, nmap, gl, z_mass, n)
         am = propagate(pos, adj, field_m, K, blocked, n)
-        pm = sum(abs(am[d])**2 for d in det)
+        pm, zm, pnear_m, bias_m = detector_reads(am, det, pos)
         if pm > 1e-30:
-            zm = sum(abs(am[d])**2 * pos[d][2] for d in det) / pm
             delta = zm - zf
-            sign = "TOWARD" if delta > 0 else "AWAY"
-            print(f" 10. Distance z={z_mass}: {delta:+.6f} ({sign})")
+            delta_pnear = pnear_m - pnear_f
+            delta_bias = bias_m - bias_f
+            sign = classify_sign(delta, delta_pnear, delta_bias)
+            print(
+                f" 10. Distance z={z_mass}: centroid={delta:+.6f}, "
+                f"P_near={delta_pnear:+.6f}, bias={delta_bias:+.6f} [{sign}]"
+            )
             if delta > 0:
                 b_data.append(z_mass); d_data.append(delta)
+            if sign == "ATTRACTIVE":
+                b_hier.append(z_mass); d_hier.append(delta)
     if len(b_data) >= 3:
         lx = [math.log(b) for b in b_data]
         ly = [math.log(d) for d in d_data]
@@ -390,7 +424,21 @@ def main():
         ss_res = sum((y-(my_l+slope*(x-mx_l)))**2 for x, y in zip(lx, ly))
         ss_tot = sum((y-my_l)**2 for y in ly)
         r2 = 1-ss_res/ss_tot if ss_tot > 0 else 0
-        print(f"     Distance law: b^({slope:.2f}), R²={r2:.3f}")
+        print(f"     Centroid law: b^({slope:.2f}), R²={r2:.3f}")
+    if len(b_hier) >= 3:
+        lx = [math.log(b) for b in b_hier]
+        ly = [math.log(d) for d in d_hier]
+        nn2 = len(lx); mx_l = sum(lx)/nn2; my_l = sum(ly)/nn2
+        sxx = sum((x-mx_l)**2 for x in lx)
+        sxy = sum((x-mx_l)*(y-my_l) for x, y in zip(lx, ly))
+        slope = sxy/sxx if sxx > 1e-10 else 0
+        ss_res = sum((y-(my_l+slope*(x-mx_l)))**2 for x, y in zip(lx, ly))
+        ss_tot = sum((y-my_l)**2 for y in ly)
+        r2 = 1-ss_res/ss_tot if ss_tot > 0 else 0
+        print(
+            f"     Hierarchy-aligned support: {len(b_hier)}/{len([2,3,4,5])} points, "
+            f"b^({slope:.2f}), R²={r2:.3f}"
+        )
 
     print()
     print("=" * 80)
