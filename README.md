@@ -149,6 +149,10 @@ If you only want the current high-level state, read this section first.
 If you are picking up the repo fresh, start with
 [START_HERE.md](/Users/jonreilly/Projects/Physics/docs/START_HERE.md).
 
+If you land on older exploratory drivers, use
+[LEGACY_EXPLORATORY_DRIVERS_NOTE.md](/Users/jonreilly/Projects/Physics/docs/LEGACY_EXPLORATORY_DRIVERS_NOTE.md)
+as the off-ramp before treating any of them as canonical harnesses.
+
 Unless a later section explicitly says it is a canonical retained note, treat
 the architecture snapshot above plus [START_HERE.md](/Users/jonreilly/Projects/Physics/docs/START_HERE.md)
 and [UNIFIED_PROGRAM_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIFIED_PROGRAM_NOTE.md)
