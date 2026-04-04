@@ -121,6 +121,11 @@ interest map rather than just broaden the science search.
      claims from the retained dense spent-delay family.
    - Do not duplicate long-running scans that are already in flight; use this
      lane for reconciliation, same-harness validation, and bounded doc prep.
+   - If a 4D kernel test is already running elsewhere, the best non-overlapping
+     support work is:
+     - transfer-norm / marginality discrimination around the proposed
+       `1/L^(d-1)` family
+     - wider `h = 0.25` post-peak tail statistics on the 3D branch
    - Deliverables:
      - one fixed-family barrier-card + no-barrier-companion script/log/note chain
      - one explicit `h = 1.0 -> 0.5` comparison using the gravity hierarchy

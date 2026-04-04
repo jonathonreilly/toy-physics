@@ -34,14 +34,14 @@ The best next steps are the ones that improve both at once.
 | category | score | read |
 |---|---:|---|
 | Toy-model mechanism interest | `9.5/10` | high intrinsic curiosity value |
-| Foundations / complex-systems / network-dynamics interest | `8.8/10` | real likely interest in the right subcommunities |
-| Broader theorist interest | `7.0/10` | selective interest, not broad buy-in |
-| Bridge to known physics | `6.8/10` | suggestive but still branch-dependent and under-theorized |
-| Publishable as a careful computational toy-model paper | `7.5/10` | plausible with narrow framing and honest caveats |
+| Foundations / complex-systems / network-dynamics interest | `8.9/10` | real likely interest in the right subcommunities |
+| Broader theorist interest | `7.1/10` | selective interest, with stronger review hardening than before |
+| Bridge to known physics | `6.9/10` | suggestive but still branch-dependent and under-theorized |
+| Publishable as a careful computational toy-model paper | `7.7/10` | plausible with narrow framing and increasingly review-safe scaffolding |
 | Publishable as a foundational-physics breakthrough claim | `3.8/10` | too early for that framing |
-| Ready for top-tier mainstream physics claims | `2.5/10` | far below the required bar |
-| Field-shifting theory program | `4.8/10` | not yet at the point where outside theorists are forced to engage |
-| Landmark foundational breakthrough | `3.0/10` | current evidence base is too branch-sensitive |
+| Ready for top-tier mainstream physics claims | `2.6/10` | still far below the required bar |
+| Field-shifting theory program | `4.9/10` | stronger than before, but still not at forced-engagement level |
+| Landmark foundational breakthrough | `3.1/10` | current evidence base is still too branch-sensitive |
 | Nobel-scale breakthrough | `0.4/10` | not a realistic present-tense read |
 
 ## Why this map is lower than the old internal map
@@ -63,6 +63,16 @@ The main downward pressures are:
 - mainstream reviewers will discount surprising numerics without a tighter law /
   derivation story
 - as a nontraditional entrant, the burden of proof is higher, not lower
+
+The main upward pressures since the first adversarial cut are:
+
+- stronger review-hardening and regression-gate discipline on `main`
+- a cleaner flagship/secondary/frontier program map
+- more explicit retained-vs-unretained separation for the lattice / NN /
+  propagator-fork branches
+- the active `1/L^(d-1)` kernel lane is now scientifically more interesting,
+  but it is still **unretained** until the exact frozen artifact chain lands on
+  `main`
 
 ## What would most improve the scores
 
@@ -114,7 +124,8 @@ external-score movers right now:
 - broad new branch fishing
 - larger speculative kernel/action sweeps without same-harness validation
 - stronger chat or commit-message narrative
-- extra 4D claims without a clearer 3D asymptotic bridge
+- extra 4D or dimension-dependent-kernel claims without a frozen `main`-branch
+  artifact chain and a clearer 3D asymptotic bridge
 
 ## Working interpretation
 
@@ -123,5 +134,15 @@ The honest external read today is:
 - **high intrinsic toy-model interest**
 - **real odds of a careful narrow paper**
 - **low current odds of broad mainstream acceptance as a breakthrough claim**
+
+The current active `1/L^(d-1)` branch could improve this map if it lands with:
+
+- the exact frozen code path that supports the claim
+- a real script/log/note chain on `main`
+- same-harness wording that separates persistence, tail steepening, and RG
+  magnitude control
+
+Until then, it should be treated as promising frontier work rather than a score
+multiplier in the canonical external read.
 
 That is the calibration the backlog should optimize against.
