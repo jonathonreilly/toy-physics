@@ -1,66 +1,47 @@
 # Physics Autopilot Handoff
 
-## 2026-04-04 16:58 America/New_York
+## 2026-04-04 18:07 America/New_York
 
 ### Seam class
-- bounded coordination repair to the real synced valley-linear closure / derivation head
-- next science seam still returns to the fixed directional-measure geometry-normalized gravity-`b` lane
+- bounded coordination repair to the real local valley-linear integrity head
+- next science seam is still the fixed directional-measure geometry-normalized gravity-`b` lane once sync is restored
 
 ### What this loop did
 - ran the duplicate-run guard and confirmed this thread is the newest unresolved `physics-autopilot` run
 - checked the cooperative lock, found it free, acquired `physics-science`, and confirmed there is no active detached science child to resume or monitor
 - read `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` in protocol order
-- reconciled canonical git before new work:
-  - `main` and `origin/main` are both at `c26a524` (`logs(valley-linear): freeze missing action and closure replays`)
-  - `git rev-list --left-right --count origin/main...main` returned `0 0`
-  - `git status --short --branch` was clean
-- inspected the landed synced artifact chain directly:
-  - `/Users/jonreilly/Projects/Physics/docs/NEWTON_DERIVATION_NOTE.md`
-  - `/Users/jonreilly/Projects/Physics/docs/ACTION_UNIQUENESS_NOTE.md`
-  - `/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_SCALING_SWEEP_NOTE.md`
-  - `/Users/jonreilly/Projects/Physics/docs/SAME_FAMILY_3D_CLOSURE_NOTE.md`
-  - `/Users/jonreilly/Projects/Physics/docs/START_HERE.md`
-  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-two-body-momentum.txt`
-  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-action-universality-probe.txt`
-  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-action-power-scaling-sweep.txt`
-  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-same-family-3d-closure.txt`
-  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-4d-wide-distance-law.txt`
-- ran `python3 /Users/jonreilly/Projects/Physics/scripts/base_confidence_check.py`
-  - benchmark regression audit, mode-only candidate isolation, sparse bridge addback visibility, sparse fallback access labels, live mechanism-split driver, and feature registry alignment all passed
-- refreshed `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- reconciled canonical git before any new work:
+  - `git status --short --branch` reported `## main...origin/main [ahead 1]`
+  - `git rev-list --left-right --count origin/main...main` returned `0 1`
+  - `git log --oneline --decorate -n 8` put `7462541` (`fix(autopilot): reconcile valley-linear sync head`) at `HEAD` above `c26a524`
+- ran the required managed pre-step push:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - result: `status=failed`, `failure_kind=dns_failure`, `host=github.com`
+- inspected `git show --stat --summary --oneline 7462541` and confirmed the stranded local commit is the prior valley-linear coordination repair, not fresh science
+- refreshed `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` to stop claiming the repo is already fully synced
 
 ### Current state
 - no detached science child is running
-- the actual synced head is a valley-linear closure / derivation chain, not the older directional-`b` stencil-transfer snapshot that the coordination files were still describing
-- the repo is healthy on the settled synced head and the cheap audit passed
-- this loop did not start fresh decoherence, continuum, or wider action-architecture work
+- the latest real repo-facing result is still the bounded valley-linear closure / derivation chain plus its stranded local coordination repair
+- the active blocker is operational rather than scientific:
+  - remote sync is still failing on DNS resolution for `github.com`
+- this loop intentionally did not reopen the directional-`b` residual analysis or any decoherence / continuum search while the coordination layer was inconsistent
 
 ### Strongest confirmed conclusion
-The coordination drift was stale metadata again. The current synced head retains a bounded valley-linear story:
-- weak-field-linear phase valleys stay the fixed-family `F~M = 1.00` class
-- the companion power sweep sharpens the safer bounded family law to `F~M = p`
-- the same-family 3D closure is now a real script / log / note chain
-- the new two-body lattice log backs the derivation note with explicit unequal-mass momentum conservation for valley-linear and `42-55%` violation for spent-delay
-- `python3 /Users/jonreilly/Projects/Physics/scripts/base_confidence_check.py` passed, so there is no fresh regression signal
-- none of that changes the next non-overlapping pickup: return to the directional-`b` residual `3-NN` miss diagnostic rather than opening new decoherence or broad continuum work
+No new physics conclusion changed this loop. The important correction is coordination truthfulness:
+- the repo is not in the fully synced `c26a524` state described by the previous handoff
+- the stranded local commit at `7462541` is still the most recent bounded integrity result on top of the valley-linear closure / derivation head
+- once the managed push path is healthy again, the next non-overlapping science pickup remains the two residual frozen `3-NN` misses in `/Users/jonreilly/Projects/Physics/logs/2026-04-04-directional-b-density-stencil-transfer.txt`
 
 ### Exact next step
-- keep the retained directional propagator and occupancy-first overlap statement fixed
-- reopen `/Users/jonreilly/Projects/Physics/logs/2026-04-04-directional-b-density-stencil-transfer.txt`
-- inspect the two surviving frozen `3-NN` misses only
-- test one equally local occupancy-aware correction only if it explains those two residual rows without hurting the reference+tree read or reopening a wider denominator search
+- rerun `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+- if sync clears, reopen `/Users/jonreilly/Projects/Physics/logs/2026-04-04-directional-b-density-stencil-transfer.txt` and inspect only:
+  - `midgamma1.4-m3`, `N = 25`, `seed = 4`
+  - `midgamma1.4-m5`, `N = 25`, `seed = 7`
 
 ### Relevant artifact paths
 - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
 - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
 - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
-- `/Users/jonreilly/Projects/Physics/docs/NEWTON_DERIVATION_NOTE.md`
-- `/Users/jonreilly/Projects/Physics/docs/ACTION_UNIQUENESS_NOTE.md`
-- `/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_SCALING_SWEEP_NOTE.md`
-- `/Users/jonreilly/Projects/Physics/docs/SAME_FAMILY_3D_CLOSURE_NOTE.md`
-- `/Users/jonreilly/Projects/Physics/logs/2026-04-04-two-body-momentum.txt`
-- `/Users/jonreilly/Projects/Physics/logs/2026-04-04-action-universality-probe.txt`
-- `/Users/jonreilly/Projects/Physics/logs/2026-04-04-action-power-scaling-sweep.txt`
-- `/Users/jonreilly/Projects/Physics/logs/2026-04-04-same-family-3d-closure.txt`
 - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-directional-b-density-stencil-transfer.txt`
 - `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
