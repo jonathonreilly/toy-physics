@@ -1,3 +1,65 @@
+## 2026-04-04 — Coordination reconciled to synced axiom-fork note head
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed:
+  - no detached science child was running
+- the canonical repo started this loop synced again:
+  - `main` and `origin/main` both point to `c5670ee` (`Merge branch 'claude/distracted-napier'`)
+  - the initial `git rev-list --left-right --count origin/main...main` check returned `0 0`
+- the tracked coordination state had drifted again:
+  - `AUTOPILOT_WORKLOG.md`, `logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` still described the older local-ahead `f97b2fa` / DNS-failure state
+  - the canonical checkout also still carried unrelated modified logs plus untracked docs / scripts in the lattice, mirror, persistent-record, gravity-design, and structured lanes
+- the synced head had advanced into Claude-owned axiom-fork / harness documentation work, so this loop stayed on coordination repair only
+
+### What changed
+- acquired the `physics-science` lock and reran the protocol sync checks against the canonical repo
+- confirmed the canonical repo state before new science:
+  - `git status --short --branch` showed `main...origin/main` with dirty local metadata / side-lane files but no branch divergence
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 8` put `c5670ee` at `HEAD`
+- ran the required push helper before new science:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - helper result: `status=nothing_to_push`, `ahead=0`, `behind=0`
+- inspected the landed synced head artifacts:
+  - `c5670ee` (`Merge branch 'claude/distracted-napier'`)
+  - `eedba60` (`docs: ACTION_POWER_NOTE — honest status of axiom fork branch`)
+  - `d673d3b` (`fix(harness): 3D barrier card fails — insufficient signal through slits`)
+  - `2295061` (`feat(axiom-fork): 3D canonical harness — power p=0.5 gives 1/b² + F∝M=0.99`)
+- read `/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_NOTE.md` to verify whether a top-level README rewrite was required
+- left `/Users/jonreilly/Projects/Physics/README.md` untouched because the synced head documents a complementary axiom-fork branch with partial 3D no-barrier validation, not a flagship architecture replacement
+- refreshed:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- recorded one bounded integrity repair so the tracked coordination state again matches the real synced repo before the next science step
+
+### Strongest confirmed conclusion
+The current integrity issue was stale coordination metadata again, now against a newer synced axiom-fork documentation head rather than the older local-ahead `f97b2fa` state.
+- `main` and `origin/main` are both at `c5670ee`, so the earlier local-ahead / DNS-failure story is no longer current
+- the landed synced head now carries a real note-backed but explicitly incomplete side branch:
+  - `/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_NOTE.md` records that on the 3D NN lattice, the power-action fork currently validates a no-barrier distance exponent near `-1.82` with `R^2 = 0.93` and mass scaling near `0.99`, while barrier-side Born / MI / decoherence remain unvalidated because the 3D barrier setup does not transmit enough signal
+- the note itself describes that branch as complementary rather than a replacement for the spent-delay flagship, so `README.md` remains honest without a top-level rewrite from this loop
+- while Claude owns the active axiom-fork / decoherence interpretation lane, this automation should not reopen overlapping architecture searches from that synced head
+- the highest-signal non-overlapping next lane returns to the fixed directional-measure geometry-normalized gravity-`b` seam
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- keep the corrected fixed directional propagator and retained `b -> b - h_mass` hierarchy fixed
+- return to one bounded geometry-normalized gravity-`b` study on the directional-measure thread
+- start from the retained directional note and the last stable holdout log:
+  - `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-03-directional-b-continuous-density-midlayer-holdout.txt`
+- test one occupancy-aware or geometry-normalized diagnostic that addresses the six frozen 4-NN false negatives without reopening decoherence or axiom-fork architecture work
+- keep avoiding the unrelated dirty lattice / mirror / persistent-record / gravity-design / structured side lanes already sitting in the checkout
+
+### First concrete action
+- reopen `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- compare the six frozen 4-NN false negatives in `/Users/jonreilly/Projects/Physics/logs/2026-04-03-directional-b-continuous-density-midlayer-holdout.txt` against `local_target_count`, `expected_target_count_4nn`, `mu`, and simple `b` / `edge_b` / local-density normalizations before adding a new family or wider denominator search
+
 ## 2026-04-03 — Coordination reconciled to synced causal marker head
 
 ### Current state
