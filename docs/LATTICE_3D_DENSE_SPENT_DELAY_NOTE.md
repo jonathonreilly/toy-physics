@@ -53,18 +53,17 @@ On this exact retained barrier card, the gravity sign is:
 
 | `z_mass` | centroid | `P_near` | bias | read |
 |---|---:|---:|---:|---|
-| `2` | `+0.003101` | `+0.001530` | `+0.003060` | attractive |
-| `3` | `+0.001941` | `+0.000766` | `+0.001532` | attractive |
-| `4` | `+0.001157` | `+0.000110` | `+0.000220` | attractive |
-| `5` | `+0.000693` | `-0.000313` | `-0.000626` | mixed / ambiguous |
+| `2` | `+0.003101` | `+0.001469` | `+0.107097` | attractive |
+| `3` | `+0.001941` | `+0.000374` | `+0.176381` | attractive |
+| `4` | `+0.001157` | `+0.000626` | `+0.113676` | attractive |
+| `5` | `+0.000693` | `+0.000715` | `+0.048601` | attractive |
 
 So the retained 3D dense spent-delay read is:
 
-- **genuine attraction on the near-to-mid tested window** (`z = 2, 3, 4`)
-- **mixed far-tail behavior** at `z = 5`
+- **genuine attraction on the retained tested window** (`z = 2, 3, 4, 5`)
 
 That is stronger than the older 3D ordered-lattice negative read, but it is
-not the same thing as “all distances are unambiguously attractive.”
+still not the same thing as an all-distances or asymptotic theorem.
 
 ## What is retained
 
@@ -75,12 +74,13 @@ not the same thing as “all distances are unambiguously attractive.”
 - the branch keeps a positive sub-linear mass response
 - the branch keeps a strong centroid-side distance decay
 - the gravity hierarchy confirms a real attractive window on the retained
-  near-to-mid `z` range
+  tested `z = 2..5` range
 
 ## What is not retained
 
 - not a replacement for the mirror flagship
-- not a proof that all tested `z` values are hierarchy-clean attraction
+- not a proof that all larger or asymptotic `z` values remain hierarchy-clean
+  attraction
 - not a continuum or RG theorem
 - not a clean promoted `1/b^2` theorem on this 3D spent-delay branch
 - not a broad architectural proof that ordered lattices solve the attraction /
@@ -92,7 +92,7 @@ This result moves the ordered-lattice branch forward in an important way:
 
 - 2D dense spent-delay keeps the clearest ultra-weak `1/b`-style reopening
 - 3D dense spent-delay now adds a retained same-family dense card with
-  nontrivial Born / MI / decoherence and a near-to-mid attractive window
+  nontrivial Born / MI / decoherence and a tested attractive window
 
 But the project ranking does not change:
 
@@ -103,7 +103,7 @@ But the project ranking does not change:
 ## Next highest-value work
 
 1. Improve the 3D dense spent-delay slit geometry so the attractive window
-   extends beyond the current mixed far-tail point.
+   extends to larger tested distances while preserving MI / decoherence.
 2. Strengthen MI / decoherence on the same retained 3D dense family.
 3. Keep the gravity-observable hierarchy attached to all future 3D dense
    gravity claims so centroid-only sign does not overstate the result.

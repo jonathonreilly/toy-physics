@@ -122,9 +122,10 @@ If you only want the current high-level state, read this section first.
 - **Ordered lattice:** retained secondary branch. The standard-strength branch
   is a same-family two-harness bridge, the weak-field reopening gives a narrow
   one-card pocket, the 3D dense spent-delay branch now adds a bounded
-  same-family **near-to-mid attractive window**, and the no-barrier branch
-  retains the cleanest current distance-law magnitude. This is a real branch,
-  but it does not displace the mirror flagship.
+  same-family attractive window that is hierarchy-clean on the retained tested
+  3D slice, and the no-barrier branch retains the cleanest current
+  distance-law magnitude. This is a real branch, but it does not displace the
+  mirror flagship.
 - **Nearest-neighbor refinement:** strongest current continuum-side bridge.
   Raw NN is Born-clean through `h = 0.25`, deterministic rescale extends a
   bounded path to `h = 0.0625`, and the canonical notes keep continuum / RG
