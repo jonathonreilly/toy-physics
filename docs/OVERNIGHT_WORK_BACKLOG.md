@@ -152,21 +152,33 @@ interest map rather than just broaden the science search.
 6. **Valley-linear branch hardening**
    - Treat valley-linear as a bounded action-law fork on the ordered-lattice
      `1/L^2` family.
-   - Keep same-family comparison, parameter robustness, and cross-architecture
-     transfer as separate evidence chains.
-   - Deliverables:
-     - one frozen robustness sweep script/log/note chain
-     - one explicit transfer test note saying whether the lane stays lattice-only
+   - Same-family comparison, parameter robustness, cross-architecture transfer,
+     decoherence-independence, and the continuum synthesis bridge are now
+     frozen on disk.
+   - Next deliverables:
+     - one bounded note if the new dimensional-field prescription is retained
+     - one explicit refinement/4D tail artifact chain before any broader
+       “all dimensions solved” wording
      - no promotion from chat or commit headlines alone
 
-7. **Repo claim-surface cleanup**
+7. **Gate B structured-connectivity rule**
+   - The connectivity-tolerance replay now sharpens the real bottleneck:
+     position noise is tolerated; connectivity construction is the failure mode.
+   - Deliverables:
+     - one growth rule that preserves structured connectivity without reverting
+       to a hand-imposed lattice
+     - one same-family generated-vs-imposed comparison with finite detector
+       signal on both sides
+     - one bounded note saying whether this materially advances Gate B or not
+
+8. **Repo claim-surface cleanup**
    - Reduce the gap between canonical notes and nearby exploratory files.
    - Focus on filenames and top-level docs that a new reader will see first.
    - Deliverables:
      - retire or relabel stale exploratory `*_test.py` files where practical
      - keep `README`, `START_HERE`, and the program notes synchronized
 
-8. **Mirror-vs-lattice synthesis**
+9. **Mirror-vs-lattice synthesis**
    - Keep mirror as the flagship line.
    - Keep lattice / NN as secondary and frontier branches unless a stronger
      retained comparison note truly changes the ranking.

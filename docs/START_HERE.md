@@ -53,6 +53,8 @@ Do not force a trade where only one of those moves.
   - the mirror/random-DAG transfer replay is now frozen and mixed:
     - valley-linear improves the random-DAG slice relative to spent-delay
     - spent-delay still has the edge on the mirror family
+  - decoherence is now frozen as action-independent on the tested 3D `1/L^2`
+    zero-field family
   - convergence and asymptotic promotion remain open
 
 ## What is bounded or still open
@@ -61,6 +63,9 @@ Do not force a trade where only one of those moves.
 - **Continuum / RG theorem:** not retained
 - **Light-cone / emergent relativity:** only a topological causal-bound read is retained
 - **Generated symmetry:** reopened by the structured chokepoint bridge, not solved
+- **Gate B dynamics:** still open, but the bottleneck is sharper now:
+  - position noise on fixed connectivity is tolerated
+  - connectivity construction is the main failure mode
 - **Action-power Newtonian-3D claim:** interesting, bounded to a no-barrier companion, not yet a promoted core claim
 - **Tapered 3D refinement:** negative on the tested family; useful as a topology-control branch, not a rescue of the dense card
 - **3D `1/L^2` kernel branch:** active bounded propagator fork under validation; do not treat branch-history or chat narrative as canonical
@@ -91,8 +96,11 @@ Do not force a trade where only one of those moves.
 - [`docs/ACTION_POWER_3D_GRAVITY_SIGN_CLOSURE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_3D_GRAVITY_SIGN_CLOSURE_NOTE.md)
 - [`docs/VALLEY_LINEAR_ACTION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_ACTION_NOTE.md)
 - [`docs/VALLEY_LINEAR_MIRROR_TRANSFER_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_MIRROR_TRANSFER_NOTE.md)
+- [`docs/VALLEY_LINEAR_CONTINUUM_SYNTHESIS_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_CONTINUUM_SYNTHESIS_NOTE.md)
 - [`docs/ACTION_ARCHITECTURE_MATRIX_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_ARCHITECTURE_MATRIX_NOTE.md)
 - [`docs/EVOLVING_NETWORK_PROTOTYPE_V3_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/EVOLVING_NETWORK_PROTOTYPE_V3_NOTE.md)
+- [`docs/GATE_B_CONNECTIVITY_TOLERANCE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_CONNECTIVITY_TOLERANCE_NOTE.md)
+- [`docs/DECOHERENCE_ACTION_INDEPENDENCE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/DECOHERENCE_ACTION_INDEPENDENCE_NOTE.md)
 - [`docs/GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md)
 - [`docs/LEGACY_EXPLORATORY_DRIVERS_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LEGACY_EXPLORATORY_DRIVERS_NOTE.md)
 - [`docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md)
@@ -129,4 +137,4 @@ Exploratory but useful branch docs:
 2. Add skeptical-reader reproduction tooling that distinguishes canonical harnesses from exploratory drivers.
 3. Extend the 3D dense spent-delay attractive window without dropping the same-family barrier card.
 4. Keep the `1/L^(d-1)` kernel branch bounded unless transfer-norm, asymptotic, and frozen-artifact wording all reconcile.
-5. Keep Gate B controls and generated-vs-imposed comparisons artifact-backed, and do not promote geometry/noise narratives until they land as real script/log/note chains.
+5. Push Gate B toward one structured-connectivity growth rule, and keep new geometry/noise or dimensional-field claims unpromoted until they land as real script/log/note chains.

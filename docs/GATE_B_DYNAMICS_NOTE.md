@@ -9,6 +9,12 @@ Can we grow (rather than impose) geometry that gives Newtonian gravity?
 
 ## What was tested
 
+Primary frozen replay for the current connectivity-vs-noise read:
+
+- [scripts/gate_b_connectivity_tolerance.py](/Users/jonreilly/Projects/Physics/scripts/gate_b_connectivity_tolerance.py)
+- [logs/2026-04-04-gate-b-connectivity-tolerance.txt](/Users/jonreilly/Projects/Physics/logs/2026-04-04-gate-b-connectivity-tolerance.txt)
+- [docs/GATE_B_CONNECTIVITY_TOLERANCE_NOTE.md](/Users/jonreilly/Projects/Physics/docs/GATE_B_CONNECTIVITY_TOLERANCE_NOTE.md)
+
 1. **Noisy NN lattice** (positions jittered, fixed connectivity):
    100% TOWARD at all jitter levels 0.0-0.5, F∝M=1.00, Born 0.
    Gravity degrades gracefully (~40% weaker at jitter=0.5).
