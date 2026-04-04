@@ -1,44 +1,48 @@
 # Physics Autopilot Handoff
 
-## 2026-04-04 14:06 America/New_York
+## 2026-04-04 16:58 America/New_York
 
 ### Seam class
-- bounded directional-`b` density-stencil transfer diagnostic on the fixed directional-measure lane
-- next science seam stays on the same occupancy-first continuous-law refinement
+- bounded coordination repair to the real synced valley-linear closure / derivation head
+- next science seam still returns to the fixed directional-measure geometry-normalized gravity-`b` lane
 
 ### What this loop did
 - ran the duplicate-run guard and confirmed this thread is the newest unresolved `physics-autopilot` run
 - checked the cooperative lock, found it free, acquired `physics-science`, and confirmed there is no active detached science child to resume or monitor
 - read `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` in protocol order
 - reconciled canonical git before new work:
-  - the first synced snapshot seen in this loop was `7792deb` (`docs(review): harden literature and discriminator scope`)
-  - before the science commit finalized, newer synced ancestors landed and the final settled synced parent became `2a381f2` (`docs(interest): update adversarial map for frozen valley-linear lanes`)
-  - the intervening synced chain also landed `66cb1aa`, `5586631`, and `056aaa4` in the action / valley-linear / reproduction lanes
-- reread the active directional-`b` seam artifacts:
-  - `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
-  - `/Users/jonreilly/Projects/Physics/logs/2026-04-03-directional-b-continuous-density-midlayer-holdout.txt`
-  - `/Users/jonreilly/Projects/Physics/logs/2026-04-01-directional-b-geometry-normalized-compare.txt`
-  - `/Users/jonreilly/Projects/Physics/logs/2026-04-01-directional-b-h-over-b-crossover-card.txt`
-  - `/Users/jonreilly/Projects/Physics/logs/2026-04-01-directional-b-overlap-onset-midlayer-sampling-holdout.txt`
-- added `/Users/jonreilly/Projects/Physics/scripts/directional_b_density_stencil_transfer.py`
-- generated `/Users/jonreilly/Projects/Physics/logs/2026-04-04-directional-b-density-stencil-transfer.txt`
-- added `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_DENSITY_STENCIL_NOTE.md`
-- updated `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+  - `main` and `origin/main` are both at `c26a524` (`logs(valley-linear): freeze missing action and closure replays`)
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git status --short --branch` was clean
+- inspected the landed synced artifact chain directly:
+  - `/Users/jonreilly/Projects/Physics/docs/NEWTON_DERIVATION_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/ACTION_UNIQUENESS_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_SCALING_SWEEP_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/SAME_FAMILY_3D_CLOSURE_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/START_HERE.md`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-two-body-momentum.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-action-universality-probe.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-action-power-scaling-sweep.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-same-family-3d-closure.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-4d-wide-distance-law.txt`
+- ran `python3 /Users/jonreilly/Projects/Physics/scripts/base_confidence_check.py`
+  - benchmark regression audit, mode-only candidate isolation, sparse bridge addback visibility, sparse fallback access labels, live mechanism-split driver, and feature registry alignment all passed
 - refreshed `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
 
 ### Current state
 - no detached science child is running
-- the latest bounded result is a directional-`b` stencil-transfer artifact chain that keeps the occupancy-first bridge fixed while reclassifying the continuous miss mode as a fourth-neighbor stencil problem
-- that science result now sits on top of the synced `2a381f2` parent rather than the earlier `7792deb` snapshot first seen in this loop
-- commit / push state should still be rechecked from canonical git at loop start per protocol
-- this loop did not start fresh continuum or decoherence architecture work
+- the actual synced head is a valley-linear closure / derivation chain, not the older directional-`b` stencil-transfer snapshot that the coordination files were still describing
+- the repo is healthy on the settled synced head and the cheap audit passed
+- this loop did not start fresh decoherence, continuum, or wider action-architecture work
 
 ### Strongest confirmed conclusion
-The midlayer false negatives do not overturn the retained geometry-normalized directional-`b` hierarchy. They isolate a smoother-law stencil issue: on the current expanded sample, frozen `3-NN` transfers better than frozen `4-NN`, while the portable coarse statement remains occupancy-first.
-- reference+tree still prefers frozen `4-NN`: `0.9206` vs `0.8889`
-- the center-biased midlayer sentinel flips that preference to frozen `3-NN`: `0.9500` vs `0.8500`
-- on the extended sample, frozen `3-NN` now beats frozen `4-NN`: `0.9126` vs `0.8932`
-- `5/6` frozen `4-NN` false negatives are one-sided low-occupancy target bands, and frozen `3-NN` rescues `4/6` of them
+The coordination drift was stale metadata again. The current synced head retains a bounded valley-linear story:
+- weak-field-linear phase valleys stay the fixed-family `F~M = 1.00` class
+- the companion power sweep sharpens the safer bounded family law to `F~M = p`
+- the same-family 3D closure is now a real script / log / note chain
+- the new two-body lattice log backs the derivation note with explicit unequal-mass momentum conservation for valley-linear and `42-55%` violation for spent-delay
+- `python3 /Users/jonreilly/Projects/Physics/scripts/base_confidence_check.py` passed, so there is no fresh regression signal
+- none of that changes the next non-overlapping pickup: return to the directional-`b` residual `3-NN` miss diagnostic rather than opening new decoherence or broad continuum work
 
 ### Exact next step
 - keep the retained directional propagator and occupancy-first overlap statement fixed
@@ -50,7 +54,13 @@ The midlayer false negatives do not overturn the retained geometry-normalized di
 - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
 - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
 - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
-- `/Users/jonreilly/Projects/Physics/scripts/directional_b_density_stencil_transfer.py`
+- `/Users/jonreilly/Projects/Physics/docs/NEWTON_DERIVATION_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/docs/ACTION_UNIQUENESS_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_SCALING_SWEEP_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/docs/SAME_FAMILY_3D_CLOSURE_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-04-two-body-momentum.txt`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-04-action-universality-probe.txt`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-04-action-power-scaling-sweep.txt`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-04-same-family-3d-closure.txt`
 - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-directional-b-density-stencil-transfer.txt`
-- `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_DENSITY_STENCIL_NOTE.md`
 - `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`

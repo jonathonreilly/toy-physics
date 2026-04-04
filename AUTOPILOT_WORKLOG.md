@@ -1,3 +1,75 @@
+## 2026-04-04 — Coordination reconciled to synced valley-linear closure / derivation head
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed:
+  - no detached science child was running
+- the canonical repo is synced again:
+  - `main` and `origin/main` both point to `c26a524` (`logs(valley-linear): freeze missing action and closure replays`)
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git status --short --branch` was clean at `## main...origin/main`
+- the tracked coordination state had drifted behind the real synced head again:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` still described the older `2a381f2` directional-`b` stencil-transfer result rather than the current valley-linear closure / derivation chain
+- because the synced head since that handoff landed real script / note / log changes on other lanes, this loop stayed on one bounded integrity repair instead of overlapping it with fresh science
+
+### What changed
+- reconciled canonical git state before new work:
+  - `git log --oneline --decorate -n 8` put `c26a524` at `HEAD` with the recent landed chain `6876d2e`, `1f1a8dc`, `82c2690`, `5684399`, `256bdce`, `40fc6a1`, and `d8351ef` directly beneath it
+- inspected the actual landed payload instead of trusting commit messages alone:
+  - `c26a524` freezes `/Users/jonreilly/Projects/Physics/logs/2026-04-04-action-power-scaling-sweep.txt`, `/Users/jonreilly/Projects/Physics/logs/2026-04-04-action-universality-probe.txt`, and `/Users/jonreilly/Projects/Physics/logs/2026-04-04-same-family-3d-closure.txt`
+  - `1f1a8dc` lands `/Users/jonreilly/Projects/Physics/docs/SAME_FAMILY_3D_CLOSURE_NOTE.md`, updates `/Users/jonreilly/Projects/Physics/docs/CANONICAL_HARNESS_INDEX.md` and `/Users/jonreilly/Projects/Physics/docs/START_HERE.md`, and rewrites `/Users/jonreilly/Projects/Physics/scripts/same_family_3d_closure.py`
+  - `82c2690` adds `/Users/jonreilly/Projects/Physics/logs/2026-04-04-two-body-momentum.txt`
+  - `5684399` adds `/Users/jonreilly/Projects/Physics/docs/NEWTON_DERIVATION_NOTE.md`
+  - `256bdce` narrows `/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_SCALING_SWEEP_NOTE.md`, `/Users/jonreilly/Projects/Physics/docs/ACTION_UNIQUENESS_NOTE.md`, and `/Users/jonreilly/Projects/Physics/docs/START_HERE.md` to bounded fixed-family claims
+  - `6876d2e` adds `/Users/jonreilly/Projects/Physics/logs/2026-04-04-4d-wide-distance-law.txt` as a wider-dimensional companion, not a promoted flagship result
+- read:
+  - `/Users/jonreilly/Projects/Physics/docs/NEWTON_DERIVATION_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/ACTION_UNIQUENESS_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_SCALING_SWEEP_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/SAME_FAMILY_3D_CLOSURE_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/START_HERE.md`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-two-body-momentum.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-action-universality-probe.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-action-power-scaling-sweep.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-same-family-3d-closure.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-4d-wide-distance-law.txt`
+- ran `python3 /Users/jonreilly/Projects/Physics/scripts/base_confidence_check.py`
+  - benchmark regression audit, mode-only candidate isolation, sparse bridge addback visibility, sparse fallback access labels, live mechanism-split driver, and feature registry alignment all passed
+- left `/Users/jonreilly/Projects/Physics/README.md` untouched because this loop repaired coordination metadata to the real synced head rather than landing a new flagship conclusion
+- refreshed:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Strongest confirmed conclusion
+The repo is healthy and synced; the actual unresolved issue was stale coordination metadata again. The current settled head is a bounded valley-linear closure / derivation chain, not the older directional-`b` result.
+- on the fixed ordered-lattice family, weak-field-linear phase valleys remain the retained mass-law class:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-action-universality-probe.txt` keeps `F~M = 1.00` for the tested weak-field-linear valleys and cleanly separates them from sublinear and superlinear action classes
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-action-power-scaling-sweep.txt` sharpens the safer bounded family law to `F~M = p` across `S = L(1-f^p)` while keeping the distance-tail statement empirical on that family
+- the same-family 3D closure is now a real script / log / note chain rather than a loose narrative:
+  - `/Users/jonreilly/Projects/Physics/docs/SAME_FAMILY_3D_CLOSURE_NOTE.md` and `/Users/jonreilly/Projects/Physics/logs/2026-04-04-same-family-3d-closure.txt` freeze the `h = 0.25`, `W = 10`, `L = 12` core rows, replay same-`h` multi-`L` stability rows, and keep the `W = 12` tail only as a width companion
+- the new derivation note is paired with an explicit lattice diagnostic rather than prose alone:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-two-body-momentum.txt` shows valley-linear momentum conservation at unequal masses while spent-delay violates it by `42-55%`
+- `python3 /Users/jonreilly/Projects/Physics/scripts/base_confidence_check.py` passed on the settled synced head, so there is no fresh regression signal forcing a rollback
+- this does **not** change the queued non-overlapping science priority:
+  - while Claude owns the decoherence frontier, the next bounded pickup still returns to the fixed directional-measure geometry-normalized gravity-`b` seam, not a fresh decoherence or broad continuum search
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- if sync still holds, return to one bounded geometry-normalized gravity-`b` diagnostic under the retained directional propagator
+- start from:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-directional-b-density-stencil-transfer.txt`
+  - `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- inspect only the two surviving frozen `3-NN` misses and test one equally local occupancy-aware correction only if it explains those residual rows without hurting the existing reference+tree read or reopening a wider denominator search
+
+### First concrete action
+- inspect the two unrescued rows in `/Users/jonreilly/Projects/Physics/logs/2026-04-04-directional-b-density-stencil-transfer.txt`:
+  - `midgamma1.4-m3`, `N = 25`, `seed = 4`
+  - `midgamma1.4-m5`, `N = 25`, `seed = 7`
+
 ## 2026-04-04 — Directional-b stencil transfer favors frozen 3-NN on the expanded sample
 
 ### Current state
