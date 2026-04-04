@@ -149,14 +149,24 @@ interest map rather than just broaden the science search.
        same-harness closure
      - no new 3D sign-fishing unless the architecture changes topologically
 
-6. **Repo claim-surface cleanup**
+6. **Valley-linear branch hardening**
+   - Treat valley-linear as a bounded action-law fork on the ordered-lattice
+     `1/L^2` family.
+   - Keep same-family comparison, parameter robustness, and cross-architecture
+     transfer as separate evidence chains.
+   - Deliverables:
+     - one frozen robustness sweep script/log/note chain
+     - one explicit transfer test note saying whether the lane stays lattice-only
+     - no promotion from chat or commit headlines alone
+
+7. **Repo claim-surface cleanup**
    - Reduce the gap between canonical notes and nearby exploratory files.
    - Focus on filenames and top-level docs that a new reader will see first.
    - Deliverables:
      - retire or relabel stale exploratory `*_test.py` files where practical
      - keep `README`, `START_HERE`, and the program notes synchronized
 
-7. **Mirror-vs-lattice synthesis**
+8. **Mirror-vs-lattice synthesis**
    - Keep mirror as the flagship line.
    - Keep lattice / NN as secondary and frontier branches unless a stronger
      retained comparison note truly changes the ranking.

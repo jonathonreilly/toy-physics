@@ -90,6 +90,30 @@ Why the comparison matters:
 
 This is the literature the repo should probably engage next most directly.
 
+### 5. Discrete propagator / lattice regularization / paper-scope framing
+
+Closest on the current valley-linear and `1/L^(d-1)` lanes:
+
+- discrete propagator comparisons on a fixed lattice family
+- finite-volume / finite-resolution scaling
+- same-harness action-law forks where only the action changes
+
+Why the comparison matters:
+
+- the valley-linear result is a bounded action fork, not a universal law
+- the ordered-lattice kernel branch is a propagator fork, not a theorem
+- the reviewer should read both as replayable comparison studies, not as
+  finished fundamental-physics derivations
+
+What is missing relative to that literature:
+
+- a derivation from the axioms that uniquely selects the action law
+- a fully closed asymptotic / continuum bridge
+- universality across graph families without new companion-harness wording
+
+This is the literature context for
+[`PAPER_SCOPE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/PAPER_SCOPE_NOTE.md).
+
 ## What this note is not claiming
 
 This note is **not** claiming equivalence to those frameworks.
@@ -142,4 +166,5 @@ When describing the project externally:
 - compare it first to **digital / emergent mechanism programs**
 - use **quantum-measure** language for fixed-DAG interference results
 - use **collision-model / influence-functional** language for the decoherence frontier
+- use **lattice regularization / finite-volume scaling** language for the ordered-lattice action forks
 - avoid presenting it as if it already competes directly with mature quantum-gravity programs on derivation or continuum control

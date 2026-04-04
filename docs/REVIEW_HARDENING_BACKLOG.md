@@ -129,6 +129,8 @@ Concrete deliverables:
 - one note distinguishing:
   - what is generated
   - what is still imposed
+- one connectivity-preserving imposed-control comparison for the Gate B
+  prototype, so the generated-vs-imposed discriminator stays fair
 
 Current sharp version:
 
@@ -139,6 +141,8 @@ Current sharp version:
   placement / node-removal rule, because the retained barrier is a property of
   node absence at the right scale rather than weak links; soft pruning of
   already connected graphs now looks asymptotically insufficient
+- the new bounded prototype comparison exists, but the imposed random control
+  is not yet connectivity-preserving enough to count as a decisive Gate B win
 
 Why it matters:
 
@@ -305,6 +309,7 @@ Goal:
 Concrete deliverables:
 
 - [LITERATURE_POSITIONING_NOTE.md](/Users/jonreilly/Projects/Physics/docs/LITERATURE_POSITIONING_NOTE.md)
+- [PAPER_SCOPE_NOTE.md](/Users/jonreilly/Projects/Physics/docs/PAPER_SCOPE_NOTE.md)
 - explicit future comparisons to:
   - quantum measure / Sorkin
   - open quantum systems / collision models

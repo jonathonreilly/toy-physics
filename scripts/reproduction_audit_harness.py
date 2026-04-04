@@ -18,6 +18,7 @@ reproducibility check without turning this into a broad search.
 
 Optional:
 - ``--include-gate`` runs the full canonical regression gate first
+- ``--valley-linear`` runs the bounded same-family valley-linear replay
 - ``--full-cross-family`` runs the heavier 3D family sweep from the existing
   exploratory benchmark, but that is not part of the default audit path.
 """
@@ -126,6 +127,20 @@ def run_full_cross_family() -> None:
     print()
 
 
+def run_valley_linear_replay() -> None:
+    print("=" * 88)
+    print("VALLEY-LINEAR BOUNDED REPLAY")
+    print("  same-family spent-delay vs valley-linear comparison on the 3D ordered-lattice 1/L^2 branch")
+    print("=" * 88)
+    out = run_script("scripts/valley_linear_same_harness_compare.py", timeout=900)
+    require("SAME-HARNESS ACTION COMPARISON" in out, "valley-linear comparison header missing")
+    require("valley-linear" in out, "valley-linear row missing")
+    require("spent-delay" in out, "spent-delay row missing")
+    require("Born" in out and "k=0" in out, "valley-linear comparison observables missing")
+    print(out.rstrip())
+    print()
+
+
 def print_inventory() -> None:
     print("=" * 88)
     print("REPRODUCTION INVENTORY")
@@ -141,7 +156,9 @@ def print_inventory() -> None:
     print("  - scripts/cross_family_robustness.py")
     print("  - scripts/lattice_4d_kernel_test.py")
     print("  - scripts/transfer_norm_and_born.py")
+    print("  - scripts/valley_linear_same_harness_compare.py")
     print("  - scripts/evolving_network_prototype.py")
+    print("  - scripts/evolving_network_prototype_v2.py")
     print("  - scripts/self_regulating_gap_3d.py")
     print()
 
@@ -158,6 +175,11 @@ def main() -> None:
         action="store_true",
         help="run the heavier 3D family sweep from the exploratory robustness lane",
     )
+    parser.add_argument(
+        "--valley-linear",
+        action="store_true",
+        help="run the bounded same-family valley-linear replay after the retained comparison",
+    )
     args = parser.parse_args()
 
     print_inventory()
@@ -170,6 +192,8 @@ def main() -> None:
         print("=" * 88)
         print()
     run_cross_family_retained_comparison()
+    if args.valley_linear:
+        run_valley_linear_replay()
     if args.full_cross_family:
         run_full_cross_family()
     print("=" * 88)

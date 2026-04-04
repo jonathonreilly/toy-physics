@@ -31,6 +31,9 @@ Canonical notes:
 
 - [`docs/START_HERE.md`](/Users/jonreilly/Projects/Physics/docs/START_HERE.md)
 - [`docs/UNIFIED_PROGRAM_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/UNIFIED_PROGRAM_NOTE.md)
+- [`docs/REPRODUCTION_AUDIT_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/REPRODUCTION_AUDIT_NOTE.md)
+- [`docs/VALLEY_LINEAR_REPRO_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_REPRO_NOTE.md)
+- [`docs/EVOLVING_NETWORK_PROTOTYPE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/EVOLVING_NETWORK_PROTOTYPE_NOTE.md)
 - [`docs/CONTINUUM_BRIDGE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/CONTINUUM_BRIDGE_NOTE.md)
 - [`docs/STRUCTURED_CHOKEPOINT_BRIDGE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/STRUCTURED_CHOKEPOINT_BRIDGE_NOTE.md)
 - [`docs/STRUCTURED_CHOKEPOINT_BRIDGE_EXTENSION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/STRUCTURED_CHOKEPOINT_BRIDGE_EXTENSION_NOTE.md)
@@ -49,6 +52,7 @@ thing a new reader should treat as canonical proof of the current story:
 - [`scripts/transfer_norm_and_born.py`](/Users/jonreilly/Projects/Physics/scripts/transfer_norm_and_born.py)
 - [`scripts/cross_family_robustness.py`](/Users/jonreilly/Projects/Physics/scripts/cross_family_robustness.py)
 - [`scripts/evolving_network_prototype.py`](/Users/jonreilly/Projects/Physics/scripts/evolving_network_prototype.py)
+- [`scripts/evolving_network_prototype_v2.py`](/Users/jonreilly/Projects/Physics/scripts/evolving_network_prototype_v2.py)
 
 ## How to use them
 

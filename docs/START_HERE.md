@@ -79,6 +79,10 @@ Do not force a trade where only one of those moves.
 - [`docs/OVERNIGHT_WORK_BACKLOG.md`](/Users/jonreilly/Projects/Physics/docs/OVERNIGHT_WORK_BACKLOG.md)
 - [`docs/CANONICAL_HARNESS_INDEX.md`](/Users/jonreilly/Projects/Physics/docs/CANONICAL_HARNESS_INDEX.md)
 - [`docs/REPRODUCTION_AUDIT_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/REPRODUCTION_AUDIT_NOTE.md)
+- [`docs/VALLEY_LINEAR_REPRO_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_REPRO_NOTE.md)
+- [`docs/EVOLVING_NETWORK_PROTOTYPE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/EVOLVING_NETWORK_PROTOTYPE_NOTE.md)
+- [`docs/LITERATURE_POSITIONING_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LITERATURE_POSITIONING_NOTE.md)
+- [`docs/PAPER_SCOPE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/PAPER_SCOPE_NOTE.md)
 - [`docs/STRUCTURED_CHOKEPOINT_BRIDGE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/STRUCTURED_CHOKEPOINT_BRIDGE_NOTE.md)
 - [`docs/ACTION_POWER_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_NOTE.md)
 - [`docs/ACTION_POWER_3D_GRAVITY_SIGN_CLOSURE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_3D_GRAVITY_SIGN_CLOSURE_NOTE.md)
@@ -119,3 +123,4 @@ Exploratory but useful branch docs:
 2. Add skeptical-reader reproduction tooling that distinguishes canonical harnesses from exploratory drivers.
 3. Extend the 3D dense spent-delay attractive window without dropping the same-family barrier card.
 4. Keep the `1/L^(d-1)` kernel branch bounded unless transfer-norm, asymptotic, and frozen-artifact wording all reconcile.
+5. Freeze valley-linear robustness and any mirror-DAG transfer result as separate artifact chains before treating them as retained.

@@ -21,6 +21,7 @@ Default behavior:
 Optional:
 
 - `--include-gate` runs the full canonical regression gate first
+- `--valley-linear` adds the bounded same-family valley-linear replay
 - `--full-cross-family` adds the heavier 3D family sweep from the exploratory
   robustness lane
 
@@ -43,6 +44,8 @@ story, without turning the audit into a broad search.
 
 If you need the full retained-frontier replay, use `--include-gate`.
 
+If you need the bounded action-fork replay, use `--valley-linear`.
+
 ## What it does not certify
 
 This harness does **not** prove:
@@ -52,6 +55,8 @@ This harness does **not** prove:
 - the continuum / RG bridge as complete
 - the exploratory 3D/4D kernel claims as canonical
 - the open dynamics problem as solved
+- the valley-linear action as a replacement flagship or complete convergence
+  result
 
 Those need their own script / log / note chains and should be promoted only if
 the evidence chain stays fixed on disk.
