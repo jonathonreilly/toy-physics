@@ -140,3 +140,21 @@ toward a power law). The gravitational magnitude grows as h^(-0.48),
 indicating RG scaling is needed for a finite continuum limit. The kernel
 change from 1/L to 1/L^2 is an axiom fork requiring theoretical
 justification."
+
+## Update: FLAG 2 Partially Resolved
+
+RG scaling test (s(h) = s₀ × h^α) shows:
+- α ≈ 0.92 stabilizes gravitational magnitude (ratio h=0.25/h=0.5 → 1.0)
+- The distance law tail exponent is INDEPENDENT of field strength:
+  always -0.35 at h=0.5 and -0.53 at h=0.25 regardless of α
+- The steepening is a GEOMETRIC property of the lattice, not a field artifact
+
+This means:
+- FLAG 2 (diverging gravity) is resolvable with RG scaling s ~ h^0.92
+- The distance law convergence (-0.35 → -0.53) is ROBUST to RG choice
+- Updated verdict: the RG-scaled model has a finite gravity with a
+  steepening distance exponent
+
+Remaining FLAGs: 1 (axiom fork) and 3 (sign discontinuity at h=1.0).
+With FLAG 2 resolved, the verdict softens from SUSPICIOUS to:
+**SUSPICIOUS (weak) — axiom fork is the main open issue.**
