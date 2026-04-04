@@ -35,12 +35,12 @@ The best next steps are the ones that improve both at once.
 |---|---:|---|
 | Toy-model mechanism interest | `9.5/10` | high intrinsic curiosity value |
 | Foundations / complex-systems / network-dynamics interest | `9.2/10` | real likely interest in the right subcommunities |
-| Broader theorist interest | `7.5/10` | selective interest, with better bounded replays and cleaner review scaffolding |
-| Bridge to known physics | `7.4/10` | stronger than before, but still branch-dependent and under-theorized |
-| Publishable as a careful computational toy-model paper | `8.3/10` | increasingly plausible with bounded replay chains and tighter scope control |
+| Broader theorist interest | `7.6/10` | selective interest, with better bounded replays, architecture synthesis, and cleaner review scaffolding |
+| Bridge to known physics | `7.5/10` | somewhat stronger than before, but still branch-dependent and under-theorized |
+| Publishable as a careful computational toy-model paper | `8.4/10` | increasingly plausible with bounded replay chains, better reproduction, and tighter scope control |
 | Publishable as a foundational-physics breakthrough claim | `4.0/10` | still too early for that framing |
 | Ready for top-tier mainstream physics claims | `2.7/10` | improved credibility, but still far below the required bar |
-| Field-shifting theory program | `5.3/10` | stronger than before, but still not at forced-engagement level |
+| Field-shifting theory program | `5.4/10` | stronger than before, but still not at forced-engagement level |
 | Landmark foundational breakthrough | `3.2/10` | current evidence base is improving, but still too branch-sensitive |
 | Nobel-scale breakthrough | `0.4/10` | not a realistic present-tense read |
 
@@ -79,8 +79,14 @@ The main upward pressures since the first adversarial cut are:
   - a bounded same-family comparison
   - a bounded reproduction replay
   - a frozen robustness sweep on the tested 3D ordered-lattice family
+- the mirror/random-DAG transfer replay is now frozen, which makes the
+  architecture split more inspectable and less chat-dependent
 - Gate B now has a real bounded prototype note with a generated-geometry
   signal, even though it remains a negative / incomplete closure attempt
+- the Gate B v3 control audit now preserves a backbone corridor, which improves
+  the fairness of the imposed comparator even though the result stays negative
+- the architecture/action matrix now gives reviewers one bounded place to read
+  the split without forcing a unification claim
 - the imported `1/L^(d-1)` kernel lane is now scientifically more interesting
   and does live on `main`, but it is still **bounded / unreconciled** rather
   than promoted in the top-line canonical story

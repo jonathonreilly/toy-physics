@@ -50,6 +50,9 @@ Do not force a trade where only one of those moves.
   - on the retained `h = 0.25` family it improves the tested mass-law exponent
     and distance-tail slope while preserving Born and TOWARD sign
   - gravity magnitude is much smaller on the tested `z=3` slice
+  - the mirror/random-DAG transfer replay is now frozen and mixed:
+    - valley-linear improves the random-DAG slice relative to spent-delay
+    - spent-delay still has the edge on the mirror family
   - convergence and asymptotic promotion remain open
 
 ## What is bounded or still open
@@ -87,6 +90,9 @@ Do not force a trade where only one of those moves.
 - [`docs/ACTION_POWER_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_NOTE.md)
 - [`docs/ACTION_POWER_3D_GRAVITY_SIGN_CLOSURE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_3D_GRAVITY_SIGN_CLOSURE_NOTE.md)
 - [`docs/VALLEY_LINEAR_ACTION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_ACTION_NOTE.md)
+- [`docs/VALLEY_LINEAR_MIRROR_TRANSFER_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_MIRROR_TRANSFER_NOTE.md)
+- [`docs/ACTION_ARCHITECTURE_MATRIX_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_ARCHITECTURE_MATRIX_NOTE.md)
+- [`docs/EVOLVING_NETWORK_PROTOTYPE_V3_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/EVOLVING_NETWORK_PROTOTYPE_V3_NOTE.md)
 - [`docs/GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md)
 - [`docs/LEGACY_EXPLORATORY_DRIVERS_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LEGACY_EXPLORATORY_DRIVERS_NOTE.md)
 - [`docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md)
@@ -123,4 +129,4 @@ Exploratory but useful branch docs:
 2. Add skeptical-reader reproduction tooling that distinguishes canonical harnesses from exploratory drivers.
 3. Extend the 3D dense spent-delay attractive window without dropping the same-family barrier card.
 4. Keep the `1/L^(d-1)` kernel branch bounded unless transfer-norm, asymptotic, and frozen-artifact wording all reconcile.
-5. Freeze valley-linear robustness and any mirror-DAG transfer result as separate artifact chains before treating them as retained.
+5. Keep Gate B controls and generated-vs-imposed comparisons artifact-backed, and do not promote geometry/noise narratives until they land as real script/log/note chains.

@@ -33,9 +33,12 @@ Canonical notes:
 - [`docs/UNIFIED_PROGRAM_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/UNIFIED_PROGRAM_NOTE.md)
 - [`docs/REPRODUCTION_AUDIT_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/REPRODUCTION_AUDIT_NOTE.md)
 - [`docs/VALLEY_LINEAR_REPRO_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_REPRO_NOTE.md)
+- [`docs/ACTION_ARCHITECTURE_MATRIX_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_ARCHITECTURE_MATRIX_NOTE.md)
 - [`docs/EVOLVING_NETWORK_PROTOTYPE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/EVOLVING_NETWORK_PROTOTYPE_NOTE.md)
+- [`docs/EVOLVING_NETWORK_PROTOTYPE_V3_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/EVOLVING_NETWORK_PROTOTYPE_V3_NOTE.md)
 - [`docs/CONTINUUM_BRIDGE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/CONTINUUM_BRIDGE_NOTE.md)
 - [`docs/ACTION_CROSSOVER_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_CROSSOVER_NOTE.md)
+- [`docs/VALLEY_LINEAR_MIRROR_TRANSFER_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_MIRROR_TRANSFER_NOTE.md)
 - [`docs/STRUCTURED_CHOKEPOINT_BRIDGE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/STRUCTURED_CHOKEPOINT_BRIDGE_NOTE.md)
 - [`docs/STRUCTURED_CHOKEPOINT_BRIDGE_EXTENSION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/STRUCTURED_CHOKEPOINT_BRIDGE_EXTENSION_NOTE.md)
 - [`docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md)
@@ -48,6 +51,7 @@ These are useful and often still review-relevant, but they are not the first
 thing a new reader should treat as canonical proof of the current story:
 
 - [`scripts/valley_linear_same_harness_compare.py`](/Users/jonreilly/Projects/Physics/scripts/valley_linear_same_harness_compare.py)
+- [`scripts/valley_linear_mirror_transfer.py`](/Users/jonreilly/Projects/Physics/scripts/valley_linear_mirror_transfer.py)
 - [`scripts/action_regularity_crossover.py`](/Users/jonreilly/Projects/Physics/scripts/action_regularity_crossover.py)
 - [`scripts/lattice_3d_valley_linear_card.py`](/Users/jonreilly/Projects/Physics/scripts/lattice_3d_valley_linear_card.py)
 - [`scripts/lattice_4d_kernel_test.py`](/Users/jonreilly/Projects/Physics/scripts/lattice_4d_kernel_test.py)
@@ -55,6 +59,7 @@ thing a new reader should treat as canonical proof of the current story:
 - [`scripts/cross_family_robustness.py`](/Users/jonreilly/Projects/Physics/scripts/cross_family_robustness.py)
 - [`scripts/evolving_network_prototype.py`](/Users/jonreilly/Projects/Physics/scripts/evolving_network_prototype.py)
 - [`scripts/evolving_network_prototype_v2.py`](/Users/jonreilly/Projects/Physics/scripts/evolving_network_prototype_v2.py)
+- [`scripts/evolving_network_prototype_v3.py`](/Users/jonreilly/Projects/Physics/scripts/evolving_network_prototype_v3.py)
 
 ## How to use them
 
