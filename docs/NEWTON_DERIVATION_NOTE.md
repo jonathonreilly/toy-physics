@@ -51,6 +51,9 @@ What is now frozen:
 - the dedicated composite-source harness shows that, on the same weak-field
   test-particle family, valley-linear source composition is additive while
   spent-delay is not
+- a second-family 2D ordered-lattice probe now shows the same bounded
+  valley-linear additivity story while spent-delay remains strongly
+  non-additive
 
 Artifact chains:
 
@@ -60,6 +63,9 @@ Artifact chains:
 - [`scripts/composite_source_additivity_harness.py`](/Users/jonreilly/Projects/Physics/scripts/composite_source_additivity_harness.py)
 - [`logs/2026-04-04-composite-source-additivity-harness.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-04-composite-source-additivity-harness.txt)
 - [`docs/COMPOSITE_SOURCE_ADDITIVITY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/COMPOSITE_SOURCE_ADDITIVITY_NOTE.md)
+- [`scripts/composite_source_additivity_2d_cross_family.py`](/Users/jonreilly/Projects/Physics/scripts/composite_source_additivity_2d_cross_family.py)
+- [`logs/2026-04-04-composite-source-additivity-2d-cross-family.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-04-composite-source-additivity-2d-cross-family.txt)
+- [`docs/COMPOSITE_SOURCE_ADDITIVITY_2D_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/COMPOSITE_SOURCE_ADDITIVITY_2D_NOTE.md)
 
 This is enough for a stronger bounded statement:
 
@@ -108,6 +114,7 @@ In 3+1D (d=3): F ∝ M₁M₂/r. This is Newton's law.
 | Amplitude-level equivalence | Exact under global amplitude rescaling |
 | Packet-shape independence | Fails on the bounded localized-packet probe |
 | Valley same-site / disjoint additivity | Exact to printed precision on the weak-field test-particle family |
+| Valley additivity on second retained family | `<= 0.08%` on the 2D ordered-lattice cross-check |
 | Spent-delay same-site / disjoint additivity | Violated by 24-29% on the same family |
 
 ## What This Does NOT Prove

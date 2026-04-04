@@ -26,6 +26,12 @@ physics lane is now:
 
 That is the next place where the theory can either harden or fail honestly.
 
+Current status on that parallel lane:
+
+- a second-family additivity cross-check now exists on the retained 2D ordered lattice
+- the remaining blocker is no longer family-local additivity
+- it is persistent-pattern / inertial-response closure
+
 ## Batch 1: Generated Geometry Closure
 
 **Question**
@@ -133,6 +139,11 @@ lattice lane?
 
 This is the best order when generated geometry is already being worked in
 parallel elsewhere.
+
+That first parallel item now means:
+
+- persistent-pattern / inertial-response closure first
+- only then a third-family additivity check if a cheap reusable family exists
 
 That order improves the physics position fastest:
 

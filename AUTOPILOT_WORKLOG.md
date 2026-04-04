@@ -12,6 +12,9 @@
   - valley-linear same-site and disjoint-source response is additive to the
     printed resolution on the weak-field test-particle family
   - spent-delay misses the same additivity checks by roughly `24-29%`
+  - a second retained-family 2D cross-check now keeps the same additivity split
+  - a readiness audit now makes the next missing step explicit: no retained
+    persistent-pattern inertial-response experiment exists yet
 
 ### Strongest confirmed conclusion
 - the derivation lane is now cleanly split into:

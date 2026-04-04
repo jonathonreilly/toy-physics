@@ -35,6 +35,8 @@ What is now frozen:
 - two-body momentum conservation for valley-linear and large unequal-mass
   violation for spent-delay
 - composite-source additivity for valley-linear on the same weak-field family
+- a second-family 2D ordered-lattice cross-check with the same bounded
+  valley-linear additivity split
 
 What is still missing:
 
@@ -43,11 +45,19 @@ What is still missing:
 - a beyond-fixed-family additivity cross-check that says whether the
   composition law is special to the retained ordered family or not
 
+The second item is now partially addressed:
+
+- a 2D ordered-lattice cross-check is frozen
+- the next real escalation is no longer “another nearby lattice family”
+- it is either:
+  - a genuinely different family
+  - or a real persistent-pattern inertial-response experiment
+
 Best next deliverables on this lane:
 
-1. one bounded beyond-fixed-family additivity/composition cross-check
-2. one smallest viable persistent-pattern or quasi-persistent inertial-response experiment
-3. one note separating test-particle additivity from any stronger inertial-mass theorem
+1. one smallest viable persistent-pattern or quasi-persistent inertial-response experiment
+2. one note separating test-particle additivity from any stronger inertial-mass theorem
+3. one third-family additivity cross-check only if it is genuinely cheap and non-overlapping
 
 ## Highest-leverage score improvers
 

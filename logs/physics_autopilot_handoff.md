@@ -24,6 +24,7 @@
   - amplitude-level equivalence is frozen
   - same-family two-body momentum is frozen
   - same-family composite-source additivity is frozen
+  - a second retained-family 2D additivity cross-check is now frozen too
 - the remaining open step is now specific:
   - persistent-pattern / inertial-mass closure
 

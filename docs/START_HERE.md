@@ -57,8 +57,13 @@ Do not force a trade where only one of those moves.
     - two-body momentum distinguishes valley-linear from spent-delay sharply
     - composite-source response is additive for valley-linear and non-additive
       for spent-delay on the weak-field test-particle family
+    - a second-family 2D ordered-lattice cross-check now keeps the same
+      additivity split
   - those derivation-side harnesses strengthen the one-parameter-mass route,
     but they do **not** yet close persistent-pattern inertia
+  - a readiness audit now makes the next gap explicit:
+    the codebase still lacks a retained persistent or quasi-persistent
+    inertial-response experiment on the ordered-lattice family
   - a bounded same-family closure note is now artifact-backed:
     rows `1-7` stay on the fixed `h = 0.25`, `W = 10`, `L = 12` core family,
     rows `8-9` are replayed at the same `h = 0.25`, `W = 10` family across
@@ -136,7 +141,10 @@ Do not force a trade where only one of those moves.
 - [`docs/ACTION_POWER_SCALING_SWEEP_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_SCALING_SWEEP_NOTE.md)
 - [`docs/EQUIVALENCE_PRINCIPLE_HARNESS_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/EQUIVALENCE_PRINCIPLE_HARNESS_NOTE.md)
 - [`docs/COMPOSITE_SOURCE_ADDITIVITY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/COMPOSITE_SOURCE_ADDITIVITY_NOTE.md)
+- [`docs/COMPOSITE_SOURCE_ADDITIVITY_2D_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/COMPOSITE_SOURCE_ADDITIVITY_2D_NOTE.md)
 - [`docs/NEWTON_DERIVATION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/NEWTON_DERIVATION_NOTE.md)
+- [`docs/PERSISTENT_INERTIAL_RESPONSE_READINESS_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/PERSISTENT_INERTIAL_RESPONSE_READINESS_NOTE.md)
+- [`docs/PERSISTENT_INERTIAL_RESPONSE_READINESS_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/PERSISTENT_INERTIAL_RESPONSE_READINESS_NOTE.md)
 - [`docs/SAME_FAMILY_3D_CLOSURE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/SAME_FAMILY_3D_CLOSURE_NOTE.md)
 - [`docs/VALLEY_LINEAR_MIRROR_TRANSFER_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_MIRROR_TRANSFER_NOTE.md)
 - [`docs/VALLEY_LINEAR_CONTINUUM_SYNTHESIS_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_CONTINUUM_SYNTHESIS_NOTE.md)
