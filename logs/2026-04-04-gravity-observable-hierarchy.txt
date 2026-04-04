@@ -1,0 +1,16 @@
+====================================================================================================================================
+GRAVITY OBSERVABLE HIERARCHY
+  Compare centroid sign, local mass-side probability gain, and signed channel bias.
+  Goal: distinguish genuine attraction from depletion/focusing ambiguity.
+====================================================================================================================================
+
+  branch                              case                      centroid   P_near gain  channel bias  interpretation
+  ------------------------------------------------------------------------------------------------------------------------------
+  2D dense spent-delay                ultra-weak retained     +0.162694  +0.006099  +0.888297  genuine attraction
+  2D dense spent-delay                strong-field depletion  -6.538915  -0.102645  -0.796165  away / depletion
+  3D power-action close-slit barrier  retained barrier card   -0.000076  -0.000000  -0.918368  away / depletion
+
+Interpretation rules:
+  - centroid>0 and P_near>0 => genuine attraction
+  - centroid<0 but P_near>0 => mass-side enhancement with opposite centroid drift
+  - centroid<0 and P_near<=0 => away / depletion

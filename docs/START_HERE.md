@@ -53,6 +53,7 @@ history or commit-message narrative.
 - [`docs/STRUCTURED_CHOKEPOINT_BRIDGE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/STRUCTURED_CHOKEPOINT_BRIDGE_NOTE.md)
 - [`docs/ACTION_POWER_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_NOTE.md)
 - [`docs/ACTION_POWER_3D_GRAVITY_SIGN_CLOSURE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_3D_GRAVITY_SIGN_CLOSURE_NOTE.md)
+- [`docs/GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md)
 
 ## Working rules
 
@@ -61,6 +62,7 @@ history or commit-message narrative.
 - Treat many `*_test.py` files as **experiment drivers**, not assertion-based regression tests.
 - Treat some NN-side `k=0 = 0` results as **sanity checks**, not independent evidence.
 - If a branch changes the action law or propagator, it is a **new branch** and does not inherit flagship claims automatically.
+- Do **not** invert gravity sign by convention; use the canonical gravity-observable hierarchy first.
 
 ## Best next pickup points
 
