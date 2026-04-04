@@ -1,12 +1,21 @@
 # Valley-Linear Action Robustness Note
 
 **Date:** 2026-04-04
-**Status:** Retained — robust across all tested parameter variations
+**Status:** exploratory robustness memo pending a dedicated frozen sweep harness
 
 ## Action
-S = L(1-f) — phase valley, linear in field f
 
-## Robustness sweeps (all at h=0.5, 3D dense lattice, 1/L^2 kernel)
+`S = L(1-f)` — phase valley, linear in field `f`
+
+This note records branch-side sweep results that are scientifically useful, but
+it should not yet be read as a fully retained proof of robustness.
+
+At the moment, the missing piece is a dedicated **script + log + note** chain
+for the full sweep itself. Until that exists, the same-family comparison in
+[`VALLEY_LINEAR_ACTION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_ACTION_NOTE.md)
+is the stronger retained artifact.
+
+## Reported robustness sweeps (all at h=0.5, 3D dense lattice, 1/L^2 kernel)
 
 ### Width sweep (L=12, max_d=3)
 
@@ -37,31 +46,42 @@ S = L(1-f) — phase valley, linear in field f
 
 Gravity monotonically increases with L — persistent and strengthening.
 
-## 2D comparison
+## 2D comparison (branch-side read)
 
 | Action | TOWARD | Tail | F∝M |
 |--------|--------|------|-----|
 | Valley-linear | 7/7 | b^(-2.27) | 1.00 |
 | Spent-delay | 7/7 | b^(-1.08) | 0.45 |
 
-Valley-linear gives steeper distance law and linear F∝M in 2D as well.
+The reported 2D comparison points in the same direction: valley-linear gives a
+steeper distance read and linear `F∝M` on the tested slice.
 
-## Mirror DAG transfer
+## Mirror DAG transfer (bounded read)
 
 | Action | TOWARD (8 seeds) |
 |--------|-----------------|
 | Spent-delay | 15/21 (71%) |
 | Valley-linear | 10/21 (48%) |
 
-The valley-linear action is lattice-optimized. On random/mirror DAGs,
-the spent-delay action gives more TOWARD gravity.
+The current branch-side read is that valley-linear is lattice-optimized. On the
+tested random/mirror DAG slice, spent-delay gives more TOWARD gravity.
 
 ## Summary
 
-The valley-linear action is robust on the lattice architecture:
-- **F∝M = 1.00 at every tested configuration** (W, max_d, L, h, dimension)
-- Born at machine precision everywhere
-- Decoherence 48-50% everywhere
-- Gravity TOWARD and growing at all lengths
+The strongest safe summary today is:
 
-It does NOT transfer well to random DAGs (architecture-dependent).
+- the valley-linear lane looks **promisingly robust** on the tested lattice
+  parameter slices
+- the branch-side sweeps report `F∝M = 1.00` and machine-clean Born across the
+  tested rows
+- the same branch-side memo also reports that the action does **not** transfer
+  as well to mirror/random DAGs
+
+What is **not** retained from this note yet:
+
+- “robust across all parameter variations” as a canonical theorem
+- “works across architectures”
+- “the action choice is fully settled”
+
+That stronger wording should wait for a dedicated frozen sweep harness and a
+separate frozen transfer test.

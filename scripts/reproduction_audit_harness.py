@@ -40,9 +40,32 @@ class AuditFailure(RuntimeError):
     """Raised when the audit harness detects a drift or missing artifact."""
 
 
-def run_script(path: str, *args: str, timeout: int = 240) -> str:
+def python_has_module(python_bin: str, module: str) -> bool:
+    probe = subprocess.run(
+        [python_bin, "-c", f"import {module}"],
+        cwd=REPO_ROOT,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    return probe.returncode == 0
+
+
+def choose_python(require_numpy: bool = False) -> str:
+    if not require_numpy:
+        return PYTHON
+    if python_has_module(PYTHON, "numpy"):
+        return PYTHON
+    system_python = "/usr/bin/python3"
+    if Path(system_python).exists() and python_has_module(system_python, "numpy"):
+        return system_python
+    return PYTHON
+
+
+def run_script(path: str, *args: str, timeout: int = 240, python_bin: str | None = None) -> str:
+    runner = python_bin or PYTHON
     proc = subprocess.run(
-        [PYTHON, str(REPO_ROOT / path), *args],
+        [runner, str(REPO_ROOT / path), *args],
         cwd=REPO_ROOT,
         capture_output=True,
         text=True,
@@ -132,7 +155,11 @@ def run_valley_linear_replay() -> None:
     print("VALLEY-LINEAR BOUNDED REPLAY")
     print("  same-family spent-delay vs valley-linear comparison on the 3D ordered-lattice 1/L^2 branch")
     print("=" * 88)
-    out = run_script("scripts/valley_linear_same_harness_compare.py", timeout=900)
+    out = run_script(
+        "scripts/valley_linear_same_harness_compare.py",
+        timeout=900,
+        python_bin=choose_python(require_numpy=True),
+    )
     require("SAME-HARNESS ACTION COMPARISON" in out, "valley-linear comparison header missing")
     require("valley-linear" in out, "valley-linear row missing")
     require("spent-delay" in out, "spent-delay row missing")
