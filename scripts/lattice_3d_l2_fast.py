@@ -45,6 +45,7 @@ class Lattice3D:
 
         # Pre-compute displacement offsets for one layer transition
         offsets = []
+        self._h_measure = h * h  # h^(d-1) for d=3 (2 transverse dims)
         for diy in range(-self.max_d, self.max_d + 1):
             for diz in range(-self.max_d, self.max_d + 1):
                 dy_phys = diy * h
@@ -131,8 +132,9 @@ class Lattice3D:
                 ret = np.sqrt(np.maximum(dl * dl - L * L, 0))
                 act = dl - ret
 
-                # Phase contribution
-                contrib = sa[nonzero] * np.exp(1j * k * act) * w / (L * L)
+                # Phase contribution (h^2 measure prevents overflow at fine h;
+                # cancels in all ratio-based observables like centroid/Born/MI)
+                contrib = sa[nonzero] * np.exp(1j * k * act) * w * self._h_measure / (L * L)
 
                 # Zero out blocked destinations
                 db = dst_blocked[di_flat[nonzero]]
