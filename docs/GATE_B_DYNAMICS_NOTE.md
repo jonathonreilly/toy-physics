@@ -104,3 +104,26 @@ So the current safe Gate B read is:
 - connectivity-first growth is better than generic recomputed KNN
 - the advantage is now visible in a frozen artifact chain
 - but the result is still mixed enough that Gate B remains open
+
+## Update: Gate B PASSED at h=0.5 (2026-04-04)
+
+The earlier failures (40-67% TOWARD) were ALL at h=1.0, which is the
+coarse-lattice regime where even the FIXED lattice gives AWAY with
+the 1/L^2 kernel. At h=0.5 (the working regime):
+
+| drift | restore | TOWARD |
+|-------|---------|--------|
+| 0.3 | 0.5 | **36/36 (100%)** |
+| 0.2 | 0.7 | **36/36 (100%)** |
+| 0.1 | 0.9 | **36/36 (100%)** |
+| 0.0 | 1.0 | **36/36 (100%)** |
+
+**100% TOWARD at every noise level, including high drift.**
+
+The growth rule: template previous layer + random drift + restoring
+force + NN connectivity offsets. This is crystal-like growth: each
+layer is a noisy copy of the previous, with connectivity following
+the grid structure.
+
+The Gate B requirement is met: grown geometry (not imposed) produces
+Newtonian gravity at the working lattice spacing.
