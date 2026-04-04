@@ -123,7 +123,7 @@ If you only want the current high-level state, read this section first.
   is a same-family two-harness bridge, the weak-field reopening gives a narrow
   one-card pocket, the 3D dense spent-delay branch now adds a bounded
   same-family attractive window that is hierarchy-clean on the retained tested
-  3D slice, and the no-barrier branch retains the cleanest current
+  `z = 2..6` slice, and the no-barrier branch retains the cleanest current
   distance-law magnitude. This is a real branch, but it does not displace the
   mirror flagship.
 - **Nearest-neighbor refinement:** strongest current continuum-side bridge.
