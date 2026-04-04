@@ -421,6 +421,39 @@ distinguish between them.
 1/L^(d-1) vs 1/L^d kernels. If 1/L^(d-1) gives T → const and 1/L^d
 gives T → 0 (beam dies out), that would confirm the selection.
 
+## Transfer Norm Test Result (2026-04-04)
+
+The predicted "T→const" for p=d-1 is WRONG. Actual behavior with
+h^(d-1) measure:
+
+  p < d-1: T_eff → CONSTANT or DECREASING (beam unconfined)
+  p = d-1: T_eff ~ ln(1/h) (LOGARITHMIC — marginally divergent)
+  p > d-1: T_eff ~ (1/h)^α (EXPONENTIAL overflow)
+
+Verified across 2D (p=0,1,2), 3D (p=1,2,3), 4D (p=2,3,4).
+
+This refines the selection: p=d-1 is the BOUNDARY between "beam
+too spread for gravity" and "amplitude overflows." It is marginally
+divergent (logarithmic), not truly constant. But it is the unique
+power where gravity persists AND overflow is delayed.
+
+## 4D Prediction Test Result (2026-04-04)
+
+4D lattice with L=12, h=0.5:
+  1/L: ALL AWAY (0/3 TOWARD) — depletion dominates
+  1/L^2: 3/3 TOWARD but WEAKENING with L (0.027→0.015)
+  1/L^3: 3/3 TOWARD and STRENGTHENING with L (0.024→0.034)
+
+Pattern confirmed across 2D/3D/4D: p=d-1 is the unique power where
+gravity PERSISTS and STRENGTHENS with lattice length. Lower powers
+give transient TOWARD that eventually flips.
+
+## 4D Born Result
+
+Born |I3|/P = 1.33e-15 (machine precision) on 4D 1/L^3 kernel.
+Born confirmed at all tested dimensions: 2D/3D/4D.
+
 ## Status
-PROPOSED — the derivation constrains but does not uniquely fix p.
-The prediction (4D kernel = 1/L^3) is untested.
+CONFIRMED (empirically) — the selection p=d-1 is verified across
+three dimensions. The derivation from axioms gives the correct
+constraint (d-1 ≤ p ≤ d) but the exact selection is empirical.
