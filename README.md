@@ -148,6 +148,12 @@ If you only want the current high-level state, read this section first.
 If you are picking up the repo fresh, start with
 [START_HERE.md](/Users/jonreilly/Projects/Physics/docs/START_HERE.md).
 
+Unless a later section explicitly says it is a canonical retained note, treat
+the architecture snapshot above plus [START_HERE.md](/Users/jonreilly/Projects/Physics/docs/START_HERE.md)
+and [UNIFIED_PROGRAM_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIFIED_PROGRAM_NOTE.md)
+as the current project state. Much of the material below is historical working
+context, not the promoted claim surface.
+
 The most relevant notes for that current architecture state are:
 
 - [UNIFIED_PROGRAM_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIFIED_PROGRAM_NOTE.md)
