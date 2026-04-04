@@ -143,20 +143,76 @@ distribution, not the propagator.
 | Mass scaling (4D) | **Partially** | **Doesn't converge** |
 | Emergence (gap dynamics) | **Partially** | **Sustains to N=80, wall at N=100** |
 
+## Lattice continuum limit (2026-04-04 update)
+
+The lattice architecture provides a genuine h→0 continuum limit that the
+random DAG architecture does not. This is a complementary lane, not a
+replacement.
+
+### Lattice results that survive refinement
+
+| Property | 2D (1/L) | 3D (1/L^2) | 4D (1/L^3) |
+|---|---|---|---|
+| Born | < 6e-16 at all h | < 4e-15 at all h | 1.3e-15 |
+| MI | → 0.95 at h=0.25 | → 0.66 at h=0.25 | 0.32 (h=1 only) |
+| Decoherence | → 50% at h=0.25 | → 50% at h=0.25 | TBD |
+| d_TV | → 0.99 at h=0.25 | → 0.83 at h=0.25 | 0.58 |
+| Gravity (TOWARD) | Strengthens | Strengthens | Strengthens |
+| Distance tail | b^(-1.08) at h=0.5 | b^(-0.53) at h=0.25 | TBD |
+
+### Dimension-dependent kernel
+
+The kernel power p = d-1 is empirically selected as the unique value
+where gravity PERSISTS and STRENGTHENS with lattice length:
+- p < d-1: beam too spread (gravity transient, eventually AWAY)
+- p = d-1: gravity persistent (logarithmically marginal transfer norm)
+- p > d-1: amplitude overflow
+
+Verified across 2D (p=1), 3D (p=2), 4D (p=3).
+
+### What the lattice changes about the distance law
+
+The random DAG distance law was b-independent (structural limitation).
+The lattice distance law is b-DEPENDENT and converging:
+- 3D 1/L^2 tail: b^(-0.35) at h=0.5 → b^(-0.53) at h=0.25
+- Exponent steepens with refinement (geometric, field-independent)
+- Direction: toward -2.0 (Newtonian in 3 spatial dims)
+
+This does NOT rescue the random DAG distance law. It provides an
+alternative architecture where distance law works.
+
+### Architecture-dependent kernel (important caveat)
+
+The dimension-dependent kernel is LATTICE-SPECIFIC:
+- On random DAGs, all kernel powers give similar noisy gravity
+- On mirror DAGs, 1/L outperforms 1/L^2
+- The kernel selection mechanism (transfer norm marginality) requires
+  the regular lattice structure with h→0 limit
+
+### RG scaling
+
+At fixed field strength s=5e-5, gravity magnitude diverges as h^(-0.48).
+RG scaling s ~ h^0.92 stabilizes the magnitude. The distance exponent
+is independent of s — it is a geometric lattice property.
+
 ## What this means for the model
 
 The retained results are:
-1. Phase-valley gravity (survives, weakens slowly)
-2. Born rule (exact, mathematical)
-3. CL bath decoherence floor (stable, family-dependent)
-4. 3D mass scaling continuum limit (alpha → 0.58)
-5. Cross-family robustness (4 of 5 families)
+1. Phase-valley gravity (survives on DAGs AND lattices)
+2. Born rule (exact, mathematical, all architectures)
+3. CL bath decoherence floor (stable on DAGs, converges on lattice)
+4. 3D mass scaling continuum limit (alpha → 0.58 on DAGs)
+5. Cross-family robustness (4 of 5 DAG families)
+6. **NEW: Distance law on lattice** (b^(-0.53) steepening toward -2)
+7. **NEW: Lattice continuum limit** (MI, decoherence, d_TV all converge)
 
 The provisional/retracted results are:
-1. 4D "F~M" mass scaling (parameter-sensitive)
+1. 4D "F~M" mass scaling on DAGs (parameter-sensitive)
 2. Strict visibility gain (vanishes at large N)
-3. Asymptotic emergence (N=80 on 3D, but N=100 is the wall)
+3. Asymptotic emergence (N=80 on 3D, wall at N=100)
+4. **RETRACTED: 3D 1/L gravity** (lattice artifact at h=1.0)
 
 The structural limitations are:
-1. Distance law (b-independent, no avenue rescues it)
-2. CLT convergence (eventually defeats all emergence rules)
+1. Distance law on random DAGs (b-independent, structural)
+2. CLT convergence on random DAGs (defeats all emergence rules)
+3. Dimension-dependent kernel not derived from axioms (empirical)

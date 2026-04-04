@@ -92,6 +92,57 @@ The mass scaling exponent depends on spatial dimension (0 → 0.58 → positive)
 A simpler model (e.g., random phase accumulation without geometric structure)
 would not show this dimensional progression.
 
+### F6. Lattice gravity reversal under refinement (2026-04-04)
+If the 3D 1/L^2 gravitational TOWARD flipped back to AWAY at h < 0.125,
+the convergence claim would be falsified. Current data: TOWARD at h=0.5,
+0.25, 0.125, strengthening at each step. A reversal below h=0.125 would
+indicate the TOWARD was another (finer) lattice artifact.
+
+### F7. Distance exponent stops steepening (2026-04-04)
+If the distance-law tail exponent plateaus (e.g., stays at -0.53
+at h=0.125 and h=0.0625), the model does NOT produce Newtonian gravity
+in the continuum limit. Currently: -0.35 (h=0.5) → -0.53 (h=0.25).
+If it flattens, the asymptotic exponent is not -2.
+
+### F8. 4D 1/L^3 gravity fails at longer lattice (2026-04-04)
+At L=15 on 4D, 1/L^3 gives +0.034 (TOWARD, strengthening). If at
+L=20 or L=25 it flips to AWAY, the dimension-dependent kernel pattern
+breaks for d=4. Currently the pattern holds for d=2,3,4.
+
+## What distinguishes this model from simpler baselines
+
+### D1. Phase valley vs amplitude routing
+The k=0 diagnostic separates phase-mediated gravity from trivial
+conductance bias. Edge reweighting (1+alpha*f)^gamma gives 1/b
+distance falloff BUT the same falloff appears at k=0 — proving it's
+amplitude routing, not gravity. The phase valley mechanism produces
+b-independent gravity that requires k > 0.
+
+### D2. CL bath vs structural decoherence
+The CL bath decoherence is genuine environment-mediated (partial trace
+over bin-resolved bath). A simpler model (e.g., dephasing from random
+phases) would not show the bin-structure dependence or the scaling
+with lambda. The CL bath specifically requires S_norm > 0 (slit
+distinguishability in the spatial bins).
+
+### D3. Emergent gap vs imposed gap
+The adaptive quantile pruning creates emergent gap structure from
+uniform DAGs, improving decoherence by 5pp at N=30 and sustaining
+through N=60. A simpler model with no self-regulation would not
+show this dynamic gap formation.
+
+### D4. Dimensional dependence
+The mass scaling exponent depends on spatial dimension (0 → 0.58 → positive).
+A simpler model (e.g., random phase accumulation without geometric structure)
+would not show this dimensional progression.
+
+### D5. Kernel dimension-dependence (2026-04-04)
+The unique persistent kernel power p=d-1 across 2D/3D/4D is a
+non-trivial pattern. A simpler model (fixed kernel independent of
+dimension) would not show this. The transfer norm analysis reveals
+p=d-1 is the logarithmically marginal boundary — not an arbitrary
+choice but the unique admissible scaling.
+
 ## Open predictions (untested)
 
 ### O1. 4D continuum limit
@@ -109,3 +160,19 @@ The cross-family test showed decoherence works on preferential DAGs
 even when gravity fails. Prediction: decoherence is more robust than
 gravity across graph families because it depends on slit distinguishability
 (geometric), not phase valley coherence (interference).
+
+### O4. 5D kernel prediction (2026-04-04)
+On a 5D lattice (4 transverse dims), the correct kernel should be
+1/L^4. Prediction: 1/L^3 will be TOWARD but weakening with L on 5D,
+while 1/L^4 will strengthen. Born should hold at machine precision.
+
+### O5. Distance exponent convergence rate (2026-04-04)
+On the 3D 1/L^2 lattice, the distance tail exponent at h=0.125 should
+be between -0.60 and -0.75 (extrapolating the -0.35 → -0.53 trend).
+If it is shallower than -0.45 or steeper than -1.0, the convergence
+rate model is wrong.
+
+### O6. RG exponent universality (2026-04-04)
+The RG scaling s ~ h^0.92 was measured on the 3D lattice. On the 4D
+lattice, a different RG exponent is expected (the per-layer amplitude
+transfer scales differently). Prediction: 4D RG exponent > 0.92.
