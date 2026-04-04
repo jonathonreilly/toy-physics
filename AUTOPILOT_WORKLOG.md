@@ -1,3 +1,149 @@
+## 2026-04-03 — Coordination reconciled to synced causal marker head
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed:
+  - no detached science child was running
+- the canonical repo is synced again:
+  - `main` and `origin/main` both point to `06c8759` (`Merge branch 'claude/distracted-napier'`)
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+- the tracked coordination state had drifted again:
+  - `AUTOPILOT_WORKLOG.md` and `logs/physics_autopilot_handoff.md` still described the older local-ahead lattice / DNS-failure state around `f9f53c6`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` was missing
+- the shared checkout still carried unrelated modified logs plus untracked docs / scripts in the lattice, mirror, persistent-record, gravity-design, and structured-lane side work, so this loop stayed on coordination repair only
+
+### What changed
+- acquired the `physics-science` lock and reran the protocol sync checks against the canonical repo
+- verified the latest synced head chain:
+  - `06c8759` (`Merge branch 'claude/distracted-napier'`)
+  - `9b89537` (`feat(causal): gravity deflection ~ k^1.59, consistent with k² coupling`)
+  - `a38409c` (`feat(causal): waveguide doesn't create mass — propagation intrinsically massless`)
+  - `10c204c` (`feat(causal): dispersion is TRIVIAL — beam width k-independent (massless)`)
+- checked the landed causal marker commits against the tree with:
+  - `git diff-tree --no-commit-id --name-only -r 9b89537`
+  - `git diff-tree --no-commit-id --name-only -r a38409c`
+  - `git diff-tree --no-commit-id --name-only -r 10c204c`
+- all three returned no tracked file changes, so the synced head moved without any new repo artifacts, benchmark logs, or note updates
+- left `/Users/jonreilly/Projects/Physics/README.md` untouched because no doc-backed conclusion changed on the synced head
+- refreshed:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- recorded one bounded integrity repair so the tracked coordination state can match the real synced repo before the next science step
+
+### Strongest confirmed conclusion
+The current integrity issue was stale coordination metadata again, but this time the repo has already resynchronized. The latest synced head advances through empty causal marker commits rather than new tracked science artifacts, so the honest repo-facing conclusion set is unchanged and `README.md` does not need a new architecture rewrite from this loop.
+- `main` and `origin/main` are both at `06c8759`, so the earlier local-ahead / DNS-failure story is no longer current
+- the three causal commits in the synced head (`10c204c`, `a38409c`, `9b89537`) carry informative commit messages but no tracked file changes, so there is no new log-backed or note-backed result to promote as a stable repo artifact here
+- the latest stable in-tree science artifacts therefore remain the already-tracked directional-`b` and ordered-lattice notes
+- while Claude owns the active causal / decoherence interpretation lane, this automation should not treat those empty marker commits as a reason to reopen overlapping frontier work
+- the highest-signal non-overlapping next lane remains the fixed directional-measure geometry-normalized gravity-`b` seam
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- keep the corrected fixed directional propagator and retained `b -> b - h_mass` hierarchy fixed
+- return to one bounded geometry-normalized gravity-`b` study on the directional-measure thread
+- start from the retained directional note and the last stable holdout log:
+  - `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-03-directional-b-continuous-density-midlayer-holdout.txt`
+- use one occupancy-aware or geometry-normalized diagnostic that addresses the frozen 4-NN false negatives without reopening a fresh causal / decoherence search
+- keep avoiding the unrelated dirty lattice / mirror / persistent-record / gravity-design side work already sitting in the shared checkout
+
+### First concrete action
+- reopen `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- compare the six frozen 4-NN false negatives in `/Users/jonreilly/Projects/Physics/logs/2026-04-03-directional-b-continuous-density-midlayer-holdout.txt` against `local_target_count`, `expected_target_count_4nn`, `mu`, and simple `b` / `edge_b` normalizations before adding a new family or wider denominator search
+
+## 2026-04-03 — Janitor reconciled coordination state to local lattice scaling head
+
+### Current state
+- janitor preflight found no live science child:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` reported `free`
+- the canonical repo was initially synchronized at loop start:
+  - `main` and `origin/main` both pointed to `8ea26f3` (`Merge branch 'claude/distracted-napier'`)
+  - the initial `git rev-list --left-right --count origin/main...main` check returned `0 0`
+- while this janitor pass was in flight, local `main` advanced through three new lattice commits:
+  - `2354c22` (`feat(lattice): freeze weak-field mass-response pocket`)
+  - `885f944` (`feat(lattice): freeze weak-field purity scaling pocket`)
+  - `f9f53c6` (`docs: note weak-field purity scaling pocket`)
+- the required push helper then failed on DNS, so the real git state at loop end is:
+  - local `main` points to `f9f53c6`
+  - `origin/main` still points to `8ea26f3`
+  - `git rev-list --left-right --count origin/main...main` now returns `0 3`
+- the tracked coordination state had drifted behind the real synced head again:
+  - `AUTOPILOT_WORKLOG.md`, `logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` still described the older local-ahead directional-`b` state around `51e8af8` / `9ef65c1`
+- the shared checkout still carried unrelated modified logs and untracked docs / scripts in the mirror, persistent-record, lattice, and gravity-design lanes, so this loop stayed on coordination repair only
+
+### What changed
+- acquired the `physics-janitor` lock and reran the protocol sync checks against the canonical repo
+- verified the landed head chain after the stale directional-`b` state:
+  - `e625618` (`fix(lattice): freeze negative symmetry unification decision`)
+  - `e9b50af` (`feat(lattice): freeze weak-field unification pocket`)
+  - `69118c1` (`feat(lattice): F∝M^0.38 in ultra-weak regime — R²=0.992`)
+  - `03b4164` (`feat(lattice): purity exponent -0.25, R²=0.96, N_half=87M — 10/10!`)
+  - `8ea26f3` (`Merge branch 'claude/distracted-napier'`)
+- inspected the tracked lattice artifacts that coordination state had missed, including the three new local commits that landed during this pass:
+  - `/Users/jonreilly/Projects/Physics/docs/UNIFIED_PROGRAM_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/LATTICE_FAMILY_VALIDATION_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/LATTICE_FIELD_STRENGTH_UNIFICATION_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/LATTICE_COMPLEMENTARITY_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/LATTICE_WEAK_FIELD_MASS_SCALING_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/LATTICE_WEAK_FIELD_PURITY_SCALING_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/scripts/lattice_field_strength_unification.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/lattice_complementarity_sweep.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/lattice_weak_field_mass_scaling.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/lattice_weak_field_purity_scaling.py`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-03-lattice-field-strength-unification.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-03-lattice-complementarity-sweep.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-03-lattice-weak-field-mass-scaling.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-03-lattice-weak-field-purity-scaling.txt`
+- ran `python3 scripts/base_confidence_check.py`
+  - benchmark regression audit, mode-only candidate isolation, sparse bridge addback visibility, live mechanism-split driver, and feature registry alignment all passed
+- ran the required push helper against the canonical repo:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - helper result: `status=failed`, `failure_kind=dns_failure`, `ahead=3`, `behind=0`, `attempts_used=5`, `error=fatal: unable to access 'https://github.com/jonathonreilly/toy-physics.git/': Could not resolve host: github.com`
+- refreshed:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-janitor/memory.md`
+- confirmed `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` is not writable from this sandbox, so that file remains stale until a writable context refreshes it
+- did not create a janitor commit because the repo was already locally ahead and the required push helper failed on DNS
+
+### Strongest confirmed conclusion
+The integrity issue was stale coordination metadata again, now against a newer local ordered-lattice scaling head rather than the older local-ahead directional-`b` state. The landed lattice result strengthens the ordered-lattice branch, but it still does not change the worker-alignment rule.
+- the standard-strength ordered-lattice bridge still holds on the synced head:
+  - barrier card `MI = 0.537498`, `d_TV = 0.713772`, `1 - pur_cl = 0.0572`, gravity `-5.740317`, Born `|I3|/P = 2.98e-16`, `k=0 = 0`
+  - no-barrier companion magnitude law remains `|delta| ~= 23.5071 * b^(-1.052)` with `R^2 = 0.9850`
+- the weak-field reopening also survives on the same ordered family:
+  - canonical retained row `max_dy = 5`, `slit = wide_center`, `strength = 0.0005`
+  - `MI = 0.616978`, `1 - pur_cl = 0.464598`, gravity at `b = 6` is `+0.162694`, Born `4.24e-16`, all tested `b` values stay positive, and the barrier-tail fit is `alpha = -1.00`, `R^2 = 0.93`
+- two new local follow-ups tightened that weak-field read without changing its scope:
+  - mass-response stays positive but sub-linear on the retained pocket: `gravity ~= 2.6960 * strength^0.353`, `R^2 = 0.971`
+  - retained-row purity scaling is bounded but real: `1 - pur_cl ~= 1.0467 * N^(-0.222)`, `R^2 = 0.9683`
+- `python3 scripts/base_confidence_check.py` passed, so there is no current evidence of a fresh regression in the benchmark / selector layer
+- the required push helper failed with `dns_failure`, so the repo remains locally ahead and this janitor pass should stop without inventing further repo history
+- the honest coordinated read is therefore:
+  - exact mirror remains the flagship coexistence architecture
+  - ordered lattice is a stronger retained secondary distance-law / weak-field branch, not the default worker lane
+  - this automation should stay in compression / order-parameter mode and keep dense laddering paused unless the tracked plan explicitly reopens a sparse guardrail sentinel
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-janitor/memory.md`
+
+### Exact next step
+- retry the required push helper before any new science:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+- stay on the compression / order-parameter thread
+- reuse the frozen-frontier compression entrypoint and retained log:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_frontier_compression.py`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-frontier-compression-1232-3344-4992-5504.txt`
+- keep dense laddering paused and treat sparse sentinels as guardrails only unless the tracked plan explicitly reopens them
+- do not take the untracked lattice / mirror / persistent-record side work already sitting in the shared checkout as the next autonomous step
+
 ## 2026-04-03 — Directional-b midlayer sentinel limits frozen 4-NN bridge
 
 ### Current state
