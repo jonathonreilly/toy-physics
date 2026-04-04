@@ -155,6 +155,9 @@ interest map rather than just broaden the science search.
    - Same-family comparison, parameter robustness, cross-architecture transfer,
      decoherence-independence, and the continuum synthesis bridge are now
      frozen on disk.
+   - A widened `W = 12` tail replay is now also frozen; it strengthens the
+     3D distance-law read but should still be described as a finite-lattice
+     replay rather than a universal theorem.
    - Next deliverables:
      - one bounded note if the new dimensional-field prescription is retained
      - one explicit refinement/4D tail artifact chain before any broader
@@ -164,9 +167,11 @@ interest map rather than just broaden the science search.
 7. **Gate B structured-connectivity rule**
    - The connectivity-tolerance replay now sharpens the real bottleneck:
      position noise is tolerated; connectivity construction is the failure mode.
+   - A first crystal-like structured-connectivity prototype is now frozen and
+     mixed: cleaner than KNN on slope, but still not a generated-geometry win.
    - Deliverables:
-     - one growth rule that preserves structured connectivity without reverting
-       to a hand-imposed lattice
+     - one next-step growth rule that improves on the mixed v4 result without
+       broad search sprawl
      - one same-family generated-vs-imposed comparison with finite detector
        signal on both sides
      - one bounded note saying whether this materially advances Gate B or not

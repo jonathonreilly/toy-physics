@@ -15,6 +15,12 @@ Primary frozen replay for the current connectivity-vs-noise read:
 - [logs/2026-04-04-gate-b-connectivity-tolerance.txt](/Users/jonreilly/Projects/Physics/logs/2026-04-04-gate-b-connectivity-tolerance.txt)
 - [docs/GATE_B_CONNECTIVITY_TOLERANCE_NOTE.md](/Users/jonreilly/Projects/Physics/docs/GATE_B_CONNECTIVITY_TOLERANCE_NOTE.md)
 
+Structured-connectivity follow-up:
+
+- [scripts/evolving_network_prototype_v4.py](/Users/jonreilly/Projects/Physics/scripts/evolving_network_prototype_v4.py)
+- [logs/2026-04-04-evolving-network-prototype-v4.txt](/Users/jonreilly/Projects/Physics/logs/2026-04-04-evolving-network-prototype-v4.txt)
+- [docs/EVOLVING_NETWORK_PROTOTYPE_V4_NOTE.md](/Users/jonreilly/Projects/Physics/docs/EVOLVING_NETWORK_PROTOTYPE_V4_NOTE.md)
+
 1. **Noisy NN lattice** (positions jittered, fixed connectivity):
    100% TOWARD at all jitter levels 0.0-0.5, F∝M=1.00, Born 0.
    Gravity degrades gracefully (~40% weaker at jitter=0.5).
@@ -74,3 +80,8 @@ is producing the grid-like connectivity from a local rule.
 This is a genuine partial result, not a failure: the geometry
 tolerance is quantified, the mass scaling transfers universally,
 and the connectivity requirement is identified.
+
+The newest v4 crystal-like growth rule is the first explicit
+structured-connectivity prototype guided by that lesson. It remains mixed and
+does not close Gate B, but it is a cleaner next-step prototype than the older
+pure KNN or pruning-only lanes.

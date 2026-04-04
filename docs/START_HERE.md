@@ -50,6 +50,8 @@ Do not force a trade where only one of those moves.
   - on the retained `h = 0.25` family it improves the tested mass-law exponent
     and distance-tail slope while preserving Born and TOWARD sign
   - gravity magnitude is much smaller on the tested `z=3` slice
+  - a widened `W = 12` replay now gives a stronger 3D far-tail read:
+    `b^(-1.17)` on the tested `z >= 5` window, with all tested rows TOWARD
   - the mirror/random-DAG transfer replay is now frozen and mixed:
     - valley-linear improves the random-DAG slice relative to spent-delay
     - spent-delay still has the edge on the mirror family
@@ -66,6 +68,9 @@ Do not force a trade where only one of those moves.
 - **Gate B dynamics:** still open, but the bottleneck is sharper now:
   - position noise on fixed connectivity is tolerated
   - connectivity construction is the main failure mode
+  - a new v4 crystal-like structured-connectivity rule is now frozen and mixed:
+    slightly better response slope than KNN on the same grown positions, but
+    still not a Gate B win
 - **Action-power Newtonian-3D claim:** interesting, bounded to a no-barrier companion, not yet a promoted core claim
 - **Tapered 3D refinement:** negative on the tested family; useful as a topology-control branch, not a rescue of the dense card
 - **3D `1/L^2` kernel branch:** active bounded propagator fork under validation; do not treat branch-history or chat narrative as canonical
@@ -97,8 +102,10 @@ Do not force a trade where only one of those moves.
 - [`docs/VALLEY_LINEAR_ACTION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_ACTION_NOTE.md)
 - [`docs/VALLEY_LINEAR_MIRROR_TRANSFER_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_MIRROR_TRANSFER_NOTE.md)
 - [`docs/VALLEY_LINEAR_CONTINUUM_SYNTHESIS_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_CONTINUUM_SYNTHESIS_NOTE.md)
+- [`docs/VALLEY_LINEAR_WIDE_TAIL_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_WIDE_TAIL_NOTE.md)
 - [`docs/ACTION_ARCHITECTURE_MATRIX_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_ARCHITECTURE_MATRIX_NOTE.md)
 - [`docs/EVOLVING_NETWORK_PROTOTYPE_V3_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/EVOLVING_NETWORK_PROTOTYPE_V3_NOTE.md)
+- [`docs/EVOLVING_NETWORK_PROTOTYPE_V4_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/EVOLVING_NETWORK_PROTOTYPE_V4_NOTE.md)
 - [`docs/GATE_B_CONNECTIVITY_TOLERANCE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_CONNECTIVITY_TOLERANCE_NOTE.md)
 - [`docs/DECOHERENCE_ACTION_INDEPENDENCE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/DECOHERENCE_ACTION_INDEPENDENCE_NOTE.md)
 - [`docs/GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md)

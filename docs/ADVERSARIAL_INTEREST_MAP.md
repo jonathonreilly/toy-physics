@@ -35,12 +35,12 @@ The best next steps are the ones that improve both at once.
 |---|---:|---|
 | Toy-model mechanism interest | `9.5/10` | high intrinsic curiosity value |
 | Foundations / complex-systems / network-dynamics interest | `9.2/10` | real likely interest in the right subcommunities |
-| Broader theorist interest | `7.7/10` | selective interest, with better bounded replays, architecture synthesis, and cleaner review scaffolding |
-| Bridge to known physics | `7.6/10` | somewhat stronger than before, with a cleaner continuum/action split and sharper Gate B bottleneck |
-| Publishable as a careful computational toy-model paper | `8.5/10` | increasingly plausible with bounded replay chains, better reproduction, and tighter scope control |
+| Broader theorist interest | `7.8/10` | selective interest, with better bounded replays, architecture synthesis, and cleaner review scaffolding |
+| Bridge to known physics | `7.7/10` | somewhat stronger than before, with a cleaner continuum/action split and sharper Gate B bottleneck |
+| Publishable as a careful computational toy-model paper | `8.6/10` | increasingly plausible with bounded replay chains, better reproduction, and tighter scope control |
 | Publishable as a foundational-physics breakthrough claim | `4.0/10` | still too early for that framing |
 | Ready for top-tier mainstream physics claims | `2.7/10` | improved credibility, but still far below the required bar |
-| Field-shifting theory program | `5.5/10` | stronger than before, but still not at forced-engagement level |
+| Field-shifting theory program | `5.6/10` | stronger than before, but still not at forced-engagement level |
 | Landmark foundational breakthrough | `3.2/10` | current evidence base is improving, but still too branch-sensitive |
 | Nobel-scale breakthrough | `0.4/10` | not a realistic present-tense read |
 
@@ -92,6 +92,10 @@ The main upward pressures since the first adversarial cut are:
   gravity-side action fork from the geometry-side decoherence story
 - the valley-linear continuum synthesis note makes the derived-vs-retained
   boundary much easier for a skeptical reader to audit
+- the widened `W = 12` valley-linear tail replay now gives a stronger finite
+  3D distance-law check with a high-quality far-tail fit
+- Gate B v4 is still mixed, but it is a cleaner structured-connectivity
+  prototype than the older generic growth controls
 - the architecture/action matrix now gives reviewers one bounded place to read
   the split without forcing a unification claim
 - the imported `1/L^(d-1)` kernel lane is now scientifically more interesting

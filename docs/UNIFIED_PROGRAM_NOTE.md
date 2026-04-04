@@ -141,6 +141,8 @@ Current safe read:
 - on the retained `h = 0.25` family, valley-linear improves the tested
   mass-law exponent and post-peak tail slope while preserving Born and the
   TOWARD sign
+- a widened `W = 12` replay now gives a stronger finite-lattice 3D far-tail
+  read on the same family
 - on the same comparison, gravity magnitude is much smaller on the tested
   `z=3` slice
 - the branch does not inherit flagship claims automatically
@@ -149,6 +151,7 @@ Current safe read:
 Primary artifact:
 
 - [`docs/VALLEY_LINEAR_ACTION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_ACTION_NOTE.md)
+- [`docs/VALLEY_LINEAR_WIDE_TAIL_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_WIDE_TAIL_NOTE.md)
 
 ### Dimension-dependent kernel branch
 
@@ -252,6 +255,10 @@ The retained ordered-lattice read at the original standard-strength slice is:
   - `d_TV = 0.714`
   - gravity `-5.740`
   - Born `2.98e-16`
+
+The bounded valley-linear fork now strengthens the ordered 3D distance-law
+story on the same family, but it remains a secondary branch rather than a
+replacement for the flagship mirror lane.
 
 ### Ordered-lattice weak-field reopening
 
