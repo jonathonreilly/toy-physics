@@ -1,7 +1,7 @@
-# Continuum Convergence: 2D Works, 3D Doesn't
+# Continuum Convergence: Dimension-Dependent Kernel
 
 **Date:** 2026-04-04
-**Status:** CRITICAL FINDING — narrows the path forward
+**Status:** CONFIRMED across 2D/3D/4D — kernel = 1/L^(d-1)
 
 ## The test
 
