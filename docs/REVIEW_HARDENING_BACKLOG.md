@@ -27,8 +27,9 @@ Current review-hardening tooling now includes:
 - [`scripts/canonical_regression_gate.py`](/Users/jonreilly/Projects/Physics/scripts/canonical_regression_gate.py)
 
 That gate is intentionally modest. It does **not** prove the physics. It does
-provide a cheap code/report drift detector for the retained lattice/NN frontier,
-which is exactly the kind of failure adversarial reviewers notice early.
+provide a cheap code/report drift detector for the retained mirror, lattice,
+and NN frontier, which is exactly the kind of failure adversarial reviewers
+notice early.
 
 Both matter. A retained result that cannot survive hostile inspection of the
 scripts, harnesses, or report chain does not help the external-reception map.
@@ -73,6 +74,13 @@ Current state:
 
 - an initial bounded gate now exists in
   [`scripts/canonical_regression_gate.py`](/Users/jonreilly/Projects/Physics/scripts/canonical_regression_gate.py)
+- it now covers:
+  - exact 2D mirror
+  - mirror MI chokepoint chain
+  - strict mirror chokepoint baseline
+  - dense 3D spent-delay
+  - structured bridge
+  - bounded NN frontier
 - next step is to extend that gate carefully, not turn it into a brittle exact-value harness
 
 ## Mainstream-readiness gates

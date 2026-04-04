@@ -78,6 +78,7 @@ Do not force a trade where only one of those moves.
 - If you touch the current canonical frontier, run
   [`scripts/canonical_regression_gate.py`](/Users/jonreilly/Projects/Physics/scripts/canonical_regression_gate.py)
   before promoting the result.
+- The current gate covers the retained mirror, lattice, structured-bridge, and bounded NN frontier scripts.
 - If a claim exists only in commit text or chat narrative, treat it as **unretained**.
 - Treat many `*_test.py` files as **experiment drivers**, not assertion-based regression tests.
 - Treat some NN-side `k=0 = 0` results as **sanity checks**, not independent evidence.

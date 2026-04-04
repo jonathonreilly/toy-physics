@@ -124,6 +124,77 @@ def check_structured_bridge() -> None:
             "structured bridge retained N=60 row changed materially")
 
 
+def check_mirror_2d_validation() -> None:
+    out = run_script("scripts/mirror_2d_validation.py")
+    require("seeds=8" in out, "mirror 2D validation default seed count drifted from the retained artifact")
+    born = extract_float(r"Born audit: max \|I3\|/P = ([0-9.eE+-]+)", out, "mirror 2D Born")
+    require(born < 1e-10, f"mirror 2D Born drifted: {born}")
+    require(
+        re.search(
+            r"^\s*60\s+0\.756118\s+0\.4420\s+0\.8572\s+\+2\.5687\s+1\.08e-15\s+\+0\.00e\+00\s+8$",
+            out,
+            re.MULTILINE,
+        )
+        is not None,
+        "mirror 2D retained N=60 row changed materially",
+    )
+    require(
+        re.search(
+            r"^\s*60\s+0\.050745\s+0\.0596\s+0\.1090\s+\+0\.7867\s+4\.16e-15\s+\+0\.00e\+00\s+8$",
+            out,
+            re.MULTILINE,
+        )
+        is not None,
+        "mirror 2D random baseline N=60 row changed materially",
+    )
+
+
+def check_mirror_mutual_information() -> None:
+    out = run_script("scripts/mirror_mutual_information_chokepoint.py")
+    require("npl_half=60 (total 120)" in out, "mirror MI geometry header changed")
+    require(
+        re.search(
+            r"^\s*mirror\s+60\s+0\.1973±0\.041\s+0\.3855\s+0\.8440±0\.03",
+            out,
+            re.MULTILINE,
+        )
+        is not None,
+        "mirror MI retained N=60 row changed materially",
+    )
+    require(
+        re.search(
+            r"^\s*random\s+80\s+0\.0564±0\.018\s+0\.1871\s+0\.9509±0\.02",
+            out,
+            re.MULTILINE,
+        )
+        is not None,
+        "mirror MI retained random N=80 row changed materially",
+    )
+    require(
+        "Note: if these exponents disagree across N windows, treat them as bounded summaries, not laws." in out,
+        "mirror MI bounded-summary guardrail changed",
+    )
+
+
+def check_mirror_chokepoint_baseline() -> None:
+    out = run_script("scripts/mirror_chokepoint_joint.py")
+    require("NPL_HALF=25 (total 50), k=5.0, 16 seeds" in out, "mirror chokepoint baseline header changed")
+    require(
+        re.search(
+            r"^\s*25\s+mirror p2=0\s+0\.8014\s+0\.7329±0\.05\s+0\.9986\s+\+2\.2748±0\.525\s+6\.54e-16\s+\+0\.00e\+00\s+13",
+            out,
+            re.MULTILINE,
+        )
+        is not None,
+        "mirror chokepoint retained N=25 row changed materially",
+    )
+    require(
+        re.search(r"^\s*60\s+mirror p2=0\s+FAIL", out, re.MULTILINE) is not None,
+        "mirror chokepoint strict N=60 fail row changed",
+    )
+    require("VALIDATION CRITERIA:" in out, "mirror chokepoint validation footer missing")
+
+
 def check_nn_continuum() -> None:
     out = run_script("scripts/lattice_nn_continuum.py")
     require(
@@ -159,6 +230,9 @@ def check_nn_deterministic_rescale() -> None:
 
 def main() -> None:
     checks = [
+        ("mirror 2D validation", check_mirror_2d_validation),
+        ("mirror MI chokepoint", check_mirror_mutual_information),
+        ("mirror chokepoint baseline", check_mirror_chokepoint_baseline),
         ("dense 3D canonical card", check_dense_3d_card),
         ("dense 3D window extension", check_dense_3d_extension),
         ("dense 3D refinement reconciliation", check_dense_3d_reconciliation),

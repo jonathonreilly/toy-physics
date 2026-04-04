@@ -359,7 +359,7 @@ def main():
     parser.add_argument("--npl-half", type=int, default=12)
     parser.add_argument("--yr", type=float, default=10.0)
     parser.add_argument("--connect-radius", type=float, default=2.5)
-    parser.add_argument("--n-seeds", type=int, default=16)
+    parser.add_argument("--n-seeds", type=int, default=8)
     parser.add_argument("--k-band", nargs="+", type=float, default=DEFAULT_K_BAND)
     parser.add_argument("--m-values", nargs="+", type=int, default=[1, 2, 3, 5, 8, 12, 16])
     parser.add_argument("--distance-thresholds", nargs="+", type=float, default=[1.0, 2.0, 3.0, 4.0, 5.0, 6.0])
