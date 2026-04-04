@@ -66,6 +66,14 @@ So the safe 3D read is now:
 - **retains a real attractive window on the current tested card**
 - **not yet a clean all-distances attraction theorem either**
 
+Important correction:
+
+- the corrected `h = 1.0` vs `h = 0.5` refinement comparison does **not**
+  preserve the older positive-refinement narrative
+- the attractive 3D dense card is real at the retained reference point, but it
+  is **not** a refinement theorem
+- the new reconciliation note freezes that failure explicitly
+
 ## The mechanism
 
 At ultra-weak field, the phase perturbation per edge is tiny.

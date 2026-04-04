@@ -25,6 +25,9 @@ before the current bridges are tightened.
    - The current canonical extension reaches `z = 6`; future passes should
      only try to push beyond that window or strengthen MI / decoherence
      without changing the action law.
+   - The corrected `h = 1.0` vs `h = 0.5` refinement reconciliation is now a
+     closed negative: do not treat the older positive-refinement narrative as
+     open.
    - A separate y-tapered 3D refinement branch has now been tested and does
      not recover hierarchy-clean attraction at `h = 1.0` or `h = 0.5`; keep
      it separate from the dense-card extension unless a new topology is

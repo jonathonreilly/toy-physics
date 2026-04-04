@@ -24,6 +24,7 @@ history or commit-message narrative.
   - standard-strength same-family two-harness bridge
   - narrow weak-field one-card pocket
   - retained 3D dense spent-delay branch with hierarchy-clean attraction on the tested `z = 2..6` window
+  - corrected `h = 1.0` vs `h = 0.5` refinement reconciliation fails: the older positive-refinement narrative does not survive physical re-mapping
   - clean distance-law magnitude on the no-barrier branch
   - a separate y-tapered 3D refinement branch was tested and remains a bounded negative on attraction at `h = 1.0` and `h = 0.5`
 - **Nearest-neighbor refinement is a bounded refinement bridge.**

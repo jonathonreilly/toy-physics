@@ -1,0 +1,46 @@
+================================================================================================
+3D DENSE SPENT-DELAY REFINEMENT RECONCILIATION
+Corrected physical mass-position mapping, same gravity-observable hierarchy,
+same physical connectivity range, honest distance companion.
+================================================================================================
+
+================================================================================================
+h = 1.0  span = 3  edges/node = 49
+Physical mapping: mass_z and slit coordinates mapped by round(coord / h)
+Barrier card at mass_z = 6.0
+  Born=4.95e-16  k=0=0.000000  MI=0.024  d_TV=0.152  decoh=2.9%
+  centroid=-0.016759  P_near=+0.000533  bias=-0.534936  read=MIXED
+Distance companion (no barrier, same family):
+  z_mass   centroid     P_near      bias        read
+    2.0  +0.005373  +0.001632  +0.206112  ATTRACTIVE
+    3.0  +0.004477  +0.000639  +0.361037  ATTRACTIVE
+    4.0  +0.003496  +0.000890  +0.283678  ATTRACTIVE
+    5.0  +0.002518  +0.000902  +0.169160  ATTRACTIVE
+    6.0  +0.001889  +0.000614  +0.096930  ATTRACTIVE
+  fit: b^(-0.94), R²=0.934
+
+================================================================================================
+h = 0.5  span = 6  edges/node = 169
+Physical mapping: mass_z and slit coordinates mapped by round(coord / h)
+Barrier card at mass_z = 6.0
+  Born=2.54e-15  k=0=0.000000  MI=0.040  d_TV=0.485  decoh=48.0%
+  centroid=+0.020256  P_near=-0.002062  bias=+0.042266  read=MIXED
+Distance companion (no barrier, same family):
+  z_mass   centroid     P_near      bias        read
+    2.0  -0.004604  +0.000133  -0.016744  MIXED
+    3.0  -0.018779  +0.000339  -0.044330  MIXED
+    4.0  -0.014114  +0.000531  -0.041016  MIXED
+    5.0  -0.013786  -0.001062  -0.054028  AWAY
+    6.0  -0.014883  -0.000232  -0.063999  AWAY
+  fit: n/a (insufficient positive hierarchy-aligned rows)
+
+================================================================================================
+Reconciliation verdict
+  h=1.0: barrier read=MIXED, distance fit=b^(-0.94), R²=0.934, attractive distance rows=5/5
+  h=0.5: barrier read=MIXED, distance fit=n/a, attractive distance rows=0/5
+
+Verdict: FAILS.
+  The older h=0.5 positive-refinement narrative does not survive the corrected comparison.
+  The barrier hierarchy is mixed/weak and the no-barrier distance companion is not a clean
+  positive refinement continuation on the corrected physical mapping.
+================================================================================================

@@ -124,10 +124,13 @@ If you only want the current high-level state, read this section first.
   one-card pocket, the 3D dense spent-delay branch now adds a bounded
   same-family attractive window that is hierarchy-clean on the retained tested
   `z = 2..6` slice, and the no-barrier branch retains the cleanest current
-  distance-law magnitude. A separate y-tapered 3D refinement branch was tested
-  and did not recover hierarchy-clean attraction under `h = 1.0` or `h = 0.5`,
-  so it stays a bounded negative topology branch. The ordered-lattice family
-  is real, but it does not displace the mirror flagship.
+  distance-law magnitude. The corrected `h = 1.0` vs `h = 0.5` refinement
+  reconciliation is now explicitly negative: the older positive-refinement
+  narrative does not survive physical re-mapping. A separate y-tapered 3D
+  refinement branch was tested and did not recover hierarchy-clean attraction
+  under `h = 1.0` or `h = 0.5`, so it stays a bounded negative topology
+  branch. The ordered-lattice family is real, but it does not displace the
+  mirror flagship.
 - **Nearest-neighbor refinement:** strongest current continuum-side bridge.
   Raw NN is Born-clean through `h = 0.25`, deterministic rescale extends a
   bounded path to `h = 0.0625`, and the canonical notes keep continuum / RG
@@ -166,6 +169,7 @@ The most relevant notes for that current architecture state are:
 - [UNIFIED_PROGRAM_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIFIED_PROGRAM_NOTE.md)
 - [GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md](/Users/jonreilly/Projects/Physics/docs/GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md)
 - [LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md](/Users/jonreilly/Projects/Physics/docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md)
+- [LATTICE_3D_DENSE_REFINEMENT_RECONCILIATION_NOTE.md](/Users/jonreilly/Projects/Physics/docs/LATTICE_3D_DENSE_REFINEMENT_RECONCILIATION_NOTE.md)
 - [LATTICE_DISTANCE_LAW_NOTE.md](/Users/jonreilly/Projects/Physics/docs/LATTICE_DISTANCE_LAW_NOTE.md)
 - [LATTICE_FAMILY_VALIDATION_NOTE.md](/Users/jonreilly/Projects/Physics/docs/LATTICE_FAMILY_VALIDATION_NOTE.md)
 - [SYNTHESIS_NOTE.md](/Users/jonreilly/Projects/Physics/docs/SYNTHESIS_NOTE.md)

@@ -277,6 +277,18 @@ So the honest retained read is:
 - **it is still safer to describe as a bounded attractive window than as a
   fully solved 3D theorem**
 
+The refinement reconciliation tightens that read further:
+
+- the older `h = 0.5` positive-refinement narrative does **not** survive once
+  physical positions and slit coordinates are mapped correctly
+- `h = 1.0` remains the retained dense 3D reference point
+- `h = 0.5` becomes mixed on the barrier card and loses the
+  hierarchy-aligned positive distance companion
+
+Primary artifact for that correction:
+
+- [`docs/LATTICE_3D_DENSE_REFINEMENT_RECONCILIATION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_3D_DENSE_REFINEMENT_RECONCILIATION_NOTE.md)
+
 Primary artifact:
 
 - [`docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md)
