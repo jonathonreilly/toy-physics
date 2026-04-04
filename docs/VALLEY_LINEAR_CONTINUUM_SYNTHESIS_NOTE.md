@@ -48,6 +48,7 @@ The retained lattice evidence comes from the already-frozen artifact chains:
 
 - [VALLEY_LINEAR_ACTION_NOTE.md](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_ACTION_NOTE.md)
 - [VALLEY_LINEAR_ROBUSTNESS_NOTE.md](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_ROBUSTNESS_NOTE.md)
+- [VALLEY_LINEAR_ASYMPTOTIC_BRIDGE_NOTE.md](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_ASYMPTOTIC_BRIDGE_NOTE.md)
 - [DIMENSIONAL_GRAVITY_TABLE.md](/Users/jonreilly/Projects/Physics/docs/DIMENSIONAL_GRAVITY_TABLE.md)
 - [DECOHERENCE_ACTION_INDEPENDENCE_NOTE.md](/Users/jonreilly/Projects/Physics/docs/DECOHERENCE_ACTION_INDEPENDENCE_NOTE.md)
 
@@ -63,7 +64,8 @@ The strongest retained reads are:
 The safe interpretation is:
 
 - valley-linear is a real bounded action fork on the ordered-lattice family
-- the best retained 3D distance-law read is close to `1/b`
+- the best retained 3D distance-law read is now a near-Newtonian finite-
+  lattice replay with slice-dependent tail fits
 - the action does not alter the decoherence observables on the tested zero-field
   family
 
@@ -73,6 +75,9 @@ The main open questions are still:
 
 - the 4D tail law, because the current 4D lattice is still too narrow for a
   clean far-tail fit
+- the 3D asymptotic bridge, because the finite-lattice tail is now close to
+  Newtonian but still slice-dependent enough that it should not be promoted as
+  an exact universal `-1.00`
 - the transfer-norm / marginality story, because the kernel-selection claims
   are still being reconciled against frozen scripts and notes
 - Gate B, because the generated-geometry signal is real but the imposed
@@ -87,7 +92,8 @@ The most honest summary is:
 
 - the valley-linear action has a clean continuum distance-law derivation
 - the ordered 3D lattice retains the matching near-Newtonian behavior at the
-  frozen `h = 0.25` resolution
+  frozen `h = 0.25` resolution, and the new asymptotic bridge note shows the
+  finite-size correction is still slice-dependent
 - decoherence is action-independent on the tested 3D `1/L^2` family
 - robustness is good on the tested ordered-lattice slices
 - the 4D and Gate B questions remain open

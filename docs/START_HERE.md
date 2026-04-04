@@ -52,6 +52,11 @@ Do not force a trade where only one of those moves.
   - gravity magnitude is much smaller on the tested `z=3` slice
   - a widened `W = 12` replay now gives a stronger 3D far-tail read:
     `b^(-1.17)` on the tested `z >= 5` window, with all tested rows TOWARD
+  - the new asymptotic bridge replay shows that the far-tail is still
+    slice-dependent: the retained `h = 0.25` slices move closer to
+    Newtonian-like behavior, but the coarse anchor remains steeper and the
+    wider replay shifts again, so the safe read is near-Newtonian finite-
+    lattice replay rather than an exact universal `-1.00`
   - the new dimensional gravity card script is a useful roll-up driver for
     this lane, but the promoted 3D numbers should still be read from the
     frozen comparison / robustness / wide-tail notes rather than from the
@@ -109,6 +114,7 @@ Do not force a trade where only one of those moves.
 - [`docs/VALLEY_LINEAR_MIRROR_TRANSFER_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_MIRROR_TRANSFER_NOTE.md)
 - [`docs/VALLEY_LINEAR_CONTINUUM_SYNTHESIS_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_CONTINUUM_SYNTHESIS_NOTE.md)
 - [`docs/VALLEY_LINEAR_WIDE_TAIL_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_WIDE_TAIL_NOTE.md)
+- [`docs/VALLEY_LINEAR_ASYMPTOTIC_BRIDGE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_ASYMPTOTIC_BRIDGE_NOTE.md)
 - [`docs/ACTION_ARCHITECTURE_MATRIX_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_ARCHITECTURE_MATRIX_NOTE.md)
 - [`docs/EVOLVING_NETWORK_PROTOTYPE_V3_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/EVOLVING_NETWORK_PROTOTYPE_V3_NOTE.md)
 - [`docs/EVOLVING_NETWORK_PROTOTYPE_V4_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/EVOLVING_NETWORK_PROTOTYPE_V4_NOTE.md)

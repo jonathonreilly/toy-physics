@@ -169,6 +169,9 @@ interest map rather than just broaden the science search.
    - A widened `W = 12` tail replay is now also frozen; it strengthens the
      3D distance-law read but should still be described as a finite-lattice
      replay rather than a universal theorem.
+   - The new asymptotic bridge replay is now frozen too; it shows the far tail
+     is still slice-dependent, even though the retained `h = 0.25` rows move
+     closer to Newtonian-like behavior.
    - Next deliverables:
      - one bounded note if the new dimensional-field prescription is retained
      - one explicit refinement/4D tail artifact chain before any broader
