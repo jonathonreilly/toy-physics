@@ -54,3 +54,25 @@ linear in the field — which is the simplest possible coupling.
 
 The spent-delay (sqrt) and quadratic actions are in DIFFERENT
 universality classes, giving different mass scaling laws.
+
+## Complete scaling law (expanded sweep)
+
+Sweep across S = L(1-f^p) at h=0.5, W=10, 3D 1/L^2:
+
+| p | F∝M | Distance tail | -(2p-1) predicted |
+|---|-----|---------------|-------------------|
+| 0.50 | 0.50 | -0.82 | 0 (mismatch) |
+| 0.75 | 0.75 | -0.83 | -0.5 (mismatch) |
+| 1.00 | **1.00** | **-1.08** | **-1** ✓ |
+| 1.50 | 1.50 | -2.06 | -2 ✓ |
+| 2.00 | 2.00 | -3.00 | -3 ✓ |
+
+**F∝M = p exactly** across all tested powers.
+
+For p ≥ 1: **distance tail ≈ -(2p-1)**, matching at p=1, 1.5, 2.
+For p < 1: tail is shallower than -(2p-1) — the f^p singularity
+at small f creates a different regime.
+
+This is the model's strongest theoretical result: given the power p
+of f in the action, BOTH scaling laws (mass and distance) are
+determined. Newtonian gravity is the p=1 case.
