@@ -11,8 +11,9 @@
 - checked the cooperative lock, found it free, acquired `physics-science`, and confirmed there is no active detached science child to resume or monitor
 - read `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` in protocol order
 - reconciled canonical git before new work:
-  - `main` and `origin/main` were both at `7792deb` (`docs(review): harden literature and discriminator scope`)
-  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - the first synced snapshot seen in this loop was `7792deb` (`docs(review): harden literature and discriminator scope`)
+  - before the science commit finalized, newer synced ancestors landed and the final settled synced parent became `2a381f2` (`docs(interest): update adversarial map for frozen valley-linear lanes`)
+  - the intervening synced chain also landed `66cb1aa`, `5586631`, and `056aaa4` in the action / valley-linear / reproduction lanes
 - reread the active directional-`b` seam artifacts:
   - `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
   - `/Users/jonreilly/Projects/Physics/logs/2026-04-03-directional-b-continuous-density-midlayer-holdout.txt`
@@ -28,6 +29,7 @@
 ### Current state
 - no detached science child is running
 - the latest bounded result is a directional-`b` stencil-transfer artifact chain that keeps the occupancy-first bridge fixed while reclassifying the continuous miss mode as a fourth-neighbor stencil problem
+- that science result now sits on top of the synced `2a381f2` parent rather than the earlier `7792deb` snapshot first seen in this loop
 - commit / push state should still be rechecked from canonical git at loop start per protocol
 - this loop did not start fresh continuum or decoherence architecture work
 

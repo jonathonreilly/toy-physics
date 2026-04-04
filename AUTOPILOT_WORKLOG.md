@@ -3,10 +3,11 @@
 ### Current state
 - duplicate-run guard and cooperative `physics-science` lock both passed:
   - no detached science child was running
-- the canonical repo started this loop synced at `7792deb` (`docs(review): harden literature and discriminator scope`)
-  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+- the canonical repo first appeared synced at `7792deb` (`docs(review): harden literature and discriminator scope`), but newer synced ancestors landed before this directional-`b` result was finalized:
+  - the final settled synced parent for this loop's science commit is `2a381f2` (`docs(interest): update adversarial map for frozen valley-linear lanes`)
+  - the intervening synced chain also landed `66cb1aa`, `5586631`, and `056aaa4` in the action / valley-linear / reproduction lanes
 - the tracked coordination state had drifted behind the real synced head again:
-  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` still described the older `8617cda` reproduction-audit head rather than the current `7792deb` review / bridge chain
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` still described the older `8617cda` reproduction-audit head rather than the current `2a381f2` review / action / valley-linear chain
 - this loop stayed on one bounded non-overlapping science step on the fixed directional-measure gravity-`b` seam
   - no fresh decoherence or wider continuum architecture search was started
 
@@ -18,6 +19,12 @@
   - `/Users/jonreilly/Projects/Physics/logs/2026-04-01-directional-b-h-over-b-crossover-card.txt`
   - `/Users/jonreilly/Projects/Physics/logs/2026-04-01-directional-b-overlap-onset-midlayer-sampling-holdout.txt`
   - `/Users/jonreilly/Projects/Physics/logs/physics_progress_summary.md`
+- rechecked the final synced ancestor chain before ending the loop:
+  - `66cb1aa` adds frozen sweep harnesses in the action / valley-linear lanes
+  - `5586631` lands the action regularity crossover replay
+  - `056aaa4` freezes the valley-linear robustness sweep artifact chain
+  - `2a381f2` updates `/Users/jonreilly/Projects/Physics/docs/ADVERSARIAL_INTEREST_MAP.md`
+  - those landed changes stayed off the directional-`b` files touched in this loop
 - added `/Users/jonreilly/Projects/Physics/scripts/directional_b_density_stencil_transfer.py`
 - generated `/Users/jonreilly/Projects/Physics/logs/2026-04-04-directional-b-density-stencil-transfer.txt`
 - added `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_DENSITY_STENCIL_NOTE.md`
