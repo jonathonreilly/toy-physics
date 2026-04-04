@@ -1,0 +1,36 @@
+========================================================================================
+ORDERED-LATTICE QUASI-PERSISTENT RELAUNCH PROBE
+  Goal: relaunch a localized packet surrogate and see whether it carries
+  through a second propagation stage on the retained ordered family.
+  h=0.5, W=8, L=12, z_mass=3.0, strength=5e-05
+========================================================================================
+
+CASE: point
+  free centroid z = -0.0000
+  free spread    = 2.7599
+  support for 90% = 20 z-bins
+  top-5 capture fraction = 0.376
+  stage-1 carry overlap = 0.6131
+  field-induced centroid shift = +0.000144
+  relaunch carry overlap = 0.9516
+  relaunch field shift   = +0.000024
+  runtime = 0.8s
+
+CASE: compact5
+  free centroid z = +0.0000
+  free spread    = 2.2539
+  support for 90% = 16 z-bins
+  top-5 capture fraction = 0.462
+  stage-1 carry overlap = 0.6797
+  field-induced centroid shift = +0.000083
+  relaunch carry overlap = 0.9839
+  relaunch field shift   = +0.000025
+  runtime = 0.8s
+
+SAFE READ
+  - If the compact packet re-identifies cleanly and the relaunch overlap stays
+    high, that is a quasi-persistent surrogate on the ordered lattice.
+  - If the relaunch overlap collapses or the packet re-identifies poorly,
+    the ordered-lattice family still does not support a persistent inertial object.
+
+Total runtime: 1.6s

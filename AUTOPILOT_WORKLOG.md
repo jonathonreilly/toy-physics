@@ -1,3 +1,52 @@
+## 2026-04-04 — Ordered-lattice 2D relaunch companion frozen
+
+### Current state
+- the relaunch idea survives as a weak cross-family companion on the retained
+  2D ordered lattice
+- this does not displace the stronger retained 3D relaunch control
+
+### What changed
+- added `/Users/jonreilly/Projects/Physics/scripts/ordered_lattice_quasi_persistent_relaunch_2d.py`
+- generated `/Users/jonreilly/Projects/Physics/logs/2026-04-04-ordered-lattice-quasi-persistent-relaunch-2d.txt`
+- added `/Users/jonreilly/Projects/Physics/docs/ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_2D_NOTE.md`
+
+### Strongest confirmed conclusion
+- the 2D surrogate stays recognizable enough to relaunch, but the capture
+  fraction is much weaker (`0.344`) than the retained 3D relaunch lane
+- that makes it a companion sanity check, not a primary inertial-response lane
+
+### Exact next step
+- keep the 3D quasi-persistent relaunch as the main bounded lane
+- use the 2D companion only as a cross-family sanity check while deciding
+  whether to build a true inertial-response experiment
+
+## 2026-04-04 — Ordered-lattice packet relaunch control frozen
+
+### Current state
+- the retained ordered-lattice family now has a quasi-persistent relaunch
+  control in addition to the packet re-identification control
+- a compact surrogate can be relaunched and stays highly recognizable, which
+  makes a quasi-persistent object plausible on the retained family
+
+### What changed
+- added `/Users/jonreilly/Projects/Physics/scripts/ordered_lattice_quasi_persistent_relaunch.py`
+- generated `/Users/jonreilly/Projects/Physics/logs/2026-04-04-ordered-lattice-quasi-persistent-relaunch.txt`
+- added `/Users/jonreilly/Projects/Physics/docs/ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_NOTE.md`
+
+### Strongest confirmed conclusion
+- the relaunch surrogate is highly recognizable:
+  - `point` relaunch carry overlap: `0.9516`
+  - `compact5` relaunch carry overlap: `0.9839`
+- that is strong enough to make a future inertial-response probe plausible
+- it is still **not** a persistent-pattern inertia theorem
+
+### Exact next step
+- combine the packet re-identification and relaunch controls into the smallest
+  viable inertial-response probe on the retained family
+- if that cannot be done without changing the family too much, keep the
+  readiness note negative and stop promising a closure that the codebase does
+  not support
+
 ## 2026-04-04 — Janitor reconciled the synced second-family additivity head
 
 ### Current state

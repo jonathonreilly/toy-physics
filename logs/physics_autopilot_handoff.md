@@ -37,6 +37,63 @@
 - if it cannot be built without changing the family too much, keep the
   readiness note negative and stop promoting the lane
 
+## 2026-04-04 23:00 America/New_York
+
+### Seam class
+- 2D cross-family relaunch companion
+- next non-Gate-B seam is still the smallest viable persistent-pattern /
+  inertial-response probe
+
+### What this loop did
+- built and ran `/Users/jonreilly/Projects/Physics/scripts/ordered_lattice_quasi_persistent_relaunch_2d.py`
+- captured `/Users/jonreilly/Projects/Physics/logs/2026-04-04-ordered-lattice-quasi-persistent-relaunch-2d.txt`
+- added `/Users/jonreilly/Projects/Physics/docs/ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_2D_NOTE.md`
+
+### Current state
+- the 2D surrogate remains recognizable enough to relaunch, but capture is
+  much weaker (`0.344`) than the retained 3D relaunch lane
+- that keeps the 2D result as a companion sanity check rather than a primary
+  inertial-response lane
+
+### Strongest confirmed conclusion
+- the surrogate idea is not accidentally 3D-only
+- the retained 3D relaunch control is still the stronger path
+
+### Exact next step
+- keep the 3D relaunch lane as the main bounded control
+- use the 2D companion only to sanity-check family-generic behavior
+
+## 2026-04-04 22:55 America/New_York
+
+### Seam class
+- bounded relaunch-control follow-on on the retained ordered-lattice family
+- next non-Gate-B seam is the smallest viable persistent-pattern /
+  inertial-response probe
+
+### What this loop did
+- built and ran `/Users/jonreilly/Projects/Physics/scripts/ordered_lattice_quasi_persistent_relaunch.py`
+- captured `/Users/jonreilly/Projects/Physics/logs/2026-04-04-ordered-lattice-quasi-persistent-relaunch.txt`
+- added `/Users/jonreilly/Projects/Physics/docs/ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_NOTE.md`
+
+### Current state
+- the relaunch surrogate remains highly recognizable:
+  - `point` relaunch carry overlap: `0.9516`
+  - `compact5` relaunch carry overlap: `0.9839`
+- that makes a future inertial-response probe plausible on the retained
+  ordered family
+- but the codebase still does not have a persistent-pattern inertial-mass
+  experiment itself
+
+### Strongest confirmed conclusion
+- packet re-identification is now a useful precondition
+- quasi-persistent relaunch is now a stronger precondition
+- persistent-pattern inertia remains open
+
+### Exact next step
+- combine packet re-identification and relaunch into the smallest viable
+  inertial-response probe
+- if that fails, keep the readiness note negative and stop promoting the lane
+
 ## 2026-04-04 19:43 America/New_York
 
 ### Seam class

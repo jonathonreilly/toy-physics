@@ -64,6 +64,15 @@ Do not force a trade where only one of those moves.
   - a readiness audit now makes the next gap explicit:
     the codebase still lacks a retained persistent or quasi-persistent
     inertial-response experiment on the ordered-lattice family
+  - a localized packet re-identification control now exists on that family,
+    but it only shows that packets remain recognizable; it does not yet close
+    persistent-pattern inertia
+  - a quasi-persistent relaunch control now exists too, and it makes the
+    packet-surrogate case more plausible, but it still falls short of a true
+    inertial-mass theorem
+  - a 2D cross-family sanity control now says the surrogate idea is not a
+    one-off 3D artifact, but it still remains a bounded control rather than a
+    persistent-mass result
   - a bounded same-family closure note is now artifact-backed:
     rows `1-7` stay on the fixed `h = 0.25`, `W = 10`, `L = 12` core family,
     rows `8-9` are replayed at the same `h = 0.25`, `W = 10` family across
@@ -145,6 +154,8 @@ Do not force a trade where only one of those moves.
 - [`docs/NEWTON_DERIVATION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/NEWTON_DERIVATION_NOTE.md)
 - [`docs/PERSISTENT_INERTIAL_RESPONSE_READINESS_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/PERSISTENT_INERTIAL_RESPONSE_READINESS_NOTE.md)
 - [`docs/PERSISTENT_INERTIAL_RESPONSE_READINESS_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/PERSISTENT_INERTIAL_RESPONSE_READINESS_NOTE.md)
+- [`docs/ORDERED_LATTICE_PACKET_REIDENTIFICATION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ORDERED_LATTICE_PACKET_REIDENTIFICATION_NOTE.md)
+- [`docs/ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_NOTE.md)
 - [`docs/SAME_FAMILY_3D_CLOSURE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/SAME_FAMILY_3D_CLOSURE_NOTE.md)
 - [`docs/VALLEY_LINEAR_MIRROR_TRANSFER_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_MIRROR_TRANSFER_NOTE.md)
 - [`docs/VALLEY_LINEAR_CONTINUUM_SYNTHESIS_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_CONTINUUM_SYNTHESIS_NOTE.md)

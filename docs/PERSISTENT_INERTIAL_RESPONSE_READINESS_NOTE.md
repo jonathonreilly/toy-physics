@@ -1,7 +1,7 @@
 # Persistent Inertial-Response Readiness Note
 
 **Date:** 2026-04-04  
-**Status:** bounded readiness audit; no real persistent-pattern probe retained yet
+**Status:** bounded readiness audit; packet re-identification control now exists, and a quasi-persistent relaunch probe is now retained, but no persistent-mass theorem yet
 
 ## Purpose
 
@@ -27,6 +27,36 @@ The nearest reusable pieces are:
   - older packet-motion machinery on a different rectangular/DAG lane
 - [`scripts/gravity_pulsating_source.py`](/Users/jonreilly/Projects/Physics/scripts/gravity_pulsating_source.py)
   - older persistent-source exploration on a different rule-driven lane
+- [`scripts/ordered_lattice_packet_reidentification.py`](/Users/jonreilly/Projects/Physics/scripts/ordered_lattice_packet_reidentification.py)
+  - localized packet re-identification control on the retained 3D ordered-
+    lattice family
+  - frozen log:
+    [`logs/2026-04-04-ordered-lattice-packet-reidentification.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-04-ordered-lattice-packet-reidentification.txt)
+  - result: the packet is easy to re-identify under weak fields on the tested
+    family, with best-shift scores at `1.000` and width ratios staying near
+    `1.000` for `valley-linear`; `spent-delay` broadens slightly but still
+    remains re-identifiable on this bounded control
+- [`scripts/ordered_lattice_quasi_persistent_relaunch.py`](/Users/jonreilly/Projects/Physics/scripts/ordered_lattice_quasi_persistent_relaunch.py)
+  - minimal ordered-lattice packet carry-through / relaunch probe on the same
+    retained valley-linear family
+  - frozen log:
+    [`logs/2026-04-04-ordered-lattice-quasi-persistent-relaunch.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-04-ordered-lattice-quasi-persistent-relaunch.txt)
+  - result: compact packets can be re-identified and relaunched with high
+    overlap (`0.9516` and `0.9839` on the frozen rows), but this is still a
+    surrogate rather than a persistent-mass theorem
+- [`scripts/ordered_lattice_quasi_persistent_relaunch_2d.py`](/Users/jonreilly/Projects/Physics/scripts/ordered_lattice_quasi_persistent_relaunch_2d.py)
+  - 2D cross-family sanity check for the same surrogate idea
+  - frozen log:
+    [`logs/2026-04-04-ordered-lattice-quasi-persistent-relaunch-2d.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-04-ordered-lattice-quasi-persistent-relaunch-2d.txt)
+  - result: the surrogate idea is family-generic enough to remain useful, but
+    still only as a bounded control
+- [`scripts/ordered_lattice_quasi_persistent_relaunch_2d.py`](/Users/jonreilly/Projects/Physics/scripts/ordered_lattice_quasi_persistent_relaunch_2d.py)
+  - cheapest cross-family companion control for the relaunch idea
+  - frozen log:
+    [`logs/2026-04-04-ordered-lattice-quasi-persistent-relaunch-2d.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-04-ordered-lattice-quasi-persistent-relaunch-2d.txt)
+  - result: the surrogate remains recognizable on the 2D family too, but the
+    capture fraction is much weaker (`0.344`), so this stays a companion
+    sanity check rather than a primary inertial-response lane
 
 ## Minimal blocker
 
@@ -55,6 +85,28 @@ But it is **not** strong enough to say:
 - persistent-pattern inertial mass has been produced or measured
 
 So the one-parameter-mass step remains open.
+
+The new packet re-identification control narrows the blocker slightly:
+
+- localized packets on the retained ordered family do stay recognizable after
+  propagation
+  - that makes a future inertial-response experiment plausible
+  - but the control does **not** by itself produce a persistent pattern with a
+    separately measurable inertial mass
+
+The relaunch probe narrows the blocker further:
+
+- the quasi-persistent surrogate survives re-identification well enough to be
+  relaunched
+- the relaunch overlap is high enough to be interesting
+- but we still do not have a self-maintaining object that carries its own
+  inertial mass in the model
+
+The 2D control suggests this is not a one-off 3D artifact:
+
+- the compressed surrogate survives on a second ordered-lattice family too
+- that makes the control more credible
+- but it still stops short of a persistent-mass experiment
 
 ## Best next experiment
 
