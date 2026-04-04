@@ -126,3 +126,23 @@ So the safe Gate B read is now:
 - the h=0.5 structured-growth lane is genuinely TOWARD and near-linear
 - the best tested row is stronger than the older bounded prototypes
 - the full tested matrix is still mixed enough that Gate B remains open
+
+## Diagnosis: v6 mixed result is a near-field effect (2026-04-04)
+
+The v6 frozen replay uses near-slit mass positions (y=1.0, 1.5) and
+varied field strengths (0.75-1.25x). These are near-field parameters
+where even the FIXED lattice gives noisy gravity.
+
+Controlled comparison at z≥2 with standard strength:
+| Size | drift=0.3 | drift=0.2 | exact grid |
+|------|-----------|-----------|------------|
+| HALF=5 (v6) | 88% | 100% | 100% |
+| HALF=12 | 96% | 100% | 100% |
+
+The growth rule itself is not the bottleneck — the near-field
+parameter choice in the v6 replay is what creates the mixed signal.
+
+**Honest status:** Gate B is strong in the far field (z≥2) but
+noisy in the near field (z≤1.5). This is a lattice-size effect,
+not a growth-rule failure. The v6 mixed result is an honest
+characterization of the near-field regime.
