@@ -55,6 +55,8 @@ Do not force a trade where only one of those moves.
 - **Action-power Newtonian-3D claim:** interesting, bounded to a no-barrier companion, not yet a promoted core claim
 - **Tapered 3D refinement:** negative on the tested family; useful as a topology-control branch, not a rescue of the dense card
 - **3D `1/L^2` kernel branch:** active unretained propagator fork under validation; do not treat branch-history or chat narrative as canonical until a script/log/note chain lands
+  - if `h = 0.125` or an `h^2` measure factor is part of the claim, the
+    frozen on-disk script must include that exact code path
 
 ## Canonical docs
 

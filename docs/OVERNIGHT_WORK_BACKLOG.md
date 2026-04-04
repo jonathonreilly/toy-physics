@@ -126,6 +126,15 @@ interest map rather than just broaden the science search.
      - one explicit `h = 1.0 -> 0.5` comparison using the gravity hierarchy
      - one clear retained-vs-unretained decision on whether the branch merits
        top-level doc promotion
+     - if `h = 0.125` or an `h^(d-1)` measure factor is claimed, the frozen
+       on-disk script must actually include that code path; inline-only runs
+       do not count
+     - any continuum wording must separate:
+       - sign persistence under refinement
+       - distance-tail steepening
+       - finite-magnitude control under RG
+     - do not promote “convergent 3D gravity” unless the frozen artifact chain
+       shows both the retained kernel implementation and the retained RG rule
 
 5. **Action-power branch claim-surface cleanup**
    - Treat the action-power lane as a new branch with no inherited claims.

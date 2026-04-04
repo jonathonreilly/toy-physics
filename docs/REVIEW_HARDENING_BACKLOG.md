@@ -182,6 +182,16 @@ Why it matters:
 - this is what turns bounded toy successes into something reviewers can read as
   candidate effective physics rather than isolated numerics
 
+Current 3D `1/L^2` review-hardening bar:
+
+- treat it as a **propagator fork**, not a continuation of dense spent-delay
+- do not accept inline-only `h = 0.125` or measure-factor results; the frozen
+  script must match the claimed kernel
+- if the branch claims a continuum bridge, separate and audit:
+  - sign persistence under refinement
+  - tail-law steepening
+  - finite-magnitude control under an explicit retained RG rule
+
 ### Gate D. Stronger gravity-side law
 
 Goal:
