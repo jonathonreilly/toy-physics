@@ -19,7 +19,7 @@ Do not force a trade where only one of those moves.
 2. **Secondary branch:** ordered lattice
 3. **Frontier bridge:** nearest-neighbor refinement
 4. **Reopened bridge:** structured chokepoint placement
-5. **Axiom fork:** action-power branch
+5. **Action-law forks:** action-power and valley-linear
 
 ## What is retained
 
