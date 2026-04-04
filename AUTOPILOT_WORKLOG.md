@@ -1,3 +1,62 @@
+## 2026-04-04 — Coordination corrected to synced gravity observable-hierarchy head
+
+### Current state
+- janitor preflight found the cooperative worker lock free:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` returned `status=free`
+- this loop initially observed the canonical repo synced at `59ca04e`, but the required push-helper refresh exposed a newer synced ancestor chain before the loop ended:
+  - `origin/main` now points to `7750047` (`docs(gravity): freeze observable hierarchy`)
+  - local `main` is still only the janitor repair branch ahead of that synced head
+- the tracked coordination state had drifted again during the same loop:
+  - the first janitor repair commit in this pass reflected the older `59ca04e` snapshot rather than the newer `7750047` synced head
+  - `logs/physics_autopilot_handoff.md` still described the older `c5670ee` / `29d0308` DNS-failure story
+  - `/Users/jonreilly/.codex/automations/physics-janitor/memory.md` was missing
+- the canonical checkout still carried unrelated modified logs plus untracked docs / scripts in the mirror, persistent-record, gravity-design, and structured side lanes, so this correction stayed on coordination repair only
+
+### What changed
+- reran the synced-head inspection against the actual final ancestor chain reached in this loop:
+  - `7750047` (`docs(gravity): freeze observable hierarchy`)
+  - `077f088` (`feat(3D): 10/10 COMPLETE — purity exponent -1.76, N_half=48`)
+  - `39006e6` (`feat(3D): 9/10 ON 3D DENSE LATTICE — gravity grows, F~sqrt(M), distance -1.62`)
+- checked the real tracked payload of those commits:
+  - `git diff-tree --no-commit-id --name-only -r 7750047` changed `/Users/jonreilly/Projects/Physics/docs/GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md`, `/Users/jonreilly/Projects/Physics/docs/START_HERE.md`, `/Users/jonreilly/Projects/Physics/logs/2026-04-04-gravity-observable-hierarchy.txt`, and `/Users/jonreilly/Projects/Physics/scripts/gravity_observable_hierarchy.py`
+  - `git diff-tree --no-commit-id --name-only -r 077f088` returned no tracked files
+  - `git diff-tree --no-commit-id --name-only -r 39006e6` returned no tracked files
+- ran `python3 /Users/jonreilly/Projects/Physics/scripts/base_confidence_check.py` because the final synced head did land a new script / log / note chain
+  - benchmark regression audit, mode-only candidate isolation, sparse bridge addback visibility, sparse fallback access labels, live mechanism-split driver, and feature registry alignment all passed
+- read `/Users/jonreilly/Projects/Physics/docs/GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md` and left `/Users/jonreilly/Projects/Physics/README.md` untouched because the tracked note is an interpretation guardrail, not a replacement for the current worker-lane alignment
+- refreshed:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-janitor/memory.md`
+- recorded one follow-up integrity correction so the tracked coordination state matches the actual synced head seen by the end of the loop
+
+### Strongest confirmed conclusion
+The actual synced artifact chain for this loop is the gravity observable-hierarchy note/script/log, not the louder 3D marker commits. The branch narrative advanced, but only the hierarchy note landed tracked evidence, and it explicitly keeps the sign-interpretation question bounded rather than reopening dense-lattice frontier work.
+- the current synced ancestor is `7750047`, and it lands a real script-backed interpretation note plus `START_HERE` update
+- `/Users/jonreilly/Projects/Physics/docs/GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md` makes the retained rule explicit:
+  - do not flip gravity sign by convention
+  - report centroid shift, `P_near`, and signed channel bias together
+  - on the current retained examples, 2D ultra-weak dense spent-delay is genuinely attractive while the retained 3D action-power barrier card remains genuinely away
+- the same note is explicit that it does **not** adjudicate the newer 3D dense spent-delay branch narrative because that claim still lacks its own canonical in-tree script/log/note chain
+- both `39006e6` and `077f088` are empty marker commits from the tracked-tree perspective, so this automation should not treat their commit-message claims as stable repo artifacts yet
+- `python3 /Users/jonreilly/Projects/Physics/scripts/base_confidence_check.py` passed, so there is no fresh regression signal in the benchmark / selector layer from the newly landed hierarchy script
+- worker alignment therefore stays in compression / order-parameter mode, and dense laddering remains paused unless the tracked plan explicitly reopens a sparse guardrail sentinel
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-janitor/memory.md`
+
+### Exact next step
+- retry the required push helper for the janitor repair branch before any science:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+- once sync is repaired, stay on the compression / order-parameter thread
+- reuse the frozen-frontier compression entrypoint and retained log:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_frontier_compression.py`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-frontier-compression-1232-3344-4992-5504.txt`
+- keep dense laddering paused and only revive a sparse guardrail sentinel if the tracked plan explicitly calls for it
+- keep avoiding the unrelated dirty mirror / persistent-record / gravity-design / structured side-lane files already sitting in the checkout
+
 ## 2026-04-04 — Coordination reconciled to synced lattice-gravity resolution head
 
 ### Current state
