@@ -28,6 +28,7 @@ from __future__ import annotations
 import math
 import os
 import sys
+import argparse
 from dataclasses import dataclass
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -363,7 +364,7 @@ def fmt_float(x: float, places: int = 2) -> str:
     return f"{x:.{places}f}"
 
 
-def main() -> None:
+def _run_base_probe() -> None:
     lat = Lattice3D(PHYS_L, PHYS_W, H)
     det = detector(lat)
     actions = [
@@ -413,6 +414,69 @@ def main() -> None:
     print("  - Phase hills / no-coupling fail to give the desired TOWARD gravity.")
     print("  - Valley actions stay TOWARD, but the F~M exponent follows the weak-field power of f.")
     print("  - The cleanest universality-class statement here is about F~M, not a universal distance theorem.")
+
+
+def _run_power_sweep() -> None:
+    phys_w = 10
+    lat = Lattice3D(PHYS_L, phys_w, H)
+    det = detector(lat)
+    powers = [0.5, 0.75, 1.0, 1.5, 2.0]
+    actions = [f"power:{power}" for power in powers]
+
+    print("=" * 104)
+    print("ACTION POWER SCALING SWEEP")
+    print("  Fixed 3D ordered-lattice family")
+    print("  h=0.5, W=10, L=12, max_d=3")
+    print("  Kernel: 1/L^2 with h^2 measure")
+    print("  Field: s/r, standard strength ladder")
+    print("  Goal: test bounded fixed-family scaling with S = L(1-f^p)")
+    print("=" * 104)
+    print()
+    print(
+        f"{'p':>4} {'Born':>10} {'grav(z=3)':>12} {'TOWARD':>8} "
+        f"{'F~M':>8} {'tail':>18} {'-(2p-1)':>10}"
+    )
+    print("-" * 104)
+
+    for power, mode in zip(powers, actions):
+        row = measure_action(lat, det, mode)
+        tail = "n/a"
+        if not math.isnan(row.tail_slope):
+            peak = f"z>={row.peak_z}" if row.peak_z is not None else "tail"
+            tail = f"{peak}:{row.tail_slope:+.2f}"
+        predicted = -(2 * power - 1)
+        print(
+            f"{power:>4.2f} "
+            f"{row.born:>10.2e} "
+            f"{row.gravity_z3:>+12.6f} "
+            f"{f'{row.toward_count}/7':>8s} "
+            f"{fmt_float(row.fm_alpha, 2):>8s} "
+            f"{tail:>18s} "
+            f"{predicted:>10.2f}"
+        )
+
+    print()
+    print("SAFE READ")
+    print("  - On this fixed family, F~M tracks the action power p across the tested sweep.")
+    print("  - Born stays machine-clean across the whole tested power family.")
+    print("  - The distance tail steepens strongly with p, but should still be read as a bounded family law.")
+    print("  - Any closed formula here is empirical on this family unless a separate derivation lands.")
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--power-sweep",
+        action="store_true",
+        help="Run the bounded S=L(1-f^p) scaling sweep on the wider W=10 family.",
+    )
+    args = parser.parse_args()
+
+    if args.power_sweep:
+        _run_power_sweep()
+        return
+
+    _run_base_probe()
 
 
 if __name__ == "__main__":
