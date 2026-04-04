@@ -1,5 +1,102 @@
 # Physics Autopilot Handoff
 
+## 2026-04-04 22:40 America/New_York
+
+### Seam class
+- bounded packet re-identification control on the retained ordered-lattice
+  family
+- next non-Gate-B seam is the smallest viable persistent-pattern /
+  inertial-response probe
+
+### What this loop did
+- built and ran `/Users/jonreilly/Projects/Physics/scripts/ordered_lattice_packet_reidentification.py`
+- captured `/Users/jonreilly/Projects/Physics/logs/2026-04-04-ordered-lattice-packet-reidentification.txt`
+- updated `/Users/jonreilly/Projects/Physics/docs/ORDERED_LATTICE_PACKET_REIDENTIFICATION_NOTE.md`
+- updated `/Users/jonreilly/Projects/Physics/docs/PERSISTENT_INERTIAL_RESPONSE_READINESS_NOTE.md`
+- refreshed the canonical index and start-here surfaces so the packet control
+  now appears as a bounded companion harness
+
+### Current state
+- localized packets on the retained ordered family are easy to re-identify
+  under weak fields:
+  - `valley-linear` stays at best-shift score `1.000` with width ratio near
+    `1.000`
+  - `spent-delay` broadens slightly but still stays recognizable
+- that means a future inertial-response experiment is plausible
+- but the codebase still does not have a persistent-pattern inertial-mass
+  experiment itself
+
+### Strongest confirmed conclusion
+- the packet re-identification control is a useful precondition, not a closure
+  theorem
+- persistent-pattern inertia remains open
+
+### Exact next step
+- build the smallest viable persistent or quasi-persistent inertial-response
+  probe on the retained ordered family
+- if it cannot be built without changing the family too much, keep the
+  readiness note negative and stop promoting the lane
+
+## 2026-04-04 19:43 America/New_York
+
+### Seam class
+- coordination repair at the synced second-family additivity / readiness head
+- worker alignment remains `latent-compression / order-parameter`, with dense
+  laddering paused
+
+### What this loop did
+- acquired the free `physics-janitor` lock after confirming
+  `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status`
+  returned `status=free`
+- confirmed the canonical repo was already clean and synced before the repair:
+  - `git status --short --branch` reported `## main...origin/main`
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 8` put `1d9e711`
+    (`docs(derivation): extend additivity lane to second family`) at the
+    settled science head
+- inspected the landed additivity / readiness payload directly and ran
+  `python3 /Users/jonreilly/Projects/Physics/scripts/base_confidence_check.py`;
+  benchmark regression audit, mode-only candidate isolation, sparse bridge
+  addback visibility, sparse fallback access labels, live mechanism-split
+  driver, and feature registry alignment all passed
+- refreshed this handoff and restored the missing automation memories so the
+  coordination layer matches the real synced state again
+
+### Current state
+- no detached `physics-science` child is active
+- the settled derivation lane beneath this coordination repair now includes:
+  - same-family additivity on the retained 3D ordered-lattice family
+  - a second-family 2D cross-family additivity replay on the retained ordered
+    family
+  - a bounded readiness audit showing there is still no retained
+    persistent-pattern / inertial-response experiment
+- valley-linear stays additive on both retained families to printed precision
+  (the 2D cross-family replay stays within `0.08%`), while spent-delay remains
+  strongly non-additive
+- persistent-pattern / inertial-mass closure is still open
+- worker alignment still stays on the compression / order-parameter thread;
+  this coordination repair should not be read as permission to reopen dense
+  ladder work
+
+### Strongest confirmed conclusion
+- stale coordination metadata was the only integrity problem; the repo and
+  cheap confidence gate are healthy
+- the derivation lane is stronger than the stale handoff said, but it still
+  does not close persistent-pattern inertia
+- the active worker mode remains compression / order-parameter, not dense
+  ladder recovery
+
+### Exact next step
+- if the janitor coordination repair leaves `main` ahead, run the managed push
+  helper before any other repo mutation:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+- once sync is restored, keep workers on the compression / order-parameter
+  thread:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_frontier_compression.py`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-frontier-compression-1232-3344-4992-5504.txt`
+- keep dense laddering paused and only revive a sparse guardrail sentinel if
+  the tracked plan explicitly calls for it
+
 ## 2026-04-04 22:10 America/New_York
 
 ### Seam class

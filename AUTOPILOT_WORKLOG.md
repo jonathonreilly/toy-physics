@@ -1,3 +1,112 @@
+## 2026-04-04 — Janitor reconciled the synced second-family additivity head
+
+### Current state
+- janitor preflight reread the tracked work log, handoff, and automation
+  memory in protocol order
+- `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status`
+  returned `status=free`, so this loop acquired `physics-janitor`; no live
+  `physics-science` child was active
+- the canonical repo was already clean and synced before any coordination fix:
+  - `git status --short --branch` reported `## main...origin/main`
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 8` put `1d9e711`
+    (`docs(derivation): extend additivity lane to second family`) at the
+    settled science head
+- the tracked coordination layer had still drifted:
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+    still framed the second-family additivity check as future work even though
+    `1d9e711` already lands the retained 2D cross-family additivity
+    script/log/note plus the persistent-inertial readiness note
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` was
+    missing
+  - `/Users/jonreilly/.codex/automations/physics-janitor/memory.md` was
+    missing
+
+### What changed
+- inspected the landed synced head instead of trusting stale coordination text:
+  - `git show --stat --summary --oneline b515a78`
+  - `git show --stat --summary --oneline 906485f`
+  - `git show --stat --summary --oneline 1d9e711`
+- reread the settled derivation surfaces directly:
+  - `/Users/jonreilly/Projects/Physics/docs/COMPOSITE_SOURCE_ADDITIVITY_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/COMPOSITE_SOURCE_ADDITIVITY_2D_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/PERSISTENT_INERTIAL_RESPONSE_READINESS_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/NEWTON_DERIVATION_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-composite-source-additivity-2d-cross-family.txt`
+- ran `python3 /Users/jonreilly/Projects/Physics/scripts/base_confidence_check.py`
+  because the synced head adds a new retained harness script:
+  - benchmark regression audit, mode-only candidate isolation, sparse bridge
+    addback visibility, sparse fallback access labels, live mechanism-split
+    driver, and feature registry alignment all passed
+- refreshed the tracked handoff and restored the missing automation memories so
+  the coordination layer again matches the real synced head
+
+### Strongest confirmed conclusion
+The integrity issue was stale coordination metadata, not broken science state.
+The synced derivation lane now has:
+- same-family additivity on the retained 3D ordered family
+- a second-family 2D cross-family additivity replay with valley-linear still
+  additive to printed precision while spent-delay stays roughly `25-29%`
+  non-additive
+- a bounded readiness audit that still leaves persistent-pattern /
+  inertial-mass closure open
+
+That sharper derivation state does **not** reopen dense ladder work. Worker
+alignment stays in `latent-compression / order-parameter` mode, with dense
+laddering paused and sparse sentinels treated only as guardrails unless the
+tracked plan explicitly reopens them.
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- `/Users/jonreilly/.codex/automations/physics-janitor/memory.md`
+
+### Exact next step
+- if this coordination repair leaves `main` ahead, run the required managed
+  push helper before any other repo mutation:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+- once sync is restored, keep workers on the compression / order-parameter
+  thread:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_frontier_compression.py`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-frontier-compression-1232-3344-4992-5504.txt`
+- keep dense laddering paused and only revive a sparse guardrail sentinel if
+  the tracked plan explicitly calls for it
+
+## 2026-04-04 — Ordered-lattice packet re-identification control frozen
+
+### Current state
+- the retained ordered-lattice family now has a bounded packet-level control
+  for the persistent-pattern / inertial-response lane
+- the control answers a narrower question than the readiness note:
+  a localized packet can be re-identified well enough after propagation to
+  stay recognizable, but that still does not produce a persistent-mass
+  theorem
+
+### What changed
+- added `/Users/jonreilly/Projects/Physics/scripts/ordered_lattice_packet_reidentification.py`
+- generated `/Users/jonreilly/Projects/Physics/logs/2026-04-04-ordered-lattice-packet-reidentification.txt`
+- added `/Users/jonreilly/Projects/Physics/docs/ORDERED_LATTICE_PACKET_REIDENTIFICATION_NOTE.md`
+- updated `/Users/jonreilly/Projects/Physics/docs/PERSISTENT_INERTIAL_RESPONSE_READINESS_NOTE.md`
+- updated the canonical entry / harness index docs to point at the new control
+
+### Strongest confirmed conclusion
+- on the retained 3D ordered-lattice family, the packet remains easy to
+  re-identify under weak fields:
+  - `valley-linear` keeps best-shift score at `1.000` with width ratio near
+    `1.000`
+  - `spent-delay` broadens slightly but remains recognizable on this bounded
+    control
+- this is useful as a precondition for an inertial-response experiment
+- it is **not** yet a persistent-pattern inertia experiment itself
+
+### Exact next step
+- use the packet re-identification control as the smallest viable scaffold for
+  a real persistent or quasi-persistent inertial-response probe
+- if that cannot be built without changing the family too much, keep the
+  readiness note negative and stop promising a closure that the codebase does
+  not support
+
 ## 2026-04-04 — Additivity harness frozen; derivation wording tightened
 
 ### Current state
