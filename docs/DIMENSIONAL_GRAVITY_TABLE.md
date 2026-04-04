@@ -67,3 +67,26 @@ The complete dimensional prescription:
   Measure: h^(d-1)
 
 All four ingredients scale with dimension d.
+
+## 4D distance law frozen result (2026-04-04)
+
+4D W=7, L=15, h=0.5, field f=s/r^2, valley-linear + 1/L^3:
+
+| z | deflection | direction |
+|---|-----------|-----------|
+| 2 | +0.0000424 | TOWARD |
+| 3 | +0.0000708 | TOWARD |
+| 4 | +0.0000762 | TOWARD (peak) |
+| 5 | +0.0000740 | TOWARD |
+| 6 | +0.0000674 | TOWARD |
+
+Tail from peak (z>=4): b^(-0.29), R²=0.884, 3 points
+Far tail (z>=5): b^(-0.51), 2 points
+
+This is at the SAME early stage as 3D when it showed -0.35
+(which later improved to -1.07 at W=12). The 4D tail needs
+W>=10 (~3M nodes in 4D) for a definitive measurement.
+
+The honest read: 4D gravity is TOWARD with the correct field
+profile and near-Newtonian mass scaling (F∝M=0.99), but the
+distance exponent is unresolved due to lattice width limits.
