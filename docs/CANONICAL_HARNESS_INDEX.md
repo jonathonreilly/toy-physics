@@ -64,6 +64,7 @@ thing a new reader should treat as canonical proof of the current story:
 - [`scripts/valley_linear_wide_tail_replay.py`](/Users/jonreilly/Projects/Physics/scripts/valley_linear_wide_tail_replay.py)
 - [`scripts/valley_linear_asymptotic_bridge.py`](/Users/jonreilly/Projects/Physics/scripts/valley_linear_asymptotic_bridge.py)
 - [`scripts/action_regularity_crossover.py`](/Users/jonreilly/Projects/Physics/scripts/action_regularity_crossover.py)
+- [`scripts/action_universality_probe.py`](/Users/jonreilly/Projects/Physics/scripts/action_universality_probe.py)
 - [`scripts/gate_b_connectivity_tolerance.py`](/Users/jonreilly/Projects/Physics/scripts/gate_b_connectivity_tolerance.py)
 - [`scripts/lattice_3d_valley_linear_card.py`](/Users/jonreilly/Projects/Physics/scripts/lattice_3d_valley_linear_card.py)
 - [`scripts/dimensional_gravity_card.py`](/Users/jonreilly/Projects/Physics/scripts/dimensional_gravity_card.py)

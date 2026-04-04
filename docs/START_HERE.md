@@ -49,6 +49,9 @@ Do not force a trade where only one of those moves.
   - a same-family comparison against spent-delay is now artifact-backed
   - on the retained `h = 0.25` family it improves the tested mass-law exponent
     and distance-tail slope while preserving Born and TOWARD sign
+  - a bounded action-universality probe now supports a narrower theory claim:
+    on the fixed ordered-lattice family, weak-field-linear phase valleys share
+    the same Newtonian mass-scaling class (`F~M = 1.00`)
   - gravity magnitude is much smaller on the tested `z=3` slice
   - a widened `W = 12` replay now gives a stronger 3D far-tail read:
     `b^(-1.17)` on the tested `z >= 5` window, with all tested rows TOWARD
@@ -111,6 +114,7 @@ Do not force a trade where only one of those moves.
 - [`docs/ACTION_POWER_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_NOTE.md)
 - [`docs/ACTION_POWER_3D_GRAVITY_SIGN_CLOSURE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_3D_GRAVITY_SIGN_CLOSURE_NOTE.md)
 - [`docs/VALLEY_LINEAR_ACTION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_ACTION_NOTE.md)
+- [`docs/ACTION_UNIQUENESS_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_UNIQUENESS_NOTE.md)
 - [`docs/VALLEY_LINEAR_MIRROR_TRANSFER_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_MIRROR_TRANSFER_NOTE.md)
 - [`docs/VALLEY_LINEAR_CONTINUUM_SYNTHESIS_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_CONTINUUM_SYNTHESIS_NOTE.md)
 - [`docs/VALLEY_LINEAR_WIDE_TAIL_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_WIDE_TAIL_NOTE.md)
