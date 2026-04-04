@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
-"""Canonical action-power harness: full validation on fixed 2D/3D lattices.
+"""Canonical action-power harness on fixed 2D/3D lattices.
 
 This is the FROZEN harness for the action-power family S = L × |f|^p.
-It measures ALL properties on the SAME graph with the SAME scorer:
-  Born |I₃|/P, k=0, MI, d_TV, pur_cl, distance law, mass response.
+It measures:
+  - same-harness 2D comparison
+  - 3D close-slit barrier card for Born / k=0 / MI / d_TV / pur_cl / gravity
+  - 3D no-barrier companion for distance law and mass response
 
 Explicit comparison against the current spent-delay baseline.
 

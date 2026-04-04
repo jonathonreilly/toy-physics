@@ -1,7 +1,7 @@
 # Action Power Branch: Honest Status
 
 **Date:** 2026-04-04
-**Status:** bounded axiom-fork branch with a retained 3D barrier card and a 3D no-barrier law companion
+**Status:** bounded axiom-fork branch with a retained 3D barrier card, a retained 3D no-barrier law companion, and a bounded negative on 3D barrier attraction for the current ordered family
 
 ## What this is
 
@@ -59,6 +59,30 @@ So the 3D branch now has:
 - a **real no-barrier companion** for distance law and mass response
 - but **not** a same-harness 3D gravity-toward-mass card
 
+### 3D barrier gravity-sign closure on the current ordered family
+
+The next bounded follow-up asked whether the retained 3D close-slit power card
+could recover attraction toward mass by changing only:
+
+- field strength
+- forward-connectivity density
+- geometric jitter with fixed NN-style topology
+
+That bounded closure now says **no** on the tested ordered 3D family:
+
+- NN topology (`9` edges/node), `strength = 1e-5 .. 1e-3`: all tested rows stay
+  **away**
+- denser forward connectivity (`25` and `49` edges/node): still **away**
+- geometric jitter with fixed NN topology (`8` seeds at each jitter): `0/8`
+  toward at every tested jitter
+
+So the honest read is:
+
+- the retained 3D power branch keeps its barrier Born / MI / decoherence card
+- it keeps its no-barrier `1/b^2`-like distance / linear-mass companion
+- but **barrier attraction is a bounded negative on the current ordered 3D
+  family**
+
 ## What is NOT validated
 
 - Gravity toward mass on the 3D barrier card
@@ -90,7 +114,8 @@ bounded:
 1. the 3D close-slit barrier card is now real and Born-clean
 2. the 3D no-barrier power-action companion has the best current distance /
    mass-law behavior on this branch
-3. the 3D barrier gravity sign is still wrong
+3. the 3D barrier gravity sign stays wrong across the current bounded ordered
+   follow-up sweeps
 
 So the action-power branch is now a real complementary 3D lane, not yet a
 replacement for the spent-delay flagship and not yet a full same-harness
@@ -101,8 +126,11 @@ Newtonian closure.
 | Script | What it tests |
 |--------|---------------|
 | action_power_canonical_harness.py | 2D same-harness comparison plus 3D close-slit barrier card and 3D no-barrier companion |
+| action_power_3d_gravity_sign_closure.py | bounded closure on 3D barrier attraction under strength / density / jitter sweeps |
 
 ## Artifact chain
 
 - [`scripts/action_power_canonical_harness.py`](/Users/jonreilly/Projects/Physics/scripts/action_power_canonical_harness.py)
 - [`logs/2026-04-04-action-power-canonical-harness.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-04-action-power-canonical-harness.txt)
+- [`scripts/action_power_3d_gravity_sign_closure.py`](/Users/jonreilly/Projects/Physics/scripts/action_power_3d_gravity_sign_closure.py)
+- [`logs/2026-04-04-action-power-3d-gravity-sign-closure.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-04-action-power-3d-gravity-sign-closure.txt)

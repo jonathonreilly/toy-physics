@@ -134,9 +134,11 @@ If you only want the current high-level state, read this section first.
   narrow retained slice. That is a real bridge result, but not yet a
   replacement flagship.
 - **Action-power branch:** exploratory axiom fork. It has a same-harness 2D
-  comparison and a promising 3D no-barrier distance / mass-response result,
-  but it does not inherit flagship claims and is not yet a full retained
-  replacement for the spent-delay lane.
+  comparison, a retained 3D close-slit barrier Born / MI / decoherence card,
+  and a retained 3D no-barrier distance / mass-response companion. The current
+  ordered 3D barrier family still fails to recover attraction toward mass, so
+  this remains a bounded complementary branch rather than a replacement for
+  the spent-delay lane.
 - **Main open problem:** generated symmetry and stronger continuum closure.
   The project now has a cleaner map, but the highest-value unresolved work is
   still to generate the good geometry more naturally and to tighten the

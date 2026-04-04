@@ -34,7 +34,7 @@ history or commit-message narrative.
   - 2D same-harness comparison exists
   - 3D close-slit barrier Born / MI / decoherence card is now retained
   - 3D distance / mass-law behavior remains a no-barrier companion
-  - 3D barrier gravity sign is still unresolved
+  - 3D barrier gravity sign is now a bounded negative on the current ordered family
 
 ## What is bounded or still open
 
@@ -42,7 +42,7 @@ history or commit-message narrative.
 - **Continuum / RG theorem:** not retained
 - **Light-cone / emergent relativity:** only a topological causal-bound read is retained
 - **Generated symmetry:** reopened by the structured chokepoint bridge, not solved
-- **Action-power Newtonian-3D claim:** interesting, not yet a promoted core claim
+- **Action-power Newtonian-3D claim:** interesting, bounded to a no-barrier companion, not yet a promoted core claim
 
 ## Canonical docs
 
@@ -52,6 +52,7 @@ history or commit-message narrative.
 - [`docs/OVERNIGHT_WORK_BACKLOG.md`](/Users/jonreilly/Projects/Physics/docs/OVERNIGHT_WORK_BACKLOG.md)
 - [`docs/STRUCTURED_CHOKEPOINT_BRIDGE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/STRUCTURED_CHOKEPOINT_BRIDGE_NOTE.md)
 - [`docs/ACTION_POWER_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_NOTE.md)
+- [`docs/ACTION_POWER_3D_GRAVITY_SIGN_CLOSURE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_3D_GRAVITY_SIGN_CLOSURE_NOTE.md)
 
 ## Working rules
 
@@ -64,5 +65,5 @@ history or commit-message narrative.
 ## Best next pickup points
 
 1. Extend the structured chokepoint bridge without changing the canonical mirror readout.
-2. Test whether the 3D action-power barrier card can recover gravity toward mass instead of weak beam-depletion.
+2. Keep the action-power branch bounded unless a topology-changing 3D family is introduced.
 3. Keep NN continuum claims narrow unless a new artifact chain truly resolves the current RG / refinement caveats.

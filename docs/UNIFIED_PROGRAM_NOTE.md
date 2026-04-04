@@ -119,13 +119,16 @@ flagship.
 
 - the same-harness 2D comparison is real
 - the 3D close-slit barrier card is now retained for Born / MI / decoherence
-- the 3D no-barrier distance / mass-response companion is promising
-- the 3D barrier gravity sign is still unresolved
+- the 3D no-barrier distance / mass-response companion is retained
+- the current ordered 3D barrier lane now has a bounded negative on attraction:
+  weakening the field, densifying forward connectivity, and adding geometric
+  jitter all still leave the sign away from mass on the tested slices
 - no flagship claims are inherited automatically
 
-Primary artifact:
+Primary artifacts:
 
 - [`docs/ACTION_POWER_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_NOTE.md)
+- [`docs/ACTION_POWER_3D_GRAVITY_SIGN_CLOSURE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_3D_GRAVITY_SIGN_CLOSURE_NOTE.md)
 
 ### Engineered non-symmetry lanes
 

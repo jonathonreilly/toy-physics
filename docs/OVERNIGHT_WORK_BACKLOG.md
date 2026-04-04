@@ -19,17 +19,7 @@ before the current bridges are tightened.
      - one clear decision on whether the bridge widens beyond the current
        narrow slice
 
-2. **Action-power 3D barrier gravity / robustness**
-   - Treat the action-power lane as a new branch with no inherited claims.
-   - The 3D barrier signal issue is now improved enough to freeze a card.
-   - Focus next on the real blocker: gravity sign and nearby-geometry
-     robustness.
-   - Deliverables:
-     - one narrow follow-up around the retained 3D close-slit card
-     - one explicit pass/fail on whether the 3D power branch can recover
-       attraction toward mass without losing the barrier card
-
-3. **NN continuum hardening**
+2. **NN continuum hardening**
    - Keep the NN story narrow and artifact-backed.
    - Prefer cleanup of companion-audit wording and stale claim surfaces over
      new speculative physics.
@@ -38,6 +28,17 @@ before the current bridges are tightened.
        described too strongly on the NN branch
      - reconcile any mismatch between branch-history claims and on-disk notes
      - do not promote a continuum theorem unless the RG side is also canonical
+
+3. **Action-power branch claim-surface cleanup**
+   - Treat the action-power lane as a new branch with no inherited claims.
+   - The 3D barrier signal issue is fixed enough to freeze a card, and the
+     current ordered-family gravity-sign lane is now a bounded negative.
+   - Focus on keeping the no-barrier Newtonian-style read and the barrier-card
+     read clearly separated in the docs.
+   - Deliverables:
+     - one wording pass that keeps 3D no-barrier law claims from reading as
+       same-harness closure
+     - no new 3D sign-fishing unless the architecture changes topologically
 
 4. **Repo claim-surface cleanup**
    - Reduce the gap between canonical notes and nearby exploratory files.
