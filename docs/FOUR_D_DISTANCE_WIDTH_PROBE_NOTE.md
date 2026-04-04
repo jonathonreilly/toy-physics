@@ -28,8 +28,6 @@ The answer is: it does **not** close asymptotic behavior here.
 - [`logs/2026-04-04-four-d-distance-width-probe.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-04-four-d-distance-width-probe.txt)
 - heavier same-family companion log:
   - [`logs/2026-04-04-4d-wide-distance-law.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-04-4d-wide-distance-law.txt)
-- heavier same-family companion replay:
-  - [`logs/2026-04-04-4d-wide-distance-law.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-04-4d-wide-distance-law.txt)
 
 ## Probe setup
 
@@ -51,7 +49,6 @@ how much distance-law support survives as width increases.
 | `W=5` | `4/4` | `z=4` | not fit | only 1 point beyond peak | width-limited |
 | `W=6` | `5/5` | `z=4` | `b^(-0.43)`, `R²=0.713` | only 2 points beyond peak | width-limited |
 | `W=7` | `6/6` | `z=4` | `b^(-0.60)`, `R²=0.800` | `b^(-0.96)`, `R²=0.915` | strongest row, still bounded |
-| `W=8` | `6/6` | `z=4` | `b^(-0.54)` | only 3 points beyond peak | heavier companion, still bounded |
 | `W=8` | `6/6` | `z=4` | `b^(-0.54)` | far tail still too short to close | stronger support, still bounded |
 
 ## Safe interpretation
@@ -73,7 +70,6 @@ What it **does** establish:
 - the current 4D distance-law status is still bounded by width, not settled
 - the heavier `W=8` companion is supportive, but it does not close the
   asymptotic law or promote a Newtonian `1/b^2` read
-- the raw `W = 8` companion improves support but does not change that status
 
 ## Relation to the current dimensional table
 
