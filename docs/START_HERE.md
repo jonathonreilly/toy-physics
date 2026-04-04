@@ -59,6 +59,7 @@ Do not force a trade where only one of those moves.
 ## Canonical docs
 
 - [`README.md`](/Users/jonreilly/Projects/Physics/README.md)
+- [`docs/ADVERSARIAL_INTEREST_MAP.md`](/Users/jonreilly/Projects/Physics/docs/ADVERSARIAL_INTEREST_MAP.md)
 - [`docs/UNIFIED_PROGRAM_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/UNIFIED_PROGRAM_NOTE.md)
 - [`docs/MIRROR_VS_LATTICE_PROGRAM_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/MIRROR_VS_LATTICE_PROGRAM_NOTE.md)
 - [`docs/OVERNIGHT_WORK_BACKLOG.md`](/Users/jonreilly/Projects/Physics/docs/OVERNIGHT_WORK_BACKLOG.md)
@@ -69,15 +70,20 @@ Do not force a trade where only one of those moves.
 - [`docs/LEGACY_EXPLORATORY_DRIVERS_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LEGACY_EXPLORATORY_DRIVERS_NOTE.md)
 - [`docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md)
 - [`docs/LATTICE_3D_DENSE_WINDOW_EXTENSION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_3D_DENSE_WINDOW_EXTENSION_NOTE.md)
+- [`scripts/canonical_frontier_regression_gate.py`](/Users/jonreilly/Projects/Physics/scripts/canonical_frontier_regression_gate.py)
 
 ## Working rules
 
 - Treat **script + log + note** as the promotion unit.
+- If you touch the current canonical frontier, run
+  [`scripts/canonical_regression_gate.py`](/Users/jonreilly/Projects/Physics/scripts/canonical_regression_gate.py)
+  before promoting the result.
 - If a claim exists only in commit text or chat narrative, treat it as **unretained**.
 - Treat many `*_test.py` files as **experiment drivers**, not assertion-based regression tests.
 - Treat some NN-side `k=0 = 0` results as **sanity checks**, not independent evidence.
 - If a branch changes the action law or propagator, it is a **new branch** and does not inherit flagship claims automatically.
 - Do **not** invert gravity sign by convention; use the canonical gravity-observable hierarchy first.
+- Before promoting lattice/NN frontier wording, run [`scripts/canonical_frontier_regression_gate.py`](/Users/jonreilly/Projects/Physics/scripts/canonical_frontier_regression_gate.py) to catch cheap code/report drift.
 
 ## Best next pickup points
 

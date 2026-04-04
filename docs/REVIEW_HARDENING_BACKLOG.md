@@ -1,13 +1,79 @@
 # Review Hardening Backlog
 
 **Status:** repo-facing backlog note  
-**Date:** 2026-04-01
+**Date:** 2026-04-04
 
 ## Purpose
 
-This backlog is not the same as the science frontier. It is the list of work that would make the project more robust to fair external review, especially reviews that focus on circularity, lack of dynamics, weak literature positioning, or unclear derivation status.
+This backlog is not the same as the science frontier. It is the list of work
+that would make the project more robust to fair external review, especially
+reviews that focus on circularity, lack of dynamics, weak literature
+positioning, unclear derivation status, or fragile code/reporting.
+
+The "hold up to community" lane now explicitly includes:
+
+- adversarial code review on the canonical scripts and notes
+- bounded regression gates for the retained harnesses
+- claim-surface audits that keep chat / commit narrative below the artifact chain
+
+The review-hardening program has two parts:
+
+1. improve the science itself
+2. improve the chance that the implemented evidence survives adversarial code
+   and methods review
+
+Current review-hardening tooling now includes:
+
+- [`scripts/canonical_frontier_regression_gate.py`](/Users/jonreilly/Projects/Physics/scripts/canonical_frontier_regression_gate.py)
+
+That gate is intentionally modest. It does **not** prove the physics. It does
+provide a cheap code/report drift detector for the retained lattice/NN frontier,
+which is exactly the kind of failure adversarial reviewers notice early.
+
+Both matter. A retained result that cannot survive hostile inspection of the
+scripts, harnesses, or report chain does not help the external-reception map.
 
 ## Highest-value backlog
+
+### Gate 0. Adversarial code-review and regression gate
+
+Goal:
+
+- make it harder for the retained story to drift away from the code
+- make the active canonical scripts harder to break, misread, or overstate
+
+Concrete deliverables:
+
+- one adversarial code-review pass on each canonical lane:
+  - flagship mirror
+  - ordered lattice / dense 3D
+  - NN refinement bridge
+- one bounded regression gate that:
+  - runs the canonical harnesses
+  - checks machine-clean Born thresholds on retained harnesses
+  - checks real `k=0` controls rather than placeholders
+  - checks for non-NaN / nontrivial retained observables
+  - checks the expected retained verdict strings on reconciliation notes
+- one short note describing what the gate does and does not certify
+- one note on which scripts are canonical harnesses versus exploratory drivers
+
+Why it matters:
+
+- external confidence drops quickly if the code can silently drift while the
+  docs stay fixed
+- this is the fastest way to make "holds up to community" mean something
+  operational rather than rhetorical
+- external reviewers do not separate code quality from scientific credibility
+- this is the fastest way to reduce “interesting numerics but fragile code”
+  skepticism
+- it directly improves the “holds up under community review” piece even before
+  the deepest theory conversions land
+
+Current state:
+
+- an initial bounded gate now exists in
+  [`scripts/canonical_regression_gate.py`](/Users/jonreilly/Projects/Physics/scripts/canonical_regression_gate.py)
+- next step is to extend that gate carefully, not turn it into a brittle exact-value harness
 
 ## Mainstream-readiness gates
 
