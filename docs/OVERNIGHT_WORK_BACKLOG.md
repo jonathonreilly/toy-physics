@@ -171,9 +171,12 @@ interest map rather than just broaden the science search.
    - The newer v5 cross-growth rule is also frozen and is a modest advance:
      better TOWARD count than the matched KNN control on the same grown
      positions, but still not a generated-geometry win on mean delta.
+   - The h=0.5 v6 structured-growth replay is now also frozen:
+     genuinely TOWARD and near-linear on the tested matrix, but still mixed
+     enough that Gate B is not closed.
    - Deliverables:
      - one next-step connectivity-first local rule that improves on the mixed
-       v5 result without broad search sprawl
+       v6 result without broad search sprawl
      - one same-family generated-vs-imposed comparison with finite detector
        signal on both sides
      - one bounded note saying whether this materially advances Gate B or not

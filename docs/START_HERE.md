@@ -72,9 +72,11 @@ Do not force a trade where only one of those moves.
 - **Gate B dynamics:** still open, but the bottleneck is sharper now:
   - position noise on fixed connectivity is tolerated
   - connectivity construction is the main failure mode
-  - a new v5 cross-growth structured-connectivity rule is now frozen and mixed:
-    better TOWARD count than the matched KNN control on the same grown
-    positions, but still not a clean Gate B win on mean delta
+  - the newest frozen `h=0.5` structured-growth replay is still mixed:
+    the best tested row reaches `33/36` TOWARD with local `F~M = 1.00`, but
+    the full tested matrix does not close Gate B
+  - the earlier v5 cross-growth row remains useful as the matched-control
+    comparison against KNN on the same grown positions
 - **Action-power Newtonian-3D claim:** interesting, bounded to a no-barrier companion, not yet a promoted core claim
 - **Tapered 3D refinement:** negative on the tested family; useful as a topology-control branch, not a rescue of the dense card
 - **3D `1/L^2` kernel branch:** active bounded propagator fork under validation; do not treat branch-history or chat narrative as canonical
@@ -111,6 +113,7 @@ Do not force a trade where only one of those moves.
 - [`docs/EVOLVING_NETWORK_PROTOTYPE_V3_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/EVOLVING_NETWORK_PROTOTYPE_V3_NOTE.md)
 - [`docs/EVOLVING_NETWORK_PROTOTYPE_V4_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/EVOLVING_NETWORK_PROTOTYPE_V4_NOTE.md)
 - [`docs/EVOLVING_NETWORK_PROTOTYPE_V5_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/EVOLVING_NETWORK_PROTOTYPE_V5_NOTE.md)
+- [`docs/EVOLVING_NETWORK_PROTOTYPE_V6_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/EVOLVING_NETWORK_PROTOTYPE_V6_NOTE.md)
 - [`docs/GATE_B_CONNECTIVITY_TOLERANCE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_CONNECTIVITY_TOLERANCE_NOTE.md)
 - [`docs/DECOHERENCE_ACTION_INDEPENDENCE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/DECOHERENCE_ACTION_INDEPENDENCE_NOTE.md)
 - [`docs/GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md)

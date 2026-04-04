@@ -40,6 +40,7 @@ Canonical notes:
 - [`docs/EVOLVING_NETWORK_PROTOTYPE_V3_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/EVOLVING_NETWORK_PROTOTYPE_V3_NOTE.md)
 - [`docs/EVOLVING_NETWORK_PROTOTYPE_V4_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/EVOLVING_NETWORK_PROTOTYPE_V4_NOTE.md)
 - [`docs/EVOLVING_NETWORK_PROTOTYPE_V5_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/EVOLVING_NETWORK_PROTOTYPE_V5_NOTE.md)
+- [`docs/EVOLVING_NETWORK_PROTOTYPE_V6_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/EVOLVING_NETWORK_PROTOTYPE_V6_NOTE.md)
 - [`docs/GATE_B_CONNECTIVITY_TOLERANCE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_CONNECTIVITY_TOLERANCE_NOTE.md)
 - [`docs/DECOHERENCE_ACTION_INDEPENDENCE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/DECOHERENCE_ACTION_INDEPENDENCE_NOTE.md)
 - [`docs/CONTINUUM_BRIDGE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/CONTINUUM_BRIDGE_NOTE.md)
@@ -72,6 +73,7 @@ thing a new reader should treat as canonical proof of the current story:
 - [`scripts/evolving_network_prototype_v3.py`](/Users/jonreilly/Projects/Physics/scripts/evolving_network_prototype_v3.py)
 - [`scripts/evolving_network_prototype_v4.py`](/Users/jonreilly/Projects/Physics/scripts/evolving_network_prototype_v4.py)
 - [`scripts/evolving_network_prototype_v5.py`](/Users/jonreilly/Projects/Physics/scripts/evolving_network_prototype_v5.py)
+- [`scripts/evolving_network_prototype_v6.py`](/Users/jonreilly/Projects/Physics/scripts/evolving_network_prototype_v6.py)
 
 ## How to use them
 

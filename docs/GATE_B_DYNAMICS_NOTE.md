@@ -105,22 +105,24 @@ So the current safe Gate B read is:
 - the advantage is now visible in a frozen artifact chain
 - but the result is still mixed enough that Gate B remains open
 
-## Update: pending h=0.5 structured-growth replay
+## Update: frozen h=0.5 structured-growth replay
 
-A newer h=0.5 structured-growth result has been reported in branch narrative:
+The newer h=0.5 structured-growth lane is now frozen on disk:
 
-- template previous layer
-- add local drift
-- restore toward the grid target
-- keep NN-style fixed-offset connectivity
+- [scripts/evolving_network_prototype_v6.py](/Users/jonreilly/Projects/Physics/scripts/evolving_network_prototype_v6.py)
+- [logs/2026-04-04-evolving-network-prototype-v6.txt](/Users/jonreilly/Projects/Physics/logs/2026-04-04-evolving-network-prototype-v6.txt)
+- [docs/EVOLVING_NETWORK_PROTOTYPE_V6_NOTE.md](/Users/jonreilly/Projects/Physics/docs/EVOLVING_NETWORK_PROTOTYPE_V6_NOTE.md)
 
-The reported headline is 100% TOWARD across a small drift/restore matrix at the
-working h=0.5 lattice spacing.
+It does **not** reproduce the branch headline of `100%` TOWARD across the full
+tested matrix. The frozen rows are:
 
-That result is not retained yet in this note because the matching v6
-script/log/note chain is not on disk. Until that lands, the safe Gate B read
-remains:
+- `drift=0.3, restore=0.5`: `33/36` TOWARD, `mean_delta=+0.000021`, `F~M=1.00`
+- `drift=0.2, restore=0.7`: `24/36` TOWARD, `mean_delta=+0.000010`, `F~M=1.00`
+- `drift=0.1, restore=0.9`: `24/36` TOWARD, `mean_delta=+0.000008`, `F~M=0.99`
+- `drift=0.0, restore=1.0`: `24/36` TOWARD, `mean_delta=+0.000007`, `F~M=0.99`
 
-- v5 is the best frozen structured-growth result
-- the h=0.5 full-pass claim is promising
-- Gate B is not promoted from doc text alone
+So the safe Gate B read is now:
+
+- the h=0.5 structured-growth lane is genuinely TOWARD and near-linear
+- the best tested row is stronger than the older bounded prototypes
+- the full tested matrix is still mixed enough that Gate B remains open
