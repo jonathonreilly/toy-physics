@@ -31,4 +31,4 @@ SAFE INTERPRETATION
 - tail fits are only reported when there are enough post-peak points; otherwise n/a
 - this is a frozen replay of the memo tables, not a proof of universality
 
-Total time: 82s
+Total time: 85s
