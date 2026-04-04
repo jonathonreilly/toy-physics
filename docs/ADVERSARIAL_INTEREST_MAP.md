@@ -34,13 +34,13 @@ The best next steps are the ones that improve both at once.
 | category | score | read |
 |---|---:|---|
 | Toy-model mechanism interest | `9.5/10` | high intrinsic curiosity value |
-| Foundations / complex-systems / network-dynamics interest | `8.9/10` | real likely interest in the right subcommunities |
-| Broader theorist interest | `7.2/10` | selective interest, with stronger review hardening than before |
-| Bridge to known physics | `7.0/10` | suggestive but still branch-dependent and under-theorized |
-| Publishable as a careful computational toy-model paper | `7.8/10` | plausible with narrow framing and increasingly review-safe scaffolding |
+| Foundations / complex-systems / network-dynamics interest | `9.1/10` | real likely interest in the right subcommunities |
+| Broader theorist interest | `7.4/10` | selective interest, with stronger review hardening than before |
+| Bridge to known physics | `7.2/10` | suggestive but still branch-dependent and under-theorized |
+| Publishable as a careful computational toy-model paper | `8.1/10` | plausible with narrow framing and increasingly review-safe scaffolding |
 | Publishable as a foundational-physics breakthrough claim | `3.8/10` | too early for that framing |
 | Ready for top-tier mainstream physics claims | `2.6/10` | still far below the required bar |
-| Field-shifting theory program | `4.9/10` | stronger than before, but still not at forced-engagement level |
+| Field-shifting theory program | `5.1/10` | stronger than before, but still not at forced-engagement level |
 | Landmark foundational breakthrough | `3.1/10` | current evidence base is still too branch-sensitive |
 | Nobel-scale breakthrough | `0.4/10` | not a realistic present-tense read |
 
@@ -73,6 +73,8 @@ The main upward pressures since the first adversarial cut are:
 - the `1/L^(d-1)` lane now has a real frozen `h=0.25` eight-property 3D card
   on `main`, which is exactly the kind of trust-building conversion skeptical
   readers look for
+- the regularity-crossover replay now has a frozen script/log/note chain, which
+  trims one more “chat-only” branch from the story
 - the imported `1/L^(d-1)` kernel lane is now scientifically more interesting
   and does live on `main`, but it is still **bounded / unreconciled** rather
   than promoted in the top-line canonical story
