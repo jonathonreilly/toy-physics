@@ -110,6 +110,7 @@ project.
 | Slower decoherence washout | **strong but bounded** | exact mirror and `Z2 x Z2` clearly soften the ceiling, but the clean retained claim is bounded-window retention rather than a finished asymptotic theorem |
 | Mass-law quality | **weak / bounded** | positive fitted windows exist, but no flagship symmetry lane has a promoted clean mass law |
 | Distance-law quality | **negative structural result** | current connected random/symmetry architecture does not retain a review-safe `1/b`-style law |
+| Continuum / refinement bridge | **promising but bounded** | raw NN is Born-clean through `h = 0.25`; deterministic rescale extends to `h = 0.0625`; RG-style gravity remains open |
 | Generated / emergent symmetry | **open** | no retained Born-clean grown successor yet |
 
 ## Distance-law closure
@@ -210,6 +211,22 @@ So the safe synthesis read is now:
 - **ordered lattice still does not displace exact mirror as the flagship
   coexistence architecture**
 
+### Nearest-neighbor refinement
+
+The nearest-neighbor lattice is now the cleanest refinement-side branch.
+
+- raw NN refinement is Born-clean through `h = 0.25`
+- deterministic rescale extends the Born-clean window to `h = 0.0625`
+- MI, `1-pur_cl`, and `d_TV` converge smoothly under that deterministic
+  schedule
+- gravity remains positive but fades toward zero under finer refinement
+
+This is a real refinement branch, but it is still a **bounded** one:
+
+- the raw kernel overflows at `h = 0.125`
+- RG-style strength scalings are suggestive but still ambiguous
+- a finished continuum / renormalization theorem is not retained yet
+
 ## Single unified approach
 
 The project no longer needs to choose between many competing stories.
@@ -220,9 +237,15 @@ The retained program is:
 2. **Use exact mirror as the flagship lane**
 3. **Use exact 2D mirror as the clean validation card**
 4. **Use `Z2 x Z2` as the stronger decoherence / retained-range extension**
-5. **Treat generated symmetry as the next open bridge problem, not as a solved lane**
+5. **Use raw nearest-neighbor refinement as the current continuum-side bridge**
+6. **Treat generated symmetry as the next open bridge problem, not as a solved lane**
 
 ## Highest-value next wins
+
+For short-horizon worker execution, use
+[`docs/OVERNIGHT_WORK_BACKLOG.md`](/Users/jonreilly/Projects/Physics/docs/OVERNIGHT_WORK_BACKLOG.md)
+as the concrete task queue. The priorities below remain the canonical
+program-level roadmap.
 
 ### Priority 1. Flagship synthesis card
 
