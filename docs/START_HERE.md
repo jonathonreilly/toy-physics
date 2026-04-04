@@ -54,8 +54,7 @@ Do not force a trade where only one of those moves.
     the same Newtonian mass-scaling class (`F~M = 1.00`)
   - a companion bounded power sweep now shows the stronger safe law on that
     family is `F~M = p` across `S = L(1-f^p)`; the distance tail also steepens
-    with `p`, but the exact tail formula is still only empirical on the tested
-    family
+    with `p`, but the exact tail formula is not retained
   - gravity magnitude is much smaller on the tested `z=3` slice
   - a widened `W = 12` replay now gives a stronger 3D far-tail read:
     `b^(-1.17)` on the tested `z >= 5` window, with all tested rows TOWARD

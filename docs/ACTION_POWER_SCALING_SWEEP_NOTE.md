@@ -1,60 +1,60 @@
-# Action Power Scaling Sweep Note
+# Action-Power Scaling Sweep
 
 **Date:** 2026-04-04  
-**Status:** bounded fixed-family sweep on the retained 3D ordered-lattice valley family
+**Status:** bounded fixed-family scaling replay
 
 ## Artifact chain
 
 - Script: [`scripts/action_power_scaling_sweep.py`](/Users/jonreilly/Projects/Physics/scripts/action_power_scaling_sweep.py)
 - Log: [`logs/2026-04-04-action-power-scaling-sweep.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-04-action-power-scaling-sweep.txt)
 
-This is a bounded replay on one fixed family:
+This is a bounded replay on one fixed retained family:
 
 - 3D ordered dense lattice
 - `h = 0.5`, `W = 10`, `L = 12`
 - kernel `1/L^2` with `h^2` measure
-- field `f = s / r`
+- field `s/r`
 - action family `S = L(1-f^p)`
 
 ## Frozen replay
 
-| `p` | `F~M` | Distance tail | Read |
-|---|---:|---:|---|
-| `0.50` | `0.50` | `z>=5: -0.78` | sub-linear valley branch |
-| `0.75` | `0.75` | `z>=4: -0.76` | sub-linear valley branch |
-| `1.00` | `1.00` | `z>=4: -1.00` | Newtonian-like row on this family |
-| `1.50` | `1.50` | `z>=5: -2.20` | super-Newtonian row |
-| `2.00` | `2.00` | `z>=5: -3.54` | steeper super-Newtonian row |
+| p | Born | F∝M | Tail |
+|---|------|-----|------|
+| 0.50 | `2.18e-15` | `0.50` | `z>=5:-0.78` |
+| 0.75 | `2.18e-15` | `0.75` | `z>=4:-0.76` |
+| 1.00 | `2.18e-15` | `1.00` | `z>=4:-1.00` |
+| 1.50 | `2.18e-15` | `1.50` | `z>=5:-2.20` |
+| 2.00 | `2.18e-15` | `2.00` | `z>=5:-3.54` |
 
-Born stays machine-clean (`2.18e-15`) for every tested power.
-All tested valley powers stay `7/7` TOWARD on the measured `z=2..8` window.
+All tested rows stay `7/7` TOWARD on the fixed `z = 2..8` window.
 
-## Safe interpretation
+## Safe read
 
-The strongest retained claim from this sweep is:
+- On this fixed family, the mass-scaling law is clean: `F∝M = p` across the
+  tested sweep.
+- Born stays machine-clean across the whole tested power family.
+- The distance tail steepens strongly with `p`.
+- The distance-tail law is **not** yet a closed theorem. The replay supports a
+  strong monotonic steepening pattern, not a unique exact formula.
 
-- on this fixed family, the mass-scaling exponent tracks the weak-field power
-  `p` in the action: `F~M = p`
+## What this does and does not support
 
-The distance-tail behavior is also systematic, but the safest wording is
-weaker:
+This sweep supports:
 
-- on this fixed family, the tail steepens as `p` increases
-- `p = 1` gives a Newtonian-like `1/b` row on this family
-- the broader tail law is empirical and approximate here, not a universal
-  theorem
+- a bounded one-parameter family of mass-scaling laws on the fixed ordered
+  lattice
+- a clean separation between sublinear, linear, and superlinear phase-valley
+  couplings on that family
 
-## What this does not prove
+This sweep does **not** support:
 
-- It does **not** prove a universal distance-law formula across graph families.
-- It does **not** prove that `-(2p-1)` is exact on the retained family.
-- It does **not** settle the irregular-geometry / spent-delay lane.
-- It does **not** derive the action power uniquely from the axioms.
+- a universal tail theorem across architectures
+- a unique exact relation like `-(2p-1)` as a retained project-level law
+- a derivation of `p=1` from the current axioms alone
 
-## Bottom line
+The strongest safe summary is:
 
-This sweep strengthens the action-law story, but in a bounded way:
-
-- `F~M = p` is now artifact-backed on one retained ordered-lattice family
-- the distance tail clearly responds to `p`, but the exact tail formula
-  remains a family-level empirical fit rather than a theorem
+- `F∝M = p` is the clean retained fixed-family result
+- tail steepening with `p` is real
+- the precise tail formula still needs either a derivation or a wider
+  cross-family replay before promotion

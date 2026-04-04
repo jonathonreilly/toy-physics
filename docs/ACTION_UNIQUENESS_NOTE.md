@@ -110,5 +110,6 @@ The clean retained statement is:
 - weak-field-linear phase valleys share a Newtonian-like mass-scaling class on
   the fixed ordered-lattice family
 - the mass-law statement is cleaner than the distance-law statement
-- broader tail universality across powers is now bounded by the companion
-  fixed-family sweep, but still not promoted to a universal theorem
+- broader tail behavior across powers is now bounded by the companion
+  fixed-family sweep, but it is still not promoted to a closed formula or a
+  universal theorem
