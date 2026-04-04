@@ -109,11 +109,16 @@ the convergence claim would be falsified. Current data: TOWARD at h=0.5,
 0.25, 0.125, strengthening at each step. A reversal below h=0.125 would
 indicate the TOWARD was another (finer) lattice artifact.
 
-### F7. Distance exponent stops steepening (2026-04-04)
-If the distance-law tail exponent plateaus (e.g., stays at -0.53
-at h=0.125 and h=0.0625), the model does NOT produce Newtonian gravity
-in the continuum limit. Currently: -0.35 (h=0.5) → -0.53 (h=0.25).
-If it flattens, the asymptotic exponent is not -2.
+### F7. Distance tail remains shallow under width-matched replay (2026-04-04)
+The earlier “steepening toward `-2`” read was confounded by comparing
+different lattice widths and fit windows. On the current width-matched replay,
+the 3D `1/L^2` tail is shallower at finer `h`, not steeper.
+
+So the real falsifier is now:
+- if wider and finer retained replays keep the post-peak tail shallow, the
+  model does NOT produce Newtonian 3D gravity in this branch
+- only a later retained reversal toward a steeper asymptotic tail would reopen
+  that stronger claim
 
 ### F8. 4D 1/L^3 gravity fails at longer lattice (2026-04-04)
 At L=15 on 4D, 1/L^3 gives +0.034 (TOWARD, strengthening). If at

@@ -158,7 +158,7 @@ not a replacement.
 | Decoherence | → 50% at h=0.25 | → 50% at h=0.25 | TBD |
 | d_TV | → 0.99 at h=0.25 | → 0.83 at h=0.25 | 0.58 |
 | Gravity (TOWARD) | Strengthens | Strengthens on the current branch | stronger persistence candidate than lower powers |
-| Distance tail | b^(-1.08) at h=0.5 | b^(-0.70) on the wider retained `h=0.25` tail probe | TBD |
+| Distance tail | b^(-1.08) at h=0.5 | post-peak tail is retained and b-dependent, but matched-width comparisons currently stay shallow rather than steepen toward `-2` | TBD |
 
 The 3D column now also has a frozen `h=0.25` eight-property script-level card
 on `main`; this is a trust-building conversion, not a closed theorem.
@@ -182,11 +182,14 @@ selection theorem. In particular:
 ### What the lattice changes about the distance law
 
 The random DAG distance law was b-independent (structural limitation).
-The lattice distance law is b-DEPENDENT and improving:
-- 3D 1/L^2 tail: b^(-0.35) at h=0.5 → b^(-0.53) at h=0.25
-- wider `h=0.25` tail stats now improve the post-peak fit to `b^(-0.70)`
-- Exponent steepens with refinement (geometric, field-independent)
-- Direction: toward -2.0 (Newtonian in 3 spatial dims)
+The lattice distance law is b-DEPENDENT, but the current 3D `1/L^2` read is
+more honest and more limited than the earlier steepening narrative:
+- there is a clean post-peak declining tail on the widened retained `h=0.25`
+  probe
+- the earlier cross-width “steepening toward `-2`” read was confounded by
+  comparing different lattice widths and fit windows
+- on the current matched-width replay, the 3D tail is still non-Newtonian and
+  currently looks shallower rather than steeper under refinement
 
 This does NOT rescue the random DAG distance law. It provides an
 alternative architecture where distance law works.
@@ -213,8 +216,9 @@ The retained results are:
 3. CL bath decoherence floor (stable on DAGs, converges on lattice)
 4. 3D mass scaling continuum limit (alpha → 0.58 on DAGs)
 5. Cross-family robustness (4 of 5 DAG families)
-6. **NEW: Distance law on lattice** (current exploratory 3D post-peak fit
-   improved from `b^(-0.53)` to `b^(-0.70)` on a wider `h=0.25` lattice)
+6. **NEW: Distance law on lattice** (current exploratory 3D branch has a
+   real post-peak declining tail, but the stronger “steepens toward `-2`”
+   wording is now retracted)
 7. **NEW: Lattice continuum limit** (MI, decoherence, d_TV all converge)
 
 The provisional/retracted results are:

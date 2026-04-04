@@ -172,7 +172,7 @@ project.
 | Mass-law quality | **weak / bounded** | positive fitted windows exist, but no flagship symmetry lane has a promoted clean mass law |
 | Distance-law quality | **negative structural result** | current connected random/symmetry architecture does not retain a review-safe `1/b`-style law |
 | Continuum / refinement bridge | **promising but bounded** | raw NN is Born-clean through `h = 0.25`; deterministic rescale extends to `h = 0.0625`; RG-style gravity remains open |
-| Generated / emergent symmetry | **reopened / bounded** | structured chokepoint bridge is retained on a narrow canonical slice, but no broad generated successor is promoted |
+| Generated / emergent symmetry | **reopened / bounded** | structured chokepoint bridge is now retained through a modest larger-`N` extension on the same pocket, but no broad generated successor is promoted |
 
 ## Distance-law closure
 

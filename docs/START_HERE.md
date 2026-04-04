@@ -71,6 +71,8 @@ Do not force a trade where only one of those moves.
 - [`docs/UNIFIED_PROGRAM_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/UNIFIED_PROGRAM_NOTE.md)
 - [`docs/MIRROR_VS_LATTICE_PROGRAM_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/MIRROR_VS_LATTICE_PROGRAM_NOTE.md)
 - [`docs/OVERNIGHT_WORK_BACKLOG.md`](/Users/jonreilly/Projects/Physics/docs/OVERNIGHT_WORK_BACKLOG.md)
+- [`docs/CANONICAL_HARNESS_INDEX.md`](/Users/jonreilly/Projects/Physics/docs/CANONICAL_HARNESS_INDEX.md)
+- [`docs/REPRODUCTION_AUDIT_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/REPRODUCTION_AUDIT_NOTE.md)
 - [`docs/STRUCTURED_CHOKEPOINT_BRIDGE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/STRUCTURED_CHOKEPOINT_BRIDGE_NOTE.md)
 - [`docs/ACTION_POWER_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_NOTE.md)
 - [`docs/ACTION_POWER_3D_GRAVITY_SIGN_CLOSURE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_3D_GRAVITY_SIGN_CLOSURE_NOTE.md)
@@ -79,6 +81,7 @@ Do not force a trade where only one of those moves.
 - [`docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md)
 - [`docs/LATTICE_3D_DENSE_WINDOW_EXTENSION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_3D_DENSE_WINDOW_EXTENSION_NOTE.md)
 - [`scripts/canonical_regression_gate.py`](/Users/jonreilly/Projects/Physics/scripts/canonical_regression_gate.py)
+- [`scripts/reproduction_audit_harness.py`](/Users/jonreilly/Projects/Physics/scripts/reproduction_audit_harness.py)
 
 Exploratory but useful branch docs:
 
@@ -105,7 +108,7 @@ Exploratory but useful branch docs:
 
 ## Best next pickup points
 
-1. Extend the structured chokepoint bridge without changing the canonical mirror readout.
-2. Extend the 3D dense spent-delay attractive window without dropping the same-family barrier card.
-3. Keep the action-power branch bounded unless a topology-changing 3D family is introduced.
-4. Keep NN continuum claims narrow unless a new artifact chain truly resolves the current RG / refinement caveats.
+1. Build a bounded evolving-network prototype that clearly separates generated structure from imposed structure.
+2. Add skeptical-reader reproduction tooling that distinguishes canonical harnesses from exploratory drivers.
+3. Extend the 3D dense spent-delay attractive window without dropping the same-family barrier card.
+4. Keep the `1/L^(d-1)` kernel branch bounded unless transfer-norm, asymptotic, and frozen-artifact wording all reconcile.

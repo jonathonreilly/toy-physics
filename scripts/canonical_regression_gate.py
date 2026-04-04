@@ -125,6 +125,32 @@ def check_structured_bridge() -> None:
             "structured bridge retained N=60 row changed materially")
 
 
+def check_structured_bridge_extension() -> None:
+    out = run_script("scripts/structured_chokepoint_bridge_extension.py")
+    require(
+        "The structured bridge widens beyond the current narrow slice" in out,
+        "structured bridge extension verdict changed",
+    )
+    require(
+        re.search(
+            r"^\s*80\s+0\.6925\s+0\.7712±0\.03\s+0\.9910\s+\+4\.3840±0\.666\s+0\.0000±0\.00\s+\+0\.00e\+00\s+16",
+            out,
+            re.MULTILINE,
+        )
+        is not None,
+        "structured bridge extension retained N=80 row changed materially",
+    )
+    require(
+        re.search(
+            r"^\s*100\s+0\.6947\s+0\.8056±0\.03\s+1\.0158\s+\+2\.9007±1\.054\s+0\.0000±0\.00\s+\+0\.00e\+00\s+16",
+            out,
+            re.MULTILINE,
+        )
+        is not None,
+        "structured bridge extension retained N=100 row changed materially",
+    )
+
+
 def check_mirror_2d_validation() -> None:
     out = run_script("scripts/mirror_2d_validation.py")
     require("seeds=8" in out, "mirror 2D validation default seed count drifted from the retained artifact")
@@ -301,6 +327,7 @@ def main() -> None:
         ("dense 3D refinement reconciliation", check_dense_3d_reconciliation),
         ("gravity observable hierarchy", check_gravity_hierarchy),
         ("structured bridge", check_structured_bridge),
+        ("structured bridge extension", check_structured_bridge_extension),
         ("NN raw continuum", check_nn_continuum),
         ("NN deterministic rescale", check_nn_deterministic_rescale),
     ]

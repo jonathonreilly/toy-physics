@@ -80,13 +80,10 @@ interest map rather than just broaden the science search.
 ## Priority order
 
 1. **Structured bridge extension**
-   - Keep the canonical mirror readout fixed.
-   - Extend the retained structured chokepoint bridge without broadening into
-     a new generator search.
-   - Deliverables:
-     - one bounded extension script/log/note chain
-     - one clear decision on whether the bridge widens beyond the current
-       narrow slice
+   - Status: completed on the retained family through `N = 100`.
+   - The pocket widened modestly on the same canonical mirror readout.
+   - Next step is no longer “does it widen at all?” but whether any generated
+     successor can approach this widened pocket without becoming a new search lane.
 
 2. **3D dense spent-delay extension**
    - Keep the retained 3D dense spent-delay family fixed.

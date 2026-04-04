@@ -25,6 +25,8 @@ The review-hardening program has two parts:
 Current review-hardening tooling now includes:
 
 - [`scripts/canonical_regression_gate.py`](/Users/jonreilly/Projects/Physics/scripts/canonical_regression_gate.py)
+- [`scripts/reproduction_audit_harness.py`](/Users/jonreilly/Projects/Physics/scripts/reproduction_audit_harness.py)
+- [`docs/CANONICAL_HARNESS_INDEX.md`](/Users/jonreilly/Projects/Physics/docs/CANONICAL_HARNESS_INDEX.md)
 
 That gate is intentionally modest. It does **not** prove the physics. It does
 provide a cheap code/report drift detector for the retained mirror, lattice,
