@@ -213,6 +213,10 @@ Do not force a trade where only one of those moves.
     - compact refinement companion
     - bounded oscillating-source harness with a frequency-dependent
       fingerprint
+  - the first smallest source-driven local-field attempt is now frozen too:
+    it preserves `TOWARD` and exact zero-source reduction, but it fails the
+    clean linear mass-scaling class (`F~M = 0.64`), so it closes as a bounded
+    no-go for "minimal self-generated field dynamics already solves it"
   - a dedicated horizon `k`-sweep now closes one tempting overclaim:
     on the retained absorbing observable, the strong wavelength-dependent
     horizon story does **not** survive; `alpha_crit` stays nearly flat in `k`
