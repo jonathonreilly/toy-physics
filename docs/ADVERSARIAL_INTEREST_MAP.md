@@ -35,13 +35,13 @@ The best next steps are the ones that improve both at once.
 |---|---:|---|
 | Toy-model mechanism interest | `9.5/10` | high intrinsic curiosity value |
 | Foundations / complex-systems / network-dynamics interest | `9.2/10` | real likely interest in the right subcommunities |
-| Broad theorist interest | `9.7/10` | selective interest, with better bounded replays, cleaner theory-side harnesses, a second-family additivity cross-check, a mesoscopic-source lane that now closes localization more honestly, graph-side evidence that replaces memo-only prose, a one-step generated-geometry refinement companion at `h = 0.25`, a non-label sector-stencil positive that also survives the same refinement step, a matching distance-law companion that keeps the tail positive and declining, a moonshot branch that now includes both trapping thresholds and bounded retarded-field proxies, a distinct edge-carried coupled-field architecture that preserves the weak lane with near-linear scaling, a source-resolved exact Green pocket that now survives one exact-family size-transfer step, a compact `h = 0.25` refinement companion, a local robustness sweep, a new source-resolved propagating Green pocket that keeps the weak sign and Newtonian scaling while adding a causal-memory offset, and a new exact-lattice self-consistent pocket that survives the same compact refinement family while the generated-family transfer closes as a no-go |
-| Bridge to known physics | `9.7/10` | somewhat stronger than before, with a cleaner continuum/action split, a bounded momentum/additivity lane, a sharper mesoscopic-inertia map, graph-perturbation evidence that distinguishes forgiving structure from harsher-ladder sign collapse, a bounded generated-geometry positive that now survives one refinement step, a sector-stencil candidate that stays `TOWARD` with `F~M = 1.00` while keeping the far-field distance tail positive on the retained family, a retained strong-field branch that now includes trapping plus reduction-safe retarded-field scheduling observables, a distinct edge-carried coupled-field variant that survives zero-source reduction but stays weak in amplitude, a source-resolved exact Green pocket that now scales beyond the smallest feasibility case with a real local basin plus a compact refinement companion, a new exact-lattice self-consistent pocket that preserves the same gates on the compact refinement family, and a new exact-lattice propagating-field pocket that adds causal memory without breaking the retained weak-field gates |
-| Publishable as a careful computational toy-model paper | `10.0/10` | increasingly plausible with bounded replay chains, better reproduction, tighter scope control, a full closure of the current localization lane, graph-side harnesses that replace memo-only prose with explicit survival/null-boundary reads, a generated-geometry lane that now has a bounded `h = 0.25` refinement companion, a non-label sector-stencil pair that strengthens the Gate B boundary with a positive sign result plus a positive declining distance-law companion, a larger exact-lattice Green scaling companion that preserves exact reduction and linear mass scaling, a compact exact h=0.25 Green companion that preserves the same gates, a local Green robustness sweep that shows the exact pocket is not just a tuned point, and a new exact-lattice propagating-field pocket that cleanly compares against the static Green control |
-| Publishable as a foundational-physics breakthrough claim | `4.0/10` | still too early for that framing |
+| Broad theorist interest | `9.4/10` | still high, now with a stronger exact-lattice Green control, a first partial generated-family support recovery, and a sharper diagnosis that the main geometry bottleneck is downstream support localization rather than source clipping; stronger than before, but no longer inflated by unretained complex-action/continuum narrative |
+| Bridge to known physics | `9.3/10` | improved by the first real partial generated-family rescue and by more disciplined reduction checks, but still capped by the fact that the self-generated field sector remains exact-lattice-only and the newer complex-action / `h^2` continuum story is not yet retained on `main` |
+| Publishable as a careful computational toy-model paper | `9.9/10` | very strong, with bounded replay chains, better reproduction, tighter scope control, exact-lattice Green/self-consistent/transverse companions, and a generated-family partial recovery that is honest about still being only partial |
+| Publishable as a foundational-physics breakthrough claim | `4.1/10` | slightly improved by the first generated-family partial rescue, but still far too early for stronger framing |
 | Ready for top-tier mainstream physics claims | `2.7/10` | improved credibility, but still far below the required bar |
-| Field-shifting theory program | `6.8/10` | stronger than before, and the moonshot branch now has real bounded strong-field, retarded-field, and alternative coupled-field observables rather than only narrative extension |
-| Landmark foundational breakthrough | `3.5/10` | current evidence base is improving, but still too branch-sensitive and too proxy-heavy for stronger framing |
+| Field-shifting theory program | `6.9/10` | somewhat stronger, because the moonshot branch now has a real exact-lattice control family, a sharper generated-family bottleneck diagnosis, and one actual partial geometry-side recovery rather than only negatives or proxies |
+| Landmark foundational breakthrough | `3.6/10` | current evidence base is improving, but still too branch-sensitive and too exact-lattice-heavy for stronger framing |
 | Nobel-scale breakthrough | `0.4/10` | not a realistic present-tense read |
 
 ## Why this map is lower than the old internal map
@@ -174,47 +174,50 @@ The main upward pressures since the first adversarial cut are:
 
 ## What would most improve the scores
 
-The largest gains now come from **trust-building conversions**, not another
-dozen exploratory branches.
+The largest gains now come from **trust-building conversions on the new exact-to-generated split**, not another dozen exploratory branches.
 
 The biggest score movers are:
 
-1. **A bounded evolving-network dynamics prototype**
+1. **A generated-family recovery that restores the full weak-field lane**
    - strongest improvement to:
      - bridge to known physics
      - broader theorist interest
      - field-shifting theory program
-   - because it closes the visible gap between the axioms and the implemented
-     geometry
+   - because the new partial recovery finally gives a concrete opening beyond
+     the exact lattice; if sign + `F~M` + broader support recover together,
+     the main “exact-lattice only” objection weakens materially
 
-2. **A real continuum / asymptotic bridge**
+2. **A true propagating-field sector**
+   - strongest improvement to:
+     - bridge to known physics
+     - broader theorist interest
+     - field-shifting theory program
+   - because moving from same-site memory / smoothing to an actual causal field
+     equation is one of the few remaining architecture changes that could
+     produce a qualitatively new retained observable
+
+3. **A persistent-object / inertial-response closure**
+   - strongest improvement to:
+     - bridge to known physics
+     - broader theorist interest
+     - careful-paper credibility
+   - because it is still the biggest open internal physics gap after the
+     test-particle and exact-lattice source lanes
+
+4. **A real continuum / asymptotic bridge**
    - strongest improvement to:
      - bridge to known physics
      - mainstream-readiness
      - landmark-breakthrough credibility
-   - because it answers the “small-grid artifact” critique directly
+   - because it answers the “small-grid artifact” critique directly, but only
+     if the branch is actually hardened on `main`
 
-3. **A cleaner same-family closure on one retained branch**
-   - strongest improvement to:
-     - publishability
-     - broader theorist interest
-     - bridge to known physics
-   - because it reduces the current branch / companion-harness sprawl
-
-4. **Independent robustness / reproduction**
+5. **Independent robustness / reproduction**
    - strongest improvement to:
      - mainstream-readiness
      - field-shifting program score
    - because confidence rises sharply once retained claims stop looking like
      one-family / one-script / one-observable stories
-
-5. **Persistent-pattern / inertial-mass closure**
-   - strongest improvement to:
-     - bridge to known physics
-     - broader theorist interest
-     - careful-paper credibility
-   - because the momentum/additivity lane is now sharp enough that the
-     remaining open step is no longer diffuse
 
 6. **Sharper literature positioning + prediction/discriminator card**
    - strongest improvement to:

@@ -227,33 +227,38 @@ remaining testable and review-safe.
        check and preserves `TOWARD` with near-linear mass scaling, but the
        amplitude is weak
 
-6. **Moonshot strong-field branch**
+6. **Moonshot architecture branch**
    - Best upside:
      - one of the few remaining paths with real step-change potential
-     - could reveal a trapping / horizon / no-return threshold rather than
-       another weak-field replay
+     - could turn the exact-lattice Green control into either a
+       geometry-generic weak-field sector or a genuinely causal field sector
    - Rule:
      - do not chase "black holes, etc." broadly
      - choose one minimal extension and one observable only
    - Deliverables:
-     - one script / log / note chain for a trapping-style observable
+     - one script / log / note chain for a generated-family recovery or
+       propagating-field observable
      - one weak-field reduction check on the same extension
      - one explicit positive-or-no-go note
    - Current preferred target:
-     - minimal absorbing or bidirectional trapping probe with escape/no-return
-       threshold
+     - generated-family support recovery that also restores `F~M`
+     - then a true propagating-field observable beyond same-site memory
    - Current retained positives:
      - absorbing threshold
      - bidirectional no-return threshold
      - bounded retarded-field delay / causality proxies with clean reduction
+     - exact-lattice same-site-memory and transverse-propagating Green pockets
+     - one generated-family partial support/sign recovery from a `kNN` floor tweak
    - Current anti-targets:
      - wave anecdotes without a retained phase-sensitive observable
      - backreaction narratives without a retained convergence or no-go chain
      - commit-message-only "GR extension" claims
    - Best next moonshot move:
      - keep the branch narrow
-     - prefer retarded-vs-instantaneous causality or delay-proxy observables
-       over broader wave rhetoric
+     - first ask whether the partial generated-family recovery also restores
+       the mass-scaling class
+     - second ask whether a true propagating field adds anything qualitatively
+       beyond local memory/smoothing
 
 ## Highest-leverage score improvers
 

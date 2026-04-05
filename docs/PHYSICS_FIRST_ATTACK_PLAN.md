@@ -19,20 +19,30 @@ must satisfy a stricter rule than the normal weak-field program:
 3. it must fail fast if the reduction breaks or if the new observable only
    appears through an obviously ad hoc artifact
 
-For the current program, the best such moonshot is not "black holes, etc."
-in general. It is a **minimal strong-field trapping / horizon probe** on the
-smallest bidirectional or absorptive extension that can still be compared
-against the retained weak-field gravity lane.
+For the current program, the best such moonshot is no longer "black holes,
+etc." in general. The branch is now better split into:
 
-That first target has now landed in bounded form:
+- an **exact-lattice control** that tells us which self-generated field ideas
+  can survive the weak-field gates at all
+- a **generated-family transfer** question asking whether that control can
+  escape the exact lattice
+- a **true propagating-field** question asking whether anything beyond
+  same-site memory produces a qualitatively new observable without losing the
+  weak-field lane
+
+The earlier strong-field target has already landed in bounded form:
 
 - absorbing horizon threshold is retained
 - bidirectional no-return threshold is retained
 
-The best next moonshot target is therefore narrower:
+The best next moonshot target is therefore narrower and more structural:
 
-- a bounded retarded-field / delay-proxy lane that still reduces cleanly back
-  to the instantaneous weak-field baseline
+- first, turn the new partial generated-family support recovery into a harder
+  test of the full weak-field lane: sign + `F~M` + broader support
+- second, test a true propagating-field architecture beyond same-site memory
+  or local smoothing
+- only third, return to stronger horizon / delay rhetoric if those
+  architecture upgrades survive reduction
 
 The current repo already has strong bounded evidence in several lanes.
 What is still missing on the physics side is not another narrative pass.
@@ -42,7 +52,7 @@ It is now one or more of these:
 2. a real universality boundary on graph structure
 3. a forced novelty or a real no-go theorem on the action / mass law
 4. a clean 3D continuum / asymptotic closure
-5. one moonshot strong-field branch with an explicit fail-fast reduction check
+5. one moonshot architecture branch with an explicit fail-fast reduction check
 
 Those are the physics bottlenecks that matter most now if the goal is not just
 "a better version of the same story" but "a result that could genuinely
@@ -211,20 +221,23 @@ lattice lane?
 - exact Newtonian wording unless the frozen data really supports it
 - broad “all dimensions solved” language
 
-## Batch 5: Moonshot Strong-Field Branch
+## Batch 5: Moonshot Architecture Branch
 
 **Question**
 
-Can a minimal extension beyond unidirectional weak-field propagation produce a
-retained strong-field observable such as trapping, no-return behavior, or a
-horizon-like threshold while still reducing back to the current weak-field
-lane?
+Can a minimal extension beyond the current exact-lattice Green control produce
+either:
+
+- a geometry-generic recovery of the weak-field lane
+- or a genuinely new causal-field observable
+
+while still reducing back to the retained weak-field baseline?
 
 **Why this matters**
 
 - It is one of the few remaining directions with genuine step-change upside.
-- A real trapping threshold would be qualitatively different from the current
-  weak-field replay program.
+- The first partial generated-family support recovery means the architecture is
+  no longer all-or-nothing; there is now a concrete recovery path to test.
 - If it fails cleanly, that also tells us where the current framework stops.
 
 **Minimal target**
@@ -233,20 +246,22 @@ Do **not** target "black holes" broadly.
 
 Target exactly one of:
 
-- escape fraction vs compactness
-- no-return probability vs compactness
-- redshift / delay blow-up proxy
+- generated-family recovery of `TOWARD` + `F~M` + support breadth
+- true propagating-field lag / phase observable beyond same-site memory
+- escape fraction / no-return only if the above two are stalled
 
 Use exactly one minimal extension:
 
-- absorptive horizon proxy
-- or bidirectional continuation / trapping
-- or imposed retarded-field scheduling with an explicit reduction check
+- connectivity-side support recovery on the retained generated family
+- or a true propagating-field update on the exact lattice
+- or, only as a secondary branch, absorptive / bidirectional / retarded-field
+  strong-field probes with an explicit reduction check
 
 **Success criteria**
 
 - one script / log / note chain
-- one strong-field observable with a qualitative threshold or clean null
+- one new observable with a qualitative threshold, clean null, or clear
+  weak-field recovery/failure boundary
 - one explicit weak-field reduction check
 
 **Fail-fast criteria**
