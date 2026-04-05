@@ -179,7 +179,39 @@ These are no longer ordered only by publication credibility.
 They are ordered by "could this still reveal a genuinely big result?" while
 remaining testable and review-safe.
 
-1. **Generated geometry closure**
+1. **Exact-lattice wavefield / causal-field closure**
+   - Best upside:
+     - this is now the clearest exact-lattice moonshot lead
+     - the larger exact-family wavefield escalation keeps reduction,
+       `TOWARD`, and near-linear `F~M` while adding a coherent detector-line
+       phase ramp
+   - Deliverables:
+     - one transfer or escalation beyond the current exact-lattice family
+     - or one clean no-go saying the wavefield lane cannot leave the exact
+       lattice without losing the weak-field gates
+
+2. **Persistent / quasi-persistent inertial objects**
+   - Best upside:
+     - closes the biggest open internal physics step after the test-particle
+       and source-resolved exact-field lanes
+   - Deliverables:
+     - one sharper localization or repeated-update object probe
+     - or one bounded negative strong enough to freeze the current broad
+       quasi-persistent control as the real limit on this family
+
+3. **Geometry-transfer discriminator / generated-family recovery**
+   - Best upside:
+     - tells us whether the exact-lattice wavefield / Green control can ever
+       leave the exact lattice
+   - New narrowing:
+     - the retained discriminator now says the current `kNN`-floor bridge is
+       geometry-limited, not field-rule-limited
+   - Deliverables:
+     - one geometry-rule change that widens support enough for the field rule
+       to matter
+     - or one stronger no-go saying that this family stays bridge-only
+
+4. **Generated geometry closure**
    - Best upside:
      - turns imposed geometry into mechanism
      - biggest remaining gap between axioms and implementation
@@ -189,7 +221,7 @@ remaining testable and review-safe.
      - one clean bounded negative showing why the current growth rules cannot
        carry the retained gravity lane
 
-2. **Graph-boundary / universality phase diagram**
+5. **Graph-boundary / universality phase diagram**
    - Best upside:
      - could turn the new graph-requirements lane into a real universality
        statement with explicit boundaries
@@ -201,7 +233,7 @@ remaining testable and review-safe.
      - one note saying exactly what graph damage changes: sign, retention,
        exponent fidelity, or graph-family dependence
 
-3. **Forced novelty or no-go on the action law**
+6. **Forced novelty or no-go on the action law**
    - Best upside:
      - either derive a stronger selector than current numerics provide
      - or prove the current framework cannot force it without extra axioms
@@ -209,14 +241,7 @@ remaining testable and review-safe.
      - one bounded derivation/no-go note with a harness where possible
      - no more circular "Newton derived" wording unless the closure is real
 
-4. **Persistent / quasi-persistent inertial objects**
-   - Best upside:
-     - closes the biggest open internal physics step after test-particle lanes
-   - Deliverables:
-     - one last constrained `h = 0.25` localization attempt
-     - or a bounded negative strong enough to end the lane cleanly
-
-5. **Only if artifact-backed: BMV or another genuinely new prediction**
+7. **Only if artifact-backed: BMV or another genuinely new prediction**
    - Best upside:
      - could produce a concrete quantum-gravity-style prediction
    - Rule:

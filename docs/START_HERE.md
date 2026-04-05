@@ -256,9 +256,17 @@ Do not force a trade where only one of those moves.
     stays in the requested dynamic/instantaneous ratio band, and preserves
     the Newtonian mass-scaling class while adding a small causal-memory
     offset relative to the static Green control
+  - a larger exact-lattice wavefield escalation now pushes that lane beyond
+    the compact pocket: exact zero-source reduction still holds, all rows stay
+    `TOWARD`, `F~M` remains near linear, and the detector line shows a
+    coherent phase ramp with `R^2 ~ 0.96` and a several-radian span
   - the generated-family transfer of that self-consistent pocket closes as a
     clean no-go: exact zero-source reduction survives, but the sign and linear
     mass-scaling class do not carry over to the compact generated DAG family
+  - the new generated-family discriminator now makes that split sharper:
+    on the retained `kNN`-floor bridge family, support rescue still beats the
+    wavefield bridge on both sign and detector support, so the current bridge
+    is best read as geometry-limited rather than field-rule-limited
   - a local robustness sweep now shows that exact-lattice Green pocket is not
     a knife-edge tuning point: nearby `mu` / `eps` perturbations and clipped
     source-cluster variants still keep exact zero-source recovery, `TOWARD`,

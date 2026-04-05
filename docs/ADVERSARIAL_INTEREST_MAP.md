@@ -35,12 +35,12 @@ The best next steps are the ones that improve both at once.
 |---|---:|---|
 | Toy-model mechanism interest | `9.5/10` | high intrinsic curiosity value |
 | Foundations / complex-systems / network-dynamics interest | `9.2/10` | real likely interest in the right subcommunities |
-| Broad theorist interest | `9.6/10` | still high, now with a stronger exact-lattice Green control, a first partial generated-family support recovery, a small generated-family basin rather than a one-point fluke, and a new exact-lattice wavefield pocket with a qualitatively stronger phase observable; the main geometry bottleneck is increasingly well diagnosed as downstream support localization rather than source clipping |
-| Bridge to known physics | `9.5/10` | improved by the first real generated-family rescue basin, the exact-lattice wavefield pocket, and more disciplined reduction checks, but still capped by the fact that the self-generated field sector remains exact-lattice-only and the newer complex-action / `h^2` continuum story is not yet retained on `main` |
+| Broad theorist interest | `9.7/10` | still high, now with a larger exact-lattice wavefield escalation that keeps reduction, sign, and near-linear `F~M` while adding a coherent detector-line phase ramp; the generated-family discriminator also sharpens the story by showing the current bridge is geometry-limited rather than just under-tuned |
+| Bridge to known physics | `9.5/10` | improved by the stronger exact-lattice wavefield lane, the first generated-family rescue basin, and the new geometry-limited discriminator, but still capped by the fact that the self-generated field sector remains exact-lattice-only and the newer complex-action / `h^2` continuum story is not yet retained on `main` |
 | Publishable as a careful computational toy-model paper | `10.0/10` | very strong, with bounded replay chains, better reproduction, tighter scope control, exact-lattice Green/self-consistent/transverse companions, and a generated-family support-recovery basin that is honest about still being only a partial rescue |
 | Publishable as a foundational-physics breakthrough claim | `4.1/10` | slightly improved by the first generated-family partial rescue, but still far too early for stronger framing |
 | Ready for top-tier mainstream physics claims | `2.8/10` | improved credibility, but still far below the required bar |
-| Field-shifting theory program | `7.3/10` | somewhat stronger, because the moonshot branch now has a real exact-lattice control family, a sharper generated-family bottleneck diagnosis, a genuine small-basin recovery rather than only negatives or proxies, and a first exact-lattice propagating-field step beyond same-site memory |
+| Field-shifting theory program | `7.4/10` | somewhat stronger, because the moonshot branch now has a larger exact-lattice wavefield control with a cleaner observable, a sharper generated-family bottleneck diagnosis, a genuine small-basin recovery rather than only negatives or proxies, and a first exact-to-generated discriminator that says where the bridge is failing |
 | Landmark foundational breakthrough | `3.6/10` | current evidence base is improving, but still too branch-sensitive and too exact-lattice-heavy for stronger framing |
 | Nobel-scale breakthrough | `0.4/10` | not a realistic present-tense read |
 
@@ -163,11 +163,24 @@ The main upward pressures since the first adversarial cut are:
   - the structureless random-DAG lane is now hardened with a real harness:
     the sign stays noisy, but when rows remain TOWARD the local `F~M` response
     stays linear, which is interesting enough to matter a little here
-  - the source-resolved exact Green pocket now has a larger exact-lattice
-    size-transfer companion, a compact `h = 0.25` refinement companion, a
-    local robustness sweep, and a new exact-lattice propagating-field pocket,
-    which makes the source-resolved branch a real local basin rather than a
-    one-off feasibility blip
+- the source-resolved exact Green pocket now has a larger exact-lattice
+  size-transfer companion, a compact `h = 0.25` refinement companion, a
+  local robustness sweep, and a new exact-lattice propagating-field pocket,
+  which makes the source-resolved branch a real local basin rather than a
+  one-off feasibility blip
+- that same source-resolved branch now has a larger exact-lattice wavefield
+  escalation with a coherent detector-line phase ramp (`R^2 ~ 0.96`) and a
+  much larger wave-versus-memory response separation, which makes the
+  causal-field lane look more like a real architecture family than a single
+  pocket
+- the new generated-family discriminator now sharpens the exact-to-generated
+  split:
+  on the retained `kNN`-floor bridge family, support rescue beats the
+  wavefield bridge on both sign and detector support, so the current bridge is
+  best read as geometry-limited rather than field-rule-limited
+- the complex-action-on-generated-geometry idea is now better bounded too:
+  on current `main`, it is only minimally credible as a tiny falsification-
+  first piggyback on the retained Gate B row, not as a new retained branch
   - the imported `1/L^(d-1)` kernel lane is now scientifically more interesting
     and does live on `main`, but it is still **bounded / unreconciled** rather
     than promoted in the top-line canonical story

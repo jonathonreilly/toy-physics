@@ -47,20 +47,22 @@ The earlier strong-field target has already landed in bounded form:
 
 The best next moonshot target is therefore narrower and more structural:
 
-- first, turn the new partial generated-family support recovery into a harder
-  test of the full weak-field lane: sign + `F~M` + broader support
+- first, push the exact-lattice wavefield lane and ask whether it can transfer
+  off the exact lattice without losing the weak-field gates
 - second, test a true propagating-field architecture beyond same-site memory
   or local smoothing
-- only third, return to stronger horizon / delay rhetoric if those
+- third, push a sharper persistent-object / inertial-response architecture
+- only fourth, return to stronger horizon / delay rhetoric if those
   architecture upgrades survive reduction
 
 Operationally, this is now a portfolio:
 
-1. generated-family recovery toward full weak-field closure
-2. true propagating-field architecture
-3. persistent object / inertial-response architecture
+1. exact-lattice wavefield / causal-field closure
+2. persistent object / inertial-response architecture
+3. geometry-transfer discriminator and geometry-rule recovery
 4. continuum / asymptotic hardening as the credibility lane
-5. strong-field trapping / horizon only after the first three stop advancing
+5. tiny falsification-first complex-action / absorptive analogue probes on retained families
+6. strong-field trapping / horizon only after the first three stop advancing
 
 The current repo already has strong bounded evidence in several lanes.
 What is still missing on the physics side is not another narrative pass.
@@ -75,6 +77,16 @@ It is now one or more of these:
 Those are the physics bottlenecks that matter most now if the goal is not just
 "a better version of the same story" but "a result that could genuinely
 surprise a skeptical physicist."
+
+The newest discriminator result also narrows one tempting lane:
+
+- on the retained `kNN`-floor generated-family bridge, support rescue still
+  beats the wavefield bridge on both sign and detector support
+- the current generated-family bridge is therefore best read as
+  **geometry-limited**
+- that means repeated tuning of the same bridge family is no longer the main
+  moonshot; the next serious generated-family step has to change the geometry
+  rule enough to widen support, not just tweak the field update again
 
 With Gate B actively being pushed elsewhere, the cleanest **parallel**
 physics lane is now:
