@@ -1,0 +1,33 @@
+====================================================================================================
+SOURCE-RESOLVED RETARDED GREEN POCKET
+  exact h=0.25 lattice, same-site memory vs finite-lag retarded-like control
+  comparison: instantaneous 1/r vs same-site vs retarded-like update
+====================================================================================================
+h=0.25, W=3, L=6, source_cluster=5 nodes
+source_z=2.0, memory_mix=0.9, retard_mix=0.7, lag=2
+field kernel: exp(-mu r)/(r+eps), mu=0.08, eps=0.5
+source strengths: [0.001, 0.002, 0.004, 0.008]
+target max |f|: 0.02
+
+REDUCTION CHECK
+  zero-source same-site shift: +0.000000e+00
+  zero-source retarded shift: +0.000000e+00
+
+       s         inst         same          ret   ret/same     ret-same
+--------------------------------------------------------------------------------
+  0.0010 +2.050891e-03 +2.412419e-03 +2.475657e-03      1.207 +6.323823e-05
+  0.0020 +4.105409e-03 +4.824993e-03 +4.951595e-03      1.206 +1.266013e-04
+  0.0040 +8.225500e-03 +9.650581e-03 +9.904265e-03      1.204 +2.536839e-04
+  0.0080 +1.651142e-02 +1.930336e-02 +1.981254e-02      1.200 +5.091792e-04
+
+SUPPORT / SPREAD COMPARISON
+  mean (ret support - same support): +0.000e+00
+  mean (ret N_eff - same N_eff): +4.493e-02
+  positive means the retarded-like update broadens detector support relative to same-site memory
+
+SAFE READ
+  instantaneous F~M exponent: 1.00
+  same-site memory F~M exponent: 1.00
+  retarded-like F~M exponent: 1.00
+  TOWARD rows: 4/4
+  this is a finite-lag pocket, not a full retarded field equation
