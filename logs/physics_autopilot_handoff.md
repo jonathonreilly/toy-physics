@@ -1,14 +1,13 @@
 # Physics Autopilot Handoff
 
-## 2026-04-05 08:20 America/New_York
+## 2026-04-05 11:16 America/New_York
 
 ### Seam class
-- bounded directional-`b` science freeze landed as `e8f46ef`, the managed push
-  helper briefly hit a transient DNS failure, and the canonical repo then
-  advanced twice more to the synced head `10aecdc`, so this loop stops rather
-  than chasing a moving checkout with more work
-- no detached `physics-science` child is active; the cooperative lock was
-  released at loop end
+- coordination-repair integrity step only: the saved work log, handoff, and
+  automation memory had drifted behind the real synced head chain, including
+  the already-landed bounded evolving-network `v6` freeze
+- no detached `physics-science` child is active; the cooperative lock can be
+  released at loop end if the managed push finishes cleanly
 
 ### What this loop did
 - read the tracked work log, latest handoff, and automation memory in protocol
@@ -16,67 +15,57 @@
 - confirmed the latest handoff named no detached `physics-science` child to
   resume or protect
 - reconciled canonical repo state and found the saved coordination layer stale
-  against the synced graph-scout head `81ccf55`
-- verified the user-priority widened holdout artifact directly:
-  - reran
-    `python3 /Users/jonreilly/Projects/Physics/scripts/directional_b_geometry_normalized_holdout_transfer.py --mass-nodes 5`
-  - compared the fresh output against
-    `/Users/jonreilly/Projects/Physics/logs/2026-04-05-directional-b-geometry-normalized-holdout-transfer-mass5.txt`
-    and got an empty diff
-- froze that bounded result as `e8f46ef`
-  (`docs(directional-b): freeze mass5 holdout transfer`) by updating:
-  - `docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_MASS5_NOTE.md`
-  - `docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_NOTE.md`
-  - `docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
-  - `README.md`
-  - `AUTOPILOT_WORKLOG.md`
-- ran the managed push helper exactly as required:
-  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
-  - result: `status=failed`, `failure_kind=dns_failure`, `attempts_used=5`
-- before loop end, the canonical repo advanced locally on top of the
-  directional-`b` commit:
-  - `1019d64` (`docs(physics): freeze localized source-response sweep`)
-  - `10aecdc` (`feat(gate-b): decoherence 48.6% on grown geometry — COMPLETE package`)
-- refreshed this runtime handoff, created automation memory, and released the
-  cooperative `physics-science` lock because no child run remains active
+  against the synced head `a69ebe4`
+- inspected the missed synced head chain directly:
+  - `da27d6c` (`docs(gate-b): freeze h=0.5 structured-growth v6 replay`)
+  - `4cdfcbe` (`feat: quantum spectral signature — wave amplification 19x, k-dependent peak`)
+  - `46b4c4f` (`feat: wave amplification robust and GROWS — 43x at L=30, 966x at s=0.2`)
+  - `a05a4e9` (`test: bound quantum horizon k-dependence on retained family`)
+  - `7cae65d` (`test: freeze minimal source-driven field probe`)
+  - `a69ebe4` (`test: bound near-horizon wave amplification claim`)
+- ran the cheap confidence gate because recent landed commits added new script
+  surfaces:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/base_confidence_check.py`
+  - result: passed
+- refreshed the tracked work log, this runtime handoff, and automation memory
+  so the next loop starts from the real synced head and does not repeat the
+  already-landed directional-`b` or structured-growth `v6` work
 
 ### Current state
 - no detached `physics-science` child is active
-- the active synced local head is `10aecdc`
-  (`feat(gate-b): decoherence 48.6% on grown geometry — COMPLETE package`)
-- the earlier concurrent local advance `1019d64`
-  (`docs(physics): freeze localized source-response sweep`) and this loop's
-  directional-`b` freeze `e8f46ef` both remain immediately underneath
-- `main` is currently synced with `origin/main` (`0 0`)
-- the only tracked dirty file left at loop end is this runtime handoff
-- the managed push helper did fail once with a transient DNS error resolving
-  `github.com`, but that is no longer the live sync blocker because the later
-  head advance is already reflected locally and at `origin/main`
+- before this loop's coordination repair, the canonical repo was clean and
+  synced at `a69ebe4` (`test: bound near-horizon wave amplification claim`)
+- the stale instruction to run
+  `python3 /Users/jonreilly/Projects/Physics/scripts/evolving_network_prototype_v6.py`
+  is now obsolete because that bounded replay already landed earlier as
+  `da27d6c`
+- the bounded integrity replay passed, so the repo is ready for the next
+  non-overlapping science step once this coordination repair is committed and
+  pushed
 
 ### Strongest confirmed conclusion
-- the widened holdout replay is now frozen as a stable repo-facing result:
-  - on the second dense-family holdout with `mass_nodes = 5`, `N = 25` loses
-    the center-offset passes (`A/b`, `F/b`) while nearest-edge density
-    (`A/edge`, `F/edge`) still passes
-  - the portable directional-`b` read is therefore narrower and safer:
-    `response / b` is asymptotic, while `response / edge_b` is the tested
-    finite-source correction once widened low-`b` overlap is real
-- operationally, that result is already in synced history, but the
-  coordination layer is stale again because concurrent local work advanced the
-  canonical repo beyond this loop's tracked work-log entry to `1019d64` and
-  then `10aecdc`
+- the saved coordination files were the blocker, not the repo: `main` already
+  contained the missed bounded evolving-network result plus a later strong-field
+  chain that tightened claims rather than broadened them
+- the retained strong-field read is now narrower than the stale state knew:
+  - the smallest source-driven local field keeps `TOWARD` and exact zero-source
+    reduction but fails linear mass scaling (`F~M = 0.64`)
+  - the retained horizon threshold is nearly flat in `k`
+  - the exact-lattice near-horizon wave-amplification ratio collapses to about
+    `1x`, so the earlier large-amplification headline is not retained
+- operationally, the next non-overlapping science pass should move to one
+  bounded continuum / asymptotic bridge card rather than revisit already-frozen
+  directional-`b`, structured-growth, or decoherence-frontier work
 
 ### Exact next step
-- before any new science, reconcile coordination to the real synced head chain
-  now visible in the repo:
-  - `10aecdc` (`feat(gate-b): decoherence 48.6% on grown geometry — COMPLETE package`)
-  - `1019d64` (`docs(physics): freeze localized source-response sweep`)
-  - `e8f46ef` (`docs(directional-b): freeze mass5 holdout transfer`)
-- only once the work log / handoff / memory reflect that synced head should the
-  next science loop move on to the bounded structured-growth prototype:
-  - `python3 /Users/jonreilly/Projects/Physics/scripts/evolving_network_prototype_v6.py`
+- move to one bounded continuum / asymptotic bridge card on the retained
+  valley-linear ladder
+- use:
+  `python3 /Users/jonreilly/Projects/Physics/scripts/valley_linear_asymptotic_bridge.py`
 
 ### First concrete action
-- inspect the synced new heads directly with `git show --stat --summary
-  --oneline 10aecdc` and `git show --stat --summary --oneline 1019d64`, then
-  refresh the coordination files before any new science step
+- rerun `valley_linear_asymptotic_bridge.py` and compare the coarse/core/wide
+  tail fits against
+  `/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_CONTINUUM_SYNTHESIS_NOTE.md`
+  before deciding whether one compact scaling card can be frozen without new
+  search sprawl

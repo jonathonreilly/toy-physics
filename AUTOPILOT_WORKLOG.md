@@ -1,3 +1,90 @@
+## 2026-04-05 — Coordination reconciled to synced wave-amplification head; cheap gate passed
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed in
+  protocol order at loop start
+- no detached `physics-science` child was active to resume or monitor
+- the canonical repo at `/Users/jonreilly/Projects/Physics` was clean and
+  synced at `a69ebe4` before this step:
+  - `git status --short --branch` reported `## main...origin/main`
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 12` showed the synced head chain
+    `a69ebe4`, `7cae65d`, `a05a4e9`, `46b4c4f`, `4cdfcbe`, `da27d6c`
+- the saved coordination layer had drifted again:
+  - this tracked work log and
+    `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+    still stopped before the older synced `10aecdc` snapshot
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` still
+    described a different thread skipping because another worker held the lock
+- the user-priority non-overlapping follow-ons were already present on
+  `main`:
+  - `da27d6c` (`docs(gate-b): freeze h=0.5 structured-growth v6 replay`)
+    had already frozen the bounded evolving-network step the stale handoff was
+    still asking for
+  - the later strong-field / horizon commits were already bounded, review-safe
+    overclaim-killers rather than an invitation to reopen the decoherence
+    frontier
+
+### What changed
+- inspected the landed synced heads directly instead of trusting the stale
+  coordination text:
+  - `git show --stat --summary --oneline da27d6c`
+  - `git show --stat --summary --oneline 4cdfcbe`
+  - `git show --stat --summary --oneline 46b4c4f`
+  - `git show --stat --summary --oneline a05a4e9`
+  - `git show --stat --summary --oneline 7cae65d`
+  - `git show --stat --summary --oneline a69ebe4`
+- reread the current priority surfaces directly:
+  - `/Users/jonreilly/Projects/Physics/docs/OVERNIGHT_WORK_BACKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/docs/PHYSICS_FIRST_ATTACK_PLAN.md`
+- ran the cheap confidence gate because recent landed commits added new script
+  surfaces:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/base_confidence_check.py`
+  - result: passed
+- refreshed the tracked work log, runtime handoff, and automation memory so
+  the next loop starts from the real synced head and no longer repeats
+  already-landed directional-`b` or bounded evolving-network work
+
+### Strongest confirmed conclusion
+- the active synced coordination head before this repair was `a69ebe4`
+  (`test: bound near-horizon wave amplification claim`), not the older
+  `10aecdc` snapshot still named by the saved coordination files
+- the missed bounded evolving-network result is already on `main` as
+  `da27d6c`, so the old instruction to "run `evolving_network_prototype_v6.py`
+  next" is now stale
+- the later retained strong-field chain is narrower than the stale
+  coordination state knew:
+  - `7cae65d` freezes the smallest source-driven local field as a bounded
+    no-go for full weak-field recovery because `TOWARD` and exact zero-source
+    reduction survive but linear mass scaling does not (`F~M = 0.64`)
+  - `a05a4e9` bounds the absorbing-threshold `k` dependence as nearly flat on
+    the retained horizon observable
+  - `a69ebe4` kills the stronger near-horizon wave-amplification headline on
+    the exact-lattice harness by collapsing the retained ratio to about `1x`
+- operationally, coordination is no longer the blocker; the next
+  non-overlapping science pass should move to one bounded continuum /
+  asymptotic bridge card rather than revisit already-frozen directional-`b`,
+  structured-growth, or decoherence-frontier artifacts
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- move to one bounded continuum / asymptotic bridge card now that the
+  directional-`b` freeze and the bounded evolving-network `v6` replay are
+  already on `main`
+- use the retained valley-linear ladder:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/valley_linear_asymptotic_bridge.py`
+
+### First concrete action
+- rerun `valley_linear_asymptotic_bridge.py` and compare its coarse/core/wide
+  tail fits against
+  `/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_CONTINUUM_SYNTHESIS_NOTE.md`
+  to decide whether one compact scaling card can be frozen without reopening
+  new search space
+
 ## 2026-04-05 — Widened holdout transfer freezes `edge_b` as the portable directional-`b` correction
 
 ### Current state
