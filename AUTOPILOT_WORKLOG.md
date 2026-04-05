@@ -1,3 +1,70 @@
+## 2026-04-04 — Coordination reconciled to the synced coarse-localization closure head
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed
+  earlier in this loop
+- no detached science child was active to resume or monitor
+- after the first coordination repair landed, the canonical repo absorbed a
+  newer synced localization-closure chain above it:
+  - `2d036ab` (`scout(mesoscopic): recommend h=0.25 for localization`)
+  - `e8c9f2f` (`feat(mesoscopic): add compact floor sweep`)
+  - `96eec1e` (`feat(inertia): bound annular-tapered localization sweep`)
+  - `3e5042b` (`docs(inertia): close coarse localization branch`)
+- the canonical repo is now clean and synced at `3e5042b`:
+  - `git status --short --branch` reported `## main...origin/main`
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+- the prior same-loop coordination entry below and the earlier handoff draft
+  had already drifted again because they still named `6d91de9` as the active
+  synced head
+
+### What changed
+- inspected the landed synced closure chain instead of trusting the stale
+  same-loop coordination text:
+  - `git show --stat --summary --oneline 2d036ab`
+  - `git show --stat --summary --oneline e8c9f2f`
+  - `git show --stat --summary --oneline 96eec1e`
+  - `git show --stat --summary --oneline 3e5042b`
+- reread the settled closure surfaces directly:
+  - `/Users/jonreilly/Projects/Physics/docs/MESOSCOPIC_SURROGATE_COMPACT_FLOOR_SWEEP_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/MESOSCOPIC_SURROGATE_ANNULAR_TAPERED_SWEEP_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/PERSISTENT_INERTIAL_RESPONSE_READINESS_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-mesoscopic-surrogate-compact-floor-sweep.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-mesoscopic-surrogate-annular-tapered-sweep.txt`
+- prepended this final coordination-repair entry and refreshed the runtime
+  handoff plus automation memory to match the real synced head again
+
+### Strongest confirmed conclusion
+- the retained 3D `h = 0.5` localization branch is now effectively closed as a
+  broad-source mesoscopic control lane:
+  - compact Gaussian and tapered families can survive explicit floors, but
+    they do not beat the admissible broad `topN` frontier
+  - no admissible annular, hollow-square, or tapered-ellipsoid family beats
+    the same frontier either
+  - the retained 2D companion still has no sharp support threshold across the
+    scanned `topN = 1 .. 81` range
+- the only still-honest localization follow-on is a retained 3D `h = 0.25`
+  replay with explicit floors; otherwise the lane should stay frozen as a
+  bounded negative rather than reopened on 3D `h = 0.5` or 2D `h = 0.5`
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- with sync restored at the current head, return to the highest-priority
+  non-overlapping directional-`b` science lane:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/directional_b_geometry_normalized_holdout_transfer.py --mass-nodes 5`
+- if the mesoscopic localization lane is revisited later, skip any more 3D
+  `h = 0.5` / 2D threshold sweeps and go directly to the retained 3D
+  `h = 0.25` family with explicit floors
+
+### First concrete action
+- rerun the widened-source directional-`b` holdout transfer at `mass_nodes = 5`
+  and inspect the low-`b` rows before deciding whether the fixed directional-
+  measure lane still stays on pure `1 / b` or must switch immediately to the
+  nearest-edge finite-source correction
+
 ## 2026-04-04 — Coordination reconciled to the synced mesoscopic localization head
 
 ### Current state
