@@ -1,0 +1,33 @@
+==============================================================================
+MINIMAL ABSORBING-HORIZON PROBE
+  Retained 3D ordered-lattice valley-linear family
+  h=0.5, W=8, L=12, mass_z=3.0, strength=0.1
+  Observable: escape fraction vs absorptive coupling alpha
+==============================================================================
+
+WEAK-FIELD REDUCTION CHECK
+  alpha=0 detector probability (free): 7.41580293e+09
+  alpha=0 detector probability (mass): 1.45873511e+10
+  alpha=0 centroid shift: +2.195382e-01  -> TOWARD
+  reduction check: PASS if alpha=0 matches the retained weak-field TOWARD lane
+
+ALPHA SWEEP
+   alpha       det_prob  escape_frac   absorbed
+--------------------------------------------------
+    0.00 1.45873511e+10       1.0000     0.0000
+    0.10 1.30664275e+10       0.8957     0.1043
+    0.30 1.05096976e+10       0.7205     0.2795
+    0.50 8.48061835e+09       0.5814     0.4186
+    1.00 5.02821442e+09       0.3447     0.6553
+    2.00 1.86239672e+09       0.1277     0.8723
+    5.00 1.27702754e+08       0.0088     0.9912
+   10.00 2.59716186e+06       0.0002     0.9998
+
+SUMMARY
+  50% escape threshold reached by alpha ≈ 1.00.
+  alpha=10.00 escape fraction = 0.0002
+  alpha=0 weak-field reduction sign = TOWARD
+  Safe read: this is a bounded absorbing-proxy experiment, not a full
+  horizon theorem. It is only interesting if the reduction check survives.
+
+Total time: 2s
