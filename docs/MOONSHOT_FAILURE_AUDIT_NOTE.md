@@ -95,43 +95,57 @@ Verdict:
 - robust no-go for readout localization on the current compact repeated-update
   source object
 
-## 4. Distance-law / wide-lattice continuum claim
+## 4. Distance-law / wide-lattice continuation
 
-Primary closure:
+Original closure state:
 
-- the compact grown-geometry tail transfer is retained on `main`
-- the broader wide-lattice `h^2+T` continuation is still exploratory on
+- the compact grown-geometry tail transfer was retained on `main`
+- the broader wide-lattice `h^2+T` continuation was still exploratory on
   `main`
 
-Why this still looks closed after re-checking:
+Status after re-checking:
 
 - the retained compact `h = 0.25` family already gives the narrow distance-law
   frontier on `main`
-- the branch-side wide-lattice claim still does not have its own retained
+- the wide-lattice branch-side claim has now earned its own retained
   script / log / note chain on `main`
-- so the safe claim is retained frontier, not full continuum theory
+- the safe claim has therefore moved upward from compact frontier only to
+  compact-plus-wide retained frontier, but still not to full continuum theory
 
 Adjacent variant check:
 
-- the wide-lattice branch-side result may still be worth hardening later
-- but it is not promoted here
+- the missed cheap variant was the independent wide-lattice replay
+- that replay has now been done and retained
+- the next open question is no longer whether the frontier exists on `main`
+- it is whether the branch can be promoted beyond finite-lattice frontier
+  language into a stronger asymptotic statement
 
 Verdict:
 
-- retained frontier on the compact `h = 0.25` tail fit
-- wide-lattice `h^2+T` remains exploratory
+- this item is no longer a closed-negative audit target
+- the wide-lattice `h^2+T` continuation has graduated to a retained frontier
+  result on `main`
+- what remains open is the stronger continuum interpretation, not the
+  existence of the wide-lattice replay itself
 
 ## Final Read
 
-The closed moonshot lanes were re-checked, and none of them appear to have a
-cheap missed reopening on the current retained families.
+The closed moonshot lanes were re-checked, and only one cheap missed reopening
+was found:
+
+- the wide-lattice `h^2+T` replay
+
+That reopening has now been executed and retained on `main`.
+
+The remaining closed moonshot lanes do not appear to have a cheap missed
+reopening on the current retained families.
 
 That means the current moonshot portfolio should move forward, not sideways:
 
 - exact-lattice wavefield / causal-field closure
+- retained-grown propagating or trapping-field architecture
 - persistent object / inertial-response closure
 - a genuinely new geometry family if we want to revisit transfer
-- only then stronger horizon / trapping rhetoric
 
 The distance-law branch is the only one that already gives a retained frontier
 result on `main`, and that should stay the narrow claim surface for now.

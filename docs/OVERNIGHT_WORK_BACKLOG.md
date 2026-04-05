@@ -43,8 +43,16 @@ There is now one explicit exception to the otherwise conservative frontier map:
   - one minimal new observable
   - one minimal architecture change
   - one explicit weak-field reduction check
-  - immediate shutdown if the branch only buys drama by destroying the
-    retained weak-field baseline
+- immediate shutdown if the branch only buys drama by destroying the
+  retained weak-field baseline
+
+When the current batch reaches a real local maximum, do one full repo cleanup:
+
+- reconcile stale claim surfaces against the retained notes
+- demote branch-only claims that never made it onto `main`
+- trim duplicated frontier summaries
+- leave exploratory scripts in place, but stop letting them speak louder than
+  their notes
 
 External-reception calibration now lives in:
 
@@ -260,9 +268,21 @@ remaining testable and review-safe.
      - one self-consistent or retarded-like field state on the retained Gate B
        row
      - one exact reduction limit back to the frozen grown baseline
-     - one bounded detector-line or far-field causal observable
+   - one bounded detector-line or far-field causal observable
 
-5. **Generated geometry closure**
+5. **Retained-grown-family trapping / frontier transport**
+   - Best upside:
+     - the grown family now already has a bounded trap-capable transport knob
+       with exact zero-coupling reduction
+     - the next step is to see whether that can be upgraded from a transport
+       observable into a more structural frontier result without losing the
+       weak-field lane
+   - Deliverables:
+     - one stricter trapping/frontier observable beyond plain detector escape
+     - one exact reduction limit on the same retained grown row
+     - one note separating bounded transport from any stronger horizon rhetoric
+
+6. **Generated geometry closure**
    - Best upside:
      - turns imposed geometry into mechanism
      - biggest remaining gap between axioms and implementation
@@ -272,7 +292,7 @@ remaining testable and review-safe.
      - one clean bounded negative showing why the current growth rules cannot
        carry the retained gravity lane
 
-6. **Graph-boundary / universality phase diagram**
+7. **Graph-boundary / universality phase diagram**
    - Best upside:
      - could turn the new graph-requirements lane into a real universality
        statement with explicit boundaries
@@ -284,7 +304,7 @@ remaining testable and review-safe.
      - one note saying exactly what graph damage changes: sign, retention,
        exponent fidelity, or graph-family dependence
 
-7. **Forced novelty or no-go on the action law**
+8. **Forced novelty or no-go on the action law**
    - Best upside:
      - either derive a stronger selector than current numerics provide
      - or prove the current framework cannot force it without extra axioms
@@ -292,14 +312,14 @@ remaining testable and review-safe.
      - one bounded derivation/no-go note with a harness where possible
      - no more circular "Newton derived" wording unless the closure is real
 
-8. **Only if artifact-backed: BMV or another genuinely new prediction**
+9. **Only if artifact-backed: BMV or another genuinely new prediction**
    - Best upside:
      - could produce a concrete quantum-gravity-style prediction
    - Rule:
      - note-only or commit-message-only claims do not count
      - if the artifact chain is absent, this lane is paused
 
-7. **Alternative coupled-field architecture**
+10. **Alternative coupled-field architecture**
    - Best upside:
      - shows whether a non-telegraph local field rule can preserve the weak
        lane more cleanly
@@ -312,7 +332,7 @@ remaining testable and review-safe.
        check and preserves `TOWARD` with near-linear mass scaling, but the
        amplitude is weak
 
-6. **Moonshot architecture portfolio**
+11. **Moonshot architecture portfolio**
    - Best upside:
      - one of the few remaining paths with real step-change potential
      - could turn the exact-lattice Green control into either a
@@ -326,15 +346,22 @@ remaining testable and review-safe.
      - one weak-field reduction check on the same extension
      - one explicit positive-or-no-go note
    - Current preferred target:
-     - generated-family support recovery that also restores `F~M`
-     - then a true propagating-field observable beyond same-site memory
-     - in parallel, a persistent-object / inertial-response architecture that
-       might close the mass gap more directly
+     - a stronger retained-grown-family propagating field than simple layer
+       memory / `gamma` blending
+     - in parallel, a retained-grown trapping/frontier upgrade beyond the
+       current bounded transport slab
+     - then a persistent-object / inertial-response architecture that might
+       close the mass gap more directly
+     - generated-family recovery stays live, but only through genuinely new
+       geometry families rather than more small bridge tweaks
    - Current retained positives:
      - absorbing threshold
      - bidirectional no-return threshold
      - bounded retarded-field delay / causality proxies with clean reduction
      - exact-lattice same-site-memory and transverse-propagating Green pockets
+     - exact-lattice wavefield escalation with a coherent detector-line phase ramp
+     - retained wide-lattice `h^2+T` far-tail replay on `main`
+     - retained grown-row trapping-capable transport with exact zero-coupling reduction
      - one generated-family partial support/sign recovery from a `kNN` floor tweak
      - a new exact-lattice wavefield pocket with stronger phase lag and lower
        overlap than same-site memory
@@ -346,13 +373,16 @@ remaining testable and review-safe.
      - commit-message-only "GR extension" claims
    - Best next moonshot move:
      - keep the branch narrow
-     - first ask whether the partial generated-family recovery also restores
-       the mass-scaling class
-     - second ask whether a true propagating field adds anything qualitatively
-       beyond local memory/smoothing
+     - first ask whether a stronger grown-family propagating field can produce
+       a causal observable the minimal memory blend could not
+     - second ask whether the retained grown trapping transport can be
+       sharpened into a more structural frontier observable without losing
+       reduction
      - third keep the persistent-object lane alive as a separate candidate for
        later unification rather than forcing everything through geometry
-     - fourth keep the continuum bridge honest: promising numerically, but not
+     - fourth revisit closed moonshots only through explicit failure-audit
+       micro-probes, not broad reopenings
+     - fifth keep the continuum bridge honest: promising numerically, but not
        yet a retained theorem
 
 ## Highest-leverage score improvers

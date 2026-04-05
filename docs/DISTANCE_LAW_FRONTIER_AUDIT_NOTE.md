@@ -1,20 +1,20 @@
 # Distance Law Frontier Audit
 
 **Date:** 2026-04-05  
-**Status:** retained frontier on the compact `h = 0.25` grown-geometry tail fit; wide-lattice `h^2+T` claim still exploratory on `main`
+**Status:** retained frontier note, now superseded upward by the independently replayed wide-lattice `h^2+T` result on `main`
 
 ## Question
 
-Is there one narrow distance-law claim that can be independently hardened onto
-`main` without turning this into a full continuum theory?
+What is the smallest honest distance-law claim now retained on `main`, after
+the later independent wide-lattice replay?
 
-This audit compares:
+This audit originally compared:
 
 - the retained compact grown-geometry `h = 0.25` tail transfer already on
   `main`
 - the branch-side wide-lattice `h^2+T` continuation as a reference only
 
-## Mainline evidence
+## Earlier mainline evidence
 
 The retained mainline distance-law companions already say:
 
@@ -37,40 +37,37 @@ Safe read from the retained family:
 - the `h = 0.25` replay remains positive and declining
 - this is a bounded refinement companion, not a full continuum theorem
 
-## Branch-side reference
+## Status update
+The later independent replay has now landed on `main`:
 
-The `claude/distracted-napier` branch contains a wider `h^2+T` distance-law
-claim with a far-field tail fit around `1/b^1.1` on a wider lattice window.
+- [`docs/WIDE_LATTICE_H2T_DISTANCE_LAW_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/WIDE_LATTICE_H2T_DISTANCE_LAW_NOTE.md)
 
-That is a useful reference point, but it is **not** yet a retained `main`
-claim.
+That means the frontier has moved.
 
-The reason is simple:
+The safe current stack is now:
 
-- `main` already has a retained compact `h = 0.25` grown-geometry tail fit
-- the wide-lattice `h^2+T` result does not yet have a separate retained note /
-  log chain on `main`
-- without that, the wider claim should stay exploratory
+- compact grown-geometry distance-law transfer remains retained
+- wide-lattice ordered `h^2+T` far-tail replay is also retained
+- neither result is yet a full continuum theorem
 
 ## Final Verdict
 
-The smallest serious distance-law claim that is already hardened on `main` is:
+The compact grown-geometry far-field tail transfer is still a retained
+frontier result.
 
-- compact grown-geometry far-field tail transfer at `h = 0.25`
+But it is no longer the whole frontier by itself.
 
-That is a **retained frontier** result.
+The independently replayed wide-lattice `h^2+T` far-tail result is now also
+retained on `main`.
 
-The broader wide-lattice `h^2+T` / continuum hardening claim is still:
+So the honest current frontier is:
 
-- **exploratory**
-
-It may become the next frontier if the wide-lattice replay is later frozen on
-`main`, but it is not yet independently retained here.
+- compact grown-geometry transfer
+- plus wide-lattice ordered `h^2+T` far-tail replay
 
 ## What This Means
 
-The right near-term move is not to broaden into a full continuum theory.
-It is to keep the compact retained tail transfer as the hard floor, and only
-promote the wide-lattice `h^2+T` story if it earns its own script / log / note
-chain on `main`.
-
+The right near-term move is still not to broaden into a full continuum theory.
+It is to keep both retained frontier pieces in view and only promote the
+distance-law lane further if a stronger asymptotic statement earns its own
+artifact chain on `main`.

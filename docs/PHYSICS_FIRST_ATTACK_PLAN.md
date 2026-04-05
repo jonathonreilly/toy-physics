@@ -44,6 +44,8 @@ The earlier strong-field target has already landed in bounded form:
 - bidirectional no-return threshold is retained
 - a first exact-lattice propagating-field pocket is retained, but only as a
   controlled phase-lag / overlap observable
+- a retained grown-row trap-capable transport probe is also now frozen with
+  exact zero-coupling reduction and a monotone escape observable
 
 The best next moonshot target is therefore narrower and more structural:
 
@@ -55,17 +57,18 @@ The best next moonshot target is therefore narrower and more structural:
   now specifically targeting detector/readout localization on top of the new
   compact repeated-update source-object positive
 - only fourth, return to stronger horizon / delay rhetoric if those
-  architecture upgrades survive reduction
+  architecture upgrades survive reduction, while keeping the new bounded
+  grown-row trapping transport probe as a control rather than the headline
 
 Operationally, this is now a portfolio:
 
 1. exact-lattice wavefield / causal-field closure
 2. retained-grown-family propagating-field closure
-3. persistent object / inertial-response architecture
-4. geometry-transfer discriminator and geometry-rule recovery
-5. continuum / asymptotic hardening as the credibility lane
-6. tiny falsification-first complex-action / absorptive analogue probes on retained families
-7. strong-field trapping / horizon only after the first four stop advancing
+3. retained-grown-family trapping / frontier architecture beyond the current bounded transport slab
+4. persistent object / inertial-response architecture
+5. geometry-transfer discriminator and geometry-rule recovery
+6. continuum / asymptotic hardening as the credibility lane
+7. tiny falsification-first complex-action / absorptive analogue probes on retained families
 
 The current repo already has strong bounded evidence in several lanes.
 What is still missing on the physics side is not another narrative pass.
@@ -138,6 +141,14 @@ Do not count:
 - another cleaner replay of known-law reproduction
 - a memo-only claim without a real harness
 - a branch that survives only in commit messages
+
+Also count one thing as progress if it is truly review-safe:
+
+- a retained frontier result that independently hardens a previously
+  branch-side claim onto `main`
+
+The wide-lattice `h^2+T` distance-law replay is the current model example of
+that kind of progress.
 
 For the moonshot branch, also do not count:
 
