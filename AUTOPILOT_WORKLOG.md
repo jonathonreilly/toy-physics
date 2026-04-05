@@ -1,3 +1,77 @@
+## 2026-04-05 — Widened holdout transfer freezes `edge_b` as the portable directional-`b` correction
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed in
+  protocol order at loop start
+- no detached `physics-science` child was active to resume or monitor
+- the canonical repo at `/Users/jonreilly/Projects/Physics` was clean and
+  synced at `81ccf55` before this step:
+  - `git status --short --branch` reported `## main...origin/main` with only
+    the runtime handoff modified
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 8` showed synced head
+    `81ccf55` (`docs(graph): reconcile scout with boundary sweep`)
+- the saved coordination layer had drifted again:
+  - this tracked work log still stopped before the synced graph scout head
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+    still described the older janitor stop at `c9b190b`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` did not
+    exist yet in this automation workspace
+- the user-priority unresolved science seam was the fixed directional-measure
+  widened holdout replay:
+  - the verified artifact already existed at
+    `/Users/jonreilly/Projects/Physics/logs/2026-04-05-directional-b-geometry-normalized-holdout-transfer-mass5.txt`
+  - but no repo-facing note had frozen its conclusion yet
+
+### What changed
+- reran the widened-source holdout harness directly:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/directional_b_geometry_normalized_holdout_transfer.py --mass-nodes 5`
+- compared that fresh output against the saved log and got an empty diff, so
+  the saved artifact is reproducible on the canonical repo state
+- froze the result in a new bounded note:
+  - `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_MASS5_NOTE.md`
+- updated the existing directional-measure summaries so the promoted wording
+  matches the widened holdout result:
+  - `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- refreshed the runtime handoff and created automation memory for this
+  workspace so the next loop starts from the new directional-`b` closure
+
+### Strongest confirmed conclusion
+- the widened holdout replay does not kill the geometry-normalized
+  directional-`b` lane, but it does sharpen which correction survives
+- on the second dense-family holdout with `mass_nodes = 5`:
+  - `N = 12` still passes on `A/b`, `A/edge`, `F/b`, and `F/edge`
+  - `N = 25` loses the center-offset passes (`A/b`, `F/b`) while
+    nearest-edge density (`A/edge`, `F/edge`) still passes
+- the promoted portable read is therefore now narrower and safer:
+  - `response / b` is the asymptotic leading term
+  - `response / edge_b` is the finite-source correction that still transfers
+    once widened low-`b` overlap is real
+- operationally, this closes the outstanding `mass_nodes = 5` follow-on as a
+  stable repo-facing directional-`b` result rather than another open prompt
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_MASS5_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- `/Users/jonreilly/Projects/Physics/README.md`
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- move to one bounded evolving-network dynamics prototype rather than reopen
+  the directional-`b` denominator lane
+- use the current structured-growth sweep:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/evolving_network_prototype_v6.py`
+
+### First concrete action
+- run `evolving_network_prototype_v6.py` and inspect whether any frozen
+  `drift` / `restore` pair keeps a review-clean TOWARD sign on the `h = 0.5`
+  structured-growth sweep
+
 ## 2026-04-05 — Coordination reconciled to synced structureless-DAG head; local drafts left untouched
 
 ### Current state

@@ -99,14 +99,14 @@ Together they now say:
 
 ## Best next move
 
-The next bounded follow-on should stay on the same lane:
+That widened `mass_nodes = 5` follow-on has now landed as:
 
-- test whether the same holdout transfer survives the widened `mass_nodes = 5`
-  family, where the finite-source correction should matter most
+- [`docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_MASS5_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_MASS5_NOTE.md)
 
-If that fails, the honest read is still useful:
+The sharpened read is:
 
 - `b` remains the clean asymptotic leading term
-- `b - h_mass` remains the practical finite-source correction
-- the limit is family overlap geometry, not absence of a geometry-normalized
-  trend
+- `b - h_mass` is the portable finite-source correction once widened low-`b`
+  overlap is real on the holdout family
+- any remaining follow-on should target overlap onset directly rather than
+  widening the denominator search again
