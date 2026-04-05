@@ -76,6 +76,14 @@ Do not force a trade where only one of those moves.
   - the broader quasi-persistent relaunch probe shows the surrogate must stay
     fairly broad to preserve downstream propagation; sharp compression is too
     lossy for an inertial-response claim
+  - the mesoscopic source/backreaction extension now shows that the broad
+    surrogate can source a weak additive field and support bounded one-step
+    two-body symmetry on the retained 3D family
+  - a 3D point-source comparison now says that, on that retained family, the
+    broad surrogate behaves almost like a soft point source at the tested scale
+  - a 2D companion source check keeps the boundary honest: the same surrogate
+    idea stays stable there too, but its breadth still materially changes the
+    response amplitude
   - a bounded same-family closure note is now artifact-backed:
     rows `1-7` stay on the fixed `h = 0.25`, `W = 10`, `L = 12` core family,
     rows `8-9` are replayed at the same `h = 0.25`, `W = 10` family across

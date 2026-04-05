@@ -57,6 +57,27 @@ The nearest reusable pieces are:
   - result: moderate compression keeps the downstream response similar, but
     sharp localization fails and the best bounded surrogate still needs a broad
     support (roughly `196-225` sites on the frozen rows)
+- [`scripts/mesoscopic_surrogate_backreaction_harness.py`](/Users/jonreilly/Projects/Physics/scripts/mesoscopic_surrogate_backreaction_harness.py)
+  - one-step source/backreaction extension of the broad surrogate lane on the
+    retained 3D ordered-lattice family
+  - frozen log:
+    [`logs/2026-04-04-mesoscopic-surrogate-backreaction.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-04-mesoscopic-surrogate-backreaction.txt)
+  - result: the broad surrogate sources an additive weak field and supports
+    bounded one-step two-body symmetry, but still only as a broad mesoscopic
+    control object
+- [`scripts/broad_surrogate_point_source_compare.py`](/Users/jonreilly/Projects/Physics/scripts/broad_surrogate_point_source_compare.py)
+  - 3D interpretive diagnostic comparing the broad surrogate source against an
+    equivalent-strength point source on the retained family
+  - frozen log:
+    [`logs/2026-04-04-broad-surrogate-point-source-compare.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-04-broad-surrogate-point-source-compare.txt)
+  - result: on the tested retained 3D family, the broad surrogate behaves like
+    a soft point source to high accuracy
+- [`scripts/mesoscopic_surrogate_source_2d.py`](/Users/jonreilly/Projects/Physics/scripts/mesoscopic_surrogate_source_2d.py)
+  - 2D companion check for the surrogate-source idea
+  - frozen log:
+    [`logs/2026-04-04-mesoscopic-surrogate-source-2d.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-04-mesoscopic-surrogate-source-2d.txt)
+  - result: the source stays stable as a mesoscopic control, but its breadth
+    still materially changes the response amplitude on the retained 2D family
 
 ## Minimal blocker
 
@@ -121,13 +142,30 @@ The broader relaunch probe sharpens the remaining gap:
 - sharp compression is not
 - so the missing inertial-response object is still not in hand
 
+The source/backreaction extension sharpens it further:
+
+- the broad surrogate can now source a weak additive field
+- one-step two-body symmetry stays at the sub-percent level on the tested 3D
+  rows
+- but this still only closes a mesoscopic control object, not a localized
+  persistent mass
+
+The 3D vs 2D source diagnostics keep the boundary honest:
+
+- on the retained 3D family, the broad surrogate behaves almost like a soft
+  point source
+- on the retained 2D family, the same source idea stays stable but its breadth
+  still matters materially for the response amplitude
+- so the surrogate-source lane is real, but still bounded and family-sensitive
+
 ## Best next experiment
 
 The smallest viable next move is:
 
-- adapt the retained ordered-lattice family so that one localized packet or
-  quasi-persistent packet surrogate can be prepared, re-identified after
-  propagation, and compared under a controlled external field
+- ask whether the broad surrogate can survive another sourced response stage
+  without collapsing into an ordinary broad packet
+- or build the smallest localized source object that improves on the current
+  mesoscopic control without leaving the retained family too much
 
 If that cannot be done without changing the family too much, the honest result
 should stay negative rather than being replaced by a fake closure.

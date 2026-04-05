@@ -45,6 +45,15 @@ What is still missing:
 - a beyond-fixed-family additivity cross-check that says whether the
   composition law is special to the retained ordered family or not
 
+What is now newly bounded:
+
+- broad mesoscopic relaunch surrogates can source additive weak fields on the
+  retained 3D family
+- one-step two-body symmetry for those surrogates stays at the sub-percent
+  level on the tested 3D rows
+- the same source idea stays meaningful on a retained 2D companion family,
+  though its breadth still changes the response amplitude there
+
 The second item is now partially addressed:
 
 - a 2D ordered-lattice cross-check is frozen
@@ -55,9 +64,9 @@ The second item is now partially addressed:
 
 Best next deliverables on this lane:
 
-1. one smallest viable persistent-pattern or quasi-persistent inertial-response experiment
-2. one note separating test-particle additivity from any stronger inertial-mass theorem
-3. one third-family additivity cross-check only if it is genuinely cheap and non-overlapping
+1. one multi-stage sourced-response experiment for the mesoscopic surrogate
+2. one smallest localized source object that improves on the current broad control
+3. one note separating mesoscopic-source closure from any stronger inertial-mass theorem
 
 ## Highest-leverage score improvers
 
