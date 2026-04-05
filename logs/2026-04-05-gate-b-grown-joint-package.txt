@@ -15,4 +15,4 @@ SAFE INTERPRETATION
   Promote the moderate-drift row if it stays close to the exact grid.
   Treat the noisier row as a stress test, not as the retained generated-geometry package.
 
-Total time: 278s
+Total time: 424s
