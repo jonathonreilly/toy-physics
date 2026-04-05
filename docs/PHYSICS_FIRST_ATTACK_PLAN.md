@@ -42,6 +42,8 @@ The earlier strong-field target has already landed in bounded form:
 
 - absorbing horizon threshold is retained
 - bidirectional no-return threshold is retained
+- a first exact-lattice propagating-field pocket is retained, but only as a
+  controlled phase-lag / overlap observable
 
 The best next moonshot target is therefore narrower and more structural:
 
@@ -57,7 +59,8 @@ Operationally, this is now a portfolio:
 1. generated-family recovery toward full weak-field closure
 2. true propagating-field architecture
 3. persistent object / inertial-response architecture
-4. strong-field trapping / horizon only after the first three stop advancing
+4. continuum / asymptotic hardening as the credibility lane
+5. strong-field trapping / horizon only after the first three stop advancing
 
 The current repo already has strong bounded evidence in several lanes.
 What is still missing on the physics side is not another narrative pass.

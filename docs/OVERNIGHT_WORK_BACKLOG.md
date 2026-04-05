@@ -260,6 +260,10 @@ remaining testable and review-safe.
      - bounded retarded-field delay / causality proxies with clean reduction
      - exact-lattice same-site-memory and transverse-propagating Green pockets
      - one generated-family partial support/sign recovery from a `kNN` floor tweak
+     - a new exact-lattice wavefield pocket with stronger phase lag and lower
+       overlap than same-site memory
+     - a generated-architecture bridge that broadens support on the retained
+       family but still does not restore the mass-scaling class
    - Current anti-targets:
      - wave anecdotes without a retained phase-sensitive observable
      - backreaction narratives without a retained convergence or no-go chain
@@ -272,6 +276,8 @@ remaining testable and review-safe.
        beyond local memory/smoothing
      - third keep the persistent-object lane alive as a separate candidate for
        later unification rather than forcing everything through geometry
+     - fourth keep the continuum bridge honest: promising numerically, but not
+       yet a retained theorem
 
 ## Highest-leverage score improvers
 
