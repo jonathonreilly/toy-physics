@@ -1,6 +1,6 @@
 ====================================================================================
 3D 1/L^2 + h^2 NUMPY H=0.125 BRIDGE
-  fixed family: phys_l=8, phys_w=4, max_d_phys=3
+  fixed family: phys_l=6, phys_w=3, max_d_phys=3
   source strength=5e-05
   goal: retain the continuum bridge or freeze a bounded failure
 ====================================================================================
@@ -8,21 +8,20 @@
 
 ======================================================================
 3D DENSE + 1/L^2 KERNEL (h=1.0)
-  729 nodes, 9 layers, 20808 edges
+  343 nodes, 7 layers, 8214 edges
   Generated in 0.0s
 ======================================================================
 
   Free propagation: 0.0s
-  1. Born |I3|/P = 8.24e-16  [PASS] (0.0s)
-  2. d_TV = 0.5613
+  1. Born |I3|/P = 6.65e-16  [PASS] (0.0s)
+  2. d_TV = 0.4026
   3. k=0 = 0.000000
-  5. Gravity z=3: -0.008151 (AWAY)
-  4. F~M: too few TOWARD points (0)
-  6. Decoherence = 29.3%
-  7. MI = 0.3227 bits
+  5. Gravity z=3: -0.001374 (AWAY)
+  4. F~M: too few TOWARD points (1)
+  6. Decoherence = 32.0%
+  7. MI = 0.2638 bits
   10. Distance law (s=5e-05):
-      z=2: -0.001745 (AWAY)
-      z=3: -0.008151 (AWAY)
+      z=2: -0.004612 (AWAY)
       Distance time: 0.0s
 
   TOTAL TIME: 0s
@@ -30,44 +29,42 @@
 
 ======================================================================
 3D DENSE + 1/L^2 KERNEL (h=0.5)
-  4913 nodes, 17 layers, 512656 edges
+  2197 nodes, 13 layers, 193548 edges
   Generated in 0.1s
 ======================================================================
 
   Free propagation: 0.0s
-  1. Born |I3|/P = 1.72e-15  [PASS] (0.1s)
-  2. d_TV = 0.7606
+  1. Born |I3|/P = 1.66e-15  [PASS] (0.0s)
+  2. d_TV = 0.7748
   3. k=0 = 0.000000
-  5. Gravity z=3: +0.018204 (TOWARD)
+  5. Gravity z=3: +0.012493 (TOWARD)
   4. F~M alpha = 0.50
-  6. Decoherence = 49.7%
-  7. MI = 0.5624 bits
+  6. Decoherence = 49.9%
+  7. MI = 0.5607 bits
   10. Distance law (s=5e-05):
-      z=2: +0.014191 (TOWARD)
-      z=3: +0.018204 (TOWARD)
+      z=2: +0.009909 (TOWARD)
       Distance time: 0.0s
 
-  TOTAL TIME: 1s
+  TOTAL TIME: 0s
 
 
 ======================================================================
 3D DENSE + 1/L^2 KERNEL (h=0.25)
-  35937 nodes, 33 layers, 14321952 edges
-  Generated in 3.7s
+  15625 nodes, 25 layers, 5279064 edges
+  Generated in 1.4s
 ======================================================================
 
-  Free propagation: 1.3s
-  1. Born |I3|/P = 3.42e-15  [PASS] (9.0s)
-  2. d_TV = 0.8278
+  Free propagation: 0.3s
+  1. Born |I3|/P = 3.48e-15  [PASS] (1.8s)
+  2. d_TV = 0.8199
   3. k=0 = 0.000000
-  5. Gravity z=3: +0.023673 (TOWARD)
+  5. Gravity z=3: +0.014965 (TOWARD)
   4. F~M alpha = 0.50
   6. Decoherence = 50.0%
-  7. MI = 0.6481 bits
+  7. MI = 0.6180 bits
   10. Distance law (s=5e-05):
-      z=2: +0.020154 (TOWARD)
-      z=3: +0.023673 (TOWARD)
-      Distance time: 3.0s
+      z=2: +0.014016 (TOWARD)
+      Distance time: 0.3s
 
-  TOTAL TIME: 34s
+  TOTAL TIME: 7s
 

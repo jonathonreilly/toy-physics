@@ -17,7 +17,7 @@ box, and if so what is the narrowest safe continuum claim?
 
 This wrapper stays deliberately narrow:
 
-- fixed physical family: `phys_l = 8`, `phys_w = 4`, `max_d_phys = 3`
+- fixed physical family: `phys_l = 6`, `phys_w = 3`, `max_d_phys = 3`
 - existing numpy dense-lattice card as the engine
 - retained observables only:
   - Born if measured
@@ -30,9 +30,9 @@ The frozen log contains completed rows only through `h = 0.25`:
 
 | `h` | Born | gravity sign | `F~M` | note |
 | --- | ---: | --- | ---: | --- |
-| `1.0` | `8.24e-16` | `AWAY` | n/a | too few `TOWARD` points |
-| `0.5` | `1.72e-15` | `TOWARD` | `0.50` | completed |
-| `0.25` | `3.42e-15` | `TOWARD` | `0.50` | completed |
+| `1.0` | `6.65e-16` | `AWAY` | n/a | too few `TOWARD` points |
+| `0.5` | `1.66e-15` | `TOWARD` | `0.50` | completed |
+| `0.25` | `3.48e-15` | `TOWARD` | `0.50` | completed |
 | `0.125` | n/a | n/a | n/a | no completed row in the frozen log |
 
 The current frozen log therefore supports:

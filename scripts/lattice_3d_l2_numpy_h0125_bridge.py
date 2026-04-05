@@ -27,8 +27,8 @@ from scripts.lattice_3d_l2_numpy import run_card
 def main() -> None:
     # Fixed physical box used across all spacings. The h=0.125 row is the
     # decisive continuation test; the coarser rows are the same-family bridge.
-    phys_l = 8
-    phys_w = 4
+    phys_l = 6
+    phys_w = 3
     max_d_phys = 3
     strength = 5e-5
 
