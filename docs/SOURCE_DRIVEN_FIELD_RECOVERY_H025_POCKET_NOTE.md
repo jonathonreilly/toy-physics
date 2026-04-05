@@ -1,7 +1,7 @@
-# Source-Driven Field Recovery h=0.25 Pocket Note
+# Source-Driven Field Recovery H=0.25 Pocket
 
 **Date:** 2026-04-05  
-**Status:** smallest serious h=0.25 refinement falsifier for the source-driven field branch
+**Status:** bounded refinement-positive for the source-driven field branch
 
 ## Artifact chain
 
@@ -10,28 +10,28 @@
 
 ## Question
 
-Does the retained exact-lattice weak-field recovery pocket survive one refinement step to `h = 0.25` when we keep the test small enough to stay practical?
+Does the weak-field recovery pocket survive one refinement step to `h = 0.25`
+while keeping exact zero-source reduction and near-linear mass scaling?
 
 This note is intentionally narrow:
 
-- one exact 3D lattice family
-- one conservative pocket calibration
-- one transfer check against the exact-lattice weak-field lane
+- one exact lattice family
+- one source-driven local-field rule
+- one refinement step to `h = 0.25`
+- one comparison against the instantaneous `1/r` field
+- one reduction check: zero source should recover free propagation exactly
 
 ## Frozen result
 
-The smallest serious `h = 0.25` test uses:
+The frozen pocket uses:
 
-- `h = 0.25`
-- `W = 3`
-- `L = 12`
-- `c = 0.40`
-- `damp = 0.35`
-- `target_max = 0.010`
+- exact lattice with `h = 0.25`, `W = 3`, `L = 12`
+- `c = 0.40`, `damp = 0.35`, `target_max = 0.010`
 
 Reduction check:
 
 - zero-source dynamic shift: `+0.000000e+00`
+- calibration gain: `1.451422e-02`
 
 Frozen readout:
 
@@ -49,23 +49,24 @@ Fitted exponents:
 
 ## Safe read
 
-The exact `h = 0.25` refinement check keeps:
+The strongest bounded statement is:
 
-- exact zero-source reduction
-- all-TOWARD sign
-- near-linear dynamic mass scaling
+- the refinement step preserves exact zero-source reduction
+- the dynamic pocket keeps all rows `TOWARD`
+- the dynamic mass exponent stays essentially linear
 
-But it fails the amplitude-transfer gate badly:
+## Honest limitation
+
+The pocket is very weak in amplitude.
 
 - mean `|dynamic / instantaneous| = 0.055`
-
-So the transfer is not a full positive. It is a clean bounded falsifier for the claim that the exact-lattice source-driven recovery pocket transfers to this refinement family with useful amplitude.
+- so this is a refinement-positive survival, not a self-consistent field upgrade
 
 ## Branch verdict
 
-This is the smallest serious refinement test, and it says:
+Treat this as a bounded refinement-positive:
 
-- the weak-field pocket does not survive refinement in a strong enough way to count as a transfer
-- sign and exponent survive
-- amplitude collapses too far below the instantaneous lane
-- the exact-lattice source-driven field branch remains calibration-sensitive rather than genuinely refinement-stable
+- exact reduction survives
+- sign survives
+- linear mass scaling survives
+- amplitude is too small for a strong-field rescue
