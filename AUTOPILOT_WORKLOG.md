@@ -1,3 +1,90 @@
+## 2026-04-05 — Coordination reconciled to synced structureless-DAG head; local drafts left untouched
+
+### Current state
+- checked the cooperative worker lock in protocol order, found it free, and
+  acquired `physics-janitor`; the latest runtime handoff still named no
+  detached `physics-science` child to resume or protect
+- the canonical repo at `/Users/jonreilly/Projects/Physics` is synced at
+  `d73b795`:
+  - `git status --short --branch` reported `## main...origin/main` plus the
+    stale runtime handoff and fresh untracked docs/scripts in the graph,
+    localization, and Gate B lanes
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 8` showed synced head chain
+    `d73b795`, `c549728`, `2180b4d`
+- the tracked coordination layer had drifted again:
+  - this work log and the runtime handoff still stopped at the older
+    `81f45c8` / `7b49b7c` sync-gate story
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` still
+    described the older 07:15 state and is readable but not writable from this
+    sandboxed janitor workspace
+- the shared checkout also carried fresh local science drafts that janitor did
+  **not** clean up or absorb into tracked state:
+  - `/Users/jonreilly/Projects/Physics/docs/GRAPH_PHASE_DIAGRAM_SCOUT_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/MESOSCOPIC_SURROGATE_H025_CONSTRAINED_LOCALIZATION_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/scripts/gate_b_farfield_harness.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/graph_phase_diagram_scout.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/mesoscopic_surrogate_h025_constrained_localization.py`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-05-gate-b-farfield-harness.txt`
+    existed as a zero-byte local log, so janitor treated this as live/manual
+    checkout state rather than stale trash
+
+### What changed
+- inspected the landed synced head directly instead of trusting the stale
+  coordination text:
+  - `git show --stat --summary --oneline 2180b4d`
+  - `git show --stat --summary --oneline c549728`
+  - `git show --stat --summary --oneline d73b795`
+- reread the current priority and graph-boundary surfaces directly:
+  - `/Users/jonreilly/Projects/Physics/docs/PHYSICS_FIRST_ATTACK_PLAN.md`
+  - `/Users/jonreilly/Projects/Physics/docs/OVERNIGHT_WORK_BACKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/docs/EDGE_DELETION_BOUNDARY_SWEEP_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/STRUCTURELESS_DAG_GRAVITY_HARNESS_NOTE.md`
+- ran the cheap confidence gate because recent landed commits added new script
+  surfaces:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/base_confidence_check.py`
+  - result: passed
+- replaced the stale runtime handoff, refreshed janitor memory, and prepended
+  this tracked integrity entry so the next loop starts from the real synced
+  head and the local-draft stop condition
+- left the untracked graph/localization/Gate B drafts untouched, created no new
+  science commit, skipped push because `main` was already synced before this
+  coordination repair, and recorded that the separate autopilot memory could
+  not be refreshed from this sandbox
+
+### Strongest confirmed conclusion
+- the active synced tracked head is now `d73b795`
+  (`feat(graph): harden structureless DAG gravity harness`), not the older
+  `81f45c8` / `7b49b7c` state still described by the saved coordination files
+- the live graph-boundary read is now narrower than the stale handoff said:
+  - `c549728` freezes a bounded null result for the 25% edge-deletion sweep on
+    the retained 3D valley-linear family
+  - `d73b795` freezes a bounded structureless random-causal-DAG pocket with
+    `49/64` TOWARD rows and stable local `F~M ≈ 1.0` on the positive rows
+- operationally, sync is no longer the blocker; the blocker is unresolved local
+  draft dirt in the graph/localization/grown-geometry lanes, so janitor stops
+  without rewriting around that work
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-janitor/memory.md`
+
+### Exact next step
+- do not let janitor absorb or delete the fresh local drafts; resolve them in a
+  separate manual/science pass first
+- once the checkout is clean again, keep workers on the compression /
+  order-parameter thread:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_frontier_compression.py`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-frontier-compression-1232-3344-4992-5504.txt`
+- keep dense laddering paused and only revive a sparse guardrail sentinel if
+  the tracked plan explicitly calls for it
+
+### First concrete action
+- decide whether the untracked graph/localization/Gate B drafts should be
+  committed in a separate science pass or cleaned up; rerun janitor only after
+  that decision lands
+
 ## 2026-04-05 — Coordination reconciled to the synced map-calibration head
 
 ### Current state

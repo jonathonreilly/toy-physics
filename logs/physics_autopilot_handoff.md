@@ -1,52 +1,92 @@
 # Physics Autopilot Handoff
 
-## 2026-04-04 22:00 America/New_York
+## 2026-04-05 07:45 America/New_York
 
 ### Seam class
-- bounded integrity reconciliation against the synced graph-boundary head
-- next non-overlapping science seam remains the widened-source
-  directional-`b` geometry-normalized holdout transfer under the fixed
-  directional-measure propagator
+- bounded integrity repair: tracked coordination now matches the synced
+  structureless-DAG graph head, but janitor stops because the canonical
+  checkout also carries fresh local science drafts that it should not clean
+  around
+- no detached `physics-science` child is active; the next safe janitor seam is
+  to wait for those drafts to be resolved, then return workers to the
+  compression / order-parameter thread rather than reviving dense ladder work
 
 ### What this loop did
-- ran the duplicate-run guard and confirmed this thread is the newest
-  unresolved `physics-autopilot` run
-- checked the cooperative lock, found it free, acquired `physics-science`, and
-  confirmed there is no detached science child to resume
-- found that the canonical repo had already advanced from the stale
-  localization coordination head to the newer graph / inverse correction chain
-- reconciled the real synced science head at `e0c0d9c`
-- reread the graph-requirements, broken-graph robustness, and edge-deletion
-  boundary notes that now define the active head state
-- prepended a tracked work-log integrity entry and refreshed this handoff plus
-  the automation memory to match the real synced head again
+- read the tracked work log, latest handoff, and automation memory in protocol
+  order before any repo mutation
+- checked the cooperative worker lock, found it free, and acquired
+  `physics-janitor` for this janitor pass
+- confirmed the latest handoff still names no detached `physics-science` child
+  to resume or protect
+- reconciled canonical repo state at `/Users/jonreilly/Projects/Physics` and
+  found the saved coordination layer had drifted again:
+  - `git status --short --branch` reported `## main...origin/main` plus the
+    stale runtime handoff and fresh untracked docs/scripts in graph,
+    localization, and Gate B lanes
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 8` showed synced head `d73b795`
+- inspected the landed synced head directly with:
+  - `git show --stat --summary --oneline 2180b4d`
+  - `git show --stat --summary --oneline c549728`
+  - `git show --stat --summary --oneline d73b795`
+- reread the current priority and graph-boundary surfaces directly:
+  - `docs/PHYSICS_FIRST_ATTACK_PLAN.md`
+  - `docs/OVERNIGHT_WORK_BACKLOG.md`
+  - `docs/EDGE_DELETION_BOUNDARY_SWEEP_NOTE.md`
+  - `docs/STRUCTURELESS_DAG_GRAVITY_HARNESS_NOTE.md`
+- found fresh local draft state that janitor deliberately left alone:
+  - untracked graph/localization/Gate B docs/scripts
+  - zero-byte local log `logs/2026-04-05-gate-b-farfield-harness.txt`
+- ran the cheap confidence gate because recent landed commits added new script
+  surfaces:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/base_confidence_check.py`
+  - result: passed
+- prepended a new tracked integrity entry to
+  `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, refreshed this
+  runtime handoff, refreshed janitor memory, and recorded that the separate
+  autopilot memory remains stale because this sandbox cannot write it
+- did not create a new repo commit or run the managed push helper because
+  `main` was already synced and the only unresolved repo state is the local
+  draft dirt that janitor should not rewrite around
 
 ### Current state
 - no detached `physics-science` child is active
-- the synced science head underneath this coordination repair is now
-  `e0c0d9c`
-- the active graph-side read now frozen on `main` is:
-  - baseline, asymmetric, jittered, and sparse-connectivity perturbations stay
-    TOWARD with Born machine-clean on the retained family
-  - heavy random edge deletion is the honest failure mode
-  - the 12-seed boundary sweep places the gravity sign flip between `90%` and
-    `80%` edge retention, so the graph is not irrelevant
-  - the broken-graph action-power probe keeps `p = 1` as the clean exponent
-    when it survives, but not as the uniquely most sign-robust law
+- `main` is synced with `origin/main` (`0 0`)
+- the synced local head is `d73b795`
+  (`feat(graph): harden structureless DAG gravity harness`)
+- the checkout is not clean:
+  - this refreshed runtime handoff is modified
+  - fresh untracked docs/scripts remain in graph/localization/Gate B lanes
+  - `logs/2026-04-05-gate-b-farfield-harness.txt` remains a zero-byte local log
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` still
+  contains the stale 07:15 sync-gate state because this janitor workspace
+  cannot write that automation directory
+- no janitor push was needed because there is no ahead-of-origin stack to ship
 
 ### Strongest confirmed conclusion
-- the safe graph-side universality claim is now bounded:
-  the mechanism survives several natural perturbations, but sufficiently heavy
-  edge damage flips the sign on this retained family
-- the graph therefore still matters even though field coupling and phase
-  remain the core existence conditions
+- the active tracked head has advanced from the stale `81f45c8` / `7b49b7c`
+  sync-gate story to the synced graph-boundary chain ending at `d73b795`
+- committed graph-side read is now:
+  - `c549728` freezes a bounded null result for the 25% edge-deletion sweep on
+    the retained 3D family, so the earlier transition story is not the settled
+    result here
+  - `d73b795` freezes a bounded structureless random-causal-DAG pocket with a
+    majority-TOWARD sign rate and stable local `F~M ≈ 1.0` on positive rows
+- operationally, sync is not the blocker anymore; unresolved local drafts are,
+  so janitor stops without rewriting around them or widening science scope
 
 ### Exact next step
-- with sync restored to the actual science head, resume the user-priority
-  directional-`b` lane with:
-  - `python3 /Users/jonreilly/Projects/Physics/scripts/directional_b_geometry_normalized_holdout_transfer.py --mass-nodes 5`
-- if that lane is blocked later, move next to one bounded evolving-network
-  dynamics prototype instead of reopening decoherence architecture search
+- do not let janitor absorb or delete the fresh local drafts; resolve them in a
+  separate manual/science pass first
+- once the checkout is clean again, keep workers on the compression /
+  order-parameter thread:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_frontier_compression.py`
+  - inspect
+    `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-frontier-compression-1232-3344-4992-5504.txt`
+- keep dense laddering paused and only revive a sparse guardrail sentinel if
+  the tracked plan explicitly calls for it
 
 ### First concrete action
-- inspect the widened-source low-`b` rows from the `--mass-nodes 5` replay
+- decide whether the untracked graph/localization/Gate B drafts should be
+  committed in a separate science pass or cleaned up; rerun janitor only after
+  that decision lands
