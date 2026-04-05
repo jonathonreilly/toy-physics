@@ -58,20 +58,27 @@ What is now newly bounded:
 - a 2D support-threshold sweep now says shrinking that surrogate support does
   not produce a sharp collapse on the retained 2D family; every scanned
   `topN` stays stable
+- compact-floor and annular/hollow sweeps now say the retained 3D `h = 0.5`
+  family does not hide a better admissible localized winner; broad `topN`
+  still owns the score/capture frontier there
+- an alternate-family scout now says the only cheap remaining localization try
+  is the retained 3D `h = 0.25` family
 
 The second item is now partially addressed:
 
 - a 2D ordered-lattice cross-check is frozen
-- the next real escalation is no longer “another nearby lattice family”
-- it is either:
+- the retained 3D `h = 0.5` localization branch is now effectively closed as a
+  bounded negative
+- the next real escalation is now either:
+  - one last constrained attempt on the retained 3D `h = 0.25` family
   - a genuinely different family
   - or a real persistent-pattern inertial-response experiment
 
 Best next deliverables on this lane:
 
-1. one smallest localized source object that improves on the current broad control
+1. one constrained `h = 0.25` localization attempt with explicit support/capture floors
 2. one note separating mesoscopic-source closure from any stronger inertial-mass theorem
-3. one third-family or off-family stress test only if it is genuinely cheap and non-overlapping
+3. freeze the localization lane as a bounded negative if `h = 0.25` also fails
 
 ## Highest-leverage score improvers
 

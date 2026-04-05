@@ -90,12 +90,23 @@ Do not force a trade where only one of those moves.
   - a 3D localization-frontier replay now says there is no single collapse
     threshold: very compact sources can stay stable while becoming weak, and
     broader sources carry stronger response while staying mesoscopic
+  - a constrained compact-family replay now says that, on the retained 3D
+    `h = 0.5` family, compact Gaussian and tapered survivors can pass explicit
+    support/capture floors but still do not beat the broad `topN` control
+  - a constrained annular / hollow / tapered replay now says the same thing on
+    that retained 3D family: no admissible non-degenerate annular or hollow
+    shape beats the broad `topN` score/capture frontier once floors are
+    enforced
   - a 2D two-stage companion control now says that broad surrogate family can
     also behave like a stable mesoscopic fixed-point control on the retained
     2D family
   - a 2D support-threshold sweep now says shrinking that surrogate support
     does not reveal a sharp collapse on the retained 2D family; every scanned
     `topN` remains stable
+  - an alternate-family scout now says the only cheap localization lane still
+    worth one more try is the retained 3D `h = 0.25` family; otherwise the
+    honest read is that the current mesoscopic surrogate closes as a broad-
+    source control rather than a sharply localized inertial object
   - a separate Nyquist-diffraction probe now freezes the high-`k` gravity sign
     flip as a bounded lattice-UV effect: the first flip tracks `pi/h` and
     moves with `h`, so it is not a retained continuum prediction

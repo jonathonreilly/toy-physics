@@ -188,26 +188,46 @@ The 2D support-threshold sweep sharpens the blocker further:
 - so the missing inertial-response object is not hidden behind a simple
   support threshold in that family
 
+The constrained 3D compact-family sweep sharpens it again:
+
+- compact Gaussian and tapered compact families can survive explicit
+  support/capture floors on the retained 3D `h = 0.5` family
+- but they still do not beat the broad `topN` control on the admissible
+  score/capture tradeoff
+- so merely excluding degenerate point-like winners does not reopen the
+  retained coarse 3D family
+
+The constrained 3D annular / hollow / tapered sweep sharpens it one more time:
+
+- no admissible non-degenerate annular, hollow, or tapered ellipsoid family
+  beats the broad `topN` frontier on the retained 3D `h = 0.5` family
+- so that family now looks closed as a broad-source control lane rather than a
+  hidden sharp-localization lane
+
 The localization frontier now looks like this:
 
 - there is no single sharp collapse threshold in the retained 2D family
+- on the retained 3D `h = 0.5` family, broad `topN` still owns the admissible
+  frontier even after compact-floor and annular/hollow sweeps
 - very compact sources can stay extremely self-similar while becoming weak
 - broader sources can carry much stronger response while remaining stable
-- so the open question is now whether any **more localized** source family can
-  beat that frontier on a different already-bounded family
+- so the open question is no longer “is there a hidden 3D `h = 0.5` winner?”
+- it is whether the retained 3D `h = 0.25` family can support a more localized
+  admissible object, or whether the lane should now be frozen as a bounded
+  broad-source control
 
 ## Best next experiment
 
 The smallest viable next move is:
 
-- build the smallest localized source object that improves on the current
-  broad mesoscopic control without leaving the retained family too much
-- or show that every attempt to shrink the source destroys the multistage
-  sourced-response strength/stability tradeoff on a different already-bounded
-  family
+- if localization is still worth one more attempt, move only to the retained
+  3D `h = 0.25` family and enforce explicit support/capture floors from the
+  start
 - do **not** keep treating the retained 2D support threshold as the next
   lever; the frozen sweep shows that family has no sharp support cutoff in the
   scanned range
-
-If that cannot be done without changing the family too much, the honest result
-should stay negative rather than being replaced by a fake closure.
+- do **not** keep sweeping the retained 3D `h = 0.5` family for compact or
+  annular winners; the new bounded negatives close that branch
+- if the retained 3D `h = 0.25` family also fails to beat the broad surrogate
+  under the same constraints, freeze the localization lane as a bounded
+  negative rather than inventing a sharper inertial object
