@@ -1,12 +1,18 @@
 # Overnight Work Backlog
 
-**Date:** 2026-04-04  
-**Status:** conservative overnight priority note
+**Date:** 2026-04-05  
+**Status:** high-upside overnight priority note
 
 This note is the short-horizon backlog for the next pass through the science
-program. It is intentionally conservative: prefer the clearest retained
-follow-ups, keep the flagship mirror lane in front, and avoid broadening scope
-before the current bridges are tightened.
+program.
+
+It is no longer conservative in the old sense.
+The working rule for the next batch is:
+
+- do not spend major effort merely making the current story cleaner
+- only prioritize moves that could force a genuinely new result, force a
+  genuine no-go, or sharply tighten a real universality boundary
+- keep the retained story honest while doing that
 
 External-reception calibration now lives in:
 
@@ -17,12 +23,37 @@ That map should govern priority: prefer work that raises outside confidence,
 not just internal excitement.
 
 At the same time, this is **not** a “stop exploring” instruction. The program
-has a dual mandate:
+still has a dual mandate:
 
 1. push the science frontier forward
 2. keep the retained story strong enough to survive outside review
 
 The highest-value tasks are the ones that do both.
+
+For the current batch, "push the science frontier forward" now means:
+
+- find a result the framework forces and standard physics does not already
+  assume
+- or prove that the current framework cannot force such a result without a
+  deeper redesign
+
+## New Operating Rule
+
+If a task does not clearly do one of these, defer it:
+
+1. close generated geometry on a retained family
+2. produce a genuinely new retained prediction
+3. derive a law from deeper internal constraints
+4. prove a no-go theorem that blocks a tempting overclaim
+5. establish a real universality boundary rather than a vague positive memo
+
+The old bar was:
+
+- "does this make the current story look better?"
+
+The new bar is:
+
+- "does this force novelty or force failure?"
 
 ## Current non-Gate-B physics bottleneck
 
@@ -86,6 +117,60 @@ Best next deliverables on this lane:
 2. one note separating mesoscopic-source closure from any stronger inertial-mass theorem
 3. freeze the localization lane as a bounded negative if `h = 0.25` also fails
 4. one bounded edge-deletion boundary sweep if we want to tighten the new graph-requirements lane
+
+This lane is now secondary unless it produces one of:
+
+- a more localized object that really beats the broad surrogate
+- or a bounded negative strong enough to close the inertial-object search
+
+## Highest-Upside Batches
+
+These are no longer ordered only by publication credibility.
+They are ordered by "could this still reveal a genuinely big result?" while
+remaining testable and review-safe.
+
+1. **Generated geometry closure**
+   - Best upside:
+     - turns imposed geometry into mechanism
+     - biggest remaining gap between axioms and implementation
+   - Success:
+     - one grown family that keeps Born, `k=0`, and good gravity-side metrics
+   - Honest failure also counts:
+     - one clean bounded negative showing why the current growth rules cannot
+       carry the retained gravity lane
+
+2. **Graph-boundary / universality phase diagram**
+   - Best upside:
+     - could turn the new graph-requirements lane into a real universality
+       statement with explicit boundaries
+   - Deliverables:
+     - one retention-threshold sweep around the edge-deletion sign flip
+     - one hardened structureless-DAG harness or a bounded rejection of that
+       lane
+     - one note saying exactly what graph damage changes: sign, retention,
+       exponent fidelity, or nothing
+
+3. **Forced novelty or no-go on the action law**
+   - Best upside:
+     - either derive a stronger selector than current numerics provide
+     - or prove the current framework cannot force it without extra axioms
+   - Deliverables:
+     - one bounded derivation/no-go note with a harness where possible
+     - no more circular "Newton derived" wording unless the closure is real
+
+4. **Persistent / quasi-persistent inertial objects**
+   - Best upside:
+     - closes the biggest open internal physics step after test-particle lanes
+   - Deliverables:
+     - one last constrained `h = 0.25` localization attempt
+     - or a bounded negative strong enough to end the lane cleanly
+
+5. **Only if artifact-backed: BMV or another genuinely new prediction**
+   - Best upside:
+     - could produce a concrete quantum-gravity-style prediction
+   - Rule:
+     - note-only or commit-message-only claims do not count
+     - if the artifact chain is absent, this lane is paused
 
 ## Highest-leverage score improvers
 
@@ -163,6 +248,23 @@ interest map rather than just broaden the science search.
        not prove
 
 ## Priority order
+
+For "highest upside":
+
+1. Generated geometry closure
+2. Graph-boundary / universality phase diagram
+3. Forced novelty or no-go on the action law
+4. Persistent / quasi-persistent inertial objects
+
+For "highest external confidence":
+
+1. Generated geometry closure
+2. Continuum / asymptotic bridge
+3. Same-family closure / reproduction
+4. One-parameter mass / additivity closure
+
+Legacy branch-specific items remain below for continuity, but they are no
+longer the top strategic frame.
 
 1. **Structured bridge extension**
    - Status: completed on the retained family through `N = 100`.
