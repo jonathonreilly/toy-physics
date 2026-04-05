@@ -35,9 +35,9 @@ The best next steps are the ones that improve both at once.
 |---|---:|---|
 | Toy-model mechanism interest | `9.5/10` | high intrinsic curiosity value |
 | Foundations / complex-systems / network-dynamics interest | `9.2/10` | real likely interest in the right subcommunities |
-| Broader theorist interest | `8.7/10` | selective interest, with better bounded replays, cleaner theory-side harnesses, a second-family additivity cross-check, a mesoscopic-source lane with sharper negatives, and now a real graph-requirements harness instead of a doc-only universality memo |
-| Bridge to known physics | `8.6/10` | somewhat stronger than before, with a cleaner continuum/action split, a bounded momentum/additivity lane, a sharper mesoscopic-inertia map, and now real graph-perturbation evidence showing where the mechanism survives and where it breaks |
-| Publishable as a careful computational toy-model paper | `9.5/10` | increasingly plausible with bounded replay chains, better reproduction, tighter scope control, a clearer closure of the coarse localization branch, and new graph-robustness harnesses that replace memo-only prose |
+| Broader theorist interest | `8.8/10` | selective interest, with better bounded replays, cleaner theory-side harnesses, a second-family additivity cross-check, a mesoscopic-source lane with sharper negatives, and now a graph-side story that includes both retained robustness harnesses and an explicit edge-deletion boundary |
+| Bridge to known physics | `8.7/10` | somewhat stronger than before, with a cleaner continuum/action split, a bounded momentum/additivity lane, a sharper mesoscopic-inertia map, and now graph-perturbation evidence that distinguishes forgiving structure from true graph-independence |
+| Publishable as a careful computational toy-model paper | `9.6/10` | increasingly plausible with bounded replay chains, better reproduction, tighter scope control, a clearer closure of the coarse localization branch, and graph-side harnesses that replace memo-only prose with explicit survival and failure boundaries |
 | Publishable as a foundational-physics breakthrough claim | `4.0/10` | still too early for that framing |
 | Ready for top-tier mainstream physics claims | `2.7/10` | improved credibility, but still far below the required bar |
 | Field-shifting theory program | `6.0/10` | stronger than before, but still not at forced-engagement level |
@@ -131,9 +131,15 @@ The main upward pressures since the first adversarial cut are:
   - the inverse-problem lane now has a real bounded harness showing several
     natural graph perturbations preserve TOWARD + Born while heavy random edge
     deletion flips the sign, replacing the earlier overstrong doc-only memo
+  - the edge-deletion boundary is now sharper too: on the tested ordered
+    family the sign flips between roughly `90%` and `80%` retained connectivity,
+    which makes the graph-side requirement more concrete and reviewable
   - the broken-graph action-power probe now keeps the graph-side universality
     story honest: `p = 1` is not uniquely the most damage-robust law on this
     retained family
+  - a structureless random-DAG mass-scaling note now exists, but it is still
+    not weighted heavily here because it has not yet been frozen with the same
+    script/log/harness discipline as the retained lattice graph-robustness lane
 - the imported `1/L^(d-1)` kernel lane is now scientifically more interesting
   and does live on `main`, but it is still **bounded / unreconciled** rather
   than promoted in the top-line canonical story
