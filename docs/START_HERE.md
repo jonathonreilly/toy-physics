@@ -202,6 +202,20 @@ Do not force a trade where only one of those moves.
     far-field sign / `F~M` survive without restore on the label-connectivity
     family, but the broader joint `d_TV` / `MI` / decoherence package becomes
     sharply drift-sensitive
+- **Moonshot strong-field branch is now real, but still bounded.**
+  - the minimal absorbing horizon proxy is frozen with a retained escape
+    threshold and weak-field reduction check
+  - the minimal bidirectional trapping probe is frozen with a retained
+    no-return threshold and weak-field recovery
+  - the retarded-field side is now artifact-backed too:
+    - delay-proxy
+    - compact generated-family causality probe with clean `c = inf` reduction
+    - compact refinement companion
+    - bounded oscillating-source harness with a frequency-dependent
+      fingerprint
+  - the safe read is:
+    real strong-field / causal-field observables now exist on disk, but they
+    are still bounded proxies rather than a closed horizon or wave theory
 - **Action-power Newtonian-3D claim:** interesting, bounded to a no-barrier companion, not yet a promoted core claim
 - **Newton-derivation lane:** stronger, but still open
   - additivity and momentum now support a bounded characterization theorem on
@@ -217,6 +231,12 @@ Do not force a trade where only one of those moves.
     - 2D / 3D / 4D persistence evidence is interesting
     - transfer-norm selection is still under reconciliation
     - do not promote this branch from repo-entry docs yet
+- **Moonshot causal-gravity closure:** still open
+  - trapping is now retained in bounded form
+  - retarded-field scheduling is now retained in bounded form
+  - what is still missing is a self-consistent field equation or a reduction-
+    safe wave sector that survives adversarial reading as more than scheduling
+    structure
 
 ## Canonical docs
 

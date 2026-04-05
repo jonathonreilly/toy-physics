@@ -24,6 +24,16 @@ in general. It is a **minimal strong-field trapping / horizon probe** on the
 smallest bidirectional or absorptive extension that can still be compared
 against the retained weak-field gravity lane.
 
+That first target has now landed in bounded form:
+
+- absorbing horizon threshold is retained
+- bidirectional no-return threshold is retained
+
+The best next moonshot target is therefore narrower:
+
+- a bounded retarded-field / delay-proxy lane that still reduces cleanly back
+  to the instantaneous weak-field baseline
+
 The current repo already has strong bounded evidence in several lanes.
 What is still missing on the physics side is not another narrative pass.
 It is now one or more of these:
@@ -231,6 +241,7 @@ Use exactly one minimal extension:
 
 - absorptive horizon proxy
 - or bidirectional continuation / trapping
+- or imposed retarded-field scheduling with an explicit reduction check
 
 **Success criteria**
 
@@ -251,6 +262,8 @@ Stop the branch quickly if:
 **What counts as progress**
 
 - a retained trapping or no-return threshold
+- a retained retarded-field or delay-proxy observable with a clean
+  instantaneous-limit reduction
 - a retained no-go note saying the minimal extension cannot preserve the
   weak-field lane
 - a sharp statement that amplitude loss, bidirectionality, or backreaction is
@@ -261,6 +274,8 @@ Stop the branch quickly if:
 - commit-message-only moonshot narrative
 - three extension anecdotes with no frozen artifact chain
 - "qualitatively black-hole-like" language without a retained threshold
+- broad gravitational-wave rhetoric without a retained bounded observable and
+  an explicit scheduling-artifact caveat
 
 ## Recommended Order
 

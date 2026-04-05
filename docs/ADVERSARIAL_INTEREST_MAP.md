@@ -1,6 +1,6 @@
 # Adversarial Interest Map
 
-**Date:** 2026-04-04  
+**Date:** 2026-04-05  
 **Status:** external-reception calibration note
 
 ## Purpose
@@ -35,13 +35,13 @@ The best next steps are the ones that improve both at once.
 |---|---:|---|
 | Toy-model mechanism interest | `9.5/10` | high intrinsic curiosity value |
 | Foundations / complex-systems / network-dynamics interest | `9.2/10` | real likely interest in the right subcommunities |
-| Broader theorist interest | `9.2/10` | selective interest, with better bounded replays, cleaner theory-side harnesses, a second-family additivity cross-check, a mesoscopic-source lane that now closes localization more honestly, graph-side evidence that replaces memo-only prose, a one-step generated-geometry refinement companion at `h = 0.25`, a non-label sector-stencil positive that also survives the same refinement step, a matching distance-law companion that keeps the tail positive and declining, and a moonshot absorbing-proxy threshold that survives weak-field reduction |
-| Bridge to known physics | `9.1/10` | somewhat stronger than before, with a cleaner continuum/action split, a bounded momentum/additivity lane, a sharper mesoscopic-inertia map, graph-perturbation evidence that distinguishes forgiving structure from harsher-ladder sign collapse, a bounded generated-geometry positive that now survives one refinement step, a sector-stencil candidate that stays `TOWARD` with `F~M = 1.00` while keeping the far-field distance tail positive on the retained family, and a retained strong-field absorption threshold that still reduces back to the weak-field lane |
+| Broader theorist interest | `9.3/10` | selective interest, with better bounded replays, cleaner theory-side harnesses, a second-family additivity cross-check, a mesoscopic-source lane that now closes localization more honestly, graph-side evidence that replaces memo-only prose, a one-step generated-geometry refinement companion at `h = 0.25`, a non-label sector-stencil positive that also survives the same refinement step, a matching distance-law companion that keeps the tail positive and declining, and a moonshot branch that now includes both trapping thresholds and bounded retarded-field proxies |
+| Bridge to known physics | `9.2/10` | somewhat stronger than before, with a cleaner continuum/action split, a bounded momentum/additivity lane, a sharper mesoscopic-inertia map, graph-perturbation evidence that distinguishes forgiving structure from harsher-ladder sign collapse, a bounded generated-geometry positive that now survives one refinement step, a sector-stencil candidate that stays `TOWARD` with `F~M = 1.00` while keeping the far-field distance tail positive on the retained family, and a retained strong-field branch that now includes trapping plus reduction-safe retarded-field scheduling observables |
 | Publishable as a careful computational toy-model paper | `9.9/10` | increasingly plausible with bounded replay chains, better reproduction, tighter scope control, a full closure of the current localization lane, graph-side harnesses that replace memo-only prose with explicit survival/null-boundary reads, a generated-geometry lane that now has a bounded `h = 0.25` refinement companion, and a non-label sector-stencil pair that strengthens the Gate B boundary with a positive sign result plus a positive declining distance-law companion |
 | Publishable as a foundational-physics breakthrough claim | `4.0/10` | still too early for that framing |
 | Ready for top-tier mainstream physics claims | `2.7/10` | improved credibility, but still far below the required bar |
-| Field-shifting theory program | `6.3/10` | stronger than before, and the new moonshot branch now has a real trapping/absorption threshold rather than just a narrative extension |
-| Landmark foundational breakthrough | `3.4/10` | current evidence base is improving, but still too branch-sensitive |
+| Field-shifting theory program | `6.6/10` | stronger than before, and the moonshot branch now has real bounded strong-field and retarded-field observables rather than only narrative extension |
+| Landmark foundational breakthrough | `3.5/10` | current evidence base is improving, but still too branch-sensitive and too proxy-heavy for stronger framing |
 | Nobel-scale breakthrough | `0.4/10` | not a realistic present-tense read |
 
 ## Why this map is lower than the old internal map

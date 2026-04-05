@@ -229,10 +229,18 @@ remaining testable and review-safe.
    - Current preferred target:
      - minimal absorbing or bidirectional trapping probe with escape/no-return
        threshold
+   - Current retained positives:
+     - absorbing threshold
+     - bidirectional no-return threshold
+     - bounded retarded-field delay / causality proxies with clean reduction
    - Current anti-targets:
      - wave anecdotes without a retained phase-sensitive observable
      - backreaction narratives without a retained convergence or no-go chain
      - commit-message-only "GR extension" claims
+   - Best next moonshot move:
+     - keep the branch narrow
+     - prefer retarded-vs-instantaneous causality or delay-proxy observables
+       over broader wave rhetoric
 
 ## Highest-leverage score improvers
 
