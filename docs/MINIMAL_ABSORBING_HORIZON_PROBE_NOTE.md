@@ -1,8 +1,7 @@
-# Minimal Absorbing-Horizon Probe Note
+# Minimal Absorbing Horizon Probe
 
 **Date:** 2026-04-05  
-**Status:** moonshot strong-field absorbing-proxy probe on the retained 3D
-ordered-lattice family
+**Status:** bounded moonshot trapping probe on the retained generated-geometry family
 
 ## Artifact chain
 
@@ -11,77 +10,68 @@ ordered-lattice family
 
 ## Question
 
-Can a minimal absorptive extension of the retained valley-linear propagation
-produce a real trapping / horizon-like threshold, measured as a drop in escape
-fraction, while still reducing back to the weak-field lane at `alpha = 0`?
+Can a minimal absorptive extension of the retained generated-geometry family
+produce a genuine trapping / no-return threshold while still reducing back to
+the weak-field lane at `alpha = 0`?
 
 This note is intentionally narrow:
 
-- one retained 3D ordered-lattice family
-- one absorptive coupling parameter `alpha`
-- one main observable: escape fraction to the far detector
-- one weak-field reduction check at `alpha = 0`
+- one absorptive parameter `alpha`
+- one observable: escape fraction versus `alpha`
+- one weak-field recovery check at `alpha = 0`
 
 ## Frozen result
 
-The frozen log records a sweep over:
+The frozen log is on the retained no-restore grown geometry family with the
+geometry-sector stencil connectivity, `h = 0.5`, `W = 10`, `NL = 25`,
+`seeds = 4`, and `z = [3, 4, 5]`.
 
-- `h = 0.5`
-- `W = 8`
-- `L = 12`
-- `mass_z = 3.0`
-- `strength = 0.1`
-- `alpha = 0.0, 0.1, 0.3, 0.5, 1.0, 2.0, 5.0, 10.0`
+Weak-field recovery check:
 
-Frozen readout:
+- exact grid: `3/3` TOWARD, `F~M = 1.00`
+- sector stencil: `3/3` TOWARD, `F~M = 1.00`
 
-| alpha | escape fraction | absorbed fraction |
-| ---: | ---: | ---: |
-| 0.0 | `1.0000` | `0.0000` |
-| 0.1 | `0.8957` | `0.1043` |
-| 0.3 | `0.7205` | `0.2795` |
-| 0.5 | `0.5814` | `0.4186` |
-| 1.0 | `0.3447` | `0.6553` |
-| 2.0 | `0.1277` | `0.8723` |
-| 5.0 | `0.0088` | `0.9912` |
-| 10.0 | `0.0002` | `0.9998` |
+Escape fraction versus absorption:
+
+| alpha | escape | no-return |
+| --- | ---: | ---: |
+| `0.00` | `1.0002` | `-0.0002` |
+| `0.10` | `0.4353` | `0.5647` |
+| `0.30` | `0.0903` | `0.9097` |
+| `0.50` | `0.0202` | `0.9798` |
+| `2.00` | `0.0000` | `1.0000` |
+| `10.00` | `0.0000` | `1.0000` |
 
 ## Safe read
 
-The honest bounded statement is:
+The strongest bounded statement is:
 
-- the `alpha = 0` row survives the weak-field reduction check and stays on the
-  retained weak-field TOWARD lane
-- the absorptive sweep then measures how much far-detector probability is lost
-  as `alpha` increases
-- the sweep does show a real threshold-like drop: the 50% escape threshold is
-  reached by `alpha ≈ 1.0` on this retained family
-- the strong-field branch therefore gives a real bounded trapping / absorption
-  proxy, not just a smooth no-op decay
+- the absorptive extension does produce a real trapping threshold on this
+  retained family
+- the escape fraction falls below `50%` already by `alpha ≈ 0.10`
+- the weak-field recovery check still holds at `alpha = 0`
 
-## Relation to the retained weak-field lane
+The honest limitation is equally important:
+
+- this is still a proxy horizon / trapping observable, not a full black-hole
+  theory
+- the branch is viable as a moonshot because it finds a sharp new threshold
+  while still reducing cleanly back to the weak-field lane
+
+## Relation to the retained lane
 
 Read this together with:
 
+- [`docs/GATE_B_NONLABEL_CONNECTIVITY_V1_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_NONLABEL_CONNECTIVITY_V1_NOTE.md)
+- [`docs/GATE_B_NONLABEL_CONNECTIVITY_V1_DISTANCE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_NONLABEL_CONNECTIVITY_V1_DISTANCE_NOTE.md)
+- [`docs/GATE_B_NONLABEL_CONNECTIVITY_V1_JOINT_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_NONLABEL_CONNECTIVITY_V1_JOINT_NOTE.md)
 - [`docs/GATE_B_FARFIELD_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_FARFIELD_NOTE.md)
-- [`docs/GATE_B_H025_FARFIELD_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_H025_FARFIELD_NOTE.md)
-- [`docs/PHYSICS_FIRST_ATTACK_PLAN.md`](/Users/jonreilly/Projects/Physics/docs/PHYSICS_FIRST_ATTACK_PLAN.md)
 
-The reduction check is the key guardrail:
+The retained weak-field story remains intact, and the new absorptive branch
+adds a qualitatively new strong-field observable: a trapping threshold.
 
-- if `alpha = 0` does not recover the retained weak-field lane, this branch is
-  not a continuation of the current physics story
-- if it does recover, then the absorption sweep can be interpreted as a
-  legitimate strong-field deformation of the retained weak-field model
+## Branch verdict
 
-The branch should be judged on two things only:
-
-- whether the escape fraction shows a real threshold / no-return regime
-- whether the weak-field limit survives cleanly
-
-On this frozen replay, both checks pass in the bounded sense:
-
-- there is a clear threshold-like absorption regime
-- the alpha=0 weak-field reduction survives and stays TOWARD
-
-No other claim should be promoted from this note.
+This branch is **viable** as a moonshot direction.
+It is not a full black-hole theory, but it is no longer just a narrative idea:
+it produces a retained threshold and reduces back to the weak-field lane.
