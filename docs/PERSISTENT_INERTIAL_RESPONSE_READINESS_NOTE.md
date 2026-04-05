@@ -158,13 +158,20 @@ The 3D vs 2D source diagnostics keep the boundary honest:
   still matters materially for the response amplitude
 - so the surrogate-source lane is real, but still bounded and family-sensitive
 
+The multistage probe sharpens the positive side:
+
+- on the retained 3D family, the broad surrogate survives a second sourced
+  response stage with high best-shift score and a stable centroid-shift scale
+- so the mesoscopic source lane is now more than a one-step curiosity
+- but it is still broad-control physics, not localized persistent-mass closure
+
 ## Best next experiment
 
 The smallest viable next move is:
 
 - ask whether the broad surrogate can survive another sourced response stage
   without collapsing into an ordinary broad packet
-- or build the smallest localized source object that improves on the current
+- build the smallest localized source object that improves on the current
   mesoscopic control without leaving the retained family too much
 
 If that cannot be done without changing the family too much, the honest result

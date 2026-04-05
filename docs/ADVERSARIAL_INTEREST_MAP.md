@@ -35,9 +35,9 @@ The best next steps are the ones that improve both at once.
 |---|---:|---|
 | Toy-model mechanism interest | `9.5/10` | high intrinsic curiosity value |
 | Foundations / complex-systems / network-dynamics interest | `9.2/10` | real likely interest in the right subcommunities |
-| Broader theorist interest | `8.3/10` | selective interest, with better bounded replays, cleaner theory-side harnesses, a second-family additivity cross-check, and a bounded mesoscopic-source lane |
-| Bridge to known physics | `8.2/10` | somewhat stronger than before, with a cleaner continuum/action split, a bounded momentum/additivity lane, and a sharper mesoscopic-inertia map |
-| Publishable as a careful computational toy-model paper | `9.1/10` | increasingly plausible with bounded replay chains, better reproduction, tighter scope control, and a more explicit derivation-side limitation map |
+| Broader theorist interest | `8.4/10` | selective interest, with better bounded replays, cleaner theory-side harnesses, a second-family additivity cross-check, and a mesoscopic-source lane that now survives two sourced stages |
+| Bridge to known physics | `8.3/10` | somewhat stronger than before, with a cleaner continuum/action split, a bounded momentum/additivity lane, and a sharper mesoscopic-inertia map |
+| Publishable as a careful computational toy-model paper | `9.2/10` | increasingly plausible with bounded replay chains, better reproduction, tighter scope control, and a more explicit derivation-side limitation map |
 | Publishable as a foundational-physics breakthrough claim | `4.0/10` | still too early for that framing |
 | Ready for top-tier mainstream physics claims | `2.7/10` | improved credibility, but still far below the required bar |
 | Field-shifting theory program | `6.0/10` | stronger than before, but still not at forced-engagement level |
@@ -116,6 +116,7 @@ The main upward pressures since the first adversarial cut are:
   - a compression boundary is frozen
   - the broad surrogate now sources an additive weak field and supports bounded
     one-step backreaction on the retained 3D family
+  - the broad 3D surrogate now also survives a second sourced-response stage
   - a 3D point-source comparison and a 2D companion check now bound how far
     that surrogate-source read can be pushed
 - the imported `1/L^(d-1)` kernel lane is now scientifically more interesting

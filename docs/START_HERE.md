@@ -84,6 +84,9 @@ Do not force a trade where only one of those moves.
   - a 2D companion source check keeps the boundary honest: the same surrogate
     idea stays stable there too, but its breadth still materially changes the
     response amplitude
+  - a two-stage sourced-response replay now says the broad 3D surrogate is not
+    just a one-step control; it remains in the same mesoscopic object family
+    across a second sourced stage
   - a bounded same-family closure note is now artifact-backed:
     rows `1-7` stay on the fixed `h = 0.25`, `W = 10`, `L = 12` core family,
     rows `8-9` are replayed at the same `h = 0.25`, `W = 10` family across

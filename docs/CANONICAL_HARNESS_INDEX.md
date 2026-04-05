@@ -77,6 +77,7 @@ thing a new reader should treat as canonical proof of the current story:
 - [`scripts/mesoscopic_surrogate_backreaction_harness.py`](/Users/jonreilly/Projects/Physics/scripts/mesoscopic_surrogate_backreaction_harness.py)
 - [`scripts/broad_surrogate_point_source_compare.py`](/Users/jonreilly/Projects/Physics/scripts/broad_surrogate_point_source_compare.py)
 - [`scripts/mesoscopic_surrogate_source_2d.py`](/Users/jonreilly/Projects/Physics/scripts/mesoscopic_surrogate_source_2d.py)
+- [`scripts/mesoscopic_surrogate_multistage.py`](/Users/jonreilly/Projects/Physics/scripts/mesoscopic_surrogate_multistage.py)
 - [`scripts/same_family_3d_closure.py`](/Users/jonreilly/Projects/Physics/scripts/same_family_3d_closure.py)
 - [`scripts/gate_b_connectivity_tolerance.py`](/Users/jonreilly/Projects/Physics/scripts/gate_b_connectivity_tolerance.py)
 - [`scripts/lattice_3d_valley_linear_card.py`](/Users/jonreilly/Projects/Physics/scripts/lattice_3d_valley_linear_card.py)
@@ -105,6 +106,7 @@ Bounded derivation-side notes:
 - [`docs/MESOSCOPIC_SURROGATE_BACKREACTION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/MESOSCOPIC_SURROGATE_BACKREACTION_NOTE.md)
 - [`docs/BROAD_SURROGATE_POINT_SOURCE_COMPARE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/BROAD_SURROGATE_POINT_SOURCE_COMPARE_NOTE.md)
 - [`docs/MESOSCOPIC_SURROGATE_SOURCE_2D_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/MESOSCOPIC_SURROGATE_SOURCE_2D_NOTE.md)
+- [`docs/MESOSCOPIC_SURROGATE_MULTISTAGE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/MESOSCOPIC_SURROGATE_MULTISTAGE_NOTE.md)
 
 ## How to use them
 

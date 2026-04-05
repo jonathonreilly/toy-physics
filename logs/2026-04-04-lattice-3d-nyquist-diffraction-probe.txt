@@ -1,0 +1,102 @@
+================================================================================================
+LATTICE 3D NYQUIST DIFFRACTION PROBE
+  Retained 3D ordered-lattice valley-linear family
+  Field strengths: 0.0001, 0.01
+  Spatial sizes: h in (0.5, 0.25), PHYS_L=4, PHYS_W=4
+  Goal: does the first gravity sign flip track pi/h, or does it remain
+        at a fixed physical scale?
+================================================================================================
+
+SPACING h=0.5
+  nyquist pi/h = 6.283185
+  lattice nodes = 2,601
+
+  strength=0.0001
+    k      delta_z      sign
+      0.000  +0.00000000  ZERO
+      0.628  +0.00000182  TOWARD
+      1.257  +0.00001933  TOWARD
+      1.885  +0.00004194  TOWARD
+      2.513  +0.00005352  TOWARD
+      3.142  +0.00005750  TOWARD
+      3.770  +0.00007917  TOWARD
+      4.398  +0.00007649  TOWARD
+      5.027  +0.00007026  TOWARD
+      5.655  +0.00006969  TOWARD
+      6.283  -0.00001071  AWAY
+      6.912  -0.00012871  AWAY
+      7.540  -0.00010855  AWAY
+    first flip: 6.199467
+    rel_err vs pi/h: 1.332%
+
+  strength=0.01
+    k      delta_z      sign
+      0.000  +0.00000000  ZERO
+      0.628  +0.00011820  TOWARD
+      1.257  +0.00170434  TOWARD
+      1.885  +0.00385205  TOWARD
+      2.513  +0.00513644  TOWARD
+      3.142  +0.00521494  TOWARD
+      3.770  +0.00720876  TOWARD
+      4.398  +0.00742581  TOWARD
+      5.027  +0.00643362  TOWARD
+      5.655  +0.00591228  TOWARD
+      6.283  -0.00230247  AWAY
+      6.912  -0.01478140  AWAY
+      7.540  -0.01210415  AWAY
+    first flip: 6.107077
+    rel_err vs pi/h: 2.803%
+
+  flip summary: mean=6.153272, spread=0.092390
+  mean/(pi/h) = 0.979324
+
+SPACING h=0.25
+  nyquist pi/h = 12.566371
+  lattice nodes = 18,513
+
+  strength=0.0001
+    k      delta_z      sign
+      0.000  +0.00000000  ZERO
+      1.257  +0.00006640  TOWARD
+      2.513  +0.00011486  TOWARD
+      3.770  +0.00012926  TOWARD
+      5.027  +0.00012225  TOWARD
+      6.283  +0.00012920  TOWARD
+      7.540  +0.00013578  TOWARD
+      8.796  +0.00014023  TOWARD
+     10.053  +0.00014565  TOWARD
+     11.310  +0.00014896  TOWARD
+     12.566  -0.00015142  AWAY
+     13.823  -0.00025166  AWAY
+     15.080  -0.00005559  AWAY
+    first flip: 11.932917
+    rel_err vs pi/h: 5.041%
+
+  strength=0.01
+    k      delta_z      sign
+      0.000  +0.00000000  ZERO
+      1.257  +0.00651797  TOWARD
+      2.513  +0.01150373  TOWARD
+      3.770  +0.01303690  TOWARD
+      5.027  +0.01225628  TOWARD
+      6.283  +0.01304285  TOWARD
+      7.540  +0.01369795  TOWARD
+      8.796  +0.01408627  TOWARD
+     10.053  +0.01476147  TOWARD
+     11.310  +0.01504312  TOWARD
+     12.566  -0.00930931  AWAY
+     13.823  -0.02754838  AWAY
+     15.080  -0.00818516  AWAY
+    first flip: 12.085990
+    rel_err vs pi/h: 3.823%
+
+  flip summary: mean=12.009454, spread=0.153073
+  mean/(pi/h) = 0.955682
+
+SAFE READ
+  - If the first sign flip sits at ~pi/h for both spacings and stays fixed
+    across field strengths, it is a lattice-scale Nyquist effect.
+  - In that case it is a UV cutoff artifact in the continuum limit, even
+    though it is a real and field-independent discrete-lattice prediction.
+  - If the flip failed to track pi/h, that would be the unexpected retained
+    prediction. This probe is designed to check that directly.

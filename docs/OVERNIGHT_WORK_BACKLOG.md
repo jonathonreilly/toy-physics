@@ -51,6 +51,8 @@ What is now newly bounded:
   retained 3D family
 - one-step two-body symmetry for those surrogates stays at the sub-percent
   level on the tested 3D rows
+- the same broad 3D surrogate survives a second sourced-response stage with a
+  high best-shift score and a stable shift scale
 - the same source idea stays meaningful on a retained 2D companion family,
   though its breadth still changes the response amplitude there
 
@@ -64,9 +66,9 @@ The second item is now partially addressed:
 
 Best next deliverables on this lane:
 
-1. one multi-stage sourced-response experiment for the mesoscopic surrogate
-2. one smallest localized source object that improves on the current broad control
-3. one note separating mesoscopic-source closure from any stronger inertial-mass theorem
+1. one smallest localized source object that improves on the current broad control
+2. one note separating mesoscopic-source closure from any stronger inertial-mass theorem
+3. one third-family or off-family stress test only if it is genuinely cheap and non-overlapping
 
 ## Highest-leverage score improvers
 
