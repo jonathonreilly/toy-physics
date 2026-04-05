@@ -87,6 +87,12 @@ Do not force a trade where only one of those moves.
   - a two-stage sourced-response replay now says the broad 3D surrogate is not
     just a one-step control; it remains in the same mesoscopic object family
     across a second sourced stage
+  - a 2D two-stage companion control now says that broad surrogate family can
+    also behave like a stable mesoscopic fixed-point control on the retained
+    2D family
+  - a separate Nyquist-diffraction probe now freezes the high-`k` gravity sign
+    flip as a bounded lattice-UV effect: the first flip tracks `pi/h` and
+    moves with `h`, so it is not a retained continuum prediction
   - a bounded same-family closure note is now artifact-backed:
     rows `1-7` stay on the fixed `h = 0.25`, `W = 10`, `L = 12` core family,
     rows `8-9` are replayed at the same `h = 0.25`, `W = 10` family across

@@ -165,14 +165,22 @@ The multistage probe sharpens the positive side:
 - so the mesoscopic source lane is now more than a one-step curiosity
 - but it is still broad-control physics, not localized persistent-mass closure
 
+The 2D two-stage companion sharpens the family-generic side:
+
+- the broad surrogate also survives two sourced-response stages on the
+  retained 2D family
+- so the mesoscopic-source picture is not just a one-family 3D quirk
+- but it still remains a bounded control picture rather than a persistent-mass
+  theorem
+
 ## Best next experiment
 
 The smallest viable next move is:
 
-- ask whether the broad surrogate can survive another sourced response stage
-  without collapsing into an ordinary broad packet
 - build the smallest localized source object that improves on the current
-  mesoscopic control without leaving the retained family too much
+  broad mesoscopic control without leaving the retained family too much
+- or show that every attempt to shrink the source destroys the multistage
+  sourced-response stability
 
 If that cannot be done without changing the family too much, the honest result
 should stay negative rather than being replaced by a fake closure.
