@@ -212,6 +212,9 @@ The localization frontier now looks like this:
 - on the retained 3D `h = 0.25` family, the final constrained replay keeps the
   same conclusion under explicit support/capture floors: broad `topN 196`
   remains the best admissible row
+- the new localized source-response sweep adds a narrower comparison: smaller
+  source objects can remain admissible, but they still do not beat the broad
+  `topN 196` frontier on the retained `h = 0.25` family
 - very compact sources can stay extremely self-similar while becoming weak
 - broader sources can carry much stronger response while remaining stable
 - so the open question is no longer “is there a hidden 3D `h = 0.5` winner?”
@@ -230,6 +233,9 @@ The smallest viable next move is:
 - do **not** reopen the retained 3D `h = 0.25` lane without a genuinely new
   object family or mechanism; the constrained replay already closes the last
   cheap localization shot
+- do **not** reopen the smaller-source comparison unless a new family is
+  introduced; the latest sweep already shows that smaller sources stay
+  admissible without beating the broad control
 - the next honest escalation is now a true persistent/quasi-persistent
   inertial-response probe beyond the broad mesoscopic surrogate, or a bounded
   negative explaining why the current codebase still cannot realize it

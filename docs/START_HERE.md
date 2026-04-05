@@ -108,6 +108,10 @@ Do not force a trade where only one of those moves.
     frontier under explicit support/capture floors, so the localization lane
     closes as a bounded broad-source control result rather than a hidden
     sharply localized inertial object
+  - the localized source-response sweep now tightens that boundary further:
+    smaller source objects can remain admissible, but none beat the broad
+    `topN 196` frontier on the retained `h = 0.25` family, so the
+    localization-to-source-response lane stays frozen as a bounded negative
   - a separate Nyquist-diffraction probe now freezes the high-`k` gravity sign
     flip as a bounded lattice-UV effect: the first flip tracks `pi/h` and
     moves with `h`, so it is not a retained continuum prediction

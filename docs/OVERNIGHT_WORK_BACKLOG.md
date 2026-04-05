@@ -95,6 +95,10 @@ What is now newly bounded:
 - the final constrained retained 3D `h = 0.25` replay now says the same thing
   more strongly: broad `topN 196` still owns the admissible frontier there
   too, so the localization lane now closes as a bounded negative
+- the localized source-response sweep now adds one more honest boundary:
+  smaller source objects can stay admissible on the retained `h = 0.25`
+  family, but they do not beat the broad `topN 196` frontier, so the
+  localization-to-source-response lane is frozen as a bounded negative
 - a bounded inverse-problem harness now says the graph is forgiving under
   several natural perturbations, but heavy `70%` random edge deletion flips
   the sign; graph structure is not irrelevant
