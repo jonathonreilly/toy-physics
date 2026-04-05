@@ -87,6 +87,9 @@ Do not force a trade where only one of those moves.
   - a two-stage sourced-response replay now says the broad 3D surrogate is not
     just a one-step control; it remains in the same mesoscopic object family
     across a second sourced stage
+  - a 3D localization-frontier replay now says there is no single collapse
+    threshold: very compact sources can stay stable while becoming weak, and
+    broader sources carry stronger response while staying mesoscopic
   - a 2D two-stage companion control now says that broad surrogate family can
     also behave like a stable mesoscopic fixed-point control on the retained
     2D family

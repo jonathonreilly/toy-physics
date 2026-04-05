@@ -173,6 +173,14 @@ The 2D two-stage companion sharpens the family-generic side:
 - but it still remains a bounded control picture rather than a persistent-mass
   theorem
 
+The localization frontier sharpens the next gap:
+
+- there is no single sharp collapse threshold for the 3D source object
+- very compact sources can stay extremely self-similar while becoming weak
+- broader sources can carry much stronger response while remaining stable
+- so the open question is now whether any **more localized** source family can
+  beat that frontier at all
+
 ## Best next experiment
 
 The smallest viable next move is:
@@ -180,7 +188,7 @@ The smallest viable next move is:
 - build the smallest localized source object that improves on the current
   broad mesoscopic control without leaving the retained family too much
 - or show that every attempt to shrink the source destroys the multistage
-  sourced-response stability
+  sourced-response strength/stability tradeoff
 
 If that cannot be done without changing the family too much, the honest result
 should stay negative rather than being replaced by a fake closure.
