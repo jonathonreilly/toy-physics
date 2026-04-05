@@ -212,6 +212,9 @@ remaining testable and review-safe.
    - New narrowing:
      - the retained discriminator now says the current `kNN`-floor bridge is
        geometry-limited, not field-rule-limited
+     - the new downstream-reach fan closes as a third no-go: it broadens
+       static support a little, but it still does not make the wavefield lane
+       matter on this family
    - Deliverables:
      - one geometry-rule change that widens support enough for the field rule
        to matter

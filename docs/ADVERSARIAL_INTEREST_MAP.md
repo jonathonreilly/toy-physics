@@ -183,6 +183,9 @@ The main upward pressures since the first adversarial cut are:
   a `z`-spread transfer variant and a sector-fan geometry repair both fail to
   widen support in the right way, so the current bridge looks stuck on the
   geometry side rather than waiting for one more small field tweak
+- the new downstream-reach fan adds a third, even more radical geometry-rule
+  no-go: it can move static support a little, but it does not improve the
+  generated-family wavefield lane and it leaves the bridge verdict unchanged
 - the complex-action-on-generated-geometry idea is now better bounded too:
   on current `main`, it is only minimally credible as a tiny falsification-
   first piggyback on the retained Gate B row, not as a new retained branch

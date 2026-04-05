@@ -90,6 +90,10 @@ The newest discriminator result also narrows one tempting lane:
 - that means repeated tuning of the same bridge family is no longer the main
   moonshot; the next serious generated-family step has to change the geometry
   rule enough to widen support, not just tweak the field update again
+- the new downstream-reach fan now adds an even stronger no-go:
+  it broadens static support a little, but it still does not make the
+  wavefield lane matter, so the transfer bottleneck is not fixed by another
+  reach-based geometry rule either
 
 With Gate B actively being pushed elsewhere, the cleanest **parallel**
 physics lane is now:

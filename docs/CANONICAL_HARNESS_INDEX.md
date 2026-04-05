@@ -96,6 +96,7 @@ thing a new reader should treat as canonical proof of the current story:
 - [`scripts/source_resolved_exact_green_scaling.py`](/Users/jonreilly/Projects/Physics/scripts/source_resolved_exact_green_scaling.py)
 - [`scripts/source_resolved_green_robustness.py`](/Users/jonreilly/Projects/Physics/scripts/source_resolved_green_robustness.py)
 - [`scripts/source_resolved_propagating_green_pocket.py`](/Users/jonreilly/Projects/Physics/scripts/source_resolved_propagating_green_pocket.py)
+- [`scripts/source_resolved_radical_geometry_probe.py`](/Users/jonreilly/Projects/Physics/scripts/source_resolved_radical_geometry_probe.py)
 - [`scripts/same_family_3d_closure.py`](/Users/jonreilly/Projects/Physics/scripts/same_family_3d_closure.py)
 - [`scripts/gate_b_connectivity_tolerance.py`](/Users/jonreilly/Projects/Physics/scripts/gate_b_connectivity_tolerance.py)
 - [`scripts/gate_b_farfield_harness.py`](/Users/jonreilly/Projects/Physics/scripts/gate_b_farfield_harness.py)

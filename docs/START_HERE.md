@@ -267,6 +267,9 @@ Do not force a trade where only one of those moves.
     on the retained `kNN`-floor bridge family, support rescue still beats the
     wavefield bridge on both sign and detector support, so the current bridge
     is best read as geometry-limited rather than field-rule-limited
+  - a more radical downstream-reach fan now confirms the same bottleneck:
+    it can move static support a little, but it still does not make the
+    wavefield lane matter on this family
   - a local robustness sweep now shows that exact-lattice Green pocket is not
     a knife-edge tuning point: nearby `mu` / `eps` perturbations and clipped
     source-cluster variants still keep exact zero-source recovery, `TOWARD`,
