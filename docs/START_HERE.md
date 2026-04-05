@@ -217,6 +217,9 @@ Do not force a trade where only one of those moves.
     it preserves `TOWARD` and exact zero-source reduction, but it fails the
     clean linear mass-scaling class (`F~M = 0.64`), so it closes as a bounded
     no-go for "minimal self-generated field dynamics already solves it"
+  - the compact generated-family source-driven coupled-field rescue also
+    closes as a bounded no-go: exact zero-source reduction and sign survive,
+    but the mass-scaling class does not reach linearity there either
   - a distinct edge-carried coupled-field architecture now survives the same
     strict reduction test and keeps `TOWARD` with near-linear mass scaling
     (`F~M = 0.98`), but at much weaker amplitude than the instantaneous
