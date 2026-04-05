@@ -204,6 +204,10 @@ The main upward pressures since the first adversarial cut are:
   lot, but it only captures a tiny fraction of the detector mass and loses the
   weak-field `F~M` class, so readout localization alone is not yet a usable
   escape hatch
+- the new softer Gaussian taper audit confirms that this is not just a harsh
+  window artifact: the readout support can shrink, but every tested taper still
+  collapses the mass law, so detector/readout localization is now a robust
+  no-go on the retained compact repeated-update object
 - the retained-grown-family causal-field lane is now better bounded too:
   the simplest `gamma`-blended retarded-like field state passes exact
   reduction on the retained Gate B row, but it does not produce a detector
