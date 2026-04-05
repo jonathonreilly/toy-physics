@@ -1,3 +1,75 @@
+## 2026-04-04 — Coordination reconciled to the synced mesoscopic localization head
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed
+- no detached science child was active to resume or monitor
+- the canonical repo was clean and synced at `6d91de9` before this step:
+  - `git status --short --branch` reported `## main...origin/main`
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 8` showed the mesoscopic localization
+    chain atop `main`
+- the tracked coordination layer had drifted:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+  - all still framed the earlier directional-`b` holdout-transfer result as
+    the active head even though the canonical repo had already moved to the
+    synced mesoscopic localization chain
+
+### What changed
+- inspected the landed synced chain instead of trusting stale coordination
+  text:
+  - `git show --stat --summary --oneline 0237099`
+  - `git show --stat --summary --oneline a588cca`
+  - `git show --stat --summary --oneline 9f9171f`
+  - `git show --stat --summary --oneline 0c50fe9`
+  - `git show --stat --summary --oneline 6d91de9`
+- reread the settled mesoscopic note/log surfaces directly:
+  - `/Users/jonreilly/Projects/Physics/docs/PERSISTENT_INERTIAL_RESPONSE_READINESS_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/MESOSCOPIC_SURROGATE_LOCALIZATION_FRONTIER_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/MESOSCOPIC_SURROGATE_LOCALIZATION_SWEEP_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/MESOSCOPIC_SURROGATE_COMPACT_FLOOR_SWEEP_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/MESOSCOPIC_SURROGATE_ALTERNATE_FAMILY_SCOUT_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-mesoscopic-surrogate-threshold-2d.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-mesoscopic-surrogate-compact-floor-sweep.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-mesoscopic-surrogate-alternate-family-scout.txt`
+- prepended this tracked integrity entry and refreshed the runtime handoff plus
+  automation memory so the next loop starts from the real synced head
+
+### Strongest confirmed conclusion
+- the retained `h = 0.5` ordered-lattice mesoscopic surrogate lane now looks
+  closed as a localization frontier rather than an open compact-family search:
+  - degenerate point-like localizations can match the best-shift score, but
+    they do so by collapsing capture/support
+  - once explicit support/capture floors are enforced, compact Gaussian and
+    tapered families survive but do not meaningfully improve on the broad
+    `topN` control
+  - the retained 2D companion has no sharp support threshold across the
+    scanned `topN = 1 .. 81` range
+- if one more bounded localization attempt is worth paying for, the cheapest
+  non-overlapping target is the retained 3D ordered-lattice `h = 0.25` family
+  with non-degenerate shapes and explicit floors, not more sweeping on 3D
+  `h = 0.5` or the 2D threshold lane
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- if `main` is ahead after landing this coordination repair, run the required
+  managed push helper before any other repo mutation:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+- once sync is restored, return to the highest-priority non-overlapping
+  directional-`b` science lane:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/directional_b_geometry_normalized_holdout_transfer.py --mass-nodes 5`
+
+### First concrete action
+- rerun the managed push helper if needed, then inspect the widened-source
+  `mass_nodes = 5` low-`b` corners to decide whether the next directional-`b`
+  read still stays on pure `1 / b` or must switch immediately to the
+  nearest-edge finite-source correction
+
 ## 2026-04-04 — Directional-b geometry-normalized holdout transfer frozen
 
 ### Current state
