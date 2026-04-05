@@ -83,3 +83,29 @@ Machine precision on both. Born transfers to grown geometry.
 
 Every property transfers. The grown geometry is physics-equivalent
 to the fixed lattice for all measured observables.
+
+## Decoherence on grown geometry (2026-04-05)
+
+| Geometry | d_TV | MI | Decoherence |
+|----------|------|-----|-------------|
+| Exact grid | 0.780 | 0.608 | 49.5% |
+| Grown drift=0.2 | 0.809 | 0.603 | 48.6% |
+| Grown drift=0.3 | 0.767 | 0.418 | 37.8% |
+
+At drift=0.2: decoherence matches the fixed lattice (48.6% vs 49.5%).
+At drift=0.3: degrades to 37.8% (more noise in growth → weaker interference).
+
+## Complete physics package: grown geometry (drift=0.2, restore=0.7)
+
+| Property | Fixed lattice | Grown geometry |
+|----------|--------------|----------------|
+| Born | 2.72e-15 | 2.16e-15 |
+| Gravity (far field) | 100% TOWARD | 100% TOWARD |
+| F∝M | 1.00 | 1.00 |
+| Distance tail | b^(-1.05) | b^(-1.01) |
+| d_TV | 0.780 | 0.809 |
+| MI | 0.608 bits | 0.603 bits |
+| Decoherence | 49.5% | 48.6% |
+
+**Every measured property transfers from the fixed lattice to grown
+geometry.** The growth rule produces physics-equivalent geometry.
