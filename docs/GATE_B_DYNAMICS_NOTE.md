@@ -169,3 +169,29 @@ F∝M=1.00 at all drift/restore levels in the far field (z≥3).
 
 The near-field (z≤2) remains mixed on both grown and fixed lattices.
 This is a beam-optics effect, not a growth-rule or physics failure.
+
+## Generated-geometry companion package (2026-04-05)
+
+The far-field Gate B lane now has dedicated companion replays for the retained
+moderate-drift row:
+
+- [`scripts/gate_b_grown_distance_law.py`](/Users/jonreilly/Projects/Physics/scripts/gate_b_grown_distance_law.py)
+- [`logs/2026-04-05-gate-b-grown-distance-law.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-05-gate-b-grown-distance-law.txt)
+- [`docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md)
+- [`scripts/gate_b_grown_joint_package.py`](/Users/jonreilly/Projects/Physics/scripts/gate_b_grown_joint_package.py)
+- [`logs/2026-04-05-gate-b-grown-joint-package.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-05-gate-b-grown-joint-package.txt)
+- [`docs/GATE_B_GROWN_JOINT_PACKAGE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_GROWN_JOINT_PACKAGE_NOTE.md)
+
+These companions sharpen the safe Gate B read:
+
+- retained far-field sign / `F~M` closure remains the main result
+- the retained moderate-drift grown row also keeps a positive declining
+  distance-law fit close to the exact-grid row on the tested `z = 3..7` window
+- the same retained grown row keeps Born at machine precision and leaves the
+  joint `d_TV` / `MI` / decoherence read nearly unchanged from the exact grid
+
+So the honest status is now:
+
+- far-field generated geometry is a real bounded positive with companion
+  support for distance and joint non-gravity observables
+- near-field and full-family Gate B closure remain open

@@ -7,6 +7,12 @@
 
 - [`scripts/gate_b_farfield_harness.py`](/Users/jonreilly/Projects/Physics/scripts/gate_b_farfield_harness.py)
 - [`logs/2026-04-05-gate-b-farfield-harness.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-05-gate-b-farfield-harness.txt)
+- [`scripts/gate_b_grown_distance_law.py`](/Users/jonreilly/Projects/Physics/scripts/gate_b_grown_distance_law.py)
+- [`logs/2026-04-05-gate-b-grown-distance-law.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-05-gate-b-grown-distance-law.txt)
+- [`docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md)
+- [`scripts/gate_b_grown_joint_package.py`](/Users/jonreilly/Projects/Physics/scripts/gate_b_grown_joint_package.py)
+- [`logs/2026-04-05-gate-b-grown-joint-package.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-05-gate-b-grown-joint-package.txt)
+- [`docs/GATE_B_GROWN_JOINT_PACKAGE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_GROWN_JOINT_PACKAGE_NOTE.md)
 
 ## Result
 
@@ -45,67 +51,28 @@ same mixing appears on the fixed lattice at near-field z-values.
 The honest Gate B read: **far-field passed, near-field mixed, same
 as the fixed lattice.**
 
-## Distance law on grown geometry (2026-04-05)
+## Companion transfer read (2026-04-05)
 
-The distance law also transfers:
+The dedicated companion replays now support a stronger but still bounded read
+on the retained moderate-drift row (`drift = 0.2`, `restore = 0.7`):
 
-| Geometry | Tail | R² |
-|----------|------|-----|
-| Exact grid | b^(-1.05) | 0.919 |
-| Grown (drift=0.2, rest=0.7) | **b^(-1.01)** | 0.914 |
-| Newtonian | b^(-1.0) | — |
+- far-field sign remains `20/20` TOWARD on the bounded distance-law replay
+- far-field `F∝M = 1.00` is frozen in the main far-field harness
+- the distance-law companion keeps a positive declining tail close to the exact
+  grid on the tested `z = 3..7` window:
+  - exact grid: `b^(-0.90)`, `R^2 = 0.855`
+  - grown geometry: `b^(-0.83)`, `R^2 = 0.884`
+- the joint Born / interference / decoherence companion stays extremely close
+  to the exact grid:
+  - exact grid: Born `2.12e-15`, `d_TV = 0.787`, `MI = 0.568`,
+    decoherence `49.4%`
+  - grown geometry: Born `2.19e-15`, `d_TV = 0.811`, `MI = 0.569`,
+    decoherence `49.4%`
 
-8 seeds averaged, W=10, L=12, h=0.5. The grown geometry gives
-b^(-1.01) — even closer to Newtonian than the fixed grid.
+The safe combined statement is:
 
-The full Newtonian package transfers to grown geometry:
-- Gravity sign: 100% TOWARD (far field)
-- F∝M = 1.00
-- Distance law: b^(-1.01)
-
-## Born rule on grown geometry (2026-04-05)
-
-| Geometry | Born |
-|----------|------|
-| Exact grid | 2.72e-15 |
-| Grown (drift=0.2) | **2.16e-15** |
-
-Machine precision on both. Born transfers to grown geometry.
-
-## Complete physics package on grown geometry
-
-| Property | Fixed lattice | Grown (drift=0.2) |
-|----------|--------------|-------------------|
-| Born | 2.72e-15 | 2.16e-15 |
-| Gravity (far field) | 100% TOWARD | 100% TOWARD |
-| F∝M | 1.00 | 1.00 |
-| Distance tail | b^(-1.05) | b^(-1.01) |
-
-Every property transfers. The grown geometry is physics-equivalent
-to the fixed lattice for all measured observables.
-
-## Decoherence on grown geometry (2026-04-05)
-
-| Geometry | d_TV | MI | Decoherence |
-|----------|------|-----|-------------|
-| Exact grid | 0.780 | 0.608 | 49.5% |
-| Grown drift=0.2 | 0.809 | 0.603 | 48.6% |
-| Grown drift=0.3 | 0.767 | 0.418 | 37.8% |
-
-At drift=0.2: decoherence matches the fixed lattice (48.6% vs 49.5%).
-At drift=0.3: degrades to 37.8% (more noise in growth → weaker interference).
-
-## Complete physics package: grown geometry (drift=0.2, restore=0.7)
-
-| Property | Fixed lattice | Grown geometry |
-|----------|--------------|----------------|
-| Born | 2.72e-15 | 2.16e-15 |
-| Gravity (far field) | 100% TOWARD | 100% TOWARD |
-| F∝M | 1.00 | 1.00 |
-| Distance tail | b^(-1.05) | b^(-1.01) |
-| d_TV | 0.780 | 0.809 |
-| MI | 0.608 bits | 0.603 bits |
-| Decoherence | 49.5% | 48.6% |
-
-**Every measured property transfers from the fixed lattice to grown
-geometry.** The growth rule produces physics-equivalent geometry.
+- on the retained moderate-drift `h = 0.5` generated-geometry family, the
+  fixed-lattice far-field package transfers well enough to count as a real
+  bounded positive
+- near-field rows and the broader generated-geometry parameter space remain
+  open, so this still does **not** close full Gate B

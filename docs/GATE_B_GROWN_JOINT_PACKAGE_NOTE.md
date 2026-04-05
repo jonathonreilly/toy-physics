@@ -28,20 +28,21 @@ on:
 
 ## Frozen result
 
-The frozen log reports mean values across the tested seeds.
+The frozen log reports mean values across `4` seeds.
 
-The retained moderate-drift grown row stays close to the exact grid:
+The retained moderate-drift grown row stays extremely close to the exact grid:
 
-- Born remains machine-clean
-- `d_TV` stays close to the exact-grid value
-- `MI` stays close to the exact-grid value
-- decoherence stays close to the exact-grid value
+- exact grid: Born `2.12e-15`, `d_TV = 0.787`, `MI = 0.568`,
+  decoherence `49.4%`
+- grown `drift = 0.2`, `restore = 0.7`: Born `2.19e-15`,
+  `d_TV = 0.811`, `MI = 0.569`, decoherence `49.4%`
 
 The noisier `drift = 0.3` stress row remains useful as a boundary read:
 
-- Born stays machine-clean
-- interference / decoherence quality weakens relative to the retained
-  moderate-drift row
+- Born `2.45e-15`
+- `d_TV = 0.790`
+- `MI = 0.446`
+- decoherence `47.2%`
 
 ## Safe read
 
@@ -49,13 +50,15 @@ The honest bounded statement is:
 
 - on the retained moderate-drift generated-geometry row, the non-gravity joint
   observables transfer well from the exact grid
+- the moderate-drift row matches the exact grid almost exactly on Born, `MI`,
+  and decoherence, and stays close on `d_TV`
 - the noisier grown row shows that the transfer is not trivial under arbitrary
-  growth noise
+  growth noise: Born remains clean, while `MI` weakens first
 
 This is exactly the kind of boundary skeptical readers need:
 
 - one retained moderate-drift positive row
-- one noisier stress row that degrades
+- one noisier stress row that degrades without collapsing everything at once
 
 ## Relation to Gate B
 
@@ -69,7 +72,7 @@ moderate-drift row:
 
 - far-field gravity sign transfers
 - far-field `F~M` transfers
-- distance-law fit transfers
+- a positive declining distance-law fit transfers
 - Born / `d_TV` / `MI` / decoherence transfer
 
 The remaining open step is not whether one retained grown row can match the

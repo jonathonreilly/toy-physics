@@ -172,9 +172,18 @@ Do not force a trade where only one of those moves.
 - **Gate B dynamics:** still open, but the bottleneck is sharper now:
   - position noise on fixed connectivity is tolerated
   - connectivity construction is the main failure mode
-  - the newest frozen `h=0.5` structured-growth replay is still mixed:
-    the best tested row reaches `33/36` TOWARD with local `F~M = 1.00`, but
-    the full tested matrix does not close Gate B
+  - the older broad `h=0.5` structured-growth replay is still mixed across the
+    full tested matrix
+  - but the retained moderate-drift far-field grown row is now much stronger:
+    it has dedicated companion artifacts for
+    - far-field sign / `F~M`
+    - a positive declining distance-law fit close to the exact-grid row
+    - Born at machine precision
+    - near-matched `d_TV` / `MI` / decoherence
+  - the safe read is now:
+    one retained generated-geometry far-field row carries the fixed-lattice
+    package well, while near-field and broader generated-geometry closure
+    remain open
   - the earlier v5 cross-growth row remains useful as the matched-control
     comparison against KNN on the same grown positions
 - **Action-power Newtonian-3D claim:** interesting, bounded to a no-barrier companion, not yet a promoted core claim
