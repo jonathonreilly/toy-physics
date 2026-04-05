@@ -1,0 +1,19 @@
+====================================================================================
+WAVE AMPLIFICATION NEAR HORIZON
+  exact 3D lattice, static vs oscillating retarded source under absorption
+====================================================================================
+h=0.5, W=6, L=30, s=0.1, c=0.8, T=8.0, A=2.0
+
+   alpha       static         wave  |wave/static|     escape
+----------------------------------------------------------------
+    0.00 -7.764007e-01 -5.676026e-01          0.731      1.552
+    0.50 -3.468626e+00 -3.508877e+00          1.012      0.009
+    0.80 -4.053685e+00 -4.044895e+00          0.998      0.002
+    1.00 -4.246098e+00 -4.236546e+00          0.998      0.001
+    2.00 -4.567770e+00 -4.582237e+00          1.003      0.000
+
+SAFE READ
+  largest ratio in this sweep: 1.012 at alpha=0.50
+  interpret large ratios only together with the raw static denominator
+  if the static row crosses near zero, the ratio can look dramatic without
+  implying a correspondingly large absolute wave signal

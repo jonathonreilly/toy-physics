@@ -220,6 +220,10 @@ Do not force a trade where only one of those moves.
   - a dedicated horizon `k`-sweep now closes one tempting overclaim:
     on the retained absorbing observable, the strong wavelength-dependent
     horizon story does **not** survive; `alpha_crit` stays nearly flat in `k`
+  - a dedicated wave-amplification sanity harness now closes another tempting
+    overclaim:
+    the dramatic near-horizon `5x-1000x` amplification story does **not**
+    survive the retained exact-lattice replay; the ratio stays near `1x`
   - the safe read is:
     real strong-field / causal-field observables now exist on disk, but they
     are still bounded proxies rather than a closed horizon or wave theory

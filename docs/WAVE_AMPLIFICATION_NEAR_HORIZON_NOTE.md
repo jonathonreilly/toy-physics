@@ -1,52 +1,72 @@
-# Gravitational Wave Amplification Near the Horizon
+# Wave Amplification Near Horizon
 
-**Date:** 2026-04-05
-**Status:** novel lattice result — wave signal peaks at trapping threshold
+**Date:** 2026-04-05  
+**Status:** bounded negative against the stronger near-horizon amplification claim on the retained exact-lattice harness
 
-## Result
+## Artifact chain
 
-Retarded oscillating source + absorbing horizon on the 3D lattice:
+- [`scripts/wave_amplification_near_horizon.py`](/Users/jonreilly/Projects/Physics/scripts/wave_amplification_near_horizon.py)
+- [`logs/2026-04-05-wave-amplification-near-horizon.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-05-wave-amplification-near-horizon.txt)
 
-| α | Wave/Static ratio | Escape fraction |
-|---|-------------------|-----------------|
-| 0.0 | 1.6× | 164% (no trapping) |
-| 0.5 | **5.7×** | 88% (transition) |
-| 0.8 | 3.7× | 65% |
-| 1.0 | 3.3× | 54% (half trapped) |
-| 2.0 | 2.5× | 27% (mostly trapped) |
+## Question
 
-## Interpretation
+Does the oscillating retarded-source signal become genuinely amplified near the
+absorptive trapping threshold, or were the earlier large ratios mostly a
+small-denominator artifact?
 
-The gravitational wave signal (deflection from oscillating retarded
-source) is **maximally amplified** at the trapping threshold (α ≈ 0.5).
+This note is intentionally narrow:
 
-At low α: the wave signal is modest (1.6× static) because the field
-is weak and retardation is a small correction.
+- one family: exact 3D lattice
+- one comparison: static retarded source vs oscillating retarded source
+- one absorber sweep: `alpha`
+- one safety check: always read the ratio alongside the raw static deflection
 
-At the threshold (α ≈ 0.5): the wave signal peaks at 5.7× because
-the absorption selectively removes the static (DC) component while
-the oscillating (AC) component retains more signal. The differential
-absorption amplifies the wave.
+## Frozen result
 
-At high α: the wave signal decreases in ratio (2.5×) because the
-absorption removes most of the beam regardless of oscillation.
+The frozen harness uses:
 
-## Physical analogy
+- exact 3D lattice with `h = 0.5`, `W = 6`, `L = 30`
+- `s = 0.1`
+- finite field speed `c = 0.8`
+- oscillation period `T = 8`
+- oscillation amplitude `A = 2`
 
-In GR, black holes have quasinormal modes: characteristic frequencies
-at which the gravitational radiation is amplified near the horizon.
-The amplification comes from the interplay between the attractive
-potential and the absorption at the horizon.
+Frozen readout:
 
-This lattice result shows the same qualitative behavior: the wave
-signal peaks at the boundary between attraction and absorption.
+| `alpha` | static deflection | wave deflection | `|wave/static|` | escape |
+| --- | ---: | ---: | ---: | ---: |
+| `0.00` | `-7.764007e-01` | `-5.676026e-01` | `0.731` | `1.552` |
+| `0.50` | `-3.468626e+00` | `-3.508877e+00` | `1.012` | `0.009` |
+| `0.80` | `-4.053685e+00` | `-4.044895e+00` | `0.998` | `0.002` |
+| `1.00` | `-4.246098e+00` | `-4.236546e+00` | `0.998` | `0.001` |
+| `2.00` | `-4.567770e+00` | `-4.582237e+00` | `1.003` | `0.000` |
 
-## What this adds to the model
+Largest ratio on the retained harness:
 
-The model now has three gravitational regimes:
-1. **Weak field** (α < 0.2): Newtonian gravity, wave/static ≈ 1.6
-2. **Near-horizon** (α ≈ 0.5): wave AMPLIFIED to 5.7×
-3. **Strong field** (α > 1): mostly absorbed, wave signal declining
+- `1.012` at `alpha = 0.50`
 
-The near-horizon amplification is a lattice prediction about the
-behavior of quantum wave packets near gravitational trapping regions.
+## Safe read
+
+The strongest retained statement is:
+
+- on this retained exact-lattice harness, the oscillating-source signal is
+  **not** dramatically amplified near the absorptive threshold
+- the retained ratio stays close to `1x`
+- the earlier 5x to 1000x narrative does not survive this sanity check
+
+## Honest limitation
+
+This is a bounded negative only for this exact harness.
+
+- it does not prove every possible oscillating-source / trapping combination is
+  flat
+- it does show that the stronger amplification story is not currently retained
+  on the main exact-lattice replay
+
+## Branch verdict
+
+Treat this as another useful overclaim-killer:
+
+- the retarded-field branch still has real bounded observables
+- but the strong near-horizon wave-amplification headline is not currently
+  supported by a retained harness
