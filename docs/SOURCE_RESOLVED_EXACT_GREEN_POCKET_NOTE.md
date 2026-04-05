@@ -27,7 +27,7 @@ This note is intentionally narrow:
 The frozen pocket uses:
 
 - exact lattice with `h = 0.5`, `W = 3`, `L = 20`
-- fixed source cluster of 4 nodes
+- fixed cross5 source cluster clipped at the boundary, leaving 4 in-bounds source nodes
 - source strengths `s = 0.001, 0.002, 0.004, 0.008`
 - kernel `exp(-mu r) / (r + eps)` with `mu = 0.08`, `eps = 0.5`
 - calibration gain `2.131774e+00`
@@ -67,6 +67,8 @@ This is a feasibility pocket, not yet a full-size exact-lattice theory.
 - the exact lattice here is intentionally small
 - the architecture is source-resolved and linear, so it is not a self-
   consistent dynamical field equation
+- the source pattern is boundary-clipped rather than fully symmetric, so this
+  is a bounded pocket control rather than a clean geometric refinement proof
 - still, it is a distinct exact-lattice self-generated field candidate that
   survives the hard gates cleanly
 

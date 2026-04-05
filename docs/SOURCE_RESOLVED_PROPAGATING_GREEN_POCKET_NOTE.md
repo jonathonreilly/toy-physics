@@ -14,7 +14,7 @@ The script is:
 ## Setup
 
 - exact 3D lattice: `h = 0.5`, `W = 3`, `L = 20`
-- source cluster: 4-node local cluster
+- source cluster: clipped cross5 local cluster, leaving 4 in-bounds nodes
 - source ladder: `s = {0.001, 0.002, 0.004, 0.008}`
 - propagating field: Green-like causal recurrence with `mix = 0.9`
 - control comparison: instantaneous `1/r` field and static source-resolved Green field
@@ -66,4 +66,3 @@ What it is **not**:
 - a full self-consistent propagating-field theory
 - a horizon / black-hole result
 - a claim that the generated geometry sector is closed
-

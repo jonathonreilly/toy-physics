@@ -32,7 +32,7 @@ This note is intentionally narrow:
 The frozen pocket uses:
 
 - exact lattice with `h = 0.25`, `W = 3`, `L = 6`
-- fixed source cluster of 4 in-bounds nodes
+- fixed cross5 source cluster clipped at the boundary, leaving 4 in-bounds source nodes
 - source strengths `s = 0.001, 0.002, 0.004, 0.008`
 - kernel `exp(-mu r) / (r + eps)` with `mu = 0.08`, `eps = 0.5`
 - calibration gain `1.757890e+00`
@@ -73,6 +73,8 @@ theory.
 - the exact lattice is intentionally compact
 - the architecture is source-resolved and linear, so it is not a self-
   consistent dynamical field equation
+- the source pattern is boundary-clipped rather than fully symmetric, so this
+  is a bounded refinement pocket rather than a clean symmetric-family proof
 - still, it is a distinct compact refinement candidate that survives the hard
   gates cleanly
 
