@@ -101,6 +101,9 @@ and move on.
 
 Run one explicit failure-audit pass first.
 
+The current canonical audit pass is recorded in
+[`docs/MOONSHOT_FAILURE_AUDIT_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/MOONSHOT_FAILURE_AUDIT_NOTE.md).
+
 That audit should ask:
 
 1. did we choose the right observable, or did we only falsify one proxy?
