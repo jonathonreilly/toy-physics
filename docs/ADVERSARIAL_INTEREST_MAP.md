@@ -101,6 +101,9 @@ The main upward pressures since the first adversarial cut are:
 - Gate B v6 is now frozen too: the h=0.5 structured-growth lane is genuinely
   TOWARD and near-linear on the tested matrix, but still mixed enough that it
   does not close the dynamics gap
+- the no-restore weak-connectivity replay now closes a clean negative:
+  label connectivity still carries the far-field package, but a weaker
+  position-based KNN+floor candidate collapses on the retained family
 - the architecture/action matrix now gives reviewers one bounded place to read
   the split without forcing a unification claim
 - the derivation-side lane is now better bounded:

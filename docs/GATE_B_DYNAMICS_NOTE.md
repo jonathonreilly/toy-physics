@@ -195,3 +195,21 @@ So the honest status is now:
 - far-field generated geometry is a real bounded positive with companion
   support for distance and joint non-gravity observables
 - near-field and full-family Gate B closure remain open
+
+## Weak-connectivity boundary (2026-04-05)
+
+The no-restore weak-connectivity lane is now frozen separately:
+
+- [`scripts/gate_b_weak_connectivity_harness.py`](/Users/jonreilly/Projects/Physics/scripts/gate_b_weak_connectivity_harness.py)
+- [`logs/2026-04-05-gate-b-weak-connectivity-harness.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-05-gate-b-weak-connectivity-harness.txt)
+- [`docs/GATE_B_WEAK_CONNECTIVITY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_WEAK_CONNECTIVITY_NOTE.md)
+
+Its bounded read is:
+
+- no-restore label-NN control still gives `12/12` TOWARD and `F~M = 1.00`
+- the weaker no-restore KNN+floor candidate collapses to `0/12` TOWARD and
+  `F~M = 0.00`
+
+So the restoring force is not the whole story. The connectivity rule is the
+critical piece, and the weaker position-based candidate does **not** carry the
+far-field package on this retained family.

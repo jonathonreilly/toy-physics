@@ -186,6 +186,9 @@ Do not force a trade where only one of those moves.
     remain open
   - the earlier v5 cross-growth row remains useful as the matched-control
     comparison against KNN on the same grown positions
+  - a new no-restore weak-connectivity boundary now sharpens the lesson:
+    label connectivity still carries the far-field package, but a weaker
+    position-based KNN+floor candidate collapses on the retained family
 - **Action-power Newtonian-3D claim:** interesting, bounded to a no-barrier companion, not yet a promoted core claim
 - **Newton-derivation lane:** stronger, but still open
   - additivity and momentum now support a bounded characterization theorem on
