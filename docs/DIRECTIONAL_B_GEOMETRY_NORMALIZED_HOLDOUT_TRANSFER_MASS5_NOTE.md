@@ -103,8 +103,18 @@ Together they now say:
 
 Do not reopen a wider denominator search from this result.
 
-If this lane is revisited at all, keep it narrow:
+That direct overlap map has now landed as:
 
-- map the failed holdout `N = 25` low-`b` rows directly onto the existing
-  overlap / occupancy cards
-- otherwise move on to the next non-overlapping program lane
+- [`docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_OVERLAP_MAP_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_OVERLAP_MAP_NOTE.md)
+
+The sharpened read is:
+
+- the failed `N = 25` center-offset rows are concentrated in the existing
+  low-`b` overlap / occupancy seam
+- they are not a new reason to widen the denominator search
+
+So if this lane is revisited again, keep it equally narrow:
+
+- either test whether the same overlap-conditioned recovery survives on one
+  other retained dense-family card
+- or move on to the next non-overlapping program lane
