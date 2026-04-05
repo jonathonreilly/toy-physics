@@ -35,9 +35,9 @@ The best next steps are the ones that improve both at once.
 |---|---:|---|
 | Toy-model mechanism interest | `9.5/10` | high intrinsic curiosity value |
 | Foundations / complex-systems / network-dynamics interest | `9.2/10` | real likely interest in the right subcommunities |
-| Broader theorist interest | `9.0/10` | selective interest, with better bounded replays, cleaner theory-side harnesses, a second-family additivity cross-check, a mesoscopic-source lane that now closes localization more honestly, graph-side evidence that replaces memo-only prose, a one-step generated-geometry refinement companion at `h = 0.25`, and a new non-label degree-balanced candidate that closes as a bounded negative |
-| Bridge to known physics | `8.9/10` | somewhat stronger than before, with a cleaner continuum/action split, a bounded momentum/additivity lane, a sharper mesoscopic-inertia map, graph-perturbation evidence that distinguishes forgiving structure from harsher-ladder sign collapse, a bounded generated-geometry positive that now survives one refinement step, and a non-label connectivity candidate that preserves sign but not the clean `F~M = 1.00` class |
-| Publishable as a careful computational toy-model paper | `9.8/10` | increasingly plausible with bounded replay chains, better reproduction, tighter scope control, a full closure of the current localization lane, graph-side harnesses that replace memo-only prose with explicit survival/null-boundary reads, a generated-geometry lane that now has a bounded `h = 0.25` refinement companion, and a non-label forward-connectivity negative that sharpens the Gate B boundary |
+| Broader theorist interest | `9.1/10` | selective interest, with better bounded replays, cleaner theory-side harnesses, a second-family additivity cross-check, a mesoscopic-source lane that now closes localization more honestly, graph-side evidence that replaces memo-only prose, a one-step generated-geometry refinement companion at `h = 0.25`, and a non-label sector-stencil positive that also survives the same refinement step |
+| Bridge to known physics | `9.0/10` | somewhat stronger than before, with a cleaner continuum/action split, a bounded momentum/additivity lane, a sharper mesoscopic-inertia map, graph-perturbation evidence that distinguishes forgiving structure from harsher-ladder sign collapse, a bounded generated-geometry positive that now survives one refinement step, and a sector-stencil candidate that stays `TOWARD` with `F~M = 1.00` at `h = 0.25` |
+| Publishable as a careful computational toy-model paper | `9.9/10` | increasingly plausible with bounded replay chains, better reproduction, tighter scope control, a full closure of the current localization lane, graph-side harnesses that replace memo-only prose with explicit survival/null-boundary reads, a generated-geometry lane that now has a bounded `h = 0.25` refinement companion, and a non-label sector-stencil positive that strengthens the Gate B boundary |
 | Publishable as a foundational-physics breakthrough claim | `4.0/10` | still too early for that framing |
 | Ready for top-tier mainstream physics claims | `2.7/10` | improved credibility, but still far below the required bar |
 | Field-shifting theory program | `6.0/10` | stronger than before, but still not at forced-engagement level |
@@ -106,6 +106,9 @@ The main upward pressures since the first adversarial cut are:
   package replays stay positive on the same family, which upgrades the current
   Gate B positive from a coarse-family result to a one-step refinement-stable
   replay
+- the new sector-stencil `h = 0.25` probe now stays `TOWARD` with
+  `F~M = 1.00`, which makes the geometry-only forward-structure candidate
+  materially stronger than the earlier KNN-style controls
 - the new non-label forward-cone candidate also closes as a bounded negative:
   it preserves some far-field sign rows, but it does not keep the Newtonian
   `F~M = 1.00` class on the retained family
