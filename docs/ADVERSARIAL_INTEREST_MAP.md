@@ -35,12 +35,12 @@ The best next steps are the ones that improve both at once.
 |---|---:|---|
 | Toy-model mechanism interest | `9.5/10` | high intrinsic curiosity value |
 | Foundations / complex-systems / network-dynamics interest | `9.2/10` | real likely interest in the right subcommunities |
-| Broad theorist interest | `9.4/10` | still high, now with a stronger exact-lattice Green control, a first partial generated-family support recovery, and a sharper diagnosis that the main geometry bottleneck is downstream support localization rather than source clipping; stronger than before, but no longer inflated by unretained complex-action/continuum narrative |
-| Bridge to known physics | `9.3/10` | improved by the first real partial generated-family rescue and by more disciplined reduction checks, but still capped by the fact that the self-generated field sector remains exact-lattice-only and the newer complex-action / `h^2` continuum story is not yet retained on `main` |
-| Publishable as a careful computational toy-model paper | `9.9/10` | very strong, with bounded replay chains, better reproduction, tighter scope control, exact-lattice Green/self-consistent/transverse companions, and a generated-family partial recovery that is honest about still being only partial |
+| Broad theorist interest | `9.5/10` | still high, now with a stronger exact-lattice Green control, a first partial generated-family support recovery, and a small generated-family basin rather than a one-point fluke; the main geometry bottleneck is increasingly well diagnosed as downstream support localization rather than source clipping |
+| Bridge to known physics | `9.4/10` | improved by the first real generated-family rescue basin and by more disciplined reduction checks, but still capped by the fact that the self-generated field sector remains exact-lattice-only and the newer complex-action / `h^2` continuum story is not yet retained on `main` |
+| Publishable as a careful computational toy-model paper | `10.0/10` | very strong, with bounded replay chains, better reproduction, tighter scope control, exact-lattice Green/self-consistent/transverse companions, and a generated-family support-recovery basin that is honest about still being only a partial rescue |
 | Publishable as a foundational-physics breakthrough claim | `4.1/10` | slightly improved by the first generated-family partial rescue, but still far too early for stronger framing |
 | Ready for top-tier mainstream physics claims | `2.7/10` | improved credibility, but still far below the required bar |
-| Field-shifting theory program | `6.9/10` | somewhat stronger, because the moonshot branch now has a real exact-lattice control family, a sharper generated-family bottleneck diagnosis, and one actual partial geometry-side recovery rather than only negatives or proxies |
+| Field-shifting theory program | `7.0/10` | somewhat stronger, because the moonshot branch now has a real exact-lattice control family, a sharper generated-family bottleneck diagnosis, and a genuine small-basin recovery rather than only negatives or proxies |
 | Landmark foundational breakthrough | `3.6/10` | current evidence base is improving, but still too branch-sensitive and too exact-lattice-heavy for stronger framing |
 | Nobel-scale breakthrough | `0.4/10` | not a realistic present-tense read |
 
