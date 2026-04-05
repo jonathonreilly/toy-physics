@@ -18,4 +18,4 @@ SAFE INTERPRETATION
   Read the result as: does far-field gravity survive with less imposed
   connectivity structure, or does the signal collapse once labels are loosened?
 
-Total time: 24s
+Total time: 8s

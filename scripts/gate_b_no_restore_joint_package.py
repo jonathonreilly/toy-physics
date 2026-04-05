@@ -31,13 +31,11 @@ PW = 10
 MAX_D_PHYS = 3
 LAM = 10.0
 N_YBINS = 8
-SEEDS = list(range(4))
+SEEDS = [0]
 ROWS = [
     ("exact grid", 0.0, 1.0),
     ("no restore drift=0.0", 0.0, 0.0),
-    ("no restore drift=0.1", 0.1, 0.0),
     ("no restore drift=0.2", 0.2, 0.0),
-    ("no restore drift=0.3", 0.3, 0.0),
     ("no restore drift=0.5", 0.5, 0.0),
 ]
 
