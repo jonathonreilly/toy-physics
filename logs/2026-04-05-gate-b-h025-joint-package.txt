@@ -1,0 +1,18 @@
+============================================================================
+GATE B H=0.25 JOINT PACKAGE HARNESS
+  Born / d_TV / MI / decoherence on exact vs grown geometry
+============================================================================
+h=0.25, W=6, L=3, seeds=1, LAM=10.0
+growth rule: template + drift + restore + NN connectivity from grid labels
+
+geometry                 Born     d_TV       MI    Decoh
+exact grid           2.62e-15    0.850    0.655    49.8%
+grown drift=0.2      2.94e-15    0.916    0.770    48.8%
+
+SAFE INTERPRETATION
+  This harness freezes the h=0.25 joint interference/decoherence
+  comparison only.
+  Promote the retained grown row only if it stays close to the exact grid.
+  Treat the result as a bounded scaling check, not a full closure claim.
+
+Total time: 90s
