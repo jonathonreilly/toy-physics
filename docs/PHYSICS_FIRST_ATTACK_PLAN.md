@@ -90,6 +90,22 @@ The newest discriminator result also narrows one tempting lane:
 - that means repeated tuning of the same bridge family is no longer the main
   moonshot; the next serious generated-family step has to change the geometry
   rule enough to widen support, not just tweak the field update again
+
+Two additional bounded negatives now sharpen the live portfolio:
+
+- the smallest retained-grown-family causal-memory / `gamma` blend is a clean
+  no-go: exact reduction survives, but the detector phase ramp stays flat and
+  the escape ratio remains `1.000`
+- the first hard detector/readout localization attempt is also a clean no-go:
+  a peak-centered `3x3` readout shrinks support sharply, but it captures too
+  little detector mass and destroys the weak-field `F~M` class
+
+So the next serious versions of those lanes must be:
+
+- a stronger generated-geometry causal-field architecture than simple layer
+  memory / `gamma` blending
+- a softer or more dynamical readout-localization rule than hard-window
+  capture
 - the new downstream-reach fan now adds an even stronger no-go:
   it broadens static support a little, but it still does not make the
   wavefield lane matter, so the transfer bottleneck is not fixed by another
@@ -129,6 +145,15 @@ For the moonshot branch, also do not count:
 - a trapping or horizon claim that does not come with a weak-field reduction
 - an absorptive or bidirectional extension that immediately destroys the
   current Born / weak-field baseline and is then treated as "physics"
+
+When a moonshot branch closes negative, add one extra adversarial pass before
+freezing it completely:
+
+- check whether the observable was too weak or too indirect
+- check whether the implementation was underpowered or overly harsh
+- check whether one adjacent minimal variant is still worth testing
+
+Only after that pass should the lane be treated as a real closure.
 
 ## Batch 1: Generated Geometry Closure
 

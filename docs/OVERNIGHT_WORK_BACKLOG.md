@@ -94,6 +94,35 @@ For the moonshot branch, the bar is narrower still:
 - "does this create one new retained strong-field observable without losing
   the current weak-field lane?"
 
+## Failure-Audit Rule
+
+When a moonshot lane closes as a bounded negative, do **not** just archive it
+and move on.
+
+Run one explicit failure-audit pass first.
+
+That audit should ask:
+
+1. did we choose the right observable, or did we only falsify one proxy?
+2. did we choose the right reduction check, or did we make the branch too weak
+   to show anything interesting?
+3. did we choose the right parameterization, or did we only falsify one harsh
+   or one underpowered implementation?
+4. is there one adjacent minimal variant worth testing before the lane is
+   really frozen?
+
+The audit does **not** reopen the whole lane.
+
+It should be:
+
+- one note or one note-backed micro-probe
+- one cheapest missed-variant test if a plausible gap exists
+- one final verdict:
+  - robust no-go
+  - metric-choice no-go
+  - underpowered implementation no-go
+  - or reopen with one tightly scoped next probe
+
 ## Current non-Gate-B physics bottleneck
 
 Outside the live generated-geometry lane, the cleanest next physics target is

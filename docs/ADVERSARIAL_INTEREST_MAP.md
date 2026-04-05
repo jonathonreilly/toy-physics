@@ -39,6 +39,7 @@ The best next steps are the ones that improve both at once.
 | Bridge to known physics | `9.6/10` | improved by the stronger exact-lattice wavefield lane, the first generated-family rescue basin, the new geometry-limited discriminator, a tiny absorptive Gate B falsifier on a retained grown row, and a new compact repeated-update source object that still keeps `TOWARD` and `F~M = 1.00`; it is still capped by the fact that the self-generated field sector remains exact-lattice-only and the readout / inertial-response side is not yet localized |
 | Publishable as a careful computational toy-model paper | `10.0/10` | very strong, with bounded replay chains, better reproduction, tighter scope control, exact-lattice Green/self-consistent/transverse companions, and a generated-family support-recovery basin that is honest about still being only a partial rescue |
 | Publishable as a foundational-physics breakthrough claim | `4.3/10` | the moonshot portfolio is a bit stronger and cleaner, with a new compact repeated-update object positive, but the project is still too exact-lattice-heavy and too transfer-limited for stronger framing |
+| Likelihood of publication in very top field journals today (`PRL` / `PRX` / `Nature Physics`) | `1.9/10` | not impossible with a very tightly scoped outsider submission, but still unlikely without one more retained architecture-level result plus stronger independent-style hardening; right now the branch-sensitive exact-to-generated gap is still too visible |
 | Ready for top-tier mainstream physics claims | `2.8/10` | improved credibility, but still far below the required bar |
 | Field-shifting theory program | `7.6/10` | somewhat stronger, because the moonshot branch now has a larger exact-lattice wavefield control with a cleaner observable, a sharper generated-family bottleneck diagnosis, two additional geometry-rule negatives that focus the transfer problem, a tiny retained Gate B absorptive falsifier that keeps one grown-geometry strong-field knob alive, and a first compact repeated-update source object that is genuinely smaller than the broad control while keeping the weak-field lane |
 | Landmark foundational breakthrough | `3.8/10` | current evidence base is improving, but still too branch-sensitive and too exact-lattice-heavy for stronger framing |
@@ -203,6 +204,12 @@ The main upward pressures since the first adversarial cut are:
   lot, but it only captures a tiny fraction of the detector mass and loses the
   weak-field `F~M` class, so readout localization alone is not yet a usable
   escape hatch
+- the retained-grown-family causal-field lane is now better bounded too:
+  the simplest `gamma`-blended retarded-like field state passes exact
+  reduction on the retained Gate B row, but it does not produce a detector
+  phase ramp or escape effect beyond the static baseline, so that minimal
+  generated-geometry causal-field idea closes as a clean no-go rather than an
+  ambiguous maybe
   - the imported `1/L^(d-1)` kernel lane is now scientifically more interesting
     and does live on `main`, but it is still **bounded / unreconciled** rather
     than promoted in the top-line canonical story
@@ -243,7 +250,20 @@ The biggest score movers are:
      destroys the mass law, so the remaining gap is now detector/readout
      localization rather than source localization
 
-4. **A real continuum / asymptotic bridge**
+4. **A real grown-family causal-field observable**
+   - strongest improvement to:
+     - bridge to known physics
+     - broader theorist interest
+     - top-journal likelihood
+   - because the exact-lattice wavefield lane is already strong, and the next
+     credibility jump would come from carrying a genuinely causal observable
+     onto retained grown geometry
+   - the newest no-go matters here too:
+     - the simple causal-memory / `gamma` blend is not enough
+     - so the next positive would have to come from a stronger architecture,
+       not one more minor variant
+
+5. **A real continuum / asymptotic bridge**
    - strongest improvement to:
      - bridge to known physics
      - mainstream-readiness
@@ -251,7 +271,7 @@ The biggest score movers are:
    - because it answers the “small-grid artifact” critique directly, but only
      if the branch is actually hardened on `main`
 
-5. **Independent robustness / reproduction**
+6. **Independent robustness / reproduction**
    - strongest improvement to:
      - mainstream-readiness
      - field-shifting program score
