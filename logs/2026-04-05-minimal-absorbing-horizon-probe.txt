@@ -18,3 +18,11 @@ ESCAPE FRACTION VS ABSORPTION
     0.30     0.0903     0.9097
     0.50     0.0202     0.9798
     2.00     0.0000     1.0000
+   10.00     0.0000     1.0000
+
+SAFE READ
+  - The escape fraction drops below 50% at alpha ≈ 0.10.
+  - That is a real trapping threshold on this retained family.
+  - The weak-field reduction check still holds at alpha=0.
+
+Total time: 71s
