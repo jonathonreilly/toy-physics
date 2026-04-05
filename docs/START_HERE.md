@@ -213,6 +213,9 @@ Do not force a trade where only one of those moves.
     - compact refinement companion
     - bounded oscillating-source harness with a frequency-dependent
       fingerprint
+  - the source-resolved propagating Green pocket now adds a retained
+    causal-memory observable on the exact lattice, but it remains bounded and
+    does not close a full self-consistent GR sector
   - the first smallest source-driven local-field attempt is now frozen too:
     at stronger calibration it preserves `TOWARD` and exact zero-source
     reduction but fails the clean linear mass-scaling class (`F~M = 0.64`)
@@ -242,9 +245,20 @@ Do not force a trade where only one of those moves.
     reduction on a small exact lattice and keeps both `TOWARD` and
     `F~M = 1.00` on the retained source ladder, making it a distinct
     self-generated-field candidate worth later size-transfer tests
+  - a minimal self-consistency update on that exact pocket also survives the
+    same hard gates: exact zero-source reduction, `TOWARD`, and near-linear
+    `F~M` all remain intact on the compact `h = 0.25` refinement family
   - a compact exact `h = 0.25` Green pocket now survives the same hard gates
     on a refinement-style exact family, with exact zero-source recovery,
     `TOWARD`, and near-linear `F~M` still intact
+  - a source-resolved propagating Green pocket now survives exact zero-source
+    reduction on the same exact-lattice family, keeps all rows `TOWARD`,
+    stays in the requested dynamic/instantaneous ratio band, and preserves
+    the Newtonian mass-scaling class while adding a small causal-memory
+    offset relative to the static Green control
+  - the generated-family transfer of that self-consistent pocket closes as a
+    clean no-go: exact zero-source reduction survives, but the sign and linear
+    mass-scaling class do not carry over to the compact generated DAG family
   - a local robustness sweep now shows that exact-lattice Green pocket is not
     a knife-edge tuning point: nearby `mu` / `eps` perturbations and clipped
     source-cluster variants still keep exact zero-source recovery, `TOWARD`,
