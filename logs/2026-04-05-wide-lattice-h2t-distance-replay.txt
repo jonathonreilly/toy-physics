@@ -1,0 +1,34 @@
+========================================================================================
+WIDE-LATTICE H^2+T DISTANCE-LAW REPLAY
+  Independent wide replay of the ordered 3D 1/L^2 family.
+  h=0.25, W=12, L=12, max_d=12
+========================================================================================
+
+Barrier sanity: Born=4.82e-15  k=0=+0.000000
+
+Distance rows:
+  z= 2  delta=+0.000188  TOWARD
+  z= 3  delta=+0.000232  TOWARD
+  z= 4  delta=+0.000245  TOWARD
+  z= 5  delta=+0.000220  TOWARD
+  z= 6  delta=+0.000183  TOWARD
+  z= 7  delta=+0.000159  TOWARD
+  z= 8  delta=+0.000142  TOWARD
+  z= 9  delta=+0.000124  TOWARD
+  z=10  delta=+0.000108  TOWARD
+  z=11  delta=+0.000093  TOWARD
+
+TOWARD support: 10/10
+Peak tail from z>=4: b^(-0.95), R^2=0.980, n=8
+Far tail from z>=5: b^(-1.05), R^2=0.990, n=7
+
+F~M sweep:
+  s=1e-06: delta=+4.636762e-06  TOWARD
+  s=2e-06: delta=+9.273526e-06  TOWARD
+  s=5e-06: delta=+2.318384e-05  TOWARD
+  s=1e-05: delta=+4.636775e-05  TOWARD
+  s=2e-05: delta=+9.273579e-05  TOWARD
+  s=5e-05: delta=+2.318416e-04  TOWARD
+  F~M exponent: 1.000
+
+Total time: 167.7s
