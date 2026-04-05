@@ -1,7 +1,8 @@
 # Valley-Linear Asymptotic Bridge Note
 
-**Date:** 2026-04-04  
-**Status:** bounded finite-size bridge on the 3D ordered-lattice `1/L^2` family
+**Date:** 2026-04-05  
+**Status:** bounded finite-size bridge on the 3D ordered-lattice `1/L^2`
+family; current-main replay reproduced
 
 ## One-line read
 
@@ -15,7 +16,8 @@ safe read remains:
 ## Primary artifact
 
 - Script: [`scripts/valley_linear_asymptotic_bridge.py`](/Users/jonreilly/Projects/Physics/scripts/valley_linear_asymptotic_bridge.py)
-- Log: [`logs/2026-04-04-valley-linear-asymptotic-bridge.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-04-valley-linear-asymptotic-bridge.txt)
+- Frozen log: [`logs/2026-04-04-valley-linear-asymptotic-bridge.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-04-valley-linear-asymptotic-bridge.txt)
+- Current-main replay: [`logs/2026-04-05-valley-linear-asymptotic-bridge-replay.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-05-valley-linear-asymptotic-bridge-replay.txt)
 
 The script keeps fixed:
 
@@ -36,6 +38,22 @@ It varies only a small `h/W` ladder:
 | coarse anchor `h=0.5, W=8` | `2.50e-15` | `0` | `1.00` | `+0.000144` | `7/9` | `z>=5: -1.47`, `R²=0.996` | `-1.47`, `R²=0.996` |
 | core retained `h=0.25, W=10` | `4.20e-15` | `0` | `1.00` | `+0.000224` | `9/9` | `z>=4: -1.00`, `R²=0.979` | `z>=5: -1.12`, `R²=0.991` |
 | wide replay `h=0.25, W=12` | `4.82e-15` | `0` | `1.00` | `+0.000232` | `9/9` | `z>=4: -0.90`, `R²=0.985` | `z>=5: -1.00`, `R²=0.995` |
+
+## Current-main replay
+
+On 2026-04-05, the same script was rerun on synced `main` at `9a23a8c`
+(`feat: add compact exact green refinement pocket`).
+
+The replay log reproduced the frozen bridge table exactly:
+
+- coarse anchor `h = 0.5, W = 8`
+- core retained `h = 0.25, W = 10`
+- wide replay `h = 0.25, W = 12`
+
+So the safe interpretation did not drift under the later exact-green lane
+commits: the valley-linear bridge still reads as a near-Newtonian
+finite-lattice replay with slice-dependent far-tail correction, not a
+stabilized universal `-1.00` theorem.
 
 ## Safe interpretation
 

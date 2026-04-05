@@ -1,14 +1,13 @@
 # Physics Autopilot Handoff
 
-## 2026-04-05 11:20 America/New_York
+## 2026-04-05 14:20 America/New_York
 
 ### Seam class
-- coordination-repair integrity step only: the saved work log, handoff, and
-  automation memory had drifted behind the real synced head chain, including
-  the already-landed bounded evolving-network `v6` freeze
-- no detached `physics-science` child is active; the managed push helper later
-  failed once with transient DNS, so the repo now sits locally ahead by the
-  coordination commit `80952a4` even though the lock can still be released
+- bounded continuum / asymptotic integrity replay on the retained
+  valley-linear 3D `1/L^2` lane
+- no detached `physics-science` child is active; this loop stayed on the
+  user-priority non-overlapping continuum bridge instead of reopening
+  directional-`b`, evolving-network, or decoherence-frontier work
 
 ### What this loop did
 - read the tracked work log, latest handoff, and automation memory in protocol
@@ -16,69 +15,57 @@
 - confirmed the latest handoff named no detached `physics-science` child to
   resume or protect
 - reconciled canonical repo state and found the saved coordination layer stale
-  against the synced head `a69ebe4`
-- inspected the missed synced head chain directly:
-  - `da27d6c` (`docs(gate-b): freeze h=0.5 structured-growth v6 replay`)
-  - `4cdfcbe` (`feat: quantum spectral signature — wave amplification 19x, k-dependent peak`)
-  - `46b4c4f` (`feat: wave amplification robust and GROWS — 43x at L=30, 966x at s=0.2`)
-  - `a05a4e9` (`test: bound quantum horizon k-dependence on retained family`)
-  - `7cae65d` (`test: freeze minimal source-driven field probe`)
-  - `a69ebe4` (`test: bound near-horizon wave amplification claim`)
-- ran the cheap confidence gate because recent landed commits added new script
-  surfaces:
-  - `python3 /Users/jonreilly/Projects/Physics/scripts/base_confidence_check.py`
-  - result: passed
-- created the repo-facing coordination repair commit:
-  - `80952a4` (`docs(autopilot): reconcile science coordination`)
-- ran the managed push helper exactly as required:
-  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
-  - result: `status=failed`, `failure_kind=dns_failure`, `ahead=1`,
-    `behind=0`, `attempts_used=5`
+  against synced head `9a23a8c`
+- inspected the relevant current head and priority surfaces directly:
+  - `git show --stat --summary --oneline 5b1065d`
+  - `git show --stat --summary --oneline 9a23a8c`
+  - `/Users/jonreilly/Projects/Physics/docs/OVERNIGHT_WORK_BACKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/docs/PHYSICS_FIRST_ATTACK_PLAN.md`
+- reran the bounded continuum bridge harness on the canonical repo:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/valley_linear_asymptotic_bridge.py | tee /Users/jonreilly/Projects/Physics/logs/2026-04-05-valley-linear-asymptotic-bridge-replay.txt`
+- confirmed the finished replay reproduced the frozen coarse/core/wide table
+  exactly on current `main`
+- updated
+  `/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_ASYMPTOTIC_BRIDGE_NOTE.md`
+  so the bounded claim surface now records the current-main replay artifact
 - refreshed the tracked work log, this runtime handoff, and automation memory
-  so the next loop starts from the real synced head and does not repeat the
-  already-landed directional-`b` or structured-growth `v6` work
+  so the next loop starts from the real synced head and the completed
+  continuum replay
 
 ### Current state
 - no detached `physics-science` child is active
-- before this loop's coordination repair, the canonical repo was clean and
-  synced at `a69ebe4` (`test: bound near-horizon wave amplification claim`)
-- the repo now contains local coordination repair commit `80952a4`
-  (`docs(autopilot): reconcile science coordination`) and sits `ahead 1,
-  behind 0` because the managed push helper hit a transient DNS failure
-- the stale instruction to run
-  `python3 /Users/jonreilly/Projects/Physics/scripts/evolving_network_prototype_v6.py`
-  is now obsolete because that bounded replay already landed earlier as
-  `da27d6c`
-- the bounded integrity replay passed, so the only live blocker before the
-  next science step is remote reconciliation, not a science-integrity issue
+- before this loop's replay, the canonical repo was clean and synced at
+  `9a23a8c` (`feat: add compact exact green refinement pocket`)
+- the saved coordination layer was behind that real head and still named the
+  older `a69ebe4` / `80952a4` state
+- the bounded continuum replay is now complete on current `main`, and its safe
+  read is unchanged from the frozen 2026-04-04 bridge note
+- this loop intentionally left `README.md` untouched because the replay
+  reproduced the existing conclusion rather than changing it
 
 ### Strongest confirmed conclusion
-- the saved coordination files were the blocker, not the repo: `main` already
-  contained the missed bounded evolving-network result plus a later strong-field
-  chain that tightened claims rather than broadened them
-- the retained strong-field read is now narrower than the stale state knew:
-  - the smallest source-driven local field keeps `TOWARD` and exact zero-source
-    reduction but fails linear mass scaling (`F~M = 0.64`)
-  - the retained horizon threshold is nearly flat in `k`
-  - the exact-lattice near-horizon wave-amplification ratio collapses to about
-    `1x`, so the earlier large-amplification headline is not retained
-- operationally, the next non-overlapping science pass should still move to
-  one bounded continuum / asymptotic bridge card rather than revisit
-  already-frozen directional-`b`, structured-growth, or decoherence-frontier
-  work, but only after the stranded local coordination commit is pushed
+- synced `main` at `9a23a8c` still reproduces the valley-linear asymptotic
+  bridge table exactly
+- the retained continuum-side read therefore stays narrow and honest:
+  - the 3D valley-linear `1/L^2` family remains Born-clean and genuinely
+    TOWARD across the tested ladder
+  - `F~M = 1.00` still survives on the tested ladder
+  - the far-tail exponent still moves with `h / W`, so the safe read remains
+    near-Newtonian finite-lattice replay rather than a universal exact
+    `-1.00` theorem
+- operationally, the next bounded continuum step should be a compact
+  finite-size correction synthesis, not a wider frontier search
 
 ### Exact next step
-- rerun the managed push helper until the local coordination repair commit is
-  no longer stranded:
-  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
-- only once `main` is synced again should the next science loop move to the
-  bounded continuum / asymptotic bridge card on the retained valley-linear
-  ladder:
-  - `python3 /Users/jonreilly/Projects/Physics/scripts/valley_linear_asymptotic_bridge.py`
+- decide whether the reproduced coarse/core/wide ladder now supports one
+  compact finite-size correction card in
+  `/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_CONTINUUM_SYNTHESIS_NOTE.md`
+  without widening the search space
 
 ### First concrete action
-- rerun `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py
-  push-if-ahead --workdir /Users/jonreilly/Projects/Physics`; if it succeeds,
-  then compare the coarse/core/wide tail fits from
-  `valley_linear_asymptotic_bridge.py` against
+- open
+  `/Users/jonreilly/Projects/Physics/logs/2026-04-05-valley-linear-asymptotic-bridge-replay.txt`
+  beside
   `/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_CONTINUUM_SYNTHESIS_NOTE.md`
+  and test whether the sign-stable / exponent-slice-dependent split can be
+  tightened into one review-safe finite-size correction paragraph

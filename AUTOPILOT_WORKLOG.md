@@ -1,3 +1,76 @@
+## 2026-04-05 — Current-main replay preserves the valley-linear asymptotic bridge
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed in
+  protocol order at loop start
+- no detached `physics-science` child was active to resume or monitor
+- the canonical repo at `/Users/jonreilly/Projects/Physics` was clean and
+  synced at `9a23a8c` before this step:
+  - `git status --short --branch` reported `## main...origin/main`
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 8` showed synced head `9a23a8c`
+- the saved coordination layer had drifted behind the real repo again:
+  - this tracked work log and the runtime handoff still stopped at the older
+    `a69ebe4` / `80952a4` coordination repair state
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` still
+    described a different thread skipping because another worker held the lock
+- within the user-priority non-overlapping lanes, the bounded continuum /
+  asymptotic bridge card remained the cleanest next step because the earlier
+  directional-`b` and evolving-network follow-ons were already frozen
+
+### What changed
+- inspected the current synced head and priority surfaces directly instead of
+  trusting the stale coordination text:
+  - `git show --stat --summary --oneline 5b1065d`
+  - `git show --stat --summary --oneline 9a23a8c`
+  - `/Users/jonreilly/Projects/Physics/docs/OVERNIGHT_WORK_BACKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/docs/PHYSICS_FIRST_ATTACK_PLAN.md`
+- completed the bounded continuum replay on the canonical repo:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/valley_linear_asymptotic_bridge.py | tee /Users/jonreilly/Projects/Physics/logs/2026-04-05-valley-linear-asymptotic-bridge-replay.txt`
+- compared the finished replay against
+  `/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_ASYMPTOTIC_BRIDGE_NOTE.md`
+  and found the coarse/core/wide ladder reproduced exactly on current `main`
+- updated the asymptotic-bridge note so the bounded claim surface now records
+  the current-main reproducibility replay alongside the frozen 2026-04-04 log
+- refreshed the tracked work log, runtime handoff, and automation memory so
+  the next loop starts from the real synced head and the completed replay
+
+### Strongest confirmed conclusion
+- synced `main` at `9a23a8c` still reproduces the frozen valley-linear
+  asymptotic bridge table exactly
+- the bounded continuum-side read therefore stays unchanged under the later
+  exact-green lane commits:
+  - the 3D ordered-lattice valley-linear family remains Born-clean and
+    genuinely TOWARD across the tested coarse/core/wide ladder
+  - `F~M = 1.00` still holds across the ladder
+  - the far-tail exponent still moves with `h / W`, so the safe read is still
+    near-Newtonian finite-lattice replay rather than a universal exact
+    `-1.00` theorem
+- operationally, this loop closes a real reproducibility / integrity question
+  on the continuum bridge without reopening directional-`b`, evolving-network,
+  or decoherence-frontier work
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_ASYMPTOTIC_BRIDGE_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- stay on the bounded continuum / asymptotic lane and decide whether the
+  reproduced coarse/core/wide ladder now supports one compact finite-size
+  correction card in
+  `/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_CONTINUUM_SYNTHESIS_NOTE.md`
+  without widening the search space
+
+### First concrete action
+- open
+  `/Users/jonreilly/Projects/Physics/logs/2026-04-05-valley-linear-asymptotic-bridge-replay.txt`
+  beside
+  `/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_CONTINUUM_SYNTHESIS_NOTE.md`
+  and test whether the sign-stable / exponent-slice-dependent split can be
+  tightened into one review-safe finite-size correction paragraph
+
 ## 2026-04-05 — Coordination reconciled to synced wave-amplification head; cheap gate passed
 
 ### Current state
