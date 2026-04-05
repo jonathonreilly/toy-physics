@@ -176,6 +176,8 @@ def evaluate_family(
         and float(capture2) >= MIN_CAPTURE
     )
 
+    delta_ratio = delta2 / delta1 if abs(delta1) > 1e-30 else 0.0
+
     return {
         "family": family,
         "param": param,
@@ -185,7 +187,7 @@ def evaluate_family(
         "capture2": capture2,
         "delta1": delta1,
         "delta2": delta2,
-        "delta_ratio": delta2 / max(delta1, 1e-30),
+        "delta_ratio": delta_ratio,
         "shift": shift,
         "score": score,
         "width_ratio": width_ratio,
@@ -288,6 +290,26 @@ def main() -> None:
             f"radius={best_tapered['param']}, capture2={float(best_tapered['capture2']):.3f}, "
             f"score={float(best_tapered['score']):.4f}, width={float(best_tapered['width_ratio']):.3f}"
         )
+
+    print("\nCOMPACT VS TOPN")
+    if best_compact is None or best_topn is None:
+        print("  comparison unavailable because one side did not meet the floors")
+    else:
+        improves_score = float(best_compact["score"]) > float(best_topn["score"]) + 1e-9
+        improves_capture = float(best_compact["capture2"]) >= float(best_topn["capture2"]) - 1e-9
+        improves_width = abs(float(best_compact["width_ratio"]) - 1.0) <= abs(float(best_topn["width_ratio"]) - 1.0)
+        meaningful = improves_score and improves_capture and improves_width
+        print(
+            "  topN benchmark: "
+            f"{best_topn['family']} {best_topn['param']} with capture2={float(best_topn['capture2']):.3f}, "
+            f"score={float(best_topn['score']):.4f}, width={float(best_topn['width_ratio']):.3f}"
+        )
+        print(
+            "  best compact: "
+            f"{best_compact['family']} {best_compact['param']} with capture2={float(best_compact['capture2']):.3f}, "
+            f"score={float(best_compact['score']):.4f}, width={float(best_compact['width_ratio']):.3f}"
+        )
+        print(f"  meaningful improvement over topN: {meaningful}")
 
     print("\nSAFE READ")
     if best_compact is None:

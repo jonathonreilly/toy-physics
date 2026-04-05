@@ -40,11 +40,20 @@ That is the key difference from the older localization sweeps:
 
 Frozen result is recorded in the log file linked above.
 
-The summary statement to fill from the frozen run is:
+The frozen read is:
 
-- whether any compact Gaussian family passed the floors
-- whether any tapered compact family passed the floors
-- whether any compact family improved on the broad top-N benchmark once the floors were enforced
+- compact Gaussian families do pass the floors
+- tapered compact families do pass the floors
+- the best compact survivor is `tapered radius 2`
+  - capture2 `0.638`
+  - score `1.0000`
+  - width ratio `1.003`
+- the broad top-N benchmark still has the stronger score/capture tradeoff
+  - topN `49`
+  - capture2 `1.000`
+  - score `0.9994`
+  - width ratio `1.020`
+- meaningful improvement over topN: `False`
 
 ## Safe read
 
@@ -59,6 +68,7 @@ The expected outcomes are:
   the least-bad mesoscopic object on the retained 3D family
 - if a compact family passes the floors, it still has to beat top-N on the same
   support/capture constraint before we call it an improvement
+- on this frozen run, the compact families survive but do not beat top-N
 
 ## Relation to the other mesoscopic notes
 
