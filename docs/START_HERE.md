@@ -110,6 +110,19 @@ Do not force a trade where only one of those moves.
   - a separate Nyquist-diffraction probe now freezes the high-`k` gravity sign
     flip as a bounded lattice-UV effect: the first flip tracks `pi/h` and
     moves with `h`, so it is not a retained continuum prediction
+  - a bounded inverse-problem graph-requirements harness is now real:
+    baseline, asymmetry, jitter, and sparse connectivity stay TOWARD with
+    Born machine-clean, while heavy `70%` random edge deletion flips AWAY
+  - that sharpens the graph-side read:
+    the retained family is forgiving under several natural perturbations, but
+    the graph is still part of the mechanism and can change the sign under
+    heavy damage
+  - a bounded broken-graph action-power robustness probe is now also real:
+    on this retained family, `p = 1` is the cleanest exponent when it
+    survives, but `p = 2` survives more of the signed damage ladder
+  - so the safe graph-side universality claim is now:
+    graph damage mostly changes retention, sign, and precision, not the
+    existence conditions alone
   - a bounded same-family closure note is now artifact-backed:
     rows `1-7` stay on the fixed `h = 0.25`, `W = 10`, `L = 12` core family,
     rows `8-9` are replayed at the same `h = 0.25`, `W = 10` family across

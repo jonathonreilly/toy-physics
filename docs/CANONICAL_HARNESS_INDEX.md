@@ -85,6 +85,8 @@ thing a new reader should treat as canonical proof of the current story:
 - [`scripts/mesoscopic_surrogate_annular_tapered_sweep.py`](/Users/jonreilly/Projects/Physics/scripts/mesoscopic_surrogate_annular_tapered_sweep.py)
 - [`scripts/mesoscopic_surrogate_alternate_family_scout.py`](/Users/jonreilly/Projects/Physics/scripts/mesoscopic_surrogate_alternate_family_scout.py)
 - [`scripts/lattice_3d_nyquist_diffraction_probe.py`](/Users/jonreilly/Projects/Physics/scripts/lattice_3d_nyquist_diffraction_probe.py)
+- [`scripts/inverse_problem_graph_requirements.py`](/Users/jonreilly/Projects/Physics/scripts/inverse_problem_graph_requirements.py)
+- [`scripts/broken_graph_action_power_robustness.py`](/Users/jonreilly/Projects/Physics/scripts/broken_graph_action_power_robustness.py)
 - [`scripts/same_family_3d_closure.py`](/Users/jonreilly/Projects/Physics/scripts/same_family_3d_closure.py)
 - [`scripts/gate_b_connectivity_tolerance.py`](/Users/jonreilly/Projects/Physics/scripts/gate_b_connectivity_tolerance.py)
 - [`scripts/lattice_3d_valley_linear_card.py`](/Users/jonreilly/Projects/Physics/scripts/lattice_3d_valley_linear_card.py)
@@ -121,6 +123,8 @@ Bounded derivation-side notes:
 - [`docs/MESOSCOPIC_SURROGATE_ANNULAR_TAPERED_SWEEP_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/MESOSCOPIC_SURROGATE_ANNULAR_TAPERED_SWEEP_NOTE.md)
 - [`docs/MESOSCOPIC_SURROGATE_ALTERNATE_FAMILY_SCOUT_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/MESOSCOPIC_SURROGATE_ALTERNATE_FAMILY_SCOUT_NOTE.md)
 - [`docs/LATTICE_3D_NYQUIST_DIFFRACTION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_3D_NYQUIST_DIFFRACTION_NOTE.md)
+- [`docs/INVERSE_PROBLEM_GRAPH_REQUIREMENTS_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/INVERSE_PROBLEM_GRAPH_REQUIREMENTS_NOTE.md)
+- [`docs/BROKEN_GRAPH_ACTION_POWER_ROBUSTNESS_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/BROKEN_GRAPH_ACTION_POWER_ROBUSTNESS_NOTE.md)
 
 ## How to use them
 

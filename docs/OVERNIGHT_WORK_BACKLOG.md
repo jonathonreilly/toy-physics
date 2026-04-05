@@ -63,6 +63,12 @@ What is now newly bounded:
   still owns the score/capture frontier there
 - an alternate-family scout now says the only cheap remaining localization try
   is the retained 3D `h = 0.25` family
+- a bounded inverse-problem harness now says the graph is forgiving under
+  several natural perturbations, but heavy `70%` random edge deletion flips
+  the sign; graph structure is not irrelevant
+- a bounded broken-graph action-power probe now says `p = 1` is not uniquely
+  the most damage-robust law on this family; `p = 2` survives more of the
+  signed damage ladder even though `p = 1` stays cleaner on the exponent side
 
 The second item is now partially addressed:
 
@@ -79,6 +85,7 @@ Best next deliverables on this lane:
 1. one constrained `h = 0.25` localization attempt with explicit support/capture floors
 2. one note separating mesoscopic-source closure from any stronger inertial-mass theorem
 3. freeze the localization lane as a bounded negative if `h = 0.25` also fails
+4. one bounded edge-deletion boundary sweep if we want to tighten the new graph-requirements lane
 
 ## Highest-leverage score improvers
 

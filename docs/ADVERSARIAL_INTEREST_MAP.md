@@ -35,9 +35,9 @@ The best next steps are the ones that improve both at once.
 |---|---:|---|
 | Toy-model mechanism interest | `9.5/10` | high intrinsic curiosity value |
 | Foundations / complex-systems / network-dynamics interest | `9.2/10` | real likely interest in the right subcommunities |
-| Broader theorist interest | `8.6/10` | selective interest, with better bounded replays, cleaner theory-side harnesses, a second-family additivity cross-check, and a mesoscopic-source lane that now has both positive multistage controls and sharper bounded negatives on the failed localization branches |
-| Bridge to known physics | `8.5/10` | somewhat stronger than before, with a cleaner continuum/action split, a bounded momentum/additivity lane, a sharper mesoscopic-inertia map, and now multiple negative controls showing where localization does and does not work |
-| Publishable as a careful computational toy-model paper | `9.4/10` | increasingly plausible with bounded replay chains, better reproduction, tighter scope control, and a clearer closure of the coarse localization branch into an honest broad-source control result |
+| Broader theorist interest | `8.7/10` | selective interest, with better bounded replays, cleaner theory-side harnesses, a second-family additivity cross-check, a mesoscopic-source lane with sharper negatives, and now a real graph-requirements harness instead of a doc-only universality memo |
+| Bridge to known physics | `8.6/10` | somewhat stronger than before, with a cleaner continuum/action split, a bounded momentum/additivity lane, a sharper mesoscopic-inertia map, and now real graph-perturbation evidence showing where the mechanism survives and where it breaks |
+| Publishable as a careful computational toy-model paper | `9.5/10` | increasingly plausible with bounded replay chains, better reproduction, tighter scope control, a clearer closure of the coarse localization branch, and new graph-robustness harnesses that replace memo-only prose |
 | Publishable as a foundational-physics breakthrough claim | `4.0/10` | still too early for that framing |
 | Ready for top-tier mainstream physics claims | `2.7/10` | improved credibility, but still far below the required bar |
 | Field-shifting theory program | `6.0/10` | stronger than before, but still not at forced-engagement level |
@@ -128,6 +128,12 @@ The main upward pressures since the first adversarial cut are:
   - an alternate-family scout now isolates the retained 3D `h = 0.25` family
     as the only cheap remaining localization shot, which makes the open step
     narrower and easier for reviewers to audit
+  - the inverse-problem lane now has a real bounded harness showing several
+    natural graph perturbations preserve TOWARD + Born while heavy random edge
+    deletion flips the sign, replacing the earlier overstrong doc-only memo
+  - the broken-graph action-power probe now keeps the graph-side universality
+    story honest: `p = 1` is not uniquely the most damage-robust law on this
+    retained family
 - the imported `1/L^(d-1)` kernel lane is now scientifically more interesting
   and does live on `main`, but it is still **bounded / unreconciled** rather
   than promoted in the top-line canonical story
