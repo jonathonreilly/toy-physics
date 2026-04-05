@@ -59,6 +59,20 @@ Good candidate families:
 - tapered ellipsoids
 - compact Gaussians with enforced capture floor
 
+## Extra cheap check
+
+A later constrained compact-floor sweep on the retained 3D `h = 0.5`
+family did not overturn the broad-source conclusion:
+
+- compact Gaussian and tapered families can survive the floors
+- but `topN` still remains the least-bad mesoscopic control on that family
+
+So the extra cheap check reinforces the same recommendation:
+
+- do not keep sweeping `h = 0.5`
+- if localization is worth trying again, use the retained 3D `h = 0.25`
+  family instead
+
 ## Safe read
 
 The honest recommendation is:
