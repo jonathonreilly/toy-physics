@@ -1,0 +1,27 @@
+====================================================================================================
+GATE B GROWN PROPAGATING FIELD PROBE
+  retained moderate-drift grown row with minimal causal-memory field
+  comparison: static baseline vs gamma-blended causal field
+====================================================================================================
+row: drift=0.2, restore=0.7, seeds=[0, 1, 2]
+source z = 3, field strength = 5.0e-05, field eps = 0.1
+gamma sweep = [0.0, 0.05, 0.1, 0.2, 0.5]
+
+REDUCTION CHECK
+  gamma=0 max field error across seeds: 0.000e+00
+  gamma=0 max amplitude error across seeds: 0.000e+00
+
+   gamma     escape      delta_z    vs_static  phase_slope   phase_R2   phase_span
+------------------------------------------------------------------------------------
+    0.00      1.000 1.300964e-04 0.000000e+00       0.0000      0.000        0.000
+    0.05      1.000 1.291910e-04 -9.053854e-07       0.0000      0.051        0.000
+    0.10      1.000 1.291018e-04 -9.945774e-07       0.0000      0.050        0.000
+    0.20      1.000 1.282304e-04 -1.866032e-06       0.0000      0.069        0.000
+    0.50      1.000 1.276327e-04 -2.463691e-06       0.0000      0.099        0.000
+
+SAFE READ
+  gamma = 0 recovers the retained grown baseline exactly by construction.
+  finite gamma does not generate a coherent detector-line phase ramp on this retained grown row, and the escape ratio stays at 1.000 to three decimals.
+  this is therefore a bounded no-go for this minimal retarded-like field state on the retained grown geometry row.
+
+Total time: 38s
