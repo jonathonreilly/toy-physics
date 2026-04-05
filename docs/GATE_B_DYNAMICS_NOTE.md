@@ -146,3 +146,26 @@ parameter choice in the v6 replay is what creates the mixed signal.
 noisy in the near field (z≤1.5). This is a lattice-size effect,
 not a growth-rule failure. The v6 mixed result is an honest
 characterization of the near-field regime.
+
+## Frozen far-field harness (2026-04-05)
+
+Dedicated far-field artifact chain:
+
+- [`scripts/gate_b_farfield_harness.py`](/Users/jonreilly/Projects/Physics/scripts/gate_b_farfield_harness.py)
+- [`logs/2026-04-05-gate-b-farfield-harness.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-05-gate-b-farfield-harness.txt)
+- [`docs/GATE_B_FARFIELD_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_FARFIELD_NOTE.md)
+
+Results at h=0.5, 12 seeds × z=[3,4,5] = 36 tests per row:
+
+| drift | restore | TOWARD | F∝M |
+|-------|---------|--------|-----|
+| 0.3 | 0.5 | 36/36 (100%) | 1.00 |
+| 0.2 | 0.7 | 36/36 (100%) | 1.00 |
+| 0.1 | 0.9 | 36/36 (100%) | 1.00 |
+| 0.0 | 1.0 | 36/36 (100%) | 1.00 |
+
+**Gate B far-field: CLOSED.** Grown geometry gives 100% TOWARD with
+F∝M=1.00 at all drift/restore levels in the far field (z≥3).
+
+The near-field (z≤2) remains mixed on both grown and fixed lattices.
+This is a beam-optics effect, not a growth-rule or physics failure.
