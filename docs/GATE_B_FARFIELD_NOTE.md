@@ -62,3 +62,24 @@ The full Newtonian package transfers to grown geometry:
 - Gravity sign: 100% TOWARD (far field)
 - F∝M = 1.00
 - Distance law: b^(-1.01)
+
+## Born rule on grown geometry (2026-04-05)
+
+| Geometry | Born |
+|----------|------|
+| Exact grid | 2.72e-15 |
+| Grown (drift=0.2) | **2.16e-15** |
+
+Machine precision on both. Born transfers to grown geometry.
+
+## Complete physics package on grown geometry
+
+| Property | Fixed lattice | Grown (drift=0.2) |
+|----------|--------------|-------------------|
+| Born | 2.72e-15 | 2.16e-15 |
+| Gravity (far field) | 100% TOWARD | 100% TOWARD |
+| F∝M | 1.00 | 1.00 |
+| Distance tail | b^(-1.05) | b^(-1.01) |
+
+Every property transfers. The grown geometry is physics-equivalent
+to the fixed lattice for all measured observables.
