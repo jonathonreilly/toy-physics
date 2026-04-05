@@ -1,0 +1,32 @@
+========================================================================================================
+SOURCE-RESOLVED WAVEFIELD GREEN POCKET
+  exact h=0.25 lattice, same-site memory vs finite-speed wavefield control
+  comparison: instantaneous 1/r vs same-site vs wavefield update
+========================================================================================================
+h=0.25, W=3, L=6, source_cluster=5 nodes
+source_z=2.0, memory_mix=0.9, wave_lag_blend=0.72
+wave_speed2=0.16, damp=0.18, source_blend=0.52
+field kernel: exp(-mu r)/(r+eps), mu=0.08, eps=0.5
+source strengths: [0.001, 0.002, 0.004, 0.008]
+target max |f|: 0.02
+
+REDUCTION CHECK
+  zero-source same-site shift: +0.000000e+00
+  zero-source wavefield shift: +0.000000e+00
+
+       s         inst         same         wave  phase_lag   overlap  wave/same
+--------------------------------------------------------------------------------------------
+  0.0010 +2.050891e-03 +2.412419e-03 +8.170763e-02     -0.484     0.991     39.840
+  0.0020 +4.105409e-03 +4.824993e-03 +1.639086e-01     -0.974     0.964     39.925
+  0.0040 +8.225500e-03 +9.650581e-03 +3.286071e-01     -1.953     0.856     39.950
+  0.0080 +1.651142e-02 +1.930336e-02 +6.377471e-01      2.417     0.496     38.625
+
+SAFE READ
+  instantaneous F~M exponent: 1.00
+  same-site-memory F~M exponent: 1.00
+  wavefield F~M exponent: 0.99
+  TOWARD rows: 4/4
+  mean detector phase lag at same-site peak: -0.249 rad
+  mean detector overlap with same-site baseline: 0.827
+  mean |wave-same| centroid delta: +2.939448e-01
+  this is a wavefield pocket, not yet a full self-consistent field theory

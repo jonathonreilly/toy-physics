@@ -1,0 +1,73 @@
+====================================================================================
+3D 1/L^2 + h^2 NUMPY H=0.125 BRIDGE
+  fixed family: phys_l=8, phys_w=4, max_d_phys=3
+  source strength=5e-05
+  goal: retain the continuum bridge or freeze a bounded failure
+====================================================================================
+
+
+======================================================================
+3D DENSE + 1/L^2 KERNEL (h=1.0)
+  729 nodes, 9 layers, 20808 edges
+  Generated in 0.0s
+======================================================================
+
+  Free propagation: 0.0s
+  1. Born |I3|/P = 8.24e-16  [PASS] (0.0s)
+  2. d_TV = 0.5613
+  3. k=0 = 0.000000
+  5. Gravity z=3: -0.008151 (AWAY)
+  4. F~M: too few TOWARD points (0)
+  6. Decoherence = 29.3%
+  7. MI = 0.3227 bits
+  10. Distance law (s=5e-05):
+      z=2: -0.001745 (AWAY)
+      z=3: -0.008151 (AWAY)
+      Distance time: 0.0s
+
+  TOTAL TIME: 0s
+
+
+======================================================================
+3D DENSE + 1/L^2 KERNEL (h=0.5)
+  4913 nodes, 17 layers, 512656 edges
+  Generated in 0.1s
+======================================================================
+
+  Free propagation: 0.0s
+  1. Born |I3|/P = 1.72e-15  [PASS] (0.1s)
+  2. d_TV = 0.7606
+  3. k=0 = 0.000000
+  5. Gravity z=3: +0.018204 (TOWARD)
+  4. F~M alpha = 0.50
+  6. Decoherence = 49.7%
+  7. MI = 0.5624 bits
+  10. Distance law (s=5e-05):
+      z=2: +0.014191 (TOWARD)
+      z=3: +0.018204 (TOWARD)
+      Distance time: 0.0s
+
+  TOTAL TIME: 1s
+
+
+======================================================================
+3D DENSE + 1/L^2 KERNEL (h=0.25)
+  35937 nodes, 33 layers, 14321952 edges
+  Generated in 3.7s
+======================================================================
+
+  Free propagation: 1.3s
+  1. Born |I3|/P = 3.42e-15  [PASS] (9.0s)
+  2. d_TV = 0.8278
+  3. k=0 = 0.000000
+  5. Gravity z=3: +0.023673 (TOWARD)
+  4. F~M alpha = 0.50
+  6. Decoherence = 50.0%
+  7. MI = 0.6481 bits
+  10. Distance law (s=5e-05):
+      z=2: +0.020154 (TOWARD)
+      z=3: +0.023673 (TOWARD)
+      Distance time: 3.0s
+
+  TOTAL TIME: 34s
+
