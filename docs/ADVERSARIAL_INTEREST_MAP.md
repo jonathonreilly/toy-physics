@@ -106,6 +106,9 @@ The main upward pressures since the first adversarial cut are:
   package replays stay positive on the same family, which upgrades the current
   Gate B positive from a coarse-family result to a one-step refinement-stable
   replay
+- the new non-label forward-cone candidate also closes as a bounded negative:
+  it preserves some far-field sign rows, but it does not keep the Newtonian
+  `F~M = 1.00` class on the retained family
 - the degree-balanced non-label forward candidate now closes as a bounded
   negative on the same retained family: it keeps most far-field sign rows but
   does not hold the clean `F~M = 1.00` class, which makes the connectivity

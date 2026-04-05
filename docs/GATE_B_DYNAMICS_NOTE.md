@@ -266,6 +266,23 @@ So the restoring force is not the whole story. The connectivity rule is the
 critical piece, and the weaker position-based candidate does **not** carry the
 far-field package on this retained family.
 
+## Non-label forward-cone candidate (2026-04-05)
+
+The no-restore grown-geometry lane now has a second bounded non-label
+candidate:
+
+- [`scripts/gate_b_nonlabel_connectivity_v2.py`](/Users/jonreilly/Projects/Physics/scripts/gate_b_nonlabel_connectivity_v2.py)
+- [`logs/2026-04-05-gate-b-nonlabel-connectivity-v2.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-05-gate-b-nonlabel-connectivity-v2.txt)
+- [`docs/GATE_B_NONLABEL_CONNECTIVITY_V2_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_NONLABEL_CONNECTIVITY_V2_NOTE.md)
+
+Its bounded read is:
+
+- no-restore label-NN control still gives `12/12` TOWARD and `F~M = 1.00`
+- the no-restore forward-cone candidate gets only `8/12` TOWARD and `F~M = 0.50`
+
+So the forward-cone rule is a bounded negative: it preserves some far-field
+sign rows, but it does **not** keep the Newtonian mass-scaling class cleanly.
+
 ## No-restore hierarchy (2026-04-05)
 
 The no-restore lane is now bounded more sharply too:

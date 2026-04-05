@@ -195,6 +195,9 @@ Do not force a trade where only one of those moves.
     lesson further: it keeps most far-field sign rows, but drops below the
     clean `F~M = 1.00` class and closes as a bounded negative on the retained
     family
+  - a second non-label forward-cone candidate now closes as a bounded negative
+    too: it keeps some far-field TOWARD rows, but not the Newtonian `F~M =
+    1.00` class
   - a paired no-restore hierarchy now sharpens that further:
     far-field sign / `F~M` survive without restore on the label-connectivity
     family, but the broader joint `d_TV` / `MI` / decoherence package becomes
