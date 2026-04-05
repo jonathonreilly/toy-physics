@@ -220,9 +220,9 @@ Do not force a trade where only one of those moves.
     the same architecture has a real weak-field pocket on the exact 3D lattice,
     with dynamic `F~M` staying near linear (`0.997`, `0.994`, `0.985`,
     `0.968`) while the calibrated dynamic field remains small
-  - a focused confirmation row keeps that read bounded:
-    `c_field = 0.25`, `damp = 0.15`, `target = 0.005` gives dynamic
-    `F~M = 0.98`
+  - a conservative pocket replay keeps that read bounded:
+    `c_field = 0.40`, `damp = 0.35`, `target = 0.010` gives dynamic
+    `F~M = 0.96` with `4/4` rows TOWARD and mean `|dyn/inst| = 1.304`
   - the safe read is therefore no longer "flat no-go"
     but "calibration-sensitive partial positive": the minimal self-generated
     field architecture has a weak-field recovery pocket, then saturates away

@@ -1,0 +1,24 @@
+========================================================================================
+SOURCE-DRIVEN FIELD RECOVERY POCKET
+  exact 3D lattice, telegraph-style field, one conservative weak-field row
+========================================================================================
+h=0.5, W=6, L=30, c_field=0.4, damp=0.35, target_max=0.01
+
+REDUCTION CHECK
+  zero-source dynamic shift: +0.000000e+00
+  calibration gain: 3.632538e-01
+
+       s         inst      dynamic   dyn/inst   max|f_dyn|
+--------------------------------------------------------------------
+  0.0010 +2.702607e-03 +3.601586e-03      1.333 1.250000e-03
+  0.0020 +5.393344e-03 +7.129776e-03      1.322 2.500000e-03
+  0.0040 +1.073461e-02 +1.396546e-02      1.301 5.000000e-03
+  0.0080 +2.122358e-02 +2.675231e-02      1.260 1.000000e-02
+
+SAFE READ
+  instantaneous F~M exponent: 0.99
+  dynamic F~M exponent: 0.96
+  dynamic TOWARD rows: 4/4
+  mean |dyn/inst| ratio: 1.304
+  this pocket only counts as a real weak-field recovery if sign stays all-TOWARD,
+  the dynamic exponent stays near 1.00, and the amplitude remains nontrivial.
