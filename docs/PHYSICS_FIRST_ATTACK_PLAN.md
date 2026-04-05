@@ -114,6 +114,16 @@ So the next serious versions of those lanes must be:
   wavefield lane matter, so the transfer bottleneck is not fixed by another
   reach-based geometry rule either
 
+Two later bridge results keep those lanes from being frozen too absolutely:
+
+- a genuinely different split-shell generated family now widens detector
+  support and modestly improves the weak-field/generated-family readout, so
+  the compact bridge is still closed but the broader generated-family story is
+  reopened as a bounded bridge
+- a dynamical adaptive readout now preserves `TOWARD` and near-linear `F~M`
+  on the compact repeated-update object while shrinking support materially, so
+  fixed windows/tapers are closed but the readout side is not fully dead
+
 With Gate B actively being pushed elsewhere, the cleanest **parallel**
 physics lane is now:
 

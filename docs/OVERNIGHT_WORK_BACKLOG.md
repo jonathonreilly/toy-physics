@@ -244,6 +244,12 @@ remaining testable and review-safe.
        the compact repeated-update object
      - or one bounded negative strong enough to freeze the compact repeated-
        update object as the real limit on this family
+   - New update:
+     - a dynamical adaptive readout now preserves `TOWARD` and near-linear
+       `F~M` while shrinking support materially
+     - fixed windows/tapers remain closed
+     - the live question is now whether a stronger adaptive readout can turn
+       that bridge into a real closure
 
 3. **Geometry-transfer discriminator / generated-family recovery**
    - Best upside:
@@ -259,6 +265,12 @@ remaining testable and review-safe.
      - one geometry-rule change that widens support enough for the field rule
        to matter
      - or one stronger no-go saying that this family stays bridge-only
+   - New update:
+     - the split-shell generated-family probe now gives a real bounded bridge:
+       support widens materially and the weak-field/generated-family readout
+       improves modestly
+     - that reopens generated-family transfer only through genuinely different
+       geometry families, not through more small bridge tweaks
 
 4. **Retained-grown-family propagating field**
    - Best upside:

@@ -27,7 +27,7 @@ Primary closure:
 - support rescue can move the row, but it does not restore the weak-field
   mass law on the tested compact family
 
-Why this still looks closed after re-checking:
+Why the fixed-window/taper family still looks closed after re-checking:
 
 - the discriminator already showed support rescue beats the wavefield bridge
 - the follow-up geometry-rule probes did not widen support in the way needed
@@ -90,10 +90,20 @@ Adjacent variant check:
 - but the current compact repeated-update object does not hide a cheap
   localized detector
 
+Updated status:
+
+- a later adaptive readout probe now shows that the lane is not closed by
+  “all non-broad readouts fail”
+- a dynamical diffusion-contour readout can preserve `TOWARD` and near-linear
+  `F~M` while shrinking support materially
+- but it still does not produce a truly compact detector/readout closure
+
 Verdict:
 
-- robust no-go for readout localization on the current compact repeated-update
-  source object
+- robust no-go for fixed-window and tapered readout localization
+- bounded partial rescue for adaptive readout
+- the lane stays open only through more structural adaptive architectures, not
+  through more static window-shape tuning
 
 ## 4. Distance-law / wide-lattice continuation
 
@@ -138,14 +148,17 @@ was found:
 That reopening has now been executed and retained on `main`.
 
 The remaining closed moonshot lanes do not appear to have a cheap missed
-reopening on the current retained families.
+reopening on the current retained families, except where a later retained
+partial rescue is now explicitly documented.
 
 That means the current moonshot portfolio should move forward, not sideways:
 
 - exact-lattice wavefield / causal-field closure
 - retained-grown propagating or trapping-field architecture
-- persistent object / inertial-response closure
+- persistent object / inertial-response closure, now with adaptive readout as
+  the one surviving detector-side bridge
 - a genuinely new geometry family if we want to revisit transfer
 
-The distance-law branch is the only one that already gives a retained frontier
-result on `main`, and that should stay the narrow claim surface for now.
+The distance-law branch is still the clearest recent promoted frontier on
+`main`, and the grown trapping/frontier lane is now a second bounded frontier-
+style control. Both should stay narrow claim surfaces for now.
