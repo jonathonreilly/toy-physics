@@ -214,6 +214,19 @@ remaining testable and review-safe.
      - note-only or commit-message-only claims do not count
      - if the artifact chain is absent, this lane is paused
 
+7. **Alternative coupled-field architecture**
+   - Best upside:
+     - shows whether a non-telegraph local field rule can preserve the weak
+       lane more cleanly
+   - Deliverables:
+     - one script / log / note chain for the distinct architecture
+     - one exact zero-source reduction check
+     - one sign / mass-scaling readout
+   - Current status:
+     - an edge-carried exact-lattice variant now survives the strict reduction
+       check and preserves `TOWARD` with near-linear mass scaling, but the
+       amplitude is weak
+
 6. **Moonshot strong-field branch**
    - Best upside:
      - one of the few remaining paths with real step-change potential

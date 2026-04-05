@@ -217,6 +217,10 @@ Do not force a trade where only one of those moves.
     it preserves `TOWARD` and exact zero-source reduction, but it fails the
     clean linear mass-scaling class (`F~M = 0.64`), so it closes as a bounded
     no-go for "minimal self-generated field dynamics already solves it"
+  - a distinct edge-carried coupled-field architecture now survives the same
+    strict reduction test and keeps `TOWARD` with near-linear mass scaling
+    (`F~M = 0.98`), but at much weaker amplitude than the instantaneous
+    comparator
   - a dedicated horizon `k`-sweep now closes one tempting overclaim:
     on the retained absorbing observable, the strong wavelength-dependent
     horizon story does **not** survive; `alpha_crit` stays nearly flat in `k`
