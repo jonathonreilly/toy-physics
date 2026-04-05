@@ -1,3 +1,54 @@
+## 2026-04-04 — Directional-b geometry-normalized holdout transfer frozen
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed
+- no detached science child was active to resume or monitor
+- the canonical repo was clean and synced at `8deda97` before this step:
+  - `git status --short --branch` reported `## main...origin/main`
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+- this loop stayed on the fixed directional-measure gravity-`b` lane and did
+  one bounded family-transfer replay instead of reopening denominator search
+
+### What changed
+- added `/Users/jonreilly/Projects/Physics/scripts/directional_b_geometry_normalized_holdout_transfer.py`
+- generated `/Users/jonreilly/Projects/Physics/logs/2026-04-04-directional-b-geometry-normalized-holdout-transfer.txt`
+- added `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_NOTE.md`
+- updated `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- updated `/Users/jonreilly/Projects/Physics/README.md`
+
+### Strongest confirmed conclusion
+- the retained geometry-normalized response-density hierarchy is not just a
+  one-generator accident
+- on the second dense-family holdout, all four retained normalized reads still
+  decrease with actual `b` at both `N = 12` and `N = 25`:
+  - `action_channel / b`
+  - `action_channel / edge_b`
+  - `packet_flow_action / b`
+  - `packet_flow_action / edge_b`
+- that keeps the current translation intact:
+  - `response / b` is still the clean asymptotic leading term
+  - `response / (b - h_mass)` is still the safer finite-source correction
+- the remaining open seam is still low-`b` overlap geometry, not absence of a
+  geometry-normalized gravity-`b` trend
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/scripts/directional_b_geometry_normalized_holdout_transfer.py`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-04-directional-b-geometry-normalized-holdout-transfer.txt`
+- `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- `/Users/jonreilly/Projects/Physics/README.md`
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+
+### Exact next step
+- test whether the same holdout transfer survives the widened `mass_nodes = 5`
+  family, where the finite-source correction should matter most
+
+### First concrete action
+- run `python3 /Users/jonreilly/Projects/Physics/scripts/directional_b_geometry_normalized_holdout_transfer.py --mass-nodes 5`
+  and inspect the low-`b` corners before deciding whether the next lane is
+  still pure `1/b` or must switch immediately to the edge correction
+
 ## 2026-04-04 — Ordered-lattice 2D relaunch companion frozen
 
 ### Current state
