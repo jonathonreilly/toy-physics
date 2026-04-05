@@ -1,48 +1,73 @@
-# Quantum Horizon: k-Dependent Trapping Threshold
+# Quantum Horizon k-Sweep
 
-**Date:** 2026-04-05
-**Status:** novel prediction — the horizon depends on particle wavelength
+**Date:** 2026-04-05  
+**Status:** bounded no-go against the stronger wavelength-dependent horizon claim on the retained absorbing family
 
-## Result
+## Artifact chain
 
-On the 3D lattice with absorbing kernel exp(-α·f):
+- [`scripts/quantum_horizon_k_sweep.py`](/Users/jonreilly/Projects/Physics/scripts/quantum_horizon_k_sweep.py)
+- [`logs/2026-04-05-quantum-horizon-k-sweep.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-05-quantum-horizon-k-sweep.txt)
 
-| k | α_crit (50% escape) | Regime |
-|---|---------------------|--------|
-| 1.0 | 1.16 | Low-k: trapped easily |
-| 2.0 | 1.27 | |
-| 3.0 | 1.27 | |
-| 5.0 | 1.42 | High-k: harder to trap |
-| 7.0 | < 0.05 | Above Nyquist: trivially trapped |
-| 10.0 | < 0.05 | Above Nyquist: trivially trapped |
+## Question
 
-## Interpretation
+On the retained absorbing-horizon sector-stencil family, does the 50%-escape
+threshold `alpha_crit` shift meaningfully with wavelength `k`, or was the
+stronger "quantum horizon" story ahead of the retained evidence?
 
-The trapping threshold α_crit INCREASES with k for k < π/h.
-Higher-momentum (shorter wavelength) particles need stronger
-absorption to be trapped. This is OPPOSITE to classical GR,
-where all particles have the same Schwarzschild radius.
+This note is intentionally narrow:
 
-At k > π/h (Nyquist): the phase aliasing already depletes the
-beam (gravity reverses), so trapping is trivial without absorption.
+- one family: retained generated-geometry sector-stencil horizon family
+- one observable: `alpha_crit` where escape falls to 50% of free propagation
+- one separation: sub-Nyquist rows vs above-Nyquist rows
 
-## Physical picture
+## Frozen result
 
-Low-k particles have long wavelengths → they "see" the mass as
-a smooth phase valley → they get deflected and trapped coherently.
+The retained sweep uses:
 
-High-k particles have short wavelengths → they resolve the lattice
-structure → the phase varies rapidly across the mass → partial
-destructive interference PROTECTS them from trapping.
+- `k = 1, 2, 3, 4, 5, 6, 7, 10`
+- `alpha = 0.00 .. 2.00` in steps of `0.05`
+- the same retained generated-geometry sector-stencil family as the minimal
+  absorbing horizon probe
 
-Above Nyquist: the lattice can't resolve the wavelength → the
-phase signal aliases → the beam is disrupted regardless of trapping.
+Frozen readout:
 
-## The prediction
+| `k` | escape at `alpha=0` | `alpha_crit` | regime |
+| --- | ---: | ---: | --- |
+| `1.0` | `1.000` | `0.08` | sub-Nyquist |
+| `2.0` | `1.000` | `0.08` | sub-Nyquist |
+| `3.0` | `1.000` | `0.08` | sub-Nyquist |
+| `4.0` | `1.000` | `0.08` | sub-Nyquist |
+| `5.0` | `1.000` | `0.09` | sub-Nyquist |
+| `6.0` | `1.000` | `0.09` | sub-Nyquist |
+| `7.0` | `1.000` | `0.09` | above Nyquist |
+| `10.0` | `1.000` | `0.08` | above Nyquist |
 
-On any discrete spacetime with lattice spacing a:
-  - Particles with λ >> 2a: classical horizon (easy to trap)
-  - Particles with λ ~ 2a: quantum-corrected horizon (harder to trap)
-  - Particles with λ < 2a: Nyquist trapping (automatic)
+Sub-Nyquist fit from the frozen sweep:
 
-The transition scale is the lattice Nyquist wavelength λ = 2a.
+- `alpha_crit ≈ 0.08 * k^0.03`
+
+## Safe read
+
+The strongest retained statement is:
+
+- on this horizon observable, `alpha_crit` is nearly flat in `k`
+- the retained family does **not** support a strong wavelength-dependent
+  horizon shift
+- the stronger "quantum horizon" narrative does not survive this bounded sweep
+
+## Honest limitation
+
+This is a no-go only for this observable on this retained family.
+
+- it does **not** rule out every possible wavelength-dependent trapping effect
+- it does say the present absorbing-horizon escape threshold is not carrying
+  that stronger claim
+- if a spectral or wavelength-dependent horizon story survives elsewhere, it
+  still needs a fresh script/log/note chain
+
+## Branch verdict
+
+Treat this as a useful overclaim-killer:
+
+- the retained absorbing proxy still has a real trapping threshold
+- but it does **not** currently support a strong `k`-dependent horizon law

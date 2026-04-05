@@ -213,6 +213,9 @@ Do not force a trade where only one of those moves.
     - compact refinement companion
     - bounded oscillating-source harness with a frequency-dependent
       fingerprint
+  - a dedicated horizon `k`-sweep now closes one tempting overclaim:
+    on the retained absorbing observable, the strong wavelength-dependent
+    horizon story does **not** survive; `alpha_crit` stays nearly flat in `k`
   - the safe read is:
     real strong-field / causal-field observables now exist on disk, but they
     are still bounded proxies rather than a closed horizon or wave theory
