@@ -242,6 +242,13 @@ Do not force a trade where only one of those moves.
     reduction on a small exact lattice and keeps both `TOWARD` and
     `F~M = 1.00` on the retained source ladder, making it a distinct
     self-generated-field candidate worth later size-transfer tests
+  - a local robustness sweep now shows that exact-lattice Green pocket is not
+    a knife-edge tuning point: nearby `mu` / `eps` perturbations and clipped
+    source-cluster variants still keep exact zero-source recovery, `TOWARD`,
+    and near-linear `F~M` on the retained ladder
+  - a larger exact-lattice Green scaling companion now shows the same
+    source-resolved pocket survives one size step, keeping exact zero-source
+    reduction, `TOWARD`, and near-linear `F~M` on the retained source ladder
   - a dedicated horizon `k`-sweep now closes one tempting overclaim:
     on the retained absorbing observable, the strong wavelength-dependent
     horizon story does **not** survive; `alpha_crit` stays nearly flat in `k`
