@@ -198,6 +198,11 @@ The main upward pressures since the first adversarial cut are:
   earlier broad quasi-persistent control and still keeps `4/4` `TOWARD` with
   `F~M = 1.00`; the remaining bottleneck is now detector/readout localization
   rather than source-object localization alone
+- a follow-up readout-localization probe now closes the detector side as a
+  bounded negative: a peak-centered `3x3` window shrinks detector support a
+  lot, but it only captures a tiny fraction of the detector mass and loses the
+  weak-field `F~M` class, so readout localization alone is not yet a usable
+  escape hatch
   - the imported `1/L^(d-1)` kernel lane is now scientifically more interesting
     and does live on `main`, but it is still **bounded / unreconciled** rather
     than promoted in the top-line canonical story
@@ -233,6 +238,10 @@ The biggest score movers are:
      - careful-paper credibility
    - because it is still the biggest open internal physics gap after the
      test-particle and exact-lattice source lanes
+   - the latest source-object result is positive, but the readout-localization
+     probe just showed that shrinking the detector side too aggressively
+     destroys the mass law, so the remaining gap is now detector/readout
+     localization rather than source localization
 
 4. **A real continuum / asymptotic bridge**
    - strongest improvement to:
