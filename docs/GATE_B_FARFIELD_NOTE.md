@@ -76,3 +76,20 @@ The safe combined statement is:
   bounded positive
 - near-field rows and the broader generated-geometry parameter space remain
   open, so this still does **not** close full Gate B
+
+## One-step h = 0.25 scaling companion
+
+A bounded moderate-drift replay on the same generated-geometry family now
+survives one refinement step to `h = 0.25`.
+
+Read it through:
+
+- [`docs/GATE_B_H025_FARFIELD_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_H025_FARFIELD_NOTE.md)
+- [`docs/GATE_B_H025_DISTANCE_LAW_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_H025_DISTANCE_LAW_NOTE.md)
+- [`docs/GATE_B_H025_JOINT_PACKAGE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_H025_JOINT_PACKAGE_NOTE.md)
+
+Safe read:
+
+- this upgrades the retained result from a coarse-family far-field positive to
+  a one-step refinement-stable positive on the same moderate-drift family
+- it still does **not** close full Gate B

@@ -1,6 +1,6 @@
 # Start Here
 
-**Date:** 2026-04-04  
+**Date:** 2026-04-05
 **Status:** canonical entry note for new readers and overnight workers
 
 This is the fastest accurate way to enter the repo without absorbing branch
@@ -181,14 +181,20 @@ Do not force a trade where only one of those moves.
     - Born at machine precision
     - near-matched `d_TV` / `MI` / decoherence
   - the safe read is now:
-    one retained generated-geometry far-field row carries the fixed-lattice
-    package well, while near-field and broader generated-geometry closure
-    remain open
+    one retained generated-geometry far-field row, plus one bounded `h = 0.25`
+    scaling companion on the same moderate-drift family, now carries the
+    fixed-lattice package well enough to count as a one-step
+    refinement-stable positive; near-field and broader generated-geometry
+    closure remain open
   - the earlier v5 cross-growth row remains useful as the matched-control
     comparison against KNN on the same grown positions
   - a new no-restore weak-connectivity boundary now sharpens the lesson:
     label connectivity still carries the far-field package, but a weaker
     position-based KNN+floor candidate collapses on the retained family
+  - a new non-label degree-balanced forward candidate now sharpens the same
+    lesson further: it keeps most far-field sign rows, but drops below the
+    clean `F~M = 1.00` class and closes as a bounded negative on the retained
+    family
   - a paired no-restore hierarchy now sharpens that further:
     far-field sign / `F~M` survive without restore on the label-connectivity
     family, but the broader joint `d_TV` / `MI` / decoherence package becomes

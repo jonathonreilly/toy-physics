@@ -164,9 +164,10 @@ If you only want the current high-level state, read this section first.
   wording are still under reconciliation. This is frontier work, not yet part
   of the canonical top-line claim surface.
 - **Main open problem:** generated symmetry and stronger continuum closure.
-  The project now has a cleaner map, but the highest-value unresolved work is
-  still to generate the good geometry more naturally and to tighten the
-  continuum / RG side without overclaiming it.
+  The project now has a cleaner map, and one retained moderate-drift
+  generated-geometry row now survives one refinement step (`h = 0.5 -> 0.25`)
+  on the ordered-lattice far-field family, but broader Gate B closure and
+  stronger continuum / RG closure remain open.
 
 If you are picking up the repo fresh, start with
 [START_HERE.md](/Users/jonreilly/Projects/Physics/docs/START_HERE.md).

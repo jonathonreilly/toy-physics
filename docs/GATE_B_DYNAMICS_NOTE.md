@@ -196,6 +196,58 @@ So the honest status is now:
   support for distance and joint non-gravity observables
 - near-field and full-family Gate B closure remain open
 
+## Non-label connectivity candidate (2026-04-05)
+
+The degree-balanced non-label forward candidate is now frozen too:
+
+- [`scripts/gate_b_nonlabel_connectivity_v3.py`](/Users/jonreilly/Projects/Physics/scripts/gate_b_nonlabel_connectivity_v3.py)
+- [`logs/2026-04-05-gate-b-nonlabel-connectivity-v3.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-05-gate-b-nonlabel-connectivity-v3.txt)
+- [`docs/GATE_B_NONLABEL_CONNECTIVITY_V3_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_NONLABEL_CONNECTIVITY_V3_NOTE.md)
+
+Its bounded read is:
+
+- exact grid: `12/12` TOWARD, `F~M = 1.00`
+- no-restore label-NN control: `12/12` TOWARD, `F~M = 1.00`
+- no-restore degree-balanced matching candidate: `10/12` TOWARD, `F~M = 0.75`
+
+So the non-label candidate preserves most far-field sign rows, but it does
+not retain the clean `F~M = 1.00` class on this family.
+
+That makes it a bounded negative for the current non-label forward-connectivity
+idea, not a replacement for the label-based far-field rule.
+
+## One-step h=0.25 scaling companion (2026-04-05)
+
+The same moderate-drift generated-geometry family now also has bounded
+`h = 0.25` refinement companions:
+
+- [`scripts/gate_b_h025_farfield.py`](/Users/jonreilly/Projects/Physics/scripts/gate_b_h025_farfield.py)
+- [`logs/2026-04-05-gate-b-h025-farfield.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-05-gate-b-h025-farfield.txt)
+- [`docs/GATE_B_H025_FARFIELD_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_H025_FARFIELD_NOTE.md)
+- [`scripts/gate_b_h025_distance_law.py`](/Users/jonreilly/Projects/Physics/scripts/gate_b_h025_distance_law.py)
+- [`logs/2026-04-05-gate-b-h025-distance-law.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-05-gate-b-h025-distance-law.txt)
+- [`docs/GATE_B_H025_DISTANCE_LAW_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_H025_DISTANCE_LAW_NOTE.md)
+- [`scripts/gate_b_h025_joint_package.py`](/Users/jonreilly/Projects/Physics/scripts/gate_b_h025_joint_package.py)
+- [`logs/2026-04-05-gate-b-h025-joint-package.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-05-gate-b-h025-joint-package.txt)
+- [`docs/GATE_B_H025_JOINT_PACKAGE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_H025_JOINT_PACKAGE_NOTE.md)
+
+Their bounded read is:
+
+- far-field sign / `F~M` stay clean on the compact `h = 0.25` family:
+  exact grid `12/12` TOWARD, grown `drift = 0.2` `12/12` TOWARD, both with
+  `F~M = 1.00`
+- the compact distance-law companion stays positive and declining:
+  exact grid `b^(-0.42)`, grown `b^(-0.54)`
+- the compact joint-package companion stays in the same qualitative Born /
+  interference / decoherence regime as the exact grid
+
+So the safe Gate B read is now:
+
+- the retained moderate-drift generated-geometry lane is no longer just a
+  coarse `h = 0.5` positive
+- it now has one bounded `h = 0.25` refinement companion on the same family
+- near-field and broader generated-geometry closure remain open
+
 ## Weak-connectivity boundary (2026-04-05)
 
 The no-restore weak-connectivity lane is now frozen separately:
