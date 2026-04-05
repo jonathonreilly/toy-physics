@@ -1,3 +1,68 @@
+## 2026-04-05 — Coordination reconciled to the synced map-calibration head
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed
+  earlier in this loop
+- no detached science child was active to resume or monitor
+- the saved coordination layer had drifted again:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md` still led with
+    the older graph-boundary integrity head at `e0c0d9c`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+    and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+    still claimed `main` was ahead by one at `8c1aee6` and blocked on a
+    transient DNS push failure
+- the canonical repo was already clean and synced at `81f45c8` before this
+  step:
+  - `git status --short --branch` reported `## main...origin/main` with only
+    the runtime handoff modified
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 8` showed local and remote head
+    `81f45c8` (`docs(map): recalibrate after overnight graph results`)
+
+### What changed
+- inspected the landed synced head directly instead of trusting the stale
+  coordination text:
+  - `git show --stat --summary --oneline 81f45c8`
+  - `git show 81f45c8 -- docs/ADVERSARIAL_INTEREST_MAP.md`
+- reread the current program-priority surfaces directly:
+  - `/Users/jonreilly/Projects/Physics/docs/ADVERSARIAL_INTEREST_MAP.md`
+  - `/Users/jonreilly/Projects/Physics/docs/START_HERE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/OVERNIGHT_WORK_BACKLOG.md`
+- prepended this tracked integrity entry and refreshed the runtime handoff plus
+  automation memory so the next loop starts from the real synced
+  map-calibration head
+
+### Strongest confirmed conclusion
+- the active synced coordination head is now `81f45c8`, not the older
+  graph-boundary memo head or the stale ahead-one autopilot state
+- the recalibrated external map now has a more concrete graph-side story:
+  - the explicit edge-deletion boundary lifts broader theorist interest to
+    `8.8/10`, bridge-to-known-physics to `8.7/10`, and careful-paper
+    plausibility to `9.6/10`
+  - the structureless random-DAG mass-scaling note is still bounded and not
+    yet weighted like the retained lattice graph-robustness lane
+- operationally, the stale push gate is cleared because `main` is already
+  synced; once this coordination repair is recorded, the next non-overlapping
+  science step can return to the user-priority directional-`b` lane
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- with coordination restored to the real synced head, return to the fixed
+  directional-measure gravity-`b` lane:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/directional_b_geometry_normalized_holdout_transfer.py --mass-nodes 5`
+- if that lane is blocked after the widened-source replay, move next to one
+  bounded evolving-network dynamics prototype before any decoherence
+  architecture search
+
+### First concrete action
+- rerun the widened-source `mass_nodes = 5` holdout transfer and inspect the
+  low-`b` rows to decide whether the fixed directional-measure read still stays
+  on pure `1 / b` or must switch to the nearest-edge finite-source correction
+
 ## 2026-04-04 — Coordination reconciled to the synced graph-boundary head
 
 ### Current state
