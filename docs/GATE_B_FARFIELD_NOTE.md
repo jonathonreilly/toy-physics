@@ -44,3 +44,21 @@ same mixing appears on the fixed lattice at near-field z-values.
 
 The honest Gate B read: **far-field passed, near-field mixed, same
 as the fixed lattice.**
+
+## Distance law on grown geometry (2026-04-05)
+
+The distance law also transfers:
+
+| Geometry | Tail | R² |
+|----------|------|-----|
+| Exact grid | b^(-1.05) | 0.919 |
+| Grown (drift=0.2, rest=0.7) | **b^(-1.01)** | 0.914 |
+| Newtonian | b^(-1.0) | — |
+
+8 seeds averaged, W=10, L=12, h=0.5. The grown geometry gives
+b^(-1.01) — even closer to Newtonian than the fixed grid.
+
+The full Newtonian package transfers to grown geometry:
+- Gravity sign: 100% TOWARD (far field)
+- F∝M = 1.00
+- Distance law: b^(-1.01)
