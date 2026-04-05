@@ -1,3 +1,92 @@
+## 2026-04-05 — Coordination reconciled to synced generated-discriminator head
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed in
+  protocol order at loop start
+- no detached `physics-science` child was active to resume or monitor
+- the canonical repo at `/Users/jonreilly/Projects/Physics` is synced again:
+  - `git status --short --branch` reported `## main...origin/main` plus
+    modified `AUTOPILOT_WORKLOG.md`, modified
+    `logs/physics_autopilot_handoff.md`, and untracked
+    `docs/ADAPTIVE_COEVOLVING_GEOMETRY_NO_GO.md`,
+    `scripts/persistent_object_compact_update_probe.py`,
+    `scripts/persistent_object_localization_escalation.py`, plus
+    `scripts/source_resolved_exact_green_support_scout.py`
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 8` showed synced head `a17c998` on top
+    of `origin/main`
+- the saved coordination layer still described the older unsynced persistent-
+  object Green head `280946d` and therefore missed the later landed chain
+  through the current synced generated-discriminator result:
+  - `967ff0b` (`feat: add h125 numpy continuum credibility audit`)
+  - `5f77656` (`feat: add wavefield escalation probe`)
+  - `a17c998` (`docs: add generated discriminator and refresh moonshot map`)
+- because the head moved during the loop, the bounded step here was final
+  repo-state reconciliation rather than a new experiment
+
+### What changed
+- reran the managed push helper exactly as required:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - result: `status=failed`, `failure_kind=dns_failure`, `ahead=1`,
+    `behind=0`, `attempts_used=5`
+- later re-reconciled git state and found the canonical repo already synced at
+  `a17c998`
+- inspected the real synced head and current retained science surfaces
+  directly:
+  - `git show --stat --summary --oneline a17c998`
+  - `git show --stat --summary --oneline 5f77656`
+  - `/Users/jonreilly/Projects/Physics/docs/SOURCE_RESOLVED_GENERATED_DISCRIMINATOR_PROBE_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/SOURCE_RESOLVED_WAVEFIELD_ESCALATION_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_DENSITY_STENCIL_NOTE.md`
+- refreshed the tracked work log, runtime handoff, and automation memory to
+  the real repo state and the current user-priority next lane
+- left the unrelated untracked drafts untouched:
+  - `/Users/jonreilly/Projects/Physics/docs/ADAPTIVE_COEVOLVING_GEOMETRY_NO_GO.md`
+  - `/Users/jonreilly/Projects/Physics/scripts/persistent_object_compact_update_probe.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/persistent_object_localization_escalation.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/source_resolved_exact_green_support_scout.py`
+
+### Strongest confirmed conclusion
+- the synced head is now `a17c998`
+  (`docs: add generated discriminator and refresh moonshot map`), not the
+  older persistent-object Green, `h = 0.125` numpy-audit, or standalone
+  wavefield-escalation heads
+- the new generated discriminator says the retained `kNN`-floor support rescue
+  still beats the wavefield bridge on both sign count and detector support, so
+  the current generated-family bottleneck is geometry/support-limited rather
+  than field-rule-limited
+- combined with the exact-lattice wavefield escalation at `5f77656`, the
+  cleanest cross-lane read is now: the exact-lattice causal-field sector has a
+  real bounded positive, but generated-family transfer still stalls on
+  geometry/support concentration
+- operationally, do not keep tuning the same generated bridge; the cleanest
+  non-overlapping next step is to return to the fixed directional-measure
+  geometry-normalized `b` seam rather than widening continuum or decoherence
+  search
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- resume the fixed directional-measure geometry-normalized `b` lane with one
+  bounded residual diagnostic:
+  - `/Users/jonreilly/Projects/Physics/scripts/directional_b_density_residual_probe.py`
+  - `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_DENSITY_STENCIL_NOTE.md`
+- keep the directional propagator, frozen 3-NN threshold, and occupancy-first
+  bridge fixed; do not reopen denominator or decoherence architecture searches
+- only if that residual diagnostic is blocked should the next loop fall back
+  to one bounded evolving-network dynamics prototype
+
+### First concrete action
+- rerun
+  `python3 /Users/jonreilly/Projects/Physics/scripts/directional_b_density_residual_probe.py`
+  and compare its residual 3-NN miss classes against
+  `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_DENSITY_STENCIL_NOTE.md`;
+  if the misses still need local rescue, freeze the failure mode instead of
+  widening the generated-wavefield bridge search
+
 ## 2026-04-05 — Current-main replay preserves the valley-linear asymptotic bridge
 
 ### Current state
@@ -32,6 +121,10 @@
   and found the coarse/core/wide ladder reproduced exactly on current `main`
 - updated the asymptotic-bridge note so the bounded claim surface now records
   the current-main reproducibility replay alongside the frozen 2026-04-04 log
+- ran the managed push helper exactly as required:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - result: `status=failed`, `failure_kind=dns_failure`, `ahead=1`,
+    `behind=0`, `attempts_used=5`
 - refreshed the tracked work log, runtime handoff, and automation memory so
   the next loop starts from the real synced head and the completed replay
 
@@ -49,6 +142,9 @@
 - operationally, this loop closes a real reproducibility / integrity question
   on the continuum bridge without reopening directional-`b`, evolving-network,
   or decoherence-frontier work
+- the only live blocker before the next continuum step is remote
+  reconciliation of local commit `cf581d9`, because the managed push helper
+  failed once with transient DNS
 
 ### Files/logs changed
 - `/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_ASYMPTOTIC_BRIDGE_NOTE.md`
@@ -57,14 +153,18 @@
 - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
 
 ### Exact next step
-- stay on the bounded continuum / asymptotic lane and decide whether the
-  reproduced coarse/core/wide ladder now supports one compact finite-size
-  correction card in
+- rerun the managed push helper until local commit `cf581d9` is no longer
+  stranded:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+- only once `main` is synced again should the next science loop decide
+  whether the reproduced coarse/core/wide ladder supports one compact
+  finite-size correction card in
   `/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_CONTINUUM_SYNTHESIS_NOTE.md`
-  without widening the search space
 
 ### First concrete action
-- open
+- rerun
+  `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`;
+  if it succeeds, then open
   `/Users/jonreilly/Projects/Physics/logs/2026-04-05-valley-linear-asymptotic-bridge-replay.txt`
   beside
   `/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_CONTINUUM_SYNTHESIS_NOTE.md`
