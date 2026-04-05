@@ -35,9 +35,9 @@ The best next steps are the ones that improve both at once.
 |---|---:|---|
 | Toy-model mechanism interest | `9.5/10` | high intrinsic curiosity value |
 | Foundations / complex-systems / network-dynamics interest | `9.2/10` | real likely interest in the right subcommunities |
-| Broader theorist interest | `8.8/10` | selective interest, with better bounded replays, cleaner theory-side harnesses, a second-family additivity cross-check, a mesoscopic-source lane with sharper negatives, and now a graph-side story that includes both retained robustness harnesses and an explicit edge-deletion boundary |
-| Bridge to known physics | `8.7/10` | somewhat stronger than before, with a cleaner continuum/action split, a bounded momentum/additivity lane, a sharper mesoscopic-inertia map, and now graph-perturbation evidence that distinguishes forgiving structure from true graph-independence |
-| Publishable as a careful computational toy-model paper | `9.6/10` | increasingly plausible with bounded replay chains, better reproduction, tighter scope control, a clearer closure of the coarse localization branch, and graph-side harnesses that replace memo-only prose with explicit survival and failure boundaries |
+| Broader theorist interest | `8.9/10` | selective interest, with better bounded replays, cleaner theory-side harnesses, a second-family additivity cross-check, a mesoscopic-source lane that now closes localization more honestly, and a graph-side story with retained structureless-DAG and phase-diagram evidence |
+| Bridge to known physics | `8.8/10` | somewhat stronger than before, with a cleaner continuum/action split, a bounded momentum/additivity lane, a sharper mesoscopic-inertia map, and graph-perturbation evidence that now distinguishes forgiving structure, harsher-ladder sign collapse, and the absence of a retained 0.75-1.00 threshold on this family |
+| Publishable as a careful computational toy-model paper | `9.7/10` | increasingly plausible with bounded replay chains, better reproduction, tighter scope control, a full closure of the current localization lane, and graph-side harnesses that replace memo-only prose with explicit survival, null-boundary, and phase-diagram reads |
 | Publishable as a foundational-physics breakthrough claim | `4.0/10` | still too early for that framing |
 | Ready for top-tier mainstream physics claims | `2.7/10` | improved credibility, but still far below the required bar |
 | Field-shifting theory program | `6.0/10` | stronger than before, but still not at forced-engagement level |
@@ -125,21 +125,23 @@ The main upward pressures since the first adversarial cut are:
   - constrained compact-floor and annular/hollow sweeps now show that the
     retained 3D `h = 0.5` family does not hide a better admissible localized
     winner once point-like cheats are excluded
-  - an alternate-family scout now isolates the retained 3D `h = 0.25` family
-    as the only cheap remaining localization shot, which makes the open step
-    narrower and easier for reviewers to audit
+  - the final retained 3D `h = 0.25` constrained localization replay now
+    closes that last cheap shot too, which makes the broad-source-control
+    boundary easier for reviewers to audit
   - the inverse-problem lane now has a real bounded harness showing several
     natural graph perturbations preserve TOWARD + Born while heavy random edge
     deletion flips the sign, replacing the earlier overstrong doc-only memo
-  - the edge-deletion boundary is now sharper too: on the tested ordered
-    family the sign flips between roughly `90%` and `80%` retained connectivity,
-    which makes the graph-side requirement more concrete and reviewable
+  - the graph phase-diagram lane is now tighter too:
+    a short damage ladder says sign fails first, while a dedicated retained-
+    family `0.75-1.00` sweep says there is no stable threshold there, so the
+    safe read is graph-family / ladder dependence rather than a promoted
+    universal `80-90%` boundary
   - the broken-graph action-power probe now keeps the graph-side universality
     story honest: `p = 1` is not uniquely the most damage-robust law on this
     retained family
-  - a structureless random-DAG mass-scaling note now exists, but it is still
-    not weighted heavily here because it has not yet been frozen with the same
-    script/log/harness discipline as the retained lattice graph-robustness lane
+  - the structureless random-DAG lane is now hardened with a real harness:
+    the sign stays noisy, but when rows remain TOWARD the local `F~M` response
+    stays linear, which is interesting enough to matter a little here
 - the imported `1/L^(d-1)` kernel lane is now scientifically more interesting
   and does live on `main`, but it is still **bounded / unreconciled** rather
   than promoted in the top-line canonical story

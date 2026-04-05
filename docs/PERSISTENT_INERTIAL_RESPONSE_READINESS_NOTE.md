@@ -209,25 +209,27 @@ The localization frontier now looks like this:
 - there is no single sharp collapse threshold in the retained 2D family
 - on the retained 3D `h = 0.5` family, broad `topN` still owns the admissible
   frontier even after compact-floor and annular/hollow sweeps
+- on the retained 3D `h = 0.25` family, the final constrained replay keeps the
+  same conclusion under explicit support/capture floors: broad `topN 196`
+  remains the best admissible row
 - very compact sources can stay extremely self-similar while becoming weak
 - broader sources can carry much stronger response while remaining stable
 - so the open question is no longer “is there a hidden 3D `h = 0.5` winner?”
-- it is whether the retained 3D `h = 0.25` family can support a more localized
-  admissible object, or whether the lane should now be frozen as a bounded
-  broad-source control
+- the localization lane is now frozen as a bounded broad-source control result,
+  not an open hidden-winner search
 
 ## Best next experiment
 
 The smallest viable next move is:
 
-- if localization is still worth one more attempt, move only to the retained
-  3D `h = 0.25` family and enforce explicit support/capture floors from the
-  start
 - do **not** keep treating the retained 2D support threshold as the next
   lever; the frozen sweep shows that family has no sharp support cutoff in the
   scanned range
 - do **not** keep sweeping the retained 3D `h = 0.5` family for compact or
   annular winners; the new bounded negatives close that branch
-- if the retained 3D `h = 0.25` family also fails to beat the broad surrogate
-  under the same constraints, freeze the localization lane as a bounded
-  negative rather than inventing a sharper inertial object
+- do **not** reopen the retained 3D `h = 0.25` lane without a genuinely new
+  object family or mechanism; the constrained replay already closes the last
+  cheap localization shot
+- the next honest escalation is now a true persistent/quasi-persistent
+  inertial-response probe beyond the broad mesoscopic surrogate, or a bounded
+  negative explaining why the current codebase still cannot realize it

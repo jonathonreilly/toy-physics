@@ -94,7 +94,7 @@ Read this with:
 
 - [`docs/INVERSE_PROBLEM_GRAPH_REQUIREMENTS_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/INVERSE_PROBLEM_GRAPH_REQUIREMENTS_NOTE.md)
 - [`docs/BROKEN_GRAPH_ACTION_POWER_ROBUSTNESS_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/BROKEN_GRAPH_ACTION_POWER_ROBUSTNESS_NOTE.md)
-- [`docs/EDGE_DELETION_BOUNDARY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/EDGE_DELETION_BOUNDARY_NOTE.md)
+- [`docs/EDGE_DELETION_BOUNDARY_SWEEP_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/EDGE_DELETION_BOUNDARY_SWEEP_NOTE.md)
 
 Those notes established that the graph is forgiving but not irrelevant.
 This scout narrows that further:

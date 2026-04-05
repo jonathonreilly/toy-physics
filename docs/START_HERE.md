@@ -103,20 +103,30 @@ Do not force a trade where only one of those moves.
   - a 2D support-threshold sweep now says shrinking that surrogate support
     does not reveal a sharp collapse on the retained 2D family; every scanned
     `topN` remains stable
-  - an alternate-family scout now says the only cheap localization lane still
-    worth one more try is the retained 3D `h = 0.25` family; otherwise the
-    honest read is that the current mesoscopic surrogate closes as a broad-
-    source control rather than a sharply localized inertial object
+  - the final constrained retained 3D `h = 0.25` localization replay now says
+    the same thing more directly: broad `topN 196` still owns the admissible
+    frontier under explicit support/capture floors, so the localization lane
+    closes as a bounded broad-source control result rather than a hidden
+    sharply localized inertial object
   - a separate Nyquist-diffraction probe now freezes the high-`k` gravity sign
     flip as a bounded lattice-UV effect: the first flip tracks `pi/h` and
     moves with `h`, so it is not a retained continuum prediction
   - a bounded inverse-problem graph-requirements harness is now real:
     baseline, asymmetry, jitter, and sparse connectivity stay TOWARD with
     Born machine-clean, while heavy `70%` random edge deletion flips AWAY
+  - a bounded graph phase-diagram scout is now frozen too:
+    sign is the first observable to fail under the short damage ladder, while
+    Born stays machine-clean and exponent fidelity survives until the sign
+    collapse
+  - a dedicated retained-family edge-deletion sweep now narrows the older
+    boundary story:
+    there is **no** retained `0.75-1.00` sign flip on this family, so the
+    safe read is ladder/family dependence rather than a universal `80-90%`
+    threshold
   - that sharpens the graph-side read:
     the retained family is forgiving under several natural perturbations, but
     the graph is still part of the mechanism and can change the sign under
-    heavy damage
+    harsher damage ladders or different graph families
   - a bounded broken-graph action-power robustness probe is now also real:
     on this retained family, `p = 1` is the cleanest exponent when it
     survives, but `p = 2` survives more of the signed damage ladder

@@ -92,11 +92,18 @@ What is now newly bounded:
 - compact-floor and annular/hollow sweeps now say the retained 3D `h = 0.5`
   family does not hide a better admissible localized winner; broad `topN`
   still owns the score/capture frontier there
-- an alternate-family scout now says the only cheap remaining localization try
-  is the retained 3D `h = 0.25` family
+- the final constrained retained 3D `h = 0.25` replay now says the same thing
+  more strongly: broad `topN 196` still owns the admissible frontier there
+  too, so the localization lane now closes as a bounded negative
 - a bounded inverse-problem harness now says the graph is forgiving under
   several natural perturbations, but heavy `70%` random edge deletion flips
   the sign; graph structure is not irrelevant
+- a bounded graph phase-diagram scout now says sign fails first under the
+  short damage ladder, while Born stays machine-clean and exponent fidelity
+  lasts until the sign collapse
+- a dedicated retained-family edge-deletion sweep now says there is no stable
+  `0.75-1.00` sign-flip threshold on that family; the safe read is ladder/
+  family dependence, not a universal `80-90%` boundary
 - a bounded broken-graph action-power probe now says `p = 1` is not uniquely
   the most damage-robust law on this family; `p = 2` survives more of the
   signed damage ladder even though `p = 1` stays cleaner on the exponent side
@@ -106,17 +113,17 @@ The second item is now partially addressed:
 - a 2D ordered-lattice cross-check is frozen
 - the retained 3D `h = 0.5` localization branch is now effectively closed as a
   bounded negative
+- the retained 3D `h = 0.25` localization branch is now closed too
 - the next real escalation is now either:
-  - one last constrained attempt on the retained 3D `h = 0.25` family
   - a genuinely different family
   - or a real persistent-pattern inertial-response experiment
 
 Best next deliverables on this lane:
 
-1. one constrained `h = 0.25` localization attempt with explicit support/capture floors
-2. one note separating mesoscopic-source closure from any stronger inertial-mass theorem
-3. freeze the localization lane as a bounded negative if `h = 0.25` also fails
-4. one bounded edge-deletion boundary sweep if we want to tighten the new graph-requirements lane
+1. one note separating mesoscopic-source closure from any stronger inertial-mass theorem
+2. one persistent or quasi-persistent inertial-response probe beyond the broad surrogate
+3. one beyond-fixed-family additivity cross-check if a cheap reusable family exists
+4. one harsher graph-family damage sweep if we want to tighten the graph-boundary lane further
 
 This lane is now secondary unless it produces one of:
 
@@ -144,11 +151,12 @@ remaining testable and review-safe.
      - could turn the new graph-requirements lane into a real universality
        statement with explicit boundaries
    - Deliverables:
-     - one retention-threshold sweep around the edge-deletion sign flip
+     - one reconciled phase-diagram note that separates short-ladder failure
+       from retained-family null sweeps
      - one hardened structureless-DAG harness or a bounded rejection of that
        lane
      - one note saying exactly what graph damage changes: sign, retention,
-       exponent fidelity, or nothing
+       exponent fidelity, or graph-family dependence
 
 3. **Forced novelty or no-go on the action law**
    - Best upside:

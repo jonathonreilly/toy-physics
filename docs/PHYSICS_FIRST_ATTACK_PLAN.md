@@ -97,7 +97,8 @@ breaks, and which observables fail first?
 
 **Success criteria**
 
-- one retained edge-deletion boundary sweep around the sign flip
+- one reconciled graph phase diagram across short damage ladders and retained-
+  family sweeps
 - one hardened random / structureless graph harness or a clean rejection
 - one note separating:
   - sign survival
@@ -107,7 +108,8 @@ breaks, and which observables fail first?
 
 **What counts as progress**
 
-- a sharp threshold or robustness window that survives multiple seeds
+- a sharp threshold or a clean null-threshold result that survives multiple
+  seeds
 - a graph-family comparison that says what is generic and what is not
 
 **What does not count**
@@ -194,7 +196,8 @@ parallel elsewhere.
 
 That first parallel item now means:
 
-- harden the edge-deletion boundary and the structureless-DAG lane first
+- harden the structureless-DAG lane and the graph phase-diagram reconciliation
+  first
 - only then return to persistent-pattern / inertial-response closure
 - only then do a third-family additivity check if a cheap reusable family exists
 
