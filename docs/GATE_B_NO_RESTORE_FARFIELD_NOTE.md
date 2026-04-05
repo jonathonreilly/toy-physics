@@ -35,14 +35,26 @@ The row format is:
 - `TOWARD` fraction over the tested far-field mass positions
 - `F~M` from the same retained three-strength probe
 
+Frozen rows:
+
+- `drift = 0.0`: `6/6` TOWARD, `F~M = 1.00`
+- `drift = 0.1`: `6/6` TOWARD, `F~M = 1.00`
+- `drift = 0.2`: `6/6` TOWARD, `F~M = 1.00`
+- `drift = 0.3`: `6/6` TOWARD, `F~M = 1.00`
+- `drift = 0.5`: `5/6` TOWARD, `F~M = 1.00`
+
 ## Safe read
 
 The honest bounded statement is:
 
 - this harness tells us how much far-field gravity survives when the restoring
   force is removed from the grown-geometry rule
-- the result should be read as a survival boundary, not as a full generated-
-  geometry replacement for the retained `restore > 0` family
+- the no-restore family is surprisingly robust in the far field:
+  `drift = 0.0` through `0.3` keep the full `6/6` TOWARD count and `F~M = 1.00`
+- even at `drift = 0.5`, the family still stays mostly TOWARD (`5/6`) with
+  `F~M = 1.00`
+- the result should still be read as a survival boundary, not as a full
+  generated-geometry replacement for the retained `restore > 0` family
 
 ## Relation to Gate B
 
