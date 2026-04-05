@@ -79,6 +79,7 @@ thing a new reader should treat as canonical proof of the current story:
 - [`scripts/mesoscopic_surrogate_source_2d.py`](/Users/jonreilly/Projects/Physics/scripts/mesoscopic_surrogate_source_2d.py)
 - [`scripts/mesoscopic_surrogate_multistage.py`](/Users/jonreilly/Projects/Physics/scripts/mesoscopic_surrogate_multistage.py)
 - [`scripts/mesoscopic_surrogate_two_stage_2d.py`](/Users/jonreilly/Projects/Physics/scripts/mesoscopic_surrogate_two_stage_2d.py)
+- [`scripts/mesoscopic_surrogate_threshold_2d.py`](/Users/jonreilly/Projects/Physics/scripts/mesoscopic_surrogate_threshold_2d.py)
 - [`scripts/mesoscopic_surrogate_localization_frontier.py`](/Users/jonreilly/Projects/Physics/scripts/mesoscopic_surrogate_localization_frontier.py)
 - [`scripts/lattice_3d_nyquist_diffraction_probe.py`](/Users/jonreilly/Projects/Physics/scripts/lattice_3d_nyquist_diffraction_probe.py)
 - [`scripts/same_family_3d_closure.py`](/Users/jonreilly/Projects/Physics/scripts/same_family_3d_closure.py)
@@ -111,6 +112,7 @@ Bounded derivation-side notes:
 - [`docs/MESOSCOPIC_SURROGATE_SOURCE_2D_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/MESOSCOPIC_SURROGATE_SOURCE_2D_NOTE.md)
 - [`docs/MESOSCOPIC_SURROGATE_MULTISTAGE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/MESOSCOPIC_SURROGATE_MULTISTAGE_NOTE.md)
 - [`docs/MESOSCOPIC_SURROGATE_TWO_STAGE_2D_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/MESOSCOPIC_SURROGATE_TWO_STAGE_2D_NOTE.md)
+- [`docs/MESOSCOPIC_SURROGATE_THRESHOLD_2D_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/MESOSCOPIC_SURROGATE_THRESHOLD_2D_NOTE.md)
 - [`docs/MESOSCOPIC_SURROGATE_LOCALIZATION_FRONTIER_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/MESOSCOPIC_SURROGATE_LOCALIZATION_FRONTIER_NOTE.md)
 - [`docs/LATTICE_3D_NYQUIST_DIFFRACTION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_3D_NYQUIST_DIFFRACTION_NOTE.md)
 

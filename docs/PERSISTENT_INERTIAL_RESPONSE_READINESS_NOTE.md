@@ -78,6 +78,13 @@ The nearest reusable pieces are:
     [`logs/2026-04-04-mesoscopic-surrogate-source-2d.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-04-mesoscopic-surrogate-source-2d.txt)
   - result: the source stays stable as a mesoscopic control, but its breadth
     still materially changes the response amplitude on the retained 2D family
+- [`scripts/mesoscopic_surrogate_threshold_2d.py`](/Users/jonreilly/Projects/Physics/scripts/mesoscopic_surrogate_threshold_2d.py)
+  - 2D support-threshold sweep for the same mesoscopic surrogate family
+  - frozen log:
+    [`logs/2026-04-04-mesoscopic-surrogate-threshold-2d.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-04-mesoscopic-surrogate-threshold-2d.txt)
+  - result: no sharp support threshold appears on the retained 2D family;
+    every scanned `topN` remains stable, so shrinking support is not the lever
+    that breaks two-stage sourced-response stability there
 
 ## Minimal blocker
 
@@ -173,13 +180,21 @@ The 2D two-stage companion sharpens the family-generic side:
 - but it still remains a bounded control picture rather than a persistent-mass
   theorem
 
-The localization frontier sharpens the next gap:
+The 2D support-threshold sweep sharpens the blocker further:
 
-- there is no single sharp collapse threshold for the 3D source object
+- shrinking the source support across `topN = 1 .. 81` does not produce a
+  collapse on the retained 2D family
+- the scanned 2D family is stable throughout the tested range
+- so the missing inertial-response object is not hidden behind a simple
+  support threshold in that family
+
+The localization frontier now looks like this:
+
+- there is no single sharp collapse threshold in the retained 2D family
 - very compact sources can stay extremely self-similar while becoming weak
 - broader sources can carry much stronger response while remaining stable
 - so the open question is now whether any **more localized** source family can
-  beat that frontier at all
+  beat that frontier on a different already-bounded family
 
 ## Best next experiment
 
@@ -188,7 +203,11 @@ The smallest viable next move is:
 - build the smallest localized source object that improves on the current
   broad mesoscopic control without leaving the retained family too much
 - or show that every attempt to shrink the source destroys the multistage
-  sourced-response strength/stability tradeoff
+  sourced-response strength/stability tradeoff on a different already-bounded
+  family
+- do **not** keep treating the retained 2D support threshold as the next
+  lever; the frozen sweep shows that family has no sharp support cutoff in the
+  scanned range
 
 If that cannot be done without changing the family too much, the honest result
 should stay negative rather than being replaced by a fake closure.

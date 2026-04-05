@@ -55,6 +55,9 @@ What is now newly bounded:
   high best-shift score and a stable shift scale
 - the same source idea stays meaningful on a retained 2D companion family,
   though its breadth still changes the response amplitude there
+- a 2D support-threshold sweep now says shrinking that surrogate support does
+  not produce a sharp collapse on the retained 2D family; every scanned
+  `topN` stays stable
 
 The second item is now partially addressed:
 

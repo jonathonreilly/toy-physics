@@ -93,6 +93,9 @@ Do not force a trade where only one of those moves.
   - a 2D two-stage companion control now says that broad surrogate family can
     also behave like a stable mesoscopic fixed-point control on the retained
     2D family
+  - a 2D support-threshold sweep now says shrinking that surrogate support
+    does not reveal a sharp collapse on the retained 2D family; every scanned
+    `topN` remains stable
   - a separate Nyquist-diffraction probe now freezes the high-`k` gravity sign
     flip as a bounded lattice-UV effect: the first flip tracks `pi/h` and
     moves with `h`, so it is not a retained continuum prediction
