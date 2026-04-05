@@ -49,20 +49,23 @@ The best next moonshot target is therefore narrower and more structural:
 
 - first, push the exact-lattice wavefield lane and ask whether it can transfer
   off the exact lattice without losing the weak-field gates
-- second, test a true propagating-field architecture beyond same-site memory
-  or local smoothing
-- third, push a sharper persistent-object / inertial-response architecture
+- second, test a true propagating-field architecture on a retained grown
+  family, not just the exact-lattice pocket
+- third, push a sharper persistent-object / inertial-response architecture,
+  now specifically targeting detector/readout localization on top of the new
+  compact repeated-update source-object positive
 - only fourth, return to stronger horizon / delay rhetoric if those
   architecture upgrades survive reduction
 
 Operationally, this is now a portfolio:
 
 1. exact-lattice wavefield / causal-field closure
-2. persistent object / inertial-response architecture
-3. geometry-transfer discriminator and geometry-rule recovery
-4. continuum / asymptotic hardening as the credibility lane
-5. tiny falsification-first complex-action / absorptive analogue probes on retained families
-6. strong-field trapping / horizon only after the first three stop advancing
+2. retained-grown-family propagating-field closure
+3. persistent object / inertial-response architecture
+4. geometry-transfer discriminator and geometry-rule recovery
+5. continuum / asymptotic hardening as the credibility lane
+6. tiny falsification-first complex-action / absorptive analogue probes on retained families
+7. strong-field trapping / horizon only after the first four stop advancing
 
 The current repo already has strong bounded evidence in several lanes.
 What is still missing on the physics side is not another narrative pass.

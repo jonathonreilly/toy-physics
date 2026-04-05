@@ -34,14 +34,14 @@ The best next steps are the ones that improve both at once.
 | category | score | read |
 |---|---:|---|
 | Toy-model mechanism interest | `9.5/10` | high intrinsic curiosity value |
-| Foundations / complex-systems / network-dynamics interest | `9.2/10` | real likely interest in the right subcommunities |
-| Broad theorist interest | `9.7/10` | still high, now with a larger exact-lattice wavefield escalation that keeps reduction, sign, and near-linear `F~M` while adding a coherent detector-line phase ramp; the generated-family discriminator also sharpens the story by showing the current bridge is geometry-limited rather than just under-tuned |
-| Bridge to known physics | `9.5/10` | improved by the stronger exact-lattice wavefield lane, the first generated-family rescue basin, and the new geometry-limited discriminator, but still capped by the fact that the self-generated field sector remains exact-lattice-only and the newer complex-action / `h^2` continuum story is not yet retained on `main` |
+| Foundations / complex-systems / network-dynamics interest | `9.3/10` | real likely interest in the right subcommunities, now with a clearer architecture portfolio and a stronger exact-lattice causal-field lane |
+| Broad theorist interest | `9.7/10` | still high, now with a larger exact-lattice wavefield escalation that keeps reduction, sign, and near-linear `F~M` while adding a coherent detector-line phase ramp; the generated-family discriminator and two new geometry-rule negatives make the current transfer bottleneck more scientifically legible rather than looser |
+| Bridge to known physics | `9.6/10` | improved by the stronger exact-lattice wavefield lane, the first generated-family rescue basin, the new geometry-limited discriminator, a tiny absorptive Gate B falsifier on a retained grown row, and a new compact repeated-update source object that still keeps `TOWARD` and `F~M = 1.00`; it is still capped by the fact that the self-generated field sector remains exact-lattice-only and the readout / inertial-response side is not yet localized |
 | Publishable as a careful computational toy-model paper | `10.0/10` | very strong, with bounded replay chains, better reproduction, tighter scope control, exact-lattice Green/self-consistent/transverse companions, and a generated-family support-recovery basin that is honest about still being only a partial rescue |
-| Publishable as a foundational-physics breakthrough claim | `4.1/10` | slightly improved by the first generated-family partial rescue, but still far too early for stronger framing |
+| Publishable as a foundational-physics breakthrough claim | `4.3/10` | the moonshot portfolio is a bit stronger and cleaner, with a new compact repeated-update object positive, but the project is still too exact-lattice-heavy and too transfer-limited for stronger framing |
 | Ready for top-tier mainstream physics claims | `2.8/10` | improved credibility, but still far below the required bar |
-| Field-shifting theory program | `7.4/10` | somewhat stronger, because the moonshot branch now has a larger exact-lattice wavefield control with a cleaner observable, a sharper generated-family bottleneck diagnosis, a genuine small-basin recovery rather than only negatives or proxies, and a first exact-to-generated discriminator that says where the bridge is failing |
-| Landmark foundational breakthrough | `3.6/10` | current evidence base is improving, but still too branch-sensitive and too exact-lattice-heavy for stronger framing |
+| Field-shifting theory program | `7.6/10` | somewhat stronger, because the moonshot branch now has a larger exact-lattice wavefield control with a cleaner observable, a sharper generated-family bottleneck diagnosis, two additional geometry-rule negatives that focus the transfer problem, a tiny retained Gate B absorptive falsifier that keeps one grown-geometry strong-field knob alive, and a first compact repeated-update source object that is genuinely smaller than the broad control while keeping the weak-field lane |
+| Landmark foundational breakthrough | `3.8/10` | current evidence base is improving, but still too branch-sensitive and too exact-lattice-heavy for stronger framing |
 | Nobel-scale breakthrough | `0.4/10` | not a realistic present-tense read |
 
 ## Why this map is lower than the old internal map
@@ -178,9 +178,23 @@ The main upward pressures since the first adversarial cut are:
   on the retained `kNN`-floor bridge family, support rescue beats the
   wavefield bridge on both sign and detector support, so the current bridge is
   best read as geometry-limited rather than field-rule-limited
+- two follow-up generated-family probes now tighten that diagnosis instead of
+  diluting it:
+  a `z`-spread transfer variant and a sector-fan geometry repair both fail to
+  widen support in the right way, so the current bridge looks stuck on the
+  geometry side rather than waiting for one more small field tweak
 - the complex-action-on-generated-geometry idea is now better bounded too:
   on current `main`, it is only minimally credible as a tiny falsification-
   first piggyback on the retained Gate B row, not as a new retained branch
+  - that tiny Gate B falsifier does still matter a little:
+    it says an absorptive / complex-action-style knob can produce a real escape
+    observable on a retained grown row while preserving exact `gamma = 0`
+    reduction, which keeps one small strong-field-generated-geometry lane open
+- the persistent-object lane is now slightly stronger too:
+  a compact `top-3` repeated-update source object is genuinely smaller than the
+  earlier broad quasi-persistent control and still keeps `4/4` `TOWARD` with
+  `F~M = 1.00`; the remaining bottleneck is now detector/readout localization
+  rather than source-object localization alone
   - the imported `1/L^(d-1)` kernel lane is now scientifically more interesting
     and does live on `main`, but it is still **bounded / unreconciled** rather
     than promoted in the top-line canonical story

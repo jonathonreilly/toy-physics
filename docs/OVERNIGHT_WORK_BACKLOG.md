@@ -194,10 +194,16 @@ remaining testable and review-safe.
    - Best upside:
      - closes the biggest open internal physics step after the test-particle
        and source-resolved exact-field lanes
+   - New narrowing:
+     - the compact `top-3` repeated-update source object is now a real bounded
+       positive on the exact `h = 0.25` family
+     - the bottleneck is no longer source-object shrinkage alone
+     - it is now detector/readout localization and inertial-response closure
    - Deliverables:
-     - one sharper localization or repeated-update object probe
-     - or one bounded negative strong enough to freeze the current broad
-       quasi-persistent control as the real limit on this family
+     - one detector/readout localization or inertial-response probe on top of
+       the compact repeated-update object
+     - or one bounded negative strong enough to freeze the compact repeated-
+       update object as the real limit on this family
 
 3. **Geometry-transfer discriminator / generated-family recovery**
    - Best upside:
@@ -211,7 +217,17 @@ remaining testable and review-safe.
        to matter
      - or one stronger no-go saying that this family stays bridge-only
 
-4. **Generated geometry closure**
+4. **Retained-grown-family propagating field**
+   - Best upside:
+     - takes the strongest generated-geometry family and asks whether it can
+       carry a genuinely causal-field observable, not just the static package
+   - Deliverables:
+     - one self-consistent or retarded-like field state on the retained Gate B
+       row
+     - one exact reduction limit back to the frozen grown baseline
+     - one bounded detector-line or far-field causal observable
+
+5. **Generated geometry closure**
    - Best upside:
      - turns imposed geometry into mechanism
      - biggest remaining gap between axioms and implementation
@@ -221,7 +237,7 @@ remaining testable and review-safe.
      - one clean bounded negative showing why the current growth rules cannot
        carry the retained gravity lane
 
-5. **Graph-boundary / universality phase diagram**
+6. **Graph-boundary / universality phase diagram**
    - Best upside:
      - could turn the new graph-requirements lane into a real universality
        statement with explicit boundaries
@@ -233,7 +249,7 @@ remaining testable and review-safe.
      - one note saying exactly what graph damage changes: sign, retention,
        exponent fidelity, or graph-family dependence
 
-6. **Forced novelty or no-go on the action law**
+7. **Forced novelty or no-go on the action law**
    - Best upside:
      - either derive a stronger selector than current numerics provide
      - or prove the current framework cannot force it without extra axioms
@@ -241,7 +257,7 @@ remaining testable and review-safe.
      - one bounded derivation/no-go note with a harness where possible
      - no more circular "Newton derived" wording unless the closure is real
 
-7. **Only if artifact-backed: BMV or another genuinely new prediction**
+8. **Only if artifact-backed: BMV or another genuinely new prediction**
    - Best upside:
      - could produce a concrete quantum-gravity-style prediction
    - Rule:
