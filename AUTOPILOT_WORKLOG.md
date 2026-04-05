@@ -1,3 +1,81 @@
+## 2026-04-04 — Coordination reconciled to the synced graph-boundary head
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed
+  earlier in this loop
+- no detached science child was active to resume or monitor
+- before this integrity repair, the canonical repo had already advanced far
+  beyond the stale localization-closure coordination head:
+  - `9ce0c11` (`docs: inverse problem — Newton+Born require almost nothing of the graph`)
+  - `c2f179c` (`docs: session summary + inverse problem — 208 commits, 10 headline results`)
+  - `97be011` (`feat(inverse): freeze graph-requirements harness`)
+  - `0567cd8` (`feat(inertia): add broken graph robustness probe`)
+  - `eaf812f` (`feat: frozen inverse-problem + broken-graph F∝M=p harnesses`)
+  - `0197939` (`docs(graph): bound inverse-problem and robustness lanes`)
+  - `e0c0d9c` (`fix(honesty): edge deletion boundary at ~85% — graph is NOT irrelevant`)
+- the canonical repo was clean and synced at `e0c0d9c` before this step:
+  - `git status --short --branch` reported `## main...origin/main`
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+- the tracked coordination layer had drifted again:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+  - all still named the earlier localization closure at `3e5042b` as the
+    active synced head even though the real repo had moved to the graph /
+    inverse correction chain
+
+### What changed
+- inspected the landed synced graph/inverse chain instead of trusting the
+  stale localization coordination text:
+  - `git show --stat --summary --oneline 9ce0c11`
+  - `git show --stat --summary --oneline c2f179c`
+  - `git show --stat --summary --oneline 97be011`
+  - `git show --stat --summary --oneline 0567cd8`
+  - `git show --stat --summary --oneline eaf812f`
+  - `git show --stat --summary --oneline 0197939`
+  - `git show --stat --summary --oneline e0c0d9c`
+- reread the settled graph-side note surfaces directly:
+  - `/Users/jonreilly/Projects/Physics/docs/INVERSE_PROBLEM_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/INVERSE_PROBLEM_GRAPH_REQUIREMENTS_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/BROKEN_GRAPH_ACTION_POWER_ROBUSTNESS_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/EDGE_DELETION_BOUNDARY_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/START_HERE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/OVERNIGHT_WORK_BACKLOG.md`
+- prepended this tracked integrity entry and refreshed the runtime handoff plus
+  automation memory so the next loop starts from the real synced head again
+
+### Strongest confirmed conclusion
+- the safe graph-side read is now narrower and more honest than the earlier
+  memo-only universality wording:
+  - baseline, asymmetry, jitter, and sparse-connectivity perturbations still
+    preserve TOWARD gravity with Born machine-clean on the retained family
+  - heavy random edge deletion does not; the 12-seed boundary sweep flips
+    between `90%` and `80%` edge retention, so gravitational attraction on
+    this family needs roughly `~85%` of the dense connectivity
+  - on the broken-graph damage ladder, `p = 1` remains the clean exponent
+    when it survives, but it is not uniquely the most sign-robust law;
+    `p = 2` survives more damaged rows
+- the graph is therefore not irrelevant to the mechanism even though field
+  coupling and phase still look like the core existence conditions
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- with coordination restored to the actual synced head, return to the
+  user-priority non-overlapping directional-`b` science lane:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/directional_b_geometry_normalized_holdout_transfer.py --mass-nodes 5`
+- if that lane is blocked later, move next to one bounded evolving-network
+  dynamics prototype rather than reopening decoherence architecture search
+
+### First concrete action
+- rerun the widened-source directional-`b` holdout transfer at `mass_nodes = 5`
+  and inspect the low-`b` rows before deciding whether the fixed directional-
+  measure lane still stays on pure `1 / b` or must switch immediately to the
+  nearest-edge finite-source correction
+
 ## 2026-04-04 — Coordination reconciled to the synced coarse-localization closure head
 
 ### Current state
