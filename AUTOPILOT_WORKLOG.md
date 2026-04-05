@@ -1,3 +1,112 @@
+## 2026-04-05 — Gate B near-field control localizes the v6 misses to one closest bucket
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed in
+  protocol order at loop start
+- no detached `physics-science` child was active to resume or monitor
+- the canonical repo at `/Users/jonreilly/Projects/Physics` was already synced
+  before this step:
+  - `git status --short --branch` reported `## main...origin/main` plus
+    modified `logs/physics_autopilot_handoff.md`, modified
+    `docs/TESTABLE_PREDICTIONS_MAP_NOTE.md`, and several unrelated untracked
+    draft notes / probes
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 8` showed synced head `eb01dc7`
+    (`feat: add wavefield phase-ramp law v2`) on top of `origin/main`
+- the saved coordination layer still described the older stranded local
+  overlap-seam head `964d726`, so this loop first reconciled the real landed
+  chain before returning to the user-priority evolving-network lane:
+  - `83a8992` (`docs: add moonshot science shortlist`)
+  - `a48fac0` (`feat: add grown trapping frontier v3 probe`)
+  - `eb01dc7` (`feat: add wavefield phase-ramp law v2`)
+
+### What changed
+- reread the tracked work log, latest handoff, and readable autopilot memory
+  in protocol order after the duplicate-run guard and cooperative lock checks
+  passed
+- confirmed no detached `physics-science` child was active to resume or
+  protect
+- reconciled canonical git state directly:
+  - `git status --short --branch`
+  - `git rev-list --left-right --count origin/main...main`
+  - `git log --oneline --decorate -n 8`
+  - `git show --stat --summary --oneline 83a8992`
+  - `git show --stat --summary --oneline a48fac0`
+  - `git show --stat --summary --oneline eb01dc7`
+- reread the current priority / claim surfaces directly:
+  - `/Users/jonreilly/Projects/Physics/docs/OVERNIGHT_WORK_BACKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/docs/PHYSICS_FIRST_ATTACK_PLAN.md`
+  - `/Users/jonreilly/Projects/Physics/docs/GATE_B_DYNAMICS_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/EVOLVING_NETWORK_PROTOTYPE_V6_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/GATE_B_GROWN_TRAPPING_FRONTIER_V3_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/SOURCE_RESOLVED_WAVEFIELD_V2_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/MOONSHOT_SCIENCE_NEXT_NOTE.md`
+- completed one bounded evolving-network support diagnostic instead of
+  reopening decoherence or geometry-normalized `b` search:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/gate_b_v6_nearfield_comparator.py | tee /Users/jonreilly/Projects/Physics/logs/2026-04-05-gate-b-v6-nearfield-comparator.txt`
+- added the new exact-vs-grown near-field artifact chain and wired it back
+  into the live Gate B status note:
+  - `/Users/jonreilly/Projects/Physics/scripts/gate_b_v6_nearfield_comparator.py`
+  - `/Users/jonreilly/Projects/Physics/docs/GATE_B_V6_NEARFIELD_COMPARATOR_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/GATE_B_DYNAMICS_NOTE.md`
+- left unrelated user/local changes untouched:
+  - `/Users/jonreilly/Projects/Physics/docs/TESTABLE_PREDICTIONS_MAP_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/ADAPTIVE_COEVOLVING_GEOMETRY_NO_GO.md`
+  - `/Users/jonreilly/Projects/Physics/docs/DISTANCE_LAW_PREDICTION_CARD_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/MOONSHOT_DIAMOND_SENSOR_BRAINSTORM_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/MOONSHOT_SELF_GRAVITY_BRAINSTORM_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/POISSON_SELF_GRAVITY_LOOP_V3_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/scripts/persistent_object_localization_escalation.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/poisson_self_gravity_loop_v3.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/source_resolved_exact_green_support_scout.py`
+
+### Strongest confirmed conclusion
+- the frozen v6 mixed result is now localized cleanly to the closest tested
+  near-field bucket, `y_mass = 1.0`
+- on that closest bucket, the ordered-lattice control is already fully
+  `AWAY` across all three tested strengths:
+  - exact grid `0/3` `TOWARD`, mean delta `-0.000019`
+- the retained structured-growth row is better than the exact control on the
+  same bucket:
+  - grown `drift = 0.3`, `restore = 0.5`: `9/12` `TOWARD`, mean delta
+    `+0.000006`
+  - only one retained seed (`44`) flips all three closest-bucket strengths
+- the rest of the near-field grid stays clean:
+  - `y_mass = 1.5`: exact `3/3`, grown `12/12`
+  - `y_mass = 2.0`: exact `3/3`, grown `12/12`
+- so the safe Gate B read is sharper than “near-field mixed” alone:
+  - the v6 misses are not evidence that structured growth collapses relative
+    to the exact grid
+  - they are best read as a bounded near-field optics / detector-geometry
+    issue on the closest bucket
+  - far-field generated geometry remains the main retained positive
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/scripts/gate_b_v6_nearfield_comparator.py`
+- `/Users/jonreilly/Projects/Physics/docs/GATE_B_V6_NEARFIELD_COMPARATOR_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/docs/GATE_B_DYNAMICS_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-05-gate-b-v6-nearfield-comparator.txt`
+
+### Exact next step
+- move to the next non-overlapping user-priority lane:
+  one bounded continuum / asymptotic bridge card
+- resume the retained 3D valley-linear bridge instead of widening Gate B or
+  decoherence architecture:
+  - `/Users/jonreilly/Projects/Physics/scripts/valley_linear_asymptotic_bridge.py`
+  - `/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_ASYMPTOTIC_BRIDGE_NOTE.md`
+- keep the ordered-lattice `1/L^2` family fixed and ask whether the current
+  finite-size correction read can be sharpened without upgrading the existing
+  near-Newtonian replay into a fake theorem
+
+### First concrete action
+- rerun
+  `python3 /Users/jonreilly/Projects/Physics/scripts/valley_linear_asymptotic_bridge.py`
+  and compare the refreshed bridge table directly against
+  `/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_ASYMPTOTIC_BRIDGE_NOTE.md`;
+  if the far-tail correction remains slice-dependent, freeze that correction
+  law more explicitly instead of widening strong-field, geometry-transfer, or
+  decoherence work
+
 ## 2026-04-05 — Widened-source holdout failure localizes to the overlap seam
 
 ### Current state

@@ -170,6 +170,35 @@ F∝M=1.00 at all drift/restore levels in the far field (z≥3).
 The near-field (z≤2) remains mixed on both grown and fixed lattices.
 This is a beam-optics effect, not a growth-rule or physics failure.
 
+## Frozen v6 near-field comparator (2026-04-05)
+
+Dedicated exact-vs-grown control:
+
+- [`scripts/gate_b_v6_nearfield_comparator.py`](/Users/jonreilly/Projects/Physics/scripts/gate_b_v6_nearfield_comparator.py)
+- [`logs/2026-04-05-gate-b-v6-nearfield-comparator.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-05-gate-b-v6-nearfield-comparator.txt)
+- [`docs/GATE_B_V6_NEARFIELD_COMPARATOR_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_V6_NEARFIELD_COMPARATOR_NOTE.md)
+
+Frozen bucket summary for the retained `drift = 0.3`, `restore = 0.5` row:
+
+| `y_mass` | exact control | grown row |
+| --- | --- | --- |
+| `1.0` | `0/3` `TOWARD`, mean `-0.000019` | `9/12` `TOWARD`, mean `+0.000006` |
+| `1.5` | `3/3` `TOWARD`, mean `+0.000011` | `12/12` `TOWARD`, mean `+0.000023` |
+| `2.0` | `3/3` `TOWARD`, mean `+0.000030` | `12/12` `TOWARD`, mean `+0.000035` |
+
+This sharpens the near-field diagnosis:
+
+- the mixed v6 signal is confined to the closest near-field bucket
+- the ordered-lattice control is already worse on that bucket
+- only one of the four retained grown seeds flips all three closest-bucket
+  strengths
+
+So the safe read is stronger than “near-field mixed” alone:
+
+- the v6 misses are not evidence that the structured-growth rule collapses
+  relative to the exact grid
+- the mixed bucket is best read as a bounded near-field optics issue
+
 ## Generated-geometry companion package (2026-04-05)
 
 The far-field Gate B lane now has dedicated companion replays for the retained
@@ -194,7 +223,9 @@ So the honest status is now:
 
 - far-field generated geometry is a real bounded positive with companion
   support for distance and joint non-gravity observables
-- near-field and full-family Gate B closure remain open
+- the mixed near-field region is now localized to the closest tested bucket,
+  where the exact control is already worse than the retained grown row
+- full-family Gate B closure remains open
 
 ## Non-label connectivity candidate (2026-04-05)
 
