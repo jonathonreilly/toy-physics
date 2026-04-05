@@ -1,0 +1,20 @@
+============================================================================
+GATE B NO-RESTORE JOINT PACKAGE HARNESS
+  Born / d_TV / MI / decoherence with restore fixed to 0
+============================================================================
+h=0.5, W=10, L=12, seeds=1, LAM=10.0
+growth rule: template + drift + no restore + NN connectivity from grid labels
+
+geometry                   Born     d_TV       MI    Decoh
+exact grid             2.12e-15    0.787    0.568    49.4%
+no restore drift=0.0   2.12e-15    0.787    0.568    49.4%
+no restore drift=0.2   2.01e-15    0.596    0.314     1.0%
+no restore drift=0.5   1.31e-15    0.971    0.811     4.3%
+
+SAFE INTERPRETATION
+  This harness isolates the no-restore lane only.
+  The exact grid is the reference row; the no-restore rows show how
+  much of the joint package survives without the restoring pull.
+  Treat this as bounded evidence, not a full generated-geometry closure.
+
+Total time: 129s
