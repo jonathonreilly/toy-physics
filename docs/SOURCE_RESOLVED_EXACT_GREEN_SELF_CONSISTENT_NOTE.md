@@ -58,7 +58,8 @@ The strongest bounded statement is:
 - the self-consistent Green field keeps the weak-field `TOWARD` sign on the
   compact `h = 0.25` family
 - the mass-scaling class stays essentially linear
-- the dynamic field remains nontrivial, with mean `|green/inst| = 1.300`
+- the dynamic field remains nontrivial relative to the chosen instantaneous
+  comparator, with mean `|green/inst| = 1.300`
 
 ## Honest limitation
 
@@ -70,6 +71,8 @@ theory.
   converged dynamical field evolution
 - the source pattern is boundary-clipped rather than fully symmetric, so this
   is a bounded refinement update rather than a symmetry-clean family proof
+- the `|green/inst|` amplitude ratio is comparator- and calibration-dependent,
+  so it should not be promoted as a standalone physical observable
 - still, it is the smallest exact-lattice refinement of the Green pocket that
   preserves the hard gates cleanly
 

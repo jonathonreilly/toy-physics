@@ -1,9 +1,9 @@
 # Source-Resolved Propagating Green Pocket
 
 **Date:** 2026-04-05  
-**Status:** retained exact-lattice moonshot positive
+**Status:** retained exact-lattice same-site-memory positive
 
-This note freezes the smallest exact-lattice propagating-field harness that
+This note freezes the smallest exact-lattice same-site-memory harness that
 could still be compared directly against the retained static Green control and
 the instantaneous `1/r` comparator.
 
@@ -16,7 +16,7 @@ The script is:
 - exact 3D lattice: `h = 0.5`, `W = 3`, `L = 20`
 - source cluster: clipped cross5 local cluster, leaving 4 in-bounds nodes
 - source ladder: `s = {0.001, 0.002, 0.004, 0.008}`
-- propagating field: Green-like causal recurrence with `mix = 0.9`
+- same-site memory field: Green-like layer recurrence with `mix = 0.9`
 - control comparison: instantaneous `1/r` field and static source-resolved Green field
 
 ## Hard gates
@@ -43,26 +43,27 @@ weak-field sign and preserve linear mass scaling on this exact-lattice family.
 
 ## Causal observable
 
-The propagating field is not identical to the static Green control:
+The same-site memory field is not identical to the static Green control:
 
 - mean `prop - green = +1.197212e-03`
 
-That is the smallest retained causal-memory observable in this pocket. It is
-nontrivial, but it remains bounded and does not claim a full self-consistent
-GR sector.
+That is the smallest retained layer-memory observable in this pocket. It is
+nontrivial, but it remains bounded and does not claim transverse transport, a
+finite-speed field equation, or a full self-consistent GR sector.
 
 ## Safe read
 
 This is a bounded exact-lattice positive:
 
-- the propagating field keeps the weak-field `TOWARD` sign
+- the same-site memory field keeps the weak-field `TOWARD` sign
 - it preserves the Newtonian mass-scaling class on the tested source ladder
 - it stays within the requested amplitude ratio band
-- it is distinguishable from the static Green control by a small causal-memory
+- it is distinguishable from the static Green control by a small layer-memory
   offset
 
 What it is **not**:
 
 - a full self-consistent propagating-field theory
+- a genuine transverse transport or finite-speed field model
 - a horizon / black-hole result
 - a claim that the generated geometry sector is closed

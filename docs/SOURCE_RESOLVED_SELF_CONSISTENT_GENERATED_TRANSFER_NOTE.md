@@ -1,7 +1,7 @@
 # Source-Resolved Self-Consistent Generated Transfer
 
 **Date:** 2026-04-05  
-**Status:** bounded no-go for transfer of the self-consistent Green pocket to the compact generated DAG family
+**Status:** bounded generated-family negative for the self-consistent Green pocket on the compact generated DAG family
 
 ## Artifact chain
 
@@ -46,12 +46,12 @@ Reduction check:
 
 Frozen readout:
 
-| `s` | instantaneous shift | self-consistent shift | self / inst | sign survival |
+| `s` | instantaneous shift | self-consistent shift | self / inst | same-sign rows |
 | --- | ---: | ---: | ---: | ---: |
-| `0.0001` | `-6.835015e-02` | `-8.435233e-02` | `1.234` | `1/4` |
-| `0.0002` | `-9.454729e-02` | `-8.893522e-02` | `0.941` | `1/4` |
-| `0.0004` | `-1.282711e-01` | `-7.117551e-02` | `0.555` | `1/4` |
-| `0.0008` | `-1.673655e-01` | `-4.548761e-02` | `0.272` | `1/4` |
+| `0.0001` | `-6.835015e-02` | `-8.435233e-02` | `1.234` | `3/4` |
+| `0.0002` | `-9.454729e-02` | `-8.893522e-02` | `0.941` | `3/4` |
+| `0.0004` | `-1.282711e-01` | `-7.117551e-02` | `0.555` | `3/4` |
+| `0.0008` | `-1.673655e-01` | `-4.548761e-02` | `0.272` | `3/4` |
 
 Fitted exponents:
 
@@ -66,21 +66,28 @@ The strongest bounded statement is:
 - the self-consistent Green field remains nontrivial
 - but the generated-family readout is `AWAY`, not `TOWARD`
 - and the strength dependence does not preserve the Newtonian linear class
+- the instantaneous comparator on this family is also already `AWAY` and
+  non-Newtonian, so this run does **not** isolate failure of the self-consistent
+  update alone
+- the self-consistent and instantaneous rows usually keep the same sign, but
+  that sign is the wrong weak-field sign for the retained target lane
 
 ## Honest limitation
 
-This is a clean no-go for the generated-family transfer of the self-consistent
-Green architecture.
+This is a clean generated-family negative, but not yet an architecture-isolation
+theorem for the self-consistent Green update.
 
 - the exact-lattice self-consistent pocket does **not** transfer to the compact
   generated DAG family in the retained weak-field class
 - sign and linear scaling do not survive together on the generated family
-- so the transfer is not a hidden positive waiting to be promoted
+- however, the baseline instantaneous control already misses the target weak-field
+  lane here, so the strongest safe inference is family-level failure rather than
+  a uniquely self-consistent failure
 
 ## Branch verdict
 
-Treat this as the generated-geometry answer for the self-consistent Green
-candidate:
+Treat this as the generated-geometry answer for the retained compact family, not
+as a broader self-consistent no-go theorem:
 
 - exact reduction survives
 - amplitude survives
