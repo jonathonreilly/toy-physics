@@ -1,6 +1,6 @@
 # Physics Autopilot Handoff
 
-## 2026-04-04 20:04 America/New_York
+## 2026-04-04 20:08 America/New_York
 
 ### Seam class
 - bounded directional-`b` geometry-normalized holdout transfer under the fixed
@@ -21,7 +21,13 @@
 
 ### Current state
 - no detached `physics-science` child is active
-- the canonical repo was clean and synced at `8deda97` before this step
+- the new bounded science result is committed locally at `85a769f`
+- `main` is ahead of `origin/main` by one commit after the managed push helper
+  hit a transient DNS failure:
+  - `status = failed`
+  - `failure_kind = dns_failure`
+  - `attempts_used = 5`
+  - `ahead = 1`, `behind = 0`
 - the new bounded result sharpens the fixed directional-measure gravity-`b`
   lane without reopening denominator search:
   - on the second dense-family holdout, `A/b`, `A/edge`, `F/b`, and `F/edge`
@@ -36,10 +42,12 @@
   a geometry-normalized gravity-`b` trend exists at all
 
 ### Exact next step
-- test whether the same holdout transfer survives the widened `mass_nodes = 5`
-  family, where the finite-source correction should matter most
+- rerun the managed push helper before any new repo mutation:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+- once sync is restored, test whether the same holdout transfer survives the
+  widened `mass_nodes = 5` family, where the finite-source correction should
+  matter most
 
 ### First concrete action
-- run `python3 /Users/jonreilly/Projects/Physics/scripts/directional_b_geometry_normalized_holdout_transfer.py --mass-nodes 5`
-  and inspect whether the low-`b` rows stay center-offset-led or immediately
-  force `b - h_mass`
+- rerun `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  before opening the widened-source follow-on
