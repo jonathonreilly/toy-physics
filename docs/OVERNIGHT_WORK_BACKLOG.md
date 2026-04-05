@@ -25,9 +25,18 @@ That agent does not get to replace the retained-artifact work. Its job is to:
 - identify the minimum bounded observable that would make each idea real
 - identify the fastest falsifier so the branch can fail quickly if needed
 
+Moonshot work is now allowed to proceed as a **portfolio**, not only as one
+serial branch at a time.
+
+That means:
+
+- we can keep multiple high-upside lanes documented in parallel
+- we can pause and later resume individual lanes without losing the thread
+- but each lane still needs its own bounded artifact chain before it counts
+
 There is now one explicit exception to the otherwise conservative frontier map:
 
-- a **moonshot strong-field branch** is allowed
+- a **moonshot architecture portfolio** is allowed
 - but only if it is run under stricter fail-fast rules than the weak-field
   program
 - that means:
@@ -227,7 +236,7 @@ remaining testable and review-safe.
        check and preserves `TOWARD` with near-linear mass scaling, but the
        amplitude is weak
 
-6. **Moonshot architecture branch**
+6. **Moonshot architecture portfolio**
    - Best upside:
      - one of the few remaining paths with real step-change potential
      - could turn the exact-lattice Green control into either a
@@ -243,6 +252,8 @@ remaining testable and review-safe.
    - Current preferred target:
      - generated-family support recovery that also restores `F~M`
      - then a true propagating-field observable beyond same-site memory
+     - in parallel, a persistent-object / inertial-response architecture that
+       might close the mass gap more directly
    - Current retained positives:
      - absorbing threshold
      - bidirectional no-return threshold
@@ -259,6 +270,8 @@ remaining testable and review-safe.
        the mass-scaling class
      - second ask whether a true propagating field adds anything qualitatively
        beyond local memory/smoothing
+     - third keep the persistent-object lane alive as a separate candidate for
+       later unification rather than forcing everything through geometry
 
 ## Highest-leverage score improvers
 

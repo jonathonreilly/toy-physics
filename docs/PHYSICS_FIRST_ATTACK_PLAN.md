@@ -19,6 +19,14 @@ must satisfy a stricter rule than the normal weak-field program:
 3. it must fail fast if the reduction breaks or if the new observable only
    appears through an obviously ad hoc artifact
 
+Multiple moonshot branches are now allowed in parallel as a **portfolio**.
+
+That is only useful if each branch still stands on its own:
+
+- one branch cannot borrow evidential weight from another
+- each branch needs its own script / log / note chain
+- later unification only counts if the individual lanes are already retained
+
 For the current program, the best such moonshot is no longer "black holes,
 etc." in general. The branch is now better split into:
 
@@ -43,6 +51,13 @@ The best next moonshot target is therefore narrower and more structural:
   or local smoothing
 - only third, return to stronger horizon / delay rhetoric if those
   architecture upgrades survive reduction
+
+Operationally, this is now a portfolio:
+
+1. generated-family recovery toward full weak-field closure
+2. true propagating-field architecture
+3. persistent object / inertial-response architecture
+4. strong-field trapping / horizon only after the first three stop advancing
 
 The current repo already has strong bounded evidence in several lanes.
 What is still missing on the physics side is not another narrative pass.
@@ -221,12 +236,12 @@ lattice lane?
 - exact Newtonian wording unless the frozen data really supports it
 - broad “all dimensions solved” language
 
-## Batch 5: Moonshot Architecture Branch
+## Batch 5: Moonshot Architecture Portfolio
 
 **Question**
 
-Can a minimal extension beyond the current exact-lattice Green control produce
-either:
+Can one or more minimal extensions beyond the current exact-lattice Green
+control produce either:
 
 - a geometry-generic recovery of the weak-field lane
 - or a genuinely new causal-field observable
@@ -244,13 +259,13 @@ while still reducing back to the retained weak-field baseline?
 
 Do **not** target "black holes" broadly.
 
-Target exactly one of:
+Each individual probe should still target exactly one of:
 
 - generated-family recovery of `TOWARD` + `F~M` + support breadth
 - true propagating-field lag / phase observable beyond same-site memory
 - escape fraction / no-return only if the above two are stalled
 
-Use exactly one minimal extension:
+And use exactly one minimal extension:
 
 - connectivity-side support recovery on the retained generated family
 - or a true propagating-field update on the exact lattice
@@ -276,6 +291,7 @@ Stop the branch quickly if:
 
 **What counts as progress**
 
+- a generated-family rescue that restores sign, support, and `F~M` together
 - a retained trapping or no-return threshold
 - a retained retarded-field or delay-proxy observable with a clean
   instantaneous-limit reduction
