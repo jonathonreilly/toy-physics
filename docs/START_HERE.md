@@ -227,6 +227,10 @@ Do not force a trade where only one of those moves.
     but "calibration-sensitive partial positive": the minimal self-generated
     field architecture has a weak-field recovery pocket, then saturates away
     from linearity as the generated field grows
+  - the smallest serious `h = 0.25` refinement check now closes as a bounded
+    falsifier: exact zero-source recovery, `TOWARD`, and near-linear exponent
+    survive, but the dynamic amplitude collapses to `|dyn/inst| = 0.055`, so
+    the exact-lattice pocket does not transfer with useful strength
   - the compact generated-family source-driven coupled-field rescue also
     closes as a bounded no-go: exact zero-source reduction and sign survive,
     but the mass-scaling class does not reach linearity there either
@@ -234,6 +238,10 @@ Do not force a trade where only one of those moves.
     strict reduction test and keeps `TOWARD` with near-linear mass scaling
     (`F~M = 0.98`), but at much weaker amplitude than the instantaneous
     comparator
+  - a new source-resolved exact Green pocket now survives exact zero-source
+    reduction on a small exact lattice and keeps both `TOWARD` and
+    `F~M = 1.00` on the retained source ladder, making it a distinct
+    self-generated-field candidate worth later size-transfer tests
   - a dedicated horizon `k`-sweep now closes one tempting overclaim:
     on the retained absorbing observable, the strong wavelength-dependent
     horizon story does **not** survive; `alpha_crit` stays nearly flat in `k`
