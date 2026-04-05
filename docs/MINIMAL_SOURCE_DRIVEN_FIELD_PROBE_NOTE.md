@@ -1,12 +1,13 @@
 # Minimal Source-Driven Field Probe
 
 **Date:** 2026-04-05  
-**Status:** bounded local-field-dynamics probe with partial weak-field recovery and failed linear mass scaling
+**Status:** bounded local-field-dynamics probe with exact reduction, preserved sign, and failed linear mass scaling at stronger calibration
 
 ## Artifact chain
 
 - [`scripts/minimal_source_driven_field_probe.py`](/Users/jonreilly/Projects/Physics/scripts/minimal_source_driven_field_probe.py)
 - [`logs/2026-04-05-minimal-source-driven-field-probe.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-05-minimal-source-driven-field-probe.txt)
+- [`docs/SOURCE_DRIVEN_FIELD_RECOVERY_SWEEP_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/SOURCE_DRIVEN_FIELD_RECOVERY_SWEEP_NOTE.md)
 
 ## Question
 
@@ -50,7 +51,7 @@ Fitted exponents:
 
 ## Safe read
 
-The strongest bounded statement is:
+The strongest bounded statement from this first probe alone is:
 
 - the smallest source-driven local field rule does preserve the sign of
   attraction on this retained lattice replay
@@ -60,7 +61,7 @@ The strongest bounded statement is:
 
 ## Honest limitation
 
-This is therefore not a clean positive for self-consistent field dynamics.
+This first probe is therefore not a clean positive for self-consistent field dynamics.
 
 - it is a partial survival:
   - `TOWARD` survives
@@ -70,8 +71,10 @@ This is therefore not a clean positive for self-consistent field dynamics.
 
 ## Branch verdict
 
-Treat this as a useful bounded no-go:
+Treat this note together with the recovery companion:
 
-- the smallest stable source-driven field extension is not enough to recover
-  the retained weak-field lane in full
-- a stronger field architecture would need more than local source driving alone
+- at stronger calibration, the smallest stable source-driven field extension
+  does not recover the retained weak-field lane in full
+- the companion recovery sweep now shows a genuine weak-field pocket where the
+  same architecture returns to near-linear `F~M`
+- the right safe read is therefore calibration hierarchy, not blanket failure

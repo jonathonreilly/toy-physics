@@ -1,13 +1,14 @@
 # Physics Autopilot Handoff
 
-## 2026-04-05 11:16 America/New_York
+## 2026-04-05 11:20 America/New_York
 
 ### Seam class
 - coordination-repair integrity step only: the saved work log, handoff, and
   automation memory had drifted behind the real synced head chain, including
   the already-landed bounded evolving-network `v6` freeze
-- no detached `physics-science` child is active; the cooperative lock can be
-  released at loop end if the managed push finishes cleanly
+- no detached `physics-science` child is active; the managed push helper later
+  failed once with transient DNS, so the repo now sits locally ahead by the
+  coordination commit `80952a4` even though the lock can still be released
 
 ### What this loop did
 - read the tracked work log, latest handoff, and automation memory in protocol
@@ -27,6 +28,12 @@
   surfaces:
   - `python3 /Users/jonreilly/Projects/Physics/scripts/base_confidence_check.py`
   - result: passed
+- created the repo-facing coordination repair commit:
+  - `80952a4` (`docs(autopilot): reconcile science coordination`)
+- ran the managed push helper exactly as required:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - result: `status=failed`, `failure_kind=dns_failure`, `ahead=1`,
+    `behind=0`, `attempts_used=5`
 - refreshed the tracked work log, this runtime handoff, and automation memory
   so the next loop starts from the real synced head and does not repeat the
   already-landed directional-`b` or structured-growth `v6` work
@@ -35,13 +42,15 @@
 - no detached `physics-science` child is active
 - before this loop's coordination repair, the canonical repo was clean and
   synced at `a69ebe4` (`test: bound near-horizon wave amplification claim`)
+- the repo now contains local coordination repair commit `80952a4`
+  (`docs(autopilot): reconcile science coordination`) and sits `ahead 1,
+  behind 0` because the managed push helper hit a transient DNS failure
 - the stale instruction to run
   `python3 /Users/jonreilly/Projects/Physics/scripts/evolving_network_prototype_v6.py`
   is now obsolete because that bounded replay already landed earlier as
   `da27d6c`
-- the bounded integrity replay passed, so the repo is ready for the next
-  non-overlapping science step once this coordination repair is committed and
-  pushed
+- the bounded integrity replay passed, so the only live blocker before the
+  next science step is remote reconciliation, not a science-integrity issue
 
 ### Strongest confirmed conclusion
 - the saved coordination files were the blocker, not the repo: `main` already
@@ -53,19 +62,23 @@
   - the retained horizon threshold is nearly flat in `k`
   - the exact-lattice near-horizon wave-amplification ratio collapses to about
     `1x`, so the earlier large-amplification headline is not retained
-- operationally, the next non-overlapping science pass should move to one
-  bounded continuum / asymptotic bridge card rather than revisit already-frozen
-  directional-`b`, structured-growth, or decoherence-frontier work
+- operationally, the next non-overlapping science pass should still move to
+  one bounded continuum / asymptotic bridge card rather than revisit
+  already-frozen directional-`b`, structured-growth, or decoherence-frontier
+  work, but only after the stranded local coordination commit is pushed
 
 ### Exact next step
-- move to one bounded continuum / asymptotic bridge card on the retained
-  valley-linear ladder
-- use:
-  `python3 /Users/jonreilly/Projects/Physics/scripts/valley_linear_asymptotic_bridge.py`
+- rerun the managed push helper until the local coordination repair commit is
+  no longer stranded:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+- only once `main` is synced again should the next science loop move to the
+  bounded continuum / asymptotic bridge card on the retained valley-linear
+  ladder:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/valley_linear_asymptotic_bridge.py`
 
 ### First concrete action
-- rerun `valley_linear_asymptotic_bridge.py` and compare the coarse/core/wide
-  tail fits against
+- rerun `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py
+  push-if-ahead --workdir /Users/jonreilly/Projects/Physics`; if it succeeds,
+  then compare the coarse/core/wide tail fits from
+  `valley_linear_asymptotic_bridge.py` against
   `/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_CONTINUUM_SYNTHESIS_NOTE.md`
-  before deciding whether one compact scaling card can be frozen without new
-  search sprawl

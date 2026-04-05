@@ -168,6 +168,7 @@ Bounded derivation-side notes:
 - [`docs/RETARDED_FIELD_COMPACT_REFINEMENT_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/RETARDED_FIELD_COMPACT_REFINEMENT_NOTE.md)
 - [`docs/RETARDED_FIELD_HARNESS_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/RETARDED_FIELD_HARNESS_NOTE.md)
 - [`docs/MINIMAL_SOURCE_DRIVEN_FIELD_PROBE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/MINIMAL_SOURCE_DRIVEN_FIELD_PROBE_NOTE.md)
+- [`docs/SOURCE_DRIVEN_FIELD_RECOVERY_SWEEP_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/SOURCE_DRIVEN_FIELD_RECOVERY_SWEEP_NOTE.md)
 - [`docs/ALTERNATIVE_COUPLED_FIELD_PROBE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ALTERNATIVE_COUPLED_FIELD_PROBE_NOTE.md)
 - [`docs/COUPLED_FIELD_GENERATED_FAMILY_PROBE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/COUPLED_FIELD_GENERATED_FAMILY_PROBE_NOTE.md)
 - [`docs/QUANTUM_HORIZON_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/QUANTUM_HORIZON_NOTE.md)

@@ -214,9 +214,19 @@ Do not force a trade where only one of those moves.
     - bounded oscillating-source harness with a frequency-dependent
       fingerprint
   - the first smallest source-driven local-field attempt is now frozen too:
-    it preserves `TOWARD` and exact zero-source reduction, but it fails the
-    clean linear mass-scaling class (`F~M = 0.64`), so it closes as a bounded
-    no-go for "minimal self-generated field dynamics already solves it"
+    at stronger calibration it preserves `TOWARD` and exact zero-source
+    reduction but fails the clean linear mass-scaling class (`F~M = 0.64`)
+  - a dedicated recovery sweep now sharpens that story:
+    the same architecture has a real weak-field pocket on the exact 3D lattice,
+    with dynamic `F~M` staying near linear (`0.997`, `0.994`, `0.985`,
+    `0.968`) while the calibrated dynamic field remains small
+  - a focused confirmation row keeps that read bounded:
+    `c_field = 0.25`, `damp = 0.15`, `target = 0.005` gives dynamic
+    `F~M = 0.98`
+  - the safe read is therefore no longer "flat no-go"
+    but "calibration-sensitive partial positive": the minimal self-generated
+    field architecture has a weak-field recovery pocket, then saturates away
+    from linearity as the generated field grows
   - the compact generated-family source-driven coupled-field rescue also
     closes as a bounded no-go: exact zero-source reduction and sign survive,
     but the mass-scaling class does not reach linearity there either
