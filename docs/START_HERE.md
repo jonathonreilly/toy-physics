@@ -189,6 +189,10 @@ Do not force a trade where only one of those moves.
   - a new no-restore weak-connectivity boundary now sharpens the lesson:
     label connectivity still carries the far-field package, but a weaker
     position-based KNN+floor candidate collapses on the retained family
+  - a paired no-restore hierarchy now sharpens that further:
+    far-field sign / `F~M` survive without restore on the label-connectivity
+    family, but the broader joint `d_TV` / `MI` / decoherence package becomes
+    sharply drift-sensitive
 - **Action-power Newtonian-3D claim:** interesting, bounded to a no-barrier companion, not yet a promoted core claim
 - **Newton-derivation lane:** stronger, but still open
   - additivity and momentum now support a bounded characterization theorem on

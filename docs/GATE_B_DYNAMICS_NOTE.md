@@ -213,3 +213,32 @@ Its bounded read is:
 So the restoring force is not the whole story. The connectivity rule is the
 critical piece, and the weaker position-based candidate does **not** carry the
 far-field package on this retained family.
+
+## No-restore hierarchy (2026-04-05)
+
+The no-restore lane is now bounded more sharply too:
+
+- [`scripts/gate_b_no_restore_farfield.py`](/Users/jonreilly/Projects/Physics/scripts/gate_b_no_restore_farfield.py)
+- [`logs/2026-04-05-gate-b-no-restore-farfield.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-05-gate-b-no-restore-farfield.txt)
+- [`docs/GATE_B_NO_RESTORE_FARFIELD_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_NO_RESTORE_FARFIELD_NOTE.md)
+- [`scripts/gate_b_no_restore_joint_package.py`](/Users/jonreilly/Projects/Physics/scripts/gate_b_no_restore_joint_package.py)
+- [`logs/2026-04-05-gate-b-no-restore-joint-package.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-05-gate-b-no-restore-joint-package.txt)
+- [`docs/GATE_B_NO_RESTORE_JOINT_PACKAGE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_NO_RESTORE_JOINT_PACKAGE_NOTE.md)
+
+Their bounded read is:
+
+- far-field gravity is surprisingly robust without restore on the label-based
+  family:
+  - `drift = 0.0` through `0.3`: `6/6` TOWARD, `F~M = 1.00`
+  - `drift = 0.5`: `5/6` TOWARD, `F~M = 1.00`
+- the non-gravity joint package is not comparably robust:
+  - `drift = 0.0` still matches the exact-grid row
+  - once drift is turned on, `d_TV`, `MI`, and decoherence become sharply
+    drift-sensitive on the frozen one-seed replay
+
+So the clean hierarchy is now:
+
+- restore is **not** required for the basic far-field sign / mass-law slice on
+  the label-connectivity family
+- restore still matters if the goal is to preserve the broader lattice-like
+  interference / decoherence package

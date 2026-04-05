@@ -104,6 +104,9 @@ The main upward pressures since the first adversarial cut are:
 - the no-restore weak-connectivity replay now closes a clean negative:
   label connectivity still carries the far-field package, but a weaker
   position-based KNN+floor candidate collapses on the retained family
+- the paired no-restore replays now sharpen that boundary into a hierarchy:
+  far-field sign / `F~M` survive without restore on the label-connectivity
+  family, but the broader joint interference / decoherence package does not
 - the architecture/action matrix now gives reviewers one bounded place to read
   the split without forcing a unification claim
 - the derivation-side lane is now better bounded:
