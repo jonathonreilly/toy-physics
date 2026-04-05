@@ -14,6 +14,29 @@ The working rule for the next batch is:
   genuine no-go, or sharply tighten a real universality boundary
 - keep the retained story honest while doing that
 
+Every nontrivial worker batch should also include:
+
+- one dedicated moonshot-brainstorm agent
+
+That agent does not get to replace the retained-artifact work. Its job is to:
+
+- propose one or two higher-risk directions that could change the scientific
+  tier if they worked
+- identify the minimum bounded observable that would make each idea real
+- identify the fastest falsifier so the branch can fail quickly if needed
+
+There is now one explicit exception to the otherwise conservative frontier map:
+
+- a **moonshot strong-field branch** is allowed
+- but only if it is run under stricter fail-fast rules than the weak-field
+  program
+- that means:
+  - one minimal new observable
+  - one minimal architecture change
+  - one explicit weak-field reduction check
+  - immediate shutdown if the branch only buys drama by destroying the
+    retained weak-field baseline
+
 External-reception calibration now lives in:
 
 - [`docs/ADVERSARIAL_INTEREST_MAP.md`](/Users/jonreilly/Projects/Physics/docs/ADVERSARIAL_INTEREST_MAP.md)
@@ -46,6 +69,8 @@ If a task does not clearly do one of these, defer it:
 3. derive a law from deeper internal constraints
 4. prove a no-go theorem that blocks a tempting overclaim
 5. establish a real universality boundary rather than a vague positive memo
+6. or test one moonshot branch that could produce a qualitatively new
+   retained observable and either survives reduction or fails honestly
 
 The old bar was:
 
@@ -54,6 +79,11 @@ The old bar was:
 The new bar is:
 
 - "does this force novelty or force failure?"
+
+For the moonshot branch, the bar is narrower still:
+
+- "does this create one new retained strong-field observable without losing
+  the current weak-field lane?"
 
 ## Current non-Gate-B physics bottleneck
 
@@ -183,6 +213,26 @@ remaining testable and review-safe.
    - Rule:
      - note-only or commit-message-only claims do not count
      - if the artifact chain is absent, this lane is paused
+
+6. **Moonshot strong-field branch**
+   - Best upside:
+     - one of the few remaining paths with real step-change potential
+     - could reveal a trapping / horizon / no-return threshold rather than
+       another weak-field replay
+   - Rule:
+     - do not chase "black holes, etc." broadly
+     - choose one minimal extension and one observable only
+   - Deliverables:
+     - one script / log / note chain for a trapping-style observable
+     - one weak-field reduction check on the same extension
+     - one explicit positive-or-no-go note
+   - Current preferred target:
+     - minimal absorbing or bidirectional trapping probe with escape/no-return
+       threshold
+   - Current anti-targets:
+     - wave anecdotes without a retained phase-sensitive observable
+     - backreaction narratives without a retained convergence or no-go chain
+     - commit-message-only "GR extension" claims
 
 ## Highest-leverage score improvers
 

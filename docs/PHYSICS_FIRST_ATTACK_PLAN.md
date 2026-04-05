@@ -8,6 +8,22 @@
 Push the strongest possible physics position before spending more effort on
 write-up polish.
 
+## Moonshot Rule
+
+If we deliberately pivot toward a potential breakthrough branch, the branch
+must satisfy a stricter rule than the normal weak-field program:
+
+1. it must target one genuinely new observable the current program cannot
+   already produce in a bounded way
+2. it must keep a clear reduction path back to the retained weak-field lane
+3. it must fail fast if the reduction breaks or if the new observable only
+   appears through an obviously ad hoc artifact
+
+For the current program, the best such moonshot is not "black holes, etc."
+in general. It is a **minimal strong-field trapping / horizon probe** on the
+smallest bidirectional or absorptive extension that can still be compared
+against the retained weak-field gravity lane.
+
 The current repo already has strong bounded evidence in several lanes.
 What is still missing on the physics side is not another narrative pass.
 It is now one or more of these:
@@ -16,6 +32,7 @@ It is now one or more of these:
 2. a real universality boundary on graph structure
 3. a forced novelty or a real no-go theorem on the action / mass law
 4. a clean 3D continuum / asymptotic closure
+5. one moonshot strong-field branch with an explicit fail-fast reduction check
 
 Those are the physics bottlenecks that matter most now if the goal is not just
 "a better version of the same story" but "a result that could genuinely
@@ -48,6 +65,13 @@ Do not count:
 - another cleaner replay of known-law reproduction
 - a memo-only claim without a real harness
 - a branch that survives only in commit messages
+
+For the moonshot branch, also do not count:
+
+- visually dramatic path plots without a retained observable
+- a trapping or horizon claim that does not come with a weak-field reduction
+- an absorptive or bidirectional extension that immediately destroys the
+  current Born / weak-field baseline and is then treated as "physics"
 
 ## Batch 1: Generated Geometry Closure
 
@@ -177,12 +201,74 @@ lattice lane?
 - exact Newtonian wording unless the frozen data really supports it
 - broad “all dimensions solved” language
 
+## Batch 5: Moonshot Strong-Field Branch
+
+**Question**
+
+Can a minimal extension beyond unidirectional weak-field propagation produce a
+retained strong-field observable such as trapping, no-return behavior, or a
+horizon-like threshold while still reducing back to the current weak-field
+lane?
+
+**Why this matters**
+
+- It is one of the few remaining directions with genuine step-change upside.
+- A real trapping threshold would be qualitatively different from the current
+  weak-field replay program.
+- If it fails cleanly, that also tells us where the current framework stops.
+
+**Minimal target**
+
+Do **not** target "black holes" broadly.
+
+Target exactly one of:
+
+- escape fraction vs compactness
+- no-return probability vs compactness
+- redshift / delay blow-up proxy
+
+Use exactly one minimal extension:
+
+- absorptive horizon proxy
+- or bidirectional continuation / trapping
+
+**Success criteria**
+
+- one script / log / note chain
+- one strong-field observable with a qualitative threshold or clean null
+- one explicit weak-field reduction check
+
+**Fail-fast criteria**
+
+Stop the branch quickly if:
+
+- the extension cannot recover the retained weak-field sign / `F~M` lane in
+  its weak-coupling or low-compactness limit
+- the effect only appears by violating the current Born / normalization
+  baseline in a trivial way
+- the result is branch-fragile and cannot be frozen as one bounded observable
+
+**What counts as progress**
+
+- a retained trapping or no-return threshold
+- a retained no-go note saying the minimal extension cannot preserve the
+  weak-field lane
+- a sharp statement that amplitude loss, bidirectionality, or backreaction is
+  the true bottleneck
+
+**What does not count**
+
+- commit-message-only moonshot narrative
+- three extension anecdotes with no frozen artifact chain
+- "qualitatively black-hole-like" language without a retained threshold
+
 ## Recommended Order
 
 1. Generated geometry closure
 2. Graph universality boundary
 3. Forced novelty or no-go on the action law
 4. 3D continuum / asymptotic closure
+5. Moonshot strong-field branch
 
 ## Recommended Parallel Non-Gate-B Order
 
