@@ -1,0 +1,34 @@
+========================================================================================
+SHAPIRO UNIQUE DISCRIMINATOR V2
+  strongest remaining boundary for the retained c-dependent phase lag
+========================================================================================
+
+Question:
+  Can anything stronger than the detector phase lag alone separate the
+  causal propagating-field lane from static lookalikes?
+
+Exact controls:
+  - exact zero control stays exact
+  - the phase-lag curve is portable across the retained grown families
+
+                mode      c=2.0      c=1.0      c=0.5     c=0.25
+------------------------------------------------------------------------
+ causal dynamic cone    +0.0372    +0.0446    +0.0569    +0.0662
+   static cone shape    +0.0372    +0.0446    +0.0569    +0.0662
+   static scheduling    +0.0446    +0.0445    +0.0446    +0.0450
+
+Boundary diagnostics:
+  causal vs static-cone RMSE: 0.0000
+  causal vs static-schedule RMSE: 0.0128
+
+Safe read:
+  - the detector-line phase lag is a real, portable observable
+  - a static cone-shape proxy reproduces the same curve exactly
+  - static scheduling does not reproduce the curve and stays near-flat
+  - no stronger discriminator appeared in the retained data
+
+Conclusion:
+  The best remaining boundary is that the Shapiro-style phase lag is
+  portable and proxy-level, but not unique against static field-shape
+  effects. A unique causal-propagation discriminator will need another
+  observable beyond the detector-line phase lag alone.
