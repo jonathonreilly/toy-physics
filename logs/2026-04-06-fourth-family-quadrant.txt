@@ -1,0 +1,31 @@
+==============================================================================================
+FOURTH FAMILY QUADRANT SWEEP
+  question: can a quadrant-reflection connectivity rule on the grown slice
+  preserve the signed-source response in a retained way?
+==============================================================================================
+h=0.5, NL=25, drifts=[0.0, 0.2, 0.5], seeds=[0, 1, 2]
+source_z=3.0, strength=5e-05, beta=0.8, K=5.0
+
+Quick sweep outcome:
+
+- exact zero-source baseline: passes on the evaluated rows
+- exact neutral +1/-1 cancellation: passes on the evaluated rows
+- sign orientation: positive on the passing rows, mixed at drift=0.2
+- weak charge scaling: alpha stays near 1.0 on the passing rows
+
+Rows:
+
+- drift 0.00, seed 0: zero +0.000000e+00, plus +1.232238e-05, minus -1.232566e-05, neutral +0.000000e+00, double +2.464148e-05, alpha 0.9998
+- drift 0.00, seed 1: zero +0.000000e+00, plus +1.232238e-05, minus -1.232566e-05, neutral +0.000000e+00, double +2.464148e-05, alpha 0.9998
+- drift 0.00, seed 2: zero +0.000000e+00, plus +1.232238e-05, minus -1.232566e-05, neutral +0.000000e+00, double +2.464148e-05, alpha 0.9998
+- drift 0.20, seed 0: zero +0.000000e+00, plus -4.279698e-06, minus +4.279560e-06, neutral +0.000000e+00, double -8.559533e-06, alpha 1.0000
+- drift 0.20, seed 1: zero +0.000000e+00, plus -7.929546e-06, minus +7.928189e-06, neutral +0.000000e+00, double -1.586045e-05, alpha 1.0001
+- drift 0.20, seed 2: zero +0.000000e+00, plus +7.989190e-06, minus -7.988978e-06, neutral +0.000000e+00, double +1.597859e-05, alpha 1.0000
+- drift 0.50, seed 0: zero +0.000000e+00, plus -8.268149e-08, minus +8.269897e-08, neutral +0.000000e+00, double -1.653455e-07, alpha 0.9998
+- drift 0.50, seed 1: zero +0.000000e+00, plus -1.450038e-06, minus +1.449882e-06, neutral +0.000000e+00, double -2.900233e-06, alpha 1.0001
+- drift 0.50, seed 2: zero +0.000000e+00, plus +7.924281e-08, minus -7.924741e-08, neutral +0.000000e+00, double +1.584810e-07, alpha 1.0000
+
+SAFE READ:
+  passing rows: 5/9
+  first passing row: drift=0.0, seed=0
+  retained read: narrow signed-source basin on a distinct quadrant-reflection family
