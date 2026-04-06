@@ -97,6 +97,30 @@ A lock-in experiment modulating the source at frequency f would see:
 - Quadrature (Y): the shaped-field delay contribution
 - Phase lag (phi): atan2(Y, X) → nonzero if the field has cone-like structure
 
+## What would count as a discriminating measurement
+
+A measurement would discriminate the model's prediction from Newtonian
+gravity if it shows:
+
+1. **A phase lag that scales as s^1** when source mass is varied, AND
+2. **That phase lag is frequency-dependent** (scales with k or drive frequency), AND
+3. **The phase vanishes for a static (unmodulated) source**
+
+The static-cone caveat means this is necessary but not sufficient: a shaped
+static field could also produce items 1-2. The additional discriminator
+would be:
+
+4. **The phase depends on source modulation frequency** in a way consistent
+   with finite field propagation speed (not just field shape)
+
+Specifically: if the source is modulated at frequency f, the quadrature
+signal Y should depend on f in a way that tracks c (the field propagation
+speed), not just the spatial envelope. A static shaped field would produce
+a frequency-independent Y; a causal field would produce Y(f) that changes
+with f at rates comparable to the light-travel time across the apparatus.
+
+This is the sharpest discriminator available from the current model.
+
 ## Existing bridge notes
 
 | Note | What it covers |
