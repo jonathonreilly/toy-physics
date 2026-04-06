@@ -1,0 +1,38 @@
+===========================================================================
+DISCRETE SHAPIRO DELAY: THREE-FAMILY PORTABILITY
+NL=30, W=8, s=0.004, z_src=3.0
+Families: 3, Seeds: 2, c values: [2.0, 1.0, 0.5, 0.25]
+===========================================================================
+
+Fam1 (drift=0.2, restore=0.7):
+       c    s0_phase    s1_phase    mean_phase
+  ----------------------------------------------
+    inst   -0.000000   -0.000000     -0.000000
+    2.00   +0.040233   +0.039881     +0.040057
+    1.00   +0.050011   +0.049884     +0.049947
+    0.50   +0.061643   +0.062651     +0.062147
+    0.25   +0.067893   +0.067936     +0.067915
+
+Fam2 (drift=0.05, restore=0.3):
+       c    s0_phase    s1_phase    mean_phase
+  ----------------------------------------------
+    inst   +0.000000   +0.000000     +0.000000
+    2.00   +0.040431   +0.039745     +0.040088
+    1.00   +0.050325   +0.049879     +0.050102
+    0.50   +0.061958   +0.062478     +0.062218
+    0.25   +0.068326   +0.067380     +0.067853
+
+Fam3 (drift=0.5, restore=0.9):
+       c    s0_phase    s1_phase    mean_phase
+  ----------------------------------------------
+    inst   +0.000000   -0.000000     -0.000000
+    2.00   +0.040130   +0.039885     +0.040007
+    1.00   +0.049930   +0.049799     +0.049864
+    0.50   +0.061700   +0.062291     +0.061996
+    0.25   +0.067886   +0.067997     +0.067942
+
+SAFE READ
+  phase at c=None (instantaneous) is 0.000 by construction
+  phase > 0 at finite c: Shapiro-like delay from causal propagation
+  if phase(c) is the same across families: geometry-independent
+  if phase increases as c decreases: slower field → more delay
