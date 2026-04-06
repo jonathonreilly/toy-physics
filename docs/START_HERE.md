@@ -196,6 +196,17 @@ Do not force a trade where only one of those moves.
     one retained grown row preserves a scalar signed-source response under
     fixed-field propagation, but this is still a bounded row-level transfer
     positive rather than a geometry-generic field law
+  - a position-based geometry-sector companion now survives on that same
+    retained row too:
+    - zero-source and neutral same-point `+1/-1` controls still reduce to
+      printed zero
+    - the single-source sign response keeps the same orientation
+    - charge doubling stays linear with exponent `1.000223`, but the response
+      amplitude is weaker than the label-grown control
+  - the safe wording for that companion is:
+    the old graph-ladder / geometry-sector architecture transfers as a narrow
+    design guide on one retained grown row, not as a replacement connectivity
+    law or a broader generated-family closure
   - the earlier v5 cross-growth row remains useful as the matched-control
     comparison against KNN on the same grown positions
   - a new no-restore weak-connectivity boundary now sharpens the lesson:

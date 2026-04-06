@@ -162,6 +162,13 @@ If you only want the current high-level state, read this section first.
   charge keeps the centroid shift linear with exponent `1.000`. This is a
   narrow grown-row transfer positive, not electromagnetism or a
   geometry-generic theorem.
+- **Non-label geometry-sector carryover:** bounded architecture transfer. On
+  that same moderate-drift Gate B row, the old position-based geometry-sector
+  candidate also preserves exact zero-source and neutral same-point
+  cancellation, keeps the signed-source orientation, and stays linear in
+  charge (`1.000223`) while running at weaker amplitude than the label-grown
+  control. This is a narrow design-guide transfer on one retained row, not a
+  replacement connectivity law or broader generated-family closure.
 - **Action-power branch:** exploratory axiom fork. It has a same-harness 2D
   comparison, a retained 3D close-slit barrier Born / MI / decoherence card,
   and a retained 3D no-barrier distance / mass-response companion. The current

@@ -1,3 +1,81 @@
+## 2026-04-06 — Surfaced the retained non-label grown-row architecture transfer
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed in
+  protocol order at loop start
+- the latest inherited handoff reported the repo still ahead of `origin/main`
+  with repeated DNS push failures, but canonical git in
+  `/Users/jonreilly/Projects/Physics` had already moved on and needed
+  reconciliation before any new lane work:
+  - `git status --short --branch` reported `## main...origin/main` plus
+    existing unrelated dirty sidecar drafts
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 8` showed local head `34200ab` already
+    synced with `origin/main`
+- the required managed push retry before local science reported a clean sync:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - result: `status=nothing_to_push`, `ahead=0`, `behind=0`
+- this loop then spawned exactly five disjoint sidecar workers covering the
+  wider `h = 0.125` lane, grown-transfer lane, self-gravity/backreaction,
+  growing-graph dynamics, and skeptic retainability audit while the local path
+  stayed on shared-state reconciliation plus one bounded summary surfacing step
+
+### What changed
+- harvested exactly one bounded repo-facing integrity/science step from the
+  already-synced `main` head: the retained non-label geometry-sector transfer
+  is now surfaced in the canonical summary notes instead of living only in its
+  frozen note/log/script chain
+- promoted that bounded transfer into the top-level summaries:
+  - kept
+    `/Users/jonreilly/Projects/Physics/docs/GATE_B_NONLABEL_SIGN_GROWN_TRANSFER_NOTE.md`
+    as the claim-carrying note
+  - kept
+    `/Users/jonreilly/Projects/Physics/logs/2026-04-06-gate-b-nonlabel-sign-grown-transfer.txt`
+    as the frozen log
+  - kept
+    `/Users/jonreilly/Projects/Physics/scripts/GATE_B_NONLABEL_SIGN_GROWN_TRANSFER.py`
+    as the replay script
+  - updated `README.md` and `docs/START_HERE.md` to surface the narrow
+    architecture-transfer result with review-safe wording
+- the retained synced read is:
+  - geometry-sector zero-source delta: `+0.000000e+00`
+  - geometry-sector neutral same-point `+1/-1` delta: `+0.000000e+00`
+  - geometry-sector single `+1`: `-3.534838e-05` (`AWAY`)
+  - geometry-sector single `-1`: `+3.533743e-05` (`TOWARD`)
+  - geometry-sector double `+2`: `-7.070770e-05`
+  - geometry-sector charge exponent: `1.000223`
+
+### Strongest confirmed conclusion
+- the old position-based geometry-sector / graph-ladder architecture genuinely
+  transfers to the current fixed-field grown-row lane on one retained
+  moderate-drift Gate B row
+- review-safe retained wording:
+  the geometry-sector candidate preserves exact zero-source and neutral
+  same-point cancellation, keeps the signed-source orientation, and stays
+  linear in charge on the checked row, but at weaker amplitude than the
+  label-grown control
+- this is a narrow design-guide transfer only; it is not a replacement
+  connectivity law, a broader generated-family closure, or a field-theory
+  promotion
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/README.md`
+- `/Users/jonreilly/Projects/Physics/docs/START_HERE.md`
+
+### Exact next step
+- rerun the protocol preflight and confirm the repo is still synced before
+  harvesting any fresh sidecar result
+- then promote at most one bounded result from the finished draft lanes,
+  preferring a clean no-go or narrow retained note that does not broaden the
+  claim surface
+
+### First concrete action
+- inspect the strongest finished sidecar candidate after the managed push check;
+  if nothing beats the current bounded surfacing step, keep the repo synced and
+  let the next loop harvest at most one of the self-gravity, graph-static, or
+  retainability closeouts
+
 ## 2026-04-06 — Promoted the bounded fixed-field grown transfer scout
 
 ### Current state
