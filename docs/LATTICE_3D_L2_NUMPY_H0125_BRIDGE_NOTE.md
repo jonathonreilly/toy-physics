@@ -7,7 +7,9 @@ current frozen log
 ## Artifact chain
 
 - [`scripts/lattice_3d_l2_numpy_h0125_bridge.py`](/Users/jonreilly/Projects/Physics/scripts/lattice_3d_l2_numpy_h0125_bridge.py)
+- [`scripts/lattice_3d_l2_numpy_h0125_only.py`](/Users/jonreilly/Projects/Physics/scripts/lattice_3d_l2_numpy_h0125_only.py)
 - [`logs/2026-04-05-lattice-3d-l2-numpy-h0125-bridge.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-05-lattice-3d-l2-numpy-h0125-bridge.txt)
+- [`logs/2026-04-05-lattice-3d-l2-numpy-h0125-only.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-05-lattice-3d-l2-numpy-h0125-only.txt)
 
 ## Question
 
@@ -26,21 +28,24 @@ This wrapper stays deliberately narrow:
 
 ## Frozen result
 
-The frozen log contains completed rows only through `h = 0.25`:
+The original bridge wrapper still contains completed rows only through `h = 0.25`,
+but the focused single-row decision harness now completes the decisive
+`h = 0.125` row on the same fixed family:
 
 | `h` | Born | gravity sign | `F~M` | note |
 | --- | ---: | --- | ---: | --- |
 | `1.0` | `6.65e-16` | `AWAY` | n/a | too few `TOWARD` points |
 | `0.5` | `1.66e-15` | `TOWARD` | `0.50` | completed |
 | `0.25` | `3.48e-15` | `TOWARD` | `0.50` | completed |
-| `0.125` | n/a | n/a | n/a | no completed row in the frozen log |
+| `0.125` | `6.59e-15` | `TOWARD` | `0.50` | completed via focused single-row harness |
 
-The current frozen log therefore supports:
+The current fixed-family artifact chain therefore supports:
 
-- Born stays machine-clean on the completed rows
-- the sign flips from `AWAY` at `h = 1.0` to `TOWARD` at `h = 0.5` and
-  `h = 0.25`
-- the completed same-family `F~M` readout is still `0.50`, not a clean
+- Born stays machine-clean on all completed rows
+- the sign flips from `AWAY` at `h = 1.0` to `TOWARD` at `h = 0.5`,
+  `h = 0.25`, and `h = 0.125`
+- `k = 0` stays zero on the focused `h = 0.125` decision harness
+- the completed same-family `F~M` readout remains `0.50`, not a clean
   Newtonian `1.00`
 
 ## Safe read
@@ -49,10 +54,10 @@ The strongest safe statement on current `main` is:
 
 - the numpy wrapper is a useful continuation attempt for the 3D dense
   `1/L^2` lane
-- it gives a clean completed bridge through `h = 0.25` on the fixed smaller
+- it now gives a clean completed `h = 0.125` row on the fixed smaller
   physical family
-- it does **not** yet freeze a completed `h = 0.125` continuation on this
-  branch
+- but the weak-field `F~M` readout on this family remains `0.50`, so this is
+  still not a Newtonian bridge closure
 
 ## Honest limitation
 
@@ -60,7 +65,7 @@ This note is intentionally conservative.
 
 It does **not** promote:
 
-- an `h = 0.125` success claim
+- an `h = 0.125` Newtonian-bridge success claim
 - a continuum-limit theorem
 - a clean Newtonian mass-law closure on this fixed small family
 

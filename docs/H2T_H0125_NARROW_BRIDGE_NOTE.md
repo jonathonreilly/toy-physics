@@ -50,16 +50,17 @@ The narrowest safe reading from that replay is:
 
 ### Bridge family
 
-The larger fixed bridge family is still a useful continuation attempt, but it
-does not rescue the narrow claim:
+The larger fixed bridge family is now fully resolved on its focused
+`h = 0.125` row, and it still does not rescue the narrow claim:
 
 - `h = 1.0`: Born `6.65e-16`, gravity `AWAY`, `F~M` too few `TOWARD` points
 - `h = 0.5`: Born `1.66e-15`, gravity `TOWARD`, `F~M = 0.50`
 - `h = 0.25`: Born `3.48e-15`, gravity `TOWARD`, `F~M = 0.50`
+- `h = 0.125`: Born `6.59e-15`, `k = 0` clean, gravity `TOWARD`,
+  `F~M = 0.50`
 
-That is not a retained weak-field bridge to `F~M \approx 1`, and the known
-boundary leakage / `P_det` underflow sensitivity from the wider lane still
-matters here.
+That is still not a retained weak-field bridge to `F~M \approx 1`, even
+though the focused `h = 0.125` row now completes cleanly on this family.
 
 ## Safe Read
 
@@ -67,10 +68,12 @@ The strongest honest statement on current `main` is:
 
 - the dense 3D `1/L^2 + h^2` family is numerically well-defined at `h = 0.125`
 - Born remains clean
+- the fixed bridge family reaches `h = 0.125` with `TOWARD` sign and clean
+  `k = 0`
 - but the narrow weak-field bridge claim does **not** survive on the reduced
   family
-- the bridge family also falls short of the narrow `F~M \approx 1` bar and
-  remains sensitive to boundary leakage / `P_det` underflow
+- the bridge family also falls short of the narrow `F~M \approx 1` bar at
+  `h = 0.125`
 
 ## Honest Limitation
 

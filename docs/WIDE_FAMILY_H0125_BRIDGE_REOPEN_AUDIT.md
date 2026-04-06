@@ -1,7 +1,8 @@
 # Wide-Family `h = 0.125` Bridge Reopen Audit
 
 **Date:** 2026-04-05  
-**Status:** reopened candidate, not retained on `main` yet
+**Status:** reopened candidate only for a truly wider family; the current fixed
+bridge family now resolves as bounded negative for weak-field closure
 
 This note is a narrow audit of the Claude-side claim that the wider fixed
 family behind the 3D dense `1/L^2 + h^2` lane can still complete the `h =
@@ -39,50 +40,57 @@ The local replay confirmed:
 - the wide-family setup is therefore not identical to the reduced-family
   dead-end audit
 
-What it did **not** freeze in this session:
+What the focused decision harness added afterward:
 
-- a completed local `h = 0.125` row
-- a new retained `main` note chain for the wide-family bridge
+- a completed local `h = 0.125` row on the same fixed bridge family
+- Born `6.59e-15`
+- `k = 0` clean
+- gravity `+0.029856` (`TOWARD`)
+- `F~M alpha = 0.501`
 
 ## Why this is still not retained
-
-The decisive `h = 0.125` continuation row was not captured cleanly enough in
-this session to promote the result, even after the interpreter mismatch was
-removed and the replay reached the `h = 0.25` row cleanly.
 
 The focused single-row replay makes the scale issue explicit:
 
 - `h = 0.125`
 - `117649` nodes
 - `49` layers
-- `155692848` edges
+- `276710448` dense transition entries in the focused replay
 
-On this machine the row remained computationally heavy for several minutes and
-did not complete inside the review window, so there is still no clean retained
-`h = 0.125` row to freeze on `main`.
+On this machine the original edge-list path remained computationally heavy,
+but the focused dense-matrix replay now completes. That completion sharpens
+the result rather than promoting it:
+
+- the fixed bridge family no longer looks unresolved at `h = 0.125`
+- it now looks like a completed same-family row that still fails the
+  weak-field `F~M \approx 1` bridge criterion
 
 That means the only safe present-tense reading is:
 
-- the wide-family bridge is a legitimate reopened candidate
 - the reduced-family `h = 0.125` negative still stands separately
-- the wider family has not yet been retained as a new positive on `main`
+- the current fixed bridge family now also completes without closing the
+  weak-field mass-law gap
+- the only remaining reopen candidate is a genuinely wider `h = 0.125`
+  family, not the current fixed bridge family
 
 ## Safe read
 
 The strongest honest statement right now is:
 
-- the Claude-side wide-family `h = 0.125` bridge is worth reopening
-- it is not yet a retained `main` result
-- the current artifact chain is insufficient to upgrade the official claim
-  surface beyond "promising but unresolved"
+- the Claude-side `h = 0.125` story was worth reopening
+- the current fixed bridge family now resolves as a bounded negative for
+  weak-field closure
+- a wider-family `h = 0.125` replay remains the only live reopen version
 
 ## Reopen condition
 
 This lane should only be promoted if a fresh retained replay captures:
 
-- the `h = 0.125` row on the wider family
+- the `h = 0.125` row on a genuinely wider family
 - clean Born on the completed rows
 - the same-family weak-field observables without a silent geometry change
 - a reproducible log file or note chain on `main`
 
-Until then, this remains a narrow reopen candidate, not a retained bridge.
+Until then, the fixed bridge family should be treated as resolved and the
+reopen candidate should be interpreted narrowly as the wider-family version
+only.
