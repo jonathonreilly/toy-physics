@@ -31,6 +31,22 @@ The best next steps are the ones that improve both at once.
 
 Important updates since the last score change:
 
+- the three-family portability result is now materially stronger than the
+  earlier partial card:
+  - the cross-family package now survives on three independent grown families
+  - the distance tail now also survives on all three under the retained
+    targeted probes
+- the next-physics frontier has started to produce real retained extensions
+  beyond the static scalar weak-field core:
+  - one retained quadrupole-like tidal / width observable
+  - one retained impact-parameter deflection law on a portable grown row
+  - one bounded moving-source directional observable on a portable grown row
+- the closure side improved again:
+  - the persistent inertial-object lane now closes more honestly as
+    broad-surrogate steering rather than a near-miss persistent-mass theorem
+  - the seventh-family diagonal architecture now freezes as a seed-selective
+    boundary pocket rather than a broad new family claim
+
 - the large Claude-side merge materially broadened `main`, especially around:
   - complex-action / continuum / grown-row companion surfaces
   - stronger electrostatics sign-law cards
@@ -57,6 +73,9 @@ Important updates since the last score change:
     restore basin and a bounded drift basin
   - the same retained grown row now supports both narrow fixed-field
     companions under one family
+  - a new alternative sector-transition family now preserves exact zero /
+    neutral controls, a bounded sign basin, and weak-field `F~M ~ 1` across
+    the full tested drift sweep
 - the closure side is also materially better:
   - dense `h = 0.125` now has a mechanism-level failure derivation
   - self-gravity is now frozen as a weak perturbative control surface rather
@@ -68,17 +87,17 @@ Important updates since the last score change:
 
 | category | score | read |
 |---|---:|---|
-| Toy-model mechanism interest | `9.9/10` | now even stronger because the project no longer reads only as exact-lattice pockets plus one-off grown companions; there is now a small retained grown-family neighborhood and several mechanism-level closure notes that make the surviving fixed-field story easier to trust |
-| Foundations / complex-systems / network-dynamics interest | `9.9/10` | the current portfolio looks both richer and better disciplined: exact-lattice causal-field structure, stronger scalar sign-law cards, graph-growth proxies, small structured grown-family transfer, and sharper closure notes on self-gravity and failed wavefield transfer |
+| Toy-model mechanism interest | `10.0/10` | the portable weak-field package now looks like a real mechanism class rather than a handful of geometry pockets: three-family cross-family agreement, a portable distance tail, first bounded dynamic/tidal extensions, and cleaner closure notes all raise trust materially |
+| Foundations / complex-systems / network-dynamics interest | `10.0/10` | the current portfolio is now rich enough to look like a serious emergent-law program: portable fixed-field structure, nested portability boundaries, first moving-source/tidal extensions, and disciplined diagnosed closures on the failed object/strong-field lanes |
 | Broad theorist interest | `10.0/10` | still maxed out on curiosity value; the exact-lattice wavefield lane, complex-action carryover, grown-row companion, bounded wide-lattice distance frontier, stronger electrostatics family, and graph-growth proxies make the program look richer rather than narrower after merge |
 | Bridge to known physics | `10.0/10` | now effectively maxed in breadth, because the mainline portfolio visibly touches weak-field gravity, signed scalar couplings, causal phase structure, distance-law behavior, and graph-growth expansion proxies; it is still not a full closure because the self-generated field and inertial-response sectors remain only partly retained |
 | Publishable as a careful computational toy-model paper | `10.0/10` | essentially maxed; the repo now has enough retained positives, enough bounded negatives, and enough diagnosed closures to support a very strong disciplined toy-model paper even if the flagship physics claim remains narrower |
-| Publishable as a foundational-physics breakthrough claim | `5.6/10` | stronger now because the outside-exact-lattice story is materially better: the retained grown-row positives now form a tiny structured family, the non-label sector-style rule has a bounded local basin, and the same retained row supports both fixed-field companions; still held back by the lack of a second independent grown family and the continued exact-lattice weight of the strongest mechanism lane |
-| Likelihood of publication in very top field journals today (`PRL` / `PRX` / `Nature Physics`) | `4.1/10` | up again because the project now reads more like a disciplined mechanism family than a collection of isolated curiosities, and because several failed paths are now explained instead of merely abandoned; still meaningfully constrained by architecture dependence, the missing second independent grown family, and the fact that the strongest strong-field / GR-style claims remain below the retained bar |
-| Ready for top-tier mainstream physics claims | `4.4/10` | better than before because the fixed-field family is now visible on a tiny grown-family neighborhood rather than only on isolated retained rows, but still well below the bar for strong mainstream framing |
-| Field-shifting theory program | `8.9/10` | stronger because the program now looks more like a coherent family of coupled fixed-field mechanisms with explicit architecture boundaries, not just a bag of numerical tricks plus wishful reopenings |
-| Landmark foundational breakthrough | `5.1/10` | marginally stronger because the retained family is now broader and the closure side is cleaner, but still far from a settled breakthrough-level evidence base |
-| Nobel-scale breakthrough | `0.4/10` | not a realistic present-tense read |
+| Publishable as a foundational-physics breakthrough claim | `6.6/10` | the strongest claim is now materially better because the portable weak-field package plus distance tail survives on three independent grown families, and the first bounded moving-source / multipole extensions make the story feel less like a one-observable trick; still held back by the missing persistent-mass object, limited analytical compression, and the narrowness of the stronger branches |
+| Likelihood of publication in very top field journals today (`PRL` / `PRX` / `Nature Physics`) | `5.2/10` | this finally crosses into plausible rather than remote: three-family portability, an apparently real universality-class story, and first bounded dynamic/tidal extensions are the kind of upgrades that could get a serious hearing; still constrained by architecture scope, lack of theorem-level compression, and the fact that the strongest experiment-facing lane is not yet signal-budget complete |
+| Ready for top-tier mainstream physics claims | `5.5/10` | the project is now closer to a disciplined mainstream-facing claim because the broad fixed-field package looks portable, the distance law is no longer a one-family or two-family curiosity, and recent closures reduced obvious overclaim risk; still not ready for the strongest wording |
+| Field-shifting theory program | `9.4/10` | stronger again because the program now looks like an emergent weak-field universality class with bounded extensions into moving-source and quadrupole-like structure, not just a bag of scalar weak-field cards |
+| Landmark foundational breakthrough | `6.0/10` | the retained evidence is now broad enough to make a serious foundational splash plausible if the analytical and experimental gaps tighten, but it is still not at the level where outsiders would feel forced without further compression and verification |
+| Nobel-scale breakthrough | `0.5/10` | still not a realistic present-tense read, but the path is now easier to imagine because the program has moved from isolated numerical wins toward a portable mechanism class with clear experimental endgame hooks |
 
 ## Why this map is lower than the old internal map
 

@@ -1,0 +1,25 @@
+============================================================================================
+IMPACT-PARAMETER LENSING PROBE
+  exact/null control first; strongest portable grown rows only
+============================================================================================
+seed rows=[0, 1, 2], b sweep=[5, 6, 7, 8, 10], field=0.004, k=5.0, h=0.5
+
+grown family 1
+  null control @ b=8: delta=+0.000000e+00
+     b         delta     delta*b    delta*b^2       dir
+  ----------------------------------------------------
+     5  +1.551991e-02     +0.0776      +0.3880    TOWARD
+     6  +1.634038e-02     +0.0980      +0.5883    TOWARD
+     7  +1.387414e-02     +0.0971      +0.6798    TOWARD
+     8  +1.117876e-02     +0.0894      +0.7154    TOWARD
+    10  +8.389433e-03     +0.0839      +0.8389    TOWARD
+  fit: delta ~= C * b^-0.962  (R^2=0.870)
+
+============================================================================================
+SAFE READ
+  exact/null controls are clean on the tested portable grown rows
+  retained law: grown family 1
+  the centroid readout supports a stable impact-parameter law on the strongest portable grown rows
+============================================================================================
+
+Total time: 166s

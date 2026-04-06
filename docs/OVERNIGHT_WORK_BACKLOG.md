@@ -187,6 +187,91 @@ Working rule for these pushes:
 - do not inflate any of these into full GR / full EM / full relativistic
   claims unless a much stronger family of observables appears
 
+## High-Level Goal Scoreboard
+
+The backlog should now be judged against a small set of program-level goals,
+not just local lane wins.
+
+### Goal 1. Portable weak-field universality
+
+- Current state:
+  - **major retained positive**
+  - the cross-family package now survives on three independent grown families
+  - the distance tail now also survives on those three families under the
+    retained targeted probes
+- What would count as the next real upgrade:
+  - one more independent family outside the current template comfort zone
+  - or one compact analytical classifier explaining why the package survives
+
+### Goal 2. Physics beyond the static scalar core
+
+- Current state:
+  - **first retained extension positives**
+  - a bounded moving-source directional observable now survives exact zero and
+    matched static controls on a portable grown row
+  - a retained quadrupole-like tidal/width observable now exists on the
+    ordered family
+  - impact-parameter deflection now has a retained narrow law on a portable
+    grown row
+- What would count as the next real upgrade:
+  - portability of one of those extensions across more than one family
+  - or one vector / magnetic-like observable that clearly does not reduce to
+    the scalar sign-law card
+
+### Goal 3. Persistent inertial objects
+
+- Current state:
+  - **still open**
+  - the lane is now better diagnosed, not more closed
+  - the retained ordered family still supports broad-surrogate steering rather
+    than a persistent-mass object
+- What would count as the next real upgrade:
+  - one object class whose persistence and inertial response are both measured
+    on the same family
+  - or a stronger architecture-level no-go that closes the search for the
+    current family
+
+### Goal 4. Causal-field / moving-source sector
+
+- Current state:
+  - **bounded positive**
+  - the moving-source proxy survives exact zero and static-field controls on a
+    portable grown row
+  - the clean survivor is a signed directional bias, not a large phase claim
+- What would count as the next real upgrade:
+  - a second-family replay
+  - or a cleaner delay / phase observable that stays real after controls
+
+### Goal 5. Experimental readiness
+
+- Current state:
+  - **promising but not ready**
+  - the diamond / NV phase-sensitive lane is still the cleanest external
+    discriminator
+  - but the source geometry, calibrated signal budget, and lab-specific
+    noise-floor story are still not closed
+- What would count as the next real upgrade:
+  - one full signal-budget note with explicit geometry and scaling
+  - or one non-diamond analog platform with a comparably sharp null
+
+### Goal 6. Analytical compression
+
+- Current state:
+  - **still the biggest theory bottleneck**
+  - the numerics now say the portable weak-field package is broad, the
+    distance law is stricter, and complex action is narrower still
+  - but the repo still lacks a compact law-level explanation of that nested
+    structure
+- What would count as the next real upgrade:
+  - one derivational or classifier note that explains the package hierarchy in
+    review-safe terms
+
+Operational rule:
+
+- every new batch should say which of these six goals it is trying to move
+- if a task does not move at least one goal or close a tempting false route,
+  it should be deprioritized
+
 ## Failure-Audit Rule
 
 When a moonshot lane closes as a bounded negative, do **not** just archive it
