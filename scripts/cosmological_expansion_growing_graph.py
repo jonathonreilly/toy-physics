@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
-"""Cosmological expansion via actual graph growth.
+"""Cosmological expansion via growing graph — fixed propagation.
 
-Instead of scaling distances (which doesn't clearly affect beam dynamics),
-GROW the graph: each new layer has more nodes than the previous.
+Each layer has width W(n) = W_0 + alpha * n * h.
+New transverse nodes appear at edges. The beam propagates from
+one variable-width layer to the next.
 
-Method: at layer n, the transverse width is W(n) = W_0 + alpha * n * h.
-New nodes are added at the edges. The beam can spread into the new space.
-
-If the beam width grows proportionally to W(n): de Sitter-like expansion.
-If the beam width saturates: the beam doesn't "feel" the new space.
+The key: node indexing uses (iy, iz) coordinates, NOT absolute indices.
+Each layer maps iy,iz → amplitude. The propagation kernel connects
+(iy,iz) in layer n to (iy+dy, iz+dz) in layer n+1, but only if
+both source and destination exist in their respective layers.
 """
 
 from __future__ import annotations
@@ -20,35 +20,15 @@ BETA = 0.8
 K = 5.0
 MAX_D_PHYS = 3.0
 H = 0.5
-PHYS_L = 30
+PHYS_L = 40
 BASE_W = 4
 
 
-def _run_growing(alpha_w):
-    """Build and propagate on a graph where W grows with layer."""
+def _run(alpha_w):
     nl = int(PHYS_L / H) + 1
     max_d = max(1, round(MAX_D_PHYS / H))
 
-    # Build all layers with their individual widths
-    layers_hw = []
-    layers_nw = []
-    layers_npl = []
-    layers_start = [0]  # cumulative node index
-
-    total_nodes = 0
-    for layer in range(nl):
-        phys_w = BASE_W + alpha_w * layer * H
-        hw = max(int(BASE_W / H), int(phys_w / H))
-        nw = 2 * hw + 1
-        npl = nw * nw
-        layers_hw.append(hw)
-        layers_nw.append(nw)
-        layers_npl.append(npl)
-        if layer < nl - 1:
-            layers_start.append(layers_start[-1] + npl)
-        total_nodes += npl
-
-    # Precompute offsets (max connectivity)
+    # Precompute offsets
     offsets = []
     for dy in range(-max_d, max_d + 1):
         for dz in range(-max_d, max_d + 1):
@@ -57,101 +37,88 @@ def _run_growing(alpha_w):
             theta = math.atan2(math.sqrt(dyp * dyp + dzp * dzp), H)
             w = math.exp(-BETA * theta * theta)
             offsets.append((dy, dz, L, w * H * H / (L * L)))
-    T = sum(wr for _, _, _, wr in offsets)
+    T_base = sum(wr for _, _, _, wr in offsets)
 
-    # Propagate layer by layer
-    # Each layer has different nw, so we can't use a fixed array
-    prev_amps = np.zeros(layers_npl[0], dtype=np.complex128)
-    hw0 = layers_hw[0]
-    prev_amps[hw0 * layers_nw[0] + hw0] = 1.0  # source at center
+    # Per-layer: hw(layer), stored as dict[iy,iz] → amplitude
+    def hw_at(layer):
+        phys_w = BASE_W + alpha_w * layer * H
+        return int(phys_w / H)
 
-    beam_widths = []
+    # Propagate using dict-based amplitudes
+    hw0 = hw_at(0)
+    current = {}
+    current[(0, 0)] = 1.0 + 0j  # source at center
+
+    beam_data = []
 
     for layer in range(nl):
-        hw_curr = layers_hw[layer]
-        nw_curr = layers_nw[layer]
-        npl_curr = layers_npl[layer]
+        hw_curr = hw_at(layer)
 
-        if layer == 0:
-            curr_amps = prev_amps
-        else:
-            curr_amps = np.zeros(npl_curr, dtype=np.complex128)
-
-        # Measure beam width at this layer
-        p = np.abs(curr_amps if layer > 0 else prev_amps) ** 2
-        t = p.sum()
-        if t > 0:
-            hw_l = layers_hw[layer if layer > 0 else 0]
-            nw_l = layers_nw[layer if layer > 0 else 0]
-            zc = np.array([iz * H for _ in range(-hw_l, hw_l + 1) for iz in range(-hw_l, hw_l + 1)])
-            if len(zc) == len(p):
-                mean_z = np.dot(p, zc) / t
-                var_z = np.dot(p, (zc - mean_z) ** 2) / t
-                beam_widths.append((layer, math.sqrt(var_z), layers_hw[layer] * H))
+        # Measure beam width
+        total_p = sum(abs(a) ** 2 for a in current.values())
+        if total_p > 0:
+            mean_z = sum(abs(a) ** 2 * iz * H for (iy, iz), a in current.items()) / total_p
+            var_z = sum(abs(a) ** 2 * (iz * H - mean_z) ** 2 for (iy, iz), a in current.items()) / total_p
+            sigma = math.sqrt(var_z)
+            beam_data.append((layer, sigma, hw_curr * H, total_p))
 
         if layer >= nl - 1:
             break
 
         # Propagate to next layer
-        hw_next = layers_hw[layer + 1]
-        nw_next = layers_nw[layer + 1]
-        npl_next = layers_npl[layer + 1]
-        hw_curr = layers_hw[layer]
-        nw_curr = layers_nw[layer]
+        hw_next = hw_at(layer + 1)
+        next_amps = {}
 
-        sa = curr_amps if layer > 0 else prev_amps
-        next_amps = np.zeros(npl_next, dtype=np.complex128)
+        for (iy_s, iz_s), ai in current.items():
+            if abs(ai) < 1e-30:
+                continue
+            for dy, dz, L, w_raw in offsets:
+                iy_d = iy_s + dy
+                iz_d = iz_s + dz
+                # Check destination is within next layer
+                if abs(iy_d) > hw_next or abs(iz_d) > hw_next:
+                    continue
+                # Compute T for this source node (how many valid destinations)
+                # For simplicity, use T_base (interior node approximation)
+                phase = K * L
+                kernel = ai * complex(math.cos(phase), math.sin(phase)) * w_raw / T_base
+                key = (iy_d, iz_d)
+                if key in next_amps:
+                    next_amps[key] += kernel
+                else:
+                    next_amps[key] = kernel
 
-        for dy, dz, L, w_raw in offsets:
-            # Source nodes in current layer
-            for yi_s in range(nw_curr):
-                iy_s = yi_s - hw_curr
-                for zi_s in range(nw_curr):
-                    iz_s = zi_s - hw_curr
-                    si = yi_s * nw_curr + zi_s
-                    ai = sa[si]
-                    if abs(ai) < 1e-300:
-                        continue
-                    # Destination in next layer
-                    iy_d = iy_s + dy - hw_curr + hw_next
-                    iz_d = zi_s + dz - hw_curr + hw_next
-                    if 0 <= iy_d < nw_next and 0 <= iz_d < nw_next:
-                        di = iy_d * nw_next + iz_d
-                        phase = K * L
-                        next_amps[di] += ai * complex(math.cos(phase), math.sin(phase)) * w_raw / T
+        current = next_amps
 
-        prev_amps = sa
-        if layer > 0:
-            curr_amps = next_amps
-        else:
-            prev_amps = next_amps
-        # Actually we need to carry forward properly
-        prev_amps = next_amps
-
-    return beam_widths, layers_hw
+    return beam_data
 
 
 def main():
     print("=" * 70)
-    print("COSMOLOGICAL EXPANSION VIA GROWING GRAPH")
-    print(f"W(layer) = {BASE_W} + alpha * layer * {H}")
+    print("COSMOLOGICAL EXPANSION VIA GROWING GRAPH (FIXED)")
+    print(f"W(n) = {BASE_W} + alpha * n * {H}")
     print(f"h={H}, L={PHYS_L}")
     print("=" * 70)
     print()
 
-    for alpha_w in [0.0, 0.1, 0.2, 0.5]:
-        label = "flat" if alpha_w == 0 else f"expanding (alpha={alpha_w})"
-        bw, hw_list = _run_growing(alpha_w)
+    for alpha_w in [0.0, 0.1, 0.3, 0.5]:
+        label = "flat" if alpha_w == 0 else f"expanding"
+        bd = _run(alpha_w)
         print(f"alpha_w={alpha_w:.1f} ({label})")
-        print(f"  {'layer':>6s} {'W_phys':>8s} {'sigma':>8s} {'sigma/W':>8s}")
-        for layer, sigma, w_phys in bw:
-            if layer % 10 == 0 or layer == len(bw) - 1:
-                ratio = sigma / w_phys if w_phys > 0 else 0
-                print(f"  {layer:6d} {w_phys:8.1f} {sigma:8.3f} {ratio:8.4f}")
-        # sigma at detector
-        if bw:
-            final = bw[-1]
-            print(f"  detector: sigma={final[1]:.3f}, W={final[2]:.1f}")
+        print(f"  {'layer':>6s} {'x':>6s} {'W':>6s} {'sigma':>8s} {'P_total':>10s}")
+        for layer, sigma, w, p in bd:
+            if layer % 10 == 0 or layer == len(bd) - 1:
+                print(f"  {layer:6d} {layer * H:6.1f} {w:6.1f} {sigma:8.3f} {p:10.2e}")
+
+        # sigma at start vs end
+        if len(bd) >= 2:
+            s0 = bd[0][1]
+            sf = bd[-1][1]
+            w0 = bd[0][2]
+            wf = bd[-1][2]
+            print(f"  sigma: {s0:.3f} → {sf:.3f}, W: {w0:.1f} → {wf:.1f}")
+            if wf > w0:
+                print(f"  sigma/W ratio: {s0 / w0:.4f} → {sf / wf:.4f}")
         print()
 
 
