@@ -15,6 +15,7 @@ fresh, narrow reopen path.
 ## Existing artifacts
 
 - [`scripts/lattice_3d_l2_numpy_h0125_bridge.py`](/Users/jonreilly/Projects/Physics/scripts/lattice_3d_l2_numpy_h0125_bridge.py)
+- [`scripts/lattice_3d_l2_numpy_h0125_only.py`](/Users/jonreilly/Projects/Physics/scripts/lattice_3d_l2_numpy_h0125_only.py)
 - [`scripts/lattice_3d_l2_wide.py`](/Users/jonreilly/Projects/Physics/scripts/lattice_3d_l2_wide.py)
 - [`docs/LATTICE_3D_L2_NUMPY_H0125_BRIDGE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_3D_L2_NUMPY_H0125_BRIDGE_NOTE.md)
 - [`docs/H2T_H0125_NARROW_BRIDGE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/H2T_H0125_NARROW_BRIDGE_NOTE.md)
