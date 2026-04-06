@@ -20,6 +20,11 @@ Retained slice tested:
 - there was no directional crossover:
   - `t01 = 0`
   - `t05 = 0`
+- the compact proxy stayed flat:
+  - `born = 0.000e+00`
+  - `d01 = -4.056664e-06`
+  - `d05 = -4.800909e-06`
+  - `fm05 = 1.000`
 
 ### Interpretation
 The sixth-family sheared basin does **not** retain a narrow complex-action companion on this slice.

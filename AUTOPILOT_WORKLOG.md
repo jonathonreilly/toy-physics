@@ -1,3 +1,72 @@
+## 2026-04-06 — Closed the sixth-family complex-action companion lane as a diagnosed boundary
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed in
+  protocol order at loop start
+- no detached `physics-science` child was active in the latest handoff, so
+  this loop stayed on a bounded local lane closeout
+- canonical git in `/Users/jonreilly/Projects/Physics` reconciled cleanly
+  before science:
+  - `git status --short --branch` reported `## main...origin/main` plus
+    existing unrelated draft dirt
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 8` showed synced head `e6ae833`
+- the required managed push check before science reported a clean sync:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - result: `status=nothing_to_push`, `ahead=0`, `behind=0`
+- the canonical orchestrator state at
+  `/Users/jonreilly/.codex/state/physics_research_orchestrator_state.json`
+  was readable but not writable under the current sandbox, so this loop used
+  it for reconciliation/selection only and recorded the intended cycle/lane
+  mutations in runtime state instead of mutating the canonical JSON
+- this loop reconciled the same five live frontier lanes, spawned exactly five
+  disjoint sidecar workers, and harvested only one finished result per the
+  bounded-step rule; the remaining lane outputs stay draft-only for the next
+  loop
+
+### What changed
+- froze the sixth-family complex lane as a diagnosed boundary instead of
+  leaving it as an unresolved draft
+- kept the bounded artifact chain:
+  - `/Users/jonreilly/Projects/Physics/docs/SIXTH_FAMILY_COMPLEX_BOUNDARY_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-06-sixth-family-complex-targeted.txt`
+- the retained anchor row read is:
+  - `drift = 0.20`, `seed = 2`
+  - `born = 0.000e+00`
+  - `g0 = -3.870601e-06`
+  - `d01 = -4.056664e-06`, `t01 = 0`
+  - `d05 = -4.800909e-06`, `t05 = 0`
+  - `fm0 = 1.000`, `fm05 = 1.000`
+- exact `gamma = 0` and weak-field linearity survive, but no
+  `TOWARD -> AWAY` crossover survives on the tested retained slice
+
+### Strongest confirmed conclusion
+- the retained sixth-family sheared basin does **not** carry a narrow
+  complex-action companion on the tested anchor row
+- the miss is structural on this slice rather than a control leak:
+  exact `gamma = 0`, Born, and weak-field linearity stay clean while the
+  directional crossover never appears
+- this lane should stay closed unless the architecture materially changes
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/docs/SIXTH_FAMILY_COMPLEX_BOUNDARY_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-06-sixth-family-complex-targeted.txt`
+
+### Exact next step
+- rerun protocol preflight and the cooperative lock, then reconcile the four
+  still-live lane drafts against the latest handoff/memory/orchestrator notes
+  before harvesting at most one more result
+- prefer the strongest already-generated bounded result among:
+  seventh-family diagonal, sixth-family distance law, distance-law-preserving
+  oblique, and portable-card extension
+
+### First concrete action
+- inspect the freshest sidecar drafts for `SEVENTH_FAMILY_DIAGONAL_*`,
+  `SIXTH_FAMILY_DISTANCE_LAW_*`, `DISTANCE_LAW_PRESERVING_*`, and
+  `PORTABLE_CARD_EXTENSION_*`, but do not mark any additional lane complete
+  until the next bounded loop
+
 ## 2026-04-06 — Surfaced the second no-restore grown-family signed-source basin
 
 ### Current state
