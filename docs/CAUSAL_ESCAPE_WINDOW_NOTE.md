@@ -64,6 +64,48 @@ The causal-escape window is a retained, portable, qualitative regime
 where the beam's fate (trapped vs escapes) depends on whether the
 gravitational field propagates causally or instantaneously.
 
+## Boundary law
+
+At the inst trap threshold (eta_crit = 14.7, inst escape = 0.50):
+
+| c | dyn escape | Status |
+| ---: | ---: | --- |
+| 2.0 | 0.75 | marginal |
+| 1.0 | 0.82 | marginal |
+| 0.5 | 0.92 | ESCAPES |
+| 0.25 | 0.98 | ESCAPES |
+| 0.1 | 1.00 | ESCAPES |
+
+Critical cone speed: c_crit ~ 0.7 for escape at the inst trap point.
+
+eta_max(c) where dyn escape drops to 0.85:
+
+| c | eta_max |
+| ---: | ---: |
+| 2.0 | 8 |
+| 1.0 | 12 |
+| 0.5 | 33 |
+| 0.25 | 250 |
+| 0.1 | 500+ |
+
+Approximately eta_max ~ 1/c^2. Slower cone → vastly more protection.
+
+## S-dependence (eta=20, c=0.25)
+
+| s | inst escape | dyn escape | ratio |
+| ---: | ---: | ---: | ---: |
+| 0.001 | 0.79 | 0.99 | 1.3 |
+| 0.004 | 0.39 | 0.97 | 2.5 |
+| 0.016 | 0.03 | 0.92 | 33 |
+
+Protection grows strongly with field strength.
+
+## Static-proxy discriminator
+
+Forward-only static field gives escape = 0.56 at eta=15 — OUTSIDE the
+escape window (< 0.85). The causal cone shape is the discriminator,
+not just the temporal truncation.
+
 This does NOT claim:
 - Equivalence to black hole escape physics
 - A specific physical trap geometry
