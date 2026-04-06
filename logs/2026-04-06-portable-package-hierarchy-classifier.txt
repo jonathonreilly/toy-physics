@@ -1,0 +1,32 @@
+# Portable Package Hierarchy Classifier
+
+**Date:** 2026-04-06
+**Status:** review-safe compact classifier
+
+## Question
+
+Can the retained nested family structure be compressed into one safe classifier: broad portable weak-field package, stricter distance tail, narrower complex-action branch?
+
+## Retained Cards
+
+- broad portable package: [`docs/SIGN_PORTABILITY_INVARIANT_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/SIGN_PORTABILITY_INVARIANT_NOTE.md), [`docs/PORTABLE_PACKAGE_EXTENSION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/PORTABLE_PACKAGE_EXTENSION_NOTE.md), [`docs/PORTABLE_CARD_EXTENSION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/PORTABLE_CARD_EXTENSION_NOTE.md)
+- distance-tail boundary: [`docs/DISTANCE_LAW_PORTABILITY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/DISTANCE_LAW_PORTABILITY_NOTE.md), [`docs/DISTANCE_LAW_BREAKPOINT_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/DISTANCE_LAW_BREAKPOINT_NOTE.md)
+- complex-action branch: [`docs/COMPLEX_ACTION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/COMPLEX_ACTION_NOTE.md), [`docs/COMPLEX_SELECTIVITY_COMPARE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/COMPLEX_SELECTIVITY_COMPARE_NOTE.md)
+
+## Classifier
+
+layer                             | retained family cards                                                                                                                                                  | closure or boundary                                                                                                                                          | safe read                                                                                                                          
+----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------
+Broad portable weak-field package | grown transfer basin, alt connectivity family, second grown-family sign, third grown-family sign, fourth family quadrant, fifth family radial holdout                  | exact zero-source cancellation, exact neutral same-point cancellation, plus/minus antisymmetry, weak-field response near unit slope                          | portable across several structured families; family labels change basin width and selectivity, not the signed-control fixed point  
+Stricter distance tail            | first two grown families as the preservation anchor; alt connectivity, third family, and fourth family as breakpoints; fifth family radial as a direction-only holdout | open directed transport that keeps direction and tail shape coupled; shell locking, reflection closure, deep branch routing, and radial confinement break it | a narrower subset of the broad package; the near-Newtonian tail is not geometry-independent across the retained structured families
+Narrower complex-action branch    | original grown basin, second-family complex anchor row, alt connectivity failure as a boundary check                                                                   | exact gamma=0 anchor plus crossover structure; boundary-sensitive and anchor-local                                                                           | more selective than the distance tail; it survives only on the narrow gamma surface and does not follow from sign portability alone
+
+## Safe Read
+
+- the broad layer is the signed-control fixed point: exact zero / neutral cancellation, plus/minus antisymmetry, and weak-field response near unit slope
+- the distance tail is stricter because it needs open directed transport; the first two grown families preserve direction and tail together, while newer retained families break or flatten one of those pieces
+- the complex-action branch is narrower still because it needs the exact gamma=0 anchor and crossover structure, and it is boundary-sensitive on adjacent families
+
+## Final Verdict
+
+**review-safe classifier: broad portable weak-field package, stricter distance tail, narrower complex-action branch**
