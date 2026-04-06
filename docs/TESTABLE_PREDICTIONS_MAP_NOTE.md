@@ -1,158 +1,211 @@
 # Testable Predictions Map
 
 **Date:** 2026-04-05  
-**Status:** ranked map of the strongest retained testables across the current
-science portfolio
+**Status:** ranked catalog of the current retained testables on `main`
 
-This note is not a claim note.
+## Purpose
 
-It is the most useful way to answer the question:
+This note is a compact, adversarial map of the best current testable
+predictions across the retained science on `main`.
 
-- what can we actually test now?
-- what is still only a theory-side discriminator?
-- what could plausibly go to a lab, an analog simulator, or a tabletop
-  platform without overselling the model?
+The ranking is by **external testability and discriminator quality**, not by
+how exciting the lane feels internally.
 
-## Ranking
+Each entry records:
 
-1. Exact-lattice wavefield phase-lag discriminator
-2. Diamond / NV lock-in quadrature test
-3. Wide-lattice `h^2+T` distance-law replay
-4. Grown trapping / frontier transport
-5. Split-shell generated-family bridge
+- observable
+- standard null
+- what is already retained
+- what still needs hardening
+- platform class: tabletop, analog-simulator, or theory-only
 
-## 1. Exact-Lattice Wavefield Phase-Lag Discriminator
+## 1. Diamond / NV lock-in quadrature protocol
 
-- Observable: detector-line phase-ramp slope and span, plus the wave / same-
-  site response ratio
-- Null: zero-source exact recovery and the same-site-memory baseline with no
-  stable phase ramp
-- What is retained: exact zero-source reduction, `TOWARD`, near-linear `F~M`,
-  and a coherent detector-line phase ramp with `R^2 ~ 0.96`
-- What still needs hardening: transfer off the exact lattice
-- Test class: theory-side discriminator first, then analog-simulator-testable
-  if a wave or interferometric platform can emulate the phase ramp
+- Observable: `X`, `Y`, `phi = atan2(Y, X)`, and optionally a spatial phase
+  ramp across the NV image
+- Standard null: after calibration and static-background subtraction, the
+  quasi-static instantaneous baseline gives `Y ≈ 0`, `phi ≈ 0`, and a flat
+  phase profile
+- Already retained:
+  - [`docs/DIAMOND_SENSOR_PREDICTION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/DIAMOND_SENSOR_PREDICTION_NOTE.md)
+  - [`docs/DIAMOND_SENSOR_PROTOCOL_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/DIAMOND_SENSOR_PROTOCOL_NOTE.md)
+  - the retarded / wavefield lane gives the motivation for a phase-sensitive
+    discriminator
+- Still needs hardening:
+  - a calibrated signal budget
+  - an explicit source geometry / drive protocol
+  - a lab-specific noise-floor estimate
+- Platform class: **tabletop-testable**
 
-Why this is strong:
+Why it ranks first:
 
-- it is the cleanest phase-sensitive retained observable in the repo
-- it already separates a wave-like update from a same-site control
-- it is more diagnostic than a scalar amplitude readout
+- it is the cleanest lab-facing discriminator
+- it naturally fits an NV / lock-in measurement stack
+- it is differential, not a raw absolute-amplitude claim
 
-Why it might fail in a broader test:
+## 2. Electrostatics scalar sign-law card
 
-- the phase ramp may remain exact-lattice specific
-- a real analog platform may reproduce only the null, not the slope
+- Observable: sign antisymmetry, exact cancellation/null, dipole directionality,
+  charge-scaling exponent, and screening ratio
+- Standard null: exact opposite-sign superposition at the same node must cancel
+  to printed precision; a separated +/- pair is a dipole, not a null
+- Already retained:
+  - [`docs/ELECTROSTATICS_CARD_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ELECTROSTATICS_CARD_NOTE.md)
+  - sign antisymmetry ratio: `-1.000`
+  - exact null: `PASS`
+  - dipole orientation flip ratio: `-0.999`
+  - charge scaling: `|delta| ~ q^1.000`
+  - screening ratio: `0.018`
+- Still needs hardening:
+  - a concrete lab protocol if this is going to be claimed outside the ordered
+    lattice
+  - a stronger mapping from the scalar sign law to a real electrostatic
+    measurement stack
+- Platform class: **theory-only**
 
-## 2. Diamond / NV Lock-In Quadrature Test
+Why it ranks this high:
 
-- Observable: `X`, `Y`, and `phi = atan2(Y, X)` under a driven source
-- Null: after calibration, the quasi-static baseline gives `Y ~ 0` and flat
-  phase
-- What is retained: the retained retarded / wavefield lane and the new
-  diamond protocol note
-- What still needs hardening: a calibrated amplitude estimate and a real lab
-  sensitivity budget
-- Test class: tabletop / lab-facing
+- it is a clean, review-safe scalar sign law on a retained family
+- it gives five separate observables without inflating into full EM
+- it is a plausible bridge to a lab conversation later
 
-Why this is strong:
+## 3. Exact-lattice wavefield phase-ramp discriminator
 
-- it is the most realistic experiment-facing discriminator in the repo
-- it is differential and lock-in friendly
-- it does not depend on absolute gravity amplitude claims
+- Observable: detector-line phase-ramp slope and span, plus the wave/same-site
+  response ratio
+- Standard null: the same-site-memory control or zero-source baseline should
+  give no coherent phase ramp and no large wave/same separation
+- Already retained:
+  - [`docs/SOURCE_RESOLVED_WAVEFIELD_ESCALATION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/SOURCE_RESOLVED_WAVEFIELD_ESCALATION_NOTE.md)
+  - exact zero-source reduction survives
+  - the detector-line ramp is coherent (`R^2 ~ 0.96`)
+  - weak-field sign is `TOWARD`
+  - `F~M` stays near `1.00`
+- Still needs hardening:
+  - transfer off the exact lattice
+  - a stronger experimental mapping if it is going to be claimed outside the toy model
+- Platform class: **analog-simulator-testable** in spirit, **theory-only** as
+  a literal lattice claim
 
-Why it might fail:
+Why it ranks high:
 
-- the quadrature may vanish after calibration
-- the signal may be absorbed by instrument lag or thermal/mechanical cross-talk
+- it is the strongest exact-lattice wave signature
+- it gives a cleaner phase observable than the older compact pocket
+- it is the nearest theory-side bridge to the diamond protocol
 
-## 3. Wide-Lattice `h^2+T` Distance-Law Replay
+## 4. Grown trapping / frontier transport
 
-- Observable: far-tail exponent of the detector response versus source
-  separation
-- Null: a non-retained or mis-ordered lattice slice that does not preserve the
-  far-tail fit
-- What is retained: independent wide replay on `main` with Born at machine
-  precision, `10/10` TOWARD, and far-tail `b^(-1.05)` with `R^2 = 0.990`
-- What still needs hardening: whether the far tail is truly asymptotic rather
-  than a finite-lattice replay
-- Test class: theory-side and analog-simulator-testable
+- Observable: escape ratio and frontier-radius shift versus trap coupling
+- Standard null: `eta = 0` must reproduce the retained grown baseline exactly
+- Already retained:
+  - [`docs/GATE_B_GROWN_TRAPPING_FRONTIER_V2_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_GROWN_TRAPPING_FRONTIER_V2_NOTE.md)
+  - escape falls monotonically with coupling
+  - frontier-radius shift rises monotonically with coupling
+- Still needs hardening:
+  - a stronger structural observable than frontier radius alone
+  - a more horizon-like interpretation only if a sharper no-return signature appears
+- Platform class: **analog-simulator-testable**
 
-Why this is strong:
+Why it ranks above the broader theory lanes:
 
-- it is the most reproducible distance-law result currently retained
-- it is already a clean, reviewable frontier result
+- it has an exact reduction check
+- it is stronger than escape-only transport
+- it is a live generated-geometry strong-field knob
 
-Why it might fail:
+## 5. Growing graph expansion proxy
 
-- the exponent may steepen on larger windows
-- the far tail may remain slice-dependent
+- Observable: node-count growth, frontier growth, mean radius growth, max
+  radius growth
+- Standard null: the static control should stay flat in count and radius
+- Already retained:
+  - [`docs/GROWING_GRAPH_EXPANSION_CARD_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GROWING_GRAPH_EXPANSION_CARD_NOTE.md)
+  - node count grows from `35` to `1369` over 16 steps
+  - mean radius grows from `2.2837` to `14.1520`
+  - log-slope fit for node count: `1.041` with `R^2 = 0.970`
+  - log-slope fit for mean radius: `0.519` with `R^2 = 0.970`
+- Still needs hardening:
+  - a more de Sitter-like or inflation-like control story if this is going to
+    be promoted beyond a graph-growth proxy
+  - a clearer mapping from the graph-growth observable to any cosmology
+    analogy
+- Platform class: **theory-only**
 
-## 4. Grown Trapping / Frontier Transport
+Why it ranks here:
 
-- Observable: escape ratio plus frontier-shell radial moment shift
-- Null: exact `eta = 0` grown baseline
-- What is retained: monotone escape decrease and monotone outward frontier
-  shift on the retained grown row
-- What still needs hardening: a stronger frontier observable than transport
-  plus a cleaner link to a horizon-like interpretation
-- Test class: theory-side first, then analog transport platform
+- it is a clean graph-growth proxy with a flat static control
+- it is the closest thing we have right now to a spreading analogue
+- it is still only an analog-proxy, not a cosmology derivation
 
-Why this is strong:
+## 6. Wide-lattice distance law
 
-- it is a real structural transport observable, not just raw attenuation
-- it is stricter than the older escape-only probe
+- Observable: far-tail exponent `alpha` from the ordered 3D `1/L^2` family
+- Standard null: a far-tail fit that does not remain stable in the promoted
+  window, or a near-field-only slope that fails the far-tail check
+- Already retained:
+  - [`docs/WIDE_LATTICE_H2T_DISTANCE_LAW_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/WIDE_LATTICE_H2T_DISTANCE_LAW_NOTE.md)
+  - Born is machine-clean
+  - `k = 0` is clean
+  - all tested rows are `TOWARD`
+  - far-tail fit is `b^(-1.05)` with `R^2 = 0.990`
+  - `F~M = 1.000`
+- Still needs hardening:
+  - a stronger asymptotic / wider-window statement
+  - a clearer separation between finite-lattice replay and any continuum claim
+- Platform class: **theory-only** for now
 
-Why it might fail:
+Why it still matters:
 
-- it may stay a transport-only probe without becoming structural horizon
-  physics
+- it is the cleanest retained far-tail law on `main`
+- it is a strong finite-lattice prediction even if the continuum status is not
+  yet settled
 
-## 5. Split-Shell Generated-Family Bridge
+## 7. Generated-family bridge
 
-- Observable: detector support `N_eff`, sign counts, and weak-field `F~M`
-- Null: the compact generated-family bridge and its retained closed family
-- What is retained: broader support and partial recovery on the split-shell
-  family
-- What still needs hardening: a clean weak-field law on the generated family
-- Test class: theory-side, and possibly analog graph / transport simulator
+- Observable: support width `N_eff`, `TOWARD` counts, and weak-field `F~M`
+  on the split-shell family
+- Standard null: the compact bridge family and the static baseline should not
+  be promoted as a closure if the weak-field law stays weak
+- Already retained:
+  - [`docs/SOURCE_RESOLVED_GENERATED_NEW_FAMILY_V2_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/SOURCE_RESOLVED_GENERATED_NEW_FAMILY_V2_NOTE.md)
+  - the split-shell family widens support
+  - `F~M` improves to `0.500` under the fixed-weight wavefield
+- Still needs hardening:
+  - a real weak-field closure, not just a broader bridge
+  - a geometry rule that restores the law rather than only widening support
+- Platform class: **theory-only** right now, with a possible analog-simulator
+  path later
 
-Why this is strong:
+Why it is still worth tracking:
 
-- it is the first real reopening after the compact bridge was closed
-- it shows the geometry family matters, not just the field rule
+- it is the first real reopening after the compact bridge closure
+- it shows that support geometry can be changed without losing exact
+  zero-source reduction
 
-Why it might fail:
+## Current ranking
 
-- the law remains too weak for a real generated-family closure
-- the bridge may stay geometry-limited
+1. Diamond / NV lock-in quadrature protocol
+2. Electrostatics scalar sign-law card
+3. Exact-lattice wavefield phase-ramp discriminator
+4. Wide-lattice distance law
+5. Generated-family bridge
 
-## Safe Use Cases
+## Top 3 testables
 
-- If you want a clean lab-facing story, the diamond / NV quadrature test is
-  the best current choice.
-- If you want the strongest internal theory discriminator, the exact-lattice
-  wavefield phase-ramp lane is still the most informative.
-- If you want the strongest retained finite-lattice gravity result, the
-  wide-lattice distance-law replay is the one to cite carefully.
+- Diamond / NV lock-in quadrature protocol
+- Electrostatics scalar sign-law card
+- Exact-lattice wavefield phase-ramp discriminator
 
-## What Is Still Theory-Only
+## Bottom line
 
-- self-gravity / Poisson backreaction as a real new mechanism
-- any clean emergent-gamma equivalence
-- any full continuum theorem
-- any horizon theory
+The cleanest current path to an outside experiment is the diamond protocol.
+The cleanest retained theory-side scalar sign-law discriminator is the
+electrostatics card.
+The cleanest retained theory-side phase discriminator is the exact-lattice
+wavefield phase ramp.
+The cleanest retained graph-growth spreading proxy is the growing-graph
+expansion card.
+The cleanest grown-geometry strong-field observable is the trapping/frontier
+moment shift.
 
-Those are still active moonshot targets, not retained predictions.
-
-## Final Verdict
-
-**best current testables are phase-sensitive, differential, and control-heavy**
-
-The practical order is:
-
-1. exact-lattice wavefield phase-ramp discriminator
-2. diamond / NV lock-in quadrature test
-3. wide-lattice distance-law replay
-4. grown trapping / frontier transport
-5. split-shell generated-family bridge
+The wide-lattice distance law is the best pure theory prediction in the set,
+but it is not yet a tabletop protocol.
