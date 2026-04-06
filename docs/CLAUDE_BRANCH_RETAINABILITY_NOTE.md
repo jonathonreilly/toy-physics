@@ -35,6 +35,10 @@ The branch is uneven in an important way:
   - scripts exist for `qnm` and `bmv`
   - the branch-level docs/log inventory does **not** yet show a comparable
     dedicated note+log chain for the strongest-field claims
+  - the later headline commits `e9f8eb8 feat(entropy)`,
+    `5ba2c01 feat(area-law)`, `319ce8b feat(ringdown)`, and
+    `a29e82a feat(unitarity)` sit on the same tree as the prior `BMV` commit,
+    so they currently read as claim pushes without new artifact additions
 
 That does not make the strong-field results false. It does mean they are
 harder to promote safely onto `main` right now.
@@ -96,6 +100,10 @@ mainline reduction / control story before they should be treated as retained.
   - `QNM`: mode spacing depends on `G`, not on source mass
   - `BMV`: back-reaction induces a gravitational phase / decoherence signature
   - entropy / area-law / ringdown: rich strong-field phenomenology
+  - concrete hardening gap:
+    `QNM` and `BMV` have scripts but no dedicated note/log chain, while the
+    later entropy / area-law / ringdown / information-paradox claims do not
+    currently add new files at all
   - these are the most promising “physics-story” results on the branch, but
     they are still exploratory until they inherit the same hard control chain
     as the best mainline cards
@@ -132,10 +140,46 @@ These are the claims that are too strong for the current evidence chain.
 - **A settled information-paradox resolution**
   - branch wording can suggest probability conservation or horizon
     thermodynamics
+  - the `feat(unitarity)` claim currently arrives as an empty-commit style
+    message push, not as a hardened script+log+note package
   - but that is not yet a mainline-retained result with the required control
     chain
   - it should be treated as an exploratory strong-field narrative, not a
     settled claim
+
+- **A full BMV-style gravitational entanglement claim**
+  - the branch script currently builds a witness/proxy rather than a joint
+    state entanglement measure
+  - that makes it interesting, but not yet mainline-safe as an entanglement
+    result
+  - it needs a stronger mediator-null and state-construction story before it
+    should be promoted
+
+## 4. Highest-value hardening shortlist
+
+This section is intentionally different from the retainability ranking below.
+It asks: if we spend more hardening effort on branch work, which claims have
+the best value-adjusted upside?
+
+Current shortlist:
+
+1. **Complex-action unification**
+   - strongest branch-side unification story if it can be replayed through one
+     exact-lattice + grown-geometry + weak-field control chain
+2. **Weak-field `h^2+T` continuum closure to `h = 0.125`**
+   - high value because it would materially strengthen the continuum/credibility
+     lane without depending on the weakest strong-field narratives
+3. **Wide-lattice distance-law replay**
+   - already close to mainline-safe in bounded form, but still needs one
+     canonical asymptotic phrasing rather than competing `-1.5` / `-1.0` /
+     widened-tail headlines
+4. **Self-gravity critical scaling**
+   - high upside, but only if the exact same loop also clears end-to-end Born
+     and weak-field class checks
+5. **QNM spectrum**
+   - highest speculative upside in the strong-field cluster, but also the most
+     vulnerable to analysis-choice and refinement collapse unless the non-Nyquist
+     peaks survive harder controls
 
 ## Bottom Line
 
