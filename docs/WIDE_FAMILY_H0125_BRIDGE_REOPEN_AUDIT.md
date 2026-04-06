@@ -49,6 +49,17 @@ The decisive `h = 0.125` continuation row was not captured cleanly enough in
 this session to promote the result, even after the interpreter mismatch was
 removed and the replay reached the `h = 0.25` row cleanly.
 
+The focused single-row replay makes the scale issue explicit:
+
+- `h = 0.125`
+- `117649` nodes
+- `49` layers
+- `155692848` edges
+
+On this machine the row remained computationally heavy for several minutes and
+did not complete inside the review window, so there is still no clean retained
+`h = 0.125` row to freeze on `main`.
+
 That means the only safe present-tense reading is:
 
 - the wide-family bridge is a legitimate reopened candidate
