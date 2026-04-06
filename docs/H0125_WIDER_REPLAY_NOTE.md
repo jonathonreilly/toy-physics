@@ -59,8 +59,14 @@ Finished bounded no-go on the retained tested row.
   - [`logs/2026-04-06-h0125-wide-full-window-probe.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-06-h0125-wide-full-window-probe.txt)
   - same `phys_w = 4`, `phys_l = 6`, `z = 3.0`, full-window row
   - same `alpha = 0.499` on the reduced three-strength sweep
+- shorter-scale scout:
+  - [`docs/H0125_SCALABLE_SCOUT_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/H0125_SCALABLE_SCOUT_NOTE.md)
+  - [`logs/2026-04-06-h0125-scalable-scout.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-06-h0125-scalable-scout.txt)
+  - `phys_l = 4`, `phys_w = 3`, full window
+  - `alpha = 0.501`, `0.501`, `0.502` across `z = 1.5`, `2.0`, `3.0`
 
 On this first genuinely wider full-window replay, the weak-field exponent does
 not move toward `1.0`; it stays pinned to the fixed-family `~0.5` class. That
 makes the wider-family `h = 0.125` continuation a bounded negative rather than
-a retained rescue.
+a retained rescue. The shorter-axial-scale scout also stays in the same class,
+so there is no review-safe scalable replay reopening on the observed rows.

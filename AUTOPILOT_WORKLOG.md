@@ -1,3 +1,84 @@
+## 2026-04-06 — Closed the shorter-scale `h = 0.125` replay as another bounded no-go
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed in
+  protocol order at loop start
+- no detached `physics-science` child was active in the latest handoff, so
+  this loop stayed on a bounded local science closeout rather than child
+  finalization
+- canonical git in `/Users/jonreilly/Projects/Physics` started this loop ahead
+  of `origin/main` by three commits:
+  - `git status --short --branch` reported `## main...origin/main [ahead 3]`
+    plus existing unrelated dirty files and untracked sidecar drafts
+  - `git rev-list --left-right --count origin/main...main` returned `0 3`
+  - `git log --oneline --decorate -n 8` showed local head `fc6b688` on top of
+    `origin/main` `5caad6d`
+- the required managed push retry before any new science still failed with DNS:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - result: `status=failed`, `failure_kind=dns_failure`, `ahead=3`,
+    `behind=0`, `attempts_used=5`
+- this loop launched exactly five disjoint sidecar workers covering:
+  wider / scalable `h = 0.125`, grown-transfer beyond exact-lattice pockets,
+  self-gravity / Born hardening, growing-graph dynamic repair, and
+  adversarial retainability audit
+
+### What changed
+- harvested exactly one bounded repo-facing result from the top queue lane:
+  the shorter-axial-scale `h = 0.125` scout now closes as another bounded
+  no-go rather than a scalable replay rescue
+- promoted that closeout into the canonical lane notes:
+  - added
+    `/Users/jonreilly/Projects/Physics/docs/H0125_SCALABLE_SCOUT_NOTE.md`
+  - added
+    `/Users/jonreilly/Projects/Physics/logs/2026-04-06-h0125-scalable-scout.txt`
+  - updated `README.md` to state that the shorter `phys_l = 4` full-window
+    scout also stays in the same `~0.5` class
+  - updated `docs/H0125_WIDER_REPLAY_NOTE.md` to link the shorter-scale scout
+    back into the frozen wider-family read
+- the retained local read is:
+  - shorter-scale observed row `phys_l = 4`, `phys_w = 3`, full window
+  - `Born = 6.50e-15`
+  - clean `k = 0`
+  - `TOWARD` gravity `+0.005594`
+  - `alpha = 0.501`, `0.501`, `0.502` across `z = 1.5`, `2.0`, `3.0`
+- important unfinished sidecars were left unharvested on purpose:
+  - the fixed-field grown-transfer scout found a narrow retained positive, but
+    this loop did not promote it because the higher-priority `h = 0.125` lane
+    was still unresolved at loop start
+  - the self-gravity, growing-graph, and retainability sidecars all closed as
+    bounded no-go / audit artifacts and remain draft-only for now
+
+### Strongest confirmed conclusion
+- the `h = 0.125` continuum-bridge reopening is now closed on both observed
+  replay directions tested so far:
+  the first genuine width increase (`phys_w = 4`, `phys_l = 6`) stays at
+  `alpha = 0.499`, and the shorter-axial-scale full-window scout
+  (`phys_l = 4`, `phys_w = 3`) stays at `alpha = 0.501..0.502`
+- review-safe retained statement:
+  on the observed full-window rows, the weak-field exponent remains pinned to
+  the same `~0.5` class while Born and `k = 0` stay clean and gravity stays
+  `TOWARD`, so there is no review-safe wider or simple scalable replay rescue
+- this remains a bounded observed-row closure, not a theorem about all wider,
+  all shorter, or all continuum continuations
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/README.md`
+- `/Users/jonreilly/Projects/Physics/docs/H0125_SCALABLE_SCOUT_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/docs/H0125_WIDER_REPLAY_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-06-h0125-scalable-scout.txt`
+
+### Exact next step
+- rerun the managed push helper first until the ahead-of-origin backlog clears
+- once the repo is synced enough to continue safely, move to the next queue
+  lane and harvest at most one bounded result from the fixed-field
+  grown-transfer scout beyond exact-lattice pockets
+
+### First concrete action
+- run `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  before promoting any other sidecar artifact; if DNS still fails, leave the
+  backlog recorded once and do not open another fresh science lane this loop
+
 ## 2026-04-06 — Promoted the bounded grown-row complex-action companion
 
 ### Current state
