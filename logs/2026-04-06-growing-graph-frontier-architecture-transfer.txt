@@ -1,0 +1,17 @@
+no-restore geometry-sector
+ zero= 0.0 neutral= 0.0
+  zero source field            +0.000000e+00   ZERO zero
+  single +1                    -6.144398e-06   AWAY repel
+  single -1                    +6.144319e-06 TOWARD attract
+  neutral same-point +1/-1     +0.000000e+00   ZERO null
+  like pair +1/+1              -1.235183e-05   AWAY repel
+  dipole +1/-1                 -1.888847e-06   AWAY partial-cancel
+  double +2                    -1.228887e-05   AWAY linear
+ charge exponent 1.0000091912257856
+
+Interpretation:
+- the old graph-ladder lesson transfers as a connectivity-design guide
+- the geometry-sector stencil can carry a signed-source response on a grown
+  row
+- this does not promote a new transport law; it is a bounded architecture
+  lesson for the current graph-growth cleanup lane
