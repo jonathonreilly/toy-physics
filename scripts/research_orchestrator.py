@@ -23,7 +23,7 @@ from typing import Any
 
 
 DEFAULT_STATE_PATH = (
-    "/Users/jonreilly/Projects/Physics/logs/research_orchestrator_state.json"
+    "/Users/jonreilly/.codex/state/physics_research_orchestrator_state.json"
 )
 ALLOWED_LANE_STATUSES = {
     "pending",
