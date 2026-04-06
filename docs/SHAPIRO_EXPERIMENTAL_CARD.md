@@ -119,7 +119,23 @@ speed), not just the spatial envelope. A static shaped field would produce
 a frequency-independent Y; a causal field would produce Y(f) that changes
 with f at rates comparable to the light-travel time across the apparatus.
 
-This is the sharpest discriminator available from the current model.
+**Update (retardation discriminator)**: This prediction is now confirmed
+in the model. An oscillating source with retarded vs instantaneous field
+response produces a frequency-dependent difference curve that:
+- Has exact nulls at f=0 and d=0
+- Is portable across 3 families (0.3-6%)
+- Shows a sign split at f=0.15 (inst negative, retarded positive)
+- Grows monotonically with retardation delay
+
+The measurable is NOT a universal phase sign. It is the **phase-locked
+response amplitude and phase** at the source modulation frequency:
+- Lock-in at frequency f
+- Measure amplitude R and phase phi of the response
+- The retardation produces a phi(f) curve that differs from instantaneous
+- The difference is phase-sensitive: phi_0 reversal flips the sign
+  (this IS the built-in null control, not a weakness)
+
+See `RETARDATION_DISCRIMINATOR_NOTE.md` for the full retained result.
 
 ## Existing bridge notes
 
@@ -133,3 +149,4 @@ This is the sharpest discriminator available from the current model.
 | DIAMOND_SENSOR_PROTOCOL_NOTE.md | Measurement protocol |
 | GRAVITOMAGNETIC_NOTE.md | Velocity-dependent correction |
 | CAUSAL_FIELD_CANONICAL_CHAIN_NOTE.md | Full chain hierarchy |
+| RETARDATION_DISCRIMINATOR_NOTE.md | Oscillating-source retardation result |
