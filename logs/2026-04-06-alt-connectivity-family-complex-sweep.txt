@@ -1,0 +1,21 @@
+================================================================================================
+ALT CONNECTIVITY FAMILY COMPLEX SWEEP
+  parity-rotated sector-transition family on the no-restore grown slice
+================================================================================================
+drifts=[0.15, 0.2, 0.25], seeds=[0, 1, 2], gammas=[0.0, 0.1, 0.2, 0.5]
+
+Representative rows:
+
+- drift 0.15 seed 0: g0=-1.517e-05, g01=-1.568e-05, g02=-1.620e-05, g05=-1.773e-05
+- drift 0.15 seed 1: g0=-3.150e-06, g01=-3.140e-06, g02=-3.131e-06, g05=-3.103e-06
+- drift 0.15 seed 2: g0=+1.202e-05, g01=+1.195e-05, g02=+1.187e-05, g05=+1.165e-05
+- drift 0.20 seed 0: g0=-3.598e-05, g01=-3.675e-05, g02=-3.752e-05, g05=-3.984e-05
+- drift 0.20 seed 1: g0=-2.081e-06, g01=-2.081e-06, g02=-2.080e-06, g05=-2.079e-06
+- drift 0.20 seed 2: g0=-1.117e-05, g01=-1.130e-05, g02=-1.142e-05, g05=-1.180e-05
+- drift 0.25 seed 0: g0=-6.911e-06, g01=-7.933e-06, g02=-8.954e-06, g05=-1.202e-05
+- drift 0.25 seed 1: g0=-2.168e-06, g01=-2.261e-06, g02=-2.355e-06, g05=-2.635e-06
+- drift 0.25 seed 2: g0=+8.058e-06, g01=+7.407e-06, g02=+6.755e-06, g05=+4.799e-06
+
+SAFE READ
+  no TOWARD -> AWAY crossover on this slice
+  complex-action remains a boundary failure for the alternative family

@@ -1,0 +1,21 @@
+============================================================================================
+ALT CONNECTIVITY FAMILY FAILURE AUDIT
+============================================================================================
+Failure reasons:
+         zero: 0
+      neutral: 0
+  orientation: 13
+      scaling: 0
+
+Representative failures:
+  drift=0.10 seed=1 zero=+0.000e+00 plus=-3.825e-06 minus=+3.823e-06 neutral=+0.000e+00 exp=1.000
+  drift=0.10 seed=2 zero=+0.000e+00 plus=-2.050e-05 minus=+2.051e-05 neutral=+0.000e+00 exp=1.000
+  drift=0.10 seed=4 zero=+0.000e+00 plus=-3.813e-06 minus=+3.813e-06 neutral=+0.000e+00 exp=1.000
+  drift=0.15 seed=2 zero=+0.000e+00 plus=-1.202e-05 minus=+1.202e-05 neutral=+0.000e+00 exp=1.000
+  drift=0.15 seed=4 zero=+0.000e+00 plus=-2.636e-05 minus=+2.636e-05 neutral=+0.000e+00 exp=1.000
+  drift=0.25 seed=2 zero=+0.000e+00 plus=-8.061e-06 minus=+8.058e-06 neutral=+0.000e+00 exp=1.000
+  drift=0.25 seed=4 zero=+0.000e+00 plus=-1.131e-06 minus=+1.132e-06 neutral=+0.000e+00 exp=1.000
+  drift=0.30 seed=1 zero=+0.000e+00 plus=-7.006e-07 minus=+7.006e-07 neutral=+0.000e+00 exp=1.000
+
+SAFE READ
+  the misses are a pure sign-orientation boundary, not a control leak
