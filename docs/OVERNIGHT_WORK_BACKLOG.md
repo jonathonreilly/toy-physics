@@ -330,6 +330,11 @@ remaining testable and review-safe.
    - Rule:
      - note-only or commit-message-only claims do not count
      - if the artifact chain is absent, this lane is paused
+   - Current branch-audit read:
+     - exact-lattice complex-action and bounded wide-lattice distance-law are
+       ahead of BMV/QNM on retainability
+     - QNM / BMV / entropy / ringdown / information-paradox stays paused until
+       it has a script+log+note chain and stronger controls
 
 10. **Alternative coupled-field architecture**
    - Best upside:

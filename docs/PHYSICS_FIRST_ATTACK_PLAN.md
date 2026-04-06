@@ -160,6 +160,17 @@ Also count one thing as progress if it is truly review-safe:
 The wide-lattice `h^2+T` distance-law replay is the current model example of
 that kind of progress.
 
+The current Claude-branch carryover ranking is now frozen in
+`docs/CLAUDE_BRANCH_RETAINABILITY_NOTE.md`:
+
+- exact-lattice wavefield phase-ramp law remains the strongest carryable claim
+- exact-lattice complex-action harness is the best new branch-side carryover
+  target if phrased narrowly
+- wide-lattice `h^2+T` distance-law is only safe as a bounded finite-lattice
+  replay
+- QNM / BMV / entropy / ringdown / information-paradox stays branch-side until
+  it has a real artifact/control chain
+
 For the moonshot branch, also do not count:
 
 - visually dramatic path plots without a retained observable
