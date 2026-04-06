@@ -1,7 +1,7 @@
 # Causal-Escape Window: Qualitative Regime
 
 **Date:** 2026-04-06
-**Status:** retained positive — qualitative causal-only escape regime confirmed
+**Status:** retained positive — escape regime exists but mechanism is exposure reduction, not irreducible cone geometry
 
 ## Artifact chain
 

@@ -5,10 +5,17 @@
 
 ## Observable hierarchy
 
-### Tier 1: Shapiro phase lag (strongest, unique causal discriminator)
+### Tier 1: Shapiro phase lag (strongest phase-sensitive dynamic observable)
 
-The c-dependent phase lag is the **primary lab-facing observable**. No static
-field of any shape reproduces a phase that depends on c.
+The c-dependent phase lag is the **primary lab-facing observable**.
+
+**Important boundary** (from `SHAPIRO_STATIC_DISCRIMINATOR_NOTE.md`):
+a static field shaped like a cone (same spatial envelope as the dynamic cone)
+reproduces the retained phase curve exactly. A static field with uniform
+scheduling does NOT. The discriminator is the spatial shape of the field,
+not causality per se. The Shapiro phase is NOT a unique causal discriminator
+in the strongest sense — it is a shape-sensitive phase observable that the
+causal cone happens to produce naturally.
 
 | c | Phase lag (rad) | 3-family agreement |
 | ---: | ---: | ---: |
@@ -90,8 +97,15 @@ The Shapiro phase lag is the canonical lab-facing prediction because:
 
 ## What should NOT be overclaimed
 
-- The trapping escape is NOT uniquely causal (static mimic works)
-- The Shapiro delay IS uniquely causal (no static mimic)
+- The trapping escape is NOT uniquely causal (exposure-matched static mimic works)
+- The Shapiro delay is NOT uniquely causal either: a static cone-shaped field
+  reproduces the same phase curve (see SHAPIRO_STATIC_DISCRIMINATOR_NOTE.md).
+  Static SCHEDULING does not reproduce it. The discriminator is spatial shape,
+  not causality per se.
 - The gravitomagnetic correction needs more seeds for the 12% spread
 - The lab bridge is relative, not absolute (no transfer coefficient)
 - The cone speed c is a free parameter (not derived from the model)
+- No observable in this chain has been shown to be irreducible to a matched
+  static proxy. The strongest retained claim is: the causal cone naturally
+  produces a specific spatial field shape that gives specific phase and
+  escape observables, but a carefully matched static field can reproduce them.
