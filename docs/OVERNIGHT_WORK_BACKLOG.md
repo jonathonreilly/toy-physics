@@ -102,6 +102,91 @@ For the moonshot branch, the bar is narrower still:
 - "does this create one new retained strong-field observable without losing
   the current weak-field lane?"
 
+## New Physics Frontier After Three-Family Portability
+
+The broad fixed-field portability question is now in a much better place than
+it was when this backlog was first written:
+
+- the retained cross-family card now survives on three independent grown
+  families
+- the distance tail now also survives on three independent grown families
+  under the current targeted retained probes
+
+That shifts the highest-value open physics lanes.
+
+The next frontier is no longer mainly:
+
+- "does anything beyond the first grown family work?"
+
+It is now:
+
+- "what additional physics beyond the static scalar weak-field package is
+  genuinely forced by the framework across those families?"
+
+The next official physics pushes are:
+
+1. **Impact-parameter scattering / lensing law**
+   - Target:
+     - one retained deflection-vs-impact-parameter law on at least one
+       portable grown family
+   - Fast falsifier:
+     - deflection is only a near-source centroid artifact with no stable
+       impact-parameter scaling window
+   - Why it matters:
+     - this is the cleanest missing classical-gravity lane after the current
+       distance-law package
+
+2. **Moving-source retarded portability**
+   - Target:
+     - one bounded moving-source / retarded-field observable that survives the
+       exact zero baseline and at least one grown-family control
+   - Fast falsifier:
+     - the signal collapses to the existing static-field null or becomes
+       architecture-noise without a stable delay / phase signature
+   - Why it matters:
+     - this is the cleanest route from the portable static package toward a
+       real causal-field sector
+
+3. **Persistent / quasi-persistent inertial object**
+   - Target:
+     - one retained localized or mesoscopic object whose persistence and
+       inertial response can both be measured on the same family
+   - Fast falsifier:
+     - every admissible object remains only a broad surrogate and never
+       separates object persistence from ordinary test-particle steering
+   - Why it matters:
+     - this remains the largest open internal physics gap after the
+       test-particle weak-field story
+
+4. **Multipole / tidal response**
+   - Target:
+     - one retained quadrupole-like or tidal-gradient observable beyond the
+       current monopole/dipole package
+   - Fast falsifier:
+     - multi-source layouts only replay the existing dipole cancellation story
+       with no new shape-sensitive response law
+   - Why it matters:
+     - this is the cleanest next structural extension of the source sector
+
+5. **Vector / magnetic-like extension of the sign-law lane**
+   - Target:
+     - one bounded transverse, circulation-like, or moving-source signed
+       response that is clearly not reducible to the existing scalar card
+   - Fast falsifier:
+     - every candidate reduces to the already-retained scalar electrostatics
+       lane with no independent directional observable
+   - Why it matters:
+     - the current EM foothold is still scalar only; even one narrow magnetic-
+       like effect would open a genuinely new branch
+
+Working rule for these pushes:
+
+- each lane must start with one minimal observable and one exact/null control
+- each lane should either land as a retained artifact chain or as a diagnosed
+  closure
+- do not inflate any of these into full GR / full EM / full relativistic
+  claims unless a much stronger family of observables appears
+
 ## Failure-Audit Rule
 
 When a moonshot lane closes as a bounded negative, do **not** just archive it
