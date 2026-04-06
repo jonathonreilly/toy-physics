@@ -1,33 +1,37 @@
-# Adversarial Interest Map
+# Interest Map
 
 **Date:** 2026-04-06  
-**Status:** external-reception calibration note
+**Status:** internal program-calibration note
 
 ## Purpose
 
-This note is not an internal enthusiasm scorecard.
+This note is an internal steering document.
 
-It is the deliberately adversarial read of how the project would likely be
-received by an outside technical community **today**, if written up and shared
-in its current state.
+It is meant to keep us honest about both:
+
+- how scientifically interesting the project currently is
+- how strong the present evidence base actually is
+- how close the program is to different levels of claim ambition
+
+It is **not** an official outside-facing scorecard, and it should not be read
+as a public “how outsiders must see us” memo.
 
 The target question is:
 
-- how interesting is this to outsiders under ordinary skeptical review?
-- how plausible is publication under different claim scopes?
-- how far is the project from broad mainstream acceptance?
+- what is strongest right now?
+- what is still missing?
+- which next moves most improve the real program rather than just the vibe?
 
-This map should be treated as the default external-reception baseline until the
-artifact chain materially improves.
+This map should be treated as the default **internal** priority baseline until
+the artifact chain materially improves again.
 
-It should **not** be read as an instruction to stop pushing the science
-frontier. The right reading is:
+It should not be read as an instruction to stop pushing the frontier. The
+right reading is:
 
 - push the science forward
-- but prefer moves that also convert exploratory structure into review-safe
+- prefer moves that also convert exploratory structure into review-safe
   retained evidence
-
-The best next steps are the ones that improve both at once.
+- use the scores to steer effort, not to market the project
 
 Important updates since the last score change:
 
@@ -52,7 +56,7 @@ Important updates since the last score change:
   - stronger electrostatics sign-law cards
   - wider distance-law framing
   - first-pass EP / GW-speed / strong-field notes
-- but the official map only counts the subset that survives the stricter
+- but this map only counts the subset that survives the stricter
   retainability read after merge:
   - exact-lattice and grown-row complex-action carryover
   - bounded wide-lattice distance-law frontier
@@ -83,7 +87,7 @@ Important updates since the last score change:
   - grown-wavefield transfer is now frozen as a phase-dephasing / detector-line
     coherence failure rather than a vague no-go
 
-## Current adversarial map
+## Current map
 
 | category | score | read |
 |---|---:|---|
@@ -192,14 +196,9 @@ The current realistic route is:
 3. finish the diamond-lane signal budget
 4. then get a genuinely new effect verified
 
-## Why this map is lower than the old internal map
+## Why this map stays conservative
 
-The old map was closer to:
-
-- how interesting the project feels from inside the program
-- how much genuine structure the computational exploration seems to uncover
-
-This map is stricter and more external.
+This map is intentionally stricter than a pure enthusiasm scorecard.
 
 The main downward pressures are:
 
@@ -208,11 +207,10 @@ The main downward pressures are:
 - continuum / RG / asymptotic claims still bounded
 - architecture dependence remains high
 - numerical successes still outrun the analytical core
-- mainstream reviewers will discount surprising numerics without a tighter law /
-  derivation story
-- as a nontraditional entrant, the burden of proof is higher, not lower
+- surprising numerics still need a tighter law / derivation story
+- the strongest claims still outrun the cleanest mechanistic compression
 
-The main upward pressures since the first adversarial cut are:
+The main upward pressures since the first cut are:
 
 - stronger review-hardening and regression-gate discipline on `main`
 - a cleaner flagship/secondary/frontier program map

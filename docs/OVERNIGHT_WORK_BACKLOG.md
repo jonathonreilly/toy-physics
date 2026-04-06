@@ -54,13 +54,13 @@ When the current batch reaches a real local maximum, do one full repo cleanup:
 - leave exploratory scripts in place, but stop letting them speak louder than
   their notes
 
-External-reception calibration now lives in:
+Program-level calibration now lives in:
 
-- [`docs/ADVERSARIAL_INTEREST_MAP.md`](/Users/jonreilly/Projects/Physics/docs/ADVERSARIAL_INTEREST_MAP.md)
+- [`docs/INTEREST_MAP.md`](/Users/jonreilly/Projects/Physics/docs/INTEREST_MAP.md)
 - [`docs/PHYSICS_FIRST_ATTACK_PLAN.md`](/Users/jonreilly/Projects/Physics/docs/PHYSICS_FIRST_ATTACK_PLAN.md)
 
-That map should govern priority: prefer work that raises outside confidence,
-not just internal excitement.
+That map should govern priority: prefer work that raises real program
+confidence, not just internal excitement.
 
 At the same time, this is **not** a “stop exploring” instruction. The program
 still has a dual mandate:

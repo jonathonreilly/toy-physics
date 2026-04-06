@@ -352,7 +352,7 @@ Do not force a trade where only one of those moves.
 ## Canonical docs
 
 - [`README.md`](/Users/jonreilly/Projects/Physics/README.md)
-- [`docs/ADVERSARIAL_INTEREST_MAP.md`](/Users/jonreilly/Projects/Physics/docs/ADVERSARIAL_INTEREST_MAP.md)
+- [`docs/INTEREST_MAP.md`](/Users/jonreilly/Projects/Physics/docs/INTEREST_MAP.md)
 - [`docs/UNIFIED_PROGRAM_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/UNIFIED_PROGRAM_NOTE.md)
 - [`docs/MIRROR_VS_LATTICE_PROGRAM_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/MIRROR_VS_LATTICE_PROGRAM_NOTE.md)
 - [`docs/OVERNIGHT_WORK_BACKLOG.md`](/Users/jonreilly/Projects/Physics/docs/OVERNIGHT_WORK_BACKLOG.md)
