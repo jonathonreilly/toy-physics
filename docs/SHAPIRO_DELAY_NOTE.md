@@ -1,59 +1,51 @@
-# Discrete Shapiro Delay
+# Shapiro Delay Note
 
-**Date:** 2026-04-06
-**Status:** retained positive — c-dependent phase lag portable across three families
+**Date:** 2026-04-06  
+**Status:** retained canonical replay of the discrete Shapiro-style phase lag
 
-## Artifact chain
+## Artifact Chain
 
-- [`scripts/shapiro_delay_portable.py`](../scripts/shapiro_delay_portable.py)
-- [`logs/2026-04-06-shapiro-delay-portable.txt`](../logs/2026-04-06-shapiro-delay-portable.txt)
-- This note
+- [`scripts/shapiro_phase_lag_probe.py`](/Users/jonreilly/Projects/Physics/scripts/shapiro_phase_lag_probe.py)
+- [`logs/2026-04-06-shapiro-delay-probe.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-06-shapiro-delay-probe.txt)
+- [`docs/SHAPIRO_COMPLEX_INTERACTION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/SHAPIRO_COMPLEX_INTERACTION_NOTE.md)
+- [`docs/SHAPIRO_DIAMOND_BRIDGE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/SHAPIRO_DIAMOND_BRIDGE_NOTE.md)
+- [`docs/DIAMOND_PHASE_RAMP_BRIDGE_CARD_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/DIAMOND_PHASE_RAMP_BRIDGE_CARD_NOTE.md)
+- [`docs/CAUSAL_PROPAGATING_FIELD_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/CAUSAL_PROPAGATING_FIELD_NOTE.md)
+- [`docs/CAUSAL_FIELD_RECONCILIATION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/CAUSAL_FIELD_RECONCILIATION_NOTE.md)
 
 ## Question
 
-Does a causally propagating gravitational field produce a phase lag
-at the detector that depends on the field propagation speed c?
+What is the canonical in-repo replay for the retained c-dependent phase lag,
+keeping the exact zero control explicit and the seed-stable delay table intact?
 
-## Result
+## Exact Control
 
-| c | Fam 1 phase | Fam 2 phase | Fam 3 phase | Max diff |
-| ---: | ---: | ---: | ---: | ---: |
-| inst | 0.0000 | 0.0000 | 0.0000 | 0% |
-| 2.0 | +0.0401 | +0.0401 | +0.0400 | 0.2% |
-| 1.0 | +0.0499 | +0.0501 | +0.0499 | 0.4% |
-| 0.5 | +0.0621 | +0.0622 | +0.0620 | 0.3% |
-| 0.25 | +0.0679 | +0.0679 | +0.0679 | 0.1% |
+- `c = inst`: phase lag `0.000 rad` on all three families
+- exact null survives by construction
 
-## Properties
+## Retained Phase Lag
 
-1. **Monotonic in 1/c**: slower field propagation → larger phase lag
-2. **Geometry-independent**: agreement within 0.4% across three families
-3. **Seed-stable**: agreement within 0.3% across seeds within each family
-4. **Qualitatively new**: no static field of any shape can produce a
-   c-dependent phase. This is NOT a deflection effect.
-5. **Zero control clean**: instantaneous field gives exactly 0 by construction
+| c | phase lag mean | family spread | fam1 | fam2 | fam3 |
+| ---: | ---: | ---: | ---: | ---: | ---: |
+| `2.00` | `+0.0401 rad` | `0.0001 rad` | `+0.0401` | `+0.0401` | `+0.0400` |
+| `1.00` | `+0.0500 rad` | `0.0002 rad` | `+0.0499` | `+0.0501` | `+0.0499` |
+| `0.50` | `+0.0621 rad` | `0.0002 rad` | `+0.0621` | `+0.0622` | `+0.0620` |
+| `0.25` | `+0.0679 rad` | `0.0000 rad` | `+0.0679` | `+0.0679` | `+0.0679` |
 
-## What this means
+## Seed Stability
 
-This is the discrete analog of the **Shapiro time delay** in GR: a beam
-passing through a gravitational field is delayed by an amount that depends
-on the gravitational potential along its path AND the propagation speed
-of the field.
+- the retained replay is seed-stable to three significant figures
+- family spread across the portable-grown replay stays at or below `2e-4 rad`
+- the phase lag increases monotonically as the field propagation speed decreases
 
-The phase lag approaches ~0.068 rad at c=0.25 and appears to saturate
-(the forward-only limit). The functional form is approximately:
+## Narrow Read
 
-    phase(c) ≈ phase_max * (1 - exp(-a/c))
+- the phase lag is the discrete Shapiro-delay observable
+- the observable is portable across the three retained grown families
+- the observable remains proxy-level; absolute NV units are still external calibration work
 
-where phase_max ≈ 0.070 rad.
+## Final Verdict
 
-## Claim boundary
-
-The Shapiro phase lag is a retained, portable, geometry-independent
-observable from causal field propagation. It is the first retained
-dynamic observable that static fields cannot produce.
-
-This does NOT claim:
-- A specific physical value for c (it's a free parameter like gamma)
-- Equivalence to the full GR Shapiro delay (which involves metric perturbations)
-- Self-consistency of the propagating field (the cone is imposed, not derived)
+**the retained c-dependent phase lag is a portable, seed-stable discrete
+Shapiro-delay observable with an exact zero control and family spread below
+2e-4 rad**
