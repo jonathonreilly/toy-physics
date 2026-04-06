@@ -48,15 +48,16 @@ trap strength much more than forward-only truncation.
 
 ## What this means
 
-This is a **qualitative** result, not just quantitative:
+The escape window is real:
 - Instantaneous gravity traps the beam (61% absorbed)
 - Causal gravity lets it escape (3% absorbed)
-- No static field proxy reproduces this
+- The forward-only static proxy does NOT reproduce escape (44% absorbed)
 
-The causal propagation speed creates a fundamentally different trapping
-regime. This is the discrete analog of the fact that a causally
-propagating gravitational field cannot trap light that's already
-outside the light cone of the source.
+However, an exposure-matched static proxy (uniform per layer, same average
+field as the dynamic cone) DOES reproduce escape. The mechanism is
+average-exposure reduction: the causal cone restricts the field spatially,
+lowering the total field the beam encounters. Any static field with the
+same average gives the same escape.
 
 ## Claim boundary
 
