@@ -1,3 +1,224 @@
+## 2026-04-05 — Harvested retained grown transfer and hardened the graph-growth no-go
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed in
+  protocol order at loop start
+- no detached `physics-science` child was active to resume or monitor
+- the canonical repo at `/Users/jonreilly/Projects/Physics` was already synced
+  before new work:
+  - `git status --short --branch` reported `## main...origin/main` plus
+    modified `AUTOPILOT_WORKLOG.md`, modified
+    `logs/physics_autopilot_handoff.md`, and several untracked draft notes /
+    probes
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 8` showed synced head `5caad6d`
+    (`feat: add grown electrostatics sign-law companion`) on top of
+    `origin/main`
+- this loop stayed review-first: it reconciled the stale coordination layer,
+  launched the requested five disjoint science lanes, and harvested only the
+  strongest finished retained result plus clean no-go surfaces
+
+### What changed
+- reread the tracked work log, latest handoff, readable autopilot memory, and
+  reconciled canonical git state in protocol order after the guard and lock
+  checks passed
+- launched exactly five disjoint overnight science workers covering:
+  - wider `h = 0.125` continuum-bridge replay / scalability
+  - outside-exact-lattice grown-geometry transfer
+  - self-gravity / backreaction hardening
+  - growing-graph expansion versus dynamic propagation
+  - skeptic retainability audit before promotion
+- completed one bounded science-harvest / integrity step from the finished
+  lanes:
+  - retained the existing grown-row complex-action companion as the strongest
+    outside-exact-lattice transfer candidate after re-audit
+  - replayed the growing-graph diagnostic and froze the same clean no-go:
+    frontier expansion remains the retained observable while dynamic
+    propagation stays noisy and non-monotone
+  - added a skeptic audit note for the wide-lattice `h^2+T` distance-law
+    replay so the promotion boundary is explicit
+- refreshed `AUTOPILOT_WORKLOG.md`,
+  `logs/physics_autopilot_handoff.md`, and
+  `/Users/jonreilly/.codex/automations/overnight-physics/memory.md` to the
+  real synced state at close
+- left unfinished or still-running local lanes untouched:
+  - `/Users/jonreilly/Projects/Physics/docs/H0125_WIDER_REPLAY_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/H0125_WIDER_W4_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/H0125_WIDER_W4_PROBE_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/MOONSHOT_SELF_GRAVITY_BRAINSTORM_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/scripts/lattice_3d_l2_wide_h0125_replay.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/lattice_3d_l2_wide_h0125_w4.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/lattice_3d_l2_wide_h0125_w4_probe.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/poisson_self_gravity_loop_v3.py`
+
+### Strongest confirmed conclusion
+- the strongest finished science result this loop is still the retained narrow
+  grown-geometry complex-action companion, not a new wider-bridge or
+  self-gravity reopening:
+  - exact `gamma = 0` reduction holds on the retained grown row
+  - the Born proxy remains machine-clean (`|I3|/P = 1.456e-15`)
+  - weak-field `F~M` stays `1.000` across the checked `gamma` sweep
+  - the `TOWARD -> AWAY` crossover survives, but only as a bounded grown-row
+    transfer rather than a geometry-generic law
+- the graph-growth lane is now even cleaner as a replacement / no-go:
+  - frontier delay still scales cleanly (`3.000 -> 22.000`, slope `+0.9325`
+    hops/step)
+  - dynamic-propagation visibility drop remains small and non-monotone
+    (`+0.0492`, `+0.0366`, `+0.0224` with only `4/10`, `4/10`, `2/10`
+    positive seeds)
+  - the retained claim is graph expansion against static controls, not a
+    transport or cosmology derivation
+- the new skeptic audit tightens the wide-lattice distance-law surface:
+  - the `h^2+T` replay stays a real finite-lattice frontier result
+  - it does **not** justify a universal `1/b` or continuum-law promotion yet
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/Projects/Physics/docs/WIDE_LATTICE_H2T_SKEPTIC_AUDIT_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-06-growing-graph-dynamic-limit.txt`
+- `/Users/jonreilly/.codex/automations/overnight-physics/memory.md`
+
+### Exact next step
+- keep the review-safe center of gravity on retained rows and explicit
+  controls:
+  - do not promote universal distance-law wording beyond the new skeptic audit
+  - do not reopen dynamic propagation as a retained observable
+- among the unfinished lanes, the next bounded science step should be whichever
+  finishes first between:
+  - a scalable / cheaper wider `h = 0.125` bridge probe that can genuinely
+    distinguish width rescue from the fixed-family negative
+  - a strict self-gravity closeout that either converges with exact reduction
+    and Born control intact or freezes a final no-go
+
+### First concrete action
+- inspect the current wider-bridge and self-gravity worktree artifacts for a
+  finished, review-safe closeout; if neither has crossed that bar, rerun only
+  one bounded cheaper width-4 or backreaction control probe instead of
+  widening scope
+
+## 2026-04-05 — Coordination repaired to the live `h = 0.125` bridge-decision chain
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed in
+  protocol order at loop start
+- no detached `physics-science` child was active to resume or monitor
+- the canonical repo at `/Users/jonreilly/Projects/Physics` was not synced
+  when this loop reconciled it, and it advanced again while the loop was
+  open:
+  - final `git status --short --branch` reported
+    `## main...origin/main [ahead 8]` plus modified
+    `AUTOPILOT_WORKLOG.md`, modified
+    `logs/physics_autopilot_handoff.md`, live `h = 0.125` bridge-lane edits
+    in `docs/H2T_H0125_NARROW_BRIDGE_NOTE.md`,
+    `docs/LATTICE_3D_L2_NUMPY_H0125_BRIDGE_NOTE.md`,
+    `docs/WIDE_FAMILY_H0125_BRIDGE_REOPEN_AUDIT.md`, and
+    `scripts/lattice_3d_l2_numpy_h0125_only.py`, plus several unrelated
+    untracked draft notes / probes
+  - final `git rev-list --left-right --count origin/main...main` returned
+    `0 8`
+  - final `git log --oneline --decorate -n 10` showed local-only head
+    `78bcad9` (`feat: add focused h0125 bridge decision test`) on top of
+    `origin/main` `c179b85` (`docs: freeze graph-growth proxy replacement`)
+- the saved coordination layer still claimed synced head `a84b67a`, so this
+  loop became a repo-facing integrity repair before any new science
+
+### What changed
+- reread the tracked work log, latest handoff, and readable autopilot memory
+  in protocol order after the duplicate-run guard and cooperative lock checks
+  passed
+- confirmed no detached `physics-science` child was active to resume or
+  protect
+- reconciled canonical git state directly, then rechecked it after the repo
+  advanced under the loop:
+  - `git status --short --branch`
+  - `git rev-list --left-right --count origin/main...main`
+  - `git log --oneline --decorate -n 10`
+- ran the managed push helper exactly as required before attempting any new
+  science, then reran it once after the branch advanced so closeout reflects
+  the final state:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - final helper result: `status=failed`, `failure_kind=dns_failure`, `ahead=8`,
+    `behind=0`, `attempts_used=5`
+- inspected the final unseen local-only chain directly:
+  - `06148ff` (`docs: add propagator family unification note`)
+  - `51c61d2` (`docs: add diamond nv phase ramp signal budget note`)
+  - `03c85b3` (`docs: audit wide-family h0125 bridge reopen`)
+  - `4577e0c` (`docs: add flagship contribution framing note`)
+  - `847f93b` (`docs: harden numpy replay environment`)
+  - `e734815` (`docs: extend numpy replay bootstrap`)
+  - `cff01c2` (`docs: quantify h0125 bridge replay scale`)
+  - `78bcad9` (`feat: add focused h0125 bridge decision test`)
+- reread the live claim surfaces behind that chain:
+  - `/Users/jonreilly/Projects/Physics/docs/WIDE_FAMILY_H0125_BRIDGE_REOPEN_AUDIT.md`
+  - `/Users/jonreilly/Projects/Physics/docs/REPLAY_ENVIRONMENT_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/PROPAGATOR_FAMILY_UNIFICATION_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/DIAMOND_NV_PHASE_RAMP_SIGNAL_BUDGET_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/FLAGSHIP_PAPER_CONTRIBUTION_STATEMENT_NOTE.md`
+  - `git diff -- /Users/jonreilly/Projects/Physics/scripts/lattice_3d_l2_numpy_h0125_only.py`
+- completed one bounded repo-facing integrity step instead of starting a new
+  science lane:
+  - refreshed `AUTOPILOT_WORKLOG.md`,
+    `logs/physics_autopilot_handoff.md`, and the automation memory to the
+    final ahead-of-origin state after the repo advanced mid-loop
+- left live working-tree edits and unrelated local changes untouched:
+  - `/Users/jonreilly/Projects/Physics/docs/H2T_H0125_NARROW_BRIDGE_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/LATTICE_3D_L2_NUMPY_H0125_BRIDGE_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/WIDE_FAMILY_H0125_BRIDGE_REOPEN_AUDIT.md`
+  - `/Users/jonreilly/Projects/Physics/scripts/lattice_3d_l2_numpy_h0125_only.py`
+  - `/Users/jonreilly/Projects/Physics/docs/DISTANCE_LAW_PREDICTION_CARD_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/MOONSHOT_DIAMOND_SENSOR_BRAINSTORM_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/MOONSHOT_SELF_GRAVITY_BRAINSTORM_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/POISSON_SELF_GRAVITY_LOOP_V3_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/scripts/persistent_object_localization_escalation.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/poisson_self_gravity_loop_v3.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/source_resolved_exact_green_support_scout.py`
+
+### Strongest confirmed conclusion
+- the strongest unseen local science in the current chain is still narrow and
+  unresolved:
+  - the wide-family dense `1/L^2 + h^2` bridge is a legitimate `h = 0.125`
+    reopen candidate because the replay environment is now stable and the
+    coarse rows replay cleanly
+  - the decisive row is still computationally heavy
+    (`117649` nodes, `49` layers, `155692848` dense edges) and has not yet
+    been frozen as a retained `main` positive
+  - the repo now has a focused single-row decision harness for that row, but
+    it has not yet produced a retained claim chain
+- the review-safe center of gravity of the local chain remains the propagator
+  family rather than continuum closure:
+  - retained wavefield, complex-action, and electrostatics cards share one
+    fixed propagator skeleton with scalar couplings
+  - the diamond / NV external interface remains a phase-quadrature and
+    spatial phase-ramp null test, not an absolute gravity budget
+- operationally, `/usr/bin/python3` plus
+  `scripts/numpy_replay_bootstrap.py` is the stable numpy replay path on this
+  machine, and `scripts/lattice_3d_l2_numpy_h0125_only.py` is now the narrow
+  decision harness once the live diff on that file is reconciled
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- before any fresh science, clear the stranded local eight-commit chain with:
+  `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+- if the repo is later synced and still points at this chain, inspect and
+  reconcile the live working-tree diff in
+  `scripts/lattice_3d_l2_numpy_h0125_only.py`, then use that focused harness
+  to decide whether the `h = 0.125` row can be frozen cleanly; if newer landed
+  work supersedes it, fall back to the then-current higher-priority
+  directional-`b` / Gate B lane instead of widening scope
+
+### First concrete action
+- rerun
+  `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`; if it reports
+  `ahead 0, behind 0`, inspect
+  `git diff -- /Users/jonreilly/Projects/Physics/scripts/lattice_3d_l2_numpy_h0125_only.py`,
+  then use the bootstrap-safe focused replay path to determine whether the
+  wide-family `h = 0.125` row can be frozen cleanly
+
 ## 2026-04-05 — Widened-source overlap seam is already present but subcritical on the `N = 12` holdout slice
 
 ### Current state
