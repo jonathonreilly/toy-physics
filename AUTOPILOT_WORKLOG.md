@@ -1,3 +1,86 @@
+## 2026-04-06 — Finalized the wider `h = 0.125` full-window no-go
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed in
+  protocol order at loop start
+- the latest handoff pointed at an inherited wider-family replay child, so
+  this loop first checked the named log paths with `lsof` before any new
+  science:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-06-h0125-wide-full-window.txt`
+    was already closed
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-06-h0125-wide-full-window-probe.txt`
+    was briefly still open, then finished during this loop, so the bounded
+    step became parsing/finalizing that completed child rather than launching a
+    fresh science run
+- canonical git in `/Users/jonreilly/Projects/Physics` still started this loop
+  ahead of `origin/main`:
+  - `git status --short --branch` reported `## main...origin/main [ahead 1]`
+    plus the existing wider-family / retainability working-tree edits
+  - `git rev-list --left-right --count origin/main...main` returned `0 1`
+  - `git log --oneline --decorate -n 8` still showed local-only head
+    `3a0d1cb` on top of `origin/main` `5caad6d`
+- the required managed push retry before new science still failed with DNS:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - result: `status=failed`, `failure_kind=dns_failure`, `ahead=1`,
+    `behind=0`, `attempts_used=5`
+
+### What changed
+- parsed the finished wider-family closeout logs instead of starting a fresh
+  lane:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-06-h0125-wide-full-window.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-06-h0125-wide-full-window-probe.txt`
+- converted the wider-family `h = 0.125` lane from “live question” to one
+  bounded finished no-go:
+  - the retained baseline `phys_w = 3`, `phys_l = 6`, full-window row stayed
+    at `alpha = 0.500`
+  - the genuinely wider `phys_w = 4`, `phys_l = 6`, full-window row stayed at
+    `alpha = 0.499` with clean Born (`8.01e-15`), clean `k = 0`, and
+    `TOWARD` gravity (`+0.010955`)
+  - so simple box widening does not reopen the weak-field mass-law bridge on
+    the tested wider row
+- updated the high-level claim surface accordingly:
+  - `README.md` now records the wider dense `h = 0.125` replay as a bounded
+    negative
+  - `docs/H0125_WIDER_REPLAY_NOTE.md` and
+    `docs/H0125_WIDER_W4_NOTE.md` now freeze the full-window width-4 result as
+    the retained no-go
+  - `docs/H0125_WIDER_W4_PROBE_NOTE.md` now explicitly demotes the cheaper
+    helper to an auxiliary scout rather than the claim-carrying closeout path
+
+### Strongest confirmed conclusion
+- the wider-family continuation does not rescue the weak-field bridge on the
+  first genuinely wider tested row
+- review-safe retained statement:
+  at `h = 0.125`, `phys_l = 6`, `z = 3.0`, and the full detector window, the
+  width increase from `phys_w = 3` to `phys_w = 4` leaves the exponent pinned
+  to the same `~0.5` class (`0.500 -> 0.499`) while staying Born-clean and
+  `k = 0` clean
+- this is a bounded row-level no-go, not a geometry-generic or continuum
+  theorem
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/README.md`
+- `/Users/jonreilly/Projects/Physics/docs/H0125_WIDER_REPLAY_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/docs/H0125_WIDER_W4_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/docs/H0125_WIDER_W4_PROBE_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-06-h0125-wide-full-window.txt`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-06-h0125-wide-full-window-probe.txt`
+
+### Exact next step
+- rerun the managed push helper first if the branch is still ahead after this
+  closeout
+- once the repo is reconciled, move to the next bounded lane on the default
+  queue: fixed-field transfer beyond exact-lattice pockets, with review-safe
+  focus on grown-geometry complex-action or signed-source families rather than
+  reopening the closed wider-family bridge
+
+### First concrete action
+- run `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  after staging the wider-family closeout commit; if the branch is still not
+  synced, leave the DNS failure recorded once and do not start a new science
+  child this loop
+
 ## 2026-04-05 — Harvested retained grown transfer and hardened the graph-growth no-go
 
 ### Current state
@@ -5,7 +88,8 @@
   protocol order at loop start
 - no detached `physics-science` child was active to resume or monitor
 - the canonical repo at `/Users/jonreilly/Projects/Physics` was already synced
-  before new work:
+  before new work, but this loop's tracked closeout commit is now stranded
+  locally after the managed push helper hit DNS failure:
   - `git status --short --branch` reported `## main...origin/main` plus
     modified `AUTOPILOT_WORKLOG.md`, modified
     `logs/physics_autopilot_handoff.md`, and several untracked draft notes /
@@ -32,15 +116,23 @@
   lanes:
   - retained the existing grown-row complex-action companion as the strongest
     outside-exact-lattice transfer candidate after re-audit
+  - froze the self-gravity / backreaction lane as a strict no-go under the
+    exact-null, convergence, and Born controls
   - replayed the growing-graph diagnostic and froze the same clean no-go:
     frontier expansion remains the retained observable while dynamic
     propagation stays noisy and non-monotone
   - added a skeptic audit note for the wide-lattice `h^2+T` distance-law
     replay so the promotion boundary is explicit
+- committed the repo-facing closeout as `3a0d1cb`
+  (`docs: record overnight retainability triage`)
+- ran the managed push helper for closeout exactly as required:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - helper result: `status=failed`, `failure_kind=dns_failure`, `ahead=1`,
+    `behind=0`, `attempts_used=5`
 - refreshed `AUTOPILOT_WORKLOG.md`,
   `logs/physics_autopilot_handoff.md`, and
   `/Users/jonreilly/.codex/automations/overnight-physics/memory.md` to the
-  real synced state at close
+  real ahead-of-origin state at close
 - left unfinished or still-running local lanes untouched:
   - `/Users/jonreilly/Projects/Physics/docs/H0125_WIDER_REPLAY_NOTE.md`
   - `/Users/jonreilly/Projects/Physics/docs/H0125_WIDER_W4_NOTE.md`
@@ -71,6 +163,11 @@
 - the new skeptic audit tightens the wide-lattice distance-law surface:
   - the `h^2+T` replay stays a real finite-lattice frontier result
   - it does **not** justify a universal `1/b` or continuum-law promotion yet
+- the self-gravity lane is now explicitly closed again:
+  - exact `epsilon = 0` reduction survives
+  - nonzero-coupling rows still fail convergence and full-loop Born cleanliness
+  - the grown-geometry backreaction probe also collapses weak-field scaling at
+    nonzero coupling, so there is no review-safe rescue there
 
 ### Files/logs changed
 - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
@@ -84,18 +181,17 @@
   controls:
   - do not promote universal distance-law wording beyond the new skeptic audit
   - do not reopen dynamic propagation as a retained observable
-- among the unfinished lanes, the next bounded science step should be whichever
-  finishes first between:
-  - a scalable / cheaper wider `h = 0.125` bridge probe that can genuinely
-    distinguish width rescue from the fixed-family negative
-  - a strict self-gravity closeout that either converges with exact reduction
-    and Born control intact or freezes a final no-go
+- the self-gravity lane is no longer a default next-step candidate
+- among the unfinished lanes, the next bounded science step should be a
+  scalable / cheaper wider `h = 0.125` bridge probe that can genuinely
+  distinguish width rescue from the fixed-family negative without widening
+  scope again
 
 ### First concrete action
-- inspect the current wider-bridge and self-gravity worktree artifacts for a
-  finished, review-safe closeout; if neither has crossed that bar, rerun only
-  one bounded cheaper width-4 or backreaction control probe instead of
-  widening scope
+- rerun the managed push helper first to clear stranded commit `3a0d1cb`; if
+  the branch returns to `ahead 0, behind 0`, inspect the current width-4 /
+  wider-family artifacts and run only one bounded cheaper `h = 0.125` width
+  rescue probe instead of reopening self-gravity or widening scope
 
 ## 2026-04-05 — Coordination repaired to the live `h = 0.125` bridge-decision chain
 

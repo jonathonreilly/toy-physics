@@ -1,8 +1,8 @@
 # Wide-Family `h = 0.125` Bridge Reopen Audit
 
-**Date:** 2026-04-05  
-**Status:** reopened candidate only for a truly wider family; the current fixed
-bridge family now resolves as bounded negative for weak-field closure
+**Date:** 2026-04-06  
+**Status:** the current fixed bridge family and the first genuinely wider
+`phys_w = 4` family both resolve as bounded negatives for weak-field closure
 
 This note is a narrow audit of the Claude-side claim that the wider fixed
 family behind the 3D dense `1/L^2 + h^2` lane can still complete the `h =
@@ -70,8 +70,11 @@ That means the only safe present-tense reading is:
 - the reduced-family `h = 0.125` negative still stands separately
 - the current fixed bridge family now also completes without closing the
   weak-field mass-law gap
-- the only remaining reopen candidate is a genuinely wider `h = 0.125`
-  family, not the current fixed bridge family
+- the first genuinely wider retained continuation can now be read directly:
+  `phys_w = 4`, `phys_l = 6`, full-window `alpha = 0.499` with clean Born,
+  clean `k = 0`, and `TOWARD` gravity
+- the immediate wider-family reopen therefore also closes as a bounded
+  negative on the tested retained row
 
 ## Safe read
 
@@ -80,17 +83,20 @@ The strongest honest statement right now is:
 - the Claude-side `h = 0.125` story was worth reopening
 - the current fixed bridge family now resolves as a bounded negative for
   weak-field closure
-- a wider-family `h = 0.125` replay remains the only live reopen version
+- the first genuinely wider `phys_w = 4` replay also resolves as a bounded
+  negative on the retained full-window row
+- there is no currently retained live reopen on this exact bridge family
 
 ## Reopen condition
 
 This lane should only be promoted if a fresh retained replay captures:
 
-- the `h = 0.125` row on a genuinely wider family
+- the `h = 0.125` row on a materially different family beyond the now-tested
+  `phys_w = 4` continuation
 - clean Born on the completed rows
 - the same-family weak-field observables without a silent geometry change
 - a reproducible log file or note chain on `main`
 
-Until then, the fixed bridge family should be treated as resolved and the
-reopen candidate should be interpreted narrowly as the wider-family version
-only.
+Until then, the fixed bridge family and the first wider-family continuation
+should both be treated as resolved bounded negatives rather than as live
+reopen candidates.

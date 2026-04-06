@@ -129,8 +129,13 @@ If you only want the current high-level state, read this section first.
   narrative does not survive physical re-mapping. A separate y-tapered 3D
   refinement branch was tested and did not recover hierarchy-clean attraction
   under `h = 1.0` or `h = 0.5`, so it stays a bounded negative topology
-  branch. The ordered-lattice family is real, but it does not displace the
-  mirror flagship.
+  branch. A genuinely wider dense `h = 0.125` replay is now also a bounded
+  negative on the retained tested row: the first `phys_w = 4`, `phys_l = 6`,
+  full-window width rescue stays Born-clean, keeps clean `k = 0`, and lands
+  at `alpha = 0.499`, essentially identical to the fixed-family `~0.5` limit,
+  so simple box widening does not reopen the weak-field mass-law bridge. The
+  ordered-lattice family is real, but it does not displace the mirror
+  flagship.
 - **Nearest-neighbor refinement:** strongest current continuum-side bridge.
   Raw NN is Born-clean through `h = 0.25`, deterministic rescale extends a
   bounded path to `h = 0.0625`, and the canonical notes keep continuum / RG
