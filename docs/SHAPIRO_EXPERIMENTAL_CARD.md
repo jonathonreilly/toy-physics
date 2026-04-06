@@ -82,10 +82,20 @@ The strongest discriminator is the **c-dependence**:
 - A causal field predicts a phase delay that depends on frequency
   (through k) and on source modulation speed (through c)
 
+**Important caveat** (from `SHAPIRO_STATIC_DISCRIMINATOR_NOTE.md`):
+a static field shaped like a cone (matching the dynamic cone's spatial
+envelope) reproduces the same phase curve. The discriminator is the
+field's spatial SHAPE, not causality per se. A lock-in experiment
+would need to distinguish causal propagation from a shaped static field.
+
+The static-scheduling proxy (uniform field applied at all layers) does
+NOT reproduce the phase. So the discriminant is spatial structure,
+and the causal cone naturally produces that structure.
+
 A lock-in experiment modulating the source at frequency f would see:
 - In-phase (X): the quasi-static gravitational response
-- Quadrature (Y): the causal delay contribution
-- Phase lag (phi): atan2(Y, X) → should be nonzero if gravity is causal
+- Quadrature (Y): the shaped-field delay contribution
+- Phase lag (phi): atan2(Y, X) → nonzero if the field has cone-like structure
 
 ## Existing bridge notes
 

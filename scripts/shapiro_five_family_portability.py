@@ -147,7 +147,19 @@ def _measure_sample(spec: SampleSpec) -> tuple[float, dict[float, float]]:
             phase = 0.0
         phases[c] = phase
 
-    return 0.0, phases
+    # Compute actual zero-field control: propagate with s=0
+    psi_zero = _prop_field(pos, adj, nmap, 0.0, MASS_Z, K, c_field=None)
+    det_zero = psi_zero[ds:]
+    n_zero = math.sqrt(sum(abs(a) ** 2 for a in det_zero))
+    if n_inst > 0.0 and n_zero > 0.0:
+        overlap_zero = sum(
+            a.conjugate() / n_inst * b / n_zero for a, b in zip(det_inst, det_zero)
+        )
+        zero_phase = abs(math.atan2(overlap_zero.imag, overlap_zero.real))
+    else:
+        zero_phase = 0.0
+
+    return zero_phase, phases
 
 
 def _family_table() -> list[FamilySummary]:

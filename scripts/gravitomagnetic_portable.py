@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Gravitomagnetic effect: velocity-dependent Shapiro correction.
 
+NOTE: This is a full executable replay harness, not a reconstruction.
+It recomputes all phase values from scratch on each run.
+
 A moving source produces an antisymmetric phase shift beyond the
 static Shapiro delay. This is the discrete analog of gravitomagnetic
 frame-dragging.
