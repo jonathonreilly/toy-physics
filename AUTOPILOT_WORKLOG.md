@@ -1,3 +1,118 @@
+## 2026-04-05 — Widened-source overlap seam is already present but subcritical on the `N = 12` holdout slice
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed in
+  protocol order at loop start
+- no detached `physics-science` child was active to resume or monitor
+- the canonical repo at `/Users/jonreilly/Projects/Physics` was initially
+  synced before this step:
+  - `git status --short --branch` reported `## main...origin/main` plus
+    modified `docs/TESTABLE_PREDICTIONS_MAP_NOTE.md`, modified
+    `logs/physics_autopilot_handoff.md`, and several unrelated untracked draft
+    notes / probes
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 8` showed synced head `e2ba9a4`
+    (`docs: add narrow h2t h0125 bridge note`) on top of `origin/main`
+- the saved coordination layer still pointed at the older Gate B /
+  continuum-bridge guidance, so this loop first reconciled the live planning
+  surfaces before returning to the user-priority fixed directional-measure
+  geometry-normalized `b` lane
+- during the loop the canonical repo advanced locally to `715c5d3`
+  (`docs: add dead-end reopen audit`) on top of `origin/main`; I inspected
+  that new note directly and it did not conflict with the bounded
+  geometry-normalized follow-on
+
+### What changed
+- reread the tracked work log, latest handoff, and readable autopilot memory
+  in protocol order after the duplicate-run guard and cooperative lock checks
+  passed
+- confirmed no detached `physics-science` child was active to resume or
+  protect
+- reconciled canonical git state directly:
+  - `git status --short --branch`
+  - `git rev-list --left-right --count origin/main...main`
+  - `git log --oneline --decorate -n 8`
+  - `git show --stat --summary --oneline -n 1 HEAD`
+- reread the current priority / claim surfaces directly:
+  - `/Users/jonreilly/Projects/Physics/docs/OVERNIGHT_WORK_BACKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/docs/PHYSICS_FIRST_ATTACK_PLAN.md`
+  - `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_MASS5_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_OVERLAP_MAP_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/H2T_H0125_NARROW_BRIDGE_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/CLAUDE_BRANCH_RETAINABILITY_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/CLAUDE_DEAD_END_REOPEN_AUDIT_NOTE.md`
+- completed one bounded fixed directional-measure geometry-normalized `b`
+  follow-on instead of reopening decoherence or a new denominator search:
+  - repaired
+    `scripts/directional_b_geometry_normalized_overlap_map.py` so the printed
+    interpretation follows the active `--n-layers` slice instead of
+    hard-coding the old `N = 25` failure language
+  - reran
+    `python3 /Users/jonreilly/Projects/Physics/scripts/directional_b_geometry_normalized_overlap_map.py --workers 1 --n-layers 12 | tee /Users/jonreilly/Projects/Physics/logs/2026-04-05-directional-b-geometry-normalized-overlap-map-n12.txt`
+- added / refreshed the bounded artifact chain:
+  - `/Users/jonreilly/Projects/Physics/scripts/directional_b_geometry_normalized_overlap_map.py`
+  - `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_OVERLAP_SUBCRITICAL_N12_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_OVERLAP_MAP_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-05-directional-b-geometry-normalized-overlap-map-n12.txt`
+- left unrelated user/local changes untouched:
+  - `/Users/jonreilly/Projects/Physics/docs/TESTABLE_PREDICTIONS_MAP_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/ADAPTIVE_COEVOLVING_GEOMETRY_NO_GO.md`
+  - `/Users/jonreilly/Projects/Physics/docs/DISTANCE_LAW_PREDICTION_CARD_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/MOONSHOT_DIAMOND_SENSOR_BRAINSTORM_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/MOONSHOT_SELF_GRAVITY_BRAINSTORM_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/POISSON_SELF_GRAVITY_LOOP_V3_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/scripts/complex_action_grown_companion.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/persistent_object_localization_escalation.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/poisson_self_gravity_loop_v3.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/source_resolved_exact_green_support_scout.py`
+
+### Strongest confirmed conclusion
+- the widened-source overlap / occupancy seam is already visible on the
+  shallower holdout slice `N = 12`; it is not unique to the deeper `N = 25`
+  replay
+- on `N = 12`, exactly `3/25` rows are true overlap rows (`mu <= 0`), all in
+  the first two target buckets and all on the low-fill side
+  `target_fill <= 0.4`
+- the seam is still subcritical on that shallow slice:
+  - full-sample `A/b`: PASS (`+0.1061 -> +0.0364`, slope `-0.0123`)
+  - full-sample `F/b`: PASS (`+0.1479 -> +0.0428`, slope `-0.0184`)
+  - removing only the overlap rows steepens the center-offset law:
+    - non-overlap `A/b`: `+0.1362 -> +0.0364`, slope `-0.0179`
+    - non-overlap `F/b`: `+0.1892 -> +0.0428`, slope `-0.0264`
+- combined with the retained `N = 25` card, the safe directional-`b` read is
+  now sharper:
+  - the low-`b` overlap seam is a shallow-to-deep progression, not a one-off
+    failure
+  - `b` remains the asymptotic coordinate
+  - `edge_b = b - h_mass` remains the portable finite-source correction
+  - there is still no reason to reopen denominator search
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/scripts/directional_b_geometry_normalized_overlap_map.py`
+- `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_OVERLAP_SUBCRITICAL_N12_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_OVERLAP_MAP_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-05-directional-b-geometry-normalized-overlap-map-n12.txt`
+
+### Exact next step
+- move to the next non-overlapping user-priority lane:
+  one bounded evolving-network dynamics diagnostic
+- stay off Claude's decoherence frontier and do not start a fresh
+  propagating-field architecture search
+- reuse the retained structured-growth row and current Gate B note surfaces:
+  - `/Users/jonreilly/Projects/Physics/scripts/evolving_network_prototype_v6.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/gate_b_v6_nearfield_comparator.py`
+  - `/Users/jonreilly/Projects/Physics/docs/GATE_B_DYNAMICS_NOTE.md`
+- ask whether the residual `y_mass = 1.0` bucket can be sharpened with one
+  fixed support diagnostic rather than a new architecture
+
+### First concrete action
+- rerun
+  `python3 /Users/jonreilly/Projects/Physics/scripts/evolving_network_prototype_v6.py`
+  and compare the refreshed bucket split directly against
+  `/Users/jonreilly/Projects/Physics/docs/GATE_B_DYNAMICS_NOTE.md`; if the
+  same closest-bucket seam remains, freeze one bounded support diagnostic on
+  that bucket instead of reopening decoherence or propagating-field work
+
 ## 2026-04-05 — Gate B near-field control localizes the v6 misses to one closest bucket
 
 ### Current state

@@ -133,6 +133,10 @@ def _summary_text(summary: TrendSummary | None) -> str:
     )
 
 
+def _passes(summary: TrendSummary | None) -> bool:
+    return summary is not None and summary.status == "PASS"
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--workers", type=int, default=min(8, max(1, os.cpu_count() or 1)))
@@ -202,9 +206,11 @@ def main() -> None:
         "This keeps the fixed directional-measure propagator, the second dense-family holdout, and"
     )
     print(
-        "the widened `mass_nodes = 5` source frozen. The question is whether the `A/b` and `F/b`"
+        "the widened `mass_nodes = 5` source frozen. The question is whether the center-offset"
     )
-    print("failures at `N = 25` are generic, or only an overlap-sector effect.")
+    print(
+        f"`A/b` and `F/b` behavior at `N = {args.n_layers}` is generic, or only an overlap-sector effect."
+    )
     print()
     print("Grouped holdout summary:")
     print(
@@ -240,25 +246,22 @@ def main() -> None:
             f"{row.target_fill:8.3f} {row.local_target_count:6d} {row.action_over_b:+9.4f} {row.flow_over_b:+9.4f}"
         )
     print()
+    all_action_summary = _trend_summary(all_trials, "action_over_b")
+    all_flow_summary = _trend_summary(all_trials, "flow_over_b")
+    all_action_edge_summary = _trend_summary(all_trials, "action_over_edge_b")
+    all_flow_edge_summary = _trend_summary(all_trials, "flow_over_edge_b")
+    non_overlap_action_summary = _trend_summary(non_overlap_trials, "action_over_b")
+    non_overlap_flow_summary = _trend_summary(non_overlap_trials, "flow_over_b")
+
+    full_center_pass = _passes(all_action_summary) and _passes(all_flow_summary)
+
     print("Trend summaries:")
-    print(
-        f"  all rows            : A/b {_summary_text(_trend_summary(all_trials, 'action_over_b'))}"
-    )
-    print(
-        f"                        F/b {_summary_text(_trend_summary(all_trials, 'flow_over_b'))}"
-    )
-    print(
-        f"                        A/edge {_summary_text(_trend_summary(all_trials, 'action_over_edge_b'))}"
-    )
-    print(
-        f"                        F/edge {_summary_text(_trend_summary(all_trials, 'flow_over_edge_b'))}"
-    )
-    print(
-        f"  non-overlap rows    : A/b {_summary_text(_trend_summary(non_overlap_trials, 'action_over_b'))}"
-    )
-    print(
-        f"                        F/b {_summary_text(_trend_summary(non_overlap_trials, 'flow_over_b'))}"
-    )
+    print(f"  all rows            : A/b {_summary_text(all_action_summary)}")
+    print(f"                        F/b {_summary_text(all_flow_summary)}")
+    print(f"                        A/edge {_summary_text(all_action_edge_summary)}")
+    print(f"                        F/edge {_summary_text(all_flow_edge_summary)}")
+    print(f"  non-overlap rows    : A/b {_summary_text(non_overlap_action_summary)}")
+    print(f"                        F/b {_summary_text(non_overlap_flow_summary)}")
     print()
     print("Interpretation:")
     print(
@@ -275,18 +278,35 @@ def main() -> None:
         "     but the actual center-offset failure is concentrated in the subset where low occupancy has"
     )
     print("     already become source overlap.")
-    print(
-        "  4. On the full sample, `A/b` and `F/b` fail; after removing only the overlap rows, both regain"
-    )
-    print(
-        "     a decreasing trend with actual `b`, while `A/edge` and `F/edge` already pass on the full sample."
-    )
-    print(
-        "  5. So the widened-source `N = 25` holdout failure maps to the existing overlap / occupancy seam,"
-    )
-    print(
-        "     not to a new global breakdown that would justify reopening the denominator search."
-    )
+    if full_center_pass:
+        print(
+            "  4. On the full sample, `A/b` and `F/b` already pass; after removing only the overlap rows,"
+        )
+        print(
+            "     both center-offset trends steepen further, while `A/edge` and `F/edge` already pass on the"
+        )
+        print("     full sample.")
+        print(
+            f"  5. So the widened-source `N = {args.n_layers}` holdout already contains the same overlap /"
+        )
+        print(
+            "     occupancy seam, but on this slice it remains subcritical rather than forcing a global"
+        )
+        print("     trend failure or a reopened denominator search.")
+    else:
+        print(
+            "  4. On the full sample, `A/b` and `F/b` fail; after removing only the overlap rows, both regain"
+        )
+        print(
+            "     a decreasing trend with actual `b`, while `A/edge` and `F/edge` already pass on the full sample."
+        )
+        print(
+            f"  5. So the widened-source `N = {args.n_layers}` holdout failure maps to the existing overlap /"
+        )
+        print(
+            "     occupancy seam, not to a new global breakdown that would justify reopening the denominator"
+        )
+        print("     search.")
 
 
 if __name__ == "__main__":

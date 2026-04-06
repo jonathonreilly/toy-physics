@@ -104,6 +104,7 @@ Read this with:
 
 - [`docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_MASS5_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_MASS5_NOTE.md)
 - [`docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_NOTE.md)
+- [`docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_OVERLAP_SUBCRITICAL_N12_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_OVERLAP_SUBCRITICAL_N12_NOTE.md)
 - [`docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`](/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md)
 - [`scripts/directional_b_overlap_occupancy_bridge_card.py`](/Users/jonreilly/Projects/Physics/scripts/directional_b_overlap_occupancy_bridge_card.py)
 
@@ -111,6 +112,8 @@ Together they now say:
 
 - the old `mass_nodes = 3` transfer was real
 - widening to `mass_nodes = 5` does not kill the geometry-normalized lane
+- the same low-`b` overlap seam is already visible on the shallower `N = 12`
+  slice, but remains subcritical there
 - the `N = 25` holdout failure of `response / b` is not a fresh global
   breakdown
 - it is the overlap-sector effect already anticipated by the `mu` and
