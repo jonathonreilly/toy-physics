@@ -516,8 +516,9 @@ def main() -> None:
     print("SAFE READ")
     print("  - Exact zero control stays exact.")
     print("  - The causal phase lag is portable across the three families and varies with c.")
-    print("  - Static cone-shape and static scheduling proxies can move the phase, but they do not reproduce the same c-dependent portable curve.")
-    print("  - The Shapiro-style phase lag is therefore stronger than static field-shape or static scheduling effects.")
+    print("  - Static cone-shape exactly reproduces the same c-dependent portable curve.")
+    print("  - Static scheduling does not reproduce the curve and stays near-flat.")
+    print("  - The Shapiro-style phase lag is a portable observable, but not a unique discriminator against static field-shape effects.")
 
 
 if __name__ == "__main__":
