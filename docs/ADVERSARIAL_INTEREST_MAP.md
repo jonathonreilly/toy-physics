@@ -33,16 +33,16 @@ The best next steps are the ones that improve both at once.
 
 | category | score | read |
 |---|---:|---|
-| Toy-model mechanism interest | `9.5/10` | high intrinsic curiosity value |
-| Foundations / complex-systems / network-dynamics interest | `9.3/10` | real likely interest in the right subcommunities, now with a clearer architecture portfolio and a stronger exact-lattice causal-field lane |
-| Broad theorist interest | `9.8/10` | still high, now with a larger exact-lattice wavefield escalation that keeps reduction, sign, and near-linear `F~M` while adding a coherent detector-line phase ramp, an independently replayed wide-lattice `h^2+T` far-tail result on `main`, a bounded split-shell generated-family reopening, and a bounded adaptive-readout rescue on the compact object lane |
-| Bridge to known physics | `9.8/10` | improved by the stronger exact-lattice wavefield lane, the independently replayed wide-lattice `h^2+T` distance-law frontier, the retained grown trapping transport plus frontier-bias observables with exact zero-coupling reduction, the split-shell generated-family bridge, and the adaptive readout that preserves `TOWARD` and near-linear `F~M`; it is still capped by the fact that the self-generated field sector remains exact-lattice-heavy and the readout / inertial-response side is not yet fully localized |
+| Toy-model mechanism interest | `9.6/10` | high intrinsic curiosity value, now with a cleaner split between retained carryovers, bounded no-gos, and explicitly reopened dead-end candidates |
+| Foundations / complex-systems / network-dynamics interest | `9.4/10` | real likely interest in the right subcommunities, now with a clearer architecture portfolio, a stronger exact-lattice causal-field lane, and a more disciplined branch-to-main carryover process |
+| Broad theorist interest | `9.9/10` | still high, now with the exact-lattice wavefield mechanism, the narrow exact-lattice complex-action carryover on `main`, its retained grown-row companion with exact reduction and weak-field `F~M = 1.000`, an independently replayed wide-lattice `h^2+T` far-tail result, a bounded split-shell generated-family reopening, and a bounded adaptive-readout rescue on the compact object lane |
+| Bridge to known physics | `9.9/10` | improved by the stronger exact-lattice wavefield lane, the retained exact-lattice complex-action carryover plus retained grown-row companion, the independently replayed wide-lattice `h^2+T` distance-law frontier, the retained grown trapping transport plus frontier-bias observables with exact zero-coupling reduction, the split-shell generated-family bridge, the adaptive readout that preserves `TOWARD` and near-linear `F~M`, and the existing bounded electric-like sign-law foothold; it is still capped by the fact that the self-generated field sector remains exact-lattice-heavy and the readout / inertial-response side is not yet fully localized |
 | Publishable as a careful computational toy-model paper | `10.0/10` | very strong, with bounded replay chains, better reproduction, tighter scope control, exact-lattice Green/self-consistent/transverse companions, and a generated-family support-recovery basin that is honest about still being only a partial rescue |
-| Publishable as a foundational-physics breakthrough claim | `4.5/10` | the moonshot portfolio is a bit stronger and cleaner, with a retained wide-lattice distance-law frontier, retained grown trapping/frontier observables, a bounded split-shell generated-family reopening, and a bounded adaptive-readout rescue, but the project is still too exact-lattice-heavy and too transfer-limited for stronger framing |
-| Likelihood of publication in very top field journals today (`PRL` / `PRX` / `Nature Physics`) | `2.5/10` | still low, but moving: the exact-lattice wavefield lane is stronger, the wide-lattice `h^2+T` far-tail replay is independently retained on `main`, the grown family now has bounded trapping/frontier observables with exact reduction, and two formerly hard-looking closures have softened into bounded bridges; even so, the exact-to-generated gap and the missing propagated-field / inertial-closure result still block serious top-journal confidence |
-| Ready for top-tier mainstream physics claims | `3.1/10` | improved credibility again, especially on the distance-law, trapping/frontier, and detector-architecture sides, but still far below the required bar |
-| Field-shifting theory program | `7.9/10` | somewhat stronger, because the moonshot branch now has a larger exact-lattice wavefield control with a cleaner observable, a retained wide-lattice distance-law frontier on `main`, retained grown trapping/frontier observables, a bounded split-shell generated-family reopening, and an adaptive-readout bridge that keeps the weak-field law while reducing support materially |
-| Landmark foundational breakthrough | `4.0/10` | current evidence base is improving, but still too branch-sensitive and too exact-lattice-heavy for stronger framing |
+| Publishable as a foundational-physics breakthrough claim | `4.9/10` | the moonshot portfolio is a bit stronger and cleaner, with a retained exact-lattice complex-action carryover, a retained grown-row complex-action companion, a retained wide-lattice distance-law frontier, retained grown trapping/frontier observables, a bounded split-shell generated-family reopening, and a bounded adaptive-readout rescue, but the project is still too exact-lattice-heavy and too transfer-limited for stronger framing |
+| Likelihood of publication in very top field journals today (`PRL` / `PRX` / `Nature Physics`) | `2.9/10` | still low, but moving: the exact-lattice wavefield lane is stronger, complex action now carries onto `main` in both exact-lattice and retained grown-row narrow forms, the wide-lattice `h^2+T` far-tail replay is independently retained, and the branch triage is much more honest; even so, the exact-to-generated gap and the missing propagated-field / inertial-closure result still block serious top-journal confidence |
+| Ready for top-tier mainstream physics claims | `3.5/10` | improved credibility again, especially on the distance-law, trapping/frontier, exact-to-grown carryover, and branch-audit discipline sides, but still far below the required bar |
+| Field-shifting theory program | `8.1/10` | somewhat stronger, because the moonshot branch now has a larger exact-lattice wavefield control with a cleaner observable, a retained exact-lattice complex-action carryover plus grown-row companion, a retained wide-lattice distance-law frontier on `main`, retained grown trapping/frontier observables, a bounded split-shell generated-family reopening, and an adaptive-readout bridge that keeps the weak-field law while reducing support materially |
+| Landmark foundational breakthrough | `4.4/10` | current evidence base is improving and cleaner than before, but it is still too exact-lattice-heavy and too transfer-limited for stronger framing |
 | Nobel-scale breakthrough | `0.4/10` | not a realistic present-tense read |
 
 ## Why this map is lower than the old internal map
@@ -111,6 +111,26 @@ The main upward pressures since the first adversarial cut are:
   package replays stay positive on the same family, which upgrades the current
   Gate B positive from a coarse-family result to a one-step refinement-stable
   replay
+- the Claude-branch audit is now frozen directly on `main`, which helps in two
+  ways at once:
+  it promotes one real branch carryover (exact-lattice complex action) while
+  explicitly demoting the overclaimed parts of the branch strong-field story
+- the exact-lattice complex-action carryover now gives the repo one more
+  review-safe mechanism-adjacent lane:
+  exact `gamma = 0` reduction, machine-clean Born on the frozen field, and a
+  narrow `TOWARD -> AWAY` crossover on the retained exact family
+- that same complex-action lane now has a retained grown-row companion too:
+  exact `gamma = 0` reduction survives, the Born proxy stays machine-clean,
+  weak-field `F~M` stays at `1.000`, and the narrow `TOWARD -> AWAY`
+  crossover survives on the retained grown row without any geometry-generic
+  language
+- the dead-end reopen audit also matters a little here:
+  it does not add new physics, but it makes the program look more self-correcting
+  by distinguishing truly closed routes from lanes that should only be reopened
+  under narrower conditions
+- the retained electric sign-law note is still bounded, but it now reads as a
+  meaningful extra bridge-to-known-physics foothold rather than a forgotten side
+  result
 - the new sector-stencil `h = 0.25` probe now stays `TOWARD` with
   `F~M = 1.00`, which makes the geometry-only forward-structure candidate
   materially stronger than the earlier KNN-style controls
