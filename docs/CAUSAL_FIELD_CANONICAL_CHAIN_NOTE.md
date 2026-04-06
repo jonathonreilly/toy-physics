@@ -1,81 +1,97 @@
 # Causal Field: Canonical Retained Chain
 
-**Date:** 2026-04-06
-**Status:** retained package — six observables, honest mimic control
+**Date:** 2026-04-06 (updated)
+**Status:** retained package — hierarchy explicit, lab bridge primary
 
-## What this chain contains
+## Observable hierarchy
 
-The causal propagating field lane has six retained observables, three
-honest controls, and one honest mimic correction. All are portable
-across three independent grown families.
+### Tier 1: Shapiro phase lag (strongest, unique causal discriminator)
 
-## Retained observables
+The c-dependent phase lag is the **primary lab-facing observable**. No static
+field of any shape reproduces a phase that depends on c.
 
-### 1. Shapiro phase delay (primary lab-facing observable)
-- Phase lag at c=0.5: +0.062 rad, scaling as s^1.000 (linear in mass)
-- Portable: 0.4% agreement across 3 families
-- Chromatic: proportional to k (wavenumber)
-- NO static field reproduces a c-dependent phase shift
-- **This is the strongest unique causal discriminator**
+| c | Phase lag (rad) | 3-family agreement |
+| ---: | ---: | ---: |
+| inst | 0.000 | exact |
+| 2.0 | +0.040 | 0.2% |
+| 1.0 | +0.050 | 0.4% |
+| 0.5 | +0.062 | 0.3% |
+| 0.25 | +0.068 | 0.1% |
 
-### 2. Gravitomagnetic correction
-- Moving source produces antisymmetric phase shift: +0.003 at v=+0.2
-- Portable: 3 families agree within 12%
-- Antisymmetry residual < 10% of signal
+Scaling laws:
+- **phase ~ s^1.000** (exactly linear in mass)
+- **phase ~ k** (chromatic: proportional to wavenumber)
+- **phase decreases with b** (weaker at larger impact parameter)
 
-### 3. Causal-escape window
-- At eta=20, s=0.004: inst trapped (0.39), dyn escapes (0.97)
-- Portable: 3 families, 0.2% agreement
-- **BUT**: exposure-matched static mimic ALSO escapes (0.987)
-- The escape mechanism is average-exposure reduction, not cone geometry
+Null: c = inst → phase = 0.000 by construction.
 
-### 4. Boundary law
-- eta_max(c) where dyn drops to 0.85: scales as ~1/c^2
-- S-dependence: protection ratio 1.3 (s=0.001) to 33 (s=0.016)
+### Tier 2: Gravitomagnetic correction (real, portable, antisymmetric)
 
-### 5. Causal cone deflection ratio
-- Dynamic(c=0.5)/instantaneous = 0.45 (stable across families)
-- Theoretical prediction (NL-gl)/NL = 0.667 for forward-only
+Moving source produces antisymmetric phase shift: delta(+v) ≈ -delta(-v).
 
-### 6. Complex action coexistence
-- Shapiro delay amplified 10% by gamma=0.5 (complex action)
-- The two observables are weakly coupled but independent
+| v | Phase correction | 3-family agreement |
+| ---: | ---: | ---: |
+| +0.2 | +0.003 | 12% |
+| -0.2 | -0.003 | 12% |
 
-## Honest controls
+Antisymmetry residual < 10% of signal.
 
-1. **Zero field**: all observables = 0 or 1.0 (exact null)
-2. **Seed robustness**: 4 seeds agree to 2%
-3. **Family portability**: 3 families agree to 0.4% (Shapiro)
+### Tier 3: Trapping escape (real regime, exposure-reduction mechanism)
 
-## Honest mimic correction
+At eta=20, s=0.004: inst trapped (0.39), dyn escapes (0.97).
+Portable across 3 families to 0.2%.
 
-The exposure-matched static proxy (uniform per-layer field with same
-average as the dynamic cone) reproduces the causal-escape window.
-The escape mechanism is quantitative exposure reduction, not qualitative
-cone geometry.
+**However**: exposure-matched static proxy ALSO escapes (0.987).
+The mechanism is average-exposure reduction, not irreducible cone geometry.
+The boundary law (eta_max ~ 1/c²) is real but not uniquely causal.
 
-The Shapiro phase lag is NOT reproducible by any static field. It remains
-the strongest unique causal discriminator.
+This is a good retained result. It is NOT the primary discriminator.
 
 ## Lab bridge
 
-The Shapiro phase delay is the most experimentally accessible observable:
-- It's a phase shift proportional to GM
-- It depends on the field propagation speed c
-- It could be measured in a matter-wave interferometer where the two
-  paths differ in gravitational exposure
-- The model predicts: phase = k * s * geometric_factor / c_function
+The Shapiro phase lag is the canonical lab-facing prediction because:
 
-The diamond sensor / tabletop gravity experiment lane (Codex's brainstorm)
-could target this specific observable.
+1. **Observable**: phase shift in a matter-wave interferometer
+2. **Null**: drive off, source removed, or source at large distance
+3. **Scaling with s (mass)**: phase ∝ s^1.000 — testable by varying source mass
+4. **Dependence on separation**: phase decreases with b — testable by varying
+   source-detector distance
+5. **Chromatic**: phase ∝ k — testable by varying beam energy
+6. **c-dependence**: if the field propagates at finite c, the phase depends on c
 
-## Artifact chain
+### What is still missing for real lab numbers
+
+- Transfer coefficient: proxy phase → NV readout units
+- Lab noise floor in those units
+- Geometry-specific coupling factor for a particular setup
+- Signal budget: whether the predicted phase exceeds detector sensitivity
+- Systematic budget: heating, strain, instrument lag controls
+
+### Existing diamond/NV bridge notes on main
+
+- `SHAPIRO_DIAMOND_BRIDGE_NOTE.md` — proxy bridge language
+- `SHAPIRO_DIAMOND_FREQUENCY_BRIDGE_NOTE.md` — chromatic bridge
+- `DIAMOND_ABSOLUTE_UNIT_BRIDGE_NOTE.md` — absolute vs relative calibration
+- `DIAMOND_NV_PHASE_RAMP_SIGNAL_BUDGET_NOTE.md` — signal budget
+- `DIAMOND_SENSOR_PROTOCOL_NOTE.md` — measurement protocol
+- `MOONSHOT_DIAMOND_SENSOR_BRAINSTORM_NOTE.md` — experimental design
+
+## Full artifact inventory
 
 | Observable | Script | Log | Note |
 | --- | --- | --- | --- |
 | Shapiro delay | shapiro_delay_portable.py | 2026-04-06-shapiro-delay-portable.txt | SHAPIRO_DELAY_NOTE.md |
+| Shapiro scaling | (inline, commit 1730b52) | — | SHAPIRO_SCALING_NOTE.md |
 | Gravitomagnetic | gravitomagnetic_portable.py | 2026-04-06-gravitomagnetic-portable.txt | GRAVITOMAGNETIC_NOTE.md |
 | Causal escape | causal_escape_window.py | — | CAUSAL_ESCAPE_WINDOW_NOTE.md |
 | Boundary law | causal_escape_boundary_law.py | — | (in escape note) |
 | Causal cone | causal_propagating_field.py | — | CAUSAL_PROPAGATING_FIELD_NOTE.md |
 | Kernel vs gravity | complex_action_kernel_vs_gravity.py | 2026-04-06-kernel-vs-gravity.txt | KERNEL_VS_GRAVITY_NOTE.md |
+
+## What should NOT be overclaimed
+
+- The trapping escape is NOT uniquely causal (static mimic works)
+- The Shapiro delay IS uniquely causal (no static mimic)
+- The gravitomagnetic correction needs more seeds for the 12% spread
+- The lab bridge is relative, not absolute (no transfer coefficient)
+- The cone speed c is a free parameter (not derived from the model)
