@@ -27,6 +27,99 @@ That is only useful if each branch still stands on its own:
 - each branch needs its own script / log / note chain
 - later unification only counts if the individual lanes are already retained
 
+## Two-Day Moonshot Queue
+
+These are the highest-upside no-holds-barred pushes for the next two days of
+Claude time. They are not routine portability work. They are the specific
+lanes most likely to move the top-end program goals if they land.
+
+1. **Truly unique causal discriminator**
+   - Target:
+     - one causal-field observable that survives every static mimic we can
+       construct, including exposure-matched and cone-shaped static controls
+   - Fast falsifier:
+     - every candidate collapses to a matched static proxy once exposure and
+       spatial envelope are controlled
+   - Why it matters:
+     - this is the clearest route from “portable internal dynamics” to
+       “irreducible causal mechanism”
+
+2. **Persistent inertial object**
+   - Target:
+     - one persistent or quasi-persistent object whose gravitational response
+       and inertial response are both measurable on the same family
+   - Fast falsifier:
+     - every candidate remains only a broad steering surrogate and never
+       separates persistence from ordinary transport
+   - Why it matters:
+     - this is still the largest missing physics ingredient in the current
+       weak-field story
+
+3. **Real vector / magnetic sector**
+   - Target:
+     - one current-current, circulation-like, or handedness-sensitive effect
+       that does not reduce to scalar exposure
+   - Fast falsifier:
+     - all moving-source or signed-source candidates collapse back to the
+       existing scalar sign-law or exposure-reduction stories
+   - Why it matters:
+     - one real vector branch would strengthen the bridge-to-known-physics
+       story more than several additional scalar-family wins
+
+4. **Self-consistent propagating field**
+   - Target:
+     - replace the imposed causal cone with an actual field-evolution rule and
+       recover at least one retained Shapiro / moving-source / trapping
+       observable with the correct weak-field reduction
+   - Fast falsifier:
+     - every self-consistent update rule destroys the retained weak-field
+       baseline or fails to reproduce the existing causal-field package
+   - Why it matters:
+     - this is the largest theory-side upgrade available in the causal lane
+
+5. **Compact universality classifier / derivation**
+   - Target:
+     - one compact classifier or derivation explaining the observed hierarchy:
+       broad portable weak-field package -> stricter distance tail -> narrower
+       complex-action branch -> bounded causal-field sector
+   - Fast falsifier:
+     - the hierarchy remains purely empirical with no compact predictor that
+       survives contact with the retained notes
+   - Why it matters:
+     - this is the most direct way to raise the analytical-compression goal
+       rather than just adding more cards
+
+6. **Lab-discriminating prediction with numbers**
+   - Target:
+     - one experimental prediction card with explicit source geometry,
+       normalized observable, signal threshold, and a concrete criterion for
+       signal over null
+   - Fast falsifier:
+     - every candidate depends on an unconstrained transfer coefficient or
+       collapses under realistic noise-floor assumptions
+   - Why it matters:
+     - this is the shortest path from strong internal science to an external
+       validation program
+
+7. **Literature backmatch after the prediction is fixed**
+   - Target:
+     - one already-published experimental outcome or analog platform that lines
+       up with a retained prediction in its scaling/null structure
+   - Fast falsifier:
+     - the apparent match disappears once the exact nulls, geometry, or
+       scaling law are applied strictly
+   - Why it matters:
+     - this is a legitimate shortcut for external support, though it never
+       replaces prospective validation
+
+Operational rule for this queue:
+
+- do not open a moonshot if it does not clearly attack one of the seven items
+  above
+- prefer one decisive observable plus one strongest falsifier over broad
+  sweeps
+- honest no-gos count if they close a tempting but weak line of thought
+
 For the current program, the best such moonshot is no longer "black holes,
 etc." in general. The branch is now better split into:
 
