@@ -67,6 +67,20 @@ For publication: this is analogous to extra-dimensional gravity models
 due to the extra-dimensional volume factor. Here, the "extra" steepening
 comes from the kernel, not from extra dimensions.
 
-Whether this is experimentally distinguishable from Newton depends on
-the physical scale. At macroscopic distances, any deviation from 1/b
-is tightly constrained by solar system tests.
+## Grown geometry result (best measurement)
+
+On grown geometry (NL=40, W=12, 3 seeds, source centered):
+- alpha(all b, 5-10) = **-0.96** — nearest to Newtonian of any test
+- The irregular node positions smooth out wave-optics oscillations
+  that steepen the exponent on regular lattices (-1.1 to -1.2)
+- All 5 impact parameters TOWARD, 3 seeds each
+
+### Artifact chain
+- [`scripts/distance_law_grown_geometry.py`](../scripts/distance_law_grown_geometry.py)
+- [`logs/2026-04-06-distance-law-grown-geometry.txt`](../logs/2026-04-06-distance-law-grown-geometry.txt)
+
+## Honest conclusion
+
+The model produces a distance law of approximately 1/b with calculable
+wave-optics corrections. The grown geometry gives the cleanest measurement
+(-0.96) because it removes the regular lattice interference fringes.
