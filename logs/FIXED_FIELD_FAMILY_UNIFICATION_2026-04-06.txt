@@ -1,0 +1,32 @@
+================================================================================================
+FIXED-FIELD FAMILY UNIFICATION
+  same retained grown row, same connectivity family, exact zero/neutral controls
+================================================================================================
+h=0.5, NL=25, W=8, drift=0.2, restore=0.7, seeds=[0]
+source_z=3.0, offset=1.0, sign_strength=5e-05, complex_strength=0.1
+
+SIGN-LAW ON THE SAME RETAINED GROWN ROW
+                  metric           mean
+------------------------------------------
+                    zero  +0.000000e+00
+                    plus  -1.594422e-04
+                   minus  +1.594790e-04
+                 neutral  +0.000000e+00
+                  double  -3.188474e-04
+                exponent  +9.998328e-01
+
+COMPLEX-ACTION ON THE SAME RETAINED GROWN ROW
+                  metric           mean
+------------------------------------------
+  gamma=0 baseline defl.  +2.460475e-01
+      delta at gamma=0.2  -7.003685e-02
+      delta at gamma=0.5  -4.993079e-01
+     escape at gamma=0.2  +1.053490e+00
+     escape at gamma=0.5  +4.120507e-01
+               crossover        bounded
+
+UNIFICATION READ
+  The same retained grown row supports the signed-source companion and
+  the exact gamma=0 complex-action companion under the same connectivity
+  family, with exact zero/neutral controls intact.
+  This is a compact family-unification positive, not a geometry-generic theorem.
