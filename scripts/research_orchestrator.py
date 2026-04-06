@@ -30,6 +30,7 @@ ALLOWED_LANE_STATUSES = {
     "active",
     "retained",
     "closure",
+    "duplicate",
     "paused",
     "dropped",
 }

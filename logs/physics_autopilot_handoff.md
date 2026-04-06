@@ -1,81 +1,131 @@
 # Physics Autopilot Handoff
 
-## 2026-04-06 02:14 America/New_York
+## 2026-04-06 10:24 America/New_York
 
 ### Seam class
-- no detached `physics-science` child was active during this loop
-- this loop used one bounded repo-facing promotion step rather than launching a
-  new long-running child
-- no detached `physics-science` child remains active at close
+- no detached `physics-science` child was launched from the main thread
+- this loop stayed on orchestrator reconciliation plus one bounded integrity
+  fix
+- the cooperative `physics-science` lock should be released at close by the
+  main thread if no further local child work is left active
 
 ### What this loop did
-- passed the duplicate-run guard and acquired the cooperative
-  `physics-science` lock before reading shared state
-- reread the tracked work log, latest handoff, and automation memory in
-  protocol order
-- reconciled canonical git state in `/Users/jonreilly/Projects/Physics`:
-  - `git status --short --branch` reported `## main...origin/main [ahead 2]`
-    plus existing unrelated dirty files and untracked sidecar drafts
-  - `git rev-list --left-right --count origin/main...main` returned `0 2`
-  - `git log --oneline --decorate -n 8` showed local head `48b9a7b`
-- reran the managed push helper before new science exactly as required:
-  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
-  - result: `status=failed`, `failure_kind=dns_failure`, `ahead=2`,
-    `behind=0`, `attempts_used=5`
-- launched exactly five disjoint sidecar workers for the requested next-set
-  lanes, then harvested only the strongest finished retained result
-- promoted the bounded grown-row complex-action companion into the top-level
-  summary surfaces:
-  - exact `gamma = 0` reduction survives on the retained moderate-drift Gate B
-    row
-  - grown Born proxy stays machine-clean at `|I3|/P = 1.456e-15`
-  - weak-field `F~M` stays at `1.000`
-  - the `TOWARD -> AWAY` crossover survives on that checked row
-- sidecar closeouts tightened other lanes without changing the top-line claim:
-  - self-gravity/backreaction closed as a bounded no-go under strict reduction,
-    convergence, and Born controls
-  - growing-graph dynamic propagation stayed a bounded no-go while the
-    expansion proxy remained the retained observable
-- closed the two still-running sidecar workers instead of letting them overlap
-  into the next loop
+- reran protocol-style reconciliation for the science automation:
+  - `automation_run_guard.py preflight --automation-id physics-autopilot`
+    returned `status=proceed`
+  - `automation_lock.py status` reported the lock free
+  - `automation_lock.py acquire --owner physics-science --purpose "science step" --ttl-hours 2`
+    succeeded for the current thread
+- reconciled canonical git in
+  [`/Users/jonreilly/Projects/Physics`](/Users/jonreilly/Projects/Physics):
+  - `git status --short --branch` reported `## main...origin/main` with
+    existing unrelated draft dirt
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 8` showed head `84b9673`
+  - `automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+    failed once with `status=failed`, `failure_kind=dns_failure`,
+    `ahead=3`, `behind=0`
+- confirmed the canonical orchestrator state at
+  [`/Users/jonreilly/.codex/state/physics_research_orchestrator_state.json`](/Users/jonreilly/.codex/state/physics_research_orchestrator_state.json)
+  is still readable but not writable:
+  - `research_orchestrator.py ... open-cycle` on the canonical path still
+    fails with `Operation not permitted` on the `.tmp` write
+- applied the bounded repo-facing integrity fix:
+  - [`/Users/jonreilly/Projects/Physics/scripts/research_orchestrator.py`](/Users/jonreilly/Projects/Physics/scripts/research_orchestrator.py)
+    now supports `duplicate` as a first-class lane status
+  - `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/research_orchestrator.py`
+    passed
+- used a writable mirror at
+  [`/tmp/physics_research_orchestrator_state_mirror.json`](/tmp/physics_research_orchestrator_state_mirror.json)
+  to drive the helper anyway:
+  - closed cycle `5` with the intended lane statuses:
+    - `impact-parameter-portability -> closure`
+    - `moving-source-cross-family -> duplicate`
+    - `diamond-signal-budget-hardening -> retained`
+    - `universality-hierarchy-classifier -> retained`
+    - `vector-magnetic-extension -> retained`
+  - opened cycle `6` with five fresh lanes:
+    - `multipole-cross-family-portability`
+    - `diamond-source-geometry-card`
+    - `diamond-noise-floor-bridge`
+    - `relativistic-closure-boundary`
+    - `persistent-object-joint-scout`
+  - spawned exactly five disjoint sidecar agents for those lanes
+
+### Returned lane results so far
+- `diamond-noise-floor-bridge`
+  - mirror status: `duplicate`
+  - strongest read: the narrow noise-floor bridge already exists across
+    [`/Users/jonreilly/Projects/Physics/docs/DIAMOND_SIGNAL_BUDGET_HARDENING_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/DIAMOND_SIGNAL_BUDGET_HARDENING_NOTE.md),
+    [`/Users/jonreilly/Projects/Physics/docs/DIAMOND_NV_PHASE_RAMP_SIGNAL_BUDGET_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/DIAMOND_NV_PHASE_RAMP_SIGNAL_BUDGET_NOTE.md),
+    and
+    [`/Users/jonreilly/Projects/Physics/docs/TESTABLE_PREDICTIONS_MAP_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/TESTABLE_PREDICTIONS_MAP_NOTE.md)
+  - replacement pending lane added:
+    `diamond-predictions-map-crosslink`
+- `relativistic-closure-boundary`
+  - mirror status: `closure`
+  - strongest read: bounded causal and moving-source positives remain real,
+    but the retained claim surface still stops at a topological causal bound
+    plus narrow proxies, not Lorentz / GR / full EM closure
+  - replacement pending lane added:
+    `transverse-pocket-bottleneck-diagnosis`
+- `multipole-cross-family-portability`
+  - mirror status: `retained`
+  - strongest read: a quadrupole-width channel survives on one second
+    retained family with exact null controls, but the stronger ordered-family
+    monotonic-in-`a` width law does not transfer
+  - replacement pending lane added:
+    `multipole-monotonicity-boundary`
+- `persistent-object-joint-scout`
+  - mirror status: still `active`
+  - strongest read so far: the compact `top-3` updater plus the v1 adaptive
+    contour remain the narrowest joint object/readout bridge; the recommended
+    next scout is a second-setup replay rather than broader self-maintaining
+    language
+- `multipole-cross-family-portability`
+  - result folded into mirror state as a narrow retained portability note
+- `diamond-source-geometry-card`
+  - sidecar launched; result not yet folded into mirror state
+  - strongest read so far: the source anchor is frozen, but the target side is
+    only frozen as a bounded readout/control card; the combined source-target
+    card remains active until it can be written without inventing lab-specific
+    geometry or noise realism
 
 ### Current state
-- no detached child remains active
-- the strongest newly surfaced result is now the bounded grown-row
-  complex-action companion:
-  - exact `gamma = 0` reduction holds
-  - grown Born proxy `|I3|/P = 1.456e-15`
-  - weak-field `F~M = 1.000`
-  - `TOWARD -> AWAY` crossover survives on the retained row
-- this is explicitly bounded:
-  it is one retained grown-row transfer, not a geometry-generic, continuum, or
-  self-gravity promotion
-- canonical git now reports `main` ahead of `origin/main` by two commits:
-  - `48b9a7b` (`docs: freeze wider h0125 bridge no-go`)
-  - `3a0d1cb` (`docs: record overnight retainability triage`)
-- remaining dirty worktree state is outside this closed lane:
-  - modified `docs/CLAUDE_BRANCH_RETAINABILITY_NOTE.md`
-  - modified `README.md`
-  - modified `docs/START_HERE.md`
-  - modified `scripts/complex_action_grown_geometry.py`
-  - modified `logs/physics_autopilot_handoff.md`
-  - existing untracked notes / scripts on other lanes, including fresh
-    self-gravity and growing-graph audits
+- the canonical orchestrator JSON is still stale because sandbox policy blocks
+  writes outside the writable roots
+- the writable mirror now holds the intended live frontier as:
+  - active lanes:
+    - `diamond-source-geometry-card`
+    - `persistent-object-joint-scout`
+  - pending reserve lanes:
+    - `diamond-predictions-map-crosslink`
+    - `transverse-pocket-bottleneck-diagnosis`
+    - `multipole-monotonicity-boundary`
+- this keeps the queue saturated as `2` active plus `3` pending after the full
+  five-agent cycle-6 batch
 
-### Strongest confirmed conclusion
-- the strongest finished retained result available this loop is the bounded
-  grown-row complex-action companion, not a new wider-lattice or self-gravity
-  reopening
-- review-safe retained wording:
-  on the retained moderate-drift Gate B row, exact `gamma = 0` reduction
-  holds, the grown Born proxy stays machine-clean, weak-field `F~M` stays at
-  `1.000`, and the `TOWARD -> AWAY` crossover survives
-  this is a bounded grown-row transfer only
+### Strongest confirmed conclusions
+- duplicate lane handling belongs in the orchestrator itself; recording it only
+  in prose was a real state-management gap
+- the diamond noise-floor bridge is already covered by existing notes and is
+  safer as `duplicate` than as a new retained lane
+- the stronger relativistic closure claim is now a diagnosed boundary, not an
+  open positive
+- the multipole lane now has one narrow cross-family retained portability
+  positive, but only as an existence claim rather than monotonic branch
+  portability
 
 ### Exact next step
-- rerun the managed push helper first on the next loop until the ahead-2 state
-  clears
-- once the branch is synced, return to the unfinished wider `h = 0.125`
-  scalable replay and outside-exact-lattice grown-transfer lanes, harvesting
-  exactly one bounded result without reopening the already-closed
-  self-gravity or dynamic-propagation no-gos
+- if the next run can write the canonical orchestrator file, replay the full
+  mirrored cycle-5 closeout and cycle-6 open there first
+- then fold in at most one further cycle-6 result from:
+  - `diamond-source-geometry-card`
+  - `persistent-object-joint-scout`
+- if no new result is mature enough, keep the frontier at `2` active plus `3`
+  pending and avoid a second repo-facing promotion
+
+### First concrete action
+- read the remaining active `diamond-source-geometry-card` and
+  `persistent-object-joint-scout` lanes and decide whether either one is
+  strong enough for a bounded retained/closure update in the mirror

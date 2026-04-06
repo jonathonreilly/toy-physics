@@ -1,3 +1,96 @@
+## 2026-04-06 — Enabled duplicate lane status in the research orchestrator and reopened cycle 6 in a writable mirror
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed in
+  protocol order at loop start
+- no detached `physics-science` child was active in the latest handoff, so
+  this loop stayed on shared-state reconciliation plus one bounded integrity
+  fix
+- canonical git in `/Users/jonreilly/Projects/Physics` reconciled before the
+  integrity work:
+  - `git status --short --branch` reported `## main...origin/main` plus
+    existing unrelated draft dirt
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 8` showed local head `84b9673`
+- the required managed push check before science failed once with DNS:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - result: `status=failed`, `failure_kind=dns_failure`, `ahead=3`,
+    `behind=0`, `attempts_used=5`
+- the canonical orchestrator state at
+  `/Users/jonreilly/.codex/state/physics_research_orchestrator_state.json`
+  remained readable but not writable under the current sandbox:
+  - `research_orchestrator.py ... open-cycle` still failed on the canonical
+    path with `Operation not permitted` for the `.tmp` file under
+    `/Users/jonreilly/.codex/state`
+- the bounded repo-facing step this loop was an integrity fix:
+  - `/Users/jonreilly/Projects/Physics/scripts/research_orchestrator.py`
+    now accepts `duplicate` as a first-class lane status
+  - `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/research_orchestrator.py`
+    passed cleanly
+- using a writable mirror at
+  `/tmp/physics_research_orchestrator_state_mirror.json`, this loop:
+  - reconciled cycle `5` as:
+    - `impact-parameter-portability -> closure`
+    - `moving-source-cross-family -> duplicate`
+    - `diamond-signal-budget-hardening -> retained`
+    - `universality-hierarchy-classifier -> retained`
+    - `vector-magnetic-extension -> retained`
+  - opened cycle `6` with five fresh lanes
+  - spawned exactly five disjoint sidecar agents for those lanes
+  - recorded three cycle-6 returns without widening the repo-facing step:
+    - `diamond-noise-floor-bridge -> duplicate`
+    - `relativistic-closure-boundary -> closure`
+    - `multipole-cross-family-portability -> retained`
+  - kept the queue full after those returns as `2` active lanes plus `3`
+    pending replacements
+
+### What changed
+- fixed the orchestrator/helper mismatch that prevented duplicate lanes from
+  being recorded faithfully through the CLI
+- reopened the next saturated frontier in the writable mirror:
+  - active:
+    - `diamond-source-geometry-card`
+    - `persistent-object-joint-scout`
+  - pending:
+    - `diamond-predictions-map-crosslink`
+    - `transverse-pocket-bottleneck-diagnosis`
+    - `multipole-monotonicity-boundary`
+- the multipole sidecar returned a narrow retained portability result:
+  exact null controls and a quadrupole-width channel survive on one second
+  retained family, but the stronger ordered-family monotonic-in-`a` width law
+  does not transfer
+- the persistent-object sidecar stayed active rather than closing early:
+  the current best joint architecture is still the compact `top-3` updater
+  plus the v1 adaptive contour, and the narrow next scout is a second-setup
+  replay rather than broader self-maintaining-object language
+
+### Strongest confirmed conclusion
+- duplicate/closure needs to be part of the orchestrator state machine:
+  otherwise the worker cannot record returned lane outcomes faithfully without
+  overloading `closure` or `dropped`
+- until the canonical JSON becomes writable again, handoff plus automation
+  memory remain the authoritative bridge for intended cycle transitions
+- after the full sidecar batch landed, the frontier stayed saturated as
+  `2` active lanes plus `3` pending reserves, which is the narrowest honest
+  state to hand to the next loop
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/Projects/Physics/scripts/research_orchestrator.py`
+
+### Exact next step
+- if the next loop can write the canonical orchestrator state, replay this
+  loop's mirrored cycle-5 updates and cycle-6 open there first, then fold in
+  at most one further cycle-6 result among:
+  - `diamond-source-geometry-card`
+  - `persistent-object-joint-scout`
+
+### First concrete action
+- inspect the remaining active diamond-source and persistent-object lanes; if
+  neither matures beyond draft, keep cycle `6` at `2` active plus `3` pending
+  and do not promote another repo-facing result yet
+
 ## 2026-04-06 — Closed the sixth-family complex-action companion lane as a diagnosed boundary
 
 ### Current state
@@ -14,6 +107,12 @@
 - the required managed push check before science reported a clean sync:
   - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
   - result: `status=nothing_to_push`, `ahead=0`, `behind=0`
+- harvested closure commit: `7dcd6fa`
+  (`docs: close sixth-family complex lane`)
+- the required managed push at loop end failed once with DNS:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - result: `status=failed`, `failure_kind=dns_failure`, `ahead=1`,
+    `behind=0`, `attempts_used=5`
 - the canonical orchestrator state at
   `/Users/jonreilly/.codex/state/physics_research_orchestrator_state.json`
   was readable but not writable under the current sandbox, so this loop used
