@@ -29,6 +29,14 @@ frontier. The right reading is:
 
 The best next steps are the ones that improve both at once.
 
+One important update since the last score change:
+
+- the Claude-side wide-family `h = 0.125` bridge now looks like the clearest
+  reopened continuum candidate
+- but it is **not counted in the scores below yet**
+- it only moves the official map if it lands with a proper retained
+  script/log/note chain on `main` or a clean local replay
+
 ## Current adversarial map
 
 | category | score | read |
