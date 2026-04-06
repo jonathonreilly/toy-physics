@@ -103,85 +103,54 @@ Important updates since the last score change:
 | Landmark foundational breakthrough | `6.0/10` | the retained evidence is now broad enough to make a serious foundational splash plausible if the analytical and experimental gaps tighten, but it is still not at the level where outsiders would feel forced without further compression and verification |
 | Nobel-scale breakthrough | `0.5/10` | still not a realistic present-tense read, but the path is now easier to imagine because the program has moved from isolated numerical wins toward a portable mechanism class with clear experimental endgame hooks |
 
-## Nobel-Scale Path: Major Goals And Current Status
+## Nobel-Scale Breakdown
 
-This is the concrete path hidden behind the low Nobel-scale score.
+These are the major goals hidden inside the low `0.5/10` Nobel-scale score.
 
-### Goal 1. Broad universality beyond the current family class
+- `6.5/10` Broad universality beyond the current family class
+  - Current: the weak-field package and distance tail now survive on three
+    independent grown families, and several additional families/boundaries
+    sharpen the structure
+  - Missing: a wider universality class beyond the current dense structured
+    family, or a theorem / near-theorem explaining why the present class works
 
-- Current status:
-  - **major progress**
-  - the weak-field package and distance tail now survive on three independent
-    grown families
-  - several additional families and boundary pockets sharpen the structure
-- Still missing:
-  - a wider universality class beyond the current dense structured family
-  - or a theorem / near-theorem explaining why the current class works
+- `2.0/10` A compact underlying principle, not just strong numerics
+  - Current: the repo now shows a nested hierarchy
+    `portable weak-field package -> stricter distance tail -> narrower complex-action branch`
+  - Missing: one law-level derivation or classifier that makes this feel
+    forced rather than curated
 
-### Goal 2. A compact underlying principle, not just strong numerics
+- `3.5/10` Beyond-static physics that also looks portable
+  - Current: retained narrow positives now exist for impact-parameter
+    deflection, moving-source directional bias, and quadrupole-like
+    tidal/width response
+  - Missing: portability of those effects across more than one family, or a
+    stronger dynamic/vector sector beyond the current scalar core
 
-- Current status:
-  - **still the biggest theory gap**
-  - the repo now has a nested hierarchy:
-    broad portable weak-field package -> stricter distance tail -> narrower
-    complex-action branch
-- Still missing:
-  - one law-level derivation or classifier that makes this feel forced rather
-    than curated
-
-### Goal 3. Beyond-static physics that also looks portable
-
-- Current status:
-  - **early real progress**
-  - retained narrow positives now exist for:
-    - impact-parameter deflection
-    - moving-source directional bias
-    - quadrupole-like tidal/width response
-- Still missing:
-  - portability of those effects across more than one family
-  - or a stronger dynamic/vector sector beyond the current scalar core
-
-### Goal 4. A true inertial-object / persistent-mass sector
-
-- Current status:
-  - **still open**
-  - amplitude-level equivalence and broad-surrogate steering are retained
-  - the persistent inertial-object lane just closed again as a diagnosed
-    broad-surrogate limit
-- Still missing:
-  - one object class whose persistence and inertial response are both
+- `1.5/10` A true inertial-object / persistent-mass sector
+  - Current: amplitude-level equivalence and broad-surrogate steering are
+    retained, but the persistent inertial-object lane just closed again as a
+    diagnosed broad-surrogate limit
+  - Missing: one object class whose persistence and inertial response are both
     measurable on the same family
 
-### Goal 5. Stronger bridge to known physics without inflation
+- `4.5/10` Stronger bridge to known physics without inflation
+  - Current: weak-field gravity-like response, scalar sign-law
+    electrostatics, moving-source bias, and tidal structure now make the
+    bridge much broader
+  - Missing: any real vector/magnetic sector, stronger relativistic closure,
+    and a clean mainstream-facing compression of what is and is not claimed
 
-- Current status:
-  - **good but incomplete**
-  - weak-field gravity-like response, scalar sign-law “electrostatics,”
-    moving-source bias, and tidal structure now make the bridge much broader
-- Still missing:
-  - any real vector/magnetic sector
-  - stronger relativistic closure
-  - a clean mainstream-facing compression of what is and is not claimed
+- `2.5/10` Experimental-readiness of the best discriminator
+  - Current: the diamond / NV phase-sensitive lane is still the cleanest real
+    external path
+  - Missing: one explicit source geometry, one quantified signal budget, and
+    one lab-specific noise-floor story
 
-### Goal 6. Experimental-readiness of the best discriminator
-
-- Current status:
-  - **promising but not ready**
-  - the diamond / NV phase-sensitive lane is still the cleanest real external
-    path
-- Still missing:
-  - one explicit source geometry
-  - one quantified signal budget
-  - one lab-specific noise-floor story
-
-### Goal 7. Experimental confirmation of a genuinely new prediction
-
-- Current status:
-  - **not yet**
-  - we have candidate discriminators, not a verified effect
-- Still missing:
-  - a prediction standard physics does not already hand us
-  - and an experiment or analog platform that sees it cleanly
+- `0.0/10` Experimental confirmation of a genuinely new prediction
+  - Current: we have candidate discriminators, not a verified effect
+  - Missing: a prediction standard physics does not already hand us, plus an
+    experiment or analog platform that sees it cleanly
 
 ## Honest Read
 
