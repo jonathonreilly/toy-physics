@@ -253,6 +253,13 @@ not just local lane wins.
 - What would count as the next real upgrade:
   - one full signal-budget note with explicit geometry and scaling
   - or one non-diamond analog platform with a comparably sharp null
+  - or one bounded literature-backmatch note showing that an already-published
+    experimental outcome unexpectedly lines up with a retained prediction
+    we can phrase cleanly
+- Important caveat:
+  - retrospective literature alignment is a real shortcut worth trying
+  - but it only counts as supporting evidence, not as a substitute for a
+    prospective prediction / verification cycle
 
 ### Goal 6. Analytical compression
 
