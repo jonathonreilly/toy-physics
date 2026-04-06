@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """Complex action on generated (grown) geometry.
 
-Question:
-  Does the complex action S = L(1-f) + i*gamma*L*f produce the same
-  gravity-to-horizon transition on grown geometry as it does on the
-  regular lattice? If so, the unification is geometry-independent.
+Boundary probe:
+  Test whether the complex action S = L(1-f) + i*gamma*L*f keeps the
+  regular-lattice weak-field class on grown geometry. If the sweep fails
+  the weak-field or Born controls, freeze it as a no-go instead of
+  promoting geometry-independence.
 
 Uses the Gate B growth rule: template + drift + restore + NN connectivity.
 Tests gamma sweep, Born, and mass scaling on grown DAGs.
@@ -262,9 +263,11 @@ def main():
 
     print()
     print("SAFE READ")
-    print("  if TOWARD fraction and F~M match regular lattice: geometry-independent")
-    print("  if Born holds on grown geometry: structural property, not lattice artifact")
-    print("  escape pattern should match: amplification at gamma<0, absorption at gamma>0")
+    print("  Born can remain clean on grown geometry, but that alone is not enough")
+    print("  to promote geometry-independence.")
+    print("  This sweep does not preserve the regular-lattice weak-field class")
+    print("  (gamma=0 F~M is below unity), so the safe read is no-go for promotion.")
+    print("  Keep the result as a grown-geometry boundary probe only.")
 
 
 if __name__ == "__main__":

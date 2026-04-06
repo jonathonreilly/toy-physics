@@ -36,8 +36,9 @@ any genuinely wider or more scalable replay path worth keeping.
 ## Readout
 
 The shorter axial scale did not produce a rescue signal in the observed
-full-window row. The retained width-4 comparator remains pinned at
-`alpha = 0.499`, so there is no review-safe basis here for a genuinely wider
-or more scalable replay path.
+full-window row. The retained width-4 comparator stays pinned at
+`alpha = 0.499`, while the shorter-scale `phys_l = 4`, `phys_w = 3` scout
+only reaches `alpha = 0.501`, `0.501`, `0.502` across the tested masses.
 
-Treat this lane as a bounded no-go, not a retained bridge.
+That is a clean bounded no-go for the observed full-window rows. There is no
+review-safe basis here for a genuinely wider or more scalable replay path.

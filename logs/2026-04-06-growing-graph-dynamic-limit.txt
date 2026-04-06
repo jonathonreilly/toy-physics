@@ -27,7 +27,7 @@ step   nodes  frontier    mean_d     rms_d     width
   19    1333    21.000    12.605    13.518     4.886
   20    1395    22.000    13.022    14.005     5.153
 
-STATIC CONTROL
+FROZEN STATIC CONTROL
   frontier delay: 3.000
   mean delay:     2.000
   rms delay:      2.151
@@ -44,14 +44,16 @@ DYNAMIC PROPAGATION LIMIT
 ====================================================================================
   Compare the evolving-graph propagation visibility against a static graph
   The question: does the signal scale cleanly with graph growth?
+  Controls held fixed: source/detector family, barrier/slit geometry, and k-band
+  Growing branch perturbation: only the second-half wiring is randomized
 
 layers mean_deg  mean_Vdrop  pos/total
 --------------------------------------------
-    10     7.96      0.0492  4/10
-    15     8.35      0.0366  4/10
-    20     8.61      0.0224  2/10
+    10     7.96      0.0492  4/10     
+    15     8.35      0.0366  4/10     
+    20     8.61      0.0224  2/10     
 
-SAFE READ
-  - Frontier delay is the clean expansion observable.
-  - The dynamic-propagation visibility signal is noisy and not monotone.
-  - The stronger retained growth story is expansion of graph distance, not a cosmology claim.
+BOUNDED NO-GO
+  - Frontier delay is the clean retained expansion observable.
+  - Dynamic-propagation visibility stays weak, seed-dependent, and not monotone.
+  - The retained growth story is graph-distance expansion, not a transport claim.

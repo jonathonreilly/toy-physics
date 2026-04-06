@@ -40,6 +40,12 @@ The branch is uneven in an important way:
     `a29e82a feat(unitarity)` sit on the same tree as the prior `BMV` commit,
     so they currently read as claim pushes without new artifact additions
 
+Two recent branch-side results are now already main-retained and should not be
+treated as branch-side candidates in this audit:
+
+- the fixed-field grown-row signed-source transfer note
+- the growing-graph frontier architecture transfer note
+
 That does not make the strong-field results false. It does mean they are
 harder to promote safely onto `main` right now.
 
@@ -166,9 +172,9 @@ Current shortlist:
 1. **Complex-action unification**
    - strongest branch-side unification story if it can be replayed through one
      exact-lattice + grown-geometry + weak-field control chain
-2. **Weak-field `h^2+T` continuum closure to `h = 0.125`**
-   - high value because it would materially strengthen the continuum/credibility
-     lane without depending on the weakest strong-field narratives
+2. **Weak-field `h^2+T` finite-family audit to `h = 0.125`**
+   - high value because it would materially strengthen the credibility lane
+     without depending on the weakest strong-field narratives
 3. **Wide-lattice distance-law replay**
    - already close to mainline-safe in bounded form, but still needs one
      canonical asymptotic phrasing rather than competing `-1.5` / `-1.0` /
@@ -199,6 +205,8 @@ The safest takeaway is:
 - the exact-lattice wavefield lane is still the strongest carryable claim,
 - the exact-lattice complex-action harness is stronger than the broader
   geometry-independent complex-action story,
+- the retained grown-transfer row and graph-frontier proxy are now on `main`,
+  so they are boundary checks rather than branch-side targets,
 - the wide-lattice distance-law lane is only safe as a bounded finite-lattice
   replay,
 - while the self-gravity / horizon / information-paradox cluster is still

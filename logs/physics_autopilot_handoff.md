@@ -35,6 +35,8 @@
     now supports `duplicate` as a first-class lane status
   - `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/research_orchestrator.py`
     passed
+  - committed the tracked integrity fix and synchronized worklog state as
+    `5a4756d` (`automation: add duplicate lane support`)
 - used a writable mirror at
   [`/tmp/physics_research_orchestrator_state_mirror.json`](/tmp/physics_research_orchestrator_state_mirror.json)
   to drive the helper anyway:
@@ -92,6 +94,14 @@
     geometry or noise realism
 
 ### Current state
+- the end-of-loop managed push retry from interim head `5a4756d` failed once
+  with DNS:
+  - `automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+    returned `status=failed`, `failure_kind=dns_failure`, `ahead=1`,
+    `behind=0`
+- after that retry, the repo advanced to synced merge head `9154abe` on
+  `main`; that merge commit includes the local integrity-fix commit `5a4756d`
+  as an ancestor and currently matches `origin/main`
 - the canonical orchestrator JSON is still stale because sandbox policy blocks
   writes outside the writable roots
 - the writable mirror now holds the intended live frontier as:
@@ -115,6 +125,9 @@
 - the multipole lane now has one narrow cross-family retained portability
   positive, but only as an existence claim rather than monotonic branch
   portability
+- the repo-facing integrity fix is preserved in current synced head
+  `9154abe`, even though the earlier push retry from intermediate head
+  `5a4756d` failed with transient DNS
 
 ### Exact next step
 - if the next run can write the canonical orchestrator file, replay the full
