@@ -103,8 +103,22 @@ Protection grows strongly with field strength.
 ## Static-proxy discriminator
 
 Forward-only static field gives escape = 0.56 at eta=15 — OUTSIDE the
-escape window (< 0.85). The causal cone shape is the discriminator,
-not just the temporal truncation.
+escape window (< 0.85).
+
+However, an **exposure-matched** static field (uniform per layer, with
+the same per-layer average as the dynamic cone) gives escape = 0.987 —
+INSIDE the escape window. This means:
+
+- The escape mechanism is **average-exposure reduction**, not cone geometry
+- The dynamic cone restricts the field spatially, lowering the average
+  field the beam encounters
+- Any static field with the same average exposure produces the same escape
+- The cone geometry per se is NOT an irreducible discriminator
+
+The retained discriminator is: forward-only (same 1/r structure but
+unmatched exposure) does NOT escape, while exposure-matched (different
+structure, matched exposure) DOES. The causal effect is quantitative
+(how much field the beam sees), not geometric (the shape of the field).
 
 This does NOT claim:
 - Equivalence to black hole escape physics
