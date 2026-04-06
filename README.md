@@ -154,6 +154,14 @@ If you only want the current high-level state, read this section first.
   stays at `1.000` on the checked sweep, and the `TOWARD -> AWAY` crossover
   survives. This is a row-level transfer result, not a geometry-generic or
   continuum claim.
+- **Fixed-field grown-row signed-source transfer:** bounded scalar transfer
+  companion. On that same moderate-drift Gate B row, a fixed-field scout now
+  preserves the signed-source response outside exact-lattice pockets:
+  zero-source and neutral same-point controls reduce to printed zero, single
+  `+1` gives `AWAY`, single `-1` gives `TOWARD`, and doubling the source
+  charge keeps the centroid shift linear with exponent `1.000`. This is a
+  narrow grown-row transfer positive, not electromagnetism or a
+  geometry-generic theorem.
 - **Action-power branch:** exploratory axiom fork. It has a same-harness 2D
   comparison, a retained 3D close-slit barrier Born / MI / decoherence card,
   and a retained 3D no-barrier distance / mass-response companion. The current

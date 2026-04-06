@@ -1,3 +1,87 @@
+## 2026-04-06 — Promoted the bounded fixed-field grown transfer scout
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed in
+  protocol order at loop start
+- the latest inherited handoff named one superseded local scout log, so this
+  loop checked
+  `/Users/jonreilly/Projects/Physics/logs/2026-04-06-h0125-l4-local-closeout.txt`
+  with `lsof` before any new science; it was no longer open, so this loop
+  continued with one bounded local harvest instead of child monitoring
+- canonical git in `/Users/jonreilly/Projects/Physics` started this loop ahead
+  of `origin/main` by four commits with existing unrelated sidecar drafts in
+  the worktree:
+  - `git status --short --branch` reported `## main...origin/main [ahead 4]`
+  - `git rev-list --left-right --count origin/main...main` returned `0 4`
+  - `git log --oneline --decorate -n 8` showed local head `aaa34bc` on top of
+    `origin/main` `5caad6d`
+- the required managed push retry before new science still failed with DNS:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - result: `status=failed`, `failure_kind=dns_failure`, `ahead=4`,
+    `behind=0`, `attempts_used=5`
+- this loop launched exactly five disjoint sidecar workers covering the wider
+  `h = 0.125` lane, grown-transfer lane, self-gravity/backreaction, growing
+  graph dynamics, and skeptic retainability audit
+
+### What changed
+- harvested exactly one bounded repo-facing result from the next-set drafts:
+  the fixed-field grown-transfer scout is now promoted as a narrow retained
+  row-level positive on the moderate-drift Gate B geometry
+- promoted that closeout into the canonical lane summaries:
+  - kept
+    `/Users/jonreilly/Projects/Physics/docs/FIXED_FIELD_GROWN_TRANSFER_SCOUT_NOTE.md`
+    as the claim-carrying note
+  - kept
+    `/Users/jonreilly/Projects/Physics/logs/2026-04-06-fixed-field-grown-transfer-scout.txt`
+    as the frozen log
+  - kept
+    `/Users/jonreilly/Projects/Physics/scripts/fixed_field_grown_transfer_scout.py`
+    as the narrow replay script
+  - updated `README.md` and `docs/START_HERE.md` to surface the new bounded
+    grown-row transfer companion
+- the retained local read is:
+  - zero-source field delta: `+0.000000e+00`
+  - neutral same-point `+1/-1` delta: `+0.000000e+00`
+  - single `+1`: `delta_z = -1.594422e-04` (`AWAY`)
+  - single `-1`: `delta_z = +1.594790e-04` (`TOWARD`)
+  - double `+2`: `delta_z = -3.188474e-04`
+  - single `+1` vs double `+2` charge exponent: `1.000`
+- other finished sidecars stayed bounded and unpromoted this loop:
+  - wider `h = 0.125` replay remains a bounded no-go on the observed rows
+  - self-gravity/backreaction remains a bounded no-go under strict controls
+  - growing-graph dynamic repair remains a bounded static-control no-go
+  - skeptic audit explicitly rejected any broader family-wide wording
+
+### Strongest confirmed conclusion
+- one retained moderate-drift grown row now carries a narrow fixed-field
+  signed-source transfer outside the exact-lattice pocket
+- review-safe retained wording:
+  on the retained grown row, zero-source and neutral same-point controls reduce
+  to printed zero, the source sign flips the centroid shift direction, and the
+  single-source response is linear in charge within the checked scout
+- this is a bounded row-level transfer positive only; it is not
+  geometry-generic electromagnetism, a full field theory, or a broader
+  generated-family closure
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/README.md`
+- `/Users/jonreilly/Projects/Physics/docs/START_HERE.md`
+- `/Users/jonreilly/Projects/Physics/docs/FIXED_FIELD_GROWN_TRANSFER_SCOUT_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-06-fixed-field-grown-transfer-scout.txt`
+- `/Users/jonreilly/Projects/Physics/scripts/fixed_field_grown_transfer_scout.py`
+
+### Exact next step
+- rerun the managed push helper first until the ahead-of-origin backlog clears
+- once the repo is synced enough to continue safely, return to the remaining
+  next-set drafts and harvest at most one bounded result from either the
+  skeptic-hardened grown-transfer follow-on or another finished no-go lane
+
+### First concrete action
+- run `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  before promoting any additional lane; if DNS still fails, record it once in
+  handoff/memory and avoid another metadata-only repo commit
+
 ## 2026-04-06 — Closed the shorter-scale `h = 0.125` replay as another bounded no-go
 
 ### Current state

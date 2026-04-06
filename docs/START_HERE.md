@@ -186,6 +186,16 @@ Do not force a trade where only one of those moves.
     fixed-lattice package well enough to count as a one-step
     refinement-stable positive; near-field and broader generated-geometry
     closure remain open
+  - a new fixed-field signed-source scout now stays retained on that same
+    moderate-drift row too:
+    - zero-source and neutral same-point `+1/-1` controls reduce to printed
+      zero
+    - single `+1` gives `AWAY`, single `-1` gives `TOWARD`
+    - doubling the source charge keeps the centroid-shift exponent at `1.000`
+  - the safe wording for that addition is narrow:
+    one retained grown row preserves a scalar signed-source response under
+    fixed-field propagation, but this is still a bounded row-level transfer
+    positive rather than a geometry-generic field law
   - the earlier v5 cross-growth row remains useful as the matched-control
     comparison against KNN on the same grown positions
   - a new no-restore weak-connectivity boundary now sharpens the lesson:
