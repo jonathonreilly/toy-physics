@@ -20,6 +20,10 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if ROOT not in sys.path:
     sys.path.insert(0, ROOT)
 
+from scripts.numpy_replay_bootstrap import ensure_numpy_runtime
+
+ensure_numpy_runtime(__file__, sys.argv)
+
 from scripts.lattice_3d_l2_numpy import run_card
 
 

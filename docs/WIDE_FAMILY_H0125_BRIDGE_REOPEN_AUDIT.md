@@ -22,7 +22,8 @@ fresh, narrow reopen path.
 ## What the current local replay confirmed
 
 I replayed the wide-family bridge in an isolated virtual environment because
-the default system Python does not ship with `numpy`.
+the default Homebrew `python3` on this machine does not ship with `numpy`,
+while the retained system interpreter at `/usr/bin/python3` does.
 
 The local replay confirmed:
 
