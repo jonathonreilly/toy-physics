@@ -1,6 +1,6 @@
 # Adversarial Interest Map
 
-**Date:** 2026-04-05  
+**Date:** 2026-04-06  
 **Status:** external-reception calibration note
 
 ## Purpose
@@ -50,21 +50,34 @@ Important updates since the last score change:
     fully close the older persistent-pattern / inertial bar
   - the QNM / BMV / entropy / ringdown / unitarity cluster, which remains
     below the main retained bar
+- the newest retained shift since then is not another broad merge, but a more
+  convincing **small structured grown-family** story:
+  - the retained grown-row positives now survive on a tiny nearby basin
+  - the non-label / geometry-sector signed-source lane now survives a bounded
+    restore basin and a bounded drift basin
+  - the same retained grown row now supports both narrow fixed-field
+    companions under one family
+- the closure side is also materially better:
+  - dense `h = 0.125` now has a mechanism-level failure derivation
+  - self-gravity is now frozen as a weak perturbative control surface rather
+    than a promoted mechanism
+  - grown-wavefield transfer is now frozen as a phase-dephasing / detector-line
+    coherence failure rather than a vague no-go
 
 ## Current adversarial map
 
 | category | score | read |
 |---|---:|---|
-| Toy-model mechanism interest | `9.8/10` | still extremely high; the merged mainline now has a broader but cleaner mechanism portfolio, and the newer control-only closures make the surviving fixed-field story easier to trust |
-| Foundations / complex-systems / network-dynamics interest | `9.8/10` | the merged breadth helps here: exact-lattice causal-field structure, stronger scalar sign-law cards, graph-growth proxies, and a more explicit split between retained controls and exploratory strong-field narratives |
+| Toy-model mechanism interest | `9.9/10` | now even stronger because the project no longer reads only as exact-lattice pockets plus one-off grown companions; there is now a small retained grown-family neighborhood and several mechanism-level closure notes that make the surviving fixed-field story easier to trust |
+| Foundations / complex-systems / network-dynamics interest | `9.9/10` | the current portfolio looks both richer and better disciplined: exact-lattice causal-field structure, stronger scalar sign-law cards, graph-growth proxies, small structured grown-family transfer, and sharper closure notes on self-gravity and failed wavefield transfer |
 | Broad theorist interest | `10.0/10` | still maxed out on curiosity value; the exact-lattice wavefield lane, complex-action carryover, grown-row companion, bounded wide-lattice distance frontier, stronger electrostatics family, and graph-growth proxies make the program look richer rather than narrower after merge |
 | Bridge to known physics | `10.0/10` | now effectively maxed in breadth, because the mainline portfolio visibly touches weak-field gravity, signed scalar couplings, causal phase structure, distance-law behavior, and graph-growth expansion proxies; it is still not a full closure because the self-generated field and inertial-response sectors remain only partly retained |
-| Publishable as a careful computational toy-model paper | `10.0/10` | very strong, with bounded replay chains, better reproduction, tighter scope control, exact-lattice Green/self-consistent/transverse companions, and a generated-family support-recovery basin that is honest about still being only a partial rescue |
-| Publishable as a foundational-physics breakthrough claim | `5.2/10` | slightly stronger after the merge because the mainline now carries a broader fixed-field family across gravity, complex action, distance-law, electrostatics, and graph-growth proxies, but the strongest mechanism lanes are still too exact-lattice-heavy and the self-generated / inertial sectors are still too incomplete for a much higher score |
-| Likelihood of publication in very top field journals today (`PRL` / `PRX` / `Nature Physics`) | `3.7/10` | up a bit because the merged mainline looks broader and more artifact-backed, especially on complex-action carryover, grown-row companion behavior, electrostatics, and the bounded distance-law frontier; it is still held back hard by the exact-to-generated gap, the fixed `h = 0.125` bridge negative, and the fact that the strongest strong-field / GR-like claims are not fully counted yet |
-| Ready for top-tier mainstream physics claims | `4.0/10` | better than before, mostly because the merged branch material makes the fixed-field family easier to see as one program, but still well below the bar for strong mainstream framing |
-| Field-shifting theory program | `8.6/10` | stronger after the merge because the program now looks more like a coherent family of coupled fixed-field mechanisms rather than a loose bag of tricks, even after subtracting the overclaims from the strong-field side |
-| Landmark foundational breakthrough | `4.8/10` | marginally stronger because the retained family is broader, but still nowhere near a settled breakthrough-level evidence base |
+| Publishable as a careful computational toy-model paper | `10.0/10` | essentially maxed; the repo now has enough retained positives, enough bounded negatives, and enough diagnosed closures to support a very strong disciplined toy-model paper even if the flagship physics claim remains narrower |
+| Publishable as a foundational-physics breakthrough claim | `5.6/10` | stronger now because the outside-exact-lattice story is materially better: the retained grown-row positives now form a tiny structured family, the non-label sector-style rule has a bounded local basin, and the same retained row supports both fixed-field companions; still held back by the lack of a second independent grown family and the continued exact-lattice weight of the strongest mechanism lane |
+| Likelihood of publication in very top field journals today (`PRL` / `PRX` / `Nature Physics`) | `4.1/10` | up again because the project now reads more like a disciplined mechanism family than a collection of isolated curiosities, and because several failed paths are now explained instead of merely abandoned; still meaningfully constrained by architecture dependence, the missing second independent grown family, and the fact that the strongest strong-field / GR-style claims remain below the retained bar |
+| Ready for top-tier mainstream physics claims | `4.4/10` | better than before because the fixed-field family is now visible on a tiny grown-family neighborhood rather than only on isolated retained rows, but still well below the bar for strong mainstream framing |
+| Field-shifting theory program | `8.9/10` | stronger because the program now looks more like a coherent family of coupled fixed-field mechanisms with explicit architecture boundaries, not just a bag of numerical tricks plus wishful reopenings |
+| Landmark foundational breakthrough | `5.1/10` | marginally stronger because the retained family is now broader and the closure side is cleaner, but still far from a settled breakthrough-level evidence base |
 | Nobel-scale breakthrough | `0.4/10` | not a realistic present-tense read |
 
 ## Why this map is lower than the old internal map
