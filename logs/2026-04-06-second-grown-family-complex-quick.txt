@@ -1,0 +1,17 @@
+==================================================================================================
+SECOND GROWN FAMILY COMPLEX QUICK
+  no-restore grown family + geometry-sector stencil
+==================================================================================================
+drifts=[0.18, 0.2, 0.22], seeds=[0]
+guards: exact gamma=0 baseline, Born proxy where feasible, TOWARD -> AWAY crossover
+
+drift       born           g0          d01          d05      e01      e05     fm0    fm05   t01   t05
+------------------------------------------------------------------------------------------------------------------
+ 0.18        n/a -5.498367e-03 -1.080390e-02 -3.110466e-02    1.079    0.301   1.000   1.000     0     0
+ 0.20  2.299e-16 -1.134023e-02 -1.577135e-02 -3.349544e-02    1.073    0.307   1.000   1.000     0     0
+ 0.22        n/a -2.214214e-02 -3.079748e-02 -6.686564e-02    1.088    0.313   1.000   1.000     0     0
+
+SAFE READ
+  anchor retained gamma=0 + Born proxy: True
+  anchor TOWARD@0.1 -> AWAY@0.5: False
+  the second grown-family candidate does not retain the complex-action companion cleanly
