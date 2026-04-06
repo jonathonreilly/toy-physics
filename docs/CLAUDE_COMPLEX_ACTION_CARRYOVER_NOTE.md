@@ -1,7 +1,8 @@
 # Claude Complex-Action Carryover Note
 
 **Date:** 2026-04-05  
-**Status:** retained narrow exact-lattice carryover
+**Status:** retained narrow carryover of the branch exact-lattice complex-action
+harness
 
 ## Artifact chain
 
@@ -10,69 +11,65 @@
 
 ## Question
 
-Can the branch exact-lattice complex-action harness be replayed on current
-`main` as a narrow carryover, while keeping the claim surface exact-lattice
-only?
+Can the strongest narrow part of Claude's branch-side complex-action story be
+carried onto `main` without importing the broader, weaker claims?
 
-This note stays deliberately narrow:
+This carryover stays deliberately narrow:
 
-- one exact 3D lattice family
-- one complex action
-  - `S = L(1-f) + i*gamma*L*f`
-- one exact `gamma = 0` reduction check
-- one frozen-field Born test
-- one `gamma` sweep for the TOWARD -> AWAY crossover
+- exact ordered 3D lattice family only
+- one fixed instantaneous field family
+- exact `gamma = 0` reduction check
+- Born test on the frozen field
+- one crossover sweep in `gamma`
+
+It does **not** claim geometry independence, continuum closure, or a retained
+effective-theory derivation from self-gravity.
 
 ## Frozen result
 
-The replay on `main` succeeds on the retained exact family:
+Exact-lattice replay at `h = 0.5`, `W = 6`, `L = 30`, `s = 0.1`, `z_src = 3`:
 
-- exact reduction:
-  - standard propagator delta: `+9.339748e-02`
-  - complex(`gamma = 0`) delta: `+9.339748e-02`
-  - match: exact within machine precision
-- Born test:
+- exact `gamma = 0` reduction:
+  - baseline deflection: `+9.339748e-02`
+  - complex-action at `gamma = 0`: `+9.339748e-02`
+- Born on the frozen field:
   - `gamma = 0.0`: `|I3|/P = 2.409e-15`
   - `gamma = 0.5`: `|I3|/P = 3.941e-16`
   - `gamma = 1.0`: `|I3|/P = 1.236e-16`
-- gamma sweep:
-  - `gamma = 0.00`: `TOWARD`, escape `2.7311`
-  - `gamma = 0.05`: `TOWARD`, escape `2.0970`
-  - `gamma = 0.10`: `AWAY`, escape `1.6119`
-  - `gamma = 0.20`: `AWAY`, escape `0.9558`
-  - `gamma = 0.50`: `AWAY`, escape `0.2056`
-  - `gamma = 1.00`: `AWAY`, escape `0.0177`
+- crossover sweep:
+
+| `gamma` | deflection | direction | escape |
+| --- | ---: | --- | ---: |
+| `0.00` | `+9.339748e-02` | `TOWARD` | `2.7311` |
+| `0.05` | `+3.863016e-02` | `TOWARD` | `2.0970` |
+| `0.10` | `-1.791678e-02` | `AWAY` | `1.6119` |
+| `0.20` | `-1.353356e-01` | `AWAY` | `0.9558` |
+| `0.50` | `-5.075192e-01` | `AWAY` | `0.2056` |
+| `1.00` | `-1.133647e+00` | `AWAY` | `0.0177` |
+
+The transition lies between `gamma = 0.05` and `0.10` on this family.
 
 ## Safe read
 
-The narrow, review-safe statement is:
+The strongest honest statement is:
 
-- on the retained exact lattice family, the complex-action replay preserves
-  the exact `gamma = 0` reduction
-- the Born test is machine clean on the frozen field
-- the `gamma` sweep retains the branch-like `TOWARD -> AWAY` crossover
-- the escape ratio decreases smoothly as `gamma` increases
+- the branch exact-lattice complex-action harness survives a narrow replay on
+  `main`
+- exact `gamma = 0` reduction is preserved
+- Born stays machine-clean on the frozen field
+- increasing `gamma` drives a clean `TOWARD -> AWAY` crossover while detector
+  escape falls sharply
 
 ## What this is not
 
-This note does **not** promote the result beyond the exact lattice family.
+- It is not a geometry-generic complex-action result.
+- It is not a continuum theorem.
+- It is not evidence that complex action is the retained effective theory of
+  Poisson self-gravity.
 
-It is not:
+The grown-geometry and broader effective-theory language stay branch-side until
+they earn their own hardened artifact chains.
 
-- geometry-independent
-- a continuum theorem
-- a grown-geometry transfer claim
-- a self-gravity mechanism claim
+## Final verdict
 
-## Branch implication
-
-The branch complex-action harness is now carryable onto `main` only in this
-narrow form:
-
-- exact-lattice only
-- exact reduction retained
-- Born retained
-- crossover retained
-- no broader complex-action theory claim implied
-
-That is the strongest defensible carryover on current `main`.
+**retained narrow carryover**
