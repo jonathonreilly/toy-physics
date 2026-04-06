@@ -75,6 +75,34 @@ The strongest honest statement on current `main` is:
 - the bridge family also falls short of the narrow `F~M \approx 1` bar at
   `h = 0.125`
 
+## Limit diagnosis
+
+The final diagnostic made this failure more informative rather than less.
+
+Three cheap rescue hypotheses were checked on the fixed bridge family:
+
+1. **Bad weak-field window**
+   - source strengths were weakened by two extra decades
+   - the fitted exponent stayed pinned at about
+     `0.5009 -> 0.50035 -> 0.50012`
+2. **Bad source-distance choice**
+   - moving the source inward to `z_mass = 1.5` on the full detector still
+     gave `alpha ~ 0.50`
+3. **Detector starvation / underflow**
+   - the free detector support is enormous (`P_free ~ 8.9e221`)
+   - so this is not a “no signal reaches the detector” failure
+
+That gives a more interesting explanation of the limit:
+
+- the fixed `h = 0.125` family keeps a clean `TOWARD` signal
+- it keeps Born clean
+- but the weak-field response collapses from an approximately linear
+  `delta ~ s` law into an approximate `delta ~ s^(1/2)` law
+
+So the best present-tense read is geometric / transport-limited rather than
+strength-limited: this box is still wide enough to carry signal, but not wide
+enough to preserve the Newtonian weak-field mass law.
+
 ## Honest Limitation
 
 This is a credibility audit, not a continuum theorem.

@@ -29,28 +29,42 @@ frontier. The right reading is:
 
 The best next steps are the ones that improve both at once.
 
-One important update since the last score change:
+Important updates since the last score change:
 
-- the Claude-side wide-family `h = 0.125` bridge now looks like the clearest
-  reopened continuum candidate
-- but it is **not counted in the scores below yet**
-- it only moves the official map if it lands with a proper retained
-  script/log/note chain on `main` or a clean local replay
+- the large Claude-side merge materially broadened `main`, especially around:
+  - complex-action / continuum / grown-row companion surfaces
+  - stronger electrostatics sign-law cards
+  - wider distance-law framing
+  - first-pass EP / GW-speed / strong-field notes
+- but the official map only counts the subset that survives the stricter
+  retainability read after merge:
+  - exact-lattice and grown-row complex-action carryover
+  - bounded wide-lattice distance-law frontier
+  - stronger scalar electrostatics family
+  - graph-growth expansion proxies
+- the following are still only partly counted or uncounted:
+  - the fixed-family `h = 0.125` bridge, which now resolves as a bounded
+    negative for weak-field closure
+  - Poisson self-gravity, which is now better framed as control-only
+  - EP / GW-speed, which add interesting bounded structure but do not yet
+    fully close the older persistent-pattern / inertial bar
+  - the QNM / BMV / entropy / ringdown / unitarity cluster, which remains
+    below the main retained bar
 
 ## Current adversarial map
 
 | category | score | read |
 |---|---:|---|
-| Toy-model mechanism interest | `9.8/10` | high intrinsic curiosity value, now with a cleaner split between retained carryovers, bounded no-gos, explicitly reopened dead-end candidates, a review-safe electrostatics superposition proxy, and the first retained graph-expansion observable |
-| Foundations / complex-systems / network-dynamics interest | `9.7/10` | real likely interest in the right subcommunities, now with a clearer architecture portfolio, a stronger exact-lattice causal-field lane, a review-safe electrostatics proxy, a graph-frontier expansion proxy, and a more disciplined branch-to-main carryover process |
-| Broad theorist interest | `10.0/10` | still high, now with the exact-lattice wavefield mechanism, the narrow exact-lattice complex-action carryover on `main`, its retained grown-row companion with exact reduction and weak-field `F~M = 1.000`, an independently replayed wide-lattice `h^2+T` far-tail result, a bounded split-shell generated-family reopening, a bounded adaptive-readout rescue on the compact object lane, a review-safe electrostatics superposition proxy, and a retained graph-expansion observable |
-| Bridge to known physics | `9.98/10` | improved by the stronger exact-lattice wavefield lane, the retained exact-lattice complex-action carryover plus retained grown-row companion, the independently replayed wide-lattice `h^2+T` distance-law frontier, the retained grown trapping transport plus frontier-bias observables with exact zero-coupling reduction, the split-shell generated-family bridge, the adaptive readout that preserves `TOWARD` and near-linear `F~M`, the existing bounded electric-like sign-law foothold, the new electrostatics superposition proxy, and the graph-expansion proxy; it is still capped by the fact that the self-generated field sector remains exact-lattice-heavy and the readout / inertial-response side is not yet fully localized |
+| Toy-model mechanism interest | `9.8/10` | still extremely high; the merged mainline now has a broader but cleaner mechanism portfolio, and the newer control-only closures make the surviving fixed-field story easier to trust |
+| Foundations / complex-systems / network-dynamics interest | `9.8/10` | the merged breadth helps here: exact-lattice causal-field structure, stronger scalar sign-law cards, graph-growth proxies, and a more explicit split between retained controls and exploratory strong-field narratives |
+| Broad theorist interest | `10.0/10` | still maxed out on curiosity value; the exact-lattice wavefield lane, complex-action carryover, grown-row companion, bounded wide-lattice distance frontier, stronger electrostatics family, and graph-growth proxies make the program look richer rather than narrower after merge |
+| Bridge to known physics | `10.0/10` | now effectively maxed in breadth, because the mainline portfolio visibly touches weak-field gravity, signed scalar couplings, causal phase structure, distance-law behavior, and graph-growth expansion proxies; it is still not a full closure because the self-generated field and inertial-response sectors remain only partly retained |
 | Publishable as a careful computational toy-model paper | `10.0/10` | very strong, with bounded replay chains, better reproduction, tighter scope control, exact-lattice Green/self-consistent/transverse companions, and a generated-family support-recovery basin that is honest about still being only a partial rescue |
-| Publishable as a foundational-physics breakthrough claim | `5.1/10` | the moonshot portfolio is a bit stronger and cleaner, with a retained exact-lattice complex-action carryover, a retained grown-row complex-action companion, a retained wide-lattice distance-law frontier, retained grown trapping/frontier observables, a bounded split-shell generated-family reopening, a bounded adaptive-readout rescue, a review-safe electrostatics proxy, and a graph-expansion proxy, but the project is still too exact-lattice-heavy and too transfer-limited for stronger framing |
-| Likelihood of publication in very top field journals today (`PRL` / `PRX` / `Nature Physics`) | `3.4/10` | still low, but moving: the exact-lattice wavefield lane is stronger, complex action now carries onto `main` in both exact-lattice and retained grown-row narrow forms, the wide-lattice `h^2+T` far-tail replay is independently retained, the electrostatics superposition proxy is review-safe, the graph-expansion proxy is now retained, and the branch triage is much more honest; even so, the exact-to-generated gap and the missing propagated-field / inertial-closure result still block serious top-journal confidence |
-| Ready for top-tier mainstream physics claims | `3.8/10` | improved credibility again, especially on the distance-law, trapping/frontier, electrostatics, graph expansion, exact-to-grown carryover, and branch-audit discipline sides, but still far below the required bar |
-| Field-shifting theory program | `8.4/10` | somewhat stronger, because the moonshot branch now has a larger exact-lattice wavefield control with a cleaner observable, a retained exact-lattice complex-action carryover plus grown-row companion, a retained wide-lattice distance-law frontier on `main`, retained grown trapping/frontier observables, a bounded split-shell generated-family reopening, an adaptive-readout bridge that keeps the weak-field law while reducing support materially, a review-safe electrostatics superposition proxy, and a retained graph-expansion proxy |
-| Landmark foundational breakthrough | `4.7/10` | current evidence base is improving and cleaner than before, but it is still too exact-lattice-heavy and too transfer-limited for stronger framing |
+| Publishable as a foundational-physics breakthrough claim | `5.2/10` | slightly stronger after the merge because the mainline now carries a broader fixed-field family across gravity, complex action, distance-law, electrostatics, and graph-growth proxies, but the strongest mechanism lanes are still too exact-lattice-heavy and the self-generated / inertial sectors are still too incomplete for a much higher score |
+| Likelihood of publication in very top field journals today (`PRL` / `PRX` / `Nature Physics`) | `3.7/10` | up a bit because the merged mainline looks broader and more artifact-backed, especially on complex-action carryover, grown-row companion behavior, electrostatics, and the bounded distance-law frontier; it is still held back hard by the exact-to-generated gap, the fixed `h = 0.125` bridge negative, and the fact that the strongest strong-field / GR-like claims are not fully counted yet |
+| Ready for top-tier mainstream physics claims | `4.0/10` | better than before, mostly because the merged branch material makes the fixed-field family easier to see as one program, but still well below the bar for strong mainstream framing |
+| Field-shifting theory program | `8.6/10` | stronger after the merge because the program now looks more like a coherent family of coupled fixed-field mechanisms rather than a loose bag of tricks, even after subtracting the overclaims from the strong-field side |
+| Landmark foundational breakthrough | `4.8/10` | marginally stronger because the retained family is broader, but still nowhere near a settled breakthrough-level evidence base |
 | Nobel-scale breakthrough | `0.4/10` | not a realistic present-tense read |
 
 ## Why this map is lower than the old internal map
