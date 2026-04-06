@@ -145,6 +145,13 @@ If you only want the current high-level state, read this section first.
   canonical mirror readout while staying Born-clean and gravity-positive on a
   narrow retained slice. That is a real bridge result, but not yet a
   replacement flagship.
+- **Complex-action carryover:** bounded grown-row companion. The exact-lattice
+  complex-action harness now has one retained generated-geometry companion on
+  the moderate-drift Gate B row: exact `gamma = 0` reduction holds, the grown
+  Born proxy stays machine-clean (`|I3|/P = 1.456e-15`), weak-field `F~M`
+  stays at `1.000` on the checked sweep, and the `TOWARD -> AWAY` crossover
+  survives. This is a row-level transfer result, not a geometry-generic or
+  continuum claim.
 - **Action-power branch:** exploratory axiom fork. It has a same-harness 2D
   comparison, a retained 3D close-slit barrier Born / MI / decoherence card,
   and a retained 3D no-barrier distance / mass-response companion. The current

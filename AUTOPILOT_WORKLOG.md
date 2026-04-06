@@ -1,3 +1,79 @@
+## 2026-04-06 — Promoted the bounded grown-row complex-action companion
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed in
+  protocol order at loop start
+- no detached `physics-science` child was active to resume or protect after
+  rereading the latest handoff
+- canonical git in `/Users/jonreilly/Projects/Physics` started this loop ahead
+  of `origin/main` with the same two local-only closeout commits still
+  stranded:
+  - `git status --short --branch` reported `## main...origin/main [ahead 2]`
+    plus existing unrelated dirty files and untracked sidecar drafts
+  - `git rev-list --left-right --count origin/main...main` returned `0 2`
+  - `git log --oneline --decorate -n 8` showed local head `48b9a7b` on top of
+    `origin/main` `5caad6d`
+- the required managed push retry before any new science still failed with DNS:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - result: `status=failed`, `failure_kind=dns_failure`, `ahead=2`,
+    `behind=0`, `attempts_used=5`
+- this loop then launched exactly five disjoint sidecar workers covering:
+  wider `h = 0.125`, grown-geometry transfer, self-gravity/backreaction,
+  growing-graph dynamics, and skeptic retainability audit
+
+### What changed
+- harvested the strongest already-finished retained transfer candidate on disk
+  instead of waiting for a new speculative lane:
+  - `/Users/jonreilly/Projects/Physics/docs/CLAUDE_COMPLEX_ACTION_GROWN_COMPANION_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-05-grown-geometry-complex-action-companion.txt`
+- promoted that bounded result into the top-level summary surfaces:
+  - `README.md` now names the exact-lattice complex-action carryover as having
+    one retained generated-geometry companion
+  - `docs/START_HERE.md` now records the same bounded grown-row transfer with
+    explicit controls and conservative wording
+- sidecar workers tightened, but did not beat, the local harvest:
+  - self-gravity/backreaction closed as a bounded no-go under strict controls
+    in `/Users/jonreilly/Projects/Physics/docs/SELF_GRAVITY_BACKREACTION_CLOSURE_NOTE.md`
+    with fresh log
+    `/Users/jonreilly/Projects/Physics/logs/2026-04-06-self-gravity-backreaction-closure.txt`
+  - growing-graph dynamic propagation remained a bounded no-go while the
+    expansion proxy stayed retained, with fresh audit artifacts under
+    `/Users/jonreilly/Projects/Physics/docs/GROWING_GRAPH_STATIC_CONTROL_AUDIT_NOTE.md`
+    and
+    `/Users/jonreilly/Projects/Physics/docs/GROWING_GRAPH_EXPANSION_SKEPTIC_AUDIT_NOTE.md`
+- the wider `h = 0.125` and fresh grown-transfer sidecars were not harvested
+  into the tracked summary this loop because they did not finish before close
+
+### Strongest confirmed conclusion
+- one narrow grown-geometry transfer of the exact-lattice complex-action lane
+  is now safe to surface in the top-level repo summary
+- review-safe retained wording:
+  on the retained moderate-drift Gate B grown row, exact `gamma = 0`
+  reduction holds, the grown Born proxy stays machine-clean
+  (`|I3|/P = 1.456e-15`), weak-field `F~M` stays at `1.000`, and the
+  `TOWARD -> AWAY` crossover survives
+- this is a bounded grown-row companion only; it does **not** justify a
+  geometry-generic, continuum, or self-gravity promotion
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/README.md`
+- `/Users/jonreilly/Projects/Physics/docs/START_HERE.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/overnight-physics/memory.md`
+
+### Exact next step
+- rerun the managed push helper first until the ahead-of-origin backlog clears
+- once the repo is synced, return to the unfinished next-set lanes and harvest
+  exactly one bounded result from either the wider `h = 0.125` scalable replay
+  or the outside-exact-lattice grown-geometry transfer lane
+
+### First concrete action
+- run `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  before touching any new science lane; if DNS still fails, reconcile the
+  unfinished wider / grown-transfer sidecar artifacts without starting another
+  overlapping child
+
 ## 2026-04-06 — Finalized the wider `h = 0.125` full-window no-go
 
 ### Current state

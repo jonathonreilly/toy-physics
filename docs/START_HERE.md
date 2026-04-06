@@ -263,6 +263,14 @@ Do not force a trade where only one of those moves.
   - the generated-family transfer of that self-consistent pocket closes as a
     clean no-go: exact zero-source reduction survives, but the sign and linear
     mass-scaling class do not carry over to the compact generated DAG family
+  - a separate narrow grown-geometry complex-action companion is now retained
+    on the moderate-drift Gate B row:
+    exact `gamma = 0` reduction holds, the grown Born proxy stays machine-clean
+    (`|I3|/P = 1.456e-15`), weak-field `F~M` stays at `1.000`, and the
+    `TOWARD -> AWAY` crossover survives on the checked row
+  - the safe read on that companion is bounded:
+    it is one retained grown-row transfer of the exact-lattice complex-action
+    carryover, not a geometry-generic or continuum promotion
   - the new generated-family discriminator now makes that split sharper:
     on the retained `kNN`-floor bridge family, support rescue still beats the
     wavefield bridge on both sign and detector support, so the current bridge
