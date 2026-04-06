@@ -1,3 +1,83 @@
+## 2026-04-06 — Surfaced the second no-restore grown-family signed-source basin
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed in
+  protocol order at loop start
+- canonical git in `/Users/jonreilly/Projects/Physics` reconciled cleanly
+  before any new promotion work:
+  - `git status --short --branch` reported `## main...origin/main` plus
+    existing unrelated draft dirt
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 8` showed synced head `5bb71cd`
+- the required managed push check before science reported a clean sync:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - result: `status=nothing_to_push`, `ahead=0`, `behind=0`
+- this loop spawned exactly five disjoint sidecar workers covering:
+  - wider / scalable `h = 0.125`
+  - outside-exact-lattice grown transfer on grown geometry
+  - self-gravity / backreaction hardening under strict controls
+  - growing-graph dynamic propagation repair against static controls
+  - skeptic retainability audit before promotion
+- the first finished sidecars closed two lanes as bounded no-gos with no new
+  summary impact:
+  - wider `h = 0.125` stayed pinned near `alpha ~ 0.5`
+  - growing-graph dynamic propagation did not survive the static-control
+    comparison
+
+### What changed
+- harvested one bounded repo-facing surfacing step from already-synced `main`:
+  the second independent no-restore grown-family signed-source basin is now
+  visible in the canonical summary surfaces instead of only in its note/script/
+  log chain
+- promoted that bounded family extension into the top-level summaries:
+  - kept
+    `/Users/jonreilly/Projects/Physics/docs/SECOND_GROWN_FAMILY_SIGN_NOTE.md`
+    as the claim-carrying note
+  - kept
+    `/Users/jonreilly/Projects/Physics/logs/2026-04-06-second-grown-family-sign.txt`
+    as the frozen log
+  - kept
+    `/Users/jonreilly/Projects/Physics/scripts/SECOND_GROWN_FAMILY_SIGN_SWEEP.py`
+    as the replay script
+  - updated `README.md` and `docs/START_HERE.md` to surface the second-family
+    retained basin with review-safe wording
+- the retained synced read is:
+  - family: no-restore Gate B geometry-sector slice
+  - passing rows: `15/15`
+  - drifts: `0.0, 0.1, 0.2, 0.3, 0.5`
+  - seeds: `0, 1, 2`
+  - zero-source baseline: exact
+  - neutral `+1/-1` cancellation: exact
+  - mean weak-charge exponent: `1.000072`
+
+### Strongest confirmed conclusion
+- the fixed-field signed-source package is no longer confined to one retained
+  moderate-drift row; it now survives on a second independent no-restore grown
+  family
+- review-safe retained wording:
+  the fixed-field signed-source lesson extends to the tested no-restore
+  geometry-sector slice with exact zero/neutral controls and near-linear
+  charge response, but this remains a bounded family extension rather than
+  geometry-generic closure
+- this does not close broader Gate B dynamics, generated-family universality,
+  or exact-lattice-independent field theory
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/README.md`
+- `/Users/jonreilly/Projects/Physics/docs/START_HERE.md`
+
+### Exact next step
+- inspect the remaining finished sidecar lanes, preferring either a skeptic-
+  hardened grown-transfer retention or a strict self-gravity/backreaction
+  no-go if one of those returns in a cleaner bounded form than the draft stack
+
+### First concrete action
+- review the outside-exact-lattice grown-transfer worker and skeptic audit
+  outputs; if neither supports a cleaner bounded promotion, leave the current
+  summary surface as-is and carry the remaining no-go closures only in handoff
+  and automation memory
+
 ## 2026-04-06 — Surfaced the retained non-label grown-row architecture transfer
 
 ### Current state

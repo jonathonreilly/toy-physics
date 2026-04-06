@@ -169,6 +169,13 @@ If you only want the current high-level state, read this section first.
   charge (`1.000223`) while running at weaker amplitude than the label-grown
   control. This is a narrow design-guide transfer on one retained row, not a
   replacement connectivity law or broader generated-family closure.
+- **Second no-restore grown-family signed-source basin:** bounded family
+  extension. On a distinct no-restore Gate B geometry-sector slice, the
+  fixed-field signed-source package now survives across all `15/15` tested
+  rows (`drift = 0.0, 0.1, 0.2, 0.3, 0.5`; seeds `0, 1, 2`) with exact
+  zero-source and neutral cancellation and mean weak-charge exponent
+  `1.000072`. This extends the signed-source lesson to a second independent
+  grown family, not to geometry-generic closure.
 - **Action-power branch:** exploratory axiom fork. It has a same-harness 2D
   comparison, a retained 3D close-slit barrier Born / MI / decoherence card,
   and a retained 3D no-barrier distance / mass-response companion. The current

@@ -207,6 +207,17 @@ Do not force a trade where only one of those moves.
     the old graph-ladder / geometry-sector architecture transfers as a narrow
     design guide on one retained grown row, not as a replacement connectivity
     law or a broader generated-family closure
+  - the signed-source package now also survives on a second independent
+    no-restore grown family:
+    - same no-restore Gate B geometry-sector slice across `15/15` tested rows
+    - drift values `0.0, 0.1, 0.2, 0.3, 0.5` and seeds `0, 1, 2`
+    - exact zero-source baseline and exact neutral `+1/-1` cancellation
+    - mean weak-charge exponent `1.000072`
+  - the safe wording for that extension is:
+    the fixed-field signed-source lesson now survives on a second independent
+    grown family, but only on the tested no-restore geometry-sector slice, so
+    this is still a bounded family extension rather than geometry-generic
+    closure
   - the earlier v5 cross-growth row remains useful as the matched-control
     comparison against KNN on the same grown positions
   - a new no-restore weak-connectivity boundary now sharpens the lesson:
