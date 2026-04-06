@@ -8,8 +8,20 @@ Also test h=0.125 if feasible.
 from __future__ import annotations
 import math
 import time
-import numpy as np
 from collections import defaultdict
+
+import os
+import sys
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if ROOT not in sys.path:
+    sys.path.insert(0, ROOT)
+
+from scripts.numpy_replay_bootstrap import ensure_numpy_runtime
+
+ensure_numpy_runtime(__file__, sys.argv)
+
+import numpy as np
 
 BETA = 0.8
 K = 5.0

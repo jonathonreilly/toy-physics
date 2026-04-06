@@ -21,9 +21,14 @@ fresh, narrow reopen path.
 
 ## What the current local replay confirmed
 
-I replayed the wide-family bridge in an isolated virtual environment because
-the default Homebrew `python3` on this machine does not ship with `numpy`,
-while the retained system interpreter at `/usr/bin/python3` does.
+I replayed the wide-family bridge under the retained system interpreter
+because the default Homebrew `python3` on this machine does not ship with
+`numpy`, while `/usr/bin/python3` does.
+
+The replay wrappers now call
+[`scripts/numpy_replay_bootstrap.py`](/Users/jonreilly/Projects/Physics/scripts/numpy_replay_bootstrap.py)
+so future numpy-heavy retained replays land on the same interpreter
+convention without depending on shell `PATH` order.
 
 The local replay confirmed:
 
@@ -41,7 +46,8 @@ What it did **not** freeze in this session:
 ## Why this is still not retained
 
 The decisive `h = 0.125` continuation row was not captured cleanly enough in
-this session to promote the result.
+this session to promote the result, even after the interpreter mismatch was
+removed and the replay reached the `h = 0.25` row cleanly.
 
 That means the only safe present-tense reading is:
 
