@@ -1,0 +1,44 @@
+======================================================================
+RETARDATION DISCRIMINATOR: FULL RETAINED HARNESS
+delay=5, A=1.5, s=0.004, z0=3.0
+======================================================================
+
+1. FREQUENCY SWEEP (inst vs retarded)
+  freq       inst        ret       diff
+----------------------------------------
+ 0.010  +0.004916  +0.002772  -0.002144
+ 0.020  +0.008876  +0.005065  -0.003811
+ 0.030  +0.010980  +0.006932  -0.004048
+ 0.050  +0.010725  +0.008398  -0.002326
+ 0.070  +0.007250  +0.008048  +0.000798
+ 0.100  +0.000712  +0.006402  +0.005690
+ 0.150  -0.008190  +0.002832  +0.011022
+ 0.200  -0.001761  -0.000172  +0.001589
+
+2. EXACT NULLS
+  f=0, d=0: -1.172706e-18
+  f=0, d=5: -1.172706e-18
+
+3. DELAY LAW at f=0.15
+  d= 0: inst=-0.008190, ret=-0.008190, diff=+0.000000 
+  d= 1: inst=-0.008190, ret=-0.006036, diff=+0.002155 
+  d= 2: inst=-0.008190, ret=-0.003668, diff=+0.004523 
+  d= 3: inst=-0.008190, ret=-0.000876, diff=+0.007314 
+  d= 5: inst=-0.008190, ret=+0.002832, diff=+0.011022 SPLIT
+  d= 7: inst=-0.008190, ret=+0.004302, diff=+0.012492 SPLIT
+  d=10: inst=-0.008190, ret=+0.003211, diff=+0.011401 SPLIT
+
+4. GLOBAL-DELAY FIT TEST
+  best tau = -1, residual/RMS = 0.8325
+  FIT FAILS — different transfer function (not just a delay)
+
+5. FAMILY PORTABILITY (difference at f=0.15, d=5)
+  Fam1: diff = +0.010502
+  Fam2: diff = +0.010217
+  Fam3: diff = +0.010660
+
+6. SEED ROBUSTNESS (f=0.15, d=5)
+  seed 0: diff = +0.011022
+  seed 1: diff = +0.009982
+  seed 2: diff = +0.009589
+  seed 3: diff = +0.012680
