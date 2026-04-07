@@ -150,6 +150,6 @@ all three classical scalar-wave signatures on the same (3+1)D operator.
   appropriate dimensionality
 - Static-source long-time profile is in buildup regime, not the
   full equilibrium; the proper static comparator is Lane 4 (Poisson 3D)
-- (3+1)D promotion of Lanes 5 and 6 (lightcone with delta pulse and
-  retarded vs instantaneous) is not done; only the radiation falloff
-  is tested in 3+1 dimensions
+- This lane only tests the (3+1)D radiation falloff. The (3+1)D
+  lightcone (delta pulse) and retarded-vs-instantaneous comparison
+  are done in a separate lane: see WAVE_3PLUS1D_PROMOTIONS_NOTE.md
