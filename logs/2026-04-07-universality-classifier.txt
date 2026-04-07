@@ -95,16 +95,28 @@ FAIL BREAKDOWN:
   H1_ring                    -> grav (delta=-0.0055), F~M (fm=1.182)
   I1_drift_y                 -> grav (delta=+0.0000), F~M (fm=nan)
 
-CLASSIFIER ANALYSIS:
-  avg_deg    : PASS [20.739, 271.212]  FAIL [10.415, 66.827]  OVERLAP
-  max_deg    : PASS [25.000, 325.000]  FAIL [13.000, 91.000]  OVERLAP
-  eff_dim    : PASS [0.000, 2.179]  FAIL [1.088, 1.492]  OVERLAP
-  z_sym      : PASS [0.000, 0.002]  FAIL [0.000, 0.996]  OVERLAP
-  fill       : PASS [0.541, 0.869]  FAIL [0.734, 0.801]  OVERLAP
-  reach_frac : PASS [0.504, 1.000]  FAIL [0.000, 0.504]  OVERLAP
+CLASSIFIER ANALYSIS (in-sample):
+  best 2-prop AND rule: (avg_deg >= 20.739) AND (z_sym <= 0.002)
+  in-sample accuracy: 100.0%
 
-  best single-property classifier:
-    avg_deg >= 20.739  -> accuracy 96.2%
+LEAVE-ONE-FAMILY-OUT:
+  LOO accuracy: 22/26 = 84.6%
+  misses:
+    G1_asym_y: truth=True, pred=False, rule=('avg_deg', '>=', 10.414572361842543, 'reach_frac', '>=', 0.8176729308276689)
+    G2_asym_z: truth=False, pred=True, rule=('avg_deg', '>=', 10.414572361842543, 'reach_frac', '>=', 0.5044330377974802)
+    H2_cross: truth=True, pred=False, rule=('avg_deg', '>=', 21.713752416505567, 'z_sym', '<=', 0.0020656841095188097)
+    K2_huge_drift_md1: truth=True, pred=False, rule=('avg_deg', '>=', 20.738617425504966, 'z_sym', '<=', 0.002026239317238183)
 
-  best 2-property AND classifier:
-    (avg_deg >= 20.739) AND (z_sym <= 0.002)  -> accuracy 100.0%
+HELD-OUT FAMILIES (predictions hard-coded before run):
+  family                     predicted   actual  rule pred   agree
+  HELD_dense_sym                  True     True       True      OK
+  HELD_grid_seed7                 True     True       True      OK
+  HELD_ring_md3                  False    False      False      OK
+  HELD_asym_z_seed7              False    False      False      OK
+  HELD_asym_y_seed7               True     True       True      OK
+  HELD_drift_y_seed7             False    False      False      OK
+  HELD_aniso_z3                   True     True       True      OK
+  HELD_cross_seed7                True     True       True      OK
+
+  pre-committed predictions: 8/8 = 100.0%
+  in-sample-fitted rule applied to held-out: 8/8 = 100.0%
