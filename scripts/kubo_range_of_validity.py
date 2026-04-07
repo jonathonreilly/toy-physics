@@ -208,50 +208,97 @@ def main():
         mean_r = sum(ratios_at_s) / len(ratios_at_s)
         print(f"  s = {s:.4f}: median ratio = {median:.4f}  mean = {mean_r:.4f}  (N={len(ratios_at_s)})")
 
-    # For passing (battery PASS) families, how well does the linearity hold?
-    print("\nPASSING families (battery PASS) — F~M distribution:")
+    # ========================================================================
+    # INDEPENDENT SUBSET 1: linearity-regime families (no F~M label used)
+    # Criterion: max |ratio - 1| across all four battery strengths < 0.10
+    # This selects families where first-order linear response actually dominates
+    # ========================================================================
+    print("\nINDEPENDENT SUBSET 1 — LINEARITY-REGIME (|ratio-1|<0.10 at all four s)")
+    print("(criterion uses ONLY measured(s) vs kubo_true*s; no F~M label involved)")
+    linear_regime = []
+    for r in valid:
+        ratios = r["ratios"]
+        if any(math.isnan(x) for x in ratios):
+            continue
+        max_dev = max(abs(x - 1.0) for x in ratios)
+        if max_dev < 0.10:
+            linear_regime.append(r)
+    print(f"  N = {len(linear_regime)} / {len(valid)}")
+    if linear_regime:
+        fms = [r["fm"] for r in linear_regime if not math.isnan(r["fm"])]
+        if fms:
+            dev_fm = [abs(f - 1.0) for f in fms]
+            print(f"  measured F~M on this subset:")
+            print(f"    mean F~M       = {sum(fms)/len(fms):.4f}")
+            print(f"    mean |F~M - 1| = {sum(dev_fm)/len(dev_fm):.4f}")
+            print(f"    max  |F~M - 1| = {max(dev_fm):.4f}")
+            print(f"    all in band    = {all(d < 0.10 for d in dev_fm)}")
+        # how many of these are battery PASS, FAIL?
+        n_pass_in_linear = sum(1 for r in linear_regime if r["pass"])
+        n_fail_in_linear = len(linear_regime) - n_pass_in_linear
+        print(f"  battery breakdown: PASS {n_pass_in_linear}, FAIL {n_fail_in_linear}")
+
+    # ========================================================================
+    # INDEPENDENT SUBSET 2: sign-agreement families (no F~M label used)
+    # Criterion: kubo_true and measured at s=0.001 both nonzero AND same sign
+    # ========================================================================
+    print("\nINDEPENDENT SUBSET 2 — SIGN-AGREEMENT (kubo & measured both nonzero, same sign)")
+    print("(criterion uses ONLY kubo_true and measured signs; no F~M label involved)")
+    sign_agree = []
+    for r in valid:
+        if abs(r["kubo"]) < 1e-6:
+            continue
+        d = r["deltas"][0]  # measured at s=0.001
+        if abs(d) < 1e-9:
+            continue
+        if (r["kubo"] > 0) == (d > 0):
+            sign_agree.append(r)
+    print(f"  N = {len(sign_agree)} / {len(valid)}")
+    if sign_agree:
+        fms = [r["fm"] for r in sign_agree if not math.isnan(r["fm"])]
+        if fms:
+            dev_fm = [abs(f - 1.0) for f in fms]
+            print(f"  measured F~M on this subset:")
+            print(f"    mean F~M       = {sum(fms)/len(fms):.4f}")
+            print(f"    mean |F~M - 1| = {sum(dev_fm)/len(dev_fm):.4f}")
+            print(f"    max  |F~M - 1| = {max(dev_fm):.4f}")
+            n_in_band = sum(1 for d in dev_fm if d < 0.10)
+            print(f"    in 0.10 band  = {n_in_band}/{len(dev_fm)}")
+        n_pass_in_sa = sum(1 for r in sign_agree if r["pass"])
+        n_fail_in_sa = len(sign_agree) - n_pass_in_sa
+        print(f"  battery breakdown: PASS {n_pass_in_sa}, FAIL {n_fail_in_sa}")
+
+    # ========================================================================
+    # SANITY (DEPENDENT on F~M label, kept for transparency only — DO NOT cite as independent)
+    # ========================================================================
+    print("\nSANITY (DEPENDENT — battery PASS subset uses |F~M-1|<0.10 by definition)")
+    print("(this is circular and is reported only for cross-checking with the independent subsets)")
     passing = [r for r in valid if r["pass"] and not math.isnan(r["fm"])]
     if passing:
         fms = [r["fm"] for r in passing]
         dev_fm = [abs(f - 1.0) for f in fms]
         print(f"  N = {len(passing)}")
-        print(f"  mean F~M = {sum(fms)/len(fms):.4f}")
+        print(f"  mean F~M = {sum(fms)/len(fms):.4f}  (TAUTOLOGICAL: PASS already requires |F~M-1|<0.10)")
         print(f"  mean |F~M - 1| = {sum(dev_fm)/len(dev_fm):.4f}")
-        print(f"  max |F~M - 1| = {max(dev_fm):.4f}")
-        print(f"  all within 0.10 of 1.0: {all(d < 0.10 for d in dev_fm)}")
-
-    # For PASSING families, check linearity ratio quality at largest s
-    print("\nPASSING families — linearity ratio at s = 0.008:")
-    if passing:
-        ratios_large = [r["ratios"][-1] for r in passing if not math.isnan(r["ratios"][-1])]
-        if ratios_large:
-            dev_from_1 = [abs(r - 1.0) for r in ratios_large]
-            print(f"  mean |ratio - 1| at s=0.008: {sum(dev_from_1)/len(dev_from_1):.4f}")
-            print(f"  max  |ratio - 1| at s=0.008: {max(dev_from_1):.4f}")
-            linear_ok = sum(1 for d in dev_from_1 if d < 0.10)
-            print(f"  linear regime (|ratio-1|<0.10): {linear_ok}/{len(ratios_large)} = "
-                  f"{linear_ok/len(ratios_large):.1%}")
 
     print("\n" + "=" * 100)
-    print("VERDICT")
+    print("VERDICT (independent subsets only)")
     print("=" * 100)
-    if passing:
-        mean_dev_fm = sum(abs(r["fm"] - 1.0) for r in passing if not math.isnan(r["fm"])) / len(passing)
-        ratios_large = [r["ratios"][-1] for r in passing if not math.isnan(r["ratios"][-1])]
-        linear_ok = sum(1 for d in ratios_large if abs(d - 1.0) < 0.10)
-        if mean_dev_fm < 0.05 and linear_ok / max(len(ratios_large), 1) > 0.8:
-            print("  STRONG — first-order Kubo derives F~M ≈ 1 on the passing subset.")
-            print("  Linear regime holds across s ∈ [0.001, 0.008] for most passing families.")
-            print("  The first-order Kubo expression is the derivation of the")
-            print("  linear-response package: gravity sign AND F~M = 1 both follow")
-            print("  from the parallel perturbation propagator at s = 0.")
-        elif mean_dev_fm < 0.10:
-            print("  MODERATE — F~M is close to 1 but linearity ratio drifts with s.")
-            print("  First-order captures the leading behavior; second-order contributions")
-            print("  are visible at s = 0.008.")
-        else:
-            print("  NEGATIVE — measured F~M deviates from 1 significantly.")
-            print("  First-order Kubo does not fully derive the F~M exponent.")
+    if linear_regime:
+        fms_lr = [r["fm"] for r in linear_regime if not math.isnan(r["fm"])]
+        if fms_lr:
+            mean_dev_lr = sum(abs(f - 1.0) for f in fms_lr) / len(fms_lr)
+            in_band_lr = sum(1 for f in fms_lr if abs(f - 1.0) < 0.10)
+            print(f"  Linearity-regime subset (independent of F~M): N = {len(linear_regime)}")
+            print(f"    mean |F~M - 1| = {mean_dev_lr:.4f}")
+            print(f"    in band        = {in_band_lr}/{len(fms_lr)}")
+            if mean_dev_lr < 0.05 and in_band_lr == len(fms_lr):
+                print("    STRONG — F~M ≈ 1 holds on the linearity-regime subset selected without")
+                print("    the F~M label. First-order Kubo derives F~M = 1 in the linear regime.")
+            elif mean_dev_lr < 0.10:
+                print("    MODERATE — F~M close to 1 in the linear-regime subset.")
+            else:
+                print("    NEGATIVE — even in the linearity-regime subset, F~M drifts from 1.")
 
 
 if __name__ == "__main__":

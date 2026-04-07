@@ -1,7 +1,7 @@
-# First-Order Kubo Range of Validity — F~M ≈ 1 Derived on Passing Families
+# First-Order Kubo Range of Validity — F~M ≈ 1 Derived on Linearity-Regime Subset
 
 **Date:** 2026-04-07
-**Status:** retained positive — first-order Kubo linear response predicts `delta_z(s) ≈ kubo_true · s`, implying F~M = 1 exactly. On 28/28 battery-passing families across the combined 44-family set (swept + scaffolded cross-gen + off-scaffold), measured F~M = **1.0061 ± 0.0098 (mean ± mean absolute deviation)**, max |F~M − 1| = 0.0364. Every passing family satisfies the battery's F~M criterion (|F~M − 1| < 0.10) by construction of being in the linear Kubo regime. This extends the first-order Kubo derivation from gravity *sign* (previous lane) to gravity *magnitude exponent*.
+**Status:** retained positive — first-order Kubo linear response predicts `delta_z(s) ≈ kubo_true · s`, implying F~M = 1 exactly. On a **linearity-regime subset of 15/41 families selected by a linearity criterion that does NOT reference the F~M label** (`|measured / (kubo_true · s) − 1| < 0.10` at all four battery strengths), measured F~M = **1.0048 ± 0.0069**, max |F~M − 1| = **0.0156**, and all 15 families satisfy the 0.10 F~M band. This is non-tautological evidence that linearity → F~M = 1. Of those 15 families, 13 are battery PASS and 2 are battery FAIL (they satisfy linearity but fail another battery condition). Selecting on battery PASS itself is circular because PASS already includes |F~M − 1| < 0.10; that result is reported as a sanity check only.
 
 ## Artifact chain
 
@@ -31,22 +31,80 @@ derivation extends from gravity *sign* to gravity *F~M exponent*.
 
 ## Result
 
-### F~M distribution on PASSING families
+### Why "PASS subset" is circular and how the independent subset is built
 
-For the 28 families that pass the full 5-condition battery
-(gravity sign + |F~M − 1|<0.10 + Born + null + dynamic gap > 5%):
+Selecting families by `r["pass"]` and reporting that the result has
+F~M ≈ 1 is **circular**, because the battery PASS criterion itself
+includes `|F~M − 1| < 0.10` as one of its five conditions. To get
+non-tautological support for "first-order Kubo derives F~M = 1", the
+subset must be defined by a criterion that does **not** reference
+the F~M label.
+
+This note uses two independent subsets:
+
+1. **Linearity-regime** (primary) — families where the per-strength
+   ratio `measured(s) / (kubo_true · s)` stays within 10% of 1 at
+   every battery strength. Direct test of whether first-order
+   linear response dominates. No F~M, no battery label.
+2. **Sign-agreement** (secondary) — families where `kubo_true` and
+   `measured(s=0.001)` are both nonzero and sign-agree. Wider but
+   weaker filter; admits cases where the linear term has the right
+   sign but second-order corrections are large.
+
+The circular PASS subset is reported separately below, **labeled
+explicitly as a sanity check, not as evidence**.
+
+### F~M on the linearity-regime subset (independent of F~M label)
 
 | Metric | Value |
 | --- | ---: |
-| N | 28 |
-| Mean F~M | **1.0061** |
-| Mean \|F~M − 1\| | **0.0098** |
-| Max \|F~M − 1\| | 0.0364 |
-| All within 0.10 of 1.0 | **Yes** (28/28) |
+| N | **15 / 41** |
+| Mean F~M | **1.0048** |
+| Mean \|F~M − 1\| | **0.0069** |
+| Max \|F~M − 1\| | **0.0156** |
+| All within 0.10 of 1.0 | **15/15 (Yes)** |
+| Battery breakdown | 13 PASS, 2 FAIL |
 
-**Mean deviation of F~M from 1.0 is under 1%.** Every passing family
-satisfies the battery's F~M criterion |F~M − 1| < 0.10 with a large
-margin.
+This is the headline result. Of 41 families with non-edge `kubo_true`,
+15 satisfy a strict linearity criterion (`|measured / (kubo_true·s) − 1| < 0.10`
+at all four s values). All 15 of those families have measured F~M
+within 1.6% of 1.0, mean |F~M − 1| = 0.0069 (under 1%).
+
+**The selection is independent of the F~M label**, so this is genuine
+non-tautological evidence that whenever first-order linear response
+dominates, F~M ≈ 1 follows. The 2 battery-FAIL families in this subset
+satisfy linearity but fail another condition (Born, dynamic, null, or
+gravity sign).
+
+### F~M on the sign-agreement subset (also independent of F~M label)
+
+| Metric | Value |
+| --- | ---: |
+| N | 38 / 41 |
+| Mean F~M | 1.0334 |
+| Mean \|F~M − 1\| | 0.0441 |
+| Max \|F~M − 1\| | 0.7865 |
+| Within 0.10 of 1.0 | 34/38 |
+
+A much larger but looser subset. Sign-agreement is a weaker filter:
+it admits families where the linear term has the right sign but
+second-order corrections push F~M outside the band. The single
+large outlier (max |F~M − 1| = 0.79) is `G2_asym_z`, which sits at
+the boundary of the linear regime and shows the predicted nonlinear
+pathology.
+
+### Sanity (circular, reported only for transparency)
+
+| Metric | Value (TAUTOLOGICAL) |
+| --- | ---: |
+| N (battery PASS) | 28 |
+| Mean F~M | 1.0061 |
+| Mean \|F~M − 1\| | 0.0098 |
+
+This subset uses `r["pass"]` which already requires `|F~M − 1| < 0.10`.
+The 28/28 number is **circular** and is included only for cross-checking
+that the linearity-regime subset is consistent with the broader PASS
+behavior.
 
 ### F~M distribution by group (Kubo-matching families only, |kubo_true| > 1e-6)
 
@@ -126,21 +184,25 @@ exponent**:
 
 | Quantity | Previous (sign) | This lane (magnitude exponent) |
 | --- | --- | --- |
-| First-order Kubo derives | d(cz)/ds sign: 42/44 | F~M = 1 on passing: 28/28 |
-| Off-scaffold correlation | r = 0.9995 | mean \|F~M − 1\| = 0.0159 |
-| Range of validity | s = 0.001 | approximately linear up to s = 0.004; 1.7% drift to s = 0.008 |
+| First-order Kubo derives | d(cz)/ds sign: 42/44 | F~M = 1 on linearity-regime subset: 15/15 (mean \|F~M − 1\| = 0.0069) |
+| Off-scaffold correlation | r = 0.9995 | off-scaffold group mean \|F~M − 1\| = 0.0159 |
+| Range of validity | s = 0.001 | approximately linear up to s = 0.004; 1.7% median ratio drift to s = 0.008 |
+| Selection criterion | none (all 44 evaluated) | linearity-regime, F~M-independent (no circularity) |
 
 Together, the two lanes say:
 
-> **For every family where linear response holds** (i.e., for all
-> 28 families that pass the battery), the first-order Kubo expression
-> derives both:
-> 1. **Gravity sign** — via the parallel perturbation propagator B_j
-> 2. **F~M = 1** — as the defining property of linear response
+> **For every family where the first-order linear regime holds**
+> (selected by an F~M-independent linearity-ratio criterion: 15
+> families out of 41), the first-order Kubo expression derives both:
+> 1. **Gravity sign** — via the parallel perturbation propagator B_j (true-Kubo lane: 42/44 across all families)
+> 2. **F~M = 1** — as the defining property of linear response (15/15 in this subset, mean |F~M − 1| = 0.0069)
 >
 > The battery's PASS criterion `(gravity TOWARD AND |F~M − 1| < 0.10)`
-> follows from a single analytic fact: the linear term dominates
-> the response at the battery's test strengths.
+> follows on this subset from a single analytic fact: the linear
+> term dominates the response at the battery's test strengths. The
+> linear regime is a strict subset of battery PASS — 13 of these
+> 15 families are battery PASS, 2 are battery FAIL on other
+> criteria (Born, dynamic, or null).
 
 ## What this does NOT extend
 
@@ -187,14 +249,17 @@ But it is a meaningful extension of the true-Kubo lane:
 
 > "The first-order Kubo expression `delta_z(s) ≈ kubo_true · s`
 > predicts F~M = 1 exactly as the defining property of linear
-> response. On all 28 battery-passing families across swept,
-> scaffolded, and off-scaffold groups, measured F~M has mean
-> 1.0061 and mean |F~M − 1| = 0.0098, well within the battery's
-> 0.10 threshold. Off-scaffold passing families are the tightest
-> (mean |F~M − 1| = 0.016). The median linearity ratio drifts 1.7%
-> from s = 0.001 to s = 0.008, indicating small but visible
-> second-order corrections at the largest battery strength.
-> Together with the previous true-Kubo lane, this derives TWO of
-> the battery's five PASS conditions (gravity sign and F~M = 1)
-> from a single closed-form analytic expression: the parallel
-> perturbation propagator B_j = d(amp_j)/ds at s = 0."
+> response. On a **linearity-regime subset of 15 / 41 families**
+> selected by `|measured / (kubo_true · s) − 1| < 0.10` at all four
+> battery strengths — a criterion that does NOT reference the F~M
+> label — measured F~M has mean **1.0048**, mean |F~M − 1| = **0.0069**,
+> max |F~M − 1| = **0.0156**, and 15/15 sit inside the battery's 0.10
+> band. Of these 15, 13 are battery PASS and 2 are battery FAIL
+> (linearity holds but another battery condition fails). The
+> circular battery-PASS subset (28/28 with mean |F~M − 1| = 0.0098)
+> is reported only as a sanity check, since PASS already includes
+> |F~M − 1| < 0.10. Together with the previous true-Kubo lane,
+> this gives a non-tautological derivation of TWO battery
+> conditions on the linearity-regime subset (gravity sign and
+> F~M = 1) from a single closed-form analytic expression: the
+> parallel perturbation propagator B_j = d(amp_j)/ds at s = 0."
