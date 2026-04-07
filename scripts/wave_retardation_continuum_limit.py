@@ -138,6 +138,11 @@ def solve_wave(NL, PW, H, strength, iz_of_t, src_layer):
 
 
 def make_instantaneous(NL, PW, H, strength, iz_of_t, src_layer):
+    """OLD comparator: cached late-time slice of static wave-equation solve.
+
+    Lattice-artifact-sensitive (see continuum-limit note); kept for
+    backward compatibility with the original Lane 6 setup.
+    """
     hw = int(PW / H)
     nw = 2 * hw + 1
     cache = {}
@@ -150,6 +155,40 @@ def make_instantaneous(NL, PW, H, strength, iz_of_t, src_layer):
             full = solve_wave(NL, PW, H, strength, lambda tt, k=iz_now: k, src_layer)
             cache[iz_now] = [row[:] for row in full[NL - 1]]
         history[t] = [row[:] for row in cache[iz_now]]
+    return history
+
+
+def make_imposed_newton(NL, PW, H, strength, iz_of_t, src_layer):
+    """NEW comparator: imposed `s / (r + 0.1)` field at each layer with the
+    source at its CURRENT physical position iz_of_t(t)*H.
+
+    This is the literal c=infinity Newtonian potential evaluated against
+    a time-varying source position. It has no wave-equation equilibration,
+    no cache keys, no incomplete propagation — just the analytic
+    instantaneous potential at each layer.
+
+    Setup: at layer t, for each (iy, iz) cell on the field grid,
+    compute the 2D Euclidean distance from the cell's physical position
+    (layer*H, iz*H) to the source's current position (src_layer*H, iz_of_t(t)*H).
+    Field value = strength / (distance + 0.1).
+    """
+    hw = int(PW / H)
+    nw = 2 * hw + 1
+    history = [[[0.0] * nw for _ in range(nw)] for _ in range(NL)]
+    x_src_phys = src_layer * H
+    for t in range(NL):
+        if t < src_layer:
+            continue
+        z_src_phys = iz_of_t(t) * H
+        layer_x = t * H
+        for iy in range(nw):
+            for iz in range(nw):
+                # Cell physical (y, z) — wave equation field is 2D in (y, z),
+                # so the "x" axis for the distance is the layer index
+                z_phys = (iz - hw) * H
+                dist = math.sqrt((layer_x - x_src_phys) ** 2
+                                 + (z_phys - z_src_phys) ** 2) + 0.1
+                history[t][iy][iz] = strength / dist
     return history
 
 
@@ -230,22 +269,34 @@ def measure_at_H(H_val, label):
 
     h_M = solve_wave(NL, PW, H_val, S_PHYS, iz_of_t, src_layer)
     h_I = make_instantaneous(NL, PW, H_val, S_PHYS, iz_of_t, src_layer)
+    h_N = make_imposed_newton(NL, PW, H_val, S_PHYS, iz_of_t, src_layer)
 
     pos, adj, nmap = grow(0, 0.20, 0.70, NL, PW, 3, H_val)
     free = prop_beam(pos, adj, nmap, None, k_phase, NL, PW, H_val)
     z_free = cz(free, pos, NL, PW, H_val)
     cz_M = cz(prop_beam(pos, adj, nmap, h_M, k_phase, NL, PW, H_val), pos, NL, PW, H_val)
     cz_I = cz(prop_beam(pos, adj, nmap, h_I, k_phase, NL, PW, H_val), pos, NL, PW, H_val)
+    cz_N = cz(prop_beam(pos, adj, nmap, h_N, k_phase, NL, PW, H_val), pos, NL, PW, H_val)
     dM = cz_M - z_free
     dI = cz_I - z_free
-    diff = dM - dI
-    rel = abs(diff) / max(abs(dM), abs(dI), 1e-12)
+    dN = cz_N - z_free
+
+    diff_MI = dM - dI
+    rel_MI = abs(diff_MI) / max(abs(dM), abs(dI), 1e-12)
+    diff_MN = dM - dN
+    rel_MN = abs(diff_MN) / max(abs(dM), abs(dN), 1e-12)
+    diff_IN = dI - dN
+    rel_IN = abs(diff_IN) / max(abs(dI), abs(dN), 1e-12)
 
     return {
         "label": label, "H": H_val, "NL": NL, "iz_traversal": iz_traversal,
         "iz_start": iz_start, "iz_end": iz_end, "src_layer": src_layer,
         "n_active": n_active, "v_per_layer": v_phys, "k_phase": k_phase,
-        "n_nodes": len(pos), "dM": dM, "dI": dI, "diff": diff, "rel": rel,
+        "n_nodes": len(pos),
+        "dM": dM, "dI": dI, "dN": dN,
+        "diff_MI": diff_MI, "rel_MI": rel_MI,
+        "diff_MN": diff_MN, "rel_MN": rel_MN,
+        "diff_IN": diff_IN, "rel_IN": rel_IN,
     }
 
 
@@ -278,48 +329,79 @@ def main():
         print(f"  src_layer = {r['src_layer']}, n_active = {r['n_active']}, "
               f"v_per_layer = {r['v_per_layer']:+.4f}")
         print(f"  n_nodes = {r['n_nodes']}")
-        print(f"  dM = {r['dM']:+.6f}, dI = {r['dI']:+.6f}")
-        print(f"  M - I = {r['diff']:+.6f}, rel_gap = {r['rel']:.2%}")
+        print(f"  dM = {r['dM']:+.6f}, dI (cached static) = {r['dI']:+.6f}, "
+              f"dN (imposed Newton) = {r['dN']:+.6f}")
+        print(f"  M - I = {r['diff_MI']:+.6f}, rel_MI = {r['rel_MI']:.2%}")
+        print(f"  M - N = {r['diff_MN']:+.6f}, rel_MN = {r['rel_MN']:.2%}")
+        print(f"  I - N = {r['diff_IN']:+.6f}, rel_IN = {r['rel_IN']:.2%}")
 
     print("\n" + "=" * 100)
     print("REFINEMENT TABLE")
     print("=" * 100)
-    print(f"{'label':>10s} {'H':>8s} {'NL':>5s} {'n_nodes':>10s} "
-          f"{'dM':>12s} {'dI':>12s} {'M-I':>12s} {'rel_gap':>10s}")
+    print(f"{'label':>8s} {'H':>6s} {'NL':>4s} {'dM':>10s} {'dI':>10s} {'dN':>10s}"
+          f" {'rel_MI':>9s} {'rel_MN':>9s} {'rel_IN':>9s}")
     for r in runs:
-        print(f"{r['label']:>10s} {r['H']:8.4f} {r['NL']:>5d} {r['n_nodes']:>10d} "
-              f"{r['dM']:+12.6f} {r['dI']:+12.6f} {r['diff']:+12.6f} {r['rel']:10.2%}")
+        print(f"{r['label']:>8s} {r['H']:6.3f} {r['NL']:>4d} "
+              f"{r['dM']:+10.6f} {r['dI']:+10.6f} {r['dN']:+10.6f} "
+              f"{r['rel_MI']:9.2%} {r['rel_MN']:9.2%} {r['rel_IN']:9.2%}")
 
     if len(runs) >= 2:
         print("\n" + "=" * 100)
-        print("CONVERGENCE")
+        print("CONVERGENCE — three quantities, two comparators")
         print("=" * 100)
-        rels = [r["rel"] for r in runs]
-        diffs = [abs(r["diff"]) for r in runs]
-        # Pairwise differences
-        for i in range(len(runs) - 1):
-            r1 = runs[i]
-            r2 = runs[i + 1]
-            change_rel = abs(r2["rel"] - r1["rel"])
-            change_diff = abs(r2["diff"] - r1["diff"])
-            print(f"  {r1['label']:>10s} → {r2['label']:>10s}: "
-                  f"Δrel = {change_rel:.4f} ({change_rel/max(r1['rel'], 1e-9):.1%}), "
-                  f"Δ|M-I| = {change_diff:.6f}")
+        for key, label in [("dM", "dM (retarded wave field)"),
+                           ("dI", "dI (cached static slice)"),
+                           ("dN", "dN (imposed Newton at current pos)"),
+                           ("rel_MI", "rel_MI = (M - I) / max(|M|,|I|)"),
+                           ("rel_MN", "rel_MN = (M - N) / max(|M|,|N|)")]:
+            print(f"\n  {label}:")
+            for i in range(len(runs) - 1):
+                r1 = runs[i]
+                r2 = runs[i + 1]
+                v1 = r1[key]
+                v2 = r2[key]
+                if isinstance(v1, float) and abs(v1) > 1e-12:
+                    print(f"    {r1['label']:>8s}({v1:+.6f}) → "
+                          f"{r2['label']:>8s}({v2:+.6f})  "
+                          f"Δ = {v2-v1:+.6f} ({(v2-v1)/v1:+.1%})")
+                else:
+                    print(f"    {r1['label']:>8s}({v1:+.6f}) → "
+                          f"{r2['label']:>8s}({v2:+.6f})  "
+                          f"Δ = {v2-v1:+.6f}")
 
         # Verdict
-        last_change = abs(runs[-1]["rel"] - runs[-2]["rel"])
-        last_rel = runs[-1]["rel"]
-        rel_tol = max(0.05 * last_rel, 0.005)  # 5% relative tolerance or 0.5% absolute
+        print("\n" + "=" * 100)
+        print("VERDICT")
+        print("=" * 100)
+        last_MI_change = abs(runs[-1]["rel_MI"] - runs[-2]["rel_MI"])
+        last_MN_change = abs(runs[-1]["rel_MN"] - runs[-2]["rel_MN"])
+        rel_tol = 0.05  # 5% absolute tolerance on rel_gap
+
+        print(f"  Last refinement Δ(rel_MI) = {last_MI_change:.4f}  "
+              f"(old comparator)")
+        print(f"  Last refinement Δ(rel_MN) = {last_MN_change:.4f}  "
+              f"(imposed-Newton comparator)")
         print()
-        if last_change < rel_tol:
-            print(f"  CONVERGING — last refinement changed rel_gap by only "
-                  f"{last_change:.4f} (<{rel_tol:.4f} tolerance)")
-            print(f"  Continuum limit appears to be ≈ {last_rel:.2%}")
+        if last_MN_change < rel_tol and last_MI_change > rel_tol:
+            print(f"  IMPROVED — imposed-Newton comparator IS converging")
+            print(f"  ({last_MN_change:.4f} < {rel_tol}) where the cached-static")
+            print(f"  comparator was NOT ({last_MI_change:.4f} > {rel_tol}).")
+            print(f"  The dI instability was a comparator construction artifact.")
+            print(f"  Continuum-limit rel_MN ≈ {runs[-1]['rel_MN']:.2%}")
+        elif last_MN_change < last_MI_change * 0.5:
+            print(f"  PARTIAL — imposed-Newton comparator is more stable than")
+            print(f"  the cached-static one (Δ_MN = {last_MN_change:.4f} < "
+                  f"Δ_MI = {last_MI_change:.4f})")
+            print(f"  but neither is strictly converged at this resolution.")
+        elif last_MN_change < last_MI_change:
+            print(f"  MARGINAL — imposed-Newton slightly more stable than cached-static")
+            print(f"  (Δ_MN = {last_MN_change:.4f} < Δ_MI = {last_MI_change:.4f}) but")
+            print(f"  not converged.")
         else:
-            print(f"  NOT CONVERGED — last refinement changed rel_gap by "
-                  f"{last_change:.4f} (>{rel_tol:.4f} tolerance)")
-            print(f"  The Lane 6 retardation gap is sensitive to lattice spacing —")
-            print(f"  it does not have a clean continuum limit at these refinement levels.")
+            print(f"  NEGATIVE — imposed-Newton comparator is no better than cached-static")
+            print(f"  (Δ_MN = {last_MN_change:.4f} ≥ Δ_MI = {last_MI_change:.4f}).")
+            print(f"  The dI instability is NOT just a comparator construction artifact.")
+            print(f"  The wave-retardation magnitude is fundamentally lattice-dependent.")
 
 
 if __name__ == "__main__":

@@ -1,7 +1,7 @@
 # Wave-Retardation Continuum Limit — NEGATIVE (Comparator-Dominated, Not Retardation-Dominated)
 
 **Date:** 2026-04-07
-**Status:** retained negative — refining the lattice spacing H from 0.5 to 0.35 to 0.25 (with all physical parameters held constant) does NOT give a converged value for the M − I rel_gap. The gap oscillates 28.81% → 9.53% → 43.40%. However, the failure structure is informative: dM (retarded wave field) drifts only 14% across the refinement (monotone, plausibly converging to ~0.007), while dI (cached-static-slice instantaneous comparator) oscillates 9% → 35% → 45%. The Lane 6 25% gap is dominated by the dI construction's lattice artifacts, NOT by a stable retardation signal. The "M ≠ I" existence is logically valid, but the magnitude does not have a clean continuum limit at these refinement levels.
+**Status:** retained negative — refining the lattice spacing H from 0.5 to 0.35 to 0.25 (with physical parameters held approximately constant; v/c drifts 3% at medium due to integer rounding) does NOT give a converged value for the M − I rel_gap under either of two tested c=∞ comparators (cached static slices or imposed-Newton field). dM (retarded wave field) is fairly stable across the refinement (14% monotone drift). The instability is in the comparator construction, not the retarded field. dN (imposed Newton) is much more lattice-stable than dI (Δ +2.5% vs +45.2% at the last step), but it is the wrong **physical** comparator (Poisson, not wave-equation static limit), so rel_MN ≈ 50–67% is apples-to-oranges. The right physical comparator (equilibrated static slice) needs larger NL than tested; that's the identified next move. The "M ≠ I" existence is logically valid, but the magnitude does not survive lattice refinement under either comparator tested.
 
 ## Artifact chain
 
@@ -24,9 +24,10 @@ vanishes in the continuum limit**:
 
 ## Setup
 
-Physical parameters held constant across refinements:
+Physical parameters held **approximately** constant across refinements
+(rounding to integer cell counts is unavoidable):
 
-| Quantity | Value | Meaning |
+| Quantity | Target value | Meaning |
 | --- | ---: | --- |
 | `T_phys` | 15.0 | Total propagation "time" = NL × H |
 | `iz_start_phys` | 3.0 | Source initial position (matches Lane 6 iz=6 at H=0.5) |
@@ -35,11 +36,29 @@ Physical parameters held constant across refinements:
 | `PW_phys` | 6.0 | Transverse beam half-width |
 | `k × H` | 2.5 | Phase per edge step (so k_phase = 2.5/H) |
 | `S_phys` | 0.004 | Field source strength |
-| `v/c` | −0.30 | Source velocity (D_phys / (T_phys · (1−src_frac))) |
+| `v/c` (target) | −0.30 | Source velocity (D_phys / (T_phys · (1−src_frac))) |
 
 At each refinement, NL = round(T_phys / H), iz_range = round(D_phys / H),
 k_phase = K_PER_H / H. The propagator and the (2+1)D wave equation are
 re-implemented with explicit H (no module-level constants).
+
+**Discretization caveat.** The realized v/c at each refinement is
+NOT exactly the target. Because NL, src_layer = NL/3, n_active, and
+iz_range are all integer-rounded, the actual velocity per layer drifts:
+
+| H | NL | src_layer | n_active | iz_range | realized v/c |
+| ---: | ---: | ---: | ---: | ---: | ---: |
+| 0.50 | 30 | 10 | 20 | 6 | **−0.3000** |
+| 0.35 | 43 | 14 | 29 | 9 | **−0.3103** |
+| 0.25 | 60 | 20 | 40 | 12 | **−0.3000** |
+
+The medium step has v/c off by 3.4% from target. This is small
+enough that it doesn't change the qualitative interpretation of the
+results, but it means the sweep is only **approximately**
+constant-velocity. A perfectly constant-velocity sweep would require
+choosing T_phys so that all three (NL, src_layer, iz_range) divide
+evenly at every H — which is not generally possible across an
+arbitrary refinement schedule.
 
 (2+1)D was used instead of (3+1)D because the (3+1)D field cube at
 H = 0.125 (97³ = 912k cells × 120 layers ≈ 110M cells) ran out of
@@ -118,6 +137,103 @@ cancel out:
 The retarded field dM has neither problem: it's a single direct
 evolution of the wave equation with a moving source, no caching, no
 slice-stitching. That's why dM converges and dI doesn't.
+
+## Follow-on test: imposed-Newton comparator (added 2026-04-07)
+
+After the cached-static-slice comparator was identified as the
+unstable half, a third comparator was added to the harness:
+
+> **dN (imposed-Newton)**: at each layer t, build the field on the
+> (iy, iz) cell grid as `field[iy, iz] = S / (dist + 0.1)` where
+> `dist = √((layer·H − x_src)² + ((iz − hw)·H − iz_of_t(t)·H)²)`.
+> This is the analytic c=∞ Newtonian potential evaluated at the
+> source's CURRENT physical position at every layer. No
+> wave-equation evolution, no cache, no equilibration time.
+
+The same H ∈ {0.50, 0.35, 0.25} sweep with all three comparators:
+
+| H | NL | dM | dI (cached static) | dN (imposed Newton) | rel_MI | rel_MN | rel_IN |
+| ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| 0.50 | 30 | +0.00836 | +0.01175 | +0.02564 | **28.81%** | 67.39% | 54.18% |
+| 0.35 | 43 | +0.00794 | +0.00878 | +0.01671 | 9.53% | 52.48% | 47.48% |
+| 0.25 | 60 | +0.00721 | +0.01274 | +0.01714 | **43.40%** | **57.92%** | 25.65% |
+
+### Comparator stability across refinements
+
+| Quantity | coarse → medium | medium → fine |
+| --- | ---: | ---: |
+| dM | −5.0% | −9.2% |
+| **dI (cached static)** | **−25.3%** | **+45.2%** (oscillating) |
+| **dN (imposed Newton)** | **−34.8%** | **+2.5%** (much more stable last step) |
+| rel_MI | −66.9% | +355.6% |
+| rel_MN | −22.1% | +10.4% |
+
+### What this tells us
+
+**dN is much more lattice-stable than dI at the medium → fine step.**
+Δ(dN) = +2.5% vs Δ(dI) = +45.2%. The imposed-Newton field has no
+equilibration / cache-key issues, so its lattice dependence is much
+weaker once the lattice is fine enough to resolve the mass position.
+
+**rel_MN is significantly more stable than rel_MI at the same step.**
+Δ(rel_MN) = 5.4% vs Δ(rel_MI) = 33.9%. So if we accept dN as the
+comparator, we get a much more stable rel_gap measurement.
+
+**BUT — rel_MN ≈ 50–67% is much LARGER than rel_MI ≈ 25%.** The
+retarded wave field gives roughly **half** the beam deflection of
+the imposed Newton potential at the same source positions. If dN
+were the right physical comparator, this would mean the wave equation
+predicts a 50% deviation from instantaneous Newton — much larger
+than the original Lane 6 25% claim.
+
+### Why dN is a numerically clean but PHYSICALLY WRONG comparator
+
+The imposed-Newton field `s / r` is the analytic solution to the
+**Poisson equation** (`∇²f = source`), not the wave equation.
+
+The wave equation is `(1/c²) ∂²f/∂t² − ∇²f = source`. Its **static
+limit** (∂²/∂t² = 0) is also Poisson — but the wave equation in our
+lattice harness has a different normalization than the imposed
+potential because:
+
+1. The wave-equation static field on the grown DAG depends on the
+   lattice connectivity, the propagator weight `w h²/L²`, and the
+   angular factor `exp(−β θ²)`. None of these match the imposed
+   `1/r` profile in normalization.
+2. The imposed-Newton field is evaluated at the cell midpoint
+   without any path-sum weighting, so it has a different effective
+   coupling to the beam than any wave-equation-derived field.
+
+The right physical c=∞ analog of the wave equation is the
+**equilibrated static wave-equation solution** at the current source
+position — which is what the cached-static-slice comparator was
+trying to be, but with insufficient equilibration time.
+
+So neither comparator is fully correct:
+
+- **dI (cached static slice)**: right physical concept, lattice-unstable
+  because the static slices aren't fully equilibrated at finite NL
+- **dN (imposed Newton)**: numerically stable, but it's a different
+  field equation (Poisson vs wave-equation static limit) so the
+  comparison `dM − dN` is apples-to-oranges in normalization
+
+### What this lane shows definitively
+
+1. **dM (retarded wave field) is fairly continuum-stable** —
+   monotone 14% drift across an 8× lattice density change. This is
+   the cleanest result of the lane.
+2. **The instability problem is in the comparator construction**,
+   not in the retarded field itself. Two different comparators
+   (cached static, imposed Newton) give very different magnitudes
+   for the gap, while the retarded field is consistent.
+3. **No comparator tested in this lane gives a clean continuum
+   limit for the retardation magnitude.** Both rel_MI and rel_MN
+   change by 5–35% per refinement step.
+4. **The next move is a properly equilibrated static slice
+   comparator** — solve each cached static problem on a much larger
+   NL than the dynamic evolution, so the late-time slice is genuine
+   equilibrium. This is option 2 from the previous note's "what to
+   attack next" list.
 
 ## What this changes about the flagship physics
 
@@ -218,17 +334,29 @@ that difference is not a robust physical number.
 
 ## Bottom line
 
-> "Refining the lattice spacing H from 0.5 → 0.35 → 0.25 with all
-> physical parameters held constant gives rel_gap values 28.81% →
-> 9.53% → 43.40% — non-monotone, growing in change between successive
-> refinements, no convergence. dM (retarded wave field) drifts only
-> 14% monotonically across the refinement and plausibly converges to
-> ~0.007. dI (cached-static-slice instantaneous comparator) oscillates
-> 35% with no convergence pattern. The Lane 6 25% rel_gap is dominated
-> by the dI construction's lattice artifacts, not by a stable
-> retardation signal. The 'M ≠ I' existence is logically valid; the
-> magnitude does not survive lattice refinement. The flagship lanes
-> that don't depend on the dI construction (Lanes 4, 5, 7, 8, and
-> the lightcone half of Lane 8b) are unaffected. The retarded-vs-
-> instantaneous magnitude claim of Lanes 6 and 8b is downgraded from
-> 'quantitative prediction' to 'existence only at fixed H'."
+> "Refining the lattice spacing H from 0.5 → 0.35 → 0.25 with
+> physical parameters held approximately constant (modulo integer
+> rounding of NL/src_layer/iz_range, which gives v/c drift of about
+> 3% at the medium step) gives rel_MI values 28.81% → 9.53% → 43.40%
+> — non-monotone, growing in change between successive refinements,
+> no convergence. dM (retarded wave field) drifts only 14%
+> monotonically and is fairly stable. dI (cached-static-slice
+> comparator) oscillates 35% with no convergence pattern. A
+> follow-on test added an imposed-Newton comparator dN (the analytic
+> s/r field at the source's current position): dN is much more
+> lattice-stable than dI (Δ +2.5% vs +45.2% at the last step), but
+> rel_MN ≈ 50–67% is much larger than rel_MI ≈ 25%, and rel_MN is
+> still drifting 5–10% per step. The imposed-Newton comparator is a
+> different field equation (Poisson) than the wave equation, so
+> rel_MN is numerically cleaner but physically apples-to-oranges.
+> The right physical comparator (cached equilibrated static slice)
+> needs much larger NL to fully equilibrate; that test is the
+> identified next move. The Lane 6 25% rel_gap is dominated by
+> comparator construction artifacts, not by a stable retardation
+> signal. The 'M ≠ I' existence is logically valid; the magnitude
+> does not survive lattice refinement under either comparator
+> tested. The flagship lanes that don't depend on a c=∞ comparator
+> (Lanes 4, 5, 7, 8, and the lightcone half of Lane 8b) are
+> unaffected. The retarded-vs-instantaneous magnitude claim of
+> Lanes 6 and 8b is downgraded from 'quantitative prediction' to
+> 'existence only at fixed H'."

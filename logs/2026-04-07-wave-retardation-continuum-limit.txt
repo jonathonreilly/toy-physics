@@ -14,37 +14,67 @@ Physical parameters held constant:
   NL = 30, iz_range = 6, k_phase = 5.000
   src_layer = 10, n_active = 20, v_per_layer = -0.3000
   n_nodes = 18126
-  dM = +0.008362, dI = +0.011747
-  M - I = -0.003385, rel_gap = 28.81%
+  dM = +0.008362, dI (cached static) = +0.011747, dN (imposed Newton) = +0.025639
+  M - I = -0.003385, rel_MI = 28.81%
+  M - N = -0.017277, rel_MN = 67.39%
+  I - N = -0.013892, rel_IN = 54.18%
 
 [medium] H = 0.35
   NL = 43, iz_range = 9, k_phase = 7.143
   src_layer = 14, n_active = 29, v_per_layer = -0.3103
   n_nodes = 51451
-  dM = +0.007942, dI = +0.008778
-  M - I = -0.000836, rel_gap = 9.53%
+  dM = +0.007942, dI (cached static) = +0.008778, dN (imposed Newton) = +0.016713
+  M - I = -0.000836, rel_MI = 9.53%
+  M - N = -0.008771, rel_MN = 52.48%
+  I - N = -0.007935, rel_IN = 47.48%
 
 [fine] H = 0.25
   NL = 60, iz_range = 12, k_phase = 10.000
   src_layer = 20, n_active = 40, v_per_layer = -0.3000
   n_nodes = 141660
-  dM = +0.007212, dI = +0.012743
-  M - I = -0.005531, rel_gap = 43.40%
+  dM = +0.007212, dI (cached static) = +0.012743, dN (imposed Newton) = +0.017138
+  M - I = -0.005531, rel_MI = 43.40%
+  M - N = -0.009926, rel_MN = 57.92%
+  I - N = -0.004395, rel_IN = 25.65%
 
 ====================================================================================================
 REFINEMENT TABLE
 ====================================================================================================
-     label        H    NL    n_nodes           dM           dI          M-I    rel_gap
-    coarse   0.5000    30      18126    +0.008362    +0.011747    -0.003385     28.81%
-    medium   0.3500    43      51451    +0.007942    +0.008778    -0.000836      9.53%
-      fine   0.2500    60     141660    +0.007212    +0.012743    -0.005531     43.40%
+   label      H   NL         dM         dI         dN    rel_MI    rel_MN    rel_IN
+  coarse  0.500   30  +0.008362  +0.011747  +0.025639    28.81%    67.39%    54.18%
+  medium  0.350   43  +0.007942  +0.008778  +0.016713     9.53%    52.48%    47.48%
+    fine  0.250   60  +0.007212  +0.012743  +0.017138    43.40%    57.92%    25.65%
 
 ====================================================================================================
-CONVERGENCE
+CONVERGENCE — three quantities, two comparators
 ====================================================================================================
-      coarse →     medium: Δrel = 0.1929 (66.9%), Δ|M-I| = 0.002548
-      medium →       fine: Δrel = 0.3388 (355.6%), Δ|M-I| = 0.004694
 
-  NOT CONVERGED — last refinement changed rel_gap by 0.3388 (>0.0217 tolerance)
-  The Lane 6 retardation gap is sensitive to lattice spacing —
-  it does not have a clean continuum limit at these refinement levels.
+  dM (retarded wave field):
+      coarse(+0.008362) →   medium(+0.007942)  Δ = -0.000420 (-5.0%)
+      medium(+0.007942) →     fine(+0.007212)  Δ = -0.000730 (-9.2%)
+
+  dI (cached static slice):
+      coarse(+0.011747) →   medium(+0.008778)  Δ = -0.002969 (-25.3%)
+      medium(+0.008778) →     fine(+0.012743)  Δ = +0.003965 (+45.2%)
+
+  dN (imposed Newton at current pos):
+      coarse(+0.025639) →   medium(+0.016713)  Δ = -0.008926 (-34.8%)
+      medium(+0.016713) →     fine(+0.017138)  Δ = +0.000425 (+2.5%)
+
+  rel_MI = (M - I) / max(|M|,|I|):
+      coarse(+0.288126) →   medium(+0.095258)  Δ = -0.192868 (-66.9%)
+      medium(+0.095258) →     fine(+0.434016)  Δ = +0.338759 (+355.6%)
+
+  rel_MN = (M - N) / max(|M|,|N|):
+      coarse(+0.673851) →   medium(+0.524815)  Δ = -0.149036 (-22.1%)
+      medium(+0.524815) →     fine(+0.579164)  Δ = +0.054350 (+10.4%)
+
+====================================================================================================
+VERDICT
+====================================================================================================
+  Last refinement Δ(rel_MI) = 0.3388  (old comparator)
+  Last refinement Δ(rel_MN) = 0.0543  (imposed-Newton comparator)
+
+  PARTIAL — imposed-Newton comparator is more stable than
+  the cached-static one (Δ_MN = 0.0543 < Δ_MI = 0.3388)
+  but neither is strictly converged at this resolution.
