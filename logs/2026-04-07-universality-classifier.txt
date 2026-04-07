@@ -22,7 +22,7 @@ PASS = (gravity TOWARD) AND (|F~M-1|<0.10) AND (Born<1e-10) AND (|null|<1e-10)
 
 [ 9/26] E1_PW3_narrow                    PASS  delta=+0.0056  fm=1.031  born=1.0e-16
 
-[10/26] E2_PW10_wide                     PASS  delta=+0.0282  fm=1.013  born=1.3e-15
+[10/26] E2_PW10_wide                     FAIL  delta=+0.0282  fm=1.013  born=1.3e-15
 
 [11/26] F1_NL10_short                    PASS  delta=+0.0054  fm=0.998  born=2.7e-16
 
@@ -46,7 +46,7 @@ PASS = (gravity TOWARD) AND (|F~M-1|<0.10) AND (Born<1e-10) AND (|null|<1e-10)
 
 [21/26] K2_huge_drift_md1                PASS  delta=+0.0000  fm=1.003  born=3.1e-15
 
-[22/26] K3_NL5                           PASS  delta=+0.0022  fm=0.947  born=3.2e-16
+[22/26] K3_NL5                           FAIL  delta=+0.0022  fm=0.947  born=3.2e-16
 
 [23/26] K4_PW2                           PASS  delta=+0.0055  fm=1.004  born=9.1e-16
 
@@ -70,7 +70,7 @@ C2_random_hi               122.81   0.002   0.73   0.970    +0.0060    0.996    
 D1_md1_NN                   21.71   0.000   0.87   0.859    +0.0386    0.972    5.2e-16   PASS
 D2_md4_long                191.07   0.000   0.66   0.978    +0.0214    1.015    4.0e-16   PASS
 E1_PW3_narrow               91.48   0.000   0.54   1.000    +0.0056    1.031    1.0e-16   PASS
-E2_PW10_wide               137.44   0.000   0.81   0.929    +0.0282    1.013    1.3e-15   PASS
+E2_PW10_wide               137.44   0.000   0.81   0.929    +0.0282    1.013    1.3e-15   FAIL
 F1_NL10_short              113.91   0.000   0.67   0.919    +0.0054    0.998    2.7e-16   PASS
 F2_NL40_long               124.86   0.000   0.74   0.981    +0.0352    1.001    2.6e-17   PASS
 G1_asym_y                   66.83   0.000   0.73   0.504    +0.0136    1.014    9.9e-17   PASS
@@ -82,30 +82,32 @@ J1_aniso_z2                203.52   0.000   0.63   0.980    +0.0209    1.016    
 J2_aniso_z4                271.21   0.000   0.83   0.980    +0.0208    1.015    1.9e-16   PASS
 K1_NN_no_restore            21.71   0.002   0.87   0.859    +0.0012    0.992    1.3e-15   PASS
 K2_huge_drift_md1           21.71   0.002   0.87   0.859    +0.0000    1.003    3.1e-15   PASS
-K3_NL5                      96.14   0.000   0.57   0.818    +0.0022    0.947    3.2e-16   PASS
+K3_NL5                      96.14   0.000   0.57   0.818    +0.0022    0.947    3.2e-16   FAIL
 K4_PW2                      66.56   0.000   0.82   1.000    +0.0055    1.004    9.1e-16   PASS
 L1_seed1                   122.81   0.000   0.73   0.970    +0.0245    1.014    1.8e-15   PASS
 L2_seed2                   122.81   0.000   0.73   0.970    +0.0263    1.010    1.7e-15   PASS
 L3_seed3                   122.81   0.000   0.73   0.970    +0.0230    1.005    1.9e-15   PASS
 
-PASS: 23 / 26    FAIL: 3 / 26
+PASS: 21 / 26    FAIL: 5 / 26
 
 FAIL BREAKDOWN:
+  E2_PW10_wide               -> dyn (2.03%)
   G2_asym_z                  -> grav (delta=-0.0002), F~M (fm=1.786)
   H1_ring                    -> grav (delta=-0.0055), F~M (fm=1.182)
-  I1_drift_y                 -> grav (delta=+0.0000), F~M (fm=nan)
+  I1_drift_y                 -> grav (delta=+0.0000), F~M (fm=nan), dyn (0.00%)
+  K3_NL5                     -> dyn (0.00%)
 
 CLASSIFIER ANALYSIS (in-sample):
-  best 2-prop AND rule: (avg_deg >= 20.739) AND (z_sym <= 0.002)
-  in-sample accuracy: 100.0%
+  best 2-prop AND rule: (avg_deg >= 10.415) AND (reach_frac >= 0.859)
+  in-sample accuracy: 92.3%
 
 LEAVE-ONE-FAMILY-OUT:
   LOO accuracy: 22/26 = 84.6%
   misses:
-    G1_asym_y: truth=True, pred=False, rule=('avg_deg', '>=', 10.414572361842543, 'reach_frac', '>=', 0.8176729308276689)
+    E2_PW10_wide: truth=False, pred=True, rule=('avg_deg', '>=', 10.414572361842543, 'reach_frac', '>=', 0.8586760882607826)
+    G1_asym_y: truth=True, pred=False, rule=('avg_deg', '>=', 10.414572361842543, 'reach_frac', '>=', 0.8586760882607826)
     G2_asym_z: truth=False, pred=True, rule=('avg_deg', '>=', 10.414572361842543, 'reach_frac', '>=', 0.5044330377974802)
-    H2_cross: truth=True, pred=False, rule=('avg_deg', '>=', 21.713752416505567, 'z_sym', '<=', 0.0020656841095188097)
-    K2_huge_drift_md1: truth=True, pred=False, rule=('avg_deg', '>=', 20.738617425504966, 'z_sym', '<=', 0.002026239317238183)
+    K3_NL5: truth=False, pred=True, rule=('avg_deg', '>=', 20.738617425504966, 'z_sym', '<=', 0.0020656841095188097)
 
 HELD-OUT FAMILIES (predictions hard-coded before run):
   family                     predicted   actual  rule pred   agree
@@ -113,10 +115,10 @@ HELD-OUT FAMILIES (predictions hard-coded before run):
   HELD_grid_seed7                 True     True       True      OK
   HELD_ring_md3                  False    False      False      OK
   HELD_asym_z_seed7              False    False      False      OK
-  HELD_asym_y_seed7               True     True       True      OK
+  HELD_asym_y_seed7               True     True      False      OK
   HELD_drift_y_seed7             False    False      False      OK
   HELD_aniso_z3                   True     True       True      OK
   HELD_cross_seed7                True     True       True      OK
 
   pre-committed predictions: 8/8 = 100.0%
-  in-sample-fitted rule applied to held-out: 8/8 = 100.0%
+  in-sample-fitted rule applied to held-out: 7/8 = 87.5%
