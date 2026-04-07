@@ -331,16 +331,27 @@ def main():
     g_null = _prop_beam(pos, adj, nmap, h_null, K)
     print(f"  Null (S0=0): delta_z = {_cz(g_null, pos) - z_free:+.6e}")
 
-    # 7. Family portability of the slope
-    print(f"\n7. FAMILY PORTABILITY (slope at f={f_drive})")
+    # 7. Family portability — F~M of radiating field across grown geometries
+    # The radiation slope is a property of the wave PDE alone (no beam),
+    # so it is the same for every family by construction. The quantity
+    # that DOES vary with grown geometry is the beam-side F~M scaling on
+    # the radiating field. Test that across all three families.
+    print(f"\n7. FAMILY PORTABILITY (F~M on radiating field, drive f={f_drive})")
+    strengths_fp = [0.01, 0.02, 0.04, 0.08]
+    fls_fp = [_solve_wave_osc(s, f_drive, src_layer) for s in strengths_fp]
+    print(f"  {'family':>6s} {'F~M':>10s}")
     for label, drift, restore in FAMILIES:
-        ps = [_peak_amp(history, src_layer, r) for r in offsets]
-        if all(p > 0 for p in ps):
-            sl = _slope([float(r) for r in offsets], ps)
-            print(f"  {label}: slope={sl:.3f}  (geometry-independent: same wave history)")
-            break
-    print("  (slope is a property of the wave field, not the beam geometry)")
-    print("  (beam observables tested in section 6)")
+        p, a, nm = grow(0, drift, restore)
+        zf = _cz(_prop_beam(p, a, nm, None, K), p)
+        deltas_fp = []
+        for fl in fls_fp:
+            g = _prop_beam(p, a, nm, fl, K)
+            deltas_fp.append(abs(_cz(g, p) - zf))
+        if all(d > 1e-15 for d in deltas_fp):
+            sl_fp = _slope(strengths_fp, deltas_fp)
+            print(f"  {label:>6s} {sl_fp:10.4f}")
+        else:
+            print(f"  {label:>6s} {'(zero)':>10s}")
 
 
 if __name__ == "__main__":

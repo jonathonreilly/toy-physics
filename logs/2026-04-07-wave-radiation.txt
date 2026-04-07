@@ -56,7 +56,8 @@ NL=60, W=12, S0=0.04
   Born |I3|/P = 3.20e-15
   Null (S0=0): delta_z = +0.000000e+00
 
-7. FAMILY PORTABILITY (slope at f=0.1)
-  Fam1: slope=-0.469  (geometry-independent: same wave history)
-  (slope is a property of the wave field, not the beam geometry)
-  (beam observables tested in section 6)
+7. FAMILY PORTABILITY (F~M on radiating field, drive f=0.1)
+  family        F~M
+    Fam1     0.9345
+    Fam2     1.0102
+    Fam3     0.8885
