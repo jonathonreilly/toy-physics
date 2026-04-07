@@ -31,13 +31,18 @@ and `0.1` is a short-distance regularizer inside the denominator) is:
 amp_j(s) = Σ_paths_to_j ∏_edges exp(i k L (1 − f(edge))) · weight(edge)
 ```
 
-Differentiating with respect to s at s = 0:
+Differentiating with respect to s at s = 0 (where `r_edge` denotes
+the regularized field distance `|midpoint − mass| + 0.1` — the same
+denominator that appears in the field formula above):
 
 ```
 d(amp_j)/ds |_{s=0}
-  = Σ_paths Σ_edges_in_path [-i k L_edge / r_edge]
+  = Σ_paths Σ_edges_in_path [-i k L_edge / (r_edge + 0.1)]
     · ∏_all_edges_in_path exp(i k L)·weight
 ```
+
+(The `+0.1` here is the same regularizer; including it explicitly
+matches what the implementation actually computes.)
 
 This has the same **path-sum structure** as the free propagator. It
 can be computed **incrementally** via a parallel perturbation
@@ -46,7 +51,7 @@ propagator `B_j = d(amp_j)/ds`:
 ```
 A_j = Σ_{i → j} A_i · exp(i k L_{ij}) · w_{ij} · h²/L_{ij}²      (standard)
 B_j = Σ_{i → j} [B_i · exp(i k L_{ij})
-               + A_i · (−i k L_{ij} / r_edge_{ij}) · exp(i k L_{ij})]
+               + A_i · (−i k L_{ij} / (r_edge_{ij} + 0.1)) · exp(i k L_{ij})]
                · w_{ij} · h²/L_{ij}²                              (perturbation)
 ```
 

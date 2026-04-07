@@ -223,9 +223,9 @@ Together, the two lanes say:
 
 | Row | Previous | This lane |
 | --- | --- | --- |
-| Compact underlying principle | first-order Kubo derivation for gravity sign | **extended**: first-order Kubo also derives F~M = 1 on passing families |
-| Theory compression | first order derived (sign only) | **extended**: first order derives both sign AND magnitude exponent on the linear-regime subset |
-| Strength against harshest critique | analytic first-principles expression exists | **modest+**: the expression predicts TWO of the battery's five conditions (gravity sign and F~M) from a single closed-form calculation |
+| Compact underlying principle | first-order Kubo derivation for gravity sign | **extended**: first-order Kubo also derives F~M = 1 on the linearity-regime subset (15/41 families, selected without the F~M label) |
+| Theory compression | first order derived (sign only) | **extended**: first order derives both sign AND magnitude exponent on the linearity-regime subset |
+| Strength against harshest critique | analytic first-principles expression exists | **modest+**: the expression predicts TWO of the battery's five conditions (gravity sign and F~M) from a single closed-form calculation, on the linearity-regime subset |
 
 ## Honest read
 
