@@ -191,7 +191,7 @@ What is NOT yet true:
 
 The rule is **not** yet "the predictor" in a law-level sense. It is
 the best current global empirical predictor on the tested scaffolded
-generators, with known false positives (N8_block_diag, N11_aniso_rand)
+generators, with known false positives (N2_kreg_k50, N8_block_diag)
 and a known counterexample for necessity (E1 from the first batch).
 All held-out generators share the `(layer, iy, iz)` grid scaffold;
 generalization beyond that substrate is untested.
@@ -204,7 +204,7 @@ generalization beyond that substrate is untested.
 > achieves 17/21 = 81.0% accuracy without refitting. The old
 > node-level 2-property rule achieves 12/21 = 57.1% on the same
 > sets, a +24-point gap stable across both batches. The rule has
-> two false positives on this batch (N8_block_diag, N11_aniso_rand)
+> two false positives on this batch (N2_kreg_k50, N8_block_diag)
 > and a necessity counterexample from the first batch (E1 passes the
 > package at `free_coh = 0`). All 21 held-out generators share the
 > same grid scaffold. The honest framing is: **free_coh is the best
