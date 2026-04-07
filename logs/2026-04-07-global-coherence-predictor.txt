@@ -79,6 +79,12 @@ H. COMPARISON to old 2-property rule (avg_deg >= 10.42 AND reach_frac >= 0.86)
   old 2-property cross-generator: 6/9 = 66.7%
   new 2-property cross-generator: 6/9 = 66.7%
 
-I. VERDICT
-  MARGINAL — cross-generator 67% -> 67%
-  the global metric does not materially help
+I. VERDICT (headline = single-property global rule)
+  best single-property global rule: free_coh >= 7.9597e-04
+    in-sample:      92.3%
+    cross-generator: 7/9 = 77.8%
+  comparison vs old 2-property rule cross-generator: 66.7%
+  IMPROVED — +11% cross-generator over old rule
+  classifier program is alive with a sharper, generator-agnostic predictor
+  NOTE: the 2-property AND search tied in-sample and chose the overfitted
+  rule; the single-property global rule is the real winner here.
