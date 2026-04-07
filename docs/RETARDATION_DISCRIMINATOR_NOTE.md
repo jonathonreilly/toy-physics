@@ -5,9 +5,12 @@
 
 ## Artifact chain
 
-- [`scripts/gravitational_wave_oscillating_source.py`](../scripts/gravitational_wave_oscillating_source.py)
-- [`logs/2026-04-06-gravitational-wave-detection.txt`](../logs/2026-04-06-gravitational-wave-detection.txt)
+- [`scripts/retardation_discriminator.py`](../scripts/retardation_discriminator.py) — canonical harness reproducing all retained results
+- [`logs/2026-04-06-retardation-discriminator.txt`](../logs/2026-04-06-retardation-discriminator.txt) — frozen output
 - This note
+
+Earlier exploration script (frequency sweep only, not the full retained harness):
+- [`scripts/gravitational_wave_oscillating_source.py`](../scripts/gravitational_wave_oscillating_source.py)
 
 ## Setup
 
