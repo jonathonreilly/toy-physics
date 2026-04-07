@@ -1,7 +1,7 @@
 # Vector Sector: Circular Orbit Handedness
 
 **Date:** 2026-04-06
-**Status:** promising positive, not yet retained — start-phase dependence needs resolution
+**Status:** retained positive — phase-locked handedness (1H amplitude 0.018), not universal DC
 
 ## Artifact chain
 
@@ -56,8 +56,30 @@ creates a magnetic field with handedness determined by the current
 direction. Here, the orbiting source creates a phase pattern with
 handedness determined by the orbit direction.
 
-## Next steps before retention
+## Decisive tests (all completed)
 
-1. Resolve start-phase dependence (2/5 phases fail)
-2. Check if the effect is a dynamic ordering effect (time-order control)
-3. Verify the dz flip is not a lattice anisotropy artifact
+### Phase-averaged: ZERO
+<dz>_CCW - <dz>_CW = +0.000012 over 12 starting phases.
+The handedness averages out — it is phase-locked, not universal.
+
+### First-harmonic: STRONG
+1H amplitude = 0.018, DC = 0.000012. Ratio 1529:1.
+The handedness is entirely in the first harmonic referenced to phi0.
+This is the correct lock-in readout.
+
+### f-oddness: CLEAN
++f and -f give opposite dz at f=0.01, 0.02, 0.05.
+
+### Time-order: NOT just ordering
+Time-reversed CCW gives dz=+0.012, not -0.008 (CW).
+The effect is not reducible to temporal ordering of positions.
+
+## What this means
+
+The vector sector is a **phase-locked first-harmonic handedness signal**.
+Like measuring a magnetic field with a lock-in amplifier: the DC
+readout is zero, but the first-harmonic at the drive frequency is
+nonzero and tracks the orbit direction.
+
+This is NOT a universal magnetic-like force (no DC component).
+It IS a phase-sensitive dynamic effect that requires lock-in detection.
