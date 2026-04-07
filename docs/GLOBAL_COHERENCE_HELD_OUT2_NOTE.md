@@ -176,9 +176,16 @@ What is NOT yet true:
 
 | Row | Previous | This lane |
 | --- | --- | --- |
-| Strength against harshest critique | modest restoration (+11 cross-generator) | **confirmed +24 points across 21 families** |
-| Compact underlying principle | modest restoration | **confirmed: a single-property global metric is the predictor** |
-| Theory compression | sharper target: global path/spectral | **stronger target**: derive `free_coh ≥ 7.96e-04` ↔ package from path-sum + S=L(1−f) |
+| Strength against harshest critique | modest restoration (+11 cross-generator) | **+24 points on 21 tested scaffolded generators; not a law-level answer** |
+| Compact underlying principle | modest restoration | **a single global empirical predictor does most of the cross-generator work on the tested set** |
+| Theory compression | sharper target: global path/spectral | **sharper target still open**: derive or no-go `free_coh ≥ 7.96e-04` ↔ package from path-sum + S=L(1−f) |
+
+The rule is **not** yet "the predictor" in a law-level sense. It is
+the best current global empirical predictor on the tested scaffolded
+generators, with known false positives (N8_block_diag, N11_aniso_rand)
+and a known counterexample for necessity (E1 from the first batch).
+All held-out generators share the `(layer, iy, iz)` grid scaffold;
+generalization beyond that substrate is untested.
 
 ## Bottom line
 
@@ -187,9 +194,11 @@ What is NOT yet true:
 > `free_coh ≥ 7.96e-04` — fitted on the swept set and frozen —
 > achieves 17/21 = 81.0% accuracy without refitting. The old
 > node-level 2-property rule achieves 12/21 = 57.1% on the same
-> sets. The +24 point gap is stable across both batches. The rule
-> is still empirical and still has false positives on pathologically
-> block-structured or very-high-density random generators, but the
-> +11 point revival from the first batch is now confirmed at +33
-> points on a fresh batch. Free-beam coherence is a real, global,
-> generator-agnostic predictor of the weak-field package."
+> sets, a +24-point gap stable across both batches. The rule has
+> two false positives on this batch (N8_block_diag, N11_aniso_rand)
+> and a necessity counterexample from the first batch (E1 passes the
+> package at `free_coh = 0`). All 21 held-out generators share the
+> same grid scaffold. The honest framing is: **free_coh is the best
+> current global empirical predictor on the tested scaffolded
+> generators, not a law-level or off-scaffold 'predictor of the
+> weak-field package.'**"
