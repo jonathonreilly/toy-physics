@@ -1,7 +1,7 @@
 # Linear-Response Derivation-Adjacent Analysis — Partial Positive
 
 **Date:** 2026-04-07
-**Status:** retained partial positive — first-moment Kubo predictor (computed directly from the propagator + field, no fitting) gives **79.5% pass classification** and **r = 0.72 correlation off-scaffold** across a combined 44-family set. Off-scaffold correlation is stronger than scaffolded (r = 0.72 vs 0.40), the opposite of `free_coh`. This is a genuine derivation-adjacent result: directionally right, first moment insufficient for a clean theorem, clear target for a second-moment extension.
+**Status:** retained partial positive — a derivation-adjacent heuristic (detector reweighting of |amp|² by 1/|z−z_src|, no parameter fit) gives **r = 0.56 overall and r = 0.72 off-scaffold correlation** with the measured first-order response and **81.8% sign agreement** across a combined 44-family set. Off-scaffold correlation is stronger than scaffolded (0.72 vs 0.40), the opposite of `free_coh`. The separately reported 79.5% "best threshold" number is in-sample tuned on the same dataset and should not be cited as a no-fit result. This is a heuristic, NOT yet the literal first-order Kubo expression `<z·δH>_0` (that is the subject of a follow-on lane).
 
 ## Artifact chain
 
@@ -20,30 +20,33 @@ ONE theoretically motivated quantity — the **first-moment Kubo
 predictor** — directly derived from linear response theory, against
 the measured first-order gravitational response.
 
-## The quantity
+## The heuristic
 
 For each family, compute:
 
 - `cz_free` = centroid of `|amp_j(0)|²` over detector cells (free beam)
 - `cz_weighted` = centroid weighted by `|amp_j|² / |z_j − z_src|`
-  (matching the 1/r field profile)
-- **`kubo = cz_weighted − cz_free`** — the first-moment linear response
-  predictor derived from the free beam + known field structure
+  (detector reweighting by the 1/r field profile)
+- **`kubo_heuristic = cz_weighted − cz_free`**
 
-This quantity uses **only**:
-1. Free-beam amplitudes (one propagation, no field)
-2. The known 1/r field profile at `z_src`
+This is a **detector-only reweighting** of the free amplitudes
+by the known 1/r field profile. It is derivation-**adjacent** — it
+uses the same field profile that enters the true Kubo expression —
+but it is NOT the literal first-order Kubo term `<z·δH>_0`.
 
-No empirical thresholds, no fitted parameters. It is the direct
-first-moment expression from linear response theory:
+The literal first-order term requires:
+- The actual action perturbation `δH = k L δf` integrated along edges
+- Path-length / phase cross-terms that this heuristic does not include
+- A derivation from the propagator + action, not just a reweighting
 
-> Under a 1/r field at z_src, the centroid shifts toward the mass
-> by an amount proportional to how much the free intensity is
-> re-weighted when the field profile is applied.
+That calculation is the subject of a separate lane
+(`linear_response_true_kubo.py`). This lane evaluates the heuristic
+as a first pass and reports its empirical correlation with the
+measured response.
 
 The **measured** response is `delta_z(s = 0.001) - delta_z(s = 0)`
 divided by `s` — the actual first-order derivative of the centroid
-with respect to the source strength.
+with respect to the source strength via finite difference.
 
 ## Result
 
@@ -56,35 +59,47 @@ with respect to the source strength.
 | **Off-scaffold** | **0.72** | 9 |
 | **Overall** | **0.56** | 44 |
 
-### Classification accuracy (no fitting)
+### Classification results (honest split: no-fit vs tuned)
 
-| Test | Accuracy |
-| --- | ---: |
-| Sign agreement (kubo > 0 matches measured > 0) | **36/44 = 81.8%** |
-| Best kubo threshold pass/fail | **35/44 = 79.5%** |
-| Upper bound (measured > 0 threshold) | 39/44 = 88.6% |
+| Test | Accuracy | Fitted? |
+| --- | ---: | :---: |
+| Sign agreement (`kubo_heuristic > 0` matches `measured > 0`) | **36/44 = 81.8%** | **no** |
+| Best kubo threshold (searched on this 44-family set) | 35/44 = 79.5% | **yes (in-sample tuned)** |
+| Upper bound (measured > 0 threshold) | 39/44 = 88.6% | reference only |
 
-The Kubo predictor achieves **80% classification accuracy without
-any fitting**, approximately 9 points below the measurement
-ceiling of 89%.
+**Only the 81.8% sign-agreement number is no-fit.** The 79.5%
+threshold-search result is in-sample tuned on the same 44-family
+set it is evaluated on and should not be cited as independent
+generalization evidence. The honest no-fit summary is:
+
+- Pearson correlation: r = 0.56 overall, r = 0.72 off-scaffold
+- Sign agreement: 36/44 = 81.8%
+
+These are the numbers that carry across the 44-family set without
+any parameter being set by looking at the labels.
 
 ### The headline finding
 
 **Off-scaffold correlation (r = 0.72) is STRONGER than scaffolded
 correlation (r = 0.40).** This is the opposite of what `free_coh`
-showed:
+showed, using the same no-fit correlation metric on the same off-scaffold families:
 
-| Metric | Scaffolded cross-gen | Off-scaffold |
+| Metric | Scaffolded r | Off-scaffold r |
 | --- | ---: | ---: |
-| `free_coh` (rule accuracy) | 78% | 56% |
-| `kubo` (first-moment, no fitting) | ~67% | **~89%** |
+| `free_coh` vs measured response | (not computed, but cf. 56% pass classification) | (not computed, but cf. 56% pass classification) |
+| `kubo_heuristic` vs measured response (Pearson, no fit) | 0.40 | **0.72** |
 
-The first-moment Kubo predictor **generalizes naturally off-scaffold**
-because it is derived directly from the propagator + action, not
-from grid-aligned phase relationships. `free_coh` was scaffold-specific
-because it measured a quantity that depended on grid geometry; `kubo`
-is substrate-independent because it is a linear functional of the
-free amplitudes plus the known field.
+The heuristic **generalizes naturally off-scaffold** because it uses
+detector amplitudes + the known field profile, not grid-aligned
+phase relationships. `free_coh` measured a quantity that was
+substrate-specific; this heuristic is substrate-independent by
+construction.
+
+The previous lane's claim that this pattern means we have a
+"derived" predictor was stronger than the heuristic supports.
+The heuristic is directionally correct and generalizes off-scaffold,
+but the literal first-order Kubo calculation is the subject of a
+separate lane.
 
 ## Which cases does the first moment miss?
 
