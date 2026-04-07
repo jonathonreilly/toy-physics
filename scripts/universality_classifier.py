@@ -590,9 +590,10 @@ HELDOUT_PREDICTIONS = {
 
 def main():
     print("=" * 90)
-    print("UNIVERSALITY CLASSIFIER")
-    print("Sweeps grown-graph families and runs the weak-field observable battery.")
+    print("UNIVERSALITY CLASSIFIER (5-condition battery: 4 static + 1 dynamic Lane 6 gap)")
+    print("Sweeps grown-graph families and runs the dynamic-augmented weak-field battery.")
     print("PASS = (gravity TOWARD) AND (|F~M-1|<0.10) AND (Born<1e-10) AND (|null|<1e-10)")
+    print("       AND (dyn_gap > 0.05)   [Lane 6 retarded vs instantaneous on (2+1)D wave]")
     print("=" * 90)
 
     families = make_families()
