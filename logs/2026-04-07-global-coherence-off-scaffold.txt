@@ -1,0 +1,91 @@
+====================================================================================================
+OFF-SCAFFOLD HELD-OUT TEST OF free_coh
+Frozen rule: free_coh >= 7.9597e-04
+Generators have random transverse positions (NOT snapped to the (iy,iz) grid)
+Threshold frozen from swept-set fit; applied WITHOUT REFIT
+====================================================================================================
+
+[1/9] OF1_uniform_k15         PASS  avg_deg=14.4  free_coh=1.7373e-02  delta=+0.0047  dyn=62.6%
+
+[2/9] OF2_uniform_k30         PASS  avg_deg=28.8  free_coh=4.6954e-03  delta=+0.0072  dyn=11.7%
+
+[3/9] OF3_uniform_k8          FAIL  avg_deg=7.7  free_coh=5.7669e-02  delta=+0.0006  dyn=0.4%
+
+[4/9] OF4_gaussian            PASS  avg_deg=14.4  free_coh=2.1614e-01  delta=+0.0002  dyn=5.5%
+
+[5/9] OF5_clustered           FAIL  avg_deg=14.4  free_coh=1.0165e-02  delta=-0.0000  dyn=87.9%
+
+[6/9] OF6_rotated_grid        PASS  avg_deg=14.4  free_coh=1.5975e-01  delta=+0.0252  dyn=41.7%
+
+[7/9] OF7_halton              PASS  avg_deg=14.4  free_coh=1.5961e-01  delta=+0.0165  dyn=11.5%
+
+[8/9] OF8_radial              FAIL  avg_deg=14.4  free_coh=1.2328e-01  delta=-0.0000  dyn=0.4%
+
+[9/9] OF9_stretched           FAIL  avg_deg=14.4  free_coh=6.4754e-03  delta=-0.0002  dyn=127.0%
+
+====================================================================================================
+SUMMARY
+====================================================================================================
+family                  avg_deg     free_coh       p_det     delta     dyn   pass
+----------------------------------------------------------------------------------------------------
+OF1_uniform_k15           14.38   1.7373e-02   3.398e+15   +0.0047  62.63%   PASS
+OF2_uniform_k30           28.75   4.6954e-03   5.719e+14   +0.0072  11.69%   PASS
+OF3_uniform_k8             7.67   5.7669e-02   5.310e+15   +0.0006   0.42%   FAIL
+OF4_gaussian              14.38   2.1614e-01   2.153e+42   +0.0002   5.48%   PASS
+OF5_clustered             14.38   1.0165e-02   1.880e+10   -0.0000  87.86%   FAIL
+OF6_rotated_grid          14.38   1.5975e-01   2.513e+12   +0.0252  41.74%   PASS
+OF7_halton                14.38   1.5961e-01   5.887e+14   +0.0165  11.46%   PASS
+OF8_radial                14.38   1.2328e-01   5.283e+51   -0.0000   0.37%   FAIL
+OF9_stretched             14.38   6.4754e-03   9.027e+12   -0.0002 126.97%   FAIL
+
+actual: PASS 5 / FAIL 4
+
+L1. PRE-COMMITTED free_coh SIGN vs measured high/low
+family                  predicted   actual   agree
+OF1_uniform_k15             False     True    MISS
+OF2_uniform_k30              True     True      OK
+OF3_uniform_k8              False     True    MISS
+OF4_gaussian                False     True    MISS
+OF5_clustered               False     True    MISS
+OF6_rotated_grid             True     True      OK
+OF7_halton                   True     True      OK
+OF8_radial                   True     True      OK
+OF9_stretched               False     True    MISS
+
+L1 coh-sign accuracy: 4/9 = 44.4%
+
+L2. FROZEN RULE (free_coh >= 7.96e-04) applied WITHOUT refit
+family                   rule   actual   agree
+OF1_uniform_k15          True     True      OK
+OF2_uniform_k30          True     True      OK
+OF3_uniform_k8           True    False    MISS
+OF4_gaussian             True     True      OK
+OF5_clustered            True    False    MISS
+OF6_rotated_grid         True     True      OK
+OF7_halton               True     True      OK
+OF8_radial               True    False    MISS
+OF9_stretched            True    False    MISS
+
+L2 frozen rule accuracy: 5/9 = 55.6%
+
+L3. PRE-COMMITTED package PASS/FAIL predictions
+family                  predicted   actual   agree
+OF1_uniform_k15              True     True      OK
+OF2_uniform_k30              True     True      OK
+OF3_uniform_k8              False    False      OK
+OF4_gaussian                 True     True      OK
+OF5_clustered               False    False      OK
+OF6_rotated_grid             True     True      OK
+OF7_halton                   True     True      OK
+OF8_radial                   True    False    MISS
+OF9_stretched               False    False      OK
+
+L3 pre-committed pass/fail: 8/9 = 88.9%
+
+COMPARISON to old node-level rule (avg_deg >= 10.42 AND reach_frac >= 0.86)
+  old 2-prop rule on this batch: 5/9 = 55.6%
+  new free_coh rule on this batch: 5/9 = 55.6%
+
+VERDICT
+  PARTIAL — frozen rule at 56% on off-scaffold batch
+  the scaffold caveat is partially relaxed but not fully cleared
