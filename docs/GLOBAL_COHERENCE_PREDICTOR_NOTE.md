@@ -120,7 +120,7 @@ What it does NOT give:
 - The new rule has its own miss patterns (E1 false negative, L1 false positive)
 - The metric is still **empirical**, not derived from the path-sum + S=L(1−f)
 - 78% on 9 families is not a universality theorem
-- E1's failure means coherence is sufficient but **not necessary** — E1 passes via dense random sampling (law of large numbers averaging) without phase coherence
+- E1 is a specific counterexample showing coherence is **not necessary** for the package — E1 passes the battery despite `free_coh = 0.0000` (it passes via dense Gaussian buildup from the law of large numbers, not via phase coherence)
 
 ## What this tells us positively
 
@@ -134,10 +134,15 @@ The improvement is small but its structural meaning is clean:
 > aligns paths. Dense ER (E2) at high p has moderate `free_coh`
 > because the law of large numbers partially recovers phase alignment.
 
-This identifies **path-phase coherence** as a **necessary condition**
-for the package on most generators, and **sufficient** for the entire
-swept set. The exception is sparse ER (E1) which passes the package
-via a different mechanism (dense uniform sampling).
+This identifies **path-phase coherence** as a **strong empirical
+predictor** of the package: on the swept set the single threshold
+`free_coh ≥ 7.96e-04` achieves 92.3% in-sample accuracy, the same as
+the best 2-property node-level rule. Sufficiency is **not established**
+— the swept set has a 7.7% residual, so there are swept-set cases
+where coherence is above threshold but the package fails, or the
+reverse. And E1 is a specific counterexample showing coherence is
+not even necessary in general (E1 passes the battery via dense
+uniform sampling without phase coherence).
 
 ## Frontier map adjustment (from Update 2)
 
