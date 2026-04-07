@@ -1,0 +1,49 @@
+======================================================================
+WAVE-EQUATION SELF-FIELD HARNESS
+NL=30, W=8, s=0.004, z_src=3.0
+======================================================================
+
+Solving wave equation (static source)...
+
+1. STATIONARY PROFILE at late time (layer NL-2)
+    iz         f_wave
+    -3      +0.000175
+    -2      +0.000397
+    -1      +0.000609
+     0      +0.000700
+     1      +0.000797
+     2      +0.000963
+     3      +0.001136
+     4      +0.001469
+     5      +0.001898
+     6      +0.002936
+     7      +0.001898
+
+2. GRAVITY across families (static wave field)
+  Fam1: delta=+0.008158 TOWARD
+  Fam2: delta=+0.007984 TOWARD
+  Fam3: delta=+0.008092 TOWARD
+
+3. F~M across families
+  Fam1: F~M = 0.9979
+  Fam2: F~M = 0.9970
+  Fam3: F~M = 0.9981
+
+4. BORN TEST (Fam1, seed=0, wave-equation field)
+  Born |I3|/P = 1.08e-15
+
+5. NULL TEST
+  s=0: delta = +0.000000e+00
+
+6. RETARDATION (single-layer pulse at src_layer)
+  pulse fired at layer 10
+  layer   dt    |f| at iz=src
+     10    0     1.000000e-01
+     11    1     1.000000e-01
+     12    2     2.500000e-02
+     13    3     2.500000e-02
+     14    4     1.093750e-02
+     15    5     2.031250e-02
+     16    6     2.539063e-02
+     17    7     1.367188e-02
+  (lightcone: response should grow at most one cell per dt)
