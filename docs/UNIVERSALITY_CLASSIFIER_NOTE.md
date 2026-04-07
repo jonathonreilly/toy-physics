@@ -179,36 +179,54 @@ What is true after the dynamic augmentation:
 - The held-out set contains both positive and negative predictions made before the run
 - Adding the dynamic condition LOWERED the in-sample accuracy from 100% to 92.3%, which is the right behavior — it tells us the static-only rule was over-fitted to the static battery
 
-What is **not** yet true:
+What is **not** true:
 - The classifier is empirical, not derived from the path-sum + S=L(1−f)
 - The dynamic-augmented thresholds are fitted, not theoretically motivated
-- The miss patterns suggest the 2-property AND search space is too restrictive for the full 5-condition battery
-- The held-out set is itself constructed by the same author, on the same lattice, with the same generator family
-- A genuinely independent generator family (random k-regular, hyperbolic, expander) has not been tested
+- The miss patterns inside the grown-DAG family already suggest the 2-property AND search space is too restrictive
+- **The rule does NOT generalize across generator families.** Tested
+  on 9 genuinely different generators (random k-regular, Erdős–Rényi,
+  long-range, tree, hub, expander), the rule applied without refit
+  gets 6/9 = 66.7% and pre-committed predictions get 4/9 = 44.4%.
+  Only 2/9 generators reproduce the full package, both Erdős–Rényi
+  at high `avg_deg`. See [`INDEPENDENT_GENERATORS_HELDOUT_NOTE.md`](INDEPENDENT_GENERATORS_HELDOUT_NOTE.md).
+- **The natural 3rd predictor (`local_z_asym`) is rejected** by a
+  3-property classifier search and does not improve cross-generator
+  accuracy. See [`LOCAL_ZSYM_PREDICTOR_NOTE.md`](LOCAL_ZSYM_PREDICTOR_NOTE.md).
+- **The simple-classifier line of attack on this generator family is
+  exhausted.** Continuing to search 2- or 3-property AND rules over
+  node-level metrics is no longer informative.
 
 ## What changes about the critique
 
-The "small engineered basin" critique is weakened, not killed:
-- 26 swept + 8 held-out = 34 families total, with 5 explicit negatives
-- The battery now includes one dynamic condition (Lane 6 gap), not just static
-- The dynamic condition discovers 2 failure modes the static battery missed
-- A simple 2-property rule still gives 87.5% on a separate held-out set
+The "small engineered basin" critique is **NOT killed**. The earlier
+"weakened" framing was reverted by the cross-generator negative result:
 
-What remains for a stronger statement:
-- Analytic derivation of the rule from the propagator + action (or a no-go)
-- A held-out set built by an independent generator family (random k-regular, hyperbolic, expander)
-- A 3-property classifier search to capture the dynamic condition cleanly
-- Independent reproduction by a non-author generator
+- 26 swept + 8 held-out = 34 families total inside the grown-DAG family
+- 9 additional families across qualitatively different generators
+- **Only 2/9 cross-generator families pass; the rule predicts 6/9**
+- The rule is a within-family fit, not a universal predictor
+- Two negative results in a chain (cross-generator + local_z_asym)
+  rule out the simple node-level classifier program
+
+The honest read is that the classifier work documents a **structurally
+sharp empirical regime within the grown-DAG generator** but does not
+extend to a universal property of grown DAGs in general. The required
+predictor is most likely a **global path-counting or spectral
+structure**, not a node-level statistic. That is the next attack
+target if classifier work continues at all; the alternative is to move
+to matter/inertial closure.
 
 ## Bottom line
 
-An empirical classifier on a 5-condition battery with LOO and pre-committed
-held-out validation is stronger than the original three-family story,
-and stronger than the static-only revision, but still weaker than a
-universality theorem. The current honest framing is:
+The honest framing is now:
 
-> "On 26 swept + 8 held-out grown-DAG families, the dynamic-augmented
-> weak-field package (4 static + 1 Lane 6 gap > 5%) is empirically
-> predicted by `(avg_deg ≥ 10.42) AND (reach_frac ≥ 0.86)` with
-> 92.3% in-sample, 84.6% leave-one-out, 87.5% held-out (in-sample-fitted
-> rule), and 100% held-out (author's pre-committed predictions)."
+> "Inside the grown-DAG generator, the dynamic-augmented weak-field
+> package is empirically predicted by `(avg_deg ≥ 10.42) AND
+> (reach_frac ≥ 0.86)` with 92.3% in-sample, 84.6% leave-one-out, and
+> 87.5% / 100% on the in-family held-out set (rule / pre-committed).
+> Across 9 genuinely different generator families, the SAME rule
+> applied without refit gets only 6/9 = 66.7% and pre-committed
+> predictions only 4/9 = 44.4%. The simple node-level classifier
+> program is exhausted; the next attack target is a global
+> path-counting / spectral predictor or a shift to the matter/inertia
+> lane."
