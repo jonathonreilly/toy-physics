@@ -1,0 +1,86 @@
+====================================================================================================
+LINEAR-RESPONSE DERIVATION-ADJACENT ANALYSIS
+First-moment Kubo predictor vs measured d(cz)/ds on 44 families
+Finite-difference epsilon: s = 0.001
+====================================================================================================
+
+A. Computing 26 swept families...
+
+B. Computing 9 scaffolded independent generators...
+
+C. Computing 9 off-scaffold generators...
+
+====================================================================================================
+RESULTS
+====================================================================================================
+family                                group  pass     measured         kubo    cz_free
+----------------------------------------------------------------------------------------------------
+A1_orig_Fam1_swept                    swept  PASS    +6.707034    +1.776541    +0.4710
+A2_orig_Fam2_swept                    swept  PASS    +6.686474    +1.780776    +0.4663
+A3_orig_Fam3_swept                    swept  PASS    +6.971989    +1.825476    +0.3399
+B1_pure_grid_swept                    swept  PASS    +7.537016    +1.913745    -0.0000
+C1_random_lo_swept                    swept  PASS    +0.449101    +0.321688    +0.6479
+C2_random_hi_swept                    swept  PASS    +1.499422    +0.262604    +1.3431
+D1_md1_NN_swept                       swept  PASS    +9.890147    +2.016658    +0.7348
+D2_md4_long_swept                     swept  PASS    +5.272666    +1.853561    +0.4378
+E1_PW3_narrow_swept                   swept  PASS    +1.359551    +1.909162    -0.2888
+E2_PW10_wide_swept                    swept  FAIL    +6.951497    +2.026254    -0.0133
+F1_NL10_short_swept                   swept  PASS    +1.364675    +1.438103    +0.0749
+F2_NL40_long_swept                    swept  PASS    +8.783983    +1.762800    +0.4732
+G1_asym_y_swept                       swept  PASS    +3.354310    +1.708398    +0.1180
+G2_asym_z_swept                       swept  FAIL    +0.053128    -0.907784    +4.8017
+H1_ring_swept                         swept  FAIL    -1.158873    +2.038728    -0.0202
+H2_cross_swept                        swept  PASS    +0.790601    +0.883568    +0.1026
+I1_drift_y_swept                      swept  FAIL    +0.000000    +0.000000    +0.0000
+J1_aniso_z2_swept                     swept  PASS    +5.147676    +1.859393    +0.4372
+J2_aniso_z4_swept                     swept  PASS    +5.140729    +1.864571    +0.4340
+K1_NN_no_restore_swept                swept  PASS    +0.307847    +0.199255    +1.7610
+K2_huge_drift_md1_swept               swept  PASS    +0.006752    +0.025302    -2.7408
+K3_NL5_swept                          swept  FAIL    +0.578009    +0.569872    -0.0124
+K4_PW2_swept                          swept  PASS    +1.363883    +0.591547    +0.1272
+L1_seed1_swept                        swept  PASS    +6.050381    +1.964518    -0.1684
+L2_seed2_swept                        swept  PASS    +6.519002    +1.959177    -0.0540
+L3_seed3_swept                        swept  PASS    +5.713734    +1.701114    -0.0149
+R1_kreg_k15_scaf                 scaffolded  FAIL    -0.853206    +0.054737    +1.0144
+R2_kreg_k8_scaf                  scaffolded  FAIL    +0.000000    +0.244557    -3.8934
+R3_kreg_k20_scaf                 scaffolded  FAIL   +22.126515    +1.945755    +0.8207
+E1_er_p005_scaf                  scaffolded  PASS    +3.992115    +0.778274    -1.3759
+E2_er_p020_scaf                  scaffolded  PASS    +3.989177    +2.052234    -0.3055
+L1_longrange_k12_scaf            scaffolded  FAIL    -0.800153    +2.914980    -0.7667
+T1_tree_fan4_scaf                scaffolded  FAIL    +0.000000    +0.000000    +0.0000
+H1_hub_scaf                      scaffolded  FAIL    +0.000000    +0.000000    +0.0000
+X1_expander_k12_scaf             scaffolded  FAIL    +0.000000    +0.000000    +0.0000
+OF1_uniform_k15_off            off_scaffold  PASS    +1.173790    +1.614325    -1.9049
+OF2_uniform_k30_off            off_scaffold  PASS    +1.798082    +1.556542    -2.5291
+OF3_uniform_k8_off             off_scaffold  FAIL    +0.149532    +0.473072    +0.4021
+OF4_gaussian_off               off_scaffold  PASS    +0.049731    +0.084103    -0.0254
+OF5_clustered_off              off_scaffold  FAIL    -0.002954    +0.027132    -1.6279
+OF6_rotated_grid_off           off_scaffold  PASS    +6.272516    +1.758362    +0.0268
+OF7_halton_off                 off_scaffold  PASS    +4.117354    +1.594068    -0.3350
+OF8_radial_off                 off_scaffold  FAIL    -0.006602    +0.021224    -0.0790
+OF9_stretched_off              off_scaffold  FAIL    -0.058893    +1.131367    +0.9633
+
+OVERALL correlation(kubo, measured): r = 0.5605  (N=44)
+
+BY GROUP:
+            swept: r = 0.7077  (N=26)
+       scaffolded: r = 0.4045  (N=9)
+     off_scaffold: r = 0.7248  (N=9)
+
+SIGN AGREEMENT (kubo predicts measured sign):
+  36/44 = 81.8%
+
+PASS CLASSIFICATION (kubo > 1e-4 as a pass predictor):
+  kubo > 0.0001: 33/44 = 75.0%
+  best kubo threshold: kubo >= 0.084103  accuracy 79.5%
+
+MEASURED RESPONSE CLASSIFICATION (sanity check upper bound):
+  measured > 0.0001: 39/44 = 88.6%
+
+====================================================================================================
+VERDICT
+====================================================================================================
+  MODERATE CORRELATION (r=0.560) — the first-moment Kubo
+  predictor partially captures the measured response. Derivation is
+  directionally right but first moment is insufficient; need second
+  moments or path-sum expansion.
