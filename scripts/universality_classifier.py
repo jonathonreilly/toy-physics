@@ -206,6 +206,140 @@ def slope_log(xs, ys):
     return sxy / sxx if sxx > 0 else 0.0
 
 
+def _laplacian_yz(f, nw):
+    lap = [[0.0] * nw for _ in range(nw)]
+    for iy in range(1, nw - 1):
+        for iz in range(1, nw - 1):
+            lap[iy][iz] = (
+                f[iy - 1][iz] + f[iy + 1][iz] + f[iy][iz - 1] + f[iy][iz + 1]
+                - 4.0 * f[iy][iz]
+            )
+    return lap
+
+
+def _solve_wave_2plus1d(NL_w, PW_w, strength, iz_of_t, src_layer):
+    hw = int(PW_w / H)
+    nw = 2 * hw + 1
+    f_prev = [[0.0] * nw for _ in range(nw)]
+    f_curr = [[0.0] * nw for _ in range(nw)]
+    history = [
+        [[0.0] * nw for _ in range(nw)],
+        [[0.0] * nw for _ in range(nw)],
+    ]
+    h2 = H * H
+    for t in range(2, NL_w):
+        if t >= src_layer:
+            iz_now = iz_of_t(t)
+            sy = nw // 2
+            sz = nw // 2 + iz_now
+        else:
+            sy = sz = -1
+        lap = _laplacian_yz(f_curr, nw)
+        f_next = [[0.0] * nw for _ in range(nw)]
+        for iy in range(nw):
+            for iz in range(nw):
+                src = strength if (iy == sy and iz == sz) else 0.0
+                f_next[iy][iz] = (
+                    2.0 * f_curr[iy][iz] - f_prev[iy][iz]
+                    + h2 * (lap[iy][iz] + src)
+                )
+        f_prev = f_curr
+        f_curr = f_next
+        history.append([row[:] for row in f_curr])
+    return history
+
+
+def _wave_field_at(history, NL_w, PW_w, layer, iy, iz):
+    hw = int(PW_w / H)
+    nw = 2 * hw + 1
+    sy = iy + nw // 2
+    sz = iz + nw // 2
+    if 0 <= layer < NL_w and 0 <= sy < nw and 0 <= sz < nw:
+        return history[layer][sy][sz]
+    return 0.0
+
+
+def _make_instantaneous_2plus1d(NL_w, PW_w, strength, iz_of_t, src_layer):
+    hw = int(PW_w / H)
+    nw = 2 * hw + 1
+    cache = {}
+    history = [[[0.0] * nw for _ in range(nw)] for _ in range(NL_w)]
+    for t in range(NL_w):
+        if t < src_layer:
+            continue
+        iz_now = iz_of_t(t)
+        if iz_now not in cache:
+            full = _solve_wave_2plus1d(NL_w, PW_w, strength,
+                                       lambda tt, k=iz_now: k, src_layer)
+            cache[iz_now] = [row[:] for row in full[NL_w - 1]]
+        history[t] = [row[:] for row in cache[iz_now]]
+    return history
+
+
+def _prop_beam_with_field(pos, adj, nmap, field_at_fn, k, NL):
+    """Beam propagation with a field accessed via a callback (layer, iy, iz)."""
+    n = len(pos)
+    field = [0.0] * n
+    if field_at_fn is not None:
+        for i, p in enumerate(pos):
+            layer = round(p[0] / H)
+            iy = round(p[1] / H)
+            iz = round(p[2] / H)
+            field[i] = field_at_fn(layer, iy, iz)
+    order = sorted(range(n), key=lambda i: pos[i][0])
+    amps = [0j] * n
+    amps[0] = 1.0
+    h2 = H * H
+    for i in order:
+        if abs(amps[i]) < 1e-30:
+            continue
+        for j in adj.get(i, []):
+            dx = pos[j][0] - pos[i][0]
+            dy = pos[j][1] - pos[i][1]
+            dz = pos[j][2] - pos[i][2]
+            L = math.sqrt(dx * dx + dy * dy + dz * dz)
+            if L < 1e-10:
+                continue
+            f = 0.5 * (field[i] + field[j])
+            phase = k * L * (1.0 - f)
+            theta = math.atan2(math.sqrt(dy * dy + dz * dz), max(dx, 1e-10))
+            w = math.exp(-BETA * theta * theta)
+            amps[j] += amps[i] * complex(math.cos(phase), math.sin(phase)) * w * h2 / (L * L)
+    return amps
+
+
+def measure_dynamic_gap(pos, adj, nmap, NL, PW):
+    """Lane 6 retarded-vs-instantaneous gap on a (2+1)D wave field.
+
+    Returns (dM, dI, rel_gap). PW must match the beam grid.
+    """
+    iz_start = 6
+    iz_end = 0
+    src_layer = NL // 4
+    n_active = NL - src_layer
+    if n_active <= 4:
+        return 0.0, 0.0, 0.0
+    v = (iz_end - iz_start) / n_active
+
+    def iz_of_t(t):
+        return iz_start + int(round(v * (t - src_layer)))
+
+    h_M = _solve_wave_2plus1d(NL, PW, S_BASE, iz_of_t, src_layer)
+    h_I = _make_instantaneous_2plus1d(NL, PW, S_BASE, iz_of_t, src_layer)
+
+    free = prop_beam(pos, adj, nmap, None, K)
+    z_free = cz(free, pos, NL, PW)
+
+    cz_M = cz(_prop_beam_with_field(pos, adj, nmap,
+              lambda l, iy, iz: _wave_field_at(h_M, NL, PW, l, iy, iz), K, NL), pos, NL, PW)
+    cz_I = cz(_prop_beam_with_field(pos, adj, nmap,
+              lambda l, iy, iz: _wave_field_at(h_I, NL, PW, l, iy, iz), K, NL), pos, NL, PW)
+    dM = cz_M - z_free
+    dI = cz_I - z_free
+    rel = abs(dM - dI) / max(abs(dM), abs(dI), 1e-12)
+    return dM, dI, rel
+
+
 def battery(family):
     """Run the observable battery on one family. Returns dict of results."""
     name = family["name"]
@@ -260,12 +394,21 @@ def battery(family):
     g_null = prop_beam(pos, adj, nmap, fld_null, K)
     delta_null = cz(g_null, pos, NL, PW) - z_free
 
-    # PASS criteria
+    # 5. Dynamic: Lane 6 retarded vs instantaneous gap on (2+1)D wave equation
+    try:
+        dM, dI, dyn_gap = measure_dynamic_gap(pos, adj, nmap, NL, PW)
+    except Exception:
+        dM, dI, dyn_gap = 0.0, 0.0, 0.0
+
+    # PASS criteria — STATIC package
     grav_ok = sign_delta > 1e-5
     fm_ok = (not math.isnan(fm)) and abs(fm - 1.0) < 0.10
     born_ok = born < 1e-10
     null_ok = abs(delta_null) < 1e-10
-    pass_pkg = grav_ok and fm_ok and born_ok and null_ok
+    pass_static = grav_ok and fm_ok and born_ok and null_ok
+    # DYNAMIC condition: retarded must differ from instantaneous by > 5%
+    dyn_ok = dyn_gap > 0.05
+    pass_full = pass_static and dyn_ok
 
     return {
         "name": name,
@@ -289,7 +432,12 @@ def battery(family):
         "fm_ok": fm_ok,
         "born_ok": born_ok,
         "null_ok": null_ok,
-        "pass": pass_pkg,
+        "dyn_dM": dM,
+        "dyn_dI": dI,
+        "dyn_gap": dyn_gap,
+        "dyn_ok": dyn_ok,
+        "pass_static": pass_static,
+        "pass": pass_full,
     }
 
 
@@ -493,6 +641,8 @@ def main():
             reasons.append(f"Born ({r['born']:.1e})")
         if not r["null_ok"]:
             reasons.append(f"null ({r['null']:.1e})")
+        if not r.get("dyn_ok", True):
+            reasons.append(f"dyn ({r.get('dyn_gap', 0):.2%})")
         print(f"  {r['name']:25s}  -> {', '.join(reasons)}")
 
     # Classifier search: in-sample, LOO, and held-out
