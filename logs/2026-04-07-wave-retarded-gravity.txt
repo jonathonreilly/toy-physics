@@ -9,18 +9,18 @@ v = -0.3000 cells/layer (|v|/c = 0.3000)
 1. STATIC REFERENCE (v=0, frozen at iz_start)
   delta_z (static, iz=iz_start=6) = +0.008158
 
-2. MOVING SOURCE vs FROZEN REFERENCES (Fam1, seed=0)
-                       reference      delta_z
-            A: frozen at z_start    +0.008158
-     B: frozen at z_end (Newton)    +0.001846
-              C: frozen at z_mid    +0.006543
-                M: moving source    +0.008457
+2. RETARDED vs INSTANTANEOUS MOVING-SOURCE (Fam1, seed=0)
+   Frozen references kept as intuition aids; the decisive
+   pairing is M (retarded) vs I (instantaneous, c=infinity).
+                                 reference      delta_z
+          A: frozen at z_start (intuition)    +0.008158
+            B: frozen at z_end (intuition)    +0.001846
+            C: frozen at z_mid (intuition)    +0.006543
+               M: moving source (RETARDED)    +0.008457
+          I: moving source (INSTANTANEOUS)    +0.011242
 
-  alpha (M as mix of A->B) = -0.0474
-    alpha=0 -> retarded (matches z_start)
-    alpha=1 -> Newton/instantaneous (matches z_end)
-    alpha=0.5 -> matches midpoint
-  verdict: RETARDED-LEANING (closer to z_start)
+  decisive: M - I = -0.002785  (relative 24.77%)
+  verdict: RETARDED != INSTANTANEOUS — finite-c effect resolved
 
 3. v-SYMMETRY (+v vs -v, Fam1)
   +v: delta_z = +0.007173
@@ -37,7 +37,8 @@ v = -0.3000 cells/layer (|v|/c = 0.3000)
 6. NULL TEST (s=0, moving source)
   delta_z = +0.000000e+00
 
-7. FAMILY PORTABILITY (alpha across families)
-  Fam1: alpha = -0.0474  (dA=+0.0082, dB=+0.0018, dM=+0.0085)
-  Fam2: alpha = -0.0424  (dA=+0.0080, dB=+0.0021, dM=+0.0082)
-  Fam3: alpha = -0.0250  (dA=+0.0081, dB=+0.0011, dM=+0.0083)
+7. FAMILY PORTABILITY (M vs I across families)
+  family           dM           dI          M-I      rel
+    Fam1    +0.008457    +0.011242    -0.002785   24.77%
+    Fam2    +0.008234    +0.011134    -0.002901   26.05%
+    Fam3    +0.008267    +0.010671    -0.002404   22.53%
