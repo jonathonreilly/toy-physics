@@ -56,13 +56,13 @@ Packet identity carries physics.
 
 Packet width (sigma_z) at detector:
 
-| packet | sigma_z |
-| --- | ---: |
-| narrow (origin) | 3.01 |
-| medium (3x3) | 2.49 |
-| offset (z=+2) | 2.98 |
+| packet | sigma_z | cz |
+| --- | ---: | ---: |
+| narrow (origin) | 3.010 | -0.084 |
+| medium (3x3) | 2.492 | -0.059 |
+| offset (z=+2) | 2.983 | +1.093 |
 
-Centroid survives strongly (offset at +1.09 vs origin at -0.09).
+Centroid survives strongly (offset at +1.093 vs origin at -0.084).
 Width converges toward propagator natural mode (~3.0) with 17%
 residual difference at NL=30.
 
