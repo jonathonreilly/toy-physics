@@ -1,0 +1,43 @@
+======================================================================
+WAVE RETARDED GRAVITY HARNESS
+NL=30, W=8, s=0.004
+======================================================================
+
+Source motion: iz from 6 to 0 over 20 layers
+v = -0.3000 cells/layer (|v|/c = 0.3000)
+
+1. STATIC REFERENCE (v=0, frozen at iz_start)
+  delta_z (static, iz=iz_start=6) = +0.008158
+
+2. MOVING SOURCE vs FROZEN REFERENCES (Fam1, seed=0)
+                       reference      delta_z
+            A: frozen at z_start    +0.008158
+     B: frozen at z_end (Newton)    +0.001846
+              C: frozen at z_mid    +0.006543
+                M: moving source    +0.008457
+
+  alpha (M as mix of A->B) = -0.0474
+    alpha=0 -> retarded (matches z_start)
+    alpha=1 -> Newton/instantaneous (matches z_end)
+    alpha=0.5 -> matches midpoint
+  verdict: RETARDED-LEANING (closer to z_start)
+
+3. v-SYMMETRY (+v vs -v, Fam1)
+  +v: delta_z = +0.007173
+  -v: delta_z = +0.008457
+
+4. F~M on MOVING-SOURCE FIELD across families
+  Fam1: F~M = 0.9965
+  Fam2: F~M = 0.9955
+  Fam3: F~M = 0.9963
+
+5. BORN TEST on moving-source field (Fam1)
+  Born |I3|/P = 2.22e-15
+
+6. NULL TEST (s=0, moving source)
+  delta_z = +0.000000e+00
+
+7. FAMILY PORTABILITY (alpha across families)
+  Fam1: alpha = -0.0474  (dA=+0.0082, dB=+0.0018, dM=+0.0085)
+  Fam2: alpha = -0.0424  (dA=+0.0080, dB=+0.0021, dM=+0.0082)
+  Fam3: alpha = -0.0250  (dA=+0.0081, dB=+0.0011, dM=+0.0083)
