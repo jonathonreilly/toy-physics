@@ -39,23 +39,25 @@ F~M holds at 0.998 (slightly looser than the static 0.9999 because the
 field is still building up over the lattice). Born stays at machine
 precision. Gravity TOWARD on all 3 families.
 
-## Retardation evidence
+## Retardation evidence (off-source arrival)
 
-Single-layer pulse at src_layer=10 with strength 100×s:
+Single-layer pulse at src_layer=10 with strength 100×s. Measure
+|f(iy=0, iz=iz_src+offset)| over time and record the first dt where
+|f| > eps=1e-6. All cells before arrival are exactly 0.0.
 
-| layer | dt | |f| at iz_src |
+| offset (cells) | first dt | |f| at arrival |
 | ---: | ---: | ---: |
-| 10 | 0 | 1.0e-1 |
-| 11 | 1 | 1.0e-1 |
-| 12 | 2 | 2.5e-2 |
-| 13 | 3 | 2.5e-2 |
-| 14 | 4 | 1.1e-2 |
-| 15 | 5 | 2.0e-2 |
-| 16 | 6 | 2.5e-2 |
-| 17 | 7 | 1.4e-2 |
+| 0 | 0 | 1.00e-1 |
+| 1 | 1 | 2.50e-2 |
+| 2 | 2 | 6.25e-3 |
+| 3 | 3 | 1.56e-3 |
+| 4 | 4 | 3.91e-4 |
+| 5 | 5 | 9.77e-5 |
 
-Field amplitude at the source cell decays as the pulse spreads
-outward. Energy propagates along the lattice lightcone.
+`first_dt = offset` for every cell. Front speed = 1 lattice cell per
+time step, exactly. Amplitudes are identically zero at every cell
+before its arrival time. This is a strict lattice lightcone, not
+just a decay envelope.
 
 ## What this means
 

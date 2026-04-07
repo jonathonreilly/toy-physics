@@ -262,16 +262,39 @@ def main():
     g0 = _prop_beam(pos, adj, nmap, h0, K)
     print(f"  s=0: delta = {_cz(g0, pos) - z_free:+.6e}")
 
-    # 6. RETARDATION: pulse source at one layer and watch arrival
-    print("\n6. RETARDATION (single-layer pulse at src_layer)")
+    # 6. RETARDATION: pulse source at one layer and watch off-source arrival
+    print("\n6. RETARDATION (single-layer pulse, off-source arrival)")
     src_layer = NL // 3
     pulse_history = _make_wave_field(S * 100.0, MASS_Z, pulse_layers={src_layer})
-    print(f"  pulse fired at layer {src_layer}")
-    print(f"  {'layer':>5s} {'dt':>4s} {'|f| at iz=src':>16s}")
-    for layer in range(src_layer, min(src_layer + 8, NL)):
-        f = abs(_field_at(pulse_history, layer, 0, iz_src))
-        print(f"  {layer:5d} {layer - src_layer:4d} {f:16.6e}")
-    print("  (lightcone: response should grow at most one cell per dt)")
+    print(f"  pulse fired at layer {src_layer}, iz_src={iz_src}")
+    print(f"  amplitudes vs offset (iz - iz_src) and dt:")
+    header = f"  {'dt':>4s} " + " ".join(f"{'off='+str(o):>11s}" for o in range(0, 6))
+    print(header)
+    for dt in range(0, 10):
+        layer = src_layer + dt
+        if layer >= NL:
+            break
+        row = [f"{abs(_field_at(pulse_history, layer, 0, iz_src + o)):11.4e}" for o in range(0, 6)]
+        print(f"  {dt:4d} " + " ".join(row))
+
+    print("\n  First-arrival table (eps=1e-6):")
+    eps = 1e-6
+    print(f"  {'offset':>7s} {'first dt':>10s} {'|f| at arrival':>16s}")
+    for offset in range(0, 6):
+        first_dt = None
+        first_f = 0.0
+        for dt in range(0, NL - src_layer):
+            layer = src_layer + dt
+            f = abs(_field_at(pulse_history, layer, 0, iz_src + offset))
+            if f > eps:
+                first_dt = dt
+                first_f = f
+                break
+        if first_dt is not None:
+            print(f"  {offset:7d} {first_dt:10d} {first_f:16.4e}")
+        else:
+            print(f"  {offset:7d} {'never':>10s} {0.0:16.4e}")
+    print("  (finite-c lightcone: first dt should equal offset)")
 
 
 if __name__ == "__main__":
