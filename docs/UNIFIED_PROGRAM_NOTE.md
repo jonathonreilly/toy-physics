@@ -432,6 +432,33 @@ Goal:
 - move the symmetry story from “good empirical architecture” toward “clear
   transfer-product mechanism”
 
+### Priority 2A. Compact weak-field / dynamic classifier
+
+Add one explicit theory objective to the main backlog:
+
+- produce a compact derivation or classifier showing why the retained
+  weak-field package and dynamic signatures are **forced, not curated**
+
+Minimum acceptable scope:
+
+- explain why the broad weak-field package is the portable core
+- explain why the distance-law branch is stricter
+- explain why the complex-action branch is narrower
+- explain why the retained dynamic / retardation signatures survive without
+  turning into arbitrary one-off cards
+
+Fast-fail condition:
+
+- if no compact predictor survives contact with the retained notes, freeze the
+  result as a bounded no-go instead of continuing to accumulate loosely
+  connected empirical wins
+
+Why this matters:
+
+- this is the cleanest answer to the strongest adversarial critique of the
+  current program: that the retained package looks curated rather than forced
+  by a compact mechanism
+
 ### Priority 3. Generated-symmetry bridge
 
 This is the highest-value open science problem.

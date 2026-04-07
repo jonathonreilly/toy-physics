@@ -79,15 +79,20 @@ lanes most likely to move the top-end program goals if they land.
 
 5. **Compact universality classifier / derivation**
    - Target:
-     - one compact classifier or derivation explaining the observed hierarchy:
+     - one compact classifier or derivation showing why the retained
+       weak-field package and dynamic signatures are **forced, not curated**
+     - the minimum successful version should explain the observed hierarchy:
        broad portable weak-field package -> stricter distance tail -> narrower
-       complex-action branch -> bounded causal-field sector
+       complex-action branch -> bounded causal-field sector -> retained
+       wave-field / retardation signatures
    - Fast falsifier:
      - the hierarchy remains purely empirical with no compact predictor that
-       survives contact with the retained notes
+       survives contact with the retained notes, especially once the dynamic
+       lanes are included
    - Why it matters:
-     - this is the most direct way to raise the analytical-compression goal
-       rather than just adding more cards
+     - this is the most direct way to answer the strongest adversarial
+       critique: that the current package is an impressive collection of
+       retained numerics rather than a forced mechanism class
 
 6. **Lab-discriminating prediction with numbers**
    - Target:
