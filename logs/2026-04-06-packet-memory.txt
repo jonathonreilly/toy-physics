@@ -26,6 +26,6 @@ A.3 GRAVITY BY PACKET
         z=-2    +0.016633
 
 B. WIDTH (sigma_z) at NL=30
-  narrow (origin) sigma_z = 3.010
-  medium (3x3)    sigma_z = 2.492
-  offset (z=+2)   sigma_z = 2.983
+  narrow (origin) sigma_z = 3.010  cz = -0.084
+  medium (3x3)    sigma_z = 2.492  cz = -0.059
+  offset (z=+2)   sigma_z = 2.983  cz = +1.093

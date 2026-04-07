@@ -195,9 +195,9 @@ def main():
     a_med = _det_amps(_prop(pos, adj, nmap, NL, K, med), pos, NL)
     # offset: z=+2
     a_off = _det_amps(_prop(pos, adj, nmap, NL, K, _packet_src(nmap, 2)), pos, NL)
-    print(f"  narrow (origin) sigma_z = {_sigmaz(a_narrow, pos, NL):.3f}")
-    print(f"  medium (3x3)    sigma_z = {_sigmaz(a_med, pos, NL):.3f}")
-    print(f"  offset (z=+2)   sigma_z = {_sigmaz(a_off, pos, NL):.3f}")
+    print(f"  narrow (origin) sigma_z = {_sigmaz(a_narrow, pos, NL):.3f}  cz = {_cz(a_narrow, pos, NL):+.3f}")
+    print(f"  medium (3x3)    sigma_z = {_sigmaz(a_med, pos, NL):.3f}  cz = {_cz(a_med, pos, NL):+.3f}")
+    print(f"  offset (z=+2)   sigma_z = {_sigmaz(a_off, pos, NL):.3f}  cz = {_cz(a_off, pos, NL):+.3f}")
 
 
 if __name__ == "__main__":
