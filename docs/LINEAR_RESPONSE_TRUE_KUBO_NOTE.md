@@ -24,8 +24,9 @@ order is insufficient and we need higher-order path-sum terms.
 
 ## The derivation
 
-The propagator amplitude at node j under field `f = s / r_edge + 0.1`
-is:
+The propagator amplitude at node j under field `f = s / (r_edge + 0.1)`
+(where `r_edge` is the distance from the edge midpoint to the mass,
+and `0.1` is a short-distance regularizer inside the denominator) is:
 ```
 amp_j(s) = Σ_paths_to_j ∏_edges exp(i k L (1 − f(edge))) · weight(edge)
 ```
@@ -75,11 +76,16 @@ the propagator path-sum at s = 0.
 | **Off-scaffold** | **0.9995** | 9 |
 | **Overall** | **0.9716** | 44 |
 
-The off-scaffold correlation of 0.9995 is essentially perfect —
-nine different continuous-position generators (uniform random,
-Gaussian, clustered, rotated grid, Halton, radial, stretched) all
-produce measured responses that line up with `kubo_true` to better
-than 0.1% deviation from a perfect line.
+The off-scaffold Pearson correlation of 0.9995 is essentially
+perfect. Across nine different continuous-position generators
+(uniform random, Gaussian, clustered, rotated grid, Halton, radial,
+stretched), `kubo_true` and `measured` fall on a nearly perfect
+straight line (Pearson sense — *linear relationship*, not
+unit-slope agreement). The per-family ratio `kubo_true / measured`
+on the off-scaffold group ranges from about 0.785 to 0.997 (the
+magnitude can be 20% off on individual families), but the linear
+relationship is extremely tight. The r = 0.9995 number speaks to
+correlation shape, not to unit-ratio magnitude.
 
 ### Sign agreement
 
