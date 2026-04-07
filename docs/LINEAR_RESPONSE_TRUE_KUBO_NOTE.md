@@ -24,25 +24,34 @@ order is insufficient and we need higher-order path-sum terms.
 
 ## The derivation
 
-The propagator amplitude at node j under field `f = s / (r_edge + 0.1)`
-(where `r_edge` is the distance from the edge midpoint to the mass,
-and `0.1` is a short-distance regularizer inside the denominator) is:
+**Notation convention used in this section.** For the rest of this
+note, `r_edge` denotes the **regularized** field distance from the
+edge midpoint to the mass:
+
+```
+r_edge ≡ √((mx − x_src)² + (mz − z_src)²) + 0.1
+```
+
+This is a single quantity, not a bare distance with a separate `+0.1`
+regularizer. The implementation
+([`scripts/linear_response_true_kubo.py`](../scripts/linear_response_true_kubo.py))
+computes it as `r_field = math.sqrt(...) + 0.1` and uses it in one
+place per edge. All formulas in this note use bare `r_edge` to mean
+this regularized quantity, with no additional `+0.1`.
+
+The propagator amplitude at node j under the imposed field
+`f = s / r_edge` (with `r_edge` regularized as above) is:
 ```
 amp_j(s) = Σ_paths_to_j ∏_edges exp(i k L (1 − f(edge))) · weight(edge)
 ```
 
-Differentiating with respect to s at s = 0 (where `r_edge` denotes
-the regularized field distance `|midpoint − mass| + 0.1` — the same
-denominator that appears in the field formula above):
+Differentiating with respect to s at s = 0:
 
 ```
 d(amp_j)/ds |_{s=0}
-  = Σ_paths Σ_edges_in_path [-i k L_edge / (r_edge + 0.1)]
+  = Σ_paths Σ_edges_in_path [-i k L_edge / r_edge]
     · ∏_all_edges_in_path exp(i k L)·weight
 ```
-
-(The `+0.1` here is the same regularizer; including it explicitly
-matches what the implementation actually computes.)
 
 This has the same **path-sum structure** as the free propagator. It
 can be computed **incrementally** via a parallel perturbation
@@ -51,7 +60,7 @@ propagator `B_j = d(amp_j)/ds`:
 ```
 A_j = Σ_{i → j} A_i · exp(i k L_{ij}) · w_{ij} · h²/L_{ij}²      (standard)
 B_j = Σ_{i → j} [B_i · exp(i k L_{ij})
-               + A_i · (−i k L_{ij} / (r_edge_{ij} + 0.1)) · exp(i k L_{ij})]
+               + A_i · (−i k L_{ij} / r_edge_{ij}) · exp(i k L_{ij})]
                · w_{ij} · h²/L_{ij}²                              (perturbation)
 ```
 
