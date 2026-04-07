@@ -121,15 +121,22 @@ Laplacian to a full 3D Laplacian, gives:
 - Drive frequency dominates the DFT at every detector
 - Exact null with no source
 
-Combined with the previous lanes:
-- Lane 4: Poisson 3D static gravity (F~M=0.9999)
-- Lane 5: (2+1)D wave equation lightcone (delta pulse)
-- Lane 6: retarded ≠ instantaneous on moving source (25% gap, 3 families)
-- Lane 7: (2+1)D radiation with slope −0.47
-- **Lane 8 (this note): (3+1)D radiation with slope −1.14**
+This is a narrow result about the (3+1)D radiation falloff law on the
+wave equation. It does NOT close the full classical scalar-wave story
+in 3+1 dimensions: the (3+1)D promotions of Lane 5 (lightcone via delta
+pulse on the same operator) and Lane 6 (retarded vs instantaneous gap
+on a moving source) are not run in this lane and remain open.
 
-The full classical scalar-wave story is now closed in physical 3+1
-dimensions, derived from one local PDE on the lattice.
+Lane stack as it stands:
+
+- Lane 4: Poisson 3D static gravity (F~M=0.9999) — full 3D static
+- Lane 5: (2+1)D wave-equation lightcone via delta pulse
+- Lane 6: (2+1)D retarded ≠ instantaneous on moving source (25%, 3 families)
+- Lane 7: (2+1)D radiation, slope −0.47
+- **Lane 8 (this note)**: (3+1)D radiation falloff, slope −1.14
+
+Lanes 5 and 6 are tested only on the (2+1)D operator. Promoting them
+to (3+1)D is the natural follow-on; it is not done here.
 
 ## Claim boundary
 
