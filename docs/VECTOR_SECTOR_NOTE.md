@@ -6,6 +6,7 @@
 ## Artifact chain
 
 - [`scripts/vector_sector_circular_orbit.py`](../scripts/vector_sector_circular_orbit.py)
+- [`logs/2026-04-06-vector-sector-circular-orbit.txt`](../logs/2026-04-06-vector-sector-circular-orbit.txt)
 - This note
 
 ## Question

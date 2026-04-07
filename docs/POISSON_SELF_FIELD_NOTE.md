@@ -3,6 +3,11 @@
 **Date:** 2026-04-06
 **Status:** retained positive — Poisson-generated field gives F~M=1.000, Born=1.6e-15, portable
 
+## Artifact chain
+
+- [`scripts/poisson_self_field.py`](../scripts/poisson_self_field.py)
+- [`logs/2026-04-06-poisson-self-field.txt`](../logs/2026-04-06-poisson-self-field.txt)
+
 ## Question
 
 Can the gravitational field be DERIVED from a local equation instead

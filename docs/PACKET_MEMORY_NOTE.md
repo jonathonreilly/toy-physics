@@ -3,6 +3,11 @@
 **Date:** 2026-04-06
 **Status:** retained positive for Tier A (memory), partial for Tier B (shape), Tier C open
 
+## Artifact chain
+
+- [`scripts/packet_memory.py`](../scripts/packet_memory.py)
+- [`logs/2026-04-06-packet-memory.txt`](../logs/2026-04-06-packet-memory.txt)
+
 ## Question
 
 Does initial-condition information survive propagation to the detector,
