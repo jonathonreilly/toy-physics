@@ -12,7 +12,9 @@
 
 The hostile critique against the program was *"three families is a small
 engineered basin."* This lane attempts to widen the basin and find a
-structural rule that predicts pass/fail on the static weak-field package.
+structural rule that predicts pass/fail on the dynamic-augmented
+weak-field package (4 static conditions + the Lane 6 retarded-vs-instantaneous
+gap on a (2+1)D wave-equation field).
 
 ## Battery (4 static + 1 dynamic)
 

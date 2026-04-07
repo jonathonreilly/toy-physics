@@ -1,7 +1,8 @@
 ==========================================================================================
-UNIVERSALITY CLASSIFIER
-Sweeps grown-graph families and runs the weak-field observable battery.
+UNIVERSALITY CLASSIFIER (5-condition battery: 4 static + 1 dynamic Lane 6 gap)
+Sweeps grown-graph families and runs the dynamic-augmented weak-field battery.
 PASS = (gravity TOWARD) AND (|F~M-1|<0.10) AND (Born<1e-10) AND (|null|<1e-10)
+       AND (dyn_gap > 0.05)   [Lane 6 retarded vs instantaneous on (2+1)D wave]
 ==========================================================================================
 
 [ 1/26] A1_orig_Fam1                     PASS  delta=+0.0270  fm=1.006  born=3.6e-17
