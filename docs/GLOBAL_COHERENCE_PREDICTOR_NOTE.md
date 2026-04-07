@@ -1,5 +1,12 @@
 # Global Free-Beam Coherence Predictor — Modest Revival
 
+> **2026-04-07 update:** the off-scaffold held-out lane
+> ([`GLOBAL_COHERENCE_OFF_SCAFFOLD_NOTE.md`](GLOBAL_COHERENCE_OFF_SCAFFOLD_NOTE.md))
+> reversed this lane's advantage. On 9 continuous-position generators,
+> `free_coh ≥ 7.96e-04` gives 5/9 = 55.6%, exactly matching the old
+> rule. The revival was scaffold-specific. The classifier lane is now
+> closed; this note is kept for the record.
+
 **Date:** 2026-04-07
 **Status:** retained partial — single-property `free_coh ≥ 7.96e-04` improves cross-generator accuracy from 6/9 = 66.7% to **7/9 = 77.8%** while keeping in-sample at 92.3%. The classifier program is alive but still empirical and the cross-generator gap is not closed.
 

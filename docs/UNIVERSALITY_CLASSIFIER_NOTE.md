@@ -1,5 +1,18 @@
 # Universality Classifier: Empirical Two-Property Predictor on a Wide Family Sweep
 
+> **2026-04-07 final update:** after four classifier lanes
+> (node-level 2-prop, local_z_asym, free_coh, free_coh held-out batch 2),
+> the off-scaffold lane
+> ([`GLOBAL_COHERENCE_OFF_SCAFFOLD_NOTE.md`](GLOBAL_COHERENCE_OFF_SCAFFOLD_NOTE.md))
+> closed the simple-classifier line. On off-scaffold continuous
+> positions, the best global metric (`free_coh`) drops to 55.6%,
+> matching the old node-level rule. The scaffolded cross-generator
+> 81% was scaffold-specific. A structural pass/fail intuition still
+> hits 88.9% on the off-scaffold batch, so the physics is predictable
+> — but not with any single metric tested so far. The next attack
+> target is matter/inertial closure or analytic derivation, not
+> another metric search.
+
 **Date:** 2026-04-07 (revised, dynamic-augmented battery)
 **Status:** retained empirical (within-family only) — 2-property classifier on a 26-family sweep with **5-condition battery (4 static + 1 dynamic Lane 6 gap)**. In-sample 92.3%, leave-one-out 84.6%, in-family held-out (8 families): 7/8 rule, 8/8 pre-committed. **Cross-generator held-out (9 independent generators): 6/9 rule, 4/9 pre-committed — the rule is a within-family fit and does NOT generalize across generator families.** See [`INDEPENDENT_GENERATORS_HELDOUT_NOTE.md`](INDEPENDENT_GENERATORS_HELDOUT_NOTE.md). NOT a derived universality theorem.
 
