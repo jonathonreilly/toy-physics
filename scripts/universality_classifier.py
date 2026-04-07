@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
-"""Universality classifier: empirical pass/fail rule for the static weak-field package.
+"""Universality classifier: empirical pass/fail rule for the dynamic-augmented weak-field package.
 
 Sweeps grown-DAG families across many generator axes and runs the SAME
-STATIC observable battery on each:
+5-condition observable battery on each (4 static + 1 dynamic):
   - gravity sign (delta_z under an imposed 1/r field)
   - F~M slope across 4 source strengths
   - Born |I3|/P (3-slit interferometer)
   - null at s=0
-PASS = (gravity TOWARD) AND (|F~M-1|<0.10) AND (Born<1e-10) AND (|null|<1e-10).
+  - Lane 6 retarded-vs-instantaneous gap on a (2+1)D wave-equation field
+    with the source moving in z; PASS requires the relative gap > 5%
 
-The battery is STATIC ONLY. The retarded-vs-instantaneous (Lane 6) and
-wave-equation observables are intentionally NOT in this lane; they are
-covered separately. Adding them to the battery is a planned extension.
+PASS = (gravity TOWARD) AND (|F~M-1|<0.10) AND (Born<1e-10) AND (|null|<1e-10)
+       AND (dyn_gap > 0.05).
 
 The script then fits an empirical 2-property AND classifier on the
 swept set and validates it three ways:
@@ -21,7 +21,10 @@ swept set and validates it three ways:
      source BEFORE running, so the audit trail is unambiguous
 
 The result is an empirical classifier on the swept family set, not a
-derived universality theorem.
+derived universality theorem. A separate lane evaluates this rule on
+genuinely different generators (random k-regular, ER, expander, etc.)
+and gets a much weaker generalization — see
+INDEPENDENT_GENERATORS_HELDOUT_NOTE.md for that negative result.
 """
 
 from __future__ import annotations
