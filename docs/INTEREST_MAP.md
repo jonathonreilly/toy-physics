@@ -1,6 +1,6 @@
 # Interest Map
 
-**Date:** 2026-04-06  
+**Date:** 2026-04-07  
 **Status:** internal program-calibration note
 
 ## Purpose
@@ -34,6 +34,30 @@ right reading is:
 - use the scores to steer effort, not to market the project
 
 Important updates since the last score change:
+
+- the retained causal-field package is now materially stronger and more
+  review-safe:
+  - the Shapiro / phase-lag lane now has a cleaner artifact chain, a
+    five-family portability extension, and a consolidated experimental card
+  - the gravitomagnetic odd-in-`v` correction is retained and portable
+  - the causal-escape window is now kept only as a bounded dynamic regime
+    with an honest static-mimic correction
+  - the oscillating-source retardation discriminator is now the strongest
+    experiment-facing dynamic result:
+    same moving source, instantaneous vs retarded response, portable across
+    three families, delay-law coherence, and a failed global-delay fit
+- the dynamic/vector frontier also improved:
+  - the circular-orbit handedness lane now survives as a retained
+    **phase-locked first-harmonic** signal with matched scalar exposure,
+    clean `f`-oddness, and cross-family portability
+  - it does **not** count as a universal DC magnetic-like force, and the map
+    only counts the narrower lock-in / handedness read
+- the following new lanes are still explicitly excluded from the score lift:
+  - packet memory, because the retained note and the frozen gravity table are
+    not yet numerically aligned
+  - Poisson self-field, because the current harness still overstates how much
+    of the field law is derived and does not yet run the Born check on the
+    Poisson field itself
 
 - the three-family portability result is now materially stronger than the
   earlier partial card:
@@ -96,36 +120,38 @@ Important updates since the last score change:
 | Broad theorist interest | `10.0/10` | still maxed out on curiosity value; the exact-lattice wavefield lane, complex-action carryover, grown-row companion, bounded wide-lattice distance frontier, stronger electrostatics family, and graph-growth proxies make the program look richer rather than narrower after merge |
 | Bridge to known physics | `10.0/10` | now effectively maxed in breadth, because the mainline portfolio visibly touches weak-field gravity, signed scalar couplings, causal phase structure, distance-law behavior, and graph-growth expansion proxies; it is still not a full closure because the self-generated field and inertial-response sectors remain only partly retained |
 | Publishable as a careful computational toy-model paper | `10.0/10` | essentially maxed; the repo now has enough retained positives, enough bounded negatives, and enough diagnosed closures to support a very strong disciplined toy-model paper even if the flagship physics claim remains narrower |
-| Publishable as a foundational-physics breakthrough claim | `6.6/10` | the strongest claim is now materially better because the portable weak-field package plus distance tail survives on three independent grown families, and the first bounded moving-source / multipole extensions make the story feel less like a one-observable trick; still held back by the missing persistent-mass object, limited analytical compression, and the narrowness of the stronger branches |
-| Likelihood of publication in very top field journals today (`PRL` / `PRX` / `Nature Physics`) | `5.2/10` | this finally crosses into plausible rather than remote: three-family portability, an apparently real universality-class story, and first bounded dynamic/tidal extensions are the kind of upgrades that could get a serious hearing; still constrained by architecture scope, lack of theorem-level compression, and the fact that the strongest experiment-facing lane is not yet signal-budget complete |
-| Ready for top-tier mainstream physics claims | `5.5/10` | the project is now closer to a disciplined mainstream-facing claim because the broad fixed-field package looks portable, the distance law is no longer a one-family or two-family curiosity, and recent closures reduced obvious overclaim risk; still not ready for the strongest wording |
-| Field-shifting theory program | `9.4/10` | stronger again because the program now looks like an emergent weak-field universality class with bounded extensions into moving-source and quadrupole-like structure, not just a bag of scalar weak-field cards |
-| Landmark foundational breakthrough | `6.0/10` | the retained evidence is now broad enough to make a serious foundational splash plausible if the analytical and experimental gaps tighten, but it is still not at the level where outsiders would feel forced without further compression and verification |
-| Nobel-scale breakthrough | `0.5/10` | still not a realistic present-tense read, but the path is now easier to imagine because the program has moved from isolated numerical wins toward a portable mechanism class with clear experimental endgame hooks |
+| Publishable as a foundational-physics breakthrough claim | `7.2/10` | the claim surface is now materially stronger: the portable weak-field package and distance tail survive on three independent grown families, the causal-field package is now much cleaner and more experiment-facing, and the vector frontier has its first retained lock-in handedness read; still limited by missing analytical compression, missing persistent objects, and unresolved review findings on the packet-memory and Poisson lanes |
+| Likelihood of publication in very top field journals today (`PRL` / `PRX` / `Nature Physics`) | `6.0/10` | the project is now plainly in the “serious hearing” range rather than the “interesting but remote” range: multi-family portability, a shaped dynamic retardation signature, and a more concrete experimental card are real upgrades; still constrained by architecture scope, theorem-level weakness, and the lack of an absolute-unit signal budget or experimental verification |
+| Ready for top-tier mainstream physics claims | `6.2/10` | the project is now closer to a disciplined mainstream-facing claim because the broad fixed-field package looks portable, the distance law is no longer a one-family curiosity, and the dynamic causal package now has a better null / delay / portability structure; still not ready for the strongest wording while key theory compression and object-level closure remain open |
+| Field-shifting theory program | `9.6/10` | stronger again because the program now looks like an emergent weak-field universality class with a real dynamic causal package and a first bounded vector-like lock-in extension, not just a bag of scalar weak-field cards |
+| Landmark foundational breakthrough | `6.6/10` | the retained evidence is now broad enough to make a serious foundational splash plausible if the analytical and experimental gaps tighten, especially because the retardation discriminator is now a much sharper finite-propagation signature than the earlier causal-field cards |
+| Nobel-scale breakthrough | `1.0/10` | still very far from a present-tense Nobel-scale evidence base, but now no longer purely speculative: the program has a portable weak-field core, a real dynamic retardation discriminator, and a clearer experiment-facing path than it had before this cycle |
 
 ## Nobel-Scale Breakdown
 
-These are the major goals hidden inside the low `0.5/10` Nobel-scale score.
+These are the major goals hidden inside the still-low `1.0/10`
+Nobel-scale score.
 
-- `6.5/10` Broad universality beyond the current family class
+- `6.7/10` Broad universality beyond the current family class
   - Current: the weak-field package and distance tail now survive on three
-    independent grown families, and several additional families/boundaries
-    sharpen the structure
+    independent grown families, and the causal-field package now also has a
+    more review-safe retained core
   - Missing: a wider universality class beyond the current dense structured
     family, or a theorem / near-theorem explaining why the present class works
 
-- `2.0/10` A compact underlying principle, not just strong numerics
-  - Current: the repo now shows a nested hierarchy
+- `2.1/10` A compact underlying principle, not just strong numerics
+  - Current: the repo now shows a cleaner nested hierarchy
     `portable weak-field package -> stricter distance tail -> narrower complex-action branch`
   - Missing: one law-level derivation or classifier that makes this feel
     forced rather than curated
 
-- `3.5/10` Beyond-static physics that also looks portable
-  - Current: retained narrow positives now exist for impact-parameter
-    deflection, moving-source directional bias, and quadrupole-like
-    tidal/width response
-  - Missing: portability of those effects across more than one family, or a
-    stronger dynamic/vector sector beyond the current scalar core
+- `5.6/10` Beyond-static physics that also looks portable
+  - Current: retained positives now include the Shapiro / phase-lag package,
+    the oscillating-source retardation discriminator, a portable
+    odd-in-`v` correction, and a bounded vector-like first-harmonic
+    handedness signal
+  - Missing: a cleaner universal vector sector, a derived dynamical field
+    equation, and broader portability of the non-scalar branches
 
 - `1.5/10` A true inertial-object / persistent-mass sector
   - Current: amplitude-level equivalence and broad-surrogate steering are
@@ -134,16 +160,18 @@ These are the major goals hidden inside the low `0.5/10` Nobel-scale score.
   - Missing: one object class whose persistence and inertial response are both
     measurable on the same family
 
-- `4.5/10` Stronger bridge to known physics without inflation
+- `6.0/10` Stronger bridge to known physics without inflation
   - Current: weak-field gravity-like response, scalar sign-law
-    electrostatics, moving-source bias, and tidal structure now make the
-    bridge much broader
-  - Missing: any real vector/magnetic sector, stronger relativistic closure,
-    and a clean mainstream-facing compression of what is and is not claimed
+    electrostatics, a shaped retardation discriminator, and a first bounded
+    vector-like lock-in signal now make the bridge meaningfully broader
+  - Missing: a universal vector/magnetic sector, stronger relativistic
+    closure, and a cleaner mainstream-facing compression of what is and is
+    not claimed
 
-- `2.5/10` Experimental-readiness of the best discriminator
+- `3.7/10` Experimental-readiness of the best discriminator
   - Current: the diamond / NV phase-sensitive lane is still the cleanest real
-    external path
+    external path, and the retardation discriminator now gives a stronger
+    transfer-function-style target than the earlier Shapiro-only read
   - Missing: one explicit source geometry, one quantified signal budget, and
     one lab-specific noise-floor story
 
@@ -161,7 +189,7 @@ far from a Nobel-scale evidence base.
 The current realistic route is:
 
 1. harden the universality / hierarchy story
-2. make one dynamic or vector extension portable
+2. tighten the dynamic / vector package without overclaim
 3. finish the diamond-lane signal budget
 4. then get a genuinely new effect verified
 
