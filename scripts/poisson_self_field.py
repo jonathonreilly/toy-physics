@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Poisson self-field: gravity from a local equation.
+"""Poisson self-field: transverse profile from a local equation.
+
+Caveat: the transverse (y,z) profile at each layer is solved from the
+2D Poisson equation. The longitudinal (x) falloff is still imposed via
+an explicit 1/(dx+0.1) factor in _make_poisson_field. So this is NOT
+a fully derived 3D field — only the transverse profile is derived.
 
 Reproduces all retained results in POISSON_SELF_FIELD_NOTE.md:
   1. Field profile from Poisson solver (laplacian f = -source)
@@ -211,15 +216,16 @@ def main():
             fm = sum((x - mx) * (y - my) for x, y in zip(lx[: len(ly)], ly)) / sxx
             print(f"  {label}: F~M = {fm:.4f}")
 
-    # 4. Born
-    print("\n4. BORN TEST (Fam1, seed=0)")
+    # 4. Born — on Poisson field, not zero
+    print("\n4. BORN TEST (Fam1, seed=0, Poisson field active)")
     pos, adj, nmap = grow(0, 0.2, 0.7)
+    fl_born = _make_poisson_field(nmap, S, MASS_Z)
     slits = [-1, 0, 1]
 
     def pb(sl):
         srcs = [(nmap.get((0, s, 0)) or nmap.get((1, s, 0)), 1.0 + 0j) for s in sl]
         srcs = [(i, a) for i, a in srcs if i is not None]
-        return _dp(_prop_beam(pos, adj, nmap, fl_zero, K, sources=srcs), pos)
+        return _dp(_prop_beam(pos, adj, nmap, fl_born, K, sources=srcs), pos)
 
     p123 = pb(slits)
     p12 = pb([-1, 0])

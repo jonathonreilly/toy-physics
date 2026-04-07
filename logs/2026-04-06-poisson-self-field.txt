@@ -27,8 +27,8 @@ NL=30, W=8, s=0.004, z_src=3.0
   Fam2: F~M = 0.9993
   Fam3: F~M = 0.9994
 
-4. BORN TEST (Fam1, seed=0)
-  Born |I3|/P = 1.57e-15
+4. BORN TEST (Fam1, seed=0, Poisson field active)
+  Born |I3|/P = 7.07e-16
 
 5. NULL TEST
   s=0: delta = +0.000000e+00
