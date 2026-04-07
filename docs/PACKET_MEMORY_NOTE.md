@@ -43,14 +43,14 @@ still 58% distinguishability.
 
 | packet | gravitational deflection |
 | --- | ---: |
-| origin | +0.0151 |
-| z=+1 | +0.0102 |
-| z=+2 | +0.0051 |
-| z=+3 | +0.0002 |
-| z=-2 | +0.0107 |
+| origin | +0.029612 |
+| z=+1 | +0.024504 |
+| z=+2 | +0.016560 |
+| z=+3 | +0.008522 |
+| z=-2 | +0.016633 |
 
-3× variation in gravitational response across packets. Packet identity
-carries physics.
+3.5× variation in gravitational response across packets (origin vs z=+3).
+Packet identity carries physics.
 
 ## Tier B: Shape partially converges — PARTIAL
 
