@@ -1,7 +1,7 @@
 # Wave-Equation Radiation: Oscillating Source Emits Propagating Field
 
 **Date:** 2026-04-07
-**Status:** retained positive — log-log slope −0.47 matches 2+1D scalar radiation prediction (−0.5); drive frequency dominates DFT at every distance; exact null at S0=0; Born preserved
+**Status:** retained positive (narrow) — log-log slope −0.47 matches (2+1)D scalar radiation prediction (−0.5); drive frequency dominates DFT at every distance; exact null at S0=0; Born preserved. Family portability section measures F~M of the radiating field across grown geometries (the slope itself is a PDE invariant)
 
 ## Artifact chain
 
@@ -93,6 +93,24 @@ F~M is 0.93 — looser than the static lanes (0.99) because the
 radiating field has oscillatory sign-changing structure that makes
 beam deflection sub-linear in S. Born stays at machine precision.
 Null is exact.
+
+
+## Family portability (F~M on radiating field)
+
+The radiation slope is a property of the wave PDE alone — it has no
+beam input — so it is the same for every grown geometry by
+construction. The geometry-dependent quantity is the beam-side F~M
+scaling on the radiating field. Measured across the three families:
+
+| Family | F~M |
+| --- | ---: |
+| Fam1 | 0.9345 |
+| Fam2 | 1.0102 |
+| Fam3 | 0.8885 |
+
+All three are within 12% of unity. The radiating-field weak-equivalence
+holds across grown geometries, with looser scaling than the static lanes
+(0.99) because the field has sign-changing oscillatory structure.
 
 ## Lightcone arrivals (note on eps threshold)
 
