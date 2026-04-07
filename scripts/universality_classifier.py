@@ -1,15 +1,27 @@
 #!/usr/bin/env python3
-"""Universality classifier: which graph families pass the weak-field package?
+"""Universality classifier: empirical pass/fail rule for the static weak-field package.
 
-Sweeps a wide grid of family generators (drift, restore, neighbor reach,
-beam width, lattice depth, seed) and runs the same observable battery on
-each. Records gravity sign, F~M slope, Born |I3|/P, null at s=0, and the
-retarded-vs-instantaneous gap from the wave equation. Each family also
-gets structural properties measured (avg forward degree, max degree,
-effective dimensionality proxy). Pass/fail is reported per family.
+Sweeps grown-DAG families across many generator axes and runs the SAME
+STATIC observable battery on each:
+  - gravity sign (delta_z under an imposed 1/r field)
+  - F~M slope across 4 source strengths
+  - Born |I3|/P (3-slit interferometer)
+  - null at s=0
+PASS = (gravity TOWARD) AND (|F~M-1|<0.10) AND (Born<1e-10) AND (|null|<1e-10).
 
-The goal is to find the structural predictor that separates PASS from
-FAIL — that property is the candidate universality criterion.
+The battery is STATIC ONLY. The retarded-vs-instantaneous (Lane 6) and
+wave-equation observables are intentionally NOT in this lane; they are
+covered separately. Adding them to the battery is a planned extension.
+
+The script then fits an empirical 2-property AND classifier on the
+swept set and validates it three ways:
+  1. In-sample accuracy
+  2. Leave-one-out cross-validation across all families
+  3. A separate HELD-OUT family list with PREDICTIONS hard-coded in the
+     source BEFORE running, so the audit trail is unambiguous
+
+The result is an empirical classifier on the swept family set, not a
+derived universality theorem.
 """
 
 from __future__ import annotations
@@ -342,6 +354,92 @@ def make_families():
     return fams
 
 
+def fit_classifier(results):
+    """Best 2-property AND classifier (avg_deg, z_sym style) on the given results.
+
+    Returns (acc, prop_a, dir_a, thr_a, prop_b, dir_b, thr_b).
+    """
+    rs = [r for r in results if "error" not in r]
+    if not rs:
+        return (0.0, "", "", 0.0, "", "", 0.0)
+    props = ["avg_deg", "z_sym", "fill", "reach_frac"]
+    best = (-1.0, "", "", 0.0, "", "", 0.0)
+    for pa in props:
+        va_set = sorted({r[pa] for r in rs})
+        for ta in va_set:
+            for da in (">=", "<="):
+                for pb in props:
+                    if pb == pa:
+                        continue
+                    vb_set = sorted({r[pb] for r in rs})
+                    for tb in vb_set:
+                        for db in (">=", "<="):
+                            correct = 0
+                            for r in rs:
+                                ok_a = (r[pa] >= ta) if da == ">=" else (r[pa] <= ta)
+                                ok_b = (r[pb] >= tb) if db == ">=" else (r[pb] <= tb)
+                                pred = ok_a and ok_b
+                                if pred == r["pass"]:
+                                    correct += 1
+                            acc = correct / len(rs)
+                            if acc > best[0]:
+                                best = (acc, pa, da, ta, pb, db, tb)
+    return best
+
+
+def apply_classifier(r, rule):
+    """Apply a (acc, pa, da, ta, pb, db, tb) rule to one result row."""
+    _, pa, da, ta, pb, db, tb = rule
+    ok_a = (r[pa] >= ta) if da == ">=" else (r[pa] <= ta)
+    ok_b = (r[pb] >= tb) if db == ">=" else (r[pb] <= tb)
+    return ok_a and ok_b
+
+
+def make_heldout_families():
+    """A separate set of families for OUT-OF-SAMPLE validation.
+
+    These are NOT in make_families(). The classifier is fitted on
+    make_families() only, then evaluated on these without refitting.
+    """
+    base = {"NL": 25, "PW": 6, "md": 3}
+    def F(**kw):
+        f = dict(base); f.update(kw); return f
+    return [
+        # H1: dense + symmetric -> predict PASS
+        F(name="HELD_dense_sym",      seed=7, drift=0.15, restore=0.50),
+        # H2: pure grid different seed -> predict PASS
+        F(name="HELD_grid_seed7",     seed=7, drift=0.00, restore=1.00),
+        # H3: ring sparse -> predict FAIL (low avg_deg)
+        F(name="HELD_ring_md3",       seed=7, drift=0.20, restore=0.70, mode="ring"),
+        # H4: asym_z (broken Z2 in measurement axis) -> predict FAIL
+        F(name="HELD_asym_z_seed7",   seed=7, drift=0.20, restore=0.70, mode="asym_z"),
+        # H5: asym_y (broken Z2 in non-measurement axis) -> predict PASS
+        F(name="HELD_asym_y_seed7",   seed=7, drift=0.20, restore=0.70, mode="asym_y"),
+        # H6: drift_y (sheared, very sparse) -> predict FAIL
+        F(name="HELD_drift_y_seed7",  seed=7, drift=0.20, restore=0.70, mode="drift_y"),
+        # H7: anisotropic z reach -> predict PASS (still dense + symmetric)
+        F(name="HELD_aniso_z3",       seed=7, drift=0.20, restore=0.70, anisotropy=3.0),
+        # H8: cross stencil -> predict PASS (sparse but not pathologically so)
+        F(name="HELD_cross_seed7",    seed=7, drift=0.20, restore=0.70, mode="cross"),
+    ]
+
+
+# PRE-COMMITTED PREDICTIONS for the held-out families above. These are
+# hard-coded BEFORE the script is run, on the basis of the previously
+# discovered rule "(avg_deg >= 20.74) AND (z_sym <= 0.002)". The audit
+# trail is this dict in the source.
+HELDOUT_PREDICTIONS = {
+    "HELD_dense_sym":     True,   # dense + symmetric
+    "HELD_grid_seed7":    True,   # pure regular grid
+    "HELD_ring_md3":      False,  # too sparse
+    "HELD_asym_z_seed7":  False,  # broken Z2 in measurement axis
+    "HELD_asym_y_seed7":  True,   # asymmetry in non-measurement axis is OK
+    "HELD_drift_y_seed7": False,  # sheared + sparse
+    "HELD_aniso_z3":      True,   # dense + symmetric still
+    "HELD_cross_seed7":   True,   # sparse but symmetric and connected
+}
+
+
 def main():
     print("=" * 90)
     print("UNIVERSALITY CLASSIFIER")
@@ -397,67 +495,64 @@ def main():
             reasons.append(f"null ({r['null']:.1e})")
         print(f"  {r['name']:25s}  -> {', '.join(reasons)}")
 
-    # Classifier search: which structural property predicts pass?
-    print("\nCLASSIFIER ANALYSIS:")
-    pass_rs = [r for r in results if r.get("pass")]
-    fail_rs = [r for r in results if not r.get("pass") and "error" not in r]
-    if pass_rs and fail_rs:
-        for prop in ["avg_deg", "max_deg", "eff_dim", "z_sym", "fill", "reach_frac"]:
-            pv = [r[prop] for r in pass_rs]
-            fv = [r[prop] for r in fail_rs]
-            p_min, p_max = min(pv), max(pv)
-            f_min, f_max = min(fv), max(fv)
-            overlap = not (p_max < f_min or f_max < p_min)
-            print(f"  {prop:11s}: PASS [{p_min:.3f}, {p_max:.3f}]  FAIL [{f_min:.3f}, {f_max:.3f}]  "
-                  f"{'OVERLAP' if overlap else 'CLEAN SEPARATION'}")
-        # threshold search per property: try (>= thr) and (<= thr) classifiers
-        print("\n  best single-property classifier:")
-        best = (0.0, "", "", 0.0)
-        for prop in ["avg_deg", "max_deg", "eff_dim", "z_sym", "fill", "reach_frac"]:
-            vals = sorted({r[prop] for r in results})
-            for thr in vals:
-                for direction in (">=", "<="):
-                    if direction == ">=":
-                        correct = sum(1 for r in results
-                                      if "error" not in r and ((r[prop] >= thr) == r["pass"]))
-                    else:
-                        correct = sum(1 for r in results
-                                      if "error" not in r and ((r[prop] <= thr) == r["pass"]))
-                    acc = correct / max(len(results), 1)
-                    if acc > best[0]:
-                        best = (acc, prop, direction, thr)
-        acc, prop, direction, thr = best
-        print(f"    {prop} {direction} {thr:.3f}  -> accuracy {acc:.1%}")
-        # 2-property AND classifier search
-        print("\n  best 2-property AND classifier:")
-        best2 = (0.0, "", "", 0.0, "", "", 0.0)
-        props = ["avg_deg", "z_sym", "fill", "reach_frac"]
-        for pa in props:
-            va_set = sorted({r[pa] for r in results})
-            for ta in va_set:
-                for da in (">=", "<="):
-                    for pb in props:
-                        if pb == pa:
-                            continue
-                        vb_set = sorted({r[pb] for r in results})
-                        for tb in vb_set:
-                            for db in (">=", "<="):
-                                correct = 0
-                                for r in results:
-                                    if "error" in r:
-                                        continue
-                                    ok_a = (r[pa] >= ta) if da == ">=" else (r[pa] <= ta)
-                                    ok_b = (r[pb] >= tb) if db == ">=" else (r[pb] <= tb)
-                                    pred = ok_a and ok_b
-                                    if pred == r["pass"]:
-                                        correct += 1
-                                acc = correct / max(len(results), 1)
-                                if acc > best2[0]:
-                                    best2 = (acc, pa, da, ta, pb, db, tb)
-        acc, pa, da, ta, pb, db, tb = best2
-        print(f"    ({pa} {da} {ta:.3f}) AND ({pb} {db} {tb:.3f})  -> accuracy {acc:.1%}")
-    else:
-        print("  (no PASS or no FAIL — classifier requires both)")
+    # Classifier search: in-sample, LOO, and held-out
+    print("\nCLASSIFIER ANALYSIS (in-sample):")
+    in_rule = fit_classifier(results)
+    acc, pa, da, ta, pb, db, tb = in_rule
+    print(f"  best 2-prop AND rule: ({pa} {da} {ta:.3f}) AND ({pb} {db} {tb:.3f})")
+    print(f"  in-sample accuracy: {acc:.1%}")
+
+    # Leave-one-out cross-validation
+    print("\nLEAVE-ONE-FAMILY-OUT:")
+    rs = [r for r in results if "error" not in r]
+    loo_correct = 0
+    loo_misses = []
+    for i, held in enumerate(rs):
+        train = rs[:i] + rs[i + 1:]
+        rule = fit_classifier(train)
+        pred = apply_classifier(held, rule)
+        if pred == held["pass"]:
+            loo_correct += 1
+        else:
+            loo_misses.append((held["name"], held["pass"], pred, rule[1:]))
+    loo_acc = loo_correct / max(len(rs), 1)
+    print(f"  LOO accuracy: {loo_correct}/{len(rs)} = {loo_acc:.1%}")
+    if loo_misses:
+        print("  misses:")
+        for name, truth, pred, rule_tail in loo_misses:
+            print(f"    {name}: truth={truth}, pred={pred}, rule={rule_tail}")
+
+    # Held-out family validation with PRE-COMMITTED predictions
+    print("\nHELD-OUT FAMILIES (predictions hard-coded before run):")
+    held_families = make_heldout_families()
+    held_results = []
+    for fam in held_families:
+        try:
+            r = battery(fam)
+        except Exception as e:
+            r = {"name": fam["name"], "pass": False, "error": str(e)}
+        held_results.append(r)
+
+    print(f"  {'family':25s} {'predicted':>10s} {'actual':>8s} {'rule pred':>10s} {'agree':>7s}")
+    pred_correct = 0
+    rule_correct = 0
+    for r in held_results:
+        if "error" in r:
+            print(f"  {r['name']:25s}  ERROR")
+            continue
+        committed = HELDOUT_PREDICTIONS.get(r["name"])
+        rule_pred = apply_classifier(r, in_rule)
+        agree_committed = (committed == r["pass"])
+        agree_rule = (rule_pred == r["pass"])
+        if agree_committed:
+            pred_correct += 1
+        if agree_rule:
+            rule_correct += 1
+        print(f"  {r['name']:25s} {str(committed):>10s} {str(r['pass']):>8s} "
+              f"{str(rule_pred):>10s} {('OK' if agree_committed else 'MISS'):>7s}")
+    n_held = sum(1 for r in held_results if "error" not in r)
+    print(f"\n  pre-committed predictions: {pred_correct}/{n_held} = {pred_correct/max(n_held,1):.1%}")
+    print(f"  in-sample-fitted rule applied to held-out: {rule_correct}/{n_held} = {rule_correct/max(n_held,1):.1%}")
 
 
 if __name__ == "__main__":
