@@ -135,8 +135,10 @@ Lane stack as it stands:
 - Lane 7: (2+1)D radiation, slope −0.47
 - **Lane 8 (this note)**: (3+1)D radiation falloff, slope −1.14
 
-Lanes 5 and 6 are tested only on the (2+1)D operator. Promoting them
-to (3+1)D is the natural follow-on; it is not done here.
+Lanes 5 and 6 promotions to (3+1)D are now done in a separate lane:
+see [`WAVE_3PLUS1D_PROMOTIONS_NOTE.md`](WAVE_3PLUS1D_PROMOTIONS_NOTE.md).
+Together, Lane 8 (radiation falloff) and the promotions lane certify
+all three classical scalar-wave signatures on the same (3+1)D operator.
 
 ## Claim boundary
 
