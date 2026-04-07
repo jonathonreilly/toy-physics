@@ -203,6 +203,28 @@ project.
 | Continuum / refinement bridge | **promising but bounded** | raw NN is Born-clean through `h = 0.25`; deterministic rescale extends to `h = 0.0625`; RG-style gravity remains open |
 | Generated / emergent symmetry | **reopened / bounded** | structured chokepoint bridge is now retained through a modest larger-`N` extension on the same pocket, but no broad generated successor is promoted |
 
+## Current gap-owning moonshots
+
+The two clearest weak points in the current program are now:
+
+1. **Weak universality beyond the retained scaffolded family**
+   - target an operator-level derivation or no-go, not another node-stat
+     classifier
+   - best immediate candidates:
+     - transfer-operator / spectral criterion
+     - path-counting or detector-mode coherence explanation
+     - prediction on a genuinely different generator family from that
+       operator-level story
+
+2. **Matter / inertial closure after the Gaussian-packet failure**
+   - do not spend the next serious cycle on more Gaussian packet tuning
+   - best immediate candidates:
+     - width-stabilized / soliton-like objects
+     - topological defects or composite bound states
+     - band-mass / quasiparticle style effective-mass regimes
+     - honest action fork with a mass / nonlinearity term if the current
+       linear route cannot support matter
+
 ## Distance-law closure
 
 The recent gravity-side closure matters for the roadmap.

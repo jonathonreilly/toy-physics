@@ -48,9 +48,19 @@ lanes most likely to move the top-end program goals if they land.
    - Target:
      - one persistent or quasi-persistent object whose gravitational response
        and inertial response are both measurable on the same family
+     - current best routes:
+       - width-stabilized objects (soliton-like or self-bound packets)
+       - topological objects / defects instead of Gaussian packets
+       - composite bound states with internal binding structure
+       - band-mass / quasiparticle style effective-mass regimes
+       - explicit mass-term action fork if the current action cannot support
+         inertial closure honestly
    - Fast falsifier:
      - every candidate remains only a broad steering surrogate and never
        separates persistence from ordinary transport
+     - repeated Gaussian-packet variants keep reducing to width /
+       dispersion-dependent slopes rather than generator-invariant inertial
+       response
    - Why it matters:
      - this is still the largest missing physics ingredient in the current
        weak-field story
@@ -85,10 +95,21 @@ lanes most likely to move the top-end program goals if they land.
        broad portable weak-field package -> stricter distance tail -> narrower
        complex-action branch -> bounded causal-field sector -> retained
        wave-field / retardation signatures
+     - current best routes:
+       - operator-level derivation / no-go on the retained scaffolded family
+       - spectral or path-coherence criterion at the transfer-operator level
+       - continuum-class rescue: different generators with the same effective
+         coarse-grained operator
+       - minimal universality boundary for the actual mechanism class if broad
+         universality fails
+       - no-go theorem for single-scalar classifiers under the current action
    - Fast falsifier:
      - the hierarchy remains purely empirical with no compact predictor that
        survives contact with the retained notes, especially once the dynamic
        lanes are included
+     - off-scaffold and cross-generator negatives continue to kill every
+       low-dimensional empirical classifier without yielding a deeper
+       operator-level explanation
    - Why it matters:
      - this is the most direct way to answer the strongest adversarial
        critique: that the current package is an impressive collection of
@@ -181,6 +202,26 @@ It is now one or more of these:
 Those are the physics bottlenecks that matter most now if the goal is not just
 "a better version of the same story" but "a result that could genuinely
 surprise a skeptical physicist."
+
+## Current Gap-Owning Moonshots
+
+If the goal is to own the two clearest current weaknesses directly, the
+highest-leverage moonshots are now:
+
+1. **Weak universality lane**
+   - operator-level derivation or no-go for why the retained scaffolded family
+     works
+   - spectral / path-counting / detector-mode criterion instead of another
+     node-stat classifier
+   - one genuinely different generator family predicted in advance from the
+     operator-level story, not from a fitted graph metric
+
+2. **Failed first matter lane**
+   - non-Gaussian persistent objects only: solitons, defects, composite bound
+     states, or band-mass quasiparticles
+   - no more Gaussian packet tuning as the headline route
+   - if those fail, fork honestly to an explicit mass-term / nonlinear action
+     rather than pretending the current linear dispersive route is near matter
 
 The newest discriminator result also narrows one tempting lane:
 

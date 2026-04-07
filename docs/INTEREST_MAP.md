@@ -131,6 +131,16 @@ Important updates since the last score change:
     than a promoted mechanism
   - grown-wavefield transfer is now frozen as a phase-dephasing / detector-line
     coherence failure rather than a vague no-go
+- the newest score-moving results are mixed and need to be counted honestly:
+  - the scaffolded `free_coh` revival is real on the tested grid-backed
+    generator sets, but the off-scaffold held-out lane is a decisive retained
+    negative: the advantage over the old node-level rule collapses to zero once
+    the shared `(layer, iy, iz)` scaffold is removed
+  - the Gaussian packet matter / inertial closure attempt is also a retained
+    negative: per-packet Newton linearity is mostly present, but equivalence
+    fails decisively and the packet response is width / dispersion dependent
+  - these two negatives do **not** weaken the scalar-wave / field-law stack,
+    but they do sharply narrow the current universality and matter stories
 
 ## Current map
 
@@ -141,13 +151,13 @@ Important updates since the last score change:
 | Broad theorist interest | `10.0/10` | still maxed out on curiosity value; the exact-lattice wavefield lane, complex-action carryover, grown-row companion, bounded wide-lattice distance frontier, stronger electrostatics family, and graph-growth proxies make the program look richer rather than narrower after merge |
 | Bridge to known physics | `10.0/10` | now effectively maxed in breadth, because the mainline portfolio visibly touches weak-field gravity, signed scalar couplings, causal phase structure, distance-law behavior, and graph-growth expansion proxies; it is still not a full closure because the self-generated field and inertial-response sectors remain only partly retained |
 | Publishable as a careful computational toy-model paper | `10.0/10` | essentially maxed; the repo now has enough retained positives, enough bounded negatives, and enough diagnosed closures to support a very strong disciplined toy-model paper even if the flagship physics claim remains narrower |
-| Publishable as a foundational-physics breakthrough claim | `8.4/10` | the claim surface is now materially stronger: the portable weak-field package and distance tail survive on three independent grown families, the causal-field package is cleaner and more experiment-facing, the vector frontier has its first retained lock-in handedness read, the scalar field now has both a retained full-3D static Poisson derivation and a retained dynamic wave-equation promotion with explicit finite-`c` evidence, and the moving-source wave lane now includes a proper retarded-vs-instantaneous comparator with a stable `23–26%` cross-family difference; still limited by missing analytical compression, missing persistent objects, and the absence of experimental confirmation |
-| Likelihood of publication in very top field journals today (`PRL` / `PRX` / `Nature Physics`) | `7.4/10` | the project is now firmly in the “serious hearing” range: multi-family portability, a sharper dynamic retardation signature, a more concrete experimental card, a full static 3D local-field derivation, a retained dynamic local field law, and now a retained moving-source retarded-vs-instantaneous result are all real upgrades; still constrained by theorem-level weakness, architecture scope, and the lack of an absolute-unit signal budget or experimental verification |
-| Ready for top-tier mainstream physics claims | `7.5/10` | the project is now closer to a disciplined mainstream-facing claim because the broad fixed-field package looks portable, the distance law is no longer a one-family curiosity, the dynamic causal package has a better null / delay / portability structure, the scalar field is derived from one retained static PDE and promoted once to a retained dynamic PDE, and moving-source retardation is now benchmarked against a proper instantaneous comparator rather than frozen proxies; still not ready for the strongest wording while key theory compression, richer dynamics, and object-level closure remain open |
-| Strength against harshest critique | `5.2/10` | the strongest hostile read is still that this is a rich scalar delayed-wave analog simulator with curated observables rather than a forced new mechanism; the package remains above bare-skeptical territory because it now has a coherent retained field-law stack with static and dynamic local PDEs, finite-`c` lightcone evidence, retarded-vs-instantaneous separation in both `(2+1)D` and `(3+1)D`, and a wider within-family basin than the original three-family story; but the cross-generator held-out negative result sharply limits how much credit the empirical classifier can buy, so the previous modest bump on this row is removed |
-| Field-shifting theory program | `10.0/10` | the program now looks like an emergent weak-field universality class with a real dynamic causal package, a first bounded vector-like lock-in extension, a full retained static field-law derivation, a retained dynamic field-law promotion, and a moving-source retardation result that directly separates retarded from instantaneous response on the same source history |
-| Landmark foundational breakthrough | `8.3/10` | the retained evidence is now broad enough to make a serious foundational splash plausible if the analytical and experimental gaps tighten, especially because the retardation package now includes both oscillating-source transfer-function structure and a moving-source retarded-vs-instantaneous comparator, while the field law has both static and dynamic retained local-equation versions |
-| Nobel-scale breakthrough | `2.4/10` | still very far from a present-tense Nobel-scale evidence base, but the path is materially clearer: the program now has a portable weak-field core, multiple real dynamic retardation discriminators, a clearer experiment-facing path, retained static plus dynamic local field-law components, and the first moving-source comparator that cleanly separates retarded from instantaneous response |
+| Publishable as a foundational-physics breakthrough claim | `7.9/10` | the strongest package is still materially stronger than it was a day ago: the scalar field now has retained static and dynamic local PDE versions, the retardation side has proper comparator-based evidence in both `(2+1)D` and `(3+1)D`, and the experiment-facing dynamic story is cleaner; but the broader claim must be narrowed because the off-scaffold universality attempt failed and the Gaussian matter / inertial closure attempt failed |
+| Likelihood of publication in very top field journals today (`PRL` / `PRX` / `Nature Physics`) | `6.8/10` | the project is still in serious-hearing territory on the strength of the field-law and retardation stack, but not as close to a top-journal breakthrough package as the previous map implied: the two biggest current weaknesses are now explicit retained negatives rather than just open gaps, namely off-scaffold universality and matter / inertia |
+| Ready for top-tier mainstream physics claims | `7.0/10` | the mainstream-facing story is now sharper but narrower: there is a convincing emergent scalar-wave / retardation program, but not yet a convincing universality story beyond the scaffolded family and not yet a convincing matter / inertial story |
+| Strength against harshest critique | `4.7/10` | the strongest hostile read has more force again: the scalar-wave / delayed-field program is real, but the recent off-scaffold coherence failure and the Gaussian matter-closure failure both reinforce the adversarial view that the current mechanism basin is narrower than hoped and still lacks an object-level matter sector |
+| Field-shifting theory program | `9.8/10` | still extremely strong as a field-shaping program because the scalar-wave / field-law stack is now unusually coherent and reviewable; slightly reduced because the current evidence no longer supports describing it as an emergent weak-field universality class without stronger qualifiers |
+| Landmark foundational breakthrough | `7.7/10` | still plausible on the strength of the retained scalar-wave / retardation program, but lower than before because the route now clearly runs through solving two hard gaps rather than broadening an already nearly-closed story: universality beyond the scaffold and matter / inertia closure |
+| Nobel-scale breakthrough | `1.8/10` | still no longer fanciful in the strict sense, because there is now a real ladder of intermediate physics goals, but the score must come down from the previous map because the recent decisive negatives showed the path is narrower than the earlier frontier enthusiasm suggested |
 
 ## Harshest-Critique Tracker
 
@@ -161,7 +171,7 @@ This section should be updated periodically alongside the score above.
 > physics; the current package may be a curated basin of compatible numerics
 > rather than a broad universality result or a law-level derivation.
 
-### Current answer strength: `5.2/10`
+### Current answer strength: `4.7/10`
 
 Why the score is not lower:
 
@@ -181,6 +191,8 @@ Why the score is not lower:
 - the original “three-family only” read is still too weak:
   - the within-family sweep is wider than before
   - the battery is now dynamic-augmented, not static-only
+- the new matter-closure negative does not damage the scalar-wave stack itself;
+  it only closes one attempted route to an object-level interpretation
 
 Why the score is not higher:
 
@@ -198,32 +210,45 @@ Why the score is not higher:
   - only `2/9` independent generators reproduce the full package
 - that negative means the classifier is a within-family proxy, not a broad
   universality answer
+- the off-scaffold coherence lane is a second retained negative:
+  - `5/9 = 55.6%`
+  - identical to the old node-level rule
+  - the scaffolded `free_coh` advantage collapses to zero off-scaffold
+- the Gaussian matter / inertial closure lane is also a retained negative:
+  - equivalence fails by `123%`
+  - packet response is width / dispersion dependent rather than
+    generator-invariant inertial response
 - no persistent inertial object / matter sector closure yet
 - no experimental confirmation yet
 
 Next moves that raise this score fastest:
 
-- a compact derivation/classifier showing why the weak-field package and
-  dynamic signatures are forced, not curated
-- a wider universality boundary or no-go theorem on architecture class
+- a direct derivation or no-go argument for why the retained scaffolded family
+  works, without relying on a brittle empirical classifier
+- a structural matter / inertia route that is not another Gaussian-packet
+  variant
 - one experimentally confirmed discriminator
 
 ## Nobel-Scale Breakdown
 
-These are the major goals hidden inside the still-low `2.4/10`
+These are the major goals hidden inside the still-low `1.8/10`
 Nobel-scale score.
 
-- `7.2/10` Broad universality beyond the current family class
+- `5.6/10` Broad universality beyond the current family class
   - Current: the weak-field package and distance tail now survive on three
     independent grown families, the causal-field package now also has a
     more review-safe retained core, both the retained 3D Poisson and
     retained wave-equation field laws survive on the same family class,
     and the moving-source retarded-vs-instantaneous separation now also
     survives on the same three-family basin
+    the scaffolded `free_coh` lane is still a useful within-substrate
+    empirical result
   - Missing: a wider universality class beyond the current dense structured
-    family, or a theorem / near-theorem explaining why the present class works
+    family, or a theorem / near-theorem explaining why the present class works;
+    the off-scaffold coherence negative is now a real downward constraint, not
+    just an open caveat
 
-- `6.6/10` A compact underlying principle, not just strong numerics
+- `5.7/10` A compact underlying principle, not just strong numerics
   - Current: the repo now shows a cleaner nested hierarchy, and the scalar
     field is no longer purely imposed even in the longitudinal axis because
     the retained 3D Poisson lane derives the full static field from one PDE,
@@ -232,9 +257,9 @@ Nobel-scale score.
     dynamic law produces a genuinely different response from the `c = infinity`
     limit on the same source history
     `portable weak-field package -> stricter distance tail -> narrower complex-action branch`
-  - Missing: one law-level derivation or classifier that makes this feel
-    forced rather than curated, plus a tighter analytical bridge between the
-    retained static and dynamic field laws
+  - Missing: one law-level derivation that makes this feel forced rather than
+    curated, plus a tighter analytical bridge between the retained static and
+    dynamic field laws; the empirical classifier route is now sharply bounded
 
 - `7.8/10` Beyond-static physics that also looks portable
   - Current: retained positives now include the Shapiro / phase-lag package,
@@ -246,22 +271,24 @@ Nobel-scale score.
   - Missing: a cleaner universal vector sector and broader portability of the
     non-scalar branches beyond the current core
 
-- `1.8/10` A true inertial-object / persistent-mass sector
-  - Current: amplitude-level equivalence and broad-surrogate steering are
-    retained, and detector-readable packet memory now survives as a narrower
-    mesoscopic positive, but the persistent inertial-object lane still lacks
-    stable localized objects with inertial closure
+- `0.8/10` A true inertial-object / persistent-mass sector
+  - Current: detector-readable packet memory and broad-surrogate steering are
+    still real narrower positives, but the first direct Gaussian packet
+    matter/inertial closure attempt is a decisive retained negative
   - Missing: one object class whose persistence and inertial response are both
-    measurable on the same family
+    measurable on the same family; Gaussian packet + uniform force is now a
+    closed negative route rather than a near miss
 
-- `8.2/10` Stronger bridge to known physics without inflation
+- `7.8/10` Stronger bridge to known physics without inflation
   - Current: weak-field gravity-like response, scalar sign-law
     electrostatics, a shaped retardation discriminator, a first bounded
     vector-like lock-in signal, retained static plus dynamic local field
     laws, and now a moving-source retarded-vs-instantaneous benchmark
     make the bridge meaningfully broader
-  - Missing: a universal vector/magnetic sector, stronger relativistic closure, and a cleaner
-    mainstream-facing compression of what is and is not claimed
+  - Missing: a universal vector/magnetic sector, stronger relativistic
+    closure, and a cleaner mainstream-facing compression of what is and is not
+    claimed; the missing matter sector also now weighs more heavily here than
+    the previous map admitted
 
 - `4.6/10` Experimental-readiness of the best discriminator
   - Current: the diamond / NV phase-sensitive lane is still the cleanest real
@@ -279,15 +306,16 @@ Nobel-scale score.
 
 ## Honest Read
 
-The project is no longer in “purely fanciful Nobel talk” territory, because
-there is now a believable chain of intermediate goals. But it is still very
-far from a Nobel-scale evidence base.
+The project is strongest where it now has the cleanest retained structure:
+the emergent scalar-wave / field-law / retardation program. It is weakest
+exactly where the recent hard tests were aimed: universality beyond the
+scaffolded family and matter / inertial closure.
 
 The current realistic route is:
 
-1. harden the universality / hierarchy story
-2. tighten the dynamic / vector package without overclaim
-3. finish the diamond-lane signal budget
+1. explain why the retained family works, or prove the boundary of why it does
+2. solve the matter / inertia gap with a genuinely different structural route
+3. keep tightening the experiment-facing retardation package
 4. then get a genuinely new effect verified
 
 ## Why this map stays conservative
@@ -303,6 +331,9 @@ The main downward pressures are:
 - numerical successes still outrun the analytical core
 - surprising numerics still need a tighter law / derivation story
 - the strongest claims still outrun the cleanest mechanistic compression
+- the newest hard tests produced two decisive negatives in exactly the places
+  where the strongest critic would look first:
+  off-scaffold universality and Gaussian matter closure
 
 The main upward pressures since the first cut are:
 
