@@ -1,7 +1,7 @@
 # Universality Classifier: Empirical Two-Property Predictor on a Wide Family Sweep
 
 **Date:** 2026-04-07 (revised, dynamic-augmented battery)
-**Status:** retained positive — empirical 2-property classifier on a 26-family sweep with **5-condition battery (4 static + 1 dynamic Lane 6 gap)**. In-sample 92.3%, leave-one-out 84.6%, 8-family held-out with pre-committed predictions 8/8 (in-sample-fitted rule applied to held-out 7/8). NOT a derived universality theorem.
+**Status:** retained empirical (within-family only) — 2-property classifier on a 26-family sweep with **5-condition battery (4 static + 1 dynamic Lane 6 gap)**. In-sample 92.3%, leave-one-out 84.6%, in-family held-out (8 families): 7/8 rule, 8/8 pre-committed. **Cross-generator held-out (9 independent generators): 6/9 rule, 4/9 pre-committed — the rule is a within-family fit and does NOT generalize across generator families.** See [`INDEPENDENT_GENERATORS_HELDOUT_NOTE.md`](INDEPENDENT_GENERATORS_HELDOUT_NOTE.md). NOT a derived universality theorem.
 
 ## Artifact chain
 
@@ -137,6 +137,32 @@ the rule is more conservative than the underlying physics: structures
 with low reach_frac can still satisfy the package if they happen to
 be Z2-symmetric in z, which the new (avg_deg, reach_frac) rule doesn't
 encode.
+
+## Cross-generator held-out (NEGATIVE)
+
+A separate lane evaluates this rule on **9 genuinely different generator
+families** (random k-regular forward DAG, Erdős–Rényi forward, long-range
+random, tree-like, hub-and-spoke, bipartite expander). Predictions are
+hard-coded BEFORE running. The rule is applied **without refit**.
+
+> Pre-committed predictions: **4/9 = 44.4%**
+> In-sample-fitted rule (no refit): **6/9 = 66.7%**
+> Generators reproducing the full package: **2/9** (both Erdős–Rényi at high p)
+
+The decisive failures: random k-regular at avg_deg 14–19 with high
+reach_frac PASSES the rule but FAILS the actual battery (gravity sign
+collapses or F~M leaves the band). Dense random connectivity at the
+same `avg_deg` does NOT reproduce the package. Something specific to
+the spatially-organized neighbor square stencil of the original
+grown-DAG generator is doing the work, not just the count of forward
+neighbors.
+
+See [`INDEPENDENT_GENERATORS_HELDOUT_NOTE.md`](INDEPENDENT_GENERATORS_HELDOUT_NOTE.md)
+for the full table and analysis.
+
+**This negative result reverses the modest "bump against the harshest
+critique" claim. The classifier is a within-family fit, not a universal
+predictor.**
 
 ## Honest read
 
