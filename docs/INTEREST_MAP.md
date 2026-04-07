@@ -12,6 +12,7 @@ It is meant to keep us honest about both:
 - how scientifically interesting the project currently is
 - how strong the present evidence base actually is
 - how close the program is to different levels of claim ambition
+- how well the current package survives the strongest adversarial reading
 
 It is **not** an official outside-facing scorecard, and it should not be read
 as a public “how outsiders must see us” memo.
@@ -143,9 +144,52 @@ Important updates since the last score change:
 | Publishable as a foundational-physics breakthrough claim | `8.4/10` | the claim surface is now materially stronger: the portable weak-field package and distance tail survive on three independent grown families, the causal-field package is cleaner and more experiment-facing, the vector frontier has its first retained lock-in handedness read, the scalar field now has both a retained full-3D static Poisson derivation and a retained dynamic wave-equation promotion with explicit finite-`c` evidence, and the moving-source wave lane now includes a proper retarded-vs-instantaneous comparator with a stable `23–26%` cross-family difference; still limited by missing analytical compression, missing persistent objects, and the absence of experimental confirmation |
 | Likelihood of publication in very top field journals today (`PRL` / `PRX` / `Nature Physics`) | `7.4/10` | the project is now firmly in the “serious hearing” range: multi-family portability, a sharper dynamic retardation signature, a more concrete experimental card, a full static 3D local-field derivation, a retained dynamic local field law, and now a retained moving-source retarded-vs-instantaneous result are all real upgrades; still constrained by theorem-level weakness, architecture scope, and the lack of an absolute-unit signal budget or experimental verification |
 | Ready for top-tier mainstream physics claims | `7.5/10` | the project is now closer to a disciplined mainstream-facing claim because the broad fixed-field package looks portable, the distance law is no longer a one-family curiosity, the dynamic causal package has a better null / delay / portability structure, the scalar field is derived from one retained static PDE and promoted once to a retained dynamic PDE, and moving-source retardation is now benchmarked against a proper instantaneous comparator rather than frozen proxies; still not ready for the strongest wording while key theory compression, richer dynamics, and object-level closure remain open |
+| Strength against harshest critique | `5.2/10` | the strongest hostile read is still that this is a rich scalar delayed-wave analog simulator with curated observables rather than a forced new mechanism; the score is now above half only because the package has grown into a coherent retained field-law stack with static and dynamic local PDEs, finite-`c` lightcone evidence, retarded-vs-instantaneous separation, and multi-family weak-field portability; it remains capped by the absence of a compact classifier/derivation, the lack of experimental confirmation, and the still-bounded matter/inertia sector |
 | Field-shifting theory program | `10.0/10` | the program now looks like an emergent weak-field universality class with a real dynamic causal package, a first bounded vector-like lock-in extension, a full retained static field-law derivation, a retained dynamic field-law promotion, and a moving-source retardation result that directly separates retarded from instantaneous response on the same source history |
 | Landmark foundational breakthrough | `8.3/10` | the retained evidence is now broad enough to make a serious foundational splash plausible if the analytical and experimental gaps tighten, especially because the retardation package now includes both oscillating-source transfer-function structure and a moving-source retarded-vs-instantaneous comparator, while the field law has both static and dynamic retained local-equation versions |
 | Nobel-scale breakthrough | `2.4/10` | still very far from a present-tense Nobel-scale evidence base, but the path is materially clearer: the program now has a portable weak-field core, multiple real dynamic retardation discriminators, a clearer experiment-facing path, retained static plus dynamic local field-law components, and the first moving-source comparator that cleanly separates retarded from instantaneous response |
+
+## Harshest-Critique Tracker
+
+This section should be updated periodically alongside the score above.
+
+### Current harshest critique
+
+> This is a sophisticated scalar delayed-wave analog simulator that has been
+> searched hard enough to accumulate many gravity-like and retardation-like
+> observables, but it still does not force a new fundamental mechanism of
+> physics; the current package may be a curated basin of compatible numerics
+> rather than a broad universality result or a law-level derivation.
+
+### Current answer strength: `5.2/10`
+
+Why the score is not lower:
+
+- the retained package is now internally coherent rather than a bag of wins
+- the field law is no longer only imposed by hand:
+  - full 3D static Poisson
+  - dynamic wave-equation field
+  - explicit finite-`c` arrival structure
+- the dynamic side now includes proper comparator tests:
+  - oscillating-source retardation transfer-function difference
+  - moving-source retarded-vs-instantaneous separation
+- the weak-field package survives across multiple independent grown families
+
+Why the score is not higher:
+
+- no compact derivation/classifier yet shows the package is forced rather than
+  curated
+- no theorem-level universality argument yet explains why this family class
+  works
+- no persistent inertial object / matter sector closure yet
+- no experimental confirmation yet
+
+Next moves that raise this score fastest:
+
+- a compact derivation/classifier showing why the weak-field package and
+  dynamic signatures are forced, not curated
+- a wider universality boundary or no-go theorem on architecture class
+- one experimentally confirmed discriminator
 
 ## Nobel-Scale Breakdown
 
