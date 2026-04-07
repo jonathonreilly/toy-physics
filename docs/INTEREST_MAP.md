@@ -57,9 +57,13 @@ Important updates since the last score change:
     detector-readable memory is counted as retained
   - packet Tier B / centroid framing still needs a minor cleanup, so the map
     only counts the narrower memory result, not a broader object claim
-  - the Poisson self-field lane is now counted in its narrowed form:
-    transverse profile derived from 2D Poisson, longitudinal falloff still
-    imposed, Born confirmed on the Poisson branch
+  - the Poisson field story now has two retained layers:
+    - the older 2D transverse-only Poisson note remains a bounded partial
+      derivation
+    - the new 3D Poisson note now counts as the stronger retained result:
+      one static local PDE on the full `(x, y, z)` lattice, no imposed
+      longitudinal falloff, Born at machine precision, and `F~M ~ 1` across
+      three families
 
 - the three-family portability result is now materially stronger than the
   earlier partial card:
@@ -122,32 +126,34 @@ Important updates since the last score change:
 | Broad theorist interest | `10.0/10` | still maxed out on curiosity value; the exact-lattice wavefield lane, complex-action carryover, grown-row companion, bounded wide-lattice distance frontier, stronger electrostatics family, and graph-growth proxies make the program look richer rather than narrower after merge |
 | Bridge to known physics | `10.0/10` | now effectively maxed in breadth, because the mainline portfolio visibly touches weak-field gravity, signed scalar couplings, causal phase structure, distance-law behavior, and graph-growth expansion proxies; it is still not a full closure because the self-generated field and inertial-response sectors remain only partly retained |
 | Publishable as a careful computational toy-model paper | `10.0/10` | essentially maxed; the repo now has enough retained positives, enough bounded negatives, and enough diagnosed closures to support a very strong disciplined toy-model paper even if the flagship physics claim remains narrower |
-| Publishable as a foundational-physics breakthrough claim | `7.4/10` | the claim surface is now materially stronger: the portable weak-field package and distance tail survive on three independent grown families, the causal-field package is cleaner and more experiment-facing, the vector frontier has its first retained lock-in handedness read, and the static field story now includes a narrowed but real Poisson-derived transverse profile; still limited by missing analytical compression, missing persistent objects, and the fact that the Poisson and packet lanes are only counted in their narrower forms |
-| Likelihood of publication in very top field journals today (`PRL` / `PRX` / `Nature Physics`) | `6.3/10` | the project is now well into the “serious hearing” range: multi-family portability, a shaped dynamic retardation signature, a more concrete experimental card, and a partial local-field derivation are all real upgrades; still constrained by architecture scope, theorem-level weakness, and the lack of an absolute-unit signal budget or experimental verification |
-| Ready for top-tier mainstream physics claims | `6.5/10` | the project is now closer to a disciplined mainstream-facing claim because the broad fixed-field package looks portable, the distance law is no longer a one-family curiosity, the dynamic causal package has a better null / delay / portability structure, and the field law is no longer purely imposed in the counted transverse Poisson lane; still not ready for the strongest wording while key theory compression and object-level closure remain open |
-| Field-shifting theory program | `9.7/10` | stronger again because the program now looks like an emergent weak-field universality class with a real dynamic causal package, a first bounded vector-like lock-in extension, and the first partially derived field law rather than only imposed backgrounds |
-| Landmark foundational breakthrough | `7.0/10` | the retained evidence is now broad enough to make a serious foundational splash plausible if the analytical and experimental gaps tighten, especially because the retardation discriminator is sharper, the field law is partly derived, and the object lane is no longer completely dead at the mesoscopic-memory level |
-| Nobel-scale breakthrough | `1.2/10` | still very far from a present-tense Nobel-scale evidence base, but no longer purely speculative: the program now has a portable weak-field core, a real dynamic retardation discriminator, a clearer experiment-facing path, and the first partially derived field-law component |
+| Publishable as a foundational-physics breakthrough claim | `7.7/10` | the claim surface is now materially stronger: the portable weak-field package and distance tail survive on three independent grown families, the causal-field package is cleaner and more experiment-facing, the vector frontier has its first retained lock-in handedness read, and the scalar field is no longer merely imposed but now has a retained full-3D static Poisson derivation; still limited by missing analytical compression, missing persistent objects, and the fact that the Poisson result remains static rather than dynamical |
+| Likelihood of publication in very top field journals today (`PRL` / `PRX` / `Nature Physics`) | `6.6/10` | the project is now solidly in the “serious hearing” range: multi-family portability, a shaped dynamic retardation signature, a more concrete experimental card, and a full static 3D local-field derivation are all real upgrades; still constrained by theorem-level weakness, architecture scope, and the lack of an absolute-unit signal budget or experimental verification |
+| Ready for top-tier mainstream physics claims | `6.8/10` | the project is now closer to a disciplined mainstream-facing claim because the broad fixed-field package looks portable, the distance law is no longer a one-family curiosity, the dynamic causal package has a better null / delay / portability structure, and the scalar field is now derived from one retained static 3D PDE rather than supplied by hand; still not ready for the strongest wording while key theory compression, dynamic field evolution, and object-level closure remain open |
+| Field-shifting theory program | `9.8/10` | stronger again because the program now looks like an emergent weak-field universality class with a real dynamic causal package, a first bounded vector-like lock-in extension, and a full retained static field-law derivation rather than only imposed backgrounds |
+| Landmark foundational breakthrough | `7.4/10` | the retained evidence is now broad enough to make a serious foundational splash plausible if the analytical and experimental gaps tighten, especially because the retardation discriminator is sharper, the field law now has a retained full-3D static derivation, and the object lane is no longer completely dead at the mesoscopic-memory level |
+| Nobel-scale breakthrough | `1.5/10` | still very far from a present-tense Nobel-scale evidence base, but no longer purely speculative: the program now has a portable weak-field core, a real dynamic retardation discriminator, a clearer experiment-facing path, and a retained full-3D static field-law component |
 
 ## Nobel-Scale Breakdown
 
 These are the major goals hidden inside the still-low `1.0/10`
 Nobel-scale score.
 
-- `6.8/10` Broad universality beyond the current family class
+- `6.9/10` Broad universality beyond the current family class
   - Current: the weak-field package and distance tail now survive on three
     independent grown families, the causal-field package now also has a
-    more review-safe retained core, and the narrowed Poisson transverse-field
-    lane survives on the same family class
+    more review-safe retained core, and the retained 3D Poisson field law
+    survives on the same family class
   - Missing: a wider universality class beyond the current dense structured
     family, or a theorem / near-theorem explaining why the present class works
 
-- `3.4/10` A compact underlying principle, not just strong numerics
-  - Current: the repo now shows a cleaner nested hierarchy, and the field law
-    is no longer purely imposed in the counted transverse Poisson lane
+- `5.0/10` A compact underlying principle, not just strong numerics
+  - Current: the repo now shows a cleaner nested hierarchy, and the scalar
+    field is no longer purely imposed even in the longitudinal axis because
+    the retained 3D Poisson lane derives the full static field from one PDE
     `portable weak-field package -> stricter distance tail -> narrower complex-action branch`
   - Missing: one law-level derivation or classifier that makes this feel
-    forced rather than curated, plus a fully derived 3D or dynamical field law
+    forced rather than curated, plus a dynamical field equation rather than
+    only a static one
 
 - `5.6/10` Beyond-static physics that also looks portable
   - Current: retained positives now include the Shapiro / phase-lag package,
@@ -165,13 +171,13 @@ Nobel-scale score.
   - Missing: one object class whose persistence and inertial response are both
     measurable on the same family
 
-- `6.6/10` Stronger bridge to known physics without inflation
+- `7.2/10` Stronger bridge to known physics without inflation
   - Current: weak-field gravity-like response, scalar sign-law
     electrostatics, a shaped retardation discriminator, a first bounded
-    vector-like lock-in signal, and a partially derived transverse field law
+    vector-like lock-in signal, and a retained full-3D static field law
     now make the bridge meaningfully broader
-  - Missing: a universal vector/magnetic sector, a fully derived 3D or
-    dynamical field equation, stronger relativistic closure, and a cleaner
+  - Missing: a universal vector/magnetic sector, a dynamical field equation,
+    stronger relativistic closure, and a cleaner
     mainstream-facing compression of what is and is not claimed
 
 - `3.7/10` Experimental-readiness of the best discriminator
