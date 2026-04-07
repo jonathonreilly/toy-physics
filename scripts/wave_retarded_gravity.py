@@ -200,6 +200,31 @@ def _moving(iz_start, v_cells_per_layer):
     return lambda t: iz_start + int(round(v_cells_per_layer * (t - src_layer_start)))
 
 
+def _make_instantaneous(s, iz_of_t):
+    """Build a stitched 'instantaneous' field history.
+
+    At each layer t, the field everywhere on that layer is set to the
+    LATE-TIME stationary slice of a static solve with the source frozen
+    at iz_of_t(t). This is the comparator that says: what if the field
+    everywhere always tracked the CURRENT source position with no
+    propagation delay? It is the c=infinity limit of the wave equation.
+    """
+    hw = int(PW / H)
+    nw = 2 * hw + 1
+    src_layer_start = NL // 3
+    cache = {}
+    history = [[[0.0] * nw for _ in range(nw)] for _ in range(NL)]
+    for t in range(NL):
+        if t < src_layer_start:
+            continue
+        iz_now = iz_of_t(t)
+        if iz_now not in cache:
+            full = _solve_wave_moving(s, src_layer_start, _frozen(iz_now))
+            cache[iz_now] = [row[:] for row in full[NL - 1]]
+        history[t] = [row[:] for row in cache[iz_now]]
+    return history
+
+
 def main():
     print("=" * 70)
     print("WAVE RETARDED GRAVITY HARNESS")
@@ -226,42 +251,42 @@ def main():
     delta_static = _cz(g_static, pos) - z_free
     print(f"  delta_z (static, iz=iz_start={iz_start}) = {delta_static:+.6f}")
 
-    # 2. The decisive comparison: moving vs frozen-start vs frozen-end vs frozen-mid
-    print("\n2. MOVING SOURCE vs FROZEN REFERENCES (Fam1, seed=0)")
-    h_A = _make_field(S, _frozen(iz_start))            # A = z_start
-    h_B = _make_field(S, _frozen(iz_end))              # B = z_end (Newton/instantaneous)
-    h_C = _make_field(S, _frozen(iz_mid))              # C = z_mid
-    h_M = _make_field(S, _moving(iz_start, v))         # moving source
+    # 2. Decisive comparison: retarded vs PROPER instantaneous comparator
+    print("\n2. RETARDED vs INSTANTANEOUS MOVING-SOURCE (Fam1, seed=0)")
+    print("   Frozen references kept as intuition aids; the decisive")
+    print("   pairing is M (retarded) vs I (instantaneous, c=infinity).")
+    h_A = _make_field(S, _frozen(iz_start))
+    h_B = _make_field(S, _frozen(iz_end))
+    h_C = _make_field(S, _frozen(iz_mid))
+    h_M = _make_field(S, _moving(iz_start, v))
+    h_I = _make_instantaneous(S, _moving(iz_start, v))
 
     cz_A = _cz(_prop_beam(pos, adj, nmap, h_A, K), pos)
     cz_B = _cz(_prop_beam(pos, adj, nmap, h_B, K), pos)
     cz_C = _cz(_prop_beam(pos, adj, nmap, h_C, K), pos)
     cz_M = _cz(_prop_beam(pos, adj, nmap, h_M, K), pos)
+    cz_I = _cz(_prop_beam(pos, adj, nmap, h_I, K), pos)
     delta_A = cz_A - z_free
     delta_B = cz_B - z_free
     delta_C = cz_C - z_free
     delta_M = cz_M - z_free
+    delta_I = cz_I - z_free
 
-    print(f"  {'reference':>30s} {'delta_z':>12s}")
-    print(f"  {'A: frozen at z_start':>30s} {delta_A:+12.6f}")
-    print(f"  {'B: frozen at z_end (Newton)':>30s} {delta_B:+12.6f}")
-    print(f"  {'C: frozen at z_mid':>30s} {delta_C:+12.6f}")
-    print(f"  {'M: moving source':>30s} {delta_M:+12.6f}")
+    print(f"  {'reference':>40s} {'delta_z':>12s}")
+    print(f"  {'A: frozen at z_start (intuition)':>40s} {delta_A:+12.6f}")
+    print(f"  {'B: frozen at z_end (intuition)':>40s} {delta_B:+12.6f}")
+    print(f"  {'C: frozen at z_mid (intuition)':>40s} {delta_C:+12.6f}")
+    print(f"  {'M: moving source (RETARDED)':>40s} {delta_M:+12.6f}")
+    print(f"  {'I: moving source (INSTANTANEOUS)':>40s} {delta_I:+12.6f}")
 
-    # interpolation parameter alpha: M = (1-alpha)*A + alpha*B
-    if abs(delta_B - delta_A) > 1e-12:
-        alpha = (delta_M - delta_A) / (delta_B - delta_A)
-        print(f"\n  alpha (M as mix of A->B) = {alpha:.4f}")
-        print(f"    alpha=0 -> retarded (matches z_start)")
-        print(f"    alpha=1 -> Newton/instantaneous (matches z_end)")
-        print(f"    alpha=0.5 -> matches midpoint")
-        if alpha < 0.45:
-            verdict = "RETARDED-LEANING (closer to z_start)"
-        elif alpha > 0.55:
-            verdict = "INSTANTANEOUS-LEANING (closer to z_end)"
-        else:
-            verdict = "MIDPOINT (averaging)"
-        print(f"  verdict: {verdict}")
+    diff_MI = delta_M - delta_I
+    rel_MI = abs(diff_MI) / max(abs(delta_M), abs(delta_I), 1e-12)
+    print(f"\n  decisive: M - I = {diff_MI:+.6f}  (relative {rel_MI:.2%})")
+    if rel_MI > 0.05:
+        verdict = "RETARDED != INSTANTANEOUS — finite-c effect resolved"
+    else:
+        verdict = "RETARDED ~= INSTANTANEOUS — finite-c effect unresolved at this v/c"
+    print(f"  verdict: {verdict}")
 
     # 3. v-symmetry: +v vs -v
     print("\n3. v-SYMMETRY (+v vs -v, Fam1)")
@@ -316,17 +341,16 @@ def main():
     g_null = _prop_beam(pos, adj, nmap, h_null, K)
     print(f"  delta_z = {_cz(g_null, pos) - z_free:+.6e}")
 
-    # 7. Family portability
-    print("\n7. FAMILY PORTABILITY (alpha across families)")
+    # 7. Family portability — M vs I across families
+    print("\n7. FAMILY PORTABILITY (M vs I across families)")
+    print(f"  {'family':>6s} {'dM':>12s} {'dI':>12s} {'M-I':>12s} {'rel':>8s}")
     for label, drift, restore in FAMILIES:
         p, a, nm = grow(0, drift, restore)
         zf = _cz(_prop_beam(p, a, nm, None, K), p)
-        dA = _cz(_prop_beam(p, a, nm, h_A, K), p) - zf
-        dB = _cz(_prop_beam(p, a, nm, h_B, K), p) - zf
-        dM = _cz(_prop_beam(p, a, nm, h_M, K), p) - zf
-        if abs(dB - dA) > 1e-12:
-            al = (dM - dA) / (dB - dA)
-            print(f"  {label}: alpha = {al:.4f}  (dA={dA:+.4f}, dB={dB:+.4f}, dM={dM:+.4f})")
+        dM_l = _cz(_prop_beam(p, a, nm, h_M, K), p) - zf
+        dI_l = _cz(_prop_beam(p, a, nm, h_I, K), p) - zf
+        rel = abs(dM_l - dI_l) / max(abs(dM_l), abs(dI_l), 1e-12)
+        print(f"  {label:>6s} {dM_l:+12.6f} {dI_l:+12.6f} {dM_l-dI_l:+12.6f} {rel:8.2%}")
 
 
 if __name__ == "__main__":
