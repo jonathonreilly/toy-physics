@@ -53,19 +53,23 @@ So the honest conclusion is:
 - The `Fam1` seed-`0` boundary at `R_hist = -20.12%` is no longer an
   obviously family-local quirk: the first `Fam2` seed-`0` replay also
   closes the old higher band, here at `R_hist = -22.61%`.
+- The same `Fam2`, seed `0`, `H = 0.25` replay now also has a
+  same-resolution control ladder in
+  [`WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md`](./WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md):
+  exact `S = 0` null, sign pattern `- - -`, and `|delta_hist / s|` spread
+  `6.67%` over `S = 0.002, 0.004, 0.008`.
 - That is still **not** enough to promote a family-wide fine-`H` law.
-  Only one seed on the second family has been tested so far.
-- The next honest move is therefore the complementary
-  `Fam2`, seed `1`, `S = 0.004`, `H = 0.25` replay, not a jump to
-  `Fam3`, a third seed, or a weaker-strength batch.
-- The queue can stay narrow:
-  decide whether `Fam2` reproduces the `Fam1` cross-seed reordering
-  pattern before spending another loop on a new family or a new control
-  axis.
+  Even with controls, this row stays in the lower boundary regime.
+- The narrow `Fam2` pair synthesis now also exists in
+  [`WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md`](./WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md).
+- The next honest move is therefore a cross-family compression pass over the
+  retained `Fam1` and `Fam2` fine-`H` pair syntheses, not a jump to `Fam3`,
+  a third seed, or a weaker-strength batch.
 
 ## Artifact Chain
 
 - [`scripts/wave_direct_dm_h025_point_runner.py`](../scripts/wave_direct_dm_h025_point_runner.py)
 - [`logs/2026-04-08-wave-direct-dm-h025-fam2-seed0.txt`](../logs/2026-04-08-wave-direct-dm-h025-fam2-seed0.txt)
+- [`docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md`](./WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md)
+- [`docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md`](./WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md)
 - [`docs/WAVE_DIRECT_DM_PORTABILITY_BATCH_NOTE.md`](./WAVE_DIRECT_DM_PORTABILITY_BATCH_NOTE.md)
-- [`docs/WAVE_DIRECT_DM_H025_TWO_POINT_SYNTHESIS_NOTE.md`](./WAVE_DIRECT_DM_H025_TWO_POINT_SYNTHESIS_NOTE.md)

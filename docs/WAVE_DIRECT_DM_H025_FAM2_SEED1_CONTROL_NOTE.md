@@ -48,8 +48,10 @@ This does **not** yet close the whole fine-`H` family-pair critique.
 
 What remains open:
 
-- `Fam2`, seed `0`, `H = 0.25` still has only the one-strength boundary
-  replay
+- the complementary `Fam2`, seed `0`, `H = 0.25` row is now also controlled
+  in
+  [`WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md`](./WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md),
+  but the family pair still does not support a stable amplitude law
 - `Fam1`/`Fam2` together still do not have a full same-resolution control
   ladder on all four fine-`H` points
 - the result still supports a bounded family-pair asymmetry surface, not a
@@ -66,4 +68,6 @@ So the exact retained claim is:
 
 - [`scripts/wave_direct_dm_h025_control_batch.py`](../scripts/wave_direct_dm_h025_control_batch.py)
 - [`logs/2026-04-08-wave-direct-dm-h025-control-fam2-seed1.txt`](../logs/2026-04-08-wave-direct-dm-h025-control-fam2-seed1.txt)
+- [`docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md`](./WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md)
+- [`docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md`](./WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md)
 - [`docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_FOLLOWUP_NOTE.md`](./WAVE_DIRECT_DM_H025_FAM2_SEED1_FOLLOWUP_NOTE.md)

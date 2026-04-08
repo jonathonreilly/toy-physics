@@ -131,13 +131,32 @@ So the second family reproduces the cross-seed late-gain asymmetry, but the
 normalized magnitude still shifts to `R_hist = -35.03%`, so the fine-`H`
 story is still not a stable amplitude-band portability law.
 
+Both second-family `H = 0.25` rows now also have same-resolution control
+ladders:
+
+- [`WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md`](./WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md):
+  exact `S = 0` null, sign pattern `- - -`, `|delta_hist / s|` spread
+  `6.67%`
+- [`WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md`](./WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md):
+  exact `S = 0` null, sign pattern `- - -`, `|delta_hist / s|` spread
+  `4.25%`
+
+So the second family is no longer a one-strength fine-`H` sidecar. It is
+now a controlled pair, and the pair keeps the same qualitative asymmetry:
+seed `0` remains in the lower boundary regime (`-22%` to `-24%`) while
+seed `1` stays materially stronger (`-35%` to `-36%`) without restoring the
+old coarse amplitude band.
+
+That pair-level read is now frozen explicitly in
+[`WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md`](./WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md).
+
 So the next honest hardening step is now:
 
 - keep the `H = 0.25` read promoted only as a narrow
   `Fam1`/`Fam2` family-pair asymmetry result
 - if the lane continues next, spend it on a compression / synthesis pass
-  over the `Fam1` and `Fam2` pairs before any `Fam3`, third-seed,
-  or weaker-strength replay
+  comparing the retained `Fam1` and `Fam2` pair syntheses before any
+  `Fam3`, third-seed, or weaker-strength replay
 - do not widen to a broader `H = 0.25` portability batch yet
 
 ## Artifact chain
@@ -149,4 +168,7 @@ So the next honest hardening step is now:
 - [`docs/WAVE_DIRECT_DM_H025_LOW_BAND_RETENTION_NOTE.md`](./WAVE_DIRECT_DM_H025_LOW_BAND_RETENTION_NOTE.md)
 - [`docs/WAVE_DIRECT_DM_H025_TWO_POINT_SYNTHESIS_NOTE.md`](./WAVE_DIRECT_DM_H025_TWO_POINT_SYNTHESIS_NOTE.md)
 - [`docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_BOUNDARY_NOTE.md`](./WAVE_DIRECT_DM_H025_FAM2_SEED0_BOUNDARY_NOTE.md)
+- [`docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md`](./WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md)
 - [`docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_FOLLOWUP_NOTE.md`](./WAVE_DIRECT_DM_H025_FAM2_SEED1_FOLLOWUP_NOTE.md)
+- [`docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md`](./WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md)
+- [`docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md`](./WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md)

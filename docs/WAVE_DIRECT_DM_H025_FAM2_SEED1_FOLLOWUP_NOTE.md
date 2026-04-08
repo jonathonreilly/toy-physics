@@ -63,18 +63,29 @@ So the honest conclusion is:
   [`WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md`](./WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md):
   exact `S = 0` null, sign pattern `- - -`, and `|delta_hist / s|` spread
   `4.25%` over `S = 0.002, 0.004, 0.008`.
-- The direct-`dM` `H = 0.25` story is therefore no longer obviously
-  `Fam1`-local, but it is still bounded to two families and one strength.
+- The complementary `Fam2`, seed `0`, `H = 0.25` replay now also has a
+  same-resolution control ladder in
+  [`WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md`](./WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md):
+  exact `S = 0` null, sign pattern `- - -`, and `|delta_hist / s|` spread
+  `6.67%`.
+- The direct-`dM` `H = 0.25` story is therefore no longer bounded to one
+  strength on the second family, but it is still bounded to two families
+  and one fine-`H` family pair per family.
 - The portable part of the read is the seed-conditioned late-gain ordering,
   not a stable `R_hist` band.
-- The next honest move is to compress the `Fam1`/`Fam2` pair into one narrow
-  synthesis before any `Fam3`, third-seed, or weaker-strength widening.
+- The narrow `Fam2` pair synthesis now exists in
+  [`WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md`](./WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md).
+- The next honest move is to compare that controlled `Fam2` pair against the
+  retained `Fam1` pair before any `Fam3`, third-seed, or weaker-strength
+  widening.
 
 ## Artifact chain
 
 - [`scripts/wave_direct_dm_h025_point_runner.py`](../scripts/wave_direct_dm_h025_point_runner.py)
 - [`logs/2026-04-08-wave-direct-dm-h025-fam2-seed1.txt`](../logs/2026-04-08-wave-direct-dm-h025-fam2-seed1.txt)
 - [`docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md`](./WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md)
+- [`docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md`](./WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md)
+- [`docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md`](./WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md)
 - [`docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_BOUNDARY_NOTE.md`](./WAVE_DIRECT_DM_H025_FAM2_SEED0_BOUNDARY_NOTE.md)
 - [`docs/WAVE_DIRECT_DM_H025_TWO_POINT_SYNTHESIS_NOTE.md`](./WAVE_DIRECT_DM_H025_TWO_POINT_SYNTHESIS_NOTE.md)
 - [`docs/WAVE_DIRECT_DM_PORTABILITY_BATCH_NOTE.md`](./WAVE_DIRECT_DM_PORTABILITY_BATCH_NOTE.md)
