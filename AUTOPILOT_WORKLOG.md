@@ -1,3 +1,108 @@
+## 2026-04-08 — Closed the Shapiro scaling artifact-chain lane with a direct replay
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed in
+  protocol order at loop start
+- no detached `physics-science` child was active in the latest handoff, so
+  this loop stayed on shared-state reconciliation plus one bounded
+  repo-facing closeout
+- canonical git in `/Users/jonreilly/Projects/Physics` reconciled before
+  science:
+  - `git status --short --branch` reported `## main...origin/main` plus
+    existing unrelated tracked doc/handoff edits and fresh local sidecar
+    drafts
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 8` showed synced head `741f1f4`
+- the required managed push check before science reported a clean sync:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - result: `status=nothing_to_push`, `ahead=0`, `behind=0`
+- the canonical orchestrator state at
+  `/Users/jonreilly/.codex/state/physics_research_orchestrator_state.json`
+  remained readable but not writable under the current sandbox, so the
+  writable mirror at `/tmp/physics_research_orchestrator_state_mirror.json`
+  stayed authoritative runtime state
+- reconciliation found the tracked handoff stale and automation memory
+  missing, while the writable mirror had already rolled the Shapiro /
+  gravitomagnetic frontier forward; this loop resumed that mirror state
+  instead of opening another duplicate cycle
+- spawned exactly five disjoint sidecar agents for the live carried-forward
+  threads:
+  - `shapiro-scaling-artifact-chain`
+  - `gravitomagnetic-static-mimic-boundary`
+  - `shapiro-extra-family-seed-stability`
+  - `shapiro-normalized-k-collapse`
+  - `shapiro-static-cone-family-portability`
+- harvested only one landed result for repo-facing state this loop:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/shapiro_scaling_direct_replay.py --format text`
+    passed
+  - `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/shapiro_scaling_direct_replay.py /Users/jonreilly/Projects/Physics/scripts/shapiro_scaling_probe.py`
+    passed
+
+### What changed
+- added a direct data-bearing Shapiro scaling replay chain:
+  - `/Users/jonreilly/Projects/Physics/scripts/shapiro_scaling_direct_replay.py`
+  - `/Users/jonreilly/Projects/Physics/docs/SHAPIRO_SCALING_DIRECT_REPLAY_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-08-shapiro-scaling-direct-replay.txt`
+- converted
+  `/Users/jonreilly/Projects/Physics/scripts/shapiro_scaling_probe.py`
+  into a compatibility wrapper and repointed
+  `/Users/jonreilly/Projects/Physics/docs/SHAPIRO_SCALING_NOTE.md`
+  at the new direct replay note
+- folded `shapiro-scaling-artifact-chain` back into the writable mirror as a
+  diagnosed closeout: the lane no longer needs to stay active as a
+  reconstruction-only artifact chain
+- left the other landed sidecar work draft-only on purpose to preserve the
+  one-result bound:
+  - `gravitomagnetic-static-mimic-boundary` produced a local retained
+    note/script/log chain with matched static controls flat at `0.0000`
+  - `shapiro-normalized-k-collapse` produced a local still-active boundary
+    replay: `phi/k` does not fully collapse because the radial family remains
+    the main split
+  - `shapiro-extra-family-seed-stability` and
+    `shapiro-static-cone-family-portability` now have local draft harness
+    scripts but were not promoted this loop
+- after the scaling closeout, the writable mirror stayed saturated on cycle
+  `12` with five active lanes and two pending reserves
+
+### Strongest confirmed conclusion
+- the Shapiro scaling lane no longer needs an empty-commit / reconstruction
+  crutch: repo-local direct replay artifacts now freeze the retained `s`, `b`,
+  and `k` laws with exact source-off and instantaneous-field controls explicit
+- the `b` law should stay narrow and honest: it is a monotone sampled tail,
+  not an exact-zero claim
+- until the canonical orchestrator JSON becomes writable again, the writable
+  mirror plus fresh handoff / memory remain the only reliable runtime queue
+  for this automation
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/docs/SHAPIRO_SCALING_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/docs/SHAPIRO_SCALING_DIRECT_REPLAY_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/scripts/shapiro_scaling_probe.py`
+- `/Users/jonreilly/Projects/Physics/scripts/shapiro_scaling_direct_replay.py`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-08-shapiro-scaling-direct-replay.txt`
+
+### Exact next step
+- inspect the draft
+  `/Users/jonreilly/Projects/Physics/docs/GRAVITOMAGNETIC_STATIC_MIMIC_BOUNDARY_NOTE.md`
+  chain first; if it survives local review, promote it next as the strongest
+  active cycle-12 result
+- otherwise continue the remaining cycle-12 lanes without widening the claim
+  surface:
+  - `shapiro-extra-family-seed-stability`
+  - `shapiro-normalized-k-collapse`
+  - `shapiro-static-cone-family-portability`
+  - `gravitomagnetic-extra-family-portability`
+
+### First concrete action
+- compare
+  `/Users/jonreilly/Projects/Physics/scripts/gravitomagnetic_static_mimic_boundary.py`
+  and
+  `/Users/jonreilly/Projects/Physics/docs/GRAVITOMAGNETIC_STATIC_MIMIC_BOUNDARY_NOTE.md`
+  against the already-retained portability chain and decide whether the local
+  retained boundary should be folded into the mirror or left draft-only for
+  another loop
+
 ## 2026-04-06 — Enabled duplicate lane status in the research orchestrator and reopened cycle 6 in a writable mirror
 
 ### Current state
