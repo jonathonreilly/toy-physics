@@ -1,49 +1,68 @@
 ====================================================================================================
 WAVE-RETARDATION CONTINUUM-LIMIT REFINEMENT
-Physical parameters held constant:
+Physical parameters held APPROXIMATELY constant:
   T_phys (total propagation 'time' = NL*H) = 15.0
   iz_start_phys = 3.0, iz_end_phys = 0.0
   D_phys (source displacement) = 3.0
   PW_phys (transverse half-width) = 6.0
   k*H (phase per edge step) = 2.5
   S_phys (field source strength) = 0.004
-  v/c at every refinement = -0.3000
+  v/c target = -0.3000  (realized v/c drifts due to
+                                 integer rounding of NL / src_layer /
+                                 iz_range; see per-run values below)
 ====================================================================================================
 
 [coarse] H = 0.5
   NL = 30, iz_range = 6, k_phase = 5.000
   src_layer = 10, n_active = 20, v_per_layer = -0.3000
   n_nodes = 18126
-  dM = +0.008362, dI (cached static) = +0.011747, dN (imposed Newton) = +0.025639
-  M - I = -0.003385, rel_MI = 28.81%
-  M - N = -0.017277, rel_MN = 67.39%
-  I - N = -0.013892, rel_IN = 54.18%
+  dM = +0.008362
+  dI (cached static, NL_dyn)   = +0.011747
+  dIeq (equilibrated static, 3*NL) = +0.002165
+  dN (imposed Newton)          = +0.025639
+  rel_MI   = 28.81%  (M vs cached static)
+  rel_MIeq = 74.11%  (M vs equilibrated static)
+  rel_MN   = 67.39%  (M vs imposed Newton)
+  rel_IeqN = 91.56%  (equilibrated vs imposed Newton)
 
 [medium] H = 0.35
   NL = 43, iz_range = 9, k_phase = 7.143
   src_layer = 14, n_active = 29, v_per_layer = -0.3103
   n_nodes = 51451
-  dM = +0.007942, dI (cached static) = +0.008778, dN (imposed Newton) = +0.016713
-  M - I = -0.000836, rel_MI = 9.53%
-  M - N = -0.008771, rel_MN = 52.48%
-  I - N = -0.007935, rel_IN = 47.48%
+  dM = +0.007942
+  dI (cached static, NL_dyn)   = +0.008778
+  dIeq (equilibrated static, 3*NL) = +0.011256
+  dN (imposed Newton)          = +0.016713
+  rel_MI   = 9.53%  (M vs cached static)
+  rel_MIeq = 29.44%  (M vs equilibrated static)
+  rel_MN   = 52.48%  (M vs imposed Newton)
+  rel_IeqN = 32.65%  (equilibrated vs imposed Newton)
 
 [fine] H = 0.25
   NL = 60, iz_range = 12, k_phase = 10.000
   src_layer = 20, n_active = 40, v_per_layer = -0.3000
   n_nodes = 141660
-  dM = +0.007212, dI (cached static) = +0.012743, dN (imposed Newton) = +0.017138
-  M - I = -0.005531, rel_MI = 43.40%
-  M - N = -0.009926, rel_MN = 57.92%
-  I - N = -0.004395, rel_IN = 25.65%
+  dM = +0.007212
+  dI (cached static, NL_dyn)   = +0.012743
+  dIeq (equilibrated static, 3*NL) = +0.005542
+  dN (imposed Newton)          = +0.017138
+  rel_MI   = 43.40%  (M vs cached static)
+  rel_MIeq = 23.16%  (M vs equilibrated static)
+  rel_MN   = 57.92%  (M vs imposed Newton)
+  rel_IeqN = 67.66%  (equilibrated vs imposed Newton)
 
 ====================================================================================================
-REFINEMENT TABLE
+REFINEMENT TABLE — beam deflection values and relative gaps
 ====================================================================================================
-   label      H   NL         dM         dI         dN    rel_MI    rel_MN    rel_IN
-  coarse  0.500   30  +0.008362  +0.011747  +0.025639    28.81%    67.39%    54.18%
-  medium  0.350   43  +0.007942  +0.008778  +0.016713     9.53%    52.48%    47.48%
-    fine  0.250   60  +0.007212  +0.012743  +0.017138    43.40%    57.92%    25.65%
+   label      H   NL         dM         dI       dIeq         dN
+  coarse  0.500   30  +0.008362  +0.011747  +0.002165  +0.025639
+  medium  0.350   43  +0.007942  +0.008778  +0.011256  +0.016713
+    fine  0.250   60  +0.007212  +0.012743  +0.005542  +0.017138
+
+   label     rel_MI   rel_MIeq     rel_MN   rel_IeqN
+  coarse     28.81%     74.11%     67.39%     91.56%
+  medium      9.53%     29.44%     52.48%     32.65%
+    fine     43.40%     23.16%     57.92%     67.66%
 
 ====================================================================================================
 CONVERGENCE — three quantities, two comparators
@@ -53,9 +72,13 @@ CONVERGENCE — three quantities, two comparators
       coarse(+0.008362) →   medium(+0.007942)  Δ = -0.000420 (-5.0%)
       medium(+0.007942) →     fine(+0.007212)  Δ = -0.000730 (-9.2%)
 
-  dI (cached static slice):
+  dI (cached static, NL_dyn):
       coarse(+0.011747) →   medium(+0.008778)  Δ = -0.002969 (-25.3%)
       medium(+0.008778) →     fine(+0.012743)  Δ = +0.003965 (+45.2%)
+
+  dIeq (equilibrated static, 3*NL_dyn):
+      coarse(+0.002165) →   medium(+0.011256)  Δ = +0.009091 (+419.9%)
+      medium(+0.011256) →     fine(+0.005542)  Δ = -0.005714 (-50.8%)
 
   dN (imposed Newton at current pos):
       coarse(+0.025639) →   medium(+0.016713)  Δ = -0.008926 (-34.8%)
@@ -65,16 +88,24 @@ CONVERGENCE — three quantities, two comparators
       coarse(+0.288126) →   medium(+0.095258)  Δ = -0.192868 (-66.9%)
       medium(+0.095258) →     fine(+0.434016)  Δ = +0.338759 (+355.6%)
 
+  rel_MIeq = (M - Ieq) / max(|M|,|Ieq|):
+      coarse(+0.741115) →   medium(+0.294413)  Δ = -0.446702 (-60.3%)
+      medium(+0.294413) →     fine(+0.231553)  Δ = -0.062860 (-21.4%)
+
   rel_MN = (M - N) / max(|M|,|N|):
       coarse(+0.673851) →   medium(+0.524815)  Δ = -0.149036 (-22.1%)
       medium(+0.524815) →     fine(+0.579164)  Δ = +0.054350 (+10.4%)
 
 ====================================================================================================
-VERDICT
+VERDICT — three comparators compared
 ====================================================================================================
-  Last refinement Δ(rel_MI) = 0.3388  (old comparator)
-  Last refinement Δ(rel_MN) = 0.0543  (imposed-Newton comparator)
+  Δ(rel_MI)   last step = 0.3388  (cached static, NL_dyn)
+  Δ(rel_MIeq) last step = 0.0629  (equilibrated static, 3*NL_dyn)
+  Δ(rel_MN)   last step = 0.0543  (imposed Newton)
+  Δ(rel_IeqN) last step = 0.3501  (equilibrated static vs imposed Newton — should → 0)
 
-  PARTIAL — imposed-Newton comparator is more stable than
-  the cached-static one (Δ_MN = 0.0543 < Δ_MI = 0.3388)
-  but neither is strictly converged at this resolution.
+  dIeq → dN: rel_IeqN = 91.56% → 67.66% (not converging)
+
+  PARTIAL — equilibrated static is more stable than cached static
+  (Δ_MIeq = 0.0629 < Δ_MI = 0.3388)
+  but neither is strictly converged.
