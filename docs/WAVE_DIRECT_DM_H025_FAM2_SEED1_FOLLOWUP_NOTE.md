@@ -58,6 +58,11 @@ So the honest conclusion is:
 - The narrow second-family question is no longer open:
   the `Fam2` pair now reproduces the same qualitative fine-`H` asymmetry as
   the `Fam1` pair.
+- The same `Fam2`, seed `1`, `H = 0.25` replay now also has a same-resolution
+  control ladder in
+  [`WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md`](./WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md):
+  exact `S = 0` null, sign pattern `- - -`, and `|delta_hist / s|` spread
+  `4.25%` over `S = 0.002, 0.004, 0.008`.
 - The direct-`dM` `H = 0.25` story is therefore no longer obviously
   `Fam1`-local, but it is still bounded to two families and one strength.
 - The portable part of the read is the seed-conditioned late-gain ordering,
@@ -69,6 +74,7 @@ So the honest conclusion is:
 
 - [`scripts/wave_direct_dm_h025_point_runner.py`](../scripts/wave_direct_dm_h025_point_runner.py)
 - [`logs/2026-04-08-wave-direct-dm-h025-fam2-seed1.txt`](../logs/2026-04-08-wave-direct-dm-h025-fam2-seed1.txt)
+- [`docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md`](./WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md)
 - [`docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_BOUNDARY_NOTE.md`](./WAVE_DIRECT_DM_H025_FAM2_SEED0_BOUNDARY_NOTE.md)
 - [`docs/WAVE_DIRECT_DM_H025_TWO_POINT_SYNTHESIS_NOTE.md`](./WAVE_DIRECT_DM_H025_TWO_POINT_SYNTHESIS_NOTE.md)
 - [`docs/WAVE_DIRECT_DM_PORTABILITY_BATCH_NOTE.md`](./WAVE_DIRECT_DM_PORTABILITY_BATCH_NOTE.md)
