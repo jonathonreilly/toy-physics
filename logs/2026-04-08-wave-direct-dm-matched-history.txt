@@ -1,0 +1,20 @@
+============================================================================================================
+WAVE DIRECT-DM MATCHED-HISTORY PROBE
+============================================================================================================
+Two histories with the same start/end/final geometry, different timing of motion
+
+[H=0.500]
+  NL=30  PW=6.000  src_layer=10
+  start_z_real=3.000  end_z_real=0.000
+  dM(early)    = +0.005840
+  dM(late)     = +0.009541
+  delta_hist   = -0.003701
+  R_hist       = -38.79%
+
+[H=0.350]
+  NL=43  PW=5.950  src_layer=14
+  start_z_real=3.150  end_z_real=0.000
+  dM(early)    = +0.005215
+  dM(late)     = +0.008328
+  delta_hist   = -0.003113
+  R_hist       = -37.38%
