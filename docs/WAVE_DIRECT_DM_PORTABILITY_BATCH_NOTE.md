@@ -93,18 +93,60 @@ probe” state.
 
 ## Best next move
 
-The next honest hardening step is not more families first. It is:
+The first follow-on is now recorded in
+[`WAVE_DIRECT_DM_SEED_BAND_DIAGNOSIS_NOTE.md`](./WAVE_DIRECT_DM_SEED_BAND_DIAGNOSIS_NOTE.md):
+the two-band split is best read as a seed-dependent late-branch
+amplification split, not as sign loss and not as early-branch failure.
 
-- explain the two-band seed split
+That first `H = 0.25` high-band replay has now landed as a diagnosed
+boundary in
+[`WAVE_DIRECT_DM_H025_HIGH_BAND_BOUNDARY_NOTE.md`](./WAVE_DIRECT_DM_H025_HIGH_BAND_BOUNDARY_NOTE.md):
+the `Fam1`, seed `0` point keeps the sign but drops from the old
+`-42%..-44%` band to `R_hist = -20.12%`.
 
-Concrete options:
+The complementary lower-band replay has now also landed in
+[`WAVE_DIRECT_DM_H025_LOW_BAND_RETENTION_NOTE.md`](./WAVE_DIRECT_DM_H025_LOW_BAND_RETENTION_NOTE.md):
+the `Fam1`, seed `1` point stays at `R_hist = -29.47%` while the `H = 0.25`
+seed-`0` replay had already fallen to `-20.12%`.
 
-- add one simple geometry diagnostic to each seed/family replay and ask
-  what separates the `-20%` band from the `-40%` band
-- add one `H = 0.25` validation point for a single seed from each band,
-  not the whole 12-point portability surface
+That narrow synthesis is now frozen in
+[`WAVE_DIRECT_DM_H025_TWO_POINT_SYNTHESIS_NOTE.md`](./WAVE_DIRECT_DM_H025_TWO_POINT_SYNTHESIS_NOTE.md):
+on the current `Fam1`, `S = 0.004` fine-`H` pair, both seeds keep the sign,
+but the old seed ordering is not refinement-stable because seed `0` loses most
+of its extra late gain while seed `1` retains the lower band.
+
+The first extra-family reserve point has now also landed in
+[`WAVE_DIRECT_DM_H025_FAM2_SEED0_BOUNDARY_NOTE.md`](./WAVE_DIRECT_DM_H025_FAM2_SEED0_BOUNDARY_NOTE.md):
+`Fam2`, seed `0`, `S = 0.004`, `H = 0.25` keeps the sign but still falls from
+the old coarse high band (`-42.33%`, `-37.73%`) to `R_hist = -22.61%`.
+So the first family-widening replay is another boundary, not an
+`H = 0.25` portability rescue.
+
+The complementary second-family seed-`1` follow-up has now also landed in
+[`WAVE_DIRECT_DM_H025_FAM2_SEED1_FOLLOWUP_NOTE.md`](./WAVE_DIRECT_DM_H025_FAM2_SEED1_FOLLOWUP_NOTE.md):
+its late gain stays on the old seed-`1` scale
+(`+0.001937`, `+0.002061`, `+0.002037`) while the same family's seed-`0`
+replay had already compressed to `+0.001576`.
+So the second family reproduces the cross-seed late-gain asymmetry, but the
+normalized magnitude still shifts to `R_hist = -35.03%`, so the fine-`H`
+story is still not a stable amplitude-band portability law.
+
+So the next honest hardening step is now:
+
+- keep the `H = 0.25` read promoted only as a narrow
+  `Fam1`/`Fam2` family-pair asymmetry result
+- if the lane continues next, spend it on a compression / synthesis pass
+  over the `Fam1` and `Fam2` pairs before any `Fam3`, third-seed,
+  or weaker-strength replay
+- do not widen to a broader `H = 0.25` portability batch yet
 
 ## Artifact chain
 
 - [`scripts/wave_direct_dm_portability_batch.py`](../scripts/wave_direct_dm_portability_batch.py)
 - [`logs/2026-04-08-wave-direct-dm-portability-batch.txt`](../logs/2026-04-08-wave-direct-dm-portability-batch.txt)
+- [`docs/WAVE_DIRECT_DM_SEED_BAND_DIAGNOSIS_NOTE.md`](./WAVE_DIRECT_DM_SEED_BAND_DIAGNOSIS_NOTE.md)
+- [`docs/WAVE_DIRECT_DM_H025_HIGH_BAND_BOUNDARY_NOTE.md`](./WAVE_DIRECT_DM_H025_HIGH_BAND_BOUNDARY_NOTE.md)
+- [`docs/WAVE_DIRECT_DM_H025_LOW_BAND_RETENTION_NOTE.md`](./WAVE_DIRECT_DM_H025_LOW_BAND_RETENTION_NOTE.md)
+- [`docs/WAVE_DIRECT_DM_H025_TWO_POINT_SYNTHESIS_NOTE.md`](./WAVE_DIRECT_DM_H025_TWO_POINT_SYNTHESIS_NOTE.md)
+- [`docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_BOUNDARY_NOTE.md`](./WAVE_DIRECT_DM_H025_FAM2_SEED0_BOUNDARY_NOTE.md)
+- [`docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_FOLLOWUP_NOTE.md`](./WAVE_DIRECT_DM_H025_FAM2_SEED1_FOLLOWUP_NOTE.md)
