@@ -1,7 +1,7 @@
 # Wave-Retardation Continuum Limit — NEGATIVE (Comparator-Dominated, Not Retardation-Dominated)
 
 **Date:** 2026-04-07
-**Status:** retained negative — refining the lattice spacing H from 0.5 to 0.35 to 0.25 (with physical parameters held approximately constant; v/c drifts 3% at medium due to integer rounding) does NOT give a converged value for the M − I rel_gap under either of two tested c=∞ comparators (cached static slices or imposed-Newton field). dM (retarded wave field) is fairly stable across the refinement (14% monotone drift). The instability is in the comparator construction, not the retarded field. dN (imposed Newton) is much more lattice-stable than dI (Δ +2.5% vs +45.2% at the last step), but it is the wrong **physical** comparator (Poisson, not wave-equation static limit), so rel_MN ≈ 50–67% is apples-to-oranges. The right physical comparator (equilibrated static slice) needs larger NL than tested; that's the identified next move. The "M ≠ I" existence is logically valid, but the magnitude does not survive lattice refinement under either comparator tested.
+**Status:** retained negative — refining the lattice spacing H from 0.5 to 0.35 to 0.25 (with physical parameters held approximately constant; v/c drifts 3% at medium due to integer rounding) does NOT give a converged value for the M − I rel_gap under any of **three** tested c=∞ comparators: cached static slices at NL_dyn (`dI`), equilibrated static slices at 3×NL_dyn (`dIeq`), or the imposed-Newton 1/r field (`dN`). dM (retarded wave field) is fairly stable across the refinement (14% monotone drift) — the instability is in the comparator construction, not in the retarded field. Critically, `dIeq` does NOT converge to `dN` (`rel_IeqN` oscillates 91.56% → 32.65% → 67.66%), meaning the discrete wave-equation static Green's function does not cleanly equal the continuum Poisson solution at these refinements. The dI instability is NOT just incomplete equilibration. The "M ≠ I" existence is logically valid, but the magnitude does not survive lattice refinement under any tested comparator. The retarded field dM itself is continuum-stable and remains a well-defined physical quantity; the issue is the reference it's compared against.
 
 ## Artifact chain
 
@@ -234,6 +234,128 @@ So neither comparator is fully correct:
    NL than the dynamic evolution, so the late-time slice is genuine
    equilibrium. This is option 2 from the previous note's "what to
    attack next" list.
+
+## Follow-on test #2: equilibrated-static-slice comparator
+
+After imposed-Newton was shown to be numerically stable but the
+wrong physical comparator, the next move was to test whether the
+cached-static-slice comparator's instability is simply **incomplete
+equilibration**. A fourth comparator was added:
+
+> **dIeq (equilibrated static)**: same construction as dI, but each
+> cached static problem is solved on `NL_eq = 3 × NL_dyn` layers
+> instead of `NL_dyn`. The late-time slice is taken from the long
+> solve, so the cached static field should be much closer to the
+> true wave-equation static limit.
+
+The hypothesis: if the dI instability is just incomplete
+equilibration, dIeq should be more lattice-stable. And since the
+wave-equation static limit IS Poisson (∂²/∂t² = 0), a fully
+equilibrated dIeq should converge to the imposed-Newton dN in the
+continuum limit.
+
+### Result — the equilibrated comparator is NO BETTER
+
+| Quantity | H=0.50 | H=0.35 | H=0.25 | drift |
+| --- | ---: | ---: | ---: | --- |
+| dM | +0.00836 | +0.00794 | +0.00721 | monotone, −14% |
+| dI (cached static) | +0.01175 | +0.00878 | +0.01274 | oscillates, 35% |
+| **dIeq (equilibrated, 3× NL)** | **+0.00217** | **+0.01126** | **+0.00554** | **oscillates, 420%** |
+| dN (imposed Newton) | +0.02564 | +0.01671 | +0.01714 | −35% then +2.5% |
+
+And the corresponding rel_gaps:
+
+| Quantity | H=0.50 | H=0.35 | H=0.25 |
+| --- | ---: | ---: | ---: |
+| rel_MI (vs cached static) | 28.81% | 9.53% | 43.40% |
+| **rel_MIeq (vs equilibrated)** | **74.11%** | **29.44%** | **23.16%** |
+| rel_MN (vs imposed Newton) | 67.39% | 52.48% | 57.92% |
+| **rel_IeqN (equilibrated vs Newton)** | **91.56%** | **32.65%** | **67.66%** |
+
+### The decisive failure mode
+
+The equilibrated static slice does **not** converge to the imposed
+Newton field as H refines. `rel_IeqN` oscillates 91.56% → 32.65% →
+67.66%. In the continuum limit, a fully equilibrated wave-equation
+static solution must equal the Poisson solution (that's what
+"static limit of wave equation" means), so `rel_IeqN` should → 0
+as H → 0. It does not, even at the medium → fine step.
+
+And `dIeq` itself oscillates **much more** than `dI`: +420% from
+coarse to medium, −51% from medium to fine. Longer equilibration
+time does not stabilize the cached slice — it adds a different
+instability.
+
+**The dI instability is NOT just incomplete equilibration.** The
+discrete lattice wave-equation static problem has an H-dependent
+normalization or boundary structure that longer equilibration does
+not fix. Either the lattice wave operator's discrete Green's
+function differs from the continuum one by O(1) factors (not O(H)
+corrections), or there's a boundary / finite-domain effect that
+interacts with the equilibration time in a non-trivial way.
+
+### The one piece of good news: rel_MIeq has a smoother last step
+
+| Quantity | Δ (medium → fine) |
+| --- | ---: |
+| rel_MI | 0.339 |
+| **rel_MIeq** | **0.063** |
+| rel_MN | 0.054 |
+
+`rel_MIeq` changes by only 6% at the last refinement step — much
+smaller than `rel_MI`'s 34%. This is a **partial** improvement: the
+equilibrated-static comparator gives a more stable *relative gap*
+at the last refinement, even though the underlying `dIeq` quantity
+itself oscillates. The stability is coming from `dM` (which is
+stable) dominating the rel_gap when both dM and dIeq happen to be
+small.
+
+But this is not a clean convergence. `rel_MIeq` goes 74.11% →
+29.44% → 23.16% — still drifting monotonically down by ~6% per
+refinement. If that drift continued, it would need another 3-4
+refinement steps to stabilize, which requires much finer H than we
+can compute.
+
+### Updated interpretation
+
+After three comparators tested (dI, dIeq, dN):
+
+- **dM (retarded wave field) is continuum-stable** — this is
+  genuinely a real physical quantity that has a meaningful
+  continuum limit. 14% drift across the refinement, monotone.
+- **No c=∞ comparator is continuum-stable at these refinements**:
+  - `dI` (cached static, NL_dyn) oscillates 35%
+  - `dIeq` (equilibrated static, 3×NL_dyn) oscillates 420% then 51%
+  - `dN` (imposed Newton, 1/r potential) is most stable but is a
+    different field equation
+- **The wave-equation static limit on the grown DAG lattice does
+  not cleanly equal the continuum Poisson solution** at H ≥ 0.25.
+  The two differ by a lattice-normalization factor that changes
+  with H.
+
+The next move is no longer "equilibrate the cached slices." The
+fundamental issue is that the **discrete wave-equation static
+Green's function** on this lattice does not cleanly match the
+continuum Poisson Green's function. To close the comparator
+question, we need either:
+
+1. **A much finer lattice** — tests whether the mismatch vanishes
+   at H ≤ 0.1. Blocked by memory unless the harness is rewritten
+   more efficiently (e.g., numpy-vectorized or with a sparse
+   adjacency representation).
+2. **An analytic derivation** of the discrete Green's function on
+   the grown DAG lattice, with explicit H-dependent normalization,
+   so we can compute the "correct" c=∞ comparator in closed form.
+3. **A different observable entirely** — give up on the comparator
+   question and characterize dM's behavior directly (how does
+   it depend on v/c, on source-beam distance, on source strength)
+   without reference to any c=∞ baseline.
+
+Option 3 is the cheapest and most decisive for the flagship physics:
+it asks "is the retarded wave field a well-defined physical quantity
+with a clean continuum limit?" and answers yes (dM drifts only 14%
+monotonically). The "retardation vs instantaneous" framing was the
+issue, not the physics.
 
 ## What this changes about the flagship physics
 
