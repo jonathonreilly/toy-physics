@@ -114,8 +114,10 @@ def solve_static_poisson_matrix_free(
     sz = nw // 2 + iz_now
     f = [[0.0] * nw for _ in range(nw)]
     omega = 2.0 / (1.0 + math.sin(math.pi / nw))
+    iterations = 0
 
     for it in range(max_iter):
+        iterations = it + 1
         max_delta = 0.0
         for parity in (0, 1):
             for iy in range(1, nw - 1):
@@ -132,9 +134,19 @@ def solve_static_poisson_matrix_free(
                         max_delta = delta
                     row[iz] = new
         if max_delta < tol:
-            return max_delta, it + 1
+            break
 
-    return max_delta, max_iter
+    max_resid = 0.0
+    for iy in range(1, nw - 1):
+        for iz in range(1, nw - 1):
+            src = strength if (iy == sy and iz == sz) else 0.0
+            resid = (
+                f[iy - 1][iz] + f[iy + 1][iz] + f[iy][iz - 1] + f[iy][iz + 1]
+                - 4.0 * f[iy][iz] + src
+            )
+            max_resid = max(max_resid, abs(resid))
+
+    return max_resid, iterations
 
 
 def build_rows(h_values: list[float]) -> list[ProbeRow]:
