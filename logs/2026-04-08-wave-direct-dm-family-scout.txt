@@ -1,0 +1,62 @@
+============================================================================================================
+WAVE DIRECT-DM MATCHED-HISTORY PROBE
+============================================================================================================
+Two source schedules with the same start/end/final geometry and the same realized move trace
+Includes an exact S=0 null and a small-s sweep over the direct response
+
+[family=Fam1 drift=0.20 restore=0.70]
+  [strength=0.004000]
+    [H=0.500]
+      NL=30  PW=6.000  src_layer=10
+      start_z_real=3.000  end_z_real=0.000
+      dM(early)    = +0.005385
+      dM(late)     = +0.009547
+      delta_hist   = -0.004161
+      R_hist       = -43.59%
+      delta_hist/s = -1.040348
+    [H=0.350]
+      NL=43  PW=5.950  src_layer=14
+      start_z_real=3.150  end_z_real=0.000
+      dM(early)    = +0.004811
+      dM(late)     = +0.008346
+      delta_hist   = -0.003535
+      R_hist       = -42.36%
+      delta_hist/s = -0.883765
+
+[family=Fam2 drift=0.05 restore=0.30]
+  [strength=0.004000]
+    [H=0.500]
+      NL=30  PW=6.000  src_layer=10
+      start_z_real=3.000  end_z_real=0.000
+      dM(early)    = +0.005565
+      dM(late)     = +0.009650
+      delta_hist   = -0.004085
+      R_hist       = -42.33%
+      delta_hist/s = -1.021142
+    [H=0.350]
+      NL=43  PW=5.950  src_layer=14
+      start_z_real=3.150  end_z_real=0.000
+      dM(early)    = +0.004743
+      dM(late)     = +0.007617
+      delta_hist   = -0.002874
+      R_hist       = -37.73%
+      delta_hist/s = -0.718417
+
+[family=Fam3 drift=0.50 restore=0.90]
+  [strength=0.004000]
+    [H=0.500]
+      NL=30  PW=6.000  src_layer=10
+      start_z_real=3.000  end_z_real=0.000
+      dM(early)    = +0.005037
+      dM(late)     = +0.009042
+      delta_hist   = -0.004005
+      R_hist       = -44.29%
+      delta_hist/s = -1.001339
+    [H=0.350]
+      NL=43  PW=5.950  src_layer=14
+      start_z_real=3.150  end_z_real=0.000
+      dM(early)    = +0.005022
+      dM(late)     = +0.008632
+      delta_hist   = -0.003610
+      R_hist       = -41.82%
+      delta_hist/s = -0.902451

@@ -77,6 +77,13 @@ What this does **not** show yet:
 - no full `H = 0.25` ladder yet
 - no claim that this is a lab-ready observable
 
+Related side notes:
+
+- an exploratory one-seed family scout is recorded in
+  [`WAVE_DIRECT_DM_FAMILY_SCOUT_NOTE.md`](./WAVE_DIRECT_DM_FAMILY_SCOUT_NOTE.md)
+- a narrow `H = 0.25` runtime check is recorded in
+  [`WAVE_DIRECT_DM_H025_FEASIBILITY_NOTE.md`](./WAVE_DIRECT_DM_H025_FEASIBILITY_NOTE.md)
+
 So the current retained claim is narrow:
 
 > On the current `Fam1`, seed-0 replay, two source schedules with the
