@@ -19,8 +19,9 @@ It compares four quantities at a fixed source position:
 
 ## Results
 
-The probe used the `H = 0.5` lattice and two frozen source positions
-(`z_phys = 3.0` and `z_phys = 0.0`).
+The retained evidence in this note is the coarse `H = 0.5` lattice and
+two frozen source positions (`z_phys = 3.0` and `z_phys = 0.0`).
+This is a smoke test, not a continuum claim.
 
 ### Frozen source at `z_phys = 3.0`
 
