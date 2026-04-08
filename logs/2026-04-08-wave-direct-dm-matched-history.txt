@@ -1,77 +1,75 @@
 ============================================================================================================
 WAVE DIRECT-DM MATCHED-HISTORY PROBE
 ============================================================================================================
-Two histories with the same start/end/final geometry, different timing of motion
+Two source schedules with the same start/end/final geometry and the same realized move trace
 Includes an exact S=0 null and a small-s sweep over the direct response
 
-[strength=0.000000]
-  [H=0.500]
-    NL=30  PW=6.000  src_layer=10
-    start_z_real=3.000  end_z_real=0.000
-    dM(early)    = +0.000000
-    dM(late)     = +0.000000
-    delta_hist   = +0.000000
-    R_hist       = +0.00%
-    null         = exact S=0 control
-  [H=0.350]
-    NL=43  PW=5.950  src_layer=14
-    start_z_real=3.150  end_z_real=0.000
-    dM(early)    = +0.000000
-    dM(late)     = +0.000000
-    delta_hist   = +0.000000
-    R_hist       = +0.00%
-    null         = exact S=0 control
-
-[strength=0.002000]
-  [H=0.500]
-    NL=30  PW=6.000  src_layer=10
-    start_z_real=3.000  end_z_real=0.000
-    dM(early)    = +0.002938
-    dM(late)     = +0.004775
-    delta_hist   = -0.001837
-    R_hist       = -38.47%
-    delta_hist/s = -0.918443
-  [H=0.350]
-    NL=43  PW=5.950  src_layer=14
-    start_z_real=3.150  end_z_real=0.000
-    dM(early)    = +0.002625
-    dM(late)     = +0.004156
-    delta_hist   = -0.001531
-    R_hist       = -36.84%
-    delta_hist/s = -0.765372
-
-[strength=0.004000]
-  [H=0.500]
-    NL=30  PW=6.000  src_layer=10
-    start_z_real=3.000  end_z_real=0.000
-    dM(early)    = +0.005840
-    dM(late)     = +0.009541
-    delta_hist   = -0.003701
-    R_hist       = -38.79%
-    delta_hist/s = -0.925319
-  [H=0.350]
-    NL=43  PW=5.950  src_layer=14
-    start_z_real=3.150  end_z_real=0.000
-    dM(early)    = +0.005215
-    dM(late)     = +0.008328
-    delta_hist   = -0.003113
-    R_hist       = -37.38%
-    delta_hist/s = -0.778257
-
-[strength=0.008000]
-  [H=0.500]
-    NL=30  PW=6.000  src_layer=10
-    start_z_real=3.000  end_z_real=0.000
-    dM(early)    = +0.011533
-    dM(late)     = +0.019045
-    delta_hist   = -0.007513
-    R_hist       = -39.45%
-    delta_hist/s = -0.939066
-  [H=0.350]
-    NL=43  PW=5.950  src_layer=14
-    start_z_real=3.150  end_z_real=0.000
-    dM(early)    = +0.010292
-    dM(late)     = +0.016724
-    delta_hist   = -0.006432
-    R_hist       = -38.46%
-    delta_hist/s = -0.803960
+[family=Fam1 drift=0.20 restore=0.70]
+  [strength=0.000000]
+    [H=0.500]
+      NL=30  PW=6.000  src_layer=10
+      start_z_real=3.000  end_z_real=0.000
+      dM(early)    = +0.000000
+      dM(late)     = +0.000000
+      delta_hist   = +0.000000
+      R_hist       = +0.00%
+      null         = exact S=0 control
+    [H=0.350]
+      NL=43  PW=5.950  src_layer=14
+      start_z_real=3.150  end_z_real=0.000
+      dM(early)    = +0.000000
+      dM(late)     = +0.000000
+      delta_hist   = +0.000000
+      R_hist       = +0.00%
+      null         = exact S=0 control
+  [strength=0.002000]
+    [H=0.500]
+      NL=30  PW=6.000  src_layer=10
+      start_z_real=3.000  end_z_real=0.000
+      dM(early)    = +0.002710
+      dM(late)     = +0.004777
+      delta_hist   = -0.002067
+      R_hist       = -43.27%
+      delta_hist/s = -1.033516
+    [H=0.350]
+      NL=43  PW=5.950  src_layer=14
+      start_z_real=3.150  end_z_real=0.000
+      dM(early)    = +0.002423
+      dM(late)     = +0.004164
+      delta_hist   = -0.001741
+      R_hist       = -41.81%
+      delta_hist/s = -0.870512
+  [strength=0.004000]
+    [H=0.500]
+      NL=30  PW=6.000  src_layer=10
+      start_z_real=3.000  end_z_real=0.000
+      dM(early)    = +0.005385
+      dM(late)     = +0.009547
+      delta_hist   = -0.004161
+      R_hist       = -43.59%
+      delta_hist/s = -1.040348
+    [H=0.350]
+      NL=43  PW=5.950  src_layer=14
+      start_z_real=3.150  end_z_real=0.000
+      dM(early)    = +0.004811
+      dM(late)     = +0.008346
+      delta_hist   = -0.003535
+      R_hist       = -42.36%
+      delta_hist/s = -0.883765
+  [strength=0.008000]
+    [H=0.500]
+      NL=30  PW=6.000  src_layer=10
+      start_z_real=3.000  end_z_real=0.000
+      dM(early)    = +0.010627
+      dM(late)     = +0.019059
+      delta_hist   = -0.008432
+      R_hist       = -44.24%
+      delta_hist/s = -1.054014
+    [H=0.350]
+      NL=43  PW=5.950  src_layer=14
+      start_z_real=3.150  end_z_real=0.000
+      dM(early)    = +0.009483
+      dM(late)     = +0.016764
+      delta_hist   = -0.007281
+      R_hist       = -43.43%
+      delta_hist/s = -0.910156

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Direct-dM matched-history probe for the wave-retardation lane.
+"""Direct-dM matched-schedule probe for the wave-retardation lane.
 
 This is the smallest direct finite-c fallback probe:
 
@@ -7,7 +7,9 @@ This is the smallest direct finite-c fallback probe:
   start position, end position, total NL, and final source geometry,
   and compare the direct retarded-wave beam response dM.
 
-The two histories are:
+The two schedules use the same realized moving trace and move-step
+count, but place that trace at different times within the active
+interval:
 
   early-move : move to the final source position in the first half of
                the active interval, then sit
@@ -18,6 +20,7 @@ The two histories are:
 from __future__ import annotations
 
 import argparse
+import gc
 from pathlib import Path
 import sys
 
@@ -37,27 +40,46 @@ from wave_retardation_continuum_limit import (
     solve_wave,
 )
 
+FAMILIES = (
+    ("Fam1", 0.20, 0.70),
+    ("Fam2", 0.05, 0.30),
+    ("Fam3", 0.50, 0.90),
+)
+
+
+def _shared_move_trace(iz_start: int, iz_end: int, move_steps: int):
+    if move_steps <= 1:
+        return [iz_end]
+    return [
+        iz_start + int(round((iz_end - iz_start) * (u / (move_steps - 1))))
+        for u in range(move_steps)
+    ]
+
 
 def make_early_move(iz_start: int, iz_end: int, src_layer: int, nl: int):
     active = nl - src_layer
-    move_steps = max(1, active // 2)
+    move_steps = max(2, active // 2)
+    trace = _shared_move_trace(iz_start, iz_end, move_steps)
+    hold_steps = active - move_steps
 
     def iz_of_t(t: int) -> int:
         if t < src_layer:
             return iz_start
         u = t - src_layer
-        if u >= move_steps:
+        if u < move_steps:
+            return trace[u]
+        if hold_steps > 0:
             return iz_end
-        frac = u / move_steps
-        return iz_start + int(round((iz_end - iz_start) * frac))
+        return trace[-1]
 
     return iz_of_t
 
 
 def make_late_move(iz_start: int, iz_end: int, src_layer: int, nl: int):
     active = nl - src_layer
-    wait_steps = max(1, active // 2)
-    move_steps = max(1, active - wait_steps)
+    move_steps = max(2, active // 2)
+    wait_steps = active - move_steps
+    trace = _shared_move_trace(iz_start, iz_end, move_steps)
 
     def iz_of_t(t: int) -> int:
         if t < src_layer:
@@ -66,15 +88,19 @@ def make_late_move(iz_start: int, iz_end: int, src_layer: int, nl: int):
         if u < wait_steps:
             return iz_start
         v = u - wait_steps
-        if v >= move_steps:
-            return iz_end
-        frac = v / move_steps
-        return iz_start + int(round((iz_end - iz_start) * frac))
+        if v < move_steps:
+            return trace[v]
+        return trace[-1]
 
     return iz_of_t
 
 
-def measure_dm(h_val: float, strength: float):
+def family_specs(labels: list[str]):
+    wanted = set(labels)
+    return [spec for spec in FAMILIES if spec[0] in wanted]
+
+
+def measure_dm(h_val: float, strength: float, family_label: str, drift: float, restore: float, seed: int = 0):
     nl = round(T_PHYS_LAYERS / h_val)
     pw = round(PW_PHYS / h_val) * h_val
     k_phase = K_PER_H / h_val
@@ -85,7 +111,7 @@ def measure_dm(h_val: float, strength: float):
     iz_start = round(IZ_START_PHYS / h_val)
     iz_end = round(IZ_END_PHYS / h_val)
 
-    pos, adj, nmap = grow(0, 0.20, 0.70, nl, pw, 3, h_val)
+    pos, adj, nmap = grow(seed, drift, restore, nl, pw, 3, h_val)
     free = prop_beam(pos, adj, nmap, None, k_phase, nl, pw, h_val)
     z_free = cz(free, pos, nl, pw, h_val)
 
@@ -104,6 +130,10 @@ def measure_dm(h_val: float, strength: float):
         "H": h_val,
         "NL": nl,
         "PW": pw,
+        "family": family_label,
+        "drift": drift,
+        "restore": restore,
+        "seed": seed,
         "src_layer": src_layer,
         "iz_start_real": iz_start * h_val,
         "iz_end_real": iz_end * h_val,
@@ -131,29 +161,41 @@ def main() -> int:
         default=[0.0, S_PHYS, 2.0 * S_PHYS],
         help="Source strengths to probe. Default: 0, S_PHYS, 2*S_PHYS",
     )
+    parser.add_argument(
+        "--families",
+        nargs="*",
+        default=["Fam1"],
+        help="Family labels to probe. Available: Fam1 Fam2 Fam3. Default: Fam1",
+    )
     args = parser.parse_args()
+    families = family_specs(args.families)
+    if not families:
+        raise SystemExit(f"no valid families selected: {args.families}")
 
     print("=" * 108)
     print("WAVE DIRECT-DM MATCHED-HISTORY PROBE")
     print("=" * 108)
-    print("Two histories with the same start/end/final geometry, different timing of motion")
+    print("Two source schedules with the same start/end/final geometry and the same realized move trace")
     print("Includes an exact S=0 null and a small-s sweep over the direct response")
 
-    for strength in args.strengths:
-        print(f"\n[strength={strength:.6f}]")
-        for h_val in args.hs:
-            r = measure_dm(h_val, strength)
-            print(f"  [H={h_val:.3f}]")
-            print(f"    NL={r['NL']}  PW={r['PW']:.3f}  src_layer={r['src_layer']}")
-            print(f"    start_z_real={r['iz_start_real']:.3f}  end_z_real={r['iz_end_real']:.3f}")
-            print(f"    dM(early)    = {r['d_early']:+.6f}")
-            print(f"    dM(late)     = {r['d_late']:+.6f}")
-            print(f"    delta_hist   = {r['delta_hist']:+.6f}")
-            print(f"    R_hist       = {r['r_hist']:+.2%}")
-            if abs(strength) <= 1e-12:
-                print("    null         = exact S=0 control")
-            else:
-                print(f"    delta_hist/s = {r['delta_hist'] / strength:+.6f}")
+    for family_label, drift, restore in families:
+        print(f"\n[family={family_label} drift={drift:.2f} restore={restore:.2f}]")
+        for strength in args.strengths:
+            print(f"  [strength={strength:.6f}]")
+            for h_val in args.hs:
+                r = measure_dm(h_val, strength, family_label, drift, restore)
+                print(f"    [H={h_val:.3f}]")
+                print(f"      NL={r['NL']}  PW={r['PW']:.3f}  src_layer={r['src_layer']}")
+                print(f"      start_z_real={r['iz_start_real']:.3f}  end_z_real={r['iz_end_real']:.3f}")
+                print(f"      dM(early)    = {r['d_early']:+.6f}")
+                print(f"      dM(late)     = {r['d_late']:+.6f}")
+                print(f"      delta_hist   = {r['delta_hist']:+.6f}")
+                print(f"      R_hist       = {r['r_hist']:+.2%}")
+                if abs(strength) <= 1e-12:
+                    print("      null         = exact S=0 control")
+                else:
+                    print(f"      delta_hist/s = {r['delta_hist'] / strength:+.6f}")
+                gc.collect()
 
     return 0
 
