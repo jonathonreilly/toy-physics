@@ -1,0 +1,40 @@
+====================================================================================================
+LANE α++: Fam2 single-family refinement
+Fam2 (drift=0.05, restore=0.3)
+Physical: T=15.0, PW=6.0, k*H=2.5, S=0.004, z_src=3.0
+Refinement: H ∈ {0.5, 0.35, 0.25, 0.20} — one new point at 0.20
+====================================================================================================
+
+Known Fam2 values from the family-portability lane:
+  H=0.500  kubo_true = +6.6588
+  H=0.350  kubo_true = +6.3168
+  H=0.250  kubo_true = +7.0883
+
+New refinement point:
+  H=0.200  NL=75  n_nodes=275355  kubo_true = +4.5082
+
+====================================================================================================
+FULL FAM2 SERIES
+====================================================================================================
+       H     kubo_true
+   0.500       +6.6588
+   0.350       +6.3168
+   0.250       +7.0883
+   0.200       +4.5082
+
+Step-by-step drifts (coarser → finer):
+  H=0.500 (+6.6588) → H=0.350 (+6.3168)  Δ = -0.3420 (-5.1%)
+  H=0.350 (+6.3168) → H=0.250 (+7.0883)  Δ = +0.7715 (+12.2%)
+  H=0.250 (+7.0883) → H=0.200 (+4.5082)  Δ = -2.5801 (-36.4%)
+
+====================================================================================================
+VERDICT
+====================================================================================================
+  Fam2 at H=0.20: +4.5082
+  Fam1/Fam3 converged value (H=0.25): ~+5.97
+  Fam2 deviation from Fam1/Fam3 target: 1.4618 (24.5%)
+  Last-step drift (H=0.25 → H=0.20): 36.4%
+
+  STILL BOUNCING — Fam2 last-step drift is still > 5%. Either
+  the continuum limit is at much finer H, or Fam2 has a genuine
+  convergence pathology at this combination of physical parameters.
