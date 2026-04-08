@@ -59,6 +59,26 @@ The retained model-side prediction is:
 - in an imaging readout, the phase slope across the field of view should be
   the cleanest discriminator, not raw amplitude
 
+## Requirement: ideal detector first
+
+Before adding any NV-specific sensitivity, noise floor, spectral artefact,
+or lock-in implementation detail, the card must include an
+**ideal-detector forward model**:
+
+- perfect phase reference
+- no technical noise
+- no bandwidth or integration limits
+- direct predicted outputs for `X`, `Y`, `R`, and `phi`
+
+The source-fidelity check comes before detector realism:
+
+- verify that the simulated source trajectory is the intended one
+- verify that retarded and instantaneous comparators use the same source history
+- only then add instrument-specific filtering or noise
+
+This keeps the experiment card honest: physics prediction first,
+instrument model second.
+
 ## Minimal control set
 
 The smallest useful control set is:
@@ -84,6 +104,7 @@ So the claim surface should stay narrow:
 - phase-quadrature discriminator: yes
 - coherent spatial phase ramp: yes
 - absolute gravity detectability: not yet budgeted here
+- ideal-detector forward model: required before any lab-specific noise claim
 
 That is the smallest prediction still worth taking to a diamond lab.
 

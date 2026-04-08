@@ -33,6 +33,7 @@ Each entry records:
   - the retarded / wavefield lane gives the motivation for a phase-sensitive
     discriminator
 - Still needs hardening:
+  - an ideal-detector forward model before any lab-specific noise or bandwidth claims
   - a calibrated signal budget
   - an explicit source geometry / drive protocol
   - a lab-specific noise-floor estimate

@@ -26,6 +26,21 @@ Measure the lock-in channels:
 If the setup is widefield, also record the spatial phase profile across the NV
 image.
 
+## Requirement: ideal-detector forward model first
+
+Before any lab-specific protocol is treated as complete, build the
+ideal-detector version of the measurement:
+
+- same driven source history in every comparator
+- perfect phase reference
+- no noise floor
+- no finite-bandwidth or spectral-leakage model
+- direct output for `X`, `Y`, `phi`, and spatial phase profile
+
+This is a required precondition, not an optional refinement.
+It checks source fidelity first and keeps the physics prediction
+separate from detector artefacts.
+
 ## Standard null
 
 After calibration and static-background subtraction, the quasi-static /
@@ -103,6 +118,7 @@ This repo does not yet provide a calibrated gravity amplitude for NV sensors.
 
 So the strongest defensible lab-facing artifact is a discriminator protocol:
 
+- ideal-detector forward model first
 - phase-sensitive lock-in readout
 - standard quasi-static null
 - sign-flip control

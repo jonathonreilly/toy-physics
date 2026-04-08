@@ -75,6 +75,30 @@ Approaches a saturation value (~0.070 rad) as c → 0.
    model's prediction is a SCALING LAW (phase ∝ GM, phase ∝ k,
    phase(c) monotone), not a single number.
 
+## Experiment card requirement: ideal detector first
+
+Before adding any NV, interferometer, or lab-specific noise model, the
+card must include an **ideal-detector forward model**:
+
+- same source trajectory used in all comparators
+- perfect timing / phase reference
+- no noise floor, bandwidth limit, or spectral artefacts
+- direct prediction of the measured channels: `X`, `Y`, `R`, `phi`
+
+This is required for two reasons:
+
+1. It checks whether the source modulation itself is being simulated
+   faithfully before detector assumptions enter.
+2. It cleanly separates the physics prediction (retarded vs
+   instantaneous / quasi-static) from instrument transfer functions.
+
+Only after the ideal-detector prediction is fixed should the card add:
+
+- finite bandwidth
+- integration time
+- lock-in windowing / spectral leakage
+- technical noise and calibration systematics
+
 ## Experimental discriminator
 
 The strongest discriminator is the **c-dependence**:
