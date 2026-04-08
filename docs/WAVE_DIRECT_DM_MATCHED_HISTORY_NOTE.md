@@ -81,6 +81,8 @@ Related side notes:
 
 - an exploratory one-seed family scout is recorded in
   [`WAVE_DIRECT_DM_FAMILY_SCOUT_NOTE.md`](./WAVE_DIRECT_DM_FAMILY_SCOUT_NOTE.md)
+- the first bounded multi-family batch is recorded in
+  [`WAVE_DIRECT_DM_PORTABILITY_BATCH_NOTE.md`](./WAVE_DIRECT_DM_PORTABILITY_BATCH_NOTE.md)
 - a narrow `H = 0.25` runtime check is recorded in
   [`WAVE_DIRECT_DM_H025_FEASIBILITY_NOTE.md`](./WAVE_DIRECT_DM_H025_FEASIBILITY_NOTE.md)
 
