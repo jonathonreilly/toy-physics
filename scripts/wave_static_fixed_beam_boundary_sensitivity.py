@@ -104,7 +104,10 @@ def measure_at(field_pw_phys: float, beam_pw_phys: float, H_val: float, src_iz_p
     z_free = cz(free, beam_pos, NL, beam_pw, H_val)
 
     h_M = crop_square(h_M_big, beam_nw)
-    h_S = crop_square([h_S_big for _ in range(NL)], beam_nw)
+    h_S = [[[0.0] * beam_nw for _ in range(beam_nw)] for _ in range(NL)]
+    cropped_static = crop_square([h_S_big], beam_nw)[0]
+    for t in range(src_layer, NL):
+        h_S[t] = [row[:] for row in cropped_static]
 
     dM = cz(prop_beam(beam_pos, beam_adj, beam_nmap, h_M, k_phase, NL, beam_pw, H_val), beam_pos, NL, beam_pw, H_val) - z_free
     dS = cz(prop_beam(beam_pos, beam_adj, beam_nmap, h_S, k_phase, NL, beam_pw, H_val), beam_pos, NL, beam_pw, H_val) - z_free

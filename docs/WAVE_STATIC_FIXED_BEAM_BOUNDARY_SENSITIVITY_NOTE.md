@@ -21,17 +21,17 @@ source `z_phys = 3.0`, and compared `field PW_phys = 6.0` vs `9.0`.
 | quantity | `field PW = 6.0` | `field PW = 9.0` | move |
 | --- | ---: | ---: | ---: |
 | `dM` | `+0.009857` | `+0.010629` | `7.26%` |
-| `dS` | `+0.013268` | `+0.017944` | `26.06%` |
-| `rel_MS` | `25.71%` | `40.76%` | `36.94%` |
+| `dS` | `+0.009507` | `+0.013637` | `30.29%` |
+| `rel_MS` | `3.56%` | `22.06%` | `83.88%` |
 | static residual | `1.998e-10` | `1.996e-10` | stable |
 
 ## Honest read
 
-The fixed-beam probe still shows material boundary sensitivity:
+The fixed-beam probe still shows material boundary sensitivity.
 
 - enlarging only the field/static solve box from `6.0` to `9.0` moves
-  `dS` by `26.06%`
-- `rel_MS` also moves materially, by `36.94%`
+  `dS` by `30.29%`
+- `rel_MS` moves even more sharply, by `83.88%`
 - `dM` is less sensitive than the comparator, but it still moves by
   `7.26%`
 
