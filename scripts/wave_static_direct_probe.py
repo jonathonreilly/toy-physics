@@ -22,6 +22,7 @@ probably closing and the flagship should shift toward direct dM observables.
 
 from __future__ import annotations
 
+import argparse
 import math
 import sys
 from pathlib import Path
@@ -143,11 +144,23 @@ def measure_at_H(H_val: float, label: str):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--hs",
+        type=float,
+        nargs="*",
+        default=[0.5, 0.35, 0.25],
+        help="H values to run. Default: 0.5 0.35 0.25",
+    )
+    args = parser.parse_args()
+
     print("=" * 100)
     print("WAVE STATIC DIRECT-COMPARATOR PROBE")
     print("=" * 100)
     rows = []
-    for H_val, label in [(0.5, "coarse"), (0.35, "medium"), (0.25, "fine")]:
+    label_map = {0.5: "coarse", 0.35: "medium", 0.25: "fine"}
+    for idx, H_val in enumerate(args.hs):
+        label = label_map.get(H_val, f"run{idx+1}")
         r = measure_at_H(H_val, label)
         rows.append(r)
         print(f"\n[{label}] H={H_val}")
@@ -162,14 +175,15 @@ def main():
         print(f"  rel_IeqS = {r['rel_IeqS']:.2%}")
         print(f"  worst static residual = {r['worst_resid']:.3e}")
 
-    print("\n" + "=" * 100)
-    print("LAST-STEP STABILITY")
-    print("=" * 100)
-    a, b = rows[1], rows[2]
-    print(f"  Δ(rel_MI)   = {abs(b['rel_MI'] - a['rel_MI']):.4f}")
-    print(f"  Δ(rel_MIeq) = {abs(b['rel_MIeq'] - a['rel_MIeq']):.4f}")
-    print(f"  Δ(rel_MS)   = {abs(b['rel_MS'] - a['rel_MS']):.4f}")
-    print(f"  Δ(rel_IeqS) = {abs(b['rel_IeqS'] - a['rel_IeqS']):.4f}")
+    if len(rows) >= 2:
+        print("\n" + "=" * 100)
+        print("LAST-STEP STABILITY")
+        print("=" * 100)
+        a, b = rows[-2], rows[-1]
+        print(f"  Δ(rel_MI)   = {abs(b['rel_MI'] - a['rel_MI']):.4f}")
+        print(f"  Δ(rel_MIeq) = {abs(b['rel_MIeq'] - a['rel_MIeq']):.4f}")
+        print(f"  Δ(rel_MS)   = {abs(b['rel_MS'] - a['rel_MS']):.4f}")
+        print(f"  Δ(rel_IeqS) = {abs(b['rel_IeqS'] - a['rel_IeqS']):.4f}")
 
 
 if __name__ == "__main__":
