@@ -21,16 +21,29 @@ The two histories used here are:
 ## Control stack
 
 The probe now includes an exact `S = 0` null and a small-strength sweep
-at the coarse `H = 0.5` point.
+at both tested `H` values.
+
+### `H = 0.5`
 
 | strength | `dM(early)` | `dM(late)` | `delta_hist` | `R_hist` | `delta_hist / s` |
 | --- | ---: | ---: | ---: | ---: | ---: |
 | `0.000` | `+0.000000` | `+0.000000` | `+0.000000` | `+0.00%` | `n/a` |
+| `0.002` | `+0.002938` | `+0.004775` | `-0.001837` | `-38.47%` | `-0.918` |
 | `0.004` | `+0.005840` | `+0.009541` | `-0.003701` | `-38.79%` | `-0.925` |
 | `0.008` | `+0.011533` | `+0.019045` | `-0.007513` | `-39.45%` | `-0.939` |
 
-The exact null is exact to numerical precision, and the nonzero points
-are approximately linear in `s` over this narrow range.
+### `H = 0.35`
+
+| strength | `dM(early)` | `dM(late)` | `delta_hist` | `R_hist` | `delta_hist / s` |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| `0.000` | `+0.000000` | `+0.000000` | `+0.000000` | `+0.00%` | `n/a` |
+| `0.002` | `+0.002625` | `+0.004156` | `-0.001531` | `-36.84%` | `-0.765` |
+| `0.004` | `+0.005215` | `+0.008328` | `-0.003113` | `-37.38%` | `-0.778` |
+| `0.008` | `+0.010292` | `+0.016724` | `-0.006432` | `-38.46%` | `-0.804` |
+
+The exact null is exact to numerical precision at both tested `H`
+values, and the nonzero points are approximately linear in `s` over the
+tested weak-field band.
 
 ## Results
 
@@ -65,9 +78,10 @@ So the current retained claim is narrow:
 > different source histories give materially different direct retarded
 > responses `dM`, with consistent sign and similar normalized magnitude
 > on the tested `H = 0.5` and `H = 0.35` points. The exact `S = 0`
-> control is null to numerical precision, and the coarse `H = 0.5`
-> weak-strength sweep is approximately linear over the tested range.
+> control is null to numerical precision, and the weak-strength sweep is
+> approximately linear over the tested range at both `H` values.
 
 ## Artifact chain
 
 - [`scripts/wave_direct_dm_matched_history_probe.py`](../scripts/wave_direct_dm_matched_history_probe.py)
+- [`logs/2026-04-08-wave-direct-dm-matched-history.txt`](../logs/2026-04-08-wave-direct-dm-matched-history.txt)
