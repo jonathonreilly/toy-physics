@@ -48,7 +48,8 @@ from __future__ import annotations
 import math
 import random
 
-# Physical parameters held constant across refinements (match Lane 6 setup)
+# Physical parameters held approximately constant across refinements
+# (match Lane 6 setup modulo integer-rounding drift in realized velocity)
 T_PHYS_LAYERS = 30 * 0.5    # 15.0 physical "time" units (Lane 6: NL=30, H=0.5)
 IZ_START_PHYS = 3.0         # Lane 6: iz_start=6 at H=0.5 → physical z = 3.0
 IZ_END_PHYS = 0.0           # Lane 6: iz_end=0 at H=0.5 → physical z = 0.0
@@ -221,10 +222,14 @@ def make_imposed_newton(NL, PW, H, strength, iz_of_t, src_layer):
         layer_x = t * H
         for iy in range(nw):
             for iz in range(nw):
-                # Cell physical (y, z) — wave equation field is 2D in (y, z),
-                # so the "x" axis for the distance is the layer index
+                # Cell physical (y, z) — the static Newton-style comparator
+                # should still use the full radial distance in the (x, y, z)
+                # geometry, even though the wave field itself evolves on a
+                # 2D (y, z) grid at each layer.
+                y_phys = (iy - hw) * H
                 z_phys = (iz - hw) * H
                 dist = math.sqrt((layer_x - x_src_phys) ** 2
+                                 + y_phys ** 2
                                  + (z_phys - z_src_phys) ** 2) + 0.1
                 history[t][iy][iz] = strength / dist
     return history
