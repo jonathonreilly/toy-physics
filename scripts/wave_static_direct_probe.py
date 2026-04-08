@@ -18,6 +18,11 @@ The probe is intentionally narrow:
 If dS is materially more stable than dIeq under H refinement, the exact
 discrete static comparator route is promising. If not, the comparator route is
 probably closing and the flagship should shift toward direct dM observables.
+
+Current review-safe default evidence is the coarse/medium ladder
+H={0.5, 0.35}. The fine point H=0.25 remains an optional validation run and
+is expensive enough on the current workstation that it should not be treated
+as retained default evidence.
 """
 
 from __future__ import annotations
@@ -160,8 +165,8 @@ def main():
         "--hs",
         type=float,
         nargs="*",
-        default=[0.5, 0.35, 0.25],
-        help="H values to run. Default: 0.5 0.35 0.25",
+        default=[0.5, 0.35],
+        help="H values to run. Default: 0.5 0.35 (H=0.25 optional and expensive)",
     )
     args = parser.parse_args()
 
