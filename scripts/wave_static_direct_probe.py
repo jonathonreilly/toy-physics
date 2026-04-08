@@ -69,8 +69,19 @@ def solve_static_poisson(PW: float, H: float, strength: float, iz_now: int,
                     max_delta = delta
                 row[iz] = new
         if max_delta < tol:
-            return [r[:] for r in f], max_delta
-    return [r[:] for r in f], max_delta
+            break
+
+    max_resid = 0.0
+    for iy in range(1, nw - 1):
+        for iz in range(1, nw - 1):
+            src = strength if (iy == sy and iz == sz) else 0.0
+            resid = (
+                f[iy - 1][iz] + f[iy + 1][iz] + f[iy][iz - 1] + f[iy][iz + 1]
+                - 4.0 * f[iy][iz] + src
+            )
+            if abs(resid) > max_resid:
+                max_resid = abs(resid)
+    return [r[:] for r in f], max_resid
 
 
 def make_direct_static(NL, PW, H, strength, iz_of_t, src_layer):
