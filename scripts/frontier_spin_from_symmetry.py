@@ -1,21 +1,31 @@
 #!/usr/bin/env python3
-"""Spin-from-symmetry experiment.
+"""Z2 parity charge experiment.
 
 The rectangular DAG has y -> -y mirror symmetry (Z2). The propagator
 decomposes into even (symmetric) and odd (antisymmetric) parity sectors.
-This script tests whether these sectors behave like spin-1/2:
+This script tests whether parity is a conserved quantum number and
+how it responds to symmetry-breaking perturbations.
 
   Part 1: Parity decomposition of propagator at detector boundary
-  Part 2: Phase winding (angular momentum) per sector
-  Part 3: Stern-Gerlach analog - field gradient splits sectors
-  Part 4: Mixing under discrete rotation
+  Part 2: Phase structure per sector
+  Part 3: Parity response to field gradients
+  Part 4: Parity under geometry changes
 
-HYPOTHESIS: The parity sectors behave as distinguishable internal degrees
-of freedom that split under a field gradient, analogous to spin-1/2.
+HYPOTHESIS: Parity is a conserved Z2 quantum number that responds
+differentially to field gradients.
 
-FALSIFICATION: If both sectors shift in the SAME direction under a field
-gradient, there is no spin-like splitting. If phases are identical in
-both sectors, there is no angular momentum distinction.
+FALSIFICATION: If parity is not conserved for symmetric configurations,
+or if gradients do not create odd components from even beams.
+
+NOTE: This tests Z2 (mirror) parity, NOT SU(2) spin. The "Stern-Gerlach"
+analogy is limited: the test compares DIFFERENT source configurations
+(centered for even, off-center for odd), not a single beam split by
+an internal degree of freedom. The sector-specific deflection follows
+from source position, not from a spin-like quantum number.
+
+Part 4 uses geometry changes (source offsets, transposed grid), NOT
+rotation operators. It tests parity sensitivity to symmetry breaking,
+not spinor-like transformation under rotation.
 """
 
 from __future__ import annotations
