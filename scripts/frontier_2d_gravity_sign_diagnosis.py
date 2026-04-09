@@ -474,6 +474,15 @@ def main():
         print("  => Comparing TOWARD vs AWAY tests will identify the cause.")
 
     print()
+    print("  NOTE: Two independent effects contribute to AWAY in 2D:")
+    print("  1. STRONG-FIELD: VL phase wrapping at f > ~0.01 (Test E crossover)")
+    print("  2. ATTENUATION MODE: 1/delay^p gives AWAY even at weak field,")
+    print("     while 1/L^p gives TOWARD (Test G). This is independent of")
+    print("     field strength and is a separate mechanism.")
+    print("  The external summary 'every anomaly was strong-field' is too clean.")
+    print("  Both effects matter in the 2D infrastructure.")
+
+    print()
 
 
 if __name__ == "__main__":

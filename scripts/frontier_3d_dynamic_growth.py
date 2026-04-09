@@ -425,8 +425,12 @@ def test_gravity(layers_free, amps_free):
         print(f"  Late  |deflection| avg: {late_mag:.6f}")
         print(f"  Deflection growing: {'YES' if growing else 'NO'}")
 
-        if late_mag > 0.01:
-            print(f"  PASS: Measurable deflection detected on grown 3D graph.")
+        toward = (late_dy > 0) == (mass_iy > 0)
+        if late_mag > 0.01 and toward:
+            print(f"  PASS: Measurable TOWARD deflection on grown 3D graph.")
+        elif late_mag > 0.01 and not toward:
+            print(f"  PARTIAL: Measurable deflection but AWAY from mass.")
+            print(f"  (Same strong-field sign issue as 2D — see frontier_2d_gravity_sign_diagnosis.py)")
         else:
             print(f"  WEAK: Deflection present but small ({late_mag:.2e}).")
     print()
