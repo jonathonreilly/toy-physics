@@ -227,6 +227,7 @@ def main():
             print(f"    Mean slope: {mean_sl:.4f} ± {std_sl:.4f} (n={len(seed_slopes)})")
             all_results.setdefault(fam_name, {})["per_seed_mean"] = mean_sl
             all_results.setdefault(fam_name, {})["per_seed_std"] = std_sl
+            all_results.setdefault(fam_name, {})["per_seed_slopes"] = seed_slopes
 
     # Cross-family comparison
     print(f"\n{'=' * 80}")
@@ -251,21 +252,33 @@ def main():
             gap = ms - eik_slope
             print(f"    {name}: gap = {gap:+.4f}")
 
-    # Verdict
-    slopes = [all_results[n].get("mean_slope", float('nan')) for n in FAMILIES if n in all_results]
-    slopes = [s for s in slopes if not math.isnan(s)]
-    if len(slopes) >= 2:
-        spread = max(slopes) - min(slopes)
-        per_seed_stds = [all_results[n].get("per_seed_std", 0) for n in FAMILIES if n in all_results]
-        avg_std = sum(per_seed_stds) / len(per_seed_stds) if per_seed_stds else 0
-        print(f"\n  Inter-family spread: {spread:.4f}")
-        print(f"  Average per-seed σ: {avg_std:.4f}")
-        if spread < avg_std:
-            print(f"  → Spread < per-seed σ: families are CONSISTENT (within noise)")
-        elif spread < 2 * avg_std:
-            print(f"  → Spread < 2σ: families are MARGINALLY consistent")
-        else:
-            print(f"  → Spread > 2σ: families show REAL differences")
+    # Verdict: pairwise t-tests on family means (correct uncertainty scale)
+    fam_names = [n for n in FAMILIES if n in all_results]
+    if len(fam_names) >= 2:
+        all_slopes = []
+        for n in fam_names:
+            all_slopes.extend(all_results[n].get("per_seed_slopes", []))
+        if all_slopes:
+            gm = sum(all_slopes) / len(all_slopes)
+            gpop = math.sqrt(sum((s - gm)**2 for s in all_slopes) / len(all_slopes))
+            print(f"\n  Grand mean (all seeds): {gm:.4f}")
+            print(f"  Grand population σ: {gpop:.4f}")
+
+        print(f"\n  Pairwise t-tests on family means:")
+        for i, n1 in enumerate(fam_names):
+            for n2 in fam_names[i+1:]:
+                s1 = all_results[n1].get("per_seed_slopes", [])
+                s2 = all_results[n2].get("per_seed_slopes", [])
+                if len(s1) < 2 or len(s2) < 2:
+                    continue
+                m1 = sum(s1) / len(s1)
+                m2 = sum(s2) / len(s2)
+                v1 = sum((x - m1)**2 for x in s1) / (len(s1) - 1)
+                v2 = sum((x - m2)**2 for x in s2) / (len(s2) - 1)
+                se = math.sqrt(v1 / len(s1) + v2 / len(s2))
+                t = abs(m1 - m2) / se if se > 1e-30 else 0
+                sig = "YES (p<0.05)" if t > 2.3 else "no"
+                print(f"    {n1} vs {n2}: Δ={abs(m1-m2):.4f}, SE={se:.4f}, t={t:.2f}, sig={sig}")
 
 
 if __name__ == "__main__":
