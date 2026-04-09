@@ -324,6 +324,202 @@ limit; on a finite lattice with complex amplitudes and 1/L^p
 attenuation, the quantization pattern is richer and model-specific.
 """)
 
+    # ================================================================
+    # PART 2: POTENTIAL WELL SPECTRUM
+    # ================================================================
+    run_well_experiment()
+
+
+def build_well_propagator(width, full_height, well_half_width,
+                          phase_per_action=4.0, attenuation_power=1.0):
+    """Build transfer matrix inside a potential well created by hard walls.
+
+    Nodes with |y| > well_half_width are blocked, creating a confined
+    channel of transverse width 2*well_half_width + 1.
+    """
+    blocked = frozenset(
+        (x, y)
+        for x in range(width + 1)
+        for y in range(-full_height, full_height + 1)
+        if abs(y) > well_half_width
+    )
+    rule = derive_local_rule(
+        persistent_nodes=frozenset(),
+        postulates=RulePostulates(
+            phase_per_action=phase_per_action,
+            attenuation_power=attenuation_power,
+        ),
+    )
+    nodes = build_rectangular_nodes(width=width, height=full_height,
+                                    blocked_nodes=blocked)
+    node_field = derive_node_field(nodes, rule)
+
+    source_x, detector_x = 0, width
+    y_positions = sorted(y for (x, y) in nodes if x == source_x)
+    n = len(y_positions)
+    y_to_idx = {y: i for i, y in enumerate(y_positions)}
+
+    M = [[complex(0) for _ in range(n)] for _ in range(n)]
+    for j, y_in in enumerate(y_positions):
+        source = (source_x, y_in)
+        at = infer_arrival_times_from_source(nodes, source, rule)
+        dag = build_causal_dag(nodes, at)
+        order = sorted(at, key=at.get)
+        states = defaultdict(complex)
+        states[source] = 1.0 + 0.0j
+        for node in order:
+            amp = states.get(node, 0.0)
+            if amp == 0.0:
+                continue
+            if node[0] == detector_x:
+                if node[1] in y_to_idx:
+                    M[y_to_idx[node[1]]][j] += amp
+                continue
+            for neighbor in dag.get(node, []):
+                _, _, link_amp = local_edge_properties(node, neighbor, rule, node_field)
+                states[neighbor] += amp * link_amp
+    return M, y_positions
+
+
+def run_well_experiment():
+    """Measure quantized energy levels from a hard-wall potential well."""
+    print(f"\n{'#'*70}")
+    print("# PART 2: POTENTIAL WELL SPECTRUM")
+    print(f"{'#'*70}")
+    print("""
+Creates hard-wall confinement by blocking nodes at |y| > well_half_width.
+This is a genuine potential well / particle-in-a-box geometry.
+We test whether E_n/E_1 follows the n^2 sequence and whether
+E_1 scales as 1/W^2 (W = well width = 2*well_half_width + 1).
+""")
+
+    width = 16
+    full_height = 14  # large enough that walls are always inside
+    well_half_widths = [3, 4, 5, 6, 8, 10]
+
+    well_data = {}
+
+    for whw in well_half_widths:
+        W = 2 * whw + 1
+        print(f"\n{'='*70}")
+        print(f"WELL half_width={whw}  (W={W}, n_y={W})")
+        print(f"{'='*70}")
+
+        M, yp = build_well_propagator(width, full_height, whw)
+        svals = get_singular_values(M)
+        pairs = extract_pairs(svals)
+        pair_means = [sum(p) / len(p) for p in pairs]
+
+        # Show spectrum
+        print(f"\nSingular values ({len(svals)} total, {len(pairs)} groups):")
+        print(f"{'#':>3}  {'sigma':>14}  {'sigma/s1':>14}  {'deg':>4}")
+        s1 = svals[0] if svals else 1
+        for k, p in enumerate(pairs[:12]):
+            mean = sum(p) / len(p)
+            ratio = mean / s1 if s1 > 0 else 0
+            print(f"{k+1:3d}  {mean:14.4e}  {ratio:14.8f}  {len(p):4d}")
+
+        # Energy levels
+        if len(pair_means) >= 2 and pair_means[0] > 0:
+            energies = []
+            for p in pair_means:
+                if p > 0:
+                    energies.append(-math.log(p / pair_means[0]))
+                else:
+                    energies.append(float('inf'))
+            non_zero = [(i, e) for i, e in enumerate(energies) if 0 < e < 100]
+            if len(non_zero) >= 2:
+                e1 = non_zero[0][1]
+                print(f"\nEnergy levels E_n = -ln(sigma_n/sigma_1):")
+                print(f"{'n':>3}  {'E_n':>10}  {'E_n/E_1':>10}  {'n^2':>6}  {'dev%':>8}")
+                ratios_for_fit = []
+                for idx, (_, en) in enumerate(non_zero[:8]):
+                    n_level = idx + 1
+                    ratio = en / e1
+                    expected = n_level ** 2
+                    dev_pct = 100 * (ratio - expected) / expected if expected > 0 else 0
+                    print(f"{n_level:3d}  {en:10.4f}  {ratio:10.4f}  {expected:6d}  {dev_pct:+8.1f}%")
+                    ratios_for_fit.append((n_level, ratio))
+
+                # RMS deviation from n^2
+                if len(ratios_for_fit) > 1:
+                    rms = math.sqrt(sum((r - n**2)**2
+                                        for n, r in ratios_for_fit[1:])
+                                    / (len(ratios_for_fit) - 1))
+                    print(f"  RMS deviation from n^2 (levels 2+): {rms:.4f}")
+
+                well_data[whw] = {
+                    'W': W, 'e1': e1, 'svals': svals,
+                    'pair_means': pair_means, 'energies': energies,
+                    'non_zero': non_zero,
+                }
+            else:
+                print("  (fewer than 2 nonzero energy levels)")
+                well_data[whw] = {'W': W, 'e1': None, 'svals': svals,
+                                  'pair_means': pair_means}
+        else:
+            print("  (insufficient data for energy extraction)")
+            well_data[whw] = {'W': W, 'e1': None, 'svals': svals,
+                              'pair_means': pair_means}
+
+    # ---- E_1 vs 1/W^2 scaling ----
+    print(f"\n{'='*70}")
+    print("E_1 vs WELL WIDTH  (particle-in-a-box predicts E_1 ~ 1/W^2)")
+    print(f"{'='*70}")
+
+    e1_points = []
+    for whw in well_half_widths:
+        d = well_data[whw]
+        W = d['W']
+        e1 = d.get('e1')
+        if e1 is not None and e1 > 0:
+            inv_w2 = 1.0 / (W * W)
+            print(f"  W={W:3d}  E_1={e1:.6f}  1/W^2={inv_w2:.6f}  E_1*W^2={e1*W*W:.4f}")
+            e1_points.append((W, e1))
+
+    if len(e1_points) >= 3:
+        # Fit E_1 = a / W^alpha  =>  ln(E_1) = ln(a) - alpha * ln(W)
+        lnW = [math.log(W) for W, _ in e1_points]
+        lnE = [math.log(e) for _, e in e1_points]
+        n_pts = len(lnW)
+        mean_lnW = sum(lnW) / n_pts
+        mean_lnE = sum(lnE) / n_pts
+        cov = sum((w - mean_lnW) * (e - mean_lnE) for w, e in zip(lnW, lnE)) / n_pts
+        var = sum((w - mean_lnW) ** 2 for w in lnW) / n_pts
+        if var > 0:
+            alpha = -cov / var  # E_1 ~ W^{-alpha}
+            ln_a = mean_lnE + alpha * mean_lnW
+            a = math.exp(ln_a)
+            predicted = [a / (W ** alpha) for W, _ in e1_points]
+            ss_res = sum((e - p) ** 2 for (_, e), p in zip(e1_points, predicted))
+            ss_tot = sum((e - math.exp(mean_lnE)) ** 2 for _, e in e1_points)
+            r2 = 1.0 - ss_res / ss_tot if ss_tot > 0 else 0
+            print(f"\n  Power-law fit: E_1 = {a:.4f} / W^{alpha:.4f}")
+            print(f"  Particle-in-a-box predicts alpha = 2.0")
+            print(f"  Measured alpha = {alpha:.4f}")
+            print(f"  R^2 = {r2:.6f}")
+
+    # ---- Summary ----
+    print(f"\n{'='*70}")
+    print("POTENTIAL WELL SUMMARY")
+    print(f"{'='*70}")
+
+    # Collect n^2 deviations across wells
+    for whw in well_half_widths:
+        d = well_data[whw]
+        if d.get('e1') is not None and 'non_zero' in d:
+            e1 = d['e1']
+            nz = d['non_zero']
+            if len(nz) >= 3:
+                devs = []
+                for idx in range(1, min(len(nz), 5)):
+                    n_level = idx + 1
+                    ratio = nz[idx][1] / e1
+                    devs.append(abs(ratio - n_level**2) / n_level**2)
+                avg_dev = sum(devs) / len(devs)
+                print(f"  W={d['W']:3d}  E_1={e1:.4f}  "
+                      f"avg |E_n/E_1 - n^2|/n^2 = {avg_dev:.4f} ({avg_dev*100:.1f}%)")
+
 
 if __name__ == "__main__":
     main()
