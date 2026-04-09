@@ -1,0 +1,78 @@
+================================================================================
+ANALYTICAL FINITE-PATH DEFLECTION through 2D 1/r field
+================================================================================
+alpha(b, L) = -s · L / (b · sqrt((L/2)² + b²))
+Setup: L_eff = (2/3) · T_phys = (2/3) · 15 = 10.0
+       b ∈ {2..6}, so L_eff/b ∈ [1.67, 5.0]
+
+Three regimes:
+  L ≫ b  →  α ≈ -2s/b           (canonical 1/b lensing)
+  L ≪ b  →  α ≈ -s·L/b²         (steeper 1/b² falloff)
+  L ≈ b  →  slope ≈ -1.4 (this is where we are)
+
+================================================================================
+ANALYTICAL CURVE at L = 10.0
+================================================================================
+   b      alpha(b)     normalized to b=3
+ 2.0      0.928477                1.6242
+ 3.0      0.571662                1.0000
+ 4.0      0.390434                0.6830
+ 5.0      0.282843                0.4948
+ 6.0      0.213395                0.3733
+
+Analytical slopes (no fit, exact):
+  b ∈ {2,3,4,5,6}: slope = -1.3346  R² = 0.9973
+  b ∈ {3,4,5,6}: slope = -1.4188  R² = 0.9988
+
+================================================================================
+COMPARISON: analytical vs measured (normalized to b=3)
+================================================================================
+   b      analytic         H=0.5        H=0.35        H=0.25
+ 2.0        1.6242        0.6591        1.1649             —
+ 3.0        1.0000        1.0000        1.0000        1.0000
+ 4.0        0.6830        0.7949        0.5591        0.6381
+ 5.0        0.4948        0.5188        0.5124        0.4722
+ 6.0        0.3733        0.4273        0.3951        0.3695
+
+Slopes side-by-side on b ∈ {3,4,5,6}:
+  analytical (L=10):    slope = -1.4188  R² = 0.9988
+  measured H=0.5:        slope = -1.2811  R² = 0.9711  |Δ from analytic| = 0.1377
+  measured H=0.35:        slope = -1.2692  R² = 0.9366  |Δ from analytic| = 0.1496
+  measured H=0.25:        slope = -1.4335  R² = 0.9984  |Δ from analytic| = 0.0147
+
+================================================================================
+REGIME TEST: predicted slope on b ∈ {3..6} as L varies
+================================================================================
+     L    L/b̄       slope                          regime
+   2.0    0.44     -1.9435     transition (closer to 1/b²)
+   5.0    1.11     -1.7336     transition (closer to 1/b²)
+  10.0    2.22     -1.4188      transition (closer to 1/b)
+  15.0    3.33     -1.2472      transition (closer to 1/b)
+  20.0    4.44     -1.1576      transition (closer to 1/b)
+  30.0    6.67     -1.0776      transition (closer to 1/b)
+  50.0   11.11     -1.0296                 → canonical 1/b
+ 100.0   22.22     -1.0076                 → canonical 1/b
+1000.0  222.22     -1.0001                 → canonical 1/b
+
+================================================================================
+FALSIFIABLE PREDICTIONS
+================================================================================
+
+PREDICTION 1: at L_eff = 60 (T_phys = 90, NL=180 at H=0.5),
+              the slope on b ∈ {3..6} should be ≈ -1.021
+              (significantly closer to −1)
+
+PREDICTION 2: at L_eff = 30 (T_phys = 45, NL=90 at H=0.5),
+              the slope on b ∈ {3..6} should be ≈ -1.078
+
+PREDICTION 3: at L_eff = 10 (current setup) but with b ∈ {1, 2, 3},
+              the slope should be ≈ -1.117
+              (closer to −1, but the b=1 point hits beam-near-field pathology)
+
+PREDICTION 4: at L_eff = 10 (current setup) but with b ∈ {10, 15, 20},
+              the slope should be ≈ -1.881
+              (closer to −2, but blocked by PW limiting b)
+
+Each of these is a falsifiable test of the analytical explanation.
+If the program's measured slope matches the L-dependent prediction,
+the 'transition regime' explanation is confirmed.
