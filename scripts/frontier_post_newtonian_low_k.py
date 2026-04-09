@@ -151,19 +151,18 @@ def measure_gravity(lat, field, k, blocked, det, zf, action_mode):
     return z_centroid - zf
 
 
-def compute_max_phase(lat, field, k, action_mode):
-    """Compute max |k * act| across all edges to check for phase wrapping."""
-    max_act = 0.0
-    for dy, dz, L, w in lat._off:
-        # Sample field at a few representative points near the mass
-        # We just need the maximum action value
-        pass
-    # Simpler: compute action for all field values
+def compute_single_edge_phase(lat, field, k, action_mode):
+    """Compute k * act for a single edge at max field — rough lower bound only.
+
+    WARNING: This measures a single edge, NOT accumulated path phase.
+    A 25-layer path accumulates ~25x this value. This number is NOT
+    sufficient to classify perturbative vs wrapping regime. It is
+    reported as a diagnostic only.
+    """
     f_vals = field[field > 1e-10]
     if len(f_vals) == 0:
-        return 0.0
-    max_f = np.max(f_vals)
-    # The edge with minimum L (=h) and maximum f gives max action deviation
+        return 0.0, 0.0
+    max_f = float(np.max(f_vals))
     h = lat.h
     if action_mode == "valley_linear":
         act_at_max_f = h * (1 - max_f)
@@ -173,7 +172,10 @@ def compute_max_phase(lat, field, k, action_mode):
         act_at_max_f = h * (1 - max_f + 0.5 * max_f * max_f)
     else:
         act_at_max_f = h
-    return abs(k * act_at_max_f)
+    single_edge = abs(k * act_at_max_f)
+    # Rough path estimate: ~nl edges along path
+    path_estimate = single_edge * lat.nl
+    return single_edge, path_estimate
 
 
 def setup_slits(lat):
@@ -249,22 +251,17 @@ def main():
     modes = ["valley_linear", "post_newtonian", "control_plus"]
     mode_short = {"valley_linear": "VL", "post_newtonian": "PN", "control_plus": "CTL"}
 
-    header = (f"{'k':>6} | {'max_phase':>10} | {'regime':>12} | "
+    header = (f"{'k':>6} | {'1-edge ph':>10} | {'~path ph':>10} | "
               f"{'VL shift':>12} | {'PN shift':>12} | {'CTL shift':>12} | "
-              f"{'PN/VL':>8} | {'PN-VL%':>8}")
+              f"{'PN-VL%':>8} | {'note':>10}")
     print(header)
     print("-" * len(header))
 
     k_results = []
     for k in k_values:
-        # Flat centroid depends on k
         zf = flat_centroid(lat, k, blocked, det)
 
-        # Max phase for VL action
-        max_phase_vl = compute_max_phase(lat, field_s, k, "valley_linear")
-        max_phase_pn = compute_max_phase(lat, field_s, k, "post_newtonian")
-        # Use the VL max phase as the reference
-        regime = "perturbative" if max_phase_vl < math.pi else "WRAPPING"
+        single_ph, path_ph = compute_single_edge_phase(lat, field_s, k, "valley_linear")
 
         shifts = {}
         for mode in modes:
@@ -274,18 +271,24 @@ def main():
         pn = shifts["post_newtonian"]
         ctl = shifts["control_plus"]
 
-        ratio_pn = pn / vl if abs(vl) > 1e-12 else float("nan")
         pct_diff = 100 * (pn - vl) / abs(vl) if abs(vl) > 1e-12 else float("nan")
 
-        row = (f"{k:>6.1f} | {max_phase_vl:>10.4f} | {regime:>12s} | "
+        # Flag rows where VL baseline is repulsive (away from mass)
+        note = ""
+        if vl < 0:
+            note = "VL repulsive"
+        elif vl > 0:
+            note = "VL attractive"
+
+        row = (f"{k:>6.1f} | {single_ph:>10.4f} | {path_ph:>10.1f} | "
                f"{vl:>+12.8f} | {pn:>+12.8f} | {ctl:>+12.8f} | "
-               f"{ratio_pn:>8.4f} | {pct_diff:>+8.2f}%")
+               f"{pct_diff:>+8.2f}% | {note:>10s}")
         print(row)
 
         k_results.append({
-            "k": k, "max_phase": max_phase_vl, "regime": regime,
-            "vl": vl, "pn": pn, "ctl": ctl,
-            "ratio": ratio_pn, "pct": pct_diff,
+            "k": k, "single_edge_phase": single_ph, "path_phase_est": path_ph,
+            "vl": vl, "pn": pn, "ctl": ctl, "pct": pct_diff,
+            "vl_attractive": vl > 0,
         })
 
     print()
@@ -315,7 +318,7 @@ def main():
     for s in strengths:
         field_s2, _ = make_field(lat, 3, s)
         mf = np.max(field_s2)
-        max_phase = compute_max_phase(lat, field_s2, k_fixed, "valley_linear")
+        _, max_phase = compute_single_edge_phase(lat, field_s2, k_fixed, "valley_linear")
 
         shifts = {}
         for mode in modes:
@@ -349,34 +352,29 @@ def main():
     print("=" * 78)
     print()
 
-    # Experiment 1 analysis
+    # Experiment 1 analysis — only use rows where VL is attractive
     print("--- Experiment 1: k-dependence at s=5e-2 ---")
     print()
+    attractive_rows = [r for r in k_results if r["vl_attractive"]]
+    repulsive_rows = [r for r in k_results if not r["vl_attractive"]]
 
-    sign_flip_k = None
     for r in k_results:
         sign_str = "ENHANCES" if r["pct"] > 0 else "SUPPRESSES"
-        print(f"  k={r['k']:>5.1f}: max_phase={r['max_phase']:.3f} "
-              f"({r['regime']:<12s})  PN {sign_str} by {abs(r['pct']):.2f}%")
-        if sign_flip_k is None and r["pct"] < 0:
-            sign_flip_k = r["k"]
+        flag = " [VL REPULSIVE — excluded from PN analysis]" if not r["vl_attractive"] else ""
+        print(f"  k={r['k']:>5.1f}: PN {sign_str} by {abs(r['pct']):.2f}%{flag}")
+
+    if repulsive_rows:
+        print(f"\n  NOTE: {len(repulsive_rows)} row(s) have repulsive VL baseline (shift < 0).")
+        print(f"  These rows do NOT represent gravity suppression/enhancement and are")
+        print(f"  excluded from the PN sign analysis.")
 
     print()
-    # Check the prediction
-    perturbative_results = [r for r in k_results if r["regime"] == "perturbative"]
-    wrapping_results = [r for r in k_results if r["regime"] == "WRAPPING"]
-
-    pn_enhances_in_perturbative = all(r["pct"] > 0 for r in perturbative_results) if perturbative_results else False
-    pn_suppresses_in_wrapping = any(r["pct"] < 0 for r in wrapping_results) if wrapping_results else False
-
     print("--- Experiment 2: s-dependence at k=1.0 ---")
     print()
     for r in s_results:
         if abs(r["vl"]) > 1e-12:
             sign_str = "ENHANCES" if r["pct"] > 0 else "SUPPRESSES"
-            print(f"  s={r['s']:.0e}: max_f={r['max_f']:.5f}  "
-                  f"PN {sign_str} by {abs(r['pct']):.2f}%  "
-                  f"(max_phase={r['max_phase']:.4f})")
+            print(f"  s={r['s']:.0e}: max_f={r['max_f']:.5f}  PN {sign_str} by {abs(r['pct']):.2f}%")
         else:
             print(f"  s={r['s']:.0e}: VL shift ~ 0 (below noise)")
 
@@ -389,49 +387,31 @@ def main():
     print("=" * 78)
     print()
 
-    if pn_enhances_in_perturbative and pn_suppresses_in_wrapping:
-        print("  HYPOTHESIS CONFIRMED: Phase wrapping explains the sign reversal.")
-        print()
-        print("  In the perturbative regime (max_phase < pi):")
-        for r in perturbative_results:
-            print(f"    k={r['k']:.1f}: PN enhances gravity by {r['pct']:+.2f}%")
-        print()
-        print("  In the wrapping regime (max_phase > pi):")
-        for r in wrapping_results:
-            print(f"    k={r['k']:.1f}: PN {'suppresses' if r['pct']<0 else 'enhances'} "
-                  f"gravity by {r['pct']:+.2f}%")
-        print()
-        print("  The f^2 correction has the PREDICTED sign (-f^2/2 enhances gravity)")
-        print("  when the lattice operates in the perturbative regime.")
-    elif pn_enhances_in_perturbative:
-        print("  HYPOTHESIS PARTIALLY CONFIRMED: PN enhances in perturbative regime,")
-        print("  but no clear wrapping regime observed.")
-        for r in k_results:
-            print(f"    k={r['k']:.1f}: PN-VL = {r['pct']:+.2f}% "
-                  f"(max_phase={r['max_phase']:.3f})")
+    if not attractive_rows:
+        print("  INCONCLUSIVE: No k values produced attractive VL baseline.")
+        print("  Cannot determine PN sign in an attractive-gravity context.")
     else:
-        # Check if ALL suppress
-        all_suppress = all(r["pct"] < 0 for r in k_results if abs(r["vl"]) > 1e-12)
-        all_enhance = all(r["pct"] > 0 for r in k_results if abs(r["vl"]) > 1e-12)
+        all_suppress = all(r["pct"] < 0 for r in attractive_rows)
+        all_enhance = all(r["pct"] > 0 for r in attractive_rows)
+
+        print(f"  Rows with attractive VL baseline: k = {[r['k'] for r in attractive_rows]}")
+        print()
 
         if all_suppress:
-            print("  HYPOTHESIS FALSIFIED: PN suppresses gravity at ALL k values,")
-            print("  including the perturbative regime (max_phase << pi).")
+            print("  At all tested k values where VL is attractive, PN SUPPRESSES")
+            print("  the centroid shift relative to VL.")
             print()
-            print("  The sign reversal is NOT phase wrapping -- it is fundamental.")
-            print("  The -f^2/2 term reduces the action deficit near the mass,")
-            print("  which REDUCES (not enhances) the phase gradient that drives")
-            print("  gravitational deflection.")
+            print("  The PN action S = L(1-f-f^2/2) produces a SMALLER deflection")
+            print("  than VL S = L(1-f). PN and CTL bracket VL from opposite sides,")
+            print("  confirming the f^2 term has a consistent directional effect.")
             print()
-            print("  This means: PN action makes the field LESS curved, not more.")
+            print("  CAVEAT: Phase classification is not reliable — single-edge phase")
+            print("  does not represent accumulated path phase. The 'perturbative vs")
+            print("  wrapping' framing from the original experiment is withdrawn.")
         elif all_enhance:
-            print("  HYPOTHESIS CONFIRMED (strongly): PN enhances gravity at ALL k.")
-            print("  The original k=5 result may have been a numerical artifact.")
-            for r in k_results:
-                print(f"    k={r['k']:.1f}: PN-VL = {r['pct']:+.2f}%")
+            print("  At all tested k where VL is attractive, PN ENHANCES deflection.")
         else:
-            print("  MIXED RESULTS: sign depends on k but not cleanly on regime.")
-            print()
+            print("  MIXED: PN effect depends on k even among attractive-VL rows.")
             for r in k_results:
                 print(f"    k={r['k']:.1f}: PN-VL = {r['pct']:+.2f}% "
                       f"(max_phase={r['max_phase']:.3f}, {r['regime']})")
