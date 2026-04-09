@@ -1,16 +1,25 @@
 #!/usr/bin/env python3
-"""Lorentzian vs Euclidean spectral averaging: the decisive test.
+"""Lorentzian vs Euclidean spectral averaging: raw equal-amplitude measure.
 
-On the Euclidean model (S=L(1-f)), spectral averaging gives AWAY because
-the geometric baseline (geodesics repelled) dominates when wave resonance
-is washed out.
+Tests whether the Lorentzian split-delay action changes the raw broadband
+spectral sum result (which was AWAY for the Euclidean model).
 
-On the Lorentzian model (S=L(1-f*cos(2theta))), the geometric baseline is
-TOWARD. If spectral averaging preserves this, we get UNIVERSAL ATTRACTION.
+CAVEATS (from review):
+  1. This tests only the RAW equal-amplitude coherent sum. The separate
+     flux-normalized test (frontier_natural_weight_spectral.py) shows that
+     inverse-probability weighting flips the result to TOWARD for BOTH
+     models. The spectral sign depends on the weighting scheme.
+  2. The "geometric TOWARD baseline" framing assumed weak-field geodesic
+     attraction, which is only demonstrated at strong field (5e-2). At the
+     closure-card weak field (5e-5), the lattice cannot resolve the
+     geodesic deflection.
+  3. The raw AWAY result is dominated by a single mode (k=0.5) with 10^22
+     times more detector probability than the attractive-window modes.
 
-HYPOTHESIS: "Lorentzian spectral averaging gives TOWARD (geometric baseline
-dominates)."
-FALSIFICATION: "If Lorentzian also gives AWAY under spectral averaging."
+RESULT: Raw broadband sums are AWAY for both models. This is a property
+of the raw measure (non-unitary amplification bias), not necessarily of
+the underlying physics. See frontier_natural_weight_spectral.py for the
+flux-normalized analysis.
 """
 
 from __future__ import annotations
