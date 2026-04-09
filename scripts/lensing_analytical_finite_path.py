@@ -1,36 +1,30 @@
 #!/usr/bin/env python3
-"""Analytical finite-path-length deflection — explains the Lane L+ slope.
+"""Analytical checks for the Lane L / L+ lensing slope.
 
-After Lane L+ downgraded the lensing measurement to 'clean power law
-with exponent ≈ −1.43, NOT 1/b', the natural question was: why isn't
-it 1/b?
+Lane L+ measured a clean asymptotic power law on b ∈ {3,4,5,6}:
+  kubo_true(b) ∝ b^-1.4335  with R² = 0.9984 at H=0.25.
 
-The answer is that the model IS doing standard Fermat-principle
-deflection through the imposed 2D 1/r field, but we are in the
-finite-path-length transition regime where the asymptotic 1/b law
-does NOT apply.
+An earlier explanation treated this as the finite-path integral for a
+beam segment of length L=10 centered on the mass:
 
-For a beam at z=0 passing a mass at z_src=b in the +x direction
-through a field f = s/(r + ε) where r = sqrt(x² + z²) (2D distance,
-y ignored), the deflection angle integrated over a path of length L
-centered on the mass is:
+    α_centered(b, L) = L / (b * sqrt((L/2)^2 + b^2))
 
-    α(b, L) = -s · L / (b · sqrt((L/2)² + b²))
+That surrogate reproduces the measured slope very well, but it is not
+the literal harness geometry. In the actual sweep:
 
-Three regimes:
-  L ≫ b  →  α ≈ -2s/b              (canonical 1/b lensing)
-  L ≪ b  →  α ≈ -s·L/b²            (steeper 1/b² falloff)
-  L ≈ b  →  intermediate, slope ≈ -1.4 or so
+  - the mass is static at x_src ≈ T_phys / 3 ≈ 5
+  - the beam propagates over the full interval x ∈ [0, (NL-1)H]
+  - the imposed field uses the regularized denominator r + 0.1
+  - the observable is detector centroid shift, not outgoing angle
 
-Our setup has L_eff = (2/3) · T_phys = 10 (the source is active for
-the second 2/3 of the propagation), and b ∈ {3, 4, 5, 6}, so
-L_eff/b ∈ [1.67, 3.33] — squarely in the transition regime.
+This script compares several increasingly literal 1D reductions:
+  1. centered-L=10 surrogate (the earlier explanation)
+  2. actual full-path static-mass integral, no regularizer
+  3. actual full-path static-mass integral, with +0.1 regularizer
+  4. full-path + remaining-distance weighting as a crude detector-shift proxy
 
-This script:
-  1. Computes the analytical α(b, L) for various L values
-  2. Compares to the Lane L / Lane L+ measurements
-  3. Demonstrates the regime transition by varying L
-  4. Predicts what happens as L → ∞ (canonical 1/b should emerge)
+The question is not just "does some finite-path model fit?" but
+"does the literal harness geometry reduce to that model?".
 """
 
 from __future__ import annotations
@@ -38,9 +32,38 @@ from __future__ import annotations
 import math
 
 
-def alpha_finite_path(b, L, s=1.0):
-    """Deflection angle through a 2D 1/r field on a finite path of length L."""
+def alpha_centered_surrogate(b, L, s=1.0):
+    """Centered finite-length surrogate used in the earlier explanation."""
     return s * L / (b * math.sqrt((L / 2) ** 2 + b ** 2))
+
+
+def alpha_full_path_unreg(b, x_det, x_src, s=1.0):
+    """Literal full-path angle integral for a static mass, no regularizer."""
+    term_hi = (x_det - x_src) / math.sqrt((x_det - x_src) ** 2 + b ** 2)
+    term_lo = x_src / math.sqrt(x_src ** 2 + b ** 2)
+    return s * (term_hi + term_lo) / b
+
+
+def alpha_full_path_reg(b, x_det, x_src, eps=0.1, n=200000):
+    """Numerical full-path angle integral with the implemented r+eps denominator."""
+    dx = x_det / n
+    acc = 0.0
+    for i in range(n):
+        x = (i + 0.5) * dx
+        r = math.sqrt((x - x_src) ** 2 + b ** 2)
+        acc += b / (((r + eps) ** 2) * r)
+    return acc * dx
+
+
+def shift_weighted_reg(b, x_det, x_src, eps=0.1, n=200000):
+    """Crude detector-shift proxy: same full-path kernel with remaining-distance weight."""
+    dx = x_det / n
+    acc = 0.0
+    for i in range(n):
+        x = (i + 0.5) * dx
+        r = math.sqrt((x - x_src) ** 2 + b ** 2)
+        acc += (x_det - x) * b / (((r + eps) ** 2) * r)
+    return acc * dx
 
 
 def slope_loglog(xs, ys):
@@ -83,126 +106,69 @@ MEASUREMENTS = {
 
 
 def main():
-    L_eff = 10.0  # (2/3) * T_phys = (2/3) * 15
+    L_sur = 10.0
+    x_src = 5.0
+    x_det = 14.75  # detector layer at x=(NL-1)H for H=0.25, NL=60
 
     print("=" * 80)
-    print("ANALYTICAL FINITE-PATH DEFLECTION through 2D 1/r field")
+    print("LENSING ANALYTICAL CHECKS")
     print("=" * 80)
-    print(f"alpha(b, L) = -s · L / (b · sqrt((L/2)² + b²))")
-    print(f"Setup: L_eff = (2/3) · T_phys = (2/3) · 15 = {L_eff}")
-    print(f"       b ∈ {{2..6}}, so L_eff/b ∈ [1.67, 5.0]")
+    print("Measured fine-lane target: kubo_true(b) on b ∈ {3,4,5,6} at H=0.25")
+    print(f"Static harness geometry: x ∈ [0, {x_det}], x_src = {x_src}, regularizer = 0.1")
+    print(f"Earlier surrogate: centered finite-path model with L = {L_sur}")
     print()
-    print("Three regimes:")
-    print("  L ≫ b  →  α ≈ -2s/b           (canonical 1/b lensing)")
-    print("  L ≪ b  →  α ≈ -s·L/b²         (steeper 1/b² falloff)")
-    print("  L ≈ b  →  slope ≈ -1.4 (this is where we are)")
-    print()
-
-    # Analytical curve at L_eff = 10
-    bs = [2.0, 3.0, 4.0, 5.0, 6.0]
-    alphas = [alpha_finite_path(b, L_eff) for b in bs]
-
-    print("=" * 80)
-    print(f"ANALYTICAL CURVE at L = {L_eff}")
-    print("=" * 80)
-    print(f"{'b':>4s}  {'alpha(b)':>12s}  {'normalized to b=3':>20s}")
-    a3 = alpha_finite_path(3.0, L_eff)
-    for b in bs:
-        a = alpha_finite_path(b, L_eff)
-        print(f"{b:4.1f}  {a:12.6f}  {a/a3:20.4f}")
-
-    # Slopes
-    print()
-    print("Analytical slopes (no fit, exact):")
-    for label, subset in [
-        ("b ∈ {2,3,4,5,6}", [2.0, 3.0, 4.0, 5.0, 6.0]),
-        ("b ∈ {3,4,5,6}",   [3.0, 4.0, 5.0, 6.0]),
-    ]:
-        ys = [alpha_finite_path(b, L_eff) for b in subset]
-        s, r2 = slope_loglog(subset, ys)
-        print(f"  {label}: slope = {s:+.4f}  R² = {r2:.4f}")
+    print("Reference formulas:")
+    print("  centered surrogate:   α(b,L) = L / (b * sqrt((L/2)^2 + b^2))")
+    print("  full-path geometry:   α(b) ∝ ∫ grad_z[1/(r+0.1)] dx over the full beam path")
+    print("  shift proxy:          same full-path kernel with remaining-distance weight")
 
     # Compare to measurements
     print()
     print("=" * 80)
-    print("COMPARISON: analytical vs measured (normalized to b=3)")
+    print("MODEL COMPARISON on b ∈ {3,4,5,6}")
     print("=" * 80)
-    print(f"{'b':>4s}  {'analytic':>12s}  {'H=0.5':>12s}  {'H=0.35':>12s}  {'H=0.25':>12s}")
-    a3 = alpha_finite_path(3.0, L_eff)
+    bs = [3.0, 4.0, 5.0, 6.0]
+    models = {
+        "measured H=0.25": {b: MEASUREMENTS[0.25][b] for b in bs},
+        "centered L=10 surrogate": {b: alpha_centered_surrogate(b, L_sur) for b in bs},
+        "actual full path (no reg)": {b: alpha_full_path_unreg(b, x_det, x_src) for b in bs},
+        "actual full path (+0.1)": {b: alpha_full_path_reg(b, x_det, x_src) for b in bs},
+        "shift-weighted full path": {b: shift_weighted_reg(b, x_det, x_src) for b in bs},
+    }
+
+    print(f"{'model':<28s} {'slope':>10s} {'R²':>8s} {'|Δ slope|':>10s}")
+    s_meas, r_meas = slope_loglog(bs, [models['measured H=0.25'][b] for b in bs])
+    for label, vals in models.items():
+        s, r2 = slope_loglog(bs, [vals[b] for b in bs])
+        ds = abs(s - s_meas)
+        delta = "—" if label == "measured H=0.25" else f"{ds:.4f}"
+        print(f"{label:<28s} {s:+10.4f} {r2:8.4f} {delta:>10s}")
+
+    print()
+    print("Normalized shapes relative to b=3:")
+    print(f"{'b':>4s} {'measured':>10s} {'centered':>10s} {'full+reg':>10s} {'shift+reg':>10s}")
+    m3 = models["measured H=0.25"][3.0]
+    c3 = models["centered L=10 surrogate"][3.0]
+    f3 = models["actual full path (+0.1)"][3.0]
+    w3 = models["shift-weighted full path"][3.0]
     for b in bs:
-        a = alpha_finite_path(b, L_eff) / a3
-        row = f"{b:4.1f}  {a:12.4f}"
-        for H in [0.5, 0.35, 0.25]:
-            v = MEASUREMENTS[H].get(b)
-            if v is None:
-                row += f"  {'—':>12s}"
-            else:
-                v3 = MEASUREMENTS[H].get(3.0, 1.0)
-                row += f"  {v/v3:12.4f}"
-        print(row)
+        print(f"{b:4.1f} {models['measured H=0.25'][b]/m3:10.4f}"
+              f" {models['centered L=10 surrogate'][b]/c3:10.4f}"
+              f" {models['actual full path (+0.1)'][b]/f3:10.4f}"
+              f" {models['shift-weighted full path'][b]/w3:10.4f}")
 
     print()
-    print("Slopes side-by-side on b ∈ {3,4,5,6}:")
-    sub_bs = [3.0, 4.0, 5.0, 6.0]
-    ana = [alpha_finite_path(b, L_eff) for b in sub_bs]
-    sa, ra = slope_loglog(sub_bs, ana)
-    print(f"  analytical (L=10):    slope = {sa:+.4f}  R² = {ra:.4f}")
-    for H in [0.5, 0.35, 0.25]:
-        ys = [MEASUREMENTS[H][b] for b in sub_bs]
-        s, r2 = slope_loglog(sub_bs, ys)
-        diff = abs(s - sa)
-        print(f"  measured H={H}:        slope = {s:+.4f}  R² = {r2:.4f}  |Δ from analytic| = {diff:.4f}")
-
-    # Regime test: vary L_eff and see slope change
-    print()
     print("=" * 80)
-    print("REGIME TEST: predicted slope on b ∈ {3..6} as L varies")
+    print("READ")
     print("=" * 80)
-    print(f"{'L':>6s}  {'L/b̄':>6s}  {'slope':>10s}  {'regime':>30s}")
-    bs_sub = [3.0, 4.0, 5.0, 6.0]
-    b_mean = sum(bs_sub) / len(bs_sub)
-    for L in [2.0, 5.0, 10.0, 15.0, 20.0, 30.0, 50.0, 100.0, 1000.0]:
-        ys = [alpha_finite_path(b, L) for b in bs_sub]
-        s, _ = slope_loglog(bs_sub, ys)
-        ratio = L / b_mean
-        if abs(s + 1.0) < 0.05:
-            regime = "→ canonical 1/b"
-        elif abs(s + 2.0) < 0.05:
-            regime = "→ short-path 1/b²"
-        elif s < -1.5:
-            regime = "transition (closer to 1/b²)"
-        else:
-            regime = "transition (closer to 1/b)"
-        print(f"{L:6.1f}  {ratio:6.2f}  {s:+10.4f}  {regime:>30s}")
-
-    # Predictions for next test
+    print("The centered L=10 surrogate reproduces the fine H=0.25 slope very well,")
+    print("but it is not the literal sweep geometry. The actual static-mass full-path")
+    print("reductions are meaningfully shallower (roughly -1.24 to -1.34).")
     print()
-    print("=" * 80)
-    print("FALSIFIABLE PREDICTIONS")
-    print("=" * 80)
-    print()
-    print("PREDICTION 1: at L_eff = 60 (T_phys = 90, NL=180 at H=0.5),")
-    print(f"              the slope on b ∈ {{3..6}} should be ≈ "
-          f"{slope_loglog([3,4,5,6], [alpha_finite_path(b, 60) for b in [3,4,5,6]])[0]:+.3f}")
-    print(f"              (significantly closer to −1)")
-    print()
-    print("PREDICTION 2: at L_eff = 30 (T_phys = 45, NL=90 at H=0.5),")
-    print(f"              the slope on b ∈ {{3..6}} should be ≈ "
-          f"{slope_loglog([3,4,5,6], [alpha_finite_path(b, 30) for b in [3,4,5,6]])[0]:+.3f}")
-    print()
-    print("PREDICTION 3: at L_eff = 10 (current setup) but with b ∈ {1, 2, 3},")
-    print(f"              the slope should be ≈ "
-          f"{slope_loglog([1,2,3], [alpha_finite_path(b, 10) for b in [1,2,3]])[0]:+.3f}")
-    print(f"              (closer to −1, but the b=1 point hits beam-near-field pathology)")
-    print()
-    print("PREDICTION 4: at L_eff = 10 (current setup) but with b ∈ {10, 15, 20},")
-    print(f"              the slope should be ≈ "
-          f"{slope_loglog([10,15,20], [alpha_finite_path(b, 10) for b in [10,15,20]])[0]:+.3f}")
-    print(f"              (closer to −2, but blocked by PW limiting b)")
-    print()
-    print("Each of these is a falsifiable test of the analytical explanation.")
-    print("If the program's measured slope matches the L-dependent prediction,")
-    print("the 'transition regime' explanation is confirmed.")
+    print("So the finite-path idea is still useful, but the current 'exact analytical")
+    print("explanation' is too strong. The missing ingredient is likely the actual")
+    print("beam/path weighting of the detector-centroid observable, not just a plain")
+    print("angle integral over a centered interaction segment.")
 
 
 if __name__ == "__main__":

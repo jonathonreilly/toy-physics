@@ -21,12 +21,13 @@ the earlier numbers and why they gave a misleading picture.
 
 The companion continuum lane
 ([`WAVE_RETARDATION_CONTINUUM_LIMIT_NOTE.md`](WAVE_RETARDATION_CONTINUUM_LIMIT_NOTE.md))
-showed that `dM` (retarded wave field deflection) is the one
-continuum-stable dynamical quantity at v/c=0.30 on Fam1 (14% monotone
-drift across the refinement {0.5, 0.35, 0.25}). All c=∞ comparators
-tested were unstable.
+showed that `dM` (retarded wave field deflection) was the **least
+unstable** dynamical quantity on Fam1 at v/c=0.30: it had 14% monotone
+last-step drift across the refinement {0.5, 0.35, 0.25}, while all
+c=∞ comparators tested were more unstable.
 
-The natural follow-on: does `dM` stay continuum-stable at **other**
+The natural follow-on: does `dM` stay the least unstable wave-field
+observable at **other**
 velocities? If yes, we have a functional `dM(v/c)` as a direct
 continuum physical observable, independent of any c=∞ comparator.
 

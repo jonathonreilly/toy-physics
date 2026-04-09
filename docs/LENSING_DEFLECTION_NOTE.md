@@ -1,17 +1,20 @@
 # Gravitational Deflection / Lensing Sweep — Power-Law Positive (NOT 1/b)
 
 **Date:** 2026-04-07 (revised after Lane L+ H=0.25 fine refinement)
-**Status:** retained partial positive — at H=0.25 fine refinement, `kubo_true(b)` on b ∈ {3, 4, 5, 6} gives a **clean power law with R² = 0.998** but **slope = −1.43**, NOT the −1 expected from Newton/Einstein 1/b lensing. Refinement steepens the slope from −1.03 (H=0.35, b ∈ {2..6}) to −1.43 (H=0.25, b ∈ {3..6}). The earlier "matches 1/b lensing" headline from the 2-refinement Lane L is **downgraded**. What survives: a clean power-law functional form (R² > 0.998 at the fine refinement), but with an exponent ≈ −1.4 to −1.5, which is not standard gravitational lensing. This is either a unique prediction of the lattice model, a transition regime that would asymptote to −1 at much larger b (untestable here because PW=6 limits the b range), or a boundary effect at the lattice edge (b=6 is at the edge).
+**Status:** retained partial positive — at H=0.25 fine refinement, `kubo_true(b)` on the asymptotic subset b ∈ {3, 4, 5, 6} gives a **clean power law with R² = 0.998** but **slope = −1.43**, NOT the −1 expected from Newton/Einstein 1/b lensing. Refinement steepens the slope: −1.03 at H=0.35 on b ∈ {2..6} → −1.27 at H=0.35 on b ∈ {3..6} → **−1.43 at H=0.25 on b ∈ {3..6}** (R² 0.94 → 0.94 → 0.998). The original Lane L "matches 1/b lensing" headline (medium-only, slope −1.03) is **downgraded**: refinement is moving the slope away from −1, not toward it. What survives is **a clean power-law functional form** (R² > 0.998 at the finest refinement) with an exponent ≈ −1.4 to −1.5 — a meaningful gravity-side functional form but NOT standard Newton/Einstein 1/b lensing. The b=3 reference point matches Lane α's continuum value (+5.986043) to 0.2%, which is a strong consistency check on the harness.
 
 > **Lane L+ update (2026-04-07, H=0.25 added):** The original Lane L
-> reported slope ≈ −1.03 on the b ∈ {2..6} subset at H=0.35 and
-> framed it as "matches 1/b gravitational lensing." Adding the fine
-> refinement at H=0.25 on the asymptotic subset b ∈ {3..6} gives a
-> dramatically cleaner R² (0.94 → 0.998) but a STEEPER slope (−1.27
-> at H=0.35 → −1.43 at H=0.25 on the same subset). The slope is
-> drifting away from −1 with refinement, not toward it. The headline
-> downgrades from "1/b lensing match" to "clean power law with
-> exponent ≈ −1.43, not standard lensing."
+> reported slope ≈ −1.03 on b ∈ {2..6} at H=0.35 and framed it as
+> "matches 1/b gravitational lensing." Adding the fine refinement
+> at H=0.25 on the asymptotic subset b ∈ {3..6} gives a dramatically
+> cleaner R² (0.94 → 0.998) but a STEEPER slope (−1.27 at H=0.35 →
+> −1.43 at H=0.25 on the same subset). The slope is drifting away
+> from −1 with refinement, not toward it. The headline downgrades
+> from "1/b lensing match" to "clean power law with exponent ≈ −1.43,
+> not standard lensing." This is still the first retained
+> **gravity-side** functional-form match in the program (earlier
+> wave-side lanes matched textbook radiation falloff and lightcone),
+> but the gravity-side exponent is non-standard.
 
 ## Artifact chain
 
@@ -113,15 +116,21 @@ displacement, not the analytic Kubo coefficient):
 | **b ∈ {2..6}** | **H=0.35** | **−1.033** | **0.911** | **0.033** |
 | b ∈ {3..6} | H=0.35 | −1.223 | 0.864 | 0.223 |
 
-**The cleanest single result is the b ∈ {2..6} fit at H=0.35 on
-`kubo_true`**: slope = **−1.03**, R² = **0.94**, essentially exact
-1/b scaling. The corresponding dM fit gives the same slope (−1.03)
-with slightly lower R² (0.91).
+**This medium-refinement fit was the initial signal, not the retained
+endpoint.** At `H=0.35` on `b ∈ {2..6}`, `kubo_true` gave slope
+`−1.03` with `R² = 0.94`, and the corresponding `dM` fit gave the
+same slope with slightly lower `R² = 0.91`. That medium-`H`
+`≈ 1/b` reading was later overturned by the `H=0.25` refinement and
+should be read as a provisional intermediate result only.
 
 The b ∈ {3..6} fit is slightly steeper (≈ −1.27) at both
 refinements — this suggests the b = 2 point is in a transition
 regime where the lensing law is approaching its asymptotic form.
-Either fit is close to 1/b.
+So the gravity-side positive here is best read as:
+
+- a strong restricted-fit match on b ∈ {2..6}
+- with a stricter asymptotic subset b ∈ {3..6} that is still close
+  to 1/b but noisier and steeper
 
 ### Coarse refinement is noisier
 
@@ -131,26 +140,29 @@ This is the same lattice-resolution issue seen in Lane δ: the
 coarse grid is not a reliable guide to continuum behavior. The
 medium refinement is where the 1/b structure becomes clean.
 
-## What this establishes
+## What the combined L / L+ lane establishes
 
-1. **Beam deflection through an imposed 1/r field follows 1/b
-   scaling** in the asymptotic regime (mass outside the beam's
-   natural width) at the tested refinement level.
-2. **The slope matches −1 within 3%** on the cleanest fit
-   (b ∈ {2..6}, H=0.35, `kubo_true`): −1.029 with R² = 0.94.
-3. **This holds for both the analytic first-order Kubo coefficient
-   and the finite-difference `dM`** — they give the same slope at
-   H=0.35 (−1.03 for both), which is a self-consistency check.
-4. **A near-field pathology at b ≤ 1 is physically sensible**: the
-   mass is inside the beam's transverse width and the lensing
-   formalism doesn't apply. The beam gets "pushed away" in the
-   centroid sense because the field is asymmetric across the
-   beam's support.
-5. **This is the first result in the program that matches a known
-   physics functional form** (weak-field gravitational lensing
-   α ∝ 1/b). Everything previous was either empirical classifiers,
-   dimensionless ratios, or lattice-specific quantities. This is
-   a direct hit on the 1/b Fermat-principle prediction.
+1. **The gravity-side deflection observable is a clean power law** on
+   the fine asymptotic subset b ∈ {3..6}:
+   - `kubo_true`: slope = `−1.4335`, `R² = 0.9984`
+   - `dM`: slope = `−1.5162`, `R² = 0.9954`
+2. **The exponent is not the Newton/Einstein `−1` law** on the tested
+   fine subset. The medium H=0.35 `≈ −1` fit was a provisional
+   coincidence that did not survive refinement.
+3. **The analytic and finite-difference measurements remain
+   self-consistent** in the stronger sense that both converge to the
+   same qualitative conclusion: a steep non-standard power law with
+   excellent log-log linearity.
+4. **The b=3 reference point is exceptionally stable**:
+   `kubo_true = +5.986043` at H=0.25 matches Lane α's retained
+   continuum value essentially exactly.
+5. **The near-field pathology at b ≤ 1 is real and persistent**:
+   the centroid still deflects away from the mass there, so the
+   far-field fit must stay restricted.
+6. **This remains the first retained gravity-side functional-form
+   match in the program**, but the match is now to a clean
+   non-standard power law rather than standard weak-field `1/b`
+   lensing.
 
 ## What this does NOT establish
 
@@ -158,16 +170,17 @@ medium refinement is where the 1/b structure becomes clean.
   they differ in the coefficient (4GM/c²b vs 2GM/c²b). Our dimensionless
   units don't let us distinguish. We only have the *power law*, not the
   *physical coefficient*.
-- **Continuum stability.** Only 2 refinements (H ∈ {0.5, 0.35}). The
-  H=0.5 data is noisy, and the drift between H=0.5 and H=0.35 at
-  individual b values is large (up to 50%+). A 3rd refinement at
-  H=0.25 would test continuum stability of the power-law slope.
+- **A final continuum-stable exponent.** We now have 3 refinements at
+  some b values, but the slope is still drifting with H
+  (`−1.27 -> −1.43` on kubo_true over b ∈ {3..6}), so the continuum
+  exponent is not yet settled.
 - **Family portability.** Fam1 only. Lane α++ showed Fam2 has
   convergence problems for `kubo_true`; the lensing slope on Fam2
   could be different or also not converge.
-- **Range of validity.** Only 5 b points in the asymptotic regime
-  (b=2 through 6). More b values, or a wider range extending to
-  b = 8, 10, etc., would characterize the 1/b law more robustly.
+- **Large-b asymptotics.** The fine lane only reached the asymptotic
+  subset b ∈ {3..6}, and PW=6 caps the transverse range. A wider PW and
+  larger b are needed to tell “true non-standard exponent” from
+  “transition regime not yet at 1/b.”
 - **Full deflection-angle measurement.** We're reporting `dM / (full
   propagation length)` as a proxy for the deflection angle α. A
   proper measurement would use entry/exit ray angles, not centroid
@@ -308,48 +321,42 @@ deflection coefficient — but it is not the headline "matches Newton/Einstein
 | Compact underlying principle | first-order Kubo derived (Fam1-continuum stable) | "1/b scaling adds a functional form" | **kubo_true(b) is a clean power law (R²=0.998) but with a non-standard exponent** |
 | Experimental prediction | blocked (comparator-dominated) | "first non-blocked connection" | **partial — clean functional form but not matching known weak-field lensing** |
 | Theory compression | first-order Kubo on linearity regime | "1/b b-dependence" | **sharpened differently** — kubo_true(b) is a power law, exponent depends on lattice resolution |
-
 ## Honest read
 
-This is the **strongest moonshot result of the session** — the first
-direct match between the program's output and a recognizable
-gravitational physics prediction. The match is:
+The combined L / L+ lane is still positive, but in a narrower and more
+interesting way than the original Lane L writeup suggested.
 
-- **Quantitatively clean** at the finer refinement (slope −1.03,
-  R² 0.94, within 3% of −1)
-- **Self-consistent** across two independent measurements
-  (analytic Kubo and finite-difference dM give the same slope)
-- **Physically honest** — the near-field exclusion at b=1 is
-  motivated by the beam's transverse width, not by fitting
-- **Conservative** — reported as moderate, not strong, because of
-  the 2-refinement limitation and the noisy coarse data
+- The gravity-side observable is **cleaner** at fine H than it looked at
+  medium H: the power-law R² rises to ~0.998.
+- The gravity-side observable is **less standard** than hoped: the slope
+  moves away from `−1`, not toward it.
+- So the correct retained read is not “matches textbook weak-field
+  lensing,” but “produces a clean non-standard power law whose exponent
+  is still H-dependent in the tested range.”
 
-What it means for the scorecard: **the program reproduces the 1/b
-functional form of weak-field gravitational lensing** on the
-Fam1 grown DAG at H=0.35, in the asymptotic regime where the mass
-is clearly outside the beam's natural width. This is qualitatively
-different from previous retained positives (which were dimensionless
-ratios, empirical classifiers, or lattice-specific coefficients).
-It's a **functional form** match to known physics, which is the
-kind of result that moves the "strength against harshest critique"
-row meaningfully.
+This note now stands as the record of the initial medium-`H` positive
+that was later narrowed. The retained read is no longer a direct
+textbook-lensing match. Instead, the current main-branch result is:
+
+- `H=0.25` gives a much cleaner power law on `b ∈ {3..6}`,
+  but with slope `≈ -1.43`, not `-1`
+- ray-optics and finite-path rescues were subsequently falsified
+- the active mechanism path is the adjoint-kernel / detector-response
+  lane, not a medium-`H` `1/b` interpretation
+
+What it means for the scorecard is narrower than this note originally
+claimed: the program produced an encouraging medium-`H` candidate that
+did not survive fine refinement as textbook weak-field lensing.
 
 ## What to attack next
 
-1. **Lane L+ — add H=0.25 refinement.** Same 6 b-values, third
-   refinement point. Tests continuum stability of the slope.
-   Cheapest single next step.
-2. **Extend the b range to {2..10}.** More asymptotic points would
-   tighten the slope fit. Cost: 4 more b-values × 2 refinements =
-   8 more runs.
-3. **Family portability on lensing slope.** Check whether Fam2 and
-   Fam3 give the same 1/b structure. Given Lane α++, Fam2 is likely
-   to be noisy, but Fam3 should give a clean comparison.
-
-The first (Lane L+) is the most decisive: if the −1.03 slope
-at H=0.35 is stable under further refinement, the result is a
-full positive. If it drifts significantly, we learn that the
-"moderate" label was generous.
+1. **Adjoint-kernel reduction / derivation.** The active question is
+   why the fine-`H` slope is `≈ -1.43`, not whether the medium-`H`
+   fit looked close to `-1`.
+2. **k sweep on the retained fine-`H` slope.** Checks whether the
+   reference `≈ -1.43` law is geometric or phase-coupled.
+3. **Family sweep on the retained fine-`H` slope.** Tests whether the
+   fine-`H` power-law shape is Fam1-specific or shared.
 
 ## Bottom line
 
@@ -357,7 +364,7 @@ full positive. If it drifts significantly, we learn that the
 > `kubo_true(b)` on b ∈ {2..6} fit a slope of −1.03 with R² = 0.94,
 > initially headlined as 'matches 1/b gravitational lensing.' Adding
 > the H=0.25 fine refinement on the asymptotic subset b ∈ {3..6}
-> dramatically tightens the fit (R² = 0.998) but **steepens the
+> dramatically tightened the fit but **steepened the
 > slope to −1.43**. Refinement is moving the slope away from −1,
 > not toward it. The Lane L 'matches lensing' headline is
 > **downgraded**. The retained result is now: `kubo_true(b)` on

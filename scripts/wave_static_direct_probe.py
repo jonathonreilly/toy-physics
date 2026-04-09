@@ -18,6 +18,11 @@ The probe is intentionally narrow:
 If dS is materially more stable than dIeq under H refinement, the exact
 discrete static comparator route is promising. If not, the comparator route is
 probably closing and the flagship should shift toward direct dM observables.
+
+Current review-safe default evidence is the coarse/medium ladder
+H={0.5, 0.35}. The fine point H=0.25 remains an optional validation run and
+is expensive enough on the current workstation that it should not be treated
+as retained default evidence.
 """
 
 from __future__ import annotations
@@ -69,8 +74,19 @@ def solve_static_poisson(PW: float, H: float, strength: float, iz_now: int,
                     max_delta = delta
                 row[iz] = new
         if max_delta < tol:
-            return [r[:] for r in f], max_delta
-    return [r[:] for r in f], max_delta
+            break
+
+    max_resid = 0.0
+    for iy in range(1, nw - 1):
+        for iz in range(1, nw - 1):
+            src = strength if (iy == sy and iz == sz) else 0.0
+            resid = (
+                f[iy - 1][iz] + f[iy + 1][iz] + f[iy][iz - 1] + f[iy][iz + 1]
+                - 4.0 * f[iy][iz] + src
+            )
+            if abs(resid) > max_resid:
+                max_resid = abs(resid)
+    return [r[:] for r in f], max_resid
 
 
 def make_direct_static(NL, PW, H, strength, iz_of_t, src_layer):
@@ -149,8 +165,8 @@ def main():
         "--hs",
         type=float,
         nargs="*",
-        default=[0.5, 0.35, 0.25],
-        help="H values to run. Default: 0.5 0.35 0.25",
+        default=[0.5, 0.35],
+        help="H values to run. Default: 0.5 0.35 (H=0.25 optional and expensive)",
     )
     args = parser.parse_args()
 

@@ -2,11 +2,12 @@
 """Continuum limit of dM (retarded wave field deflection) at multiple v/c.
 
 Lane δ. The wave-retardation continuum lane
-(`wave_retardation_continuum_limit.py`) established that `dM` — the
+(`wave_retardation_continuum_limit.py`) suggested that `dM` — the
 beam centroid deflection through the retarded wave-equation field
-driven by a moving source — is the one continuum-stable dynamical
-quantity. At v/c = 0.30 on Fam1, dM drifts only 14% monotonically
-across the refinement {0.5, 0.35, 0.25}.
+driven by a moving source — is the least unstable dynamical quantity
+among the tested wave-retardation observables. At v/c = 0.30 on Fam1,
+dM drifts 14% monotonically across the refinement {0.5, 0.35, 0.25},
+while the tested c=∞ comparators were more unstable.
 
 That was a single velocity. This lane sweeps v/c and measures dM
 alone (NO comparators: no dI, dIeq, or dN) across the same
@@ -20,7 +21,7 @@ gravitational deflection as a function of source velocity — without
 any reference to an instantaneous-Newton comparator. This bypasses
 the comparator question that blocks the wave-retardation lab card.
 
-If no, we learn that dM's apparent stability at v/c = 0.30 was
+If no, we learn that dM's apparent relative stability at v/c = 0.30 was
 velocity-specific and the retarded field has lattice artifacts at
 other velocities too.
 

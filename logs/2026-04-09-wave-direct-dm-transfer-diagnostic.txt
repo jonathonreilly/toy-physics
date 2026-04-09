@@ -1,0 +1,24 @@
+==========================================================================================================================
+WAVE DIRECT-DM TRANSFER DIAGNOSTIC
+==========================================================================================================================
+Controlled Fam1/Fam2 fine-H rows compressed against the retained coarse matched-schedule batch at reference strength s=0.004
+Diagnostic: G = dM(late) - dM(early), T(F,s) = G(H=0.25) / mean(G(H=0.5), G(H=0.35))
+
+PER-ROW TRANSFER TABLE
+family seed      G@0.5     G@0.35  mean coarse G     G@0.25    T(F,s)    R@0.25
+Fam1      0  +0.004162  +0.003535      +0.003848  +0.001257    0.3266   -20.12%
+Fam1      1  +0.001897  +0.001625      +0.001761  +0.001844    1.0471   -29.47%
+Fam2      0  +0.004085  +0.002874      +0.003480  +0.001576    0.4529   -22.61%
+Fam2      1  +0.001937  +0.002061      +0.001999  +0.002037    1.0190   -35.03%
+
+SEED SUMMARY
+seed     mean T             T band read
+   0     0.3898   0.3266 ..  0.4529 fine-H late gain compresses sharply into the weaker branch
+   1     1.0331   1.0190 ..  1.0471 fine-H late gain stays on the coarse branch scale
+
+NARROW READ
+  - This transfer map is not a new portability batch or a family law.
+  - It is one concrete split diagnostic on the already-controlled Fam1/Fam2 fine-H surface.
+  - Seed-0 rows compress sharply: T = 0.3266 and 0.4529.
+  - Seed-1 rows retain coarse late-gain scale: T = 1.0471 and 1.0190.
+  - So the durable separator is coarse-to-fine late-gain retention/compression, not family label alone and not early-branch loss.

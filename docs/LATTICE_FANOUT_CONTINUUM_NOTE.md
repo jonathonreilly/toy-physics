@@ -69,7 +69,7 @@ one for the fan-out's (1/h) count.
 
 - Fan-out normalization as a continuum-limit recipe for this kernel
 - Any claim that "linear edge normalization by √branch_count" is sufficient
-  for Born-clean refinement — the branch count's h-scaling is the wrong power
+  for continuum-safe refinement — the branch count's h-scaling is the wrong power
 
 ## What remains from the plan
 

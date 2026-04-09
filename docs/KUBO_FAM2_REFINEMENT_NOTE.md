@@ -1,7 +1,7 @@
-# Fam2 Single-Family Refinement — Hard Negative
+# Fam2 Single-Family Refinement — Strong Negative on the Tested Ladder
 
 **Date:** 2026-04-07
-**Status:** retained negative — Fam2 kubo_true at H=0.20 gives **+4.5082**, a 36.4% crash from H=0.25's +7.0883 and 24.5% below the Fam1/Fam3 converged value of ~5.97. The oscillation amplitude is GROWING with refinement, not shrinking. The hypothesis "Fam2 just needs finer H to converge to ~5.97" is decisively rejected. Fam2 has a genuinely different continuum behavior from Fam1/Fam3, most likely because its weak lattice pull (drift=0.05, restore=0.30) produces qualitatively different grown geometry at each H.
+**Status:** retained negative on the tested ladder — Fam2 kubo_true at H=0.20 gives **+4.5082**, a 36.4% crash from H=0.25's +7.0883 and 24.5% below the Fam1/Fam3 converged value of ~5.97. The oscillation amplitude grows rather than shrinks across the tested H sequence. This strongly weakens the simple "Fam2 just needs one more refinement to settle near ~5.97" rescue story, but it does **not** prove literal divergence or rule out later settling at much finer H. The lane supports a genuinely different observed refinement behavior on Fam2 relative to Fam1/Fam3. A weaker lattice-pull story is a plausible interpretation, but the current data do **not** isolate `restore` alone because drift and restore vary together across families.
 
 ## Artifact chain
 
@@ -48,14 +48,15 @@ Comparison to Fam1/Fam3 at H=0.25:
 - Fam2 at H=0.20: **+4.5082**
 - Deviation from Fam1/Fam3 target: **24.5%**
 
-## What this rejects
+## What this strongly weakens
 
-The hypothesis "Fam2 is slow to converge but will settle near 5.97
-at finer H" is decisively rejected. If Fam2 were approaching the
-Fam1/Fam3 value, we would expect Δ(H=0.25 → H=0.20) to be smaller
+The simple near-term rescue story
+"Fam2 is slow to converge but will settle near 5.97 on this tested
+ladder" is not supported. If Fam2 were approaching the Fam1/Fam3
+value smoothly, we would expect Δ(H=0.25 → H=0.20) to be smaller
 than Δ(H=0.35 → H=0.25). Instead, the Δ amplitude GREW from 12.2%
-to 36.4%. The oscillation is getting worse with refinement, not
-damping out.
+to 36.4%. On the tested sequence, the oscillation is getting worse,
+not better.
 
 The Fam2 series is:
 
@@ -64,8 +65,9 @@ The Fam2 series is:
        -5.1%    +12.2%    -36.4%
 ```
 
-This is non-monotone and divergent — the very pattern that
-indicates NOT converging.
+This is non-monotone and still bouncing on the tested ladder.
+It is enough to say "not converged here," not enough to prove
+mathematical divergence.
 
 ## What this does not reject
 
@@ -74,10 +76,10 @@ affected. Lane α+'s finding that Fam1 and Fam3 agree to 0.5% at
 H=0.25 is not affected. What this lane kills is the weaker claim
 that Fam2 *would* join them at finer H.
 
-## Scientific interpretation
+## Scientific interpretation (inference, not isolated mechanism)
 
-The three tested families have very different "lattice pull"
-strengths:
+The three tested families have very different generator parameters, and
+one plausible reading is that they differ in effective "lattice pull":
 
 | Family | drift | restore | character |
 | --- | ---: | ---: | --- |
@@ -93,41 +95,39 @@ contribution. At **restore=0.30** (Fam2), only 30% is locked to
 the grid and **70% of the position** is determined by the
 previous layer's drift trajectory.
 
-This has a key implication: **Fam2 at different H values is not
-the same physical system with a finer lattice — it is qualitatively
-different geometry at each H**. The "crystalline" structure that
-Fam1 and Fam3 preserve under refinement is not preserved by Fam2.
-Each refinement step produces a distinctly-structured grown DAG
-because the weak restore + the changing drift*H magnitude yields
-a different balance.
+That makes the following interpretation plausible, but not yet proven:
+**Fam2 may not preserve the same effective geometry under refinement in
+the way the higher-restore families do.** The current data are
+consistent with Fam2 producing a more H-sensitive grown DAG, but they do
+not isolate whether `restore`, `drift`, or some interaction between the
+two is the operative cause.
 
 In this reading:
 
-- Fam1 and Fam3 have a well-defined continuum limit of `kubo_true`
-  because the geometry is stable under refinement
-- Fam2 does NOT have a well-defined continuum limit at these
-  refinements because the geometry keeps changing qualitatively
-- The family-portable continuum value (~5.97) holds on
-  strongly-crystalline families, not weakly-crystalline ones
+- Fam1 and Fam3 have a well-defined observed continuum limit of
+  `kubo_true` at the tested refinements
+- Fam2 is not converged on the tested H ladder
+- The ~5.97 continuum value currently holds on the two higher-restore
+  families tested, but not on Fam2 at these refinements
 
 This is a meaningful distinction, not just a failure to converge:
-it says the continuum-limit claim for `kubo_true` is conditional
-on the generator having enough lattice pull to produce geometry-
-invariant behavior across refinements.
+it says the continuum-limit claim for `kubo_true` is generator-
+conditional at the currently tested parameter choices. The weak-lattice-
+pull reading is a leading explanation, not yet an isolated theorem.
 
 ## Frontier map adjustment (Update 13)
 
 | Row | Update 12 (Lane α+ + Lane δ) | This lane |
 | --- | --- | --- |
-| kubo_true continuum limit on Fam2 | not yet settled | **explicitly DOES NOT converge** at H ∈ {0.5, 0.35, 0.25, 0.20} |
-| Family portability of kubo_true | partial (Fam1/Fam3 agree, Fam2 bouncing) | **partial narrowed**: agrees on strongly-crystalline families (restore ≥ 0.70), does NOT hold on Fam2 (restore=0.30) |
-| Hypothesis "Fam2 just needs finer H" | open | **REJECTED** — Fam2 oscillation amplitude grows with refinement |
+| kubo_true continuum limit on Fam2 | not yet settled | **not converged on the tested H ladder** H ∈ {0.5, 0.35, 0.25, 0.20} |
+| Family portability of kubo_true | partial (Fam1/Fam3 agree, Fam2 bouncing) | **partial narrowed**: agrees on the two higher-restore families tested, does NOT hold on Fam2 at these refinements |
+| Hypothesis "Fam2 just needs one more refinement" | open | **strongly weakened** — Fam2 oscillation amplitude grows with refinement |
 
 ## What this does NOT resolve
 
 - Whether a 5th refinement point (H=0.15 or finer) would reveal a
   different pattern — blocked by memory / compute budget.
-- Whether the "strongly crystalline" classification is the right
+- Whether the higher-restore / weaker-restore reading is the right
   one, or whether some other property of Fam2 (e.g., its smaller
   drift producing less path diversity) is the real cause.
 - Whether there exists a modified family generator that would
@@ -137,14 +137,16 @@ invariant behavior across refinements.
 
 > "At a new refinement point H=0.20, Fam2's kubo_true is +4.5082 — a
 > 36.4% crash from H=0.25's +7.0883 and 24.5% below the Fam1/Fam3
-> converged value of ~5.97. The Fam2 oscillation amplitude is
-> GROWING with refinement (5.1% → 12.2% → 36.4%), not shrinking. The
-> hypothesis 'Fam2 is slow to converge but will settle near 5.97
-> at finer H' is decisively rejected. Fam2's weak lattice pull
-> (restore=0.30, vs 0.70/0.90 for Fam1/Fam3) means its grown
-> geometry is qualitatively different at each H, so there is no
-> single 'continuum limit' in the same sense as Fam1/Fam3. The
-> family-portable continuum value ~5.97 now holds specifically on
-> strongly-crystalline families, not on weakly-crystalline Fam2.
-> This narrows the claim rather than invalidating it — Lane α and
-> Lane α+'s Fam1/Fam3 agreement are unaffected."
+> converged value of ~5.97. The Fam2 oscillation amplitude grows
+> with refinement on the tested ladder (5.1% → 12.2% → 36.4%), so
+> Fam2 is still bouncing rather than settling at H ∈ {0.5, 0.35,
+> 0.25, 0.20}. This strongly weakens the easy near-term rescue story,
+> but it does not by itself prove literal divergence or rule out
+> later settling at much finer H. Fam2 shows a genuinely different
+> observed refinement behavior from Fam1/Fam3 at the tested H values.
+> A weaker-lattice-pull explanation is plausible, but the current data
+> do not isolate `restore` alone because drift and restore co-vary.
+> The ~5.97 continuum value currently holds on Fam1/Fam3 and not on
+> Fam2 at these refinements. This narrows the claim rather than
+> invalidating it — Lane α and Lane α+'s Fam1/Fam3 agreement are
+> unaffected."

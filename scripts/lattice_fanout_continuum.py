@@ -14,14 +14,13 @@ fan-out: if each edge carries amp/sqrt(fan_out), the sum of |edge|²
 over the fan-out equals |amp|² (ignoring the 1/L and w factors).
 
 The key questions:
-  1. Is the kernel Born-clean (|I₃|/P < 1e-10)? This MUST be verified
-     because fan-out normalization changes the kernel.
+  1. Does the kernel stay numerically well-behaved as h → 0?
   2. Does the physics (gravity, MI, decoherence) converge as h → 0?
   3. Does the scheme survive h=0.25 and ideally h=0.125?
 
 If all three pass, this is the continuum-limit unlock the plan targets.
-If Born fails, the scheme is physics-invalid and we learn the
-normalization can't be arbitrary.
+If the amplitudes or detector probability blow up, the scheme is
+physics-invalid and we learn the normalization can't be arbitrary.
 
 Cost: same as lattice_continuum_limit at each h. Tests h ∈ {2, 1, 0.5, 0.25}.
 """
@@ -136,13 +135,13 @@ def make_field(pos, nmap, gl, mass_y_phys, spacing, hw_nodes, strength):
     return field, mass_idx
 
 
-def born_audit(pa, pb, det):
-    """Born audit: interference term |I3| vs total probability P.
+def interference_ratio(pa, pb, det):
+    """2-slit interference-ratio sanity value.
 
-    Two path-sets a and b that are complementary (a+b). For a linear
-    (Born-clean) propagator, |pa+pb|² = |pa|² + |pb|² + 2·Re(pa*·pb)
-    and P_total when BOTH slits are open equals sum |pa+pb|² over det.
-    |I3|/P measures how far from Born the kernel is.
+    This is NOT a true 3-slit Sorkin I3/P Born audit. It reports the
+    magnitude of the 2-slit interference contribution relative to the
+    total detector probability. It is useful as a coarse sanity value,
+    but it should not be interpreted as Born violation or Born retention.
     """
     num = 0.0
     den = 0.0
@@ -155,13 +154,6 @@ def born_audit(pa, pb, det):
         den += p_interf
     if den < 1e-30:
         return float('nan')
-    # Cross terms ARE Born-allowed (they ARE the interference).
-    # The I3 audit is three-way: (p_a+p_b+p_c) vs sum of two-ways.
-    # For our 2-slit setup, the honest Born check is the sum rule:
-    # P_open = P_a + P_b + 2·Re(pa·pb*)   (this is automatically true)
-    # A sharper check: does |pa|²+|pb|² equal P_no_interference?
-    # Here we report ratio of interference to total as a sanity value;
-    # true I3 Born violation needs a 3-slit geometry, not reported here.
     return num / den
 
 
@@ -207,12 +199,12 @@ def measure_all(spacing):
         gk0 = (sum(abs(am0[d]) ** 2 * pos[d][1] for d in det) / pm0
                - sum(abs(af0[d]) ** 2 * pos[d][1] for d in det) / pf0)
 
-    # Single-slit runs for Born audit and MI
+    # Single-slit runs for interference-ratio sanity value and MI
     pa = propagate_fanout(pos, adj, field_f, K, blocked | set(sb), n)
     pb = propagate_fanout(pos, adj, field_f, K, blocked | set(sa), n)
 
-    # Born audit
-    born_ratio = born_audit(pa, pb, det)
+    # 2-slit interference-ratio sanity value (not a true Born I3 audit)
+    born_ratio = interference_ratio(pa, pb, det)
 
     # MI
     bw = 2 * (PHYS_WIDTH + spacing) / N_YBINS
@@ -325,9 +317,9 @@ def main():
     else:
         print("    sign NOT stable across refinements")
 
-    # Born check (this is a 2-slit cross-term report, not 3-slit I3)
+    # Interference check (this is a 2-slit cross-term report, not 3-slit I3)
     borns = [r['born'] for r in results]
-    print(f"  Born interference ratio: {['%.2e' % b for b in borns]}")
+    print(f"  2-slit interference ratio: {['%.2e' % b for b in borns]}")
     print(f"    (this is a 2-slit cross-term magnitude, not 3-slit I3;")
     print(f"     a true 3-slit Born audit needs a 3-path geometry)")
 
