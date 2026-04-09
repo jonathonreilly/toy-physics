@@ -1,11 +1,11 @@
 # Born/Eikonal Scattering Comparison with Lattice Lensing
 
-**Date:** 2026-04-08
-**Status:** SUGGESTIVE POSITIVE — the non-relativistic eikonal prediction gives a slope of −1.28 on b ∈ {3..6}, while the lattice gives −1.43. The shapes are consistent: both are in the finite-path transition regime, both steepen with b, and the Δ = 0.15 discrepancy is in the direction predicted by the Gaussian angular weight correction (tighter beam → steeper slope).
+**Date:** 2026-04-08 (updated same day with 3D corrections)
+**Status:** NARROWED — the plane-wave eikonal gives slope −1.28 (Δ=0.15 from lattice), which remains the closest theoretical prediction. Beam-averaging corrections (both 2D and 3D) WORSEN the match. The original framing as "non-relativistic eikonal" was based on the 2D Schrödinger characterization, which does NOT transfer to the 3D grown DAG (where Schrödinger and Klein-Gordon are indistinguishable). The eikonal integral itself is geometry-agnostic — it's the same regardless of whether the underlying dispersion is relativistic or non-relativistic.
 
 ## Context
 
-The [dispersion relation measurement](DISPERSION_RELATION_NOTE.md) established that the propagator is Schrödinger (non-relativistic). This means the correct theoretical comparison for the [lensing invariant](LENSING_COMBINED_INVARIANT_NOTE.md) is non-relativistic eikonal scattering from a 1/r potential, not relativistic gravitational lensing.
+The [dispersion relation measurement](DISPERSION_RELATION_NOTE.md) originally established Schrödinger on 2D lattice, but 3D follow-up showed **Schrödinger ≈ Klein-Gordon on the actual grown DAG** (R² Δ=0.002). The eikonal comparison is valid regardless of the dispersion type — it's a geometric-optics prediction for the deflection integral along a straight path through a 1/r potential.
 
 ## The prediction
 
@@ -54,25 +54,37 @@ The eikonal prediction captures the **right functional form** (power law, steepe
 - The L-independence is a **wave-mechanical effect** beyond the eikonal — likely related to the Gaussian beam's effective transverse coherence length being the relevant scale, not the path length L
 - The Gaussian angular weight β=0.8 provides the specific correction that shifts −1.28 → −1.43
 
+## Beam-averaging corrections (BOTH TESTED AND FALSIFIED)
+
+The queued follow-up was to compute beam-corrected eikonals. Both 2D and 3D beam corrections were tested and both **WORSEN** the match:
+
+| Model | Slope | Δ from −1.43 | Status |
+| --- | ---: | ---: | --- |
+| Plane-wave (single ray) | −1.28 | 0.15 | **BEST** |
+| 2D beam average (β=0.8) | −0.35 | 1.08 | Falsified |
+| 3D beam average (β=0.8, 1/L²) | −0.77 | 0.66 | Falsified |
+| Canonical 1/b | −1.00 | 0.43 | Wrong |
+| Lattice measurement | −1.43 | 0.00 | Target |
+
+Scripts: [`gaussian_beam_eikonal.py`](../scripts/gaussian_beam_eikonal.py), [`eikonal_3d_corrected.py`](../scripts/eikonal_3d_corrected.py)
+
+**Why beam averaging fails:** At β=0.8, the beam width at the source position is σ_z ≈ 3.5–4.0, comparable to the impact parameters b ∈ {3..6}. Averaging over this wide beam smears out the 1/b structure, flattening the slope. The 3D correction (1/L² kernel factor) tightens the beam slightly (σ_z: 3.95 → 3.54) but not enough.
+
 ## What this establishes
 
-- The non-relativistic eikonal is a **better starting point** than relativistic lensing (slope Δ = 0.15 vs Δ = 0.43 for canonical 1/b)
-- The remaining discrepancy is attributable to known physics (beam localization, wave corrections) rather than a mysterious unknown mechanism
-- The L-independence is the ONE feature the eikonal still can't explain
-- The whole picture is coherent: Schrödinger propagator → non-relativistic eikonal baseline → Gaussian beam correction → measured −1.43
-
-## Queued follow-up
-
-- Compute the Gaussian-beam-corrected eikonal (replace the plane-wave assumption with the actual Gaussian angular weight distribution). This should close the gap between −1.28 and −1.43.
-- If the corrected prediction also becomes L-independent (because the beam width, not L, sets the effective integration range), that would explain ALL the features of the lattice measurement.
+- The plane-wave eikonal is the **best available theoretical prediction** (Δ=0.15)
+- Beam corrections make things worse, not better — the effective deflection is closer to single-ray optics than to wave optics for this observable
+- ~~The whole picture is coherent~~ — **the picture is INCOMPLETE**: the Δ=0.15 gap between eikonal (−1.28) and lattice (−1.43) is unexplained by any correction tested
+- The L-independence remains unexplained
+- The original "non-relativistic" framing is uncertain: the DAG's dispersion doesn't clearly distinguish Schrödinger from Klein-Gordon
 
 ## Bottom line
 
-> "The non-relativistic eikonal gives slope −1.28 vs lattice −1.43 (Δ=0.15),
-> with the discrepancy in the direction predicted by the Gaussian angular
-> weight correction. This is a better match than any relativistic formula
-> tried (which gave Δ = 0.43 for canonical 1/b). The remaining gap is
-> attributable to the beam's finite transverse width (set by β=0.8), not
-> an unknown mechanism. The one feature still unexplained is the
-> L-independence, which may emerge from the beam width being the effective
-> integration cutoff rather than the path length."
+> "The plane-wave eikonal for a 2D 1/r potential at L=15, x_src=5
+> gives slope −1.28 on b ∈ {3..6} (Δ=0.15 from lattice −1.43).
+> This is the closest theoretical prediction achieved. Beam-averaging
+> corrections (2D and 3D) both worsen the match to Δ=1.08 and
+> Δ=0.66 respectively. The remaining Δ=0.15 and the L-independence
+> are unexplained. The original framing as 'non-relativistic eikonal'
+> was based on a 2D dispersion result that does not transfer to the
+> 3D grown DAG."
