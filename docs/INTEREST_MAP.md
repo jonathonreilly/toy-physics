@@ -1,6 +1,6 @@
 # Interest Map
 
-**Date:** 2026-04-07  
+**Date:** 2026-04-09  
 **Status:** internal program-calibration note
 
 ## Purpose
@@ -142,6 +142,69 @@ Important updates since the last score change:
   - these two negatives do **not** weaken the scalar-wave / field-law stack,
     but they do sharply narrow the current universality and matter stories
 
+## Delta Vs Last Update
+
+Score deltas since the previous map:
+
+- `Publishable as a foundational-physics breakthrough claim`: `7.9 -> 8.0`
+  Reason: today added a narrower but more review-safe flagship core:
+  action constraint, the resolved 2D-vs-3D distance-law framing, and the
+  gauge-structure result now form a cleaner paper package than the earlier
+  frontier spread.
+- `Likelihood of publication in very top field journals today`: `6.8 -> 7.0`
+  Reason: the package is still too incomplete for a broad breakthrough claim,
+  but the review-hardened narrow story is stronger and more legible than it
+  was before the moonshot / review cycle.
+- `Ready for top-tier mainstream physics claims`: `7.0 -> 7.1`
+  Reason: the bridge-to-known-physics surface widened again through the
+  retained gauge, action, distance-law, and bounded parity-sector results,
+  even though the Lorentz / matter story is still open.
+- `Strength against harshest critique`: `4.7 -> 5.0`
+  Reason: six review rounds materially improved trust. Several apparent wins
+  were narrowed or withdrawn, but that self-correction makes the surviving
+  package easier to defend under hostile reading.
+- `Field-shifting theory program`: `9.8 -> 9.9`
+  Reason: today's merged work widened the program in a useful way even where
+  the answers were negative: gauge structure now lands strongly, while the
+  Hawking, spin, entanglement, energy-spectrum, and phase-metric lanes are
+  more honestly bounded.
+
+Retained-claim status changes since the previous map:
+
+- `New positive`: gauge invariance now survives as a real structural result
+  inside the current path-sum harness:
+  U(1) node-phase invariance, true pure-gauge invariance, Aharonov-Bohm
+  modulation, SU(2) gauge-transform invariance, and Wilson-loop invariance.
+- `Narrow positive`: the action story is now clearly a constraint theorem,
+  not a uniqueness theorem; that is weaker rhetoric but stronger retained
+  science.
+- `Narrow positive`: the distance-law story is cleaner:
+  the old 2D anomaly is reframed as correct logarithmic 2D physics, while the
+  3D / Coulomb-side valley-linear result survives as the real Newtonian bridge.
+- `Downgraded`: entanglement moved from a claimed area law to
+  boundary-controlled sub-area-law saturation.
+- `Downgraded`: Hawking moved from a horizon-style analog claim to the much
+  narrower result "thermal-looking spectrum, Hawking scaling falsified."
+- `Downgraded`: spin moved from a spin-1/2 / SU(2) suggestion to a bounded
+  `Z2` parity-charge / Stern-Gerlach-style splitting result.
+- `New negative`: the phase-weighted metric does produce Lorentzian windows,
+  but the current stability sweep says they move into the UV roughly like
+  `1/h`; that makes this lane look like a lattice-phase aliasing effect rather
+  than retained continuum Lorentzian emergence.
+- `New bounded result`: the effective-Hamiltonian lane now says the propagator
+  has classifiable dispersion at tested `h`, but no clean converged continuum
+  form is established yet.
+
+Score deltas that did not move:
+
+- `Toy-model mechanism interest`: unchanged at `10.0/10`
+- `Foundations / complex-systems / network-dynamics interest`: unchanged at `10.0/10`
+- `Broad theorist interest`: unchanged at `10.0/10`
+- `Bridge to known physics`: unchanged at `10.0/10`
+- `Publishable as a careful computational toy-model paper`: unchanged at `10.0/10`
+- `Landmark foundational breakthrough`: unchanged at `7.7/10`
+- `Nobel-scale breakthrough`: unchanged at `1.8/10`
+
 ## Current map
 
 | category | score | read |
@@ -151,11 +214,11 @@ Important updates since the last score change:
 | Broad theorist interest | `10.0/10` | still maxed out on curiosity value; the exact-lattice wavefield lane, complex-action carryover, grown-row companion, bounded wide-lattice distance frontier, stronger electrostatics family, and graph-growth proxies make the program look richer rather than narrower after merge |
 | Bridge to known physics | `10.0/10` | now effectively maxed in breadth, because the mainline portfolio visibly touches weak-field gravity, signed scalar couplings, causal phase structure, distance-law behavior, and graph-growth expansion proxies; it is still not a full closure because the self-generated field and inertial-response sectors remain only partly retained |
 | Publishable as a careful computational toy-model paper | `10.0/10` | essentially maxed; the repo now has enough retained positives, enough bounded negatives, and enough diagnosed closures to support a very strong disciplined toy-model paper even if the flagship physics claim remains narrower |
-| Publishable as a foundational-physics breakthrough claim | `7.9/10` | the strongest package is still materially stronger than it was a day ago: the scalar field now has retained static and dynamic local PDE versions, the retardation side has proper comparator-based evidence in both `(2+1)D` and `(3+1)D`, and the experiment-facing dynamic story is cleaner; but the broader claim must be narrowed because the off-scaffold universality attempt failed and the Gaussian matter / inertial closure attempt failed |
-| Likelihood of publication in very top field journals today (`PRL` / `PRX` / `Nature Physics`) | `6.8/10` | the project is still in serious-hearing territory on the strength of the field-law and retardation stack, but not as close to a top-journal breakthrough package as the previous map implied: the two biggest current weaknesses are now explicit retained negatives rather than just open gaps, namely off-scaffold universality and matter / inertia |
-| Ready for top-tier mainstream physics claims | `7.0/10` | the mainstream-facing story is now sharper but narrower: there is a convincing emergent scalar-wave / retardation program, but not yet a convincing universality story beyond the scaffolded family and not yet a convincing matter / inertial story |
-| Strength against harshest critique | `4.7/10` | the strongest hostile read has more force again: the scalar-wave / delayed-field program is real, but the recent off-scaffold coherence failure and the Gaussian matter-closure failure both reinforce the adversarial view that the current mechanism basin is narrower than hoped and still lacks an object-level matter sector |
-| Field-shifting theory program | `9.8/10` | still extremely strong as a field-shaping program because the scalar-wave / field-law stack is now unusually coherent and reviewable; slightly reduced because the current evidence no longer supports describing it as an emergent weak-field universality class without stronger qualifiers |
+| Publishable as a foundational-physics breakthrough claim | `8.0/10` | slightly stronger than the previous map, but only in a narrower form: the cleanest package is now action constraint + corrected distance-law framing + the retained gauge-structure result, while the Lorentz / matter / full universality story remains materially incomplete |
+| Likelihood of publication in very top field journals today (`PRL` / `PRX` / `Nature Physics`) | `7.0/10` | the review-hardened narrow package is stronger than it was before the moonshot cycle, because the retained core is more legible and the overclaims are better scrubbed; still below true breakthrough readiness because too many high-value lanes close only as bounded negatives or feasibility signals |
+| Ready for top-tier mainstream physics claims | `7.1/10` | the mainstream-facing surface is a little broader now: weak-field gravity/action, bounded parity-sector splitting, and especially gauge structure make the model easier to situate against known physics, but not enough to claim emergent relativity or a matter sector |
+| Strength against harshest critique | `5.0/10` | still the weakest score on the map, but better than the previous cut because the package is more self-correcting and audit-safe after the review cycle; the hostile reader still has real leverage on universality, matter / inertia, and continuum Lorentz closure |
+| Field-shifting theory program | `9.9/10` | slightly up because the merged moonshot branch widened the real program in a useful way: one strong new retained gauge lane, one cleaner action/distance-law core, and several honest bounded negatives that sharpen rather than blur the frontier map |
 | Landmark foundational breakthrough | `7.7/10` | still plausible on the strength of the retained scalar-wave / retardation program, but lower than before because the route now clearly runs through solving two hard gaps rather than broadening an already nearly-closed story: universality beyond the scaffold and matter / inertia closure |
 | Nobel-scale breakthrough | `1.8/10` | still no longer fanciful in the strict sense, because there is now a real ladder of intermediate physics goals, but the score must come down from the previous map because the recent decisive negatives showed the path is narrower than the earlier frontier enthusiasm suggested |
 
@@ -171,7 +234,7 @@ This section should be updated periodically alongside the score above.
 > physics; the current package may be a curated basin of compatible numerics
 > rather than a broad universality result or a law-level derivation.
 
-### Current answer strength: `4.7/10`
+### Current answer strength: `5.0/10`
 
 Why the score is not lower:
 
