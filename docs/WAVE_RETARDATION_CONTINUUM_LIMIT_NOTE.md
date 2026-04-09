@@ -250,8 +250,8 @@ So none of the tested comparators is fully satisfactory:
 
 ## Follow-on test #2: equilibrated-static-slice comparator
 
-After imposed-Newton was shown to be numerically stable but the
-wrong physical comparator, the next move was to test whether the
+After imposed-Newton was shown to be a useful diagnostic baseline but
+not a converged comparator, the next move was to test whether the
 cached-static-slice comparator's instability is simply **incomplete
 equilibration**. A fourth comparator was added:
 
@@ -262,10 +262,9 @@ equilibration**. A fourth comparator was added:
 > true wave-equation static limit.
 
 The hypothesis: if the dI instability is just incomplete
-equilibration, dIeq should be more lattice-stable. And since the
-wave-equation static limit IS Poisson (∂²/∂t² = 0), a fully
-equilibrated dIeq should converge to the imposed-Newton dN in the
-continuum limit.
+equilibration, dIeq should be more lattice-stable. At minimum, it
+should give a smoother refinement story than dI and move in the same
+general direction as the diagnostic dN branch.
 
 ### Result — the equilibrated comparator is NO BETTER
 
@@ -274,7 +273,7 @@ continuum limit.
 | dM | +0.00836 | +0.00794 | +0.00721 | monotone, −14% |
 | dI (cached static) | +0.01175 | +0.00878 | +0.01274 | oscillates, 35% |
 | **dIeq (equilibrated, 3× NL)** | **+0.00217** | **+0.01126** | **+0.00554** | **oscillates, 420%** |
-| dN (imposed Newton) | +0.02564 | +0.01671 | +0.01714 | −35% then +2.5% |
+| dN (imposed Newton) | +0.01124 | +0.00784 | +0.01049 | −30% then +34% |
 
 And the corresponding rel_gaps:
 
@@ -282,17 +281,15 @@ And the corresponding rel_gaps:
 | --- | ---: | ---: | ---: |
 | rel_MI (vs cached static) | 28.81% | 9.53% | 43.40% |
 | **rel_MIeq (vs equilibrated)** | **74.11%** | **29.44%** | **23.16%** |
-| rel_MN (vs imposed Newton) | 67.39% | 52.48% | 57.92% |
-| **rel_IeqN (equilibrated vs Newton)** | **91.56%** | **32.65%** | **67.66%** |
+| rel_MN (vs imposed Newton) | 25.60% | 1.26% | 31.24% |
+| **rel_IeqN (equilibrated vs Newton)** | **80.74%** | **30.33%** | **47.17%** |
 
 ### The decisive failure mode
 
-The equilibrated static slice does **not** converge to the imposed
-Newton field as H refines. `rel_IeqN` oscillates 91.56% → 32.65% →
-67.66%. In the continuum limit, a fully equilibrated wave-equation
-static solution must equal the Poisson solution (that's what
-"static limit of wave equation" means), so `rel_IeqN` should → 0
-as H → 0. It does not, even at the medium → fine step.
+The equilibrated static slice does **not** settle into a cleaner static
+baseline as H refines. `rel_IeqN` runs 80.74% → 30.33% → 47.17%, so the
+equilibrated branch still fails to line up cleanly with the diagnostic
+Poisson-style baseline.
 
 And `dIeq` itself oscillates **much more** than `dI`: +420% from
 coarse to medium, −51% from medium to fine. Longer equilibration
@@ -313,15 +310,15 @@ interacts with the equilibration time in a non-trivial way.
 | --- | ---: |
 | rel_MI | 0.339 |
 | **rel_MIeq** | **0.063** |
-| rel_MN | 0.054 |
+| rel_MN | 0.300 |
 
 `rel_MIeq` changes by only 6% at the last refinement step — much
-smaller than `rel_MI`'s 34%. This is a **partial** improvement: the
-equilibrated-static comparator gives a more stable *relative gap*
-at the last refinement, even though the underlying `dIeq` quantity
-itself oscillates. The stability is coming from `dM` (which is
-stable) dominating the rel_gap when both dM and dIeq happen to be
-small.
+smaller than `rel_MI`'s 34% and `rel_MN`'s 30%. This is a **partial**
+improvement: the equilibrated-static comparator gives a smoother
+*relative gap* at the last refinement, even though the underlying
+`dIeq` quantity itself oscillates. The stability is coming from `dM`
+(which is stable) dominating the rel_gap when both dM and dIeq happen
+to be small.
 
 But this is not a clean convergence. `rel_MIeq` goes 74.11% →
 29.44% → 23.16% — still drifting monotonically down by ~6% per
@@ -339,8 +336,8 @@ After three comparators tested (dI, dIeq, dN):
 - **No c=∞ comparator is continuum-stable at these refinements**:
   - `dI` (cached static, NL_dyn) oscillates 35%
   - `dIeq` (equilibrated static, 3×NL_dyn) oscillates 420% then 51%
-  - `dN` (imposed Newton, 1/r potential) is most stable but is a
-    different field equation
+  - `dN` (imposed Newton, 1/r potential) is a useful diagnostic but
+    still non-monotone and physically a different field equation
 - **The wave-equation static limit on the grown DAG lattice does
   not cleanly equal the continuum Poisson solution** at H ≥ 0.25.
   The two differ by a lattice-normalization factor that changes

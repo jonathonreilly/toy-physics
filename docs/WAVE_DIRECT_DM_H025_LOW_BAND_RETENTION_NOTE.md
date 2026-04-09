@@ -1,14 +1,14 @@
 # Wave Direct-dM H=0.25 Low-Band Retention Note
 
 **Date:** 2026-04-08
-**Status:** retained one-strength validation on the Fam1/seed1 low-band continuation, later hardened by control ladder
+**Status:** retained one-strength validation on the Fam1/seed1 branch replay, later hardened by control ladder
 
 This note records the complementary direct `H = 0.25` replay for the
 direct-`dM` amplitude-band story:
 
-> Start from the retained lower-magnitude reference point
+> Start from the originally retained lower-magnitude reference point
 > (`Fam1`, seed `1`, `S = 0.004`) and ask whether the same configuration
-> stays in the lower-magnitude band when the matched-history lane is
+> keeps the same branch identity when the matched-history lane is
 > refined from `H = 0.5` / `0.35` down to `H = 0.25`.
 
 ## Reference comparison
@@ -31,18 +31,18 @@ Runtime / memory for the `H = 0.25` replay:
 - The matched-history effect survives cleanly at `H = 0.25` on the seed-`1`
   continuation:
   `delta_hist` stays negative and materially nonzero.
-- The lower-magnitude branch is also the more refinement-stable one on the
-  current single-family read:
+- On the current single-family read, the seed-`1` late-gain scale is the more
+  refinement-stable one:
   the `H = 0.25` late gain `+0.001844` sits almost exactly on the retained
   `H = 0.5` / `0.35` seed-`1` values.
 - The normalized magnitude does not collapse toward zero or drift up toward
   the old seed-`0` band.
-  Instead it lands at `R_hist = -29.47%`, still inside the old lower band and
-  slightly stronger than the `H = 0.5` seed-`1` reference.
+  Instead it lands at `R_hist = -29.47%`, which is slightly stronger than the
+  `H = 0.5` seed-`1` reference and no longer supports the old low-band label.
 
 So the honest conclusion is:
 
-> The direct `H = 0.25` low-band replay is a **retained** continuation of the
+> The direct `H = 0.25` historical low-band replay is a **retained** continuation of the
 > seed-`1` branch at the level of sign plus late-gain difference. The
 > matched-history sign survives and the seed-`1` late-gain scale stays close
 > to the coarse rows, but the absolute branch responses still drift downward
@@ -59,7 +59,7 @@ by the same-resolution control ladder in
 - `|delta_hist / s|` spread `5.22%`
 
 So this note should now be read as the first retained replay for the
-Fam1/seed1 low branch, not the final control surface.
+Fam1/seed1 branch under the old naming, not the final control surface.
 
 ## What this changes
 
