@@ -134,18 +134,20 @@ def make_field(lat, z_mass_phys, strength):
 
 
 def make_field_yz(lat, y_mass_phys, z_mass_phys, strength):
-    """Place mass at arbitrary y,z for isotropy test."""
+    """Place mass at EXACT physical (y, z) — no grid snapping.
+
+    Uses exact floating-point coordinates for the 1/r field center,
+    ensuring identical field strength at beam axis regardless of angle.
+    """
+    x_phys = (2 * lat.nl // 3) * lat.h
+    r = np.sqrt(
+        (lat.pos[:, 0] - x_phys) ** 2
+        + (lat.pos[:, 1] - y_mass_phys) ** 2
+        + (lat.pos[:, 2] - z_mass_phys) ** 2
+    ) + 0.1
     iy = round(y_mass_phys / lat.h)
     iz = round(z_mass_phys / lat.h)
     mi = lat.nmap.get((2 * lat.nl // 3, iy, iz))
-    if mi is None:
-        return np.zeros(lat.n), None
-    mx, my, mz = lat.pos[mi]
-    r = np.sqrt(
-        (lat.pos[:, 0] - mx) ** 2
-        + (lat.pos[:, 1] - my) ** 2
-        + (lat.pos[:, 2] - mz) ** 2
-    ) + 0.1
     return strength / r, mi
 
 
