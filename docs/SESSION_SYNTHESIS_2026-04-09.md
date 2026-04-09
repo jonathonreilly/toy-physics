@@ -72,7 +72,7 @@ not from a gravitational mechanism. It survives any reinterpretation.
 - Superposition 0.01% on additive fields in 3D (propagator linearity)
 - Action constrained from axioms (valley-linear at leading order)
 
-### Lorentzian model (S = L(1-f·cos(2θ))) — NEW, needs validation
+### Lorentzian model (S = L(1-f·cos(2θ))) — bounded, not yet broadband-safe
 - Geometric gravity: geodesics TOWARD mass at strong field (5e-2).
   At weak field (5e-5, the closure-card regime), lattice cannot resolve
   geodesic deflection (both models show NONE). The geometric mechanism
@@ -81,7 +81,14 @@ not from a gravitational mechanism. It survives any reinterpretation.
   Born 1.50e-15, gravity +0.001 TOWARD, F∝M=1.00, 5/6 TOWARD b^(-1.23)
 - Born, F∝M, d_TV, decoherence identical to Euclidean (flat-space same)
 - Attractive window shifted: k=6.5-7.5 and k=10-12
-- NOT YET VALIDATED: spectral averaging, 3+1D, multi-L, Laplacian field
+- 3+1D feasibility at k=7 passes: Born 3.14e-15, gravity +0.000453 TOWARD,
+  F∝M=0.99
+- Multi-L at k=7 passes: gravity grows monotonically with L, purity stable
+- Raw broadband spectral sums are AWAY, just as in the Euclidean lane
+- Source-side weighting controls do NOT rescue broadband attraction; only
+  detector-equalized counterfactual weighting flips many cases
+- STILL OPEN: weak-field geometric baseline resolution and self-consistent
+  Laplacian-field closure on the Lorentzian lane
 
 ## Honest negatives
 
@@ -91,7 +98,9 @@ not from a gravitational mechanism. It survives any reinterpretation.
 - Hawking T~1/M: falsified (thermal shape is lattice geometry)
 - Lorentz invariance: not emergent (τ invariance is assumed, not derived)
 - Dimensional preference: falsified (all dimensions 1+1D-4+1D pass)
-- Spectral averaging: AWAY on Euclidean retained lattice
+- Spectral averaging: AWAY on both Euclidean and Lorentzian retained lattices
+- Source-side spectral weighting does not rescue broadband attraction on the
+  retained Lorentzian lane
 - Propagator is diffusive, not causal (no light cone from amplitude alone)
 - Angular kernel: not derived (heuristic phase-coherence story only)
 
@@ -106,17 +115,19 @@ Gravity in both models is a resonance phenomenon:
 - F∝M = 1.00 holds at ALL k values (structural to the action)
 
 The Euclidean model has the resonance fighting a repulsive baseline.
-The Lorentzian model has the resonance reinforcing an attractive baseline.
+The Lorentzian model shifts the resonance window, but broadband/source-side
+averaging still does not produce generic attraction.
 
 ## Open questions for the next session
 
 ### Validation of the Lorentzian model
-1. Spectral averaging: does the Lorentzian model survive it better?
-   (The geometric baseline is now TOWARD, so the average might be TOWARD)
-2. 3+1D: does the Lorentzian model work in physical spacetime?
-3. Multi-L companion checks at k=7
-4. Self-consistent Laplacian field on the Lorentzian model
-5. The attractive window k=6.5-7.5 is narrow — is this stable?
+1. Weak-field geodesic refinement: does geometric TOWARD appear at higher
+   resolution in the actual closure-card regime?
+2. Self-consistent Laplacian field on the Lorentzian model
+3. The attractive window k=6.5-7.5 is narrow — is this stable under box/h
+   changes and source perturbations?
+4. Does any physically motivated source spectrum produce broadband TOWARD
+   without using detector-defined reweighting?
 
 ### Theoretical
 6. Can cos(2θ) be derived from the axioms? (The split distinguishes causal
@@ -128,8 +139,8 @@ The Lorentzian model has the resonance reinforcing an attractive baseline.
 
 ### The paper
 10. Frame as: "A linear path-sum on a discrete causal graph with Lorentzian
-    split-delay action produces geometric gravitational attraction, Born rule,
-    gauge connections, and dynamic graph growth."
+    split-delay action produces a narrowband gravity-like attraction window,
+    Born rule, gauge connections, and dynamic graph growth."
 11. The Euclidean→Lorentzian transition is a discovery worth documenting
 12. The resonance mechanism is novel physics worth describing
 
@@ -142,8 +153,11 @@ The Lorentzian model has the resonance reinforcing an attractive baseline.
 
 ### Key scripts (in rough importance order)
 - frontier_lorentzian_closure_card.py — Lorentzian head-to-head
-- frontier_lorentzian_k8_card.py — k=7 full card (ALL PASS)
+- frontier_lorentzian_k7_card.py — k=7 full card (ALL PASS)
 - frontier_lorentzian_delay_geodesic.py — geodesics TOWARD with split delay
+- frontier_lorentzian_multi_l_and_3plus1d.py — multi-L and 3+1D feasibility
+- frontier_lorentzian_spectral.py — raw Lorentzian spectral AWAY
+- frontier_lorentzian_source_weight_spectral.py — retained-lane source-side vs detector-side spectral weighting
 - frontier_geodesic_gravity_test.py — geodesics AWAY on Euclidean
 - frontier_fm_vs_k.py — F∝M=1.00 at all k
 - frontier_wave_geodesic_decomposition.py — wave vs geometric separation
