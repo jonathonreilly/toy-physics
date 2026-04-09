@@ -1,23 +1,18 @@
 """Entanglement area law on the discrete event-network DAG.
 
-Propagate a wave packet through a rectangular DAG, partition at a vertical
-cut, trace out region B to obtain the reduced density matrix of region A,
-and compute von Neumann entropy.  Vary the boundary size (DAG height) to
-test whether S ~ boundary (area law) or S ~ volume.
-
-Key physical setup:
-- A single source at (0, 0) propagates through a DAG of width W, height H.
-- At the cut boundary x=cut_x, we have 2H+1 spatial sites.
-- We track which y-band each path traverses at an intermediate point,
-  creating "which-path" sectors. If a path went through y-band k at
-  the midpoint, that's sector k.  Different sectors are orthogonal
-  (they carry distinguishing environmental information in the full
-  theory).
-- The reduced density matrix after tracing over sectors:
-      rho(y,y') = sum_k  psi_k(y) psi_k(y')*
-- Von Neumann entropy S = -Tr(rho ln rho)
+TRUE SPATIAL BIPARTITION method:
+- Region A = source boundary (x=0), region B = cut boundary (x=cut_x).
+- Propagate from EACH source y_in on x=0 independently through the DAG.
+- Collect amplitudes M[y_cut, y_in] at the cut boundary.
+- The reduced density matrix for region B:
+      rho_B(y, y') = sum_{y_in} M(y, y_in) * conj(M(y', y_in))
+  This traces over region A (the source degrees of freedom).
+- S_vN = -Tr(rho_B ln rho_B)
 
 For area law: S should scale with boundary size (2H+1), not volume (H*cut_x).
+
+Eigensolver: proper complex Hermitian Jacobi diagonalization using
+complex Givens rotations (phase-factored 2x2 subproblem).
 
 Pure-Python implementation (no numpy dependency).
 """
@@ -28,8 +23,7 @@ import cmath
 import math
 import sys
 import os
-from collections import defaultdict
-from typing import DefaultDict
+from typing import Any
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
@@ -38,13 +32,13 @@ from toy_event_physics import (
     build_rectangular_nodes,
     derive_local_rule,
     derive_node_field,
-    infer_arrival_times_from_source,
+    infer_arrival_times_with_field,
     build_causal_dag,
     local_edge_properties,
 )
 
 # ---------------------------------------------------------------------------
-# Pure-Python Hermitian eigenvalue solver (Jacobi)
+# Pure-Python complex Hermitian eigenvalue solver (Jacobi)
 # ---------------------------------------------------------------------------
 
 Matrix = list[list[complex]]
@@ -54,57 +48,95 @@ def mat_zeros(n: int) -> Matrix:
     return [[0.0 + 0j for _ in range(n)] for _ in range(n)]
 
 
-def hermitian_eigenvalues(h: Matrix, max_iter: int = 300) -> list[float]:
+def hermitian_eigenvalues(h: Matrix, max_iter: int = 500) -> list[float]:
+    """Eigenvalues of a complex Hermitian matrix via Jacobi rotations.
+
+    Uses complex Givens rotations: for off-diagonal h[p][q] = |z|*exp(i*phi),
+    factor out the phase, solve the real 2x2 problem, then apply the
+    unitary rotation U that zeroes h[p][q] and h[q][p].
+    """
     n = len(h)
     if n == 0:
         return []
     if n == 1:
         return [h[0][0].real]
 
-    a = [[h[i][j].real for j in range(n)] for i in range(n)]
-    for i in range(n):
-        for j in range(i + 1, n):
-            avg = 0.5 * (a[i][j] + a[j][i])
-            a[i][j] = avg
-            a[j][i] = avg
+    # Work on a copy
+    a: Matrix = [[h[i][j] for j in range(n)] for i in range(n)]
 
-    for _ in range(max_iter * n):
+    # Force exact Hermitian symmetry
+    for i in range(n):
+        a[i][i] = complex(a[i][i].real, 0.0)
+        for j in range(i + 1, n):
+            avg = 0.5 * (a[i][j] + a[j][i].conjugate())
+            a[i][j] = avg
+            a[j][i] = avg.conjugate()
+
+    for _sweep in range(max_iter):
+        # Find largest off-diagonal magnitude
         max_val = 0.0
         p, q = 0, 1
         for i in range(n):
             for j in range(i + 1, n):
-                if abs(a[i][j]) > max_val:
-                    max_val = abs(a[i][j])
+                mag = abs(a[i][j])
+                if mag > max_val:
+                    max_val = mag
                     p, q = i, j
         if max_val < 1e-14:
             break
 
-        if abs(a[p][p] - a[q][q]) < 1e-30:
+        # Complex Givens rotation for Hermitian 2x2 subproblem
+        # a[p][q] = z = |z| * exp(i*phi)
+        z = a[p][q]
+        mag_z = abs(z)
+        if mag_z < 1e-30:
+            continue
+
+        # Phase factor: e^{-i*phi} rotates z to real
+        phase = z / mag_z  # exp(i*phi)
+        phase_conj = phase.conjugate()  # exp(-i*phi)
+
+        # Real 2x2 problem: [[app, |z|], [|z|, aqq]]
+        app = a[p][p].real
+        aqq = a[q][q].real
+        diff = app - aqq
+
+        if abs(diff) < 1e-30:
             theta = math.pi / 4
         else:
-            theta = 0.5 * math.atan2(2 * a[p][q], a[p][p] - a[q][q])
+            theta = 0.5 * math.atan2(2.0 * mag_z, diff)
 
         c = math.cos(theta)
         s = math.sin(theta)
 
-        new_a = [row[:] for row in a]
+        # The unitary rotation matrix U acts as:
+        #   row p: c * row_p + s * phase_conj * row_q
+        #   row q: -s * phase * row_p + c * row_q
+        # And similarly for columns.
+
+        # Update rows/columns for all i != p, q
         for i in range(n):
-            if i != p and i != q:
-                new_a[i][p] = c * a[i][p] + s * a[i][q]
-                new_a[p][i] = new_a[i][p]
-                new_a[i][q] = -s * a[i][p] + c * a[i][q]
-                new_a[q][i] = new_a[i][q]
+            if i == p or i == q:
+                continue
+            aip = a[i][p]
+            aiq = a[i][q]
+            a[i][p] = c * aip + s * phase_conj * aiq
+            a[p][i] = a[i][p].conjugate()
+            a[i][q] = -s * phase * aip + c * aiq
+            a[q][i] = a[i][q].conjugate()
 
-        new_a[p][p] = c * c * a[p][p] + 2 * s * c * a[p][q] + s * s * a[q][q]
-        new_a[q][q] = s * s * a[p][p] - 2 * s * c * a[p][q] + c * c * a[q][q]
-        new_a[p][q] = 0.0
-        new_a[q][p] = 0.0
-        a = new_a
+        # Update diagonal elements
+        new_pp = c * c * app + 2 * c * s * mag_z + s * s * aqq
+        new_qq = s * s * app - 2 * c * s * mag_z + c * c * aqq
+        a[p][p] = complex(new_pp, 0.0)
+        a[q][q] = complex(new_qq, 0.0)
+        a[p][q] = 0.0 + 0j
+        a[q][p] = 0.0 + 0j
 
-    return sorted(a[i][i] for i in range(n))
+    return sorted(a[i][i].real for i in range(n))
 
 
-def von_neumann_entropy_from_eigenvalues(eigenvalues: list[float]) -> float:
+def von_neumann_entropy(eigenvalues: list[float]) -> float:
     entropy = 0.0
     for lam in eigenvalues:
         if lam > 1e-15:
@@ -113,143 +145,192 @@ def von_neumann_entropy_from_eigenvalues(eigenvalues: list[float]) -> float:
 
 
 # ---------------------------------------------------------------------------
-# Core propagation with sector tracking
+# Core: build propagator matrix M[y_cut, y_source]
 # ---------------------------------------------------------------------------
 
 
-def propagate_with_node_sectors(
+def propagate_single_source(
     nodes: set[tuple[int, int]],
     source: tuple[int, int],
-    rule,
+    rule: Any,
     node_field: dict[tuple[int, int], float],
     cut_x: int,
-    sector_x: int,
-) -> tuple[dict[int, dict[int, complex]], list[int]]:
-    """Propagate from source, labeling paths by which node they pass through
-    at x=sector_x.
-
-    The sector label is the y-coordinate at x=sector_x.  This gives
-    the maximum possible number of orthogonal sectors (one per node at
-    the sector column), creating rich entanglement structure.
-
-    Returns:
-        sectors: {sector_y: {cut_y: amplitude}}
-        y_positions: sorted list of y at cut_x
-    """
-    arrival_times = infer_arrival_times_from_source(nodes, source, rule)
+) -> dict[int, complex]:
+    """Propagate unit amplitude from a single source, return {y_cut: amplitude}."""
+    arrival_times = infer_arrival_times_with_field(nodes, source, rule, node_field)
     dag = build_causal_dag(nodes, arrival_times)
 
-    # State: (node, sector_label) -> amplitude
-    # sector_label starts as None (before sector_x), becomes y at sector_x
-    state: DefaultDict[tuple[tuple[int, int], int | None], complex] = defaultdict(complex)
-    state[(source, None)] = 1.0 + 0.0j
+    state: dict[tuple[int, int], complex] = {source: 1.0 + 0j}
 
     order = sorted(
         (n for n in arrival_times if n in dag or n == source),
         key=lambda n: arrival_times[n],
     )
 
-    # sector_y -> {y_at_cut: amplitude}
-    boundary: DefaultDict[int, DefaultDict[int, complex]] = defaultdict(
-        lambda: defaultdict(complex)
-    )
+    result: dict[int, complex] = {}
 
     for node in order:
-        matching = [
-            (sec, amp)
-            for (n, sec), amp in list(state.items())
-            if n == node and abs(amp) > 1e-30
-        ]
-        if not matching:
+        amp = state.get(node)
+        if amp is None or abs(amp) < 1e-30:
             continue
 
         if node[0] == cut_x:
-            for sec, amp in matching:
-                if sec is not None:
-                    boundary[sec][node[1]] += amp
-                del state[(node, sec)]
+            result[node[1]] = result.get(node[1], 0j) + amp
             continue
 
         if node[0] > cut_x:
-            for sec, amp in matching:
-                del state[(node, sec)]
             continue
 
-        for sec, amp in matching:
-            del state[(node, sec)]
-            for neighbor in dag.get(node, []):
-                _, _, link_amp = local_edge_properties(
-                    node, neighbor, rule, node_field,
-                )
-                next_sec = sec
-                # Assign sector when crossing sector_x
-                if node[0] < sector_x <= neighbor[0]:
-                    next_sec = neighbor[1]
-                elif node[0] == sector_x and sec is None:
-                    next_sec = node[1]
+        for neighbor in dag.get(node, []):
+            _, _, link_amp = local_edge_properties(
+                node, neighbor, rule, node_field,
+            )
+            if neighbor not in state:
+                state[neighbor] = 0j
+            state[neighbor] += amp * link_amp
 
-                state[(neighbor, next_sec)] += amp * link_amp
-
-    y_positions = sorted(y for (x, y) in nodes if x == cut_x)
-    return dict(boundary), y_positions
+    return result
 
 
-def build_rho_and_entropy(
-    sectors: dict[int, dict[int, complex]],
-    y_positions: list[int],
-) -> tuple[float, int, list[float]]:
-    """Build density matrix from sector amplitudes, return (S_vN, rank, eigenvalues)."""
-    n = len(y_positions)
-    y_to_idx = {y: i for i, y in enumerate(y_positions)}
-    rho = mat_zeros(n)
+def build_propagator_matrix(
+    nodes: set[tuple[int, int]],
+    sources: list[tuple[int, int]],
+    rule: Any,
+    node_field: dict[tuple[int, int], float],
+    cut_x: int,
+    y_cut_positions: list[int],
+) -> Matrix:
+    """Build M[y_cut_idx, source_idx] by propagating from each source."""
+    n_cut = len(y_cut_positions)
+    n_src = len(sources)
+    y_to_idx = {y: i for i, y in enumerate(y_cut_positions)}
 
-    for sec_y, amp_dict in sectors.items():
-        psi = [0.0 + 0j] * n
-        for y, amp in amp_dict.items():
+    M = [[0.0 + 0j for _ in range(n_src)] for _ in range(n_cut)]
+
+    for j, src in enumerate(sources):
+        amplitudes = propagate_single_source(nodes, src, rule, node_field, cut_x)
+        for y, amp in amplitudes.items():
             if y in y_to_idx:
-                psi[y_to_idx[y]] = amp
-        for i in range(n):
-            for j in range(n):
-                rho[i][j] += psi[i] * psi[j].conjugate()
+                M[y_to_idx[y]][j] += amp
+
+    return M
+
+
+def build_rho_B(M: Matrix) -> Matrix:
+    """rho_B(y, y') = sum_j M(y, j) * conj(M(y', j)) = M @ M^dagger."""
+    n_cut = len(M)
+    if n_cut == 0:
+        return []
+    n_src = len(M[0])
+
+    rho = mat_zeros(n_cut)
+    for i in range(n_cut):
+        for j in range(n_cut):
+            s = 0.0 + 0j
+            for k in range(n_src):
+                s += M[i][k] * M[j][k].conjugate()
+            rho[i][j] = s
+    return rho
+
+
+# ---------------------------------------------------------------------------
+# Diagnostics
+# ---------------------------------------------------------------------------
+
+
+def rho_diagnostics(rho: Matrix) -> dict[str, float]:
+    """Compute diagnostic quantities for the density matrix."""
+    n = len(rho)
+    if n == 0:
+        return {"trace": 0.0, "max_abs": 0.0, "max_imag_ratio": 0.0}
 
     tr = sum(rho[i][i].real for i in range(n))
-    if tr > 1e-30:
-        for i in range(n):
-            for j in range(n):
-                rho[i][j] /= tr
+    max_abs = 0.0
+    max_imag = 0.0
+    for i in range(n):
+        for j in range(n):
+            a = abs(rho[i][j])
+            if a > max_abs:
+                max_abs = a
+            im = abs(rho[i][j].imag)
+            if im > max_imag:
+                max_imag = im
 
-    eigenvalues = hermitian_eigenvalues(rho)
-    s_vn = von_neumann_entropy_from_eigenvalues(eigenvalues)
-    rank = sum(1 for e in eigenvalues if e > 1e-10)
+    # Check Hermiticity: max |rho[i][j] - conj(rho[j][i])|
+    max_herm_err = 0.0
+    for i in range(n):
+        for j in range(i + 1, n):
+            err = abs(rho[i][j] - rho[j][i].conjugate())
+            if err > max_herm_err:
+                max_herm_err = err
 
-    return s_vn, rank, eigenvalues
+    ratio = max_imag / max_abs if max_abs > 1e-30 else 0.0
+    return {
+        "trace": tr,
+        "max_abs": max_abs,
+        "max_imag": max_imag,
+        "max_imag_ratio": ratio,
+        "hermiticity_error": max_herm_err,
+    }
+
+
+# ---------------------------------------------------------------------------
+# Experiment runner
+# ---------------------------------------------------------------------------
 
 
 def run_experiment(
     height: int,
     width: int,
     cut_x: int,
-    sector_x: int,
-    source: tuple[int, int],
-    persistent_nodes: frozenset[tuple[int, int]],
     postulates: RulePostulates,
-) -> tuple[int, int, float, int, int]:
-    """Returns (boundary_size, volume_A, S_vN, rank, n_sectors)."""
+    persistent_nodes: frozenset[tuple[int, int]] = frozenset(),
+) -> dict[str, Any]:
+    """Run a single bipartition experiment.
+
+    Returns dict with: boundary_size, volume_A, S_vN, rank, n_sources,
+    max_imag_ratio, trace.
+    """
     nodes = build_rectangular_nodes(width=width, height=height)
     rule = derive_local_rule(persistent_nodes=persistent_nodes, postulates=postulates)
     node_field = derive_node_field(nodes, rule)
 
-    sectors, y_positions = propagate_with_node_sectors(
-        nodes, source, rule, node_field, cut_x, sector_x,
-    )
+    # Sources: all y-positions at x=0
+    sources = sorted([(0, y) for (x, y) in nodes if x == 0], key=lambda n: n[1])
+    # Cut boundary: all y-positions at x=cut_x
+    y_cut_positions = sorted(y for (x, y) in nodes if x == cut_x)
 
-    s_vn, rank, _ = build_rho_and_entropy(sectors, y_positions)
+    M = build_propagator_matrix(nodes, sources, rule, node_field, cut_x, y_cut_positions)
+    rho = build_rho_B(M)
 
-    boundary_size = len(y_positions)
+    diag = rho_diagnostics(rho)
+
+    # Normalize rho
+    tr = diag["trace"]
+    n = len(rho)
+    if tr > 1e-30:
+        for i in range(n):
+            for j in range(n):
+                rho[i][j] /= tr
+
+    eigenvalues = hermitian_eigenvalues(rho)
+    s_vn = von_neumann_entropy(eigenvalues)
+    rank = sum(1 for e in eigenvalues if e > 1e-10)
+
+    boundary_size = len(y_cut_positions)
     volume_a = sum(1 for (x, _) in nodes if x < cut_x)
-    n_sectors = len(sectors)
 
-    return boundary_size, volume_a, s_vn, rank, n_sectors
+    return {
+        "boundary_size": boundary_size,
+        "volume_A": volume_a,
+        "S_vN": s_vn,
+        "rank": rank,
+        "n_sources": len(sources),
+        "n_cut": len(y_cut_positions),
+        "max_imag_ratio": diag["max_imag_ratio"],
+        "hermiticity_error": diag["hermiticity_error"],
+        "trace_before_norm": diag["trace"],
+    }
 
 
 def linear_fit(xs: list[float], ys: list[float]) -> tuple[float, float, float]:
@@ -274,15 +355,17 @@ def main() -> None:
     print("ENTANGLEMENT AREA LAW ON DISCRETE EVENT-NETWORK DAG")
     print("=" * 80)
     print()
-    print("Method: single source at (0,0), sector label = y-coordinate at")
-    print("intermediate column.  Each node at the sector column defines an")
-    print("orthogonal 'which-path' sector.  The number of sectors grows with")
-    print("height (= boundary size), providing a natural area-law test.")
+    print("Method: TRUE SPATIAL BIPARTITION")
+    print("  Region A = source boundary (x=0), region B = cut boundary (x=cut_x)")
+    print("  Propagate from EACH source y_in independently to build M[y_cut, y_in]")
+    print("  rho_B = M @ M^dagger  (traces over source degrees of freedom)")
+    print("  S_vN = -Tr(rho_B ln rho_B)")
+    print()
+    print("Eigensolver: complex Hermitian Jacobi with proper Givens rotations")
     print()
 
     width = 20
     cut_x = 10
-    source = (0, 0)
 
     postulates = RulePostulates(
         phase_per_action=4.0,
@@ -298,42 +381,38 @@ def main() -> None:
 
     # ===================================================================
     # Experiment A: Vary height => vary boundary size
-    #   sector_x = cut_x // 2 = 5
     # ===================================================================
-    sector_x = cut_x // 2
     heights = [3, 4, 5, 6, 7, 8, 9, 10, 12, 14]
 
-    print(f"EXPERIMENT A: Vary boundary size  (sector_x={sector_x})")
-    print(f"  width={width}, cut_x={cut_x}, source={source}")
+    print(f"EXPERIMENT A: Vary boundary size")
+    print(f"  width={width}, cut_x={cut_x}")
     print()
 
-    header = (f"{'h':>3} {'bnd':>4} {'vol':>5} {'nsec':>5} "
-              f"{'S_free':>10} {'rk_f':>4} {'S_mass':>10} {'rk_m':>4} {'dS':>8}")
+    header = (f"{'h':>3} {'bnd':>4} {'vol':>5} {'nsrc':>5} "
+              f"{'S_free':>10} {'rk_f':>4} {'S_mass':>10} {'rk_m':>4} "
+              f"{'dS':>8} {'Im/|rho|':>8}")
     print(header)
     print("-" * len(header))
 
-    data_free: list[tuple[int, int, float, int]] = []
-    data_mass: list[tuple[int, int, float, int]] = []
+    data_free: list[dict] = []
+    data_mass: list[dict] = []
 
     for h in heights:
-        bnd, vol, sf, rkf, nsec = run_experiment(
-            h, width, cut_x, sector_x, source, frozenset(), postulates,
-        )
-        data_free.append((bnd, vol, sf, rkf))
+        rf = run_experiment(h, width, cut_x, postulates)
+        data_free.append(rf)
 
-        _, _, sm, rkm, _ = run_experiment(
-            h, width, cut_x, sector_x, source, mass_nodes, postulates,
-        )
-        data_mass.append((bnd, vol, sm, rkm))
+        rm = run_experiment(h, width, cut_x, postulates, mass_nodes)
+        data_mass.append(rm)
 
-        print(f"{h:>3} {bnd:>4} {vol:>5} {nsec:>5} "
-              f"{sf:>10.6f} {rkf:>4} {sm:>10.6f} {rkm:>4} {sm - sf:>8.4f}")
+        print(f"{h:>3} {rf['boundary_size']:>4} {rf['volume_A']:>5} {rf['n_sources']:>5} "
+              f"{rf['S_vN']:>10.6f} {rf['rank']:>4} {rm['S_vN']:>10.6f} {rm['rank']:>4} "
+              f"{rm['S_vN'] - rf['S_vN']:>8.4f} {rf['max_imag_ratio']:>8.4f}")
 
     # Fits for free space
-    bnds = [float(d[0]) for d in data_free]
-    s_f = [d[2] for d in data_free]
-    vols = [float(d[1]) for d in data_free]
-    s_m = [d[2] for d in data_mass]
+    bnds = [float(d["boundary_size"]) for d in data_free]
+    s_f = [d["S_vN"] for d in data_free]
+    vols = [float(d["volume_A"]) for d in data_free]
+    s_m = [d["S_vN"] for d in data_mass]
 
     print("\n--- Free space fits ---")
     a_b, b_b, r2_b = linear_fit(bnds, s_f)
@@ -341,37 +420,36 @@ def main() -> None:
     a_v, b_v, r2_v = linear_fit(vols, s_f)
     print(f"  S vs volume:   slope={a_v:.6f}  R^2={r2_v:.4f}")
 
-    log_b = [math.log(b) for b in bnds]
-    log_sf = [math.log(max(s, 1e-15)) for s in s_f]
+    log_b = [math.log(b) for b in bnds if b > 0]
+    log_sf = [math.log(max(s, 1e-15)) for s, b in zip(s_f, bnds) if b > 0]
     alpha, _, r2_pl = linear_fit(log_b, log_sf)
     print(f"  Power law: S ~ bnd^{alpha:.3f}  R^2={r2_pl:.4f}")
 
     print("\n--- With mass fits ---")
     a_bm, _, r2_bm = linear_fit(bnds, s_m)
     print(f"  S vs boundary: slope={a_bm:.5f}  R^2={r2_bm:.4f}")
-    log_sm = [math.log(max(s, 1e-15)) for s in s_m]
+    log_sm = [math.log(max(s, 1e-15)) for s, b in zip(s_m, bnds) if b > 0]
     alpha_m, _, r2_plm = linear_fit(log_b, log_sm)
     print(f"  Power law: S ~ bnd^{alpha_m:.3f}  R^2={r2_plm:.4f}")
 
     # ===================================================================
-    # Experiment B: Vary sector_x position to test robustness
+    # Experiment B: Robustness -- vary cut_x at fixed height
     # ===================================================================
     print(f"\n\n{'=' * 80}")
-    print("EXPERIMENT B: Vary sector_x (robustness check)")
+    print("EXPERIMENT B: Vary cut_x (robustness check)")
     print("=" * 80)
 
     fixed_h = 8
-    sector_positions = [2, 3, 4, 5, 6, 7, 8]
+    cut_positions_b = [4, 6, 8, 10, 12, 14, 16]
 
-    print(f"  height={fixed_h}, cut_x={cut_x}\n")
-    print(f"{'sec_x':>5} {'nsec':>5} {'S_free':>10} {'rank':>5}")
-    print("-" * 30)
+    print(f"  height={fixed_h}, boundary = {2 * fixed_h + 1}\n")
+    print(f"{'cut_x':>5} {'nsrc':>5} {'ncut':>5} {'S_free':>10} {'rank':>5} {'Im/|rho|':>8}")
+    print("-" * 48)
 
-    for sx in sector_positions:
-        _, _, sf, rk, nsec = run_experiment(
-            fixed_h, width, cut_x, sx, source, frozenset(), postulates,
-        )
-        print(f"{sx:>5} {nsec:>5} {sf:>10.6f} {rk:>5}")
+    for cx in cut_positions_b:
+        r = run_experiment(fixed_h, width, cx, postulates)
+        print(f"{cx:>5} {r['n_sources']:>5} {r['n_cut']:>5} "
+              f"{r['S_vN']:>10.6f} {r['rank']:>5} {r['max_imag_ratio']:>8.4f}")
 
     # ===================================================================
     # Experiment C: Fixed height, vary cut_x (volume test)
@@ -384,25 +462,20 @@ def main() -> None:
     cut_positions = [4, 6, 8, 10, 12, 14, 16, 18]
 
     print(f"  height={fixed_h_c}, boundary = {2 * fixed_h_c + 1}\n")
-    print(f"{'cut_x':>5} {'sec_x':>5} {'vol_A':>6} {'S_free':>10} {'S_mass':>10}")
-    print("-" * 46)
+    print(f"{'cut_x':>5} {'vol_A':>6} {'S_free':>10} {'S_mass':>10}")
+    print("-" * 40)
 
     s_free_c: list[float] = []
     s_mass_c: list[float] = []
     vols_c: list[float] = []
 
     for cx in cut_positions:
-        sx = max(1, cx // 2)
-        bnd, vol, sf, _, _ = run_experiment(
-            fixed_h_c, width, cx, sx, source, frozenset(), postulates,
-        )
-        _, _, sm, _, _ = run_experiment(
-            fixed_h_c, width, cx, sx, source, mass_nodes, postulates,
-        )
-        print(f"{cx:>5} {sx:>5} {vol:>6} {sf:>10.6f} {sm:>10.6f}")
-        s_free_c.append(sf)
-        s_mass_c.append(sm)
-        vols_c.append(float(vol))
+        rf = run_experiment(fixed_h_c, width, cx, postulates)
+        rm = run_experiment(fixed_h_c, width, cx, postulates, mass_nodes)
+        print(f"{cx:>5} {rf['volume_A']:>6} {rf['S_vN']:>10.6f} {rm['S_vN']:>10.6f}")
+        s_free_c.append(rf["S_vN"])
+        s_mass_c.append(rm["S_vN"])
+        vols_c.append(float(rf["volume_A"]))
 
     bnd_const = 2 * fixed_h_c + 1
     s_mean = sum(s_free_c) / len(s_free_c)
@@ -415,10 +488,52 @@ def main() -> None:
     print(f"  S_free vs volume_A: R^2={r2_vc:.4f}")
 
     # ===================================================================
-    # Experiment D: Diagonal cut test -- at fixed width, if we change
-    #   height we change both boundary AND volume together.  The
-    #   discriminator is Experiment C where boundary is fixed.
+    # Diagnostic: show rho structure for one case
     # ===================================================================
+    print(f"\n\n{'=' * 80}")
+    print("DIAGNOSTIC: rho_B structure for height=6, cut_x=10")
+    print("=" * 80)
+
+    diag_h = 6
+    nodes = build_rectangular_nodes(width=width, height=diag_h)
+    rule = derive_local_rule(persistent_nodes=frozenset(), postulates=postulates)
+    nf = derive_node_field(nodes, rule)
+    sources = sorted([(0, y) for (x, y) in nodes if x == 0], key=lambda n: n[1])
+    y_cut = sorted(y for (x, y) in nodes if x == cut_x)
+
+    M = build_propagator_matrix(nodes, sources, rule, nf, cut_x, y_cut)
+    rho = build_rho_B(M)
+    diag_info = rho_diagnostics(rho)
+
+    print(f"  M shape: {len(M)} x {len(M[0]) if M else 0}")
+    print(f"  rho_B shape: {len(rho)} x {len(rho)}")
+    print(f"  Tr(rho_B) = {diag_info['trace']:.6f}")
+    print(f"  max |rho[i][j]| = {diag_info['max_abs']:.6f}")
+    print(f"  max |Im(rho[i][j])| = {diag_info['max_imag']:.6f}")
+    print(f"  max |Im| / max |rho| = {diag_info['max_imag_ratio']:.4f}")
+    print(f"  Hermiticity error = {diag_info['hermiticity_error']:.2e}")
+
+    # Show a few rho entries
+    n = len(rho)
+    tr = diag_info["trace"]
+    if tr > 1e-30:
+        for i in range(n):
+            for j in range(n):
+                rho[i][j] /= tr
+
+    print(f"\n  Sample rho_B entries (after normalization, Tr=1):")
+    show_n = min(5, n)
+    for i in range(show_n):
+        for j in range(show_n):
+            r, im = rho[i][j].real, rho[i][j].imag
+            print(f"    rho[{i},{j}] = {r:+.6f} {im:+.6f}i", end="")
+            if j < show_n - 1:
+                print("  |", end="")
+        print()
+
+    eigs = hermitian_eigenvalues(rho)
+    print(f"\n  Eigenvalues (top 10): {[f'{e:.6f}' for e in eigs[-10:]]}")
+    print(f"  Sum of eigenvalues: {sum(eigs):.6f}")
 
     # ===================================================================
     # Summary
@@ -436,6 +551,8 @@ def main() -> None:
         print(f"   ==> WEAK AREA LAW (sub-linear growth)")
     elif alpha < 0:
         print(f"   ==> ENTROPY SATURATES (sub-area-law)")
+    else:
+        print(f"   ==> INCONCLUSIVE (alpha={alpha:.2f}, R^2={r2_pl:.3f})")
 
     print(f"\n2. VOLUME INDEPENDENCE TEST (Experiment C, fixed boundary={bnd_const}):")
     if cv < 0.25 and r2_vc < 0.5:
@@ -451,18 +568,26 @@ def main() -> None:
         else:
             print(f"   ==> MIXED SCALING regime")
 
-    deltas = [data_mass[i][2] - data_free[i][2] for i in range(len(heights))]
+    deltas = [data_mass[i]["S_vN"] - data_free[i]["S_vN"] for i in range(len(heights))]
     delta_mean = sum(deltas) / len(deltas)
     print(f"\n3. GRAVITATIONAL EFFECT:")
     print(f"   Mean delta_S (mass - free) = {delta_mean:.4f}")
     if delta_mean > 0.1:
         print(f"   Mass INCREASES entanglement entropy")
         print(f"   ==> Gravitational field enhances boundary correlations")
-        print(f"   ==> Consistent with Bekenstein-Hawking: more mass -> more entropy")
     elif delta_mean < -0.1:
         print(f"   Mass DECREASES entanglement entropy (gravitational focusing)")
     else:
-        print(f"   Negligible mass effect")
+        print(f"   Negligible mass effect (|dS| < 0.1)")
+
+    # Imaginary part diagnostic
+    mean_imag_ratio = sum(d["max_imag_ratio"] for d in data_free) / len(data_free)
+    print(f"\n4. IMAGINARY PART DIAGNOSTIC:")
+    print(f"   Mean max|Im(rho)|/max|rho| across Exp A = {mean_imag_ratio:.4f}")
+    if mean_imag_ratio > 0.01:
+        print(f"   ==> Imaginary parts are SIGNIFICANT -- complex Hermitian solver required")
+    else:
+        print(f"   ==> Imaginary parts negligible -- real-symmetric would suffice")
 
     print()
 

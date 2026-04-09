@@ -230,13 +230,28 @@ imaginary parts of rho (max |Im(rho_ij)| approx 0.106, larger than max
 real off-diagonal approx 0.073), making the eigenvalues numerically wrong.
 
 **v2 implementation** (post-review): uses true spatial bipartition via
-the propagator matrix M(y_out, y_in), computing rho_B = M M^H with a
-correct complex Hermitian eigensolver.
+the propagator matrix M(y_cut, y_source), computing rho_B = M M^H with
+a correct complex Hermitian eigensolver (Givens rotations, no .real
+truncation). Diagnostics confirm Im parts are 20.6% of max |rho|.
 
-[v2 results to be filled after rerun]
+**v2 results:**
 
-**Status:** The "area law confirmed" claim from v1 is WITHDRAWN pending
-v2 validation. The v1 observable was not measuring what was claimed.
+Experiment A (vary boundary): Free-space entropy SATURATES at ln(2) =
+0.693 for h >= 9 (eigenvalue spectrum collapses to two values near 0.5).
+This is SUB-area-law: S does NOT grow with boundary size.
+S ~ boundary^(-0.09), R^2 = 0.095.
+
+Experiment C (fixed boundary=17, vary volume 68-306):
+S_free: mean = 0.746, CV = 0.175. S vs volume R^2 = 0.19.
+Entropy is boundary-controlled, not volume-controlled.
+
+Gravitational effect: mean delta_S = +0.39 (mass increases entropy).
+
+**Corrected conclusion:** The model produces boundary-controlled entropy
+(consistent with area-law scaling) but the entropy SATURATES rather
+than growing with boundary size. This is sub-area-law, not area-law.
+The v1 "area law confirmed" claim is replaced with: "entropy is
+boundary-controlled and sub-area-law in the single-source regime."
 
 ### Frontier #6: Energy Quantization — GENUINE SPECTRA
 
@@ -289,8 +304,9 @@ The v2 script labels these distinctly.
 | 3D VL distance exponent = 1.0 | PASS | alpha = 1.019, R^2 = 0.999 |
 | 3D VL mass scaling = 1.0 | PASS | beta = 1.000 |
 | 2D field is logarithmic | PASS | Correct 2D physics, not an anomaly |
-| Area law (v1 which-path) | WITHDRAWN | v1 measured wrong observable; v2 pending |
-| Area law eigensolver | FAIL | v1 discarded Im(rho); v2 uses correct solver |
+| Area law (v2 bipartition) | PARTIAL | Sub-area-law: saturates at ln(2), does not grow |
+| Area law eigensolver (v2) | PASS | Complex Hermitian solver; Im parts 20.6% of max |
+| Entropy volume-independent | PASS | CV = 0.175 at fixed boundary; R^2_vol = 0.19 |
 | Time dilation sign | PASS | Clocks slow near mass (correct sign) |
 | Time dilation quantitative | PARTIAL | Poisson shape tautological; mass scaling 0.35 |
 | Parity doubling | PASS | Machine-precision symmetry |
