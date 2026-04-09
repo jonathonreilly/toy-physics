@@ -250,9 +250,10 @@ def main():
     print(f"    Klein-Gordon → ω ∝ |p| (linear)")
     print("=" * 90)
 
-    # Collect per-seed results
-    all_seed_omegas = {p: [] for p in p_values}
-    all_seed_r2s = {p: [] for p in p_values}
+    # Collect per-seed results keyed by (p, seed)
+    # Using dicts keyed by seed to avoid misindexing when seeds drop out
+    all_seed_omegas = {p: {} for p in p_values}  # p -> {seed: omega}
+    all_seed_r2s = {p: {} for p in p_values}      # p -> {seed: r2}
 
     for seed in seeds:
         t0 = time.time()
@@ -260,8 +261,8 @@ def main():
         for p in p_values:
             omega, r2 = measure_omega(pos, adj, nmap, NL, hw, H, p)
             if not math.isnan(omega) and r2 > 0.9:
-                all_seed_omegas[p].append(omega)
-                all_seed_r2s[p].append(r2)
+                all_seed_omegas[p][seed] = omega
+                all_seed_r2s[p][seed] = r2
         dt = time.time() - t0
         if seed == 0:
             print(f"  nodes={len(pos)}, time per seed ≈ {dt:.1f}s")
@@ -272,8 +273,10 @@ def main():
 
     good_p, good_omega = [], []
     for p in p_values:
-        ws = all_seed_omegas[p]
-        r2s = all_seed_r2s[p]
+        ws_dict = all_seed_omegas[p]
+        r2_dict = all_seed_r2s[p]
+        ws = list(ws_dict.values())
+        r2s = list(r2_dict.values())
         if len(ws) < 3:
             print(f"  {p:5.1f}  {'<3 good':>10s}")
             continue
@@ -307,17 +310,15 @@ def main():
         else:
             print(f"    → TIE NOT BROKEN (Δ < 0.01)")
 
-    # Per-seed fits (per review P2)
+    # Per-seed fits (keyed by actual seed ID, not list index)
     print(f"\n  PER-SEED FITS (winner per seed):")
     seed_winners = []
     for seed in seeds:
         seed_p, seed_w = [], []
         for p in p_values:
-            ws = all_seed_omegas[p]
-            r2s = all_seed_r2s[p]
-            if len(ws) > seed:
+            if seed in all_seed_omegas[p]:
                 seed_p.append(p)
-                seed_w.append(ws[seed])
+                seed_w.append(all_seed_omegas[p][seed])
         if len(seed_p) >= 6:
             fits = fit_models(seed_p, seed_w)
             ranked = sorted(fits.items(), key=lambda x: -x[1][0])
@@ -325,8 +326,9 @@ def main():
             gap = ranked[0][1][0] - ranked[1][1][0]
             seed_winners.append(winner)
             print(f"    seed {seed}: {winner:15s}  (Δ = {gap:.4f})", end="")
-            # Show top 2
             print(f"  [{ranked[0][0][:3]}={ranked[0][1][0]:.4f}, {ranked[1][0][:3]}={ranked[1][1][0]:.4f}]")
+        else:
+            print(f"    seed {seed}: <6 clean p-values, skipped")
 
     # Tally
     from collections import Counter

@@ -1,7 +1,7 @@
 # k_eff = k·h Continuum Limit Note
 
 **Date:** 2026-04-09
-**Status:** retained NEGATIVE — the remaining dense-continuum candidate `k_eff = k·h` does not produce a clean refinement lane. It gives finite rows at `h ∈ {2.0, 1.0, 0.5}` but the detector probability collapses to zero by `h = 0.25`. The gravity channel is also unstable on the retained rows (`-1.69 → +0.14 → +0.58`). This is not a harness bug; it is a mixed failure mode where coarse spacings are still strongly coupled while the fine spacing starves the detector completely.
+**Status:** retained NEGATIVE — the remaining dense-continuum candidate `k_eff = k·h` does not produce a clean refinement lane. It gives finite rows at `h ∈ {2.0, 1.0, 0.5}` but the detector probability falls below the harness prune floor (1e-30) at `h = 0.25`, causing the measurement to report zero. The gravity channel is also unstable on the retained rows (`-1.69 → +0.14 → +0.58`). **Note:** the reported "zero" at h=0.25 is a harness-floor artifact — replaying without the 1e-30 amplitude prune gives P_free ≈ 7e-75 (nonzero on all detector nodes). The detector is not literally dead; it is ~75 orders of magnitude below unity, which is still a practical failure for the scheme.
 
 ## Artifact chain
 
@@ -86,8 +86,9 @@ So the dense-continuum candidate pool is now effectively exhausted:
 > "The remaining open dense continuum scheme `k_eff = k·h` does not rescue the
 > lattice continuum program. It gives finite rows at `h = 2.0, 1.0, 0.5`, but
 > detector probability collapses to zero by `h = 0.25`, while the gravity
-> channel wanders `-1.69 → +0.14 → +0.58`. This is not a harness bug; the
-> scheme shows a mixed failure mode where coarse spacings are still strongly
-> coupled and the fine spacing starves the detector completely. The dense
+> channel wanders `-1.69 → +0.14 → +0.58`. The reported zero at h=0.25 is
+> a harness-floor artifact (P_free ≈ 7e-75 without the 1e-30 prune), but
+> the scheme is still a practical failure: 75 orders of magnitude below
+> unity is not a usable continuum limit. The dense
 > candidate pool is now exhausted except for explicit architecture changes or
 > a return to the already-bounded nearest-neighbor branch." 
