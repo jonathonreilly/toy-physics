@@ -1,20 +1,21 @@
 #!/usr/bin/env python3
-"""Dimension-dependent kernel test: w(theta) = cos^(d_spatial)(theta).
+"""Dimension-dependent kernel test: does optimal cosine power track d_spatial?
 
-HYPOTHESIS: The angular kernel should scale with spatial dimension.
-  In 2+1D (2 spatial dims): w(theta) = cos^2(theta)
-  In 3+1D (3 spatial dims): w(theta) = cos^3(theta)
+HYPOTHESIS: The optimal cosine power for gravity is cos^(d_spatial)(theta).
 
-Adding one power of cos(theta) per spatial dimension compensates for
-the growing path density at large theta (which scales as sin^(d-1)(theta)),
-maintaining a balanced gravity-to-isotropy trade-off across dimensions.
+OBSERVABLE: Gravity sign and magnitude for each cosine power, plus Born.
+This script does NOT measure isotropy — it ranks kernels by gravity
+strength and Born compliance only.
 
 EXPERIMENT:
   Part 1 (2+1D): Compare cos(t), cos^2(t), cos^3(t)
   Part 2 (3+1D): Compare cos^2(t), cos^3(t), cos^4(t), exp(-0.8t^2)
 
-FALSIFICATION: If the optimal kernel power doesn't track d_spatial,
+FALSIFICATION: If the optimal power doesn't track d_spatial,
 the kernel is dimension-independent.
+
+NOTE: 3+1D results use h=1.0 which is coarse. The gravity-strength
+ranking may differ at finer resolution.
 """
 
 from __future__ import annotations
@@ -232,15 +233,19 @@ def make_field_3d(lat, z_mass_phys, strength):
 
 
 def make_field_4d(lat, z_mass_phys, strength):
-    """1/r^2 field for 3 spatial dimensions (3D Coulomb)."""
+    """Static 3D Coulomb: 1/r_spatial^2 using spatial (y,z,w) only."""
     gl = 2 * lat.nl // 3
     iz = round(z_mass_phys / lat.h)
     mi = lat.nmap.get((gl, 0, iz, 0))
     if mi is None:
         return np.zeros(lat.n), None
-    mx = lat.pos[mi]
-    r = np.sqrt(np.sum((lat.pos - mx) ** 2, axis=1)) + 0.1
-    return strength / (r ** 2), mi
+    my, mz, mw = lat.pos[mi, 1], lat.pos[mi, 2], lat.pos[mi, 3]
+    r_spatial = np.sqrt(
+        (lat.pos[:, 1] - my) ** 2 +
+        (lat.pos[:, 2] - mz) ** 2 +
+        (lat.pos[:, 3] - mw) ** 2
+    ) + 0.1
+    return strength / (r_spatial ** 2), mi
 
 
 def setup_slits_3d(lat):
