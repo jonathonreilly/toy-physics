@@ -1,18 +1,22 @@
 # Lensing Adjoint Kernel Probe — Why The Slope Is Not A Ray-Deflection Law
 
 **Date:** 2026-04-08
-**Status:** retained partial positive — the literal first-order lensing observable is now identified exactly as an **adjoint-weighted edge sum**, not a ray-angle integral. On the decisive fine setup (`H=0.25`, `b=3`), the exact layer kernel reproduces `kubo_true` to machine precision at both `T_phys=15` and `T_phys=7.5`, and the kernel is **broad and post-mass-skewed**, not a narrow kick at the mass plane. This does not fully explain the `≈ -1.43` slope yet, but it does explain why simple Fermat/ray formulas failed: the detector-centroid observable is a wave-mechanical, detector-weighted response distributed over many layers after the mass, not a local deflection angle.
+**Status:** retained partial positive — the literal first-order lensing observable is now identified exactly as an **adjoint-weighted edge sum**, not a ray-angle integral. On the decisive fine setup (`H=0.25`, `b=3`), the exact layer kernel reproduces `kubo_true` to machine precision at both `T_phys=15` and `T_phys=7.5`, and the kernel is **broad and post-mass-skewed**, not a narrow kick at the mass plane. The new fan-out over `b ∈ {3,4,5,6}` at default `BETA=0.8` shows that this broad, downstream-weighted structure persists across the full retained slope-fit window. And the exact-kernel replay of the merged `beta=5` lensing negative shows the same thing: even where the coarse sweep accidentally looked ray-like, the literal first-order response never localizes into a narrow kick and then flips sign at `H=0.35`. This does not fully explain the `≈ -1.43` slope yet, but it does explain why simple Fermat/ray formulas failed: the detector-centroid observable is a wave-mechanical, detector-weighted response distributed over many layers after the mass, not a local deflection angle.
 
 ## Artifact chain
 
 - [`scripts/lensing_adjoint_kernel_probe.py`](../scripts/lensing_adjoint_kernel_probe.py)
 - [`logs/2026-04-08-lensing-adjoint-kernel-T15-H025-b3.txt`](../logs/2026-04-08-lensing-adjoint-kernel-T15-H025-b3.txt)
 - [`logs/2026-04-08-lensing-adjoint-kernel-T7p5-H025-b3.txt`](../logs/2026-04-08-lensing-adjoint-kernel-T7p5-H025-b3.txt)
+- [`logs/2026-04-08-lensing-adjoint-kernel-T15-H025-b3456.txt`](../logs/2026-04-08-lensing-adjoint-kernel-T15-H025-b3456.txt)
 - [`logs/2026-04-08-lensing-adjoint-kernel-T7p5-H025-b3-beta040.txt`](../logs/2026-04-08-lensing-adjoint-kernel-T7p5-H025-b3-beta040.txt)
 - [`logs/2026-04-08-lensing-adjoint-kernel-T7p5-H025-b3-beta160.txt`](../logs/2026-04-08-lensing-adjoint-kernel-T7p5-H025-b3-beta160.txt)
+- [`logs/2026-04-08-lensing-adjoint-kernel-T15-H05-b3-beta500.txt`](../logs/2026-04-08-lensing-adjoint-kernel-T15-H05-b3-beta500.txt)
+- [`logs/2026-04-08-lensing-adjoint-kernel-T15-H035-b3456-beta500.txt`](../logs/2026-04-08-lensing-adjoint-kernel-T15-H035-b3456-beta500.txt)
 - Depends on:
   - [`scripts/kubo_continuum_limit.py`](../scripts/kubo_continuum_limit.py)
   - [`docs/LENSING_LONG_PATH_TEST_NOTE.md`](LENSING_LONG_PATH_TEST_NOTE.md)
+  - [`docs/LENSING_BETA_SWEEP_NOTE.md`](LENSING_BETA_SWEEP_NOTE.md)
 
 ## Question
 
@@ -147,6 +151,27 @@ So the observable behaves like:
 That is exactly the kind of structure a simple ray-deflection formula
 cannot capture.
 
+### Across the retained slope-fit window: `b ∈ {3,4,5,6}` at `T=15`, `H=0.25`, `BETA=0.8`
+
+The broad structure is not just a single-`b` artifact. Across the full
+default asymptotic subset:
+
+| `b` | `kubo_true` | peak layer | abs-center | abs-width | left/right abs split |
+| ---: | ---: | ---: | ---: | ---: | --- |
+| `3` | `+5.986043` | `5.25` | `6.266` | `3.508` | `0.43 / 0.61` |
+| `4` | `+3.819639` | `5.25` | `6.459` | `3.666` | `0.41 / 0.62` |
+| `5` | `+2.826383` | `5.25` | `6.626` | `3.786` | `0.40 / 0.62` |
+| `6` | `+2.211718` | `4.50` | `6.763` | `3.873` | `0.39 / 0.63` |
+
+Two facts survive the fan-out:
+
+1. the kernel remains **broad** throughout the fitted `b` range
+2. the kernel remains **post-mass-skewed** throughout the fitted `b` range
+
+So the retained `≈ -1.43` slope is not coming from one anomalous
+impact parameter. It is a property of the same broad detector-weighted
+response structure across the full four-point fit window.
+
 ## Why we do not see textbook `1/b` lensing
 
 The answer is now sharper:
@@ -219,14 +244,55 @@ harness itself and closed the simple narrow-beam rescue:
 The apparent `beta=5` near-`1/b` point is an isolated coarse-grid spike,
 not a stable asymptotic branch.
 
+The exact-kernel replay sharpens that conclusion.
+
+#### `beta = 5`, coarse `H = 0.5`, `T=15`, `b=3`
+
+The coarse point that looked most ray-like in the slope sweep still has
+a broad, mixed-sign kernel:
+
+- `kubo_true = +0.018865`
+- peak layer: `x = 6.50`
+- abs-center: `x = 7.017`
+- abs-width: `3.129`
+- left/right abs split: `0.32 / 0.74`
+
+Top signed layers:
+
+```text
+x=6.50:+3.334e-03  x=3.00:-3.303e-03  x=6.00:+3.235e-03
+x=4.50:+2.676e-03  x=3.50:-2.526e-03  x=1.50:+1.923e-03
+```
+
+That is not a localized kick. It is still a broad response with strong
+downstream weight and meaningful cancellation.
+
+#### `beta = 5`, medium `H = 0.35`, `T=15`, `b ∈ {3,4,5,6}`
+
+At the next refinement, the same `beta=5` branch flips sign while
+remaining broad and downstream-weighted:
+
+| `b` | `kubo_true` | peak layer | abs-center | abs-width | left/right abs split |
+| ---: | ---: | ---: | ---: | ---: | --- |
+| `3` | `-0.034338` | `5.95` | `6.835` | `3.018` | `0.30 / 0.74` |
+| `4` | `-0.027640` | `6.30` | `7.018` | `3.116` | `0.29 / 0.75` |
+| `5` | `-0.023081` | `6.65` | `7.156` | `3.183` | `0.28 / 0.75` |
+| `6` | `-0.019810` | `6.65` | `7.261` | `3.231` | `0.28 / 0.76` |
+
+So the `beta=5` lane fails in the exact observable for the same reason
+it failed in the deflection sweep: it never actually reaches a ray-like
+regime. The apparent coarse-grid `1/b` shape came from a broad,
+sign-canceling kernel that is not stable under refinement.
+
 ## Best next move
 
 The cheapest decisive next lane is now:
 
-1. fan out the exact kernel probe over `b ∈ {3,4,5,6}` at `T=15, H=0.25`
-2. compare normalized `K_l` shapes across `b`
-3. only after that, test whether kernel width/skew metrics track the retained
+1. compare normalized `K_l` shapes across `b ∈ {3,4,5,6}` at `T=15, H=0.25`
+2. test whether kernel width/skew metrics track the retained
    `≈ -1.43` exponent more directly than raw `BETA` does
+3. if they do not, move to a literal derivation of the `b`-dependence
+   from the full layer kernel rather than more parameter sweeps
 
 If the normalized kernel shape is stable across `b`, then the slope is
 coming mainly from how the edge factor `1/r_field(b)` is sampled against
@@ -235,13 +301,16 @@ a fixed broad kernel. If the kernel shape itself changes strongly with
 
 ## Bottom line
 
-> "We now know why the simple lensing explanation failed. The literal
+> "We now know why the simple lensing explanations failed. The literal
 > first-order observable is an adjoint-weighted edge sum for detector
 > centroid shift, not a localized ray deflection. On the decisive fine
-> runs (`H=0.25`, `b=3`), the exact layer kernel reproduces `kubo_true`
-> to machine precision and is broad and post-mass-skewed, with a width
-> about 0.36–0.39 of the post-mass path. The slope therefore belongs to
-> the wave-mechanical detector response of the propagator, not to a
-> simple Fermat kick law. This does not derive the `≈ -1.43` exponent
-> yet, but it does explain why textbook `1/b` ray optics is the wrong
-> observable for this lane."
+> runs (`H=0.25`, `b ∈ {3,4,5,6}`), the exact layer kernel reproduces
+> `kubo_true` to machine precision and stays broad and post-mass-skewed
+> across the full retained slope-fit window. And on the merged `beta=5`
+> branch, the exact kernel never localizes into a ray-like kick even
+> where the coarse sweep briefly looked canonical; it remains broad,
+> sign-mixed, and flips sign at the next refinement. The slope therefore
+> belongs to the wave-mechanical detector response of the propagator,
+> not to a simple Fermat kick law. This does not derive the `≈ -1.43`
+> exponent yet, but it does explain why textbook `1/b` ray optics is
+> the wrong observable for this lane."
