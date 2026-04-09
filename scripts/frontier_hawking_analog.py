@@ -1,19 +1,21 @@
 #!/usr/bin/env python3
-"""Hawking-analog radiation from amplitude trapping in a discrete DAG.
+"""Thermal spectrum test on detector wavefunction in a discrete DAG.
+
+NOTE: This is NOT a true Hawking radiation test. The field does not trap
+amplitude (detector probability INCREASES with field strength), so the
+setup does not produce "escaped radiation from a trapping region."
+
+What this script DOES test: whether the Fourier power spectrum of the
+detector wavefunction has a thermal (Boltzmann-like) shape, and whether
+the fitted temperature scales with field strength.
 
 Hypothesis:
-    Escaped amplitude from a trapping region has a thermal (Boltzmann-like)
-    energy spectrum.  Specifically, the Fourier power spectrum |psi_k|^2 of
-    the detector wavefunction should satisfy:
-
-        ln(|psi_k|^2) = a - b * k^2       (R^2 > 0.9 => thermal)
-
-    and the fitted temperature T ~ 1/(2b) should scale inversely with the
-    field strength (mass analog), matching the Hawking prediction T ~ 1/M.
+    The Fourier spectrum |psi_k|^2 satisfies ln(|psi_k|^2) = a - b*k^2
+    (R^2 > 0.9 => thermal shape), and T ~ 1/(2b) scales as 1/M.
 
 Falsification:
-    If ln(|psi_k|^2) vs k^2 has R^2 < 0.5 for any field strength, the
-    spectrum is not thermal.
+    If R^2 < 0.5 for the thermal fit, the spectrum is not thermal-shaped.
+    If T is constant across field strengths, Hawking scaling is falsified.
 
 Infrastructure:
     Uses the 2D rectangular DAG propagator from toy_event_physics.py.
@@ -246,13 +248,36 @@ def run_experiment():
     det_free = extract_detector_amplitudes(psi_free, WIDTH, HEIGHT)
     p_total_free = sum(abs(a) ** 2 for _, a in det_free)
     print(f"  Total detector probability (free): {p_total_free:.6e}")
+
+    # Field-free spectral control
+    dft_free = discrete_fourier_transform(det_free)
+    ps_free = power_spectrum(dft_free)
+    n_modes_free = len(ps_free)
+    half_free = n_modes_free // 2
+    pos_modes_free = [(k, p) for k, p in ps_free if 0 < k <= half_free]
+    valid_free = [(k, p) for k, p in pos_modes_free if p > 0]
+    if len(valid_free) >= 3:
+        xs_free = [float(k * k) for k, _ in valid_free]
+        ys_free = [math.log(p) for _, p in valid_free]
+        a_free, b_free, r2_free = linear_regression(xs_free, ys_free)
+        t_free = 1.0 / (2.0 * abs(b_free)) if abs(b_free) > 1e-30 else float("inf")
+        label_free = "THERMAL" if r2_free > 0.9 else ("marginal" if r2_free > 0.5 else "NOT thermal")
+        print(f"  Free-field spectrum: a={a_free:+.4f} b={b_free:+.6f} "
+              f"R^2={r2_free:.4f} T={t_free:.4f} [{label_free}]")
+        print(f"  ==> This is the CONTROL: if free-field is also thermal-shaped,")
+        print(f"      the shape is geometric (lattice structure), not field-induced.")
+    else:
+        r2_free = 0.0
+        print(f"  Free-field spectrum: too few modes for fit")
     print()
 
     # -----------------------------------------------------------------------
-    # Part 1: Trapping measurement
+    # Part 1: Field-enhanced throughput (not trapping)
     # -----------------------------------------------------------------------
     print("-" * 72)
-    print("PART 1: TRAPPING vs FIELD STRENGTH")
+    print("PART 1: DETECTOR THROUGHPUT vs FIELD STRENGTH")
+    print("  NOTE: 'trapped fraction' is negative at all tested strengths,")
+    print("  meaning the field ENHANCES detector probability (no trapping).")
     print("-" * 72)
 
     results = {}  # field_strength -> dict of results

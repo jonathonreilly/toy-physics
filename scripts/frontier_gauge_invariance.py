@@ -1,18 +1,30 @@
 """
-frontier_gauge_invariance.py -- Gauge invariance in the path-sum propagator
+frontier_gauge_invariance.py -- Gauge connections on the path-sum propagator
 ============================================================================
 
-HYPOTHESIS: "The path-sum propagator has U(1) gauge invariance and supports
-an Aharonov-Bohm effect."
+Tests whether the path-sum propagator naturally supports gauge fields
+(link phases / link matrices) with the expected invariance properties.
 
-FALSIFICATION:
-  - If random node phases change |psi|^2, gauge invariance is broken.
-  - If a slit phase shift does NOT produce sinusoidal modulation, the AB effect fails.
+Part 1: Node-phase gauge invariance — |psi|^2 is unchanged under local
+  phase redefinitions alpha(i) at each node. This is MATHEMATICALLY
+  TRIVIAL (all paths between same endpoints pick up same endpoint phase,
+  which cancels in |psi|^2). Included as a consistency check.
 
-Part 1: Verify trivial gauge invariance (random node phases leave |psi|^2 unchanged).
-Part 2: Add a uniform gauge field (pure gauge) and verify |psi|^2 is unchanged.
-Part 3: Aharonov-Bohm test (sweep slit phase, measure sinusoidal interference shift).
-Part 4: Non-abelian SU(2) gauge field (exploratory spinor propagation).
+Part 2: Gauge field (link phases) — uniform A_ij = const is NOT a pure
+  gauge (paths with different lengths pick up different phases).
+  True pure gauge A_ij = alpha(j) - alpha(i) IS invariant (trivially).
+
+Part 3: Aharonov-Bohm modulation — phase shift on upper-slit edges
+  produces cos^2(phi/2) modulation of center detector probability.
+  This is a standard two-slit interference effect with a phase offset,
+  implemented as a gauge field on the slit edges.
+
+Part 4: SU(2) gauge field (exploratory) — 2x2 unitary link matrices
+  with 2-component spinor amplitudes. Custom code, not integrated with
+  the core propagator. Convention needs verification against standard
+  lattice gauge theory.
+
+Part 5: Wilson loop — gauge-invariant observable for closed paths.
 """
 
 from __future__ import annotations
