@@ -88,7 +88,7 @@ def grow(seed, drift, restore, NL, PW, max_d_phys, H):
     return pos, adj, nmap
 
 
-def true_kubo_at_H(pos, adj, NL, PW, H, k_phase, x_src, z_src):
+def true_kubo_at_H(pos, adj, NL, PW, H, k_phase, x_src, z_src, beta=BETA):
     """Parallel perturbation propagator for the static-gravity Kubo coefficient.
 
     Returns (dM_at_small_s, kubo_true, cz_free).
@@ -127,7 +127,7 @@ def true_kubo_at_H(pos, adj, NL, PW, H, k_phase, x_src, z_src):
             phase = k_phase * L
             phi = complex(math.cos(phase), math.sin(phase))
             theta = math.atan2(math.sqrt(dy * dy + dz * dz), max(dx, 1e-10))
-            w = math.exp(-BETA * theta * theta)
+            w = math.exp(-beta * theta * theta)
             w_eff = w * h2 / (L * L)
             weight = phi * w_eff
             dphi_ds = complex(0.0, -k_phase * L / r_field) * phi
@@ -152,7 +152,7 @@ def true_kubo_at_H(pos, adj, NL, PW, H, k_phase, x_src, z_src):
     return kubo, cz_free, T0
 
 
-def finite_diff_dM(pos, adj, NL, PW, H, k_phase, x_src, z_src, s):
+def finite_diff_dM(pos, adj, NL, PW, H, k_phase, x_src, z_src, s, beta=BETA):
     """Measure the static dM (cz displacement) at a small source strength s
     via direct beam propagation (no parallel propagator), for cross-check."""
     n = len(pos)
@@ -176,7 +176,7 @@ def finite_diff_dM(pos, adj, NL, PW, H, k_phase, x_src, z_src, s):
             f = 0.5 * (field[i] + field[j])
             phase = k_phase * L * (1.0 - f)
             theta = math.atan2(math.sqrt(dy * dy + dz * dz), max(dx, 1e-10))
-            w = math.exp(-BETA * theta * theta)
+            w = math.exp(-beta * theta * theta)
             amps[j] += amps[i] * complex(math.cos(phase), math.sin(phase)) * w * h2 / (L * L)
     hw = int(PW / H)
     npl = (2 * hw + 1) ** 2

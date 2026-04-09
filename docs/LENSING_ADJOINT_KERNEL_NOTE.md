@@ -213,13 +213,20 @@ does **not** support the idea that the default `≈ -1.43` slope is caused
 simply by the kernel collapsing or widening in a trivial way. The broad
 adjoint-weighted structure appears robust.
 
+Lane M then carried the slope-side `BETA` sweep through the deflection
+harness itself and closed the simple narrow-beam rescue:
+[`/Users/jonreilly/Projects/Physics/docs/LENSING_BETA_SWEEP_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LENSING_BETA_SWEEP_NOTE.md).
+The apparent `beta=5` near-`1/b` point is an isolated coarse-grid spike,
+not a stable asymptotic branch.
+
 ## Best next move
 
 The cheapest decisive next lane is now:
 
 1. fan out the exact kernel probe over `b ∈ {3,4,5,6}` at `T=15, H=0.25`
 2. compare normalized `K_l` shapes across `b`
-3. then do the **full** `BETA` dependence of the slope, not just a single-`b` spot-check
+3. only after that, test whether kernel width/skew metrics track the retained
+   `≈ -1.43` exponent more directly than raw `BETA` does
 
 If the normalized kernel shape is stable across `b`, then the slope is
 coming mainly from how the edge factor `1/r_field(b)` is sampled against
