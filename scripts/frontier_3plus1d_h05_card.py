@@ -1,15 +1,18 @@
 #!/usr/bin/env python3
-"""3+1D closure card at h=0.5 — finer lattice confirmation of h=1.0 results.
+"""3+1D feasibility signal at h=0.5 on a SMALLER box (W=3 vs W=4).
 
-Runs the same 7-test closure card as frontier_3plus1d_closure_card.py but
-with h=0.5 (instead of 1.0) and PHYS_W=3 (instead of 4) to keep node count
-manageable (~46k nodes).
+Runs the same 7-test card as frontier_3plus1d_closure_card.py but with
+h=0.5 and PHYS_W=3. This changes TWO things: lattice spacing AND box
+width. It is therefore NOT a pure refinement check — it is a feasibility
+signal on a different physical geometry.
 
-HYPOTHESIS: h=0.5 confirms the h=1.0 results: both kernels pass Born/k=0/
-  gravity/F~M. This rules out finite-size artifacts at h=1.0.
+HYPOTHESIS: Both kernels still pass Born/k=0/gravity/F~M on this
+  smaller, finer box.
 
-FALSIFICATION: If results flip sign or Born fails at h=0.5, the h=1.0
-  results were finite-size artifacts.
+FALSIFICATION: If core tests fail, the W=3 box is too small.
+
+NOTE: This does NOT rule out finite-size artifacts from h=1.0, because
+the box width changed simultaneously.
 
 Tests for EACH kernel (exp(-0.8*theta^2) and cos^2(theta)):
   1. Born rule (3-slit Sorkin test)
@@ -131,15 +134,22 @@ class Lattice4D:
 
 
 def make_field(lat, z_mass_phys, strength):
-    """1/r^2 field for 3 spatial dimensions (3D Coulomb)."""
+    """Static 3D Coulomb field: 1/r_spatial^2 using SPATIAL dims only.
+
+    Depends on (y, z, w) separation only, NOT causal x separation.
+    """
     gl = 2 * lat.nl // 3
     iz = round(z_mass_phys / lat.h)
     mi = lat.nmap.get((gl, 0, iz, 0))
     if mi is None:
         return np.zeros(lat.n), None
-    mx = lat.pos[mi]
-    r = np.sqrt(np.sum((lat.pos - mx) ** 2, axis=1)) + 0.1
-    return strength / (r ** 2), mi
+    my, mz, mw = lat.pos[mi, 1], lat.pos[mi, 2], lat.pos[mi, 3]
+    r_spatial = np.sqrt(
+        (lat.pos[:, 1] - my) ** 2 +
+        (lat.pos[:, 2] - mz) ** 2 +
+        (lat.pos[:, 3] - mw) ** 2
+    ) + 0.1
+    return strength / (r_spatial ** 2), mi
 
 
 def setup_slits(lat):

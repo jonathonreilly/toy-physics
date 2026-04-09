@@ -132,16 +132,27 @@ class Lattice4D:
 
 
 def make_field(lat, z_mass_phys, strength):
-    """1/r^2 field for 3 spatial dimensions (3D Coulomb)."""
+    """Static 3D Coulomb field: 1/r_spatial^2 using SPATIAL dims only.
+
+    The field depends on spatial separation (y, z, w) from the mass,
+    NOT on causal (x/layer) separation. This is a static field —
+    every layer sees the same spatial potential from the mass position.
+    The mass is placed at (y=0, z=z_mass, w=0) on every layer.
+    """
     gl = 2 * lat.nl // 3
     iz = round(z_mass_phys / lat.h)
     mi = lat.nmap.get((gl, 0, iz, 0))
     if mi is None:
         return np.zeros(lat.n), None
-    mx = lat.pos[mi]
-    r = np.sqrt(np.sum((lat.pos - mx) ** 2, axis=1)) + 0.1
-    # 3D Coulomb: field ~ 1/r^2 (not 1/r as in 2D Coulomb)
-    return strength / (r ** 2), mi
+    # Mass spatial position: (y, z, w) from the mass node
+    my, mz, mw = lat.pos[mi, 1], lat.pos[mi, 2], lat.pos[mi, 3]
+    # Spatial-only radius (columns 1,2,3 = y,z,w; exclude column 0 = x)
+    r_spatial = np.sqrt(
+        (lat.pos[:, 1] - my) ** 2 +
+        (lat.pos[:, 2] - mz) ** 2 +
+        (lat.pos[:, 3] - mw) ** 2
+    ) + 0.1
+    return strength / (r_spatial ** 2), mi
 
 
 def setup_slits(lat):
@@ -423,19 +434,19 @@ def main():
         k0_pass = abs(r["k0"]) < 1e-6
         fm_pass = not math.isnan(r["fm_alpha"]) and abs(r["fm_alpha"] - 1.0) < 0.3
 
-        core_pass = born_pass and grav_pass and k0_pass
+        core_pass = born_pass and grav_pass and k0_pass and fm_pass
         print(f"\n  {r['kernel']}:")
         print(f"    Born:    {'PASS' if born_pass else 'FAIL'} ({r['born']:.2e})")
         print(f"    k=0:     {'PASS' if k0_pass else 'FAIL'} ({r['k0']:.6f})")
         print(f"    Gravity: {'PASS' if grav_pass else 'FAIL'} ({r['grav']:+.6f} {r['grav_dir']})")
         print(f"    F~M:     {'PASS' if fm_pass else 'CHECK'} ({r['fm_alpha']:.2f})")
-        print(f"    Core:    {'ALL PASS' if core_pass else 'FAIL'}")
+        print(f"    TOWARD:  {r['n_toward']}/3")
+        print(f"    Core (Born+k0+grav+F~M): {'ALL PASS' if core_pass else 'FAIL'}")
 
     print()
-    print("  CAVEAT: h=1.0 is a coarse lattice. Results should be confirmed")
-    print("  at h=0.5 if computationally feasible (est. ~600k nodes).")
-    print("  The 3+1D lattice at h=1.0 has only ~9 nodes per transverse dim,")
-    print("  so finite-size effects may dominate.")
+    print("  CAVEAT: h=1.0 is a coarse lattice (9 nodes per transverse dim).")
+    print("  This is a coarse feasibility signal, not a physical 3+1D closure.")
+    print("  The field now uses spatial-only radius (y,z,w), excluding causal x.")
 
 
 if __name__ == "__main__":
