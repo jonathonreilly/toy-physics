@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
-"""Head-to-head: cos^2(theta) vs exp(-0.8*theta^2) on the 3D closure card.
+"""Head-to-head: cos^2(theta) vs exp(-0.8*theta^2) on the 2+1D lattice.
 
-Runs the exact same 10-property audit from lattice_3d_valley_linear_card.py
-with BOTH kernels, printing results side by side.
+Runs the FIXED-h CORE CHECKS from lattice_3d_valley_linear_card.py
+(properties 1-7 plus distance law) with both kernels. This is a
+NARROWER test than the full 10-property card: it omits properties
+8-9 (multi-L companion checks for purity stability and gravity growth).
 
 The only change between runs is the angular weight function:
   - Default: w = exp(-0.8 * theta^2)
@@ -11,11 +13,14 @@ The only change between runs is the angular weight function:
 Everything else is identical: action S=L(1-f), kernel 1/L^2, h^2 measure,
 lattice parameters h=0.25, W=10, L=12.
 
-HYPOTHESIS: cos^2(theta) preserves all 10 retained properties while
-  improving rotational isotropy from ~16% to ~1.5%.
+HYPOTHESIS: cos^2(theta) preserves the fixed-h core checks.
 
 FALSIFICATION: If any of Born, gravity sign, or F~M alpha fail with
   cos^2(theta), it cannot replace the default kernel.
+
+NOTE: This script does NOT measure isotropy. The 1.5% vs 16%
+anisotropy comparison comes from frontier_angular_kernel_investigation.py,
+not from this script.
 """
 
 from __future__ import annotations
@@ -391,18 +396,31 @@ def main():
                 row += f" | {v:>20{fmt}}"
                 vals.append(v)
 
-        # Determine winner
+        # Determine winner — ties are reported as ties
         winner = ""
         if all(v is not None for v in vals):
             v0, v1 = vals
+            # Use relative tolerance for tie detection
+            rel_tol = 0.01  # 1% relative difference = tie
+            def is_tie(a, b):
+                if a == b:
+                    return True
+                denom = max(abs(a), abs(b))
+                return denom > 0 and abs(a - b) / denom < rel_tol
+
             if direction == "lower":
-                winner = all_results[0]["kernel"] if v0 < v1 else all_results[1]["kernel"]
+                if is_tie(v0, v1): winner = "tie"
+                else: winner = all_results[0]["kernel"] if v0 < v1 else all_results[1]["kernel"]
             elif direction == "higher":
-                winner = all_results[0]["kernel"] if v0 > v1 else all_results[1]["kernel"]
+                if is_tie(v0, v1): winner = "tie"
+                else: winner = all_results[0]["kernel"] if v0 > v1 else all_results[1]["kernel"]
             elif direction == "lower_abs":
-                winner = all_results[0]["kernel"] if abs(v0) < abs(v1) else all_results[1]["kernel"]
+                if is_tie(abs(v0), abs(v1)): winner = "tie"
+                else: winner = all_results[0]["kernel"] if abs(v0) < abs(v1) else all_results[1]["kernel"]
             elif direction == "near_1":
-                winner = all_results[0]["kernel"] if abs(v0-1) < abs(v1-1) else all_results[1]["kernel"]
+                d0, d1 = abs(v0-1), abs(v1-1)
+                if is_tie(d0, d1): winner = "tie"
+                else: winner = all_results[0]["kernel"] if d0 < d1 else all_results[1]["kernel"]
             elif direction == "positive":
                 if v0 > 0 and v1 > 0:
                     winner = "tie (both TOWARD)"
@@ -419,7 +437,9 @@ def main():
     print()
     for r in all_results:
         if r["dist_slope"] is not None:
-            print(f"  {r['kernel']}: distance tail b^({r['dist_slope']:.2f}), R^2={r['dist_r2']:.3f}")
+            dist_from_newton = abs(r["dist_slope"] - (-1.0))
+            print(f"  {r['kernel']}: distance tail b^({r['dist_slope']:.2f}), "
+                  f"R^2={r['dist_r2']:.3f}, |slope - (-1)| = {dist_from_newton:.2f}")
 
     # Verdict
     print(f"\n{'='*70}")
@@ -452,11 +472,15 @@ def main():
         print(f"    MI:          {'better' if mi_better else 'worse'} "
               f"({cos2['mi']:.4f} vs {default['mi']:.4f})")
         print()
-        print("  cos^2(theta) is a viable replacement for exp(-0.8*theta^2)")
-        print("  with substantially better rotational isotropy (1.5% vs 16%).")
+        print("  cos^2(theta) passes the fixed-h core checks on this 2+1D lattice.")
         print()
-        print("  CAVEAT: This is a single-family test at one h value.")
-        print("  Transfer to other families and h values needs separate testing.")
+        print("  CAVEATS:")
+        print("  - This is a NARROWER test than the full 10-property card")
+        print("    (omits multi-L purity stability and gravity growth checks)")
+        print("  - Isotropy comparison (1.5% vs 16%) comes from a separate")
+        print("    script (frontier_angular_kernel_investigation.py), not here")
+        print("  - cos^2(theta) has weaker gravity and lower MI/d_TV than default")
+        print("  - Single-family, single-h test — not sufficient for promotion")
     else:
         failures = []
         if not born_pass: failures.append(f"Born ({cos2['born']:.2e})")
