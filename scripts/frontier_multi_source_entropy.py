@@ -280,7 +280,11 @@ def run_multi_source(
 
     eigenvalues = hermitian_eigenvalues(rho)
     s_vn = von_neumann_entropy(eigenvalues)
-    rank = sum(1 for e in eigenvalues if e > 1e-10)
+
+    # Effective rank: count eigenvalues > 1% of the largest eigenvalue.
+    # Using a relative threshold avoids counting numerical dust as "rank."
+    max_eig = max(eigenvalues) if eigenvalues else 0.0
+    eff_rank = sum(1 for e in eigenvalues if e > 0.01 * max_eig) if max_eig > 1e-30 else 0
 
     return {
         "n_sources_requested": n_sources,
@@ -288,7 +292,7 @@ def run_multi_source(
         "source_ys": [s[1] for s in sources],
         "n_cut": len(y_cut_positions),
         "S_vN": s_vn,
-        "rank": rank,
+        "eff_rank": eff_rank,
         "trace_before_norm": tr,
         "eigenvalues": eigenvalues,
     }
@@ -339,7 +343,7 @@ def main() -> None:
 
     print("EXPERIMENT A: Free space -- vary number of sources")
     print("-" * 72)
-    header = f"{'N_s':>4} {'actual':>6} {'S_vN':>10} {'rank':>5} {'S/ln(2)':>8} {'S/ln(N_s)':>10} {'S/ln(bnd)':>10}"
+    header = f"{'N_s':>4} {'actual':>6} {'S_vN':>10} {'erank':>5} {'S/ln(2)':>8} {'S/ln(N_s)':>10} {'S/ln(bnd)':>10}"
     print(header)
     print("-" * len(header))
 
@@ -355,7 +359,7 @@ def main() -> None:
         ratio_ns = s / ln_ns if ln_ns > 0 else float("inf")
         ratio_bnd = s / ln_bnd if ln_bnd > 0 else 0
 
-        print(f"{ns:>4} {r['n_sources_actual']:>6} {s:>10.6f} {r['rank']:>5} "
+        print(f"{ns:>4} {r['n_sources_actual']:>6} {s:>10.6f} {r['eff_rank']:>5} "
               f"{ratio_ln2:>8.4f} {ratio_ns:>10.4f} {ratio_bnd:>10.4f}")
 
     # ===================================================================
@@ -379,7 +383,7 @@ def main() -> None:
         ratio_ns = s / ln_ns if ln_ns > 0 else float("inf")
         ratio_bnd = s / ln_bnd if ln_bnd > 0 else 0
 
-        print(f"{ns:>4} {r['n_sources_actual']:>6} {s:>10.6f} {r['rank']:>5} "
+        print(f"{ns:>4} {r['n_sources_actual']:>6} {s:>10.6f} {r['eff_rank']:>5} "
               f"{ratio_ln2:>8.4f} {ratio_ns:>10.4f} {ratio_bnd:>10.4f}")
 
     # ===================================================================
@@ -395,7 +399,7 @@ def main() -> None:
         ns = rf["n_sources_actual"]
         ds = rm["S_vN"] - rf["S_vN"]
         print(f"{ns:>4} {rf['S_vN']:>10.6f} {rm['S_vN']:>10.6f} {ds:>10.6f} "
-              f"{rf['rank']:>5} {rm['rank']:>5}")
+              f"{rf['eff_rank']:>5} {rm['eff_rank']:>5}")
 
     # ===================================================================
     # Eigenvalue spectrum for key cases
@@ -420,7 +424,7 @@ def main() -> None:
 
     s_values = [r["S_vN"] for r in results_free]
     ns_actual = [r["n_sources_actual"] for r in results_free]
-    ranks = [r["rank"] for r in results_free]
+    ranks = [r["eff_rank"] for r in results_free]
 
     s_single = s_values[0]
     s_max = max(s_values)
@@ -448,12 +452,14 @@ def main() -> None:
 
     # Rank analysis
     print(f"\n  Rank progression: {list(zip(ns_actual, ranks))}")
-    rank_grows = ranks[-1] > ranks[0]
-    print(f"  Rank grows with N_s: {rank_grows}")
-    if rank_grows:
-        print(f"    ==> State space effectively enlarges with more sources")
+    max_rank = max(ranks)
+    rank_at_max_ns = ranks[-1]
+    print(f"  Max effective rank: {max_rank}  (at N_s >= 2, stays at {rank_at_max_ns})")
+    if max_rank <= 2:
+        print(f"    ==> Effective rank saturates at 2 regardless of source count")
+        print(f"    ==> Propagator concentrates in two parity modes (even/odd y)")
     else:
-        print(f"    ==> Rank stuck at {ranks[0]} -- geometry limits effective dimension")
+        print(f"    ==> Effective rank grows beyond 2 with more sources")
 
     # Scaling check: does S ~ ln(N_s)?
     log_ns = [math.log(n) for n in ns_actual if n > 1]
@@ -469,12 +475,14 @@ def main() -> None:
             slope = ss_xy / ss_xx
             r2 = (ss_xy ** 2) / (ss_xx * ss_yy) if ss_yy > 1e-30 else 0
             print(f"\n  Scaling fit S vs ln(N_s): slope={slope:.4f}, R^2={r2:.4f}")
-            if r2 > 0.9 and abs(slope - 1.0) < 0.3:
+            if abs(slope) < 0.01:
+                print(f"    ==> S flat (slope ~ 0): entropy does NOT grow with N_s")
+            elif r2 > 0.9 and abs(slope - 1.0) < 0.3:
                 print(f"    ==> S ~ ln(N_s) scaling (near slope=1)")
-            elif r2 > 0.7:
-                print(f"    ==> Some logarithmic scaling (slope={slope:.2f})")
+            elif r2 > 0.7 and slope > 0.1:
+                print(f"    ==> Weak positive scaling (slope={slope:.2f})")
             else:
-                print(f"    ==> Poor fit to ln(N_s)")
+                print(f"    ==> No clear scaling with N_s")
 
     # Mass effect
     ds_mass = [rm["S_vN"] - rf["S_vN"] for rf, rm in zip(results_free, results_mass)]

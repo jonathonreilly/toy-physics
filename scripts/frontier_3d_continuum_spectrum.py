@@ -275,20 +275,36 @@ def main():
                 r2_coarse = float('nan')
                 r2_fine = float('nan')
 
-            # For 2D box, E_2/E_1 should be 5/2 = 2.5 (modes (1,2) vs (1,1))
-            target = 2.5
-            print(f"  E_2/E_1 at h=1.0: {r2_coarse:.4f}")
-            print(f"  E_2/E_1 at h=0.5: {r2_fine:.4f}")
-            print(f"  Target (2D box):   {target:.4f}")
+            # For a square 2D box, eigenvalues are E_{ny,nz} ~ ny^2 + nz^2.
+            # Ground state: (1,1) -> 2.  First excited (degenerate): (1,2),(2,1) -> 5.
+            # E_n are GAPS from ground: E_1 = E_{1,2} - E_{1,1} = 5-2 = 3.
+            # So E_2/E_1 depends on ordering: if first two nonzero gaps come
+            # from the degenerate (1,2)/(2,1) pair, E_2/E_1 = 1.0 (degeneracy).
+            # The NEXT distinct gap is (2,2)->8, giving (8-2)/(5-2) = 2.0.
+            #
+            # NOTE: The previous version incorrectly compared to 2.5 (the raw
+            # eigenvalue ratio 5/2), not the gap ratio. With the SVD approach
+            # (E_n = -ln(sigma_n/sigma_1)), the extracted quantities are decay
+            # gaps, so the right comparison is:
+            #   First pair: E_2/E_1 ~ 1.0 (degenerate pair from square symmetry)
+            #   Next distinct: E_3/E_1 ~ 2.0 (if (2,2) mode)
+            target_degen = 1.0
+            target_next = 2.0
+            print(f"  E_2/E_1 at h=1.0: {r2_coarse:.4f}  (expect ~1.0 from degeneracy)")
+            print(f"  E_2/E_1 at h=0.5: {r2_fine:.4f}  (expect ~1.0 from degeneracy)")
+            print(f"  Target (degenerate pair): {target_degen:.1f}")
             print()
 
             if not (math.isnan(r2_coarse) or math.isnan(r2_fine)):
-                dist_coarse = abs(r2_coarse - target)
-                dist_fine = abs(r2_fine - target)
-                if dist_fine < dist_coarse:
-                    print("  POSITIVE: E_2/E_1 moves TOWARD 2.5 as h decreases.")
+                dist_coarse = abs(r2_coarse - target_degen)
+                dist_fine = abs(r2_fine - target_degen)
+                if dist_fine < 0.2 and dist_coarse < 0.2:
+                    print("  NOTE: Both show E_2/E_1 ~ 1.0, consistent with the")
+                    print("  expected first-excited degeneracy from square cross-section.")
+                elif dist_fine < dist_coarse:
+                    print("  E_2/E_1 moves TOWARD degeneracy (1.0) as h decreases.")
                 else:
-                    print("  NEGATIVE: E_2/E_1 does NOT move toward 2.5 as h decreases.")
+                    print("  E_2/E_1 does NOT move toward degeneracy as h decreases.")
             else:
                 print("  INCONCLUSIVE: could not compute ratios.")
         else:
