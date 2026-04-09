@@ -1,23 +1,26 @@
 #!/usr/bin/env python3
 """
-Frontier experiment: Born rule from information-theoretic axioms.
+Frontier experiment: Born rule from composability and p-norm uniqueness.
 
 HYPOTHESIS: Linearity (and hence Born rule) is the UNIQUE propagator
-            consistent with composability and no-signaling.
+            consistent with composability (tensor product structure).
 FALSIFICATION: If a nonlinear propagator also preserves I3=0 and tensor
                products, linearity is not uniquely selected.
 
-Physics: The Born rule (P = |psi|^2) follows from linearity of the
-path-sum propagator. This experiment tests whether linearity is the
-unique update rule consistent with two information-theoretic axioms:
+WHAT THIS SCRIPT ACTUALLY TESTS (from review):
+  - Composability / tensor-product preservation (Part 1)
+  - Sorkin I3 on the DAG for linear vs nonlinear maps (Part 2)
+  - p=2 norm uniqueness under Hadamard mixing (Part 3)
+  - Additivity and homogeneity for nonlinear maps (Part 4)
 
-  Axiom 1 (No-signaling): Tracing out a subsystem gives reduced state
-           independent of operations on that subsystem.
-  Axiom 2 (Composability): M_AB = M_A (x) M_B for independent systems.
+WHAT THIS SCRIPT DOES NOT TEST:
+  - No-signaling (reduced-state independence under partial operations)
+  - The no-signaling axiom is mentioned in the Hardy/Chiribella framing
+    but no reduced-state or operation-independence test is implemented.
 
-These are the Hardy/Chiribella quantum reconstruction axioms. If they
-uniquely select linear path-sums, the Born rule is derived from
-information theory alone.
+The retained argument is: composability → linearity → p=2 → Born rule.
+This is narrower than the full Hardy/Chiribella reconstruction but is
+numerically verified against 4 specific nonlinear alternatives.
 """
 
 import sys
