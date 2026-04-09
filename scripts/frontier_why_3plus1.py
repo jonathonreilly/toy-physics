@@ -1,22 +1,30 @@
 #!/usr/bin/env python3
-"""Frontier experiment: Why 3+1D? Dimensionality preference test.
+"""Frontier experiment: Dimensionality smoke test.
 
-Tests whether gravity + decoherence + Born are jointly optimized in 3+1D.
+Broad smoke test of Born + gravity across 1+1D through 4+1D, using
+dimension-appropriate kernel power and measure but NOT a fully unified
+source law.
+
+CAVEATS (from review):
+  - 1+1D uses an ad hoc 1/r field (the 1D Poisson Green's fn is linear
+    in |r|, not 1/r). This means 1+1D is not testing the same unified
+    prescription as 2+1D through 4+1D.
+  - Different h values and box sizes across dimensions (1+1D/2+1D at
+    h=0.5; 3+1D/4+1D at h=1.0). This confounds the cross-dimensional
+    comparison with resolution and geometry effects.
+  - grav/spread ratio is NOT directly comparable across dimensions.
+
+This is a multi-harness smoke test, not a clean universality comparison.
 
 For each total spacetime dimension d_total (2, 3, 4, 5):
-  - d_spatial = d_total - 1
-  - Kernel power: p = d_total - 1 (= d_spatial)
-  - Angular weight: exp(-0.8*theta^2)
+  - Kernel power: p = d_spatial
   - Action: S = L(1-f) (valley-linear)
-  - Field: strength / r_spatial^(d_spatial-1) (dimension-appropriate Coulomb)
+  - Field: strength / r_spatial^(d_spatial-1) (2+1D through 4+1D)
+           strength / r_spatial (ad hoc for 1+1D)
   - Measure: h^d_spatial
 
-Measures: Born |I3|/P, gravity sign, gravity magnitude, F~M scaling.
-Normalizes gravity by flat-field detector spread for cross-dimension comparison.
-
-HYPOTHESIS: 3+1D (d_spatial=3) gives the strongest joint gravity + Born compliance.
-FALSIFICATION: If gravity monotonically increases/decreases with dimension,
-  there is no preferred dimensionality.
+HYPOTHESIS: 3+1D gives the strongest joint gravity + Born compliance.
+FALSIFICATION: If all dimensions pass, no preferred dimensionality.
 """
 
 from __future__ import annotations

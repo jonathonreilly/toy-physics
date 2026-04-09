@@ -19,16 +19,23 @@ Physics:
   |G(k_y, omega)|^2 in the (k_y, omega) plane reveal the dispersion surface.
 
 Key question:
-  Does the dispersion surface have a LIGHT CONE shape (E^2 = k_x^2 + k_y^2,
-  Lorentzian) or a parabolic shape (E = k_x^2 + k_y^2, Euclidean)?
+  Does the dispersion surface have a LIGHT CONE shape (E^2 ~ k_y^2,
+  Lorentzian) or a parabolic shape (E ~ k_y^2, Euclidean)?
 
 Hypothesis:
-  The 2D dispersion surface has a light-cone shape (omega^2 ~ k_y^2) at
-  fine lattice spacing.
+  At small k_y (the physically relevant continuum sector), omega^2 is
+  approximately linear in k_y^2.
 
 Falsification:
-  If omega is always parabolic in k_y (Schrodinger, not relativistic),
-  no light cone emerges.
+  If omega is always parabolic in k_y across the full Brillouin zone
+  AND at small k_y, no cone-like behavior is present.
+
+CAVEAT (from review):
+  At h=0.5, the script's own global verdict is parabolic/lattice wins
+  (6/6 global fits). The "light cone" appears only in a local small-k
+  sub-fit covering half the Brillouin zone. At this resolution, parabolic
+  and cone fits are nearly tied in the small-k regime. Finer lattice
+  spacing would be needed to cleanly distinguish them.
 """
 
 import numpy as np
