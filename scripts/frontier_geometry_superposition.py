@@ -273,24 +273,34 @@ def main():
     for name, w in weights.items():
         print(f"  {name:<16}: w={w:.6e},  w^2/sum(w^2) = {w**2/w_norm_sq:.4f}")
 
-    # ── Coherent vs incoherent sum ──────────────────────────────────
+    # ── Normalize each geometry's wavefunction to unit probability ──
+    # This removes amplitude differences so we compare PHASE ONLY.
+    psi_normed = {}
+    for name, psi in psi_all.items():
+        norm = math.sqrt(sum(abs(a)**2 for a in psi.values()))
+        if norm > 1e-30:
+            psi_normed[name] = {y: a / norm for y, a in psi.items()}
+        else:
+            psi_normed[name] = psi
+
+    # ── Coherent vs incoherent sum (CORRECTED normalization) ──────
+    # Use equal weights on normalized wavefunctions to avoid
+    # Cauchy-Schwarz inflation. With equal weights on unit-norm ψ:
+    #   P_coherent(y)   = |mean_i ψ_i(y)|²
+    #   P_incoherent(y) = mean_i |ψ_i(y)|²
+    # These agree when all ψ_i are identical and differ when phases differ.
+    N_geom = len(psi_normed)
     P_coherent = {}
     P_incoherent = {}
 
     for y in all_ys:
-        # Coherent: |sum w_i psi_i|^2
-        coh_amp = sum(
-            weights[name] * psi_all[name].get(y, 0j)
-            for name in psi_all
-        )
-        P_coherent[y] = abs(coh_amp) ** 2 / w_norm_sq
+        # Coherent: |average amplitude|^2
+        coh_amp = sum(psi_normed[name].get(y, 0j) for name in psi_normed) / N_geom
+        P_coherent[y] = abs(coh_amp) ** 2
 
-        # Incoherent: sum |w_i|^2 |psi_i|^2
-        inc = sum(
-            weights[name] ** 2 * abs(psi_all[name].get(y, 0j)) ** 2
-            for name in psi_all
-        )
-        P_incoherent[y] = inc / w_norm_sq
+        # Incoherent: average of probabilities
+        inc = sum(abs(psi_normed[name].get(y, 0j)) ** 2 for name in psi_normed) / N_geom
+        P_incoherent[y] = inc
 
     # ── Interference contrast ───────────────────────────────────────
     max_P_inc = max(P_incoherent.values()) if P_incoherent else 1e-30
