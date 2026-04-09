@@ -1,0 +1,103 @@
+====================================================================================================
+LANE L: GRAVITATIONAL DEFLECTION / LENSING SWEEP
+Physical: T=15.0, PW=6.0, k*H=2.5, S=0.004
+Impact parameters b: [1.0, 2.0, 3.0, 4.0, 5.0, 6.0]
+Refinements: [0.5, 0.35]
+====================================================================================================
+
+--- coarse (H=0.5) ---
+  b=1.0  NL= 30  dM=-0.014349  kubo_true=-0.7476
+  b=2.0  NL= 30  dM=+0.019068  kubo_true=+4.6543
+  b=3.0  NL= 30  dM=+0.034642  kubo_true=+7.0619
+  b=4.0  NL= 30  dM=+0.026148  kubo_true=+5.6136
+  b=5.0  NL= 30  dM=+0.013483  kubo_true=+3.6639
+  b=6.0  NL= 30  dM=+0.012404  kubo_true=+3.0176
+
+--- medium (H=0.35) ---
+  b=1.0  NL= 43  dM=-0.013448  kubo_true=-2.2912
+  b=2.0  NL= 43  dM=+0.028442  kubo_true=+6.9576
+  b=3.0  NL= 43  dM=+0.024169  kubo_true=+5.9728
+  b=4.0  NL= 43  dM=+0.012387  kubo_true=+3.3393
+  b=5.0  NL= 43  dM=+0.012620  kubo_true=+3.0606
+  b=6.0  NL= 43  dM=+0.009623  kubo_true=+2.3599
+
+====================================================================================================
+DEFLECTION TABLE — dM(b) at each refinement
+====================================================================================================
+     b      coarse dM (H=0.5)     medium dM (H=0.35)      drift
+   1.0              -0.014349              -0.013448       6.3%
+   2.0               0.019068               0.028442      49.2%
+   3.0               0.034642               0.024169      30.2%
+   4.0               0.026148               0.012387      52.6%
+   5.0               0.013483               0.012620       6.4%
+   6.0               0.012404               0.009623      22.4%
+
+====================================================================================================
+LOG-LOG FIT |dM| vs b  at each refinement
+====================================================================================================
+  coarse (H=0.5):
+    log|dM| = -0.0329 * log(b) + -3.9484
+    R² = 0.0028
+    |slope − (−1)| = 0.9671
+  medium (H=0.35):
+    log|dM| = -0.2687 * log(b) + -3.8718
+    R² = 0.1751
+    |slope − (−1)| = 0.7313
+
+====================================================================================================
+LOG-LOG FIT kubo_true vs b  at each refinement (full range)
+====================================================================================================
+  coarse (H=0.5):
+    log|kubo| = +0.7453 * log(b) + +0.4044
+    R² = 0.3813
+    |slope − (−1)| = 1.7453
+  medium (H=0.35):
+    log|kubo| = -0.0765 * log(b) + +1.3737
+    R² = 0.0116
+    |slope − (−1)| = 0.9235
+
+====================================================================================================
+RESTRICTED FITS — excluding near-field pathology
+====================================================================================================
+
+  Subset: b ∈ {2,3,4,5,6} (excluding near-field b=1)
+    coarse (H=0.5):
+      kubo_true: slope = -0.4702  R²=0.3672  |slope−(−1)|=0.5298
+      dM       : slope = -0.5499  R²=0.3004  |slope−(−1)|=0.4501
+    medium (H=0.35):
+      kubo_true: slope = -1.0287  R²=0.9373  |slope−(−1)|=0.0287
+      dM       : slope = -1.0331  R²=0.9113  |slope−(−1)|=0.0331
+
+  Subset: b ∈ {3,4,5,6}   (asymptotic only, excluding peak at b≈2)
+    coarse (H=0.5):
+      kubo_true: slope = -1.2811  R²=0.9711  |slope−(−1)|=0.2811
+      dM       : slope = -1.6240  R²=0.9339  |slope−(−1)|=0.6240
+    medium (H=0.35):
+      kubo_true: slope = -1.2692  R²=0.9366  |slope−(−1)|=0.2692
+      dM       : slope = -1.2226  R²=0.8637  |slope−(−1)|=0.2226
+
+====================================================================================================
+SIGN CHECK — gravity should be TOWARD the mass (dM > 0 when z_src > 0)
+====================================================================================================
+  coarse b=1.0: dM=-0.014349  AWAY (NOT toward)
+  medium b=1.0: dM=-0.013448  AWAY (NOT toward)
+
+====================================================================================================
+VERDICT
+====================================================================================================
+  Full range (b=1..6) at H=0.35:
+    kubo_true(b) ∝ b^-0.076  R²=0.012
+    Dominated by near-field pathology at b=1 (negative deflection)
+
+  Asymptotic (b=3..6) at H=0.35:
+    kubo_true(b) ∝ b^-1.269  R²=0.937
+
+  MODERATE POSITIVE — the asymptotic slope is consistent with −1
+  within noise. The program shows 1/b-like deflection in the
+  far-field regime (mass clearly outside the beam's natural width).
+
+  Caveats:
+  - Only a 2-refinement sweep (H ∈ {0.5, 0.35}), not 3-refinement
+  - Large H-drifts at some b values (up to 50%+), not continuum-stable
+  - The near-field regime (b ≤ 1) has a genuine sign flip, not lensing
+  - Asymptotic range is only 4 b points; more needed for a clean fit
