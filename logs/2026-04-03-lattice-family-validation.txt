@@ -1,0 +1,29 @@
+========================================================================================
+LATTICE FAMILY VALIDATION
+  regular 2D lattice family: barrier joint card + no-barrier distance law
+  N=40, half_width=20, k=5.0
+========================================================================================
+
+Barrier-lattice joint card (b=7 mass row):
+  MI(bits)   = 0.537498
+  pur_min    = 0.592563
+  pur_cl     = 0.942834
+  1-pur_cl   = 0.0572
+  d_TV       = 0.713772
+  gravity    = -5.740317
+  Born       = 2.982356e-16
+  k=0        = +0.000000e+00
+  S_norm     = 0.783263
+
+No-barrier distance-law branch:
+  b= 3  delta=-3.534967  |delta|=3.534967
+  b= 5  delta=-3.379828  |delta|=3.379828
+  b= 7  delta=-2.879720  |delta|=2.879720
+  b=10  delta=-2.187925  |delta|=2.187925
+  b=13  delta=-1.661224  |delta|=1.661224
+  b=16  delta=-1.278711  |delta|=1.278711
+  b=19  delta=-1.004506  |delta|=1.004506
+
+Far-field |delta| fit on b >= 7:
+  |delta| ~= 23.5071 * b^(-1.052)
+  R^2 = 0.9850

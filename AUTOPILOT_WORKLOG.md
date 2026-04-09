@@ -1,58 +1,3743 @@
-## 2026-04-01 — Directional-measure b overlap-onset transfer holdout
+## 2026-04-08 — Closed the Shapiro scaling artifact-chain lane with a direct replay
 
 ### Current state
-- the canonical repo had already moved to `6fc649f` while the top tracked science entry still stopped at the first overlap-onset compare
-- the required preflight push via `automation_push.py` failed with DNS (`Could not resolve host: github.com`), so this loop stayed on one bounded science step instead of widening scope
-- the active gravity question from the top entry was still:
-  - do the new overlap-onset observables transfer onto one second dense-family control strongly enough to promote the local-density explanation
+- duplicate-run guard and cooperative `physics-science` lock both passed in
+  protocol order at loop start
+- no detached `physics-science` child was active in the latest handoff, so
+  this loop stayed on shared-state reconciliation plus one bounded
+  repo-facing closeout
+- canonical git in `/Users/jonreilly/Projects/Physics` reconciled before
+  science:
+  - `git status --short --branch` reported `## main...origin/main` plus
+    existing unrelated tracked doc/handoff edits and fresh local sidecar
+    drafts
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 8` showed synced head `741f1f4`
+- the required managed push check before science reported a clean sync:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - result: `status=nothing_to_push`, `ahead=0`, `behind=0`
+- the canonical orchestrator state at
+  `/Users/jonreilly/.codex/state/physics_research_orchestrator_state.json`
+  remained readable but not writable under the current sandbox, so the
+  writable mirror at `/tmp/physics_research_orchestrator_state_mirror.json`
+  stayed authoritative runtime state
+- reconciliation found the tracked handoff stale and automation memory
+  missing, while the writable mirror had already rolled the Shapiro /
+  gravitomagnetic frontier forward; this loop resumed that mirror state
+  instead of opening another duplicate cycle
+- spawned exactly five disjoint sidecar agents for the live carried-forward
+  threads:
+  - `shapiro-scaling-artifact-chain`
+  - `gravitomagnetic-static-mimic-boundary`
+  - `shapiro-extra-family-seed-stability`
+  - `shapiro-normalized-k-collapse`
+  - `shapiro-static-cone-family-portability`
+- harvested only one landed result for repo-facing state this loop:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/shapiro_scaling_direct_replay.py --format text`
+    passed
+  - `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/shapiro_scaling_direct_replay.py /Users/jonreilly/Projects/Physics/scripts/shapiro_scaling_probe.py`
+    passed
 
 ### What changed
-- added `scripts/directional_b_overlap_onset_transfer_holdout.py`
-- wrote `logs/2026-04-01-directional-b-overlap-onset-transfer-holdout.txt`
-- tested one nearby second dense-family control with independent seeds:
-  - baseline DAG compare kept `25` nodes/layer with `y_range = 12`
-  - holdout DAG used `28` nodes/layer with `y_range = 13`
-- evaluated the existing bounded overlap rule on that holdout:
-  - `same_side_mean_gap >= 0.7504 and selected_span_step >= 1.1301`
-- compared exact-rule transfer against holdout-only refits
+- added a direct data-bearing Shapiro scaling replay chain:
+  - `/Users/jonreilly/Projects/Physics/scripts/shapiro_scaling_direct_replay.py`
+  - `/Users/jonreilly/Projects/Physics/docs/SHAPIRO_SCALING_DIRECT_REPLAY_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-08-shapiro-scaling-direct-replay.txt`
+- converted
+  `/Users/jonreilly/Projects/Physics/scripts/shapiro_scaling_probe.py`
+  into a compatibility wrapper and repointed
+  `/Users/jonreilly/Projects/Physics/docs/SHAPIRO_SCALING_NOTE.md`
+  at the new direct replay note
+- folded `shapiro-scaling-artifact-chain` back into the writable mirror as a
+  diagnosed closeout: the lane no longer needs to stay active as a
+  reconstruction-only artifact chain
+- left the other landed sidecar work draft-only on purpose to preserve the
+  one-result bound:
+  - `gravitomagnetic-static-mimic-boundary` produced a local retained
+    note/script/log chain with matched static controls flat at `0.0000`
+  - `shapiro-normalized-k-collapse` produced a local still-active boundary
+    replay: `phi/k` does not fully collapse because the radial family remains
+    the main split
+  - `shapiro-extra-family-seed-stability` and
+    `shapiro-static-cone-family-portability` now have local draft harness
+    scripts but were not promoted this loop
+- after the scaling closeout, the writable mirror stayed saturated on cycle
+  `12` with five active lanes and two pending reserves
 
 ### Strongest confirmed conclusion
-The overlap-onset story now transfers at the feature level, but not as one frozen threshold pair.
-- on the second dense-family control, the original two-clause rule still gives:
-  - `tp/fp/fn/tn = 9/1/6/24`
-  - accuracy `0.8250`
-- the qualitative separation survives cleanly:
-  - overlap rows have much weaker target-band fill (`0.196` vs `0.885`)
-  - coarser same-side spacing (`1.035` vs `0.869`)
-  - larger selected span per source step (`1.193` vs `0.498`)
-- but the best holdout-only separator collapses mostly to target-band occupancy alone:
-  - `target_fill <= 1/3`
-  - `tp/fp/fn/tn = 14/2/1/23`
-  - accuracy `0.9250`
-
-So the promoted statement should be narrower and cleaner:
-- sparse target-band occupancy is the leading transferable overlap-onset signal
-- same-side spacing and selected-span cuts stay useful refinements, but their exact thresholds are family-dependent, especially on the milder `N=25` wide-family shoulder
+- the Shapiro scaling lane no longer needs an empty-commit / reconstruction
+  crutch: repo-local direct replay artifacts now freeze the retained `s`, `b`,
+  and `k` laws with exact source-off and instantaneous-field controls explicit
+- the `b` law should stay narrow and honest: it is a monotone sampled tail,
+  not an exact-zero claim
+- until the canonical orchestrator JSON becomes writable again, the writable
+  mirror plus fresh handoff / memory remain the only reliable runtime queue
+  for this automation
 
 ### Files/logs changed
-- `/Users/jonreilly/Projects/Physics/scripts/directional_b_overlap_onset_transfer_holdout.py`
-- `/Users/jonreilly/Projects/Physics/logs/2026-04-01-directional-b-overlap-onset-transfer-holdout.txt`
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/docs/SHAPIRO_SCALING_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/docs/SHAPIRO_SCALING_DIRECT_REPLAY_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/scripts/shapiro_scaling_probe.py`
+- `/Users/jonreilly/Projects/Physics/scripts/shapiro_scaling_direct_replay.py`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-08-shapiro-scaling-direct-replay.txt`
+
+### Exact next step
+- inspect the draft
+  `/Users/jonreilly/Projects/Physics/docs/GRAVITOMAGNETIC_STATIC_MIMIC_BOUNDARY_NOTE.md`
+  chain first; if it survives local review, promote it next as the strongest
+  active cycle-12 result
+- otherwise continue the remaining cycle-12 lanes without widening the claim
+  surface:
+  - `shapiro-extra-family-seed-stability`
+  - `shapiro-normalized-k-collapse`
+  - `shapiro-static-cone-family-portability`
+  - `gravitomagnetic-extra-family-portability`
+
+### First concrete action
+- compare
+  `/Users/jonreilly/Projects/Physics/scripts/gravitomagnetic_static_mimic_boundary.py`
+  and
+  `/Users/jonreilly/Projects/Physics/docs/GRAVITOMAGNETIC_STATIC_MIMIC_BOUNDARY_NOTE.md`
+  against the already-retained portability chain and decide whether the local
+  retained boundary should be folded into the mirror or left draft-only for
+  another loop
+
+## 2026-04-06 — Enabled duplicate lane status in the research orchestrator and reopened cycle 6 in a writable mirror
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed in
+  protocol order at loop start
+- no detached `physics-science` child was active in the latest handoff, so
+  this loop stayed on shared-state reconciliation plus one bounded integrity
+  fix
+- canonical git in `/Users/jonreilly/Projects/Physics` reconciled before the
+  integrity work:
+  - `git status --short --branch` reported `## main...origin/main` plus
+    existing unrelated draft dirt
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 8` showed local head `84b9673`
+- the required managed push check before science failed once with DNS:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - result: `status=failed`, `failure_kind=dns_failure`, `ahead=3`,
+    `behind=0`, `attempts_used=5`
+- the canonical orchestrator state at
+  `/Users/jonreilly/.codex/state/physics_research_orchestrator_state.json`
+  remained readable but not writable under the current sandbox:
+  - `research_orchestrator.py ... open-cycle` still failed on the canonical
+    path with `Operation not permitted` for the `.tmp` file under
+    `/Users/jonreilly/.codex/state`
+- the bounded repo-facing step this loop was an integrity fix:
+  - `/Users/jonreilly/Projects/Physics/scripts/research_orchestrator.py`
+    now accepts `duplicate` as a first-class lane status
+  - `python3 -m py_compile /Users/jonreilly/Projects/Physics/scripts/research_orchestrator.py`
+    passed cleanly
+- using a writable mirror at
+  `/tmp/physics_research_orchestrator_state_mirror.json`, this loop:
+  - reconciled cycle `5` as:
+    - `impact-parameter-portability -> closure`
+    - `moving-source-cross-family -> duplicate`
+    - `diamond-signal-budget-hardening -> retained`
+    - `universality-hierarchy-classifier -> retained`
+    - `vector-magnetic-extension -> retained`
+  - opened cycle `6` with five fresh lanes
+  - spawned exactly five disjoint sidecar agents for those lanes
+  - recorded three cycle-6 returns without widening the repo-facing step:
+    - `diamond-noise-floor-bridge -> duplicate`
+    - `relativistic-closure-boundary -> closure`
+    - `multipole-cross-family-portability -> retained`
+  - kept the queue full after those returns as `2` active lanes plus `3`
+    pending replacements
+
+### What changed
+- fixed the orchestrator/helper mismatch that prevented duplicate lanes from
+  being recorded faithfully through the CLI
+- reopened the next saturated frontier in the writable mirror:
+  - active:
+    - `diamond-source-geometry-card`
+    - `persistent-object-joint-scout`
+  - pending:
+    - `diamond-predictions-map-crosslink`
+    - `transverse-pocket-bottleneck-diagnosis`
+    - `multipole-monotonicity-boundary`
+- the multipole sidecar returned a narrow retained portability result:
+  exact null controls and a quadrupole-width channel survive on one second
+  retained family, but the stronger ordered-family monotonic-in-`a` width law
+  does not transfer
+- the persistent-object sidecar stayed active rather than closing early:
+  the current best joint architecture is still the compact `top-3` updater
+  plus the v1 adaptive contour, and the narrow next scout is a second-setup
+  replay rather than broader self-maintaining-object language
+
+### Strongest confirmed conclusion
+- duplicate/closure needs to be part of the orchestrator state machine:
+  otherwise the worker cannot record returned lane outcomes faithfully without
+  overloading `closure` or `dropped`
+- until the canonical JSON becomes writable again, handoff plus automation
+  memory remain the authoritative bridge for intended cycle transitions
+- after the full sidecar batch landed, the frontier stayed saturated as
+  `2` active lanes plus `3` pending reserves, which is the narrowest honest
+  state to hand to the next loop
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/Projects/Physics/scripts/research_orchestrator.py`
+
+### Exact next step
+- if the next loop can write the canonical orchestrator state, replay this
+  loop's mirrored cycle-5 updates and cycle-6 open there first, then fold in
+  at most one further cycle-6 result among:
+  - `diamond-source-geometry-card`
+  - `persistent-object-joint-scout`
+
+### First concrete action
+- inspect the remaining active diamond-source and persistent-object lanes; if
+  neither matures beyond draft, keep cycle `6` at `2` active plus `3` pending
+  and do not promote another repo-facing result yet
+
+## 2026-04-06 — Closed the sixth-family complex-action companion lane as a diagnosed boundary
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed in
+  protocol order at loop start
+- no detached `physics-science` child was active in the latest handoff, so
+  this loop stayed on a bounded local lane closeout
+- canonical git in `/Users/jonreilly/Projects/Physics` reconciled cleanly
+  before science:
+  - `git status --short --branch` reported `## main...origin/main` plus
+    existing unrelated draft dirt
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 8` showed synced head `e6ae833`
+- the required managed push check before science reported a clean sync:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - result: `status=nothing_to_push`, `ahead=0`, `behind=0`
+- harvested closure commit: `7dcd6fa`
+  (`docs: close sixth-family complex lane`)
+- the required managed push at loop end failed once with DNS:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - result: `status=failed`, `failure_kind=dns_failure`, `ahead=1`,
+    `behind=0`, `attempts_used=5`
+- the canonical orchestrator state at
+  `/Users/jonreilly/.codex/state/physics_research_orchestrator_state.json`
+  was readable but not writable under the current sandbox, so this loop used
+  it for reconciliation/selection only and recorded the intended cycle/lane
+  mutations in runtime state instead of mutating the canonical JSON
+- this loop reconciled the same five live frontier lanes, spawned exactly five
+  disjoint sidecar workers, and harvested only one finished result per the
+  bounded-step rule; the remaining lane outputs stay draft-only for the next
+  loop
+
+### What changed
+- froze the sixth-family complex lane as a diagnosed boundary instead of
+  leaving it as an unresolved draft
+- kept the bounded artifact chain:
+  - `/Users/jonreilly/Projects/Physics/docs/SIXTH_FAMILY_COMPLEX_BOUNDARY_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-06-sixth-family-complex-targeted.txt`
+- the retained anchor row read is:
+  - `drift = 0.20`, `seed = 2`
+  - `born = 0.000e+00`
+  - `g0 = -3.870601e-06`
+  - `d01 = -4.056664e-06`, `t01 = 0`
+  - `d05 = -4.800909e-06`, `t05 = 0`
+  - `fm0 = 1.000`, `fm05 = 1.000`
+- exact `gamma = 0` and weak-field linearity survive, but no
+  `TOWARD -> AWAY` crossover survives on the tested retained slice
+
+### Strongest confirmed conclusion
+- the retained sixth-family sheared basin does **not** carry a narrow
+  complex-action companion on the tested anchor row
+- the miss is structural on this slice rather than a control leak:
+  exact `gamma = 0`, Born, and weak-field linearity stay clean while the
+  directional crossover never appears
+- this lane should stay closed unless the architecture materially changes
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/docs/SIXTH_FAMILY_COMPLEX_BOUNDARY_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-06-sixth-family-complex-targeted.txt`
+
+### Exact next step
+- rerun protocol preflight and the cooperative lock, then reconcile the four
+  still-live lane drafts against the latest handoff/memory/orchestrator notes
+  before harvesting at most one more result
+- prefer the strongest already-generated bounded result among:
+  seventh-family diagonal, sixth-family distance law, distance-law-preserving
+  oblique, and portable-card extension
+
+### First concrete action
+- inspect the freshest sidecar drafts for `SEVENTH_FAMILY_DIAGONAL_*`,
+  `SIXTH_FAMILY_DISTANCE_LAW_*`, `DISTANCE_LAW_PRESERVING_*`, and
+  `PORTABLE_CARD_EXTENSION_*`, but do not mark any additional lane complete
+  until the next bounded loop
+
+## 2026-04-06 — Surfaced the second no-restore grown-family signed-source basin
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed in
+  protocol order at loop start
+- canonical git in `/Users/jonreilly/Projects/Physics` reconciled cleanly
+  before any new promotion work:
+  - `git status --short --branch` reported `## main...origin/main` plus
+    existing unrelated draft dirt
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 8` showed synced head `5bb71cd`
+- the required managed push check before science reported a clean sync:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - result: `status=nothing_to_push`, `ahead=0`, `behind=0`
+- this loop spawned exactly five disjoint sidecar workers covering:
+  - wider / scalable `h = 0.125`
+  - outside-exact-lattice grown transfer on grown geometry
+  - self-gravity / backreaction hardening under strict controls
+  - growing-graph dynamic propagation repair against static controls
+  - skeptic retainability audit before promotion
+- the first finished sidecars closed two lanes as bounded no-gos with no new
+  summary impact:
+  - wider `h = 0.125` stayed pinned near `alpha ~ 0.5`
+  - growing-graph dynamic propagation did not survive the static-control
+    comparison
+
+### What changed
+- harvested one bounded repo-facing surfacing step from already-synced `main`:
+  the second independent no-restore grown-family signed-source basin is now
+  visible in the canonical summary surfaces instead of only in its note/script/
+  log chain
+- promoted that bounded family extension into the top-level summaries:
+  - kept
+    `/Users/jonreilly/Projects/Physics/docs/SECOND_GROWN_FAMILY_SIGN_NOTE.md`
+    as the claim-carrying note
+  - kept
+    `/Users/jonreilly/Projects/Physics/logs/2026-04-06-second-grown-family-sign.txt`
+    as the frozen log
+  - kept
+    `/Users/jonreilly/Projects/Physics/scripts/SECOND_GROWN_FAMILY_SIGN_SWEEP.py`
+    as the replay script
+  - updated `README.md` and `docs/START_HERE.md` to surface the second-family
+    retained basin with review-safe wording
+- the retained synced read is:
+  - family: no-restore Gate B geometry-sector slice
+  - passing rows: `15/15`
+  - drifts: `0.0, 0.1, 0.2, 0.3, 0.5`
+  - seeds: `0, 1, 2`
+  - zero-source baseline: exact
+  - neutral `+1/-1` cancellation: exact
+  - mean weak-charge exponent: `1.000072`
+
+### Strongest confirmed conclusion
+- the fixed-field signed-source package is no longer confined to one retained
+  moderate-drift row; it now survives on a second independent no-restore grown
+  family
+- review-safe retained wording:
+  the fixed-field signed-source lesson extends to the tested no-restore
+  geometry-sector slice with exact zero/neutral controls and near-linear
+  charge response, but this remains a bounded family extension rather than
+  geometry-generic closure
+- this does not close broader Gate B dynamics, generated-family universality,
+  or exact-lattice-independent field theory
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
 - `/Users/jonreilly/Projects/Physics/README.md`
+- `/Users/jonreilly/Projects/Physics/docs/START_HERE.md`
+
+### Exact next step
+- inspect the remaining finished sidecar lanes, preferring either a skeptic-
+  hardened grown-transfer retention or a strict self-gravity/backreaction
+  no-go if one of those returns in a cleaner bounded form than the draft stack
+
+### First concrete action
+- review the outside-exact-lattice grown-transfer worker and skeptic audit
+  outputs; if neither supports a cleaner bounded promotion, leave the current
+  summary surface as-is and carry the remaining no-go closures only in handoff
+  and automation memory
+
+## 2026-04-06 — Surfaced the retained non-label grown-row architecture transfer
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed in
+  protocol order at loop start
+- the latest inherited handoff reported the repo still ahead of `origin/main`
+  with repeated DNS push failures, but canonical git in
+  `/Users/jonreilly/Projects/Physics` had already moved on and needed
+  reconciliation before any new lane work:
+  - `git status --short --branch` reported `## main...origin/main` plus
+    existing unrelated dirty sidecar drafts
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 8` showed local head `34200ab` already
+    synced with `origin/main`
+- the required managed push retry before local science reported a clean sync:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - result: `status=nothing_to_push`, `ahead=0`, `behind=0`
+- this loop then spawned exactly five disjoint sidecar workers covering the
+  wider `h = 0.125` lane, grown-transfer lane, self-gravity/backreaction,
+  growing-graph dynamics, and skeptic retainability audit while the local path
+  stayed on shared-state reconciliation plus one bounded summary surfacing step
+
+### What changed
+- harvested exactly one bounded repo-facing integrity/science step from the
+  already-synced `main` head: the retained non-label geometry-sector transfer
+  is now surfaced in the canonical summary notes instead of living only in its
+  frozen note/log/script chain
+- promoted that bounded transfer into the top-level summaries:
+  - kept
+    `/Users/jonreilly/Projects/Physics/docs/GATE_B_NONLABEL_SIGN_GROWN_TRANSFER_NOTE.md`
+    as the claim-carrying note
+  - kept
+    `/Users/jonreilly/Projects/Physics/logs/2026-04-06-gate-b-nonlabel-sign-grown-transfer.txt`
+    as the frozen log
+  - kept
+    `/Users/jonreilly/Projects/Physics/scripts/GATE_B_NONLABEL_SIGN_GROWN_TRANSFER.py`
+    as the replay script
+  - updated `README.md` and `docs/START_HERE.md` to surface the narrow
+    architecture-transfer result with review-safe wording
+- the retained synced read is:
+  - geometry-sector zero-source delta: `+0.000000e+00`
+  - geometry-sector neutral same-point `+1/-1` delta: `+0.000000e+00`
+  - geometry-sector single `+1`: `-3.534838e-05` (`AWAY`)
+  - geometry-sector single `-1`: `+3.533743e-05` (`TOWARD`)
+  - geometry-sector double `+2`: `-7.070770e-05`
+  - geometry-sector charge exponent: `1.000223`
+
+### Strongest confirmed conclusion
+- the old position-based geometry-sector / graph-ladder architecture genuinely
+  transfers to the current fixed-field grown-row lane on one retained
+  moderate-drift Gate B row
+- review-safe retained wording:
+  the geometry-sector candidate preserves exact zero-source and neutral
+  same-point cancellation, keeps the signed-source orientation, and stays
+  linear in charge on the checked row, but at weaker amplitude than the
+  label-grown control
+- this is a narrow design-guide transfer only; it is not a replacement
+  connectivity law, a broader generated-family closure, or a field-theory
+  promotion
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/README.md`
+- `/Users/jonreilly/Projects/Physics/docs/START_HERE.md`
+
+### Exact next step
+- rerun the protocol preflight and confirm the repo is still synced before
+  harvesting any fresh sidecar result
+- then promote at most one bounded result from the finished draft lanes,
+  preferring a clean no-go or narrow retained note that does not broaden the
+  claim surface
+
+### First concrete action
+- inspect the strongest finished sidecar candidate after the managed push check;
+  if nothing beats the current bounded surfacing step, keep the repo synced and
+  let the next loop harvest at most one of the self-gravity, graph-static, or
+  retainability closeouts
+
+## 2026-04-06 — Promoted the bounded fixed-field grown transfer scout
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed in
+  protocol order at loop start
+- the latest inherited handoff named one superseded local scout log, so this
+  loop checked
+  `/Users/jonreilly/Projects/Physics/logs/2026-04-06-h0125-l4-local-closeout.txt`
+  with `lsof` before any new science; it was no longer open, so this loop
+  continued with one bounded local harvest instead of child monitoring
+- canonical git in `/Users/jonreilly/Projects/Physics` started this loop ahead
+  of `origin/main` by four commits with existing unrelated sidecar drafts in
+  the worktree:
+  - `git status --short --branch` reported `## main...origin/main [ahead 4]`
+  - `git rev-list --left-right --count origin/main...main` returned `0 4`
+  - `git log --oneline --decorate -n 8` showed local head `aaa34bc` on top of
+    `origin/main` `5caad6d`
+- the required managed push retry before new science still failed with DNS:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - result: `status=failed`, `failure_kind=dns_failure`, `ahead=4`,
+    `behind=0`, `attempts_used=5`
+- this loop launched exactly five disjoint sidecar workers covering the wider
+  `h = 0.125` lane, grown-transfer lane, self-gravity/backreaction, growing
+  graph dynamics, and skeptic retainability audit
+
+### What changed
+- harvested exactly one bounded repo-facing result from the next-set drafts:
+  the fixed-field grown-transfer scout is now promoted as a narrow retained
+  row-level positive on the moderate-drift Gate B geometry
+- promoted that closeout into the canonical lane summaries:
+  - kept
+    `/Users/jonreilly/Projects/Physics/docs/FIXED_FIELD_GROWN_TRANSFER_SCOUT_NOTE.md`
+    as the claim-carrying note
+  - kept
+    `/Users/jonreilly/Projects/Physics/logs/2026-04-06-fixed-field-grown-transfer-scout.txt`
+    as the frozen log
+  - kept
+    `/Users/jonreilly/Projects/Physics/scripts/fixed_field_grown_transfer_scout.py`
+    as the narrow replay script
+  - updated `README.md` and `docs/START_HERE.md` to surface the new bounded
+    grown-row transfer companion
+- the retained local read is:
+  - zero-source field delta: `+0.000000e+00`
+  - neutral same-point `+1/-1` delta: `+0.000000e+00`
+  - single `+1`: `delta_z = -1.594422e-04` (`AWAY`)
+  - single `-1`: `delta_z = +1.594790e-04` (`TOWARD`)
+  - double `+2`: `delta_z = -3.188474e-04`
+  - single `+1` vs double `+2` charge exponent: `1.000`
+- other finished sidecars stayed bounded and unpromoted this loop:
+  - wider `h = 0.125` replay remains a bounded no-go on the observed rows
+  - self-gravity/backreaction remains a bounded no-go under strict controls
+  - growing-graph dynamic repair remains a bounded static-control no-go
+  - skeptic audit explicitly rejected any broader family-wide wording
+
+### Strongest confirmed conclusion
+- one retained moderate-drift grown row now carries a narrow fixed-field
+  signed-source transfer outside the exact-lattice pocket
+- review-safe retained wording:
+  on the retained grown row, zero-source and neutral same-point controls reduce
+  to printed zero, the source sign flips the centroid shift direction, and the
+  single-source response is linear in charge within the checked scout
+- this is a bounded row-level transfer positive only; it is not
+  geometry-generic electromagnetism, a full field theory, or a broader
+  generated-family closure
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/README.md`
+- `/Users/jonreilly/Projects/Physics/docs/START_HERE.md`
+- `/Users/jonreilly/Projects/Physics/docs/FIXED_FIELD_GROWN_TRANSFER_SCOUT_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-06-fixed-field-grown-transfer-scout.txt`
+- `/Users/jonreilly/Projects/Physics/scripts/fixed_field_grown_transfer_scout.py`
+
+### Exact next step
+- rerun the managed push helper first until the ahead-of-origin backlog clears
+- once the repo is synced enough to continue safely, return to the remaining
+  next-set drafts and harvest at most one bounded result from either the
+  skeptic-hardened grown-transfer follow-on or another finished no-go lane
+
+### First concrete action
+- run `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  before promoting any additional lane; if DNS still fails, record it once in
+  handoff/memory and avoid another metadata-only repo commit
+
+## 2026-04-06 — Closed the shorter-scale `h = 0.125` replay as another bounded no-go
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed in
+  protocol order at loop start
+- no detached `physics-science` child was active in the latest handoff, so
+  this loop stayed on a bounded local science closeout rather than child
+  finalization
+- canonical git in `/Users/jonreilly/Projects/Physics` started this loop ahead
+  of `origin/main` by three commits:
+  - `git status --short --branch` reported `## main...origin/main [ahead 3]`
+    plus existing unrelated dirty files and untracked sidecar drafts
+  - `git rev-list --left-right --count origin/main...main` returned `0 3`
+  - `git log --oneline --decorate -n 8` showed local head `fc6b688` on top of
+    `origin/main` `5caad6d`
+- the required managed push retry before any new science still failed with DNS:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - result: `status=failed`, `failure_kind=dns_failure`, `ahead=3`,
+    `behind=0`, `attempts_used=5`
+- this loop launched exactly five disjoint sidecar workers covering:
+  wider / scalable `h = 0.125`, grown-transfer beyond exact-lattice pockets,
+  self-gravity / Born hardening, growing-graph dynamic repair, and
+  adversarial retainability audit
+
+### What changed
+- harvested exactly one bounded repo-facing result from the top queue lane:
+  the shorter-axial-scale `h = 0.125` scout now closes as another bounded
+  no-go rather than a scalable replay rescue
+- promoted that closeout into the canonical lane notes:
+  - added
+    `/Users/jonreilly/Projects/Physics/docs/H0125_SCALABLE_SCOUT_NOTE.md`
+  - added
+    `/Users/jonreilly/Projects/Physics/logs/2026-04-06-h0125-scalable-scout.txt`
+  - updated `README.md` to state that the shorter `phys_l = 4` full-window
+    scout also stays in the same `~0.5` class
+  - updated `docs/H0125_WIDER_REPLAY_NOTE.md` to link the shorter-scale scout
+    back into the frozen wider-family read
+- the retained local read is:
+  - shorter-scale observed row `phys_l = 4`, `phys_w = 3`, full window
+  - `Born = 6.50e-15`
+  - clean `k = 0`
+  - `TOWARD` gravity `+0.005594`
+  - `alpha = 0.501`, `0.501`, `0.502` across `z = 1.5`, `2.0`, `3.0`
+- important unfinished sidecars were left unharvested on purpose:
+  - the fixed-field grown-transfer scout found a narrow retained positive, but
+    this loop did not promote it because the higher-priority `h = 0.125` lane
+    was still unresolved at loop start
+  - the self-gravity, growing-graph, and retainability sidecars all closed as
+    bounded no-go / audit artifacts and remain draft-only for now
+
+### Strongest confirmed conclusion
+- the `h = 0.125` continuum-bridge reopening is now closed on both observed
+  replay directions tested so far:
+  the first genuine width increase (`phys_w = 4`, `phys_l = 6`) stays at
+  `alpha = 0.499`, and the shorter-axial-scale full-window scout
+  (`phys_l = 4`, `phys_w = 3`) stays at `alpha = 0.501..0.502`
+- review-safe retained statement:
+  on the observed full-window rows, the weak-field exponent remains pinned to
+  the same `~0.5` class while Born and `k = 0` stay clean and gravity stays
+  `TOWARD`, so there is no review-safe wider or simple scalable replay rescue
+- this remains a bounded observed-row closure, not a theorem about all wider,
+  all shorter, or all continuum continuations
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/README.md`
+- `/Users/jonreilly/Projects/Physics/docs/H0125_SCALABLE_SCOUT_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/docs/H0125_WIDER_REPLAY_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-06-h0125-scalable-scout.txt`
+
+### Exact next step
+- rerun the managed push helper first until the ahead-of-origin backlog clears
+- once the repo is synced enough to continue safely, move to the next queue
+  lane and harvest at most one bounded result from the fixed-field
+  grown-transfer scout beyond exact-lattice pockets
+
+### First concrete action
+- run `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  before promoting any other sidecar artifact; if DNS still fails, leave the
+  backlog recorded once and do not open another fresh science lane this loop
+
+## 2026-04-06 — Promoted the bounded grown-row complex-action companion
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed in
+  protocol order at loop start
+- no detached `physics-science` child was active to resume or protect after
+  rereading the latest handoff
+- canonical git in `/Users/jonreilly/Projects/Physics` started this loop ahead
+  of `origin/main` with the same two local-only closeout commits still
+  stranded:
+  - `git status --short --branch` reported `## main...origin/main [ahead 2]`
+    plus existing unrelated dirty files and untracked sidecar drafts
+  - `git rev-list --left-right --count origin/main...main` returned `0 2`
+  - `git log --oneline --decorate -n 8` showed local head `48b9a7b` on top of
+    `origin/main` `5caad6d`
+- the required managed push retry before any new science still failed with DNS:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - result: `status=failed`, `failure_kind=dns_failure`, `ahead=2`,
+    `behind=0`, `attempts_used=5`
+- this loop then launched exactly five disjoint sidecar workers covering:
+  wider `h = 0.125`, grown-geometry transfer, self-gravity/backreaction,
+  growing-graph dynamics, and skeptic retainability audit
+
+### What changed
+- harvested the strongest already-finished retained transfer candidate on disk
+  instead of waiting for a new speculative lane:
+  - `/Users/jonreilly/Projects/Physics/docs/CLAUDE_COMPLEX_ACTION_GROWN_COMPANION_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-05-grown-geometry-complex-action-companion.txt`
+- promoted that bounded result into the top-level summary surfaces:
+  - `README.md` now names the exact-lattice complex-action carryover as having
+    one retained generated-geometry companion
+  - `docs/START_HERE.md` now records the same bounded grown-row transfer with
+    explicit controls and conservative wording
+- sidecar workers tightened, but did not beat, the local harvest:
+  - self-gravity/backreaction closed as a bounded no-go under strict controls
+    in `/Users/jonreilly/Projects/Physics/docs/SELF_GRAVITY_BACKREACTION_CLOSURE_NOTE.md`
+    with fresh log
+    `/Users/jonreilly/Projects/Physics/logs/2026-04-06-self-gravity-backreaction-closure.txt`
+  - growing-graph dynamic propagation remained a bounded no-go while the
+    expansion proxy stayed retained, with fresh audit artifacts under
+    `/Users/jonreilly/Projects/Physics/docs/GROWING_GRAPH_STATIC_CONTROL_AUDIT_NOTE.md`
+    and
+    `/Users/jonreilly/Projects/Physics/docs/GROWING_GRAPH_EXPANSION_SKEPTIC_AUDIT_NOTE.md`
+- the wider `h = 0.125` and fresh grown-transfer sidecars were not harvested
+  into the tracked summary this loop because they did not finish before close
+
+### Strongest confirmed conclusion
+- one narrow grown-geometry transfer of the exact-lattice complex-action lane
+  is now safe to surface in the top-level repo summary
+- review-safe retained wording:
+  on the retained moderate-drift Gate B grown row, exact `gamma = 0`
+  reduction holds, the grown Born proxy stays machine-clean
+  (`|I3|/P = 1.456e-15`), weak-field `F~M` stays at `1.000`, and the
+  `TOWARD -> AWAY` crossover survives
+- this is a bounded grown-row companion only; it does **not** justify a
+  geometry-generic, continuum, or self-gravity promotion
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/README.md`
+- `/Users/jonreilly/Projects/Physics/docs/START_HERE.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/overnight-physics/memory.md`
+
+### Exact next step
+- rerun the managed push helper first until the ahead-of-origin backlog clears
+- once the repo is synced, return to the unfinished next-set lanes and harvest
+  exactly one bounded result from either the wider `h = 0.125` scalable replay
+  or the outside-exact-lattice grown-geometry transfer lane
+
+### First concrete action
+- run `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  before touching any new science lane; if DNS still fails, reconcile the
+  unfinished wider / grown-transfer sidecar artifacts without starting another
+  overlapping child
+
+## 2026-04-06 — Finalized the wider `h = 0.125` full-window no-go
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed in
+  protocol order at loop start
+- the latest handoff pointed at an inherited wider-family replay child, so
+  this loop first checked the named log paths with `lsof` before any new
+  science:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-06-h0125-wide-full-window.txt`
+    was already closed
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-06-h0125-wide-full-window-probe.txt`
+    was briefly still open, then finished during this loop, so the bounded
+    step became parsing/finalizing that completed child rather than launching a
+    fresh science run
+- canonical git in `/Users/jonreilly/Projects/Physics` still started this loop
+  ahead of `origin/main`:
+  - `git status --short --branch` reported `## main...origin/main [ahead 1]`
+    plus the existing wider-family / retainability working-tree edits
+  - `git rev-list --left-right --count origin/main...main` returned `0 1`
+  - `git log --oneline --decorate -n 8` still showed local-only head
+    `3a0d1cb` on top of `origin/main` `5caad6d`
+- the required managed push retry before new science still failed with DNS:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - result: `status=failed`, `failure_kind=dns_failure`, `ahead=1`,
+    `behind=0`, `attempts_used=5`
+
+### What changed
+- parsed the finished wider-family closeout logs instead of starting a fresh
+  lane:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-06-h0125-wide-full-window.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-06-h0125-wide-full-window-probe.txt`
+- converted the wider-family `h = 0.125` lane from “live question” to one
+  bounded finished no-go:
+  - the retained baseline `phys_w = 3`, `phys_l = 6`, full-window row stayed
+    at `alpha = 0.500`
+  - the genuinely wider `phys_w = 4`, `phys_l = 6`, full-window row stayed at
+    `alpha = 0.499` with clean Born (`8.01e-15`), clean `k = 0`, and
+    `TOWARD` gravity (`+0.010955`)
+  - so simple box widening does not reopen the weak-field mass-law bridge on
+    the tested wider row
+- updated the high-level claim surface accordingly:
+  - `README.md` now records the wider dense `h = 0.125` replay as a bounded
+    negative
+  - `docs/H0125_WIDER_REPLAY_NOTE.md` and
+    `docs/H0125_WIDER_W4_NOTE.md` now freeze the full-window width-4 result as
+    the retained no-go
+  - `docs/H0125_WIDER_W4_PROBE_NOTE.md` now explicitly demotes the cheaper
+    helper to an auxiliary scout rather than the claim-carrying closeout path
+
+### Strongest confirmed conclusion
+- the wider-family continuation does not rescue the weak-field bridge on the
+  first genuinely wider tested row
+- review-safe retained statement:
+  at `h = 0.125`, `phys_l = 6`, `z = 3.0`, and the full detector window, the
+  width increase from `phys_w = 3` to `phys_w = 4` leaves the exponent pinned
+  to the same `~0.5` class (`0.500 -> 0.499`) while staying Born-clean and
+  `k = 0` clean
+- this is a bounded row-level no-go, not a geometry-generic or continuum
+  theorem
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/README.md`
+- `/Users/jonreilly/Projects/Physics/docs/H0125_WIDER_REPLAY_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/docs/H0125_WIDER_W4_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/docs/H0125_WIDER_W4_PROBE_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-06-h0125-wide-full-window.txt`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-06-h0125-wide-full-window-probe.txt`
+
+### Exact next step
+- rerun the managed push helper first if the branch is still ahead after this
+  closeout
+- once the repo is reconciled, move to the next bounded lane on the default
+  queue: fixed-field transfer beyond exact-lattice pockets, with review-safe
+  focus on grown-geometry complex-action or signed-source families rather than
+  reopening the closed wider-family bridge
+
+### First concrete action
+- run `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  after staging the wider-family closeout commit; if the branch is still not
+  synced, leave the DNS failure recorded once and do not start a new science
+  child this loop
+
+## 2026-04-05 — Harvested retained grown transfer and hardened the graph-growth no-go
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed in
+  protocol order at loop start
+- no detached `physics-science` child was active to resume or monitor
+- the canonical repo at `/Users/jonreilly/Projects/Physics` was already synced
+  before new work, but this loop's tracked closeout commit is now stranded
+  locally after the managed push helper hit DNS failure:
+  - `git status --short --branch` reported `## main...origin/main` plus
+    modified `AUTOPILOT_WORKLOG.md`, modified
+    `logs/physics_autopilot_handoff.md`, and several untracked draft notes /
+    probes
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 8` showed synced head `5caad6d`
+    (`feat: add grown electrostatics sign-law companion`) on top of
+    `origin/main`
+- this loop stayed review-first: it reconciled the stale coordination layer,
+  launched the requested five disjoint science lanes, and harvested only the
+  strongest finished retained result plus clean no-go surfaces
+
+### What changed
+- reread the tracked work log, latest handoff, readable autopilot memory, and
+  reconciled canonical git state in protocol order after the guard and lock
+  checks passed
+- launched exactly five disjoint overnight science workers covering:
+  - wider `h = 0.125` continuum-bridge replay / scalability
+  - outside-exact-lattice grown-geometry transfer
+  - self-gravity / backreaction hardening
+  - growing-graph expansion versus dynamic propagation
+  - skeptic retainability audit before promotion
+- completed one bounded science-harvest / integrity step from the finished
+  lanes:
+  - retained the existing grown-row complex-action companion as the strongest
+    outside-exact-lattice transfer candidate after re-audit
+  - froze the self-gravity / backreaction lane as a strict no-go under the
+    exact-null, convergence, and Born controls
+  - replayed the growing-graph diagnostic and froze the same clean no-go:
+    frontier expansion remains the retained observable while dynamic
+    propagation stays noisy and non-monotone
+  - added a skeptic audit note for the wide-lattice `h^2+T` distance-law
+    replay so the promotion boundary is explicit
+- committed the repo-facing closeout as `3a0d1cb`
+  (`docs: record overnight retainability triage`)
+- ran the managed push helper for closeout exactly as required:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - helper result: `status=failed`, `failure_kind=dns_failure`, `ahead=1`,
+    `behind=0`, `attempts_used=5`
+- refreshed `AUTOPILOT_WORKLOG.md`,
+  `logs/physics_autopilot_handoff.md`, and
+  `/Users/jonreilly/.codex/automations/overnight-physics/memory.md` to the
+  real ahead-of-origin state at close
+- left unfinished or still-running local lanes untouched:
+  - `/Users/jonreilly/Projects/Physics/docs/H0125_WIDER_REPLAY_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/H0125_WIDER_W4_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/H0125_WIDER_W4_PROBE_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/MOONSHOT_SELF_GRAVITY_BRAINSTORM_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/scripts/lattice_3d_l2_wide_h0125_replay.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/lattice_3d_l2_wide_h0125_w4.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/lattice_3d_l2_wide_h0125_w4_probe.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/poisson_self_gravity_loop_v3.py`
+
+### Strongest confirmed conclusion
+- the strongest finished science result this loop is still the retained narrow
+  grown-geometry complex-action companion, not a new wider-bridge or
+  self-gravity reopening:
+  - exact `gamma = 0` reduction holds on the retained grown row
+  - the Born proxy remains machine-clean (`|I3|/P = 1.456e-15`)
+  - weak-field `F~M` stays `1.000` across the checked `gamma` sweep
+  - the `TOWARD -> AWAY` crossover survives, but only as a bounded grown-row
+    transfer rather than a geometry-generic law
+- the graph-growth lane is now even cleaner as a replacement / no-go:
+  - frontier delay still scales cleanly (`3.000 -> 22.000`, slope `+0.9325`
+    hops/step)
+  - dynamic-propagation visibility drop remains small and non-monotone
+    (`+0.0492`, `+0.0366`, `+0.0224` with only `4/10`, `4/10`, `2/10`
+    positive seeds)
+  - the retained claim is graph expansion against static controls, not a
+    transport or cosmology derivation
+- the new skeptic audit tightens the wide-lattice distance-law surface:
+  - the `h^2+T` replay stays a real finite-lattice frontier result
+  - it does **not** justify a universal `1/b` or continuum-law promotion yet
+- the self-gravity lane is now explicitly closed again:
+  - exact `epsilon = 0` reduction survives
+  - nonzero-coupling rows still fail convergence and full-loop Born cleanliness
+  - the grown-geometry backreaction probe also collapses weak-field scaling at
+    nonzero coupling, so there is no review-safe rescue there
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/Projects/Physics/docs/WIDE_LATTICE_H2T_SKEPTIC_AUDIT_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-06-growing-graph-dynamic-limit.txt`
+- `/Users/jonreilly/.codex/automations/overnight-physics/memory.md`
+
+### Exact next step
+- keep the review-safe center of gravity on retained rows and explicit
+  controls:
+  - do not promote universal distance-law wording beyond the new skeptic audit
+  - do not reopen dynamic propagation as a retained observable
+- the self-gravity lane is no longer a default next-step candidate
+- among the unfinished lanes, the next bounded science step should be a
+  scalable / cheaper wider `h = 0.125` bridge probe that can genuinely
+  distinguish width rescue from the fixed-family negative without widening
+  scope again
+
+### First concrete action
+- rerun the managed push helper first to clear stranded commit `3a0d1cb`; if
+  the branch returns to `ahead 0, behind 0`, inspect the current width-4 /
+  wider-family artifacts and run only one bounded cheaper `h = 0.125` width
+  rescue probe instead of reopening self-gravity or widening scope
+
+## 2026-04-05 — Coordination repaired to the live `h = 0.125` bridge-decision chain
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed in
+  protocol order at loop start
+- no detached `physics-science` child was active to resume or monitor
+- the canonical repo at `/Users/jonreilly/Projects/Physics` was not synced
+  when this loop reconciled it, and it advanced again while the loop was
+  open:
+  - final `git status --short --branch` reported
+    `## main...origin/main [ahead 8]` plus modified
+    `AUTOPILOT_WORKLOG.md`, modified
+    `logs/physics_autopilot_handoff.md`, live `h = 0.125` bridge-lane edits
+    in `docs/H2T_H0125_NARROW_BRIDGE_NOTE.md`,
+    `docs/LATTICE_3D_L2_NUMPY_H0125_BRIDGE_NOTE.md`,
+    `docs/WIDE_FAMILY_H0125_BRIDGE_REOPEN_AUDIT.md`, and
+    `scripts/lattice_3d_l2_numpy_h0125_only.py`, plus several unrelated
+    untracked draft notes / probes
+  - final `git rev-list --left-right --count origin/main...main` returned
+    `0 8`
+  - final `git log --oneline --decorate -n 10` showed local-only head
+    `78bcad9` (`feat: add focused h0125 bridge decision test`) on top of
+    `origin/main` `c179b85` (`docs: freeze graph-growth proxy replacement`)
+- the saved coordination layer still claimed synced head `a84b67a`, so this
+  loop became a repo-facing integrity repair before any new science
+
+### What changed
+- reread the tracked work log, latest handoff, and readable autopilot memory
+  in protocol order after the duplicate-run guard and cooperative lock checks
+  passed
+- confirmed no detached `physics-science` child was active to resume or
+  protect
+- reconciled canonical git state directly, then rechecked it after the repo
+  advanced under the loop:
+  - `git status --short --branch`
+  - `git rev-list --left-right --count origin/main...main`
+  - `git log --oneline --decorate -n 10`
+- ran the managed push helper exactly as required before attempting any new
+  science, then reran it once after the branch advanced so closeout reflects
+  the final state:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - final helper result: `status=failed`, `failure_kind=dns_failure`, `ahead=8`,
+    `behind=0`, `attempts_used=5`
+- inspected the final unseen local-only chain directly:
+  - `06148ff` (`docs: add propagator family unification note`)
+  - `51c61d2` (`docs: add diamond nv phase ramp signal budget note`)
+  - `03c85b3` (`docs: audit wide-family h0125 bridge reopen`)
+  - `4577e0c` (`docs: add flagship contribution framing note`)
+  - `847f93b` (`docs: harden numpy replay environment`)
+  - `e734815` (`docs: extend numpy replay bootstrap`)
+  - `cff01c2` (`docs: quantify h0125 bridge replay scale`)
+  - `78bcad9` (`feat: add focused h0125 bridge decision test`)
+- reread the live claim surfaces behind that chain:
+  - `/Users/jonreilly/Projects/Physics/docs/WIDE_FAMILY_H0125_BRIDGE_REOPEN_AUDIT.md`
+  - `/Users/jonreilly/Projects/Physics/docs/REPLAY_ENVIRONMENT_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/PROPAGATOR_FAMILY_UNIFICATION_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/DIAMOND_NV_PHASE_RAMP_SIGNAL_BUDGET_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/FLAGSHIP_PAPER_CONTRIBUTION_STATEMENT_NOTE.md`
+  - `git diff -- /Users/jonreilly/Projects/Physics/scripts/lattice_3d_l2_numpy_h0125_only.py`
+- completed one bounded repo-facing integrity step instead of starting a new
+  science lane:
+  - refreshed `AUTOPILOT_WORKLOG.md`,
+    `logs/physics_autopilot_handoff.md`, and the automation memory to the
+    final ahead-of-origin state after the repo advanced mid-loop
+- left live working-tree edits and unrelated local changes untouched:
+  - `/Users/jonreilly/Projects/Physics/docs/H2T_H0125_NARROW_BRIDGE_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/LATTICE_3D_L2_NUMPY_H0125_BRIDGE_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/WIDE_FAMILY_H0125_BRIDGE_REOPEN_AUDIT.md`
+  - `/Users/jonreilly/Projects/Physics/scripts/lattice_3d_l2_numpy_h0125_only.py`
+  - `/Users/jonreilly/Projects/Physics/docs/DISTANCE_LAW_PREDICTION_CARD_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/MOONSHOT_DIAMOND_SENSOR_BRAINSTORM_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/MOONSHOT_SELF_GRAVITY_BRAINSTORM_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/POISSON_SELF_GRAVITY_LOOP_V3_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/scripts/persistent_object_localization_escalation.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/poisson_self_gravity_loop_v3.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/source_resolved_exact_green_support_scout.py`
+
+### Strongest confirmed conclusion
+- the strongest unseen local science in the current chain is still narrow and
+  unresolved:
+  - the wide-family dense `1/L^2 + h^2` bridge is a legitimate `h = 0.125`
+    reopen candidate because the replay environment is now stable and the
+    coarse rows replay cleanly
+  - the decisive row is still computationally heavy
+    (`117649` nodes, `49` layers, `155692848` dense edges) and has not yet
+    been frozen as a retained `main` positive
+  - the repo now has a focused single-row decision harness for that row, but
+    it has not yet produced a retained claim chain
+- the review-safe center of gravity of the local chain remains the propagator
+  family rather than continuum closure:
+  - retained wavefield, complex-action, and electrostatics cards share one
+    fixed propagator skeleton with scalar couplings
+  - the diamond / NV external interface remains a phase-quadrature and
+    spatial phase-ramp null test, not an absolute gravity budget
+- operationally, `/usr/bin/python3` plus
+  `scripts/numpy_replay_bootstrap.py` is the stable numpy replay path on this
+  machine, and `scripts/lattice_3d_l2_numpy_h0125_only.py` is now the narrow
+  decision harness once the live diff on that file is reconciled
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- before any fresh science, clear the stranded local eight-commit chain with:
+  `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+- if the repo is later synced and still points at this chain, inspect and
+  reconcile the live working-tree diff in
+  `scripts/lattice_3d_l2_numpy_h0125_only.py`, then use that focused harness
+  to decide whether the `h = 0.125` row can be frozen cleanly; if newer landed
+  work supersedes it, fall back to the then-current higher-priority
+  directional-`b` / Gate B lane instead of widening scope
+
+### First concrete action
+- rerun
+  `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`; if it reports
+  `ahead 0, behind 0`, inspect
+  `git diff -- /Users/jonreilly/Projects/Physics/scripts/lattice_3d_l2_numpy_h0125_only.py`,
+  then use the bootstrap-safe focused replay path to determine whether the
+  wide-family `h = 0.125` row can be frozen cleanly
+
+## 2026-04-05 — Widened-source overlap seam is already present but subcritical on the `N = 12` holdout slice
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed in
+  protocol order at loop start
+- no detached `physics-science` child was active to resume or monitor
+- the canonical repo at `/Users/jonreilly/Projects/Physics` was initially
+  synced before this step:
+  - `git status --short --branch` reported `## main...origin/main` plus
+    modified `docs/TESTABLE_PREDICTIONS_MAP_NOTE.md`, modified
+    `logs/physics_autopilot_handoff.md`, and several unrelated untracked draft
+    notes / probes
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 8` showed synced head `e2ba9a4`
+    (`docs: add narrow h2t h0125 bridge note`) on top of `origin/main`
+- the saved coordination layer still pointed at the older Gate B /
+  continuum-bridge guidance, so this loop first reconciled the live planning
+  surfaces before returning to the user-priority fixed directional-measure
+  geometry-normalized `b` lane
+- during the loop the canonical repo advanced locally to `715c5d3`
+  (`docs: add dead-end reopen audit`) on top of `origin/main`; I inspected
+  that new note directly and it did not conflict with the bounded
+  geometry-normalized follow-on
+
+### What changed
+- reread the tracked work log, latest handoff, and readable autopilot memory
+  in protocol order after the duplicate-run guard and cooperative lock checks
+  passed
+- confirmed no detached `physics-science` child was active to resume or
+  protect
+- reconciled canonical git state directly:
+  - `git status --short --branch`
+  - `git rev-list --left-right --count origin/main...main`
+  - `git log --oneline --decorate -n 8`
+  - `git show --stat --summary --oneline -n 1 HEAD`
+- reread the current priority / claim surfaces directly:
+  - `/Users/jonreilly/Projects/Physics/docs/OVERNIGHT_WORK_BACKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/docs/PHYSICS_FIRST_ATTACK_PLAN.md`
+  - `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_MASS5_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_OVERLAP_MAP_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/H2T_H0125_NARROW_BRIDGE_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/CLAUDE_BRANCH_RETAINABILITY_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/CLAUDE_DEAD_END_REOPEN_AUDIT_NOTE.md`
+- completed one bounded fixed directional-measure geometry-normalized `b`
+  follow-on instead of reopening decoherence or a new denominator search:
+  - repaired
+    `scripts/directional_b_geometry_normalized_overlap_map.py` so the printed
+    interpretation follows the active `--n-layers` slice instead of
+    hard-coding the old `N = 25` failure language
+  - reran
+    `python3 /Users/jonreilly/Projects/Physics/scripts/directional_b_geometry_normalized_overlap_map.py --workers 1 --n-layers 12 | tee /Users/jonreilly/Projects/Physics/logs/2026-04-05-directional-b-geometry-normalized-overlap-map-n12.txt`
+- added / refreshed the bounded artifact chain:
+  - `/Users/jonreilly/Projects/Physics/scripts/directional_b_geometry_normalized_overlap_map.py`
+  - `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_OVERLAP_SUBCRITICAL_N12_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_OVERLAP_MAP_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-05-directional-b-geometry-normalized-overlap-map-n12.txt`
+- left unrelated user/local changes untouched:
+  - `/Users/jonreilly/Projects/Physics/docs/TESTABLE_PREDICTIONS_MAP_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/ADAPTIVE_COEVOLVING_GEOMETRY_NO_GO.md`
+  - `/Users/jonreilly/Projects/Physics/docs/DISTANCE_LAW_PREDICTION_CARD_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/MOONSHOT_DIAMOND_SENSOR_BRAINSTORM_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/MOONSHOT_SELF_GRAVITY_BRAINSTORM_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/POISSON_SELF_GRAVITY_LOOP_V3_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/scripts/complex_action_grown_companion.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/persistent_object_localization_escalation.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/poisson_self_gravity_loop_v3.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/source_resolved_exact_green_support_scout.py`
+
+### Strongest confirmed conclusion
+- the widened-source overlap / occupancy seam is already visible on the
+  shallower holdout slice `N = 12`; it is not unique to the deeper `N = 25`
+  replay
+- on `N = 12`, exactly `3/25` rows are true overlap rows (`mu <= 0`), all in
+  the first two target buckets and all on the low-fill side
+  `target_fill <= 0.4`
+- the seam is still subcritical on that shallow slice:
+  - full-sample `A/b`: PASS (`+0.1061 -> +0.0364`, slope `-0.0123`)
+  - full-sample `F/b`: PASS (`+0.1479 -> +0.0428`, slope `-0.0184`)
+  - removing only the overlap rows steepens the center-offset law:
+    - non-overlap `A/b`: `+0.1362 -> +0.0364`, slope `-0.0179`
+    - non-overlap `F/b`: `+0.1892 -> +0.0428`, slope `-0.0264`
+- combined with the retained `N = 25` card, the safe directional-`b` read is
+  now sharper:
+  - the low-`b` overlap seam is a shallow-to-deep progression, not a one-off
+    failure
+  - `b` remains the asymptotic coordinate
+  - `edge_b = b - h_mass` remains the portable finite-source correction
+  - there is still no reason to reopen denominator search
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/scripts/directional_b_geometry_normalized_overlap_map.py`
+- `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_OVERLAP_SUBCRITICAL_N12_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_OVERLAP_MAP_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-05-directional-b-geometry-normalized-overlap-map-n12.txt`
+
+### Exact next step
+- move to the next non-overlapping user-priority lane:
+  one bounded evolving-network dynamics diagnostic
+- stay off Claude's decoherence frontier and do not start a fresh
+  propagating-field architecture search
+- reuse the retained structured-growth row and current Gate B note surfaces:
+  - `/Users/jonreilly/Projects/Physics/scripts/evolving_network_prototype_v6.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/gate_b_v6_nearfield_comparator.py`
+  - `/Users/jonreilly/Projects/Physics/docs/GATE_B_DYNAMICS_NOTE.md`
+- ask whether the residual `y_mass = 1.0` bucket can be sharpened with one
+  fixed support diagnostic rather than a new architecture
+
+### First concrete action
+- rerun
+  `python3 /Users/jonreilly/Projects/Physics/scripts/evolving_network_prototype_v6.py`
+  and compare the refreshed bucket split directly against
+  `/Users/jonreilly/Projects/Physics/docs/GATE_B_DYNAMICS_NOTE.md`; if the
+  same closest-bucket seam remains, freeze one bounded support diagnostic on
+  that bucket instead of reopening decoherence or propagating-field work
+
+## 2026-04-05 — Gate B near-field control localizes the v6 misses to one closest bucket
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed in
+  protocol order at loop start
+- no detached `physics-science` child was active to resume or monitor
+- the canonical repo at `/Users/jonreilly/Projects/Physics` was already synced
+  before this step:
+  - `git status --short --branch` reported `## main...origin/main` plus
+    modified `logs/physics_autopilot_handoff.md`, modified
+    `docs/TESTABLE_PREDICTIONS_MAP_NOTE.md`, and several unrelated untracked
+    draft notes / probes
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 8` showed synced head `eb01dc7`
+    (`feat: add wavefield phase-ramp law v2`) on top of `origin/main`
+- the saved coordination layer still described the older stranded local
+  overlap-seam head `964d726`, so this loop first reconciled the real landed
+  chain before returning to the user-priority evolving-network lane:
+  - `83a8992` (`docs: add moonshot science shortlist`)
+  - `a48fac0` (`feat: add grown trapping frontier v3 probe`)
+  - `eb01dc7` (`feat: add wavefield phase-ramp law v2`)
+
+### What changed
+- reread the tracked work log, latest handoff, and readable autopilot memory
+  in protocol order after the duplicate-run guard and cooperative lock checks
+  passed
+- confirmed no detached `physics-science` child was active to resume or
+  protect
+- reconciled canonical git state directly:
+  - `git status --short --branch`
+  - `git rev-list --left-right --count origin/main...main`
+  - `git log --oneline --decorate -n 8`
+  - `git show --stat --summary --oneline 83a8992`
+  - `git show --stat --summary --oneline a48fac0`
+  - `git show --stat --summary --oneline eb01dc7`
+- reread the current priority / claim surfaces directly:
+  - `/Users/jonreilly/Projects/Physics/docs/OVERNIGHT_WORK_BACKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/docs/PHYSICS_FIRST_ATTACK_PLAN.md`
+  - `/Users/jonreilly/Projects/Physics/docs/GATE_B_DYNAMICS_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/EVOLVING_NETWORK_PROTOTYPE_V6_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/GATE_B_GROWN_TRAPPING_FRONTIER_V3_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/SOURCE_RESOLVED_WAVEFIELD_V2_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/MOONSHOT_SCIENCE_NEXT_NOTE.md`
+- completed one bounded evolving-network support diagnostic instead of
+  reopening decoherence or geometry-normalized `b` search:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/gate_b_v6_nearfield_comparator.py | tee /Users/jonreilly/Projects/Physics/logs/2026-04-05-gate-b-v6-nearfield-comparator.txt`
+- added the new exact-vs-grown near-field artifact chain and wired it back
+  into the live Gate B status note:
+  - `/Users/jonreilly/Projects/Physics/scripts/gate_b_v6_nearfield_comparator.py`
+  - `/Users/jonreilly/Projects/Physics/docs/GATE_B_V6_NEARFIELD_COMPARATOR_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/GATE_B_DYNAMICS_NOTE.md`
+- left unrelated user/local changes untouched:
+  - `/Users/jonreilly/Projects/Physics/docs/TESTABLE_PREDICTIONS_MAP_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/ADAPTIVE_COEVOLVING_GEOMETRY_NO_GO.md`
+  - `/Users/jonreilly/Projects/Physics/docs/DISTANCE_LAW_PREDICTION_CARD_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/MOONSHOT_DIAMOND_SENSOR_BRAINSTORM_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/MOONSHOT_SELF_GRAVITY_BRAINSTORM_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/POISSON_SELF_GRAVITY_LOOP_V3_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/scripts/persistent_object_localization_escalation.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/poisson_self_gravity_loop_v3.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/source_resolved_exact_green_support_scout.py`
+
+### Strongest confirmed conclusion
+- the frozen v6 mixed result is now localized cleanly to the closest tested
+  near-field bucket, `y_mass = 1.0`
+- on that closest bucket, the ordered-lattice control is already fully
+  `AWAY` across all three tested strengths:
+  - exact grid `0/3` `TOWARD`, mean delta `-0.000019`
+- the retained structured-growth row is better than the exact control on the
+  same bucket:
+  - grown `drift = 0.3`, `restore = 0.5`: `9/12` `TOWARD`, mean delta
+    `+0.000006`
+  - only one retained seed (`44`) flips all three closest-bucket strengths
+- the rest of the near-field grid stays clean:
+  - `y_mass = 1.5`: exact `3/3`, grown `12/12`
+  - `y_mass = 2.0`: exact `3/3`, grown `12/12`
+- so the safe Gate B read is sharper than “near-field mixed” alone:
+  - the v6 misses are not evidence that structured growth collapses relative
+    to the exact grid
+  - they are best read as a bounded near-field optics / detector-geometry
+    issue on the closest bucket
+  - far-field generated geometry remains the main retained positive
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/scripts/gate_b_v6_nearfield_comparator.py`
+- `/Users/jonreilly/Projects/Physics/docs/GATE_B_V6_NEARFIELD_COMPARATOR_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/docs/GATE_B_DYNAMICS_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-05-gate-b-v6-nearfield-comparator.txt`
+
+### Exact next step
+- move to the next non-overlapping user-priority lane:
+  one bounded continuum / asymptotic bridge card
+- resume the retained 3D valley-linear bridge instead of widening Gate B or
+  decoherence architecture:
+  - `/Users/jonreilly/Projects/Physics/scripts/valley_linear_asymptotic_bridge.py`
+  - `/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_ASYMPTOTIC_BRIDGE_NOTE.md`
+- keep the ordered-lattice `1/L^2` family fixed and ask whether the current
+  finite-size correction read can be sharpened without upgrading the existing
+  near-Newtonian replay into a fake theorem
+
+### First concrete action
+- rerun
+  `python3 /Users/jonreilly/Projects/Physics/scripts/valley_linear_asymptotic_bridge.py`
+  and compare the refreshed bridge table directly against
+  `/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_ASYMPTOTIC_BRIDGE_NOTE.md`;
+  if the far-tail correction remains slice-dependent, freeze that correction
+  law more explicitly instead of widening strong-field, geometry-transfer, or
+  decoherence work
+
+## 2026-04-05 — Widened-source holdout failure localizes to the overlap seam
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed in
+  protocol order at loop start
+- no detached `physics-science` child was active to resume or monitor
+- the canonical repo at `/Users/jonreilly/Projects/Physics` was synced before
+  this step:
+  - `git status --short --branch` reported `## main...origin/main` plus
+    modified `AUTOPILOT_WORKLOG.md`, modified
+    `docs/TESTABLE_PREDICTIONS_MAP_NOTE.md`, modified
+    `logs/physics_autopilot_handoff.md`, and several unrelated untracked draft
+    notes / probes
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 8` showed synced head `9a0d358`
+    (`feat: add poisson self-gravity born audit`) on top of `origin/main`
+- the saved coordination layer still described the older wide-lattice replay
+  head `a5982a2`, so this loop first reconciled the real repo state before
+  returning to the user-priority fixed directional-measure geometry-normalized
+  `b` lane
+
+### What changed
+- reread the tracked work log, latest handoff, and readable autopilot memory
+  in protocol order after the duplicate-run guard and cooperative lock checks
+  passed
+- reconciled canonical git state directly:
+  - `git status --short --branch`
+  - `git rev-list --left-right --count origin/main...main`
+  - `git log --oneline --decorate -n 8`
+  - `git show --stat --summary --oneline 9a0d358`
+- inspected the current priority surfaces directly:
+  - `/Users/jonreilly/Projects/Physics/docs/OVERNIGHT_WORK_BACKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/docs/PHYSICS_FIRST_ATTACK_PLAN.md`
+  - `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_MASS5_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/GATE_B_DYNAMICS_NOTE.md`
+- completed one bounded directional-`b` support diagnostic instead of
+  reopening denominator or decoherence search:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/directional_b_geometry_normalized_overlap_map.py --workers 1 | tee /Users/jonreilly/Projects/Physics/logs/2026-04-05-directional-b-geometry-normalized-overlap-map.txt`
+- added the new overlap-map artifact and wired it back into the widened-source
+  holdout note:
+  - `/Users/jonreilly/Projects/Physics/scripts/directional_b_geometry_normalized_overlap_map.py`
+  - `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_OVERLAP_MAP_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_MASS5_NOTE.md`
+- left unrelated user/local changes untouched:
+  - `/Users/jonreilly/Projects/Physics/docs/TESTABLE_PREDICTIONS_MAP_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/ADAPTIVE_COEVOLVING_GEOMETRY_NO_GO.md`
+  - `/Users/jonreilly/Projects/Physics/docs/DISTANCE_LAW_PREDICTION_CARD_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/MOONSHOT_DIAMOND_SENSOR_BRAINSTORM_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/MOONSHOT_SELF_GRAVITY_BRAINSTORM_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/scripts/persistent_object_localization_escalation.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/source_resolved_exact_green_support_scout.py`
+
+### Strongest confirmed conclusion
+- on the widened-source second dense-family holdout at `mass_nodes = 5`,
+  `N = 25`, the old center-offset densities fail only because of a narrow
+  low-`b` overlap sector, not because the whole geometry-normalized lane
+  collapses
+- the full sample still gives:
+  - `A/b`: FAIL (`-0.3518 -> +0.0416`)
+  - `F/b`: FAIL (`-0.4761 -> +0.0294`)
+  - `A/edge`: PASS (`+0.1651 -> +0.0524`)
+  - `F/edge`: PASS (`+0.1070 -> +0.0382`)
+- the direct overlap map shows the failure is localized:
+  - exactly `4/25` rows are true overlap rows (`mu <= 0`)
+  - all `4` overlap rows sit in the first two target buckets (`b = 1.5`,
+    `3.0`)
+  - all `4` also lie on the promoted occupancy-floor side
+    `target_fill <= 0.4`
+- once only those overlap rows are removed, the old center-offset trend
+  recovers:
+  - non-overlap `A/b`: PASS (`+0.1017 -> +0.0416`, slope `-0.0116`)
+  - non-overlap `F/b`: PASS (`+0.0833 -> +0.0294`, slope `-0.0107`)
+- the safe directional-`b` read is therefore sharper, not weaker:
+  - `b` remains the asymptotic coordinate
+  - `edge_b = b - h_mass` remains the portable finite-source correction
+  - the widened-source holdout failure is an overlap-seam effect already
+    anticipated by the retained `mu` / occupancy cards
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/scripts/directional_b_geometry_normalized_overlap_map.py`
+- `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_OVERLAP_MAP_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_MASS5_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-05-directional-b-geometry-normalized-overlap-map.txt`
+
+### Exact next step
+- move to the next non-overlapping user-priority lane: one bounded
+  evolving-network dynamics diagnostic built on the retained Gate B row
+- keep the retained `drift = 0.3`, `restore = 0.5` structured-growth rule
+  fixed and quantify the mixed near-field region against the ordered-lattice
+  control instead of reopening geometry-normalized `b` denominators
+- use:
+  - `/Users/jonreilly/Projects/Physics/scripts/evolving_network_prototype_v6.py`
+  - `/Users/jonreilly/Projects/Physics/docs/GATE_B_DYNAMICS_NOTE.md`
+
+### First concrete action
+- start from
+  `python3 /Users/jonreilly/Projects/Physics/scripts/evolving_network_prototype_v6.py`
+  and freeze one exact-vs-grown near-field comparator for the retained
+  `drift = 0.3`, `restore = 0.5` row so the `z <= 2` mixed zone is quantified
+  as a bounded support diagnostic rather than left as a narrative caveat
+
+## 2026-04-05 — Coordination reconciled to synced wide-lattice distance-law head
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed in
+  protocol order at loop start
+- no detached `physics-science` child was active to resume or monitor
+- the canonical repo at `/Users/jonreilly/Projects/Physics` is synced again:
+  - `git status --short --branch` reported `## main...origin/main` plus
+    modified `AUTOPILOT_WORKLOG.md`, modified
+    `logs/physics_autopilot_handoff.md`, and untracked local draft note /
+    probe files
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 12` showed synced head `a5982a2` on top
+    of `origin/main`
+- the saved coordination layer still described the older synced moonshot-map
+  refresh head `dfe73d0` and therefore missed the later landed chain through
+  the current synced wide-lattice replay head:
+  - `256739f` (`docs: freeze distance-law frontier audit`)
+  - `145d538` (`docs: add moonshot failure audit`)
+  - `2663fff` (`feat: add grown trapping transport probe`)
+  - `a5982a2` (`feat: independently replay wide-lattice h2t distance law`)
+- because the head moved again after the last saved coordination pass, the
+  bounded step here was final coordination repair rather than a new
+  experiment
+
+### What changed
+- reread the tracked work log, latest handoff, and readable autopilot memory
+  in protocol order after the duplicate-run guard and cooperative lock checks
+  passed
+- confirmed no detached `physics-science` child was active to resume or
+  protect
+- reconciled canonical git state directly:
+  - `git status --short --branch`
+  - `git rev-list --left-right --count origin/main...main`
+  - `git log --oneline --decorate -n 12`
+- inspected the landed head chain and current priority surfaces directly:
+  - `git show --stat --summary --oneline a5982a2`
+  - `git show --stat --summary --oneline 2663fff`
+  - `git show --stat --summary --oneline 145d538`
+  - `git show --stat --summary --oneline 256739f`
+  - `/Users/jonreilly/Projects/Physics/docs/WIDE_LATTICE_H2T_DISTANCE_LAW_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/GATE_B_GROWN_TRAPPING_TRANSPORT_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/OVERNIGHT_WORK_BACKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/docs/PHYSICS_FIRST_ATTACK_PLAN.md`
+  - `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_DENSITY_STENCIL_NOTE.md`
+- refreshed the tracked work log, runtime handoff, and automation memory to
+  the real synced head and the current highest-priority non-overlapping next
+  lane
+- ran the managed push helper exactly as required:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - result: `status=nothing_to_push`, `ahead=0`, `behind=0`
+- left the unrelated untracked local work untouched:
+  - `/Users/jonreilly/Projects/Physics/docs/ADAPTIVE_COEVOLVING_GEOMETRY_NO_GO.md`
+  - `/Users/jonreilly/Projects/Physics/scripts/persistent_object_localization_escalation.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/source_resolved_exact_green_support_scout.py`
+
+### Strongest confirmed conclusion
+- the synced head is now `a5982a2`
+  (`feat: independently replay wide-lattice h2t distance law`), not the older
+  moonshot-map refresh snapshot at `dfe73d0`
+- the strongest new science surface in the synced chain is the independent
+  wide-lattice `h^2+T` distance-law replay: on the ordered 3D `1/L^2` family
+  with `W = 12`, `h = 0.25`, `L = 12`, the replay stays `10/10` `TOWARD`,
+  keeps `F~M = 1.000`, and shows a near-Newtonian far-tail fit
+  `b^(-1.05)` with `R^2 = 0.990`
+- this hardens the continuum / credibility lane as a retained current-`main`
+  replay, but it is still not a universal theorem or continuum-limit proof
+- the earlier grown trapping transport probe at `2663fff` remains a bounded
+  positive, yet the next non-overlapping worker step should still return to
+  the fixed directional-measure geometry-normalized `b` seam because that lane
+  remains first in the current user-priority order
+- while Claude owns the decoherence frontier, do not reopen fresh
+  decoherence-architecture searches here
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- resume the fixed directional-measure geometry-normalized `b` lane with one
+  bounded residual diagnostic:
+  - `/Users/jonreilly/Projects/Physics/scripts/directional_b_density_residual_probe.py`
+  - `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_DENSITY_STENCIL_NOTE.md`
+- keep the directional propagator, frozen 3-NN threshold, and occupancy-first
+  bridge fixed; do not reopen denominator or decoherence architecture search
+- only if that residual diagnostic is blocked should the next loop fall back
+  to one bounded evolving-network dynamics prototype
+
+### First concrete action
+- rerun
+  `python3 /Users/jonreilly/Projects/Physics/scripts/directional_b_density_residual_probe.py`
+  and compare its two residual 3-NN miss classes against
+  `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_DENSITY_STENCIL_NOTE.md`;
+  if the miss-local rescue still degrades the reference+tree control, freeze
+  the failure mode instead of widening the generated-bridge,
+  persistent-object, or decoherence search
+
+## 2026-04-05 — Coordination reconciled to synced moonshot-map refresh head
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed in
+  protocol order at loop start
+- no detached `physics-science` child was active to resume or monitor
+- the canonical repo at `/Users/jonreilly/Projects/Physics` is synced again:
+  - `git status --short --branch` reported `## main...origin/main` plus
+    modified `AUTOPILOT_WORKLOG.md`, modified
+    `logs/physics_autopilot_handoff.md`, and untracked
+    `docs/ADAPTIVE_COEVOLVING_GEOMETRY_NO_GO.md`,
+    `scripts/persistent_object_localization_escalation.py`, plus
+    `scripts/source_resolved_exact_green_support_scout.py`
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 8` showed synced head `dfe73d0` on top
+    of `origin/main`
+- the saved coordination layer still described the older unsynced persistent-
+  object Green head `280946d` and therefore missed the later landed chain
+  through the current synced priority-refresh head:
+  - `79561aa` (`feat: add persistent object compact update probe`)
+  - `dfe73d0` (`docs: update interest map and next moonshot lanes`)
+- because the head moved during the loop, the bounded step here was final
+  repo-state reconciliation rather than a new experiment
+
+### What changed
+- reran the managed push helper exactly as required:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - result: `status=failed`, `failure_kind=dns_failure`, `ahead=1`,
+    `behind=0`, `attempts_used=5`
+- later re-reconciled git state repeatedly and found the canonical repo had
+  advanced again to synced head `dfe73d0`
+- inspected the real synced head and current retained science surfaces
+  directly:
+  - `git show --stat --summary --oneline dfe73d0`
+  - `git show --stat --summary --oneline 79561aa`
+  - `/Users/jonreilly/Projects/Physics/docs/PERSISTENT_OBJECT_COMPACT_UPDATE_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/SOURCE_RESOLVED_GENERATED_DISCRIMINATOR_PROBE_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_DENSITY_STENCIL_NOTE.md`
+- refreshed the tracked work log, runtime handoff, and automation memory to
+  the real repo state and the current user-priority next lane
+- left the unrelated modified / untracked drafts untouched:
+  - `/Users/jonreilly/Projects/Physics/docs/ADVERSARIAL_INTEREST_MAP.md`
+  - `/Users/jonreilly/Projects/Physics/docs/ADAPTIVE_COEVOLVING_GEOMETRY_NO_GO.md`
+  - `/Users/jonreilly/Projects/Physics/scripts/persistent_object_localization_escalation.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/source_resolved_exact_green_support_scout.py`
+
+### Strongest confirmed conclusion
+- the synced head is now `dfe73d0`
+  (`docs: update interest map and next moonshot lanes`), but the strongest new
+  science surface in the synced chain is still `79561aa`
+  (`feat: add persistent object compact update probe`)
+- that compact-update probe is a bounded positive on the persistent-object
+  lane: the tighter repeated-update `top-3` object is smaller than the broad
+  control while keeping `4/4` `TOWARD` and `F~M = 1.00`, but it still does not
+  close the inertial-response gap because the detector/readout sector remains
+  broad
+- the earlier generated discriminator still says the retained generated-family
+  bridge is geometry/support-limited rather than field-rule-limited, so there
+  is no reason to keep tuning the same generated-wavefield bridge here
+- operationally, the cleanest non-overlapping next step remains the fixed
+  directional-measure geometry-normalized `b` seam rather than widening the
+  persistent-object, generated-bridge, continuum, or decoherence lanes
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- resume the fixed directional-measure geometry-normalized `b` lane with one
+  bounded residual diagnostic:
+  - `/Users/jonreilly/Projects/Physics/scripts/directional_b_density_residual_probe.py`
+  - `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_DENSITY_STENCIL_NOTE.md`
+- keep the directional propagator, frozen 3-NN threshold, and occupancy-first
+  bridge fixed; do not reopen denominator or decoherence architecture searches
+- only if that residual diagnostic is blocked should the next loop fall back
+  to one bounded evolving-network dynamics prototype
+
+### First concrete action
+- rerun
+  `python3 /Users/jonreilly/Projects/Physics/scripts/directional_b_density_residual_probe.py`
+  and compare its residual 3-NN miss classes against
+  `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_DENSITY_STENCIL_NOTE.md`;
+  if the misses still need local rescue, freeze the failure mode instead of
+  widening the generated-wavefield or persistent-object search
+
+## 2026-04-05 — Current-main replay preserves the valley-linear asymptotic bridge
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed in
+  protocol order at loop start
+- no detached `physics-science` child was active to resume or monitor
+- the canonical repo at `/Users/jonreilly/Projects/Physics` was clean and
+  synced at `9a23a8c` before this step:
+  - `git status --short --branch` reported `## main...origin/main`
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 8` showed synced head `9a23a8c`
+- the saved coordination layer had drifted behind the real repo again:
+  - this tracked work log and the runtime handoff still stopped at the older
+    `a69ebe4` / `80952a4` coordination repair state
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` still
+    described a different thread skipping because another worker held the lock
+- within the user-priority non-overlapping lanes, the bounded continuum /
+  asymptotic bridge card remained the cleanest next step because the earlier
+  directional-`b` and evolving-network follow-ons were already frozen
+
+### What changed
+- inspected the current synced head and priority surfaces directly instead of
+  trusting the stale coordination text:
+  - `git show --stat --summary --oneline 5b1065d`
+  - `git show --stat --summary --oneline 9a23a8c`
+  - `/Users/jonreilly/Projects/Physics/docs/OVERNIGHT_WORK_BACKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/docs/PHYSICS_FIRST_ATTACK_PLAN.md`
+- completed the bounded continuum replay on the canonical repo:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/valley_linear_asymptotic_bridge.py | tee /Users/jonreilly/Projects/Physics/logs/2026-04-05-valley-linear-asymptotic-bridge-replay.txt`
+- compared the finished replay against
+  `/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_ASYMPTOTIC_BRIDGE_NOTE.md`
+  and found the coarse/core/wide ladder reproduced exactly on current `main`
+- updated the asymptotic-bridge note so the bounded claim surface now records
+  the current-main reproducibility replay alongside the frozen 2026-04-04 log
+- ran the managed push helper exactly as required:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - result: `status=failed`, `failure_kind=dns_failure`, `ahead=1`,
+    `behind=0`, `attempts_used=5`
+- refreshed the tracked work log, runtime handoff, and automation memory so
+  the next loop starts from the real synced head and the completed replay
+
+### Strongest confirmed conclusion
+- synced `main` at `9a23a8c` still reproduces the frozen valley-linear
+  asymptotic bridge table exactly
+- the bounded continuum-side read therefore stays unchanged under the later
+  exact-green lane commits:
+  - the 3D ordered-lattice valley-linear family remains Born-clean and
+    genuinely TOWARD across the tested coarse/core/wide ladder
+  - `F~M = 1.00` still holds across the ladder
+  - the far-tail exponent still moves with `h / W`, so the safe read is still
+    near-Newtonian finite-lattice replay rather than a universal exact
+    `-1.00` theorem
+- operationally, this loop closes a real reproducibility / integrity question
+  on the continuum bridge without reopening directional-`b`, evolving-network,
+  or decoherence-frontier work
+- the only live blocker before the next continuum step is remote
+  reconciliation of local commit `cf581d9`, because the managed push helper
+  failed once with transient DNS
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_ASYMPTOTIC_BRIDGE_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- rerun the managed push helper until local commit `cf581d9` is no longer
+  stranded:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+- only once `main` is synced again should the next science loop decide
+  whether the reproduced coarse/core/wide ladder supports one compact
+  finite-size correction card in
+  `/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_CONTINUUM_SYNTHESIS_NOTE.md`
+
+### First concrete action
+- rerun
+  `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`;
+  if it succeeds, then open
+  `/Users/jonreilly/Projects/Physics/logs/2026-04-05-valley-linear-asymptotic-bridge-replay.txt`
+  beside
+  `/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_CONTINUUM_SYNTHESIS_NOTE.md`
+  and test whether the sign-stable / exponent-slice-dependent split can be
+  tightened into one review-safe finite-size correction paragraph
+
+## 2026-04-05 — Coordination reconciled to synced wave-amplification head; cheap gate passed
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed in
+  protocol order at loop start
+- no detached `physics-science` child was active to resume or monitor
+- the canonical repo at `/Users/jonreilly/Projects/Physics` was clean and
+  synced at `a69ebe4` before this step:
+  - `git status --short --branch` reported `## main...origin/main`
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 12` showed the synced head chain
+    `a69ebe4`, `7cae65d`, `a05a4e9`, `46b4c4f`, `4cdfcbe`, `da27d6c`
+- the saved coordination layer had drifted again:
+  - this tracked work log and
+    `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+    still stopped before the older synced `10aecdc` snapshot
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` still
+    described a different thread skipping because another worker held the lock
+- the user-priority non-overlapping follow-ons were already present on
+  `main`:
+  - `da27d6c` (`docs(gate-b): freeze h=0.5 structured-growth v6 replay`)
+    had already frozen the bounded evolving-network step the stale handoff was
+    still asking for
+  - the later strong-field / horizon commits were already bounded, review-safe
+    overclaim-killers rather than an invitation to reopen the decoherence
+    frontier
+
+### What changed
+- inspected the landed synced heads directly instead of trusting the stale
+  coordination text:
+  - `git show --stat --summary --oneline da27d6c`
+  - `git show --stat --summary --oneline 4cdfcbe`
+  - `git show --stat --summary --oneline 46b4c4f`
+  - `git show --stat --summary --oneline a05a4e9`
+  - `git show --stat --summary --oneline 7cae65d`
+  - `git show --stat --summary --oneline a69ebe4`
+- reread the current priority surfaces directly:
+  - `/Users/jonreilly/Projects/Physics/docs/OVERNIGHT_WORK_BACKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/docs/PHYSICS_FIRST_ATTACK_PLAN.md`
+- ran the cheap confidence gate because recent landed commits added new script
+  surfaces:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/base_confidence_check.py`
+  - result: passed
+- refreshed the tracked work log, runtime handoff, and automation memory so
+  the next loop starts from the real synced head and no longer repeats
+  already-landed directional-`b` or bounded evolving-network work
+
+### Strongest confirmed conclusion
+- the active synced coordination head before this repair was `a69ebe4`
+  (`test: bound near-horizon wave amplification claim`), not the older
+  `10aecdc` snapshot still named by the saved coordination files
+- the missed bounded evolving-network result is already on `main` as
+  `da27d6c`, so the old instruction to "run `evolving_network_prototype_v6.py`
+  next" is now stale
+- the later retained strong-field chain is narrower than the stale
+  coordination state knew:
+  - `7cae65d` freezes the smallest source-driven local field as a bounded
+    no-go for full weak-field recovery because `TOWARD` and exact zero-source
+    reduction survive but linear mass scaling does not (`F~M = 0.64`)
+  - `a05a4e9` bounds the absorbing-threshold `k` dependence as nearly flat on
+    the retained horizon observable
+  - `a69ebe4` kills the stronger near-horizon wave-amplification headline on
+    the exact-lattice harness by collapsing the retained ratio to about `1x`
+- operationally, coordination is no longer the blocker; the next
+  non-overlapping science pass should move to one bounded continuum /
+  asymptotic bridge card rather than revisit already-frozen directional-`b`,
+  structured-growth, or decoherence-frontier artifacts
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- move to one bounded continuum / asymptotic bridge card now that the
+  directional-`b` freeze and the bounded evolving-network `v6` replay are
+  already on `main`
+- use the retained valley-linear ladder:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/valley_linear_asymptotic_bridge.py`
+
+### First concrete action
+- rerun `valley_linear_asymptotic_bridge.py` and compare its coarse/core/wide
+  tail fits against
+  `/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_CONTINUUM_SYNTHESIS_NOTE.md`
+  to decide whether one compact scaling card can be frozen without reopening
+  new search space
+
+## 2026-04-05 — Widened holdout transfer freezes `edge_b` as the portable directional-`b` correction
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed in
+  protocol order at loop start
+- no detached `physics-science` child was active to resume or monitor
+- the canonical repo at `/Users/jonreilly/Projects/Physics` was clean and
+  synced at `81ccf55` before this step:
+  - `git status --short --branch` reported `## main...origin/main` with only
+    the runtime handoff modified
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 8` showed synced head
+    `81ccf55` (`docs(graph): reconcile scout with boundary sweep`)
+- the saved coordination layer had drifted again:
+  - this tracked work log still stopped before the synced graph scout head
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+    still described the older janitor stop at `c9b190b`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` did not
+    exist yet in this automation workspace
+- the user-priority unresolved science seam was the fixed directional-measure
+  widened holdout replay:
+  - the verified artifact already existed at
+    `/Users/jonreilly/Projects/Physics/logs/2026-04-05-directional-b-geometry-normalized-holdout-transfer-mass5.txt`
+  - but no repo-facing note had frozen its conclusion yet
+
+### What changed
+- reran the widened-source holdout harness directly:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/directional_b_geometry_normalized_holdout_transfer.py --mass-nodes 5`
+- compared that fresh output against the saved log and got an empty diff, so
+  the saved artifact is reproducible on the canonical repo state
+- froze the result in a new bounded note:
+  - `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_MASS5_NOTE.md`
+- updated the existing directional-measure summaries so the promoted wording
+  matches the widened holdout result:
+  - `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+  - `/Users/jonreilly/Projects/Physics/README.md`
+- refreshed the runtime handoff and created automation memory for this
+  workspace so the next loop starts from the new directional-`b` closure
+
+### Strongest confirmed conclusion
+- the widened holdout replay does not kill the geometry-normalized
+  directional-`b` lane, but it does sharpen which correction survives
+- on the second dense-family holdout with `mass_nodes = 5`:
+  - `N = 12` still passes on `A/b`, `A/edge`, `F/b`, and `F/edge`
+  - `N = 25` loses the center-offset passes (`A/b`, `F/b`) while
+    nearest-edge density (`A/edge`, `F/edge`) still passes
+- the promoted portable read is therefore now narrower and safer:
+  - `response / b` is the asymptotic leading term
+  - `response / edge_b` is the finite-source correction that still transfers
+    once widened low-`b` overlap is real
+- operationally, this closes the outstanding `mass_nodes = 5` follow-on as a
+  stable repo-facing directional-`b` result rather than another open prompt
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_MASS5_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_NOTE.md`
 - `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- `/Users/jonreilly/Projects/Physics/README.md`
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- move to one bounded evolving-network dynamics prototype rather than reopen
+  the directional-`b` denominator lane
+- use the current structured-growth sweep:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/evolving_network_prototype_v6.py`
+
+### First concrete action
+- run `evolving_network_prototype_v6.py` and inspect whether any frozen
+  `drift` / `restore` pair keeps a review-clean TOWARD sign on the `h = 0.5`
+  structured-growth sweep
+
+## 2026-04-05 — Coordination reconciled to synced structureless-DAG head; local drafts left untouched
+
+### Current state
+- checked the cooperative worker lock in protocol order, found it free, and
+  acquired `physics-janitor`; the latest runtime handoff still named no
+  detached `physics-science` child to resume or protect
+- the canonical repo at `/Users/jonreilly/Projects/Physics` is synced at
+  `d73b795`:
+  - `git status --short --branch` reported `## main...origin/main` plus the
+    stale runtime handoff and fresh untracked docs/scripts in the graph,
+    localization, and Gate B lanes
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 8` showed synced head chain
+    `d73b795`, `c549728`, `2180b4d`
+- the tracked coordination layer had drifted again:
+  - this work log and the runtime handoff still stopped at the older
+    `81f45c8` / `7b49b7c` sync-gate story
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` still
+    described the older 07:15 state and is readable but not writable from this
+    sandboxed janitor workspace
+- the shared checkout also carried fresh local science drafts that janitor did
+  **not** clean up or absorb into tracked state:
+  - `/Users/jonreilly/Projects/Physics/docs/GRAPH_PHASE_DIAGRAM_SCOUT_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/MESOSCOPIC_SURROGATE_H025_CONSTRAINED_LOCALIZATION_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/scripts/gate_b_farfield_harness.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/graph_phase_diagram_scout.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/mesoscopic_surrogate_h025_constrained_localization.py`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-05-gate-b-farfield-harness.txt`
+    existed as a zero-byte local log, so janitor treated this as live/manual
+    checkout state rather than stale trash
+
+### What changed
+- inspected the landed synced head directly instead of trusting the stale
+  coordination text:
+  - `git show --stat --summary --oneline 2180b4d`
+  - `git show --stat --summary --oneline c549728`
+  - `git show --stat --summary --oneline d73b795`
+- reread the current priority and graph-boundary surfaces directly:
+  - `/Users/jonreilly/Projects/Physics/docs/PHYSICS_FIRST_ATTACK_PLAN.md`
+  - `/Users/jonreilly/Projects/Physics/docs/OVERNIGHT_WORK_BACKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/docs/EDGE_DELETION_BOUNDARY_SWEEP_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/STRUCTURELESS_DAG_GRAVITY_HARNESS_NOTE.md`
+- ran the cheap confidence gate because recent landed commits added new script
+  surfaces:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/base_confidence_check.py`
+  - result: passed
+- replaced the stale runtime handoff, refreshed janitor memory, and prepended
+  this tracked integrity entry so the next loop starts from the real synced
+  head and the local-draft stop condition
+- left the untracked graph/localization/Gate B drafts untouched, created no new
+  science commit, skipped push because `main` was already synced before this
+  coordination repair, and recorded that the separate autopilot memory could
+  not be refreshed from this sandbox
+
+### Strongest confirmed conclusion
+- the active synced tracked head is now `d73b795`
+  (`feat(graph): harden structureless DAG gravity harness`), not the older
+  `81f45c8` / `7b49b7c` state still described by the saved coordination files
+- the live graph-boundary read is now narrower than the stale handoff said:
+  - `c549728` freezes a bounded null result for the 25% edge-deletion sweep on
+    the retained 3D valley-linear family
+  - `d73b795` freezes a bounded structureless random-causal-DAG pocket with
+    `49/64` TOWARD rows and stable local `F~M ≈ 1.0` on the positive rows
+- operationally, sync is no longer the blocker; the blocker is unresolved local
+  draft dirt in the graph/localization/grown-geometry lanes, so janitor stops
+  without rewriting around that work
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-janitor/memory.md`
+
+### Exact next step
+- do not let janitor absorb or delete the fresh local drafts; resolve them in a
+  separate manual/science pass first
+- once the checkout is clean again, keep workers on the compression /
+  order-parameter thread:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_frontier_compression.py`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-frontier-compression-1232-3344-4992-5504.txt`
+- keep dense laddering paused and only revive a sparse guardrail sentinel if
+  the tracked plan explicitly calls for it
+
+### First concrete action
+- decide whether the untracked graph/localization/Gate B drafts should be
+  committed in a separate science pass or cleaned up; rerun janitor only after
+  that decision lands
+
+## 2026-04-05 — Coordination reconciled to the synced map-calibration head
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed
+  earlier in this loop
+- no detached science child was active to resume or monitor
+- the saved coordination layer had drifted again:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md` still led with
+    the older graph-boundary integrity head at `e0c0d9c`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+    and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+    still claimed `main` was ahead by one at `8c1aee6` and blocked on a
+    transient DNS push failure
+- the canonical repo was already clean and synced at `81f45c8` before this
+  step:
+  - `git status --short --branch` reported `## main...origin/main` with only
+    the runtime handoff modified
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 8` showed local and remote head
+    `81f45c8` (`docs(map): recalibrate after overnight graph results`)
+
+### What changed
+- inspected the landed synced head directly instead of trusting the stale
+  coordination text:
+  - `git show --stat --summary --oneline 81f45c8`
+  - `git show 81f45c8 -- docs/ADVERSARIAL_INTEREST_MAP.md`
+- reread the current program-priority surfaces directly:
+  - `/Users/jonreilly/Projects/Physics/docs/ADVERSARIAL_INTEREST_MAP.md`
+  - `/Users/jonreilly/Projects/Physics/docs/START_HERE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/OVERNIGHT_WORK_BACKLOG.md`
+- prepended this tracked integrity entry and refreshed the runtime handoff plus
+  automation memory so the next loop starts from the real synced
+  map-calibration head
+
+### Strongest confirmed conclusion
+- the active synced coordination head is now `81f45c8`, not the older
+  graph-boundary memo head or the stale ahead-one autopilot state
+- the recalibrated external map now has a more concrete graph-side story:
+  - the explicit edge-deletion boundary lifts broader theorist interest to
+    `8.8/10`, bridge-to-known-physics to `8.7/10`, and careful-paper
+    plausibility to `9.6/10`
+  - the structureless random-DAG mass-scaling note is still bounded and not
+    yet weighted like the retained lattice graph-robustness lane
+- operationally, the stale push gate is cleared because `main` is already
+  synced; once this coordination repair is recorded, the next non-overlapping
+  science step can return to the user-priority directional-`b` lane
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- with coordination restored to the real synced head, return to the fixed
+  directional-measure gravity-`b` lane:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/directional_b_geometry_normalized_holdout_transfer.py --mass-nodes 5`
+- if that lane is blocked after the widened-source replay, move next to one
+  bounded evolving-network dynamics prototype before any decoherence
+  architecture search
+
+### First concrete action
+- rerun the widened-source `mass_nodes = 5` holdout transfer and inspect the
+  low-`b` rows to decide whether the fixed directional-measure read still stays
+  on pure `1 / b` or must switch to the nearest-edge finite-source correction
+
+## 2026-04-04 — Coordination reconciled to the synced graph-boundary head
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed
+  earlier in this loop
+- no detached science child was active to resume or monitor
+- before this integrity repair, the canonical repo had already advanced far
+  beyond the stale localization-closure coordination head:
+  - `9ce0c11` (`docs: inverse problem — Newton+Born require almost nothing of the graph`)
+  - `c2f179c` (`docs: session summary + inverse problem — 208 commits, 10 headline results`)
+  - `97be011` (`feat(inverse): freeze graph-requirements harness`)
+  - `0567cd8` (`feat(inertia): add broken graph robustness probe`)
+  - `eaf812f` (`feat: frozen inverse-problem + broken-graph F∝M=p harnesses`)
+  - `0197939` (`docs(graph): bound inverse-problem and robustness lanes`)
+  - `e0c0d9c` (`fix(honesty): edge deletion boundary at ~85% — graph is NOT irrelevant`)
+- the canonical repo was clean and synced at `e0c0d9c` before this step:
+  - `git status --short --branch` reported `## main...origin/main`
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+- the tracked coordination layer had drifted again:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+  - all still named the earlier localization closure at `3e5042b` as the
+    active synced head even though the real repo had moved to the graph /
+    inverse correction chain
+
+### What changed
+- inspected the landed synced graph/inverse chain instead of trusting the
+  stale localization coordination text:
+  - `git show --stat --summary --oneline 9ce0c11`
+  - `git show --stat --summary --oneline c2f179c`
+  - `git show --stat --summary --oneline 97be011`
+  - `git show --stat --summary --oneline 0567cd8`
+  - `git show --stat --summary --oneline eaf812f`
+  - `git show --stat --summary --oneline 0197939`
+  - `git show --stat --summary --oneline e0c0d9c`
+- reread the settled graph-side note surfaces directly:
+  - `/Users/jonreilly/Projects/Physics/docs/INVERSE_PROBLEM_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/INVERSE_PROBLEM_GRAPH_REQUIREMENTS_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/BROKEN_GRAPH_ACTION_POWER_ROBUSTNESS_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/EDGE_DELETION_BOUNDARY_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/START_HERE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/OVERNIGHT_WORK_BACKLOG.md`
+- prepended this tracked integrity entry and refreshed the runtime handoff plus
+  automation memory so the next loop starts from the real synced head again
+
+### Strongest confirmed conclusion
+- the safe graph-side read is now narrower and more honest than the earlier
+  memo-only universality wording:
+  - baseline, asymmetry, jitter, and sparse-connectivity perturbations still
+    preserve TOWARD gravity with Born machine-clean on the retained family
+  - heavy random edge deletion does not; the 12-seed boundary sweep flips
+    between `90%` and `80%` edge retention, so gravitational attraction on
+    this family needs roughly `~85%` of the dense connectivity
+  - on the broken-graph damage ladder, `p = 1` remains the clean exponent
+    when it survives, but it is not uniquely the most sign-robust law;
+    `p = 2` survives more damaged rows
+- the graph is therefore not irrelevant to the mechanism even though field
+  coupling and phase still look like the core existence conditions
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- with coordination restored to the actual synced head, return to the
+  user-priority non-overlapping directional-`b` science lane:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/directional_b_geometry_normalized_holdout_transfer.py --mass-nodes 5`
+- if that lane is blocked later, move next to one bounded evolving-network
+  dynamics prototype rather than reopening decoherence architecture search
+
+### First concrete action
+- rerun the widened-source directional-`b` holdout transfer at `mass_nodes = 5`
+  and inspect the low-`b` rows before deciding whether the fixed directional-
+  measure lane still stays on pure `1 / b` or must switch immediately to the
+  nearest-edge finite-source correction
+
+## 2026-04-04 — Coordination reconciled to the synced coarse-localization closure head
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed
+  earlier in this loop
+- no detached science child was active to resume or monitor
+- after the first coordination repair landed, the canonical repo absorbed a
+  newer synced localization-closure chain above it:
+  - `2d036ab` (`scout(mesoscopic): recommend h=0.25 for localization`)
+  - `e8c9f2f` (`feat(mesoscopic): add compact floor sweep`)
+  - `96eec1e` (`feat(inertia): bound annular-tapered localization sweep`)
+  - `3e5042b` (`docs(inertia): close coarse localization branch`)
+- the canonical repo is now clean and synced at `3e5042b`:
+  - `git status --short --branch` reported `## main...origin/main`
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+- the prior same-loop coordination entry below and the earlier handoff draft
+  had already drifted again because they still named `6d91de9` as the active
+  synced head
+
+### What changed
+- inspected the landed synced closure chain instead of trusting the stale
+  same-loop coordination text:
+  - `git show --stat --summary --oneline 2d036ab`
+  - `git show --stat --summary --oneline e8c9f2f`
+  - `git show --stat --summary --oneline 96eec1e`
+  - `git show --stat --summary --oneline 3e5042b`
+- reread the settled closure surfaces directly:
+  - `/Users/jonreilly/Projects/Physics/docs/MESOSCOPIC_SURROGATE_COMPACT_FLOOR_SWEEP_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/MESOSCOPIC_SURROGATE_ANNULAR_TAPERED_SWEEP_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/PERSISTENT_INERTIAL_RESPONSE_READINESS_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-mesoscopic-surrogate-compact-floor-sweep.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-mesoscopic-surrogate-annular-tapered-sweep.txt`
+- prepended this final coordination-repair entry and refreshed the runtime
+  handoff plus automation memory to match the real synced head again
+
+### Strongest confirmed conclusion
+- the retained 3D `h = 0.5` localization branch is now effectively closed as a
+  broad-source mesoscopic control lane:
+  - compact Gaussian and tapered families can survive explicit floors, but
+    they do not beat the admissible broad `topN` frontier
+  - no admissible annular, hollow-square, or tapered-ellipsoid family beats
+    the same frontier either
+  - the retained 2D companion still has no sharp support threshold across the
+    scanned `topN = 1 .. 81` range
+- the only still-honest localization follow-on is a retained 3D `h = 0.25`
+  replay with explicit floors; otherwise the lane should stay frozen as a
+  bounded negative rather than reopened on 3D `h = 0.5` or 2D `h = 0.5`
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- with sync restored at the current head, return to the highest-priority
+  non-overlapping directional-`b` science lane:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/directional_b_geometry_normalized_holdout_transfer.py --mass-nodes 5`
+- if the mesoscopic localization lane is revisited later, skip any more 3D
+  `h = 0.5` / 2D threshold sweeps and go directly to the retained 3D
+  `h = 0.25` family with explicit floors
+
+### First concrete action
+- rerun the widened-source directional-`b` holdout transfer at `mass_nodes = 5`
+  and inspect the low-`b` rows before deciding whether the fixed directional-
+  measure lane still stays on pure `1 / b` or must switch immediately to the
+  nearest-edge finite-source correction
+
+## 2026-04-04 — Coordination reconciled to the synced mesoscopic localization head
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed
+- no detached science child was active to resume or monitor
+- the canonical repo was clean and synced at `6d91de9` before this step:
+  - `git status --short --branch` reported `## main...origin/main`
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 8` showed the mesoscopic localization
+    chain atop `main`
+- the tracked coordination layer had drifted:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+  - all still framed the earlier directional-`b` holdout-transfer result as
+    the active head even though the canonical repo had already moved to the
+    synced mesoscopic localization chain
+
+### What changed
+- inspected the landed synced chain instead of trusting stale coordination
+  text:
+  - `git show --stat --summary --oneline 0237099`
+  - `git show --stat --summary --oneline a588cca`
+  - `git show --stat --summary --oneline 9f9171f`
+  - `git show --stat --summary --oneline 0c50fe9`
+  - `git show --stat --summary --oneline 6d91de9`
+- reread the settled mesoscopic note/log surfaces directly:
+  - `/Users/jonreilly/Projects/Physics/docs/PERSISTENT_INERTIAL_RESPONSE_READINESS_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/MESOSCOPIC_SURROGATE_LOCALIZATION_FRONTIER_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/MESOSCOPIC_SURROGATE_LOCALIZATION_SWEEP_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/MESOSCOPIC_SURROGATE_COMPACT_FLOOR_SWEEP_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/MESOSCOPIC_SURROGATE_ALTERNATE_FAMILY_SCOUT_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-mesoscopic-surrogate-threshold-2d.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-mesoscopic-surrogate-compact-floor-sweep.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-mesoscopic-surrogate-alternate-family-scout.txt`
+- prepended this tracked integrity entry and refreshed the runtime handoff plus
+  automation memory so the next loop starts from the real synced head
+
+### Strongest confirmed conclusion
+- the retained `h = 0.5` ordered-lattice mesoscopic surrogate lane now looks
+  closed as a localization frontier rather than an open compact-family search:
+  - degenerate point-like localizations can match the best-shift score, but
+    they do so by collapsing capture/support
+  - once explicit support/capture floors are enforced, compact Gaussian and
+    tapered families survive but do not meaningfully improve on the broad
+    `topN` control
+  - the retained 2D companion has no sharp support threshold across the
+    scanned `topN = 1 .. 81` range
+- if one more bounded localization attempt is worth paying for, the cheapest
+  non-overlapping target is the retained 3D ordered-lattice `h = 0.25` family
+  with non-degenerate shapes and explicit floors, not more sweeping on 3D
+  `h = 0.5` or the 2D threshold lane
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- if `main` is ahead after landing this coordination repair, run the required
+  managed push helper before any other repo mutation:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+- once sync is restored, return to the highest-priority non-overlapping
+  directional-`b` science lane:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/directional_b_geometry_normalized_holdout_transfer.py --mass-nodes 5`
+
+### First concrete action
+- rerun the managed push helper if needed, then inspect the widened-source
+  `mass_nodes = 5` low-`b` corners to decide whether the next directional-`b`
+  read still stays on pure `1 / b` or must switch immediately to the
+  nearest-edge finite-source correction
+
+## 2026-04-04 — Directional-b geometry-normalized holdout transfer frozen
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed
+- no detached science child was active to resume or monitor
+- the canonical repo was clean and synced at `8deda97` before this step:
+  - `git status --short --branch` reported `## main...origin/main`
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+- this loop stayed on the fixed directional-measure gravity-`b` lane and did
+  one bounded family-transfer replay instead of reopening denominator search
+
+### What changed
+- added `/Users/jonreilly/Projects/Physics/scripts/directional_b_geometry_normalized_holdout_transfer.py`
+- generated `/Users/jonreilly/Projects/Physics/logs/2026-04-04-directional-b-geometry-normalized-holdout-transfer.txt`
+- added `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_NOTE.md`
+- updated `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- updated `/Users/jonreilly/Projects/Physics/README.md`
+
+### Strongest confirmed conclusion
+- the retained geometry-normalized response-density hierarchy is not just a
+  one-generator accident
+- on the second dense-family holdout, all four retained normalized reads still
+  decrease with actual `b` at both `N = 12` and `N = 25`:
+  - `action_channel / b`
+  - `action_channel / edge_b`
+  - `packet_flow_action / b`
+  - `packet_flow_action / edge_b`
+- that keeps the current translation intact:
+  - `response / b` is still the clean asymptotic leading term
+  - `response / (b - h_mass)` is still the safer finite-source correction
+- the remaining open seam is still low-`b` overlap geometry, not absence of a
+  geometry-normalized gravity-`b` trend
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/scripts/directional_b_geometry_normalized_holdout_transfer.py`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-04-directional-b-geometry-normalized-holdout-transfer.txt`
+- `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- `/Users/jonreilly/Projects/Physics/README.md`
 - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
 - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
 
 ### Exact next step
-- keep the corrected propagator and corrected directional-`b` hierarchy fixed
-- test whether the same target-band occupancy floor transfers onto one more geometry-varied control that changes the mid-layer sampling law without changing the overlap diagnostic
-- only if that still holds, translate target-band occupancy into a cleaner asymptotic bridge variable
+- test whether the same holdout transfer survives the widened `mass_nodes = 5`
+  family, where the finite-source correction should matter most
 
 ### First concrete action
-- vary the mid-layer sampling law one notch further while measuring only:
-  - `target_fill`
-  - `same_side_mean_gap`
-  - `selected_span_step`
-  - `mu`
+- run `python3 /Users/jonreilly/Projects/Physics/scripts/directional_b_geometry_normalized_holdout_transfer.py --mass-nodes 5`
+  and inspect the low-`b` corners before deciding whether the next lane is
+  still pure `1/b` or must switch immediately to the edge correction
+
+## 2026-04-04 — Ordered-lattice 2D relaunch companion frozen
+
+### Current state
+- the relaunch idea survives as a weak cross-family companion on the retained
+  2D ordered lattice
+- this does not displace the stronger retained 3D relaunch control
+
+### What changed
+- added `/Users/jonreilly/Projects/Physics/scripts/ordered_lattice_quasi_persistent_relaunch_2d.py`
+- generated `/Users/jonreilly/Projects/Physics/logs/2026-04-04-ordered-lattice-quasi-persistent-relaunch-2d.txt`
+- added `/Users/jonreilly/Projects/Physics/docs/ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_2D_NOTE.md`
+
+### Strongest confirmed conclusion
+- the 2D surrogate stays recognizable enough to relaunch, but the capture
+  fraction is much weaker (`0.344`) than the retained 3D relaunch lane
+- that makes it a companion sanity check, not a primary inertial-response lane
+
+### Exact next step
+- keep the 3D quasi-persistent relaunch as the main bounded lane
+- use the 2D companion only as a cross-family sanity check while deciding
+  whether to build a true inertial-response experiment
+
+## 2026-04-04 — Ordered-lattice packet relaunch control frozen
+
+### Current state
+- the retained ordered-lattice family now has a quasi-persistent relaunch
+  control in addition to the packet re-identification control
+- a compact surrogate can be relaunched and stays highly recognizable, which
+  makes a quasi-persistent object plausible on the retained family
+
+### What changed
+- added `/Users/jonreilly/Projects/Physics/scripts/ordered_lattice_quasi_persistent_relaunch.py`
+- generated `/Users/jonreilly/Projects/Physics/logs/2026-04-04-ordered-lattice-quasi-persistent-relaunch.txt`
+- added `/Users/jonreilly/Projects/Physics/docs/ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_NOTE.md`
+
+### Strongest confirmed conclusion
+- the relaunch surrogate is highly recognizable:
+  - `point` relaunch carry overlap: `0.9516`
+  - `compact5` relaunch carry overlap: `0.9839`
+- that is strong enough to make a future inertial-response probe plausible
+- it is still **not** a persistent-pattern inertia theorem
+
+### Exact next step
+- combine the packet re-identification and relaunch controls into the smallest
+  viable inertial-response probe on the retained family
+- if that cannot be done without changing the family too much, keep the
+  readiness note negative and stop promising a closure that the codebase does
+  not support
+
+## 2026-04-04 — Janitor reconciled the synced second-family additivity head
+
+### Current state
+- janitor preflight reread the tracked work log, handoff, and automation
+  memory in protocol order
+- `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status`
+  returned `status=free`, so this loop acquired `physics-janitor`; no live
+  `physics-science` child was active
+- the canonical repo was already clean and synced before any coordination fix:
+  - `git status --short --branch` reported `## main...origin/main`
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 8` put `1d9e711`
+    (`docs(derivation): extend additivity lane to second family`) at the
+    settled science head
+- the tracked coordination layer had still drifted:
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+    still framed the second-family additivity check as future work even though
+    `1d9e711` already lands the retained 2D cross-family additivity
+    script/log/note plus the persistent-inertial readiness note
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` was
+    missing
+  - `/Users/jonreilly/.codex/automations/physics-janitor/memory.md` was
+    missing
+
+### What changed
+- inspected the landed synced head instead of trusting stale coordination text:
+  - `git show --stat --summary --oneline b515a78`
+  - `git show --stat --summary --oneline 906485f`
+  - `git show --stat --summary --oneline 1d9e711`
+- reread the settled derivation surfaces directly:
+  - `/Users/jonreilly/Projects/Physics/docs/COMPOSITE_SOURCE_ADDITIVITY_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/COMPOSITE_SOURCE_ADDITIVITY_2D_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/PERSISTENT_INERTIAL_RESPONSE_READINESS_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/NEWTON_DERIVATION_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-composite-source-additivity-2d-cross-family.txt`
+- ran `python3 /Users/jonreilly/Projects/Physics/scripts/base_confidence_check.py`
+  because the synced head adds a new retained harness script:
+  - benchmark regression audit, mode-only candidate isolation, sparse bridge
+    addback visibility, sparse fallback access labels, live mechanism-split
+    driver, and feature registry alignment all passed
+- refreshed the tracked handoff and restored the missing automation memories so
+  the coordination layer again matches the real synced head
+
+### Strongest confirmed conclusion
+The integrity issue was stale coordination metadata, not broken science state.
+The synced derivation lane now has:
+- same-family additivity on the retained 3D ordered family
+- a second-family 2D cross-family additivity replay with valley-linear still
+  additive to printed precision while spent-delay stays roughly `25-29%`
+  non-additive
+- a bounded readiness audit that still leaves persistent-pattern /
+  inertial-mass closure open
+
+That sharper derivation state does **not** reopen dense ladder work. Worker
+alignment stays in `latent-compression / order-parameter` mode, with dense
+laddering paused and sparse sentinels treated only as guardrails unless the
+tracked plan explicitly reopens them.
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- `/Users/jonreilly/.codex/automations/physics-janitor/memory.md`
+
+### Exact next step
+- if this coordination repair leaves `main` ahead, run the required managed
+  push helper before any other repo mutation:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+- once sync is restored, keep workers on the compression / order-parameter
+  thread:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_frontier_compression.py`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-frontier-compression-1232-3344-4992-5504.txt`
+- keep dense laddering paused and only revive a sparse guardrail sentinel if
+  the tracked plan explicitly calls for it
+
+## 2026-04-04 — Ordered-lattice packet re-identification control frozen
+
+### Current state
+- the retained ordered-lattice family now has a bounded packet-level control
+  for the persistent-pattern / inertial-response lane
+- the control answers a narrower question than the readiness note:
+  a localized packet can be re-identified well enough after propagation to
+  stay recognizable, but that still does not produce a persistent-mass
+  theorem
+
+### What changed
+- added `/Users/jonreilly/Projects/Physics/scripts/ordered_lattice_packet_reidentification.py`
+- generated `/Users/jonreilly/Projects/Physics/logs/2026-04-04-ordered-lattice-packet-reidentification.txt`
+- added `/Users/jonreilly/Projects/Physics/docs/ORDERED_LATTICE_PACKET_REIDENTIFICATION_NOTE.md`
+- updated `/Users/jonreilly/Projects/Physics/docs/PERSISTENT_INERTIAL_RESPONSE_READINESS_NOTE.md`
+- updated the canonical entry / harness index docs to point at the new control
+
+### Strongest confirmed conclusion
+- on the retained 3D ordered-lattice family, the packet remains easy to
+  re-identify under weak fields:
+  - `valley-linear` keeps best-shift score at `1.000` with width ratio near
+    `1.000`
+  - `spent-delay` broadens slightly but remains recognizable on this bounded
+    control
+- this is useful as a precondition for an inertial-response experiment
+- it is **not** yet a persistent-pattern inertia experiment itself
+
+### Exact next step
+- use the packet re-identification control as the smallest viable scaffold for
+  a real persistent or quasi-persistent inertial-response probe
+- if that cannot be built without changing the family too much, keep the
+  readiness note negative and stop promising a closure that the codebase does
+  not support
+
+## 2026-04-04 — Additivity harness frozen; derivation wording tightened
+
+### Current state
+- the ordered-lattice derivation lane is materially sharper than the earlier
+  one-parameter-mass version, but it is still not a closed first-principles
+  proof
+- the new bounded artifact chain now exists:
+  - `/Users/jonreilly/Projects/Physics/scripts/composite_source_additivity_harness.py`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-composite-source-additivity-harness.txt`
+  - `/Users/jonreilly/Projects/Physics/docs/COMPOSITE_SOURCE_ADDITIVITY_NOTE.md`
+- the current fixed-family read is:
+  - valley-linear same-site and disjoint-source response is additive to the
+    printed resolution on the weak-field test-particle family
+  - spent-delay misses the same additivity checks by roughly `24-29%`
+  - a second retained-family 2D cross-check now keeps the same additivity split
+  - a readiness audit now makes the next missing step explicit: no retained
+    persistent-pattern inertial-response experiment exists yet
+
+### Strongest confirmed conclusion
+- the derivation lane is now cleanly split into:
+  - what is frozen:
+    - amplitude-level equivalence
+    - same-family two-body momentum
+    - same-family composite-source additivity
+  - what is still open:
+    - persistent-pattern / inertial-mass closure
+- the strongest safe statement is now a bounded characterization theorem on the
+  retained ordered family, not “Newton derived from first principles”
+
+### Exact next step
+- test whether the same additivity / composition story survives beyond the
+  retained fixed 3D ordered family
+- then build the smallest viable persistent-pattern or quasi-persistent
+  inertial-response experiment
+
+## 2026-04-04 — Coordination reconciled to the residual-probe commit atop the derivation head
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed:
+  - no detached science child was running
+- while this loop was running, the canonical repo absorbed a newer synced derivation chain above the earlier `0972175` momentum-harness head:
+  - `3ee7c82` adds `/Users/jonreilly/Projects/Physics/scripts/equivalence_principle_harness.py`
+  - `8d8b354` adds `/Users/jonreilly/Projects/Physics/.claude/science/derivations/two-principle-newton-2026-04-04.md`
+  - `25f002e` adds `/Users/jonreilly/Projects/Physics/docs/EQUIVALENCE_PRINCIPLE_HARNESS_NOTE.md` and updates `/Users/jonreilly/Projects/Physics/docs/NEWTON_DERIVATION_NOTE.md`
+  - `f7bea8e` adds `/Users/jonreilly/Projects/Physics/.claude/science/derivations/mass-additivity-newton-2026-04-04.md`
+- the directional-`b` science commit from this loop is still the local head result:
+  - `9034525` (`feat(direction-b): freeze residual rescue probe`) now sits on top of the synced `f7bea8e` parent rather than directly on the older `0972175` state
+- the prior same-loop work-log entry below and the earlier handoff draft had therefore drifted again:
+  - they still named `0972175` as the synced head even though the final settled synced parent for this loop is now `f7bea8e`
+
+### What changed
+- rechecked canonical git after the residual-probe commit:
+  - `git status --short --branch`
+  - `git rev-list --left-right --count origin/main...main`
+  - `git log --oneline --decorate -n 8`
+- inspected the synced derivation payload instead of trusting commit subjects alone:
+  - `git show --stat --summary --oneline 3ee7c82`
+  - `git show --stat --summary --oneline 8d8b354`
+  - `git show --stat --summary --oneline 25f002e`
+  - `git show --stat --summary --oneline f7bea8e`
+- confirmed the new synced derivation commits stay off the directional-`b` files touched by `9034525`, so the residual-probe science result remains non-overlapping and valid
+- refreshed the tracked coordination artifacts to the real post-commit chain:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Strongest confirmed conclusion
+This integrity repair does not change the new directional-`b` science result; it fixes which synced parent head that result actually lives on.
+- the final settled synced parent for this loop is the derivation head `f7bea8e`, not the older `0972175` momentum-harness head
+- the new synced chain strengthens an independent Newton-derivation lane through the equivalence-principle harness and mass-additivity notes
+- the directional-`b` conclusion from `9034525` remains unchanged:
+  - `3-NN` is still the best single frozen smooth law on the current expanded sample
+  - occupancy shortage is still the portable coarse bridge
+  - no frozen residual rescue law is ready to promote yet
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- run `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics` until the local residual-probe result and this coordination repair are no longer stranded
+- only after sync is restored, return to the directional-`b` residual lane and compare the three hybrid false positives against the rescued `midgamma1.4-m5`, `N = 25`, `seed = 7` upper-shelf row
+
+### First concrete action
+- verify whether the managed push path can sync the local head before any further science:
+  - rerun `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+
+## 2026-04-04 — Directional-b residual probe keeps 3-NN as the leading frozen law
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed:
+  - no detached science child was running
+- the canonical repo is synced again:
+  - `git status --short --branch` reported `## main...origin/main`
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 8` put `0972175` (`feat: dedicated two-body momentum harness — valley 0.0%, spent 38.9%`) at `HEAD`
+- the tracked coordination state had drifted behind the real synced head again:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md` and `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md` still described the older stranded-local `7462541` state even though the canonical repo had already absorbed `d305cbc` and the newer synced science head `0972175`
+- with sync restored, this loop returned to the highest-priority non-overlapping science seam:
+  - one bounded geometry-normalized gravity-`b` residual probe under the fixed directional-measure propagator
+  - no fresh decoherence architecture or broader denominator search was started
+
+### What changed
+- reconciled canonical state before new science:
+  - reread `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and automation memory in protocol order
+  - rechecked `git status --short --branch`, `git rev-list --left-right --count origin/main...main`, and `git log --oneline --decorate -n 8`
+  - inspected `git show --stat --summary --oneline d305cbc` and `git show --stat --summary --oneline 0972175`
+  - read `/Users/jonreilly/Projects/Physics/logs/2026-04-04-two-body-momentum-harness.txt` to anchor the synced head in real artifact content instead of stale coordination text
+- added `/Users/jonreilly/Projects/Physics/scripts/directional_b_density_residual_probe.py`
+- generated `/Users/jonreilly/Projects/Physics/logs/2026-04-04-directional-b-density-residual-probe.txt`
+- updated:
+  - `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_DENSITY_STENCIL_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- the new bounded probe froze the old dense-reference `3-NN` threshold and inspected only the two remaining midlayer-sentinel overlap misses:
+  - `midgamma1.4-m3`, `N = 25`, `seed = 4`
+  - `midgamma1.4-m5`, `N = 25`, `seed = 7`
+- the residual anatomy now splits cleanly:
+  - a sparse shoulder with one in-band node (`d1 = 0.7085`)
+  - an asymmetric upper shelf with two nodes above the target plane and `local_gap_density_load = 1.8982`
+- a miss-local combined hybrid closes the midlayer sentinel (`10/0/0/30`) and the full extended sample overlap rows (`34/8/0/61`), but it is not portable:
+  - the old reference+tree control degrades from frozen `3-NN` `22/5/2/34` to `24/8/0/31`
+  - the new safe-side false positives are `holdout-m3 N=12 seed=1`, `holdout-m3 N=25 seed=1`, and `holdout-m5 N=25 seed=6`
+- left `/Users/jonreilly/Projects/Physics/README.md` untouched because this loop sharpened a bounded continuous-law residual and repaired coordination truthfulness rather than changing a flagship conclusion
+
+### Strongest confirmed conclusion
+Two independent conclusions now hold on the synced head:
+- `0972175` lands a real dedicated momentum harness, and its artifact confirms the valley-linear vs spent-delay split more sharply than the older note chain:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-two-body-momentum-harness.txt` keeps valley-linear momentum violation at `0.0-0.1%` while spent-delay reaches mean `38.9%`, max `55.4%`
+- on the fixed directional-measure gravity-`b` seam, the residual gap is no longer a fourth-neighbor problem, but it is also not solved by a clean frozen rescue law:
+  - `3-NN` remains the best **single** frozen smooth law on the current extended sample
+  - occupancy shortage remains the portable coarse bridge
+  - any current miss-local hybrid that closes the two remaining midlayer `3-NN` misses also imports safe-side false positives into the older controls, so no sampler-robust residual closure is promoted yet
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- `/Users/jonreilly/Projects/Physics/scripts/directional_b_density_residual_probe.py`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-04-directional-b-density-residual-probe.txt`
+- `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_DENSITY_STENCIL_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+
+### Exact next step
+- keep the fixed directional propagator, frozen `3-NN` threshold, and occupancy-first bridge statement fixed
+- compare the three new hybrid false positives against the rescued `midgamma1.4-m5`, `N = 25`, `seed = 7` upper-shelf row
+- test one side-balanced local correction only if it rescues that upper-shelf miss without triggering:
+  - `holdout-m3`, `N = 12`, `seed = 1`
+  - `holdout-m3`, `N = 25`, `seed = 1`
+  - `holdout-m5`, `N = 25`, `seed = 6`
+
+### First concrete action
+- reopen `/Users/jonreilly/Projects/Physics/logs/2026-04-04-directional-b-density-residual-probe.txt`
+- start from the three new safe-side false positives and the rescued upper-shelf row before proposing any further local clause
+
+## 2026-04-04 — Coordination reconciled to the local valley-linear integrity head
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed:
+  - no detached science child was running
+- the canonical repo is not actually in the fully synced state described by the latest tracked handoff:
+  - `main` is still locally ahead of `origin/main` because the prior valley-linear coordination repair at `7462541` (`fix(autopilot): reconcile valley-linear sync head`) never reached the remote
+  - `git status --short --branch` reported `## main...origin/main [ahead 1]`
+  - `git rev-list --left-right --count origin/main...main` returned `0 1`
+- the managed pre-step push required by protocol still failed before any new science:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics` returned `status=failed`, `failure_kind=dns_failure`, `host=github.com`
+- the coordination layer had split:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md` and `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md` still claimed the valley-linear state was already synced at `c26a524`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` correctly showed the repo as local-ahead after the failed managed push
+- because tracked coordination state still disagreed with the real repo state, this loop stayed on one bounded integrity repair instead of reopening the directional-`b` seam early
+
+### What changed
+- reconciled the canonical repo before doing any new work:
+  - reread the latest tracked work log, latest handoff, and automation memory in protocol order
+  - rechecked `git status --short --branch`, `git rev-list --left-right --count origin/main...main`, and `git log --oneline --decorate -n 8`
+  - inspected `git show --stat --summary --oneline 7462541` to confirm that the stranded local commit is the prior valley-linear coordination repair rather than new science
+- refreshed the coordination files to the real state:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- left `/Users/jonreilly/Projects/Physics/README.md` untouched because this loop repaired coordination integrity only and did not change any flagship conclusion
+
+### Strongest confirmed conclusion
+No new physics result changed this loop. The highest-signal fact is operational:
+- the latest real repo-facing result is still the bounded valley-linear closure / derivation chain plus its local coordination repair
+- the blocking issue is remote reachability, not a science regression:
+  - the managed push helper still fails on DNS resolution for `github.com`
+- while Claude owns the decoherence frontier, the next non-overlapping science pickup remains unchanged:
+  - once the local valley-linear coordination repair is synced, return to the fixed directional-measure geometry-normalized gravity-`b` residual `3-NN` miss diagnostic
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- rerun `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics` until the local valley-linear coordination repair is no longer stranded
+- only after sync is restored, reopen `/Users/jonreilly/Projects/Physics/logs/2026-04-04-directional-b-density-stencil-transfer.txt` and the two residual frozen `3-NN` misses under the fixed directional propagator
+
+### First concrete action
+- verify that the managed push helper is still the only blocker before touching fresh science:
+  - rerun `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+
+## 2026-04-04 — Coordination reconciled to synced valley-linear closure / derivation head
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed:
+  - no detached science child was running
+- the canonical repo is synced again:
+  - `main` and `origin/main` both point to `c26a524` (`logs(valley-linear): freeze missing action and closure replays`)
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git status --short --branch` was clean at `## main...origin/main`
+- the tracked coordination state had drifted behind the real synced head again:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` still described the older `2a381f2` directional-`b` stencil-transfer result rather than the current valley-linear closure / derivation chain
+- because the synced head since that handoff landed real script / note / log changes on other lanes, this loop stayed on one bounded integrity repair instead of overlapping it with fresh science
+
+### What changed
+- reconciled canonical git state before new work:
+  - `git log --oneline --decorate -n 8` put `c26a524` at `HEAD` with the recent landed chain `6876d2e`, `1f1a8dc`, `82c2690`, `5684399`, `256bdce`, `40fc6a1`, and `d8351ef` directly beneath it
+- inspected the actual landed payload instead of trusting commit messages alone:
+  - `c26a524` freezes `/Users/jonreilly/Projects/Physics/logs/2026-04-04-action-power-scaling-sweep.txt`, `/Users/jonreilly/Projects/Physics/logs/2026-04-04-action-universality-probe.txt`, and `/Users/jonreilly/Projects/Physics/logs/2026-04-04-same-family-3d-closure.txt`
+  - `1f1a8dc` lands `/Users/jonreilly/Projects/Physics/docs/SAME_FAMILY_3D_CLOSURE_NOTE.md`, updates `/Users/jonreilly/Projects/Physics/docs/CANONICAL_HARNESS_INDEX.md` and `/Users/jonreilly/Projects/Physics/docs/START_HERE.md`, and rewrites `/Users/jonreilly/Projects/Physics/scripts/same_family_3d_closure.py`
+  - `82c2690` adds `/Users/jonreilly/Projects/Physics/logs/2026-04-04-two-body-momentum.txt`
+  - `5684399` adds `/Users/jonreilly/Projects/Physics/docs/NEWTON_DERIVATION_NOTE.md`
+  - `256bdce` narrows `/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_SCALING_SWEEP_NOTE.md`, `/Users/jonreilly/Projects/Physics/docs/ACTION_UNIQUENESS_NOTE.md`, and `/Users/jonreilly/Projects/Physics/docs/START_HERE.md` to bounded fixed-family claims
+  - `6876d2e` adds `/Users/jonreilly/Projects/Physics/logs/2026-04-04-4d-wide-distance-law.txt` as a wider-dimensional companion, not a promoted flagship result
+- read:
+  - `/Users/jonreilly/Projects/Physics/docs/NEWTON_DERIVATION_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/ACTION_UNIQUENESS_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_SCALING_SWEEP_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/SAME_FAMILY_3D_CLOSURE_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/START_HERE.md`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-two-body-momentum.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-action-universality-probe.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-action-power-scaling-sweep.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-same-family-3d-closure.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-4d-wide-distance-law.txt`
+- ran `python3 /Users/jonreilly/Projects/Physics/scripts/base_confidence_check.py`
+  - benchmark regression audit, mode-only candidate isolation, sparse bridge addback visibility, sparse fallback access labels, live mechanism-split driver, and feature registry alignment all passed
+- left `/Users/jonreilly/Projects/Physics/README.md` untouched because this loop repaired coordination metadata to the real synced head rather than landing a new flagship conclusion
+- refreshed:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Strongest confirmed conclusion
+The repo is healthy and synced; the actual unresolved issue was stale coordination metadata again. The current settled head is a bounded valley-linear closure / derivation chain, not the older directional-`b` result.
+- on the fixed ordered-lattice family, weak-field-linear phase valleys remain the retained mass-law class:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-action-universality-probe.txt` keeps `F~M = 1.00` for the tested weak-field-linear valleys and cleanly separates them from sublinear and superlinear action classes
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-action-power-scaling-sweep.txt` sharpens the safer bounded family law to `F~M = p` across `S = L(1-f^p)` while keeping the distance-tail statement empirical on that family
+- the same-family 3D closure is now a real script / log / note chain rather than a loose narrative:
+  - `/Users/jonreilly/Projects/Physics/docs/SAME_FAMILY_3D_CLOSURE_NOTE.md` and `/Users/jonreilly/Projects/Physics/logs/2026-04-04-same-family-3d-closure.txt` freeze the `h = 0.25`, `W = 10`, `L = 12` core rows, replay same-`h` multi-`L` stability rows, and keep the `W = 12` tail only as a width companion
+- the new derivation note is paired with an explicit lattice diagnostic rather than prose alone:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-two-body-momentum.txt` shows valley-linear momentum conservation at unequal masses while spent-delay violates it by `42-55%`
+- `python3 /Users/jonreilly/Projects/Physics/scripts/base_confidence_check.py` passed on the settled synced head, so there is no fresh regression signal forcing a rollback
+- this does **not** change the queued non-overlapping science priority:
+  - while Claude owns the decoherence frontier, the next bounded pickup still returns to the fixed directional-measure geometry-normalized gravity-`b` seam, not a fresh decoherence or broad continuum search
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- if sync still holds, return to one bounded geometry-normalized gravity-`b` diagnostic under the retained directional propagator
+- start from:
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-directional-b-density-stencil-transfer.txt`
+  - `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- inspect only the two surviving frozen `3-NN` misses and test one equally local occupancy-aware correction only if it explains those residual rows without hurting the existing reference+tree read or reopening a wider denominator search
+
+### First concrete action
+- inspect the two unrescued rows in `/Users/jonreilly/Projects/Physics/logs/2026-04-04-directional-b-density-stencil-transfer.txt`:
+  - `midgamma1.4-m3`, `N = 25`, `seed = 4`
+  - `midgamma1.4-m5`, `N = 25`, `seed = 7`
+
+## 2026-04-04 — Directional-b stencil transfer favors frozen 3-NN on the expanded sample
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed:
+  - no detached science child was running
+- the canonical repo first appeared synced at `7792deb` (`docs(review): harden literature and discriminator scope`), but newer synced ancestors landed before this directional-`b` result was finalized:
+  - the final settled synced parent for this loop's science commit is `2a381f2` (`docs(interest): update adversarial map for frozen valley-linear lanes`)
+  - the intervening synced chain also landed `66cb1aa`, `5586631`, and `056aaa4` in the action / valley-linear / reproduction lanes
+- the tracked coordination state had drifted behind the real synced head again:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` still described the older `8617cda` reproduction-audit head rather than the current `2a381f2` review / action / valley-linear chain
+- this loop stayed on one bounded non-overlapping science step on the fixed directional-measure gravity-`b` seam
+  - no fresh decoherence or wider continuum architecture search was started
+
+### What changed
+- reread the active directional-`b` seam inputs:
+  - `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-03-directional-b-continuous-density-midlayer-holdout.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-01-directional-b-geometry-normalized-compare.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-01-directional-b-h-over-b-crossover-card.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-01-directional-b-overlap-onset-midlayer-sampling-holdout.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_progress_summary.md`
+- rechecked the final synced ancestor chain before ending the loop:
+  - `66cb1aa` adds frozen sweep harnesses in the action / valley-linear lanes
+  - `5586631` lands the action regularity crossover replay
+  - `056aaa4` freezes the valley-linear robustness sweep artifact chain
+  - `2a381f2` updates `/Users/jonreilly/Projects/Physics/docs/ADVERSARIAL_INTEREST_MAP.md`
+  - those landed changes stayed off the directional-`b` files touched in this loop
+- added `/Users/jonreilly/Projects/Physics/scripts/directional_b_density_stencil_transfer.py`
+- generated `/Users/jonreilly/Projects/Physics/logs/2026-04-04-directional-b-density-stencil-transfer.txt`
+- added `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_DENSITY_STENCIL_NOTE.md`
+- updated `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- the new bounded diagnostic freezes the original dense-reference `3-NN` and `4-NN` density-load thresholds, then applies them without refit to the tree control and the center-biased midlayer sentinel
+- the frozen-stencil results are now sharper:
+  - reference+tree still prefers `4-NN`: `0.9206` vs `0.8889`
+  - the midlayer sentinel flips that preference to `3-NN`: `0.9500` vs `0.8500`
+  - on the current extended sample, `3-NN` now beats `4-NN`: `0.9126` vs `0.8932`
+  - `5/6` frozen `4-NN` false negatives are one-sided low-occupancy target bands, and frozen `3-NN` rescues `4/6` of them
+- left `/Users/jonreilly/Projects/Physics/README.md` untouched because this is a bounded continuous-law refinement on the retained directional lane, not a new flagship program conclusion
+
+### Strongest confirmed conclusion
+The current midlayer false-negative problem is a fourth-neighbor stencil issue, not evidence that the retained geometry-normalized directional-`b` hierarchy failed. Occupancy shortage remains the portable coarse bridge, but on the current expanded sample the frozen `3-NN` density law is now the better smooth candidate.
+- `4-NN` remains the cleaner fit on the original dense reference sample plus tree control
+- once the center-biased midlayer sentinel is included, `3-NN` transfers better than `4-NN` without refitting thresholds
+- the miss mode is mostly one-sided low-occupancy support where the fourth neighbor is the first point to jump across the target-plane gap and `r4` therefore overstates same-side support
+- so the next bounded continuous-law step should start from `3-NN` or another equally local occupancy-aware correction, not from a broader denominator search
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- `/Users/jonreilly/Projects/Physics/scripts/directional_b_density_stencil_transfer.py`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-04-directional-b-density-stencil-transfer.txt`
+- `/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_DENSITY_STENCIL_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+
+### Exact next step
+- keep the retained directional propagator and occupancy-first overlap statement fixed
+- reopen `/Users/jonreilly/Projects/Physics/logs/2026-04-04-directional-b-density-stencil-transfer.txt`
+- inspect the two surviving frozen `3-NN` misses only
+- test one equally local occupancy-aware correction only if it explains those two residual rows without hurting the existing reference+tree read or reopening a wider denominator search
+
+### First concrete action
+- inspect the unrescued rows in `/Users/jonreilly/Projects/Physics/logs/2026-04-04-directional-b-density-stencil-transfer.txt`:
+  - `midgamma1.4-m3`, `N = 25`, `seed = 4`
+  - `midgamma1.4-m5`, `N = 25`, `seed = 7`
+
+## 2026-04-04 — Coordination corrected to synced reproduction-audit head
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed:
+  - no detached science child was running
+- this loop had already landed one bounded integrity repair at `c42c5ef`, but the managed push/fetch cycle exposed newer synced ancestors before the loop ended:
+  - the final settled synced head is now `8617cda` (`docs(repro): add canonical harness index and audit entry point`)
+  - `main` and `origin/main` both point to `8617cda`
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+- the tracked coordination state had drifted again during the same loop:
+  - the earlier same-loop entry in `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md` still described the intermediate `79f70e2` theory head rather than the final reproduction-audit head that absorbed the prior repair commit
+- the canonical checkout is otherwise clean apart from one unrelated untracked side-lane file:
+  - `/Users/jonreilly/Projects/Physics/scripts/lattice_3d_valley_linear_card.py`
+
+### What changed
+- verified that the prior integrity repair commit `c42c5ef` is now already included in the synced `8617cda` history
+- inspected the final landed payload chain instead of trusting commit messages alone:
+  - `4522702` retains the new skeptical-reader audit harness path
+  - `8617cda` adds `/Users/jonreilly/Projects/Physics/docs/CANONICAL_HARNESS_INDEX.md` and `/Users/jonreilly/Projects/Physics/docs/REPRODUCTION_AUDIT_NOTE.md`
+  - the same synced head keeps `/Users/jonreilly/Projects/Physics/scripts/reproduction_audit_harness.py` on disk as the new bounded reproduction entry point
+- read:
+  - `/Users/jonreilly/Projects/Physics/docs/CANONICAL_HARNESS_INDEX.md`
+  - `/Users/jonreilly/Projects/Physics/docs/REPRODUCTION_AUDIT_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/scripts/reproduction_audit_harness.py`
+  - `/Users/jonreilly/Projects/Physics/docs/START_HERE.md` at the new reproduction-tooling references
+- ran `python3 /Users/jonreilly/Projects/Physics/scripts/reproduction_audit_harness.py`
+  - result: `REPRODUCTION AUDIT: PASS`
+  - exact 2D mirror retained row is still present
+  - structured chokepoint bridge retained row is still present
+  - the harness cleanly separates canonical entry points from exploratory drivers without reopening a broad search
+- left `/Users/jonreilly/Projects/Physics/README.md` untouched because the settled synced head adds skeptical-reader reproduction tooling and coordination repair, not a new flagship conclusion
+- refreshed:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Strongest confirmed conclusion
+The final settled synced head for this loop is a reproduction-audit / review-hygiene landing, and it works. The current repo now has a bounded skeptical-reader entry point that reproduces two distinct retained families without blurring canonical harnesses together with exploratory drivers.
+- `/Users/jonreilly/Projects/Physics/docs/CANONICAL_HARNESS_INDEX.md` now names the scripts and notes that new readers should treat as canonical harnesses
+- `/Users/jonreilly/Projects/Physics/docs/REPRODUCTION_AUDIT_NOTE.md` states the intended audit scope and explicitly says what the harness does **not** certify
+- `python3 /Users/jonreilly/Projects/Physics/scripts/reproduction_audit_harness.py` passes on the settled synced head:
+  - mirror 2D Born stays machine-clean
+  - the retained structured chokepoint row is still present and Born-clean
+  - the comparison is deliberately bounded rather than a broad frontier sweep
+- this improves reproducibility and review posture, but it does **not** change the queued non-overlapping science priority
+- with sync restored and the reproduction entry point verified, the next science step still returns to the fixed directional-measure geometry-normalized gravity-`b` seam
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- if sync still holds, resume one bounded geometry-normalized gravity-`b` diagnostic under the retained directional propagator
+- start from:
+  - `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-03-directional-b-continuous-density-midlayer-holdout.txt`
+- explain the six frozen 4-NN false negatives on the midlayer sentinel with one occupancy-aware or geometry-normalized diagnostic
+- keep avoiding the unrelated untracked side-lane file `/Users/jonreilly/Projects/Physics/scripts/lattice_3d_valley_linear_card.py`
+
+### First concrete action
+- reopen `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- compare the six frozen 4-NN misses in `/Users/jonreilly/Projects/Physics/logs/2026-04-03-directional-b-continuous-density-midlayer-holdout.txt` against `mu`, `local_target_count`, `expected_target_count_4nn`, and one occupancy-normalized `b` diagnostic before widening scope
+
+## 2026-04-04 — Coordination reconciled to synced spent-delay distance-law head
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed:
+  - no detached science child was running
+- the canonical repo is synced again:
+  - `main` and `origin/main` both point to `79f70e2` (`feat(theory): distance exponent ~-0.5 is the spent-delay prediction, not -2`)
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+- the tracked coordination state had drifted behind the real synced head again:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`, `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` still described the older gravity-observable / `8445218` janitor snapshot rather than the current theory / bridge head
+- the canonical checkout also carried unrelated modified docs / scripts in the continuum and reproduction-audit lanes, so this loop stayed on a bounded integrity repair instead of overlapping that work
+
+### What changed
+- acquired the `physics-science` lock and reran the protocol reconciliation against `/Users/jonreilly/Projects/Physics`
+- confirmed the canonical repo state before new science:
+  - `git status --short --branch` showed `main...origin/main` with unrelated dirty continuum / reproduction-audit files but no branch divergence
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 12` put `79f70e2` at `HEAD`
+- inspected the landed synced payload instead of trusting commit messages alone:
+  - `79f70e2` adds `.claude/science/derivations/distance-exponent-analysis-2026-04-04.md`
+  - `d1e6eb2` adds `/Users/jonreilly/Projects/Physics/docs/STRUCTURED_CHOKEPOINT_BRIDGE_EXTENSION_NOTE.md` plus its script / log pair
+  - `374a0df` updates `README.md`, `/Users/jonreilly/Projects/Physics/docs/CONTINUUM_BRIDGE_NOTE.md`, `/Users/jonreilly/Projects/Physics/docs/PREDICTION_CARD.md`, `/Users/jonreilly/Projects/Physics/docs/START_HERE.md`, `/Users/jonreilly/Projects/Physics/docs/UNIFIED_PROGRAM_NOTE.md`, and the imported kernel scripts
+  - `7984a47` freezes the 3D `1/L^2` canonical card script and `700f263` adds the 3D inverse-square tail statistics lane
+- read the committed theory / note artifacts directly:
+  - `.claude/science/derivations/distance-exponent-analysis-2026-04-04.md`
+  - `/Users/jonreilly/Projects/Physics/docs/STRUCTURED_CHOKEPOINT_BRIDGE_EXTENSION_NOTE.md`
+  - committed `HEAD` versions of `/Users/jonreilly/Projects/Physics/docs/PREDICTION_CARD.md` and `/Users/jonreilly/Projects/Physics/docs/CONTINUUM_BRIDGE_NOTE.md`
+- ran `python3 /Users/jonreilly/Projects/Physics/scripts/base_confidence_check.py` because the synced head since the last science handoff landed multiple scripts and benchmark-facing notes
+  - benchmark regression audit, mode-only candidate isolation, sparse bridge addback visibility, sparse fallback access labels, live mechanism-split driver, and feature registry alignment all passed
+- left `/Users/jonreilly/Projects/Physics/README.md` untouched because the current synced head already carries the theory/card updates and this loop only repaired coordination metadata
+- refreshed:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Strongest confirmed conclusion
+The repo is healthy and synced; the actual integrity problem was stale coordination metadata again. The current synced head advances the honest distance-law story, but it does **not** justify reopening a fresh continuum or decoherence architecture search from this loop.
+- `79f70e2`'s committed derivation file makes the current spent-delay claim explicit:
+  - the weak-field action naturally explains the measured `F ∝ M^0.5` scaling
+  - the current 3D lattice distance exponent is still only near `-0.5`
+  - the document explicitly marks the gap to the single-ray `-1` expectation as unresolved, so the old `-2` target claim is no longer the honest repo-facing prediction
+- `/Users/jonreilly/Projects/Physics/docs/CONTINUUM_BRIDGE_NOTE.md` and `/Users/jonreilly/Projects/Physics/docs/PREDICTION_CARD.md` now already encode that refined story in the tracked docs:
+  - lattice distance law is improving under refinement, but the retained falsifier is now that the exponent could plateau away from Newtonian behavior
+  - the kernel / continuum bridge remains exploratory and architecture-dependent
+- `/Users/jonreilly/Projects/Physics/docs/STRUCTURED_CHOKEPOINT_BRIDGE_EXTENSION_NOTE.md` adds one real bounded positive result on a non-overlapping side lane:
+  - the retained structured chokepoint pocket widens cleanly to `N = 100`
+  - Born stays at machine precision, `k = 0` stays pinned to zero, and gravity remains positive
+- `python3 /Users/jonreilly/Projects/Physics/scripts/base_confidence_check.py` passed on the settled synced head, so there is no fresh regression signal forcing a rollback or emergency follow-up
+- with Claude still owning the decoherence frontier, the highest-signal non-overlapping next science lane returns to the fixed directional-measure geometry-normalized gravity-`b` seam
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- keep the retained directional propagator fixed
+- return to one bounded geometry-normalized gravity-`b` study on the directional-measure thread
+- start from:
+  - `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-03-directional-b-continuous-density-midlayer-holdout.txt`
+- test one occupancy-aware or geometry-normalized diagnostic that addresses the six frozen 4-NN false negatives on the midlayer sentinel without reopening decoherence or wider continuum architecture work
+- keep avoiding the unrelated dirty continuum / reproduction-audit files already present in the canonical checkout
+
+### First concrete action
+- reopen `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- compare the six frozen 4-NN misses in `/Users/jonreilly/Projects/Physics/logs/2026-04-03-directional-b-continuous-density-midlayer-holdout.txt` against `mu`, `local_target_count`, `expected_target_count_4nn`, and simple occupancy-normalized `b` diagnostics before adding any new family or broader denominator search
+
+## 2026-04-04 — Coordination corrected to synced gravity observable-hierarchy head
+
+### Current state
+- janitor preflight found the cooperative worker lock free:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` returned `status=free`
+- this loop initially observed the canonical repo synced at `59ca04e`, but the required push-helper refresh exposed a newer synced ancestor chain before the loop ended:
+  - `origin/main` now points to `7750047` (`docs(gravity): freeze observable hierarchy`)
+  - local `main` is still only the janitor repair branch ahead of that synced head
+- the tracked coordination state had drifted again during the same loop:
+  - the first janitor repair commit in this pass reflected the older `59ca04e` snapshot rather than the newer `7750047` synced head
+  - `logs/physics_autopilot_handoff.md` still described the older `c5670ee` / `29d0308` DNS-failure story
+  - `/Users/jonreilly/.codex/automations/physics-janitor/memory.md` was missing
+- the canonical checkout still carried unrelated modified logs plus untracked docs / scripts in the mirror, persistent-record, gravity-design, and structured side lanes, so this correction stayed on coordination repair only
+
+### What changed
+- reran the synced-head inspection against the actual final ancestor chain reached in this loop:
+  - `7750047` (`docs(gravity): freeze observable hierarchy`)
+  - `077f088` (`feat(3D): 10/10 COMPLETE — purity exponent -1.76, N_half=48`)
+  - `39006e6` (`feat(3D): 9/10 ON 3D DENSE LATTICE — gravity grows, F~sqrt(M), distance -1.62`)
+- checked the real tracked payload of those commits:
+  - `git diff-tree --no-commit-id --name-only -r 7750047` changed `/Users/jonreilly/Projects/Physics/docs/GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md`, `/Users/jonreilly/Projects/Physics/docs/START_HERE.md`, `/Users/jonreilly/Projects/Physics/logs/2026-04-04-gravity-observable-hierarchy.txt`, and `/Users/jonreilly/Projects/Physics/scripts/gravity_observable_hierarchy.py`
+  - `git diff-tree --no-commit-id --name-only -r 077f088` returned no tracked files
+  - `git diff-tree --no-commit-id --name-only -r 39006e6` returned no tracked files
+- ran `python3 /Users/jonreilly/Projects/Physics/scripts/base_confidence_check.py` because the final synced head did land a new script / log / note chain
+  - benchmark regression audit, mode-only candidate isolation, sparse bridge addback visibility, sparse fallback access labels, live mechanism-split driver, and feature registry alignment all passed
+- read `/Users/jonreilly/Projects/Physics/docs/GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md` and left `/Users/jonreilly/Projects/Physics/README.md` untouched because the tracked note is an interpretation guardrail, not a replacement for the current worker-lane alignment
+- refreshed:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-janitor/memory.md`
+- recorded one follow-up integrity correction so the tracked coordination state matches the actual synced head seen by the end of the loop
+
+### Strongest confirmed conclusion
+The actual synced artifact chain for this loop is the gravity observable-hierarchy note/script/log, not the louder 3D marker commits. The branch narrative advanced, but only the hierarchy note landed tracked evidence, and it explicitly keeps the sign-interpretation question bounded rather than reopening dense-lattice frontier work.
+- the current synced ancestor is `7750047`, and it lands a real script-backed interpretation note plus `START_HERE` update
+- `/Users/jonreilly/Projects/Physics/docs/GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md` makes the retained rule explicit:
+  - do not flip gravity sign by convention
+  - report centroid shift, `P_near`, and signed channel bias together
+  - on the current retained examples, 2D ultra-weak dense spent-delay is genuinely attractive while the retained 3D action-power barrier card remains genuinely away
+- the same note is explicit that it does **not** adjudicate the newer 3D dense spent-delay branch narrative because that claim still lacks its own canonical in-tree script/log/note chain
+- both `39006e6` and `077f088` are empty marker commits from the tracked-tree perspective, so this automation should not treat their commit-message claims as stable repo artifacts yet
+- `python3 /Users/jonreilly/Projects/Physics/scripts/base_confidence_check.py` passed, so there is no fresh regression signal in the benchmark / selector layer from the newly landed hierarchy script
+- worker alignment therefore stays in compression / order-parameter mode, and dense laddering remains paused unless the tracked plan explicitly reopens a sparse guardrail sentinel
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-janitor/memory.md`
+
+### Exact next step
+- retry the required push helper for the janitor repair branch before any science:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+- once sync is repaired, stay on the compression / order-parameter thread
+- reuse the frozen-frontier compression entrypoint and retained log:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_frontier_compression.py`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-frontier-compression-1232-3344-4992-5504.txt`
+- keep dense laddering paused and only revive a sparse guardrail sentinel if the tracked plan explicitly calls for it
+- keep avoiding the unrelated dirty mirror / persistent-record / gravity-design / structured side-lane files already sitting in the checkout
+
+## 2026-04-04 — Coordination reconciled to synced lattice-gravity resolution head
+
+### Current state
+- janitor preflight found the cooperative worker lock free:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` returned `status=free`
+- the canonical repo started this loop synced again:
+  - `main` and `origin/main` both point to `59ca04e` (`Merge branch 'claude/distracted-napier'`)
+  - the initial `git rev-list --left-right --count origin/main...main` check returned `0 0`
+- the tracked coordination state had drifted again:
+  - `AUTOPILOT_WORKLOG.md` and `logs/physics_autopilot_handoff.md` still described the older `c5670ee` axiom-fork note head and the stale local-ahead `29d0308` / DNS-failure story
+  - `/Users/jonreilly/.codex/automations/physics-janitor/memory.md` was missing
+  - the canonical checkout also still carried unrelated modified logs plus untracked docs / scripts in the mirror, persistent-record, gravity-design, and structured side lanes
+- the synced head had advanced into gravity-resolution note work rather than a new compression/order-parameter artifact, so this loop stayed on coordination repair only
+
+### What changed
+- acquired the `physics-janitor` lock and reran the protocol sync checks against the canonical repo
+- confirmed the canonical repo state before any janitor repair:
+  - `git status --short --branch` showed `main...origin/main` with dirty local metadata / side-lane files but no branch divergence
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 8` put `59ca04e` at `HEAD`
+- inspected the landed synced head artifacts:
+  - `59ca04e` (`Merge branch 'claude/distracted-napier'`)
+  - `5b59b66` (`feat(gravity): 3D DENSE LATTICE CRACKED — TOWARD + b^(-1.62) + Born 7e-16`)
+  - `604cc09` (`docs: LATTICE_GRAVITY_RESOLUTION — 2D solved, 3D open`)
+- checked the actual tracked payload of the new gravity head:
+  - `git diff-tree --no-commit-id --name-only -r 5b59b66` returned no tracked files
+  - `git diff-tree --no-commit-id --name-only -r 604cc09` changed only `/Users/jonreilly/Projects/Physics/docs/LATTICE_GRAVITY_RESOLUTION_NOTE.md`
+- skipped `python3 scripts/base_confidence_check.py` because the landed head did not change scripts or benchmark semantics in-tree
+- read `/Users/jonreilly/Projects/Physics/docs/LATTICE_GRAVITY_RESOLUTION_NOTE.md` and left `/Users/jonreilly/Projects/Physics/README.md` untouched because the synced head documents a 2D dense-lattice closure with 3D still open, not a new flagship architecture or worker-lane change
+- refreshed:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-janitor/memory.md`
+- recorded one bounded integrity repair so the tracked coordination state again matches the real synced repo before the next compression/order-parameter step
+
+### Strongest confirmed conclusion
+The current integrity issue was stale coordination metadata again, but the repo itself is already synced. The only new in-tree artifact is a gravity-resolution note; the louder 3D breakthrough commit message did not land tracked files, so it should not displace the current worker alignment.
+- `main` and `origin/main` are both at `59ca04e`, so the older `c5670ee` / `29d0308` local-ahead DNS story is no longer current
+- `/Users/jonreilly/Projects/Physics/docs/LATTICE_GRAVITY_RESOLUTION_NOTE.md` now records a real 2D dense-lattice closure on the original spent-delay action:
+  - at `strength = 0.0005`, all `9/9` tested `b` values shift TOWARD the mass
+  - the retained distance fit is `b^(-0.94)` with `R^2 = 0.939`
+  - Born, `k=0`, MI, `d_TV`, and decoherence remain validated on the same 2D family
+- the same note is explicit that 3D is still open, and the newer `5b59b66` marker commit carries no tracked payload, so this loop should not reopen dense ladder work from commit-message semantics alone
+- because the synced head did not land script or benchmark-code changes, a cheap confidence pass was not required here
+- this automation should stay aligned to compression / order-parameter mode and keep dense laddering paused unless the tracked plan explicitly reopens a sparse guardrail sentinel
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-janitor/memory.md`
+
+### Exact next step
+- if the janitor repair leaves `main` ahead, run the required push helper before any science:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+- stay on the compression / order-parameter thread
+- reuse the frozen-frontier compression entrypoint and retained log:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_frontier_compression.py`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-frontier-compression-1232-3344-4992-5504.txt`
+- keep dense laddering paused and only revive a sparse guardrail sentinel if the tracked plan explicitly calls for it
+- keep avoiding the unrelated dirty mirror / persistent-record / gravity-design / structured side-lane files already sitting in the checkout
+
+## 2026-04-04 — Coordination reconciled to synced axiom-fork note head
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed:
+  - no detached science child was running
+- the canonical repo started this loop synced again:
+  - `main` and `origin/main` both point to `c5670ee` (`Merge branch 'claude/distracted-napier'`)
+  - the initial `git rev-list --left-right --count origin/main...main` check returned `0 0`
+- the tracked coordination state had drifted again:
+  - `AUTOPILOT_WORKLOG.md`, `logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` still described the older local-ahead `f97b2fa` / DNS-failure state
+  - the canonical checkout also still carried unrelated modified logs plus untracked docs / scripts in the lattice, mirror, persistent-record, gravity-design, and structured lanes
+- the synced head had advanced into Claude-owned axiom-fork / harness documentation work, so this loop stayed on coordination repair only
+
+### What changed
+- acquired the `physics-science` lock and reran the protocol sync checks against the canonical repo
+- confirmed the canonical repo state before new science:
+  - `git status --short --branch` showed `main...origin/main` with dirty local metadata / side-lane files but no branch divergence
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - `git log --oneline --decorate -n 8` put `c5670ee` at `HEAD`
+- ran the required push helper before new science:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - helper result: `status=nothing_to_push`, `ahead=0`, `behind=0`
+- inspected the landed synced head artifacts:
+  - `c5670ee` (`Merge branch 'claude/distracted-napier'`)
+  - `eedba60` (`docs: ACTION_POWER_NOTE — honest status of axiom fork branch`)
+  - `d673d3b` (`fix(harness): 3D barrier card fails — insufficient signal through slits`)
+  - `2295061` (`feat(axiom-fork): 3D canonical harness — power p=0.5 gives 1/b² + F∝M=0.99`)
+- read `/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_NOTE.md` to verify whether a top-level README rewrite was required
+- left `/Users/jonreilly/Projects/Physics/README.md` untouched because the synced head documents a complementary axiom-fork branch with partial 3D no-barrier validation, not a flagship architecture replacement
+- refreshed:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- recorded one bounded integrity repair so the tracked coordination state again matches the real synced repo before the next science step
+
+### Strongest confirmed conclusion
+The current integrity issue was stale coordination metadata again, now against a newer synced axiom-fork documentation head rather than the older local-ahead `f97b2fa` state.
+- `main` and `origin/main` are both at `c5670ee`, so the earlier local-ahead / DNS-failure story is no longer current
+- the landed synced head now carries a real note-backed but explicitly incomplete side branch:
+  - `/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_NOTE.md` records that on the 3D NN lattice, the power-action fork currently validates a no-barrier distance exponent near `-1.82` with `R^2 = 0.93` and mass scaling near `0.99`, while barrier-side Born / MI / decoherence remain unvalidated because the 3D barrier setup does not transmit enough signal
+- the note itself describes that branch as complementary rather than a replacement for the spent-delay flagship, so `README.md` remains honest without a top-level rewrite from this loop
+- while Claude owns the active axiom-fork / decoherence interpretation lane, this automation should not reopen overlapping architecture searches from that synced head
+- the highest-signal non-overlapping next lane returns to the fixed directional-measure geometry-normalized gravity-`b` seam
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- keep the corrected fixed directional propagator and retained `b -> b - h_mass` hierarchy fixed
+- return to one bounded geometry-normalized gravity-`b` study on the directional-measure thread
+- start from the retained directional note and the last stable holdout log:
+  - `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-03-directional-b-continuous-density-midlayer-holdout.txt`
+- test one occupancy-aware or geometry-normalized diagnostic that addresses the six frozen 4-NN false negatives without reopening decoherence or axiom-fork architecture work
+- keep avoiding the unrelated dirty lattice / mirror / persistent-record / gravity-design / structured side lanes already sitting in the checkout
+
+### First concrete action
+- reopen `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- compare the six frozen 4-NN false negatives in `/Users/jonreilly/Projects/Physics/logs/2026-04-03-directional-b-continuous-density-midlayer-holdout.txt` against `local_target_count`, `expected_target_count_4nn`, `mu`, and simple `b` / `edge_b` / local-density normalizations before adding a new family or wider denominator search
+
+## 2026-04-03 — Coordination reconciled to synced causal marker head
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed:
+  - no detached science child was running
+- the canonical repo is synced again:
+  - `main` and `origin/main` both point to `06c8759` (`Merge branch 'claude/distracted-napier'`)
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+- the tracked coordination state had drifted again:
+  - `AUTOPILOT_WORKLOG.md` and `logs/physics_autopilot_handoff.md` still described the older local-ahead lattice / DNS-failure state around `f9f53c6`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` was missing
+- the shared checkout still carried unrelated modified logs plus untracked docs / scripts in the lattice, mirror, persistent-record, gravity-design, and structured-lane side work, so this loop stayed on coordination repair only
+
+### What changed
+- acquired the `physics-science` lock and reran the protocol sync checks against the canonical repo
+- verified the latest synced head chain:
+  - `06c8759` (`Merge branch 'claude/distracted-napier'`)
+  - `9b89537` (`feat(causal): gravity deflection ~ k^1.59, consistent with k² coupling`)
+  - `a38409c` (`feat(causal): waveguide doesn't create mass — propagation intrinsically massless`)
+  - `10c204c` (`feat(causal): dispersion is TRIVIAL — beam width k-independent (massless)`)
+- checked the landed causal marker commits against the tree with:
+  - `git diff-tree --no-commit-id --name-only -r 9b89537`
+  - `git diff-tree --no-commit-id --name-only -r a38409c`
+  - `git diff-tree --no-commit-id --name-only -r 10c204c`
+- all three returned no tracked file changes, so the synced head moved without any new repo artifacts, benchmark logs, or note updates
+- left `/Users/jonreilly/Projects/Physics/README.md` untouched because no doc-backed conclusion changed on the synced head
+- refreshed:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- recorded one bounded integrity repair so the tracked coordination state can match the real synced repo before the next science step
+
+### Strongest confirmed conclusion
+The current integrity issue was stale coordination metadata again, but this time the repo has already resynchronized. The latest synced head advances through empty causal marker commits rather than new tracked science artifacts, so the honest repo-facing conclusion set is unchanged and `README.md` does not need a new architecture rewrite from this loop.
+- `main` and `origin/main` are both at `06c8759`, so the earlier local-ahead / DNS-failure story is no longer current
+- the three causal commits in the synced head (`10c204c`, `a38409c`, `9b89537`) carry informative commit messages but no tracked file changes, so there is no new log-backed or note-backed result to promote as a stable repo artifact here
+- the latest stable in-tree science artifacts therefore remain the already-tracked directional-`b` and ordered-lattice notes
+- while Claude owns the active causal / decoherence interpretation lane, this automation should not treat those empty marker commits as a reason to reopen overlapping frontier work
+- the highest-signal non-overlapping next lane remains the fixed directional-measure geometry-normalized gravity-`b` seam
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- keep the corrected fixed directional propagator and retained `b -> b - h_mass` hierarchy fixed
+- return to one bounded geometry-normalized gravity-`b` study on the directional-measure thread
+- start from the retained directional note and the last stable holdout log:
+  - `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-03-directional-b-continuous-density-midlayer-holdout.txt`
+- use one occupancy-aware or geometry-normalized diagnostic that addresses the frozen 4-NN false negatives without reopening a fresh causal / decoherence search
+- keep avoiding the unrelated dirty lattice / mirror / persistent-record / gravity-design side work already sitting in the shared checkout
+
+### First concrete action
+- reopen `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- compare the six frozen 4-NN false negatives in `/Users/jonreilly/Projects/Physics/logs/2026-04-03-directional-b-continuous-density-midlayer-holdout.txt` against `local_target_count`, `expected_target_count_4nn`, `mu`, and simple `b` / `edge_b` normalizations before adding a new family or wider denominator search
+
+## 2026-04-03 — Janitor reconciled coordination state to local lattice scaling head
+
+### Current state
+- janitor preflight found no live science child:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` reported `free`
+- the canonical repo was initially synchronized at loop start:
+  - `main` and `origin/main` both pointed to `8ea26f3` (`Merge branch 'claude/distracted-napier'`)
+  - the initial `git rev-list --left-right --count origin/main...main` check returned `0 0`
+- while this janitor pass was in flight, local `main` advanced through three new lattice commits:
+  - `2354c22` (`feat(lattice): freeze weak-field mass-response pocket`)
+  - `885f944` (`feat(lattice): freeze weak-field purity scaling pocket`)
+  - `f9f53c6` (`docs: note weak-field purity scaling pocket`)
+- the required push helper then failed on DNS, so the real git state at loop end is:
+  - local `main` points to `f9f53c6`
+  - `origin/main` still points to `8ea26f3`
+  - `git rev-list --left-right --count origin/main...main` now returns `0 3`
+- the tracked coordination state had drifted behind the real synced head again:
+  - `AUTOPILOT_WORKLOG.md`, `logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` still described the older local-ahead directional-`b` state around `51e8af8` / `9ef65c1`
+- the shared checkout still carried unrelated modified logs and untracked docs / scripts in the mirror, persistent-record, lattice, and gravity-design lanes, so this loop stayed on coordination repair only
+
+### What changed
+- acquired the `physics-janitor` lock and reran the protocol sync checks against the canonical repo
+- verified the landed head chain after the stale directional-`b` state:
+  - `e625618` (`fix(lattice): freeze negative symmetry unification decision`)
+  - `e9b50af` (`feat(lattice): freeze weak-field unification pocket`)
+  - `69118c1` (`feat(lattice): F∝M^0.38 in ultra-weak regime — R²=0.992`)
+  - `03b4164` (`feat(lattice): purity exponent -0.25, R²=0.96, N_half=87M — 10/10!`)
+  - `8ea26f3` (`Merge branch 'claude/distracted-napier'`)
+- inspected the tracked lattice artifacts that coordination state had missed, including the three new local commits that landed during this pass:
+  - `/Users/jonreilly/Projects/Physics/docs/UNIFIED_PROGRAM_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/LATTICE_FAMILY_VALIDATION_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/LATTICE_FIELD_STRENGTH_UNIFICATION_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/LATTICE_COMPLEMENTARITY_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/LATTICE_WEAK_FIELD_MASS_SCALING_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/LATTICE_WEAK_FIELD_PURITY_SCALING_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/scripts/lattice_field_strength_unification.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/lattice_complementarity_sweep.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/lattice_weak_field_mass_scaling.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/lattice_weak_field_purity_scaling.py`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-03-lattice-field-strength-unification.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-03-lattice-complementarity-sweep.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-03-lattice-weak-field-mass-scaling.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-03-lattice-weak-field-purity-scaling.txt`
+- ran `python3 scripts/base_confidence_check.py`
+  - benchmark regression audit, mode-only candidate isolation, sparse bridge addback visibility, live mechanism-split driver, and feature registry alignment all passed
+- ran the required push helper against the canonical repo:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+  - helper result: `status=failed`, `failure_kind=dns_failure`, `ahead=3`, `behind=0`, `attempts_used=5`, `error=fatal: unable to access 'https://github.com/jonathonreilly/toy-physics.git/': Could not resolve host: github.com`
+- refreshed:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-janitor/memory.md`
+- confirmed `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` is not writable from this sandbox, so that file remains stale until a writable context refreshes it
+- did not create a janitor commit because the repo was already locally ahead and the required push helper failed on DNS
+
+### Strongest confirmed conclusion
+The integrity issue was stale coordination metadata again, now against a newer local ordered-lattice scaling head rather than the older local-ahead directional-`b` state. The landed lattice result strengthens the ordered-lattice branch, but it still does not change the worker-alignment rule.
+- the standard-strength ordered-lattice bridge still holds on the synced head:
+  - barrier card `MI = 0.537498`, `d_TV = 0.713772`, `1 - pur_cl = 0.0572`, gravity `-5.740317`, Born `|I3|/P = 2.98e-16`, `k=0 = 0`
+  - no-barrier companion magnitude law remains `|delta| ~= 23.5071 * b^(-1.052)` with `R^2 = 0.9850`
+- the weak-field reopening also survives on the same ordered family:
+  - canonical retained row `max_dy = 5`, `slit = wide_center`, `strength = 0.0005`
+  - `MI = 0.616978`, `1 - pur_cl = 0.464598`, gravity at `b = 6` is `+0.162694`, Born `4.24e-16`, all tested `b` values stay positive, and the barrier-tail fit is `alpha = -1.00`, `R^2 = 0.93`
+- two new local follow-ups tightened that weak-field read without changing its scope:
+  - mass-response stays positive but sub-linear on the retained pocket: `gravity ~= 2.6960 * strength^0.353`, `R^2 = 0.971`
+  - retained-row purity scaling is bounded but real: `1 - pur_cl ~= 1.0467 * N^(-0.222)`, `R^2 = 0.9683`
+- `python3 scripts/base_confidence_check.py` passed, so there is no current evidence of a fresh regression in the benchmark / selector layer
+- the required push helper failed with `dns_failure`, so the repo remains locally ahead and this janitor pass should stop without inventing further repo history
+- the honest coordinated read is therefore:
+  - exact mirror remains the flagship coexistence architecture
+  - ordered lattice is a stronger retained secondary distance-law / weak-field branch, not the default worker lane
+  - this automation should stay in compression / order-parameter mode and keep dense laddering paused unless the tracked plan explicitly reopens a sparse guardrail sentinel
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-janitor/memory.md`
+
+### Exact next step
+- retry the required push helper before any new science:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+- stay on the compression / order-parameter thread
+- reuse the frozen-frontier compression entrypoint and retained log:
+  - `/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_frontier_compression.py`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-03-26-pocket-wrap-suppressor-frontier-compression-1232-3344-4992-5504.txt`
+- keep dense laddering paused and treat sparse sentinels as guardrails only unless the tracked plan explicitly reopens them
+- do not take the untracked lattice / mirror / persistent-record side work already sitting in the shared checkout as the next autonomous step
+
+## 2026-04-03 — Directional-b midlayer sentinel limits frozen 4-NN bridge
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed:
+  - no detached science child was running
+- the canonical repo matched `origin/main` before new science:
+  - `main` and `origin/main` both point to `51e8af8` (`Merge branch 'claude/distracted-napier'`)
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+- the shared checkout still carried unrelated modified logs plus untracked docs / scripts in the lattice, mirror, persistent-record, and gravity-design lanes, so this loop stayed strictly on the fixed-directional-measure directional-`b` seam
+- the retained directional-`b` next step was to stress-test the frozen continuous target-plane density bridge `mass_nodes / expected_target_count_4nn >= 2.7354` on one additional dense-family sentinel beyond the passing tree control
+
+### What changed
+- added `/Users/jonreilly/Projects/Physics/scripts/directional_b_overlap_continuous_density_midlayer_holdout.py`
+- generated `/Users/jonreilly/Projects/Physics/logs/2026-04-03-directional-b-continuous-density-midlayer-holdout.txt`
+- reused the retained dense-pair + tree thresholds without refit:
+  - counted `mass_nodes / local_target_count >= 2.5`
+  - continuous `mass_nodes / expected_target_count_4nn >= 2.7354`
+- applied them to one adjacent dense sentinel that changes only the gravity-layer `y` sampler:
+  - the middle layer now uses the centered law `y = sign(u) |u|^1.4 * y_range`
+  - sizes, target `b`, support width, and overlap diagnostic stayed fixed
+- updated `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md` so the directional note now records the midlayer-sentinel limit on the frozen 4-NN bridge and narrows the next step accordingly
+- refreshed:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- prepared one bounded science commit carrying the new directional-`b` sentinel result
+
+### Strongest confirmed conclusion
+The frozen continuous 4-NN target-plane density law is still the sharper smooth explanation on the original dense pair plus tree control, but it is not yet a fully portable frozen replacement for the counted bridge across dense sampler changes.
+- on the new one-notch center-biased midlayer sentinel:
+  - counted source-load rule transfers at `9/3/1/27`, accuracy `0.9000`
+  - frozen 4-NN rule transfers at `4/0/6/30`, accuracy `0.8500`
+  - the 4-NN rule stays precise (`0` false positives) but becomes conservative (`6` false negatives)
+- the same-side local-density read is still not dead:
+  - on the extended sample including the older dense pair, tree control, and new midlayer sentinel, the 4-NN rule still beats the counted rule overall:
+    - counted `32/12/2/57`, accuracy `0.8641`
+    - frozen 4-NN `25/2/9/67`, accuracy `0.8932`
+- so the portable mechanism language tightens again:
+  - occupancy shortage / source load remains the cross-dense-family primitive
+  - the 4-NN density law is best read as the current smooth refinement on the original dense pair + tree control
+  - center-biased target-plane densification is now the concrete miss mode that any promoted continuous correction must explain
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/scripts/directional_b_overlap_continuous_density_midlayer_holdout.py`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-03-directional-b-continuous-density-midlayer-holdout.txt`
+- `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- keep the corrected fixed directional propagator and retained `b -> b - h_mass` hierarchy fixed
+- stay on the same directional-`b` overlap-translation thread
+- use the six new frozen 4-NN false negatives as the bounded diagnostic seam
+- test whether one occupancy-aware continuous correction can absorb the center-biased densification misses while preserving the tree safety margin, without reopening a wider denominator search
+
+### First concrete action
+- reopen `/Users/jonreilly/Projects/Physics/logs/2026-04-03-directional-b-continuous-density-midlayer-holdout.txt`
+- compare each frozen 4-NN miss directly against `local_target_count`, `knn4_expected_target_count`, and `mu`
+- try one monotone occupancy-aware normalization on the existing dense-pair + tree + midlayer rows before touching any new families
+
+## 2026-04-03 — Coordination reconciled to synced lattice validation head
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed:
+  - no detached science child was running
+- the canonical repo already matched `origin/main` before this repair:
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - synced HEAD was `8346d37` (`feat: freeze ordered lattice distance and family validation`)
+- the tracked coordination state had drifted behind the real synced head again:
+  - `AUTOPILOT_WORKLOG.md`, `logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` still described the earlier mirror / higher-symmetry repair story around `e1f8fc2`, `8cc4af2`, and local repair commit `3150651`
+- the shared checkout still carried unrelated modified logs and untracked docs / scripts in the symmetry-generated, persistent-record, gravity-design, and mirror lanes, so this loop stayed on coordination repair / README correction only
+
+### What changed
+- reconciled canonical git state before any new science:
+  - confirmed `main` and `origin/main` were already synchronized at `8346d37`
+  - verified the latest landed synced head chain:
+    - `3caaa4d` (`feat(lattice): 10/10 ON ONE GRAPH FAMILY — lattice-mirror unification`)
+    - `8055d1a` (`Merge branch 'claude/distracted-napier'`)
+    - `8346d37` (`feat: freeze ordered lattice distance and family validation`)
+- inspected the landed lattice artifacts missing from coordination state:
+  - `/Users/jonreilly/Projects/Physics/docs/UNIFIED_PROGRAM_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/LATTICE_DISTANCE_LAW_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/LATTICE_FAMILY_VALIDATION_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/scripts/lattice_no_barrier_distance.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/lattice_family_validation.py`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-03-lattice-no-barrier-distance.txt`
+  - `/Users/jonreilly/Projects/Physics/logs/2026-04-03-lattice-family-validation.txt`
+- updated `/Users/jonreilly/Projects/Physics/README.md` so the top-level architecture snapshot now reflects the synced ordered-lattice result and links the current unified-program notes
+- refreshed:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- prepared one bounded coordination repair commit carrying the synced lattice-state refresh
+- did not start fresh science because protocol-required state reconciliation was itself the bounded highest-signal step, and the newly landed lattice / symmetry frontier remains Claude-owned and non-overlapping with this automation's next preferred directional-`b` lane
+
+### Strongest confirmed conclusion
+The integrity problem was stale coordination state again, now against a newer synced ordered-lattice validation head rather than the older mirror repair story. The landed lattice result materially changes the honest project summary without changing this automation's non-overlap rule.
+- `8346d37` freezes a retained ordered-lattice distance-law branch:
+  - on the no-barrier harness, `|delta| ~= 23.5071 * b^(-1.052)` with `R^2 = 0.9850` for `b >= 7`
+  - `k = 0` stays exactly zero on that branch
+- the same ordered-lattice family also keeps a real barrier-harness coexistence card:
+  - `MI = 0.537498`, `d_TV = 0.713772`, `1 - pur_cl = 0.0572`, gravity `-5.740317`, Born `|I3|/P = 2.98e-16`
+- so the honest repo state is now:
+  - distance law remains structurally closed on the flagship connected symmetry family
+  - ordered lattice is now the strongest retained secondary distance-law branch, not a replacement flagship architecture
+  - the correct next autonomous move here is still not a fresh lattice / decoherence architecture search; once coordination is synced, this automation should return to the non-overlapping fixed-directional-measure directional-`b` geometry-normalized density-control seam
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/README.md`
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- retry the required push helper before any new science so the coordination repair can sync or surface a non-DNS blocker
+- once sync is available again, keep the corrected fixed directional propagator and retained `b -> b - h_mass` hierarchy fixed
+- keep the frozen continuous bridge `mass_nodes / expected_target_count_4nn >= 2.7354`
+- run one geometry-normalized dense-family sentinel outside the current dense pair without refitting the threshold
+- keep avoiding the unrelated symmetry-generated / gravity-design / lattice-frontend dirt while Claude owns the active lattice / symmetry frontier
+
+### First concrete action
+- rerun the required push helper against `/Users/jonreilly/Projects/Physics`
+- if sync is available, reopen the retained directional-`b` bridge / control scripts and launch one non-refit geometry-normalized dense-family sentinel compare under the frozen `expected_target_count_4nn = 4 / r4` bridge
+
+## 2026-04-03 — Coordination reconciled to synced mirror frontier head
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed:
+  - no detached science child was running
+- the canonical repo already matched `origin/main` before this repair:
+  - `git rev-list --left-right --count origin/main...main` returned `0 0`
+  - synced HEAD was `e1f8fc2` (`feat(mirror): extend chokepoint pocket to N=100`)
+- the tracked coordination state had drifted badly behind the real synced head:
+  - `AUTOPILOT_WORKLOG.md`, `logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` still described the obsolete local-only repair story around `a69a762` / `1bbdbf6`
+- the shared checkout still carried unrelated untracked dirt in the symmetry-generated, persistent-record, and gravity-design lanes, so this loop stayed on coordination repair / README correction only
+
+### What changed
+- reconciled canonical git state before any new science:
+  - confirmed `main` and `origin/main` were already synchronized at `e1f8fc2`
+  - verified the latest landed synced head chain:
+    - `9b45880` (`Merge branch 'claude/distracted-napier'`)
+    - `ba49027` (`feat: add mirror gravity probe`)
+    - `e1f8fc2` (`feat(mirror): extend chokepoint pocket to N=100`)
+- inspected the landed mirror artifacts missing from coordination state:
+  - `/Users/jonreilly/Projects/Physics/docs/MIRROR_CHOKEPOINT_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/MIRROR_GRAVITY_PROBE_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/scripts/mirror_chokepoint_joint.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/mirror_gravity_fixed_anchor.py`
+  - `/Users/jonreilly/Projects/Physics/scripts/mirror_gravity_distance_sweep.py`
+- updated `/Users/jonreilly/Projects/Physics/README.md` so the repo summary now reflects the synced mirror conclusion
+- refreshed:
+  - `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+  - `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- prepared one bounded coordination repair commit carrying the synced mirror-state refresh
+- did not start fresh science because protocol-required state reconciliation was itself the bounded highest-signal step, and the landed mirror / symmetry frontier remains non-overlapping with this automation's next preferred directional-`b` lane
+
+### Strongest confirmed conclusion
+The integrity problem was stale coordination state again, but now against a newer synced mirror frontier rather than a local-only repair commit. The landed mirror result is materially stronger than the stale coordination files said, while still staying bounded.
+- `e1f8fc2` extends the strict mirror chokepoint coexistence pocket through `N = 100` on the dense boundary scan:
+  - retained rows stay Born-clean at machine precision, gravity-positive, and decohering
+  - `N = 120` loses gravity, so the lane is bounded rather than asymptotic
+- `ba49027` adds the narrow mirror-only gravity probe:
+  - fixed-anchor mass fits remain positive but sublinear / weakly structured
+  - the fixed-mass distance sweep is peak-plus-plateau rather than a clean falling tail
+- so the honest repo state is now:
+  - mirror is a real bounded symmetry-protected coexistence challenger
+  - mirror is not yet the best gravity-side lane
+  - the correct next autonomous step for this automation is still to return to the fixed-directional-measure directional-`b` geometry-normalized density-control program rather than widen the Claude-owned mirror / decoherence frontier
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/README.md`
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- keep the corrected fixed directional propagator and retained `b -> b - h_mass` hierarchy fixed
+- keep the frozen continuous bridge `mass_nodes / expected_target_count_4nn >= 2.7354`
+- run one geometry-normalized dense-family sentinel outside the current dense pair without refitting the threshold
+- keep avoiding the unrelated symmetry-generated / gravity-design dirt while Claude owns the mirror / decoherence frontier
+
+### First concrete action
+- reopen the retained directional-`b` bridge / control scripts and notes
+- launch one non-refit geometry-normalized dense-family sentinel compare under the frozen `expected_target_count_4nn = 4 / r4` bridge while avoiding the unrelated dirty emergence / gravity-design files
+
+## 2026-04-02 — Coordination reconciled to asymmetry-persistence Born head
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed:
+  - no detached science child was running
+- the canonical repo was already ahead of `origin/main` at loop start:
+  - `main` HEAD was `5e12477` (`feat: add asymmetry persistence born calibration`)
+  - `origin/main` was `9f42776` (`feat: add dense central-band joint card`)
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics` failed with `failure_kind = dns_failure`, so remote reconciliation was not available before new work
+- the tracked coordination state had drifted behind the real local head:
+  - `AUTOPILOT_WORKLOG.md` and `logs/physics_autopilot_handoff.md` still pointed at the older asymmetry-persistence mass-scaling follow-up state instead of the newer Born-calibration head
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` still advertised the even older coordination commit `1f28bc0`
+- the shared checkout still carried unrelated untracked dirt in the gravity-design / topological-pathcount lane, so this loop stayed on coordination repair only
+
+### What changed
+- inspected the landed local-head commit missing from coordination state:
+  - `5e12477` (`feat: add asymmetry persistence born calibration`)
+- refreshed the tracked work log and runtime handoff to the real local-head science state
+- refreshed `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- did not start fresh science because the repo was already locally ahead and the required push helper failed on DNS
+
+### Strongest confirmed conclusion
+The integrity issue was stale coordination metadata, not missing science. The newest stable local science head is now the asymmetry-persistence Born-calibration note.
+- on the dense generated `N = 100` probe with corrected Sorkin `I3` including `-P(empty)`:
+  - persistence stayed Born-clean at machine precision
+  - persistence + layer normalization stayed Born-clean at machine precision
+  - persistence + layer normalization + collapse also stayed Born-clean at machine precision
+- the strongest retained rows were:
+  - `thr = 0.10`: linear `8.49e-16±1.7e-16`, persistence `8.49e-16±1.7e-16`, persistence+LN `2.78e-16±7.2e-17`, persistence+LN+collapse `2.78e-16±4.1e-17`
+  - `thr = 0.20`: linear `1.12e-15±2.5e-16`, persistence `1.12e-15±2.5e-16`, persistence+LN `2.59e-16±3.9e-17`, persistence+LN+collapse `2.59e-16±4.1e-17`
+- so the honest science state is now:
+  - the generated asymmetry-persistence lane remains Born-clean on this narrow dense `N = 100` calibration
+  - the result is strong enough to keep the lane alive
+  - it is still only a density-limited confirmation, not a review-safe asymptotic claim
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- retry the required push helper before any new science so the local-head commit can sync or surface a non-DNS blocker
+- once sync is no longer blocked, return to the prioritized fixed-propagator directional-`b` lane
+- keep the frozen continuous bridge `mass_nodes / expected_target_count_4nn >= 2.7354`
+- test that same 4-NN density-load law on one additional geometry-normalized dense-family sentinel without refitting the threshold
+
+### First concrete action
+- rerun the required push helper against `/Users/jonreilly/Projects/Physics`
+- if sync is available, run the frozen `expected_target_count_4nn = 4 / r4` bridge on one geometry-normalized dense-family sentinel outside the current dense pair
+
+## 2026-04-02 — Janitor reconciled coordination state to local asymmetry-persistence head
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed:
+  - no detached science child was running
+- the canonical repo was already ahead of `origin/main` at loop start:
+  - `main` HEAD was `fce4698` (`feat: add asymmetry persistence mass scaling follow-up`)
+  - `origin/main` was `93b26b2` (`Merge: stochastic collapse reverses scaling — 6th publishable result`)
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics` failed with `failure_kind = dns_failure`, so remote reconciliation was not available before new work
+- the tracked coordination state was stale:
+  - `AUTOPILOT_WORKLOG.md` and `logs/physics_autopilot_handoff.md` still pointed at the older directional-`b` tree-control head `a85ae37`
+  - `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` was missing
+- the shared checkout still carried unrelated untracked dirt in the gravity-design / topological-pathcount lane, so this loop stayed on coordination repair only
+
+### What changed
+- inspected the landed local-head commits missing from coordination state:
+  - `59363c0` (`feat: add geometry lane head-to-head note`)
+  - `fe913a5` (`feat: add asymmetry persistence joint card`)
+  - `fce4698` (`feat: add asymmetry persistence mass scaling follow-up`)
+- refreshed the tracked work log and runtime handoff to the real local-head science state
+- created `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+- did not start fresh science because the repo was already locally ahead and the protocol push failed on DNS
+
+### Strongest confirmed conclusion
+The integrity issue was stale coordination metadata, not missing science. The newest stable local science head is now the bounded asymmetry-persistence lane.
+- `fe913a5` established a dense same-graph joint card through `N = 100`:
+  - improved `pur_cl`
+  - improved `pur_min`
+  - corrected Born stayed machine-clean
+  - positive gravity coexisted on the retained dense `N = 100` rows
+- `fce4698` then showed generated hard geometry repairs the fixed-anchor gravity mass window at dense `N = 100`, but does not yet produce an exact mass law:
+  - baseline linear fit is nearly flat:
+    - `delta ~= 0.8508 * M^0.101`, `R^2 = 0.592`
+  - cleanest retained row is the `thr = 0.10` layernorm lane:
+    - `delta ~= 0.4032 * M^0.420`, `R^2 = 0.970`
+- so the honest science state is now:
+  - real bounded dense coexistence through `N = 100`
+  - improved gravity mass response relative to the baseline generated lane
+  - still no review-safe exact `F ∝ M`
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- retry the required push helper before any new science so the local-head commits can sync or surface a non-DNS blocker
+- once sync is no longer blocked, return to the prioritized fixed-propagator directional-`b` lane
+- keep the frozen continuous bridge `mass_nodes / expected_target_count_4nn >= 2.7354`
+- test that same 4-NN density-load law on one additional geometry-normalized dense-family sentinel without refitting the threshold
+
+### First concrete action
+- rerun the frozen `expected_target_count_4nn = 4 / r4` bridge on one wider random-DAG control outside the current dense pair
+- compare any misses directly against `mu = edge_b / h_mass` and the retained tree-control safety margins
+
+## 2026-04-02 — Directional-measure b continuous-density tree control
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed:
+  - no detached science child was running
+- the canonical repo matched `origin/main` at loop start:
+  - `main` HEAD was `1abfb2c` (`Merge synthesis with 24-seed combined scaling law`)
+- the tracked coordination state had drifted behind the real repo:
+  - `AUTOPILOT_WORKLOG.md`, `logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` still advertised the older local directional-`b` head `85142e7` instead of the synced repo state
+- the shared checkout also carried unrelated untracked dirt in the gravity-design / topological-pathcount lane, so this loop stayed on clean directional-`b` files only
+- the open seam from the previous stable entry was:
+  - freeze the continuous bridge `mass_nodes / expected_target_count_4nn >= 2.7354`
+  - test whether that same 4-NN density-load law survives one additional non-overlapping control without refitting the threshold
+
+### What changed
+- added `scripts/directional_b_overlap_continuous_density_tree_control.py`
+- wrote:
+  - `logs/2026-04-02-directional-b-continuous-density-tree-control.txt`
+- promoted the frozen tree-control result in:
+  - `README.md`
+  - `docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- refreshed the tracked work log to the real synced repo state and advanced the active directional-`b` seam
+
+### Strongest confirmed conclusion
+The retained 4-NN directional-`b` density bridge survives the branching-tree control without refit.
+- frozen continuous law:
+  - `expected_target_count_4nn = 4 / r4`
+  - `mass_nodes / expected_target_count_4nn >= 2.7354`
+- on the non-overlapping tree control (`mass_nodes = 2`):
+  - `knn4_density_load = 0.5938`, `0.2656`, `0.1484` for `N = 8`, `10`, `12`
+  - `mu = 3`, `5`, `11`, so all tree rows stay safely on the non-overlap side
+- on the extended sample (dense families plus tree control):
+  - frozen 4-NN bridge:
+    - `tp/fp/fn/tn = 21/2/3/37`
+    - accuracy `0.9206`
+  - counted source-load law:
+    - `tp/fp/fn/tn = 23/9/1/30`
+    - accuracy `0.8413`
+- physical read:
+  - tree-like controls stay safe because target-plane support densifies as depth grows
+  - the retained overlap law is therefore behaving like a real local target-plane density control, not just a dense-family occupancy fit
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/scripts/directional_b_overlap_continuous_density_tree_control.py`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-02-directional-b-continuous-density-tree-control.txt`
+- `/Users/jonreilly/Projects/Physics/README.md`
+- `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- keep the corrected directional propagator and retained `b -> b - h_mass` hierarchy fixed
+- keep the frozen continuous bridge `mass_nodes / expected_target_count_4nn >= 2.7354`
+- test that same frozen 4-NN density-load law on one additional independent dense-family sentinel without refitting the threshold
+
+### First concrete action
+- run the frozen `expected_target_count_4nn = 4 / r4` bridge on one denser or wider random-DAG family outside the current dense pair
+- compare any residual false positives or misses directly against `mu = edge_b / h_mass` and the tree-control safety margins
+
+## 2026-04-02 — Directional-measure b continuous-density bridge card
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed:
+  - no detached science child was running
+- the canonical repo was already ahead of `origin/main` at loop start:
+  - `main` HEAD was `2997a01` (`feat: add asymmetry joint card and tighten synthesis`)
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics` failed again with `failure_kind = dns_failure`, so remote reconciliation was not available before new science
+- the shared checkout still carried unrelated live dirt in the topological-pathcount / gravity-design lane, so this loop stayed on clean directional-`b` files only
+- the open seam from the previous stable entry was:
+  - replace counted target-band supply with a continuous local density estimate from same-side spacing on the same combined dense-family sample
+  - test whether one continuous load-over-density variable preserves the retained supply-load bridge, especially on the baseline `m5` residual
+
+### What changed
+- added `scripts/directional_b_overlap_continuous_density_bridge_card.py`
+- wrote:
+  - `logs/2026-04-02-directional-b-continuous-density-bridge-card.txt`
+- promoted the stronger continuous-density translation in:
+  - `README.md`
+  - `docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- refreshed the tracked work log, runtime handoff, and automation memory to the current directional-`b` seam
+
+### Strongest confirmed conclusion
+The retained directional-`b` supply law now has a bounded continuous translation from same-side spacing, not just a counted occupancy version.
+- best continuous bridge:
+  - estimate target-plane support from the fourth-nearest same-side node radius:
+    - `expected_target_count_4nn = 4 / r4`
+  - the best bounded load-over-density law is:
+    - `mass_nodes / expected_target_count_4nn >= 2.7354`
+  - combined dense-family performance:
+    - `tp/fp/fn/tn = 21/2/3/34`
+    - accuracy `0.9167`
+- comparison to the previous counted law:
+  - `mass_nodes / local_target_count >= 2.5` reached `0.8333` combined accuracy
+  - the 4-NN bridge lifts both baseline dense families from `0.7000` to `0.9000`
+- physical read:
+  - the counted target-band law is now best read as a coarse discretization of a smoother local target-plane density law
+  - the baseline `m5` residual was not a failure of the supply picture, but a sign that discrete target counts were too coarse to represent continuous same-side packing
+
+So the promoted gravity statement is now sharper again: dense families cross into `mu <= 0` when widened source demand outruns a continuous local target-plane density scale, not merely when the counted target band looks sparse.
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/scripts/directional_b_overlap_continuous_density_bridge_card.py`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-02-directional-b-continuous-density-bridge-card.txt`
+- `/Users/jonreilly/Projects/Physics/README.md`
+- `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- keep the corrected directional propagator and retained `b -> b - h_mass` hierarchy fixed
+- freeze the continuous bridge `mass_nodes / expected_target_count_4nn >= 2.7354`
+- test whether that same 4-NN density-load law survives one additional non-overlapping control or asymptotic bridge without refitting the threshold
+
+### First concrete action
+- run the frozen `expected_target_count_4nn = 4 / r4` bridge on one tree-like control or one additional dense-family sentinel
+- compare the residuals directly against `mu = edge_b / h_mass` to see whether the remaining misses are geometry effects or density-estimation effects
+
+## 2026-04-02 — Directional-measure b supply-load bridge card
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed:
+  - no detached science child was running
+- the canonical repo matched `origin/main` at `c09aba5` at loop start
+- the shared repo moved during the loop before this step was committed:
+  - local `main` picked up `517e8c8` (`feat: add topological path-count asymmetry probe`)
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics` then failed with `failure_kind = dns_failure`, so the repo stayed locally ahead
+- the shared checkout still carried unrelated live dirt in the nonlinear / gravity-design lane, so this loop stayed on clean directional-`b` files only
+- the open seam from the previous stable entry was:
+  - decompose the retained occupancy bridge `target_fill = local_target_count / mass_nodes` into raw target-band supply, source-window size, and same-side density factors on the same combined dense-family sample
+
+### What changed
+- added `scripts/directional_b_overlap_supply_load_bridge_card.py`
+- wrote:
+  - `logs/2026-04-02-directional-b-overlap-supply-load-bridge-card.txt`
+- promoted the sharpened physical translation in:
+  - `README.md`
+  - `docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- refreshed the tracked work log, runtime handoff, and automation memory to the current directional-`b` seam
+
+### Strongest confirmed conclusion
+The retained occupancy bridge now has a cleaner physical translation: overlap is governed by local source load, not by raw target-band sparsity alone.
+- portable bridge law:
+  - `mass_nodes / local_target_count >= 2.5`
+  - equivalently `target_fill <= 0.4`
+  - combined dense-family accuracy stays `0.8333` with `tp/fp/fn/tn = 23/9/1/27`
+- raw components are weaker or less transferable:
+  - `local_target_count <= 1` reaches `0.8000` combined accuracy but drops to `0.5500` on the baseline family
+  - `target_share_same_side <= 0.1` behaves the same way
+  - `mass_nodes >= 5` is too crude (`0.5667` combined accuracy)
+- key family read:
+  - the baseline `m5` corner is the decisive holdout against a raw-count story
+  - even two target-band nodes can still be overloaded once a five-node source window has to share them
+
+So the promoted gravity statement is now sharper: dense families cross into `mu <= 0` when local target-plane support fails to scale with widened source demand.
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/scripts/directional_b_overlap_supply_load_bridge_card.py`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-02-directional-b-overlap-supply-load-bridge-card.txt`
+- `/Users/jonreilly/Projects/Physics/README.md`
+- `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- keep the corrected directional propagator and retained `b -> b - h_mass` hierarchy fixed
+- replace the counted target-band supply with a continuous local density estimate from same-side spacing
+- test whether one continuous load-over-density variable preserves the `mass_nodes / local_target_count >= 2.5` bridge, especially on the baseline `m5` residual
+
+### First concrete action
+- estimate expected target-band supply from same-side local spacing on the same combined dense-family rows
+- compare `mass_nodes / expected_target_count` against both measured `source_load` and overlap / `mu`
+
+## 2026-04-02 — Directional-measure b occupancy bridge card and state refresh
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed:
+  - no detached science child was running
+- the tracked coordination state was stale again:
+  - `AUTOPILOT_WORKLOG.md`, `logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` still advertised the older `6c332fc` janitor snapshot instead of the actual shared repo state
+- final reconciled repo state at handoff time:
+  - `main` matched `origin/main` at `10cef42` (`Merge: layer norm is Born-clean, pur_min=0.80 at N=40 (vs 0.95 linear)`)
+  - the shared checkout still had live dirty files from another worker in the nonlinear / gravity-design lane, so this loop stayed on clean directional-`b` files only
+- within the retained directional-`b` lane, the exact open seam from the previous stable entry was:
+  - compress the occupancy-first overlap result into one coarser asymptotic bridge variable across the original dense-family card and the second dense-family holdout
+
+### What changed
+- added `scripts/directional_b_overlap_occupancy_bridge_card.py`
+- wrote:
+  - `logs/2026-04-02-directional-b-overlap-occupancy-bridge-card.txt`
+- combined the original dense-family rows with the second dense-family holdout and tested one coarse occupancy bridge variable:
+  - `target_fill = local_target_count / mass_nodes`
+- promoted the combined bridge read in:
+  - `README.md`
+  - `docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- refreshed the tracked work log, runtime handoff, and automation memory to the current shared repo state
+
+### Strongest confirmed conclusion
+The occupancy-first overlap story now compresses into one coarse asymptotic bridge variable on the bounded dense-family evidence.
+- combined dense-family bridge rule:
+  - `target_fill <= 0.4000`
+  - `tp/fp/fn/tn = 23/9/1/27`
+  - accuracy `0.8333`
+- regime read:
+  - `target_fill <= 1/3` carries `19/26` overlap rows with median `mu = -0.457`
+  - `1/3 < target_fill <= 2/3` is the mixed shoulder (`5/17` overlap, median `mu = +0.282`)
+  - `target_fill > 2/3` has no overlap rows in the current combined sample (`0/17`, median `mu = +2.111`)
+
+So sparse target-band occupancy is now the promoted coarse bridge variable; spacing clauses still sharpen bounded family fits, but they are secondary refinements rather than the retained asymptotic statement.
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/scripts/directional_b_overlap_occupancy_bridge_card.py`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-02-directional-b-overlap-occupancy-bridge-card.txt`
+- `/Users/jonreilly/Projects/Physics/README.md`
+- `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md`
+
+### Exact next step
+- keep the corrected propagator and current directional-`b` hierarchy fixed
+- translate `target_fill` into a more physical layer-density / mass-geometry law on the same bounded dense-family generator
+- do not widen back out to fresh denominator families unless that translation fails
+
+### First concrete action
+- decompose `target_fill` on the same combined dense-family rows into:
+  - raw target-band node count
+  - source-window size
+  - same-side layer density near the target plane
+- test which factor actually carries the `target_fill <= 0.4` bridge with less family dependence
+
+## 2026-04-02 — Janitor reconciled coordination state to q=0.03 mechanism audits
+
+### Current state
+- the shared repo was clean and synced at loop start:
+  - `main` matched `origin/main` at `6c332fc` (`feat: q=0.03 audits + worker reaudit scripts`)
+- no live science child held the cooperative lock:
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_lock.py status` reported `free`
+- the tracked coordination state was stale:
+  - `AUTOPILOT_WORKLOG.md`, `logs/physics_autopilot_handoff.md`, and `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` still pointed at the older `9690d3a` directional-`b` transfer-holdout step
+- the actual landed science state had moved on:
+  - `q=0.03` same-graph dense pruning still flips gravity at `N=80` on `3/14` seeds while remaining gentler than `q=0.10`
+  - coarse reach/support/weighted-flow metrics stay flat, so the surviving mechanism seam is routing / cancellation inside mass-coupled paths rather than raw connectivity collapse
+  - the `4D` local-continuation pilot fails every tested depth weight, so together with the `3D` `d=0.50` demotion that architecture is now closed
+
+### What changed
+- acquired the `physics-janitor` lock and reran the protocol sync checks against the canonical repo
+- ran `python3 scripts/base_confidence_check.py`
+  - all cheap checks passed
+- repaired the tracked work-log / handoff narrative so it reflects the real `q=0.03` mechanism-audit state instead of the stale directional-`b` transfer seam
+- refreshed `/Users/jonreilly/.codex/automations/physics-janitor/memory.md`
+- confirmed that `/Users/jonreilly/.codex/automations/physics-autopilot/memory.md` is still not writable from this sandbox, so that file remains stale until a context with access refreshes it
+
+### Strongest confirmed conclusion
+The integrity issue was stale coordination metadata, not broken code. The actual active thread is the dense-prune mechanism compression lane: `q=0.03` preserves the gentler same-graph prune but still leaves `N=80` gravity flips (`3/14` seeds), the guarded prune helps only partially, and the coarse reach/flow diagnostics remain flat. So the honest next science step is still a bounded routing/cancellation order-parameter compression pass, while local-continuation backreaction is closed rather than reopened.
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/logs/physics_autopilot_handoff.md`
+- `/Users/jonreilly/.codex/automations/physics-janitor/memory.md`
+
+### Exact next step
+- stay on the compression / order-parameter thread
+- use the existing `q=0.03` replay and re-audit scripts to compress the flip subpopulation into one bounded routing/cancellation discriminator
+- keep dense laddering paused and treat sparse sentinels as guardrails only unless the tracked plan explicitly reopens them
+
+## 2026-04-02 — Directional-measure b overlap-onset transfer holdout restored
+
+### Current state
+- the active gravity seam was still the next one named in the previous entry:
+  - test whether the overlap-onset observables transfer onto one second dense-family control
+- shared repo sync was not fully reconcilable at loop start:
+  - `/Users/jonreilly/Projects/Physics` was `ahead 9, behind 28` relative to `origin/main`
+  - `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics` failed with a DNS error (`Could not resolve host: github.com`)
+- the finished holdout result already existed only as local runtime artifacts:
+  - `logs/2026-04-01-directional-b-overlap-onset-transfer-holdout.txt`
+  - `scripts/__pycache__/directional_b_overlap_onset_transfer_holdout.cpython-313.pyc`
+- the source card itself was missing from the repo, so the result was not yet reproducible as a stable repo-facing step
+
+### What changed
+- restored `scripts/directional_b_overlap_onset_transfer_holdout.py` from the local compiled card constants so the second dense-family control is reproducible again
+- reran the restored card and wrote:
+  - `logs/2026-04-02-directional-b-overlap-onset-transfer-holdout.txt`
+- promoted the retained gravity wording in:
+  - `README.md`
+  - `docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- refreshed the tracked work log to move the next seam from “does it transfer?” to “how do we compress the transferred occupancy signal?”
+
+### Strongest confirmed conclusion
+The local-density overlap story does transfer to one second dense-family control, but not as one universal frozen threshold pair.
+- the exact baseline pair
+  - `same_side_mean_gap >= 0.7504 and selected_span_step >= 1.1301`
+  - drops to `tp/fp/fn/tn = 9/1/6/24`
+  - accuracy `0.8250`
+- the feature-level mechanism does survive cleanly:
+  - overlap rows on the holdout still have much weaker target-band fill (`0.196` vs `0.885`)
+  - and coarser same-side spacing (`1.035` vs `0.869`)
+- the best holdout refit collapses mostly to occupancy:
+  - `target_fill <= 0.3333`
+  - `tp/fp/fn/tn = 14/2/1/23`
+  - accuracy `0.9250`
+
+So the promoted gravity statement is now sharper:
+- sparse target-band occupancy is the leading transferable overlap-onset signal
+- coarse local spacing remains real, but as a family-dependent refinement rather than the retained universal clause
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/scripts/directional_b_overlap_onset_transfer_holdout.py`
+- `/Users/jonreilly/Projects/Physics/logs/2026-04-02-directional-b-overlap-onset-transfer-holdout.txt`
+- `/Users/jonreilly/Projects/Physics/README.md`
+- `/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+
+### Exact next step
+- keep the corrected propagator and corrected directional-`b` hierarchy fixed
+- compress the occupancy-first overlap result into one coarser asymptotic bridge variable across:
+  - the original dense-family card
+  - this second dense-family holdout
+- only if that bridge fails should the lane widen back out to another family-specific diagnostic
+
+### First concrete action
+- build one bounded bridge card that regresses overlap / `mu` against a coarse occupancy variable
+  - start with `target_fill` or `1 / target_fill`
+  - then test whether that one-variable floor survives both dense-family datasets better than the old gap/span clause
 
 ## 2026-04-01 — Directional-measure b review fix and overlap-onset local-density compare
 

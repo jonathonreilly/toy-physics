@@ -1,0 +1,46 @@
+====================================================================================================
+3D DENSE WINDOW EXTENSION
+  Same family: ordered 3D dense lattice, spent-delay action, no action-law changes.
+  Question: can the hierarchy-clean attractive window be extended to larger tested z?
+====================================================================================================
+
+Canonical family: L=12, W=6, h=1.0, span=3, edges/node=49
+Canonical slit threshold: 0.5
+Canonical detector window half-widths: [0.5, 1.0, 1.5, 2.0]
+
+Canonical slit geometry, varying near-mass detector window:
+  z  centroid     P_near      bias         Born         MI    decoh     dTV   read
+  --------------------------------------------------------------------------------------------
+   2  +0.003101  +0.001469  +0.107097    5.20e-16   0.134   0.140   0.368  ATTRACTIVE
+   3  +0.001941  +0.000374  +0.176381    6.17e-16   0.135   0.140   0.370  ATTRACTIVE
+   4  +0.001157  +0.000626  +0.113676    4.48e-16   0.135   0.139   0.371  ATTRACTIVE
+   5  +0.000693  +0.000715  +0.048601    5.17e-16   0.136   0.138   0.372  ATTRACTIVE
+   6  +0.000572  +0.000536  +0.000112    6.02e-16   0.137   0.138   0.373  ATTRACTIVE
+   7  +0.000000  +0.000000  +nan    7.39e-16   0.141   0.135   0.379  MIXED
+
+Canonical geometry, detector-window sensitivity at z=6:
+  half-width  centroid     P_near      bias        read
+  ------------------------------------------------------------------
+        0.5  +0.000572  +0.000173  +0.000112  ATTRACTIVE
+        1.0  +0.000572  +0.000536  +0.000112  ATTRACTIVE
+        1.5  +0.000572  +0.000536  +0.000112  ATTRACTIVE
+        2.0  +0.000572  +0.000830  +0.000112  ATTRACTIVE
+
+Slit-threshold spot check at z=6, near-window=1.0:
+  thresh  centroid     P_near      bias        read
+  ----------------------------------------------------------
+     0.5  +0.000572  +0.000536  +0.000112  ATTRACTIVE
+     1.5  -0.000082  +0.000531  -0.026969  MIXED
+     2.5  +0.000097  +0.000453  -0.015331  MIXED
+
+Canonical Born / info read on the dense 3D extension point:
+  Born = 6.02e-16
+  MI = 0.1371 bits
+  decoherence = 13.8%
+  d_TV = 0.3732
+
+Decision: BOUNDED EXTENSION.
+  The retained 3D dense spent-delay window extends cleanly to z=6 on the canonical family.
+  z=7 is signal-free / mixed, and wider slit thresholds do not extend the window further.
+
+====================================================================================================

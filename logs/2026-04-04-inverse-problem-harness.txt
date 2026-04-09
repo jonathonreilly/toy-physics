@@ -1,0 +1,22 @@
+=================================================================
+INVERSE PROBLEM HARNESS
+  Which graph properties does Newton+Born require?
+  Lattice: 13 layers, hw=4, h=1.0, max_d=3
+=================================================================
+
+                                    Test     gravity    dir        Born
+------------------------------------------------------------------------
+              Baseline (regular lattice)   +0.001083      T  6.0e-16  (0s)
+                Edge deletion (keep 90%)   +0.001430      T  7.9e-16  (0s)
+                Edge deletion (keep 70%)   +0.000689      T  6.6e-16  (0s)
+                Edge deletion (keep 50%)   +0.000184      T  5.7e-16  (0s)
+          Asymmetric (z>0 edges removed)   +0.000320      T  5.5e-16  (0s)
+                  Position jitter (0.3h)   -0.000354      A  7.0e-16  (0s)
+                  Position jitter (0.5h)   +0.000459      T  8.6e-16  (0s)
+               Sparse (NN only, 9 edges)   +0.000586      T  5.0e-17  (0s)
+                      No field (control)   +0.000000      0  6.0e-16  (0s)
+
+Total time: 1s
+
+REQUIRED = property whose removal kills gravity (AWAY or zero)
+NOT REQUIRED = gravity survives the perturbation

@@ -1,0 +1,27 @@
+========================================================================
+GATE B GROWN-GEOMETRY DISTANCE-LAW HARNESS
+  exact grid vs grown geometry on the retained h=0.5 family
+========================================================================
+h=0.5, W=10, L=12, seeds=4, z=3..7
+growth rule: template + drift + restore + NN connectivity from grid labels
+
+exact grid          20/20 TOWARD  tail=b^(-0.90)  R^2=0.855  peak_z=4
+    z=3: mean delta=+0.00014993
+    z=4: mean delta=+0.00016778
+    z=5: mean delta=+0.00016504
+    z=6: mean delta=+0.00013049
+    z=7: mean delta=+0.00010203
+
+grown drift=0.2     20/20 TOWARD  tail=b^(-0.83)  R^2=0.884  peak_z=4
+    z=3: mean delta=+0.00013509
+    z=4: mean delta=+0.00014335
+    z=5: mean delta=+0.00013818
+    z=6: mean delta=+0.00011226
+    z=7: mean delta=+0.00009024
+
+SAFE INTERPRETATION
+  This harness freezes the distance-law comparison only.
+  Far-field sign/F~M closure still lives in gate_b_farfield_harness.py.
+  Promote only the bounded exact-vs-grown comparison measured here.
+
+Total time: 146s

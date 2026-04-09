@@ -1,0 +1,41 @@
+================================================================================================================
+GATE B GROWN PROPAGATING FIELD V3
+  retained grown row, frontier-echo self-consistent field
+  comparison: chi=0 matched-null baseline vs chi-activated feedback field
+  structural null: signal trap slab vs matched frontier-shell control slab
+================================================================================================================
+row: drift=0.2, restore=0.7, seeds=[0, 1, 2, 3]
+source z = 3.0, field strength = 5.0e-05, field eps = 0.1
+trap eta = 0.35, trap layers = [11, 12, 13], trap radius = 2.0
+control band = 1.5, chi sweep = [0.0, 0.05, 0.1, 0.2, 0.35, 0.5]
+frontier-echo constants: target_max=0.08, wave_speed2=0.24, damp=0.12, self=0.64, relax=0.65, real_gain=1.0, imag_gain=0.8, escape_gain=0.35, phase_gain=0.9
+
+REDUCTION CHECK
+  chi=0 reproduces the retained trap/control baseline exactly by construction
+  all matched shifts vanish at chi=0
+
+           seed    sigEsc(0.50)   ctrlEsc(0.50)      mEsc(0.50)    mShell(0.50)    mPhase(0.50)     resid(0.50)        F~M(0.0)        F~M(0.5)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+              0           0.722           0.659           0.063         -0.0045          0.0025       1.438e-02             n/a           -0.19
+              1           1.401           1.528          -0.128         -0.0074         -0.0004       1.434e-02             n/a           -0.01
+              2           0.706           0.655           0.051          0.0012         -0.0008       1.465e-02             n/a           -0.00
+              3           0.608           0.534           0.074          0.0142          0.0027       1.700e-02             n/a            0.12
+
+AGGREGATE
+  chi=0.00 sigEsc=1.000 ctrlEsc=1.000 mEsc=+0.000 mZ=+0.000000e+00 mShell=+0.0000 mPhase=+0.0000 mSpan=+0.0000 resid=0.000e+00
+  chi=0.05 sigEsc=0.979 ctrlEsc=0.975 mEsc=+0.004 mZ=+2.755678e-04 mShell=+0.0002 mPhase=+0.0001 mSpan=+0.0450 resid=1.508e-03
+  chi=0.10 sigEsc=0.960 ctrlEsc=0.952 mEsc=+0.008 mZ=+5.174343e-04 mShell=+0.0004 mPhase=+0.0002 mSpan=+0.0879 resid=3.008e-03
+  chi=0.20 sigEsc=0.926 ctrlEsc=0.913 mEsc=+0.013 mZ=+7.326951e-04 mShell=+0.0006 mPhase=+0.0003 mSpan=+0.1755 resid=6.024e-03
+  chi=0.35 sigEsc=0.887 ctrlEsc=0.870 mEsc=+0.017 mZ=+6.740195e-04 mShell=+0.0008 mPhase=+0.0005 mSpan=+0.3211 resid=1.056e-02
+  chi=0.50 sigEsc=0.859 ctrlEsc=0.844 mEsc=+0.015 mZ=+2.914999e-04 mShell=+0.0009 mPhase=+0.0010 mSpan=+0.5129 resid=1.509e-02
+
+WEAK-FIELD SANITY
+  F~M exponent at chi=0: n/a
+  F~M exponent at chi=0.5: -0.021
+
+SAFE READ
+  chi=0 is an exact matched-null reduction to the retained trap/control baseline
+  the promoted observables are the matched shell and phase shifts, not raw escape alone
+  if the matched-null shifts stay small while residuals stay small, this remains a bounded no-go
+
+Total time: 847.4s

@@ -1,0 +1,23 @@
+======================================================================
+F~M TRANSFER: GROWN vs FIXED LATTICE
+NL=30, W=8, drift=0.2, restore=0.7
+6 seeds, 4 mass points
+======================================================================
+
+FIXED: F~M = 0.9901
+
+GROWN (per seed):
+  seed 0: F~M = 0.9988
+  seed 1: F~M = 0.9702
+  seed 2: F~M = 0.9812
+  seed 3: F~M = 0.9900
+  seed 4: F~M = 0.9968
+  seed 5: F~M = 0.9851
+
+GROWN: F~M = 0.9870 +/- 0.0097
+FIXED: F~M = 0.9901
+DIFF:  0.0031 (0.3 sigma)
+
+SAFE READ
+  mass-law transfer agrees within uncertainty
+  no broader claim about geometry-generic transfer

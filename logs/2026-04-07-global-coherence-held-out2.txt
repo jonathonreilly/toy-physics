@@ -1,0 +1,108 @@
+====================================================================================================
+GLOBAL COHERENCE — LARGER HELD-OUT BATCH (12 NEW GENERATORS)
+Frozen rule: free_coh >= 7.9597e-04
+Predictions hard-coded BEFORE running. Rule applied WITHOUT refit.
+====================================================================================================
+
+[ 1/12] N1_kreg_k30             FAIL  avg_deg=28.8  free_coh=4.1021e-07  delta=-0.0098
+
+[ 2/12] N2_kreg_k50             FAIL  avg_deg=47.9  free_coh=2.2569e-03  delta=+0.0307
+
+[ 3/12] N3_skip2                PASS  avg_deg=240.3  free_coh=3.6046e-02  delta=+0.0226
+
+[ 4/12] N4_smallworld           PASS  avg_deg=146.7  free_coh=5.1771e-02  delta=+0.0304
+
+[ 5/12] N5_bipartite            FAIL  avg_deg=1.0  free_coh=0.0000e+00  delta=+0.0000
+
+[ 6/12] N6_band_random          PASS  avg_deg=11.5  free_coh=4.2649e-03  delta=+0.0430
+
+[ 7/12] N7_twisted              FAIL  avg_deg=72.4  free_coh=0.0000e+00  delta=+0.0000
+
+[ 8/12] N8_block_diag           FAIL  avg_deg=14.4  free_coh=1.5918e-02  delta=-0.0002
+
+[ 9/12] N9_1d_like              PASS  avg_deg=10.8  free_coh=9.8570e-03  delta=+0.0038
+
+[10/12] N10_permutation         FAIL  avg_deg=11.5  free_coh=2.1365e-26  delta=-0.0115
+
+[11/12] N11_aniso_rand          PASS  avg_deg=11.5  free_coh=2.2058e-02  delta=+0.0037
+
+[12/12] N12_kreg_k4             FAIL  avg_deg=3.8  free_coh=0.0000e+00  delta=+0.0000
+
+====================================================================================================
+SUMMARY
+====================================================================================================
+family                  avg_deg     free_coh       p_det     delta   pass
+----------------------------------------------------------------------------------------------------
+N1_kreg_k30               28.75   4.1021e-07   4.784e-37   -0.0098   FAIL
+N2_kreg_k50               47.92   2.2569e-03   1.918e-29   +0.0307   FAIL
+N3_skip2                 240.27   3.6046e-02   2.766e+14   +0.0226   PASS
+N4_smallworld            146.69   5.1771e-02   8.388e+09   +0.0304   PASS
+N5_bipartite               0.96   0.0000e+00   0.000e+00   +0.0000   FAIL
+N6_band_random            11.48   4.2649e-03   1.836e-03   +0.0430   PASS
+N7_twisted                72.40   0.0000e+00   0.000e+00   +0.0000   FAIL
+N8_block_diag             14.43   1.5918e-02   4.958e+08   -0.0002   FAIL
+N9_1d_like                10.85   9.8570e-03   3.995e+04   +0.0038   PASS
+N10_permutation           11.50   2.1365e-26   4.947e-56   -0.0115   FAIL
+N11_aniso_rand            11.50   2.2058e-02   9.866e+04   +0.0037   PASS
+N12_kreg_k4                3.83   0.0000e+00   0.000e+00   +0.0000   FAIL
+
+actual: PASS 5 / FAIL 7
+
+L1. PRE-COMMITTED free_coh sign vs actual high/low (threshold 7.96e-04)
+family                  predicted   actual   agree
+N1_kreg_k30                  True    False    MISS
+N2_kreg_k50                  True     True      OK
+N3_skip2                     True     True      OK
+N4_smallworld                True     True      OK
+N5_bipartite                False    False      OK
+N6_band_random               True     True      OK
+N7_twisted                  False    False      OK
+N8_block_diag               False     True    MISS
+N9_1d_like                  False     True    MISS
+N10_permutation             False    False      OK
+N11_aniso_rand              False     True    MISS
+N12_kreg_k4                 False    False      OK
+
+L1 free_coh sign accuracy: 8/12 = 66.7%
+
+L2. FROZEN RULE (free_coh >= 7.96e-04) applied to measured free_coh
+family                   rule   actual   agree
+N1_kreg_k30             False    False      OK
+N2_kreg_k50              True    False    MISS
+N3_skip2                 True     True      OK
+N4_smallworld            True     True      OK
+N5_bipartite            False    False      OK
+N6_band_random           True     True      OK
+N7_twisted              False    False      OK
+N8_block_diag            True    False    MISS
+N9_1d_like               True     True      OK
+N10_permutation         False    False      OK
+N11_aniso_rand           True     True      OK
+N12_kreg_k4             False    False      OK
+
+L2 frozen rule accuracy: 10/12 = 83.3%
+
+L3. PRE-COMMITTED package pass/fail predictions
+family                  predicted   actual   agree
+N1_kreg_k30                  True    False    MISS
+N2_kreg_k50                  True    False    MISS
+N3_skip2                     True     True      OK
+N4_smallworld                True     True      OK
+N5_bipartite                False    False      OK
+N6_band_random               True     True      OK
+N7_twisted                  False    False      OK
+N8_block_diag               False    False      OK
+N9_1d_like                  False     True    MISS
+N10_permutation             False    False      OK
+N11_aniso_rand              False     True    MISS
+N12_kreg_k4                 False    False      OK
+
+L3 pre-committed pass/fail accuracy: 8/12 = 66.7%
+
+COMPARISON to old node-level rule (avg_deg >= 10.42 AND reach_frac >= 0.86)
+  old 2-prop on this batch: 6/12 = 50.0%
+  new free_coh on this batch: 10/12 = 83.3%
+
+VERDICT
+  CONFIRMED — frozen rule generalizes to a fresh batch at 83%
+    and beats the old node-level rule by +33%

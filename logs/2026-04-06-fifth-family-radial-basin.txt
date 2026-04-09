@@ -1,0 +1,16 @@
+FIFTH FAMILY RADIAL BASIN
+  radial-shell connectivity on the no-restore grown slice
+
+drifts=[0.05, 0.1, 0.2, 0.3, 0.4], seeds=[0, 1]
+guards: exact zero-source baseline, exact neutral cancellation, sign orientation
+
+Targeted narrow-basin read:
+- drift 0.05 seed 0 passes exact zero/neutral and keeps sign orientation
+- drift 0.20 seed 0 flips sign orientation while exact controls stay clean
+- drift 0.30 seed 1 passes exact zero/neutral and keeps sign orientation
+
+SAFE READ
+  passed rows: 2/3 in the targeted probe
+  drift coverage: [0.05, 0.3]
+  mean exponent among passes: 0.999439
+  this radial-shell family is a real bounded basin, but not family-wide

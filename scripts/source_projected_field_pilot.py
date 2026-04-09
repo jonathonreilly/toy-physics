@@ -43,6 +43,7 @@ from scripts.source_resolved_green_pilot import (  # type: ignore  # noqa: E402
     K_BAND,
     MASS_COUNTS,
     MASS_COUNT_FIXED,
+    MASS_LAYER_OFFSET,
     N_SEEDS,
     FIXED_MASS_B,
     N_LAYERS,
@@ -88,6 +89,12 @@ def _fit_power_law(xs_in: list[float], ys_in: list[float]) -> tuple[float, float
     ss_res = sum((y - (slope * x + intercept)) ** 2 for x, y in zip(xs, ys))
     r2 = 1.0 - (ss_res / ss_tot if ss_tot > 1e-30 else 0.0)
     return slope, math.exp(intercept), r2
+
+
+def _fit_full_positive_power_law(xs_in: list[float], ys_in: list[float]) -> tuple[float, float, float] | None:
+    if len(xs_in) < 3 or any(y <= 0 for y in ys_in):
+        return None
+    return _fit_power_law(xs_in, ys_in)
 
 
 def _topo_layers(positions: list[tuple[float, float, float]]) -> dict[int, list[int]]:
@@ -188,19 +195,16 @@ def _measure_b_sweep(label: str, field_fn) -> tuple[float | None, float | None]:
             rng_seed=seed * 17 + 3,
             gap=GAP,
         )
-        by_layer = _topo_layers(positions)
-        layers = sorted(by_layer)
-        if len(layers) < 7:
+        if len(layer_indices) < 7:
             continue
 
-        src = by_layer[layers[0]]
-        det_list = list(by_layer[layers[-1]])
+        src = layer_indices[0]
+        det_list = list(layer_indices[-1])
         if not det_list:
             continue
 
         center_y = statistics.fmean(positions[i][1] for i in range(len(positions)))
-        mid_layer = layers[len(layers) // 2]
-        layer_nodes = by_layer[mid_layer]
+        layer_nodes = layer_indices[MASS_LAYER_OFFSET]
 
         for b in TARGET_BS:
             mass_nodes = _select_fixed_mass_nodes(
@@ -212,8 +216,9 @@ def _measure_b_sweep(label: str, field_fn) -> tuple[float | None, float | None]:
             if delta is not None:
                 by_b[b].append(delta)
 
-    positive_bs = []
-    positive_shifts = []
+    fit_bs = []
+    fit_shifts = []
+    saw_nonpositive = False
     for b in TARGET_BS:
         vals = by_b[b]
         if not vals:
@@ -223,13 +228,17 @@ def _measure_b_sweep(label: str, field_fn) -> tuple[float | None, float | None]:
         se = _se(vals)
         t = shift / se if se and math.isfinite(se) and se > 1e-12 else 0.0
         print(f"{b:3d}  {shift:+8.4f}  {se:6.4f}  {t:+6.2f}  {shift / b:+8.3f}  {len(vals):7d}")
-        if shift > 0:
-            positive_bs.append(b)
-            positive_shifts.append(shift)
+        fit_bs.append(b)
+        fit_shifts.append(shift)
+        if shift <= 0:
+            saw_nonpositive = True
 
-    fit = _fit_power_law(positive_bs, positive_shifts)
+    fit = _fit_full_positive_power_law(fit_bs, fit_shifts)
     if fit is None:
-        print("  Fit: insufficient positive points for a stable power-law fit")
+        if saw_nonpositive:
+            print("  Fit: not reported because the full sweep includes non-positive mean shifts")
+        else:
+            print("  Fit: insufficient positive points for a stable power-law fit")
         return None, None
     alpha, c, r2 = fit
     print(f"  Fit: shift ~= {c:.4f} * b^{alpha:.3f}  (R^2={r2:.3f})")
@@ -251,19 +260,16 @@ def _measure_mass_sweep(label: str, field_fn) -> tuple[float | None, float | Non
             rng_seed=seed * 17 + 3,
             gap=GAP,
         )
-        by_layer = _topo_layers(positions)
-        layers = sorted(by_layer)
-        if len(layers) < 7:
+        if len(layer_indices) < 7:
             continue
 
-        src = by_layer[layers[0]]
-        det_list = list(by_layer[layers[-1]])
+        src = layer_indices[0]
+        det_list = list(layer_indices[-1])
         if not det_list:
             continue
 
         center_y = statistics.fmean(positions[i][1] for i in range(len(positions)))
-        mid_layer = layers[len(layers) // 2]
-        layer_nodes = by_layer[mid_layer]
+        layer_nodes = layer_indices[MASS_LAYER_OFFSET]
         mass_nodes = _select_fixed_mass_nodes(
             layer_nodes, positions, center_y + FIXED_MASS_B, max(MASS_COUNTS)
         )
@@ -278,8 +284,9 @@ def _measure_mass_sweep(label: str, field_fn) -> tuple[float | None, float | Non
             if delta is not None:
                 by_m[m].append(delta)
 
-    positive_ms = []
-    positive_shifts = []
+    fit_ms = []
+    fit_shifts = []
+    saw_nonpositive = False
     for m in MASS_COUNTS:
         vals = by_m[m]
         if not vals:
@@ -289,13 +296,17 @@ def _measure_mass_sweep(label: str, field_fn) -> tuple[float | None, float | Non
         se = _se(vals)
         t = shift / se if se and math.isfinite(se) and se > 1e-12 else 0.0
         print(f"{m:4d}  {shift:+8.4f}  {se:6.4f}  {t:+6.2f}  {shift / m:+8.3f}  {len(vals):7d}")
-        if shift > 0:
-            positive_ms.append(m)
-            positive_shifts.append(shift)
+        fit_ms.append(m)
+        fit_shifts.append(shift)
+        if shift <= 0:
+            saw_nonpositive = True
 
-    fit = _fit_power_law(positive_ms, positive_shifts)
+    fit = _fit_full_positive_power_law(fit_ms, fit_shifts)
     if fit is None:
-        print("  Fit: insufficient positive points for a stable power-law fit")
+        if saw_nonpositive:
+            print("  Fit: not reported because the full sweep includes non-positive mean shifts")
+        else:
+            print("  Fit: insufficient positive points for a stable power-law fit")
         return None, None
     alpha, c, r2 = fit
     print(f"  Fit: shift ~= {c:.4f} * M^{alpha:.3f}  (R^2={r2:.3f})")
@@ -330,8 +341,9 @@ def main() -> None:
     src = layer_indices[0]
     det_list = list(layer_indices[-1])
     center_y = statistics.fmean(p[1] for p in positions)
-    mid_layer = layer_indices[len(layer_indices) // 2]
-    mass_nodes = _select_fixed_mass_nodes(mid_layer, positions, center_y + FIXED_MASS_B, MASS_COUNT_FIXED)
+    mass_nodes = _select_fixed_mass_nodes(
+        layer_indices[MASS_LAYER_OFFSET], positions, center_y + FIXED_MASS_B, MASS_COUNT_FIXED
+    )
     baseline = field_laplacian(positions, adj, mass_nodes)
     green = field_source_resolved_green(positions, adj, mass_nodes)
     projected = field_source_projected(positions, adj, mass_nodes)

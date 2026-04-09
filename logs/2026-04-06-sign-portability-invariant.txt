@@ -1,0 +1,22 @@
+# Sign Portability Invariant Comparison
+
+Core comparison across the first five retained sign-law basins.
+
+| family | slice | exact controls | sign orientation | weak-field response | basin shape |
+| --- | --- | --- | --- | --- | --- |
+| Grown transfer basin | nearby grown rows around the retained moderate-drift basin | exact zero-source and neutral same-point cancellation | retained on nearby rows | F~M = 1.000 | narrow and selective |
+| Alternative connectivity family | no-restore grown slice with parity-rotated sector transitions | exact zero-source and neutral same-point cancellation | retained on passing rows | F~M = 0.999994 | bounded but broadest of the retained sign-law families |
+| Second grown-family sign | no-restore geometry-sector slice | exact zero-source and neutral same-point cancellation | retained on all tested rows | mean exponent = 1.000072 | independent basin, still narrow in architecture space |
+| Third grown-family sign | cross-quadrant load-balanced no-restore slice | exact zero-source and neutral same-point cancellation | retained on passing rows | mean exponent = 0.999842 | bounded drift basin |
+| Fourth family quadrant | quadrant-reflection connectivity on the grown slice | exact zero-source and neutral same-point cancellation | retained on passing rows; mixed at drift=0.2 | alpha near 1.0 | narrow and seed-selective |
+
+Out-of-band confirmation from the later radial-shell basin:
+| family | slice | exact controls | sign orientation | weak-field response | basin shape |
+| --- | --- | --- | --- | --- | --- |
+| Fifth family radial | radial-shell no-restore grown slice | exact zero-source and neutral same-point cancellation | retained on sampled rows; flips at the interior boundary | mean exponent = 0.999439 | narrow holdout confirmation |
+
+Order parameter candidate:
+The portable quantity is the signed-control fixed point: exact zero-source null, exact neutral cancellation, and plus/minus antisymmetry with weak-field response pinned near unit slope.
+
+Final verdict:
+retained narrow comparison positive: signed-source transfer is portable across the retained structured families, while basin width and selectivity vary by connectivity rule

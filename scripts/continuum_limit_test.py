@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Test whether the model has a well-defined continuum limit.
+"""Exploratory legacy continuum-limit test.
+
+This is an experiment driver, not a canonical retained continuum harness. Use
+`docs/START_HERE.md` and the NN lattice notes before promoting any result from
+this file.
 
 The 8.2% Lorentz breaking comes from the discrete grid's finite
 connectivity. If we measure physics at longer distances (more grid

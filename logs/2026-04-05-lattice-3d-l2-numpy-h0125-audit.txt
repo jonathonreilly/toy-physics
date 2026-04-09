@@ -1,0 +1,86 @@
+====================================================================================
+3D 1/L^2 + h^2 NUMPY H=0.125 AUDIT
+  fixed family: phys_l=4, phys_w=1.5, max_d_phys=3
+  source strength=5e-05
+  goal: freeze the narrowest safe continuum claim
+====================================================================================
+
+
+======================================================================
+3D DENSE + 1/L^2 KERNEL (h=1.0)
+  45 nodes, 5 layers, 324 edges
+  Generated in 0.0s
+======================================================================
+
+  Free propagation: 0.0s
+  1. Born |I3|/P = nan  [FAIL] (0.0s)
+  2. d_TV = 0.2605
+  3. k=0 = 0.000000
+  5. Gravity z=3: +0.000000 (AWAY)
+  4. F~M: too few TOWARD points (0)
+  6. Decoherence = 38.3%
+  7. MI = 0.1248 bits
+  10. Distance law (s=5e-05):
+      Distance time: 0.0s
+
+  TOTAL TIME: 0s
+
+
+======================================================================
+3D DENSE + 1/L^2 KERNEL (h=0.5)
+  441 nodes, 9 layers, 19208 edges
+  Generated in 0.0s
+======================================================================
+
+  Free propagation: 0.0s
+  1. Born |I3|/P = 1.39e-15  [PASS] (0.0s)
+  2. d_TV = 0.6586
+  3. k=0 = 0.000000
+  5. Gravity z=3: +0.000000 (AWAY)
+  4. F~M: too few TOWARD points (0)
+  6. Decoherence = 49.9%
+  7. MI = 0.4985 bits
+  10. Distance law (s=5e-05):
+      Distance time: 0.0s
+
+  TOTAL TIME: 0s
+
+
+======================================================================
+3D DENSE + 1/L^2 KERNEL (h=0.25)
+  2873 nodes, 17 layers, 456976 edges
+  Generated in 0.2s
+======================================================================
+
+  Free propagation: 0.0s
+  1. Born |I3|/P = 2.50e-15  [PASS] (0.5s)
+  2. d_TV = 0.6994
+  3. k=0 = 0.000000
+  5. Gravity z=3: +0.000000 (AWAY)
+  4. F~M: too few TOWARD points (0)
+  6. Decoherence = 49.9%
+  7. MI = 0.4699 bits
+  10. Distance law (s=5e-05):
+      Distance time: 0.0s
+
+  TOTAL TIME: 1s
+
+
+======================================================================
+3D DENSE + 1/L^2 KERNEL (h=0.125)
+  20625 nodes, 33 layers, 12500000 edges
+  Generated in 5.1s
+======================================================================
+
+  Free propagation: 2.2s
+  1. Born |I3|/P = 4.23e-15  [PASS] (10.3s)
+  2. d_TV = 0.6725
+  3. k=0 = 0.000000
+  5. Gravity z=3: +0.000000 (AWAY)
+  4. F~M: too few TOWARD points (0)
+  6. Decoherence = 49.0%
+  7. MI = 0.3787 bits
+  10. Distance law (s=5e-05):
+      Distance time: 0.0s
+
+  TOTAL TIME: 38s

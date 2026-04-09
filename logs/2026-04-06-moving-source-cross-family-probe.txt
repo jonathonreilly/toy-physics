@@ -1,0 +1,55 @@
+==================================================================================================
+MOVING SOURCE CROSS-FAMILY PROBE
+  two portable grown families, exact zero baseline, matched static control
+  main observable: detector centroid y shift relative to the static field
+==================================================================================================
+source anchor target: (y, z)=(0.0, 3.0)
+motion law: y_src(layer) = y0 + v * (layer - source_layer) * h, h=0.5
+seeds=6, source_layer=8, K=5.0
+
+FAMILY: portable family 1  (drift=0.2, restore=0.7)
+ZERO BASELINE
+  zero-source static max |delta_y| = 0.000e+00
+  zero-source moving max |delta_y| = 0.000e+00
+  -> exact zero baseline survives the moving-source schedule
+
+STATIC CONTROL
+  v=+0.00  delta_y vs free = +2.921491e-07 ± 6.816e-07  delta_y vs static = +0.000000e+00 ± 0.000e+00  phase lag = +0.000000e+00 ± 0.000e+00
+
+MOVING SOURCE
+      v                delta_y vs free              delta_y vs static           phase lag(rad)  seeds
+----------------------------------------------------------------------------------------------------------
+   0.50  +1.158721e-06 ± 8.048e-07  +8.665715e-07 ± 1.380e-07  +1.401315e-05 ± 2.744e-07      6
+   1.00  +1.764349e-06 ± 8.125e-07  +1.472200e-06 ± 1.571e-07  +4.334258e-05 ± 1.396e-07      6
+  -0.50  -6.311548e-07 ± 5.243e-07  -9.233039e-07 ± 1.986e-07  +1.309075e-05 ± 5.927e-07      6
+  -1.00  -1.349256e-06 ± 4.309e-07  -1.641405e-06 ± 3.484e-07  +4.852935e-05 ± 1.170e-06      6
+
+FAMILY: portable family 2  (drift=0.05, restore=0.3)
+ZERO BASELINE
+  zero-source static max |delta_y| = 0.000e+00
+  zero-source moving max |delta_y| = 0.000e+00
+  -> exact zero baseline survives the moving-source schedule
+
+STATIC CONTROL
+  v=+0.00  delta_y vs free = +4.801723e-07 ± 5.300e-07  delta_y vs static = +0.000000e+00 ± 0.000e+00  phase lag = +0.000000e+00 ± 0.000e+00
+
+MOVING SOURCE
+      v                delta_y vs free              delta_y vs static           phase lag(rad)  seeds
+----------------------------------------------------------------------------------------------------------
+   0.50  +1.442996e-06 ± 5.839e-07  +9.628235e-07 ± 7.508e-08  +1.401789e-05 ± 2.577e-07      6
+   1.00  +2.086924e-06 ± 5.674e-07  +1.606752e-06 ± 7.161e-08  +4.355026e-05 ± 2.640e-07      6
+  -0.50  -5.500748e-07 ± 4.559e-07  -1.030247e-06 ± 1.313e-07  +1.334915e-05 ± 4.680e-07      6
+  -1.00  -1.342499e-06 ± 4.138e-07  -1.822671e-06 ± 2.373e-07  +4.919546e-05 ± 9.070e-07      6
+
+CROSS-FAMILY READ
+  zero-source static max |delta_y| across both families = 0.000e+00
+  zero-source moving max |delta_y| across both families = 0.000e+00
+SAFE READ
+  - The exact zero baseline stays exact on both portable grown families.
+  - The matched v=0 static control stays flat on both families.
+  - The moving-source centroid bias keeps its sign flip with v on both families,
+    so the directional observable is not one-family-local in this replay.
+  - The phase lag remains small and secondary; it does not displace the
+    direction observable as the main survivor.
+  - Strongest signed row across the two-family replay: portable family 2, v=-1.00, delta_y vs static=-1.822671e-06 ± 2.373e-07.
+  - This is still a bounded moving-source proxy on grown geometries, not a wave theory.

@@ -1,0 +1,16 @@
+FIFTH FAMILY RADIAL SWEEP
+  radial-shell connectivity on the no-restore grown slice
+
+targets=[(0.05, 0), (0.2, 0), (0.3, 1)]
+guards: exact zero-source baseline, exact neutral cancellation, sign orientation
+
+drift seed zero plus minus neutral double exp ok
+0.05    0 +0.000e+00 +2.259e-05 -2.262e-05 +0.000e+00 +4.515e-05   0.999 YES
+0.20    0 +0.000e+00 -2.028e-06 +2.028e-06 +0.000e+00 -4.057e-06   1.000  no
+0.30    1 +0.000e+00 +1.131e-05 -1.132e-05 +0.000e+00 +2.262e-05   1.000 YES
+
+SAFE READ
+  passed rows: 2/3
+  drift coverage: [0.05, 0.3]
+  mean exponent among passes: 0.999439
+  this radial-shell family is a real fifth-family basin on the sampled rows

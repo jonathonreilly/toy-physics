@@ -1,0 +1,25 @@
+=================================================================
+BROKEN-GRAPH F∝M=p ROBUSTNESS HARNESS
+  Lattice: 13 layers, hw=4, h=1.0, max_d=2
+  Seeds: 4, strengths: [0.0001, 0.0005, 0.005]
+=================================================================
+
+  Perfect lattice:
+    p=0.5: too few TOWARD points across seeds
+    p=1.0: F∝M = 0.99 ± 0.00 (predicted 1.0, error 0.01)
+    p=2.0: too few TOWARD points across seeds
+
+  Broken (70% edges, 0.3h jitter):
+    p=0.5: F∝M = 0.40 ± 0.06 (predicted 0.5, error 0.10)
+    p=1.0: F∝M = 0.97 ± 0.04 (predicted 1.0, error 0.03)
+    p=2.0: F∝M = 2.00 ± 0.00 (predicted 2.0, error 0.00)
+
+  Very broken (50% edges, 0.5h jitter):
+    p=0.5: F∝M = 0.57 ± 0.00 (predicted 0.5, error 0.07)
+    p=1.0: F∝M = 0.99 ± 0.00 (predicted 1.0, error 0.01)
+    p=2.0: F∝M = 2.00 ± 0.00 (predicted 2.0, error 0.00)
+
+Total time: 2s
+
+ROBUSTNESS = F∝M matches predicted p even on broken graphs
+Newton (p=1) is robust if its error is smallest under damage

@@ -1,0 +1,26 @@
+====================================================================================================
+EXACT 2D MIRROR GRAVITY LAW CLEANUP
+  fixed-geometry distance windows and fixed-anchor mass windows only
+  npl_half=12, yr=10.0, r=2.5, seeds=8
+====================================================================================================
+
+N = 60
+  retained graphs: 8 / 8
+  best mass window: anchor_b=5.0, delta ~= 0.8676 * M^0.462, R^2=0.923
+  best distance tail: mass_count=5, peak_thr=3.0, delta ~= 0.8858 * b^0.307, R^2=0.872
+
+N = 80
+  retained graphs: 7 / 8
+  best mass window: anchor_b=5.0, delta ~= 1.0791 * M^0.458, R^2=0.820
+  best distance tail: FAIL
+
+N = 100
+  retained graphs: 5 / 8
+  best mass window: anchor_b=6.0, delta ~= 1.0027 * M^0.204, R^2=0.568
+  best distance tail: mass_count=4, peak_thr=1.0, delta ~= 0.9961 * b^0.140, R^2=0.321
+
+Interpretation:
+  - exact 2D mirror remains Born-clean on the retained validator
+  - gravity-side windows were swept more widely here
+  - promote a law only if the fit is visibly clean; otherwise keep the
+    result as a bounded gravity pocket

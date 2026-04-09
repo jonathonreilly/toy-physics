@@ -1,0 +1,33 @@
+========================================================================================
+GATE B GROWN TRAPPING TRANSPORT PROBE
+  retained grown row only: drift=0.2, restore=0.7
+  observable: escape(eta) = P_det(eta) / P_det(0)
+  guardrail: eta=0 must exactly reproduce the retained grown baseline
+========================================================================================
+h=0.5, W=8, NL=25, seeds=[0, 1, 2, 3], trap_layers=[11, 12, 13], trap_radius=2.0
+eta sweep: [0.0, 0.05, 0.1, 0.2, 0.35, 0.5]
+
+eta=0 exact reduction: escape=1.000 by construction on the retained grown baseline
+
+seed       P_det(0)       0.05       0.10       0.20       0.35       0.50
+----------------------------------------------------------------------------------------
+   0   9.065230e+09      0.804      0.650      0.441      0.282      0.218
+   1   9.613149e+09      0.796      0.638      0.424      0.266      0.208
+   2   1.113454e+10      0.798      0.640      0.425      0.262      0.196
+   3   9.272325e+09      0.797      0.639      0.423      0.262      0.200
+
+AGGREGATE
+  mean P_det(0) = 9.771312e+09
+  eta=0.05  escape= 0.799  trapped= 0.201
+  eta=0.10  escape= 0.642  trapped= 0.358
+  eta=0.20  escape= 0.428  trapped= 0.572
+  eta=0.35  escape= 0.268  trapped= 0.732
+  eta=0.50  escape= 0.205  trapped= 0.795
+
+SAFE READ
+  eta=0 reproduces the retained grown baseline exactly by construction.
+  The only promoted observable is the detector escape ratio.
+  If escape falls with eta, the grown row carries a real trap-sensitive
+  transport channel; if not, this trap window is too weak for closure.
+
+Total time: 55s

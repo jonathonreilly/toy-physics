@@ -1,0 +1,32 @@
+============================================================================================
+EVOLVING NETWORK PROTOTYPE V6
+  Gate B: h=0.5 structured-growth sweep
+  Rule: template previous layer + drift + restore + NN connectivity
+  Control: none; this is the frozen growth-rule sweep itself
+============================================================================================
+
+Setup: h=0.5, layers=13, half-width=5, seeds=(5, 18, 31, 44), mass strengths=(0.75, 1.0, 1.25), mass y targets=(1.0, 1.5, 2.0)
+Coverage: 4 drift/restore rows x 4 seeds x 3 y targets x 3 strengths = 144 tests
+Action: S = L(1-f), 3D forward propagation, valley-linear phase valley
+
+ drift restore   toward  mean_delta    F~M  samples
+------------------------------------------------------
+   0.3     0.5       33/36    +0.000021   1.00       36
+   0.2     0.7       24/36    +0.000010   1.00       36
+   0.1     0.9       24/36    +0.000008   0.99       36
+   0.0     1.0       24/36    +0.000007   0.99       36
+
+PAIRWISE READ
+  best row: drift=0.3, restore=0.5, toward=33/36, mean_delta=+0.000021, F~M=1.00
+
+SAFE INTERPRETATION
+  - This replay is the small h=0.5 structured-growth sweep.
+  - The row count is the review-safe evidence unit; do not generalize
+    beyond the tested drift/restore matrix.
+  - If all rows are TOWARD, that means the growth rule is robust on the
+    tested h=0.5 window, not that Gate B is closed everywhere.
+  - If any row is mixed, keep the note conservative and treat the sweep
+    as a bounded Gate B advance rather than a theorem.
+
+Total time: 0.7s
+============================================================================================

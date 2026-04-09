@@ -1,0 +1,19 @@
+==============================================================================================================
+STRUCTURED CHOKEPOINT BRIDGE: Born + Gravity + Decoherence
+  structured placement, layer-1 chokepoint, canonical readout, NPL_HALF=25, seeds=16
+  grid_spacing=1.0, connect_radius=3.5, layer_jitter=0.25
+==============================================================================================================
+
+     N      d_TV    pur_cl    S_norm     gravity        Born         k=0   ok   time
+  ------------------------------------------------------------------------------------------------
+    25    0.9626   0.9473±0.00    1.0125  +6.4026±0.185    6.77e-16   +0.00e+00   16     1s
+    40    0.8850   0.9491±0.01    0.9948  +7.4729±0.305    8.14e-16   +0.00e+00   16     2s
+    60    0.6440   0.8030±0.04    1.0043  +5.7613±0.892    6.56e-16   +0.00e+00   16     3s
+
+VALIDATION CRITERIA:
+  Born: |I3|/P < 1e-10 = machine precision (PASS)
+  k=0: must be 0 (phase-mediated gravity)
+  pur_cl < 0.95 at retained N: decoherence ceiling broken
+  gravity > 0 with grav_t > 2: significant attraction
+
+DECISION: retained structured bridge pocket, narrow canonical readout only

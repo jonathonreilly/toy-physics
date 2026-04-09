@@ -1,0 +1,30 @@
+============================================================================================
+SOURCE-RESOLVED GREEN ROBUSTNESS SWEEP
+  exact 3D lattice local robustness around the retained Green pocket
+============================================================================================
+lattice: h=0.5, W=3, L=20
+source strengths: (0.001, 0.002, 0.004, 0.008)
+target max |f|: 0.02
+
+KERNEL NEIGHBORHOOD
+kernel mu=0.04, eps=0.25, nodes=4  zero=+0.00e+00  TOWARD=4/4  F~M= 1.002  |green/inst|=0.973  max|f|=2.000e-02  PASS
+kernel mu=0.04, eps=0.50, nodes=4  zero=+0.00e+00  TOWARD=4/4  F~M= 1.001  |green/inst|=1.250  max|f|=2.000e-02  PASS
+kernel mu=0.04, eps=0.75, nodes=4  zero=+0.00e+00  TOWARD=4/4  F~M= 1.001  |green/inst|=1.421  max|f|=2.000e-02  PASS
+kernel mu=0.08, eps=0.25, nodes=4  zero=+0.00e+00  TOWARD=4/4  F~M= 1.002  |green/inst|=0.959  max|f|=2.000e-02  PASS
+kernel mu=0.08, eps=0.50, nodes=4  zero=+0.00e+00  TOWARD=4/4  F~M= 1.000  |green/inst|=1.235  max|f|=2.000e-02  PASS
+kernel mu=0.08, eps=0.75, nodes=4  zero=+0.00e+00  TOWARD=4/4  F~M= 0.999  |green/inst|=1.409  max|f|=2.000e-02  PASS
+kernel mu=0.12, eps=0.25, nodes=4  zero=+0.00e+00  TOWARD=4/4  F~M= 1.002  |green/inst|=0.934  max|f|=2.000e-02  PASS
+kernel mu=0.12, eps=0.50, nodes=4  zero=+0.00e+00  TOWARD=4/4  F~M= 0.999  |green/inst|=1.204  max|f|=2.000e-02  PASS
+kernel mu=0.12, eps=0.75, nodes=4  zero=+0.00e+00  TOWARD=4/4  F~M= 0.998  |green/inst|=1.375  max|f|=2.000e-02  PASS
+kernel pass count: 9/9
+
+CLUSTER NEIGHBORHOOD
+cluster:cross5 mu=0.08, eps=0.50, nodes=4  zero=+0.00e+00  TOWARD=4/4  F~M= 1.000  |green/inst|=1.235  max|f|=2.000e-02  PASS
+cluster:line3 mu=0.08, eps=0.50, nodes=3  zero=+0.00e+00  TOWARD=4/4  F~M= 1.002  |green/inst|=1.213  max|f|=2.000e-02  PASS
+cluster:skew4 mu=0.08, eps=0.50, nodes=3  zero=+0.00e+00  TOWARD=4/4  F~M= 0.999  |green/inst|=1.134  max|f|=2.000e-02  PASS
+cluster pass count: 3/3
+
+SAFE READ
+  real local robustness region
+  the pocket is only interesting as moonshot material if a local neighborhood
+  survives the hard gates, not just the exact baseline

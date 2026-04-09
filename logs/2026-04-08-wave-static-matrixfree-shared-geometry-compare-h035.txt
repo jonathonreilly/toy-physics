@@ -1,0 +1,23 @@
+============================================================================================================
+WAVE STATIC MATRIX-FREE SHARED-GEOMETRY COMPARE
+============================================================================================================
+Shared H = 0.350
+Frozen source z_phys = 3.000 (realized z = 3.150)
+NL=43  PW=5.950  src_layer=14
+
+Static solve comparison:
+  direct residual      = 1.997e-10
+  matrix-free residual = 2.292e-10
+  matrix-free iters    = 86
+  max |direct - mf|    = 1.203e-08
+  rel field mismatch   = 4.481e-06
+
+Beam-side comparison with the same beam setup:
+  dM         = +0.008380
+  dS direct  = +0.010863
+  dS mf      = +0.010863
+  rel(dS)    = 2.825e-06
+  rel_MS dir = 2.286e-01
+  rel_MS mf  = 2.286e-01
+
+Verdict: matrix-free is close, but not yet proven identical to the direct static comparator.

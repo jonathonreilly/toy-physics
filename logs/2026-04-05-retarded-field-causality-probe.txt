@@ -1,0 +1,22 @@
+========================================================================================
+RETARDED FIELD CAUSALITY PROBE
+  Instantaneous vs retarded field on a compact generated DAG family
+  Observable: detector centroid shift difference
+  Reduction check: c = inf -> instantaneous limit
+========================================================================================
+
+Compact retained family: 4 seeds
+Instantaneous baseline mean shift: -6.968870e-02
+
+       c     inst shift      ret shift          delta
+------------------------------------------------------
+     inf  -6.968870e-02  -6.968870e-02  +0.000000e+00
+       4  -6.968870e-02  -2.280621e-02  +4.688249e-02
+       2  -6.968870e-02  -5.211564e-02  +1.757306e-02
+       1  -6.968870e-02  +0.000000e+00  +6.968870e-02
+     0.5  -6.968870e-02  +0.000000e+00  +6.968870e-02
+
+SAFE READ
+  - c = inf recovers the instantaneous lane with relative error 0.0000%.
+  - finite c changes the detector deflection relative to the instantaneous lane, so field-arrival timing matters on this compact generated family.
+  - this remains a field-scheduling proxy, not a self-consistent dynamical wave theory; the field is still imposed by hand and delayed by node time.
