@@ -1,7 +1,22 @@
-# Lensing Slope Explained — Finite-Path-Length Transition Regime
+# Lensing Slope Explained — FALSIFIED (was a coincidence, not a general match)
 
-**Date:** 2026-04-07
-**Status:** retained STRONG positive — the Lane L+ slope of −1.43 ± 0.01 on b ∈ {3..6} at H=0.25 matches an analytical first-principles calculation of finite-path-length deflection through a 2D 1/r field. The analytical prediction (no fitted parameters) gives slope = −1.4188 with R² = 0.9988; the measurement gives −1.4335 with R² = 0.9984. **|Δ from analytic| = 0.0147**, agreement at 1% level. The "non-1/b" exponent that downgraded Lane L+ is **NOT a model anomaly** — it's the exact correct behavior in the finite-path-length transition regime where L_eff/b ≈ 2 to 3. The model IS doing standard Fermat-principle gravitational deflection. The downgrade was correct that it's not 1/b at this particular L; the mistake was treating "not 1/b" as a problem when it's actually a clean analytical-physics-explained consequence of the finite path length.
+**Date:** 2026-04-07 (FALSIFIED 2026-04-07 by Lane L++ short-path test)
+**Status:** RETRACTED — the previous "STRONG positive" claim that the −1.43 slope at H=0.25 matched the finite-path analytical formula at 1.5% was a single-point coincidence, NOT a general explanation. The Lane L++ short-path test at T_phys=7.5 (where the analytical formula predicts slope ≈ −1.73) measured slope ≈ −1.44 at H=0.25 — essentially identical to the T_phys=15 measurement. **The model gives the same slope (~ −1.43) at H=0.25 fine refinement regardless of T_phys in the tested range**, but the analytical formula predicts different slopes at different T values. The regime-transition prediction is falsified. The actual cause of the −1.43 slope is NOT the finite-path Fermat deflection — it must be a property of the wave-mechanical Kubo response that doesn't reduce to ray-optics in this regime.
+
+> **2026-04-07 retraction:** I previously claimed this lane was a strong
+> positive — the analytical 2D Fermat finite-path formula matched the
+> H=0.25 measurement to 1.5% at T_phys=15. The Lane L++ short-path test
+> ran the same harness at T_phys=7.5 and T_phys=45 to verify the
+> regime-transition prediction. **The prediction is falsified.** At
+> H=0.25 fine refinement, the measured slope is ≈ −1.43 at BOTH
+> T_phys=7.5 and T_phys=15 — but the analytical formula predicts very
+> different slopes (−1.73 and −1.42) at those two T values. The
+> "match" at T_phys=15 was a coincidence: the analytical −1.42 happens
+> to land essentially on top of the actual measured −1.43, but at
+> other T values they don't agree. The model's slope is L-independent
+> in the tested range, which a ray-deflection formula cannot give.
+> See [`LENSING_LONG_PATH_TEST_NOTE.md`](LENSING_LONG_PATH_TEST_NOTE.md)
+> for the falsifying data.
 
 ## Artifact chain
 
