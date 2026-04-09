@@ -1,7 +1,7 @@
 # Lensing Combined Invariant — Phenomenological Fingerprint (Look Deeper)
 
 **Date:** 2026-04-08
-**Status:** retained POSITIVE (phenomenological) — combining all detected signals across the lensing lanes gives one coherent, continuum-stable, reproducible empirical power law at the reference configuration. It is NOT canonical 1/b lensing and NOT derivable from any ray-optics formula tried, but it IS the cleanest single characterization of the program's first-order gravitational response. Flagged **"look deeper at this"** — the mechanism is unknown and every attempt to derive it has been falsified, but the observable itself is sharp and stable.
+**Status:** retained POSITIVE (phenomenological) — combining the retained lensing signals gives one coherent, reproducible empirical power law at the reference configuration. It is NOT canonical 1/b lensing and NOT derivable from any ray-optics formula tried, but it IS the cleanest single characterization of the program's first-order gravitational response. Flagged **"look deeper at this"** — the mechanism is unknown and every attempt to derive it has been falsified, but the observable itself is sharp on the retained setup.
 
 ## The combined invariant
 
@@ -25,7 +25,7 @@ Equivalently: kubo_true(3) = 5.986, with slope −1.4335 (R² = 0.998) on log-lo
 
 ## What the invariant is
 
-- A reproducible, continuum-stable, configuration-specific empirical power law
+- A reproducible, configuration-specific empirical power law on the retained reference setup
 - Anchored in magnitude (Lane α) and sharp in shape (Lane L+)
 - Survives refinement to H=0.25 on the slope and H=0.25 on the magnitude
 - Survives a path-length falsification test (slope the same at T=7.5 and T=15)
@@ -83,9 +83,9 @@ The retained finding — this combined invariant — is what survives after all 
 > (L-independence: same slope at T=7.5 and T=15), the program's
 > first-order Kubo response to a 2D 1/r field at the reference
 > configuration is kubo_true(b) ≈ 28.4 · b^(−1.43) on b ∈ {3..6}.
-> This is the cleanest, most stable gravity-side observable the
-> program has produced: reproducible, continuum-stable, and
-> L-invariant at fine refinement. It is NOT canonical 1/b lensing,
+> This is the cleanest gravity-side observable the
+> program has produced: reproducible on the retained reference
+> configuration and L-invariant at fine refinement. It is NOT canonical 1/b lensing,
 > NOT any finite-path ray formula, and NOT the narrow-beam
 > asymptote — all three derivation attempts in this session were
 > falsified. It is a phenomenological invariant whose mechanism

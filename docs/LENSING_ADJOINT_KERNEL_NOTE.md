@@ -205,8 +205,9 @@ What this establishes:
 What this does not establish:
 
 1. It does **not** yet derive the full `b`-slope `≈ -1.43`.
-2. It does **not** yet show whether the normalized kernel shape is the
-   same for all `b ∈ {3,4,5,6}`.
+2. The companion shape-compare pass now shows the normalized kernel is
+   quasi-fixed across `b ∈ {3,4,5,6}`; what remains open is deriving the
+   observed `b`-law from that broad kernel.
 3. It does **not** yet isolate which propagator parameter controls the
    exponent most strongly (`BETA`, `k`, beam width, or something else).
 

@@ -116,11 +116,12 @@ displacement, not the analytic Kubo coefficient):
 | **b ∈ {2..6}** | **H=0.35** | **−1.033** | **0.911** | **0.033** |
 | b ∈ {3..6} | H=0.35 | −1.223 | 0.864 | 0.223 |
 
-**The cleanest single result is the restricted b ∈ {2..6} fit at
-H=0.35 on `kubo_true`**: slope = **−1.03**, R² = **0.94**,
-essentially exact 1/b scaling on that five-point fit. The
-corresponding dM fit gives the same slope (−1.03) with slightly
-lower R² (0.91).
+**This medium-refinement fit was the initial signal, not the retained
+endpoint.** At `H=0.35` on `b ∈ {2..6}`, `kubo_true` gave slope
+`−1.03` with `R² = 0.94`, and the corresponding `dM` fit gave the
+same slope with slightly lower `R² = 0.91`. That medium-`H`
+`≈ 1/b` reading was later overturned by the `H=0.25` refinement and
+should be read as a provisional intermediate result only.
 
 The b ∈ {3..6} fit is slightly steeper (≈ −1.27) at both
 refinements — this suggests the b = 2 point is in a transition
@@ -333,43 +334,29 @@ interesting way than the original Lane L writeup suggested.
   lensing,” but “produces a clean non-standard power law whose exponent
   is still H-dependent in the tested range.”
 
-This is the **strongest gravity-side moonshot result of the session** —
-the first direct match between the program's output and a recognizable
-lensing-style prediction. The match is:
+This note now stands as the record of the initial medium-`H` positive
+that was later narrowed. The retained read is no longer a direct
+textbook-lensing match. Instead, the current main-branch result is:
 
-- **Quantitatively clean** at the finer refinement (slope −1.03,
-  R² 0.94, within 3% of −1)
-- **Self-consistent** across two independent measurements
-  (analytic Kubo and finite-difference dM give the same slope)
-- **Physically honest** — the near-field exclusion at b=1 is
-  motivated by the beam's transverse width, not by fitting
-- **Conservative** — reported as moderate, not strong, because of
-  the 2-refinement limitation and the noisy coarse data
+- `H=0.25` gives a much cleaner power law on `b ∈ {3..6}`,
+  but with slope `≈ -1.43`, not `-1`
+- ray-optics and finite-path rescues were subsequently falsified
+- the active mechanism path is the adjoint-kernel / detector-response
+  lane, not a medium-`H` `1/b` interpretation
 
-What it means for the scorecard: **the program reproduces the 1/b
-functional form of weak-field gravitational lensing** on the
-Fam1 grown DAG at H=0.35 on the clean restricted fit b ∈ {2..6},
-with a stricter asymptotic subset b ∈ {3..6} still in the same
-ballpark but steeper. That is a meaningful gravity-side
-functional-form connection, even though it is not yet a stable
-continuum claim or a lab-ready prediction.
+What it means for the scorecard is narrower than this note originally
+claimed: the program produced an encouraging medium-`H` candidate that
+did not survive fine refinement as textbook weak-field lensing.
 
 ## What to attack next
 
-1. **Lane L+ — add H=0.25 refinement.** Same 6 b-values, third
-   refinement point. Tests continuum stability of the slope.
-   Cheapest single next step.
-2. **Extend the b range to {2..10}.** More asymptotic points would
-   tighten the slope fit. Cost: 4 more b-values × 2 refinements =
-   8 more runs.
-3. **Family portability on lensing slope.** Check whether Fam2 and
-   Fam3 give the same 1/b structure. Given Lane α++, Fam2 is likely
-   to be noisy, but Fam3 should give a clean comparison.
-
-The first (Lane L+) is the most decisive: if the −1.03 slope
-at H=0.35 is stable under further refinement, the result is a
-full positive. If it drifts significantly, we learn that the
-"moderate" label was generous.
+1. **Adjoint-kernel reduction / derivation.** The active question is
+   why the fine-`H` slope is `≈ -1.43`, not whether the medium-`H`
+   fit looked close to `-1`.
+2. **k sweep on the retained fine-`H` slope.** Checks whether the
+   reference `≈ -1.43` law is geometric or phase-coupled.
+3. **Family sweep on the retained fine-`H` slope.** Tests whether the
+   fine-`H` power-law shape is Fam1-specific or shared.
 
 ## Bottom line
 
@@ -377,7 +364,7 @@ full positive. If it drifts significantly, we learn that the
 > `kubo_true(b)` on b ∈ {2..6} fit a slope of −1.03 with R² = 0.94,
 > initially headlined as 'matches 1/b gravitational lensing.' Adding
 > the H=0.25 fine refinement on the asymptotic subset b ∈ {3..6}
-> dramatically tightens the fit (R² = 0.998) but **steepens the
+> dramatically tightened the fit but **steepened the
 > slope to −1.43**. Refinement is moving the slope away from −1,
 > not toward it. The Lane L 'matches lensing' headline is
 > **downgraded**. The retained result is now: `kubo_true(b)` on

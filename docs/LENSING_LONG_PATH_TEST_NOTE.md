@@ -203,16 +203,12 @@ What remains real:
 
 ## What to attack next
 
-1. **Test slope dependence on `BETA`** (the angular-weight
-   parameter). Cheap: just rerun at one or two BETA values and
-   compare the slopes. If slope changes with BETA, the cause is
-   the propagator's path distribution. If not, look elsewhere.
+1. **Derive `kubo_true(b)` from the actual adjoint-weighted path-sum**,
+   not a ray approximation. This is the active mechanism lane now.
 2. **Test slope dependence on `k`** (propagator coupling).
    Same idea, different parameter.
-3. **Try to derive `kubo_true(b)` analytically from the actual
-   path-sum integral**, not the ray approximation. This is the
-   real first-principles calculation; it's harder than the
-   2D Fermat formula but it's the right one.
+3. **Family sweep on the retained fine-`H` slope** to see whether the
+   broad-kernel mechanism is Fam1-specific or shared.
 4. **Stop claiming gravity-side first-principles matches** until
    one survives a regime-transition test.
 
