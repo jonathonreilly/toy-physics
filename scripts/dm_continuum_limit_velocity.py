@@ -106,11 +106,11 @@ def main():
     print()
 
     # Velocity targets (cells per layer, negative = source moves toward z=0)
-    # Reduced from 6 velocities × 3 refinements (took hours) to 3 velocities × 2
-    # refinements (tractable). The H=0.25 finest step dominates cost; 0.5 → 0.35
-    # is enough to check whether dM drift is comparable across v values.
+    # Lane δ+: extended to 3 refinements including H=0.25 at the three existing
+    # velocities. Cost: 3 velocities × 3 refinements = 9 wave solves. The H=0.25
+    # finest step dominates cost.
     velocity_targets = [-0.15, -0.25, -0.35]
-    refinements = [(0.5, "coarse"), (0.35, "medium")]
+    refinements = [(0.5, "coarse"), (0.35, "medium"), (0.25, "fine")]
 
     # results[v_target] = list of runs (one per refinement)
     results = {}
