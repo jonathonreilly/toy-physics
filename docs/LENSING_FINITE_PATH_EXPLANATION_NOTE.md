@@ -1,7 +1,37 @@
-# Lensing Slope — Finite-Path Surrogate Helps, But Does Not Yet Close The Explanation
+# Lensing Slope — Finite-Path Surrogate FALSIFIED at a Second T_phys
 
-**Date:** 2026-04-07
-**Status:** retained PARTIAL analytical clue — a centered finite-path surrogate with `L = 10` reproduces the Lane L+ fine slope on `b ∈ {3..6}` at `H=0.25` very well (`−1.4188` predicted vs `−1.4335` measured, `|Δ| = 0.0147`). But that surrogate is **not the literal harness geometry**. In the actual sweep the mass is static at `x_src ≈ 5` and the beam traverses the full interval `x ∈ [0, 14.75]`. When that actual geometry is reduced directly, the slope is shallower (`≈ −1.24` to `−1.34`, depending on weighting), not `−1.42`. So finite-path effects are clearly part of the story, but the exact analytical reduction of the measured detector-centroid observable remains open.
+**Date:** 2026-04-07 (revised twice: first narrowed by literal-geometry check, then falsified by Lane L++ short-path test)
+**Status:** RETRACTED as an explanation of the slope. Two independent issues invalidate the previous "1.5% analytical match" claim:
+
+> **Issue 1 (parallel narrowing, bd14a30):** The "1.5% match" used a
+> *centered* finite-path surrogate with `L = 10`. The literal harness
+> geometry is NOT centered: the mass is at `x_src ≈ 5`, the beam
+> traverses `x ∈ [0, 14.75]`, so the integration is asymmetric. When
+> reduced to the actual geometry directly, the analytical surrogate
+> gives slope ≈ −1.24 to −1.34 (depending on weighting), not −1.42.
+> The "1.5% match" was sensitive to the centering convention.
+>
+> **Issue 2 (Lane L++ short-path test, this commit):** Even putting
+> aside the centering issue, the surrogate makes a clean falsifiable
+> regime-transition prediction: at T_phys = 7.5 (L_eff = 5) the slope
+> should drop to ≈ −1.73; at T_phys = 45 (L_eff = 30) the slope
+> should rise to ≈ −1.08. The Lane L++ short-path measurement at
+> T_phys = 7.5 with H=0.25 fine refinement gives slope ≈ −1.44 —
+> essentially **identical** to the T_phys=15 measurement of −1.43
+> at the same H. The slope is approximately **L-independent** at
+> H=0.25 in the tested range, which a ray-deflection formula cannot
+> give. The regime-transition prediction is falsified.
+
+The combined picture: the finite-path Fermat formula explains
+neither (a) the literal-geometry version of the same observable
+nor (b) the slope at a second T_phys value. The "1.5% analytical
+match" at T_phys=15 with the centered surrogate was a coincidence
+of two narrow choices (centering convention + the specific T value)
+that landed on top of the actual measurement.
+
+See [`LENSING_LONG_PATH_TEST_NOTE.md`](LENSING_LONG_PATH_TEST_NOTE.md)
+for the Lane L++ falsifying data and the new "L-independent slope"
+finding.
 
 ## Artifact chain
 
