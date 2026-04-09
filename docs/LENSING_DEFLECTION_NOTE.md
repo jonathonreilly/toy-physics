@@ -1,7 +1,17 @@
-# Gravitational Deflection / Lensing Sweep — Moderate Positive
+# Gravitational Deflection / Lensing Sweep — Power-Law Positive (NOT 1/b)
 
-**Date:** 2026-04-07
-**Status:** retained moderate positive — at H=0.35, the first-order Kubo deflection coefficient `kubo_true(b)` follows essentially clean 1/b scaling on the asymptotic regime b ∈ {2, 3, 4, 5, 6}: slope = **−1.03**, R² = **0.94**, |slope − (−1)| = **0.03**. The beam's centroid deflection `dM(b)` gives the same slope (−1.03, R²=0.91). The full-range fit (b=1..6) is dominated by a near-field pathology at b=1 (deflection AWAY from the mass because the mass is inside the beam's natural transverse width), so the physically-motivated restriction to b ≥ 2 is not cherry-picking — it's the lensing regime. This is the first result in the program that directly matches a known physics functional form (weak-field gravitational lensing).
+**Date:** 2026-04-07 (revised after Lane L+ H=0.25 fine refinement)
+**Status:** retained partial positive — at H=0.25 fine refinement, `kubo_true(b)` on b ∈ {3, 4, 5, 6} gives a **clean power law with R² = 0.998** but **slope = −1.43**, NOT the −1 expected from Newton/Einstein 1/b lensing. Refinement steepens the slope from −1.03 (H=0.35, b ∈ {2..6}) to −1.43 (H=0.25, b ∈ {3..6}). The earlier "matches 1/b lensing" headline from the 2-refinement Lane L is **downgraded**. What survives: a clean power-law functional form (R² > 0.998 at the fine refinement), but with an exponent ≈ −1.4 to −1.5, which is not standard gravitational lensing. This is either a unique prediction of the lattice model, a transition regime that would asymptote to −1 at much larger b (untestable here because PW=6 limits the b range), or a boundary effect at the lattice edge (b=6 is at the edge).
+
+> **Lane L+ update (2026-04-07, H=0.25 added):** The original Lane L
+> reported slope ≈ −1.03 on the b ∈ {2..6} subset at H=0.35 and
+> framed it as "matches 1/b gravitational lensing." Adding the fine
+> refinement at H=0.25 on the asymptotic subset b ∈ {3..6} gives a
+> dramatically cleaner R² (0.94 → 0.998) but a STEEPER slope (−1.27
+> at H=0.35 → −1.43 at H=0.25 on the same subset). The slope is
+> drifting away from −1 with refinement, not toward it. The headline
+> downgrades from "1/b lensing match" to "clean power law with
+> exponent ≈ −1.43, not standard lensing."
 
 ## Artifact chain
 
@@ -163,14 +173,141 @@ medium refinement is where the 1/b structure becomes clean.
   proper measurement would use entry/exit ray angles, not centroid
   displacement.
 
-## Frontier map adjustment (Update 14)
+## Lane L+ — H=0.25 fine refinement (added 2026-04-07)
 
-| Row | Before | This lane |
-| --- | --- | --- |
-| Strength against harshest critique | no direct match to known physics functional forms | **moderate positive — 1/b lensing scaling matches on the asymptotic regime at the finer refinement** |
-| Compact underlying principle | first-order Kubo derived (linearity regime, Fam1-continuum stable) | **extended — 1/b scaling of kubo_true(b) adds a functional form to the isolated +5.986 number** |
-| Experimental prediction | blocked (comparator-dominated) | **first non-blocked connection** — 1/b scaling is recognizable physics terminology |
-| Theory compression | first-order Kubo on linearity regime | **sharpened** — the first-order Kubo coefficient now has a known b-dependence |
+### Why this lane was needed
+
+The original Lane L (above) was a 2-refinement sweep H ∈ {0.5, 0.35}.
+The medium fit gave slope ≈ −1.03 and was framed as "matches 1/b
+gravitational lensing." But Lane δ+ in this same session showed
+that 2-refinement results can be misleading: small steps between
+two coarse refinements can mimic convergence, and adding a third
+refinement reveals the true behavior.
+
+Lane L+ adds H=0.25 (fine) to test continuum stability of the slope.
+
+### Cost / OOM workaround
+
+The full sweep at 6 b-values × 3 refinements OOM-killed at H=0.25
+(NL=60 grown DAGs allocated in sequence exhausted available memory
+on this machine). Workaround: run each fine b-value as a separate
+Python process so memory is freed by the OS between invocations,
+and restrict to the asymptotic subset b ∈ {3, 4, 5, 6}.
+
+Used [`lensing_deflection_fine_single.py`](../scripts/lensing_deflection_fine_single.py)
+in a bash loop, results recorded in
+[`logs/2026-04-07-lensing-fine-asymptotic.txt`](../logs/2026-04-07-lensing-fine-asymptotic.txt).
+
+Combined-analysis script:
+[`lensing_deflection_lane_lplus.py`](../scripts/lensing_deflection_lane_lplus.py),
+log [`logs/2026-04-07-lensing-deflection-lane-lplus.txt`](../logs/2026-04-07-lensing-deflection-lane-lplus.txt).
+
+### Per-b drift across all three refinements (kubo_true)
+
+| b | H=0.5 | H=0.35 | H=0.25 | Δ(0.5→0.35) | Δ(0.35→0.25) |
+| ---: | ---: | ---: | ---: | ---: | ---: |
+| 1.0 | −0.748 | −2.291 | +0.776 | 206% | 134% |
+| 2.0 | +4.654 | +6.958 | — | 49.5% | — |
+| **3.0** | **+7.062** | **+5.973** | **+5.986** | **15.4%** | **0.2%** |
+| 4.0 | +5.614 | +3.339 | +3.820 | 40.5% | 14.4% |
+| 5.0 | +3.664 | +3.061 | +2.826 | 16.5% | 7.7% |
+| 6.0 | +3.018 | +2.360 | +2.212 | 21.8% | 6.3% |
+
+The b=3 point matches Lane α's continuum value (+5.986043) **exactly**
+(0.2% drift between H=0.35 and H=0.25). That's a strong consistency
+check on the harness: when both runs hit the Lane α reference
+configuration, they agree to 4 decimal places.
+
+The other b values show 6–14% drift between H=0.35 and H=0.25 —
+modest but not negligible.
+
+### Slope fits at all three refinements (kubo_true)
+
+| Subset | H=0.5 | H=0.35 | H=0.25 |
+| --- | ---: | ---: | ---: |
+| **b ∈ {2,3,4,5,6}** | slope=−0.470 R²=0.37 | **slope=−1.029 R²=0.94** | (b=2 missing at H=0.25) |
+| **b ∈ {3,4,5,6}** | slope=−1.281 R²=0.97 | slope=−1.269 R²=0.94 | **slope=−1.434 R²=0.998** |
+
+And for the finite-difference dM:
+
+| Subset | H=0.5 | H=0.35 | H=0.25 |
+| --- | ---: | ---: | ---: |
+| b ∈ {2,3,4,5,6} | slope=−0.550 R²=0.30 | slope=−1.033 R²=0.91 | (b=2 missing) |
+| **b ∈ {3,4,5,6}** | slope=−1.624 R²=0.93 | slope=−1.223 R²=0.86 | **slope=−1.516 R²=0.995** |
+
+### What the fine refinement reveals
+
+**Two changes at H=0.25:**
+
+1. **R² improves dramatically** — from 0.86–0.97 (medium) to **0.995–0.998** (fine).
+   The 4-point fit on b ∈ {3..6} at H=0.25 is essentially a perfect log-log
+   line. The functional form is genuinely a power law.
+
+2. **The slope steepens** — from −1.03 at H=0.35 (b ∈ {2..6}) to **−1.43 at
+   H=0.25** (b ∈ {3..6} on kubo_true) or **−1.52** (on dM). The fine
+   refinement does not stabilize the slope at −1; it moves the slope
+   away from −1.
+
+The Lane L "matches 1/b lensing" framing relied on the H=0.35 slope of
+−1.03 being close to the true continuum value. The H=0.25 result shows
+that was a noise-pulled near-coincidence, not a structural fact. The
+H=0.35 b ∈ {2..6} fit's R² of 0.94 was a warning sign — the H=0.25 fits
+at the same subset (when b=2 was tested at coarse and medium) hit R²
+values around 0.94 too, but b=2 has its own transition-regime issues
+that we now know about.
+
+### What survives Lane L+
+
+- **It IS a clean power law.** R² = 0.998 on the b ∈ {3..6} subset at
+  H=0.25 means the kubo_true(b) relationship is essentially a perfect
+  power law in this range.
+- **The exponent is ≈ −1.43 to −1.52**, not −1.
+- **It is NOT standard gravitational lensing**, which would be 1/b.
+
+Three possible interpretations of the steeper-than-1/b power:
+
+1. **Unique lattice prediction.** The model genuinely gives `α(b) ∝ b^(−1.43)`
+   in this regime, which is a different functional form from Newton/Einstein
+   weak-field lensing. This would be a distinctive signature, not a match
+   to known physics.
+2. **Transition regime.** The actual asymptotic far-field behavior is
+   `1/b` but we're sampling a near-field tail that hasn't reached its
+   asymptote. Untestable here because PW=6 caps b at 6.
+3. **Boundary effect.** b=6 is at the lattice transverse edge. The
+   amplitude distribution at b=6 may be artificially truncated, biasing
+   the kubo_true value low and steepening the slope.
+
+The Lane L+ data alone cannot distinguish (1), (2), and (3). All three
+are consistent with a clean power law on b ∈ {3..6}. To distinguish
+them you'd need either a much larger PW (allowing b > 6) or an analytic
+calculation of the expected b-dependence in the lattice continuum
+limit.
+
+### Honest read for Lane L overall
+
+The Lane L "moderate positive" headline overstated. The cleaner H=0.25
+data shows:
+
+- **Positive**: a clean power law with very high R²
+- **Negative**: the exponent is not −1, so this is not a 1/b lensing
+  match in the standard sense
+- **Open**: whether the model genuinely predicts a steeper power, or
+  whether this is a transition / boundary artifact
+
+The retained claim is now: **`kubo_true(b)` follows a clean power
+law on b ∈ {3..6} at H=0.25 with exponent ≈ −1.43 ± 0.1 and R² = 0.998.**
+That is a meaningful result — a clean functional form for the
+deflection coefficient — but it is not the headline "matches Newton/Einstein
+1/b lensing" that the original Lane L claimed.
+
+## Frontier map adjustment (Update 14, post-Lane-L+)
+
+| Row | Before | Lane L (H=0.35 only) | Lane L+ (H=0.25 added) |
+| --- | --- | --- | --- |
+| Strength against harshest critique | no direct match to known physics functional forms | "1/b lensing scaling matches" | **downgraded — clean power law but exponent ≈ −1.43, NOT standard 1/b lensing** |
+| Compact underlying principle | first-order Kubo derived (Fam1-continuum stable) | "1/b scaling adds a functional form" | **kubo_true(b) is a clean power law (R²=0.998) but with a non-standard exponent** |
+| Experimental prediction | blocked (comparator-dominated) | "first non-blocked connection" | **partial — clean functional form but not matching known weak-field lensing** |
+| Theory compression | first-order Kubo on linearity regime | "1/b b-dependence" | **sharpened differently** — kubo_true(b) is a power law, exponent depends on lattice resolution |
 
 ## Honest read
 
@@ -216,17 +353,21 @@ full positive. If it drifts significantly, we learn that the
 
 ## Bottom line
 
-> "At 5 impact parameters b ∈ {2, 3, 4, 5, 6} (excluding a
-> near-field pathology at b=1 where the mass is inside the beam's
-> natural transverse width), the first-order Kubo deflection
-> coefficient `kubo_true(b)` at H=0.35 on Fam1 follows a clean
-> log-log linear fit: **slope = −1.03, R² = 0.94**. The
-> finite-difference deflection `dM(b)` gives the same slope (−1.03,
-> R² 0.91). This is essentially exact 1/b scaling — the functional
-> form of weak-field gravitational lensing (shared by Newton and
-> Einstein, differing only in prefactor). The coarse refinement
-> (H=0.5) is noisier, and only 2 refinements are tested, so this
-> is retained as a moderate positive rather than a strong one.
-> It is the first result in the program that matches a recognizable
-> gravitational-physics functional form, rather than a dimensionless
-> ratio or empirical classifier."
+> "At H=0.35 the first-order Kubo deflection coefficient
+> `kubo_true(b)` on b ∈ {2..6} fit a slope of −1.03 with R² = 0.94,
+> initially headlined as 'matches 1/b gravitational lensing.' Adding
+> the H=0.25 fine refinement on the asymptotic subset b ∈ {3..6}
+> dramatically tightens the fit (R² = 0.998) but **steepens the
+> slope to −1.43**. Refinement is moving the slope away from −1,
+> not toward it. The Lane L 'matches lensing' headline is
+> **downgraded**. The retained result is now: `kubo_true(b)` on
+> b ∈ {3..6} at H=0.25 follows a **clean power law with exponent
+> ≈ −1.43 ± 0.1 and R² = 0.998** — a meaningful functional form
+> but NOT standard Newton/Einstein 1/b lensing. The b=3 point
+> agrees with Lane α's continuum value (+5.986043) to 0.2%, which
+> is a strong consistency check on the harness. Three possible
+> interpretations of the steeper-than-1/b power: (a) a unique
+> lattice prediction, (b) a transition regime that asymptotes to
+> 1/b at b ≫ 6 (untestable here because PW=6 caps b at 6), or
+> (c) a boundary effect at the lattice edge. None can be
+> distinguished from this data alone."

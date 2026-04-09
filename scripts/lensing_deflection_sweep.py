@@ -42,7 +42,7 @@ from kubo_continuum_limit import (
 )
 
 IMPACT_PARAMETERS = [1.0, 2.0, 3.0, 4.0, 5.0, 6.0]
-REFINEMENTS = [(0.5, "coarse"), (0.35, "medium")]
+REFINEMENTS = [(0.5, "coarse"), (0.35, "medium"), (0.25, "fine")]
 
 
 def measure_deflection_at(H_val, b_phys):
