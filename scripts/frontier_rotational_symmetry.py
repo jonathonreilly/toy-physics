@@ -95,16 +95,23 @@ class Lattice3D:
 
 
 def make_field_at_position(lat, y_phys, z_phys, strength):
-    """Place mass at (2*nl//3, iy, iz) and return 1/r field."""
+    """Place mass at EXACT physical (y, z) — no grid snapping.
+
+    Uses the exact floating-point coordinates for the 1/r field center.
+    This ensures identical field strength at the beam axis regardless of
+    mass angle, giving a clean isotropy comparison unconfounded by
+    radius mismatch.
+    """
+    x_phys = (2 * lat.nl // 3) * lat.h
+    r = np.sqrt((lat.pos[:, 0] - x_phys)**2 +
+                (lat.pos[:, 1] - y_phys)**2 +
+                (lat.pos[:, 2] - z_phys)**2) + 0.1
     iy = round(y_phys / lat.h)
     iz = round(z_phys / lat.h)
     mi = lat.nmap.get((2 * lat.nl // 3, iy, iz))
-    if mi is None:
-        print(f"  WARNING: mass position ({2*lat.nl//3}, {iy}, {iz}) out of bounds")
-        return np.zeros(lat.n), None
-    mx, my, mz = lat.pos[mi]
-    r = np.sqrt((lat.pos[:, 0] - mx)**2 + (lat.pos[:, 1] - my)**2 +
-                (lat.pos[:, 2] - mz)**2) + 0.1
+    actual_r = math.sqrt(y_phys**2 + z_phys**2)
+    print(f"  Field center: exact ({x_phys:.2f}, {y_phys:.4f}, {z_phys:.4f}), "
+          f"radius={actual_r:.4f}")
     return strength / r, mi
 
 
