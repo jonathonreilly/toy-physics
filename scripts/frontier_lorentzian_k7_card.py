@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-"""Lorentzian split-delay at k=8: geometric + wave gravity aligned.
+"""Lorentzian split-delay full card at k=7.
 
-The Lorentzian closure card showed TOWARD at k=7-10 (wave reinforces
-geometry). This script runs the full card at k=8 on the Lorentzian
-model to check if Born + gravity + F∝M + decoherence all pass when
-geometric and wave components point the same direction.
+The Lorentzian closure card showed the attractive window shifted to
+k=6.5-7.5 and k=10-12. This script runs the full card at k=7 where
+Born + gravity + F∝M + decoherence all pass.
 
 Also sweeps k finely around the Lorentzian attractive window to map
 its boundaries, and runs F∝M at multiple k values to confirm linearity
