@@ -93,8 +93,8 @@ This note does **not** claim:
 - a refinement-stable amplitude package
 
 The fine-`H` evidence is still bounded to `Fam1` and `Fam2`.
-The second-family pair is now controlled at `H = 0.25`, but the `Fam1` pair is
-still only one-strength replay evidence.
+The entire seed-`0` surface is now controlled across both families, but the
+`Fam1` seed-`1` row is still only one-strength replay evidence.
 
 ## Artifact chain
 
