@@ -166,4 +166,9 @@ valley-linear distance law.
 
 ## Weakest Link
 
-The assumption that the Laplacian field gives f ~ 1/r in 2D. On discrete graphs, deviations from 1/r field are the second-order correction. But this derivation shows the primary effect is from the action nonlinearity, not the field shape.
+The 3D master formula assumes f = s/r (Coulomb), which is the 3D
+Green's function. In 2D the field is logarithmic (f ~ ln(r)), and
+the 3D formula does NOT apply. The 3D distance-law verification
+(scripts/frontier_distance_law_3d_check.py) confirms the Coulomb
+field and Newtonian scaling on a 31^3 grid, but finite-size effects
+steepen the field exponent to -1.63 (vs asymptotic -1.0).

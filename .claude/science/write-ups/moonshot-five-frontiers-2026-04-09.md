@@ -89,46 +89,53 @@ Apply axioms A1-A6 sequentially to constrain coefficients.
 
 **Source derivation:** `derivations/action-uniqueness-theorem-2026-04-09.md`
 
-### Frontier #5: Entanglement Area Law
+### Frontier #5: Entanglement Entropy (v2 — true spatial bipartition)
 
-**Approach:** Propagate a single source through rectangular DAGs of
-varying height. At an intermediate column, label each path by its
-y-coordinate ("which-path sector"). At the cut boundary, construct
-the reduced density matrix rho(y,y') = sum_k psi_k(y) psi_k(y')*
-by tracing over sectors. Compute von Neumann entropy S = -Tr(rho ln rho).
+**Approach (v2):** Build the full propagator matrix M[y_cut, y_source]
+by propagating unit amplitude from EACH source y on x=0 through the
+DAG to x=cut_x. Compute rho_B = M M^H, which traces over the source
+degrees of freedom (region A). This is a genuine spatial bipartition:
+region A = source boundary, region B = cut boundary.
+
+Compute S_vN = -Tr(rho_B ln rho_B) using a complex Hermitian Jacobi
+eigensolver with proper Givens rotations (no imaginary-part truncation).
 
 | Parameter | Value |
 |-----------|-------|
 | Width | 20 |
 | Heights (Exp A) | 3, 4, 5, 6, 7, 8, 9, 10, 12, 14 |
-| Cut position | x = 10 |
-| Sector position | x = 5 (Exp A), varied 2-8 (Exp B) |
-| Source | (0, 0) |
+| Cut positions (Exp B,C) | 4, 6, 8, 10, 12, 14, 16, 18 |
+| Source | all y on x=0 (one column per source) |
 | Postulates | k=4.0, p=1.0 |
 | Mass cluster | 9 nodes at (10,0) +/- 1 |
-| Eigenvalue solver | Pure-Python Jacobi rotation |
+| Eigenvalue solver | Complex Hermitian Jacobi (Givens rotations) |
 
 **Three sub-experiments:**
 - A: Vary boundary size (height), measure S vs boundary
-- B: Vary sector position at fixed height (robustness)
-- C: Fixed boundary (height=8), vary cut_x (volume test — the key discriminator)
+- B: Vary cut_x at fixed height (robustness)
+- C: Fixed boundary (height=8), vary cut_x (volume test)
 
 **Script:** `scripts/frontier_entanglement_area_law.py`
 
-### Frontier #6: Quantized Energy Levels
+### Frontier #6: Quantized Energy Levels (v2 — with potential well)
 
-**Approach:** Construct the full propagator matrix M(y_out, y_in)
-mapping amplitudes from left boundary to right boundary. For each
-input y, inject unit amplitude and propagate through the DAG. Compute
-singular values of M (eigenvalues of M^H M). Extract energy-like
-quantities E_n = -ln(sigma_n / sigma_1).
+**Part 1 (free-space transfer matrix):** Construct the full propagator
+matrix M(y_out, y_in) for a box with no persistent nodes. Compute SVD.
+This tests whether the propagator has discrete modes, not whether it
+reproduces particle-in-a-box.
+
+**Part 2 (hard-wall potential well, added in v2):** Block nodes at
+|y| > well_half_width to create hard-wall confinement. Build M for the
+confined geometry and test whether E_n ~ n^2 and E_1 ~ 1/W^2.
 
 | Parameter | Value |
 |-----------|-------|
 | Width | 16 |
-| Heights | 4, 6, 8, 10, 12 |
+| Heights (Part 1) | 4, 6, 8, 10, 12 |
+| Well half-widths (Part 2) | 3, 4, 5, 6, 8, 10 |
 | Postulates | k=4.0, p=1.0 |
-| No persistent nodes | (free-space box) |
+| Part 1 persistent nodes | none (free space) |
+| Part 2 confinement | blocked_nodes at |y| > well_half_width |
 | Matrix analysis | SVD via numpy |
 
 **Script:** `scripts/frontier_quantized_energy_levels.py`
@@ -311,7 +318,8 @@ The v2 script labels these distinctly.
 | Time dilation quantitative | PARTIAL | Poisson shape tautological; mass scaling 0.35 |
 | Parity doubling | PASS | Machine-precision symmetry |
 | Spectral gaps | PASS | Up to 3.83 decades |
-| Energy levels in well | PENDING | v1 had no well; v2 adds confined geometry |
+| Energy levels in well | NEGATIVE | n^2 spacing not reproduced (deviation 42-86%) |
+| E_1 ~ 1/W^2 scaling | NEGATIVE | alpha = 0.22 vs expected 2.0 (R^2 = -0.06) |
 | Distance law exponent on finite grid | PARTIAL | Boundary effects dominate |
 | n^2 level spacing | FAIL | Lattice topology dominates |
 | Mass scaling of redshift | FAIL | Sub-linear (0.35 vs 1.0) |
@@ -333,19 +341,21 @@ nonlinearity. The fix is not a tweak to the propagator or field equation;
 it is a change to the action, forced by Lorentz covariance and the
 Newtonian weak-field limit.
 
-The derived action S = L - tau^2/(2L) is a proper result: it emerges from
-the axioms rather than being selected. The only remaining free parameter
-is the coupling strength c_2, which is the discrete analog of Newton's
-constant G and is not expected to be derivable from kinematics.
+The constrained action S = L - c_2*tau^2/L is a leading-order result: at
+weak field it matches valley-linear, but the coupling strength c_2 and all
+higher-order corrections (c_3, c_4, ...) remain free. This is a constraint,
+not a full derivation.
 
 This changes the ASSUMPTION_DERIVATION_LEDGER entry for "Action-proportional
 phase" from "assumed + comparatively tested" to "constrained to leading order
-by A1+A3+A4+A6" — NOT "derived," since the coupling strength c_2 and all
-higher-order corrections (c_3, c_4, ...) remain unconstrained.
+by A1+A3+A4+A6" — NOT "derived," since c_2 and higher-order terms remain
+unconstrained.
 
-The area law result from v1 is WITHDRAWN: the implemented observable was a
+The area law v1 result was WITHDRAWN after review found it measured a
 which-path sector trace, not a spatial bipartition. The v2 implementation
-using the true propagator matrix is pending validation.
+using rho_B = M M^H (true spatial bipartition) shows sub-area-law
+saturation at ln(2), with entropy that is boundary-controlled but does
+not grow with boundary size.
 
 ### Caveats
 

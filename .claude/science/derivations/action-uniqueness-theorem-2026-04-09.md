@@ -329,7 +329,7 @@ It is therefore excluded by BOTH A6 and A4. Its utility on noisy
 graphs (stronger signal-to-noise per the bridge analysis) is an
 operational advantage, not a fundamental property.
 
-## Valley-linear emerges as the unique leading-order action
+## Valley-linear emerges as the leading-order constrained action
 
 With c_0 = 1 and c_2 = -1/2:
   g(f) = 1 - f - f^2/2 = 1 - f + O(f^2)
@@ -342,28 +342,30 @@ is a POST-NEWTONIAN CORRECTION that is:
     f^2 ~ 10^{-10} is undetectable)
   - Analogous to the 1PN correction in GR
 
-## Summary of the derived action
+## Summary of the constrained action
 
-The unique Lorentz-covariant, Newtonian, gravity-attracting action
-to leading post-Newtonian order is:
+The leading-order Lorentz-covariant, Newtonian, gravity-attracting
+action consistent with axioms A1-A6 is:
 
-  **S_edge = L - (tau^2)/(2L) = L - L(2f+f^2)/2 = L(1-f) - Lf^2/2**
+  **S_edge = L - c_2*(tau^2)/(L) = L - c_2*L*(2f+f^2)**
 
-Or equivalently:
-  **S_edge = L - (dt^2 - L^2)/(2L)**
+With c_2 = -1/2 this gives L(1-f) - Lf^2/2, matching valley-linear
+at weak field. But c_2 is a FREE parameter (coupling strength), and
+higher-order corrections (c_3*tau^3/L^2, ...) are unconstrained.
 
-This is a DERIVED result. The valley-linear action S = L(1-f) is
-its weak-field limit. The spent-delay action S = dt - tau is
-excluded by Lorentz covariance.
+This is a CONSTRAINT result, not a full derivation. It narrows g(f)
+from an arbitrary function to a one-parameter family at leading order.
+The valley-linear action S = L(1-f) is the weak-field limit for any
+c_2 < 0. The spent-delay action S = dt - tau is excluded by Lorentz
+covariance.
 
 ## Status
-PROPOSED — the algebraic argument is clean. The key non-trivial
-step is showing that c_1 = 0 (the tau term is excluded by A4).
-The identification of tau^2/L as the natural Lorentz-scalar
-action parallels the GR geodesic action and provides a physical
-interpretation. The remaining free parameter (c_2, i.e., the
-coupling strength) is analogous to Newton's G and is not expected
-to be derivable from kinematics alone.
+PROPOSED CONSTRAINT — the algebraic argument is clean for the
+leading-order form. The key non-trivial step is showing c_1 = 0
+(tau term excluded by A4). The result is a constraint to a
+one-parameter family, NOT a uniqueness proof: c_2 (coupling
+strength, analog of G) is free, and c_3, c_4, ... are
+unconstrained by these axioms.
 
 ## Open questions
 1. Can the higher-order coefficients (c_3, c_4, ...) be

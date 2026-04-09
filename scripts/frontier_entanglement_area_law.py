@@ -557,16 +557,18 @@ def main() -> None:
     print(f"\n2. VOLUME INDEPENDENCE TEST (Experiment C, fixed boundary={bnd_const}):")
     if cv < 0.25 and r2_vc < 0.5:
         print(f"   S roughly constant (CV={cv:.3f}) despite volume changes")
-        print(f"   ==> AREA LAW CONFIRMED: entropy depends on boundary, not volume")
+        print(f"   ==> BOUNDARY-CONTROLLED: entropy does not track volume")
+        if alpha < 0.1:
+            print(f"   BUT: boundary scaling is flat/negative (alpha={alpha:.2f}),")
+            print(f"   so this is SUB-AREA-LAW (saturation), not area law")
+        else:
+            print(f"   ==> Consistent with area law (entropy grows with boundary)")
     elif r2_vc > 0.7:
         print(f"   S grows with volume (R^2={r2_vc:.3f})")
         print(f"   ==> VOLUME LAW component present")
     else:
         print(f"   Intermediate: CV={cv:.3f}, R^2_vol={r2_vc:.3f}")
-        if cv < 0.4:
-            print(f"   ==> PREDOMINANTLY AREA LAW with some volume dependence")
-        else:
-            print(f"   ==> MIXED SCALING regime")
+        print(f"   ==> MIXED SCALING regime")
 
     deltas = [data_mass[i]["S_vN"] - data_free[i]["S_vN"] for i in range(len(heights))]
     delta_mean = sum(deltas) / len(deltas)
