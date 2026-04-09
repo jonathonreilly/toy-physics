@@ -25,17 +25,10 @@ import argparse
 import math
 from collections import defaultdict
 
-from kubo_continuum_limit import (
-    BETA,
-    K_PER_H,
-    PW_PHYS,
-    SRC_LAYER_FRAC,
-    grow,
-    true_kubo_at_H,
-)
+from kubo_continuum_limit import BETA, K_PER_H, PW_PHYS, SRC_LAYER_FRAC, grow, true_kubo_at_H
 
 
-def build_free_and_adjoint(pos, adj, NL, PW, H, k_phase):
+def build_free_and_adjoint(pos, adj, NL, PW, H, k_phase, beta):
     """Return free amplitudes A, detector sensitivity lambda, and free stats."""
     n = len(pos)
     order = sorted(range(n), key=lambda i: pos[i][0])
@@ -57,7 +50,7 @@ def build_free_and_adjoint(pos, adj, NL, PW, H, k_phase):
             phase = k_phase * L
             phi = complex(math.cos(phase), math.sin(phase))
             theta = math.atan2(math.sqrt(dy * dy + dz * dz), max(dx, 1e-10))
-            w = math.exp(-BETA * theta * theta)
+            w = math.exp(-beta * theta * theta)
             A[j] += ai * phi * w * h2 / (L * L)
 
     hw = int(PW / H)
@@ -89,7 +82,7 @@ def build_free_and_adjoint(pos, adj, NL, PW, H, k_phase):
             phase = k_phase * L
             phi = complex(math.cos(phase), math.sin(phase))
             theta = math.atan2(math.sqrt(dy * dy + dz * dz), max(dx, 1e-10))
-            w = math.exp(-BETA * theta * theta)
+            w = math.exp(-beta * theta * theta)
             W = phi * w * h2 / (L * L)
             acc += lam[j] * W
         lam[i] = acc
@@ -97,7 +90,7 @@ def build_free_and_adjoint(pos, adj, NL, PW, H, k_phase):
     return A, lam, cz_free, T0, order
 
 
-def layer_kernel_for_b(pos, adj, H, k_phase, A, lam, z_src, x_src):
+def layer_kernel_for_b(pos, adj, H, k_phase, beta, A, lam, z_src, x_src):
     """Exact signed layer contributions K_l for one impact parameter."""
     h2 = H * H
     layer_contrib = defaultdict(float)
@@ -120,7 +113,7 @@ def layer_kernel_for_b(pos, adj, H, k_phase, A, lam, z_src, x_src):
             phase = k_phase * L
             phi = complex(math.cos(phase), math.sin(phase))
             theta = math.atan2(math.sqrt(dy * dy + dz * dz), max(dx, 1e-10))
-            w = math.exp(-BETA * theta * theta)
+            w = math.exp(-beta * theta * theta)
             W = phi * w * h2 / (L * L)
             U = complex(0.0, -k_phase * L / r_field) * W
             contrib = 2.0 * (lam[j] * ai * U).real
@@ -191,6 +184,7 @@ def main():
     parser.add_argument("--seed", type=int, default=0)
     parser.add_argument("--drift", type=float, default=0.20)
     parser.add_argument("--restore", type=float, default=0.70)
+    parser.add_argument("--beta", type=float, default=BETA)
     args = parser.parse_args()
 
     H = args.h
@@ -198,14 +192,15 @@ def main():
     PW = PW_PHYS
     k_phase = K_PER_H / H
     x_src = round(NL * SRC_LAYER_FRAC) * H
+    beta = args.beta
 
     pos, adj, _ = grow(args.seed, args.drift, args.restore, NL, PW, 3, H)
-    A, lam, cz_free, T0, _ = build_free_and_adjoint(pos, adj, NL, PW, H, k_phase)
+    A, lam, cz_free, T0, _ = build_free_and_adjoint(pos, adj, NL, PW, H, k_phase, beta)
 
     print("=" * 100)
     print("LENSING ADJOINT KERNEL PROBE")
     print("=" * 100)
-    print(f"T_phys={args.t_phys:g}  H={H:g}  NL={NL}  PW={PW:g}  k_phase={k_phase:.3f}")
+    print(f"T_phys={args.t_phys:g}  H={H:g}  NL={NL}  PW={PW:g}  k_phase={k_phase:.3f}  beta={beta:.3f}")
     print(f"seed={args.seed}  drift={args.drift:.2f}  restore={args.restore:.2f}")
     print(f"x_src={x_src:.3f}  detector_x={(NL-1)*H:.3f}  cz_free={cz_free:+.6f}  T0={T0:.6e}")
     print(f"b_values={args.b_values}")
@@ -221,18 +216,24 @@ def main():
         f" {'|K| in [xsrc±5]':>16s} {'|K| left/right':>16s}"
     )
     for b in args.b_values:
-        layer_contrib, abs_layer_contrib = layer_kernel_for_b(pos, adj, H, k_phase, A, lam, b, x_src)
+        layer_contrib, abs_layer_contrib = layer_kernel_for_b(pos, adj, H, k_phase, beta, A, lam, b, x_src)
         stats = kernel_stats(layer_contrib, abs_layer_contrib, H, x_src)
         kubo_exact = stats["signed_total"]
-        kubo_ref, _, _ = true_kubo_at_H(pos, adj, NL, PW, H, k_phase, x_src, b)
-        delta = abs(kubo_exact - kubo_ref)
+        if abs(beta - BETA) < 1e-12:
+            kubo_ref, _, _ = true_kubo_at_H(pos, adj, NL, PW, H, k_phase, x_src, b)
+            delta = abs(kubo_exact - kubo_ref)
+            kubo_ref_txt = f"{kubo_ref:+12.6f}"
+            delta_txt = f"{delta:10.3e}"
+        else:
+            kubo_ref_txt = f"{'n/a':>12s}"
+            delta_txt = f"{'n/a':>10s}"
         lr = (
             f"{stats['left_frac']:.2f}/{stats['right_frac']:.2f}"
             if stats["left_frac"] == stats["left_frac"] and stats["right_frac"] == stats["right_frac"]
             else "nan"
         )
         print(
-            f"{b:4.1f} {kubo_exact:+14.6f} {kubo_ref:+12.6f} {delta:10.3e}"
+            f"{b:4.1f} {kubo_exact:+14.6f} {kubo_ref_txt} {delta_txt}"
             f" {stats['peak_x']:8.3f} {stats['abs_center']:8.3f} {stats['abs_width']:8.3f}"
             f" {stats['centered_frac']:16.3f} {lr:>16s}"
         )

@@ -8,6 +8,8 @@
 - [`scripts/lensing_adjoint_kernel_probe.py`](../scripts/lensing_adjoint_kernel_probe.py)
 - [`logs/2026-04-08-lensing-adjoint-kernel-T15-H025-b3.txt`](../logs/2026-04-08-lensing-adjoint-kernel-T15-H025-b3.txt)
 - [`logs/2026-04-08-lensing-adjoint-kernel-T7p5-H025-b3.txt`](../logs/2026-04-08-lensing-adjoint-kernel-T7p5-H025-b3.txt)
+- [`logs/2026-04-08-lensing-adjoint-kernel-T7p5-H025-b3-beta040.txt`](../logs/2026-04-08-lensing-adjoint-kernel-T7p5-H025-b3-beta040.txt)
+- [`logs/2026-04-08-lensing-adjoint-kernel-T7p5-H025-b3-beta160.txt`](../logs/2026-04-08-lensing-adjoint-kernel-T7p5-H025-b3-beta160.txt)
 - Depends on:
   - [`scripts/kubo_continuum_limit.py`](../scripts/kubo_continuum_limit.py)
   - [`docs/LENSING_LONG_PATH_TEST_NOTE.md`](LENSING_LONG_PATH_TEST_NOTE.md)
@@ -183,13 +185,41 @@ What this does not establish:
 3. It does **not** yet isolate which propagator parameter controls the
    exponent most strongly (`BETA`, `k`, beam width, or something else).
 
+## Initial `BETA` spot-check
+
+To test whether the broad kernel is just an artifact of the default
+angular weight, I reran the exact probe at the cheaper clean point
+`T_phys = 7.5`, `H = 0.25`, `b = 3` for three values of `BETA`:
+
+| `BETA` | `kubo_true` | peak layer | abs-center | abs-width | left/right abs split |
+| ---: | ---: | ---: | ---: | ---: | --- |
+| `0.4` | `+9.563675` | `2.75` | `3.509` | `1.653` | `0.34 / 0.73` |
+| `0.8` | `+2.455550` | `2.75` | `3.655` | `1.832` | `0.33 / 0.72` |
+| `1.6` | `+0.651091` | `2.50` | `3.606` | `1.887` | `0.36 / 0.69` |
+
+What changes:
+
+- the **overall response amplitude** changes strongly with `BETA`
+  (about `15x` from `1.6` to `0.4`)
+
+What does **not** change much:
+
+- the kernel stays **broad**
+- the kernel stays **post-mass-skewed**
+- the absolute-center and width move only modestly
+
+So `BETA` clearly controls coupling strength, but this first spot-check
+does **not** support the idea that the default `≈ -1.43` slope is caused
+simply by the kernel collapsing or widening in a trivial way. The broad
+adjoint-weighted structure appears robust.
+
 ## Best next move
 
 The cheapest decisive next lane is now:
 
 1. fan out the exact kernel probe over `b ∈ {3,4,5,6}` at `T=15, H=0.25`
 2. compare normalized `K_l` shapes across `b`
-3. then vary `BETA` at one representative `b`
+3. then do the **full** `BETA` dependence of the slope, not just a single-`b` spot-check
 
 If the normalized kernel shape is stable across `b`, then the slope is
 coming mainly from how the edge factor `1/r_field(b)` is sampled against
