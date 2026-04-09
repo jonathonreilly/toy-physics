@@ -26,7 +26,6 @@ from wave_retardation_continuum_limit import (
     IZ_END_PHYS,
     IZ_START_PHYS,
     K_PER_H,
-    PW_PHYS,
     S_PHYS,
     SRC_LAYER_FRAC,
     T_PHYS_LAYERS,
