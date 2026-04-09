@@ -1,22 +1,25 @@
 # Moonshot Program: Five Frontier Experiments
 
 **Date:** 2026-04-09
-**Status:** Complete — all five frontiers delivered results
+**Status:** Revised after review — claims narrowed per P1/P2 feedback
 
 ## Abstract
 
 We attacked five open frontiers of the discrete event-network model
-in a single session, targeting the gaps most likely to block or enable
-publication. Two analytic derivations and three numerical experiments
-were executed in parallel. The central result is convergent: the
-distance law theorem and action uniqueness theorem independently prove
-that the valley-linear action S = L(1-f) is the unique leading-order
-Lorentz-covariant, Newtonian-limit action, and that the spent-delay
-action is excluded by two independent axioms. Additionally, we find
-evidence for an entanglement area law (CV = 13.2% at fixed boundary
-with 4.5x volume variation), gravitational time dilation matching the
-2D Poisson prediction (R^2 = 0.998), and genuine energy quantization
-with exact parity doubling and spectral gaps up to 6753x on finite DAGs.
+in a single session. Two analytic derivations and three numerical
+experiments were executed in parallel. The central result: the action
+constraint theorem and distance law analysis convergently show that
+the valley-linear action S = L(1-f) is the leading-order action
+consistent with Lorentz covariance and Newtonian weak-field limit,
+with one free coupling parameter and unconstrained higher-order
+corrections. Spent-delay is excluded by two independent axioms.
+A 3D lattice verification confirms the valley-linear action gives
+alpha = 1.019 (theory: 1.0, R^2 = 0.999) distance-law exponent
+and beta = 1.000 mass exponent. The 2D distance-law "anomaly" is
+identified as the correct 2D physics (logarithmic Green's function),
+not a model failure. Entanglement, quantization, and time dilation
+experiments produced preliminary positive results requiring further
+validation before strong claims can be made.
 
 ## Background
 
@@ -150,87 +153,90 @@ and 2D-correct logarithmic (f = a + b*ln(r)) forms.
 
 ## Results
 
-### Frontier #1: Distance Law — ANALYTIC RESOLUTION
+### Frontier #1: Distance Law — ANALYTIC CLARIFICATION + 3D CONFIRMATION
 
-**Master formula:** For action g(f) ~ f^alpha, the deflection is
-delta(b) = k * s^alpha * C_alpha / b^alpha, where C_alpha is a
-finite gamma-function ratio.
+**3D master formula:** For action g(f) ~ f^alpha on a 3D lattice
+(where f = s/r, Coulomb), the deflection is
+delta(b) = k * s^alpha * C_alpha / b^alpha.
 
-| Action | alpha | delta(b) | F(M) | Status |
-|--------|-------|----------|------|--------|
-| Valley-linear S=L(1-f) | 1 | 1/b | F ~ M | Newtonian |
-| Spent-delay S~sqrt(f) | 1/2 | 1/sqrt(b) | F~sqrt(M) | Non-Newtonian |
-| Quadratic S~f^2 | 2 | 1/b^2 | F ~ M^2 | Super-Newtonian |
+**2D reality:** The 2D Green's function is logarithmic (f ~ ln(r)),
+not Coulomb. The original derivation incorrectly assumed f = s/r in
+2D. In 2D, even the valley-linear action gives approximately flat
+b-dependence, because d/db integral ln(sqrt(x^2+b^2)) dx ~ arctan,
+not 1/b.
 
-**Key unification:** The same exponent alpha controls BOTH the distance
-law and the mass law. This resolves two anomalies with one explanation.
+| Action | 3D (f=s/r) | 2D (f~ln r) |
+|--------|-----------|------------|
+| Valley-linear | delta~1/b | delta~const |
+| Spent-delay | delta~1/sqrt(b) | weaker than VL |
 
-**Numerical confirmation:**
-- Valley-linear mass exponent: beta = **1.0000** (exact to 4 decimals)
-- Spent-delay has g'(f) singularity at f=0: pathological boundary behavior
-- Finite-grid distance exponents show boundary effects requiring larger grids
+**3D numerical confirmation:**
+- Valley-linear distance exponent: alpha = **1.019** (theory: 1.0, R^2 = 0.999)
+- Valley-linear mass exponent: beta = **1.000** (theory: 1.0)
+- Spent-delay: alpha = 0.21 (boundary-dominated, poor R^2)
 
-**Null result:** The finite-grid verification does not cleanly recover
-the predicted distance exponents because boundary effects dominate at
-b > height/2. This is a grid-size limitation, not a theory failure.
+**Key realization:** The 2D "distance law anomaly" that motivated 9+
+numerical avenues was the CORRECT 2D physics, not a model failure.
+The physical 3D case works as predicted.
 
-### Frontier #3: Action Uniqueness — ONE-PARAMETER FAMILY
+**Null result:** 2D valley-linear verification shows flat b-dependence
+on the 2D grid (as now expected from the logarithmic field).
 
-**Theorem:** The unique Lorentz-covariant, Newtonian, gravity-attracting
-action to leading post-Newtonian order is:
+**Script:** `scripts/frontier_distance_law_3d_check.py`
 
-    S_edge = L - tau^2/(2L) = L - L(2f + f^2)/2
+### Frontier #3: Action Constraint — ONE-PARAMETER FAMILY + UNCONSTRAINED HIGHER ORDER
 
-At weak field: S = L(1-f) - Lf^2/2, matching valley-linear plus a
-post-Newtonian correction. One free parameter: c_2 (coupling strength,
-analog of Newton's G).
+**Result (NOT full uniqueness):** The axioms constrain the leading-order
+Lorentz-covariant, Newtonian, gravity-attracting action to:
 
-**Axiom power ranking:**
+    S_edge = L - c_2 * tau^2/L + [unconstrained c_3, c_4, ... terms]
 
-| Axiom | Constraint | Power |
-|-------|-----------|-------|
-| A4 (Newtonian limit) | Kills c_1*tau term (c_1=0) | **Strongest** |
-| A6 (Lorentz covariance) | Only tau and L as building blocks | Second |
-| A3 (Gravity sign) | c_2 < 0 | Third |
-| A5 (Action-reaction) | Redundant once A4 imposed | None |
+At weak field with c_2 = -1/2: S = L(1-f) - Lf^2/2, matching
+valley-linear plus a post-Newtonian correction.
+
+**What IS constrained:**
+- c_1 = 0 (the tau term is excluded by A4)
+- c_2 < 0 (gravity is attractive)
+- The leading-order form is valley-linear
+
+**What is NOT constrained:**
+- c_2 itself (coupling strength, analog of G — free parameter)
+- c_3, c_4, ... (higher-order corrections, unconstrained by A4)
+
+This is a CONSTRAINT theorem, not a uniqueness theorem. It narrows
+the action from an arbitrary function g(f) to a one-parameter family
+at leading order, with unconstrained post-Newtonian corrections.
 
 **Spent-delay excluded** by two independent axioms:
 1. NOT a Lorentz scalar (verified numerically: boost drift > 0)
 2. g(f) ~ sqrt(f) at weak field violates Newtonian limit
 
 **Convergence with Frontier #1:** Both derivations independently conclude
-valley-linear is the correct action. The distance law theorem shows WHY
-(it's the only alpha=1 action), and the uniqueness theorem shows it's
-the only ALLOWED action from Lorentz covariance.
+valley-linear is the correct leading-order action.
 
-### Frontier #5: Entanglement Area Law — POSITIVE
+The ASSUMPTION_DERIVATION_LEDGER entry should be updated from "assumed"
+to "constrained to leading order by A1+A3+A4+A6" — NOT "derived,"
+since the coupling strength and higher-order terms remain free.
 
-**Experiment A (vary boundary):**
-- S ranges from 0.75 (h=3) to 1.44 (h=9), then drops
-- S ~ boundary^0.07, R^2 = 0.015 (nearly flat — entropy saturates)
-- Not clean area law in the "S proportional to boundary" sense
+### Frontier #5: Entanglement Entropy — REVISED AFTER REVIEW
 
-**Experiment B (robustness):**
-- S increases monotonically from 0.80 (sec_x=2) to 1.60 (sec_x=8)
-- All 17 modes active at height=8 — full rank
-- Entropy depends on depth of sector labeling, confirming real entanglement
+**IMPORTANT CORRECTION:** The v1 implementation measured a "which-path
+sector" entropy, NOT a true spatial bipartition entropy. The original
+script created artificial orthogonal sectors by labeling paths at an
+intermediate column (one sector per midpoint y-node), then built
+rho = sum_k psi_k psi_k*. This is an environment-trace, not a
+spatial-bipartition trace. Additionally, the v1 eigensolver discarded
+imaginary parts of rho (max |Im(rho_ij)| approx 0.106, larger than max
+real off-diagonal approx 0.073), making the eigenvalues numerically wrong.
 
-**Experiment C (the key discriminator):**
-- Fixed boundary = 17 nodes, volume varies 68 to 306 (4.5x)
-- S_free: mean = 1.14, std = 0.15, **CV = 0.132**
-- S_free vs volume R^2 = 0.32
-- **Entropy is approximately constant despite 4.5x volume change**
-- **Area law supported**: entropy tracks boundary, not volume
+**v2 implementation** (post-review): uses true spatial bipartition via
+the propagator matrix M(y_out, y_in), computing rho_B = M M^H with a
+correct complex Hermitian eigensolver.
 
-**Gravitational effect:**
-- Mean delta_S (mass - free) = **+0.52** (mass increases entropy)
-- Consistent across all tested heights
-- Gravitational field enhances boundary correlations
+[v2 results to be filled after rerun]
 
-**Null result:** The boundary scaling in Experiment A is sub-linear
-(exponent 0.07), which is weaker than a strict S proportional to boundary
-prediction. The entropy saturates rather than growing. This may reflect
-the single-source initial condition or finite propagation depth.
+**Status:** The "area law confirmed" claim from v1 is WITHDRAWN pending
+v2 validation. The v1 observable was not measuring what was claimed.
 
 ### Frontier #6: Energy Quantization — GENUINE SPECTRA
 
@@ -257,36 +263,39 @@ first 2-3 levels at h=8 show approximate agreement (E_2/E_1 = 3.8 vs
 predicted 4), but this does not persist. The continuum limit has not
 been demonstrated.
 
-### Frontier #15: Time Dilation — CONFIRMED
+### Frontier #15: Time Dilation — CORRECT SIGN, QUANTITATIVE CAVEATS
 
-**Field profile:** Logarithmic fit R^2 = **0.998** vs power-law R^2 = 0.924.
-The field follows the 2D Poisson Green's function f ~ ln(R/r), which is
-the correct functional form for a 2D Laplacian solver. Effective boundary
-R_eff = 34-35 (vs grid half-diagonal ~45).
+**What is confirmed:**
+- Local clock rate 1/(1+f) < 1 near mass (correct sign for redshift)
+- Field follows 2D Poisson (R^2 = 0.998) — but this is tautological
+  since derive_node_field IS a Poisson solver
 
-**Clock rate:** 1/(1+f) at each node. Near mass (r=3, M=36): clock rate
-= 0.51 (49% time dilation). Far from mass (r=30, M=36): clock rate = 0.92.
+**Observable conflation (corrected in v2):**
+The v1 script printed path-integrated arrival ratios alongside local
+clock rates without distinguishing them. At r=10 with M=36, local
+clock rate = 0.68 while path ratio = 1.41 — materially different.
+The v2 script labels these distinctly.
 
-**Mass scaling:** Log coefficient |b| scales as M^0.35, not M^1.0. This
-sub-linear scaling arises from the persistence support function saturating
-at 1.0 for interior nodes of extended mass clusters, and from Dirichlet BC
-on the finite domain.
-
-**Null result:** The mass scaling exponent (0.35 vs expected 1.0) means
-the model does not yet produce correct linear-in-mass gravitational
-redshift for extended sources. Point-source scaling needs separate testing.
+**Null results:**
+- Mass scaling sub-linear (gamma = 0.35 vs expected 1.0)
+- Poisson field shape is guaranteed by construction, not derived
+- "Matches GR" claim requires 3D verification (not yet done)
 
 ## Validation Summary
 
 | Check | Status | Notes |
 |-------|--------|-------|
 | Frontier #1+#3 convergence | PASS | Independent derivations agree on valley-linear |
-| VL mass scaling = 1.0 | PASS | Exact to 4 decimal places |
-| Area law: S constant at fixed boundary | PASS | CV = 13.2%, R^2_vol = 0.32 |
-| Time dilation sign | PASS | Clocks slow near mass |
-| Field = 2D Poisson | PASS | R^2 = 0.998 |
+| 3D VL distance exponent = 1.0 | PASS | alpha = 1.019, R^2 = 0.999 |
+| 3D VL mass scaling = 1.0 | PASS | beta = 1.000 |
+| 2D field is logarithmic | PASS | Correct 2D physics, not an anomaly |
+| Area law (v1 which-path) | WITHDRAWN | v1 measured wrong observable; v2 pending |
+| Area law eigensolver | FAIL | v1 discarded Im(rho); v2 uses correct solver |
+| Time dilation sign | PASS | Clocks slow near mass (correct sign) |
+| Time dilation quantitative | PARTIAL | Poisson shape tautological; mass scaling 0.35 |
 | Parity doubling | PASS | Machine-precision symmetry |
 | Spectral gaps | PASS | Up to 3.83 decades |
+| Energy levels in well | PENDING | v1 had no well; v2 adds confined geometry |
 | Distance law exponent on finite grid | PARTIAL | Boundary effects dominate |
 | n^2 level spacing | FAIL | Lattice topology dominates |
 | Mass scaling of redshift | FAIL | Sub-linear (0.35 vs 1.0) |
@@ -314,12 +323,13 @@ is the coupling strength c_2, which is the discrete analog of Newton's
 constant G and is not expected to be derivable from kinematics.
 
 This changes the ASSUMPTION_DERIVATION_LEDGER entry for "Action-proportional
-phase" from "assumed + comparatively tested" to "derived from A1+A3+A4+A6."
+phase" from "assumed + comparatively tested" to "constrained to leading order
+by A1+A3+A4+A6" — NOT "derived," since the coupling strength c_2 and all
+higher-order corrections (c_3, c_4, ...) remain unconstrained.
 
-The area law result, while preliminary, provides the first connection between
-this model and entanglement/information-theoretic physics. The finding that
-mass increases entanglement entropy at the partition boundary is directionally
-consistent with gravitational entropy physics.
+The area law result from v1 is WITHDRAWN: the implemented observable was a
+which-path sector trace, not a spatial bipartition. The v2 implementation
+using the true propagator matrix is pending validation.
 
 ### Caveats
 
@@ -390,8 +400,11 @@ python3 -m venv /tmp/physics_venv
 source /tmp/physics_venv/bin/activate
 pip install numpy scipy
 
-# Frontier #1: Distance law analytic verification
+# Frontier #1: Distance law analytic verification (2D)
 python3 scripts/frontier_distance_law_analytic_check.py
+
+# Frontier #1b: 3D distance law verification (KEY RESULT)
+python3 scripts/frontier_distance_law_3d_check.py
 
 # Frontier #5: Entanglement area law (pure Python, no numpy needed)
 python3 scripts/frontier_entanglement_area_law.py

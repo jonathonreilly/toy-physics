@@ -1,4 +1,4 @@
-# Derivation: Action Uniqueness Theorem
+# Derivation: Action Constraint Theorem
 
 ## Date
 2026-04-09
@@ -7,6 +7,12 @@
 Determine how tightly the axioms constrain the action functional
 S_edge = L * g(f), where f is the gravitational field and L is the
 spatial link length. Is g(f) unique, or is there a family?
+
+NOTE: This result does NOT prove full uniqueness. It constrains
+the leading-order action to a one-parameter family (parametrized
+by the coupling strength c_2), with unconstrained higher-order
+corrections (c_3, c_4, ...). The title "constraint theorem" rather
+than "uniqueness theorem" reflects this.
 
 ## Axioms
 
@@ -267,7 +273,7 @@ g_00 = 1 + 2*Phi gives S ~ integral (1 + Phi) dt. Our term
 c_2*tau^2/L ~ c_2*2f*L plays exactly this role: a linear
 coupling to the potential f.
 
-## The Uniqueness Theorem
+## The Constraint Theorem
 
 **Theorem.** Among Lorentz-scalar actions that are:
   (i)   additive along paths (A1),

@@ -15,15 +15,30 @@ where C_alpha = sqrt(pi) * Gamma((alpha+1)/2) / Gamma((alpha+2)/2).
 
 ## Setup
 
-Consider a point mass at origin on a 2D lattice. The Laplacian field satisfies nabla^2 f = -rho, giving (in continuum limit):
+### Dimension-dependent Green's function
 
-    f(r) = s / r    (2D Coulomb, s = coupling strength proportional to mass M)
+The Laplacian field satisfies nabla^2 f = -rho. The Green's function
+depends on spatial dimension:
+
+- **3D (physical):** f(r) = s / r      (Coulomb potential)
+- **2D (lattice):**  f(r) = -s * ln(r) (logarithmic potential)
+
+IMPORTANT: The 2D model operates with logarithmic fields, NOT 1/r.
+The derivation below is presented for BOTH cases. The 3D case gives
+the clean analytic result; the 2D case requires separate treatment
+because ln(r) has qualitatively different gradient structure.
+
+### 3D derivation (the physical case)
+
+Consider a point mass at origin on a 3D lattice. The field is
+f(r) = s/r with s proportional to mass M.
 
 A beam at impact parameter b propagates along x, accumulating phase:
 
     Phi(b) = k * integral_{-W}^{W} g(f(x,b)) dx
 
-where g(f) is the action's dependence on field strength, and f(x,b) = s / sqrt(x^2 + b^2).
+where g(f) is the action's dependence on field strength, and
+f(x,b) = s / sqrt(x^2 + b^2).
 
 The gravitational deflection is the transverse phase gradient:
 
@@ -77,35 +92,71 @@ This is the b^{-1/2} law observed numerically.
 | S ~ sqrt(f) (spent-delay) | 1/2 | 1/sqrt(b) | F ~ sqrt(M) |
 | S ~ f^2 | 2 | 1/b^2 | F ~ M^2 |
 
-## The Unification
+### 2D derivation (the lattice case)
 
-**Key insight:** The action power alpha controls both anomalies simultaneously:
+In 2D, the field is f(x,b) = -s * ln(sqrt(x^2 + b^2)) + const on a
+bounded domain. The gradient df/db = -s*b/(x^2+b^2).
+
+For the valley-linear action g(f) = -f (so g'(f) = -1):
+
+    delta_VL(b) = k * s * b * integral dx / (x^2 + b^2)
+               = k * s * [arctan(W/b)]
+               ~ k * s * (pi/2 - b/W)    for b << W
+
+This gives delta ~ constant at small b (with weak 1/W correction),
+NOT 1/b. In 2D, even the valley-linear action does not give 1/b
+from the logarithmic field.
+
+For the spent-delay action g(f) ~ -sqrt(|f|):
+
+    The integral involves sqrt(ln(r)), which gives even weaker
+    b-dependence than the valley-linear case.
+
+**The 2D lattice cannot exhibit 1/b gravity from any action form.**
+The 1/b result requires 3D (Coulomb) fields. The 2D results showing
+flat or weak b-dependence are the CORRECT behavior for a 2D model —
+not an anomaly to be fixed.
+
+## The Unification (3D)
+
+In 3D where f = s/r, the action power alpha controls both:
 - Distance law: delta ~ 1/b^alpha
 - Mass law: delta ~ M^alpha (since s ~ M, and delta ~ s^alpha)
 
-The numerical measurements:
-- Distance exponent: b^{-0.5} to b^{-0.9} (expected: 0.5 in continuum limit for spent-delay)
-- Mass exponent: M^{0.82} (intermediate — finite-size corrections push alpha from 0.5 toward 1)
+The 2D lattice measurements:
+- Distance exponent: b^{-0.5} to b^{-0.9} (reflects 2D logarithmic field, not 3D Coulomb)
+- Mass exponent: M^{0.82} (intermediate — partly 2D boundary effects)
 
-The spread arises because at small b (where f is large), the spent-delay transitions from sqrt(f) to linear-f behavior, inflating the effective exponent.
+The earlier characterization of these as "anomalies" was incorrect:
+the 2D lattice is not expected to give 1/b gravity. The distance law
+"negative result" was actually the correct 2D physics.
 
-## The Minimal Fix: Action Phase Linearity
+## The Minimal Fix (3D): Action Phase Linearity
 
 **Axiom (Action Phase Linearity):** The phase per edge is Phi_edge = k * L * (1 - c*f).
 
-This single axiom:
+In 3D (where f = s/r), this single axiom:
 - Gives Newtonian distance law: delta ~ 1/b
 - Gives linear mass dependence: F ~ M
 - IS the valley-linear action S = L(1-f)
-- No modification to the field equation or kernel is needed
 
-## Why This Matters
+In 2D (where f ~ ln(r)), even this axiom gives flat/weak b-dependence,
+because the logarithmic field gradient is fundamentally different from 1/r^2.
 
-The distance law closure was previously treated as a structural negative. This derivation shows:
+## What This Means
 
-1. The anomaly is NOT a lattice artifact or finite-size effect — it's the expected continuum behavior of the spent-delay action
-2. The fix is a single axiom (phase linearity) that also fixes the mass law
-3. Valley-linear was already tested and shown to work numerically — now we know WHY
+The distance law closure was previously treated as a structural negative
+("the model cannot produce 1/b gravity"). This derivation clarifies:
+
+1. On 2D lattices, flat b-dependence is the CORRECT behavior for
+   logarithmic fields — not an anomaly
+2. On 3D lattices, the valley-linear action SHOULD give 1/b from
+   the Coulomb field — this is a testable prediction
+3. The spent-delay action gives sub-Newtonian scaling in any dimension
+   due to its sqrt(f) nonlinearity
+
+The critical next step is a 3D lattice verification of the
+valley-linear distance law.
 
 ## Open Questions
 
