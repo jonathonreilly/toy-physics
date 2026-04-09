@@ -73,8 +73,12 @@ not from a gravitational mechanism. It survives any reinterpretation.
 - Action constrained from axioms (valley-linear at leading order)
 
 ### Lorentzian model (S = L(1-f·cos(2θ))) — NEW, needs validation
-- Geometric gravity: geodesics TOWARD mass
-- All core tests pass at k=7 on 3D lattice (h=0.5, W=6, L=12)
+- Geometric gravity: geodesics TOWARD mass at strong field (5e-2).
+  At weak field (5e-5, the closure-card regime), lattice cannot resolve
+  geodesic deflection (both models show NONE). The geometric mechanism
+  is demonstrated at strong field only.
+- All core tests pass at k=7 on 3D lattice (h=0.5, W=6, L=12):
+  Born 1.50e-15, gravity +0.001 TOWARD, F∝M=1.00, 5/6 TOWARD b^(-1.23)
 - Born, F∝M, d_TV, decoherence identical to Euclidean (flat-space same)
 - Attractive window shifted: k=6.5-7.5 and k=10-12
 - NOT YET VALIDATED: spectral averaging, 3+1D, multi-L, Laplacian field

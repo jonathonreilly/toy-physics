@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
-"""Wave vs geodesic decomposition: separate geometric baseline from wave resonance.
+"""Wave vs geodesic decomposition: compare geometric and wave deflection signs.
 
-At each k, the net deflection is the SUM of a repulsive geometric baseline
-and a k-dependent wave component. This script decomposes them.
+CAVEAT (from review): The geodesic asymmetry (arrival-time difference) and
+the wave deflection (probability centroid shift) are in DIFFERENT UNITS and
+cannot be directly subtracted. What this script supports is a SIGN comparison
+(geometric points AWAY while wave can point TOWARD), not a quantitative
+decomposition into additive geometric + wave components.
 
 On the 3D ordered lattice (h=0.5, W=6, L=12):
 
