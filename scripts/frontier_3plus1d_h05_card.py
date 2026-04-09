@@ -371,18 +371,18 @@ def run_card(kernel_name, weight_fn, h, phys_l):
 
 def main():
     print("=" * 70)
-    print("3+1D CLOSURE CARD: h=0.5 FINER LATTICE CONFIRMATION")
+    print("3+1D FEASIBILITY SIGNAL: h=0.5, W=3 (smaller box)")
     print("=" * 70)
     print()
-    print("This confirms h=1.0 results on a finer lattice (h=0.5).")
-    print("PHYS_W=3 (reduced from 4) to keep node count manageable.")
+    print("NOTE: This is NOT a same-geometry refinement of the h=1.0 card.")
+    print("Both h AND W changed (W=4 -> W=3), so this is a feasibility")
+    print("signal on a different physical box, not a resolution confirmation.")
+    print("For the clean same-geometry test, see frontier_3plus1d_same_geometry_refinement.py.")
     print()
-    print("Kernel: 1/L^3 (p = d_spatial = 3)")
-    print("Action: S = L(1-f) (valley-linear)")
-    print("Field:  s/r^2 (3D Coulomb for 3 spatial dimensions)")
+    print("Kernel: 1/L^3, Action: S=L(1-f), Field: s/r_spatial^2")
     print()
-    print("HYPOTHESIS: h=0.5 confirms h=1.0: both kernels pass Born/k=0/gravity/F~M.")
-    print("FALSIFICATION: If results flip sign or Born fails, h=1.0 was finite-size.")
+    print("HYPOTHESIS: Both kernels pass Born/k=0/gravity/F~M at h=0.5, W=3.")
+    print("FALSIFICATION: If core tests fail, W=3 is too small.")
     print()
 
     h = 0.5
@@ -444,22 +444,18 @@ def main():
         k0_pass = abs(r["k0"]) < 1e-6
         fm_pass = not math.isnan(r["fm_alpha"]) and abs(r["fm_alpha"] - 1.0) < 0.3
 
-        core_pass = born_pass and grav_pass and k0_pass
+        core_pass = born_pass and grav_pass and k0_pass and fm_pass
         print(f"\n  {r['kernel']}:")
         print(f"    Born:    {'PASS' if born_pass else 'FAIL'} ({r['born']:.2e})")
         print(f"    k=0:     {'PASS' if k0_pass else 'FAIL'} ({r['k0']:.6f})")
         print(f"    Gravity: {'PASS' if grav_pass else 'FAIL'} ({r['grav']:+.6f} {r['grav_dir']})")
         print(f"    F~M:     {'PASS' if fm_pass else 'CHECK'} ({r['fm_alpha']:.2f})")
-        print(f"    Core:    {'ALL PASS' if core_pass else 'FAIL'}")
+        print(f"    TOWARD:  {r['n_toward']}/3")
+        print(f"    Core (Born+k0+grav+F~M): {'ALL PASS' if core_pass else 'FAIL'}")
 
-    # Compare with h=1.0 reference
     print()
-    print("  h=1.0 reference (from frontier_3plus1d_closure_card.py):")
-    print("    exp(-0.8t^2): Born PASS, k=0 PASS, grav TOWARD, F~M ~1.0")
-    print("    cos^2(theta): Born PASS, k=0 PASS, grav TOWARD, F~M ~1.0")
-    print()
-    print("  If h=0.5 matches h=1.0 qualitatively, finite-size artifacts ruled out.")
-    print("  If h=0.5 disagrees, h=1.0 was unreliable.")
+    print("  NOTE: This is a different physical box (W=3) than the h=1.0 card (W=4).")
+    print("  For the same-geometry refinement, see frontier_3plus1d_same_geometry_refinement.py.")
 
 
 if __name__ == "__main__":

@@ -221,15 +221,17 @@ class Lattice4D:
 # =========================================================================
 
 def make_field_3d(lat, z_mass_phys, strength):
-    """1/r field for 2 spatial dimensions (2D Coulomb)."""
+    """Static 2D Coulomb: 1/r_spatial using spatial (y,z) only, excluding causal x."""
     gl = 2 * lat.nl // 3
     iz = round(z_mass_phys / lat.h)
     mi = lat.nmap.get((gl, 0, iz))
     if mi is None:
         return np.zeros(lat.n), None
-    mx = lat.pos[mi]
-    r = np.sqrt(np.sum((lat.pos - mx) ** 2, axis=1)) + 0.1
-    return strength / r, mi
+    my, mz = lat.pos[mi, 1], lat.pos[mi, 2]
+    r_spatial = np.sqrt(
+        (lat.pos[:, 1] - my) ** 2 + (lat.pos[:, 2] - mz) ** 2
+    ) + 0.1
+    return strength / r_spatial, mi
 
 
 def make_field_4d(lat, z_mass_phys, strength):
@@ -494,8 +496,8 @@ def main():
     print("  w(theta) = cos^(d_spatial)(theta)")
     print("=" * 70)
     print()
-    print("HYPOTHESIS: cos^(d_spatial)(theta) gives the best gravity-to-isotropy")
-    print("trade-off in each dimension, compensating for sin^(d-1)(theta) path")
+    print("HYPOTHESIS: cos^(d_spatial)(theta) gives the strongest gravity in each")
+    print("dimension, compensating for sin^(d-1)(theta) path")
     print("density growth at large angles.")
     print()
 
