@@ -38,8 +38,6 @@ Per-family summaries:
 - not a stable amplitude law
 - not a family-independent `H = 0.25` portability result
 - not a third-family extrapolation
-- not a claim that the `Fam1` boundary replay has been fully hardened
-
 The common sign stays negative, but the normalized magnitudes remain
 family-dependent.
 `Fam1` is the shallower weak branch; `Fam2` is the deeper weak branch.

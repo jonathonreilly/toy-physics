@@ -1,7 +1,7 @@
-# Fam2 Single-Family Refinement — Hard Negative
+# Fam2 Single-Family Refinement — Strong Negative on the Tested Ladder
 
 **Date:** 2026-04-07
-**Status:** retained negative — Fam2 kubo_true at H=0.20 gives **+4.5082**, a 36.4% crash from H=0.25's +7.0883 and 24.5% below the Fam1/Fam3 converged value of ~5.97. The oscillation amplitude is GROWING with refinement, not shrinking. The hypothesis "Fam2 just needs finer H to converge to ~5.97" is decisively rejected. The lane supports a genuinely different observed refinement behavior on Fam2 relative to Fam1/Fam3. A weaker lattice-pull story is a plausible interpretation, but the current data do **not** isolate `restore` alone because drift and restore vary together across families.
+**Status:** retained negative on the tested ladder — Fam2 kubo_true at H=0.20 gives **+4.5082**, a 36.4% crash from H=0.25's +7.0883 and 24.5% below the Fam1/Fam3 converged value of ~5.97. The oscillation amplitude grows rather than shrinks across the tested H sequence. This strongly weakens the simple "Fam2 just needs one more refinement to settle near ~5.97" rescue story, but it does **not** prove literal divergence or rule out later settling at much finer H. The lane supports a genuinely different observed refinement behavior on Fam2 relative to Fam1/Fam3. A weaker lattice-pull story is a plausible interpretation, but the current data do **not** isolate `restore` alone because drift and restore vary together across families.
 
 ## Artifact chain
 
@@ -48,14 +48,15 @@ Comparison to Fam1/Fam3 at H=0.25:
 - Fam2 at H=0.20: **+4.5082**
 - Deviation from Fam1/Fam3 target: **24.5%**
 
-## What this rejects
+## What this strongly weakens
 
-The hypothesis "Fam2 is slow to converge but will settle near 5.97
-at finer H" is decisively rejected. If Fam2 were approaching the
-Fam1/Fam3 value, we would expect Δ(H=0.25 → H=0.20) to be smaller
+The simple near-term rescue story
+"Fam2 is slow to converge but will settle near 5.97 on this tested
+ladder" is not supported. If Fam2 were approaching the Fam1/Fam3
+value smoothly, we would expect Δ(H=0.25 → H=0.20) to be smaller
 than Δ(H=0.35 → H=0.25). Instead, the Δ amplitude GREW from 12.2%
-to 36.4%. The oscillation is getting worse with refinement, not
-damping out.
+to 36.4%. On the tested sequence, the oscillation is getting worse,
+not better.
 
 The Fam2 series is:
 
@@ -64,8 +65,9 @@ The Fam2 series is:
        -5.1%    +12.2%    -36.4%
 ```
 
-This is non-monotone and divergent — the very pattern that
-indicates NOT converging.
+This is non-monotone and still bouncing on the tested ladder.
+It is enough to say "not converged here," not enough to prove
+mathematical divergence.
 
 ## What this does not reject
 
@@ -104,10 +106,9 @@ In this reading:
 
 - Fam1 and Fam3 have a well-defined observed continuum limit of
   `kubo_true` at the tested refinements
-- Fam2 does NOT have a well-defined observed continuum limit at these
-  refinements
+- Fam2 is not converged on the tested H ladder
 - The ~5.97 continuum value currently holds on the two higher-restore
-  families tested, but not on Fam2
+  families tested, but not on Fam2 at these refinements
 
 This is a meaningful distinction, not just a failure to converge:
 it says the continuum-limit claim for `kubo_true` is generator-
@@ -118,9 +119,9 @@ pull reading is a leading explanation, not yet an isolated theorem.
 
 | Row | Update 12 (Lane α+ + Lane δ) | This lane |
 | --- | --- | --- |
-| kubo_true continuum limit on Fam2 | not yet settled | **explicitly DOES NOT converge** at H ∈ {0.5, 0.35, 0.25, 0.20} |
+| kubo_true continuum limit on Fam2 | not yet settled | **not converged on the tested H ladder** H ∈ {0.5, 0.35, 0.25, 0.20} |
 | Family portability of kubo_true | partial (Fam1/Fam3 agree, Fam2 bouncing) | **partial narrowed**: agrees on the two higher-restore families tested, does NOT hold on Fam2 at these refinements |
-| Hypothesis "Fam2 just needs finer H" | open | **REJECTED** — Fam2 oscillation amplitude grows with refinement |
+| Hypothesis "Fam2 just needs one more refinement" | open | **strongly weakened** — Fam2 oscillation amplitude grows with refinement |
 
 ## What this does NOT resolve
 
@@ -136,13 +137,16 @@ pull reading is a leading explanation, not yet an isolated theorem.
 
 > "At a new refinement point H=0.20, Fam2's kubo_true is +4.5082 — a
 > 36.4% crash from H=0.25's +7.0883 and 24.5% below the Fam1/Fam3
-> converged value of ~5.97. The Fam2 oscillation amplitude is
-> GROWING with refinement (5.1% → 12.2% → 36.4%), not shrinking. The
-> hypothesis 'Fam2 is slow to converge but will settle near 5.97
-> at finer H' is decisively rejected. Fam2 shows a genuinely different
+> converged value of ~5.97. The Fam2 oscillation amplitude grows
+> with refinement on the tested ladder (5.1% → 12.2% → 36.4%), so
+> Fam2 is still bouncing rather than settling at H ∈ {0.5, 0.35,
+> 0.25, 0.20}. This strongly weakens the easy near-term rescue story,
+> but it does not by itself prove literal divergence or rule out
+> later settling at much finer H. Fam2 shows a genuinely different
 > observed refinement behavior from Fam1/Fam3 at the tested H values.
 > A weaker-lattice-pull explanation is plausible, but the current data
 > do not isolate `restore` alone because drift and restore co-vary.
 > The ~5.97 continuum value currently holds on Fam1/Fam3 and not on
-> Fam2. This narrows the claim rather than invalidating it — Lane α
-> and Lane α+'s Fam1/Fam3 agreement are unaffected."
+> Fam2 at these refinements. This narrows the claim rather than
+> invalidating it — Lane α and Lane α+'s Fam1/Fam3 agreement are
+> unaffected."

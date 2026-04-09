@@ -1,7 +1,7 @@
 # Wave Direct-dM H=0.25 Low-Band Retention Note
 
 **Date:** 2026-04-08
-**Status:** retained narrow validation on the Fam1/seed1 low-band continuation
+**Status:** retained one-strength validation on the Fam1/seed1 low-band continuation, later hardened by control ladder
 
 This note records the complementary direct `H = 0.25` replay for the
 direct-`dM` amplitude-band story:
@@ -48,6 +48,19 @@ So the honest conclusion is:
 > to the coarse rows, but the absolute branch responses still drift downward
 > at the finer refinement.
 
+## Later hardening
+
+This one-strength replay is now superseded as the main artifact for this pair
+by the same-resolution control ladder in
+[`WAVE_DIRECT_DM_H025_FAM1_SEED1_CONTROL_NOTE.md`](./WAVE_DIRECT_DM_H025_FAM1_SEED1_CONTROL_NOTE.md):
+
+- exact `S = 0` null
+- sign pattern `- - -`
+- `|delta_hist / s|` spread `5.22%`
+
+So this note should now be read as the first retained replay for the
+Fam1/seed1 low branch, not the final control surface.
+
 ## What this changes
 
 - The two planned `H = 0.25` validation points have now both landed.
@@ -70,5 +83,6 @@ So the honest conclusion is:
 
 - [`scripts/wave_direct_dm_h025_point_runner.py`](../scripts/wave_direct_dm_h025_point_runner.py)
 - [`logs/2026-04-08-wave-direct-dm-h025-low-band.txt`](../logs/2026-04-08-wave-direct-dm-h025-low-band.txt)
+- [`docs/WAVE_DIRECT_DM_H025_FAM1_SEED1_CONTROL_NOTE.md`](./WAVE_DIRECT_DM_H025_FAM1_SEED1_CONTROL_NOTE.md)
 - [`docs/WAVE_DIRECT_DM_H025_HIGH_BAND_BOUNDARY_NOTE.md`](./WAVE_DIRECT_DM_H025_HIGH_BAND_BOUNDARY_NOTE.md)
 - [`docs/WAVE_DIRECT_DM_H025_TWO_POINT_SYNTHESIS_NOTE.md`](./WAVE_DIRECT_DM_H025_TWO_POINT_SYNTHESIS_NOTE.md)
