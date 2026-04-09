@@ -294,10 +294,10 @@ def main():
     print()
 
     # ================================================================
-    # EXPERIMENT 2: s-sweep at k = 1.0 (perturbative regime)
+    # EXPERIMENT 2: s-sweep at k = 1.0
     # ================================================================
     print("=" * 78)
-    print("EXPERIMENT 2: s-sweep at k = 1.0 (perturbative regime)")
+    print("EXPERIMENT 2: s-sweep at k = 1.0")
     print("=" * 78)
     print()
 
@@ -308,7 +308,7 @@ def main():
 
     strengths = [5e-6, 5e-5, 5e-4, 5e-3, 5e-2]
 
-    header2 = (f"{'s':>10} | {'max_f':>8} | {'max_phase':>10} | "
+    header2 = (f"{'s':>10} | {'max_f':>8} | {'~path_ph':>10} | "
                f"{'VL shift':>12} | {'PN shift':>12} | {'CTL shift':>12} | "
                f"{'PN/VL':>8} | {'PN-VL%':>8}")
     print(header2)
@@ -412,12 +412,10 @@ def main():
             print("  At all tested k where VL is attractive, PN ENHANCES deflection.")
         else:
             print("  MIXED: PN effect depends on k even among attractive-VL rows.")
-            for r in k_results:
-                print(f"    k={r['k']:.1f}: PN-VL = {r['pct']:+.2f}% "
-                      f"(max_phase={r['max_phase']:.3f}, {r['regime']})")
+            for r in attractive_rows:
+                print(f"    k={r['k']:.1f}: PN-VL = {r['pct']:+.2f}%")
             print()
-            print("  The relationship between phase magnitude and sign is more")
-            print("  complex than simple perturbative vs wrapping classification.")
+            print("  The sign of the f^2 correction is k-dependent in this regime.")
 
     elapsed = time.time() - t0
     print()
