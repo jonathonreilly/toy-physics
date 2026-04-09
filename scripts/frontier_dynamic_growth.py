@@ -20,16 +20,27 @@ GROWTH RULE:
 TESTS:
   1. Growth shape: does the graph grow, collapse, or explode?
   2. Born rule (Sorkin 3-slit): does |I3|/P remain < 1e-10 on the grown DAG?
-  3. Gravity: does a persistent mass source deflect the grown graph?
-  4. Comparison to static rectangular lattice of the same size.
+  3. Gravity: does a mass source deflect the beam on a grown graph?
+  4. Final-layer probability overlap with a static rectangular lattice.
+
+CAVEATS (from review):
+  - Test 3 uses a bespoke analytic potential V(y) = -s/(|y-y_mass|+1),
+    NOT the retained derive_node_field Laplacian relaxation. This is a
+    feasibility probe for gravity on grown graphs, not evidence that the
+    full retained gravity mechanism survives dynamic growth.
+  - Test 4 compares only the FINAL-LAYER free-space probability distribution
+    (Bhattacharyya overlap on common y-values). It does not compare
+    intermediate layers, phases, graph structure, or the gravity case.
+    The "96% fidelity" is a narrow end-state similarity metric.
+  - The free-space action S = L is valley-linear with f=0. The gravity
+    test uses S = L*(1+V) which is valley-linear with f = -V.
 
 HYPOTHESIS:
-  "Amplitude-guided growth produces a viable graph where Born rule and
-  gravity survive."
+  "Amplitude-guided growth produces a self-regulating graph where Born
+  rule survives."
 
 FALSIFICATION:
-  "If the graph collapses to 1 node per layer or Born fails on the grown
-  graph."
+  "If the graph collapses to 1 node per layer or Born fails."
 """
 
 from __future__ import annotations

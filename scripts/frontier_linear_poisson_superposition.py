@@ -1,6 +1,18 @@
 #!/usr/bin/env python3
-"""Test: does replacing the nonlinear field solver with a standard linear
-Poisson solver restore gravitational superposition?
+"""Test: linear vs nonlinear field solver superposition — SPENT-DELAY LANE.
+
+STATUS: SUPERSEDED by frontier_two_body_valley_linear.py, which tests
+  the RETAINED valley-linear action. This script is on the LEGACY
+  spent-delay lane (default action_mode) and is kept for reference only.
+
+  The VL two-body test showed that superposition fails for BOTH solvers
+  on the retained action, because the phase accumulation exp(i*k*L*(1-f))
+  is intrinsically nonlinear in f regardless of field linearity.
+
+KNOWN ISSUES (from review):
+  - Uses default spent_delay action (not the retained valley-linear)
+  - Freezes the free-space DAG (does not rebuild arrival times per field)
+  - The 116.8% -> 4.5% improvement conflates solver change with DAG freeze
 
 BACKGROUND:
   frontier_two_body_gravity.py found 223% superposition error. The root
