@@ -17,7 +17,7 @@ VERDICT
   OVERFLOW — amplitude range 1.0e+00 to 2.4e+11
   Gravity values: ['-0.9844', '+0.1355', '-0.2692']
     sign NOT stable across refinements
-  Born interference ratio: ['3.87e-01', '2.87e-01', '1.10e-02']
+  2-slit interference ratio: ['3.87e-01', '2.87e-01', '1.10e-02']
     (this is a 2-slit cross-term magnitude, not 3-slit I3;
      a true 3-slit Born audit needs a 3-path geometry)
   MI values:  ['0.4317', '0.4952', '0.9994']
