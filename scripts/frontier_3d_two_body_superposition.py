@@ -2,11 +2,23 @@
 """
 frontier_3d_two_body_superposition.py
 
-Test gravitational superposition on the 3D ordered lattice with valley-linear action.
-Two masses at asymmetric z-positions; check if delta(A+B) = delta(A) + delta(B).
+Test whether propagation is linear in an ANALYTICALLY ADDITIVE external
+field on the 3D ordered lattice with valley-linear action.
 
-Hypothesis: Superposition fails in 3D as it did in 2D (structural to phase-valley mechanism).
-Falsification: If superposition error < 10%, the 2D failure was dimension-specific.
+NOTE (from review): This script builds two single-mass analytic 1/r
+fields and DEFINES field_ab = field_a + field_b directly. It therefore
+tests whether the propagator responds linearly to an already-additive
+field, NOT whether the retained multi-source field solver (derive_node_field)
+produces additive fields. The 0.01% error shows propagator linearity
+in the field coupling, not gravitational superposition from first principles.
+
+A true multi-source superposition test would need to solve the Laplacian
+field with BOTH mass clusters simultaneously and compare to the sum
+of individually-solved fields.
+
+Hypothesis: Propagation is linear in the field coupling (delta(A+B) = delta(A) + delta(B)
+  when field(A+B) = field(A) + field(B) by construction).
+Falsification: If superposition error > 10% even with additive fields.
 """
 
 import math

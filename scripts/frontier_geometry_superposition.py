@@ -1,23 +1,27 @@
 #!/usr/bin/env python3
 """Geometry superposition: coherent sum over DAG ensemble.
 
-In quantum gravity, spacetime geometry itself should be in superposition.
-This experiment sums the propagator over an ENSEMBLE of DAGs weighted by
-a complexity measure (inverse edge count).
+STATUS: NORMALIZATION ARTIFACT (from review). The reported 278%/384%
+contrast is dominated by a Cauchy-Schwarz artifact: with the original
+normalization, even IDENTICAL geometries give a large coherent/incoherent
+ratio (|sum w_i|^2 / sum |w_i|^2 = N for N equal-weight geometries).
 
-Five DAG geometries for the same physical setup (same source, detector, dims):
+The REAL question is whether different DAG topologies produce different
+PHASES at the detector. The phase diagnostic (up to 14.7 degrees
+difference) IS real, but the contrast metric needs fixing.
+
+Five DAG geometries:
   1. Rectangular grid (standard)
-  2. Rectangular grid with random edge deletions (10%)
-  3. Rectangular grid with random edge additions (10%)
-  4. Tapered grid (narrower in the middle)
-  5. Expanded grid (wider in the middle)
+  2. Random edge deletions (10%)
+  3. Random edge additions (10%)
+  4. Tapered grid
+  5. Expanded grid
 
-For each DAG, propagate from (0,0) to detector at x=width, collecting
-COMPLEX amplitudes psi(y) at the detector.
+For each, propagate from (0,0) to detector, collecting complex psi(y).
 
-Geometry superposition:
-  P_coherent(y)   = |sum_i w_i psi_i(y)|^2 / sum_i |w_i|^2
-  P_incoherent(y) = sum_i |w_i|^2 |psi_i(y)|^2 / sum_i |w_i|^2
+NOTE: The coherent/incoherent contrast metric has a built-in
+Cauchy-Schwarz inflation. The phase differences between geometries
+are the meaningful observable, not the raw contrast ratio.
 
 Weight: w_i = 1/n_edges_i (simpler geometries weighted more).
 

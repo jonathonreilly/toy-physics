@@ -1,23 +1,26 @@
 #!/usr/bin/env python3
 """
-Frontier experiment: wave-particle transition under continuous decoherence.
+Frontier experiment: wave-particle transition under detector-level mixing.
 
-HYPOTHESIS: There is a sharp transition from wave to particle behavior
-            at a critical decoherence coupling.
-FALSIFICATION: If visibility V decreases linearly with mixing parameter alpha,
-               the transition is gradual (no critical point).
+STATUS: IMPOSED, NOT EMERGENT (from review). This script constructs the
+transition by mixing endpoint probability distributions AFTER propagation:
+  P(y, alpha) = (1-alpha)*P_wave(y) + alpha*P_particle(y)
+and sets D = alpha by definition. The smooth transition and Englert
+complementarity check are therefore properties of this interpolation
+ANSATZ, not emergent results of the propagator + environment dynamics.
 
-Physics: The model produces interference (wave) when no which-path record
-exists, and decoherence (particle) when which-path records are created.
-We interpolate between these two regimes with a mixing parameter alpha in [0,1]:
+A physical decoherence model would need an actual environment coupling
+(e.g., the CL bath with tunable lambda) producing D as an output,
+not an input.
 
+WHAT SURVIVES: The two endpoint distributions P_wave and P_particle
+are genuine propagator results (interference vs which-path). The
+interpolation structure shows these are smoothly connected, which is
+consistent with (but not a proof of) complementarity.
+
+We interpolate between interference and which-path regimes:
     P(y, alpha) = (1 - alpha) * P_interference(y) + alpha * P_whichpath(y)
-
-and measure:
-    - Visibility:  V = (P_max - P_min) / (P_max + P_min)  in the central region
-    - Coherent visibility: V_coh = (V - V_particle) / (1 - V_particle)
-      subtracts the incoherent (single-slit diffraction) baseline
-    - Complementarity: V_coh^2 + alpha^2 <= 1  (Englert relation)
+and measure visibility and complementarity as functions of alpha.
 """
 
 import sys

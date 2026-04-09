@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
-"""Derive WHY a monotonically decreasing angular kernel w(theta) is required
-for gravitational attraction in the path-integral-on-graphs framework.
+"""Heuristic investigation of WHY decreasing angular kernels produce attraction.
+
+STATUS: NOT A DERIVATION (from review). The single-layer geometric argument
+fails (predicts TOWARD for uniform, which is actually AWAY). The script
+falls back to full simulation and post-hoc interpretation. What survives
+is a heuristic story about phase coherence, verified numerically against
+all 7 kernels, but NOT an analytic proof from axioms.
 
 Hypothesis: "The gravitational response function G_gravity predicts gravity
 direction for all tested kernels."
