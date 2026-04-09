@@ -31,6 +31,7 @@ Cost: 6 b-values × 2 H values (H ∈ {0.5, 0.35}) = 12 runs.
 
 from __future__ import annotations
 
+import argparse
 import math
 import os
 import sys
@@ -42,7 +43,7 @@ from kubo_continuum_limit import (
 )
 
 IMPACT_PARAMETERS = [1.0, 2.0, 3.0, 4.0, 5.0, 6.0]
-REFINEMENTS = [(0.5, "coarse"), (0.35, "medium")]
+DEFAULT_HS = [0.5, 0.35]
 
 
 def measure_deflection_at(H_val, b_phys):
@@ -86,15 +87,28 @@ def log_slope(xs, ys):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--hs",
+        type=float,
+        nargs="*",
+        default=DEFAULT_HS,
+        help="Refinement H values to run. Default: 0.5 0.35",
+    )
+    args = parser.parse_args()
+
+    label_map = {0.5: "coarse", 0.35: "medium", 0.25: "fine"}
+    refinements = [(h, label_map.get(h, f"H={h:g}")) for h in args.hs]
+
     print("=" * 100)
     print("LANE L: GRAVITATIONAL DEFLECTION / LENSING SWEEP")
     print(f"Physical: T={T_PHYS}, PW={PW_PHYS}, k*H={K_PER_H}, S={S_PHYS}")
     print(f"Impact parameters b: {IMPACT_PARAMETERS}")
-    print(f"Refinements: {[r[0] for r in REFINEMENTS]}")
+    print(f"Refinements: {[r[0] for r in refinements]}")
     print("=" * 100)
 
     results = {}  # results[H][b] = measurement dict
-    for H_val, label in REFINEMENTS:
+    for H_val, label in refinements:
         print(f"\n--- {label} (H={H_val}) ---", flush=True)
         results[H_val] = {}
         for b in IMPACT_PARAMETERS:
@@ -107,14 +121,14 @@ def main():
     print("DEFLECTION TABLE — dM(b) at each refinement")
     print("=" * 100)
     header = f"{'b':>6s}"
-    for H_val, label in REFINEMENTS:
+    for H_val, label in refinements:
         header += f" {label + f' dM (H={H_val})':>22s}"
     header += f" {'drift':>10s}"
     print(header)
     for b in IMPACT_PARAMETERS:
         row = f"{b:6.1f}"
         dMs = []
-        for H_val, label in REFINEMENTS:
+        for H_val, label in refinements:
             dM = results[H_val][b]["dM"]
             dMs.append(dM)
             row += f" {dM:22.6f}"
@@ -127,7 +141,7 @@ def main():
     print("\n" + "=" * 100)
     print("LOG-LOG FIT |dM| vs b  at each refinement")
     print("=" * 100)
-    for H_val, label in REFINEMENTS:
+    for H_val, label in refinements:
         bs = list(IMPACT_PARAMETERS)
         dMs = [results[H_val][b]["dM"] for b in bs]
         slope, intercept, r2 = log_slope(bs, dMs)
@@ -142,7 +156,7 @@ def main():
     print("\n" + "=" * 100)
     print("LOG-LOG FIT kubo_true vs b  at each refinement (full range)")
     print("=" * 100)
-    for H_val, label in REFINEMENTS:
+    for H_val, label in refinements:
         bs = list(IMPACT_PARAMETERS)
         kubos = [results[H_val][b]["kubo_true"] for b in bs]
         slope, intercept, r2 = log_slope(bs, kubos)
@@ -165,7 +179,7 @@ def main():
         ("b ∈ {3,4,5,6}   (asymptotic only, excluding peak at b≈2)", [3.0, 4.0, 5.0, 6.0]),
     ]:
         print(f"\n  Subset: {subset_label}")
-        for H_val, label in REFINEMENTS:
+        for H_val, label in refinements:
             kubos = [results[H_val][b]["kubo_true"] for b in subset_bs]
             dMs = [results[H_val][b]["dM"] for b in subset_bs]
             slope_k, intercept_k, r2_k = log_slope(subset_bs, kubos)
@@ -181,7 +195,7 @@ def main():
     print("SIGN CHECK — gravity should be TOWARD the mass (dM > 0 when z_src > 0)")
     print("=" * 100)
     all_toward = True
-    for H_val, label in REFINEMENTS:
+    for H_val, label in refinements:
         for b in IMPACT_PARAMETERS:
             dM = results[H_val][b]["dM"]
             toward = dM > 0
@@ -195,7 +209,7 @@ def main():
     print("\n" + "=" * 100)
     print("VERDICT")
     print("=" * 100)
-    H_fine = REFINEMENTS[-1][0]
+    H_fine = refinements[-1][0]
     asymp_bs = [3.0, 4.0, 5.0, 6.0]
     asymp_kubos = [results[H_fine][b]["kubo_true"] for b in asymp_bs]
     slope_asymp, _, r2_asymp = log_slope(asymp_bs, asymp_kubos)
