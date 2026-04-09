@@ -137,12 +137,14 @@ def main():
                 lorentz_windows.append({"start": kk, "end": kk})
             elif sig == "LORENTZIAN" and prev_sig == "LORENTZIAN":
                 lorentz_windows[-1]["end"] = kk
-            prev_sig = sig
 
             # Print at coarser intervals + all transitions
-            if abs(kk % 1.0) < 0.05 or sig != prev_sig:
+            is_transition = (sig != prev_sig)
+            prev_sig = sig
+            if abs(kk % 1.0) < 0.05 or is_transition:
+                marker = " <<" if is_transition else ""
                 print(f"  {kk:>6.2f} | {eig_causal:>+12.6f} | {eig_spatial:>+12.6f} | "
-                      f"{cos_kh:>+10.4f} | {sig:>15}")
+                      f"{cos_kh:>+10.4f} | {sig:>15}{marker}")
 
         print()
         if lorentz_windows:
@@ -204,8 +206,11 @@ def main():
     print("PART 3: Does the Lorentzian window scale with h?")
     print("=" * 72)
     print()
-    print("  If the window is at k ~ pi/(2h), it's a lattice artifact.")
-    print("  If it's at k ~ constant (independent of h), it's physical.")
+    print("  If the first Lorentzian k shifts roughly as 1/h, the window")
+    print("  is a UV/lattice-scale feature. If k is h-independent, it's physical.")
+    print("  NOTE: this tests where the window STARTS, not whether the low-k")
+    print("  continuum sector stays Euclidean (that would require a separate")
+    print("  fixed-k sweep across h values).")
     print()
 
     wfn = lambda t: math.cos(t) ** 2  # cos^2
