@@ -92,9 +92,8 @@ This note does **not** claim:
 - an `H = 0.25` portability law
 - a refinement-stable amplitude package
 
-The fine-`H` evidence is still bounded to `Fam1` and `Fam2`.
-The entire seed-`0` surface is now controlled across both families, but the
-`Fam1` seed-`1` row is still only one-strength replay evidence.
+The fine-`H` evidence is still bounded to `Fam1` and `Fam2`, but both retained
+families now have fully controlled `H = 0.25` pairs.
 
 ## Artifact chain
 
