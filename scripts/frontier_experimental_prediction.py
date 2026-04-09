@@ -1,16 +1,22 @@
 #!/usr/bin/env python3
 """
-Experimental Predictions: DAG Model vs Standard QM
-===================================================
-Compute concrete, quantitative predictions where this model
-differs from textbook quantum mechanics, and estimate the
-experimental regime where deviations become detectable.
+Experimental Predictions: DAG Model vs Simplified QM Comparator
+===============================================================
+Compute where this model's predictions differ from simple analytic
+formulas and estimate the experimental regime for deviations.
 
-Prediction 1 -- Modified double-slit pattern
-  The model's interference comes from a path-sum on a finite DAG
-  with discrete lattice spacing h.  Standard QM uses the continuous
-  Schrodinger propagator.  We compare the two patterns and quantify
-  their difference.
+CAVEAT (from review): Prediction 1 compares the DAG pattern against
+a bare cos^2(delta_phi/2) two-path formula, NOT a full continuum
+QM propagator with single-slit envelopes and proper normalization.
+The reported 11.4% difference shows deviation from this simplified
+comparator, not from standard QM per se. A proper comparison would
+need the full Fraunhofer/Fresnel diffraction integral.
+
+Prediction 1 -- DAG pattern vs simplified two-path formula
+  The model's interference from a path-sum on a finite DAG
+  compared to a bare cos^2 interference formula (no diffraction
+  envelope). Differences reflect both lattice structure AND the
+  missing diffraction physics in the comparator.
 
 Prediction 2 -- Gravitational phase shift (COW experiment)
   QM predicts dPhi = m^2 g A / (hbar^2 k).
