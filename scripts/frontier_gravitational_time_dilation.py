@@ -135,14 +135,20 @@ def run_experiment() -> None:
         arrival_data[actual_M] = t_vals
 
         print(f"M={M} (actual={actual_M} nodes in grid):")
-        print(f"  {'r':>4s}  {'f(r)':>10s}  {'1/(1+f)':>10s}  {'t_mass':>10s}  {'t_flat':>10s}  {'t_ratio':>10s}")
+        print(f"  NOTE: 'local_clock' = 1/(1+f) is the LOCAL clock rate at radius r.")
+        print(f"        'path_ratio' = t_mass/t_flat is path-integrated (source-to-r).")
+        print(f"        These are DIFFERENT observables. Only local_clock is the")
+        print(f"        time dilation analog. path_ratio includes field at ALL radii")
+        print(f"        between source and measurement point.")
+        print()
+        print(f"  {'r':>4s}  {'f(r)':>10s}  {'local_clock':>12s}  {'t_mass':>10s}  {'t_flat':>10s}  {'path_ratio':>11s}")
         for i, r in enumerate(r_values):
             f_val = f_vals[i]
             clock_rate = 1.0 / (1.0 + f_val) if f_val > -1 else float("inf")
             t_m = t_vals[i]
             t_f = arrivals_flat.get(measurement_points[i], float("inf"))
             ratio = t_m / t_f if t_f > 0 else float("inf")
-            print(f"  {r:4d}  {f_val:10.6f}  {clock_rate:10.6f}  {t_m:10.4f}  {t_f:10.4f}  {ratio:10.6f}")
+            print(f"  {r:4d}  {f_val:10.6f}  {clock_rate:12.6f}  {t_m:10.4f}  {t_f:10.4f}  {ratio:11.6f}")
         print()
 
     # ===== PART 2: Power-law fit f(r) = A/r^alpha =====
@@ -385,16 +391,26 @@ def run_experiment() -> None:
         print()
 
         print("5. VERDICT:")
-        print("   The model DOES produce gravitational time dilation.")
-        print("   The field f(r) is the solution to the 2D Poisson equation")
-        print("   (as it must be, since derive_node_field IS a Laplacian relaxation).")
-        print("   In 2D, this gives f ~ ln(R/r), not 1/r.")
-        print("   The time dilation formula dtau/tau = -f matches the 2D GR analog")
-        print("   of the Schwarzschild solution to first order.")
+        print("   The model produces a LOCAL clock-rate field 1/(1+f) that is")
+        print("   slower near mass (f > 0). This is the correct SIGN for")
+        print("   gravitational time dilation.")
         print()
-        print("   For 3D (the physical case), the same mechanism on a 3D lattice")
-        print("   would give f ~ 1/r (3D Poisson Green's function),")
-        print("   recovering dtau/tau = -GM/rc^2 exactly.")
+        print("   WHAT IS CONFIRMED:")
+        print("   - The field f(r) solves the 2D Poisson equation (R^2 > 0.998)")
+        print("   - Local clock rate decreases near mass (correct sign)")
+        print("   - The mechanism (delay = L*(1+f)) naturally produces redshift")
+        print()
+        print("   WHAT IS NOT CONFIRMED:")
+        print("   - Mass scaling is sub-linear (gamma=0.35 vs expected 1.0)")
+        print("   - Path-integrated arrival ratios =/= local clock rates")
+        print("     (these are distinct observables and should not be conflated)")
+        print("   - The claim 'matches GR' requires 3D verification with 1/r field")
+        print()
+        print("   CAVEAT: The field solver IS a Poisson solver, so f(r) following")
+        print("   the Poisson Green's function is guaranteed by construction,")
+        print("   not a derived result. The non-trivial content is that the")
+        print("   propagator's delay mechanism produces the correct TIME DILATION")
+        print("   SIGN from the field.")
 
 
 if __name__ == "__main__":
