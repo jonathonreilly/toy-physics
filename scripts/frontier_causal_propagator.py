@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Causal propagator: does the signal vanish outside the light cone?
+"""Causal propagator: does the amplitude envelope show a light cone?
 
 HYPOTHESIS: The DAG propagator has a well-defined light cone with constant
 effective signal speed c_eff. For |y| > c_eff * n (lattice layers), the
@@ -19,7 +19,13 @@ EXPERIMENT:
             the maximum-speed lattice path?
 
 FALSIFICATION: If G is significant for all y at all n, there is no causal
-cone and the theory is Euclidean (no signal speed limit).
+cone in the AMPLITUDE ENVELOPE and the propagator is diffusive rather than
+ballistic.
+
+NOTE AFTER THE k-SWEEP:
+  This tests ballistic amplitude spreading only. A negative result here does
+  not rule out phase-sensitive, resonance-based gravity-like responses; it
+  only rules out a clean wavefront / light-cone interpretation of |psi|.
 
 Run: source /tmp/physics_venv/bin/activate && python3 scripts/frontier_causal_propagator.py
 """
@@ -536,10 +542,16 @@ def run_experiment():
     print("     lattice causality. This is expected -- the kernels are smooth,")
     print("     not compactly supported.")
     print()
-    print("  IMPLICATION: The propagator behaves like a diffusion kernel, not a")
-    print("  wave kernel. The cone edge grows as sqrt(n) rather than n, meaning")
-    print("  there is no finite signal speed. To recover Lorentzian causality,")
-    print("  one would need either:")
+    print("  IMPLICATION: The amplitude envelope behaves like a diffusion kernel,")
+    print("  not a ballistic wave kernel. The cone edge grows as sqrt(n) rather")
+    print("  than n, meaning there is no finite signal speed in |psi| alone.")
+    print("  This is consistent with a resonance/interference mechanism for")
+    print("  gravity-like deflection: the relevant physics can live in phase-")
+    print("  sensitive response windows even when the coarse amplitude envelope")
+    print("  spreads diffusively.")
+    print()
+    print("  To recover Lorentzian causality from the propagator itself, one")
+    print("  would need either:")
     print("    (a) A compactly-supported kernel (hard cutoff at some angle)")
     print("    (b) Interference effects (Wick rotation / analytic continuation)")
     print("    (c) A mechanism where the PHASE structure creates effective")

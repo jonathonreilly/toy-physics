@@ -16,8 +16,9 @@
 2. **k=0 gravity control** — setting the phase coupling to zero kills gravity
    for all kernels, all dimensions, all field strengths. Structural.
 
-3. **F∝M = 1.00 in 2+1D** — valley-linear action on the 3D ordered lattice
-   gives exact linear mass scaling with R²=1.0. Existing closure card
+3. **F∝M = 1.00 in 2+1D at the retained reference coupling** — valley-linear
+   action on the 3D ordered lattice gives exact linear mass scaling with
+   R²=1.0 in the benchmark attractive window. Existing closure card
    (lattice_3d_valley_linear_card.py) with 10 verified properties.
 
 4. **Action constraint theorem** — Lorentz covariance + Newtonian limit
@@ -38,6 +39,15 @@
 7. **Mass breaks propagator rank degeneracy** — free-space effective rank = 2
    (parity concentration). Mass pushes entropy from ln(2) to 1.45.
    Mechanism: field gradient breaks y-symmetry.
+
+**Synthesis update from the later k-sweep, PN study, and 2D sign diagnosis**
+
+The gravity-like response is best understood as a **coupling-window /
+resonance phenomenon**, not as a universal geometric law of the propagator.
+The retained `-1.40` lensing slope at `k·H=2.5` is a reference-configuration
+value on an oscillatory response curve, not a structural constant. Within
+specific attractive windows the model can look Newtonian-like; outside them
+the same propagator can become shallower or even repulsive.
 
 **Tier 3: Results that are real but overclaimed in the scripts**
 
@@ -79,9 +89,11 @@
     whether ANY finite-lattice propagator has this shape. The thermal
     spectrum is likely geometric (lattice mode structure), not dynamical.
 
-13. **PN f² correction suppresses gravity** — opposite to naive expectation,
-    consistent across all k values where VL is attractive. The f² term
-    reduces phase contrast.
+13. **PN f² correction is regime-dependent** — in the weak-field window it
+    enhances gravity slightly, while at stronger coupling it can suppress
+    or oscillate. The cleaner synthesis is that the f² term shifts the
+    effective accumulated phase and moves the system along the same
+    interference / resonance curve seen in the later k-sweep.
 
 ## Reframed approaches for the failures
 

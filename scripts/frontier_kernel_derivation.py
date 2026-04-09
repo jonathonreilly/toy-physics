@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
-"""Heuristic investigation of WHY decreasing angular kernels produce attraction.
+"""Heuristic investigation of how the angular kernel biases gravity direction.
 
 STATUS: NOT A DERIVATION (from review). The single-layer geometric argument
 fails (predicts TOWARD for uniform, which is actually AWAY). The script
-falls back to full simulation and post-hoc interpretation. What survives
-is a heuristic story about phase coherence, verified numerically against
-all 7 kernels, but NOT an analytic proof from axioms.
+falls back to full simulation and post-hoc interpretation. After the later
+k-sweep, what survives is narrower: the kernel and k·H are entangled.
+Decreasing kernels do not analytically guarantee attraction; they appear to
+bias the propagator toward attractive interference windows on the tested
+lattice. This file remains a heuristic interpretation, not an analytic proof.
 
 Hypothesis: "The gravitational response function G_gravity predicts gravity
 direction for all tested kernels."
@@ -17,7 +19,8 @@ The key insight: gravity arises from a TRANSVERSE PHASE GRADIENT.  A mass
 creates a scalar field f(x) > 0 that shortens action S = L(1-f) for nearby
 paths.  Paths closer to the mass accumulate less phase, shifting the
 interference pattern.  Whether the centroid moves TOWARD or AWAY from the
-mass depends on how the kernel w(theta) weights different propagation angles.
+mass depends on how the kernel w(theta) weights different propagation angles
+AND on where the coupling k·H places the propagator on its interference curve.
 
 We define G_gravity = sum over offsets of:
     w(theta) * sin(theta) * cos(theta) * h^d / L^p
@@ -28,8 +31,9 @@ where:
   - h^d / L^p is the propagator attenuation (d=2 for 3D lattice, p=2)
   - The sum is over all neighbor offsets (dy, dz) in one layer step
 
-If G > 0, the kernel deflects amplitude TOWARD the mass (attraction).
-If G <= 0, the kernel fails to produce gravity or produces repulsion.
+If G > 0, the kernel naively predicts TOWARD deflection.
+If G <= 0, the kernel naively predicts AWAY or no deflection.
+The later sections show that this single-layer quantity is not sufficient.
 """
 from __future__ import annotations
 
@@ -740,7 +744,7 @@ def compute_two_layer_deflection(weight_fn, name, h=H, max_d_phys=MAX_D_PHYS, k=
 # ---------------------------------------------------------------------------
 def main():
     print("=" * 90)
-    print("KERNEL DERIVATION: Why monotonically decreasing w(theta) is required")
+    print("KERNEL HEURISTIC: How w(theta) biases the interference window")
     print("=" * 90)
     print()
     print("Hypothesis: G_gravity predicts gravity direction for all tested kernels.")
@@ -902,40 +906,43 @@ def main():
     print("   - Layer 2: phase-shifted amplitude interferes at detector")
     print("   The direction depends on the INTERFERENCE PATTERN, not just geometry.")
     print()
-    print("3. WHY DECREASING KERNELS WORK:")
-    print("   Forward-biased kernels (cos^n, exp(-a*t^2), linear) concentrate")
-    print("   amplitude in the FORWARD CONE. The field gradient imprints a phase")
-    print("   slope on this concentrated beam. Subsequent propagation converts")
-    print("   the phase slope to centroid shift via interference.")
+    print("3. WHY DECREASING KERNELS TEND TO WORK ON THE TESTED LATTICE:")
+    print("   Forward-biased kernels (cos^n, exp(-a*t^2), linear) narrow the")
+    print("   path-length / angle spectrum sampled by the propagator.")
+    print("   The field gradient then imprints a phase slope on a more coherent")
+    print("   subset of paths. Subsequent propagation converts that phase slope")
+    print("   to centroid shift via interference.")
     print()
-    print("   The mechanism is analogous to optical lensing:")
-    print("   - A thin lens imprints a quadratic phase profile")
-    print("   - Subsequent free propagation focuses/defocuses the beam")
-    print("   - A collimated beam (forward kernel) gets cleanly deflected")
-    print("   - A diffuse beam (uniform kernel) gets SCRAMBLED by the lens")
+    print("   After the k-sweep, the safer interpretation is not pure geometric")
+    print("   collimation but RESONANCE SELECTION: the kernel changes which")
+    print("   interference window in k·H dominates the net response.")
     print()
     print("4. WHY UNIFORM KERNEL FAILS (if it does):")
     print("   The uniform kernel allows paths at ALL angles equally.")
-    print("   High-angle paths have phase k*L that wraps many times around 2pi.")
-    print("   On a DISCRETE lattice, this rapid phase variation creates")
-    print("   destructive interference that can REVERSE the deflection sign.")
+    print("   On a discrete lattice this broad phase mixture includes many")
+    print("   high-angle aliases. The net response can therefore land in a")
+    print("   repulsive interference window instead of an attractive one.")
     print()
-    print("   This is a LATTICE ARTIFACT: in the continuum limit (h->0, max_d->inf),")
-    print("   the uniform kernel would give correct results because the phase")
-    print("   integral would converge. On a finite lattice, phase aliasing breaks it.")
+    print("   This is still a finite-lattice interference story, but the safer")
+    print("   claim is qualitative: uniform sampling broadens the phase ensemble")
+    print("   and makes repulsive windows easier to hit on the tested grid.")
     print()
     print("5. NECESSARY CONDITION FOR GRAVITY:")
-    print("   A kernel w(theta) produces attraction when its two-layer deflection")
-    print("   response is positive. This requires:")
-    print("   (a) Sufficient forward bias to maintain phase coherence")
-    print("   (b) Suppression of high-angle paths that cause phase aliasing")
-    print("   (c) w(theta) monotonically decreasing guarantees both (a) and (b)")
+    print("   A kernel w(theta) produces attraction when its multi-layer")
+    print("   interference response lands in an attractive window. On the tested")
+    print("   lattice, this appears to require:")
+    print("   (a) enough forward bias to keep the phase mixture coherent")
+    print("   (b) suppression of high-angle aliases that push the net response")
+    print("       toward repulsive windows")
+    print("   (c) at fixed k·H, monotonically decreasing kernels empirically")
+    print("       satisfy (a) and (b), but this file does not prove necessity")
     print()
-    print("   Formally: w(theta) must satisfy")
+    print("   Heuristically: w(theta) should satisfy")
     print("     sum_{z_mid} sum_{dz1,dz2} w(t1)*w(t2) * z_det * sin(k*delta_S) * h^{2d}/(L1*L2)^p > 0")
     print("   where delta_S is the action difference due to the field.")
-    print("   Decreasing w ensures high-angle paths (large L, rapid phase) are suppressed,")
-    print("   preventing them from overwhelming the coherent forward deflection.")
+    print("   Decreasing w suppresses high-angle paths (large L, rapid phase),")
+    print("   biasing the response toward attractive windows rather than proving")
+    print("   a geometry-only theorem.")
     print()
 
     # Check hypothesis
@@ -963,28 +970,28 @@ def main():
     print()
     print("CONCLUSION:")
     print("-" * 40)
-    print("The requirement for a monotonically decreasing kernel w(theta) arises from")
-    print("the PHASE COHERENCE needed for gravitational lensing on a discrete lattice.")
+    print("The tested data support a narrower conclusion than the title suggests.")
+    print("Decreasing kernels are not derived from first principles here. Instead,")
+    print("they appear to bias the discrete propagator toward ATTRACTIVE")
+    print("interference windows on the tested lattice.")
     print()
     print("Gravity is a MULTI-LAYER interference effect: the field gradient imprints a")
-    print("transverse phase slope, and subsequent free propagation converts this to a")
-    print("centroid shift. This conversion requires the beam to maintain SPATIAL COHERENCE")
-    print("across the transverse direction.")
+    print("transverse phase slope, and subsequent propagation converts this to a")
+    print("centroid shift. The sign of that shift depends on the sampled phase")
+    print("spectrum, which is set jointly by w(theta) and the coupling k·H.")
     print()
-    print("A forward-biased kernel (decreasing in theta) ensures:")
-    print("  1. The beam stays collimated (small transverse spread)")
-    print("  2. Phase variations across the beam are SLOWLY VARYING")
-    print("  3. The field gradient creates a COHERENT deflection")
+    print("A forward-biased kernel (decreasing in theta) tends to:")
+    print("  1. Narrow the path-length / angle spectrum")
+    print("  2. Reduce high-angle phase aliases")
+    print("  3. Favor attractive resonance windows at the retained reference coupling")
     print()
-    print("A uniform kernel allows high-angle paths that:")
-    print("  1. Spread the beam rapidly (large transverse variance)")
-    print("  2. Introduce RAPIDLY OSCILLATING phase across the beam")
-    print("  3. Cause the field-induced deflection to partially CANCEL")
+    print("A uniform kernel samples high-angle paths that:")
+    print("  1. Broaden the phase mixture")
+    print("  2. Introduce rapidly oscillating aliases")
+    print("  3. Can shift the net response into repulsive windows")
     print()
-    print("This is not merely empirical -- it follows from the SAME physics that makes")
-    print("optical lensing require a collimated beam: a diffuse light source cannot be")
-    print("focused by a thin lens. The angular kernel plays the role of the collimation")
-    print("optic, and the scalar field plays the role of the gravitational lens.")
+    print("So the surviving picture is RESONANCE SELECTION, not a closed derivation:")
+    print("the kernel influences which interference window the propagator occupies.")
 
 
 if __name__ == "__main__":

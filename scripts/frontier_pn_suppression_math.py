@@ -1,19 +1,20 @@
 #!/usr/bin/env python3
-"""PN suppression mystery: why does S = L(1-f-f^2/2) suppress gravity?
+"""PN regime map: how the f^2 term moves the propagator along its response curve.
 
 THE MYSTERY:
   Both -f and -f^2/2 reduce S near mass. Less S -> less phase -> should mean
   more constructive interference toward mass -> should ENHANCE gravity.
-  But empirically, PN suppresses gravity compared to VL. Why?
+  But earlier runs alternated between enhancement and suppression. Why?
 
 HYPOTHESIS:
-  PN suppresses gravity because the extra f^2/2 in the action shifts the total
-  accumulated phase past a constructive-interference peak, reducing the net
-  transverse gradient.
+  PN does not have a fixed sign effect. The extra f^2/2 term shifts the total
+  accumulated phase k*S and therefore moves the propagator along an oscillatory
+  interference / resonance curve. In some field-strength windows PN enhances
+  gravity; in others it suppresses it.
 
 FALSIFICATION:
-  If the phase gradient at the detector is LARGER for PN than VL at the tested
-  field strength, the phase-wrapping explanation is wrong.
+  If PN/VL stays one-sided across the field-strength sweep, the resonance
+  interpretation is wrong.
 
 Four-part experiment:
   1. Single-edge phase gradient (analytic)
@@ -517,7 +518,7 @@ def main():
     print("=" * 70)
     print()
 
-    # Final comparison at s=5e-3 (where PN detection script showed divergence)
+    # Final comparison at a representative weak-field point
     s_test = 5e-3
     field_test, _ = make_field(lat, 3, s_test)
     dz_vl = measure_gravity(lat, field_test, K, blocked, det, zf, "valley_linear")
@@ -534,23 +535,24 @@ def main():
     print()
 
     if dz_pn < dz_vl and dz_vl > 0:
-        print("CONFIRMED: PN suppresses gravity (delta_z_PN < delta_z_VL).")
+        print("At this field strength PN sits on a SUPPRESSIVE response window.")
         print()
         print("MECHANISM ANALYSIS:")
-        print("  1. Single-edge: PN gradient is STRONGER (factor 1+f)")
-        print("  2. But accumulated phase along the full path is LARGER for PN")
-        print("  3. The extra phase shifts the interference pattern, REDUCING")
-        print("     the net transverse probability gradient at the detector")
+        print("  1. Single-edge: PN gradient is still STRONGER (factor 1+f)")
+        print("  2. But the extra accumulated phase moves the propagator to a")
+        print("     different point on the interference / resonance curve")
+        print("  3. At this point on that curve, the net transverse response is weaker")
         print()
-        print("This is the PHASE WRAPPING effect: more phase per edge means")
-        print("the total phase k*S_total along near-mass paths overshoots the")
-        print("constructive interference maximum. Like turning a screw too far.")
+        print("So the old 'phase wrapping' language is only a partial description.")
+        print("The broader picture is regime-dependent resonance: PN changes k*S,")
+        print("and the sign of the response depends on which window that lands in.")
     elif dz_pn > dz_vl and dz_vl > 0:
-        print("FALSIFIED: PN actually ENHANCES gravity. The phase-wrapping")
-        print("hypothesis is WRONG at this field strength.")
+        print("At this field strength PN sits on an ENHANCING response window.")
         print()
-        print("The suppression seen in frontier_post_newtonian_detection.py")
-        print("may be an artifact of different parameters or field strengths.")
+        print("This matches the weak-field side of the sweep: the f^2 term")
+        print("moves the propagator along the same oscillatory response curve")
+        print("seen in the later k·H lensing scan, rather than imposing a")
+        print("fixed suppressive correction.")
     else:
         print("INCONCLUSIVE: gravity direction unclear at this field strength.")
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Diagnose why 2D gives AWAY gravity while 3D gives TOWARD with valley-linear.
+"""Diagnose why 2D can give AWAY while 3D gives TOWARD with valley-linear.
 
 THE MYSTERY:
   - 2D toy_event_physics + derive_node_field + VL => AWAY
@@ -12,6 +12,8 @@ POSSIBLE CAUSES:
   3. The 2D path topology (fewer paths, different interference)
   4. The field including causal-direction dependence in 2D
   5. The attenuation mode (delay vs geometry)
+  6. Changing field strength shifts the effective accumulated phase k*S,
+     moving the propagator between attractive and repulsive response windows
 
 TESTS:
   A. Analytic 1/r field in 2D (full spacetime radius)
@@ -20,8 +22,9 @@ TESTS:
   D. derive_node_field (nonlinear solver, the original)
   E. Vary field strength (1e-6 to 1e-2)
 
-HYPOTHESIS: AWAY comes from derive_node_field's nonlinear coupling,
-  not from the 2D geometry.
+HYPOTHESIS: AWAY in 2D is not a pure dimensional effect. It comes from a mix
+  of solver / attenuation choices and moving the propagator into different
+  interference windows as the effective phase changes.
 FALSIFICATION: If ALL field types give AWAY in 2D, the 2D path
   topology is the cause.
 """
@@ -475,12 +478,16 @@ def main():
 
     print()
     print("  NOTE: Two independent effects contribute to AWAY in 2D:")
-    print("  1. STRONG-FIELD: VL phase wrapping at f > ~0.01 (Test E crossover)")
+    print("  1. RESPONSE-WINDOW SHIFT: increasing f changes the accumulated")
+    print("     phase k*S and moves the propagator across attractive /")
+    print("     repulsive interference windows (Test E crossover).")
     print("  2. ATTENUATION MODE: 1/delay^p gives AWAY even at weak field,")
     print("     while 1/L^p gives TOWARD (Test G). This is independent of")
-    print("     field strength and is a separate mechanism.")
-    print("  The external summary 'every anomaly was strong-field' is too clean.")
-    print("  Both effects matter in the 2D infrastructure.")
+    print("     the strong-field crossover and is a separate mechanism.")
+    print("  So the 2D pathology is not 'just geometry' and not 'just")
+    print("  strong-field wrapping' either. It is a mixed infrastructure")
+    print("  effect: attenuation choice plus where the phase lands on the")
+    print("  interference response curve.")
 
     print()
 

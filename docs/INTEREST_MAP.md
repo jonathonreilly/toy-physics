@@ -36,164 +36,108 @@ right reading is:
 
 Important updates since the last score change:
 
-- the retained causal-field package is now materially stronger and more
-  review-safe:
-  - the Shapiro / phase-lag lane now has a cleaner artifact chain, a
-    five-family portability extension, and a consolidated experimental card
-  - the gravitomagnetic odd-in-`v` correction is retained and portable
-  - the causal-escape window is now kept only as a bounded dynamic regime
-    with an honest static-mimic correction
-  - the oscillating-source retardation discriminator is now the strongest
-    experiment-facing dynamic result:
-    same moving source, instantaneous vs retarded response, portable across
-    three families, delay-law coherence, and a failed global-delay fit
-- the dynamic/vector frontier also improved:
-  - the circular-orbit handedness lane now survives as a retained
-    **phase-locked first-harmonic** signal with matched scalar exposure,
-    clean `f`-oddness, and cross-family portability
-  - it does **not** count as a universal DC magnetic-like force, and the map
-    only counts the narrower lock-in / handedness read
-- the packet-memory and Poisson lanes now partly clear the retained bar:
-  - packet memory now has a real script/log chain, and Tier A
-    detector-readable memory is counted as retained
-  - packet Tier B / centroid values are now in the canonical harness/log, but
-    the map still counts only the narrower memory result, not a broader
-    object claim
-  - the Poisson field story now has two retained layers:
-    - the older 2D transverse-only Poisson note remains a bounded partial
-      derivation
-    - the new 3D Poisson note now counts as the stronger retained result:
-      one static local PDE on the full `(x, y, z)` lattice, no imposed
-      longitudinal falloff, Born at machine precision, and `F~M ~ 1` across
-      three families
-- the field-law story now extends one step further:
-  - the wave-equation self-field lane now survives as a retained **dynamic**
-    local field law
-  - the same wave-equation field keeps `F~M ~ 1`, Born at machine precision,
-    gravity TOWARD, and exact nulls
-  - the finite-`c` claim is now backed by an off-source arrival table:
-    first arrival time equals cell offset with exact pre-arrival zeros across
-    the tested offsets
-  - the wave moving-source lane now also survives as a retained
-    **retarded-vs-instantaneous** result:
-    on the same moving source history, the retarded field and the proper
-    `c = infinity` instantaneous comparator differ by `23–26%` across the
-    three retained grown families while `F~M`, Born, and exact nulls persist
-
-- the three-family portability result is now materially stronger than the
-  earlier partial card:
-  - the cross-family package now survives on three independent grown families
-  - the distance tail now also survives on all three under the retained
-    targeted probes
-- the next-physics frontier has started to produce real retained extensions
-  beyond the static scalar weak-field core:
-  - one retained quadrupole-like tidal / width observable
-  - one retained impact-parameter deflection law on a portable grown row
-  - one bounded moving-source directional observable on a portable grown row
-- the closure side improved again:
-  - the persistent inertial-object lane now closes more honestly as
-    broad-surrogate steering rather than a near-miss persistent-mass theorem
-  - the seventh-family diagonal architecture now freezes as a seed-selective
-    boundary pocket rather than a broad new family claim
-
-- the large Claude-side merge materially broadened `main`, especially around:
-  - complex-action / continuum / grown-row companion surfaces
-  - stronger electrostatics sign-law cards
-  - wider distance-law framing
-  - first-pass EP / GW-speed / strong-field notes
-- but this map only counts the subset that survives the stricter
-  retainability read after merge:
-  - exact-lattice and grown-row complex-action carryover
-  - bounded wide-lattice distance-law frontier
-  - stronger scalar electrostatics family
-  - graph-growth expansion proxies
-- the following are still only partly counted or uncounted:
-  - the fixed-family `h = 0.125` bridge, which now resolves as a bounded
-    negative for weak-field closure
-  - Poisson self-gravity, which is now better framed as control-only
-  - EP / GW-speed, which add interesting bounded structure but do not yet
-    fully close the older persistent-pattern / inertial bar
-  - the QNM / BMV / entropy / ringdown / unitarity cluster, which remains
-    below the main retained bar
-- the newest retained shift since then is not another broad merge, but a more
-  convincing **small structured grown-family** story:
-  - the retained grown-row positives now survive on a tiny nearby basin
-  - the non-label / geometry-sector signed-source lane now survives a bounded
-    restore basin and a bounded drift basin
-  - the same retained grown row now supports both narrow fixed-field
-    companions under one family
-  - a new alternative sector-transition family now preserves exact zero /
-    neutral controls, a bounded sign basin, and weak-field `F~M ~ 1` across
-    the full tested drift sweep
-- the closure side is also materially better:
-  - dense `h = 0.125` now has a mechanism-level failure derivation
-  - self-gravity is now frozen as a weak perturbative control surface rather
-    than a promoted mechanism
-  - grown-wavefield transfer is now frozen as a phase-dephasing / detector-line
-    coherence failure rather than a vague no-go
-- the newest score-moving results are mixed and need to be counted honestly:
-  - the scaffolded `free_coh` revival is real on the tested grid-backed
-    generator sets, but the off-scaffold held-out lane is a decisive retained
-    negative: the advantage over the old node-level rule collapses to zero once
-    the shared `(layer, iy, iz)` scaffold is removed
-  - the Gaussian packet matter / inertial closure attempt is also a retained
-    negative: per-packet Newton linearity is mostly present, but equivalence
-    fails decisively and the packet response is width / dispersion dependent
-  - these two negatives do **not** weaken the scalar-wave / field-law stack,
-    but they do sharply narrow the current universality and matter stories
+- the retained scalar weak-field core is stronger in one important way:
+  - the new 3D Laplacian closure card says analytic `1/r`, nonlinear Laplacian,
+    and linear Laplacian all reproduce the same sign-class and near-linear
+    `F~M` behavior on the retained ordered-lattice `2+1D` lane
+  - that closes the old objection that the gravity signal survived only on a
+    hand-written analytic field
+- but the stronger mechanistic read is now also narrower:
+  - the completed `k·H` sweep shows the lensing slope is not a geometric
+    invariant; it oscillates from attractive to repulsive as the coupling moves
+  - the old `-1.40` lensing slope at `k·H = 2.5` survives only as a retained
+    reference-window value, not as a universal law of the propagator
+  - the "eikonal gap" is therefore not a fixed correction but a coupling-
+    dependent interference term
+- the weak/strong-field cleanup is materially clearer:
+  - the PN `f²` lane is now read as a regime map rather than a paradox:
+    enhancement and suppression occur in different response windows
+  - the 2D AWAY/TOWARD story is now split into two mechanisms:
+    attenuation choice and phase-window shifts with changing accumulated phase
+- the publication-blocker pass tightened the outer claim surface:
+  - the causal propagator lane is a real negative for a ballistic light-cone
+    interpretation of the amplitude envelope
+  - the analytic continuum-transfer lane is interesting but still non-unitary,
+    so it does not rescue a clean relativistic propagator claim
+  - the wider 3+1D distance-law card is better than the first probe, but still
+    under-constrained and boundary-sensitive
+  - the angular-kernel derivation remains open; the current route is still
+    heuristic / empirical rather than derived
+- the dynamic side is still promising but should stay bounded:
+  - 3D dynamic growth now has clean Born survival and a real field-sensitive
+    response on the grown DAG
+  - but the current merged artifact does not yet support a retained
+    toward-mass gravity transfer claim on the grown 3D graph
+- the bottom-line shift is:
+  - stronger as a mechanistic discrete-wave / path-sum research program
+  - weaker as an immediate "we reproduced Newton / relativity" package
 
 ## Delta Vs Last Update
 
 Score deltas since the previous map:
 
-- `Publishable as a foundational-physics breakthrough claim`: `7.9 -> 8.0`
-  Reason: today added a narrower but more review-safe flagship core:
-  action constraint, the resolved 2D-vs-3D distance-law framing, and the
-  gauge-structure result now form a cleaner paper package than the earlier
-  frontier spread.
-- `Likelihood of publication in very top field journals today`: `6.8 -> 7.0`
-  Reason: the package is still too incomplete for a broad breakthrough claim,
-  but the review-hardened narrow story is stronger and more legible than it
-  was before the moonshot / review cycle.
-- `Ready for top-tier mainstream physics claims`: `7.0 -> 7.1`
-  Reason: the bridge-to-known-physics surface widened again through the
-  retained gauge, action, distance-law, and bounded parity-sector results,
-  even though the Lorentz / matter story is still open.
-- `Strength against harshest critique`: `4.7 -> 5.0`
-  Reason: six review rounds materially improved trust. Several apparent wins
-  were narrowed or withdrawn, but that self-correction makes the surviving
-  package easier to defend under hostile reading.
-- `Field-shifting theory program`: `9.8 -> 9.9`
-  Reason: today's merged work widened the program in a useful way even where
-  the answers were negative: gauge structure now lands strongly, while the
-  Hawking, spin, entanglement, energy-spectrum, and phase-metric lanes are
-  more honestly bounded.
+- `Publishable as a foundational-physics breakthrough claim`: `8.0 -> 7.4`
+  Reason: the latest merged work closes one real gap (`2+1D` Laplacian-field
+  closure) but narrows the flagship gravity claim more sharply:
+  the lensing slope is now a coupling-window / resonance observable rather
+  than a universal Newtonian exponent, the kernel is still empirical, and the
+  causal / continuum blockers did not convert into positives.
+- `Likelihood of publication in very top field journals today`: `7.0 -> 6.4`
+  Reason: the package is still strong as a careful toy-model / emergent-
+  mechanism paper, but the newest blockers weaken the broad-physics pitch:
+  no ballistic light cone in the amplitude envelope, no clean unitary
+  continuum limit from the raw transfer matrix, and no stable `3+1D`
+  distance-law closure yet.
+- `Ready for top-tier mainstream physics claims`: `7.1 -> 6.5`
+  Reason: the mainstream-facing story is now more honest but also narrower.
+  The model still touches gravity, action, gauge structure, and dynamics, but
+  the current read is “parameter-window resonance mechanism” rather than
+  “emergent relativistic gravity.”
+- `Strength against harshest critique`: `5.0 -> 4.8`
+  Reason: one hostile line just got stronger:
+  “this is a tuned resonance window on a discrete propagator, not a broad law.”
+  The Laplacian closure helps against the old analytic-field critique, but the
+  new `k·H` dependence and causal-propagator negative give skeptics fresh
+  leverage.
+- `Field-shifting theory program`: `9.9 -> 10.0`
+  Reason: the program itself is now even more interesting.
+  The `k`-sweep is one of the most informative mechanistic results in the repo:
+  it says the gravity-like lane is an interference / resonance phenomenon.
+  That is weaker as a direct GR-style claim, but richer as a discrete-physics
+  research direction.
+- `Landmark foundational breakthrough`: `7.7 -> 7.1`
+  Reason: the path is narrower than the previous map implied. The project now
+  looks less like “nearly there if one more lane closes” and more like “real
+  mechanism class with several decisive conceptual gaps still open.”
+- `Nobel-scale breakthrough`: `1.8 -> 1.6`
+  Reason: still not fanciful in the strict sense, but the resonance-window
+  interpretation and the causal / continuum negatives push the true horizon
+  farther out again.
 
 Retained-claim status changes since the previous map:
 
-- `New positive`: gauge invariance now survives as a real structural result
-  inside the current path-sum harness:
-  U(1) node-phase invariance, true pure-gauge invariance, Aharonov-Bohm
-  modulation, SU(2) gauge-transform invariance, and Wilson-loop invariance.
-- `Narrow positive`: the action story is now clearly a constraint theorem,
-  not a uniqueness theorem; that is weaker rhetoric but stronger retained
-  science.
-- `Narrow positive`: the distance-law story is cleaner:
-  the old 2D anomaly is reframed as correct logarithmic 2D physics, while the
-  3D / Coulomb-side valley-linear result survives as the real Newtonian bridge.
-- `Downgraded`: entanglement moved from a claimed area law to
-  boundary-controlled sub-area-law saturation.
-- `Downgraded`: Hawking moved from a horizon-style analog claim to the much
-  narrower result "thermal-looking spectrum, Hawking scaling falsified."
-- `Downgraded`: spin moved from a spin-1/2 / SU(2) suggestion to a bounded
-  `Z2` parity-charge / Stern-Gerlach-style splitting result.
-- `New negative`: the phase-weighted metric does produce Lorentzian windows,
-  but the current stability sweep says they move into the UV roughly like
-  `1/h`; that makes this lane look like a lattice-phase aliasing effect rather
-  than retained continuum Lorentzian emergence.
-- `New bounded result`: the effective-Hamiltonian lane now says the propagator
-  has classifiable dispersion at tested `h`, but no clean converged continuum
-  form is established yet.
+- `New positive`: the retained `2+1D` gravity lane is stronger because the
+  self-consistent Laplacian closures now reproduce the analytic field’s sign
+  class and near-linear `F~M`.
+- `Downgraded`: the old `-1.40` lensing slope is no longer counted as a
+  structural invariant. It is now a retained reference-window value at
+  `k·H = 2.5`.
+- `New mechanism read`: the gravity-like deflection lane is now best described
+  as a coupling-window / resonance phenomenon in the propagator, not geometric
+  ray bending with a fixed wave correction.
+- `Narrow positive`: the PN lane now supports a regime-dependent shift along
+  the same response curve, not a fixed “suppression” theorem.
+- `Narrow positive`: the 2D AWAY/TOWARD split is now cleaner:
+  part attenuation prescription, part phase-window shift, not a pure
+  dimensional no-go.
+- `New negative`: the amplitude-envelope propagator does not show a clean
+  ballistic light cone. Whatever causality survives in the model is not
+  present as a simple wavefront in `|psi|`.
+- `New bounded negative`: the analytic continuum-transfer lane is interesting
+  but still non-unitary / growth-dominated, so it does not currently support
+  a clean relativistic or KG-like continuum claim.
+- `Narrow positive`: the wider `3+1D` distance-law probe improves feasibility
+  but remains under-constrained; it is not yet a retained Newtonian tail.
 
 Score deltas that did not move:
 
@@ -202,8 +146,6 @@ Score deltas that did not move:
 - `Broad theorist interest`: unchanged at `10.0/10`
 - `Bridge to known physics`: unchanged at `10.0/10`
 - `Publishable as a careful computational toy-model paper`: unchanged at `10.0/10`
-- `Landmark foundational breakthrough`: unchanged at `7.7/10`
-- `Nobel-scale breakthrough`: unchanged at `1.8/10`
 
 ## Current map
 
@@ -214,13 +156,13 @@ Score deltas that did not move:
 | Broad theorist interest | `10.0/10` | still maxed out on curiosity value; the exact-lattice wavefield lane, complex-action carryover, grown-row companion, bounded wide-lattice distance frontier, stronger electrostatics family, and graph-growth proxies make the program look richer rather than narrower after merge |
 | Bridge to known physics | `10.0/10` | now effectively maxed in breadth, because the mainline portfolio visibly touches weak-field gravity, signed scalar couplings, causal phase structure, distance-law behavior, and graph-growth expansion proxies; it is still not a full closure because the self-generated field and inertial-response sectors remain only partly retained |
 | Publishable as a careful computational toy-model paper | `10.0/10` | essentially maxed; the repo now has enough retained positives, enough bounded negatives, and enough diagnosed closures to support a very strong disciplined toy-model paper even if the flagship physics claim remains narrower |
-| Publishable as a foundational-physics breakthrough claim | `8.0/10` | slightly stronger than the previous map, but only in a narrower form: the cleanest package is now action constraint + corrected distance-law framing + the retained gauge-structure result, while the Lorentz / matter / full universality story remains materially incomplete |
-| Likelihood of publication in very top field journals today (`PRL` / `PRX` / `Nature Physics`) | `7.0/10` | the review-hardened narrow package is stronger than it was before the moonshot cycle, because the retained core is more legible and the overclaims are better scrubbed; still below true breakthrough readiness because too many high-value lanes close only as bounded negatives or feasibility signals |
-| Ready for top-tier mainstream physics claims | `7.1/10` | the mainstream-facing surface is a little broader now: weak-field gravity/action, bounded parity-sector splitting, and especially gauge structure make the model easier to situate against known physics, but not enough to claim emergent relativity or a matter sector |
-| Strength against harshest critique | `5.0/10` | still the weakest score on the map, but better than the previous cut because the package is more self-correcting and audit-safe after the review cycle; the hostile reader still has real leverage on universality, matter / inertia, and continuum Lorentz closure |
-| Field-shifting theory program | `9.9/10` | slightly up because the merged moonshot branch widened the real program in a useful way: one strong new retained gauge lane, one cleaner action/distance-law core, and several honest bounded negatives that sharpen rather than blur the frontier map |
-| Landmark foundational breakthrough | `7.7/10` | still plausible on the strength of the retained scalar-wave / retardation program, but lower than before because the route now clearly runs through solving two hard gaps rather than broadening an already nearly-closed story: universality beyond the scaffold and matter / inertia closure |
-| Nobel-scale breakthrough | `1.8/10` | still no longer fanciful in the strict sense, because there is now a real ladder of intermediate physics goals, but the score must come down from the previous map because the recent decisive negatives showed the path is narrower than the earlier frontier enthusiasm suggested |
+| Publishable as a foundational-physics breakthrough claim | `7.4/10` | still above the bar for a serious foundations paper, but now clearly narrower than the previous map: the cleanest retained story is action constraint + Born/gauge structure + bounded weak-field gravity windows, not a universal Newtonian / relativistic closure |
+| Likelihood of publication in very top field journals today (`PRL` / `PRX` / `Nature Physics`) | `6.4/10` | plausible only as a highly disciplined, narrowly framed mechanism paper; the latest blockers make the broader flagship pitch weaker because the strongest gravity-like lane is parameter-window specific and the causal / continuum story remains materially incomplete |
+| Ready for top-tier mainstream physics claims | `6.5/10` | the bridge to known physics is still broad, but the current honest read is “discrete-wave resonance mechanism with Newtonian-looking windows,” not “emergent relativistic gravity,” which lowers mainstream claim-readiness |
+| Strength against harshest critique | `4.8/10` | still the weakest score on the map. The package is more honest and mechanistically sharper, but the hostile reader can now press a stronger line: the retained gravity-like behavior may be a tuned resonance-window phenomenon rather than a broad law-level result |
+| Field-shifting theory program | `10.0/10` | maxed as a research program: the latest work made the flagship claim narrower but the mechanism class more interesting. The `k`-sweep, PN regime map, attenuation / phase split, and causal-envelope negative together point to a richer discrete-wave theory question than before |
+| Landmark foundational breakthrough | `7.1/10` | still conceivable, but no longer reads like a near-miss. The route now clearly requires solving several deep conceptual gaps: kernel derivation, causal / continuum closure, and a non-window-specific gravity law |
+| Nobel-scale breakthrough | `1.6/10` | the project still has a real ladder of intermediate results, but the latest mechanistic clarification moves it farther from an immediate “new fundamental law” horizon |
 
 ## Harshest-Critique Tracker
 
@@ -228,66 +170,48 @@ This section should be updated periodically alongside the score above.
 
 ### Current harshest critique
 
-> This is a sophisticated scalar delayed-wave analog simulator that has been
-> searched hard enough to accumulate many gravity-like and retardation-like
-> observables, but it still does not force a new fundamental mechanism of
-> physics; the current package may be a curated basin of compatible numerics
-> rather than a broad universality result or a law-level derivation.
+> This is a sophisticated discrete path-sum / interference simulator that can
+> produce gravity-like, gauge-like, and Born-like behavior, but the current
+> gravity story may be a tuned resonance-window phenomenon on a discrete
+> propagator rather than a broad law-level derivation. The package is richer
+> and more honest than before, but still not structurally forced.
 
-### Current answer strength: `5.0/10`
+### Current answer strength: `4.8/10`
 
 Why the score is not lower:
 
-- the retained package is now internally coherent rather than a bag of wins
-- the field law is no longer only imposed by hand:
-  - full 3D static Poisson
-  - dynamic wave-equation field
-  - explicit finite-`c` arrival structure
-- the dynamic side now includes proper comparator tests:
-  - oscillating-source retardation transfer-function difference
-  - moving-source retarded-vs-instantaneous separation
-- the `(3+1)D` wave-equation stack is now cleaner:
-  - strict lightcone on the physical 3D operator
-  - retarded-vs-instantaneous separation on the same operator
-  - radiation falloff with the expected `~ 1/r` law
-- the weak-field package survives across multiple independent grown families
-- the original “three-family only” read is still too weak:
-  - the within-family sweep is wider than before
-  - the battery is now dynamic-augmented, not static-only
-- the new matter-closure negative does not damage the scalar-wave stack itself;
-  it only closes one attempted route to an object-level interpretation
+- the retained package is more self-correcting and mechanistically explicit
+  than it was before this update
+- the `2+1D` gravity lane is no longer just an analytic-field artifact:
+  the Laplacian-closure card reproduces the same sign class and near-linear
+  mass scaling
+- the `k`-sweep is a real mechanistic gain:
+  it tells us the gravity-like response is coupling-window dependent rather
+  than leaving the `-1.40` slope as a mysterious one-off number
+- Born, `k=0`, and gauge structure remain genuinely strong retained anchors
+- the negative results are now cleaner no-gos instead of vague unease:
+  no ballistic light cone in the amplitude envelope, no raw-transfer
+  continuum closure, no derived kernel yet
 
 Why the score is not higher:
 
-- no compact derivation/classifier yet shows the package is forced rather than
-  curated
-- no theorem-level universality argument yet explains why this family class
-  works
-- the classifier is still empirical and brittle:
-  - `92.3%` in-sample
-  - `84.6%` leave-one-out
-  - `87.5%` held-out when the fitted rule is applied without refit
-- the genuinely different-generator held-out test is a retained negative:
-  - `44.4%` pre-committed predictions
-  - `66.7%` rule accuracy without refit
-  - only `2/9` independent generators reproduce the full package
-- that negative means the classifier is a within-family proxy, not a broad
-  universality answer
-- the off-scaffold coherence lane is a second retained negative:
-  - `5/9 = 55.6%`
-  - identical to the old node-level rule
-  - the scaffolded `free_coh` advantage collapses to zero off-scaffold
-- the Gaussian matter / inertial closure lane is also a retained negative:
-  - equivalence fails by `123%`
-  - packet response is width / dispersion dependent rather than
-    generator-invariant inertial response
-- no persistent inertial object / matter sector closure yet
+- the strongest gravity-like observable is now parameter-window specific:
+  the same propagator becomes shallow or repulsive at other `k·H`
+- there is still no derived reason the retained kernel should be the right one
+- the amplitude envelope does not supply a clean relativistic / light-cone
+  story
+- the raw continuum-transfer lane is still non-unitary
+- the `3+1D` distance law is still under-constrained and boundary-sensitive
+- no matter / inertia closure yet
 - no experimental confirmation yet
 
 Next moves that raise this score fastest:
 
-- a direct derivation or no-go argument for why the retained scaffolded family
-  works, without relying on a brittle empirical classifier
+- an analytic or semi-analytic characterization of the response curve
+  `alpha_kubo(k·H)` rather than more single-point slope claims
+- a kernel derivation from a resolvent / Fourier / normalized-transfer route
+- a cleaner `3+1D` distance-law box with enough TOWARD points to test whether
+  any stable window gives a real asymptotic law
 - a structural matter / inertia route that is not another Gaussian-packet
   variant
 - one experimentally confirmed discriminator
