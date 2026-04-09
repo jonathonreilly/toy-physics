@@ -420,18 +420,18 @@ def main():
         else:
             psi_normed[name] = {y: 0j for y in psi_all[name]}
 
-    # Equal weights for normalized version (all geometries equally important)
-    w_eq = 1.0 / len(psi_normed)
-    w_eq_norm_sq = len(psi_normed) * w_eq ** 2  # = 1/N
-
+    # Normalized version: equal-weight mean (same as raw block above)
+    N_g = len(psi_normed)
     P_coh_norm = {}
     P_inc_norm = {}
     for y in all_ys:
-        coh_amp = sum(w_eq * psi_normed[name].get(y, 0j) for name in psi_normed)
-        P_coh_norm[y] = abs(coh_amp) ** 2 / w_eq_norm_sq
+        # Coherent: |mean amplitude|^2
+        coh_amp = sum(psi_normed[name].get(y, 0j) for name in psi_normed) / N_g
+        P_coh_norm[y] = abs(coh_amp) ** 2
 
-        inc = sum(w_eq ** 2 * abs(psi_normed[name].get(y, 0j)) ** 2 for name in psi_normed)
-        P_inc_norm[y] = inc / w_eq_norm_sq
+        # Incoherent: mean of probabilities
+        inc = sum(abs(psi_normed[name].get(y, 0j)) ** 2 for name in psi_normed) / N_g
+        P_inc_norm[y] = inc
 
     max_P_inc_norm = max(P_inc_norm.values()) if P_inc_norm else 1e-30
     diffs_norm = {y: abs(P_coh_norm[y] - P_inc_norm[y]) for y in all_ys}

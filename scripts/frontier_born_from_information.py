@@ -615,8 +615,9 @@ def run_experiment():
     print("FRONTIER: Born Rule from Information-Theoretic Axioms")
     print("=" * 70)
     print()
-    print("Testing whether composability + no-signaling uniquely select")
-    print("linear propagators (and hence the Born rule P = |psi|^2).")
+    print("Testing whether composability (tensor-product structure) uniquely")
+    print("selects linear propagators (and hence the Born rule P = |psi|^2).")
+    print("NOTE: No-signaling is NOT tested here (no reduced-state test).")
 
     # Part 1: Tensor product / composability
     linear_pass, nl_results = test_tensor_product_preservation()
