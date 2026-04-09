@@ -1,7 +1,7 @@
 # High-p Dispersion Tiebreaker
 
 **Date:** 2026-04-09
-**Status:** PARTIAL RESOLUTION — extending the momentum range to p=0–6 (from p=0–2) **eliminates Klein-Gordon** as the worst fit (R²=0.78) but does NOT give a clean winner. Schrödinger R²=0.97 vs Linear R²=0.96 on the seed-mean, with per-seed winner split 5:3 (Schrödinger:Linear). The dispersion curve has structure beyond any simple two-parameter form: a smooth region at low p, a gap/dropout near p≈2.5, and steep negative ω at high p.
+**Status:** PARTIAL RESOLUTION — extending the momentum range to p=0–6 (from p=0–2) **eliminates Klein-Gordon** as the worst fit (R²=0.78, 0/8 per-seed wins) but does NOT give a clean winner between Schrödinger and Linear. Schrödinger R²=0.97 vs Linear R²=0.96 on the seed-mean, with per-seed winner split **4:4** (Schrödinger:Linear). The dispersion curve has structure beyond any simple two-parameter form: a smooth region at low p, a gap/dropout near p≈2.5, and steep negative ω at high p.
 
 ## Setup
 
@@ -13,8 +13,8 @@
 
 | Form | R² (seed-mean, 12 pts) | Per-seed winner tally |
 | --- | ---: | ---: |
-| **Schrödinger** | **0.974** | **5/8** |
-| Linear | 0.958 | 3/8 |
+| **Schrödinger** | **0.974** | **4/8** |
+| Linear | 0.958 | 4/8 |
 | Klein-Gordon | 0.780 | 0/8 |
 | sqrt-KG | −0.59 | 0/8 |
 
@@ -69,7 +69,7 @@ The elimination of Klein-Gordon means the eikonal comparison (which is dispersio
 
 > "Extending the dispersion measurement to p=0–6 eliminates Klein-Gordon
 > as the worst fit (R²=0.78, 0/8 per-seed wins). Schrödinger fits
-> best on the seed-mean (R²=0.97) with 5/8 per-seed wins, but the
+> best on the seed-mean (R²=0.97) with 4/8 per-seed wins (4:4 split with Linear), but the
 > dispersion has non-trivial band structure at p>2.5 (mode dropout,
 > curvature sign flip) that neither simple model captures. The earlier
 > Schrödinger/KG near-tie was an artifact of the limited p-range (0–2).
