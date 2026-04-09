@@ -1,50 +1,63 @@
-# Cross-Family Universality: Dispersion + Lensing
+# Cross-Family Consistency: Dispersion + Lensing at H=0.5
 
-**Date:** 2026-04-08
-**Status:** retained STRONG POSITIVE — both the dispersion relation AND the lensing slope are **family-independent** across all three tested DAG families. This is the session's strongest structural finding: the propagator's physics is determined by the kernel, not the DAG geometry.
+**Date:** 2026-04-08 (revised 2026-04-09 after review)
+**Status:** retained POSITIVE (bounded) — at H=0.5, the family-mean dispersion and lensing observables are consistent across all three tested DAG families. The Schrödinger/KG near-tie persists in every family. However, per-seed variance is large (slope σ ≈ 0.16–0.23), so the supported claim is "no detectable family effect at H=0.5," not "the physics is family-independent." Fine-H (H=0.25) universality is **untested** for Fam2 and Fam3.
 
 ## What was tested
 
-| Observable | Fam1 (0.20/0.70) | Fam2 (0.05/0.30) | Fam3 (0.50/0.90) | Spread |
+All measurements at H=0.5, 5 seeds per family, on the same grown-DAG generator with three parameter sets.
+
+| Observable | Fam1 (0.20/0.70) | Fam2 (0.05/0.30) | Fam3 (0.50/0.90) | Inter-family spread |
 | --- | ---: | ---: | ---: | ---: |
-| m_eff (Schrödinger) | 5.98 | 5.90 | 5.88 | **0.10 (1.7%)** |
+| m_eff (Schrödinger fit on seed-mean) | 5.98 | 5.90 | 5.88 | 0.10 (1.7%) |
 | Δ(Schrö − KG) in R² | 0.0019 | 0.0068 | 0.0028 | all < 0.01 |
-| Lensing slope (H=0.5) | −1.31 | −1.31 | −1.27 | **0.04** |
-| Lensing prefactor | 23.8 | 24.7 | 22.6 | ~10% |
+| Lensing slope (seed-mean, H=0.5) | −1.31 | −1.31 | −1.27 | 0.04 |
+| Lensing prefactor (seed-mean) | 23.8 | 24.7 | 22.6 | ~10% |
 
-## Dispersion universality
+## Dispersion: Schrödinger/KG near-tie persists across families
 
-All three families give:
-- Schrödinger marginally wins over Klein-Gordon (but Δ < 0.01 in R²)
-- Effective mass m_eff ≈ 5.9 ± 0.05 (1.7% family variation)
-- Same omega(p) curve shape: monotone decreasing, no band peak
+All three families give Schrödinger and Klein-Gordon fits within Δ < 0.01 in R² when fitting the seed-averaged ω(p) curve. No family breaks the tie.
 
-The Schrödinger/KG near-tie is **structural** — it doesn't depend on the DAG's drift or restore parameters. The effective mass is determined by the kernel (β=0.8, k·H=2.5) not the geometry.
+**Caveat (P2 from review):** The fits are performed on seed-averaged ω(p), not per-seed. On a per-seed basis, the "winner" flips: KG beats Schrödinger on 2/5 Fam1 seeds, 1/5 Fam2 seeds, and 2/5 Fam3 seeds. The supported claim is:
 
-## Lensing universality
+> "The Schrödinger/KG near-tie persists across families"
 
-All three families give:
-- Slope ≈ −1.29 ± 0.02 at H=0.5 (spread = 0.04)
-- Positive kubo (deflection toward mass) for all b ∈ {3..6}
-- Prefactor varies by ~10% across families (consistent with the Kubo families note showing Fam1≈Fam3 to 0.5%)
+NOT:
 
-The slope steepens under refinement: Fam1 at H=0.5 gives −1.31, at H=0.25 gives −1.43. All three families match at H=0.5, so we expect all three to steepen similarly at H=0.25 and converge near −1.43.
+> ~~"Schrödinger marginally wins in all families"~~
 
-**The −1.43 slope is not a Fam1 artifact.** It's a property of the propagator kernel.
+The effective mass m_eff ≈ 5.9 is consistent across families at the seed-mean level (1.7% spread), but per-seed variance has not been quantified for m_eff.
 
-## Implications
+## Lensing: no detectable family effect at H=0.5
 
-### For the "propagator type is undetermined" conclusion
+The seed-mean slopes are consistent: −1.31, −1.31, −1.27 (inter-family spread = 0.04).
 
-Still correct: all families show Schrödinger ≈ KG (Δ < 0.01). But the universality strengthens the finding: whatever the dispersion type IS, it's the **same across all families**. The kernel determines it, not the graph.
+**Caveat (P2 from review):** Per-seed slope standard deviations are σ ≈ 0.23 (Fam1), 0.19 (Fam2), 0.16 (Fam3) — much larger than the 0.04 inter-family spread. The inter-family consistency is therefore **within noise**, not a precision measurement. The supported claim is:
 
-### For the lensing invariant
+> "No detectable family effect on the lensing slope at H=0.5"
 
-The combined invariant kubo(b) ≈ 28.4·b^(−1.43) (at H=0.25) is now expected to be universal across families. The magnitude anchor (+5.986 at b=3) was already verified across families in the Kubo families note. This test adds the slope.
+NOT:
 
-### For the plane-wave eikonal comparison
+> ~~"The slope is universal across families"~~
 
-The eikonal gives −1.28, the H=0.5 lattice gives −1.31, and H=0.25 gives −1.43. The Δ between eikonal and lattice is **spacing-dependent**: it's 0.03 at H=0.5 and 0.15 at H=0.25. This means the eikonal captures the coarse-H physics well, and the discrepancy grows under refinement — suggesting the lattice's −1.43 at fine H includes wave-mechanical corrections beyond the eikonal.
+## What was NOT tested (P1 from review)
+
+**Fine-H universality is open.** The −1.4335 slope at H=0.25 was measured only on Fam1. Fam2 and Fam3 have NOT been tested at H=0.25. The earlier version of this note extrapolated that "all three families should steepen similarly at H=0.25 and converge near −1.43" — that extrapolation was unsupported and is retracted.
+
+The correct statement is:
+- At H=0.5, all three families give consistent slopes (within noise)
+- At H=0.25, only Fam1 has been measured (slope −1.4335)
+- Whether Fam2 and Fam3 give −1.43 at H=0.25 is unknown
+
+## Scope of "family-independence" (P1 from review)
+
+The earlier version of this note claimed the physics is "kernel-determined, not geometry-determined." This overstates what was shown. The three families are all generated by the **same DAG growth algorithm** with different parameter settings. They do NOT represent different geometries in the broader sense:
+
+- The 2D regular lattice gives decisively Schrödinger dispersion (R²=0.9995)
+- The 3D regular lattice gives band structure (R²<0.68)
+- The grown DAG gives the near-tie (R²≈0.99)
+
+So the dispersion IS geometry-dependent at the lattice-type level. What this note shows is narrower: **within the grown-DAG generator family, the physics is insensitive to the drift/restore parameters.** That's a statement about the DAG generator's parameter space, not about geometry in general.
 
 ## Artifact chain
 
@@ -53,10 +66,12 @@ The eikonal gives −1.28, the H=0.5 lattice gives −1.31, and H=0.25 gives −
 
 ## Bottom line
 
-> "Both the dispersion relation (m_eff ≈ 5.9, Schrödinger ≈ KG) and the
-> lensing slope (≈ −1.3 at H=0.5) are universal across all three tested
-> DAG families (Fam1/Fam2/Fam3), with <2% variation in m_eff and <0.05
-> variation in slope. The propagator's physics is kernel-determined, not
-> geometry-determined. The −1.43 slope at fine H is expected to be
-> universal as well. The Schrödinger/KG near-tie is structural: no family
-> breaks it."
+> "At H=0.5, the seed-mean dispersion (m_eff ≈ 5.9) and lensing slope
+> (≈ −1.3) show no detectable family effect across Fam1/Fam2/Fam3.
+> The Schrödinger/KG near-tie persists in all families (Δ < 0.01),
+> though the winner flips across individual seeds. Per-seed lensing
+> slope variance (σ ≈ 0.16–0.23) is much larger than the inter-family
+> spread (0.04), so the consistency is within noise, not precision.
+> Fine-H (H=0.25) universality is untested for Fam2/Fam3. The claim
+> scope is limited to the grown-DAG generator's parameter space, not
+> geometry in general."
