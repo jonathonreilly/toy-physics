@@ -1,6 +1,17 @@
 #!/usr/bin/env python3
 """Test whether a Lorentzian delay split produces geometric gravity.
 
+CAVEAT (from review): Lorentzian geodesic attraction is only demonstrated
+at strong field (strength=5e-2, max f~0.5). At the weak-field strengths
+used in the closure card (strength=5e-5, max f~5e-4), the discrete lattice
+cannot resolve the geodesic deflection — both Euclidean and Lorentzian show
+NONE. This is a lattice resolution limitation, not a physics failure:
+the geodesic deflection at weak field is smaller than one lattice spacing.
+
+What this script demonstrates: at strong enough field for the lattice to
+resolve it, the Lorentzian split DOES bend geodesics TOWARD mass while
+the Euclidean model gives NONE or AWAY.
+
 THE IDEA:
   In the current model, ALL delays increase near mass: delay = L*(1+f).
   This is Euclidean (positive-definite), so geodesics bend AWAY from mass.

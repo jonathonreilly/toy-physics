@@ -163,7 +163,7 @@ def main():
     print("  → Both components ALIGN at k=8")
     print()
 
-    K_TARGET = 8.0
+    K_TARGET = 7.0
 
     t0 = time.time()
     lat = Lattice3D(PHYS_L, PHYS_W, H)
