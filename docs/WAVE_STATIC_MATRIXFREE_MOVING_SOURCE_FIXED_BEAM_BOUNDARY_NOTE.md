@@ -1,95 +1,79 @@
 # Wave Static Matrix-Free Moving-Source Fixed-Beam Boundary Probe
 
 **Date:** 2026-04-08
-**Status:** retained negative side probe
+**Status:** retained boundary probe
 
-This is the moving-source analogue of the frozen-source fixed-beam
-boundary probes.
+This probe is the moving-source analogue of the frozen-source
+fixed-beam boundary test.
 
-It asks the directly relevant comparator question:
+It asks:
 
-> At a shared `H` and fixed beam geometry, does the exact discrete static
-> comparator remain materially field-box sensitive when the source moves
-> through the Lane 6 trajectory?
+> At shared `H`, fixed beam geometry, and the Lane 6 source trajectory,
+> does the exact discrete static comparator still depend materially on
+> the field/static-solve box size?
 
-## What it compares
+## Setup
 
-- moving source on the standard Lane 6 history
-- fixed beam box at `PW = 6.0`
-- field/static solve box widened from `PW = 6.0` to `9.0`
-- matrix-free exact discrete static solve, cached by visited source `z`
-- retarded-wave response `dM` through the same fixed beam DAG
-- exact static response `dS` through the same fixed beam DAG
-
-## Why this is the right rescue test
-
-This is the cleanest medium-`H` check of the exact-comparator rescue story:
-
-- the source motion is the real moving-source Lane 6 history
-- the beam geometry is fixed
-- only the field/static solve box changes
-
-If the exact static baseline still moves materially here, the comparator
-problem is not a direct-solver artifact and not just a frozen-source quirk.
+- shared `H = 0.35`
+- fixed beam `PW_phys = 6.0`
+- moving source on the standard Lane 6 trajectory
+- matrix-free exact discrete static solve
+- two field/static-solve boxes:
+  - `PW_phys = 6.0`
+  - `PW_phys = 9.0`
+- same beam DAG for both runs
 
 ## Result
 
-The retained run uses shared `H = 0.35`, fixed beam `PW_phys = 6.0`,
-and compares `field PW_phys = 6.0` vs `9.0`.
-
-| quantity | `field PW = 5.95` | `field PW = 9.10` | move |
+| quantity | field `PW = 5.95` | field `PW = 9.10` | move |
 | --- | ---: | ---: | ---: |
 | `dM` | `+0.007942` | `+0.007973` | `0.39%` |
 | `dS` | `+0.006111` | `+0.007720` | `20.84%` |
 | `rel_MS` | `23.05%` | `3.18%` | `86.21%` |
 | matrix-free residual | `2.292e-10` | `1.984e-10` | stable |
 | matrix-free iterations | `87` | `128` | converged |
-| cached static solves | `10` | `10` | same history |
+
+The realized motion parameters were the same in both runs:
+
+- `NL = 43`
+- `src_layer = 14`
+- `iz_start = 9`
+- `iz_end = 0`
+- realized `v/layer = -0.3103`
 
 ## Honest read
 
-This is a useful negative.
+This is a mixed result.
 
-The exact static comparator does move **toward** the retarded response when
-the field box is enlarged:
+What stays negative:
 
-- `rel_MS` drops from `23.05%` to `3.18%`
+- the exact moving-source static comparator is still materially
+  field-box sensitive at `H = 0.35`
+- `dS` moves by `20.84%`
+- `rel_MS` moves by `86.21%`
+- so there is still no boundary-stable quantitative comparator claim
 
-But the key quantity is not the improved large-box fit by itself. The key
-quantity is the sensitivity:
+What is genuinely encouraging:
 
-- widening only the field box moves `dS` by `20.84%`
-- the corresponding `rel_MS` changes by `86.21%`
-- `dM` itself moves only `0.39%`
+- `dM` is almost unchanged (`0.39%`)
+- on the larger field box, the exact static comparator gets close to
+  the retarded response:
+  - `rel_MS = 3.18%`
+  - `dS = +0.007720` versus `dM = +0.007973`
 
-So at medium `H`, the moving-source exact static comparator is still not
-boundary-stable enough to promote as the quantitative `c = infinity`
-baseline.
+So this lane does **not** rescue the exact-comparator story yet, but it
+does sharpen the target:
 
-What this does show is narrower and still useful:
+- the problem is not that exact static and retarded responses are
+  generically far apart
+- the problem is that the exact static comparator is still boundary
+  dependent on the smaller field box
 
-- the matrix-free engine is not the problem
-- the exact-static baseline can be pulled much closer to `dM`
-- but the current finite-box exact-static baseline is still dominated by
-  box choice
-
-That means the exact-comparator lane is still alive in principle, but not
-yet promotable on the current field-box setup.
-
-## Boundary
-
-This note does **not** show:
-
-- a converged exact static baseline
-- a restored continuum-stable retardation magnitude
-- a reason to replace the direct-`dM` lane as the current clean flagship
-
-The current honest ranking is:
-
-- direct `dM`: still the clean retained moving-source observable
-- exact static comparator: still a live rescue attempt, but boundary-limited
+The next decisive run on this branch is the same comparison at
+`H = 0.25` with the larger field box, not another small-box replay.
 
 ## Artifact chain
 
 - [`scripts/wave_static_matrixfree_moving_source_fixed_beam_boundary.py`](../scripts/wave_static_matrixfree_moving_source_fixed_beam_boundary.py)
+- [`scripts/wave_static_matrixfree_moving_source_fixed_beam_boundary_freeze.py`](../scripts/wave_static_matrixfree_moving_source_fixed_beam_boundary_freeze.py)
 - [`logs/2026-04-08-wave-static-matrixfree-moving-source-fixed-beam-boundary-h035.txt`](../logs/2026-04-08-wave-static-matrixfree-moving-source-fixed-beam-boundary-h035.txt)
