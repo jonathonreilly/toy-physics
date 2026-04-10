@@ -288,19 +288,20 @@ These are not new score-card rows for the existing architectures. They are targe
 | Graph true KG vs CN comparison | `frontier_graph_true_kg_vs_cn.py` | On cubic, CN free-mode fit lands at `R² = 0.9634`, slope `0.7055`, intercept `-0.0263`, isotropy `1.1728`, while true local KG lands at `R² = 0.9998`, slope `0.9520`, intercept `0.0932`, isotropy `1.0309`. On the tested operating point both still give TOWARD gravity and `F∝M`. | The current CN scalar graph lane is a strong low-energy scalar control, not a faithful stand-in for a true local graph KG theory. Free theory and weak-field gravity rows must now be treated as separate claims. |
 | Staggered fermion probe | `frontier_staggered_fermion.py` | Genuine staggered Dirac dispersion closes exactly: `E² = m² + sin²(k)` in 1D and `R² = 1.000000` for the 3D low-`k` KG fit. Gravity is `18/18` TOWARD and monotone in 1D, `F∝M` is `R² = 0.999975`, Born is `1.20e-15`, norm drift is `4.44e-16`. | This is the strongest current no-coin genuine Dirac lane. Its main unresolved issue is transport realism: the current CN evolution blows through a strict light-cone gate, so it is promising but not yet a retained replacement architecture. |
 | Graph scalar + spinor prototype | `frontier_graph_scalar_plus_spinor.py` | Matter norm stays at machine precision, the matter centroid shifts TOWARD the scalar source across the tested strength scan, and a nontrivial upper/lower spinor imbalance survives. | A two-field graph architecture is plausibly cleaner than forcing gravity and spin into one field. The immediate blocker is that the scalar background is still external and one-way; there is no self-consistent backreaction yet. |
+| Weak-coin chiral + potential probe | `frontier_weakcoin_16card.py` | Default right-polarized packet scores `16/16` with strict light cone, exact norm, Born `2.66e-16`, force-achromaticity and force-level equivalence. But the new state-family sweep shows `R` TOWARD, `L` AWAY, symmetric AWAY, and antisymmetric TOWARD. | This is a real sector-conditioned success, not a universal gravity architecture. It motivates a formal state-family robustness gate in the core card. |
 | Split mass vs gravity coupling | `frontier_chiral_split_mass_gravity.py` | KG and `F∝M` survive unchanged. Theta-envelope sensitivity drops from exponent `3.802` to `2.803` and `CV 1.0825` to `0.9013`. `k`-chromaticity stays `CV_k = 2.6580`. | `theta` overload is real, but it is not the only bottleneck; wavelength sensitivity survives the split. |
 | Boundary-condition phase diagram | `frontier_chiral_3plus1d_boundary_phase_diagram.py` | Periodic coherent has `4/25` AWAY consensus cells, periodic classical/phase-kill `10/25`; reflecting is `25/25` TOWARD in all modes; open classical/phase-kill are `25/25` TOWARD. | The 3+1D sign problem is dominated by periodic recurrence / boundary effects, not by a torus-observable bug. |
 
-## PART 10: Expanded Core Card (N = 16)
+## PART 10: Expanded Core Card (N = 17)
 
 The old 10-row closure card is still useful, but it is no longer the best
 front-door card by itself. The best current core card is:
 
 - `C1-C10`: operating-point health
-- `C11-C16`: structural bottleneck checks
+- `C11-C17`: structural bottleneck checks
 
 Optional:
-- `C17`: growth / backreaction separation
+- `C18`: growth / backreaction separation
 
 | Row | Test | Description | Current branch read |
 |---|---|---|---|
@@ -320,19 +321,20 @@ Optional:
 | C14 | split mass vs gravity susceptibility | Separate free gap from gravity coupling. | split helps but does not solve chromaticity |
 | C15 | boundary-condition robustness | Same `delta = d/n`, `lambda = L/n` point under periodic/reflecting/open boundaries. | current 3+1D periodic windows are mostly boundary-sensitive |
 | C16 | multi-observable gravity consistency | First-arrival, peak, current, centroid, torus-aware centroid on one run. | concrete in `DIR-3D`: centroid/shell agree `5/6`, current `3/6`, peak `0/6`; now wired into the integrated Dirac core card |
+| C17 | state-family robustness | Same transport/gravity claim under packet-family / polarization / chirality / sublattice preparations. | weak-coin chiral + potential closes the card on the default `R` packet, but flips sign on `L` and symmetric families; universal promotion should fail this row |
 
 ### Optional Core-Adjacent Row
 
 | Row | Test | Description |
 |---|---|---|
-| C17 | growth / backreaction separation | Apply growth or record deposition after transport/readout rather than while the state is still coherent. |
+| C18 | growth / backreaction separation | Apply growth or record deposition after transport/readout rather than while the state is still coherent. |
 
 ### Recommended Order
 
 1. `C1-C5`: prove the operating point is not nonsense
-2. `C11-C16`: prove the architecture is not structurally broken
+2. `C11-C17`: prove the architecture is not structurally broken
 3. `C6-C10`: add measurement and scaling context
-4. `C17` if growth or endogenous backreaction is in scope
+4. `C18` if growth or endogenous backreaction is in scope
 
 This is the best current N-card for core tests. If a branch cannot clear these
 rows, the moonshots are likely to mislead.

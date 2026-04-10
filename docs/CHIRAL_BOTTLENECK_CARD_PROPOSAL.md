@@ -14,15 +14,16 @@ The old 10-row card is still useful, but it is not sufficient. A model can go
 - fused mass and gravity coupling
 - periodic recurrence sensitivity
 - observable mismatch
+- state-family / preparation sensitivity
 
-So the best current core card is **N = 16** rows:
+So the best current core card is **N = 17** rows:
 - **C1-C10:** operating-point card
-- **C11-C16:** structural bottleneck card
+- **C11-C17:** structural bottleneck card
 
 Optional:
-- **C17:** growth / backreaction separation
+- **C18:** growth / backreaction separation
 
-## Expanded Core Card (N = 16)
+## Expanded Core Card (N = 17)
 
 | Row | Test | What it measures | Why it belongs in the core card | Current branch read |
 |---|---|---|---|---|
@@ -42,22 +43,23 @@ Optional:
 | C14 | split mass vs gravity susceptibility | independent sweep of free mass gap and gravity coupling | tests whether inertial mass and gravity response are fused | current split model helps but does not solve everything |
 | C15 | boundary-condition robustness | same `delta = d/n`, `lambda = L/n` point under periodic / reflecting / open boundaries | catches recurrence / wrap artifacts before they become doctrine | current 3+1D periodic sign windows are mostly boundary-sensitive |
 | C16 | multi-observable gravity consistency | compare first-arrival, peak, current, centroid, torus-aware centroid | forces us to separate geometric drift from wave readout | concrete on `DIR-3D`; centroid/shell agree best, peak is not a reliable gravity gate |
+| C17 | state-family robustness | rerun the same gravity claim across packet-family / polarization / chirality / sublattice preparations | blocks sector-conditioned “perfect cards” from being promoted as universal architecture wins | weak-coin chiral + potential scores on the default `R` packet but flips sign on `L` and symmetric families |
 
 ## Optional Row
 
 | Row | Test | What it measures | Why it is optional |
 |---|---|---|---|
-| C17 | growth / backreaction separation | whether growth fails because it is applied to a coherent state instead of to records/currents | extremely important, but secondary to fixing the transport bottlenecks first |
+| C18 | growth / backreaction separation | whether growth fails because it is applied to a coherent state instead of to records/currents | extremely important, but secondary to fixing the transport bottlenecks first |
 
 ## Ordering
 
 The card should be run in this order:
 
 1. `C1-C5`: prove the operating point is not nonsense
-2. `C11-C16`: prove the architecture is not structurally broken
+2. `C11-C17`: prove the architecture is not structurally broken
    If factorized CH-3D fails here, the next move is not “keep tuning the same separable coin”; it is to jump to an irreducible 3+1D transport law such as the Dirac Hamiltonian lane.
 3. `C6-C10`: add the measurement and scaling context
-4. `C17` if growth or endogenous backreaction is in scope
+4. `C18` if growth or endogenous backreaction is in scope
 
 That ordering is deliberate. The repo’s failure pattern has been:
 
@@ -74,6 +76,7 @@ The expanded card fixes that.
 - `C13-C14`: `scripts/frontier_chiral_split_mass_gravity.py` plus the literal integrated `DIR-3D` rows now wired in `scripts/frontier_dirac_walk_3plus1d_core_card.py`
 - `C15`: `scripts/frontier_chiral_3plus1d_boundary_phase_diagram.py`, with the analogous `DIR-3D` robustness row now wired in `scripts/frontier_dirac_walk_3plus1d_core_card.py`
 - `C16`: prototype exists in `scripts/frontier_dirac_walk_3plus1d_observable_panel.py` and is now wired into `scripts/frontier_dirac_walk_3plus1d_core_card.py`
+- `C17`: `scripts/frontier_weakcoin_16card.py` is the first clean motivating example; future promotion candidates should include the same packet-family sweep explicitly
 
 The newer `DIR-3D` scans add one more practical lesson:
 
@@ -90,8 +93,8 @@ problem.
 The best current core card is not “10 rows plus some moonshots later.”
 
 It is:
-- **a 16-row front-door card**
+- **a 17-row front-door card**
 - with the old closure rows kept
-- and the six structural bottleneck rows promoted into the core path
+- and the seven structural bottleneck rows promoted into the core path
 
 That gives us the right shape of operating environment much earlier.
