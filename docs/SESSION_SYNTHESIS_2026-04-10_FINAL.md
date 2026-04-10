@@ -216,20 +216,34 @@ The full-suite baseline is now frozen:
    strong and monotone on layered-cycle graphs, weak-to-mixed on random
    geometric and growing graphs.
 
+8. **Larger-graph cycle battery**: DONE as a retained sibling harness.
+   `frontier_staggered_cycle_battery_scaled.py` keeps the force-first `9/9`
+   battery closed on all three retained graph families at side `8`, `10`, and
+   `12`, with native gauge still nonzero and `15/15` iterative stability in
+   every run.
+
+9. **Retarded / hybrid two-field probe**: DONE as a retained negative-positive
+   frontier result. `frontier_two_field_retarded_probe.py` preserves the core
+   force / linearity / additivity / norm / gauge battery, but only scores
+   `8/9`, `9/9`, `8/9` because family robustness still fails on the random
+   geometric and layered-cycle families.
+
 ### Remaining work
 
 1. **Endogenous-field scale**: G_eff=12-178 is characterized but not closed.
    The miss is structural on the current graph Poisson map, not a sign or
    linearity failure.
-2. **Two-field retarded-field hardening**: the wave-law upgrade is now real.
-   The next step is to test retarded or hybrid field laws against the same
-   retained force battery and the retained nonlocal source-sector closure.
+2. **Two-field family robustness**: the retarded / hybrid law now exists and
+   preserves the main coupled-force battery, but still drops to `2/3` families
+   on two admissible graph families. The next step is to close that sector
+   robustness gap without losing the current force/norm/gauge wins.
 3. **Self-gravity hardening**: push beyond the new scaling note toward a
    retained larger-size / harsher-family map, especially to explain why
    contraction remains strong on layered-cycle graphs but only weak-to-mixed on
    random geometric and growing families.
-4. **Larger graph tests**: map how the structural source-scale gap and the
-   retained force battery evolve with size on the admissible graph families.
+4. **Beyond the retained size sweep**: push past side `12` or into harsher
+   irregular families to find the first real break in the larger-graph cycle
+   battery, rather than rerunning already-frozen sizes.
 
 For the active backlog and agent brief, see:
 - `docs/WORK_BACKLOG_2026-04-10.md`
@@ -242,5 +256,6 @@ The current retained cycle-bearing integration is frozen in:
 Companion retained probes:
 - `scripts/frontier_staggered_self_gravity.py`
 - `scripts/frontier_staggered_self_gravity_scaling.py`
+- `scripts/frontier_staggered_cycle_battery_scaled.py`
 - `scripts/frontier_two_field_coupling.py`
 - `scripts/frontier_two_field_wave.py`

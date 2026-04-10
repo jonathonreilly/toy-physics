@@ -24,6 +24,9 @@ This backlog is ordered by value to the main project, not by ease.
 - A retained scaling readout now exists in
   [`frontier_staggered_self_gravity_scaling.py`](../scripts/frontier_staggered_self_gravity_scaling.py):
   inward force is stable, but contraction is topology-sensitive.
+- A retained larger-graph sibling now exists in
+  [`frontier_staggered_cycle_battery_scaled.py`](../scripts/frontier_staggered_cycle_battery_scaled.py):
+  the force-first `9/9` battery stays closed on side `8`, `10`, and `12`.
 - A first two-field endogenous coupling is now retained as a prototype in
   [`frontier_two_field_coupling.py`](../scripts/frontier_two_field_coupling.py),
   but it still uses relaxation dynamics for `Phi`.
@@ -31,6 +34,10 @@ This backlog is ordered by value to the main project, not by ease.
   [`frontier_two_field_wave.py`](../scripts/frontier_two_field_wave.py): hard
   `5/5` on the retained cycle-bearing families, with width kept as a
   diagnostic rather than a hard gate.
+- A retarded / hybrid field-law probe is now retained in
+  [`frontier_two_field_retarded_probe.py`](../scripts/frontier_two_field_retarded_probe.py):
+  the main coupled-force battery survives, but family robustness still drops to
+  `2/3` on random geometric and layered-cycle families.
 - The sparse layered DAG-like family remains a useful negative control; it
   still fails the gauge/current threshold.
 - The main blocker is no longer transport portability. It is self-consistent
@@ -47,9 +54,9 @@ This backlog is ordered by value to the main project, not by ease.
 - Next seam: iterative endogenous closure on top of the retained nonlocal Green
   map, because the one-step self-refresh gap is still `O(1)` on the
   cycle-bearing families.
-- After that, push beyond the current wave-law hardening toward retarded or
-  hybrid field laws rather than multiplying more one-way background-field
-  probes.
+- After that, push beyond the current wave-law hardening toward a retarded or
+  hybrid field law that actually closes family robustness, rather than
+  multiplying more one-way background-field probes.
 - Acceptance gate:
   preserve the retained `resistance_yukawa` closure level while reducing the
   one-step self-refresh gap, without losing TOWARD sign, source linearity,
