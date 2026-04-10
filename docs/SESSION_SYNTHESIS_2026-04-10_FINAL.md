@@ -204,3 +204,7 @@ The next work is:
 For the active backlog and agent brief, see:
 - `docs/WORK_BACKLOG_2026-04-10.md`
 - `docs/CLAUDE_BACKLOG_BRIEF_2026-04-10.md`
+
+The current retained cycle-bearing integration is frozen in:
+- `scripts/frontier_staggered_cycle_battery.py`
+- `docs/CYCLE_BATTERY_NOTE_2026-04-10.md`

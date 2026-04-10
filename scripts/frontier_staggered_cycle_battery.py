@@ -14,7 +14,12 @@ Battery rows:
   B6: Norm conservation (drift < 1e-3)
   B7: State-family robustness (gauss, color-0, color-1 all TOWARD)
   B8: Native gauge closure (persistent current sin(A) on graph cycle)
-  B9: Force-gap characterization (solved vs external, coupling-constant analysis)
+  B9: Force-gap characterization + shell/spectral diagnostics
+
+Graph families (all cycle-bearing, bipartite):
+  - Random geometric (6x6 grid, cross-color NN links, has cycles)
+  - Growing (preferential attachment, alternating colors, has cycles)
+  - Layered cycle (layered structure, 2-connection per node, has cycles)
 
 Force is the primary gravity observable. No centroid shift.
 No 1D ring fallback. No silent semantic swaps.
@@ -111,6 +116,30 @@ def make_growing(seed=42, n_target=48) -> Graph:
         cur+=1
     pos=np.array(coords); col=np.array(colors,dtype=int); adj_l={k:list(v) for k,v in adj.items()}
     return Graph("growing",pos,col,adj_l,len(pos),0,_bfs(adj_l,0,len(pos)),_find_cycle_edge(adj_l))
+
+def make_layered_cycle(seed=42, layers=6, width=4) -> Graph:
+    """Layered graph with cycles: each node connects to 2 nodes in the next layer."""
+    rng=random.Random(seed); coords=[]; colors=[]; layer_nodes=[]; idx=0
+    for layer in range(layers):
+        count=max(2,width); this_layer=[]
+        for k in range(count):
+            y=float(k)+0.05*(rng.random()-0.5)
+            coords.append((float(layer),y)); colors.append(layer%2)
+            this_layer.append(idx); idx+=1
+        layer_nodes.append(this_layer)
+    pos=np.array(coords); col=np.array(colors,dtype=int); n=len(pos)
+    adj={i:set() for i in range(n)}
+    for layer in range(layers-1):
+        curr=layer_nodes[layer]; nxt=layer_nodes[layer+1]
+        for i_pos,i in enumerate(curr):
+            j1=nxt[i_pos%len(nxt)]; adj[i].add(j1); adj[j1].add(i)
+            j2=nxt[(i_pos+1)%len(nxt)]
+            if j2!=j1: adj[i].add(j2); adj[j2].add(i)
+    adj_l={k:list(v) for k,v in adj.items()}
+    # Reject if not bipartite
+    if _has_odd_cycle(adj_l, col): return None
+    src=layer_nodes[0][0]
+    return Graph("layered_cycle",pos,col,adj_l,n,src,_bfs(adj_l,src,n),_find_cycle_edge(adj_l))
 
 
 # ============================================================================
@@ -292,16 +321,33 @@ def run_battery(g: Graph):
     else:
         print(f"  [B8] Gauge: no cycle found, SKIP"); score+=0
 
-    # B9: Force-gap characterization
+    # B9: Force-gap + shell/spectral diagnostics
     phi_ext=_ext_phi(g); H_ext=_build_H(g,MASS,phi_ext)
     psi_ext=_cn_evolve(H_ext,psi0,DT,N_STEPS_SINGLE)
     F_ext=_shell_force(g,psi_ext,phi_ext)
     gap=abs(F_s-F_ext)/abs(F_ext) if abs(F_ext)>1e-30 else 0
-    # The gap is a coupling-constant mismatch (solved Poisson vs 1/r kernel).
-    # Both respond linearly. Report as characterization, not pass/fail.
     G_eff=F_ext/F_s if abs(F_s)>1e-30 else float('inf')
-    print(f"  [B9] Gap: F_solve={F_s:+.3e}, F_ext={F_ext:+.3e}, gap={gap:.1%}, G_eff={G_eff:.1f}")
-    score += 1  # characterization row, always passes
+    # Shell profile: Phi_solve vs Phi_ext at each BFS depth
+    max_d=int(np.max(g.depth[np.isfinite(g.depth)])) if np.any(np.isfinite(g.depth)) else 0
+    ps_sh=np.zeros(max_d+1); pe_sh=np.zeros(max_d+1); cnt=np.zeros(max_d+1)
+    for i in range(g.n):
+        d_=int(g.depth[i]) if np.isfinite(g.depth[i]) else -1
+        if 0<=d_<=max_d:
+            ps_sh[d_]+=phi_s[i]; pe_sh[d_]+=phi_ext[i]; cnt[d_]+=1
+    for d_ in range(max_d+1):
+        if cnt[d_]>0: ps_sh[d_]/=cnt[d_]; pe_sh[d_]/=cnt[d_]
+    # Spectral: decompose both into Laplacian eigenmodes
+    L=_graph_laplacian(g); evals_L,evecs_L=np.linalg.eigh(L.toarray())
+    spec_solve=evecs_L.T@phi_s; spec_ext=evecs_L.T@phi_ext
+    # Spectral ratio at low modes (modes 1-5)
+    spec_ratios=[]
+    for k in range(1,min(6,g.n)):
+        if abs(spec_ext[k])>1e-10:
+            spec_ratios.append(abs(spec_solve[k]/spec_ext[k]))
+    mean_spec_ratio=np.mean(spec_ratios) if spec_ratios else 0
+    print(f"  [B9] Gap: G_eff={G_eff:.1f}, shell_grad_ratio={(ps_sh[0]-ps_sh[min(1,max_d)])/(pe_sh[0]-pe_sh[min(1,max_d)]):.3f}" if max_d>0 and abs(pe_sh[0]-pe_sh[min(1,max_d)])>1e-10 else f"  [B9] Gap: G_eff={G_eff:.1f}")
+    print(f"       spectral_ratio(modes1-5)={mean_spec_ratio:.3f}")
+    score += 1  # characterization, always passes
 
     print(f"\n  SCORE: {score}/9")
     return score
@@ -321,7 +367,14 @@ if __name__ == '__main__':
     print()
 
     scores = []
-    for g in [make_random_geometric(seed=42), make_growing(seed=42)]:
+    families = [make_random_geometric(seed=42), make_growing(seed=42), make_layered_cycle(seed=42)]
+    for g in families:
+        if g is None:
+            print("  REJECTED: graph construction failed (odd cycle or disconnected)")
+            continue
+        if _has_odd_cycle(g.adj, g.colors):
+            print(f"  REJECTED: {g.name} has odd-cycle defect")
+            continue
         s = run_battery(g)
         if s is not None: scores.append(s)
 

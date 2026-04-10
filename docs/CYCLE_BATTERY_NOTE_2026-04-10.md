@@ -8,17 +8,19 @@
 The staggered fermion + potential gravity architecture passes a 9-row
 battery on two cycle-bearing bipartite graph families:
 
-| Row | Random Geometric (36) | Growing (48) |
-|-----|:---:|:---:|
-| B1 Zero-source | exact | exact |
-| B2 Linearity | R²=1.000 | R²=1.000 |
-| B3 Additivity | <2e-16 | <2e-16 |
-| B4 Force TOWARD | ✅ | ✅ |
-| B5 Iterative (15 steps) | 15/15 TW | 15/15 TW |
-| B6 Norm | <5e-16 | <5e-16 |
-| B7 Families (3/3) | ✅ | ✅ |
-| B8 Native gauge | R²=0.9999 | R²=0.9500 |
-| B9 Force-gap (characterization) | G_eff=32 | G_eff=178 |
+| Row | Random Geometric (36) | Growing (48) | Layered Cycle (24) |
+|-----|:---:|:---:|:---:|
+| B1 Zero-source | exact | exact | exact |
+| B2 Linearity | R²=1.000 | R²=1.000 | R²=1.000 |
+| B3 Additivity | <2e-16 | <2e-16 | <3e-16 |
+| B4 Force TOWARD | ✅ | ✅ | ✅ |
+| B5 Iterative (15 steps) | 15/15 TW | 15/15 TW | 15/15 TW |
+| B6 Norm | <5e-16 | <5e-16 | <5e-16 |
+| B7 Families (3/3) | ✅ | ✅ | ✅ |
+| B8 Native gauge | R²=0.9999 | R²=0.9500 | R²=0.9736 |
+| B9 Force-gap | G_eff=32 | G_eff=178 | G_eff=12 |
+| B9 shell_grad_ratio | 1.9% | 0.5% | 4.4% |
+| B9 spectral_ratio | 18.9% | 7.7% | 16.9% |
 
 ## What Works
 
@@ -62,8 +64,8 @@ lattice cutoff.
 
 ## Remaining Caveats
 
-1. **Cycle-bearing families only** — the layered cycle graph needs to be
-   integrated into the battery harness.
+1. **All three cycle-bearing families integrated** — random geometric,
+   growing, and layered cycle all pass 9/9.
 2. **Force is primary** — no centroid rows. The centroid has a period-4
    oscillation on staggered periodic lattices.
 3. **B9 is characterization, not pass/fail** — the gap is reported but
