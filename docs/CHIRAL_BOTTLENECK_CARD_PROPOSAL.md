@@ -36,12 +36,12 @@ Optional:
 | C8 | purity stability | whether the record proxy is stable across the scanned window | guards against one-off purity positives | retained |
 | C9 | gravity grows with propagation | whether the signal is a real trend instead of one lucky layer count | still needed for operating-point sanity | retained |
 | C10 | distance law | how the gravity response decays with offset | still needed, but no longer overinterpreted as the whole gravity story | retained with caveats |
-| C11 | 3D KG isotropy / coupled-coin dispersion | `E^2` vs `k^2` along axes and diagonals, isotropy ratio | first fast detector of factorized 3D transport | current factorized CH-3D fails; coupled family helps but does not close |
-| C12 | 3D gauge-loop / AB visibility | Wilson-loop / enclosed-flux response on the same 3D transport | first fast detector of missing cross-axis coupling | current factorized CH-3D fails; coupled family restores strong signal |
+| C11 | 3D KG isotropy / coupled-coin dispersion | `E^2` vs `k^2` along axes and diagonals, isotropy ratio | first fast detector of factorized 3D transport | factorized CH-3D fails; generic coupled `6x6` helps but only the `DIR-3D` Hamiltonian lane closes KG cleanly |
+| C12 | 3D gauge-loop / AB visibility | Wilson-loop / enclosed-flux response on the same 3D transport | first fast detector of missing cross-axis coupling | factorized CH-3D fails; `DIR-3D` flux-tube restores nonzero AB (`V=0.519`) |
 | C13 | fixed-`theta` `k`-achromaticity | deflection CV across carrier `k` at matched travel distance | catches wave-window gravity before it is sold as structural gravity | current CH-1D fails (`CV_k ≈ 2.66`) |
 | C14 | split mass vs gravity susceptibility | independent sweep of free mass gap and gravity coupling | tests whether inertial mass and gravity response are fused | current split model helps but does not solve everything |
 | C15 | boundary-condition robustness | same `delta = d/n`, `lambda = L/n` point under periodic / reflecting / open boundaries | catches recurrence / wrap artifacts before they become doctrine | current 3+1D periodic sign windows are mostly boundary-sensitive |
-| C16 | multi-observable gravity consistency | compare first-arrival, peak, current, centroid, torus-aware centroid | forces us to separate geometric drift from wave readout | not yet wired as one retained integrated harness |
+| C16 | multi-observable gravity consistency | compare first-arrival, peak, current, centroid, torus-aware centroid | forces us to separate geometric drift from wave readout | concrete on `DIR-3D`; centroid/shell agree best, peak is not a reliable gravity gate |
 
 ## Optional Row
 
@@ -55,6 +55,7 @@ The card should be run in this order:
 
 1. `C1-C5`: prove the operating point is not nonsense
 2. `C11-C16`: prove the architecture is not structurally broken
+   If factorized CH-3D fails here, the next move is not “keep tuning the same separable coin”; it is to jump to an irreducible 3+1D transport law such as the Dirac Hamiltonian lane.
 3. `C6-C10`: add the measurement and scaling context
 4. `C17` if growth or endogenous backreaction is in scope
 
@@ -72,7 +73,7 @@ The expanded card fixes that.
 - `C11-C12`: `scripts/frontier_chiral_3plus1d_coupled_coin_scan.py`
 - `C13-C14`: `scripts/frontier_chiral_split_mass_gravity.py` and corrected carrier-`k` utilities from the moonshot harness
 - `C15`: `scripts/frontier_chiral_3plus1d_boundary_phase_diagram.py`
-- `C16`: next harness to add; should wrap the existing closure-card propagators and emit multiple observables from the same run
+- `C16`: prototype exists in `scripts/frontier_dirac_walk_3plus1d_observable_panel.py`; next step is porting it into the shared retained harness
 
 ## Bottom Line
 

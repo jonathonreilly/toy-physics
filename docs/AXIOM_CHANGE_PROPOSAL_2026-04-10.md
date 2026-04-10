@@ -10,6 +10,7 @@ The current matrix no longer supports the older axiom wording without qualificat
 - strong retained 1+1D and 2+1D chiral results
 - a real 3+1D operating-point success, but not a universal sign law
 - a repeated failure mode in 3+1D that points to the transport law, not just to lattice size
+- a new 4-component Dirac lane that recovers exact 3D KG and nonzero AB where the factorized chiral lane fails
 - clear evidence that Axiom 6, Axiom 8, and Axiom 10 need rewrites or demotion
 - a plausible missing constraint: local transport should be linear / isometric and symmetry-coupled before durable records form
 
@@ -72,10 +73,15 @@ measurements justify.
    The new coupled-coin scan shows that once the coin couples axes, both 3D
    gauge response and 3D KG fit improve materially.
 
-3. **The 3+1D periodic AWAY windows are not a clean boundary-agnostic falsifier.**
+3. **The failed factorized chiral route is not a generic 3D no-go.**
+   The 4-component Dirac Hamiltonian lane already recovers exact isotropic KG
+   and a nonzero AB response, so the stronger lesson is about separable
+   transport, not about 3+1D transport in general.
+
+4. **The 3+1D periodic AWAY windows are not a clean boundary-agnostic falsifier.**
    The boundary scan shows that most of them are tied to periodic recurrence.
 
-4. **Parameter overload is not the whole equivalence-style failure.**
+5. **Parameter overload is not the whole equivalence-style failure.**
    Splitting inertial mass from gravity susceptibility helps, but measured
    carrier-`k` chromaticity survives.
 
@@ -89,6 +95,7 @@ That is the cleanest way to summarize the repeated bottlenecks:
 
 - factorized 3+1D chiral transport fails to produce isotropic Klein-Gordon behavior
 - 3+1D gauge behavior fails under the same separable transport law
+- irreducible 4-component spinor transport closes those gates much more naturally than generic coupled `6x6` mixers
 - dense global operators can recover some retention, but at the cost of locality
 - the successful cases all require a tighter transport law than the old Axiom 6 wording implied
 
@@ -97,10 +104,10 @@ That is the cleanest way to summarize the repeated bottlenecks:
 The next experiments should target the bottlenecks directly, before adding more
 phenomenology:
 
-1. **symmetry-matched coupled 3+1D coin**
-   Go beyond a generic mixer. Build a `6x6` or `8x8` unitary whose generator is
-   chosen to respect the continuation-channel symmetry, then rerun 3D KG and
-   3D gauge together.
+1. **symmetry-matched irreducible 3+1D transport**
+   Go beyond a generic mixer. Compare a symmetry-matched `6x6`/`8x8` unitary
+   directly against the retained 4-component Dirac Hamiltonian lane, then rerun
+   3D KG and 3D gauge together.
 2. **split inertial mass from gravitational susceptibility**
    Keep the free gap fixed, vary only the gravity generator, and watch whether
    the equivalence-style sensitivity drops without harming KG or `F∝M`.
@@ -129,3 +136,4 @@ The combined axiom view for this branch is:
 - weaken Axiom 8 so it no longer implies `distortion => gravity`
 - demote Axiom 10 to a preference, not a law
 - add the missing pre-record transport constraint explicitly
+- treat irreducible spinor-like transport as the leading concrete candidate for satisfying that constraint in 3+1D

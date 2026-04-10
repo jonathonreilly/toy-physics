@@ -104,7 +104,8 @@ The axiom rewrite changes how the current evidence should be summarized.
 - **The factorized 3+1D chiral lane should be treated as a bounded implementation,
   not as a theorem about chiral transport.**
   The coupled-coin scan materially improves both 3D gauge response and 3D KG
-  fit, so the factorized coin is now best read as a design bottleneck.
+  fit, and the newer 4-component Dirac Hamiltonian lane closes both gates much
+  more cleanly. The factorized coin is now best read as a design bottleneck.
 
 - **The 3+1D periodic AWAY windows are not the clean falsifier they first
   appeared to be.**
@@ -121,9 +122,10 @@ The axiom rewrite changes how the current evidence should be summarized.
 
 The next non-optional tests are:
 
-1. **symmetry-matched coupled 3+1D coin family**
-   Build a better `6x6` or `8x8` on-site generator, not just a generic pair mixer,
-   and rerun 3D KG/gauge together.
+1. **symmetry-matched irreducible 3+1D transport family**
+   Compare a better `6x6`/`8x8` on-site generator directly against the retained
+   4-component Dirac Hamiltonian lane, not just against the factorized chiral
+   baseline, and rerun 3D KG/gauge together.
 2. **compare periodic against reflecting or open boundaries at fixed `delta` and `lambda`**
    Treat boundary robustness as a core gate, not a late diagnostic.
 3. **tie any geodesic-based gravity observable to the same retained 3+1D chiral transport law**

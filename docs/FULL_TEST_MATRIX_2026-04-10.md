@@ -61,6 +61,7 @@
 | **CH-1D** | Chiral Walk 1+1D | 2-component, symmetric coin, θ-coupling |
 | **CH-2D** | Chiral Walk 2+1D | 4-component, factorized coin |
 | **CH-3D** | Chiral Walk 3+1D | 6-component, n=21, N=16 |
+| **DIR-3D** | Dirac Walk 3+1D | 4-component spinor, Hamiltonian/shift hybrid, reversed mass coupling |
 
 ---
 
@@ -81,7 +82,7 @@
 | | **Score** | **10/10** | **10/10** | **2/10** | **0/10** | **3/10** | **10/10** | **10/10** | **10/10** |
 
 \* k-window only (k=1-6), spectral AWAY
-† Part 1: Barrier I₃ fails (linearity is tautological). Part 2/5: Factorized coin gives 1D-per-pair dispersion, not isotropic 3D KG — needs coupled 6×6 Dirac coin
+† Part 1: Barrier I₃ fails (linearity is tautological). Part 2/5: Factorized coin gives 1D-per-pair dispersion, not isotropic 3D KG. Generic coupled `6×6` families help but do not close; `DIR-3D` is the stronger current route.
 ‡ k=7 window, spectral AWAY
 § Global medium, not localized mass
 ¶ Converged regime (N ≤ n-5), sign windows exist
@@ -183,32 +184,38 @@
 | **Chiral 2+1D** | **10/10** | ~10 | 5/6 | 6/9 | ~8/13 | ~39/58 |
 | **Chiral 3+1D** | **10/10** | ~9 | 5/6 | 5/9 | ~7/13 | ~36/58 |
 
+`DIR-3D` is not yet scored as a full architecture in Part 6 because the branch
+has retained bottleneck probes (`v1-v4`) rather than one stabilized all-sections
+card. The current Dirac evidence belongs in the design-probe layer first.
+
 ---
 
 ## PART 7: Remaining Open Issues (by priority)
 
 ### Critical:
-1. **Factorized 3+1D coin** — confirmed core blocker. Coupled-coin scan lifts gauge visibility from `0.0000` to `0.9142` and KG fit from `R²=0.0627` to `0.4787`, but isotropic 3D KG still does not retain.
-2. **Equivalence / parameter overload** — splitting `theta_m` from gravity susceptibility reduces theta-envelope sensitivity (`3.802 -> 2.803`, `CV 1.0825 -> 0.9013`) but leaves strong k-chromaticity intact (`CV_k = 2.6580`).
-3. **3+1D periodic sign windows** — mostly recurrence / boundary artifacts. Reflecting is `25/25` TOWARD across all scanned cells; open classical and phase-kill are also `25/25` TOWARD, while periodic retains AWAY corners.
-4. **Distance exponent -0.6** — explained by beam spreading but not Newtonian
+1. **Factorized 3+1D chiral coin** — confirmed blocker for the current CH-3D lane. Coupled-coin scan lifts gauge visibility from `0.0000` to `0.9142` and KG fit from `R²=0.0627` to `0.4787`, but isotropic 3D KG still does not retain there.
+2. **Dirac 3+1D gravity stability** — the 4-component Dirac walk closes exact KG (`R²=1.000000`) and restores nonzero AB (`V=0.519`), but larger-lattice `v4` still plateaus at `7/10` and keeps non-monotone `N`-growth plus mixed-sign distance law even under open boundaries.
+3. **Equivalence / parameter overload** — splitting `theta_m` from gravity susceptibility reduces theta-envelope sensitivity (`3.802 -> 2.803`, `CV 1.0825 -> 0.9013`) but leaves strong k-chromaticity intact (`CV_k = 2.6580`).
+4. **3+1D periodic sign windows** — mostly recurrence / boundary artifacts in CH-3D. Reflecting is `25/25` TOWARD across all scanned cells; open classical and phase-kill are also `25/25` TOWARD, while periodic retains AWAY corners.
+5. **Distance exponent -0.6** — explained by beam spreading but not Newtonian
 
 ### Significant:
-5. **Dynamic growth** — works on TM, fails on chiral
-6. **CLT decoherence ceiling** — persists on all architectures
-7. **SU(2) gauge** — needs additional color DOF
-8. **Chromaticity on chiral gravity** — corrected k-sweep at fixed θ shows strong k-dependence (CV=2.66)
+6. **Dynamic growth** — works on TM, fails on chiral
+7. **CLT decoherence ceiling** — persists on all architectures
+8. **SU(2) gauge** — needs additional color DOF
+9. **Chromaticity on chiral gravity** — corrected k-sweep at fixed θ shows strong k-dependence (CV=2.66)
 
 ### Moderate:
-9. **Cosmological expansion** — fails on chiral
-10. **Hawking analog** — no thermal spectrum on chiral
-11. **3+1D Born** — 0.056 (weaker than lower dimensions)
-12. **2+1D dispersion** — approximate KG only (slope 0.87-0.93)
-13. **Chirality not conserved** — precesses, not a good spin analog
-14. **VL-3D spectrum growth-contaminated** — CV=0.334, spectral radius=1.72 (non-unitary)
+10. **Cosmological expansion** — fails on chiral
+11. **Hawking analog** — no thermal spectrum on chiral
+12. **3+1D Born** — 0.056 (weaker than lower dimensions)
+13. **2+1D dispersion** — approximate KG only (slope 0.87-0.93)
+14. **Chirality not conserved** — precesses, not a good spin analog
+15. **VL-3D spectrum growth-contaminated** — CV=0.334, spectral radius=1.72 (non-unitary)
+16. **Dirac decoherence rows need redesign** — explicit record purity behaves correctly while the current detector proxy barely moves, so the retained negative is harness-level for now.
 
 ### Design Bottleneck (from spot checks):
-0. **Factorized coin cannot produce retained 3D transport** — The independent `2×2` blocks on each chirality pair produce 1D-per-pair dispersion (`R²=0.16` on the baseline spot check) and zero 3D AB visibility. The new coupled-coin scan confirms this is real: once cross-axis mixing is introduced, gauge response jumps to `V=0.9142` and KG fit improves materially. A symmetry-matched coupled `6×6` or `8×8` Dirac-like coin is the highest-priority design task.
+0. **Separable continuation channels are the central 3D transport blocker** — In CH-3D, the independent `2×2` blocks on each chirality pair produce 1D-per-pair dispersion (`R²=0.16`) and zero 3D AB visibility. Generic coupled `6×6` families help but do not close. The first architecture that actually closes both gates materially is the irreducible 4-component Dirac Hamiltonian lane (`R²=1.000000`, `AB V=0.519`). The highest-priority design task is therefore no longer “arbitrary larger coupled coin,” but a symmetry-matched irreducible 3+1D transport law.
 
 ### Resolved/Understood:
 14. **2D gravity sign** — non-unitarity artifact (TOWARD with polar U)
@@ -223,6 +230,7 @@
 23. **Periodic sign windows are mostly recurrence artifacts** — reflecting is `25/25` TOWARD and open classical / phase-kill are `25/25` TOWARD on the boundary phase diagram; the worst sign windows are tied to periodic wrap.
 24. **Theta overload is real but not sole** — split mass/gravity coupling reduces theta-envelope sensitivity but does not cure k-chromaticity, so overloading matters without being the whole story.
 25. **Cross-axis coupling helps but does not finish 3D** — a coupled `6×6` family lifts 3D gauge response strongly and improves KG fit, but the best low-k isotropic fit remains only moderate (`R²=0.4787`).
+26. **Dirac Hamiltonian closes KG and AB but not yet gravity stability** — the 4-component `DIR-3D` lane recovers exact isotropic KG and nonzero AB, but larger-lattice `v4` keeps non-monotone `N` response and mixed-sign offset law even with open boundaries.
 
 ---
 
@@ -250,7 +258,7 @@ The **factorized coin** (independent 2×2 blocks per chirality pair) is the cent
 - Why 3D gauge fails (AB requires coupled spatial dimensions)
 - Why the 2D results are strong (2D has only one spatial pair)
 
-A **coupled Dirac-like coin** (6×6 for 3+1D, mixing all chirality components) would be the natural next step. This is the highest-priority experiment remaining.
+The stronger next step is now an **irreducible 3+1D transport law**. The branch already has one concrete example: the 4-component `DIR-3D` Hamiltonian lane closes exact KG and restores nonzero AB, even though its gravity stability is still incomplete.
 
 ---
 
@@ -261,6 +269,10 @@ These are not new score-card rows for the existing architectures. They are targe
 | Probe | Harness | Key result | Interpretation |
 |---|---|---|---|
 | Coupled 3+1D coin scan | `frontier_chiral_3plus1d_coupled_coin_scan.py` | Baseline `mix=0`: KG `R²=0.0627`, gauge `V=0.0000`. Best gauge at `mix=0.88`: `V=0.9142`. Best KG at `mix=1.00`: `R²=0.4787`. | Separability is a confirmed 3D blocker, but arbitrary coupling alone does not yet recover a clean isotropic 3D KG law. |
+| Dirac 3+1D v3 | `frontier_dirac_walk_3plus1d_v3.py` | Exact Hamiltonian KG `R²=1.000000`, AB flux-tube `V=0.519`, `F∝M=1.000`, closure `7/10`. | An irreducible 4-component spinor transport law can recover the two hardest 3D gates that the factorized chiral lane misses. This weakens any generic 3D no-go reading. |
+| Dirac 3+1D v4 convergence | `frontier_dirac_walk_3plus1d_v4_convergence.py` | Best at `m0=0.10`: periodic closure plateaus at `7/10` for `n=17..29`; open boundaries do not fix `N`-monotonicity or offset-law failure. | Larger lattices do not rescue the remaining Dirac gravity issues. In the current 4-component implementation, the residual failures look structural rather than purely boundary-driven. |
+| Dirac decoherence / record probe | `frontier_dirac_walk_3plus1d_decoherence_probe.py` | Clean vs record residual `0.91-0.94`, record-mixture purity `~0.500`, detector proxy barely moves. | The current closure-card purity/decoherence proxy is a harness mismatch for `DIR-3D`. Dirac should be judged with explicit which-path record purity plus an interference-residual metric. |
+| Dirac observable panel | `frontier_dirac_walk_3plus1d_observable_panel.py` | Centroid and shell agree `5/6`, current `3/6`, peak `0/6`, first-arrival fixed at layer `6`. | `C16` is now concrete: centroid/shell are the best current sign proxies, peak is too wave-sensitive, and multi-observable agreement must become an explicit promotion gate. |
 | Split mass vs gravity coupling | `frontier_chiral_split_mass_gravity.py` | KG and `F∝M` survive unchanged. Theta-envelope sensitivity drops from exponent `3.802` to `2.803` and `CV 1.0825` to `0.9013`. `k`-chromaticity stays `CV_k = 2.6580`. | `theta` overload is real, but it is not the only bottleneck; wavelength sensitivity survives the split. |
 | Boundary-condition phase diagram | `frontier_chiral_3plus1d_boundary_phase_diagram.py` | Periodic coherent has `4/25` AWAY consensus cells, periodic classical/phase-kill `10/25`; reflecting is `25/25` TOWARD in all modes; open classical/phase-kill are `25/25` TOWARD. | The 3+1D sign problem is dominated by periodic recurrence / boundary effects, not by a torus-observable bug. |
 
@@ -282,17 +294,17 @@ Optional:
 | C3 | null control (`k=0` or `f=0`) | No-field baseline. | retained |
 | C4 | `F∝M` scaling | Weak-field linearity in source strength or mass. | retained |
 | C5 | gravity sign at retained point | Minimal TOWARD/AWAY operating-point check. | retained but insufficient alone |
-| C6 | decoherence / record proxy | Weak environment / record sensitivity. | retained but bounded |
+| C6 | decoherence / record proxy | Weak environment / record sensitivity. | retained but bounded; `DIR-3D` needs explicit record purity instead of detector concentration proxy |
 | C7 | mutual information | Branch correlation strength. | retained |
-| C8 | purity stability | Whether the record proxy is stable across the scan. | retained |
+| C8 | purity stability | Whether the record proxy is stable across the scan. | retained, but proxy choice is architecture-sensitive |
 | C9 | gravity growth with propagation | Whether the signal is a trend instead of one lucky depth. | retained |
 | C10 | distance law | Offset falloff and fit quality. | retained with caveats |
-| C11 | 3D KG isotropy / coupled-coin dispersion | `E^2` vs `k^2` along axes/diagonals and isotropy ratio. | factorized CH-3D fails; coupled family improves but does not close |
-| C12 | 3D gauge-loop / AB visibility | Genuine 3D loop/flux response on the same transport law. | factorized CH-3D fails; coupled family restores strong signal |
+| C11 | 3D KG isotropy / coupled-coin dispersion | `E^2` vs `k^2` along axes/diagonals and isotropy ratio. | factorized CH-3D fails; generic coupled family improves but only `DIR-3D` closes KG cleanly |
+| C12 | 3D gauge-loop / AB visibility | Genuine 3D loop/flux response on the same transport law. | factorized CH-3D fails; generic coupled family helps, and `DIR-3D` flux-tube gives retained nonzero AB |
 | C13 | fixed-`theta` `k`-achromaticity | Deflection CV across carrier `k` at matched travel distance. | current CH-1D fails (`CV_k ≈ 2.66`) |
 | C14 | split mass vs gravity susceptibility | Separate free gap from gravity coupling. | split helps but does not solve chromaticity |
 | C15 | boundary-condition robustness | Same `delta = d/n`, `lambda = L/n` point under periodic/reflecting/open boundaries. | current 3+1D periodic windows are mostly boundary-sensitive |
-| C16 | multi-observable gravity consistency | First-arrival, peak, current, centroid, torus-aware centroid on one run. | not yet integrated as one retained harness |
+| C16 | multi-observable gravity consistency | First-arrival, peak, current, centroid, torus-aware centroid on one run. | concrete in `DIR-3D`: centroid/shell agree `5/6`, current `3/6`, peak `0/6`; needs promotion into the retained shared harness |
 
 ### Optional Core-Adjacent Row
 

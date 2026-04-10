@@ -25,7 +25,7 @@ chirality components (d = spatial dimensions). Per layer:
 
 | Property | 1+1D | 2+1D | 3+1D |
 |----------|------|------|------|
-| Closure card | 10/10 | 10/10 | 10/10 |
+| Closure card | 10/10 | 10/10 | 10/10 at the tested operating point* |
 | Born |I₃|/P | 3.3e-16 | 0 (exact) | 0.056 |
 | F∝M | 1.000 | 0.992 | 1.000 (R²=1.0) |
 | Gravity | TOWARD | TOWARD | TOWARD basin* |
@@ -33,8 +33,9 @@ chirality components (d = spatial dimensions). Per layer:
 | Light cone | v=1.0 | — | — |
 | Decoherence | 38.6% | 82.8% | PASS |
 
-\* The 3+1D closure card operating point remained positive, but the later
-  addendum narrows the global 3+1D claim to a TOWARD basin with genuine
+\* The 3+1D closure-card operating point remained positive at the tested
+  `(n=21, L=16, offset=3)` setup, but the later addendum narrows the global
+  3+1D claim to an operating-point success plus a TOWARD basin with genuine
   periodic sign windows.
 
 ### Klein-Gordon dispersion (1+1D):
