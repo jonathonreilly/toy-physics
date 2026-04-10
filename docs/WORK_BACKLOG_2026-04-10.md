@@ -18,16 +18,16 @@
 
 The next work package is no longer scorekeeping. It is:
 
-1. **Backreaction prototype**
+1. **Graph portability of staggered / Dirac transport**
+   - bipartite random geometric graphs
+   - bipartite growing graphs
+   - layered / DAG-compatible bipartite graphs
+
+2. **Backreaction prototype**
    - replace external `V = m * Phi` with a source-generated `Phi` on the same graph/lattice
    - keep force `F = -<dV/dz>` as the primary gravity observable
    - prove a minimal source-response / two-body / stability loop
    - use `docs/STAGGERED_BACKREACTION_NOTE.md` as the prototype spec
-
-2. **Graph portability of staggered / Dirac transport**
-   - bipartite random geometric graphs
-   - bipartite growing graphs
-   - layered / DAG-compatible bipartite graphs
 
 3. **Graph-Dirac design memo**
    - classify graph families as admissible, marginal, or incompatible
