@@ -45,24 +45,31 @@ the full 16-row audited core card on three different graph topologies.
 5. **Gravity** — A mass source creates a local potential:
    V(v) = -m * g * S / (d(v, source) + eps).
 
-## What these axioms derive (not assume)
+## What these axioms produce
 
-- **Klein-Gordon dispersion**: E^2 = m^2 + lambda(k) where lambda(k) are the
-  graph Laplacian eigenvalues. On a regular lattice: lambda = 2*sum(1-cos(k_j)).
-  R^2 = 0.9998, isotropy 1.031 on cubic.
+**Important caveat**: The evolution is first-order Schrodinger (i*dpsi/dt = H*psi),
+NOT second-order Klein-Gordon (d^2 psi/dt^2 = -H^2*psi). The Hamiltonian's eigenvalue
+spectrum satisfies E = sqrt(m^2 + lambda(k)), which SQUARED gives the KG relation,
+but the dynamics are Schrodinger-like. This is a graph-scalar Hamiltonian lane with
+KG-like spectrum, not a fully demonstrated local KG dynamics.
+
+- **KG-like spectrum**: E^2 = m^2 + lambda(k) where lambda(k) are the graph
+  Laplacian eigenvalues. On a regular lattice: lambda = 2*sum(1-cos(k_j)).
+  R^2 = 0.9998, isotropy 1.031 on cubic. (Spectrum verified, not dynamics.)
 - **Born rule**: Sorkin I_3 / P = 4e-15 (machine zero). Structural from
   linearity of the CN evolution.
 - **Gravitational attraction**: TOWARD, F proportional to M (R^2=1.000),
   achromatic (force CV=0.002), mass-independent acceleration (CV=0.000),
   monotonically growing with propagation depth, stable across N range.
-- **Gauge (AB effect)**: Slit-phase visibility 0.43-0.79 across graphs.
-  Torus flux test confirms gauge sensitivity (V_det=0.11).
+- **AB-proxy gauge**: Slit-phase visibility 0.43-0.79 across graphs.
+  Torus flux test shows partial gauge sensitivity (V_det=0.11). This is
+  an AB proxy, not a full retained graph gauge closure.
 - **Decoherence**: Phase noise suppresses coherences (94->7% on cubic).
 - **Superposition**: Two-body gravity error < 0.1%.
 
 ## Frozen audited scores
 
-Script: `frontier_axioms_16card.py` @ commit 9c830fc
+Script: `frontier_axioms_16card.py` @ commit 3dbcd73 (C1 Sorkin fix) + 9c830fc (C11 dense grid)
 
 | Row | Test | Cubic (3375) | Random (300) | Growing (150) |
 |-----|------|:---:|:---:|:---:|
