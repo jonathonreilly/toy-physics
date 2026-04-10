@@ -79,7 +79,7 @@ chirality components (d = spatial dimensions). Per layer:
 ### Superposition:
   1+1D: 0.17% on adequate lattice
   2+1D: 0.10%
-  (3+1D not yet tested on chiral)
+  3+1D: 0.65% in the overnight remaining-gaps run
 
 ## What Doesn't Work Yet
 
