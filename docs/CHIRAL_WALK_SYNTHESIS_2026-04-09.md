@@ -1,7 +1,12 @@
 # Chiral Walk Architecture — Complete Synthesis
 
 **Date:** 2026-04-09
-**Status:** The paper architecture. All dimensions validated.
+**Status:** Overnight synthesis. See `CHIRAL_WALK_SYNTHESIS_2026-04-10_ADDENDUM.md` for the narrowed 3+1D status.
+
+> Update 2026-04-10: the overnight 1+1D and 2+1D results still stand, and the
+> 3+1D closure card at its tested operating point still stands, but the later
+> like-for-like 3+1D periodic sweep shows a TOWARD basin with genuine sign
+> windows, not a universal sign-stable 3+1D gravity law.
 
 ## The Architecture
 
@@ -16,17 +21,21 @@ chirality components (d = spatial dimensions). Per layer:
 
 ## What This Produces
 
-### Confirmed in ALL THREE spacetime dimensions:
+### Overnight operating-point positives:
 
 | Property | 1+1D | 2+1D | 3+1D |
 |----------|------|------|------|
 | Closure card | 10/10 | 10/10 | 10/10 |
 | Born |I₃|/P | 3.3e-16 | 0 (exact) | 0.056 |
 | F∝M | 1.000 | 0.992 | 1.000 (R²=1.0) |
-| Gravity | TOWARD | TOWARD | TOWARD |
+| Gravity | TOWARD | TOWARD | TOWARD basin* |
 | Norm | exact | exact | exact |
 | Light cone | v=1.0 | — | — |
 | Decoherence | 38.6% | 82.8% | PASS |
+
+\* The 3+1D closure card operating point remained positive, but the later
+  addendum narrows the global 3+1D claim to a TOWARD basin with genuine
+  periodic sign windows.
 
 ### Klein-Gordon dispersion (1+1D):
   cos(E) = cos(θ)·cos(k)
@@ -59,15 +68,18 @@ chirality components (d = spatial dimensions). Per layer:
   3+1D: α=-0.56, 6/7 TOWARD (R²=0.90)
   Not Newtonian (-1.0). Softened by beam spreading (~d^0.5)
 
-### Convergence:
-  Gravity is TOWARD at 71% of all tested (n, N) cells
-  AWAY cells are boundary-wrapping interference, not physics
-  Converged regime: N ≤ n-5, n >> 2×mass_offset
+### Convergence (overnight view; narrowed later):
+  The overnight sweep suggested a substantial TOWARD basin in 3+1D periodic
+  chiral transport.
+  The later addendum shows genuine AWAY windows that survive in coherent,
+  classical, and phase-kill runs on the same periodic architecture.
+  So 3+1D should be read as a retained basin and operating-point success,
+  not as a universal sign-stable regime.
 
 ### Superposition:
   1+1D: 0.17% on adequate lattice
   2+1D: 0.10%
-  (3+1D not yet tested on chiral)
+  3+1D: 0.65% in the overnight remaining-gaps run
 
 ## What Doesn't Work Yet
 
@@ -109,9 +121,9 @@ The Lorentzian θ-coupling: θ(r) = θ₀(1-f(r))
 This creates a "refractive index" gradient: the walk is faster/straighter
 near mass (less scattering), pulling the probability centroid TOWARD mass.
 
-The mechanism is achromatic: θ doesn't involve k, so gravity is the same
-at all wavelengths. This resolves the transfer matrix's k-dependent
-resonance problem.
+At fixed θ, the coupling is k-independent. That resolves the transfer matrix's
+k-dependent resonance problem in 1+1D, but it does not by itself guarantee a
+universal sign-stable 3+1D periodic regime.
 
 ## Connection to Known Physics
 

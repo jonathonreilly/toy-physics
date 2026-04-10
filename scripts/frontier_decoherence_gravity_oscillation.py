@@ -1,46 +1,42 @@
 #!/usr/bin/env python3
 """
-Frontier: Decoherence Suppression of Gravity Sign Oscillation
-=============================================================
+Frontier: 1D Decoherence Suppression of Gravity-Sign Oscillation
+================================================================
+
+This script is a wide-lattice 1+1D chiral test only.
+
+It does NOT address the separate 3+1D periodic-lattice sign-flip question.
+That requires a like-for-like 3+1D sweep on the same periodic architecture.
 
 HYPOTHESIS:
-  The chiral walk's gravity sign oscillates with layer count N.
-  This oscillation is wave interference on the discrete lattice.
-  Decoherence (environment coupling) should suppress the interference,
-  leaving the geometric TOWARD baseline.
-
-  If the decohered gravity is ALWAYS TOWARD regardless of N, the geometric
-  gravity survives decoherence and the oscillation is just the quantum
-  correction.
+  On the wide 1D reflecting lattice, decoherence may suppress any coherent
+  gravity-sign oscillation and reveal a stable TOWARD baseline.
 
 APPROACH:
-  Part 1: Coherent gravity vs N (reproduce the oscillation)
-  Part 2: Fully decohered (classical) gravity vs N
-  Part 3: Partial decoherence sweep across gamma
+  Part 1: coherent gravity vs N on the 1D wide lattice
+  Part 2: fully decohered (classical) gravity vs N
+  Part 3: stochastic dephasing sweep across gamma
 
 DECOHERENCE MODEL:
   At each layer, after coin+shift, with probability gamma, destroy all
   relative phases between sites:
     psi(y) -> |psi(y)| * exp(i * random_phase(y))
 
-  gamma=0: fully coherent (standard walk)
-  gamma=1: fully decohered (classical random walk limit)
+  gamma=0: fully coherent
+  gamma=1: maximal stochastic dephasing
 
-  For the fully decohered limit, we also implement PROBABILITY propagation:
-    P(y, n+1) = sum_y' |U(y,y')|^2 * P(y', n)
-  This is the exact classical limit (no Monte Carlo noise).
+  For the fully decohered limit, we also implement probability propagation:
+    P(n+1) = |U|^2 @ P(n)
+  This is the exact classical limit for this 1D walk.
 
 PARAMETERS:
-  n_y=15, periodic BC, theta_0=0.3, strength=5e-4
-  Mass offset +3 from center (mass at z=10, source at z=7)
-  6 chiral components for 3+1D (but we use 1+1D chiral for speed/clarity)
+  n_y=41, reflecting BC, theta_0=0.3, strength=5e-4
+  Mass offsets +3..+6 from the centered source
 
-KEY TEST:
-  At N=16 (AWAY in coherent walk): if decohered gravity is TOWARD,
-  decoherence suppresses the oscillation and geometric gravity survives.
-
-FALSIFICATION:
-  If fully decohered gravity is AWAY at N=16.
+LIMITATION:
+  A positive result here should be read as a 1D wide-lattice fact only.
+  It cannot be promoted to 3+1D without rerunning the same coherent vs
+  classical comparison on the 3+1D periodic chiral walk.
 """
 
 from __future__ import annotations
@@ -645,21 +641,43 @@ def main():
                 print(f"  Classical also AWAY at N={still_away}")
     print()
 
-    # Overall verdict
+    # Overall verdict for this 1D wide-lattice test only.
     all_classical_toward = classical_toward == len(N_LAYERS_LIST)
     no_classical_oscillation = sign_changes_cl == 0
 
-    if all_classical_toward and no_classical_oscillation:
-        verdict = "CONFIRMED: Decoherence suppresses oscillation, geometric gravity always TOWARD"
+    if best_sign_changes < 2 and toward_count == len(N_LAYERS_LIST):
+        verdict = (
+            "1D RESULT ONLY: no coherent oscillation was present on this wide "
+            "reflecting lattice, so decoherence cannot be credited with "
+            "removing it here"
+        )
+    elif all_classical_toward and no_classical_oscillation:
+        verdict = (
+            "1D RESULT ONLY: decoherence suppresses the measured oscillation "
+            "and leaves a TOWARD classical baseline"
+        )
     elif classical_toward > toward_count:
-        verdict = "PARTIAL: Decoherence reduces oscillation but does not fully suppress it"
+        verdict = (
+            "1D RESULT ONLY: decoherence reduces oscillation but does not "
+            "fully suppress it"
+        )
     elif no_classical_oscillation and not all_classical_toward:
-        verdict = "MIXED: Classical walk is stable (no oscillation) but not always TOWARD"
+        verdict = (
+            "1D RESULT ONLY: the classical walk is stable but not always "
+            "TOWARD"
+        )
     else:
-        verdict = "FALSIFIED: Classical walk also oscillates, oscillation is not quantum-only"
+        verdict = (
+            "1D RESULT ONLY: the classical walk still oscillates, so the "
+            "oscillation is not quantum-only"
+        )
 
-    print(f"  HYPOTHESIS: 'Decoherence suppresses the N-oscillation, leaving gravity TOWARD at all N'")
+    print(
+        "  HYPOTHESIS: 'On the 1D wide lattice, decoherence suppresses any "
+        "coherent N-oscillation and leaves gravity TOWARD at all N'"
+    )
     print(f"  VERDICT: {verdict}")
+    print("  Scope: 1D reflecting lattice only; does not settle the 3+1D periodic case.")
     print()
 
     elapsed = time.time() - t_start
