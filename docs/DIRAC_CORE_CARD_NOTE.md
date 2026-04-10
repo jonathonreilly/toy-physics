@@ -3,7 +3,8 @@
 **Date:** 2026-04-10  
 **Harness:** [`scripts/frontier_dirac_walk_3plus1d_core_card.py`](../scripts/frontier_dirac_walk_3plus1d_core_card.py)
 
-This note freezes the first integrated `DIR-3D` core-card runner. The goal is
+This note freezes the first literal **16-row** integrated `DIR-3D` core-card
+runner. The goal is
 to stop treating the Dirac lane as four disconnected probes (`v3`, `v4`,
 decoherence, panel) and instead report one consolidated read.
 
@@ -18,7 +19,7 @@ decoherence, panel) and instead report one consolidated read.
 
 The current integrated score is:
 
-- **11/14**
+- **12/16**
 
 Retained positives:
 
@@ -31,6 +32,10 @@ Retained positives:
 - `C7` mutual information positive
 - `C8` purity stability `CV = 0.3801`
 - `C12` AB visibility `V = 0.5056`
+- `C14` split mass vs gravity susceptibility passes with `best_g = 0.030`,
+  `R^2 = 1.0000`
+- `C15` boundary robustness passes with periodic/open sign agreement
+  `9/9` on the `N` sweep and `5/5` on the offset sweep
 - `C16` multi-observable gravity passes under the primary readouts:
   centroid/shell agree `5/6`, first-arrival is stable
 
@@ -40,13 +45,16 @@ Failures:
 - `C10` distance law is mixed-sign at the larger-lattice stress point (`3/5` TOWARD)
 - `C11` strict isotropy gate fails even though the low-k KG fit is exact:
   `R^2 = 1.000000`, isotropy ratio `1.1034`
+- `C13` fixed-`theta` `k`-achromaticity fails: matched-travel `k` sweep has
+  `CV = 0.3606` and the measured deflection stays wavelength-sensitive
 
 ## Interpretation
 
 This is the cleanest current 3+1D read on the branch:
 
 - the `DIR-3D` lane is the first retained 3+1D route that closes proper Born,
-  exact low-k KG, nonzero AB, `F∝M`, and a positive operating-point gravity bias
+  exact low-k KG, nonzero AB, `F∝M`, split susceptibility, boundary robustness,
+  and a positive operating-point gravity bias
 - the remaining blocker is not “does 3D work at all?” but “why does the gravity
   lane stay non-monotone and mixed-sign under deeper stress?”
 - the multi-observable panel shows that centroid and shell are the primary
@@ -60,3 +68,4 @@ for the remaining three failures:
 1. explain or remove the `N`-growth oscillation
 2. clean up the mixed-sign offset law
 3. close the residual isotropy gap under the strict `C11` gate
+4. reduce the surviving carrier-`k` sensitivity in `C13`

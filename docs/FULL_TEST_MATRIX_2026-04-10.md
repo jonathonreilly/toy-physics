@@ -185,10 +185,10 @@
 | **Chiral 3+1D** | **10/10** | ~9 | 5/6 | 5/9 | ~7/13 | ~36/58 |
 
 `DIR-3D` is not yet scored as a full architecture in Part 6 because the branch
-has retained bottleneck probes (`v1-v4`) rather than one stabilized all-sections
-card. The current Dirac evidence belongs in the design-probe layer first, though
-the new integrated core card now gives a single canonical `11/14` read on the
-current retained harness.
+still mixes an integrated `16`-row core card with supporting stability scans
+rather than one all-sections repo-wide score surface. But the current Dirac
+evidence is no longer just scattered probes: the integrated core card now gives
+a single canonical `12/16` read on the retained harness.
 
 ---
 
@@ -196,7 +196,7 @@ current retained harness.
 
 ### Critical:
 1. **Factorized 3+1D chiral coin** — confirmed blocker for the current CH-3D lane. Coupled-coin scan lifts gauge visibility from `0.0000` to `0.9142` and KG fit from `R²=0.0627` to `0.4787`, but isotropic 3D KG still does not retain there.
-2. **Dirac 3+1D gravity stability** — the 4-component Dirac walk closes proper Born, exact KG (`R²=1.000000`), and nonzero AB (`V=0.5056` on the integrated card), but the larger-lattice lane still keeps non-monotone `N`-growth plus mixed-sign distance law even under open boundaries.
+2. **Dirac 3+1D gravity stability** — the 4-component Dirac walk closes proper Born, exact KG (`R²=1.000000`), nonzero AB (`V=0.5056`), split susceptibility, and boundary robustness on the integrated card, but the larger-lattice lane still keeps non-monotone `N`-growth plus mixed-sign distance law even under open boundaries.
 3. **Equivalence / parameter overload** — splitting `theta_m` from gravity susceptibility reduces theta-envelope sensitivity (`3.802 -> 2.803`, `CV 1.0825 -> 0.9013`) but leaves strong k-chromaticity intact (`CV_k = 2.6580`).
 4. **3+1D periodic sign windows** — mostly recurrence / boundary artifacts in CH-3D. Reflecting is `25/25` TOWARD across all scanned cells; open classical and phase-kill are also `25/25` TOWARD, while periodic retains AWAY corners.
 5. **Distance exponent -0.6** — explained by beam spreading but not Newtonian
@@ -216,6 +216,7 @@ current retained harness.
 15. **VL-3D spectrum growth-contaminated** — CV=0.334, spectral radius=1.72 (non-unitary)
 16. **Dirac decoherence rows need redesign** — explicit record purity behaves correctly while the current detector proxy barely moves, so the retained negative is harness-level for now.
 17. **Dirac strict isotropy gate still misses** — the integrated core card gets exact low-k KG fit but still lands isotropy ratio `1.1034` at the current retained mass point, so `C11` stays stricter than a scalar `R²` gate.
+18. **Dirac fixed-`theta` k-achromaticity still fails** — the literal `C13` row on the integrated card gives `CV = 0.3606` on a matched-travel packet sweep, with residual wavelength-sensitive deflection.
 
 ### Design Bottleneck (from spot checks):
 0. **Separable continuation channels are the central 3D transport blocker** — In CH-3D, the independent `2×2` blocks on each chirality pair produce 1D-per-pair dispersion (`R²=0.16`) and zero 3D AB visibility. Generic coupled `6×6` families help but do not close. The first architecture that actually closes both gates materially is the irreducible 4-component Dirac Hamiltonian lane (`R²=1.000000`, `AB V=0.519`). The highest-priority design task is therefore no longer “arbitrary larger coupled coin,” but a symmetry-matched irreducible 3+1D transport law.
@@ -279,7 +280,7 @@ These are not new score-card rows for the existing architectures. They are targe
 | Dirac 3+1D v4 convergence | `frontier_dirac_walk_3plus1d_v4_convergence.py` | Best at `m0=0.10`: periodic closure plateaus at `7/10` for `n=17..29`; open boundaries do not fix `N`-monotonicity or offset-law failure. | Larger lattices do not rescue the remaining Dirac gravity issues. In the current 4-component implementation, the residual failures look structural rather than purely boundary-driven. |
 | Dirac decoherence / record probe | `frontier_dirac_walk_3plus1d_decoherence_probe.py` | Clean vs record residual `0.91-0.94`, record-mixture purity `~0.500`, detector proxy barely moves. | The current closure-card purity/decoherence proxy is a harness mismatch for `DIR-3D`. Dirac should be judged with explicit which-path record purity plus an interference-residual metric. |
 | Dirac observable panel | `frontier_dirac_walk_3plus1d_observable_panel.py` | Centroid and shell agree `5/6`, current `3/6`, peak `0/6`, first-arrival fixed at layer `6`. | `C16` is now concrete: centroid/shell are the best current sign proxies, peak is too wave-sensitive, and multi-observable agreement must become an explicit promotion gate. |
-| Dirac integrated core card | `frontier_dirac_walk_3plus1d_core_card.py` | `11/14`: Born `3.98e-16`, `F∝M` pass, AB `0.5056`, record-purity pass, `N`-growth fail, distance-law fail, strict isotropy gate fail. | The `DIR-3D` lane is now one retained harness rather than four scattered probes. Its remaining failures are narrowly localized. |
+| Dirac integrated core card | `frontier_dirac_walk_3plus1d_core_card.py` | `12/16`: Born `3.98e-16`, `F∝M` pass, AB `0.5056`, record-purity pass, split susceptibility pass, boundary robustness pass; fails on `N`-growth, distance law, strict isotropy gate, and fixed-`theta` `k`-achromaticity. | The `DIR-3D` lane is now one retained harness rather than four scattered probes. Its remaining failures are narrowly localized and explicitly named. |
 | Dirac source smoothing | `frontier_dirac_walk_3plus1d_source_smoothing_scan.py` | Best Gaussian source (`sigma=1.25`) gives `4/5` TOWARD on the short `N` sweep, but monotonicity still fails and the point source remains best on the offset law. | Source smoothing is not the missing fix. |
 | Dirac field smoothing | `frontier_dirac_walk_3plus1d_field_smoothing_scan.py` | Broad Gaussian field reaches `5/5` TOWARD offsets with `alpha = 3.053`, `R² = 0.8098`, but `N` monotonicity still fails. | Mass-field shape matters for the offset law, but it does not solve the deeper gravity-stability problem by itself. |
 | Dirac weak coupling / larger `lambda` | `frontier_dirac_walk_3plus1d_weak_coupling_scan.py` | Cross-strength sign-stability is unchanged; magnitude-law fit improves mainly with larger `lambda` (`R² = 0.8537` at `lambda = 0.70`). | The remaining Dirac failures are more geometry/recurrence-driven than coupling-driven. |

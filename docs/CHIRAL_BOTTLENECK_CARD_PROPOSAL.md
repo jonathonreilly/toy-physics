@@ -70,9 +70,9 @@ The expanded card fixes that.
 ## Immediate Implementation Mapping
 
 - `C1-C10`: existing chiral closure-card harnesses
-- `C11-C12`: `scripts/frontier_chiral_3plus1d_coupled_coin_scan.py`
-- `C13-C14`: `scripts/frontier_chiral_split_mass_gravity.py` and corrected carrier-`k` utilities from the moonshot harness
-- `C15`: `scripts/frontier_chiral_3plus1d_boundary_phase_diagram.py`
+- `C11-C12`: `scripts/frontier_chiral_3plus1d_coupled_coin_scan.py`, with the stronger current 3+1D closure route in `scripts/frontier_dirac_walk_3plus1d_core_card.py`
+- `C13-C14`: `scripts/frontier_chiral_split_mass_gravity.py` plus the literal integrated `DIR-3D` rows now wired in `scripts/frontier_dirac_walk_3plus1d_core_card.py`
+- `C15`: `scripts/frontier_chiral_3plus1d_boundary_phase_diagram.py`, with the analogous `DIR-3D` robustness row now wired in `scripts/frontier_dirac_walk_3plus1d_core_card.py`
 - `C16`: prototype exists in `scripts/frontier_dirac_walk_3plus1d_observable_panel.py` and is now wired into `scripts/frontier_dirac_walk_3plus1d_core_card.py`
 
 The newer `DIR-3D` scans add one more practical lesson:

@@ -25,6 +25,9 @@ Rows:
   C10 distance law
   C11 3D KG isotropy
   C12 3D gauge-loop / AB visibility
+  C13 fixed-theta k-achromaticity
+  C14 split mass vs gravity susceptibility
+  C15 boundary-condition robustness
   C16 multi-observable gravity consistency
 """
 
@@ -42,12 +45,17 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
 
-from frontier_dirac_walk_3plus1d_decoherence_probe import run_case as run_decoherence_case  # noqa: E402
+from frontier_dirac_walk_3plus1d_decoherence_probe import (  # noqa: E402
+    make_packet,
+    positive_x_spinor,
+    run_case as run_decoherence_case,
+)
 from frontier_dirac_walk_3plus1d_observable_panel import evolve_panel, summarize_panel  # noqa: E402
 from frontier_dirac_walk_3plus1d_v3 import ab_flux_tube_test, bloch_hamiltonian_kg  # noqa: E402
 from frontier_dirac_walk_3plus1d_v4_convergence import (  # noqa: E402
     closure_card,
     fit_power_law,
+    make_mass_field,
     run_bias_case,
     step_dirac,
 )
@@ -122,6 +130,16 @@ def record_row(n: int, steps: int, mass0: float) -> tuple[dict[str, float], bool
     }, bool(purity_ok and residual_ok)
 
 
+def aggregate_record_row(record_cases: list[tuple[int, int]], mass0: float) -> tuple[dict[str, object], bool]:
+    case_metrics = []
+    case_passes = []
+    for n_case, steps_case in record_cases:
+        metrics, passed = record_row(n_case, steps_case, mass0)
+        case_metrics.append(((n_case, steps_case), metrics))
+        case_passes.append(passed)
+    return {"cases": case_metrics}, all(case_passes)
+
+
 def panel_row(n: int, layers: list[int], mass0: float, strength: float, offset: int) -> tuple[dict[str, float], bool]:
     summaries = [summarize_panel(evolve_panel(n, L, mass0, strength, offset)) for L in layers]
     total = len(summaries)
@@ -179,6 +197,155 @@ def distance_row(n: int, n_layers: int, mass0: float, strength: float, offsets: 
     return {"biases": periodic, "toward": toward, "r2": r2, "exponent": exponent}, passed
 
 
+def axis_centroid(rho: np.ndarray, axis: int) -> float:
+    total = float(np.sum(rho))
+    if total <= 1e-30:
+        return 0.0
+    marginal_axes = tuple(i for i in range(3) if i != axis)
+    marginal = np.sum(rho, axis=marginal_axes)
+    coords = np.arange(rho.shape[axis], dtype=float)
+    return float(np.dot(coords, marginal) / total)
+
+
+def evolve_packet(
+    n: int,
+    n_layers: int,
+    mass0: float,
+    strength: float,
+    offset: int,
+    kx: float,
+    sigma: float = 1.4,
+    boundary: str = "open",
+) -> np.ndarray:
+    center = n // 2
+    source = (max(3, center - 5), center, center)
+    spinor = positive_x_spinor()
+    psi = make_packet(n, source, sigma, kx, spinor)
+    mass_positions = None if strength <= 0 else [(center, center, center + offset)]
+    mass_field = make_mass_field(n, mass0, strength, mass_positions, boundary)
+    for _ in range(n_layers):
+        psi = step_dirac(psi, mass_field, boundary)
+    return psi
+
+
+def matched_k_deflection_row(
+    n: int,
+    mass0: float,
+    strength: float,
+    offset: int,
+    k_values: list[float],
+    target_x_shift: float = 4.0,
+    max_layers: int = 20,
+) -> tuple[dict[str, object], bool]:
+    rows = []
+    source_x = max(3, n // 2 - 5)
+    for kx in k_values:
+        best_layers = None
+        best_gap = None
+        best_free = None
+        for n_layers in range(4, max_layers + 1):
+            free_state = evolve_packet(n, n_layers, mass0, 0.0, offset, kx, boundary="open")
+            free_rho = raw_density(free_state)
+            x_shift = axis_centroid(free_rho, 0) - float(source_x)
+            gap = abs(x_shift - target_x_shift)
+            if best_gap is None or gap < best_gap:
+                best_gap = gap
+                best_layers = n_layers
+                best_free = free_rho
+        assert best_layers is not None and best_free is not None
+        field_state = evolve_packet(n, best_layers, mass0, strength, offset, kx, boundary="open")
+        field_rho = raw_density(field_state)
+        z_defl = axis_centroid(field_rho, 2) - axis_centroid(best_free, 2)
+        x_shift = axis_centroid(best_free, 0) - float(source_x)
+        rows.append((kx, best_layers, x_shift, z_defl))
+
+    deflections = np.array([row[3] for row in rows], dtype=float)
+    signs = [np.sign(v) for v in deflections if abs(v) > 1e-30]
+    cv = float(np.std(np.abs(deflections)) / np.mean(np.abs(deflections))) if np.mean(np.abs(deflections)) > 1e-30 else math.inf
+    passed = bool(signs) and len(set(int(s) for s in signs)) == 1 and signs[0] > 0 and cv < 0.5
+    return {"rows": rows, "cv": cv}, passed
+
+
+def split_mass_field(n: int, mass0: float, strength: float, offset: int, susceptibility: float, boundary: str = "periodic") -> np.ndarray:
+    center = n // 2
+    mass_positions = [(center, center, center + offset)]
+    # Reuse the same geometric field profile as the baseline, but detach the
+    # free gap (mass0) from the local gravity susceptibility.
+    baseline_field = make_mass_field(n, 1.0, strength, mass_positions, boundary) - 1.0
+    return np.full((n, n, n), mass0, dtype=float) + susceptibility * baseline_field
+
+
+def split_mass_gravity_row(
+    n: int,
+    n_layers: int,
+    mass0: float,
+    strengths: list[float],
+    offset: int,
+    susceptibilities: list[float],
+) -> tuple[dict[str, object], bool]:
+    center = n // 2
+    best = None
+    for g in susceptibilities:
+        free_field = np.full((n, n, n), mass0, dtype=float)
+        psi0 = init_source(n)
+
+        def evolve_split(strength: float) -> np.ndarray:
+            psi = np.array(psi0, copy=True)
+            mass_field = free_field if strength <= 0 else split_mass_field(n, mass0, strength, offset, g, boundary="periodic")
+            for _ in range(n_layers):
+                psi = step_dirac(psi, mass_field, "periodic")
+            return raw_density(psi)
+
+        rho_free = evolve_split(0.0)
+        forces = []
+        for strength in strengths:
+            rho_field = evolve_split(strength)
+            toward = float(np.sum(rho_field[center, center, center + 1 : center + offset + 1] - rho_free[center, center, center + 1 : center + offset + 1]))
+            away = float(np.sum(rho_field[center, center, center - offset : center] - rho_free[center, center, center - offset : center]))
+            forces.append(toward - away)
+        x = np.asarray(strengths, dtype=float)
+        y = np.asarray(forces, dtype=float)
+        co = np.polyfit(x, y, 1)
+        pred = np.polyval(co, x)
+        ss_r = float(np.sum((y - pred) ** 2))
+        ss_t = float(np.sum((y - np.mean(y)) ** 2))
+        r2 = 1.0 - ss_r / ss_t if ss_t > 0 else 0.0
+        gravity_bias = float(forces[2])
+        candidate = {"g": g, "r2": r2, "bias": gravity_bias, "forces": forces}
+        if best is None or (candidate["bias"] > 0, candidate["r2"]) > (best["bias"] > 0, best["r2"]):
+            best = candidate
+
+    assert best is not None
+    passed = best["g"] != mass0 and best["bias"] > 0 and best["r2"] > 0.9
+    return best, passed
+
+
+def boundary_robustness_row(
+    n: int,
+    mass0: float,
+    strength: float,
+    offset: int,
+    layers: list[int],
+    offsets: list[int],
+) -> tuple[dict[str, object], bool]:
+    n_agree = 0
+    n_total = 0
+    for n_layers in layers:
+        periodic = run_bias_case("periodic", n, n_layers, mass0, strength, offset)["bias"]
+        open_bias = run_bias_case("open", n, n_layers, mass0, strength, offset)["bias"]
+        n_agree += int(np.sign(periodic) == np.sign(open_bias))
+        n_total += 1
+    d_agree = 0
+    d_total = 0
+    for off in offsets:
+        periodic = run_bias_case("periodic", n, 16, mass0, strength, off)["bias"]
+        open_bias = run_bias_case("open", n, 16, mass0, strength, off)["bias"]
+        d_agree += int(np.sign(periodic) == np.sign(open_bias))
+        d_total += 1
+    passed = n_agree == n_total and d_agree == d_total
+    return {"n_agree": n_agree, "n_total": n_total, "d_agree": d_agree, "d_total": d_total}, passed
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Integrated 3+1D Dirac core card")
     parser.add_argument("--mass0", type=float, default=0.10)
@@ -196,11 +363,15 @@ def main() -> None:
     parser.add_argument("--record-cases", default="17:16,21:20")
     parser.add_argument("--panel-n", type=int, default=21)
     parser.add_argument("--panel-layers", default="10,12,14,16,18,20")
+    parser.add_argument("--k-values", default="0.25,0.45,0.65,0.85")
+    parser.add_argument("--split-g-values", default="0.03,0.05,0.07,0.15")
     args = parser.parse_args()
 
     stability_layers = [int(x) for x in args.stability_layers.split(",") if x]
     distance_offsets = [int(x) for x in args.distance_offsets.split(",") if x]
     panel_layers = [int(x) for x in args.panel_layers.split(",") if x]
+    k_values = [float(x) for x in args.k_values.split(",") if x]
+    split_g_values = [float(x) for x in args.split_g_values.split(",") if x]
     record_cases = []
     for item in args.record_cases.split(","):
         if not item:
@@ -238,21 +409,13 @@ def main() -> None:
     c5 = bool(info["gravity_bias"] > 0)
     rows.append(("C5 gravity sign", f"bias={info['gravity_bias']:+.6e}", "PASS" if c5 else "FAIL"))
 
-    record_passes = []
-    for n_case, steps_case in record_cases:
-        rec_metrics, rec_pass = record_row(n_case, steps_case, args.mass0)
-        record_passes.append(rec_pass)
-        rows.append(
-            (
-                f"C6 record purity ({n_case},{steps_case})",
-                (
-                    f"pur={rec_metrics['record_purity']:.4f}, "
-                    f"L1={rec_metrics['residual']:.4f}, "
-                    f"proxy_gap={rec_metrics['proxy_gap']:.4f}"
-                ),
-                "PASS" if rec_pass else "FAIL",
-            )
+    record_metrics, c6 = aggregate_record_row(record_cases, args.mass0)
+    case_summaries = []
+    for (n_case, steps_case), metrics in record_metrics["cases"]:
+        case_summaries.append(
+            f"({n_case},{steps_case}): pur={metrics['record_purity']:.4f}, L1={metrics['residual']:.4f}"
         )
+    rows.append(("C6 record purity", "; ".join(case_summaries), "PASS" if c6 else "FAIL"))
 
     c7 = bool(info["mi"] > 0)
     rows.append(("C7 mutual information", f"MI={info['mi']:.6e}", "PASS" if c7 else "FAIL"))
@@ -287,6 +450,28 @@ def main() -> None:
     c12 = ab_v > 0.3
     rows.append(("C12 AB visibility", f"V={ab_v:.4f}", "PASS" if c12 else "FAIL"))
 
+    k_metrics, c13 = matched_k_deflection_row(args.stability_n, args.mass0, args.strength, args.offset, k_values)
+    k_desc = ", ".join(f"k={k:.2f}:L={L},dx={dx:.2f},dz={dz:+.2e}" for k, L, dx, dz in k_metrics["rows"])
+    rows.append(("C13 fixed-theta k-achrom", f"CV={k_metrics['cv']:.4f}; {k_desc}", "PASS" if c13 else "FAIL"))
+
+    split_metrics, c14 = split_mass_gravity_row(args.n, args.layers, args.mass0, [1e-4, 2e-4, 5e-4, 1e-3, 2e-3], args.offset, split_g_values)
+    rows.append(
+        (
+            "C14 split mass/gravity",
+            f"best_g={split_metrics['g']:.3f}, R^2={split_metrics['r2']:.4f}, bias={split_metrics['bias']:+.3e}",
+            "PASS" if c14 else "FAIL",
+        )
+    )
+
+    boundary_metrics, c15 = boundary_robustness_row(args.stability_n, args.mass0, args.strength, args.offset, stability_layers, distance_offsets)
+    rows.append(
+        (
+            "C15 boundary robustness",
+            f"N agree={boundary_metrics['n_agree']}/{boundary_metrics['n_total']}, offset agree={boundary_metrics['d_agree']}/{boundary_metrics['d_total']}",
+            "PASS" if c15 else "FAIL",
+        )
+    )
+
     panel_metrics, c16 = panel_row(args.panel_n, panel_layers, args.mass0, args.strength, args.offset)
     rows.append(
         (
@@ -316,6 +501,7 @@ def main() -> None:
     print("Interpretation:")
     print("  - KG and AB are now first-class retained 3+1D positives on the Dirac lane.")
     print("  - Record purity is judged with an explicit which-path mixture, not the old detector proxy.")
+    print("  - Split mass vs gravity susceptibility is viable, but fixed-theta carrier-k achromaticity still fails.")
     print("  - Gravity stability is still the main blocker: non-monotone N-growth and mixed-sign distance law remain.")
     print("  - Centroid and shell are the primary gravity readouts; peak is not a promotion gate.")
 
