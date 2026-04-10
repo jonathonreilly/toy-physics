@@ -1,3 +1,96 @@
+## 2026-04-10 — Closed the direct-dM post-freeze wording lane and pruned the amplification sidecar
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed in
+  protocol order at loop start
+- no detached `physics-science` child was active in the latest handoff, so
+  this loop stayed on one bounded repo-facing integrity fix plus orchestrator
+  reconciliation
+- canonical git in `/Users/jonreilly/Projects/Physics` reconciled before
+  science:
+  - `git status --short --branch` reported
+    `## codex/resonance-controls...origin/codex/resonance-controls`
+    plus existing unrelated tracker / handoff edits and unrelated untracked
+    drafts
+  - the required managed push check reported a clean sync:
+    `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+    returned `status=nothing_to_push`, `ahead=0`, `behind=0`
+- the canonical orchestrator state at
+  `/Users/jonreilly/.codex/state/physics_research_orchestrator_state.json`
+  stayed authoritative; this loop closed
+  `direct-dm-post-freeze-wording-reconcile`, opened cycle `35`, spawned
+  exactly five disjoint in-app sidecars, folded the returned lane reads back
+  into the queue, and repaired one transient JSON corruption caused by a
+  concurrent write collision before continuing
+- cycle `35` now stands at `4` active plus `1` pending:
+  - active:
+    - `direct-dm-post-amplification-frontier-gate`
+    - `wave-static-infinite-lattice-green-baseline`
+    - `lensing-edge-binned-reduction-h025`
+    - `wave-static-largebox-note-freeze`
+  - pending:
+    - `lensing-h025-exact-edge-freeze`
+
+### What changed
+- repaired the active direct-dM doc surface without rewriting historical
+  precursor notes:
+  - `/Users/jonreilly/Projects/Physics/docs/WAVE_DIRECT_DM_H025_FAM3_SEED1_CONTROL_NOTE.md`
+  - `/Users/jonreilly/Projects/Physics/docs/WAVE_DIRECT_DM_TRANSFER_DIAGNOSTIC_NOTE.md`
+- closed `direct-dm-post-freeze-wording-reconcile -> closure`
+- harvested the strongest sidecar direct-dM mechanism read as an explicit
+  closure instead of a second note freeze:
+  - `direct-dm-h025-amplification-ratio-freeze -> closure`
+  - diagnosis: `A = dM(late)/dM(early)` is just the monotone rewrite
+    `A = 1 / (1 + R_hist)` on the fixed controlled `H = 0.25` surface
+- kept the queue full after the closure by adding one narrower reserve:
+  - `lensing-h025-exact-edge-freeze`
+- did **not** reopen stale broken-comparator or naive-lab-card branches
+- did **not** take a second repo-facing science commit beyond this wording
+  reconciliation closeout
+
+### Strongest confirmed conclusion
+- the active direct-dM docs are now consistent with the retained three-family
+  `H = 0.25` freeze:
+  `Fam3` seed `1` is no longer described as the weaker / still-gating branch,
+  and the older two-family transfer note no longer points to the `Fam3` seed
+  `1` ladder as the still-open frontier
+- the queued amplification-factor sidecar does **not** deserve its own
+  repo-facing note:
+  on the controlled `Fam1`/`Fam2`/`Fam3`, seed-`0`/`1`, `H = 0.25` surface it
+  adds no independent mechanism beyond the already-frozen `R_hist` tables and
+  `T(F,s)` transfer map
+- the honest local direct-dM repo-facing chain is therefore nearly saturated:
+  the remaining `direct-dm-post-amplification-frontier-gate` should likely
+  close unless a materially different comparator or observable appears
+- outside direct-dM, the next bounded closeout work is sharper than before:
+  - the wave-static large-box note still needs an in-place wrong-baseline
+    freeze
+  - the infinite-lattice comparator reopen is honest only as a gauge-fixed
+    free-space discrete Green kernel of the same lattice Laplacian
+  - the lensing midpoint-binned replay still waits on a frozen exact
+    `H = 0.25` edge table
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/docs/WAVE_DIRECT_DM_H025_FAM3_SEED1_CONTROL_NOTE.md`
+- `/Users/jonreilly/Projects/Physics/docs/WAVE_DIRECT_DM_TRANSFER_DIAGNOSTIC_NOTE.md`
+
+### Exact next step
+- keep cycle `35` active and take the smallest honest non-duplicative followup:
+  - first close `direct-dm-post-amplification-frontier-gate` explicitly if no
+    materially different direct-dM comparator / observable appears
+  - then prefer the bounded
+    `wave-static-largebox-note-freeze` as the next repo-facing artifact
+  - keep `lensing-h025-exact-edge-freeze` as the honest lensing prerequisite
+    before any midpoint-binned replay
+
+### First concrete action
+- inspect
+  `/Users/jonreilly/Projects/Physics/docs/WAVE_STATIC_MATRIXFREE_MOVING_SOURCE_FIXED_BEAM_BOUNDARY_NOTE.md`
+  at the stale medium-`H` ending and patch it to the already-diagnosed
+  `H = 0.25` wrong-baseline closure unless the direct-dM frontier gate closes
+  first by pure orchestrator reconciliation
+
 ## 2026-04-10 — Closed the direct-dM three-family freeze lane with a retained H=0.25 transfer note
 
 ### Current state

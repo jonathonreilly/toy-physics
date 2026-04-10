@@ -70,9 +70,13 @@ This note does **not** claim:
 It only freezes one concrete split diagnostic on the existing controlled
 surface.
 
-The next honest widening control, if the direct-`dM` lane continues, remains a
-single `Fam3`, seed `1`, `H = 0.25` control ladder rather than another
-one-strength replay.
+At the time this two-family diagnostic landed, the next honest widening
+control was a single `Fam3`, seed `1`, `H = 0.25` control ladder rather than
+another one-strength replay. That row, the complementary `Fam3`, seed `0`
+control, and the later three-family transfer freeze have since landed, so this
+note should now be read as the two-family precursor to
+[`docs/WAVE_DIRECT_DM_H025_THREE_FAMILY_TRANSFER_NOTE.md`](./WAVE_DIRECT_DM_H025_THREE_FAMILY_TRANSFER_NOTE.md),
+not as the current frontier recommendation.
 
 ## Artifact Chain
 
@@ -80,6 +84,7 @@ one-strength replay.
 - [`logs/2026-04-09-wave-direct-dm-transfer-diagnostic.txt`](../logs/2026-04-09-wave-direct-dm-transfer-diagnostic.txt)
 - [`docs/WAVE_DIRECT_DM_SEED_BAND_DIAGNOSIS_NOTE.md`](./WAVE_DIRECT_DM_SEED_BAND_DIAGNOSIS_NOTE.md)
 - [`docs/WAVE_DIRECT_DM_H025_FAMILY_PAIR_SYNTHESIS_NOTE.md`](./WAVE_DIRECT_DM_H025_FAMILY_PAIR_SYNTHESIS_NOTE.md)
+- [`docs/WAVE_DIRECT_DM_H025_THREE_FAMILY_TRANSFER_NOTE.md`](./WAVE_DIRECT_DM_H025_THREE_FAMILY_TRANSFER_NOTE.md)
 - [`logs/2026-04-08-wave-direct-dm-h025-control-fam1-seed0.txt`](../logs/2026-04-08-wave-direct-dm-h025-control-fam1-seed0.txt)
 - [`logs/2026-04-08-wave-direct-dm-h025-control-fam1-seed1.txt`](../logs/2026-04-08-wave-direct-dm-h025-control-fam1-seed1.txt)
 - [`logs/2026-04-08-wave-direct-dm-h025-control-fam2-seed0.txt`](../logs/2026-04-08-wave-direct-dm-h025-control-fam2-seed0.txt)

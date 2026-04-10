@@ -43,34 +43,43 @@ point.
 
 ## What This Changes
 
-- The third-family `H = 0.25` row now sits in the same controlled ladder style
-  as the existing `Fam1`/`Fam2` control points.
-- `Fam3`, seed `1` stays in the weaker branch, but it does not collapse to the
-  exact zero/null regime.
-- The family-specific read remains narrow: this confirms one controlled row,
-  not a third-family portability law.
+- At the time this note landed, it moved the third-family `H = 0.25` row into
+  the same controlled ladder style as the existing `Fam1`/`Fam2` control
+  points.
+- On the later controlled `Fam3` pair, seed `1` stays above the compressed
+  seed `0` branch; this note should no longer be read as saying seed `1` is the
+  weaker branch.
+- The family-specific read remains narrow: this note freezes one controlled
+  row, not a third-family portability law.
 
 ## Boundary
 
 This does **not** yet establish a wider family law.
 
-What remains open:
+What remained open at the time of landing:
 
-- `Fam3`, seed `0` should stay gated behind this result
-- the current claim is still bounded to one third-family control row
+- the complementary `Fam3`, seed `0` control row
+- the current claim of this note in isolation is still bounded to one
+  third-family control row
 - any synthesis beyond this point should compare against the already retained
   `Fam1`/`Fam2` transfer map rather than reopen one-strength seed-band work
 
-So the exact retained claim is:
+That complementary `Fam3`, seed `0` ladder has since landed, so the live
+pair-level read now belongs in the later transfer-compression freeze rather
+than this single-row note.
+
+So the exact retained claim of this note is:
 
 > `Fam3`, seed `1`, `H = 0.25` is now a controlled fine-`H` replay with exact
 > null, stable sign, and approximately linear weak-field scaling at
-> `R_hist ~ -27%`. That is the honest third-family widening point, not a
-> portability law.
+> `R_hist ~ -27%`. At the time of landing, that was the honest first
+> third-family control row, not a portability law.
 
 ## Artifact Chain
 
 - [`logs/2026-04-09-direct-dm-fam3-seed1-h025-control.txt`](../logs/2026-04-09-direct-dm-fam3-seed1-h025-control.txt)
+- [`docs/WAVE_DIRECT_DM_H025_FAM3_SEED0_CONTROL_NOTE.md`](./WAVE_DIRECT_DM_H025_FAM3_SEED0_CONTROL_NOTE.md)
+- [`docs/WAVE_DIRECT_DM_H025_THREE_FAMILY_TRANSFER_NOTE.md`](./WAVE_DIRECT_DM_H025_THREE_FAMILY_TRANSFER_NOTE.md)
 - [`docs/WAVE_DIRECT_DM_TRANSFER_DIAGNOSTIC_NOTE.md`](./WAVE_DIRECT_DM_TRANSFER_DIAGNOSTIC_NOTE.md)
 - [`docs/WAVE_DIRECT_DM_H025_FAM1_SEED1_CONTROL_NOTE.md`](./WAVE_DIRECT_DM_H025_FAM1_SEED1_CONTROL_NOTE.md)
 - [`docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md`](./WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md)
