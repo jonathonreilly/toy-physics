@@ -1,3 +1,89 @@
+## 2026-04-10 — Closed the direct-dM three-family freeze lane with a retained H=0.25 transfer note
+
+### Current state
+- duplicate-run guard and cooperative `physics-science` lock both passed in
+  protocol order at loop start
+- no detached `physics-science` child was active in the latest handoff, so
+  this loop stayed on one bounded repo-facing closeout plus orchestrator
+  reconciliation
+- canonical git in `/Users/jonreilly/Projects/Physics` reconciled before
+  science:
+  - `git status --short --branch` reported
+    `## codex/resonance-controls...origin/codex/resonance-controls [ahead 1]`
+    plus existing unrelated tracker / handoff edits and unrelated untracked
+    draft files
+  - the required managed push check succeeded on retry:
+    `python3 /Users/jonreilly/Projects/Physics/scripts/automation_push.py push-if-ahead --workdir /Users/jonreilly/Projects/Physics`
+    returned `status=pushed`, `ahead=0`, `behind=0`
+- the canonical orchestrator state at
+  `/Users/jonreilly/.codex/state/physics_research_orchestrator_state.json`
+  was writable again; this loop promoted the mirror-backed direct-dM queue into
+  the canonical path, closed stale cycle `33`, opened cycle `34`, and spawned
+  exactly five disjoint sidecar agents for the selected lanes
+- harvested three sidecar lane results without taking a second repo-facing
+  science step:
+  - `direct-dm-history-coupling-diagnostic -> retained`
+  - `direct-dm-next-predeclared-control-gate -> closure`
+  - `direct-dm-seed-geometry-transfer-diagnostic -> closure`
+- closed cycle `34` after those returns and left the next queue saturated as
+  `2` active plus `3` pending:
+  - active:
+    - `direct-dm-post-freeze-wording-reconcile`
+    - `wave-static-infinite-lattice-green-baseline`
+  - pending:
+    - `direct-dm-h025-amplification-ratio-freeze`
+    - `lensing-edge-binned-reduction-h025`
+    - `wave-static-largebox-note-freeze`
+
+### What changed
+- added the missing repo-facing freeze note:
+  - `/Users/jonreilly/Projects/Physics/docs/WAVE_DIRECT_DM_H025_THREE_FAMILY_TRANSFER_NOTE.md`
+- folded that closeout back into the canonical orchestrator as a retained
+  direct-dM lane result
+- added one new narrow reserve lane instead of widening seeds or families:
+  - `direct-dm-h025-amplification-ratio-freeze`
+- did **not** reopen stale broken-comparator or naive-lab-card branches
+- did **not** take a second science commit beyond this retained closeout
+
+### Strongest confirmed conclusion
+- the controlled `H = 0.25` direct-dM surface now has a clean three-family
+  freeze:
+  - seed `0` transfer factors: `0.3266`, `0.4529`, `0.3401`
+  - seed `1` transfer factors: `1.0471`, `1.0190`, `0.8525`
+  - so the durable read is still late-gain transfer/compression, not an
+    `H = 0.25` portability law
+- the genuinely predeclared `H = 0.25` control surface is now exhausted:
+  all six `Fam1`/`Fam2`/`Fam3` x seed-`0`/`1` pairs already have exact `S = 0`
+  plus weak-field ladders, so no honest extra control lane remains
+- a narrower fine-`H` history-coupling sidecar did survive:
+  `A = dM(late) / dM(early)` separates the weak and strong rows cleanly on the
+  controlled surface, but it stays secondary to the cross-`H` `T(F,s)` map
+- the exact-static wave comparator lane stays honest only as a new
+  same-Laplacian free-space Green-kernel branch with explicit gauge fixing;
+  finite-box replays remain closed as wrong-baseline boundaries
+
+### Files/logs changed
+- `/Users/jonreilly/Projects/Physics/AUTOPILOT_WORKLOG.md`
+- `/Users/jonreilly/Projects/Physics/docs/WAVE_DIRECT_DM_H025_THREE_FAMILY_TRANSFER_NOTE.md`
+
+### Exact next step
+- open cycle `35` from the canonical orchestrator queue and take the smallest
+  honest direct-dM follow-up:
+  - either the minimal active-doc wording reconcile
+  - or the narrow `direct-dm-h025-amplification-ratio-freeze`
+- do **not** reopen wider seed / family work or invent another control ladder
+- keep the wave-static infinite-lattice comparator active only if it is the
+  new free-space Green-kernel path; lensing and the large-box note freeze stay
+  as reserves
+
+### First concrete action
+- inspect
+  `/Users/jonreilly/Projects/Physics/docs/WAVE_DIRECT_DM_H025_FAM3_SEED1_CONTROL_NOTE.md`
+  and
+  `/Users/jonreilly/Projects/Physics/docs/WAVE_DIRECT_DM_TRANSFER_DIAGNOSTIC_NOTE.md`
+  for the minimal active-doc contradiction cleanup, then decide whether that
+  or the amplification-ratio sidecar is the next bounded repo-facing landing
+
 ## 2026-04-08 — Closed the Shapiro scaling artifact-chain lane with a direct replay
 
 ### Current state
