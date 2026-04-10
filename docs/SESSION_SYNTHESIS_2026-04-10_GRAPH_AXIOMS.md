@@ -102,6 +102,31 @@ Script: `frontier_axioms_16card.py` @ commit 3dbcd73 (C1 Sorkin fix) + 9c830fc (
   adding nodes, which is outside the current axiom set.
 - **Cosmology, Hawking, geometry superposition**: N/A for a static scalar field.
 
+## What The Follow-Up Probes Changed
+
+Two follow-up probes sharpen the interpretation of the scalar graph lane.
+
+- **True local KG vs CN**:
+  [`frontier_graph_true_kg_vs_cn.py`](../scripts/frontier_graph_true_kg_vs_cn.py)
+  shows that the current CN scalar lane and a true local doubled-state KG lane
+  are not the same free theory. The CN lane is still useful because it matches
+  several weak-field gravity rows, but it should now be treated as a clean
+  scalar control/base layer rather than as a proven local KG formulation.
+
+- **Two-field scalar + spinor prototype**:
+  [`frontier_graph_scalar_plus_spinor.py`](../scripts/frontier_graph_scalar_plus_spinor.py)
+  gives a positive proof of concept for a split architecture. A spinor matter
+  sector can keep unitary norm and feel a TOWARD scalar gravity background on
+  the same graph. The blocker is not transport anymore; it is backreaction,
+  because the scalar background is still one-way and external.
+
+- **Staggered fermion probe**:
+  [`frontier_staggered_fermion.py`](../scripts/frontier_staggered_fermion.py)
+  is the most promising current no-coin genuine Dirac lane. It closes the free
+  staggered dispersion exactly and gives strong 1D gravity behavior, but the
+  current CN evolution still fails a strict light-cone gate. That makes it a
+  strong successor probe, not yet the retained replacement architecture.
+
 ## The core tension (still open)
 
 The architectures that DERIVE the most physics (chiral walk: KG, light cone,

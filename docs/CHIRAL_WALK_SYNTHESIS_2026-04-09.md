@@ -174,4 +174,4 @@ quantum walk. What's NEW:
    narrowed to an operating-point closure card plus a TOWARD basin
 4. The connection to the sharpened axiom program, especially transport-law
    pressure from Axiom 6 and the weaker reading of Axiom 8
-5. Klein-Gordon + gravity + Born + gauge in one framework
+5. Klein-Gordon + gravity + Born + gauge at the retained operating points
