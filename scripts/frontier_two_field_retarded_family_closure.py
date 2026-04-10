@@ -354,11 +354,11 @@ def main() -> None:
         f"family closure: iters={FAMILY_CLOSURE_ITERS}, seed_mix={FAMILY_SEED_MIX:.2f}, "
         f"sharpen={FAMILY_SHARPEN:.2f}, relax={FAMILY_RELAX:.2f}, capture_exp={FAMILY_CAPTURE_EXP:.2f}"
     )
-    print("Graph-native only: random geometric, growing, layered cycle.")
+    print("Graph-native: random geometric, growing, layered cycle, causal DAG.")
     print()
 
     scores = []
-    for builder in (base.make_random_geometric, base.make_growing, base.make_layered_cycle):
+    for builder in (base.make_random_geometric, base.make_growing, base.make_layered_cycle, base.make_causal_dag):
         graph = builder()
         if graph is None:
             print("  REJECTED: graph construction failed.")
