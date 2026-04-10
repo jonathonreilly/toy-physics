@@ -115,6 +115,7 @@ a native 3D torus gauge test. C17 includes energy projections at n=9.
 |-----|-------------------|---------------------|
 | C5 | Centroid shift TOWARD | Force F>0 (TOWARD) |
 | C9 | Centroid shift grows monotonically | Force stays positive across N |
+| C10 | Centroid distance law (evolved) | Force-at-T=0 sign vs offset |
 | C15 | Periodic vs open boundary | Force stable across propagation depth |
 | C16 | Centroid + peak + shell (3 obs) | Force + shell (2 obs) |
 

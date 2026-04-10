@@ -296,8 +296,11 @@ def run_card(dim, n):
             J = np.imag(pg_[n_r-1].conj()*(-1j/2*np.exp(1j*A))*pg_[0])
             currents.append(J)
     else:
-        # 3D: thread flux through z-periodic boundary
-        n_r3 = min(n, 7)  # small torus for eigensolve
+        # 3D: thread flux through z-periodic boundary.
+        # Use n_r3 = n for n<=9 (full eigensolve feasible).
+        # For n>9, use n_r3=n but sparse eigensolver for ground state.
+        from scipy.sparse.linalg import eigsh
+        n_r3 = n
         Nr3 = n_r3**3; As12 = np.linspace(0, 2*np.pi, 9); currents = []
         for A in As12:
             Hfl3 = lil_matrix((Nr3, Nr3), dtype=complex)
@@ -316,9 +319,13 @@ def run_card(dim, n):
                         Hfl3[i, x*n_r3*n_r3+y*n_r3+(z+1)%n_r3] += e3*(-1j/2)*pf_
                         Hfl3[i, x*n_r3*n_r3+y*n_r3+(z-1)%n_r3] += e3*(1j/2)*pb_
                         Hfl3[i, i] += m*((-1)**(x+y+z))
-            ev12, ec12 = np.linalg.eigh(csr_matrix(Hfl3).toarray())
-            pg_ = ec12[:, 0]
-            # Current at z-boundary link (x=0,y=0)
+            Hfl3_csr = csr_matrix(Hfl3)
+            if Nr3 <= 1000:
+                ev12, ec12 = np.linalg.eigh(Hfl3_csr.toarray())
+                pg_ = ec12[:, 0]
+            else:
+                ev12, ec12 = eigsh(Hfl3_csr, k=1, which='SA')
+                pg_ = ec12[:, 0]
             e3_bnd = (-1)**(0+0)
             i_from = 0*n_r3*n_r3+0*n_r3+(n_r3-1)
             i_to = 0*n_r3*n_r3+0*n_r3+0
@@ -419,17 +426,21 @@ def run_card(dim, n):
         print(f"    {label:12s}: F={F17:+.4e} {'TOWARD' if tw else 'AWAY'}{tag}")
 
     n_fam = len(families)
+    full_family = psi_pos is not None  # True only if energy projections computed
     p17 = n_tw >= n_fam - 1  # allow at most 1 failure
     score += p17
-    print(f"    {n_tw}/{n_fam} TOWARD {'PASS' if p17 else 'FAIL'} (anti={anti_dir})")
+    fam_note = f" ({n_fam}/6 families tested)" if not full_family else ""
+    print(f"    {n_tw}/{n_fam} TOWARD {'PASS' if p17 else 'FAIL'} (anti={anti_dir}){fam_note}")
 
     # Summary
     norm = np.sum(np.abs(evolve_cn(H_grav, N, DT, min(20,ns+5), psi0))**2)
     elapsed = time.time() - t0
     print(f"\n  Norm: {abs(norm-1):.4e}")
     print(f"  SCORE: {score}/17 ({elapsed:.1f}s)")
-    if score == 17 and n_tw == n_fam:
+    if score == 17 and n_tw == n_fam and full_family:
         print("  PERFECT — no qualifiers.")
+    elif score == 17 and not full_family:
+        print(f"  17/17 — C17 tested {n_fam}/6 families (energy projections skipped at n>{int(round(N**(1./dim)))}).")
     elif score == 17:
         print(f"  17/17 with qualifier: anti={anti_dir}.")
     return score
