@@ -1,4 +1,4 @@
-# Axiom Change Proposal
+# Axiom Update And Interpretation Change
 
 **Date:** 2026-04-10  
 **Status:** Canonical axiom note for the current branch. This note folds the useful substance of the prior risk-ledger framing into one combined presentation.
@@ -59,6 +59,26 @@ Why:
 - some retained positive results come from nonlocal effective operators
 - this is better treated as a research preference than a physical axiom
 
+## Prior conclusions that must be revisited
+
+These are not changes to the raw measurements. They are changes to what those
+measurements justify.
+
+1. **“Distortion gives gravity” is no longer an acceptable summary.**
+   The current evidence says attraction depends on the transport law, symmetry
+   coupling, boundary regime, and observable, not on distortion alone.
+
+2. **The factorized 3+1D chiral result is no longer the generic chiral verdict.**
+   The new coupled-coin scan shows that once the coin couples axes, both 3D
+   gauge response and 3D KG fit improve materially.
+
+3. **The 3+1D periodic AWAY windows are not a clean boundary-agnostic falsifier.**
+   The boundary scan shows that most of them are tied to periodic recurrence.
+
+4. **Parameter overload is not the whole equivalence-style failure.**
+   Splitting inertial mass from gravity susceptibility helps, but measured
+   carrier-`k` chromaticity survives.
+
 ## Likely missing constraint
 
 The strongest missing rule is:
@@ -72,15 +92,33 @@ That is the cleanest way to summarize the repeated bottlenecks:
 - dense global operators can recover some retention, but at the cost of locality
 - the successful cases all require a tighter transport law than the old Axiom 6 wording implied
 
-## Tests this note implies
+## Bottleneck attack experiments this note implies
 
-The next experiments should target the bottlenecks early, before adding more phenomenology:
+The next experiments should target the bottlenecks directly, before adding more
+phenomenology:
 
-1. coupled-coin interpolation in 3+1D, from factorized to fully mixed transport
-2. split inertial mass from gravitational susceptibility so Axiom 6 does not overload Axiom 8
-3. torus-aware vs boundary-aware gravity observables on the same harness
-4. dimensionless recurrence scans using `delta = d/n` and `lambda = L/n`
-5. observable separation tests for first-arrival, peak, current, and centroid
+1. **symmetry-matched coupled 3+1D coin**
+   Go beyond a generic mixer. Build a `6x6` or `8x8` unitary whose generator is
+   chosen to respect the continuation-channel symmetry, then rerun 3D KG and
+   3D gauge together.
+2. **split inertial mass from gravitational susceptibility**
+   Keep the free gap fixed, vary only the gravity generator, and watch whether
+   the equivalence-style sensitivity drops without harming KG or `F∝M`.
+3. **multi-observable gravity panel**
+   On the same run, report first-arrival, packet peak, current, centroid, and
+   torus-aware centroid so geometric drift and wave readout are no longer
+   conflated.
+4. **boundary-condition robustness at fixed `delta` and `lambda`**
+   Keep the dimensionless geometry fixed while sweeping periodic, reflecting,
+   and open boundaries.
+5. **geometry-normalized distance law**
+   Measure the same response after dividing out shell measure and beam
+   spreading, so cross-dimensional distance-law comparisons are physically
+   normalized.
+6. **growth-after-record formation**
+   Apply growth or backreaction after transport/readout rather than pruning a
+   still-coherent state, to test whether the growth failure belongs to the
+   growth rule rather than to the chiral propagator.
 
 ## Bottom line
 

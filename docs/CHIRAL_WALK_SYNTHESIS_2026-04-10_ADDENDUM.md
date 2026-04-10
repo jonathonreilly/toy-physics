@@ -92,10 +92,45 @@ The overnight synthesis should now be read as:
 That is a stronger and more defensible statement than either of the extremes:
 "all dimensions validated" or "3+1D is pure chaos."
 
+## Revisited Conclusions After The Axiom Update
+
+The axiom rewrite changes how the current evidence should be summarized.
+
+- **Axiom 8 no longer licenses `distortion => attraction`.**
+  The 3+1D periodic sign windows, the boundary scan, and the coupled-coin probe
+  all say the same thing: transport law, symmetry coupling, and boundary
+  regime matter directly.
+
+- **The factorized 3+1D chiral lane should be treated as a bounded implementation,
+  not as a theorem about chiral transport.**
+  The coupled-coin scan materially improves both 3D gauge response and 3D KG
+  fit, so the factorized coin is now best read as a design bottleneck.
+
+- **The 3+1D periodic AWAY windows are not the clean falsifier they first
+  appeared to be.**
+  The new boundary scan makes them mostly a periodic recurrence phenomenon,
+  though still a real problem for that architecture and boundary class.
+
+- **Splitting mass from gravity susceptibility helps but does not close the
+  gravity story.**
+  It reduces theta-envelope sensitivity without curing carrier-`k`
+  chromaticity, so the remaining bottleneck is broader than one overloaded
+  parameter.
+
 ## Next Work
 
 The next non-optional tests are:
 
-1. compare periodic against reflecting or open boundaries at fixed `delta` and `lambda`
-2. tie any geodesic-based gravity observable to the same retained 3+1D chiral transport law
-3. sweep the 3+1D architecture in dimensionless coordinates first, not just by raw lattice size
+1. **symmetry-matched coupled 3+1D coin family**
+   Build a better `6x6` or `8x8` on-site generator, not just a generic pair mixer,
+   and rerun 3D KG/gauge together.
+2. **compare periodic against reflecting or open boundaries at fixed `delta` and `lambda`**
+   Treat boundary robustness as a core gate, not a late diagnostic.
+3. **tie any geodesic-based gravity observable to the same retained 3+1D chiral transport law**
+   Stop mixing geometric and wave observables without an explicit comparison.
+4. **keep the split mass / gravity lane alive**
+   The split model is not a full cure, but it is now the clearest route for
+   attacking the equivalence-style bottleneck without sacrificing KG or `F∝M`.
+5. **sweep the 3+1D architecture in dimensionless coordinates first, not just by raw lattice size**
+   `delta = d/n` and `lambda = L/n` are now better control variables than
+   lattice size alone.

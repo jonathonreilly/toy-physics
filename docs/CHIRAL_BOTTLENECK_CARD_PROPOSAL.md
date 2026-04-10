@@ -1,88 +1,86 @@
-# Chiral Bottleneck Card Proposal
+# Chiral Expanded Core Card
 
 **Date:** 2026-04-10  
-**Scope:** add an early-failure card in front of the moonshot battery so the main architectural limits are exposed before the large sweeps.
+**Scope:** replace the old 10-row closure card as the primary front-door card
+with an expanded core card that catches both operating-point health and the
+structural bottlenecks that keep surfacing later.
 
-This proposal is based on:
-- [FULL_TEST_MATRIX_2026-04-10.md](/Users/jonreilly/projects/Physics/.claude/worktrees/sleepy-cerf/docs/FULL_TEST_MATRIX_2026-04-10.md)
-- [CHIRAL_WALK_SYNTHESIS_2026-04-09.md](/Users/jonreilly/projects/Physics/.claude/worktrees/sleepy-cerf/docs/CHIRAL_WALK_SYNTHESIS_2026-04-09.md)
-- [CHIRAL_WALK_SYNTHESIS_2026-04-10_ADDENDUM.md](/Users/jonreilly/projects/Physics/.claude/worktrees/sleepy-cerf/docs/CHIRAL_WALK_SYNTHESIS_2026-04-10_ADDENDUM.md)
+The old 10-row card is still useful, but it is not sufficient. A model can go
+`10/10` there and still fail on:
 
-The repeated pattern in the matrix is not “many unrelated failures.” It is a smaller set of structural bottlenecks:
-- factorized transport in 3D
-- overloaded `theta` coupling
-- k-dependent gravity readouts
-- boundary/recurrence sensitivity
-- mixed observables being treated as the same measurement
+- multi-D dispersion and isotropy
+- genuine 3D gauge loops
+- fixed-`theta` chromaticity
+- fused mass and gravity coupling
+- periodic recurrence sensitivity
+- observable mismatch
 
-The closure card should catch those first.
+So the best current core card is **N = 16** rows:
+- **C1-C10:** operating-point card
+- **C11-C16:** structural bottleneck card
 
-## Proposed Rows
+Optional:
+- **C17:** growth / backreaction separation
 
-| Row | Test | What it measures | Why it is early |
+## Expanded Core Card (N = 16)
+
+| Row | Test | What it measures | Why it belongs in the core card | Current branch read |
+|---|---|---|---|---|
+| C1 | Born barrier / slit `|I3|/P` | pairwise/Born interference law under blocking | still the cleanest non-negotiable linearity/interference gate | retained in CH-1D / CH-2D / CH-3D operating point |
+| C2 | `d_TV` / slit distinguishability | branch separation after blocking | checks whether the slit harness is informative rather than degenerate | retained |
+| C3 | null control (`k=0` or `f=0`) | no-field / no-phase baseline | protects against built-in drift being mistaken for gravity | retained |
+| C4 | `F∝M` scaling | weak-field linear mass/strength response | keeps the gravity claim honest at first order | retained in chiral operating points |
+| C5 | gravity sign at retained operating point | whether the branch has a real TOWARD point | still needed as the minimal gravity gate | retained, but no longer sufficient by itself |
+| C6 | decoherence / record proxy | whether branch-separation survives weak environment coupling | still a core observable for the measurement side | retained but bounded |
+| C7 | mutual information | branch correlation strength | useful companion to decoherence / purity | retained |
+| C8 | purity stability | whether the record proxy is stable across the scanned window | guards against one-off purity positives | retained |
+| C9 | gravity grows with propagation | whether the signal is a real trend instead of one lucky layer count | still needed for operating-point sanity | retained |
+| C10 | distance law | how the gravity response decays with offset | still needed, but no longer overinterpreted as the whole gravity story | retained with caveats |
+| C11 | 3D KG isotropy / coupled-coin dispersion | `E^2` vs `k^2` along axes and diagonals, isotropy ratio | first fast detector of factorized 3D transport | current factorized CH-3D fails; coupled family helps but does not close |
+| C12 | 3D gauge-loop / AB visibility | Wilson-loop / enclosed-flux response on the same 3D transport | first fast detector of missing cross-axis coupling | current factorized CH-3D fails; coupled family restores strong signal |
+| C13 | fixed-`theta` `k`-achromaticity | deflection CV across carrier `k` at matched travel distance | catches wave-window gravity before it is sold as structural gravity | current CH-1D fails (`CV_k ≈ 2.66`) |
+| C14 | split mass vs gravity susceptibility | independent sweep of free mass gap and gravity coupling | tests whether inertial mass and gravity response are fused | current split model helps but does not solve everything |
+| C15 | boundary-condition robustness | same `delta = d/n`, `lambda = L/n` point under periodic / reflecting / open boundaries | catches recurrence / wrap artifacts before they become doctrine | current 3+1D periodic sign windows are mostly boundary-sensitive |
+| C16 | multi-observable gravity consistency | compare first-arrival, peak, current, centroid, torus-aware centroid | forces us to separate geometric drift from wave readout | not yet wired as one retained integrated harness |
+
+## Optional Row
+
+| Row | Test | What it measures | Why it is optional |
 |---|---|---|---|
-| B1 | 3D KG isotropy / coupled-coin dispersion | `E^2` vs `k^2` along axes and diagonal, plus isotropy ratio | This is the first gate for the factorized-coin bottleneck. If the coin is still separable, KG will fail before any downstream gravity claim can be trusted. |
-| B2 | 3D gauge-loop / AB visibility | Wilson loop or enclosed-flux visibility on the same 3D harness | If AB only works in lower dimension or only with geometry tricks, the 3D transport law is still missing cross-pair coupling. |
-| B3 | Fixed-`theta` k-achromaticity | Deflection vs carrier `k` at fixed `theta`, matched travel distance, same source geometry | This separates “wave-window” effects from a structural gravity law. The current matrix already shows `k`-dependence in CH-1D. |
-| B4 | Split mass parameter vs gravity susceptibility | Hold free dispersion mass fixed while sweeping a separate gravity coupling | This tests whether `theta` is doing too many jobs at once. It directly targets the equivalence-principle pressure in the matrix. |
-| B5 | Boundary-condition robustness / recurrence phase diagram | Periodic vs reflecting vs open at fixed `delta = d/n` and `lambda = L/n` | This catches torus wrap and recurrence artifacts before they are mistaken for physics. It is the right way to expose 3+1D sign-window instability early. |
-| B6 | Multi-observable gravity consistency | Compare first-arrival, peak, current, centroid, and torus-aware centroid on the same run | This forces us to separate geometric drift from wave interference. If only one observable flips, the readout is the problem, not the transport. |
+| C17 | growth / backreaction separation | whether growth fails because it is applied to a coherent state instead of to records/currents | extremely important, but secondary to fixing the transport bottlenecks first |
 
-## Suggested Harness Mapping
+## Ordering
 
-These rows do not all need new infrastructure.
+The card should be run in this order:
 
-- **B1/B2:** extend [frontier_coupled_dirac_coin_3plus1d.py](/Users/jonreilly/projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_coupled_dirac_coin_3plus1d.py). That file already contains the coupled-coin hypothesis and a Bloch-analysis engine.
-- **B3/B4:** reuse the corrected fixed-`theta` and carrier-`k` helpers already introduced in [frontier_chiral_final_moonshots.py](/Users/jonreilly/projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_chiral_final_moonshots.py).
-- **B5:** reuse the torus-aware recurrence logic from [frontier_chiral_3plus1d_decoherence_sweep.py](/Users/jonreilly/projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_chiral_3plus1d_decoherence_sweep.py).
-- **B6:** add a small readout wrapper on top of the existing closure-card helpers so the same run reports all observables.
+1. `C1-C5`: prove the operating point is not nonsense
+2. `C11-C16`: prove the architecture is not structurally broken
+3. `C6-C10`: add the measurement and scaling context
+4. `C17` if growth or endogenous backreaction is in scope
 
-## Recommended Pass Criteria
+That ordering is deliberate. The repo’s failure pattern has been:
 
-These are not meant to be “everything passes” rows. They are meant to fail fast when the architecture is still wrong.
+- a branch looks healthy on an operating point
+- a later moonshot reveals a structural bottleneck
+- the bottleneck should have been screened much earlier
 
-- **B1:** coupled 3D coin should improve the isotropic KG fit relative to the current factorized baseline, and the axis/diagonal slopes should agree within a tight band.
-- **B2:** AB visibility should remain nonzero under a genuine closed-loop flux test, not just a local phase decoration.
-- **B3:** the deflection should be stable across `k` to within a small coefficient of variation if the architecture is really achromatic at fixed `theta`.
-- **B4:** varying the gravity coupling should not require changing the free mass gap. If it does, mass and gravity susceptibility are still fused.
-- **B5:** the sign map should be stable when expressed in `delta` and `lambda`, not just at one raw `n, L` operating point.
-- **B6:** the gravity sign and magnitude should agree across observables after minimum-image correction. If only the centroid flips, the card should mark that as an observable mismatch.
+The expanded card fixes that.
 
-## Axiom Pressure
+## Immediate Implementation Mapping
 
-The bottleneck card should force the axioms to answer sharper questions:
-
-- **Axiom 6** needs a stronger statement about local continuation channels. The 3D failures suggest that axis-separable transport is not enough; the on-site operator likely has to be irreducible across the available channels.
-- **Axiom 8** should not be read as “any distorted continuation gives gravity.” The card should distinguish geometric drift from wave readout.
-- **Axiom 10** should remain a summary score, not a substitute for the structural checks above.
-
-## Order Of Operations
-
-If we only add four rows first, make them:
-1. B1 coupled-coin 3D KG isotropy
-2. B2 3D gauge-loop / AB visibility
-3. B3 fixed-`theta` k-achromaticity
-4. B4 split mass vs gravity susceptibility
-
-If we add two more immediately, make them:
-5. B5 boundary-condition robustness / recurrence phase diagram
-6. B6 multi-observable gravity consistency
-
-## Optional Seventh Row
-
-If you want a dedicated growth gate, add:
-- **B7 growth/backreaction separation**: evolve propagation first, then apply growth or record deposition after the state is measured, not while it is still coherent.
-
-That row is useful, but it is secondary to the transport bottlenecks above.
+- `C1-C10`: existing chiral closure-card harnesses
+- `C11-C12`: `scripts/frontier_chiral_3plus1d_coupled_coin_scan.py`
+- `C13-C14`: `scripts/frontier_chiral_split_mass_gravity.py` and corrected carrier-`k` utilities from the moonshot harness
+- `C15`: `scripts/frontier_chiral_3plus1d_boundary_phase_diagram.py`
+- `C16`: next harness to add; should wrap the existing closure-card propagators and emit multiple observables from the same run
 
 ## Bottom Line
 
-The right early-card strategy is not “more moonshot coverage.” It is to force the architecture to answer six structural questions before the big sweeps:
-- can the 3D coin actually couple dimensions
-- can the 3D harness support a real gauge loop
-- is gravity achromatic in `k`
-- is gravity separable from mass
-- are sign windows boundary artifacts
-- are the gravity observables consistent
+The best current core card is not “10 rows plus some moonshots later.”
 
-If those six are clean, the moonshots become much more meaningful. If any of them fails, the failure mode is local and actionable instead of being discovered late.
+It is:
+- **a 16-row front-door card**
+- with the old closure rows kept
+- and the six structural bottleneck rows promoted into the core path
+
+That gives us the right shape of operating environment much earlier.

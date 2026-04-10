@@ -106,6 +106,34 @@ chirality components (d = spatial dimensions). Per layer:
   No clean preferred dimension. Gravity magnitude decreases with d.
   2+1D can flip AWAY at some parameters (lattice-size effect).
 
+## Revisited Conclusions After The Axiom Update
+
+The raw measurements above mostly still stand, but several interpretations need
+to be narrowed.
+
+1. **Do not read factorized 3+1D chiral as a generic chiral no-go.**
+   The coupled-coin probe now shows that once the on-site operator couples axes,
+   3D gauge response rises sharply and low-k KG fit improves. The factorized
+   `2x2 ⊕ 2x2 ⊕ 2x2` coin is therefore a specific implementation bottleneck,
+   not the final verdict on chiral transport in 3+1D.
+
+2. **Do not read periodic AWAY windows as proof that distortion fails.**
+   The new boundary phase scan shows that most of the 3+1D AWAY windows are
+   periodic recurrence artifacts. Reflecting is all-TOWARD on the scanned grid,
+   and open classical/phase-kill are also all-TOWARD there.
+
+3. **Do not read `theta` overload as the whole equivalence failure.**
+   Splitting inertial mass from gravitational susceptibility does reduce the
+   theta-envelope sensitivity, but it leaves the strong carrier-`k`
+   chromaticity intact. So parameter overload is real, but it is not the only
+   structural blocker.
+
+4. **Do not present the current gravity lane as an Axiom 8 derivation.**
+   After the axiom rewrite, the right statement is weaker: the retained
+   chiral results show that attraction can emerge under a particular transport
+   law and boundary regime. They do not show that distortion alone guarantees
+   attraction.
+
 ## The F∝M Mechanism (explained)
 
 Phase coupling: |e^{ikf}|² = 1 → zero first-order probability shift → F∝M²
@@ -116,20 +144,23 @@ enters through the AMPLITUDE of mixing, not just the phase. This is
 why F∝M=1.0 is exact: the centroid shift is proportional to the
 first-order probability perturbation, which is linear in f.
 
-## The Gravity Mechanism (from first principles)
+## Current Gravity Mechanism Read
 
-Axiom 8: "Gravity is natural continuation in a distorted continuation structure."
+This is now the best mechanism read of the retained harnesses, not a direct
+first-principles derivation from Axiom 8 alone.
 
 The Lorentzian θ-coupling: θ(r) = θ₀(1-f(r))
   Near mass: θ decreases → less chirality mixing → walk is more forward-directed
   Far from mass: θ = θ₀ → normal mixing
 
 This creates a "refractive index" gradient: the walk is faster/straighter
-near mass (less scattering), pulling the probability centroid TOWARD mass.
+near mass (less scattering), pulling the probability centroid TOWARD mass on
+the retained operating points.
 
 At fixed θ, the coupling is k-independent. That resolves the transfer matrix's
 k-dependent resonance problem in 1+1D, but it does not by itself guarantee a
-universal sign-stable 3+1D periodic regime.
+universal sign-stable 3+1D periodic regime, and the corrected carrier-`k`
+wavepacket sweep does not support achromatic measured deflection.
 
 ## Connection to Known Physics
 
@@ -140,5 +171,6 @@ quantum walk. What's NEW:
 2. F∝M=1.0 from amplitude coupling (new mechanism)
 3. 10/10 closure cards at retained operating points, with the 3+1D claim
    narrowed to an operating-point closure card plus a TOWARD basin
-4. The connection to the axiom chain (Axiom 6 → kernel, Axiom 8 → gravity)
+4. The connection to the sharpened axiom program, especially transport-law
+   pressure from Axiom 6 and the weaker reading of Axiom 8
 5. Klein-Gordon + gravity + Born + gauge in one framework

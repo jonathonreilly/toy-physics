@@ -264,17 +264,48 @@ These are not new score-card rows for the existing architectures. They are targe
 | Split mass vs gravity coupling | `frontier_chiral_split_mass_gravity.py` | KG and `F∝M` survive unchanged. Theta-envelope sensitivity drops from exponent `3.802` to `2.803` and `CV 1.0825` to `0.9013`. `k`-chromaticity stays `CV_k = 2.6580`. | `theta` overload is real, but it is not the only bottleneck; wavelength sensitivity survives the split. |
 | Boundary-condition phase diagram | `frontier_chiral_3plus1d_boundary_phase_diagram.py` | Periodic coherent has `4/25` AWAY consensus cells, periodic classical/phase-kill `10/25`; reflecting is `25/25` TOWARD in all modes; open classical/phase-kill are `25/25` TOWARD. | The 3+1D sign problem is dominated by periodic recurrence / boundary effects, not by a torus-observable bug. |
 
-## PART 10: Proposed Bottleneck Card
+## PART 10: Expanded Core Card (N = 16)
 
-The current closure card catches healthy operating points, but it misses the structural faults that later break 3D physics. The proposed early-failure rows are:
+The old 10-row closure card is still useful, but it is no longer the best
+front-door card by itself. The best current core card is:
 
-| Row | Test | Purpose | Current lesson |
+- `C1-C10`: operating-point health
+- `C11-C16`: structural bottleneck checks
+
+Optional:
+- `C17`: growth / backreaction separation
+
+| Row | Test | Description | Current branch read |
 |---|---|---|---|
-| B1 | 3D KG isotropy / coupled-coin dispersion | Fail fast on axis-separable transport. | Needed immediately; the factorized 3D coin fails here first. |
-| B2 | 3D gauge-loop / AB visibility | Check whether 3D transport supports real loop phases. | Also needed immediately; baseline 3D gauge is zero and only appears once the coin couples axes. |
-| B3 | Fixed-`theta` k-achromaticity | Separate structural gravity from wave-window chromaticity. | Already a live failure in CH-1D (`CV_k = 2.66`). |
-| B4 | Split mass parameter vs gravity susceptibility | Test whether mass gap and gravity response are fused. | Overload is real, but this row also shows whether a split cure is enough. |
-| B5 | Boundary-condition robustness | Distinguish recurrence artifacts from transport-law failures. | The 3+1D sign windows demand this row. |
-| B6 | Multi-observable gravity consistency | Compare first-arrival, peak, current, and centroid on the same run. | Needed so we stop treating every centroid shift as the same physics. |
+| C1 | Born barrier / slit `|I3|/P` | Pairwise/Born interference under blocking. | retained operating-point gate |
+| C2 | `d_TV` / slit distinguishability | Whether the slit harness actually separates alternatives. | retained |
+| C3 | null control (`k=0` or `f=0`) | No-field baseline. | retained |
+| C4 | `F∝M` scaling | Weak-field linearity in source strength or mass. | retained |
+| C5 | gravity sign at retained point | Minimal TOWARD/AWAY operating-point check. | retained but insufficient alone |
+| C6 | decoherence / record proxy | Weak environment / record sensitivity. | retained but bounded |
+| C7 | mutual information | Branch correlation strength. | retained |
+| C8 | purity stability | Whether the record proxy is stable across the scan. | retained |
+| C9 | gravity growth with propagation | Whether the signal is a trend instead of one lucky depth. | retained |
+| C10 | distance law | Offset falloff and fit quality. | retained with caveats |
+| C11 | 3D KG isotropy / coupled-coin dispersion | `E^2` vs `k^2` along axes/diagonals and isotropy ratio. | factorized CH-3D fails; coupled family improves but does not close |
+| C12 | 3D gauge-loop / AB visibility | Genuine 3D loop/flux response on the same transport law. | factorized CH-3D fails; coupled family restores strong signal |
+| C13 | fixed-`theta` `k`-achromaticity | Deflection CV across carrier `k` at matched travel distance. | current CH-1D fails (`CV_k ≈ 2.66`) |
+| C14 | split mass vs gravity susceptibility | Separate free gap from gravity coupling. | split helps but does not solve chromaticity |
+| C15 | boundary-condition robustness | Same `delta = d/n`, `lambda = L/n` point under periodic/reflecting/open boundaries. | current 3+1D periodic windows are mostly boundary-sensitive |
+| C16 | multi-observable gravity consistency | First-arrival, peak, current, centroid, torus-aware centroid on one run. | not yet integrated as one retained harness |
 
-If the closure card stays capped at 10 rows, the right trade is to demote some of the later MI/purity-growth rows into a second-tier diagnostics card and move these bottleneck rows into the front door.
+### Optional Core-Adjacent Row
+
+| Row | Test | Description |
+|---|---|---|
+| C17 | growth / backreaction separation | Apply growth or record deposition after transport/readout rather than while the state is still coherent. |
+
+### Recommended Order
+
+1. `C1-C5`: prove the operating point is not nonsense
+2. `C11-C16`: prove the architecture is not structurally broken
+3. `C6-C10`: add measurement and scaling context
+4. `C17` if growth or endogenous backreaction is in scope
+
+This is the best current N-card for core tests. If a branch cannot clear these
+rows, the moonshots are likely to mislead.
