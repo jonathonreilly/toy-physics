@@ -14,6 +14,9 @@ This project is strongest when it is explicit about which ingredients are:
 
 This ledger is meant to make that separation harder to blur in future writeups.
 
+For current pressure on the *axioms themselves* rather than the assumed/derived
+ingredients, see [AXIOM_RISK_LEDGER.md](./AXIOM_RISK_LEDGER.md).
+
 ## Current ledger
 
 | ingredient | current status | what is actually true now |
