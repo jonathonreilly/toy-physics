@@ -6,6 +6,14 @@ This backlog is ordered by value to the main project, not by ease.
 
 ## P0 - Endogenous Field Closure
 
+- Frozen narrow positive:
+  [`frontier_staggered_backreaction_green_closure.py`](../scripts/frontier_staggered_backreaction_green_closure.py)
+  and
+  [`STAGGERED_BACKREACTION_GREEN_CLOSURE_NOTE.md`](../docs/STAGGERED_BACKREACTION_GREEN_CLOSURE_NOTE.md)
+  now give a graph-native direct Green map (`resistance_yukawa`) that cuts the
+  retained cycle-bearing mean gap from `8.899e-01` to `9.889e-02` and the
+  layered holdout gap from `8.759e-01` to `1.680e-02`, while preserving the
+  retained force battery.
 - Portability is now established enough for the retained force battery:
   baseline portability, stress portability, and the failure map are all frozen.
 - Native gauge/current closure is now retained on the cycle-bearing stress
@@ -13,21 +21,24 @@ This backlog is ordered by value to the main project, not by ease.
   the current probe.
 - The sparse layered DAG-like family remains a useful negative control; it
   still fails the gauge/current threshold.
-- The main blocker is no longer transport portability. It is endogenous-field
-  scale closure on the cycle-bearing graph families.
+- The main blocker is no longer transport portability. It is self-consistent
+  endogenous refresh on top of the now-retained nonlocal source-to-field
+  closure.
 - Push beyond
   [`frontier_staggered_backreaction_prototype.py`](../scripts/frontier_staggered_backreaction_prototype.py)
   and
   [`frontier_staggered_backreaction_iterative.py`](../scripts/frontier_staggered_backreaction_iterative.py):
-  the solved/source-generated `Phi` has the right sign and structure, but it is
-  still too weak relative to the external-kernel control on cycle-bearing
-  families.
-- Prioritize genuinely different source-to-field rules or iterative endogenous
-  closure over more small linear preconditioning sweeps.
+  the local screened-Poisson field is too weak, but the direct nonlocal
+  `resistance_yukawa` Green map now closes the raw source-to-field scale on the
+  retained graph set.
+- Do not reopen small linear source preconditioner sweeps.
+- Next seam: iterative endogenous closure on top of the retained nonlocal Green
+  map, because the one-step self-refresh gap is still `O(1)` on the
+  cycle-bearing families.
 - Acceptance gate:
-  materially reduce the force-scale gap on cycle-bearing families without
-  losing TOWARD sign, exact source linearity, exact additivity, or norm
-  stability.
+  preserve the retained `resistance_yukawa` closure level while reducing the
+  one-step self-refresh gap, without losing TOWARD sign, source linearity,
+  exact additivity, or norm stability.
 
 ## P1 - Native Gauge Holdout on Layered Graphs
 
