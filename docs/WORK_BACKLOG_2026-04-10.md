@@ -21,6 +21,9 @@ This backlog is ordered by value to the main project, not by ease.
   the current probe.
 - True self-gravity is now retained on the three cycle-bearing graph families
   in [`frontier_staggered_self_gravity.py`](../scripts/frontier_staggered_self_gravity.py).
+- A retained scaling readout now exists in
+  [`frontier_staggered_self_gravity_scaling.py`](../scripts/frontier_staggered_self_gravity_scaling.py):
+  inward force is stable, but contraction is topology-sensitive.
 - A first two-field endogenous coupling is now retained as a prototype in
   [`frontier_two_field_coupling.py`](../scripts/frontier_two_field_coupling.py),
   but it still uses relaxation dynamics for `Phi`.
