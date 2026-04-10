@@ -127,16 +127,17 @@ Two follow-up probes sharpen the interpretation of the scalar graph lane.
   current CN evolution still fails a strict light-cone gate. That makes it a
   strong successor probe, not yet the retained replacement architecture.
 
-- **Staggered fermion + potential 17-card**:
-  [`frontier_staggered_potential_16card.py`](../scripts/frontier_staggered_potential_16card.py)
-  and [`frontier_staggered_17card.py`](../scripts/frontier_staggered_17card.py)
-  show the sharpest current robustness fork. Under a physical-state-only gate
-  that excludes the antisymmetric Nyquist-like family, the lane now scores
-  `17/17`, using a persistent-current gauge row in place of the weaker
-  slit-phase proxy. Under the stricter audited all-family gate, the same lane
-  still scores `14/17`, failing `C6`, `C12`, and `C17`. This means the
-  staggered potential story is real, but it is not yet a universal gravity
-  architecture unless the repo explicitly narrows the robustness claim.
+- **Staggered fermion force-based card** (current retained result):
+  [`frontier_staggered_17card.py`](../scripts/frontier_staggered_17card.py)
+  uses force F=-⟨dV/dz⟩ instead of centroid shift for gravity rows.
+  The centroid oscillates in a permanent period-4 pattern on the staggered
+  periodic lattice; force converges at all tested sizes (n=7..17).
+  Scores: 1D n=61 `17/17` (6/6 families), 3D n=9 `17/17` (6/6 families),
+  3D n=11,13 `17/17` (4/6 families, eigensolve cost). Full suite: 1D `29/38`,
+  3D `28/38`. Rows C5/C9/C10/C15/C16 have different semantics from the
+  repo-wide centroid card (see `STAGGERED_FERMION_CARD_2026-04-10.md`).
+  C12 is a native persistent-current test on the actual card lattice.
+  All 7 state families including anti/Nyquist are TOWARD under force.
 
 ## The core tension (still open)
 
