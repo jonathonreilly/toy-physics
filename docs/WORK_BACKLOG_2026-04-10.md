@@ -21,9 +21,16 @@ This backlog is ordered by value to the main project, not by ease.
   the current probe.
 - True self-gravity is now retained on the three cycle-bearing graph families
   in [`frontier_staggered_self_gravity.py`](../scripts/frontier_staggered_self_gravity.py).
+- A retained scaling readout now exists in
+  [`frontier_staggered_self_gravity_scaling.py`](../scripts/frontier_staggered_self_gravity_scaling.py):
+  inward force is stable, but contraction is topology-sensitive.
 - A first two-field endogenous coupling is now retained as a prototype in
   [`frontier_two_field_coupling.py`](../scripts/frontier_two_field_coupling.py),
   but it still uses relaxation dynamics for `Phi`.
+- A wave-law two-field hardening is now retained in
+  [`frontier_two_field_wave.py`](../scripts/frontier_two_field_wave.py): hard
+  `5/5` on the retained cycle-bearing families, with width kept as a
+  diagnostic rather than a hard gate.
 - The sparse layered DAG-like family remains a useful negative control; it
   still fails the gauge/current threshold.
 - The main blocker is no longer transport portability. It is self-consistent
@@ -40,8 +47,9 @@ This backlog is ordered by value to the main project, not by ease.
 - Next seam: iterative endogenous closure on top of the retained nonlocal Green
   map, because the one-step self-refresh gap is still `O(1)` on the
   cycle-bearing families.
-- After that, harden the two-field `Phi` dynamics rather than multiplying more
-  one-way background-field probes.
+- After that, push beyond the current wave-law hardening toward retarded or
+  hybrid field laws rather than multiplying more one-way background-field
+  probes.
 - Acceptance gate:
   preserve the retained `resistance_yukawa` closure level while reducing the
   one-step self-refresh gap, without losing TOWARD sign, source linearity,
