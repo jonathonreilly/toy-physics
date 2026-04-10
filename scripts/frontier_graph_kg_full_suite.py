@@ -98,7 +98,7 @@ def part1():
     rf=P(ev_barrier(slits),n); Pt=np.sum(rf)
     rs=[P(ev_barrier([s]),n) for s in slits]
     born=np.sum(np.abs(rf-sum(rs)))/Pt if Pt>1e-20 else 0
-    p1=born>0.01; sc+=p1
+    p1=born<1e-2; sc+=p1  # Born holds when I3/P is SMALL
     print(f"  [1] Born: {born:.4f} {'PASS' if p1 else 'FAIL'}")
 
     # 2. d_TV
@@ -150,10 +150,13 @@ def part1():
     p8=cv<0.5; sc+=p8
     print(f"  [8] Purity: CV={cv:.4f} {'PASS' if p8 else 'FAIL'}")
 
-    # 9. Gravity grows
+    # 9. Gravity grows (all TOWARD + monotonic)
     forces9={ns:cz(ev(ns=ns,g_v=G,s_v=S,mpos=[(c,c,c+3)]),n)-cz(ev(ns=ns),n) for ns in [6,8,10,14]}
-    p9=all(f>0 for f in forces9.values()); sc+=p9
-    print(f"  [9] GravGrow: {'PASS' if p9 else 'FAIL'}")
+    vals9=list(forces9.values())
+    all_tw=all(f>0 for f in vals9)
+    monotone=all(vals9[i+1]>=vals9[i] for i in range(len(vals9)-1))
+    p9=all_tw and monotone; sc+=p9
+    print(f"  [9] GravGrow: all_tw={all_tw}, mono={monotone} {'PASS' if p9 else 'FAIL'}")
 
     # 10. Distance
     d0=cz(ev(),n); offs=list(range(2,n//4+1))
@@ -286,9 +289,10 @@ def part3():
     print(f"  Light cone:   PARTIAL (v_max < 1, lattice CFL)"); sc+=0
 
     # Unitary
-    # Leapfrog is symplectic, preserving the KG norm (not L2 norm)
-    # L2 norm drifts slightly due to the V term (not a true force potential in leapfrog sense)
-    print(f"  Unitary:      YES (symplectic leapfrog)"); sc+=1
+    # Leapfrog is symplectic but L2 norm drifts with V (see Part 1 norm check)
+    # CN integrator fixes this; leapfrog is an exploratory baseline
+    uni = abs(norm-norm0)/norm0 < 0.01
+    print(f"  Unitary:      {'YES' if uni else 'NO (leapfrog norm drift)'} (drift={abs(norm-norm0)/norm0:.4f})"); sc+=uni
 
     # Causal DAG
     print(f"  Causal DAG:   NO (regular lattice, but method extends to DAG)"); sc+=0
@@ -437,6 +441,9 @@ if __name__=='__main__':
     print(f"    Dynamic growth (extend to evolving graphs)")
     print(f"    Cosmology, Hawking, geometry superposition")
     print()
-    print(f"  vs SCALAR KG (FFT):  same physics, local implementation")
+    print(f"  NOTE: This is a LEAPFROG baseline. Norm drifts with V(x).")
+    print(f"  The CN integrator (frontier_axioms_16card.py) fixes norm.")
+    print(f"  Scores here should not be mixed with CN 16-card scores.")
+    print(f"\n  vs SCALAR KG (FFT):  same physics, local implementation")
     print(f"  vs CHIRAL WALK:      fixes gravity blockers, loses light cone + causal set")
     print(f"\n  Total time: {elapsed:.1f}s")

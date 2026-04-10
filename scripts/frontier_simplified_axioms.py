@@ -350,9 +350,14 @@ if __name__ == '__main__':
     print(f"  Growing graph:    {s_growing}/8")
     print(f"\n  Total time: {elapsed:.1f}s")
 
+    print(f"\n  NOTE: This is a narrow spot battery (8 tests) with leapfrog")
+    print(f"  integrator (norm drifts). These results are directional, not")
+    print(f"  a validated core card. See frontier_axioms_16card.py for the")
+    print(f"  audited 16-row card with Crank-Nicolson norm preservation.")
     if s_cubic >= 6 and s_random >= 6 and s_growing >= 6:
-        print("\n  VERDICT: Axioms produce physics across all graph types.")
-        print("  The physics is derived from the axioms, not from the lattice.")
+        print(f"\n  VERDICT: Gravity, Born, decoherence, superposition work across")
+        print(f"  all 3 graph types in this spot battery. Encouraging but not")
+        print(f"  sufficient for topology-independence claims.")
     elif s_cubic >= 6:
         print("\n  VERDICT: Axioms work on regular lattice but need refinement")
         print("  for irregular graphs.")
