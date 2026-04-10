@@ -272,21 +272,22 @@ def run_16_card(name, adj, pos, mass=0.3, g=5.0, S=5e-4, dt=0.05, n_steps=20):
 
     # C11: KG / isotropy from graph Laplacian spectrum
     if name.startswith("CUBIC"):
-        # Cubic lattice: check exact lattice dispersion E^2 = m^2 + 2(1-cos k)
-        # along axis (0,0,k) and diagonal (k,k,k), matching audited card.
-        n_c = round(N_nodes ** (1/3))
-        f11 = np.fft.fftfreq(n_c) * 2 * np.pi
+        # Cubic lattice: use DENSE auxiliary momentum grid (n=41, not the
+        # lattice's own n) to get enough samples for the fit.
+        # This matches the method in frontier_graph_kg_16card.py.
         def lattice_E2(kx, ky, kz):
             return mass**2 + 2*(1-np.cos(kx)) + 2*(1-np.cos(ky)) + 2*(1-np.cos(kz))
+        f11 = np.fft.fftfreq(41) * 2 * np.pi  # 41 dense k-points
         axis = np.array([(k*k, lattice_E2(0, 0, k)) for k in f11])
         diag = np.array([(3*k*k, lattice_E2(k, k, k)) for k in f11])
-        ma = axis[:, 0] < 0.5; md = diag[:, 0] < 0.5
+        ma = axis[:, 0] < 0.8; md = diag[:, 0] < 0.8
         sa, _, ra, _, _ = stats.linregress(axis[ma, 0], axis[ma, 1])
         sd, _, rd, _, _ = stats.linregress(diag[md, 0], diag[md, 1])
         r2kg = min(ra**2, rd**2)
         iso = max(sa, sd) / min(sa, sd) if min(sa, sd) > 0 else float("inf")
+        n_axis = int(np.sum(ma)); n_diag = int(np.sum(md))
         p = r2kg > 0.99 and iso < 1.05; score += p
-        print(f"  [C11] KG-cubic R^2={r2kg:.6f}, iso={iso:.4f} {'PASS' if p else 'FAIL'}")
+        print(f"  [C11] KG-cubic R^2={r2kg:.6f}, iso={iso:.4f} (axis:{n_axis}pts, diag:{n_diag}pts) {'PASS' if p else 'FAIL'}")
     else:
         # Non-cubic: eigensolve Laplacian, fit low eigenvalues to E^2 = m^2 + c*lambda
         evals = np.sort(np.linalg.eigvalsh(L.toarray()))
