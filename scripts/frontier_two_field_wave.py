@@ -19,7 +19,7 @@ Battery:
   W2: Force TOWARD across all iterations
   W3: ψ norm conservation
   W4: Φ bounded (no runaway)
-  W5: Contraction vs free evolution
+  W5: Width response vs free evolution (diagnostic, not a hard gate)
   W6: State-family robustness
 """
 
@@ -184,7 +184,7 @@ def run_wave_coupling(name, pos, col, adj, n, src):
     psi_free = psi.copy()
 
     forces=[]; widths_c=[]; widths_f=[]; norms=[]; phi_norms=[]; phi_energies=[]
-    score = 0
+    hard_score = 0
 
     for it in range(N_ITER):
         rho = np.abs(psi)**2
@@ -221,29 +221,27 @@ def run_wave_coupling(name, pos, col, adj, n, src):
     # Battery
     # W1: Phi responds
     phi_grew = phi_norms[-1] > 1e-6
-    p = phi_grew; score += p
+    p = phi_grew; hard_score += p
     print(f"\n  [W1] Phi responds: {phi_norms[0]:.3e} -> {phi_norms[-1]:.3e} {'PASS' if p else 'FAIL'}")
 
     # W2: Force TOWARD
     n_tw = sum(1 for f in forces if f > 0)
-    p = n_tw > N_ITER * 0.8; score += p
+    p = n_tw == N_ITER; hard_score += p
     print(f"  [W2] Force: {n_tw}/{N_ITER} TOWARD {'PASS' if p else 'FAIL'}")
 
     # W3: Norm
     norm_drift = max(abs(nm-1) for nm in norms)
-    p = norm_drift < 1e-3; score += p
+    p = norm_drift < 1e-3; hard_score += p
     print(f"  [W3] Norm: drift={norm_drift:.4e} {'PASS' if p else 'FAIL'}")
 
     # W4: Phi bounded
     p = phi_norms[-1] < 1e6 and not np.any(np.isnan(phi))
-    score += p
+    hard_score += p
     print(f"  [W4] Phi bounded: max={np.max(np.abs(phi)):.3e} {'PASS' if p else 'FAIL'}")
 
-    # W5: Contraction
+    # W5: Width response (diagnostic only)
     ratio = widths_c[-1] / widths_f[-1] if widths_f[-1] > 0 else 1
-    p = True  # always report, not a hard gate
-    score += 1
-    print(f"  [W5] Width ratio: {ratio:.4f} ({'contracted' if ratio<1 else 'expanded'})")
+    print(f"  [W5] Width ratio: {ratio:.4f} ({'contracted' if ratio<1 else 'expanded'}) [diagnostic]")
 
     # W6: State families
     fam_tw = 0
@@ -263,11 +261,11 @@ def run_wave_coupling(name, pos, col, adj, n, src):
         F_f = _shell_force(depth,max_d,n,psi_f,phi_f)
         tw = F_f > 0; fam_tw += tw
         print(f"    {label:10s}: F={F_f:+.4e} {'TW' if tw else 'AW'}")
-    p = fam_tw >= 2; score += p
+    p = fam_tw == 3; hard_score += p
     print(f"  [W6] Families: {fam_tw}/3 {'PASS' if p else 'FAIL'}")
 
-    print(f"\n  SCORE: {score}/6")
-    return score
+    print(f"\n  HARD SCORE: {hard_score}/5 + W5 diagnostic")
+    return hard_score, ratio
 
 
 if __name__ == '__main__':
@@ -281,11 +279,14 @@ if __name__ == '__main__':
     print()
 
     scores = []
+    ratios = []
     for builder in [make_random_geometric, make_growing, make_layered_cycle]:
         name, pos, col, adj, n, src = builder()
-        s = run_wave_coupling(name, pos, col, adj, n, src)
+        s, ratio = run_wave_coupling(name, pos, col, adj, n, src)
         scores.append(s)
+        ratios.append(ratio)
 
+    ratio_fmt = [float(f"{r:.4f}") for r in ratios]
     print(f"\n{'='*70}")
-    print(f"SUMMARY: scores={scores}")
+    print(f"SUMMARY: hard_scores={scores}, width_ratios={ratio_fmt}")
     print(f"Time: {time.time()-t0:.1f}s")

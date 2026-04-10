@@ -204,14 +204,20 @@ The full-suite baseline is now frozen:
    4/4 on the retained graph with a separate scalar Φ field sourced by `|ψ|²`,
    30/30 TOWARD force, exact matter norm, and bounded Φ growth.
 
+6. **Two-field wave hardening**: DONE as a retained hardening step.
+   `frontier_two_field_wave.py` closes hard `5/5` on all three retained
+   cycle-bearing families with a wave-law `Φ` field, exact `ψ` norm, bounded
+   `Φ`, and 30/30 TOWARD force. Width response survives only as a diagnostic,
+   not a universal gate.
+
 ### Remaining work
 
 1. **Endogenous-field scale**: G_eff=12-178 is characterized but not closed.
    The miss is structural on the current graph Poisson map, not a sign or
    linearity failure.
-2. **Two-field hardening**: replace the current relaxation update for Φ with a
-   more physical wave or retarded-field law, then rerun the retained force
-   battery.
+2. **Two-field retarded-field hardening**: the wave-law upgrade is now real.
+   The next step is to test retarded or hybrid field laws against the same
+   retained force battery and the retained nonlocal source-sector closure.
 3. **Self-gravity portability**: extend the retained self-gravity probe beyond
    the current three cycle-bearing graph families and quantify how contraction
    scales with graph size and geometry.
@@ -229,3 +235,4 @@ The current retained cycle-bearing integration is frozen in:
 Companion retained probes:
 - `scripts/frontier_staggered_self_gravity.py`
 - `scripts/frontier_two_field_coupling.py`
+- `scripts/frontier_two_field_wave.py`
