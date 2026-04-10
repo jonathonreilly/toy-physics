@@ -1,7 +1,7 @@
 # Full Test Matrix — All Architectures × All Measures
 
-**Date:** 2026-04-10 (updated with spot checks)
-**Status:** Comprehensive scorecard across the ENTIRE REPO (pre-session + session + spot checks).
+**Date:** 2026-04-10 (updated with spot checks, bottleneck probes, and axiom pass)
+**Status:** Comprehensive scorecard across the ENTIRE REPO (pre-session + session + spot checks + bottleneck probes).
 
 ## Pre-Session Architectures (from existing repo)
 
@@ -188,26 +188,27 @@
 ## PART 7: Remaining Open Issues (by priority)
 
 ### Critical:
-1. **Equivalence principle violation** — θ parameterizes both mass AND gravity coupling (56% variation)
-2. **3+1D sign windows** — converged basin but not universal
-3. **Distance exponent -0.6** — explained by beam spreading but not Newtonian
+1. **Factorized 3+1D coin** — confirmed core blocker. Coupled-coin scan lifts gauge visibility from `0.0000` to `0.9142` and KG fit from `R²=0.0627` to `0.4787`, but isotropic 3D KG still does not retain.
+2. **Equivalence / parameter overload** — splitting `theta_m` from gravity susceptibility reduces theta-envelope sensitivity (`3.802 -> 2.803`, `CV 1.0825 -> 0.9013`) but leaves strong k-chromaticity intact (`CV_k = 2.6580`).
+3. **3+1D periodic sign windows** — mostly recurrence / boundary artifacts. Reflecting is `25/25` TOWARD across all scanned cells; open classical and phase-kill are also `25/25` TOWARD, while periodic retains AWAY corners.
+4. **Distance exponent -0.6** — explained by beam spreading but not Newtonian
 
 ### Significant:
-4. **Dynamic growth** — works on TM, fails on chiral
-5. **CLT decoherence ceiling** — persists on all architectures
-6. **SU(2) gauge** — needs additional color DOF
-7. **Chromaticity on chiral gravity** — corrected k-sweep at fixed θ shows strong k-dependence (CV=2.66)
+5. **Dynamic growth** — works on TM, fails on chiral
+6. **CLT decoherence ceiling** — persists on all architectures
+7. **SU(2) gauge** — needs additional color DOF
+8. **Chromaticity on chiral gravity** — corrected k-sweep at fixed θ shows strong k-dependence (CV=2.66)
 
 ### Moderate:
-8. **Cosmological expansion** — fails on chiral
-9. **Hawking analog** — no thermal spectrum on chiral
-10. **3+1D Born** — 0.056 (weaker than lower dimensions)
-11. **2+1D dispersion** — approximate KG only (slope 0.87-0.93)
-12. **Chirality not conserved** — precesses, not a good spin analog
-13. **VL-3D spectrum growth-contaminated** — CV=0.334, spectral radius=1.72 (non-unitary)
+9. **Cosmological expansion** — fails on chiral
+10. **Hawking analog** — no thermal spectrum on chiral
+11. **3+1D Born** — 0.056 (weaker than lower dimensions)
+12. **2+1D dispersion** — approximate KG only (slope 0.87-0.93)
+13. **Chirality not conserved** — precesses, not a good spin analog
+14. **VL-3D spectrum growth-contaminated** — CV=0.334, spectral radius=1.72 (non-unitary)
 
 ### Design Bottleneck (from spot checks):
-0. **Factorized coin cannot produce 3D Klein-Gordon** — The independent 2×2 blocks on each chirality pair produce 1D-per-pair dispersion (R²=0.16 for isotropic 3D KG). This also prevents 3D Aharonov-Bohm (V=0.0). A coupled 6×6 or 8×8 Dirac-like coin is needed. This is the single biggest open design challenge.
+0. **Factorized coin cannot produce retained 3D transport** — The independent `2×2` blocks on each chirality pair produce 1D-per-pair dispersion (`R²=0.16` on the baseline spot check) and zero 3D AB visibility. The new coupled-coin scan confirms this is real: once cross-axis mixing is introduced, gauge response jumps to `V=0.9142` and KG fit improves materially. A symmetry-matched coupled `6×6` or `8×8` Dirac-like coin is the highest-priority design task.
 
 ### Resolved/Understood:
 14. **2D gravity sign** — non-unitarity artifact (TOWARD with polar U)
@@ -219,6 +220,9 @@
 20. **Wave-particle complementarity** — passes under an explicit local path-tag model; absorption-only harness was invalid
 21. **2D gauge works** — Node-phase U(1) exact (6.7e-16), AB V=0.884 in 2+1D chiral
 22. **3D chirality conserved within pairs** — factorized coin preserves chirality per spatial pair (100%)
+23. **Periodic sign windows are mostly recurrence artifacts** — reflecting is `25/25` TOWARD and open classical / phase-kill are `25/25` TOWARD on the boundary phase diagram; the worst sign windows are tied to periodic wrap.
+24. **Theta overload is real but not sole** — split mass/gravity coupling reduces theta-envelope sensitivity but does not cure k-chromaticity, so overloading matters without being the whole story.
+25. **Cross-axis coupling helps but does not finish 3D** — a coupled `6×6` family lifts 3D gauge response strongly and improves KG fit, but the best low-k isotropic fit remains only moderate (`R²=0.4787`).
 
 ---
 
@@ -247,3 +251,30 @@ The **factorized coin** (independent 2×2 blocks per chirality pair) is the cent
 - Why the 2D results are strong (2D has only one spatial pair)
 
 A **coupled Dirac-like coin** (6×6 for 3+1D, mixing all chirality components) would be the natural next step. This is the highest-priority experiment remaining.
+
+---
+
+## PART 9: Bottleneck Probes (2026-04-10)
+
+These are not new score-card rows for the existing architectures. They are targeted design probes meant to identify why the same failures keep reappearing.
+
+| Probe | Harness | Key result | Interpretation |
+|---|---|---|---|
+| Coupled 3+1D coin scan | `frontier_chiral_3plus1d_coupled_coin_scan.py` | Baseline `mix=0`: KG `R²=0.0627`, gauge `V=0.0000`. Best gauge at `mix=0.88`: `V=0.9142`. Best KG at `mix=1.00`: `R²=0.4787`. | Separability is a confirmed 3D blocker, but arbitrary coupling alone does not yet recover a clean isotropic 3D KG law. |
+| Split mass vs gravity coupling | `frontier_chiral_split_mass_gravity.py` | KG and `F∝M` survive unchanged. Theta-envelope sensitivity drops from exponent `3.802` to `2.803` and `CV 1.0825` to `0.9013`. `k`-chromaticity stays `CV_k = 2.6580`. | `theta` overload is real, but it is not the only bottleneck; wavelength sensitivity survives the split. |
+| Boundary-condition phase diagram | `frontier_chiral_3plus1d_boundary_phase_diagram.py` | Periodic coherent has `4/25` AWAY consensus cells, periodic classical/phase-kill `10/25`; reflecting is `25/25` TOWARD in all modes; open classical/phase-kill are `25/25` TOWARD. | The 3+1D sign problem is dominated by periodic recurrence / boundary effects, not by a torus-observable bug. |
+
+## PART 10: Proposed Bottleneck Card
+
+The current closure card catches healthy operating points, but it misses the structural faults that later break 3D physics. The proposed early-failure rows are:
+
+| Row | Test | Purpose | Current lesson |
+|---|---|---|---|
+| B1 | 3D KG isotropy / coupled-coin dispersion | Fail fast on axis-separable transport. | Needed immediately; the factorized 3D coin fails here first. |
+| B2 | 3D gauge-loop / AB visibility | Check whether 3D transport supports real loop phases. | Also needed immediately; baseline 3D gauge is zero and only appears once the coin couples axes. |
+| B3 | Fixed-`theta` k-achromaticity | Separate structural gravity from wave-window chromaticity. | Already a live failure in CH-1D (`CV_k = 2.66`). |
+| B4 | Split mass parameter vs gravity susceptibility | Test whether mass gap and gravity response are fused. | Overload is real, but this row also shows whether a split cure is enough. |
+| B5 | Boundary-condition robustness | Distinguish recurrence artifacts from transport-law failures. | The 3+1D sign windows demand this row. |
+| B6 | Multi-observable gravity consistency | Compare first-arrival, peak, current, and centroid on the same run. | Needed so we stop treating every centroid shift as the same physics. |
+
+If the closure card stays capped at 10 rows, the right trade is to demote some of the later MI/purity-growth rows into a second-tier diagnostics card and move these bottleneck rows into the front door.

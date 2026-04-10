@@ -84,12 +84,12 @@ AXIOMS = [
     ),
     AxiomStatus(
         6,
-        "free continuation prefers local coherence",
+        "free continuation with transport constraints",
         "Y",
         "Y",
         "N",
         "Y",
-        "the continuation/action chooser is selected because it works, not yet derived from deeper network rules",
+        "underspecified until transport is local, linear / isometric, and symmetry-coupled before durable records form",
     ),
     AxiomStatus(
         7,
@@ -98,16 +98,16 @@ AXIOMS = [
         "Y",
         "P",
         "P",
-        "coherent movers exist, but mover dynamics and field response are not yet one clean shared law",
+        "coherent movers exist, but the shared transport law still needs to be explicitly norm-preserving / isometric",
     ),
     AxiomStatus(
         8,
-        "gravity as distorted continuation",
+        "gravity as asymmetric distorted continuation",
         "Y",
         "Y",
         "P",
         "P",
-        "the corrected phase-driven rule is strong and the 2D momentum kick is cleaner, but transfer beyond the current 2D log-field setting is still provisional",
+        "distortion alone does not guarantee attraction; boundary conditions, observable choice, and channel coupling matter",
     ),
     AxiomStatus(
         9,
@@ -120,12 +120,12 @@ AXIOMS = [
     ),
     AxiomStatus(
         10,
-        "prefer local persistent explanations",
+        "local explanations as preference",
         "Y",
         "P",
         "N",
         "Y",
-        "many mechanisms are local, but several closures are still selected rather than generated",
+        "a retained nonlocal or global effective operator can still outrun a local construction, so this is methodological rather than mandatory",
     ),
 ]
 
@@ -154,6 +154,12 @@ COUPLINGS = [
         "unitary/path-sum layer",
         "Y",
         "corrected 1/L^p gravity and steering act through phase / path weighting",
+    ),
+    Coupling(
+        "pre-record transport constraint",
+        "unitary/path-sum layer",
+        "P",
+        "local linear / isometric and symmetry-coupled transport may be the missing constraint behind the 3D bottlenecks",
     ),
     Coupling(
         "unitary/path-sum layer",
@@ -224,9 +230,15 @@ TOP_GAPS = [
     ),
     (
         "Gap 3",
-        "Axioms 2 + 7 + 8",
-        "Persistent movers need to feel the field in the same framework.",
-        "Coherent movers, static steering, and broad live pattern-sourced steering all exist, but the field-to-pattern feedback law is still partial: wide already has one retained local corridor clause, while self remains config-local rather than one retained dynamics.",
+        "Axioms 2 + 6 + 7 + 8",
+        "Persistent movers need a transport law that is local, linear / isometric, and symmetry-coupled.",
+        "The current results keep exposing the same bottleneck: factorized transport is not enough in 3+1D, distortion alone does not force attraction, and the successful cases always require a tighter pre-record transport law than the old axiom wording implied.",
+    ),
+    (
+        "Gap 4",
+        "Axiom 10",
+        "Local explanation is a preference, not a law.",
+        "The retained data now allow both local and retained nonlocal effective operators, so the axiom should guide model choice rather than constrain the physics by fiat.",
     ),
 ]
 
@@ -313,10 +325,10 @@ def _render_bottom_line() -> None:
         "lane sharpens the same picture rather than broadening it: the unitary sector "
         "is comparatively well constrained, while the non-unitary sector now looks "
         "like a scaling-limited theory gap rather than a missing finite environment "
-        "register. The main frontier is therefore to make more of the architecture "
-        "endogenous: graph growth should generate more of the physics, durable "
-        "records should be real local products of the model, and movers should feel "
-        "fields in the same framework that already gives them coherent persistence."
+        "register. The main frontier is therefore to make the pre-record transport "
+        "law explicit: local linear / isometric, symmetry-coupled continuation is the "
+        "likely missing constraint, gravity should not be phrased as distortion alone, "
+        "and local explanations remain preferred without being mandatory."
     )
 
 
