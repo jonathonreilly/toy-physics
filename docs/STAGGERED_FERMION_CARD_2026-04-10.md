@@ -13,6 +13,7 @@ Crank-Nicolson evolution.
 Rows that differ from the repo-wide card semantics:
 - **C5**: force sign, not centroid sign
 - **C9**: force stays positive across depth, not centroid grows monotonically
+- **C10**: force-at-T=0 sign vs offset, not evolved centroid distance law
 - **C15**: force stable across depth, not periodic-vs-open boundary comparison
 - **C16**: force + shell asymmetry (2 observables), not centroid + peak + shell (3)
 

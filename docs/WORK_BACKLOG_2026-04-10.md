@@ -8,6 +8,7 @@ This backlog is ordered by value to the main project, not by ease.
 
 - Extend [`frontier_staggered_graph_portability.py`](../scripts/frontier_staggered_graph_portability.py) to larger and more irregular bipartite graphs.
 - Run [`frontier_staggered_graph_portability_stress.py`](../scripts/frontier_staggered_graph_portability_stress.py) as the next portability gate on larger, more irregular, less forgiving bipartite families.
+- Build an adversarial failure map for odd-cycle defects, parity ambiguity, dense shortcuts, wrap/parity inconsistencies, and high-degree contamination.
 - Add one more graph family if it clarifies the boundary between "portable" and "periodic-lattice only".
 - Keep the retained battery narrow: Born/linearity, norm, force sign, `F∝M`,
   achromatic force, equivalence, robustness, and gauge if cycles exist.
@@ -16,9 +17,12 @@ This backlog is ordered by value to the main project, not by ease.
 
 - The first retained source-generated Phi prototype is implemented in
   [`frontier_staggered_backreaction_prototype.py`](../scripts/frontier_staggered_backreaction_prototype.py).
-- Next step: iterate the same graph-solved Poisson update until the
-  source-generated force scale is closer to the external-kernel control on the
-  cycle-bearing families.
+- The layered/DAG-compatible bridge is implemented in
+  [`frontier_staggered_layered_backreaction.py`](../scripts/frontier_staggered_layered_backreaction.py)
+  with exact zero-source control and source-on response.
+- Next step: replace the point-source approximation with a graph-solved
+  source sector fed by the evolving matter density, then retest the layered
+  family and the cycle-bearing stress family.
 - Test whether the force rows survive once `Phi` is endogenous instead of
   imposed.
 - Keep the transport law fixed while only the source field changes.

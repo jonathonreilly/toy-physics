@@ -129,15 +129,16 @@ Two follow-up probes sharpen the interpretation of the scalar graph lane.
 
 - **Staggered fermion force-based card** (current retained result):
   [`frontier_staggered_17card.py`](../scripts/frontier_staggered_17card.py)
-  uses force F=-⟨dV/dz⟩ instead of centroid shift for gravity rows.
+  uses force F=-⟨dV/dz⟩ instead of centroid shift for the gravity rows.
   The centroid oscillates in a permanent period-4 pattern on the staggered
   periodic lattice; force converges at all tested sizes (n=7..17).
   Scores: 1D n=61 `17/17` (6/6 families), 3D n=9 `17/17` (6/6 families),
-  3D n=11,13 `17/17` (4/6 families, eigensolve cost). Full suite: 1D `29/38`,
-  3D `28/38`. Rows C5/C9/C10/C15/C16 have different semantics from the
-  repo-wide centroid card (see `STAGGERED_FERMION_CARD_2026-04-10.md`).
-  C12 is a native persistent-current test on the actual card lattice.
-  All 7 state families including anti/Nyquist are TOWARD under force.
+  3D n=11,13 `17/17` (4/6 families, energy projections skipped). Full suite
+  baseline: 1D `29/38`, 3D `28/38`.
+  Rows C5/C9/C10/C15/C16 have different semantics from the repo-wide centroid
+  card (see `STAGGERED_FERMION_CARD_2026-04-10.md`). C12 is a native
+  persistent-current test on the actual card lattice. All 7 state families
+  including anti/Nyquist are TOWARD under force at n=61 and n=9.
 
 - **Staggered graph portability probe**:
   [`frontier_staggered_graph_portability.py`](../scripts/frontier_staggered_graph_portability.py)
