@@ -127,6 +127,17 @@ Two follow-up probes sharpen the interpretation of the scalar graph lane.
   current CN evolution still fails a strict light-cone gate. That makes it a
   strong successor probe, not yet the retained replacement architecture.
 
+- **Staggered fermion + potential 17-card**:
+  [`frontier_staggered_potential_16card.py`](../scripts/frontier_staggered_potential_16card.py)
+  and [`frontier_staggered_17card.py`](../scripts/frontier_staggered_17card.py)
+  show the sharpest current robustness fork. Under a physical-state-only gate
+  that excludes the antisymmetric Nyquist-like family, the lane now scores
+  `17/17`, using a persistent-current gauge row in place of the weaker
+  slit-phase proxy. Under the stricter audited all-family gate, the same lane
+  still scores `14/17`, failing `C6`, `C12`, and `C17`. This means the
+  staggered potential story is real, but it is not yet a universal gravity
+  architecture unless the repo explicitly narrows the robustness claim.
+
 ## The core tension (still open)
 
 The architectures that DERIVE the most physics (chiral walk: KG, light cone,

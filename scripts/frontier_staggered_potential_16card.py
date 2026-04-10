@@ -79,7 +79,7 @@ MASS_POS = N_SITES//2 + 4
 
 def run_card():
     print("="*70)
-    print("STAGGERED FERMION + POTENTIAL — C1-C16 + ROBUSTNESS GATE")
+    print("STAGGERED FERMION + POTENTIAL — C1-C16 + PHYSICAL-STATE GATE")
     print("="*70)
     n=N_SITES; m=MASS; c=n//2; mp=MASS_POS
     V = build_V(n, m, G, S, mp)
