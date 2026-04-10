@@ -231,15 +231,45 @@ def run_suite(dim, n):
     else:
         print(f"  [7] Chirality: even/odd sublattice parity")
 
-    # 11. Gauge
-    n_r=21; As_=np.linspace(0,2*np.pi,13); Js=[]
-    for A in As_:
-        Hfl=staggered_H_flux_1d(n_r,m,A); ev_,ec_=np.linalg.eigh(Hfl.toarray())
-        pg_=ec_[:,0]; Js.append(np.imag(pg_[n_r-1].conj()*(-1j/2*np.exp(1j*A))*pg_[0]))
+    # 11. Gauge — native to the card dimension
+    if dim == 1:
+        n_r=21; As_=np.linspace(0,2*np.pi,13); Js=[]
+        for A in As_:
+            Hfl=staggered_H_flux_1d(n_r,m,A); ev_,ec_=np.linalg.eigh(Hfl.toarray())
+            pg_=ec_[:,0]; Js.append(np.imag(pg_[n_r-1].conj()*(-1j/2*np.exp(1j*A))*pg_[0]))
+    else:
+        from scipy.sparse.linalg import eigsh
+        n_r3=n; Nr3=n_r3**3; As_=np.linspace(0,2*np.pi,9); Js=[]
+        for A in As_:
+            Hfl3=lil_matrix((Nr3,Nr3),dtype=complex)
+            for x_ in range(n_r3):
+                for y_ in range(n_r3):
+                    for z_ in range(n_r3):
+                        i_=x_*n_r3*n_r3+y_*n_r3+z_
+                        Hfl3[i_,((x_+1)%n_r3)*n_r3*n_r3+y_*n_r3+z_]+=-1j/2
+                        Hfl3[i_,((x_-1)%n_r3)*n_r3*n_r3+y_*n_r3+z_]+=1j/2
+                        e2_=(-1)**x_
+                        Hfl3[i_,x_*n_r3*n_r3+((y_+1)%n_r3)*n_r3+z_]+=e2_*(-1j/2)
+                        Hfl3[i_,x_*n_r3*n_r3+((y_-1)%n_r3)*n_r3+z_]+=e2_*(1j/2)
+                        e3_=(-1)**(x_+y_)
+                        pf_=np.exp(1j*A) if z_==n_r3-1 else 1.0
+                        pb_=np.exp(-1j*A) if z_==0 else 1.0
+                        Hfl3[i_,x_*n_r3*n_r3+y_*n_r3+(z_+1)%n_r3]+=e3_*(-1j/2)*pf_
+                        Hfl3[i_,x_*n_r3*n_r3+y_*n_r3+(z_-1)%n_r3]+=e3_*(1j/2)*pb_
+                        Hfl3[i_,i_]+=m*((-1)**(x_+y_+z_))
+            Hfl3_csr=csr_matrix(Hfl3)
+            if Nr3<=1000:
+                ev_,ec_=np.linalg.eigh(Hfl3_csr.toarray()); pg_=ec_[:,0]
+            else:
+                ev_,ec_=eigsh(Hfl3_csr,k=1,which='SA'); pg_=ec_[:,0]
+            e3_bnd=(-1)**(0+0); i_from=0*n_r3*n_r3+0*n_r3+(n_r3-1); i_to=0
+            Js.append(np.imag(pg_[i_from].conj()*e3_bnd*(-1j/2*np.exp(1j*A))*pg_[i_to]))
     Jr=np.max(Js)-np.min(Js)
-    print(f"  [11] Gauge: persistent current J_range={Jr:.4e}")
+    gauge_label='1D ring' if dim==1 else f'3D torus n={n}'
+    print(f"  [11] Gauge ({gauge_label}): J_range={Jr:.4e}")
 
     # 12. Superposition
+    sup_tested = False
     if dim==1:
         mp2=c-mp_off; V2=build_V_1d(n,m,G,S,mp2)
         r0=np.abs(evolve_cn(H_flat,N,DT,ns,psi0))**2
@@ -248,8 +278,11 @@ def run_suite(dim, n):
         rAB=np.abs(evolve_cn(staggered_H_1d(n,m,V+V2),N,DT,ns,psi0))**2
         dA=rA-r0; dB=rB-r0; dAB=rAB-r0
         sup=np.sum(np.abs(dAB-dA-dB))/max(np.sum(np.abs(dAB)),1e-30)*100
-    else: sup=0  # skip expensive 3D
-    print(f"  [12] Superposition: {sup:.4f}%")
+        sup_tested = True
+        print(f"  [12] Superposition: {sup:.4f}%")
+    else:
+        sup = None
+        print(f"  [12] Superposition: SKIPPED (3D too expensive)")
 
     print(f"  [13] Decoherence: bounded (noise reduces coherence)")
     print(f"  [14] Born from info: structural (linearity)")
@@ -283,7 +316,10 @@ def run_suite(dim, n):
     print(f"  Achromatic m: YES (CV=0)"); sc4+=1
     print(f"  Spectral: YES (no k-window)"); sc4+=1
     print(f"  Broadband: YES"); sc4+=1
-    print(f"  Superposition: {sup:.2f}%"); sc4+=1
+    if sup_tested:
+        print(f"  Superposition: {sup:.2f}%"); sc4+=1
+    else:
+        print(f"  Superposition: SKIPPED"); sc4+=0
     print(f"  N-stable: YES (force all TW)"); sc4+=1
     print(f"  Part 4: {sc4}/9\n")
 
