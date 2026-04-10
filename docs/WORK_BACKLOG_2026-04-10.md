@@ -7,6 +7,7 @@ This backlog is ordered by value to the main project, not by ease.
 ## P0 - Portability
 
 - Extend [`frontier_staggered_graph_portability.py`](../scripts/frontier_staggered_graph_portability.py) to larger and more irregular bipartite graphs.
+- Run [`frontier_staggered_graph_portability_stress.py`](../scripts/frontier_staggered_graph_portability_stress.py) as the next portability gate on larger, more irregular, less forgiving bipartite families.
 - Add one more graph family if it clarifies the boundary between "portable" and "periodic-lattice only".
 - Keep the retained battery narrow: Born/linearity, norm, force sign, `F∝M`,
   achromatic force, equivalence, robustness, and gauge if cycles exist.

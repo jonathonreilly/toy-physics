@@ -11,11 +11,14 @@ survives on non-cubic graph families, then move toward backreaction.
 
 1. Port the staggered transport law to bipartite random geometric graphs,
    bipartite growing graphs, and a layered bipartite DAG-compatible graph.
-2. Keep the battery narrow and retained: Born/linearity, norm, force sign,
+2. Stress-test the portability result on larger, more irregular bipartite
+   families before promoting it: seed-swept or larger-size runs are fine if the
+   retained battery stays the same.
+3. Keep the battery narrow and retained: Born/linearity, norm, force sign,
    `F∝M`, achromatic force, equivalence, robustness, and gauge if cycles exist.
-3. If the portable force battery survives, build a backreaction prototype where
+4. If the portable force battery survives, build a backreaction prototype where
    the source field is solved from the graph rather than imposed externally.
-4. Write down the graph invariants required by the staggered lane before trying
+5. Write down the graph invariants required by the staggered lane before trying
    any larger redesign.
 
 ## Constraints
