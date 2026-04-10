@@ -40,6 +40,22 @@ def build_graph_laplacian(n):
     adj=csr_matrix(adj); deg=np.array(adj.sum(axis=1)).flatten()
     return diags(deg)-adj
 
+def build_open_graph_laplacian(n):
+    """Same cubic lattice, but open rather than periodic boundaries."""
+    N = n**3
+    adj = lil_matrix((N, N), dtype=float)
+    for x in range(n):
+        for y in range(n):
+            for z in range(n):
+                i = idx(x, y, z, n)
+                for dx, dy, dz in [(1,0,0),(-1,0,0),(0,1,0),(0,-1,0),(0,0,1),(0,0,-1)]:
+                    xx, yy, zz = x + dx, y + dy, z + dz
+                    if 0 <= xx < n and 0 <= yy < n and 0 <= zz < n:
+                        adj[i, idx(xx, yy, zz, n)] = 1.0
+    adj = csr_matrix(adj)
+    deg = np.array(adj.sum(axis=1)).flatten()
+    return diags(deg) - adj
+
 def field_r(n, mp):
     r=np.zeros(n**3)
     for x in range(n):
@@ -82,6 +98,28 @@ def P(phi,n): return np.abs(phi.reshape(n,n,n))**2
 def cz(phi,n):
     p=P(phi,n); c=n//2; z=np.arange(n)-c; pz=np.sum(p,axis=(0,1))
     return np.sum(z*pz)/np.sum(pz) if np.sum(pz)>0 else 0
+
+def packet(n, k0, sigma=None):
+    """Gaussian packet with z-carrier k0."""
+    c = n // 2
+    sigma = sigma or max(2.0, n / 6)
+    x = np.arange(n)
+    gx = np.exp(-(x-c)**2/(2*sigma**2))
+    env = gx[:,None,None] * gx[None,:,None] * gx[None,None,:]
+    phi = np.zeros(n**3, dtype=complex)
+    for iz in range(n):
+        phase = np.exp(1j * k0 * (iz - c))
+        for ix in range(n):
+            for iy in range(n):
+                phi[idx(ix, iy, iz, n)] = env[ix, iy, iz] * phase
+    return phi / np.linalg.norm(phi)
+
+def lattice_energy_sq(mass, kx, ky, kz):
+    return mass**2 + 2*(1-np.cos(kx)) + 2*(1-np.cos(ky)) + 2*(1-np.cos(kz))
+
+def group_velocity_z(mass, k0):
+    denom = np.sqrt(lattice_energy_sq(mass, 0.0, 0.0, k0))
+    return np.sin(k0) / denom if denom > 0 else 0.0
 
 # ============================================================================
 # Parameters
@@ -126,7 +164,8 @@ def run_card():
     rf=P(ev_barrier(slits),n); Pt=np.sum(rf)
     rs=[P(ev_barrier([s]),n) for s in slits]
     born=np.sum(np.abs(rf-sum(rs)))/Pt if Pt>1e-20 else 0
-    p=born>0.01; score+=p
+    # True Born pass means the higher-order term is small.
+    p=born<1e-2; score+=p
     print(f"  [C1]  Born={born:.4f} {'PASS' if p else 'FAIL'}")
 
     # C2: d_TV
@@ -179,10 +218,12 @@ def run_card():
 
     # C9: Gravity grows
     forces9={ns:cz(ev(ns=ns,g_val=G,s_val=S,mpos=[(c,c,c+3)]),n)-cz(ev(ns=ns),n) for ns in [6,8,10,14]}
-    all_tw=all(f>0 for f in forces9.values())
-    p=all_tw; score+=p
+    vals9=list(forces9.values())
+    all_tw=all(f>0 for f in vals9)
+    monotone=all(vals9[i+1] >= vals9[i] for i in range(len(vals9)-1))
+    p=all_tw and monotone; score+=p
     detail=", ".join(f"N={k}:{v:+.3e}" for k,v in forces9.items())
-    print(f"  [C9]  GravGrow: all_tw={all_tw} [{detail}] {'PASS' if p else 'FAIL'}")
+    print(f"  [C9]  GravGrow: all_tw={all_tw}, monotone={monotone} [{detail}] {'PASS' if p else 'FAIL'}")
 
     # C10: Distance
     d0=cz(ev(),n); offs=list(range(2,n//4+1))
@@ -191,28 +232,20 @@ def run_card():
     p=ntw>len(offs)//2; score+=p
     print(f"  [C10] Distance: {ntw}/{len(offs)} TW {'PASS' if p else 'FAIL'}")
 
-    # C11: KG isotropy (verify against exact lattice KG)
-    n11=11; E=np.zeros(n11**3)
-    f=np.fft.fftfreq(n11)*2*np.pi
-    for ix in range(n11):
-        for iy in range(n11):
-            for iz in range(n11):
-                k2=2*(1-np.cos(f[ix]))+2*(1-np.cos(f[iy]))+2*(1-np.cos(f[iz]))
-                E[idx(ix,iy,iz,n11)]=np.sqrt(k2+m**2)
-    # The leapfrog dispersion matches the lattice KG for small dt
-    # Just verify: E^2 = m^2 + k_lat^2
-    allE2=[]; allk2=[]
-    for ix in range(n11):
-        for iy in range(n11):
-            for iz in range(n11):
-                allE2.append(E[idx(ix,iy,iz,n11)]**2)
-                allk2.append(f[ix]**2+f[iy]**2+f[iz]**2)
-    allE2=np.array(allE2); allk2=np.array(allk2); mask=allk2<1.0
-    sl,ic,rv,_,_=stats.linregress(allk2[mask],allE2[mask]); r2kg=rv**2
-    p=r2kg>0.99; score+=p
-    print(f"  [C11] KG R^2={r2kg:.6f} {'PASS' if p else 'FAIL'}")
+    # C11: KG isotropy on the exact graph-lattice dispersion.
+    f11=np.fft.fftfreq(41)*2*np.pi
+    axis = np.array([(k*k, lattice_energy_sq(m, 0.0, 0.0, k)) for k in f11])
+    diag = np.array([(3*k*k, lattice_energy_sq(m, k, k, k)) for k in f11])
+    ma = axis[:,0] < 0.8
+    md = diag[:,0] < 0.8
+    sa, _, ra, _, _ = stats.linregress(axis[ma,0], axis[ma,1])
+    sd, _, rd, _, _ = stats.linregress(diag[md,0], diag[md,1])
+    r2kg = min(ra**2, rd**2)
+    iso = max(sa, sd) / min(sa, sd) if min(sa, sd) > 0 else float("inf")
+    p=r2kg>0.99 and iso<1.05; score+=p
+    print(f"  [C11] KG R^2={r2kg:.6f}, iso={iso:.4f} {'PASS' if p else 'FAIL'}")
 
-    # C12: AB (slit-phase)
+    # C12: AB proxy (two-path flux phase).
     def ev_ab(A):
         phi0=gauss(n); pi0=np.zeros_like(phi0); m2=m**2
         phi=phi0.copy(); pi=pi0.copy()
@@ -232,58 +265,63 @@ def run_card():
     Pa=np.array(Ps)
     Vab=(np.max(Pa)-np.min(Pa))/(np.max(Pa)+np.min(Pa)) if np.max(Pa)>0 else 0
     p=Vab>0.3; score+=p
-    print(f"  [C12] AB V={Vab:.4f} {'PASS' if p else 'FAIL'}")
+    print(f"  [C12] AB-proxy V={Vab:.4f} {'PASS' if p else 'FAIL'}")
 
-    # C13: Force achromaticity
-    V_field=np.zeros(n**3)
-    for mp in [(c,c,c+3)]:
-        r=field_r(n,mp); V_field += -m*G*S/(r+0.1)
-    dVdz=np.zeros(n**3)
-    for x in range(n):
-        for y in range(n):
-            for z in range(n):
-                i=idx(x,y,z,n)
-                zp=idx(x,y,(z+1)%n,n); zm=idx(x,y,(z-1)%n,n)
-                dVdz[i]=(V_field[zp]-V_field[zm])/2
-    forces13=[]
-    for k0 in [0,0.2,0.4,0.6]:
-        phi0=gauss(n); rho0=np.abs(phi0)**2
-        F=-np.sum(rho0*dVdz); forces13.append(F)
-    fa13=np.array(forces13)
-    all_pos=all(f>0 for f in fa13)
+    # C13: carrier-k achromaticity at matched travel distance.
+    rows13 = []
+    for k0 in [0.15, 0.25, 0.35, 0.45, 0.55]:
+        vg = abs(group_velocity_z(m, k0))
+        ns = max(4, min(20, int(round(3.0 / (max(vg, 1e-6) * DT)))))
+        phi0 = packet(n, k0)
+        d0 = cz(ev(ns=ns, phi0=phi0), n)
+        dg = cz(ev(ns=ns, g_val=G, s_val=S, mpos=[(c,c,c+3)], phi0=phi0), n)
+        rows13.append((k0, ns, dg - d0))
+    fa13=np.array([row[2] for row in rows13])
+    all_pos=all(f>0 for f in fa13) or all(f<0 for f in fa13)
     cv13=np.std(fa13)/np.mean(np.abs(fa13)) if np.mean(np.abs(fa13))>0 else 999
     p=all_pos and cv13<0.1; score+=p
-    print(f"  [C13] Force achrom: CV={cv13:.6f} {'PASS' if p else 'FAIL'}")
+    detail13 = ", ".join(f"k={k:.2f}:N={ns},d={d:+.2e}" for k, ns, d in rows13)
+    print(f"  [C13] k-achrom: CV={cv13:.6f}, same_sign={all_pos} [{detail13}] {'PASS' if p else 'FAIL'}")
 
-    # C14: Equivalence (a=F/m)
-    accels=[]
-    for mass in [0.1,0.2,0.3,0.5,0.8]:
-        V14=np.zeros(n**3)
-        for mp in [(c,c,c+3)]:
-            r=field_r(n,mp); V14 += -mass*G*S/(r+0.1)
-        dV14=np.zeros(n**3)
-        for x in range(n):
-            for y in range(n):
-                for z in range(n):
-                    i=idx(x,y,z,n)
-                    dV14[i]=(V14[idx(x,y,(z+1)%n,n)]-V14[idx(x,y,(z-1)%n,n)])/2
-        rho0=np.abs(gauss(n))**2; F=-np.sum(rho0*dV14)
-        accels.append(F/mass)
-    fa14=np.array(accels)
-    cv14=np.std(fa14)/abs(np.mean(fa14)) if abs(np.mean(fa14))>0 else 999
-    p=cv14<0.1; score+=p
-    print(f"  [C14] Equiv CV={cv14:.6f} {'PASS' if p else 'FAIL'}")
+    # C14: split mass vs gravity susceptibility.
+    masses14 = [0.1, 0.2, 0.3, 0.5, 0.8]
+    gs14 = [1.0, 2.0, 5.0, 10.0]
+    mat14 = []
+    for mass14 in masses14:
+        d_flat = cz(ev(mass=mass14), n)
+        row = []
+        for g14 in gs14:
+            row.append(cz(ev(mass=mass14, g_val=g14, s_val=S, mpos=[(c,c,c+3)]), n) - d_flat)
+        mat14.append(row)
+    arr14 = np.array(mat14)
+    u, svals, vt = np.linalg.svd(arr14, full_matrices=False)
+    rank1 = svals[0] * np.outer(u[:,0], vt[0])
+    rel_err = np.linalg.norm(arr14 - rank1) / max(np.linalg.norm(arr14), 1e-30)
+    lin_r2 = []
+    for row in arr14:
+        _, _, rv, _, _ = stats.linregress(gs14, row)
+        lin_r2.append(rv**2)
+    same_sign14 = all(np.all(row > 0) for row in arr14)
+    p = rel_err < 0.05 and min(lin_r2) > 0.99 and same_sign14
+    score += p
+    print(f"  [C14] split m/g: rank1_err={rel_err:.4e}, min_g_R2={min(lin_r2):.6f}, same_sign={same_sign14} {'PASS' if p else 'FAIL'}")
 
     # C15: Boundary robustness
-    d_per=cz(ev(g_val=G,s_val=S,mpos=[(c,c,c+3)]),n)-cz(ev(),n)
-    # Compare with smaller lattice
-    n_s=15; L_s=build_graph_laplacian(n_s); c_s=n_s//2
-    phi_s,_=evolve(L_s,n_s,m,DT,NS,gauss(n_s))
-    phi_sg,_=evolve(L_s,n_s,m,DT,NS,gauss(n_s),G,S,[(c_s,c_s,c_s+3)])
-    d_small=cz(phi_sg,n_s)-cz(phi_s,n_s)
-    same=(d_per>0 and d_small>0)or(d_per<0 and d_small<0)
-    p=same; score+=p
-    print(f"  [C15] BC: n={n}:{d_per:+.3e}, n={n_s}:{d_small:+.3e}, same={same} {'PASS' if p else 'FAIL'}")
+    L_open = build_open_graph_laplacian(n)
+    def ev_open(mass=m, ns=NS, g_val=0, s_val=0, mpos=None, phi0=None):
+        if phi0 is None:
+            phi0 = gauss(n)
+        phi, _ = evolve(L_open, n, mass, DT, ns, phi0, g_val, s_val, mpos, 0)
+        return phi
+    rows15 = []
+    for ns in [6, 8, 10, 12, 14]:
+        d_per = cz(ev(ns=ns, g_val=G, s_val=S, mpos=[(c,c,c+3)]), n) - cz(ev(ns=ns), n)
+        d_open = cz(ev_open(ns=ns, g_val=G, s_val=S, mpos=[(c,c,c+3)]), n) - cz(ev_open(ns=ns), n)
+        rows15.append((ns, d_per, d_open))
+    agree15 = sum((a > 0) == (b > 0) for _, a, b in rows15)
+    p = agree15 == len(rows15); score += p
+    detail15 = ", ".join(f"N={ns}:per={a:+.2e},open={b:+.2e}" for ns, a, b in rows15)
+    print(f"  [C15] BC: agree={agree15}/{len(rows15)} [{detail15}] {'PASS' if p else 'FAIL'}")
 
     # C16: Multi-observable
     rho0_16=P(ev(),n); rhog_16=P(ev(g_val=G,s_val=S,mpos=[(c,c,c+3)]),n)
