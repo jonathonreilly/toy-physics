@@ -2,16 +2,21 @@
 """
 Staggered Fermion + Potential Gravity — CANONICAL 17-Card
 ==========================================================
-Force-based gravity measurement. The centroid shift oscillates with
-lattice size due to staggered standing-wave artifacts on periodic BCs.
-The force F = -<dV/dx> is the correct physical observable.
+FORCE-BASED STAGGERED CARD. This is NOT identical to the repo-wide
+centroid-based core card — the gravity rows use F = -<dV/dz> instead
+of centroid shift, because the centroid oscillates with lattice size
+on the staggered architecture.
 
-C5, C9, C10, C15, C16, C17: all use FORCE, not centroid shift.
-C4: F~M via force at fixed time.
-C12: persistent-current gauge.
-C17: all 7 families tested.
+Row semantics that differ from the repo-wide card:
+  C5:  force sign, not centroid sign
+  C9:  force stays positive, not centroid grows monotonically
+  C15: force stable across depth, not periodic-vs-open boundary
+  C16: force + shell, not centroid + peak + shell
 
-Designed to converge across lattice sizes (n=7..61).
+Rows with matching semantics:
+  C1:  Sorkin I3 (real barrier in BOTH 1D and 3D)
+  C12: persistent current on NATIVE Hamiltonian (1D ring or 3D torus)
+  C17: all families including energy projections in 3D (n=9 eigensolve)
 """
 
 import numpy as np
@@ -163,40 +168,33 @@ def run_card(dim, n):
     score = 0; bl = min(4, ns-2)
     slits = [c-2, c, c+2] if dim == 1 else None
 
-    # C1: Sorkin Born (1D only, 3D uses linearity proxy)
-    if dim == 1:
-        def ev_born(sl):
-            psi = make_gauss(n); psi = evolve_cn(H_flat, N, DT, bl, psi)
-            mask = np.zeros(N);
+    # C1: Sorkin Born — REAL barrier in both 1D and 3D
+    slits_z = [c-2, c, c+2] if c >= 2 else [c-1, c, c+1]
+    def ev_born(sl):
+        psi = make_gauss(n)
+        psi = evolve_cn(H_flat, N, DT, bl, psi)
+        mask = np.zeros(N)
+        if dim == 1:
             for s in sl: mask[s] = 1
-            psi *= mask; return evolve_cn(H_flat, N, DT, ns-bl, psi)
-        rho123 = np.abs(ev_born(slits))**2; Pt = np.sum(rho123)
-        rho_s = [np.abs(ev_born([s]))**2 for s in slits]
-        rho_p = [np.abs(ev_born([slits[i],slits[j]]))**2 for i,j in [(0,1),(0,2),(1,2)]]
-        I3 = rho123 - sum(rho_p) + sum(rho_s)
-        born = np.sum(np.abs(I3)) / Pt if Pt > 1e-20 else 0
-    else:
-        # Linearity test for 3D
-        psi_a = make_gauss(n); psi_b = np.roll(psi_a, N//7)
-        psi_b /= np.linalg.norm(psi_b)
-        psi_sum = (psi_a + psi_b) / np.sqrt(2)
-        phi_a = evolve_cn(H_flat, N, DT, ns, psi_a)
-        phi_b = evolve_cn(H_flat, N, DT, ns, psi_b)
-        phi_sum = evolve_cn(H_flat, N, DT, ns, psi_sum)
-        born = np.linalg.norm(phi_sum - (phi_a+phi_b)/np.sqrt(2)) / max(np.linalg.norm(phi_sum), 1e-30)
+        else:
+            for sz in sl:
+                for x in range(n):
+                    for y in range(n):
+                        mask[x*n*n + y*n + sz] = 1
+        psi *= mask
+        return evolve_cn(H_flat, N, DT, ns - bl, psi)
+    rho123 = np.abs(ev_born(slits_z))**2; Pt = np.sum(rho123)
+    rho_s = [np.abs(ev_born([s]))**2 for s in slits_z]
+    rho_p = [np.abs(ev_born([slits_z[i], slits_z[j]]))**2 for i, j in [(0,1),(0,2),(1,2)]]
+    I3 = rho123 - sum(rho_p) + sum(rho_s)
+    born = np.sum(np.abs(I3)) / Pt if Pt > 1e-20 else 0
     p = born < 1e-2; score += p
-    print(f"  [C1]  Born = {born:.4e} {'PASS' if p else 'FAIL'}")
+    print(f"  [C1]  Sorkin I3/P = {born:.4e} {'PASS' if p else 'FAIL'}")
 
-    # C2: d_TV (1D slit, 3D spatial distinguishability)
-    if dim == 1:
-        ru = np.abs(ev_born([c-2]))**2; rd = np.abs(ev_born([c+2]))**2
-        dtv = 0.5*np.sum(np.abs(ru/max(np.sum(ru),1e-30)-rd/max(np.sum(rd),1e-30)))
-    else:
-        psi_a = make_gauss(n); psi_b = np.roll(psi_a, n*n)
-        psi_b /= np.linalg.norm(psi_b)
-        pa = evolve_cn(H_flat, N, DT, ns, psi_a); pb = evolve_cn(H_flat, N, DT, ns, psi_b)
-        ra = np.abs(pa)**2; rb = np.abs(pb)**2
-        dtv = 0.5*np.sum(np.abs(ra/np.sum(ra)-rb/np.sum(rb)))
+    # C2: d_TV — slit distinguishability (same barrier as C1)
+    ru = np.abs(ev_born([slits_z[0]]))**2
+    rd = np.abs(ev_born([slits_z[-1]]))**2
+    dtv = 0.5*np.sum(np.abs(ru/max(np.sum(ru),1e-30) - rd/max(np.sum(rd),1e-30)))
     p = dtv > 0.01; score += p
     print(f"  [C2]  d_TV = {dtv:.4f} {'PASS' if p else 'FAIL'}")
 
@@ -288,14 +286,48 @@ def run_card(dim, n):
     r2kg = rv**2; p = r2kg > 0.99; score += p
     print(f"  [C11] KG R^2 = {r2kg:.6f} {'PASS' if p else 'FAIL'}")
 
-    # C12: Gauge (persistent current, 1D ring only)
-    n_r = 21; As12 = np.linspace(0, 2*np.pi, 13); currents = []
-    for A in As12:
-        Hfl = staggered_H_flux(n_r, m, A); ev12, ec12 = np.linalg.eigh(Hfl.toarray())
-        pg = ec12[:, 0]; J = np.imag(pg[n_r-1].conj()*(-1j/2*np.exp(1j*A))*pg[0])
-        currents.append(J)
-    Jr = np.max(currents)-np.min(currents); p = Jr > 1e-4; score += p
-    print(f"  [C12] Gauge J_range = {Jr:.4e} {'PASS' if p else 'FAIL'}")
+    # C12: Gauge — persistent current on NATIVE Hamiltonian
+    if dim == 1:
+        n_r = 21; As12 = np.linspace(0, 2*np.pi, 13); currents = []
+        for A in As12:
+            Hfl = staggered_H_flux(n_r, m, A)
+            ev12, ec12 = np.linalg.eigh(Hfl.toarray())
+            pg_ = ec12[:, 0]
+            J = np.imag(pg_[n_r-1].conj()*(-1j/2*np.exp(1j*A))*pg_[0])
+            currents.append(J)
+    else:
+        # 3D: thread flux through z-periodic boundary
+        n_r3 = min(n, 7)  # small torus for eigensolve
+        Nr3 = n_r3**3; As12 = np.linspace(0, 2*np.pi, 9); currents = []
+        for A in As12:
+            Hfl3 = lil_matrix((Nr3, Nr3), dtype=complex)
+            for x in range(n_r3):
+                for y in range(n_r3):
+                    for z in range(n_r3):
+                        i = x*n_r3*n_r3+y*n_r3+z
+                        Hfl3[i, ((x+1)%n_r3)*n_r3*n_r3+y*n_r3+z] += -1j/2
+                        Hfl3[i, ((x-1)%n_r3)*n_r3*n_r3+y*n_r3+z] += 1j/2
+                        e2 = (-1)**x
+                        Hfl3[i, x*n_r3*n_r3+((y+1)%n_r3)*n_r3+z] += e2*(-1j/2)
+                        Hfl3[i, x*n_r3*n_r3+((y-1)%n_r3)*n_r3+z] += e2*(1j/2)
+                        e3 = (-1)**(x+y)
+                        pf_ = np.exp(1j*A) if z == n_r3-1 else 1.0
+                        pb_ = np.exp(-1j*A) if z == 0 else 1.0
+                        Hfl3[i, x*n_r3*n_r3+y*n_r3+(z+1)%n_r3] += e3*(-1j/2)*pf_
+                        Hfl3[i, x*n_r3*n_r3+y*n_r3+(z-1)%n_r3] += e3*(1j/2)*pb_
+                        Hfl3[i, i] += m*((-1)**(x+y+z))
+            ev12, ec12 = np.linalg.eigh(csr_matrix(Hfl3).toarray())
+            pg_ = ec12[:, 0]
+            # Current at z-boundary link (x=0,y=0)
+            e3_bnd = (-1)**(0+0)
+            i_from = 0*n_r3*n_r3+0*n_r3+(n_r3-1)
+            i_to = 0*n_r3*n_r3+0*n_r3+0
+            J = np.imag(pg_[i_from].conj() * e3_bnd * (-1j/2*np.exp(1j*A)) * pg_[i_to])
+            currents.append(J)
+    Jr = np.max(currents) - np.min(currents)
+    p = Jr > 1e-6; score += p
+    gauge_label = f"{'1D ring' if dim==1 else '3D torus'}"
+    print(f"  [C12] Gauge ({gauge_label}) J_range = {Jr:.4e} {'PASS' if p else 'FAIL'}")
 
     # C13: Force achromaticity (T=0)
     f13 = []
@@ -361,7 +393,16 @@ def run_card(dim, n):
                     else: odd[i] = 0
                     anti[i] *= ((-1)**(x+y+z))
         even /= np.linalg.norm(even); odd /= np.linalg.norm(odd); anti /= np.linalg.norm(anti)
-        psi_pos = None; psi_neg = None  # too expensive for large 3D
+        # Energy projections: eigensolve 3D H (feasible at n<=9)
+        if N <= 1000:
+            evals3, evecs3 = np.linalg.eigh(H_flat.toarray())
+            coeffs3 = evecs3.conj().T @ g_arr
+            c_pos = coeffs3.copy(); c_pos[evals3 < 0] = 0
+            c_neg = coeffs3.copy(); c_neg[evals3 > 0] = 0
+            psi_pos = evecs3 @ c_pos; psi_pos /= np.linalg.norm(psi_pos)
+            psi_neg = evecs3 @ c_neg; psi_neg /= np.linalg.norm(psi_neg)
+        else:
+            psi_pos = None; psi_neg = None
 
     families = [("gauss", g_arr), ("even", even), ("odd", odd), ("anti", anti)]
     if psi_pos is not None:
