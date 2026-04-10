@@ -25,7 +25,7 @@ chirality components (d = spatial dimensions). Per layer:
 
 | Property | 1+1D | 2+1D | 3+1D |
 |----------|------|------|------|
-| Closure card | 10/10 | 10/10 | 10/10 |
+| Closure card | 10/10 | 10/10 | 10/10 at the tested operating point* |
 | Born |I₃|/P | 3.3e-16 | 0 (exact) | 0.056 |
 | F∝M | 1.000 | 0.992 | 1.000 (R²=1.0) |
 | Gravity | TOWARD | TOWARD | TOWARD basin* |
@@ -33,8 +33,9 @@ chirality components (d = spatial dimensions). Per layer:
 | Light cone | v=1.0 | — | — |
 | Decoherence | 38.6% | 82.8% | PASS |
 
-\* The 3+1D closure card operating point remained positive, but the later
-  addendum narrows the global 3+1D claim to a TOWARD basin with genuine
+\* The 3+1D closure-card operating point remained positive at the tested
+  `(n=21, L=16, offset=3)` setup, but the later addendum narrows the global
+  3+1D claim to an operating-point success plus a TOWARD basin with genuine
   periodic sign windows.
 
 ### Klein-Gordon dispersion (1+1D):
@@ -68,6 +69,12 @@ chirality components (d = spatial dimensions). Per layer:
   3+1D: α=-0.56, 6/7 TOWARD (R²=0.90)
   Not Newtonian (-1.0). Softened by beam spreading (~d^0.5)
 
+### Achromatic gravity:
+  The operator-level coupling is k-independent at fixed θ, but the corrected
+  carrier-k wavepacket sweep does not support achromatic deflection in 1+1D.
+  On the current harness, the measured deflection varies strongly with k
+  (CV≈2.66), so broadband attraction should not be claimed from this note.
+
 ### Convergence (overnight view; narrowed later):
   The overnight sweep suggested a substantial TOWARD basin in 3+1D periodic
   chiral transport.
@@ -100,6 +107,34 @@ chirality components (d = spatial dimensions). Per layer:
   No clean preferred dimension. Gravity magnitude decreases with d.
   2+1D can flip AWAY at some parameters (lattice-size effect).
 
+## Revisited Conclusions After The Axiom Update
+
+The raw measurements above mostly still stand, but several interpretations need
+to be narrowed.
+
+1. **Do not read factorized 3+1D chiral as a generic chiral no-go.**
+   The coupled-coin probe now shows that once the on-site operator couples axes,
+   3D gauge response rises sharply and low-k KG fit improves. The factorized
+   `2x2 ⊕ 2x2 ⊕ 2x2` coin is therefore a specific implementation bottleneck,
+   not the final verdict on chiral transport in 3+1D.
+
+2. **Do not read periodic AWAY windows as proof that distortion fails.**
+   The new boundary phase scan shows that most of the 3+1D AWAY windows are
+   periodic recurrence artifacts. Reflecting is all-TOWARD on the scanned grid,
+   and open classical/phase-kill are also all-TOWARD there.
+
+3. **Do not read `theta` overload as the whole equivalence failure.**
+   Splitting inertial mass from gravitational susceptibility does reduce the
+   theta-envelope sensitivity, but it leaves the strong carrier-`k`
+   chromaticity intact. So parameter overload is real, but it is not the only
+   structural blocker.
+
+4. **Do not present the current gravity lane as an Axiom 8 derivation.**
+   After the axiom rewrite, the right statement is weaker: the retained
+   chiral results show that attraction can emerge under a particular transport
+   law and boundary regime. They do not show that distortion alone guarantees
+   attraction.
+
 ## The F∝M Mechanism (explained)
 
 Phase coupling: |e^{ikf}|² = 1 → zero first-order probability shift → F∝M²
@@ -110,20 +145,23 @@ enters through the AMPLITUDE of mixing, not just the phase. This is
 why F∝M=1.0 is exact: the centroid shift is proportional to the
 first-order probability perturbation, which is linear in f.
 
-## The Gravity Mechanism (from first principles)
+## Current Gravity Mechanism Read
 
-Axiom 8: "Gravity is natural continuation in a distorted continuation structure."
+This is now the best mechanism read of the retained harnesses, not a direct
+first-principles derivation from Axiom 8 alone.
 
 The Lorentzian θ-coupling: θ(r) = θ₀(1-f(r))
   Near mass: θ decreases → less chirality mixing → walk is more forward-directed
   Far from mass: θ = θ₀ → normal mixing
 
 This creates a "refractive index" gradient: the walk is faster/straighter
-near mass (less scattering), pulling the probability centroid TOWARD mass.
+near mass (less scattering), pulling the probability centroid TOWARD mass on
+the retained operating points.
 
 At fixed θ, the coupling is k-independent. That resolves the transfer matrix's
 k-dependent resonance problem in 1+1D, but it does not by itself guarantee a
-universal sign-stable 3+1D periodic regime.
+universal sign-stable 3+1D periodic regime, and the corrected carrier-`k`
+wavepacket sweep does not support achromatic measured deflection.
 
 ## Connection to Known Physics
 
@@ -132,6 +170,8 @@ quantum walk. What's NEW:
 
 1. Gravitational coupling via θ-modulation (not in the literature)
 2. F∝M=1.0 from amplitude coupling (new mechanism)
-3. 10/10 closure card across 3 spacetime dimensions (new validation)
-4. The connection to the axiom chain (Axiom 6 → kernel, Axiom 8 → gravity)
-5. Klein-Gordon + gravity + Born + gauge in one framework
+3. 10/10 closure cards at retained operating points, with the 3+1D claim
+   narrowed to an operating-point closure card plus a TOWARD basin
+4. The connection to the sharpened axiom program, especially transport-law
+   pressure from Axiom 6 and the weaker reading of Axiom 8
+5. Klein-Gordon + gravity + Born + gauge at the retained operating points

@@ -53,19 +53,21 @@ These are the conceptual axioms the toy is built around.
    Time-asymmetry is connected to the growth of persistent, non-erasable records rather than inserted as a separate metaphysical primitive.
 
 6. **Free systems follow the locally simplest admissible continuation.**  
-   In the absence of strong disturbances, the system prefers locally coherent continuations rather than arbitrary jumps.
+   In the absence of strong disturbances, the system prefers locally coherent continuations, subject to local linear, norm-preserving, and symmetry-coupled transport before records form.
 
 7. **Inertia is undisturbed natural continuation.**  
    What looks like inertial motion is the toy version of persistence of local continuation when nothing distorts the surrounding continuation structure.
 
 8. **Gravity is natural continuation in a distorted continuation structure.**  
-   Gravity-like behavior is modeled not as a force added by hand, but as path selection through a locally altered delay/load landscape.
+   Gravity-like behavior is modeled not as a force added by hand, but as an emergent bias in an asymmetric continuation structure; distortion alone does not guarantee attraction.
 
 9. **Measurement is durable record formation that separates alternatives.**  
    Alternatives may coexist or combine when no durable record separates them; once a durable record forms, those alternatives are no longer treated the same way.
 
 10. **Observed large-scale structure should be explained by persistent local mechanisms wherever possible.**  
-    If a geometry-like or measurement-like effect appears, the preferred explanation is that it emerged from local network structure rather than being imposed from outside.
+    If a geometry-like or measurement-like effect appears, the preferred explanation is that it emerged from local network structure rather than being imposed from outside. This is a preference, not a hard law.
+
+Canonical axiom note for this branch: [AXIOM_CHANGE_PROPOSAL_2026-04-10.md](/Users/jonreilly/projects/Physics/.claude/worktrees/sleepy-cerf/docs/AXIOM_CHANGE_PROPOSAL_2026-04-10.md). It folds the prior risk-ledger framing into one combined axiom note.
 
 ## What The Toy Actually Is
 

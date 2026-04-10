@@ -128,12 +128,21 @@ def evolve_prob(n: int, field: np.ndarray, n_layers: int) -> np.ndarray:
     return np.sum(prob, axis=-1)
 
 
-def z_expectation(prob: np.ndarray) -> float:
+def signed_min_image_coords(n: int, center: int) -> np.ndarray:
+    coords = np.arange(n, dtype=float) - float(center)
+    half = n // 2
+    coords[coords > half] -= n
+    coords[coords < -half] += n
+    return coords
+
+
+def toward_mass_expectation(prob: np.ndarray, center: int) -> float:
     z_marginal = np.sum(prob, axis=(0, 2))
     total = float(np.sum(z_marginal))
     if total <= 1e-30:
-        return prob.shape[1] / 2.0
-    return float(np.dot(np.arange(prob.shape[1], dtype=float), z_marginal) / total)
+        return 0.0
+    signed_z = signed_min_image_coords(prob.shape[1], center)
+    return float(np.dot(signed_z, z_marginal) / total)
 
 
 def run_case(n: int, n_layers: int) -> tuple[float, float, float]:
@@ -144,15 +153,15 @@ def run_case(n: int, n_layers: int) -> tuple[float, float, float]:
 
     p0_coh = evolve_amp(n, field0, n_layers, phase_kill=False)
     pm_coh = evolve_amp(n, fieldm, n_layers, phase_kill=False)
-    coherent = z_expectation(pm_coh) - z_expectation(p0_coh)
+    coherent = toward_mass_expectation(pm_coh, center) - toward_mass_expectation(p0_coh, center)
 
     p0_cl = evolve_prob(n, field0, n_layers)
     pm_cl = evolve_prob(n, fieldm, n_layers)
-    classical = z_expectation(pm_cl) - z_expectation(p0_cl)
+    classical = toward_mass_expectation(pm_cl, center) - toward_mass_expectation(p0_cl, center)
 
     p0_pk = evolve_amp(n, field0, n_layers, phase_kill=True)
     pm_pk = evolve_amp(n, fieldm, n_layers, phase_kill=True)
-    phase_kill = z_expectation(pm_pk) - z_expectation(p0_pk)
+    phase_kill = toward_mass_expectation(pm_pk, center) - toward_mass_expectation(p0_pk, center)
 
     return coherent, classical, phase_kill
 

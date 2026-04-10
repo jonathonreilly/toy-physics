@@ -12,8 +12,10 @@ shows a stronger limitation.
 
 - **1+1D chiral:** the wide-lattice result remains strong. Exact lattice
   Klein-Gordon in the low-k limit, Born-clean barrier behavior, U(1) gauge,
-  exact light cone, and stable TOWARD deflection on the wide reflecting lattice
-  are all still retained.
+  exact light cone, and stable localized-source TOWARD deflection on the wide
+  reflecting lattice are still retained. But a corrected carrier-k sweep at
+  fixed `theta` does **not** support full achromaticity of the measured
+  deflection.
 - **2+1D chiral:** the closure-card operating point, approximate low-k
   Klein-Gordon behavior, and sub-percent superposition remain retained as
   overnight results.
@@ -90,10 +92,47 @@ The overnight synthesis should now be read as:
 That is a stronger and more defensible statement than either of the extremes:
 "all dimensions validated" or "3+1D is pure chaos."
 
+## Revisited Conclusions After The Axiom Update
+
+The axiom rewrite changes how the current evidence should be summarized.
+
+- **Axiom 8 no longer licenses `distortion => attraction`.**
+  The 3+1D periodic sign windows, the boundary scan, and the coupled-coin probe
+  all say the same thing: transport law, symmetry coupling, and boundary
+  regime matter directly.
+
+- **The factorized 3+1D chiral lane should be treated as a bounded implementation,
+  not as a theorem about chiral transport.**
+  The coupled-coin scan materially improves both 3D gauge response and 3D KG
+  fit, and the newer 4-component Dirac Hamiltonian lane closes both gates much
+  more cleanly. The factorized coin is now best read as a design bottleneck.
+
+- **The 3+1D periodic AWAY windows are not the clean falsifier they first
+  appeared to be.**
+  The new boundary scan makes them mostly a periodic recurrence phenomenon,
+  though still a real problem for that architecture and boundary class.
+
+- **Splitting mass from gravity susceptibility helps but does not close the
+  gravity story.**
+  It reduces theta-envelope sensitivity without curing carrier-`k`
+  chromaticity, so the remaining bottleneck is broader than one overloaded
+  parameter.
+
 ## Next Work
 
 The next non-optional tests are:
 
-1. compare periodic against reflecting or open boundaries at fixed `delta` and `lambda`
-2. tie any geodesic-based gravity observable to the same retained 3+1D chiral transport law
-3. sweep the 3+1D architecture in dimensionless coordinates first, not just by raw lattice size
+1. **symmetry-matched irreducible 3+1D transport family**
+   Compare a better `6x6`/`8x8` on-site generator directly against the retained
+   4-component Dirac Hamiltonian lane, not just against the factorized chiral
+   baseline, and rerun 3D KG/gauge together.
+2. **compare periodic against reflecting or open boundaries at fixed `delta` and `lambda`**
+   Treat boundary robustness as a core gate, not a late diagnostic.
+3. **tie any geodesic-based gravity observable to the same retained 3+1D chiral transport law**
+   Stop mixing geometric and wave observables without an explicit comparison.
+4. **keep the split mass / gravity lane alive**
+   The split model is not a full cure, but it is now the clearest route for
+   attacking the equivalence-style bottleneck without sacrificing KG or `F∝M`.
+5. **sweep the 3+1D architecture in dimensionless coordinates first, not just by raw lattice size**
+   `delta = d/n` and `lambda = L/n` are now better control variables than
+   lattice size alone.
