@@ -127,6 +127,11 @@ phenomenology:
    still-coherent state, to test whether the growth failure belongs to the
    growth rule rather than to the chiral propagator.
 
+The newer `DIR-3D` scans sharpen this further: field broadening can improve the
+offset law, but weaker coupling does not rescue the sign structure, so the
+remaining 3+1D gravity instability now looks more geometry/recurrence-sensitive
+than coupling-strength-sensitive.
+
 ## Bottom line
 
 The combined axiom view for this branch is:

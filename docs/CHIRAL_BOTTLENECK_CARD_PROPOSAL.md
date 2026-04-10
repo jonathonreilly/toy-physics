@@ -73,7 +73,17 @@ The expanded card fixes that.
 - `C11-C12`: `scripts/frontier_chiral_3plus1d_coupled_coin_scan.py`
 - `C13-C14`: `scripts/frontier_chiral_split_mass_gravity.py` and corrected carrier-`k` utilities from the moonshot harness
 - `C15`: `scripts/frontier_chiral_3plus1d_boundary_phase_diagram.py`
-- `C16`: prototype exists in `scripts/frontier_dirac_walk_3plus1d_observable_panel.py`; next step is porting it into the shared retained harness
+- `C16`: prototype exists in `scripts/frontier_dirac_walk_3plus1d_observable_panel.py` and is now wired into `scripts/frontier_dirac_walk_3plus1d_core_card.py`
+
+The newer `DIR-3D` scans add one more practical lesson:
+
+- source smoothing changes local windows but does not remove the growth/sign failure
+- field smoothing can clean up the offset law without fixing `N`-monotonicity
+- weaker coupling does not rescue the sign structure
+
+So the remaining 3+1D Dirac problem should now be attacked mainly as a
+geometry/recurrence problem, not as a source-shape or coupling-magnitude
+problem.
 
 ## Bottom Line
 
