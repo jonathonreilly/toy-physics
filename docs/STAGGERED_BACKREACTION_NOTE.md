@@ -1,7 +1,7 @@
 # Staggered Backreaction Prototype
 
 **Date:** 2026-04-10  
-**Status:** backlog / prototype spec
+**Status:** prototype implemented
 
 ## Objective
 
@@ -46,8 +46,11 @@ The primary observable remains the force:
 
 ## Next Implementation Targets
 
-- `scripts/frontier_staggered_backreaction_prototype.py`
-- a short note with exact numbers and the first-failure mode
+- [`scripts/frontier_staggered_backreaction_prototype.py`](../scripts/frontier_staggered_backreaction_prototype.py)
+- [`STAGGERED_BACKREACTION_RESULTS_2026-04-10.md`](./STAGGERED_BACKREACTION_RESULTS_2026-04-10.md)
+- next step: iterate the same graph-solved Poisson update until the source-
+  generated force scale moves closer to the external-kernel control on the
+  cycle-bearing families
 
 ## Why This Matters
 

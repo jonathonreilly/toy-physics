@@ -181,26 +181,27 @@ The full-suite baseline is now frozen:
 - `frontier_staggered_full_suite.py`: `29/38` in 1D, `28/38` in 3D
 - `frontier_staggered_17card.py`: retained force-based canonical card
 
-The next work is not "more scorekeeping." It is:
+The next work is:
 
-1. **Graph portability (highest priority)**: extend the staggered / Kähler-Dirac
-   transport law to bipartite random geometric graphs, growing graphs, and
-   layered/DAG-like graphs. Start with a tight retained subset:
-   Born, norm, force sign, `F∝M`, achromatic force, equivalence, robustness.
+1. **Graph portability (highest priority)**: extend the staggered /
+   Kähler-Dirac transport law to bipartite random geometric graphs, growing
+   graphs, and layered/DAG-like graphs. Keep the battery narrow: Born, norm,
+   force sign, `F∝M`, achromatic force, equivalence, robustness, and gauge only
+   when cycles exist.
 
-2. **Backreaction prototype**: replace the external source potential with a
-   graph-solved source sector or density-generated `Φ`, then rerun the two-body /
-   response rows. This is the first step from "matter in a background" to an
-   interacting model. See `STAGGERED_BACKREACTION_NOTE.md`.
+2. **Backreaction bridge**: the new task is to replace the external source
+   potential with a graph-solved source sector or density-generated `Φ`, then
+   rerun zero-source control, source-on response, and stability checks on a
+   layered or DAG-compatible graph. This is the active bridge from background
+   field to endogenous coupling.
 
-3. **Graph-Dirac design memo**: write down the graph invariants the staggered
-   lane actually needs (bipartite structure, orientation, layering, admissible
-   cycles, failure modes). This should guide which graph families are worth
-   coding and which ones are structurally incompatible.
+3. **Graph-Dirac design memo**: keep the graph invariants current so the
+   staggered lane's requirements, admissible families, and failure modes stay
+   explicit before the next sweep.
 
-4. **Only then** spend secondary effort on larger 3D periodic lattices or
-   centroid-based diagnostics. Those are useful cleanup tasks, but they are not
-   the most significant way to move the project forward.
+4. **Secondary cleanup only**: larger 3D periodic lattices and centroid-based
+   diagnostics are lower priority unless portability or backreaction forces us
+   back to them.
 
 For the active backlog and agent brief, see:
 - `docs/WORK_BACKLOG_2026-04-10.md`

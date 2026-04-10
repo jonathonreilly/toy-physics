@@ -14,8 +14,13 @@ This backlog is ordered by value to the main project, not by ease.
 
 ## P1 - Backreaction
 
-- Replace the external source potential with a graph-solved source sector.
-- Test whether the force rows survive once `Phi` is endogenous instead of imposed.
+- The first retained source-generated Phi prototype is implemented in
+  [`frontier_staggered_backreaction_prototype.py`](../scripts/frontier_staggered_backreaction_prototype.py).
+- Next step: iterate the same graph-solved Poisson update until the
+  source-generated force scale is closer to the external-kernel control on the
+  cycle-bearing families.
+- Test whether the force rows survive once `Phi` is endogenous instead of
+  imposed.
 - Keep the transport law fixed while only the source field changes.
 
 ## P2 - Graph-Dirac Design
