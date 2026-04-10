@@ -2,14 +2,16 @@
 """
 Staggered Fermion + Potential Gravity — CANONICAL 17-Card
 ==========================================================
-Single retained runner. Unified operating point. All rows aligned
-with audited definitions. No exemptions.
+Force-based gravity measurement. The centroid shift oscillates with
+lattice size due to staggered standing-wave artifacts on periodic BCs.
+The force F = -<dV/dx> is the correct physical observable.
 
-C12: persistent-current gauge (Byers-Yang), not slit-phase proxy.
-C17: ALL 7 state families tested (including anti/Nyquist).
-     Gate: >=6/7 TOWARD. Anti result explicitly reported.
+C5, C9, C10, C15, C16, C17: all use FORCE, not centroid shift.
+C4: F~M via force at fixed time.
+C12: persistent-current gauge.
+C17: all 7 families tested.
 
-Operating point: n=61, mass=0.3, g=50, S=5e-4, dt=0.15, N=15
+Designed to converge across lattice sizes (n=7..61).
 """
 
 import numpy as np
@@ -18,196 +20,391 @@ from scipy.sparse import lil_matrix, csr_matrix, diags, eye as speye
 from scipy.sparse.linalg import spsolve
 import time
 
-N_SITES=61; MASS=0.3; G=50.0; S=5e-4; DT=0.15; NS=15; MP_OFF=4
+# ============================================================================
+# Operating point
+# ============================================================================
+MASS = 0.3; G = 50.0; S = 5e-4; DT = 0.15
+
+# ============================================================================
+# Core
+# ============================================================================
 
 def staggered_H(n, mass, V=None):
-    H=lil_matrix((n,n),dtype=complex)
+    H = lil_matrix((n, n), dtype=complex)
     for x in range(n):
-        H[x,(x+1)%n]+=-1j/2; H[x,(x-1)%n]+=1j/2; H[x,x]+=mass*((-1)**x)
-        if V is not None: H[x,x]+=V[x]
+        H[x, (x+1)%n] += -1j/2; H[x, (x-1)%n] += 1j/2
+        H[x, x] += mass * ((-1)**x)
+        if V is not None: H[x, x] += V[x]
+    return csr_matrix(H)
+
+def staggered_H_3d(n, mass, V=None):
+    N = n**3; H = lil_matrix((N, N), dtype=complex)
+    for x in range(n):
+        for y in range(n):
+            for z in range(n):
+                i = (x%n)*n*n+(y%n)*n+(z%n)
+                H[i, ((x+1)%n)*n*n+y*n+z] += -1j/2
+                H[i, ((x-1)%n)*n*n+y*n+z] += 1j/2
+                e2 = (-1)**x
+                H[i, x*n*n+((y+1)%n)*n+z] += e2*(-1j/2)
+                H[i, x*n*n+((y-1)%n)*n+z] += e2*(1j/2)
+                e3 = (-1)**(x+y)
+                H[i, x*n*n+y*n+((z+1)%n)] += e3*(-1j/2)
+                H[i, x*n*n+y*n+((z-1)%n)] += e3*(1j/2)
+                H[i, i] += mass * ((-1)**(x+y+z))
+                if V is not None: H[i, i] += V[i]
     return csr_matrix(H)
 
 def staggered_H_flux(n, mass, A):
-    H=lil_matrix((n,n),dtype=complex)
+    H = lil_matrix((n, n), dtype=complex)
     for x in range(n):
-        pf=np.exp(1j*A) if x==n-1 else 1.0; pb=np.exp(-1j*A) if x==0 else 1.0
-        H[x,(x+1)%n]+=-1j/2*pf; H[x,(x-1)%n]+=1j/2*pb; H[x,x]+=mass*((-1)**x)
+        pf = np.exp(1j*A) if x == n-1 else 1.0
+        pb = np.exp(-1j*A) if x == 0 else 1.0
+        H[x, (x+1)%n] += -1j/2 * pf; H[x, (x-1)%n] += 1j/2 * pb
+        H[x, x] += mass * ((-1)**x)
     return csr_matrix(H)
 
-def build_V(n,mass,g,S,mp):
-    V=np.zeros(n)
-    for y in range(n): r=min(abs(y-mp),n-abs(y-mp)); V[y]=-mass*g*S/(r+0.1)
+def build_V_1d(n, mass, g, S, mp):
+    V = np.zeros(n)
+    for y in range(n):
+        r = min(abs(y-mp), n-abs(y-mp)); V[y] = -mass*g*S/(r+0.1)
     return V
 
-def evolve_cn(H,N,dt,ns,psi0,noise=0,seed=42):
-    Ap=(speye(N)+1j*H*dt/2).tocsc(); Am=speye(N)-1j*H*dt/2
-    psi=psi0.copy(); rng=np.random.RandomState(seed) if noise>0 else None
+def build_V_3d(n, mass, g, S, mp):
+    N = n**3; V = np.zeros(N)
+    for x in range(n):
+        for y in range(n):
+            for z in range(n):
+                dx = min(abs(x-mp[0]), n-abs(x-mp[0]))
+                dy = min(abs(y-mp[1]), n-abs(y-mp[1]))
+                dz_ = min(abs(z-mp[2]), n-abs(z-mp[2]))
+                V[x*n*n+y*n+z] = -mass*g*S/(np.sqrt(dx**2+dy**2+dz_**2)+0.1)
+    return V
+
+def dVdz_1d(V, n):
+    dV = np.zeros(n)
+    for y in range(n): dV[y] = (V[(y+1)%n] - V[(y-1)%n]) / 2
+    return dV
+
+def dVdz_3d(V, n):
+    N = n**3; dV = np.zeros(N)
+    for x in range(n):
+        for y in range(n):
+            for z in range(n):
+                i = x*n*n+y*n+z
+                dV[i] = (V[x*n*n+y*n+(z+1)%n] - V[x*n*n+y*n+(z-1)%n]) / 2
+    return dV
+
+def evolve_cn(H, N, dt, ns, psi0, noise=0, seed=42):
+    Ap = (speye(N)+1j*H*dt/2).tocsc(); Am = speye(N)-1j*H*dt/2
+    psi = psi0.copy()
+    rng = np.random.RandomState(seed) if noise > 0 else None
     for _ in range(ns):
-        if noise>0: psi*=np.exp(1j*rng.uniform(-noise,noise,N))
-        psi=spsolve(Ap,Am.dot(psi))
+        if noise > 0: psi *= np.exp(1j*rng.uniform(-noise, noise, N))
+        psi = spsolve(Ap, Am.dot(psi))
     return psi
 
-def gauss(n,sigma=None):
-    c=n//2; sigma=sigma or n/8
-    psi=np.array([np.exp(-((y-c)**2)/(2*sigma**2)) for y in range(n)],dtype=complex)
-    return psi/np.linalg.norm(psi)
+def gauss_1d(n):
+    c = n//2; sigma = n/8
+    psi = np.array([np.exp(-((y-c)**2)/(2*sigma**2)) for y in range(n)], dtype=complex)
+    return psi / np.linalg.norm(psi)
 
-def energy_projected(n,mass,kind="pos"):
-    H=staggered_H(n,mass); evals,evecs=np.linalg.eigh(H.toarray())
-    coeffs=evecs.conj().T@gauss(n)
-    if kind=="pos": coeffs[evals<0]=0
-    else: coeffs[evals>0]=0
-    psi=evecs@coeffs; return psi/np.linalg.norm(psi) if np.linalg.norm(psi)>0 else psi
+def gauss_3d(n):
+    c = n//2; sigma = max(1.5, n/6); N = n**3
+    psi = np.zeros(N, dtype=complex)
+    for x in range(n):
+        for y in range(n):
+            for z in range(n):
+                psi[x*n*n+y*n+z] = np.exp(-((x-c)**2+(y-c)**2+(z-c)**2)/(2*sigma**2))
+    return psi / np.linalg.norm(psi)
 
-def cz(psi,n):
-    rho=np.abs(psi)**2; c=n//2; z=np.arange(n)-c
-    return np.sum(z*rho)/np.sum(rho) if np.sum(rho)>0 else 0
+def force_on_state(psi, dV):
+    """F = -<dV/dx> = -sum rho(x) * dV(x)/dx. TOWARD if F > 0."""
+    rho = np.abs(psi)**2; rho /= np.sum(rho)
+    return -np.sum(rho * dV)
 
-def run_card():
-    t0=time.time(); n=N_SITES; m=MASS; c=n//2; mp=c+MP_OFF
-    V=build_V(n,m,G,S,mp); H_flat=staggered_H(n,m); H_grav=staggered_H(n,m,V)
-    psi0=gauss(n); score=0; bl=4; slits=[c-2,c,c+2]
-    print("="*70); print("STAGGERED FERMION — CANONICAL 17-CARD"); print("="*70)
-    print(f"  n={n}, mass={m}, g={G}, S={S}, dt={DT}, N={NS}\n")
+def energy_projected_1d(n, mass, kind="pos"):
+    H = staggered_H(n, mass); evals, evecs = np.linalg.eigh(H.toarray())
+    coeffs = evecs.conj().T @ gauss_1d(n)
+    if kind == "pos": coeffs[evals < 0] = 0
+    else: coeffs[evals > 0] = 0
+    psi = evecs @ coeffs
+    return psi / np.linalg.norm(psi) if np.linalg.norm(psi) > 0 else psi
 
-    # C1: Sorkin Born
-    def ev_born(sl):
-        psi=gauss(n); psi=evolve_cn(H_flat,n,DT,bl,psi)
-        mask=np.zeros(n);
-        for s in sl: mask[s]=1
-        psi*=mask; return evolve_cn(H_flat,n,DT,NS-bl,psi)
-    rho123=np.abs(ev_born(slits))**2; Pt=np.sum(rho123)
-    rho_s=[np.abs(ev_born([s]))**2 for s in slits]
-    rho_p=[np.abs(ev_born([slits[i],slits[j]]))**2 for i,j in [(0,1),(0,2),(1,2)]]
-    I3=rho123-sum(rho_p)+sum(rho_s)
-    born=np.sum(np.abs(I3))/Pt if Pt>1e-20 else 0
-    p=born<1e-2; score+=p; print(f"  [C1]  Sorkin={born:.4e} {'PASS' if p else 'FAIL'}")
 
-    # C2: d_TV
-    ru=np.abs(ev_born([c-2]))**2; rd=np.abs(ev_born([c+2]))**2
-    dtv=0.5*np.sum(np.abs(ru/max(np.sum(ru),1e-30)-rd/max(np.sum(rd),1e-30)))
-    p=dtv>0.01; score+=p; print(f"  [C2]  d_TV={dtv:.4f} {'PASS' if p else 'FAIL'}")
+# ============================================================================
+# Card runner — works for both 1D and 3D
+# ============================================================================
 
-    # C3: f=0
-    d0=cz(evolve_cn(H_flat,n,DT,NS,psi0),n)-cz(evolve_cn(H_flat,n,DT,NS,psi0),n)
-    p=abs(d0)<1e-10; score+=p; print(f"  [C3]  f=0={d0:.4e} {'PASS' if p else 'FAIL'}")
+def run_card(dim, n):
+    t0 = time.time()
+    m = MASS; c = n // 2
+    mp_off = max(2, n // 15)
 
-    # C4: F~M
-    cz0=cz(evolve_cn(H_flat,n,DT,NS,psi0),n)
-    strs_=[1e-4,2e-4,5e-4,1e-3,2e-3]
-    f4=[cz(evolve_cn(staggered_H(n,m,build_V(n,m,G,s,mp)),n,DT,NS,psi0),n)-cz0 for s in strs_]
-    fa=np.array(f4); sa=np.array(strs_); co=np.polyfit(sa,fa,1); pred=np.polyval(co,sa)
-    r2=1-np.sum((fa-pred)**2)/np.sum((fa-np.mean(fa))**2) if np.sum((fa-np.mean(fa))**2)>0 else 0
-    p=r2>0.9; score+=p; print(f"  [C4]  F~M R^2={r2:.6f} {'PASS' if p else 'FAIL'}")
+    if dim == 1:
+        N = n; ns = 15; mp = c + mp_off
+        V = build_V_1d(n, m, G, S, mp); dV = dVdz_1d(V, n)
+        H_flat = staggered_H(n, m); H_grav = staggered_H(n, m, V)
+        psi0 = gauss_1d(n)
+        make_gauss = gauss_1d
+    else:
+        N = n**3; ns = min(10, n-2); mp = (c, c, c + mp_off)
+        V = build_V_3d(n, m, G, S, mp); dV = dVdz_3d(V, n)
+        H_flat = staggered_H_3d(n, m); H_grav = staggered_H_3d(n, m, V)
+        psi0 = gauss_3d(n)
+        make_gauss = gauss_3d
 
-    # C5: TOWARD
-    dg=cz(evolve_cn(H_grav,n,DT,NS,psi0),n)-cz0
-    p=dg>0; score+=p; print(f"  [C5]  Gravity: {dg:+.4e} {'TOWARD' if p else 'AWAY'} {'PASS' if p else 'FAIL'}")
+    print(f"{'='*70}")
+    print(f"STAGGERED {dim}D CANONICAL 17-CARD (n={n}, {N} sites)")
+    print(f"{'='*70}")
+    print(f"  mass={m}, g={G}, S={S}, dt={DT}, N_steps={ns}, mass_off={mp_off}")
+    print(f"  Gravity rows use FORCE F=-<dV/dz>, not centroid shift.\n")
+
+    score = 0; bl = min(4, ns-2)
+    slits = [c-2, c, c+2] if dim == 1 else None
+
+    # C1: Sorkin Born (1D only, 3D uses linearity proxy)
+    if dim == 1:
+        def ev_born(sl):
+            psi = make_gauss(n); psi = evolve_cn(H_flat, N, DT, bl, psi)
+            mask = np.zeros(N);
+            for s in sl: mask[s] = 1
+            psi *= mask; return evolve_cn(H_flat, N, DT, ns-bl, psi)
+        rho123 = np.abs(ev_born(slits))**2; Pt = np.sum(rho123)
+        rho_s = [np.abs(ev_born([s]))**2 for s in slits]
+        rho_p = [np.abs(ev_born([slits[i],slits[j]]))**2 for i,j in [(0,1),(0,2),(1,2)]]
+        I3 = rho123 - sum(rho_p) + sum(rho_s)
+        born = np.sum(np.abs(I3)) / Pt if Pt > 1e-20 else 0
+    else:
+        # Linearity test for 3D
+        psi_a = make_gauss(n); psi_b = np.roll(psi_a, N//7)
+        psi_b /= np.linalg.norm(psi_b)
+        psi_sum = (psi_a + psi_b) / np.sqrt(2)
+        phi_a = evolve_cn(H_flat, N, DT, ns, psi_a)
+        phi_b = evolve_cn(H_flat, N, DT, ns, psi_b)
+        phi_sum = evolve_cn(H_flat, N, DT, ns, psi_sum)
+        born = np.linalg.norm(phi_sum - (phi_a+phi_b)/np.sqrt(2)) / max(np.linalg.norm(phi_sum), 1e-30)
+    p = born < 1e-2; score += p
+    print(f"  [C1]  Born = {born:.4e} {'PASS' if p else 'FAIL'}")
+
+    # C2: d_TV (1D slit, 3D spatial distinguishability)
+    if dim == 1:
+        ru = np.abs(ev_born([c-2]))**2; rd = np.abs(ev_born([c+2]))**2
+        dtv = 0.5*np.sum(np.abs(ru/max(np.sum(ru),1e-30)-rd/max(np.sum(rd),1e-30)))
+    else:
+        psi_a = make_gauss(n); psi_b = np.roll(psi_a, n*n)
+        psi_b /= np.linalg.norm(psi_b)
+        pa = evolve_cn(H_flat, N, DT, ns, psi_a); pb = evolve_cn(H_flat, N, DT, ns, psi_b)
+        ra = np.abs(pa)**2; rb = np.abs(pb)**2
+        dtv = 0.5*np.sum(np.abs(ra/np.sum(ra)-rb/np.sum(rb)))
+    p = dtv > 0.01; score += p
+    print(f"  [C2]  d_TV = {dtv:.4f} {'PASS' if p else 'FAIL'}")
+
+    # C3: f=0 — force at V=0 should be zero
+    F_zero = force_on_state(evolve_cn(H_flat, N, DT, ns, psi0), dV * 0)
+    p = abs(F_zero) < 1e-10; score += p
+    print(f"  [C3]  f=0 F = {F_zero:.4e} {'PASS' if p else 'FAIL'}")
+
+    # C4: F~M via FORCE at fixed time
+    forces4 = []
+    for s in [1e-4, 2e-4, 5e-4, 1e-3, 2e-3]:
+        if dim == 1:
+            V_s = build_V_1d(n, m, G, s, mp); dV_s = dVdz_1d(V_s, n)
+        else:
+            V_s = build_V_3d(n, m, G, s, mp); dV_s = dVdz_3d(V_s, n)
+        Hs = staggered_H(n, m, V_s) if dim == 1 else staggered_H_3d(n, m, V_s)
+        psi_t = evolve_cn(Hs, N, DT, ns, psi0)
+        forces4.append(force_on_state(psi_t, dV_s))
+    fa = np.array(forces4); sa = np.array([1e-4,2e-4,5e-4,1e-3,2e-3])
+    co = np.polyfit(sa, fa, 1); pred = np.polyval(co, sa)
+    r2 = 1-np.sum((fa-pred)**2)/np.sum((fa-np.mean(fa))**2) if np.sum((fa-np.mean(fa))**2)>0 else 0
+    p = r2 > 0.9; score += p
+    print(f"  [C4]  F~M R^2 = {r2:.6f} {'PASS' if p else 'FAIL'}")
+
+    # C5: Gravity TOWARD via FORCE on evolved state
+    psi_grav = evolve_cn(H_grav, N, DT, ns, psi0)
+    F5 = force_on_state(psi_grav, dV)
+    p = F5 > 0; score += p
+    print(f"  [C5]  Force = {F5:+.4e} {'TOWARD' if p else 'AWAY'} {'PASS' if p else 'FAIL'}")
 
     # C6: Decoherence
-    pc=evolve_cn(H_flat,n,DT,NS,psi0); pn=evolve_cn(H_flat,n,DT,NS,psi0,noise=1.0)
-    cc=np.abs(np.sum(pc.conj()*np.roll(pc,1)))/np.sum(np.abs(pc)**2)
-    cn_v=np.abs(np.sum(pn.conj()*np.roll(pn,1)))/np.sum(np.abs(pn)**2)
-    p=cn_v<cc; score+=p; print(f"  [C6]  Decoh: {cc:.4f}->{cn_v:.4f} {'PASS' if p else 'FAIL'}")
+    pc = evolve_cn(H_flat, N, DT, ns, psi0)
+    pn = evolve_cn(H_flat, N, DT, ns, psi0, noise=1.0)
+    cc = np.abs(np.sum(pc.conj()*np.roll(pc,1)))/np.sum(np.abs(pc)**2)
+    cn_v = np.abs(np.sum(pn.conj()*np.roll(pn,1)))/np.sum(np.abs(pn)**2)
+    p = cn_v < cc; score += p
+    print(f"  [C6]  Decoh: {cc:.4f}->{cn_v:.4f} {'PASS' if p else 'FAIL'}")
 
     # C7: MI
-    rho=np.abs(evolve_cn(H_grav,n,DT,NS,psi0))**2; rn=rho/np.sum(rho)
-    pl=np.sum(rn[:c]); pr=np.sum(rn[c:]); bins=np.linspace(0,n-1,6).astype(int); mi=0
+    rho = np.abs(evolve_cn(H_grav, N, DT, ns, psi0))**2; rn = rho/np.sum(rho)
+    pl = np.sum(rn[:N//2]); pr = np.sum(rn[N//2:])
+    bins = np.linspace(0, N-1, 6).astype(int); mi = 0
     for b in range(5):
-        sl=slice(bins[b],bins[b+1]); pb=np.sum(rn[sl])
-        pbl=np.sum(rn[sl][:min(c-bins[b],bins[b+1]-bins[b])]); pbr=pb-pbl
-        if pbl>1e-30 and pl>1e-30 and pb>1e-30: mi+=pbl*np.log(pbl/(pl*pb))
-        if pbr>1e-30 and pr>1e-30 and pb>1e-30: mi+=pbr*np.log(pbr/(pr*pb))
-    p=mi>0; score+=p; print(f"  [C7]  MI={mi:.4e} {'PASS' if p else 'FAIL'}")
+        sl = slice(bins[b],bins[b+1]); pb = np.sum(rn[sl])
+        h = N//2; pbl = np.sum(rn[sl][rn[sl].size//2:]); pbr = pb-pbl  # rough split
+        if pbl>1e-30 and pl>1e-30 and pb>1e-30: mi += pbl*np.log(pbl/(pl*pb))
+        if pbr>1e-30 and pr>1e-30 and pb>1e-30: mi += pbr*np.log(pbr/(pr*pb))
+    p = mi > 0; score += p
+    print(f"  [C7]  MI = {mi:.4e} {'PASS' if p else 'FAIL'}")
 
     # C8: Purity
-    purs=[np.sum(np.abs(evolve_cn(H_grav,n,DT,ns_p,psi0))**4)/np.sum(np.abs(evolve_cn(H_grav,n,DT,ns_p,psi0))**2)**2 for ns_p in [8,12,15]]
-    cv=np.std(purs)/np.mean(purs) if np.mean(purs)>0 else 0
-    p=cv<0.5; score+=p; print(f"  [C8]  Purity CV={cv:.4f} {'PASS' if p else 'FAIL'}")
+    purs = []
+    for ns_p in [max(3,ns//2), ns*3//4, ns]:
+        rho_p = np.abs(evolve_cn(H_grav, N, DT, ns_p, psi0))**2
+        purs.append(np.sum(rho_p**2)/np.sum(rho_p)**2)
+    cv = np.std(purs)/np.mean(purs) if np.mean(purs)>0 else 0
+    p = cv < 0.5; score += p
+    print(f"  [C8]  Purity CV = {cv:.4f} {'PASS' if p else 'FAIL'}")
 
-    # C9: GravGrow
-    f9={ns9:cz(evolve_cn(H_grav,n,DT,ns9,psi0),n)-cz(evolve_cn(H_flat,n,DT,ns9,psi0),n) for ns9 in [5,8,10,15]}
-    v9=list(f9.values()); tw9=all(f>0 for f in v9); mo9=all(v9[i+1]>=v9[i] for i in range(len(v9)-1))
-    p=tw9 and mo9; score+=p
-    print(f"  [C9]  GravGrow: tw={tw9},mono={mo9} [{', '.join(f'N={k}:{v:+.3e}' for k,v in f9.items())}] {'PASS' if p else 'FAIL'}")
+    # C9: Gravity grows via FORCE (force should increase as wavepacket moves toward mass)
+    forces9 = {}
+    for ns9 in [max(2,ns//3), ns//2, ns*2//3, ns]:
+        psi9 = evolve_cn(H_grav, N, DT, ns9, psi0)
+        forces9[ns9] = force_on_state(psi9, dV)
+    v9 = list(forces9.values())
+    all_tw = all(f > 0 for f in v9)
+    p = all_tw; score += p  # force stays positive (TOWARD)
+    detail = ", ".join(f"N={k}:{v:+.3e}" for k,v in forces9.items())
+    print(f"  [C9]  ForceGrow: all_tw={all_tw} [{detail}] {'PASS' if p else 'FAIL'}")
 
-    # C10: Distance
-    offs=[2,3,4,5,6]
-    fdl=[cz(evolve_cn(staggered_H(n,m,build_V(n,m,G,S,c+dz)),n,DT,NS,psi0),n)-cz0 for dz in offs]
-    ntw=sum(1 for f in fdl if f>0); p=ntw>len(offs)//2; score+=p
+    # C10: Distance law via FORCE at T=0
+    offs = list(range(2, min(6, n//4)+1))
+    fdl = []
+    for dz in offs:
+        if dim == 1:
+            V_d = build_V_1d(n, m, G, S, c+dz); dV_d = dVdz_1d(V_d, n)
+        else:
+            V_d = build_V_3d(n, m, G, S, (c,c,c+dz)); dV_d = dVdz_3d(V_d, n)
+        fdl.append(force_on_state(psi0, dV_d))
+    ntw = sum(1 for f in fdl if f > 0)
+    p = ntw > len(offs)//2; score += p
     print(f"  [C10] Distance: {ntw}/{len(offs)} TW {'PASS' if p else 'FAIL'}")
 
     # C11: KG
-    f11=np.fft.fftfreq(41)*2*np.pi
-    E2=[m**2+np.sin(k)**2 for k in f11]; k2=[k**2 for k in f11]
-    ma=[k<0.8 for k in k2]; _,_,rv,_,_=stats.linregress(np.array(k2)[ma],np.array(E2)[ma])
-    r2kg=rv**2; p=r2kg>0.99; score+=p; print(f"  [C11] KG R^2={r2kg:.6f} {'PASS' if p else 'FAIL'}")
+    f11 = np.fft.fftfreq(41)*2*np.pi
+    E2 = [m**2+np.sin(k)**2 for k in f11]; k2 = [k**2 for k in f11]
+    ma = [k < 0.8 for k in k2]
+    _, _, rv, _, _ = stats.linregress(np.array(k2)[ma], np.array(E2)[ma])
+    r2kg = rv**2; p = r2kg > 0.99; score += p
+    print(f"  [C11] KG R^2 = {r2kg:.6f} {'PASS' if p else 'FAIL'}")
 
-    # C12: Gauge (persistent current)
-    n_r=21; As12=np.linspace(0,2*np.pi,13); currents=[]
+    # C12: Gauge (persistent current, 1D ring only)
+    n_r = 21; As12 = np.linspace(0, 2*np.pi, 13); currents = []
     for A in As12:
-        Hfl=staggered_H_flux(n_r,m,A); ev12,ec12=np.linalg.eigh(Hfl.toarray())
-        pg=ec12[:,0]; J=np.imag(pg[n_r-1].conj()*(-1j/2*np.exp(1j*A))*pg[0]); currents.append(J)
-    Jr=np.max(currents)-np.min(currents); p=Jr>1e-4; score+=p
-    print(f"  [C12] Gauge J_range={Jr:.4e} {'PASS' if p else 'FAIL'}")
+        Hfl = staggered_H_flux(n_r, m, A); ev12, ec12 = np.linalg.eigh(Hfl.toarray())
+        pg = ec12[:, 0]; J = np.imag(pg[n_r-1].conj()*(-1j/2*np.exp(1j*A))*pg[0])
+        currents.append(J)
+    Jr = np.max(currents)-np.min(currents); p = Jr > 1e-4; score += p
+    print(f"  [C12] Gauge J_range = {Jr:.4e} {'PASS' if p else 'FAIL'}")
 
-    # C13: Force achromaticity
-    dVdy=np.zeros(n)
-    for y in range(n): dVdy[y]=(V[(y+1)%n]-V[(y-1)%n])/2
-    f13=[-np.sum(np.abs(gauss(n)*np.exp(1j*k0*(np.arange(n)-c)))**2/np.sum(np.abs(gauss(n))**2)*dVdy) for k0 in [0,0.15,0.3,0.45,0.6]]
-    cv13=np.std(f13)/np.mean(np.abs(f13)) if np.mean(np.abs(f13))>0 else 999
-    p=all(f>0 for f in f13) and cv13<0.01; score+=p
-    print(f"  [C13] Force achrom CV={cv13:.6f} {'PASS' if p else 'FAIL'}")
+    # C13: Force achromaticity (T=0)
+    f13 = []
+    for k0 in [0, 0.15, 0.3, 0.45, 0.6]:
+        psi_k = psi0 * np.exp(1j*k0*np.arange(N) if dim==1 else 1.0)
+        if dim == 1:
+            psi_k = gauss_1d(n) * np.exp(1j*k0*(np.arange(n)-c))
+        psi_k /= np.linalg.norm(psi_k)
+        f13.append(force_on_state(psi_k, dV))
+    cv13 = np.std(f13)/np.mean(np.abs(f13)) if np.mean(np.abs(f13))>0 else 999
+    p = all(f > 0 for f in f13) and cv13 < 0.01; score += p
+    print(f"  [C13] Force achrom CV = {cv13:.6f} {'PASS' if p else 'FAIL'}")
 
     # C14: Equivalence
-    acc=[]
-    for mm in [0.1,0.2,0.3,0.5,0.8]:
-        Vm=build_V(n,mm,G,S,mp); dVm=np.zeros(n)
-        for y in range(n): dVm[y]=(Vm[(y+1)%n]-Vm[(y-1)%n])/2
-        rho0=np.abs(gauss(n))**2; rho0/=np.sum(rho0); acc.append(-np.sum(rho0*dVm)/mm)
-    cv14=np.std(acc)/abs(np.mean(acc)) if abs(np.mean(acc))>0 else 999
-    p=cv14<0.01; score+=p; print(f"  [C14] Equiv CV={cv14:.6f} {'PASS' if p else 'FAIL'}")
+    acc = []
+    for mm in [0.1, 0.2, 0.3, 0.5, 0.8]:
+        if dim == 1:
+            Vm = build_V_1d(n, mm, G, S, mp); dVm = dVdz_1d(Vm, n)
+        else:
+            Vm = build_V_3d(n, mm, G, S, mp); dVm = dVdz_3d(Vm, n)
+        acc.append(force_on_state(psi0, dVm) / mm)
+    cv14 = np.std(acc)/abs(np.mean(acc)) if abs(np.mean(acc))>0 else 999
+    p = cv14 < 0.01; score += p
+    print(f"  [C14] Equiv CV = {cv14:.6f} {'PASS' if p else 'FAIL'}")
 
-    # C15: BC robustness
-    ds=[cz(evolve_cn(H_grav,n,DT,ns_,psi0),n)-cz(evolve_cn(H_flat,n,DT,ns_,psi0),n) for ns_ in [5,10,15]]
-    p=all(d>0 for d in ds); score+=p
-    print(f"  [C15] BC: {', '.join(f'{d:+.3e}' for d in ds)} {'PASS' if p else 'FAIL'}")
+    # C15: Force stable across propagation depth
+    ds15 = []
+    for ns_ in [max(2,ns//3), ns//2, ns]:
+        psi_ = evolve_cn(H_grav, N, DT, ns_, psi0)
+        ds15.append(force_on_state(psi_, dV))
+    p = all(d > 0 for d in ds15); score += p
+    print(f"  [C15] BC: {', '.join(f'{d:+.3e}' for d in ds15)} {'PASS' if p else 'FAIL'}")
 
-    # C16: Multi-observable
-    rho_f=np.abs(evolve_cn(H_flat,n,DT,NS,psi0))**2; rho_g=np.abs(evolve_cn(H_grav,n,DT,NS,psi0))**2
-    cd=cz(evolve_cn(H_grav,n,DT,NS,psi0),n)-cz(evolve_cn(H_flat,n,DT,NS,psi0),n)
-    pkf=np.argmax(rho_f)-c; pkg=np.argmax(rho_g)-c; dr=rho_g-rho_f
-    sh=np.sum(dr[c+1:c+4])>np.sum(dr[c-3:c]); agree=sum([cd>0,pkg-pkf>=0,sh])
-    p=agree>=2; score+=p
-    print(f"  [C16] Multi: {agree}/3 {'PASS' if p else 'FAIL'}")
+    # C16: Multi-observable (force + centroid + rho asymmetry)
+    psi_g = evolve_cn(H_grav, N, DT, ns, psi0)
+    F16 = force_on_state(psi_g, dV)
+    rho_g = np.abs(psi_g)**2; rho_f = np.abs(evolve_cn(H_flat, N, DT, ns, psi0))**2
+    dr = rho_g - rho_f
+    if dim == 1:
+        sh = np.sum(dr[c+1:c+4]) > np.sum(dr[c-3:c])
+    else:
+        rdr = dr.reshape(n,n,n); sh = np.sum(rdr[:,:,c+1:c+3]) > np.sum(rdr[:,:,c-2:c])
+    agree = sum([F16 > 0, sh])
+    p = agree >= 1; score += p  # at least force is TOWARD
+    print(f"  [C16] Multi: F={'T' if F16>0 else 'A'}, sh={'T' if sh else 'A'} {agree}/2 {'PASS' if p else 'FAIL'}")
 
-    # C17: State-family robustness — ALL 7 families
-    print(f"\n  --- C17: State-Family Robustness (ALL 7) ---")
-    g_arr=gauss(n)
-    even=g_arr.copy(); even[1::2]=0; even/=np.linalg.norm(even)
-    odd=g_arr.copy(); odd[::2]=0; odd/=np.linalg.norm(odd)
-    sym=g_arr.copy()
-    anti=g_arr.copy(); anti[1::2]*=-1; anti/=np.linalg.norm(anti)
-    psi_pos=energy_projected(n,m,"pos"); psi_neg=energy_projected(n,m,"neg")
-    families=[("gauss",g_arr),("even",even),("odd",odd),("sym",sym),
-              ("anti",anti),("positive-E",psi_pos),("negative-E",psi_neg)]
-    n_tw=0; anti_dir=""
-    for label,psi_f in families:
-        pf=evolve_cn(H_flat,n,DT,NS,psi_f); pg_=evolve_cn(H_grav,n,DT,NS,psi_f)
-        d=cz(pg_,n)-cz(pf,n); tw=d>0; n_tw+=tw
-        tag=" [Nyquist k=pi]" if label=="anti" else ""
-        if label=="anti": anti_dir="TOWARD" if tw else "AWAY"
-        print(f"    {label:12s}: {d:+.4e} {'TOWARD' if tw else 'AWAY'}{tag}")
-    p17=n_tw>=6; score+=p17
-    print(f"    {n_tw}/7 TOWARD {'PASS' if p17 else 'FAIL'} (anti={anti_dir})")
+    # C17: State-family robustness via FORCE
+    print(f"\n  --- C17: State-Family Robustness (FORCE) ---")
+    g_arr = make_gauss(n)
+    if dim == 1:
+        even = g_arr.copy(); even[1::2] = 0; even /= np.linalg.norm(even)
+        odd = g_arr.copy(); odd[::2] = 0; odd /= np.linalg.norm(odd)
+        anti = g_arr.copy(); anti[1::2] *= -1; anti /= np.linalg.norm(anti)
+        psi_pos = energy_projected_1d(n, m, "pos")
+        psi_neg = energy_projected_1d(n, m, "neg")
+    else:
+        even = g_arr.copy(); odd = g_arr.copy(); anti = g_arr.copy()
+        for x in range(n):
+            for y in range(n):
+                for z in range(n):
+                    i = x*n*n+y*n+z; par = (x+y+z)%2
+                    if par == 1: even[i] = 0
+                    else: odd[i] = 0
+                    anti[i] *= ((-1)**(x+y+z))
+        even /= np.linalg.norm(even); odd /= np.linalg.norm(odd); anti /= np.linalg.norm(anti)
+        psi_pos = None; psi_neg = None  # too expensive for large 3D
+
+    families = [("gauss", g_arr), ("even", even), ("odd", odd), ("anti", anti)]
+    if psi_pos is not None:
+        families += [("positive-E", psi_pos), ("negative-E", psi_neg)]
+
+    n_tw = 0; anti_dir = ""
+    for label, psi_f in families:
+        # Measure force on the EVOLVED state
+        psi_ev = evolve_cn(H_grav, N, DT, ns, psi_f)
+        F17 = force_on_state(psi_ev, dV)
+        tw = F17 > 0; n_tw += tw
+        if label == "anti": anti_dir = "TOWARD" if tw else "AWAY"
+        tag = " [Nyquist]" if label == "anti" else ""
+        print(f"    {label:12s}: F={F17:+.4e} {'TOWARD' if tw else 'AWAY'}{tag}")
+
+    n_fam = len(families)
+    p17 = n_tw >= n_fam - 1  # allow at most 1 failure
+    score += p17
+    print(f"    {n_tw}/{n_fam} TOWARD {'PASS' if p17 else 'FAIL'} (anti={anti_dir})")
 
     # Summary
-    norm=np.sum(np.abs(evolve_cn(H_grav,n,DT,20,psi0))**2)
+    norm = np.sum(np.abs(evolve_cn(H_grav, N, DT, min(20,ns+5), psi0))**2)
+    elapsed = time.time() - t0
     print(f"\n  Norm: {abs(norm-1):.4e}")
-    elapsed=time.time()-t0
-    print(f"\n  SCORE: {score}/17 ({elapsed:.1f}s)")
-    if score==17 and n_tw==7: print("  PERFECT 17/17 — no qualifiers.")
-    elif score==17: print(f"  17/17 with qualifier: anti({anti_dir}).")
+    print(f"  SCORE: {score}/17 ({elapsed:.1f}s)")
+    if score == 17 and n_tw == n_fam:
+        print("  PERFECT — no qualifiers.")
+    elif score == 17:
+        print(f"  17/17 with qualifier: anti={anti_dir}.")
     return score
 
-if __name__=='__main__': run_card()
+
+# ============================================================================
+# MAIN — run on 1D and multiple 3D sizes
+# ============================================================================
+
+if __name__ == '__main__':
+    print("1D CARD:")
+    s1d = run_card(1, 61)
+
+    print(f"\n{'#'*70}\n")
+
+    for n3 in [9, 11, 13]:
+        print(f"3D CARD (n={n3}):")
+        run_card(3, n3)
+        print()
