@@ -36,7 +36,9 @@ The centroid oscillates with lattice size (staggered standing-wave artifact on
 periodic BCs). The force is the correct physical observable.
 
 **Native gauge test.** C12 uses Byers-Yang persistent current on the SAME
-Hamiltonian dimension as the card: 1D ring (n=21) in 1D, 3D torus (n=7) in 3D.
+Hamiltonian dimension as the card: 1D ring (n=21) in 1D, 3D torus (n=n) in 3D.
+The 3D gauge row is evaluated on the actual card lattice size, not a reduced
+auxiliary.
 
 **Full family set.** C17 tests gauss, even, odd, anti, positive-E, negative-E
 (6 families). Energy projections computed via eigensolve at n≤9 in 3D.

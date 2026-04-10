@@ -440,7 +440,7 @@ def run_card(dim, n):
     if score == 17 and n_tw == n_fam and full_family:
         print("  PERFECT — no qualifiers.")
     elif score == 17 and not full_family:
-        print(f"  17/17 — C17 tested {n_fam}/6 families (energy projections skipped at n>{int(round(N**(1./dim)))}).")
+        print(f"  17/17 — C17 tested {n_fam}/6 families (energy projections skipped, N>{1000}).")
     elif score == 17:
         print(f"  17/17 with qualifier: anti={anti_dir}.")
     return score
