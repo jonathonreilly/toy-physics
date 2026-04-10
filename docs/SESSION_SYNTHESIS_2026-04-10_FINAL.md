@@ -181,25 +181,25 @@ The full-suite baseline is now frozen:
 - `frontier_staggered_full_suite.py`: `29/38` in 1D, `28/38` in 3D
 - `frontier_staggered_17card.py`: retained force-based canonical card
 
-The next work is:
+### Closed since initial freeze
 
-1. **Endogenous-field scale closure**: the solved/source-generated `Φ` now has
-   the right sign, exact linearity, exact additivity, and exact norm behavior,
-   but it is still too weak on the cycle-bearing graph families. The next move
-   is a real closure attempt, not more small source-preconditioning sweeps.
+1. **Layered gauge holdout**: CLOSED. Layered cycle graph (2-connection per node)
+   has cycles and passes native gauge (sin R²=0.974). Integrated into battery.
 
-2. **Layered gauge closure**: native gauge/current now closes on the
-   cycle-bearing stress families and on explicit layered brickwall / plaquette
-   geometries. The sparse layered DAG-like family remains a useful negative
-   control.
+2. **Source-sector diagnostics**: DONE. Shell/spectral analysis in B9 shows the
+   Poisson Green function is structurally smoother than 1/r: spectral ratio 8-19%
+   at low modes, G_eff=12-178. Coupling-constant mismatch, not physics failure.
 
-3. **Source-sector diagnostics**: compare `phi_solved(depth)` against
-   `phi_ext(depth)` directly so the source-scale miss is explained
-   structurally, not just numerically.
+3. **Iterative endogenous closure**: DONE. 15/15 TOWARD on both cycle-bearing
+   families with density-sourced Φ re-solved each step.
 
-4. **Secondary cleanup only**: periodic-lattice polishing and centroid-based
-   diagnostics are lower priority unless the new source/gauge closure results
-   force us back to them.
+### Remaining work
+
+1. **Endogenous-field scale**: G_eff=12-178 is characterized but not closed.
+   Predicted to shrink with graph size. Compensable by coupling renormalization.
+2. **True self-gravity**: full ρ→Φ→ψ→ρ iteration to convergence.
+3. **Two-field coupling**: scalar Φ field + staggered ψ field.
+4. **Larger graph tests**: verify G_eff scaling prediction.
 
 For the active backlog and agent brief, see:
 - `docs/WORK_BACKLOG_2026-04-10.md`
