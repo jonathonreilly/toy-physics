@@ -19,6 +19,11 @@ This backlog is ordered by value to the main project, not by ease.
 - Native gauge/current closure is now retained on the cycle-bearing stress
   families, and explicit layered brickwall / plaquette geometries also close
   the current probe.
+- True self-gravity is now retained on the three cycle-bearing graph families
+  in [`frontier_staggered_self_gravity.py`](../scripts/frontier_staggered_self_gravity.py).
+- A first two-field endogenous coupling is now retained as a prototype in
+  [`frontier_two_field_coupling.py`](../scripts/frontier_two_field_coupling.py),
+  but it still uses relaxation dynamics for `Phi`.
 - The sparse layered DAG-like family remains a useful negative control; it
   still fails the gauge/current threshold.
 - The main blocker is no longer transport portability. It is self-consistent
@@ -35,6 +40,8 @@ This backlog is ordered by value to the main project, not by ease.
 - Next seam: iterative endogenous closure on top of the retained nonlocal Green
   map, because the one-step self-refresh gap is still `O(1)` on the
   cycle-bearing families.
+- After that, harden the two-field `Phi` dynamics rather than multiplying more
+  one-way background-field probes.
 - Acceptance gate:
   preserve the retained `resistance_yukawa` closure level while reducing the
   one-step self-refresh gap, without losing TOWARD sign, source linearity,

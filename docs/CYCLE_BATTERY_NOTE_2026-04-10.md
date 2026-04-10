@@ -6,7 +6,7 @@
 ## Summary
 
 The staggered fermion + potential gravity architecture passes a 9-row
-battery on two cycle-bearing bipartite graph families:
+battery on three cycle-bearing bipartite graph families:
 
 | Row | Random Geometric (36) | Growing (48) | Layered Cycle (24) |
 |-----|:---:|:---:|:---:|

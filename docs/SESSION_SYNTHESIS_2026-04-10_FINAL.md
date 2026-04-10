@@ -100,8 +100,11 @@ Observable: Force F = -⟨dV/dz⟩ for gravity direction/magnitude
 - **Centroid-based gravity convergence in 3D**: The centroid oscillates with
   lattice size on periodic BCs (finite-size recurrence). Force converges.
   Centroid would need n >> 13 in 3D.
-- **Topology portability**: Tested on periodic cubic only. Extending to
-  random/growing graphs requires adapting staggering conventions.
+- **Topology portability beyond the cubic lattice**: the retained force battery,
+  native gauge closure, and self-gravity probe now survive on random
+  geometric, growing, and layered cycle bipartite graph families. The open
+  portability question is now about the boundary of the admissible graph
+  class, not whether the mechanism is cubic-only.
 - **Dynamic growth / cosmology / Hawking**: Static lattice.
 
 ## Frozen Scores
@@ -193,13 +196,27 @@ The full-suite baseline is now frozen:
 3. **Iterative endogenous closure**: DONE. 15/15 TOWARD on both cycle-bearing
    families with density-sourced Φ re-solved each step.
 
+4. **True self-gravity**: DONE. `frontier_staggered_self_gravity.py` now closes
+   5/5 on all three cycle-bearing families with 20/20 TOWARD force, exact norm,
+   zero sign flips, and measurable contraction versus free evolution.
+
+5. **Two-field coupling**: PROTOTYPED. `frontier_two_field_coupling.py` closes
+   4/4 on the retained graph with a separate scalar Φ field sourced by `|ψ|²`,
+   30/30 TOWARD force, exact matter norm, and bounded Φ growth.
+
 ### Remaining work
 
 1. **Endogenous-field scale**: G_eff=12-178 is characterized but not closed.
-   Predicted to shrink with graph size. Compensable by coupling renormalization.
-2. **True self-gravity**: full ρ→Φ→ψ→ρ iteration to convergence.
-3. **Two-field coupling**: scalar Φ field + staggered ψ field.
-4. **Larger graph tests**: verify G_eff scaling prediction.
+   The miss is structural on the current graph Poisson map, not a sign or
+   linearity failure.
+2. **Two-field hardening**: replace the current relaxation update for Φ with a
+   more physical wave or retarded-field law, then rerun the retained force
+   battery.
+3. **Self-gravity portability**: extend the retained self-gravity probe beyond
+   the current three cycle-bearing graph families and quantify how contraction
+   scales with graph size and geometry.
+4. **Larger graph tests**: map how the structural source-scale gap and the
+   retained force battery evolve with size on the admissible graph families.
 
 For the active backlog and agent brief, see:
 - `docs/WORK_BACKLOG_2026-04-10.md`
@@ -208,3 +225,7 @@ For the active backlog and agent brief, see:
 The current retained cycle-bearing integration is frozen in:
 - `scripts/frontier_staggered_cycle_battery.py`
 - `docs/CYCLE_BATTERY_NOTE_2026-04-10.md`
+
+Companion retained probes:
+- `scripts/frontier_staggered_self_gravity.py`
+- `scripts/frontier_two_field_coupling.py`
