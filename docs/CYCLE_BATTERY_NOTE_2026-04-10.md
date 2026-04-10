@@ -62,10 +62,42 @@ absolute force scale requires a graph-dependent coupling constant G_eff.
 This is analogous to renormalization — the bare coupling runs with the
 lattice cutoff.
 
+## Self-Gravity Probe (Retained)
+
+**Script:** `frontier_staggered_self_gravity.py`
+
+True self-gravity: no external source. |ψ|² generates Φ via screened Poisson,
+which acts back on the wavepacket. Battery:
+
+| Row | Random Geometric (36) | Growing (48) | Layered Cycle (24) |
+|-----|:---:|:---:|:---:|
+| S1 Force TOWARD | 20/20 | 20/20 | 20/20 |
+| S2 Contraction | 0.94 (6%) | 0.99 (1%) | **0.64 (36%)** |
+| S3 Norm | 4.4e-16 | 4.4e-16 | 6.7e-16 |
+| S4 Stability | 0 flips | 0 flips | 0 flips |
+| S5 Families | 3/3 TW | 3/3 TW | 3/3 TW |
+| **Score** | **5/5** | **5/5** | **5/5** |
+
+The layered cycle shows strongest contraction (36%) because the layered
+structure channels the wavepacket along a preferred direction.
+
+## Two-Field Coupling (Prototype)
+
+**Script:** `frontier_two_field_coupling.py`
+
+Separate scalar Φ field (diffusion+source) and staggered ψ field (CN):
+- Φ grows from zero, sourced by β·|ψ|²
+- ψ evolves under V = -m·Φ
+- Force: 30/30 TOWARD
+- Width: contracts to 0.9992 (gravitational binding)
+- Φ bounded, ψ norm exact (9e-16)
+
+This is the first two-field endogenous gravity result in the project.
+
 ## Remaining Caveats
 
 1. **All three cycle-bearing families integrated** — random geometric,
-   growing, and layered cycle all pass 9/9.
+   growing, and layered cycle all pass 9/9 (battery) and 5/5 (self-gravity).
 2. **Force is primary** — no centroid rows. The centroid has a period-4
    oscillation on staggered periodic lattices.
 3. **B9 is characterization, not pass/fail** — the gap is reported but
