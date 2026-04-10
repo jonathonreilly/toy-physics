@@ -68,6 +68,12 @@ chirality components (d = spatial dimensions). Per layer:
   3+1D: α=-0.56, 6/7 TOWARD (R²=0.90)
   Not Newtonian (-1.0). Softened by beam spreading (~d^0.5)
 
+### Achromatic gravity:
+  The operator-level coupling is k-independent at fixed θ, but the corrected
+  carrier-k wavepacket sweep does not support achromatic deflection in 1+1D.
+  On the current harness, the measured deflection varies strongly with k
+  (CV≈2.66), so broadband attraction should not be claimed from this note.
+
 ### Convergence (overnight view; narrowed later):
   The overnight sweep suggested a substantial TOWARD basin in 3+1D periodic
   chiral transport.
@@ -132,6 +138,7 @@ quantum walk. What's NEW:
 
 1. Gravitational coupling via θ-modulation (not in the literature)
 2. F∝M=1.0 from amplitude coupling (new mechanism)
-3. 10/10 closure card across 3 spacetime dimensions (new validation)
+3. 10/10 closure cards at retained operating points, with the 3+1D claim
+   narrowed to an operating-point closure card plus a TOWARD basin
 4. The connection to the axiom chain (Axiom 6 → kernel, Axiom 8 → gravity)
 5. Klein-Gordon + gravity + Born + gauge in one framework

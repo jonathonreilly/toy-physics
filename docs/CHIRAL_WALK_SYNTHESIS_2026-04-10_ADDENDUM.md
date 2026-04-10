@@ -12,8 +12,10 @@ shows a stronger limitation.
 
 - **1+1D chiral:** the wide-lattice result remains strong. Exact lattice
   Klein-Gordon in the low-k limit, Born-clean barrier behavior, U(1) gauge,
-  exact light cone, and stable TOWARD deflection on the wide reflecting lattice
-  are all still retained.
+  exact light cone, and stable localized-source TOWARD deflection on the wide
+  reflecting lattice are still retained. But a corrected carrier-k sweep at
+  fixed `theta` does **not** support full achromaticity of the measured
+  deflection.
 - **2+1D chiral:** the closure-card operating point, approximate low-k
   Klein-Gordon behavior, and sub-percent superposition remain retained as
   overnight results.

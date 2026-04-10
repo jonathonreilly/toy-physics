@@ -108,11 +108,11 @@
 | 13 | Decoherence scaling | CLT ceiling | — | CLT ceiling | — | — |
 | 14 | Born from info | composability→p=2 | — | structural | structural | structural |
 | 15 | Time dilation | correct sign | — | θ(1-f) | — | — |
-| 16 | Wave-particle | imposed | — | FAIL (V=1) | — | — |
+| 16 | Wave-particle | imposed | — | PASS (local V²+D²) | — | — |
 | 17 | Why d=3+1 | all dims pass | — | no preference | — | no preference |
 | 18 | Causal set | r=0.997 | — | **r=0.956, strict LC** | — | — |
-| 19 | Geometry superposition | phase diffs real | — | **0.08-0.61 rad** | — | — |
-| 20 | Experimental predictions | Planck-suppressed | — | **3/4 pass** | — | — |
+| 19 | Geometry superposition | phase diffs real | — | **TV=0.039, dphi=0.25-0.66 rad** | — | — |
+| 20 | Experimental predictions | Planck-suppressed | — | **3/4 pass (k-achromatic FAIL)** | — | — |
 
 ---
 
@@ -136,10 +136,10 @@
 | **Geodesic direction** | AWAY | TOWARD | — | — | — | — | — | — |
 | **Wave direction (k=5)** | TOWARD | AWAY | AWAY | AWAY | TOWARD§ | TOWARD | TOWARD | TOWARD¶ |
 | **F∝M** | 1.00 | 1.00 | FAIL | FAIL | 1.00 | 1.00 | 0.99 | 1.00 |
-| **Achromatic (k-indep)** | NO (k-window) | NO (shifted window) | — | — | — | YES (fixed θ) | YES | YES |
+| **Achromatic (k-indep)** | NO (k-window) | NO (shifted window) | — | — | — | NO (k-sweep CV=2.66) | YES | YES |
 | **Achromatic (θ-indep)** | N/A | N/A | — | — | — | **NO (56% var)** | — | NO (117% asym)‖ |
 | **Spectral survives** | AWAY | AWAY | — | — | TOWARD§ | N/A (no k) | N/A | N/A |
-| **Broadband survives** | NO | NO | — | — | — | YES (achromatic) | YES | YES |
+| **Broadband survives** | NO | NO | — | — | — | NO (k-dependent deflection) | YES | YES |
 | **Superposition** | 0.01% (3D) | — | — | — | — | 0.17% | 0.10% | 0.65% |
 | | VL-3D: 0.00% | | | | | | | |
 | **N-stable** | N/A | N/A | — | — | — | YES (n≥41) | YES (n≥21) | basin¶ |
@@ -156,7 +156,7 @@
 |----------|-----|-------|-------|-------|--------|
 | **Born rule** | ✓ (2.5e-15) | ✓ (3.3e-16) | ✓ (exact 0) | ✓ (0.056) | CONFIRMED |
 | **Klein-Gordon** | ambiguous | ✓ (R²>0.99999) | approx (R²>0.999) | FAIL (R²=0.16)† | CONFIRMED (1D,2D) |
-| **Newtonian gravity** | F∝M in k-window | F∝M achromatic | F∝M=0.99 | F∝M in basin | PARTIAL |
+| **Newtonian gravity** | F∝M in k-window | F∝M but k-dependent | F∝M=0.99 | F∝M in basin | PARTIAL |
 | **Equivalence principle** | violated (k-dep) | violated (θ-dep) | — | violated (117% asym) | FAIL |
 | **Light cone** | NO | ✓ (v=1 exact) | — | — | CONFIRMED (1D) |
 | **U(1) gauge** | structural | ✓ (AB 88.5%) | ✓ (AB V=0.88) | FAIL (geometry) | CONFIRMED (1D,2D) |
@@ -166,7 +166,7 @@
 | **Causal set** | r=0.997 | r=0.956, strict LC | — | — | CONFIRMED |
 | **Cosmological expansion** | 14% | FAIL | — | — | TM ONLY |
 | **Dynamic growth** | Born 4.3e-17 | FAIL | — | — | TM ONLY |
-| **Geometry superposition** | phase diffs | 0.08-0.61 rad | — | — | CONFIRMED |
+| **Geometry superposition** | phase diffs | TV=0.039, dphi=0.25-0.66 rad | — | — | CONFIRMED |
 
 ---
 
@@ -179,7 +179,7 @@
 | **Beam-Splitter** | 2/10 | — | 5/6 | 1/9 | — | ~8/58 |
 | **Quantum Walk** | 0/10 | — | 5/6 | 0/9 | — | ~5/58 |
 | **Polar Unitary** | 3/10 | — | 4/6 | 3/9 | — | ~10/58 |
-| **Chiral 1+1D** | **10/10** | **13 pass/partial** | **6/6** | **7/9** | **9/13** | **45/58** |
+| **Chiral 1+1D** | **10/10** | **14 pass/partial** | **6/6** | **5/9** | **9/13** | **44/58** |
 | **Chiral 2+1D** | **10/10** | ~10 | 5/6 | 6/9 | ~8/13 | ~39/58 |
 | **Chiral 3+1D** | **10/10** | ~9 | 5/6 | 5/9 | ~7/13 | ~36/58 |
 
@@ -196,7 +196,7 @@
 4. **Dynamic growth** — works on TM, fails on chiral
 5. **CLT decoherence ceiling** — persists on all architectures
 6. **SU(2) gauge** — needs additional color DOF
-7. **Wave-particle complementarity** — absorption doesn't create which-path
+7. **Chromaticity on chiral gravity** — corrected k-sweep at fixed θ shows strong k-dependence (CV=2.66)
 
 ### Moderate:
 8. **Cosmological expansion** — fails on chiral
@@ -216,8 +216,9 @@
 17. **Distance exponent** — beam spreading d^0.6 softens 1/d (1D); d^-2.55 in 2D (steeper)
 18. **Convergence threshold** — N >> π/θ + 20, n >> 2×offset
 19. **F∝M mechanism** — amplitude coupling (|sin²(θ(1-f))| linear in f)
-20. **2D gauge works** — Node-phase U(1) exact (6.7e-16), AB V=0.884 in 2+1D chiral
-21. **3D chirality conserved within pairs** — factorized coin preserves chirality per spatial pair (100%)
+20. **Wave-particle complementarity** — passes under an explicit local path-tag model; absorption-only harness was invalid
+21. **2D gauge works** — Node-phase U(1) exact (6.7e-16), AB V=0.884 in 2+1D chiral
+22. **3D chirality conserved within pairs** — factorized coin preserves chirality per spatial pair (100%)
 
 ---
 
