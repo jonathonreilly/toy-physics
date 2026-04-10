@@ -12,6 +12,10 @@ This backlog is ordered by value to the main project, not by ease.
 - Add one more graph family if it clarifies the boundary between "portable" and "periodic-lattice only".
 - Keep the retained battery narrow: Born/linearity, norm, force sign, `F∝M`,
   achromatic force, equivalence, robustness, and gauge if cycles exist.
+- Attack native gauge/current closure on the cycle-bearing layered or stress
+  graphs using the graph-native staggered transport law. Do not fall back to
+  1D helpers; the goal is a native graph-loop or flux win on the same
+  transport law.
 
 ## P1 - Backreaction
 
