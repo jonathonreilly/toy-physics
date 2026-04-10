@@ -55,6 +55,13 @@ SOURCE_Y = 10
 BARRIER_LAYER = 8
 SLITS = [8, 10, 12]
 SOFTENING = 0.1
+WIDE_N_Y = 41
+WIDE_SOURCE_Y = 20
+WIDE_MASS_X = 10
+WIDE_DISTANCE_OFFSETS = list(range(2, 11))
+WIDE_MULTI_L_RANGE = list(range(8, 24))
+WIDE_MULTI_L_SAFE_OFFSET = 4
+WIDE_MULTI_L_STRESSED_OFFSET = 8
 
 
 # ---------------------------------------------------------------------------
@@ -163,6 +170,33 @@ def fit_power_law(strengths: list[float], deltas: list[float]) -> tuple[float, f
     return alpha, r2
 
 
+def gravity_observable(
+    n_y: int,
+    n_layers: int,
+    strength: float,
+    mass_x: int,
+    mass_y: int,
+    source_y: int,
+) -> tuple[float, str, float, float]:
+    """Centroid shift and sign from whether the field pulls the centroid closer to mass."""
+    field = make_localized_field(n_layers, n_y, strength, mass_x, mass_y)
+    field0 = np.zeros_like(field)
+    psi_0, _ = propagate_chiral_theta(n_y, n_layers, field0, THETA0, source_y)
+    psi_f, _ = propagate_chiral_theta(n_y, n_layers, field, THETA0, source_y)
+    c0 = centroid(detector_probs(psi_0, n_y))
+    cf = centroid(detector_probs(psi_f, n_y))
+    delta = cf - c0
+    dist0 = abs(c0 - mass_y)
+    distf = abs(cf - mass_y)
+    if distf + 1e-15 < dist0:
+        direction = "TOWARD"
+    elif distf > dist0 + 1e-15:
+        direction = "AWAY"
+    else:
+        direction = "NONE"
+    return delta, direction, c0, cf
+
+
 # ---------------------------------------------------------------------------
 # Tests
 # ---------------------------------------------------------------------------
@@ -229,13 +263,9 @@ def test_gravity(field: np.ndarray) -> bool:
     print("\n" + "=" * 72)
     print("TEST 3: GRAVITY DIRECTION")
     print("=" * 72)
-    field0 = np.zeros_like(field)
-    psi_0, _ = propagate_chiral_theta(N_Y, N_LAYERS, field0, THETA0, SOURCE_Y)
-    psi_f, _ = propagate_chiral_theta(N_Y, N_LAYERS, field, THETA0, SOURCE_Y)
-    c0 = centroid(detector_probs(psi_0, N_Y))
-    cf = centroid(detector_probs(psi_f, N_Y))
-    delta = cf - c0
-    direction = "TOWARD" if delta > 0 else ("AWAY" if delta < 0 else "NONE")
+    delta, direction, c0, cf = gravity_observable(
+        N_Y, N_LAYERS, STRENGTH, MASS_X, MASS_Y, SOURCE_Y
+    )
     print(f"  source y = {SOURCE_Y}, mass y = {MASS_Y}")
     print(f"  centroid flat  = {c0:.6f}")
     print(f"  centroid field = {cf:.6f}")
@@ -326,6 +356,70 @@ def test_signal_speed() -> bool:
     return ok
 
 
+def test_distance_law_wide() -> tuple[bool, float, float, int]:
+    print("\n" + "=" * 72)
+    print("TEST 6: DISTANCE LAW (wider lattice)")
+    print("=" * 72)
+    deltas = []
+    toward_count = 0
+    for d in WIDE_DISTANCE_OFFSETS:
+        mass_y = WIDE_SOURCE_Y + d
+        delta, direction, c0, cf = gravity_observable(
+            WIDE_N_Y, N_LAYERS, STRENGTH, WIDE_MASS_X, mass_y, WIDE_SOURCE_Y
+        )
+        if direction == "TOWARD":
+            toward_count += 1
+        deltas.append(delta)
+        print(
+            f"  d={d:2d}: mass_y={mass_y:2d}, centroid_flat={c0:.6f}, "
+            f"centroid_field={cf:.6f}, delta={delta:+.6e}, {direction}"
+        )
+
+    alpha, r2 = fit_power_law(WIDE_DISTANCE_OFFSETS, deltas)
+    ok = toward_count == len(WIDE_DISTANCE_OFFSETS)
+    print(
+        f"  toward count: {toward_count}/{len(WIDE_DISTANCE_OFFSETS)}"
+    )
+    print(f"  fit |delta| ~ d^(-alpha): alpha = {alpha:.4f}, R^2 = {r2:.4f}")
+    print(f"  {'PASS' if ok else 'CHECK'}")
+    return ok, alpha, r2, toward_count
+
+
+def _multi_l_case(mass_offset: int) -> tuple[int, bool]:
+    mass_y = WIDE_SOURCE_Y + mass_offset
+    deltas = []
+    toward_count = 0
+    for n_layers in WIDE_MULTI_L_RANGE:
+        delta, direction, _, _ = gravity_observable(
+            WIDE_N_Y, n_layers, STRENGTH, WIDE_MASS_X, mass_y, WIDE_SOURCE_Y
+        )
+        if direction == "TOWARD":
+            toward_count += 1
+        deltas.append(abs(delta))
+        print(f"  L={n_layers:2d}: delta={delta:+.6e}, {direction}")
+    growth = deltas[-1] > deltas[0]
+    print(f"  toward count: {toward_count}/{len(WIDE_MULTI_L_RANGE)}")
+    print(
+        f"  |delta| start={deltas[0]:.6e}, end={deltas[-1]:.6e}, "
+        f"net growth={growth}"
+    )
+    return toward_count, growth
+
+
+def test_multi_l_wide() -> tuple[bool, int, bool, int, bool]:
+    print("\n" + "=" * 72)
+    print("TEST 7: MULTI-L SIGN / PARITY CHECK (wider lattice)")
+    print("=" * 72)
+    print(f"  Boundary-safe offset d={WIDE_MULTI_L_SAFE_OFFSET}")
+    safe_toward, safe_growth = _multi_l_case(WIDE_MULTI_L_SAFE_OFFSET)
+    print()
+    print(f"  Stressed offset d={WIDE_MULTI_L_STRESSED_OFFSET}")
+    stressed_toward, stressed_growth = _multi_l_case(WIDE_MULTI_L_STRESSED_OFFSET)
+    ok = safe_toward == len(WIDE_MULTI_L_RANGE)
+    print(f"  {'PASS' if ok else 'CHECK'}")
+    return ok, safe_toward, safe_growth, stressed_toward, stressed_growth
+
+
 # ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
@@ -359,6 +453,10 @@ def main() -> None:
     fm_pass, alpha, r2 = test_f_prop_m()
     results["f_prop_m"] = fm_pass
     results["signal_speed"] = test_signal_speed()
+    dist_pass, dist_alpha, dist_r2, dist_toward = test_distance_law_wide()
+    results["distance_wide"] = dist_pass
+    multi_pass, multi_safe_toward, multi_safe_growth, multi_stressed_toward, multi_stressed_growth = test_multi_l_wide()
+    results["multi_l_wide"] = multi_pass
     elapsed = time.time() - t0
 
     print("\n" + "=" * 72)
@@ -378,6 +476,18 @@ def main() -> None:
     print("    - This closure card is theta-coupled only; k is a reference label.")
     print("    - Gravity and F∝M are reported on the same localized harness.")
     print("    - Signal speed is a finite-support style check from the shift rule.")
+    print(
+        f"    - Wider distance law: {dist_toward}/{len(WIDE_DISTANCE_OFFSETS)} "
+        f"TOWARD, alpha={dist_alpha:.4f}, R^2={dist_r2:.4f}."
+    )
+    print(
+        f"    - Wider multi-L safe offset: {multi_safe_toward}/{len(WIDE_MULTI_L_RANGE)} "
+        f"TOWARD, net |delta| growth={multi_safe_growth}."
+    )
+    print(
+        f"    - Wider multi-L stressed offset: {multi_stressed_toward}/{len(WIDE_MULTI_L_RANGE)} "
+        f"TOWARD, net |delta| growth={multi_stressed_growth}."
+    )
 
 
 if __name__ == "__main__":
