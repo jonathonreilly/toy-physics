@@ -49,6 +49,10 @@ This backlog is ordered by value to the main project, not by ease.
   [`frontier_staggered_cycle_break_frontier.py`](../scripts/frontier_staggered_cycle_break_frontier.py):
   the earliest clean failure is a gauge/current collapse on the random
   geometric family under dense shortcuts, not a force-sign collapse.
+- The matched frontier slice is now frozen in
+  [`frontier_staggered_cycle_break_slice.py`](../scripts/frontier_staggered_cycle_break_slice.py):
+  a quality-matched local control stays retained through `extra=6`, while the
+  frontier branch fails native gauge at `extra=5/6`.
 - The sparse layered DAG-like family remains a useful negative control; it
   still fails the gauge/current threshold.
 - The main blocker is no longer transport portability. It is self-consistent
