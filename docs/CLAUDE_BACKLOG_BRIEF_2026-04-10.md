@@ -1,12 +1,11 @@
-# Claude Handoff: Next Significant Work
+# Claude Handoff: Current Work Package
 
 ## Objective
 
-Push the project forward in the most significant way:
-
-1. test whether the retained staggered Dirac + potential gravity mechanism
-   survives on axiom-like graph families
-2. then prototype endogenous / backreacting gravity
+Push the project forward in the most significant way by testing whether the
+retained staggered Dirac + potential gravity mechanism survives on axiom-like
+graph families, then making gravity endogenous by generating `Phi` from a
+source sector on the same graph.
 
 Do **not** spend main effort on periodic-lattice polish or chiral-3D rescue.
 
@@ -23,9 +22,25 @@ Do **not** spend main effort on periodic-lattice polish or chiral-3D rescue.
 - Scalar graph lane is the gravity/base-layer control.
 - Chiral coin gravity is a diagnostic / negative control.
 
-## Workstreams
+## Backlog Order
 
-### 1. Graph portability (highest priority)
+### 1. Backreaction prototype
+
+Replace external `V = m * Phi` with a source-generated `Phi` on the same
+graph/lattice.
+
+Minimum acceptable prototype:
+- source sector or density-generated `Phi`
+- staggered matter evolves in that `Phi`
+- minimal two-body / source-response / stability check
+- force remains the primary gravity observable
+
+Required output:
+- one prototype script under `scripts/`
+- one note under `docs/` that states exact results and failure modes
+- use `docs/STAGGERED_BACKREACTION_NOTE.md` as the prototype spec
+
+### 2. Graph portability of staggered / Dirac transport
 
 Build staggered / Kähler-Dirac transport on:
 - bipartite random geometric graphs
@@ -45,19 +60,6 @@ Start with a tight retained battery:
 Required output:
 - one retained harness
 - one short note with honest pass/fail language
-
-### 2. Backreaction prototype
-
-Replace external `V = m·Φ` with a source-generated `Φ` on the same graph.
-
-Minimum acceptable prototype:
-- source sector or density-generated `Φ`
-- staggered matter evolves in that `Φ`
-- rerun source-response / two-body / stability checks
-
-Required output:
-- one prototype script
-- one note that distinguishes external background vs endogenous coupling
 
 ### 3. Graph-Dirac design memo
 
@@ -80,6 +82,6 @@ Required output:
 
 ## Success Condition
 
-The project materially advances if staggered transport plus potential gravity
-survives off the periodic cubic lattice. If it does not, pivot to a two-field
-graph theory with scalar gravity sector + staggered matter sector.
+The project materially advances if staggered transport plus source-generated
+potential survives off the periodic cubic lattice. If it does not, pivot to a
+two-field graph theory with scalar gravity sector + staggered matter sector.

@@ -181,9 +181,7 @@ The full-suite baseline is now frozen:
 - `frontier_staggered_full_suite.py`: `29/38` in 1D, `28/38` in 3D
 - `frontier_staggered_17card.py`: retained force-based canonical card
 
-So the next work is not "more scorekeeping." It is testing whether the retained
-staggered mechanism survives outside periodic cubic lattices and whether gravity
-can become endogenous rather than externally imposed.
+The next work is not "more scorekeeping." It is:
 
 1. **Graph portability (highest priority)**: extend the staggered / Kähler-Dirac
    transport law to bipartite random geometric graphs, growing graphs, and
@@ -193,7 +191,7 @@ can become endogenous rather than externally imposed.
 2. **Backreaction prototype**: replace the external source potential with a
    graph-solved source sector or density-generated `Φ`, then rerun the two-body /
    response rows. This is the first step from "matter in a background" to an
-   interacting model.
+   interacting model. See `STAGGERED_BACKREACTION_NOTE.md`.
 
 3. **Graph-Dirac design memo**: write down the graph invariants the staggered
    lane actually needs (bipartite structure, orientation, layering, admissible
