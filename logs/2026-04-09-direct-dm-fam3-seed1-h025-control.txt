@@ -1,0 +1,48 @@
+============================================================================================================
+WAVE DIRECT-DM H=0.25 CONTROL BATCH
+============================================================================================================
+family=Fam3 drift=0.50 restore=0.90 seed=1 H=0.250
+Exact null plus weak-field ladder on one predeclared fine-H pair
+
+[strength=0.000000]
+  NL=60  PW=6.000  src_layer=20
+  start_z_real=3.000  end_z_real=0.000
+  dM(early)    = +0.000000
+  dM(late)     = +0.000000
+  delta_hist   = +0.000000
+  R_hist       = +0.00%
+  null         = exact S=0 control
+
+[strength=0.002000]
+  NL=60  PW=6.000  src_layer=20
+  start_z_real=3.000  end_z_real=0.000
+  dM(early)    = +0.002397
+  dM(late)     = +0.003269
+  delta_hist   = -0.000872
+  R_hist       = -26.68%
+  delta_hist/s = -0.436079
+
+[strength=0.004000]
+  NL=60  PW=6.000  src_layer=20
+  start_z_real=3.000  end_z_real=0.000
+  dM(early)    = +0.004772
+  dM(late)     = +0.006552
+  delta_hist   = -0.001780
+  R_hist       = -27.16%
+  delta_hist/s = -0.444901
+
+[strength=0.008000]
+  NL=60  PW=6.000  src_layer=20
+  start_z_real=3.000  end_z_real=0.000
+  dM(early)    = +0.009457
+  dM(late)     = +0.013158
+  delta_hist   = -0.003701
+  R_hist       = -28.13%
+  delta_hist/s = -0.462626
+
+============================================================================================================
+SUMMARY
+============================================================================================================
+null max |delta_hist| = 0.000e+00
+delta_hist sign pattern = - - -
+|delta_hist/s| spread   = +5.93%
