@@ -145,41 +145,37 @@ def run_16_card(name, adj, pos, mass=0.3, g=5.0, S=5e-4, dt=0.05, n_steps=20):
 
     def toward(d): return (d>0)==mass_above
 
-    # C1: Born rule via LINEARITY test.
-    # Born rule follows from linearity: U(a*psi_1 + b*psi_2) = a*U(psi_1) + b*U(psi_2).
-    # Test: create two different initial states, evolve separately and as sum,
-    # check that U(a+b) = U(a) + U(b) to machine precision.
-    # This is more fundamental than the 3-slit test and works on any graph.
+    # C1: Born rule via Sorkin 3-slit test.
+    # I3 = P_123 - P_12 - P_13 - P_23 + P_1 + P_2 + P_3
+    # Born holds when |I3|/P ~ 0 (no 3-body interference).
+    # Use 3 nodes at different distances from center as "slits".
     dists_c = np.sqrt(np.sum((pos-pos[ci])**2, axis=1))
     nearby = np.argsort(dists_c)
-    psi_a = gaussian_on_graph(pos, ci, sigma=0.1)
-    second_node = nearby[min(5, N_nodes-1)]  # a node at some distance
-    psi_b = gaussian_on_graph(pos, second_node, sigma=0.1)
-    psi_sum = (psi_a + psi_b) / np.sqrt(2)
-    phi_a = ev(psi=psi_a); phi_b = ev(psi=psi_b)
-    phi_sum = ev(psi=psi_sum)
-    phi_check = (phi_a + phi_b) / np.sqrt(2)
-    lin_err = np.linalg.norm(phi_sum - phi_check) / max(np.linalg.norm(phi_sum), 1e-30)
-    p = lin_err < 1e-6; score += p
-    print(f"  [C1]  Born/linearity err={lin_err:.4e} {'PASS' if p else 'FAIL'}")
-
-    # Also keep slit indices for C12 AB-proxy
-    slits_idx = [nearby[1], nearby[2], nearby[3]]
+    slits_idx = [nearby[1], nearby[3], nearby[5]] if N_nodes > 5 else [nearby[1], nearby[2], nearby[3]]
+    bl_steps = max(2, n_steps // 3)  # barrier layer
 
     def ev_barrier(sl_list, A_phase=0):
-        psi = psi0.copy()
-        bl = n_steps // 3
-        for step in range(n_steps):
-            if step == bl:
-                mask = np.zeros(N_nodes)
-                for s in sl_list: mask[s] = 1.0
-                psi *= mask
-                if A_phase != 0 and len(sl_list) >= 2:
-                    psi[sl_list[-1]] *= np.exp(1j*A_phase)
-                psi_norm = np.linalg.norm(psi)
-                if psi_norm > 0: psi /= psi_norm
-            psi = evolve_cn(L, N_nodes, mass, dt, 1, psi)
+        """Evolve to barrier, project onto slits, evolve remaining steps."""
+        psi = evolve_cn(L, N_nodes, mass, dt, bl_steps, psi0)
+        mask = np.zeros(N_nodes)
+        for s in sl_list: mask[s] = 1.0
+        psi *= mask  # absorption projection (no renormalization)
+        if A_phase != 0 and len(sl_list) >= 2:
+            psi[sl_list[-1]] *= np.exp(1j * A_phase)
+        remaining = n_steps - bl_steps
+        if remaining > 0:
+            psi = evolve_cn(L, N_nodes, mass, dt, remaining, psi)
         return psi
+
+    rho_123 = np.abs(ev_barrier(slits_idx))**2
+    P_total = np.sum(rho_123)
+    rho_singles = [np.abs(ev_barrier([s]))**2 for s in slits_idx]
+    rho_pairs = [np.abs(ev_barrier([slits_idx[i], slits_idx[j]]))**2
+                 for i, j in [(0,1), (0,2), (1,2)]]
+    I3 = rho_123 - sum(rho_pairs) + sum(rho_singles)
+    born = np.sum(np.abs(I3)) / P_total if P_total > 1e-20 else 0
+    p = born < 1e-2; score += p
+    print(f"  [C1]  Sorkin |I3|/P={born:.4e} {'PASS' if p else 'FAIL'}")
 
     # C2: d_TV
     ru = np.abs(ev_barrier([slits_idx[0]]))**2
