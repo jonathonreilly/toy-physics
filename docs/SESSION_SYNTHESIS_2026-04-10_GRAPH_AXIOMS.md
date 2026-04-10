@@ -139,6 +139,16 @@ Two follow-up probes sharpen the interpretation of the scalar graph lane.
   C12 is a native persistent-current test on the actual card lattice.
   All 7 state families including anti/Nyquist are TOWARD under force.
 
+- **Staggered graph portability probe**:
+  [`frontier_staggered_graph_portability.py`](../scripts/frontier_staggered_graph_portability.py)
+  is the current backlog probe for non-cubic graph families. The first retained
+  run on bipartite random geometric, bipartite growing, and layered bipartite
+  DAG-compatible graphs keeps the staggered force battery intact: Born/linearity
+  `~5e-16`, norm `~1e-15`, force sign TOWARD, `F∝M = 1.000`, achromatic force
+  `~1e-16`, equivalence `~1e-16`, robustness `3/3`, and gauge response on the
+  cycle-bearing families. This is the first portability checkpoint, not a new
+  canonical card.
+
 ## The core tension (still open)
 
 The architectures that DERIVE the most physics (chiral walk: KG, light cone,

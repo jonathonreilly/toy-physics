@@ -1,88 +1,42 @@
-# Claude Handoff: Next Significant Work
+# Claude Backlog Brief
 
-## Objective
+Use this brief for the next pass on the staggered / graph-Dirac program.
 
-Push the project forward in the most significant way:
+## Primary Objective
 
-1. test whether the retained staggered Dirac + potential gravity mechanism
-   survives on axiom-like graph families
-2. then prototype endogenous / backreacting gravity
+Test whether staggered / Kahler-Dirac style transport plus potential gravity
+survives on non-cubic graph families, then move toward backreaction.
 
-Do **not** spend main effort on periodic-lattice polish or chiral-3D rescue.
+## Working Order
 
-## Frozen Current State
+1. Port the staggered transport law to bipartite random geometric graphs,
+   bipartite growing graphs, and a layered bipartite DAG-compatible graph.
+2. Keep the battery narrow and retained: Born/linearity, norm, force sign,
+   `F∝M`, achromatic force, equivalence, robustness, and gauge if cycles exist.
+3. If the portable force battery survives, build a backreaction prototype where
+   the source field is solved from the graph rather than imposed externally.
+4. Write down the graph invariants required by the staggered lane before trying
+   any larger redesign.
 
-- Canonical staggered card:
-  `frontier_staggered_17card.py`
-- Full suite baseline:
-  `frontier_staggered_full_suite.py`
-  - `1D = 29/38`
-  - `3D = 28/38`
-- Force is the primary gravity observable for staggered lanes.
-- Centroid/shell are diagnostics only.
-- Scalar graph lane is the gravity/base-layer control.
-- Chiral coin gravity is a diagnostic / negative control.
+## Constraints
 
-## Workstreams
+- Do not modify existing retained card scripts unless a fix is required for
+  the new portability harness.
+- Keep the force-based staggered card separate from the repo-wide centroid card.
+- Treat gauge as conditional: score it only when the graph family actually has
+  cycles.
+- Treat DAG-compatible graphs as a portability test, not as evidence that the
+  transport law is already causal-set complete.
 
-### 1. Graph portability (highest priority)
+## Deliverables
 
-Build staggered / Kähler-Dirac transport on:
-- bipartite random geometric graphs
-- bipartite growing graphs
-- layered / DAG-compatible bipartite graphs
+- One retained portability harness under `scripts/` with a clear task prefix.
+- One note under `docs/` with exact results and caveats.
+- One backlog note under `docs/` that lists the next work items in priority
+  order.
 
-Start with a tight retained battery:
-- Born / linearity
-- norm / unitarity
-- force sign
-- `F∝M`
-- achromatic force
-- equivalence
-- state-family robustness
-- native gauge response if cycles exist
+## Recommended Reporting
 
-Required output:
-- one retained harness
-- one short note with honest pass/fail language
-
-### 2. Backreaction prototype
-
-Replace external `V = m * Phi` with a source-generated `Phi` on the same
-graph/lattice.
-
-Minimum acceptable prototype:
-- source sector or density-generated `Phi`
-- staggered matter evolves in that `Phi`
-- minimal two-body / source-response / stability check
-- force remains the primary gravity observable
-
-Required output:
-- one prototype script under `scripts/`
-- one note under `docs/` that states exact results and failure modes
-- use `docs/STAGGERED_BACKREACTION_NOTE.md` as the prototype spec
-
-### 3. Graph-Dirac design memo
-
-Write down the graph invariants required by the staggered lane:
-- bipartite structure
-- orientation / staggering convention
-- layering or causal compatibility
-- cycle constraints
-- expected failure modes
-
-Required output:
-- one memo classifying graph families as admissible / marginal / incompatible
-
-## Rules
-
-- Keep force as the primary gravity observable on staggered lanes.
-- Do not silently swap card semantics; document any semantic changes.
-- Prefer one retained harness per task over many exploratory fragments.
-- If a graph family fails structurally, say so quickly and move on.
-
-## Success Condition
-
-The project materially advances if staggered transport plus potential gravity
-survives off the periodic cubic lattice. If it does not, pivot to a two-field
-graph theory with scalar gravity sector + staggered matter sector.
+- State exact graph family, size, seed, and metric values.
+- Separate pass/fail from "N/A" rows.
+- If a row changes semantics relative to the repo-wide card, say so directly.

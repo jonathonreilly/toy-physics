@@ -201,3 +201,7 @@ The next work is not "more scorekeeping." It is:
 4. **Only then** spend secondary effort on larger 3D periodic lattices or
    centroid-based diagnostics. Those are useful cleanup tasks, but they are not
    the most significant way to move the project forward.
+
+For the active backlog and agent brief, see:
+- `docs/WORK_BACKLOG_2026-04-10.md`
+- `docs/CLAUDE_BACKLOG_BRIEF_2026-04-10.md`
