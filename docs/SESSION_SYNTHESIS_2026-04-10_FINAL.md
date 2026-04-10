@@ -176,17 +176,30 @@ tests), but these rows are NOT directly comparable to centroid-based cards.
 
 ## What's Next
 
-1. **Full 58-measure suite** on the staggered architecture: moonshots, structural,
-   physics emergence. Many rows will be N/A (static lattice, scalar field) but the
-   testable ones should be documented.
+The full-suite baseline is now frozen:
 
-2. **Topology portability**: extend staggered fermion to non-cubic graphs using
-   Kähler-Dirac formulation. This would validate the axioms on arbitrary graphs
-   like the graph-Laplacian scalar did.
+- `frontier_staggered_full_suite.py`: `29/38` in 1D, `28/38` in 3D
+- `frontier_staggered_17card.py`: retained force-based canonical card
 
-3. **Larger 3D lattices**: n=15+ to check if the centroid-based gravity converges
-   at larger sizes (would remove the force-only semantic qualifier).
+So the next work is not "more scorekeeping." It is testing whether the retained
+staggered mechanism survives outside periodic cubic lattices and whether gravity
+can become endogenous rather than externally imposed.
 
-4. **Two-field theory**: scalar field for gravity potential + staggered fermion
-   for matter. Coupled through V = m·Φ. This would separate the gravitational
-   DOF from the matter DOF, like real physics.
+1. **Graph portability (highest priority)**: extend the staggered / Kähler-Dirac
+   transport law to bipartite random geometric graphs, growing graphs, and
+   layered/DAG-like graphs. Start with a tight retained subset:
+   Born, norm, force sign, `F∝M`, achromatic force, equivalence, robustness.
+
+2. **Backreaction prototype**: replace the external source potential with a
+   graph-solved source sector or density-generated `Φ`, then rerun the two-body /
+   response rows. This is the first step from "matter in a background" to an
+   interacting model.
+
+3. **Graph-Dirac design memo**: write down the graph invariants the staggered
+   lane actually needs (bipartite structure, orientation, layering, admissible
+   cycles, failure modes). This should guide which graph families are worth
+   coding and which ones are structurally incompatible.
+
+4. **Only then** spend secondary effort on larger 3D periodic lattices or
+   centroid-based diagnostics. Those are useful cleanup tasks, but they are not
+   the most significant way to move the project forward.
