@@ -4,45 +4,65 @@
 
 This backlog is ordered by value to the main project, not by ease.
 
-## P0 - Portability
+## P0 - Endogenous Field Closure
 
-- Extend [`frontier_staggered_graph_portability.py`](../scripts/frontier_staggered_graph_portability.py) to larger and more irregular bipartite graphs.
-- Run [`frontier_staggered_graph_portability_stress.py`](../scripts/frontier_staggered_graph_portability_stress.py) as the next portability gate on larger, more irregular, less forgiving bipartite families.
-- Build an adversarial failure map for odd-cycle defects, parity ambiguity, dense shortcuts, wrap/parity inconsistencies, and high-degree contamination.
-- Add one more graph family if it clarifies the boundary between "portable" and "periodic-lattice only".
-- Keep the retained battery narrow: Born/linearity, norm, force sign, `F∝M`,
-  achromatic force, equivalence, robustness, and gauge if cycles exist.
-- Attack native gauge/current closure on the cycle-bearing layered or stress
-  graphs using the graph-native staggered transport law. Do not fall back to
-  1D helpers; the goal is a native graph-loop or flux win on the same
-  transport law.
+- Portability is now established enough for the retained force battery:
+  baseline portability, stress portability, and the failure map are all frozen.
+- Native gauge/current closure is now retained on the cycle-bearing stress
+  families; the remaining gauge holdout is the layered cycle-bearing family.
+- The main blocker is no longer transport portability. It is endogenous-field
+  scale closure on the cycle-bearing graph families.
+- Push beyond
+  [`frontier_staggered_backreaction_prototype.py`](../scripts/frontier_staggered_backreaction_prototype.py)
+  and
+  [`frontier_staggered_backreaction_iterative.py`](../scripts/frontier_staggered_backreaction_iterative.py):
+  the solved/source-generated `Phi` has the right sign and structure, but it is
+  still too weak relative to the external-kernel control on cycle-bearing
+  families.
+- Prioritize genuinely different source-to-field rules or iterative endogenous
+  closure over more small linear preconditioning sweeps.
+- Acceptance gate:
+  materially reduce the force-scale gap on cycle-bearing families without
+  losing TOWARD sign, exact source linearity, exact additivity, or norm
+  stability.
 
-## P1 - Backreaction
+## P1 - Native Gauge Holdout on Layered Graphs
 
-- The first retained source-generated Phi prototype is implemented in
-  [`frontier_staggered_backreaction_prototype.py`](../scripts/frontier_staggered_backreaction_prototype.py).
-- The layered/DAG-compatible bridge is implemented in
-  [`frontier_staggered_layered_backreaction.py`](../scripts/frontier_staggered_layered_backreaction.py)
-  with exact zero-source control and source-on response.
-- Next step: replace the point-source approximation with a graph-solved
-  source sector fed by the evolving matter density, then retest the layered
-  family and the cycle-bearing stress family.
-- Test whether the force rows survive once `Phi` is endogenous instead of
-  imposed.
-- Keep the transport law fixed while only the source field changes.
+- [`frontier_staggered_graph_gauge_closure.py`](../scripts/frontier_staggered_graph_gauge_closure.py)
+  closes native gauge/current on the cycle-bearing stress families.
+- The narrow remaining miss is the layered cycle-bearing family, which still
+  has a weak current span and fails the retained threshold.
+- Next step: engineer or identify a layered cycle geometry that supports a
+  robust graph-native loop current without collapsing the layered/DAG-like
+  structure.
+- Stay on the same graph-native staggered transport law. No 1D helpers or proxy
+  substitutions.
 
-## P2 - Graph-Dirac Design
+## P2 - Shell / Spectral Diagnostics for the Source Sector
+
+- Compare `phi_solved(depth)` against `phi_ext(depth)` directly on one
+  cycle-bearing family and one layered family.
+- Add a low-mode or shell-profile readout so the force-scale miss is explained
+  structurally, not just numerically.
+- Use this to decide whether the next closure attempt should be:
+  - a different Green's-function map
+  - a genuinely nonlinear iterative source sector
+  - or a graph-family-specific normalization rule
+
+## P3 - Graph-Dirac Design
 
 - Write down the graph invariants the staggered lane actually needs.
 - Separate "bipartite", "layered", "cycle-bearing", and "DAG-compatible" as
   explicit architectural constraints.
 - Identify which graph families are structurally incompatible before coding.
 
-## P3 - Documentation Hygiene
+## P4 - Documentation Hygiene
 
 - Keep the force-based staggered card separate from the repo-wide centroid card.
 - Keep the portability probe separate from the canonical card.
 - Preserve the full-suite baseline as `29/38` in 1D and `28/38` in 3D.
+- Tighten the staggered card doc so the semantic differences table fully matches
+  the force-based script and the tested family sets.
 
 ## Acceptance Criteria
 

@@ -4,9 +4,12 @@ Use this brief for the next pass on the staggered / graph-Dirac program.
 
 ## Primary Objective
 
-Test whether staggered / Kahler-Dirac style transport plus potential gravity
-survives on non-cubic graph families, then close native gauge/current on the
-cycle-bearing families and move toward backreaction.
+Portability is no longer the main question. The next objective is:
+
+1. materially reduce or close the endogenous-field force-scale gap on the
+   cycle-bearing graph families
+2. close the remaining native gauge/current holdout on the layered
+   cycle-bearing family
 
 ## Working Order
 
@@ -15,19 +18,20 @@ cycle-bearing families and move toward backreaction.
 2. Stress-test the portability result on larger, more irregular bipartite
    families before promoting it: seed-swept or larger-size runs are fine if the
    retained battery stays the same.
-3. Attack native gauge/current closure on the cycle-bearing layered or stress
-   graphs using the same staggered transport law. Do not fall back to 1D
-   helpers.
-4. Build an adversarial failure map for odd-cycle defects, parity ambiguity,
-   dense shortcuts, wrap/parity inconsistencies, and high-degree contamination.
-5. Keep the battery narrow and retained: Born/linearity, norm, force sign,
+3. Keep the battery narrow and retained: Born/linearity, norm, force sign,
    `F∝M`, achromatic force, equivalence, robustness, and gauge only when the
    graph family actually has cycles.
-6. If the portable force battery survives, build a layered backreaction bridge
-   where the source field is solved from the graph rather than imposed
-   externally.
-7. Write down the graph invariants required by the staggered lane before trying
-   any larger redesign.
+4. Attack endogenous-field scale closure on the cycle-bearing families:
+   the solved/source-generated `Phi` has the right sign, linearity, additivity,
+   and norm behavior, but it is still too weak relative to the external-kernel
+   control.
+5. Attack native gauge/current closure on the layered cycle-bearing family
+   using the same graph-native staggered transport law. Do not fall back to 1D
+   helpers or proxy rows.
+6. Add shell-profile / spectral diagnostics for `phi_solved` vs `phi_ext` so
+   the source-sector miss is explained structurally.
+7. Keep the graph invariants and failure map current before trying any larger
+   redesign.
 
 ## Constraints
 
@@ -39,18 +43,20 @@ cycle-bearing families and move toward backreaction.
 - Treat DAG-compatible graphs as a portability test, not as evidence that the
   transport law is already causal-set complete.
 - Treat native gauge closure as a separate blocker from portability: the next
-  retained win should be a graph-native loop/flux response on a cycle-bearing
-  layered or stress family.
+  retained win should be the layered cycle-bearing holdout, not more stress
+  passes on families that already close.
+- Treat portability as established enough for now: do not spend more time on
+  first-pass graph families unless a new source/gauge result forces it.
 
 ## Deliverables
 
-- One retained portability harness under `scripts/` with a clear task prefix.
-- One retained native gauge-closure harness under `scripts/` that stays on the
-  graph-native staggered transport law and does not use 1D helpers.
-- One layered backreaction bridge under `scripts/` with a note under `docs/`
-  that freezes exact results and caveats.
-- One backlog note under `docs/` that lists the next work items in priority
-  order.
+- One endogenous-field closure harness under `scripts/` with exact force-scale
+  comparisons on the cycle-bearing families.
+- One layered gauge-closure harness under `scripts/` that stays on the
+  graph-native staggered transport law and targets the layered holdout.
+- One diagnostic note under `docs/` comparing `phi_solved` vs `phi_ext` by
+  shell/depth or low-mode content.
+- One backlog note under `docs/` kept aligned to the current blockers.
 
 ## Recommended Reporting
 

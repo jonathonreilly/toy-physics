@@ -183,25 +183,23 @@ The full-suite baseline is now frozen:
 
 The next work is:
 
-1. **Graph portability (highest priority)**: extend the staggered /
-   Kähler-Dirac transport law to bipartite random geometric graphs, growing
-   graphs, and layered/DAG-like graphs. Keep the battery narrow: Born, norm,
-   force sign, `F∝M`, achromatic force, equivalence, robustness, and gauge only
-   when cycles exist.
+1. **Endogenous-field scale closure**: the solved/source-generated `Φ` now has
+   the right sign, exact linearity, exact additivity, and exact norm behavior,
+   but it is still too weak on the cycle-bearing graph families. The next move
+   is a real closure attempt, not more small source-preconditioning sweeps.
 
-2. **Backreaction bridge**: the new task is to replace the external source
-   potential with a graph-solved source sector or density-generated `Φ`, then
-   rerun zero-source control, source-on response, and stability checks on a
-   layered or DAG-compatible graph. This is the active bridge from background
-   field to endogenous coupling.
+2. **Layered gauge holdout**: native gauge/current now closes on the
+   cycle-bearing stress families. The narrow remaining miss is the layered
+   cycle-bearing family, which needs a better graph-native loop geometry or
+   observable on the same staggered transport law.
 
-3. **Graph-Dirac design memo**: keep the graph invariants current so the
-   staggered lane's requirements, admissible families, and failure modes stay
-   explicit before the next sweep.
+3. **Source-sector diagnostics**: compare `phi_solved(depth)` against
+   `phi_ext(depth)` directly so the source-scale miss is explained
+   structurally, not just numerically.
 
-4. **Secondary cleanup only**: larger 3D periodic lattices and centroid-based
-   diagnostics are lower priority unless portability or backreaction forces us
-   back to them.
+4. **Secondary cleanup only**: periodic-lattice polishing and centroid-based
+   diagnostics are lower priority unless the new source/gauge closure results
+   force us back to them.
 
 For the active backlog and agent brief, see:
 - `docs/WORK_BACKLOG_2026-04-10.md`
