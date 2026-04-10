@@ -9,7 +9,10 @@ This backlog is ordered by value to the main project, not by ease.
 - Portability is now established enough for the retained force battery:
   baseline portability, stress portability, and the failure map are all frozen.
 - Native gauge/current closure is now retained on the cycle-bearing stress
-  families; the remaining gauge holdout is the layered cycle-bearing family.
+  families, and explicit layered brickwall / plaquette geometries also close
+  the current probe.
+- The sparse layered DAG-like family remains a useful negative control; it
+  still fails the gauge/current threshold.
 - The main blocker is no longer transport portability. It is endogenous-field
   scale closure on the cycle-bearing graph families.
 - Push beyond
@@ -30,11 +33,11 @@ This backlog is ordered by value to the main project, not by ease.
 
 - [`frontier_staggered_graph_gauge_closure.py`](../scripts/frontier_staggered_graph_gauge_closure.py)
   closes native gauge/current on the cycle-bearing stress families.
-- The narrow remaining miss is the layered cycle-bearing family, which still
-  has a weak current span and fails the retained threshold.
-- Next step: engineer or identify a layered cycle geometry that supports a
-  robust graph-native loop current without collapsing the layered/DAG-like
-  structure.
+- The engineered layered cycle geometry now closes native gauge/current.
+- The sparse layered DAG-like holdout still fails and should be kept as a
+  negative control rather than a target for the same loop geometry.
+- Next step: preserve the explicit layered-loop closure while pushing the
+  source sector toward endogenous scale closure.
 - Stay on the same graph-native staggered transport law. No 1D helpers or proxy
   substitutions.
 
@@ -42,9 +45,8 @@ This backlog is ordered by value to the main project, not by ease.
 
 - Compare `phi_solved(depth)` against `phi_ext(depth)` directly on one
   cycle-bearing family and one layered family.
-- Add a low-mode or shell-profile readout so the force-scale miss is explained
-  structurally, not just numerically.
-- Use this to decide whether the next closure attempt should be:
+- Frozen in [`STAGGERED_BACKREACTION_SHELL_SPECTRAL_NOTE.md`](../docs/STAGGERED_BACKREACTION_SHELL_SPECTRAL_NOTE.md): the solved graph field is much flatter in depth than the external-kernel control, and its spectrum is more concentrated in the lowest modes on both families.
+- Use that result to decide whether the next closure attempt should be:
   - a different Green's-function map
   - a genuinely nonlinear iterative source sector
   - or a graph-family-specific normalization rule

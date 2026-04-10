@@ -8,8 +8,8 @@ Portability is no longer the main question. The next objective is:
 
 1. materially reduce or close the endogenous-field force-scale gap on the
    cycle-bearing graph families
-2. close the remaining native gauge/current holdout on the layered
-   cycle-bearing family
+2. preserve the explicit layered-cycle gauge/current closure while treating
+   the sparse layered DAG-like graph as a negative control
 
 ## Working Order
 
@@ -25,9 +25,9 @@ Portability is no longer the main question. The next objective is:
    the solved/source-generated `Phi` has the right sign, linearity, additivity,
    and norm behavior, but it is still too weak relative to the external-kernel
    control.
-5. Attack native gauge/current closure on the layered cycle-bearing family
-   using the same graph-native staggered transport law. Do not fall back to 1D
-   helpers or proxy rows.
+5. Use the explicit layered brickwall / plaquette geometry as the retained
+   layered gauge/current closure. Keep the sparse layered DAG-like family as a
+   negative control. Do not fall back to 1D helpers or proxy rows.
 6. Add shell-profile / spectral diagnostics for `phi_solved` vs `phi_ext` so
    the source-sector miss is explained structurally.
 7. Keep the graph invariants and failure map current before trying any larger
@@ -53,7 +53,8 @@ Portability is no longer the main question. The next objective is:
 - One endogenous-field closure harness under `scripts/` with exact force-scale
   comparisons on the cycle-bearing families.
 - One layered gauge-closure harness under `scripts/` that stays on the
-  graph-native staggered transport law and targets the layered holdout.
+  graph-native staggered transport law and targets explicit layered loop
+  geometry.
 - One diagnostic note under `docs/` comparing `phi_solved` vs `phi_ext` by
   shell/depth or low-mode content.
 - One backlog note under `docs/` kept aligned to the current blockers.

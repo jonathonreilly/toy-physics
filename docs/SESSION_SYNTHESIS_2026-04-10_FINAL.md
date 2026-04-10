@@ -188,10 +188,10 @@ The next work is:
    but it is still too weak on the cycle-bearing graph families. The next move
    is a real closure attempt, not more small source-preconditioning sweeps.
 
-2. **Layered gauge holdout**: native gauge/current now closes on the
-   cycle-bearing stress families. The narrow remaining miss is the layered
-   cycle-bearing family, which needs a better graph-native loop geometry or
-   observable on the same staggered transport law.
+2. **Layered gauge closure**: native gauge/current now closes on the
+   cycle-bearing stress families and on explicit layered brickwall / plaquette
+   geometries. The sparse layered DAG-like family remains a useful negative
+   control.
 
 3. **Source-sector diagnostics**: compare `phi_solved(depth)` against
    `phi_ext(depth)` directly so the source-scale miss is explained
