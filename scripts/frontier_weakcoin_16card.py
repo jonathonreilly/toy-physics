@@ -74,6 +74,25 @@ def gauss_psi(n, k0=0, sigma=None):
         psi[2*y] = np.exp(-((y-c)**2)/(2*sigma**2)) * np.exp(1j*k0*(y-c))
     return psi / np.linalg.norm(psi)
 
+def packet_family(n, kind="R", k0=0, sigma=None):
+    c = n//2; sigma = sigma or n/8
+    psi = np.zeros(2*n, dtype=complex)
+    for y in range(n):
+        amp = np.exp(-((y-c)**2)/(2*sigma**2)) * np.exp(1j*k0*(y-c))
+        if kind == "R":
+            psi[2*y] = amp
+        elif kind == "L":
+            psi[2*y+1] = amp
+        elif kind == "sym":
+            psi[2*y] = amp
+            psi[2*y+1] = amp
+        elif kind == "anti":
+            psi[2*y] = amp
+            psi[2*y+1] = -amp
+        else:
+            raise ValueError(f"unknown packet kind: {kind}")
+    return psi / np.linalg.norm(psi)
+
 def build_V(n, theta, g, S, mass_pos):
     V = np.zeros(n)
     for y in range(n):
@@ -294,7 +313,18 @@ def run_card():
     norm = np.sum(np.abs(psi_final)**2)
     print(f"  Norm after 20 steps: {norm:.10f}")
 
+    print(f"\n  --- Initial-state sensitivity ---")
+    for kind in ["R", "L", "sym", "anti"]:
+        psi_kind = packet_family(n, kind)
+        free_kind = evolve(n, th, ns, psi_kind)
+        rho_kind = prob(free_kind, n)
+        pz = np.sum(rho_kind[c+1:c+4]); mz = np.sum(rho_kind[c-3:c])
+        bias_kind = abs(pz-mz)/(pz+mz) if (pz+mz) > 0 else 0
+        dg_kind = cz(evolve(n, th, ns, psi_kind, V), n) - cz(free_kind, n)
+        print(f"    {kind:>4}: f=0 bias={bias_kind:.4f}, grav={dg_kind:+.4e}")
+
     print(f"\n  SCORE: {score}/16")
+    print("  NOTE: score is for the default right-polarized packet only.")
     return score
 
 
