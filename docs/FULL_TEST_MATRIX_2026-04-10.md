@@ -1,7 +1,7 @@
 # Full Test Matrix — All Architectures × All Measures
 
-**Date:** 2026-04-10
-**Status:** Comprehensive scorecard across the ENTIRE REPO (pre-session + session).
+**Date:** 2026-04-10 (updated with spot checks)
+**Status:** Comprehensive scorecard across the ENTIRE REPO (pre-session + session + spot checks).
 
 ## Pre-Session Architectures (from existing repo)
 
@@ -77,11 +77,11 @@
 | 7 | MI (bits) | 0.64 | 0.64 | — | — | — | 0.56 | 0.35 | 0.17 |
 | 8 | Purity stable | PASS | PASS | — | — | — | PASS | CV=0.08 | CV=0.03 |
 | 9 | Gravity grows | PASS | PASS | — | — | — | PASS | PASS | PASS |
-| 10 | Distance law | b⁻⁰·⁹³ | b⁻¹·²³ | — | — | — | d⁻⁰·⁶⁰ | — | α=-0.56 |
+| 10 | Distance law | b⁻⁰·⁹³ | b⁻¹·²³ | — | — | — | d⁻⁰·⁶⁰ | d⁻²·⁵⁵ | α=-0.56 |
 | | **Score** | **10/10** | **10/10** | **2/10** | **0/10** | **3/10** | **10/10** | **10/10** | **10/10** |
 
 \* k-window only (k=1-6), spectral AWAY
-† Barrier I₃ fails; linearity is tautological
+† Part 1: Barrier I₃ fails (linearity is tautological). Part 2/5: Factorized coin gives 1D-per-pair dispersion, not isotropic 3D KG — needs coupled 6×6 Dirac coin
 ‡ k=7 window, spectral AWAY
 § Global medium, not localized mass
 ¶ Converged regime (N ≤ n-5), sign windows exist
@@ -93,17 +93,18 @@
 | # | Frontier | TM | TM-L | CH-1D | CH-2D | CH-3D |
 |---|----------|-----|------|-------|-------|-------|
 | 1 | Distance law | b⁻⁰·⁹³ | b⁻¹·²³ | d⁻⁰·⁶⁰ | — | α=-0.56 |
-| 2 | Lorentz/dispersion | ambiguous | — | **E²=θ²+k²** | approx (R²>0.999) | — |
+| 2 | Lorentz/dispersion | ambiguous | — | **E²=θ²+k²** | approx (R²>0.999) | FAIL (R²=0.16)† |
 | 3 | Action constraint | VL from axioms | — | θ-coupling | θ-coupling | θ-coupling |
 | 4 | Dynamic growth | Born 4.3e-17 | — | FAIL (asymmetry) | FAIL (revival) | — |
 | 5 | Entanglement | sub-area ln(2) | — | — | — | — |
 | 6 | Energy spectrum | lattice-dominated | — | **exact analytic** | — | — |
-| 7 | Spin / chirality | Z₂ parity | — | precesses, SG | — | — |
+| 7 | Spin / chirality | Z₂ parity | — | precesses, SG | — | SG 6.75, 117% asym |
 | 8 | Cosmology | 14% separation | — | FAIL | — | — |
 | 9 | Hawking | thermal=lattice | — | FAIL (no thermal) | — | — |
 | 10 | RG flow | scale-dependent | — | clean unitary | — | — |
-| 11 | Gauge U(1) | structural | — | **AB 88.5%** | — | — |
+| 11 | Gauge U(1) | structural | — | **AB 88.5%** | **AB V=0.88** | FAIL (geometry) |
 | 12 | Two-body superposition | 0.01% (3D add.) | — | 0.17% | 0.10% | 0.65% |
+| | | VL-3D: 0.00% | | | | |
 | 13 | Decoherence scaling | CLT ceiling | — | CLT ceiling | — | — |
 | 14 | Born from info | composability→p=2 | — | structural | structural | structural |
 | 15 | Time dilation | correct sign | — | θ(1-f) | — | — |
@@ -136,34 +137,36 @@
 | **Wave direction (k=5)** | TOWARD | AWAY | AWAY | AWAY | TOWARD§ | TOWARD | TOWARD | TOWARD¶ |
 | **F∝M** | 1.00 | 1.00 | FAIL | FAIL | 1.00 | 1.00 | 0.99 | 1.00 |
 | **Achromatic (k-indep)** | NO (k-window) | NO (shifted window) | — | — | — | YES (fixed θ) | YES | YES |
-| **Achromatic (θ-indep)** | N/A | N/A | — | — | — | **NO (56% var)** | — | — |
+| **Achromatic (θ-indep)** | N/A | N/A | — | — | — | **NO (56% var)** | — | NO (117% asym)‖ |
 | **Spectral survives** | AWAY | AWAY | — | — | TOWARD§ | N/A (no k) | N/A | N/A |
 | **Broadband survives** | NO | NO | — | — | — | YES (achromatic) | YES | YES |
 | **Superposition** | 0.01% (3D) | — | — | — | — | 0.17% | 0.10% | 0.65% |
+| | VL-3D: 0.00% | | | | | | | |
 | **N-stable** | N/A | N/A | — | — | — | YES (n≥41) | YES (n≥21) | basin¶ |
 
 § Global medium, not localized
 ¶ Converged regime with sign windows
+‖ Chirality-dependent: ψ₊ deflects 3.8× more than ψ₋
 
 ---
 
 ## PART 5: Physics Emergence
 
-| Property | TM | CH-1D | CH-3D | Status |
-|----------|-----|-------|-------|--------|
-| **Born rule** | ✓ (2.5e-15) | ✓ (3.3e-16) | ✓ (0.056) | CONFIRMED |
-| **Klein-Gordon** | ambiguous | ✓ (R²>0.99999) | — | CONFIRMED (1D) |
-| **Newtonian gravity** | F∝M in k-window | F∝M achromatic | F∝M in basin | PARTIAL |
-| **Equivalence principle** | violated (k-dep) | violated (θ-dep) | — | FAIL |
-| **Light cone** | NO | ✓ (v=1 exact) | — | CONFIRMED (1D) |
-| **U(1) gauge** | structural | ✓ (AB 88.5%) | — | CONFIRMED |
-| **SU(2) gauge** | custom code | FAIL (needs color) | — | FAIL |
-| **Spin/chirality** | Z₂ parity | precession, SG | — | PARTIAL |
-| **Decoherence** | 49.5%, CLT ceiling | 38.6%, CLT ceiling | PASS | BOUNDED |
-| **Causal set** | r=0.997 | r=0.956, strict LC | — | CONFIRMED |
-| **Cosmological expansion** | 14% | FAIL | — | TM ONLY |
-| **Dynamic growth** | Born 4.3e-17 | FAIL | — | TM ONLY |
-| **Geometry superposition** | phase diffs | 0.08-0.61 rad | — | CONFIRMED |
+| Property | TM | CH-1D | CH-2D | CH-3D | Status |
+|----------|-----|-------|-------|-------|--------|
+| **Born rule** | ✓ (2.5e-15) | ✓ (3.3e-16) | ✓ (exact 0) | ✓ (0.056) | CONFIRMED |
+| **Klein-Gordon** | ambiguous | ✓ (R²>0.99999) | approx (R²>0.999) | FAIL (R²=0.16)† | CONFIRMED (1D,2D) |
+| **Newtonian gravity** | F∝M in k-window | F∝M achromatic | F∝M=0.99 | F∝M in basin | PARTIAL |
+| **Equivalence principle** | violated (k-dep) | violated (θ-dep) | — | violated (117% asym) | FAIL |
+| **Light cone** | NO | ✓ (v=1 exact) | — | — | CONFIRMED (1D) |
+| **U(1) gauge** | structural | ✓ (AB 88.5%) | ✓ (AB V=0.88) | FAIL (geometry) | CONFIRMED (1D,2D) |
+| **SU(2) gauge** | custom code | FAIL (needs color) | — | — | FAIL |
+| **Spin/chirality** | Z₂ parity | precession, SG | — | SG 6.75, 117% grav asym | PARTIAL |
+| **Decoherence** | 49.5%, CLT ceiling | 38.6%, CLT ceiling | 82.8% | PASS | BOUNDED |
+| **Causal set** | r=0.997 | r=0.956, strict LC | — | — | CONFIRMED |
+| **Cosmological expansion** | 14% | FAIL | — | — | TM ONLY |
+| **Dynamic growth** | Born 4.3e-17 | FAIL | — | — | TM ONLY |
+| **Geometry superposition** | phase diffs | 0.08-0.61 rad | — | — | CONFIRMED |
 
 ---
 
@@ -177,8 +180,8 @@
 | **Quantum Walk** | 0/10 | — | 5/6 | 0/9 | — | ~5/58 |
 | **Polar Unitary** | 3/10 | — | 4/6 | 3/9 | — | ~10/58 |
 | **Chiral 1+1D** | **10/10** | **13 pass/partial** | **6/6** | **7/9** | **9/13** | **45/58** |
-| **Chiral 2+1D** | **10/10** | ~8 | 5/6 | 6/9 | ~7/13 | ~36/58 |
-| **Chiral 3+1D** | **10/10** | ~7 | 5/6 | 5/9 | ~6/13 | ~33/58 |
+| **Chiral 2+1D** | **10/10** | ~10 | 5/6 | 6/9 | ~8/13 | ~39/58 |
+| **Chiral 3+1D** | **10/10** | ~9 | 5/6 | 5/9 | ~7/13 | ~36/58 |
 
 ---
 
@@ -201,11 +204,45 @@
 10. **3+1D Born** — 0.056 (weaker than lower dimensions)
 11. **2+1D dispersion** — approximate KG only (slope 0.87-0.93)
 12. **Chirality not conserved** — precesses, not a good spin analog
+13. **VL-3D spectrum growth-contaminated** — CV=0.334, spectral radius=1.72 (non-unitary)
+
+### Design Bottleneck (from spot checks):
+0. **Factorized coin cannot produce 3D Klein-Gordon** — The independent 2×2 blocks on each chirality pair produce 1D-per-pair dispersion (R²=0.16 for isotropic 3D KG). This also prevents 3D Aharonov-Bohm (V=0.0). A coupled 6×6 or 8×8 Dirac-like coin is needed. This is the single biggest open design challenge.
 
 ### Resolved/Understood:
-13. **2D gravity sign** — non-unitarity artifact (TOWARD with polar U)
-14. **Spectral averaging** — non-unitarity hierarchy (chiral doesn't have this problem)
-15. **Angular kernel** — derived from Axiom 6 (turn-cost) in 2+1D
-16. **Distance exponent** — beam spreading d^0.6 softens 1/d
-17. **Convergence threshold** — N >> π/θ + 20, n >> 2×offset
-18. **F∝M mechanism** — amplitude coupling (|sin²(θ(1-f))| linear in f)
+14. **2D gravity sign** — non-unitarity artifact (TOWARD with polar U)
+15. **Spectral averaging** — non-unitarity hierarchy (chiral doesn't have this problem)
+16. **Angular kernel** — derived from Axiom 6 (turn-cost) in 2+1D
+17. **Distance exponent** — beam spreading d^0.6 softens 1/d (1D); d^-2.55 in 2D (steeper)
+18. **Convergence threshold** — N >> π/θ + 20, n >> 2×offset
+19. **F∝M mechanism** — amplitude coupling (|sin²(θ(1-f))| linear in f)
+20. **2D gauge works** — Node-phase U(1) exact (6.7e-16), AB V=0.884 in 2+1D chiral
+21. **3D chirality conserved within pairs** — factorized coin preserves chirality per spatial pair (100%)
+
+---
+
+## PART 8: Spot Check Results (2026-04-10)
+
+10 spot checks run to fill blank cells in the matrix. Scripts committed on `frontier/spot-checks`.
+
+| # | Check | Architecture | Result | Verdict |
+|---|-------|-------------|--------|---------|
+| 1 | 3D Klein-Gordon dispersion | CH-3D | R²=0.156 | **FAIL** — factorized coin gives 1D-per-pair |
+| 2 | 3D Aharonov-Bohm gauge | CH-3D | V=0.000 | **FAIL** — geometry prevents AB in 3D |
+| 3 | 2D distance law | CH-2D | α=-2.55 (R²=0.87) | Steeper than 1D (d⁻⁰·⁶⁰), not Newtonian |
+| 4 | VL-3D two-body superposition | VL-3D | 0.00% error | **PASS** |
+| 5 | 3D chirality conservation | CH-3D | 100% within pair | **PASS** — coin preserves per-pair chirality |
+| 6 | 3D Stern-Gerlach | CH-3D | 6.75 separation | **PASS** — gradient separates +z/−z |
+| 7 | 3D chirality-dependent gravity | CH-3D | 117% asymmetry | **PASS** — ψ₊ deflects 3.8× more than ψ₋ |
+| 8 | 2D node-phase U(1) gauge | CH-2D | max dev=6.7e-16 | **PASS** — exact invariance |
+| 9 | 2D Aharonov-Bohm | CH-2D | V=0.884 | **PASS** — strong modulation |
+| 10 | VL-3D energy spectrum | VL-3D | CV=0.334, ρ=1.72 | Growth-contaminated (non-unitary) |
+
+### Key Insight
+
+The **factorized coin** (independent 2×2 blocks per chirality pair) is the central design bottleneck. It explains:
+- Why 3D KG fails (each pair disperses in 1D only)
+- Why 3D gauge fails (AB requires coupled spatial dimensions)
+- Why the 2D results are strong (2D has only one spatial pair)
+
+A **coupled Dirac-like coin** (6×6 for 3+1D, mixing all chirality components) would be the natural next step. This is the highest-priority experiment remaining.
