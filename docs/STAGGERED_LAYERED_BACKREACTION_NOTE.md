@@ -22,8 +22,8 @@ instead of being imposed externally?
 
 | Family | n | zero-source `Phi` | zero-source force | source-on force | source `R^2` | `Phi` residual | norm drift | robustness | gauge |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| layered bipartite DAG-compatible | 36 | `0.00e+00` | `+0.000e+00` | `+3.064e-01` TOWARD | `1.0000` | `3.84e-16` | `3.33e-16` | `3/3` | `N/A` |
-| layered bipartite stress | 55 | `0.00e+00` | `+0.000e+00` | `+1.849e-01` TOWARD | `1.0000` | `1.69e-16` | `2.22e-16` | `3/3` | `FAIL` |
+| `layered_bipartite_dag_s13_n36` | 36 | `0.00e+00` | `+0.000e+00` | `+3.064e-01` TOWARD | `1.0000` | `3.84e-16` | `3.33e-16` | `3/3` | `N/A` |
+| `layered_bipartite_dag_s29_n55` | 55 | `0.00e+00` | `+0.000e+00` | `+1.849e-01` TOWARD | `1.0000` | `1.69e-16` | `2.22e-16` | `3/3` | `FAIL` |
 
 ## Readout
 
