@@ -228,22 +228,39 @@ The full-suite baseline is now frozen:
    `8/9`, `9/9`, `8/9` because family robustness still fails on the random
    geometric and layered-cycle families.
 
+10. **Retarded family-closure sibling**: DONE as a bounded positive sibling
+    result. `frontier_two_field_retarded_family_closure.py` lifts the family
+    row to `3/3` on all three admissible families while preserving the rest of
+    the retarded battery, but it is still a sibling closure recipe rather than
+    the frozen canonical retarded harness.
+
+11. **Causal DAG compatibility**: DONE as a retained probe.
+    `frontier_staggered_dag.py` closes `6/6` on three layered DAG
+    configurations with TOWARD force, Born-clean linearity, exact norm, and
+    measurable forward propagation.
+
+12. **First larger-graph break frontier**: DONE as a retained boundary note.
+    `frontier_staggered_cycle_break_frontier.py` shows that the first honest
+    failure beyond the scaled sibling is a native-gauge collapse on the random
+    geometric family under dense shortcuts, not a force-sign collapse.
+
 ### Remaining work
 
 1. **Endogenous-field scale**: G_eff=12-178 is characterized but not closed.
    The miss is structural on the current graph Poisson map, not a sign or
    linearity failure.
-2. **Two-field family robustness**: the retarded / hybrid law now exists and
-   preserves the main coupled-force battery, but still drops to `2/3` families
-   on two admissible graph families. The next step is to close that sector
-   robustness gap without losing the current force/norm/gauge wins.
+2. **Canonical retarded-field decision**: the family-closure sibling now
+   exists, but it is not yet the frozen canonical retarded harness. The next
+   step is to decide whether that closure loop is principled enough to retain,
+   or whether the project should treat it as a promising tuned sibling only.
 3. **Self-gravity hardening**: push beyond the new scaling note toward a
    retained larger-size / harsher-family map, especially to explain why
    contraction remains strong on layered-cycle graphs but only weak-to-mixed on
    random geometric and growing families.
-4. **Beyond the retained size sweep**: push past side `12` or into harsher
-   irregular families to find the first real break in the larger-graph cycle
-   battery, rather than rerunning already-frozen sizes.
+4. **Post-frontier boundary mapping**: the first break is now known
+   (`random_geometric side=18 extra=5`, gauge fail). The next step is to map
+   that boundary more precisely and determine whether it is genuinely a random-
+   geometric shortcut effect or a more general gauge-fragility criterion.
 
 For the active backlog and agent brief, see:
 - `docs/WORK_BACKLOG_2026-04-10.md`
@@ -259,3 +276,7 @@ Companion retained probes:
 - `scripts/frontier_staggered_cycle_battery_scaled.py`
 - `scripts/frontier_two_field_coupling.py`
 - `scripts/frontier_two_field_wave.py`
+- `scripts/frontier_two_field_retarded_probe.py`
+- `scripts/frontier_two_field_retarded_family_closure.py`
+- `scripts/frontier_staggered_dag.py`
+- `scripts/frontier_staggered_cycle_break_frontier.py`
