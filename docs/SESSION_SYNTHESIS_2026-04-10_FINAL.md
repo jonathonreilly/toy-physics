@@ -243,6 +243,11 @@ The full-suite baseline is now frozen:
     `frontier_staggered_cycle_break_frontier.py` shows that the first honest
     failure beyond the scaled sibling is a native-gauge collapse on the random
     geometric family under dense shortcuts, not a force-sign collapse.
+13. **Matched frontier slice**: DONE as a retained slice note.
+    `frontier_staggered_cycle_break_slice.py` shows that the frontier failure
+    is specific to dense shortcut geometry. A quality-matched local control at
+    the same edge-count scale stays retained through `extra=6`, while the
+    frontier branch collapses gauge/current at `extra=5/6`.
 
 ### Remaining work
 
@@ -258,9 +263,10 @@ The full-suite baseline is now frozen:
    contraction remains strong on layered-cycle graphs but only weak-to-mixed on
    random geometric and growing families.
 4. **Post-frontier boundary mapping**: the first break is now known
-   (`random_geometric side=18 extra=5`, gauge fail). The next step is to map
-   that boundary more precisely and determine whether it is genuinely a random-
-   geometric shortcut effect or a more general gauge-fragility criterion.
+   (`random_geometric side=18 extra=5`, gauge fail). The matched slice shows
+   the failure is tied to dense shortcut geometry rather than edge-count or
+   degree scale. The next step is to map whether other shortcut topologies hit
+   the same gauge/current boundary.
 
 For the active backlog and agent brief, see:
 - `docs/WORK_BACKLOG_2026-04-10.md`
@@ -269,6 +275,8 @@ For the active backlog and agent brief, see:
 The current retained cycle-bearing integration is frozen in:
 - `scripts/frontier_staggered_cycle_battery.py`
 - `docs/CYCLE_BATTERY_NOTE_2026-04-10.md`
+- `scripts/frontier_staggered_cycle_break_slice.py`
+- `docs/CYCLE_BREAK_SLICE_NOTE_2026-04-10.md`
 
 Companion retained probes:
 - `scripts/frontier_staggered_self_gravity.py`
