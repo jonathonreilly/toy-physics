@@ -22,6 +22,11 @@ These are not review items anymore:
 - `scripts/frontier_staggered_test_mass_companion.py`
 - `DISTANCE_LAW_3D_64_CLOSURE_NOTE_2026-04-11.md`
 - `scripts/distance_law_3d_64_closure.py`
+- `WILSON_TEST_MASS_CONTINUUM_NOTE_2026-04-11.md`
+- `scripts/frontier_test_mass_limit.py`
+- `scripts/frontier_perturbative_mass_law.py`
+- `scripts/frontier_continuum_limit.py`
+- `scripts/frontier_newton_systematic.py`
 
 Status:
 
@@ -35,6 +40,11 @@ Status:
 - not full Newton closure
 - not both-masses closure
 - not architecture portability
+- bounded-retained Wilson test-mass / continuum companion
+- safe reading: exact source-mass scaling plus same-convention continuum fit
+- not both-masses closure
+- not action-reaction closure
+- not architecture-independent Newton closure
 
 ## Remaining Bounded Candidate
 
@@ -102,13 +112,12 @@ Current bounded temporal read:
   - `w08_16`
 - later windows lose cleanliness or sign stability and do not support a
   retained global fit
+- the frozen/static-source control has now been run on the same Wilson surface
+  and it still does **not** clear the promotion bar
 
 Required next experiment:
 
-- no promotion yet; if reopened, the same side / placement / separation /
-  early-window surface still needs a frozen/static-source comparison that
-  actually distinguishes dynamic shared backreaction from the frozen
-  explanation
+- no promotion yet; the missing discriminator remains causal, not temporal
 
 Promotion rule:
 
