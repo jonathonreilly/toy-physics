@@ -43,9 +43,10 @@ Hamiltonian dimension as the card: 1D ring (n=21) in 1D, 3D torus (n=n) in 3D.
 The 3D gauge row is evaluated on the actual card lattice size, not a reduced
 auxiliary.
 
-**Full family set.** C17 tests gauss, even, odd, anti, positive-E, negative-E
-(6 families). Energy projections computed via eigensolve at n≤9 in 3D.
-At n>9, 3D omits energy projections (eigensolve cost) and tests 4 families.
+**Family coverage.** C17 tests gauss, even, odd, anti, positive-E, negative-E
+(6 families). Energy projections are computed in 3D only when
+`N_sites <= 1000`, so the retained `n=9` 3D card runs `6/6` families while
+`n=11,13` run `4/6`.
 
 ## Scores
 
@@ -71,7 +72,7 @@ At n>9, 3D omits energy projections (eigensolve cost) and tests 4 families.
 | C16 | Multi-observable | 1/2 | PASS |
 | C17 | State families (6/6) | all TOWARD | PASS |
 | | **Norm** | **5.55e-16** | |
-| | **Score** | **17/17** | **No qualifiers** |
+| | **Score** | **17/17** | **No qualifiers (1D operating point)** |
 
 ### 3D Convergence
 
@@ -89,7 +90,7 @@ At n>9, 3D omits energy projections (eigensolve cost) and tests 4 families.
 
 All lattice sizes converge: force is TOWARD everywhere, decreasing smoothly
 with lattice size. C1 is a real 3D Sorkin barrier (z-plane slits). C12 is
-a native 3D torus gauge test. C17 includes energy projections at n=9.
+a native 3D torus gauge test. C17 includes energy projections only at `n=9`.
 
 ## What This Architecture Derives
 
@@ -128,7 +129,7 @@ a native 3D torus gauge test. C17 includes energy projections at n=9.
 | C15 | Periodic vs open boundary | Force stable across propagation depth |
 | C16 | Centroid + peak + shell (3 obs) | Force + shell (2 obs) |
 
-These are WEAKER than the repo-wide definitions for C9 and C16. They are
+These are WEAKER than the repo-wide definitions for C9, C10, and C16. They are
 DIFFERENT (not weaker or stronger) for C5 and C15. The force observable is
 more fundamental (it's what the equivalence principle tests), but the score
 is NOT directly comparable to centroid-based cards.

@@ -1,5 +1,9 @@
 # Session Synthesis: Graph Laplacian Axioms (2026-04-10)
 
+**Status:** historical synthesis note. The current retained staggered status is
+tracked by the force-based card and corrected full-suite baseline, not by the
+older `frontier_staggered_fermion.py` successor framing alone.
+
 ## What happened
 
 This session started from the chiral walk's 3 gravity blockers (chromaticity,
@@ -120,12 +124,12 @@ Two follow-up probes sharpen the interpretation of the scalar graph lane.
   the same graph. The blocker is not transport anymore; it is backreaction,
   because the scalar background is still one-way and external.
 
-- **Staggered fermion probe**:
+- **Staggered fermion probe** (historical successor probe):
   [`frontier_staggered_fermion.py`](../scripts/frontier_staggered_fermion.py)
   is the most promising current no-coin genuine Dirac lane. It closes the free
   staggered dispersion exactly and gives strong 1D gravity behavior, but the
   current CN evolution still fails a strict light-cone gate. That makes it a
-  strong successor probe, not yet the retained replacement architecture.
+  strong successor probe, not the retained replacement architecture.
 
 - **Staggered fermion force-based card** (current retained result):
   [`frontier_staggered_17card.py`](../scripts/frontier_staggered_17card.py)
@@ -133,12 +137,14 @@ Two follow-up probes sharpen the interpretation of the scalar graph lane.
   The centroid oscillates in a permanent period-4 pattern on the staggered
   periodic lattice; force converges at all tested sizes (n=7..17).
   Scores: 1D n=61 `17/17` (6/6 families), 3D n=9 `17/17` (6/6 families),
-  3D n=11,13 `17/17` (4/6 families, energy projections skipped). Full suite
+  3D n=11,13 `17/17` (4/6 families, energy projections skipped because
+  `N_sites > 1000`). Full suite
   baseline: 1D `29/38`, 3D `28/38`.
   Rows C5/C9/C10/C15/C16 have different semantics from the repo-wide centroid
   card (see `STAGGERED_FERMION_CARD_2026-04-10.md`). C12 is a native
-  persistent-current test on the actual card lattice. All 7 state families
-  including anti/Nyquist are TOWARD under force at n=61 and n=9.
+  persistent-current test on the actual card lattice. All tested state
+  families, including anti/Nyquist in the full 1D and 3D `n=9` runs, are
+  TOWARD under force.
 
 - **Staggered graph portability probe**:
   [`frontier_staggered_graph_portability.py`](../scripts/frontier_staggered_graph_portability.py)
