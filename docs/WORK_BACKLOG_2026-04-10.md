@@ -20,6 +20,13 @@ This backlog is ordered by value to the main project, not by ease.
 - The next real fork is:
   - derive the attractive sign from the staggered / Dirac structure, or
   - freeze the irregular graph program as explicitly sign-agnostic
+- A new exploratory weak-coupling regime now exists in
+  [`WEAK_COUPLING_SIGN_SENSITIVITY_NOTE_2026-04-11.md`](../docs/WEAK_COUPLING_SIGN_SENSITIVITY_NOTE_2026-04-11.md):
+  at `G=5,10`, width asymmetry and shell-force separation are much stronger
+  than on the retained structural operating points. This is promising, but it
+  is not yet a retained closure because the effect is `14/15`, not `15/15`,
+  and repulsive shell-force counts are still mixed on some random-geometric
+  seeds.
 - Acceptance gate:
   either produce one graph-native irregular observable that distinguishes
   coupling sign, or rewrite the program around structural interacting-field

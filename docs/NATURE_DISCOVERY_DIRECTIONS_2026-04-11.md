@@ -5,11 +5,13 @@
 
 ## Current State After Parity Coupling Rewrite
 
-The staggered fermion lane now closes 3/4 blockers:
-- B1: Sign-selective on irregular graphs at weak coupling (G=5-10)
-- B2: Field equation derived variationally
-- B3: Light cone framed as standard lattice QFT
-- B4: Static lattice (acceptable for first paper)
+The staggered fermion lane now has:
+- B1: a **strong weak-coupling sign-sensitive regime** on irregular graphs,
+  but not a full blocker closure
+- B2: a standard lowest-order variational justification for screened Poisson
+- B3: light cone framed as standard lattice QFT / Lieb-Robinson behavior
+- B4: static lattice still acceptable for a first paper, but not a Nature
+  breakthrough by itself
 
 Full suite: 29/38 (1D), 28/38 (3D). Canonical card: 17/17.
 
@@ -19,8 +21,10 @@ Full suite: 29/38 (1D), 28/38 (3D). Canonical card: 17/17.
 **HIGHEST PRIORITY — Never attempted, connects to quantum gravity**
 
 The chiral 1+1D walk achieved geometry superposition: TV=0.039, real phase
-differences dphi=0.25-0.66 rad between different graph geometries. This was
-NEVER tested on the staggered architecture.
+differences dphi=0.25-0.66 rad between different graph geometries. A new
+frontier script now shows a **path-sum DAG-ensemble** geometry-superposition
+signal at about `4.4%` contrast, but that script is not staggered. So this
+remains untested on the actual staggered architecture.
 
 **The experiment:** Evolve a staggered fermion on a superposition of two
 graph geometries (e.g., a graph with vs without a massive object). Measure
@@ -134,11 +138,12 @@ uniqueness theorem has NEVER been applied to the staggered lane's source
 sector. Could narrow the admissible Φ law on graphs.
 
 ### 8. Weak-Coupling Full Battery
-**IMMEDIATE — Needed to freeze the B1 closure**
+**IMMEDIATE — Needed to test whether the weak-coupling regime can be frozen**
 
 Run the complete 17-card and supplementary batteries at G=10 (the sweet
-spot for sign-selective gravity). Currently only tested with the weak-
-coupling battery script, not the frozen canonical harnesses.
+spot for sign-sensitive irregular-graph behavior). Currently only tested with
+the dedicated weak-coupling battery script, where the effect is strong but not
+yet universal (`14/15`, not `15/15`).
 
 ## Cross-Architecture Table
 
@@ -148,7 +153,7 @@ coupling battery script, not the frozen canonical harnesses.
 | KG | exact | N/A | exact | N/A |
 | Light cone | strict v=1 | N/A | LR 97% | N/A |
 | Gauge | AB 88.5% | N/A | pers. curr. | N/A |
-| Geometry super. | TV=0.039 | N/A | **UNTESTED** | N/A |
+| Geometry super. | TV=0.039 | N/A | **UNTESTED on staggered** | N/A |
 | Causal metric | r=0.956 | N/A | **UNTESTED** | r=0.997 |
 | Self-gravity | N/A | N/A | w=0.40-0.76 | N/A |
 | MI | N/A | 0.773 | 0.164-0.615 | N/A |

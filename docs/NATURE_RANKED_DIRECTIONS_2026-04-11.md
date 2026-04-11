@@ -8,9 +8,9 @@
 1. Parity coupling correction (literature contribution)
 2. 17/17 canonical card with sign-selective well/hill test
 3. Self-gravity contraction 9/9 (w=0.40-0.76)
-4. Weak-coupling sign selectivity 14/15 on irregular graphs (G=5-10)
-5. Geometry superposition TV=0.37, TVq=0.079 (9x stronger than chiral walk)
-6. Field equation derived variationally
+4. Weak-coupling sign-sensitive regime `14/15` on irregular graphs (G=5-10)
+5. Historical/path-sum geometry-superposition signal at `4.37%` contrast
+6. Field equation justified variationally at lowest local quadratic order
 7. Light cone framed as standard lattice QFT
 8. Full suite 29/38 (1D), 28/38 (3D)
 
@@ -33,8 +33,9 @@ It is a topological phase transition whose universality class depends on
 graph topology. The sign-freedom of the parity coupling is the discrete
 analog of coordinate freedom in general relativity."
 
-This is a publishable theoretical argument backed by existing numerics.
-The quantum gravity community (Sorkin, Dowker, Loll) would engage.
+This is a provocative theoretical argument, but it is not yet a retained repo
+claim. Treat it as a speculative framing until it is backed by a stronger
+frozen observable stack.
 
 ## Tier 1: Immediate Computation (Existing Code + Modest Extension)
 
@@ -76,10 +77,13 @@ by tabletop experiments (Bouwmeester, Arndt, Aspelmeyer groups).
 
 ### Direction 4: Geometry Superposition — Extend and Quantify
 
-The TV=0.37 result is already 9x stronger than the chiral walk. Extend:
+The currently rerunnable result is a **path-sum DAG-ensemble** signal at about
+`4.4%` coherent-vs-incoherent contrast with detector-phase differences up to
+about `0.26 rad`. That is real, but it is not a staggered result. Extend:
 - Multiple source positions and strengths
 - Quantify the gravitational phase shift dphi vs source parameters
-- Test on irregular graphs (not just lattices)
+- Build the actual staggered geometry-superposition harness instead of relying
+  on the older path-sum ensemble script
 - Verify TVq (quantum vs classical) scales with source strength
 - Connect to BMV experiment design: what mass/separation would produce
   detectable entanglement via geometry superposition?
@@ -130,7 +134,7 @@ altered after the wave passes — the discrete Christodoulou memory effect.
 | KG dispersion | exact | exact | N/A | N/A |
 | Light cone | LR 97% | strict v=1 | N/A | N/A |
 | Gauge | pers. curr. | AB 88.5% | N/A | N/A |
-| Geom. superpos. | **TV=0.37** | TV=0.039 | N/A | N/A |
+| Geom. superpos. | path-sum DAG `4.37%` only | TV=0.039 | N/A | N/A |
 | Self-gravity | w=0.40-0.76 | N/A | N/A | N/A |
 | Sign selective | G=5-10 | N/A | N/A | N/A |
 | MI | 0.16-0.62 | N/A | **0.773** | N/A |
@@ -147,17 +151,16 @@ attraction, and geometry superposition from discrete structure"
 
 **Core claims:**
 1. Dirac dispersion derived from graph staggering (not assumed)
-2. Gravitational attraction derived from parity coupling at weak coupling
-   (sign-selective on all graph families, G=5-10)
+2. Gravitational attraction on the cubic card plus a strong weak-coupling
+   sign-sensitive regime on irregular graphs
 3. Self-gravity contracts wavepackets (w=0.40-0.76, 9/9 families)
-4. Geometry superposition produces 37% distinguishability and 8% quantum
-   interference — matter probes geometry quantum-mechanically
+4. A geometry-superposition signal exists in the older path-sum DAG ensemble,
+   motivating a true staggered geometry-superposition test
 5. Topology-dependent critical exponents (new universality class)
-6. Field equation derived variationally (graph Laplacian = discrete curvature)
+6. Field equation justified variationally at lowest local quadratic order
 
 **Novel contributions:**
 - Parity coupling correction to staggered scalar gravity (Zache 2020 applied
   to self-gravity for the first time)
-- Geometry superposition signal 9x stronger than previous discrete models
-- Weak-coupling sign selection on irregular graphs (new regime identification)
+- Weak-coupling irregular sign sensitivity (new regime identification)
 - The B1 reframing as discrete general covariance (theoretical contribution)

@@ -38,7 +38,7 @@ simplest local quadratic graph field action.
 
 ## What This Means
 
-The field equation is NOT "chosen by convention." It is DERIVED from
+The field equation is NOT purely "chosen by convention." It is justified by
 the requirement that the field-matter system is at a stationary point
 of the combined action, under the constraint that the field action is:
 
@@ -48,8 +48,8 @@ of the combined action, under the constraint that the field action is:
 
 Any other choice (biharmonic, heat kernel, etc.) corresponds to a
 DIFFERENT field action with higher-order terms or non-local structure.
-The screened Poisson equation is the unique lowest-order local field
-equation on the graph.
+Within this restricted class, the screened Poisson equation is the unique
+lowest-order local field equation on the graph.
 
 ## What Remains Free
 
@@ -71,6 +71,6 @@ In the weak-field (linearized) limit, Einstein's equation reduces to:
 which on the graph becomes L Φ = G ρ. The screened version (L + μ²)Φ = G ρ
 corresponds to massive gravity (Yukawa-type potential with range 1/μ).
 
-So the field equation on the graph IS the linearized Einstein equation
-with a mass term. The static lattice corresponds to the linearized-gravity
-limit where the metric perturbation Φ is small compared to the background.
+So the field equation on the graph is best read as a lowest-order discrete
+analog of the linearized Einstein / Yukawa equation, not as a full derivation
+of Einstein's equation from the axioms.
