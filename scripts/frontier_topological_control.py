@@ -12,9 +12,12 @@ Protocol:
      edge modes, gap.
   2. Generate random disorder V ~ N(0, std(Phi_at_this_G)).  No self-consistency.
      20 seeds per G.
-  3. Count edge modes and measure gap for each random realization.
-  4. Compare G_transition(gravity) vs G_transition(disorder).
-  5. Spatial structure test: self-consistent Phi vs random vs shuffled Phi.
+  3. Build a static structured template from the free half-filled density and
+     rescale it to match std(Phi_at_this_G)).
+  4. Compare G_transition(gravity) vs matched random disorder and the static
+     template.
+  5. Spatial structure test: self-consistent Phi vs random vs shuffled Phi
+     vs static structured Phi.
 
 SSH setup (parity-coupled staggered chain, open BC):
   H[2i, 2i+1]   = t1           (intracell hopping)
@@ -94,6 +97,15 @@ def parity_coupled_onsite(phi: np.ndarray, mass: float = MASS) -> np.ndarray:
     return (mass + phi) * stagger
 
 
+def normalized_template(phi: np.ndarray) -> np.ndarray:
+    """Return a zero-mean, unit-std template when possible."""
+    centered = phi - np.mean(phi)
+    std = float(np.std(centered))
+    if std < 1e-12:
+        return np.zeros_like(centered)
+    return centered / std
+
+
 # ── Self-consistent gravity loop ────────────────────────────────
 
 def self_consistent_solve(n: int, t1: float, t2: float,
@@ -126,6 +138,22 @@ def self_consistent_solve(n: int, t1: float, t2: float,
         phi = (1.0 - alpha) * phi + alpha * phi_new
 
     return eigenvalues, eigenvectors, phi
+
+
+def free_density_template_phi(n: int, t1: float, t2: float, mu2: float) -> np.ndarray:
+    """One-shot field sourced by the free half-filled density."""
+    laplacian = build_1d_laplacian(n)
+    on_site = parity_coupled_onsite(np.zeros(n))
+    H = build_ssh_hamiltonian(n, t1, t2, on_site)
+    _, eigenvectors = eigh(H)
+    n_filled = n // 2
+    rho = np.zeros(n)
+    for i in range(n_filled):
+        rho += np.abs(eigenvectors[:, i]) ** 2
+    rho /= np.sum(rho)
+    phi = solve_phi(laplacian, rho, mu2)
+    phi -= np.mean(phi)
+    return phi
 
 
 # ── Solve with a fixed on-site potential (no self-consistency) ──
@@ -262,10 +290,13 @@ def main():
     print()
 
     disorder_results = {}
+    static_results = {}
+    phi_template = free_density_template_phi(N, T1, T2, MU2)
+    phi_template_unit = normalized_template(phi_template)
 
-    print("%-8s  %-10s  %-10s  %-10s  %-12s  %-12s" % (
-        "G", "sigma", "Modes(avg)", "Modes(med)", "BulkGap(avg)", "BulkGap(med)"))
-    print("-" * 68)
+    print("%-8s  %-10s  %-10s  %-10s  %-12s  %-12s  %-10s" % (
+        "G", "sigma", "Modes(avg)", "Modes(med)", "BulkGap(avg)", "BulkGap(med)", "Static"))
+    print("-" * 80)
 
     for G in G_VALUES:
         sigma = gravity_results[G]["phi_std"]
@@ -291,14 +322,32 @@ def main():
         avg_bgap = float(np.mean(seed_bgaps))
         med_bgap = float(np.median(seed_bgaps))
 
+        field_sigma = G * sigma
+
+        if field_sigma < 1e-12:
+            phi_static = np.zeros(N)
+        else:
+            phi_static = field_sigma * phi_template_unit
+        on_site_static = parity_coupled_onsite(phi_static)
+        evals_s, evecs_s = solve_with_onsite(N, T1, T2, on_site_static)
+        static_modes = count_edge_modes(evals_s, evecs_s, N, gap_thresh)
+        static_bgap = bulk_gap(evals_s, evecs_s, N)
+
         disorder_results[G] = {
             "sigma": sigma, "modes_list": seed_modes, "bgap_list": seed_bgaps,
             "avg_modes": avg_modes, "med_modes": med_modes,
             "avg_bgap": avg_bgap, "med_bgap": med_bgap,
         }
+        static_results[G] = {
+            "sigma": sigma,
+            "field_sigma": field_sigma,
+            "modes": static_modes,
+            "bgap": static_bgap,
+            "phi": phi_static.copy(),
+        }
 
-        print("%-8.2f  %-10.6f  %-10.2f  %-10.1f  %-12.6f  %-12.6f" % (
-            G, sigma, avg_modes, med_modes, avg_bgap, med_bgap))
+        print("%-8.2f  %-10.6f  %-10.2f  %-10.1f  %-12.6f  %-12.6f  %-10d" % (
+            G, sigma, avg_modes, med_modes, avg_bgap, med_bgap, static_modes))
 
     # Find disorder transition
     g_trans_disorder = None
@@ -365,6 +414,14 @@ def main():
         bgap_b = float(np.median(bgap_b_list))
         sgap_b = float(np.median(sgap_b_list))
 
+        # (b2) Static structured template matched to the self-consistent std
+        phi_static = static_results[G]["phi"]
+        on_site_static = parity_coupled_onsite(phi_static)
+        evals_bs, evecs_bs = solve_with_onsite(N, T1, T2, on_site_static)
+        modes_bs = count_edge_modes(evals_bs, evecs_bs, N, gap_thresh)
+        bgap_bs = bulk_gap(evals_bs, evecs_bs, N)
+        sgap_bs = spectral_gap(evals_bs)
+
         # (c) Shuffled self-consistent Phi
         modes_c_list = []
         bgap_c_list = []
@@ -385,11 +442,13 @@ def main():
 
         spatial_data[G] = {
             "sc": (modes_a, bgap_a, sgap_a),
+            "static": (modes_bs, bgap_bs, sgap_bs),
             "random": (modes_b, bgap_b, sgap_b),
             "shuffled": (modes_c, bgap_c, sgap_c),
         }
 
         print("%-8.2f  %-8s  %-10d  %-10.6f  %-10.6f" % (G, "gravity", modes_a, bgap_a, sgap_a))
+        print("%-8s  %-8s  %-10d  %-10.6f  %-10.6f" % ("", "static", modes_bs, bgap_bs, sgap_bs))
         print("%-8s  %-8s  %-10.1f  %-10.6f  %-10.6f" % ("", "random", modes_b, bgap_b, sgap_b))
         print("%-8s  %-8s  %-10.1f  %-10.6f  %-10.6f" % ("", "shuffled", modes_c, bgap_c, sgap_c))
         print()
@@ -498,15 +557,23 @@ def main():
     for G in test_G_values:
         d = spatial_data[G]
         sc_modes, sc_bgap, _ = d["sc"]
+        st_modes, st_bgap, _ = d["static"]
         rand_modes, rand_bgap, _ = d["random"]
         shuf_modes, shuf_bgap, _ = d["shuffled"]
 
-        if sc_modes != rand_modes or abs(sc_bgap - rand_bgap) / max(rand_bgap, 1e-10) > 0.2:
-            print("  G=%.2f: gravity and random DIFFER (modes: %d vs %.1f, gap: %.4f vs %.4f)"
-                  % (G, sc_modes, rand_modes, sc_bgap, rand_bgap))
+        if sc_modes != st_modes or abs(sc_bgap - st_bgap) / max(st_bgap, 1e-10) > 0.2:
+            print("  G=%.2f: gravity and static DIFFER (modes: %d vs %d, gap: %.4f vs %.4f)"
+                  % (G, sc_modes, st_modes, sc_bgap, st_bgap))
         else:
-            print("  G=%.2f: gravity and random match (modes: %d vs %.1f, gap: %.4f vs %.4f)"
-                  % (G, sc_modes, rand_modes, sc_bgap, rand_bgap))
+            print("  G=%.2f: gravity and static match (modes: %d vs %d, gap: %.4f vs %.4f)"
+                  % (G, sc_modes, st_modes, sc_bgap, st_bgap))
+
+        if sc_modes != rand_modes or abs(sc_bgap - rand_bgap) / max(rand_bgap, 1e-10) > 0.2:
+            print("          gravity and random DIFFER (modes: %d vs %.1f, gap: %.4f vs %.4f)"
+                  % (sc_modes, rand_modes, sc_bgap, rand_bgap))
+        else:
+            print("          gravity and random match (modes: %d vs %.1f, gap: %.4f vs %.4f)"
+                  % (sc_modes, rand_modes, sc_bgap, rand_bgap))
 
         if sc_modes != shuf_modes or abs(sc_bgap - shuf_bgap) / max(shuf_bgap, 1e-10) > 0.2:
             print("          shuffled DIFFERS from gravity (modes: %.1f, gap: %.4f)"
@@ -518,6 +585,10 @@ def main():
     print("VERDICT")
     print("=" * 80)
     print()
+
+    static_match = False
+    if g_trans_gravity is not None:
+        static_match = static_results[g_trans_gravity]["modes"] == 0
 
     if g_trans_gravity is None:
         print("No gravity transition detected in range G=[%.1f, %.1f]."
@@ -531,6 +602,11 @@ def main():
         print("DIFFERENT THRESHOLDS: gravity at G=%.2f, disorder at G=%.2f" % (
             g_trans_gravity, g_trans_disorder))
         print("Self-gravity has a distinct effect beyond matched disorder strength.")
+    elif static_match:
+        print("STRUCTURED-CONTROL REPRODUCED: Self-gravity destroys edge modes at G=%.2f," % g_trans_gravity)
+        print("but a smooth static template matched to the same field scale does too.")
+        print("This lane survives random-disorder controls, but dynamic backreaction")
+        print("is not isolated on the current SSH surface.")
     else:
         print("GRAVITY-SPECIFIC EDGE-MODE TRANSITION: Self-gravity destroys edge modes at G=%.2f"
               % g_trans_gravity)
@@ -538,9 +614,13 @@ def main():
         print("self-consistency of the gravitational potential matters.")
 
     print()
-    print("Lane state: exploratory-reopen on the audited parity-coupled SSH surface.")
-    print("The gravity-specific edge-mode signal survives the matched-disorder control,")
-    print("but the broader topology claim should stay constrained to this audited surface.")
+    print("Lane state: exploratory only on the audited parity-coupled SSH surface.")
+    print("The edge-mode-loss signal survives matched random disorder,")
+    if static_match:
+        print("but a smooth non-self-consistent structured control reproduces it.")
+    else:
+        print("and also beats the static structured control on this surface.")
+    print("Do not promote this as a gravity-specific topological theorem yet.")
 
     print()
     print("DONE")

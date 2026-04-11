@@ -477,8 +477,9 @@ def main():
 
     n_for = len(evidence_for)
     if n_for >= 3:
-        print("CANDIDATE TRANSITION: self-gravity drives a topological edge-mode change")
-        print("Compare against frontier_topological_control.py before promotion.")
+        print("CANDIDATE EDGE-MODE TRANSITION: this legacy direct-on-site lane shows")
+        print("a self-gravity-driven edge-mode change on the audited SSH surface.")
+        print("Treat it as exploratory until the control lane clears dynamic-vs-static structure.")
     elif n_for >= 2:
         print("EXPLORATORY: self-gravity partially disrupts topology")
     elif n_for >= 1:

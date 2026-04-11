@@ -1,7 +1,7 @@
 # Gravity-vs-Topology Control Note
 
 **Date:** 2026-04-11  
-**Status:** exploratory-reopen on an audited SSH surface
+**Status:** exploratory only on one audited SSH surface
 
 **Scripts:**
 - `scripts/frontier_topological_phases.py`
@@ -9,57 +9,83 @@
 
 ## Question
 
-Does the claimed gravity-driven SSH/topological transition survive a matched
-disorder/control comparison, or is it just generic on-site symmetry breaking?
-The legacy direct-on-site scan is kept separate from the parity-coupled
-control audit.
+Does the claimed gravity-driven SSH edge-mode transition survive lower
+screening or a better matched control surface, or is it reproduced by a
+non-self-consistent structured potential?
 
-## Main scan
+## Surfaces checked
 
-The self-consistent gravity scan on the open SSH chain reports:
+- low-screening parity-coupled SSH control surface with `mu2 = 0.001`
+- matched random disorder at the same field variance
+- shuffled self-consistent `Phi`
+- new static structured template built from the free half-filled density and
+  rescaled to match the self-consistent on-site field scale `std(G*Phi)`
+
+## Main control result
+
+The low-screening parity-coupled SSH lane still shows edge-mode loss:
 
 - free system: 2 edge modes
-- edge modes remain through `G = 0.20`
-- edge modes vanish at `G = 0.50`
-- the bulk gap is reduced but not closed before the edge modes disappear
-- sublattice polarization is nonzero at small `G` and fades again at strong `G`
+- self-consistent gravity: edge modes remain through `G = 0.30`
+- self-consistent gravity: edge modes vanish at `G = 0.50`
+- fine random-disorder threshold is much later, near `sigma ~ 0.36`
+- at the gravity transition, the random matched-disorder median still keeps
+  `1.0` edge mode
 
-Taken alone, this is a candidate topological transition, not yet a universal
-claim.
+So the effect is not explained by matched random disorder alone.
 
-## Matched control
+## Better matched control
 
-The matched disorder control on the same audited SSH surface gives:
+The stronger test is the structured static template. On the same low-screening
+surface, that control reproduces the self-consistent lane almost exactly once
+the on-site field scale is matched:
 
-- self-gravity transition at `G = 0.50`
-- matched random disorder does not destroy the edge modes in the scanned
-  `G` window
-- the fine disorder scan finds a disorder threshold near `sigma ~ 0.36`
-- the gravity-to-disorder variance ratio at the gravity transition is `0.36`
+- `G = 0.10`: gravity `2` modes, static `2`
+- `G = 0.20`: gravity `2` modes, static `2`
+- `G = 0.30`: gravity `2` modes, static `2`
+- `G = 0.50`: gravity `0` modes, static `0`
+- `G = 1.00`: gravity `0` modes, static `0`
+- `G = 2.00`: gravity `0` modes, static `0`
+- `G = 5.00`: gravity `0` modes, static `0`
 
-So the gravity signal is not explained by the matched disorder control.
+Bulk gaps also match at the `1e-4` to `1e-3` level across the scan.
+
+This means the current lane is sensitive to a **smooth parity-coupled structured
+field**, not specifically to the self-consistent feedback loop.
 
 ## Interpretation
 
-What survives is narrower than the original headline, but real:
+What survives:
 
-- the gravity-driven edge-mode loss survives the matched disorder comparison
-- the control indicates the effect is not just variance-driven
-- the broader universality claim is still open because this is one audited SSH
-  surface, not a finished classification theorem
+- lower screening does **not** kill the edge-mode-loss signal
+- matched random disorder is too weak a control to explain the transition
+- shuffled `Phi` also differs from the self-consistent lane near and above the
+  transition
 
-## Retained reading
+What does **not** survive:
 
-> self-gravity produces a gravity-specific SSH edge-mode transition on the
-> audited open chain, but the claim should remain surface-specific and
-> exploratory until wider control families are checked
+- a gravity-specific or Einstein-like topological claim
+- any statement that dynamic backreaction is the load-bearing ingredient
 
-## Conclusion
+The new structured static control is a better match than random disorder, and it
+reproduces the transition. So the honest reading is:
 
-This lane is worth keeping as an **exploratory-reopen** result, not as a
-universal topological theorem:
+> on this audited open SSH surface, edge-mode loss is triggered by a smooth
+> parity-coupled structured field at the same scale as the self-consistent
+> field; dynamic self-consistency is not yet isolated as the cause
 
-- the claimed transition survives the matched disorder/control comparison
-- the lane is strong enough to retain
-- the documentation should stay constrained to the audited surface and not
-  generalize beyond it
+## Lane state
+
+Keep this lane as **exploratory only**.
+
+It is worth preserving because the edge-mode loss is real on the audited
+surface and survives naive disorder controls, but it is **not** ready to be
+retained as a gravity-specific topological transition.
+
+## Next work required
+
+- build a structured non-gravitational control family beyond the free-density
+  template
+- test the same observable on a Wilson or open 2D surface
+- isolate whether any residual dynamic effect survives after matching both
+  field scale and low-frequency spatial profile
