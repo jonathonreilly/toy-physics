@@ -1,14 +1,14 @@
 # 20 Science Frontiers — Full-Repo Brainstorm
 
 **Date:** 2026-04-11
-**Source:** Full repo survey + all session results + Wilson two-body breakthrough
+**Source:** Full repo survey + all session results + frontier Wilson / Anderson follow-up
 
 ## Top 5 (Highest Impact — Build on Wilson Two-Body)
 
 | # | Frontier | Risk | Key Test |
 |---|---------|------|----------|
-| 1 | **Wilson 1/r² distance law** | Med | a_mutual vs d → exponent = -2? |
-| 2 | **Wilson F∝M₁M₂ mass law** | Med | a_mutual vs mass ratio → linear? |
+| 1 | **Wilson distance-law crossover** | Med | does clean `d^-3.4` soften toward `d^-2` with lattice refinement? |
+| 2 | **Wilson partner-source / inertial scaling** | Med | does the current sublinear law cross over toward linear mass scaling? |
 | 3 | **Hartree N-body classical limit** | Low-Med | Penrose timescale at N→∞ |
 | 4 | **Continuum limit of spectral hierarchy** | Med | Do trajectory observables recover at a→0? |
 | 5 | **BMV entanglement prediction** | Med | S(ρ_A) growth rate in physical units |
@@ -45,13 +45,16 @@
 
 ## Strategic Assessment
 
-**The Wilson two-body line (1-3, 5, 10) is the single highest-leverage
-direction.** If 1/r² and F∝M₁M₂ emerge cleanly, the framework goes from
-"interesting toy model" to "first discrete derivation of Newton's law."
+**The Wilson two-body line (1-3, 5, 10) is still the single highest-leverage
+direction, but its state is now narrower and cleaner.** The open-lattice
+Wilson surface supports a real mutual-attraction channel, but the current law
+is `|a_mut| ~ d^-3.4` with sublinear source scaling, not Newtonian closure.
+So the immediate question is whether that law crosses over toward Newton, or
+whether it defines a different discrete universality class.
 
 **Low-hanging fruit with guaranteed publication value:** Frontiers 7 (CDT),
-9 (Anderson phase diagram), 12 (eigenvalue stats) require modest computation
-and address communities that engage regardless of the gravity interpretation.
+9 (Anderson phase diagram), 12 (eigenvalue stats) remain strong because they
+already have clean bounded results and do not depend on a Newton-law claim.
 
 **The graph selection problem (8, 15, 17) is the theoretical frontier.**
 Solving it elevates "toy model on a graph" to "theory of emergent spacetime."
