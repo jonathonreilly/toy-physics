@@ -9,13 +9,18 @@ Phi is no longer a pure wave-only field. It carries a causal memory channel:
   dm/dt = (rho - m) / tau_mem
   d²Phi/dt² = -c² (L + mu²) Phi - gamma dPhi/dt + beta * ((1-lam) m + lam rho)
 
-with psi evolving via CN under V = -mass * Phi.
+with psi evolving via CN under the literature-correct parity-coupled scalar
+mass-gap:
+
+  H_diag = (mass + Phi) · parity
 
 Interpretation:
   - m is a retarded source accumulator
   - Phi is the propagating field
   - the source entering Phi is a hybrid of instantaneous density and lagged
     density history
+  - the matter sector couples through the same staggered parity factor as the
+    mass term
 
 This is graph-native:
   - no 1D helper fallback
@@ -281,7 +286,9 @@ def _graph_laplacian(g: Graph):
 def _build_H(g: Graph, mass, phi):
     H = lil_matrix((g.n, g.n), dtype=complex)
     parity = np.where(g.colors == 0, 1.0, -1.0)
-    H.setdiag(mass * parity - mass * phi)
+    # Parity (scalar 1⊗1) coupling: Φ modulates mass gap, not energy level.
+    # Literature: Zache et al. 2020, Dempsey et al. 2025.
+    H.setdiag((mass + phi) * parity)
     for i, nbs in g.adj.items():
         for j in nbs:
             if i >= j:

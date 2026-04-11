@@ -10,7 +10,8 @@ wave prototype:
 
 - a causal memory accumulator `m` that lags the matter density `|ψ|²`
 - a damped wave equation for `Φ`
-- matter evolution via staggered CN with `V = -m · Φ`
+- matter evolution via staggered CN with the parity-coupled mass gap
+  `H_diag = (m + Φ)·ε`
 
 The field law is graph-native and runs only on the retained admissible
 cycle-bearing bipartite families:
@@ -21,9 +22,10 @@ cycle-bearing bipartite families:
 
 **Measurement note:** on these irregular graph families, the sign rows use the
 same BFS-depth shell-radial proxy as the cycle battery, not the exact
-lattice-coordinate force from the cubic canonical card. The later two-sign
-audit shows these irregular sign measures are not sign-selective and therefore
-cannot by themselves support an attractive-gravity claim.
+lattice-coordinate force from the cubic canonical card. After the two-sign
+audit, these irregular sign measures should be treated as field-profile
+diagnostics under the prescribed parity coupling, not as sign-selection
+evidence.
 
 ## Battery Results
 
@@ -34,14 +36,14 @@ cannot by themselves support an attractive-gravity claim.
 | R3 Additivity | `1.80e-16` | `1.91e-16` | `1.63e-16` |
 | R4 Force TOWARD | `+8.17e-03` | `+2.08e-03` | `+1.68e-02` |
 | R5 Iterative stability | `30/30` TOWARD | `30/30` TOWARD | `30/30` TOWARD |
-| R6 Norm | `4.44e-16` | `0.00e+00` | `2.22e-16` |
+| R6 Norm | `1.22e-15` | `0.00e+00` | `2.22e-16` |
 | R7 Families | `2/3` | `3/3` | `2/3` |
 | R8 Gauge | `J_range=1.60e-02`, `sin R²=0.9999` | `J_range=3.08e-03`, `sin R²=0.9500` | `J_range=4.00e-02`, `sin R²=0.9736` |
-| R9 Gap | `G_eff=157.8`, `shell_grad_ratio=0.005`, `spectral_ratio=0.020` | `G_eff=215.4`, `shell_grad_ratio=0.004`, `spectral_ratio=0.017` | `G_eff=99.5`, `shell_grad_ratio=0.009`, `spectral_ratio=0.021` |
+| R9 Gap | `G_eff=157.8`, `shell_grad_ratio=0.005`, `spectral_ratio=0.020` | `G_eff=230.6`, `shell_grad_ratio=0.004`, `spectral_ratio=0.017` | `G_eff=100.5`, `shell_grad_ratio=0.009`, `spectral_ratio=0.021` |
 
 ## What Holds
 
-- The coupled trajectory stays inward under the prescribed attractive sign on
+- The coupled trajectory stays inward under the prescribed parity coupling on
   all three families, but the two-sign audit shows this is a field-profile
   diagnostic rather than standalone evidence of attractive gravity.
 - Linearity and additivity remain machine-clean.
