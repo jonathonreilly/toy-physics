@@ -8,6 +8,10 @@ This is **not** a paper outline and **not** a claim that every item below is
 already publication-ready. It is a running inventory of findings worth keeping
 visible when paper planning starts.
 
+See also:
+
+- [`PUBLICATION_DISCOVERY_AUDIT_2026-04-11.md`](PUBLICATION_DISCOVERY_AUDIT_2026-04-11.md) for the current lane-by-lane critical audit of what is actually safe to treat as a paper candidate, what is bounded, and what should stay out of claims.
+
 ## Inclusion Rule
 
 An item belongs here only if it is at least one of:
@@ -50,6 +54,8 @@ Every item should point to a retained note or runner.
 | D17 | Off-lattice same-surface sign-selection failure: no endogenous irregular-graph directional observable yet cleanly distinguishes attractive from repulsive coupling | staggered sign audit | `negative-result` | High-value blocker result; narrows exactly what must be solved before stronger off-lattice gravity claims are defensible | [`IRREGULAR_DIRECTIONAL_OBSERVABLE_NOTE_2026-04-11.md`](IRREGULAR_DIRECTIONAL_OBSERVABLE_NOTE_2026-04-11.md), [`GRAVITY_SIGN_AUDIT_2026-04-10.md`](GRAVITY_SIGN_AUDIT_2026-04-10.md) |
 | D18 | Topology-dependent onset behavior / critical-exponent hint: fitted onset exponents vary strongly across admissible graph families | staggered critical behavior | `exploratory-lead` | Quantitative lead with possible universality-class significance, but not yet a frozen full scaling law | [`CRITICAL_EXPONENTS_TOPOLOGY_NOTE_2026-04-10.md`](CRITICAL_EXPONENTS_TOPOLOGY_NOTE_2026-04-10.md) |
 | D19 | Emergent-geometry growth partial reopen: matter-coupled growth can reshape coarse geometry and reopen a narrow strong-coupling toward window | emergent geometry | `exploratory-lead` | Could become a geometry paper or a strong bounded note, but currently too seed-/coupling-sensitive to promote | [`EMERGENT_GEOMETRY_GROWTH_NOTE_2026-04-10.md`](EMERGENT_GEOMETRY_GROWTH_NOTE_2026-04-10.md) |
+| D20 | Bounded chiral-walk positive package: 1+1D closes exact low-k KG, strict light cone, Born-clean barrier behavior, and strong U(1) gauge response; 2+1D retains approximate KG and strong AB modulation | coin / chiral | `bounded-retained` | The coin/chiral lane is not only a negative diagnosis. In 1+1D and 2+1D it contains a real, historically important positive package that is still worth paper planning, provided the 3+1D claims stay narrowed and achromatic gravity is not overclaimed | [`CHIRAL_WALK_SYNTHESIS_2026-04-09.md`](CHIRAL_WALK_SYNTHESIS_2026-04-09.md), [`CHIRAL_WALK_SYNTHESIS_2026-04-10_ADDENDUM.md`](CHIRAL_WALK_SYNTHESIS_2026-04-10_ADDENDUM.md) |
+| D21 | Generated-geometry transfer package: on a retained moderate-drift grown row, Born, `d_TV`, `MI`, decoherence, and far-field gravity transfer closely from the exact grid to the grown geometry | generated geometry / Gate B | `bounded-retained` | This is the cleanest historical result showing that a grown geometry can inherit a substantial part of the exact-grid observational package without immediately destroying the interference structure | [`GATE_B_GROWN_JOINT_PACKAGE_NOTE.md`](GATE_B_GROWN_JOINT_PACKAGE_NOTE.md), [`GATE_B_GROWN_DISTANCE_LAW_NOTE.md`](GATE_B_GROWN_DISTANCE_LAW_NOTE.md) |
 
 ## What This Log Is Not Saying
 

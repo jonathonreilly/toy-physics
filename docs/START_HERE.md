@@ -14,11 +14,13 @@ way in is:
    [`docs/lanes/README.md`](lanes/README.md)
 4. Read the publication-discovery ledger:
    [`docs/POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md`](POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md)
-5. Read the retained runner map:
+5. Read the publication-discovery audit:
+   [`docs/PUBLICATION_DISCOVERY_AUDIT_2026-04-11.md`](PUBLICATION_DISCOVERY_AUDIT_2026-04-11.md)
+6. Read the retained runner map:
    [`docs/CANONICAL_HARNESS_INDEX.md`](CANONICAL_HARNESS_INDEX.md)
-6. Read the bug / rerun workflow:
+7. Read the bug / rerun workflow:
    [`docs/repo/RETEST_PLAYBOOK.md`](repo/RETEST_PLAYBOOK.md)
-7. Then read the current retained science state:
+8. Then read the current retained science state:
    [`docs/FULL_TEST_MATRIX_2026-04-10.md`](FULL_TEST_MATRIX_2026-04-10.md)
 
 ## Current Program Reality

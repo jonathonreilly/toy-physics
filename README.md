@@ -18,6 +18,8 @@ so the repo now has an explicit navigation layer.
   [`docs/lanes/README.md`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/docs/lanes/README.md)
 - Publication-discovery log:
   [`docs/POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/docs/POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md)
+- Publication-discovery audit:
+  [`docs/PUBLICATION_DISCOVERY_AUDIT_2026-04-11.md`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/docs/PUBLICATION_DISCOVERY_AUDIT_2026-04-11.md)
 - Retained runner map:
   [`docs/CANONICAL_HARNESS_INDEX.md`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/docs/CANONICAL_HARNESS_INDEX.md)
 - Bug / rerun workflow:
