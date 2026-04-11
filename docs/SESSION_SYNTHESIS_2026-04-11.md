@@ -9,7 +9,8 @@
 
 Started from a gravity sign audit ("are we measuring gravity correctly?")
 and ended with 10 parallel discovery probes covering holography, spectral
-geometry, gravitational memory, quantum Zeno, confinement, and more.
+geometry, gravitational memory, Wilson `mu^2` sensitivity, quantum Zeno,
+confinement, and more.
 
 ## Phase 1: Parity Coupling Correction
 
@@ -78,6 +79,8 @@ After a gravitational wave pulse passes, the separation between test
 wavepackets is permanently altered.
 - Control drift: `+0.000000`
 - Weak-pulse memory/amp mean: `+0.012460`, std `0.000592`
+- later `mu^2` / geometry sweep shows the original size-fragility is not
+  purely Yukawa-range driven
 - Nonlinear onset at strong amplitudes
 Later robustness work downgraded this substantially:
 - the signal collapses by `N=81` and is effectively gone by `N=101`

@@ -71,7 +71,7 @@ The repo currently contains four different classes of publication material:
 - topology-dependent onset fits
 - branch-superposition remains fixed-adjacency field branching, not topology superposition
 - boundary-law scaling itself is generic for gapped free fermions; the nontrivial content here is the retained coefficient shift and robustness under the audited surface
-- memory result is ring-specific, size-fragile, and currently best treated as an exploratory screening artifact rather than paper-grade positive evidence
+- memory result is still exploratory and protocol-sensitive; the later `mu^2` / geometry sweep (`MEMORY_MU2_GEOMETRY_SWEEP_NOTE_2026-04-11.md`) shows the size-fragility is not purely Yukawa-range driven, so it should stay out of any positive paper claim
 - branch-mediated entanglement is not a full BMV witness
 - tripartite branch-mediated entanglement is not a multipartite BMV witness and is now read as W-type rather than GHZ-type
 - weak-coupling retention does not close broader off-lattice directional gravity outside the low-`G` window
@@ -91,7 +91,44 @@ The repo currently contains four different classes of publication material:
 - the new bounded branch-superposition result is worth preserving inside that package
 - the entropy null result is worth preserving as a negative control against overclaiming holography
 - the new boundary-law and branch-entanglement notes are worth preserving as bounded side results, not as headline claims
-- the memory note is still worth preserving, but primarily as a diagnostic/exploratory artifact rather than publication-grade positive evidence
+- the memory note is still worth preserving, but now mainly as a diagnostic/exploratory artifact showing protocol dependence rather than a screening-only explanation; the sweep note is the relevant rerun companion
+
+### 1B. Wilson Two-Body Open Surface
+
+**Safe bounded material**
+
+- genuine two-orbital mutual-attraction channel on open 3D Wilson lattices
+- clean `shared` vs `self_only` separation on the audited `G=5`, `mu^2=0.22`
+  surface
+- fitted distance and partner-source laws
+- later `mu^2` sweep (`WILSON_MU2_DISTANCE_SWEEP_NOTE_2026-04-11.md`) shows the distance exponent softens toward Newton as the screening term is reduced
+
+**What is strong here**
+
+- this is the cleanest two-body mutual-attraction signal currently in the repo
+- it survives removal of the periodic small-box sign flip that affected the
+  narrow periodic Wilson window
+
+**What is bounded**
+
+- the distance law is clean but non-Newtonian at the retained `mu^2 = 0.22`
+- partner-source scaling is monotone but sublinear
+- the `mu^2` sweep makes the exponent a screened crossover, not a fixed steep
+  law
+- this is not yet an emergent Newton-law paper
+
+**What is not safe**
+
+- `1/r^2`
+- `F ∝ M1 M2`
+- promotion of the periodic `frontier_wilson_newton_law.py` script, which still
+  wraps the box despite its stated motivation
+
+**Verdict**
+
+- worth preserving as a bounded retained frontier result
+- strong enough to anchor a “clean mutual channel, wrong law” discussion
+- not yet the Nature-threshold two-body closure
 
 ### 2. Coin / Chiral / Dirac-Walk Lane
 

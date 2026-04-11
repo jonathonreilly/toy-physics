@@ -1,67 +1,70 @@
-# Wilson Mu^2 Distance Sweep Note
+# Wilson `mu^2` Distance Sweep Note
 
 **Date:** 2026-04-11  
-**Status:** bounded-retained calibration note on frontier; not a promoted Newton-law claim  
-**Script:** `frontier_wilson_mu2_distance_sweep.py`
+**Status:** bounded-retained calibration note
+
+**Script:** `scripts/frontier_wilson_mu2_sweep.py`
+
+**Anchor notes/scripts:**
+- `docs/WILSON_TWO_BODY_OPEN_NOTE_2026-04-11.md`
+- `docs/WILSON_TWO_BODY_OPEN_REFINED_NOTE_2026-04-11.md`
+- `scripts/frontier_wilson_two_body_open.py`
 
 ## Question
 
-Is the steep open-lattice Wilson distance exponent primarily a screening-mass
-artifact?
+Does the open-boundary Wilson distance law stay steep as screening is reduced,
+or does it soften toward Newtonian `d^-2` behavior?
 
-This sweep keeps the open Wilson law surface fixed and varies only the
-screening mass:
+## Sweep design
 
-- `side = 11, 13, 15`
+- open 3D Wilson lattice
 - `G = 5`
-- `d = 3, 4, 5, 6`
-- packet width fixed at the base open-lattice setting
-- `mu^2 = 0.22, 0.05, 0.01, 0.005, 0.001`
+- sides `11, 13, 15`
+- separations `d = 3, 4, 5, 6`
+- `mu^2 = 0.22, 0.10, 0.05, 0.01, 0.001, 0.0`
 
-Observable:
+Only clean attractive rows were used in the distance-law fit, matching the
+retained open-lattice Wilson convention.
 
-- early-time mutual acceleration from `SHARED - SELF_ONLY`
-- fit `|a_mut| ~ d^alpha` on clean attractive rows only
+## Results
 
-## Result
+All sampled points remained attractive and clean across the mu-scan surface.
 
-The exponent shifts strongly as `mu^2` is reduced:
+Clean distance-law fits:
 
-- `mu^2 = 0.22` -> `alpha = -3.315` (`R^2 = 0.9960`)
-- `mu^2 = 0.05` -> `alpha = -2.392` (`R^2 = 0.9978`)
-- `mu^2 = 0.01` -> `alpha = -1.992` (`R^2 = 0.9984`)
-- `mu^2 = 0.005` -> `alpha = -1.927` (`R^2 = 0.9985`)
-- `mu^2 = 0.001` -> `alpha = -1.871` (`R^2 = 0.9986`)
+- `mu^2 = 0.22`: exponent `-3.290` (`R^2 = 0.9957`)
+- `mu^2 = 0.10`: exponent `-2.732` (`R^2 = 0.9969`)
+- `mu^2 = 0.05`: exponent `-2.394` (`R^2 = 0.9975`)
+- `mu^2 = 0.01`: exponent `-1.996` (`R^2 = 0.9981`)
+- `mu^2 = 0.001`: exponent `-1.872` (`R^2 = 0.9984`)
+- `mu^2 = 0.0`: exponent `-1.857` (`R^2 = 0.9985`)
 
-All sampled configurations remained attractive and clean (`12/12` per `mu^2`).
+Per-side fits at low screening are consistent with the global trend:
+
+- at `mu^2 = 0.01`, `side=13` gives `-1.978`
+- at `mu^2 = 0.001`, `side=15` gives `-1.885`
+- at `mu^2 = 0.0`, `side=15` gives `-1.869`
 
 ## Interpretation
 
-The steep `d^-3.4` falloff seen at `mu^2 = 0.22` is not stable under
-screening removal. As the screening mass is reduced, the distance exponent
-softens toward the Newtonian `-2` value.
+The steep open-lattice exponent at `mu^2 = 0.22` is **screening-controlled**.
 
-Current best statement:
+As screening is reduced:
 
-> On the open Wilson lattice, the distance exponent is strongly controlled by
-> the screening mass. The steep `mu^2 = 0.22` law is primarily a screened
-> Yukawa artifact of the chosen operating point, and the open-surface law
-> moves toward `1/r^2` as `mu^2 -> 0`.
+- the exponent softens monotonically
+- the law approaches Newtonian `d^-2`
+- the mutual-attraction channel itself remains present
 
-This does **not** establish an exact Newton-law derivation yet, because the
-smallest `mu^2` values still sit slightly above `-2` in the tested window.
-It does, however, rule out the earlier interpretation that the steep exponent
-was a fixed discrete universality class independent of screening.
+So the correct statement is not “the Wilson law is permanently steeper than
+Newton,” but rather:
 
-## Relation to the Earlier Open Wilson Note
+> the open-lattice Wilson mutual channel is real, and its distance exponent
+> is strongly controlled by the screening mass.
 
-The original open Wilson note remains valid as a description of the
-`mu^2 = 0.22` surface. This addendum narrows its interpretation:
+## Conclusion
 
-- the mutual-attraction channel is real on the open surface
-- the exponent at the default screened operating point is steep
-- but that steepness is largely screening-controlled
+This is a calibration result, not a separate Newton-law derivation.
 
-So the Wilson lane is now best read as a screened open-lattice mutual-channel
-result with a clear path toward Newtonian scaling in the weak-screening
-limit, not as a fixed non-Newtonian law.
+It supports the use of the open Wilson lane as a screened crossover study and
+shows that the steep `mu^2 = 0.22` exponent should not be treated as a fixed
+universality class.
