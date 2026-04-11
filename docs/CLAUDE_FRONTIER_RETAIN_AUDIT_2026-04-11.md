@@ -156,6 +156,29 @@ Retention boundary:
 - calibrated open-cubic surface only
 - not a retained both-masses law
 
+### 6C. Bounded staggered weak-field source-mass companion
+
+Keep:
+
+- [STAGGERED_TEST_MASS_COMPANION_NOTE_2026-04-11.md](STAGGERED_TEST_MASS_COMPANION_NOTE_2026-04-11.md)
+- [scripts/frontier_staggered_test_mass_companion.py](../scripts/frontier_staggered_test_mass_companion.py)
+
+Why:
+
+- this is the primary-architecture analogue of the retained Wilson weak-field
+  test-mass/source-mass logic
+- the note is explicit that the source is static and the test packet is
+  normalized
+- the audited weak-field surface gives exact source scaling in the force
+  channel and near-linear source scaling in the blocked-envelope trajectory
+  companion
+
+Retention boundary:
+
+- source-only, not both-masses
+- static-source, not self-consistent two-body
+- not a standalone distance-law closure
+
 ### 8. Corrected periodic-2D rerun surface
 
 Keep:

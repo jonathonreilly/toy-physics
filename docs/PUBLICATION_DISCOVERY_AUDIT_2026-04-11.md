@@ -58,6 +58,7 @@ The repo currently contains four different classes of publication material:
 - bounded weak-coupling irregular-graph sign-sensitive regime on stable shell metrics
 - bounded open-cubic staggered trajectory Newton reproduction, with a blocking-sensitivity companion showing the near-Newton exponent is not a one-off `2x2x2` artifact
 - bounded 3D staggered blocked-envelope self-gravity contraction, with an explicit negative sign-flip companion result on the same centered surface
+- bounded open-cubic staggered weak-field static-source test-mass/source-mass companion, with exact source scaling in the force channel and near-linear blocked-envelope trajectory scaling on the audited side-and-separation surface
 - bounded open-cubic staggered self-consistent two-body **partner-force** channel with a near-Newton distance law on the calibrated surface
 
 **Current strongest package**
@@ -73,6 +74,7 @@ The repo currently contains four different classes of publication material:
 - source-scale closure via `G_eff`
 - topology-dependent onset fits
 - the open-cubic staggered trajectory companions are bounded cubic-surface results, not architecture-wide or graph-family closures
+- the new staggered test-mass companion is source-only and weak-field; it does not close both-masses scaling, self-consistent two-body mass transfer, or a standalone distance-law claim
 - the self-consistent two-body staggered companion is force-led and calibrated; it does not close trajectory-level two-body gravity or both-masses closure
 - branch-superposition remains fixed-adjacency field branching, not topology superposition
 - boundary-law scaling itself is generic for gapped free fermions; the nontrivial content here is the retained coefficient shift and robustness under the audited surface

@@ -41,6 +41,7 @@ Bounded primary-architecture companions:
 - [`scripts/frontier_staggered_newton_reproduction.py`](../scripts/frontier_staggered_newton_reproduction.py)
 - [`scripts/frontier_staggered_newton_blocking_sensitivity.py`](../scripts/frontier_staggered_newton_blocking_sensitivity.py)
 - [`scripts/frontier_staggered_3d_self_gravity_sign.py`](../scripts/frontier_staggered_3d_self_gravity_sign.py)
+- [`scripts/frontier_staggered_test_mass_companion.py`](../scripts/frontier_staggered_test_mass_companion.py)
 - [`scripts/frontier_staggered_self_consistent_two_body.py`](../scripts/frontier_staggered_self_consistent_two_body.py)
 
 Companion notes:
@@ -48,12 +49,15 @@ Companion notes:
 - [`docs/STAGGERED_NEWTON_REPRODUCTION_NOTE_2026-04-11.md`](STAGGERED_NEWTON_REPRODUCTION_NOTE_2026-04-11.md)
 - [`docs/STAGGERED_NEWTON_BLOCKING_SENSITIVITY_NOTE_2026-04-11.md`](STAGGERED_NEWTON_BLOCKING_SENSITIVITY_NOTE_2026-04-11.md)
 - [`docs/STAGGERED_3D_SELF_GRAVITY_SIGN_NOTE_2026-04-11.md`](STAGGERED_3D_SELF_GRAVITY_SIGN_NOTE_2026-04-11.md)
+- [`docs/STAGGERED_TEST_MASS_COMPANION_NOTE_2026-04-11.md`](STAGGERED_TEST_MASS_COMPANION_NOTE_2026-04-11.md)
 - [`docs/STAGGERED_SELF_CONSISTENT_TWO_BODY_NOTE_2026-04-11.md`](STAGGERED_SELF_CONSISTENT_TWO_BODY_NOTE_2026-04-11.md)
 
 Reading boundary:
 
 - these are the right reruns when you need the open-cubic trajectory story
   on the primary staggered architecture
+- the static-source test-mass companion is a weak-field source-mass lane, not a
+  both-masses or self-consistent two-body closure
 - the self-consistent two-body companion is force-led, not trajectory-closed
 - they are bounded open-cubic companions, not full both-masses closure
 
