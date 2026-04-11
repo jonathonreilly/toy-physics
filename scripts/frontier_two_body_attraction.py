@@ -15,8 +15,16 @@ Protocol:
   - Mutual acceleration = d''_shared(t) - d''_self(t)
   - If mutual accel < 0 (separation decreasing), that's ATTRACTION
   - Sweep separations d = [4, 6, 8, 10, 12]
-  - Multiple seeds (random phase kicks) and G values
+  - Multiple seeds (random phase kicks on one fixed surface)
   - Report fraction attractive and |a_mutual| vs d power law
+
+Surface caveat:
+  This script tests ONE geometry (side-20 open cubic), ONE placement
+  family (x-axis centered), with phase-jitter repeats only. The seeds
+  add small random phase kicks to the initial Gaussians but do not vary
+  the lattice, placement axis, or packet shape. Results demonstrate a
+  deterministic signal on this surface but do not constitute cross-graph
+  or cross-placement robustness.
 
 Confirmed parameters from Newton -1.979 result:
   MASS=0.3, WILSON_R=1.0, DT=0.08, N_STEPS=15, G=5, mu2=0.001, side=20
@@ -323,7 +331,7 @@ def main():
     clean_amps = []
     for d in SEPARATIONS:
         mean_a, std_a, n_att, n_tot, _ = distance_means[d]
-        if mean_a < -1e-8 and n_att >= n_tot // 2:
+        if mean_a < -1e-8 and n_att == n_tot:  # require ALL seeds attractive
             clean_ds.append(d)
             clean_amps.append(abs(mean_a))
 
