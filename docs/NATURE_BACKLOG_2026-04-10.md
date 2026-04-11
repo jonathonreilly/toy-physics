@@ -26,8 +26,19 @@ sign-selective.
 Show that the attractive sign is required by the staggered / Dirac structure,
 or find one graph-native irregular observable that actually distinguishes
 attractive from repulsive coupling.
-**Status:** OPEN. The two-sign comparison shows current irregular shell/edge
-measures are not sign-selective.
+**Status:** PARTIALLY CLOSED (2026-04-11).
+- The identity coupling `m·ε − m·Φ` was wrong. Replaced with the
+  literature-correct parity coupling `(m + Φ)·ε(x)` (Zache et al. 2020).
+- On the **exact-lattice canonical card**, well/hill sign test now splits
+  cleanly: TOWARD for V<0, AWAY for V>0. This is a genuine sign-selective
+  result on the cubic lattice.
+- On **irregular graph families**, the retained shell/edge-radial proxies
+  are strong structural interacting-field results but do not yet constitute
+  a clean directional-gravity claim. One frozen graph-native directional
+  observable is still needed.
+- Self-gravity now contracts strongly (w=0.44-0.63) under parity coupling,
+  vs expanding (w=1.68) under the old identity coupling.
+**Scripts:** `frontier_correct_coupling.py`, `frontier_two_sign_parity.py`
 
 ## Tier 1: Emergent Geometry (Nature-level)
 

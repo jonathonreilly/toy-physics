@@ -83,7 +83,8 @@ def grow_graph(n_final, G_self, n_evolve=3, seed=42, dim=2):
         phi = spsolve((L + MU2*speye(n,format='csr')).tocsc(), G_self*rho)
         H = lil_matrix((n,n), dtype=complex)
         par = np.where(col_arr==0, 1., -1.)
-        H.setdiag(MASS*par - MASS*phi)
+        # Parity (scalar 1⊗1) coupling: Φ modulates mass gap via ε(x).
+        H.setdiag((MASS+phi)*par)
         for i, nbs in adj_l.items():
             for j in nbs:
                 if i >= j: continue

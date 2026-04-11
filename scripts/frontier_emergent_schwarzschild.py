@@ -79,7 +79,8 @@ def _build_H(pos, col, adj, n, mass, phi=None):
     H = lil_matrix((n, n), dtype=complex)
     par = np.where(col == 0, 1., -1.)
     diag = mass * par
-    if phi is not None: diag = diag - mass * phi
+    # Parity (scalar 1⊗1) coupling: Φ modulates mass gap via ε(x).
+    if phi is not None: diag = (mass + phi) * par
     H.setdiag(diag)
     for i, nbs in adj.items():
         for j in nbs:

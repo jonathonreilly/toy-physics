@@ -167,7 +167,8 @@ def _build_hamiltonian(
             V[i] = -mass * G * source_strength / (dist[i] + EPS)
 
     parity = np.where(graph.colors == 0, 1.0, -1.0)
-    H.setdiag(mass * parity + V)
+    # Parity (scalar 1⊗1) coupling: V modulates mass gap via ε(x).
+    H.setdiag((mass + V) * parity)
 
     phase_edge = None
     if flux_edge is not None:

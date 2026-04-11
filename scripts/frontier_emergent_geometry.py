@@ -88,7 +88,8 @@ def grow_graph_matter_coupled(n_final=80, n_evolve_steps=5, seed=42):
         # Build H and evolve
         H = lil_matrix((n,n), dtype=complex)
         par = np.where(col_arr==0, 1., -1.)
-        H.setdiag(MASS*par - MASS*phi)
+        # Parity (scalar 1⊗1) coupling: Φ modulates mass gap via ε(x).
+        H.setdiag((MASS+phi)*par)
         for i, nbs in adj_l.items():
             for j in nbs:
                 if i >= j: continue
