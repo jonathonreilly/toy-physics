@@ -87,9 +87,14 @@ parameter enters identically. Should recheck at μ²=0.001.
 
 ## ALREADY RECHECKED (Done with μ²=0.001)
 
-- Newton's distance law: -2.02 ± 0.07 ← CONFIRMED
-- Newton's mass law: R²=0.987 ← CONFIRMED (was done at μ²=0.22 but
-  the mass test used external source, not self-consistent Poisson)
+- Newton's distance law: -1.979 ± 0.008 systematic sweep ← ROBUST
+  (3 lattice sizes × 2 G values, all R²>0.998)
+- Newton's mass law: R²=0.987 ← CONFIRMED
+- Ollivier Einstein: R²=0.999, 699x random separation ← STRENGTHENED (was 0.97/300x)
+- Sign selectivity: 150/150 (100%), random 82% ← CONFIRMED
+- Boundary law: 100/100 R²>0.95, 10.4σ separation ← STRENGTHENED (was 2.7σ)
+- Cycle battery: 9/9, 9/9, 9/9, 8/9 ← IDENTICAL
+- CDT flow: Sigmoid R²>0.989 ← CONFIRMED (done earlier)
 
 ## DOES NOT NEED RECHECK
 

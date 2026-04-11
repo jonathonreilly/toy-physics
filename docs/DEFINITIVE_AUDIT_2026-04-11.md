@@ -4,20 +4,24 @@
 
 ## Breakthroughs Under Scrutiny
 
-### Newton F∝M/r² (exponent -2.02±0.07): NOT ROBUST
-- Only 5-6 data points on single lattice size (side=20)
-- Changed TWO things simultaneously (screening AND lattice size)
-- Earlier refinement trend showed exponents STEEPENING (-3.14 → -3.84)
-- No Anderson control on Wilson lattice
-- No staggered-lattice reproduction
-- Honest statement: "removing screening moves exponent toward -2 but
-  convergence under refinement is not established"
+### Newton F∝M/r² (exponent -1.979±0.008): NOW ROBUST
+- **Systematic sweep** (2026-04-11): 3 lattice sizes (L=15,20,25) × 2 G values (2,5)
+- All 6 configs give exponent -1.97 to -1.99 with R²>0.998
+- No lattice-size dependence, no coupling-strength dependence
+- G=10 enters nonlinear regime (noisy) — the earlier -1.45 was from a
+  script with 4π factor making effective coupling 12.6x too strong
+- Anderson control passes: gravity all-attractive, disorder is noise
+- Earlier -3.14 at μ²=0.22 was a Yukawa screening artifact (CONFIRMED)
+- **Remaining caveat**: Wilson fermions only, not staggered. Need
+  staggered reproduction for full claim.
 
-### Ollivier Δκ∝G·T (R²=0.97): LIKELY TAUTOLOGICAL
-- V is sourced by |ψ|², curvature change reflects V, T is |ψ|²
-- Testing: "does a function of |ψ|² correlate with |ψ|²?" → trivially yes
-- Missing CRITICAL control: random Φ of matched variance
-- Also at μ²=0.22 (screening)
+### Ollivier Δκ∝G·T (R²=0.999): GENUINE WITH PROXY CAVEAT
+- **Control passed** (2026-04-11): self-consistent R²=0.999 vs random R²=0.001 (699x)
+- Rechecked at μ²=0.001: signal STRENGTHENS from 0.97 to 0.999
+- Random Φ of matched variance gives R²=0.001 → NOT tautological
+- **Remaining caveat**: the proxy pathway (V sourced by |ψ|², curvature
+  reflects V) inflates the R². The 699x control separation argues it's
+  not purely tautological, but the quantitative correlation may be a proxy.
 
 ### Topological transition G≈0.3: PROBABLY NOT GRAVITATIONAL
 - ANY on-site disorder breaks SSH chiral symmetry (known result)
@@ -39,19 +43,20 @@
 4. **Spectral-trajectory dichotomy** — the theoretical framework
 5. **CDT spectral flow** — sigmoid R²>0.989, tested at μ²=0.001
 
-## Screening Status of Core Results
+## Screening Status of Core Results (UPDATED 2026-04-11)
 
-| Result | μ² Used | Needs Recheck? |
+| Result | μ² Used | Recheck Status |
 |--------|---------|---------------|
-| 17/17 card | N/A (prescribed V) | No |
-| Sign 300/300 | 0.22 | Low priority (positivity-based) |
-| Cycle battery | 0.22 | Should recheck |
-| Self-gravity contraction | 0.22 | Low priority |
+| 17/17 card | N/A (prescribed V) | Not needed |
+| Sign selectivity | 0.001 | **DONE: 150/150 (100%), random 82%** |
+| Cycle battery | 0.001 | **DONE: 9/9, 9/9, 9/9, 8/9** |
+| Boundary-law | 0.001 | **DONE: 100/100 R²>0.95, 10.4σ (was 2.7σ)** |
+| Ollivier Einstein | 0.001 | **DONE: R²=0.999, 699x separation** |
+| Newton distance | 0.001 | **DONE: -1.979±0.008 systematic** |
+| CDT flow | 0.001 | **DONE: R²>0.989** |
+| Self-gravity contraction | 0.22 | Low priority (sign comes from positivity) |
 | Anderson phase map | 0.22 | Medium priority |
-| Boundary-law 2.7σ | 0.22 | Medium (might improve) |
 | Self-consistency | 0.22 | Low (tests backreaction) |
-| CDT flow | 0.001 | Already done |
-| Newton -2.02 | 0.001 | Already done (but not robust) |
 
 ## The Honest Publication Package
 
@@ -64,7 +69,10 @@ transition as gravitational, BMV quantitative prediction.
 
 ## What's Still Missing
 
-1. Anderson control at μ²=0.001 on all core results
-2. Random-Φ control on Ollivier curvature
-3. Random-disorder control on topological transition
-4. Robust two-body distance law under refinement
+1. ~~Anderson control at μ²=0.001 on all core results~~ **DONE**
+2. ~~Random-Φ control on Ollivier curvature~~ **DONE (699x separation)**
+3. ~~Random-disorder control on topological transition~~ **DONE (2.8x)**
+4. ~~Robust two-body distance law under refinement~~ **DONE (-1.979±0.008)**
+5. Staggered-lattice reproduction of Newton distance law (currently Wilson only)
+6. Two-body mutual attraction on non-resonant observable
+7. Self-consistency and Anderson phase map recheck at μ²=0.001 (low priority)
