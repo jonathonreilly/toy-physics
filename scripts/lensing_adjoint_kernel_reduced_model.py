@@ -25,6 +25,7 @@ from __future__ import annotations
 
 import argparse
 import math
+import time
 from collections import defaultdict
 
 from kubo_continuum_limit import BETA, K_PER_H, PW_PHYS, SRC_LAYER_FRAC, grow, true_kubo_at_H
@@ -157,6 +158,14 @@ def summarize_model(label, bs, ys, ref):
     }
 
 
+def emit_progress(enabled, start_time, message):
+    """Emit a flushed phase marker for bounded long-running replays."""
+    if not enabled:
+        return
+    elapsed = time.perf_counter() - start_time
+    print(f"[progress +{elapsed:7.2f}s] {message}", flush=True)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--t-phys", type=float, default=15.0)
@@ -179,7 +188,13 @@ def main() -> None:
         default=[3.0],
         help="b values to cross-check with true_kubo_at_H when --truth-mode=spotcheck",
     )
+    parser.add_argument(
+        "--progress",
+        action="store_true",
+        help="emit flushed phase markers before the final summary table",
+    )
     args = parser.parse_args()
+    start_time = time.perf_counter()
 
     H = args.h
     NL = max(3, round(args.t_phys / H))
@@ -188,18 +203,38 @@ def main() -> None:
     x_src = round(NL * SRC_LAYER_FRAC) * H
     beta = args.beta
 
+    emit_progress(
+        args.progress,
+        start_time,
+        (
+            f"starting grow: T_phys={args.t_phys:g} H={H:g} NL={NL} PW={PW:g} "
+            f"seed={args.seed} drift={args.drift:.2f} restore={args.restore:.2f}"
+        ),
+    )
     pos, adj, _ = grow(args.seed, args.drift, args.restore, NL, PW, 3, H)
+    emit_progress(args.progress, start_time, f"grow complete: n_nodes={len(pos)}")
+    emit_progress(args.progress, start_time, "building free amplitudes and detector adjoint")
     A, lam, cz_free, T0, _ = build_free_and_adjoint(pos, adj, NL, PW, H, k_phase, beta)
+    emit_progress(args.progress, start_time, f"adjoint build complete: cz_free={cz_free:+.6f} T0={T0:.6e}")
+    emit_progress(args.progress, start_time, "extracting signed edge coefficients")
     edges = signed_edge_coefficients(pos, adj, H, k_phase, beta, A, lam)
+    emit_progress(args.progress, start_time, f"edge extraction complete: n_edges={len(edges)}")
+    emit_progress(args.progress, start_time, "compressing layer and midpoint-bin surrogates")
     layers = compress_layers(edges)
     midpoint_dx = 0.5
     midpoint_dz = 1.0
     midpoint_bins = compress_midpoint_bins(edges, midpoint_dx, midpoint_dz)
+    emit_progress(
+        args.progress,
+        start_time,
+        f"compression complete: n_layer_terms={len(layers)} n_midpoint_bins={len(midpoint_bins)}",
+    )
 
     exact_vals = []
     red_signed = []
     red_midpoint = []
     for b in args.b_values:
+        emit_progress(args.progress, start_time, f"evaluating reduced models at b={b:g}")
         exact_vals.append(exact_edge_sum(edges, x_src, b))
         red_signed.append(reduced_sum(layers, x_src, b, "signed"))
         red_midpoint.append(reduced_sum_midpoint_bins(midpoint_bins, x_src, b))
@@ -212,9 +247,11 @@ def main() -> None:
 
     truth_checks = {}
     for b in truth_targets:
+        emit_progress(args.progress, start_time, f"running truth harness at b={b:g}")
         true_kubo, _, _ = true_kubo_at_H(pos, adj, NL, PW, H, k_phase, x_src, b, beta=beta)
         truth_checks[b] = true_kubo
 
+    emit_progress(args.progress, start_time, "rendering summary table")
     print("=" * 100)
     print("LENSING ADJOINT KERNEL REDUCED MODEL")
     print("=" * 100)
