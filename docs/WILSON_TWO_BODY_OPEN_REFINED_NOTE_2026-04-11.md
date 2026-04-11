@@ -95,7 +95,13 @@ This note is still accurate for the fixed `mu^2 = 0.22` surface it audited.
 The later screening sweep narrows the interpretation:
 
 - the steep exponent at `mu^2 = 0.22` is real on that surface
-- but the exponent softens toward `-2` as `mu^2` is reduced
+- the exponent moves monotonically with `mu^2`:
+  - `-3.290` at `mu^2 = 0.22`
+  - `-2.732` at `mu^2 = 0.10`
+  - `-2.394` at `mu^2 = 0.05`
+  - `-1.996` at `mu^2 = 0.01`
+  - `-1.872` at `mu^2 = 0.001`
+  - `-1.857` at `mu^2 = 0.0`
 - so the steep law is not a fixed universality class independent of screening
 
 See [`WILSON_MU2_DISTANCE_SWEEP_NOTE_2026-04-11.md`](WILSON_MU2_DISTANCE_SWEEP_NOTE_2026-04-11.md)

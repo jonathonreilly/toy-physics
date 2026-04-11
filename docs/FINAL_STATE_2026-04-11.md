@@ -21,7 +21,7 @@ Two axioms. Two free parameters (m, G). One open problem (graph selection).
 | Result | How It Died |
 |--------|------------|
 | Entanglement "Hawking-Page" | G_c drifts with L (34% spread) — finite-size artifact |
-| Memory | Vanishes at large N even with μ=0 — not just Yukawa |
+| Memory | Protocol-sensitive: size-fragile on the scaled ring, but survives on fixed geometry; not purely Yukawa |
 | Two-body mutual attraction | Not detected in Hartree two-orbital test |
 | 3-body GHZ | Corrected to W-type (theorem for 2-branch) |
 | Multifractal universality | D₂ drifts toward 0 (localization, not critical) |
