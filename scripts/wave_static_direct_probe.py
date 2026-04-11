@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Direct discrete static-comparator probe for the wave-retardation lane.
+"""Static-comparator probe for the wave-retardation lane.
 
 This script tests the next concrete comparator candidate after the corrected
 continuum negative:
 
-  solve the exact static fixed-point / Poisson problem on the same finite
-  (y, z) field grid and use that as the c=infinity comparator.
+  build the gauge-fixed free-space (infinite-lattice) discrete Green
+  comparator history on the same (y, z) field grid.
 
 The probe is intentionally narrow:
   - same physical setup as wave_retardation_continuum_limit.py
@@ -13,11 +13,10 @@ The probe is intentionally narrow:
   - compare three static comparators:
       dI    = cached static slice at NL_dyn
       dIeq  = cached static slice at 3 * NL_dyn
-      dS    = direct discrete static solve on the finite (y, z) grid
+      dGinf = gauge-fixed infinite-lattice Green history
 
-If dS is materially more stable than dIeq under H refinement, the exact
-discrete static comparator route is promising. If not, the comparator route is
-probably closing and the flagship should shift toward direct dM observables.
+This lane only lands the reusable constructor/cache prerequisite and integration
+point. It does not assert a final comparator verdict.
 
 Current review-safe default evidence is the coarse/medium ladder
 H={0.5, 0.35}. The fine point H=0.25 remains an optional validation run and
@@ -28,7 +27,6 @@ as retained default evidence.
 from __future__ import annotations
 
 import argparse
-import math
 import sys
 from pathlib import Path
 
@@ -50,61 +48,40 @@ from wave_retardation_continuum_limit import (
     prop_beam,
     solve_wave,
 )
+from infinite_lattice_green_kernel import gauge_fixed_green_kernel_2d
 
 
-def solve_static_poisson(PW: float, H: float, strength: float, iz_now: int,
-                         tol: float = 1e-10, max_iter: int = 20000):
-    """Solve lap(f) + src = 0 on the finite (y, z) grid with zero boundaries."""
+def make_infinite_lattice_static(NL, PW, H, strength, iz_of_t, src_layer):
+    """Gauge-fixed infinite-lattice static comparator history.
+
+    Uses the 2D free-space discrete Green kernel with G(0,0)=0.
+    """
     hw = int(PW / H)
     nw = 2 * hw + 1
     sy = nw // 2
-    sz = nw // 2 + iz_now
-    f = [[0.0] * nw for _ in range(nw)]
-    for _ in range(max_iter):
-        max_delta = 0.0
-        for iy in range(1, nw - 1):
-            row = f[iy]
-            up = f[iy - 1]
-            dn = f[iy + 1]
-            for iz in range(1, nw - 1):
-                src = strength if (iy == sy and iz == sz) else 0.0
-                new = 0.25 * (up[iz] + dn[iz] + row[iz - 1] + row[iz + 1] + src)
-                delta = abs(new - row[iz])
-                if delta > max_delta:
-                    max_delta = delta
-                row[iz] = new
-        if max_delta < tol:
-            break
+    max_offset = 2 * hw
+    kernel = gauge_fixed_green_kernel_2d(max_offset=max_offset)
+    offset = max_offset
 
-    max_resid = 0.0
-    for iy in range(1, nw - 1):
-        for iz in range(1, nw - 1):
-            src = strength if (iy == sy and iz == sz) else 0.0
-            resid = (
-                f[iy - 1][iz] + f[iy + 1][iz] + f[iy][iz - 1] + f[iy][iz + 1]
-                - 4.0 * f[iy][iz] + src
-            )
-            if abs(resid) > max_resid:
-                max_resid = abs(resid)
-    return [r[:] for r in f], max_resid
-
-
-def make_direct_static(NL, PW, H, strength, iz_of_t, src_layer):
-    """Exact discrete static comparator via direct Poisson solve per source z."""
-    hw = int(PW / H)
-    nw = 2 * hw + 1
     history = [[[0.0] * nw for _ in range(nw)] for _ in range(NL)]
-    cache = {}
-    residuals = {}
+    slice_cache = {}
     for t in range(NL):
         if t < src_layer:
             continue
         iz_now = iz_of_t(t)
-        if iz_now not in cache:
-            cache[iz_now], residuals[iz_now] = solve_static_poisson(PW, H, strength, iz_now)
-        history[t] = [row[:] for row in cache[iz_now]]
-    worst_resid = max(residuals.values()) if residuals else 0.0
-    return history, worst_resid
+        if iz_now not in slice_cache:
+            sz = sy + iz_now
+            field = [[0.0] * nw for _ in range(nw)]
+            for iy in range(nw):
+                dy = iy - sy
+                kernel_y = kernel[dy + offset]
+                row = field[iy]
+                for iz in range(nw):
+                    dz = iz - sz
+                    row[iz] = strength * kernel_y[dz + offset]
+            slice_cache[iz_now] = field
+        history[t] = [row[:] for row in slice_cache[iz_now]]
+    return history, {"cached_source_positions": len(slice_cache), "kernel_max_offset": max_offset}
 
 
 def measure_at_H(H_val: float, label: str):
@@ -126,7 +103,9 @@ def measure_at_H(H_val: float, label: str):
     h_Ieq = make_instantaneous_equilibrated(
         NL, PW, H_val, S_PHYS, iz_of_t, src_layer, equilib_multiplier=3
     )
-    h_S, worst_resid = make_direct_static(NL, PW, H_val, S_PHYS, iz_of_t, src_layer)
+    h_Ginf, ginf_meta = make_infinite_lattice_static(
+        NL, PW, H_val, S_PHYS, iz_of_t, src_layer
+    )
 
     pos, adj, nmap = grow(0, 0.20, 0.70, NL, PW, 3, H_val)
     free = prop_beam(pos, adj, nmap, None, k_phase, NL, PW, H_val)
@@ -134,15 +113,15 @@ def measure_at_H(H_val: float, label: str):
     cz_M = cz(prop_beam(pos, adj, nmap, h_M, k_phase, NL, PW, H_val), pos, NL, PW, H_val)
     cz_I = cz(prop_beam(pos, adj, nmap, h_I, k_phase, NL, PW, H_val), pos, NL, PW, H_val)
     cz_Ieq = cz(prop_beam(pos, adj, nmap, h_Ieq, k_phase, NL, PW, H_val), pos, NL, PW, H_val)
-    cz_S = cz(prop_beam(pos, adj, nmap, h_S, k_phase, NL, PW, H_val), pos, NL, PW, H_val)
+    cz_Ginf = cz(prop_beam(pos, adj, nmap, h_Ginf, k_phase, NL, PW, H_val), pos, NL, PW, H_val)
     dM = cz_M - z_free
     dI = cz_I - z_free
     dIeq = cz_Ieq - z_free
-    dS = cz_S - z_free
+    dGinf = cz_Ginf - z_free
     rel_MI = abs(dM - dI) / max(abs(dM), abs(dI), 1e-12)
     rel_MIeq = abs(dM - dIeq) / max(abs(dM), abs(dIeq), 1e-12)
-    rel_MS = abs(dM - dS) / max(abs(dM), abs(dS), 1e-12)
-    rel_IeqS = abs(dIeq - dS) / max(abs(dIeq), abs(dS), 1e-12)
+    rel_MGinf = abs(dM - dGinf) / max(abs(dM), abs(dGinf), 1e-12)
+    rel_IeqGinf = abs(dIeq - dGinf) / max(abs(dIeq), abs(dGinf), 1e-12)
     return {
         "label": label,
         "H": H_val,
@@ -150,12 +129,12 @@ def measure_at_H(H_val: float, label: str):
         "dM": dM,
         "dI": dI,
         "dIeq": dIeq,
-        "dS": dS,
+        "dGinf": dGinf,
         "rel_MI": rel_MI,
         "rel_MIeq": rel_MIeq,
-        "rel_MS": rel_MS,
-        "rel_IeqS": rel_IeqS,
-        "worst_resid": worst_resid,
+        "rel_MGinf": rel_MGinf,
+        "rel_IeqGinf": rel_IeqGinf,
+        "ginf_meta": ginf_meta,
     }
 
 
@@ -171,7 +150,7 @@ def main():
     args = parser.parse_args()
 
     print("=" * 100)
-    print("WAVE STATIC DIRECT-COMPARATOR PROBE")
+    print("WAVE STATIC INFINITE-LATTICE COMPARATOR PREREQUISITE")
     print("=" * 100)
     rows = []
     label_map = {0.5: "coarse", 0.35: "medium", 0.25: "fine"}
@@ -184,12 +163,16 @@ def main():
         print(f"  dM   = {r['dM']:+.6f}")
         print(f"  dI   = {r['dI']:+.6f}")
         print(f"  dIeq = {r['dIeq']:+.6f}")
-        print(f"  dS   = {r['dS']:+.6f}  (direct static solve)")
+        print(f"  dGinf = {r['dGinf']:+.6f}  (gauge-fixed infinite-lattice Green)")
         print(f"  rel_MI   = {r['rel_MI']:.2%}")
         print(f"  rel_MIeq = {r['rel_MIeq']:.2%}")
-        print(f"  rel_MS   = {r['rel_MS']:.2%}")
-        print(f"  rel_IeqS = {r['rel_IeqS']:.2%}")
-        print(f"  worst static residual = {r['worst_resid']:.3e}")
+        print(f"  rel_MGinf   = {r['rel_MGinf']:.2%}")
+        print(f"  rel_IeqGinf = {r['rel_IeqGinf']:.2%}")
+        print(
+            "  Ginf history cache: "
+            f"{r['ginf_meta']['cached_source_positions']} source z slices, "
+            f"kernel max_offset={r['ginf_meta']['kernel_max_offset']}"
+        )
 
     if len(rows) >= 2:
         print("\n" + "=" * 100)
@@ -198,8 +181,8 @@ def main():
         a, b = rows[-2], rows[-1]
         print(f"  Δ(rel_MI)   = {abs(b['rel_MI'] - a['rel_MI']):.4f}")
         print(f"  Δ(rel_MIeq) = {abs(b['rel_MIeq'] - a['rel_MIeq']):.4f}")
-        print(f"  Δ(rel_MS)   = {abs(b['rel_MS'] - a['rel_MS']):.4f}")
-        print(f"  Δ(rel_IeqS) = {abs(b['rel_IeqS'] - a['rel_IeqS']):.4f}")
+        print(f"  Δ(rel_MGinf)   = {abs(b['rel_MGinf'] - a['rel_MGinf']):.4f}")
+        print(f"  Δ(rel_IeqGinf) = {abs(b['rel_IeqGinf'] - a['rel_IeqGinf']):.4f}")
 
 
 if __name__ == "__main__":
