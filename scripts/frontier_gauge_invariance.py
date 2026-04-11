@@ -35,9 +35,12 @@ import random
 import sys
 from collections import defaultdict
 from dataclasses import dataclass
+from pathlib import Path
 from typing import DefaultDict
 
-sys.path.insert(0, "/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf")
+REPO_ROOT = Path(__file__).resolve().parents[1]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
 
 from toy_event_physics import (
     RulePostulates,

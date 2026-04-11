@@ -30,10 +30,11 @@ import cmath
 import math
 import sys
 import time
+from pathlib import Path
 
-sys.path.insert(
-    0, "/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf"
-)
+REPO_ROOT = Path(__file__).resolve().parents[1]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
 
 from toy_event_physics import (
     RulePostulates,
