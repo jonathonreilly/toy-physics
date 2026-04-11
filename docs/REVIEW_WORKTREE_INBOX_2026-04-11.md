@@ -28,6 +28,7 @@ These are not review items anymore:
 - `scripts/frontier_continuum_limit.py`
 - `scripts/frontier_newton_systematic.py`
 - `docs/NEWTON_DERIVATION_NOTE.md`
+- `docs/ACTION_UNIQUENESS_AUDIT_2026-04-11.md`
 
 Status:
 
@@ -131,30 +132,7 @@ Required next experiment:
 - add frozen/static-source control
 - replay on the primary staggered/open-cubic surface
 
-#### C. Action uniqueness
-
-Source branches:
-
-- `origin/claude/youthful-neumann`
-- `origin/codex/resonance-controls`
-
-Files:
-
-- `docs/ACTION_UNIQUENESS_AUDIT_2026-04-11.md`
-- `scripts/action_uniqueness_investigation.py`
-
-Why held:
-
-- current evidence supports a weak-field family law on one ordered-lattice
-  setup
-- it does not justify architecture-independent uniqueness
-
-Required next experiment:
-
-- rewrite the claim to the family level, or
-- prove portability across the retained architectures
-
-#### D. Irregular endogenous sign closure
+#### C. Irregular endogenous sign closure
 
 Source branches:
 
@@ -185,7 +163,7 @@ Required next experiment:
   shell-packet readout, or switch to a different irregular observable
 - do not promote the current reinforcement run
 
-#### E. Staggered two-body closure family
+#### D. Staggered two-body closure family
 
 Source branches:
 

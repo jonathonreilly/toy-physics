@@ -13,42 +13,12 @@ These are not part of the hold list:
 - `STAGGERED_TEST_MASS_COMPANION_NOTE_2026-04-11.md`
 - `DISTANCE_LAW_3D_64_CLOSURE_NOTE_2026-04-11.md`
 - `WILSON_TEST_MASS_CONTINUUM_NOTE_2026-04-11.md`
-
-## Remaining Bounded Candidate
-
-These are still worth promoting, but only if the wording stays explicitly
-family-level.
-
-### 0. Action uniqueness audit
-
-Files:
-
-- `docs/ACTION_UNIQUENESS_AUDIT_2026-04-11.md`
-
-Why candidate:
-
-- the action-uniqueness lane is bounded-family keep, not theorem
-- it is a bounded weak-field family law on one ordered-lattice setup
-- it is not yet architecture-independent
-- it can be promoted only if the wording stays explicitly family-level
+- `NEWTON_DERIVATION_NOTE.md`
+- `ACTION_UNIQUENESS_AUDIT_2026-04-11.md`
 
 ## Holds
 
-### 0. Newton derivation note
-
-Files:
-
-- `docs/NEWTON_DERIVATION_NOTE.md`
-
-Why held:
-
-- the test-particle additivity story is stronger, but the persistent-pattern
-  inertia / one-parameter mass realization is still open
-- the packet re-identification control is only a bounded diagnostic
-- the stricter persistent inertial-object probe finds no admissible class
-- the note is therefore a bounded family law, not a mainline closure
-
-### 1. Wilson mutual-attraction side lane
+### 0. Wilson mutual-attraction side lane
 
 Files:
 
@@ -77,7 +47,7 @@ Next control:
 - `SHARED`, `SELF_ONLY`, `FROZEN_SOURCE`
 - do not promote until the causal discriminator is clean
 
-### 2. Exact two-particle product law
+### 1. Exact two-particle product law
 
 Files:
 
@@ -96,7 +66,7 @@ Next control:
 - add a frozen/static-source control
 - replay on the primary staggered/open-cubic surface
 
-### 3. Irregular endogenous sign closure
+### 2. Irregular endogenous sign closure
 
 Files:
 
@@ -120,7 +90,7 @@ Next control:
 - a third genuinely independent packet family, or
 - a different observable on the same irregular surface
 
-### 4. Staggered two-body closure family
+### 3. Staggered two-body closure family
 
 Files:
 
