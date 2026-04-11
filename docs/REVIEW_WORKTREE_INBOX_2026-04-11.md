@@ -28,7 +28,7 @@ These are not review items anymore:
 - `scripts/frontier_continuum_limit.py`
 - `scripts/frontier_newton_systematic.py`
 - `docs/NEWTON_DERIVATION_NOTE.md`
-- `docs/ACTION_UNIQUENESS_AUDIT_2026-04-11.md`
+- `docs/NEWTON_PERSISTENT_PATTERN_CONTROL_NOTE_2026-04-11.md`
 
 Status:
 
@@ -55,20 +55,19 @@ Status:
 Everything else in this review worktree is held pending a specific missing
 control or redesign step.
 
-#### 0. Newton persistent-pattern control
+#### 0. Action uniqueness
 
 Files:
 
-- `docs/NEWTON_PERSISTENT_PATTERN_CONTROL_NOTE_2026-04-11.md`
+- `docs/ACTION_UNIQUENESS_AUDIT_2026-04-11.md`
+- `scripts/action_uniqueness_investigation.py`
 
 Status:
 
 - hold
-- the test-particle additivity story is stronger, but the persistent-pattern
-  inertia / one-parameter mass realization is still open
-- the packet re-identification control is only a bounded diagnostic
-- the stricter persistent inertial-object probe finds no admissible class
-- the control is a bounded negative, not a persistent-pattern theorem
+- the evidence supports a weak-field family law on one ordered-lattice setup
+- it does not justify architecture-independent uniqueness
+- the audit should stay at bounded family-level wording
 
 #### A. Wilson mutual-attraction side lane
 
