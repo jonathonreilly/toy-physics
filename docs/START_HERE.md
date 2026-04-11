@@ -12,11 +12,13 @@ way in is:
    [`docs/repo/REPO_ORGANIZATION.md`](repo/REPO_ORGANIZATION.md)
 3. Read the lane manifests:
    [`docs/lanes/README.md`](lanes/README.md)
-4. Read the retained runner map:
+4. Read the publication-discovery ledger:
+   [`docs/POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md`](POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md)
+5. Read the retained runner map:
    [`docs/CANONICAL_HARNESS_INDEX.md`](CANONICAL_HARNESS_INDEX.md)
-5. Read the bug / rerun workflow:
+6. Read the bug / rerun workflow:
    [`docs/repo/RETEST_PLAYBOOK.md`](repo/RETEST_PLAYBOOK.md)
-6. Then read the current retained science state:
+7. Then read the current retained science state:
    [`docs/FULL_TEST_MATRIX_2026-04-10.md`](FULL_TEST_MATRIX_2026-04-10.md)
 
 ## Current Program Reality

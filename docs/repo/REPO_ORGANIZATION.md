@@ -64,6 +64,8 @@ still landing. The fix is a stable control plane:
   - which scripts to rerun first
 - [`docs/lanes/README.md`](../lanes/README.md)
   - lane-by-lane manifests for the full repo
+- [`docs/POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md`](../POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md)
+  - cumulative paper-seed / discovery ledger
 - [`docs/repo/RETEST_PLAYBOOK.md`](RETEST_PLAYBOOK.md)
   - how to handle runner bugs or claim changes
 - [`docs/repo/LANE_REGISTRY.yaml`](LANE_REGISTRY.yaml)
