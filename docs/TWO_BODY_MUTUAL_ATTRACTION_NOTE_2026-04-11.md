@@ -6,6 +6,8 @@
 - `frontier_two_body_mutual_attraction.py`  
 - `frontier_two_orbital_mutual_attraction.py`  
 - `frontier_two_body_acceleration.py`
+- `frontier_two_body_partner_kick.py`
+- `frontier_two_body_partner_kick_size_scan.py`
 
 ## Question
 
@@ -79,9 +81,92 @@ Current result:
 
 So this is useful frontier instrumentation, not a publishable positive.
 
+## Symmetry-Averaged Partner-Kick Follow-Up
+
+`frontier_two_body_partner_kick.py` improves the observable again:
+
+- periodic 3D staggered lattice
+- two separate orbitals
+- compare `shared` against `self_only`
+- use the partner-induced centroid kick rather than raw second differences
+- average over:
+  - two parity placements
+  - both left/right orientations of the pair
+
+This cancels much of the common-translation contamination that was still
+present in the raw acceleration harness.
+
+### What survives on this surface
+
+On the **massless-field** surface `mu^2 = 0`, with separation `sep = 4` on the
+`n=9` periodic 3D lattice, the mutual channel becomes clean:
+
+- `G=10`: `7/8` toward steps, `4/5` early toward steps
+- `G=20`: `8/8` toward steps, `5/5` early toward steps
+- `G=30`: `8/8` toward steps, `5/5` early toward steps
+- `G=50`: `8/8` toward steps, `5/5` early toward steps
+- `G=100`: `8/8` toward steps, `5/5` early toward steps
+
+Representative kick sizes on that same surface:
+
+- `G=20`: mean early mutual kick `+4.96e-4`, final `+1.37e-3`
+- `G=50`: mean early mutual kick `+1.23e-4`, final `+3.31e-4`
+
+The common-shift diagnostic is also small on this surface, so this is a
+meaningfully cleaner mutual-channel read than the older centroid or raw
+acceleration proxies.
+
+### What still fails
+
+The signal is **not** general:
+
+- with screening (`mu^2 > 0`), the same surface mostly loses the effect
+- at shorter separations (`sep = 2, 3`), the `mu^2 = 0` signal disappears
+- the partner-gradient diagnostic remains outward in sign and is not an exact
+  force observable under parity coupling
+
+So this is a narrow periodic/massless window, not Newton-law closure.
+
+### First size check
+
+`frontier_two_body_partner_kick_size_scan.py` checks the same massless periodic
+surface on odd cubic sizes `side = 7, 9, 11`, using the maximal symmetric
+separation `sep = floor(side/2)`.
+
+What survives:
+
+- `side=7, sep=3`
+  - `G=10`: `8/8` toward, `5/5` early, mean early kick `+6.31e-3`
+  - `G=20`: `8/8` toward, `5/5` early, mean early kick `+2.56e-3`
+- `side=9, sep=4`
+  - `G=20`: `8/8` toward, `5/5` early, mean early kick `+4.96e-4`
+  - `G=50`: `8/8` toward, `5/5` early, mean early kick `+1.23e-4`
+
+What does **not** yet justify retention:
+
+- `side=11, sep=5` keeps the sign pattern at `G=20,50`, but the amplitude is
+  tiny:
+  - `G=20`: mean early kick `+4.12e-6`
+  - `G=50`: mean early kick `+9.69e-7`
+- those kicks are already far smaller than the lower-size signals, so the
+  current size scan does **not** support a stable continuum-strength mutual
+  channel
+
+So the first size check says:
+
+- this is not a pure side-9 resonance
+- but it is still a narrow, rapidly decaying signal rather than a robust
+  emergent force law
+
 ## Honest State
 
-The two-body lane is still **open**.
+The two-body lane is still **open**, but it is no longer a pure null.
+
+What now exists is:
+
+- a **narrow positive window** on the symmetry-averaged periodic 3D surface
+- no broad or screened two-body closure
+- no retained distance-law or monotone separation scaling
 
 What is ruled out:
 
@@ -94,14 +179,17 @@ What survives:
 - the proper comparison is `shared` vs `self_only`
 - centroid separation alone is too contaminated by baseline drift to carry the
   claim
+- the massless symmetry-averaged partner-kick observable is the cleanest
+  current mutual-channel probe
 
 ## Next Requirement
 
 Before this lane can be retained, it needs:
 
-1. a zero-drift baseline surface
-2. a stable early-time mutual-acceleration observable
-3. a clear `shared < self_only` separation on that same surface
-4. sensible scaling with coupling and initial separation
+1. size-scaling of the `mu^2 = 0`, `sep = 4` periodic window
+2. clarification of why the signal disappears at shorter separations
+3. a distance-law surface that is not just a single narrow resonance window
+4. a bridge from this massless periodic signal to the broader screened graph
+   program
 
 Until then, the two-body mutual-attraction lane remains exploratory.
