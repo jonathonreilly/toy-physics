@@ -1,6 +1,6 @@
 # Remaining Non-Main Holds
 
-**Date:** 2026-04-11
+**Date:** 2026-04-11  
 **Scope:** review-worktree items that are still not safe for `main`
 
 This is the consolidated inventory for follow-through. It names the missing
@@ -13,33 +13,23 @@ These are not part of the hold list:
 - `STAGGERED_TEST_MASS_COMPANION_NOTE_2026-04-11.md`
 - `DISTANCE_LAW_3D_64_CLOSURE_NOTE_2026-04-11.md`
 - `WILSON_TEST_MASS_CONTINUUM_NOTE_2026-04-11.md`
-
-## Remaining Bounded Candidate
-
-- `docs/ACTION_UNIQUENESS_AUDIT_2026-04-11.md`
-
-Why it is still only a candidate:
-
-- the action-uniqueness lane is bounded-family keep, not theorem
-- it is a bounded weak-field family law on one ordered-lattice setup
-- it is not yet architecture-independent
-- it can be promoted only if the wording stays explicitly family-level
+- `NEWTON_DERIVATION_NOTE.md`
+- `ACTION_UNIQUENESS_AUDIT_2026-04-11.md`
 
 ## Holds
 
-### 0. Newton derivation note
+### 0. Newton persistent-pattern control
 
 Files:
 
-- `docs/NEWTON_DERIVATION_NOTE.md`
+- `docs/NEWTON_PERSISTENT_PATTERN_CONTROL_NOTE_2026-04-11.md`
 
 Why held:
 
-- the test-particle additivity story is stronger, but the persistent-pattern
-  inertia / one-parameter mass realization is still open
-- the packet re-identification control is only a bounded diagnostic
-- the stricter persistent inertial-object probe finds no admissible class
-- the note is therefore a bounded family law, not a mainline closure
+- it is a bounded negative control supporting the Newton derivation path
+- it does not close the persistent-pattern / one-parameter mass gap
+- it should stay review-only until the Newton family-law package is fully
+  reconciled
 
 ### 1. Wilson mutual-attraction side lane
 
@@ -81,7 +71,7 @@ Why held:
 
 - the bilinear factor is built into the Hamiltonian ansatz
 - exact diagonalization confirms the imposed kernel, not emergent product law
-- the model is a 1D open-boundary toy, not the retained primary architecture
+- the model is a 1D open-boundary toy, not the primary staggered surface
 
 Next control:
 
@@ -142,7 +132,5 @@ Next control:
 
 ## Bottom Line
 
-The review worktree now contains only explicit holds and one bounded candidate.
-Nothing else should be promoted without the missing control named in its
-section.
-
+The review worktree now contains explicit holds only. Nothing else should be
+promoted without the missing control named in its section.
