@@ -87,13 +87,13 @@ which acts back on the wavepacket. Battery:
 | Row | Random Geometric (36) | Growing (48) | Layered Cycle (24) |
 |-----|:---:|:---:|:---:|
 | S1 Force TOWARD | 20/20 | 20/20 | 20/20 |
-| S2 Contraction | 0.94 (6%) | 0.99 (1%) | **0.64 (36%)** |
-| S3 Norm | 4.4e-16 | 4.4e-16 | 6.7e-16 |
+| S2 Contraction | **0.63 (37%)** | **0.60 (40%)** | **0.44 (56%)** |
+| S3 Norm | 2.2e-16 | 4.4e-16 | 4.4e-16 |
 | S4 Stability | 0 flips | 0 flips | 0 flips |
 | S5 Families | 3/3 TW | 3/3 TW | 3/3 TW |
 | **Score** | **5/5** | **5/5** | **5/5** |
 
-The layered cycle shows strongest contraction (36%) because the layered
+The layered cycle shows strongest contraction (56%) because the layered
 structure channels the wavepacket along a preferred direction.
 
 ## Two-Field Coupling (Prototype)

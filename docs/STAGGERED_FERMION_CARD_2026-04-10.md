@@ -56,8 +56,8 @@ At n>9, 3D omits energy projections (eigensolve cost) and tests 4 families.
 | C1 | Sorkin Born |I₃|/P | 1.28e-15 | PASS |
 | C2 | d_TV | 0.92 | PASS |
 | C3 | f=0 force | 0.00 | PASS |
-| C4 | F∝M (force-based) | R²=0.912 | PASS |
-| C5 | Force TOWARD | +5.69e-5 | PASS |
+| C4 | F∝M (force-based) | R²=0.917 | PASS |
+| C5 | Force TOWARD | +5.75e-5 | PASS |
 | C6 | Decoherence | 0.230→0.177 | PASS |
 | C7 | MI | 0.164 | PASS |
 | C8 | Purity CV | 0.011 | PASS |
@@ -70,7 +70,7 @@ At n>9, 3D omits energy projections (eigensolve cost) and tests 4 families.
 | C15 | Force vs depth | all TOWARD | PASS |
 | C16 | Multi-observable | 1/2 | PASS |
 | C17 | State families (6/6) | all TOWARD | PASS |
-| | **Norm** | **1.44e-15** | |
+| | **Norm** | **5.55e-16** | |
 | | **Score** | **17/17** | **No qualifiers** |
 
 ### 3D Convergence
@@ -78,10 +78,10 @@ At n>9, 3D omits energy projections (eigensolve cost) and tests 4 families.
 | Row | n=9 (729) | n=11 (1331) | n=13 (2197) |
 |-----|-----------|-------------|-------------|
 | C1 Sorkin | 2.62e-15 | 2.75e-15 | 3.11e-15 |
-| C4 F∝M | R²=1.000 | R²=0.999 | R²=0.998 |
-| C5 Force | +1.29e-3 TW | +5.78e-4 TW | +3.18e-4 TW |
+| C4 F∝M | R²=1.000 | R²=1.000 | R²=0.999 |
+| C5 Force | +1.29e-3 TW | +5.44e-4 TW | +3.18e-4 TW |
 | C6 Decoh | 0.754→0.164 | 0.699→0.068 | 0.657→0.085 |
-| C12 Gauge | 3D torus 6.57e-3 | 3D torus 6.57e-3 | 3D torus 6.57e-3 |
+| C12 Gauge | 3D torus 3.69e-3 | 3D torus 2.27e-3 | 3D torus 1.49e-3 |
 | C13 Achrom | CV=0.000 | CV=0.000 | CV=0.000 |
 | C14 Equiv | CV=0.000 | CV=0.000 | CV=0.000 |
 | C17 families | 6/6 (incl anti TW) | 4/4 (no eigensolve) | 4/4 (no eigensolve) |
@@ -96,10 +96,11 @@ a native 3D torus gauge test. C17 includes energy projections at n=9.
 - **Dirac dispersion:** E² = m² + sin²(k) exact, from staggering phases η_μ(x).
   Not assumed — follows from the nearest-neighbor hopping with alternating signs.
 - **Born rule:** Sorkin I₃ at machine zero. From linearity of CN evolution.
-- **Directional response under scalar/parity potential:** Force TOWARD for
-  ALL state families including anti/Nyquist on the attractive operating point.
-  The potential modulates the mass gap via `epsilon(x)` rather than acting as
-  a plain diagonal shift.
+- **Directional response under scalar/parity potential:** On the canonical
+  lattice card, force stays TOWARD for all tested state families including
+  anti/Nyquist at the retained attractive operating point. The potential
+  modulates the mass gap via `epsilon(x)` rather than acting as a plain
+  diagonal shift.
 - **Achromatic force:** F = -⟨dV/dz⟩ has no k-dependence (CV=0.000000).
 - **Equivalence:** a = F/m = -⟨dΦ/dz⟩ is mass-independent (CV=0.000000).
 - **Gauge:** Persistent current J(A) with sin(A) modulation on ring.
@@ -112,8 +113,9 @@ a native 3D torus gauge test. C17 includes energy projections at n=9.
   A strict cone requires coin+shift (which reintroduces the mixing period).
 - **Repo-wide centroid-based gravity rows:** C5/C9/C15/C16 use force, not centroid.
   The centroid oscillates on staggered lattices. This card is force-specific.
-- **Topology portability:** Tested on periodic cubic lattice only. Extending to
-  random/growing graphs requires adapting the staggering convention.
+- **This card itself is cubic-only:** portability to random geometric, growing,
+  layered cycle, and DAG-compatible graph families is tracked in separate
+  retained probes, not on this card.
 - **Dynamic growth / cosmology / Hawking:** Static lattice, not tested.
 
 ## Semantic Differences from Repo-Wide Card

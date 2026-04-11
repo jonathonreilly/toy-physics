@@ -55,7 +55,8 @@ that passes a force-based 17-row card in 1D and 3D.
 
 10. **Kogut-Susskind staggered fermion**: 1 scalar per site, Dirac structure from
     staggering phases η_μ(x) = (-1)^(x₁+...+x_{μ-1}). No coin. Genuine Dirac
-    dispersion E² = m² + sin²(k). Potential gravity V = -m·g·S/(r+ε).
+    dispersion E² = m² + sin²(k). The corrected scalar channel is parity-coupled:
+    `H_diag = (m + Φ(x)) ε(x)`, not a plain identity diagonal shift.
 
 11. **Directional force survives only on the exact lattice card**: The centroid
     shift oscillates with lattice size (periodic-lattice recurrence, not fixable
@@ -73,16 +74,16 @@ that passes a force-based 17-row card in 1D and 3D.
 
 ## Architecture Summary
 
-**Staggered fermion + scalar potential gravity, Crank-Nicolson evolution.**
+**Staggered fermion + scalar/parity potential gravity, Crank-Nicolson evolution.**
 
 ```
 State:      1 complex scalar per lattice site
 Kinetic:    Staggered Dirac operator (η_μ phases on nearest-neighbor hops)
 Mass:       m · ε(x) where ε = (-1)^(x₁+x₂+x₃)
-Gravity:    V(x) = -m · g · S / (|x - x_mass| + ε)
+Gravity:    scalar/parity mass-gap modulation H_diag = (m + Φ(x)) ε(x)
 Evolution:  Crank-Nicolson (exactly unitary, norm ≈ 1e-15)
 Observable: Exact lattice force F = -⟨dV/dz⟩ on the canonical card;
-            irregular graphs use radial interaction proxies only
+            irregular graphs use audited radial interaction proxies only
 ```
 
 ## What This Architecture Derives
@@ -92,8 +93,8 @@ Observable: Exact lattice force F = -⟨dV/dz⟩ on the canonical card;
 - **Born rule**: Sorkin I₃ at machine zero (1e-15). From linearity.
 - **Directional response on the canonical lattice**: Force TOWARD for all
   6 physical state families (gauss, even, odd, anti, positive-E, negative-E)
-  on the exact lattice-force card, under the prescribed attractive potential
-  V = -m·Φ.
+  on the exact lattice-force card, under the retained attractive operating
+  point with the corrected scalar/parity coupling.
 - **Achromatic force**: F = -⟨dV/dz⟩ has no k-dependence (CV = 0.000000).
 - **Mass-independent acceleration**: a = F/m = -⟨dΦ/dz⟩ (CV = 0.000000).
 - **Gauge**: Persistent current J(A) with sin(A) modulation. Native to both
@@ -119,7 +120,7 @@ Observable: Exact lattice force F = -⟨dV/dz⟩ on the canonical card;
 
 ### Force-Based Staggered Card
 
-**Script:** `frontier_staggered_17card.py` @ commit 9c70598
+**Script:** `frontier_staggered_17card.py`
 
 This is a FORCE-BASED card, not the repo-wide centroid-based card.
 Rows C5, C9, C10, C15, C16 have different semantics (see table below).
@@ -229,13 +230,13 @@ The full-suite baseline is now frozen:
    `frontier_staggered_self_gravity_scaling.py` shows that self-gravity stays
    norm-clean and inward across sizes, and contraction is now strong across
    all three families under the corrected parity coupling, with the layered
-   cycle still the strongest.
+   cycle still the strongest and the growing family now stably below unity.
 
 8. **Larger-graph cycle battery**: DONE as a retained sibling harness.
-   `frontier_staggered_cycle_battery_scaled.py` keeps the force-first `9/9`
-   battery closed on random geometric and growing at side `8`, `10`, and `12`,
-   while the layered-cycle family now shows the same linearity miss at scale
-   under the corrected parity coupling.
+   `frontier_staggered_cycle_battery_scaled.py` keeps random geometric at `9/9`
+   through side `12`, recovers growing from `8/9` at side `8` to `9/9` at
+   side `10` and `12`, and shows that the layered-cycle family keeps the same
+   `8/9` linearity miss at scale under the corrected parity coupling.
 
 9. **Retarded / hybrid two-field probe**: DONE as a retained negative-positive
    frontier result. `frontier_two_field_retarded_probe.py` preserves the core
@@ -246,9 +247,11 @@ The full-suite baseline is now frozen:
 10. **Retarded family-closure sibling**: DONE as a bounded positive sibling
     result. `frontier_two_field_retarded_family_closure.py` lifts the family
     row to `3/3` on all three admissible families while preserving the rest of
-    the retarded battery, and now extends the same operating-point closure to a
-    causal DAG (`8/9`, gauge structurally N/A), but it is still a sibling
-    closure recipe rather than the frozen canonical retarded harness.
+    the retarded battery on random geometric and layered cycle, and extends the
+    same operating-point closure to a causal DAG (`8/9`, gauge structurally
+    N/A). The growing family still misses `R5` iterative stability (`8/9`), so
+    this remains a sibling closure recipe rather than the frozen canonical
+    retarded harness.
 
 11. **Causal DAG compatibility**: DONE as a retained probe.
    `frontier_staggered_dag.py` closes `6/6` on three layered DAG
@@ -291,9 +294,10 @@ The full-suite baseline is now frozen:
    repulsive coupling. The next real fork is either to derive the sign from the
    staggered/Dirac structure or to freeze the irregular graph program as
    explicitly sign-agnostic.
-2. **Endogenous-field scale**: G_eff=12-178 is characterized but not closed.
-   The miss is structural on the current graph Poisson map, not a sign or
-   linearity failure.
+2. **Endogenous-field scale**: the raw graph Poisson map still has
+   `G_eff=12-178` and remains structurally flatter than the external-kernel
+   control. The retarded sibling can close that gap at the operating point, but
+   it is not yet the frozen canonical source-sector law.
 3. **Canonical retarded-field decision**: the family-closure sibling now
    exists, but it is not yet the frozen canonical retarded harness. The next
    step is to decide whether that closure loop is principled enough to retain,

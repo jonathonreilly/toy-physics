@@ -6,7 +6,7 @@
 ## Question
 
 Does consistency select the coupling sign in the graph-native staggered /
-self-gravity lane?
+self-gravity lane under the **old identity-coupling convention**?
 
 The tested comparison is:
 
@@ -15,7 +15,9 @@ The tested comparison is:
 
 If the repulsive sign were pathological while the attractive sign stayed
 stable, that would be real evidence that the sign is selected rather than
-assumed.
+assumed. It is now best read as a **negative control** for the retired
+identity-coupling form, not as the final sign audit for the corrected
+scalar/parity coupling.
 
 ## Main Result
 
@@ -77,5 +79,8 @@ The project now has a real fork:
 1. **Derive the sign** from the staggered / Dirac structure itself
 2. **Reframe** around sign-agnostic interacting-field results
 
-Until (1) happens, the honest statement is that attraction is prescribed, not
-predicted, off the exact lattice-coordinate card.
+The companion corrected-coupling check is now
+`frontier_two_sign_parity.py`: it shows that direct external-source sign tests
+become sign-sensitive again under the parity-coupled scalar channel. What is
+still missing is one frozen irregular-graph directional observable that is as
+clean as the exact lattice-coordinate force used by the canonical cubic card.

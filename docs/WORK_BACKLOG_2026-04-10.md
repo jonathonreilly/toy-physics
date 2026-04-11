@@ -69,8 +69,9 @@ This backlog is ordered by value to the main project, not by ease.
   [`frontier_two_field_retarded_family_closure.py`](../scripts/frontier_two_field_retarded_family_closure.py):
   it lifts the retarded family row to `3/3` on all admissible cycle-bearing
   families and extends the same operating-point closure to the causal DAG
-  (`8/9`, gauge structurally N/A), but is not yet frozen as the canonical
-  retarded harness.
+  (`8/9`, gauge structurally N/A), but the growing family still misses `R5`
+  iterative stability (`8/9`) and the result is not yet frozen as the
+  canonical retarded harness.
 - The first larger-graph break frontier is now frozen in
   [`frontier_staggered_cycle_break_frontier.py`](../scripts/frontier_staggered_cycle_break_frontier.py):
   the earliest clean failure is a gauge/current collapse on the random

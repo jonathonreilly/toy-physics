@@ -129,7 +129,8 @@ def solve_phi(g: Graph, rho: np.ndarray) -> np.ndarray:
 def build_H(g: Graph, mass: float, phi: np.ndarray) -> csr_matrix:
     n = g.positions.shape[0]; H = lil_matrix((n,n), dtype=complex)
     parity = np.where(g.colors == 0, 1.0, -1.0)
-    H.setdiag(mass * parity - mass * phi)
+    # Parity (scalar 1⊗1) coupling: Φ modulates mass gap, not energy level.
+    H.setdiag((mass + phi) * parity)
     for i, nbs in g.adj.items():
         for j in nbs:
             if i >= j: continue

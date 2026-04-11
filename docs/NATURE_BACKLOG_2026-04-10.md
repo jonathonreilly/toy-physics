@@ -8,13 +8,17 @@
 One canonical endogenous two-field harness that simultaneously closes
 R1-R7 + R9 on both cycle-bearing and causal-DAG families.
 
-**Result:** 9/9 on 3 cycle families + 8/9 on causal DAG (R8 gauge N/A).
-Source-scale gap closed (G_eff=0.4-0.6, retarded field steeper than 1/r).
+**Current best sibling result:** `9/9`, `8/9`, `9/9` on the three retained
+cycle-bearing families plus `8/9` on the causal DAG (`R8` gauge N/A).
+The retarded family-closure sibling closes the source-scale gap at the
+operating point (`G_eff≈0.4-0.7`), but it is **not yet canonical** because the
+growing family still misses `R5` iterative stability.
 **Script:** `frontier_two_field_retarded_family_closure.py`
 **Caveat:** after the two-sign audit, this prerequisite should be read as a
-structural interacting-field closure, not as evidence that the irregular graph
-families predict attractive gravity direction. On those families the retained
-sign rows are audited radial proxies and are not sign-selective.
+structural interacting-field closure attempt, not as evidence that the
+irregular graph families predict attractive gravity direction. On those
+families the retained sign rows are audited radial proxies and are not
+sign-selective.
 
 ## Tier 0: Direction / Observable Gap
 

@@ -1,11 +1,16 @@
 #!/usr/bin/env python3
 """
-Staggered Fermion + Potential Gravity — CANONICAL 17-Card
-==========================================================
+Staggered Fermion + Scalar/Parity Potential Gravity — CANONICAL 17-Card
+=======================================================================
 FORCE-BASED STAGGERED CARD. This is NOT identical to the repo-wide
 centroid-based core card — the gravity rows use F = -<dV/dz> instead
 of centroid shift, because the centroid oscillates with lattice size
 on the staggered architecture.
+
+The diagonal coupling is literature-correct scalar/parity modulation of
+the mass gap:
+    H_diag = (m + Phi(x)) * epsilon(x)
+so the potential enters with the same staggered parity factor as the mass.
 
 Row semantics that differ from the repo-wide card:
   C5:  force sign, not centroid sign
@@ -38,8 +43,10 @@ def staggered_H(n, mass, V=None):
     H = lil_matrix((n, n), dtype=complex)
     for x in range(n):
         H[x, (x+1)%n] += -1j/2; H[x, (x-1)%n] += 1j/2
-        H[x, x] += mass * ((-1)**x)
-        if V is not None: H[x, x] += V[x]
+        eps_x = (-1)**x
+        phi_x = 0.0 if V is None else V[x]
+        # Literature-correct scalar/parity coupling: (m + Phi) * epsilon(x).
+        H[x, x] += (mass + phi_x) * eps_x
     return csr_matrix(H)
 
 def staggered_H_3d(n, mass, V=None):
@@ -56,8 +63,10 @@ def staggered_H_3d(n, mass, V=None):
                 e3 = (-1)**(x+y)
                 H[i, x*n*n+y*n+((z+1)%n)] += e3*(-1j/2)
                 H[i, x*n*n+y*n+((z-1)%n)] += e3*(1j/2)
-                H[i, i] += mass * ((-1)**(x+y+z))
-                if V is not None: H[i, i] += V[i]
+                eps_xyz = (-1)**(x+y+z)
+                phi_i = 0.0 if V is None else V[i]
+                # Literature-correct scalar/parity coupling: (m + Phi) * epsilon(x).
+                H[i, i] += (mass + phi_i) * eps_xyz
     return csr_matrix(H)
 
 def staggered_H_flux(n, mass, A):
