@@ -60,6 +60,7 @@ The repo currently contains four different classes of publication material:
 - bounded 3D staggered blocked-envelope self-gravity contraction, with an explicit negative sign-flip companion result on the same centered surface
 - bounded open-cubic staggered weak-field static-source test-mass/source-mass companion, with exact source scaling in the force channel and near-linear blocked-envelope trajectory scaling on the audited side-and-separation surface
 - bounded open-cubic staggered self-consistent two-body **partner-force** channel with a near-Newton distance law on the calibrated surface
+- bounded ordered-lattice Newton derivation candidate from four principles, with the persistent-pattern inertia step still open
 
 **Current strongest package**
 
