@@ -36,6 +36,24 @@ Primary notes:
 - [`docs/FULL_TEST_MATRIX_2026-04-10.md`](FULL_TEST_MATRIX_2026-04-10.md)
 - [`docs/GRAVITY_SIGN_AUDIT_2026-04-10.md`](GRAVITY_SIGN_AUDIT_2026-04-10.md)
 
+Bounded primary-architecture companions:
+
+- [`scripts/frontier_staggered_newton_reproduction.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_staggered_newton_reproduction.py)
+- [`scripts/frontier_staggered_newton_blocking_sensitivity.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_staggered_newton_blocking_sensitivity.py)
+- [`scripts/frontier_staggered_3d_self_gravity_sign.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_staggered_3d_self_gravity_sign.py)
+
+Companion notes:
+
+- [`docs/STAGGERED_NEWTON_REPRODUCTION_NOTE_2026-04-11.md`](STAGGERED_NEWTON_REPRODUCTION_NOTE_2026-04-11.md)
+- [`docs/STAGGERED_NEWTON_BLOCKING_SENSITIVITY_NOTE_2026-04-11.md`](STAGGERED_NEWTON_BLOCKING_SENSITIVITY_NOTE_2026-04-11.md)
+- [`docs/STAGGERED_3D_SELF_GRAVITY_SIGN_NOTE_2026-04-11.md`](STAGGERED_3D_SELF_GRAVITY_SIGN_NOTE_2026-04-11.md)
+
+Reading boundary:
+
+- these are the right reruns when you need the open-cubic trajectory story
+  on the primary staggered architecture
+- they are bounded open-cubic companions, not full both-masses closure
+
 ## 2. Retained Irregular-Graph Structural Surface
 
 - [`scripts/frontier_staggered_cycle_battery.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_staggered_cycle_battery.py)

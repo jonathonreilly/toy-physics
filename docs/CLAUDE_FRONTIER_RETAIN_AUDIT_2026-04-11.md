@@ -82,7 +82,37 @@ Why:
 - it should be read as an interpretive framework built from the repo record,
   not as a proven theorem
 
-### 6. Corrected periodic-2D rerun surface
+### 6. Bounded staggered open-cubic trajectory companions
+
+Keep:
+
+- [STAGGERED_NEWTON_REPRODUCTION_NOTE_2026-04-11.md](STAGGERED_NEWTON_REPRODUCTION_NOTE_2026-04-11.md)
+- [STAGGERED_NEWTON_BLOCKING_SENSITIVITY_NOTE_2026-04-11.md](STAGGERED_NEWTON_BLOCKING_SENSITIVITY_NOTE_2026-04-11.md)
+- [STAGGERED_3D_SELF_GRAVITY_SIGN_NOTE_2026-04-11.md](STAGGERED_3D_SELF_GRAVITY_SIGN_NOTE_2026-04-11.md)
+- [scripts/frontier_staggered_newton_reproduction.py](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_staggered_newton_reproduction.py)
+- [scripts/frontier_staggered_newton_blocking_sensitivity.py](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_staggered_newton_blocking_sensitivity.py)
+- [scripts/frontier_staggered_3d_self_gravity_sign.py](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_staggered_3d_self_gravity_sign.py)
+
+Why:
+
+- they are honestly framed bounded companions on the **primary staggered
+  architecture**
+- the external-source open-cubic lane now shows a Newton-compatible
+  trajectory-distance law with sensible blocking, not just with one tuned
+  `2x2x2` readout
+- the 3D self-gravity note adds a real trajectory-level staggered positive
+  while also freezing the negative sign-closure result on the same centered
+  surface
+
+Retention boundary:
+
+- these are **not** full Newton closure
+- they are **not** both-masses closure
+- they are **not** irregular-graph transfer
+- they should move with their runner/note pairs, not as standalone control-plane
+  prose
+
+### 7. Corrected periodic-2D rerun surface
 
 Keep:
 
@@ -102,7 +132,7 @@ Why:
 - the Born-rule alpha lane is worth preserving only as a corrected negative /
   boundary-of-validity marker, not as a measurement-theory derivation
 
-### 7. Bounded Ollivier curvature proxy
+### 8. Bounded Ollivier curvature proxy
 
 Keep:
 
@@ -116,7 +146,7 @@ Why:
 - the retained claim is a bounded potential-weighted structured-curvature proxy
 - the note explicitly rules out the stronger Einstein-equation overclaim
 
-### 8. Wilson two-body hardening notes
+### 9. Wilson two-body hardening notes
 
 Keep:
 

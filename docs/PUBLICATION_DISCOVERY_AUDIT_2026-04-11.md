@@ -56,6 +56,8 @@ The repo currently contains four different classes of publication material:
 - bounded branch-mediated entanglement result in the externally imposed geometry-branch toy protocol
 - bounded tripartite branch-mediated entanglement result with corrected W-type structure in the externally imposed two-branch toy protocol
 - bounded weak-coupling irregular-graph sign-sensitive regime on stable shell metrics
+- bounded open-cubic staggered trajectory Newton reproduction, with a blocking-sensitivity companion showing the near-Newton exponent is not a one-off `2x2x2` artifact
+- bounded 3D staggered blocked-envelope self-gravity contraction, with an explicit negative sign-flip companion result on the same centered surface
 
 **Current strongest package**
 
@@ -69,6 +71,7 @@ The repo currently contains four different classes of publication material:
 - retarded/hybrid family closure
 - source-scale closure via `G_eff`
 - topology-dependent onset fits
+- the open-cubic staggered trajectory companions are bounded cubic-surface results, not architecture-wide or graph-family closures
 - branch-superposition remains fixed-adjacency field branching, not topology superposition
 - boundary-law scaling itself is generic for gapped free fermions; the nontrivial content here is the retained coefficient shift and robustness under the audited surface
 - memory result is still exploratory and protocol-sensitive; the later `mu^2` / geometry sweep (`MEMORY_MU2_GEOMETRY_SWEEP_NOTE_2026-04-11.md`) shows the size-fragility is not purely Yukawa-range driven, so it should stay out of any positive paper claim
