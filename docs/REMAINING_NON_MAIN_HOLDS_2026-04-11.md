@@ -1,11 +1,10 @@
 # Remaining Non-Main Holds
 
-**Date:** 2026-04-11  
+**Date:** 2026-04-11
 **Scope:** review-worktree items that are still not safe for `main`
 
-This is the consolidated inventory for follow-through. It separates the one
-remaining bounded candidate from the held items and names the missing control
-for each held lane.
+This is the consolidated inventory for follow-through. It separates bounded
+candidates from held items and names the missing control for each held lane.
 
 ## Already on `main`
 
@@ -14,13 +13,19 @@ These are not part of the hold list:
 - `STAGGERED_TEST_MASS_COMPANION_NOTE_2026-04-11.md`
 - `DISTANCE_LAW_3D_64_CLOSURE_NOTE_2026-04-11.md`
 - `WILSON_TEST_MASS_CONTINUUM_NOTE_2026-04-11.md`
-- `NEWTON_DERIVATION_NOTE.md`
 
 ## Remaining Bounded Candidate
 
+These are still worth promoting, but only if the wording stays explicitly
+family-level.
+
+### 0. Action uniqueness audit
+
+Files:
+
 - `docs/ACTION_UNIQUENESS_AUDIT_2026-04-11.md`
 
-Why it is still only a candidate:
+Why candidate:
 
 - the action-uniqueness lane is bounded-family keep, not theorem
 - it is a bounded weak-field family law on one ordered-lattice setup
@@ -130,6 +135,6 @@ Next control:
 
 ## Bottom Line
 
-The review worktree now contains one bounded candidate and a set of explicit
+The review worktree now contains two bounded candidates and a set of explicit
 holds. Nothing else should be promoted without the missing control named in
 its section.
