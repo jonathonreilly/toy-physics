@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """
-Topological Phase Transition Driven by Self-Gravity
-====================================================
+Legacy Topological Phase Scan for Self-Gravity
+==============================================
 
 Test whether self-gravity drives a topological phase transition in the
-staggered 1D Hamiltonian (SSH analog).
+staggered 1D Hamiltonian (SSH analog). This is the legacy direct-on-site
+scan, kept for comparison against the parity-coupled control.
 
 Physics:
   The SSH model has two hopping amplitudes t1, t2 on alternating bonds.
@@ -20,7 +21,7 @@ Protocol:
   1. Build 1D open-BC SSH chain (N=60 sites, 30 unit cells):
        H[2j, 2j+1]   = t1  (intracell hopping)
        H[2j+1, 2j+2] = t2  (intercell hopping)
-       H[x,x] = G * Phi[x]  (self-gravity potential, NO staggering)
+       H[x,x] = G * Phi[x]  (self-gravity potential, NO staggering; legacy scan)
   2. Self-consistent loop: rho = |psi_filled|^2 -> Phi = -(Lap + mu2)^{-1} rho
   3. Diagnostics per G:
        a. Spectral gap: min |E_n|
@@ -30,7 +31,8 @@ Protocol:
 
 Hypothesis:
   Self-gravity breaks chiral symmetry, lifts the edge modes, and closes
-  then reopens the gap: a gravity-driven topological phase transition.
+  then reopens the gap: a candidate gravity-driven edge-mode transition on
+  this legacy direct-on-site surface.
 
 Falsification:
   If edge modes persist for all G, self-gravity does not break the

@@ -11,6 +11,8 @@
 
 Does the claimed gravity-driven SSH/topological transition survive a matched
 disorder/control comparison, or is it just generic on-site symmetry breaking?
+The legacy direct-on-site scan is kept separate from the parity-coupled
+control audit.
 
 ## Main scan
 
