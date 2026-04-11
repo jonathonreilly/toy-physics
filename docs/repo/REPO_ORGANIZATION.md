@@ -66,6 +66,8 @@ still landing. The fix is a stable control plane:
   - lane-by-lane manifests for the full repo
 - [`docs/POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md`](../POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md)
   - cumulative paper-seed / discovery ledger
+- [`docs/PUBLICATION_DISCOVERY_AUDIT_2026-04-11.md`](../PUBLICATION_DISCOVERY_AUDIT_2026-04-11.md)
+  - current lane-by-lane critical audit of what is genuinely safe to treat as a paper candidate
 - [`docs/repo/RETEST_PLAYBOOK.md`](RETEST_PLAYBOOK.md)
   - how to handle runner bugs or claim changes
 - [`docs/repo/LANE_REGISTRY.yaml`](LANE_REGISTRY.yaml)
