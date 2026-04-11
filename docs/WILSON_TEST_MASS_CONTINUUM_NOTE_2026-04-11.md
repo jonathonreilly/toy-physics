@@ -24,10 +24,10 @@ It does **not** close:
 
 ## What Was Run
 
-- [`scripts/frontier_test_mass_limit.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_test_mass_limit.py)
-- [`scripts/frontier_perturbative_mass_law.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_perturbative_mass_law.py)
-- [`scripts/frontier_continuum_limit.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_continuum_limit.py)
-- [`scripts/frontier_newton_systematic.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_newton_systematic.py)
+- [`scripts/frontier_test_mass_limit.py`](scripts/frontier_test_mass_limit.py)
+- [`scripts/frontier_perturbative_mass_law.py`](scripts/frontier_perturbative_mass_law.py)
+- [`scripts/frontier_continuum_limit.py`](scripts/frontier_continuum_limit.py)
+- [`scripts/frontier_newton_systematic.py`](scripts/frontier_newton_systematic.py)
 
 All four share the same open-Wilson convention:
 
@@ -113,7 +113,8 @@ normalization mistake.
 
 Use this note with:
 
-- [`scripts/frontier_newton_systematic.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_newton_systematic.py)
+- [`scripts/frontier_newton_systematic.py`](scripts/frontier_newton_systematic.py)
+- [`docs/WILSON_NORMALIZATION_RECONCILIATION_NOTE_2026-04-11.md`](WILSON_NORMALIZATION_RECONCILIATION_NOTE_2026-04-11.md)
 
 and read that runner exactly as labeled: a same-convention sweep, not a global
 normalization adjudicator.

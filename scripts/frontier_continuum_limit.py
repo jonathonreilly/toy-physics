@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Continuum limit of the Wilson two-body inverse-square law.
+Continuum-limit companion for the bounded Wilson weak-field distance law.
 
 Goal:
   Test whether the distance-law exponent converges to exactly -2.0
@@ -17,10 +17,16 @@ Method:
   Then extrapolate:
     alpha(L) = alpha_inf + c / L^p
 
-  If alpha_inf = -2.000 +/- small error, we have a Nature-level
-  statement: the continuum limit reproduces Newton's inverse-square law.
+  If alpha_inf approaches -2 with small error on this same open-Wilson
+  convention, the distance-law side of the bounded Wilson lane is
+  Newton-compatible in the weak-field limit.
 
 Parameters: G=5, mu2=0.001, MASS=0.3, WILSON_R=1.0, DT=0.08, N_STEPS=15
+
+Important boundary:
+  This runner is a same-convention Wilson calibration study. It does not by
+  itself close full Newton closure, both-masses closure, or the broader
+  cross-runner normalization debate.
 """
 
 from __future__ import annotations

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Test-mass limit: F = G * M_source / r^2 from a single heavy source.
+Test-mass companion on the open-Wilson weak-field surface.
 
 Avoids the self-field contamination that plagued the Hartree two-orbital
 both-masses probe.  Instead of two equal-mass packets, we use:
@@ -20,9 +20,15 @@ Protocol:
      Expect mass exponent ~ 1.0.
 
   2. Distance sweep:  fix A_source=2.0, vary d in [3, 4, 5, 6, 7].
-     Expect distance exponent ~ -2.0  (Coulomb / Newton on 3D lattice).
+     Expect a near-`-2` distance exponent on this same open-Wilson surface.
 
 Uses the Wilson 3D open-BC lattice infrastructure.
+
+Important boundary:
+  This runner is a same-convention Wilson companion only. It supports
+  source-mass scaling on the audited open-Wilson surface, but it does not by
+  itself settle the earlier mixed-runner normalization discrepancy and it does
+  not close full both-masses Newton closure.
 
 PStack experiment: test-mass-limit
 """

@@ -142,7 +142,7 @@ The repo currently contains four different classes of publication material:
 
 **What is not safe**
 
-- `1/r^2`
+- a global `1/r^2` / full Newton-closure claim
 - `F ∝ M1 M2`
 - promotion of the periodic `frontier_wilson_newton_law.py` script, which still
   wraps the box despite its stated motivation

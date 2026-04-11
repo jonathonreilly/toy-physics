@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Perturbative extraction of Newton's mass law on a Wilson 3D lattice.
+Perturbative same-convention mass-law companion on a Wilson 3D lattice.
 
 Motivation:
   The Hartree mean-field two-orbital approach cannot cleanly separate the
@@ -32,6 +32,13 @@ Protocol:
   6. Compare perturbative prediction against full Hartree simulation
 
 This is a THEORETICAL first-order calculation, not a dynamical simulation.
+
+Important boundary:
+  The linear mass and coupling exponents are exact at first order once this
+  Green's function and Poisson convention are fixed. This makes the script a
+  useful same-convention theory companion, not an independent cross-check of
+  the broader Wilson normalization story or a closure of the full Hartree
+  both-masses law.
 """
 
 from __future__ import annotations
