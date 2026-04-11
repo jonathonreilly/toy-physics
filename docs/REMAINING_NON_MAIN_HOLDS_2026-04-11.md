@@ -1,10 +1,11 @@
 # Remaining Non-Main Holds
 
-**Date:** 2026-04-11
+**Date:** 2026-04-11  
 **Scope:** review-worktree items that are still not safe for `main`
 
-This is the consolidated inventory for follow-through. It separates bounded
-candidates from held items and names the missing control for each held lane.
+This is the consolidated inventory for follow-through. It separates the one
+remaining bounded candidate from the held items and names the missing control
+for each held lane.
 
 ## Already on `main`
 
@@ -14,11 +15,21 @@ These are not part of the hold list:
 - `DISTANCE_LAW_3D_64_CLOSURE_NOTE_2026-04-11.md`
 - `WILSON_TEST_MASS_CONTINUUM_NOTE_2026-04-11.md`
 - `NEWTON_DERIVATION_NOTE.md`
-- `ACTION_UNIQUENESS_AUDIT_2026-04-11.md`
+
+## Remaining Bounded Candidate
+
+- `docs/ACTION_UNIQUENESS_AUDIT_2026-04-11.md`
+
+Why it is still only a candidate:
+
+- the action-uniqueness lane is bounded-family keep, not theorem
+- it is a bounded weak-field family law on one ordered-lattice setup
+- it is not yet architecture-independent
+- it can be promoted only if the wording stays explicitly family-level
 
 ## Holds
 
-### 0. Wilson mutual-attraction side lane
+### 1. Wilson mutual-attraction side lane
 
 Files:
 
@@ -47,7 +58,7 @@ Next control:
 - `SHARED`, `SELF_ONLY`, `FROZEN_SOURCE`
 - do not promote until the causal discriminator is clean
 
-### 1. Exact two-particle product law
+### 2. Exact two-particle product law
 
 Files:
 
@@ -66,7 +77,7 @@ Next control:
 - add a frozen/static-source control
 - replay on the primary staggered/open-cubic surface
 
-### 2. Irregular endogenous sign closure
+### 3. Irregular endogenous sign closure
 
 Files:
 
@@ -90,7 +101,7 @@ Next control:
 - a third genuinely independent packet family, or
 - a different observable on the same irregular surface
 
-### 3. Staggered two-body closure family
+### 4. Staggered two-body closure family
 
 Files:
 
@@ -119,6 +130,6 @@ Next control:
 
 ## Bottom Line
 
-The review worktree now contains two bounded candidates and a set of explicit
+The review worktree now contains one bounded candidate and a set of explicit
 holds. Nothing else should be promoted without the missing control named in
 its section.
