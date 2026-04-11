@@ -14,6 +14,7 @@ These are not part of the hold list:
 - `STAGGERED_TEST_MASS_COMPANION_NOTE_2026-04-11.md`
 - `DISTANCE_LAW_3D_64_CLOSURE_NOTE_2026-04-11.md`
 - `WILSON_TEST_MASS_CONTINUUM_NOTE_2026-04-11.md`
+- `NEWTON_DERIVATION_NOTE.md`
 
 ## Remaining Bounded Candidate
 
@@ -27,20 +28,6 @@ Why it is still only a candidate:
 - it can be promoted only if the wording stays explicitly family-level
 
 ## Holds
-
-### 0. Newton derivation note
-
-Files:
-
-- `docs/NEWTON_DERIVATION_NOTE.md`
-
-Why held:
-
-- the test-particle additivity story is stronger, but the persistent-pattern
-  inertia / one-parameter mass realization is still open
-- the packet re-identification control is only a bounded diagnostic
-- the stricter persistent inertial-object probe finds no admissible class
-- the note is therefore a bounded family law, not a mainline closure
 
 ### 1. Wilson mutual-attraction side lane
 
