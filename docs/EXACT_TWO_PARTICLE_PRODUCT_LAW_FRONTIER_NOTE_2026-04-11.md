@@ -6,13 +6,14 @@
 
 ## Verdict
 
-**Hold off `main`.** This lane is scientifically useful, but it is not yet a
-retainable mainline note because the reported `M1*M2` dependence is built into
-the interaction ansatz itself and the setup is still a 1D open-boundary toy
-model rather than the repo's primary staggered/open-cubic architecture.
+**Bounded-control keep.** Retain this lane only as an exact-vs-Hartree control
+result on a toy surface. It is not a promotable product-law note because the
+reported `M1*M2` dependence is built into the interaction ansatz itself and
+the setup is still a 1D open-boundary toy model rather than the repo's primary
+staggered/open-cubic architecture.
 
-The script does show a real exact-vs-Hartree distinction, but that is a
-secondary control result. It does **not** yet establish an emergent product law
+The script does show a real exact-vs-Hartree distinction, but that is the only
+claim worth keeping. It does **not** yet establish an emergent product law
 that the repo can safely promote as a bounded Newton-closure companion.
 
 ## Why Not Mainline Yet
@@ -42,8 +43,9 @@ without changing the Hamiltonian class:
   isolates a source-only field while preserving the same exact two-particle
   observable
 
-So the current toy model can prove exact-vs-Hartree separation, but it cannot
-prove an emergent product law unless the interaction ansatz is redesigned.
+So the current toy model can prove exact-vs-Hartree separation, and that is
+the only retainable claim. It cannot prove an emergent product law unless the
+interaction ansatz is redesigned.
 
 There is also a model mismatch relative to the retained mainline Newton work:
 
@@ -79,7 +81,7 @@ retained as a bounded companion on `main`.
 
 ## Closest Retainable Claim
 
-Retain only the exact-vs-Hartree comparison as a bounded control result.
+Keep only the exact-vs-Hartree comparison as a bounded control result.
 Hold the product-law headline until a source-only interaction or equivalent
 control removes the bilinear factor from the ansatz on a promotable surface.
 
