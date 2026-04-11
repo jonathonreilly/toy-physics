@@ -48,9 +48,11 @@
 **The Wilson two-body line (1-3, 5, 10) is still the single highest-leverage
 direction, but its state is now narrower and cleaner.** The open-lattice
 Wilson surface supports a real mutual-attraction channel, but the current law
-is `|a_mut| ~ d^-3.4` with sublinear source scaling, not Newtonian closure.
-So the immediate question is whether that law crosses over toward Newton, or
-whether it defines a different discrete universality class.
+is `|a_mut| ~ d^-3.4` at the default screened operating point. The later
+`mu^2` sweep shows that exponent softens toward `-2` as screening is reduced,
+so the immediate question is now whether the remaining gap to Newton closes
+fully in the weak-screening limit or whether a residual discrete exponent
+survives.
 
 **Low-hanging fruit with guaranteed publication value:** Frontiers 7 (CDT),
 9 (Anderson phase diagram), 12 (eigenvalue stats) remain strong because they

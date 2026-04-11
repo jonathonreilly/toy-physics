@@ -118,11 +118,24 @@ Current best statement:
 
 > Open-boundary Wilson two-orbital Hartree dynamics produces a robust mutual
 > attraction channel on the audited `G=5`, `mu^2=0.22` surface, with a clean
-> non-Newtonian distance falloff `|a_mut| ~ d^-3.4` and sublinear partner-source
+> screened distance falloff `|a_mut| ~ d^-3.4` and sublinear partner-source
 > scaling `|a_mut| ~ m_B^0.48`.
 
 That is scientifically meaningful, but it is not the Nature-threshold
 “emergent Newton law” claim.
+
+## Screening-Mass Addendum
+
+The later `mu^2` sweep narrows the interpretation further:
+
+- `mu^2 = 0.22` gives `alpha = -3.315`
+- `mu^2 = 0.05` gives `alpha = -2.392`
+- `mu^2 = 0.01` gives `alpha = -1.992`
+- `mu^2 = 0.005` gives `alpha = -1.927`
+- `mu^2 = 0.001` gives `alpha = -1.871`
+
+So the steep exponent is not a fixed law of the open surface. It is strongly
+screening-controlled and softens toward Newtonian scaling as `mu^2` is reduced.
 
 ## Important Guardrail
 

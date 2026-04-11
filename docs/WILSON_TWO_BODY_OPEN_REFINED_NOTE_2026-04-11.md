@@ -89,8 +89,20 @@ Best current statement:
 - The result speaks to the open 3D Wilson surface at `G=5`, `mu^2=0.22`; it
   does not yet establish a universal law across couplings or masses.
 
+## Screening Addendum
+
+This note is still accurate for the fixed `mu^2 = 0.22` surface it audited.
+The later screening sweep narrows the interpretation:
+
+- the steep exponent at `mu^2 = 0.22` is real on that surface
+- but the exponent softens toward `-2` as `mu^2` is reduced
+- so the steep law is not a fixed universality class independent of screening
+
+See [`WILSON_MU2_DISTANCE_SWEEP_NOTE_2026-04-11.md`](WILSON_MU2_DISTANCE_SWEEP_NOTE_2026-04-11.md)
+for the screening-controlled crossover.
+
 ## Conclusion
 
-The open-lattice Wilson distance law appears stable as a distinct
-non-Newtonian universality class in the tested regime, not a softened
-approach to `d^-2`.
+The open-lattice Wilson distance law is best read as a screened-law result:
+the default `mu^2 = 0.22` surface is steep and clean, but the exponent moves
+toward Newtonian scaling as screening is removed.
