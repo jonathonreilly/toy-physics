@@ -23,7 +23,7 @@ transferring to one layered holdout and preserving the retained force battery?
   - zero-source exactness
   - source-response linearity
   - two-body additivity
-  - TOWARD force sign
+  - inward retained proxy sign under the prescribed attractive coupling
   - norm stability
 - Frozen field maps:
   - `screened_poisson` baseline
@@ -63,7 +63,7 @@ For the promoted `resistance_yukawa` map:
 
 - source-response `R²` min / mean: `0.9978 / 0.9989`
 - two-body residual max: `3.063e-16`
-- minimum TOWARD count: `3/3`
+- minimum inward proxy count: `3/3`
 - norm drift max: `7.772e-16`
 
 Family-level calibrated gaps:
@@ -84,7 +84,8 @@ Family-level calibrated gaps:
 
 ## Interpretation
 
-- The retained force battery survives the promoted nonlocal field map.
+- The retained structural interaction battery survives the promoted nonlocal
+  field map.
 - Effective-resistance distance is the cleanest graph-native metric in this
   frozen comparison.
 - The next open seam is no longer the raw source-to-field scale on this small

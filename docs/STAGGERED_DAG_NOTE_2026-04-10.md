@@ -16,7 +16,8 @@ The graph family is intentionally narrow:
 - nearest-layer forward geometry
 - force as the gravity observable
 
-The probe closes `6/6` on three layered DAG configurations:
+The probe closes `6/6` on three layered DAG configurations under the
+prescribed attractive sign:
 
 - `(8 layers, width 5)` -> `36` nodes
 - `(12 layers, width 4)` -> `45` nodes
@@ -42,10 +43,11 @@ State families tested:
 
 ## What This Closes
 
-- the staggered force battery is compatible with layered causal ordering
+- the staggered structural interaction battery is compatible with layered
+  causal ordering
 - bipartite structure can come from layer parity rather than cubic coordinates
 - exact norm and machine-zero linearity survive the DAG-compatible transport
-- force remains TOWARD across the tested family set
+- the retained inward proxy response survives across the tested family set
 
 ## What This Does Not Yet Claim
 
@@ -60,4 +62,5 @@ The important result is compatibility, not score inflation:
 
 > the staggered force-first lane is not confined to periodic cubic lattices; it
 > survives a narrow admissible causal DAG family with forward propagation,
-> machine-clean norm/Born, and stable TOWARD force.
+> machine-clean norm/Born, and stable inward retained proxy response under the
+> prescribed attractive sign.

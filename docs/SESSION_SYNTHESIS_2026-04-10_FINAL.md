@@ -57,15 +57,15 @@ that passes a force-based 17-row card in 1D and 3D.
     staggering phases η_μ(x) = (-1)^(x₁+...+x_{μ-1}). No coin. Genuine Dirac
     dispersion E² = m² + sin²(k). Potential gravity V = -m·g·S/(r+ε).
 
-11. **Universal gravity via force measurement**: The centroid shift oscillates with
-    lattice size (periodic-lattice recurrence, not fixable by coarse-graining).
-    On the regular cubic card, the exact lattice force F = -⟨dV/dz⟩ is TOWARD at
-    all tested sizes and state families. On irregular graph families, the
-    retained batteries use audited radial shell-force proxies; stronger
-    edge-radial spot checks agree in sign on the retained admissible families.
-    Force is still the right measurement direction, but the irregular-graph
-    observable should be described as a radial proxy rather than an exact
-    coordinate-force expectation.
+11. **Directional force survives only on the exact lattice card**: The centroid
+    shift oscillates with lattice size (periodic-lattice recurrence, not fixable
+    by coarse-graining). On the regular cubic card, the exact lattice force
+    F = -⟨dV/dz⟩ is a real dynamical-response observable and stays TOWARD at all
+    tested sizes and state families under the prescribed attractive potential.
+    On irregular graph families, the retained batteries use radial shell/edge
+    proxies; the later two-sign audit shows those irregular sign measures are
+    not sign-selective and therefore should not be promoted as evidence that the
+    architecture predicts attractive gravity direction.
 
 12. **Force-based 17-card**: 17/17 on 1D n=61 (6/6 families, no qualifiers) and
     3D n=9 (6/6 families, no qualifiers). 3D n=11,13: 17/17 with qualifier
@@ -81,7 +81,8 @@ Kinetic:    Staggered Dirac operator (η_μ phases on nearest-neighbor hops)
 Mass:       m · ε(x) where ε = (-1)^(x₁+x₂+x₃)
 Gravity:    V(x) = -m · g · S / (|x - x_mass| + ε)
 Evolution:  Crank-Nicolson (exactly unitary, norm ≈ 1e-15)
-Observable: Force F = -⟨dV/dz⟩ for gravity direction/magnitude
+Observable: Exact lattice force F = -⟨dV/dz⟩ on the canonical card;
+            irregular graphs use radial interaction proxies only
 ```
 
 ## What This Architecture Derives
@@ -89,10 +90,10 @@ Observable: Force F = -⟨dV/dz⟩ for gravity direction/magnitude
 - **Dirac dispersion**: E² = m² + sin²(k) exact, from staggering phases.
   Not assumed — follows from nearest-neighbor hopping with alternating signs.
 - **Born rule**: Sorkin I₃ at machine zero (1e-15). From linearity.
-- **Universal gravity**: Force TOWARD for all 6 physical state families
-  (gauss, even, odd, anti, positive-E, negative-E) on the exact lattice-force
-  card, and audited TOWARD radial sign on the retained admissible irregular
-  graph families. From V = m·Φ potential.
+- **Directional response on the canonical lattice**: Force TOWARD for all
+  6 physical state families (gauss, even, odd, anti, positive-E, negative-E)
+  on the exact lattice-force card, under the prescribed attractive potential
+  V = -m·Φ.
 - **Achromatic force**: F = -⟨dV/dz⟩ has no k-dependence (CV = 0.000000).
 - **Mass-independent acceleration**: a = F/m = -⟨dΦ/dz⟩ (CV = 0.000000).
 - **Gauge**: Persistent current J(A) with sin(A) modulation. Native to both
@@ -170,10 +171,12 @@ tests), but these rows are NOT directly comparable to centroid-based cards.
    (particle/antiparticle cancellation) or chiral walks (chirality-mediated
    kinematics don't respond to scalar phases).
 
-3. **Force is the correct gravity observable on lattices.** The centroid shift
-   picks up lattice-scale artifacts (staggered standing waves, periodic-boundary
-   recurrence). The force F = -⟨dV/dx⟩ is immune because it's a potential-gradient
-   expectation, not a position expectation.
+3. **Exact lattice force is the clean directional observable on regular
+   lattices.** The centroid shift picks up lattice-scale artifacts (staggered
+   standing waves, periodic-boundary recurrence). On irregular graphs, the
+   current shell/edge-radial measures remain useful structural diagnostics, but
+   the two-sign audit shows they do not by themselves distinguish attractive
+   from repulsive coupling.
 
 4. **Staggered fermions give Dirac without a coin.** The η_μ phases produce
    gamma-matrix structure from the lattice connectivity alone. No internal DOF
@@ -204,18 +207,22 @@ The full-suite baseline is now frozen:
    families with density-sourced Φ re-solved each step.
 
 4. **True self-gravity**: DONE. `frontier_staggered_self_gravity.py` now closes
-   5/5 on all three cycle-bearing families with 20/20 TOWARD force, exact norm,
-   zero sign flips, and measurable contraction versus free evolution.
+   5/5 on all three cycle-bearing families with exact norm, zero sign flips,
+   and measurable contraction versus free evolution under the prescribed
+   attractive sign. After the two-sign audit, the irregular sign rows are
+   structural field-profile diagnostics rather than standalone direction
+   evidence.
 
 5. **Two-field coupling**: PROTOTYPED. `frontier_two_field_coupling.py` closes
    4/4 on the retained graph with a separate scalar Φ field sourced by `|ψ|²`,
-   30/30 TOWARD force, exact matter norm, and bounded Φ growth.
+   exact matter norm, bounded Φ growth, and inward retained proxy response
+   under the prescribed attractive sign.
 
 6. **Two-field wave hardening**: DONE as a retained hardening step.
    `frontier_two_field_wave.py` closes hard `5/5` on all three retained
    cycle-bearing families with a wave-law `Φ` field, exact `ψ` norm, bounded
-   `Φ`, and 30/30 TOWARD force. Width response survives only as a diagnostic,
-   not a universal gate.
+   `Φ`, and inward retained proxy response under the prescribed attractive
+   sign. Width response survives only as a diagnostic, not a universal gate.
 
 7. **Self-gravity scaling**: DONE as a retained scaling readout.
    `frontier_staggered_self_gravity_scaling.py` shows that self-gravity stays
@@ -244,8 +251,9 @@ The full-suite baseline is now frozen:
 
 11. **Causal DAG compatibility**: DONE as a retained probe.
     `frontier_staggered_dag.py` closes `6/6` on three layered DAG
-    configurations with TOWARD force, Born-clean linearity, exact norm, and
-    measurable forward propagation.
+    configurations with Born-clean linearity, exact norm, measurable forward
+    propagation, and inward retained proxy response under the prescribed
+    attractive sign.
 
 12. **First larger-graph break frontier**: DONE as a retained boundary note.
     `frontier_staggered_cycle_break_frontier.py` shows that the first honest
@@ -258,10 +266,11 @@ The full-suite baseline is now frozen:
     frontier branch collapses gauge/current at `extra=5/6`.
 14. **Gravity-sign audit**: DONE as a measurement correction.
     The regular cubic card keeps the exact lattice-force claim. The irregular
-    graph batteries are now explicitly treated as shell-radial proxies, with
-    edge-radial spot checks confirming the retained TOWARD sign on admissible
-    families. The emergent-geometry growth lane is mixed under the stronger
-    audit and should no longer be described as cleanly AWAY.
+    graph batteries are now explicitly treated as shell/edge-radial proxies,
+    and the later two-sign comparison shows those irregular sign measures are
+    not sign-selective: both attractive and repulsive coupling can read inward.
+    The emergent-geometry growth lane is mixed under the stronger audit and
+    should no longer be described as cleanly AWAY.
 15. **Topology-dependent onset scout**: exploratory but real.
     `frontier_critical_exponents.py` now gives family-dependent finite-size
     onset fits across admissible graph representatives, with one degenerate DAG
@@ -275,28 +284,34 @@ The full-suite baseline is now frozen:
 
 ### Remaining work
 
-1. **Endogenous-field scale**: G_eff=12-178 is characterized but not closed.
+1. **Direction derivation / directional observable**: the exact cubic card keeps
+   a real directional observable because it uses `F = -⟨dV/dx⟩`, but the
+   irregular graph batteries do not currently distinguish attractive from
+   repulsive coupling. The next real fork is either to derive the sign from the
+   staggered/Dirac structure or to freeze the irregular graph program as
+   explicitly sign-agnostic.
+2. **Endogenous-field scale**: G_eff=12-178 is characterized but not closed.
    The miss is structural on the current graph Poisson map, not a sign or
    linearity failure.
-2. **Canonical retarded-field decision**: the family-closure sibling now
+3. **Canonical retarded-field decision**: the family-closure sibling now
    exists, but it is not yet the frozen canonical retarded harness. The next
    step is to decide whether that closure loop is principled enough to retain,
    or whether the project should treat it as a promising tuned sibling only.
-3. **Self-gravity hardening**: push beyond the new scaling note toward a
+4. **Self-gravity hardening**: push beyond the new scaling note toward a
    retained larger-size / harsher-family map, especially to explain why
    contraction remains strong on layered-cycle graphs but only weak-to-mixed on
    random geometric and growing families.
-4. **Post-frontier boundary mapping**: the first break is now known
+5. **Post-frontier boundary mapping**: the first break is now known
    (`random_geometric side=18 extra=5`, gauge fail). The matched slice shows
    the failure is tied to dense shortcut geometry rather than edge-count or
    degree scale. The next step is to map whether other shortcut topologies hit
    the same gauge/current boundary.
-5. **Irregular-graph force standardization**: the cycle and retarded batteries
-   now need one frozen graph-native force observable. The current shell-radial
-   proxy survives the retained sign audits, but future promotion work should
-   require agreement with an edge-radial measure rather than relying on shell
-   averages alone.
-6. **Emergent geometry hardening**: before treating growth as a Nature-level
+6. **Irregular-graph directional standardization**: the cycle and retarded
+   batteries now need one frozen graph-native observable that actually
+   distinguishes coupling sign. The current shell and edge-radial measures are
+   useful structural diagnostics, but the two-sign audit shows they are not
+   sufficient for direction claims.
+7. **Emergent geometry hardening**: before treating growth as a Nature-level
    path, require multi-seed robustness, a curvature/metric observable, and a
    grown-graph gravity check that closes under both shell-probability and
    edge-radial force measures.
@@ -319,5 +334,6 @@ Companion retained probes:
 - `scripts/frontier_two_field_wave.py`
 - `scripts/frontier_two_field_retarded_probe.py`
 - `scripts/frontier_two_field_retarded_family_closure.py`
+- `scripts/frontier_two_sign_comparison.py`
 - `scripts/frontier_staggered_dag.py`
 - `scripts/frontier_staggered_cycle_break_frontier.py`

@@ -4,7 +4,7 @@
 
 ## Strongest Current Result
 
-The strongest defended result is the retained staggered force-first stack:
+The strongest defended result is the retained staggered interaction stack:
 
 - force-based staggered card closes `17/17` on the retained 1D/3D operating
   points
@@ -15,9 +15,9 @@ The strongest defended result is the retained staggered force-first stack:
 - a causal-DAG sibling shows the same force/Born/norm/family story survives on
   layered DAGs
 
-That is a real methodological result: the staggered force-first gravity lane is
-portable across an admissible graph class and is not just a periodic-cubic
-artifact.
+That is a real methodological result: the staggered graph-native interacting
+field lane is portable across an admissible graph class and is not just a
+periodic-cubic artifact.
 
 ## Strongest Negative Result
 
@@ -41,10 +41,11 @@ graph family or one more field law.
 A real breakthrough would be:
 
 > one canonical, graph-native, endogenous matter-plus-field dynamics that
-> simultaneously closes the retained force battery, family robustness, and
-> source-scale closure on both an admissible cycle-bearing graph family and an
-> admissible causal-DAG family, without relying on external kernels or
-> architecture-specific rescue semantics.
+> simultaneously closes the retained interaction battery, family robustness,
+> source-scale closure, and a sign-selective directional observable on both an
+> admissible cycle-bearing graph family and an admissible causal-DAG family,
+> without relying on external kernels or architecture-specific rescue
+> semantics.
 
 That would move the project from “strong lattice/graph methodology” toward a
 credible discrete-physics architecture claim.
@@ -63,7 +64,7 @@ require, in one harness:
 1. zero-source reduction
 2. source linearity
 3. additivity
-4. TOWARD force
+4. sign-selective directional response
 5. iterative stability
 6. exact matter norm
 7. family robustness
@@ -73,3 +74,7 @@ require, in one harness:
 If that closes, the project crosses from “clever retained probes” to a real
 candidate architecture. If it fails, the branch learns exactly where the
 remaining obstruction lives.
+
+The two-sign audit now makes this stricter: preserving inward shell/edge-radial
+sign is not enough, because those irregular observables do not currently
+distinguish attractive from repulsive coupling.
