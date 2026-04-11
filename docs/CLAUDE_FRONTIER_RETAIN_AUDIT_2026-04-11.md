@@ -262,8 +262,9 @@ Reason:
 Current honest baseline:
 
 > the open Wilson distance exponent is strongly controlled by `mu^2` and
-> becomes Newton-compatible as screening is reduced; full Newton closure is
-> still pending a valid both-masses law on the same surface
+> moves toward Newton-compatible scaling as screening is reduced; the full
+> two-body closure is still pending a valid both-masses law on the same
+> surface
 
 ### 2. BMV / branch-entanglement extensions
 

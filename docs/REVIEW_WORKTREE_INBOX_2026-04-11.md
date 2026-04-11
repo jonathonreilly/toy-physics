@@ -10,6 +10,9 @@ This inbox is intentionally strict:
 - if something is here, it is either:
   - a bounded promotion candidate that still needs one last review pass, or
   - a hold item with a specific missing control / redesign step
+- bounded candidates are lane-specific evidence only; do not read them as
+  full Newton or Einstein closure unless the note explicitly says the missing
+  controls are closed
 
 ## Already On `main`
 

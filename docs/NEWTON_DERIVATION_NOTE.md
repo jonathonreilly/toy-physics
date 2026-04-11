@@ -1,4 +1,4 @@
-# Newton's Law Derived from Four Principles
+# Newtonian Mass Scaling from Four Principles (bounded derivation candidate)
 
 **Date:** 2026-04-04
 **Status:** bounded derivation candidate. Additivity now strengthens Principle 3, but persistent-pattern inertia remains open.
@@ -101,7 +101,9 @@ This holds for ALL mass ratios s_A/s_B only if **p = 1**.
 ### Conclusion
 
 With p = 1: F ∝ s_A × s_B / r^(d-2) on a d-dimensional lattice.
-In 3+1D (d=3): F ∝ M₁M₂/r. This is Newton's law.
+In 3+1D (d=3): F ∝ M₁M₂/r on the retained ordered-lattice family.
+This is the Newtonian mass-scaling law on that family; the persistent-pattern
+version of the argument remains open.
 
 ## Numerical Evidence
 
