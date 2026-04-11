@@ -1,0 +1,74 @@
+# Potential Publication Discoveries Log
+
+**Date opened:** 2026-04-11  
+**Purpose:** cumulative repo-wide log of results that look novel, publishable,
+or methodologically important enough to preserve for future paper planning.
+
+This is **not** a paper outline and **not** a claim that every item below is
+already publication-ready. It is a running inventory of findings worth keeping
+visible when paper planning starts.
+
+## Inclusion Rule
+
+An item belongs here only if it is at least one of:
+
+- a retained positive result with possible publication value
+- a strong methodological contribution
+- a strong negative/diagnostic result that teaches something structural
+- an exploratory quantitative lead that looks strong enough to track
+
+Every item should point to a retained note or runner.
+
+## Status Legend
+
+- `retained`
+- `bounded-retained`
+- `methodological`
+- `negative-result`
+- `exploratory-lead`
+
+## Whole-Repo Ledger
+
+| ID | Discovery | Lane | Status | Why it matters | Evidence |
+|---|---|---|---|---|---|
+| D01 | Exact mirror coexistence pocket: Born-clean, gravity-positive, and nontrivial MI/decoherence on the same graph family | mirror | `bounded-retained` | One of the strongest same-graph coexistence results in the repo and a historically important architecture result | [`UNIFIED_PROGRAM_NOTE.md`](UNIFIED_PROGRAM_NOTE.md), [`MIRROR_2D_VALIDATION_NOTE.md`](MIRROR_2D_VALIDATION_NOTE.md) |
+| D02 | Higher-symmetry `Z2 x Z2` extension keeps Born-clean behavior, positive gravity read, and stronger decoherence/range than exact mirror on the tested dense probe | mirror / higher symmetry | `bounded-retained` | Shows the coexistence story is not unique to one exact mirror family | [`HIGHER_SYMMETRY_JOINT_VALIDATION_NOTE.md`](HIGHER_SYMMETRY_JOINT_VALIDATION_NOTE.md) |
+| D03 | Structured chokepoint bridge: structured/generated placement survives the canonical mirror readout on a narrow retained slice | generated symmetry bridge | `bounded-retained` | Converts an older “negative/open” generated-symmetry story into a real but narrow bridge result | [`STRUCTURED_CHOKEPOINT_BRIDGE_NOTE.md`](STRUCTURED_CHOKEPOINT_BRIDGE_NOTE.md) |
+| D04 | 3D dense spent-delay ordered-lattice branch keeps a real attractive window with Born / MI / decoherence on the same family | ordered lattice | `bounded-retained` | Important historical result because it showed the older ordered-lattice lane had a real 3D positive pocket, not just 2D behavior | [`LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md`](LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md) |
+| D05 | Nearest-neighbor refinement bridge: weak-field/Born structure survives refinement and deterministic rescale out to finer `h` | ordered lattice / continuum bridge | `bounded-retained` | One of the strongest older continuity/refinement bridges in the repo | [`CONTINUUM_BRIDGE_NOTE.md`](CONTINUUM_BRIDGE_NOTE.md) |
+| D06 | Valley-linear action-law fork improves the tested mass-law exponent and tail behavior on a fixed retained ordered-lattice family while preserving Born and TOWARD sign | action-law | `bounded-retained` | Clean same-family action-law comparison; plausible paper-shaped result even if not universal | [`PAPER_SCOPE_NOTE.md`](PAPER_SCOPE_NOTE.md), [`VALLEY_LINEAR_ACTION_NOTE.md`](VALLEY_LINEAR_ACTION_NOTE.md) |
+| D07 | Coin mixing-period diagnosis: chromaticity, equivalence problems, and long-time gravity failures in coin-based/chiral/Dirac-walk lanes trace back to the coin mixing period | coin / chiral / Dirac-walk | `negative-result` | Strong cross-architecture negative result; likely publishable as a design/diagnostic lesson | [`CHIRAL_WALK_SYNTHESIS_2026-04-10_ADDENDUM.md`](CHIRAL_WALK_SYNTHESIS_2026-04-10_ADDENDUM.md) |
+| D08 | Exact-force vs centroid lesson on staggered lattices: centroid can oscillate with permanent lattice artifacts while exact lattice force remains stable | staggered methodological core | `methodological` | Important measurement contribution; changed how gravity should be measured on the staggered lane | [`STAGGERED_FERMION_CARD_2026-04-10.md`](STAGGERED_FERMION_CARD_2026-04-10.md), [`GRAVITY_SIGN_AUDIT_2026-04-10.md`](GRAVITY_SIGN_AUDIT_2026-04-10.md) |
+| D09 | Parity-coupling correction for staggered scalar gravity: the correct scalar coupling is through the same parity factor as the mass term, not an identity shift | staggered methodological core | `methodological` | Major correction that fixed the coupling convention and materially changed the physical interpretation of the staggered lane | [`STAGGERED_FERMION_CARD_2026-04-11.md`](STAGGERED_FERMION_CARD_2026-04-11.md), [`TWO_SIGN_COMPARISON_NOTE_2026-04-10.md`](TWO_SIGN_COMPARISON_NOTE_2026-04-10.md) |
+| D10 | Force-based canonical staggered card: parity-coupled staggered Dirac closes the retained 17-card at 1D and 3D operating points, with full-suite baseline `29/38` in 1D and `28/38` in 3D | staggered | `retained` | Current strongest retained architecture package in the repo | [`STAGGERED_FERMION_CARD_2026-04-11.md`](STAGGERED_FERMION_CARD_2026-04-11.md), [`FULL_TEST_MATRIX_2026-04-10.md`](FULL_TEST_MATRIX_2026-04-10.md) |
+| D11 | Graph portability: the staggered lane survives on admissible bipartite irregular graph families instead of only on periodic cubic lattices | staggered graph portability | `retained` | Important portability result; shows the mainline architecture is not just a regular-lattice artifact | [`STAGGERED_GRAPH_PORTABILITY_NOTE.md`](STAGGERED_GRAPH_PORTABILITY_NOTE.md), [`STAGGERED_GRAPH_PORTABILITY_STRESS_NOTE.md`](STAGGERED_GRAPH_PORTABILITY_STRESS_NOTE.md) |
+| D12 | Native gauge/current on irregular graph cycles via persistent-current / flux response on real graph loops | staggered graph gauge | `retained` | Strong graph-native gauge result, especially because it works on irregular cycle-bearing families rather than only on rings/torii | [`CYCLE_BATTERY_NOTE_2026-04-10.md`](CYCLE_BATTERY_NOTE_2026-04-10.md), [`STAGGERED_GRAPH_GAUGE_CLOSURE_RESULTS_2026-04-10.md`](STAGGERED_GRAPH_GAUGE_CLOSURE_RESULTS_2026-04-10.md) |
+| D13 | Endogenous self-gravity contraction on graphs: under parity coupling, self-gravity no longer expands the packet and instead contracts it across retained cycle-bearing families | staggered self-gravity | `retained` | First real endogenous self-field result in the current mainline; materially stronger after parity coupling fix | [`CYCLE_BATTERY_NOTE_2026-04-10.md`](CYCLE_BATTERY_NOTE_2026-04-10.md), [`SELF_GRAVITY_SCALING_NOTE_2026-04-10.md`](SELF_GRAVITY_SCALING_NOTE_2026-04-10.md) |
+| D14 | Two-field wave coupling on graphs: a separate dynamical `Phi` field with wave-law evolution can remain bounded while `psi` stays exactly norm-preserving on retained families | staggered two-field | `retained` | Moves the program from static/background fields toward genuine interacting field dynamics | [`STAGGERED_TWO_FIELD_WAVE_NOTE.md`](STAGGERED_TWO_FIELD_WAVE_NOTE.md) |
+| D15 | Retarded/hybrid family closure: one operating-point sibling closes the cycle-bearing families and carries the causal DAG at `8/9`, with the source-scale gap reduced to `G_eff ~ 0.4–0.7` | staggered two-field / retarded | `bounded-retained` | Strong interacting-field structural result, even though directional gravity off-lattice is still not frozen | [`TWO_FIELD_RETARDED_FAMILY_CLOSURE_NOTE_2026-04-10.md`](TWO_FIELD_RETARDED_FAMILY_CLOSURE_NOTE_2026-04-10.md) |
+| D16 | Causal DAG compatibility: staggered transport and the retained structural battery survive on layered DAGs with forward propagation and exact norm/Born behavior | staggered DAG | `retained` | Important because it connects the current mainline architecture back to causal/DAG structure rather than only undirected graph families | [`STAGGERED_DAG_NOTE_2026-04-10.md`](STAGGERED_DAG_NOTE_2026-04-10.md) |
+| D17 | Off-lattice same-surface sign-selection failure: no endogenous irregular-graph directional observable yet cleanly distinguishes attractive from repulsive coupling | staggered sign audit | `negative-result` | High-value blocker result; narrows exactly what must be solved before stronger off-lattice gravity claims are defensible | [`IRREGULAR_DIRECTIONAL_OBSERVABLE_NOTE_2026-04-11.md`](IRREGULAR_DIRECTIONAL_OBSERVABLE_NOTE_2026-04-11.md), [`GRAVITY_SIGN_AUDIT_2026-04-10.md`](GRAVITY_SIGN_AUDIT_2026-04-10.md) |
+| D18 | Topology-dependent onset behavior / critical-exponent hint: fitted onset exponents vary strongly across admissible graph families | staggered critical behavior | `exploratory-lead` | Quantitative lead with possible universality-class significance, but not yet a frozen full scaling law | [`CRITICAL_EXPONENTS_TOPOLOGY_NOTE_2026-04-10.md`](CRITICAL_EXPONENTS_TOPOLOGY_NOTE_2026-04-10.md) |
+| D19 | Emergent-geometry growth partial reopen: matter-coupled growth can reshape coarse geometry and reopen a narrow strong-coupling toward window | emergent geometry | `exploratory-lead` | Could become a geometry paper or a strong bounded note, but currently too seed-/coupling-sensitive to promote | [`EMERGENT_GEOMETRY_GROWTH_NOTE_2026-04-10.md`](EMERGENT_GEOMETRY_GROWTH_NOTE_2026-04-10.md) |
+
+## What This Log Is Not Saying
+
+- It is **not** saying every item above belongs in the same paper.
+- It is **not** saying every item is equally strong.
+- It is **not** replacing the retained matrix or the lane board.
+
+Use this log when asking:
+
+- what discoveries are worth preserving for paper planning?
+- which results are methodological vs physical vs negative?
+- which older lanes still contain paper-grade findings even if they are not the
+  current default architecture?
+
+## Maintenance Rule
+
+When a new result looks paper-grade, add it here only after it has:
+
+1. a runner,
+2. a retained note or bounded note,
+3. a lane assignment,
+4. and a status label.
