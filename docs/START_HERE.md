@@ -20,7 +20,9 @@ way in is:
    [`docs/CANONICAL_HARNESS_INDEX.md`](CANONICAL_HARNESS_INDEX.md)
 7. Read the bug / rerun workflow:
    [`docs/repo/RETEST_PLAYBOOK.md`](repo/RETEST_PLAYBOOK.md)
-8. Then read the current retained science state:
+8. Read the rerun-required bug audit:
+   [`docs/RERUN_REQUIRED_BUG_AUDIT_2026-04-11.md`](RERUN_REQUIRED_BUG_AUDIT_2026-04-11.md)
+9. Then read the current retained science state:
    [`docs/FULL_TEST_MATRIX_2026-04-10.md`](FULL_TEST_MATRIX_2026-04-10.md)
 
 ## Current Program Reality

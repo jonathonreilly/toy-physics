@@ -1,35 +1,16 @@
 #!/usr/bin/env python3
 """
-Two-Body Mutual Attraction via Self-Consistent Gravity
-=======================================================
+Historical single-wavefunction two-lobe probe.
+==============================================
 
-The most important experiment: do two self-gravitating wavepackets on a
-staggered lattice attract each other through a shared self-consistent field?
+Important guardrail:
+  this is NOT a genuine two-body experiment. It evolves one normalized
+  wavefunction with two lobes and infers 'body' motion from a left/right split,
+  so any separation signal is contaminated by self-focusing and intra-state
+  interference.
 
-Every other gravitational result in the repo is either tautological (follows
-from positive smoothed potential), generic (any gapped free-fermion gives area
-law), or single-particle (self-contraction, not mutual attraction).
-
-Under a static/random potential, two packets evolve independently -- no centroid
-correlation. Under self-consistent gravity, packet A's Phi pulls packet B, and
-vice versa. This is Newton's law.
-
-Protocol on 2D staggered lattice (side=12, n=144):
-  1. Two Gaussians at (3,6) and (9,6), sigma=1.2
-  2. Self-consistent evolution: rho -> Phi -> H -> CN step
-  3. Track left/right centroids separately
-  4. Signal: separation decreases over time (mutual attraction)
-
-Controls:
-  A. FREE (G=0): no gravity
-  B. FROZEN: Phi computed once from initial rho, held fixed
-  C. ANDERSON: random positive potential with matched statistics
-  D. SELF-GRAVITY: the real test
-
-Sweeps:
-  - G = [10, 20, 50, 100]
-  - Separation d = [4, 6, 8, 10]
-  - Mass ratio: one packet 2x amplitude
+It is kept only as a historical control / negative surface. Use the later
+two-orbital and Wilson two-body harnesses for actual mutual-channel tests.
 """
 
 from __future__ import annotations

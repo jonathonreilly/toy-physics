@@ -3,6 +3,10 @@
 **Date:** 2026-04-11  
 **Purpose:** one-page map of where each major lane currently sits
 
+Active rerun map:
+
+- [`docs/RERUN_REQUIRED_BUG_AUDIT_2026-04-11.md`](../RERUN_REQUIRED_BUG_AUDIT_2026-04-11.md)
+
 ## Status Legend
 
 - `primary-retained`: current best-supported lane
@@ -48,3 +52,5 @@
 - If a claim depends on sign/direction, check the blocker row before trusting
   any irregular-graph summary.
 - If a lane is historical, treat it as real prior work, not current default.
+- If a lane is mentioned in the rerun-required audit, do not promote it again
+  before the listed rerun/redesign step is completed.

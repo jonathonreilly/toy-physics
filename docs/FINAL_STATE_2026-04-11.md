@@ -12,7 +12,7 @@ Two axioms. Two free parameters (m, G). One open problem (graph selection).
 | Result | Robustness | Anderson Control | Promotion |
 |--------|-----------|-----------------|-----------|
 | Sign selectivity | 300/300 | Random only 6/10 | Genuinely gravitational |
-| Self-consistency | 50σ from static/random | — | Load-bearing at high σ |
+| Self-consistency | deterministic split vs static; strong sigma-like split vs random controls | — | Load-bearing, but not a single literal 50σ result |
 | Boundary coefficient | 100/100 R²>0.95 | 2.7σ from disorder | Modest but real |
 | CDT spectral flow | Sigmoid R²>0.989 | Generic shape | σ* converging → PROMOTED |
 
@@ -34,9 +34,11 @@ Area-law R² (Eisert-Cramer-Plenio theorem), branch entanglement S=0.69
 
 ## Key Insights
 
-1. **Self-consistency is load-bearing at 50σ** — not reducible to random
-   disorder, static potential, or positivity alone. Dynamic backreaction,
-   spatial correlations, AND sign all contribute independently.
+1. **Self-consistency is load-bearing** — not reducible to random disorder,
+   static potential, or positivity alone. Dynamic backreaction, spatial
+   correlations, and sign all contribute independently. The self-consistent vs
+   static split is deterministic on the fixed audited surface; the larger
+   sigma-like separations apply to the random-control comparisons.
 
 2. **Gravity is spectral at the discrete level** — the Hamiltonian spectrum
    encodes gravitational effects (area-law coefficient, sign selectivity,
@@ -55,7 +57,7 @@ it fails"
 
 Core claims:
 - Parity coupling correction (literature contribution)
-- Self-consistency not reducible to disorder (50σ, the key result)
+- Self-consistency not reducible to disorder or a frozen static surface
 - Sign selectivity on irregular graphs (300/300)
 - CDT-like spectral flow promoted (σ* converging)
 - Honest Anderson control mapping gravitational vs generic content
@@ -71,7 +73,7 @@ potential." The lane is open; the observable needs fixing.
 - 21+ probes run across 3 rounds
 - 3 gatekeeper experiments (all passed)
 - Anderson control (existential — gravity survives at 2.7σ + sign)
-- Self-consistency test (50σ — the strongest single result)
+- Self-consistency test (deterministic split vs static; strong random-control separation)
 - Promotion battery (1 promoted, 1 killed, 2 inconclusive, 1 fix failed)
 - Two-body test (negative — needs better observable)
 - Theory reduced to 2 axioms

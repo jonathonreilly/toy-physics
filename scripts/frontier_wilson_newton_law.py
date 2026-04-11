@@ -1,18 +1,21 @@
 #!/usr/bin/env python3
 """
-Newton's Law Test for Wilson Fermion Two-Body Mutual Attraction.
+Periodic Wilson two-body distance/source scan.
 
-Tests whether the Hartree two-orbital mutual attraction follows:
-  F proportional to M1*M2 / r^2
+Important guardrail:
+  this runner uses a periodic cubic lattice and therefore does NOT provide
+  an image-free Newton-law test. It is preserved as a torus control / historical
+  scan only.
 
-Two sweeps:
-  1. Distance sweep: vary d in [3..8] at fixed G=5, fit log|a_mutual| vs log(d)
-     Newton predicts slope = -2
-  2. Mass sweep: vary M_ratio (effective mass of orbital B) at fixed d=4
-     Newton predicts a_mutual_on_A linear in M_ratio
+What it actually tests:
+  1. distance dependence of the SHARED-SELF_ONLY mutual-channel observable
+     on a periodic torus
+  2. source-strength dependence from reweighting orbital B's contribution to
+     the Poisson source at fixed orbital A
 
-Lattice: side=13, N=2197 (avoids periodic image contamination for d<=8)
-Controls: SELF_ONLY, FREE, ANDERSON (random disorder, 5 seeds)
+What it does NOT test:
+  - a clean open-boundary distance law
+  - a full F proportional to M1*M2 Newtonian mass law
 """
 
 import numpy as np
@@ -201,7 +204,7 @@ def make_anderson_potential(rng, rho_ref, G):
 # ═══════════════════════════════════════════════════════════════════════════
 def main():
     print("=" * 80)
-    print("WILSON FERMION NEWTON'S LAW TEST")
+    print("PERIODIC WILSON TWO-BODY DISTANCE / SOURCE SCAN")
     print("=" * 80)
     print(f"Lattice: {N_SIDE}^3 = {N} sites")
     print(f"MASS={MASS}, WILSON_R={WILSON_R}, DT={DT}, REG={REG}, G={G_VAL}")
@@ -212,7 +215,7 @@ def main():
 
     # ─── DISTANCE SWEEP ──────────────────────────────────────────────────
     print("=" * 80)
-    print("PART 1: DISTANCE SWEEP  (Newton predicts slope = -2)")
+    print("PART 1: DISTANCE SWEEP  (periodic torus control, not open-lattice Newton)")
     print("=" * 80)
     d_vals = [3, 4, 5, 6, 7, 8]
     dist_results = {}

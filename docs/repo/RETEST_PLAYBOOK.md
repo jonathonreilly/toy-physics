@@ -3,6 +3,10 @@
 **Date:** 2026-04-11  
 **Purpose:** how to retest the repo when a runner bug or semantic bug is found
 
+Current rerun-required bug ledger:
+
+- [`docs/RERUN_REQUIRED_BUG_AUDIT_2026-04-11.md`](../RERUN_REQUIRED_BUG_AUDIT_2026-04-11.md)
+
 ## 1. Pick The Lane First
 
 Before rerunning anything, identify the lane in:
