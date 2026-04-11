@@ -14,18 +14,22 @@ al. 2020, Dempsey et al. 2025). This:
 - Made the well/hill sign test work on the exact cubic lattice
 - Turned self-gravity contraction from EXPANSION (w=1.68) to CONTRACTION
   (w=0.40-0.76)
-- Identified weak-coupling (G=5-10) as the sign-sensitive regime on
-  irregular graphs (14/15 seeds, force TOWARD 40/40 attract, AWAY 0/40 repulse)
+- Identified weak-coupling (G=5-10) as a retained sign-sensitive regime on
+  irregular graphs via shell-force separation on a 60-run audited surface
 - Updated every script in the repo (17+ files)
 
-All retained batteries survive: 17/17 canonical card, 26/27 cycle battery,
-15/15 self-gravity, 34/36 retarded closure, 29/38 full suite.
+Retained batteries after the parity rewrite:
+- canonical card: `17/17` in 1D and `17/17` in 3D at `n=9`
+- cycle battery: `9/9`, `9/9`, `9/9`
+- self-gravity: `5/5`, `5/5`, `5/5`
+- retarded family closure: `9/9`, `9/9`, `9/9`, `8/9` (DAG gauge N/A)
+- full suite: `29/38` in 1D, `28/38` in 3D
 
 ## Phase 2: Blocker Closure
 
 | Blocker | Before | After |
 |---------|--------|-------|
-| B1 Sign on irregular graphs | OPEN | Strong weak-coupling regime (14/15) |
+| B1 Sign on irregular graphs | OPEN | Retained weak-coupling sign-sensitive regime; broader off-lattice closure still open |
 | B2 Field equation | OPEN | Variational derivation (Euler-Lagrange) |
 | B3 Light cone | OPEN | Standard lattice QFT framing |
 | B4 Static lattice | OPEN | Acceptable (linearized gravity limit) |
@@ -37,33 +41,38 @@ All retained batteries survive: 17/17 canonical card, 26/27 cycle battery,
 **1. Holographic Area Law (frontier_holographic_probe.py)**
 Entanglement entropy of the Dirac sea (filled negative-energy modes) on the
 staggered lattice scales with BOUNDARY AREA, not volume.
-- R^2 = 0.9997-0.9998 for S vs |boundary|
-- R^2 = 0.88-0.90 for S vs |volume|
-- Gravity REDUCES entropy by 12.5% (self-gravity localizes the Dirac sea)
-- Holds at all tested sizes (side=8-14)
-This is the discrete Ryu-Takayanagi formula from staggered fermion dynamics.
+- Free: `R^2 = 0.9995` for `S` vs `|boundary|`, `0.8984` for `S` vs `|A|`
+- Gravity: `R^2 = 0.9682` for `S` vs `|boundary|`, `0.9328` for `S` vs `|A|`
+- Gravity reduces the area-law coefficient by `12.46%`
+- This is a bounded positive many-body-style boundary-law result, not a full holography proof
 
 **2. Spectral Dimension Shift (frontier_spectral_geometry.py)**
 Self-gravity changes the spectral dimension of the Hamiltonian.
-- Free 2D lattice: d_s = 1.90 (correct — expected ~2.0)
-- Self-gravitating: d_s = 2.89-4.09 (shift of +1.0 to +2.4)
+- Free 2D lattice: `d_s = 1.90` (close to the expected 2D baseline)
+- Gravity-dependent shifts observed across tested families: `+0.86` to `+2.38`
 - Gap widens by 1.1-2.4x under gravity
-This is a computable quantum gravity correction to spacetime dimension.
+This is a bounded positive spectral-law shift. The interpretation as a
+quantum-gravity correction is still exploratory.
 
-**3. Geometry Superposition (frontier_geometry_superposition_sweep.py)**
-Flat vs curved staggered evolution produces distinguishable detector states.
-- TV up to 0.56 on growing graphs (G=10)
-- TVq up to 0.25 (quantum superposition differs from classical mixture)
-- Phase shift dphi up to 2.83 rad
-- Scales with G, persists across all irregular graph families
-Satisfies the BMV (Bose-Marletto-Vedral) criterion for quantum gravity.
+**3. Geometry Superposition (frontier_staggered_geometry_superposition_retained.py)**
+On a fixed 2D staggered lattice, coherent flat-vs-screened-field branching
+produces a detector-resolved branch effect distinct from the corresponding
+classical mixture.
+- `1D` controls are null under the same protocol
+- `2D side=8`: `TV = 0.5766`, `dphi = 3.5315`, `TVq = 0.2237`, `overlap = 0.0105`
+- `2D side=10`: `TV = 0.2493`, `TVq = 0.0685`
+- `2D side=12`: `TV = 0.1271`, `TVq = 0.0146`
+This is a retained fixed-adjacency branch-superposition result, not a BMV
+witness and not a topology-superposition claim.
 
 **4. Gravitational Memory (frontier_gravitational_memory.py)**
 After a gravitational wave pulse passes, the separation between test
 wavepackets is permanently altered.
-- Memory signal: +0.013 lattice units (vs 0.000 control)
-- Nonlinear at strong amplitudes (expected)
-Discrete analog of the Christodoulou/BMS memory effect.
+- Control drift: `+0.000000`
+- Weak-pulse memory/amp mean: `+0.012460`, std `0.000592`
+- Nonlinear onset at strong amplitudes
+This is a bounded positive weak-amplitude memory-style signal, not yet a full
+GR-memory equivalence claim.
 
 ### Tier 2 — Strong Results
 
@@ -100,19 +109,21 @@ a fitting artifact on non-monotonic data. NOT confirmed.
 Decoherence signal exists but Diosi-Penrose scaling (Gamma ~ G/d) not
 cleanly reproduced. Finite-size artifacts dominate. Needs n >> 61.
 
-**10. Single-Particle Entropy (frontier_area_law_entropy.py)**
-Gravity boosts single-particle entanglement entropy by 100-170%.
-Saturates near ln(2). The Dirac-sea version (holographic probe) is
-the stronger result.
+**10. Single-Particle Entropy (frontier_self_gravity_entropy.py)**
+Simple bipartition entropy is NOT an area-law result.
+- bounded by `ln(2)`
+- dominated by subsystem occupancy
+- mean entropy shift `(self - free) = -0.2227`
+The Dirac-sea / holographic probe is the stronger and more relevant boundary-law result.
 
 ## Discovery Map
 
 | Result | Community | Risk | Status |
 |--------|-----------|------|--------|
-| Holographic area law | QG, QI, holography | Low | R^2=0.9998 |
-| Spectral dimension shift | QG, spectral theory | Medium | d_s shift +1.4 mean |
-| Geometry superposition | QG, BMV experiments | Medium | TV=0.56, TVq=0.25 |
-| Gravitational memory | GW theory, BMS | Medium | +0.013 signal |
+| Holographic area law | QG, QI, holography | Low | boundary-law fit survives with gravity |
+| Spectral dimension shift | QG, spectral theory | Medium | gravity-dependent shift, interpretation exploratory |
+| Geometry superposition | QG, coherent branch probes | Medium | retained 2D branch effect on fixed adjacency |
+| Gravitational memory | GW theory, BMS | Medium | weak-amplitude memory-style signal |
 | Quantum Zeno | Foundations, decoherence | Low | G_Zeno=49 |
 | Z2 protection | QI, decoherence | Low | 2x MI boost |
 | Critical exponents | Stat phys, Anderson | Low | beta=0.19 stable |
@@ -132,8 +143,8 @@ Scripts (new):
 - frontier_displacement_test.py — wavepacket displacement
 - frontier_field_equation_uniqueness.py — four alternative field equations
 - frontier_emergent_geometry_multisize.py — multi-size growth test
-- frontier_staggered_geometry_superposition.py — geometry superposition
-- frontier_area_law_entropy.py — single-particle entropy
+- frontier_staggered_geometry_superposition_retained.py — retained branch superposition
+- frontier_self_gravity_entropy.py — single-particle entropy audit
 - frontier_critical_exponents_extended.py — 12-config finite-size scaling
 - frontier_geometry_superposition_sweep.py — 4-sweep parameter study
 - frontier_gravitational_decoherence_rate.py — decoherence rate
@@ -159,17 +170,21 @@ Scripts (modified — parity coupling):
 
 ## What's Next
 
-The holographic area law (R^2=0.9998) and spectral dimension shift are
-the strongest new results. Combined with the existing 17/17 canonical card,
-self-gravity contraction, and weak-coupling sign selectivity, the staggered
-fermion program now has:
+The strongest new results in this batch are:
+- the Dirac-sea boundary-law probe
+- the retained 2D branch-superposition harness
+- the weak-amplitude memory-style signal
+
+Combined with the existing 17/17 canonical card, self-gravity contraction,
+and weak-coupling sign selectivity, the staggered fermion program now has:
 
 1. Derived Dirac physics (KG dispersion, Born rule, gauge)
 2. Gravitational attraction (sign-selective at weak coupling)
-3. Holographic area law (Ryu-Takayanagi from the lattice)
-4. Quantum gravity correction to spacetime dimension
-5. Gravitational memory effect
+3. A strong boundary-law / holography-style many-body probe
+4. A gravity-dependent spectral shift of the effective Hamiltonian
+5. A weak-amplitude memory-style signal
 6. Quantum Zeno localization from self-gravity
 
-This is a multi-paper program. The area law + spectral dimension results
-alone could be a standalone paper targeting PRL or Nature Physics.
+This is a multi-paper program. The strongest immediate paper directions are
+the parity-corrected staggered baseline, the many-body boundary-law probe,
+and the retained weak-coupling sign-sensitive regime.

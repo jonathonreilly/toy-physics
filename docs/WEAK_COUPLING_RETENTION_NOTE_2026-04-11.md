@@ -60,7 +60,7 @@ Norm conservation was also required:
 Across the full `60`-run audited surface:
 
 - width asymmetry `< 1`: `56/60`
-- gap ratio `> 1`: `56/60`
+- gap ratio `> 1`: `54/60`
 - shell strict split: `47/60`
 - shell ordered (`tw_a > tw_r`): `60/60`
 - shell margin `>= 10`: `60/60`
@@ -75,7 +75,7 @@ By family:
   - shell margin: `20/20`
 - growing:
   - width: `16/20`
-  - gap: `16/20`
+  - gap: `14/20`
   - shell strict: `16/20`
   - shell margin: `20/20`
 - layered cycle:
