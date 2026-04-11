@@ -98,12 +98,17 @@ def build_hamiltonian(pos: np.ndarray, col: np.ndarray,
     H = lil_matrix((n, n), dtype=complex)
     par = np.where(col == 0, 1.0, -1.0)
     H.setdiag((MASS + phi) * par)
+    side = int(round(np.max(pos[:, 0]) + 1))
 
     for i in range(n):
         for j in adj[i]:
             if i >= j:
                 continue
-            d = math.hypot(pos[j, 0] - pos[i, 0], pos[j, 1] - pos[i, 1])
+            dx = abs(pos[j, 0] - pos[i, 0])
+            dy = abs(pos[j, 1] - pos[i, 1])
+            dx = min(dx, side - dx)
+            dy = min(dy, side - dy)
+            d = math.hypot(dx, dy)
             d = min(d, 2.0)
             w = 1.0 / max(d, 0.5)
             H[i, j] += -0.5j * w
@@ -535,8 +540,10 @@ def main():
     print(f"  Best non-2.0 selectivity: alpha={best_other_sel[0]:.2f}, "
           f"margin={best_other_sel[1]:+d}")
 
-    if sel_at_2 > 0 and sel_at_2 >= best_other_sel[1]:
-        print("  Sign selectivity supports Born rule selection.")
+    if sel_at_2 > 0 and sel_at_2 > best_other_sel[1]:
+        print("  Sign selectivity favors alpha=2.0 over the tested alternatives.")
+    elif sel_at_2 > 0 and sel_at_2 == best_other_sel[1]:
+        print("  Sign selectivity is present at alpha=2.0 but not uniquely best.")
     elif sel_at_2 > 0:
         print("  Sign selectivity present but not uniquely best at alpha=2.")
     else:

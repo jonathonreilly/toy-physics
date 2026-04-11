@@ -79,12 +79,17 @@ def build_hamiltonian(pos: np.ndarray, col: np.ndarray,
     H = lil_matrix((n, n), dtype=complex)
     par = np.where(col == 0, 1.0, -1.0)
     H.setdiag((MASS + phi) * par)
+    side = int(round(np.max(pos[:, 0]) + 1))
 
     for i in range(n):
         for j in adj[i]:
             if i >= j:
                 continue
-            d = math.hypot(pos[j, 0] - pos[i, 0], pos[j, 1] - pos[i, 1])
+            dx = abs(pos[j, 0] - pos[i, 0])
+            dy = abs(pos[j, 1] - pos[i, 1])
+            dx = min(dx, side - dx)
+            dy = min(dy, side - dy)
+            d = math.hypot(dx, dy)
             d = min(d, 2.0)
             w = 1.0 / max(d, 0.5)
             H[i, j] += -0.5j * w
@@ -423,7 +428,8 @@ def run_eigenvalue_statistics():
     r_last = results_part1[-1]['r']
     if r_last > r0 + 0.03:
         print(f"  <r> grows from {r0:.4f} (G=0) to {r_last:.4f} (G={G_values[-1]})")
-        print("  Self-gravity pushes the spectrum toward quantum chaos.")
+        print("  Self-gravity softens the strongly integrable spacing pattern,")
+        print("  but the spectrum remains on the Poisson side of the chaos threshold.")
     elif abs(r_last - r0) < 0.03:
         print(f"  <r> remains near {r0:.4f} across all G -- no spectral transition.")
     else:
