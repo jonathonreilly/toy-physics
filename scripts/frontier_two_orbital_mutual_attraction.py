@@ -13,6 +13,12 @@ under a shared self-consistent scalar field:
 The key control is "self-only", where each orbital evolves only under the
 field sourced by its own density. Any extra approach in the shared-field
 run is the mutual channel.
+
+Primary observable:
+  residual(t) = sep_shared(t) - sep_self_only(t)
+
+A negative residual means the shared field pulls the two orbitals closer than
+they move under self-focusing alone.
 """
 
 from __future__ import annotations
@@ -203,6 +209,18 @@ def summarize(label: str, seps: np.ndarray):
     return label, delta, monotone_frac, float(seps[-1])
 
 
+def residual_metrics(shared: np.ndarray, self_only: np.ndarray, early_steps: int = 20):
+    resid = shared - self_only
+    early = resid[:early_steps]
+    return {
+        "final": float(resid[-1]),
+        "min": float(np.min(resid)),
+        "early_mean": float(np.mean(early)),
+        "neg_frac": float(np.mean(resid < 0)),
+        "early_neg_frac": float(np.mean(early < 0)),
+    }
+
+
 def main():
     t0 = time.time()
     print("=" * 78)
@@ -231,15 +249,20 @@ def main():
             rows.append((G,) + row[1:])
             print(f"{label:<14s} {row[1]:>+12.6f} {row[2]:>10.3f} {row[3]:>12.4f}")
 
-        mutual_delta = float(res["shared"][-1] - res["self_only"][-1])
+        resid = residual_metrics(res["shared"], res["self_only"])
         print()
-        print(f"Mutual channel (shared - self_only, final separation): {mutual_delta:+.6f}")
-        if mutual_delta < -1e-2:
-            print("  -> shared field pulls the packets closer than self-only evolution")
-        elif mutual_delta > 1e-2:
-            print("  -> shared field leaves the packets farther apart than self-only evolution")
+        print("Mutual-channel residual  residual(t) = sep_shared(t) - sep_self_only(t)")
+        print(f"  final residual:        {resid['final']:+.6f}")
+        print(f"  minimum residual:      {resid['min']:+.6f}")
+        print(f"  mean residual t<20:    {resid['early_mean']:+.6f}")
+        print(f"  negative fraction:     {resid['neg_frac']:.3f}")
+        print(f"  early negative frac:   {resid['early_neg_frac']:.3f}")
+        if resid["early_mean"] < -1e-2 and resid["early_neg_frac"] > 0.75:
+            print("  -> shared field shows a sustained early mutual-attraction channel")
+        elif resid["final"] < -1e-2 or resid["min"] < -1e-2:
+            print("  -> shared field shows only a weak or transient attraction channel")
         else:
-            print("  -> no material separation from self-only evolution")
+            print("  -> no material mutual-attraction separation from self-only evolution")
         print()
 
     print("=" * 78)
