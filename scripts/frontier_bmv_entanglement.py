@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
 """
-BMV (Bose-Marletto-Vedral) entanglement protocol on a staggered lattice.
+BMV-like branch entanglement protocol on a staggered lattice.
 
-Protocol: Two particles (wavepackets) on a 2D staggered lattice. A gravitational
-source at the midpoint is placed in superposition of (present, absent). Each
-particle evolves under both branches. The joint state correlates the two particles
-through the gravitational source. If entanglement develops between the particles,
-gravity must be quantum.
+Protocol: Two particles (wavepackets) on a 2D staggered lattice. A source at the
+midpoint is placed in an externally imposed branch superposition of
+(present, absent). Each particle evolves under both branches. The joint state
+correlates the two particles through that branch structure.
+
+Guardrail:
+  this is a toy-model branch-entanglement probe, not a full BMV witness. It
+  does not by itself prove that gravity must be quantum.
 
 The two-particle state is:
   |Psi> = (|psi_1A>|psi_2A> + |psi_1B>|psi_2B>) / sqrt(2)
@@ -17,7 +20,7 @@ giving entanglement entropy:
 
   S = H_binary(p) where p = (1 + overlap_1 * overlap_2) / 2
 
-BMV witness: S > 0 whenever overlap < 1, i.e. whenever the source creates
+Toy witness: S > 0 whenever overlap < 1, i.e. whenever the branches create
 distinguishable evolution for either particle.
 
 Sweep G = [1, 2, 5, 10, 20, 50] to map the entanglement vs coupling strength.

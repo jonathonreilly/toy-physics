@@ -1,5 +1,10 @@
 # Session Synthesis — 2026-04-11: Parity Coupling + 10 Discovery Probes
 
+> Historical frontier snapshot. Several items below were later narrowed by
+> audits, controls, and review. Do not use this file alone as the current
+> retained status; cross-check against the later audit notes and the repo lane
+> board.
+
 ## What This Session Did
 
 Started from a gravity sign audit ("are we measuring gravity correctly?")
@@ -36,7 +41,7 @@ Retained batteries after the parity rewrite:
 
 ## Phase 3: 10 Discovery Probes (All Opus Agents)
 
-### Tier 1 — Nature-Level Results
+### Early Frontier Highlights (later narrowed in places)
 
 **1. Holographic Area Law (frontier_holographic_probe.py)**
 Entanglement entropy of the Dirac sea (filled negative-energy modes) on the
