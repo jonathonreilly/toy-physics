@@ -75,6 +75,8 @@ The repo currently contains four different classes of publication material:
 - branch-mediated entanglement is not a full BMV witness
 - tripartite branch-mediated entanglement is not a multipartite BMV witness and is now read as W-type rather than GHZ-type
 - weak-coupling retention does not close broader off-lattice directional gravity outside the low-`G` window
+- Anderson-vs-gravity distinction is strongest in a finite perturbative window and not uniform across sizes
+- eigenvalue statistics currently support a clean negative “no chaos transition” result, not a dynamical criticality claim
 
 **What should not be overclaimed**
 
@@ -82,6 +84,7 @@ The repo currently contains four different classes of publication material:
 - irregular graph sign rows remain audited radial proxies
 - the endogenous same-surface directional probe is still a blocker
 - the simple single-particle entropy probe is not a holographic / area-law result
+- the Anderson phase map should not be flattened into a universal `L>=10` statement
 
 **Verdict**
 
@@ -92,6 +95,41 @@ The repo currently contains four different classes of publication material:
 - the entropy null result is worth preserving as a negative control against overclaiming holography
 - the new boundary-law and branch-entanglement notes are worth preserving as bounded side results, not as headline claims
 - the memory note is still worth preserving, but primarily as a diagnostic/exploratory artifact rather than publication-grade positive evidence
+- the Anderson/eigenvalue phase note is worth preserving as a bounded diagnostic companion result
+
+### 1B. Wilson Two-Body Open Surface
+
+**Safe bounded material**
+
+- genuine two-orbital mutual-attraction channel on open 3D Wilson lattices
+- clean `shared` vs `self_only` separation on the audited `G=5`, `mu^2=0.22`
+  surface
+- fitted distance and partner-source laws
+
+**What is strong here**
+
+- this is the cleanest two-body mutual-attraction signal currently in the repo
+- it survives removal of the periodic small-box sign flip that affected the
+  narrow periodic Wilson window
+
+**What is bounded**
+
+- the distance law is clean but non-Newtonian: approximately `d^-3.4`
+- partner-source scaling is monotone but sublinear
+- this is not yet an emergent Newton-law paper
+
+**What is not safe**
+
+- `1/r^2`
+- `F ∝ M1 M2`
+- promotion of the periodic `frontier_wilson_newton_law.py` script, which still
+  wraps the box despite its stated motivation
+
+**Verdict**
+
+- worth preserving as a bounded retained frontier result
+- strong enough to anchor a “clean mutual channel, wrong law” discussion
+- not yet the Nature-threshold two-body closure
 
 ### 2. Coin / Chiral / Dirac-Walk Lane
 
