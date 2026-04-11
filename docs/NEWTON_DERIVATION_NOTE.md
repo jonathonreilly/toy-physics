@@ -1,7 +1,7 @@
-# Newton's Law Derived from Four Principles
+# Newtonian Mass Scaling from Four Principles (bounded family-law note)
 
 **Date:** 2026-04-04
-**Status:** bounded derivation candidate. Additivity now strengthens Principle 3, but persistent-pattern inertia remains open.
+**Status:** hold. Additivity now strengthens Principle 3 on the retained ordered-lattice family, but persistent-pattern inertia remains open.
 
 ## The Claim
 
@@ -14,6 +14,10 @@ all of the following hold together:
 2. Phase valley (gravitational attraction)
 3. Additive one-parameter mass (`m ∝ s` under the same composition law)
 4. Momentum conservation (action-reaction symmetry)
+
+This is a family-level statement only. It does **not** claim architecture-
+independent uniqueness, and it does **not** claim that the action is uniquely
+forced by the axioms on arbitrary graphs or lattices.
 
 The open step is still whether Principle 3 can be made real for persistent
 patterns rather than only for the current test-particle/composition harnesses.
@@ -101,7 +105,9 @@ This holds for ALL mass ratios s_A/s_B only if **p = 1**.
 ### Conclusion
 
 With p = 1: F ∝ s_A × s_B / r^(d-2) on a d-dimensional lattice.
-In 3+1D (d=3): F ∝ M₁M₂/r. This is Newton's law.
+In 3+1D (d=3): F ∝ M₁M₂/r on the retained ordered-lattice family.
+This is the Newtonian mass-scaling law on that family; the persistent-pattern
+version of the argument remains open.
 
 ## Numerical Evidence
 
@@ -117,6 +123,21 @@ In 3+1D (d=3): F ∝ M₁M₂/r. This is Newton's law.
 | Valley additivity on second retained family | `<= 0.08%` on the 2D ordered-lattice cross-check |
 | Spent-delay same-site / disjoint additivity | Violated by 24-29% on the same family |
 
+## Persistent-Pattern Control
+
+The smallest viable persistent-pattern check was run and did not close the gap:
+
+- the packet re-identification control stayed visually stable, but that only
+  supports a bounded re-identification diagnostic
+- the stricter persistent inertial-object probe found no admissible class that
+  met the capture / carry / shift thresholds
+- the leading row was still a broad surrogate, not a persistent-pattern
+  inertial object
+
+So the review branch still lacks a localized state whose inertial response can
+be measured as a closed one-parameter mass. Principle 3 is stronger than a bare
+assumption, but it is not closed for persistent patterns.
+
 ## What This Does NOT Prove
 
 1. It does not derive the dimension d of spacetime
@@ -130,11 +151,20 @@ In 3+1D (d=3): F ∝ M₁M₂/r. This is Newton's law.
    test-particle response statement; they do not yet produce a
    persistent-pattern inertial mass
 
+## Promotion Guidance
+
+Do **not** promote the stronger theorem framing:
+
+- “valley-linear is uniquely forced by the axioms”
+- “Newtonian mass scaling is architecture-independent”
+- “the action is uniquely determined on arbitrary graphs”
+
 ## The Strongest Safe Statement
 
 "On the retained ordered-lattice family, if the propagator is linear, the
 action creates a phase valley, the inertial quantity is extensive under the
 same composition law as the field-source parameter, and momentum is conserved,
-then `p = 1` is selected and the Newtonian mass-scaling law follows. The open
-step in the current project is still the persistent-pattern version of that
-extensive one-parameter mass principle."
+then `p = 1` is selected and the Newtonian mass-scaling law follows on that
+family. The open step in the current project is still the persistent-pattern
+version of that extensive one-parameter mass principle, so this remains a
+hold rather than a mainline closure."
