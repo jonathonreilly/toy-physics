@@ -92,9 +92,9 @@ information 1.8-2.0x better than mixed states.
 ### Tier 3 — Exploratory / Inconclusive
 
 **8. Confinement (frontier_confinement_probe.py)**
-Cornell fit gives string tension sigma=0.018. E(r) oscillatory but shows
-linear trend at intermediate r. Suggestive, not conclusive. Needs larger
-lattices.
+Cornell fit gives sigma=0.018 but E(r) is strongly oscillatory (even/odd r
+alternation from staggered lattice artifacts). The "string tension" is likely
+a fitting artifact on non-monotonic data. NOT confirmed.
 
 **9. Gravitational Decoherence Rate (frontier_gravitational_decoherence_rate.py)**
 Decoherence signal exists but Diosi-Penrose scaling (Gamma ~ G/d) not
