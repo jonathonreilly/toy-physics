@@ -19,6 +19,12 @@ cycle-bearing bipartite families:
 - growing
 - layered cycle
 
+**Measurement note:** on these irregular graph families, the gravity rows use
+the same BFS-depth shell-radial proxy as the cycle battery, not the exact
+lattice-coordinate force from the cubic canonical card. A later gravity-sign
+audit found the proxy sign agrees with a stronger edge-radial check on the
+retained admissible families.
+
 ## Battery Results
 
 | Row | Random Geometric (36) | Growing (48) | Layered Cycle (24) |
@@ -35,7 +41,9 @@ cycle-bearing bipartite families:
 
 ## What Holds
 
-- Force stays TOWARD on the main coupled trajectory for all three families.
+- Radial gravity stays TOWARD on the main coupled trajectory for all three
+  families. This is a shell-radial proxy, cross-checked in sign against a
+  stronger edge-radial diagnostic on the retained admissible families.
 - Linearity and additivity remain machine-clean.
 - Norm stays machine-clean.
 - Native gauge closure still lands on actual graph cycles.
@@ -60,3 +68,5 @@ The retained takeaway is narrower than the wave prototype:
 - graph-native causal memory is viable
 - the force battery stays intact on the main coupled evolution
 - sector robustness remains the next blocker
+- on irregular graphs, the current sign claim is about an audited radial proxy,
+  not an exact coordinate-force expectation

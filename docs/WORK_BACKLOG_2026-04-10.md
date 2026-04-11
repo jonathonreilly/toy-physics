@@ -43,8 +43,10 @@ This backlog is ordered by value to the main project, not by ease.
   `2/3` on random geometric and layered-cycle families.
 - A sibling family-closure attempt now exists in
   [`frontier_two_field_retarded_family_closure.py`](../scripts/frontier_two_field_retarded_family_closure.py):
-  it lifts the retarded family row to `3/3` on all admissible families, but is
-  not yet frozen as the canonical retarded harness.
+  it lifts the retarded family row to `3/3` on all admissible cycle-bearing
+  families and extends the same operating-point closure to the causal DAG
+  (`8/9`, gauge structurally N/A), but is not yet frozen as the canonical
+  retarded harness.
 - The first larger-graph break frontier is now frozen in
   [`frontier_staggered_cycle_break_frontier.py`](../scripts/frontier_staggered_cycle_break_frontier.py):
   the earliest clean failure is a gauge/current collapse on the random
@@ -53,6 +55,11 @@ This backlog is ordered by value to the main project, not by ease.
   [`frontier_staggered_cycle_break_slice.py`](../scripts/frontier_staggered_cycle_break_slice.py):
   a quality-matched local control stays retained through `extra=6`, while the
   frontier branch fails native gauge at `extra=5/6`.
+- The gravity-sign audit is now frozen in
+  [`GRAVITY_SIGN_AUDIT_2026-04-10.md`](../docs/GRAVITY_SIGN_AUDIT_2026-04-10.md):
+  exact lattice force remains the standard on the canonical card, while the
+  irregular-graph batteries are now explicitly treated as audited radial
+  proxies cross-checked against stronger edge-radial diagnostics.
 - The sparse layered DAG-like family remains a useful negative control; it
   still fails the gauge/current threshold.
 - The main blocker is no longer transport portability. It is self-consistent
@@ -109,6 +116,9 @@ This backlog is ordered by value to the main project, not by ease.
 ## P4 - Documentation Hygiene
 
 - Keep the force-based staggered card separate from the repo-wide centroid card.
+- Keep the exact lattice-force card separate from the irregular-graph
+  shell-radial proxy batteries, and do not describe the latter as exact
+  coordinate-force expectations.
 - Keep the portability probe separate from the canonical card.
 - Preserve the full-suite baseline as `29/38` in 1D and `28/38` in 3D.
 - Tighten the staggered card doc so the semantic differences table fully matches

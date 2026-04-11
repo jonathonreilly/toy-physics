@@ -6,6 +6,7 @@ Does the self-gravity phase transition have topology-dependent exponents?
 If β differs across graph families, that's a new universality class.
 
 Tests: random geometric, growing, layered cycle, causal DAG.
+This is a topology-dependent finite-size scout, not a universal critical-law proof.
 """
 
 from __future__ import annotations
@@ -124,7 +125,10 @@ def measure_transition(name, pos, col, adj):
     psi0=np.exp(-0.5*((pos[:,0]-center[0])**2+(pos[:,1]-center[1])**2)/1.15**2).astype(complex)
     psi0/=np.linalg.norm(psi0)
 
-    G_vals=np.concatenate([np.linspace(1,10,10),np.linspace(10,50,20),np.linspace(50,200,10)])
+    G_vals=np.array(
+        [1,2,3,4,5,6,7,8,9,10,12,14,16,18,20,24,28,32,36,40,45,50,60,80,100,125,150,175,200],
+        dtype=float,
+    )
     results=[]
     for G_self in G_vals:
         psi_s=psi0.copy(); psi_f=psi0.copy()
@@ -145,7 +149,7 @@ def measure_transition(name, pos, col, adj):
 
     # Fit
     mask=(G_arr>G_crit)&(G_arr<5*G_crit)
-    beta_fit=0.5; r2=0; A_fit=0
+    beta_fit=float("nan"); r2=float("nan"); A_fit=float("nan")
     if np.sum(mask)>=5:
         G_above=G_arr[mask]; order=np.clip(1-phi_arr[mask],1e-10,None)
         try:
@@ -153,7 +157,7 @@ def measure_transition(name, pos, col, adj):
             popt,_=curve_fit(pl,G_above,order,p0=[0.01,0.5],maxfev=5000)
             A_fit,beta_fit=popt
             pred=pl(G_above,*popt); ss_res=np.sum((order-pred)**2); ss_tot=np.sum((order-np.mean(order))**2)
-            r2=1-ss_res/ss_tot if ss_tot>0 else 0
+            r2=1-ss_res/ss_tot if ss_tot>0 else float("nan")
         except: pass
 
     phi_sat=phi_arr[-1]
@@ -168,20 +172,25 @@ if __name__=='__main__':
     print()
 
     families=[
-        build_rg(42,8),
-        build_rg(42,10),
-        build_growing(42,64),
-        build_layered(42,8,8),
-        build_dag(42,10,6),
-        build_dag(42,8,8),
+        ("random_geometric_s8",) + build_rg(42,8),
+        ("random_geometric_s10",) + build_rg(42,10),
+        ("growing_n64",) + build_growing(42,64),
+        ("layered_cycle_8x8",) + build_layered(42,8,8),
+        ("causal_dag_10x6",) + build_dag(42,10,6),
+        ("causal_dag_8x8",) + build_dag(42,8,8),
     ]
 
-    print(f"{'Family':<25s} {'n':>5s} {'G_crit':>8s} {'beta':>8s} {'R^2':>8s} {'phi_sat':>8s}")
+    print(f"{'Family':<25s} {'base':<18s} {'n':>5s} {'G_crit':>8s} {'beta':>8s} {'R^2':>8s} {'phi_sat':>8s} {'status':>12s}")
     print("-"*70)
-    for name,pos,col,adj in families:
+    for label,name,pos,col,adj in families:
         G_c,beta,r2,phi_s,n=measure_transition(name,pos,col,adj)
-        print(f"{name:<25s} {n:5d} {G_c:8.1f} {beta:8.4f} {r2:8.4f} {phi_s:8.4f}")
+        ok = np.isfinite(beta) and np.isfinite(r2) and r2 >= 0.75
+        beta_text = f"{beta:8.4f}" if np.isfinite(beta) else f"{'nan':>8s}"
+        r2_text = f"{r2:8.4f}" if np.isfinite(r2) else f"{'nan':>8s}"
+        status = "fit" if ok else "degenerate"
+        print(f"{label:<25s} {name:<18s} {n:5d} {G_c:8.1f} {beta_text} {r2_text} {phi_s:8.4f} {status:>12s}")
 
     print(f"\nTime: {time.time()-t0:.1f}s")
-    print("\nIf beta varies across families -> new universality class.")
-    print("If beta ~ 0.5 everywhere -> mean-field (expected for long-range Poisson).")
+    print("\nInterpretation:")
+    print("  - differing fitted beta across admissible families is evidence for topology-dependent finite-size onset behavior")
+    print("  - rows marked 'degenerate' should not be used as positive universality evidence without a stronger fit")

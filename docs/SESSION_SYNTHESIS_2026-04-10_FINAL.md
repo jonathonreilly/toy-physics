@@ -59,8 +59,13 @@ that passes a force-based 17-row card in 1D and 3D.
 
 11. **Universal gravity via force measurement**: The centroid shift oscillates with
     lattice size (periodic-lattice recurrence, not fixable by coarse-graining).
-    But the force F = -⟨dV/dz⟩ is TOWARD at ALL lattice sizes, ALL state families,
-    ALL dimensions. Force is the correct physical observable for gravity.
+    On the regular cubic card, the exact lattice force F = -⟨dV/dz⟩ is TOWARD at
+    all tested sizes and state families. On irregular graph families, the
+    retained batteries use audited radial shell-force proxies; stronger
+    edge-radial spot checks agree in sign on the retained admissible families.
+    Force is still the right measurement direction, but the irregular-graph
+    observable should be described as a radial proxy rather than an exact
+    coordinate-force expectation.
 
 12. **Force-based 17-card**: 17/17 on 1D n=61 (6/6 families, no qualifiers) and
     3D n=9 (6/6 families, no qualifiers). 3D n=11,13: 17/17 with qualifier
@@ -85,7 +90,9 @@ Observable: Force F = -⟨dV/dz⟩ for gravity direction/magnitude
   Not assumed — follows from nearest-neighbor hopping with alternating signs.
 - **Born rule**: Sorkin I₃ at machine zero (1e-15). From linearity.
 - **Universal gravity**: Force TOWARD for all 6 physical state families
-  (gauss, even, odd, anti, positive-E, negative-E). From V = m·Φ potential.
+  (gauss, even, odd, anti, positive-E, negative-E) on the exact lattice-force
+  card, and audited TOWARD radial sign on the retained admissible irregular
+  graph families. From V = m·Φ potential.
 - **Achromatic force**: F = -⟨dV/dz⟩ has no k-dependence (CV = 0.000000).
 - **Mass-independent acceleration**: a = F/m = -⟨dΦ/dz⟩ (CV = 0.000000).
 - **Gauge**: Persistent current J(A) with sin(A) modulation. Native to both
@@ -231,8 +238,9 @@ The full-suite baseline is now frozen:
 10. **Retarded family-closure sibling**: DONE as a bounded positive sibling
     result. `frontier_two_field_retarded_family_closure.py` lifts the family
     row to `3/3` on all three admissible families while preserving the rest of
-    the retarded battery, but it is still a sibling closure recipe rather than
-    the frozen canonical retarded harness.
+    the retarded battery, and now extends the same operating-point closure to a
+    causal DAG (`8/9`, gauge structurally N/A), but it is still a sibling
+    closure recipe rather than the frozen canonical retarded harness.
 
 11. **Causal DAG compatibility**: DONE as a retained probe.
     `frontier_staggered_dag.py` closes `6/6` on three layered DAG
@@ -248,6 +256,22 @@ The full-suite baseline is now frozen:
     is specific to dense shortcut geometry. A quality-matched local control at
     the same edge-count scale stays retained through `extra=6`, while the
     frontier branch collapses gauge/current at `extra=5/6`.
+14. **Gravity-sign audit**: DONE as a measurement correction.
+    The regular cubic card keeps the exact lattice-force claim. The irregular
+    graph batteries are now explicitly treated as shell-radial proxies, with
+    edge-radial spot checks confirming the retained TOWARD sign on admissible
+    families. The emergent-geometry growth lane is mixed under the stronger
+    audit and should no longer be described as cleanly AWAY.
+15. **Topology-dependent onset scout**: exploratory but real.
+    `frontier_critical_exponents.py` now gives family-dependent finite-size
+    onset fits across admissible graph representatives, with one degenerate DAG
+    configuration. This is not yet a universality proof, but it rules out a
+    simple “mean-field everywhere” story.
+16. **Emergent geometry growth audit**: exploratory mixed result.
+    Matter-coupled growth can push the coarse graph geometry toward
+    `d_eff≈2`, but the stronger follow-up probe finds no clean density-to-`Φ`
+    correlation and no retained gravity-compatible sign closure on the grown
+    graphs.
 
 ### Remaining work
 
@@ -267,6 +291,15 @@ The full-suite baseline is now frozen:
    the failure is tied to dense shortcut geometry rather than edge-count or
    degree scale. The next step is to map whether other shortcut topologies hit
    the same gauge/current boundary.
+5. **Irregular-graph force standardization**: the cycle and retarded batteries
+   now need one frozen graph-native force observable. The current shell-radial
+   proxy survives the retained sign audits, but future promotion work should
+   require agreement with an edge-radial measure rather than relying on shell
+   averages alone.
+6. **Emergent geometry hardening**: before treating growth as a Nature-level
+   path, require multi-seed robustness, a curvature/metric observable, and a
+   grown-graph gravity check that closes under both shell-probability and
+   edge-radial force measures.
 
 For the active backlog and agent brief, see:
 - `docs/WORK_BACKLOG_2026-04-10.md`
