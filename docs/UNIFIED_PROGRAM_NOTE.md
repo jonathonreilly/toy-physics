@@ -27,8 +27,8 @@ This is the main synthesis headline.
 
 Primary artifacts:
 
-- [`docs/MIRROR_CHOKEPOINT_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/MIRROR_CHOKEPOINT_NOTE.md)
-- [`docs/MIRROR_MUTUAL_INFORMATION_CHOKEPOINT_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/MIRROR_MUTUAL_INFORMATION_CHOKEPOINT_NOTE.md)
+- [`docs/MIRROR_CHOKEPOINT_NOTE.md`](MIRROR_CHOKEPOINT_NOTE.md)
+- [`docs/MIRROR_MUTUAL_INFORMATION_CHOKEPOINT_NOTE.md`](MIRROR_MUTUAL_INFORMATION_CHOKEPOINT_NOTE.md)
 
 ### 2. Clean validation card: exact 2D mirror
 
@@ -46,7 +46,7 @@ Strongest retained row:
 
 Primary artifact:
 
-- [`docs/MIRROR_2D_VALIDATION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/MIRROR_2D_VALIDATION_NOTE.md)
+- [`docs/MIRROR_2D_VALIDATION_NOTE.md`](MIRROR_2D_VALIDATION_NOTE.md)
 
 ### 3. Range / decoherence extension: `Z2 x Z2`
 
@@ -59,7 +59,7 @@ This is the strongest higher-symmetry extension.
 
 Primary artifact:
 
-- [`docs/HIGHER_SYMMETRY_JOINT_VALIDATION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/HIGHER_SYMMETRY_JOINT_VALIDATION_NOTE.md)
+- [`docs/HIGHER_SYMMETRY_JOINT_VALIDATION_NOTE.md`](HIGHER_SYMMETRY_JOINT_VALIDATION_NOTE.md)
 
 ### 4. Head-to-head result
 
@@ -70,7 +70,7 @@ The clean tradeoff is now frozen:
 
 Primary artifact:
 
-- [`docs/SYMMETRY_HEAD_TO_HEAD_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/SYMMETRY_HEAD_TO_HEAD_NOTE.md)
+- [`docs/SYMMETRY_HEAD_TO_HEAD_NOTE.md`](SYMMETRY_HEAD_TO_HEAD_NOTE.md)
 
 ## What is not retained as a core lane
 
@@ -84,8 +84,8 @@ This is the most important negative result from the recent audit pass.
 
 Primary artifacts:
 
-- [`docs/STRUCTURED_MIRROR_RECONCILIATION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/STRUCTURED_MIRROR_RECONCILIATION_NOTE.md)
-- [`docs/STRUCTURED_MIRROR_BORNSAFE_SCAN_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/STRUCTURED_MIRROR_BORNSAFE_SCAN_NOTE.md)
+- [`docs/STRUCTURED_MIRROR_RECONCILIATION_NOTE.md`](STRUCTURED_MIRROR_RECONCILIATION_NOTE.md)
+- [`docs/STRUCTURED_MIRROR_BORNSAFE_SCAN_NOTE.md`](STRUCTURED_MIRROR_BORNSAFE_SCAN_NOTE.md)
 
 So structured mirror is currently:
 
@@ -105,7 +105,7 @@ This is the most important recent generated-symmetry reopening.
 
 Primary artifact:
 
-- [`docs/STRUCTURED_CHOKEPOINT_BRIDGE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/STRUCTURED_CHOKEPOINT_BRIDGE_NOTE.md)
+- [`docs/STRUCTURED_CHOKEPOINT_BRIDGE_NOTE.md`](STRUCTURED_CHOKEPOINT_BRIDGE_NOTE.md)
 
 So the safe read is:
 
@@ -127,8 +127,8 @@ flagship.
 
 Primary artifacts:
 
-- [`docs/ACTION_POWER_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_NOTE.md)
-- [`docs/ACTION_POWER_3D_GRAVITY_SIGN_CLOSURE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ACTION_POWER_3D_GRAVITY_SIGN_CLOSURE_NOTE.md)
+- [`docs/ACTION_POWER_NOTE.md`](ACTION_POWER_NOTE.md)
+- [`docs/ACTION_POWER_3D_GRAVITY_SIGN_CLOSURE_NOTE.md`](ACTION_POWER_3D_GRAVITY_SIGN_CLOSURE_NOTE.md)
 
 ### Valley-linear action fork
 
@@ -156,8 +156,8 @@ Current safe read:
 
 Primary artifact:
 
-- [`docs/VALLEY_LINEAR_ACTION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_ACTION_NOTE.md)
-- [`docs/VALLEY_LINEAR_WIDE_TAIL_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/VALLEY_LINEAR_WIDE_TAIL_NOTE.md)
+- [`docs/VALLEY_LINEAR_ACTION_NOTE.md`](VALLEY_LINEAR_ACTION_NOTE.md)
+- [`docs/VALLEY_LINEAR_WIDE_TAIL_NOTE.md`](VALLEY_LINEAR_WIDE_TAIL_NOTE.md)
 
 ### Dimension-dependent kernel branch
 
@@ -178,9 +178,9 @@ Current safe read:
 
 Useful artifacts:
 
-- [`docs/CONTINUUM_CONVERGENCE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/CONTINUUM_CONVERGENCE_NOTE.md)
-- [`docs/LATTICE_3D_L2_TAIL_STATS_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_3D_L2_TAIL_STATS_NOTE.md)
-- [`docs/LATTICE_KERNEL_TRANSFER_NORM_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_KERNEL_TRANSFER_NORM_NOTE.md)
+- [`docs/CONTINUUM_CONVERGENCE_NOTE.md`](CONTINUUM_CONVERGENCE_NOTE.md)
+- [`docs/LATTICE_3D_L2_TAIL_STATS_NOTE.md`](LATTICE_3D_L2_TAIL_STATS_NOTE.md)
+- [`docs/LATTICE_KERNEL_TRANSFER_NORM_NOTE.md`](LATTICE_KERNEL_TRANSFER_NORM_NOTE.md)
 
 ### Engineered non-symmetry lanes
 
@@ -251,8 +251,8 @@ So the project should treat distance law on the current flagship family as:
 
 Useful references:
 
-- [`docs/B_INDEPENDENCE_MECHANISM_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/B_INDEPENDENCE_MECHANISM_NOTE.md)
-- [`docs/MIRROR_2D_GRAVITY_LAW_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/MIRROR_2D_GRAVITY_LAW_NOTE.md)
+- [`docs/B_INDEPENDENCE_MECHANISM_NOTE.md`](B_INDEPENDENCE_MECHANISM_NOTE.md)
+- [`docs/MIRROR_2D_GRAVITY_LAW_NOTE.md`](MIRROR_2D_GRAVITY_LAW_NOTE.md)
 
 ### Ordered-lattice reopening
 
@@ -261,16 +261,16 @@ Recent lattice work changes the roadmap without changing the flagship story.
 - the committed lattice-mirror script already shows a real
   **distance-dependent** effect with sign change and decaying far-field
   magnitude on a regular ordered graph:
-  [`scripts/lattice_mirror_distance.py`](/Users/jonreilly/Projects/Physics/scripts/lattice_mirror_distance.py)
+  [`scripts/lattice_mirror_distance.py`](../scripts/lattice_mirror_distance.py)
 - this supports the beam-confinement / ordered-transport explanation for why
   the random-connected symmetry lanes fail to retain a clean distance law
 
 That stronger no-barrier lattice branch is now frozen in:
 
-- [`docs/LATTICE_DISTANCE_LAW_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_DISTANCE_LAW_NOTE.md)
-- [`docs/LATTICE_FAMILY_VALIDATION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_FAMILY_VALIDATION_NOTE.md)
-- [`docs/LATTICE_SYMMETRY_UNIFICATION_DECISION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_SYMMETRY_UNIFICATION_DECISION_NOTE.md)
-- [`docs/LATTICE_FIELD_STRENGTH_UNIFICATION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_FIELD_STRENGTH_UNIFICATION_NOTE.md)
+- [`docs/LATTICE_DISTANCE_LAW_NOTE.md`](LATTICE_DISTANCE_LAW_NOTE.md)
+- [`docs/LATTICE_FAMILY_VALIDATION_NOTE.md`](LATTICE_FAMILY_VALIDATION_NOTE.md)
+- [`docs/LATTICE_SYMMETRY_UNIFICATION_DECISION_NOTE.md`](LATTICE_SYMMETRY_UNIFICATION_DECISION_NOTE.md)
+- [`docs/LATTICE_FIELD_STRENGTH_UNIFICATION_NOTE.md`](LATTICE_FIELD_STRENGTH_UNIFICATION_NOTE.md)
 
 The retained ordered-lattice read at the original standard-strength slice is:
 
@@ -365,11 +365,11 @@ The refinement reconciliation tightens that read further:
 
 Primary artifact for that correction:
 
-- [`docs/LATTICE_3D_DENSE_REFINEMENT_RECONCILIATION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_3D_DENSE_REFINEMENT_RECONCILIATION_NOTE.md)
+- [`docs/LATTICE_3D_DENSE_REFINEMENT_RECONCILIATION_NOTE.md`](LATTICE_3D_DENSE_REFINEMENT_RECONCILIATION_NOTE.md)
 
 Primary artifact:
 
-- [`docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md)
+- [`docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md`](LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md)
 
 ### Tapered 3D refinement branch
 
@@ -424,7 +424,7 @@ The retained program is:
 ## Highest-value next wins
 
 For short-horizon worker execution, use
-[`docs/OVERNIGHT_WORK_BACKLOG.md`](/Users/jonreilly/Projects/Physics/docs/OVERNIGHT_WORK_BACKLOG.md)
+[`docs/OVERNIGHT_WORK_BACKLOG.md`](OVERNIGHT_WORK_BACKLOG.md)
 as the concrete task queue. The priorities below remain the canonical
 program-level roadmap.
 

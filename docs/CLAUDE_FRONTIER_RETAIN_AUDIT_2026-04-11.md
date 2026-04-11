@@ -36,7 +36,7 @@ Why:
 Keep:
 
 - [WILSON_MU2_DISTANCE_SWEEP_NOTE_2026-04-11.md](WILSON_MU2_DISTANCE_SWEEP_NOTE_2026-04-11.md)
-- [scripts/frontier_wilson_mu2_sweep.py](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_wilson_mu2_sweep.py)
+- [scripts/frontier_wilson_mu2_distance_sweep.py](../scripts/frontier_wilson_mu2_distance_sweep.py)
 
 Why:
 
@@ -73,7 +73,7 @@ Why:
 Keep:
 
 - [MEMORY_MU2_GEOMETRY_SWEEP_NOTE_2026-04-11.md](MEMORY_MU2_GEOMETRY_SWEEP_NOTE_2026-04-11.md)
-- [scripts/frontier_memory_mu2_size_sweep.py](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_memory_mu2_size_sweep.py)
+- [scripts/frontier_memory_mu2_size_sweep.py](../scripts/frontier_memory_mu2_size_sweep.py)
 
 Why:
 
@@ -112,9 +112,9 @@ Keep:
 - [STAGGERED_NEWTON_REPRODUCTION_NOTE_2026-04-11.md](STAGGERED_NEWTON_REPRODUCTION_NOTE_2026-04-11.md)
 - [STAGGERED_NEWTON_BLOCKING_SENSITIVITY_NOTE_2026-04-11.md](STAGGERED_NEWTON_BLOCKING_SENSITIVITY_NOTE_2026-04-11.md)
 - [STAGGERED_3D_SELF_GRAVITY_SIGN_NOTE_2026-04-11.md](STAGGERED_3D_SELF_GRAVITY_SIGN_NOTE_2026-04-11.md)
-- [scripts/frontier_staggered_newton_reproduction.py](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_staggered_newton_reproduction.py)
-- [scripts/frontier_staggered_newton_blocking_sensitivity.py](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_staggered_newton_blocking_sensitivity.py)
-- [scripts/frontier_staggered_3d_self_gravity_sign.py](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_staggered_3d_self_gravity_sign.py)
+- [scripts/frontier_staggered_newton_reproduction.py](../scripts/frontier_staggered_newton_reproduction.py)
+- [scripts/frontier_staggered_newton_blocking_sensitivity.py](../scripts/frontier_staggered_newton_blocking_sensitivity.py)
+- [scripts/frontier_staggered_3d_self_gravity_sign.py](../scripts/frontier_staggered_3d_self_gravity_sign.py)
 
 Why:
 
@@ -140,7 +140,7 @@ Retention boundary:
 Keep:
 
 - [STAGGERED_SELF_CONSISTENT_TWO_BODY_NOTE_2026-04-11.md](STAGGERED_SELF_CONSISTENT_TWO_BODY_NOTE_2026-04-11.md)
-- [scripts/frontier_staggered_self_consistent_two_body.py](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_staggered_self_consistent_two_body.py)
+- [scripts/frontier_staggered_self_consistent_two_body.py](../scripts/frontier_staggered_self_consistent_two_body.py)
 
 Why:
 
@@ -163,9 +163,9 @@ Keep:
 - [PERIODIC_2D_WRAPAROUND_FIX_NOTE_2026-04-11.md](PERIODIC_2D_WRAPAROUND_FIX_NOTE_2026-04-11.md)
 - [SELF_CONSISTENCY_STRUCTURED_NULL_NOTE_2026-04-11.md](SELF_CONSISTENCY_STRUCTURED_NULL_NOTE_2026-04-11.md)
 - [EIGENVALUE_ANDERSON_PHASE_NOTE_2026-04-11.md](EIGENVALUE_ANDERSON_PHASE_NOTE_2026-04-11.md)
-- [scripts/frontier_self_consistency_test.py](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_self_consistency_test.py)
-- [scripts/frontier_eigenvalue_stats_and_anderson_phase.py](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_eigenvalue_stats_and_anderson_phase.py)
-- [scripts/frontier_born_rule_alpha.py](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_born_rule_alpha.py)
+- [scripts/frontier_self_consistency_test.py](../scripts/frontier_self_consistency_test.py)
+- [scripts/frontier_eigenvalue_stats_and_anderson_phase.py](../scripts/frontier_eigenvalue_stats_and_anderson_phase.py)
+- [scripts/frontier_born_rule_alpha.py](../scripts/frontier_born_rule_alpha.py)
 
 Why:
 
@@ -181,7 +181,7 @@ Why:
 Keep:
 
 - [ANDERSON_PHASE_MU2_0001_NOTE_2026-04-11.md](ANDERSON_PHASE_MU2_0001_NOTE_2026-04-11.md)
-- [scripts/frontier_anderson_phase_unscreened_periodic.py](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_anderson_phase_unscreened_periodic.py)
+- [scripts/frontier_anderson_phase_unscreened_periodic.py](../scripts/frontier_anderson_phase_unscreened_periodic.py)
 
 Why:
 
@@ -195,8 +195,8 @@ Why:
 Keep:
 
 - [OLLIVIER_EINSTEIN_PROXY_NOTE_2026-04-11.md](OLLIVIER_EINSTEIN_PROXY_NOTE_2026-04-11.md)
-- [scripts/frontier_ollivier_einstein.py](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_ollivier_einstein.py)
-- [scripts/frontier_ollivier_control.py](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_ollivier_control.py)
+- [scripts/frontier_ollivier_einstein.py](../scripts/frontier_ollivier_einstein.py)
+- [scripts/frontier_ollivier_control.py](../scripts/frontier_ollivier_control.py)
 
 Why:
 

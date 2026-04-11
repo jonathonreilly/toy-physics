@@ -79,12 +79,12 @@ If you want the current exact-vs-irregular distinction:
 
 If you need the exact retained graph-native stack:
 
-1. [`scripts/frontier_staggered_cycle_battery.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_staggered_cycle_battery.py)
-2. [`scripts/frontier_staggered_cycle_battery_scaled.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_staggered_cycle_battery_scaled.py)
-3. [`scripts/frontier_staggered_self_gravity.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_staggered_self_gravity.py)
-4. [`scripts/frontier_two_field_wave.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_two_field_wave.py)
-5. [`scripts/frontier_two_field_retarded_family_closure.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_two_field_retarded_family_closure.py)
-6. [`scripts/frontier_staggered_dag.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_staggered_dag.py)
+1. [`scripts/frontier_staggered_cycle_battery.py`](../scripts/frontier_staggered_cycle_battery.py)
+2. [`scripts/frontier_staggered_cycle_battery_scaled.py`](../scripts/frontier_staggered_cycle_battery_scaled.py)
+3. [`scripts/frontier_staggered_self_gravity.py`](../scripts/frontier_staggered_self_gravity.py)
+4. [`scripts/frontier_two_field_wave.py`](../scripts/frontier_two_field_wave.py)
+5. [`scripts/frontier_two_field_retarded_family_closure.py`](../scripts/frontier_two_field_retarded_family_closure.py)
+6. [`scripts/frontier_staggered_dag.py`](../scripts/frontier_staggered_dag.py)
 
 If you want to understand where historical lanes sit:
 

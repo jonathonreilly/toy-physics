@@ -25,20 +25,20 @@ things on:
 Use the smallest retained runner that actually carries the claim:
 
 - exact cubic directional claim:
-  - [`scripts/frontier_staggered_17card.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_staggered_17card.py)
+  - [`scripts/frontier_staggered_17card.py`](../../scripts/frontier_staggered_17card.py)
 - irregular structural interaction claim:
-  - [`scripts/frontier_staggered_cycle_battery.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_staggered_cycle_battery.py)
+  - [`scripts/frontier_staggered_cycle_battery.py`](../../scripts/frontier_staggered_cycle_battery.py)
 - scaled irregular claim:
-  - [`scripts/frontier_staggered_cycle_battery_scaled.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_staggered_cycle_battery_scaled.py)
+  - [`scripts/frontier_staggered_cycle_battery_scaled.py`](../../scripts/frontier_staggered_cycle_battery_scaled.py)
 - endogenous self-gravity:
-  - [`scripts/frontier_staggered_self_gravity.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_staggered_self_gravity.py)
+  - [`scripts/frontier_staggered_self_gravity.py`](../../scripts/frontier_staggered_self_gravity.py)
 - two-field retarded sibling:
-  - [`scripts/frontier_two_field_retarded_family_closure.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_two_field_retarded_family_closure.py)
+  - [`scripts/frontier_two_field_retarded_family_closure.py`](../../scripts/frontier_two_field_retarded_family_closure.py)
 - causal DAG compatibility:
-  - [`scripts/frontier_staggered_dag.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_staggered_dag.py)
+  - [`scripts/frontier_staggered_dag.py`](../../scripts/frontier_staggered_dag.py)
 - emergent geometry:
-  - [`scripts/frontier_emergent_geometry_v2.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_emergent_geometry_v2.py)
-  - [`scripts/frontier_emergent_geometry_g_sweep.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_emergent_geometry_g_sweep.py)
+  - [`scripts/frontier_emergent_geometry_v2.py`](../../scripts/frontier_emergent_geometry_v2.py)
+  - [`scripts/frontier_emergent_geometry_g_sweep.py`](../../scripts/frontier_emergent_geometry_g_sweep.py)
 
 ## 3. If The Bug Touches Gravity Direction
 
@@ -48,8 +48,8 @@ You must split exact-lattice from irregular-graph immediately.
 
 Rerun:
 
-- [`scripts/frontier_staggered_17card.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_staggered_17card.py)
-- [`scripts/frontier_two_sign_parity.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_two_sign_parity.py)
+- [`scripts/frontier_staggered_17card.py`](../../scripts/frontier_staggered_17card.py)
+- [`scripts/frontier_two_sign_parity.py`](../../scripts/frontier_two_sign_parity.py)
 
 Interpretation:
 
@@ -60,8 +60,8 @@ Interpretation:
 
 Rerun:
 
-- [`scripts/frontier_irregular_directional_observable.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_irregular_directional_observable.py)
-- [`scripts/frontier_two_sign_comparison.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_two_sign_comparison.py)
+- [`scripts/frontier_irregular_directional_observable.py`](../../scripts/frontier_irregular_directional_observable.py)
+- [`scripts/frontier_two_sign_comparison.py`](../../scripts/frontier_two_sign_comparison.py)
 - whichever retained irregular battery is implicated
 
 Interpretation:
@@ -73,18 +73,18 @@ Interpretation:
 
 Rerun in this order:
 
-1. [`scripts/frontier_staggered_self_gravity.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_staggered_self_gravity.py)
-2. [`scripts/frontier_two_field_wave.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_two_field_wave.py)
-3. [`scripts/frontier_two_field_retarded_family_closure.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_two_field_retarded_family_closure.py)
-4. [`scripts/frontier_staggered_backreaction_green_closure.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_staggered_backreaction_green_closure.py) if the bug touches scale closure specifically
+1. [`scripts/frontier_staggered_self_gravity.py`](../../scripts/frontier_staggered_self_gravity.py)
+2. [`scripts/frontier_two_field_wave.py`](../../scripts/frontier_two_field_wave.py)
+3. [`scripts/frontier_two_field_retarded_family_closure.py`](../../scripts/frontier_two_field_retarded_family_closure.py)
+4. [`scripts/frontier_staggered_backreaction_green_closure.py`](../../scripts/frontier_staggered_backreaction_green_closure.py) if the bug touches scale closure specifically
 
 ## 5. If The Bug Touches Growth / Geometry
 
 Rerun:
 
-- [`scripts/frontier_emergent_geometry_v2.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_emergent_geometry_v2.py)
-- [`scripts/frontier_emergent_geometry_g_sweep.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_emergent_geometry_g_sweep.py)
-- [`scripts/frontier_emergent_geometry_multisize.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_emergent_geometry_multisize.py) if size dependence is implicated
+- [`scripts/frontier_emergent_geometry_v2.py`](../../scripts/frontier_emergent_geometry_v2.py)
+- [`scripts/frontier_emergent_geometry_g_sweep.py`](../../scripts/frontier_emergent_geometry_g_sweep.py)
+- [`scripts/frontier_emergent_geometry_multisize.py`](../../scripts/frontier_emergent_geometry_multisize.py) if size dependence is implicated
 
 ## 6. Environment
 

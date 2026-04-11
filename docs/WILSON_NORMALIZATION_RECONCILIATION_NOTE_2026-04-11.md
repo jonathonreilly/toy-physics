@@ -24,10 +24,10 @@ The late Wilson batch is internally coherent **within one shared convention**:
 
 Within that convention, the following are all consistent with each other:
 
-- [`scripts/frontier_newton_systematic.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_newton_systematic.py)
-- [`scripts/frontier_test_mass_limit.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_test_mass_limit.py)
-- [`scripts/frontier_perturbative_mass_law.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_perturbative_mass_law.py)
-- [`scripts/frontier_continuum_limit.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_continuum_limit.py)
+- [`scripts/frontier_newton_systematic.py`](../scripts/frontier_newton_systematic.py)
+- [`scripts/frontier_test_mass_limit.py`](../scripts/frontier_test_mass_limit.py)
+- [`scripts/frontier_perturbative_mass_law.py`](../scripts/frontier_perturbative_mass_law.py)
+- [`scripts/frontier_continuum_limit.py`](../scripts/frontier_continuum_limit.py)
 
 The safe conclusion is:
 

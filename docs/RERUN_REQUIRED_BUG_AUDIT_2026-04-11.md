@@ -11,10 +11,18 @@ Use this together with:
 
 ## A. Fix And Rerun On The Same Lane
 
-These lanes are still scientifically meaningful, but the current runner surface
-is buggy enough that the affected claim needs a corrected rerun.
+This section mixes two classes of items:
+
+- active rerun requirements
+- bug patterns that are already corrected on retained `main` surfaces but still
+  matter when older runner families are reopened
+
+Do not read every entry below as an unresolved blocker on current `main`.
 
 ### 1. Periodic 2D staggered wraparound-weight bug
+
+**Status on `main`: corrected on the retained trio; still a live bug pattern
+for nearby periodic-2D surfaces**
 
 Bug class:
 
@@ -25,25 +33,32 @@ Bug class:
 
 Validated affected runners:
 
-- [`scripts/frontier_born_rule_alpha.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_born_rule_alpha.py)
-- [`scripts/frontier_self_consistency_test.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_self_consistency_test.py)
-- [`scripts/frontier_eigenvalue_stats_and_anderson_phase.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_eigenvalue_stats_and_anderson_phase.py)
+- [`scripts/frontier_born_rule_alpha.py`](../scripts/frontier_born_rule_alpha.py)
+- [`scripts/frontier_self_consistency_test.py`](../scripts/frontier_self_consistency_test.py)
+- [`scripts/frontier_eigenvalue_stats_and_anderson_phase.py`](../scripts/frontier_eigenvalue_stats_and_anderson_phase.py)
 
 Likely same bug pattern also touches nearby periodic 2D frontier probes built
 with the same helper structure. Before promoting any periodic 2D result from
 the 2026-04-11 frontier batch, check whether it uses this pattern.
 
-Required reruns after fix:
+Corrected retained reruns now exist on `main` for:
 
-- self-consistency comparisons
-- Anderson / eigenvalue phase map
-- any periodic 2D derived follow-on note that depends on those surfaces
+- [`scripts/frontier_self_consistency_test.py`](../scripts/frontier_self_consistency_test.py)
+- [`scripts/frontier_eigenvalue_stats_and_anderson_phase.py`](../scripts/frontier_eigenvalue_stats_and_anderson_phase.py)
+- [`scripts/frontier_born_rule_alpha.py`](../scripts/frontier_born_rule_alpha.py)
+
+Revisit rule:
+
+- any *other* periodic 2D result outside those corrected retained notes should
+  still be rerun or code-audited before reuse
 
 ### 2. Self-consistency random controls are not moment-matched
 
+**Status on `main`: corrected on the retained structured-null rerun**
+
 Affected runner:
 
-- [`scripts/frontier_self_consistency_test.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_self_consistency_test.py)
+- [`scripts/frontier_self_consistency_test.py`](../scripts/frontier_self_consistency_test.py)
 
 Bug:
 
@@ -51,16 +66,21 @@ Bug:
 - this changes the effective mean and variance
 - sign/correlation comparisons are confounded
 
-Required rerun:
+Corrected retained surface:
 
-- rerun the full self-consistency comparison after replacing the random controls
-  with true moment-matched nulls
+- [`scripts/frontier_self_consistency_test.py`](../scripts/frontier_self_consistency_test.py)
+- [`docs/SELF_CONSISTENCY_STRUCTURED_NULL_NOTE_2026-04-11.md`](SELF_CONSISTENCY_STRUCTURED_NULL_NOTE_2026-04-11.md)
+
+Revisit rule:
+
+- do not reuse older iid-random-control summaries; use the structured-null note
+  and corrected runner surface instead
 
 ### 3. Two-field wave family robustness is not independent
 
 Affected runner:
 
-- [`scripts/frontier_two_field_wave.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_two_field_wave.py)
+- [`scripts/frontier_two_field_wave.py`](../scripts/frontier_two_field_wave.py)
 
 Bug:
 
@@ -74,7 +94,7 @@ Required rerun:
 
 Affected runner:
 
-- [`scripts/frontier_two_field_retarded_probe.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_two_field_retarded_probe.py)
+- [`scripts/frontier_two_field_retarded_probe.py`](../scripts/frontier_two_field_retarded_probe.py)
 
 Bug:
 
@@ -89,7 +109,7 @@ Required rerun:
 
 Affected runner:
 
-- [`scripts/frontier_gravitational_decoherence_rate.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_gravitational_decoherence_rate.py)
+- [`scripts/frontier_gravitational_decoherence_rate.py`](../scripts/frontier_gravitational_decoherence_rate.py)
 
 Bug:
 
@@ -104,7 +124,7 @@ Required rerun:
 
 Affected runner:
 
-- [`scripts/frontier_geometry_superposition.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_geometry_superposition.py)
+- [`scripts/frontier_geometry_superposition.py`](../scripts/frontier_geometry_superposition.py)
 
 Bug:
 
@@ -125,7 +145,8 @@ claim does not match the computed object.
 
 Affected runner:
 
-- [`scripts/frontier_two_body_mutual_attraction.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_two_body_mutual_attraction.py)
+- historical frontier-only runner `frontier_two_body_mutual_attraction.py`
+  (not retained on `main`)
 
 Reason:
 
@@ -134,13 +155,17 @@ Reason:
 Action:
 
 - do not rerun this for evidence
-- use the two-orbital / Wilson harness family instead
+- use the retained open-Wilson family instead:
+  - [`scripts/frontier_wilson_two_body_open.py`](../scripts/frontier_wilson_two_body_open.py)
+  - [`scripts/frontier_wilson_two_body_laws.py`](../scripts/frontier_wilson_two_body_laws.py)
+  - [`scripts/frontier_test_mass_limit.py`](../scripts/frontier_test_mass_limit.py)
 
 ### 2. Periodic Wilson “Newton law” runner
 
 Affected runner:
 
-- [`scripts/frontier_wilson_newton_law.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_wilson_newton_law.py)
+- historical frontier-only runner `frontier_wilson_newton_law.py`
+  (not retained on `main`)
 
 Reasons:
 
@@ -151,14 +176,18 @@ Action:
 
 - do not rerun as a Newton test
 - if the law lane continues, rerun only on the open Wilson surface with a
-  physically meaningful source/inertial parameterization
+  physically meaningful source/inertial parameterization:
+  - [`scripts/frontier_wilson_mu2_distance_sweep.py`](../scripts/frontier_wilson_mu2_distance_sweep.py)
+  - [`scripts/frontier_test_mass_limit.py`](../scripts/frontier_test_mass_limit.py)
+  - [`scripts/frontier_continuum_limit.py`](../scripts/frontier_continuum_limit.py)
 
 ### 3. Wilson law-fit scripts use post-selected survivor rows
 
 Affected runners:
 
-- [`scripts/frontier_wilson_two_body_laws.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_wilson_two_body_laws.py)
-- [`scripts/frontier_wilson_partner_source_crossover.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_wilson_partner_source_crossover.py)
+- [`scripts/frontier_wilson_two_body_laws.py`](../scripts/frontier_wilson_two_body_laws.py)
+- historical frontier-only runner `frontier_wilson_partner_source_crossover.py`
+  (not retained on `main`)
 
 Reason:
 
@@ -172,7 +201,7 @@ Action:
 
 Affected runner:
 
-- [`scripts/frontier_born_rule_alpha.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_born_rule_alpha.py)
+- [`scripts/frontier_born_rule_alpha.py`](../scripts/frontier_born_rule_alpha.py)
 
 Reasons:
 
@@ -188,9 +217,9 @@ Action:
 
 Affected runners:
 
-- [`scripts/frontier_bmv_entanglement.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_bmv_entanglement.py)
-- [`scripts/frontier_bmv_threebody.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_bmv_threebody.py)
-- [`scripts/frontier_branch_entanglement_robustness.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_branch_entanglement_robustness.py)
+- [`scripts/frontier_bmv_entanglement.py`](../scripts/frontier_bmv_entanglement.py)
+- [`scripts/frontier_bmv_threebody.py`](../scripts/frontier_bmv_threebody.py)
+- [`scripts/frontier_branch_entanglement_robustness.py`](../scripts/frontier_branch_entanglement_robustness.py)
 
 Reasons:
 
@@ -206,7 +235,7 @@ Action:
 
 Affected runner:
 
-- [`scripts/frontier_entanglement_area_law.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_entanglement_area_law.py)
+- [`scripts/frontier_entanglement_area_law.py`](../scripts/frontier_entanglement_area_law.py)
 
 Reason:
 
@@ -220,7 +249,7 @@ Action:
 
 Affected runner:
 
-- [`scripts/frontier_bekenstein_hawking.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_bekenstein_hawking.py)
+- [`scripts/frontier_bekenstein_hawking.py`](../scripts/frontier_bekenstein_hawking.py)
 
 Reason:
 
@@ -234,8 +263,8 @@ Action:
 
 Affected runners:
 
-- [`scripts/frontier_axioms_16card.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_axioms_16card.py)
-- [`scripts/frontier_staggered_potential_16card.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_staggered_potential_16card.py)
+- [`scripts/frontier_axioms_16card.py`](../scripts/frontier_axioms_16card.py)
+- [`scripts/frontier_staggered_potential_16card.py`](../scripts/frontier_staggered_potential_16card.py)
 
 Reasons:
 
@@ -251,7 +280,7 @@ Action:
 
 Affected runner:
 
-- [`scripts/frontier_staggered_dag.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_staggered_dag.py)
+- [`scripts/frontier_staggered_dag.py`](../scripts/frontier_staggered_dag.py)
 
 Reason:
 
@@ -267,11 +296,11 @@ These do not require new numerical work right now; they need narrowed framing.
 
 - [`docs/SESSION_SYNTHESIS_2026-04-11.md`](SESSION_SYNTHESIS_2026-04-11.md)
 - [`docs/FINAL_STATE_2026-04-11.md`](FINAL_STATE_2026-04-11.md)
-- [`scripts/frontier_boundary_law_robustness.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_boundary_law_robustness.py) header/banner
+- [`scripts/frontier_boundary_law_robustness.py`](../scripts/frontier_boundary_law_robustness.py) header/banner
 
 ## D. Verified False Positive
 
 Discarded after direct check:
 
-- the claim that [`scripts/frontier_wilson_two_body_open.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_wilson_two_body_open.py)
+- the claim that [`scripts/frontier_wilson_two_body_open.py`](../scripts/frontier_wilson_two_body_open.py)
   still used a torus-style circular center of mass. It does not.
