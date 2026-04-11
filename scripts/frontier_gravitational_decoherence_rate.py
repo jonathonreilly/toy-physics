@@ -1,18 +1,26 @@
 #!/usr/bin/env python3
-"""Gravitational decoherence rate on a 1D staggered lattice.
+"""Gravitational decoherence rate on a 2D staggered lattice.
 
-Computes the decoherence rate for a mass in spatial superposition and
-compares to the Diosi-Penrose prediction: Gamma_DP ~ G * m^2 / d.
+Computes the decoherence rate for a mass in spatial superposition of two
+locations and compares to the Diosi-Penrose prediction:
+    Gamma_DP ~ G * m^2 / d
 
 Protocol:
-  1. On a 1D periodic staggered lattice (n=61), prepare a superposition
-     of two Gaussian wavepackets separated by distance d.
-  2. Evolve each branch independently under its own self-gravity
-     (screened Poisson for phi, parity-coupled Hamiltonian).
-  3. Evolve the superposition under its combined self-gravity.
-  4. Measure decoherence via overlap loss between the coherent
-     superposition evolution and the independent-branch sum.
-  5. Extract Gamma = -log(overlap) / T and compare to Gamma_DP ~ G/d.
+  1. On a 2D periodic lattice (side=10), prepare superposition:
+       |psi> = (|L> + |R>) / sqrt(2)
+     where |L> is Gaussian at (3, side/2), |R> at (7, side/2).
+
+  2. Evolve under self-gravity with parity coupling:
+       H_diag = (MASS + Phi) * epsilon(x),
+       Phi from screened Poisson (L + mu^2) Phi = G * |psi|^2
+
+  3. At each step, compute coherence:
+       C(t) = |<psi_L|psi(t)> * <psi(t)|psi_R>|
+
+  4. Fit decoherence rate: C(t) = C(0) * exp(-Gamma * t)
+
+  5. Sweep G, separation d, and MASS. Compare to Diosi-Penrose:
+       Gamma_DP ~ G * MASS^2 / separation
 
 PStack experiment: gravitational-decoherence-rate
 """
@@ -25,65 +33,102 @@ from scipy.sparse.linalg import spsolve
 
 
 # ---------------------------------------------------------------------------
-# Physical parameters
+# Default physical parameters
 # ---------------------------------------------------------------------------
-N = 61                # lattice sites (odd for clean center)
-MASS = 0.30           # bare mass
-MU2 = 0.22            # screening mass^2 for Poisson
-DT = 0.12             # time step
-N_STEPS = 50          # evolution steps
-SIGMA = 3.0           # Gaussian width (lattice units)
-
-SEPARATIONS = [2, 4, 6, 8, 12, 16]
-COUPLINGS = [1.0, 5.0, 10.0, 20.0, 50.0]
+SIDE = 10
+MASS = 0.30
+MU2 = 0.22
+DT = 0.12
+N_STEPS = 60
+SIGMA = 1.5  # Gaussian width in lattice units
 
 
 # ---------------------------------------------------------------------------
-# Lattice operators
+# 2D periodic lattice helpers
 # ---------------------------------------------------------------------------
-def make_laplacian(n: int) -> sparse.csc_matrix:
-    """1D periodic Laplacian (second-difference)."""
-    diag = -2.0 * np.ones(n)
-    off = np.ones(n - 1)
-    L = sparse.diags([off, diag, off], [-1, 0, 1], shape=(n, n), format="lil")
-    L[0, n - 1] = 1.0
-    L[n - 1, 0] = 1.0
-    return L.tocsc()
+def build_lattice(side: int):
+    """Build 2D periodic lattice: positions, colors, adjacency.
+
+    Returns:
+        pos: list of (x, y) tuples
+        col: array of parity colors (x+y) % 2
+        adj: dict mapping site index -> list of neighbor indices
+        n: total number of sites
+    """
+    pos = [(x, y) for x in range(side) for y in range(side)]
+    n = len(pos)
+    col = np.array([(x + y) % 2 for x, y in pos], dtype=float)
+
+    idx = {}
+    for i, (x, y) in enumerate(pos):
+        idx[(x, y)] = i
+
+    adj = {}
+    for i, (x, y) in enumerate(pos):
+        neighbors = []
+        for dx, dy in [(1, 0), (-1, 0), (0, 1), (0, -1)]:
+            nx, ny = (x + dx) % side, (y + dy) % side
+            neighbors.append(idx[(nx, ny)])
+        adj[i] = neighbors
+
+    return pos, col, adj, n
 
 
-def solve_phi(rho: np.ndarray, L: sparse.csc_matrix, mu2: float, G: float) -> np.ndarray:
-    """Screened Poisson: (L + mu^2) phi = G * rho."""
-    A = (L + mu2 * sparse.eye(N)).tocsc()
+def make_laplacian_2d(adj: dict, n: int) -> sparse.csc_matrix:
+    """Graph Laplacian for periodic 2D lattice."""
+    rows, cols, vals = [], [], []
+    for i in range(n):
+        nbrs = adj[i]
+        rows.append(i)
+        cols.append(i)
+        vals.append(-float(len(nbrs)))
+        for j in nbrs:
+            rows.append(i)
+            cols.append(j)
+            vals.append(1.0)
+    return sparse.csc_matrix((vals, (rows, cols)), shape=(n, n))
+
+
+def solve_phi(rho: np.ndarray, L: sparse.csc_matrix, mu2: float,
+              G: float, n: int) -> np.ndarray:
+    """Screened Poisson: (L + mu^2 I) phi = G * rho."""
+    A = (L + mu2 * sparse.eye(n)).tocsc()
     return spsolve(A, G * rho)
 
 
-def make_hamiltonian(phi: np.ndarray) -> sparse.csc_matrix:
-    """1D staggered Hamiltonian with parity coupling.
+def build_hamiltonian(pos, col, adj, n, phi, mass):
+    """Staggered 2D Hamiltonian with parity coupling.
 
-    H[x,x] = (MASS + phi[x]) * epsilon(x)   where epsilon(x) = (-1)^x
-    H[x, x+1] = -i/2,  H[x, x-1] = +i/2    (periodic)
+    H_diag = (mass + phi) * epsilon,  epsilon = (-1)^(x+y)
+    H_hop  = -i/2 forward, +i/2 backward (nearest-neighbor)
     """
-    n = len(phi)
-    eps = np.array([(-1) ** x for x in range(n)], dtype=float)
+    par = np.where(col == 0, 1.0, -1.0)
+    diag = (mass + phi) * par
 
-    # Diagonal: parity-coupled mass + field
-    diag = (MASS + phi) * eps
+    rows, cols_arr, vals = [], [], []
+    for i in range(n):
+        rows.append(i)
+        cols_arr.append(i)
+        vals.append(diag[i])
 
-    # Hopping: -i/2 forward, +i/2 backward
-    hop_fwd = -0.5j * np.ones(n - 1)
-    hop_bwd = 0.5j * np.ones(n - 1)
+    for i in range(n):
+        for j in adj[i]:
+            rows.append(i)
+            cols_arr.append(j)
+            # Antisymmetric hopping: sign from ordering
+            if j > i or (j < i and (j == 0 and i == n - 1)):
+                vals.append(-0.5j)
+            else:
+                vals.append(0.5j)
 
-    H = sparse.diags([hop_bwd, diag, hop_fwd], [-1, 0, 1],
-                      shape=(n, n), format="lil", dtype=complex)
-    # Periodic boundary
-    H[0, n - 1] = 0.5j
-    H[n - 1, 0] = -0.5j
-    return H.tocsc()
+    H = sparse.csc_matrix((vals, (rows, cols_arr)), shape=(n, n), dtype=complex)
+    return H
 
 
-def cn_step(psi: np.ndarray, H: sparse.csc_matrix, dt: float) -> np.ndarray:
+def cn_step(H: sparse.csc_matrix, psi: np.ndarray, dt: float) -> np.ndarray:
     """Crank-Nicolson time step: (I + iHdt/2) psi_new = (I - iHdt/2) psi_old."""
-    I = sparse.eye(len(psi), dtype=complex, format="csc")
+    n = len(psi)
+    I = sparse.eye(n, dtype=complex, format="csc")
     A_plus = (I + 1j * H * dt / 2).tocsc()
     A_minus = I - 1j * H * dt / 2
     rhs = A_minus.dot(psi)
@@ -91,182 +136,261 @@ def cn_step(psi: np.ndarray, H: sparse.csc_matrix, dt: float) -> np.ndarray:
 
 
 # ---------------------------------------------------------------------------
-# Gaussian wavepacket
+# Gaussian wavepacket on 2D lattice
 # ---------------------------------------------------------------------------
-def gaussian(center: float, sigma: float, n: int) -> np.ndarray:
-    """Normalized Gaussian on the lattice."""
-    x = np.arange(n, dtype=float)
-    psi = np.exp(-0.5 * ((x - center) / sigma) ** 2)
-    norm = np.sqrt(np.sum(np.abs(psi) ** 2))
+def gaussian_2d(cx: float, cy: float, sigma: float, pos, n: int) -> np.ndarray:
+    """Normalized 2D Gaussian centered at (cx, cy)."""
+    psi = np.zeros(n, dtype=complex)
+    for i, (x, y) in enumerate(pos):
+        psi[i] = np.exp(-0.5 * ((x - cx)**2 + (y - cy)**2) / sigma**2)
+    norm = np.sqrt(np.sum(np.abs(psi)**2))
     return psi / norm
 
 
 # ---------------------------------------------------------------------------
-# Evolve a wavefunction under self-gravity for N_STEPS
+# Coherence measurement
 # ---------------------------------------------------------------------------
-def evolve(psi: np.ndarray, G: float, L: sparse.csc_matrix,
-           n_steps: int = N_STEPS) -> np.ndarray:
-    """Evolve psi under self-consistent gravity for n_steps CN steps."""
-    psi = psi.copy().astype(complex)
-    for _ in range(n_steps):
-        rho = np.abs(psi) ** 2
-        phi = solve_phi(rho, L, MU2, G)
-        H = make_hamiltonian(phi)
-        psi = cn_step(psi, H, DT)
-        # Re-normalize to prevent drift
-        psi /= np.sqrt(np.sum(np.abs(psi) ** 2))
-    return psi
+def measure_coherence(psi, psi_L_init, psi_R_init):
+    """Coherence C = |<psi_L|psi> * <psi|psi_R>|."""
+    overlap_L = np.vdot(psi_L_init, psi)  # <psi_L|psi>
+    overlap_R = np.vdot(psi, psi_R_init)  # <psi|psi_R>
+    return np.abs(overlap_L * overlap_R)
 
 
 # ---------------------------------------------------------------------------
-# Decoherence measurement
+# Single decoherence run
 # ---------------------------------------------------------------------------
-def measure_decoherence(d: int, G: float, L: sparse.csc_matrix) -> float:
-    """Measure gravitational decoherence for separation d and coupling G.
+def run_decoherence(side, mass, G, separation, n_steps=N_STEPS, dt=DT,
+                    mu2=MU2, sigma=SIGMA):
+    """Evolve superposition under self-gravity, return coherence time series.
 
-    Returns Gamma = -log(overlap) / T where T = N_STEPS * DT.
+    Places left packet at (side/2 - separation/2, side/2)
+          right packet at (side/2 + separation/2, side/2)
     """
-    center = N // 2
-    left_center = center - d // 2
-    right_center = center + d // 2
+    pos, col, adj, n = build_lattice(side)
+    L = make_laplacian_2d(adj, n)
 
-    psi_L = gaussian(left_center, SIGMA, N)
-    psi_R = gaussian(right_center, SIGMA, N)
+    cy = side / 2.0
+    cx_L = side / 2.0 - separation / 2.0
+    cx_R = side / 2.0 + separation / 2.0
 
-    # Evolve each branch independently
-    psi_L_evolved = evolve(psi_L, G, L)
-    psi_R_evolved = evolve(psi_R, G, L)
+    psi_L_init = gaussian_2d(cx_L, cy, sigma, pos, n)
+    psi_R_init = gaussian_2d(cx_R, cy, sigma, pos, n)
 
-    # Evolve the superposition under combined self-gravity
-    psi_super = (psi_L + psi_R) / np.sqrt(2)
-    psi_super /= np.sqrt(np.sum(np.abs(psi_super) ** 2))
-    psi_super_evolved = evolve(psi_super, G, L)
+    # Initial superposition
+    psi = (psi_L_init + psi_R_init) / np.sqrt(2)
+    psi /= np.sqrt(np.sum(np.abs(psi)**2))
 
-    # Coherent sum of independently evolved branches
-    psi_coherent = (psi_L_evolved + psi_R_evolved) / np.sqrt(2)
-    psi_coherent /= np.sqrt(np.sum(np.abs(psi_coherent) ** 2))
+    coherence = np.zeros(n_steps + 1)
+    coherence[0] = measure_coherence(psi, psi_L_init, psi_R_init)
 
-    # Overlap: how much does the self-gravitating superposition
-    # differ from the coherent sum?
-    overlap = np.abs(np.vdot(psi_super_evolved, psi_coherent)) ** 2
+    for step in range(n_steps):
+        rho = np.abs(psi)**2
+        phi = solve_phi(rho, L, mu2, G, n)
+        H = build_hamiltonian(pos, col, adj, n, phi, mass)
+        psi = cn_step(H, psi, dt)
+        psi /= np.sqrt(np.sum(np.abs(psi)**2))  # re-normalize
+        coherence[step + 1] = measure_coherence(psi, psi_L_init, psi_R_init)
 
-    T = N_STEPS * DT
-    # Clamp overlap to avoid log(0)
-    overlap = max(overlap, 1e-30)
-    gamma = -np.log(overlap) / T
+    return coherence
+
+
+# ---------------------------------------------------------------------------
+# Fit decoherence rate
+# ---------------------------------------------------------------------------
+def fit_gamma(coherence, dt):
+    """Fit C(t) = C(0) * exp(-Gamma*t) via log-linear regression.
+
+    Returns Gamma (positive = decaying).
+    """
+    c0 = coherence[0]
+    if c0 < 1e-30:
+        return 0.0
+
+    # Use points where coherence is still measurable
+    valid = []
+    for i, c in enumerate(coherence):
+        if c > 1e-20 and c / c0 > 1e-10:
+            valid.append((i * dt, np.log(c / c0)))
+
+    if len(valid) < 3:
+        return 0.0
+
+    times = np.array([v[0] for v in valid])
+    log_ratio = np.array([v[1] for v in valid])
+
+    # Linear fit: log(C/C0) = -Gamma * t
+    coeffs = np.polyfit(times, log_ratio, 1)
+    gamma = -coeffs[0]  # slope is -Gamma
     return gamma
 
 
 # ---------------------------------------------------------------------------
-# Main
+# Main sweeps
 # ---------------------------------------------------------------------------
-def main() -> None:
-    L = make_laplacian(N)
-
-    print("=" * 72)
-    print("Gravitational Decoherence Rate on 1D Staggered Lattice")
-    print("=" * 72)
-    print(f"  N={N}, MASS={MASS}, MU2={MU2}, DT={DT}, N_STEPS={N_STEPS}")
-    print(f"  sigma={SIGMA}, T_total={N_STEPS * DT:.2f}")
+def main():
+    print("=" * 76)
+    print("Gravitational Decoherence Rate on 2D Staggered Lattice")
+    print("=" * 76)
+    print(f"  SIDE={SIDE}, default MASS={MASS}, MU2={MU2}, DT={DT}")
+    print(f"  N_STEPS={N_STEPS}, SIGMA={SIGMA}")
+    print(f"  T_total = {N_STEPS * DT:.2f}")
     print()
 
-    # Collect results
-    results: dict[tuple[int, float], float] = {}
-
-    for G in COUPLINGS:
-        for d in SEPARATIONS:
-            gamma = measure_decoherence(d, G, L)
-            results[(d, G)] = gamma
-
-    # --- Print Gamma(d, G) table ---
-    print("Gamma(d, G) table  [decoherence rate]")
-    print("-" * 72)
-    header = f"{'d \\\\ G':>8}"
-    for G in COUPLINGS:
-        header += f"  {G:>10.1f}"
-    print(header)
-    print("-" * 72)
-
-    for d in SEPARATIONS:
-        row = f"{d:>8d}"
-        for G in COUPLINGS:
-            row += f"  {results[(d, G)]:>10.4e}"
-        print(row)
+    side = SIDE
+    pos, col, adj, n = build_lattice(side)
+    print(f"  Lattice: {side}x{side} = {n} sites, periodic BC")
     print()
 
-    # --- Check Gamma ~ G / d scaling ---
-    print("Scaling check: Gamma * d / G  (should be ~ constant if Gamma ~ G/d)")
-    print("-" * 72)
-    header = f"{'d \\\\ G':>8}"
-    for G in COUPLINGS:
-        header += f"  {G:>10.1f}"
-    print(header)
-    print("-" * 72)
+    # ===================================================================
+    # SWEEP 1: G coupling strength
+    # ===================================================================
+    G_values = [1, 2, 5, 10, 20, 50]
+    sep_default = 4
+    mass_default = MASS
 
-    for d in SEPARATIONS:
-        row = f"{d:>8d}"
-        for G in COUPLINGS:
-            gamma = results[(d, G)]
-            scaled = gamma * d / G if G > 0 else 0.0
-            row += f"  {scaled:>10.4e}"
-        print(row)
+    print("-" * 76)
+    print(f"SWEEP 1: Gamma vs G  (d={sep_default}, MASS={mass_default})")
+    print("-" * 76)
+
+    gammas_G = []
+    for G in G_values:
+        coherence = run_decoherence(side, mass_default, G, sep_default)
+        gamma = fit_gamma(coherence, DT)
+        gammas_G.append(gamma)
+        print(f"  G={G:>4d}  Gamma={gamma:>12.6e}  C(0)={coherence[0]:.6f}  "
+              f"C(end)={coherence[-1]:.6f}")
+
+    # Power-law fit: Gamma vs G
+    valid_G = [(g, gam) for g, gam in zip(G_values, gammas_G) if gam > 1e-20]
+    if len(valid_G) >= 2:
+        log_g = np.log([v[0] for v in valid_G])
+        log_gam = np.log([v[1] for v in valid_G])
+        slope_G = np.polyfit(log_g, log_gam, 1)[0]
+        print(f"\n  Power-law fit: Gamma ~ G^{slope_G:.3f}  (DP predicts G^1.0)")
+    else:
+        slope_G = float("nan")
+        print("\n  Insufficient data for power-law fit")
     print()
 
-    # --- Diosi-Penrose comparison ---
-    print("Diosi-Penrose comparison: Gamma_DP = G * m^2 / d")
-    print(f"  (using m = MASS = {MASS})")
-    print("-" * 72)
-    header = f"{'d \\\\ G':>8}  {'Gamma':>10}  {'Gamma_DP':>10}  {'ratio':>10}"
-    print(header)
-    print("-" * 72)
+    # ===================================================================
+    # SWEEP 2: separation d
+    # ===================================================================
+    d_values = [2, 4, 6, 8]
+    G_default = 10
 
-    for d in SEPARATIONS:
-        for G in COUPLINGS:
-            gamma = results[(d, G)]
-            gamma_dp = G * MASS ** 2 / d
-            ratio = gamma / gamma_dp if gamma_dp > 0 else float("inf")
-            print(f"{d:>8d}  {gamma:>10.4e}  {gamma_dp:>10.4e}  {ratio:>10.4f}")
+    print("-" * 76)
+    print(f"SWEEP 2: Gamma vs separation d  (G={G_default}, MASS={mass_default})")
+    print("-" * 76)
+
+    gammas_d = []
+    for d in d_values:
+        coherence = run_decoherence(side, mass_default, G_default, d)
+        gamma = fit_gamma(coherence, DT)
+        gammas_d.append(gamma)
+        print(f"  d={d:>2d}  Gamma={gamma:>12.6e}  C(0)={coherence[0]:.6f}  "
+              f"C(end)={coherence[-1]:.6f}")
+
+    valid_d = [(d, gam) for d, gam in zip(d_values, gammas_d) if gam > 1e-20]
+    if len(valid_d) >= 2:
+        log_d = np.log([v[0] for v in valid_d])
+        log_gam = np.log([v[1] for v in valid_d])
+        slope_d = np.polyfit(log_d, log_gam, 1)[0]
+        print(f"\n  Power-law fit: Gamma ~ d^{slope_d:.3f}  (DP predicts d^-1.0)")
+    else:
+        slope_d = float("nan")
+        print("\n  Insufficient data for power-law fit")
     print()
 
-    # --- Power-law fits ---
-    print("Power-law fits (log-log regression)")
-    print("-" * 72)
+    # ===================================================================
+    # SWEEP 3: mass
+    # ===================================================================
+    mass_values = [0.1, 0.2, 0.3, 0.5]
 
-    # Fit Gamma vs d at each G
-    print("\nGamma vs d  (expect slope ~ -1 for 1/d):")
-    for G in COUPLINGS:
-        gammas = [results[(d, G)] for d in SEPARATIONS]
-        # Filter out zero/tiny values
-        valid = [(d, g) for d, g in zip(SEPARATIONS, gammas) if g > 1e-20]
-        if len(valid) < 2:
-            print(f"  G={G:>6.1f}:  insufficient data")
-            continue
-        ds, gs = zip(*valid)
-        log_d = np.log(np.array(ds, dtype=float))
-        log_g = np.log(np.array(gs, dtype=float))
-        coeffs = np.polyfit(log_d, log_g, 1)
-        slope = coeffs[0]
-        print(f"  G={G:>6.1f}:  slope = {slope:>+.3f}  (expect -1.0)")
+    print("-" * 76)
+    print(f"SWEEP 3: Gamma vs MASS  (G={G_default}, d={sep_default})")
+    print("-" * 76)
 
-    # Fit Gamma vs G at each d
-    print("\nGamma vs G  (expect slope ~ +1 for linear):")
-    for d in SEPARATIONS:
-        gammas = [results[(d, G)] for G in COUPLINGS]
-        valid = [(G, g) for G, g in zip(COUPLINGS, gammas) if g > 1e-20]
-        if len(valid) < 2:
-            print(f"  d={d:>3d}:  insufficient data")
-            continue
-        Gs, gs = zip(*valid)
-        log_G = np.log(np.array(Gs, dtype=float))
-        log_g = np.log(np.array(gs, dtype=float))
-        coeffs = np.polyfit(log_G, log_g, 1)
-        slope = coeffs[0]
-        print(f"  d={d:>3d}:  slope = {slope:>+.3f}  (expect +1.0)")
+    gammas_m = []
+    for m in mass_values:
+        coherence = run_decoherence(side, m, G_default, sep_default)
+        gamma = fit_gamma(coherence, DT)
+        gammas_m.append(gamma)
+        print(f"  MASS={m:.2f}  Gamma={gamma:>12.6e}  C(0)={coherence[0]:.6f}  "
+              f"C(end)={coherence[-1]:.6f}")
+
+    valid_m = [(m, gam) for m, gam in zip(mass_values, gammas_m) if gam > 1e-20]
+    if len(valid_m) >= 2:
+        log_m = np.log([v[0] for v in valid_m])
+        log_gam = np.log([v[1] for v in valid_m])
+        slope_m = np.polyfit(log_m, log_gam, 1)[0]
+        print(f"\n  Power-law fit: Gamma ~ m^{slope_m:.3f}  (DP predicts m^2.0)")
+    else:
+        slope_m = float("nan")
+        print("\n  Insufficient data for power-law fit")
+    print()
+
+    # ===================================================================
+    # Diosi-Penrose comparison table
+    # ===================================================================
+    print("=" * 76)
+    print("DIOSI-PENROSE COMPARISON")
+    print("  Gamma_DP = G * MASS^2 / d   (lattice units)")
+    print("=" * 76)
+    print()
+
+    print(f"{'G':>6} {'d':>4} {'MASS':>6} {'Gamma':>14} {'Gamma_DP':>14} {'ratio':>10}")
+    print("-" * 76)
+
+    # Run a cross-section of the parameter space
+    all_results = []
+    for G in [1, 5, 10, 20, 50]:
+        for d in [2, 4, 6, 8]:
+            for m in [0.2, 0.3, 0.5]:
+                coherence = run_decoherence(side, m, G, d)
+                gamma = fit_gamma(coherence, DT)
+                gamma_dp = G * m**2 / d
+                ratio = gamma / gamma_dp if gamma_dp > 0 else float("inf")
+                all_results.append((G, d, m, gamma, gamma_dp, ratio))
+                print(f"{G:>6d} {d:>4d} {m:>6.2f} {gamma:>14.6e} "
+                      f"{gamma_dp:>14.6e} {ratio:>10.4f}")
 
     print()
-    print("=" * 72)
+
+    # ===================================================================
+    # Summary of scaling exponents
+    # ===================================================================
+    print("=" * 76)
+    print("SCALING SUMMARY")
+    print("=" * 76)
+    print(f"  Gamma ~ G^alpha:    alpha = {slope_G:+.3f}   (DP: +1.0)")
+    print(f"  Gamma ~ d^beta:     beta  = {slope_d:+.3f}   (DP: -1.0)")
+    print(f"  Gamma ~ m^delta:    delta = {slope_m:+.3f}   (DP: +2.0)")
+    print()
+
+    # Check overall consistency
+    if not np.isnan(slope_G) and not np.isnan(slope_d) and not np.isnan(slope_m):
+        dp_match = (abs(slope_G - 1.0) < 0.5 and
+                    abs(slope_d + 1.0) < 0.5 and
+                    abs(slope_m - 2.0) < 0.5)
+        if dp_match:
+            print("  RESULT: Scaling is CONSISTENT with Diosi-Penrose "
+                  "(Gamma ~ G*m^2/d)")
+        else:
+            print("  RESULT: Scaling DEVIATES from Diosi-Penrose prediction")
+            if abs(slope_G - 1.0) >= 0.5:
+                print(f"    - G exponent off: {slope_G:+.3f} vs +1.0")
+            if abs(slope_d + 1.0) >= 0.5:
+                print(f"    - d exponent off: {slope_d:+.3f} vs -1.0")
+            if abs(slope_m - 2.0) >= 0.5:
+                print(f"    - m exponent off: {slope_m:+.3f} vs +2.0")
+    else:
+        print("  RESULT: Insufficient data for scaling assessment")
+
+    print()
+    print("=" * 76)
     print("DONE")
-    print("=" * 72)
+    print("=" * 76)
 
 
 if __name__ == "__main__":
