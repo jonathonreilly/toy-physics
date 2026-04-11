@@ -3,9 +3,8 @@
 **Date:** 2026-04-11  
 **Scope:** review-worktree items that are still not safe for `main`
 
-This is the consolidated inventory for follow-through. It separates the one
-remaining bounded candidate from the held items and names the missing control
-for each held lane.
+This is the consolidated inventory for follow-through. It names the missing
+control for each held lane.
 
 ## Already on `main`
 
@@ -130,6 +129,5 @@ Next control:
 
 ## Bottom Line
 
-The review worktree now contains one bounded candidate and a set of explicit
-holds. Nothing else should be promoted without the missing control named in
-its section.
+The review worktree now contains only explicit holds. Nothing else should be
+promoted without the missing control named in its section.
