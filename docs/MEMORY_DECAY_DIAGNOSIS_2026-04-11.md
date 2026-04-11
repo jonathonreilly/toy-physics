@@ -1,4 +1,4 @@
-# Memory Signal Decay — Root Cause: Yukawa Screening
+# Memory Signal Decay — Protocol Fragility and Screening
 
 **Date:** 2026-04-11
 
@@ -8,37 +8,50 @@
   N=81:  memory ~ 1e-5 (vanishing)
   N=101: memory ~ 1e-7 (gone)
 
-## Root Cause: Yukawa screening mass μ=0.22
+## What the first sweep suggested
 
-Screening length = 1/μ ≈ 4.5 sites. Markers at distance ~N/4:
+The original ring protocol used a screened field with `mu^2 = 0.22`. In the
+original size-scaled setup, the marker/source geometry moved outward with `N`,
+and the memory signal collapsed with size.
 
-| N | marker distance | exp(-μ·d) | exp(-2μ·d) |
+Screening length in the operator convention is `ell_screen = 1/sqrt(mu^2)`.
+For the original scanned values:
+
+| N | source-marker distance | `ell_screen` | memory trend |
 |---|----------------|-----------|------------|
-| 41 | ~10 | 0.11 | 0.012 |
-| 61 | ~15 | 0.037 | 0.0014 |
-| 81 | ~20 | 0.012 | 0.00015 |
-| 101 | ~25 | 0.004 | 0.000016 |
+| 41 | ~10 | 2.13 | strong |
+| 61 | ~15 | 2.13 | positive but small |
+| 81 | ~20 | 2.13 | vanishing |
+| 101 | ~25 | 2.13 | gone |
 
-Memory is quadratic in Φ, so it decays as exp(-2μd). The observed
-7-order-of-magnitude drop from N=41 to N=101 matches this scaling.
+That first pass was consistent with a screening-limited protocol, but it did
+not isolate whether Yukawa range was the only cause.
 
-Damping (γ=0.05) adds secondary suppression: exp(-γd/2c) ≈ 0.54
-at d=25. Minor compared to Yukawa.
+## Follow-up sweep
+
+The later `mu^2` / geometry sweep changed the interpretation:
+
+- when the source/marker geometry was scaled with `N`, the memory still
+  decreased strongly with size even as `mu^2` was lowered to `0`
+- when the geometry was held fixed, the memory survived and actually grew
+  with `N`, with only weak dependence on `mu^2`
+
+That means the original collapse was **not primarily a Yukawa-range artifact**.
+Screening contributes, but geometry scaling and boundary placement are the
+dominant confounds.
 
 ## Assessment
 
-The N=41 signal is a FINITE-SIZE ARTIFACT. The entire ring (max
-distance 20 sites) is within a few screening lengths. This creates
-artificially strong field everywhere.
-
-Genuine gravitational memory requires the signal to STABILIZE with
-increasing N. Exponential decay to zero is the signature of screening.
+The narrow `N=61` ring signal is real, but the original protocol is too
+geometry-sensitive to support a publication-grade memory claim.
 
 ## Fix
 
-Set μ=0 (massless graviton). This eliminates exponential screening.
-The 1D wave equation without mass has no attenuation — the pulse
-propagates without decay. Memory should then be N-independent.
+Future reruns should:
 
-The memory result should be DOWNGRADED from bounded-retained to
-exploratory/finite-size artifact until tested with μ=0.
+- keep the marker/source geometry fixed while increasing `N`
+- use a more direct arrival-time / displacement observable
+- treat `mu^2 = 0` as one control, not the sole explanation
+
+The memory result remains exploratory, but the failure mode is now better
+understood and less singular than the original Yukawa diagnosis suggested.
