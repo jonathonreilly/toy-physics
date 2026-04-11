@@ -15,48 +15,50 @@ families and reports three things per case:
 
 After the two-sign audit, the retained question is not whether the irregular
 proxy reads inward. It is whether the contraction survives as the graph gets
-larger under the prescribed attractive coupling.
+larger under the corrected parity coupling.
 
 ## Sweep Results
 
 | Family | Size case | Nodes | Width ratio | Contraction | Force | Flips | Norm drift | Score |
 |---|---|---:|---:|---:|---|---:|---:|---:|
-| Random geometric | `side=4` | 16 | 1.1131 | -11.31% | 20/20 TW | 0 | 2.22e-16 | 2/3 |
-| Random geometric | `side=6` | 36 | 0.9948 | +0.52% | 15/20 TW | 1 | 2.22e-16 | 2/3 |
-| Random geometric | `side=8` | 64 | 1.0309 | -3.09% | 20/20 TW | 0 | 4.44e-16 | 2/3 |
-| Random geometric | `side=10` | 100 | 0.9987 | +0.13% | 20/20 TW | 0 | 2.22e-16 | 3/3 |
-| Growing | `n=16` | 16 | 1.1001 | -10.01% | 20/20 TW | 0 | 6.66e-16 | 2/3 |
-| Growing | `n=36` | 36 | 1.0113 | -1.13% | 20/20 TW | 0 | 2.22e-16 | 2/3 |
-| Growing | `n=64` | 64 | 1.0267 | -2.67% | 20/20 TW | 0 | 2.22e-16 | 2/3 |
-| Growing | `n=100` | 100 | 0.9891 | +1.09% | 20/20 TW | 0 | 2.22e-16 | 3/3 |
-| Layered cycle | `layers=6,width=3` | 18 | 0.6364 | +36.36% | 20/20 TW | 0 | 2.22e-16 | 3/3 |
-| Layered cycle | `layers=6,width=4` | 24 | 0.6359 | +36.41% | 20/20 TW | 0 | 4.44e-16 | 3/3 |
-| Layered cycle | `layers=6,width=5` | 30 | 0.6224 | +37.76% | 20/20 TW | 0 | 6.66e-16 | 3/3 |
-| Layered cycle | `layers=6,width=6` | 36 | 0.6054 | +39.46% | 20/20 TW | 0 | 4.44e-16 | 3/3 |
+| Random geometric | `side=4` | 16 | 0.8800 | +12.00% | 20/20 TW | 0 | 5.55e-16 | 3/3 |
+| Random geometric | `side=6` | 36 | 0.6396 | +36.04% | 20/20 TW | 0 | 8.88e-16 | 3/3 |
+| Random geometric | `side=8` | 64 | 0.6184 | +38.16% | 20/20 TW | 0 | 6.66e-16 | 3/3 |
+| Random geometric | `side=10` | 100 | 0.6026 | +39.74% | 20/20 TW | 0 | 2.22e-16 | 3/3 |
+| Growing | `n=16` | 16 | 0.6848 | +31.52% | 20/20 TW | 0 | 2.22e-16 | 3/3 |
+| Growing | `n=36` | 36 | 0.6806 | +31.94% | 20/20 TW | 0 | 6.66e-16 | 3/3 |
+| Growing | `n=64` | 64 | 0.6711 | +32.89% | 20/20 TW | 0 | 4.44e-16 | 3/3 |
+| Growing | `n=100` | 100 | 0.6760 | +32.40% | 20/20 TW | 0 | 4.44e-16 | 3/3 |
+| Layered cycle | `layers=6,width=3` | 18 | 0.4487 | +55.13% | 20/20 TW | 0 | 4.44e-16 | 3/3 |
+| Layered cycle | `layers=6,width=4` | 24 | 0.4356 | +56.44% | 20/20 TW | 0 | 2.22e-16 | 3/3 |
+| Layered cycle | `layers=6,width=5` | 30 | 0.4284 | +57.16% | 20/20 TW | 0 | 2.22e-16 | 3/3 |
+| Layered cycle | `layers=6,width=6` | 36 | 0.4216 | +57.84% | 20/20 TW | 0 | 2.22e-16 | 3/3 |
 
 ## Family Trends
 
 | Family | Mean width ratio | Range | Trend vs size | Force stability | Norm max drift |
 |---|---:|---:|---|---|---:|
-| Random geometric | 1.0344 | 0.9948 - 1.1131 | slope `-9.925e-04`, corr `-0.658` | mixed | 4.44e-16 |
-| Growing | 1.0318 | 0.9891 - 1.1001 | slope `-1.064e-03`, corr `-0.807` | 20/20 TW at all sizes | 6.66e-16 |
-| Layered cycle | 0.6250 | 0.6054 - 0.6364 | slope `-1.773e-03`, corr `-0.941` | 20/20 TW at all sizes | 6.66e-16 |
+| Random geometric | 0.6852 | 0.6026 - 0.8800 | slope `-2.773e-03`, corr `-0.773` | 20/20 TW at all sizes | 8.88e-16 |
+| Growing | 0.6781 | 0.6711 - 0.6848 | slope `-1.172e-04`, corr `-0.723` | 20/20 TW at all sizes | 6.66e-16 |
+| Layered cycle | 0.4336 | 0.4216 - 0.4487 | slope `-1.472e-03`, corr `-0.986` | 20/20 TW at all sizes | 4.44e-16 |
 
 ## Readout
 
-- **Inward proxy stability** is strong on growing and layered-cycle families.
+- **Inward proxy stability** is strong on all three families.
 - **Norm** stays machine-clean everywhere.
-- **Contraction** is topology-sensitive:
-  - layered cycle contracts strongly and consistently
-  - growing is near-unity and only weakly contracts at larger sizes
-  - random geometric is mixed at small sizes and only settles near unity by `n=100`
+- **Contraction** is topology-sensitive but now clearly present on every
+  family:
+  - layered cycle contracts most strongly and consistently
+  - growing contracts moderately and stably
+  - random geometric contracts strongly enough that the larger sizes are all
+    well below unity
 
 ## Interpretation
 
-The retained self-gravity effect is real, but its contraction strength is not
-uniform across graph families. The strongest and cleanest contraction appears
-on the layered cycle family, while the admissible random geometric and growing
-families show weaker, size-dependent contraction.
+The retained self-gravity effect is real, and the corrected parity coupling
+strengthens contraction across all three graph families. The strongest and
+cleanest contraction still appears on the layered cycle family, but the random
+geometric and growing families are no longer near-unity edge cases.
 
 That makes this a genuine scaling probe rather than a universal contraction
 claim.

@@ -216,25 +216,26 @@ The full-suite baseline is now frozen:
 5. **Two-field coupling**: PROTOTYPED. `frontier_two_field_coupling.py` closes
    4/4 on the retained graph with a separate scalar Φ field sourced by `|ψ|²`,
    exact matter norm, bounded Φ growth, and inward retained proxy response
-   under the prescribed attractive sign.
+   under the corrected parity coupling.
 
 6. **Two-field wave hardening**: DONE as a retained hardening step.
    `frontier_two_field_wave.py` closes hard `5/5` on all three retained
    cycle-bearing families with a wave-law `Φ` field, exact `ψ` norm, bounded
-   `Φ`, and inward retained proxy response under the prescribed attractive
-   sign. Width response survives only as a diagnostic, not a universal gate.
+   `Φ`, and inward retained proxy response under the corrected parity
+   coupling. Width response survives only as a diagnostic, not a universal
+   gate.
 
 7. **Self-gravity scaling**: DONE as a retained scaling readout.
    `frontier_staggered_self_gravity_scaling.py` shows that self-gravity stays
-   norm-clean and inward across sizes, but contraction is topology-sensitive:
-   strong and monotone on layered-cycle graphs, weak-to-mixed on random
-   geometric and growing graphs.
+   norm-clean and inward across sizes, and contraction is now strong across
+   all three families under the corrected parity coupling, with the layered
+   cycle still the strongest.
 
 8. **Larger-graph cycle battery**: DONE as a retained sibling harness.
    `frontier_staggered_cycle_battery_scaled.py` keeps the force-first `9/9`
-   battery closed on all three retained graph families at side `8`, `10`, and
-   `12`, with native gauge still nonzero and `15/15` iterative stability in
-   every run.
+   battery closed on random geometric and growing at side `8`, `10`, and `12`,
+   while the layered-cycle family now shows the same linearity miss at scale
+   under the corrected parity coupling.
 
 9. **Retarded / hybrid two-field probe**: DONE as a retained negative-positive
    frontier result. `frontier_two_field_retarded_probe.py` preserves the core
@@ -250,10 +251,10 @@ The full-suite baseline is now frozen:
     closure recipe rather than the frozen canonical retarded harness.
 
 11. **Causal DAG compatibility**: DONE as a retained probe.
-    `frontier_staggered_dag.py` closes `6/6` on three layered DAG
-    configurations with Born-clean linearity, exact norm, measurable forward
-    propagation, and inward retained proxy response under the prescribed
-    attractive sign.
+   `frontier_staggered_dag.py` closes `6/6` on three layered DAG
+   configurations with Born-clean linearity, exact norm, measurable forward
+   propagation, and inward retained proxy response under the corrected
+   parity-coupled sign.
 
 12. **First larger-graph break frontier**: DONE as a retained boundary note.
     `frontier_staggered_cycle_break_frontier.py` shows that the first honest

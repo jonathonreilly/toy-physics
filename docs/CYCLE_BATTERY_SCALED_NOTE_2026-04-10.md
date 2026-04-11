@@ -13,13 +13,15 @@ the size sweep:
 - growing: `n_target = side^2`
 - layered cycle: `layers = side`, `width = side`
 
-All nine retained runs pass the same `9/9` battery.
+Eight of the nine retained runs pass the same `9/9` battery; the layered
+cycle family now scores `8/9` because the B2 linearity row fails at the
+corrected parity coupling.
 
 | Family | side=8 | side=10 | side=12 |
 |-----|:---:|:---:|:---:|
 | Random geometric | 9/9 | 9/9 | 9/9 |
 | Growing | 9/9 | 9/9 | 9/9 |
-| Layered cycle | 9/9 | 9/9 | 9/9 |
+| Layered cycle | 8/9 | 8/9 | 8/9 |
 
 ## Key Numbers
 
@@ -55,14 +57,15 @@ All nine retained runs pass the same `9/9` battery.
 
 ## What This Freezes
 
-- The retained cycle battery is not a small-graph artifact: the same `9/9`
-  semantics hold at side `8`, `10`, and `12`.
+- The retained cycle battery is not a small-graph artifact: random geometric
+  and growing keep the same `9/9` semantics at side `8`, `10`, and `12`, while
+  layered cycle consistently exposes the same `8/9` linearity miss.
 - Force remains the primary gravity observable.
 - The force-gap row remains characterization only. It does not gate the pass.
 - The larger sweep is honest about scale:
   - random geometric and growing keep the same sign/robustness pattern
   - layered cycle keeps the strongest inward force and the cleanest retained
-    gauge response at all tested sizes
+    gauge response at all tested sizes, but the B2 linearity miss persists
 
 ## Relation To The Base Battery
 

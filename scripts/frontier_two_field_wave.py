@@ -117,7 +117,8 @@ def _laplacian(pos,adj,n):
 
 def _build_H(pos,col,adj,n,mass,phi):
     H=lil_matrix((n,n),dtype=complex)
-    par=np.where(col==0,1.,-1.); H.setdiag(mass*par-mass*phi)
+    # Parity (scalar 1⊗1) coupling: Φ modulates the same staggered mass term.
+    par=np.where(col==0,1.,-1.); H.setdiag((mass + phi) * par)
     for i,nbs in adj.items():
         for j in nbs:
             if i>=j: continue
@@ -274,7 +275,7 @@ if __name__ == '__main__':
     print("TWO-FIELD WAVE COUPLING — ALL CYCLE FAMILIES")
     print("="*70)
     print(f"Phi: wave eq d²Phi/dt² = -c²(L+mu²)Phi + beta|psi|²")
-    print(f"psi: CN staggered Dirac with V=-m*Phi")
+    print(f"psi: CN staggered Dirac with parity coupling H_diag=(m+Phi)*eps")
     print(f"c_phi={C_PHI}, beta={BETA}, dt_phi={DT_PHI}, dt_psi={DT_PSI}, N={N_ITER}")
     print()
 

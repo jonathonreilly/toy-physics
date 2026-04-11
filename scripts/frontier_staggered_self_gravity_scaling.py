@@ -9,7 +9,7 @@ admissible staggered graph families.
 The probe is intentionally narrow:
   - no external source
   - matter density |psi|^2 generates its own Phi
-  - Phi acts back through V = -m * Phi
+  - Phi acts back through parity coupling H_diag = (m + Phi) * epsilon
   - force is the primary gravity observable
   - contraction is measured against the corresponding free evolution
 
@@ -122,7 +122,7 @@ def _build_hamiltonian(
 ):
     H = lil_matrix((n, n), dtype=complex)
     parity = np.where(colors == 0, 1.0, -1.0)
-    H.setdiag(mass * parity - mass * phi)
+    H.setdiag((mass + phi) * parity)
     for i, nbs in adj.items():
         for j in nbs:
             if i >= j:

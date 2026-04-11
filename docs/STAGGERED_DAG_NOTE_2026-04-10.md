@@ -17,7 +17,7 @@ The graph family is intentionally narrow:
 - force as the gravity observable
 
 The probe closes `6/6` on three layered DAG configurations under the
-prescribed attractive sign:
+corrected parity-coupled attractive sign:
 
 - `(8 layers, width 5)` -> `36` nodes
 - `(12 layers, width 4)` -> `45` nodes

@@ -8,19 +8,32 @@ are genuine physical predictions or tautological consequences of sign convention
 
 ## Executive Summary
 
-The coupling sign `−mass·Φ` is **prescribed** (Newtonian convention), not derived.
-That is an input assumption, and should be stated as such.
+The old identity coupling `H_diag = m·ε − m·Φ` was physically wrong for the
+staggered scalar channel. It treated `Φ` as a plain diagonal energy shift and
+is exactly why the earlier two-sign comparison could leave the irregular graph
+sign rows inward under both coupling signs.
 
-The later two-sign comparison makes the irregular-graph implication sharper:
-the current shell-radial and edge-radial sign measures are **not sign-selective**.
-They can stay inward under both attractive and repulsive coupling because they are
-dominated by the source-centered `Φ` profile. The exact lattice force on the cubic
-card remains a genuine dynamical-response observable; the irregular graph sign rows
-do not.
+The literature-correct scalar coupling is the **parity coupling**
+`H_diag = (m + Φ)·ε(x)`. A Hermitian lapse-style coupling is also possible via
+`H_grav = √N · H_flat · √N`, `N = 1 + Φ/m`.
 
-The emergent-geometry "AWAY" claim was **overclaimed** from the weaker shell proxy.
-A three-metric comparison (shell_mean, shell_prob, edge_radial) shows mixed signs —
-the honest verdict is measurement-dependent, not settled geometric repulsion.
+Direct sign tests now split cleanly:
+- under the corrected parity and lapse couplings, well vs hill are
+  distinguishable in the exact-lattice external-potential test
+- the canonical exact-force staggered card survives unchanged at `17/17`
+- graph portability (`7/7`), self-gravity (`5/5`), wave coupling (`5/5`),
+  and DAG compatibility (`6/6`) all survive numerically under the parity rewrite
+- some irregular graph batteries do **not** survive cleanly: the base cycle
+  battery drops to `8/9` on layered cycle, the scaled sibling now has
+  family/size-dependent `8/9` misses, and the retarded family-closure sibling
+  is `9/9`, `8/9`, `9/9`, `8/9`
+
+So the sign story is reopened, but not fully closed:
+- the old two-sign comparison is now a **negative control** that invalidates the
+  identity coupling
+- the corrected coupling restores sign-sensitivity in direct well/hill tests
+- irregular self-generated graph batteries still need one frozen graph-native
+  directional observable beyond the current shell/edge-radial proxies
 
 ## Observable Hierarchy
 
@@ -46,15 +59,29 @@ The screened Poisson `(L + μ²I)Φ = G·ρ` with positive-definite operator and
 ρ = |ψ|² ≥ 0 necessarily gives Φ ≥ 0. This is mathematical, not a physics choice.
 The retarded wave equation with β > 0 likewise drives Φ positive.
 
-### Link 2: Hamiltonian Coupling (THE ASSUMPTION)
+### Link 2: Hamiltonian Coupling (THE CRITICAL CORRECTION)
 
-Every file uses:
+The earlier retained graph harnesses used the identity coupling
+
 ```python
 H.setdiag(mass * parity - mass * phi)
 ```
-The `−mass·Φ` mirrors Newtonian V = −GM/r. This is an input assumption.
-It is NOT derived from the staggered structure. Flipping the sign would reverse
-all force directions.
+
+That is not the correct scalar coupling for staggered fermions.
+
+The literature-correct scalar channel is:
+
+```python
+H.setdiag((mass + phi) * parity)
+```
+
+and the Hermitian lapse-style variant is:
+
+```python
+H_grav = sqrt_lapse @ H_flat @ sqrt_lapse
+```
+
+with `sqrt_lapse = sqrt(1 + Φ/m)`.
 
 ### Link 3: Force Measurement
 
@@ -65,31 +92,43 @@ averages of `Φ` and `ρ`. This is a radial proxy — shell volume enters the
 averaging. It should be described as "radial force proxy" rather than "exact
 force."
 
-### What the Coupling Assumption Buys
+### What the Corrected Coupling Buys
 
-Given `−mass·Φ`, the TOWARD direction is expected for any wavepacket with support
-near the potential minimum. The non-trivial content is:
+Given the corrected parity coupling, the direct well/hill sign test is no
+longer tautological. The non-trivial content is now:
 
-1. **The dynamics are stable** — backreaction doesn't blow up over 20 iterations
-2. **The force magnitude / source scale is non-trivial** — G_eff = 0.4–0.6,
-   source-linear under the retarded law
-3. **Multiple structural measures agree under the prescribed sign** — shell proxy
-   and edge-radial can agree on admissible families, but this no longer counts as
-   sign selection after Option C
-4. **State-family structure is non-trivial** — retained families can share the same
-   interaction profile without destabilizing the field law
-5. **Topology-dependent phase transition** — critical exponent β varies with graph family
+1. **The exact-lattice directional response survives** — the `17-card` stays `17/17`
+2. **The sign test becomes dynamical** — well vs hill split under parity/lapse
+3. **Self-gravity contracts much more strongly** — width ratios now land well below `1`
+   across all retained scaling families
+4. **Portability survives** — the `7/7` graph-portability probe still closes
+5. **Some irregular batteries now fail honestly** — layered-cycle linearity and
+   growing-family retarded stability are real post-rewrite misses
 
-## Spot-Check Results (Edge-Radial vs Shell Proxy)
+## Direct Sign Tests
 
-Admissible cycle families, retarded field, both measures inward under the
-prescribed attractive sign:
+### Exact Lattice External-Potential Test
 
-| Family | Shell proxy | Edge-radial | Agreement |
-|--------|-----------|-------------|-----------|
-| Random geometric | +0.059 | +0.090 | YES |
-| Growing | +0.011 | +0.017 | YES |
-| Layered cycle | +0.100 | +0.128 | YES |
+`frontier_correct_coupling.py` now gives:
+
+| Coupling | Well (V<0) | Hill (V>0) | Distinguishes? |
+|----------|-----------|-----------|----------------|
+| identity | TOWARD | TOWARD | NO |
+| parity | TOWARD | AWAY | YES |
+| lapse | TOWARD | AWAY | YES |
+
+### Irregular Random-Geometric External-Source Test
+
+`frontier_two_sign_parity.py` shows the corrected parity coupling also flips
+the shell-force sign when the external source is inverted:
+
+| External field | Parity-coupled shell sign |
+|----------------|---------------------------|
+| `Φ > 0` | TOWARD |
+| `Φ < 0` | AWAY |
+
+This is enough to say the old identity-coupling sign audit no longer governs
+the retained stack.
 
 ## Emergent Geometry — Corrected
 
@@ -123,7 +162,7 @@ across seeds and sizes.
 
 ## What Would Strengthen the Gravity Story
 
-### Option A: Derive the Coupling Sign ← DONE — BREAKTHROUGH
+### Option A: Derive the Coupling Sign ← PARTIALLY CLOSED
 
 The literature (Zache et al. 2020, Dempsey et al. 2025) shows that a scalar
 potential in the staggered Hamiltonian must couple through the SAME parity
@@ -136,7 +175,7 @@ The full GR coupling via the lapse function gives:
 
     H_grav = √N · H_flat · √N,   N = 1 + Φ/m   ("lapse coupling")
 
-**Result: Both correct couplings DISTINGUISH attractive from repulsive.**
+**Result: Both correct couplings distinguish well from hill in the direct sign test.**
 
 | Coupling | Well (V<0) | Hill (V>0) | Distinguishes? |
 |----------|-----------|-----------|----------------|
@@ -144,19 +183,20 @@ The full GR coupling via the lapse function gives:
 | parity (correct) | TOWARD +2.08 | AWAY −0.78 | YES |
 | lapse (full GR) | TOWARD +0.61 | AWAY −1.78 | YES |
 
-Under parity coupling, V<0 narrows the mass gap locally → faster
-propagation toward the potential minimum → TOWARD. V>0 widens the gap →
-slower propagation → AWAY. This is a genuine dynamical prediction:
-**the sign of gravity emerges from the Dirac mass-gap structure.**
+Under parity coupling, `V<0` narrows the mass gap locally and `V>0` widens it.
+That is enough to make the direct external sign test dynamical rather than
+conventional.
 
-Additionally, parity coupling CONTRACTS the wavepacket (w_f/w_0 = 0.94)
-under self-gravity, while identity EXPANDS it (1.68). Gravity should
-contract — the correct coupling gets the right physics.
+What is **not** closed yet is the final irregular-graph claim:
+the retained shell/edge-radial graph observables are still proxy measures, and
+the self-generated graph field story has not yet been reduced to one exact,
+graph-native directional observable.
 
 **Script:** `frontier_correct_coupling.py`
 
-**Action required:** All retained batteries must be updated to use parity
-coupling `H_diag = (m + Φ)·ε` instead of `H_diag = m·ε − m·Φ`.
+**Action completed in part:** the retained stack is being rewritten around the
+parity coupling; the canonical card, portability, self-gravity, wave, and DAG
+probes survive, while some cycle/retarded rows now fail honestly.
 
 ### Option B: Sign-Agnostic Observables
 Reframe around contraction magnitude, binding energy, correlation length —
@@ -190,29 +230,30 @@ because they measure the field shape, not the dynamical response.
 
 ## For a Nature Referee
 
-A referee will ask: "Why is the potential attractive?"
+A referee will now ask a narrower question:
 
-Honest answer: The coupling sign `−mass·Φ` is an input assumption, mirroring
-Newtonian gravity. The two-sign comparison (Option C) confirms this: both
-`−mass·Φ` and `+mass·Φ` produce stable, norm-conserving dynamics with bounded
-energy and convergent backreaction. Consistency does not select the sign.
+> "Did you merely fix a wrong coupling, or did you also close directional
+> gravity on the irregular graph families?"
 
-Furthermore, the shell/edge-radial force observables give TOWARD under
-BOTH signs — they measure the field profile shape, not the dynamical
-response to the potential. This means the "force direction" rows in the
-retained batteries are not testing gravity; they are testing that
-(L+μ²)⁻¹ρ peaks at the source, which is guaranteed.
+Honest answer:
+- yes, the old identity coupling was wrong and had to be retired
+- yes, the corrected parity/lapse couplings restore sign-sensitivity in the
+  direct external-potential tests
+- no, the irregular graph story is not fully closed yet, because the retained
+  graph-family directional observables are still proxy measures and some
+  batteries now fail honestly after the rewrite
 
-What we DID show (sign-agnostic, would survive this critique):
-- Staggered fermions on bipartite graphs support consistent self-gravitating
-  dynamics under EITHER coupling sign (stable backreaction, norm conservation)
-- G_eff = 0.4–0.6 coupling magnitude (retarded field, source-scale gap closed)
-- Topology-dependent critical threshold for gravitational collapse (β varies)
-- Emergent 2D geometry from matter-coupled growth (d_eff = 2.03)
-- Gauge invariance, Born rule, Lieb-Robinson causality on arbitrary graphs
+What now survives cleanly:
+- exact-lattice directional response on the canonical `17-card`
+- graph portability `7/7`
+- self-gravity `5/5` with strong contraction across all retained scaling families
+- wave two-field `5/5`
+- DAG compatibility `6/6`
+- topology-dependent onset behavior
 
-The force DIRECTION is not among these results. The force MAGNITUDE and
-the existence of a phase transition are.
+What is still open:
+- one graph-native directional observable that stands up on irregular graphs
+- a fully retained cycle/retarded battery under the corrected coupling
 
-The direction is postulated. The consistency, stability, and quantitative
-characterization are the results.
+**Scripts:** `frontier_correct_coupling.py`, `frontier_two_sign_comparison.py`,
+`frontier_two_sign_parity.py`

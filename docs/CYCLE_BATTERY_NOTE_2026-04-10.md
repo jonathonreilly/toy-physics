@@ -5,36 +5,38 @@
 
 ## Summary
 
-The staggered fermion + potential gravity architecture passes a 9-row
-battery on three cycle-bearing bipartite graph families:
+The staggered fermion + parity-coupled potential gravity architecture passes
+the cycle battery on the three retained cycle-bearing bipartite graph
+families, with a layered-cycle linearity failure that is now explicit:
 
 | Row | Random Geometric (36) | Growing (48) | Layered Cycle (24) |
 |-----|:---:|:---:|:---:|
 | B1 Zero-source | exact | exact | exact |
-| B2 Linearity | R²=1.000 | R²=1.000 | R²=1.000 |
+| B2 Linearity | R²=0.991 | R²=0.997 | R²=0.985 FAIL |
 | B3 Additivity | <2e-16 | <2e-16 | <3e-16 |
 | B4 Force TOWARD | ✅ | ✅ | ✅ |
 | B5 Iterative (15 steps) | 15/15 TW | 15/15 TW | 15/15 TW |
 | B6 Norm | <5e-16 | <5e-16 | <5e-16 |
 | B7 Families (3/3) | ✅ | ✅ | ✅ |
 | B8 Native gauge | R²=0.9999 | R²=0.9500 | R²=0.9736 |
-| B9 Force-gap | G_eff=32 | G_eff=178 | G_eff=12 |
+| B9 Force-gap | G_eff=58.7 | G_eff=129.6 | G_eff=29.2 |
 | B9 shell_grad_ratio | 1.9% | 0.5% | 4.4% |
 | B9 spectral_ratio | 18.9% | 7.7% | 16.9% |
 
 **Measurement note:** on these irregular graph families, `B4/B5/B7` use a
 radial shell-force proxy built from BFS-depth shell averages of `Φ`. This is
-not the exact lattice-coordinate force used by the canonical cubic card.
-The later two-sign audit shows these irregular sign measures are not
-sign-selective: they can stay inward under both attractive and repulsive
-coupling because they are dominated by the source-centered `Φ` profile.
+not the exact lattice-coordinate force used by the canonical cubic card. The
+later two-sign audit shows these irregular sign measures are not sign-
+selective: they can stay inward under both attractive and repulsive coupling
+because they are dominated by the source-centered `Φ` profile.
 
 ## What Works
 
-- **Radial field-profile sign**: inward on all retained families and iterations
-  under the prescribed attractive coupling. After the two-sign audit, this row
-  should be treated as a centered-field diagnostic, not as standalone evidence
-  that attraction is dynamically selected.
+- **Radial field-profile sign**: inward on the random geometric and growing
+  families, while the layered-cycle family now exposes a linearity failure at
+  the corrected parity coupling. After the two-sign audit, this row should be
+  treated as a centered-field diagnostic, not as standalone evidence that
+  attraction is dynamically selected.
 - **Iterative backreaction**: density-sourced Φ re-solved each step, force
   stays positive across 15-20 iterations with exact norm.
 - **Native gauge**: persistent current J(A) with sin(A) modulation, measured
@@ -51,9 +53,11 @@ the layered cycle graph.
 
 ## Endogenous Field Scale — OPEN (Structural)
 
-The force from the graph-solved Φ is 2-6% of the external kernel force.
-This is a coupling-constant mismatch (G_eff=32-178), not a sign/linearity
-failure.
+The force from the graph-solved Φ is still much smaller than the external
+kernel force. This is a coupling-constant mismatch (`G_eff≈30-130`), not a
+sign/linearity failure on the random geometric and growing families. The
+layered-cycle family now additionally shows a linearity miss at the corrected
+parity coupling.
 
 **Root cause**: the screened Poisson Green function (L+μ²I)⁻¹ on a small
 graph is smoother than the 1/r kernel. Spectral analysis shows the
@@ -62,15 +66,16 @@ kernel has more high-frequency content from the 1/r singularity.
 
 **Characterization**:
 - The gap is structural (graph discretization, not physics)
-- Shrinks with graph size (larger graphs → sharper Green function)
-- Does not affect sign, linearity, additivity, stability, or robustness
+- Shrinks with graph size only weakly and non-monotonically here
+- Does not affect sign, additivity, stability, or robustness on the two
+  non-layered families
 - Can be compensated by increasing G (force scales linearly)
 
-**What it means**: the endogenous Poisson source produces gravity with
-the correct qualitative behavior at all tested graph sizes, but the
-absolute force scale requires a graph-dependent coupling constant G_eff.
-This is analogous to renormalization — the bare coupling runs with the
-lattice cutoff.
+**What it means**: the endogenous Poisson source still produces stable inward
+response on two of the three retained families, but the absolute force scale
+requires a graph-dependent coupling constant G_eff. The layered-cycle family
+now tells us the corrected coupling is not universally linear across all cycle
+topologies.
 
 ## Self-Gravity Probe (Retained)
 
@@ -106,8 +111,9 @@ This is the first two-field endogenous gravity result in the project.
 
 ## Remaining Caveats
 
-1. **All three cycle-bearing families integrated** — random geometric,
-   growing, and layered cycle all pass 9/9 (battery) and 5/5 (self-gravity).
+1. **All three cycle-bearing families integrated** — random geometric and
+   growing still pass `9/9`, while layered cycle is `8/9` because B2 linearity
+   fails at the corrected parity coupling.
 2. **Force is primary** — no centroid rows. The centroid has a period-4
    oscillation on staggered periodic lattices.
 3. **Irregular-graph force is a proxy** — on these graph families the retained

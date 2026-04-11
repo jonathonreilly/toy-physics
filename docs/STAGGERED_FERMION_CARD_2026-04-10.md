@@ -1,10 +1,10 @@
-# Staggered Fermion + Potential Gravity — Force-Based Card
+# Staggered Fermion + Scalar/Parity Potential Gravity — Force-Based Card
 
 **Date:** 2026-04-10
 **Script:** `frontier_staggered_17card.py`
 **Architecture:** Kogut-Susskind staggered fermion, 1 scalar per site, Dirac
-from staggering phases η_μ(x), gravity via scalar potential V=-m·g·S/(r+ε),
-Crank-Nicolson evolution.
+from staggering phases η_μ(x), gravity via scalar/parity potential coupling
+V(x) that enters the mass gap as (m + V(x))·ε(x), Crank-Nicolson evolution.
 
 ## Important Framing
 
@@ -35,8 +35,8 @@ mass = 0.3, g = 50.0, S = 5e-4, dt = 0.15
 **Force, not centroid.** Gravity rows measure the exact lattice force
 F = -⟨dV/dz⟩ on the evolved state. The centroid oscillates with lattice size
 (staggered standing-wave artifact on periodic BCs). This exact lattice-force
-observable is the cleanest directional probe in the repo, but the attractive
-sign is still prescribed by choosing `V<0`, not derived.
+observable is the cleanest directional probe in the repo. The diagonal
+coupling itself is now literature-correct: `H_diag = (m + Phi(x))·epsilon(x)`.
 
 **Native gauge test.** C12 uses Byers-Yang persistent current on the SAME
 Hamiltonian dimension as the card: 1D ring (n=21) in 1D, 3D torus (n=n) in 3D.
@@ -96,9 +96,10 @@ a native 3D torus gauge test. C17 includes energy projections at n=9.
 - **Dirac dispersion:** E² = m² + sin²(k) exact, from staggering phases η_μ(x).
   Not assumed — follows from the nearest-neighbor hopping with alternating signs.
 - **Born rule:** Sorkin I₃ at machine zero. From linearity of CN evolution.
-- **Directional response under prescribed attractive potential:** Force TOWARD
-  for ALL state families including anti/Nyquist, because the exact lattice
-  force responds to the chosen `V = -m·g·S/(r+ε)` diagonal potential.
+- **Directional response under scalar/parity potential:** Force TOWARD for
+  ALL state families including anti/Nyquist on the attractive operating point.
+  The potential modulates the mass gap via `epsilon(x)` rather than acting as
+  a plain diagonal shift.
 - **Achromatic force:** F = -⟨dV/dz⟩ has no k-dependence (CV=0.000000).
 - **Equivalence:** a = F/m = -⟨dΦ/dz⟩ is mass-independent (CV=0.000000).
 - **Gauge:** Persistent current J(A) with sin(A) modulation on ring.
@@ -145,7 +146,6 @@ is NOT directly comparable to centroid-based cards.
 4. **3D C17 at n>9** — omits energy projections (eigensolve cost). Tests 4/6
    families. At n=9: full 6/6.
 
-5. **Attractive sign is prescribed** — this card still tests the response to an
-   imposed attractive potential. What is retained here is the exact directional
-   response of the staggered matter field to that potential, not a derivation
-   of the sign from first principles.
+5. **Attractive operating point is still imposed** — the benchmark remains a
+   fixed attractive well, but the coupling law is now the literature-correct
+   scalar/parity form rather than a plain identity diagonal shift.
