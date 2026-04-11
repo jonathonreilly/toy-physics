@@ -24,6 +24,8 @@ so the repo now has an explicit navigation layer.
   [`docs/CANONICAL_HARNESS_INDEX.md`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/docs/CANONICAL_HARNESS_INDEX.md)
 - Bug / rerun workflow:
   [`docs/repo/RETEST_PLAYBOOK.md`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/docs/repo/RETEST_PLAYBOOK.md)
+- Recent frontier retain audit:
+  [`docs/CLAUDE_FRONTIER_RETAIN_AUDIT_2026-04-11.md`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/docs/CLAUDE_FRONTIER_RETAIN_AUDIT_2026-04-11.md)
 
 ## Current Repo Reality
 
