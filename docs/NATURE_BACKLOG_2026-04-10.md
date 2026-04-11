@@ -3,7 +3,7 @@
 **Date:** 2026-04-10
 **Status:** Active
 
-## Prerequisite (CLOSED)
+## Prerequisite (STRUCTURAL ONLY)
 
 One canonical endogenous two-field harness that simultaneously closes
 R1-R7 + R9 on both cycle-bearing and causal-DAG families.
@@ -11,9 +11,19 @@ R1-R7 + R9 on both cycle-bearing and causal-DAG families.
 **Result:** 9/9 on 3 cycle families + 8/9 on causal DAG (R8 gauge N/A).
 Source-scale gap closed (G_eff=0.4-0.6, retarded field steeper than 1/r).
 **Script:** `frontier_two_field_retarded_family_closure.py`
-**Caveat:** on irregular graph families the retained gravity rows are audited
-radial proxies (shell-radial, cross-checked against edge-radial spot checks),
-not exact lattice-coordinate force expectations.
+**Caveat:** after the two-sign audit, this prerequisite should be read as a
+structural interacting-field closure, not as evidence that the irregular graph
+families predict attractive gravity direction. On those families the retained
+sign rows are audited radial proxies and are not sign-selective.
+
+## Tier 0: Direction / Observable Gap
+
+### 0. Derive or Select the Coupling Sign
+Show that the attractive sign is required by the staggered / Dirac structure,
+or find one graph-native irregular observable that actually distinguishes
+attractive from repulsive coupling.
+**Status:** OPEN. The two-sign comparison shows current irregular shell/edge
+measures are not sign-selective.
 
 ## Tier 1: Emergent Geometry (Nature-level)
 
@@ -79,4 +89,5 @@ Derive the axioms from a complexity-minimization principle.
 
 ### 11. User's Breakthrough Target
 One canonical endogenous two-field on cycle + DAG. All 9 rows.
-**Status:** CLOSED (9/9 + 8/9)
+**Status:** STRUCTURALLY CLOSED (9/9 + 8/9), but not yet a directional-gravity
+closure because the irregular sign rows are not sign-selective.

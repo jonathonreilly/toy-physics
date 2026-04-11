@@ -29,9 +29,11 @@ families, plus a causal DAG operating-point check:
 - layered cycle
 - causal DAG (`R8` gauge structurally N/A)
 
-**Measurement note:** on these irregular graph families, the gravity rows use
-the audited shell-radial proxy from the retained graph batteries rather than
-the exact lattice-coordinate force used on the cubic canonical card.
+**Measurement note:** on these irregular graph families, the sign rows use the
+audited shell-radial proxy from the retained graph batteries rather than the
+exact lattice-coordinate force used on the cubic canonical card. The later
+two-sign audit shows these irregular sign measures are not sign-selective, so
+they should not be promoted as evidence that attraction is dynamically chosen.
 
 ## Battery Results
 
@@ -66,6 +68,9 @@ probe.
 - This probe shows that a family-conditioned closure loop can lift the
   `R7` gate while keeping the other rows intact, and can do so on both the
   cycle-bearing families and a causal DAG operating point.
+- The two-sign audit narrows the interpretation: the irregular sign rows are
+  structural field-profile diagnostics, not proof that the architecture
+  predicts attraction on these graph families.
 - The remaining open question is whether the same closure recipe can be
   turned into a single retained canonical harness without losing the force
   battery or the graph-native gauge row.

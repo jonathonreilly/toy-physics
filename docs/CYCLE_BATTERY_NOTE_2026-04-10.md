@@ -25,15 +25,16 @@ battery on three cycle-bearing bipartite graph families:
 **Measurement note:** on these irregular graph families, `B4/B5/B7` use a
 radial shell-force proxy built from BFS-depth shell averages of `Φ`. This is
 not the exact lattice-coordinate force used by the canonical cubic card.
-After the gravity-sign audit, stronger probability-weighted shell and
-edge-radial spot checks were run and the sign stayed TOWARD on all three
-retained families.
+The later two-sign audit shows these irregular sign measures are not
+sign-selective: they can stay inward under both attractive and repulsive
+coupling because they are dominated by the source-centered `Φ` profile.
 
 ## What Works
 
-- **Radial gravity sign**: TOWARD on all retained families, all iterations.
-  The retained battery uses a shell-radial proxy; the audit confirms that an
-  edge-radial cross-check agrees in sign on these three admissible families.
+- **Radial field-profile sign**: inward on all retained families and iterations
+  under the prescribed attractive coupling. After the two-sign audit, this row
+  should be treated as a centered-field diagnostic, not as standalone evidence
+  that attraction is dynamically selected.
 - **Iterative backreaction**: density-sourced Φ re-solved each step, force
   stays positive across 15-20 iterations with exact norm.
 - **Native gauge**: persistent current J(A) with sin(A) modulation, measured
@@ -110,8 +111,9 @@ This is the first two-field endogenous gravity result in the project.
 2. **Force is primary** — no centroid rows. The centroid has a period-4
    oscillation on staggered periodic lattices.
 3. **Irregular-graph force is a proxy** — on these graph families the retained
-   sign rows are shell-radial proxies, not exact `F=-⟨∇Φ⟩`. Edge-radial spot
-   checks agree on the retained families, but the observable should still be
-   described as a radial proxy.
-4. **B9 is characterization, not pass/fail** — the gap is reported but
+   sign rows are shell-radial proxies, not exact `F=-⟨∇Φ⟩`.
+4. **Two-sign audit narrows the claim** — these sign rows do not distinguish
+   attractive from repulsive coupling and therefore should not be promoted as
+   evidence of gravitational direction.
+5. **B9 is characterization, not pass/fail** — the gap is reported but
    doesn't gate the battery.

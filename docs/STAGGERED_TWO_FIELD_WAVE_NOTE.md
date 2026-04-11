@@ -10,7 +10,8 @@ field relaxation update with a wave equation:
 
 `d²Φ/dt² = -c² (L + μ²) Φ + β |ψ|²`
 
-The matter field `ψ` still evolves by Crank-Nicolson under `V = -m Φ`. The
+The matter field `ψ` still evolves by Crank-Nicolson under the prescribed
+attractive coupling `V = -m Φ`. The
 current retained read is:
 
 - hard score `5/5` on all three retained cycle-bearing graph families
@@ -21,7 +22,7 @@ current retained read is:
 | Row | Random Geometric (36) | Growing (48) | Layered Cycle (24) |
 |-----|:---:|:---:|:---:|
 | W1 Φ responds | ✅ | ✅ | ✅ |
-| W2 Force TOWARD | 30/30 | 30/30 | 30/30 |
+| W2 Inward retained proxy | 30/30 | 30/30 | 30/30 |
 | W3 ψ norm | 1.1e-15 | 2.2e-16 | 2.2e-16 |
 | W4 Φ bounded | ✅ | ✅ | ✅ |
 | W6 Families | 3/3 | 3/3 | 3/3 |
@@ -35,14 +36,16 @@ current retained read is:
 | Growing | `1.0006` |
 | Layered cycle | `1.0028` |
 
-So the wave-field hardening closes the force/norm/family story cleanly, but it
-does **not** give universal contraction on this retained operating point.
+So the wave-field hardening closes the structural interaction / norm / family
+story cleanly, but it does **not** give universal contraction on this retained
+operating point.
 
 ## What This Proves
 
 - a separate scalar field `Φ` can have its own hyperbolic dynamics on the same
   admissible graph families
-- the coupled force stays TOWARD for every iteration on all retained families
+- the coupled retained proxy stays inward for every iteration on all retained
+  families under the prescribed attractive sign
 - the matter norm stays exact while `Φ` remains bounded
 - the state-family robustness seen in the static-potential and self-gravity
   probes survives the wave-field upgrade

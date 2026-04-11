@@ -4,7 +4,27 @@
 
 This backlog is ordered by value to the main project, not by ease.
 
-## P0 - Endogenous Field Closure
+## P0 - Sign Selection / Direction Observable
+
+- The two-sign comparison is now retained in
+  [`frontier_two_sign_comparison.py`](../scripts/frontier_two_sign_comparison.py)
+  and
+  [`TWO_SIGN_COMPARISON_NOTE_2026-04-10.md`](../docs/TWO_SIGN_COMPARISON_NOTE_2026-04-10.md):
+  on irregular graph families, the current shell-radial and edge-radial sign
+  measures are not sign-selective. Both attractive and repulsive coupling can
+  remain inward on those observables.
+- This makes the exact cubic card the only retained directional gravity result
+  in the current stack, because it uses the exact lattice-coordinate force
+  `F = -⟨dV/dx⟩`.
+- The next real fork is:
+  - derive the attractive sign from the staggered / Dirac structure, or
+  - freeze the irregular graph program as explicitly sign-agnostic
+- Acceptance gate:
+  either produce one graph-native irregular observable that distinguishes
+  coupling sign, or rewrite the program around structural interacting-field
+  results without directional gravity claims.
+
+## P1 - Endogenous Field Closure
 
 - Frozen narrow positive:
   [`frontier_staggered_backreaction_green_closure.py`](../scripts/frontier_staggered_backreaction_green_closure.py)
@@ -59,7 +79,8 @@ This backlog is ordered by value to the main project, not by ease.
   [`GRAVITY_SIGN_AUDIT_2026-04-10.md`](../docs/GRAVITY_SIGN_AUDIT_2026-04-10.md):
   exact lattice force remains the standard on the canonical card, while the
   irregular-graph batteries are now explicitly treated as audited radial
-  proxies cross-checked against stronger edge-radial diagnostics.
+  proxies that do not by themselves distinguish attractive from repulsive
+  coupling.
 - The sparse layered DAG-like family remains a useful negative control; it
   still fails the gauge/current threshold.
 - The main blocker is no longer transport portability. It is self-consistent
@@ -81,10 +102,10 @@ This backlog is ordered by value to the main project, not by ease.
   sibling. Do not blur that distinction.
 - Acceptance gate:
   preserve the retained `resistance_yukawa` closure level while reducing the
-  one-step self-refresh gap, without losing TOWARD sign, source linearity,
-  exact additivity, or norm stability.
+  one-step self-refresh gap, while preserving source linearity, exact
+  additivity, norm stability, and the current structural interaction battery.
 
-## P1 - Native Gauge Holdout on Layered Graphs
+## P2 - Native Gauge Holdout on Layered Graphs
 
 - [`frontier_staggered_graph_gauge_closure.py`](../scripts/frontier_staggered_graph_gauge_closure.py)
   closes native gauge/current on the cycle-bearing stress families.
@@ -96,7 +117,7 @@ This backlog is ordered by value to the main project, not by ease.
 - Stay on the same graph-native staggered transport law. No 1D helpers or proxy
   substitutions.
 
-## P2 - Shell / Spectral Diagnostics for the Source Sector
+## P3 - Shell / Spectral Diagnostics for the Source Sector
 
 - Compare `phi_solved(depth)` against `phi_ext(depth)` directly on one
   cycle-bearing family and one layered family.
@@ -106,19 +127,19 @@ This backlog is ordered by value to the main project, not by ease.
   - a genuinely nonlinear iterative source sector
   - or a graph-family-specific normalization rule
 
-## P3 - Graph-Dirac Design
+## P4 - Graph-Dirac Design
 
 - Write down the graph invariants the staggered lane actually needs.
 - Separate "bipartite", "layered", "cycle-bearing", and "DAG-compatible" as
   explicit architectural constraints.
 - Identify which graph families are structurally incompatible before coding.
 
-## P4 - Documentation Hygiene
+## P5 - Documentation Hygiene
 
 - Keep the force-based staggered card separate from the repo-wide centroid card.
 - Keep the exact lattice-force card separate from the irregular-graph
   shell-radial proxy batteries, and do not describe the latter as exact
-  coordinate-force expectations.
+  coordinate-force expectations or as sign-selection evidence.
 - Keep the portability probe separate from the canonical card.
 - Preserve the full-suite baseline as `29/38` in 1D and `28/38` in 3D.
 - Tighten the staggered card doc so the semantic differences table fully matches
@@ -129,6 +150,7 @@ This backlog is ordered by value to the main project, not by ease.
 - A portability result is promotable only if it stays honest across graph
   family changes, not just on one retained graph.
 - Backreaction is promotable only if the force rows survive with an endogenous
-  `Phi`.
+  `Phi`, and any directional claim on irregular graphs must use a
+  sign-selective observable rather than the current shell/edge proxies.
 - A design memo is promotable only if it lists the required graph invariants
   and failure modes concretely enough to guide implementation.

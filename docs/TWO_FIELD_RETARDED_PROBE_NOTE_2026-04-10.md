@@ -19,11 +19,11 @@ cycle-bearing bipartite families:
 - growing
 - layered cycle
 
-**Measurement note:** on these irregular graph families, the gravity rows use
-the same BFS-depth shell-radial proxy as the cycle battery, not the exact
-lattice-coordinate force from the cubic canonical card. A later gravity-sign
-audit found the proxy sign agrees with a stronger edge-radial check on the
-retained admissible families.
+**Measurement note:** on these irregular graph families, the sign rows use the
+same BFS-depth shell-radial proxy as the cycle battery, not the exact
+lattice-coordinate force from the cubic canonical card. The later two-sign
+audit shows these irregular sign measures are not sign-selective and therefore
+cannot by themselves support an attractive-gravity claim.
 
 ## Battery Results
 
@@ -41,9 +41,9 @@ retained admissible families.
 
 ## What Holds
 
-- Radial gravity stays TOWARD on the main coupled trajectory for all three
-  families. This is a shell-radial proxy, cross-checked in sign against a
-  stronger edge-radial diagnostic on the retained admissible families.
+- The coupled trajectory stays inward under the prescribed attractive sign on
+  all three families, but the two-sign audit shows this is a field-profile
+  diagnostic rather than standalone evidence of attractive gravity.
 - Linearity and additivity remain machine-clean.
 - Norm stays machine-clean.
 - Native gauge closure still lands on actual graph cycles.
@@ -68,5 +68,5 @@ The retained takeaway is narrower than the wave prototype:
 - graph-native causal memory is viable
 - the force battery stays intact on the main coupled evolution
 - sector robustness remains the next blocker
-- on irregular graphs, the current sign claim is about an audited radial proxy,
-  not an exact coordinate-force expectation
+- on irregular graphs, the current sign rows are about an audited radial proxy,
+  not an exact coordinate-force expectation or a sign-selection result

@@ -10,11 +10,12 @@ retained self-gravity dynamics across graph size on admissible staggered graph
 families and reports three things per case:
 
 - final width ratio `w_self / w_free`
-- force-sign stability across iterations
+- inward-sign stability across iterations under the prescribed attractive coupling
 - norm drift
 
-The retained question is not whether force is inward. It is whether the
-contraction survives as the graph gets larger.
+After the two-sign audit, the retained question is not whether the irregular
+proxy reads inward. It is whether the contraction survives as the graph gets
+larger under the prescribed attractive coupling.
 
 ## Sweep Results
 
@@ -43,7 +44,7 @@ contraction survives as the graph gets larger.
 
 ## Readout
 
-- **Force sign stability** is strong on growing and layered-cycle families.
+- **Inward proxy stability** is strong on growing and layered-cycle families.
 - **Norm** stays machine-clean everywhere.
 - **Contraction** is topology-sensitive:
   - layered cycle contracts strongly and consistently
