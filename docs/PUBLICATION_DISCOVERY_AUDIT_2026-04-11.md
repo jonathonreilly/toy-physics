@@ -51,6 +51,7 @@ The repo currently contains four different classes of publication material:
 - endogenous self-gravity contraction
 - bounded two-field wave coupling
 - causal DAG compatibility
+- bounded fixed-adjacency branch-superposition result in 2D
 
 **Current strongest package**
 
@@ -64,18 +65,22 @@ The repo currently contains four different classes of publication material:
 - retarded/hybrid family closure
 - source-scale closure via `G_eff`
 - topology-dependent onset fits
+- branch-superposition remains fixed-adjacency field branching, not topology superposition
 
 **What should not be overclaimed**
 
 - off-lattice attraction is not yet derived
 - irregular graph sign rows remain audited radial proxies
 - the endogenous same-surface directional probe is still a blocker
+- the simple single-particle entropy probe is not a holographic / area-law result
 
 **Verdict**
 
 - strongest current paper package in the repo
 - strong enough for a main architecture paper plus one or two methodology
   companions
+- the new bounded branch-superposition result is worth preserving inside that package
+- the entropy null result is worth preserving as a negative control against overclaiming holography
 
 ### 2. Coin / Chiral / Dirac-Walk Lane
 
