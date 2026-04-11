@@ -2,11 +2,11 @@
 
 **Date:** 2026-04-11  
 **Lane:** staggered bounded side probe  
-**Status:** bounded-retained proxy result with explicit caveats
+**Status:** bounded-retained structured-curvature proxy with explicit caveats
 
 ## Bottom line
 
-On the screened `10x10` periodic staggered torus, the **potential-weighted**
+On the audited `10x10` periodic staggered torus, the **potential-weighted**
 Ollivier curvature observable shows a strong edgewise relation
 
 - `Delta_kappa ~ G * T`
@@ -15,6 +15,8 @@ after the validated wraparound-weight bug is fixed in the lane-local runners.
 
 What survives:
 
+- the signal survives both the screened run (`mu^2 = 0.22`) and the
+  low-screening rerun (`mu^2 = 0.001`)
 - the signal is **not** reproduced by random-`Phi` controls matched in mean/std
 - the signal is **not** reproduced by shuffled self-consistent `Phi`
 - the relation is stable across `G = 1, 5, 10, 20, 50`
@@ -24,9 +26,12 @@ What does **not** survive:
 - the density-weighted and combined curvature definitions do **not** show a
   comparably strong relation
 - the result does **not** justify a direct “Einstein equation derived” claim
-- dynamic backreaction is only **partially** isolated, because a fixed
-  `Phi` sourced by the initial packet reproduces an increasing fraction of the
-  same signal and is essentially indistinguishable at `G = 50`
+- dynamic backreaction is only **partially** isolated, because both a fixed
+  `Phi` sourced by the initial packet and a smooth shell-averaged `Phi`
+  reproduce a large fraction of the same signal
+- in the low-screening run, the shell-averaged control is nearly identical to
+  the self-consistent result, so the strongest honest read is
+  **structured-curvature proxy**, not Einstein-equation closure
 
 ## Audited runners
 
@@ -38,7 +43,7 @@ periodic wraparound hopping weights before rerun.
 
 ## Rerun summary
 
-### Main runner
+### Screened run (`mu^2 = 0.22`)
 
 Using the corrected periodic metric, the three curvature definitions give:
 
@@ -48,7 +53,7 @@ Using the corrected periodic metric, the three curvature definitions give:
 
 So the lane only works on the **potential-weighted** metric construction.
 
-### Controls
+### Screened controls (`mu^2 = 0.22`)
 
 For the same corrected surface, the control runner gives mean
 `R^2(Delta_kappa, G*T)` across `G = 1, 5, 10, 20, 50`:
@@ -64,42 +69,72 @@ Interpretation:
   “any matched variance potential works” artifact
 - a **structured fixed** `Phi` sourced by the initial packet carries a real
   part of the same signal, and this share grows with `G`
-- therefore the clean statement is:
+- therefore the clean screened statement is:
 
 > the potential-weighted Ollivier observable is a **bounded linearized
 > curvature-density proxy** on this surface, with dynamic self-consistency
 > helping at weak/moderate coupling but not uniquely determining the strong
 > coupling result
 
+### Low-screening rerun (`mu^2 = 0.001`)
+
+The dedicated low-screening runner gives:
+
+- `self_consistent`: mean `R^2(Delta_kappa, G*T) = 0.9990`
+- `random_matched`: mean `R^2 = 0.0014`
+- random-control separation: `698.8x`
+
+So the proxy clearly survives the move to a long screening length.
+
+### Low-screening structured controls (`mu^2 = 0.001`)
+
+Running the full control battery at the same `mu^2` gives mean
+`R^2(Delta_kappa, G*T)`:
+
+- `self_consistent`: `0.9990`
+- `static_initial`: `0.4656`
+- `shell_averaged`: `0.9935`
+- `random_matched`: `0.0014`
+- `shuffled`: `0.0020`
+
+Interpretation:
+
+- unscreening does **not** kill the proxy
+- random/shuffled controls still collapse decisively
+- but a smooth shell-averaged field almost perfectly reproduces the signal
+- therefore the low-screening rerun strengthens the claim that this is a real
+  **structured curvature proxy**, while weakening any claim that the exact
+  self-consistent update is uniquely responsible for it
+
 ## Why this is bounded, not headline
 
 This lane still has several important caveats:
 
-- it lives on a screened (`mu^2 = 0.22`) periodic torus
+- it still lives on a periodic staggered torus
 - it uses an **effective metric definition** `d_eff = 1 + Phi_avg + offset`,
   not a standard graph-geometric Einstein derivation
 - the successful signal is method-specific
-- the static-initial control shows that “structured positive potential” already
-  explains a substantial part of the effect
-- there is no open-boundary / unscreened / Wilson cross-check yet
+- the low-screening rerun shows that **smooth structured controls** already
+  explain almost all of the effect on this surface
+- there is still no open-boundary / Wilson cross-check for this observable
 
 ## Honest retained claim
 
 The retainable claim is:
 
 > On the audited screened periodic staggered torus, a **potential-weighted
-> Ollivier curvature proxy** tracks `G*T` strongly and decisively beats
-> random/shuffled controls, but it remains a **bounded proxy result** rather
-> than an Einstein-equation derivation because the signal is method-specific
-> and a static initial-source potential reproduces an increasing fraction of it.
+> Ollivier curvature proxy** tracks `G*T` strongly. The same proxy survives in
+> the low-screening regime and decisively beats random/shuffled controls, but
+> it remains a **bounded structured-curvature proxy** rather than an
+> Einstein-equation derivation because the signal is method-specific and a
+> shell-averaged structured potential reproduces almost all of it.
 
 ## What needs further work
 
 Before any stronger claim, this lane needs:
 
-1. an unscreened / low-`mu^2` rerun of the same proxy
-2. an open-boundary or Wilson-style comparison surface
-3. a control that preserves smooth radial structure but breaks the exact
-   self-consistent update
-4. a justification for why the potential-weighted Ollivier metric should be the
+1. an open-boundary or Wilson-style comparison surface
+2. a nontrivial structured control that is smoother than random but less tied
+   to the final self-consistent profile than shell averaging
+3. a justification for why the potential-weighted Ollivier metric should be the
    physically preferred curvature observable here
