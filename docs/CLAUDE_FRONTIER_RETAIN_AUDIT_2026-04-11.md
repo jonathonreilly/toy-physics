@@ -112,6 +112,27 @@ Retention boundary:
 - they should move with their runner/note pairs, not as standalone control-plane
   prose
 
+### 6B. Bounded staggered self-consistent two-body force companion
+
+Keep:
+
+- [STAGGERED_SELF_CONSISTENT_TWO_BODY_NOTE_2026-04-11.md](STAGGERED_SELF_CONSISTENT_TWO_BODY_NOTE_2026-04-11.md)
+- [scripts/frontier_staggered_self_consistent_two_body.py](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_staggered_self_consistent_two_body.py)
+
+Why:
+
+- this is a real primary-architecture positive beyond external-source forcing
+- the exact partner-only force channel reruns cleanly with a near-Newton
+  distance law on the calibrated open-cubic surface
+- the note is already honest that the trajectory channel is still noisy and
+  that this does not close both-masses or full staggered Newton
+
+Retention boundary:
+
+- force-led, not trajectory-closed
+- calibrated open-cubic surface only
+- not a retained both-masses law
+
 ### 7. Corrected periodic-2D rerun surface
 
 Keep:
@@ -131,6 +152,20 @@ Why:
   finite Anderson-vs-disorder window
 - the Born-rule alpha lane is worth preserving only as a corrected negative /
   boundary-of-validity marker, not as a measurement-theory derivation
+
+### 7B. Unscreened periodic Anderson companion
+
+Keep:
+
+- [ANDERSON_PHASE_MU2_0001_NOTE_2026-04-11.md](ANDERSON_PHASE_MU2_0001_NOTE_2026-04-11.md)
+- [scripts/frontier_anderson_phase_unscreened_periodic.py](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_anderson_phase_unscreened_periodic.py)
+
+Why:
+
+- the unscreened rerun reproduces the note cleanly
+- it preserves the corrected periodic torus lane while clarifying that the
+  disorder separation changes character under unscreening
+- it remains careful about sign being a weak discriminator on this surface
 
 ### 8. Bounded Ollivier curvature proxy
 

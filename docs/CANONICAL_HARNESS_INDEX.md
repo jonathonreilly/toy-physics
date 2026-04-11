@@ -41,17 +41,20 @@ Bounded primary-architecture companions:
 - [`scripts/frontier_staggered_newton_reproduction.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_staggered_newton_reproduction.py)
 - [`scripts/frontier_staggered_newton_blocking_sensitivity.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_staggered_newton_blocking_sensitivity.py)
 - [`scripts/frontier_staggered_3d_self_gravity_sign.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_staggered_3d_self_gravity_sign.py)
+- [`scripts/frontier_staggered_self_consistent_two_body.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_staggered_self_consistent_two_body.py)
 
 Companion notes:
 
 - [`docs/STAGGERED_NEWTON_REPRODUCTION_NOTE_2026-04-11.md`](STAGGERED_NEWTON_REPRODUCTION_NOTE_2026-04-11.md)
 - [`docs/STAGGERED_NEWTON_BLOCKING_SENSITIVITY_NOTE_2026-04-11.md`](STAGGERED_NEWTON_BLOCKING_SENSITIVITY_NOTE_2026-04-11.md)
 - [`docs/STAGGERED_3D_SELF_GRAVITY_SIGN_NOTE_2026-04-11.md`](STAGGERED_3D_SELF_GRAVITY_SIGN_NOTE_2026-04-11.md)
+- [`docs/STAGGERED_SELF_CONSISTENT_TWO_BODY_NOTE_2026-04-11.md`](STAGGERED_SELF_CONSISTENT_TWO_BODY_NOTE_2026-04-11.md)
 
 Reading boundary:
 
 - these are the right reruns when you need the open-cubic trajectory story
   on the primary staggered architecture
+- the self-consistent two-body companion is force-led, not trajectory-closed
 - they are bounded open-cubic companions, not full both-masses closure
 
 ## 2. Retained Irregular-Graph Structural Surface
@@ -93,12 +96,14 @@ claim:
 - [`scripts/frontier_irregular_directional_observable.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_irregular_directional_observable.py)
 - [`scripts/frontier_two_sign_comparison.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_two_sign_comparison.py)
 - [`scripts/frontier_weak_coupling_retained.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_weak_coupling_retained.py)
+- [`scripts/frontier_anderson_phase_unscreened_periodic.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_anderson_phase_unscreened_periodic.py)
 
 Key notes:
 
 - [`docs/IRREGULAR_DIRECTIONAL_OBSERVABLE_NOTE_2026-04-11.md`](IRREGULAR_DIRECTIONAL_OBSERVABLE_NOTE_2026-04-11.md)
 - [`docs/TWO_SIGN_COMPARISON_NOTE_2026-04-10.md`](TWO_SIGN_COMPARISON_NOTE_2026-04-10.md)
 - [`docs/WEAK_COUPLING_RETENTION_NOTE_2026-04-11.md`](WEAK_COUPLING_RETENTION_NOTE_2026-04-11.md)
+- [`docs/ANDERSON_PHASE_MU2_0001_NOTE_2026-04-11.md`](ANDERSON_PHASE_MU2_0001_NOTE_2026-04-11.md)
 
 ## 4. Bounded Side Probes
 

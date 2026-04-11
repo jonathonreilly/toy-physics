@@ -58,6 +58,7 @@ The repo currently contains four different classes of publication material:
 - bounded weak-coupling irregular-graph sign-sensitive regime on stable shell metrics
 - bounded open-cubic staggered trajectory Newton reproduction, with a blocking-sensitivity companion showing the near-Newton exponent is not a one-off `2x2x2` artifact
 - bounded 3D staggered blocked-envelope self-gravity contraction, with an explicit negative sign-flip companion result on the same centered surface
+- bounded open-cubic staggered self-consistent two-body **partner-force** channel with a near-Newton distance law on the calibrated surface
 
 **Current strongest package**
 
@@ -72,6 +73,7 @@ The repo currently contains four different classes of publication material:
 - source-scale closure via `G_eff`
 - topology-dependent onset fits
 - the open-cubic staggered trajectory companions are bounded cubic-surface results, not architecture-wide or graph-family closures
+- the self-consistent two-body staggered companion is force-led and calibrated; it does not close trajectory-level two-body gravity or both-masses closure
 - branch-superposition remains fixed-adjacency field branching, not topology superposition
 - boundary-law scaling itself is generic for gapped free fermions; the nontrivial content here is the retained coefficient shift and robustness under the audited surface
 - memory result is still exploratory and protocol-sensitive; the later `mu^2` / geometry sweep (`MEMORY_MU2_GEOMETRY_SWEEP_NOTE_2026-04-11.md`) shows the size-fragility is not purely Yukawa-range driven, so it should stay out of any positive paper claim
@@ -79,6 +81,7 @@ The repo currently contains four different classes of publication material:
 - tripartite branch-mediated entanglement is not a multipartite BMV witness and is now read as W-type rather than GHZ-type
 - weak-coupling retention does not close broader off-lattice directional gravity outside the low-`G` window
 - Anderson-vs-gravity distinction is strongest in a finite perturbative window and not uniform across sizes
+- the unscreened periodic Anderson companion strengthens the numerical separation but changes the interpretation into a low-variance low-`alpha` offset, so it remains a bounded torus-surface diagnostic
 - eigenvalue statistics currently support a clean negative “no chaos transition” result, not a dynamical criticality claim
 - the Ollivier `Delta_kappa ~ G*T` lane is now retained only as a **bounded
   potential-weighted curvature proxy** on the screened periodic torus; it
