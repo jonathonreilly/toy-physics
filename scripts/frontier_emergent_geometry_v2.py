@@ -149,7 +149,15 @@ def measure_d_eff(pos, adj, n):
 
 
 def force_battery_on_grown(pos, col, adj, psi, G_self):
-    """Quick force battery: does the grown graph support TOWARD gravity?"""
+    """Quick force audit on the grown graph.
+
+    Returns three radial-force variants:
+      - shell_mean: legacy shell-averaged proxy used in early probes
+      - shell_prob: shell-gradient weighted by total shell probability
+      - edge_radial: edge-based radial gradient weighted by local probability
+
+    The last two are the defensible observables on highly nonuniform graphs.
+    """
     n = len(pos); d_dim = pos.shape[1]
     center = np.mean(pos, axis=0); dists = np.sqrt(np.sum((pos-center)**2, axis=1))
     src = np.argmin(dists)
@@ -174,21 +182,53 @@ def force_battery_on_grown(pos, col, adj, psi, G_self):
         for j in adj_l.get(i, []):
             if depth[j] == np.inf: depth[j] = depth[i]+1; q.append(j)
     max_d = int(np.max(depth[np.isfinite(depth)]))
-    if max_d <= 0: return 0, False
+    if max_d <= 0:
+        return {"shell_mean": 0.0, "shell_prob": 0.0, "edge_radial": 0.0, "toward": False}
 
-    ps = np.zeros(max_d+1); rs = np.zeros(max_d+1); cnt = np.zeros(max_d+1)
+    ps = np.zeros(max_d+1); rs_mean = np.zeros(max_d+1); rs_prob = np.zeros(max_d+1); cnt = np.zeros(max_d+1)
     for i in range(n):
         d_ = int(depth[i]) if np.isfinite(depth[i]) else -1
-        if 0 <= d_ <= max_d: ps[d_] += phi[i]; rs[d_] += rho[i]; cnt[d_] += 1
+        if 0 <= d_ <= max_d:
+            ps[d_] += phi[i]
+            rs_mean[d_] += rho[i]
+            rs_prob[d_] += rho[i]
+            cnt[d_] += 1
     for d_ in range(max_d+1):
-        if cnt[d_] > 0: ps[d_] /= cnt[d_]; rs[d_] /= cnt[d_]
+        if cnt[d_] > 0:
+            ps[d_] /= cnt[d_]
+            rs_mean[d_] /= cnt[d_]
     grad = np.zeros(max_d+1)
     for d_ in range(max_d+1):
         if d_ == 0: grad[d_] = ps[0] - ps[min(1,max_d)]
         elif d_ == max_d: grad[d_] = ps[d_-1] - ps[d_]
         else: grad[d_] = 0.5*(ps[d_-1] - ps[d_+1])
-    F = float(np.sum(rs * grad))
-    return F, F > 0
+    shell_mean = float(np.sum(rs_mean * grad))
+    shell_prob = float(np.sum(rs_prob * grad))
+
+    edge_radial = 0.0
+    rho_n = rho / np.sum(rho)
+    for i, nbs in adj_l.items():
+        di = int(depth[i]) if np.isfinite(depth[i]) else -1
+        for j in nbs:
+            if i >= j:
+                continue
+            dj = int(depth[j]) if np.isfinite(depth[j]) else -1
+            dd = dj - di
+            if dd == 0:
+                continue
+            sign = 1.0 if dd > 0 else -1.0
+            d = math.sqrt(sum((pos[j,d_]-pos[i,d_])**2 for d_ in range(d_dim)))
+            w = 1./max(d, 0.3)
+            edge_radial += 0.5 * (rho_n[i] + rho_n[j]) * w * (phi[i] - phi[j]) * sign
+
+    # Require the probability-weighted and edge-based observables to agree.
+    toward = shell_prob > 0 and edge_radial > 0
+    return {
+        "shell_mean": shell_mean,
+        "shell_prob": shell_prob,
+        "edge_radial": float(edge_radial),
+        "toward": toward,
+    }
 
 
 if __name__ == '__main__':
@@ -240,9 +280,13 @@ if __name__ == '__main__':
     print("\n--- Q3: Force Battery on Grown Graph ---")
     for G in [25, 50, 100]:
         pos_g, col_g, adj_g, psi_g = grow_graph(100, G_self=G, seed=42)
-        F, toward = force_battery_on_grown(pos_g, col_g, adj_g, psi_g, G)
+        out = force_battery_on_grown(pos_g, col_g, adj_g, psi_g, G)
         norm = np.linalg.norm(psi_g)
-        print(f"  G={G:4d}: F={F:+.4e} {'TOWARD' if toward else 'AWAY'}, |psi|={norm:.6f}")
+        print(
+            f"  G={G:4d}: shell_mean={out['shell_mean']:+.4e}, "
+            f"shell_prob={out['shell_prob']:+.4e}, edge_radial={out['edge_radial']:+.4e} "
+            f"{'ROBUST_TOWARD' if out['toward'] else 'MIXED/AWAY'}, |psi|={norm:.6f}"
+        )
 
     # Q4: Can we get d_eff = 3 from 3D seed?
     print("\n--- Q4: 3D Seed → d_eff=3? ---")
