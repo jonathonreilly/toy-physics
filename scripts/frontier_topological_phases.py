@@ -475,13 +475,14 @@ def main():
 
     n_for = len(evidence_for)
     if n_for >= 3:
-        print("STRONG EVIDENCE: Self-gravity drives topological phase transition")
+        print("CANDIDATE TRANSITION: self-gravity drives a topological edge-mode change")
+        print("Compare against frontier_topological_control.py before promotion.")
     elif n_for >= 2:
-        print("MODERATE EVIDENCE: Self-gravity partially disrupts topology")
+        print("EXPLORATORY: self-gravity partially disrupts topology")
     elif n_for >= 1:
-        print("WEAK EVIDENCE: Some signatures but inconclusive")
+        print("WEAK EVIDENCE: some signatures but inconclusive")
     else:
-        print("NO EVIDENCE: Self-gravity does not affect the topological phase")
+        print("NO EVIDENCE: self-gravity does not affect the topological phase")
 
     print()
     print("DONE")

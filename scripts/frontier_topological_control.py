@@ -526,16 +526,21 @@ def main():
     elif g_trans_disorder is not None and g_trans_gravity == g_trans_disorder:
         print("GENERIC TRANSITION: Self-gravity and matched disorder destroy edge modes")
         print("at the same threshold.  The topological transition is driven by the")
-        print("VARIANCE of the on-site potential, not by gravitational self-consistency.")
+        print("variance of the on-site potential, not by gravitational self-consistency.")
     elif g_trans_disorder is not None and g_trans_gravity != g_trans_disorder:
         print("DIFFERENT THRESHOLDS: gravity at G=%.2f, disorder at G=%.2f" % (
             g_trans_gravity, g_trans_disorder))
         print("Self-gravity has a distinct effect beyond matched disorder strength.")
     else:
-        print("GRAVITY-SPECIFIC TRANSITION: Self-gravity destroys edge modes at G=%.2f"
+        print("GRAVITY-SPECIFIC EDGE-MODE TRANSITION: Self-gravity destroys edge modes at G=%.2f"
               % g_trans_gravity)
         print("but matched random disorder does NOT.  The spatial structure or")
         print("self-consistency of the gravitational potential matters.")
+
+    print()
+    print("Lane state: exploratory-reopen on the audited parity-coupled SSH surface.")
+    print("The gravity-specific edge-mode signal survives the matched-disorder control,")
+    print("but the broader topology claim should stay constrained to this audited surface.")
 
     print()
     print("DONE")
