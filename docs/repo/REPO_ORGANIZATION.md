@@ -30,6 +30,8 @@ still landing. The fix is a stable control plane:
   - retained notes, synthesis notes, audits, backlogs, and historical writeups
 - `docs/repo/`
   - navigation/control-plane docs added specifically to keep the repo usable
+- `docs/lanes/`
+  - lane-level manifests for the whole repo
 - `outputs/`, `logs/`
   - run artifacts and transient output
 
@@ -47,6 +49,8 @@ still landing. The fix is a stable control plane:
   - partially positive but not yet promoted
 - `historical-control`
   - useful for comparison, methodology, or negative controls
+- `historical-retained`
+  - older retained major program still worth navigating directly
 - `historical-bounded`
   - scientifically useful but no longer current flagship
 - `historical-blocked`
@@ -55,13 +59,17 @@ still landing. The fix is a stable control plane:
 ## Navigation Files
 
 - [`docs/repo/LANE_STATUS_BOARD.md`](LANE_STATUS_BOARD.md)
-  - where each lane sits now
+  - where each lane across the whole repo sits now
 - [`docs/CANONICAL_HARNESS_INDEX.md`](../CANONICAL_HARNESS_INDEX.md)
   - which scripts to rerun first
+- [`docs/lanes/README.md`](../lanes/README.md)
+  - lane-by-lane manifests for the full repo
 - [`docs/repo/RETEST_PLAYBOOK.md`](RETEST_PLAYBOOK.md)
   - how to handle runner bugs or claim changes
 - [`docs/repo/LANE_REGISTRY.yaml`](LANE_REGISTRY.yaml)
   - machine-readable registry for automation and future tooling
+- [`docs/repo/ROOT_FILE_GUIDE.md`](ROOT_FILE_GUIDE.md)
+  - what the remaining top-level files are
 
 ## File-Naming Rules Going Forward
 
@@ -70,6 +78,8 @@ still landing. The fix is a stable control plane:
   - `frontier_staggered_*`
   - `frontier_two_field_*`
   - `frontier_emergent_geometry_*`
+- Historical lanes should not be renamed just to fit the current taxonomy.
+  They should be indexed in the lane board and registry instead.
 - New retained notes should be explicit about the runner they interpret.
 - New strategy or synthesis notes should not silently replace retained notes.
 - If a lane is historical, mark that in the lane board and registry instead of

@@ -3,8 +3,12 @@
 **Date:** 2026-04-11  
 **Purpose:** current retained runner map
 
-This file is intentionally shorter than the historical version. It lists the
-current runners people should actually use first, grouped by lane.
+This file is intentionally organized in two layers:
+
+- current default reruns
+- whole-repo historical retained entrypoints
+
+That keeps the current program readable without losing the rest of `main`.
 
 For lane status, use:
 
@@ -13,6 +17,10 @@ For lane status, use:
 For retest workflow, use:
 
 - [`docs/repo/RETEST_PLAYBOOK.md`](repo/RETEST_PLAYBOOK.md)
+
+For lane-by-lane repo organization, use:
+
+- [`docs/lanes/README.md`](lanes/README.md)
 
 ## 1. Primary Retained Surface
 
@@ -72,20 +80,38 @@ Key note:
 
 ## 5. Historical / Legacy Entrypoints
 
-Use these only if you are intentionally revisiting older lanes:
+Use these when you are intentionally revisiting older lanes on `main`:
 
 - mirror / exact geometry:
   - [`docs/UNIFIED_PROGRAM_NOTE.md`](UNIFIED_PROGRAM_NOTE.md)
   - [`scripts/mirror_2d_validation.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/mirror_2d_validation.py)
+- ordered lattice / dense spent-delay:
+  - [`docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md`](LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md)
+  - [`scripts/lattice_3d_dense_10prop.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/lattice_3d_dense_10prop.py)
+  - [`scripts/lattice_3d_dense_window_extension.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/lattice_3d_dense_window_extension.py)
+- nearest-neighbor refinement:
+  - [`docs/CONTINUUM_BRIDGE_NOTE.md`](CONTINUUM_BRIDGE_NOTE.md)
+  - [`scripts/lattice_nn_continuum.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/lattice_nn_continuum.py)
+  - [`scripts/lattice_nn_deterministic_rescale.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/lattice_nn_deterministic_rescale.py)
+- structured chokepoint / generated-symmetry bridge:
+  - [`docs/STRUCTURED_CHOKEPOINT_BRIDGE_NOTE.md`](STRUCTURED_CHOKEPOINT_BRIDGE_NOTE.md)
+  - [`scripts/structured_chokepoint_bridge.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/structured_chokepoint_bridge.py)
+  - [`scripts/structured_chokepoint_bridge_extension.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/structured_chokepoint_bridge_extension.py)
 - ordered lattice / action-power / valley-linear:
   - [`docs/ACTION_ARCHITECTURE_MATRIX_NOTE.md`](ACTION_ARCHITECTURE_MATRIX_NOTE.md)
   - [`scripts/frontier_3plus1d_closure_card.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_3plus1d_closure_card.py)
+- dimension-dependent kernel:
+  - [`docs/DIMENSIONAL_GRAVITY_TABLE.md`](DIMENSIONAL_GRAVITY_TABLE.md)
+  - [`scripts/frontier_dimension_dependent_kernel.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_dimension_dependent_kernel.py)
 - coin / chiral lane:
   - [`docs/CHIRAL_WALK_SYNTHESIS_2026-04-09.md`](CHIRAL_WALK_SYNTHESIS_2026-04-09.md)
   - [`scripts/frontier_chiral_bottleneck_card.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_chiral_bottleneck_card.py)
 - generated geometry / Gate B:
   - [`docs/GATE_B_GROWN_JOINT_PACKAGE_NOTE.md`](GATE_B_GROWN_JOINT_PACKAGE_NOTE.md)
   - [`scripts/gate_b_grown_joint_package.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/gate_b_grown_joint_package.py)
+- moonshots / horizon:
+  - [`docs/NATURE_BACKLOG_2026-04-10.md`](NATURE_BACKLOG_2026-04-10.md)
+  - [`scripts/frontier_emergent_schwarzschild.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_emergent_schwarzschild.py)
 
 ## Reading Rule
 

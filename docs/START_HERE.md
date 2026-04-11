@@ -10,16 +10,19 @@ way in is:
    [`docs/repo/LANE_STATUS_BOARD.md`](repo/LANE_STATUS_BOARD.md)
 2. Read the repo organization layer:
    [`docs/repo/REPO_ORGANIZATION.md`](repo/REPO_ORGANIZATION.md)
-3. Read the retained runner map:
+3. Read the lane manifests:
+   [`docs/lanes/README.md`](lanes/README.md)
+4. Read the retained runner map:
    [`docs/CANONICAL_HARNESS_INDEX.md`](CANONICAL_HARNESS_INDEX.md)
-4. Read the bug / rerun workflow:
+5. Read the bug / rerun workflow:
    [`docs/repo/RETEST_PLAYBOOK.md`](repo/RETEST_PLAYBOOK.md)
-5. Then read the current retained science state:
+6. Then read the current retained science state:
    [`docs/FULL_TEST_MATRIX_2026-04-10.md`](FULL_TEST_MATRIX_2026-04-10.md)
 
 ## Current Program Reality
 
-The repo has one clear primary lane:
+The repo has one clear primary lane, but `main` also contains several major
+historical retained programs.
 
 - **Primary retained lane:** staggered fermion with corrected parity coupling
 - **Cleanest directional result:** exact lattice-force canonical card
@@ -34,6 +37,23 @@ The repo has one clear primary lane:
 The older mirror / ordered-lattice / action / coin-walk programs are still in
 the repo and still scientifically useful, but they are no longer the current
 navigation baseline. Use the lane board to see exactly where each one sits.
+
+## Whole-Repo Families
+
+The lane board covers the whole repo, not just the current frontier. The main
+families on `main` are:
+
+- current mainline: staggered fermion + parity coupling
+- current blocker: irregular off-lattice direction/sign selection
+- exploratory reopen: emergent geometry growth
+- historical retained: mirror / exact geometry / `Z2 x Z2`
+- historical retained: ordered lattice / dense spent-delay
+- historical retained: nearest-neighbor refinement
+- historical retained: structured chokepoint / generated-symmetry bridge
+- historical bounded: action-power / valley-linear / dimension-dependent kernel
+- historical bounded: generated geometry / Gate B / source-resolved
+- historical blocked: coin / chiral / Dirac-walk line
+- historical control: scalar / KG controls and moonshot horizon probes
 
 ## Read In This Order
 

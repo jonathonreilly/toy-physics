@@ -82,8 +82,8 @@ lanes:
       - docs/CHIRAL_WALK_SYNTHESIS_2026-04-10_ADDENDUM.md
   - id: mirror_exact
     label: "Mirror / exact geometry / Z2xZ2"
-    status: historical-bounded
-    summary: "Earlier flagship. Still real work, but no longer the default entrypoint."
+    status: historical-retained
+    summary: "Earlier flagship. Still a major retained historical program, but no longer the default entrypoint."
     canonical_scripts:
       - scripts/mirror_2d_validation.py
       - scripts/mirror_mutual_information_chokepoint.py
@@ -93,15 +93,21 @@ lanes:
       - docs/MIRROR_PROGRAM_SYNTHESIS.md
   - id: ordered_lattice_action
     label: "Ordered lattice / action-power / valley-linear"
-    status: historical-bounded
-    summary: "Large retained historical branch with real bounded positives, but not the current mainline."
+    status: historical-retained
+    summary: "Large retained historical branch spanning ordered lattice and action-law subprograms."
     canonical_scripts:
       - scripts/frontier_3plus1d_closure_card.py
       - scripts/frontier_dimension_dependent_kernel.py
       - scripts/frontier_lorentzian_closure_card.py
+      - scripts/lattice_3d_dense_10prop.py
+      - scripts/lattice_nn_continuum.py
+      - scripts/structured_chokepoint_bridge.py
     canonical_notes:
       - docs/ACTION_ARCHITECTURE_MATRIX_NOTE.md
       - docs/VALLEY_LINEAR_CONTINUUM_SYNTHESIS_NOTE.md
+      - docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md
+      - docs/CONTINUUM_BRIDGE_NOTE.md
+      - docs/STRUCTURED_CHOKEPOINT_BRIDGE_NOTE.md
   - id: generated_geometry_gate_b
     label: "Generated geometry / Gate B / source-resolved"
     status: historical-bounded
