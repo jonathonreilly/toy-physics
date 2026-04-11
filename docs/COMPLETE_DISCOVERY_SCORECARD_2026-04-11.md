@@ -1,75 +1,59 @@
-# Complete Discovery Scorecard — 15 Probes
+# Frontier Discovery Scorecard — Triage Snapshot
 
-**Date:** 2026-04-11
-**Branch:** frontier/spot-checks
+**Date:** 2026-04-11  
+**Branch:** `frontier/spot-checks`
 
-## Results Table
+This file is a frontier triage surface, not a publication-ready summary. It
+separates:
 
-| # | Probe | Key Number | Verdict |
-|---|-------|-----------|---------|
-| 1 | Holographic area law | S~\|bnd\| R²=0.9998, gravity -12.5% | Strong positive |
-| 2 | Spectral dimension shift | d_s: 1.9→2.9-4.1 | Strong positive |
-| 3 | Geometry superposition | TV=0.56, TVq=0.25, dphi=2.83 | Strong positive |
-| 4 | Gravitational memory | +0.013 permanent shift, linear scaling | Strong positive |
-| 5 | Quantum Zeno | G_Zeno≈49, topology-dependent | Positive |
-| 6 | Z2 sublattice protection | 2x MI, gravity boosts 2-4x | Positive |
-| 7 | Critical exponents | β=0.19 stable (random geo) | Positive |
-| 8 | CDT spectral flow | 10/10 UV→IR, mid d_s=2.6-4.3 | Strong positive |
-| 9 | BMV entanglement | S=0.693 nats (1 bit), witness positive all G | Strong positive |
-| 10 | Anderson multifractal | D_2=0.52, monotonic D_q | Strong positive |
-| 11 | Bekenstein-Hawking | S~\|bnd\|^1.76, coeff G-dependent | Moderate |
-| 12 | Confinement | Staggered artifact in E(r) | Negative |
-| 13 | Penrose threshold | R_P not constant (CV=1.6) | Negative |
-| 14 | Decoherence rate | d-scaling partial (-0.80 vs -1.0) | Inconclusive |
-| 15 | Single-particle entropy | Saturates at ln(2) | Weak |
+- bounded retained side results
+- exploratory leads
+- clean negatives
 
-**Score: 7 strong positive, 3 positive, 1 moderate, 2 negative, 1 inconclusive, 1 weak**
+For publication use, prefer:
 
-## The 7 Strong Positives — What They Mean Together
+- [PUBLICATION_DISCOVERY_AUDIT_2026-04-11.md](PUBLICATION_DISCOVERY_AUDIT_2026-04-11.md)
+- [POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md](POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md)
 
-### 1. Holographic area law + CDT flow + spectral shift = EMERGENT SPACETIME
+## Audited Frontier Triage
 
-The Dirac sea entropy scales with boundary area (R²=0.9998). The spectral
-dimension flows from ~2 (UV) to ~3-4 (IR), matching CDT. Gravity shifts
-the spectral dimension by +1.0 to +2.4. Together: the staggered fermion
-model has an emergent spacetime structure where gravity modifies the
-effective dimensionality, and information is holographically encoded at
-boundaries.
+| Probe | Strongest honest claim | Status |
+|---|---|---|
+| Holographic boundary-law probe | On the 2D periodic staggered lattice, Dirac-sea entropy and Schmidt rank scale more cleanly with boundary than volume; gravity preserves boundary preference while reducing the fitted coefficient by `12.46%` | `bounded-retained` |
+| Fixed-adjacency branch superposition | Retained 2D branch effect on the current staggered Hamiltonian; 1D controls stay null | `bounded-retained` |
+| Gravitational memory | 1D ring pulse protocol gives a small but repeatable permanent post-pulse separation shift with weak-amplitude linearity | `bounded-retained` |
+| Two-body branch entanglement | Externally imposed two-branch source/field protocol yields `delta_S > 0` for all tested `G`, with peak entropy `0.69287` nats | `bounded-retained` |
+| Three-body branch entanglement | Externally imposed two-branch source/field protocol yields GHZ-like tripartite branch entanglement with peak `tau_3 = 0.848522` | `bounded-retained` |
+| Weak-coupling sign-sensitive regime | At `G=5,10`, attractive parity coupling gives a uniformly larger shell-force TOWARD count than repulsive coupling on the audited irregular-graph surface; stable shell margin is `60/60` | `bounded-retained` |
+| Quantum Zeno | Self-gravity freezes spreading above a coupling window on the tested lattices | `exploratory-lead` |
+| Z2 sublattice protection | Mutual-information protection signal is positive, but still lives in the exploratory side-probe bucket | `exploratory-lead` |
+| Critical exponents | Random-geometric `beta≈0.19` remains interesting, but the broader universality story is not frozen | `exploratory-lead` |
+| Spectral geometry shift | Gravity-dependent spectral changes exist, but the quantum-gravity interpretation is still exploratory | `exploratory-lead` |
+| Spectral-flow / CDT precision flow | Finite-size Laplacian diffusion crossover on 2D graph families with high-quality sigmoid fits; not a retained CDT claim and gravity only weakly perturbs the periodic curves | `exploratory-lead` |
+| Multifractal / universality scripts | Near `G≈2` on 2D random-geometric graphs there is exploratory anomalous multifractal-looking scaling (`D_2≈0.52–0.55`), but not a defensible new universality-class claim | `exploratory-lead` |
+| Entanglement phase diagram | Single-lattice entanglement-scaling crossover near `G≈10`; not a Hawking-Page result | `exploratory-lead` |
+| Scrambling OTOC | Frozen self-gravity strongly suppresses the script’s single-particle spreading proxy; no reliable fast-scrambling evidence | `negative / bounded exploratory` |
+| Penrose threshold | Penrose scaling is not confirmed; `|E_self| ~ G` is clean but the Penrose ratio is not constant | `negative-result` |
+| Bekenstein-Hawking probe | BH entropy law is not established on this lattice sweep | `negative-result` |
+| Confinement | Cornell/string-tension interpretation is dominated by staggered even/odd artifacts | `negative-result` |
+| Decoherence rate | Partial distance scaling only; not a clean Diosi-Penrose match | `inconclusive` |
+| Single-particle entropy | Bounded by `ln(2)` and occupancy-dominated; not an area-law instrument | `negative-result` |
 
-### 2. BMV entanglement + geometry superposition = QUANTUM GRAVITY
+## What This Means
 
-Gravity creates up to 1 bit of entanglement between separated particles
-via geometry superposition (BMV witness positive at all G). The detector
-states from flat vs curved evolution differ by TV=0.56. Together: gravity
-is quantum in this model — it mediates entanglement through geometry.
+The current strong frontier additions are mostly **bounded side results**, not
+new headline architecture closures. The best-audited new positives are:
 
-### 3. Anderson multifractal + critical exponents = NEW UNIVERSALITY CLASS
+- Dirac-sea boundary-law probe
+- weak-amplitude memory-style signal
+- two-body and three-body branch-mediated entanglement companions
+- retained weak-coupling sign-sensitive regime
 
-The self-gravity localization transition at G≈2 shows Anderson-class
-multifractality (D_2=0.52, monotonic D_q). The critical exponent β=0.19
-is stable across graph sizes. Together: gravitational localization is a
-genuine phase transition in the Anderson universality class, with a
-topology-dependent exponent.
+The main overclaimed lanes from the raw frontier batch are now explicitly
+downgraded:
 
-### 4. Gravitational memory = DISCRETE GR EFFECT
-
-Permanent geodesic separation shift after a gravitational wave pulse, with
-linear scaling at weak amplitudes. This is the discrete Christodoulou memory
-effect — a GR prediction emerging from the lattice model.
-
-## What's Missing (Honest Negatives)
-
-1. **Penrose collapse**: the Zeno mechanism is lattice-specific (parity
-   coupling overwhelming hopping), not Penrose's E_G/hbar. The model
-   produces localization but through a different channel.
-
-2. **Confinement**: E(r) oscillates with even/odd r (staggered artifact),
-   masking any linear trend. The string tension is not confirmed.
-
-3. **Decoherence rate**: the d-scaling is partial (slope -0.80 vs DP's -1.0)
-   but G and mass scalings deviate. The model produces gravitational
-   decoherence through a different mechanism than Diosi-Penrose.
-
-4. **BH entropy**: S scales with boundary but with exponent 1.76 (not 1.0)
-   and the coefficient is G-dependent (not universal). The BH formula
-   doesn't cleanly emerge at these lattice sizes.
+- no retained Hawking-Page claim
+- no retained Bekenstein-Hawking claim
+- no retained new universality-class claim
+- no retained CDT-like gravity claim
+- no retained fast-scrambling / black-hole claim

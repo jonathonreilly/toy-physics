@@ -48,6 +48,10 @@ Primary notes:
 - [`scripts/frontier_staggered_dag.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_staggered_dag.py)
 - [`scripts/frontier_staggered_graph_portable.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_staggered_graph_portable.py)
 - [`scripts/frontier_staggered_geometry_superposition_retained.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_staggered_geometry_superposition_retained.py)
+- [`scripts/frontier_holographic_probe.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_holographic_probe.py)
+- [`scripts/frontier_gravitational_memory.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_gravitational_memory.py)
+- [`scripts/frontier_bmv_entanglement.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_bmv_entanglement.py)
+- [`scripts/frontier_bmv_threebody.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_bmv_threebody.py)
 
 Key notes:
 
@@ -58,6 +62,10 @@ Key notes:
 - [`docs/TWO_FIELD_RETARDED_FAMILY_CLOSURE_NOTE_2026-04-10.md`](TWO_FIELD_RETARDED_FAMILY_CLOSURE_NOTE_2026-04-10.md)
 - [`docs/STAGGERED_DAG_NOTE_2026-04-10.md`](STAGGERED_DAG_NOTE_2026-04-10.md)
 - [`docs/STAGGERED_GEOMETRY_SUPERPOSITION_NOTE_2026-04-11.md`](STAGGERED_GEOMETRY_SUPERPOSITION_NOTE_2026-04-11.md)
+- [`docs/HOLOGRAPHIC_PROBE_NOTE_2026-04-11.md`](HOLOGRAPHIC_PROBE_NOTE_2026-04-11.md)
+- [`docs/GRAVITATIONAL_MEMORY_NOTE_2026-04-11.md`](GRAVITATIONAL_MEMORY_NOTE_2026-04-11.md)
+- [`docs/BMV_ENTANGLEMENT_NOTE_2026-04-11.md`](BMV_ENTANGLEMENT_NOTE_2026-04-11.md)
+- [`docs/BMV_THREEBODY_NOTE_2026-04-11.md`](BMV_THREEBODY_NOTE_2026-04-11.md)
 
 ## 3. Open Directional Blocker Surface
 
@@ -66,13 +74,29 @@ claim:
 
 - [`scripts/frontier_irregular_directional_observable.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_irregular_directional_observable.py)
 - [`scripts/frontier_two_sign_comparison.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_two_sign_comparison.py)
+- [`scripts/frontier_weak_coupling_retained.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_weak_coupling_retained.py)
 
 Key notes:
 
 - [`docs/IRREGULAR_DIRECTIONAL_OBSERVABLE_NOTE_2026-04-11.md`](IRREGULAR_DIRECTIONAL_OBSERVABLE_NOTE_2026-04-11.md)
 - [`docs/TWO_SIGN_COMPARISON_NOTE_2026-04-10.md`](TWO_SIGN_COMPARISON_NOTE_2026-04-10.md)
+- [`docs/WEAK_COUPLING_RETENTION_NOTE_2026-04-11.md`](WEAK_COUPLING_RETENTION_NOTE_2026-04-11.md)
 
-## 4. Exploratory Reopen Surface
+## 4. Bounded Side Probes
+
+- [`scripts/frontier_holographic_probe.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_holographic_probe.py)
+- [`scripts/frontier_gravitational_memory.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_gravitational_memory.py)
+- [`scripts/frontier_bmv_entanglement.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_bmv_entanglement.py)
+- [`scripts/frontier_bmv_threebody.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_bmv_threebody.py)
+
+Key notes:
+
+- [`docs/HOLOGRAPHIC_PROBE_NOTE_2026-04-11.md`](HOLOGRAPHIC_PROBE_NOTE_2026-04-11.md)
+- [`docs/GRAVITATIONAL_MEMORY_NOTE_2026-04-11.md`](GRAVITATIONAL_MEMORY_NOTE_2026-04-11.md)
+- [`docs/BMV_ENTANGLEMENT_NOTE_2026-04-11.md`](BMV_ENTANGLEMENT_NOTE_2026-04-11.md)
+- [`docs/BMV_THREEBODY_NOTE_2026-04-11.md`](BMV_THREEBODY_NOTE_2026-04-11.md)
+
+## 5. Exploratory Reopen Surface
 
 - [`scripts/frontier_emergent_geometry_v2.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_emergent_geometry_v2.py)
 - [`scripts/frontier_emergent_geometry_g_sweep.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_emergent_geometry_g_sweep.py)
@@ -82,7 +106,7 @@ Key note:
 
 - [`docs/EMERGENT_GEOMETRY_GROWTH_NOTE_2026-04-10.md`](EMERGENT_GEOMETRY_GROWTH_NOTE_2026-04-10.md)
 
-## 5. Historical / Legacy Entrypoints
+## 6. Historical / Legacy Entrypoints
 
 Use these when you are intentionally revisiting older lanes on `main`:
 

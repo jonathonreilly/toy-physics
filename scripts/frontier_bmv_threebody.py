@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-Three-body BMV entanglement on a staggered lattice.
+Three-body branch entanglement on a staggered lattice.
 
-Extension of the 2-body BMV protocol to three particles in a triangular
-arrangement. A gravitational source at the center is in superposition of
-two configurations (present vs absent). Each particle evolves under both
-branches. The three-particle joint state:
+Extension of the 2-body branch-entanglement protocol to three particles in a
+triangular arrangement. A gravitational source at the center is placed in an
+externally imposed superposition of two configurations (present vs absent).
+Each particle evolves under both branches. The three-particle joint state:
 
   |Psi> = (|psi_1A>|psi_2A>|psi_3A> + |psi_1B>|psi_2B>|psi_3B>) / sqrt(2)
 
@@ -29,8 +29,8 @@ For this 2-branch superposition of product states:
     W-type:   bipartite entropies may differ, tau_3 ~ 0
     Biseparable: at least one bipartite entropy ~ 0
 
-Physics question: does the geometry-superposition mechanism produce GHZ or W
-type tripartite entanglement?
+Physics question: does the externally imposed two-branch source/field
+mechanism produce GHZ- or W-type tripartite entanglement?
 """
 
 from __future__ import annotations
@@ -146,10 +146,10 @@ def binary_entropy(p: float) -> float:
     return -p * math.log(p) - (1.0 - p) * math.log(1.0 - p)
 
 
-# ── Three-body BMV protocol ─────────────────────────────────────────
+# ── Three-body branch-entanglement protocol ─────────────────────────
 
 def run_threebody_bmv(g: float):
-    """Run the three-body BMV protocol for a given source coupling G."""
+    """Run the three-body branch-entanglement protocol for a given source coupling G."""
     pos, color, adj, index, n = make_lattice_2d(SIDE)
     lap = build_laplacian(pos, adj)
 
@@ -660,7 +660,7 @@ def main():
     t0 = time.time()
 
     print("=" * 90)
-    print("THREE-BODY BMV ENTANGLEMENT ON STAGGERED LATTICE")
+    print("THREE-BODY BRANCH ENTANGLEMENT ON STAGGERED LATTICE")
     print("=" * 90)
     print()
     print(f"Lattice: 2D staggered, side={SIDE}, n={SIDE**2}")
@@ -747,8 +747,8 @@ def main():
     # Is entanglement GHZ-type?
     if ghz_count > len(G_VALUES) // 2:
         print("DOMINANT CLASS: GHZ-type")
-        print("  The geometry-superposition mechanism creates genuine tripartite")
-        print("  entanglement (non-zero 3-tangle). This is expected: the state")
+        print("  The two-branch source/field protocol creates genuine tripartite")
+        print("  branch entanglement (non-zero 3-tangle). This is expected: the state")
         print("  |Psi> = (|abc> + |def>)/sqrt(2) has the structure of a")
         print("  generalized GHZ state when the branches become distinguishable.")
     elif w_count > 0:
@@ -800,11 +800,11 @@ def main():
     print()
 
     if max_tangle > 1e-3:
-        print("CONFIRMED: Three-body BMV produces GHZ-type entanglement.")
+        print("CONFIRMED: The three-body branch protocol produces GHZ-type entanglement.")
         print(f"  Maximum 3-tangle: {max_tangle:.6f}")
-        print("  Gravity-mediated geometry superposition creates genuine")
-        print("  tripartite entanglement that cannot be decomposed into")
-        print("  pairwise entanglement alone.")
+        print("  In this fixed-adjacency externally branched toy model, the")
+        print("  source/field superposition creates genuine tripartite entanglement")
+        print("  that cannot be decomposed into pairwise entanglement alone.")
     elif max_tangle > 1e-6:
         print("DETECTED: Weak but non-zero 3-tangle.")
         print(f"  Maximum 3-tangle: {max_tangle:.6f}")

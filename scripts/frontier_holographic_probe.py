@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Holographic principle probe: does boundary-accessible information scale with area?
+"""Boundary-law probe: does boundary-accessible information scale with area?
 
 Tests whether the entanglement entropy of a Dirac-sea state on a 2D periodic
 lattice scales with the boundary area (number of boundary edges) of a BFS-ball
@@ -270,8 +270,8 @@ def safe_linregress(x, y):
 
 def run_experiment():
     print("=" * 80)
-    print("HOLOGRAPHIC PRINCIPLE PROBE")
-    print("Does boundary-accessible information scale with area or volume?")
+    print("HOLOGRAPHIC BOUNDARY-LAW PROBE")
+    print("Does Dirac-sea entanglement scale more cleanly with boundary than volume?")
     print("=" * 80)
     print()
     print("Method: Dirac-sea correlation matrix (Peschel 2003)")

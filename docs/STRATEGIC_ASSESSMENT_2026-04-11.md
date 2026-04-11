@@ -1,114 +1,74 @@
-# Strategic Assessment — What the 21 Results Mean Together
+# Strategic Assessment — Frontier Interpretation Memo
 
 **Date:** 2026-04-11
 
-## The Unified Narrative
+## Current honest reading
 
-The model discovers that a single-particle wavefunction on a discrete graph
-with screened self-gravity reproduces the *spectral architecture* of quantum
-gravity — area-law entropy, dimensional flow, a Hawking-Page transition,
-Anderson-class localization, and a novel universality class — but is
-insufficient to reproduce the *dynamical content* (confinement, decoherence
-scaling, BH thermodynamics). The spectral successes arise because the
-Dirac-sea correlation matrix on a gravitationally-deformed graph encodes the
-same information as the modular Hamiltonian of a free field on curved
-spacetime, which is itself a single-particle object. The frozen star result
-marks exactly where the model's validity boundary lies: self-gravity
-localizes the wavefunction so completely that scrambling dynamics requiring
-many-body Hilbert space cannot be accessed. The 12 strong positives map
-everything extractable from spectral geometry of a single particle coupled
-to its own gravitational backreaction. The failures map everything that
-requires more.
+This batch strengthened the repo’s **bounded side-probe surface**, but it did
+not produce a new headline breakthrough package.
 
-## The Frozen Star / BMV Resolution
+What survived audit:
 
-NOT a contradiction — it's a PHASE DIAGRAM.
+- a bounded many-body-style boundary-law result from the Dirac-sea
+  correlation-matrix probe
+- a bounded 1D memory-style signal with exact zero-drift control
+- bounded two-body and three-body branch-mediated entanglement in fixed-
+  adjacency externally branched toy protocols
+- a retained weak-coupling sign-sensitive regime on irregular graphs
 
-BMV entanglement is KINEMATIC: particles become entangled via gravitational
-phase accumulation. No spreading or scrambling needed. Particles can be
-perfectly localized and still entangle through geometry superposition.
+What did not survive as headline claims:
 
-The frozen star is DYNAMICAL: asks whether a localized wavepacket spreads
-and scrambles. At strong G, the Zeno mechanism freezes spreading.
+- no retained Hawking-Page transition
+- no retained Bekenstein-Hawking law
+- no retained new universality class
+- no retained gravity-specific CDT match
+- no retained fast-scrambling / black-hole result
 
-Gravity at strong coupling creates entanglement BETWEEN subsystems (BMV)
-while freezing information WITHIN each subsystem (Zeno). This is exactly
-the structure of a fuzzball: surface is maximally entangled with radiation,
-but interior degrees of freedom are frozen.
+## Spectral vs trajectory hierarchy
 
-The Hawking-Page transition at G_HP≈9.8 separates:
-- G < 10: information can spread (area-law, scrambling possible)
-- G > 10: inter-subsystem entanglement grows super-area but
-  intra-subsystem dynamics are frozen
+The strongest interpretive idea from this batch is still useful, but it should
+be kept explicitly as an interpretation:
 
-## G_HP ≈ Sign Selectivity Window — Not a Coincidence
+- several **spectral / branch / correlation** probes are producing clean,
+  replayable signals
+- the more ambitious **trajectory / thermodynamic / many-body-dynamical**
+  probes are much weaker or fail cleanly
 
-The parity coupling H = (m+Φ)·ε means Φ enters with opposite sign on
-the two sublattices. The G=5-10 window is where Φ and m are comparable,
-so the sign of the parity coupling determines whether a sublattice sees
-attraction or repulsion. This is exactly where sign selectivity peaks.
+That suggests a plausible hierarchy:
 
-The Hawking-Page transition happens at the coupling where the two
-sublattices decouple into effectively different gravitational environments.
-The entanglement changes character from geometric (area-law) to
-localization-driven (super-area).
+- the current architecture is strongest on Hamiltonian-spectrum and
+  correlation-matrix observables
+- it is weaker on claims that need true many-body thermodynamics or operator
+  growth
 
-Prediction: G_HP should shift on graphs with different parity structure.
+This is a good working hypothesis. It is not yet a retained theorem.
 
-## The Single Biggest Missing Piece
+## Strongest immediate scientific path
 
-A TWO-PARTICLE area-law calculation. The minimum viable many-body test.
+The best next bridge remains a genuinely many-body extension of the current
+bounded boundary-law probe.
 
-Take the area-law lattice (R²=0.9998). Construct the two-particle
-antisymmetrized Hilbert space. Compute the ground state with two-particle
-self-gravity. Measure entanglement entropy.
+Most leverage:
 
-Prediction: area-law coefficient should be 2× the single-particle value
-(species counting) plus a correction of order G. If the correction is
-negative (gravity reduces entropy) and scales linearly with particle
-number, the single-particle results are the leading order of a systematic
-expansion.
+1. two-particle or few-particle boundary-law calculation
+2. non-bipartite / alternative-lattice robustness check for the bounded
+   side probes that already survive audit
+3. retained negative note for the frozen single-particle scrambling proxy,
+   if we want to preserve that failure mode cleanly
 
-This converts "interesting single-particle numerics" into "first term
-in a many-body expansion."
+## What not to say yet
 
-## Three Highest-Leverage Next Experiments
+- do not call the branch-entanglement toy protocols full BMV witnesses
+- do not call the entanglement-scaling crossover Hawking-Page
+- do not call the boundary-law probe holography in the strong sense
+- do not call the multifractal scripts a new universality class
+- do not call the OTOC proxy a black-hole scrambling result
 
-### 1. Two-Particle Area Law (Bridge Calculation)
-Validates the many-body extension. Success makes everything else
-the leading-order term in a systematic expansion.
+## Bottom line
 
-### 2. BMV + OTOC Joint Measurement (Complementarity Test)
-Plot BMV witness and OTOC decay on the same axes vs G.
-Prediction: BMV grows monotonically, OTOC drops to zero at G≈49,
-curves cross near G_HP≈9.8.
-Most publishable standalone result.
+The frontier is productive, but the value is mostly in:
 
-### 3. Non-Bipartite Lattice (Lattice Independence Test)
-Run area law + CDT flow + Hawking-Page on triangular lattice or
-non-bipartite random graph (needs Wilson fermions).
-Kills the "lattice artifact" objection if spectral results survive.
-
-## Nature Referee's #1 Objection
-
-"The gravitational field is solved classically. Without quantized
-geometry, 'discrete quantum gravity' is not supported."
-
-Response:
-1. The BMV probe DOES quantize geometry (superposition of lattices) and
-   produces genuine quantum-gravitational entanglement (1 bit, GHZ)
-2. The novel universality class (D_2=0.52) doesn't match any known
-   QM-on-curved-background class — the gravitational self-consistency
-   creates genuinely new physics
-3. The frozen star is a PREDICTION not derivable from semiclassical gravity
-4. We present this as the minimal discrete structure reproducing the
-   spectral signatures, not as full quantum gravity
-
-## Viable Nature Submission Framing
-
-"We present a minimal discrete framework that reproduces the spectral
-architecture of semiclassical gravity — holographic area-law entropy,
-CDT-like dimensional flow, a Hawking-Page entanglement transition, and
-gravity-mediated multipartite entanglement — predicts a novel
-multifractal universality class and a frozen-star phase, and admits a
-systematic many-body extension."
+- bounded companion results worth preserving
+- clean negatives that narrow the valid claim surface
+- a clearer map of which future many-body experiments would actually change
+  the scientific ceiling

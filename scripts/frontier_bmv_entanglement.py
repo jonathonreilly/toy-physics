@@ -269,7 +269,9 @@ def main():
     print("  dS      = S_quant - S_mix                   [gravity-induced entanglement]")
     print()
 
-    # Check BMV witness
+    # Check branch-mediated entanglement signal.
+    # This is not a full BMV witness: the source branch superposition is imposed
+    # externally, not generated dynamically by the particles themselves.
     any_entangled = False
     for res in results:
         if res["delta_S"] > 1e-6:
@@ -277,10 +279,11 @@ def main():
             break
 
     if any_entangled:
-        print("BMV WITNESS: POSITIVE")
-        print("  Gravity creates entanglement beyond classical mixing.")
-        print("  This is consistent with gravity being quantum (mediating")
-        print("  entanglement through geometry superposition).")
+        print("BRANCH-ENTANGLEMENT SIGNAL: POSITIVE")
+        print("  The fixed geometry-branch toy model generates entanglement")
+        print("  beyond the corresponding classical branch mixture.")
+        print("  This is BMV-like evidence in a controlled toy setting,")
+        print("  not a standalone gravity-is-quantum witness.")
     else:
         print("BMV WITNESS: NULL")
         print("  No entanglement beyond classical mixing detected.")
@@ -316,9 +319,10 @@ def main():
     significant = max_s > 0.01
 
     if significant and monotonic:
-        print("CONFIRMED: BMV entanglement grows monotonically with source strength.")
+        print("CONFIRMED: branch-mediated entanglement grows monotonically with source strength.")
         print(f"  Entanglement range: {min(s_values):.5f} to {max_s:.5f} nats")
-        print("  Gravity mediates quantum entanglement between separated particles.")
+        print("  In this imposed-branch model, the shared geometry branch")
+        print("  coherently entangles the two separated particles.")
     elif significant:
         print("PARTIAL: Entanglement detected but non-monotonic in G.")
         print("  Possible finite-size or lattice artifacts at high coupling.")

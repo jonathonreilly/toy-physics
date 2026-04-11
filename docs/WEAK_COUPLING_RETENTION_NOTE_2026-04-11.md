@@ -55,34 +55,46 @@ Norm conservation was also required:
 
 - `| ||psi|| - 1 | < 1e-10` for both attractive and repulsive runs
 
-## Exact Pass Counts
+## Stable Pass Counts
 
-Across the full `60`-run audited surface:
+The runner was rerun four times in the physics venv. Three observables were
+stable across all four reruns:
 
 - width asymmetry `< 1`: `56/60`
-- gap ratio `> 1`: `54/60`
 - shell strict split: `47/60`
 - shell ordered (`tw_a > tw_r`): `60/60`
 - shell margin `>= 10`: `60/60`
 - norm conserved: `60/60`
 
-By family:
+Stable by-family counts:
 
 - random geometric:
   - width: `20/20`
-  - gap: `20/20`
   - shell strict: `11/20`
+  - shell ordered: `20/20`
   - shell margin: `20/20`
 - growing:
   - width: `16/20`
-  - gap: `14/20`
   - shell strict: `16/20`
+  - shell ordered: `20/20`
   - shell margin: `20/20`
 - layered cycle:
   - width: `20/20`
-  - gap: `20/20`
   - shell strict: `20/20`
+  - shell ordered: `20/20`
   - shell margin: `20/20`
+
+## Unstable Secondary Observable
+
+The spectral-gap tally is not stable enough to freeze as an exact retained
+count. Across four identical reruns, the script reported:
+
+- gap ratio `> 1`: `55/60`, `56/60`, `57/60`, `55/60`
+- growing-family gap count: `15/20`, `16/20`, `17/20`, `15/20`
+
+So the gap ratio remains a useful supporting indicator, but not a frozen
+retained row. The retained claim below relies only on the stable shell-force
+and norm observables.
 
 ## Strongest Sign-Selective Observable
 
@@ -101,7 +113,9 @@ The weaker but still useful supporting observables are:
 - width asymmetry
 - spectral gap ratio
 
-They are real, but not universal enough to carry retention by themselves.
+Width asymmetry is stable but not universal enough to carry retention by
+itself. Spectral gap ratio is directionally useful, but its exact pass count is
+runner-sensitive and is therefore not frozen here.
 
 ## Retained Claim
 
