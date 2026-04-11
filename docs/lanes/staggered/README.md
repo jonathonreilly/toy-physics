@@ -20,15 +20,15 @@
 
 ## Key Runners
 
-- [`scripts/frontier_staggered_17card.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_staggered_17card.py)
-- [`scripts/frontier_staggered_cycle_battery.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_staggered_cycle_battery.py)
-- [`scripts/frontier_staggered_cycle_battery_scaled.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_staggered_cycle_battery_scaled.py)
-- [`scripts/frontier_staggered_self_gravity.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_staggered_self_gravity.py)
-- [`scripts/frontier_two_field_wave.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_two_field_wave.py)
-- [`scripts/frontier_two_field_retarded_family_closure.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_two_field_retarded_family_closure.py)
-- [`scripts/frontier_staggered_dag.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_staggered_dag.py)
-- [`scripts/frontier_irregular_directional_observable.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_irregular_directional_observable.py)
-- [`scripts/frontier_emergent_geometry_v2.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_emergent_geometry_v2.py)
+- [`scripts/frontier_staggered_17card.py`](../../scripts/frontier_staggered_17card.py)
+- [`scripts/frontier_staggered_cycle_battery.py`](../../scripts/frontier_staggered_cycle_battery.py)
+- [`scripts/frontier_staggered_cycle_battery_scaled.py`](../../scripts/frontier_staggered_cycle_battery_scaled.py)
+- [`scripts/frontier_staggered_self_gravity.py`](../../scripts/frontier_staggered_self_gravity.py)
+- [`scripts/frontier_two_field_wave.py`](../../scripts/frontier_two_field_wave.py)
+- [`scripts/frontier_two_field_retarded_family_closure.py`](../../scripts/frontier_two_field_retarded_family_closure.py)
+- [`scripts/frontier_staggered_dag.py`](../../scripts/frontier_staggered_dag.py)
+- [`scripts/frontier_irregular_directional_observable.py`](../../scripts/frontier_irregular_directional_observable.py)
+- [`scripts/frontier_emergent_geometry_v2.py`](../../scripts/frontier_emergent_geometry_v2.py)
 
 ## Current Standing
 

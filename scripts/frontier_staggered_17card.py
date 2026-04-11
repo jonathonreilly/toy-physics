@@ -12,6 +12,11 @@ the mass gap:
     H_diag = (m + Phi(x)) * epsilon(x)
 so the potential enters with the same staggered parity factor as the mass.
 
+Reproducibility status:
+  - self-contained repo-local harness
+  - no external worktree or absolute-path imports
+  - retained rerun on main reproduces the frozen 1D and 3D score surface
+
 Row semantics that differ from the repo-wide card:
   C5:  force sign, not centroid sign
   C9:  force stays positive, not centroid grows monotonically

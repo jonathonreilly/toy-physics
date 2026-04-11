@@ -6,6 +6,26 @@
 from staggering phases η_μ(x), gravity via scalar/parity potential coupling
 V(x) that enters the mass gap as (m + V(x))·ε(x), Crank-Nicolson evolution.
 
+## Reproducibility Status
+
+**Status on `main` (2026-04-11): reproduced from the repo-local runner.**
+
+The current retained harness at
+[`scripts/frontier_staggered_17card.py`](../scripts/frontier_staggered_17card.py)
+is self-contained and does not import from any Claude worktree or external
+absolute path.
+
+Retained rerun on `main` reproduced the frozen strict-card surface:
+
+- 1D `n=61`: `17/17`
+- 3D `n=9`: `17/17`
+- 3D `n=11`: `17/17`
+- 3D `n=13`: `17/17`
+
+The only qualifier remains the documented 3D family-coverage gate:
+energy projections run at `n=9`, while `n=11,13` test `4/6` families because
+`N_sites > 1000`.
+
 ## Important Framing
 
 **This is a FORCE-BASED STAGGERED CARD, not the repo-wide centroid-based card.**
