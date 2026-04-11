@@ -27,6 +27,8 @@ These are not review items anymore:
 - `scripts/frontier_perturbative_mass_law.py`
 - `scripts/frontier_continuum_limit.py`
 - `scripts/frontier_newton_systematic.py`
+- `docs/NEWTON_DERIVATION_NOTE.md`
+- `docs/ACTION_UNIQUENESS_AUDIT_2026-04-11.md`
 
 Status:
 
@@ -68,34 +70,7 @@ Status:
 - the stricter persistent inertial-object probe finds no admissible class
 - the control is a bounded negative, not a persistent-pattern theorem
 
-#### A. Action uniqueness
-
-Source branches:
-
-- `origin/claude/youthful-neumann`
-- `origin/codex/resonance-controls`
-
-Files:
-
-- `docs/ACTION_UNIQUENESS_AUDIT_2026-04-11.md`
-- `scripts/action_uniqueness_investigation.py`
-
-Current verdict:
-
-- hold for now
-
-Blocker:
-
-- the evidence supports a weak-field family law on one ordered-lattice setup
-- it does not justify architecture-independent uniqueness
-- the audit should stay at bounded family-level wording
-
-Required next experiment:
-
-- rewrite to the family level, or
-- prove portability across the retained architectures
-
-#### B. Wilson mutual-attraction side lane
+#### A. Wilson mutual-attraction side lane
 
 Source branches:
 
@@ -147,7 +122,7 @@ Promotion rule:
 - do not move this to `main` unless the new control shows dynamic shared
   backreaction matters beyond a frozen-field explanation
 
-#### C. Exact two-particle product law
+#### B. Exact two-particle product law
 
 Source branches:
 
@@ -172,7 +147,7 @@ Required next experiment:
 - add frozen/static-source control
 - replay on the primary staggered/open-cubic surface
 
-#### D. Irregular endogenous sign closure
+#### C. Irregular endogenous sign closure
 
 Source branches:
 
@@ -203,7 +178,7 @@ Required next experiment:
   shell-packet readout, or switch to a different irregular observable
 - do not promote the current reinforcement run
 
-#### E. Staggered two-body closure family
+#### D. Staggered two-body closure family
 
 Source branches:
 
