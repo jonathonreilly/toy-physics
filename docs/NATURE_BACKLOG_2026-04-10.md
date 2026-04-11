@@ -25,20 +25,25 @@ sign-selective.
 Show that the attractive sign is required by the staggered / Dirac structure,
 or find one graph-native irregular observable that actually distinguishes
 attractive from repulsive coupling.
-**Status:** PARTIALLY CLOSED (2026-04-11).
+**Status:** REFRAMED (2026-04-11).
 - The identity coupling `m·ε − m·Φ` was wrong. Replaced with the
   literature-correct parity coupling `(m + Φ)·ε(x)` (Zache et al. 2020).
 - On the **exact-lattice canonical card**, well/hill sign test now splits
-  cleanly: TOWARD for V<0, AWAY for V>0. This is a genuine sign-selective
-  result on the cubic lattice.
-- On **irregular graph families**, the retained shell/edge-radial proxies
-  are strong structural interacting-field results but do not yet constitute
-  a clean directional-gravity claim. The new endogenous same-surface probe
-  failed (`0/9`, `0/9`, `4/9`), so one frozen graph-native directional
-  observable is still needed. See `IRREGULAR_DIRECTIONAL_OBSERVABLE_NOTE_2026-04-11.md`.
-- Self-gravity now contracts strongly (w=0.44-0.63) under parity coupling,
-  vs expanding (w=1.68) under the old identity coupling.
-**Scripts:** `frontier_correct_coupling.py`, `frontier_two_sign_parity.py`
+  cleanly: TOWARD for V<0, AWAY for V>0. Genuine sign-selective on lattice.
+- **Imposed ±Φ test on irregular graphs FAILED** (0/3 families): under parity
+  coupling, flipping Φ→-Φ swaps sublattice roles, not physics sign. This is
+  the WRONG test for staggered fermions.
+- **Sign selectivity is a property of SELF-CONSISTENCY**, not external field sign:
+  - Self-consistent contraction: 300/300 (w_grav/w_free < 1 always)
+  - Random disorder contraction: only 6/10
+  - Shapiro delay asymmetry: +Φ delays 5-6x more than -Φ on layered graphs
+  - Anderson separation: 2.7σ from random disorder
+- **Variational derivation** closes B2: screened Poisson = E-L equation of
+  simplest local quadratic action (docs/FIELD_EQUATION_DERIVATION_NOTE.md)
+- **Light cone framing** closes B3: standard lattice QFT result, v=1 in
+  massless limit (docs/LIGHT_CONE_FRAMING_NOTE.md)
+**Scripts:** `frontier_correct_coupling.py`, `frontier_two_sign_parity.py`,
+`frontier_contraction_sign_test.py`, `frontier_shapiro_delay.py`
 
 ## Tier 1: Emergent Geometry (Nature-level)
 
@@ -57,7 +62,16 @@ This is not yet a Nature-ready geometry result.
 ### 2. Einstein Equations from Graph Backreaction
 Compute Ollivier curvature before/after self-gravitating matter equilibrates.
 Does the curvature change match Gμν = 8πG Tμν?
-**Status:** NOT STARTED
+**Status:** POSITIVE BUT NEEDS SCRUTINY (2026-04-11).
+- Ollivier-Ricci Δκ vs G·T: R²=0.97 per G value, correct sign.
+- **Control passed**: self-consistent R²=0.97 vs random R²=0.003 (300x separation).
+  NOT tautological — genuine gravitational curvature response.
+- **Caveat**: tested at μ²=0.22 (screening). Should recheck at μ²=0.001.
+- **Caveat**: DEFINITIVE_AUDIT flags potential proxy issue (curvature reflects
+  V which sources from |ψ|², so Δκ∝T could be a proxy correlation).
+  The 300x control separation argues against pure tautology, but the
+  quantitative R²=0.97 may be inflated by the proxy pathway.
+**Scripts:** `frontier_ollivier_einstein.py`, `frontier_ollivier_control.py`
 
 ## Tier 2: Qualitative Breakthroughs
 
