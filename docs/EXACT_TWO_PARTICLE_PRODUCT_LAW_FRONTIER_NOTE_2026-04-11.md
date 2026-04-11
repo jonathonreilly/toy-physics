@@ -31,6 +31,20 @@ But the product-law claim is not independent of the model assumption:
 - the fitted `gamma ≈ 1` is therefore a response to an encoded bilinear kernel,
   not yet a derivation of `M1*M2` from a source-only law
 
+Concretely, this toy surface cannot move the factor out of the interaction
+without changing the Hamiltonian class:
+
+- if `s1*s2` is removed from `V`, the exact two-body run no longer has a
+  bilinear source-response channel to fit
+- if `s1*s2` stays in `V`, then the observed `gamma ≈ 1` is always compatible
+  with the kernel assumption and cannot certify emergence
+- on this 1D open-boundary surface there is no frozen/static-source control that
+  isolates a source-only field while preserving the same exact two-particle
+  observable
+
+So the current toy model can prove exact-vs-Hartree separation, but it cannot
+prove an emergent product law unless the interaction ansatz is redesigned.
+
 There is also a model mismatch relative to the retained mainline Newton work:
 
 - this is a 1D open-boundary toy lattice
@@ -63,6 +77,12 @@ factor from the ansatz and re-test the response under controls:
 Only if the `M1*M2` scaling survives after those controls should the lane be
 retained as a bounded companion on `main`.
 
+## Closest Retainable Claim
+
+Retain only the exact-vs-Hartree comparison as a bounded control result.
+Hold the product-law headline until a source-only interaction or equivalent
+control removes the bilinear factor from the ansatz on a promotable surface.
+
 ## Suggested Control-Plane Wording
 
 > Frontier exact two-particle diagonalization shows exact-vs-Hartree
@@ -70,4 +90,3 @@ retained as a bounded companion on `main`.
 > `M1*M2` factor is encoded in the interaction ansatz. This is not yet an
 > emergent Newton product law and remains frontier-only until a source-only
 > control and a primary-architecture replay are completed.
-
