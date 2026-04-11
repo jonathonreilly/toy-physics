@@ -14,8 +14,8 @@ Protocol on 2D staggered lattice (side=10):
 Compare FOUR potential types:
   1. SELF-CONSISTENT   Phi = (L + mu^2)^{-1} G |psi|^2  (updates each step)
   2. STATIC-FROM-INITIAL  Phi = (L + mu^2)^{-1} G |psi_0|^2  (frozen at t=0)
-  3. POSITIVE RANDOM   Phi_i = |N(mean_Phi, std_Phi)|  (positive, uncorrelated)
-  4. NEGATIVE RANDOM   Phi_i = -|N(mean_Phi, std_Phi)| (negative, uncorrelated)
+  3. SHIFTED STRUCTURED NULL  torus-shifted static field (same moments, same smoothness)
+  4. PHASE-SCRAMBLED NULL    same power spectrum and moments, misaligned structure
 
 For each, measure:
   a. Sign selectivity   — attract vs repulse shell-force margin (G=5, 40 iter)
@@ -24,8 +24,8 @@ For each, measure:
 
 KEY discriminators:
   - SELF-CONSISTENT != STATIC-FROM-INITIAL  =>  backreaction matters
-  - STATIC-FROM-INITIAL = POSITIVE RANDOM   =>  spatial correlations don't matter
-  - POSITIVE RANDOM != NEGATIVE RANDOM      =>  sign of Phi matters
+  - STATIC-FROM-INITIAL != SHIFTED NULL     =>  packet-field alignment matters
+  - STATIC-FROM-INITIAL != PHASE NULL       =>  exact spatial structure matters
 
 Important reporting note:
   The self-consistent and static-from-initial surfaces are deterministic on
@@ -60,6 +60,8 @@ G_BOUNDARY = 10.0   # for boundary law probe
 SIGN_ITER = 40
 WIDTH_STEPS = 40
 N_SEEDS = 5
+SHIFT_DX = 3
+SHIFT_DY = 2
 
 
 # ── Lattice ────────────────────────────────────────────────────────
@@ -140,6 +142,14 @@ def make_gaussian(pos: np.ndarray, n: int):
     psi = np.exp(-r2 / (2 * SIGMA**2)).astype(complex)
     psi /= np.linalg.norm(psi)
     return psi
+
+
+def evolve_reference_phi(L_csr, n, G, pos, col, adj, steps):
+    """Deterministic reference field from static initial source."""
+    solve_op = (L_csr + MU2 * speye(n, format='csr')).tocsc()
+    psi0 = make_gaussian(pos, n)
+    rho0 = np.abs(psi0)**2
+    return np.asarray(spsolve(solve_op, G * rho0), dtype=float)
 
 
 def rms_width(psi: np.ndarray, pos: np.ndarray) -> float:
@@ -369,18 +379,51 @@ def make_static_initial_potential(L_csr, n, G, pos):
     return potential_fn
 
 
-def make_positive_random_potential(mean_phi, std_phi, n):
-    """Type 3: |N(mean, std)|, positive random, matched stats."""
+def make_shifted_structured_potential(L_csr, n, G, pos, col, adj, steps):
+    """Type 3: exact-moment torus shift of the static initial field."""
+    phi_static = evolve_reference_phi(L_csr, n, G, pos, col, adj, steps)
+    field = phi_static.reshape(SIDE, SIDE)
+    shifted = np.roll(field, shift=(SHIFT_DX, SHIFT_DY), axis=(0, 1)).reshape(-1)
+
     def potential_fn(psi, sign, rng):
-        return sign * np.abs(rng.normal(mean_phi, std_phi, n))
+        return sign * shifted
 
     return potential_fn
 
 
-def make_negative_random_potential(mean_phi, std_phi, n):
-    """Type 4: -|N(mean, std)|, negative random."""
+def phase_scramble_field(field: np.ndarray, rng: np.random.RandomState) -> np.ndarray:
+    """Preserve torus power spectrum while destroying spatial alignment."""
+    field2d = field.reshape(SIDE, SIDE)
+    mean = float(np.mean(field2d))
+    centered = field2d - mean
+    spec = np.fft.rfft2(centered)
+    amp = np.abs(spec)
+    phase = rng.uniform(0.0, 2.0 * np.pi, size=spec.shape)
+
+    # Keep the zero and Nyquist modes real to preserve irfft2 reality.
+    phase[0, 0] = 0.0
+    if SIDE % 2 == 0:
+        phase[:, -1] = 0.0
+        phase[SIDE // 2, :] = 0.0
+
+    scrambled = np.fft.irfft2(amp * np.exp(1j * phase), s=(SIDE, SIDE)).real
+    scrambled -= np.mean(scrambled)
+    std = float(np.std(scrambled))
+    target_std = float(np.std(centered))
+    if std > 1e-12 and target_std > 0.0:
+        scrambled *= target_std / std
+    scrambled += mean
+    return scrambled.reshape(-1)
+
+
+def make_phase_scrambled_potential(L_csr, n, G, pos, col, adj, steps, seed):
+    """Type 4: same moments and spectrum, randomized torus phases."""
+    phi_static = evolve_reference_phi(L_csr, n, G, pos, col, adj, steps)
+    rng_local = np.random.RandomState(9100 + 37 * seed + int(round(100 * G)) + steps)
+    phi_phase = phase_scramble_field(phi_static, rng_local)
+
     def potential_fn(psi, sign, rng):
-        return sign * (-np.abs(rng.normal(mean_phi, std_phi, n)))
+        return sign * phi_phase
 
     return potential_fn
 
@@ -407,21 +450,10 @@ def main():
     n, pos, adj, col = build_lattice_2d(SIDE)
     L = build_laplacian(adj, n)
 
-    # ── Compute reference phi stats from self-consistent evolution ──
-    print("Computing reference Phi statistics from self-consistent run...")
-    solve_op = (L + MU2 * speye(n, format='csr')).tocsc()
-    psi_ref = make_gaussian(pos, n)
-    phi_ref = np.zeros(n)
-    for step in range(N_STEPS):
-        rho = np.abs(psi_ref)**2
-        phi_ref = spsolve(solve_op, G_BOUNDARY * rho)
-        H_ref = build_hamiltonian(pos, col, adj, n, phi_ref)
-        psi_ref = cn_step(psi_ref, H_ref, DT)
-        psi_ref /= np.linalg.norm(psi_ref)
-
-    phi_mean = float(np.mean(phi_ref))
-    phi_std = float(np.std(phi_ref))
-    print(f"  Reference Phi: mean={phi_mean:.6f}, std={phi_std:.6f}, "
+    # ── Compute reference phi stats from static initial source ─────
+    print("Computing matched static-field statistics...")
+    phi_ref = evolve_reference_phi(L, n, G_BOUNDARY, pos, col, adj, N_STEPS)
+    print(f"  Static-field Phi: mean={np.mean(phi_ref):.6f}, std={np.std(phi_ref):.6f}, "
           f"min={np.min(phi_ref):.6f}, max={np.max(phi_ref):.6f}")
     print(f"  All positive: {np.all(phi_ref >= 0)}")
     print()
@@ -430,24 +462,30 @@ def main():
 
     types = {
         "1-SelfConsist": {
-            "sign": lambda G: make_self_consistent_potential(L, n, G),
-            "width": lambda: make_self_consistent_potential(L, n, G_WIDTH),
-            "boundary": lambda: make_self_consistent_potential(L, n, G_BOUNDARY),
+            "sign": lambda G, seed: make_self_consistent_potential(L, n, G),
+            "width": lambda seed: make_self_consistent_potential(L, n, G_WIDTH),
+            "boundary": lambda seed: make_self_consistent_potential(L, n, G_BOUNDARY),
         },
         "2-StaticInit": {
-            "sign": lambda G: make_static_initial_potential(L, n, G, pos),
-            "width": lambda: make_static_initial_potential(L, n, G_WIDTH, pos),
-            "boundary": lambda: make_static_initial_potential(L, n, G_BOUNDARY, pos),
+            "sign": lambda G, seed: make_static_initial_potential(L, n, G, pos),
+            "width": lambda seed: make_static_initial_potential(L, n, G_WIDTH, pos),
+            "boundary": lambda seed: make_static_initial_potential(L, n, G_BOUNDARY, pos),
         },
-        "3-PosRandom": {
-            "sign": lambda G: make_positive_random_potential(phi_mean, phi_std, n),
-            "width": lambda: make_positive_random_potential(phi_mean, phi_std, n),
-            "boundary": lambda: make_positive_random_potential(phi_mean, phi_std, n),
+        "3-ShiftedNull": {
+            "sign": lambda G, seed: make_shifted_structured_potential(
+                L, n, G, pos, col, adj, SIGN_ITER),
+            "width": lambda seed: make_shifted_structured_potential(
+                L, n, G_WIDTH, pos, col, adj, WIDTH_STEPS),
+            "boundary": lambda seed: make_shifted_structured_potential(
+                L, n, G_BOUNDARY, pos, col, adj, N_STEPS),
         },
-        "4-NegRandom": {
-            "sign": lambda G: make_negative_random_potential(phi_mean, phi_std, n),
-            "width": lambda: make_negative_random_potential(phi_mean, phi_std, n),
-            "boundary": lambda: make_negative_random_potential(phi_mean, phi_std, n),
+        "4-PhaseNull": {
+            "sign": lambda G, seed: make_phase_scrambled_potential(
+                L, n, G, pos, col, adj, SIGN_ITER, seed),
+            "width": lambda seed: make_phase_scrambled_potential(
+                L, n, G_WIDTH, pos, col, adj, WIDTH_STEPS, seed),
+            "boundary": lambda seed: make_phase_scrambled_potential(
+                L, n, G_BOUNDARY, pos, col, adj, N_STEPS, seed),
         },
     }
 
@@ -470,7 +508,7 @@ def main():
 
         for seed in range(N_SEEDS):
             # Probe A: sign selectivity
-            pfn_sign = factories["sign"](G_SIGN)
+            pfn_sign = factories["sign"](G_SIGN, seed)
             tw_a, tw_r, margin = measure_sign_selectivity(
                 pos, col, adj, n, pfn_sign, seed=seed)
             sign_attracts.append(tw_a)
@@ -478,13 +516,13 @@ def main():
             sign_margins.append(margin)
 
             # Probe B: width contraction
-            pfn_width = factories["width"]()
+            pfn_width = factories["width"](seed)
             ratio, w_g, w_f = measure_width_contraction(
                 pos, col, adj, n, pfn_width, seed=seed)
             width_ratios.append(ratio)
 
             # Probe C: boundary law
-            pfn_bnd = factories["boundary"]()
+            pfn_bnd = factories["boundary"](seed)
             alpha, r2 = measure_boundary_law(
                 pos, col, adj, n, pfn_bnd, seed=seed)
             boundary_alphas.append(alpha)
@@ -566,12 +604,12 @@ def main():
     comparisons = [
         ("1-SelfConsist", "2-StaticInit",
          "Self-consistent vs Static-from-initial (does backreaction matter?)"),
-        ("2-StaticInit", "3-PosRandom",
-         "Static-from-initial vs Positive random (do spatial correlations matter?)"),
-        ("3-PosRandom", "4-NegRandom",
-         "Positive random vs Negative random (does sign of Phi matter?)"),
-        ("1-SelfConsist", "3-PosRandom",
-         "Self-consistent vs Positive random (full self-consistency vs just positivity)"),
+        ("2-StaticInit", "3-ShiftedNull",
+         "Static-from-initial vs Shifted structured null (does packet-field alignment matter?)"),
+        ("2-StaticInit", "4-PhaseNull",
+         "Static-from-initial vs Phase-scrambled null (does exact spatial structure matter?)"),
+        ("1-SelfConsist", "4-PhaseNull",
+         "Self-consistent vs Phase-scrambled null (full backreaction vs structured null)"),
     ]
 
     for t1_name, t2_name, description in comparisons:
@@ -629,57 +667,61 @@ def main():
     print()
 
     # Q2: Do spatial correlations matter?
-    r_pr = results["3-PosRandom"]
+    r_pr = results["3-ShiftedNull"]
     sigs_q2 = [
         sigma_diff(r_si["sign_margins"], r_pr["sign_margins"]),
         sigma_diff(r_si["width_ratios"], r_pr["width_ratios"]),
         sigma_diff(r_si["boundary_alphas"], r_pr["boundary_alphas"]),
     ]
     max_q2 = max(sigs_q2)
-    if max_q2 > threshold:
-        print(f"  Q2: SPATIAL CORRELATIONS MATTER ({max_q2:.1f} sigma)")
-        print(f"      Static-from-initial differs from positive random.")
-        print(f"      The spatial structure of |psi_0|^2 provides information")
-        print(f"      beyond mere positivity of the potential.")
+    q2_det = np.any(np.isnan(sigs_q2))
+    if q2_det or max_q2 > threshold:
+        label = "deterministic separation on this fixed surface" if q2_det else f"{max_q2:.1f} sigma"
+        print(f"  Q2: PACKET-FIELD ALIGNMENT MATTERS ({label})")
+        print(f"      Static-from-initial differs from the shifted structured null.")
+        print(f"      Exact alignment between the field peak and the packet matters")
+        print(f"      beyond preserving moments and smoothness.")
     else:
-        print(f"  Q2: Spatial correlations NOT distinguished ({max_q2:.1f} sigma)")
-        print(f"      Any positive potential of matching stats works the same.")
+        print(f"  Q2: Packet-field alignment NOT distinguished ({max_q2:.1f} sigma)")
+        print(f"      A shifted matched field works as well as the aligned one.")
 
     print()
 
-    # Q3: Does sign of Phi matter?
-    r_nr = results["4-NegRandom"]
+    # Q3: Does exact field structure matter beyond a smooth matched null?
+    r_nr = results["4-PhaseNull"]
     sigs_q3 = [
         sigma_diff(r_pr["sign_margins"], r_nr["sign_margins"]),
         sigma_diff(r_pr["width_ratios"], r_nr["width_ratios"]),
         sigma_diff(r_pr["boundary_alphas"], r_nr["boundary_alphas"]),
     ]
     max_q3 = max(sigs_q3)
-    if max_q3 > threshold:
-        print(f"  Q3: SIGN OF PHI MATTERS ({max_q3:.1f} sigma)")
-        print(f"      Positive random differs from negative random.")
-        print(f"      Confirms parity-coupling sign selection is physical.")
+    q3_det = np.any(np.isnan(sigs_q3))
+    if q3_det or max_q3 > threshold:
+        label = "deterministic separation on this fixed surface" if q3_det else f"{max_q3:.1f} sigma"
+        print(f"  Q3: STRUCTURED NULL CHOICE MATTERS ({label})")
+        print(f"      Shifted and phase-scrambled matched nulls are not equivalent.")
+        print(f"      The fixed-surface claim depends on which structured null is used.")
     else:
-        print(f"  Q3: Sign of Phi NOT distinguished ({max_q3:.1f} sigma)")
-        print(f"      Positive and negative random give same results.")
+        print(f"  Q3: Structured nulls agree ({max_q3:.1f} sigma)")
+        print(f"      The null result is robust across two matched structured controls.")
 
     print()
 
     # Overall
     r_sc_vs_pr = [
-        sigma_diff(r_sc["sign_margins"], r_pr["sign_margins"]),
-        sigma_diff(r_sc["width_ratios"], r_pr["width_ratios"]),
-        sigma_diff(r_sc["boundary_alphas"], r_pr["boundary_alphas"]),
+        sigma_diff(r_sc["sign_margins"], r_nr["sign_margins"]),
+        sigma_diff(r_sc["width_ratios"], r_nr["width_ratios"]),
+        sigma_diff(r_sc["boundary_alphas"], r_nr["boundary_alphas"]),
     ]
     finite_overall = [x for x in r_sc_vs_pr if not np.isnan(x)]
     max_overall = max(finite_overall) if finite_overall else float('nan')
     overall_label = fmt_sep(max_overall)
-    print(f"  OVERALL: Self-consistent vs Positive random = {overall_label}")
+    print(f"  OVERALL: Self-consistent vs Phase-scrambled null = {overall_label}")
     if (not np.isnan(max_overall)) and max_overall > threshold:
-        print(f"  Self-consistency provides information BEYOND just having")
-        print(f"  a positive potential. The gravitational backreaction is real.")
+        print(f"  Self-consistency provides information BEYOND a matched smooth")
+        print(f"  structured null. The iterative backreaction remains real.")
     else:
-        print(f"  Self-consistency is NOT distinguished from mere positivity.")
+        print(f"  Self-consistency is NOT distinguished from the structured null.")
 
     elapsed = time.time() - t0
     print(f"\n  Total time: {elapsed:.1f}s")
@@ -696,7 +738,7 @@ def main():
                      fontsize=13, fontweight='bold')
 
         type_names = list(types.keys())
-        short_names = ["Self-\nconsist", "Static\ninit", "Pos\nrandom", "Neg\nrandom"]
+        short_names = ["Self-\nconsist", "Static\ninit", "Shifted\nnull", "Phase\nnull"]
         colors = ['#d62728', '#ff7f0e', '#2ca02c', '#1f77b4']
         x = np.arange(len(type_names))
 
