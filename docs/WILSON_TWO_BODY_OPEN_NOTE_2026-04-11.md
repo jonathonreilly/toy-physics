@@ -143,6 +143,47 @@ So the honest read is:
 - the current both-masses observable fails because common propagation slowing
   overwhelms any clean action-reaction signal
 
+## Acceleration Follow-Up On The Cleaner Wilson Surface
+
+`frontier_wilson_both_masses_accel.py` reruns the both-masses question with a
+better observable:
+
+- open 3D Wilson lattice
+- `side = 20`
+- `G = 5`
+- `mu^2 = 0.001`
+- fixed separation `d = 8`
+- mass grid `M_A, M_B in {0.5, 1.0, 1.5, 2.0}`
+- retained observables are inward-positive early accelerations
+  - `a_A^mut = +(a_A^shared - a_A^self)`
+  - `a_B^mut = -(a_B^shared - a_B^self)`
+  - `F_A = M_A * a_A^mut`
+  - `F_B = M_B * a_B^mut`
+
+This does materially improve the lane:
+
+- anchor slice `a_A^mut` vs `M_B` at `M_A = 1.0`: `R^2 = 0.999981`
+- anchor slice `a_B^mut` vs `M_A` at `M_B = 1.0`: `R^2 = 0.999942`
+
+So the old failure was partly the observable, not just the architecture.
+
+But full closure still fails on the same surface:
+
+- `a_A^mut / M_B`: `CV = 19.654%`
+- `a_B^mut / M_A`: `CV = 37.497%`
+- force-balance proxy `|F_A - F_B| / (|F_A| + |F_B|)`
+  - mean `28.113%`
+  - max `56.085%`
+
+So the stronger and more current read is:
+
+- Wilson both-masses anchor slices are nearly perfectly linear
+- the full-grid separable law still fails
+- equal-and-opposite force balance still fails
+
+That is a real strengthening of the lane, but it is still short of retained
+full Newton closure.
+
 ## Honest Interpretation
 
 The Wilson lane has improved substantially over the staggered two-body lane:
@@ -218,5 +259,12 @@ So the next step is narrower:
     kinematics
 
 Until one of those produces a clean equal-and-opposite signal, the Wilson lane
-should be cited as a distance-law calibration plus a failed both-masses closure,
+should be cited as:
+
+- a distance-law calibration
+- a real mutual-attraction channel
+- near-perfect anchor-slice partner-mass scaling on the side-20 unscreened
+  surface
+- but still a failed full both-masses closure
+
 not as a retained Newton derivation.
