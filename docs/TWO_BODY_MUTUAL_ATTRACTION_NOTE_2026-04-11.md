@@ -207,4 +207,16 @@ Before this lane can be retained, it needs:
 4. a bridge from this massless periodic signal to the broader screened graph
    program
 
+For the Wilson/open-surface successor lane specifically, the exact next
+observable is now clear:
+
+- not another source-weight-only sweep
+- instead, independent inertial masses in the two orbital Hamiltonians
+- with the retained read taken from early-time mutual momentum transfer:
+  - `P_A^mut = M_A * a_A^(shared-self_only)`
+  - `P_B^mut = M_B * a_B^(shared-self_only)`
+
+That is the first Wilson observable that can honestly test a retained
+both-masses law rather than just source-linearity slices.
+
 Until then, the two-body mutual-attraction lane remains exploratory.

@@ -11,7 +11,7 @@
 
 Does the Wilson-fermion two-orbital Hartree lane produce a genuine mutual
 attraction signal once the staggered parity oscillation is removed, and if so,
-does it approach Newtonian scaling?
+how much of a Newton-like law can actually be retained?
 
 ## Periodic Wilson Result
 
@@ -98,7 +98,34 @@ Fit:
 
 - `|a_mut| ~ mB^0.483` (`R^2 = 0.9363`)
 
-So the partner-source dependence is monotone and real, but clearly sublinear.
+So the partner-source dependence is monotone and real, but clearly sublinear
+on that screened surface.
+
+## Both-Masses Audit
+
+`frontier_newton_both_masses.py` checks the newer open-surface,
+weak-screening surface with `mu^2 = 0.001`, but it still does **not** close a
+full `M_A M_B` law.
+
+What the runner actually varies:
+
+- `source_A`, `source_B` in the Poisson source
+- two unit-normalized orbitals with the **same** Wilson Hamiltonian mass term
+
+So it measures source-linearity slices, not a full inertial-times-source law.
+
+Direct rerun on that surface:
+
+- anchor slice `a_on_A` vs `source_B` at `source_A = 1.0`: `R^2 = 0.9956`
+- anchor slice `a_on_B` vs `source_A` at `source_B = 1.0`: `R^2 = 1.0000`
+- full-grid normalized response `a_on_A / source_B`: `CV = 62.9%`
+- equal-and-opposite acceleration proxy `a_A / a_B`: fails strongly on the full grid
+
+So the honest read is:
+
+- the open Wilson lane supports a real distance-law calibration
+- it also supports slice-wise source linearity
+- it still does **not** support retained full Newton closure
 
 ## Honest Interpretation
 
@@ -135,7 +162,7 @@ The later `mu^2` sweep narrows the interpretation further:
 - `mu^2 = 0.001` gives `alpha = -1.871`
 
 So the steep exponent is not a fixed law of the open surface. It is strongly
-screening-controlled and softens toward Newtonian scaling as `mu^2` is reduced.
+screening-controlled and softens toward Newton-compatible scaling as `mu^2` is reduced.
 
 ## Important Guardrail
 
@@ -155,6 +182,21 @@ This Wilson result is strongest as:
 
 It does **not** yet support:
 
-- `1/r^2`
-- `F ∝ M1 M2`
+- retained full `F ∝ M_1 M_2 / r^2`
+- a valid action-reaction law on the both-masses grid
 - a promoted Nature-level Newton-law claim
+
+## Exact Next Observable
+
+The next decisive observable is no longer another source-weight-only sweep.
+
+It is:
+
+- separate inertial masses in `H_A(M_A, Phi)` and `H_B(M_B, Phi)`
+- the early-time mutual momentum-transfer residual on the same open surface
+  - `P_A^mut = M_A * a_A^(shared-self_only)`
+  - `P_B^mut = M_B * a_B^(shared-self_only)`
+- then test:
+  - `P_A^mut ∝ M_B`
+  - `P_B^mut ∝ M_A`
+  - `P_A^mut = -P_B^mut`

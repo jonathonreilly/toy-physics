@@ -3,7 +3,7 @@
 **Date:** 2026-04-11  
 **Status:** bounded-retained calibration note
 
-**Script:** `scripts/frontier_wilson_mu2_sweep.py`
+**Script:** `scripts/frontier_wilson_mu2_distance_sweep.py`
 
 **Anchor notes/scripts:**
 - `docs/WILSON_TWO_BODY_OPEN_NOTE_2026-04-11.md`
@@ -13,7 +13,7 @@
 ## Question
 
 Does the open-boundary Wilson distance law stay steep as screening is reduced,
-or does it soften toward Newtonian `d^-2` behavior?
+or does it soften toward Newton-compatible `d^-2` behavior?
 
 ## Sweep design
 
@@ -52,7 +52,7 @@ The steep open-lattice exponent at `mu^2 = 0.22` is **screening-controlled**.
 As screening is reduced:
 
 - the exponent softens monotonically
-- the law approaches Newtonian `d^-2`
+- the law approaches Newton-compatible `d^-2`
 - the mutual-attraction channel itself remains present
 
 So the correct statement is not “the Wilson law is permanently steeper than
@@ -61,6 +61,12 @@ Newton,” but rather:
 > the open-lattice Wilson mutual channel is real, and its distance exponent
 > is strongly controlled by the screening mass.
 
+This note only calibrates the **distance-law side** of the Wilson lane.
+
+It does **not** close the mass-law side, because the current both-masses
+runner varies Poisson source weights without introducing independent inertial
+masses in the two orbital Hamiltonians.
+
 ## Conclusion
 
 This is a calibration result, not a separate Newton-law derivation.
@@ -68,3 +74,14 @@ This is a calibration result, not a separate Newton-law derivation.
 It supports the use of the open Wilson lane as a screened crossover study and
 shows that the steep `mu^2 = 0.22` exponent should not be treated as a fixed
 universality class.
+
+The exact next observable needed for a retained Wilson Newton claim is:
+
+- independent inertial masses `M_A`, `M_B` in `H_A`, `H_B`
+- early-time mutual momentum transfer
+  - `P_A^mut = M_A * a_A^(shared-self_only)`
+  - `P_B^mut = M_B * a_B^(shared-self_only)`
+- on the same open weak-screening surface
+
+Until that exists, this note should only be cited as a distance-law
+calibration.

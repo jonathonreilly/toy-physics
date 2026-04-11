@@ -1,21 +1,23 @@
 #!/usr/bin/env python3
 """
-Full Newton's law test: F proportional to M_A * M_B / r^2.
+Open-Wilson source/response mass check on the two-orbital lane.
 
-Previous results established F proportional to M (R^2=0.987) and 1/r^2
-(exponent -2.02 +/- 0.07) separately. This script tests the FULL product
-law by sweeping M_A x M_B independently.
+This script does NOT by itself establish full Newton closure.
 
-Protocol:
-  - Wilson 3D, side=15, open BC, G=5, DT=0.08, mu2=0.001
-  - Two Gaussians sigma=1.0 at separation d=5
-  - Source for Phi = M_B_weight * |psi_B|^2 + M_A_weight * |psi_A|^2
-  - Measure individual centroid accelerations (not just separation)
-  - F_on_A should scale with M_B (source strength of B)
-  - F_on_B should scale with M_A (source strength of A)
-  - Newton's third law: F_on_A = -F_on_B
+What it really tests:
+  - open 3D Wilson lattice, side=15, G=5, mu2=0.001
+  - two separate orbitals at fixed separation d=5
+  - Poisson source weights source_A, source_B multiply |psi_A|^2, |psi_B|^2
+  - early mutual accelerations are extracted from SHARED - SELF_ONLY
 
-Sweep: M_weight in [0.5, 1.0, 2.0, 3.0] for both A and B independently.
+What it does NOT test:
+  - independent inertial-mass variation of the two orbitals
+  - a true M_A * M_B force law
+  - a valid momentum-balance / third-law check away from the equal-dynamics lane
+
+So the honest read is:
+  - source-linearity slices can be checked on an open Wilson surface
+  - full both-masses Newton closure still needs a separate inertial-mass observable
 """
 
 from __future__ import annotations
@@ -190,7 +192,7 @@ def main():
     center_b = (x_b, center, center)
 
     print("=" * 88)
-    print("FULL NEWTON'S LAW TEST: F ~ M_A * M_B / r^2")
+    print("OPEN WILSON SOURCE/RESPONSE MASS CHECK")
     print("=" * 88)
     print(f"Lattice: {SIDE}^3 = {N} sites, open BC")
     print(f"Wilson: MASS={MASS}, r={WILSON_R}, DT={DT}")
@@ -206,22 +208,22 @@ def main():
     # PART 1: Full M_A x M_B grid
     # ══════════════════════════════════════════════════════════════════
     print("=" * 88)
-    print("PART 1: M_A x M_B GRID")
+    print("PART 1: SOURCE_A x SOURCE_B GRID")
     print("=" * 88)
     print()
-    print("For each (M_A, M_B), measure:")
-    print("  F_on_A = mutual acceleration of A (should scale with M_B)")
-    print("  F_on_B = mutual acceleration of B (should scale with M_A)")
-    print("  Third law ratio = F_on_A / F_on_B  (should be ~ -1)")
+    print("For each (source_A, source_B), measure:")
+    print("  a_on_A = mutual acceleration of A from SHARED - SELF_ONLY")
+    print("  a_on_B = mutual acceleration of B from SHARED - SELF_ONLY")
+    print("  ratio a_A/a_B is only a force-symmetry proxy on this fixed-dynamics surface")
     print()
 
     # Storage for analysis
     results = {}
 
-    header = (f"{'M_A':>5s} {'M_B':>5s} | "
-              f"{'F_on_A':>12s} {'F_on_B':>12s} | "
-              f"{'3rd_law':>8s} | "
-              f"{'F_A/M_B':>10s} {'F_B/M_A':>10s} | "
+    header = (f"{'sA':>5s} {'sB':>5s} | "
+              f"{'a_on_A':>12s} {'a_on_B':>12s} | "
+              f"{'aA/aB':>8s} | "
+              f"{'aA/sB':>10s} {'aB/sA':>10s} | "
               f"{'time':>5s}")
     print(header)
     print("-" * len(header))
@@ -268,13 +270,13 @@ def main():
     print(f"\nTotal grid time: {t_total:.0f}s")
 
     # ══════════════════════════════════════════════════════════════════
-    # PART 2: F_on_A vs M_B (fixing M_A = 1.0)
+    # PART 2: a_on_A vs source_B (fixing source_A = 1.0)
     # ══════════════════════════════════════════════════════════════════
     print()
     print("=" * 88)
-    print("PART 2: F_on_A vs M_B  (M_A = 1.0 fixed)")
+    print("PART 2: a_on_A vs source_B  (source_A = 1.0 fixed)")
     print("=" * 88)
-    print("If Newton's law holds, F_on_A should be LINEAR in M_B.")
+    print("This checks source-linearity of the A response at fixed source_A.")
     print()
 
     mb_vals = []
@@ -283,21 +285,21 @@ def main():
         r = results[(1.0, m_b)]
         mb_vals.append(m_b)
         fa_vals.append(r['f_on_a'])
-        print(f"  M_B={m_b:.1f}:  F_on_A = {r['f_on_a']:+.6f}")
+        print(f"  source_B={m_b:.1f}:  a_on_A = {r['f_on_a']:+.6f}")
 
     slope, intercept, r2 = linear_fit(mb_vals, fa_vals)
-    print(f"\n  Linear fit: F_on_A = {slope:.6f} * M_B + {intercept:.6f}")
+    print(f"\n  Linear fit: a_on_A = {slope:.6f} * source_B + {intercept:.6f}")
     print(f"  R^2 = {r2:.6f}")
     print(f"  Intercept/slope = {abs(intercept/slope):.4f} (should be ~0 for proportionality)")
 
     # ══════════════════════════════════════════════════════════════════
-    # PART 3: F_on_B vs M_A  (M_B = 1.0 fixed)
+    # PART 3: a_on_B vs source_A  (source_B = 1.0 fixed)
     # ══════════════════════════════════════════════════════════════════
     print()
     print("=" * 88)
-    print("PART 3: F_on_B vs M_A  (M_B = 1.0 fixed)")
+    print("PART 3: a_on_B vs source_A  (source_B = 1.0 fixed)")
     print("=" * 88)
-    print("If Newton's law holds, F_on_B should be LINEAR in M_A.")
+    print("This checks source-linearity of the B response at fixed source_B.")
     print()
 
     ma_vals = []
@@ -306,19 +308,19 @@ def main():
         r = results[(m_a, 1.0)]
         ma_vals.append(m_a)
         fb_vals.append(r['f_on_b'])
-        print(f"  M_A={m_a:.1f}:  F_on_B = {r['f_on_b']:+.6f}")
+        print(f"  source_A={m_a:.1f}:  a_on_B = {r['f_on_b']:+.6f}")
 
     slope_b, intercept_b, r2_b = linear_fit(ma_vals, fb_vals)
-    print(f"\n  Linear fit: F_on_B = {slope_b:.6f} * M_A + {intercept_b:.6f}")
+    print(f"\n  Linear fit: a_on_B = {slope_b:.6f} * source_A + {intercept_b:.6f}")
     print(f"  R^2 = {r2_b:.6f}")
     print(f"  Intercept/slope = {abs(intercept_b/slope_b):.4f} (should be ~0 for proportionality)")
 
     # ══════════════════════════════════════════════════════════════════
-    # PART 4: Newton's third law check
+    # PART 4: acceleration symmetry proxy
     # ══════════════════════════════════════════════════════════════════
     print()
     print("=" * 88)
-    print("PART 4: NEWTON'S THIRD LAW  (F_on_A = -F_on_B)")
+    print("PART 4: ACCELERATION SYMMETRY PROXY  (a_on_A ?= -a_on_B)")
     print("=" * 88)
     print()
 
@@ -331,29 +333,31 @@ def main():
                 deviation = abs(r['third_law'] + 1.0)
                 status = "PASS" if deviation < 0.2 else ("MARGINAL" if deviation < 0.5 else "FAIL")
                 print(f"  M_A={m_a:.1f}, M_B={m_b:.1f}: "
-                      f"F_A/F_B = {r['third_law']:+.4f}  "
+                      f"a_A/a_B = {r['third_law']:+.4f}  "
                       f"(deviation from -1: {deviation:.4f}) [{status}]")
 
     if third_law_ratios:
         mean_ratio = np.mean(third_law_ratios)
         std_ratio = np.std(third_law_ratios)
-        print(f"\n  Mean F_A/F_B = {mean_ratio:+.4f} +/- {std_ratio:.4f}")
-        print(f"  Expected: -1.000")
+        print(f"\n  Mean a_A/a_B = {mean_ratio:+.4f} +/- {std_ratio:.4f}")
+        print("  Expected only as a proxy on this equal-dynamics surface, not as a full force law.")
 
     # ══════════════════════════════════════════════════════════════════
-    # PART 5: Full product law F ~ M_A * M_B
+    # PART 5: source-linearity across the full grid
     # ══════════════════════════════════════════════════════════════════
     print()
     print("=" * 88)
-    print("PART 5: PRODUCT LAW  F_on_A ~ M_A_inertial * M_B_source ?")
+    print("PART 5: SOURCE-LINEARITY ACROSS THE FULL GRID")
     print("=" * 88)
     print()
-    print("Test: is F_on_A proportional to M_B across ALL (M_A, M_B) pairs?")
-    print("(The inertial response of A is the same regardless of M_A_source,")
-    print(" since wavepackets are unit-normalized before mass_weight scaling.)")
+    print("Test: is a_on_A proportional to source_B across ALL (source_A, source_B) pairs?")
+    print("This is still a source-only statement:")
+    print("  the orbitals remain unit-normalized")
+    print("  the Wilson mass term is not varied per orbital")
+    print("  so this is NOT a full inertial x source mass law")
     print()
 
-    # For each M_A, plot F_on_A vs M_B and check linearity
+    # For each source_A, plot a_on_A vs source_B and check linearity
     for m_a in mass_values:
         mbs = []
         fas = []
@@ -363,14 +367,14 @@ def main():
             fas.append(r['f_on_a'])
 
         sl, intc, r2_val = linear_fit(mbs, fas)
-        print(f"  M_A={m_a:.1f}:  F_on_A = {sl:+.6f} * M_B + {intc:+.6f}  (R^2={r2_val:.6f})")
+        print(f"  source_A={m_a:.1f}:  a_on_A = {sl:+.6f} * source_B + {intc:+.6f}  (R^2={r2_val:.6f})")
 
     print()
-    print("If all R^2 ~ 1 with small intercepts, F_on_A ~ M_B confirmed for all M_A.")
+    print("If all R^2 ~ 1 with small intercepts, source-linearity survives across source_A slices.")
     print()
 
-    # Similarly for F_on_B vs M_A at each M_B
-    print("Test: is F_on_B proportional to M_A across ALL (M_A, M_B) pairs?")
+    # Similarly for a_on_B vs source_A at each source_B
+    print("Test: is a_on_B proportional to source_A across ALL (source_A, source_B) pairs?")
     print()
     for m_b in mass_values:
         mas = []
@@ -381,10 +385,10 @@ def main():
             fbs.append(r['f_on_b'])
 
         sl, intc, r2_val = linear_fit(mas, fbs)
-        print(f"  M_B={m_b:.1f}:  F_on_B = {sl:+.6f} * M_A + {intc:+.6f}  (R^2={r2_val:.6f})")
+        print(f"  source_B={m_b:.1f}:  a_on_B = {sl:+.6f} * source_A + {intc:+.6f}  (R^2={r2_val:.6f})")
 
     # ══════════════════════════════════════════════════════════════════
-    # PART 6: Product scaling test: F_on_A / (M_B) should be constant
+    # PART 6: normalized acceleration tables
     # ══════════════════════════════════════════════════════════════════
     print()
     print("=" * 88)
@@ -392,8 +396,8 @@ def main():
     print("=" * 88)
     print()
 
-    print("F_on_A / M_B  (should be constant across columns for each M_A row):")
-    print(f"{'M_A\\M_B':>8s}", end="")
+    print("a_on_A / source_B  (should be constant across columns for each source_A row if source-linear):")
+    print(f"{'sA\\sB':>8s}", end="")
     for m_b in mass_values:
         print(f"  {m_b:>10.1f}", end="")
     print()
@@ -406,8 +410,8 @@ def main():
         print()
 
     print()
-    print("F_on_B / M_A  (should be constant across rows for each M_B column):")
-    print(f"{'M_A\\M_B':>8s}", end="")
+    print("a_on_B / source_A  (should be constant across rows for each source_B column if source-linear):")
+    print(f"{'sA\\sB':>8s}", end="")
     for m_b in mass_values:
         print(f"  {m_b:>10.1f}", end="")
     print()
@@ -428,29 +432,29 @@ def main():
     print("=" * 88)
     print()
 
-    print(f"1. F_on_A vs M_B (M_A=1): slope={slope:.6f}, R^2={r2:.6f}")
+    print(f"1. a_on_A vs source_B (source_A=1): slope={slope:.6f}, R^2={r2:.6f}")
     if r2 > 0.95:
-        print(f"   PASS: F_on_A is LINEAR in M_B (R^2={r2:.4f})")
+        print(f"   PASS: a_on_A is LINEAR in source_B on the anchor slice (R^2={r2:.4f})")
     elif r2 > 0.85:
-        print(f"   MARGINAL: F_on_A roughly linear in M_B (R^2={r2:.4f})")
+        print(f"   MARGINAL: a_on_A roughly linear in source_B on the anchor slice (R^2={r2:.4f})")
     else:
-        print(f"   FAIL: F_on_A NOT linear in M_B (R^2={r2:.4f})")
+        print(f"   FAIL: a_on_A NOT linear in source_B on the anchor slice (R^2={r2:.4f})")
 
-    print(f"\n2. F_on_B vs M_A (M_B=1): slope={slope_b:.6f}, R^2={r2_b:.6f}")
+    print(f"\n2. a_on_B vs source_A (source_B=1): slope={slope_b:.6f}, R^2={r2_b:.6f}")
     if r2_b > 0.95:
-        print(f"   PASS: F_on_B is LINEAR in M_A (R^2={r2_b:.4f})")
+        print(f"   PASS: a_on_B is LINEAR in source_A on the anchor slice (R^2={r2_b:.4f})")
     elif r2_b > 0.85:
-        print(f"   MARGINAL: F_on_B roughly linear in M_A (R^2={r2_b:.4f})")
+        print(f"   MARGINAL: a_on_B roughly linear in source_A on the anchor slice (R^2={r2_b:.4f})")
     else:
-        print(f"   FAIL: F_on_B NOT linear in M_A (R^2={r2_b:.4f})")
+        print(f"   FAIL: a_on_B NOT linear in source_A on the anchor slice (R^2={r2_b:.4f})")
 
-    print(f"\n3. Newton's third law: mean F_A/F_B = {mean_ratio:+.4f} +/- {std_ratio:.4f}")
+    print(f"\n3. acceleration symmetry proxy: mean a_A/a_B = {mean_ratio:+.4f} +/- {std_ratio:.4f}")
     if abs(mean_ratio + 1.0) < 0.1 and std_ratio < 0.1:
-        print(f"   PASS: Third law holds (ratio ~ -1)")
+        print("   PASS: equal-and-opposite acceleration proxy holds on this fixed-dynamics surface")
     elif abs(mean_ratio + 1.0) < 0.3:
-        print(f"   MARGINAL: Third law approximately holds")
+        print("   MARGINAL: equal-and-opposite acceleration proxy approximately holds")
     else:
-        print(f"   FAIL: Third law violated")
+        print("   FAIL: equal-and-opposite acceleration proxy breaks on the full source grid")
 
     # Check full product law: F_on_A / M_B should be ~constant for each M_A
     all_fa_per_mb = []
@@ -461,14 +465,14 @@ def main():
     fa_per_mb_mean = np.mean(all_fa_per_mb)
     cv = abs(fa_per_mb_std / fa_per_mb_mean) if abs(fa_per_mb_mean) > 1e-12 else float('inf')
 
-    print(f"\n4. Product law: F_on_A/M_B across all pairs:")
+    print(f"\n4. source-linearity across the full grid: a_on_A/source_B across all pairs:")
     print(f"   mean = {fa_per_mb_mean:+.6f}, std = {fa_per_mb_std:.6f}, CV = {cv:.4f}")
     if cv < 0.15:
-        print(f"   PASS: F_on_A/M_B ~ constant (CV={cv:.2%})")
+        print(f"   PASS: a_on_A/source_B ~ constant (CV={cv:.2%})")
     elif cv < 0.30:
-        print(f"   MARGINAL: F_on_A/M_B roughly constant (CV={cv:.2%})")
+        print(f"   MARGINAL: a_on_A/source_B roughly constant (CV={cv:.2%})")
     else:
-        print(f"   FAIL: F_on_A/M_B NOT constant (CV={cv:.2%})")
+        print(f"   FAIL: a_on_A/source_B NOT constant (CV={cv:.2%})")
 
     # Overall verdict
     print()
@@ -476,15 +480,25 @@ def main():
                    abs(mean_ratio + 1.0) < 0.1 and std_ratio < 0.1,
                    cv < 0.15])
     total = 4
-    print(f"OVERALL: {passes}/{total} tests passed")
+    print(f"OVERALL: {passes}/{total} checks passed")
     if passes == total:
-        print("FULL NEWTON'S LAW F ~ M_A * M_B CONFIRMED")
+        print("Source-linearity and equal-dynamics symmetry both look good on this surface.")
     elif passes >= 3:
-        print("Newton's law mostly confirmed, minor deviations")
+        print("Strong slice-wise source-linearity survives, but the full source grid is not closed.")
     elif passes >= 2:
-        print("Partial Newton's law; some aspects hold, others don't")
+        print("Only partial source-linearity survives; this is NOT a retained both-masses law.")
     else:
-        print("Newton's law NOT confirmed at this parameter point")
+        print("This surface does not support a retainable both-masses law.")
+
+    print()
+    print("NEXT REQUIRED OBSERVABLE:")
+    print("  give the two orbitals independent inertial masses in H_A and H_B,")
+    print("  then measure early-time mutual momentum transfer")
+    print("    P_A^mut = M_A * a_A^(shared-self_only)")
+    print("    P_B^mut = M_B * a_B^(shared-self_only)")
+    print("  on the same open, weak-screening Wilson surface.")
+    print("  That is the first observable that can genuinely test M_A*M_B scaling")
+    print("  together with an action-reaction law.")
 
 
 if __name__ == "__main__":
