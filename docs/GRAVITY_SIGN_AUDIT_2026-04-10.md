@@ -23,17 +23,19 @@ Direct sign tests now split cleanly:
 - the canonical exact-force staggered card survives unchanged at `17/17`
 - graph portability (`7/7`), self-gravity (`5/5`), wave coupling (`5/5`),
   and DAG compatibility (`6/6`) all survive numerically under the parity rewrite
-- some irregular graph batteries do **not** survive cleanly: the base cycle
-  battery drops to `8/9` on layered cycle, the scaled sibling now has
-  family/size-dependent `8/9` misses, and the retarded family-closure sibling
-  is `9/9`, `8/9`, `9/9`, `8/9`
+- the cycle battery now closes `9/9` on all three retained cycle-bearing
+  families
+- the scaled sibling now closes `9/9` on all nine retained larger-size runs
+- the retarded family-closure sibling now closes `9/9`, `9/9`, `9/9`, `8/9`
+- the endogenous same-surface directional probe failed (`0/9`, `0/9`, `4/9`)
 
 So the sign story is reopened, but not fully closed:
 - the old two-sign comparison is now a **negative control** that invalidates the
   identity coupling
 - the corrected coupling restores sign-sensitivity in direct well/hill tests
 - irregular self-generated graph batteries still need one frozen graph-native
-  directional observable beyond the current shell/edge-radial proxies
+  directional observable beyond the current shell/edge-radial proxies and the
+  failed endogenous same-surface probe
 
 ## Observable Hierarchy
 
@@ -130,20 +132,37 @@ the shell-force sign when the external source is inverted:
 This is enough to say the old identity-coupling sign audit no longer governs
 the retained stack.
 
+### Endogenous Same-Surface Directional Probe
+
+`frontier_irregular_directional_observable.py` and
+`IRREGULAR_DIRECTIONAL_OBSERVABLE_NOTE_2026-04-11.md` try to distinguish
+attractive from repulsive coupling on the same irregular graph families using
+dynamical observables rather than shell-profile positivity.
+
+| Metric | Sign-separated parity-vs-identity cases |
+|--------|-----------------------------------------|
+| `Δ<depth>` | `0/9` |
+| signed cut flux | `0/9` |
+| frontier current bias | `4/9` |
+
+**Verdict:** blocker. The endogenous same-surface observable does not yet
+provide a frozen sign-selective irregular-graph direction claim.
+
 ## Emergent Geometry — Corrected
 
-The v2 emergent geometry script (n=100, G=50) now reports three measures:
+The v2 emergent geometry script plus the new G sweep now report:
 
 | Measure | Value | Sign |
 |---------|-------|------|
+| `G=100` audit | robust TOWARD | narrow high-`G` window |
 | shell_mean | −1.94e-3 | AWAY |
 | shell_prob | −3.30e-2 | AWAY |
 | edge_radial | +3.52e-3 | TOWARD |
 
-**Verdict:** Mixed / measurement-dependent. Not settled geometric repulsion.
-The old one-number "AWAY" readout was overclaimed. Do not promote the
-emergent-geometry gravity sign story until it passes the two-metric gate
-across seeds and sizes.
+**Verdict:** partial reopen only. The old one-number "AWAY" readout was
+overclaimed, and the new sweep only opens a narrow high-`G` window rather than
+a retained closure. Do not promote the emergent-geometry gravity sign story
+until it passes the two-metric gate across seeds and sizes.
 
 ## What IS Genuinely Non-Trivial
 
@@ -153,7 +172,7 @@ across seeds and sizes.
 | Self-gravity contraction | Width shrinks under self-gravity | Magnitude is non-trivial |
 | Iterative stability (20/20) | Backreaction loop converges | Could blow up; it doesn't |
 | G_eff = 0.4–0.6 | Retarded field coupling strength | Quantitative, not sign-dependent |
-| Multi-measure sign agreement | Shell and edge-radial agree on admissible families | Cross-validates proxy BUT see Option C caveat below |
+| Multi-measure sign agreement | Shell and edge-radial agree on admissible families | Cross-validates proxy, but not sign-selective |
 | Critical exponent β | Topology-dependent onset | Phase transition existence is real |
 | Gauge current J(A) | Persistent current on graph cycles | Unrelated to gravity sign |
 | Born rule I₃ | Three-slit interference | Unrelated to gravity sign |
@@ -190,7 +209,8 @@ conventional.
 What is **not** closed yet is the final irregular-graph claim:
 the retained shell/edge-radial graph observables are still proxy measures, and
 the self-generated graph field story has not yet been reduced to one exact,
-graph-native directional observable.
+graph-native directional observable. The endogenous same-surface probe is the
+current blocker, not the exact-cubic sign test.
 
 **Script:** `frontier_correct_coupling.py`
 
@@ -240,8 +260,8 @@ Honest answer:
 - yes, the corrected parity/lapse couplings restore sign-sensitivity in the
   direct external-potential tests
 - no, the irregular graph story is not fully closed yet, because the retained
-  graph-family directional observables are still proxy measures and some
-  batteries now fail honestly after the rewrite
+  graph-family directional observables are still proxy measures and the
+  endogenous same-surface probe failed honestly after the rewrite
 
 What now survives cleanly:
 - exact-lattice directional response on the canonical `17-card`
@@ -249,11 +269,14 @@ What now survives cleanly:
 - self-gravity `5/5` with strong contraction across all retained scaling families
 - wave two-field `5/5`
 - DAG compatibility `6/6`
+- cycle battery `9/9` on all three retained cycle-bearing families
+- scaled sibling `9/9` on all nine retained larger-size runs
+- retarded family-closure sibling `9/9`, `9/9`, `9/9`, `8/9`
 - topology-dependent onset behavior
 
 What is still open:
 - one graph-native directional observable that stands up on irregular graphs
-- a fully retained cycle/retarded battery under the corrected coupling
+- the emergent-geometry high-`G` window is a partial reopen, not retained closure
 
 **Scripts:** `frontier_correct_coupling.py`, `frontier_two_sign_comparison.py`,
 `frontier_two_sign_parity.py`

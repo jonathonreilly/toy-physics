@@ -14,16 +14,17 @@ This backlog is ordered by value to the main project, not by ease.
   measures are not sign-selective. Both attractive and repulsive coupling can
   remain inward on those observables, even after the corrected parity
   coupling is applied.
-- This makes the exact cubic card the only retained directional gravity result
-  in the current stack, because it uses the exact lattice-coordinate force
-  `F = -⟨dV/dx⟩`.
+- The exact cubic card now retains its directional result under the corrected
+  parity coupling, so the remaining directional blocker is specifically the
+  endogenous same-surface irregular probe.
 - The next real fork is:
   - derive the attractive sign from the staggered / Dirac structure, or
   - freeze the irregular graph program as explicitly sign-agnostic
 - Acceptance gate:
   either produce one graph-native irregular observable that distinguishes
   coupling sign, or rewrite the program around structural interacting-field
-  results without directional gravity claims.
+  results without directional gravity claims. Do not conflate this with the
+  exact-cubic external-potential sign test.
 
 ## P1 - Endogenous Field Closure
 
@@ -35,11 +36,10 @@ This backlog is ordered by value to the main project, not by ease.
   retained cycle-bearing mean gap from `8.899e-01` to `9.889e-02` and the
   layered holdout gap from `8.759e-01` to `1.680e-02`, while preserving the
   retained force battery.
-- Portability is now established enough for the retained force battery:
-  baseline portability, stress portability, and the failure map are all frozen.
-- Native gauge/current closure is now retained on the cycle-bearing stress
-  families, and explicit layered brickwall / plaquette geometries also close
-  the current probe.
+- Portability is established enough for the retained force battery:
+  baseline portability, stress portability, and the failure map are frozen.
+- Native gauge/current closure is retained on the cycle-bearing stress
+  families, and explicit layered cycle geometry also closes the current probe.
 - True self-gravity is now retained on the three cycle-bearing graph families
   in [`frontier_staggered_self_gravity.py`](../scripts/frontier_staggered_self_gravity.py).
 - A retained scaling readout now exists in
@@ -47,9 +47,8 @@ This backlog is ordered by value to the main project, not by ease.
   inward force is stable, but contraction is topology-sensitive.
 - A retained larger-graph sibling now exists in
   [`frontier_staggered_cycle_battery_scaled.py`](../scripts/frontier_staggered_cycle_battery_scaled.py):
-  the force-first battery stays closed on random geometric and growing, while
-  the layered-cycle family exposes a linearity miss at side `8`, `10`, and
-  `12`.
+  the force-first battery stays closed on random geometric, growing, and
+  layered cycle at side `8`, `10`, and `12`.
 - A retained causal-DAG compatibility probe now exists in
   [`frontier_staggered_dag.py`](../scripts/frontier_staggered_dag.py): `6/6`
   on three layered DAG configurations.
@@ -67,11 +66,8 @@ This backlog is ordered by value to the main project, not by ease.
   `2/3` on random geometric and layered-cycle families.
 - A sibling family-closure attempt now exists in
   [`frontier_two_field_retarded_family_closure.py`](../scripts/frontier_two_field_retarded_family_closure.py):
-  it lifts the retarded family row to `3/3` on all admissible cycle-bearing
-  families and extends the same operating-point closure to the causal DAG
-  (`8/9`, gauge structurally N/A), but the growing family still misses `R5`
-  iterative stability (`8/9`) and the result is not yet frozen as the
-  canonical retarded harness.
+  it closes `9/9` on all three admissible cycle-bearing families and retains
+  the causal DAG at `8/9` (`R8` gauge structurally N/A).
 - The first larger-graph break frontier is now frozen in
   [`frontier_staggered_cycle_break_frontier.py`](../scripts/frontier_staggered_cycle_break_frontier.py):
   the earliest clean failure is a gauge/current collapse on the random
@@ -85,14 +81,13 @@ This backlog is ordered by value to the main project, not by ease.
   exact lattice force remains the standard on the canonical card, while the
   irregular-graph batteries are now explicitly treated as audited radial
   proxies that do not by themselves distinguish attractive from repulsive
-  coupling.
+  coupling. The failed same-surface probe is the current blocker.
 - The sparse layered DAG-like family remains a useful negative control; it
   still fails the gauge/current threshold.
-- The main blocker is no longer transport portability. It is self-consistent
-  endogenous refresh on top of the now-retained nonlocal source-to-field
-  closure, plus the question of whether the irregular graph batteries should
-  be treated as sign-agnostic structural results rather than directional
-  gravity claims.
+- The main blocker is now the endogenous same-surface directional observable
+  on irregular graphs. The source-sector pieces are characterized, but the
+  irregular graph batteries still need one frozen sign-selective observable
+  before any directional claim off-lattice is defensible.
 - Push beyond
   [`frontier_staggered_backreaction_prototype.py`](../scripts/frontier_staggered_backreaction_prototype.py)
   and
@@ -129,7 +124,7 @@ This backlog is ordered by value to the main project, not by ease.
 
 - Compare `phi_solved(depth)` against `phi_ext(depth)` directly on one
   cycle-bearing family and one layered family.
-- Frozen in [`STAGGERED_BACKREACTION_SHELL_SPECTRAL_NOTE.md`](../docs/STAGGERED_BACKREACTION_SHELL_SPECTRAL_NOTE.md): the solved graph field is much flatter in depth than the external-kernel control, and its spectrum is more concentrated in the lowest modes on both families.
+- Frozen in [`STAGGERED_BACKREACTION_SHELL_SPECTRAL_NOTE.md`](../docs/STAGGERED_BACKREACTION_SHELL_SPECTRAL_NOTE.md): the solved graph field is much flatter in depth than the external-kernel control, and its spectrum is more concentrated in the lowest modes on both families. Treat this as source-sector characterization, not as an open blocker.
 - Use that result to decide whether the next closure attempt should be:
   - a different Green's-function map
   - a genuinely nonlinear iterative source sector
@@ -147,7 +142,9 @@ This backlog is ordered by value to the main project, not by ease.
 - Keep the force-based staggered card separate from the repo-wide centroid card.
 - Keep the exact lattice-force card separate from the irregular-graph
   shell-radial proxy batteries, and do not describe the latter as exact
-  coordinate-force expectations or as sign-selection evidence.
+  coordinate-force expectations or as sign-selection evidence. Treat
+  [`IRREGULAR_DIRECTIONAL_OBSERVABLE_NOTE_2026-04-11.md`](../docs/IRREGULAR_DIRECTIONAL_OBSERVABLE_NOTE_2026-04-11.md)
+  as the blocker note.
 - Keep the portability probe separate from the canonical card.
 - Preserve the full-suite baseline as `29/38` in 1D and `28/38` in 3D.
 - Tighten the staggered card doc so the semantic differences table fully matches
@@ -159,6 +156,7 @@ This backlog is ordered by value to the main project, not by ease.
   family changes, not just on one retained graph.
 - Backreaction is promotable only if the force rows survive with an endogenous
   `Phi`, and any directional claim on irregular graphs must use a
-  sign-selective observable rather than the current shell/edge proxies.
+  sign-selective observable rather than the current shell/edge proxies or the
+  failed same-surface probe.
 - A design memo is promotable only if it lists the required graph invariants
   and failure modes concretely enough to guide implementation.

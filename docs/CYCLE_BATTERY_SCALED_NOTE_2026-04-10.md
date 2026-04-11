@@ -34,30 +34,21 @@ All nine retained runs now pass the same `9/9` battery:
 - `B4` force: `+1.9243e-02`, `+1.8456e-02`, `+2.0788e-02` TOWARD
 - `B5` iterative stability: `15/15` TOWARD at all sizes
 - `B8` native gauge: `R²=0.9968`, `0.9943`, `0.9853`
-- `B9` force-gap / shell / spectral:
-  - `G_eff = 60.3, 61.7, 57.7`
-  - `shell_grad_ratio = 0.019, 0.020, 0.020`
-  - `spectral_ratio(modes1-5) = 0.249, 0.288, 0.323`
+- `B9` force-gap / shell / spectral: characterization only
 
 ### Growing
 
 - `B4` force: `+1.0997e-02`, `+2.1029e-03`, `+7.6498e-04` TOWARD
 - `B5` iterative stability: `15/15` TOWARD at all sizes
 - `B8` native gauge: `R²=0.9867`, `0.9975`, `0.9943`
-- `B9` force-gap / shell / spectral:
-  - `G_eff = 62.2, 351.0, 637.5`
-  - `shell_grad_ratio = 0.011, 0.004, 0.003`
-  - `spectral_ratio(modes1-5) = 0.061, 0.061, 0.060`
+- `B9` force-gap / shell / spectral: characterization only
 
 ### Layered cycle
 
 - `B4` force: `+2.3645e-02`, `+2.5023e-02`, `+2.5740e-02` TOWARD
 - `B5` iterative stability: `15/15` TOWARD at all sizes
 - `B8` native gauge: `R²=0.9985`, `0.9888`, `0.9877`
-- `B9` force-gap / shell / spectral:
-  - `G_eff = 57.0, 54.3, 52.9`
-  - `shell_grad_ratio = 0.032, 0.034, 0.035`
-  - `spectral_ratio(modes1-5) = 0.321, 0.341, 0.359`
+- `B9` force-gap / shell / spectral: characterization only
 
 ## What This Freezes
 

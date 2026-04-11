@@ -62,6 +62,10 @@ Hardened audit on the retained `k=4` growth rule:
 
 - This remains a **real exploratory geometry result**: the growth rule changes
   the coarse graph geometry in a matter-correlated way.
+- The new `G` sweep partially reopens the lane at strong coupling:
+  - `G=100` is the narrow retained high-`G` window where the grown graph is
+    robust TOWARD on the audited measures
+  - lower and higher `G` remain mixed or AWAY
 - It is **still not fully retained** because:
   - the density-to-`Φ` correlation is positive but seed-dependent
   - `d_eff(G)` is not monotone and does not encode a clean curvature law
@@ -73,7 +77,8 @@ Hardened audit on the retained `k=4` growth rule:
 This is still the first growth result in the current staggered program that
 looks like a plausible bridge from “physics on a fixed graph” toward “matter
 shapes geometry,” but the bridge is only geometric so far, not gravitationally
-closed.
+closed. Treat the strong-coupling window as a partial reopen, not retained
+closure.
 
 ## Next acceptance gates
 

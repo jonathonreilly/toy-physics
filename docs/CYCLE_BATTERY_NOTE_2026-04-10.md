@@ -21,7 +21,7 @@ layered cycle at a max-degree interior node.
 | B6 Norm | <5e-16 | <5e-16 | <5e-16 |
 | B7 Families (3/3) | ✅ | ✅ | ✅ |
 | B8 Native gauge | R²=0.9999 | R²=0.9500 | R²=0.9736 |
-| B9 Force-gap | G_eff=58.7 | G_eff=57.6 | G_eff=70.5 |
+| B9 Force-gap | characterization-only | characterization-only | characterization-only |
 | B9 shell_grad_ratio | 1.9% | 1.2% | 2.4% |
 | B9 spectral_ratio | 18.9% | 5.9% | 27.5% |
 
@@ -52,7 +52,7 @@ The layered DAG had no cycles by construction (tree topology). Adding
 bipartiteness. Result: gauge PASS (J_range=4.0e-2, sin R²=0.9736) on
 the layered cycle graph.
 
-## Endogenous Field Scale — OPEN (Structural)
+## Endogenous Field Scale — CHARACTERIZED (Structural)
 
 The force from the graph-solved Φ is still much smaller than the external
 kernel force. This is a coupling-constant mismatch (`G_eff≈58-70`), not a
