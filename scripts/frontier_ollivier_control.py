@@ -13,13 +13,16 @@ So R^2=0.97 might just be "a function of |psi|^2 correlates with |psi|^2"
 THREE conditions at each G in [1, 5, 10, 20, 50]:
 
 1. SELF-CONSISTENT: Phi from screened Poisson sourced by |psi|^2
-2. RANDOM-MATCHED: Phi is random with same mean/std as self-consistent Phi
+2. STATIC-INITIAL: Phi from screened Poisson sourced by the initial packet,
+   then held fixed throughout the evolution
+3. RANDOM-MATCHED: Phi is random with same mean/std as self-consistent Phi
    (same |psi|^2 for T, but Phi has no spatial correlation with |psi|^2)
-3. SHUFFLED: Phi = self-consistent Phi but randomly permuted across nodes
+4. SHUFFLED: Phi = self-consistent Phi but randomly permuted across nodes
    (same values/distribution, spatial correlation with |psi|^2 destroyed)
 
-If RANDOM and SHUFFLED give similar R^2 to SELF-CONSISTENT: tautological.
-If SELF-CONSISTENT gives much higher R^2: spatial self-consistency matters.
+If STATIC-INITIAL also matches SELF-CONSISTENT: the signal is a structured
+potential effect, not evidence that dynamic backreaction is load-bearing.
+If SELF-CONSISTENT still wins cleanly: dynamic backreaction matters here too.
 """
 
 from __future__ import annotations
@@ -69,6 +72,17 @@ def build_lattice_2d(side: int):
     return n, pos, adj, col
 
 
+def minimum_image_delta(a: float, b: float, side: int) -> float:
+    """Periodic displacement on a 1D torus."""
+    delta = b - a
+    half = side / 2.0
+    if delta > half:
+        delta -= side
+    elif delta < -half:
+        delta += side
+    return delta
+
+
 # ── Hamiltonian and evolution ──────────────────────────────────────
 
 def build_laplacian(adj: dict[int, list[int]], n: int):
@@ -94,7 +108,9 @@ def build_hamiltonian(pos, col, adj, n, phi):
         for j in adj[i]:
             if i >= j:
                 continue
-            d = math.hypot(pos[j, 0] - pos[i, 0], pos[j, 1] - pos[i, 1])
+            dx = minimum_image_delta(pos[i, 0], pos[j, 0], SIDE)
+            dy = minimum_image_delta(pos[i, 1], pos[j, 1], SIDE)
+            d = math.hypot(dx, dy)
             d = min(d, 2.0)
             w = 1.0 / max(d, 0.5)
             H[i, j] += -0.5j * w
@@ -285,6 +301,16 @@ def evolve_with_gravity(pos, col, adj, n, G, L_csr):
     return psi, phi
 
 
+def evolve_with_fixed_phi(pos, col, adj, n, phi):
+    """Evolve N_STEPS under a fixed external potential."""
+    psi = make_gaussian(pos, n)
+    H = build_hamiltonian(pos, col, adj, n, phi)
+    for step in range(N_STEPS):
+        psi = cn_step(psi, H, DT)
+        psi /= np.linalg.norm(psi)
+    return psi
+
+
 def get_edges(adj, n):
     edges = []
     for i in range(n):
@@ -364,6 +390,7 @@ def main():
     # Storage for results
     results = {
         'self_consistent': {},
+        'static_initial': {},
         'random_matched': {},
         'shuffled': {},
     }
@@ -386,7 +413,20 @@ def main():
               f"R2(Dk,T)={res_sc['r2_T']:.4f}  "
               f"slope_GT={res_sc['slope_GT']:.6f}")
 
-        # ── Condition 2: RANDOM-MATCHED (10 seeds) ────────────────
+        # ── Condition 2: STATIC-INITIAL ───────────────────────────
+        print("  [STATIC-INITIAL] Fixed Phi sourced by the initial packet...")
+        rho0 = np.abs(make_gaussian(pos, n))**2
+        phi_init = spsolve((L + MU2 * speye(n, format='csr')).tocsc(), G * rho0)
+        psi_init = evolve_with_fixed_phi(pos, col, adj, n, phi_init)
+        rho_init = np.abs(psi_init)**2
+        kappa_init = compute_OR_potential_weighted(adj, n, phi_init)
+        res_init = analyze_curvature(kappa_init, kappa_before, edges, rho_init, G)
+        results['static_initial'][G] = res_init
+        print(f"    R2(Dk,GT)={res_init['r2_GT']:.4f}  "
+              f"R2(Dk,T)={res_init['r2_T']:.4f}  "
+              f"slope_GT={res_init['slope_GT']:.6f}")
+
+        # ── Condition 3: RANDOM-MATCHED (10 seeds) ────────────────
         print(f"  [RANDOM-MATCHED] {N_RANDOM_SEEDS} random Phi samples "
               f"(same mean/std as self-consistent)...")
         r2_GT_list = []
@@ -428,7 +468,7 @@ def main():
         print(f"    R2(Dk,GT)={np.mean(r2_GT_list):.4f} +/- {np.std(r2_GT_list):.4f}  "
               f"R2(Dk,T)={np.mean(r2_T_list):.4f} +/- {np.std(r2_T_list):.4f}")
 
-        # ── Condition 3: SHUFFLED (10 seeds) ──────────────────────
+        # ── Condition 4: SHUFFLED (10 seeds) ──────────────────────
         print(f"  [SHUFFLED] {N_RANDOM_SEEDS} shuffled Phi samples "
               f"(spatial correlation destroyed)...")
         r2_GT_list = []
@@ -475,27 +515,29 @@ def main():
     print("\n" + "=" * 78)
     print("SUMMARY TABLE: R^2(Delta_kappa vs G*T)")
     print("=" * 78)
-    print(f"\n{'G':>5s}  {'SELF-CONSIST':>14s}  {'RANDOM-MATCH':>20s}  "
-          f"{'SHUFFLED':>20s}")
-    print("-" * 65)
+    print(f"\n{'G':>5s}  {'SELF-CONSIST':>14s}  {'STATIC-INIT':>14s}  "
+          f"{'RANDOM-MATCH':>20s}  {'SHUFFLED':>20s}")
+    print("-" * 83)
 
     for G in G_VALUES:
         sc = results['self_consistent'][G]
+        si = results['static_initial'][G]
         rm = results['random_matched'][G]
         sh = results['shuffled'][G]
-        print(f"{G:>5d}  {sc['r2_GT']:>14.4f}  "
+        print(f"{G:>5d}  {sc['r2_GT']:>14.4f}  {si['r2_GT']:>14.4f}  "
               f"{rm['r2_GT_mean']:>8.4f} +/- {rm['r2_GT_std']:.4f}  "
               f"{sh['r2_GT_mean']:>8.4f} +/- {sh['r2_GT_std']:.4f}")
 
-    print(f"\n{'G':>5s}  {'SELF-CONSIST':>14s}  {'RANDOM-MATCH':>20s}  "
-          f"{'SHUFFLED':>20s}")
-    print("-" * 65)
+    print(f"\n{'G':>5s}  {'SELF-CONSIST':>14s}  {'STATIC-INIT':>14s}  "
+          f"{'RANDOM-MATCH':>20s}  {'SHUFFLED':>20s}")
+    print("-" * 83)
     print("R^2(Delta_kappa vs T):")
     for G in G_VALUES:
         sc = results['self_consistent'][G]
+        si = results['static_initial'][G]
         rm = results['random_matched'][G]
         sh = results['shuffled'][G]
-        print(f"{G:>5d}  {sc['r2_T']:>14.4f}  "
+        print(f"{G:>5d}  {sc['r2_T']:>14.4f}  {si['r2_T']:>14.4f}  "
               f"{rm['r2_T_mean']:>8.4f} +/- {rm['r2_T_std']:.4f}  "
               f"{sh['r2_T_mean']:>8.4f} +/- {sh['r2_T_std']:.4f}")
 
@@ -508,8 +550,8 @@ def main():
 
     G_arr = np.array(G_VALUES, dtype=float)
 
-    for label in ['self_consistent', 'random_matched', 'shuffled']:
-        if label == 'self_consistent':
+    for label in ['self_consistent', 'static_initial', 'random_matched', 'shuffled']:
+        if label in {'self_consistent', 'static_initial'}:
             slopes = [results[label][G]['slope_T'] for G in G_VALUES]
         else:
             slopes = [results[label][G]['slope_GT_mean'] for G in G_VALUES]
@@ -529,28 +571,37 @@ def main():
     print("=" * 78)
 
     sc_r2s = [results['self_consistent'][G]['r2_GT'] for G in G_VALUES]
+    si_r2s = [results['static_initial'][G]['r2_GT'] for G in G_VALUES]
     rm_r2s = [results['random_matched'][G]['r2_GT_mean'] for G in G_VALUES]
     sh_r2s = [results['shuffled'][G]['r2_GT_mean'] for G in G_VALUES]
 
     mean_sc = np.mean(sc_r2s)
+    mean_si = np.mean(si_r2s)
     mean_rm = np.mean(rm_r2s)
     mean_sh = np.mean(sh_r2s)
 
     print(f"\n  Mean R^2(Dk vs GT) across G values:")
     print(f"    SELF-CONSISTENT: {mean_sc:.4f}")
+    print(f"    STATIC-INITIAL:  {mean_si:.4f}")
     print(f"    RANDOM-MATCHED:  {mean_rm:.4f}")
     print(f"    SHUFFLED:        {mean_sh:.4f}")
 
+    ratio_si = mean_sc / max(mean_si, 1e-10)
     ratio_rm = mean_sc / max(mean_rm, 1e-10)
     ratio_sh = mean_sc / max(mean_sh, 1e-10)
+    print(f"\n  R^2 ratio (self-consistent / static-initial): {ratio_si:.2f}x")
     print(f"\n  R^2 ratio (self-consistent / random):  {ratio_rm:.2f}x")
     print(f"  R^2 ratio (self-consistent / shuffled): {ratio_sh:.2f}x")
 
     # The key discriminant: does self-consistent beat controls?
-    if mean_sc > 0.5 and mean_rm < 0.3 and mean_sh < 0.3:
+    if mean_sc > 0.5 and mean_si < 0.3 and mean_rm < 0.3 and mean_sh < 0.3:
         print("\n  GENUINE: Self-consistent Phi produces much higher R^2")
-        print("  than random or shuffled controls. The Dk~G*T result is")
-        print("  NOT a tautological artifact of |psi|^2 self-correlation.")
+        print("  than static, random, or shuffled controls. Dynamic")
+        print("  backreaction matters; this is not just a structured potential.")
+    elif mean_sc > 0.5 and mean_si > 0.8 * mean_sc and mean_rm < 0.1 and mean_sh < 0.1:
+        print("\n  STRUCTURED-POTENTIAL: Self-consistent and static-initial")
+        print("  both produce the correlation, while random/shuffled do not.")
+        print("  The signal is real but does not isolate dynamic backreaction.")
     elif mean_sc > mean_rm * 1.5 and mean_sc > mean_sh * 1.5:
         print("\n  PARTIAL: Self-consistent Phi gives meaningfully higher R^2")
         print("  than controls, but the gap is not overwhelming.")
@@ -572,30 +623,31 @@ def main():
         matplotlib.use('Agg')
         import matplotlib.pyplot as plt
 
-        fig, axes = plt.subplots(3, len(G_VALUES),
+        fig, axes = plt.subplots(4, len(G_VALUES),
                                  figsize=(4 * len(G_VALUES), 12))
         fig.suptitle('Ollivier Curvature Control Experiment\n'
                      r'$\Delta\kappa$ vs $G \cdot T$: '
-                     'Self-Consistent vs Random vs Shuffled $\Phi$',
+                     r'Self-Consistent vs Static vs Random vs Shuffled $\Phi$',
                      fontsize=13, fontweight='bold')
 
-        conditions = ['self_consistent', 'random_matched', 'shuffled']
-        condition_labels = ['Self-Consistent', 'Random-Matched', 'Shuffled']
-        colors = ['steelblue', 'firebrick', 'forestgreen']
+        conditions = ['self_consistent', 'static_initial', 'random_matched', 'shuffled']
+        condition_labels = ['Self-Consistent', 'Static-Initial', 'Random-Matched', 'Shuffled']
+        colors = ['steelblue', 'darkorange', 'firebrick', 'forestgreen']
 
         for row, (cond, clabel, cc) in enumerate(
                 zip(conditions, condition_labels, colors)):
             for col_idx, G in enumerate(G_VALUES):
                 ax = axes[row, col_idx]
-                if cond == 'self_consistent':
+                if cond in {'self_consistent', 'static_initial'}:
                     r = results[cond][G]
-                    ax.scatter(r['GT'], r['dk'], alpha=0.4, s=12, c=cc)
+                    GT = r['GT'] if 'GT' in r else G * r['T']
+                    ax.scatter(GT, r['dk'], alpha=0.4, s=12, c=cc)
                     r2 = r['r2_GT']
 
                     if r2 > 0:
-                        x_line = np.linspace(r['GT'].min(), r['GT'].max(), 50)
+                        x_line = np.linspace(GT.min(), GT.max(), 50)
                         sl = r['slope_GT']
-                        inter = r['dk'].mean() - sl * r['GT'].mean()
+                        inter = r['dk'].mean() - sl * GT.mean()
                         ax.plot(x_line, sl * x_line + inter, 'k-', lw=2)
 
                     ax.set_title(f'{clabel} G={G}\nR2={r2:.3f}', fontsize=9)
@@ -611,7 +663,7 @@ def main():
 
                 if col_idx == 0:
                     ax.set_ylabel(r'$\Delta\kappa$')
-                if row == 2:
+                if row == len(conditions) - 1:
                     ax.set_xlabel(r'$G \cdot T$')
 
         plt.tight_layout()
@@ -625,19 +677,22 @@ def main():
                       fontsize=13, fontweight='bold')
 
         x = np.arange(len(G_VALUES))
-        width = 0.25
+        width = 0.2
 
         sc_vals = [results['self_consistent'][G]['r2_GT'] for G in G_VALUES]
+        si_vals = [results['static_initial'][G]['r2_GT'] for G in G_VALUES]
         rm_vals = [results['random_matched'][G]['r2_GT_mean'] for G in G_VALUES]
         rm_errs = [results['random_matched'][G]['r2_GT_std'] for G in G_VALUES]
         sh_vals = [results['shuffled'][G]['r2_GT_mean'] for G in G_VALUES]
         sh_errs = [results['shuffled'][G]['r2_GT_std'] for G in G_VALUES]
 
-        ax2.bar(x - width, sc_vals, width, label='Self-Consistent',
+        ax2.bar(x - 1.5 * width, sc_vals, width, label='Self-Consistent',
                 color='steelblue', alpha=0.8)
-        ax2.bar(x, rm_vals, width, yerr=rm_errs, label='Random-Matched',
+        ax2.bar(x - 0.5 * width, si_vals, width, label='Static-Initial',
+                color='darkorange', alpha=0.8)
+        ax2.bar(x + 0.5 * width, rm_vals, width, yerr=rm_errs, label='Random-Matched',
                 color='firebrick', alpha=0.8, capsize=4)
-        ax2.bar(x + width, sh_vals, width, yerr=sh_errs, label='Shuffled',
+        ax2.bar(x + 1.5 * width, sh_vals, width, yerr=sh_errs, label='Shuffled',
                 color='forestgreen', alpha=0.8, capsize=4)
 
         ax2.set_xlabel('G')

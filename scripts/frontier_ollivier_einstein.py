@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 """
-Ollivier-Ricci Curvature vs Einstein's Equation
-=================================================
+Potential-Weighted Ollivier Curvature vs Stress-Energy Proxy
+============================================================
 
-Test whether self-consistent gravity induces Ollivier-Ricci curvature
-that matches Einstein's equation:  Delta_kappa ~ G * T.
+Audit whether self-consistent gravity induces a bounded linearized proxy
+
+    Delta_kappa ~ G * T
+
+on a screened periodic staggered lattice.
 
 Protocol on 2D staggered lattice (side=10):
 
@@ -16,12 +19,18 @@ Protocol on 2D staggered lattice (side=10):
    (b) Potential-weighted: edge distances d_eff(i,j) = 1 + alpha*Phi_avg(e)
    (c) Combined: density-weighted measures on potential-weighted graph
 4. Compute Delta_kappa(e) = kappa_after - kappa_before.
-5. Compute local stress-energy T(e) = average |psi|^2 at two endpoints.
+5. Compute local stress-energy proxy T(e) = average |psi|^2 at two endpoints.
 6. Fit:  Delta_kappa vs G*T.  Report R^2.
 
-Sweep G = [1, 5, 10, 20, 50].  Does the slope scale linearly with G?
+Sweep G = [1, 5, 10, 20, 50]. Does the slope scale linearly with G?
 
 Ollivier-Ricci curvature kappa(i,j) = 1 - W_1(mu_i, mu_j) / d(i,j).
+
+Important caveat:
+- on this surface, only the potential-weighted metric definition produces a
+  strong signal
+- this runner is therefore a curvature-density proxy audit, not a derivation
+  of Einstein's equation
 """
 
 from __future__ import annotations
@@ -70,6 +79,17 @@ def build_lattice_2d(side: int):
     return n, pos, adj, col
 
 
+def minimum_image_delta(a: float, b: float, side: int) -> float:
+    """Periodic displacement on a 1D torus."""
+    delta = b - a
+    half = side / 2.0
+    if delta > half:
+        delta -= side
+    elif delta < -half:
+        delta += side
+    return delta
+
+
 # ── Hamiltonian and evolution ──────────────────────────────────────
 
 def build_laplacian(adj: dict[int, list[int]], n: int):
@@ -97,7 +117,9 @@ def build_hamiltonian(pos: np.ndarray, col: np.ndarray,
         for j in adj[i]:
             if i >= j:
                 continue
-            d = math.hypot(pos[j, 0] - pos[i, 0], pos[j, 1] - pos[i, 1])
+            dx = minimum_image_delta(pos[i, 0], pos[j, 0], SIDE)
+            dy = minimum_image_delta(pos[i, 1], pos[j, 1], SIDE)
+            d = math.hypot(dx, dy)
             d = min(d, 2.0)
             w = 1.0 / max(d, 0.5)
             H[i, j] += -0.5j * w
@@ -338,8 +360,8 @@ def main():
     t0 = time.time()
 
     print("=" * 78)
-    print("OLLIVIER-RICCI CURVATURE vs EINSTEIN'S EQUATION")
-    print("Does self-consistent gravity induce Delta_kappa ~ G*T ?")
+    print("POTENTIAL-WEIGHTED OLLIVIER CURVATURE vs STRESS-ENERGY PROXY")
+    print("Does self-consistent gravity induce a bounded Delta_kappa ~ G*T proxy?")
     print("=" * 78)
     print()
     print(f"Lattice: {SIDE}x{SIDE} periodic staggered (n={SIDE**2})")
@@ -529,11 +551,13 @@ def main():
     meta_r2 = meta.rvalue**2
 
     if mean_r2 > 0.5 and meta_r2 > 0.8:
-        print("  STRONG EVIDENCE: Delta_kappa ~ G*T (Einstein-like)")
+        print("  STRONG PROXY EVIDENCE: Delta_kappa ~ G*T on the")
+        print("  potential-weighted Ollivier metric.")
     elif mean_r2 > 0.3 or meta_r2 > 0.5:
-        print("  MODERATE EVIDENCE: Partial curvature-stress-energy correlation.")
+        print("  MODERATE PROXY EVIDENCE: partial curvature-stress-energy")
+        print("  correlation on the potential-weighted observable.")
     else:
-        print("  WEAK/NO EVIDENCE: Delta_kappa does not track G*T cleanly.")
+        print("  WEAK/NO EVIDENCE: this proxy does not track G*T cleanly.")
 
     # Diagnostic: is the SIGN correct?
     # In GR, positive energy density causes positive curvature.

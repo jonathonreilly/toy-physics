@@ -77,6 +77,11 @@ The repo currently contains four different classes of publication material:
 - weak-coupling retention does not close broader off-lattice directional gravity outside the low-`G` window
 - Anderson-vs-gravity distinction is strongest in a finite perturbative window and not uniform across sizes
 - eigenvalue statistics currently support a clean negative “no chaos transition” result, not a dynamical criticality claim
+- the Ollivier `Delta_kappa ~ G*T` lane is now retained only as a **bounded
+  potential-weighted curvature proxy** on the screened periodic torus; it
+  beats random/shuffled controls strongly, but a fixed initial-source
+  potential reproduces an increasing fraction of the same signal, so it is not
+  a safe Einstein-equation derivation claim
 
 **What should not be overclaimed**
 
