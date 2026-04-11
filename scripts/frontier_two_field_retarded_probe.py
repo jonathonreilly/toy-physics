@@ -226,6 +226,38 @@ def make_layered_cycle(seed=42, layers=6, width=4) -> Graph:
     return Graph("layered_cycle", pos, col, adj_l, n, src, _bfs(adj_l, src, n), _find_cycle_edge(adj_l))
 
 
+def make_causal_dag(seed=42, layers=8, width=5) -> Graph:
+    """Layered bipartite DAG-like tree: one forward connection per node, no cycles."""
+    rng = random.Random(seed)
+    coords = []
+    colors = []
+    layer_nodes = []
+    idx = 0
+    for layer in range(layers):
+        count = 1 if layer == 0 else width
+        this_layer = []
+        for k in range(count):
+            coords.append((float(layer), float(k) + 0.1 * (rng.random() - 0.5)))
+            colors.append(layer % 2)
+            this_layer.append(idx)
+            idx += 1
+        layer_nodes.append(this_layer)
+    pos = np.array(coords)
+    col = np.array(colors, dtype=int)
+    n = len(pos)
+    adj = {i: set() for i in range(n)}
+    for layer in range(layers - 1):
+        curr = layer_nodes[layer]
+        nxt = layer_nodes[layer + 1]
+        for i_pos, i in enumerate(curr):
+            j = nxt[(i_pos + layer) % len(nxt)]
+            adj[i].add(j)
+            adj[j].add(i)
+    adj_l = {k: list(v) for k, v in adj.items()}
+    src = layer_nodes[0][0]
+    return Graph("causal_dag", pos, col, adj_l, n, src, _bfs(adj_l, src, n), None)
+
+
 # ============================================================================
 # Physics tools
 # ============================================================================
