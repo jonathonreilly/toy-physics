@@ -17,15 +17,30 @@ These are not part of the hold list:
 
 ## Remaining Bounded Candidate
 
-- `docs/NEWTON_DERIVATION_NOTE.md`
+- `docs/ACTION_UNIQUENESS_AUDIT_2026-04-11.md`
 
 Why it is still only a candidate:
 
-- it is a bounded ordered-lattice family law
-- the open step is persistent-pattern inertia / one-parameter mass realization
+- the action-uniqueness lane is bounded-family keep, not theorem
+- it is a bounded weak-field family law on one ordered-lattice setup
 - it is not yet architecture-independent
+- it can be promoted only if the wording stays explicitly family-level
 
 ## Holds
+
+### 0. Newton derivation note
+
+Files:
+
+- `docs/NEWTON_DERIVATION_NOTE.md`
+
+Why held:
+
+- the test-particle additivity story is stronger, but the persistent-pattern
+  inertia / one-parameter mass realization is still open
+- the packet re-identification control is only a bounded diagnostic
+- the stricter persistent inertial-object probe finds no admissible class
+- the note is therefore a bounded family law, not a mainline closure
 
 ### 1. Wilson mutual-attraction side lane
 
@@ -75,24 +90,7 @@ Next control:
 - add a frozen/static-source control
 - replay on the primary staggered/open-cubic surface
 
-### 3. Action uniqueness
-
-Files:
-
-- `docs/ACTION_UNIQUENESS_AUDIT_2026-04-11.md`
-- `scripts/action_uniqueness_investigation.py`
-
-Why held:
-
-- the evidence supports a weak-field family law on one ordered-lattice setup
-- it does not justify architecture-independent uniqueness
-
-Next control:
-
-- rewrite to the family level, or
-- prove portability across the retained architectures
-
-### 4. Irregular endogenous sign closure
+### 3. Irregular endogenous sign closure
 
 Files:
 
@@ -116,7 +114,7 @@ Next control:
 - a third genuinely independent packet family, or
 - a different observable on the same irregular surface
 
-### 5. Staggered two-body closure family
+### 4. Staggered two-body closure family
 
 Files:
 

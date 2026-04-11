@@ -27,6 +27,7 @@ These are not review items anymore:
 - `scripts/frontier_perturbative_mass_law.py`
 - `scripts/frontier_continuum_limit.py`
 - `scripts/frontier_newton_systematic.py`
+- `docs/NEWTON_DERIVATION_NOTE.md`
 
 Status:
 
@@ -52,26 +53,6 @@ Status:
 
 Everything else in this review worktree is held pending a specific missing
 control or redesign step.
-
-#### 0. Newton derivation note / action uniqueness
-
-Files:
-
-- `docs/NEWTON_DERIVATION_NOTE.md`
-- `docs/ACTION_UNIQUENESS_AUDIT_2026-04-11.md`
-
-Status:
-
-- bounded family-law keep, not a theorem
-- the test-particle additivity story is stronger, but the persistent-pattern
-  inertia / one-parameter mass realization is still open
-- the packet re-identification control is only a bounded diagnostic
-- the stricter persistent inertial-object probe finds no admissible class
-- the note is therefore a bounded family law, not a mainline closure
-- the action-uniqueness audit is also a bounded family-law keep if it stays at
-  the same wording level
-- open step: rewrite both notes to the family level and keep them off `main`
-  until the persistent-pattern step is closed
 
 #### A. Wilson mutual-attraction side lane
 
