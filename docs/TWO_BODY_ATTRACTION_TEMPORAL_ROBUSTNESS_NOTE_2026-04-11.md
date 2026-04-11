@@ -1,112 +1,166 @@
 # Two-Body Attraction Temporal Robustness Note
 
 **Date:** 2026-04-11  
-**Status:** bounded positive on the open-Wilson side lane; temporal boundary now frozen  
-**Script:** `scripts/frontier_two_body_attraction_temporal_robustness.py`
+**Status:** bounded positive on early/mid windows only; not a late-time or full-trace law  
+**Script:** `frontier_two_body_attraction_temporal_robustness.py`
 
 ## Question
 
-Does the current low-screening open-Wilson near-inverse-square mutual-channel
-law survive alternate analysis windows or longer traces on the same audited
-surface?
+Does the bounded low-screening open-Wilson mutual-attraction law remain
+near-inverse-square when the same trajectories are scored on alternate time
+windows, not just the original early window?
 
-This note does **not** widen the geometry class. It keeps the same narrow
-surface and only changes the trace length and windowing:
+## Intended Surface
+
+This note stays on the same audited open-Wilson surface as the existing
+side/placement robustness note:
 
 - open 3D Wilson lattice
-- `side = 20`
-- centered placement family
-- separations `d = 4, 6, 8, 10, 12`
 - `MASS = 0.3`
 - `WILSON_R = 1.0`
 - `G = 5`
 - `mu^2 = 0.001`
+- `REG = 1e-3`
 - `sigma = 1.0`
-- `DT = 0.08`
+- sides `18, 20, 22`
+- placement families `centered`, `face_offset`, `corner_offset`
+- separations `d = 4, 6, 8, 10, 12`
 
-Retained observable:
+Temporal extension:
 
-- `a_mutual(t) = a_sep(shared) - a_sep(self_only)`
+- trace length increased from `15` to `35` steps
+- fixed windows:
+  - `w02_10 = [2, 11)`
+  - `w05_13 = [5, 14)`
+  - `w08_16 = [8, 17)`
+  - `w11_19 = [11, 20)`
+  - `w14_22 = [14, 23)`
+  - `w17_25 = [17, 26)`
 
-The distance-law fit in this note is always:
+## Observable
 
-- an **early-time** fit
-- on `|a_mutual|`, not signed `a_mutual`
-- on the named window only
-- on rows that remain attractive on that same window
+As before, the retained object is the shared-vs-self-only separation residual:
 
-## Main Result
+`a_mutual = a_sep(shared) - a_sep(self_only)`
 
-The low-screening open-Wilson law is **temporally robust only in the early and
-mid-early windows**. It is not a full-trace law.
+For each fixed window, the runner records:
 
-What survives:
+- sign of the mean residual acceleration
+- `SNR = |mean| / std`
+- whether both packets move inward relative to `self_only` over that window
+- a bounded early-/mid-/late-window fit of `|a_mutual| ~ d^alpha`
 
-- `15`-step trace:
-  - `w2_10`: `5/5` attractive, `5/5` clean, `|a_mut| ~ d^-1.965`, `R^2 = 0.9999`
-  - `w3_11`: `5/5` attractive, `5/5` clean, `|a_mut| ~ d^-1.957`, `R^2 = 0.9999`
-  - `w6_14`: `5/5` attractive, `5/5` clean, `|a_mut| ~ d^-1.936`, `R^2 = 0.9997`
-- `25`-step trace:
-  - `w2_10`: `5/5` attractive, `5/5` clean, `|a_mut| ~ d^-1.965`, `R^2 = 0.9999`
-  - `w6_14`: `5/5` attractive, `5/5` clean, `|a_mut| ~ d^-1.936`, `R^2 = 0.9997`
-  - `w10_18`: `5/5` attractive, `5/5` clean, `|a_mut| ~ d^-1.997`, `R^2 = 0.9996`
-- `35`-step trace:
-  - `w2_10`: `5/5` attractive, `5/5` clean, `|a_mut| ~ d^-1.965`, `R^2 = 0.9999`
-  - `w10_18`: `5/5` attractive, `5/5` clean, `|a_mut| ~ d^-1.997`, `R^2 = 0.9996`
+## Retention Boundary
 
-What fails:
+This lane is bounded even if it stays positive.
 
-- `25`-step `w14_22`: only `1/5` attractive, `0/5` clean
-- `35`-step `w18_26`: only `1/5` attractive, `0/5` clean
-- `35`-step `w26_34`: `5/5` attractive but `0/5` clean, with a flattened fit
-  `|a_mut| ~ d^-1.199`, `R^2 = 0.7017`
+It can support at most:
 
-So the near-inverse-square law is robust through the early/mid-early part of
-the trace and then breaks.
+> On the audited open-Wilson surface, the mutual-channel residual remains
+> attractive and near inverse-square on specific fixed early-time windows of a
+> longer trace.
 
-## Physical Boundary
+It cannot by itself support:
 
-With `DT = 0.08`, the last still-retainable window is:
+- full-trace Newton closure
+- both-masses closure
+- action-reaction closure
+- cross-architecture robustness
+- a claim that the late-time tail is stable unless the rerun actually shows it
 
-- `w10_18 = [10:19]`, roughly `t ≈ 0.80` to `1.44`
+## Rerun Result
 
-Past that:
+The early/mid-window law survives cleanly on the full audited surface, but the
+late windows do not.
 
-- the sign is no longer stable by `w14_22` / `w18_26`
-- and the very late `w26_34` window is too noisy and too flat to count as the
-  same law even though it remains weakly attractive on this surface
+Global window table:
 
-This is the exact temporal boundary for the current bounded Wilson lane:
+- `w02_10 = [2, 11)`
+  - attract `45/45`
+  - clean `45/45`
+  - inward `45/45`
+  - strong `45/45`
+  - `|a_mut| ~ d^-1.952`, `R^2 = 0.9986`
+- `w05_13 = [5, 14)`
+  - attract `45/45`
+  - clean `45/45`
+  - inward `45/45`
+  - strong `45/45`
+  - `|a_mut| ~ d^-1.943`, `R^2 = 0.9976`
+- `w08_16 = [8, 17)`
+  - attract `45/45`
+  - clean `45/45`
+  - inward `45/45`
+  - strong `45/45`
+  - `|a_mut| ~ d^-1.967`, `R^2 = 0.9933`
+- `w11_19 = [11, 20)`
+  - attract `45/45`
+  - clean `11/45`
+  - inward `45/45`
+  - strong `11/45`
+  - no retained global fit
+- `w14_22 = [14, 23)`
+  - attract `14/45`
+  - clean `0/45`
+  - inward `45/45`
+  - strong `0/45`
+  - no retained fit
+- `w17_25 = [17, 26)`
+  - attract `8/45`
+  - clean `0/45`
+  - inward `42/45`
+  - strong `0/45`
+  - no retained fit
 
-> the near-inverse-square mutual-channel law is an early-to-mid-early trace
-> result, not a full-trace result.
+Placement-family fits on the surviving windows stay close to inverse square:
 
-## Additional Read
+- `w02_10`
+  - `centered`: `-1.977`, `R^2 = 0.9994`
+  - `face_offset`: `-1.952`, `R^2 = 0.9992`
+  - `corner_offset`: `-1.927`, `R^2 = 0.9989`
+- `w05_13`
+  - `centered`: `-1.962`, `R^2 = 0.9984`
+  - `face_offset`: `-1.943`, `R^2 = 0.9982`
+  - `corner_offset`: `-1.925`, `R^2 = 0.9978`
+- `w08_16`
+  - `centered`: `-1.981`, `R^2 = 0.9947`
+  - `face_offset`: `-1.967`, `R^2 = 0.9940`
+  - `corner_offset`: `-1.953`, `R^2 = 0.9929`
 
-A separate, weaker statement remains true even after the fit collapses:
+## Exact Boundary
 
-- both packets still end inward relative to `self_only` on every audited row
-  for `15`, `25`, and `35` steps
+The honest bounded statement is:
 
-But that final-displacement fact is **not** enough to extend the distance-law
-claim. The law itself only survives through the windows above.
+> On the audited low-screening open-Wilson surface, the shared-vs-self-only
+> mutual-channel residual remains attractive, clean, inward, and near
+> inverse-square on fixed windows through `w08_16 = [8, 17)`.
 
-## Honest Bounded Statement
+And the exact failure boundary is:
 
-The correct retained wording for this lane is:
+- by `w11_19`, the signal stays negative everywhere but loses clean SNR on most
+  rows, so the law is no longer retainable
+- by `w14_22` and `w17_25`, the sign itself is no longer stable, so there is no
+  late-window or full-trace force-law claim here
 
-> On the low-screening open-Wilson centered surface (`side=20`, `d=4..12`,
-> `G=5`, `mu^2=0.001`), the shared-vs-self-only mutual-channel attraction keeps
-> a near-inverse-square early-time law through windows up to `w10_18`
-> (`t ≈ 0.80..1.44`), but the law does not survive as a clean full-trace or
-> very-late-window statement.
+## Honest Read
 
-That is stronger than the earlier single-window read because it freezes the
-temporal boundary exactly. It is still:
+This strengthens the Wilson side lane in one specific way:
 
-- one Wilson architecture
-- one geometry family
-- one observable family
-- not both-masses closure
-- not action-reaction closure
-- not repo-wide Newton closure
+- the near-`1/r^2` law is not confined to one single early slice
+- it survives three distinct early/mid windows on the full `45`-row audited
+  side/placement/separation surface
+
+This also closes an important loophole:
+
+- the retained Wilson law is **not** a full-trace statement
+- it is an early-/mid-window statement on this observable family
+- later windows lose first SNR, then sign stability
+
+So the correct bounded retention candidate is:
+
+> early-/mid-window near-inverse-square mutual-channel attraction on the
+> audited open-Wilson surface
+
+and not:
+
+> a globally stable Newtonian two-body law over the full trace.

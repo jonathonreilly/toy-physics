@@ -68,6 +68,7 @@ Source branches:
 - `origin/frontier/spot-checks`
 - `origin/claude/sleepy-cerf`
 - `origin/codex/wilson-temporal-robustness`
+- `origin/codex/wilson-temporal-window-lane`
 
 Files:
 
@@ -90,6 +91,16 @@ Blocker:
 
 - missing `FROZEN_SOURCE` / static-source control on the same open 3D Wilson
   surface
+
+Current bounded temporal read:
+
+- early/mid windows survive on the audited `45`-configuration surface
+- retained windows:
+  - `w02_10`
+  - `w05_13`
+  - `w08_16`
+- later windows lose cleanliness or sign stability and do not support a
+  retained global fit
 
 Required next experiment:
 

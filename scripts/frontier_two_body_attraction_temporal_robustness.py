@@ -1,29 +1,28 @@
 #!/usr/bin/env python3
 """
-Temporal-robustness follow-up for the bounded Wilson two-body attraction lane.
+Bounded temporal-robustness follow-up for the Wilson two-body attraction lane.
 
-This stays on the same low-screening open-Wilson convention as the current
-bounded side-lane result and asks a narrower question:
-
-Does the early-time near-inverse-square mutual-attraction law survive alternate
-time windows or longer traces on the same audited surface?
-
-This script intentionally does not widen the geometry class. It keeps:
-  - open 3D cubic Wilson lattice
-  - centered x-axis packet placements
+This keeps the same audited surface as the side/placement robustness sweep:
+  - open 3D Wilson lattice
   - MASS=0.3, WILSON_R=1.0
-  - G=5, mu2=0.001
-  - sigma=1.0, DT=0.08
+  - G=5, mu2=0.001, REG=1e-3
+  - Gaussian packets with sigma=1.0
+  - sides 18, 20, 22
+  - placement families centered / face_offset / corner_offset
+  - separations d = 4, 6, 8, 10, 12
 
-It varies:
-  - trace length
-  - analysis window
+The only change is temporal:
+  - extend the trace from 15 to 35 steps
+  - score several fixed windows on the same trajectories
 
-The retained observable remains:
-  a_mutual(t) = a_sep(shared) - a_sep(self_only)
+The retained observable remains the shared-vs-self-only separation residual:
+  a_mutual = a_sep(shared) - a_sep(self_only)
 
-and the fit is always taken on early-time absolute means |a_mutual| for the
-named window on rows that stay attractive for that same window.
+This runner is intentionally bounded. It does not claim:
+  - cross-architecture robustness
+  - both-masses closure
+  - action-reaction closure
+  - a full-trace force law
 """
 
 from __future__ import annotations
@@ -42,24 +41,30 @@ MASS = 0.30
 WILSON_R = 1.0
 DT = 0.08
 REG = 1e-3
+N_STEPS = 35
 SIGMA = 1.0
 G_VAL = 5.0
 MU2 = 0.001
 
-SIDE = 20
-DEFAULT_SEPARATIONS = (4, 6, 8, 10, 12)
-DEFAULT_TRACE_STEPS = (15, 25, 35)
-WINDOWS = {
-    15: (("w2_10", 2, 11), ("w3_11", 3, 12), ("w6_14", 6, 15)),
-    25: (("w2_10", 2, 11), ("w6_14", 6, 15), ("w10_18", 10, 19), ("w14_22", 14, 23)),
-    35: (("w2_10", 2, 11), ("w10_18", 10, 19), ("w18_26", 18, 27), ("w26_34", 26, 35)),
-}
+SIDES = (18, 20, 22)
+SEPARATIONS = (4, 6, 8, 10, 12)
+PLACEMENT_FAMILIES = ("centered", "face_offset", "corner_offset")
+
+WINDOWS: tuple[tuple[str, int, int], ...] = (
+    ("w02_10", 2, 11),
+    ("w05_13", 5, 14),
+    ("w08_16", 8, 17),
+    ("w11_19", 11, 20),
+    ("w14_22", 14, 23),
+    ("w17_25", 17, 26),
+)
 
 
 @dataclass(frozen=True)
 class Placement:
     center_a: tuple[int, int, int]
     center_b: tuple[int, int, int]
+    family: str
 
 
 class OpenWilsonLattice:
@@ -144,16 +149,16 @@ class OpenWilsonLattice:
     def evolve_step(self, psi, H):
         return expm_multiply(-1j * DT * H, psi)
 
-    def run_mode(self, mode: str, placement: Placement, n_steps: int):
-        psi_a = self.gaussian_wavepacket(placement.center_a)
-        psi_b = self.gaussian_wavepacket(placement.center_b)
+    def run_mode(self, mode: str, center_a, center_b):
+        psi_a = self.gaussian_wavepacket(center_a)
+        psi_b = self.gaussian_wavepacket(center_b)
 
-        com_a = np.zeros((n_steps + 1, 3), dtype=float)
-        com_b = np.zeros((n_steps + 1, 3), dtype=float)
+        com_a = np.zeros((N_STEPS + 1, 3), dtype=float)
+        com_b = np.zeros((N_STEPS + 1, 3), dtype=float)
         com_a[0] = self.center_of_mass_vec(psi_a)
         com_b[0] = self.center_of_mass_vec(psi_b)
 
-        for t in range(n_steps):
+        for t in range(N_STEPS):
             if mode == "SHARED":
                 rho_total = np.abs(psi_a) ** 2 + np.abs(psi_b) ** 2
                 phi_shared = self.solve_poisson(rho_total, G_VAL, MU2)
@@ -163,7 +168,7 @@ class OpenWilsonLattice:
                 phi_a = self.solve_poisson(np.abs(psi_a) ** 2, G_VAL, MU2)
                 phi_b = self.solve_poisson(np.abs(psi_b) ** 2, G_VAL, MU2)
             else:
-                raise ValueError(f"unsupported mode: {mode}")
+                raise ValueError(f"unknown mode {mode}")
 
             H_a = self.build_wilson_hamiltonian(phi_a)
             H_b = self.build_wilson_hamiltonian(phi_b)
@@ -179,13 +184,6 @@ class OpenWilsonLattice:
             "com_b": com_b,
             "sep": np.linalg.norm(com_b - com_a, axis=1),
         }
-
-
-def centered_placement(side: int, d: int) -> Placement:
-    center = side // 2
-    x_a = center - d // 2
-    x_b = center + (d - d // 2)
-    return Placement((x_a, center, center), (x_b, center, center))
 
 
 def separation_acceleration(sep):
@@ -207,125 +205,198 @@ def power_law_fit(xs, ys):
     return slope, r2
 
 
-def projected_mutual_motion(shared, self_only, initial_vec):
+def placement_for(side: int, d: int, family: str) -> Placement:
+    center = side // 2
+    offset = max(2, side // 6)
+    y = center
+    z = center
+    if family == "face_offset":
+        y = center - offset
+    elif family == "corner_offset":
+        y = center - offset
+        z = center - offset
+
+    x_a = center - d // 2
+    x_b = center + (d - d // 2)
+    return Placement((x_a, y, z), (x_b, y, z), family)
+
+
+def projected_window_motion(shared, self_only, initial_vec, start: int, stop: int):
     u = initial_vec / max(np.linalg.norm(initial_vec), 1e-30)
-    dx_a = np.dot(shared["com_a"][-1] - self_only["com_a"][-1], u)
-    dx_b = np.dot(shared["com_b"][-1] - self_only["com_b"][-1], u)
-    return float(dx_a), float(dx_b)
+    res_a = shared["com_a"] - self_only["com_a"]
+    res_b = shared["com_b"] - self_only["com_b"]
+    dxa = np.dot(res_a[stop - 1] - res_a[start], u)
+    dxb = np.dot(res_b[stop - 1] - res_b[start], u)
+    return float(dxa), float(dxb)
 
 
-def measure_window(a_mut, start: int, stop: int):
-    window = a_mut[start:stop]
-    mean = float(np.mean(window))
-    std = float(np.std(window))
-    snr = abs(mean) / (std + 1e-12)
-    return mean, std, snr
-
-
-def run_trace(lat: OpenWilsonLattice, d: int, n_steps: int):
-    placement = centered_placement(lat.side, d)
-    shared = lat.run_mode("SHARED", placement, n_steps)
-    self_only = lat.run_mode("SELF_ONLY", placement, n_steps)
+def evaluate_window(shared, self_only, placement, start: int, stop: int):
     a_mut = separation_acceleration(shared["sep"]) - separation_acceleration(self_only["sep"])
-    initial_vec = np.asarray(placement.center_b, dtype=float) - np.asarray(placement.center_a, dtype=float)
-    dx_a, dx_b = projected_mutual_motion(shared, self_only, initial_vec)
+    window = a_mut[start:stop]
+    a_mean = float(np.mean(window))
+    a_std = float(np.std(window))
+    snr = abs(a_mean) / (a_std + 1e-12)
 
-    result = {
-        "d": d,
-        "n_steps": n_steps,
-        "shared_dsep": float(shared["sep"][-1] - shared["sep"][0]),
-        "self_dsep": float(self_only["sep"][-1] - self_only["sep"][0]),
+    initial_vec = np.asarray(placement.center_b, dtype=float) - np.asarray(placement.center_a, dtype=float)
+    dx_a, dx_b = projected_window_motion(shared, self_only, initial_vec, start, stop)
+    inward_both = dx_a > 0 and dx_b < 0
+
+    return {
+        "a_mutual_mean": a_mean,
+        "a_mutual_std": a_std,
+        "snr": snr,
+        "signal": "ATTRACT" if a_mean < -1e-6 else ("REPEL" if a_mean > 1e-6 else "NULL"),
+        "clean": snr > 2.0,
+        "inward_both": inward_both,
         "dx_a_mutual": dx_a,
         "dx_b_mutual": dx_b,
-        "inward_both": dx_a > 0 and dx_b < 0,
-        "windows": {},
     }
-    for label, start, stop in WINDOWS[n_steps]:
-        mean, std, snr = measure_window(a_mut, start, stop)
-        result["windows"][label] = {
-            "start": start,
-            "stop": stop,
-            "mean": mean,
-            "std": std,
-            "snr": snr,
-            "signal": "ATTRACT" if mean < -1e-6 else ("REPEL" if mean > 1e-6 else "NULL"),
-            "clean": snr > 2.0,
-        }
-    return result
 
 
-def summarize(results, trace_steps):
-    print("\nTemporal summaries")
-    print("-" * 108)
-    for n_steps in trace_steps:
-        sub = [r for r in results if r["n_steps"] == n_steps]
-        print(f"\ntrace={n_steps} side={SIDE} centered configs={len(sub)}")
-        for label, start, stop in WINDOWS[n_steps]:
-            rows = [r for r in sub if r["windows"][label]["signal"] == "ATTRACT"]
-            clean_rows = [r for r in rows if r["windows"][label]["clean"]]
-            if len(rows) >= 3:
-                slope, r2 = power_law_fit(
-                    [r["d"] for r in rows],
-                    [abs(r["windows"][label]["mean"]) for r in rows],
-                )
-                fit_msg = f"|a_mut| ~ d^{slope:.3f}  R^2={r2:.4f}"
-            else:
-                fit_msg = "fit=insufficient"
-            print(
-                f"  {label:7s} [{start}:{stop}]: "
-                f"attract={len(rows)}/{len(sub)} clean={len(clean_rows)}/{len(sub)} "
-                f"inward={sum(r['inward_both'] for r in sub)}/{len(sub)} {fit_msg}"
+def run_config(side: int, d: int, family: str):
+    lat = OpenWilsonLattice(side)
+    placement = placement_for(side, d, family)
+    shared = lat.run_mode("SHARED", placement.center_a, placement.center_b)
+    self_only = lat.run_mode("SELF_ONLY", placement.center_a, placement.center_b)
+
+    row = {"side": side, "family": family, "d": d}
+    for label, start, stop in WINDOWS:
+        metrics = evaluate_window(shared, self_only, placement, start, stop)
+        for key, value in metrics.items():
+            row[f"{label}_{key}"] = value
+    return row
+
+
+def window_summary(rows, label):
+    attract = [r for r in rows if r[f"{label}_signal"] == "ATTRACT"]
+    clean = [r for r in rows if r[f"{label}_clean"]]
+    inward = [r for r in rows if r[f"{label}_inward_both"]]
+    strong = [
+        r for r in rows
+        if r[f"{label}_signal"] == "ATTRACT"
+        and r[f"{label}_clean"]
+        and r[f"{label}_inward_both"]
+    ]
+
+    summary = {
+        "configs": len(rows),
+        "attract": len(attract),
+        "clean": len(clean),
+        "inward": len(inward),
+        "strong": len(strong),
+    }
+    if len(strong) >= 3 and len({r['d'] for r in strong}) >= 3:
+        slope, r2 = power_law_fit(
+            [r["d"] for r in strong],
+            [abs(r[f"{label}_a_mutual_mean"]) for r in strong],
+        )
+        summary["slope"] = slope
+        summary["r2"] = r2
+    else:
+        summary["slope"] = None
+        summary["r2"] = None
+
+    families: dict[str, dict[str, float | int | None]] = {}
+    for family in PLACEMENT_FAMILIES:
+        sub = [r for r in strong if r["family"] == family]
+        entry: dict[str, float | int | None] = {"strong": len(sub)}
+        if len(sub) >= 3 and len({r['d'] for r in sub}) >= 3:
+            slope, r2 = power_law_fit(
+                [r["d"] for r in sub],
+                [abs(r[f"{label}_a_mutual_mean"]) for r in sub],
             )
+            entry["slope"] = slope
+            entry["r2"] = r2
+        else:
+            entry["slope"] = None
+            entry["r2"] = None
+        families[family] = entry
+    summary["families"] = families
+    return summary
+
+
+def summarize_window(rows, label):
+    summary = window_summary(rows, label)
+    print(f"\nWindow {label}")
+    print("-" * 108)
+    print(
+        f"configs={summary['configs']} "
+        f"attract={summary['attract']}/{summary['configs']} "
+        f"clean={summary['clean']}/{summary['configs']} "
+        f"inward={summary['inward']}/{summary['configs']} "
+        f"strong={summary['strong']}/{summary['configs']}"
+    )
+    if summary["slope"] is not None:
+        print(f"global strong rows: |a_mut| ~ d^{summary['slope']:.3f}  R^2={summary['r2']:.4f}")
+    else:
+        print("global strong rows: insufficient rows")
+    for family in PLACEMENT_FAMILIES:
+        entry = summary["families"][family]
+        if entry["slope"] is not None:
+            print(f"{family:13s}: |a_mut| ~ d^{entry['slope']:.3f}  R^2={entry['r2']:.4f}")
+        else:
+            print(f"{family:13s}: insufficient strong rows")
 
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--steps", type=int, nargs="+", default=list(DEFAULT_TRACE_STEPS))
-    parser.add_argument("--separations", type=int, nargs="+", default=list(DEFAULT_SEPARATIONS))
-    parser.add_argument("--json-out", type=str, default="")
+    parser.add_argument("--summary-json", help="Write compact window summary JSON to this path.")
+    parser.add_argument("--quiet", action="store_true", help="Suppress per-row progress output.")
     return parser.parse_args()
 
 
 def main():
     args = parse_args()
-    trace_steps = tuple(args.steps)
-    separations = tuple(args.separations)
     t0 = time.time()
-    lat = OpenWilsonLattice(SIDE)
-
-    print("=" * 108)
-    print("WILSON TWO-BODY TEMPORAL ROBUSTNESS")
-    print("=" * 108)
-    print(f"side={SIDE}, separations={separations}")
-    print(f"MASS={MASS}, WILSON_R={WILSON_R}, DT={DT}, SIGMA={SIGMA}")
-    print(f"G={G_VAL}, mu2={MU2}, REG={REG}")
-    print("placement_family=centered")
-    print()
-
-    results = []
-    for n_steps in trace_steps:
-        print(f"Trace length {n_steps}")
-        print("-" * 108)
-        for d in separations:
-            row_start = time.time()
-            res = run_trace(lat, d, n_steps)
-            results.append(res)
-            base = res["windows"][WINDOWS[n_steps][0][0]]
-            print(
-                f"d={d:2d} "
-                f"base({WINDOWS[n_steps][0][0]})={base['mean']:+.6f} +/- {base['std']:.6f} "
-                f"SNR={base['snr']:.2f} {base['signal']:7s} "
-                f"inward={'Y' if res['inward_both'] else 'N'} "
-                f"dsep SH={res['shared_dsep']:+.4f} SELF={res['self_dsep']:+.4f} "
-                f"({time.time() - row_start:.1f}s)"
-            )
+    if not args.quiet:
+        print("=" * 108)
+        print("WILSON TWO-BODY TEMPORAL ROBUSTNESS")
+        print("=" * 108)
+        print(f"MASS={MASS}, WILSON_R={WILSON_R}, DT={DT}, N_STEPS={N_STEPS}, SIGMA={SIGMA}")
+        print(f"G={G_VAL}, mu2={MU2}, REG={REG}")
+        print(f"sides={SIDES}")
+        print(f"separations={SEPARATIONS}")
+        print(f"placement_families={PLACEMENT_FAMILIES}")
+        print(f"windows={WINDOWS}")
         print()
 
-    summarize(results, trace_steps)
-    if args.json_out:
-        with open(args.json_out, "w", encoding="utf-8") as f:
-            json.dump(results, f, indent=2)
-    print(f"\nElapsed: {time.time() - t0:.1f}s")
+    rows = []
+    for side in SIDES:
+        for family in PLACEMENT_FAMILIES:
+            for d in SEPARATIONS:
+                row_start = time.time()
+                row = run_config(side, d, family)
+                rows.append(row)
+                if not args.quiet:
+                    baseline = "w02_10"
+                    tail = "w17_25"
+                    print(
+                        f"side={side:2d} family={family:13s} d={d:2d} "
+                        f"{baseline}: {row[f'{baseline}_signal']:7s} "
+                        f"SNR={row[f'{baseline}_snr']:.2f} "
+                        f"inward={'Y' if row[f'{baseline}_inward_both'] else 'N'} "
+                        f"a_mut={row[f'{baseline}_a_mutual_mean']:+.6f} ; "
+                        f"{tail}: {row[f'{tail}_signal']:7s} "
+                        f"SNR={row[f'{tail}_snr']:.2f} "
+                        f"inward={'Y' if row[f'{tail}_inward_both'] else 'N'} "
+                        f"a_mut={row[f'{tail}_a_mutual_mean']:+.6f} "
+                        f"({time.time() - row_start:.1f}s)"
+                    )
+
+    summary = {
+        "rows": len(rows),
+        "elapsed_s": time.time() - t0,
+        "windows": {label: window_summary(rows, label) for label, _, _ in WINDOWS},
+    }
+    if args.summary_json:
+        with open(args.summary_json, "w") as f:
+            json.dump(summary, f, indent=2)
+    if args.quiet:
+        print(json.dumps(summary, indent=2))
+    else:
+        for label, _, _ in WINDOWS:
+            summarize_window(rows, label)
+        print(f"\nElapsed: {summary['elapsed_s']:.1f}s")
 
 
 if __name__ == "__main__":
