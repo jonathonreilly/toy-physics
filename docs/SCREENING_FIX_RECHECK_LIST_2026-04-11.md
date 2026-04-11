@@ -1,12 +1,15 @@
 # Screening Fix Recheck List
 
 **Date:** 2026-04-11
-**Root cause:** μ²=0.22 gives screening length 2.13 sites. This Yukawa
-screening was hiding Newton's law (exponent -3.15 instead of -2.02) and
-killing long-range signals throughout the entire project.
+**Major confound:** `μ²=0.22` gives screening length 2.13 sites. That strong
+screening materially distorted some long-range reads, especially on the Wilson
+distance-law lane, but it is **not** the universal root cause of every Poisson-
+coupled discrepancy in the repo.
 
-**Fix:** μ²=0.001 gives screening length 31.6 sites. With this value,
-Newton's 1/r² law is recovered (exponent -2.02 ± 0.07).
+**Low-screening rerun surface:** `μ²=0.001` gives screening length 31.6 sites.
+On the audited open Wilson surface this produces a near-`-2` distance law, but
+the repo still does **not** retain full Newton closure because the valid
+both-masses law remains unresolved.
 
 ## MUST RECHECK (Results that were killed or weakened by screening)
 
@@ -87,10 +90,12 @@ parameter enters identically. Should recheck at μ²=0.001.
 
 ## ALREADY RECHECKED (Done with μ²=0.001)
 
-- Newton's distance law: -1.979 ± 0.008 systematic sweep ← ROBUST
-  (3 lattice sizes × 2 G values, all R²>0.998)
-- Newton's mass law: R²=0.987 ← CONFIRMED
-- Ollivier Einstein: R²=0.999, 699x random separation ← STRENGTHENED (was 0.97/300x)
+- Wilson distance law on the audited low-screening open surface:
+  near-`-2` systematic sweep with very high fit quality
+- Newton mass law: still **not retained**; the valid both-masses closure
+  remains open
+- Ollivier low-screening proxy: `R²=0.999` vs random `R²=0.001`,
+  but retained only as a bounded potential-weighted structured-curvature proxy
 - Sign selectivity: 150/150 (100%), random 82% ← CONFIRMED
 - Boundary law: 100/100 R²>0.95, 10.4σ separation ← STRENGTHENED (was 2.7σ)
 - Cycle battery: 9/9, 9/9, 9/9, 8/9 ← IDENTICAL

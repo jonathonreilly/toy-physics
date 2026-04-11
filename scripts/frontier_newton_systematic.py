@@ -3,13 +3,15 @@
 Systematic Newton exponent study on open-boundary Wilson lattices.
 
 Goal:
-  Determine whether the ~-2.0 distance-law exponent for mutual gravitational
-  acceleration is robust across lattice sizes and coupling strengths.
+  Determine whether the near-`-2` distance-law exponent for the Wilson
+  mutual-channel observable is robust across lattice sizes and coupling
+  strengths on one fixed open-boundary surface.
 
 Protocol:
   - Open 3D Wilson lattice (no periodic images)
   - Wilson Hamiltonian: complex hopping with WILSON_R=1.0
-  - Poisson with 4*pi*G factor, mu2=0.001 (near-massless mediator)
+  - Poisson with the same `-4*pi*G*rho` convention used by the audited
+    open-Wilson runners
   - Mutual acceleration = a(SHARED) - a(SELF_ONLY)
   - Power-law fit: log|a_mutual| vs log(d)
   - Report: side x G -> exponent +/- stderr
@@ -19,6 +21,13 @@ Conventions (matching frontier_wilson_two_body_open.py):
       + (-0.5j + 0.5*WILSON_R) * adj_upper
       + (+0.5j + 0.5*WILSON_R) * adj_lower
   Poisson: (lap - mu2*I - REG*I) phi = -4*pi*G*rho
+
+Important note:
+  This runner does not by itself settle the normalization debate from the
+  broader frontier narrative. It is only a same-convention systematic sweep of
+  the open-Wilson lane. Use it to test robustness *within that lane*, not to
+  claim that `4*pi` was or was not the source of earlier discrepancies across
+  different runners.
 """
 
 from __future__ import annotations

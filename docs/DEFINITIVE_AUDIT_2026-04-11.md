@@ -4,24 +4,30 @@
 
 ## Breakthroughs Under Scrutiny
 
-### Newton F∝M/r² (exponent -1.979±0.008): NOW ROBUST
-- **Systematic sweep** (2026-04-11): 3 lattice sizes (L=15,20,25) × 2 G values (2,5)
-- All 6 configs give exponent -1.97 to -1.99 with R²>0.998
-- No lattice-size dependence, no coupling-strength dependence
-- G=10 enters nonlinear regime (noisy) — the earlier -1.45 was from a
-  script with 4π factor making effective coupling 12.6x too strong
-- Anderson control passes: gravity all-attractive, disorder is noise
-- Earlier -3.14 at μ²=0.22 was a Yukawa screening artifact (CONFIRMED)
-- **Remaining caveat**: Wilson fermions only, not staggered. Need
-  staggered reproduction for full claim.
+### Wilson distance law under low screening: strengthened, but not full Newton closure
+- **Systematic Wilson sweep** (2026-04-11): 3 lattice sizes (`L=15,20,25`) × 2
+  coupling values (`G=2,5`) on the open Wilson surface
+- All 6 retained configurations give a near-`-2` distance exponent with
+  excellent fit quality (`R² > 0.998`)
+- The low-screening Wilson distance law is materially stronger than the earlier
+  screened `mu²=0.22` read, and the steep screened exponent is now clearly a
+  screening-controlled effect
+- **But this is still not full Newton closure**:
+  - the valid both-masses law is still unresolved
+  - the result still lives on the Wilson side lane, not the primary staggered
+    architecture
+  - the repo does not yet retain `F ∝ M/r²` as a global architecture claim
 
-### Ollivier Δκ∝G·T (R²=0.999): GENUINE WITH PROXY CAVEAT
-- **Control passed** (2026-04-11): self-consistent R²=0.999 vs random R²=0.001 (699x)
-- Rechecked at μ²=0.001: signal STRENGTHENS from 0.97 to 0.999
-- Random Φ of matched variance gives R²=0.001 → NOT tautological
-- **Remaining caveat**: the proxy pathway (V sourced by |ψ|², curvature
-  reflects V) inflates the R². The 699x control separation argues it's
-  not purely tautological, but the quantitative correlation may be a proxy.
+### Ollivier potential-weighted curvature proxy: strong bounded result
+- **Random-control separation survives** (2026-04-11): self-consistent
+  `R²=0.999` vs random `R²=0.001` on the low-screening torus surface
+- The low-screening rerun strengthens the bounded proxy signal relative to the
+  screened read
+- **But the retained interpretation is narrower**:
+  - this is a potential-weighted structured-curvature proxy
+  - a smooth shell-averaged structured control reproduces almost all of the
+    same signal
+  - this lane still does **not** justify an Einstein-equation derivation claim
 
 ### Topological transition G≈0.3: PROBABLY NOT GRAVITATIONAL
 - ANY on-site disorder breaks SSH chiral symmetry (known result)
@@ -36,8 +42,10 @@
 ## What Actually Survives All Scrutiny
 
 1. **Parity coupling correction** — literature contribution
-2. **Sign selectivity 300/300** — positivity-based but empirically
-   distinct from random disorder (6/10)
+2. **Sign selectivity** — positivity-based and stable under rerun, but the
+   anti-disorder interpretation is weaker than the early `6/10` random-control
+   read; the later unscreened contraction comparison gives random contraction
+   in a large majority of rows and should be cited with that caveat
 3. **Self-consistency not reducible to disorder** — deterministic
    split; dynamic backreaction produces different spectral structure
 4. **Spectral-trajectory dichotomy** — the theoretical framework
@@ -51,8 +59,8 @@
 | Sign selectivity | 0.001 | **DONE: 150/150 (100%), random 82%** |
 | Cycle battery | 0.001 | **DONE: 9/9, 9/9, 9/9, 8/9** |
 | Boundary-law | 0.001 | **DONE: 100/100 R²>0.95, 10.4σ (was 2.7σ)** |
-| Ollivier Einstein | 0.001 | **DONE: R²=0.999, 699x separation** |
-| Newton distance | 0.001 | **DONE: -1.979±0.008 systematic** |
+| Ollivier proxy | 0.001 | **DONE: bounded potential-weighted proxy, random/shuffled controls collapse** |
+| Wilson distance law | 0.001 | **DONE: near-`-2` on the audited Wilson surface; full Newton closure still open** |
 | CDT flow | 0.001 | **DONE: R²>0.989** |
 | Self-gravity contraction | 0.22 | Low priority (sign comes from positivity) |
 | Anderson phase map | 0.22 | Medium priority |
