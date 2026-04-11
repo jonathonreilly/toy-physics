@@ -93,12 +93,17 @@ Do not retain as a repo truth yet:
 - `scripts/frontier_wilson_unscreened.py`
 - `scripts/frontier_wilson_newton_law.py`
 - `scripts/frontier_newton_both_masses.py`
+- `scripts/frontier_two_body_attraction.py`
 
 Reason:
 
 - the distance-law side is now much stronger
 - the mass-law side is still not closed on a valid both-masses runner
 - the old periodic Wilson runner only tested source-strength scaling
+- the newer fixed-surface two-body attraction runner may be a real improvement,
+  but it currently has no retained note and its advertised `5 seeds` are only
+  phase-jitter repeats on one open Wilson surface, not cross-surface
+  robustness
 
 Current honest baseline:
 
