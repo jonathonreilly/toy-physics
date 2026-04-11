@@ -34,6 +34,20 @@ Why candidate:
 
 ## Holds
 
+### 0. Newton derivation note
+
+Files:
+
+- `docs/NEWTON_DERIVATION_NOTE.md`
+
+Why held:
+
+- the test-particle additivity story is stronger, but the persistent-pattern
+  inertia / one-parameter mass realization is still open
+- the packet re-identification control is only a bounded diagnostic
+- the stricter persistent inertial-object probe finds no admissible class
+- the note is therefore a bounded family law, not a mainline closure
+
 ### 1. Wilson mutual-attraction side lane
 
 Files:
