@@ -29,8 +29,12 @@ For this 2-branch superposition of product states:
     W-type:   bipartite entropies may differ, tau_3 ~ 0
     Biseparable: at least one bipartite entropy ~ 0
 
-Physics question: does the externally imposed two-branch source/field
-mechanism produce GHZ- or W-type tripartite entanglement?
+Historical note:
+  This standalone runner was the first tripartite probe, but its
+  GHZ/W interpretation is superseded by
+  frontier_branch_entanglement_robustness.py.
+  Keep this script as an exploratory heuristic surface, not the
+  canonical classifier.
 """
 
 from __future__ import annotations
@@ -744,17 +748,16 @@ def main():
         print(f"  G={res['G']:5.0f}: {res['classification']}")
     print()
 
-    # Is entanglement GHZ-type?
+    # Historical heuristic classification only.
     if ghz_count > len(G_VALUES) // 2:
-        print("DOMINANT CLASS: GHZ-type")
-        print("  The two-branch source/field protocol creates genuine tripartite")
-        print("  branch entanglement (non-zero 3-tangle). This is expected: the state")
-        print("  |Psi> = (|abc> + |def>)/sqrt(2) has the structure of a")
-        print("  generalized GHZ state when the branches become distinguishable.")
+        print("DOMINANT CLASS (heuristic): GHZ-type")
+        print("  This is the standalone runner's internal classifier only.")
+        print("  Use frontier_branch_entanglement_robustness.py for the")
+        print("  canonical 3-body interpretation.")
     elif w_count > 0:
-        print("DOMINANT CLASS: W-type")
-        print("  Pairwise entanglement dominates with zero 3-tangle.")
-        print("  This would be surprising for the 2-branch mechanism.")
+        print("DOMINANT CLASS (heuristic): W-type")
+        print("  Use frontier_branch_entanglement_robustness.py for the")
+        print("  canonical 3-body interpretation.")
     else:
         print("DOMINANT CLASS: Weak/Separable")
         print("  Entanglement too weak to classify reliably.")
@@ -792,25 +795,22 @@ def main():
     print()
 
     # Key insight: the 2-branch mechanism
-    print("STRUCTURAL INSIGHT:")
-    print("  The state |Psi> = (|abc> + |def>)/sqrt(2) is a non-orthogonal GHZ state.")
-    print("  In the limit of full distinguishability (all overlaps -> 0),")
-    print("  this becomes a perfect GHZ state: |000> + |111>)/sqrt(2).")
-    print("  The 3-tangle should be non-zero whenever overlaps < 1.")
+    print("STRUCTURAL NOTE:")
+    print("  This standalone runner uses a heuristic non-orthogonal-state")
+    print("  tangle construction. The later robustness harness is the")
+    print("  canonical interpretation surface for the 3-body protocol.")
     print()
 
     if max_tangle > 1e-3:
-        print("CONFIRMED: The three-body branch protocol produces GHZ-type entanglement.")
+        print("HEURISTIC RESULT: positive 3-tangle on this runner.")
         print(f"  Maximum 3-tangle: {max_tangle:.6f}")
-        print("  In this fixed-adjacency externally branched toy model, the")
-        print("  source/field superposition creates genuine tripartite entanglement")
-        print("  that cannot be decomposed into pairwise entanglement alone.")
+        print("  Do not treat this as the canonical tripartite classification.")
     elif max_tangle > 1e-6:
-        print("DETECTED: Weak but non-zero 3-tangle.")
+        print("HEURISTIC RESULT: weak but non-zero 3-tangle.")
         print(f"  Maximum 3-tangle: {max_tangle:.6f}")
-        print("  Larger lattice or stronger coupling may be needed.")
+        print("  Do not treat this as the canonical tripartite classification.")
     else:
-        print("INCONCLUSIVE: 3-tangle below detection threshold.")
+        print("HEURISTIC RESULT: 3-tangle below this runner's threshold.")
         print("  Overlaps may be too close to 1 on this lattice.")
 
     # CKW check

@@ -19,11 +19,11 @@ For publication use, prefer:
 
 | Probe | Strongest honest claim | Status |
 |---|---|---|
-| Holographic boundary-law probe | On the 2D periodic staggered lattice, Dirac-sea entropy and Schmidt rank scale more cleanly with boundary than volume; gravity preserves boundary preference while reducing the fitted coefficient by `12.46%` | `bounded-retained` |
+| Holographic boundary-law probe | On the 2D periodic staggered lattice, Dirac-sea entropy scales more cleanly with boundary than volume; the audited BFS-ball robustness surface gives `100/100` fits above `R^2=0.95`, with caveats on the `side=6` two-point fits and separate smaller partition checks | `bounded-retained` |
 | Fixed-adjacency branch superposition | Retained 2D branch effect on the current staggered Hamiltonian; 1D controls stay null | `bounded-retained` |
-| Gravitational memory | 1D ring pulse protocol gives a small but repeatable permanent post-pulse separation shift with weak-amplitude linearity | `bounded-retained` |
+| Gravitational memory | The original `N=61` ring pulse signal is real on its narrow protocol, but later robustness sweeps show strong size/position fragility and Yukawa-screening dependence | `exploratory-lead` |
 | Two-body branch entanglement | Externally imposed two-branch source/field protocol yields `delta_S > 0` for all tested `G`, with peak entropy `0.69287` nats | `bounded-retained` |
-| Three-body branch entanglement | Externally imposed two-branch source/field protocol yields GHZ-like tripartite branch entanglement with peak `tau_3 = 0.848522` | `bounded-retained` |
+| Three-body branch entanglement | On the audited robustness surface, the fixed two-branch protocol yields W-type tripartite branch entanglement with `tau_3 = 0` in `25/25` configurations | `bounded-retained` |
 | Weak-coupling sign-sensitive regime | At `G=5,10`, attractive parity coupling gives a uniformly larger shell-force TOWARD count than repulsive coupling on the audited irregular-graph surface; stable shell margin is `60/60` | `bounded-retained` |
 | Quantum Zeno | Self-gravity freezes spreading above a coupling window on the tested lattices | `exploratory-lead` |
 | Z2 sublattice protection | Mutual-information protection signal is positive, but still lives in the exploratory side-probe bucket | `exploratory-lead` |
@@ -45,8 +45,8 @@ The current strong frontier additions are mostly **bounded side results**, not
 new headline architecture closures. The best-audited new positives are:
 
 - Dirac-sea boundary-law probe
-- weak-amplitude memory-style signal
-- two-body and three-body branch-mediated entanglement companions
+- robust 2-body branch-entanglement companion
+- corrected 3-body W-type branch-entanglement companion
 - retained weak-coupling sign-sensitive regime
 
 The main overclaimed lanes from the raw frontier batch are now explicitly
@@ -57,3 +57,4 @@ downgraded:
 - no retained new universality-class claim
 - no retained CDT-like gravity claim
 - no retained fast-scrambling / black-hole claim
+- no retained positive gravitational-memory claim on the current screened ring protocol

@@ -4,7 +4,7 @@ Branch-mediated entanglement robustness checks (2-body and 3-body).
 
 Multi-seed, multi-geometry, and source-position robustness sweeps for the
 BMV-style branch entanglement results. Tests whether delta_S > 0 (2-body)
-and GHZ-type tripartite entanglement (3-body) survive across:
+and the corrected 3-body entanglement classification survive across:
 
   1. Multiple seeds (5 per configuration, jittered lattice positions)
   2. Source position sweep (5 different locations)
@@ -22,6 +22,10 @@ Protocol (3-body):
   Three particles in triangular arrangement.
   Same source superposition.
   Compute bipartite entropies and 3-tangle.
+
+This runner is the canonical interpretation surface for the 3-body branch
+protocol. The earlier standalone three-body runner uses a heuristic tangle
+construction and should not override this robustness read.
 """
 
 from __future__ import annotations

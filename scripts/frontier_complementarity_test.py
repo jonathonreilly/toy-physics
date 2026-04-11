@@ -1,28 +1,28 @@
 #!/usr/bin/env python3
-"""Complementarity / fuzzball test: BMV entanglement vs OTOC scrambling.
+"""Exploratory crossing test: branch entropy vs frozen spreading proxy.
 
-HYPOTHESIS: BMV entanglement witness and OTOC scrambling measure are
-complementary observables that cross near the Hawking-Page transition G_HP.
+This runner compares two unlike observables on the same fixed 2D lattice:
 
-  - BMV grows monotonically with G (entanglement from geometry superposition)
-  - OTOC scrambling is KILLED at strong G (localization suppresses transport)
-  - Prediction: the two curves cross near G_HP ~ 9.8
+  - a branch-overlap entropy signal from an externally imposed
+    source-present vs source-absent protocol
+  - a frozen single-particle spreading proxy built from propagator amplitudes
 
-This is the complementarity/fuzzball interpretation: as the gravitational
-coupling strengthens, quantum information becomes entangled (BMV) but stops
-scrambling (OTOC). The crossover marks the Hawking-Page transition.
+If the two normalized curves cross on the sampled sweep, that is exploratory
+only. It is not, by itself, a Hawking-Page, complementarity, fuzzball, or
+black-hole claim.
 
 Protocol on 2D staggered lattice (side=10, n=100):
 
-  BMV: Two wavepackets propagate under geometry-superposition (source vs no
-       source). S_BMV = H_binary((1 + ovlp_1 * ovlp_2) / 2) / ln(2).
+  Branch signal: two wavepackets propagate under source-present vs source-
+       absent branching. S_branch = H_binary((1 + ovlp_1 * ovlp_2) / 2) / ln(2).
 
-  OTOC: Build self-gravitating H, eigendecompose, compute propagator
-        G(i,j,t), measure C_max = max_t [1 - |G(i,j,t)|^4 / |G(i,j,0)|^4].
+  Spreading proxy: build self-gravitating H, eigendecompose, compute
+        propagator G(i,j,t), measure C_max from the peak local spreading readout.
 
-  Area-law exponent: Dirac sea from final H, BFS balls R=1..4, fit S ~ |bnd|^alpha.
+  Boundary-fit exponent: Dirac sea from final H, BFS balls R=1..4, fit
+        S ~ |bnd|^alpha.
 
-PStack experiment: complementarity-test
+PStack experiment: exploratory-crossing-test
 """
 
 from __future__ import annotations
@@ -53,7 +53,7 @@ SIDE = 10
 N_SITES = SIDE * SIDE  # 100
 
 G_VALUES = [0.5, 1, 2, 5, 8, 10, 15, 20, 30, 50, 75, 100]
-G_HP = 9.8  # predicted Hawking-Page transition
+G_HP = 9.8  # imported reference crossover from a different exploratory runner
 
 # OTOC parameters
 T_MAX_OTOC = 50  # max time in units of DT
@@ -150,14 +150,14 @@ def binary_entropy(p: float) -> float:
 
 
 # ---------------------------------------------------------------------------
-# BMV measurement
+# Branch-overlap entropy measurement
 # ---------------------------------------------------------------------------
 
 def measure_bmv(G: float, n: int, pos: np.ndarray, adj: dict,
                 col: np.ndarray, index: dict):
-    """BMV entanglement witness for coupling G.
+    """Branch-overlap entropy signal for coupling G.
 
-    Returns S_BMV normalized to [0, 1] (in units of ln(2)).
+    Returns the normalized two-branch entropy in units of ln(2).
     """
     # Solve for source field at midpoint
     source_node = index[(SIDE // 2, SIDE // 2)]
@@ -371,8 +371,8 @@ def main():
     t0 = time.time()
 
     print("=" * 80)
-    print("FRONTIER: Complementarity / Fuzzball Test")
-    print("  BMV Entanglement vs OTOC Scrambling vs G")
+    print("FRONTIER: Exploratory Crossing Test")
+    print("  Branch entropy vs frozen spreading proxy vs G")
     print("=" * 80)
     print()
     print(f"Lattice: 2D staggered, side={SIDE}, n={N_SITES}")
@@ -380,7 +380,7 @@ def main():
     print(f"BMV: particles at (2,5) and (8,5), source at ({SIDE//2},{SIDE//2})")
     print(f"OTOC: center site, distance={OTOC_DISTANCE}, T_max={T_MAX_OTOC*DT:.1f}")
     print(f"Area law: BFS radii {RADII}")
-    print(f"G_HP = {G_HP} (predicted Hawking-Page transition)")
+    print(f"G_HP = {G_HP} (reference crossover from another exploratory runner)")
     print()
 
     n, pos, adj, col, index = build_lattice(SIDE)
@@ -390,8 +390,8 @@ def main():
     otoc_data = []
     alpha_data = []
 
-    header = (f"{'G':>6s}  {'BMV_wit':>8s} {'ovlp_1':>7s} {'ovlp_2':>7s} "
-              f"{'S_BMV':>8s}  {'OTOC_Cmax':>10s}  {'alpha':>7s}")
+    header = (f"{'G':>6s}  {'branch':>8s} {'ovlp_1':>7s} {'ovlp_2':>7s} "
+              f"{'S_br':>8s}  {'OTOC_Cmax':>10s}  {'alpha':>7s}")
     print(header)
     print("-" * 75)
 
@@ -436,24 +436,24 @@ def main():
             # Linear interpolation for crossing
             frac = abs(diff_i) / (abs(diff_i) + abs(diff_j))
             crossing_G = G_arr[i] + frac * (G_arr[i + 1] - G_arr[i])
-            print(f"  BMV and normalized OTOC curves CROSS at G ~ {crossing_G:.1f}")
+            print(f"  Branch-entropy and normalized spreading curves first CROSS at G ~ {crossing_G:.1f}")
             print(f"  (Between G={G_arr[i]:.1f} and G={G_arr[i+1]:.1f})")
             break
 
     if crossing_G is None:
         # Check which dominates
         if bmv_arr[-1] > otoc_norm[-1]:
-            print("  No crossing detected: BMV dominates OTOC at all G values")
+            print("  No crossing detected: branch entropy dominates normalized spreading at all G values")
         else:
-            print("  No crossing detected: OTOC dominates BMV at all G values")
+            print("  No crossing detected: normalized spreading dominates branch entropy at all G values")
 
     # Distance to G_HP
     if crossing_G is not None:
         print(f"  Distance to G_HP = {G_HP}: |crossing - G_HP| = {abs(crossing_G - G_HP):.1f}")
         if abs(crossing_G - G_HP) < 5:
-            print("  -> CONSISTENT with Hawking-Page prediction!")
+            print("  -> numerically near the imported reference crossover")
         else:
-            print("  -> NOT near G_HP, complementarity is decoupled from HP transition")
+            print("  -> not particularly near the imported reference crossover")
 
     # -----------------------------------------------------------------------
     # Area-law exponent analysis
@@ -486,9 +486,9 @@ def main():
     color_otoc = '#b2182b'
 
     ax1.set_xlabel('Gravitational coupling G', fontsize=12)
-    ax1.set_ylabel('BMV witness (normalized)', fontsize=12, color=color_bmv)
+    ax1.set_ylabel('Branch entropy (normalized)', fontsize=12, color=color_bmv)
     line1, = ax1.plot(G_arr, bmv_arr, 'o-', color=color_bmv, linewidth=2,
-                      markersize=6, label='BMV witness')
+                      markersize=6, label='branch entropy')
     ax1.tick_params(axis='y', labelcolor=color_bmv)
     ax1.set_ylim(-0.05, 1.05)
 
@@ -511,7 +511,7 @@ def main():
         ax1.text(crossing_G + 0.5, 0.85, f'crossing ~ {crossing_G:.1f}',
                  fontsize=10, color='green', va='top')
 
-    ax1.set_title('Complementarity Test: BMV Entanglement vs OTOC Scrambling',
+    ax1.set_title('Exploratory Crossing: Branch Entropy vs Spreading Proxy',
                   fontsize=14, fontweight='bold')
     lines = [line1, line2]
     labels = [l.get_label() for l in lines]
@@ -549,36 +549,27 @@ def main():
     print("=" * 80)
     print()
 
-    # BMV monotonicity
+    # Branch-entropy monotonicity
     bmv_monotonic = all(bmv_arr[i] >= bmv_arr[i - 1] - 1e-6 for i in range(1, len(bmv_arr)))
-    print(f"  BMV monotonic in G:        {'YES' if bmv_monotonic else 'NO'}")
-    print(f"  BMV range:                 {bmv_arr.min():.5f} to {bmv_arr.max():.5f}")
+    print(f"  Branch entropy monotonic in G: {'YES' if bmv_monotonic else 'NO'}")
+    print(f"  Branch-entropy range:         {bmv_arr.min():.5f} to {bmv_arr.max():.5f}")
 
     # OTOC suppression
     otoc_suppressed = otoc_arr[-1] < otoc_arr[0] * 0.1
     print(f"  OTOC suppressed at high G: {'YES' if otoc_suppressed else 'NO'}")
     print(f"  OTOC range:                {otoc_arr.min():.6f} to {otoc_arr.max():.6f}")
 
-    # Complementarity
-    if crossing_G is not None and abs(crossing_G - G_HP) < 5:
+    # Exploratory crossing only
+    if crossing_G is not None:
         print()
-        print("  COMPLEMENTARITY CONFIRMED near Hawking-Page transition")
-        print(f"  Crossing at G ~ {crossing_G:.1f}, G_HP = {G_HP}")
-        print("  Interpretation: as gravity strengthens past G_HP,")
-        print("  quantum information becomes entangled (BMV up) but")
-        print("  stops scrambling (OTOC down) -- fuzzball picture.")
-    elif crossing_G is not None:
-        print()
-        print(f"  COMPLEMENTARITY detected but DECOUPLED from G_HP")
-        print(f"  Crossing at G ~ {crossing_G:.1f}, G_HP = {G_HP}")
+        print("  EXPLORATORY CROSSING DETECTED")
+        print(f"  First crossing at G ~ {crossing_G:.1f}")
+        print("  This crossing depends on the script's internal normalization")
+        print("  and is not a retained phase-transition claim.")
     else:
         print()
-        if bmv_arr[-1] > 0.5 and otoc_suppressed:
-            print("  NO CROSSING but complementary trends:")
-            print("  BMV increases while OTOC decreases with G")
-            print("  Fuzzball-like behavior without sharp transition")
-        else:
-            print("  COMPLEMENTARITY NOT CONFIRMED in this parameter regime")
+        print("  No crossing detected on this sampled sweep.")
+        print("  These remain exploratory diagnostics only.")
 
     elapsed = time.time() - t0
     print(f"\nTotal time: {elapsed:.1f}s")

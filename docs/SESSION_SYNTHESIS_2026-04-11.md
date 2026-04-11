@@ -44,6 +44,9 @@ staggered lattice scales with BOUNDARY AREA, not volume.
 - Free: `R^2 = 0.9995` for `S` vs `|boundary|`, `0.8984` for `S` vs `|A|`
 - Gravity: `R^2 = 0.9682` for `S` vs `|boundary|`, `0.9328` for `S` vs `|A|`
 - Gravity reduces the area-law coefficient by `12.46%`
+- Later robustness addendum: the audited BFS-ball surface gives `100/100`
+  fits above `R^2=0.95`, with explicit caveats on the `side=6` two-point fits
+  and a smaller separate partition check.
 - This is a bounded positive many-body-style boundary-law result, not a full holography proof
 
 **2. Spectral Dimension Shift (frontier_spectral_geometry.py)**
@@ -71,8 +74,12 @@ wavepackets is permanently altered.
 - Control drift: `+0.000000`
 - Weak-pulse memory/amp mean: `+0.012460`, std `0.000592`
 - Nonlinear onset at strong amplitudes
-This is a bounded positive weak-amplitude memory-style signal, not yet a full
-GR-memory equivalence claim.
+Later robustness work downgraded this substantially:
+- the signal collapses by `N=81` and is effectively gone by `N=101`
+- it flips sign under source-position changes on the same ring
+- the current best read is a screened, protocol-specific finite-size artifact
+
+So this is now exploratory only, not a retained positive claim.
 
 ### Tier 2 — Strong Results
 
@@ -123,7 +130,7 @@ The Dirac-sea / holographic probe is the stronger and more relevant boundary-law
 | Holographic area law | QG, QI, holography | Low | boundary-law fit survives with gravity |
 | Spectral dimension shift | QG, spectral theory | Medium | gravity-dependent shift, interpretation exploratory |
 | Geometry superposition | QG, coherent branch probes | Medium | retained 2D branch effect on fixed adjacency |
-| Gravitational memory | GW theory, BMS | Medium | weak-amplitude memory-style signal |
+| Gravitational memory | GW theory, BMS | Medium | exploratory screened ring artifact |
 | Quantum Zeno | Foundations, decoherence | Low | G_Zeno=49 |
 | Z2 protection | QI, decoherence | Low | 2x MI boost |
 | Critical exponents | Stat phys, Anderson | Low | beta=0.19 stable |
@@ -173,7 +180,7 @@ Scripts (modified — parity coupling):
 The strongest new results in this batch are:
 - the Dirac-sea boundary-law probe
 - the retained 2D branch-superposition harness
-- the weak-amplitude memory-style signal
+- the weak-coupling sign-sensitive regime
 
 Combined with the existing 17/17 canonical card, self-gravity contraction,
 and weak-coupling sign selectivity, the staggered fermion program now has:
@@ -182,7 +189,7 @@ and weak-coupling sign selectivity, the staggered fermion program now has:
 2. Gravitational attraction (sign-selective at weak coupling)
 3. A strong boundary-law / holography-style many-body probe
 4. A gravity-dependent spectral shift of the effective Hamiltonian
-5. A weak-amplitude memory-style signal
+5. A robust 2-body branch-entanglement companion result
 6. Quantum Zeno localization from self-gravity
 
 This is a multi-paper program. The strongest immediate paper directions are

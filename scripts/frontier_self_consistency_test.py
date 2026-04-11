@@ -26,6 +26,12 @@ KEY discriminators:
   - SELF-CONSISTENT != STATIC-FROM-INITIAL  =>  backreaction matters
   - STATIC-FROM-INITIAL = POSITIVE RANDOM   =>  spatial correlations don't matter
   - POSITIVE RANDOM != NEGATIVE RANDOM      =>  sign of Phi matters
+
+Important reporting note:
+  The self-consistent and static-from-initial surfaces are deterministic on
+  this fixed lattice, so repeated seeds there are not a genuine sampling
+  distribution. Large deterministic splits should be described as exact
+  separations on this surface, not as literal infinite-sigma statements.
 """
 
 from __future__ import annotations
@@ -540,12 +546,17 @@ def main():
     print()
 
     def sigma_diff(a, b):
-        """Sigma separation between means of two samples."""
+        """Sigma-like separation when both sides have real spread."""
         pooled_std = np.sqrt((a.std()**2 + b.std()**2) / 2)
         if pooled_std < 1e-12:
             diff = abs(a.mean() - b.mean())
-            return float('inf') if diff > 1e-12 else 0.0
+            return float('nan') if diff > 1e-12 else 0.0
         return abs(a.mean() - b.mean()) / pooled_std
+
+    def fmt_sep(sig):
+        if np.isnan(sig):
+            return "deterministic split"
+        return f"{sig:.1f} sigma"
 
     comparisons = [
         ("1-SelfConsist", "2-StaticInit",
@@ -568,11 +579,11 @@ def main():
 
         print(f"  {description}")
         print(f"    Sign margin:   {r1['sign_margins'].mean():>+6.1f} vs "
-              f"{r2['sign_margins'].mean():>+6.1f}  ({sig_sign:.1f} sigma)")
+              f"{r2['sign_margins'].mean():>+6.1f}  ({fmt_sep(sig_sign)})")
         print(f"    Width ratio:   {r1['width_ratios'].mean():>.4f} vs "
-              f"{r2['width_ratios'].mean():>.4f}  ({sig_width:.1f} sigma)")
+              f"{r2['width_ratios'].mean():>.4f}  ({fmt_sep(sig_width)})")
         print(f"    Bnd alpha:     {r1['boundary_alphas'].mean():>.6f} vs "
-              f"{r2['boundary_alphas'].mean():>.6f}  ({sig_alpha:.1f} sigma)")
+              f"{r2['boundary_alphas'].mean():>.6f}  ({fmt_sep(sig_alpha)})")
 
         # Sign consistency comparison
         n1_pos = int(np.sum(r1["sign_margins"] > 0))
@@ -599,8 +610,10 @@ def main():
         sigma_diff(r_sc["boundary_alphas"], r_si["boundary_alphas"]),
     ]
     max_q1 = max(sigs_q1)
-    if max_q1 > threshold:
-        print(f"  Q1: BACKREACTION MATTERS ({max_q1:.1f} sigma)")
+    q1_det = np.any(np.isnan(sigs_q1))
+    if q1_det or max_q1 > threshold:
+        label = "deterministic separation on this fixed surface" if q1_det else f"{max_q1:.1f} sigma"
+        print(f"  Q1: BACKREACTION MATTERS ({label})")
         print(f"      Self-consistent differs from static-from-initial.")
         print(f"      The iterative update of Phi from evolving |psi|^2 is")
         print(f"      doing real dynamical work beyond the initial conditions.")
@@ -653,9 +666,11 @@ def main():
         sigma_diff(r_sc["width_ratios"], r_pr["width_ratios"]),
         sigma_diff(r_sc["boundary_alphas"], r_pr["boundary_alphas"]),
     ]
-    max_overall = max(r_sc_vs_pr)
-    print(f"  OVERALL: Self-consistent vs Positive random = {max_overall:.1f} sigma")
-    if max_overall > threshold:
+    finite_overall = [x for x in r_sc_vs_pr if not np.isnan(x)]
+    max_overall = max(finite_overall) if finite_overall else float('nan')
+    overall_label = fmt_sep(max_overall)
+    print(f"  OVERALL: Self-consistent vs Positive random = {overall_label}")
+    if (not np.isnan(max_overall)) and max_overall > threshold:
         print(f"  Self-consistency provides information BEYOND just having")
         print(f"  a positive potential. The gravitational backreaction is real.")
     else:

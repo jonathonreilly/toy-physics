@@ -305,8 +305,8 @@ def main():
     print(f"  Control drift (no wave):       {ctrl_drift:+.6f}")
     print(f"  Memory signal (amp=1.0, net):  {mem_1:+.6f}")
     if abs(mem_1) > 2 * abs(ctrl_drift) and abs(mem_1) > 1e-6:
-        print("  -> PASS: Permanent separation change detected after wave passage")
-        print("           (gravitational memory effect confirmed)")
+        print("  -> PASS: Permanent separation change detected on this narrow ring protocol")
+        print("           (do not treat as a general memory claim without robustness checks)")
     elif abs(mem_1) > 1e-6:
         print("  -> MARGINAL: Memory signal present but comparable to control drift")
     else:

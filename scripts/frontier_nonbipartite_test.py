@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Non-bipartite lattice test: do spectral results survive without staggering?
+"""Triangular/Wilson robustness probe with bounded scope.
 
-Tests whether the three key observables (area law, CDT flow, Hawking-Page
-transition) survive on a TRIANGULAR lattice with Wilson fermions, ruling out
-"lattice artifact of bipartite/staggered structure" objections.
+This runner tests whether a bounded boundary-law preference seen on the
+staggered square lattice can also appear on one periodic triangular lattice
+with Wilson fermions. It also carries exploratory internal checks based on a
+Hamiltonian-spectrum flow estimator and an entropy-scaling crossover scan.
 
 Architecture:
   - Triangular lattice (6-neighbor, NOT bipartite: has odd cycles)
@@ -12,9 +13,9 @@ Architecture:
   - Same screened-Poisson self-gravity as bipartite runs
 
 Three probes:
-  1. AREA LAW: Dirac-sea entanglement entropy for BFS ball bipartitions
-  2. CDT FLOW: Spectral dimension d_s(t) from diffusion return probability
-  3. HAWKING-PAGE: R^2_area - R^2_vol crossing as function of G
+  1. boundary-law preference for Dirac-sea entropy on BFS-ball cuts
+  2. exploratory Hamiltonian-spectrum flow estimator
+  3. exploratory entropy-scaling crossover scan
 """
 
 from __future__ import annotations
@@ -420,12 +421,12 @@ def probe_area_law(label, n, pos, adj, L_sp, build_H_fn, G=10.0, **kw):
 
 
 # ===================================================================
-# PROBE 2: CDT spectral dimension flow
+# PROBE 2: exploratory spectrum-flow estimator
 # ===================================================================
 
 def probe_cdt_flow(label, n, pos, adj, L_sp, build_H_fn, G=10.0, **kw):
-    """Test CDT-like spectral dimension flow."""
-    print(f"\n  --- Probe 2: CDT Spectral Dimension Flow ({label}) ---")
+    """Exploratory Hamiltonian-spectrum UV->IR flow estimator."""
+    print(f"\n  --- Probe 2: Spectrum-Flow Estimator ({label}) ---")
 
     # Free Hamiltonian
     phi_zero = np.zeros(n)
@@ -452,15 +453,15 @@ def probe_cdt_flow(label, n, pos, adj, L_sp, build_H_fn, G=10.0, **kw):
 
 
 # ===================================================================
-# PROBE 3: Hawking-Page transition
+# PROBE 3: exploratory entropy-scaling crossover
 # ===================================================================
 
 def probe_hawking_page(label, n, pos, adj, L_sp, build_H_fn,
                        G_values=None, **kw):
-    """Sweep G to find area-to-volume law crossover."""
+    """Sweep G to find an entropy-fit crossover on this specific runner."""
     if G_values is None:
         G_values = [0.0, 1.0, 2.0, 5.0, 10.0, 20.0, 50.0, 100.0]
-    print(f"\n  --- Probe 3: Hawking-Page Transition ({label}) ---")
+    print(f"\n  --- Probe 3: Entropy-Scaling Crossover ({label}) ---")
     print(f"  G sweep: {G_values}")
 
     side = int(round(math.sqrt(n)))
@@ -516,12 +517,12 @@ def probe_hawking_page(label, n, pos, adj, L_sp, build_H_fn,
                 crossings.append(G_cross)
 
         if crossings:
-            print(f"\n  Hawking-Page crossing at G_HP ~ {crossings[0]:.1f}")
+            print(f"\n  entropy-fit crossing at G ~ {crossings[0]:.1f}")
         else:
             if np.all(diff_arr > 0):
-                print(f"\n  Area law dominant throughout (no HP transition in range)")
+                print(f"\n  Boundary-law preference dominates throughout (no crossover in range)")
             elif np.all(diff_arr < 0):
-                print(f"\n  Volume law dominant throughout")
+                print(f"\n  Volume fit dominates throughout")
             else:
                 print(f"\n  Mixed behavior, no clean crossing detected")
 
@@ -534,8 +535,8 @@ def probe_hawking_page(label, n, pos, adj, L_sp, build_H_fn,
 
 def main():
     print("=" * 80)
-    print("NON-BIPARTITE LATTICE TEST: Wilson Fermions on Triangular Lattice")
-    print("Does area law / CDT flow / Hawking-Page survive without staggering?")
+    print("TRIANGULAR/WILSON ROBUSTNESS PROBE")
+    print("Bounded boundary-law transfer on one non-bipartite alternative lattice")
     print("=" * 80)
     print()
     print(f"Parameters: MASS={MASS}, MU2={MU2}, DT={DT}, WILSON_R={WILSON_R}")
@@ -576,13 +577,13 @@ def main():
                                      _build_H, G=10.0)
         print(f"  [Probe 1 time: {time.time()-t0:.1f}s]")
 
-        # Probe 2: CDT flow
+        # Probe 2: spectrum-flow estimator
         t0 = time.time()
         probe_cdt_flow(f"tri_{side}", n, pos, adj, L_sp, _build_H, G=10.0)
         print(f"  [Probe 2 time: {time.time()-t0:.1f}s]")
 
-        # Probe 3: Hawking-Page (only on side=12 to save time)
-        # Extended G range for triangular -- crossover may be at higher G
+        # Probe 3: entropy-scaling crossover (only on side=12 to save time)
+        # Extended G range for triangular -- any crossover may be at higher G
         if side >= 12:
             t0 = time.time()
             hp_tri = probe_hawking_page(
@@ -632,15 +633,14 @@ def main():
     print("SUMMARY: Non-Bipartite vs Bipartite")
     print("=" * 80)
     print()
-    print("If all three probes give qualitatively similar results on the")
-    print("triangular (Wilson) lattice and the square (staggered) lattice,")
-    print("then the spectral results are NOT artifacts of the bipartite")
-    print("structure or the staggered fermion discretization.")
+    print("This is a bounded robustness check, not a clean isolation test.")
+    print("It changes graph family, fermion discretization, and coupling")
+    print("structure at the same time.")
     print()
     print("Key questions:")
-    print("  1. Does area law survive on triangular lattice?")
-    print("  2. Does CDT flow (d_s UV < d_s IR) survive?")
-    print("  3. Does the Hawking-Page transition exist? At similar G_HP?")
+    print("  1. Does boundary-law preference survive on triangular/Wilson?")
+    print("  2. Does the internal spectrum-flow estimator still rise UV -> IR?")
+    print("  3. Does an entropy-fit crossover appear on this different setup?")
 
 
 if __name__ == "__main__":

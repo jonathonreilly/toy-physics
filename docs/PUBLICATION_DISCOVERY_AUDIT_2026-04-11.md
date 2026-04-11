@@ -52,10 +52,9 @@ The repo currently contains four different classes of publication material:
 - bounded two-field wave coupling
 - causal DAG compatibility
 - bounded fixed-adjacency branch-superposition result in 2D
-- bounded many-body-style boundary-law result from the Dirac-sea correlation-matrix probe
-- bounded 1D-ring retarded memory-style signal
+- bounded many-body-style boundary-law result from the Dirac-sea correlation-matrix probe, now backed by a larger robustness addendum
 - bounded branch-mediated entanglement result in the externally imposed geometry-branch toy protocol
-- bounded tripartite branch-mediated entanglement result with GHZ-like structure in the externally imposed two-branch toy protocol
+- bounded tripartite branch-mediated entanglement result with corrected W-type structure in the externally imposed two-branch toy protocol
 - bounded weak-coupling irregular-graph sign-sensitive regime on stable shell metrics
 
 **Current strongest package**
@@ -71,9 +70,10 @@ The repo currently contains four different classes of publication material:
 - source-scale closure via `G_eff`
 - topology-dependent onset fits
 - branch-superposition remains fixed-adjacency field branching, not topology superposition
-- memory result is ring-specific, not yet a graph-family structural result
+- boundary-law scaling itself is generic for gapped free fermions; the nontrivial content here is the retained coefficient shift and robustness under the audited surface
+- memory result is ring-specific, size-fragile, and currently best treated as an exploratory screening artifact rather than paper-grade positive evidence
 - branch-mediated entanglement is not a full BMV witness
-- tripartite branch-mediated entanglement is not a multipartite BMV witness
+- tripartite branch-mediated entanglement is not a multipartite BMV witness and is now read as W-type rather than GHZ-type
 - weak-coupling retention does not close broader off-lattice directional gravity outside the low-`G` window
 
 **What should not be overclaimed**
@@ -90,7 +90,8 @@ The repo currently contains four different classes of publication material:
   companions
 - the new bounded branch-superposition result is worth preserving inside that package
 - the entropy null result is worth preserving as a negative control against overclaiming holography
-- the new boundary-law, memory, and branch-entanglement notes are worth preserving as bounded side results, not as headline claims
+- the new boundary-law and branch-entanglement notes are worth preserving as bounded side results, not as headline claims
+- the memory note is still worth preserving, but primarily as a diagnostic/exploratory artifact rather than publication-grade positive evidence
 
 ### 2. Coin / Chiral / Dirac-Walk Lane
 
