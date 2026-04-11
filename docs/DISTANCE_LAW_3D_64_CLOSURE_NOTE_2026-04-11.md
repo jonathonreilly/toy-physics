@@ -1,4 +1,4 @@
-# 3D Distance Law 64^3 Continuation Note
+# 3D Path-Sum Distance Continuation Note
 
 **Date:** 2026-04-11  
 **Status:** retained narrowly as a bounded continuation note; not full Newton closure
@@ -11,9 +11,9 @@
 ## Scope
 
 This note records a single 3D path-sum distance-law continuation on a
-64^3 lattice. It is best read as a numerical extension of the existing
-distance-story line, not as a universal theorem and not as a replacement for
-the Wilson-lane control work.
+64^3 lattice. It is best read as a bounded numerical extension of the
+existing path-sum distance-story line, not as a universal theorem and not as
+a replacement for the Wilson-lane control work.
 
 ## Retained result
 
@@ -43,8 +43,8 @@ existing retained story:
 
 Safe mainline phrasing:
 
-- the 64^3 path-sum run is a strong bounded continuation of the distance-law
-  story
+- the 64^3 path-sum run is a strong bounded continuation of the
+  path-sum distance story
 - it supports a near-Newton continuum trend on this surface
 - it should not be cited as full Newton closure
 

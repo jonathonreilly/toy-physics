@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""3D path-sum distance law closure on 64^3 lattice.
+"""3D path-sum distance-law continuation on 64^3 lattice.
 
-Closes the distance-law numerically by scaling to 64^3 (262,144 sites) and
+Extends the distance-law numerically by scaling to 64^3 (262,144 sites) and
 showing convergence of the gravitational force exponent toward alpha = -2
-(i.e., F ~ 1/r^2 in 3D, or equivalently deflection ~ 1/b).
+(i.e., F ~ 1/r^2 in 3D, or equivalently deflection ~ 1/b) on this finite
+lattice family.
 
 Method:
   - Solve the 3D Poisson equation for a point mass (f ~ 1/r field)
@@ -249,7 +250,7 @@ def extrapolate_alpha(Ns: list[int], alphas: list[float],
 
 def main():
     print("=" * 80)
-    print("3D PATH-SUM DISTANCE LAW CLOSURE — UP TO 64^3 LATTICE")
+    print("3D PATH-SUM DISTANCE CONTINUATION — UP TO 64^3 LATTICE")
     print("=" * 80)
     print()
     print("Method: Poisson field (f ~ 1/r) + valley-linear action S = L(1-f)")
@@ -369,7 +370,7 @@ def main():
         if deviation < 0.05:
             print(f"  RESULT: alpha_inf = {alpha_inf:.3f}, "
                   f"consistent with -1.0 ({sigma:.1f} sigma deviation)")
-            print(f"  DISTANCE LAW CLOSED: F ~ 1/r^2 confirmed in 3D continuum limit")
+            print("  DISTANCE LAW TREND: bounded 1/r^2 continuation supported")
         elif deviation < 0.1:
             print(f"  RESULT: alpha_inf = {alpha_inf:.3f}, "
                   f"marginally consistent with -1.0 ({sigma:.1f} sigma)")
@@ -418,10 +419,11 @@ def main():
     print("=" * 80)
     print("  Valley-linear action S = L(1-f) on 3D lattice with Coulomb f = s/r:")
     print("    - Deflection delta(b) ~ 1/b^alpha")
-    print("    - alpha -> -1.0 in continuum limit => F ~ 1/r^2 (Newtonian)")
+    print("    - alpha -> -1.0 in bounded continuum extrapolation")
+    print("      => near-Newton 1/r^2 continuation on this family")
     print("    - alpha = -1 for deflection means force exponent = -2")
     print("    - Previous 31^3: alpha ~ -0.98, steepened by boundary effects")
-    print("    - This run: up to 64^3 with convergence analysis")
+    print("    - This run: up to 64^3 with bounded convergence analysis")
 
 
 if __name__ == "__main__":

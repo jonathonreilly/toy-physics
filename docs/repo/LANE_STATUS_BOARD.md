@@ -34,6 +34,12 @@ Active rerun map:
 | Anderson / eigenvalue diagnostics | `retained-companion` | The newer phase-map / spectrum lane now cleanly says two things: no chaos transition on the audited spacing-statistics surface, and a finite perturbative `G`-window where self-gravity is distinguishable from matched disorder, strongest near `L=8` and still present on `L=10,12`. The unscreened companion preserves the same torus lane under `mu2 = 0.001`, where the separation strengthens numerically but changes character into a low-variance low-`alpha` offset rather than the earlier narrow-window story. | [`docs/EIGENVALUE_ANDERSON_PHASE_NOTE_2026-04-11.md`](../EIGENVALUE_ANDERSON_PHASE_NOTE_2026-04-11.md), [`docs/ANDERSON_PHASE_MU2_0001_NOTE_2026-04-11.md`](../ANDERSON_PHASE_MU2_0001_NOTE_2026-04-11.md) | [`scripts/frontier_eigenvalue_stats_and_anderson_phase.py`](../scripts/frontier_eigenvalue_stats_and_anderson_phase.py), [`scripts/frontier_anderson_phase_unscreened_periodic.py`](../scripts/frontier_anderson_phase_unscreened_periodic.py) |
 | Emergent geometry growth | `exploratory-reopen` | Matter-coupled growth clearly reshapes geometry and reopens a narrow high-`G` toward-force window, but the result is seed- and coupling-sensitive and not yet promoted. | [`docs/EMERGENT_GEOMETRY_GROWTH_NOTE_2026-04-10.md`](../EMERGENT_GEOMETRY_GROWTH_NOTE_2026-04-10.md) | [`scripts/frontier_emergent_geometry_v2.py`](../../scripts/frontier_emergent_geometry_v2.py), [`scripts/frontier_emergent_geometry_g_sweep.py`](../../scripts/frontier_emergent_geometry_g_sweep.py), [`scripts/frontier_emergent_geometry_multisize.py`](../../scripts/frontier_emergent_geometry_multisize.py) |
 
+## Bounded Continuation
+
+| Lane | Status | Why it sits here | Start here | Retest surface |
+|---|---|---|---|---|
+| 3D path-sum distance continuation | `retained-companion` | A single 64^3 path-sum family gives a bounded numerical continuation of the distance story, with finite-size extrapolation approaching a Newton-compatible weak-field trend. This stays replayable and useful, but it remains boundary-sensitive and is not a replacement for the Wilson calibration work. | [`docs/DISTANCE_LAW_3D_64_CLOSURE_NOTE_2026-04-11.md`](../DISTANCE_LAW_3D_64_CLOSURE_NOTE_2026-04-11.md) | [`scripts/distance_law_3d_64_closure.py`](../../scripts/distance_law_3d_64_closure.py) |
+
 ## Whole-Repo Historical Programs On `main`
 
 | Lane | Status | Why it sits here | Start here | Retest surface |

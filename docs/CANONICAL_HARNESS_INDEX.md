@@ -159,6 +159,23 @@ Reading boundary:
 - use it for same-convention open-Wilson calibration only
 - do not read it as both-masses closure or architecture-wide closure
 
+## 6B. 3D Path-Sum Distance Continuation
+
+Use this when you need the bounded 64^3 path-sum continuation of the distance
+story:
+
+- [`scripts/distance_law_3d_64_closure.py`](../scripts/distance_law_3d_64_closure.py)
+
+Key note:
+
+- [`docs/DISTANCE_LAW_3D_64_CLOSURE_NOTE_2026-04-11.md`](DISTANCE_LAW_3D_64_CLOSURE_NOTE_2026-04-11.md)
+
+Reading boundary:
+
+- this is a bounded path-sum continuation, not full Newton closure
+- use it for the 64^3 distance-story extrapolation only
+- do not read it as both-masses closure or architecture-wide closure
+
 ## 7. Historical / Legacy Entrypoints
 
 Use these when you are intentionally revisiting older lanes on `main`:

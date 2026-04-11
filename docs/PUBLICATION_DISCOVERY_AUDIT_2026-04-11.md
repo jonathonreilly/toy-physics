@@ -156,6 +156,40 @@ The repo currently contains four different classes of publication material:
   Newton-compatible companion” discussion
 - not yet the Nature-threshold two-body closure
 
+### 1C. 3D Path-Sum Distance Continuation
+
+**Safe bounded material**
+
+- a single 64^3 path-sum continuation on one 3D lattice geometry
+- finite-size continuation of the distance-law trend toward a Newton-compatible
+  `1/r^2` force law on this surface
+- mass linearity on the largest grid at the bounded continuation level
+
+**What is strong here**
+
+- the continuation is numerically clean on the audited grid sweep
+- the far-field exponent and finite-size extrapolation both point toward the
+  Newton-compatible weak-field trend
+
+**What is bounded**
+
+- one point-mass family on one 3D lattice geometry
+- Dirichlet boundary sensitivity
+- no frozen/static-source control family
+- no architecture portability beyond this path-sum setup
+- no full two-body `M_1 M_2` law
+
+**What is not safe**
+
+- full Newton closure
+- architecture-independent promotion
+- replacement of the Wilson control work
+
+**Verdict**
+
+- retain as a narrow continuation note
+- preserve the distance-law trend, not the stronger closure story
+
 ### 2. Coin / Chiral / Dirac-Walk Lane
 
 **Safe positive package**
