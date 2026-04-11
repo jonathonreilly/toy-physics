@@ -21,8 +21,10 @@ import time
 def staggered_H_1d(n, mass, V=None):
     H=lil_matrix((n,n),dtype=complex)
     for x in range(n):
-        H[x,(x+1)%n]+=-1j/2; H[x,(x-1)%n]+=1j/2; H[x,x]+=mass*((-1)**x)
-        if V is not None: H[x,x]+=V[x]
+        eps_x=(-1)**x
+        H[x,(x+1)%n]+=-1j/2; H[x,(x-1)%n]+=1j/2; H[x,x]+=mass*eps_x
+        # Parity (scalar 1⊗1) coupling: V modulates mass gap via ε(x).
+        if V is not None: H[x,x]+=V[x]*eps_x
     return csr_matrix(H)
 
 def staggered_H_3d(n, mass, V=None):
@@ -34,8 +36,10 @@ def staggered_H_3d(n, mass, V=None):
                 H[i,((x+1)%n)*n*n+y*n+z]+=-1j/2; H[i,((x-1)%n)*n*n+y*n+z]+=1j/2
                 e2=(-1)**x; H[i,x*n*n+((y+1)%n)*n+z]+=e2*(-1j/2); H[i,x*n*n+((y-1)%n)*n+z]+=e2*(1j/2)
                 e3=(-1)**(x+y); H[i,x*n*n+y*n+(z+1)%n]+=e3*(-1j/2); H[i,x*n*n+y*n+(z-1)%n]+=e3*(1j/2)
-                H[i,i]+=mass*((-1)**(x+y+z))
-                if V is not None: H[i,i]+=V[i]
+                eps_xyz=(-1)**(x+y+z)
+                H[i,i]+=mass*eps_xyz
+                # Parity (scalar 1⊗1) coupling: V modulates mass gap via ε(x).
+                if V is not None: H[i,i]+=V[i]*eps_xyz
     return csr_matrix(H)
 
 def staggered_H_flux_1d(n, mass, A):
