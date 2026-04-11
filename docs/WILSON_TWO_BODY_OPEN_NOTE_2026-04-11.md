@@ -103,29 +103,45 @@ on that screened surface.
 
 ## Both-Masses Audit
 
-`frontier_newton_both_masses.py` checks the newer open-surface,
-weak-screening surface with `mu^2 = 0.001`, but it still does **not** close a
-full `M_A M_B` law.
+`frontier_newton_both_masses.py` now runs the first honest next-step observable
+on the same open weak-screening surface:
 
-What the runner actually varies:
+- `side = 15`
+- `G = 5`
+- `mu^2 = 0.001`
+- `d = 5`
+- each orbital gets its own physical mass in **both**
+  - the Poisson source
+  - the Wilson Hamiltonian diagonal
+- the retained observable is early-time mutual momentum transfer
+  - `P_A^mut = M_A * <v_A^shared - v_A^self>`
+  - `P_B^mut = M_B * <v_B^self - v_B^shared>`
 
-- `source_A`, `source_B` in the Poisson source
-- two unit-normalized orbitals with the **same** Wilson Hamiltonian mass term
-
-So it measures source-linearity slices, not a full inertial-times-source law.
+This is materially better than the earlier source-only sweep, but it still does
+**not** close a retained `M_A M_B` law.
 
 Direct rerun on that surface:
 
-- anchor slice `a_on_A` vs `source_B` at `source_A = 1.0`: `R^2 = 0.9956`
-- anchor slice `a_on_B` vs `source_A` at `source_B = 1.0`: `R^2 = 1.0000`
-- full-grid normalized response `a_on_A / source_B`: `CV = 62.9%`
-- equal-and-opposite acceleration proxy `a_A / a_B`: fails strongly on the full grid
+- anchor slice `P_A^mut` vs `M_B` at `M_A = 1.0`: `R^2 = 0.9445`
+- anchor slice `P_B^mut` vs `M_A` at `M_B = 1.0`: `R^2 = 0.9400`
+- full-grid normalized `P_A^mut / M_B`: `CV = 35.4%`
+- full-grid normalized `P_B^mut / M_A`: `CV = 37.5%`
+- action-reaction balance `P_A^mut + P_B^signed`: fails on every row
+
+The structural reason is also clearer now:
+
+- once both inertial masses vary, the shared-minus-self residual is dominated by
+  a **common Wilson-gap slowdown**
+- that slowdown is not an exchanged momentum channel
+- so the residual does not behave like a clean two-body force law
 
 So the honest read is:
 
 - the open Wilson lane supports a real distance-law calibration
-- it also supports slice-wise source linearity
+- it supports bounded slice-wise source/response structure
 - it still does **not** support retained full Newton closure
+- the current both-masses observable fails because common propagation slowing
+  overwhelms any clean action-reaction signal
 
 ## Honest Interpretation
 
@@ -188,15 +204,19 @@ It does **not** yet support:
 
 ## Exact Next Observable
 
-The next decisive observable is no longer another source-weight-only sweep.
+That next observable has now been run, and it failed honestly.
 
-It is:
+So the next step is narrower:
 
-- separate inertial masses in `H_A(M_A, Phi)` and `H_B(M_B, Phi)`
-- the early-time mutual momentum-transfer residual on the same open surface
-  - `P_A^mut = M_A * a_A^(shared-self_only)`
-  - `P_B^mut = M_B * a_B^(shared-self_only)`
-- then test:
-  - `P_A^mut ∝ M_B`
-  - `P_B^mut ∝ M_A`
-  - `P_A^mut = -P_B^mut`
+- keep the same open weak-screening Wilson surface
+- redesign the mutual-channel readout so it suppresses the common slowdown mode
+- likely candidates are:
+  - local momentum flux through the mid-plane
+  - weaker-coupling / lighter-mass windows where the shared-minus-self residual
+    stays perturbative
+  - a directly antisymmetrized impulse observable instead of centroid-only
+    kinematics
+
+Until one of those produces a clean equal-and-opposite signal, the Wilson lane
+should be cited as a distance-law calibration plus a failed both-masses closure,
+not as a retained Newton derivation.

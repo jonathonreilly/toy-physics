@@ -207,16 +207,24 @@ Before this lane can be retained, it needs:
 4. a bridge from this massless periodic signal to the broader screened graph
    program
 
-For the Wilson/open-surface successor lane specifically, the exact next
-observable is now clear:
+For the Wilson/open-surface successor lane specifically, that exact next
+observable has now been run:
 
-- not another source-weight-only sweep
-- instead, independent inertial masses in the two orbital Hamiltonians
-- with the retained read taken from early-time mutual momentum transfer:
-  - `P_A^mut = M_A * a_A^(shared-self_only)`
-  - `P_B^mut = M_B * a_B^(shared-self_only)`
+- independent inertial masses in the two orbital Hamiltonians
+- early-time mutual momentum transfer on the open weak-screening surface
 
-That is the first Wilson observable that can honestly test a retained
-both-masses law rather than just source-linearity slices.
+And it still fails as a retained both-masses law:
 
-Until then, the two-body mutual-attraction lane remains exploratory.
+- anchor mass slices degrade to `R^2 ≈ 0.94`
+- full-grid normalized impulses drift by `35-38%`
+- action-reaction fails on every grid row
+
+The failure mode is informative:
+
+- the shared-minus-self residual is dominated by a common propagation slowdown
+  once both inertial masses vary
+- so centroid momentum transfer does not isolate a clean exchanged-force
+  channel
+
+So the Wilson successor lane remains exploratory, with a better-observed but
+still unresolved both-masses closure problem.

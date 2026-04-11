@@ -63,9 +63,15 @@ Newton,” but rather:
 
 This note only calibrates the **distance-law side** of the Wilson lane.
 
-It does **not** close the mass-law side, because the current both-masses
-runner varies Poisson source weights without introducing independent inertial
-masses in the two orbital Hamiltonians.
+The later both-masses momentum-transfer runner still does **not** close the
+mass-law side:
+
+- anchor impulse slices fall below retained linearity (`R^2 ≈ 0.94`)
+- full-grid normalized impulses drift by `35-38%`
+- action-reaction fails on every grid row
+
+So the distance exponent can be calibrated honestly, but full Newton closure is
+still open.
 
 ## Conclusion
 
@@ -75,13 +81,9 @@ It supports the use of the open Wilson lane as a screened crossover study and
 shows that the steep `mu^2 = 0.22` exponent should not be treated as a fixed
 universality class.
 
-The exact next observable needed for a retained Wilson Newton claim is:
+That observable has now been attempted and it fails because the shared-minus-
+self residual is dominated by common propagation slowing once both inertial
+masses vary.
 
-- independent inertial masses `M_A`, `M_B` in `H_A`, `H_B`
-- early-time mutual momentum transfer
-  - `P_A^mut = M_A * a_A^(shared-self_only)`
-  - `P_B^mut = M_B * a_B^(shared-self_only)`
-- on the same open weak-screening surface
-
-Until that exists, this note should only be cited as a distance-law
-calibration.
+So this note should still be cited only as a distance-law calibration, not as
+a retained Wilson Newton claim.
