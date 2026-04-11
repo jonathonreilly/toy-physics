@@ -129,7 +129,30 @@ Key note:
 
 - [`docs/EMERGENT_GEOMETRY_GROWTH_NOTE_2026-04-10.md`](EMERGENT_GEOMETRY_GROWTH_NOTE_2026-04-10.md)
 
-## 6. Historical / Legacy Entrypoints
+## 6. Wilson Bounded Calibration Surface
+
+Use these when you need the bounded Wilson weak-field Newton-strengthening
+package on `main`:
+
+- [`scripts/frontier_wilson_two_body_open.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_wilson_two_body_open.py)
+- [`scripts/frontier_wilson_mu2_distance_sweep.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_wilson_mu2_distance_sweep.py)
+- [`scripts/frontier_test_mass_limit.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_test_mass_limit.py)
+- [`scripts/frontier_perturbative_mass_law.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_perturbative_mass_law.py)
+- [`scripts/frontier_continuum_limit.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_continuum_limit.py)
+
+Key notes:
+
+- [`docs/WILSON_TWO_BODY_OPEN_NOTE_2026-04-11.md`](WILSON_TWO_BODY_OPEN_NOTE_2026-04-11.md)
+- [`docs/WILSON_MU2_DISTANCE_SWEEP_NOTE_2026-04-11.md`](WILSON_MU2_DISTANCE_SWEEP_NOTE_2026-04-11.md)
+- [`docs/WILSON_TEST_MASS_CONTINUUM_NOTE_2026-04-11.md`](WILSON_TEST_MASS_CONTINUUM_NOTE_2026-04-11.md)
+
+Reading boundary:
+
+- this is a bounded Wilson companion surface, not full Newton closure
+- use it for same-convention open-Wilson calibration only
+- do not read it as both-masses closure or architecture-wide closure
+
+## 7. Historical / Legacy Entrypoints
 
 Use these when you are intentionally revisiting older lanes on `main`:
 

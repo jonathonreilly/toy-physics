@@ -117,12 +117,18 @@ The repo currently contains four different classes of publication material:
   surface
 - fitted distance and partner-source laws
 - later `mu^2` sweep (`WILSON_MU2_DISTANCE_SWEEP_NOTE_2026-04-11.md`) shows the distance exponent softens toward Newton as the screening term is reduced
+- a later bounded companion note now freezes the strongest weak-field Wilson
+  evidence:
+  - exact test-mass source scaling
+  - same-convention continuum extrapolation to `alpha_inf = -2.009 +/- 0.019`
 
 **What is strong here**
 
 - this is the cleanest two-body mutual-attraction signal currently in the repo
 - it survives removal of the periodic small-box sign flip that affected the
   narrow periodic Wilson window
+- the new test-mass / continuum companion substantially strengthens the
+  weak-field distance-law side of the lane
 
 **What is bounded**
 
@@ -130,6 +136,8 @@ The repo currently contains four different classes of publication material:
 - partner-source scaling is monotone but sublinear
 - the `mu^2` sweep makes the exponent a screened crossover, not a fixed steep
   law
+- the new test-mass / continuum companion is still same-convention Wilson
+  evidence, not full both-masses closure
 - this is not yet an emergent Newton-law paper
 
 **What is not safe**
@@ -142,7 +150,8 @@ The repo currently contains four different classes of publication material:
 **Verdict**
 
 - worth preserving as a bounded retained frontier result
-- strong enough to anchor a “clean mutual channel, wrong law” discussion
+- strong enough to anchor a bounded “clean mutual channel plus weak-field
+  Newton-compatible companion” discussion
 - not yet the Nature-threshold two-body closure
 
 ### 2. Coin / Chiral / Dirac-Walk Lane

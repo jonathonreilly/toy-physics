@@ -45,7 +45,27 @@ Why:
   and becomes Newton-compatible as `mu^2` is reduced
 - it does **not** overclaim full Newton closure
 
-### 3. Memory `mu^2` / geometry diagnostic
+### 3. Wilson test-mass / continuum companion
+
+Keep:
+
+- [WILSON_TEST_MASS_CONTINUUM_NOTE_2026-04-11.md](WILSON_TEST_MASS_CONTINUUM_NOTE_2026-04-11.md)
+- [scripts/frontier_test_mass_limit.py](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_test_mass_limit.py)
+- [scripts/frontier_perturbative_mass_law.py](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_perturbative_mass_law.py)
+- [scripts/frontier_continuum_limit.py](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_continuum_limit.py)
+- [scripts/frontier_newton_systematic.py](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_newton_systematic.py)
+
+Why:
+
+- this is the strongest bounded Newton-strengthening package on the Wilson lane
+- the note keeps the result inside its actual closure surface:
+  - exact test-mass source scaling
+  - same-convention continuum fit converging to `-2`
+  - no both-masses closure claim
+- it also resolves the normalization-review concern by framing the batch as
+  same-convention Wilson evidence, not a global cross-runner verdict
+
+### 4. Memory `mu^2` / geometry diagnostic
 
 Keep:
 
@@ -58,7 +78,7 @@ Why:
 - the honest result is that memory fragility is **not purely** a Yukawa-range
   effect; geometry scaling and boundary placement matter at least as much
 
-### 4. Born-rule boundary marker
+### 5. Born-rule boundary marker
 
 Keep:
 
@@ -70,7 +90,7 @@ Why:
 - it correctly says the old alpha sweep was probing fixed-point smoothness, not
   measurement theory
 
-### 5. Spectral / trajectory theory memo
+### 6. Spectral / trajectory theory memo
 
 Keep as a memo, not a theorem:
 
@@ -82,7 +102,7 @@ Why:
 - it should be read as an interpretive framework built from the repo record,
   not as a proven theorem
 
-### 6. Bounded staggered open-cubic trajectory companions
+### 7. Bounded staggered open-cubic trajectory companions
 
 Keep:
 
@@ -133,7 +153,7 @@ Retention boundary:
 - calibrated open-cubic surface only
 - not a retained both-masses law
 
-### 7. Corrected periodic-2D rerun surface
+### 8. Corrected periodic-2D rerun surface
 
 Keep:
 
@@ -167,7 +187,7 @@ Why:
   disorder separation changes character under unscreening
 - it remains careful about sign being a weak discriminator on this surface
 
-### 8. Bounded Ollivier curvature proxy
+### 9. Bounded Ollivier curvature proxy
 
 Keep:
 
@@ -181,7 +201,7 @@ Why:
 - the retained claim is a bounded potential-weighted structured-curvature proxy
 - the note explicitly rules out the stronger Einstein-equation overclaim
 
-### 9. Wilson two-body hardening notes
+### 10. Wilson two-body hardening notes
 
 Keep:
 
