@@ -17,7 +17,8 @@ What it does **not** yet support:
 
 - a promotion to repo-wide Newton closure
 - a claim that the mutual channel is distinguished from a frozen or static-source control
-- a claim that the temporal law survives once the source field is decoupled from the evolving packets
+- a claim that the temporal law survives once the source field is decoupled from
+  the evolving packets
 
 ## Why It Is Held
 
@@ -27,9 +28,9 @@ The current Wilson family still compares `SHARED` against `SELF_ONLY` only. That
 
 Without that control, the lane can still be read as a self-consistent Hartree-style effect on one open Wilson surface. That is bounded and interesting, but not enough to promote the side lane to `main`.
 
-## Exact Next Control
+## Frozen-Source Control
 
-Run a **frozen/static-source control** on the same audited Wilson surface:
+The missing control has now been run on the same audited Wilson surface:
 
 - same open 3D Wilson lattice
 - same `side=18,20,22` robustness surface
@@ -44,11 +45,14 @@ Required comparison:
 - `SELF_ONLY`
 - `FROZEN_SOURCE` or equivalent static-field control
 
-Promotion criteria after that control:
+Outcome:
 
-- attraction remains positive and clean versus the frozen/static baseline
-- the near-inverse-square exponent remains close to `-2`
-- the result still survives the side/placement robustness surface
+- `SHARED - SELF_ONLY` stays strong on the retained early/mid windows
+- `SHARED - FROZEN_SOURCE` is **not** clean enough to promote
+- `SELF_ONLY - FROZEN_SOURCE` is a negative control
+
+So the side lane remains retained only as bounded evidence. The promotion bar
+is still not closed.
 
 ## Retainable Now
 
@@ -64,4 +68,3 @@ Do not retain as `main` truth yet:
 - both-masses closure
 - action-reaction closure
 - a causal claim that excludes frozen/static-source explanations
-

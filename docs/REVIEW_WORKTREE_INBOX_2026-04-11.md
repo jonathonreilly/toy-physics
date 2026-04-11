@@ -20,6 +20,8 @@ These are not review items anymore:
 
 - `STAGGERED_TEST_MASS_COMPANION_NOTE_2026-04-11.md`
 - `scripts/frontier_staggered_test_mass_companion.py`
+- `DISTANCE_LAW_3D_64_CLOSURE_NOTE_2026-04-11.md`
+- `scripts/distance_law_3d_64_closure.py`
 
 Status:
 
@@ -28,43 +30,39 @@ Status:
 - not both-masses closure
 - not self-consistent two-body closure
 - not standalone distance-law closure
+- bounded-retained `64^3` path-sum distance continuation
+- safe reading: single-family continuation note for the path-sum distance story
+- not full Newton closure
+- not both-masses closure
+- not architecture portability
+
+## Remaining Bounded Candidate
+
+One review-side note is still a bounded promotion candidate rather than a hold:
+
+- `docs/NEWTON_DERIVATION_NOTE.md`
+
+Status:
+
+- bounded derivation candidate on the retained ordered-lattice family
+- safe reading: Newtonian mass scaling is selected when linear amplitude
+  propagation, phase valley, additive one-parameter mass, and momentum
+  conservation hold together
+- not a persistent-pattern inertial-mass theorem
+- not architecture-independent closure
+- open step: persistent-pattern inertia / one-parameter mass realization
+
+This item can move to `main` only if the open persistent-pattern step is
+actually closed or the claim is rewritten to stay explicitly family-level.
 
 ## Review Inventory
 
-### 1. Bounded promotion candidates
+### 1. Everything Else Left Is On Hold
 
-These are the strongest things in this review worktree. They still need one
-final human pass before any `main` promotion.
+Everything else in this review worktree is held pending a specific missing
+control or redesign step.
 
-#### A. 64^3 path-sum distance continuation
-
-Source branches:
-
-- `origin/claude/youthful-neumann`
-- `origin/codex/resonance-controls`
-
-Files:
-
-- `docs/DISTANCE_LAW_3D_64_CLOSURE_NOTE_2026-04-11.md`
-- `scripts/distance_law_3d_64_closure.py`
-
-Current verdict:
-
-- bounded continuation candidate
-
-Why bounded:
-
-- one 3D point-mass path-sum family
-- Dirichlet boundary sensitivity still matters
-- no architecture-portability result
-- no both-masses closure
-
-What decides promotion:
-
-- final note wording must stay continuation-level only
-- no `full Newton closure` language
-
-#### B. Wilson mutual-attraction side lane
+#### A. Wilson mutual-attraction side lane
 
 Source branches:
 
@@ -92,8 +90,8 @@ Current verdict:
 
 Blocker:
 
-- missing `FROZEN_SOURCE` / static-source control on the same open 3D Wilson
-  surface
+- frozen/static-source control has now been run and does **not** close the
+  promotion bar on the same open 3D Wilson surface
 
 Current bounded temporal read:
 
@@ -107,19 +105,17 @@ Current bounded temporal read:
 
 Required next experiment:
 
-- replay the same side / placement / separation / early-window surface with
-  `SHARED`, `SELF_ONLY`, and `FROZEN_SOURCE`
+- no promotion yet; if reopened, the same side / placement / separation /
+  early-window surface still needs a frozen/static-source comparison that
+  actually distinguishes dynamic shared backreaction from the frozen
+  explanation
 
 Promotion rule:
 
 - do not move this to `main` unless the new control shows dynamic shared
   backreaction matters beyond a frozen-field explanation
 
-### 2. Explicit holds
-
-These should stay out of `main` until the listed redesign or control is done.
-
-#### A. Exact two-particle product law
+#### B. Exact two-particle product law
 
 Source branches:
 
@@ -144,7 +140,7 @@ Required next experiment:
 - add frozen/static-source control
 - replay on the primary staggered/open-cubic surface
 
-#### B. Action uniqueness
+#### C. Action uniqueness
 
 Source branches:
 
@@ -167,7 +163,7 @@ Required next experiment:
 - rewrite the claim to the family level, or
 - prove portability across the retained architectures
 
-#### C. Irregular endogenous sign closure
+#### D. Irregular endogenous sign closure
 
 Source branches:
 
@@ -178,21 +174,23 @@ Files:
 
 - `docs/IRREGULAR_ENDOGENOUS_SIGN_CLOSURE_NOTE_2026-04-11.md`
 - `docs/IRREGULAR_ENDOGENOUS_SIGN_CLOSURE_NEXT_STEPS_2026-04-11.md`
+- `docs/IRREGULAR_ENDOGENOUS_SIGN_REINFORCEMENT_NOTE_2026-04-11.md`
 - `scripts/frontier_irregular_endogenous_sign_closure.py`
 
 Why held:
 
 - strong on one screened shell-packet surface
-- low-screening confirmation fails
+- low-screening confirmation failed in the reinforcement run
+- second packet family helped but still did not close the lane
 - packet-family generality is not closed
 
 Required next experiment:
 
-- second packet family
-- low-screening confirmation on the same observable
-- optional size portability if the above two pass
+- if reopened, add a third genuinely independent packet family or a size
+  portability sweep on the same shell-packet observable
+- do not promote the current reinforcement run
 
-#### D. Staggered two-body closure family
+#### E. Staggered two-body closure family
 
 Source branches:
 
@@ -216,8 +214,8 @@ Why held:
 - partner-force is real
 - direct-CoM closure still fails
 - both-masses closure is still negative / force-led
-- detector-side transfer is a clean transport readout, but it is still
-  negative on the audited open-cubic surface
+- detector-side transfer has now been tried and is still negative on the
+  audited open-cubic surface
 
 Required next experiment:
 
@@ -242,5 +240,6 @@ If Claude continues from this review worktree, give these instructions:
 After this consolidation:
 
 - `main` carries the retained baseline
-- this review worktree carries the outstanding non-`main` science surface
+- this review worktree carries the one remaining bounded candidate plus the
+  outstanding held non-`main` science surface
 - no important current frontier item should exist only on a deleted local path

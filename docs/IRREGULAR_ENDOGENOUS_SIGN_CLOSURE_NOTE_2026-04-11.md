@@ -147,7 +147,7 @@ Norm drift stayed machine-clean across both signs:
 ## Honest Verdict
 
 This is the strongest same-surface endogenous irregular sign result in the
-repo so far.
+repo so far, and the follow-up reinforcement run did **not** close the lane.
 
 What it **does** show:
 
@@ -167,12 +167,16 @@ So the correct interpretation is:
 - the broader irregular off-lattice **directional** closure remains a larger
   claim and should stay separate
 
-This is therefore a **strong frontier win**, but not yet a `main` retention
-candidate until one of these is added:
+The reinforcement note now confirms that the low-screening replay and the
+second packet family still do not close the lane. So this remains a **strong
+frontier win**, but not yet a `main` retention candidate until one of these is
+added:
 
-- a second packet family with the same `30/30` style separation
+- a third genuinely independent packet family with the same `30/30` style
+  separation
 - a size-portability sweep on the same shell-packet observable
-- an unscreened / low-screening confirmation on the same surface
+- an unscreened / low-screening confirmation on the same surface that keeps
+  the sign separation clean
 
 ## Why This Matters
 
