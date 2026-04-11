@@ -75,6 +75,13 @@ The repo currently contains four different classes of publication material:
 - branch-mediated entanglement is not a full BMV witness
 - tripartite branch-mediated entanglement is not a multipartite BMV witness and is now read as W-type rather than GHZ-type
 - weak-coupling retention does not close broader off-lattice directional gravity outside the low-`G` window
+- Anderson-vs-gravity distinction is strongest in a finite perturbative window and not uniform across sizes
+- eigenvalue statistics currently support a clean negative “no chaos transition” result, not a dynamical criticality claim
+- the Ollivier `Delta_kappa ~ G*T` lane is now retained only as a **bounded
+  potential-weighted curvature proxy** on the screened periodic torus; it
+  beats random/shuffled controls strongly, but a fixed initial-source
+  potential reproduces an increasing fraction of the same signal, so it is not
+  a safe Einstein-equation derivation claim
 
 **What should not be overclaimed**
 
@@ -82,6 +89,7 @@ The repo currently contains four different classes of publication material:
 - irregular graph sign rows remain audited radial proxies
 - the endogenous same-surface directional probe is still a blocker
 - the simple single-particle entropy probe is not a holographic / area-law result
+- the Anderson phase map should not be flattened into a universal `L>=10` statement
 
 **Verdict**
 
@@ -92,6 +100,7 @@ The repo currently contains four different classes of publication material:
 - the entropy null result is worth preserving as a negative control against overclaiming holography
 - the new boundary-law and branch-entanglement notes are worth preserving as bounded side results, not as headline claims
 - the memory note is still worth preserving, but now mainly as a diagnostic/exploratory artifact showing protocol dependence rather than a screening-only explanation; the sweep note is the relevant rerun companion
+- the Anderson/eigenvalue phase note is worth preserving as a bounded diagnostic companion result
 
 ### 1B. Wilson Two-Body Open Surface
 

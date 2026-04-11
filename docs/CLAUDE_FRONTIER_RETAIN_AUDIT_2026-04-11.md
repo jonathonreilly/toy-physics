@@ -82,6 +82,54 @@ Why:
 - it should be read as an interpretive framework built from the repo record,
   not as a proven theorem
 
+### 6. Corrected periodic-2D rerun surface
+
+Keep:
+
+- [PERIODIC_2D_WRAPAROUND_FIX_NOTE_2026-04-11.md](PERIODIC_2D_WRAPAROUND_FIX_NOTE_2026-04-11.md)
+- [SELF_CONSISTENCY_STRUCTURED_NULL_NOTE_2026-04-11.md](SELF_CONSISTENCY_STRUCTURED_NULL_NOTE_2026-04-11.md)
+- [EIGENVALUE_ANDERSON_PHASE_NOTE_2026-04-11.md](EIGENVALUE_ANDERSON_PHASE_NOTE_2026-04-11.md)
+- [scripts/frontier_self_consistency_test.py](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_self_consistency_test.py)
+- [scripts/frontier_eigenvalue_stats_and_anderson_phase.py](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_eigenvalue_stats_and_anderson_phase.py)
+- [scripts/frontier_born_rule_alpha.py](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_born_rule_alpha.py)
+
+Why:
+
+- the validated minimum-image wraparound bug has now been fixed in these
+  runners
+- the corrected reruns preserve bounded fixed-surface self-consistency and the
+  finite Anderson-vs-disorder window
+- the Born-rule alpha lane is worth preserving only as a corrected negative /
+  boundary-of-validity marker, not as a measurement-theory derivation
+
+### 7. Bounded Ollivier curvature proxy
+
+Keep:
+
+- [OLLIVIER_EINSTEIN_PROXY_NOTE_2026-04-11.md](OLLIVIER_EINSTEIN_PROXY_NOTE_2026-04-11.md)
+- [scripts/frontier_ollivier_einstein.py](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_ollivier_einstein.py)
+- [scripts/frontier_ollivier_control.py](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_ollivier_control.py)
+
+Why:
+
+- the note is now honest about what survives
+- the retained claim is a bounded potential-weighted structured-curvature proxy
+- the note explicitly rules out the stronger Einstein-equation overclaim
+
+### 8. Wilson two-body hardening notes
+
+Keep:
+
+- [WILSON_TWO_BODY_OPEN_NOTE_2026-04-11.md](WILSON_TWO_BODY_OPEN_NOTE_2026-04-11.md)
+- [TWO_BODY_MUTUAL_ATTRACTION_NOTE_2026-04-11.md](TWO_BODY_MUTUAL_ATTRACTION_NOTE_2026-04-11.md)
+
+Why:
+
+- they preserve the current honest state of the two-body lane
+- they keep the clean open-surface mutual channel while explicitly recording
+  the failed both-masses closure
+- this prevents the later frontier Newton overclaim from becoming repo truth
+
 ## Frontier-Only For Now
 
 These are not necessarily wrong, but they are not yet `main`-grade.
@@ -118,15 +166,13 @@ Reason:
 - the corrected bounded 2-body and W-type 3-body notes are already enough for
   `main`
 
-### 3. Ollivier / Einstein, graph selection, topological, CDT quantitative,
-Hartree N-body, mirror Z2, error correction
+### 3. Graph selection, topological, CDT quantitative, Hartree N-body,
+mirror Z2, error correction
 
 Leave on frontier until separately audited.
 
 Reason:
 
-- several sit on periodic 2D surfaces that need extra scrutiny because of the
-  validated wraparound-weight bug class
 - others are plausible but still only represented by a fresh frontier script
   plus a claim-heavy session narrative
 
@@ -154,8 +200,9 @@ Affected examples:
 
 Impact:
 
-- periodic 2D follow-on claims from the late frontier wave should not be
-  promoted again until this is fixed and rerun
+- the bug is now fixed and rerun on these three headline scripts
+- any additional periodic-2D follow-on claims outside the retained rerun notes
+  should still be treated as untrusted until separately rerun
 
 ### 2. Self-consistency random controls
 
@@ -165,8 +212,8 @@ Affected:
 
 Impact:
 
-- the deterministic `self-consistent` vs `static` split is still useful
-- the stronger sigma-like random-control language needs corrected nulls
+- the corrected structured-null rerun is now the retained baseline
+- older iid-random-control framings should not be reused
 
 ### 3. Invalid or redesign-only claim surfaces
 
@@ -174,7 +221,6 @@ Do not rerun in current form:
 
 - `scripts/frontier_two_body_mutual_attraction.py`
 - `scripts/frontier_wilson_newton_law.py`
-- `scripts/frontier_born_rule_alpha.py`
 - `scripts/frontier_entanglement_area_law.py`
 - `scripts/frontier_bekenstein_hawking.py`
 

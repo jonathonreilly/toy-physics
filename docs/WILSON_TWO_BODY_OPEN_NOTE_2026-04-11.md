@@ -11,7 +11,7 @@
 
 Does the Wilson-fermion two-orbital Hartree lane produce a genuine mutual
 attraction signal once the staggered parity oscillation is removed, and if so,
-does it approach Newtonian scaling?
+how much of a Newton-like law can actually be retained?
 
 ## Periodic Wilson Result
 
@@ -98,7 +98,50 @@ Fit:
 
 - `|a_mut| ~ mB^0.483` (`R^2 = 0.9363`)
 
-So the partner-source dependence is monotone and real, but clearly sublinear.
+So the partner-source dependence is monotone and real, but clearly sublinear
+on that screened surface.
+
+## Both-Masses Audit
+
+`frontier_newton_both_masses.py` now runs the first honest next-step observable
+on the same open weak-screening surface:
+
+- `side = 15`
+- `G = 5`
+- `mu^2 = 0.001`
+- `d = 5`
+- each orbital gets its own physical mass in **both**
+  - the Poisson source
+  - the Wilson Hamiltonian diagonal
+- the retained observable is early-time mutual momentum transfer
+  - `P_A^mut = M_A * <v_A^shared - v_A^self>`
+  - `P_B^mut = M_B * <v_B^self - v_B^shared>`
+
+This is materially better than the earlier source-only sweep, but it still does
+**not** close a retained `M_A M_B` law.
+
+Direct rerun on that surface:
+
+- anchor slice `P_A^mut` vs `M_B` at `M_A = 1.0`: `R^2 = 0.9445`
+- anchor slice `P_B^mut` vs `M_A` at `M_B = 1.0`: `R^2 = 0.9400`
+- full-grid normalized `P_A^mut / M_B`: `CV = 35.4%`
+- full-grid normalized `P_B^mut / M_A`: `CV = 37.5%`
+- action-reaction balance `P_A^mut + P_B^signed`: fails on every row
+
+The structural reason is also clearer now:
+
+- once both inertial masses vary, the shared-minus-self residual is dominated by
+  a **common Wilson-gap slowdown**
+- that slowdown is not an exchanged momentum channel
+- so the residual does not behave like a clean two-body force law
+
+So the honest read is:
+
+- the open Wilson lane supports a real distance-law calibration
+- it supports bounded slice-wise source/response structure
+- it still does **not** support retained full Newton closure
+- the current both-masses observable fails because common propagation slowing
+  overwhelms any clean action-reaction signal
 
 ## Honest Interpretation
 
@@ -135,7 +178,7 @@ The later `mu^2` sweep narrows the interpretation further:
 - `mu^2 = 0.001` gives `alpha = -1.871`
 
 So the steep exponent is not a fixed law of the open surface. It is strongly
-screening-controlled and softens toward Newtonian scaling as `mu^2` is reduced.
+screening-controlled and softens toward Newton-compatible scaling as `mu^2` is reduced.
 
 ## Important Guardrail
 
@@ -155,6 +198,25 @@ This Wilson result is strongest as:
 
 It does **not** yet support:
 
-- `1/r^2`
-- `F ∝ M1 M2`
+- retained full `F ∝ M_1 M_2 / r^2`
+- a valid action-reaction law on the both-masses grid
 - a promoted Nature-level Newton-law claim
+
+## Exact Next Observable
+
+That next observable has now been run, and it failed honestly.
+
+So the next step is narrower:
+
+- keep the same open weak-screening Wilson surface
+- redesign the mutual-channel readout so it suppresses the common slowdown mode
+- likely candidates are:
+  - local momentum flux through the mid-plane
+  - weaker-coupling / lighter-mass windows where the shared-minus-self residual
+    stays perturbative
+  - a directly antisymmetrized impulse observable instead of centroid-only
+    kinematics
+
+Until one of those produces a clean equal-and-opposite signal, the Wilson lane
+should be cited as a distance-law calibration plus a failed both-masses closure,
+not as a retained Newton derivation.
