@@ -5,7 +5,7 @@
 
 ## Verdict
 
-**Frontier theorem sketch, not a main-retainable theorem.**
+**Bounded family-law keep, not a theorem.**
 
 The script argues for a uniqueness result:
 
@@ -63,14 +63,17 @@ The stronger uniqueness language is still blocked by:
 - lack of proof across non-ordered or irregular graph families
 - the existence of other weak-field-linear valley actions with the same retained Newtonian behavior on this family
 
-## Recommendation
+## Promotion Guidance
 
-**Hold from `main` as a theorem.** Promote only as a bounded family-law note if the wording is narrowed to:
+Promote only as a bounded family-law note if the wording stays at the family
+level:
 
 - “weak-field-linear phase valleys are Newtonian on the tested ordered-lattice family”
+- “multiple weak-field-linear valleys are equivalent on this family in the Newtonian regime”
 
 Do **not** promote the stronger wording:
 
 - “valley-linear is uniquely forced by the axioms”
+- “the action is uniquely determined on arbitrary graphs”
 
 That phrasing is not supported by the retained note chain or by the current script evidence.

@@ -46,31 +46,30 @@ Status:
 - not action-reaction closure
 - not architecture-independent Newton closure
 
-## Remaining Bounded Candidate
-
-One review-side note is still a bounded promotion candidate rather than a hold:
-
-- `docs/NEWTON_DERIVATION_NOTE.md`
-
-Status:
-
-- bounded derivation candidate on the retained ordered-lattice family
-- safe reading: Newtonian mass scaling is selected when linear amplitude
-  propagation, phase valley, additive one-parameter mass, and momentum
-  conservation hold together
-- not a persistent-pattern inertial-mass theorem
-- not architecture-independent closure
-- open step: persistent-pattern inertia / one-parameter mass realization
-
-This item can move to `main` only if the open persistent-pattern step is
-actually closed or the claim is rewritten to stay explicitly family-level.
-
 ## Review Inventory
 
 ### 1. Everything Else Left Is On Hold
 
 Everything else in this review worktree is held pending a specific missing
 control or redesign step.
+
+#### 0. Newton derivation note
+
+Files:
+
+- `docs/NEWTON_DERIVATION_NOTE.md`
+- `docs/ACTION_UNIQUENESS_AUDIT_2026-04-11.md`
+
+Status:
+
+- hold
+- the test-particle additivity story is stronger, but the persistent-pattern
+  inertia / one-parameter mass realization is still open
+- the packet re-identification control is only a bounded diagnostic
+- the stricter persistent inertial-object probe finds no admissible class
+- the note is therefore a bounded family law, not a mainline closure
+- the action-uniqueness audit is also a hold unless rewritten to the same
+  bounded family-level wording
 
 #### A. Wilson mutual-attraction side lane
 
@@ -184,19 +183,23 @@ Files:
 - `docs/IRREGULAR_ENDOGENOUS_SIGN_CLOSURE_NOTE_2026-04-11.md`
 - `docs/IRREGULAR_ENDOGENOUS_SIGN_CLOSURE_NEXT_STEPS_2026-04-11.md`
 - `docs/IRREGULAR_ENDOGENOUS_SIGN_REINFORCEMENT_NOTE_2026-04-11.md`
+- `docs/IRREGULAR_ENDOGENOUS_SIGN_SIZE_PORTABILITY_NOTE_2026-04-11.md`
 - `scripts/frontier_irregular_endogenous_sign_closure.py`
+- `scripts/frontier_irregular_endogenous_sign_reinforcement.py`
+- `scripts/frontier_irregular_endogenous_sign_size_portability.py`
 
 Why held:
 
 - strong on one screened shell-packet surface
 - low-screening confirmation failed in the reinforcement run
 - second packet family helped but still did not close the lane
+- size-portability sweep also failed to make the shell-packet separator portable
 - packet-family generality is not closed
 
 Required next experiment:
 
-- if reopened, add a third genuinely independent packet family or a size
-  portability sweep on the same shell-packet observable
+- if reopened, add a genuinely independent third packet family on the same
+  shell-packet readout, or switch to a different irregular observable
 - do not promote the current reinforcement run
 
 #### E. Staggered two-body closure family
@@ -249,6 +252,6 @@ If Claude continues from this review worktree, give these instructions:
 After this consolidation:
 
 - `main` carries the retained baseline
-- this review worktree carries the one remaining bounded candidate plus the
-  outstanding held non-`main` science surface
+- this review worktree carries only explicit holds from the non-`main` science
+  surface
 - no important current frontier item should exist only on a deleted local path
