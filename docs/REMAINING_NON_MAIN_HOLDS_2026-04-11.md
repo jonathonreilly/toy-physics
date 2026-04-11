@@ -1,6 +1,6 @@
 # Remaining Non-Main Holds
 
-**Date:** 2026-04-11  
+**Date:** 2026-04-11
 **Scope:** review-worktree items that are still not safe for `main`
 
 This is the consolidated inventory for follow-through. It names the missing
@@ -13,7 +13,6 @@ These are not part of the hold list:
 - `STAGGERED_TEST_MASS_COMPANION_NOTE_2026-04-11.md`
 - `DISTANCE_LAW_3D_64_CLOSURE_NOTE_2026-04-11.md`
 - `WILSON_TEST_MASS_CONTINUUM_NOTE_2026-04-11.md`
-- `NEWTON_DERIVATION_NOTE.md`
 
 ## Remaining Bounded Candidate
 
@@ -27,6 +26,20 @@ Why it is still only a candidate:
 - it can be promoted only if the wording stays explicitly family-level
 
 ## Holds
+
+### 0. Newton derivation note
+
+Files:
+
+- `docs/NEWTON_DERIVATION_NOTE.md`
+
+Why held:
+
+- the test-particle additivity story is stronger, but the persistent-pattern
+  inertia / one-parameter mass realization is still open
+- the packet re-identification control is only a bounded diagnostic
+- the stricter persistent inertial-object probe finds no admissible class
+- the note is therefore a bounded family law, not a mainline closure
 
 ### 1. Wilson mutual-attraction side lane
 
@@ -68,7 +81,7 @@ Why held:
 
 - the bilinear factor is built into the Hamiltonian ansatz
 - exact diagonalization confirms the imposed kernel, not emergent product law
-- the model is a 1D open-boundary toy, not the primary staggered surface
+- the model is a 1D open-boundary toy, not the retained primary architecture
 
 Next control:
 
@@ -129,5 +142,7 @@ Next control:
 
 ## Bottom Line
 
-The review worktree now contains only explicit holds. Nothing else should be
-promoted without the missing control named in its section.
+The review worktree now contains only explicit holds and one bounded candidate.
+Nothing else should be promoted without the missing control named in its
+section.
+

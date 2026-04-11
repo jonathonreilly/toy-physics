@@ -123,6 +123,10 @@ version of the argument remains open.
 | Valley additivity on second retained family | `<= 0.08%` on the 2D ordered-lattice cross-check |
 | Spent-delay same-site / disjoint additivity | Violated by 24-29% on the same family |
 
+## Artifact Chain
+
+- [`docs/NEWTON_PERSISTENT_PATTERN_CONTROL_NOTE_2026-04-11.md`](NEWTON_PERSISTENT_PATTERN_CONTROL_NOTE_2026-04-11.md)
+
 ## Persistent-Pattern Control
 
 The smallest viable persistent-pattern check was run and did not close the gap:
