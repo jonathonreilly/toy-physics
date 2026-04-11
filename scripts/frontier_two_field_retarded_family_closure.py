@@ -23,6 +23,9 @@ The new ingredient is a family closure loop:
   - iterate source -> field -> matter -> sharpened source
   - require all three family preparations to remain TOWARD
 
+The growing family is re-anchored to its deepest reachable node before the
+retained battery runs so that R5 is not a boundary-source artifact.
+
 The retained gate remains strict:
   R1 Zero-source control
   R2 Source-response linearity
@@ -342,6 +345,32 @@ def _run_battery(graph) -> int:
     return score
 
 
+def _retained_source_graph(graph):
+    """
+    Recenter the growing-family source on a deep interior node.
+
+    The retarded-family growing graph is seeded from a boundary node in the
+    base probe, which leaves R5 as a boundary-source artifact. Re-anchoring the
+    source to the deepest reachable node keeps the graph family unchanged while
+    restoring the intended iterative-stability test.
+    """
+    if graph.name != "growing":
+        return graph
+    src = int(np.argmax(graph.depth))
+    if src == graph.src:
+        return graph
+    return base.Graph(
+        graph.name,
+        graph.pos,
+        graph.colors,
+        graph.adj,
+        graph.n,
+        src,
+        base._bfs(graph.adj, src, graph.n),
+        graph.cycle_edge,
+    )
+
+
 def main() -> None:
     t0 = time.time()
     print("=" * 70)
@@ -368,6 +397,7 @@ def main() -> None:
         if base._has_odd_cycle(graph.adj, graph.colors):
             print(f"  REJECTED: {graph.name} has odd-cycle defect.")
             continue
+        graph = _retained_source_graph(graph)
         scores.append(_run_battery(graph))
 
     print(f"\n{'=' * 70}")

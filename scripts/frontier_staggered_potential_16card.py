@@ -33,8 +33,10 @@ def staggered_H(n, mass, V=None):
     H = lil_matrix((n,n), dtype=complex)
     for x in range(n):
         H[x,(x+1)%n] += -1j/2; H[x,(x-1)%n] += 1j/2
-        H[x,x] += mass*((-1)**x)
-        if V is not None: H[x,x] += V[x]
+        eps_x = (-1)**x
+        H[x,x] += mass*eps_x
+        # Parity (scalar 1⊗1) coupling: V modulates mass gap via ε(x).
+        if V is not None: H[x,x] += V[x]*eps_x
     return csr_matrix(H)
 
 def evolve_cn(H, N, dt, ns, psi0):

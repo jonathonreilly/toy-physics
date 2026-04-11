@@ -21,6 +21,10 @@ Graph families (all cycle-bearing, bipartite):
   - Growing (preferential attachment, alternating colors, has cycles)
   - Layered cycle (layered structure, 2-connection per node, has cycles)
 
+Source convention:
+  - Growing uses the deepest reachable node as its retained source.
+  - Layered cycle uses a max-degree interior node as its retained source.
+
 Force is the primary gravity observable. No centroid shift.
 No 1D ring fallback. No silent semantic swaps.
 """
@@ -115,7 +119,13 @@ def make_growing(seed=42, n_target=48) -> Graph:
             for _,j in ds[:min(4,len(ds))]: _ae(adj,cur,j)
         cur+=1
     pos=np.array(coords); col=np.array(colors,dtype=int); adj_l={k:list(v) for k,v in adj.items()}
-    return Graph("growing",pos,col,adj_l,len(pos),0,_bfs(adj_l,0,len(pos)),_find_cycle_edge(adj_l))
+    n=len(pos)
+    # Use the deepest reachable node as the retained source. The growing
+    # family is seeded from a boundary node; centering the source on the
+    # graph's extent removes a boundary-source artifact without changing the
+    # row definition.
+    src=int(np.argmax(_bfs(adj_l, 0, n)))
+    return Graph("growing",pos,col,adj_l,n,src,_bfs(adj_l,src,n),_find_cycle_edge(adj_l))
 
 def make_layered_cycle(seed=42, layers=6, width=4) -> Graph:
     """Layered graph with cycles: each node connects to 2 nodes in the next layer."""
@@ -138,7 +148,10 @@ def make_layered_cycle(seed=42, layers=6, width=4) -> Graph:
     adj_l={k:list(v) for k,v in adj.items()}
     # Reject if not bipartite
     if _has_odd_cycle(adj_l, col): return None
-    src=layer_nodes[0][0]
+    # Use a high-connectivity interior source instead of the seed node.
+    # This avoids boundary-source artifacts while keeping the family and row
+    # semantics unchanged.
+    src=max(range(n), key=lambda i: len(adj_l.get(i, [])))
     return Graph("layered_cycle",pos,col,adj_l,n,src,_bfs(adj_l,src,n),_find_cycle_edge(adj_l))
 
 

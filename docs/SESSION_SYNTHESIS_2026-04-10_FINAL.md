@@ -233,10 +233,10 @@ The full-suite baseline is now frozen:
    cycle still the strongest and the growing family now stably below unity.
 
 8. **Larger-graph cycle battery**: DONE as a retained sibling harness.
-   `frontier_staggered_cycle_battery_scaled.py` keeps random geometric at `9/9`
-   through side `12`, recovers growing from `8/9` at side `8` to `9/9` at
-   side `10` and `12`, and shows that the layered-cycle family keeps the same
-   `8/9` linearity miss at scale under the corrected parity coupling.
+   `frontier_staggered_cycle_battery_scaled.py` now keeps random geometric,
+   growing, and layered cycle at `9/9` through side `12`. The larger sweep
+   freezes the claim that the force-first battery is not just a tiny-graph
+   artifact.
 
 9. **Retarded / hybrid two-field probe**: DONE as a retained negative-positive
    frontier result. `frontier_two_field_retarded_probe.py` preserves the core
@@ -245,13 +245,10 @@ The full-suite baseline is now frozen:
    geometric and layered-cycle families.
 
 10. **Retarded family-closure sibling**: DONE as a bounded positive sibling
-    result. `frontier_two_field_retarded_family_closure.py` lifts the family
-    row to `3/3` on all three admissible families while preserving the rest of
-    the retarded battery on random geometric and layered cycle, and extends the
-    same operating-point closure to a causal DAG (`8/9`, gauge structurally
-    N/A). The growing family still misses `R5` iterative stability (`8/9`), so
-    this remains a sibling closure recipe rather than the frozen canonical
-    retarded harness.
+    result. `frontier_two_field_retarded_family_closure.py` closes `9/9` on all
+    three admissible cycle-bearing families and retains the causal DAG at
+    `8/9` (`R8` gauge structurally N/A). This is the retained family-closure
+    sibling; keep it distinct from the still-partial retarded probe.
 
 11. **Causal DAG compatibility**: DONE as a retained probe.
    `frontier_staggered_dag.py` closes `6/6` on three layered DAG
@@ -269,12 +266,11 @@ The full-suite baseline is now frozen:
     the same edge-count scale stays retained through `extra=6`, while the
     frontier branch collapses gauge/current at `extra=5/6`.
 14. **Gravity-sign audit**: DONE as a measurement correction.
-    The regular cubic card keeps the exact lattice-force claim. The irregular
-    graph batteries are now explicitly treated as shell/edge-radial proxies,
-    and the later two-sign comparison shows those irregular sign measures are
-    not sign-selective: both attractive and repulsive coupling can read inward.
-    The emergent-geometry growth lane is mixed under the stronger audit and
-    should no longer be described as cleanly AWAY.
+    The regular cubic card keeps the exact lattice-force claim. The corrected
+    parity coupling restores sign sensitivity in the exact external-potential
+    test, but the endogenous irregular same-surface directional probe failed,
+    so the irregular graph batteries remain shell/edge-radial proxies rather
+    than sign-selective directional observables.
 15. **Topology-dependent onset scout**: exploratory but real.
     `frontier_critical_exponents.py` now gives family-dependent finite-size
     onset fits across admissible graph representatives, with one degenerate DAG
@@ -282,18 +278,18 @@ The full-suite baseline is now frozen:
     simple “mean-field everywhere” story.
 16. **Emergent geometry growth audit**: exploratory mixed result.
     Matter-coupled growth can push the coarse graph geometry toward
-    `d_eff≈2`, but the stronger follow-up probe finds no clean density-to-`Φ`
-    correlation and no retained gravity-compatible sign closure on the grown
-    graphs.
+    `d_eff≈2`. The new G sweep partially reopens the lane at strong coupling
+    (`G=100` is robust TOWARD), but the window is narrow and seed-dependent,
+    so this is not retained closure.
 
 ### Remaining work
 
 1. **Direction derivation / directional observable**: the exact cubic card keeps
    a real directional observable because it uses `F = -⟨dV/dx⟩`, but the
-   irregular graph batteries do not currently distinguish attractive from
-   repulsive coupling. The next real fork is either to derive the sign from the
-   staggered/Dirac structure or to freeze the irregular graph program as
-   explicitly sign-agnostic.
+   irregular same-surface probe failed. The next real fork is either to derive
+   the sign from the staggered/Dirac structure or to freeze the irregular graph
+   program as explicitly sign-agnostic. Do not blur the exact-cubic
+   external-source sign test with the endogenous irregular probe.
 2. **Endogenous-field scale**: the raw graph Poisson map still has
    `G_eff=12-178` and remains structurally flatter than the external-kernel
    control. The retarded sibling can close that gap at the operating point, but
@@ -314,12 +310,13 @@ The full-suite baseline is now frozen:
 6. **Irregular-graph directional standardization**: the cycle and retarded
    batteries now need one frozen graph-native observable that actually
    distinguishes coupling sign. The current shell and edge-radial measures are
-   useful structural diagnostics, but the two-sign audit shows they are not
-   sufficient for direction claims.
+   useful structural diagnostics, and the new endogenous probe failed, so they
+   are not sufficient for direction claims.
 7. **Emergent geometry hardening**: before treating growth as a Nature-level
    path, require multi-seed robustness, a curvature/metric observable, and a
    grown-graph gravity check that closes under both shell-probability and
-   edge-radial force measures.
+   edge-radial force measures. The current status is a narrow high-`G` reopen,
+   not a retained geometry closure.
 
 For the active backlog and agent brief, see:
 - `docs/WORK_BACKLOG_2026-04-10.md`

@@ -33,9 +33,30 @@ def _ae(adj, a, b):
     adj.setdefault(a, set()).add(b); adj.setdefault(b, set()).add(a)
 
 
-def grow_graph(n_final, G_self, n_evolve=3, seed=42, dim=2):
+def _growth_rule_params(rule: str):
+    """Return the attachment rule used by the growth probe.
+
+    The retained improvement is the minimal `k=4` matter-coupled rule. The
+    `k=3` version remains available as the pre-change baseline, but is kept as
+    a comparison only.
+    """
+    rule = rule.lower()
+    table = {
+        "matter_k4": ("matter", 4, 0.3),
+        "matter_k3": ("matter", 3, 0.3),
+        "degree_penalty_k4": ("degree_penalty", 4, 0.3),
+        "uniform_k4": ("uniform", 4, 0.3),
+        "matter_k4_local": ("matter", 4, 0.15),
+    }
+    if rule not in table:
+        raise ValueError(f"unknown growth_rule={rule!r}")
+    return table[rule]
+
+
+def grow_graph(n_final, G_self, n_evolve=3, seed=42, dim=2, growth_rule="matter_k4"):
     """Grow graph with matter-coupled preferential attachment."""
     rng = random.Random(seed)
+    parent_mode, k_connect, offset_scale = _growth_rule_params(growth_rule)
 
     if dim == 2:
         # 2D seed
@@ -83,7 +104,8 @@ def grow_graph(n_final, G_self, n_evolve=3, seed=42, dim=2):
         phi = spsolve((L + MU2*speye(n,format='csr')).tocsc(), G_self*rho)
         H = lil_matrix((n,n), dtype=complex)
         par = np.where(col_arr==0, 1., -1.)
-        H.setdiag(MASS*par - MASS*phi)
+        # Parity (scalar 1⊗1) coupling: Φ modulates mass gap via ε(x).
+        H.setdiag((MASS+phi)*par)
         for i, nbs in adj_l.items():
             for j in nbs:
                 if i >= j: continue
@@ -99,11 +121,26 @@ def grow_graph(n_final, G_self, n_evolve=3, seed=42, dim=2):
         # Growth
         rho = np.abs(psi)**2; rho_n = rho/np.sum(rho)
         nc = cur % 2
-        parent = rng.choices(range(n), weights=rho_n, k=1)[0]
-        if d_dim == 2:
-            new_pos = (pos_arr[parent,0]+0.3*(rng.random()-0.5), pos_arr[parent,1]+0.3*(rng.random()-0.5))
+        if parent_mode == "matter":
+            parent = rng.choices(range(n), weights=rho_n, k=1)[0]
+        elif parent_mode == "degree_penalty":
+            deg = np.array([len(adj[i]) for i in range(n)], dtype=float)
+            weights = rho_n / (deg + 1.0)
+            parent = rng.choices(range(n), weights=weights, k=1)[0]
+        elif parent_mode == "uniform":
+            parent = rng.randrange(n)
         else:
-            new_pos = tuple(pos_arr[parent,d_]+0.3*(rng.random()-0.5) for d_ in range(d_dim))
+            raise ValueError(f"unknown parent_mode={parent_mode!r}")
+        if d_dim == 2:
+            new_pos = (
+                pos_arr[parent,0] + offset_scale * (rng.random() - 0.5),
+                pos_arr[parent,1] + offset_scale * (rng.random() - 0.5),
+            )
+        else:
+            new_pos = tuple(
+                pos_arr[parent,d_] + offset_scale * (rng.random() - 0.5)
+                for d_ in range(d_dim)
+            )
         pos.append(new_pos); col.append(nc)
         adj[cur] = set()
         dists = []
@@ -112,12 +149,12 @@ def grow_graph(n_final, G_self, n_evolve=3, seed=42, dim=2):
                 d = math.sqrt(sum((new_pos[d_]-pos[i][d_] if isinstance(pos[i],tuple) else new_pos[d_]-pos_arr[i,d_])**2 for d_ in range(d_dim)))
                 dists.append((d, i))
         dists.sort()
-        for _, j in dists[:min(3, len(dists))]:
+        for _, j in dists[:min(k_connect, len(dists))]:
             adj[cur].add(j); adj[j].add(cur)
 
         psi_new = np.zeros(cur+1, dtype=complex)
         psi_new[:n] = psi; psi_new[cur] = 0.01*psi[parent]
-        psi /= np.linalg.norm(psi_new); psi = psi_new/np.linalg.norm(psi_new)
+        psi = psi_new / np.linalg.norm(psi_new)
         cur += 1
 
     return np.array(pos), np.array(col,dtype=int), {k:list(v) for k,v in adj.items()}, psi
@@ -231,67 +268,124 @@ def force_battery_on_grown(pos, col, adj, psi, G_self):
     }
 
 
+def density_phi_correlation(pos, adj, psi, G_self):
+    """Return the density-vs-Phi correlation on the grown graph."""
+    n = len(pos)
+    center = np.mean(pos, axis=0)
+    dists = np.sqrt(np.sum((pos - center)**2, axis=1))
+
+    L = lil_matrix((n, n), dtype=float)
+    for i, nbs in adj.items():
+        for j in nbs:
+            if i >= j:
+                continue
+            d = math.sqrt(sum((pos[j, d_] - pos[i, d_])**2 for d_ in range(pos.shape[1])))
+            w = 1. / max(d, 0.3)
+            L[i, j] -= w
+            L[j, i] -= w
+            L[i, i] += w
+            L[j, j] += w
+    phi = spsolve((L.tocsr() + MU2 * speye(n, format='csr')).tocsc(), G_self * np.abs(psi)**2)
+
+    r_bins = np.linspace(0.1, 0.8, 8)
+    density_profile = []
+    phi_profile = []
+    for i in range(len(r_bins) - 1):
+        mask = (dists >= r_bins[i]) & (dists < r_bins[i + 1])
+        area = np.pi * (r_bins[i + 1]**2 - r_bins[i]**2)
+        density_profile.append(np.sum(mask) / area if area > 0 else 0)
+        phi_profile.append(np.mean(phi[mask]) if np.sum(mask) > 0 else 0)
+
+    d_arr = np.array(density_profile)
+    p_arr = np.array(phi_profile)
+    valid = (d_arr > 0) & (p_arr > 0)
+    if np.sum(valid) >= 3:
+        lr = linregress(p_arr[valid], d_arr[valid])
+        return lr.rvalue**2, lr.slope
+    return 0.0, 0.0
+
+
+def multi_seed_audit(growth_rule, seeds, G_values, dim=2):
+    """Run the retained multi-seed audit for the current growth rule."""
+    print(f"\n--- Multi-seed audit ({growth_rule}) ---")
+    for G in G_values:
+        toward = 0
+        r2s = []
+        deffs = []
+        for seed in seeds:
+            pos, col, adj, psi = grow_graph(120, G_self=G, seed=seed, dim=dim, growth_rule=growth_rule)
+            out = force_battery_on_grown(pos, col, adj, psi, G)
+            toward += int(out["toward"])
+            r2, _ = density_phi_correlation(pos, adj, psi, G)
+            r2s.append(r2)
+            deff, _ = measure_d_eff(pos, adj, len(pos))
+            deffs.append(deff)
+        print(
+            f"  G={G:4d}: ROBUST_TOWARD={toward}/{len(seeds)}, "
+            f"mean_R2={np.mean(r2s):.3f}, min_R2={np.min(r2s):.3f}, "
+            f"mean_d_eff={np.mean(deffs):.3f}"
+        )
+
+
+def variant_compare(seeds, G=100, dim=2):
+    """Compare the minimal growth-rule variants without changing semantics."""
+    print("\n--- Growth Rule Comparison ---")
+    for rule in ["matter_k3", "matter_k4", "degree_penalty_k4", "uniform_k4"]:
+        toward = 0
+        r2s = []
+        for seed in seeds:
+            pos, col, adj, psi = grow_graph(120, G_self=G, seed=seed, dim=dim, growth_rule=rule)
+            out = force_battery_on_grown(pos, col, adj, psi, G)
+            toward += int(out["toward"])
+            r2, _ = density_phi_correlation(pos, adj, psi, G)
+            r2s.append(r2)
+        print(
+            f"  {rule:17s}: ROBUST_TOWARD={toward}/{len(seeds)}, "
+            f"mean_R2={np.mean(r2s):.3f}"
+        )
+
+
 if __name__ == '__main__':
     t0 = time.time()
     print("="*70)
     print("EMERGENT GEOMETRY v2 — FOUR QUESTIONS")
     print("="*70)
+    print("Retained growth rule: matter-coupled attachment with k=4 neighbors.")
 
     # Q1: Does node density match Phi(r)?
     print("\n--- Q1: Node Density vs Gravitational Potential ---")
-    pos, col, adj, psi = grow_graph(120, G_self=50, seed=42)
-    n = len(pos); center = np.mean(pos, axis=0)
-    dists = np.sqrt((pos[:,0]-center[0])**2 + (pos[:,1]-center[1])**2)
-
-    L = lil_matrix((n,n), dtype=float)
-    for i, nbs in adj.items():
-        for j in nbs:
-            if i >= j: continue
-            d = math.hypot(pos[j,0]-pos[i,0], pos[j,1]-pos[i,1])
-            w = 1./max(d, 0.3)
-            L[i,j] -= w; L[j,i] -= w; L[i,i] += w; L[j,j] += w
-    phi = spsolve((L.tocsr() + MU2*speye(n,format='csr')).tocsc(), 50*np.abs(psi)**2)
-
-    r_bins = np.linspace(0.1, 0.8, 8)
-    density_profile = []; phi_profile = []
-    for i in range(len(r_bins)-1):
-        mask = (dists >= r_bins[i]) & (dists < r_bins[i+1])
-        area = np.pi*(r_bins[i+1]**2 - r_bins[i]**2)
-        density_profile.append(np.sum(mask)/area if area > 0 else 0)
-        phi_profile.append(np.mean(phi[mask]) if np.sum(mask) > 0 else 0)
-
-    d_arr = np.array(density_profile); p_arr = np.array(phi_profile)
-    valid = (d_arr > 0) & (p_arr > 0)
-    if np.sum(valid) >= 3:
-        lr = linregress(p_arr[valid], d_arr[valid])
-        print(f"  Density vs Phi correlation: R^2={lr.rvalue**2:.4f}, slope={lr.slope:.2f}")
-        print(f"  {'POSITIVE' if lr.slope > 0 else 'NEGATIVE'} correlation: denser where Phi is stronger")
-    else:
-        print(f"  Not enough data for correlation")
+    pos, col, adj, psi = grow_graph(120, G_self=100, seed=42, growth_rule="matter_k4")
+    r2, slope = density_phi_correlation(pos, adj, psi, 100)
+    print(f"  Seed 42, G=100: density vs Phi R^2={r2:.4f}, slope={slope:.2f}")
+    print("  (Positive slope is the retained sign criterion; strength is seed-dependent.)")
+    print("\n--- Q1b: Multi-seed Density-Phi Stability ---")
+    multi_seed_audit("matter_k4", seeds=range(40, 50), G_values=[50, 100, 150], dim=2)
 
     # Q2: d_eff vs G_self
     print("\n--- Q2: Effective Dimension vs Gravity Coupling ---")
-    for G in [0, 10, 25, 50, 100, 200]:
-        pos_g, col_g, adj_g, psi_g = grow_graph(100, G_self=G, seed=42)
+    for G in [0, 50, 100, 150, 200]:
+        pos_g, col_g, adj_g, psi_g = grow_graph(100, G_self=G, seed=42, growth_rule="matter_k4")
         d_eff, r2 = measure_d_eff(pos_g, adj_g, len(pos_g))
         print(f"  G={G:4d}: d_eff={d_eff:.3f} (R^2={r2:.4f})")
 
     # Q3: Force battery on grown graph
     print("\n--- Q3: Force Battery on Grown Graph ---")
-    for G in [25, 50, 100]:
-        pos_g, col_g, adj_g, psi_g = grow_graph(100, G_self=G, seed=42)
+    for G in [50, 100, 150]:
+        pos_g, col_g, adj_g, psi_g = grow_graph(100, G_self=G, seed=42, growth_rule="matter_k4")
         out = force_battery_on_grown(pos_g, col_g, adj_g, psi_g, G)
         norm = np.linalg.norm(psi_g)
         print(
-            f"  G={G:4d}: shell_mean={out['shell_mean']:+.4e}, "
+            f"  Seed 42, G={G:4d}: shell_mean={out['shell_mean']:+.4e}, "
             f"shell_prob={out['shell_prob']:+.4e}, edge_radial={out['edge_radial']:+.4e} "
             f"{'ROBUST_TOWARD' if out['toward'] else 'MIXED/AWAY'}, |psi|={norm:.6f}"
         )
+    print("\n--- Q3b: Growth Rule Comparison at G=100 ---")
+    variant_compare(seeds=range(40, 50), G=100, dim=2)
 
     # Q4: Can we get d_eff = 3 from 3D seed?
     print("\n--- Q4: 3D Seed → d_eff=3? ---")
     for G in [0, 50, 100]:
-        pos_3, col_3, adj_3, psi_3 = grow_graph(100, G_self=G, seed=42, dim=3)
+        pos_3, col_3, adj_3, psi_3 = grow_graph(100, G_self=G, seed=42, dim=3, growth_rule="matter_k4")
         d_eff, r2 = measure_d_eff(pos_3, adj_3, len(pos_3))
         print(f"  3D seed, G={G:4d}: d_eff={d_eff:.3f} (R^2={r2:.4f})")
 

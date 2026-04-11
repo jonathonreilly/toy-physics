@@ -226,7 +226,8 @@ def _build_hamiltonian(graph: GraphFamily, mass: float, phi: np.ndarray) -> csr_
     n = graph.positions.shape[0]
     H = lil_matrix((n, n), dtype=complex)
     parity = np.where(graph.colors == 0, 1.0, -1.0)
-    H.setdiag(mass * parity - mass * phi)
+    # Parity (scalar 1⊗1) coupling: Φ modulates mass gap via ε(x).
+    H.setdiag((mass + phi) * parity)
     for i, nbs in graph.adj.items():
         for j in nbs:
             if i >= j:

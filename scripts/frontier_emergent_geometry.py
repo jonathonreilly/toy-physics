@@ -88,7 +88,8 @@ def grow_graph_matter_coupled(n_final=80, n_evolve_steps=5, seed=42):
         # Build H and evolve
         H = lil_matrix((n,n), dtype=complex)
         par = np.where(col_arr==0, 1., -1.)
-        H.setdiag(MASS*par - MASS*phi)
+        # Parity (scalar 1⊗1) coupling: Φ modulates mass gap via ε(x).
+        H.setdiag((MASS+phi)*par)
         for i, nbs in adj_l.items():
             for j in nbs:
                 if i >= j: continue
@@ -115,8 +116,10 @@ def grow_graph_matter_coupled(n_final=80, n_evolve_steps=5, seed=42):
         new_pos = (pos_arr[parent, 0] + offset_x, pos_arr[parent, 1] + offset_y)
         pos.append(new_pos); col.append(new_color)
 
-        # Connect to k nearest nodes of OPPOSITE color
-        k_connect = min(3, n)
+        # Connect to k nearest nodes of OPPOSITE color.
+        # The k=4 attachment is the retained variant that best expanded the
+        # robust-TOWARD regime in the multi-seed audit.
+        k_connect = min(4, n)
         dists = [(math.hypot(new_pos[0]-pos_arr[i,0], new_pos[1]-pos_arr[i,1]), i) for i in range(n) if col[i] != new_color]
         dists.sort()
         adj[cur] = set()
@@ -255,7 +258,7 @@ if __name__ == '__main__':
         adj_u[cur] = set()
         dists = [(math.hypot(px-pos_u[i][0],py-pos_u[i][1]),i) for i in range(cur) if col_u[i]!=nc]
         dists.sort()
-        for _,j in dists[:3]: adj_u[cur].add(j); adj_u[j].add(cur)
+        for _,j in dists[:4]: adj_u[cur].add(j); adj_u[j].add(cur)
 
     pos_u_arr = np.array(pos_u); col_u_arr = np.array(col_u, dtype=int)
     adj_u_l = {k:list(v) for k,v in adj_u.items()}

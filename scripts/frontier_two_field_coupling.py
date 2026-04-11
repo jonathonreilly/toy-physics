@@ -70,7 +70,8 @@ def _laplacian(pos,adj,n):
 
 def _build_H(pos,col,adj,n,mass,phi):
     H=lil_matrix((n,n),dtype=complex)
-    par=np.where(col==0,1.,-1.); H.setdiag(mass*par-mass*phi)
+    # Parity (scalar 1⊗1) coupling: Φ modulates mass gap via ε(x).
+    par=np.where(col==0,1.,-1.); H.setdiag((mass+phi)*par)
     for i,nbs in adj.items():
         for j in nbs:
             if i>=j: continue

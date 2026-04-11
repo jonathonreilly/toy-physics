@@ -49,11 +49,12 @@ def staggered_H_1d(n, mass, V=None):
         H[x, xm] += 1j / 2    # +i/2 for backward hop
 
         # Mass: m * (-1)^x (staggering phase)
-        H[x, x] += mass * ((-1)**x)
+        eps_x = (-1)**x
+        H[x, x] += mass * eps_x
 
-        # Potential
+        # Parity (scalar 1⊗1) coupling: V modulates mass gap via ε(x).
         if V is not None:
-            H[x, x] += V[x]
+            H[x, x] += V[x] * eps_x
 
     return csr_matrix(H)
 
@@ -101,9 +102,9 @@ def staggered_H_3d(n, mass, V=None):
                 eps = (-1)**(x + y + z)
                 H[i, i] += mass * eps
 
-                # Potential
+                # Parity (scalar 1⊗1) coupling: V modulates mass gap via ε(x).
                 if V is not None:
-                    H[i, i] += V[i]
+                    H[i, i] += V[i] * eps
 
     return csr_matrix(H)
 
