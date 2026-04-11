@@ -204,16 +204,20 @@ Files:
 - `docs/STAGGERED_DIRECT_COM_CLOSURE_NOTE_2026-04-11.md`
 - `docs/STAGGERED_BOTH_MASSES_NOTE_2026-04-11.md`
 - `docs/STAGGERED_TWO_BODY_PORTABILITY_NOTE_2026-04-11.md`
+- `docs/STAGGERED_TWO_BODY_TRANSPORT_NOTE_2026-04-11.md`
 - `docs/STAGGERED_TWO_BODY_NEXT_STEPS_NOTE_2026-04-11.md`
 - `scripts/frontier_staggered_direct_com_closure.py`
 - `scripts/frontier_staggered_both_masses.py`
 - `scripts/frontier_staggered_two_body_portability.py`
+- `scripts/frontier_staggered_two_body_transport.py`
 
 Why held:
 
 - partner-force is real
 - direct-CoM closure still fails
 - both-masses closure is still negative / force-led
+- detector-side transfer is a clean transport readout, but it is still
+  negative on the audited open-cubic surface
 
 Required next experiment:
 
