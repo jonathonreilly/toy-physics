@@ -22,7 +22,9 @@ way in is:
    [`docs/repo/RETEST_PLAYBOOK.md`](repo/RETEST_PLAYBOOK.md)
 8. Read the rerun-required bug audit:
    [`docs/RERUN_REQUIRED_BUG_AUDIT_2026-04-11.md`](RERUN_REQUIRED_BUG_AUDIT_2026-04-11.md)
-9. Then read the current retained science state:
+9. Read the recent frontier retain audit:
+   [`docs/CLAUDE_FRONTIER_RETAIN_AUDIT_2026-04-11.md`](CLAUDE_FRONTIER_RETAIN_AUDIT_2026-04-11.md)
+10. Then read the current retained science state:
    [`docs/FULL_TEST_MATRIX_2026-04-10.md`](FULL_TEST_MATRIX_2026-04-10.md)
 
 ## Current Program Reality
