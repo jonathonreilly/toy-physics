@@ -158,6 +158,19 @@ So the first size check says:
 - but it is still a narrow, rapidly decaying signal rather than a robust
   emergent force law
 
+### Separation scan conclusion
+
+A follow-up separation scan at fixed `G=20`, `mu^2=0` sharpens the interpretation:
+
+- `side=9`: only the maximal symmetric separation `sep=4` survives cleanly
+- `side=11`: `sep=2,3,4` all fail; only the maximal symmetric separation
+  `sep=5` keeps the sign pattern, and only at tiny amplitude
+- `side=7`: `sep=2` is weakly positive, but `sep=3` (the maximal symmetric
+  separation) is much stronger
+
+So the current two-body signal is best interpreted as a **maximal-separation
+periodic resonance window**, not a generic mutual-attraction law.
+
 ## Honest State
 
 The two-body lane is still **open**, but it is no longer a pure null.
@@ -165,6 +178,8 @@ The two-body lane is still **open**, but it is no longer a pure null.
 What now exists is:
 
 - a **narrow positive window** on the symmetry-averaged periodic 3D surface
+- that window is concentrated at maximal symmetric separation on odd periodic
+  lattices
 - no broad or screened two-body closure
 - no retained distance-law or monotone separation scaling
 
@@ -187,7 +202,7 @@ What survives:
 Before this lane can be retained, it needs:
 
 1. size-scaling of the `mu^2 = 0`, `sep = 4` periodic window
-2. clarification of why the signal disappears at shorter separations
+2. explanation of the maximal-separation periodic resonance
 3. a distance-law surface that is not just a single narrow resonance window
 4. a bridge from this massless periodic signal to the broader screened graph
    program
