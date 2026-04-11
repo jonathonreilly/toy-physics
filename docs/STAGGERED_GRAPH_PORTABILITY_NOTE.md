@@ -3,7 +3,8 @@
 **Status:** retained portability probe
 
 This note freezes the first portability run for the staggered / Kahler-Dirac
-lane on non-cubic graph families.
+lane on non-cubic graph families with the corrected parity-coupled scalar
+potential.
 
 ## Question
 

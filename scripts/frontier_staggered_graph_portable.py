@@ -5,7 +5,7 @@ Staggered Fermion on Non-Cubic Graphs — Portability Test
 The staggered Dirac operator needs:
   1. Bipartite graph (2-coloring for mass term epsilon(x))
   2. Oriented links (for staggering phases)
-  3. Potential V(x) per node (for gravity)
+  3. Potential V(x) per node entering the same staggered parity factor
 
 Strategy: construct bipartite random geometric graphs and bipartite
 growing graphs, then run the retained subset:
@@ -87,7 +87,7 @@ def staggered_H_graph(adj, color, mass, V=None):
     """Staggered Dirac Hamiltonian on a bipartite graph.
 
     H[i,j] = -i/2 * sign(i,j) for adjacent i,j with different color
-    H[i,i] = mass * epsilon(i) + V(i)
+    H[i,i] = (mass + V(i)) * epsilon(i)
     epsilon(i) = +1 if color[i]==0, -1 if color[i]==1
     sign(i,j) = +1 if i < j, -1 if i > j (orientation convention)
 
@@ -107,12 +107,12 @@ def staggered_H_graph(adj, color, mass, V=None):
             H[i, j] += -1j / 2
             H[j, i] += 1j / 2
 
-    # Diagonal: mass + potential
+    # Diagonal: staggered mass gap modulated by the scalar potential
     for i in range(N):
         eps = 1 if color[i] == 0 else -1
         H[i, i] = mass * eps
         if V is not None:
-            H[i, i] += V[i]
+            H[i, i] += V[i] * eps
 
     return csr_matrix(H)
 

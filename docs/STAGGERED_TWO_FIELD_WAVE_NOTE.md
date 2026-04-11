@@ -10,8 +10,8 @@ field relaxation update with a wave equation:
 
 `d²Φ/dt² = -c² (L + μ²) Φ + β |ψ|²`
 
-The matter field `ψ` still evolves by Crank-Nicolson under the prescribed
-attractive coupling `V = -m Φ`. The
+The matter field `ψ` still evolves by Crank-Nicolson under the corrected
+parity coupling `H_diag = (m + Φ) ε`. The
 current retained read is:
 
 - hard score `5/5` on all three retained cycle-bearing graph families
@@ -32,9 +32,9 @@ current retained read is:
 
 | Family | Final width ratio vs free |
 |-----|-----:|
-| Random geometric | `0.9997` |
-| Growing | `1.0006` |
-| Layered cycle | `1.0028` |
+| Random geometric | `1.0047` |
+| Growing | `1.0019` |
+| Layered cycle | `0.9923` |
 
 So the wave-field hardening closes the structural interaction / norm / family
 story cleanly, but it does **not** give universal contraction on this retained
@@ -45,7 +45,7 @@ operating point.
 - a separate scalar field `Φ` can have its own hyperbolic dynamics on the same
   admissible graph families
 - the coupled retained proxy stays inward for every iteration on all retained
-  families under the prescribed attractive sign
+  families under the corrected parity coupling
 - the matter norm stays exact while `Φ` remains bounded
 - the state-family robustness seen in the static-potential and self-gravity
   probes survives the wave-field upgrade

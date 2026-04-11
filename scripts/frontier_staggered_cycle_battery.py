@@ -162,7 +162,8 @@ def _solve_phi(g, rho):
 
 def _build_H(g, mass, phi):
     n=g.n; H=lil_matrix((n,n),dtype=complex)
-    par=np.where(g.colors==0,1.,-1.); H.setdiag(mass*par-mass*phi)
+    # Parity (scalar 1⊗1) coupling: Φ modulates mass gap, not energy level.
+    par=np.where(g.colors==0,1.,-1.); H.setdiag((mass+phi)*par)
     for i,nbs in g.adj.items():
         for j in nbs:
             if i>=j: continue

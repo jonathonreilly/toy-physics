@@ -8,12 +8,14 @@ This keeps the same force/norm/gauge battery as the retained probe, but
 adds an explicit family-sector closure pass for the R7 row so we can try to
 lift the remaining family-robustness gap without weakening the gate.
 
-The core field law is unchanged:
+The core field law is unchanged and parity-coupled:
 
   dm/dt = (rho - m) / tau_mem
   d²Phi/dt² = -c² (L + mu²) Phi - gamma dPhi/dt + beta * ((1-lam) m + lam rho)
 
-Matter still evolves with staggered CN under V = -mass * Phi.
+Matter evolves with staggered CN under the parity-coupled mass gap:
+
+  H_diag = (mass + Phi) · parity
 
 The new ingredient is a family closure loop:
   - start from the graph seed source

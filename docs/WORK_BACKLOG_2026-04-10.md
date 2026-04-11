@@ -12,7 +12,8 @@ This backlog is ordered by value to the main project, not by ease.
   [`TWO_SIGN_COMPARISON_NOTE_2026-04-10.md`](../docs/TWO_SIGN_COMPARISON_NOTE_2026-04-10.md):
   on irregular graph families, the current shell-radial and edge-radial sign
   measures are not sign-selective. Both attractive and repulsive coupling can
-  remain inward on those observables.
+  remain inward on those observables, even after the corrected parity
+  coupling is applied.
 - This makes the exact cubic card the only retained directional gravity result
   in the current stack, because it uses the exact lattice-coordinate force
   `F = -⟨dV/dx⟩`.
@@ -46,7 +47,9 @@ This backlog is ordered by value to the main project, not by ease.
   inward force is stable, but contraction is topology-sensitive.
 - A retained larger-graph sibling now exists in
   [`frontier_staggered_cycle_battery_scaled.py`](../scripts/frontier_staggered_cycle_battery_scaled.py):
-  the force-first `9/9` battery stays closed on side `8`, `10`, and `12`.
+  the force-first battery stays closed on random geometric and growing, while
+  the layered-cycle family exposes a linearity miss at side `8`, `10`, and
+  `12`.
 - A retained causal-DAG compatibility probe now exists in
   [`frontier_staggered_dag.py`](../scripts/frontier_staggered_dag.py): `6/6`
   on three layered DAG configurations.
@@ -56,7 +59,8 @@ This backlog is ordered by value to the main project, not by ease.
 - A wave-law two-field hardening is now retained in
   [`frontier_two_field_wave.py`](../scripts/frontier_two_field_wave.py): hard
   `5/5` on the retained cycle-bearing families, with width kept as a
-  diagnostic rather than a hard gate.
+  diagnostic rather than a hard gate. The corrected parity coupling leaves the
+  hard score intact but changes the width diagnostic.
 - A retarded / hybrid field-law probe is now retained in
   [`frontier_two_field_retarded_probe.py`](../scripts/frontier_two_field_retarded_probe.py):
   the main coupled-force battery survives, but family robustness still drops to
@@ -65,8 +69,9 @@ This backlog is ordered by value to the main project, not by ease.
   [`frontier_two_field_retarded_family_closure.py`](../scripts/frontier_two_field_retarded_family_closure.py):
   it lifts the retarded family row to `3/3` on all admissible cycle-bearing
   families and extends the same operating-point closure to the causal DAG
-  (`8/9`, gauge structurally N/A), but is not yet frozen as the canonical
-  retarded harness.
+  (`8/9`, gauge structurally N/A), but the growing family still misses `R5`
+  iterative stability (`8/9`) and the result is not yet frozen as the
+  canonical retarded harness.
 - The first larger-graph break frontier is now frozen in
   [`frontier_staggered_cycle_break_frontier.py`](../scripts/frontier_staggered_cycle_break_frontier.py):
   the earliest clean failure is a gauge/current collapse on the random
@@ -85,7 +90,9 @@ This backlog is ordered by value to the main project, not by ease.
   still fails the gauge/current threshold.
 - The main blocker is no longer transport portability. It is self-consistent
   endogenous refresh on top of the now-retained nonlocal source-to-field
-  closure.
+  closure, plus the question of whether the irregular graph batteries should
+  be treated as sign-agnostic structural results rather than directional
+  gravity claims.
 - Push beyond
   [`frontier_staggered_backreaction_prototype.py`](../scripts/frontier_staggered_backreaction_prototype.py)
   and
@@ -96,7 +103,8 @@ This backlog is ordered by value to the main project, not by ease.
 - Do not reopen small linear source preconditioner sweeps.
 - Next seam: iterative endogenous closure on top of the retained nonlocal Green
   map, because the one-step self-refresh gap is still `O(1)` on the
-  cycle-bearing families.
+  cycle-bearing families. Also keep the parity-coupling rewrite frozen and do
+  not reopen the old identity-coupling convention.
 - After that, either justify the new retarded family-closure sibling as a real
   retained canonical harness or leave it explicitly as a tuned positive
   sibling. Do not blur that distinction.

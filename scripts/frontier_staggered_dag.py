@@ -54,7 +54,7 @@ def build_dag(n_layers=8, width=5, seed=42):
 def _build_H(pos,col,adj,n,mass,V=None):
     H=lil_matrix((n,n),dtype=complex)
     par=np.where(col==0,1.,-1.); diag=mass*par
-    if V is not None: diag=diag+V
+    if V is not None: diag=diag+V*par
     H.setdiag(diag)
     for i,nbs in adj.items():
         for j in nbs:
