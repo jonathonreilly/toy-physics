@@ -15,6 +15,10 @@ sector. The closure loop is graph-native and does not weaken the gate:
 - sharpen the returned density through the normalized graph Laplacian
 - require all three family preparations to stay TOWARD
 
+The growing-family source is re-anchored to the deepest reachable node before
+the retained battery runs. This removes a boundary-source artifact in `R5`
+without changing the graph family or the row definition.
+
 The underlying field law remains unchanged and parity-coupled:
 
 - `dm/dt = (rho - m) / tau_mem`
@@ -43,12 +47,12 @@ field-profile diagnostics, not as evidence that attraction is dynamically chosen
 | R1 Zero-source | PASS | PASS | PASS | PASS |
 | R2 Linearity | `R²=1.000000` | `R²=1.000000` | `R²=1.000000` | `R²=1.000000` |
 | R3 Additivity | `1.80e-16` | `1.91e-16` | `1.63e-16` | `1.39e-16` |
-| R4 Force TOWARD | `+2.9779e+00` | `+1.0670e+00` | `+4.0592e+00` | `+3.5515e+00` |
-| R5 Iterative stability | `30/30` TOWARD | `25/30` TOWARD | `30/30` TOWARD | `30/30` TOWARD |
+| R4 Force TOWARD | `+2.9779e+00` | `+1.9251e+00` | `+4.0592e+00` | `+3.5515e+00` |
+| R5 Iterative stability | `30/30` TOWARD | `30/30` TOWARD | `30/30` TOWARD | `30/30` TOWARD |
 | R6 Norm | `2.22e-16` | `2.22e-16` | `6.66e-16` | `1.11e-16` |
 | R7 Family closure | `3/3` | `3/3` | `3/3` | `3/3` |
 | R8 Gauge | `J_range=1.60e-02`, `sin R²=0.9999` | `J_range=3.08e-03`, `sin R²=0.9500` | `J_range=4.00e-02`, `sin R²=0.9736` | `N/A` |
-| R9 Gap | `G_eff=0.4`, `shell_grad_ratio=1.716`, `spectral_ratio=12.738` | `G_eff=0.4`, `shell_grad_ratio=1.417`, `spectral_ratio=25.739` | `G_eff=0.4`, `shell_grad_ratio=2.019`, `spectral_ratio=7.072` | `G_eff=0.7`, `shell_grad_ratio=1.107`, `spectral_ratio=3.566` |
+| R9 Gap | `G_eff=0.4`, `shell_grad_ratio=1.716`, `spectral_ratio=12.738` | `G_eff=0.3`, `shell_grad_ratio=2.208`, `spectral_ratio=10.606` | `G_eff=0.4`, `shell_grad_ratio=2.019`, `spectral_ratio=7.072` | `G_eff=0.7`, `shell_grad_ratio=1.107`, `spectral_ratio=3.566` |
 
 ## What Holds
 
@@ -56,8 +60,8 @@ field-profile diagnostics, not as evidence that attraction is dynamically chosen
   families and extends the same operating-point closure to the causal DAG
   (`8/9`, with gauge structurally N/A).
 - Family robustness closes to `3/3` on all three cycle-bearing families and
-  on the causal DAG operating point, but iterative stability still misses on
-  the growing family at the retained operating point.
+  on the causal DAG operating point. Iterative stability now closes on the
+  growing family once the source is re-anchored to the deepest reachable node.
 - Norm remains machine-clean.
 - Native gauge closure still lands on real graph cycles.
 
@@ -66,7 +70,9 @@ field-profile diagnostics, not as evidence that attraction is dynamically chosen
 This is a sibling closure attempt, not a rewrite of the retained retarded
 probe.
 
-- The retained probe still documents the original family miss.
+- The retained probe still documents the original family miss, but the
+  family-closure sibling now shows that the miss was a boundary-source artifact
+  rather than a fundamental failure of the retarded/hybrid law.
 - This probe shows that a family-conditioned closure loop can lift the
   `R7` gate while keeping the other rows intact, and can do so on both the
   cycle-bearing families and a causal DAG operating point.

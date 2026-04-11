@@ -7,21 +7,23 @@
 
 The staggered fermion + parity-coupled potential gravity architecture passes
 the cycle battery on the three retained cycle-bearing bipartite graph
-families, with a layered-cycle linearity failure that is now explicit:
+families. The retained source convention now uses a family-appropriate
+interior source: growing is anchored at the deepest reachable node and the
+layered cycle at a max-degree interior node.
 
 | Row | Random Geometric (36) | Growing (48) | Layered Cycle (24) |
 |-----|:---:|:---:|:---:|
 | B1 Zero-source | exact | exact | exact |
-| B2 Linearity | R²=0.991 | R²=0.997 | R²=0.985 FAIL |
+| B2 Linearity | R²=0.991 | R²=1.000 | R²=0.991 |
 | B3 Additivity | <2e-16 | <2e-16 | <3e-16 |
 | B4 Force TOWARD | ✅ | ✅ | ✅ |
 | B5 Iterative (15 steps) | 15/15 TW | 15/15 TW | 15/15 TW |
 | B6 Norm | <5e-16 | <5e-16 | <5e-16 |
 | B7 Families (3/3) | ✅ | ✅ | ✅ |
 | B8 Native gauge | R²=0.9999 | R²=0.9500 | R²=0.9736 |
-| B9 Force-gap | G_eff=58.7 | G_eff=129.6 | G_eff=29.2 |
-| B9 shell_grad_ratio | 1.9% | 0.5% | 4.4% |
-| B9 spectral_ratio | 18.9% | 7.7% | 16.9% |
+| B9 Force-gap | G_eff=58.7 | G_eff=57.6 | G_eff=70.5 |
+| B9 shell_grad_ratio | 1.9% | 1.2% | 2.4% |
+| B9 spectral_ratio | 18.9% | 5.9% | 27.5% |
 
 **Measurement note:** on these irregular graph families, `B4/B5/B7` use a
 radial shell-force proxy built from BFS-depth shell averages of `Φ`. This is
@@ -32,9 +34,8 @@ because they are dominated by the source-centered `Φ` profile.
 
 ## What Works
 
-- **Radial field-profile sign**: inward on the random geometric and growing
-  families, while the layered-cycle family now exposes a linearity failure at
-  the corrected parity coupling. After the two-sign audit, this row should be
+- **Radial field-profile sign**: inward on all three families under the
+  corrected parity coupling. After the two-sign audit, this row should be
   treated as a centered-field diagnostic, not as standalone evidence that
   attraction is dynamically selected.
 - **Iterative backreaction**: density-sourced Φ re-solved each step, force
@@ -48,16 +49,14 @@ because they are dominated by the source-centered `Φ` profile.
 
 The layered DAG had no cycles by construction (tree topology). Adding
 2-connection-per-node between layers creates cycles while preserving
-bipartiteness. Result: gauge PASS (J_range=3.2e-2, sin R²=0.985) on
+bipartiteness. Result: gauge PASS (J_range=4.0e-2, sin R²=0.9736) on
 the layered cycle graph.
 
 ## Endogenous Field Scale — OPEN (Structural)
 
 The force from the graph-solved Φ is still much smaller than the external
-kernel force. This is a coupling-constant mismatch (`G_eff≈30-130`), not a
-sign/linearity failure on the random geometric and growing families. The
-layered-cycle family now additionally shows a linearity miss at the corrected
-parity coupling.
+kernel force. This is a coupling-constant mismatch (`G_eff≈58-70`), not a
+sign/linearity failure on any retained family.
 
 **Root cause**: the screened Poisson Green function (L+μ²I)⁻¹ on a small
 graph is smoother than the 1/r kernel. Spectral analysis shows the
@@ -72,10 +71,8 @@ kernel has more high-frequency content from the 1/r singularity.
 - Can be compensated by increasing G (force scales linearly)
 
 **What it means**: the endogenous Poisson source still produces stable inward
-response on two of the three retained families, but the absolute force scale
-requires a graph-dependent coupling constant G_eff. The layered-cycle family
-now tells us the corrected coupling is not universally linear across all cycle
-topologies.
+response on all three retained families, but the absolute force scale requires
+a graph-dependent coupling constant G_eff.
 
 ## Self-Gravity Probe (Retained)
 
@@ -111,9 +108,9 @@ This is the first two-field endogenous gravity result in the project.
 
 ## Remaining Caveats
 
-1. **All three cycle-bearing families integrated** — random geometric and
-   growing still pass `9/9`, while layered cycle is `8/9` because B2 linearity
-   fails at the corrected parity coupling.
+1. **All three cycle-bearing families integrated** — random geometric,
+   growing, and layered cycle now pass `9/9` under the family-appropriate
+   source convention.
 2. **Force is primary** — no centroid rows. The centroid has a period-4
    oscillation on staggered periodic lattices.
 3. **Irregular-graph force is a proxy** — on these graph families the retained

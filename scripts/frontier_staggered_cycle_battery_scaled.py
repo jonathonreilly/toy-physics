@@ -16,6 +16,10 @@ Semantics are inherited from frontier_staggered_cycle_battery.py:
   - B8 native gauge closure
   - B9 force-gap characterization + shell/spectral diagnostics
 
+The retained source convention is inherited too:
+  - growing uses the deepest reachable node
+  - layered cycle uses a max-degree interior node
+
 The only change is the admitted graph size sweep. This probe freezes the
 larger-graph claim honestly on the same admissible cycle-bearing bipartite
 families:
