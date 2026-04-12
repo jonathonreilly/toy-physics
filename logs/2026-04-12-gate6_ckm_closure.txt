@@ -1,0 +1,887 @@
+========================================================================
+CODEX GATE 6 CLOSURE: THREE REMAINING CKM DERIVATION GAPS
+========================================================================
+  Goal: Close the 3 remaining open items in Gate 6:
+    1. DERIVE epsilon = 1/3
+    2. DERIVE Higgs Z_3 charge delta = (1,1,0)
+    3. IMPROVE quantitative CKM elements
+
+  Prior result: Interpretation B is DERIVED (12/12 PASS)
+  This script: attack the remaining 3 gaps
+========================================================================
+PART 1: DERIVING EPSILON = 1/3
+  Why is the Froggatt-Nielsen expansion parameter exactly 1/3?
+========================================================================
+
+  APPROACH A: Z_3 GROUP THEORY
+  ------------------------------------------------------------
+
+  The FN mechanism: a heavy scalar (flavon) phi gets a VEV <phi>.
+  The expansion parameter is eps = <phi>/M_FN.
+  On the lattice, Z_3 symmetry breaks when the 3 spatial directions
+  develop different hopping amplitudes (anisotropy).
+
+  The Z_3 group has 3 elements: {1, omega, omega^2}.
+  The representation theory gives the Clebsch-Gordan decomposition:
+    3 x 3 = 1 + 1 + 1  (three singlets)
+  The coupling between different Z_3 sectors is suppressed by
+  the projection onto a single sector: P_z = (1/3) sum_k omega^(zk).
+
+  The key: the probability of finding a Z_3-charged state in a
+  specific Z_3 sector is 1/|Z_3| = 1/3.
+  This 1/3 is the UNIVERSAL mixing suppression for any Z_3-breaking
+  transition, because the flavon VEV selects one of 3 degenerate minima.
+
+  VERIFICATION: Z_3 projector norms
+  The projector onto Z_3 sector z is:
+    P_z = (1/3) sum_k omega^(z*k)
+  The overlap between sectors z and z' is:
+    <P_z | P_z'> = (1/3) delta_{z,z'}
+    <P_0|P_0> = +1.000000 +0.000000i  |overlap| = 1.000000
+    <P_0|P_1> = +0.000000 -0.000000i  |overlap| = 0.000000
+    <P_0|P_2> = +0.000000 -0.000000i  |overlap| = 0.000000
+    <P_1|P_0> = +0.000000 +0.000000i  |overlap| = 0.000000
+    <P_1|P_1> = +1.000000 -0.000000i  |overlap| = 1.000000
+    <P_1|P_2> = -0.000000 +0.000000i  |overlap| = 0.000000
+    <P_2|P_0> = +0.000000 +0.000000i  |overlap| = 0.000000
+    <P_2|P_1> = +0.000000 +0.000000i  |overlap| = 0.000000
+    <P_2|P_2> = +1.000000 -0.000000i  |overlap| = 1.000000
+
+  The transition amplitude between adjacent Z_3 sectors is
+  |<z|z+1>| = 0 in the exact symmetry limit.  When the symmetry
+  breaks, the mixing is proportional to 1/|Z_3| = 1/3.
+
+  WHY 1/|Z_3| specifically?
+  The flavon potential has 3 degenerate minima.  The VEV <phi>
+  selects one.  The AMPLITUDE to tunnel from minimum i to j is:
+    A(i->j) = <j|phi|i> / <i|phi|i>
+  In the Z_3-symmetric potential, this ratio is determined by the
+  group structure: each minimum has equal weight 1/3 of the total,
+  so the relative amplitude is |A| = 1/3.
+
+
+  APPROACH B: LATTICE ANISOTROPY (NUMERICAL)
+  ------------------------------------------------------------
+
+  Build the staggered Hamiltonian with anisotropic hopping:
+    t_x = 1 + delta, t_y = 1, t_z = 1 - delta
+  This breaks Z_3 (permutation symmetry of x, y, z).
+
+  Compute the mass matrix in the Z_3 taste basis.
+  Extract the ratio of off-diagonal to diagonal elements.
+  Find the value of delta where eps_eff = 1/3.
+
+  Scanning delta from 0 to 1.5, L=6, d=3:
+       delta      <diag>    <off-diag>     eps_eff   eps_eff/0.333
+    --------  ----------  ------------  ----------  --------------
+       0.000    0.577350      0.000000    0.000000          0.0000
+       0.050    0.606218      0.000000    0.000000          0.0000
+       0.100    0.635085      0.000000    0.000000          0.0000
+       0.150    0.663953      0.000000    0.000000          0.0000
+       0.200    0.692820      0.000000    0.000000          0.0000
+       0.250    0.721688      0.000000    0.000000          0.0000
+       0.300    0.750555      0.000000    0.000000          0.0000
+       0.350    0.779423      0.000000    0.000000          0.0000
+       0.400    0.808290      0.000000    0.000000          0.0000
+       0.450    0.837158      0.000000    0.000000          0.0000
+       0.500    0.866025      0.000000    0.000000          0.0000
+       0.550    0.894893      0.000000    0.000000          0.0000
+       0.600    0.923760      0.000000    0.000000          0.0000
+       0.650    0.952628      0.000000    0.000000          0.0000
+       0.700    0.981495      0.000000    0.000000          0.0000
+       0.750    1.010363      0.000000    0.000000          0.0000
+       0.800    1.039230      0.000000    0.000000          0.0000
+       0.850    1.068098      0.000000    0.000000          0.0000
+       0.900    1.096966      0.000000    0.000000          0.0000
+       0.950    1.125833      0.000000    0.000000          0.0000
+       1.000    1.154701      0.000000    0.000000          0.0000
+       1.050    1.183568      0.000000    0.000000          0.0000
+       1.100    1.212436      0.000000    0.000000          0.0000
+       1.150    1.241303      0.000000    0.000000          0.0000
+       1.200    1.270171      0.000000    0.000000          0.0000
+       1.250    1.299038      0.000000    0.000000          0.0000
+       1.300    1.327906      0.000000    0.000000          0.0000
+       1.350    1.356773      0.000000    0.000000          0.0000
+       1.400    1.385641      0.000000    0.000000          0.0000
+       1.450    1.414508      0.000000    0.000000          0.0000
+       1.500    1.443376      0.000000    0.000000          0.0000
+
+  eps_eff = 1/3 not found in this scan range.
+
+
+  APPROACH C: Z_3 TRANSITION MATRIX (EXACT)
+  ------------------------------------------------------------
+
+  The staggered mass operator eps(x) induces transitions between
+  Z_3 taste sectors.  The transition matrix T_{z,z'} = <z|eps|z'>
+  encodes the inter-generation mixing.
+
+  The FN epsilon is the ratio:
+    eps = |T_offdiag| / |T_diag|
+  where T_offdiag connects ADJACENT Z_3 sectors (z -> z+1)
+  and T_diag is the same-sector coupling.
+
+    L = 6: 1D Z_3 transition matrix for (-1)^x:
+      |T[0,0]| = 0.000000  |T[0,1]| = 0.000000  |T[0,2]| = 0.000000
+      |T[1,0]| = 0.000000  |T[1,1]| = 0.000000  |T[1,2]| = 0.000000
+      |T[2,0]| = 0.000000  |T[2,1]| = 0.000000  |T[2,2]| = 0.000000
+    eps_1d: diagonal is zero (L is multiple of 3)
+    Both diagonal and off-diagonal vanish: eps is ill-defined.
+    This is EXPECTED: when L = 0 mod 3, the Z_3 symmetry is
+    EXACT and there is no mixing between sectors.
+
+    L = 9: 1D Z_3 transition matrix for (-1)^x:
+      |T[0,0]| = 0.111111  |T[0,1]| = 0.222222  |T[0,2]| = 0.222222
+      |T[1,0]| = 0.222222  |T[1,1]| = 0.111111  |T[1,2]| = 0.222222
+      |T[2,0]| = 0.222222  |T[2,1]| = 0.222222  |T[2,2]| = 0.111111
+    eps_1d = |off-diag|/|diag| = 2.000000
+    Compare to 1/3 = 0.333333, ratio = 6.0000
+
+    L = 12: 1D Z_3 transition matrix for (-1)^x:
+      |T[0,0]| = 0.000000  |T[0,1]| = 0.000000  |T[0,2]| = 0.000000
+      |T[1,0]| = 0.000000  |T[1,1]| = 0.000000  |T[1,2]| = 0.000000
+      |T[2,0]| = 0.000000  |T[2,1]| = 0.000000  |T[2,2]| = 0.000000
+    eps_1d: diagonal is zero (L is multiple of 3)
+    Both diagonal and off-diagonal vanish: eps is ill-defined.
+    This is EXPECTED: when L = 0 mod 3, the Z_3 symmetry is
+    EXACT and there is no mixing between sectors.
+
+  L NOT divisible by 3 (where Z_3 is approximate):
+    L= 4: diagonal = 0
+    L= 5: eps_1d = 1.000000, ratio to 1/3 = 3.0000
+    L= 7: eps_1d = 1.000000, ratio to 1/3 = 3.0000
+    L= 8: diagonal = 0
+    L=10: diagonal = 0
+    L=11: eps_1d = 1.000000, ratio to 1/3 = 3.0000
+
+
+  APPROACH D: INFORMATION-THEORETIC / PROBABILITY ARGUMENT
+  ------------------------------------------------------------
+
+  The FN parameter eps measures the SUPPRESSION of inter-generation
+  transitions.  In a system with Z_3 symmetry:
+
+  1. There are 3 degenerate minima (generations).
+  2. A Z_3 transition operator maps sector z -> z+1.
+  3. The PROBABILITY of transition z -> z+1 is P = 1/3
+     (each of 3 sectors equally likely after one Z_3 rotation).
+  4. The AMPLITUDE is sqrt(P) = 1/sqrt(3) ~ 0.577.
+
+  But eps = 1/3, not 1/sqrt(3).  The resolution:
+  eps is not the amplitude but the RATIO of VEVs:
+    eps = <phi_broken>/M = v/M
+  where v = <phi> is the VEV and M is the heavy scale.
+
+  In a Z_3-symmetric potential V(phi) = lambda * (phi^3 - v^3)^2,
+  the ratio v/M is determined by:
+    v ~ (mu^2/lambda)^(1/3)  [cubic minimum]
+    M ~ lambda * v^2 / mu  [heavy mode mass]
+  giving v/M ~ mu / (lambda * v) ~ 1/(lambda * v^2 / mu^2)
+
+  For the NATURAL choice where the potential's coefficients are
+  related by the Z_3 structure:
+    V = mu^2 * |phi|^2 * (1 - 2*Re(phi^3)/v^3 + |phi|^6/v^6)
+  the ratio is controlled by the Z_3 Clebsch-Gordan coefficient
+  for the fundamental x fundamental -> anti-fundamental coupling:
+    C_{1,1}^{2} = 1/sqrt(3)  [Z_3 CG coefficient]
+  and eps = |C|^2 = 1/3.
+
+  NUMERICAL CHECK: Z_3 Clebsch-Gordan coefficients
+  Z_3 representations: r=0 (trivial), r=1 (fundamental), r=2 (conjugate)
+  Tensor product decomposition:
+    r=0 x r=0 -> r=0
+    r=0 x r=1 -> r=1
+    r=0 x r=2 -> r=2
+    r=1 x r=0 -> r=1
+    r=1 x r=1 -> r=2
+    r=1 x r=2 -> r=0
+    r=2 x r=0 -> r=2
+    r=2 x r=1 -> r=0
+    r=2 x r=2 -> r=1
+
+  For abelian groups, the CG coefficients are phases (magnitude 1).
+  The 1/3 comes not from the CG but from the GROUP AVERAGING:
+    <z+1|V_break|z> = (1/3) sum_k omega^k * V_k
+  where V_k are the Fourier modes of the breaking potential.
+  For a single-harmonic breaking V = V_1 * omega^x + h.c.,
+  the 1/3 factor is the Fourier normalization.
+
+
+  APPROACH E: DIRECT LATTICE COMPUTATION
+  ------------------------------------------------------------
+
+  On the 3D staggered lattice, compute the MASS MATRIX in the
+  Z_3 taste basis.  The ratio of adjacent-sector coupling to
+  same-sector coupling defines eps.
+
+  Critical: only the MASS TERM (eps(x)) mixes tastes.
+  The hopping terms preserve Z_3 momentum on a Z_3-compatible lattice.
+
+    L=4, d=3:
+      delta mod 3 = 0: avg |elem| = 0.08118988, count = 54
+      delta mod 3 = 1: avg |elem| = 0.08118988, count = 81
+      delta mod 3 = 2: avg |elem| = 0.08118988, count = 81
+      eps = <|delta=1|>/<|delta=0|> = 1.000000
+      Compare to 1/3 = 0.333333, ratio = 3.0000
+
+    L=5, d=3:
+      delta mod 3 = 0: avg |elem| = 0.00800000, count = 243
+      delta mod 3 = 1: avg |elem| = 0.00800000, count = 243
+      delta mod 3 = 2: avg |elem| = 0.00800000, count = 243
+      eps = <|delta=1|>/<|delta=0|> = 1.000000
+      Compare to 1/3 = 0.333333, ratio = 3.0000
+
+    L=7, d=3:
+      delta mod 3 = 0: avg |elem| = 0.00291545, count = 243
+      delta mod 3 = 1: avg |elem| = 0.00291545, count = 243
+      delta mod 3 = 2: avg |elem| = 0.00291545, count = 243
+      eps = <|delta=1|>/<|delta=0|> = 1.000000
+      Compare to 1/3 = 0.333333, ratio = 3.0000
+
+    L=8, d=3:
+      delta mod 3 = 0: avg |elem| = 0.01014874, count = 54
+      delta mod 3 = 1: avg |elem| = 0.01014874, count = 81
+      delta mod 3 = 2: avg |elem| = 0.01014874, count = 81
+      eps = <|delta=1|>/<|delta=0|> = 1.000000
+      Compare to 1/3 = 0.333333, ratio = 3.0000
+
+    L=10, d=3:
+      delta mod 3 = 0: avg |elem| = 0.00519615, count = 54
+      delta mod 3 = 1: avg |elem| = 0.00519615, count = 81
+      delta mod 3 = 2: avg |elem| = 0.00519615, count = 81
+      eps = <|delta=1|>/<|delta=0|> = 1.000000
+      Compare to 1/3 = 0.333333, ratio = 3.0000
+
+    L=11, d=3:
+      delta mod 3 = 0: avg |elem| = 0.00075131, count = 243
+      delta mod 3 = 1: avg |elem| = 0.00075131, count = 243
+      delta mod 3 = 2: avg |elem| = 0.00075131, count = 243
+      eps = <|delta=1|>/<|delta=0|> = 1.000000
+      Compare to 1/3 = 0.333333, ratio = 3.0000
+
+  PART 1 SUMMARY:
+  ------------------------------------------------------------
+
+  eps = 1/3 has multiple supporting arguments:
+
+  (a) GROUP THEORY: 1/|Z_3| = 1/3 is the universal mixing
+      suppression for Z_3-breaking transitions.  The Z_3 projection
+      operator P_z = (1/3) sum_k omega^(zk) introduces the factor 1/3
+      whenever a Z_3-charged operator connects different sectors.
+      This is EXACT and independent of dynamics.
+
+  (b) LATTICE: The mass operator eps(x) on the staggered lattice
+      induces transitions between Z_3 taste sectors.  The ratio of
+      inter-sector to intra-sector coupling depends on L.
+      No L value gives eps = 1/3 exactly from the mass operator.
+      The lattice values are L-dependent (finite-size artifact).
+
+  (c) PHYSICAL: eps = 1/N_colors is the STANDARD relation in
+      Froggatt-Nielsen models with a Z_N family symmetry.
+      For Z_3: eps = 1/3 follows from the group order.
+      This is an INPUT of the model, not derived from dynamics,
+      but it is NATURAL (the simplest choice consistent with the
+      discrete symmetry).
+
+  HONEST ASSESSMENT:
+  The argument that eps = 1/3 is DERIVED is WEAK.
+  The group-theoretic argument gives 1/|Z_3| = 1/3 as the natural
+  scale, but this is a DIMENSIONAL/GROUP-THEORY argument, not a
+  dynamical derivation.  The actual value of eps depends on:
+    - The ratio <phi>/M_FN (free parameter in general)
+    - The specific Z_3-breaking potential (not derived)
+  What IS derived: if the family symmetry IS Z_3, then eps ~ 1/3
+  is the NATURAL scale, and the exact value 1/3 is the simplest
+  choice.  But 'natural' is not 'derived'.
+
+  SCORE: 0.50 (motivated but not rigorously derived)
+
+
+========================================================================
+PART 2: DERIVING THE HIGGS Z_3 CHARGE delta = (1,1,0)
+========================================================================
+
+  A) SYSTEMATIC L-DEPENDENCE ANALYSIS
+  ------------------------------------------------------------
+
+  The mass operator eps(x) = (-1)^(sum x_i) shifts the Z_3
+  momentum by (L/2) mod 3 per direction (for even L).
+  This gives different delta for different L:
+
+       L     L/2   (L/2)%3   delta_total     L%3     L%6
+    ----  ------  --------  ------------  ------  ------
+       3     1.5         2             0       0       3
+       4     2.0         2             0       1       4
+       5     2.5         2             0       2       5
+       6     3.0         0             0       0       0
+       7     3.5         1             0       1       1
+       8     4.0         1             0       2       2
+       9     4.5         2             0       0       3
+      10     5.0         2             0       1       4
+      11     5.5         2             0       2       5
+      12     6.0         0             0       0       0
+      13     6.5         1             0       1       1
+      14     7.0         1             0       2       2
+      15     7.5         2             0       0       3
+      16     8.0         2             0       1       4
+      17     8.5         2             0       2       5
+      18     9.0         0             0       0       0
+      19     9.5         1             0       1       1
+      20    10.0         1             0       2       2
+      21    10.5         2             0       0       3
+      22    11.0         2             0       1       4
+      23    11.5         2             0       2       5
+      24    12.0         0             0       0       0
+
+
+  B) CONTINUUM LIMIT ANALYSIS
+  ------------------------------------------------------------
+
+  The continuum limit corresponds to L -> infinity (lattice spacing -> 0).
+  The Z_3 charge of the mass operator in this limit:
+
+  For the staggered Dirac operator, the mass term M*eps(x) connects
+  the 2^d naive fermion doublers.  In d=3, there are 2^3 = 8 doublers,
+  which organize into 8/4 = 2 physical tastes (in the standard
+  staggered formulation).
+
+  The Z_3 subgroup of the taste symmetry has a well-defined
+  continuum limit.  The mass term connects doublers at momenta
+  k and k + (pi,pi,pi).  Under Z_3:
+    k_mu -> k_mu + 2*pi/3 * z_mu
+  The pi-shift in Z_3 language is:
+    pi = (2*pi/3) * (3/2)
+  So the Z_3 charge per direction is 3/2, which modulo 3 is 3/2.
+  Since Z_3 charges are integers, we need to ROUND, and the
+  appropriate rounding depends on the UV completion.
+
+  Among even L in [4,24]:
+    delta = 0: 4/11 (L = [6, 12, 18, 24])
+    delta = 1: 3/11 (L = [8, 14, 20])
+    delta = 2: 4/11 (L = [4, 10, 16, 22])
+
+
+  C) EXPLICIT LATTICE TRANSITION MATRICES
+  ------------------------------------------------------------
+
+    L=4: transition magnitudes by Z_3 charge shift:
+      delta=0: total_mag = 4.384254, count = 54
+      delta=1: total_mag = 6.576380, count = 81
+      delta=2: total_mag = 6.576380, count = 81 <-- dominant
+
+    L=5: transition magnitudes by Z_3 charge shift:
+      delta=0: total_mag = 1.944000, count = 243
+      delta=1: total_mag = 1.944000, count = 243
+      delta=2: total_mag = 1.944000, count = 243 <-- dominant
+
+    L=7: transition magnitudes by Z_3 charge shift:
+      delta=0: total_mag = 0.708455, count = 243 <-- dominant
+      delta=1: total_mag = 0.708455, count = 243
+      delta=2: total_mag = 0.708455, count = 243
+
+    L=8: transition magnitudes by Z_3 charge shift:
+      delta=0: total_mag = 0.548032, count = 54
+      delta=1: total_mag = 0.822048, count = 81 <-- dominant
+      delta=2: total_mag = 0.822048, count = 81
+
+    L=10: transition magnitudes by Z_3 charge shift:
+      delta=0: total_mag = 0.280592, count = 54
+      delta=1: total_mag = 0.420888, count = 81
+      delta=2: total_mag = 0.420888, count = 81 <-- dominant
+
+    L=11: transition magnitudes by Z_3 charge shift:
+      delta=0: total_mag = 0.182569, count = 243
+      delta=1: total_mag = 0.182569, count = 243 <-- dominant
+      delta=2: total_mag = 0.182569, count = 243
+
+
+  D) WHY delta = 0 FOR GENERATION 3
+  ------------------------------------------------------------
+
+  The observed pattern is delta = (1, 1, 0):
+    Gen 1: q_up = 5, q_down = 4, delta = 1
+    Gen 2: q_up = 3, q_down = 2, delta = 1
+    Gen 3: q_up = 0, q_down = 0, delta = 0
+
+  WHY does the Higgs not shift generation 3?
+
+  PHYSICAL ARGUMENT:
+  In the FN mechanism, the Yukawa coupling is:
+    Y_ij ~ c_ij * (phi/M)^(q_i + q_j)
+  For generation 3 with q = 0 in both sectors:
+    Y_33 ~ c_33 * (phi/M)^0 = c_33 ~ O(1)
+  The top quark mass is unsuppressed.  The Higgs VEV gives
+  m_t = Y_33 * v ~ v, and m_b = Y_33 * v (same order).
+
+  The Higgs Z_3 charge DOES enter the Yukawa, but for q_i = q_j = 0,
+  the charge conservation is automatically satisfied:
+    q_L(gen3) + q_H + q_R(gen3) = 0 + delta + 0 = delta mod 3
+  This is nonzero only if delta != 0 mod 3.  But the Yukawa
+  coupling is ALLOWED as long as the total charge is 0 mod 3.
+  Since q_L = q_R = 0, we need delta = 0 mod 3 for gen 3.
+
+  If the Higgs has delta = 1, then the gen-3 Yukawa would be
+  FORBIDDEN unless there's a compensating flavon insertion.
+  But the top Yukawa IS O(1), so there is NO suppression.
+
+  RESOLUTION: The Higgs Z_3 charge enters the EFFECTIVE charge
+  difference between up and down sectors for each generation.
+  For gen 3 (q=0), the up-down splitting comes from the SU(2)
+  Yukawa coupling directly, not from the FN mechanism.
+  The 'delta = 0' for gen 3 means the FN mechanism does not
+  DISTINGUISH up from down for the heaviest generation --
+  both couple with strength O(1).
+
+  This is CONSISTENT with the FN framework: the Higgs charge
+  only matters for the FN-suppressed couplings (gen 1, 2),
+  not for the unsuppressed ones (gen 3).
+
+  PART 2 SUMMARY:
+  ------------------------------------------------------------
+
+  Lattice sizes giving delta = 1: [8, 11]
+  Lattice sizes giving delta != 1: [4, 5, 7, 10]
+
+  The Higgs Z_3 charge is L-DEPENDENT on finite lattices,
+  confirming the finding in frontier_ckm_interpretation_derivation.py.
+
+  The physical argument:
+  1. The mass operator eps(x) carries Z_3 charge delta per direction
+  2. delta depends on L: delta = (L/2) mod 3 for even L
+  3. For L = 2 mod 6 (e.g., L=8,14,20): delta = 1 per direction
+  4. For L = 0 mod 6 (e.g., L=6,12): delta = 0 (Z_3-neutral)
+  5. For L = 4 mod 6 (e.g., L=4,10): delta = 2 per direction
+
+  The continuum limit is AMBIGUOUS because delta cycles through
+  {0, 1, 2} as L increases.  There is no well-defined limit.
+
+  HONEST ASSESSMENT:
+  The Higgs Z_3 charge delta = 1 is NOT rigorously derived from
+  the lattice.  It is a PHYSICALLY MOTIVATED CHOICE:
+  - delta = 1 is the minimal nonzero Z_3 charge (fundamental rep)
+  - delta = 1 gives the correct CKM structure
+  - delta = 0 would give q_up = q_down (no CKM mixing)
+  - delta = 2 would give different (worse) CKM predictions
+
+  The delta = (1,1,0) structure (1 for gen 1&2, 0 for gen 3)
+  follows from the FN mechanism itself: gen 3 has q=0, so the
+  Higgs charge is irrelevant for the top/bottom coupling.
+
+  SCORE: 0.55 (partially derived: the (1,1,0) pattern follows
+  from FN structure, but delta=1 vs delta=2 is not rigorous)
+
+
+========================================================================
+PART 3: IMPROVING QUANTITATIVE CKM ELEMENTS
+  Computing O(1) coefficients from lattice overlaps
+========================================================================
+
+  A) THE PROBLEM
+  ------------------------------------------------------------
+
+  Parametric FN prediction (c_ij = 1 for all i,j):
+    |V_us| = 0.1111  (obs: 0.2243, ratio: 0.495)
+    |V_cb| = 0.1111  (obs: 0.0422, ratio: 2.633)
+    |V_ub| = 0.01235  (obs: 0.00394, ratio: 3.133)
+
+  The ratios show:
+    V_us: predicted/observed = 0.50 (factor of 2 too small)
+    V_cb: predicted/observed = 2.63 (factor of 8 too large)
+    V_ub: predicted/observed = 3.13 (factor of 9 too large)
+
+  The problem is systematic: V_us is TOO SMALL while V_cb is
+  TOO LARGE.  The parametric formula V_us ~ eps^|q1-q2| gives
+  V_us ~ (1/3)^2 = 1/9 whereas the correct value is ~1/4.
+  Meanwhile V_cb ~ (1/3)^1 is much larger than the observed ~0.04.
+
+  In standard FN models, the O(1) coefficients c_ij fix this.
+  The question: can the LATTICE determine these coefficients?
+
+
+  B) LATTICE OVERLAP COEFFICIENTS
+  ------------------------------------------------------------
+
+  The mass matrix in the FN mechanism is:
+    M_ij = c_ij * eps^(q_i + q_j)
+  where c_ij are O(1) 'anarchic' coefficients.
+
+  On the lattice, c_ij = <taste_i|H|taste_j> / eps^(q_i + q_j)
+  i.e., the overlap integral between taste eigenstates,
+  normalized by the expected FN suppression.
+
+  We compute <z_i|H|z_j> for the specific Z_3^3 vectors:
+    Gen 3: z = (0,0,0), q = 0
+    Gen 2: z = (1,1,1), q = 3
+    Gen 1: z = (1,2,2), q = 5
+
+    L = 4:
+    Up sector overlaps <z_i|H|z_j>:
+    |M_up|:
+        0.649519    0.040595    0.081190  
+        0.040595    0.649519    0.081190  
+        0.081190    0.081190    0.000000  
+    Down sector overlaps <z_i|H|z_j>:
+    |M_down|:
+        0.000000    0.000000    0.000000  
+        0.000000    0.000000    0.000000  
+        0.000000    0.000000    0.000000  
+
+    Extracted c_ij coefficients (up sector):
+      38353.4506    266.3434     19.7291  
+        266.3434    473.4994      2.1921  
+         19.7291      2.1921      0.0000  
+
+    Extracted c_ij coefficients (down sector):
+          0.0000      0.0000      0.0000  
+          0.0000      0.0000      0.0000  
+          0.0000      0.0000      0.0000  
+
+    Building FN mass matrices with lattice c_ij:
+    CKM matrix (lattice c_ij):
+                     d           s           b
+         u      0.5837      0.7557      0.2972
+         c      0.7781      0.6236      0.0756
+         t      0.2323      0.2002      0.9518
+
+    Key elements:
+      |V_us| = 0.7557  (obs: 0.2243)
+      |V_cb| = 0.0756  (obs: 0.0422)
+      |V_ub| = 0.29716  (obs: 0.00394)
+      chi2 (lattice c_ij): 20.5039
+      chi2 (parametric c=1): 2.7351
+      NO IMPROVEMENT: lattice c_ij gives larger chi2
+
+    L = 5:
+    Up sector overlaps <z_i|H|z_j>:
+    |M_up|:
+        0.394989    0.022271    0.008000  
+        0.022271    0.644373    0.008000  
+        0.008000    0.008000    0.008000  
+    Down sector overlaps <z_i|H|z_j>:
+    |M_down|:
+        0.124964    0.008000    0.008000  
+        0.008000    0.124964    0.008000  
+        0.008000    0.008000    0.008000  
+
+    Extracted c_ij coefficients (up sector):
+      23323.6823    146.1204      1.9440  
+        146.1204    469.7476      0.2160  
+          1.9440      0.2160      0.0080  
+
+    Extracted c_ij coefficients (down sector):
+        819.8888      5.8320      0.6480  
+          5.8320     10.1221      0.0720  
+          0.6480      0.0720      0.0080  
+
+    Building FN mass matrices with lattice c_ij:
+    CKM matrix (lattice c_ij):
+                     d           s           b
+         u      0.7151      0.6960      0.0655
+         c      0.6972      0.7143      0.0600
+         t      0.0503      0.0732      0.9961
+
+    Key elements:
+      |V_us| = 0.6960  (obs: 0.2243)
+      |V_cb| = 0.0600  (obs: 0.0422)
+      |V_ub| = 0.06548  (obs: 0.00394)
+      chi2 (lattice c_ij): 9.3047
+      chi2 (parametric c=1): 2.7351
+      NO IMPROVEMENT: lattice c_ij gives larger chi2
+
+    L = 7:
+    Up sector overlaps <z_i|H|z_j>:
+    |M_up|:
+        0.621121    0.015427    0.002915  
+        0.015427    0.863505    0.002915  
+        0.002915    0.002915    0.002915  
+    Down sector overlaps <z_i|H|z_j>:
+    |M_down|:
+        0.121228    0.002915    0.002915  
+        0.002915    0.121228    0.002915  
+        0.002915    0.002915    0.002915  
+
+    Extracted c_ij coefficients (up sector):
+      36676.5900    101.2173      0.7085  
+        101.2173    629.4955      0.0787  
+          0.7085      0.0787      0.0029  
+
+    Extracted c_ij coefficients (down sector):
+        795.3777      2.1254      0.2362  
+          2.1254      9.8195      0.0262  
+          0.2362      0.0262      0.0029  
+
+    Building FN mass matrices with lattice c_ij:
+    CKM matrix (lattice c_ij):
+                     d           s           b
+         u      0.7094      0.7045      0.0189
+         c      0.7043      0.7092      0.0299
+         t      0.0252      0.0248      0.9994
+
+    Key elements:
+      |V_us| = 0.7045  (obs: 0.2243)
+      |V_cb| = 0.0299  (obs: 0.0422)
+      |V_ub| = 0.01892  (obs: 0.00394)
+      chi2 (lattice c_ij): 3.8919
+      chi2 (parametric c=1): 2.7351
+      NO IMPROVEMENT: lattice c_ij gives larger chi2
+
+    L = 8:
+    Up sector overlaps <z_i|H|z_j>:
+    |M_up|:
+        0.649519    0.010149    0.010149  
+        0.010149    0.649519    0.010149  
+        0.010149    0.010149    0.000000  
+    Down sector overlaps <z_i|H|z_j>:
+    |M_down|:
+        0.000000    0.000000    0.000000  
+        0.000000    0.000000    0.000000  
+        0.000000    0.000000    0.000000  
+
+    Extracted c_ij coefficients (up sector):
+      38353.4506     66.5859      2.4661  
+         66.5859    473.4994      0.2740  
+          2.4661      0.2740      0.0000  
+
+    Extracted c_ij coefficients (down sector):
+          0.0000      0.0000      0.0000  
+          0.0000      0.0000      0.0000  
+          0.0000      0.0000      0.0000  
+
+    Building FN mass matrices with lattice c_ij:
+    CKM matrix (lattice c_ij):
+                     d           s           b
+         u      0.6135      0.7829      0.1033
+         c      0.7778      0.5989      0.1905
+         t      0.1362      0.1685      0.9762
+
+    Key elements:
+      |V_us| = 0.7829  (obs: 0.2243)
+      |V_cb| = 0.1905  (obs: 0.0422)
+      |V_ub| = 0.10333  (obs: 0.00394)
+      chi2 (lattice c_ij): 14.5057
+      chi2 (parametric c=1): 2.7351
+      NO IMPROVEMENT: lattice c_ij gives larger chi2
+
+
+  C) RANDOM O(1) COEFFICIENT SCAN (for comparison)
+  ------------------------------------------------------------
+
+  In standard FN analyses, the c_ij are random O(1) numbers.
+  Scan 10000 random coefficient sets to find the fraction
+  that gives V_us within 50% of the observed value.
+
+  Results from 10000 random O(1) coefficient sets:
+    V_us within 50%: 4659 (46.6%)
+    V_cb within 50%: 875 (8.8%)
+    ALL within 50%:  76 (0.8%)
+
+  Best random CKM:
+    |V_us| = 0.2292  (obs: 0.2243)
+    |V_cb| = 0.0369  (obs: 0.0422)
+    |V_ub| = 0.00387  (obs: 0.00394)
+    chi2 = 0.0189
+
+
+  D) CONSTRAINED OPTIMIZATION
+  ------------------------------------------------------------
+
+  Can we find c_ij that simultaneously:
+  1. Match observed CKM elements
+  2. Are O(1) (not fine-tuned)
+  3. Respect the lattice symmetry structure?
+
+  Required effective c values:
+    For V_us: c_eff ~ V_us/eps^2 = 0.2243/0.1111 = 2.019
+    For V_cb: c_eff ~ V_cb/eps = 0.0422/0.3333 = 0.127
+    For V_ub: c_eff ~ V_ub/eps^3 = 0.00394/0.03704 = 0.106
+
+  c_eff for V_us = 2.019 -- this IS O(1), just ~2x
+  c_eff for V_cb = 0.127 -- this is O(0.1), NOT O(1)
+  c_eff for V_ub = 0.106 -- this is O(0.1), NOT O(1)
+
+  DIAGNOSIS: The FN charge assignment q_up=(5,3,0), q_down=(4,2,0)
+  predicts V_cb ~ eps^1 = 0.333, but the observed value is 0.042.
+  This is NOT an O(1) coefficient issue -- it's a factor of 8.
+  The charge DIFFERENCE |q_up_2 - q_down_2| = |3-2| = 1 gives
+  V_cb ~ eps^1.  The observed value requires V_cb ~ eps^2.8.
+
+  Possible resolutions:
+  1. The actual FN exponent is |q_i - q_j| for LEFT-HANDED rotations,
+     not the simple max formula used here.
+  2. The mixing involves BOTH up and down sector rotations,
+     with possible cancellations.
+  3. The simple eps^|dq| formula is only order-of-magnitude.
+
+  REFINED MIXING ANALYSIS:
+  The CKM matrix V = U_u^dag * U_d where U_u, U_d diagonalize
+  the up and down mass matrices separately.
+
+  For the mass matrix M_ij = c_ij * eps^(q_i + q_j):
+    M_up = c * diag(eps^5, eps^3, 1)^T * diag(eps^5, eps^3, 1)
+    M_down = c * diag(eps^4, eps^2, 1)^T * diag(eps^4, eps^2, 1)
+
+  The LEFT rotation U_L diagonalizing M * M^dag has angles:
+    (U_u)_12 ~ eps^(q1-q2) = eps^2  (up sector)
+    (U_d)_12 ~ eps^(q1-q2) = eps^2  (down sector)
+    V_us = (U_u)_12 - (U_d)_12 ~ O(eps^2)  [if equal, cancels!]
+
+  The key: V_us involves a SUBTRACTION of two eps^2 terms.
+  With c_ij != 1, the subtraction is incomplete and V_us can be
+  larger (constructive) or smaller (destructive) than eps^2.
+
+  NUMERICAL DEMONSTRATION:
+  Finding c_ij coefficients that reproduce observed CKM...
+
+  Best-fit CKM with O(1) coefficients (50000 trials):
+    |V_us| = 0.2182  (obs: 0.2243, ratio: 0.973)
+    |V_cb| = 0.0408  (obs: 0.0422, ratio: 0.967)
+    |V_ub| = 0.00397  (obs: 0.00394, ratio: 1.008)
+    chi2 = 0.0019
+    (parametric chi2 = 2.7351)
+
+  Best-fit c_ij magnitudes:
+  Up sector:
+      1.15    1.85    1.37  
+      1.85    1.87    2.22  
+      1.37    2.22    1.75  
+  Down sector:
+      4.67    1.48    0.68  
+      1.48    2.82    2.78  
+      0.68    2.78    1.52  
+
+  c_ij statistics:
+    min |c| = 0.678
+    max |c| = 4.675
+    mean |c| = 1.920
+    Are all O(1) (between 0.1 and 10)? YES
+
+  PART 3 SUMMARY:
+  ------------------------------------------------------------
+
+  1. The parametric FN formula with c_ij = 1 gives V_us = 0.111
+     (factor 2 below observed) and V_cb = 0.333 (factor 8 above).
+
+  2. Lattice-computed c_ij from taste overlaps do NOT significantly
+     improve the prediction (the overlaps have their own structure
+     that does not automatically match the needed corrections).
+
+  3. Random O(1) coefficient scan: 0.8% of
+     random c_ij sets give all CKM elements within 50% of observed.
+     Best random chi2 = 0.0189
+
+  4. With symmetric c_ij in [0.2, 5.0] (50k trials):
+     best chi2 = 0.0019, DOES improve over parametric.
+
+  HONEST ASSESSMENT:
+  The V_cb discrepancy is the MAIN problem.  The charge assignment
+  gives |q_up_2 - q_down_2| = 1, predicting V_cb ~ eps = 0.333.
+  The observed V_cb = 0.042 requires a suppression factor ~1/8.
+  This CANNOT come from O(1) coefficients alone -- it requires
+  either a different charge assignment or a modification of the
+  simple FN formula.
+
+  The FN mechanism is inherently order-of-magnitude.  The factor
+  of 2 discrepancy in V_us is within the expected range, but the
+  factor of 8 in V_cb is a genuine tension.
+
+  POSSIBLE RESOLUTION: If the effective FN charge difference for
+  V_cb is 2 instead of 1 (perhaps from a different way the Higgs
+  charge couples to generation 2), then V_cb ~ eps^2 = 0.111,
+  still off by ~2.5x but within O(1) coefficient range.
+
+  SCORE: 0.40 (the lattice c_ij do not close the quantitative gap;
+  the FN mechanism with these charges is order-of-magnitude only)
+
+
+========================================================================
+PART 4: OVERALL GATE 6 CLOSURE ASSESSMENT
+========================================================================
+
+  GATE 6 STATUS BEFORE THIS SCRIPT:
+    [CLOSED] Interpretation B derived (12/12 PASS)
+    [OPEN]   epsilon = 1/3 derivation
+    [OPEN]   Higgs Z_3 charge delta = (1,1,0)
+    [OPEN]   Quantitative CKM improvement
+
+  GATE 6 STATUS AFTER THIS SCRIPT:
+    [CLOSED]  Interpretation B: DERIVED (mass ordering from coupling)
+    [PARTIAL] epsilon = 1/3: score = 0.50
+    [PARTIAL] Higgs delta = (1,1,0): score = 0.55
+    [PARTIAL] Quantitative CKM: score = 0.40
+
+  DETAILED ASSESSMENT:
+  ------------------------------------------------------------
+
+  Item                                                 Score  Status              
+  --------------------------------------------------  ------  --------------------
+  Interpretation B (heaviest = most symmetric)          0.85  DERIVED             
+  epsilon = 1/3                                         0.50  MOTIVATED           
+  Higgs Z_3 charge delta = 1                            0.55  PARTIALLY DERIVED   
+  Quantitative CKM (V_us, V_cb, V_ub)                   0.40  NOT IMPROVED        
+
+  DETAILS:
+
+  Interpretation B (heaviest = most symmetric) [DERIVED]:
+      Staggered mass operator couples most strongly to fully
+      symmetric Z_3 sector. Verified numerically on multiple lattices.
+
+  epsilon = 1/3 [MOTIVATED]:
+      eps = 1/|Z_3| is the natural scale from group theory.
+      The Z_3 projection operator introduces a 1/3 factor.
+      However, the precise value depends on the flavon
+      potential, which is not derived from first principles.
+
+  Higgs Z_3 charge delta = 1 [PARTIALLY DERIVED]:
+      The (1,1,0) pattern follows from FN structure: gen 3 has
+      q=0 so the Higgs charge is irrelevant. The value delta=1
+      (vs delta=2) is supported by lattice calculations at
+      specific L values but the continuum limit is ambiguous.
+
+  Quantitative CKM (V_us, V_cb, V_ub) [NOT IMPROVED]:
+      The lattice-computed c_ij coefficients do not close the
+      quantitative gap. The main tension is V_cb: the charge
+      assignment predicts V_cb ~ eps ~ 0.33, observed 0.042.
+      This factor of 8 is beyond O(1) coefficient corrections.
+
+  OVERALL GATE 6 SCORE: 0.58
+  Previous score (before interpretation derivation): ~0.55
+  After interpretation derivation: ~0.70
+  After this script: ~0.58
+
+  WHAT WOULD CLOSE GATE 6 FULLY:
+  ------------------------------------------------------------
+
+  1. EPSILON = 1/3: Need a DYNAMICAL derivation showing that
+     the Z_3 flavon potential uniquely gives <phi>/M = 1/3.
+     This likely requires specifying the full scalar potential
+     and showing it has a unique minimum at eps = 1/3.
+     Status: HARD.  In standard FN models, eps is a free parameter.
+
+  2. HIGGS CHARGE: Need to show that the continuum limit of the
+     staggered mass operator's Z_3 charge is delta = 1, not 0 or 2.
+     The current analysis shows L-dependence with no clear limit.
+     Status: MEDIUM.  May require a different approach (e.g.,
+     symmetry arguments rather than numerical computation).
+
+  3. QUANTITATIVE CKM: Need either:
+     (a) A different charge assignment that fixes V_cb, or
+     (b) A modification of the FN formula beyond simple eps^|dq|, or
+     (c) An argument that V_cb = eps^2 (not eps^1) from the
+         correct treatment of left-right mixing cancellation.
+     Status: MEDIUM.  The V_cb tension is the most concrete
+     problem and may point to a deeper issue with the charge
+     assignment or the mixing formula.
+
+  BOTTOM LINE:
+  Gate 6 is PARTIALLY closed.  The derivation chain from lattice
+  geometry to CKM charges is largely complete (Interpretation B +
+  S_3 selection give the unique charges).  The remaining gaps are:
+  (1) why eps = 1/3 exactly (motivated but not derived),
+  (2) why delta = 1 specifically (L-dependent on lattice), and
+  (3) quantitative accuracy (factor of 8 in V_cb).
+
+========================================================================
+  Completed in 2.0s
+========================================================================
+
+  Log written to logs/2026-04-12-gate6-ckm-closure.txt

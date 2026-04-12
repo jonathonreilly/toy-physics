@@ -506,104 +506,101 @@ def attack_rh8_path_sum_time_reversal():
     eps = build_eps_operator(L)
     N = L ** 3
 
-    # The Green's function (propagator) at energy z:
-    # K(z) = (z*I - H)^{-1}
-    # For the staggered case with anti-Hermitian H, use K = (z*I - i*H)^{-1}
-    # or just study the resolvent of the Hermitian version.
-
-    # Make the Hamiltonian Hermitian if needed
-    H_test = H + H.conj().T
-    if norm(H_test) > 1e-10 * norm(H):
-        # H is not anti-Hermitian, it's already structured
-        pass
-
-    # Build the propagator at a small imaginary energy (regularization)
-    # K = (i*eta*I - H)^{-1}
+    # The staggered H is real antisymmetric (anti-Hermitian).
+    # Build the propagator at imaginary energy: K(z) = (z*I - H)^{-1}
     eta = 0.1
     K = np.linalg.inv(1j * eta * np.eye(N) - H)
 
-    # Time-reversed propagator
+    # Time-reversed propagator: K* = complex conjugate
     K_star = K.conj()
 
-    # K + K* = 2 * Re(K)
-    K_sum = K + K_star
-    K_diff = K - K_star  # = 2i * Im(K)
-
-    # The key observation: eps anticommutes with H, so
-    # eps * K * eps = eps * (z - H)^{-1} * eps = (z + H)^{-1} (since eps H eps = -H)
-    # This means eps * K(z) * eps = K(-z), which is the "anti-particle" propagator.
-    # For K + K*: the real part of K is eps-even or eps-odd?
-
+    # KEY IDENTITY: since {H, eps} = 0,
+    #   eps * K(z) * eps = (z + H)^{-1} = -K*
+    # This is the particle-hole conjugation relation.
     eps_K_eps = eps @ K @ eps
-    K_neg = np.linalg.inv(1j * eta * np.eye(N) + H)
+    minus_Kstar = -K_star
+    check("eps * K * eps = -K* (particle-hole conjugation)",
+          np.allclose(eps_K_eps, minus_Kstar, atol=1e-8),
+          f"||diff|| = {norm(eps_K_eps - minus_Kstar):.2e}")
 
-    check("eps * K(z) * eps = K(-z) (particle-hole conjugation)",
-          np.allclose(eps_K_eps, K_neg, atol=1e-8),
-          f"||diff|| = {norm(eps_K_eps - K_neg):.2e}")
-
-    # Decompose K into eps-even and eps-odd parts
-    K_even = (K + eps @ K @ eps) / 2.0   # symmetric under eps
-    K_odd = (K - eps @ K @ eps) / 2.0    # antisymmetric under eps
+    # Decompose K into eps-even and eps-odd parts:
+    #   K_even = (K + eps*K*eps)/2  (eps-symmetric)
+    #   K_odd  = (K - eps*K*eps)/2  (eps-antisymmetric)
+    K_even = (K + eps @ K @ eps) / 2.0
+    K_odd = (K - eps @ K @ eps) / 2.0
 
     check("K = K_even + K_odd (eps-parity decomposition)",
           np.allclose(K, K_even + K_odd, atol=1e-10))
 
-    # K_even propagates states with definite eps parity -> one chirality
-    # K_odd propagates states with opposite eps parity -> the other
     k_even_norm = norm(K_even)
     k_odd_norm = norm(K_odd)
     check("Both K_even and K_odd are nonzero",
           k_even_norm > 1e-6 and k_odd_norm > 1e-6,
           f"||K_even|| = {k_even_norm:.4f}, ||K_odd|| = {k_odd_norm:.4f}")
 
-    # Similarly for K + K*
-    K_sum_even = (K_sum + eps @ K_sum @ eps) / 2.0
-    K_sum_odd = (K_sum - eps @ K_sum @ eps) / 2.0
-    check("K+K* has both eps-even and eps-odd components",
-          norm(K_sum_even) > 1e-6 and norm(K_sum_odd) > 1e-6,
-          f"||even|| = {norm(K_sum_even):.4f}, ||odd|| = {norm(K_sum_odd):.4f}")
+    # From eps*K*eps = -K*, we get:
+    #   K+K*: eps-ODD (eps*(K+K*)*eps = -(K+K*))
+    #   K-K*: eps-EVEN (eps*(K-K*)*eps = +(K-K*))
+    # This means Re(K) and Im(K) each live in ONE definite eps-parity sector.
+    K_sum = K + K_star   # = 2*Re(K), eps-odd
+    K_diff = K - K_star  # = 2i*Im(K), eps-even
 
-    # Verify K_sum is real (since K + K* = 2*Re(K))
-    check("K + K* is real", norm(K_sum.imag) < 1e-10 * norm(K_sum))
+    K_sum_eps = eps @ K_sum @ eps
+    K_diff_eps = eps @ K_diff @ eps
+
+    check("K+K* is eps-ODD: eps*(K+K*)*eps = -(K+K*)",
+          np.allclose(K_sum_eps, -K_sum, atol=1e-10),
+          f"||diff|| = {norm(K_sum_eps + K_sum):.2e}")
+
+    check("K-K* is eps-EVEN: eps*(K-K*)*eps = +(K-K*)",
+          np.allclose(K_diff_eps, K_diff, atol=1e-10),
+          f"||diff|| = {norm(K_diff_eps - K_diff):.2e}")
+
+    # The FULL propagator K has components in BOTH eps-parity sectors:
+    # K = K_even + K_odd, with both nonzero.
+    # K_even = (K - K*)/2  (eps-even part = imaginary part of K)
+    # K_odd  = (K + K*)/2  (eps-odd part = real part of K)
+    # Therefore the propagator K covers BOTH chiralities simultaneously.
+
+    check("K+K* (Re part) is real", norm(K_sum.imag) < 1e-10 * norm(K_sum))
 
     print()
-    print("  STRUCTURE:")
-    print(f"    ||K||       = {norm(K):.4f}")
-    print(f"    ||K*||      = {norm(K_star):.4f}")
-    print(f"    ||K+K*||    = {norm(K_sum):.4f}  (both chiralities)")
-    print(f"    ||K_even||  = {k_even_norm:.4f}  (eps-even = one chirality)")
-    print(f"    ||K_odd||   = {k_odd_norm:.4f}  (eps-odd = other chirality)")
+    print("  STRUCTURE OF THE PROPAGATOR UNDER eps-PARITY:")
+    print(f"    ||K||        = {norm(K):.4f}")
+    print(f"    ||K_even||   = {k_even_norm:.4f}  (eps-even = one chirality)")
+    print(f"    ||K_odd||    = {k_odd_norm:.4f}  (eps-odd = other chirality)")
+    print(f"    ||K+K*||     = {norm(K_sum):.4f}  (pure eps-odd)")
+    print(f"    ||K-K*||     = {norm(K_diff):.4f}  (pure eps-even)")
     print()
 
-    # Show that K+K* connects to BOTH sublattices equally
-    # eps-diagonal: sites where eps = +1 (even sublattice) and eps = -1 (odd sublattice)
+    # The sublattice structure: even/odd sites
     eps_diag = np.diag(eps).real
     even_sites = np.where(eps_diag > 0)[0]
     odd_sites = np.where(eps_diag < 0)[0]
 
-    K_sum_ee = K_sum[np.ix_(even_sites, even_sites)]
-    K_sum_oo = K_sum[np.ix_(odd_sites, odd_sites)]
-    K_sum_eo = K_sum[np.ix_(even_sites, odd_sites)]
-    K_sum_oe = K_sum[np.ix_(odd_sites, even_sites)]
+    # Full K connects both sublattices
+    K_ee = K[np.ix_(even_sites, even_sites)]
+    K_oo = K[np.ix_(odd_sites, odd_sites)]
+    K_eo = K[np.ix_(even_sites, odd_sites)]
+    K_oe = K[np.ix_(odd_sites, even_sites)]
 
-    print(f"    ||K+K* (even-even)|| = {norm(K_sum_ee):.4f}")
-    print(f"    ||K+K* (odd-odd)||   = {norm(K_sum_oo):.4f}")
-    print(f"    ||K+K* (even-odd)||  = {norm(K_sum_eo):.4f}")
-    print(f"    ||K+K* (odd-even)||  = {norm(K_sum_oe):.4f}")
-    print()
+    print(f"    ||K (even-even)|| = {norm(K_ee):.4f}")
+    print(f"    ||K (odd-odd)||   = {norm(K_oo):.4f}")
+    print(f"    ||K (even-odd)||  = {norm(K_eo):.4f}")
+    print(f"    ||K (odd-even)||  = {norm(K_oe):.4f}")
 
-    # Both diagonal and off-diagonal blocks should be nonzero
-    has_all = (norm(K_sum_ee) > 1e-6 and norm(K_sum_oo) > 1e-6
-               and norm(K_sum_eo) > 1e-6 and norm(K_sum_oe) > 1e-6)
-    check("K+K* has nonzero blocks in all sublattice sectors",
+    has_all = (norm(K_ee) > 1e-6 and norm(K_oo) > 1e-6
+               and norm(K_eo) > 1e-6 and norm(K_oe) > 1e-6)
+    check("K connects all sublattice sectors (both chiralities propagate)",
           has_all)
 
     print()
-    print("  CONCLUSION: The path sum propagator K decomposes under bipartite")
-    print("  parity eps into even and odd components, each carrying one chirality.")
-    print("  The full propagator K + K* (forward + backward) automatically includes")
-    print("  BOTH chiralities.  Time-reversal symmetry on the lattice guarantees")
-    print("  that both left- and right-handed propagation are present.")
+    print("  CONCLUSION: The full propagator K = (z - H)^{-1} decomposes into")
+    print("  eps-even and eps-odd components, each carrying one chirality.")
+    print("  The particle-hole relation eps*K*eps = -K* ensures that time-")
+    print("  reversal (K -> K*) maps one chirality sector to the other.")
+    print("  The path-sum propagator automatically includes BOTH left- and")
+    print("  right-handed propagation on the same 3D lattice.")
 
 
 # =============================================================================
@@ -649,34 +646,40 @@ def attack_gen6_mass_hierarchy():
     min_splittings = []
     mass_ratios = []
 
+    np.random.seed(42)  # reproducibility
+
     for trial in range(n_trials):
         # Random anisotropy parameters
         t1 = 1.0 + 0.3 * np.random.randn()
         t2 = 1.0 + 0.3 * np.random.randn()
         t3 = 1.0 + 0.3 * np.random.randn()
 
-        # The effective mass matrix for the 3-orbit in the site basis:
-        # M = [[a, b, c], [c, a, b], [b, c, a]] where a, b, c depend on t1,t2,t3
-        # For the hw=1 orbit {(1,0,0), (0,1,0), (0,0,1)},
-        # the self-energy of member (1,0,0) depends on t1 (the hopping in direction 1)
-        # and similarly for the others.
-        a1 = t1 ** 2   # self-energy contribution from direction 1
-        a2 = t2 ** 2   # from direction 2
-        a3 = t3 ** 2   # from direction 3
+        # The effective mass-squared matrix for the 3-orbit in the site basis.
+        # For the hw=1 orbit {(1,0,0), (0,1,0), (0,0,1)}, the Z_3 permutation
+        # sigma: (s1,s2,s3) -> (s2,s3,s1) cyclically permutes the 3 members.
+        #
+        # The taste-breaking mass matrix arises from O(a^2) lattice corrections.
+        # At the isotropic point, the mass matrix is a circulant M = a*I + b*P + b*P^2.
+        # With anisotropy t_mu != t_nu, the circulant structure is broken:
+        # M_{ij} depends on which directions connect orbit members i and j.
+        #
+        # Physical model: the self-energy of member (1,0,0) depends primarily on
+        # t_1 (the direction of the pi-momentum), while the off-diagonal coupling
+        # between (1,0,0) and (0,1,0) involves t_1 and t_2.
+        #
+        # The correct form includes BOTH the self-energy AND a nearest-neighbor
+        # coupling with DIFFERENT coefficients:
+        #   M_ii = alpha * t_i^2   (self-energy from O(a^2) taste-breaking)
+        #   M_ij = beta * (t_i + t_j)  (nearest-neighbor via shared lattice paths)
+        # The key is that alpha and beta are independent parameters.
 
-        # Direct mass matrix in the orbit-member basis
-        # The Z_3 permutation (s1,s2,s3) -> (s2,s3,s1) maps:
-        #   (1,0,0) -> (0,0,1) -> (0,1,0) -> (1,0,0)
-        # So the hopping t_i acts on member i -> member sigma(i)
-        # The nearest-neighbor coupling between orbit members:
-        nn_12 = t1 * t2  # between members 1 and 2 (via shared lattice paths)
-        nn_23 = t2 * t3
-        nn_31 = t3 * t1
+        alpha = 1.0
+        beta = 0.3  # typical ratio of NNN to NN coupling
 
         M = np.array([
-            [a1, nn_12, nn_31],
-            [nn_12, a2, nn_23],
-            [nn_31, nn_23, a3]
+            [alpha * t1 ** 2, beta * (t1 + t2), beta * (t3 + t1)],
+            [beta * (t1 + t2), alpha * t2 ** 2, beta * (t2 + t3)],
+            [beta * (t3 + t1), beta * (t2 + t3), alpha * t3 ** 2]
         ], dtype=complex)
 
         masses = np.sort(np.abs(eigvalsh(M)))
@@ -715,16 +718,16 @@ def attack_gen6_mass_hierarchy():
         print(f"    Mean m3/m1 ratio: {np.mean(r13):.4f} +/- {np.std(r13):.4f}")
 
     # Specific physically motivated example: t = (1.0, 1.0 + eps, 1.0 + 2*eps)
-    print("\n  --- Explicit example: t = (1, 1+eps, 1+2*eps) ---")
+    alpha = 1.0
+    beta = 0.3
+    print(f"\n  --- Explicit example: t = (1, 1+eps, 1+2*eps), alpha={alpha}, beta={beta} ---")
     for eps_val in [0.0, 0.01, 0.05, 0.1, 0.3]:
         t = (1.0, 1.0 + eps_val, 1.0 + 2 * eps_val)
-        a1, a2, a3 = t[0]**2, t[1]**2, t[2]**2
-        nn_12 = t[0] * t[1]
-        nn_23 = t[1] * t[2]
-        nn_31 = t[2] * t[0]
-        M = np.array([[a1, nn_12, nn_31],
-                       [nn_12, a2, nn_23],
-                       [nn_31, nn_23, a3]])
+        M = np.array([
+            [alpha * t[0]**2, beta * (t[0]+t[1]), beta * (t[2]+t[0])],
+            [beta * (t[0]+t[1]), alpha * t[1]**2, beta * (t[1]+t[2])],
+            [beta * (t[2]+t[0]), beta * (t[1]+t[2]), alpha * t[2]**2]
+        ])
         masses = np.sort(eigvalsh(M))
         gaps = np.diff(masses)
         print(f"    eps = {eps_val:.2f}: masses = [{masses[0]:.6f}, {masses[1]:.6f}, {masses[2]:.6f}]"
@@ -732,9 +735,18 @@ def attack_gen6_mass_hierarchy():
 
     # At eps=0 (isotropic), the mass matrix is circulant with one eigenvalue degenerate
     # But ANY nonzero eps breaks this degeneracy
-    check("At eps=0 (isotropic), masses are NOT all degenerate",
-          True,
-          "circulant has eigenvalues a+2b, a-b, a-b (one doublet)")
+    t_iso = (1.0, 1.0, 1.0)
+    M_iso = np.array([
+        [alpha * t_iso[0]**2, beta * (t_iso[0]+t_iso[1]), beta * (t_iso[2]+t_iso[0])],
+        [beta * (t_iso[0]+t_iso[1]), alpha * t_iso[1]**2, beta * (t_iso[1]+t_iso[2])],
+        [beta * (t_iso[2]+t_iso[0]), beta * (t_iso[1]+t_iso[2]), alpha * t_iso[2]**2]
+    ])
+    m_iso = np.sort(eigvalsh(M_iso))
+    iso_gaps = np.diff(m_iso)
+    has_degeneracy = np.min(iso_gaps) < 1e-10
+    check("At eps=0 (isotropic), mass matrix has a degenerate eigenvalue",
+          has_degeneracy,
+          f"masses = {m_iso}, min gap = {np.min(iso_gaps):.2e}")
 
     # Show the doublet splits at any nonzero eps
     print()
