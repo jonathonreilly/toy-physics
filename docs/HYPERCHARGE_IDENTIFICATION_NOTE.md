@@ -2,9 +2,9 @@
 
 ## Statement
 
-**Theorem.** The U(1) factor in the commutant algebra su(3) + u(1) of
-{SU(2)\_weak, SWAP\_{23}} in End(C^8) is specifically hypercharge U(1)\_Y.
-This identification is forced by the algebra -- there is no freedom of choice.
+**Theorem.** The unique traceless U(1) direction in the commutant algebra
+su(3) + u(1) of {SU(2)\_weak, SWAP\_{23}} in End(C^8) matches the Standard
+Model hypercharge assignments on the left-handed doublet surface.
 
 ## Setup
 
@@ -40,11 +40,11 @@ Eigenvalues on C^8: a (x6 quark states), b (x2 lepton states).
 
     6a + 2b = 0  =>  b = -3a
 
-This leaves a unique generator (up to normalization):
+This leaves a unique traceless generator (up to normalization):
 
     Y = a (P_sym - 3 P_anti)
 
-## Proof: This is Hypercharge
+## Proof: This Matches Hypercharge
 
 ### 1. Eigenvalue Matching
 
@@ -55,7 +55,8 @@ With conventional normalization a = 1/3:
 | (2,3) = C^2 x Sym^2(C^2) | 6 | +1/3 | Left-handed quark doublet |
 | (2,1) = C^2 x Anti^2(C^2) | 2 | -1 | Left-handed lepton doublet |
 
-These are exactly the Standard Model hypercharge values:
+These match the Standard Model hypercharge values on the left-handed
+doublet surface:
 - Q\_L = (u\_L, d\_L): Y = +1/3
 - L\_L = (nu\_L, e\_L): Y = -1
 
@@ -82,17 +83,18 @@ The argument is purely algebraic:
 3. This reduces the space to **dimension 1** -- a unique generator up to
    normalization.
 4. That unique generator has eigenvalue ratio 1:(-3) on (2,3) vs (2,1).
-5. This IS hypercharge. No choice is involved.
+5. This matches hypercharge on the left-handed doublet surface.
 
-### 4. Anomaly Checks
+### 4. Consistency Checks on the Left-Handed Surface
 
 For the 8 left-handed states:
 
-- **Tr[Y] = 0**: 6(1/3) + 2(-1) = 0. Satisfied (gravitational anomaly).
-- **Tr[Y {S\_i, S\_j}] = 0**: The SU(2)^2-U(1) mixed anomaly vanishes
-  because Tr[Y] = 0 over each SU(2) multiplet separately
-  (Tr\_color[Y] = 3(1/3) + 1(-1) = 0).
-- **Tr[Y^3] != 0**: Expected -- cancellation requires right-handed fermions.
+- **Tr[Y] = 0**: 6(1/3) + 2(-1) = 0. The traceless direction removes the
+  overall phase.
+- **Tr[Y {S\_i, S\_j}] = 0**: The SU(2)^2-U(1) mixed trace vanishes on this
+  left-handed surface because Tr\_color[Y] = 3(1/3) + 1(-1) = 0.
+- **Tr[Y^3] != 0**: Expected on a left-handed-only surface. Full anomaly
+  cancellation requires the right-handed fermions as well.
 
 ### 5. GUT Normalization
 
@@ -103,14 +105,15 @@ SU(5) embedding.
 ## Key Insight
 
 The hypercharge identification is not an additional input or assumption.
-It is a **consequence** of three ingredients:
+It is a **consequence** of three ingredients on the left-handed surface:
 
 1. C^8 = (C^2)^{x3} (taste space from the staggered lattice)
 2. SU(2)\_weak on factor 1 (from bipartite structure)
 3. SWAP\_{23} symmetry (from spatial permutation)
 
-The commutant algebra forces su(3) + u(1), and within that algebra,
-the traceless U(1) generator is **unique** and **is** hypercharge.
+The commutant algebra forces su(3) + u(1), and within that algebra the
+traceless U(1) generator is **unique up to normalization** and matches
+hypercharge.
 
 ## Files
 

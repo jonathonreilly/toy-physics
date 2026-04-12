@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
-"""Hypercharge U(1)_Y identification from commutant + anomaly cancellation.
+"""Hypercharge U(1)_Y identification from commutant + left-handed consistency.
 
 Physics context
 ---------------
 The commutant of {SU(2)_weak, SWAP_{23}} in End(C^8) is gl(3) + gl(1).
 The gl(3) part gives SU(3)_color.  But the gl(1) part -- is it hypercharge?
 
-This script proves that the U(1) generator from the commutant is UNIQUELY
-hypercharge U(1)_Y, not just "some leftover U(1)".  The proof has three legs:
+This script shows that the unique traceless U(1) generator from the commutant
+matches hypercharge U(1)_Y on the left-handed doublet surface.  The evidence
+has three legs:
 
   1. EIGENVALUE MATCHING: The U(1) generator assigns eigenvalues in the
      ratio 1:(-3) to the (2,3) and (2,1) subspaces, matching Y_quark/Y_lepton.
@@ -15,10 +16,10 @@ hypercharge U(1)_Y, not just "some leftover U(1)".  The proof has three legs:
   2. ELECTRIC CHARGE: Q = T_3 + Y/2 gives the correct charges
      (2/3, -1/3, 0, -1) for up, down, neutrino, electron.
 
-  3. ANOMALY CANCELLATION: The U(1) generator is the UNIQUE anomaly-free
-     U(1) in the commutant algebra.  Tr[Y] = 0, Tr[Y^3] = 0, and the
-     mixed anomaly Tr[Y T_a^2] = 0 are all satisfied -- and they FIX the
-     normalization uniquely (up to overall sign).
+  3. LEFT-HANDED CONSISTENCY: The traceless direction on this surface is
+     unique up to normalization.  Tr[Y] = 0 and the SU(2)^2-U(1) mixed trace
+     vanish on the left-handed sector, while Tr[Y^3] != 0 is expected because
+     the right-handed fermions are not included here.
 
   4. GUT NORMALIZATION: The ratio of eigenvalues matches the SU(5) GUT
      embedding with the standard sqrt(3/5) normalization factor.
@@ -165,8 +166,8 @@ print("  Interpretation:")
 print("    Y = +1/3 on 6 states = (2,3) = quark doublet (3 colors x 2 weak)")
 print("    Y = -1   on 2 states = (2,1) = lepton doublet (1 singlet x 2 weak)")
 print()
-print("  These ARE the Standard Model hypercharge assignments for left-handed")
-print("  fermions!  Q_L doublet has Y = 1/3, L_L doublet has Y = -1.")
+print("  These match the Standard Model hypercharge assignments on the")
+print("  left-handed doublet surface: Q_L has Y = 1/3, L_L has Y = -1.")
 
 # ============================================================================
 # PART 2: Verify commutation with SU(2) and SU(3)
@@ -309,11 +310,11 @@ else:
 
 
 # ============================================================================
-# PART 4: Anomaly cancellation
+# PART 4: Consistency checks on the left-handed surface
 # ============================================================================
 print()
 print("=" * 72)
-print("PART 4: Anomaly cancellation")
+print("PART 4: Consistency checks on the left-handed surface")
 print("=" * 72)
 print()
 
@@ -336,17 +337,18 @@ n_leptons = 2
 
 # Condition 1: Tr[Y] = 0
 trY = n_quarks * y_quarks + n_leptons * y_leptons
-print(f"  Anomaly condition 1: Tr[Y] = {n_quarks}*({y_quarks:.4f}) + {n_leptons}*({y_leptons:.4f})")
+print(f"  Consistency check 1: Tr[Y] = {n_quarks}*({y_quarks:.4f}) + {n_leptons}*({y_leptons:.4f})")
 print(f"    = {trY:.6f}")
-print(f"    Satisfied: {abs(trY) < 1e-10}")
+print(f"    Satisfied on this surface: {abs(trY) < 1e-10}")
 print()
 
 # Condition 2: Tr[Y^3] = 0
 trY3 = n_quarks * y_quarks**3 + n_leptons * y_leptons**3
-print(f"  Anomaly condition 2: Tr[Y^3] = {n_quarks}*({y_quarks:.4f})^3 + {n_leptons}*({y_leptons:.4f})^3")
+print(f"  Consistency check 2: Tr[Y^3] = {n_quarks}*({y_quarks:.4f})^3 + {n_leptons}*({y_leptons:.4f})^3")
 print(f"    = {n_quarks * y_quarks**3:.6f} + {n_leptons * y_leptons**3:.6f}")
 print(f"    = {trY3:.6f}")
 print(f"    Satisfied: {abs(trY3) < 1e-10}")
+print("    NOTE: For a left-handed-only surface, Tr[Y^3] is expected to be nonzero.")
 print()
 
 # Condition 3: Tr[Y T_a^2] for SU(3) generators
@@ -364,7 +366,7 @@ print()
 # More precisely: Tr[Y T_a T_b] = Tr_Y * C(r) * delta_{ab}
 # where the trace is over the full 8-dim space.
 # Let's compute it directly:
-print(f"  Anomaly condition 3: Tr[Y T_a T_b] for SU(3)")
+print(f"  Consistency check 3: Tr[Y T_a T_b] for SU(3)")
 for a_idx in range(8):
     for b_idx in range(a_idx, min(a_idx + 1, 8)):
         val = np.trace(Y_raw_8 @ T_color_8[a_idx] @ T_color_8[b_idx]).real
@@ -382,8 +384,8 @@ for a_idx in range(8):
 # it cancels when RIGHT-handed fermions (u_R, d_R, e_R) are included.
 print()
 print("  NOTE: For a single chirality, Tr[Y T_a^2] need not vanish.")
-print("  Anomaly cancellation occurs between left- and right-handed sectors.")
-print("  The LEFT-HANDED sector alone has the anomaly coefficients we computed.")
+print("  Full anomaly cancellation requires the right-handed fermions as well.")
+print("  The LEFT-HANDED sector alone is a consistency check, not a full anomaly test.")
 print()
 
 # Condition 4: Tr[Y {T_i, T_j}] for SU(2) generators
@@ -391,7 +393,7 @@ print()
 # {T_i, T_j} = delta_{ij}/2 * I_2 (on the weak factor)
 # So Tr[Y {T_i, T_j}] = delta_{ij}/2 * Tr_color[Y]
 # = delta_{ij}/2 * (3 * 1/3 + 1 * (-1)) = delta_{ij}/2 * 0 = 0
-print(f"  Anomaly condition 4: Tr[Y {{T_i, T_j}}] for SU(2)")
+print(f"  Consistency check 4: Tr[Y {{T_i, T_j}}] for SU(2)")
 for i in range(3):
     for j in range(i, i + 1):
         anti = S[i] @ S[j] + S[j] @ S[i]
@@ -404,11 +406,11 @@ print(f"    SU(2)^2-U(1) mixed anomaly vanishes: {abs(su2_mixed_anomaly) < 1e-10
 
 
 # ============================================================================
-# PART 5: Uniqueness -- Y is the ONLY anomaly-free U(1)
+# PART 5: Uniqueness -- Y is the unique traceless U(1) direction
 # ============================================================================
 print()
 print("=" * 72)
-print("PART 5: Uniqueness of hypercharge from anomaly freedom")
+print("PART 5: Uniqueness of the traceless U(1) direction")
 print("=" * 72)
 print()
 
@@ -428,12 +430,13 @@ print()
 #
 # This gives eigenvalues alpha on quarks, -3*alpha on leptons.
 # Choosing alpha = 1/3: Y = 1/3 on quarks, -1 on leptons.
-# This IS the Standard Model hypercharge for left-handed fermions.
+# This matches the Standard Model hypercharge assignments on the
+# left-handed doublet surface.
 
 print("  The commutant contains a 2-parameter family of U(1) generators:")
 print("    Y(alpha, beta) = alpha * P_sym + beta * P_anti")
 print()
-print("  Requiring Tr[Y] = 0 (remove overall phase / gravitational anomaly):")
+print("  Requiring Tr[Y] = 0 (remove the overall phase):")
 print("    6*alpha + 2*beta = 0  =>  beta = -3*alpha")
 print("  This leaves a ONE-parameter family: Y = alpha * (P_sym - 3*P_anti)")
 print()
@@ -441,7 +444,7 @@ print("  The normalization alpha is fixed by convention. Standard choice: alpha 
 print("  gives Y_quark = 1/3, Y_lepton = -1.")
 print()
 
-# Verify: Tr[Y^3] = 0 is AUTOMATICALLY satisfied
+# Verify: Tr[Y^3] on the left-handed surface is not zero
 alpha = 1.0  # generic
 Y_generic = alpha * P_sym_8 - 3 * alpha * P_anti_8
 trY3_generic = np.trace(Y_generic @ Y_generic @ Y_generic).real
@@ -450,9 +453,9 @@ print(f"  Check Tr[Y^3] for generic alpha:")
 print(f"    Tr[Y^3] = 6*(alpha)^3 + 2*(-3*alpha)^3 = 6*alpha^3 - 54*alpha^3 = -48*alpha^3")
 print(f"    This is NOT zero for a single left-handed generation.")
 print()
-print("  The U(1)^3 anomaly vanishes in the FULL SM only when right-handed")
+print("  The U(1)^3 anomaly cancels only in the FULL SM when right-handed")
 print("  fermions are included.  For a single left-handed generation, Tr[Y^3] != 0")
-print("  is expected -- it cancels against the right-handed contributions.")
+print("  is expected.")
 print()
 
 # The KEY point: within our 8-dimensional left-handed sector,
@@ -461,7 +464,8 @@ print("  UNIQUENESS THEOREM:")
 print("  Within the commutant of {SU(2), SWAP_23} in End(C^8),")
 print("  there is exactly ONE traceless U(1) generator (up to normalization).")
 print("  Its eigenvalues are in the ratio 1:(-3) on the (2,3) vs (2,1) subspaces.")
-print("  This IS the Standard Model hypercharge.")
+print("  This matches the Standard Model hypercharge on the left-handed")
+print("  doublet surface.")
 
 
 # ============================================================================
@@ -593,11 +597,11 @@ print(Q_sa.real)
 
 
 # ============================================================================
-# PART 8: Alternative U(1) choices and why they fail
+# PART 8: Alternative U(1) choices and why the traceless one is singled out
 # ============================================================================
 print()
 print("=" * 72)
-print("PART 8: No other anomaly-free U(1) exists")
+print("PART 8: No other traceless U(1) exists on this surface")
 print("=" * 72)
 print()
 
@@ -651,8 +655,8 @@ print("    dim(U(1) space in commutant) = 2  (center of u(3), plus u(1))")
 print("    dim(traceless subspace) = 1       (one linear constraint)")
 print("    => UNIQUE traceless U(1) generator (up to normalization)")
 print()
-print("  Therefore: U(1)_Y IS the commutant U(1), not by choice but by")
-print("  the structure of the algebra.  There is no freedom.")
+print("  Therefore: the commutant U(1) is uniquely fixed on this surface,")
+print("  and its eigenvalues match U(1)_Y.")
 
 
 # ============================================================================
@@ -692,8 +696,9 @@ print("=" * 72)
 print("FINAL SUMMARY")
 print("=" * 72)
 print()
-print("  THEOREM: The U(1) in the commutant su(3) + u(1) is specifically")
-print("  hypercharge U(1)_Y.  This is established by THREE independent arguments:")
+print("  THEOREM: The unique traceless U(1) in the commutant su(3) + u(1)")
+print("  matches hypercharge U(1)_Y on the left-handed doublet surface.")
+print("  This is established by THREE independent arguments:")
 print()
 print("  1. EIGENVALUE MATCHING")
 print("     The unique traceless U(1) in the commutant has eigenvalues")
@@ -708,13 +713,12 @@ print("  3. UNIQUENESS")
 print("     The commutant u(3)+u(1) contains a 2-dimensional space of U(1)")
 print("     generators.  The tracelessness condition (removing the trivial")
 print("     overall phase) reduces this to a UNIQUE generator (up to")
-print("     normalization).  This unique generator IS hypercharge.")
-print("     There is no choice involved -- the identification is forced.")
+print("     normalization).  This unique generator matches hypercharge.")
 print()
 print("  4. GUT NORMALIZATION")
 print("     The eigenvalue ratio 1:(-3) is consistent with the SU(5) GUT")
 print("     embedding, where Y_GUT = sqrt(3/5) * Y_SM.")
 print()
-print("  BOTTOM LINE: The commutant U(1) does not need to be 'identified as'")
-print("  hypercharge -- it IS hypercharge, uniquely and inevitably.")
+print("  BOTTOM LINE: The commutant U(1) is uniquely fixed on this surface")
+print("  and matches hypercharge on the left-handed sector.")
 print("=" * 72)
