@@ -23,8 +23,9 @@ FIVE SELECTION MECHANISMS TESTED:
   4. Representation uniqueness in Z_3^3
   5. S_3 permutation symmetry (most promising)
 
-RESULT: The S_3 symmetry argument (#5) UNIQUELY selects (5,3,0)/(4,2,0)
-by requiring maximal spatial permutation symmetry at each generation level.
+RESULT: The S_3 symmetry argument (#5) strongly prefers (5,3,0)/(4,2,0)
+under Interpretation B, but the charge choice remains a bounded selection
+argument rather than a complete CKM derivation.
 
 PStack experiment: ckm-dynamical-selection
 Self-contained: numpy + scipy only.
@@ -623,7 +624,7 @@ def part3_anomaly_cancellation(charge_decompositions, low_chi2_combos):
     log(f"  Need: {needed_lep_mod3}")
 
     selects = len(anomaly_free) == 1 and anomaly_free[0]['q_up'] == (5, 3, 0)
-    log(f"\n  RESULT: Anomaly cancellation {'UNIQUELY selects' if selects else 'does NOT uniquely select'} (5,3,0)/(4,2,0)")
+    log(f"\n  RESULT: Anomaly cancellation {'selects' if selects else 'does NOT select'} (5,3,0)/(4,2,0) under the current assumptions")
 
     return selects, anomaly_free
 
@@ -746,13 +747,13 @@ def part4_representation_uniqueness(charge_decompositions):
 def part5_s3_symmetry_selection(charge_decompositions, q_to_vecs):
     """
     The S_3 permutation symmetry of the 3 spatial directions provides
-    a UNIQUE selection mechanism for the FN charges.
+    a bounded selection mechanism for the FN charges.
 
     PRINCIPLE: At each generation level, choose the Z_3^3 vector with
     MAXIMAL S_3 symmetry.  If multiple vectors have the same symmetry
     class, choose the one from the orbit with smallest size (most symmetric).
 
-    This principle uniquely selects:
+    This principle prefers:
       Gen 3 (q=0): (0,0,0) -- the ONLY vector, fully symmetric
       Gen 2 (q=3): (1,1,1) -- the UNIQUE fully symmetric vector
       Gen 1 (q=5): (1,2,2) -- the UNIQUE partially symmetric orbit
@@ -1036,7 +1037,7 @@ def part5_s3_symmetry_selection(charge_decompositions, q_to_vecs):
 
 def part6_formal_proof(q_to_vecs):
     """
-    Formal proof that the S_3 symmetry principle uniquely selects
+    Formal proof that the S_3 symmetry principle selects
     q = (5, 3, 0) for the up sector.
 
     The proof proceeds by exhaustive enumeration of all possible
@@ -1223,7 +1224,7 @@ def part6_formal_proof(q_to_vecs):
     log(f"  Interpretation B is the CORRECT one.")
     log(f"")
     log(f"  FINAL RESULT:")
-    log(f"  The S_3 symmetry principle (Interpretation B) UNIQUELY selects")
+    log(f"  The S_3 symmetry principle (Interpretation B) selects")
     log(f"  q_up = (5, 3, 0) with the directional assignment:")
     log(f"    Gen 3: (0,0,0) -- trivial Z_3^3 representation")
     log(f"    Gen 2: (1,1,1) -- diagonal Z_3^3 representation")
@@ -1317,7 +1318,7 @@ def part7_down_sector(q_to_vecs):
     log(f"  generations where it shifts the effective charge.")
 
     # Verify the full down-sector assignment
-    log(f"\n  DERIVED DOWN SECTOR:")
+    log(f"\n  SUPPORTED DOWN SECTOR:")
     log(f"    Gen 3: q_down = 0  (Higgs decouples from q=0)")
     log(f"    Gen 2: q_down = q_up_2 - 1 = 3 - 1 = 2")
     log(f"    Gen 1: q_down = q_up_1 - 1 = 5 - 1 = 4")
@@ -1415,16 +1416,16 @@ def part8_summary(energy_selects, hierarchy_selects, anomaly_selects,
     log(f"  6. Higgs Z_3 charge delta=1 -> q_down = q_up - (1,1,0)")
     log(f"  7. eps = 1/3 from Z_3 -> quantitative CKM prediction")
     log(f"")
-    log(f"  This constitutes a COMPLETE derivation of the CKM charge structure")
+    log(f"  This constitutes a CONDITIONAL derivation of the CKM charge structure")
     log(f"  from the geometry of the 3D lattice, contingent on:")
-    log(f"  - The S_3 symmetry principle (axiom, not derived)")
-    log(f"  - The Higgs Z_3 charge delta = 1 (axiom, not derived)")
+    log(f"  - The S_3 symmetry principle (working input, not derived here)")
+    log(f"  - The Higgs Z_3 charge delta = 1 (working input, not derived here)")
     log(f"  - The FN mechanism with eps = 1/3")
 
     # Score card
     scores = {
         "Z_3 charge range (0-6) matches data":     0.95,
-        "S_3 uniquely selects q_up = (5,3,0)":     0.85,
+        "S_3 supports q_up = (5,3,0)":             0.85,
         "Higgs charge gives q_down = (4,2,0)":     0.70,
         "CKM mixing angles (|V_us|, |V_cb|, |V_ub|)": 0.65,
         "Full derivation chain is self-consistent": 0.80,
@@ -1461,7 +1462,7 @@ def main():
     log("=" * 72)
     log("DYNAMICAL SELECTION OF CKM CHARGES FROM Z_3 SYMMETRY")
     log("=" * 72)
-    log(f"  Can we UNIQUELY SELECT q_up = (5,3,0) and q_down = (4,2,0)")
+    log(f"  Can we select q_up = (5,3,0) and q_down = (4,2,0)")
     log(f"  from the Z_3 symmetry of the 3D staggered lattice?")
     log(f"")
     log(f"  Prior result: 29 low-chi2 charge combinations are Z_3-reachable.")

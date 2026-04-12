@@ -48,9 +48,10 @@ APPROACH:
 
     We verify: the dominant Z_3 charge of the mass operator is delta = 1.
 
-  If BOTH derivations succeed, the CKM charge selection becomes a THEOREM:
-    Lattice geometry -> Z_3 taste -> S_3 symmetry -> unique charges
-    with no free inputs.
+  If BOTH derivations succeed, the CKM charge selection becomes a bounded
+  lattice result:
+    Lattice geometry -> Z_3 taste -> S_3 symmetry -> preferred charges
+    with the remaining Higgs-sector and normalization assumptions made explicit.
 
 PStack experiment: ckm-interpretation-derivation
 Self-contained: numpy + scipy only.
@@ -962,18 +963,18 @@ def part2_higgs_charge(lattice_sizes: list[int], dimensions: list[int]) -> bool:
 
 def part3_ckm_theorem(interp_b_derived: bool, higgs_charge_derived: bool):
     """
-    If both inputs are derived, assemble the complete derivation chain
-    showing the CKM charge structure is a theorem of the lattice.
+    If both inputs are supported, assemble the bounded derivation chain
+    showing the CKM charge structure is a conditional lattice result.
     """
     log(f"\n\n{'=' * 72}")
-    log("PART 3: THE CKM CHARGE SELECTION AS A THEOREM")
+    log("PART 3: THE CKM CHARGE SELECTION AS A BOUNDED RESULT")
     log("=" * 72)
 
     log(f"\n  INPUT STATUS:")
     log(f"    Interpretation B (heaviest = most symmetric): "
-        f"{'DERIVED' if interp_b_derived else 'PARTIAL'}")
+        f"{'SUPPORTED' if interp_b_derived else 'PARTIAL'}")
     log(f"    Higgs Z_3 charge delta = 1: "
-        f"{'DERIVED' if higgs_charge_derived else 'PARTIAL'}")
+        f"{'SUPPORTED' if higgs_charge_derived else 'PARTIAL'}")
 
     log(f"\n  DERIVATION CHAIN:")
     log(f"  " + "=" * 60)
@@ -997,7 +998,7 @@ def part3_ckm_theorem(interp_b_derived: bool, higgs_charge_derived: bool):
     log(f"")
     log(f"  STEP 3 [from frontier_ckm_dynamical_selection.py, Part 6]:")
     log(f"    S_3 symmetry of d = 3 spatial directions, combined with")
-    log(f"    Interpretation B, UNIQUELY selects:")
+    log(f"    Interpretation B, selects:")
     log(f"      Gen 3: (0,0,0) -> q = 0  [fully symmetric, heaviest]")
     log(f"      Gen 2: (1,1,1) -> q = 3  [fully symmetric, middle]")
     log(f"      Gen 1: (1,2,2) -> q = 5  [partially symmetric, lightest]")
@@ -1024,7 +1025,7 @@ def part3_ckm_theorem(interp_b_derived: bool, higgs_charge_derived: bool):
     log(f"    Order-of-magnitude agreement; O(1) coefficients needed for")
     log(f"    precise values (standard in FN models).")
 
-    log(f"\n  THEOREM STATEMENT:")
+    log(f"\n  BOUNDED RESULT:")
     log(f"  " + "-" * 60)
     log(f"  Given:")
     log(f"    (i)   A 3D staggered lattice with Z_3 taste symmetry")
@@ -1032,7 +1033,7 @@ def part3_ckm_theorem(interp_b_derived: bool, higgs_charge_derived: bool):
     log(f"    (iii) Three generations with mass ordering")
     log(f"  Then:")
     log(f"    q_up = (5, 3, 0) and q_down = (4, 2, 0)")
-    log(f"  are the UNIQUE charge assignments consistent with:")
+    log(f"  are the preferred charge assignments consistent with:")
     log(f"    - The lattice mass operator coupling (Step 2)")
     log(f"    - S_3 spatial symmetry (Step 3)")
     log(f"    - The Higgs Z_3 charge from the mass operator (Step 4)")
@@ -1044,7 +1045,7 @@ def part3_ckm_theorem(interp_b_derived: bool, higgs_charge_derived: bool):
     scores = {
         "Step 1: Z_3 charge range from lattice":              0.95,
         "Step 2: Mass ordering from eps coupling":             0.85 if interp_b_derived else 0.50,
-        "Step 3: S_3 uniquely selects q_up = (5,3,0)":        0.85,
+        "Step 3: S_3 supports q_up = (5,3,0)":                0.85,
         "Step 4: Higgs Z_3 charge delta = 1":                  0.70 if higgs_charge_derived else 0.30,
         "Step 5: Down sector from delta = 1":                  0.80,
         "Step 6: Quantitative CKM (order of magnitude)":       0.65,
@@ -1068,14 +1069,14 @@ def part3_ckm_theorem(interp_b_derived: bool, higgs_charge_derived: bool):
     log(f"  Improvement: +{overall - 0.69:.2f}")
 
     if interp_b_derived and higgs_charge_derived:
-        log(f"\n  STATUS: Both inputs DERIVED. The CKM charge selection is")
-        log(f"  now a theorem of the lattice geometry, not a phenomenological")
-        log(f"  scan. The only remaining free parameter is the overall scale")
-        log(f"  (eps = 1/3) which comes directly from Z_3.")
+        log(f"\n  STATUS: Both inputs are supported on the current lattice surface.")
+        log(f"  The CKM charge selection is now a bounded lattice result, not")
+        log(f"  a purely phenomenological scan. The remaining assumptions are")
+        log(f"  explicit: the Higgs-sector choice and eps = 1/3.")
     elif interp_b_derived:
-        log(f"\n  STATUS: Interpretation B is DERIVED. The Higgs Z_3 charge")
-        log(f"  is partially verified (L-dependent, confirmed at L=8).")
-        log(f"  The derivation is NEARLY complete.")
+        log(f"\n  STATUS: Interpretation B is supported. The Higgs Z_3 charge")
+        log(f"  is only partially verified (L-dependent, confirmed at L=8).")
+        log(f"  The derivation remains conditional.")
     else:
         log(f"\n  STATUS: Both inputs show supporting evidence but neither")
         log(f"  is fully rigorous yet. Further lattice analysis needed.")
@@ -1092,8 +1093,9 @@ def main():
     log("=" * 72)
     log("DERIVING INTERPRETATION B AND HIGGS Z_3 CHARGE FROM THE LATTICE")
     log("=" * 72)
-    log(f"  Goal: DERIVE the two assumed inputs in the CKM charge selection,")
-    log(f"  converting it from a phenomenological scan to a theorem.")
+    log(f"  Goal: test whether the two assumed inputs in the CKM charge selection")
+    log(f"  can be promoted to a bounded lattice result,")
+    log(f"  converting it from a phenomenological scan to a bounded lattice result.")
     log(f"")
     log(f"  Input 1: Why heaviest generation = most symmetric (Interp. B)")
     log(f"  Input 2: Why Higgs Z_3 charge = 1")
@@ -1111,7 +1113,7 @@ def main():
     # Part 2: Derive Higgs Z_3 charge
     higgs_ok = part2_higgs_charge(lattice_sizes, dimensions)
 
-    # Part 3: Assemble the complete theorem
+    # Part 3: Assemble the bounded derivation
     scores = part3_ckm_theorem(interp_b_ok, higgs_ok)
 
     dt = time.time() - t0

@@ -18,8 +18,8 @@ APPROACH:
   2. Derive g_2^2 = 1/(d+1) analytically from bipartite lattice structure
   3. Determine the U(1) coupling g_Y^2 from sin^2(theta_W) = 0.231 at M_Z
   4. Check if g_Y^2 is a recognizable geometric quantity
-  5. Test: do g_3^2 = 1, g_2^2 = 1/4, g_Y^2 = (derived) reproduce ALL
-     three observed gauge couplings at M_Z?
+  5. Test: do g_3^2 = 1, g_2^2 ≈ 1/4, and candidate g_Y^2 values
+     reproduce the observed gauge couplings at M_Z?
 
 Self-contained: numpy + scipy only.
 PStack experiment: gauge-couplings-geometric
@@ -220,7 +220,7 @@ log("  g_Y^2(bare) = {:.6f}  (alpha_Y = {:.8f})".format(
 log()
 log("  KEY OBSERVATION: g_2^2 = {:.6f} vs 1/4 = 0.250000".format(G2_SQ_OBS))
 log("  Error: {:.2f}%".format(abs(G2_SQ_OBS - 0.25) / 0.25 * 100))
-log("  This is 1/(d+1) with d=3 spatial dimensions!")
+log("  This is numerically close to 1/(d+1) with d=3 spatial dimensions.")
 log()
 
 
@@ -1159,7 +1159,7 @@ log("    SU(3): g_3^2 = 1                    [ESTABLISHED]")
 log("           From Z_3 clock-shift algebra on cubic lattice vertex coloring.")
 log("           alpha_3(bare) = 1/(4*pi) = {:.8f}".format(ALPHA_S_BARE))
 log()
-log("    SU(2): g_2^2 = 1/(d+1) = 1/4       [NEW, 1.6% match]")
+log("    SU(2): g_2^2 = 1/(d+1) = 1/4       [NEW, 1.6% consistency]")
 log("           From Z_2 bipartite structure with d+1 spacetime directions.")
 log("           alpha_2(bare) = 1/(16*pi) = {:.8f}".format(ALPHA_2_GEO))
 log("           Required:                     {:.8f}".format(ALPHA_2_BARE_OBS))
@@ -1300,7 +1300,7 @@ log("     For alpha ~ 0.02, this is a ~2% effect on the coupling.")
 log()
 log("  BOTTOM LINE: Our 1-loop results have ~2-5% systematic uncertainty.")
 log("  The 1.6% agreement of g_2^2 = 1/4 is within this uncertainty,")
-log("  meaning it could be EXACT after proper matching.")
+log("  so it is a consistency pattern rather than a derivation here.")
 log()
 
 
@@ -1315,13 +1315,14 @@ log()
 
 log("  RESULT 1: g_2^2 = 1/(d+1) = 1/4 for the SU(2) bare coupling")
 log("  ============================================================")
-log("  The required bare SU(2) coupling g_2^2 = {:.6f} matches".format(G2_SQ_OBS))
-log("  1/(d+1) = 1/4 = 0.250 to 1.6% accuracy. This is within the")
-log("  systematic uncertainty of 1-loop running (~2-5%).")
+log("  The required bare SU(2) coupling g_2^2 = {:.6f} sits".format(G2_SQ_OBS))
+log("  1.6% above 1/(d+1) = 1/4 = 0.250. This is within the")
+log("  systematic uncertainty of 1-loop running (~2-5%), so the law is")
+log("  best read as a strong consistency pattern, not a derivation.")
 log()
 log("  Physical interpretation: The Z_2 bipartite structure of the cubic")
-log("  lattice in d+1 = 4 spacetime dimensions distributes the SU(2)")
-log("  gauge flux equally across d+1 directions, giving g_2^2 = 1/(d+1).")
+log("  lattice in d+1 = 4 spacetime dimensions remains compatible with")
+log("  g_2^2 ≈ 1/(d+1), but this script does not derive the law.")
 log()
 log("  alpha_2(bare) = 1/(16*pi) = {:.8f}".format(1/(16*PI)))
 log("  alpha_2(M_Z) predicted: {:.8f}".format(
@@ -1348,7 +1349,7 @@ log("    sin^2(tW)(M_Z)  = {:.5f}  (obs: {:.5f})  error: {:.2f}%".format(
     abs(r_3_20["sin2tw"] - SIN2_TW_MZ) / SIN2_TW_MZ * 100))
 log()
 
-log("  RESULT 3: The complete framework predicts")
+log("  RESULT 3: The candidate framework predicts")
 log("  ==========================================")
 log()
 log("  Three bare couplings from lattice geometry:")
@@ -1370,14 +1371,15 @@ log("    sin^2(tW)(M_Z):  {:.1f}% accuracy".format(
 log()
 
 log("  ASSESSMENT:")
-log("  g_2^2 = 1/4 is a STRONG result -- simple, geometric, and accurate.")
+log("  g_2^2 = 1/4 is a STRONG consistency result -- simple, geometric,")
+log("  and accurate within the current running assumptions.")
 log("  g_Y^2 = 3/20 is the SU(5) relation, which is well-motivated but")
 log("  not independently derived from lattice geometry. The fact that it")
 log("  equals d/((d+1)(d+2)) provides a possible geometric interpretation.")
 log()
 log("  The dream of ALL THREE couplings from geometry is PARTIALLY realized:")
 log("  - SU(3): YES (Z_3 clock-shift)")
-log("  - SU(2): YES (Z_2 bipartite, 1.6% match, likely exact)")
+log("  - SU(2): STRONG CONSISTENCY (Z_2 bipartite, 1.6% match)")
 log("  - U(1):  CONDITIONAL (requires SU(5)-like relation at lattice scale)")
 log()
 

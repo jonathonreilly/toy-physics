@@ -4,11 +4,11 @@ CKM Matrix from Z_3 Representation Theory
 ==========================================
 
 QUESTION: Do the best-fit Froggatt-Nielsen charges q_up = (5,3,0) and
-q_down = (4,2,0) arise from Z_3 representation theory on the 3D
+q_down = (4,2,0) arise as Z_3-compatible charge patterns on the 3D
 staggered lattice?
 
-If yes, this constitutes a DERIVATION of the CKM matrix from the
-lattice structure -- unprecedented in physics.
+If yes, this constitutes a bounded lattice selection argument for the
+CKM charge pattern, not a full CKM derivation.
 
 CONTEXT (from prior scripts):
   - frontier_baryogenesis.py: sin(theta_C) = sqrt(eps), eps = 1/3 from Z_3,
@@ -570,7 +570,7 @@ def part3_ckm_prediction(charge_decompositions):
 
 
 # =============================================================================
-# PART 4: MATCH BETWEEN Z_3-DERIVED AND DATA-FITTED CHARGES
+# PART 4: MATCH BETWEEN Z_3-COMPATIBLE AND DATA-FITTED CHARGES
 # =============================================================================
 
 def part4_charge_match(best_combo, charge_decompositions):
@@ -586,7 +586,7 @@ def part4_charge_match(best_combo, charge_decompositions):
     and check if they have additional structure.
     """
     log(f"\n{'=' * 72}")
-    log("PART 4: MATCH BETWEEN Z_3-DERIVED AND DATA-FITTED CHARGES")
+    log("PART 4: MATCH BETWEEN Z_3-COMPATIBLE AND DATA-FITTED CHARGES")
     log("=" * 72)
 
     data_fit_up = (5, 3, 0)
@@ -1122,7 +1122,7 @@ def main():
     log("=" * 72)
     log("CKM MATRIX FROM Z_3 REPRESENTATION THEORY")
     log("=" * 72)
-    log(f"  Can the CKM matrix be DERIVED from the Z_3 symmetry of the")
+    log(f"  Can the CKM matrix charge pattern be selected from the Z_3")
     log(f"  3D staggered lattice?")
     log(f"")
     log(f"  Prior results:")
@@ -1131,7 +1131,7 @@ def main():
     log(f"    - Cabibbo angle: 0.3% match")
     log(f"    - Jarlskog J: 2.1% match")
     log(f"")
-    log(f"  This script: derive these charges from Z_3 representation theory")
+    log(f"  This script: test whether these charges are selected by the Z_3")
     log(f"  on the staggered lattice.")
 
     # Part 1: Z_3 representations
