@@ -1,0 +1,550 @@
+==============================================================================
+U(1) HYPERCHARGE COUPLING FROM EDGE GEOMETRY
+The last missing piece for lattice-derived gauge couplings
+==============================================================================
+
+ESTABLISHED:
+  SU(3): g_3^2 = 1              alpha_3 = 1/(4*pi) = 0.07957747
+  SU(2): g_2^2 = 1/(d+1) = 1/4  alpha_2 = 1/(16*pi) = 0.01989437
+
+TARGET (observation):
+  sin^2(theta_W)(M_Z) = 0.23122
+  alpha_EM(M_Z)       = 1/127.951 = 0.00781549
+
+==============================================================================
+SECTION 1: CUBIC LATTICE EDGE GEOMETRY (d = 3)
+==============================================================================
+
+  Vertex structure:
+    Coordination number z = 2d = 6
+    Vertex Laplacian bandwidth = 4d = 12
+
+  Edge structure:
+    Edge/vertex ratio = d = 3
+    Edge graph coordination z_edge = 2(z-1) = 10
+    Edge Laplacian bandwidth = 2(d+1) = 8
+
+  Plaquette structure:
+    Plaquettes per vertex = d(d-1)/2 = 3
+    Edges per plaquette = 4
+    Plaquettes per edge = 2(d-1) = 4
+
+  Key integer quantities:
+    d = 3
+    d+1 = 4
+    2d = 6
+    2d+1 = 7
+    d(d-1)/2 = 3
+    d(d+1)/2 = 6
+    2(d-1) = 4
+    2(d+1) = 8
+    z_edge = 10
+    z_edge+1 = 11
+
+==============================================================================
+SECTION 2: REQUIRED g_Y^2 FROM OBSERVATION
+==============================================================================
+
+  Running observed couplings M_Z -> M_Planck (1-loop + threshold):
+
+  Required bare couplings for exact match:
+    alpha_1(bare) = 0.03061008   (GUT norm, 1/alpha = 32.67)
+    alpha_2(bare) = 0.02064795   (1/alpha = 48.43)
+
+    g_2^2(bare,obs) = 0.259470
+    g_2^2(lattice)  = 0.250000  (1/(d+1) = 1/4)
+    Discrepancy: 3.65%
+
+    g_Y^2(bare,obs) = 0.230795
+    alpha_Y(bare)   = 0.01836605
+
+    sin^2(theta_W)(bare) = 0.470755
+
+  Cross-check (run back to M_Z, 1-loop):
+    sin^2(theta_W) = 0.231220 (target 0.23122)
+    1/alpha_EM = 127.95 (target 127.95)
+
+  With g_2^2 = 1/4 FIXED, find g_Y^2 to match sin^2(theta_W)(M_Z):
+
+    g_Y^2(exact, 1-loop) = 0.2075443082
+    sin^2(tW)(M_Z) = 0.23122000
+    1/alpha_EM = 135.8851 (obs: 127.9510)
+    alpha_EM error = 6.20%
+
+  With g_2^2 = 1/4 FIXED, find g_Y^2 using 2-loop running:
+    g_Y^2(exact, 2-loop) = 0.2053533540
+    sin^2(tW)(M_Z) = 0.23122000
+    1/alpha_EM = 137.2633 (obs: 127.9510)
+    alpha_EM error = 7.28%
+
+  SUMMARY OF TARGETS:
+    g_Y^2 needed (1-loop): 0.20754431
+    g_Y^2 needed (2-loop): 0.20535335
+    sin^2(tW)(bare, 1-loop target): 0.453605
+    sin^2(tW)(bare, 2-loop target): 0.450976
+
+==============================================================================
+SECTION 3: SYSTEMATIC CANDIDATE ENUMERATION
+30+ geometric formulas for g_Y^2(d) evaluated at d = 3
+==============================================================================
+
+  Candidate                                          g_Y^2 sin2tW(bare)
+  ----------------------------------------------------------------------
+  A1: 1/(d+1)                                     0.250000     0.500000
+  A2: 1/(d+2)                                     0.200000     0.444444
+  A3: d/(d+1)^2                                   0.187500     0.428571
+  A4: d/(d+1)(d+2)                                0.150000     0.375000
+  A5: (d-1)/(d+1)^2                               0.125000     0.333333
+  A6: d/(2d+1)                                    0.428571     0.631579
+  A7: (2d-1)/(2d(d+1))                            0.208333     0.454545
+  A8: 1/z = 1/(2d)                                0.166667     0.400000
+  A9: 2/z = 1/d                                   0.333333     0.571429
+  A10: d^2/(d+1)^3                                0.140625     0.360000
+  B1: 1/(z_edge+1)                                0.090909     0.266667
+  B2: z_edge/(z_edge+1)^2                         0.082645     0.248447
+  B3: 1/z_edge                                    0.100000     0.285714
+  B4: 2/z_edge                                    0.200000     0.444444
+  B5: (z-1)/z_edge                                0.500000     0.666667
+  C1: 1/plaq_per_edge = 1/(2(d-1))                0.250000     0.500000
+  C2: 1/(d(d-1)/2)                                0.333333     0.571429
+  C3: 2/(d(d-1))                                  0.333333     0.571429
+  C4: edges/plaquettes = 2d/(d(d-1)/2)            2.000000     0.888889
+  D1: 1/edge_Lap_bw = 1/(2(d+1))                  0.125000     0.333333
+  D2: edge_bw/vert_bw = (d+1)/(2d)                0.666667     0.727273
+  D3: vert_bw/edge_bw^2                           0.187500     0.428571
+  E1: sin2tW = 3/8 (GUT)                          0.150000     0.375000
+  E2: sin2tW = (d-1)/(d+1)                        0.250000     0.500000
+  E3: sin2tW = d/(2d+1)                           0.187500     0.428571
+  E4: sin2tW = (d-1)/2d                           0.125000     0.333333
+  E5: sin2tW = d/(d+2)                            0.375000     0.600000
+  E6: sin2tW = 1/2                                0.250000     0.500000
+  E7: sin2tW = (d-1)/(2(d+1))                     0.083333     0.250000
+  E8: sin2tW = d^2/(d^2+d+1)                      0.562500     0.692308
+  F1: g1_GUT^2 = 1/(d+1), g_Y = (3/5)*g1          0.150000     0.375000
+  F2: g1_GUT^2 = 5/(3(d+1))                       0.250000     0.500000
+
+==============================================================================
+SECTION 4: RUN ALL CANDIDATES TO M_Z (1-loop + threshold)
+==============================================================================
+
+  RANKING BY COMBINED ERROR (1-loop):
+
+  Rank Candidate                                        g_Y^2 sin2tW(MZ)   err(%)     1/a_EM   err(%)
+  ----------------------------------------------------------------------------------------------------
+     1 A7: (2d-1)/(2d(d+1))                           0.20833    0.23161     0.17     135.66     6.02
+     2 A2: 1/(d+2)                                    0.20000    0.22740     1.65     138.17     7.99
+     3 B4: 2/z_edge                                   0.20000    0.22740     1.65     138.17     7.99
+     4 A1: 1/(d+1)                                    0.25000    0.25015     8.19     125.60     1.84
+     5 C1: 1/plaq_per_edge = 1/(2(d-1))               0.25000    0.25015     8.19     125.60     1.84
+     6 E2: sin2tW = (d-1)/(d+1)                       0.25000    0.25015     8.19     125.60     1.84
+     7 E6: sin2tW = 1/2                               0.25000    0.25015     8.19     125.60     1.84
+     8 F2: g1_GUT^2 = 5/(3(d+1))                      0.25000    0.25015     8.19     125.60     1.84
+     9 A3: d/(d+1)^2                                  0.18750    0.22071     4.55     142.36    11.26
+    10 D3: vert_bw/edge_bw^2                          0.18750    0.22071     4.55     142.36    11.26
+    11 E3: sin2tW = d/(2d+1)                          0.18750    0.22071     4.55     142.36    11.26
+    12 A8: 1/z = 1/(2d)                               0.16667    0.20844     9.85     150.74    17.81
+    13 A9: 2/z = 1/d                                  0.33333    0.27796    20.21     113.04    11.66
+    14 C2: 1/(d(d-1)/2)                               0.33333    0.27796    20.21     113.04    11.66
+    15 C3: 2/(d(d-1))                                 0.33333    0.27796    20.21     113.04    11.66
+    16 A4: d/(d+1)(d+2)                               0.15000    0.19747    14.60     159.11    24.35
+    17 E1: sin2tW = 3/8 (GUT)                         0.15000    0.19747    14.60     159.11    24.35
+    18 F1: g1_GUT^2 = 1/(d+1), g_Y = (3/5)*g1         0.15000    0.19747    14.60     159.11    24.35
+    19 E5: sin2tW = d/(d+2)                           0.37500    0.28865    24.84     108.85    14.93
+    20 A10: d^2/(d+1)^3                               0.14062    0.19077    17.49     164.70    28.72
+    21 A6: d/(2d+1)                                   0.42857    0.30021    29.84     104.66    18.20
+    22 B5: (z-1)/z_edge                               0.50000    0.31272    35.25     100.47    21.48
+    23 A5: (d-1)/(d+1)^2                              0.12500    0.17865    22.73     175.87    37.45
+    24 D1: 1/edge_Lap_bw = 1/(2(d+1))                 0.12500    0.17865    22.73     175.87    37.45
+    25 E4: sin2tW = (d-1)/2d                          0.12500    0.17865    22.73     175.87    37.45
+    26 E8: sin2tW = d^2/(d^2+d+1)                     0.56250    0.32166    39.12      97.68    23.66
+    27 D2: edge_bw/vert_bw = (d+1)/(2d)               0.66667    0.33359    44.27      94.19    26.39
+    28 B3: 1/z_edge                                   0.10000    0.15631    32.40     201.00    57.09
+    29 C4: edges/plaquettes = 2d/(d(d-1)/2)           2.00000    0.38494    66.48      81.62    36.21
+    30 B1: 1/(z_edge+1)                               0.09091    0.14712    36.37     213.57    66.91
+    31 E7: sin2tW = (d-1)/(2(d+1))                    0.08333    0.13894    39.91     226.13    76.73
+    32 B2: z_edge/(z_edge+1)^2                        0.08264    0.13817    40.24     227.39    77.72
+
+  Target: sin^2(tW) = 0.23122, 1/alpha_EM = 127.951
+  Required: g_Y^2 = 0.20754431
+
+==============================================================================
+SECTION 5: RUN ALL CANDIDATES TO M_Z (2-loop)
+==============================================================================
+
+  RANKING BY COMBINED ERROR (2-loop):
+
+  Rank Candidate                                        g_Y^2 sin2tW(MZ)   err(%)     1/a_EM   err(%)
+  ----------------------------------------------------------------------------------------------------
+     1 A7: (2d-1)/(2d(d+1))                           0.20833    0.23270     0.64     136.39     6.59
+     2 A2: 1/(d+2)                                    0.20000    0.22849     1.18     138.90     8.56
+     3 B4: 2/z_edge                                   0.20000    0.22849     1.18     138.90     8.56
+     4 A1: 1/(d+1)                                    0.25000    0.25121     8.64     126.35     1.25
+     5 C1: 1/plaq_per_edge = 1/(2(d-1))               0.25000    0.25121     8.64     126.35     1.25
+     6 E2: sin2tW = (d-1)/(d+1)                       0.25000    0.25121     8.64     126.35     1.25
+     7 E6: sin2tW = 1/2                               0.25000    0.25121     8.64     126.35     1.25
+     8 F2: g1_GUT^2 = 5/(3(d+1))                      0.25000    0.25121     8.64     126.35     1.25
+     9 A3: d/(d+1)^2                                  0.18750    0.22181     4.07     143.08    11.83
+    10 D3: vert_bw/edge_bw^2                          0.18750    0.22181     4.07     143.08    11.83
+    11 E3: sin2tW = d/(2d+1)                          0.18750    0.22181     4.07     143.08    11.83
+    12 A8: 1/z = 1/(2d)                               0.16667    0.20954     9.37     151.46    18.37
+    13 A9: 2/z = 1/d                                  0.33333    0.27892    20.63     113.80    11.06
+    14 C2: 1/(d(d-1)/2)                               0.33333    0.27892    20.63     113.80    11.06
+    15 C3: 2/(d(d-1))                                 0.33333    0.27892    20.63     113.80    11.06
+    16 A4: d/(d+1)(d+2)                               0.15000    0.19856    14.12     159.83    24.91
+    17 E1: sin2tW = 3/8 (GUT)                         0.15000    0.19856    14.12     159.83    24.91
+    18 F1: g1_GUT^2 = 1/(d+1), g_Y = (3/5)*g1         0.15000    0.19856    14.12     159.83    24.91
+    19 E5: sin2tW = d/(d+2)                           0.37500    0.28957    25.24     109.62    14.33
+    20 A10: d^2/(d+1)^3                               0.14062    0.19186    17.02     165.41    29.28
+    21 A6: d/(2d+1)                                   0.42857    0.30105    30.20     105.44    17.59
+    22 B5: (z-1)/z_edge                               0.50000    0.31348    35.58     101.27    20.85
+    23 A5: (d-1)/(d+1)^2                              0.12500    0.17973    22.27     176.57    38.00
+    24 D1: 1/edge_Lap_bw = 1/(2(d+1))                 0.12500    0.17973    22.27     176.57    38.00
+    25 E4: sin2tW = (d-1)/2d                          0.12500    0.17973    22.27     176.57    38.00
+    26 E8: sin2tW = d^2/(d^2+d+1)                     0.56250    0.32235    39.41      98.49    23.03
+    27 D2: edge_bw/vert_bw = (d+1)/(2d)               0.66667    0.33416    44.52      95.01    25.74
+    28 B3: 1/z_edge                                   0.10000    0.15733    31.96     201.70    57.64
+    29 C4: edges/plaquettes = 2d/(d(d-1)/2)           2.00000    0.38469    66.38      82.57    35.47
+    30 B1: 1/(z_edge+1)                               0.09091    0.14811    35.95     214.26    67.46
+    31 E7: sin2tW = (d-1)/(2(d+1))                    0.08333    0.13990    39.49     226.83    77.28
+    32 B2: z_edge/(z_edge+1)^2                        0.08264    0.13913    39.83     228.08    78.26
+
+  Required: g_Y^2(2-loop) = 0.20535335
+
+==============================================================================
+SECTION 6: DEEP DIVE ON TOP 5 CANDIDATES
+==============================================================================
+
+  --- Candidate #1: A7: (2d-1)/(2d(d+1)) ---
+  Description: edge neighbors normalized
+
+  Bare coupling:
+    g_Y^2 = 0.20833333
+    g_2^2 = 0.25000000
+    sin^2(theta_W)(bare) = 0.454545
+
+  At M_Z (2-loop):
+    sin^2(theta_W) = 0.232703  (obs: 0.23122, err: 0.64%)
+    1/alpha_EM     = 136.3888  (obs: 127.951, err: 6.59%)
+    alpha_2(M_Z)   = 0.031508  (obs: 0.033801)
+
+  Combined error: 6.63%
+
+  --- Candidate #2: A2: 1/(d+2) ---
+  Description: next integer denominator
+
+  Bare coupling:
+    g_Y^2 = 0.20000000
+    g_2^2 = 0.25000000
+    sin^2(theta_W)(bare) = 0.444444
+
+  At M_Z (2-loop):
+    sin^2(theta_W) = 0.228495  (obs: 0.23122, err: 1.18%)
+    1/alpha_EM     = 138.8997  (obs: 127.951, err: 8.56%)
+    alpha_2(M_Z)   = 0.031508  (obs: 0.033801)
+
+  Combined error: 8.64%
+
+  --- Candidate #3: B4: 2/z_edge ---
+  Description: per-endpoint on edge graph
+
+  Bare coupling:
+    g_Y^2 = 0.20000000
+    g_2^2 = 0.25000000
+    sin^2(theta_W)(bare) = 0.444444
+
+  At M_Z (2-loop):
+    sin^2(theta_W) = 0.228495  (obs: 0.23122, err: 1.18%)
+    1/alpha_EM     = 138.8997  (obs: 127.951, err: 8.56%)
+    alpha_2(M_Z)   = 0.031508  (obs: 0.033801)
+
+  Combined error: 8.64%
+
+  --- Candidate #4: A1: 1/(d+1) ---
+  Description: same as g_2^2, equal couplings
+
+  Bare coupling:
+    g_Y^2 = 0.25000000
+    g_2^2 = 0.25000000
+    sin^2(theta_W)(bare) = 0.500000
+
+  At M_Z (2-loop):
+    sin^2(theta_W) = 0.251208  (obs: 0.23122, err: 8.64%)
+    1/alpha_EM     = 126.3473  (obs: 127.951, err: 1.25%)
+    alpha_2(M_Z)   = 0.031506  (obs: 0.033801)
+
+  Combined error: 8.74%
+
+  --- Candidate #5: C1: 1/plaq_per_edge = 1/(2(d-1)) ---
+  Description: one plaquette per edge
+
+  Bare coupling:
+    g_Y^2 = 0.25000000
+    g_2^2 = 0.25000000
+    sin^2(theta_W)(bare) = 0.500000
+
+  At M_Z (2-loop):
+    sin^2(theta_W) = 0.251208  (obs: 0.23122, err: 8.64%)
+    1/alpha_EM     = 126.3473  (obs: 127.951, err: 1.25%)
+    alpha_2(M_Z)   = 0.031506  (obs: 0.033801)
+
+  Combined error: 8.74%
+
+==============================================================================
+SECTION 7: SPECIAL ANALYSIS -- sin^2(theta_W)(bare) = (d-1)/(d+1)
+==============================================================================
+
+  This is the most elegant candidate:
+    sin^2(theta_W)(bare) = (d-1)/(d+1)
+    For d=3: (3-1)/(3+1) = 2/4 = 1/2
+    g_Y^2 = g_2^2 * sin2/(1-sin2) = (1/4) * (1/2)/(1/2) = 1/4 = g_2^2
+    => EQUAL COUPLINGS at the Planck scale!
+
+  1-loop result:
+    sin^2(theta_W)(M_Z) = 0.250149  (obs: 0.23122)
+    1/alpha_EM(M_Z)     = 125.6027  (obs: 127.951)
+    Errors: sin2tW = 8.19%, alpha_EM = 1.84%
+
+  2-loop result:
+    sin^2(theta_W)(M_Z) = 0.251208  (obs: 0.23122)
+    1/alpha_EM(M_Z)     = 126.3473  (obs: 127.951)
+    Errors: sin2tW = 8.64%, alpha_EM = 1.25%
+
+  Shift needed from higher-order/threshold corrections:
+    Delta sin^2(tW) = -0.019988 (-8.64% of observed value)
+
+  PHYSICAL INTERPRETATION:
+    If sin^2(theta_W)(bare) = (d-1)/(d+1) = 1/2 in d=3,
+    then g_Y^2 = g_2^2 = 1/(d+1) at the lattice scale.
+    The U(1) and SU(2) start as EQUAL couplings, and the
+    Weinberg angle is entirely generated by RUNNING.
+
+    This would mean ALL gauge couplings come from ONE formula:
+      g_3^2 = 1,  g_2^2 = g_Y^2 = 1/(d+1)
+    With d = 3 spatial dimensions as the ONLY input.
+
+==============================================================================
+SECTION 8: DIMENSIONAL CONSISTENCY
+Top candidates evaluated at d = 2, 3, 4, 5
+==============================================================================
+
+  Formula                                  d      g_Y^2 sin2(bare)   sin2(MZ)     err(%)
+  -------------------------------------------------------------------------------------
+  E2: sin2tW=(d-1)/(d+1)                   2   0.166667   0.333333        N/A        N/A
+  E2: sin2tW=(d-1)/(d+1)                   3   0.250000   0.500000   0.251208       8.64
+  E2: sin2tW=(d-1)/(d+1)                   4   0.300000   0.600000        N/A        N/A
+  E2: sin2tW=(d-1)/(d+1)                   5   0.333333   0.666667        N/A        N/A
+
+  E3: sin2tW=d/(2d+1)                      2   0.222222   0.400000        N/A        N/A
+  E3: sin2tW=d/(2d+1)                      3   0.187500   0.428571   0.221808       4.07
+  E3: sin2tW=d/(2d+1)                      4   0.160000   0.444444        N/A        N/A
+  E3: sin2tW=d/(2d+1)                      5   0.138889   0.454545        N/A        N/A
+
+  E1: sin2tW=3/8 (GUT)                     2   0.200000   0.375000        N/A        N/A
+  E1: sin2tW=3/8 (GUT)                     3   0.150000   0.375000   0.198563      14.12
+  E1: sin2tW=3/8 (GUT)                     4   0.120000   0.375000        N/A        N/A
+  E1: sin2tW=3/8 (GUT)                     5   0.100000   0.375000        N/A        N/A
+
+  A1: g_Y^2=1/(d+1) (equal)                2   0.333333   0.500000        N/A        N/A
+  A1: g_Y^2=1/(d+1) (equal)                3   0.250000   0.500000   0.251208       8.64
+  A1: g_Y^2=1/(d+1) (equal)                4   0.200000   0.500000        N/A        N/A
+  A1: g_Y^2=1/(d+1) (equal)                5   0.166667   0.500000        N/A        N/A
+
+  F1: g_Y^2=(3/5)/(d+1)                    2   0.200000   0.375000        N/A        N/A
+  F1: g_Y^2=(3/5)/(d+1)                    3   0.150000   0.375000   0.198563      14.12
+  F1: g_Y^2=(3/5)/(d+1)                    4   0.120000   0.375000        N/A        N/A
+  F1: g_Y^2=(3/5)/(d+1)                    5   0.100000   0.375000        N/A        N/A
+
+  NOTE: RG running only meaningful for d=3. Other dimensions shown
+  to check if the formula gives 'reasonable' bare-scale values.
+
+==============================================================================
+SECTION 9: COMPARISON WITH GUT VALUE sin^2(theta_W) = 3/8
+==============================================================================
+
+  GUT: sin^2(theta_W) = 3/8 = 0.375 at M_Planck
+  => g_Y^2 = (3/5) * g_2^2 = 3/(5*4) = 3/20 = 0.150000
+
+  1-loop result at M_Z:
+    sin^2(theta_W) = 0.197466  (obs: 0.23122, err: 14.60%)
+    1/alpha_EM = 159.1130  (obs: 127.951, err: 24.35%)
+
+  2-loop result at M_Z:
+    sin^2(theta_W) = 0.198563  (obs: 0.23122, err: 14.12%)
+    1/alpha_EM = 159.8282  (obs: 127.951, err: 24.91%)
+
+  For comparison: sin^2 = 3/8 at M_GUT = 2e+16 GeV:
+    1-loop: sin^2(M_Z) = 0.222421  (err: 3.81%)
+    2-loop: sin^2(M_Z) = 0.223323  (err: 3.42%)
+
+==============================================================================
+SECTION 10: UV SCALE SENSITIVITY
+How sensitive are the results to M_UV choice?
+==============================================================================
+
+  Testing best candidate: A7: (2d-1)/(2d(d+1)) (g_Y^2 = 0.208333)
+
+  UV scale                    sin2tW(MZ)     1/a_EM     err(%)
+  ------------------------------------------------------------
+  M_Planck (full)               0.232703   136.3888       6.63
+  M_Planck (reduced)            0.240126   135.3436       6.94
+  10^18 GeV                     0.244272   134.7665       7.76
+  10^17 GeV                     0.255167   133.2731      11.16
+  M_GUT = 2e16 GeV              0.262928   132.2288      14.11
+
+  Testing equal couplings g_Y^2 = g_2^2 = 1/4:
+
+  UV scale                    sin2tW(MZ)     1/a_EM     err(%)
+  ------------------------------------------------------------
+  M_Planck (full)               0.251208   126.3473       8.74
+  M_Planck (reduced)            0.259380   125.3018      12.35
+  10^18 GeV                     0.263950   124.7245      14.38
+  10^17 GeV                     0.275972   123.2307      19.70
+  M_GUT = 2e16 GeV              0.284549   122.1861      23.50
+
+==============================================================================
+SECTION 11: PLAQUETTE-BASED SELF-CONSISTENT U(1) COUPLING
+==============================================================================
+
+  On a d-dimensional cubic lattice with compact U(1):
+    Wilson action: S = beta * sum_P (1 - cos theta_P)
+    beta = 1/g^2 = inverse bare coupling squared
+
+  Each link participates in 2(d-1) = 4 plaquettes.
+  The mean-field improved coupling satisfies:
+    g^2_MF = g^2_bare / <P>
+    <P> = 1 - g^2 / (4*d*(d-1))  (free U(1) approximation)
+
+  Self-consistent solutions for g0^2 = 1:
+    g^2_MF(+) = 22.954451
+    g^2_MF(-) = 1.045549
+
+  Taking the perturbative branch: g^2_MF = 1.045549
+    sin^2(tW)(MZ) = 0.359912 (err 55.66%)
+    1/alpha_EM    = 88.2296 (err 31.04%)
+
+==============================================================================
+SECTION 12: CONTINUOUS SCAN -- g_Y^2 AROUND TARGET VALUE
+Which simple fraction is closest to the required g_Y^2?
+==============================================================================
+
+  Target g_Y^2 (2-loop) = 0.20535335
+
+  p/q         g_Y^2       dist   sin2tW(MZ)     1/a_EM   err(%)
+  ------------------------------------------------------------
+   6/29    0.206897  +0.001543     0.231991   136.8073     6.93
+   5/24    0.208333  +0.002980     0.232703   136.3888     6.63
+   4/19    0.210526  +0.005173     0.233780   135.7612     6.20
+   1/5     0.200000  -0.005353     0.228495   138.8997     8.64
+   3/14    0.214286  +0.008932     0.235596   134.7150     5.61
+   5/23    0.217391  +0.012038     0.237070   133.8781     5.28
+   5/26    0.192308  -0.013046     0.224435   141.4107    10.92
+   4/21    0.190476  -0.014877     0.223443   142.0385    11.51
+   2/9     0.222222  +0.016869     0.239315   132.6229     5.06
+   3/16    0.187500  -0.017853     0.221808   143.0848    12.51
+   5/27    0.185185  -0.020168     0.220518   143.9218    13.31
+   5/22    0.227273  +0.021919     0.241603   131.3676     5.22
+   2/11    0.181818  -0.023535     0.218610   145.1775    14.53
+   3/13    0.230769  +0.025416     0.243152   130.5308     5.54
+   5/28    0.178571  -0.026782     0.216734   146.4331    15.74
+   7/30    0.233333  +0.027980     0.244271   129.9332     5.85
+   3/17    0.176471  -0.028883     0.215502   147.2702    16.56
+   4/17    0.235294  +0.029941     0.245118   129.4849     6.13
+   4/23    0.173913  -0.031440     0.213981   148.3166    17.58
+   5/21    0.238095  +0.032742     0.246312   128.8573     6.57
+
+  Fractions with lattice-related denominators:
+
+  Frac          g_Y^2       dist   sin2tW(MZ)     1/a_EM   err(%)
+  --------------------------------------------------------------
+  1/4        0.250000  +0.044647     0.251208   126.3473     8.74
+  1/5        0.200000  -0.005353     0.228495   138.8997     8.64
+  3/16       0.187500  -0.017853     0.221808   143.0848    12.51
+  5/24       0.208333  +0.002980     0.232703   136.3888     6.63
+  7/30       0.233333  +0.027980     0.244271   129.9332     5.85
+  3/13       0.230769  +0.025416     0.243152   130.5308     5.54
+  5/21       0.238095  +0.032742     0.246312   128.8573     6.57
+  2/9        0.222222  +0.016869     0.239315   132.6229     5.06
+  3/14       0.214286  +0.008932     0.235596   134.7150     5.61
+  4/17       0.235294  +0.029941     0.245118   129.4849     6.13
+  5/22       0.227273  +0.021919     0.241603   131.3676     5.22
+  1/3        0.333333  +0.127980     0.278924   113.8014    23.41
+  2/7        0.285714  +0.080361     0.264344   120.0732    15.59
+  3/10       0.300000  +0.094647     0.269032   117.9823    18.11
+  4/15       0.266667  +0.061313     0.257609   123.2100    12.00
+
+==============================================================================
+SECTION 13: COMPLETE GAUGE COUPLING TRIAD
+==============================================================================
+
+  THE FRAMEWORK (d = 3 spatial dimensions):
+
+  SU(3): g_3^2 = 1               [Z_3 clock-shift algebra]
+         alpha_3(bare) = 1/(4*pi) = 0.07957747
+
+  SU(2): g_2^2 = 1/(d+1) = 1/4   [Z_2 bipartite geometry]
+         alpha_2(bare) = 1/(16*pi) = 0.01989437
+
+  U(1):  BEST CANDIDATE: A7: (2d-1)/(2d(d+1))
+         g_Y^2 = 0.20833333
+         sin^2(theta_W)(bare) = 0.454545
+
+  PREDICTIONS AT M_Z (2-loop):
+    sin^2(theta_W) = 0.232703  (obs: 0.23122, err: 0.64%)
+    1/alpha_EM     = 136.3888  (obs: 127.951, err: 6.59%)
+
+  EQUAL COUPLING HYPOTHESIS (g_Y^2 = g_2^2 = 1/(d+1)):
+    sin^2(theta_W)(bare) = 1/2
+    sin^2(theta_W)(M_Z, 2-loop) = 0.251208 (err: 8.64%)
+    1/alpha_EM(M_Z)              = 126.3473 (err: 1.25%)
+
+  EXACT MATCH REQUIRES:
+    g_Y^2 = 0.2075443082 (1-loop)
+    g_Y^2 = 0.2053533540 (2-loop)
+
+  Perturbative uncertainty estimate:
+    |g_Y^2(1-loop) - g_Y^2(2-loop)| = 0.00219095
+    Relative: 1.06%
+
+  Candidates within perturbative uncertainty of exact value:
+    A7: (2d-1)/(2d(d+1)) (g_Y^2 = 0.208333, err: 6.63%)
+
+==============================================================================
+SECTION 14: IMPLICATIONS AND NEXT STEPS
+==============================================================================
+
+  KEY FINDINGS:
+
+  1. The required g_Y^2 at M_Planck for exact sin^2(tW)(M_Z) = 0.23122
+     is g_Y^2 = 0.205353 (2-loop), very close to 0.207544 (1-loop).
+
+  2. The EQUAL COUPLING hypothesis g_Y^2 = g_2^2 = 1/4 gives:
+     sin^2(tW)(M_Z) = 0.251208 (8.6% error)
+     This corresponds to sin^2(tW)(bare) = 1/2 = (d-1)/(d+1) for d=3.
+
+  3. The GUT value 3/8 at M_Planck (not M_GUT) gives:
+     sin^2(tW)(M_Z) = 0.198563 (14.1% error)
+
+  4. The best discrete geometric candidate is:
+     A7: (2d-1)/(2d(d+1)) with 6.63% combined error
+
+  NEXT STEPS:
+
+  a) If the equal coupling hypothesis is close but not exact:
+     - Investigate whether threshold corrections at M_top close the gap
+     - Check if 3-loop beta functions improve the match
+     - Consider non-perturbative lattice-to-continuum matching corrections
+
+  b) For a rigorous lattice derivation of g_Y^2:
+     - Compute the edge Laplacian spectrum on finite cubic lattices
+     - Identify which spectral property determines the bare U(1) coupling
+     - Prove or disprove g_Y^2 = 1/(d+1) from the edge structure
+
+  c) Phenomenological tests:
+     - With all three bare couplings fixed, predict M_W/M_Z ratio
+     - Run alpha_s to M_Z and compare (currently blocked by Landau pole)
+     - Compute proton decay rate if the lattice has GUT-like structure
+
+
+==============================================================================
+Results saved to logs/2026-04-12-u1_coupling_derivation.txt
+==============================================================================
