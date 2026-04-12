@@ -39,6 +39,12 @@ It does not by itself prove that the native Cl(3) bivector su(2) is
 canonically identical to the distinguished tensor-factor su(2); that
 bridge remains a separate claim.
 
+**Missing bridge theorem.** To upgrade this result to the native cubic
+lane, one still needs a basis-free proof that the cubic lattice's
+intrinsic `S_3` action canonically selects a `Z_2` stabilizer/weak axis
+and conjugates the native bivector `su(2)` into the KS tensor-factor
+`su(2)` used below. That stabilizer theorem is not proven here.
+
 ---
 
 ## Proof
