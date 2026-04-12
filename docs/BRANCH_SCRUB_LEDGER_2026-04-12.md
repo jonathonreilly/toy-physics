@@ -116,6 +116,27 @@ Reason:
   single shell-packet irregular sign-closure note+runner pair above, and that
   pair is now preserved on the active review branch
 
+### `origin/codex/wilson-temporal-robustness`
+
+Status:
+
+- scrubbed into `codex/review-active`
+
+Captured in this pass:
+
+- `docs/TWO_BODY_ATTRACTION_FROZEN_SOURCE_NOTE_2026-04-11.md`
+- `scripts/frontier_two_body_attraction_frozen_source.py`
+
+Archive readiness:
+
+- archive-ready
+
+Reason:
+
+- the branch-specific payload beyond the already-captured Wilson temporal and
+  robustness notes is the frozen-source control pair above, and that pair is
+  now preserved on the active review branch
+
 ## Codex First-Pass Triage
 
 These statuses are mechanical only: whether the branch tip is already an

@@ -179,6 +179,17 @@ Current read:
 - not a current `main` candidate because the later low-screening and
   portability gates, not this shell-packet surface alone, now define the lane
 
+### Narrow capture from `origin/codex/wilson-temporal-robustness`
+
+- `docs/TWO_BODY_ATTRACTION_FROZEN_SOURCE_NOTE_2026-04-11.md`
+- `scripts/frontier_two_body_attraction_frozen_source.py`
+
+Current read:
+
+- bounded frozen-source negative control for the Wilson mutual-attraction lane
+- important for the Wilson hold section because it narrows, but does not close,
+  the static-vs-dynamic explanation gap
+
 ### 2026-04-12 migration from `claude/youthful-neumann`
 
 New bounded promotion candidates:

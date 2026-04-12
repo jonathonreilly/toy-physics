@@ -192,12 +192,14 @@ Next control:
 Files:
 
 - `docs/TWO_BODY_ATTRACTION_RETAINED_NOTE_2026-04-11.md`
+- `docs/TWO_BODY_ATTRACTION_FROZEN_SOURCE_NOTE_2026-04-11.md`
 - `docs/TWO_BODY_ATTRACTION_ROBUSTNESS_NOTE_2026-04-11.md`
 - `docs/TWO_BODY_ATTRACTION_TEMPORAL_ROBUSTNESS_NOTE_2026-04-11.md`
 - `docs/WILSON_SIDE_LANE_PROMOTION_REVIEW_2026-04-11.md`
 - `docs/WILSON_BOTH_MASSES_ACCEL_NOTE_2026-04-11.md`
 - `docs/WILSON_CAUSAL_DISCRIMINATOR_NOTE_2026-04-11.md`
 - `scripts/frontier_two_body_attraction.py`
+- `scripts/frontier_two_body_attraction_frozen_source.py`
 - `scripts/frontier_two_body_attraction_robustness.py`
 - `scripts/frontier_two_body_attraction_temporal_robustness.py`
 - `scripts/frontier_wilson_both_masses_accel.py`
