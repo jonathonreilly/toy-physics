@@ -1,95 +1,186 @@
 ================================================================================
-HIERARCHY RATIO: G/e^2 FROM GRAPH STRUCTURE
+HIERARCHY RATIO -- GRAVITY/EM COUPLING FROM FRAMEWORK CONSTRAINTS
 ================================================================================
-
-Question: Does the framework produce a natural gravity/EM
-coupling ratio, and does it depend on lattice spacing?
-
-Method:
-  - Gravity coupling G_eff: from Poisson-solved 1/r field deflection
-  - EM coupling q_eff: from Coulomb potential V=Q/r deflection
-  - Both produce 1/r fields, but couple differently to the action:
-    Gravity: S = L*(1-phi)  [geometric, modifies path length]
-    EM:      phase += q*V   [potential energy, additive]
-
---------------------------------------------------------------------------------
-PART 1: GRAVITY COUPLING
---------------------------------------------------------------------------------
-
-  N= 20: s_eff = 0.038426, G_mean = 0.062964, dt = 0.0s
-  N= 31: s_eff = 0.056126, G_mean = 0.064124, dt = 1.0s
-  N= 40: s_eff = 0.061788, G_mean = 0.067478, dt = 6.6s
-  N= 48: s_eff = 0.065124, G_mean = 0.069120, dt = 28.6s
-  N= 56: s_eff = 0.067465, G_mean = 0.070289, dt = 80.4s
-  N= 64: s_eff = 0.069200, G_mean = 0.071119, dt = 195.5s
-
---------------------------------------------------------------------------------
-PART 2: EM COUPLING
---------------------------------------------------------------------------------
-
-  N= 20: q_mean = -0.774137, dt = 0.0s
-  N= 31: q_mean = -0.820605, dt = 0.0s
-  N= 40: q_mean = -0.859543, dt = 0.0s
-  N= 48: q_mean = -0.879263, dt = 0.0s
-  N= 56: q_mean = -0.891716, dt = 0.0s
-  N= 64: q_mean = -0.900026, dt = 0.0s
+Lattice: 16^3 = 4096 sites
+Wavenumber: k = 4.0
+Physical question: Why G*m^2/e^2 ~ 10^{-36}?
 
 ================================================================================
-PART 3: HIERARCHY RATIO G_eff / q_eff^2
+TEST 1: SELF-CONSISTENT GRAVITY COUPLING SWEEP
 ================================================================================
+Lattice: 16^3, wavenumber k = 4.0
 
-   N      G_eff      q_eff        G/q^2        G/q  log10(G/q^2)
------------------------------------------------------------------
-  20   0.062964  -0.774137     0.105064  -0.081334       -0.9785
-  31   0.064124  -0.820605     0.095226  -0.078143       -1.0212
-  40   0.067478  -0.859543     0.091333  -0.078504       -1.0394
-  48   0.069120  -0.879263     0.089406  -0.078611       -1.0486
-  56   0.070289  -0.891716     0.088396  -0.078824       -1.0536
-  64   0.071119  -0.900026     0.087796  -0.079019       -1.0565
+       G  converged  iters    phi_max     beta       R2          reason
+------------------------------------------------------------------------------
+    0.01        YES      2   0.000068    0.825   0.8699       converged
+    0.05        YES      3   0.000439    0.825   0.8699       converged
+    0.10        YES      5   0.001112    0.825   0.8699       converged
+    0.50        YES     10   0.006493    0.825   0.8699       converged
+    1.00        YES     12   0.013181    0.825   0.8699       converged
+    2.00        YES     14   0.026565    0.826   0.8700       converged
+    5.00        YES     16   0.066764    0.827   0.8702       converged
+   10.00        YES     18   0.134260    0.829   0.8707       converged
+   20.00        YES     22   0.271746    0.835   0.8717       converged
+   50.00         no     25   0.717719    0.855   0.8760        max_iter
 
---------------------------------------------------------------------------------
-PART 4: SCALING WITH LATTICE SPACING
---------------------------------------------------------------------------------
-
-If a = 1/N is the lattice spacing, how does G/q^2 scale with a?
-
-  G/q^2 ~ a^0.155  (R^2 = 0.9517)
-  Equivalently: G/q^2 ~ N^-0.155
-
-  WEAK SCALING: G/q^2 is approximately constant (no hierarchy mechanism).
-
-================================================================================
-SUMMARY
-================================================================================
-
-The gravity/EM coupling difference arises from HOW each field
-enters the path-sum action:
-  - Gravity modifies the geometric step length: S = L*(1-phi)
-  - EM adds a potential phase: phase += q*V
-
-This structural difference means:
-  - Gravity is inherently weaker at large distances because it
-    modifies the 'background' that all paths traverse
-  - EM is a direct phase coupling that doesn't dilute with geometry
-
-Mean G/q^2 across lattice sizes: 0.092870
-log10(G/q^2): -1.0321
+  No G value gave both convergence and beta~1 with R2>0.9
+  Convergence range: G in [0.01, 20.0]
+  Stability boundary: G_max_stable ~ 20.0
+  Natural G scale ~ 20.0 (in lattice units where a=1)
+  [Test 1 elapsed: 2.1s]
 
 ================================================================================
-BOUNDED CLAIMS
+TEST 2: EM COUPLING q SWEEP (COULOMB FORCE LAW)
+================================================================================
+Lattice: 16^3, wavenumber k = 4.0
+
+       q      slope       R2     defl_max  clean_1r2  sign_ok
+--------------------------------------------------------------
+    0.01     -1.106   0.9965     0.007641        YES      YES
+    0.05     -1.106   0.9965     0.038204        YES      YES
+    0.10     -1.106   0.9965     0.076409        YES      YES
+    0.50     -1.106   0.9965     0.382044        YES      YES
+    1.00     -1.106   0.9965     0.764087        YES      YES
+    2.00     -1.106   0.9965     1.528174        YES      YES
+    5.00     -1.106   0.9965     3.820436        YES      YES
+   10.00     -1.106   0.9965     7.640872        YES      YES
+   20.00     -1.106   0.9965    15.281744        YES      YES
+   50.00     -1.106   0.9965    38.204359        YES      YES
+
+  Best q for 1/r^2 Coulomb: q = 0.01 (slope=-1.106, R2=0.9965)
+  Coherence limit: q < 2*pi/N ~ 0.393
+  Max clean q: 50.0
+  q where |deflection| > 1: q ~ 2.0
+  Natural q scale ~ O(1) (dimensionless gauge coupling)
+  [Test 2 elapsed: 0.0s]
+
+================================================================================
+TEST 3: THE HIERARCHY RATIO
 ================================================================================
 
-1. Gravity (scalar on nodes, geometric coupling S=L(1-phi)) and
-   EM (scalar potential, additive coupling phase+=qV) produce
-   different effective couplings from the same 1/r source field.
+  G_natural = 20.0000 (lattice units)
+  q_natural = 50.0000 (lattice units)
+  G_nat / q_nat^2 = 0.008000
 
-2. The ratio G_eff/q_eff^2 is measured across lattice sizes
-   N = 20..64 to test for UV-cutoff dependence.
+  DIMENSIONAL ANALYSIS:
+  In lattice units (a=1):
+    G has dimensions [length^2] in 3D (Poisson: nabla^2 phi = -G*rho)
+    q is dimensionless (phase coupling)
+    So G/q^2 ~ a^2 in natural units
 
-3. If the ratio scales with lattice spacing, the hierarchy
-   between gravity and EM has a geometric/structural origin.
+  If a = l_Planck ~ 10^{-35} m:
+    G_phys ~ G_nat * a^2 = 20.00 * l_P^2
+    q_phys ~ q_nat = 50.00
+    G_phys/q_phys^2 ~ 20.00 * l_P^2 / 50.00^2
+                    ~ 0.0080 * l_P^2
+                    ~ 0.0080 * 10^{-70} m^2
 
-4. Caveat: this is a simplified model. The full hierarchy requires
-   quantum field theory renormalization and running couplings.
+  Physical ratio: G*m_p^2/e^2 ~ 10^{-36}
+  This ratio has dimensions of 1 when hbar=c=1,
+  so it's (m_Planck/m_proton)^2 * alpha_em ~ (10^{19}/10^{-27+18})^2 / 137
 
-Total runtime: 312s (5.2 min)
+  KEY INSIGHT:
+  Gravity coupling G enters the field equation: nabla^2 f = -G*rho
+  EM coupling q enters the action: S += q*V
+  Self-consistency constrains G: G*rho*phi_max < O(1)
+  Phase coherence constrains q: q*V_max*N_path < 2*pi
+
+  The hierarchy arises because:
+  - rho*phi_max ~ 1/N^3 (density spreads over volume)
+  - So G_max ~ N^3 ~ 4096
+  - V_max ~ 1 (at r=1), N_path ~ N ~ 16
+  - So q_max ~ 2*pi/N ~ 0.393
+  - Ratio G_max/q_max^2 ~ N^3/(2*pi/N)^2 ~ N^5/(4*pi^2) ~ 26560.7
+
+  For physical lattice size N ~ l_macro/l_Planck ~ 10^{35}:
+  G/q^2 ~ N^5 ~ 10^{175} (lattice units)
+  But G has dim [length^2] so G_phys ~ G_lat * a^2
+  and the hierarchy becomes G_phys*m^2/q^2 ~ (m*a)^2 * N^5
+  This depends on the mass m, which sets the scale.
+
+================================================================================
+TEST 4: COMBINED GRAVITY + EM SELF-CONSISTENCY
+================================================================================
+Lattice: 16^3, k = 4.0
+
+       G        q       G/q2  grav_conv    phi_max     R_GE_max   em_slope  combined_ok
+----------------------------------------------------------------------------------------------
+    0.10     0.10    10.0000        YES   0.000681     1.42e-14     -1.065          YES
+    0.10     0.50     0.4000        YES   0.000681     7.11e-15     -1.065          YES
+    0.10     1.00     0.1000        YES   0.000681     7.11e-15     -1.065          YES
+    0.10     5.00     0.0040        YES   0.000681     1.42e-14     -1.065          YES
+    0.50     0.10    50.0000        YES   0.004389     7.11e-15     -1.065          YES
+    0.50     0.50     2.0000        YES   0.004389     7.11e-15     -1.065          YES
+    0.50     1.00     0.5000        YES   0.004389     7.11e-15     -1.065          YES
+    0.50     5.00     0.0200        YES   0.004389     1.42e-14     -1.065          YES
+    1.00     0.10   100.0000        YES   0.011118     0.00e+00     -1.065          YES
+    1.00     0.50     4.0000        YES   0.011118     7.11e-15     -1.065          YES
+    1.00     1.00     1.0000        YES   0.011118     1.42e-14     -1.065          YES
+    1.00     5.00     0.0400        YES   0.011118     7.11e-15     -1.065          YES
+    5.00     0.10   500.0000        YES   0.065073     1.42e-14     -1.065          YES
+    5.00     0.50    20.0000        YES   0.065073     7.11e-15     -1.065          YES
+    5.00     1.00     5.0000        YES   0.065073     7.11e-15     -1.065          YES
+    5.00     5.00     0.2000        YES   0.065073     1.42e-14     -1.065          YES
+   10.00     0.10  1000.0000        YES   0.132554     7.11e-15     -1.065          YES
+   10.00     0.50    40.0000        YES   0.132554     1.42e-14     -1.065          YES
+   10.00     1.00    10.0000        YES   0.132554     7.11e-15     -1.065          YES
+   10.00     5.00     0.4000        YES   0.132554     7.11e-15     -1.065          YES
+
+  Combined OK for 20/20 (G,q) pairs
+  G/q^2 range where combined works: [0.0040, 1000.0000]
+  No upper bound detected (all large ratios work)
+  No lower bound detected (all small ratios work)
+  Mixed residual R_GE = 0 (exact): True
+  (Confirms gravity and EM are truly independent sectors)
+
+  STABILITY CROSS-CHECK: does G convergence depend on q?
+    G=0.1: converges for q = [0.1, 0.5, 1.0, 5.0] (out of [0.1, 0.5, 1.0, 5.0])
+    G=0.5: converges for q = [0.1, 0.5, 1.0, 5.0] (out of [0.1, 0.5, 1.0, 5.0])
+    G=1.0: converges for q = [0.1, 0.5, 1.0, 5.0] (out of [0.1, 0.5, 1.0, 5.0])
+    G=5.0: converges for q = [0.1, 0.5, 1.0, 5.0] (out of [0.1, 0.5, 1.0, 5.0])
+    G=10.0: converges for q = [0.1, 0.5, 1.0, 5.0] (out of [0.1, 0.5, 1.0, 5.0])
+  [Test 4 elapsed: 0.6s]
+
+================================================================================
+SYNTHESIS: WHAT THE FRAMEWORK SAYS ABOUT THE HIERARCHY
+================================================================================
+
+1. GRAVITY AND EM ARE INDEPENDENT SECTORS
+   The mixed residual R_GE = 0 exactly (by linearity of action).
+   Gravity enters through S = L*(1-f), EM through S += q*V.
+   The two couplings G and q are NOT constrained relative to each other
+   by self-consistency alone.
+
+2. EACH COUPLING HAS ITS OWN STABILITY CONSTRAINT
+   Gravity: G must be small enough for self-consistent Poisson to converge.
+   Natural G scale on 16^3 lattice: G ~ 20.0 (lattice units)
+   EM: q must be small enough for phase coherence.
+   Natural q scale: q ~ O(1)-O(10) (dimensionless)
+
+3. THE HIERARCHY IS DIMENSIONAL, NOT DYNAMICAL
+   G has dimensions [length^2] (Newton's constant in natural units).
+   q is dimensionless (gauge coupling).
+   Their ratio G/q^2 has dimensions [length^2] = a^2 in lattice units.
+   The physical hierarchy G*m^2/q^2 = (m*a)^2 * (G_lat/q_lat^2).
+   This means the hierarchy is set by the ratio m/m_Planck,
+   which is the MASS hierarchy, not a coupling hierarchy.
+
+4. HONEST ASSESSMENT
+   The framework does NOT solve the hierarchy problem.
+   It correctly identifies that:
+   (a) G and q live in independent sectors
+   (b) G and q have different dimensions
+   (c) The apparent weakness of gravity is really a statement about
+       the mass of the proton being far below the Planck mass
+   (d) The framework does not predict the proton mass
+
+   What the framework DOES constrain:
+   - G_lat < 20 for stable self-consistent iteration
+   - q_lat can be O(1)-O(10) while maintaining 1/r^2 Coulomb
+   - The sectors do not interfere (R_GE = 0 exactly)
+   - The Poisson field equation is uniquely selected by self-consistency
+
+   The hierarchy problem remains: WHY is m_proton << m_Planck?
+   This is a question about the mass spectrum, not about couplings.
+
+Total elapsed: 2.6s
