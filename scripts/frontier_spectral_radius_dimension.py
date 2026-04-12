@@ -474,36 +474,36 @@ def main():
     print()
 
     # ── Verdict ─────────────────────────────────────────────────────────
-    # Check if any d>3 has rho>1 and all d<=3 have rho<=1
-    bounded_dims = []
-    divergent_dims = []
-    for d in sorted(configs.keys()):
-        for r in results_by_d[d]:
-            if abs(r["k"] - 5.0) < 0.01 and abs(r["f"]) < 0.01:
-                if r["rho"] > 1.0:
-                    divergent_dims.append(d)
-                else:
-                    bounded_dims.append(d)
-                break
-
     print("VERDICT:")
-    if divergent_dims and all(d > 3 for d in divergent_dims):
-        if all(d <= 3 for d in bounded_dims):
-            print("  STRONG SELECTION: rho <= 1 for d <= 3, rho > 1 for d > 3")
-            print("  The propagator is normalizable ONLY in d <= 3 spatial dimensions.")
-            print("  This is a hard dimension selection from propagator self-consistency.")
-        else:
-            print(f"  PARTIAL SELECTION: bounded at d={bounded_dims}, divergent at d={divergent_dims}")
-    elif divergent_dims:
-        print(f"  DIVERGENT dimensions: {divergent_dims}")
-        print(f"  BOUNDED dimensions: {bounded_dims}")
-        print("  Dimension selection is more nuanced than predicted.")
-    else:
-        print("  NO DIVERGENCE detected at any tested dimension.")
-        print("  The spectral radius is bounded for all d=1..5.")
-        print("  Dimension selection must arise from a different mechanism.")
-        print("  (Possible: need larger lattice, different p, or normalization differs.)")
-
+    print()
+    print("1. RAW TRANSFER MATRIX (all-to-all connections, h=1):")
+    print("   rho > 1 for ALL d >= 2.  No clean d=3 cutoff at fixed h.")
+    print("   The row-sum bound grows monotonically: 1.0, 2.0, 5.2, 12.9, 21.8")
+    print("   for d = 1, 2, 3, 4, 5.  This is geometric growth ~ O(side^{d-2}).")
+    print()
+    print("2. NEAREST-NEIGHBOR TRANSFER MATRIX:")
+    print("   rho_nn converges with lattice size (Exp 8) but stays > 1 for d >= 2.")
+    print("   The NN row bound scales as 3^{d-1} (coordination number):")
+    print("   1.0, 1.7, 3.2, 6.4, 13.9 for d = 1, 2, 3, 4, 5.")
+    print()
+    print("3. CONTINUUM LIMIT (Exp 3, all-to-all, h -> 0):")
+    print("   This is the KEY discriminator. Row sum ~ h^{d-1-p} * N_neighbors.")
+    print("   For p=1: row_sum ~ h^{d-2} * (lattice extent dependent).")
+    print("   d=2: rho stays O(1) as h->0 -- MARGINAL/DIVERGENT.")
+    print("   d=3: rho -> 0 as h->0 -- BOUNDED in continuum limit.")
+    print("   d=4: rho -> 0 faster -- also bounded but stronger attenuation needed.")
+    print()
+    print("4. DIMENSION SELECTION MECHANISM:")
+    print("   The spectral radius does NOT provide a sharp d<=3 cutoff.")
+    print("   Instead, it provides GRADED suppression: higher d means")
+    print("   the row-sum bound grows faster with the number of transverse")
+    print("   connections, requiring stronger phase cancellation to compensate.")
+    print("   With the cos^2 kernel, rho grows roughly as sqrt(3^{d-1}).")
+    print()
+    print("   The original hypothesis (rho<=1 iff d<=3) is NOT confirmed.")
+    print("   Dimension selection in this model must come from a different")
+    print("   mechanism (e.g., self-consistency of the gravitational field,")
+    print("   Born rule constraints, or the Poisson equation structure).")
     print()
 
 
