@@ -161,6 +161,11 @@ Why held:
   planar, and symmetric directions through low-order spectral invariants, so
   the missing selector must come from a genuinely larger same-surface
   operator or dynamical mechanism
+- the new graph-first selector lanes reduce that hold to a narrower theorem:
+  the canonical cube shifts `S_i` now support a derived quartic selector with
+  three axis minima and residual `Z_2` stabilizer, but the result is still
+  review-only until the selected graph axis is integrated canonically into the
+  bounded `su(3) ⊕ u(1)` commutant theorem
 - the later `HYPERCHARGE_IDENTIFICATION` script gives the right left-handed
   `Y` ratio and charges, but its anomaly-based uniqueness language still
   exceeds what that left-handed surface proves

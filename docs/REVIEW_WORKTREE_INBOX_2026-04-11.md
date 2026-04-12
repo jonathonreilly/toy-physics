@@ -45,6 +45,16 @@ Current state:
   the natural native triplets do exist, but their quadratic/cubic/quartic
   spectral invariants are isotropic, so they cannot by themselves generate
   the missing weak-axis selector
+- the new `NATIVE_NONLOCAL_SELECTOR_NOTE` and
+  `GRAPH_FIRST_SELECTOR_DERIVATION_NOTE` introduce the first viable graph-first
+  same-surface closure route: the canonical cube shifts `S_i` have a derived
+  quartic selector whose minima are exactly the three axes with residual `Z_2`
+  stabilizer
+- the new `NATIVE_DYNAMICAL_SELECTOR_NOTE` shows the corresponding
+  purity-deficit / pairwise-overlap potential on the normalized axis simplex;
+  that gives the right vacuum structure, but the still-open step is to
+  integrate this selected graph axis into the bounded `su(3) ⊕ u(1)` commutant
+  theorem cleanly
 - the later `HYPERCHARGE_IDENTIFICATION` lane is still conditional on that
   commutant setup and should not be summarized as anomaly-free closure
 - the later `YT_FROM_ALPHA_S` lane remains review-only: useful constraint, but

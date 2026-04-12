@@ -264,10 +264,28 @@ Required rework:
   `su(3) ⊕ u(1)`”
 - to close the stronger lane, either:
   - bridge the retained bivector `su(2)` to this factor `su(2)` canonically, or
-  - explicitly narrow the publication claim away from “`Cl(3)` alone”
+  - derive a graph-first same-surface axis selector and integrate the selected
+    axis canonically into the bounded commutant theorem
 - keep the hypercharge note conditional on the commutant theorem and rewrite
   its uniqueness claim around tracelessness / charge matching, not anomaly
   cancellation
+
+New development on review:
+
+- the new graph-first selector lanes
+  [docs/NATIVE_NONLOCAL_SELECTOR_NOTE.md](/private/tmp/physics-review-active/docs/NATIVE_NONLOCAL_SELECTOR_NOTE.md),
+  [docs/NATIVE_DYNAMICAL_SELECTOR_NOTE.md](/private/tmp/physics-review-active/docs/NATIVE_DYNAMICAL_SELECTOR_NOTE.md),
+  and
+  [docs/GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md](/private/tmp/physics-review-active/docs/GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md)
+  materially change the shape of this blocker
+- low-degree native Clifford triplets are still a no-go, but the canonical
+  graph-shift triplet now has a derived quartic selector with exactly three
+  axis minima and residual `Z_2` stabilizer
+- this does **not** yet put the lane on `main`, but it means the old native
+  bivector-to-KS bridge is no longer the only plausible closure route
+- the remaining theorem is now more focused:
+  integrate the graph-selected axis into the bounded `su(3) ⊕ u(1)` commutant
+  theorem without slipping back into representation-level choice language
 
 ### 5. Neutrino masses are a downstream phenomenology fit, not retained closure
 
