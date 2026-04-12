@@ -248,8 +248,8 @@ def attack1_gauge_lattice_mc():
     # Run scalar MC for both parameter sets
     # ------------------------------------------------------------------
     L_values = [12, 16, 24, 32]
-    N_therm = 500
-    N_meas = 2000
+    N_therm = 300
+    N_meas = 1200
     N_skip = 2
 
     rng = np.random.default_rng(42)
@@ -257,52 +257,57 @@ def attack1_gauge_lattice_mc():
     log(f"\n  Lattice sizes: {L_values}")
     log(f"  Sweeps: {N_therm} therm + {N_meas} meas (skip {N_skip})")
 
+    def nn_sum_vectorized(phi, L):
+        """Compute nearest-neighbor sum for all sites using numpy rolls."""
+        s = np.zeros_like(phi)
+        for ax in range(3):
+            s += np.roll(phi, 1, axis=ax)
+            s += np.roll(phi, -1, axis=ax)
+        return s
+
     def run_scalar_mc(L, r_values, h_param, u_param, rng_local):
-        """Run scalar MC with given parameters, return phi_avg and chi."""
+        """Run scalar MC with vectorized checkerboard Metropolis."""
         V = L**3
         phi_avg_list = []
         chi_list = []
+
+        # Build checkerboard masks
+        ix, iy, iz = np.meshgrid(range(L), range(L), range(L), indexing='ij')
+        mask_even = ((ix + iy + iz) % 2 == 0)
+        mask_odd = ~mask_even
 
         for r_val in r_values:
             phi = rng_local.normal(0.3, 0.1, size=(L, L, L))
             measurements = []
 
             for sweep in range(N_therm + N_meas):
-                # Vectorized Metropolis: update each site
-                for _ in range(V):
-                    ix = rng_local.integers(0, L)
-                    iy = rng_local.integers(0, L)
-                    iz = rng_local.integers(0, L)
+                # Checkerboard Metropolis: update even then odd sites
+                for mask in [mask_even, mask_odd]:
+                    nn = nn_sum_vectorized(phi, L)
 
-                    phi_old = phi[ix, iy, iz]
-
-                    # Nearest-neighbor sum
-                    nn_sum = 0.0
-                    for mu_dir in range(3):
-                        nb = [ix, iy, iz]
-                        nb[mu_dir] = (nb[mu_dir] + 1) % L
-                        nn_sum += phi[nb[0], nb[1], nb[2]]
-                        nb = [ix, iy, iz]
-                        nb[mu_dir] = (nb[mu_dir] - 1) % L
-                        nn_sum += phi[nb[0], nb[1], nb[2]]
-
-                    # Local action
-                    S_old = (-nn_sum * phi_old
+                    # Local action for current phi
+                    phi_old = phi.copy()
+                    S_old = (-nn * phi_old
                              + 3 * phi_old**2
                              + r_val * phi_old**2 / 2.0
                              - h_param * phi_old**3 / 3.0
                              + u_param * phi_old**4 / 4.0)
 
-                    phi_new = phi_old + rng_local.normal(0, 0.4)
-                    S_new = (-nn_sum * phi_new
+                    # Propose new phi
+                    delta = rng_local.normal(0, 0.4, size=(L, L, L))
+                    phi_new = phi_old + delta
+
+                    S_new = (-nn * phi_new
                              + 3 * phi_new**2
                              + r_val * phi_new**2 / 2.0
                              - h_param * phi_new**3 / 3.0
                              + u_param * phi_new**4 / 4.0)
 
                     dS = S_new - S_old
-                    if dS < 0 or rng_local.random() < np.exp(-min(dS, 500)):
-                        phi[ix, iy, iz] = phi_new
+                    dS_clipped = np.clip(dS, -500, 500)
+                    accept = (dS < 0) | (rng_local.random(size=(L, L, L)) < np.exp(-dS_clipped))
+                    update = accept & mask
+                    phi = np.where(update, phi_new, phi_old)
 
                 if sweep >= N_therm and (sweep - N_therm) % N_skip == 0:
                     measurements.append(np.mean(phi))
