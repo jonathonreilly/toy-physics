@@ -1,31 +1,26 @@
 #!/usr/bin/env python3
 """
-Generation Physicality: Z_3 Taste Orbits as Physical Fermion Generations
+Generation Physicality: Z_3 Taste Orbits as a Physicality Pressure Test
 ========================================================================
 
-CLAIM: The Z_3 cyclic-permutation orbits of the 8 staggered taste states
-in d=3 correspond to PHYSICAL fermion generations, not representation
-artifacts.
+CLAIM: The Z_3 cyclic-permutation orbits of the 8 staggered taste states in
+d=3 give an exact orbit decomposition, and the Wilson deformation can be used
+as a pressure test for whether those orbits can be treated as physical fermion
+generations.
 
 THE REFEREE OBJECTION:
     "In lattice QCD, taste states are artifacts of staggered discretisation
-     removed in the continuum limit (via the fourth-root trick).  Your orbits
+     removed in the continuum limit (via the fourth-root trick). Your orbits
      are just taste doublers, not generations."
 
-THIS SCRIPT PROVES OTHERWISE through six independent arguments:
+THIS SCRIPT DOES NOT PROVE PHYSICAL GENERATIONS. It does three things:
 
-  1. Physical distinctness -- the three Z_3 orbits have different masses,
-     gauge couplings (at O(a^2)), and CP phases.
-  2. Key distinction from lattice QCD -- in our framework a = l_Planck is
-     physical (no continuum limit), so taste-breaking IS mass splitting.
-  3. CKM-like mixing -- Z_3 anisotropy produces Cabibbo angle and Jarlskog
-     invariant matching experiment.
-  4. Singlet identification -- the two Z_3 fixed points decouple from the
-     gauge sector, consistent with sterile-neutrino interpretation.
-  5. Wilson deformation test -- adding a Wilson term breaks SU(2), SU(3),
-     and generations SIMULTANEOUSLY, proving they share one algebraic root.
-  6. Comparison to Furey -- our Z_3-on-Cl(3) mechanism is geometric (ties
-     N_gen = d_spatial), unlike Furey's purely algebraic S_3-on-Cl(8).
+  1. Proves the exact orbit algebra 8 = 1 + 1 + 3 + 3.
+  2. Shows how the model behaves if the lattice spacing a is taken to be
+     physical (a = l_Planck) rather than sent to zero.
+  3. Uses a Wilson deformation as a controlled pressure test for whether the
+     same Clifford structure controls the orbit pattern, gauge generators, and
+     mass splitting in this model.
 
 PStack experiment: generation-physicality
 Self-contained: numpy + scipy only.
@@ -163,7 +158,7 @@ def section_1_physical_distinctness():
       (c) CP-violating phase -- Z_3 charge omega^k gives distinct phases
     """
     print("\n" + "=" * 78)
-    print("SECTION 1: PHYSICAL DISTINCTNESS OF Z_3 ORBITS")
+    print("SECTION 1: MODEL ORBIT DISTINCTNESS OF Z_3 ORBITS")
     print("=" * 78)
 
     orbits = z3_orbits()
@@ -305,11 +300,12 @@ def section_2_lattice_qcd_distinction():
     print("  -> Taste splitting vanishes quadratically as a -> 0.")
 
     # --- 2b. Our framework: a = l_Planck, no continuum limit ---
-    print("\n--- 2b. Our framework: a = l_Planck is PHYSICAL ---")
+    print("\n--- 2b. Our framework: a = l_Planck is the working premise ---")
     print("  In the causal-set / graph-based spacetime approach:")
     print("    - The lattice spacing a ~ l_Planck ~ 1.6e-35 m is the minimum length.")
     print("    - There is no 'continuum limit' to take.")
-    print("    - Taste-breaking effects are PHYSICAL mass splittings, not artifacts.\n")
+    print("    - If that premise is adopted, taste-breaking effects are physical")
+    print("      mass splittings rather than continuum artifacts.\n")
 
     # Compute the 1+3+3+1 mass spectrum at physical values
     r_phys = 0.5  # Wilson parameter (O(1) in Planck units)
@@ -390,7 +386,7 @@ def section_2_lattice_qcd_distinction():
 
     report("graphene-precedent",
            True,
-           "Graphene proves taste doublers can be physical when the lattice is physical")
+           "Graphene shows taste doublers can be physical when the lattice is physical")
 
 
 # =============================================================================
@@ -624,27 +620,27 @@ def section_4_singlet_question():
     print("  Taste mixing requires 4-fermion interactions or explicit taste-breaking.")
 
     # --- 4c. Physical interpretation ---
-    print("\n--- 4c. Physical interpretation of singlets ---")
-    print("  Option A: STERILE NEUTRINOS")
+    print("\n--- 4c. Candidate interpretation of singlets ---")
+    print("  Option A: STERILE NEUTRINO CANDIDATES")
     print("    - (0,0,0) is the lightest state (m = 0 at tree level)")
     print("    - It is Z_3-invariant: no generation quantum number")
     print("    - It has no preferred direction -> no chiral gauge coupling")
     print("    - Interpretation: a sterile (right-handed) neutrino")
     print("    - PREDICTION: 2 sterile neutrinos (one per singlet)")
     print()
-    print("  Option B: DECOUPLED STATES")
+    print("  Option B: DECOUPLED STATE CANDIDATES")
     print("    - (1,1,1) has Wilson mass 6r/a ~ M_Planck -> decouples at low energy")
     print("    - (0,0,0) could mix with the triplet states via interactions")
     print("    - At low energy, only the triplet states (generations) survive")
     print()
-    print("  Option C: COMBINED")
+    print("  Option C: COMBINED MODEL INTERPRETATION")
     print("    - (0,0,0) = light sterile neutrino (observable)")
     print("    - (1,1,1) = Planck-mass state (decoupled)")
     print("    - This gives 3 generations + 1 sterile neutrino + 1 ultra-heavy state")
 
     report("singlet-interpretation",
            True,
-           "Singlets: (0,0,0) -> light sterile neutrino, (1,1,1) -> Planck-mass decoupled")
+           "Singlet candidates remain model-level interpretations, not derivations")
 
 
 # =============================================================================
@@ -653,8 +649,8 @@ def section_4_singlet_question():
 
 def section_5_wilson_deformation():
     """
-    Show that adding a Wilson term breaks SU(2), SU(3), and the generation
-    structure SIMULTANEOUSLY -- proving they share one algebraic root (Cl(3)).
+    Use a Wilson deformation as a pressure test: in this model the Clifford
+    algebra, SU(2), and the orbit pattern co-vary under the same deformation.
     """
     print("\n" + "=" * 78)
     print("SECTION 5: WILSON DEFORMATION -- SIMULTANEOUS BREAKING")
@@ -828,11 +824,10 @@ def section_5_wilson_deformation():
 
     # At r=0, the Z_3 orbit structure IS intact even though Wilson masses differ.
     # The key point: the TASTE ALGEBRA (Cl(3)) is what protects all three structures.
-    print("\n  CONCLUSION: All three structures (SU(2), SU(3), generations) are")
-    print("  protected by the SAME algebraic object -- the Cl(3) Clifford algebra.")
-    print("  The Wilson term deforms Cl(3), and ALL three break together.")
-    print("  This proves: generations are NOT an independent artifact.")
-    print("  They are as physical as SU(2) and SU(3) -- all three stand or fall together.")
+    print("\n  CONCLUSION: In this deformation model, Cl(3), SU(2), and the orbit")
+    print("  pattern co-vary under the same Wilson deformation.")
+    print("  That is a strong pressure test for the shared-root story,")
+    print("  but it does NOT by itself prove that generations are physical.")
 
     report("simultaneous-breaking",
            cl_threshold == su2_threshold or (cl_threshold is not None and su2_threshold is not None),
@@ -956,40 +951,35 @@ def main():
     print(f"{'=' * 78}")
 
     print(f"""
-  The six arguments above establish that Z_3 taste orbits are PHYSICAL
-  fermion generations, not lattice artifacts:
+  The six tests above establish the exact orbit algebra and a coherent
+  model-level pressure test for taste physicality. They do NOT by
+  themselves close the physical-generation theorem:
 
-  1. PHYSICAL DISTINCTNESS: The orbits differ in mass (O(r/a)), gauge
-     coupling (O(a^2)), and CP phase (2pi*k/3).  Three independently
-     measurable quantities distinguish them.
+  1. ORBIT ALGEBRA: The exact decomposition 8 = 1 + 1 + 3 + 3 is fixed
+     by the audited Z_3 action.
 
-  2. NO CONTINUUM LIMIT: In our framework a = l_Planck is physical.
-     Taste-breaking effects that vanish as a -> 0 in lattice QCD are
-     permanent, physical mass splittings here.  The 1+3+3+1 pattern
-     is exact at all lattice sizes.
+  2. PHYSICAL-LATTICE PREMISE: If a = l_Planck is taken as physical,
+     taste-breaking effects do not vanish in a continuum limit. This is
+     a framework premise, not a theorem derived here.
 
-  3. CKM MIXING: Z_3 anisotropy produces the CKM matrix with:
-     - Cabibbo angle from Z_3 geometry
-     - Jarlskog invariant J ~ 3e-5 from delta_CP = 2pi/3
-     Artifacts do not produce the correct CKM structure.
+  3. MODEL MIXING: Z_3 anisotropy gives a CKM-like texture in the toy
+     model, but the exact Standard Model mixing angles remain review-only.
 
-  4. SINGLETS: The two Z_3 fixed points (0,0,0) and (1,1,1) are
-     naturally identified as a light sterile neutrino and a Planck-mass
-     decoupled state -- testable predictions, not fudge factors.
+  4. SINGLET INTERPRETATION: The two fixed points are candidate singlet
+     sectors, not a derivation of the right-handed matter content.
 
-  5. WILSON ENTANGLEMENT: SU(2), SU(3), and the generation structure
-     break SIMULTANEOUSLY under Wilson deformation, proving they share
-     one algebraic root (Cl(3)).  Generations are as physical as gauge
-     groups -- all three stand or fall together.
+  5. WILSON PRESSURE TEST: In this model, SU(2), the triplet SU(3)
+     surface, and the orbit pattern deform together under the Wilson
+     term. That is evidence for a shared algebraic root, not a proof of
+     physicality.
 
-  6. N_gen = d_spatial: Unlike Furey's algebraic S_3, our Z_3 is the
-     physical rotation symmetry of d=3 space.  This gives the prediction
-     N_gen = d, tying the generation count to spatial dimensionality.
+  6. COMPARISON: The Z_3 orbit mechanism is geometric and tied to d=3,
+     but the generation interpretation still needs a canonical
+     matter-assignment theorem.
 
-  BOTTOM LINE: A referee who accepts that SU(2) and SU(3) emerge from
-  the taste algebra must also accept 3 generations.  They cannot reject
-  the generations without also rejecting the gauge groups, because both
-  come from the same Cl(3) structure (as proved by the Wilson test).
+  BOTTOM LINE: The exact theorem is the orbit decomposition 8 = 1 + 1 + 3 + 3.
+  The open theorem is whether those orbits are physical generations rather
+  than model artifacts.
 
   Tests passed: {PASS_COUNT}/{PASS_COUNT + FAIL_COUNT}
   Time: {elapsed:.1f}s
