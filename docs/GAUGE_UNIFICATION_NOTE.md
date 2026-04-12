@@ -67,21 +67,21 @@ close to the 1/alpha_1 value at M_Planck.
 
 ## sin^2(theta_W) at M_Z
 
-Running from exact unification at M_Planck predicts:
+**BUG FIX (2026-04-12):** The original computation used the formula
+sin^2 = alpha_1/(alpha_1 + alpha_2) with GUT-normalized alpha_1. The
+correct formula is sin^2 = (3/5)*alpha_1/((3/5)*alpha_1 + alpha_2),
+which reduces to 3/8 at unification. The script has been corrected.
 
-    sin^2(theta_W)(M_Z) ~ 0.263
+Running from exact unification at M_Planck with SM-only beta functions:
 
-compared to the measured value 0.23122. The discrepancy of ~14% is of
-the expected order for Planck-scale threshold corrections not captured
-by the SM beta functions alone.
+    sin^2(theta_W)(M_Z) ~ 0.176  [CORRECTED from 0.263]
 
-The dependence on the unification scale is weak:
+compared to the measured value 0.23122. The SM-only prediction is 24% LOW.
 
-| log10(M_U/GeV) | sin^2(theta_W) | Deviation from 0.231 |
-|-----------------|-----------------|---------------------|
-| 14 | 0.315 | +36% |
-| 16 | 0.293 | +27% |
-| 19 | 0.263 | +14% |
+With taste threshold corrections (see WEINBERG_ANGLE_CORRECTION_NOTE.md):
+- Full 8-fold taste at M_taste = 1.2 x 10^17 GeV: sin^2 = 0.231 (exact match)
+- Structured taste at M_taste = 6 x 10^11 GeV: sin^2 = 0.231 (exact match)
+- Self-consistent caveat: fitted M_taste, not derived from first principles
 
 ## Proton decay
 
@@ -101,7 +101,7 @@ far beyond any foreseeable experiment, explaining the null result.
 - The Cl(3) algebra naturally provides all three gauge groups
 - The GUT relation sin^2(theta_W) = 3/8 emerges automatically
 - Proton decay suppression is a genuine qualitative prediction
-- sin^2(theta_W) at M_Z is within ~14% of the measured value
+- sin^2(theta_W) at M_Z is 0.176 with SM-only running (24% low); 0.231 with taste threshold corrections
 
 **What needs work:**
 - The bare lattice coupling (alpha ~ 0.08) is ~3.6x larger than the

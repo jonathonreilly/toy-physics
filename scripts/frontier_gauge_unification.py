@@ -417,7 +417,10 @@ inv_a2_pred = 1.0/alpha_U + b_2 * L_Pl
 a1_pred = 1.0 / inv_a1_pred
 a2_pred = 1.0 / inv_a2_pred
 a3_pred = 1.0 / (1.0/alpha_U + b_3 * L_Pl)
-sin2_pred = a1_pred / (a1_pred + a2_pred)
+# BUG FIX: alpha_1 is GUT-normalized (5/3 * alpha_Y), so sin^2(theta_W)
+# = (3/5)*alpha_1 / ((3/5)*alpha_1 + alpha_2), which gives 3/8 at unification.
+# The WRONG formula alpha_1/(alpha_1+alpha_2) gave 0.263; the correct one gives 0.176.
+sin2_pred = (3.0/5.0) * a1_pred / ((3.0/5.0) * a1_pred + a2_pred)
 
 log(f"  sin^2(theta_W)(M_Z) from running:")
 log(f"    Predicted: {sin2_pred:.6f}")
@@ -442,7 +445,7 @@ inv_a1_lat = 1.0/alpha_plaq + b_1 * L_Pl
 inv_a2_lat = 1.0/alpha_plaq + b_2 * L_Pl
 a1_lat = 1.0 / inv_a1_lat
 a2_lat = 1.0 / inv_a2_lat
-sin2_lat = a1_lat / (a1_lat + a2_lat)
+sin2_lat = (3.0/5.0) * a1_lat / ((3.0/5.0) * a1_lat + a2_lat)
 log()
 log(f"  sin^2(theta_W) with lattice coupling: {sin2_lat:.6f}"
     f" (measured: {SIN2_TW_MZ:.6f})")
@@ -476,7 +479,7 @@ for au in alpha_scan:
     a1p = 1.0 / ia1
     a2p = 1.0 / ia2
     a3p = 1.0 / ia3
-    s2p = a1p / (a1p + a2p)
+    s2p = (3.0/5.0) * a1p / ((3.0/5.0) * a1p + a2p)
     chi2 = ((a1p - ALPHA_1_MZ)/ALPHA_1_MZ)**2 \
          + ((a2p - ALPHA_2_MZ)/ALPHA_2_MZ)**2 \
          + ((a3p - ALPHA_3_MZ)/ALPHA_3_MZ)**2
@@ -513,7 +516,7 @@ for au, label in [(au_best, "best couplings"), (au_best_sin2, "best sin2tw")]:
     ia2 = inv_au + b_2 * L_Pl
     ia3 = inv_au + b_3 * L_Pl
     a1p, a2p, a3p = 1/ia1, 1/ia2, 1/ia3
-    s2p = a1p / (a1p + a2p)
+    s2p = (3.0/5.0) * a1p / ((3.0/5.0) * a1p + a2p)
     log(f"  With alpha_U = {au:.6f} ({label}):")
     log(f"    alpha_1(MZ) = {a1p:.6f} vs {ALPHA_1_MZ:.6f} ({(a1p/ALPHA_1_MZ-1)*100:+.1f}%)")
     log(f"    alpha_2(MZ) = {a2p:.6f} vs {ALPHA_2_MZ:.6f} ({(a2p/ALPHA_2_MZ-1)*100:+.1f}%)")
