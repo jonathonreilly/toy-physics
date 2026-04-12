@@ -40,6 +40,17 @@ overnight hold bundle.
 - `scripts/frontier_hawking_bogoliubov_quench.py`
 - `docs/DISTANCE_LAW_64_FROZEN_CONTROL_NOTE.md`
 - `scripts/frontier_distance_law_64_frozen_control.py`
+- `docs/DISTANCE_LAW_DEFINITIVE_NOTE.md`
+- `scripts/frontier_distance_law_definitive.py`
+- `docs/ACTION_NORMALIZATION_NOTE.md`
+- `scripts/frontier_action_normalization.py`
+- `docs/BEYOND_LATTICE_QCD_NOTE.md`
+- `scripts/frontier_beyond_lattice_qcd.py`
+- `docs/DIAMOND_NV_EXPERIMENT_CARD.md`
+- `docs/DIAMOND_NV_LATTICE_CORRECTION_NOTE.md`
+- `scripts/frontier_diamond_nv_lattice_correction.py`
+- `docs/POISSON_EXHAUSTIVE_UNIQUENESS_NOTE.md`
+- `scripts/frontier_poisson_exhaustive_uniqueness.py`
 
 ## Holds
 
@@ -55,6 +66,8 @@ Files:
 - `docs/EM_GRAVITY_COEXISTENCE_CONTROL_NOTE_2026-04-12.md`
 - `docs/SPATIAL_METRIC_DERIVATION_NOTE.md`
 - `scripts/frontier_spatial_metric_derivation.py`
+- `docs/INDEPENDENT_SPATIAL_METRIC_NOTE.md`
+- `scripts/frontier_independent_spatial_metric.py`
 - `docs/SECOND_QUANTIZED_PROTOTYPE_NOTE.md`
 - `scripts/frontier_second_quantized_prototype.py`
 - `docs/HOLOGRAPHIC_ENTROPY_NOTE.md`
@@ -85,8 +98,10 @@ Why held:
   field-theory probes
 - dimension and cosmology remain bounded proxy studies
 - the new dispersion runner is still an honest negative with anomalous scaling
-- the Poisson-preference note is review-grade evidence for preference among the
-  tested operators, not a uniqueness result
+- the old Poisson-preference note remains a hold artifact; the newer exhaustive
+  audit is now tracked above as a separate bounded review candidate
+- the independent-spatial-metric note improves the old circularity problem but
+  still does not independently force the `(1-f)` amplitude prefactor
 
 Next control:
 

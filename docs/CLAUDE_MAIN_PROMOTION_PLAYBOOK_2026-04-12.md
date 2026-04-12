@@ -93,6 +93,17 @@ Sub-gates:
 - Poisson preference:
   - keep as preference among tested operators unless uniqueness is actually
     established
+- Poisson exhaustive family audit:
+  - safe promotion target is uniqueness of the Newtonian crossing within the
+    tested local fractional nearest-neighbor family
+  - do not restate global uniqueness of the field equation
+  - do not generalize non-local divergence beyond the tested operators/surface
+- independent spatial metric:
+  - do not promote as an unconditional derivation while the amplitude prefactor
+    `(1-f)` is still introduced as a minimal-coupling prescription
+  - Born-rule/spectral squaring strengthens the argument only after that
+    prefactor is granted
+  - safe read today is improved consistency derivation, not gate closure
 - lattice-gauge distinction:
   - reviewer memo only, not retained science
 

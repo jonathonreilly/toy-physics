@@ -87,6 +87,19 @@ review pass and claim-boundary check before any promotion.
 - `scripts/frontier_hawking_bogoliubov_quench.py`
 - `docs/DISTANCE_LAW_64_FROZEN_CONTROL_NOTE.md`
 - `scripts/frontier_distance_law_64_frozen_control.py`
+- `docs/DISTANCE_LAW_DEFINITIVE_NOTE.md`
+- `scripts/frontier_distance_law_definitive.py`
+- `docs/ACTION_NORMALIZATION_NOTE.md`
+- `scripts/frontier_action_normalization.py`
+- `docs/BEYOND_LATTICE_QCD_NOTE.md`
+- `scripts/frontier_beyond_lattice_qcd.py`
+- `docs/DIAMOND_NV_EXPERIMENT_CARD.md`
+- `docs/DIAMOND_NV_LATTICE_CORRECTION_NOTE.md`
+- `scripts/frontier_diamond_nv_lattice_correction.py`
+- `docs/POISSON_EXHAUSTIVE_UNIQUENESS_NOTE.md`
+- `scripts/frontier_poisson_exhaustive_uniqueness.py`
+- `docs/INDEPENDENT_SPATIAL_METRIC_NOTE.md`
+- `scripts/frontier_independent_spatial_metric.py`
 
 Current read:
 
@@ -98,6 +111,20 @@ Current read:
   null and thermal-fit regime; not a Hawking claim
 - distance law 64 frozen control: bounded diagnostic companion; brackets the
   continuum exponent but does not close the strict frozen/static-source gate
+- distance law definitive: strong ordered-cubic/Dirichlet closure candidate,
+  but still bounded to that surface until separately retained
+- action normalization: reviewer-facing normalization memo; not an axiomatic
+  derivation of the coupling coefficient
+- beyond lattice QCD: reviewer-facing bounded differentiation memo, not
+  standalone retained physics
+- diamond NV card: lab-facing proposal card, not an experimental result
+- diamond lattice correction: distinct formula relative to smooth GR, but not
+  an actionable discriminator at realistic microscopic lattice scales
+- Poisson exhaustive uniqueness: strengthened operator-family audit; safe as a
+  bounded family result, not a global uniqueness theorem
+- independent spatial metric: stronger than the old circular argument, but
+  still held because the amplitude prefactor `(1-f)` is prescribed rather than
+  independently forced
 
 Promotion rule:
 
