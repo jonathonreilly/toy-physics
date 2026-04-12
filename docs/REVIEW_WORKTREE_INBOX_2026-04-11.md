@@ -165,6 +165,20 @@ Promotion rule:
 - if any of these lanes are reopened, write a fresh bounded audit note on top
   of the imported artifacts rather than promoting the historical note itself
 
+### Narrow capture from `origin/codex/irregular-sign-closure`
+
+- `docs/IRREGULAR_ENDOGENOUS_SIGN_CLOSURE_NOTE_2026-04-11.md`
+- `scripts/frontier_irregular_endogenous_sign_closure.py`
+
+Current read:
+
+- strong same-surface shell-packet irregular sign separator on the audited
+  irregular families
+- valuable predecessor artifact for the later core-packet retention and
+  portability analysis
+- not a current `main` candidate because the later low-screening and
+  portability gates, not this shell-packet surface alone, now define the lane
+
 ### 2026-04-12 migration from `claude/youthful-neumann`
 
 New bounded promotion candidates:

@@ -95,6 +95,27 @@ Reason:
 - the imported slice preserves the cleanest repo-facing historical controls,
   but the branch still needs further uniqueness review before archive
 
+### `origin/codex/irregular-sign-closure`
+
+Status:
+
+- scrubbed into `codex/review-active`
+
+Captured in this pass:
+
+- `docs/IRREGULAR_ENDOGENOUS_SIGN_CLOSURE_NOTE_2026-04-11.md`
+- `scripts/frontier_irregular_endogenous_sign_closure.py`
+
+Archive readiness:
+
+- archive-ready
+
+Reason:
+
+- relative to `origin/frontier/spot-checks`, this branch's unique payload is the
+  single shell-packet irregular sign-closure note+runner pair above, and that
+  pair is now preserved on the active review branch
+
 ## Codex First-Pass Triage
 
 These statuses are mechanical only: whether the branch tip is already an

@@ -244,6 +244,8 @@ Next control:
 
 Files:
 
+- `docs/IRREGULAR_ENDOGENOUS_SIGN_CLOSURE_NOTE_2026-04-11.md`
+- `scripts/frontier_irregular_endogenous_sign_closure.py`
 - `docs/IRREGULAR_ENDOGENOUS_SIGN_CLOSURE_NEXT_STEPS_2026-04-11.md`
 - `docs/IRREGULAR_ENDOGENOUS_SIGN_REINFORCEMENT_NOTE_2026-04-11.md`
 - `docs/IRREGULAR_ENDOGENOUS_SIGN_SIZE_PORTABILITY_NOTE_2026-04-11.md`
@@ -256,6 +258,8 @@ Files:
 
 Why held:
 
+- the shell-packet same-surface separator is a real strong frontier result and
+  is now preserved on review
 - the bounded core-packet same-surface separator is now retained on `main`
 - what remains open is portability beyond that surface
 - the third packet family still does not close the lane
