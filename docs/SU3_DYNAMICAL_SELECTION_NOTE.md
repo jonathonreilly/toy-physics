@@ -1,18 +1,25 @@
-# SU(3) Dynamical Selection -- Closing the Hand-Embedding Gap
+# SU(3) Dynamical Selection — Taste-Breaking Stress Test
 
-**Status:** 4/5 attacks PASS  
-**Script:** `scripts/frontier_su3_dynamical_selection.py`  
+**Status:** MODELED TASTE-BREAKING STRESS TEST — strengthens but does not close native cubic SU(3)
+**Authority:** CI3_Z3_PUBLICATION_RETAIN_AUDIT_2026-04-12.md
+**Script:** `scripts/frontier_su3_dynamical_selection.py`
 **Date:** 2026-04-12
 
 ## Problem
 
 The previous SU(3) construction (frontier_ultimate_simplification.py, lines 785--830) picks 3 basis states out of a 4-dimensional subspace and embeds Gell-Mann matrices there. This demonstrates *compatibility* but not *derivation*. A reviewer correctly flagged this: the runner does not derive a distinguished SU(3) from the cubic taste algebra.
 
-SU(2) is rigorous -- it emerges from the bipartite Z_2 structure. We need the same rigor for SU(3).
+SU(2) is rigorous -- it emerges from the bipartite Z_2 structure. SU(3) requires additional structure.
 
-## The Three-Step Derivation Chain
+**Caveat:** The taste-breaking coefficients (delta_A, delta_T, delta_S) used
+below are MODELED via imported O(a²) parameters, not derived from the retained
+cubic surface. This note is a stress test showing that taste breaking naturally
+selects SU(3), but the breaking operator itself is not yet derived from first
+principles within the retained lane.
 
-SU(3) is derived (not embedded) via:
+## The Three-Step Argument (modeled, not derived)
+
+SU(3) is selected (not derived) via:
 
 1. **Taste breaking forces 8 = 1 + 3 + 3 + 1.** The 2^3 = 8 staggered taste states are classified by the number of pi-components in their Brillouin zone corner momentum (n_pi = 0, 1, 2, 3). Cubic symmetry guarantees that states with the same n_pi are degenerate. The combinatorial count C(3, n_pi) gives degeneracies 1, 3, 3, 1.
 
