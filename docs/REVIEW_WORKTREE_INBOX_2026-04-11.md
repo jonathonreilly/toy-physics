@@ -197,12 +197,14 @@ Files:
 - `docs/STAGGERED_TWO_BODY_PORTABILITY_NOTE_2026-04-11.md`
 - `docs/STAGGERED_TWO_BODY_TRANSPORT_NOTE_2026-04-11.md`
 - `docs/STAGGERED_TWO_BODY_LINK_CURRENT_NOTE_2026-04-11.md`
+- `docs/STAGGERED_TWO_BODY_MOMENTUM_FLUX_NOTE_2026-04-11.md`
 - `docs/STAGGERED_TWO_BODY_NEXT_STEPS_NOTE_2026-04-11.md`
 - `scripts/frontier_staggered_direct_com_closure.py`
 - `scripts/frontier_staggered_both_masses.py`
 - `scripts/frontier_staggered_two_body_portability.py`
 - `scripts/frontier_staggered_two_body_transport.py`
 - `scripts/frontier_staggered_two_body_link_current.py`
+- `scripts/frontier_staggered_two_body_momentum_flux.py`
 
 Why held:
 
@@ -213,12 +215,14 @@ Why held:
   audited open-cubic surface
 - the true mid-plane link-current readout has now been tried and is still
   negative on the audited open-cubic surface
+- the packet-local momentum-flux / impulse readout has now been tried and is
+  still negative on the audited open-cubic surface
 
 Required next experiment:
 
 - stop trying more centroid variants
-- current / flux / impulse observables remain the only credible next step if
-  this lane is reopened
+- if the lane is reopened, it needs a genuinely different conserved-current
+  formulation or a different graph geometry, not another packet cut
 
 ## Claude Instructions
 

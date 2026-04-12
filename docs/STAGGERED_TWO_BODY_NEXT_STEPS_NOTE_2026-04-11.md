@@ -214,3 +214,14 @@ They mean something narrower and more actionable:
 
 The next wins will come from force- or current-led readouts, not from another
 centroid split.
+
+## Update
+
+The packet-local momentum-flux / impulse candidate has now also been tried on
+the same audited open-cubic surface and remains a hold. That narrows the
+remaining reopen path further:
+
+- no more centroid variants
+- no more mid-plane or packet-face cuts on the same surface
+- if this lane is reopened, it needs a genuinely different conserved-current
+  formulation or a different graph geometry
