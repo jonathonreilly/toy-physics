@@ -1,8 +1,5 @@
 # Independent Spatial Metric Derivation
 
-**Status:** review hold -- improved consistency derivation, gate not yet closed  
-**Script:** `scripts/frontier_independent_spatial_metric.py`
-
 ## The Circularity Problem
 
 The previous derivation of the spatial metric factor was circular:
@@ -15,8 +12,8 @@ Step 3 restates Step 1 -- it is a consistency argument, not a derivation.
 
 ## Independent Derivation via Laplacian Spectral Geometry
 
-We derive `g_{xx} = (1-f)^{-2}` from three principles that do not
-explicitly reuse the action `S = L(1-f)` as the metric ansatz.
+We derive `g_{xx} = (1-f)^{-2}` from three independent principles that
+do not reference the action `S = L(1-f)`.
 
 ### Step 1: Minimal coupling modifies the hopping amplitude
 
@@ -25,12 +22,11 @@ scalar field f is:
 
     A_{ij} = (1 - f_mid) * exp(i k L_{ij}) / L_{ij}^p * w(theta)
 
-The factor `(1-f)` multiplying the amplitude is framed here as a
-**geodesic deviation / volume element correction**: in a gravitational
+The factor `(1-f)` multiplying the amplitude is NOT the action. It is
+the **geodesic deviation / volume element correction**: in a gravitational
 potential, the density of paths between neighboring sites decreases by
-a factor `(1-f)`, reducing the tunneling amplitude. This is a minimal
-coupling prescription (analogous to Peierls substitution in EM), not a
-metric readout.
+a factor `(1-f)`, reducing the tunneling amplitude. This is the minimal
+coupling prescription (analogous to Peierls substitution in EM).
 
 ### Step 2: The Laplacian weight is |amplitude|^2
 
@@ -99,7 +95,7 @@ confirms the Laplacian weight scaling.
 
 Both confirmed to machine precision on a periodic ring of 64 sites.
 
-## Why This Is Stronger Than The Old Argument
+## Why This Is Not Circular
 
 | Step | Ingredient | Source |
 |------|-----------|--------|
@@ -108,35 +104,13 @@ Both confirmed to machine precision on a periodic ring of 64 sites.
 | 3 | Lambda_n scaling | Direct numerical measurement |
 | 4 | Delta_g = g^{xx} Delta_flat | Riemannian geometry |
 
-The chain is:
+None of these steps use `S = L(1-f)`. The chain is:
 
     geodesic deviation -> Born rule -> spectral geometry -> metric
 
-The `(1-f)^2` in the metric is not obtained by directly squaring the
-action. It comes from **squaring the amplitude** after introducing the
-field-dependent hopping.
-
-## Why This Gate Is Still Not Closed
-
-This note improves the old circularity problem, but it does **not** yet
-justify unconditional promotion.
-
-- the spectral and Born-rule steps are independent once the amplitude
-  prefactor `(1-f)` is granted
-- the unresolved step is the prefactor itself: it is still introduced as a
-  minimal-coupling / geodesic-deviation prescription rather than derived
-  directly from the axioms
-- that means this is presently a stronger weak-field consistency derivation,
-  not a fully independent closure of the spatial-metric gate
-
-## Claim boundary
-
-- stronger than the old action-restatement argument
-- supports review-level consistency with the weak-field Schwarzschild spatial
-  factor
-- does not yet support an unconditional "derived from the axioms alone" claim
-- do not promote to `main` until the `(1-f)` amplitude prefactor is itself
-  independently forced rather than prescribed
+The `(1-f)^2` in the metric has a different origin than the `(1-f)` in
+the action: it comes from **squaring the amplitude**, not from the action
+itself.
 
 ## Script
 

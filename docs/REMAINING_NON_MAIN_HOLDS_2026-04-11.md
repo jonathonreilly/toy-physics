@@ -75,6 +75,28 @@ overnight hold bundle.
 - `docs/DIAMOND_NV_EXPERIMENT_CARD.md` (reviewer memo, not science)
 - `docs/LATTICE_GAUGE_DISTINCTION_NOTE.md` (reviewer memo, not science)
 
+### 2026-04-12 batch 2 migration additions (bounded promotion candidates)
+
+- `docs/DIMENSION_SELECTION_NOTE.md`
+- `scripts/frontier_dimension_selection.py`
+- `docs/BACKGROUND_INDEPENDENCE_NOTE.md`
+- `scripts/frontier_background_independence.py`
+- `docs/TENSOR_NETWORK_CONNECTION_NOTE.md`
+- `scripts/frontier_tensor_network_connection.py`
+- `docs/AXIOM_REDUCTION_NOTE.md`
+- `docs/GRAVITATIONAL_WAVE_PROBE_NOTE.md`
+- `scripts/frontier_grav_wave_post_newtonian.py`
+
+### 2026-04-12 batch 2 migration additions (archive-ready, not for promotion)
+
+- `docs/HIERARCHY_RATIO_NOTE.md`
+- `scripts/frontier_hierarchy_ratio.py`
+- `docs/LITERATURE_ANOMALY_SEARCH_NOTE.md`
+
+### 2026-04-12 batch 2 migration additions (reviewer memos / planning)
+
+- `docs/NATURE_SCIENCE_BACKLOG.md`
+
 ## Holds
 
 ### 0. Overnight Claude audit bundle
@@ -267,6 +289,18 @@ The following reclassifications were applied during the migration from
   as archive-ready
 - Items #25-26 (LATTICE_GAUGE_DISTINCTION_NOTE, DIAMOND_NV_EXPERIMENT_CARD)
   are reviewer memos, not science artifacts
+
+### 2026-04-12 batch 2 reclassifications
+
+- `INDEPENDENT_SPATIAL_METRIC_NOTE.md` and `frontier_independent_spatial_metric.py`:
+  updated versions copied; remains in hold #0 (user says not independent enough;
+  (1-f) prefactor prescribed)
+- `DIAMOND_NV_EXPERIMENT_CARD.md`: updated version copied; remains reviewer memo
+- `POISSON_EXHAUSTIVE_UNIQUENESS_NOTE.md` and `frontier_poisson_exhaustive_uniqueness.py`:
+  updated versions copied; remains bounded promotion candidate (21 operators)
+- Files already on review-active that received updates from youthful-neumann:
+  ACTION_NORMALIZATION, BEYOND_LATTICE_QCD, NONLINEAR_BORN_GRAVITY,
+  GRAVITATIONAL_ENTANGLEMENT, WAVE_EQUATION_GRAVITY (all latest versions copied)
 
 Full classification: `docs/MIGRATION_AUDIT_2026-04-12.md`
 

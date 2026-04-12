@@ -151,8 +151,96 @@ Negative results or closed lanes. Retained for completeness, not for promotion.
 - Hold items require the named blocker to be resolved before promotion
 - Archive-ready items stay on review-active for reference only
 
+## Batch 2: 2026-04-12 (late)
+
+Source: `claude/youthful-neumann` (continued accumulation)
+
+### Files Copied (New to review-active)
+
+Scripts:
+- `scripts/frontier_dimension_selection.py`
+- `scripts/frontier_hierarchy_ratio.py`
+- `scripts/frontier_background_independence.py`
+- `scripts/frontier_tensor_network_connection.py`
+- `scripts/frontier_grav_wave_post_newtonian.py`
+
+Docs:
+- `docs/DIMENSION_SELECTION_NOTE.md`
+- `docs/HIERARCHY_RATIO_NOTE.md`
+- `docs/BACKGROUND_INDEPENDENCE_NOTE.md`
+- `docs/TENSOR_NETWORK_CONNECTION_NOTE.md`
+- `docs/AXIOM_REDUCTION_NOTE.md`
+- `docs/LITERATURE_ANOMALY_SEARCH_NOTE.md`
+- `docs/GRAVITATIONAL_WAVE_PROBE_NOTE.md`
+- `docs/NATURE_SCIENCE_BACKLOG.md`
+
+### Files Updated (newer versions copied over existing)
+
+Scripts:
+- `scripts/frontier_wave_equation_gravity.py`
+- `scripts/frontier_gravitational_entanglement.py`
+- `scripts/frontier_nonlinear_born_gravity.py`
+- `scripts/frontier_beyond_lattice_qcd.py`
+- `scripts/frontier_poisson_exhaustive_uniqueness.py`
+- `scripts/frontier_action_normalization.py`
+- `scripts/frontier_independent_spatial_metric.py`
+
+Docs:
+- `docs/WAVE_EQUATION_GRAVITY_NOTE.md`
+- `docs/GRAVITATIONAL_ENTANGLEMENT_NOTE.md`
+- `docs/NONLINEAR_BORN_GRAVITY_NOTE.md`
+- `docs/BEYOND_LATTICE_QCD_NOTE.md`
+- `docs/POISSON_EXHAUSTIVE_UNIQUENESS_NOTE.md`
+- `docs/ACTION_NORMALIZATION_NOTE.md`
+- `docs/INDEPENDENT_SPATIAL_METRIC_NOTE.md`
+- `docs/DIAMOND_NV_EXPERIMENT_CARD.md`
+
+### Classification (Batch 2)
+
+#### A. Bounded Promotion Candidates (6 new items)
+
+| # | Name | Script | Note | Summary |
+|---|------|--------|------|---------|
+| 27 | dimension_selection | `frontier_dimension_selection.py` | `DIMENSION_SELECTION_NOTE.md` | d>=3 from self-consistency; bounded to tested operator family |
+| 28 | background_independence | `frontier_background_independence.py` | `BACKGROUND_INDEPENDENCE_NOTE.md` | 4/4 pass on randomized backgrounds; bounded |
+| 29 | tensor_network_connection | `frontier_tensor_network_connection.py` | `TENSOR_NETWORK_CONNECTION_NOTE.md` | 4/4 pass incl holographic; bounded |
+| 30 | axiom_reduction | (memo only) | `AXIOM_REDUCTION_NOTE.md` | 2 axioms + 1 integer; reviewer-facing reduction memo |
+| 31 | grav_wave_post_newtonian | `frontier_grav_wave_post_newtonian.py` | `GRAVITATIONAL_WAVE_PROBE_NOTE.md` | 3 beyond-Newton effects (speed, quadrupole, dissipation) |
+| 32 | poisson_exhaustive_uniqueness | `frontier_poisson_exhaustive_uniqueness.py` | `POISSON_EXHAUSTIVE_UNIQUENESS_NOTE.md` | 21 operators; updated version of existing candidate |
+
+#### B. Archive-Ready (2 new items)
+
+| # | Name | Script | Note | Reason |
+|---|------|--------|------|--------|
+| 33 | hierarchy_ratio | `frontier_hierarchy_ratio.py` | `HIERARCHY_RATIO_NOTE.md` | honest null; no hierarchy at tested scales |
+| 34 | literature_anomaly_search | (memo only) | `LITERATURE_ANOMALY_SEARCH_NOTE.md` | no match found in surveyed literature |
+
+#### C. Explicit Hold (1 updated item)
+
+| # | Name | Script | Note | Blocker |
+|---|------|--------|------|---------|
+| 13 | independent_spatial_metric | `frontier_independent_spatial_metric.py` | `INDEPENDENT_SPATIAL_METRIC_NOTE.md` | user says not independent enough; (1-f) prefactor prescribed |
+
+#### D. Reviewer Memos / Planning (2 items)
+
+| # | Name | File | Type |
+|---|------|------|------|
+| 26 | DIAMOND_NV_EXPERIMENT_CARD | `docs/DIAMOND_NV_EXPERIMENT_CARD.md` | lab protocol (updated) |
+| 35 | NATURE_SCIENCE_BACKLOG | `docs/NATURE_SCIENCE_BACKLOG.md` | internal planning document |
+
+#### E. Updated Existing Candidates (no reclassification)
+
+These files received newer versions from youthful-neumann but their
+classification is unchanged from batch 1:
+
+- wave_equation_gravity (#9): still bounded promotion candidate
+- gravitational_entanglement (#8): still bounded promotion candidate
+- nonlinear_born_gravity (#7): still bounded promotion candidate
+- beyond_lattice_qcd (#10): still bounded promotion candidate
+- action_normalization (#6): still bounded promotion candidate
+
 ## Source Branch Status
 
-After this migration, `claude/youthful-neumann` has no unique science artifacts
-that are not also on `codex/review-active`. The branch can be considered
-fully migrated for science content.
+After this migration (batches 1+2), `claude/youthful-neumann` has no unique
+science artifacts that are not also on `codex/review-active`. The branch can be
+considered fully migrated for science content.

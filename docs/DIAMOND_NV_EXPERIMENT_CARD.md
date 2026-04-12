@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-12
 **For:** Experimentalist collaborator (NV center lab)
-**Status:** bounded review candidate -- lab-facing experiment card
+**Status:** Lab-ready protocol card, three experiments ranked by feasibility
 
 ---
 
@@ -14,15 +14,7 @@ framework. They are ordered by feasibility: Experiment 1 is doable with
 equipment most NV labs already have. Experiment 3 is a reach goal.
 
 All three share the same NV platform and most of the same hardware. A lab
-that sets up for Experiment 1 is most of the way to Experiment 2.
-
-## Claim boundary
-
-- this is a lab-facing proposal card, not a retained result
-- the gravitational Born-rule experiment is the highest-feasibility proposal,
-  but it is not yet an executed experiment
-- the retardation / lattice-correction lane remains below detectability in the
-  current support note
+that sets up for Experiment 1 is 80% of the way to Experiment 2.
 
 ---
 

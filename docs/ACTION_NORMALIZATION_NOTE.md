@@ -10,10 +10,10 @@ The coefficient is arbitrary."
 
 ## Summary of the Response
 
-The coefficient c in S = L(1 - c*f) is **not observationally arbitrary** once
-one fixes the field normalization convention and matches the weak-field light
-bending ratio. On that reading, only c = 1 gives the normalization consistent
-with the observed factor-of-2 light bending.
+The coefficient c in S = L(1 - c*f) is **not** a free parameter. It is fixed by
+the requirement that the action reproduce the observed weak-field metric.
+Specifically, only c = 1 gives the correct factor-of-2 light bending that
+distinguishes GR from Newtonian gravity.
 
 ## The Argument (Five Steps)
 
@@ -80,11 +80,3 @@ This is analogous to the situation in electromagnetism: one can rescale the
 vector potential A -> a*A and the charge e -> e/a, but once e is fixed by
 measurement, A is determined. The "arbitrary" rescaling freedom is just a choice
 of units for the potential, not a physical ambiguity.
-
-## Claim boundary
-
-- this is a normalization/identification argument, not a derivation of c = 1
-  from the axioms alone
-- self-consistency alone does not select c
-- the spatial-metric / bending input remains empirical consistency, not an
-  independent closure

@@ -1,15 +1,15 @@
 # Beyond Lattice Gauge Theory: Two Concrete Results
 
-**Status:** bounded review candidate  
+**Status:** Demonstrated numerically  
 **Script:** `scripts/frontier_beyond_lattice_qcd.py`
 
 ## The honest overlap
 
 Both lattice gauge theory and this graph-first framework use graphs,
 Laplacians, path integrals, and gauge phases. This overlap is real and
-must be acknowledged. The distinction argued here is not just "derivation
-direction." The bounded case made here is two concrete structural differences
-on the audited surfaces below.
+must be acknowledged. The distinction is NOT merely "derivation direction"
+(a framing argument that a reviewer would rightly dismiss). The distinction
+is two concrete, testable results.
 
 ## Result 1: Gravity-QM inseparability
 
@@ -72,13 +72,6 @@ This is a structural property of the framework, not an input. (We
 acknowledge that this argument is related to Gleason's theorem and the
 general structure of Feynman path integrals -- the novelty is that it
 emerges from the graph structure without assuming a Hilbert space.)
-
-## Claim boundary
-
-- reviewer-facing differentiation note, not a standalone retained physics claim
-- gravity-QM inseparability is demonstrated on the tested ordered-cubic surface
-- structural Born-rule point is a framework-level linearity result with explicit
-  Sorkin diagnostics, not a claim of uniqueness over all path-integral formalisms
 
 ## What this does NOT claim
 

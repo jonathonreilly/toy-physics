@@ -174,6 +174,68 @@ Current read:
 
 Full migration audit: `docs/MIGRATION_AUDIT_2026-04-12.md`
 
+### 2026-04-12 batch 2 migration from `claude/youthful-neumann`
+
+New bounded promotion candidates:
+
+- `docs/DIMENSION_SELECTION_NOTE.md`
+- `scripts/frontier_dimension_selection.py`
+- `docs/BACKGROUND_INDEPENDENCE_NOTE.md`
+- `scripts/frontier_background_independence.py`
+- `docs/TENSOR_NETWORK_CONNECTION_NOTE.md`
+- `scripts/frontier_tensor_network_connection.py`
+- `docs/AXIOM_REDUCTION_NOTE.md`
+- `docs/GRAVITATIONAL_WAVE_PROBE_NOTE.md`
+- `scripts/frontier_grav_wave_post_newtonian.py`
+- `docs/POISSON_EXHAUSTIVE_UNIQUENESS_NOTE.md` (updated)
+- `scripts/frontier_poisson_exhaustive_uniqueness.py` (updated)
+
+Current read:
+
+- dimension selection: d>=3 from self-consistency; bounded to the tested
+  operator family
+- background independence: 4/4 passes on randomized backgrounds; bounded to
+  the audited surface
+- tensor network connection: 4/4 passes including holographic entanglement
+  scaling; bounded to the tested graph family
+- axiom reduction: 2 axioms + 1 integer sufficient for the bounded claim chain;
+  reviewer-facing reduction memo
+- gravitational wave probe: 3 beyond-Newton effects (speed, quadrupole,
+  dissipation); bounded wave-equation extension
+- Poisson exhaustive uniqueness: 21 operators scanned, only Poisson gives
+  attraction; strengthened operator-family audit (updated version)
+
+New archive-ready items (negative results, retained for reference):
+
+- `docs/HIERARCHY_RATIO_NOTE.md`
+- `scripts/frontier_hierarchy_ratio.py`
+- `docs/LITERATURE_ANOMALY_SEARCH_NOTE.md`
+
+Current read:
+
+- hierarchy ratio: honest null, no hierarchy emerges at tested scales
+- literature anomaly search: no match found in surveyed literature
+
+Explicit hold (not for promotion):
+
+- `docs/INDEPENDENT_SPATIAL_METRIC_NOTE.md` (updated)
+- `scripts/frontier_independent_spatial_metric.py` (updated)
+
+Current read:
+
+- independent spatial metric: user says not independent enough; (1-f) amplitude
+  prefactor still prescribed rather than forced; remains in hold #0
+
+Reviewer memos and planning docs:
+
+- `docs/DIAMOND_NV_EXPERIMENT_CARD.md` (updated)
+- `docs/NATURE_SCIENCE_BACKLOG.md`
+
+Current read:
+
+- diamond NV card: updated lab protocol, not science
+- nature/science backlog: internal planning document, not science
+
 ## Review Inventory
 
 Everything left in this review worktree is now on hold.
