@@ -52,6 +52,29 @@ overnight hold bundle.
 - `docs/POISSON_EXHAUSTIVE_UNIQUENESS_NOTE.md`
 - `scripts/frontier_poisson_exhaustive_uniqueness.py`
 
+### 2026-04-12 migration additions (bounded promotion candidates)
+
+- `docs/NONLINEAR_BORN_GRAVITY_NOTE.md`
+- `scripts/frontier_nonlinear_born_gravity.py`
+- `docs/GRAVITATIONAL_ENTANGLEMENT_NOTE.md`
+- `scripts/frontier_gravitational_entanglement.py`
+- `docs/WAVE_EQUATION_GRAVITY_NOTE.md`
+- `scripts/frontier_wave_equation_gravity.py`
+- `docs/DISTANCE_LAW_64_BOUNDED_CONTINUATION_NOTE.md`
+- `scripts/continuum_convergence_h0625.py`
+- `docs/IRREGULAR_SIGN_LOW_SCREENING_GATE_NOTE.md`
+- `scripts/frontier_irregular_sign_low_screening_gate.py`
+
+### 2026-04-12 migration additions (archive-ready, not for promotion)
+
+- `docs/WILSON_FROZEN_SOURCE_DISCRIMINATOR_NOTE.md`
+- `scripts/frontier_wilson_frozen_source_discriminator.py`
+- `docs/EXPERIMENTAL_PREDICTIONS_NOTE.md`
+- `scripts/frontier_experimental_predictions.py`
+- `docs/DIAMOND_NV_LATTICE_CORRECTION_NOTE.md` (reclassified: archive-ready)
+- `docs/DIAMOND_NV_EXPERIMENT_CARD.md` (reviewer memo, not science)
+- `docs/LATTICE_GAUGE_DISTINCTION_NOTE.md` (reviewer memo, not science)
+
 ## Holds
 
 ### 0. Overnight Claude audit bundle
@@ -229,6 +252,23 @@ Next control:
 - the current lane has now been tried; only a genuinely different conserved
   current or a different graph geometry would be credible if this family is
   revisited
+
+## 2026-04-12 Migration Update
+
+The following reclassifications were applied during the migration from
+`claude/youthful-neumann`:
+
+- Items #12-20 from the task list (emergent_gr_signatures through
+  cosmological_expansion) remain in hold #0 with their existing blockers
+- Items #7-9 (nonlinear_born_gravity, gravitational_entanglement,
+  wave_equation_gravity) were migrated as new bounded promotion candidates
+- Items #21-24 (wilson_frozen_source_discriminator, dispersion_relation,
+  experimental_predictions, diamond_nv_lattice_correction) were classified
+  as archive-ready
+- Items #25-26 (LATTICE_GAUGE_DISTINCTION_NOTE, DIAMOND_NV_EXPERIMENT_CARD)
+  are reviewer memos, not science artifacts
+
+Full classification: `docs/MIGRATION_AUDIT_2026-04-12.md`
 
 ## Bottom Line
 

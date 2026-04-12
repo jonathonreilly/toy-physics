@@ -132,6 +132,48 @@ Promotion rule:
   a hold note that freezes the claim boundary
 - not a universal distance-law portability result
 
+### 2026-04-12 migration from `claude/youthful-neumann`
+
+New bounded promotion candidates:
+
+- `docs/NONLINEAR_BORN_GRAVITY_NOTE.md`
+- `scripts/frontier_nonlinear_born_gravity.py`
+- `docs/GRAVITATIONAL_ENTANGLEMENT_NOTE.md`
+- `scripts/frontier_gravitational_entanglement.py`
+- `docs/WAVE_EQUATION_GRAVITY_NOTE.md`
+- `scripts/frontier_wave_equation_gravity.py`
+- `docs/DISTANCE_LAW_64_BOUNDED_CONTINUATION_NOTE.md`
+- `scripts/continuum_convergence_h0625.py`
+- `docs/IRREGULAR_SIGN_LOW_SCREENING_GATE_NOTE.md`
+- `scripts/frontier_irregular_sign_low_screening_gate.py`
+
+Current read:
+
+- nonlinear Born gravity: I3=0 iff attractive, perfect correlation; bounded
+  Born-rule nonlinearity probe on the audited surface
+- gravitational entanglement: MI=2.3, lattice gauge theory cannot reproduce;
+  bounded entanglement discriminator
+- wave equation gravity: box(f)=rho recovers grav waves at c=1.05; bounded
+  wave-equation probe
+- distance law 64 continuation: bounded note documenting the 96^3 continuation
+  alongside the definitive runner
+- irregular sign low-screening gate: companion to the core-packet gate;
+  bounded same-surface low-screening check
+
+New archive-ready items (negative results, retained for reference):
+
+- `docs/WILSON_FROZEN_SOURCE_DISCRIMINATOR_NOTE.md`
+- `scripts/frontier_wilson_frozen_source_discriminator.py`
+- `docs/EXPERIMENTAL_PREDICTIONS_NOTE.md`
+- `scripts/frontier_experimental_predictions.py`
+
+Current read:
+
+- Wilson frozen source discriminator: negative result, lane closed
+- experimental predictions: Planck-scale undetectable, lane closed
+
+Full migration audit: `docs/MIGRATION_AUDIT_2026-04-12.md`
+
 ## Review Inventory
 
 Everything left in this review worktree is now on hold.
