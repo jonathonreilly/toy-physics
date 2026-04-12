@@ -234,6 +234,71 @@ Use these when you are intentionally revisiting older lanes on `main`:
   - [`docs/NATURE_BACKLOG_2026-04-10.md`](NATURE_BACKLOG_2026-04-10.md)
   - [`scripts/frontier_emergent_schwarzschild.py`](../scripts/frontier_emergent_schwarzschild.py)
 
+## 8. Bounded Frontier Probes (promoted 2026-04-12)
+
+All claims below are bounded to the tested operator families and graph
+surfaces. None restates full Newton closure, unconditional spatial-metric
+derivation, or global Poisson uniqueness.
+
+### Distance law / field equation family
+
+- [`scripts/frontier_distance_law_definitive.py`](../scripts/frontier_distance_law_definitive.py)
+- [`docs/DISTANCE_LAW_DEFINITIVE_NOTE.md`](DISTANCE_LAW_DEFINITIVE_NOTE.md)
+- [`scripts/frontier_self_consistent_field_equation.py`](../scripts/frontier_self_consistent_field_equation.py)
+- [`docs/SELF_CONSISTENCY_FORCES_POISSON_NOTE.md`](SELF_CONSISTENCY_FORCES_POISSON_NOTE.md)
+- [`scripts/frontier_poisson_exhaustive_uniqueness.py`](../scripts/frontier_poisson_exhaustive_uniqueness.py)
+- [`docs/POISSON_EXHAUSTIVE_UNIQUENESS_NOTE.md`](POISSON_EXHAUSTIVE_UNIQUENESS_NOTE.md)
+
+### Normalization and axiom reduction
+
+- [`scripts/frontier_action_normalization.py`](../scripts/frontier_action_normalization.py)
+- [`docs/ACTION_NORMALIZATION_NOTE.md`](ACTION_NORMALIZATION_NOTE.md)
+- [`docs/AXIOM_REDUCTION_NOTE.md`](AXIOM_REDUCTION_NOTE.md)
+
+### Born rule / nonlinearity / entanglement probes
+
+- [`scripts/frontier_nonlinear_born_gravity.py`](../scripts/frontier_nonlinear_born_gravity.py)
+- [`docs/NONLINEAR_BORN_GRAVITY_NOTE.md`](NONLINEAR_BORN_GRAVITY_NOTE.md)
+- [`scripts/frontier_gravitational_entanglement.py`](../scripts/frontier_gravitational_entanglement.py)
+- [`docs/GRAVITATIONAL_ENTANGLEMENT_NOTE.md`](GRAVITATIONAL_ENTANGLEMENT_NOTE.md)
+
+### Wave equation / gravitational wave probes
+
+- [`scripts/frontier_wave_equation_gravity.py`](../scripts/frontier_wave_equation_gravity.py)
+- [`docs/WAVE_EQUATION_GRAVITY_NOTE.md`](WAVE_EQUATION_GRAVITY_NOTE.md)
+- [`scripts/frontier_grav_wave_post_newtonian.py`](../scripts/frontier_grav_wave_post_newtonian.py)
+- [`docs/GRAVITATIONAL_WAVE_PROBE_NOTE.md`](GRAVITATIONAL_WAVE_PROBE_NOTE.md)
+
+### Differentiation and coexistence
+
+- [`scripts/frontier_beyond_lattice_qcd.py`](../scripts/frontier_beyond_lattice_qcd.py)
+- [`docs/BEYOND_LATTICE_QCD_NOTE.md`](BEYOND_LATTICE_QCD_NOTE.md)
+- [`scripts/em_gravity_coexistence_2x2.py`](../scripts/em_gravity_coexistence_2x2.py)
+- [`docs/EM_GRAVITY_COEXISTENCE_2X2_NOTE.md`](EM_GRAVITY_COEXISTENCE_2X2_NOTE.md)
+
+### Dimension selection / bound states
+
+- [`scripts/frontier_dimension_selection.py`](../scripts/frontier_dimension_selection.py)
+- [`docs/DIMENSION_SELECTION_NOTE.md`](DIMENSION_SELECTION_NOTE.md)
+- [`scripts/frontier_bound_state_selection.py`](../scripts/frontier_bound_state_selection.py)
+- [`docs/BOUND_STATE_SELECTION_NOTE.md`](BOUND_STATE_SELECTION_NOTE.md)
+
+### Background independence / tensor network
+
+- [`scripts/frontier_background_independence.py`](../scripts/frontier_background_independence.py)
+- [`docs/BACKGROUND_INDEPENDENCE_NOTE.md`](BACKGROUND_INDEPENDENCE_NOTE.md)
+- [`scripts/frontier_tensor_network_connection.py`](../scripts/frontier_tensor_network_connection.py)
+- [`docs/TENSOR_NETWORK_CONNECTION_NOTE.md`](TENSOR_NETWORK_CONNECTION_NOTE.md)
+
+Reading boundary:
+
+- these are bounded frontier probes, not full derivations
+- distance law result is bounded to ordered-cubic/Dirichlet surface
+- Poisson uniqueness is a 21-operator family audit, not a global theorem
+- dimension selection is bounded to the tested operator family
+- bound state result is bounded to tested potentials at d<=3
+- all wave/entanglement probes are bounded to the audited graph surfaces
+
 ## Reading Rule
 
 If a claim is not represented in:
