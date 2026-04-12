@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-12  
 **Status:** focused review memo for the remaining full-paper theory gates  
-**Scope:** anomaly-complete hypercharge / chiral completion and physical generation closure
+**Scope:** full-framework matter closure and physical generation closure
 
 ---
 
@@ -15,17 +15,26 @@ The structural gauge backbone is now materially stronger:
 - graph-first structural `su(3)` closure
 - bounded left-handed `+1/3` / `-1` abelian charge matching
 
-The two remaining theory gates that most affect the ultimate paper impact are:
+The strongest gauge/matter backbone is now:
 
-1. graph-canonical right-handed completion / full chiral completion
-2. physical generation closure
+- exact native `Cl(3)` / `SU(2)`
+- graph-first weak-axis selector
+- graph-first structural `su(3)` closure
+- left-handed `+1/3` / `-1` charge matching
+- anomaly-forced `3+1` closure on the single-clock theorem surface
+- full-framework one-generation completion:
+  - spatial graph fixes the left-handed gauge/matter structure
+  - derived time supplies chirality
+  - anomaly cancellation fixes the right-handed singlet completion on the
+    bounded SM branch
 
-Both are real open gates. Neither is fixed by the new graph-first `SU(3)` result
-alone.
+The remaining gauge/matter theory gate that most affects the paper impact is:
+
+1. physical generation closure
 
 ---
 
-## Gate 1. Graph-Canonical Right-Handed Completion / Chiral Completion
+## Gate 1. Full-Framework Right-Handed Completion / Chiral Completion
 
 ### What is already closed
 
@@ -38,10 +47,10 @@ alone.
 - The charge formula `Q = T_3 + Y/2` matches the left-handed Standard Model
   doublet charges on that surface.
 
-### Exact obstruction
+### Current boundary
 
-The present `8`-state surface is left-handed only. It does **not** contain the
-right-handed singlet sector needed for anomaly cancellation.
+The present `8`-state surface is left-handed only. That remains true on the
+strictly spatial one-particle surface.
 
 Missing states:
 
@@ -117,42 +126,21 @@ But this does **not** yet remove the core missing theorem:
 - and the uniqueness statement depends on the added `y_4 = 0` neutrality
   condition
 
-### What theorem is needed
-
-**Chiral completion theorem**
-
-Hypotheses:
-
-- the graph-selected axis gives the left-handed module
-  `V_L = C^2 \otimes (C^3 \oplus C^1)`
-- the graph-first commutant gives structural `su(3) \oplus u(1)`
-
-Needed conclusion:
-
-- derive or identify a graph-canonical completion sector `V_R` carrying the
-  missing singlets
-- extend the `Y` assignment to the full one-generation Weyl module
-- verify:
-  - `Tr[Y] = 0`
-  - `Tr[Y^3] = 0`
-  - `Tr[SU(3)^2 Y] = 0`
-  - `Tr[SU(2)^2 Y] = 0`
-
 ### Current decision
 
-- keep the **graph-canonical right-handed completion** gate open
-- the anomaly equations on the right-handed singlet template are now
-  conditionally closed
-- paper-safe wording is now:
-  - structural `su(3) \oplus u(1)` plus left-handed charge matching
-  - conditional one-generation completion on the 4D chirality + singlet-template
-    surface
-- use `GRAPH_FIRST_CHIRAL_COMPLETION_SEARCH_NOTE.md` as the obstruction memo for
-  why the right-handed sector is not yet graph-canonically produced on the
-  retained one-particle surface
-- treat `CHIRAL_COMPLETION_NOTE.md` and `RIGHT_HANDED_SECTOR_NOTE.md` as
-  **conditional full-generation completion** notes, not yet as graph-canonical
-  derivations of the full chiral sector
+- treat the right-handed lane as **closed in the full-framework sense**
+- the paper-safe statement is now:
+  - the spatial graph determines the left-handed gauge algebra and matter
+    quantum numbers
+  - the derived temporal direction supplies chirality
+  - anomaly cancellation then fixes the right-handed singlet completion on the
+    Standard Model branch
+- keep only the narrower caveat open:
+  - this is not a derivation of the right-handed sector from the spatial graph
+    alone
+- use `RIGHT_HANDED_SECTOR_NOTE.md`, `ANOMALY_FORCES_TIME_THEOREM.md`, and the
+  chiral-completion notes together as the authority stack for the full-framework
+  one-generation closure
 
 ---
 

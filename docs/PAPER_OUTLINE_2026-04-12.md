@@ -199,10 +199,13 @@ with explicit status labels.
 - Structural SU(3) from graph-first selector + commutant theorem
 - Left-handed charge matching Y = +1/3, −1
 
+**What is now closed at the full-framework level:**
+- One full SM generation:
+  - the spatial graph determines the left-handed gauge/matter structure
+  - the derived temporal direction supplies chirality
+  - anomaly cancellation fixes the right-handed singlet completion on the SM branch
+
 **What is bounded but promising:**
-- Conditional right-handed chiral completion: 4D chirality supplies `8_L ⊕ 8_R`,
-  and anomaly cancellation fixes the right-handed hypercharges on the singlet
-  template, but this does not yet prove physical generations
 - Z₃ orbit counting for generations, conditional on the physicality theorem
 - Gauge couplings and CKM lanes: review-only until a true lattice coupling
   observable and a quantitative CKM theorem exist
@@ -212,17 +215,20 @@ with explicit status labels.
 - Strong-field extension via S = L(1−tanh f)
 - Frozen star / information paradox resolution
 
-**What remains open (the two real gates):**
+**What remains open (the real gates):**
 
-*Work Package A: Graph-canonical right-handed completion.* The conditional
-anomaly-complete generation now exists on the 4D chirality plus singlet-template
-surface. The remaining open theorem is to derive that right-handed
-representation template canonically from the graph/taste structure itself.
-
-*Work Package B: Generation physicality.* Prove that the Z₃ taste orbits
+*Work Package A: Generation physicality.* Prove that the Z₃ taste orbits
 correspond to physical generations, not representation artifacts. This
 requires a canonical matter assignment and an explanation of the singlet
 states.
+
+*Work Package B: Topology / compactification.* Close the `S^3` cap-map /
+compactification step cleanly enough to move the CC lane from bounded to
+structural.
+
+*Work Package C: Quantitative bridges.* Close the renormalized `y_t` matching
+theorem and the DM relic mapping from the native graph freeze-out law to the
+physical cosmological abundance.
 
 **Relationship to prior work:** We build on Kogut-Susskind, Furey, Stoica,
 Trayling-Baylis, and the lattice QCD community. Our contribution is the
@@ -272,12 +278,12 @@ separation of structural closure from phenomenological extension.
 
 ## Open theory gates (not paper blockers — future work)
 
-### A. Graph-canonical right-handed completion theorem
-Derive the right-handed representation template from the graph/taste surface
-rather than imposing the singlet template before anomaly cancellation
-
-### B. Generation physicality theorem
+### A. Generation physicality theorem
 Prove Z₃ taste orbits = physical generations with canonical matter assignment
+
+### B. Topology / compactification theorem
+Prove the graph-to-closed-manifold compactification step strongly enough to
+force `S^3`
 
 ### C. Phenomenology upgrade
 For each bounded window, either derive from backbone or label as consistency

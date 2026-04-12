@@ -94,8 +94,10 @@ Retained-claim status changes since the previous map:
   strengthens the DM lane, even though the freeze-out law remains open.
 - `New positive`: the paper-planning surface is now much cleaner and more
   reviewer-robust.
-- `Bounded, not closed`: right-handed completion is conditional rather than
-  graph-canonical.
+- `New positive`: one full SM generation now closes at the full-framework
+  level: the spatial graph fixes the left-handed structure, the derived
+  temporal direction supplies chirality, and anomaly cancellation fixes the
+  right-handed singlet completion on the SM branch.
 - `Bounded, not closed`: the `8 = 1 + 1 + 3 + 3` orbit algebra is exact, but
   physical generations remain unproved.
 - `Bounded, not closed`: `y_t` is stronger, but still conditional on the full
@@ -139,12 +141,11 @@ This section should be updated periodically alongside the score above.
 ### Current harshest critique
 
 > This is now a genuinely strong graph-first gauge/gravity backbone with real
-> retained structure, but the full paper still mixes closed theorems with
-> conditional matter-sector completion and bounded cosmology. Until the
-> right-handed template, physical generations, full gauged `y_t`
-> normalization, and graph-to-`S^3` compactification are truly closed, the
-> package is still one or two decisive theorem layers short of full unification
-> closure.
+> retained structure, including a closed one-generation matter sector at the
+> full-framework level. The main remaining gaps are physical generations,
+> full gauged `y_t` normalization, graph-to-`S^3` compactification, and the
+> DM relic bridge. The package is no longer missing basic chiral completion,
+> but it is still one decisive theorem layer short of full unification closure.
 
 ### Current answer strength: `5.9/10`
 
@@ -159,7 +160,6 @@ Why the score is not lower:
 
 Why the score is not higher:
 
-- right-handed completion is still conditional rather than graph-canonical
 - physical generations are still not theorem-level closed
 - `y_t` now has bare UV closure, but the renormalized matching theorem is
   still open
@@ -169,7 +169,6 @@ Why the score is not higher:
 
 Next moves that raise this score fastest:
 
-- derive the graph-canonical right-handed template
 - derive the physical-generation theorem
 - close the renormalized `Z_Y = Z_g` matching theorem
 - derive the compactification step for `S^3`

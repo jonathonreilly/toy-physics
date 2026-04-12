@@ -30,6 +30,12 @@ The current retained core is now materially stronger:
 - left-handed charge/eigenvalue matching on the selected-axis commutant
   surface, if presented as a
   corollary of the commutant theorem rather than as hypercharge closure
+- anomaly-forced `3+1` closure on the single-clock theorem surface
+- full-framework one-generation completion:
+  - spatial graph fixes the left-handed gauge/matter structure
+  - derived time supplies chirality
+  - anomaly cancellation fixes the right-handed singlet completion on the
+    Standard Model branch
 
 The paper-safe language is therefore:
 
@@ -44,19 +50,19 @@ That sentence is now defensible.
 
 The strongest remaining open points are now narrower:
 
-- a physical identification of the surviving abelian factor as hypercharge
-  `U(1)_Y`
-- anomaly-complete hypercharge closure rather than left-handed matching
+- physical generation closure
+- a full physical identification of the surviving abelian factor as hypercharge
+  `U(1)_Y` beyond the now-closed one-generation branch
 - a final manuscript argument for whether the graph-first route should be
   presented as the primary closure path or alongside the older KS language
 
 Until those steps are written cleanly, the following claims stay bounded:
 
-- full anomaly-complete hypercharge identification
-- any manuscript line that treats the abelian factor as fully closed rather
-  than hypercharge-like / left-handed matched
+- physical three-generation closure
+- any manuscript line that treats the abelian factor as fully closed for the
+  full flavor sector rather than as one-generation-complete / left-handed matched
 - downstream claims that rely on the abelian factor being fully fixed beyond
-  the current left-handed surface
+  the current one-generation surface
 
 ## Review-only phenomenology
 
@@ -92,9 +98,10 @@ Use this as the honest summary now:
 > The retained cubic graph yields exact `Cl(3)` / `SU(2)` structure. A
 > graph-first selector on the canonical cube-shift surface derives a weak axis,
 > and the selected graph fibers plus residual cubic swap have commutant
-> `su(3) \oplus u(1)`. The surviving abelian factor is presently best read as
-> hypercharge-like / left-handed matched, while downstream phenomenology
-> remains review-only.
+> `su(3) \oplus u(1)`. The spatial graph fixes the left-handed gauge/matter
+> structure, the derived temporal direction supplies chirality, and anomaly
+> cancellation closes one Standard Model generation. Physical generations and
+> downstream phenomenology remain open or review-only.
 
 ## What Not To Say
 
@@ -102,5 +109,6 @@ Do **not** say any of the following unless a future retained chain explicitly
 earns them:
 
 - full anomaly-complete hypercharge closure is done
+- the spatial graph alone derives the right-handed sector
 - zero free parameters
 - review-only phenomenology is already retained closure
