@@ -80,6 +80,30 @@ Required rework:
 These arrived after the first publication audit and do **not** change the
 current promotion decision.
 
+### 2a. Review thread summary is not the retention authority
+
+Files:
+
+- `docs/REVIEW_THREAD_SUMMARY_2026-04-12.md`
+
+Current read:
+
+- useful branch-local synthesis memo
+- materially overstates the closure status of the native-cubic `SU(3)` lane and
+  the frozen-stars / strong-field lane
+
+Why not on `main`:
+
+- promotion decisions are governed by this retain audit, not by a branch memo
+- several "CLOSED" labels in the summary conflict with the audited scripts and
+  the narrower hold surface recorded below
+
+Required rework:
+
+- keep the summary explicitly subordinate to this audit
+- do not use it as manuscript or control-plane truth until its status labels
+  are aligned with the retained claim boundaries
+
 ### 3. `SU(3)` commutant note does not close native cubic `SU(3)`
 
 Files:
@@ -162,6 +186,7 @@ Required rework:
 
 Files:
 
+- `docs/FROZEN_STARS_RIGOROUS_NOTE.md`
 - `scripts/frontier_frozen_stars_rigorous.py`
 
 Current read:
@@ -307,6 +332,7 @@ Files:
 - `docs/STRONG_FIELD_GR_NOTE.md`
 - `docs/STRONG_FIELD_REGIME_NOTE.md`
 - `docs/ACCESSIBLE_PREDICTION_NOTE.md`
+- `docs/FROZEN_STARS_RIGOROUS_NOTE.md`
 - `scripts/frontier_frozen_stars.py`
 - `scripts/frontier_frozen_stars_rigorous.py`
 - `scripts/frontier_strong_field_gr.py`

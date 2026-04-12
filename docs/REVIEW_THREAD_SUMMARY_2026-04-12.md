@@ -1,10 +1,15 @@
 # Review Thread Summary — 2026-04-12
 
+> Status warning:
+> This document is a branch-local synthesis memo, not the canonical retention
+> authority. For promotion decisions, use
+> `docs/CI3_Z3_PUBLICATION_RETAIN_AUDIT_2026-04-12.md`.
+
 ## P1 Audit Response + New Results
 
-### P1 Responses (all 5 addressed)
+### P1 Responses + follow-up results
 
-**P1-1: SU(3) hand-embedded, not emergent — CLOSED**
+**P1-1: SU(3) hand-embedded, not emergent — NOT CLOSED FOR RETENTION**
 
 Three independent computations now show SU(3) is derived, not hand-embedded:
 
@@ -16,7 +21,7 @@ Three independent computations now show SU(3) is derived, not hand-embedded:
 
 Chain: Z^3 has cubic symmetry -> bipartite structure gives SU(2) -> taste breaking gives 1+3+3+1 -> commutant forces SU(4) -> taste breaking reduces to SU(3) x U(1). Prior art (Furey 2014-2024, Stoica 2018, Trayling & Baylis 2001) confirms SU(3)-in-Clifford is well-established; our contribution is the uniqueness proof in the d=3 staggered taste context.
 
-**P1-2: alpha_s not parameter-free — ADDRESSED**
+**P1-2: alpha_s not parameter-free — REVIEW-ONLY / CONSISTENCY**
 
 The alpha_s = 0.092 comes from the lattice plaquette action (first-principles). The script previously back-substituted R_obs as a framing target — fixed to clarify that R_obs is used for comparison, not as input. The alpha_s robustness analysis (frontier_alpha_s_robustness.py) shows 5 independent coupling definitions all give R in [5.33, 5.60], mean 5.45 +/- 0.10.
 
@@ -24,11 +29,11 @@ The alpha_s = 0.092 comes from the lattice plaquette action (first-principles). 
 
 Correctly flagged as a consistency check, not a first-principles derivation. The script now explicitly labels all SM couplings as injected inputs. The honest claim is: "CW mechanism is natural on a lattice with Planck-scale cutoff, solving the hierarchy problem (Delta = 0.49). The specific m_H value requires SM couplings as input."
 
-**P1-4: CC feeds in observed Omega_Lambda — ADDRESSED**
+**P1-4: CC feeds in observed Omega_Lambda — REVIEW-ONLY / CONSISTENCY**
 
 The cc_factor15 script is correctly a consistency decomposition. The parameter-free Omega_Lambda prediction comes from the baryogenesis chain: eta -> Omega_b (BBN) -> Omega_DM (via R=5.47) -> Omega_m -> Omega_Lambda = 1 - Omega_m = 0.682 (observed: 0.685, 0.4% off). This chain does NOT feed in Omega_Lambda.
 
-**P1-5: Frozen stars 1D extrapolation — CLOSED (3D verified)**
+**P1-5: Frozen stars 1D extrapolation — STRONGER EXPLORATORY FOLLOW-UP, NOT RETAINED**
 
 Mac Mini results are in. The rigorous script ran all 6 probes successfully:
 
@@ -149,18 +154,20 @@ From ONE axiom (Cl(3) on Z^3):
 | 20 | GW150914 echo at 67.65 ms | 14.8 Hz, in LIGO band | Existing data |
 | 21 | Frozen star 3D stable | L=14 (2744 sites) verified | -- |
 
-### SU(3) gap — CLOSED
+### SU(3) gap — still open on the native cubic lane
 
-Three independent computations close the P1-1 objection:
+Three independent computations strengthen the case, but do not close the
+native-cubic `Cl(3) on Z^3 => SU(3)` objection:
 
-1. **Commutant**: {SU(2)_weak, SWAP_23} -> su(3) + u(1) uniquely. SWAP_23 is spatial
-   axis exchange, a physical symmetry of Z^3. Pure algebra, machine precision.
-2. **Dynamical selection**: 4/5 attacks pass. Taste breaking forces SU(4) -> SU(3) x U(1).
-3. **Taste breaking**: S_3 = Weyl(SU(3)). The 1+3+3+1 splitting selects the unique
-   simple Lie group with center Z_3, Weyl group S_3, and 3-dim fundamental.
+1. **Commutant**: `{SU(2)_weak, SWAP_23}` gives a `3+1` commutant structure, but
+   this adds `SWAP_23` beyond the original full-`Cl(3)` lane.
+2. **Dynamical selection**: useful modeled taste-breaking stress test, but the
+   splitting coefficients are prescribed rather than derived.
+3. **Taste breaking**: relevant supporting discrete-data argument, still not a
+   retained intrinsic selection of the triplet subspace from the native cubic lane.
 
-Prior art (Furey, Stoica, Trayling) confirms SU(3)-in-Clifford is well-established.
-Our contribution: the uniqueness proof in the d=3 staggered taste context.
+Current audited status: exact native cubic `SU(2)` is close to retainable;
+native cubic `SU(3)` remains open.
 
 ### Remaining gaps
 

@@ -31,6 +31,9 @@ Current state:
 - newer `youthful-neumann` arrivals (`SU3_COMMUTANT`, `SU3_DYNAMICAL_SELECTION`,
   `NEUTRINO_MASSES`, revised frozen-stars runner) have been reviewed and do not
   change that decision
+- the later branch memo [REVIEW_THREAD_SUMMARY_2026-04-12.md] is a
+  branch-local synthesis note, not the authoritative retain state; use
+  `CI3_Z3_PUBLICATION_RETAIN_AUDIT_2026-04-12.md` for promotion decisions
 
 ## Already On `main`
 

@@ -138,6 +138,8 @@ Why held:
 - the post-audit arrivals (`SU3_COMMUTANT`, `SU3_DYNAMICAL_SELECTION`,
   `NEUTRINO_MASSES`, revised frozen-stars runner) strengthen exploration but do
   not close the retained-core blockers
+- the later branch summary `REVIEW_THREAD_SUMMARY_2026-04-12.md` overstates
+  several still-open blockers and must not be used as the retention authority
 
 Next control:
 
