@@ -1,7 +1,7 @@
-# Freeze-Out from Lattice Thermodynamics -- g_* and x_F Without Imported Cosmology
+# Freeze-Out from Lattice Thermodynamics -- g_* and x_F as Bounded Inputs
 
 **Date:** 2026-04-12
-**Status:** structural closure -- g_* and x_F derived from lattice, removing two Codex flags
+**Status:** bounded thermal input; the relic-abundance step remains open
 
 ## Artifact chain
 
@@ -15,7 +15,9 @@ The DM ratio R = Omega_DM/Omega_b = 5.48 uses two parameters flagged by Codex as
 1. **g_\* = 106.75** -- relativistic degrees of freedom at freeze-out (from SM particle counting)
 2. **x_F = m/T_F ~ 25** -- freeze-out parameter (from standard Boltzmann equation + Friedmann cosmology)
 
-Both are used in the Sommerfeld enhancement calculation and the freeze-out thermodynamics.  This note shows they follow from the lattice structure.
+Both are used in the Sommerfeld enhancement calculation and the freeze-out
+thermodynamics. This note checks the lattice-side counting and normalization
+inputs, but the master equation / relic-abundance law is still imported.
 
 ## Attack 1: g_\* from the taste spectrum
 
@@ -23,7 +25,11 @@ The 8 taste states on the 3-qubit lattice decompose under SU(2)\_weak x SU(3)\_c
 
     8 = (2, 3) + (2, 1)
 
-This gives one generation of the SM: a quark doublet (2,3) and a lepton doublet (2,1).  The number of generations N\_gen = 3 comes from the Z\_3 orbit structure (the triplet has 3 elements).
+This gives one generation of the SM: a quark doublet (2,3) and a lepton
+doublet (2,1).  The number of generations N\_gen = 3 comes from the Z\_3 orbit
+structure (the triplet has 3 elements).  This is a matter-assignment input
+already discussed in the generation-closure review, not a standalone freeze-out
+derivation.
 
 **Counting d.o.f. per generation:**
 
@@ -51,7 +57,7 @@ This matches the standard SM value exactly.  The 7/8 factor (Fermi-Dirac vs Bose
 
 ## Attack 2: x_F from the lattice Boltzmann equation
 
-The freeze-out condition Gamma\_ann = H uses only structural inputs:
+The freeze-out condition Gamma\_ann = H still uses standard cosmology:
 
 - **sigma\_v = pi \* alpha\_s^2 / m^2** from the plaquette coupling (alpha\_s ~ 0.092)
 - **n\_eq(T)** from the Boltzmann weight on the lattice
@@ -60,7 +66,9 @@ The freeze-out condition Gamma\_ann = H uses only structural inputs:
 
 Solving x\_F = ln(c \* m \* M\_Pl \* sigma\_v / sqrt(x\_F)) iteratively gives x\_F ~ 15--45 over 16 orders of magnitude in mass, centered at x\_F ~ 25.
 
-The LOGARITHMIC dependence on mass and cross-section is the key structural feature: x\_F ~ 25 is not a model choice but the generic result of perturbative thermal freeze-out.
+The logarithmic dependence on mass and cross-section is the key structural
+feature: x\_F ~ 25 is robust once the freeze-out law is assumed, but that law is
+still imported.
 
 ## Attack 3: Boltzmann equation from the lattice master equation
 
@@ -74,7 +82,8 @@ In the thermodynamic limit (many particles, continuous T), this reduces to:
 
     dn/dt + 3Hn = -<sigma*v>(n^2 - n_eq^2)
 
-The Boltzmann equation is the continuum limit of the lattice master equation, not an imported equation.
+The Boltzmann equation may be the continuum limit of a lattice master equation
+in a suitable thermodynamic limit, but that reduction is not yet proved here.
 
 The Hubble expansion term (3Hn) comes from the Poisson coupling on the expanding lattice -- the sole physical assumption is that the universe expands (H > 0).
 
@@ -98,17 +107,23 @@ Total variation over x\_F = [10, 50]: 33%.  The prediction R ~ 5.5 is robust aga
 
 | # | Parameter | Value | Source | Status |
 |---|-----------|-------|--------|--------|
-| 1 | g\_\* | 106.75 | Taste spectrum + spin-statistics | STRUCTURAL |
-| 2 | x\_F | 25 +/- 10 | Lattice Boltzmann eq. | STRUCTURAL |
-| 3 | v\_rel | 2/sqrt(x\_F) | Equipartition on lattice | STRUCTURAL |
-| 4 | sigma\_v | pi\*alpha\_s^2/m^2 | Plaquette coupling | STRUCTURAL |
-| 5 | H(T) | sqrt(8piG\*rho/3) | Poisson coupling + g\_\* | STRUCTURAL |
+| 1 | g\_\* | 106.75 | Taste spectrum + spin-statistics | BOUNDED |
+| 2 | x\_F | 25 +/- 10 | Lattice Boltzmann eq. | BOUNDED |
+| 3 | v\_rel | 2/sqrt(x\_F) | Equipartition on lattice | BOUNDED |
+| 4 | sigma\_v | pi\*alpha\_s^2/m^2 | Plaquette coupling | BOUNDED |
+| 5 | H(T) | sqrt(8piG\*rho/3) | Poisson coupling + g\_\* | BOUNDED |
 
 ## Remaining cosmological input
 
-The ONE assumption that cannot be derived from the lattice alone: **the universe expands (H > 0)**.  This is a dynamical statement about spacetime, not a structural property of the lattice.  Everything else -- g\_\*, x\_F, the Boltzmann equation, the annihilation cross-section, and the Sommerfeld enhancement -- follows from lattice structure.
+The ONE assumption that cannot be derived from the lattice alone is the
+freeze-out / relic-abundance law itself: **the universe expands (H > 0)** and
+the standard Boltzmann/Friedmann decoupling framework remains in use.  The
+lattice now supplies cleaner counting and contact-enhancement inputs, but it
+does not yet replace the cosmological evolution law.
 
 ## Impact
 
-Before this analysis: 2 Codex flags (g\_\*, x\_F) on the DM ratio as "imported cosmology."
-After: 0 flags.  The freeze-out thermodynamics is fully derived from the lattice taste spectrum and structural couplings.
+Before this analysis: the DM ratio lane was flagged for imported `g_*` and
+`x_F`.
+After: the lattice-side counting inputs are better organized, but the full
+freeze-out thermodynamics remains open.

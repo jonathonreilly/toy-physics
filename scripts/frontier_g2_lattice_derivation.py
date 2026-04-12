@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """
-Deriving g_2^2 from the Staggered Lattice Action
+Bounding g_2^2 from the Staggered Lattice Action
 =================================================
 
 Codex feedback on frontier_gauge_couplings_geometric.py: the g_2^2 = 1/(d+1)
 result was "reverse-engineered, not derived." That script ran observed couplings
-up to Planck and noted the bare value was close to 1/4. This script derives
-g_2^2 from the lattice action itself.
+up to Planck and noted the bare value was close to 1/4. This script isolates
+the lattice-side normalization and makes the equal-partition step explicit.
+The action-side weight is derived; the equal-partition principle remains open.
 
 THE DERIVATION:
   On a d-dimensional cubic lattice, the gauged staggered Dirac operator is:
@@ -291,12 +292,12 @@ def log(msg=""):
 # =============================================================================
 
 log("=" * 78)
-log("DERIVING g_2^2 FROM THE STAGGERED LATTICE ACTION")
+log("BOUNDED g_2^2 FROM THE STAGGERED LATTICE ACTION")
 log("=" * 78)
 log()
 
 log("=" * 78)
-log("SECTION 1: ANALYTIC DERIVATION")
+log("SECTION 1: ANALYTIC BOUND / CONDITIONAL DERIVATION")
 log("=" * 78)
 log()
 
@@ -1469,7 +1470,7 @@ log("SECTION 9: SUMMARY AND ASSESSMENT")
 log("=" * 78)
 log()
 
-log("  THE DERIVATION OF g_2^2 = 1/(d+1)")
+log("  THE BOUNDED NORMALIZATION STATEMENT FOR g_2^2 = 1/(d+1)")
 log("  ====================================")
 log()
 log("  PREMISE: The staggered Dirac operator on a d-dimensional cubic lattice:")
@@ -1523,8 +1524,9 @@ log("  FIXED by the requirement that the gauge-matter vertex in one")
 log("  direction has the GEOMETRICALLY DETERMINED weight 1/(d+1) of the")
 log("  total action.")
 log()
-log("  This is NOT reverse-engineering: we compute the weight 1/2 per")
-log("  direction and (d+1)/2 total from the staggered action directly.")
+log("  This is not reverse-engineering of observed couplings: we compute")
+log("  the weight 1/2 per direction and (d+1)/2 total from the staggered")
+log("  action directly.")
 log("  The ratio gives g^2 = 1/(d+1) without reference to any observed")
 log("  coupling value.")
 log()
@@ -1578,14 +1580,15 @@ log("  gauge-modified hopping in direction mu, and it should equal the")
 log("  free hopping times the geometric coupling factor.")
 log()
 log("  The geometric coupling factor is 1/sqrt(d+1) per direction")
-log("  (equal partition of unit total coupling across d+1 directions).")
+log("  if the equal-partition principle holds across d+1 directions.")
 log("  So g = 1/sqrt(d+1), g^2 = 1/(d+1).")
 log()
 log("  This relies on the EQUAL PARTITION PRINCIPLE: the total gauge")
 log("  coupling (analogous to g_3^2 = 1 for SU(3)) is UNIT, and it is")
 log("  distributed equally across d+1 spacetime directions because")
 log("  the Z_2 bipartite parity (-1)^{sum x_mu} depends on all coordinates")
-log("  democratically.")
+log("  democratically. That principle is motivated by the staggered")
+log("  structure but is not yet derived from it.")
 log()
 
 log("  ASSESSMENT")
@@ -1605,16 +1608,17 @@ log("  - The equal-partition principle is motivated by the Z_2 parity")
 log("    structure, but is not proven from first principles.")
 log("  - It is an ASSUMPTION that the total coupling is 1 (like g_3^2 = 1).")
 log()
-log("  Status: DERIVED with one assumption (equal partition of unit total")
+log("  Status: BOUNDED with one assumption (equal partition of unit total")
 log("  coupling across spacetime directions).")
 log()
 log("  Previous status: REVERSE-ENGINEERED (run observed couplings to Planck,")
 log("  note proximity to 1/4).")
 log()
-log("  Improvement: The derivation starts from the staggered action structure")
-log("  and arrives at 1/(d+1) without using any observed coupling values.")
-log("  The remaining assumption (equal partition) is a geometric principle,")
-log("  not an empirical fit.")
+log("  Improvement: The analysis starts from the staggered action structure")
+log("  and isolates 1/(d+1) without using observed coupling values.")
+log("  The remaining assumption (equal partition) is the exact blocker:")
+log("  it is a geometric principle, not yet a theorem from the graph/staggered")
+log("  structure alone.")
 log()
 
 
