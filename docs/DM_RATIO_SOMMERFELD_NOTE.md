@@ -1,27 +1,32 @@
 # Dark Matter Ratio with Sommerfeld Enhancement
 
 **Date:** 2026-04-12
-**Status:** Quantitative prediction -- R = 5.47 with Sommerfeld correction
-**Script:** `scripts/frontier_dm_ratio_sommerfeld.py`
-**Log:** `logs/2026-04-12-dm_ratio_sommerfeld.txt`
+**Status:** Bounded direct lattice contact-propagator observable
+**Script:** `scripts/frontier_dm_contact_propagator.py`
+**Log:** `logs/2026-04-12-dm_contact_propagator.txt`
 **Depends on:** `docs/ANNIHILATION_RATIO_NOTE.md`
 
 ---
 
 ## Abstract
 
-The base annihilation ratio derivation gives R = Omega_dark/Omega_vis = 31/9
-= 3.44 from group-theory channel counting and Hamming-weight masses, leaving a
-factor 1.59 gap to the observed 5.47.  This note shows that the Sommerfeld
-enhancement for SU(3)-colored particles at freeze-out closes the gap exactly.
+The old Sommerfeld note was written as a closure claim.  The current reviewed
+status is narrower: the code now performs a direct finite-lattice contact-
+propagator computation for Coulomb and free Hamiltonians, so the contact
+response is a genuine lattice observable rather than a rephrased continuum
+formula.
 
-Colored (visible) particle pairs attract via gluon exchange before annihilating.
-This funneling enhances their effective cross-section by a factor S_vis ~ 1.6.
-Dark (color-singlet) particles have no color force, so S_dark = 1.  The ratio
-S_vis/S_dark ~ 1.59 is precisely the missing factor.
+For the benchmark scan in `scripts/frontier_dm_contact_propagator.py`:
 
-**Result:** R = (3/5) * S_vis * (f_vis/f_dark) = 5.47 at alpha_s ~ 0.092,
-which lies in the expected GUT-scale coupling range.
+| Observable | Free | Coulomb | Ratio |
+|---|---:|---:|---:|
+| Literal contact resolvent `|G(0,0)|` | computed | computed | finite, scheme-dependent |
+| Boundary-driven contact amplitude | computed | computed | enhanced vs free |
+
+The boundary-driven contact ratio is about `1.27 -> 1.37` across the tested
+grid spacings, while the literal contact resolvent ratio is about `1.10 -> 1.03`.
+That is a real lattice contact effect, but it does **not** yet prove exact
+continuum Sommerfeld equality or full DM-ratio closure.
 
 ---
 
@@ -145,7 +150,7 @@ where:
 
 ## 7. Parameter Accounting
 
-### Derived (zero free parameters)
+### Historical continuum derivation context
 
 1. **3/5**: Hamming-weight mass spectrum (lattice combinatorics)
 2. **32/3**: C_2(SU(3)_fund) * dim(SU(3)_adj) (group theory)
@@ -195,14 +200,14 @@ drops to ~0.07-0.08, which is closer to standard GUT estimates.
 | sigma_vis/sigma_dark | 5.74 | 9.12 | ~9.1 (required) |
 | Gap to observation | 1.59x | 1.00x | -- |
 | Free parameters | 0 | ~0.5 (alpha_GUT in narrow range) | -- |
-| Status | Semi-quantitative | Quantitative match | -- |
+| Status | Historical | Historical continuum match | -- |
 
 ---
 
 ## 10. What This Means
 
-The dark-to-visible matter ratio Omega_dark/Omega_vis = 5.47 emerges from
-three ingredients:
+The dark-to-visible matter ratio Omega_dark/Omega_vis = 5.47 is still
+organized around three ingredients:
 
 1. **Lattice combinatorics**: The Hamming-weight mass spectrum gives
    m_dark^2 / sum(m_vis^2) = 3/5.
@@ -213,9 +218,10 @@ three ingredients:
 3. **QCD dynamics**: The color Coulomb potential funnels visible pairs
    together before annihilation, enhancing sigma_vis by a factor 1.59.
 
-The product (3/5) * 5.74 * 1.59 = 5.47 matches observation.
+The product (3/5) * 5.74 * 1.59 still matches observation numerically in the
+older continuum analysis, but the current reviewed status is narrower.
 
-**STATUS: QUANTITATIVE PREDICTION.** Upgraded from "within factor 1.6"
-to "exact match at alpha_s = 0.092."  The single weakly-constrained
-parameter (alpha_GUT) lies within the expected GUT-scale range, and the
-prediction is robust across alpha_s in [0.08, 0.10].
+**STATUS: BOUNDED DIRECT LATTICE OBSERVABLE.** The direct contact-
+propagator computation is explicit and finite-dimensional.  The exact
+continuum Sommerfeld equality and the full freeze-out closure remain open,
+so the DM ratio itself stays review-only.
