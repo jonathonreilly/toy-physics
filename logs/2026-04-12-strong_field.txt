@@ -1,0 +1,274 @@
+Strong-Field Regime Characterization
+======================================================================
+Framework: S = L(1-f), path-sum propagator on 3D lattice
+Exploring: f -> 1 (horizon), f > 1 (breakdown)
+
+======================================================================
+TEST 1: Propagator amplitude vs uniform field strength
+======================================================================
+
+Lattice: 31 transverse x 20 propagation layers
+k = 6.0, p = 1.0, max_dy = 5
+Gaussian sigma = 3.0, center = 15
+
+     f   |psi_out|    |psi_in|       ratio    norm_out  phase_per_step
+----------------------------------------------------------------------
+  0.00  1.0821e-02  4.3366e-01  3.7261e-02  3.7261e-02          6.0000
+  0.10  7.3787e-02  4.3366e-01  1.8793e-01  1.8793e-01          5.4000
+  0.30  1.8706e+00  4.3366e-01  4.7007e+00  4.7007e+00          4.2000
+  0.50  4.0950e+01  4.3366e-01  1.0603e+02  1.0603e+02          3.0000
+  0.70  1.1826e+03  4.3366e-01  3.2664e+03  3.2664e+03          1.8000
+  0.90  5.8018e+04  4.3366e-01  1.8596e+05  1.8596e+05          0.6000
+  0.95  1.4652e+05  4.3366e-01  4.7645e+05  4.7645e+05          0.3000
+  0.99  2.0730e+05  4.3366e-01  6.7519e+05  6.7519e+05          0.0600
+  1.00  2.1043e+05  4.3366e-01  6.8543e+05  6.8543e+05          0.0000
+  1.05  1.4652e+05  4.3366e-01  4.7645e+05  4.7645e+05         -0.3000
+  1.10  5.8018e+04  4.3366e-01  1.8596e+05  1.8596e+05         -0.6000
+
+--- Analysis ---
+Baseline ratio (f=0): 3.7261e-02
+Ratio at f=1.0: 6.8543e+05
+  -> f=1 AMPLIFIES (phase frozen, no destructive interference)
+Ratio at f=1.05: 4.7645e+05  (amplification factor vs baseline: 12786991.51x)
+Ratio at f=1.10: 1.8596e+05  (amplification factor vs baseline: 4990851.45x)
+
+======================================================================
+TEST 2: Effective horizon radius and shadow mapping
+======================================================================
+
+Lattice: 31^3, mass at center (15,15,15)
+k = 6.0, p = 1.0
+
+
+  Mass strength = 20
+  f_max (center) = 4.9618
+  f(r=5) = 0.2291
+  Horizon radius r_h = 1.7278347381374761
+  Surface gravity kappa = 0.5852
+  Poisson solve: 1.49s
+
+  Shadow map (impact parameter b, transmission ratio, deflection):
+     b       ratio  deflection        status
+  --------------------------------------------
+     0  5.6616e+01      0.0000    INSIDE r_h
+     2  5.3864e+01      0.7740              
+     4  4.9524e+01      1.8332              
+     6  2.9400e+01     -0.2559              
+     8  4.3093e+01      2.9825              
+    10  1.4343e+02      2.8483              
+    12  1.0300e+03      0.7904              
+
+  Mass strength = 40
+  f_max (center) = 9.9236
+  f(r=5) = 0.4582
+  Horizon radius r_h = 2.863428410719033
+  Surface gravity kappa = 0.4521
+  Poisson solve: 1.85s
+
+  Shadow map (impact parameter b, transmission ratio, deflection):
+     b       ratio  deflection        status
+  --------------------------------------------
+     0  9.7379e+01     -0.0000    INSIDE r_h
+     2  8.4333e+01      0.0124    INSIDE r_h
+     4  5.9979e+01      1.7659              
+     6  4.4191e+01      3.0337              
+     8  3.9123e+01      2.2687              
+    10  3.2128e+01      2.3910              
+    12  2.5437e+02      1.4424              
+
+  Mass strength = 60
+  f_max (center) = 14.8855
+  f(r=5) = 0.6872
+  Horizon radius r_h = 3.859387466862822
+  Surface gravity kappa = 0.3435
+  Poisson solve: 2.24s
+
+  Shadow map (impact parameter b, transmission ratio, deflection):
+     b       ratio  deflection        status
+  --------------------------------------------
+     0  8.9936e+01      0.0000    INSIDE r_h
+     2  7.6517e+01     -0.5054    INSIDE r_h
+     4  5.4242e+01      1.0029              
+     6  4.1400e+01      2.1530              
+     8  3.1323e+01      3.0434              
+    10  2.9957e+01      3.0283              
+    12  9.2707e+01      1.5189              
+
+  Mass strength = 80
+  f_max (center) = 19.8473
+  f(r=5) = 0.9163
+  Horizon radius r_h = 4.7504770229822375
+  Surface gravity kappa = 0.2775
+  Poisson solve: 2.60s
+
+  Shadow map (impact parameter b, transmission ratio, deflection):
+     b       ratio  deflection        status
+  --------------------------------------------
+     0  3.2466e+01      0.0000    INSIDE r_h
+     2  3.5023e+01      1.1750    INSIDE r_h
+     4  4.4858e+01      3.3550    INSIDE r_h
+     6  4.6621e+01      2.5508              
+     8  3.3970e+01      1.3199              
+    10  1.3075e+01     -0.0109              
+    12  2.6028e+01      1.6868              
+
+  Mass strength = 120
+  f_max (center) = 29.7709
+  f(r=5) = 1.3745
+  Horizon radius r_h = 6.193244015960485
+  Surface gravity kappa = 0.2815
+  Poisson solve: 2.19s
+
+  Shadow map (impact parameter b, transmission ratio, deflection):
+     b       ratio  deflection        status
+  --------------------------------------------
+     0  1.2700e+02      0.0000    INSIDE r_h
+     2  9.8783e+01     -2.0113    INSIDE r_h
+     4  4.5350e+01     -3.4573    INSIDE r_h
+     6  2.6704e+01      3.6025    INSIDE r_h
+     8  3.2191e+01      3.0813              
+    10  2.6632e+01      0.9985              
+    12  1.1873e+01     -0.5909              
+
+======================================================================
+TEST 3: Deviation from weak-field GR prediction
+======================================================================
+
+Lattice: 31^3, mass at center, impact parameter b = 8
+k = 6.0, p = 1.0
+
+    ms    f_peak    f_at_b   defl_prop     defl_GR  deviation%
+--------------------------------------------------------------
+   2.0    0.4962    0.0106      4.0323      0.1516      2559.7
+   5.0    1.2405    0.0265      3.5778      0.3790       844.0
+  10.0    2.4809    0.0530      3.6664      0.7580       383.7
+  15.0    3.7214    0.0795      3.6903      1.1370       224.6
+  25.0    6.2023    0.1325      2.0520      1.8951         8.3
+  40.0    9.9236    0.2120      2.2687      3.0321        25.2
+  60.0   14.8855    0.3180      3.0434      4.5482        33.1
+
+--- Weak-field validity thresholds ---
+10% deviation at f_peak ~ 0.496 (f_at_b ~ 0.011, ms = 2)
+50% deviation at f_peak ~ 0.496 (f_at_b ~ 0.011, ms = 2)
+
+======================================================================
+TEST 4: Super-horizon (f > 1) behavior
+======================================================================
+
+Uniform field propagation: 31 transverse x 20 layers
+k = 6.0, p = 1.0
+
+     f    S=L(1-f)    norm_out   growth_rate  phase_sign              behavior
+------------------------------------------------------------------------------
+  0.80      0.2000  2.0076e+04      1.641097    positive             DIVERGENT
+  0.90      0.1000  1.8596e+05      1.834304    positive             DIVERGENT
+  0.95      0.0500  4.7645e+05      1.922653    positive             DIVERGENT
+  1.00      0.0000  6.8543e+05      1.957934        zero             DIVERGENT
+  1.05     -0.0500  4.7645e+05      1.922653    negative             DIVERGENT
+  1.10     -0.1000  1.8596e+05      1.834304    negative             DIVERGENT
+  1.20     -0.2000  2.0076e+04      1.641097    negative             DIVERGENT
+  1.50     -0.5000  1.0603e+02      1.262618    negative             DIVERGENT
+  2.00     -1.0000  3.7261e-02      0.848325    negative              ABSORBED
+  3.00     -2.0000  7.9911e+01      1.244888    negative             DIVERGENT
+
+--- Super-horizon analysis ---
+  f = 1.00: action S = 0.000, norm grows by 6.85e+05x over 20 steps (DIVERGENT)
+  f = 1.05: action S = -0.050, norm grows by 4.76e+05x over 20 steps (DIVERGENT)
+  f = 1.10: action S = -0.100, norm grows by 1.86e+05x over 20 steps (DIVERGENT)
+  f = 1.20: action S = -0.200, norm grows by 2.01e+04x over 20 steps (DIVERGENT)
+  f = 1.50: action S = -0.500, norm grows by 1.06e+02x over 20 steps (DIVERGENT)
+  f = 2.00: action S = -1.000, norm grows by 3.73e-02x over 20 steps (ABSORBED)
+  f = 3.00: action S = -2.000, norm grows by 7.99e+01x over 20 steps (DIVERGENT)
+
+  Transfer matrix spectral radius (largest eigenvalue magnitude):
+       f    spectral_r               implies
+  --------------------------------------------
+    0.50      1.266311  unstable (1.266x/step)
+    0.90      1.849741  unstable (1.850x/step)
+    1.00      1.980104  unstable (1.980x/step)
+    1.10      1.849741  unstable (1.850x/step)
+    1.50      1.266311  unstable (1.266x/step)
+    2.00      1.617266  unstable (1.617x/step)
+
+======================================================================
+TEST 5: Schwarzschild radius analog
+======================================================================
+
+Lattice: 31^3, mass at center
+Finding r_h where f(r_h) = 1 for each mass strength
+
+    ms     f_max     r_h     kappa    r_h/ms   has_horizon
+----------------------------------------------------------
+  10.0    2.4809    0.89    1.0492   0.08885           YES
+  20.0    4.9618    1.73    1.5012   0.08639           YES
+  40.0    9.9236    2.86    0.8770   0.07159           YES
+  60.0   14.8855    3.86    0.5359   0.06432           YES
+  80.0   19.8473    4.75    0.3785   0.05938           YES
+ 100.0   24.8091    5.53    0.2961   0.05530           YES
+ 120.0   29.7709    6.19    0.2462   0.05161           YES
+
+--- Schwarzschild scaling check ---
+  Linear fit: r_h = 0.0476 * ms + 0.7633
+  R^2 = 0.9857
+  -> r_h IS proportional to ms (Schwarzschild-like scaling)
+  -> Proportionality constant: r_h / ms ~ 0.0476
+
+  Expected from 3D Poisson (f = ms/(4*pi*r)): r_h = 0.0796 * ms
+  Measured mean r_h/ms = 0.0682
+  Ratio (measured/expected) = 0.8571
+
+======================================================================
+SUMMARY: Strong-Field Regime
+======================================================================
+
+1. AMPLITUDE VS FIELD STRENGTH:
+   f = 0.00: transmission ratio = 3.7261e-02 (phase/step = 6.00)
+   f = 0.50: transmission ratio = 1.0603e+02 (phase/step = 3.00)
+   f = 0.90: transmission ratio = 1.8596e+05 (phase/step = 0.60)
+   f = 1.00: transmission ratio = 6.8543e+05 (phase/step = 0.00)
+   f = 1.10: transmission ratio = 1.8596e+05 (phase/step = -0.60)
+
+2. HORIZON STRUCTURE:
+   ms = 20: r_h = 1.73, f_max = 4.96
+   ms = 40: r_h = 2.86, f_max = 9.92
+   ms = 60: r_h = 3.86, f_max = 14.89
+   ms = 80: r_h = 4.75, f_max = 19.85
+   ms = 120: r_h = 6.19, f_max = 29.77
+
+3. WEAK-FIELD VALIDITY:
+   ms = 2: f_peak = 0.496, deviation from weak-field = 2559.7%
+   ms = 5: f_peak = 1.240, deviation from weak-field = 844.0%
+   ms = 10: f_peak = 2.481, deviation from weak-field = 383.7%
+   ms = 15: f_peak = 3.721, deviation from weak-field = 224.6%
+   ms = 25: f_peak = 6.202, deviation from weak-field = 8.3%
+   ms = 40: f_peak = 9.924, deviation from weak-field = 25.2%
+   ms = 60: f_peak = 14.885, deviation from weak-field = 33.1%
+
+4. SUPER-HORIZON BEHAVIOR:
+   f = 0.95: DIVERGENT (growth rate = 1.9227/step)
+   f = 1.00: DIVERGENT (growth rate = 1.9579/step)
+   f = 1.05: DIVERGENT (growth rate = 1.9227/step)
+   f = 1.10: DIVERGENT (growth rate = 1.8343/step)
+   f = 1.20: DIVERGENT (growth rate = 1.6411/step)
+   f = 1.50: DIVERGENT (growth rate = 1.2626/step)
+   f = 2.00: ABSORBED (growth rate = 0.8483/step)
+   f = 3.00: DIVERGENT (growth rate = 1.2449/step)
+
+5. SCHWARZSCHILD ANALOG:
+   ms = 10: r_h = 0.89
+   ms = 20: r_h = 1.73
+   ms = 40: r_h = 2.86
+   ms = 60: r_h = 3.86
+   ms = 80: r_h = 4.75
+   ms = 100: r_h = 5.53
+   ms = 120: r_h = 6.19
+
+----------------------------------------------------------------------
+OVERALL ASSESSMENT:
+----------------------------------------------------------------------
+- The f=1 surface AMPLIFIES rather than absorbs: NOT a true horizon
+  This is because S=0 removes phase variation, eliminating
+  destructive interference that normally limits amplitude.
+- Some f > 1 regions are stable: f = [2.0]
+
+Total runtime: 29.6s

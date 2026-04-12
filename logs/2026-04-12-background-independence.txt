@@ -1,0 +1,158 @@
+
+BACKGROUND INDEPENDENCE: EFFECTIVE GEOMETRY DIFFERS FROM INPUT GRAPH
+================================================================================
+
+Parameters: N=20, mass_strength=5.0, k=1.0
+
+================================================================================
+TEST 1: EFFECTIVE CONNECTIVITY
+================================================================================
+
+On the flat lattice, every edge has weight w = exp(-k) (uniform).
+With gravity, w = exp(-k*(1-f)) varies with position.
+Near mass (f>0): w > exp(-k) -- edges are STRONGER (more amplitude).
+Far from mass (f~0): w ~ exp(-k) -- edges approach flat value.
+The effective graph has non-uniform connectivity from gravity.
+
+Lattice N=20, mass at center, M=5.0, k=1.0
+Flat edge weight: w_flat = exp(-1.0) = 0.367879
+
+   r          <w>     w/w_flat       std(w)         f(r)  n_edges
+-----------------------------------------------------------------
+   1     0.497250     1.351667     0.084196     0.290495      108
+   2     0.431830     1.173836     0.023458     0.158882      444
+   3     0.403872     1.097839     0.008374     0.093131      876
+   4     0.390955     1.062727     0.005017     0.060756     1884
+   5     0.383882     1.043499     0.002935     0.042550     2460
+   6     0.378880     1.029903     0.002108     0.029449     3708
+   7     0.375253     1.020044     0.001649     0.019836     5484
+   8     0.372551     1.012698     0.001327     0.012612     6780
+
+Edge weight ratio w/w_flat:
+  Inner (r<=3): 1.207780
+  Outer (r>=7): 1.016371
+  Ratio inner/outer: 1.188326
+
+RESULT: Edge weights are NON-UNIFORM. Gravity creates an
+effective graph with different connectivity than the input lattice.
+Edges near mass are 18.8% stronger than far from mass.
+
+================================================================================
+TEST 2: EFFECTIVE DISTANCE
+================================================================================
+
+Define d_eff(i,j) = -log|G(i,j)| where G is the Green's function.
+On a flat lattice, d_eff scales linearly with graph distance r.
+With gravity, d_eff(r) has a different profile -- the effective
+metric departs from the flat lattice metric.
+
+Lattice N=20, source at center, M=5.0, k=1.0
+
+Effective distance along x-axis from center:
+   r       d_flat       d_grav      Delta_d     d_flat/r     d_grav/r         f(r)
+--------------------------------------------------------------------------------
+   1     1.588607     1.772795    +0.184188     1.588607     1.772795     0.393246
+   2     2.410731     2.484929    +0.074198     1.205366     1.242465     0.177196
+   3     2.984207     3.016365    +0.032158     0.994736     1.005455     0.100251
+   4     3.406615     3.418155    +0.011540     0.851654     0.854539     0.063647
+   5     3.733336     3.733234    -0.000101     0.746667     0.746647     0.042217
+   6     3.988510     3.981541    -0.006969     0.664752     0.663590     0.027782
+   7     4.180435     4.169594    -0.010841     0.597205     0.595656     0.016972
+   8     4.310094     4.297403    -0.012692     0.538762     0.537175     0.008069
+
+Uniformity of d_eff/r (std dev of d/r across radii):
+  Flat: std(d_flat/r) = 0.331616
+  Grav: std(d_grav/r) = 0.385674
+
+Range of Delta_d = d_grav - d_flat across radii: 0.196880
+
+RESULT: The effective distance d_eff = -log|G| has a DIFFERENT
+radial profile with gravity vs. without. The propagator sees a
+metric that differs from the flat lattice metric.
+
+  Delta_d (inner, r<=3): +0.096848
+  Delta_d (outer, r>=6): -0.010167
+  Metric modification is strongest near the mass => curved geometry.
+
+================================================================================
+TEST 3: EFFECTIVE SPECTRAL DIMENSION
+================================================================================
+
+The spectral dimension d_s = -2 * d(log P(t))/d(log t)
+where P(t) is the heat kernel return probability on the weighted graph.
+We compute P(t) via matrix exponentiation of the normalized Laplacian.
+
+Lattice N=20, mass at center, M=5.0, k=1.0
+Building transition matrices...
+
+  center: f=1.2267, d_s(flat)=2.905, d_s(grav)=2.736, Delta=-0.169
+  near (r=2): f=0.1772, d_s(flat)=2.905, d_s(grav)=2.766, Delta=-0.139
+  mid (r=5): f=0.0422, d_s(flat)=2.848, d_s(grav)=2.848, Delta=-0.000
+  far (r=8): f=0.0081, d_s(flat)=2.532, d_s(grav)=2.541, Delta=+0.008
+
+Interpretation: if d_s differs between flat and gravity cases,
+the effective dimensionality seen by the propagator changes.
+Non-uniform d_s across positions = curved effective geometry.
+
+================================================================================
+TEST 4: GEOMETRY RESPONDS TO MATTER
+================================================================================
+
+Place two masses at different positions. Show that the effective
+geometry (Green's function) around mass A depends on where mass B is.
+This is the graph analog of 'matter tells geometry how to curve'.
+
+Lattice N=20, k=1.0, M=5.0
+Mass A at (10, 10, 10)
+Mass B1 at (15, 10, 10) (offset along x by 5)
+Mass B2 at (10, 15, 10) (offset along y by 5)
+
+Effective distance d_eff = -log|G| from center in each configuration:
+          point       d(A)    d(A+Bx)    d(A+By)   Bx shift   By shift
+-----------------------------------------------------------------
+           x=+2    2.48493    2.53126    2.51347   +0.04633   +0.02855
+           x=+3    3.01636    3.06721    3.03721   +0.05084   +0.02084
+           x=+4    3.41816    3.47139    3.43203   +0.05323   +0.01388
+           x=-2    2.48751    2.51275    2.51621   +0.02524   +0.02870
+           x=-3    3.02319    3.04284    3.04424   +0.01965   +0.02105
+           x=-4    3.43255    3.44795    3.44663   +0.01540   +0.01408
+           y=+2    2.48493    2.51347    2.53126   +0.02855   +0.04633
+           y=+3    3.01636    3.03721    3.06721   +0.02084   +0.05084
+           y=+4    3.41816    3.43203    3.47139   +0.01388   +0.05323
+           y=-2    2.48751    2.51621    2.51275   +0.02870   +0.02524
+           y=-3    3.02319    3.04424    3.04284   +0.02105   +0.01965
+           y=-4    3.43255    3.44663    3.44795   +0.01408   +0.01540
+
+RMS metric shift from mass B along x: 0.031269
+RMS metric shift from mass B along y: 0.031269
+
+RESULT: The effective geometry around mass A CHANGES when mass B
+is added. The metric shift depends on mass B's position.
+=> Matter tells geometry how to curve.
+
+Anisotropy of Bx metric shift:
+  Along x (toward/away from B1): RMS = 0.038353
+  Along y (perpendicular to B1): RMS = 0.022012
+  => ANISOTROPIC: geometry responds directionally to matter.
+
+================================================================================
+SUMMARY: BACKGROUND INDEPENDENCE
+================================================================================
+
+Although the graph topology is fixed (cubic lattice, every node has
+6 neighbors), the effective geometry -- as measured by:
+
+  1. Edge weights: non-uniform in gravity (stronger near mass)
+  2. Effective distances d_eff = -log|G|: depart from flat profile
+  3. Spectral dimension: modified by the gravitational field
+  4. Two-mass response: geometry around A depends on B's position
+
+-- changes in response to the gravitational field.
+
+The input graph provides the substrate; the geometry is an output.
+
+This is background independence: the effective geometry seen by the
+propagator is determined by the matter content, not prescribed by hand.
+The lattice is scaffolding; the physics lives in the propagator weights.
+
+Total runtime: 1.0s
