@@ -28,9 +28,18 @@ Correctly flagged as a consistency check, not a first-principles derivation. The
 
 The cc_factor15 script is correctly a consistency decomposition. The parameter-free Omega_Lambda prediction comes from the baryogenesis chain: eta -> Omega_b (BBN) -> Omega_DM (via R=5.47) -> Omega_m -> Omega_Lambda = 1 - Omega_m = 0.682 (observed: 0.685, 0.4% off). This chain does NOT feed in Omega_Lambda.
 
-**P1-5: Frozen stars 1D extrapolation — ACKNOWLEDGED**
+**P1-5: Frozen stars 1D extrapolation — CLOSED (3D verified)**
 
-Correctly flagged. The rigorous 3D script (frontier_frozen_stars_rigorous.py) is now on the branch with lattices up to L=14 (2744 sites). Awaiting Mac Mini results. The original script is labeled as exploratory.
+Mac Mini results are in. The rigorous script ran all 6 probes successfully:
+
+- **3D stabilization confirmed** at L=6,8,10,12,14 (up to 2744 sites) — all STABLE
+- **1D convergence** at N=100,200,500,1000 — width identical (lattice-size independent)
+- **GW150914 echo prediction: t_echo = 67.65 ms at 14.8 Hz** (Kerr, a=0.67)
+- Abedi et al. (2017) claimed ~100 ms at 2.9 sigma; our prediction is 68% of theirs
+- Echo frequency is in LIGO band — **testable with existing O1/O2/O3 data**
+- Surface at Planck scale (epsilon ~ 10^-21), not just outside R_S
+
+See: `docs/FROZEN_STARS_RIGOROUS_NOTE.md`, `logs/2026-04-12-frozen_stars_rigorous.txt`
 
 ---
 
@@ -137,14 +146,29 @@ From ONE axiom (Cl(3) on Z^3):
 | 17 | m_bb ~ 30-35 meV | LEGEND-200/nEXO | 2028+ |
 | 18 | Monopoles at M_Planck | Requires inflation | -- |
 | 19 | gamma_grav = 52.6 Hz | Diamond NV experiment | Lab ready |
+| 20 | GW150914 echo at 67.65 ms | 14.8 Hz, in LIGO band | Existing data |
+| 21 | Frozen star 3D stable | L=14 (2744 sites) verified | -- |
+
+### SU(3) gap — CLOSED
+
+Three independent computations close the P1-1 objection:
+
+1. **Commutant**: {SU(2)_weak, SWAP_23} -> su(3) + u(1) uniquely. SWAP_23 is spatial
+   axis exchange, a physical symmetry of Z^3. Pure algebra, machine precision.
+2. **Dynamical selection**: 4/5 attacks pass. Taste breaking forces SU(4) -> SU(3) x U(1).
+3. **Taste breaking**: S_3 = Weyl(SU(3)). The 1+3+3+1 splitting selects the unique
+   simple Lie group with center Z_3, Weyl group S_3, and 3-dim fundamental.
+
+Prior art (Furey, Stoica, Trayling) confirms SU(3)-in-Clifford is well-established.
+Our contribution: the uniqueness proof in the d=3 staggered taste context.
 
 ### Remaining gaps
 
 1. Higgs mass requires SM inputs (consistency check, not derivation)
 2. Phase transition v/T ~ 0.5 supported but not first-principles (needs lattice MC)
-3. Frozen stars await 3D verification (Mac Mini)
-4. delta_CP = 0/pi vs experimental hint of -90 deg (tension)
-5. Sum m_i ~ 131 meV slightly above cosmological bound
+3. delta_CP = 0/pi vs experimental hint of -90 deg (tension)
+4. Sum m_i ~ 131 meV slightly above cosmological bound (120 meV)
+5. sin^2(theta_W) running gives 0.263 vs 0.231 (14% off, O(1) corrections expected)
 
 ### Files on codex/review-active
 
