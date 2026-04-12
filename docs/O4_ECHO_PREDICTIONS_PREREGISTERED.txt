@@ -3,6 +3,22 @@
 # Date: 2026-04-12
 # Zero free parameters: t_echo = f(M_remnant, a_spin, l_Planck)
 #
+# UPDATED PREDICTION (2026-04-12):
+# Echo TIMING listed below (robust, zero free parameters).
+# Echo AMPLITUDE predicted to be ZERO.
+#
+# The framework's own field creates an evanescent barrier between
+# R_min (lattice floor) and R_S. Tunneling amplitude:
+#   T ~ exp(-R_S/l_Pl * ln(R_S/R_min)) ~ 10^{-10^41} = 0
+# Four independent analyses confirm: no detectable echoes.
+# (See ECHO_PREDICTION_RESOLVED_2026-04-12.md)
+#
+# The frozen star surface EXISTS (no singularity, unitarity preserved)
+# but is observationally silent. Null LIGO result = CONFIRMATION.
+#
+# Any DETECTION of echoes would FALSIFY the evanescent barrier
+# and require physics beyond this framework.
+#
                     event  M_final     a  t_echo_ms  f_echo_Hz             GPS
 --------------------------------------------------------------------------------
           GW230518_125908      9.1  0.67        9.7      103.4    1368449966.2
