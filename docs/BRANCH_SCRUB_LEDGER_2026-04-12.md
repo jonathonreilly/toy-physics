@@ -91,14 +91,14 @@ do not need further science capture before archive:
 - `origin/codex/main-open-cubic-validation`
 - `origin/codex/main-post-validation`
 - `origin/codex/strict-staggered-repro`
+- `origin/codex/main-distance-64`
+- `origin/codex/main-newton-note`
 
 ### Likely archive-ready after one short verification pass
 
 These appear to be promotion/integration helper branches rather than unique
 science branches, but they still need a quick final diff audit before delete:
 
-- `origin/codex/main-distance-64`
-- `origin/codex/main-newton-note`
 - `origin/codex/archive-main-retain-audit-20260411`
 - `origin/codex/archive-main-wilson-bounded-20260411`
 
