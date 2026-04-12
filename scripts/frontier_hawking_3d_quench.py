@@ -600,12 +600,12 @@ def test_spatial_profile(L: int = 10, R_h: float = 3.0,
     peak_near_horizon = abs(peak_r - R_h) < 2.0  # within 2 lattice spacings
 
     # Print radial profile
-    print(f"\n  {'r':>6s}  {'|delta_n|':>12s}  {'bar':>20s}")
+    print(f"\n  {'r':>6s}  {'delta_n':>14s}  {'bar':>20s}")
     max_dn = max(delta_n.max(), 1e-15)
     for i in range(len(bin_centers)):
         bar_len = int(40 * delta_n[i] / max_dn)
         marker = " <-- R_h" if abs(bin_centers[i] - R_h) < 0.5 else ""
-        print(f"  {bin_centers[i]:6.2f}  {delta_n[i]:12.6f}  {'#' * bar_len}{marker}")
+        print(f"  {bin_centers[i]:6.2f}  {delta_n[i]:14.8f}  {'#' * bar_len}{marker}")
 
     print(f"\n  Peak near horizon (|r_peak - R_h| < 2): {peak_near_horizon}")
 
