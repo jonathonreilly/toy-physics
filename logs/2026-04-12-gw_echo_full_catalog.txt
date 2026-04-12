@@ -1,0 +1,180 @@
+=====================================================================================
+FULL-CATALOG ECHO SEARCH: ABEDI REPRODUCTION + FROZEN-STAR PREDICTION
+=====================================================================================
+
+Available H1 event files: 73
+
+=====================================================================================
+PART A: ABEDI REPRODUCTION — GW150914 at ~100ms
+=====================================================================================
+
+  H1:
+    Blind sweep best: 138.4ms (SNR=4.832)
+    At Abedi ~100ms: SNR=3.158, sigma=-0.67
+    At prediction 67.5ms: SNR=3.000, sigma=-1.01
+    Sweep mean=3.203, std=0.831
+
+  L1:
+    Blind sweep best: 73.9ms (SNR=5.003)
+    At Abedi ~100ms: SNR=3.054, sigma=-1.05
+    At prediction 67.5ms: SNR=3.257, sigma=-0.64
+    Sweep mean=3.392, std=0.857
+
+=====================================================================================
+PART B: MULTI-EVENT STACK — EVENTS WITH KNOWN REMNANT PARAMS
+=====================================================================================
+
+  GW150914: M=62.0, a=0.67, t_echo=67.5ms
+    H1: pred_sigma=-1.06, best=138.4ms
+    L1: pred_sigma=-0.63, best=73.9ms
+    Combined: -1.20 sigma
+
+  GW151226: M=20.8, a=0.74, t_echo=23.6ms
+    H1: pred_sigma=2.05, best=23.4ms
+    L1: pred_sigma=0.21, best=21.6ms
+    Combined: 1.59 sigma
+
+  GW170104: M=48.7, a=0.64, t_echo=51.8ms
+    H1: pred_sigma=0.90, best=45.5ms
+    L1: pred_sigma=0.15, best=21.6ms
+    Combined: 0.75 sigma
+
+  GW170608: M=17.8, a=0.69, t_echo=19.3ms
+    H1: pred_sigma=0.00, best=26.3ms
+    L1: pred_sigma=0.00, best=22.8ms
+    Combined: 0.00 sigma
+
+  GW170729: M=79.5, a=0.81, t_echo=100.0ms
+    H1: pred_sigma=0.81, best=24.5ms
+    L1: pred_sigma=0.46, best=22.2ms
+    Combined: 0.90 sigma
+
+  GW170809: M=56.3, a=0.70, t_echo=62.6ms
+    H1: pred_sigma=0.56, best=23.4ms
+    L1: pred_sigma=-0.26, best=23.4ms
+    Combined: 0.21 sigma
+
+  GW170814: M=53.2, a=0.72, t_echo=60.1ms
+    H1: pred_sigma=-0.88, best=21.6ms
+    L1: pred_sigma=-0.93, best=144.8ms
+    Combined: -1.28 sigma
+
+  GW170823: M=65.4, a=0.71, t_echo=73.4ms
+    H1: pred_sigma=0.54, best=137.3ms
+    L1: pred_sigma=-1.07, best=23.9ms
+    Combined: -0.37 sigma
+
+-------------------------------------------------------------------------------------
+STACKING (known PE events)
+-------------------------------------------------------------------------------------
+
+         event      M   t_pred    sigma
+      GW150914   62.0     67.5    -1.20
+      GW151226   20.8     23.6     1.59
+      GW170104   48.7     51.8     0.75
+      GW170608   17.8     19.3     0.00
+      GW170729   79.5    100.0     0.90
+      GW170809   56.3     62.6     0.21
+      GW170814   53.2     60.1    -1.28
+      GW170823   65.4     73.4    -0.37
+
+  Stacked: 0.21 sigma
+  Positive: 4/8 (50%)
+  Mean: 0.074
+
+=====================================================================================
+PART C: ALL EVENTS (with estimated remnant params where needed)
+=====================================================================================
+  GW150914: -1.11σ (pred), t=67ms, Abedi: -1.36σ
+  GW151226: +1.51σ (pred), t=24ms, Abedi: -0.65σ
+  GW170104: +0.68σ (pred), t=52ms, Abedi: +1.35σ
+  GW170608: +0.00σ (pred), t=19ms, Abedi: +2.03σ
+  GW170729: +0.98σ (pred), t=100ms, Abedi: +0.82σ
+  GW170809: +0.24σ (pred), t=63ms, Abedi: -0.54σ
+  GW170814: -1.19σ (pred), t=60ms, Abedi: -0.27σ
+  GW170817: +0.46σ (pred), t=54ms, Abedi: -1.09σ
+  GW170823: -0.55σ (pred), t=73ms, Abedi: -0.58σ
+  GW190403_051519: -1.32σ (pred), t=54ms, Abedi: -0.45σ
+  GW190408_181802: -0.40σ (pred), t=54ms, Abedi: +0.52σ
+  GW190413_052954: -0.33σ (pred), t=54ms, Abedi: -0.46σ
+  GW190413_134308: +0.67σ (pred), t=54ms, Abedi: -0.62σ
+  GW190421_213856: -0.41σ (pred), t=54ms, Abedi: +0.69σ
+  GW190426_190642: +0.00σ (pred), t=54ms, Abedi: +0.55σ
+  GW190503_185404: +1.82σ (pred), t=54ms, Abedi: +1.32σ
+  GW190512_180714: +0.65σ (pred), t=54ms, Abedi: -0.51σ
+  GW190513_205428: -1.16σ (pred), t=54ms, Abedi: +0.69σ
+  GW190514_065416: -1.30σ (pred), t=54ms, Abedi: +0.49σ
+  GW190517_055101: +0.57σ (pred), t=54ms, Abedi: +0.54σ
+  GW190519_153544: +0.90σ (pred), t=54ms, Abedi: -2.18σ
+  GW190521_074359: +0.87σ (pred), t=54ms, Abedi: +1.89σ
+  GW190527_092055: -0.85σ (pred), t=54ms, Abedi: +0.36σ
+  GW190602_175927: -1.26σ (pred), t=54ms, Abedi: +0.29σ
+  GW190701_203306: +0.53σ (pred), t=54ms, Abedi: +1.02σ
+  GW190706_222641: -0.18σ (pred), t=54ms, Abedi: +1.29σ
+  GW190707_093326: +0.61σ (pred), t=54ms, Abedi: -0.04σ
+  GW190719_215514: +1.69σ (pred), t=54ms, Abedi: +0.25σ
+  GW190720_000836: -0.60σ (pred), t=54ms, Abedi: -1.28σ
+  GW190727_060333: -0.98σ (pred), t=54ms, Abedi: -1.06σ
+  GW190728_064510: -0.18σ (pred), t=54ms, Abedi: -0.77σ
+  GW190731_140936: -0.76σ (pred), t=54ms, Abedi: -1.08σ
+  GW190803_022701: -0.15σ (pred), t=54ms, Abedi: -0.45σ
+  GW190805_211137: -0.43σ (pred), t=54ms, Abedi: +1.27σ
+  GW190828_063405: -0.48σ (pred), t=54ms, Abedi: -1.03σ
+  GW190828_065509: -0.08σ (pred), t=54ms, Abedi: -0.68σ
+  GW190915_235702: +0.82σ (pred), t=54ms, Abedi: +0.64σ
+  GW190916_200658: +0.17σ (pred), t=54ms, Abedi: +0.57σ
+  GW190917_114630: +0.29σ (pred), t=54ms, Abedi: +1.13σ
+  GW190924_021846: +1.68σ (pred), t=54ms, Abedi: +0.49σ
+  GW190925_232845: -1.15σ (pred), t=54ms, Abedi: -1.39σ
+  GW190926_050336: +0.10σ (pred), t=54ms, Abedi: -2.20σ
+  GW190929_012149: -1.54σ (pred), t=54ms, Abedi: +1.50σ
+  GW190930_133541: +0.62σ (pred), t=54ms, Abedi: -0.73σ
+  GW191103_012549: +1.59σ (pred), t=54ms, Abedi: -1.31σ
+  GW191105_143521: +1.54σ (pred), t=54ms, Abedi: +1.71σ
+  GW191109_010717: +1.29σ (pred), t=54ms, Abedi: -0.62σ
+  GW191113_071753: +2.57σ (pred), t=54ms, Abedi: -0.05σ
+  GW191126_115259: -0.07σ (pred), t=54ms, Abedi: +0.10σ
+  GW191127_050227: +0.86σ (pred), t=54ms, Abedi: +1.01σ
+  GW191129_134029: -0.58σ (pred), t=54ms, Abedi: +0.95σ
+  GW191204_110529: +0.78σ (pred), t=54ms, Abedi: -1.93σ
+  GW191215_223052: +0.57σ (pred), t=54ms, Abedi: +0.04σ
+  GW191216_213338: +0.02σ (pred), t=54ms, Abedi: -0.15σ
+  GW191222_033537: +1.05σ (pred), t=54ms, Abedi: -0.57σ
+  GW191230_180458: +0.95σ (pred), t=54ms, Abedi: +0.29σ
+  GW200128_022011: -0.77σ (pred), t=54ms, Abedi: +1.79σ
+  GW200129_065458: +1.60σ (pred), t=54ms, Abedi: -1.23σ
+  GW200202_154313: +0.17σ (pred), t=54ms, Abedi: +0.35σ
+  GW200208_130117: -1.32σ (pred), t=54ms, Abedi: +0.95σ
+  GW200208_222617: +0.85σ (pred), t=54ms, Abedi: -0.22σ
+  GW200209_085452: -1.41σ (pred), t=54ms, Abedi: +1.25σ
+  GW200210_092254: +2.19σ (pred), t=54ms, Abedi: +0.49σ
+  GW200216_220804: +0.00σ (pred), t=54ms, Abedi: -2.24σ
+  GW200219_094415: -0.72σ (pred), t=54ms, Abedi: +0.05σ
+  GW200220_061928: +0.48σ (pred), t=54ms, Abedi: -0.98σ
+  GW200220_124850: +0.02σ (pred), t=54ms, Abedi: -0.90σ
+  GW200224_222234: +0.71σ (pred), t=54ms, Abedi: +0.79σ
+  GW200225_060421: -0.05σ (pred), t=54ms, Abedi: +2.49σ
+  GW200308_173609: -0.60σ (pred), t=54ms, Abedi: -0.06σ
+  GW200311_115853: +0.00σ (pred), t=54ms, Abedi: +0.74σ
+  GW200316_215756: -1.46σ (pred), t=54ms, Abedi: +1.04σ
+  GW200322_091133: -0.66σ (pred), t=54ms, Abedi: -0.37σ
+
+=====================================================================================
+FINAL SUMMARY
+=====================================================================================
+
+  FROZEN-STAR PREDICTION (all 73 events):
+    Stacked sigma: 1.06
+    Mean sigma: 0.125
+    Positive: 40/73 (55%)
+    Binomial p: 0.2414
+
+  ABEDI ~100ms (all 73 events):
+    Stacked sigma: 0.43
+    Mean sigma: 0.051
+    Positive: 38/73 (52%)
+
+  VERDICT: WEAK HINT
+
+  Total events analyzed: 73
+  Runtime: 34s (0.6 min)
