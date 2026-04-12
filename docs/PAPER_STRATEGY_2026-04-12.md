@@ -66,14 +66,17 @@ audited taste-orbit structure
 - Present this as the clean positive result from the retained weak lane.
 - Do not re-open native cubic `SU(3)` here.
 
-**3. KS-surface commutant theorem**
-- Present the commutant result as:
-  - derived `SU(2)` factor plus residual cubic exchange symmetry
-  - basis-stable `su(3) \oplus u(1)` commutant on the KS surface
-- Make clear this is a theorem on the KS tensor-factor surface.
-- Do not describe it as `Cl(3)`-alone closure.
-- Separate the algebraic theorem from the physical interpretation of the
-  abelian factor.
+**3. Graph-first selector and commutant theorem**
+- Present the new structural chain as:
+  - canonical graph shifts on the taste cube
+  - derived quartic weak-axis selector with three axis vacua
+  - selected graph fibers carrying weak `su(2)`
+  - residual cubic swap on the complementary base
+  - `su(3) \oplus u(1)` commutant on the selected-axis graph surface
+- This is now the preferred structural route because it is graph-first rather
+  than factorization-first.
+- Keep the abelian-factor interpretation separate from the structural
+  `su(3) \oplus u(1)` closure.
 
 **4. Hypercharge as a corollary, not a closure claim**
 - Report left-handed charge/eigenvalue matching.
@@ -89,8 +92,8 @@ audited taste-orbit structure
   on taste physicality rather than as a settled derivation.
 
 **6. What the paper does not claim**
-- No native cubic `SU(3)` from `Cl(3)` alone.
-- No full Standard Model closure.
+- No anomaly-complete hypercharge closure unless that is separately written.
+- No full Standard Model closure beyond the structural gauge result.
 - No zero-free-parameter claim.
 - No claim that the abelian factor is fully identified as hypercharge unless
   the review docs explicitly close that step.
@@ -108,16 +111,18 @@ main letter, but keep the claim boundaries explicit.
 ### Contents
 
 1. Native cubic `Cl(3)` / `SU(2)` derivation
-2. KS-surface commutant theorem and basis-independence checks
-3. Taste-orbit algebra `8 = 1 + 1 + 3 + 3`
-4. Left-handed charge matching and the bounded hypercharge discussion
-5. Explicit open problems and failure modes
-6. Review-only phenomenology lanes, clearly labeled as such
+2. Graph-first weak-axis selector derivation
+3. Graph-first `su(3) \oplus u(1)` commutant integration theorem
+4. Taste-orbit algebra `8 = 1 + 1 + 3 + 3`
+5. Left-handed charge matching and the bounded hypercharge discussion
+6. Explicit open problems and failure modes
+7. Review-only phenomenology lanes, clearly labeled as such
 
 ### What belongs here
 
-- the `SU(3)` commutant theorem on the KS surface
-- the basis-independence checks
+- the graph-first selector derivation
+- the graph-first commutant integration theorem
+- the older basis-independence checks as support, not as the main closure path
 - the reviewed but still bounded hypercharge discussion
 - the exact orbit algebra
 
@@ -140,7 +145,6 @@ their claim boundaries are rewritten and re-audited.
 
 ### Keep as review-only / bounded
 
-- `SU(3)` native bridge beyond the KS surface
 - physical generations
 - `y_t` from `alpha_s`
 - Weinberg-angle threshold correction
@@ -166,12 +170,16 @@ their claim boundaries are rewritten and re-audited.
 1. Lock the main manuscript to the audited core.
 2. Rewrite any strategy or summary docs so they reflect the same claim
    boundaries.
-3. Keep the strong `SU(3)` bridge language confined to the KS-surface theorem.
+3. Use the graph-first selector + integration theorem as the main structural
+   closure route for the gauge sector.
 
 ### Next
 
-4. If the native bridge theorem is later proved, update the manuscript plan.
-5. If not, leave the open theorem as an explicit limitation.
+4. If a cleaner native-bivector-to-graph or native-bivector-to-KS bridge is
+   later proved, add it as a strengthening theorem rather than as the only
+   route.
+5. Keep the abelian-factor identification bounded until the anomaly-complete
+   argument is written cleanly.
 
 ### After that
 
@@ -185,7 +193,8 @@ their claim boundaries are rewritten and re-audited.
 The safe paper is smaller than the old flagship version, but it is coherent:
 
 - exact native cubic `Cl(3)` / `SU(2)`
-- KS-surface `su(3) \oplus u(1)` commutant theorem
+- graph-first weak-axis selector
+- graph-first `su(3) \oplus u(1)` commutant theorem
 - left-handed charge matching as a bounded corollary
 - exact taste-orbit algebra
 - explicit open problems where the audit still says “open”
