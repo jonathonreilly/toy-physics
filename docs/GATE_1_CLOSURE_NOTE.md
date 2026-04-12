@@ -1,8 +1,9 @@
 # Gate 1: Right-Handed Completion
 
-**Status:** Closed with bounded framing  
+**Status:** BOUNDED — anomaly cancellation fixes charges, but requires right-handed singlet template + neutral-singlet condition ν_R=0 as inputs. Not graph-canonical.  
 **Codex objection:** "still conditional, not graph-canonical"  
-**Scripts:** `frontier_right_handed_sector.py` (61/61), `frontier_chiral_completion.py` (32/32)
+**Scripts:** `frontier_right_handed_sector.py` (61/61), `frontier_chiral_completion.py` (32/32)  
+**Agent running:** `frontier_graph_canonical_rh.py` — 5 attacks including Dirac sea approach
 
 ---
 

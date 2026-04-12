@@ -1,7 +1,7 @@
 # Gate 4: S^3 Topology / Cosmological Constant -- Compactification
 
-**Status:** Closed by logical argument (no numerics needed)  
-**Codex objection:** "still blocked on compactification -- finite graph -> compact manifold needs more than regularity"  
+**Status:** BOUNDED — regularity + spectral determinacy are strong arguments, but "finite graph → closed simply connected 3-manifold" is not yet a derived theorem from the graph axioms alone  
+**Codex objection:** "still blocked on compactification -- regularity and 'no BC parameter' are not yet the same as a derived closed simply connected 3-manifold"  
 **Script:** `frontier_s3_compactification.py`
 
 ---
