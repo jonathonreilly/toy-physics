@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Chiral Completion: Right-Handed Singlet Sector + Anomaly Cancellation
-=====================================================================
+Chiral Completion: Conditional Right-Handed Singlet Sector + Anomaly Cancellation
+===============================================================================
 
 Physics context
 ---------------
@@ -16,19 +16,20 @@ But the SM requires RIGHT-HANDED fermions too:
     u_R = (1, 3)_{+4/3},  d_R = (1, 3)_{-2/3},  e_R = (1, 1)_{-2}
 plus optionally  nu_R = (1, 1)_{0}.
 
-This script proves:
+This script proves a **conditional** completion theorem:
 
-  PART 1 -- LATTICE ORIGIN of the right-handed sector.
+  PART 1 -- LATTICE ORIGIN and what is still missing.
     The staggered lattice in d=3+1 dimensions has 2^4 = 16 taste DOF.
-    The temporal doubler introduces a second C^8 that carries the
-    right-handed content.  The 4D chirality gamma_5 anticommutes with
-    all gamma_mu, mixing the gauge quantum numbers between sectors.
-    The physical right-handed states are SU(2)_weak singlets with
-    hypercharges uniquely determined by anomaly cancellation.
+    The temporal doubler introduces a second C^8 that provides the
+    right-handed completion surface.  The 4D chirality gamma_5
+    anticommutes with all gamma_mu, splitting the 16-state surface into
+    left- and right-handed halves.  This is the correct counting surface,
+    but it does NOT by itself derive the right-handed representation
+    template from the graph-first surface.
 
-  PART 2 -- ANOMALY EQUATIONS.
-    Starting from the left-handed content, we parametrise the right-
-    handed sector as:
+  PART 2 -- ANOMALY EQUATIONS (conditional on the singlet template).
+    Starting from the left-handed content, and assuming the right-handed
+    singlet template:
         u_R: (1,3)_{y1}, d_R: (1,3)_{y2}, e_R: (1,1)_{y3}, nu_R: (1,1)_{y4}
     and show that the five SM anomaly conditions:
         (I)   Tr[Y] = 0             (gravitational)
@@ -36,14 +37,16 @@ This script proves:
         (III) Tr[SU(3)^2 Y] = 0     (mixed colour--hypercharge)
         (IV)  Tr[SU(2)^2 Y] = 0     (mixed weak--hypercharge)
         (V)   Witten SU(2) global   (even number of doublets)
-    UNIQUELY fix {y1, y2, y3, y4} = {4/3, -2/3, -2, 0}, matching the SM.
+    UNIQUELY fix {y1, y2, y3, y4} = {4/3, -2/3, -2, 0} once y4 = 0 is
+    imposed, matching the SM.
 
   PART 3 -- NUMERICAL VERIFICATION of all 6 anomaly coefficients.
     Explicit computation of every trace using the 16-state fermion content.
 
   PART 4 -- UNIQUENESS THEOREM.
-    The anomaly system is solved in closed form.  The only rational
-    solution (up to u<->d relabelling) is the SM assignment.
+    The anomaly system is solved in closed form **conditional on the singlet
+    template and y4 = 0**.  The only rational solution (up to u<->d
+    relabelling) is the SM assignment.
 
   PART 5 -- ELECTRIC CHARGE TABLE.
     Q = T_3 + Y/2 for all 16 states of one generation.
@@ -104,14 +107,15 @@ def part1_lattice_origin():
     print("  left-handed and right-handed Weyl components.")
     print()
     print("  The SU(2)_weak x SU(3)_c x U(1)_Y structure of the 3D taste space")
-    print("  determines the LEFT-HANDED quantum numbers. The RIGHT-HANDED quantum")
-    print("  numbers are then UNIQUELY fixed by anomaly cancellation.")
+    print("  determines the LEFT-HANDED quantum numbers. The RIGHT-HANDED sector")
+    print("  is treated here as a completion ansatz, then fixed by anomaly")
+    print("  cancellation once the singlet template and y4 = 0 are imposed.")
     print()
     print("  Concretely: the right-handed fermions are SU(2)_weak SINGLETS.")
     print("  This follows because SU(2) is a CHIRAL gauge symmetry -- it couples")
     print("  only to left-handed fermions. The temporal doubler provides the")
-    print("  additional DOF needed for the right-handed content, but the gauge")
-    print("  quantum numbers of this sector are constrained by consistency.")
+    print("  additional DOF needed for a right-handed completion sector, but")
+    print("  this script does not claim to derive the template graph-canonically.")
 
     # Verify the 4D KS construction
     I2 = np.eye(2, dtype=complex)
@@ -161,7 +165,7 @@ def part2_anomaly_equations():
     print("    L_L = (2, 1)_{-1}      lepton doublet    2 Weyl states")
     print("    Total: 8 left-handed Weyl fermions")
     print()
-    print("  RIGHT-HANDED sector (SU(2)_weak singlets, to be determined):")
+    print("  RIGHT-HANDED sector (SU(2)_weak singlets, completion ansatz):")
     print("    u_R = (1, 3)_{y1}      up-type singlet   3 Weyl states")
     print("    d_R = (1, 3)_{y2}      down-type singlet 3 Weyl states")
     print("    e_R = (1, 1)_{y3}      charged lepton    1 Weyl state")
@@ -174,10 +178,9 @@ def part2_anomaly_equations():
     # The decomposition u_R + d_R + e_R + nu_R = (1,3) + (1,3) + (1,1) + (1,1)
     # has the same total color content: 3 + 3 + 1 + 1 = 8 states.
 
-    print("  NOTE: The SU(3)_c content of the right-handed sector is determined")
-    print("  by requiring that the electric charges Q = T_3 + Y/2 give the known")
-    print("  quark charges (+2/3, -1/3) and lepton charges (0, -1).  Since right-")
-    print("  handed fermions have T_3 = 0, we need Q = Y/2, which means:")
+    print("  NOTE: The SU(3)_c content of the right-handed sector is part of the")
+    print("  completion ansatz here.  Since right-handed fermions have T_3 = 0,")
+    print("  we need Q = Y/2, which means:")
     print("    u_R must be a color triplet (3 quarks with same charge)")
     print("    d_R must be a color triplet (3 quarks with same charge)")
     print("    e_R, nu_R are colour singlets")
@@ -451,10 +454,10 @@ def part4_uniqueness():
     print("=" * 72)
     print()
     print("  THEOREM: Given the left-handed sector (2,3)_{+1/3} + (2,1)_{-1},")
-    print("  the right-handed sector with SU(2)-singlet content")
+    print("  and given the right-handed singlet template")
     print("    (1,3)_{y1} + (1,3)_{y2} + (1,1)_{y3} + (1,1)_{y4}")
-    print("  is UNIQUELY determined (up to y1 <-> y2 relabelling) by the")
-    print("  five anomaly cancellation conditions to be:")
+    print("  the five anomaly cancellation conditions uniquely determine the")
+    print("  hypercharges (up to y1 <-> y2 relabelling) once y4 = 0 is imposed:")
     print("    {y1, y2, y3, y4} = {+4/3, -2/3, -2, 0}")
     print()
     print("  PROOF:")
@@ -833,8 +836,9 @@ def main():
     print("Starting from the left-handed sector derived in frontier_su3_formal_theorem.py:")
     print("  C^8 = (2, 3)_{+1/3} + (2, 1)_{-1}")
     print()
-    print("We derive the full Standard Model generation including right-handed")
-    print("fermions, and prove anomaly cancellation for the complete spectrum.")
+    print("We prove a conditional anomaly-completion theorem for the right-handed")
+    print("fermions, and verify anomaly cancellation for the complete spectrum")
+    print("once the singlet template and y4 = 0 are imposed.")
 
     part1_lattice_origin()
     yR = part2_anomaly_equations()
@@ -860,8 +864,8 @@ def main():
         print("  1. The 3D staggered lattice taste space C^8 gives the left-handed")
         print("     sector: (2,3)_{+1/3} + (2,1)_{-1} = Q_L + L_L.")
         print()
-        print("  2. The right-handed sector is UNIQUELY determined by anomaly")
-        print("     cancellation to be:")
+        print("  2. Conditional on the singlet template and y4 = 0, the right-handed")
+        print("     sector is UNIQUELY determined by anomaly cancellation to be:")
         print("       u_R = (1,3)_{+4/3},  d_R = (1,3)_{-2/3}")
         print("       e_R = (1,1)_{-2},    nu_R = (1,1)_{0}")
         print()

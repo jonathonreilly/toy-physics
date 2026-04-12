@@ -1,4 +1,4 @@
-# Chiral Completion: Right-Handed Singlet Sector and Anomaly Cancellation
+# Chiral Completion: Conditional Right-Handed Singlet Completion and Anomaly Cancellation
 
 **Script:** `scripts/frontier_chiral_completion.py`
 **Depends on:** `frontier_su3_formal_theorem.py`, `frontier_hypercharge_identification.py`
@@ -13,7 +13,9 @@ from the 8-dim taste space of staggered fermions in d=3:
 
 The Standard Model also requires **right-handed** fermions:
 u_R, d_R, e_R (and possibly nu_R), which are SU(2)_weak singlets.
-This note derives the right-handed sector and proves full anomaly cancellation.
+This note does **not** derive that right-handed template from the graph-first
+surface. It proves the anomaly-completion theorem **conditional on** the
+template and then states the exact missing graph-canonical step.
 
 ## Lattice Origin
 
@@ -22,11 +24,24 @@ freedom, giving the left-handed content.  Including the temporal direction
 (d = 3+1) doubles the taste space to 2^4 = 16 = C^2 x C^2 x C^2 x C^2.
 The 4D chirality operator gamma_5 splits C^16 = C^8_L + C^8_R.
 
-The right-handed fermions are SU(2)_weak **singlets** because SU(2) is a
-chiral gauge symmetry coupling only to left-handed fermions.  Their
-hypercharges are uniquely fixed by anomaly cancellation.
+This doubling is the correct counting surface for one SM generation and is
+consistent with prior repo work noting `8 Dirac = 16 Weyl = 1 SO(10)
+generation`, but the existence of a 16-state count does **not** by itself
+derive the right-handed representation template.
 
-## Derivation of Right-Handed Hypercharges
+The right-handed fermions are SU(2)_weak **singlets** because SU(2) is a
+chiral gauge symmetry coupling only to left-handed fermions.  In this note the
+right-handed sector is treated as a completion ansatz:
+
+    u_R = (1, 3)_{y1}, d_R = (1, 3)_{y2}, e_R = (1, 1)_{y3}, nu_R = (1, 1)_{y4}
+
+The hypercharges are then fixed by anomaly cancellation once the singlet
+template and the neutral-neutrino condition `y4 = 0` are imposed.
+
+What is still missing is the graph-canonical theorem that produces this
+right-handed singlet template from the retained graph/taste surface itself.
+
+## Conditional Derivation of Right-Handed Hypercharges
 
 Parametrise the right-handed sector as:
 
@@ -102,10 +117,20 @@ by exhaustive scan over rational y4 values: for each y4, a one-parameter
 family of solutions exists, but y4 = 0 is the unique choice consistent
 with a right-handed neutrino carrying no gauge charges.
 
+Without the `y4 = 0` input, the anomaly equations leave a one-parameter family
+of completions. So the theorem is sharp but conditional:
+
+- theorem proved: anomaly cancellation uniquely fixes the SM right-handed
+  hypercharges **given** the singlet template and neutral neutrino condition
+- theorem still missing: a graph-canonical derivation of the singlet template
+  itself
+
 ## Significance
 
 The left-handed sector (2,3)_{+1/3} + (2,1)_{-1} derived from the 8-dim
 taste space of the 3D staggered lattice, together with anomaly cancellation,
-**uniquely determines** the full Standard Model fermion content of one
-generation.  The right-handed hypercharges are not free parameters --
-they are forced by mathematical consistency.
+**uniquely determines** the right-handed hypercharges of one generation
+once the right-handed singlet template is supplied.
+
+That is the exact result this note proves. It is not yet a graph-canonical
+derivation of the right-handed template from the retained surface.
