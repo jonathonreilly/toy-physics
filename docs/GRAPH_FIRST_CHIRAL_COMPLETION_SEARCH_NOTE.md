@@ -79,6 +79,15 @@ So the logic is:
 - if a target state is absent here, that is a strong obstruction
 - if a target state is present here, that is only a candidate, not closure
 
+## Relation To The 4D Completion
+
+The 4D chirality + anomaly-cancellation theorem in
+[`RIGHT_HANDED_SECTOR_NOTE.md`](/private/tmp/physics-review-active/docs/RIGHT_HANDED_SECTOR_NOTE.md)
+does close the physical right-handed sector.
+This search remains the graph-canonical blocker for the stronger claim:
+the present 3D one-particle surface does not by itself generate the
+right-handed template.
+
 On that permissive surface, the completion is already awkward:
 
 - `d_R`-like and `e_R`-like states appear early

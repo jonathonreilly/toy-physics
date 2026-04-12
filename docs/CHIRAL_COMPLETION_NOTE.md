@@ -13,9 +13,10 @@ from the 8-dim taste space of staggered fermions in d=3:
 
 The Standard Model also requires **right-handed** fermions:
 u_R, d_R, e_R (and possibly nu_R), which are SU(2)_weak singlets.
-This note does **not** derive that right-handed template from the graph-first
-surface. It proves the anomaly-completion theorem **conditional on** the
-template and then states the exact missing graph-canonical step.
+This note proves the anomaly-completion theorem **conditional on** the
+singlet template and `y4 = 0`. The stronger graph-canonical template theorem
+remains open, and the 3D one-particle surface does not generate the right-
+handed template by itself.
 
 ## Lattice Origin
 

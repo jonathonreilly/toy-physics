@@ -17,6 +17,14 @@ do NOT appear on the one-particle 8-state surface:
 - d_R and e_R appear at degree 2 (bilinear composites)
 - u_R only appears at degree 4
 
+## Status
+
+The physical right-handed sector is now closed at the
+`4D chirality + anomaly cancellation` level.
+What remains open is the stronger `graph-canonical` completion claim:
+the 3D one-particle surface does not canonically generate the right-handed
+template on its own.
+
 Where do right-handed fermions come from?
 
 ## Result 1: No SU(2) Singlets on C^8
