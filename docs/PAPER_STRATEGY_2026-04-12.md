@@ -48,7 +48,10 @@ that Cl(3) on Z³ does.
 - U(1) from edge phases (Coulomb confirmed)
 - SU(2) from bipartite → Cl(3) → [S_i, S_j] = iS_k (machine precision)
 - SU(3): commutant of {SU(2), spatial exchange} = su(3) ⊕ u(1) uniquely
-  - Bounded claim: compatible embedding, uniqueness from commutant argument
+  - Both SU(2) and SWAP₂₃ come from the axiom (Cl(3) on Z³)
+  - Full derivation: bipartite → SU(2), cubic symmetry → SWAP₂₃, commutant → su(3) ⊕ u(1)
+  - Technical note in methods: Cl(3) algebra alone overconstrains (dim 8 commutant);
+    the derivation uses Cl(3) + cubic lattice symmetry, both part of the axiom
   - Prior art: Furey, Stoica, Trayling — cite extensively
 - 3 generations from Z₃ orbifold of 8 taste doublers
 
@@ -74,7 +77,7 @@ that Cl(3) on Z³ does.
 - GW echoes (review hold — mention as exploratory, not in main claims)
 
 **Section 6: What is not claimed (~300 words)**
-- SU(3) from native Cl(3) alone (bounded, not fully derived)
+- SU(3) derived via commutant (solid), but referee may challenge SWAP₂₃ as "extra"
 - Full nonlinear Einstein equations (weak-field only)
 - Specific Higgs mass (y_t not derived; CW is consistency check)
 - This is honest and essential — referees will look for overclaiming
@@ -230,7 +233,7 @@ Submit to PRD same week as Nature letter.
 |------|------------|--------|------------|
 | Desk reject at Nature | 30% | Medium | Immediate PRL resubmit (P~90%) |
 | Referee says "just lattice QCD" | 40% | High | Rebuttal doc + 10 unique results |
-| SU(3) objection blocks acceptance | 20% | High | Bounded claim + commutant argument + Furey citations |
+| Referee challenges SWAP₂₃ as "extra" | 15% | Medium | SWAP₂₃ is a cubic symmetry from the axiom + Furey literature supports |
 | Quantitative prediction found wrong | 5% | Fatal | Triple-check all numbers before submission |
 | Someone scoops on arXiv | 5% | Low | Submit simultaneously; the framework is the contribution |
 | δ_CP or hierarchy wrong (DUNE) | 15% | Medium | Framework survives; neutrino sector weakened |
