@@ -329,6 +329,111 @@ Reason:
   review
 - no additional branch-specific science remains stranded on these tips
 
+### `origin/claude/control-reruns`
+
+Status:
+
+- scrubbed into `codex/review-active`
+
+Captured in this pass:
+
+- no new capture needed; all branch payload files are already present on the
+  active review branch
+
+Archive readiness:
+
+- archive-ready
+
+Reason:
+
+- the branch-specific control-rerun scripts are already preserved on
+  `codex/review-active`
+- no additional unique science remains stranded on the source branch tip
+
+### `origin/claude/sleepy-cerf`
+
+Status:
+
+- scrubbed into `codex/review-active`
+
+Captured in this pass:
+
+- no new capture needed; the bounded note+runner pairs already exist on
+  `main` or the active review branch
+
+Archive readiness:
+
+- archive-ready
+
+Reason:
+
+- the branch-specific payload is already preserved on the retained or active
+  review surfaces
+- no additional unique science remains stranded on the source branch tip
+
+### `origin/claude/hierarchical-alpha`
+
+Status:
+
+- scrubbed into `codex/review-active`
+
+Captured in this pass:
+
+- no new capture needed; `scripts/hierarchical_alpha_study.py` is already on
+  the active review branch
+
+Archive readiness:
+
+- archive-ready
+
+Reason:
+
+- the branch is a single-file alias of a script already preserved on review
+
+### `origin/claude/smart-prune`
+
+Status:
+
+- scrubbed into `codex/review-active`
+
+Captured in this pass:
+
+- no new capture needed; `scripts/smart_prune_emergence.py` is already on the
+  active review branch
+
+Archive readiness:
+
+- archive-ready
+
+Reason:
+
+- the branch is a single-file alias of a script already preserved on review
+
+### Historical medium `claude/*` research branches
+
+Status:
+
+- scrubbed into `codex/review-active`
+
+Captured in this pass:
+
+- `origin/claude/gracious-pasteur` -> historical 3D/4D DAG notes, derivations,
+  synthesis docs, and probe scripts already preserved on review
+- `origin/claude/distracted-napier` -> historical moonshot/frontier notes,
+  derivations, write-ups, and ordered-lattice probe scripts already preserved
+  on review
+
+Archive readiness:
+
+- archive-ready
+
+Reason:
+
+- representative spot checks confirm the branch payload is already present on
+  the active review branch
+- these branches now function as historical provenance only; no additional
+  branch-specific science remains stranded on the source tips
+
 ## Codex First-Pass Triage
 
 These statuses are mechanical only: whether the branch tip is already an
@@ -393,12 +498,18 @@ do not need further science capture before archive:
 - `origin/claude/overnight-verify`
 - `origin/claude/slit-growth`
 - `origin/claude/continuum-bridge`
+- `origin/claude/control-reruns`
 - `origin/claude/docs-update`
 - `origin/claude/review-fixes`
 - `origin/claude/reviewer-summary`
 - `origin/claude/predictions`
 - `origin/claude/evolving-network`
 - `origin/claude/nonlinear-pathsum`
+- `origin/claude/hierarchical-alpha`
+- `origin/claude/smart-prune`
+- `origin/claude/sleepy-cerf`
+- `origin/claude/gracious-pasteur`
+- `origin/claude/distracted-napier`
 
 ### Likely archive-ready after one short verification pass
 

@@ -279,6 +279,36 @@ Next control:
 - if any of these lanes are reopened, require a fresh bounded audit note on the
   exact rerun surface before considering `main`
 
+### 0e. Historical Claude medium-branch notebooks
+
+Files:
+
+- `.claude/science/analyses/*`
+- `.claude/science/derivations/*`
+- `.claude/science/write-ups/*`
+- `docs/SESSION_SUMMARY_2026-04-01_DIMENSIONAL.md`
+- `docs/SYNTHESIS_NOTE_3D.md`
+- `docs/MOONSHOT_HONEST_REVIEW_2026-04-09.md`
+- `docs/MOONSHOT_TOP20_FRONTIERS.md`
+- `docs/LENSING_K_SWEEP_NOTE.md`
+- `docs/FINE_H_FAMILY_UNIVERSALITY_NOTE.md`
+- historical script suites from `origin/claude/gracious-pasteur` and
+  `origin/claude/distracted-napier`
+
+Why held:
+
+- these branches are historical notebook / frontier collections already
+  preserved on review for provenance
+- the docs and scripts contain useful lane history, theorem sketches, and old
+  probe harnesses, but they are not bounded promotion artifacts on their
+  historical wording
+
+Next control:
+
+- no direct promotion
+- if a lane from these collections is reopened, write a fresh bounded audit
+  note on the exact rerun surface before considering `main`
+
 ### 1. Wilson mutual-attraction side lane
 
 Files:

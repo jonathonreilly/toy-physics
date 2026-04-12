@@ -337,6 +337,37 @@ Current read:
 - preserve on review for provenance and possible reopening, but none of this is
   a direct `main` promotion target without a fresh bounded audit note
 
+### Historical Claude medium-branch capture batch
+
+Captured from:
+
+- `origin/claude/gracious-pasteur`
+- `origin/claude/distracted-napier`
+
+Files already preserved on review include:
+
+- `.claude/science/analyses/*` and `.claude/science/derivations/*` notes from
+  the early 3D/4D DAG program and the later moonshot frontier push
+- historical synthesis/review docs such as:
+  - `docs/SESSION_SUMMARY_2026-04-01_DIMENSIONAL.md`
+  - `docs/SYNTHESIS_NOTE_3D.md`
+  - `docs/MOONSHOT_HONEST_REVIEW_2026-04-09.md`
+  - `docs/MOONSHOT_TOP20_FRONTIERS.md`
+  - `docs/LENSING_K_SWEEP_NOTE.md`
+  - `docs/FINE_H_FAMILY_UNIVERSALITY_NOTE.md`
+- historical script suites for:
+  - early 3D/4D DAG gravity/decoherence/Born probes
+  - causal-field and locality-shell diagnostics
+  - moonshot ordered-lattice/frontier probes such as effective-Hamiltonian,
+    continuum-spectrum, light-bending, entropy, Hawking, and lensing scans
+
+Current read:
+
+- these two branches are now best treated as historical research notebooks and
+  script collections already preserved on the active review branch
+- they are useful for provenance and reopening old lanes, but not direct
+  `main` promotion candidates on their historical wording
+
 ### 2026-04-12 migration from `claude/youthful-neumann`
 
 New bounded promotion candidates:
