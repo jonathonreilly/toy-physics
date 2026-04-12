@@ -3,6 +3,8 @@
 **Date:** 2026-04-04
 **Status:** hold. Additivity now strengthens Principle 3 on the retained ordered-lattice family, but persistent-pattern inertia remains open.
 
+**Decision:** do not promote. The smallest viable persistent-pattern control did not produce an admissible inertial class, so this remains a bounded family-law result only.
+
 ## The Claim
 
 The strongest bounded claim currently supported is:
