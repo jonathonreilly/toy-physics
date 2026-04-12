@@ -117,6 +117,25 @@ Key notes:
 
 - [`scripts/frontier_holographic_probe.py`](../scripts/frontier_holographic_probe.py)
 - [`scripts/frontier_gravitational_memory.py`](../scripts/frontier_gravitational_memory.py)
+
+## 5. Newton-Family Bounded Companions
+
+- [`scripts/frontier_emergent_product_law.py`](../scripts/frontier_emergent_product_law.py)
+- [`scripts/frontier_architecture_portability_sweep.py`](../scripts/frontier_architecture_portability_sweep.py)
+
+Key notes:
+
+- [`docs/EMERGENT_PRODUCT_LAW_NOTE.md`](EMERGENT_PRODUCT_LAW_NOTE.md)
+- [`docs/EMERGENT_PRODUCT_LAW_AUDIT_2026-04-11.md`](EMERGENT_PRODUCT_LAW_AUDIT_2026-04-11.md)
+- [`docs/ARCHITECTURE_PORTABILITY_SWEEP_NOTE.md`](ARCHITECTURE_PORTABILITY_SWEEP_NOTE.md)
+- [`docs/ARCHITECTURE_PORTABILITY_AUDIT_2026-04-11.md`](ARCHITECTURE_PORTABILITY_AUDIT_2026-04-11.md)
+
+Boundaries:
+
+- these are bounded companions, not full Newton closure
+- the product-law result is one audited open 3D staggered cross-field surface
+- the portability result is source-mass / attraction portability only
+- neither closes both-masses + distance-law portability across architectures
 - [`scripts/frontier_bmv_entanglement.py`](../scripts/frontier_bmv_entanglement.py)
 - [`scripts/frontier_bmv_threebody.py`](../scripts/frontier_bmv_threebody.py)
 
