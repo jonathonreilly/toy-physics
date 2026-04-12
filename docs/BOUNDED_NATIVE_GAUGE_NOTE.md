@@ -1,9 +1,9 @@
-# Bounded Native Gauge Note: Cl(3) / SU(2) on Z³
+# Bounded Native Gauge Note: Graph-First Gauge Closure on Z³
 
 **Date:** 2026-04-12
-**Status:** BOUNDED-RETAINED POSITIVE (SU(2)) + EXPLICIT OPEN (SU(3))
+**Status:** BOUNDED-RETAINED POSITIVE (native `SU(2)` + structural `SU(3)`) | BOUNDED abelian factor (`+1/3`, `-1` on the left-handed surface)
 **Claim boundary authority:** this note
-**Script:** `scripts/frontier_non_abelian_gauge.py`
+**Scripts:** `scripts/frontier_non_abelian_gauge.py`, `scripts/frontier_graph_first_selector_derivation.py`, `scripts/frontier_graph_first_su3_integration.py`
 
 ---
 
@@ -44,41 +44,64 @@ self-consistent Poisson), the Born rule (via unitarity), and d=3 selection.
 
 ---
 
-## Explicit Open: Native Cubic SU(3)
+## Retained Positive: Graph-First Structural `SU(3)` Closure
 
-**SU(3) emergence from the native cubic Cl(3) algebra is NOT closed.**
+The structural color lane is now closed on a graph-first surface that does not
+depend on a hand-chosen tensor-factor presentation.
 
-### What has been attempted
+### The retained graph-first chain
 
-| Approach | Result | Status |
-|----------|--------|--------|
-| Hand-embedding 3-of-4 states | Compatible, 8/8 Gell-Mann | Not derived — subspace chosen by hand |
-| Commutant of SU(2) + SWAP₂₃ | su(3) ⊕ u(1) uniquely | Side result — adds SWAP₂₃ beyond native Cl(3) |
-| Taste breaking 1+3+3+1 | Splitting forces 3-fold degeneracy | Depends on modeled O(a²) breaking coefficients |
-| Anomaly cancellation | SU(3) anomaly-free with 3+3* | Constrains but does not select |
-| Confinement | Partial (small lattice, weak coupling) | Not conclusive |
+1. The taste cube `V = {0,1}^3` carries three canonical one-step axis shifts
+   `S_1, S_2, S_3`.
+2. For `H(\phi) = \sum_i \phi_i S_i`, the first nontrivial even invariant is
+   \[
+   V_{\mathrm{sel}}(\phi)
+   = \mathrm{Tr}\,H(\phi)^4 - \frac{1}{8}\big(\mathrm{Tr}\,H(\phi)^2\big)^2
+   = 32 \sum_{i<j}\phi_i^2 \phi_j^2.
+   \]
+3. After normalization `p_i = \phi_i^2 / \sum_j \phi_j^2`, this becomes
+   \[
+   F(p) = \sum_{i<j} p_i p_j = \frac{1}{2}\left(1 - \sum_i p_i^2\right),
+   \]
+   whose minima are exactly the three axis vertices.
+4. Each selected axis gives a canonical graph decomposition into:
+   - a 2-point fiber along the selected axis
+   - a 4-point base on the remaining two coordinates
+5. The selected-axis shift/parity pair generates the weak `su(2)` on the graph
+   fibers.
+6. The residual swap of the complementary axes acts canonically on the base and
+   splits it as `3 ⊕ 1`.
+7. The joint commutant is therefore `gl(3) ⊕ gl(1)`, with compact semisimple
+   part `su(3)`.
 
-### Honest assessment
+### Numerical verification
 
-The cubic taste algebra CONTAINS a compatible SU(3) embedding. Multiple
-independent arguments (commutant, taste breaking, anomaly cancellation)
-constrain the color group to be SU(3) rather than SU(4) or larger. But
-none of these derives SU(3) purely from the native Cl(3) structure without
-either:
-- choosing a subspace by hand (original embedding)
-- adding an identification layer (SWAP₂₃ commutant)
-- importing modeled breaking coefficients (taste breaking)
+| Test | Result | Error |
+|------|--------|-------|
+| Graph-first selector derivation | `63/63` pass | 0 fail |
+| Axis minima with residual `Z_2` stabilizer | Exact on all 3 axes | 0 |
+| Graph-first `SU(3)` integration theorem | `111/111` pass | 0 fail |
+| Joint commutant dimension | `10` on all 3 selected axes | Exact |
+| Embedded Gell-Mann closure | `su(3)` on all 3 selected axes | `< 10^-15` |
 
-### What would close this
+### What is retained for publication
 
-A derivation showing that the Cl(3) algebra on Z³, combined ONLY with
-structures already retained (bipartite Z₂, self-consistent Poisson, unitarity),
-uniquely selects a 3-dimensional gauge subspace. Possible paths:
-- Dynamical symmetry breaking from self-consistent field iteration
-- A graph-theoretic criterion selecting the triplet
-- Proof that the commutant argument follows from cubic symmetry alone
-  (SWAP₂₃ IS a cubic symmetry, but the commutant chain needs explicit
-  derivation from the lattice, not just identification)
+- exact native cubic `Cl(3)` / `SU(2)` algebra
+- derived graph-first weak-axis selector on the canonical cube-shift surface
+- structural `su(3)` closure from the selected graph axis plus residual cubic
+  swap
+- unique traceless abelian direction with eigenvalues `+1/3` on the
+  `6`-dimensional symmetric/weak-doublet block and `-1` on the
+  `2`-dimensional antisymmetric/weak-doublet block
+
+### What remains bounded
+
+- the abelian factor is still best described as **hypercharge-like** or
+  left-handed charge matching until the anomaly-complete chiral completion
+  theorem is written cleanly
+- downstream phenomenology remains separate from this structural closure
+- this note closes the gauge-structure backbone, not the full Standard Model
+  matter-completion story
 
 ### Prior art that must be cited
 
@@ -89,12 +112,17 @@ uniquely selects a 3-dimensional gauge subspace. Possible paths:
 
 ---
 
-## Reading rule
+## Reading Rule
 
 Use this note as the publication-facing claim boundary for the CI(3) / `Z^3`
-native gauge lane on `main`.
+gauge lane on `main`.
 
-- safe retained reading: exact native cubic `Cl(3)` / `SU(2)` algebra
-- explicit open boundary: native cubic `SU(3)`
+- safe retained reading:
+  - exact native cubic `Cl(3)` / `SU(2)` algebra
+  - derived graph-first weak-axis selector
+  - structural graph-first `su(3)` closure
+- still bounded:
+  - abelian factor as hypercharge-like / left-handed matched
+  - all downstream phenomenology
 - do not treat broader CI(3) / `Z^3` derivation memos or phenomenology notes as
   retention authority unless they are separately promoted with bounded wording

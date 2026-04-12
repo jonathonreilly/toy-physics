@@ -276,10 +276,14 @@ derivation, or global Poisson uniqueness.
 - [`scripts/em_gravity_coexistence_2x2.py`](../scripts/em_gravity_coexistence_2x2.py)
 - [`docs/EM_GRAVITY_COEXISTENCE_2X2_NOTE.md`](EM_GRAVITY_COEXISTENCE_2X2_NOTE.md)
 
-### Bounded CI(3) / `Z^3` gauge algebra surface
+### Bounded CI(3) / `Z^3` graph-first gauge surface
 
 - [`scripts/frontier_non_abelian_gauge.py`](../scripts/frontier_non_abelian_gauge.py)
+- [`scripts/frontier_graph_first_selector_derivation.py`](../scripts/frontier_graph_first_selector_derivation.py)
+- [`scripts/frontier_graph_first_su3_integration.py`](../scripts/frontier_graph_first_su3_integration.py)
 - [`docs/BOUNDED_NATIVE_GAUGE_NOTE.md`](BOUNDED_NATIVE_GAUGE_NOTE.md)
+- [`docs/GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md`](GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md)
+- [`docs/GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`](GRAPH_FIRST_SU3_INTEGRATION_NOTE.md)
 
 ### Dimension selection / bound states
 
@@ -300,8 +304,12 @@ Reading boundary:
 - these are bounded frontier probes, not full derivations
 - distance law result is bounded to ordered-cubic/Dirichlet surface
 - Poisson uniqueness is a 21-operator family audit, not a global theorem
-- the bounded native gauge note retains exact native cubic `Cl(3)` / `SU(2)`
-  only; native cubic `SU(3)` remains explicitly open
+- the bounded native gauge package now retains:
+  - exact native cubic `Cl(3)` / `SU(2)`
+  - a derived graph-first weak-axis selector
+  - structural graph-first `su(3)` closure
+- the abelian factor remains bounded as hypercharge-like / left-handed matched
+- downstream CI(3) phenomenology is still not retained from this package alone
 - dimension selection is bounded to the tested operator family
 - bound state result is bounded to tested potentials at d<=3
 - all wave/entanglement probes are bounded to the audited graph surfaces

@@ -198,33 +198,41 @@ The repo currently contains four different classes of publication material:
 - retain as a narrow continuation note
 - preserve the distance-law trend, not the stronger closure story
 
-### 1D. CI(3) / `Z^3` bounded algebraic gauge lane
+### 1D. CI(3) / `Z^3` bounded graph-first gauge lane
 
 **Safe bounded material**
 
 - exact native cubic `Cl(3)` closure to an `SU(2)` subalgebra on the staggered
   taste space
 - exact Casimir / chiral-structure checks at machine precision
-- explicit negative/open boundary for native cubic `SU(3)`
+- derived graph-first weak-axis selector on the canonical cube-shift surface
+- structural graph-first `su(3)` closure from the selected graph axis plus the
+  residual complementary-axis swap
+- bounded left-handed `+1/3` / `-1` abelian charge matching on the selected-axis
+  commutant surface
 
 **What is strong here**
 
-- this is the first CI(3) / `Z^3` note in the repo that cleanly separates the
-  one retention-safe positive from the still-open overclaims
-- the retained part is algebraic and replayable, not a downstream fit
+- the gauge backbone is now replayable beyond native `SU(2)` alone
+- the weak-axis selector is derived directly from the graph/taste axiom on the
+  canonical cube-shift surface
+- the structural color algebra closes without relying on a hand-chosen
+  tensor-factor presentation
 
 **What is bounded**
 
-- this is a bounded algebraic gauge note, not a full Standard Model derivation
-- native cubic `SU(3)` remains open
+- this is still not a full Standard Model derivation
+- anomaly-complete `U(1)_Y` identification remains open pending chiral
+  completion of the right-handed singlet sector
 - generations, dark-matter, Higgs, cosmology, and strong-field phenomenology
   remain off the retained surface
 
 **Verdict**
 
 - preserve as a bounded retained companion on `main`
-- use it as the canonical CI(3) / `Z^3` gauge entrypoint until or unless the
-  native cubic `SU(3)` blocker is actually closed
+- use it as the canonical CI(3) / `Z^3` gauge entrypoint on `main`
+- treat the abelian factor as hypercharge-like / left-handed matched until the
+  anomaly-complete completion theorem lands
 
 ### 2. Coin / Chiral / Dirac-Walk Lane
 
