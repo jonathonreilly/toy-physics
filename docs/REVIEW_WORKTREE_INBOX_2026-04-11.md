@@ -59,7 +59,55 @@ Status:
 
 ## Review Inventory
 
-### 1. Everything Else Left Is On Hold
+### 1. New Bounded Candidates Awaiting Audit
+
+These are now consolidated here from Claude frontier, but are not yet on
+`main` and are not yet approved. They need one last audit pass.
+
+#### A. Emergent product-law candidate
+
+Files:
+
+- `docs/EMERGENT_PRODUCT_LAW_NOTE.md`
+- `scripts/frontier_emergent_product_law.py`
+
+Current claim:
+
+- on the audited open 3D staggered cross-field Poisson surface, `F ~ M_A^alpha
+  M_B^beta` with `alpha ~ 1.015`, `beta ~ 0.986`, `R^2 > 0.99999`
+- the bilinear factor is not explicit in the Hamiltonian
+- frozen-field control stays near-identical
+
+Audit focus:
+
+- confirm the bounded reading is correct
+- keep the claim at “field-linearity emergence on this surface,” not full
+  Newton closure
+- decide whether it is safe for bounded promotion to `main`
+
+#### B. Architecture portability candidate
+
+Files:
+
+- `docs/ARCHITECTURE_PORTABILITY_SWEEP_NOTE.md`
+- `scripts/frontier_architecture_portability_sweep.py`
+
+Current claim:
+
+- source-mass exponent `beta ~ 1` and attractive sign survive on four
+  architectures:
+  - ordered 3D cubic
+  - staggered 3D cubic
+  - Wilson 3D cubic
+  - random geometric
+
+Audit focus:
+
+- confirm the architectures are being compared honestly
+- keep it bounded to mass-law/source-scaling portability
+- do not let it drift into architecture-independent full Newton closure
+
+### 2. Everything Else Left Is On Hold
 
 Everything else in this review worktree is held pending a specific missing
 control or redesign step.
