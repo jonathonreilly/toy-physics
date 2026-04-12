@@ -64,6 +64,24 @@ python3 scripts/frontier_su3_generations.py 2>&1 | tee ~/Desktop/su3_generations
 
 **All scripts A1-A6 are now on the branch. Pull and run.**
 
+## PRIORITY A+: Frozen Stars Rigorous (NEW — HIGH PRIORITY)
+
+The original frozen stars script ran on small 1D lattices. This rigorous version has 6 probes including analytical scaling, 3D lattice verification (up to L=14 = 2744 sites), and a specific GW150914 echo time prediction in milliseconds.
+
+```bash
+python3 scripts/frontier_frozen_stars_rigorous.py 2>&1 | tee ~/Desktop/frozen_stars_rigorous.txt
+```
+
+Expected runtime: ~10-20 min. The 3D L=14 eigendecomposition is the bottleneck.
+
+**What to report:**
+- Analytical R_min/R_S formula — does it agree with numerics?
+- 1D convergence: does Fermi stabilization hold at N=500, 1000?
+- 3D verification: does stabilization persist at L=12, 14?
+- Compactness ratio at physical masses
+- **GW150914 echo time in milliseconds** — this is the headline number
+- Comparison to Abedi et al. (2017) claimed ~100 ms echoes
+
 ## PRIORITY B: UV-IR Cosmological Constant (when script lands)
 
 ```bash
