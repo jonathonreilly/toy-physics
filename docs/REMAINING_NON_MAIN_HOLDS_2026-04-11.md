@@ -339,6 +339,43 @@ Next control:
 - if the backreaction or source-aware lane is reopened, require a fresh bounded
   audit note on the exact rerun surface before considering `main`
 
+### 0g. Bulk `frontier/spot-checks` import
+
+Files:
+
+- `docs/CRITICAL_GAPS_2026-04-11.md`
+- `docs/DEFINITIVE_AUDIT_2026-04-11.md`
+- `docs/DISCRETE_GENERAL_COVARIANCE_NOTE.md`
+- `docs/EIGENVALUE_ANDERSON_PHASE_WINDOW_NOTE_2026-04-11.md`
+- `docs/FINAL_STATE_2026-04-11.md`
+- `docs/NEXT_HIGH_IMPACT_DIRECTIONS_2026-04-11.md`
+- `docs/NEXT_PROMOTION_TRIAGE_2026-04-11.md`
+- `docs/SCREENING_FIX_RECHECK_LIST_2026-04-11.md`
+- `docs/STRATEGIC_ASSESSMENT_2026-04-11.md`
+- `docs/TOPOLOGICAL_GRAVITY_CONTROL_NOTE_2026-04-11.md`
+- `docs/TWENTY_FRONTIERS_2026-04-11.md`
+- `docs/TWO_AXIOM_REDUCTION_2026-04-11.md`
+- `docs/WHY_TRAJECTORIES_FAIL_2026-04-11.md`
+- `docs/WILSON_PARTNER_SOURCE_CROSSOVER_NOTE_2026-04-11.md`
+- the imported `frontier/spot-checks` runner batch now staged on review
+
+Why held:
+
+- this is a consolidation move from the last large unresolved frontier branch,
+  not a retention decision
+- the batch mixes strategy / audit narratives with a broad runner surface
+  spanning many unrelated lanes
+- many imported artifacts overlap lanes already retained, held, or superseded
+  elsewhere on `main` or `review-active`, but have not yet been classified
+  lane-by-lane on this branch
+
+Next control:
+
+- split the imported `spot-checks` material by lane before any promotion
+- for science runners, require a bounded note+runner pair or an explicit hold
+- for strategy / audit / planning docs, classify as archive-only rather than
+  promotion candidates
+
 ### 1. Wilson mutual-attraction side lane
 
 Files:

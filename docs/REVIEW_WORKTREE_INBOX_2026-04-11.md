@@ -231,6 +231,98 @@ Promotion rule:
 - if the Lorentzian window lane is reopened, write a fresh bounded audit note
   over the full `k`-window instead of promoting a single `k=8` script
 
+### Bulk capture from `origin/frontier/spot-checks`
+
+- `docs/CRITICAL_GAPS_2026-04-11.md`
+- `docs/DEFINITIVE_AUDIT_2026-04-11.md`
+- `docs/DISCRETE_GENERAL_COVARIANCE_NOTE.md`
+- `docs/EIGENVALUE_ANDERSON_PHASE_WINDOW_NOTE_2026-04-11.md`
+- `docs/FINAL_STATE_2026-04-11.md`
+- `docs/NEXT_HIGH_IMPACT_DIRECTIONS_2026-04-11.md`
+- `docs/NEXT_PROMOTION_TRIAGE_2026-04-11.md`
+- `docs/SCREENING_FIX_RECHECK_LIST_2026-04-11.md`
+- `docs/STRATEGIC_ASSESSMENT_2026-04-11.md`
+- `docs/TOPOLOGICAL_GRAVITY_CONTROL_NOTE_2026-04-11.md`
+- `docs/TWENTY_FRONTIERS_2026-04-11.md`
+- `docs/TWO_AXIOM_REDUCTION_2026-04-11.md`
+- `docs/WHY_TRAJECTORIES_FAIL_2026-04-11.md`
+- `docs/WILSON_PARTNER_SOURCE_CROSSOVER_NOTE_2026-04-11.md`
+- `scripts/frontier_anderson_control.py`
+- `scripts/frontier_anderson_multifractal.py`
+- `scripts/frontier_area_law_entropy.py`
+- `scripts/frontier_asymmetry_scaling.py`
+- `scripts/frontier_bekenstein_hawking.py`
+- `scripts/frontier_bmv_prediction.py`
+- `scripts/frontier_both_masses_redesign.py`
+- `scripts/frontier_boundary_law_unscreened.py`
+- `scripts/frontier_cdt_precision_flow.py`
+- `scripts/frontier_cdt_quantitative.py`
+- `scripts/frontier_complementarity_test.py`
+- `scripts/frontier_confinement_probe.py`
+- `scripts/frontier_critical_exponents_extended.py`
+- `scripts/frontier_cycle_battery_unscreened.py`
+- `scripts/frontier_decoherence_unscreened.py`
+- `scripts/frontier_eigenvalue_phase_window.py`
+- `scripts/frontier_entanglement_phase_diagram.py`
+- `scripts/frontier_error_correction.py`
+- `scripts/frontier_gap_asymmetry_test.py`
+- `scripts/frontier_geometry_superposition_sweep.py`
+- `scripts/frontier_graph_selection.py`
+- `scripts/frontier_gravitational_decoherence_rate.py`
+- `scripts/frontier_hartree_n_body.py`
+- `scripts/frontier_hawking_page_unscreened.py`
+- `scripts/frontier_memory_sign_robustness.py`
+- `scripts/frontier_memory_unscreened.py`
+- `scripts/frontier_mirror_staggered.py`
+- `scripts/frontier_multifractal_spectrum.py`
+- `scripts/frontier_newton_both_masses.py`
+- `scripts/frontier_nonbipartite_test.py`
+- `scripts/frontier_ollivier_unscreened.py`
+- `scripts/frontier_penrose_threshold.py`
+- `scripts/frontier_promotion_battery.py`
+- `scripts/frontier_quantum_zeno.py`
+- `scripts/frontier_scrambling_otoc.py`
+- `scripts/frontier_sign_selectivity_unscreened.py`
+- `scripts/frontier_spectral_dimension_flow.py`
+- `scripts/frontier_spectral_geometry.py`
+- `scripts/frontier_staggered_geometry_superposition.py`
+- `scripts/frontier_topological_control.py`
+- `scripts/frontier_topological_phases.py`
+- `scripts/frontier_two_body_3d_massless.py`
+- `scripts/frontier_two_body_acceleration.py`
+- `scripts/frontier_two_body_mutual_attraction.py`
+- `scripts/frontier_two_body_partner_kick.py`
+- `scripts/frontier_two_body_partner_kick_size_scan.py`
+- `scripts/frontier_two_orbital_mutual_attraction.py`
+- `scripts/frontier_two_particle_area_law.py`
+- `scripts/frontier_weak_coupling_battery.py`
+- `scripts/frontier_wilson_newton_control.py`
+- `scripts/frontier_wilson_newton_law.py`
+- `scripts/frontier_wilson_partner_source_crossover.py`
+- `scripts/frontier_wilson_refinement.py`
+- `scripts/frontier_wilson_two_body.py`
+- `scripts/frontier_wilson_two_body_open_refined.py`
+- `scripts/frontier_wilson_unscreened.py`
+- `scripts/frontier_z2_sublattice_decoherence.py`
+
+Current read:
+
+- these are imported so they no longer live only on the large `spot-checks`
+  branch tip
+- this is a preservation move, not a promotion judgment
+- many of the docs are strategy / audit / triage narratives rather than
+  retained science notes
+- the runner set spans many unrelated lanes and still needs lane-by-lane
+  classification before any direct `main` promotion is considered
+
+Promotion rule:
+
+- do not promote directly from this bulk import
+- first split into:
+  - bounded promotion candidates with explicit note+runner pairing
+  - explicit holds with a named blocker
+  - archive-only strategy / audit / planning material
+
 ### Narrow capture from `origin/codex/archive-claude-distracted-napier-20260411`
 
 - `docs/K_OSCILLATION_PREDICTION_NOTE.md`

@@ -857,5 +857,8 @@ science branches, but they still need a quick final diff audit before delete:
 - `origin/claude/youthful-neumann` remains live and protected; capture from it
   should continue incrementally into `codex/review-active`, but it is not an
   archive candidate while active work continues
-- next scrub stage is the remaining larger `frontier/*` branches after the
-  Lorentzian / synthesis / unitary / chiral / dynamics / growth / review-fixes / large frontier batches; `spot-checks` is the largest unresolved frontier source
+- `origin/frontier/spot-checks` has now had its review-missing text artifacts
+  imported to `codex/review-active`, but it is still not archive-ready until
+  the already-present diff surface is lane-classified
+- next scrub stage is the remaining `spot-checks` uniqueness pass and any
+  residual helper / automation refs after that
