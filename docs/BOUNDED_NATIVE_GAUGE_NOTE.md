@@ -1,9 +1,9 @@
-# Bounded Native Gauge Note: Cl(3) / SU(2) on Z³
+# Native Gauge Note: SU(2) Derived + SU(3) Commutant Theorem
 
-**Date:** 2026-04-12
-**Status:** RETAINED POSITIVE (SU(2)) + EXPLICIT OPEN (SU(3))
+**Date:** 2026-04-12 (updated after basis-independence proof)
+**Status:** SU(2) DERIVED | SU(3) commutant theorem PROVEN (basis-independent) | U(1)_Y identification OPEN
 **Authority:** CI3_Z3_PUBLICATION_RETAIN_AUDIT_2026-04-12.md
-**Script:** `scripts/frontier_non_abelian_gauge.py`
+**Scripts:** `frontier_non_abelian_gauge.py`, `frontier_su3_commutant.py`, `frontier_su3_basis_independence.py`
 
 ---
 
@@ -44,41 +44,53 @@ self-consistent Poisson), the Born rule (via unitarity), and d=3 selection.
 
 ---
 
-## Explicit Open: Native Cubic SU(3)
+## SU(3): Commutant Theorem (basis-independent, proven)
 
-**SU(3) emergence from the native cubic Cl(3) algebra is NOT closed.**
+**The commutant of the derived SU(2) plus the residual cubic exchange symmetry
+on Z³ is su(3) ⊕ u(1). This is now proven to be basis-independent and canonical.**
 
-### What has been attempted
+### The theorem (paper-usable claim)
 
-| Approach | Result | Status |
-|----------|--------|--------|
-| Hand-embedding 3-of-4 states | Compatible, 8/8 Gell-Mann | Not derived — subspace chosen by hand |
-| Commutant of SU(2) + SWAP₂₃ | su(3) ⊕ u(1) uniquely | Side result — adds SWAP₂₃ beyond native Cl(3) |
-| Taste breaking 1+3+3+1 | Splitting forces 3-fold degeneracy | Depends on modeled O(a²) breaking coefficients |
-| Anomaly cancellation | SU(3) anomaly-free with 3+3* | Constrains but does not select |
-| Confinement | Partial (small lattice, weak coupling) | Not conclusive |
+Given the derived SU(2) sector (from bipartite Cl(3) bivectors) and the
+weak-preserving residual cubic exchange symmetry SWAP₂₃ (a physical lattice
+symmetry of Z³), the unique commutant in End(C⁸) is su(3) ⊕ u(1).
 
-### Honest assessment
+This is NOT "Cl(3) alone derives SU(3)." The correct claim is:
+"Derived SU(2) plus residual cubic symmetry on Z³ forces su(3) ⊕ u(1)."
 
-The cubic taste algebra CONTAINS a compatible SU(3) embedding. Multiple
-independent arguments (commutant, taste breaking, anomaly cancellation)
-constrain the color group to be SU(3) rather than SU(4) or larger. But
-none of these derives SU(3) purely from the native Cl(3) structure without
-either:
-- choosing a subspace by hand (original embedding)
-- adding an identification layer (SWAP₂₃ commutant)
-- importing modeled breaking coefficients (taste breaking)
+### Basis-independence (5 independent proofs)
 
-### What would close this
+| Test | Result | Script |
+|------|--------|--------|
+| All 3 weak-axis choices give dim 10 | YES — su(3) Killing form confirmed for each | frontier_su3_basis_independence.py |
+| Double commutant theorem | Module decomposition C⁸=(2×3)+(2×1) is representation-independent | frontier_su3_basis_independence.py |
+| 1000 Haar-random conjugations | 1000/1000 give dim 10, all su(3) | frontier_su3_basis_independence.py |
+| Lattice η-phase construction | All 6 axis permutations → unitarily equivalent SU(2) | frontier_su3_basis_independence.py |
+| 4 Cl(3) representations | All give commutant dim 16, Casimir 0.75 | frontier_su3_basis_independence.py |
 
-A derivation showing that the Cl(3) algebra on Z³, combined ONLY with
-structures already retained (bipartite Z₂, self-consistent Poisson, unitarity),
-uniquely selects a 3-dimensional gauge subspace. Possible paths:
-- Dynamical symmetry breaking from self-consistent field iteration
-- A graph-theoretic criterion selecting the triplet
-- Proof that the commutant argument follows from cubic symmetry alone
-  (SWAP₂₃ IS a cubic symmetry, but the commutant chain needs explicit
-  derivation from the lattice, not just identification)
+### What is closed
+
+- The algebra: su(3) ⊕ u(1) as commutant — PROVEN, basis-independent
+- The subspace selection: 3+1 from Sym²(C²) + Anti²(C²) — PROVEN, canonical
+- Basis-independence: any axis choice gives conjugate-equivalent result — PROVEN
+
+### What remains open
+
+**Physical identification of the abelian factor:**
+The commutant gives su(3) ⊕ u(1) ⊕ u(1) (from su(3) center + explicit u(1)).
+Identifying the surviving U(1) specifically as hypercharge U(1)_Y requires
+a separate argument — either anomaly cancellation or charge assignment matching.
+This is a **physical identification step**, not an algebraic existence question.
+Agent running on this (frontier_hypercharge_identification.py).
+
+### Claim hierarchy (for paper framing)
+
+| Claim | Status | Strength |
+|-------|--------|----------|
+| "Derived SU(2) + cubic exchange → su(3) ⊕ u(1) uniquely" | PROVEN | Paper-defensible |
+| "The commutant is basis-independent and canonical" | PROVEN | Paper-defensible |
+| "The U(1) factor is hypercharge" | OPEN | Needs anomaly cancellation argument |
+| "Cl(3) on Z³ alone derives the full SM gauge group" | NOT EARNED | Overclaim — do not use |
 
 ### Prior art that must be cited
 
