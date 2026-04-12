@@ -101,11 +101,13 @@ Files:
 - `docs/STAGGERED_BOTH_MASSES_NOTE_2026-04-11.md`
 - `docs/STAGGERED_TWO_BODY_PORTABILITY_NOTE_2026-04-11.md`
 - `docs/STAGGERED_TWO_BODY_TRANSPORT_NOTE_2026-04-11.md`
+- `docs/STAGGERED_TWO_BODY_LINK_CURRENT_NOTE_2026-04-11.md`
 - `docs/STAGGERED_TWO_BODY_NEXT_STEPS_NOTE_2026-04-11.md`
 - `scripts/frontier_staggered_direct_com_closure.py`
 - `scripts/frontier_staggered_both_masses.py`
 - `scripts/frontier_staggered_two_body_portability.py`
 - `scripts/frontier_staggered_two_body_transport.py`
+- `scripts/frontier_staggered_two_body_link_current.py`
 
 Why held:
 
@@ -113,12 +115,14 @@ Why held:
 - direct-CoM closure still fails
 - both-masses closure is still negative / force-led
 - detector-side transfer is still negative on the audited open-cubic surface
+- the true link-current readout is still negative on the audited open-cubic
+  surface
 
 Next control:
 
 - stop centroid variants
-- move to a true current, flux, or impulse observable on the same staggered
-  surface
+- the current lane has now been tried; only a momentum-flux or impulse
+  observable would be the next credible move if this family is revisited
 
 ## Bottom Line
 
