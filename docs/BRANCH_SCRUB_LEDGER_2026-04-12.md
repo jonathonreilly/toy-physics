@@ -169,6 +169,11 @@ do not need further science capture before archive:
 - `origin/codex/strict-staggered-repro`
 - `origin/codex/main-distance-64`
 - `origin/codex/main-newton-note`
+- `origin/codex/irregular-sign-closure`
+- `origin/codex/staggered-direct-com`
+- `origin/codex/wilson-temporal-robustness`
+- `origin/codex/wilson-temporal-window-lane`
+- `origin/codex/main-revisit-sweep`
 
 ### Likely archive-ready after one short verification pass
 
@@ -177,6 +182,7 @@ science branches, but they still need a quick final diff audit before delete:
 
 - `origin/codex/archive-main-retain-audit-20260411`
 - `origin/codex/archive-main-wilson-bounded-20260411`
+- `origin/codex/source-weight-spectral`
 
 ### Still need uniqueness review before archive
 
@@ -186,12 +192,6 @@ science branches, but they still need a quick final diff audit before delete:
 - `origin/codex/archive-main-wilson-bounded-20260411`
 - `origin/codex/axiom-risk-ledger`
 - `origin/codex/chiral-harness-tests`
-- `origin/codex/irregular-sign-closure`
 - `origin/codex/local-lorentzian-beamsplitter`
-- `origin/codex/main-revisit-sweep`
 - `origin/codex/next-session-tests`
 - `origin/codex/resonance-controls`
-- `origin/codex/source-weight-spectral`
-- `origin/codex/staggered-direct-com`
-- `origin/codex/wilson-temporal-robustness`
-- `origin/codex/wilson-temporal-window-lane`
