@@ -92,11 +92,14 @@ Key notes:
 - [`docs/BMV_ENTANGLEMENT_NOTE_2026-04-11.md`](BMV_ENTANGLEMENT_NOTE_2026-04-11.md)
 - [`docs/BMV_THREEBODY_NOTE_2026-04-11.md`](BMV_THREEBODY_NOTE_2026-04-11.md)
 
-## 3. Open Directional Blocker Surface
+## 3. Irregular Direction / Portability Surface
 
-These scripts should be run before making any new off-lattice gravity-direction
-claim:
+These scripts should be run before making any new broad off-lattice
+gravity-direction claim. The core-packet gate is the current bounded retained
+positive on the audited irregular families; the rest remain the blocker /
+portability surfaces around it.
 
+- [`scripts/frontier_irregular_sign_core_packet_gate.py`](../scripts/frontier_irregular_sign_core_packet_gate.py)
 - [`scripts/frontier_irregular_directional_observable.py`](../scripts/frontier_irregular_directional_observable.py)
 - [`scripts/frontier_two_sign_comparison.py`](../scripts/frontier_two_sign_comparison.py)
 - [`scripts/frontier_weak_coupling_retained.py`](../scripts/frontier_weak_coupling_retained.py)
@@ -104,6 +107,7 @@ claim:
 
 Key notes:
 
+- [`docs/IRREGULAR_SIGN_CORE_PACKET_GATE_NOTE.md`](IRREGULAR_SIGN_CORE_PACKET_GATE_NOTE.md)
 - [`docs/IRREGULAR_DIRECTIONAL_OBSERVABLE_NOTE_2026-04-11.md`](IRREGULAR_DIRECTIONAL_OBSERVABLE_NOTE_2026-04-11.md)
 - [`docs/TWO_SIGN_COMPARISON_NOTE_2026-04-10.md`](TWO_SIGN_COMPARISON_NOTE_2026-04-10.md)
 - [`docs/WEAK_COUPLING_RETENTION_NOTE_2026-04-11.md`](WEAK_COUPLING_RETENTION_NOTE_2026-04-11.md)

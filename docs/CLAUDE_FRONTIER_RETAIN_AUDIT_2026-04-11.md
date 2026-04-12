@@ -179,6 +179,31 @@ Retention boundary:
 - static-source, not self-consistent two-body
 - not a standalone distance-law closure
 
+### 6D. Bounded irregular core-packet sign separator
+
+Keep:
+
+- [IRREGULAR_SIGN_CORE_PACKET_GATE_NOTE.md](IRREGULAR_SIGN_CORE_PACKET_GATE_NOTE.md)
+- [scripts/frontier_irregular_sign_core_packet_gate.py](../scripts/frontier_irregular_sign_core_packet_gate.py)
+
+Why:
+
+- this is the first bounded same-surface irregular sign-separation result that
+  survives both the screened and low-screening replay on the audited families
+- it does not lean on cubic exact-force semantics; it is a same-surface matter
+  response readout on the irregular graph families themselves
+- it cleanly narrows the older blocker: the shell/off-center/transport-style
+  failures were real, but they no longer justify saying no such irregular
+  observable exists at all
+
+Retention boundary:
+
+- core-packet surface only
+- audited families and operating window only
+- not transport portability
+- not packet-family universality
+- not full off-lattice directional-gravity closure
+
 ### 8. Corrected periodic-2D rerun surface
 
 Keep:

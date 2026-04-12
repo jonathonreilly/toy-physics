@@ -31,7 +31,7 @@ The repo currently contains four different classes of publication material:
    - coin mixing-period diagnosis
    - force-vs-centroid measurement lesson
    - parity-coupling correction
-   - off-lattice sign-selection blocker
+   - historical off-lattice sign-selection failures plus the bounded core-packet reopen
 4. **Exploratory leads that are not yet safe claims**
    - topology-dependent onset exponents
    - emergent geometry growth
@@ -56,6 +56,7 @@ The repo currently contains four different classes of publication material:
 - bounded branch-mediated entanglement result in the externally imposed geometry-branch toy protocol
 - bounded tripartite branch-mediated entanglement result with corrected W-type structure in the externally imposed two-branch toy protocol
 - bounded weak-coupling irregular-graph sign-sensitive regime on stable shell metrics
+- bounded irregular same-surface core-packet sign separator across the audited irregular families at both screened and low-screening settings
 - bounded open-cubic staggered trajectory Newton reproduction, with a blocking-sensitivity companion showing the near-Newton exponent is not a one-off `2x2x2` artifact
 - bounded 3D staggered blocked-envelope self-gravity contraction, with an explicit negative sign-flip companion result on the same centered surface
 - bounded open-cubic staggered weak-field static-source test-mass/source-mass companion, with exact source scaling in the force channel and near-linear blocked-envelope trajectory scaling on the audited side-and-separation surface
@@ -66,8 +67,9 @@ The repo currently contains four different classes of publication material:
 
 - the cleanest directional result in the repo is still the exact-force cubic
   card
-- the irregular graph siblings are strong interacting-field results, but not
-  yet full off-lattice directional-gravity closure
+- the irregular graph siblings are strong interacting-field results and now
+  include one bounded same-surface core-packet sign separator, but not yet
+  full off-lattice directional-gravity portability
 
 **What is bounded, not headline**
 
@@ -83,6 +85,7 @@ The repo currently contains four different classes of publication material:
 - branch-mediated entanglement is not a full BMV witness
 - tripartite branch-mediated entanglement is not a multipartite BMV witness and is now read as W-type rather than GHZ-type
 - weak-coupling retention does not close broader off-lattice directional gravity outside the low-`G` window
+- the new irregular core-packet separator is specific to one centered non-oscillating packet surface; transport and packet portability on irregular graphs still fail
 - Anderson-vs-gravity distinction is strongest in a finite perturbative window and not uniform across sizes
 - the unscreened periodic Anderson companion strengthens the numerical separation but changes the interpretation into a low-variance low-`alpha` offset, so it remains a bounded torus-surface diagnostic
 - eigenvalue statistics currently support a clean negative “no chaos transition” result, not a dynamical criticality claim
@@ -95,8 +98,8 @@ The repo currently contains four different classes of publication material:
 **What should not be overclaimed**
 
 - off-lattice attraction is not yet derived
-- irregular graph sign rows remain audited radial proxies
-- the endogenous same-surface directional probe is still a blocker
+- many irregular sign rows outside the bounded core-packet surface remain audited radial proxies
+- broader irregular transport / packet portability remains a blocker even though the bounded core-packet surface now closes
 - the simple single-particle entropy probe is not a holographic / area-law result
 - the Anderson phase map should not be flattened into a universal `L>=10` statement
 
@@ -391,4 +394,5 @@ When planning papers, use these buckets:
 3. add the historical Gate B transfer result to the ledger
 4. do not promote emergent geometry beyond exploratory
 5. do not promote off-lattice directional gravity beyond the cubic exact-force
-   card until a sign-selective graph-native observable exists
+   card and the bounded irregular core-packet surface until transport /
+   packet portability closes on irregular graphs

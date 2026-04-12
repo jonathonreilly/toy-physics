@@ -37,8 +37,8 @@ historical retained programs.
 - **Strongest graph-native companion results:** cycle battery, scaled cycle
   battery, self-gravity, two-field wave, retarded family closure, and DAG
   compatibility
-- **Main open blocker:** no frozen sign-selective endogenous irregular-graph
-  observable yet
+- **Main open blocker:** broader irregular off-lattice transport / portability
+  closure beyond the bounded core-packet sign surface
 - **Exploratory reopen:** emergent geometry growth, but only as a bounded,
   high-coupling partial positive
 
@@ -52,7 +52,8 @@ The lane board covers the whole repo, not just the current frontier. The main
 families on `main` are:
 
 - current mainline: staggered fermion + parity coupling
-- current blocker: irregular off-lattice direction/sign selection
+- current blocker: irregular off-lattice transport / portability beyond the
+  bounded core-packet sign surface
 - exploratory reopen: emergent geometry growth
 - historical retained: mirror / exact geometry / `Z2 x Z2`
 - historical retained: ordered lattice / dense spent-delay
