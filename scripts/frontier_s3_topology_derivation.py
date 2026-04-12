@@ -1,26 +1,25 @@
 #!/usr/bin/env python3
 """
-Deriving S^3 Topology from Graph Growth Axioms
-================================================
+S^3 Topology from Graph Growth Axioms
+=====================================
 
 MOTIVATION:
-  The CC prediction Lambda = lambda_min = 3/R^2 on S^3 gives
-  Lambda_pred / Lambda_obs = 1.46 with zero free parameters.
-  But this is flagged as "bounded" because S^3 topology is ASSUMED.
-  This script derives S^3 from the axioms, removing the objection.
+  The CC lane wants to use lambda_1(S^3) = 3/R^2. That coefficient is
+  structural only if the topology is fixed. This script checks how far the
+  graph-growth axioms actually get us.
 
-FIVE INDEPENDENT ATTACKS:
+CORE RESULT:
+  The local graph-growth evidence is real:
+    - shell boundaries are S^2-like (chi = 2) on the tested radii
+    - the filled ball-like cubical complexes are contractible on the
+      tested radii
+  But the closed-manifold / compactification step is still extra input:
+    a finite graph or shell-growing ball does not by itself force S^3.
 
-  Attack 1: Finite graph -> compact topology (any compact manifold has spectral gap)
-  Attack 2: Graph growth selects topology (growing shell -> S^3)
-  Attack 3: Unitarity requires compactness (finite Hilbert space -> finite lattice)
-  Attack 4: Poincare conjecture (simply connected + compact = S^3)
-  Attack 5: Spectral gap universality (S^3 is observationally selected)
-
-RESULT:
-  The chain is: finite Hilbert space -> finite graph -> compact manifold
-  -> local cubic growth -> simply connected -> S^3 (Perelman).
-  The spectral gap lambda_min = 3/R^2 is then DERIVED, not assumed.
+WHAT THIS SCRIPT DOES NOT CLAIM:
+  - finite graph -> compact continuum manifold
+  - local growth -> closed 3-manifold
+  - local growth -> S^3 without a global compactification / closure axiom
 
 PStack experiment: frontier-s3-topology-derivation
 """
@@ -58,29 +57,28 @@ H_0 = 67.4e3 / 3.0857e22     # 1/s
 
 
 # ===========================================================================
-# ATTACK 1: Finite graph -> compact topology -> spectral gap
+# ATTACK 1: Finite graph -> discrete spectrum; compactness is not derived
 # ===========================================================================
 def attack_1_compactness():
     """
     The axiom posits a FINITE lattice (finite-dimensional Hilbert space).
-    A finite graph embedded in d dimensions is necessarily bounded.
-    Bounded + connected -> the continuum limit is a compact manifold.
-    ANY compact Riemannian manifold has a discrete Laplacian spectrum
-    with lambda_0 = 0 and lambda_1 > 0 (the spectral gap).
+    A finite graph has a discrete graph Laplacian spectrum.
+    That is not yet the same thing as deriving a compact continuum manifold.
 
-    Key question: does the CC prediction depend on WHICH compact topology?
+    Key question: does the graph-growth surface force a closed topology,
+    or does a compactification axiom still need to be supplied?
     """
     print("=" * 72)
-    print("ATTACK 1: Finite graph -> compact topology -> spectral gap")
+    print("ATTACK 1: Finite graph -> discrete spectrum (compactness open)")
     print("=" * 72)
 
     print("""
   LOGICAL CHAIN:
     1. Axiom: Hilbert space is finite-dimensional (dim = N)
     2. One site per basis state -> graph has N vertices
-    3. N finite -> graph is bounded in any embedding
-    4. Bounded + connected -> continuum limit is COMPACT manifold
-    5. Compact Riemannian manifold -> discrete spectrum with gap
+    3. N finite -> graph spectrum is discrete
+    4. Deriving a compact continuum manifold requires extra global input
+    5. Any compact Riemannian manifold has a discrete spectrum with gap
 
   THEOREM (spectral theory):
     For any compact d-manifold M without boundary,
@@ -113,21 +111,20 @@ def attack_1_compactness():
         print(f"  {name:<35s} {lam1_R2:>14.4f} {ratio:>22.4f}")
         results[name] = ratio
 
-    # Key observation: all compact manifolds give Lambda in the right ballpark
+    # Key observation: the compact-manifold coefficient is topology-dependent.
     ratios = list(results.values())
     print(f"\n  Range of Lambda_pred/Lambda_obs: [{min(ratios):.2f}, {max(ratios):.2f}]")
-    print(f"  ALL compact 3-manifolds give Lambda within ~1 order of magnitude!")
-    print(f"  The CC problem (10^122) is solved by COMPACTNESS ALONE.")
+    print(f"  Compact 3-manifolds give different O(1) coefficients.")
+    print(f"  Finite Hilbert space alone does NOT fix the continuum topology.")
 
-    print(f"\n  ATTACK 1 VERDICT: Compactness is DERIVED from finite Hilbert space.")
-    print(f"  This alone reduces the CC from 10^122 to O(1).")
-    print(f"  The specific topology determines the O(1) coefficient.")
+    print(f"\n  ATTACK 1 VERDICT: Discrete graph spectrum is derived; compact topology is not.")
+    print(f"  The specific closed-manifold coefficient still depends on a global closure step.")
 
     return results
 
 
 # ===========================================================================
-# ATTACK 2: Graph growth selects topology
+# ATTACK 2: Graph growth gives spherical shells; closure remains open
 # ===========================================================================
 def attack_2_growth_topology():
     """
@@ -135,19 +132,17 @@ def attack_2_growth_topology():
     what topology does the growing graph have?
 
     Key insight: uniform 3D growth from a point produces SHELLS.
-    At each time step, the boundary of the grown region is a 2-sphere S^2.
-    The accumulated 3D region is topologically a 3-ball B^3.
-    Its boundary (the spatial slice at the "now" surface) is S^2.
+    At each tested radius, the boundary of the grown region is S^2-like.
+    The filled voxel region is ball-like (contractible on the tested radii).
 
-    For the SPATIAL manifold (not spacetime): if each time slice is a growing
-    3-ball, and we close it (identify the boundary, or the graph wraps around
-    when it reaches the causal horizon), we get S^3.
+    What is NOT derived here: a closed 3-manifold or the one-point
+    compactification needed to identify the spatial slice with S^3.
 
     Numerical test: grow a 3D graph from a seed and measure its topology
     via the Betti numbers of the boundary.
     """
     print("\n" + "=" * 72)
-    print("ATTACK 2: Graph growth selects S^3 topology")
+    print("ATTACK 2: Graph growth gives spherical shells (closure open)")
     print("=" * 72)
 
     print("""
@@ -156,9 +151,9 @@ def attack_2_growth_topology():
     At each step, add nodes at distance r+1 from center.
     Connect to all neighbors at distance r (local attachment).
 
-    After N_steps, the grown region is a ball B^3.
-    The spatial slice at the boundary is S^2.
-    The full spatial manifold (compactified) is S^3.
+    After N_steps, the grown region is ball-like.
+    The spatial boundary at each radius is S^2-like.
+    The closed-manifold compactification step is still open.
 """)
 
     # Numerical demonstration: grow a 3D cubic lattice shell by shell
@@ -241,38 +236,31 @@ def attack_2_growth_topology():
     # The spatial manifold argument
     print(f"""
   TOPOLOGICAL ARGUMENT:
-    1. Growth from a seed produces a 3-ball B^3 at each step.
+    1. Growth from a seed produces spherical shells with chi = 2.
     2. The boundary at each step has chi = 2 -> topology S^2.
-    3. The spatial manifold is the UNION of all shells.
-    4. Compactification: when the graph reaches the causal horizon
-       (finite Hilbert space), the boundary must close.
-    5. A 3-ball with its boundary identified to a point = S^3.
-       Equivalently: S^3 = B^3 / (boundary ~ point).
-
-  More precisely: the one-point compactification of R^3 is S^3.
-  A growing ball in Z^3 that saturates a finite region and
-  "closes" at the boundary gives S^3 topology.
+    3. The filled region is ball-like on the tested discrete radii.
+    4. Closing the boundary into a closed 3-manifold is additional input.
+    5. If that extra closure is supplied, Perelman then gives S^3.
 """)
 
-    print(f"  ATTACK 2 VERDICT: Growth from a seed naturally produces S^3.")
-    print(f"  The key step is compactification, forced by Attack 1 (finite Hilbert space).")
+    print(f"  ATTACK 2 VERDICT: Growth from a seed produces spherical shells.")
+    print(f"  The closed-manifold / compactification step remains open.")
 
-    return {"n_s2_boundaries": n_s2, "total": len(boundary_chi_values)}
+    return {"n_s2_boundaries": n_s2, "total": len(boundary_chi_values), "shells_s2": True}
 
 
 # ===========================================================================
-# ATTACK 3: Unitarity requires compactness
+# ATTACK 3: Unitarity requires finite graph size, not a derived S^3
 # ===========================================================================
 def attack_3_unitarity():
     """
     On an infinite lattice, the Hilbert space is infinite-dimensional.
     The axiom requires finite-dimensional Hilbert space for unitary evolution.
-    Therefore the lattice must be FINITE -> topology must be COMPACT.
-
-    Furthermore: the spectral gap of the FINITE Laplacian sets Lambda.
+    Therefore the graph must be finite, but that still does not determine
+    the closed continuum topology.
     """
     print("\n" + "=" * 72)
-    print("ATTACK 3: Unitarity requires compactness")
+    print("ATTACK 3: Unitarity requires finite graph size")
     print("=" * 72)
 
     print("""
@@ -316,36 +304,29 @@ def attack_3_unitarity():
     print(f"    Open:      C = pi^2 = {math.pi**2:.4f}")
 
     # In 3D
-    print(f"\n  In 3D, the ONLY way to have lambda_1 = 0 is N -> infinity.")
-    print(f"  Finite N -> lambda_1 > 0 -> Lambda > 0.")
-    print(f"  This is why the CC is naturally SMALL but NONZERO:")
-    print(f"    Lambda ~ 1/N^(2/d) ~ 1/R^2 ~ (l_P/R_H)^2 ~ 10^(-122)")
-    print(f"    The smallness comes from the LARGENESS of the graph (N ~ 10^183).")
+    print(f"\n  In 3D, finite N gives a discrete graph spectrum.")
+    print(f"  The graph size can make the lowest mode small, but topology is still undecided.")
 
-    print(f"\n  ATTACK 3 VERDICT: Unitarity (finite H) -> compactness -> Lambda > 0.")
-    print(f"  The CC is nonzero because the universe is finite.")
-    print(f"  The CC is small because the universe is large.")
+    print(f"\n  ATTACK 3 VERDICT: Unitarity fixes finiteness, not closed topology.")
+    print(f"  The CC coefficient still depends on the open compactification step.")
 
     return results
 
 
 # ===========================================================================
-# ATTACK 4: Poincare conjecture (simply connected + compact = S^3)
+# ATTACK 4: Poincare theorem applies only after a closed manifold is supplied
 # ===========================================================================
 def attack_4_poincare():
     """
     Perelman's theorem (2003): Every simply connected, closed 3-manifold
     is homeomorphic to S^3.
 
-    If the growing graph is simply connected (no handles or tunnels),
-    and compact (Attack 1), then the topology MUST be S^3.
-
-    Simply connected means: every closed loop can be continuously
-    contracted to a point. On a cubic lattice grown from a seed,
-    this is obvious -- there are no topological handles.
+    Perelman's theorem applies only to a closed, simply connected 3-manifold.
+    The shell-growth checks suggest ball-like regions, but they do not yet
+    derive the closed-manifold compactification needed to invoke the theorem.
     """
     print("\n" + "=" * 72)
-    print("ATTACK 4: Poincare conjecture forces S^3")
+    print("ATTACK 4: Poincare theorem is conditional on closed topology")
     print("=" * 72)
 
     print("""
@@ -357,17 +338,11 @@ def attack_4_poincare():
 
   QUESTION: Is the grown graph simply connected?
 
-  ANSWER: YES, by construction.
-    1. Start from a single node (trivially simply connected).
-    2. At each growth step, add nodes connected to the boundary.
-    3. This is topologically equivalent to "inflating" the ball.
-    4. At no step do we create a handle or tunnel.
-    5. Therefore pi_1 = 0 at every step.
-    6. Compactification (Attack 1) closes the manifold.
-    7. Closed + simply connected -> S^3 by Perelman.
+  ANSWER: The tested filled regions are ball-like, but closed topology is not
+  yet derived. The Perelman step is therefore conditional, not closed.
 """)
 
-    # Topological argument for simple connectivity.
+    # Topological argument for the filled regions.
     #
     # NOTE: The graph-theoretic first Betti number beta_1 = |E| - |V| + 1
     # counts independent GRAPH cycles, not pi_1 of the underlying space.
@@ -376,16 +351,12 @@ def attack_4_poincare():
     # The correct object is the CLIQUE COMPLEX (or cubical complex) of the
     # graph. For a discrete ball in Z^3:
     #   - The cubical complex fills in all unit cubes whose 8 corners are present.
-    #   - A filled ball in Z^3 is a cubical complex homeomorphic to B^3.
-    #   - B^3 is contractible, hence pi_1 = 0 (simply connected).
+    #   - The tested filled regions are ball-like cubical complexes.
+    #   - This is evidence for local contractibility, not a derived closed manifold.
     #
-    # We verify this by checking that the filled complex has trivial H_1:
-    # For a cubical complex C with cells (vertices V, edges E, square faces F, cubes K):
-    #   H_1 = ker(d_1) / im(d_0) where d_0: C_0 -> C_1, d_1: C_1 -> C_2.
-    #   If every graph cycle bounds a 2-chain of filled squares, then H_1 = 0.
-    #
-    # For a convex region in Z^3, this is guaranteed: every cycle in a convex
-    # set spans a disk made of unit squares inside the set.
+    # We verify a ball-like cubical-complex Euler characteristic on the tested
+    # radii. That is a local check; it does not by itself prove a closed
+    # 3-manifold or a compactification to S^3.
 
     print(f"  Numerical check: cubical complex topology of growing balls")
     print(f"  {'Radius':>8s} {'Vertices':>10s} {'Edges':>10s} {'Squares':>10s} {'Cubes':>8s} {'Contractible?':>16s}")
@@ -441,57 +412,52 @@ def attack_4_poincare():
         sc = "YES (chi=1)" if contractible else f"NO (chi={chi})"
         print(f"  {R:>8d} {V_count:>10d} {E_count:>10d} {F_count:>10d} {K_count:>8d} {sc:>16s}")
 
-    print(f"\n  All growing balls are contractible (chi=1) -> simply connected.")
-    print(f"  This is guaranteed: a discrete ball in Z^3 is convex, hence contractible.")
+    print(f"\n  The tested filled regions are ball-like on the discrete voxels.")
+    print(f"  This is evidence for local contractibility, not a closed 3-manifold.")
 
     if not all_simply_connected:
-        print(f"  NOTE: chi != 1 for some radii due to discrete voxel effects,")
-        print(f"  but the underlying topological space is still contractible (B^3).")
-        # The discrete chi can deviate from 1 for non-convex voxelized balls,
-        # but the topological argument (convex region is contractible) holds.
-        all_simply_connected = True  # override: the topology argument is rigorous
+        print(f"  NOTE: chi != 1 for some radii due to discrete voxel effects.")
+        print(f"  That does not change the main point: the closed-manifold step is open.")
 
     # The key distinction from T^3
     print(f"""
   WHY NOT T^3?
     T^3 = S^1 x S^1 x S^1 has pi_1 = Z^3 (three independent non-contractible loops).
     This requires IDENTIFYING opposite faces of a cube -- a global operation.
-    Local growth from a seed NEVER produces face identification.
-    Therefore T^3 is EXCLUDED by the growth axiom.
+    Local growth from a seed does not by itself produce that identification.
+    Therefore T^3 is not derived here.
 
   WHY NOT S^2 x S^1?
     S^2 x S^1 has pi_1 = Z (one non-contractible loop around S^1).
     This requires a "tunnel" or "handle" -- never produced by local growth.
-    Therefore S^2 x S^1 is EXCLUDED.
+    Therefore S^2 x S^1 is not derived here.
 
   WHY NOT RP^3?
     RP^3 = S^3 / Z_2 has pi_1 = Z_2.
     This requires antipodal identification -- a global operation.
-    Therefore RP^3 is EXCLUDED.
+    Therefore RP^3 is not derived here.
 
   WHY NOT lens spaces L(p,q)?
     L(p,q) = S^3 / Z_p has pi_1 = Z_p.
     This requires a discrete quotient -- a global operation.
-    Therefore all lens spaces are EXCLUDED.
+    Therefore all lens spaces are not derived here.
 
   The ONLY closed, simply connected 3-manifold is S^3.
-  Graph growth produces a simply connected space.
-  Therefore the topology is S^3.
+  But the closed-manifold premise is still extra input in this lane.
 """)
 
-    print(f"  ATTACK 4 VERDICT: Local growth -> simply connected -> S^3 (Perelman).")
-    print(f"  This is the strongest argument: it EXCLUDES all alternatives.")
+    print(f"  ATTACK 4 VERDICT: Perelman applies only after closed topology is supplied.")
+    print(f"  The current lane has not yet derived that closure.")
 
-    return {"all_simply_connected": all_simply_connected}
+    return {"all_simply_connected": all_simply_connected, "closed_topology_derived": False}
 
 
 # ===========================================================================
-# ATTACK 5: Spectral gap observational selection
+# ATTACK 5: Spectral coefficient comparison remains conditional
 # ===========================================================================
 def attack_5_spectral_selection():
     """
-    Even without the Poincare argument, does the observed Lambda
-    select S^3 over other topologies?
+    This is a coefficient comparison only. It does not derive topology.
 
     Compute lambda_1 * R^2 for all compact 3-manifolds and compare
     to the observed value Lambda_obs * R_H^2.
@@ -595,15 +561,15 @@ def attack_5_spectral_selection():
     print(f"    S^3 discrepancy: {abs(3.0/observed_C - 1)*100:.1f}%")
     print(f"    T^3 discrepancy: {abs(lam_T3_R2/observed_C - 1)*100:.1f}%")
 
-    print(f"\n  ATTACK 5 VERDICT: S^3 gives the closest match to observation.")
-    print(f"  Combined with Attack 4 (S^3 is the ONLY simply connected option),")
-    print(f"  the topology is uniquely determined both theoretically and observationally.")
+    print(f"\n  ATTACK 5 VERDICT: S^3 is the closest coefficient among closed-manifold options.")
+    print(f"  This is not a derivation of S^3; it is a conditional comparison.")
 
     return {
         "observed_C": observed_C,
         "S3_ratio": C_S3 / observed_C,
         "T3_ratio": C_T3 / observed_C,
         "best_match": best_match,
+        "conditional_comparison_only": True,
     }
 
 
@@ -612,13 +578,8 @@ def attack_5_spectral_selection():
 # ===========================================================================
 def bonus_s3_lattice_eigenvalue():
     """
-    Construct a graph that approximates S^3 and verify lambda_1 = 3/R^2.
-    Use the approach: S^3 can be covered by two 3-balls glued along S^2.
-    Discretize as concentric shells of an icosahedral-type mesh.
-
-    Simpler approach: use the known result that the discrete Laplacian
-    on a uniform mesh of S^3 converges to 3/R^2 as mesh refines.
-    Demonstrate with a hypercubic lattice on S^3 via stereographic projection.
+    Numerical sanity check for the analytic S^3 spectrum.
+    This does not derive S^3 from the graph-growth axioms.
     """
     print("\n" + "=" * 72)
     print("BONUS: Numerical verification of S^3 spectral gap")
@@ -716,12 +677,12 @@ def bonus_s3_lattice_eigenvalue():
   and normalization-dependent. The key theoretical result is ANALYTIC:
     On S^3 of radius R: lambda_1 = 3/R^2 (exact, from representation theory).
     On S^n of radius R: lambda_1 = n/R^2.
-  This is a theorem, not a numerical result. The numerics above are
-  a sanity check, not a proof.
+  This is a theorem about S^3 itself, not a derivation of S^3 from the axioms.
+  The numerics above are a sanity check on the coefficient only.
 """)
 
     print(f"  BONUS VERDICT: S^3 spectral gap lambda_1 = 3/R^2 is a mathematical theorem.")
-    print(f"  No numerical verification needed, but the lattice approximation is consistent.")
+    print(f"  The topology step that would make S^3 structural remains open.")
 
 
 # ===========================================================================
@@ -730,61 +691,47 @@ def bonus_s3_lattice_eigenvalue():
 def synthesis(results_1, results_2, results_3, results_4, results_5):
     """Combine all five attacks into the derivation chain."""
     print("\n" + "=" * 72)
-    print("SYNTHESIS: S^3 Topology Derivation")
+    print("SYNTHESIS: S^3 Topology Status")
     print("=" * 72)
 
     print(f"""
-  THE DERIVATION CHAIN:
+  THE CHAIN AS CURRENTLY JUSTIFIED:
   =====================
 
   Step 1: FINITE HILBERT SPACE (axiom)
     dim(H) = N < infinity
     |
     v
-  Step 2: FINITE GRAPH (Attack 1 + Attack 3)
-    N sites, local connections
-    Unitarity requires N < infinity
+  Step 2: FINITE GRAPH / DISCRETE SPECTRUM
+    N sites, local connections, finite graph spectrum
     |
     v
-  Step 3: COMPACT MANIFOLD (continuum limit)
-    Finite graph -> bounded -> compact
-    Any compact 3-manifold has spectral gap lambda_1 > 0
-    This ALONE solves the CC hierarchy: Lambda ~ 1/R^2 ~ 10^(-122)
+  Step 3: SHELL-GROWTH GEOMETRY
+    Local cubic growth produces S^2-like shells (chi = 2)
+    and ball-like filled regions on the tested radii
     |
     v
-  Step 4: SIMPLY CONNECTED (Attack 2 + Attack 4)
-    Growth from a seed -> ball B^3 at each step
-    No handles, no tunnels -> pi_1 = 0
-    Verified numerically: beta_1 = 0 for all growing balls
+  Step 4: CLOSED-MANIFOLD INPUT (OPEN)
+    One-point / boundary compactification is not yet derived
+    The closed 3-manifold premise remains extra input
     |
     v
-  Step 5: S^3 (Poincare/Perelman)
-    Compact + simply connected + 3-dimensional -> S^3
-    This is Perelman's theorem (2003).
-    No alternatives exist!
+  Step 5: IF CLOSED + SIMPLY CONNECTED, THEN S^3 (Perelman)
+    This theorem is conditional on the missing closure step
     |
     v
-  Step 6: SPECTRAL GAP = 3/R^2 (representation theory)
+  Step 6: SPECTRAL GAP = 3/R^2 ON S^3 (representation theory)
     On S^3 of radius R: lambda_1 = 3/R^2 (exact)
     This is from the eigenvalues of the Laplacian on S^3,
     which are l(l+2)/R^2 for l = 1, 2, 3, ...
     The lowest nonzero: l=1 gives lambda_1 = 1*3/R^2 = 3/R^2.
     |
     v
-  Step 7: COSMOLOGICAL CONSTANT (identification)
-    Lambda = lambda_1 = 3/R_H^2
-    Lambda_pred / Lambda_obs = 3 / (Lambda_obs * R_H^2)
-                             = 3 / (3 * Omega_Lambda)
-                             = 1 / Omega_Lambda
-                             = {1/Omega_Lambda:.4f}
+  Step 7: COSMOLOGICAL CONSTANT (conditional identification)
+    Lambda = lambda_1 = 3/R_H^2 if and only if the closed topology is S^3
 
-  The remaining factor of {1/Omega_Lambda:.2f} is the matter contribution:
-    In pure de Sitter (no matter): Lambda = 3H^2/c^2, so R_H = c/H and
-    Lambda * R_H^2 = 3 exactly.
-    With matter: H^2 = (Lambda*c^2/3) / Omega_Lambda, so
-    R_H^2 = c^2/H^2 = 3/(Lambda * Omega_Lambda)
-    => Lambda * R_H^2 = 3/Omega_Lambda
-    => Lambda_pred/Lambda_obs = 1/Omega_Lambda = {1/Omega_Lambda:.4f}
+  The remaining factor of {1/Omega_Lambda:.2f} is a separate matter-content / Friedmann issue,
+  not a topology derivation.
 """)
 
     # Scorecard
@@ -799,18 +746,16 @@ def synthesis(results_1, results_2, results_3, results_4, results_5):
     print(f"  {'R^3 (non-compact)':<20s} {'Attack 1 (infinite H)':>25s} {'0.0000':>14s} {'0.00':>12s}")
 
     print(f"""
-  STATUS UPGRADE:
-    BEFORE: Lambda_pred/Lambda_obs = 1.46, topology ASSUMED -> "bounded"
-    AFTER:  Lambda_pred/Lambda_obs = 1.46, topology DERIVED -> "structural"
+  STATUS:
+    BEFORE: S^3 topology assumed
+    AFTER:  local shell-growth topology verified, closed-manifold step OPEN
 
-    The derivation chain uses only:
+    The derivation chain currently uses:
       1. Finite Hilbert space (axiom)
-      2. Local growth from a seed (axiom)
-      3. Perelman's theorem (mathematics)
-      4. Laplacian spectrum on S^3 (mathematics)
+      2. Local graph growth (axiom)
+      3. Shell topology checks on the tested discrete balls
 
-    No physics assumptions beyond the two axioms.
-    The S^3 topology is a CONSEQUENCE, not an INPUT.
+    The missing piece is the global compactification / closed-manifold input.
 """)
 
     # Final CC prediction
@@ -823,17 +768,14 @@ def synthesis(results_1, results_2, results_3, results_4, results_5):
     print(f"    Discrepancy: {(ratio - 1)*100:.1f}% (from matter contribution)")
     print(f"    Pure de Sitter limit: ratio -> 1.000 (exact)")
 
-    all_pass = (
-        results_4["all_simply_connected"]
-        and results_2["n_s2_boundaries"] == results_2["total"]
-        and abs(ratio - 1.0/Omega_Lambda) / (1.0/Omega_Lambda) < 0.02
-    )
+    local_pass = (results_2["n_s2_boundaries"] == results_2["total"] and ratio > 0)
 
     return {
         "Lambda_pred_over_obs": ratio,
-        "topology_derived": True,
-        "chain": "finite H -> compact -> simply connected -> S^3 (Perelman)",
-        "all_tests_pass": all_pass,
+        "topology_derived": False,
+        "chain": "finite H -> finite graph -> shell growth (S^3 still conditional)",
+        "local_checks_pass": local_pass,
+        "global_gap_closed": False,
     }
 
 
@@ -868,26 +810,25 @@ def main():
     print("VERDICT")
     print("=" * 72)
 
-    if final["all_tests_pass"]:
-        status = "ALL TESTS PASS"
+    if final["local_checks_pass"]:
+        status = "LOCAL CHECKS PASS; GLOBAL GAP STILL OPEN"
     else:
         status = "SOME TESTS FAILED -- review output"
 
     print(f"""
   {status}
 
-  S^3 topology is DERIVED from two axioms:
-    1. Finite-dimensional Hilbert space -> compact manifold
-    2. Local growth from a seed -> simply connected
+  The shell-growth topology result is LOCAL and real:
+    - S^2-like shell boundaries (chi = 2)
+    - ball-like filled regions on the tested radii
 
-  Combined with Perelman's theorem: compact + simply connected = S^3.
+  The closed-manifold / compactification step is still OPEN:
+    - finite graph -> compact manifold is not derived
+    - B^3 -> S^3 remains an extra global input
 
-  The CC prediction Lambda = 3/R_H^2 is now STRUCTURAL:
+  Therefore the S^3-based CC coefficient remains CONDITIONAL:
     Lambda_pred / Lambda_obs = {final['Lambda_pred_over_obs']:.4f}
-    (= 1/Omega_Lambda, the matter dilution factor)
-
-  The "assumed topology" objection is REMOVED.
-  The CC prediction moves from BOUNDED to STRUCTURAL.
+    (valid only if the missing global closure is supplied)
 """)
 
 
