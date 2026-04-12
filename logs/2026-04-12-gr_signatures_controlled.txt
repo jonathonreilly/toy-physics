@@ -1,0 +1,191 @@
+================================================================================
+CONTROLLED GR-SIGNATURE TESTS
+Frozen-source control to separate geometry from self-consistency
+================================================================================
+
+MOTIVATION: The review flagged that tests 1-2 are 'exact by
+construction' -- they test identities of S = L(1-f), not
+independent predictions from self-consistency. This script adds
+a FROZEN-SOURCE CONTROL: a hand-crafted 1/r field (not Poisson-
+solved) to prove the signatures are geometric, not dynamic.
+
+================================================================================
+FIELD GENERATION
+================================================================================
+
+Lattice: N=31, mass at (15,15,15)
+Poisson field at r=5: 0.01145398
+Frozen 1/r amplitude: 0.05726989
+Frozen 1/r^2 amplitude: 0.28634945
+
+Radial profiles:
+   r      Poisson   Frozen 1/r  Frozen 1/r2
+---------------------------------------------
+   2   0.03824922   0.02863495   0.07158736
+   3   0.02290432   0.01908996   0.03181661
+   4   0.01564606   0.01431747   0.01789684
+   5   0.01145398   0.01145398   0.01145398
+   7   0.00676214   0.00818141   0.00584387
+  10   0.00321664   0.00572699   0.00286349
+
+================================================================================
+TEST 1: GRAVITATIONAL TIME DILATION
+  STATUS: EXACT BY CONSTRUCTION
+  For ANY field f, phase deficit = k * sum(f). This is an
+  identity of S = L(1-f), not a test of self-consistency.
+================================================================================
+
+             Field      ratio        std               status
+--------------------------------------------------------------
+    Poisson-solved   1.000000   1.26e-13 EXACT (by construction)
+        Frozen 1/r   1.000000   2.19e-13 EXACT (by construction)
+      Frozen 1/r^2   1.000000   3.12e-13 EXACT (by construction)
+
+INTERPRETATION: ALL fields give ratio = 1.000 because this is an
+identity of the action S = L(1-f). The frozen field gives the SAME
+result as Poisson-solved. This confirms the signature is GEOMETRIC,
+not from self-consistency.
+
+================================================================================
+TEST 2: WEAK EQUIVALENCE PRINCIPLE
+  STATUS: EXACT BY CONSTRUCTION
+  Deflection = dS/db = d/db sum(1-f) is k-independent for ANY f.
+  This is an identity of S = L(1-f), not a test of dynamics.
+================================================================================
+
+             Field     deflection    spread%               status
+------------------------------------------------------------------
+    Poisson-solved    +0.03368215     0.0000 EXACT (by construction)
+        Frozen 1/r    +0.02441705     0.0000 EXACT (by construction)
+      Frozen 1/r^2    +0.04447671     0.0000 EXACT (by construction)
+
+INTERPRETATION: ALL fields give zero spread because deflection = dS/db
+and S = sum(1-f) is k-independent by construction. The frozen field
+confirms this is geometric, not dynamic.
+
+================================================================================
+TEST 3: LIGHT DEFLECTION FACTOR OF 2
+  STATUS: CONDITIONAL
+  This tests: IF S_eff = L*(1-f)^2 (spatial metric included),
+  THEN deflection doubles. The spatial metric factor is NOT
+  derived from the axioms.
+================================================================================
+
+What IS derived:  S = L*(1-f)  [valley-linear action from axioms]
+What is ASSUMED:  S_eff = L*(1-f)^2  [spatial metric adds another (1-f)]
+What is TESTED:   Does (1-f)^2 give 2x deflection? (Yes, by algebra.)
+
+             Field  FM/TD ratio        std    near 2.0?
+--------------------------------------------------------
+    Poisson-solved     1.985107     0.0124          YES
+        Frozen 1/r     1.982967     0.0086          YES
+      Frozen 1/r^2     1.981274     0.0214          YES
+
+INTERPRETATION: ALL fields give ratio ~ 2.0 because:
+  (1-f)^2 ~ 1 - 2f + f^2, so the phase deficit doubles (to leading
+  order in f). This is ALGEBRA, not physics. The factor-of-2 is
+  guaranteed for ANY field once you choose S_eff = L*(1-f)^2.
+
+What WOULD make this non-trivial: an independent derivation showing
+that the path-sum propagator naturally produces (1-f)^2 as the
+effective action, rather than (1-f). This is NOT YET DONE.
+
+================================================================================
+TEST 4: STATIC vs DYNAMIC FIELD COMPARISON
+  What distinguishes Poisson-solved from frozen 1/r?
+================================================================================
+
+Radial decay exponents:
+  Poisson-solved: beta = 1.6610 (R^2 = 0.9744)
+  Frozen 1/r:     beta = 1.0000 (R^2 = 1.0000)
+
+Laplacian of frozen field (should be nonzero if NOT a Poisson solution):
+  r=3: nabla^2 f_frozen = 8.539550e-04
+  r=5: nabla^2 f_frozen = 6.478411e-05
+  r=7: nabla^2 f_frozen = 1.198284e-05
+
+KEY DIFFERENCE: The Poisson-solved field satisfies nabla^2 f = -delta
+(Laplacian vanishes away from source). The frozen 1/r field does NOT
+satisfy Poisson on the lattice (nonzero Laplacian residual).
+
+For the GR signature tests (1-3), this difference is IRRELEVANT:
+the signatures depend only on f appearing in S = L(1-f), not on
+what equation f satisfies.
+
+What DOES require Poisson: self-consistent iteration, where the field
+is sourced by the propagator's own density rho = |psi|^2. Only the
+Poisson field achieves this loop closure (tested in the separate
+self-consistency script).
+
+================================================================================
+TEST 5: WRONG RADIAL DEPENDENCE (1/r^2 FIELD)
+  Tests whether GR signatures depend on the 1/r profile
+================================================================================
+
+Time dilation for 1/r^2 field:
+  Ratio: 1.000000 (1.0 = exact by construction)
+
+WEP for 1/r^2 field:
+  Spread: 0.000000% (0.0 = exact by construction)
+
+Factor-of-2 for 1/r^2 field:
+  FM/TD ratio: 1.981274 (2.0 = algebraic identity)
+
+CONCLUSION: Even with a 1/r^2 field (wrong for gravity), ALL three
+GR signatures hold identically. This PROVES these signatures test
+the action structure S = L(1-f), not the field's radial profile.
+
+What DOES depend on 1/r: the FORCE LAW. A 1/r potential gives 1/r^2
+force (Newtonian gravity). A 1/r^2 potential gives 1/r^3 force
+(non-physical). The force law is tested by self-consistency and
+orbital dynamics, NOT by the GR-signature tests.
+
+================================================================================
+SUMMARY TABLE
+================================================================================
+
+                          Test |                    Status |                       What it tests
+------------------------------------------------------------------------------------------------
+                 Time dilation |     EXACT BY CONSTRUCTION |           Action structure S=L(1-f)
+          WEP (k-independence) |     EXACT BY CONSTRUCTION |           Action structure S=L(1-f)
+        Factor-of-2 deflection |               CONDITIONAL |      Algebra of (1-f)^2, IF assumed
+              Conformal metric |                STRUCTURAL |    Action implies g_ij = (1-f) d_ij
+
+================================================================================
+BOUNDED CLAIMS
+================================================================================
+
+WHAT IS TRUE:
+  1. The action S = L(1-f) produces time dilation and WEP as
+     IDENTITIES. Any field f in this action gives these results.
+     The non-trivial content is that f = s/r (from Poisson)
+     makes (1-f) match the Schwarzschild time-time component.
+
+  2. IF the spatial metric factor is included (S_eff = L*(1-f)^2),
+     THEN light deflection doubles. This is algebra, not a prediction.
+
+  3. The frozen-source control confirms these are GEOMETRIC signatures
+     of the action form, not consequences of self-consistent dynamics.
+
+WHAT IS NOT YET SHOWN:
+  1. Why the spatial metric should contribute an additional (1-f)
+     factor. This requires deriving the effective action from the
+     full path-sum propagator structure, which is not done.
+
+  2. That self-consistency adds any GR content beyond what the
+     action structure already gives. The frozen field gives all
+     the same signatures without self-consistency.
+
+  3. Any connection to the FULL GR (nonlinear regime, frame
+     dragging, gravitational waves). Only weak-field, static,
+     spherically symmetric case is addressed.
+
+WHAT WOULD CONSTITUTE A GENUINE PREDICTION:
+  - Deriving the spatial metric factor from the propagator
+  - Showing self-consistent dynamics produces effects BEYOND
+    what a frozen field gives (e.g., back-reaction)
+  - Reproducing a GR effect that is NOT an identity of S = L(1-f)
+    or S = L(1-f)^2 (e.g., precession, gravitational redshift
+    of spectral lines from the propagator)
+
+Total runtime: 1.6s
