@@ -1,0 +1,143 @@
+Deep Experimental Literature Search — Path-Sum Framework
+========================================================================
+Date: 2026-04-12
+Question: Do any existing experiments show anomalies matching the
+path-sum framework, or constrain its parameters?
+
+========================================================================
+1. MICROSCOPE SATELLITE — Equivalence Principle
+========================================================================
+Result: eta(Ti,Pt) = [-1.5 +/- 2.3(stat) +/- 1.5(syst)] x 10^-15
+  No EP violation to 10^-15 (100x better than ground tests)
+  Touboul et al., Phys. Rev. Lett. 129, 121102 (2022)
+
+Anomaly: NONE
+Constraint: Framework's lattice coupling must be universal (composition-
+  independent) to below 10^-15, or no EP violation is predicted.
+
+========================================================================
+2. EOT-WASH — Short-Range Gravity (1/r^2 Tests)
+========================================================================
+Result: 1/r^2 confirmed down to 52 micrometers separation
+  Yukawa interaction excluded above 38.6 um at 95% CL
+  Lee et al., Phys. Rev. Lett. 124, 101101 (2020)
+
+Anomaly: NONE
+Constraint: Lattice spacing a << 38.6 um (if corrections are Yukawa-type)
+  STRONGEST DIRECT CONSTRAINT on the lattice spacing.
+  If a ~ l_Planck (10^-35 m), these experiments are ~30 orders of
+  magnitude away from probing it.
+
+========================================================================
+3. GRAVITATIONAL AHARONOV-BOHM (Kasevich Group)
+========================================================================
+Result: Gravitational AB effect observed with cold rubidium atoms
+  Phase shift from kilogram-scale source mass, consistent with QM
+  Overstreet et al., Science 375, 226 (2022)
+
+Anomaly: NONE — matches standard QM prediction
+Framework relevance: HIGHEST CONCEPTUAL MATCH
+  This experiment directly measures path-dependent gravitational phase
+  accumulation — exactly what the path-sum framework computes.
+  Agreement confirms the continuum limit but does not yet distinguish
+  the framework from standard semiclassical gravity.
+
+========================================================================
+4. COW EXPERIMENT — Neutron Interferometry
+========================================================================
+Result: Gravitational phase shift phi = m*g*A/(hbar*v) confirmed
+  Historical 0.6-0.8% discrepancy now resolved (crystal imperfections)
+  Current precision: ~0.4%, consistent with standard theory
+  Colella, Overhauser & Werner, Phys. Rev. Lett. 34, 1472 (1975)
+
+Anomaly: NONE (historical discrepancy was systematic)
+Constraint: Lattice corrections < 0.4% at ~cm path lengths (weak)
+
+========================================================================
+5. ATOM INTERFEROMETRY — MAGIS-100, AION, Stanford Tower
+========================================================================
+Result: MAGIS-100 laser lab completed Jan 2026, commissioning ~2028
+  100-meter baseline, potential 10^-15 g sensitivity
+  Cold Atom Lab on ISS demonstrated microgravity interferometry
+
+Anomaly: No data yet from MAGIS-100
+Future potential: MOST PROMISING for framework tests
+  If lattice corrections accumulate over N ~ L/a steps, sensitivity
+  could exceed naive (a/L)^2 scaling.
+
+========================================================================
+6. BIG G SCATTER
+========================================================================
+Result: CODATA-2022: G = 6.67430(15) x 10^-11 m^3 kg^-1 s^-2
+  16 measurements show 550 ppm scatter (far exceeding individual errors)
+  Anderson et al. found 5.899-year oscillation correlated with LOD
+  Anderson et al., arXiv:1504.06604 (2015)
+
+Anomaly: YES — 550 ppm unexplained scatter is genuine unsolved problem
+Framework connection: SPECULATIVE
+  Different experimental geometries could sample lattice differently,
+  but time-dependent scatter (5.9-year period) hard to explain with
+  static lattice. Most likely explanation remains underestimated
+  mechanical systematics (wire anelasticity, etc.)
+
+========================================================================
+7. PIKOVSKI GRAVITY-INDUCED DECOHERENCE
+========================================================================
+Result: Theory prediction (2015): gravitational time dilation induces
+  universal decoherence of composite particles in superposition
+  No experimental confirmation yet
+  Pikovski et al., Nature Physics 11, 668 (2015)
+
+Anomaly: No data yet
+Framework connection: The path-sum naturally produces decoherence of
+  composite particles (different internal states accumulate phases at
+  different rates). Rate could differ from Pikovski prediction by
+  lattice corrections of order (a * Delta_E / hbar*c).
+  Future tests: Cold Atom Lab, space-based interferometers
+
+========================================================================
+8. GRANIT / qBOUNCE — Neutron Bouncer
+========================================================================
+Result: Quantized gravitational states confirmed (z_0 = 5.9 um)
+  qBounce 2023: 3.9-sigma systematic shift in local g measurement
+  Energy level precision: ~1%
+  Nesvizhevsky et al., Nature 415, 297 (2002)
+
+Anomaly: 3.9-sigma g shift likely systematic (vibrations, mirror quality)
+Constraint: a < ~0.6 um from energy level precision (WEAK)
+
+========================================================================
+SUMMARY TABLE
+========================================================================
+
+Experiment          Precision     Anomaly?  a constraint    Relevance
+----------------------------------------------------------------------
+MICROSCOPE          10^-15 eta    No        Universal req   Medium
+Eot-Wash ISL        52 um         No        a << 38.6 um    HIGH
+Grav. AB (Kasevich) Phase meas    No        Continuum OK    HIGH (concept)
+COW neutrons        0.4%          No        Weak            Low
+MAGIS-100           Building      No data   Future strong   HIGH (future)
+Big G scatter       550 ppm       YES       Speculative     Low
+Pikovski decoher.   Theory only   No data   Future test     Medium
+GRANIT/qBounce      ~1%           Likely sys a < 0.6 um     Medium
+
+========================================================================
+CONCLUSION
+========================================================================
+
+No current experiment shows an anomaly uniquely explained by the
+path-sum framework. The framework is consistent with all data because
+all experiments agree with the continuum (1/r^2) limit.
+
+Key findings:
+1. Strongest constraint: Eot-Wash (a < 38.6 um for Yukawa corrections)
+2. Best conceptual match: Kasevich gravitational AB — directly measures
+   path-dependent gravitational phase accumulation
+3. Most promising future: MAGIS-100 (commissioning ~2028)
+4. Only genuine anomaly: Big G scatter (550 ppm), but likely systematics
+
+If a ~ l_Planck (~10^-35 m), no foreseeable experiment can detect
+lattice corrections, and the framework is empirically equivalent to GR
+in all accessible regimes. The framework's value is then theoretical
+(explaining WHY 1/r^2, WHY d=3, WHY Born rule) rather than producing
+novel experimental predictions.
