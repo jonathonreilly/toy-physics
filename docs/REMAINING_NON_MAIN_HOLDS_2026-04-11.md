@@ -115,6 +115,7 @@ Files:
 - `docs/STAGGERED_TWO_BODY_TRANSPORT_NOTE_2026-04-11.md`
 - `docs/STAGGERED_TWO_BODY_LINK_CURRENT_NOTE_2026-04-11.md`
 - `docs/STAGGERED_TWO_BODY_MOMENTUM_FLUX_NOTE_2026-04-11.md`
+- `docs/STAGGERED_X_FLUX_REFINEMENT_NOTE_2026-04-11.md`
 - `docs/STAGGERED_TWO_BODY_NEXT_STEPS_NOTE_2026-04-11.md`
 - `scripts/frontier_staggered_direct_com_closure.py`
 - `scripts/frontier_staggered_both_masses.py`
@@ -133,10 +134,12 @@ Why held:
   surface
 - the packet-local momentum-flux / impulse readout is also still negative on
   the audited open-cubic surface
+- the x-directed shell-flux refinement fixes the sign gate, but the impulse
+  remains non-convergent and the lane still lacks a retained trajectory law
 
 Next control:
 
-- stop centroid variants
+- stop centroid and shell-flux variants
 - the current lane has now been tried; only a genuinely different conserved
   current or a different graph geometry would be credible if this family is
   revisited

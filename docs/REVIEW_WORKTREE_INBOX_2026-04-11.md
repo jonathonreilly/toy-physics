@@ -78,12 +78,17 @@ Current claim:
 - the bilinear factor is not explicit in the Hamiltonian
 - frozen-field control stays near-identical
 
-Audit focus:
+Status:
 
-- confirm the bounded reading is correct
-- keep the claim at “field-linearity emergence on this surface,” not full
-  Newton closure
-- decide whether it is safe for bounded promotion to `main`
+- approved for bounded promotion
+- audit note written at `docs/EMERGENT_PRODUCT_LAW_AUDIT_2026-04-11.md`
+
+Retained reading:
+
+- field-linearity emergence on this surface
+- not full Newton closure
+- not architecture-independent product-law derivation
+- frozen control stays near-identical on the same audited surface
 
 #### B. Architecture portability candidate
 
@@ -243,6 +248,7 @@ Files:
 - `docs/STAGGERED_TWO_BODY_TRANSPORT_NOTE_2026-04-11.md`
 - `docs/STAGGERED_TWO_BODY_LINK_CURRENT_NOTE_2026-04-11.md`
 - `docs/STAGGERED_TWO_BODY_MOMENTUM_FLUX_NOTE_2026-04-11.md`
+- `docs/STAGGERED_X_FLUX_REFINEMENT_NOTE_2026-04-11.md`
 - `docs/STAGGERED_TWO_BODY_NEXT_STEPS_NOTE_2026-04-11.md`
 - `scripts/frontier_staggered_direct_com_closure.py`
 - `scripts/frontier_staggered_both_masses.py`
@@ -262,6 +268,8 @@ Why held:
   negative on the audited open-cubic surface
 - the packet-local momentum-flux / impulse readout has now been tried and is
   still negative on the audited open-cubic surface
+- the x-directed shell-flux refinement fixes the sign gate, but the impulse
+  remains non-convergent and does not produce a retained trajectory law
 
 Required next experiment:
 
