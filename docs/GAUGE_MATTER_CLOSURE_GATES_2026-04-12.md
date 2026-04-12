@@ -17,7 +17,7 @@ The structural gauge backbone is now materially stronger:
 
 The two remaining theory gates that most affect the ultimate paper impact are:
 
-1. anomaly-complete hypercharge / chiral completion
+1. graph-canonical right-handed completion / full chiral completion
 2. physical generation closure
 
 Both are real open gates. Neither is fixed by the new graph-first `SU(3)` result
@@ -25,7 +25,7 @@ alone.
 
 ---
 
-## Gate 1. Anomaly-Complete Hypercharge / Chiral Completion
+## Gate 1. Graph-Canonical Right-Handed Completion / Chiral Completion
 
 ### What is already closed
 
@@ -140,14 +140,19 @@ Needed conclusion:
 
 ### Current decision
 
-- keep hypercharge anomaly completion **open**
-- paper-safe wording remains:
-  - hypercharge-like
-  - left-handed charge matching
-- use `GRAPH_FIRST_CHIRAL_COMPLETION_SEARCH_NOTE.md` as the current obstruction
-  memo for why the right-handed sector is still missing
-- treat `CHIRAL_COMPLETION_NOTE.md` as a **conditional anomaly-completion
-  theorem**, not yet as a graph-canonical derivation of the full chiral sector
+- keep the **graph-canonical right-handed completion** gate open
+- the anomaly equations on the right-handed singlet template are now
+  conditionally closed
+- paper-safe wording is now:
+  - structural `su(3) \oplus u(1)` plus left-handed charge matching
+  - conditional one-generation completion on the 4D chirality + singlet-template
+    surface
+- use `GRAPH_FIRST_CHIRAL_COMPLETION_SEARCH_NOTE.md` as the obstruction memo for
+  why the right-handed sector is not yet graph-canonically produced on the
+  retained one-particle surface
+- treat `CHIRAL_COMPLETION_NOTE.md` and `RIGHT_HANDED_SECTOR_NOTE.md` as
+  **conditional full-generation completion** notes, not yet as graph-canonical
+  derivations of the full chiral sector
 
 ---
 

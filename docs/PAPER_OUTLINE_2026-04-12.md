@@ -22,12 +22,12 @@ gravitational and atomic stability bounds, exact SU(2) gauge structure from the
 bipartite Clifford bivectors, and structural SU(3) colour from a graph-first
 axis selector combined with the commutant theorem — yielding the decomposition
 C⁸ = (2,3) ⊕ (2,1) with left-handed charge assignment Y = +1/3 (quarks) and
-Y = −1 (leptons). The retained structural backbone has no adjustable
-parameters; bounded phenomenological windows and still-open gates are reported
-separately. We identify bounded windows for the dark matter ratio (R ≈ 5.5),
-the cosmological energy density, and the CMB spectral tilt, and we catalogue
-the remaining theorems needed for full matter-sector closure — anomaly-complete
-hypercharge and generation physicality.
+Y = −1 (leptons). A conditional 4D chiral completion of one SM generation is
+now available on a right-handed singlet template, while the remaining open
+matter-sector theorem is the graph-canonical derivation of that template and
+the physical-generation assignment. The retained structural backbone has no
+adjustable parameters; bounded phenomenological windows and still-open gates
+are reported separately.
 
 ---
 
@@ -109,10 +109,13 @@ Q = T₃ + Y/2 give (+2/3, −1/3, 0, −1) — matching one generation of
 left-handed SM fermions.
 
 **BOUNDED: Hypercharge identification**
-The charge matching is correct for left-handed fermions. Full anomaly-complete
-hypercharge requires extending to the right-handed singlet sector and verifying
-Tr[Y] = Tr[Y³] = Tr[SU(3)²Y] = Tr[SU(2)²Y] = 0 over a complete generation.
-This is the chiral completion theorem (Work Package A, see Discussion).
+The charge matching is correct for left-handed fermions. A conditional
+one-generation completion now exists: in the 4D taste space, chirality gives
+an `8_L ⊕ 8_R` split, and anomaly cancellation uniquely fixes the right-handed
+hypercharges on the singlet template once the neutral-neutrino condition is
+imposed. The remaining open step is not anomaly solving itself, but the
+graph-canonical derivation of that right-handed representation template
+(Work Package A, see Discussion).
 
 **BOUNDED: Three generations**
 The Z₃ orbifold of 8 taste states produces orbits of size 3, consistent with
@@ -133,13 +136,13 @@ depends on inputs or assumptions not yet derived from the structural backbone.**
 
 | Quantity | Framework window | Observed | Status |
 |---|---|---|---|
-| Dark matter ratio R | ~5.5 (taste Casimir + α_s) | 5.47 | Bounded: α_s from plaquette, Sommerfeld modelled |
+| Dark matter ratio R | ~5.5 (taste Casimir + α_s) | 5.47 | Bounded: direct lattice contact observable; freeze-out/Boltzmann still imported |
 | Λ_pred/Λ_obs | 1.46 (spectral gap on S³) | 1.00 | Bounded: topology assumed, not derived |
 | n_s | 0.967 (graph growth, N_e=60) | 0.965 ± 0.004 | Bounded: growth model, not derived dynamics |
 | sin θ_C | 0.224 (Z₃ anisotropy) | 0.224 | Bounded: Z₃ breaking parameter fitted |
 | J (Jarlskog) | 3.1×10⁻⁵ (Z₃ phase) | 3.08×10⁻⁵ | Bounded: same Z₃ fit |
 | sin²θ_W | 0.231 (taste thresholds) | 0.231 | Bounded: M_taste fitted, not derived |
-| m_t | 178.8 GeV (y_t = g_s/√6) | 173.0 GeV | Bounded: trace identity, not formal theorem |
+| m_t | 175.0 GeV (y_t = g_s/√6) | 173.0 GeV | Bounded: lattice Ward identity stronger; full gauged normalization still open |
 | Δm²₃₁/Δm²₂₁ | 32.6 | 32.6 | Fit: 2 free parameters in Z₃ seesaw |
 | δ_CP | −103° | −90° ± 20° | Fit: complex Z₃ breaking phase |
 
@@ -188,18 +191,21 @@ with explicit status labels.
 - Left-handed charge matching Y = +1/3, −1
 
 **What is bounded but promising:**
-- Anomaly-complete hypercharge on the right-handed template, conditional on the
-  separate graph-canonical completion step
+- Conditional full one-generation completion: 4D chirality supplies `8_L ⊕ 8_R`,
+  and anomaly cancellation fixes the right-handed hypercharges on the singlet
+  template
 - Z₃ orbit counting for generations, conditional on the physicality theorem
 - Phenomenological windows for R, Λ, n_s, sin θ_C, J, sin²θ_W, m_t
+- Direct lattice DM contact-propagator enhancement in the attractive Coulomb channel
 - Strong-field extension via S = L(1−tanh f)
 - Frozen star / information paradox resolution
 
 **What remains open (the two real gates):**
 
-*Work Package A: Chiral completion.* Derive the right-handed singlet sector
-canonically on the graph surface, rather than by a template, and verify anomaly
-cancellation across a full generation.
+*Work Package A: Graph-canonical right-handed completion.* The conditional
+anomaly-complete generation now exists on the 4D chirality plus singlet-template
+surface. The remaining open theorem is to derive that right-handed
+representation template canonically from the graph/taste structure itself.
 
 *Work Package B: Generation physicality.* Prove that the Z₃ taste orbits
 correspond to physical generations, not representation artifacts. This
@@ -254,8 +260,9 @@ separation of structural closure from phenomenological extension.
 
 ## Open theory gates (not paper blockers — future work)
 
-### A. Chiral completion theorem
-Derive right-handed sector → verify Tr[Y]=Tr[Y³]=Tr[SU(3)²Y]=Tr[SU(2)²Y]=0
+### A. Graph-canonical right-handed completion theorem
+Derive the right-handed representation template from the graph/taste surface
+rather than imposing the singlet template before anomaly cancellation
 
 ### B. Generation physicality theorem
 Prove Z₃ taste orbits = physical generations with canonical matter assignment
