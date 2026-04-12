@@ -4,9 +4,9 @@ Generation Physicality: Z_3 Taste Orbits as a Physicality Pressure Test
 ========================================================================
 
 CLAIM: The Z_3 cyclic-permutation orbits of the 8 staggered taste states in
-d=3 give an exact orbit decomposition, and the Wilson deformation can be used
-as a pressure test for whether those orbits can be treated as physical fermion
-generations.
+d=3 give an exact orbit decomposition. The Wilson deformation is a pressure
+test for the stronger claim that those orbits can be canonically assigned as
+physical fermion generations.
 
 THE REFEREE OBJECTION:
     "In lattice QCD, taste states are artifacts of staggered discretisation
@@ -21,6 +21,9 @@ THIS SCRIPT DOES NOT PROVE PHYSICAL GENERATIONS. It does three things:
   3. Uses a Wilson deformation as a controlled pressure test for whether the
      same Clifford structure controls the orbit pattern, gauge generators, and
      mass splitting in this model.
+
+The exact blocker is the absence of a canonical matter-assignment theorem that
+forces the orbit classes to be physical generations.
 
 PStack experiment: generation-physicality
 Self-contained: numpy + scipy only.
@@ -263,11 +266,11 @@ def section_1_physical_distinctness():
     print("    2. Gauge coupling: g_eff ~ 1 + c*a^2*|s|^2  [lattice correction]")
     print("    3. CP phase:      delta_k = 2*pi*k/3        [Z_3 charge]")
     print("  If all three were identical, the orbits would be copies (artifacts).")
-    print("  They differ in ALL THREE -> the orbits are physically distinct.")
+    print("  They differ in ALL THREE -> the orbits are model-distinct.")
 
     report("physical-distinctness",
            True,
-           "Z_3 orbits differ in mass, coupling, and CP phase -> not artifacts")
+           "Z_3 orbits differ in model diagnostics; physical assignment remains open")
 
 
 # =============================================================================
@@ -546,7 +549,8 @@ def section_3_ckm_mixing():
     print("    2. The misalignment between their eigenbases IS the CKM matrix")
     print("    3. The CP phase delta = 2pi/3 comes from the Z_3 root of unity omega")
     print("    4. The Cabibbo angle comes from the Z_3 geometric factor")
-    print("  All four CKM parameters (3 angles + 1 phase) have Z_3 origins.")
+    print("  All four CKM parameters are accommodated in the toy Z_3-breaking texture.")
+    print("  Exact Standard Model values remain review-only.")
 
 
 # =============================================================================
@@ -626,17 +630,17 @@ def section_4_singlet_question():
     print("    - It is Z_3-invariant: no generation quantum number")
     print("    - It has no preferred direction -> no chiral gauge coupling")
     print("    - Interpretation: a sterile (right-handed) neutrino")
-    print("    - PREDICTION: 2 sterile neutrinos (one per singlet)")
+    print("    - Candidate interpretation: 2 sterile neutrinos (one per singlet)")
     print()
     print("  Option B: DECOUPLED STATE CANDIDATES")
     print("    - (1,1,1) has Wilson mass 6r/a ~ M_Planck -> decouples at low energy")
     print("    - (0,0,0) could mix with the triplet states via interactions")
-    print("    - At low energy, only the triplet states (generations) survive")
+    print("    - At low energy, only the triplet states survive in this toy picture")
     print()
     print("  Option C: COMBINED MODEL INTERPRETATION")
     print("    - (0,0,0) = light sterile neutrino (observable)")
     print("    - (1,1,1) = Planck-mass state (decoupled)")
-    print("    - This gives 3 generations + 1 sterile neutrino + 1 ultra-heavy state")
+    print("    - This gives 3 candidate generations + 1 sterile neutrino + 1 ultra-heavy state")
 
     report("singlet-interpretation",
            True,
@@ -831,7 +835,7 @@ def section_5_wilson_deformation():
 
     report("simultaneous-breaking",
            cl_threshold == su2_threshold or (cl_threshold is not None and su2_threshold is not None),
-           "SU(2), SU(3), and generations break at the same Wilson threshold")
+           "Cl(3) and SU(2) break together in the pressure test; generation co-variation remains noncanonical")
 
 
 # =============================================================================
@@ -884,8 +888,8 @@ def section_6_furey_comparison():
 
     # --- Key advantage: N_gen = d_spatial ---
     print("\n--- Key advantage: N_gen = d_spatial ---")
-    print("  Our mechanism ties the number of generations to the spatial dimensionality.")
-    print("  This is a PREDICTION that Furey's mechanism does not make:")
+    print("  Our mechanism ties the number of candidate generations to the spatial dimensionality.")
+    print("  This is a conditional prediction that Furey's mechanism does not make:")
     print("    - If d = 2 (flatland): N_gen = 1 (one doublet orbit)")
     print("    - If d = 3 (our universe): N_gen = 3 (two triplet orbits)")
     print("    - If d = 5 (hypothetical): N_gen = 6 (six quintet orbits)")
@@ -904,16 +908,16 @@ def section_6_furey_comparison():
     # --- Key advantage: geometric origin ---
     print("\n--- Key advantage: geometric origin ---")
     print("  Furey's S_3 acts on ABSTRACT algebraic structures (Cayley-Dickson doublings).")
-    print("  Our Z_3 acts on PHYSICAL spatial axes.")
+    print("  Our Z_3 acts on the lattice spatial axes in the model.")
     print("  This means our mechanism has a clear operational definition:")
     print("    'Rotate the lattice by 120 degrees about the (1,1,1) body diagonal.'")
     print("  This rotation maps spatial axis x -> y -> z -> x, which in taste space")
     print("  maps BZ corner (pi,0,0) -> (0,pi,0) -> (0,0,pi) -> (pi,0,0).")
-    print("  The orbit IS the set of states related by this physical rotation.")
+    print("  The orbit is the set of states related by this lattice rotation.")
 
     report("geometric-origin",
            True,
-           "Z_3 has operational definition as physical rotation, unlike Furey's algebraic S_3")
+           "Z_3 has an operational lattice-rotation interpretation, unlike Furey's algebraic S_3")
 
 
 # =============================================================================
@@ -980,6 +984,9 @@ def main():
   BOTTOM LINE: The exact theorem is the orbit decomposition 8 = 1 + 1 + 3 + 3.
   The open theorem is whether those orbits are physical generations rather
   than model artifacts.
+
+  EXACT BLOCKER: no canonical matter-assignment theorem and no unavoidable
+  graph-side structure theorem forcing the orbit classes to be physical.
 
   Tests passed: {PASS_COUNT}/{PASS_COUNT + FAIL_COUNT}
   Time: {elapsed:.1f}s

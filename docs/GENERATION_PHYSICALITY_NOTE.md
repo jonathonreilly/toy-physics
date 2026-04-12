@@ -13,7 +13,7 @@ The audited `Z_3` action on the 8 staggered taste states gives the exact orbit a
 
 `8 = 1 + 1 + 3 + 3`.
 
-That algebraic decomposition is stable and exact. The Wilson deformation study also gives a useful model-level pressure test: in the current toy construction, the Clifford/gauge diagnostics and orbit multiplicities co-vary under the same deformation.
+That algebraic decomposition is stable and exact. The Wilson deformation study gives a useful model-level pressure test: in the current toy construction, the Clifford/gauge diagnostics and orbit multiplicities co-vary under the same deformation. That is evidence for a shared algebraic root, not a proof that the orbits are physical generations.
 
 This is the strongest result in the lane.
 
@@ -54,6 +54,8 @@ To close the generation-physicality gap, we still need one of the following:
 
 Without one of those, the lane stays bounded: the orbit algebra is exact, but physical generation closure is open.
 
+The exact blocker is therefore not the orbit count; it is the absence of a theorem that canonically identifies the orbit classes with physical matter families on the graph side.
+
 ---
 
 ## Paper-safe wording
@@ -61,4 +63,3 @@ Without one of those, the lane stays bounded: the orbit algebra is exact, but ph
 Use this, not the stronger claim:
 
 > The audited `Z_3` action on the 8 taste states yields the exact orbit algebra `8 = 1 + 1 + 3 + 3`. The Wilson deformation provides a model-level pressure test suggesting that this orbit structure shares the same algebraic root as the Clifford/gauge diagnostics. Physical generation closure remains an open theorem.
-

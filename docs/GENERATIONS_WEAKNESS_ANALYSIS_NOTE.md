@@ -73,13 +73,14 @@ These match the known S_3 character table exactly.
 
 ### Verdict
 
-**Severity: MEDIUM -- resolved by restatement.**
+**Severity: MEDIUM -- mathematical fact, but not a physical-family theorem.**
 
 The S_3 reducibility is a mathematical fact about the embedding of the
 permutation representation, but it is irrelevant to the physics. The correct
 symmetry group is Z_3, under which all three generations are inequivalent.
 The paper should use Z_3 (not S_3) as the organizing symmetry and should
-not claim an "irreducible triplet."
+not claim an "irreducible triplet." This does not yet identify the orbit
+classes with physical matter families.
 
 ---
 
@@ -148,13 +149,14 @@ whether position-space Z_3 is exact.
 
 ### Verdict
 
-**Severity: HIGH -- but fully addressable by reformulation.**
+**Severity: HIGH -- exact blocker for physical-generation closure.**
 
 The paper must NOT claim that "spatial rotations create generations." Instead:
 "The Cl(d) Z_3 automorphism organizes the 2^d spinor components (taste
 doublers) into d-fold orbits. For d = 3, these orbits serve as three fermion
 generations." This version is exact, algebraic, and immune to the
-position-space objection.
+position-space objection, but it still does not supply a canonical matter
+assignment.
 
 ---
 
@@ -190,13 +192,13 @@ Furthermore, d = 3 is independently selected by:
 
 ### Verdict
 
-**Severity: LOW.**
+**Severity: LOW -- helpful context, not a closure theorem.**
 
 The generation count N_gen = d is a consequence, not an independent prediction.
 But d = 3 is independently fixed and uniquely produces 2 chiral orbits. The
 paper should state this honestly: "The number of generations equals the
 spatial dimensionality. Since d = 3 is fixed by gravitational and atomic
-stability, this predicts exactly 3 generations."
+stability, this predicts exactly 3 candidate generations."
 
 ---
 
@@ -255,11 +257,11 @@ momentum-space labels. This is correct for the SM.
 
 ### Verdict
 
-**Severity: HIGH -- foundational assumption, not removable.**
+**Severity: HIGH -- the exact open theorem.**
 
 The generation mechanism is conditional on the fundamental lattice being
 staggered. This is the deepest assumption in the argument. It cannot be
-proven from within the framework -- it must be stated as a postulate.
+proven from within the current surface -- it must be stated as a postulate.
 
 The paper should write: "IF the fundamental lattice structure is staggered
 (as in the causal-graph framework), THEN taste doublers are physical degrees
@@ -280,20 +282,20 @@ structure is shown to be non-staggered, the mechanism fails.
 | S_3 reducibility (1+2) | MEDIUM | Resolved | Use Z_3, not S_3 |
 | Position vs taste Z_3 | HIGH | Resolved | Algebraic reformulation via Cl(3) |
 | 3 is just d | LOW | Bounded | State honestly as consequence |
-| Taste physicality | HIGH | Bounded | State as conditional assumption |
+| Taste physicality | HIGH | Open blocker | State as conditional assumption |
 
 ### The claim survives, with caveats
 
-The Z_3 generation mechanism is **mathematically sound** and **not broken**
-by any of the attacks. However, the paper must:
+  The Z_3 generation mechanism is **mathematically sound** and **not broken**
+  by any of the attacks. However, the paper must:
 
 1. **Reformulate** using the Cl(3) Z_3 automorphism (not spatial rotations)
 2. **State clearly** that the result is conditional on a fundamental staggered
    lattice (taste doublers = physical particles)
 3. **Acknowledge** that N_gen = d is a consequence of dimensionality, not an
    independent prediction (though d = 3 is uniquely selected)
-4. **Drop** any claim of an "irreducible triplet" -- the three generations
-   carry distinct Z_3 charges but are NOT an irrep of any larger group
+4. **Drop** any claim of an "irreducible triplet" -- the orbit classes carry
+   distinct Z_3 charges but are NOT an irrep of any larger group.
 
 ### What would actually break the claim
 
@@ -306,3 +308,11 @@ The claim would be falsified by:
   taste doublers unphysical
 
 None of these is currently the case.
+
+### Exact blocker
+
+The exact blocker is not orbit counting. It is the absence of a theorem that
+canonically assigns the orbit classes to physical matter families on the graph
+side, together with the absence of an unavoidable graph-side structure that
+forces that assignment. The current evidence is sufficient for the orbit
+algebra and pressure tests, but not for physical-generation closure.

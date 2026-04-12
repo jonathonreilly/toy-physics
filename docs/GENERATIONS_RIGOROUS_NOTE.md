@@ -1,7 +1,7 @@
-# Three Fermion Generations from Z_3 Taste Orbifold
+# Orbit Algebra from Z_3 Taste Orbifold
 
 **Date:** 2026-04-12
-**Status:** Rigorous development -- all claims numerically verified
+**Status:** Rigorous orbit algebra; physical-generation interpretation remains conditional
 **Script:** `scripts/frontier_generations_rigorous.py`
 **Log:** `logs/2026-04-12-generations_rigorous.txt`
 
@@ -11,12 +11,12 @@
 
 We show that the 8 = 2^3 taste doublers of staggered fermions in d = 3 spatial
 dimensions decompose under the Z_3 cyclic permutation of spatial axes into exactly
-4 orbits: two singlets and two triplets. The triplets are natural three-generation
-multiplets. The orbit structure 8 = 1 + 1 + 3 + 3 is proven unique by Burnside's
-lemma and requires no free parameters -- the number 3 arises from the spatial
-dimensionality. The two triplets carry opposite chirality, matching the left-right
-structure of Standard Model generations. We distinguish this mechanism from prior
-work (Furey, Kaplan-Sun, string orbifolds) and address the continuum-limit objection.
+4 orbits: two singlets and two triplets. The orbit structure 8 = 1 + 1 + 3 + 3 is
+proven unique by Burnside's lemma and requires no free parameters -- the number 3
+arises from the spatial dimensionality. The two triplets are natural candidate
+generation multiplets, but physical-generation closure is not derived here. We
+distinguish this mechanism from prior work (Furey, Kaplan-Sun, string orbifolds)
+and separate the exact orbit algebra from the still-open matter-assignment step.
 
 ---
 
@@ -26,8 +26,9 @@ work (Furey, Kaplan-Sun, string orbifolds) and address the continuum-limit objec
 by binary vectors s = (s_1, s_2, s_3) in {0,1}^3, corresponding to the 8 corners
 of the Brillouin zone at momenta p_mu = s_mu * pi/a. The cyclic group Z_3, generated
 by the permutation sigma: (s_1, s_2, s_3) -> (s_2, s_3, s_1), decomposes these 8
-states into orbits that include exactly two triplets. These triplets serve as
-fermion generations.
+states into orbits that include exactly two triplets. These triplets are the exact
+orbit classes that a generation model would need to identify with fermion families;
+that identification remains conditional.
 
 ---
 
@@ -90,7 +91,7 @@ representation decomposes under Z_3 as:
 
     3 = rho_0 + rho_1 + rho_2
 
-where rho_k has character omega^k. Each generation carries a **distinct Z_3 charge**.
+where rho_k has character omega^k. Each orbit component carries a **distinct Z_3 charge**.
 
 ### 3.2 S_3 decomposition
 
@@ -105,10 +106,11 @@ This is verified numerically: the representation matrices become block-diagonal
 The 2x2 block has characters chi(sigma) = -1, chi(tau) = 0, confirming the
 standard irrep of S_3.
 
-**Assessment:** The three generations are **not** an irreducible triplet of S_3
+**Assessment:** The three orbit states are **not** an irreducible triplet of S_3
 (no such irrep exists for S_3). They form the permutation representation, which
 is the natural representation of S_3 on 3 objects. Under the Z_3 subgroup, all
-three irreps are distinct, providing a quantum number that labels generations.
+three irreps are distinct, providing a quantum number that can label candidate
+generations.
 
 ### 3.3 Conjugate orbits
 
@@ -125,8 +127,8 @@ has charges (0, -1, +1). The two orbits are related by charge conjugation.
 In staggered fermion theory, gauge fields live on lattice links and couple
 identically to all taste states. Therefore, all members of a Z_3 orbit carry
 the **same** electric charge, weak isospin, and color charge. This is the
-correct property for generations: the electron, muon, and tau differ only in
-mass, not in gauge quantum numbers.
+right property if the orbits are later identified with generations: the
+electron, muon, and tau differ only in mass, not in gauge quantum numbers.
 
 ### 4.2 Chirality
 
@@ -138,8 +140,8 @@ The staggered chirality operator Gamma_5 has eigenvalue (-1)^{|s|} where
 
 All members within each orbit have the **same chirality** (since Z_3 preserves
 Hamming weight). The two orbits have **opposite chirality**, matching the
-left-right structure of the Standard Model where each generation contains
-both a left-handed and right-handed component.
+left-right structure of the Standard Model if the orbit classes are taken as
+candidate generations.
 
 ### 4.3 Free-theory mass
 
@@ -178,10 +180,10 @@ observable rotation symmetry of 3D space restricted to its cyclic subgroup.
 ### 5.4 vs. "d = 3 implies 3 generations" folklore
 
 The numerical coincidence d = N_gen = 3 has been noted as unexplained. Our
-contribution is the **mechanism**: Z_3 cyclic permutation on taste doublers creates
-size-3 orbits. This converts a numerological observation into a mathematical theorem
-with a specific prediction: N_gen = d for prime d, via the orbit structure of Z_d
-acting on {0,1}^d.
+contribution is the **mechanism candidate**: Z_3 cyclic permutation on taste
+doublers creates size-3 orbits. This converts a numerological observation into a
+mathematical orbit theorem with a candidate prediction: N_gen = d for prime d,
+via the orbit structure of Z_d acting on {0,1}^d.
 
 ---
 
@@ -199,8 +201,9 @@ In our framework, the lattice is **not a regulator** -- it is the fundamental
 theory. There is no continuum limit to take. The lattice spacing a ~ l_Planck is
 physical. Therefore:
 
-1. **Taste doublers are physical degrees of freedom**, not artifacts to be removed.
-   The rooting trick is a choice made to match continuum QCD; it is not forced.
+1. **Taste doublers are physical degrees of freedom under the framework premise**,
+   not artifacts to be removed. The rooting trick is a choice made to match
+   continuum QCD; it is not forced.
 
 2. **Precedent in condensed matter:** In graphene (d = 2), the 2^2 = 4 taste states
    correspond to 4 physical Dirac cones with observable consequences (valley
@@ -208,9 +211,9 @@ physical. Therefore:
    physical structure. We propose the same at the Planck scale.
 
 3. **Falsifiability:** If taste doublers = generations, the number of generations
-   equals d (the spatial dimensionality). This is a sharp prediction: exactly 3
-   generations in d = 3, no more, no less. The mechanism also predicts the existence
-   of 2 singlet states with special properties.
+   equals d (the spatial dimensionality). This is a sharp conditional prediction:
+   exactly 3 generations in d = 3, no more, no less. The mechanism also predicts
+   the existence of 2 singlet states with special properties.
 
 4. **Numerical verification:** The 8-fold near-zero mode count is exact on all even
    lattices L = 4, 6, 8, 10, 12, 14 with periodic boundary conditions. This is a
@@ -280,13 +283,14 @@ For d = 3: (2^3 - 2)/3 = 2 triplet orbits, confirming the result.
 ### Strengths
 
 1. **Uniqueness:** The orbit decomposition is the unique partition under Z_3,
-   proven by Burnside's lemma. There is no freedom in the construction.
+   proven by Burnside's lemma. There is no freedom in the orbit count itself.
 
 2. **No free parameters:** The number 3 enters once (as d) and produces 3
-   generations as a mathematical consequence.
+   candidate generations as a mathematical consequence.
 
 3. **Correct quantum numbers:** Same gauge charges within orbits, opposite
-   chirality between T_1 and T_2, matching SM generation structure.
+   chirality between T_1 and T_2, matching SM generation structure if the orbit
+   classes are later identified with families.
 
 4. **Lattice-size independent:** Algebraic property of taste space, not a
    finite-size artifact.
@@ -294,20 +298,22 @@ For d = 3: (2^3 - 2)/3 = 2 triplet orbits, confirming the result.
 ### Weaknesses
 
 1. **Reducibility under S_3:** The triplet is 1 + 2 under S_3, not irreducible.
-   The generations are not fully democratic under the full permutation group.
+   This is a mathematical fact about the embedding, not a physical-family theorem.
 
 2. **Two triplets plus two singlets:** The 8 = 1+1+3+3 decomposition gives
-   more states than just 3 generations. The extra states require interpretation
-   (left/right chirality, sterile neutrinos, dark sector).
+   more states than just 3 generations. The extra states require a canonical
+   matter assignment (left/right chirality, sterile neutrinos, dark sector).
 
-3. **Mass ratios not predicted:** The mechanism explains N_gen = 3 but not the
-   specific mass hierarchy. This is a dynamical question.
+3. **Mass ratios not predicted:** The mechanism explains the orbit count but not
+   the specific mass hierarchy. This is a dynamical question.
 
 4. **Radical assumption:** Treating taste doublers as physical (not artifacts)
-   is a departure from standard lattice QCD.
+   is a departure from standard lattice QCD and remains the exact matter-
+   assignment gap.
 
 5. **Position-space Z_3 breaking:** The staggered phases break the spatial Z_3
-   in position space. The symmetry is exact only in momentum (taste) space.
+   in position space. The symmetry is exact only in momentum (taste) space, so
+   a graph-side inevitability theorem is still needed.
 
 ---
 
