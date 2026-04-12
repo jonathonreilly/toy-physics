@@ -360,7 +360,7 @@ def main():
     mass_strength = 1.0
 
     # Grid sizes: extend to 80 and 96
-    grid_sizes = [31, 40, 48, 56, 64, 80, 96]
+    grid_sizes = [31, 40, 48, 56, 64, 80, 96, 128]
 
     # Impact parameters: use b=3..N/6 (scaled with grid) and also a fixed core b=3..10
     min_b_fit = 3
