@@ -591,6 +591,77 @@ Reason:
   wording rather than unique branch-specific science payload
 - no branch-specific science paths remain stranded on this source tip
 
+### Exact-match `frontier/*` architecture / chiral batch
+
+Status:
+
+- scrubbed into `codex/review-active`
+
+Branches covered in this pass:
+
+- `origin/frontier/architecture-fork`
+- `origin/frontier/chiral-3plus1d`
+- `origin/frontier/chiral-higher-dim`
+
+Archive readiness:
+
+- archive-ready
+
+Reason:
+
+- all files in these three branches match the active review branch exactly
+- no branch-specific science paths remain stranded on these source tips
+
+### Historical-variant `frontier/*` dynamics / Lorentzian / unitarity batch
+
+Status:
+
+- scrubbed into `codex/review-active`
+
+Branches covered in this pass:
+
+- `origin/frontier/final-fixes`
+- `origin/frontier/lorentzian-validation`
+- `origin/frontier/review-round7`
+- `origin/frontier/unitarity-fix`
+- `origin/frontier/spectral-on-lattice`
+
+Archive readiness:
+
+- archive-ready
+
+Reason:
+
+- `review-round7`, `unitarity-fix`, and `spectral-on-lattice` match the active
+  review branch exactly on their tracked paths
+- `final-fixes` and `lorentzian-validation` differ only by older,
+  less-cautious or superseded Lorentzian / spectral framing, with no unique
+  science payload left after the earlier review captures
+- no branch-specific science paths remain stranded on these source tips
+
+### Historical-variant `frontier/*` growth / dimensionality batch
+
+Status:
+
+- scrubbed into `codex/review-active`
+
+Branches covered in this pass:
+
+- `origin/frontier/cleanup-experiments`
+- `origin/frontier/moonshot-round3`
+
+Archive readiness:
+
+- archive-ready
+
+Reason:
+
+- the differing scripts on these branches are older, broader versions of
+  growth / dispersion / dimensionality probes already preserved on review
+- the active review branch contains the narrowed current forms of the same
+  files
+- no branch-specific science paths remain stranded on these source tips
+
 ## Codex First-Pass Triage
 
 These statuses are mechanical only: whether the branch tip is already an
@@ -683,6 +754,16 @@ do not need further science capture before archive:
 - `origin/frontier/synthesis-and-next`
 - `origin/frontier/unitary-linear`
 - `origin/frontier/gravity-diagnosis`
+- `origin/frontier/architecture-fork`
+- `origin/frontier/chiral-3plus1d`
+- `origin/frontier/chiral-higher-dim`
+- `origin/frontier/final-fixes`
+- `origin/frontier/lorentzian-validation`
+- `origin/frontier/review-round7`
+- `origin/frontier/unitarity-fix`
+- `origin/frontier/spectral-on-lattice`
+- `origin/frontier/cleanup-experiments`
+- `origin/frontier/moonshot-round3`
 
 ### Likely archive-ready after one short verification pass
 
@@ -697,4 +778,4 @@ science branches, but they still need a quick final diff audit before delete:
   should continue incrementally into `codex/review-active`, but it is not an
   archive candidate while active work continues
 - next scrub stage is the remaining larger `frontier/*` branches after the
-  small Lorentzian / synthesis / unitary batches
+  Lorentzian / synthesis / unitary / chiral / dynamics / growth batches
