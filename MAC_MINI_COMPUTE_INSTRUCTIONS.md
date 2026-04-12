@@ -53,6 +53,39 @@ Expected runtime: ~10-20 min. The 3D L=14 eigendecomposition (2744 sites) is the
 - **GW150914 echo time in milliseconds** — this is the headline number
 - Comparison to Abedi et al. (2017) claimed ~100 ms echoes
 
+## Run 5: Sommerfeld Lattice Green's Function (CONVERGENCE FIX)
+
+The script computes S = G_Coulomb(r=0; E) / G_free(r=0; E) directly on a
+lattice Hamiltonian. At N=2000 it gets 0/20 within 5% of the analytic formula
+due to finite-size effects. Needs N >> 2000.
+
+```bash
+python3 scripts/frontier_sommerfeld_lattice_greens.py 2>&1 | tee ~/Desktop/sommerfeld_lattice.txt
+```
+
+**The fix needed:** Edit the script to increase lattice sizes:
+- 1D: change N from [100, 200, 500, 1000, 2000] to [2000, 5000, 10000, 20000, 50000]
+- 3D: change L from [8, 10, 12] to [16, 20, 24, 32] (if memory allows)
+- Also try: increase the box size (multiply positions by a scale factor) to reduce
+  boundary effects on the Coulomb wavefunction
+
+**What to report:**
+- Does S_lattice converge to S_Sommerfeld at larger N?
+- At what N does it match to 5%? To 1%?
+- The master table: α_s, v_rel, S_analytic, S_lattice(best N), % match
+- If 3D L=32 is too large, report the largest L that fits in memory
+
+**Why this matters:** If S_lattice matches S_Sommerfeld at large N, the
+Sommerfeld enhancement is a LATTICE OBSERVABLE — codex's last flag on the
+DM ratio lane is closed. R = 5.48 becomes fully structural.
+
+Expected runtime: 10-60 min depending on max N. The 1D N=50000 eigendecomposition
+is the bottleneck (~50000×50000 matrix).
+
+**Memory note:** For 1D, N=50000 needs ~20GB RAM (dense matrix). If that's too
+much, use scipy.sparse.linalg.eigsh with k=500 eigenvectors instead of full
+diagonalization, and compute G(0;E) from the partial spectral sum.
+
 ## What to report back
 
 From each run, copy the output sections:
