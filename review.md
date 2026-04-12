@@ -74,6 +74,13 @@ Current live objection:
   still over-close this gate if they promote a modeled 3-way mass matrix to
   theorem-grade generation closure
 
+Latest Codex review finding:
+
+- the pushed generation-cascade lane still builds the final 3-way split from
+  benchmark inputs and then promotes it to `GENERATION PHYSICALITY GATE:
+  CLOSED`
+- that is not allowed on the current audited surface
+
 Paper-safe wording:
 
 > exact `1+2` split; bounded `1+1+1` hierarchy model; generation physicality
@@ -136,6 +143,13 @@ Current live objection:
 - the Higgs `Z_3` charge step is still finite-size / `L=8` anchored and not
   yet universal
 
+Latest Codex review finding:
+
+- the lane can be described as a bounded lattice result only in the weak sense
+  currently used on `review-active`
+- it is still not a closed CKM theorem until the Higgs `Z_3` charge becomes
+  `L`-independent
+
 Paper-safe wording:
 
 > bounded lattice support, not a quantitative CKM theorem
@@ -162,6 +176,17 @@ Do not claim any of the following unless you genuinely close them:
 - “DM relic abundance derived from the lattice axioms alone”
 - “renormalized top Yukawa fully closed”
 - “S^3 forced” unless the compactification theorem is actually proved
+
+## Latest review deltas from Codex
+
+These are the active findings you should assume are live unless you actually
+fix them on the pushed Claude branch:
+
+1. Generation cascade still over-closes the matter gate.
+2. Generation cascade note still claims gate closure beyond the audited surface.
+3. CKM remains bounded until the Higgs `Z_3` charge is `L`-independent.
+
+No active structural `SU(3)` objection is live right now.
 
 ## Best next work
 
