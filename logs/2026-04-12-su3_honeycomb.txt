@@ -1,0 +1,125 @@
+================================================================================
+SU(3) FROM HONEYCOMB / 3-SUBLATTICE LATTICES
+================================================================================
+
+============================================================
+LATTICE 1: Kagome lattice (2D, 3 sublattices)
+============================================================
+  Sampled 400 k-points
+  Independent traceless Hermitian generators: 3
+  su(3) needs 8 generators
+
+  Gell-Mann overlap:
+    lambda_1: max overlap = 1.0000 [COVERED]
+    lambda_2: max overlap = 0.0000 
+    lambda_3: max overlap = 0.0000 
+    lambda_4: max overlap = 0.8392 [COVERED]
+    lambda_5: max overlap = 0.0000 
+    lambda_6: max overlap = 0.8392 [COVERED]
+    lambda_7: max overlap = 0.0000 
+    lambda_8: max overlap = 0.0000 
+  Gell-Mann directions covered: 3/8
+
+  Commutator closure of kagome Bloch Hamiltonians:
+  Algebra dimension from commutator closure: 12
+
+  Verifying su(3) structure constants:
+  Max residual in structure constants: 0.333333
+  Lie algebra closure: NO
+
+============================================================
+LATTICE 2: Cubic with 3-site basis (ABC stacking)
+============================================================
+  Sampled 3375 k-points
+  Independent traceless Hermitian generators: 3
+  Algebra dimension from commutator closure: 8
+  Gell-Mann directions covered: 8/8
+
+============================================================
+LATTICE 3: Staggered Z_3 fermions on 3-sublattice cubic
+============================================================
+  Hopping matrices per direction:
+    T_x:
+      [1.+0.j 0.+0.j 0.+0.j]
+      [ 0. +0.j       -0.5+0.866025j  0. +0.j      ]
+      [ 0. +0.j        0. +0.j       -0.5-0.866025j]
+    T_y:
+      [0.+0.j 1.+0.j 0.+0.j]
+      [0.+0.j 0.+0.j 1.+0.j]
+      [1.+0.j 0.+0.j 0.+0.j]
+    T_z:
+      [0.+0.j 1.+0.j 0.+0.j]
+      [ 0. +0.j        0. +0.j       -0.5+0.866025j]
+      [-0.5-0.866025j  0. +0.j        0. +0.j      ]
+
+  Independent generators from H(k): 6
+  After adding anti-Hermitian parts: 6
+  Algebra dimension from commutator closure: 8
+
+  Gell-Mann overlap:
+    lambda_1: max overlap = 0.6667 [COVERED]
+    lambda_2: max overlap = 0.5700 [COVERED]
+    lambda_3: max overlap = 0.6045 [COVERED]
+    lambda_4: max overlap = 0.5779 [COVERED]
+    lambda_5: max overlap = 0.5700 [COVERED]
+    lambda_6: max overlap = 0.5774 [COVERED]
+    lambda_7: max overlap = 0.5774 [COVERED]
+    lambda_8: max overlap = 0.8660 [COVERED]
+  Gell-Mann directions covered: 8/8
+
+  Generator decomposition in Gell-Mann basis:
+    g_0: -0.471*L1 + -0.354*L3 + -0.118*L4 + 0.204*L5 + -0.118*L6 + 0.204*L7 + -0.204*L8
+    g_1: 0.031*L1 + 0.401*L2 + -0.046*L3 + -0.409*L4 + 0.148*L5 + 0.287*L6 + -0.254*L7 + -0.026*L8
+    g_2: 0.164*L1 + -0.075*L2 + -0.246*L3 + -0.263*L4 + -0.321*L5 + -0.392*L6 + -0.246*L7 + -0.142*L8
+    g_3: 0.046*L1 + 0.403*L2 + -0.069*L3 + 0.046*L4 + -0.403*L5 + 0.046*L6 + 0.403*L7 + -0.040*L8
+    g_4: 0.285*L1 + -0.065*L2 + -0.427*L3 + 0.285*L4 + 0.065*L5 + 0.285*L6 + -0.065*L7 + -0.247*L8
+    g_5: -0.354*L3 + 0.612*L8
+    g_6: -0.354*L1 + 0.204*L2 + 0.354*L4 + -0.204*L5 + -0.408*L7
+    g_7: -0.204*L1 + -0.354*L2 + -0.204*L4 + -0.354*L5 + 0.408*L6
+
+================================================================================
+VERDICT
+================================================================================
+
+  SUMMARY TABLE:
+  +--------------------------+---------+----------+---------+
+  | Lattice                  | Algebra | Gell-Mann| su(3)?  |
+  |                          | dim     | covered  |         |
+  +--------------------------+---------+----------+---------+
+  | Kagome (2D, 3-sublatt)   |      12 |     3/8   |      NO |
+  | ABC cubic (3-sublatt)    |       8 |     8/8   |     YES |
+  | Staggered Z_3 (cubic)    |       8 |     8/8   |     YES |
+  +--------------------------+---------+----------+---------+
+
+  KEY FINDINGS:
+
+  1. KAGOME LATTICE (2D): The Bloch Hamiltonian H(k) on the kagome lattice
+     is a 3x3 matrix. As k varies over the Brillouin zone, H(k) traces out
+     a submanifold of the space of 3x3 Hermitian matrices. The algebra
+     generated has dimension 12.
+     
+
+  2. ABC CUBIC LATTICE: The 3-sublattice cubic lattice in 3D has a 3x3
+     Bloch Hamiltonian. The algebra generated has dimension 8.
+     This IS su(3)!
+
+  3. STAGGERED Z_3: Using Z_3 phases (clock and shift matrices) as the
+     hopping matrices produces an algebra of dimension 8.
+     This IS su(3)!
+
+  INTERPRETATION:
+  - Any lattice with a 3-site unit cell has a 3x3 Bloch Hamiltonian.
+  - The question is whether the SPECIFIC form of H(k) spans all 8
+    dimensions of su(3), or only a subalgebra.
+  - The staggered Z_3 construction (using clock and shift matrices as
+    hopping operators) is the most promising, because clock-shift
+    generates all of gl(3), and their traceless Hermitian combinations
+    span su(3).
+
+  BOTTOM LINE: The 3-sublattice structure provides the 3x3 matrix space
+  needed for su(3). Whether the FULL su(3) is generated depends on the
+  hopping matrices having enough structure (at least 2 non-commuting
+  3x3 matrices that together span 8 dimensions).
+
+  Time: 0.2s
+
