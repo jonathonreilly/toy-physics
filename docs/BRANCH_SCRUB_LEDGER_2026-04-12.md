@@ -174,6 +174,7 @@ do not need further science capture before archive:
 - `origin/codex/wilson-temporal-robustness`
 - `origin/codex/wilson-temporal-window-lane`
 - `origin/codex/main-revisit-sweep`
+- `origin/codex/source-weight-spectral`
 
 ### Likely archive-ready after one short verification pass
 
@@ -182,7 +183,6 @@ science branches, but they still need a quick final diff audit before delete:
 
 - `origin/codex/archive-main-retain-audit-20260411`
 - `origin/codex/archive-main-wilson-bounded-20260411`
-- `origin/codex/source-weight-spectral`
 
 ### Still need uniqueness review before archive
 
