@@ -314,15 +314,16 @@ log()
 
 
 # =========================================================================
-# STEP 4: Transfer matrix / continued fraction verification
+# STEP 4: Transfer matrix / bounded continued-fraction cross-check
 # =========================================================================
 
 log("=" * 78)
-log("STEP 4: TRANSFER MATRIX / CONTINUED FRACTION")
+log("STEP 4: TRANSFER MATRIX / BOUNDED CONTINUED-FRACTION CROSS-CHECK")
 log("=" * 78)
 log()
 log("  Verify G_free(0,0;z) = 1/sqrt(z^2 - 4t^2) for the infinite chain.")
-log("  Then show Coulomb continued fraction converges.")
+log("  Then compare the Coulomb continued fraction against the Sommerfeld limit.")
+log("  This is a bounded cross-check, not the decisive numerical proof.")
 log()
 
 
@@ -451,7 +452,8 @@ for n_terms in [100, 200, 500, 1000, 2000]:
         err = abs(S_cf_val / S_exact_cf - 1.0) * 100
         log(f"  {n_terms:8d}  {S_cf_val:14.8f}  {S_exact_cf:14.8f}  {err:8.4f}")
 
-check("Continued fraction ratio converges toward Sommerfeld factor", True)
+check("Continued fraction ratio stays in a bounded cross-check window (< 60% error)",
+      err < 60.0)
 log()
 
 
@@ -685,8 +687,9 @@ log("  PROOF CHAIN:")
 log("  1. Lattice resolvent -> continuum resolvent (Lax-Richtmyer)")
 log("  2. Continuum Coulomb |psi(0)|^2 = Gamow factor (confluent hypergeometric)")
 log("  3. Green's function ratio = |psi_C(0)|^2 / |psi_0(0)|^2 = S(zeta)")
-log("  4. Direct lattice route via transfer matrix / continued fraction")
-log("  5. Finite-size error O(1/N), predicting N needed for accuracy targets")
+log("  4. Finite-chain transfer-matrix cross-check (bounded, not decisive)")
+log("  5. Direct lattice contact computation in the companion note")
+log("  6. Finite-size error O(1/N), predicting N needed for accuracy targets")
 log()
 log(f"  VERIFICATION: {pass_count} passed, {fail_count} failed "
     f"out of {pass_count + fail_count} checks.")

@@ -181,10 +181,11 @@ alpha/v > 0, and S > 1 (enhancement).
 **QED.** The Green's function ratio at contact equals S(zeta). []
 
 
-## Step 4: Transfer Matrix / Continued Fraction (Direct Lattice Route)
+## Step 4: Transfer Matrix / Bounded Cross-Check
 
-For completeness, we give the direct lattice proof that bypasses the continuum
-limit entirely.
+For completeness, we record the finite-chain transfer-matrix identity as a
+cross-check against the continuum limit. The direct lattice contact computation
+is supplied by the companion numerical note.
 
 **Theorem 4** (Transfer matrix representation). The on-site Green's function of
 the 1D tight-binding chain with diagonal disorder {V_j} is
@@ -218,12 +219,16 @@ yielding g_0(z) = (z - sqrt(z^2 - 4t^2))/(2t^2), and therefore
 This is exact for the infinite chain.
 
 For the **Coulomb** chain (V_j = -alpha/(j*a)), the continued fraction does
-not close in elementary functions. However, in the continuum limit (a -> 0,
+not close in elementary functions. In the continuum limit (a -> 0,
 j -> infinity, j*a = r fixed), the transfer matrix T_j that maps
-(u_j, u_{j-1}) -> (u_{j+1}, u_j) converges to the propagator of the
-continuum Coulomb equation. The accumulated phase shift and amplitude
-modification are captured by the Whittaker function W_{-i*eta, 1/2}(2ikr),
-whose behavior at the origin gives back the Gamow factor from Theorem 2.
+(u_j, u_{j-1}) -> (u_{j+1}, u_j) approaches the propagator of the Coulomb
+equation. The accumulated phase shift and amplitude modification are captured
+by the Whittaker function W_{-i*eta, 1/2}(2ikr), whose behavior at the origin
+gives back the Gamow factor from Theorem 2.
+
+This is the analytic bridge. The benchmark below remains a finite-chain
+cross-check and is not the decisive numerical confirmation; at the representative
+parameters used in the script it stays at roughly 52% error.
 
 More precisely, the lattice transfer matrix at site j is
 
@@ -236,7 +241,8 @@ monodromy matrix of the continuum ODE, which is expressed in terms of Coulomb
 wavefunctions. The ratio of Green's functions then reduces to the ratio of
 wavefunction amplitudes at the origin, which is the Gamow factor.
 
-This completes the direct lattice proof. []
+This completes the finite-chain transfer-matrix identity. The direct lattice
+contact computation is in the companion numerical note. []
 
 
 ## Step 5: Finite-Size Error Estimate
@@ -312,11 +318,12 @@ The discretization error O(1/N^2) becomes subdominant for N > ~100.
 | 1 | H_lattice -> H_cont as a -> 0 | Lax-Richtmyer + Kato perturbation theory |
 | 2 | \|psi_k^C(0)\|^2 = Gamow factor | Confluent hypergeometric solution of Coulomb eqn |
 | 3 | G_C(0)/G_0(0) = S(zeta) | Spectral representation + Step 2 |
-| 4 | Lattice transfer matrix -> Whittaker functions | Direct lattice proof, no continuum limit needed |
+| 4 | Lattice transfer matrix identity | Bounded cross-check; direct lattice contact computation in companion note |
 | 5 | Error ~ O(1/N) finite-size + O(1/N^2) discretization | Poisson summation + FD truncation error |
 
-**Conclusion.** The lattice Green's function ratio converges to the Sommerfeld
-factor S = pi*zeta / (1 - exp(-pi*zeta)) as N -> infinity. The convergence rate
-is O(1/N), dominated by finite-size effects at the domain boundary. This
-explains why N = 2000 is insufficient for 5% accuracy at moderate coupling,
-and predicts that N ~ 10000-50000 is needed for percent-level agreement.
+**Conclusion.** The analytic chain from the resolvent to the Gamow factor and
+Sommerfeld expression is intact, and the transfer-matrix identity provides a
+finite-chain cross-check. The companion direct-computation note supplies the
+actual lattice contact calculation. The continued-fraction benchmark remains
+bounded and does not by itself establish the Sommerfeld limit at the
+representative parameters.
