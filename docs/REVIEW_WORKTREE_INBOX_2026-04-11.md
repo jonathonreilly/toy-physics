@@ -151,10 +151,12 @@ Files:
 - `docs/IRREGULAR_ENDOGENOUS_SIGN_CLOSURE_NOTE_2026-04-11.md`
 - `docs/IRREGULAR_ENDOGENOUS_SIGN_CLOSURE_NEXT_STEPS_2026-04-11.md`
 - `docs/IRREGULAR_ENDOGENOUS_SIGN_REINFORCEMENT_NOTE_2026-04-11.md`
+- `docs/IRREGULAR_ENDOGENOUS_SIGN_OBSERVABLE_NOTE_2026-04-11.md`
 - `docs/IRREGULAR_ENDOGENOUS_SIGN_SIZE_PORTABILITY_NOTE_2026-04-11.md`
 - `docs/IRREGULAR_ENDOGENOUS_SIGN_THIRD_FAMILY_NOTE_2026-04-11.md`
 - `scripts/frontier_irregular_endogenous_sign_closure.py`
 - `scripts/frontier_irregular_endogenous_sign_reinforcement.py`
+- `scripts/frontier_irregular_endogenous_sign_observable.py`
 - `scripts/frontier_irregular_endogenous_sign_size_portability.py`
 - `scripts/frontier_irregular_endogenous_sign_third_family.py`
 
@@ -164,13 +166,16 @@ Why held:
 - low-screening confirmation failed in the reinforcement run
 - second packet family helped but still did not close the lane
 - size-portability sweep also failed to make the shell-packet separator portable
+- the new transport observable improves the readout, but `k = 2` still fails
+  on most audited rows
 - packet-family generality is not closed
 
 Required next experiment:
 
   - the third independent annulus family has now been tried and still does not
     close the lane
-  - if reopened, switch to a different irregular observable on the same surface
+  - if reopened, switch to a different transport definition on the same
+    surface, not another packet-family sweep
 - do not promote the current reinforcement run
 
 #### D. Staggered two-body closure family

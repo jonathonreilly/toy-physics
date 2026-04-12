@@ -24,3 +24,9 @@ Current limitation:
 - `hold`: yes
 
 The lane should stay frontier-only until at least one low-screening confirmation and one portability check land cleanly.
+
+Update after the transport probe:
+
+- a same-surface current/impulse observable has now been tried on the low-screening surface
+- it improved the readout but still failed on the `k = 2` cut for many rows
+- do not reopen with another packet-family sweep unless the observable itself changes

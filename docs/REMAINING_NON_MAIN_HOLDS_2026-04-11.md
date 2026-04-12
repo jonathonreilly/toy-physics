@@ -76,9 +76,11 @@ Files:
 - `docs/IRREGULAR_ENDOGENOUS_SIGN_CLOSURE_NEXT_STEPS_2026-04-11.md`
 - `docs/IRREGULAR_ENDOGENOUS_SIGN_REINFORCEMENT_NOTE_2026-04-11.md`
 - `docs/IRREGULAR_ENDOGENOUS_SIGN_SIZE_PORTABILITY_NOTE_2026-04-11.md`
+- `docs/IRREGULAR_ENDOGENOUS_SIGN_OBSERVABLE_NOTE_2026-04-11.md`
 - `docs/IRREGULAR_ENDOGENOUS_SIGN_THIRD_FAMILY_NOTE_2026-04-11.md`
 - `scripts/frontier_irregular_endogenous_sign_closure.py`
 - `scripts/frontier_irregular_endogenous_sign_reinforcement.py`
+- `scripts/frontier_irregular_endogenous_sign_observable.py`
 - `scripts/frontier_irregular_endogenous_sign_size_portability.py`
 - `scripts/frontier_irregular_endogenous_sign_third_family.py`
 
@@ -88,10 +90,13 @@ Why held:
 - low-screening confirmation failed
 - the second packet family still does not close the lane
 - the size-portability sweep also fails to make the lane portable across graph growth
+- the new transport observable improves the readout, but `k = 2` still fails on
+  most of the audited rows, so the lane is not yet portable or closed
 
 Next control:
 
-- a different observable on the same irregular surface
+- if reopened, use a different transport definition on the same irregular
+  surface, not another packet-family sweep
 
 ### 4. Staggered two-body closure family
 
