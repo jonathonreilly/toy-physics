@@ -239,8 +239,61 @@ classification is unchanged from batch 1:
 - beyond_lattice_qcd (#10): still bounded promotion candidate
 - action_normalization (#6): still bounded promotion candidate
 
+## Batch 3: 2026-04-12 (Mac Mini results)
+
+Source: `claude/youthful-neumann` (Mac Mini compute runs + new frontier scripts)
+
+### Files Copied (New to review-active)
+
+Scripts:
+- `scripts/frontier_geodesic_equation.py`
+- `scripts/frontier_strong_field_regime.py`
+- `scripts/frontier_hawking_3d_quench.py`
+- `scripts/frontier_self_energy_critical_dimension.py`
+
+Docs:
+- `docs/GEODESIC_EQUATION_NOTE.md`
+- `docs/STRONG_FIELD_REGIME_NOTE.md`
+- `docs/HAWKING_3D_QUENCH_NOTE.md`
+- `docs/SELF_ENERGY_CRITICAL_DIMENSION_NOTE.md`
+
+Logs (Mac Mini supporting evidence):
+- `logs/2026-04-12-geodesic.txt`
+- `logs/2026-04-12-strong_field.txt`
+- `logs/2026-04-12-hawking_3d.txt`
+- `logs/2026-04-12-self-energy-critical-dimension.txt`
+- `logs/2026-04-12-background-independence.txt`
+- `logs/2026-04-12-bound_states.txt`
+- `logs/2026-04-12-conformal_boundary.txt`
+- `logs/2026-04-12-dimension-selection.txt`
+- `logs/2026-04-12-distance-law-128.txt`
+- `logs/2026-04-12-distance-law-96.txt`
+- `logs/2026-04-12-distance-law-frozen.txt`
+- `logs/2026-04-12-hierarchy-ratio.txt`
+
+### Classification (Batch 3)
+
+#### A. Bounded Promotion Candidates (2 new items)
+
+| # | Name | Script | Note | Summary |
+|---|------|--------|------|---------|
+| 36 | geodesic_equation | `frontier_geodesic_equation.py` | `GEODESIC_EQUATION_NOTE.md` | 5/5 tests pass, factor-of-2 light bending, Christoffel match to 2.3e-7; bounded to weak-field (f<0.1) on 31^3 lattice |
+| 37 | self_energy_critical_dimension | `frontier_self_energy_critical_dimension.py` | `SELF_ENERGY_CRITICAL_DIMENSION_NOTE.md` | d=3 UV/IR critical transition; bounded to tested lattice sizes and Dirichlet BC |
+
+#### B. Explicit Holds (1 new item)
+
+| # | Name | Script | Note | Blocker |
+|---|------|--------|------|---------|
+| 38 | strong_field_regime | `frontier_strong_field_regime.py` | `STRONG_FIELD_REGIME_NOTE.md` | Honest limitation: f=1 amplifies (phase coherence max), no horizon; bounded characterization of validity regime |
+
+#### C. Paper 2 / Hold (1 new item)
+
+| # | Name | Script | Note | Blocker |
+|---|------|--------|------|---------|
+| 39 | hawking_3d_quench | `frontier_hawking_3d_quench.py` | `HAWKING_3D_QUENCH_NOTE.md` | Paper 2; T-kappa sign issue unresolved; Gaussian-state analog only |
+
 ## Source Branch Status
 
-After this migration (batches 1+2), `claude/youthful-neumann` has no unique
+After this migration (batches 1+2+3), `claude/youthful-neumann` has no unique
 science artifacts that are not also on `codex/review-active`. The branch can be
 considered fully migrated for science content.
