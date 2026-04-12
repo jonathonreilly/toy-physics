@@ -47,3 +47,42 @@ Status:
 Archive readiness:
 
 - archive-ready once downstream references are switched to `review-active`
+
+## Codex First-Pass Triage
+
+These statuses are mechanical only: whether the branch tip is already an
+ancestor of `origin/main` or `origin/codex/review-active`. Non-ancestor status
+means the branch still needs a uniqueness pass before archive.
+
+### Already subsumed by `main`
+
+- `origin/codex/main-distance-64`
+- `origin/codex/main-newton-note`
+- `origin/codex/main-open-cubic-validation`
+- `origin/codex/main-post-validation`
+- `origin/codex/strict-staggered-repro`
+
+### Already subsumed by `review-active`
+
+- `origin/codex/review-final-20260411`
+- `origin/codex/main-open-cubic-validation`
+- `origin/codex/main-post-validation`
+- `origin/codex/strict-staggered-repro`
+
+### Still need uniqueness review before archive
+
+- `origin/codex/archive-automation-backup-20260411`
+- `origin/codex/archive-claude-distracted-napier-20260411`
+- `origin/codex/archive-main-retain-audit-20260411`
+- `origin/codex/archive-main-wilson-bounded-20260411`
+- `origin/codex/axiom-risk-ledger`
+- `origin/codex/chiral-harness-tests`
+- `origin/codex/irregular-sign-closure`
+- `origin/codex/local-lorentzian-beamsplitter`
+- `origin/codex/main-revisit-sweep`
+- `origin/codex/next-session-tests`
+- `origin/codex/resonance-controls`
+- `origin/codex/source-weight-spectral`
+- `origin/codex/staggered-direct-com`
+- `origin/codex/wilson-temporal-robustness`
+- `origin/codex/wilson-temporal-window-lane`
