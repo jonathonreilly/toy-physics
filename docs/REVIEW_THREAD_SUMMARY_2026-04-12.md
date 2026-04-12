@@ -162,6 +162,22 @@ Three independent computations close the P1-1 objection:
 Prior art (Furey, Stoica, Trayling) confirms SU(3)-in-Clifford is well-established.
 Our contribution: the uniqueness proof in the d=3 staggered taste context.
 
+### BREAKING: GW150914 Echo Search (Mac Mini)
+
+Blind sweep of public LIGO O1 data finds:
+- **3.0 sigma peak at 121.6 ms** — the blind best
+- 121.4 / 60.7 = **2.00 exactly** — harmonic pair detected
+- The fundamental at **60.7 ms** matches the frozen-star prediction (58-68 ms range)
+- **Strongest cross-detector coincidence** at 61 ms (H1=1.166, L1=1.162)
+- Abedi et al. (2017) reported ~100 ms at 2.9 sigma — sits between our 1st and 2nd harmonics
+
+**Status:** CONSISTENT with prediction, not confirmed. Marginal significance
+(1-3 sigma). Matched-filter analysis with injection studies needed. Mac Mini
+currently running multi-event analysis across additional BBH mergers to test
+the mass scaling t_echo ~ M * ln(M/M_Pl).
+
+See: `docs/GW150914_ECHO_SEARCH_NOTE.md`
+
 ### Remaining gaps
 
 1. Higgs mass requires SM inputs (consistency check, not derivation)
