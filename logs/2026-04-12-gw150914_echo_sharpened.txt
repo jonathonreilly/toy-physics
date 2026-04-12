@@ -1,0 +1,133 @@
+=====================================================================================
+SHARPENED GW ECHO ANALYSIS
+Harmonic comb + proper PSD + multi-event stack
+=====================================================================================
+
+=====================================================================================
+PART 1: GW150914 — HARMONIC COMB FILTER + 4096s PSD
+=====================================================================================
+  16 kHz data loaded: 524288 samples
+  H1: PSD from 4096s file (256s of data)
+  L1: PSD from 4096s file (256s of data)
+
+  --- Harmonic comb scan (5-200ms) ---
+
+  Top 5 harmonic comb peaks (combined):
+  rank    t0_ms       H1       L1     comb            note
+     1    194.5   1.2099   1.2533   2.4632                
+     2    104.6   1.2392   1.2108   2.4500                
+     3    168.3   1.3059   1.1332   2.4391                
+     4    151.5   1.2207   1.1785   2.3993                
+     5    194.1   1.0814   1.2905   2.3719                
+
+  At predicted 67.7ms: comb=1.8949 (-0.77 sigma)
+  At nonspin  58.1ms: comb=1.9448 (-0.41 sigma)
+  At 61ms peak:       comb=2.2048 (1.45 sigma)
+
+  --- Harmonic consistency at best peak (194.5ms) ---
+    k   H1_ratio   L1_ratio
+    1     0.7893     1.1188
+    2     0.6175     0.8998
+    3     1.3220     0.7739
+    4     1.0474     0.9774
+    5     2.7433     1.8550
+    6     0.5268     0.9391
+    7     0.3289     1.5296
+    8     1.1722     0.7308
+  H1 decay slope: 0.1610
+  L1 decay slope: -0.0556
+
+  --- Background estimation (500 shifts, harmonic comb) ---
+  Background: 1.9978 +/- 0.1162
+  Signal at 67.7ms: 1.8949
+  Significance: -0.89 sigma
+  p-value: 0.8340 (83.40%)
+
+=====================================================================================
+PART 2: MULTI-EVENT STACK
+=====================================================================================
+
+  Downloading and analyzing GWTC-1 events...
+  Each event gets its own predicted t_echo from M_remnant and a_spin
+
+  GW150914: M=62.0 M_sun, a=0.67, t_echo=67.5ms (Kerr), 57.5ms (nonspin)
+    H1: stat=1.0453, bg=1.0050+/-0.0765, sigma=0.53
+    L1: stat=1.0666, bg=1.0058+/-0.1153, sigma=0.53
+    Combined: 0.75 sigma
+
+  GW151226: M=20.8 M_sun, a=0.74, t_echo=23.6ms (Kerr), 19.0ms (nonspin)
+    H1: stat=0.9565, bg=1.0013+/-0.0401, sigma=-1.12
+    L1: stat=1.0302, bg=1.0015+/-0.0370, sigma=0.77
+    Combined: -0.24 sigma
+
+  GW170104: M=48.7 M_sun, a=0.64, t_echo=51.8ms (Kerr), 45.0ms (nonspin)
+    H1: stat=1.0225, bg=0.9926+/-0.0777, sigma=0.39
+    L1: stat=1.0526, bg=1.0054+/-0.0663, sigma=0.71
+    Combined: 0.78 sigma
+
+  GW170608: M=17.8 M_sun, a=0.69, t_echo=19.3ms (Kerr), 16.2ms (nonspin)
+    H1: stat=1.0328, bg=0.9977+/-0.0544, sigma=0.64
+    L1: stat=1.0122, bg=0.9976+/-0.0303, sigma=0.48
+    Combined: 0.80 sigma
+
+  GW170729: M=79.5 M_sun, a=0.81, t_echo=100.0ms (Kerr), 74.0ms (nonspin)
+    H1: stat=0.9940, bg=0.9921+/-0.0848, sigma=0.02
+    L1: stat=1.0878, bg=0.9891+/-0.0963, sigma=1.02
+    Combined: 0.74 sigma
+
+  GW170809: M=56.3 M_sun, a=0.70, t_echo=62.6ms (Kerr), 52.1ms (nonspin)
+    H1: stat=0.9639, bg=0.9959+/-0.0829, sigma=-0.39
+    L1: stat=0.9268, bg=0.9900+/-0.1058, sigma=-0.60
+    Combined: -0.69 sigma
+
+  GW170814: M=53.2 M_sun, a=0.72, t_echo=60.1ms (Kerr), 49.2ms (nonspin)
+    H1: stat=1.1035, bg=1.0025+/-0.0877, sigma=1.15
+    L1: stat=0.7969, bg=0.9996+/-0.0892, sigma=-2.27
+    Combined: -0.79 sigma
+
+  GW170818: M=59.4 M_sun, a=0.67, t_echo=64.6ms (Kerr), 55.0ms (nonspin)
+    No data available, skipping
+  GW170823: M=65.4 M_sun, a=0.71, t_echo=73.4ms (Kerr), 60.7ms (nonspin)
+    H1: stat=0.9061, bg=0.9995+/-0.0666, sigma=-1.40
+    L1: stat=0.9767, bg=1.0014+/-0.0811, sigma=-0.30
+    Combined: -1.21 sigma
+
+-------------------------------------------------------------------------------------
+STACKING RESULTS
+-------------------------------------------------------------------------------------
+
+  Events analyzed: 8 / 9
+
+  Per-event sigmas:
+         event      M  t_pred_ms    sigma     stat
+      GW150914   62.0       67.5     0.75   1.0560
+      GW151226   20.8       23.6    -0.24   0.9934
+      GW170104   48.7       51.8     0.78   1.0375
+      GW170608   17.8       19.3     0.80   1.0225
+      GW170729   79.5      100.0     0.74   1.0409
+      GW170809   56.3       62.6    -0.69   0.9454
+      GW170814   53.2       60.1    -0.79   0.9502
+      GW170823   65.4       73.4    -1.21   0.9414
+
+  Mean sigma: 0.02
+  Stacked sigma (sqrt-N): 0.04
+  Positive fraction: 4/8 (50%)
+  Mean statistic: 0.9984
+  Binomial p-value (4/8 positive): 0.6367
+
+=====================================================================================
+FINAL SUMMARY
+=====================================================================================
+
+  GW150914 harmonic comb (67.7ms): -0.89 sigma, p=0.8340
+  Multi-event stack (8 events): 0.04 sigma
+
+  Combined significance: 0.04 sigma
+
+  VERDICT: NO SIGNIFICANT SIGNAL — upper limit on echo amplitude
+
+  The frozen-star prediction (t_echo from Planck-scale surface)
+  gives a SPECIFIC echo time for each event with NO free parameters.
+  This is a genuine zero-parameter prediction testable with O3/O4 data.
+
+Total runtime: 3s (0.1 min)
