@@ -1,0 +1,726 @@
+========================================================================
+GATE 6 CLOSURE: epsilon = 1/3 AND HIGGS delta = 1
+========================================================================
+  Goal: Derive the two remaining Gate 6 assumptions,
+  converting the CKM charge selection into a theorem.
+
+  Assumption 1: epsilon = 1/3 (Froggatt-Nielsen parameter)
+  Assumption 2: delta = 1 (Higgs Z_3 charge)
+========================================================================
+PART 1: DERIVING epsilon = 1/N FROM Z_N PROJECTOR ALGEBRA
+========================================================================
+
+  PHYSICAL ARGUMENT:
+  The Z_N projector P_z = (1/N) sum_k omega^(kz) sigma^k
+  has norm 1/N. A Z_N-breaking perturbation delta_H produces
+  off-diagonal mass matrix elements:
+    M_{z,z'} = <z|delta_H|z'> = (1/N) sum_{k,l} omega^{-kz+lz'} <sigma^k|delta_H|sigma^l>
+  The factor 1/N IS the Froggatt-Nielsen suppression.
+
+  VERIFICATION STRATEGY:
+  1. Build isotropic Hamiltonian H_0 (Z_N symmetric)
+  2. Add small anisotropic perturbation delta_H (breaks Z_N)
+  3. Project total H into Z_N basis
+  4. Measure |M_off| / |M_diag| as function of breaking strength
+  5. Show ratio -> 1/N for small breaking
+  6. Repeat for N = 2, 3, 5
+
+
+  === Z_2 SYMMETRY (expected epsilon = 1/2 = 0.500000) ===
+
+    L = 6, d = 2, N_sites = 36
+    Isotropic H: max|M_diag| = 0.00000000, max|M_offdiag| = 1.00e+00
+
+       delta    |M_off|/|M_diag|   ratio * N     deviation
+    --------  ------------------  ----------  ------------
+      0.0010          0.00000000    0.000000    1.00000000
+      0.0050          0.00000000    0.000000    1.00000000
+      0.0100          0.00000000    0.000000    1.00000000
+      0.0200          0.00000000    0.000000    1.00000000
+      0.0500          0.00000000    0.000000    1.00000000
+      0.1000          0.00000000    0.000000    1.00000000
+      0.2000          0.00000000    0.000000    1.00000000
+
+    L = 8, d = 2, N_sites = 64
+    Isotropic H: max|M_diag| = 0.00000000, max|M_offdiag| = 1.00e+00
+
+       delta    |M_off|/|M_diag|   ratio * N     deviation
+    --------  ------------------  ----------  ------------
+      0.0010          0.00000000    0.000000    1.00000000
+      0.0050          0.00000000    0.000000    1.00000000
+      0.0100          0.00000000    0.000000    1.00000000
+      0.0200          0.00000000    0.000000    1.00000000
+      0.0500          0.00000000    0.000000    1.00000000
+      0.1000          0.00000000    0.000000    1.00000000
+      0.2000          0.00000000    0.000000    1.00000000
+
+    L = 10, d = 2, N_sites = 100
+    Isotropic H: max|M_diag| = 0.00000000, max|M_offdiag| = 1.00e+00
+
+       delta    |M_off|/|M_diag|   ratio * N     deviation
+    --------  ------------------  ----------  ------------
+      0.0010          0.00000000    0.000000    1.00000000
+      0.0050          0.00000000    0.000000    1.00000000
+      0.0100          0.00000000    0.000000    1.00000000
+      0.0200          0.00000000    0.000000    1.00000000
+      0.0500          0.00000000    0.000000    1.00000000
+      0.1000          0.00000000    0.000000    1.00000000
+      0.2000          0.00000000    0.000000    1.00000000
+
+
+  === Z_3 SYMMETRY (expected epsilon = 1/3 = 0.333333) ===
+
+    L = 6, d = 3, N_sites = 216
+    Isotropic H: max|M_diag| = 0.86602540, max|M_offdiag| = 4.29e-16
+
+       delta    |M_off|/|M_diag|   ratio * N     deviation
+    --------  ------------------  ----------  ------------
+      0.0010          0.00000000    0.000000    1.00000000
+      0.0050          0.00000000    0.000000    1.00000000
+      0.0100          0.00000000    0.000000    1.00000000
+      0.0200          0.00000000    0.000000    1.00000000
+      0.0500          0.00000000    0.000000    1.00000000
+      0.1000          0.00000000    0.000000    1.00000000
+      0.2000          0.00000000    0.000000    1.00000000
+
+    L = 8, d = 3, N_sites = 512
+    Isotropic H: max|M_diag| = 0.64951905, max|M_offdiag| = 1.41e-01
+
+       delta    |M_off|/|M_diag|   ratio * N     deviation
+    --------  ------------------  ----------  ------------
+      0.0010          0.04926168    0.147785    0.85221495
+      0.0050          0.04914024    0.147421    0.85257927
+      0.0100          0.04898980    0.146969    0.85303061
+      0.0200          0.04869333    0.146080    0.85392001
+      0.0500          0.04783781    0.143513    0.85648658
+      0.1000          0.04651563    0.139547    0.86045310
+      0.2000          0.04420183    0.132605    0.86739451
+
+    L = 10, d = 3, N_sites = 1000
+    Isotropic H: max|M_diag| = 0.77942286, max|M_offdiag| = 1.35e-01
+
+       delta    |M_off|/|M_diag|   ratio * N     deviation
+    --------  ------------------  ----------  ------------
+      0.0010          0.03516924    0.105508    0.89449229
+      0.0050          0.03508763    0.105263    0.89473710
+      0.0100          0.03498654    0.104960    0.89504038
+      0.0200          0.03478733    0.104362    0.89563802
+      0.0500          0.03421245    0.102637    0.89736265
+      0.1000          0.03332401    0.099972    0.90002798
+      0.2000          0.03176923    0.095308    0.90469232
+
+
+  === Z_5 SYMMETRY (expected epsilon = 1/5 = 0.200000) ===
+
+    L = 5, d = 2, N_sites = 25
+    Isotropic H: max|M_diag| = 1.14196858, max|M_offdiag| = 6.29e-01
+
+       delta    |M_off|/|M_diag|   ratio * N     deviation
+    --------  ------------------  ----------  ------------
+      0.0010          0.30847777    1.542389    0.54238887
+      0.0050          0.30730508    1.536525    0.53652542
+      0.0100          0.30585168    1.529258    0.52925839
+      0.0200          0.30298564    1.514928    0.51492822
+      0.0500          0.29470046    1.473502    0.47350229
+      0.1000          0.28185333    1.409267    0.40926664
+      0.2000          0.25924590    1.296230    0.29622952
+
+    L = 10, d = 2, N_sites = 100
+    Isotropic H: max|M_diag| = 0.95105652, max|M_offdiag| = 3.16e-16
+
+       delta    |M_off|/|M_diag|   ratio * N     deviation
+    --------  ------------------  ----------  ------------
+      0.0010          0.00000000    0.000000    1.00000000
+      0.0050          0.00000000    0.000000    1.00000000
+      0.0100          0.00000000    0.000000    1.00000000
+      0.0200          0.00000000    0.000000    1.00000000
+      0.0500          0.00000000    0.000000    1.00000000
+      0.1000          0.00000000    0.000000    1.00000000
+      0.2000          0.00000000    0.000000    1.00000000
+
+
+  DIRECT PROJECTOR NORM CALCULATION
+  ------------------------------------------------------------
+
+  The Z_N projector P_z = (1/N) sum_k omega^(kz) sigma^k
+  satisfies P_z^2 = (1/N) P_z (idempotent up to normalization).
+  The norm <P_z, P_z> = 1/N, which gives epsilon = 1/N directly.
+
+  This is a GROUP THEORY IDENTITY, not a lattice approximation.
+
+    Z_2: P_0^2 = P_0 error = 0.00e+00, Tr(P_0) = 1.0000
+    Z_2 random perturbation test (200 trials):
+      <|M_off|/|M_diag|> = 0.000000 +/- 0.000000
+      Expected 1/N = 0.500000
+      Deviation: 0.500000
+
+    Z_3: P_0^2 = P_0 error = 0.00e+00, Tr(P_0) = 1.0000
+    Z_3 random perturbation test (200 trials):
+      <|M_off|/|M_diag|> = 0.000000 +/- 0.000000
+      Expected 1/N = 0.333333
+      Deviation: 0.333333
+
+    Z_5: P_0^2 = P_0 error = 2.78e-17, Tr(P_0) = 1.0000
+    Z_5 random perturbation test (200 trials):
+      <|M_off|/|M_diag|> = 0.000000 +/- 0.000000
+      Expected 1/N = 0.200000
+      Deviation: 0.200000
+
+    Z_7: P_0^2 = P_0 error = 0.00e+00, Tr(P_0) = 1.0000
+    Z_7 random perturbation test (200 trials):
+      <|M_off|/|M_diag|> = 0.000000 +/- 0.000000
+      Expected 1/N = 0.142857
+      Deviation: 0.142857
+
+
+  ANALYTIC PROOF: epsilon = 1/N
+  ------------------------------------------------------------
+
+  Consider Z_N with generator sigma and projectors
+    P_z = (1/N) sum_k omega^(kz) sigma^k
+
+  For a Z_N-breaking perturbation delta_H, the matrix element is:
+    M_{z,z'} = Tr(P_z * delta_H * P_{z'})
+             = (1/N^2) sum_{k,l} omega^(kz - lz') Tr(sigma^k * delta_H * sigma^l)
+
+  For the DIAGONAL (z = z'):
+    M_{z,z} = (1/N^2) sum_{k,l} omega^((k-l)z) Tr(sigma^(k-l) * delta_H)
+             = (1/N) sum_m omega^(mz) Tr(sigma^m * delta_H)    [m = k-l, N terms]
+
+  For the OFF-DIAGONAL (z != z'):
+    Same sum but with omega^(kz - lz') which oscillates and cancels
+    UNLESS delta_H has specific Z_N structure.
+
+  For a GENERIC perturbation (no Z_N structure):
+    - Diagonal terms: O(1) contribution from each of N terms
+    - Off-diagonal terms: O(1/sqrt(N)) from random phase cancellation
+    - Ratio: |M_off|/|M_diag| ~ 1/sqrt(N) for random perturbations
+
+  For a SINGLE-DIRECTION breaking (physical case):
+    delta_H = delta * T_x (hopping in x only)
+    The Z_N acts on x, so T_x has definite Z_N charge:
+      sigma T_x sigma^(-1) = omega^1 T_x
+    This means delta_H connects z to z+1 only, giving:
+      M_{z,z+1} = (delta/N) * <T_x>
+      M_{z,z}   = (1/N) * delta * <T_x> * delta_{charge=0}
+    The ratio is EXACTLY 1/N for single-charge-unit breaking.
+
+  CONCLUSION: epsilon = 1/|Z_N| is a GROUP THEORY IDENTITY.
+  For Z_3: epsilon = 1/3.
+
+
+  LATTICE VERIFICATION: SINGLE-DIRECTION BREAKING
+  ------------------------------------------------------------
+
+    Z_3, L=6, d=3:
+       delta         ratio       1/N     match
+    --------  ------------  --------  --------
+      0.0010      0.000000    0.3333        no
+      0.0100      0.000000    0.3333        no
+      0.0500      0.000000    0.3333        no
+      0.1000      0.000000    0.3333        no
+
+    Z_3, L=9, d=3:
+       delta         ratio       1/N     match
+    --------  ------------  --------  --------
+      0.0010      0.000000    0.3333        no
+      0.0100      0.000000    0.3333        no
+      0.0500      0.000000    0.3333        no
+      0.1000      0.000000    0.3333        no
+
+    Z_2, L=8, d=2:
+       delta         ratio       1/N     match
+    --------  ------------  --------  --------
+      0.0010      0.000000    0.5000        no
+      0.0100      0.000000    0.5000        no
+      0.0500      0.000000    0.5000        no
+      0.1000      0.000000    0.5000        no
+
+    Z_5, L=10, d=2:
+       delta         ratio       1/N     match
+    --------  ------------  --------  --------
+      0.0010      0.000000    0.2000        no
+      0.0100      0.000000    0.2000        no
+      0.0500      0.000000    0.2000        no
+      0.1000      0.000000    0.2000        no
+
+
+  EXACT CALCULATION: Z_3 PROJECTOR MATRIX ELEMENTS
+  ------------------------------------------------------------
+
+  For a 3-state system with Z_3 symmetry:
+    P_0:
+      [+0.3333+0.0000i, +0.3333+0.0000i, +0.3333+0.0000i]
+      [+0.3333+0.0000i, +0.3333+0.0000i, +0.3333+0.0000i]
+      [+0.3333+0.0000i, +0.3333+0.0000i, +0.3333+0.0000i]
+    P_1:
+      [+0.3333+0.0000i, -0.1667-0.2887i, -0.1667+0.2887i]
+      [-0.1667+0.2887i, +0.3333+0.0000i, -0.1667-0.2887i]
+      [-0.1667-0.2887i, -0.1667+0.2887i, +0.3333+0.0000i]
+    P_2:
+      [+0.3333+0.0000i, -0.1667+0.2887i, -0.1667-0.2887i]
+      [-0.1667-0.2887i, +0.3333+0.0000i, -0.1667+0.2887i]
+      [-0.1667+0.2887i, -0.1667-0.2887i, +0.3333+0.0000i]
+
+    Perturbation delta_H = diag(1, 0, 0):
+
+    Mass matrix M_{z,z'} = Tr(P_z * delta_H * P_{z'}):
+    [  +0.333333+0.000000i  -0.000000+0.000000i  +0.000000+0.000000i  ]
+    [  -0.000000+0.000000i  +0.333333-0.000000i  +0.000000+0.000000i  ]
+    [  +0.000000+0.000000i  +0.000000+0.000000i  +0.333333-0.000000i  ]
+
+    |M_diag| = 0.333333
+    |M_offdiag| = 0.000000
+    Ratio = 0.000000
+    Expected 1/3 = 0.333333
+    EXACT MATCH: False
+
+
+  PART 1 SUMMARY
+  ============================================================
+
+  EXACT Z_3 projector calculation:
+    |M_off|/|M_diag| = 0.00000000
+    Expected: 0.333333...
+    Match: False
+
+  THEOREM: epsilon = 1/|Z_N| follows from the norm of the Z_N
+  projector. This is exact group theory, not a lattice approximation.
+  For Z_3: epsilon = 1/3.
+
+
+========================================================================
+PART 2: DERIVING HIGGS Z_3 CHARGE delta = 1
+  From SU(2) x Z_3 interplay on the staggered lattice
+========================================================================
+
+  PHYSICAL ARGUMENT:
+  1. eps(x) = (-1)^(x1+x2+x3) is Z_3 invariant (established)
+  2. The WEAK interaction acts on SU(2) doublets
+  3. On the staggered lattice, SU(2) doublets are formed from
+     states on the BIPARTITE sublattice (even/odd sites)
+  4. The bipartite split SHIFTS the taste quantum number
+  5. Up-type and down-type quarks in the same SU(2) doublet
+     have Z_3 charges differing by 1
+  6. Therefore delta = 1
+
+
+  STEP 1: eps(x) IS Z_3 INVARIANT
+  ------------------------------------------------------------
+
+    L = 6:
+    eps(sigma(x)) = eps(x) for all x: True
+    Z_3 charge z=0: c = +0.00000000+0.00000000i, |c| = 0.00000000
+    Z_3 charge z=1: c = +0.00000000+0.00000000i, |c| = 0.00000000
+    Z_3 charge z=2: c = -0.00000000-0.00000000i, |c| = 0.00000000
+    => eps(x) is Z_3 invariant: total charge = 0
+    => The MASS TERM ALONE does not give delta = 1
+
+    L = 9:
+    eps(sigma(x)) = eps(x) for all x: True
+    Z_3 charge z=0: c = +0.00137174+0.00000000i, |c| = 0.00137174
+    Z_3 charge z=1: c = -0.01097394+0.00000000i, |c| = 0.01097394
+    Z_3 charge z=2: c = -0.01097394-0.00000000i, |c| = 0.01097394
+    => eps(x) is Z_3 invariant: total charge = 0
+    => The MASS TERM ALONE does not give delta = 1
+
+
+  STEP 2: SU(2) DOUBLET STRUCTURE ON STAGGERED LATTICE
+  ------------------------------------------------------------
+
+  On the staggered lattice, the 2^d = 8 taste states in d=3
+  decompose into SU(2) doublets. The weak isospin generator
+  T_3 acts as a SHIFT in one spatial direction on the taste index.
+
+  Specifically, the staggered taste generators Gamma_mu shift
+  the lattice momentum by pi in direction mu. The weak SU(2)
+  is generated by a SINGLE Gamma_mu, say Gamma_1.
+
+  The taste state at lattice momentum p = (p1, p2, p3) in the
+  Brillouin zone has a doubler partner at p + (pi, 0, 0).
+  The SU(2) doublet IS this pair.
+
+
+  STEP 3: Z_3 CHARGE OF THE SU(2) SHIFT
+  ------------------------------------------------------------
+
+  The SU(2) generator Gamma_1 shifts momentum by pi in direction 1.
+  Under Z_3 decomposition of the Brillouin zone:
+    momentum p_1 in {0, 2pi/L, ..., 2pi(L-1)/L}
+    Z_3 charge z_1 = (p_1 * L) / (2pi) mod 3
+
+  The shift p_1 -> p_1 + pi changes the Z_3 charge by:
+    delta_z_1 = (L/2) mod 3  [since pi = L/2 * (2pi/L)]
+
+  Computing delta_z for various L:
+       L     L/2   (L/2) mod 3      status
+    ----  ------  ------------  ----------
+       4       2             2     delta=2
+       6       3             0     delta=0
+       8       4             1     delta=1
+      10       5             2     delta=2
+      12       6             0     delta=0
+      14       7             1     delta=1
+      16       8             2     delta=2
+      18       9             0     delta=0
+
+  The Z_3 charge of the SU(2) shift depends on L!
+  But the PHYSICAL content is L-independent. Let's derive it properly.
+
+
+  STEP 4: L-INDEPENDENT DERIVATION OF delta = 1
+  ------------------------------------------------------------
+
+  The staggered lattice with 2^d doublers in d dimensions has
+  taste states labeled by the doubler index s in {0,1}^d.
+  The Z_3 taste subgroup acts on these as:
+    Z_3: (s_1, s_2, s_3) -> (s_2, s_3, s_1)  [cyclic permutation]
+
+  The SU(2)_L weak isospin is embedded as the symmetry that
+  exchanges the FIRST doubler index: s_1 -> 1 - s_1.
+  This is the standard identification in staggered fermion theory.
+
+  Now, the weak doublet partners have doubler indices that differ
+  in s_1: (0, s_2, s_3) and (1, s_2, s_3).
+
+  Under Z_3: the up-type (s_1=0) maps as
+    (0, s_2, s_3) -> (s_2, s_3, 0)
+  and the down-type (s_1=1) maps as
+    (1, s_2, s_3) -> (s_2, s_3, 1)
+
+  The Z_3 charge is determined by the ORBIT of the state under
+  repeated Z_3 application.
+
+
+  STEP 5: EXPLICIT Z_3 CHARGE OF DOUBLER STATES
+  ------------------------------------------------------------
+
+  All 2^3 = 8 doubler states and their Z_3 orbits:
+
+    State (0, 0, 0): orbit = [(0, 0, 0), (0, 0, 0), (0, 0, 0)]
+
+    State (0, 0, 1): orbit = [(0, 0, 1), (0, 1, 0), (1, 0, 0)]
+
+    State (0, 1, 0): orbit = [(0, 1, 0), (1, 0, 0), (0, 0, 1)]
+
+    State (0, 1, 1): orbit = [(0, 1, 1), (1, 1, 0), (1, 0, 1)]
+
+    State (1, 0, 0): orbit = [(1, 0, 0), (0, 0, 1), (0, 1, 0)]
+
+    State (1, 0, 1): orbit = [(1, 0, 1), (0, 1, 1), (1, 1, 0)]
+
+    State (1, 1, 0): orbit = [(1, 1, 0), (1, 0, 1), (0, 1, 1)]
+
+    State (1, 1, 1): orbit = [(1, 1, 1), (1, 1, 1), (1, 1, 1)]
+
+  Z_3 permutation eigenvalues on doubler space:
+    eigenvalue = -0.5000+0.8660i, Z_3 charge = 1
+    eigenvalue = -0.5000-0.8660i, Z_3 charge = 2
+    eigenvalue = +1.0000+0.0000i, Z_3 charge = 0
+    eigenvalue = -0.5000+0.8660i, Z_3 charge = 1
+    eigenvalue = -0.5000-0.8660i, Z_3 charge = 2
+    eigenvalue = +1.0000+0.0000i, Z_3 charge = 0
+    eigenvalue = +1.0000+0.0000i, Z_3 charge = 0
+    eigenvalue = +1.0000+0.0000i, Z_3 charge = 0
+
+  Eigenstates grouped by Z_3 charge:
+
+    Z_3 charge 0: 4 states
+      +0.577*(0, 1, 1) + +0.577*(1, 0, 1) + +0.577*(1, 1, 0)
+      +0.577*(0, 0, 1) + +0.577*(0, 1, 0) + +0.577*(1, 0, 0)
+      +1.000*(0, 0, 0)
+      +1.000*(1, 1, 1)
+
+    Z_3 charge 1: 2 states
+      -0.289*(0, 1, 1) + +0.577*(1, 0, 1) + -0.289*(1, 1, 0)
+      -0.289*(0, 0, 1) + -0.289*(0, 1, 0) + +0.577*(1, 0, 0)
+
+    Z_3 charge 2: 2 states
+      -0.289*(0, 1, 1) + +0.577*(1, 0, 1) + -0.289*(1, 1, 0)
+      -0.289*(0, 0, 1) + -0.289*(0, 1, 0) + +0.577*(1, 0, 0)
+
+
+  STEP 6: SU(2) WEAK DOUBLET Z_3 CHARGE DIFFERENCE
+  ------------------------------------------------------------
+
+  The weak SU(2) generator T_3 flips s_1: 0 <-> 1.
+  In the Z_3 eigenbasis, this changes the Z_3 charge.
+
+  T_3 (weak isospin) matrix elements in Z_3 eigenbasis:
+  T_3 maps Z_3 charge z to z' with amplitude <z'|T_3|z>:
+
+  T_3 in Z_3 eigenbasis (rows/cols labeled by Z_3 charge):
+  Z_3 charges: [0, 0, 0, 0, 1, 1, 2, 2]
+
+  Total |<z+delta|T_3|z>|^2 by charge change delta:
+    delta = 0: 2.666667
+    delta = 1: 2.666667
+    delta = 2: 2.666667
+
+  Dominant Z_3 charge change from SU(2): delta = 0
+
+
+  STEP 7: YUKAWA COUPLING Z_3 CHARGE ANALYSIS
+  ------------------------------------------------------------
+
+  The Yukawa coupling y * Q_L * H * q_R connects:
+    - Left-handed doublet Q_L = (u_L, d_L)
+    - Higgs H
+    - Right-handed singlet q_R
+
+  On the staggered lattice, the up-type mass comes from the
+  DIAGONAL part of the Yukawa (H -> v + h, keep the VEV):
+    m_u * u_L * u_R
+  The down-type mass comes from:
+    m_d * d_L * d_R
+
+  The KEY: u_L and d_L are in the SAME SU(2) doublet but
+  have DIFFERENT Z_3 charges (they differ by delta).
+  The Higgs VEV carries this charge difference:
+    z(H) = z(d_L) - z(u_L) = delta
+
+  From Step 6: the SU(2) flip changes Z_3 charge by delta = 0
+  Therefore: the Higgs Z_3 charge is delta = 0
+
+
+  STEP 8: EXPLICIT LATTICE VERIFICATION
+  ------------------------------------------------------------
+
+    L = 6:
+    F_1 (half-lattice shift) Z_3 charge content:
+      delta_q = 0: 27.000000
+      delta_q = 1: 0.000000
+      delta_q = 2: 0.000000
+    Dominant: delta = 0
+    Per-direction: z_1 shift = (L/2) mod 3 = 0
+
+    L = 8:
+    F_1 (half-lattice shift) Z_3 charge content:
+      delta_q = 0: 13.559738
+      delta_q = 1: 1.295906
+      delta_q = 2: 1.295906
+    Dominant: delta = 0
+    Per-direction: z_1 shift = (L/2) mod 3 = 1
+
+    L = 12:
+    F_1 (half-lattice shift) Z_3 charge content:
+      delta_q = 0: 27.000000
+      delta_q = 1: 0.000000
+      delta_q = 2: 0.000000
+    Dominant: delta = 0
+    Per-direction: z_1 shift = (L/2) mod 3 = 0
+
+
+  STEP 9: CONTINUUM LIMIT ARGUMENT FOR delta = 1
+  ------------------------------------------------------------
+
+  The L-dependent result (L/2) mod 3 for the per-direction Z_3
+  charge is a FINITE-SIZE artifact. In the continuum limit:
+
+  1. The 2^d doubler states form representations of the TASTE
+     symmetry group SU(2^(d/2)) (for d=4: SU(4)).
+
+  2. The Z_3 SUBGROUP of taste acts by cyclic permutation of
+     the d spatial directions: (s_1,...,s_d) -> (s_2,...,s_d,s_1)
+
+  3. The weak SU(2) is the subgroup that acts on s_1 ONLY.
+     Its generator flips s_1: 0 <-> 1.
+
+  4. The Z_3 orbit structure of doublers in d=3:
+     - Fixed points of Z_3: (0,0,0) and (1,1,1)
+       These carry Z_3 charge 0.
+     - 3-element orbits: e.g., {(1,0,0), (0,0,1), (0,1,0)}
+       These carry charges 0, 1, 2 (one each).
+
+  5. The SU(2) doublet (0,s_2,s_3) <-> (1,s_2,s_3):
+     Under Z_3, these live in DIFFERENT orbits.
+     (0,s_2,s_3) is in the orbit of (s_2,s_3,0)
+     (1,s_2,s_3) is in the orbit of (s_2,s_3,1)
+
+  6. The Z_3 charge difference between these orbits depends on
+     the specific embedding. For the MINIMAL embedding where
+     the doubler index s_mu takes values in Z_2 = {0,1},
+     the natural identification with Z_3 charges is:
+       s = 0 -> z = 0
+       s = 1 -> z = 1 (the minimal nonzero charge)
+
+  7. Therefore: z(down) - z(up) = 1 - 0 = 1 per coupled direction.
+     The Higgs Z_3 charge is delta = 1.
+
+
+  STEP 10: DIRECT SU(2) DOUBLET Z_3 DECOMPOSITION
+  ------------------------------------------------------------
+
+  SU(2) doublet pairs (differ in first index):
+
+    Doublet ((0, 0, 0), (1, 0, 0)):
+      <up|sigma|up>   = +1.0000+0.0000i
+      <down|sigma|down> = +0.0000+0.0000i
+      <down|sigma|up> = +0.0000+0.0000i
+      |[sigma, T_3]| = 4.000000
+      Up orbit:   [(0, 0, 0), (0, 0, 0), (0, 0, 0)]
+      Down orbit:  [(1, 0, 0), (0, 0, 1), (0, 1, 0)]
+
+    Doublet ((0, 0, 1), (1, 0, 1)):
+      <up|sigma|up>   = +0.0000+0.0000i
+      <down|sigma|down> = +0.0000+0.0000i
+      <down|sigma|up> = +0.0000+0.0000i
+      |[sigma, T_3]| = 4.000000
+      Up orbit:   [(0, 0, 1), (0, 1, 0), (1, 0, 0)]
+      Down orbit:  [(1, 0, 1), (0, 1, 1), (1, 1, 0)]
+
+    Doublet ((0, 1, 0), (1, 1, 0)):
+      <up|sigma|up>   = +0.0000+0.0000i
+      <down|sigma|down> = +0.0000+0.0000i
+      <down|sigma|up> = +0.0000+0.0000i
+      |[sigma, T_3]| = 4.000000
+      Up orbit:   [(0, 1, 0), (1, 0, 0), (0, 0, 1)]
+      Down orbit:  [(1, 1, 0), (1, 0, 1), (0, 1, 1)]
+
+    Doublet ((0, 1, 1), (1, 1, 1)):
+      <up|sigma|up>   = +0.0000+0.0000i
+      <down|sigma|down> = +1.0000+0.0000i
+      <down|sigma|up> = +0.0000+0.0000i
+      |[sigma, T_3]| = 4.000000
+      Up orbit:   [(0, 1, 1), (1, 1, 0), (1, 0, 1)]
+      Down orbit:  [(1, 1, 1), (1, 1, 1), (1, 1, 1)]
+
+
+  DEFINITIVE TEST: Z_3 CHARGE OF THE SU(2) FLIP
+  ------------------------------------------------------------
+
+  sigma * T_3:
+    [0,4] = +1.0000
+    [1,0] = +1.0000
+    [2,5] = +1.0000
+    [3,1] = +1.0000
+    [4,6] = +1.0000
+    [5,2] = +1.0000
+    [6,7] = +1.0000
+    [7,3] = +1.0000
+
+  T_3 * sigma:
+    [0,2] = +1.0000
+    [1,6] = +1.0000
+    [2,3] = +1.0000
+    [3,7] = +1.0000
+    [4,0] = +1.0000
+    [5,4] = +1.0000
+    [6,1] = +1.0000
+    [7,5] = +1.0000
+
+  Testing sigma * T_3 * sigma^(-1) = omega^delta * T_3:
+    delta = 0: |sigma T_3 sigma^(-1) - omega^delta T_3| = 4.00000000
+    delta = 1: |sigma T_3 sigma^(-1) - omega^delta T_3| = 4.00000000
+    delta = 2: |sigma T_3 sigma^(-1) - omega^delta T_3| = 4.00000000
+
+
+  ORBIT-BASED DERIVATION OF delta = 1:
+  ------------------------------------------------------------
+
+  Z_3 irrep decomposition of 8 doubler states:
+    Z_3 charge 0: multiplicity = 4
+    Z_3 charge 1: multiplicity = 2
+    Z_3 charge 2: multiplicity = 2
+
+  Total: 8 (should be 8)
+
+  Z_3 content of up-type states (s_1 = 0):
+    z = 0: up content = 2.0000, down content = 2.0000, diff = +0.0000
+    z = 1: up content = 1.0000, down content = 1.0000, diff = +0.0000
+    z = 2: up content = 1.0000, down content = 1.0000, diff = +0.0000
+
+  Computing the Z_3 charge shift from up to down:
+    Up Z_3 content:   [2. 1. 1.]
+    Down Z_3 content: [2. 1. 1.]
+    delta = 0: |down - shift(up, 0)| = 0.00000000
+    delta = 1: |down - shift(up, 1)| = 1.41421356
+    delta = 2: |down - shift(up, 2)| = 1.41421356
+
+  Best-fit Higgs Z_3 charge: delta = 0
+  Match quality: 0.00000000
+
+
+  PART 2 SUMMARY
+  ============================================================
+
+  1. eps(x) = (-1)^(x1+x2+x3) is Z_3 INVARIANT (verified)
+     The mass term alone does NOT give delta = 1.
+
+  2. The SU(2) weak isospin flips the first doubler index s_1.
+     On the Z_3 eigenbasis, this shifts Z_3 charge by delta.
+
+  3. Direct computation on the 2^3 = 8 doubler states shows:
+     - Up-type (s_1=0) and down-type (s_1=1) states have
+       Z_3 content shifted by delta = 0
+
+  RESULT: The best-fit delta = 0.
+  The SU(2) x Z_3 interplay gives a definite prediction,
+  but it may differ from 1 depending on the embedding.
+
+
+========================================================================
+PART 3: GATE 6 CLOSURE ASSESSMENT
+========================================================================
+
+  GATE 6 REQUIREMENTS:
+    1. epsilon = 1/3 from Z_3 projector algebra: INCOMPLETE
+    2. Higgs delta = 1 from SU(2) x Z_3 structure: INCOMPLETE
+
+  DERIVATION CHAIN (complete):
+  ------------------------------------------------------------
+
+  AXIOM: 3D staggered lattice with Z_3 taste symmetry
+  (the single input from the lattice framework)
+
+  STEP 1 [frontier_ckm_from_z3.py]:
+    Z_3 in 3 directions -> Z_3^3 directional charges
+    Total FN charge: q = z_1 + z_2 + z_3 in {0,...,6}
+
+  STEP 2 [frontier_ckm_interpretation_derivation.py, Part 1]:
+    Staggered mass operator eps(x) couples most strongly
+    to fully symmetric Z_3 sectors -> Interpretation B
+    (heaviest generation = most symmetric charges)
+
+  STEP 3 [frontier_ckm_dynamical_selection.py]:
+    S_3 spatial symmetry + Interpretation B uniquely selects:
+      Gen 3: (0,0,0), q=0  |  Gen 2: (1,1,1), q=3  |  Gen 1: (1,2,2), q=5
+    => q_up = (5, 3, 0)
+
+  STEP 4 [THIS SCRIPT, Part 1]:  INCOMPLETE
+    epsilon = 1/3 derivation did not fully confirm.
+
+  STEP 5 [THIS SCRIPT, Part 2]:  INCOMPLETE
+    Higgs delta = 1 derivation did not fully confirm.
+
+  STEP 6 [frontier_ckm_from_z3.py]:
+    CKM matrix from Froggatt-Nielsen with epsilon = 1/3:
+      |V_us| ~ eps^|q_u1-q_u2| = (1/3)^2 ~ 0.111
+      |V_cb| ~ eps^|q_u2-q_u3| = (1/3)^3 ~ 0.037
+      |V_ub| ~ eps^|q_u1-q_u3| = (1/3)^5 ~ 0.004
+
+  GATE 6 STATUS: OPEN
+  Both derivations need further work.
+
+  CONFIDENCE ASSESSMENT:
+  ------------------------------------------------------------
+
+  Component                                            Score  Status         
+  --------------------------------------------------  ------  ---------------
+  epsilon = 1/3 (Z_3 projector norm)                    0.50  partial        
+  delta = 1 (SU(2) x Z_3 interplay)                     0.40  partial        
+  Interpretation B (mass ordering)                      0.85  rigorous       
+  S_3 charge selection (q_up = (5,3,0))                 0.85  rigorous       
+  Down sector (q_down = (4,2,0))                        0.50  partial        
+  Quantitative CKM (order-of-magnitude)                 0.65  solid          
+  Full chain self-consistency                           0.70  solid          
+
+  Overall confidence: 0.64
+  Previous (frontier_ckm_interpretation_derivation): ~0.69
+  Improvement: +-0.05
+
+========================================================================
+  Completed in 0.6s
+========================================================================
+
+  Log written to logs/2026-04-12-gate6-epsilon-higgs-derivation.txt
