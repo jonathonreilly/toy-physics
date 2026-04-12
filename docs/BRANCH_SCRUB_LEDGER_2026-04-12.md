@@ -857,8 +857,13 @@ science branches, but they still need a quick final diff audit before delete:
 - `origin/claude/youthful-neumann` remains live and protected; capture from it
   should continue incrementally into `codex/review-active`, but it is not an
   archive candidate while active work continues
-- `origin/frontier/spot-checks` has now had its review-missing text artifacts
-  imported to `codex/review-active`, but it is still not archive-ready until
-  the already-present diff surface is lane-classified
-- next scrub stage is the remaining `spot-checks` uniqueness pass and any
+- `origin/frontier/spot-checks` now has all review-missing text artifacts
+  imported to `codex/review-active`
+- current `spot-checks` remainder:
+  - `142` exact-match paths already duplicated on review
+  - `21` differing text paths still needing lane-by-lane classification
+  - `6` generated PNG outputs intentionally not imported
+- `spot-checks` is still not archive-ready until the remaining `21` differing
+  text files are classified
+- next scrub stage is the `spot-checks` 21-file classification pass and any
   residual helper / automation refs after that
