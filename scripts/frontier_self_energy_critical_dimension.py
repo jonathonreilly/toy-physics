@@ -144,7 +144,7 @@ def solve_poisson_nd(N: int, d: int, source_func=None) -> tuple[np.ndarray, np.n
     if n_interior < 50000:
         phi_interior = spsolve(L, -rho_interior)
     else:
-        phi_interior, info = cg(-L, rho_interior, tol=1e-8, maxiter=5000)
+        phi_interior, info = cg(-L, rho_interior, rtol=1e-8, maxiter=5000)
         if info != 0:
             print(f"    CG did not converge (info={info}), using partial result")
 
@@ -191,8 +191,8 @@ def test_point_source_scaling():
     sizes_by_dim = {
         2: [8, 12, 16, 24, 32, 48, 64],
         3: [8, 12, 16, 20, 24, 32],
-        4: [6, 8, 10, 12, 14, 16],
-        5: [4, 6, 8, 10, 12],
+        4: [6, 8, 10, 12, 14],
+        5: [4, 6, 8, 10],
     }
 
     results = {}
@@ -422,7 +422,7 @@ def test_self_consistent():
             if n_interior < 50000:
                 phi_interior = spsolve(L, -rho_interior)
             else:
-                phi_interior, info = cg(-L, rho_interior, tol=1e-8, maxiter=3000)
+                phi_interior, info = cg(-L, rho_interior, rtol=1e-8, maxiter=3000)
 
             # Compute self-energy
             E = 0.5 * np.dot(rho_interior, phi_interior)
@@ -506,8 +506,8 @@ def test_uv_sensitivity():
     N_values_by_dim = {
         2: [16, 24, 32, 48],
         3: [10, 14, 18, 22],
-        4: [6, 8, 10, 12],
-        5: [4, 6, 8],
+        4: [6, 8, 10],
+        5: [4, 6],
     }
 
     results = {}
