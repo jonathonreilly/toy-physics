@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """
-SU(3) Commutant Theorem -- Numerical Verification of Each Proof Step
-====================================================================
+SU(3) Commutant Theorem on the KS Tensor-Factor Surface
+=======================================================
 
 Companion script to docs/SU3_FORMAL_THEOREM_NOTE.md.
-Verifies every algebraic claim in the basis-free proof numerically.
+Verifies every algebraic claim in the bounded KS-surface proof numerically.
 
 The proof uses:
   - The Kawamoto-Smit (KS) tensor product structure C^8 = C^2 x C^2 x C^2
-  - su(2) acting on the first tensor factor (not the bivector su(2))
+  - su(2) acting on the first tensor factor on the KS surface (not the native bivector su(2))
   - SWAP_{23} exchanging the second and third tensor factors
   - Commutant analysis via Schur's lemma
 
@@ -348,7 +348,7 @@ def verify_step5(T_gens, SWAP23, Pi_plus, Pi_minus):
     rank_ht = np.linalg.matrix_rank(np.array([h.flatten() for h in ht]), tol=1e-8)
     check(f"Hermitian traceless on C^6: rank = 8 = dim su(3)", rank_ht == 8, f"got {rank_ht}")
 
-    print("\n  CONCLUSION: compact semisimple commutant = su(3)")
+    print("\n  CONCLUSION: compact semisimple commutant on the KS surface = su(3)")
 
 
 # ===========================================================================
@@ -446,7 +446,7 @@ def verify_gellmann(T_gens, SWAP23):
 # ===========================================================================
 def main():
     print("=" * 70)
-    print("SU(3) COMMUTANT THEOREM -- NUMERICAL VERIFICATION")
+    print("SU(3) COMMUTANT THEOREM ON THE KS SURFACE -- NUMERICAL VERIFICATION")
     print("Companion to docs/SU3_FORMAL_THEOREM_NOTE.md")
     print("=" * 70)
 
@@ -467,7 +467,7 @@ def main():
 
     if FAIL_COUNT == 0:
         print("\n  ALL CHECKS PASSED")
-        print("  Every algebraic claim in the formal proof is numerically verified.")
+        print("  Every algebraic claim in the bounded KS-surface proof is numerically verified.")
     else:
         print(f"\n  WARNING: {FAIL_COUNT} checks FAILED")
 

@@ -1,13 +1,13 @@
-# SU(3) Commutant Theorem: Basis-Free Proof
+# SU(3) Commutant Theorem on the KS Tensor-Factor Surface
 
-**Status:** FORMAL THEOREM -- paper appendix material
+**Status:** FORMAL THEOREM -- bounded KS tensor-factor result; native Cl(3) bridge remains open
 **Date:** 2026-04-12
 
 ## Statement
 
-**Theorem (SU(3) Commutant).** Let Z^3 be the cubic lattice with
-staggered fermion phases eta_mu(x) = (-1)^{x_1 + ... + x_{mu-1}}.
-Then:
+**Theorem (KS-Surface SU(3) Commutant).** Let Z^3 be the cubic lattice
+with staggered fermion phases eta_mu(x) = (-1)^{x_1 + ... + x_{mu-1}}.
+On the Kawamoto-Smit tensor-factor surface, then:
 
 1. The staggered phases determine, via the Kawamoto-Smit construction,
    a canonical tensor product decomposition of the 8-dimensional taste
@@ -29,9 +29,15 @@ Then:
 5. The compact semisimple commutant of {su(2), SWAP} in End(V)
    is uniquely su(3).
 
-6. The unique traceless U(1) generator in the commutant is hypercharge,
-   with eigenvalues Y = +1/3 (on C^3, quarks) and Y = -1 (on C^1,
+6. The unique traceless U(1) generator in the commutant is the
+   hypercharge-like central direction on this KS surface, with
+   eigenvalues Y = +1/3 (on C^3, quarks) and Y = -1 (on C^1,
    leptons).
+
+**Scope note.** This theorem is a KS tensor-factor commutant result.
+It does not by itself prove that the native Cl(3) bivector su(2) is
+canonically identical to the distinguished tensor-factor su(2); that
+bridge remains a separate claim.
 
 ---
 
@@ -181,7 +187,7 @@ which is uniquely determined by the tensor product structure. No basis
 choice is required. QED
 
 
-### Step 5. su(3) as the unique compact semisimple commutant
+### Step 5. su(3) as the unique compact semisimple commutant on the KS surface
 
 **Claim.** The compact semisimple part of the commutant of
 {su(2), SWAP_{23}} in End(V) is su(3).
@@ -240,7 +246,8 @@ This is unique because:
 
 (iii) gl(1, C) is abelian, contributing no semisimple part.
 
-Therefore the compact semisimple commutant is su(3). QED
+Therefore the compact semisimple commutant on the KS tensor-factor
+surface is su(3). QED
 
 
 ### Step 6. Hypercharge from the traceless U(1) constraint
@@ -276,7 +283,7 @@ is -1, we set b = -1, hence a = 1/3:
     Y has eigenvalue -1   on C^2 tensor Anti^2 = C^2  (multiplicity 2)
 
 This matches the Standard Model hypercharge assignment for one
-generation of left-handed fermions:
+generation of left-handed fermions on the KS tensor-factor surface:
 
     Left-handed quarks:  weak doublet x color triplet, Y = +1/3
     Left-handed leptons: weak doublet x color singlet, Y = -1
@@ -318,8 +325,8 @@ does NOT commute with SWAP_{23}. The two su(2) algebras (T_k and B_k)
 are independent 3-dimensional subalgebras of End(C^8).
 
 This distinction is important: the theorem uses the tensor product
-structure of the KS representation (which is canonical given the lattice
-coordinates), not just the abstract Clifford algebra Cl(3).
+structure of the KS representation (canonical once the lattice
+coordinates are fixed), not just the abstract Clifford algebra Cl(3).
 
 ---
 
@@ -344,13 +351,14 @@ generation of left-handed fermions in the Standard Model:
 1. **Input:** staggered fermion phases on Z^3 (standard lattice QCD construction).
 2. **Choice:** identification of direction 1 as the weak isospin axis.
    This is the lattice analog of electroweak symmetry breaking.
-3. **Output:** SU(3)_color x U(1)_Y with correct quantum numbers.
-4. **Not derived:** why direction 1 is special (this is EW symmetry
-   breaking); the existence of three generations; right-handed fermion
-   representations.
+3. **Output:** SU(3)_color x U(1)_Y structure on the KS surface, with
+   the physically standard quark/lepton charge pattern.
+4. **Not derived:** why direction 1 is special from the native
+   Clifford bivector lane; the existence of three generations;
+   right-handed fermion representations.
 5. **Scope:** This is a KINEMATIC result about the symmetry structure
-   of the taste space. It does not address dynamics (confinement,
-   mass generation, etc.).
+   of the KS taste space. It does not prove the native Cl(3) bridge
+   or address dynamics (confinement, mass generation, etc.).
 
 ---
 
