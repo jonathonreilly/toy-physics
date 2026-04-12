@@ -62,7 +62,7 @@ The staggered lattice produces 2³ = 8 taste species in 3D. The Standard Model h
 python3 scripts/frontier_su3_generations.py 2>&1 | tee ~/Desktop/su3_generations.txt
 ```
 
-**NOTE: Scripts A1-A6 may not exist yet on the branch. If a script is missing, skip it — the laptop will create them and push. Pull again before each run.**
+**All scripts A1-A6 are now on the branch. Pull and run.**
 
 ## PRIORITY B: UV-IR Cosmological Constant (when script lands)
 
