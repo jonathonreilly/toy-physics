@@ -23,7 +23,7 @@ onto `main` without reintroducing claim drift
 ## Current Branch Targets
 
 - `main`: retained baseline
-- review branch: `origin/codex/review-final-20260411`
+- review branch: `origin/codex/review-active`
 
 ## Source of Truth
 
