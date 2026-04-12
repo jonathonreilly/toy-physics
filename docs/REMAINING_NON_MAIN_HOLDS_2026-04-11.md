@@ -215,6 +215,70 @@ Next control:
 - if any of these side lanes are reopened, write a fresh bounded audit note on
   the exact reopened surface before considering promotion
 
+### 0c. Historical emergence / continuum / overnight Claude scaffolding
+
+Files:
+
+- `docs/ASSUMPTION_DERIVATION_LEDGER.md`
+- `docs/LITERATURE_POSITIONING_NOTE.md`
+- `scripts/four_d_continuum_gap_sweep.py`
+- `scripts/adaptive_quantile_emergence.py`
+- `scripts/birth_death_emergence.py`
+- `scripts/cross_family_robustness.py`
+- `scripts/emergence_sustain_and_4d.py`
+- `scripts/fixed_position_alpha.py`
+- `scripts/geometric_growth_emergence.py`
+- `scripts/overnight_batch.py`
+- `scripts/overnight_batch_2.py`
+- `scripts/overnight_batch_3.py`
+- `scripts/overnight_batch_4.py`
+- `scripts/overnight_deep_batch.py`
+- `scripts/overnight_verification.py`
+- `scripts/slit_guided_3d_growth.py`
+
+Why held:
+
+- this batch preserves historical DAG-growth, emergence, and continuum search
+  harnesses from small `claude/*` branches
+- the two docs are framing/context notes, not retained physics results
+- the scripts are reopening scaffolds and verification probes, not audited
+  bounded results on the current retained science surface
+
+Next control:
+
+- no direct promotion
+- if any emergence/continuum lane is reopened, promote only from a fresh
+  bounded audit note written on the exact rerun surface
+
+### 0d. Historical reviewer / prediction / nonlinear-rescue Claude batch
+
+Files:
+
+- `docs/CONTINUUM_BRIDGE_NOTE.md`
+- `docs/REVIEWER_SUMMARY.md`
+- `docs/PREDICTION_CARD.md`
+- `scripts/preferential_gravity_diagnosis.py`
+- `scripts/self_regulating_gap_3d.py`
+- `scripts/self_regulating_large_n.py`
+- `scripts/dynamical_reweight_distance_law.py`
+- `scripts/nonlinear_phase_distance.py`
+
+Why held:
+
+- this batch preserves reviewer-facing summaries and historical diagnostics from
+  the earlier DAG program
+- the docs are framing/control-plane artifacts, not retained results on the
+  current mainline science surface
+- the scripts are useful reopening harnesses for preferential-attachment,
+  self-regulating-gap, and nonlinear-rescue questions, but they are not bounded
+  promotion candidates as-is
+
+Next control:
+
+- no direct promotion
+- if any of these lanes are reopened, require a fresh bounded audit note on the
+  exact rerun surface before considering `main`
+
 ### 1. Wilson mutual-attraction side lane
 
 Files:

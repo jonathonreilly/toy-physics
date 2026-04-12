@@ -253,6 +253,90 @@ Current read:
 - useful as a bounded nonlinear-diagnostic harness, not a retained physics
   result
 
+### Single-artifact Claude capture batch
+
+Captured from:
+
+- `origin/claude/4d-continuum`
+- `origin/claude/adaptive-emergence`
+- `origin/claude/assumption-ledger`
+- `origin/claude/birth-death`
+- `origin/claude/cross-family`
+- `origin/claude/emergence-sustain`
+- `origin/claude/fixed-position-alpha`
+- `origin/claude/geometric-growth`
+- `origin/claude/literature`
+- `origin/claude/overnight-2`
+- `origin/claude/overnight-3`
+- `origin/claude/overnight-4`
+- `origin/claude/overnight-deep`
+- `origin/claude/overnight-science`
+- `origin/claude/overnight-verify`
+- `origin/claude/slit-growth`
+
+Files:
+
+- `docs/ASSUMPTION_DERIVATION_LEDGER.md`
+- `docs/LITERATURE_POSITIONING_NOTE.md`
+- `scripts/four_d_continuum_gap_sweep.py`
+- `scripts/adaptive_quantile_emergence.py`
+- `scripts/birth_death_emergence.py`
+- `scripts/cross_family_robustness.py`
+- `scripts/emergence_sustain_and_4d.py`
+- `scripts/fixed_position_alpha.py`
+- `scripts/geometric_growth_emergence.py`
+- `scripts/overnight_batch.py`
+- `scripts/overnight_batch_2.py`
+- `scripts/overnight_batch_3.py`
+- `scripts/overnight_batch_4.py`
+- `scripts/overnight_deep_batch.py`
+- `scripts/overnight_verification.py`
+- `scripts/slit_guided_3d_growth.py`
+
+Current read:
+
+- this is historical emergence / continuum / overnight probe scaffolding from
+  the earlier DAG-growth program
+- `ASSUMPTION_DERIVATION_LEDGER` and `LITERATURE_POSITIONING_NOTE` are
+  reviewer-facing framing documents, not retained results
+- the scripts are valuable to preserve on review because they encode earlier
+  search directions, verification harnesses, and stress tests
+- none of this batch is a direct `main` promotion target without a fresh bounded
+  audit note on the exact reopened surface
+
+### Small overlapping Claude batch
+
+Captured from:
+
+- `origin/claude/continuum-bridge`
+- `origin/claude/docs-update`
+- `origin/claude/review-fixes`
+- `origin/claude/reviewer-summary`
+- `origin/claude/predictions`
+- `origin/claude/evolving-network`
+- `origin/claude/nonlinear-pathsum`
+
+Files:
+
+- `docs/CONTINUUM_BRIDGE_NOTE.md`
+- `docs/REVIEWER_SUMMARY.md`
+- `docs/PREDICTION_CARD.md`
+- `scripts/preferential_gravity_diagnosis.py`
+- `scripts/self_regulating_gap_3d.py`
+- `scripts/self_regulating_large_n.py`
+- `scripts/dynamical_reweight_distance_law.py`
+- `scripts/nonlinear_phase_distance.py`
+
+Current read:
+
+- `CONTINUUM_BRIDGE_NOTE`, `REVIEWER_SUMMARY`, and `PREDICTION_CARD` are
+  reviewer-facing framing/control-plane documents from the earlier DAG program
+- the prediction and emergence scripts are historical diagnostic harnesses for
+  preferential-attachment failure, self-regulating gap dynamics, and nonlinear
+  distance-law rescue attempts
+- preserve on review for provenance and possible reopening, but none of this is
+  a direct `main` promotion target without a fresh bounded audit note
+
 ### 2026-04-12 migration from `claude/youthful-neumann`
 
 New bounded promotion candidates:

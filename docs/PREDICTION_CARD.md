@@ -92,39 +92,6 @@ The mass scaling exponent depends on spatial dimension (0 → 0.58 → positive)
 A simpler model (e.g., random phase accumulation without geometric structure)
 would not show this dimensional progression.
 
-### D5. Kernel dimension-dependence (2026-04-04)
-The current ordered-lattice probes suggest that `p = d - 1` is the strongest
-empirical candidate for a persistence-preserving kernel across 2D / 3D / 4D.
-A simpler model with one fixed kernel independent of dimension would not show
-that pattern.
-
-Important caveat:
-- this is still an empirical lattice-side result
-- the transfer-norm story is not fully reconciled yet
-- so this is a discriminating pattern, not a derived theorem
-
-### F6. Lattice gravity reversal under refinement (2026-04-04)
-If the 3D 1/L^2 gravitational TOWARD flipped back to AWAY at h < 0.125,
-the convergence claim would be falsified. Current data: TOWARD at h=0.5,
-0.25, 0.125, strengthening at each step. A reversal below h=0.125 would
-indicate the TOWARD was another (finer) lattice artifact.
-
-### F7. Distance tail remains shallow under width-matched replay (2026-04-04)
-The earlier “steepening toward `-2`” read was confounded by comparing
-different lattice widths and fit windows. On the current width-matched replay,
-the 3D `1/L^2` tail is shallower at finer `h`, not steeper.
-
-So the real falsifier is now:
-- if wider and finer retained replays keep the post-peak tail shallow, the
-  model does NOT produce Newtonian 3D gravity in this branch
-- only a later retained reversal toward a steeper asymptotic tail would reopen
-  that stronger claim
-
-### F8. 4D 1/L^3 gravity fails at longer lattice (2026-04-04)
-At L=15 on 4D, 1/L^3 gives +0.034 (TOWARD, strengthening). If at
-L=20 or L=25 it flips to AWAY, the dimension-dependent kernel pattern
-breaks for d=4. Currently the pattern holds for d=2,3,4.
-
 ## Open predictions (untested)
 
 ### O1. 4D continuum limit
@@ -142,25 +109,3 @@ The cross-family test showed decoherence works on preferential DAGs
 even when gravity fails. Prediction: decoherence is more robust than
 gravity across graph families because it depends on slit distinguishability
 (geometric), not phase valley coherence (interference).
-
-### O4. 5D kernel prediction (2026-04-04)
-On a 5D lattice (4 transverse dims), the correct kernel should be
-1/L^4. Prediction: 1/L^3 will be TOWARD but weakening with L on 5D,
-while 1/L^4 will strengthen. Born should hold at machine precision.
-
-### O5. Tail recovery beyond the moving peak (2026-04-04)
-On the 3D `1/L^2` lattice, finer spacing shifts the peak outward. The next
-useful prediction is therefore geometric rather than numerical:
-
-- if the lattice is widened enough at `h = 0.125`, a genuine post-peak tail
-  should reappear beyond the shifted peak
-- if widening still fails to recover a declining post-peak segment, the current
-  tail-steepening story is wrong
-
-This replaces the earlier numeric-band prediction for the `h = 0.125` tail
-exponent, which was explicitly refuted once the peak shift was measured.
-
-### O6. RG exponent universality (2026-04-04)
-The RG scaling s ~ h^0.92 was measured on the 3D lattice. On the 4D
-lattice, a different RG exponent is expected (the per-layer amplitude
-transfer scales differently). Prediction: 4D RG exponent > 0.92.

@@ -257,6 +257,78 @@ Reason:
   on this branch is the narrow chiral two-body superposition diagnostic above,
   and that script is now preserved on review
 
+### Single-artifact `claude/*` capture batch
+
+Status:
+
+- scrubbed into `codex/review-active`
+
+Captured in this pass:
+
+- `origin/claude/4d-continuum` -> `scripts/four_d_continuum_gap_sweep.py`
+- `origin/claude/adaptive-emergence` -> `scripts/adaptive_quantile_emergence.py`
+- `origin/claude/assumption-ledger` -> `docs/ASSUMPTION_DERIVATION_LEDGER.md`
+- `origin/claude/birth-death` -> `scripts/birth_death_emergence.py`
+- `origin/claude/cross-family` -> `scripts/cross_family_robustness.py`
+- `origin/claude/emergence-sustain` -> `scripts/emergence_sustain_and_4d.py`
+- `origin/claude/fixed-position-alpha` -> `scripts/fixed_position_alpha.py`
+- `origin/claude/geometric-growth` -> `scripts/geometric_growth_emergence.py`
+- `origin/claude/intelligent-jepsen` -> no unique payload relative to review
+- `origin/claude/literature` -> `docs/LITERATURE_POSITIONING_NOTE.md`
+- `origin/claude/overnight-2` -> `scripts/overnight_batch_2.py`
+- `origin/claude/overnight-3` -> `scripts/overnight_batch_3.py`
+- `origin/claude/overnight-4` -> `scripts/overnight_batch_4.py`
+- `origin/claude/overnight-deep` -> `scripts/overnight_deep_batch.py`
+- `origin/claude/overnight-science` -> `scripts/overnight_batch.py`
+- `origin/claude/overnight-verify` -> `scripts/overnight_verification.py`
+- `origin/claude/slit-growth` -> `scripts/slit_guided_3d_growth.py`
+
+Archive readiness:
+
+- archive-ready
+
+Reason:
+
+- each branch in this batch either had exactly one unique artifact or no unique
+  payload at all
+- those artifacts are now preserved on the active review branch as historical
+  emergence/continuum scaffolding or reviewer-facing context notes
+- no additional branch-specific science remains stranded on these tips
+
+### Small overlapping `claude/*` capture batch
+
+Status:
+
+- scrubbed into `codex/review-active`
+
+Captured in this pass:
+
+- `origin/claude/continuum-bridge` -> `docs/CONTINUUM_BRIDGE_NOTE.md`
+- `origin/claude/docs-update` -> superseded by the captured
+  `docs/CONTINUUM_BRIDGE_NOTE.md`
+- `origin/claude/review-fixes` -> `docs/CONTINUUM_BRIDGE_NOTE.md`,
+  `docs/REVIEWER_SUMMARY.md`
+- `origin/claude/reviewer-summary` -> superseded by the captured
+  `docs/REVIEWER_SUMMARY.md`
+- `origin/claude/predictions` -> `docs/PREDICTION_CARD.md`,
+  `scripts/preferential_gravity_diagnosis.py`
+- `origin/claude/evolving-network` -> `scripts/self_regulating_gap_3d.py`,
+  `scripts/self_regulating_large_n.py`
+- `origin/claude/nonlinear-pathsum` -> `scripts/dynamical_reweight_distance_law.py`,
+  `scripts/nonlinear_phase_distance.py`
+
+Archive readiness:
+
+- archive-ready
+
+Reason:
+
+- the reviewer-doc overlap is now preserved in the latest available form on the
+  active review branch
+- the remaining scripts are historical diagnostic harnesses now preserved on
+  review
+- no additional branch-specific science remains stranded on these tips
+
 ## Codex First-Pass Triage
 
 These statuses are mechanical only: whether the branch tip is already an
@@ -303,6 +375,30 @@ do not need further science capture before archive:
 - `origin/codex/chiral-harness-tests`
 - `origin/codex/local-lorentzian-beamsplitter`
 - `origin/codex/next-session-tests`
+- `origin/claude/4d-continuum`
+- `origin/claude/adaptive-emergence`
+- `origin/claude/assumption-ledger`
+- `origin/claude/birth-death`
+- `origin/claude/cross-family`
+- `origin/claude/emergence-sustain`
+- `origin/claude/fixed-position-alpha`
+- `origin/claude/geometric-growth`
+- `origin/claude/intelligent-jepsen`
+- `origin/claude/literature`
+- `origin/claude/overnight-2`
+- `origin/claude/overnight-3`
+- `origin/claude/overnight-4`
+- `origin/claude/overnight-deep`
+- `origin/claude/overnight-science`
+- `origin/claude/overnight-verify`
+- `origin/claude/slit-growth`
+- `origin/claude/continuum-bridge`
+- `origin/claude/docs-update`
+- `origin/claude/review-fixes`
+- `origin/claude/reviewer-summary`
+- `origin/claude/predictions`
+- `origin/claude/evolving-network`
+- `origin/claude/nonlinear-pathsum`
 
 ### Likely archive-ready after one short verification pass
 
@@ -313,4 +409,5 @@ science branches, but they still need a quick final diff audit before delete:
 ### Still need uniqueness review before archive
 
 - none remaining in `codex/*`
-- next scrub stage is `claude/*`, then `frontier/*`
+- next scrub stage is the remaining overlapping `claude/*` branches, then
+  `frontier/*`

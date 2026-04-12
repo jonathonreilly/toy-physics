@@ -143,92 +143,20 @@ distribution, not the propagator.
 | Mass scaling (4D) | **Partially** | **Doesn't converge** |
 | Emergence (gap dynamics) | **Partially** | **Sustains to N=80, wall at N=100** |
 
-## Lattice continuum limit (2026-04-04 update)
-
-The lattice architecture provides a genuine h→0 refinement lane that the
-random DAG architecture does not. This is a complementary exploratory lane,
-not a replacement.
-
-### Lattice results that survive refinement
-
-| Property | 2D (1/L) | 3D (1/L^2) | 4D (1/L^3) |
-|---|---|---|---|
-| Born | < 6e-16 at all h | < 4e-15 at all h | 1.3e-15 |
-| MI | → 0.95 at h=0.25 | → 0.66 at h=0.25 | 0.32 (h=1 only) |
-| Decoherence | → 50% at h=0.25 | → 50% at h=0.25 | TBD |
-| d_TV | → 0.99 at h=0.25 | → 0.83 at h=0.25 | 0.58 |
-| Gravity (TOWARD) | Strengthens | Strengthens on the current branch | stronger persistence candidate than lower powers |
-| Distance tail | b^(-1.08) at h=0.5 | post-peak tail is retained and b-dependent, but matched-width comparisons currently stay shallow rather than steepen toward `-2` | TBD |
-
-The 3D column now also has a frozen `h=0.25` eight-property script-level card
-on `main`; this is a trust-building conversion, not a closed theorem.
-
-### Dimension-dependent kernel
-
-The imported kernel branch currently suggests a stronger persistence rule:
-
-- lower powers can look attractive on short lattices
-- `p = d-1` is the strongest current empirical candidate for a kernel whose
-  gravity signal persists more cleanly as lattice length grows
-
-That is stronger than the earlier 2D-only picture, but weaker than a
-selection theorem. In particular:
-
-- the 4D evidence is still bounded
-- the local transfer-norm probe on `main` does **not** uniquely single out
-  `p = d-1`
-- the transfer-norm story is still under reconciliation
-
-### What the lattice changes about the distance law
-
-The random DAG distance law was b-independent (structural limitation).
-The lattice distance law is b-DEPENDENT, but the current 3D `1/L^2` read is
-more honest and more limited than the earlier steepening narrative:
-- there is a clean post-peak declining tail on the widened retained `h=0.25`
-  probe
-- the earlier cross-width “steepening toward `-2`” read was confounded by
-  comparing different lattice widths and fit windows
-- on the current matched-width replay, the 3D tail is still non-Newtonian and
-  currently looks shallower rather than steeper under refinement
-
-This does NOT rescue the random DAG distance law. It provides an
-alternative architecture where distance law works.
-
-### Architecture-dependent kernel (important caveat)
-
-The dimension-dependent kernel is LATTICE-SPECIFIC:
-- On random DAGs, all kernel powers give similar noisy gravity
-- On mirror DAGs, 1/L outperforms 1/L^2
-- The kernel selection mechanism (transfer norm marginality) requires
-  the regular lattice structure with h→0 limit
-
-### RG scaling
-
-At fixed field strength s=5e-5, gravity magnitude diverges as h^(-0.48).
-RG scaling s ~ h^0.92 stabilizes the magnitude. The distance exponent
-is independent of s — it is a geometric lattice property.
-
 ## What this means for the model
 
 The retained results are:
-1. Phase-valley gravity (survives on DAGs AND lattices)
-2. Born rule (exact, mathematical, all architectures)
-3. CL bath decoherence floor (stable on DAGs, converges on lattice)
-4. 3D mass scaling continuum limit (alpha → 0.58 on DAGs)
-5. Cross-family robustness (4 of 5 DAG families)
-6. **NEW: Distance law on lattice** (current exploratory 3D branch has a
-   real post-peak declining tail, but the stronger “steepens toward `-2`”
-   wording is now retracted)
-7. **NEW: Lattice continuum limit** (MI, decoherence, d_TV all converge)
+1. Phase-valley gravity (survives, weakens slowly)
+2. Born rule (exact, mathematical)
+3. CL bath decoherence floor (stable, family-dependent)
+4. 3D mass scaling continuum limit (alpha → 0.58)
+5. Cross-family robustness (4 of 5 families)
 
 The provisional/retracted results are:
-1. 4D "F~M" mass scaling on DAGs (parameter-sensitive)
+1. 4D "F~M" mass scaling (parameter-sensitive)
 2. Strict visibility gain (vanishes at large N)
-3. Asymptotic emergence (N=80 on 3D, wall at N=100)
-4. **RETRACTED: 3D 1/L gravity** (lattice artifact at h=1.0)
+3. Asymptotic emergence (N=80 on 3D, but N=100 is the wall)
 
 The structural limitations are:
-1. Distance law on random DAGs (b-independent, structural)
-2. CLT convergence on random DAGs (defeats all emergence rules)
-3. Dimension-dependent kernel not derived from axioms (empirical and still
-   under transfer-norm reconciliation)
+1. Distance law (b-independent, no avenue rescues it)
+2. CLT convergence (eventually defeats all emergence rules)
