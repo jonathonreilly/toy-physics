@@ -78,11 +78,13 @@ Files:
 - `docs/TWO_BODY_ATTRACTION_TEMPORAL_ROBUSTNESS_NOTE_2026-04-11.md`
 - `docs/WILSON_SIDE_LANE_PROMOTION_REVIEW_2026-04-11.md`
 - `docs/WILSON_BOTH_MASSES_ACCEL_NOTE_2026-04-11.md`
+- `docs/WILSON_CAUSAL_DISCRIMINATOR_NOTE_2026-04-11.md`
 - `scripts/frontier_two_body_attraction.py`
 - `scripts/frontier_two_body_attraction_robustness.py`
 - `scripts/frontier_two_body_attraction_temporal_robustness.py`
 - `scripts/frontier_wilson_both_masses_accel.py`
 - `scripts/frontier_wilson_both_masses_local_balance.py`
+- `scripts/frontier_wilson_causal_discriminator.py`
 
 Current verdict:
 
@@ -104,6 +106,8 @@ Current bounded temporal read:
   retained global fit
 - the frozen/static-source control has now been run on the same Wilson surface
   and it still does **not** clear the promotion bar
+- the lagged source-refresh discriminator is also too adiabatic to isolate
+  causal timing on this surface
 
 Required next experiment:
 
@@ -112,7 +116,8 @@ Required next experiment:
 Promotion rule:
 
 - do not move this to `main` unless the new control shows dynamic shared
-  backreaction matters beyond a frozen-field explanation
+  backreaction matters beyond a frozen-field explanation or a lagged-refresh
+  explanation
 
 #### B. Exact two-particle product law
 

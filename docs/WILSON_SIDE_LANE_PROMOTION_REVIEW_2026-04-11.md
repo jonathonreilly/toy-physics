@@ -1,7 +1,7 @@
 # Wilson Side-Lane Promotion Review
 
 **Date:** 2026-04-11  
-**Scope:** `TWO_BODY_ATTRACTION_RETAINED_NOTE_2026-04-11.md`, `TWO_BODY_ATTRACTION_ROBUSTNESS_NOTE_2026-04-11.md`, `TWO_BODY_ATTRACTION_TEMPORAL_ROBUSTNESS_NOTE_2026-04-11.md`, `frontier_two_body_attraction.py`, `frontier_two_body_attraction_robustness.py`, `frontier_two_body_attraction_temporal_robustness.py`
+**Scope:** `TWO_BODY_ATTRACTION_RETAINED_NOTE_2026-04-11.md`, `TWO_BODY_ATTRACTION_ROBUSTNESS_NOTE_2026-04-11.md`, `TWO_BODY_ATTRACTION_TEMPORAL_ROBUSTNESS_NOTE_2026-04-11.md`, `WILSON_CAUSAL_DISCRIMINATOR_NOTE_2026-04-11.md`, `frontier_two_body_attraction.py`, `frontier_two_body_attraction_robustness.py`, `frontier_two_body_attraction_temporal_robustness.py`, `frontier_wilson_causal_discriminator.py`
 
 ## Verdict
 
@@ -71,6 +71,24 @@ cannot be promoted as a causal proof.
 So there is no further clean Wilson-side discriminator to add on this same
 surface without switching observables or geometry. The correct status is hold,
 not more branch sprawl.
+
+## Lagged-Refresh Follow-Up
+
+A further review-local probe replaced the frozen/static comparison with a
+one-step and two-step source-refresh lag on the same open surface.
+
+Outcome:
+
+- `SHARED_NOW`: mean early mutual acceleration `-5.686792e-02`
+- `LAG1`: mean early mutual acceleration `-5.983074e-02`
+- `LAG2`: mean early mutual acceleration `-6.196355e-02`
+- lag1 gap vs shared: `5.21%`
+- lag2 gap vs shared: `8.96%`
+
+That gap is real but too small to isolate causal timing cleanly. The response is
+better described as adiabatic than causally separated, so the hold is now
+cleaner: the surface is sensitive to source-refresh lag, but not enough to
+separate dynamic shared backreaction from a lagged-source explanation.
 
 ## Retainable Now
 

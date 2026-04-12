@@ -29,11 +29,13 @@ Files:
 - `docs/TWO_BODY_ATTRACTION_TEMPORAL_ROBUSTNESS_NOTE_2026-04-11.md`
 - `docs/WILSON_SIDE_LANE_PROMOTION_REVIEW_2026-04-11.md`
 - `docs/WILSON_BOTH_MASSES_ACCEL_NOTE_2026-04-11.md`
+- `docs/WILSON_CAUSAL_DISCRIMINATOR_NOTE_2026-04-11.md`
 - `scripts/frontier_two_body_attraction.py`
 - `scripts/frontier_two_body_attraction_robustness.py`
 - `scripts/frontier_two_body_attraction_temporal_robustness.py`
 - `scripts/frontier_wilson_both_masses_accel.py`
 - `scripts/frontier_wilson_both_masses_local_balance.py`
+- `scripts/frontier_wilson_causal_discriminator.py`
 
 Why held:
 
@@ -41,12 +43,15 @@ Why held:
 - the early/mid-window near-inverse-square law is real
 - the frozen/static-source control has now been run and still does not
   separate dynamic shared backreaction cleanly from a static explanation
+- the lagged source-refresh discriminator has now been run and the response is
+  still too adiabatic to isolate causal timing cleanly on this surface
 - full Newton closure is still open
 
 Next control:
 
 - same open 3D Wilson surface
-- `SHARED`, `SELF_ONLY`, `FROZEN_SOURCE`
+- if reopened, move to an intervention-style observable rather than another
+  source-refresh lag
 - do not promote until the causal discriminator is clean
 
 ### 2. Exact two-particle product law
@@ -107,12 +112,14 @@ Files:
 - `docs/STAGGERED_TWO_BODY_PORTABILITY_NOTE_2026-04-11.md`
 - `docs/STAGGERED_TWO_BODY_TRANSPORT_NOTE_2026-04-11.md`
 - `docs/STAGGERED_TWO_BODY_LINK_CURRENT_NOTE_2026-04-11.md`
+- `docs/STAGGERED_TWO_BODY_MOMENTUM_FLUX_NOTE_2026-04-11.md`
 - `docs/STAGGERED_TWO_BODY_NEXT_STEPS_NOTE_2026-04-11.md`
 - `scripts/frontier_staggered_direct_com_closure.py`
 - `scripts/frontier_staggered_both_masses.py`
 - `scripts/frontier_staggered_two_body_portability.py`
 - `scripts/frontier_staggered_two_body_transport.py`
 - `scripts/frontier_staggered_two_body_link_current.py`
+- `scripts/frontier_staggered_two_body_momentum_flux.py`
 
 Why held:
 
@@ -122,12 +129,15 @@ Why held:
 - detector-side transfer is still negative on the audited open-cubic surface
 - the true link-current readout is still negative on the audited open-cubic
   surface
+- the packet-local momentum-flux / impulse readout is also still negative on
+  the audited open-cubic surface
 
 Next control:
 
 - stop centroid variants
-- the current lane has now been tried; only a momentum-flux or impulse
-  observable would be the next credible move if this family is revisited
+- the current lane has now been tried; only a genuinely different conserved
+  current or a different graph geometry would be credible if this family is
+  revisited
 
 ## Bottom Line
 
