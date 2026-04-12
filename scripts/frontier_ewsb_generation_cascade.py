@@ -1136,13 +1136,14 @@ def step5_theorem():
         - m_2, m_3: radiative coupling (1-loop suppressed)
         - m_2 != m_3: JW asymmetry in the Kawamoto-Smit representation
 
-    (4) Three distinct masses => three physical generations.
+    (4) Three distinct masses from EWSB cascade (bounded model).
 
-    (5) The generation structure is NOT an independent input.
-        It is a CONSEQUENCE of the same CW mechanism that gives the
-        Higgs VEV and determines the weak axis.
+    (5) The 1+2 split is a structural consequence of EWSB.
+        The full 1+1+1 hierarchy is a bounded model result.
+        Generation physicality remains open (see review.md).
 
-  GENERATION PHYSICALITY GATE: CLOSED.
+  GENERATION PHYSICALITY GATE: BOUNDED (not closed).
+  Exact: 1+2 split. Bounded: 1+1+1 hierarchy. Open: physicality.
   =====================================================================
   """)
 

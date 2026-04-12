@@ -16,7 +16,7 @@ Let V_sel = 32 sum_{i<j} phi_i^2 phi_j^2 be the graph-shift selector on the 3-cu
 
 4. **The hierarchy is m_v >> m_2, m_3** because the weak-direction member couples directly to the Higgs VEV while the color-direction members couple only radiatively.
 
-5. **Three distinct masses => three physical generations**. The generation structure is a CONSEQUENCE of EWSB, not an independent input.
+5. **Three distinct masses from the EWSB cascade** (bounded model). The 1+2 split is structural; the full 1+1+1 hierarchy is a bounded model result. Generation physicality remains open per review.md.
 
 ## Key Insight
 
