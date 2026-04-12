@@ -32,6 +32,10 @@ Current state:
 - newer `youthful-neumann` arrivals (`SU3_COMMUTANT`, `SU3_DYNAMICAL_SELECTION`,
   `NEUTRINO_MASSES`, revised frozen-stars runner) have been reviewed and do not
   change that decision
+- later arrivals (`NEUTRINO_COMPLEX_Z3`, `EWPT_STRENGTH`, `EWPT_LATTICE_MC`,
+  `WEINBERG_ANGLE_CORRECTION`, and the GW150914 echo stack) are also review-only:
+  they strengthen exploration, but they do not yet clear the retained
+  first-principles bar
 - the later branch memo [REVIEW_THREAD_SUMMARY_2026-04-12.md] is a
   branch-local synthesis note, not the authoritative retain state; use
   `CI3_Z3_PUBLICATION_RETAIN_AUDIT_2026-04-12.md` for promotion decisions

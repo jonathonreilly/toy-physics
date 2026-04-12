@@ -141,6 +141,11 @@ Why held:
 - the post-audit arrivals (`SU3_COMMUTANT`, `SU3_DYNAMICAL_SELECTION`,
   `NEUTRINO_MASSES`, revised frozen-stars runner) strengthen exploration but do
   not close the retained-core blockers
+- the newer arrivals (`NEUTRINO_COMPLEX_Z3`, `EWPT_STRENGTH`,
+  `EWPT_LATTICE_MC`, `WEINBERG_ANGLE_CORRECTION`, and the GW150914 echo stack)
+  also remain review-only because they are fit-, scenario-, or
+  still-changing-analysis surfaces rather than retained first-principles
+  closure
 - the later branch summary `REVIEW_THREAD_SUMMARY_2026-04-12.md` overstates
   several still-open blockers and must not be used as the retention authority
 

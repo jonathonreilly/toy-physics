@@ -189,6 +189,106 @@ Required rework:
 - if reopened, rewrite as a bounded phenomenology note with explicit “fit, not
   derivation” language
 
+### 5a. Complex `Z_3` breaking still strengthens the fit, not the derivation
+
+Files:
+
+- `docs/NEUTRINO_COMPLEX_Z3_NOTE.md`
+- `scripts/frontier_neutrino_complex_z3.py`
+
+Current read:
+
+- useful extension of the earlier neutrino fit because it relaxes the real
+  `Z_3`-breaking restriction and improves the `\delta_CP` / `\Sigma m_i`
+  tensions
+- the complex phase story is physically suggestive and better motivated than
+  the earlier purely real-breaking lane
+
+Why not on `main`:
+
+- the core runner is still a multi-parameter fit against measured
+  `\theta_{12}`, `\theta_{23}`, `\theta_{13}`, `\delta_CP`,
+  `\Delta m^2_{31}/\Delta m^2_{21}`, and the cosmological neutrino-mass bound
+- the “resolved within systematics” language depends on experimental hints and
+  an explicit tolerance to the cosmological bound
+- this is still phenomenology matching, not a retained first-principles
+  derivation from the cubic lane
+
+Required rework:
+
+- keep it off `main`
+- if reused for publication, relabel as a bounded phenomenology-fit note and
+  separate the algebraic motivation for complex breaking from the fitted
+  numerical closure claims
+
+### 5b. Electroweak phase transition lane is stronger, but still not
+first-principles closure
+
+Files:
+
+- `docs/EWPT_STRENGTH_NOTE.md`
+- `scripts/frontier_ewpt_strength.py`
+- `docs/EWPT_LATTICE_MC_NOTE.md`
+- `scripts/frontier_ewpt_lattice_mc.py`
+
+Current read:
+
+- `EWPT_STRENGTH` is a reasonable scenario/analogy note: extra bosons of the
+  right order strengthen the transition, and 2HDM/xSM literature is relevant
+- `EWPT_LATTICE_MC` improves on that by actually running a scalar 3D Monte
+  Carlo instead of stopping at perturbation theory
+
+Why not on `main`:
+
+- the taste-scalar mass scale is still injected (`m_S = 80 GeV`) rather than
+  derived from the retained cubic lane
+- the scalar-only Monte Carlo gives the central value `v/T ~ 0.49`, which is
+  borderline on its own
+- the headline `v/T ~ 0.73` result multiplies the scalar MC by a literature
+  enhancement factor `R_gauge = 1.5` rather than computing the gauge-field
+  sector in the same simulation
+- this makes the lane useful and much stronger than before, but still not a
+  retained first-principles electroweak/baryogenesis closure
+
+Required rework:
+
+- keep both notes off `main`
+- if reopened, write one bounded note that clearly separates:
+  - scalar-only MC result on the tested surface
+  - literature-anchored gauge enhancement estimate
+  - uncomputed full gauge+scalar lattice closure
+
+### 5c. Weinberg-angle threshold correction is still scenario-dependent
+
+Files:
+
+- `docs/WEINBERG_ANGLE_CORRECTION_NOTE.md`
+- `scripts/frontier_weinberg_angle_correction.py`
+
+Current read:
+
+- useful correction of the earlier normalization bug
+- useful as a reviewer-facing threshold-mechanism exploration showing the
+  taste spectrum can move the running in the correct direction
+
+Why not on `main`:
+
+- the script’s taste-partner assignments are explicitly model-dependent,
+  especially for leptons, where the note itself runs into colored-exotic
+  partner ambiguity
+- the best numerical match uses a fixed `alpha_U` from the SM-only
+  extrapolation, while the self-consistent `alpha_U` section reopens the gap
+  and pushes the result back toward the bad `0.176` baseline
+- this is therefore not a closed prediction of `\sin^2\theta_W`, only a
+  threshold-correction scenario study
+
+Required rework:
+
+- keep it off `main`
+- reduce it to a bounded threshold-correction memo unless the taste-partner
+  representation content and self-consistent unified coupling are both derived
+  from the retained lane
+
 ### 6. Revised frozen-stars runner is still not retention-ready
 
 Files:
@@ -360,6 +460,33 @@ What must be redone:
 
 - no retention until a genuine 3D strong-field surface exists and the
   observables are derived on that surface rather than extrapolated from a 1D toy
+
+### F. Echo search remains an active strong-field hold
+
+Files:
+
+- `docs/GW150914_ECHO_SEARCH_NOTE.md`
+- `scripts/gw150914_echo_search.py`
+- `scripts/gw150914_echo_definitive.py`
+- `scripts/gw_echo_matched_filter.py`
+
+Why held:
+
+- the current pipelines are still in motion and are not yet a frozen
+  publication-grade detection stack
+- earlier search variants excluded the first predicted echo by construction
+  through delayed post-merger windows
+- the current “consistent with prediction” language is too strong until the
+  pipeline includes the first predicted echo directly, has injection-calibrated
+  false-alarm control, and freezes the tested template family
+
+What must be redone:
+
+- keep the entire echo lane on `review-active`
+- no promotion until there is:
+  - one frozen search window / template definition
+  - direct inclusion of the first predicted echo
+  - injection-calibrated significance and trials accounting
 
 ## Reviewer-Facing Memos, Not Retained Science
 
