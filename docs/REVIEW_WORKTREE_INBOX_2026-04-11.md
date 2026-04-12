@@ -71,6 +71,38 @@ Status:
 - safe reading: source-mass scaling and attractive-sign portability across the
   audited ordered, staggered, Wilson, and 2D irregular control rows
 - not architecture-independent full Newton closure
+
+## Bounded Review Candidates
+
+These are on `codex/review-active`, not on `main` yet. They need one more
+review pass and claim-boundary check before any promotion.
+
+### Overnight additions captured from `origin/claude/youthful-neumann`
+
+- `docs/EM_GRAVITY_COEXISTENCE_2X2_NOTE.md`
+- `scripts/em_gravity_coexistence_2x2.py`
+- `docs/DISPERSION_RUNNING_EXPONENT_NOTE.md`
+- `scripts/frontier_dispersion_running_exponent.py`
+- `docs/HAWKING_BOGOLIUBOV_QUENCH_NOTE.md`
+- `scripts/frontier_hawking_bogoliubov_quench.py`
+- `docs/DISTANCE_LAW_64_FROZEN_CONTROL_NOTE.md`
+- `scripts/frontier_distance_law_64_frozen_control.py`
+
+Current read:
+
+- gravity+EM 2x2: bounded kinematic coexistence pass on the ray-sum surface;
+  mixed residual is zero by linearity of accumulated action
+- dispersion running-exponent: bounded classification improvement over the old
+  global `R^2` fit; cubic/Wilson read as Schrodinger-type at the tested `h`
+- Hawking Bogoliubov quench: bounded Gaussian-state in/out step with clean
+  null and thermal-fit regime; not a Hawking claim
+- distance law 64 frozen control: bounded diagnostic companion; brackets the
+  continuum exponent but does not close the strict frozen/static-source gate
+
+Promotion rule:
+
+- do not move any of these to `main` without an explicit bounded audit note or
+  a hold note that freezes the claim boundary
 - not a universal distance-law portability result
 
 ## Review Inventory
@@ -82,7 +114,7 @@ Everything left in this review worktree is now on hold.
 Everything else in this review worktree is held pending a specific missing
 control or redesign step.
 
-#### Overnight Claude bundle
+#### Overnight Claude bundle (remaining holds only)
 
 Files:
 
@@ -113,8 +145,8 @@ Why held:
 
 - the overnight branch contains real work, but the safe interpretation is
   narrower than the overnight storyline
-- no overnight artifact is ready for direct `main` promotion without new
-  bounded audit notes or additional controls
+- some bounded candidates have now been split out above; what remains in this
+  bundle is still hold-only
 - the latest Poisson/self-consistency, spatial-metric, and lattice-gauge notes
   also remain review-only after audit
 

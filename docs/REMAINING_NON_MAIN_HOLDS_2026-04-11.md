@@ -26,6 +26,21 @@ These are not part of the hold list:
 - `ARCHITECTURE_PORTABILITY_AUDIT_2026-04-11.md`
 - `scripts/frontier_architecture_portability_sweep.py`
 
+## On Review, Not Yet Held Or Retained
+
+These artifacts have been captured onto `codex/review-active` as bounded review
+candidates. They are not on `main`, but they are no longer part of the generic
+overnight hold bundle.
+
+- `docs/EM_GRAVITY_COEXISTENCE_2X2_NOTE.md`
+- `scripts/em_gravity_coexistence_2x2.py`
+- `docs/DISPERSION_RUNNING_EXPONENT_NOTE.md`
+- `scripts/frontier_dispersion_running_exponent.py`
+- `docs/HAWKING_BOGOLIUBOV_QUENCH_NOTE.md`
+- `scripts/frontier_hawking_bogoliubov_quench.py`
+- `docs/DISTANCE_LAW_64_FROZEN_CONTROL_NOTE.md`
+- `scripts/frontier_distance_law_64_frozen_control.py`
+
 ## Holds
 
 ### 0. Overnight Claude audit bundle
@@ -59,6 +74,8 @@ Why held:
 
 - the overnight branch contains useful new artifacts, but none of them crosses
   the current `main` retention bar without substantial narrowing
+- four bounded candidates from that branch have been split out above onto the
+  active review surface; what remains here is hold-only
 - GR-signatures and electromagnetism remain consistency checks rather than
   GR/Maxwell derivations
 - the spatial-metric step remains a weak-field consistency argument rather than
