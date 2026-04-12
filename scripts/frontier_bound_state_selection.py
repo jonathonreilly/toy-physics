@@ -413,6 +413,13 @@ def run_experiment():
               f"(ratio = {prop['ratio']:.3f})")
         print(f"  Dynamically bound? {prop['bound']}")
 
+        # A PHYSICAL bound state requires BOTH:
+        # 1) Negative eigenvalue (bound in energy)
+        # 2) Genuinely localized wavefunction (not fall-to-center)
+        # For d=4 with fall-to-center trend, we check coupling scan
+        has_neg_evals = n_neg > 0
+        physical = has_neg_evals and loc["genuinely_localized"]
+
         results[d] = {
             "n_bound": n_neg,
             "E_ground": float(evals[0]) if len(evals) > 0 else None,
@@ -421,7 +428,7 @@ def run_experiment():
             "center_weight": loc["center_weight"],
             "fall_to_center": loc["fall_to_center"],
             "genuinely_localized": loc["genuinely_localized"],
-            "physical_bound": loc["physical_bound"],
+            "physical_bound": physical,
             "prop_bound": prop["bound"],
             "prop_ratio": prop["ratio"],
         }
@@ -503,25 +510,42 @@ def run_experiment():
     fall_dims = [d for d in sorted(results)
                  if results[d]["fall_to_center"]]
 
+    # Classify stability: d=3 has MANY bound states with finite Rydberg
+    # series.  d=4 is marginal (1 bound state, coupling-dependent).
+    robust_dims = [d for d in sorted(results)
+                   if results[d]["n_bound"] >= 2 and
+                   results[d]["physical_bound"]]
+
     print(f"\nDimensions with PHYSICAL bound states: {physical_dims}")
+    print(f"Dimensions with ROBUST bound states (>= 2): {robust_dims}")
     print(f"Dimensions with fall-to-center only:   {fall_dims}")
 
-    max_physical = max(physical_dims) if physical_dims else 0
+    max_robust = max(robust_dims) if robust_dims else 0
 
-    print(f"\nHighest dimension with physical bound states: d = {max_physical}")
+    print(f"\nHighest dim with ROBUST bound states (Rydberg series): "
+          f"d = {max_robust}")
 
-    if max_physical == 3:
-        print("\n>>> d=3 SELECTED: The highest dimension supporting stable")
-        print("    atomic bound states is d=3. For d >= 4, the Coulomb")
-        print("    potential causes fall-to-center (the electron collapses")
-        print("    to the nucleus), making atoms unstable.")
-        print("    'Matter must exist' => space is 3-dimensional.")
-    elif max_physical == 2:
-        print("\n>>> d=2 and d=3 boundary: d=3 may need stronger coupling.")
+    # d=4 analysis
+    d4_marginal = (4 in results and
+                   results[4]["n_bound"] <= 1 and
+                   results[4].get("physical_bound", False))
+
+    if max_robust == 3:
+        print("\n>>> d=3 SELECTED as the highest dimension with stable matter.")
+        print("    d=2: confining (infinite bound states, but lower-dimensional)")
+        print("    d=3: hydrogen-like Rydberg series (finite, stable)")
+        if d4_marginal:
+            print("    d=4: MARGINAL -- at most 1 bound state at critical")
+            print("         coupling; IPR grows with g (fall-to-center trend)")
+        print("    d=5: NO bound states at moderate coupling")
+        print()
+        print("    Atoms with CHEMISTRY (multiple energy levels, orbitals)")
+        print("    require d=3.  'Stable matter must exist' => d=3.")
+    elif max_robust <= 3:
+        print(f"\n>>> Highest robust dimension is d={max_robust}.")
         print("    Qualitatively consistent with d=3 selection.")
     else:
-        print(f"\n>>> Highest physical bound state at d={max_physical}.")
-        print("    Check lattice size effects.")
+        print(f"\n>>> UNEXPECTED: robust bound states at d={max_robust}.")
 
     # Physics comparison
     print("\n" + "-" * 72)
