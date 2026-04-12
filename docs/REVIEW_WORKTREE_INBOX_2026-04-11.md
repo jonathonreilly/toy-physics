@@ -41,6 +41,10 @@ Current state:
   low-degree native Clifford algebra only yields the obvious vector and
   bivector triplets plus singlets, with no same-surface `S_3 -> Z_2`
   selector hiding in the low-degree operator span
+- the new `NATIVE_WEAK_AXIS_SELECTOR_THEOREM_NOTE` sharpens that result:
+  the natural native triplets do exist, but their quadratic/cubic/quartic
+  spectral invariants are isotropic, so they cannot by themselves generate
+  the missing weak-axis selector
 - the later `HYPERCHARGE_IDENTIFICATION` lane is still conditional on that
   commutant setup and should not be summarized as anomaly-free closure
 - the later `YT_FROM_ALPHA_S` lane remains review-only: useful constraint, but

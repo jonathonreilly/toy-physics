@@ -156,6 +156,11 @@ Why held:
   operator search collapses to the known Clifford basis: singlets `I` and
   `Gamma_5`, plus the obvious vector and bivector triplets; it does not
   produce a canonical same-surface `S_3 -> Z_2` selector
+- the new `NATIVE_WEAK_AXIS_SELECTOR_THEOREM` note strengthens that hold:
+  the natural native triplets are too isotropic to distinguish axis,
+  planar, and symmetric directions through low-order spectral invariants, so
+  the missing selector must come from a genuinely larger same-surface
+  operator or dynamical mechanism
 - the later `HYPERCHARGE_IDENTIFICATION` script gives the right left-handed
   `Y` ratio and charges, but its anomaly-based uniqueness language still
   exceeds what that left-handed surface proves
