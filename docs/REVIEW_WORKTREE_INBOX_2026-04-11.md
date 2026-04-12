@@ -190,6 +190,17 @@ Current read:
 - important for the Wilson hold section because it narrows, but does not close,
   the static-vs-dynamic explanation gap
 
+### Narrow capture from `origin/codex/axiom-risk-ledger`
+
+- `docs/AXIOM_RISK_LEDGER.md`
+
+Current read:
+
+- reviewer-facing synthesis note about which axioms are stable, vague, or under
+  pressure from the audited results
+- useful framing document for manuscript and review response work
+- not a retained physics result and not a promotion target for `main`
+
 ### 2026-04-12 migration from `claude/youthful-neumann`
 
 New bounded promotion candidates:

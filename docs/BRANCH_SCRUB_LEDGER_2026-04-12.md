@@ -137,6 +137,25 @@ Reason:
   robustness notes is the frozen-source control pair above, and that pair is
   now preserved on the active review branch
 
+### `origin/codex/axiom-risk-ledger`
+
+Status:
+
+- scrubbed into `codex/review-active`
+
+Captured in this pass:
+
+- `docs/AXIOM_RISK_LEDGER.md`
+
+Archive readiness:
+
+- archive-ready
+
+Reason:
+
+- the branch-specific payload is the reviewer-facing axiom risk note above, and
+  that note is now preserved on the active review branch
+
 ## Codex First-Pass Triage
 
 These statuses are mechanical only: whether the branch tip is already an
