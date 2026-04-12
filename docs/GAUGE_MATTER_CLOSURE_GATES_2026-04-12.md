@@ -66,6 +66,21 @@ not yet:
 
 - anomaly-complete `U(1)_Y`
 
+### New search result on the current surface
+
+The new graph-first chiral-completion search sharpens this obstruction:
+
+- there are **no** weak singlets on the one-particle `8`-state surface
+- in a permissive tensor-power scan:
+  - `d_R`-like singlets appear by degree `2`
+  - `e_R`-like singlets appear by degree `2`
+  - `u_R`-like singlets do **not** appear until degree `4`
+
+This does not prove that all completions are impossible.
+
+It does prove that the present left-handed one-particle surface does **not**
+contain a natural, symmetric, low-degree chiral completion by itself.
+
 ### What theorem is needed
 
 **Chiral completion theorem**
@@ -93,6 +108,8 @@ Needed conclusion:
 - paper-safe wording remains:
   - hypercharge-like
   - left-handed charge matching
+- use `GRAPH_FIRST_CHIRAL_COMPLETION_SEARCH_NOTE.md` as the current obstruction
+  memo for why the right-handed sector is still missing
 
 ---
 
@@ -126,6 +143,14 @@ There is also a smaller representation-theoretic gap:
 
 - the orbit theorem does not canonically assign physical family labels
 - the two singlets still need interpretation
+
+The newer `GENERATION_PHYSICALITY` lane improves the pressure on this gate but
+does **not** close it cleanly:
+
+- the Wilson-entanglement argument correlates the fate of some structures under
+  deformation, but it does not yet canonically derive physical family labels
+- the CKM and singlet sections still rely on modeled anisotropy and speculative
+  singlet interpretation rather than a closed matter-assignment theorem
 
 ### What theorem is needed
 

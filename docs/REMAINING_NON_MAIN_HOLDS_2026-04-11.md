@@ -125,6 +125,10 @@ Files:
 - `docs/ACCESSIBLE_PREDICTION_NOTE.md`
 - `docs/COMPLETE_DERIVATION_CHAIN_2026-04-12.md`
 - `docs/REVOLUTIONARY_IMPLICATIONS_NOTE.md`
+- `docs/YT_FORMAL_THEOREM_NOTE.md`
+- `docs/GENERATION_PHYSICALITY_NOTE.md`
+- `docs/S3_TOPOLOGY_DERIVATION_NOTE.md`
+- `docs/GRAPH_FIRST_CHIRAL_COMPLETION_SEARCH_NOTE.md`
 - corresponding `frontier_*` runners on the same lane
 
 Why held:
@@ -172,6 +176,20 @@ Why held:
 - the later `YT_FROM_ALPHA_S` lane is still held because the exact
   trace-identity coefficient and coupling normalization remain unresolved in
   the runner itself
+- the later `YT_FORMAL_THEOREM` lane materially strengthens the `y_t` surface,
+  but it is still held because the key gauge-Yukawa normalization step is
+  explicitly left to a not-yet-derived Ward identity
+- the later `GENERATION_PHYSICALITY` lane strengthens the taste-physicality
+  case, but it is still held because its Wilson-entanglement headline exceeds
+  what the script actually checks, and its CKM / singlet interpretation
+  sections remain scenario-dependent
+- the later `S3_TOPOLOGY_DERIVATION` lane is still held because the argument
+  uses a stronger compactification/manifold step than the current graph-growth
+  surface has derived
+- the new `GRAPH_FIRST_CHIRAL_COMPLETION_SEARCH` lane sharpens Gate 1 by
+  showing the present left-handed graph-first module has no weak-singlet
+  one-particle completion and no natural low-degree symmetric right-handed
+  sector
 - the later branch summary `REVIEW_THREAD_SUMMARY_2026-04-12.md` overstates
   several still-open blockers and must not be used as the retention authority
 
