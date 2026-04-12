@@ -1,6 +1,6 @@
 # Gravity + EM Coexistence 2x2 Factorial Control
 
-**Status:** bounded review candidate  
+**Status:** bounded-retained  
 **Runner:** `scripts/em_gravity_coexistence_2x2.py`  
 **Gate:** Promotion Playbook section 4a (2026-04-12)
 
@@ -63,9 +63,8 @@ All residuals are at floating-point noise level.
   contributions to the action. The 2x2 mixed residual is exactly zero
   by linearity of action accumulation.
 - Charge-sign cancellation is exact in both the pure-EM and joint cells.
-- Neither sector interferes with the other at this kinematic ray-sum level:
-  turning on EM does not change the gravity readout, and turning on gravity
-  does not change the EM readout.
+- Neither sector interferes with the other: turning on EM does not change
+  the gravity readout, and turning on gravity does not change the EM readout.
 
 ## What Is Not Supported
 

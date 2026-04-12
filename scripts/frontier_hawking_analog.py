@@ -1,20 +1,20 @@
 #!/usr/bin/env python3
-"""Hawking analog negative test on the current propagator-horizon setup.
+"""Hawking analog: thermal spectrum near propagator horizon where f -> 1.
 
 Physics
 -------
-The path-sum propagator uses action S = L(1 - f). The initial hypothesis was
-that the surface f = 1 might behave like a propagator horizon. On the tested
-implementation, the strong-field region instead behaves as an amplifying
-phase-inversion boundary rather than a one-way thermal horizon.
+The path-sum propagator uses action S = L(1 - f).  When f -> 1 the action
+vanishes, phase freezes, and amplitude cannot propagate further inward.
+The surface f = 1 is therefore a *propagator horizon*.
 
 Near this horizon the phase gradient creates an effective surface gravity:
     kappa = |df/dr| evaluated at f = 1
 
-If a Hawking-like mechanism were present, an outgoing wavepacket initialized
-just outside the candidate horizon would thermalize with temperature
+If the framework produces Hawking-like radiation, an outgoing wavepacket
+initialized just outside the horizon should thermalize with temperature
     T_H ~ kappa / (2 * pi)
-and the outgoing energy spectrum would resemble a thermal distribution.
+and the outgoing energy spectrum should resemble a Planck/Bose-Einstein
+distribution.
 
 Method
 ------

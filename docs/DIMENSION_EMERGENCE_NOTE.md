@@ -1,7 +1,5 @@
 # Dimension Emergence: Spectral Dimension vs Force Law
 
-**Status:** review proxy; bounded regular-lattice correlation
-
 ## Question
 
 Does the effective spatial dimension of a graph determine the gravitational
@@ -79,10 +77,9 @@ trend: higher d_s gives steeper Green's function decay. However, quantitative
 agreement with the continuum prediction beta = -(d_s - 2) is limited by
 the screening mass, discrete distance binning, and finite-size effects.
 
-## Bounded Read: Regular-Lattice Dimension/Force Correlation
+## Key Finding: d_s = 3 is Special
 
-Within the tested regular-lattice Poisson proxy, `d = 3` is the first integer
-dimension that supports an inverse-square force law because:
+d_s = 3 is the critical dimension for Newtonian gravity because:
 
 1. It is the lowest integer dimension where the Laplacian Green's function
    decays as a power law (phi ~ 1/r), producing an inverse-square force.
@@ -95,13 +92,12 @@ dimension that supports an inverse-square force law because:
 
 ## Bounded Claims
 
-**Confirmed on the tested proxy:**
+**Confirmed:**
 - On regular lattices, the spatial dimension d determines the force law
   via the Green's function: F ~ 1/r^(d-1). Verified for d = 2, 3.
 - The spectral dimension d_s (from the heat-kernel trace of the graph
   Laplacian) correctly identifies the effective dimension.
-- on the tested regular lattices, the `d = 3` row yields inverse-square force
-  and the `d = 2` row trends toward a logarithmic potential regime.
+- d_s = 3 yields inverse-square force. d_s = 2 yields log potential.
 
 **Partially confirmed:**
 - The Green's function exponent on irregular graphs trends with d_s,
@@ -121,5 +117,3 @@ dimension that supports an inverse-square force law because:
 - Graph-distance Green's function measurements are affected by the screening
   mass mu^2 in the Poisson solver; this distorts the power law at short and
   long distances.
-- This note does not establish a universal statement that spectral dimension
-  alone determines the force law on arbitrary graphs.

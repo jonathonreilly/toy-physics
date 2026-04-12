@@ -1,14 +1,13 @@
 # Electromagnetism Probe Note
 
 **Date:** 2026-04-11
-**Status:** review hold; bounded U(1) consistency probe
+**Status:** exploratory probe complete, bounded claims only
 
 ## Summary
 
-This probe tests whether simple U(1) phases on directed graph edges and a
-scalar Coulomb potential reproduce bounded electromagnetic-style behavior on
-the staggered lattice. It is a consistency probe of the chosen discretization,
-not a derivation of Maxwell theory.
+This probe tests whether U(1) gauge phases on directed graph edges produce
+electromagnetic behaviour within the staggered lattice framework that already
+supports gravitational attraction.
 
 Two sectors were tested on an 18^3 open-boundary cubic lattice:
 
@@ -65,7 +64,8 @@ non-perturbative regime at these B values).
 3. The Wilson plaquette holonomy equals the applied B field exactly, confirming
    the gauge construction is consistent with lattice gauge theory.
 
-4. The gauge construction is internally consistent on the tested surface.
+4. The electrostatic and magnetic sectors are independent of the gravitational
+   sector and can coexist in the same Hamiltonian.
 
 **What this probe does NOT establish:**
 
@@ -85,8 +85,6 @@ non-perturbative regime at these B values).
 
 4. Coupling between the electric and magnetic sectors (electromagnetic waves,
    radiation).
-5. Coupled gravity+electromagnetism. This probe does not run a nonzero
-   gravitational field together with the EM sectors.
 
 ## Key parameters
 

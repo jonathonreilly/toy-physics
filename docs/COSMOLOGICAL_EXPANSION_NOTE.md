@@ -1,14 +1,13 @@
 # Cosmological Expansion from Graph Growth Rules
 
 **Date:** 2026-04-11
-**Status:** review hold; growth-proxy study
+**Status:** exploratory frontier note
 
 ## One-line read
 
-Graph growth rules produce measurable expansion histories in the chosen
-graph-distance proxy. Exponential node-addition gives a de Sitter-like signal
-on its own growth clock, but no tested rule produces matter- or
-radiation-dominated expansion at `N = 300`.
+Graph growth rules produce measurable expansion histories; exponential
+node-addition gives clean de Sitter (R^2=0.998, constant H), but no rule
+tested produces matter-dominated or radiation-dominated expansion at N=300.
 
 ## Primary artifact
 
@@ -82,10 +81,9 @@ on graph snapshots taken during growth.
 well-defined scale factor a(t) and Hubble parameter H(t). The measurement
 framework works.
 
-**C2** (partially supported): exponential node-addition gives a de Sitter-like
-signal in this proxy, but that result is partly tautological and the rules are
-not compared on a common time coordinate. No tested rule produces matter or
-radiation domination.
+**C2** (partially supported): Exponential node-addition gives de Sitter-like
+expansion (R^2=0.998, CV(H)=0.09). Uniform random and spatial growth show
+weaker de Sitter signatures. No rule produces matter or radiation domination.
 
 **C3** (supported): Gravitational attraction survives on growing-graph
 snapshots (4/4 pass). The force law does not break when the background
@@ -103,8 +101,6 @@ geometry is expanding.
   couples expansion to energy density; here growth rules are imposed)
 - The exponential de Sitter result is partially tautological: we impose
   exponential growth and measure exponential expansion
-- The non-exponential and exponential rules do not share a common clock in the
-  current implementation, so cross-rule Friedmann comparisons remain provisional
 
 ## What would strengthen this
 

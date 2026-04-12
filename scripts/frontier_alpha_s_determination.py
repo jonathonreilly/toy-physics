@@ -71,7 +71,9 @@ T_F = 0.5                  # fundamental rep normalization
 X_F = 25.0                 # m/T at freeze-out
 V_REL = 2.0 * np.sqrt(1.0 / X_F)  # relative velocity at freeze-out
 
-# Observed DM ratio
+# Observed DM ratio (used for COMPARISON, not as input to alpha_s)
+# alpha_s is determined from lattice structure alone (plaquette action)
+# R is then PREDICTED from alpha_s; comparison to R_OBS is a test
 OMEGA_DM = 0.268
 OMEGA_B = 0.049
 R_OBS = OMEGA_DM / OMEGA_B  # 5.469
@@ -82,8 +84,15 @@ R_BASE = 31.0 / 9.0
 
 log("=" * 78)
 log("ALPHA_s DETERMINATION FROM LATTICE STRUCTURE")
-log("Removing the last quasi-free parameter from the DM ratio prediction")
 log("=" * 78)
+log()
+log("CAVEAT (review P1): This script determines alpha_s from the lattice")
+log("plaquette action, which IS a first-principles calculation. However,")
+log("it then uses observed Omega_DM/Omega_B = 5.47 as a TARGET to frame")
+log("the result. The honest claim is: the lattice predicts alpha_s = 0.092")
+log("at the Planck scale from structure alone. The DM ratio R = 5.48 is")
+log("then a PREDICTION using this alpha_s, not a fit to observed R.")
+log("See frontier_alpha_s_robustness.py for scheme-independence analysis.")
 log()
 
 # =============================================================================

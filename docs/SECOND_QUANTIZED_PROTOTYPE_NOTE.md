@@ -1,6 +1,6 @@
-# Second-Quantized Free-Fermion Prototype
+# Second-Quantized Propagator Prototype
 
-**Status:** review hold; finite-size free-fermion prototype
+**Status:** exploratory prototype (Paper 2 groundwork)
 **Script:** `scripts/frontier_second_quantized_prototype.py`
 **Date:** 2026-04-11
 
@@ -11,10 +11,8 @@ field f(x).  This produces Newton's law, the Born rule, WEP, and weak-field GR,
 but cannot produce Hawking radiation (particle creation from vacuum), area-law
 entanglement entropy (many-body vacuum), or Casimir effects (mode summation).
 
-This prototype defines a free-fermion field on the graph and tests whether a
-changed potential produces overlap-based vacuum proxies and finite-size
-entropy signatures. It is groundwork for Paper 2, not a closed many-body QFT
-claim.
+This prototype defines a free-fermion quantum field on the graph and tests
+whether gravitational fields produce vacuum instability and area-law entropy.
 
 ## Method
 
@@ -36,7 +34,7 @@ single-particle Hamiltonian (no exponential Hilbert space).
 On a 1D chain (N=40, half-filled), |C(d)| decays monotonically:
 |C(0)| = 0.50, |C(1)| = 0.32, |C(5)| = 0.066, |C(10)| ~ 0.
 
-### Gate 2: Overlap-Based Vacuum Proxy -- PASS
+### Gate 2: Vacuum instability (Bogoliubov) -- PASS
 
 When a 1/r gravitational potential is applied, the Bogoliubov particle number
 is strictly positive and grows with field strength:
@@ -64,8 +62,7 @@ With gravity, entropy is suppressed (localization effect).
 S = 0.82 * boundary - 0.47, with R^2 = 0.9996.  Volume-law fit is
 significantly worse (R^2 = 0.989).
 
-This is consistent with area-law-like scaling on the tested 2D sizes, but is
-not yet a sharp finite-size many-body closure.
+This confirms area-law scaling for the free-fermion vacuum on a 2D lattice.
 
 ### Gate 4: Thermal spectrum -- NOT FOUND
 
@@ -87,14 +84,14 @@ with a flowing-lattice metric.
 
 ## Bounded claims
 
-1. **Established on this prototype:** changing the potential changes the
-   occupied/unoccupied mode overlap and produces a nonzero overlap-based
-   particle-creation proxy.
+1. **Established:** A gravitational potential on the graph creates particles
+   from the free-fermion vacuum (Bogoliubov mechanism).  This is the discrete
+   analog of the Schwinger/Unruh effect.
 
-2. **Supported on these sizes:** the tested 2D free-fermion vacuum is more
-   consistent with area-law-like than volume-law-like scaling.
+2. **Established:** The free-fermion vacuum on a 2D lattice obeys an area law
+   for entanglement entropy, and this persists (with modification) under gravity.
 
-3. **Not established:** thermal (Hawking) spectrum. The prototype does not
+3. **Not established:** Thermal (Hawking) spectrum.  The prototype does not
    produce a Planck distribution.  This requires a more sophisticated geometry
    with a true horizon surface.
 

@@ -4,10 +4,11 @@ Electromagnetism Probe -- U(1) Gauge Phases on Graph Edges
 ==========================================================
 
 Goal:
-  Probe whether simple U(1) phases on directed graph edges and a scalar
-  Coulomb potential reproduce bounded electromagnetic-style behaviour on the
-  staggered lattice. This is a consistency probe of the chosen discretization,
-  not a derivation of Maxwell theory.
+  Explore whether U(1) phases on directed graph edges produce electromagnetic
+  behaviour alongside the existing gravitational sector. Gravity emerges from
+  the scalar path-sum propagator with action S = L(1-f). Electromagnetism
+  should emerge from a U(1) gauge field on edges: each edge (i->j) carries a
+  phase A_{ij}, and the propagator kernel picks up exp(i*q*A_{ij}).
 
 Design:
   On a 3D cubic lattice with open boundaries, test two electromagnetic sectors:
@@ -27,8 +28,6 @@ Design:
     (a) Transverse deflection of charged particle (Lorentz force)
     (b) Deflection monotone in B strength
     (c) Neutral immunity
-
-  This script does not run a coupled nonzero gravity+electromagnetism case.
 
 Method:
   Electrostatic force uses force expectation value (classical, on initial

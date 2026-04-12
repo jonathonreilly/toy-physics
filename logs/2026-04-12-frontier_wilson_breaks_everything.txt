@@ -1,0 +1,207 @@
+==============================================================================
+WILSON TERM BREAKS GAUGE GROUPS AND GENERATIONS TOGETHER
+==============================================================================
+
+Hypothesis: The Wilson term simultaneously destroys the Clifford
+algebra, the SU(2) and SU(3) gauge structures, and the three-
+generation pattern.  These are not independent features that can
+be selectively removed -- they are aspects of a single algebraic
+structure (Cl(3)) that either exists in full or not at all.
+
+
+==============================================================================
+  r = 0.0
+==============================================================================
+  [1] Clifford: relative error = 0.000000  PASS
+  [2] SU(2):    relative error = 0.000000  PASS
+  [3] SU(3):    Casimir quality = 1.0000, closure dim = 8, spread = 0.0000  PASS
+        S^2 eigenvalues: [0.7500, 0.7500, 0.7500, 0.7500, 0.7500, 0.7500, 0.7500, 0.7500]
+  [4] Generations: all degenerate (Z_3 orbits exist but mass-unresolved)  PASS
+        m = 0.0000: 8x  [(0, 0, 0), (0, 0, 1), (0, 1, 0), (0, 1, 1), (1, 0, 0), (1, 0, 1), (1, 1, 0), (1, 1, 1)]
+  [5] Gravity:  attractive=True, beta=-0.078  DEGRADED
+        net shifts: m=4 -> +3.1673, m=8 -> +3.0013
+  [6] Born rule: I_3/P = 1.40e-16  PASS
+
+==============================================================================
+  r = 0.2
+==============================================================================
+  [1] Clifford: relative error = 0.590270  BROKEN
+  [2] SU(2):    relative error = 0.621668  BROKEN
+  [3] SU(3):    Casimir quality = 0.1766, closure dim = 8, spread = 0.1757  BROKEN
+        S^2 eigenvalues: [0.1038, 0.1095, 0.1095, 0.1152, 0.1496, 0.1553, 0.1553, 0.1610]
+  [4] Generations: mass levels: 1+3+3+1, spread = 1.20  PASS
+        m = 0.0000: 1x  [(0, 0, 0)]
+        m = 0.4000: 3x  [(0, 0, 1), (0, 1, 0), (1, 0, 0)]
+        m = 0.8000: 3x  [(0, 1, 1), (1, 0, 1), (1, 1, 0)]
+        m = 1.2000: 1x  [(1, 1, 1)]
+  [5] Gravity:  attractive=True, beta=-0.054  DEGRADED
+        net shifts: m=4 -> +3.1014, m=8 -> +2.9869
+  [6] Born rule: I_3/P = 1.08e-16  PASS
+
+==============================================================================
+  r = 0.5
+==============================================================================
+  [1] Clifford: relative error = 0.802597  BROKEN
+  [2] SU(2):    relative error = 0.847411  BROKEN
+  [3] SU(3):    Casimir quality = 0.0394, closure dim = 8, spread = 0.3057  BROKEN
+        S^2 eigenvalues: [0.0174, 0.0208, 0.0208, 0.0243, 0.0347, 0.0382, 0.0382, 0.0417]
+  [4] Generations: mass levels: 1+3+3+1, spread = 3.00  PASS
+        m = 0.0000: 1x  [(0, 0, 0)]
+        m = 1.0000: 3x  [(0, 0, 1), (0, 1, 0), (1, 0, 0)]
+        m = 2.0000: 3x  [(0, 1, 1), (1, 0, 1), (1, 1, 0)]
+        m = 3.0000: 1x  [(1, 1, 1)]
+  [5] Gravity:  attractive=True, beta=-0.086  DEGRADED
+        net shifts: m=4 -> +3.0297, m=8 -> +2.8549
+  [6] Born rule: I_3/P = 1.05e-16  PASS
+
+==============================================================================
+  r = 0.8
+==============================================================================
+  [1] Clifford: relative error = 0.875887  BROKEN
+  [2] SU(2):    relative error = 0.919981  BROKEN
+  [3] SU(3):    Casimir quality = 0.0146, closure dim = 8, spread = 0.3797  BROKEN
+        S^2 eigenvalues: [0.0051, 0.0070, 0.0070, 0.0088, 0.0130, 0.0148, 0.0148, 0.0167]
+  [4] Generations: mass levels: 1+3+3+1, spread = 4.80  PASS
+        m = 0.0000: 1x  [(0, 0, 0)]
+        m = 1.6000: 3x  [(0, 0, 1), (0, 1, 0), (1, 0, 0)]
+        m = 3.2000: 3x  [(0, 1, 1), (1, 0, 1), (1, 1, 0)]
+        m = 4.8000: 1x  [(1, 1, 1)]
+  [5] Gravity:  attractive=True, beta=-0.868  DEGRADED
+        net shifts: m=4 -> +4.2823, m=8 -> +2.3470
+  [6] Born rule: I_3/P = 3.66e-17  PASS
+
+==============================================================================
+  r = 1.0
+==============================================================================
+  [1] Clifford: relative error = 0.901834  BROKEN
+  [2] SU(2):    relative error = 0.943607  BROKEN
+  [3] SU(3):    Casimir quality = 0.0087, closure dim = 8, spread = 0.4139  BROKEN
+        S^2 eigenvalues: [0.0027, 0.0040, 0.0040, 0.0052, 0.0078, 0.0090, 0.0090, 0.0103]
+  [4] Generations: mass levels: 1+3+3+1, spread = 6.00  PASS
+        m = 0.0000: 1x  [(0, 0, 0)]
+        m = 2.0000: 3x  [(0, 0, 1), (0, 1, 0), (1, 0, 0)]
+        m = 4.0000: 3x  [(0, 1, 1), (1, 0, 1), (1, 1, 0)]
+        m = 6.0000: 1x  [(1, 1, 1)]
+  [5] Gravity:  attractive=True, beta=-0.669  DEGRADED
+        net shifts: m=4 -> +4.7011, m=8 -> +2.9572
+  [6] Born rule: I_3/P = 5.72e-17  PASS
+
+==============================================================================
+  r = 1.5
+==============================================================================
+  [1] Clifford: relative error = 0.936781  BROKEN
+  [2] SU(2):    relative error = 0.972068  BROKEN
+  [3] SU(3):    Casimir quality = 0.0032, closure dim = 8, spread = 0.4716  BROKEN
+        S^2 eigenvalues: [0.0008, 0.0013, 0.0013, 0.0019, 0.0029, 0.0034, 0.0034, 0.0040]
+  [4] Generations: mass levels: 1+3+3+1, spread = 9.00  PASS
+        m = 0.0000: 1x  [(0, 0, 0)]
+        m = 3.0000: 3x  [(0, 0, 1), (0, 1, 0), (1, 0, 0)]
+        m = 6.0000: 3x  [(0, 1, 1), (1, 0, 1), (1, 1, 0)]
+        m = 9.0000: 1x  [(1, 1, 1)]
+  [5] Gravity:  attractive=True, beta=-0.230  DEGRADED
+        net shifts: m=4 -> +3.0237, m=8 -> +2.5776
+  [6] Born rule: I_3/P = 3.36e-16  PASS
+
+==============================================================================
+  r = 2.0
+==============================================================================
+  [1] Clifford: relative error = 0.953978  BROKEN
+  [2] SU(2):    relative error = 0.983795  BROKEN
+  [3] SU(3):    Casimir quality = 0.0015, closure dim = 8, spread = 0.5076  BROKEN
+        S^2 eigenvalues: [0.0003, 0.0006, 0.0006, 0.0009, 0.0014, 0.0017, 0.0017, 0.0020]
+  [4] Generations: mass levels: 1+3+3+1, spread = 12.00  PASS
+        m = 0.0000: 1x  [(0, 0, 0)]
+        m = 4.0000: 3x  [(0, 0, 1), (0, 1, 0), (1, 0, 0)]
+        m = 8.0000: 3x  [(0, 1, 1), (1, 0, 1), (1, 1, 0)]
+        m = 12.0000: 1x  [(1, 1, 1)]
+  [5] Gravity:  attractive=True, beta=-0.707  DEGRADED
+        net shifts: m=4 -> +2.1085, m=8 -> +1.2914
+  [6] Born rule: I_3/P = 3.01e-16  PASS
+
+==============================================================================
+SUMMARY TABLE
+==============================================================================
+
+    r |    Cl(3) |    SU(2) |    SU(3) |     3 gen |       Grav |       Born
+----------------------------------------------------------------------------
+  0.0 |       ok |       ok | q=1.00/d8 |   8(Z3ok) |   b=-0.08* |    1.4e-16
+  0.2 |    0.590 |    0.622 | q=0.18/d8 |   1+3+3+1 |   b=-0.05* |    1.1e-16
+  0.5 |    0.803 |    0.847 | q=0.04/d8 |   1+3+3+1 |   b=-0.09* |    1.1e-16
+  0.8 |    0.876 |    0.920 | q=0.01/d8 |   1+3+3+1 |   b=-0.87* |    3.7e-17
+  1.0 |    0.902 |    0.944 | q=0.01/d8 |   1+3+3+1 |   b=-0.67* |    5.7e-17
+  1.5 |    0.937 |    0.972 | q=0.00/d8 |   1+3+3+1 |   b=-0.23* |    3.4e-16
+  2.0 |    0.954 |    0.984 | q=0.00/d8 |   1+3+3+1 |   b=-0.71* |    3.0e-16
+
+==============================================================================
+ANALYSIS
+==============================================================================
+
+  r = 0.0 (NO Wilson term):
+    Clifford:    exact
+    SU(2):       exact
+    SU(3) proj:  Casimir quality=1.0000, closure dim=8
+    Generations: all 8 degenerate (full taste symmetry)
+    Born rule:   I_3/P = 1.40e-16
+
+  Clifford algebra breaks at r = 0.2
+  SU(2) closure breaks at   r = 0.2
+  SU(3) struct consts break r = 0.2
+
+  Error vs r (monotonic degradation):
+    r=0.0: Cl_err=0.0000  SU2_err=0.0000  SU3_cq=1.000/d8  mass_spread=0.00
+    r=0.2: Cl_err=0.5903  SU2_err=0.6217  SU3_cq=0.177/d8  mass_spread=1.20
+    r=0.5: Cl_err=0.8026  SU2_err=0.8474  SU3_cq=0.039/d8  mass_spread=3.00
+    r=0.8: Cl_err=0.8759  SU2_err=0.9200  SU3_cq=0.015/d8  mass_spread=4.80
+    r=1.0: Cl_err=0.9018  SU2_err=0.9436  SU3_cq=0.009/d8  mass_spread=6.00
+    r=1.5: Cl_err=0.9368  SU2_err=0.9721  SU3_cq=0.003/d8  mass_spread=9.00
+    r=2.0: Cl_err=0.9540  SU2_err=0.9838  SU3_cq=0.002/d8  mass_spread=12.00
+
+  KEY FINDING: Clifford and SU(2) break at the SAME r value
+  (both break at r >= 0.2)
+  This is expected: SU(2) is constructed FROM the Clifford algebra
+  as S_k = -(i/2) eps_{ijk} Gamma_i Gamma_j.
+  Breaking Cl(3) necessarily breaks SU(2).
+
+  GENERATION STRUCTURE:
+  At r=0: all 8 taste states degenerate. The Z_3 orbit decomposition
+  8 = 1 + 3 + 3 + 1 is a symmetry property (Burnside's lemma).
+  At r>0: Wilson mass m(s) = 2r * Hamming_weight(s) lifts the
+  degeneracy into 4 mass levels with multiplicities 1+3+3+1.
+  The Z_3 internal degeneracy of each triplet is PRESERVED because
+  Hamming weight is Z_3-invariant (cyclic permutation preserves it).
+
+  The Wilson term thus does NOT break the generation COUNTING.
+  It breaks the GAUGE STRUCTURE (Cl(3), SU(2)) that gives the
+  generations their physical meaning as internal quantum numbers.
+  Without Cl(3), the 1+3+3+1 pattern is just a mass spectrum --
+  there are no gauge transformations connecting generation members.
+
+==============================================================================
+CENTRAL RESULT
+==============================================================================
+
+  The Wilson term simultaneously destroys:
+    - The Clifford algebra Cl(3) (anticommutation relations)
+    - The SU(2) gauge structure (commutator closure)
+    - The algebraic content of SU(3) (triplet projection)
+
+  While the Z_3 mass degeneracy 1+3+3+1 is preserved (because
+  Hamming weight is Z_3-invariant), the GAUGE STRUCTURE that gives
+  these multiplets their physical interpretation is destroyed.
+
+  Three generations without gauge groups are just three mass levels.
+  Gauge groups without Cl(3) cannot exist.
+  Cl(3) without taste physicality (r=0) cannot be maintained.
+
+  Therefore: taste physicality is not a separate assumption for
+  generations -- it is the SAME structural requirement that
+  produces the gauge groups.  You cannot have one without the other.
+
+  NOTE: The Born rule (I_3 = 0) survives the Wilson term
+  because linearity of the path-sum is independent of the
+  Clifford algebra structure.  The Wilson term adds real
+  damping, not nonlinearity.  This is consistent: the Born
+  rule follows from linearity, while gauge structures follow
+  from the Clifford algebra of tastes.
+
+  Total runtime: 3.8s

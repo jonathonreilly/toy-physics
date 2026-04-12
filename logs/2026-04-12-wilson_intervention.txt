@@ -1,0 +1,56 @@
+====================================================================================================
+WILSON MUTUAL-ATTRACTION: INTERVENTION-STYLE OBSERVABLE
+====================================================================================================
+MASS=0.3, WILSON_R=1.0, DT=0.08, N_STEPS=30
+G=5.0, mu2=0.001, REG=0.001, SIGMA=1.0
+SIDE=14, T_INTERV=15
+SOURCE_POS=(10, 7, 7), TEST_POS=(4, 7, 7)
+SOURCE_MASS=1.0, DISPLACEMENT_OFFSET=2
+intervention types: ('removal', 'doubling', 'displacement')
+
+lattice: 14^3 = 2744 sites  (built in 0.0s)
+
+running FROZEN baseline ...
+  FROZEN done (0.2s)
+running NO_SOURCE baseline ...
+  NO_SOURCE done (0.1s)
+
+running DYNAMIC with intervention=removal ...
+  DYNAMIC/removal done (0.6s)
+
+running DYNAMIC with intervention=doubling ...
+  DYNAMIC/doubling done (0.7s)
+
+running DYNAMIC with intervention=displacement ...
+  DYNAMIC/displacement done (0.7s)
+
+====================================================================================================
+PER-INTERVENTION RESULTS
+====================================================================================================
+  intervention |    pre_dev   post_dev      ratio |     dv_dyn     dv_frz |   pull_pre  pull_post | pre~frz post!=frz causal
+----------------------------------------------------------------------------------------------------------------------------
+       removal |   0.00e+00   2.12e-02    2.1e+10 |  +3.94e-03  +7.72e-03 |  +0.031862  +0.187777 |       Y         Y      Y
+      doubling |   0.00e+00   8.96e-03    9.0e+09 |  +1.14e-02  +7.72e-03 |  +0.031862  +0.217970 |       Y         Y      Y
+  displacement |   0.00e+00   2.40e-03    2.4e+09 |  +6.96e-03  +7.72e-03 |  +0.031862  +0.206611 |       Y         Y      Y
+
+====================================================================================================
+SUMMARY
+====================================================================================================
+interventions tested: 3
+pre-intervention dynamic agrees with frozen: 3/3
+post-intervention dynamic diverges from frozen: 3/3
+full causal signature (both): 3/3
+
+  REMOVAL: CAUSAL -- dynamic trajectory matches frozen before intervention, then diverges after. Divergence ratio = 21232802030.2x.
+  DOUBLING: CAUSAL -- dynamic trajectory matches frozen before intervention, then diverges after. Divergence ratio = 8960227423.1x.
+  DISPLACEMENT: CAUSAL -- dynamic trajectory matches frozen before intervention, then diverges after. Divergence ratio = 2398710922.3x.
+
+====================================================================================================
+VERDICT
+====================================================================================================
+ALL 3 interventions show causal signature: dynamic trajectory agrees with frozen before intervention, then diverges after.
+This is consistent with genuine self-consistent dynamics rather than a static or adiabatic field approximation.
+Bounded claim: the Poisson-sourced gravitational field on this lattice responds to source changes with a detectable, temporally-located effect on the test particle centroid.
+
+matplotlib not available, skipping plots
+total elapsed: 2.3s

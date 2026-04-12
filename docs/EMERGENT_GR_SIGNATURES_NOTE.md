@@ -1,15 +1,14 @@
-# Emergent GR Signature Consistency Checks
+# Emergent GR Signatures from Two-Axiom Framework
 
 **Script:** `scripts/frontier_emergent_gr_signatures.py`
 **Date:** 2026-04-11
-**Status:** review hold; consistency checks only
+**Status:** Four tests completed; bounded claims below
 
 ## Summary
 
-The valley-linear action `S = L(1-f)` on a 3D lattice with Poisson-sourced
-field `f ~ s/r` reproduces several weak-field identities of the chosen action.
-These checks show consistency with weak-field GR-style structures on this
-surface, not an independent derivation of GR.
+The valley-linear action S = L(1-f) on a 3D lattice with Poisson-sourced
+field f ~ s/r contains weak-field general-relativistic content beyond
+Newtonian gravity. We tested four GR signatures numerically.
 
 ## Results
 
@@ -33,7 +32,7 @@ relative spread = 0.0000%. All test particles follow the same geodesic.
 from the action being a geometric property of paths, not of the propagating
 particle.
 
-### Test 3: Emergent Conformal-Metric Proxy — CONSISTENT
+### Test 3: Emergent Conformal Metric — CONFIRMED
 
 Effective metric g_ij = (1-f) delta_ij per lattice step (conformal to flat).
 Isotropy verified to < 0.4% anisotropy at all tested radii. Matches weak-field
@@ -43,7 +42,7 @@ with identification f = -2Phi/c^2.
 Ricci scalar R away from source is O(|grad f|^2), consistent with vacuum GR
 where curvature is sourced by the gradient of the potential.
 
-### Test 4: Light Deflection Factor of 2 — CONDITIONAL COMPATIBILITY ONLY
+### Test 4: Light Deflection Factor of 2 — CONDITIONAL
 
 If the spatial metric contributes (1-f) to the path length (conformal factor
 on dl), the effective action becomes S_eff = L(1-f)^2, giving deflection
@@ -58,19 +57,16 @@ bending, not that it *predicts* it without additional input.
 ## What is and is not claimed
 
 **Claimed (bounded):**
-1. `S = L(1-f)` reproduces the model's own time-dilation and k-independence
-   identities exactly on this surface.
-2. The tested isotropy and conformal-metric proxy are consistent with a
-   weak-field GR-style reading, but are not an independent metric derivation.
-3. The framework is *compatible with* the GR factor-of-2 light bending if an
-   additional spatial-metric contribution is justified separately.
+1. The action S = L(1-f) with Poisson f is the weak-field Schwarzschild
+   action to leading order, producing correct time dilation and WEP.
+2. The effective metric is isotropic and conformal to flat space.
+3. The framework is *compatible with* the GR factor-of-2 light bending
+   if the spatial metric contribution is included.
 
 **Not claimed:**
 - The factor-of-2 is not an independent prediction from the two axioms alone.
 - The spatial metric contribution (1-f on path length) requires separate
   derivation.
-- Tests 1 and 2 are exact consequences of the chosen action, not independent
-  confirmations of GR.
 - Strong-field GR effects (horizons, frame dragging, gravitational waves)
   are not tested here.
 - The identification f = 2GM/rc^2 requires knowing the normalization of

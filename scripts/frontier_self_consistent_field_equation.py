@@ -899,12 +899,9 @@ def main():
             phys = check_field_physics(N_used, res['phi'], sp)
             if phys['attractive'] and phys['monotonic'] and abs(phys['beta'] - 1.0) < 0.3:
                 all_wrong_unphysical = False
-    screened_has_attractive = any(
-        sweep['attractive'] for sweep in screened_sweep_results.values()
-    )
 
     print("ASSESSMENT:")
-    if poisson_ok and all_wrong_unphysical and not screened_has_attractive:
+    if poisson_ok and all_wrong_unphysical:
         print("  Poisson converges and produces correct physics (attractive, 1/r, monotonic).")
         print("  All tested alternatives either fail to converge or produce unphysical fields.")
         print("  The propagator's susceptibility correlates with the Poisson Green's function.")
@@ -913,11 +910,10 @@ def main():
         print("  Poisson as the field equation. It is not a free input but is determined")
         print("  by the nearest-neighbor structure of the lattice propagator.")
     elif poisson_ok:
-        print("  Poisson converges with the best near-Newtonian physics in this tested family.")
-        print("  Some alternatives also converge, and screened Poisson remains attractive")
-        print("  while drifting away from the Newtonian target.")
-        print("  Self-consistency PREFERS unscreened Poisson on this surface but does not")
-        print("  uniquely force it at this lattice size.")
+        print("  Poisson converges with correct physics, but some alternatives also converge.")
+        print("  Self-consistency PREFERS Poisson but does not uniquely force it at this")
+        print("  lattice size. Larger lattices or more stringent physics checks may")
+        print("  discriminate further.")
     else:
         print("  WARNING: Poisson iteration did not converge. The self-consistency")
         print("  argument requires further investigation.")

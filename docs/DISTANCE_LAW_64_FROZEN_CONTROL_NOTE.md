@@ -1,7 +1,7 @@
 # 64^3 Distance Law: Frozen / Static-Source Control Note
 
 **Date:** 2026-04-12
-**Status:** bounded review candidate — the frozen/static-source control reveals a
+**Status:** bounded diagnostic — the frozen/static-source control reveals a
 real and informative field-shape discrepancy between Poisson-solved and
 pure 1/r fields
 **Runner:** `scripts/frontier_distance_law_64_frozen_control.py`
@@ -100,9 +100,9 @@ is boundary geometry, not a solver bug.
 
 ## Promotion status
 
-This note is kept on `codex/review-active` as a bounded diagnostic companion
-to the existing 64^3 continuation note. It documents the field-shape
-discrepancy and identifies boundary corrections as the source.
+This note is retained as a bounded diagnostic companion to the existing
+64^3 continuation note. It documents the field-shape discrepancy and
+identifies boundary corrections as the source.
 
 The frozen/static-source gate remains open in the strict sense (0.5%
 threshold not met), but the diagnostic explains the mechanism. A future

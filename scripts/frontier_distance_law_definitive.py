@@ -28,10 +28,40 @@ import numpy as np
 try:
     from scipy import sparse
     from scipy.sparse.linalg import spsolve, cg
+    HAS_SCIPY = True
 except ImportError:
-    print("ERROR: scipy is required for sparse Poisson solver.")
-    print("Install with: pip install scipy")
-    sys.exit(1)
+    HAS_SCIPY = False
+
+
+def solve_poisson_jacobi(N: int, mass_pos: tuple[int, int, int],
+                         mass_strength: float = 1.0,
+                         max_iter: int = 12000,
+                         tol: float = 1e-7) -> np.ndarray:
+    """Vectorized Jacobi solver for large grids where sparse direct is too slow."""
+    field = np.zeros((N, N, N))
+    source = np.zeros((N, N, N))
+    mx, my, mz = mass_pos
+    source[mx, my, mz] = mass_strength
+
+    for iteration in range(max_iter):
+        new = np.zeros_like(field)
+        new[1:-1, 1:-1, 1:-1] = (
+            field[2:, 1:-1, 1:-1] + field[:-2, 1:-1, 1:-1] +
+            field[1:-1, 2:, 1:-1] + field[1:-1, :-2, 1:-1] +
+            field[1:-1, 1:-1, 2:] + field[1:-1, 1:-1, :-2] +
+            source[1:-1, 1:-1, 1:-1]
+        ) / 6.0
+        max_change = np.max(np.abs(new - field))
+        field = new
+        if iteration % 500 == 0:
+            print(f"    Jacobi iter {iteration}: max_change = {max_change:.2e}", flush=True)
+        if max_change < tol:
+            print(f"    Jacobi converged in {iteration+1} iterations (max_change={max_change:.2e})", flush=True)
+            break
+    else:
+        print(f"    Jacobi: max_iter reached (max_change={max_change:.2e})", flush=True)
+
+    return field
 
 
 # ---------------------------------------------------------------------------
@@ -330,7 +360,7 @@ def main():
     mass_strength = 1.0
 
     # Grid sizes: extend to 80 and 96
-    grid_sizes = [31, 40, 48, 56, 64, 80, 96]
+    grid_sizes = [31, 40, 48, 56, 64, 80, 96, 128]
 
     # Impact parameters: use b=3..N/6 (scaled with grid) and also a fixed core b=3..10
     min_b_fit = 3
@@ -354,9 +384,12 @@ def main():
 
         print(f"--- N = {N}  ({N**3:,} sites, {(N-2)**3:,} interior) ---")
 
-        # Solve Poisson
+        # Solve Poisson — use sparse direct for N <= 64, Jacobi for larger
         t_p = time.time()
-        field = solve_poisson_sparse(N, (mid, mid, mid), mass_strength)
+        if HAS_SCIPY and N <= 64:
+            field = solve_poisson_sparse(N, (mid, mid, mid), mass_strength)
+        else:
+            field = solve_poisson_jacobi(N, (mid, mid, mid), mass_strength)
         dt_p = time.time() - t_p
         print(f"  Poisson solve: {dt_p:.1f}s")
 
@@ -556,7 +589,10 @@ def main():
 
     mass_alphas = []
     for M in mass_values:
-        field = solve_poisson_sparse(N_test, (mid, mid, mid), M)
+        if HAS_SCIPY and N_test <= 64:
+            field = solve_poisson_sparse(N_test, (mid, mid, mid), M)
+        else:
+            field = solve_poisson_jacobi(N_test, (mid, mid, mid), M)
         defl = compute_deflections(field, k, mid, b_test_values)
         b_arr = np.array(b_test_values, dtype=float)
         fit = fit_power_law(b_arr, defl)

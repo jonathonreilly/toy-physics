@@ -1,130 +1,125 @@
-# Dispersion Relation: Geometry-Dependent, Not Decisively Relativistic or Non-Relativistic
+# Modified Dispersion Relation from Discrete Propagator
 
-**Date:** 2026-04-08 (updated same day with 3D + grown DAG results)
-**Status:** NARROWED — the 2D regular lattice gives clean Schrödinger (R²=0.9995), but the 3D regular lattice gives band structure (R²<0.68 for all forms), and the **actual grown DAG (Fam1) gives Schrödinger ≈ Klein-Gordon (R²=0.994 vs 0.992) — too close to distinguish**. The 2D result was misleading. On the actual physics geometry, we cannot decisively determine whether the propagator is relativistic or non-relativistic.
+**Date:** 2026-04-11
+**Status:** anomalous scaling -- c4 coefficient present but does not scale as h^2
 
 ## Artifact chain
 
-- [`scripts/lattice_dispersion_relation.py`](../scripts/lattice_dispersion_relation.py) — 2D lattice (h=1.0, h=0.5)
-- [`scripts/lattice_dispersion_fine.py`](../scripts/lattice_dispersion_fine.py) — 2D lattice (h=0.25)
-- [`scripts/dispersion_3d_lattice.py`](../scripts/dispersion_3d_lattice.py) — 3D regular lattice (h=1.0)
-- [`scripts/dispersion_3d_fine.py`](../scripts/dispersion_3d_fine.py) — 3D regular lattice (h=0.5)
-- [`scripts/dispersion_grown_dag.py`](../scripts/dispersion_grown_dag.py) — **Fam1 grown DAG** (H=0.5, H=0.35)
-- [`logs/2026-04-08-lattice-dispersion.txt`](../logs/2026-04-08-lattice-dispersion.txt)
+- [`scripts/frontier_dispersion_relation.py`](../scripts/frontier_dispersion_relation.py)
+
+## Question
+
+Does the path-sum propagator on a discrete lattice produce a modified
+dispersion relation omega^2 = k^2 + c4 * k^4 + ... with c4 scaling as
+h^2 (standard lattice correction)?  If so, what effective Planck energy
+does this predict, and is it consistent with Fermi LAT bounds?
 
 ## Method
 
-1. On a 2D regular lattice with the standard kernel `exp(i·K·L)·exp(-β·θ²)/L·h²`, initialize a plane-wave source at layer 0: `amp_j = exp(i·p·y_j)`.
-2. Propagate forward (free field, no slits, no mass).
-3. At each downstream layer, project onto the p-mode: `M(x) = Σ_j amp_j · exp(-i·p·y_j)`.
-4. Extract `ω(p) = dφ/dx` from the unwrapped phase φ(x) = arg(M(x)).
-5. Sweep p from 0 to 3.0 at two spacings (h=0.5, h=0.25).
-6. Fit ω(p) to three candidate functional forms.
+Propagate plane waves exp(i k x) through one layer of the path-sum
+transfer kernel on a 3D cubic lattice.  The Fourier-space transfer
+function M_hat(k_y) gives omega(k_y) via the unwrapped phase.
+Fit omega(k) and omega^2(k) as polynomials in k^2 in the low-k regime
+(k < 0.3 * k_max) to extract the c4 coefficient.
 
-All phase fits are perfectly linear in x: R² = 1.0000000 at every (p, h) point tested at h=0.5, and R² > 0.9999 at h=0.25. The measurement is clean.
+Tested three lattice architectures (cubic, staggered, Wilson) and two
+angular kernels (cos^2, Gaussian) at four lattice spacings
+h = 1.0, 0.5, 0.25, 0.125.
 
-## Result
+## Results
 
-### Full geometry comparison
+### c4 coefficients (omega^2 fit)
 
-| Geometry | Schrödinger R² | Klein-Gordon R² | Linear R² | Winner |
-| --- | ---: | ---: | ---: | --- |
-| **2D lattice h=0.5** | **0.99947** | 0.96156 | 0.92045 | Schrödinger (decisive) |
-| **2D lattice h=0.25** | **0.99827** | 0.73744 | 0.91395 | Schrödinger (decisive) |
-| **3D lattice h=0.5** | 0.677 | 0.656 | 0.404 | **None** (band structure) |
-| **Grown DAG H=0.5** | **0.994** | 0.992 | 0.877 | Schrödinger (marginal) |
-| **Grown DAG H=0.35** | **0.988** | 0.980 | 0.949 | Schrödinger (marginal) |
+| Architecture | Kernel | h=1.0 | h=0.5 | h=0.25 | h=0.125 |
+| --- | --- | ---: | ---: | ---: | ---: |
+| cubic | cos2 | +1.5e-2 | -1.1e-1 | +7.3e-4 | +2.1e-3 |
+| cubic | gauss | -2.8e-1 | -1.0e+0 | -2.9e-2 | -3.1e-2 |
+| staggered | cos2 | -2.4e-1 | +5.9e-1 | -7.3e-4 | -1.9e-4 |
+| staggered | gauss | -4.0e-1 | +4.5e+0 | +1.0e-2 | -6.4e-3 |
+| wilson | cos2 | +1.5e-2 | -1.1e-1 | +7.3e-4 | +2.1e-3 |
+| wilson | gauss | -2.8e-1 | -1.0e+0 | -2.9e-2 | -3.1e-2 |
 
-**Critical finding:** On the 2D lattice, Schrödinger wins decisively. But on the **actual physics geometry** (3D grown DAG), Schrödinger and Klein-Gordon are within R² = 0.002 of each other — **too close to distinguish**. The 2D result was misleading.
+### Scaling of |c4| with h
 
-### Fit parameters
+| Architecture | Kernel | alpha | A | R^2 |
+| --- | --- | ---: | ---: | ---: |
+| cubic | cos2 | 1.58 | 3.7e-2 | 0.40 |
+| cubic | gauss | 1.47 | 5.8e-1 | 0.56 |
+| staggered | cos2 | 4.05 | 8.0e-1 | 0.80 |
+| staggered | gauss | 2.67 | 1.7e+0 | 0.59 |
 
-| Parameter | h=0.5 | h=0.25 | Converged? |
-| --- | ---: | ---: | --- |
-| a (curvature) | −0.0919 | −0.0742 | Not yet (Δ=0.018) |
-| b (rest phase) | −0.2365 | +0.4347 | Sign flipped |
-| m_eff = −1/(2a) | 5.44 | 6.74 | Not yet |
+Wilson identical to cubic (Wilson term only affects high-k doublers).
 
-The **functional form** (quadratic in p) is stable across refinement. The **coefficients** are not converged — the rest phase ω₀ = b depends on h because the per-edge phase K·h contributes a spacing-dependent background. This is expected: ω₀ is a gauge-like quantity that depends on the reference frame. The physically meaningful quantity is the curvature a = 1/(2m_eff), which changes by 19% between h=0.5 and h=0.25 (improving but not converged).
+### Key findings
 
-### Raw data (h=0.5)
+1. **c4 is nonzero:** The discrete propagator does produce a k^4
+   correction to the dispersion relation.  This is a genuine signature
+   of discreteness.
 
-| p | ω | R² |
-| ---: | ---: | ---: |
-| 0.00 | −0.2365 | 1.000 |
-| 0.10 | −0.2380 | 1.000 |
-| 0.30 | −0.2489 | 1.000 |
-| 0.50 | −0.2661 | 1.000 |
-| 1.00 | −0.3219 | 1.000 |
-| 2.00 | −0.5940 | 1.000 |
-| 3.00 | −1.0735 | 1.000 |
+2. **Scaling is anomalous:** The c4 coefficient does NOT scale as h^2
+   for cubic/Wilson lattices (alpha ~ 1.5, not 2.0).  The power-law
+   model itself is a poor fit (R^2 ~ 0.4-0.6).  This means the
+   correction does not behave like a standard lattice artifact.
 
-## Why it's Schrödinger
+3. **Sign of c4 is not stable:** For the cos^2 kernel, c4 flips sign
+   between h values.  For the Gaussian kernel on cubic/Wilson, c4
+   is consistently negative (subluminal correction).
 
-The angular weight `exp(−β·θ²)` at small angles gives `w ≈ exp(−β·(Δy/Δx)²)`. For a plane wave with transverse momentum p, the contribution from a node at transverse offset Δy picks up a phase factor `exp(i·p·Δy)`. The combined effect is:
+4. **Architecture dependence is large:** The staggered lattice gives
+   qualitatively different c4 (different sign, different scaling
+   exponent alpha ~ 4).  Cubic and Wilson are identical.
 
-```
-Σ_Δy  exp(−β·(Δy/h)²) · exp(i·p·Δy) / L
-    ∝ exp(−p²·h²/(4β))  (Gaussian integral)
-```
+5. **Fermi LAT consistency:** Despite the anomalous scaling, if the
+   lattice spacing is Planckian, all architectures give effective
+   Planck energies E_eff ~ 10^19 GeV, far above the Fermi LAT n=2
+   bound of 6.3 x 10^10 GeV.
 
-This is a **Gaussian damping in p-space** which, per layer, gives a phase advance:
+### Effective Planck energies (assuming h = l_Planck)
 
-```
-ω(p) ≈ ω₀ − α·p²
-```
+| Architecture/Kernel | E_Planck_eff (GeV) | Fermi LAT status |
+| --- | ---: | --- |
+| cubic/cos2 | 6.3e+19 | consistent |
+| cubic/gauss | 1.6e+19 | consistent |
+| staggered/gauss | 9.4e+18 | consistent |
 
-with α determined by β and the edge geometry. This IS the discrete Schrödinger propagator kernel: the Gaussian angular weight plays the role of the non-relativistic kinetic energy `exp(i·p²/(2m)·Δt)`, except with a real (damping) exponent instead of imaginary (oscillatory). The two give the SAME dispersion relation shape (quadratic in p), differing only in whether the propagation is unitary (imaginary exponent) or decaying (real exponent).
+### Predicted photon speed deviation at 10 GeV
 
-## Implications
+All combinations give |v - 1| ~ 10^{-37} to 10^{-38}, many orders of
+magnitude below any foreseeable measurement capability.
 
-### For the lensing invariant
+## Bounded claims
 
-The lensing work found kubo_true(b) ∝ b^(−1.43) and all attempts to derive it from relativistic ray optics failed. This is now EXPLAINED: the propagator is Schrödinger, not relativistic. Weak-field gravitational lensing (1/b) is a relativistic prediction. We should not expect it from a non-relativistic propagator.
+1. The path-sum propagator on a discrete lattice produces a nonzero k^4
+   correction to the dispersion relation.
 
-~~The correct comparison for the −1.43 slope is non-relativistic scattering from a 1/r potential~~ — **RETRACTED**: the grown DAG does not decisively distinguish Schrödinger from Klein-Gordon, so we cannot assume non-relativistic scattering is the right comparison.
+2. The correction does NOT scale as h^2 (standard lattice artifact).
+   The scaling exponent is anomalous (alpha ~ 1.5 for cubic, ~2.7-4
+   for staggered).  This means the correction has a different
+   character from textbook lattice discretization.
 
-### For the continuum limit
+3. The c4 coefficient depends on both the angular kernel and the
+   lattice architecture.  Cubic and Wilson give identical results;
+   staggered differs qualitatively.
 
-The 2D Schrödinger dispersion provides a prediction for what the 2D continuum theory should look like. The 3D / grown-DAG continuum theory is less clear — the dispersion form is not yet determined.
+4. If the lattice spacing is Planckian, the predicted photon speed
+   deviation is far below current experimental sensitivity
+   (|v-1| ~ 10^{-37} at 10 GeV).
 
-### For the project's physics claims
-
-~~Any claim about "emergent general relativity" is premature: the propagator is fundamentally non-relativistic~~ — **NARROWED**: this statement was only proven on the 2D lattice. On the actual grown DAG, Klein-Gordon R² = 0.992 is within 0.002 of Schrödinger R² = 0.994. We cannot rule out relativistic physics on the actual geometry. The correct statement is: **the propagator's dispersion type is undetermined on the grown DAG**.
+5. The model is NOT falsified by Fermi LAT data, but the prediction
+   is also not testable with current or near-future instruments.
 
 ## What this does NOT establish
 
-- ~~The grown-DAG dispersion~~ — NOW TESTED: Schrödinger/KG nearly tied (R²=0.994/0.992)
-- Whether a different angular weight could give decisive Klein-Gordon
-- Whether the −1.43 lensing slope matches non-relativistic OR relativistic scattering theory (both remain possible)
-- The continuum-limit value of m_eff (parameters not yet converged)
-- Whether more p-values or finer H could break the Schrödinger/KG tie on the DAG
+- That the anomalous scaling is physically meaningful (it could be an
+  artifact of the 1D Fourier-space projection used here)
+- That c4 converges to a definite value in the continuum limit
+  (the sign-flipping for cos^2 kernel suggests it may not)
+- A clean, architecture-independent prediction for Lorentz violation
 
-## 3D correction: what changed
+## Status
 
-The original analysis (2D only) concluded "decisively non-relativistic." The 3D follow-up (same day) showed this was **misleading**:
-
-1. **3D regular lattice**: neither form fits (band structure, R²<0.68). The extra transverse dimension creates non-trivial band effects absent in 2D.
-2. **3D grown DAG**: the randomness smooths out the band structure (R²≈0.99), but Schrödinger and Klein-Gordon become nearly indistinguishable.
-3. **Implication**: the clean 2D Schrödinger result is a property of 2D geometry + the angular weight, not necessarily of the 3D propagator. The actual physics geometry doesn't pick a winner.
-
-## Frontier map adjustment (Update 20, corrected)
-
-| Row | Before (2D only) | After 3D correction |
-| --- | --- | --- |
-| Propagator type | "Schrödinger (decisive)" | **Undetermined on grown DAG; Schrödinger ≈ KG (R² Δ=0.002)** |
-| Lensing failure explanation | "Expected: propagator is non-relativistic" | **Cannot determine; both relativistic and non-relativistic remain viable** |
-| Next lensing direction | "Non-relativistic 2D Born scattering" | **Need to test both NR and relativistic predictions against the 3D data** |
-
-## Bottom line
-
-> "The free propagator's dispersion relation is geometry-dependent. On the
-> 2D regular lattice: cleanly Schrödinger (R²=0.9995 vs KG R²=0.962). On
-> the 3D regular lattice: neither form fits (band structure). On the actual
-> Fam1 grown DAG: Schrödinger R²=0.994 vs Klein-Gordon R²=0.992 — too
-> close to distinguish. The original claim that 'the propagator is
-> fundamentally non-relativistic' was proven only on the 2D lattice and
-> does NOT transfer to the 3D grown DAG where the physics lives. On the
-> actual geometry, we cannot rule out either relativistic or non-relativistic
-> dispersion. The lensing slope −1.43 cannot be attributed to either
-> regime with current data."
+The k^4 correction exists but its scaling is anomalous and
+architecture-dependent.  This is an honest negative result for the
+hypothesis that the model makes a clean Lorentz-violation prediction.
+The effective Planck energy is consistent with all bounds, but the
+prediction is many orders of magnitude below experimental reach.

@@ -1,7 +1,7 @@
 # Dispersion Running-Exponent Fingerprint
 
 **Date:** 2026-04-12
-**Status:** bounded review candidate -- running-exponent fingerprint on cubic/Wilson, non-standard on staggered
+**Status:** bounded proxy -- Schrodinger-type dispersion on cubic/Wilson, non-standard on staggered
 
 ## Artifact chain
 

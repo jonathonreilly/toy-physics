@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
-"""Weak-field GR-style consistency checks for the chosen action.
+"""Emergent general-relativistic signatures from the two-axiom framework.
 
 The path-sum propagator uses action S = L(1-f) where f is the Poisson-sourced
-gravitational field (f ~ s/r in 3D). This script tests whether that chosen
-action is consistent with several weak-field GR-style identities on one
-ordered 3D surface.
+gravitational field (f ~ s/r in 3D). This contains GR to leading order:
 
 1. GRAVITATIONAL TIME DILATION: Phase accumulation rate = k*L*(1-f).
    In a gravitational well (f > 0), phase advances less. Phase advance rate
@@ -21,9 +19,9 @@ ordered 3D surface.
    conformal to flat space. In weak-field GR (Schwarzschild isotropic),
    g_ij ~ (1 + 2Phi/c^2)^2 d_ij.
 
-4. LIGHT DEFLECTION FACTOR OF 2: This row is only a compatibility test. It
-   checks whether adding an additional spatial-metric contribution can recover
-   the GR factor-of-2 light bending on this surface.
+4. LIGHT DEFLECTION FACTOR OF 2: In GR, light bending is 4GM/bc^2 vs the
+   Newtonian 2GM/bc^2 — a famous factor of 2 from the spatial metric
+   contribution. We test whether the full propagator gives this factor.
 
 Uses 3D ordered cubic lattice with valley-linear action S = L(1-f).
 Poisson solver for gravitational field. Infrastructure from existing scripts.

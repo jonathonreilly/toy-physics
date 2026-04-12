@@ -50,6 +50,13 @@ from numpy.linalg import eigh
 # Shared infrastructure
 # ============================================================================
 
+# CAVEAT (review P1): This script uses a 1D self-consistent Hartree model
+# with a hand-written 1/r potential. Astrophysical predictions (M_Ch, echo
+# times, surface temperatures) are EXTRAPOLATED from 1D numerics to 3D via
+# analytical scaling. This is EXPLORATORY. A genuine 3D strong-field
+# calculation is needed before these predictions can be retained. See
+# frontier_frozen_stars_rigorous.py for the 3D extension (up to L=14).
+
 def build_1d_hamiltonian(N: int, t: float = 1.0, m: float = 0.0,
                          potential: np.ndarray | None = None) -> np.ndarray:
     """Tight-binding Hamiltonian on 1D chain with open BC."""

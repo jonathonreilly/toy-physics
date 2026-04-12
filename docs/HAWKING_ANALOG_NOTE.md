@@ -2,12 +2,14 @@
 
 **Script:** `scripts/frontier_hawking_analog.py`
 **Date:** 2026-04-11
-**Status:** review negative; no thermal spectrum on this setup
+**Status:** FALSIFIED at current lattice size
 
 ## Hypothesis
 
-The tested near-horizon propagator setup would produce Hawking-like thermal
-radiation if the `f = 1` surface behaved as a true thermal horizon.
+The propagator horizon where f -> 1 (action S = L(1-f) -> 0) produces
+Hawking-like thermal radiation: an outgoing wavepacket should thermalize
+with temperature T proportional to the surface gravity kappa = |df/dr|
+at the f = 1 surface.
 
 ## Method
 
@@ -76,11 +78,11 @@ For a genuine Hawking analog, the framework would need:
 
 ## Verdict
 
-**Negative on this setup.** The tested `f = 1` surface does not produce a
-Hawking-like thermal spectrum. The near-horizon spectrum is less thermal than
-the far-field control, and the fitted temperature shows no useful correlation
-with surface gravity. On this implementation the `f = 1` surface behaves as an
-amplifying phase-inversion boundary, not a one-way thermal horizon.
+**FALSIFIED.** The propagator horizon where f -> 1 does not produce
+Hawking-like thermal radiation. The near-horizon spectrum is less thermal
+than the far-field control, and the fitted temperature shows no correlation
+with surface gravity. The f = 1 surface acts as a phase-inversion boundary
+that amplifies amplitude rather than trapping it.
 
 This is a genuine negative result: the two-axiom framework in its current
 form does not contain the mechanism needed for Hawking radiation. This is

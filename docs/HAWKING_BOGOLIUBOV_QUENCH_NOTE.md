@@ -1,6 +1,6 @@
 # Gaussian-State In/Out Quench Prototype
 
-**Status:** bounded review candidate (Paper 2 groundwork)
+**Status:** bounded-retained (Paper 2 groundwork)
 **Script:** `scripts/frontier_hawking_bogoliubov_quench.py`
 **Date:** 2026-04-12
 

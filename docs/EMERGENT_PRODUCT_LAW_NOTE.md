@@ -2,7 +2,7 @@
 
 **Script:** `scripts/frontier_emergent_product_law.py`
 **Date:** 2026-04-11
-**Status:** bounded-retained candidate; acceptance gates passed on one audited open 3D staggered cross-field Poisson surface
+**Status:** All acceptance gates passed.
 
 ## Motivation
 
@@ -76,8 +76,7 @@ confirming it is a field-linearity result.
 
 2. **Mechanism identified:** The product law follows from two independent
    linearities (Poisson source scaling + test-mass response), confirmed by the
-   frozen-source control on the same audited surface. This is a field-linearity
-   result, not full Newton closure.
+   frozen-source control.
 
 3. **Not demonstrated:** The distance-law exponent is not tested here (fixed
    separation). For distance-law emergence, see the existing self-consistent

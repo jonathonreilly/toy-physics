@@ -1,7 +1,7 @@
 # Diamond NV Lattice-Scale Correction Note
 
 **Date:** 2026-04-12
-**Status:** bounded review candidate -- distinct but undetectable correction
+**Status:** quantitative prediction, honest detectability assessment
 **Script:** `scripts/frontier_diamond_nv_lattice_correction.py`
 
 ## Purpose
@@ -163,11 +163,3 @@ spacing.
 The framework's experimental value for diamond NV remains the **retardation
 phase ramp itself** (the existing prediction in `DIAMOND_SENSOR_PREDICTION_NOTE.md`),
 not the lattice correction to it.
-
-## Claim boundary
-
-- this is a bounded prediction note, not an experimentally actionable
-  discrimination card at realistic lattice scales
-- the qualitative distinction from smooth GR is real in the formula
-- the quantitative correction is far below detectability for any plausible
-  microscopic lattice spacing

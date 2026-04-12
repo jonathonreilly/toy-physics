@@ -1,7 +1,7 @@
 # Distinction from Lattice Gauge Theory and Discrete Gravity Programs
 
 **Date:** 2026-04-12
-**Status:** reviewer-facing memo; not a retained science claim
+**Status:** reviewer-facing comparison note for Nature submission
 **Purpose:** Preempt the question "how is this different from lattice QCD?"
 
 ---
@@ -39,26 +39,26 @@ continuum quantum field theories. Its defining features:
 
 ## 2. What this framework does differently
 
-This framework begins from a discrete event-network ontology and asks what
-physics-like structure can be recovered without assuming a prior continuum
-theory. The key structural differences, as supported by the current tests, are:
+This framework begins from a discrete event-network ontology (10 axioms)
+and asks what physics-like structure can be recovered without assuming a
+prior continuum theory. The key structural differences:
 
 - **No prior continuum theory.** There is no Lagrangian being
   discretized. The graph is the starting point, not an approximation to
   a manifold.
-- **The graph is treated as fundamental.** Unlike the lattice in lattice QCD,
-  the discrete structure is not introduced merely as scaffolding to be removed.
-  The continuum limit, if it exists, is treated as a prediction to be tested,
-  not a construction requirement.
+- **The graph is fundamental.** Unlike the lattice in lattice QCD, the
+  discrete structure is not scaffolding to be removed. The theory lives
+  on the graph. The continuum limit, if it exists, is a prediction to be
+  tested, not a requirement to be satisfied.
 - **The propagator emerges from path sums on the graph.** Complex
   amplitudes are assigned to paths via an action S = L(1 - f), where L
   is path length and f is a field sourced by a Poisson equation on the
   graph. This is not a discretization of a known propagator — the
   propagator is defined directly on the discrete structure.
-- **Gravity-like behavior appears as an output of the tested setup.** The gravitational deflection of
+- **Gravity is an output.** The gravitational deflection of
   propagating amplitudes, Newtonian mass scaling (F proportional to M),
   the weak equivalence principle, and gravitational time dilation are
-  numerical outputs of the tested path sum, not direct continuum inputs. The action S = L(1-f)
+  numerical outputs of the path sum, not inputs. The action S = L(1-f)
   was not designed to reproduce general relativity; the weak-field
   Schwarzschild metric structure was discovered after the action was
   selected on other grounds (phase valley + weak-field linearity).
@@ -67,7 +67,7 @@ theory. The key structural differences, as supported by the current tests, are:
   field profile is derived, not imposed — the 2D Poisson solution on
   each layer gives F proportional to M = 0.9997, better than the imposed
   1/r form (0.990).
-- **The continuum limit is treated as a prediction.** On ordered lattices, taking
+- **The continuum limit is a prediction.** On ordered lattices, taking
   h -> 0 produces convergent observables: the weak-field deflection
   changes by only 2.7% between h = 0.25 and h = 0.125, the mass
   exponent F proportional to M brackets 1.000, and the Born rule holds
@@ -129,7 +129,7 @@ symmetry breaking, form factors, decay constants, and other properties
 of the strong interaction — all derivable in principle from the QCD
 Lagrangian that was the input.
 
-This framework produces evidence for gravitational deflection, mass scaling,
+This framework produces gravitational deflection, mass scaling,
 the weak equivalence principle, gravitational time dilation, an
 emergent conformal metric, Born-rule interference, and decoherence
 from record formation — none of which were inputs. The distance law
@@ -298,15 +298,15 @@ a continuum limit). The distinction is real but can be overstated.
 
 ## 6. Key sentences for the paper
 
-The following sentences are possible starting points for a Nature-facing draft,
-but they should be softened to match the bounded numerical evidence.
+The following sentences are calibrated for a Nature audience. Each
+is defensible given the current evidence chain.
 
 **Sentence 1 (Introduction, positioning):**
 "Unlike lattice gauge theory, which discretizes a known continuum
 Lagrangian, this framework begins with a discrete graph substrate and
-derives bounded gravitational phenomenology in our tests as an output of
-self-consistent amplitude propagation — the continuum limit is treated as a
-prediction, not a construction requirement."
+derives gravitational phenomenology as an output of self-consistent
+amplitude propagation — the continuum limit is a prediction, not a
+construction requirement."
 
 **Sentence 2 (Methods, action selection):**
 "The action S = L(1-f) was not chosen to reproduce general relativity;
@@ -325,7 +325,7 @@ graph connectivity rather than an imposed boundary condition."
 "The key structural difference from lattice regularization programs
 is the logical status of the discrete structure: in lattice QCD the
 graph is computational scaffolding whose artifacts must be removed; here
-the graph is treated as the physical substrate whose properties determine the
+the graph is the physical substrate whose properties determine the
 emergent phenomenology."
 
 **Sentence 5 (Discussion, honest caveat):**

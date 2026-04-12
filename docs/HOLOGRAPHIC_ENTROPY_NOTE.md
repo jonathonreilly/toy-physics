@@ -1,13 +1,13 @@
-# Propagator Entropy Saturation Test
+# Holographic Entropy: Area vs Volume Scaling Test
 
 **Script:** `scripts/frontier_holographic_entropy.py`
 **Date:** 2026-04-11
-**Status:** review hold; single-particle entropy proxy
+**Status:** Exploratory / partial result
 
 ## Question
 
-Does the single-particle propagator entropy across a 2D surface in a 3D
-lattice scale with area, volume, or saturate with lattice size?
+Does the entanglement entropy of the path-sum propagator across a 2D
+surface in a 3D lattice scale as area (L^2, holographic) or volume (L^3)?
 
 ## Method
 
@@ -88,8 +88,9 @@ more of the correlation structure in rho_A.
 
 ## Bounded claims
 
-1. CONFIRMED: the tested propagator entropy is sub-extensive / saturating.
-2. CONFIRMED: the gravitational field reduces this entropy proxy.
-3. NOT CONFIRMED: area-law scaling `S ~ L^2`.
-4. OPEN: whether a many-body or field-theoretic extension would recover
-   an area law remains untested.
+1. CONFIRMED: Propagator entanglement entropy is sub-extensive (sub-volume).
+2. CONFIRMED: Gravitational field reduces entanglement entropy (focusing).
+3. NOT CONFIRMED: Area-law scaling S ~ L^2. The entropy saturates faster
+   than area growth, indicating a bounded mode count.
+4. OPEN: Whether a many-body or field-theoretic extension would recover
+   area-law scaling remains untested.
