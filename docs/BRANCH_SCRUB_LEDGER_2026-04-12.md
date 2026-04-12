@@ -570,6 +570,27 @@ Reason:
   one script already preserved on review
 - no branch-specific science paths remain stranded on these source tips
 
+### Narrow `frontier/*` Lorentzian diagnostic branch
+
+Status:
+
+- scrubbed into `codex/review-active`
+
+Branches covered in this pass:
+
+- `origin/frontier/gravity-diagnosis`
+
+Archive readiness:
+
+- archive-ready
+
+Reason:
+
+- all three scripts are already preserved on review
+- the remaining diffs are older, less-cautious Lorentzian/geodesic diagnostic
+  wording rather than unique branch-specific science payload
+- no branch-specific science paths remain stranded on this source tip
+
 ## Codex First-Pass Triage
 
 These statuses are mechanical only: whether the branch tip is already an
@@ -661,6 +682,7 @@ do not need further science capture before archive:
 - `origin/frontier/lorentzian-closure`
 - `origin/frontier/synthesis-and-next`
 - `origin/frontier/unitary-linear`
+- `origin/frontier/gravity-diagnosis`
 
 ### Likely archive-ready after one short verification pass
 
