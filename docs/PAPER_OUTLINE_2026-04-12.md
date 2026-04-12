@@ -151,6 +151,15 @@ the structural backbone to any row would require closing the inputs listed.
 These windows are presented as evidence of structural compatibility, not as
 zero-parameter predictions.
 
+Two additional lanes remain review-only and are not counted as retained
+results in this draft:
+
+- Gauge couplings: the `SU(2)` normalization is still a consistency
+  observation, and the `U(1)` coupling is still fit/scanned rather than
+  derived.
+- CKM: the current charge-selection work gives a bounded pattern argument,
+  not a quantitative CKM theorem.
+
 **The strongest entries** are the ones with the least imported machinery: the
 direct lattice DM contact-propagator enhancement and the cosmological-
 constant window. Both are still bounded, but they are the cleanest signals
@@ -191,10 +200,12 @@ with explicit status labels.
 - Left-handed charge matching Y = +1/3, −1
 
 **What is bounded but promising:**
-- Conditional full one-generation completion: 4D chirality supplies `8_L ⊕ 8_R`,
+- Conditional right-handed chiral completion: 4D chirality supplies `8_L ⊕ 8_R`,
   and anomaly cancellation fixes the right-handed hypercharges on the singlet
-  template
+  template, but this does not yet prove physical generations
 - Z₃ orbit counting for generations, conditional on the physicality theorem
+- Gauge couplings and CKM lanes: review-only until a true lattice coupling
+  observable and a quantitative CKM theorem exist
 - Phenomenological windows for R, Λ, n_s, sin θ_C, J, sin²θ_W, m_t
 - Direct lattice DM contact-propagator enhancement in the attractive Coulomb channel;
   the full freeze-out/relic-abundance step remains open

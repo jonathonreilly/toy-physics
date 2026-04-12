@@ -1,7 +1,7 @@
 # Generation Physicality: Orbit Algebra Pressure Test
 
 **Date:** 2026-04-12  
-**Status:** bounded negative -- exact orbit algebra retained, physical-generation theorem still open  
+**Status:** bounded negative -- exact orbit algebra retained; physical-generation theorem still open because there is no canonical matter-assignment theorem
 **Script:** `scripts/frontier_generation_physicality.py`  
 **Prior work:** `docs/GENERATIONS_RIGOROUS_NOTE.md`, `docs/GENERATIONS_WEAKNESS_ANALYSIS_NOTE.md`, `docs/WILSON_BREAKS_EVERYTHING_NOTE.md`
 
@@ -55,6 +55,7 @@ To close the generation-physicality gap, we still need one of the following:
 Without one of those, the lane stays bounded: the orbit algebra is exact, but physical generation closure is open.
 
 The exact blocker is therefore not the orbit count; it is the absence of a theorem that canonically identifies the orbit classes with physical matter families on the graph side.
+The CKM-like texture, singlet interpretation, and Wilson deformation are all diagnostics or pressure tests, not closure proofs.
 
 ---
 
