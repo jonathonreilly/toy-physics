@@ -149,6 +149,15 @@ Why held:
 - the latest `SU3_BASIS_INDEPENDENCE` lane reduces the basis-choice objection,
   but still leaves the canonical residual-symmetry and hypercharge
   identification steps open
+- the later `SU3_FORMAL_THEOREM` verifier rewrite resolves the old script
+  mismatch, but the lane is still held because the proved `su(2)` is now the
+  KS tensor-factor `su(2)`, not the retained native `Cl(3)` / bivector lane
+- the later `HYPERCHARGE_IDENTIFICATION` script gives the right left-handed
+  `Y` ratio and charges, but its anomaly-based uniqueness language still
+  exceeds what that left-handed surface proves
+- the later `YT_FROM_ALPHA_S` lane is still held because the exact
+  trace-identity coefficient and coupling normalization remain unresolved in
+  the runner itself
 - the later branch summary `REVIEW_THREAD_SUMMARY_2026-04-12.md` overstates
   several still-open blockers and must not be used as the retention authority
 

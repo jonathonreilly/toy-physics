@@ -34,6 +34,13 @@ Current state:
   change that decision
 - the newer `SU3_BASIS_INDEPENDENCE` note materially strengthens the commutant
   argument, but it still does not clear the retained native-cubic `SU(3)` bar
+- the later `SU3_FORMAL_THEOREM` rewrite fixes the old verifier mismatch
+  (`106/106` pass), but the theorem now closes a narrower KS tensor-factor
+  commutant result rather than native `Cl(3)`-alone `SU(3)` emergence
+- the later `HYPERCHARGE_IDENTIFICATION` lane is still conditional on that
+  commutant setup and should not be summarized as anomaly-free closure
+- the later `YT_FROM_ALPHA_S` lane remains review-only: useful constraint, but
+  not a closed derivation of the exact top Yukawa coefficient
 - later arrivals (`NEUTRINO_COMPLEX_Z3`, `EWPT_STRENGTH`, `EWPT_LATTICE_MC`,
   `WEINBERG_ANGLE_CORRECTION`, and the GW150914 echo stack) are also review-only:
   they strengthen exploration, but they do not yet clear the retained

@@ -217,6 +217,58 @@ Required rework:
   stabilizer of the derived weak sector and separately justify the physical
   identification of the surviving `u(1)`
 
+### 4b. Formal `SU(3)` theorem now fixes the old verifier mismatch, but changes
+the claim surface
+
+Files:
+
+- `docs/SU3_FORMAL_THEOREM_NOTE.md`
+- `scripts/frontier_su3_formal_theorem.py`
+- `docs/HYPERCHARGE_IDENTIFICATION_NOTE.md`
+- `scripts/frontier_hypercharge_identification.py`
+
+Current read:
+
+- the old explicit-construction mismatch is resolved: the rewritten verifier now
+  passes `106/106`
+- the audited positive is now a strong commutant theorem on the
+  Kawamoto-Smit tensor product surface:
+  - choose a distinguished spatial direction
+  - let `su(2)` act on the corresponding `C^2` factor
+  - let `SWAP` act on the two remaining factors
+  - then `Comm{su(2), SWAP}` has compact semisimple part `su(3)`
+- that is a real and much stronger result than the older hand-embedding lane
+
+Why not on `main`:
+
+- the rewritten theorem no longer derives the weak `su(2)` from the retained
+  `Cl(3)` / bivector lane
+- the verifier explicitly records that `T_2` and `T_3` are **not** in `Cl(3)`;
+  they are canonical from the KS tensor decomposition, but they are not the old
+  derived bivector generators
+- so the current theorem closes:
+  “KS tensor-factor `su(2)` plus residual swap symmetry gives `su(3)`”
+  but it still does not close the stronger retained claim:
+  “native cubic `Cl(3)` alone derives the full nonabelian gauge sector”
+- the hypercharge companion is also narrower than its headline:
+  the left-handed doublet sector gives the right `Y` eigenvalue ratio and
+  charge formula, but the script itself shows the `U(1)^3` anomaly is nonzero
+  on that surface, so anomaly freedom is not what fixes the identification here
+
+Required rework:
+
+- keep this off `main` for now
+- paper-safe wording at this stage is:
+  “within the KS tensor-factor realization of `Cl(3)` on `Z^3`, a distinguished
+  factor `su(2)` together with the residual cubic swap has commutant
+  `su(3) ⊕ u(1)`”
+- to close the stronger lane, either:
+  - bridge the retained bivector `su(2)` to this factor `su(2)` canonically, or
+  - explicitly narrow the publication claim away from “`Cl(3)` alone”
+- keep the hypercharge note conditional on the commutant theorem and rewrite
+  its uniqueness claim around tracelessness / charge matching, not anomaly
+  cancellation
+
 ### 5. Neutrino masses are a downstream phenomenology fit, not retained closure
 
 Files:
@@ -241,6 +293,40 @@ Required rework:
 - keep off `main`
 - if reopened, rewrite as a bounded phenomenology note with explicit “fit, not
   derivation” language
+
+### 5b. Top Yukawa from `alpha_s` is still a constrained phenomenology lane,
+not a closed derivation
+
+Files:
+
+- `docs/YT_FROM_ALPHA_S_NOTE.md`
+- `scripts/frontier_yt_from_alpha_s.py`
+
+Current read:
+
+- the lane is useful because it narrows the size of the remaining freedom in
+  `y_t`
+- the script finds a trace-identity candidate `y_t = g_s / sqrt(6)` and,
+  after 1-loop RG running, gets `m_t = 178.8 GeV`, which is `+3.4%` high
+
+Why not on `main`:
+
+- the runner itself finishes with `8 PASS / 1 FAIL`
+- its own summary says the exact Clebsch-Gordan coefficient is **not** uniquely
+  determined yet
+- the script compares multiple competing normalizations (`sqrt(6)`, `sqrt(7)`,
+  bare vs unified coupling) and explicitly notes that the “best” coefficient is
+  still unresolved
+- so this is not a retained prediction from `Cl(3)`; it is a promising
+  constraint lane with an unresolved operator-identification problem
+
+Required rework:
+
+- keep off `main`
+- rewrite as: “`Cl(3)` constrains `y_t` to be `O(g)` with a coefficient near
+  the observed value, but the exact trace-identity coefficient remains open”
+- do not call this “the last free parameter removed” unless the operator choice
+  and coupling normalization are fixed from the retained cubic lane
 
 ### 5a. Complex `Z_3` breaking still strengthens the fit, not the derivation
 
