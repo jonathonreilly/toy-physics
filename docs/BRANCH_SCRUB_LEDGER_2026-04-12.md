@@ -69,6 +69,26 @@ means the branch still needs a uniqueness pass before archive.
 - `origin/codex/main-post-validation`
 - `origin/codex/strict-staggered-repro`
 
+### Archive-ready now
+
+These branches are already represented by `main` or `codex/review-active` and
+do not need further science capture before archive:
+
+- `origin/codex/review-final-20260411`
+- `origin/codex/main-open-cubic-validation`
+- `origin/codex/main-post-validation`
+- `origin/codex/strict-staggered-repro`
+
+### Likely archive-ready after one short verification pass
+
+These appear to be promotion/integration helper branches rather than unique
+science branches, but they still need a quick final diff audit before delete:
+
+- `origin/codex/main-distance-64`
+- `origin/codex/main-newton-note`
+- `origin/codex/archive-main-retain-audit-20260411`
+- `origin/codex/archive-main-wilson-bounded-20260411`
+
 ### Still need uniqueness review before archive
 
 - `origin/codex/archive-automation-backup-20260411`
