@@ -119,6 +119,25 @@ Do not promote if:
 
 - `FROZEN_SOURCE` still explains the lane within tolerance
 
+### 2a. Distance-law close path
+
+Current best retained artifact:
+
+- `docs/DISTANCE_LAW_3D_64_CLOSURE_NOTE_2026-04-11.md`
+- `scripts/distance_law_3d_64_closure.py`
+
+Gate:
+
+- do **not** treat `96^3` as the primary next fix
+- first add a matched frozen/static-source control on the same `64^3` surface
+- write the control outcome into a review-safe bounded note
+- only then use `96^3` as a secondary widening / stability check
+
+Do not promote if:
+
+- the `64^3` lane still lacks same-surface frozen/static-source separation
+- the only improvement is a larger-box continuation with no causal/static null
+
 ### 3. Exact two-particle product-law toy
 
 Files:
@@ -153,6 +172,57 @@ Do not promote if:
 
 - `cut2` still fails
 - portability across graph growth still fails
+
+### 4a. Gravity + EM coexistence
+
+Files:
+
+- `docs/EM_GRAVITY_COEXISTENCE_CONTROL_NOTE_2026-04-12.md`
+
+Gate:
+
+- build a smallest 2x2 factorial on one fixed ordered 3D surface
+- recommended surface:
+  - `h=0.5`
+  - `W=8`
+  - `L=12`
+  - same point packet
+  - same final-layer detector
+  - same source plane
+- runner target:
+  - `scripts/em_gravity_coexistence_2x2.py`
+
+Required cells:
+
+- `H0`: no gravity, no EM
+- `Hg`: gravity only
+- `Hem`: EM only
+- `Hg+Hem`: both on
+
+Required readouts on the same evolved packet:
+
+- `Δg`: gravity centroid shift, using the retained gravity harness readout
+- `Δem`: EM odd response, using the retained electrostatics signed-centroid or
+  antisymmetry readout
+
+Decision statistic:
+
+```text
+R_GE[readout] = readout(Hg+Hem) - readout(Hg) - readout(Hem) + readout(H0)
+```
+
+Pass signature:
+
+- `R_GE[Δg] ≈ 0`
+- `R_GE[Δem] ≈ 0`
+- EM same-point `+/-` cancellation remains exactly zero
+- the combined cell preserves both single-sector readouts
+
+Do not promote if:
+
+- one sector changes materially when the other is turned on
+- the mixed residual is stably nonzero
+- the joint cell only works after renormalizing back into one single-sector lane
 
 ### 5. Staggered two-body closure family
 
