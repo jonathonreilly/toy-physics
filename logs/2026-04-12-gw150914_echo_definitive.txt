@@ -1,0 +1,124 @@
+=====================================================================================
+GW150914 DEFINITIVE ECHO SEARCH
+Blind sweep first, then compare to frozen-star prediction
+=====================================================================================
+
+--- LOADING DATA ---
+  Using 16 kHz data: 524288 samples
+  Sample rate: 16384 Hz
+
+--- PSD ESTIMATION ---
+  PSD from samples 88850-219922 (8.0s)
+
+--- WHITENING ---
+  Whitened and bandpassed 20-500 Hz
+
+--- RINGDOWN SUBTRACTION ---
+  H1 ringdown power reduction: 1.9x
+  Echo search window: 200ms to 3000ms post-merger
+  Window: 45876 samples (2.80s)
+
+=====================================================================================
+PHASE 1: BLIND ECHO SWEEP (5 - 300 ms)
+=====================================================================================
+
+  Top 10 echo periods (combined H1+L1 statistic):
+  rank  t_echo_ms    H1_stat    L1_stat   combined            note
+  -------------------------------------------------------
+     1      121.6     1.3821     1.1735     2.5556                
+     2      209.3     1.3083     1.2455     2.5538                
+     3      121.3     1.3017     1.2201     2.5217                
+     4      121.9     1.3539     1.1652     2.5190                
+     5      294.1     1.2386     1.2455     2.4841                
+     6      209.0     1.2422     1.2358     2.4780                
+     7      182.5     1.2595     1.2003     2.4598                
+     8      121.1     1.1650     1.2931     2.4581                
+     9      290.3     1.0397     1.3662     2.4059                
+    10      122.2     1.2146     1.1868     2.4014                
+
+  Predicted 67.7ms ranks #118 out of 1000
+  Statistic at 67.7ms: H1=1.0069, L1=1.1875, combined=2.1943
+
+  Scan statistics: mean=1.9951, std=0.1698
+  Predicted 67.7ms: 1.17 sigma above mean
+  Best peak: 3.30 sigma above mean
+
+=====================================================================================
+PHASE 2: BACKGROUND ESTIMATION (500 time shifts)
+=====================================================================================
+
+  Best echo period: 121.6ms
+  Signal statistic: 2.5556
+  Background: 1.9986 +/- 0.1882
+  Significance: 2.96 sigma
+  p-value: 0.0000 (0.00%)
+
+  At predicted 67.7ms:
+  Signal statistic: 2.1943
+  Significance: 1.04 sigma
+  p-value: 0.1520 (15.20%)
+
+=====================================================================================
+PHASE 3: CROSS-DETECTOR CONSISTENCY
+=====================================================================================
+
+  H1 top 5:
+    #1: 121.6ms (stat=1.3821)
+    #2: 191.0ms (stat=1.3711)
+    #3: 162.4ms (stat=1.3648)
+    #4: 121.9ms (stat=1.3539)
+    #5: 300.0ms (stat=1.3405)
+
+  L1 top 5:
+    #1: 279.0ms (stat=1.4085)
+    #2: 278.7ms (stat=1.4024)
+    #3: 133.2ms (stat=1.3751)
+    #4: 290.3ms (stat=1.3662)
+    #5: 132.9ms (stat=1.3279)
+
+  H1-L1 statistic correlation: -0.1034
+  No coincident peaks between H1 and L1 top 5
+
+=====================================================================================
+PHASE 4: ECHO SEARCH ACROSS POST-MERGER WINDOWS
+=====================================================================================
+
+        window  best_t_ms  best_stat  pred_stat pred_sigma
+  ----------------------------------------------------------
+      0.1-1.0s      138.5     2.5001     1.9765      -0.09
+      0.2-1.5s      144.8     2.5275     2.1915       0.93
+      0.2-2.0s      121.3     2.5318     2.1997       1.01
+      0.2-3.0s      121.3     2.5077     2.1773       1.02
+      0.5-2.0s      129.4     2.5043     2.2734       1.61
+      0.5-3.0s      129.4     2.4884     2.2552       1.59
+      1.0-3.0s       21.8     2.6229     2.2214       1.03
+
+=====================================================================================
+SUMMARY
+=====================================================================================
+
+  BLIND SWEEP RESULT:
+    Best echo period: 121.6ms (2.96 sigma)
+    p-value: 0.0000
+
+  AT PREDICTED ECHO TIME (67.7ms):
+    Significance: 1.04 sigma
+    p-value: 0.1520
+    Rank: #118 out of 1000 trial periods
+
+  CROSS-DETECTOR:
+    H1-L1 correlation of echo statistic: -0.1034
+    No coincident peaks in top 5
+
+  VERDICT: MARGINAL echo at 121.6ms (3.0 sigma).
+
+  COMPARISON TO ABEDI ET AL. (2017):
+    Abedi: ~100ms, 2.9 sigma (disputed)
+    Ours:  blind best = 121.6ms, 3.0 sigma
+    Prediction: 67.7ms (Planck-scale frozen star)
+
+  FRAMEWORK STATUS:
+    Echo at predicted time is 1.0 sigma — INCONCLUSIVE
+    Not ruled out; may need O3/O4 data for definitive test
+
+Total runtime: 0.2s

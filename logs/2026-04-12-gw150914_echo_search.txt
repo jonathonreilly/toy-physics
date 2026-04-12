@@ -1,0 +1,154 @@
+================================================================================
+GW150914 ECHO SEARCH — FROZEN STAR PREDICTION
+================================================================================
+
+Predicted echo time: 67.7 ms
+Predicted echo freq: 14.8 Hz
+Source: Planck-scale frozen star (R_min = N^(1/3) * l_Planck)
+
+--------------------------------------------------------------------------------
+LOADING DATA
+--------------------------------------------------------------------------------
+  H1: 131072 samples, 4096 Hz, GPS 1126259447
+  L1: 131072 samples, 4096 Hz, GPS 1126259447
+  Merger at sample 63078 (GPS 1126259462.4)
+
+--------------------------------------------------------------------------------
+PREPROCESSING
+--------------------------------------------------------------------------------
+  Bandpass filtered: 10-200 Hz
+  Whitened
+  Post-merger window: 500ms to 2000ms after merger
+  Window length: 6144 samples (1500ms)
+
+--------------------------------------------------------------------------------
+TEST 1: AUTOCORRELATION
+--------------------------------------------------------------------------------
+
+  Autocorrelation at predicted echo lag (277 samples = 67.7ms):
+    H1: AC(277) = 0.022128
+    L1: AC(277) = 0.042305
+
+  AC profile around predicted lag:
+    lag_ms lag_samp      AC_H1      AC_L1
+      65.2      267   0.053424  -0.017817
+      66.4      272   0.129550   0.196566
+      67.1      275   0.082608   0.149431
+      67.4      276   0.054298   0.101698
+      67.6      277   0.022128   0.042305
+      67.9      278  -0.012123  -0.024701
+      68.1      279  -0.046658  -0.094716
+      68.8      282  -0.136262  -0.275895
+      70.1      287  -0.192646  -0.297200
+
+  Peak AC in 50-100ms range:
+    H1: lag=83.3ms, AC=0.493460
+    L1: lag=83.5ms, AC=0.694103
+
+--------------------------------------------------------------------------------
+TEST 2: COMB FILTER SNR
+--------------------------------------------------------------------------------
+
+  Comb filter at t_echo = 67.7ms, 8 echoes:
+    H1 power ratio: 1.0426
+    L1 power ratio: 0.7850
+
+--------------------------------------------------------------------------------
+TEST 3: ECHO TIME SCAN (20-200ms)
+--------------------------------------------------------------------------------
+
+  H1 scan:
+    Best echo time: 41.7ms (SNR=1.6053)
+    At predicted 67.7ms: SNR=1.0901
+    Mean SNR: 0.9886 +/- 0.1928
+    Predicted vs mean: 0.53 sigma
+
+  L1 scan:
+    Best echo time: 29.0ms (SNR=1.6317)
+    At predicted 67.7ms: SNR=0.7846
+    Mean SNR: 0.9542 +/- 0.2293
+    Predicted vs mean: -0.74 sigma
+
+  Top 5 echo times:
+    H1 #1: t=41.7ms, SNR=1.6053
+    H1 #2: t=84.2ms, SNR=1.5511
+    H1 #3: t=40.8ms, SNR=1.5446
+    H1 #4: t=42.6ms, SNR=1.5146
+    H1 #5: t=153.9ms, SNR=1.4958
+    L1 #1: t=29.0ms, SNR=1.6317
+    L1 #2: t=187.3ms, SNR=1.6273
+    L1 #3: t=39.0ms, SNR=1.5162
+    L1 #4: t=196.4ms, SNR=1.5126
+    L1 #5: t=38.1ms, SNR=1.4504
+
+--------------------------------------------------------------------------------
+TEST 4: BACKGROUND ESTIMATION (100 time shifts)
+--------------------------------------------------------------------------------
+
+  H1:
+    Signal power ratio: 1.0426
+    Background: 0.9689 +/- 0.1873
+    Significance: 0.39 sigma
+
+  L1:
+    Signal power ratio: 0.7850
+    Background: 1.0234 +/- 0.2186
+    Significance: -1.09 sigma
+
+  Combined significance: 0.00 sigma (quadrature)
+
+--------------------------------------------------------------------------------
+TEST 5: CROSS-DETECTOR CORRELATION
+--------------------------------------------------------------------------------
+
+  Cross-correlation H1 x L1:
+    lag_ms         CC
+       0.0  -0.220544
+      10.0  -0.169061
+      50.0  -0.037571
+      67.7   0.025398 <-- predicted
+     100.0  -0.271251
+     135.4   0.201683 <-- 2x predicted
+     200.0  -0.202581
+
+--------------------------------------------------------------------------------
+TEST 6: ECHO SEARCH IN DIFFERENT POST-MERGER WINDOWS
+--------------------------------------------------------------------------------
+
+        window   H1_SNR   L1_SNR    H1_AC    L1_AC
+  --------------------------------------------------
+      0.2-1.0s   1.3031   1.2380 0.048558 -0.076160
+      0.3-1.5s   0.9000   1.1855 0.046064 0.017215
+      0.5-2.0s   1.0426   0.7850 0.022128 0.042305
+      1.0-3.0s   0.7279   0.7457 0.073912 0.030722
+      0.2-3.0s   1.1069   1.3755 0.065275 -0.001197
+
+================================================================================
+SUMMARY
+================================================================================
+
+  Predicted echo time: 67.7ms
+  Predicted echo freq: 14.8 Hz
+
+  Autocorrelation at predicted lag:
+    H1: 0.022128
+    L1: 0.042305
+
+  Comb filter significance (vs time-shift background):
+    H1: 0.39 sigma
+    L1: -1.09 sigma
+    Combined: 0.00 sigma
+
+  RESULT: No significant echo signal at predicted time.
+  This does NOT invalidate the frozen star prediction —
+  echoes may be too weak to detect with current sensitivity.
+
+  CAVEATS:
+  - This is a simplified analysis (not a full matched-filter search)
+  - Proper analysis requires careful PSD estimation, glitch removal,
+    and injection studies to calibrate sensitivity
+  - The 4096 Hz sample rate limits us to echoes above ~10 Hz
+  - Abedi et al. used a more sophisticated method and found 2.9 sigma
+  - A null result here is expected given the simple analysis
+
+Total runtime: 0.1s
