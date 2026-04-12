@@ -142,7 +142,7 @@ depends on inputs or assumptions not yet derived from the structural backbone.**
 | sin θ_C | 0.224 (Z₃ anisotropy) | 0.224 | Bounded: Z₃ breaking parameter fitted |
 | J (Jarlskog) | 3.1×10⁻⁵ (Z₃ phase) | 3.08×10⁻⁵ | Bounded: same Z₃ fit |
 | sin²θ_W | 0.231 (taste thresholds) | 0.231 | Bounded: M_taste fitted, not derived |
-| m_t | 175.0 GeV (y_t = g_s/√6) | 173.0 GeV | Bounded: lattice Ward identity stronger; full gauged normalization still open |
+| m_t | 175.0 GeV (y_t = g_s/√6) | 173.0 GeV | Bounded: bare UV normalization fixed; renormalized matching still open |
 | Δm²₃₁/Δm²₂₁ | 32.6 | 32.6 | Fit: 2 free parameters in Z₃ seesaw |
 | δ_CP | −103° | −90° ± 20° | Fit: complex Z₃ breaking phase |
 
