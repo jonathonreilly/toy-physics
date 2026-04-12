@@ -129,6 +129,7 @@ Files:
 - `docs/GENERATION_PHYSICALITY_NOTE.md`
 - `docs/S3_TOPOLOGY_DERIVATION_NOTE.md`
 - `docs/GRAPH_FIRST_CHIRAL_COMPLETION_SEARCH_NOTE.md`
+- `docs/CHIRAL_COMPLETION_NOTE.md`
 - corresponding `frontier_*` runners on the same lane
 
 Why held:
@@ -190,6 +191,11 @@ Why held:
   showing the present left-handed graph-first module has no weak-singlet
   one-particle completion and no natural low-degree symmetric right-handed
   sector
+- the later `CHIRAL_COMPLETION` lane is still held because it closes anomaly
+  cancellation only after assuming the right-handed representation template
+  `(1,3)+(1,3)+(1,1)+(1,1)` and imposing a neutral singlet `y4=0`; it does not
+  yet derive that full right-handed sector graph-canonically from the retained
+  surface
 - the later branch summary `REVIEW_THREAD_SUMMARY_2026-04-12.md` overstates
   several still-open blockers and must not be used as the retention authority
 

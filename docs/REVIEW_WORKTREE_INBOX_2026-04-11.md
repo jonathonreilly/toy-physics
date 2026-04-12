@@ -72,6 +72,11 @@ Current state:
   it shows the current left-handed graph-first surface has no one-particle
   weak singlets and does not naturally produce a low-degree right-handed
   completion
+- the later `CHIRAL_COMPLETION` lane is a real step forward, but only as a
+  conditional anomaly-completion result: given a right-handed
+  `(1,3)+(1,3)+(1,1)+(1,1)` sector from 4D doubling and a neutral singlet, the
+  hypercharges are uniquely fixed; the graph-canonical derivation of that
+  sector template is still open
 - later arrivals (`NEUTRINO_COMPLEX_Z3`, `EWPT_STRENGTH`, `EWPT_LATTICE_MC`,
   `WEINBERG_ANGLE_CORRECTION`, and the GW150914 echo stack) are also review-only:
   they strengthen exploration, but they do not yet clear the retained

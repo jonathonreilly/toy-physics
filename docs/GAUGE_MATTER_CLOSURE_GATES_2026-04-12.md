@@ -81,6 +81,42 @@ This does not prove that all completions are impossible.
 It does prove that the present left-handed one-particle surface does **not**
 contain a natural, symmetric, low-degree chiral completion by itself.
 
+### New conditional completion result
+
+The newer `CHIRAL_COMPLETION` lane materially strengthens the gate, but only in
+conditional form.
+
+What it now establishes:
+
+- if the 4D temporal doubling is used to supply an additional `8`-state chiral
+  sector
+- and if that sector is parameterized as
+  - `(1,3)_{y_1} + (1,3)_{y_2} + (1,1)_{y_3} + (1,1)_{y_4}`
+- and if the neutrino singlet is required to be electrically neutral
+  (`y_4 = 0`)
+
+then anomaly cancellation uniquely fixes:
+
+- `u_R : (1,3)_{+4/3}`
+- `d_R : (1,3)_{-2/3}`
+- `e_R : (1,1)_{-2}`
+- `nu_R : (1,1)_0`
+
+This is a real upgrade over the earlier left-handed-only state:
+
+- the anomaly equations are now solved explicitly
+- the full one-generation anomaly sums close
+- the resulting spectrum matches the standard `\bar{5} + 10 + 1` bookkeeping
+
+But this does **not** yet remove the core missing theorem:
+
+- the script does not derive that right-handed representation template from the
+  graph/taste surface itself
+- it does not derive the colour assignments of the right-handed sector from the
+  graph-first module
+- and the uniqueness statement depends on the added `y_4 = 0` neutrality
+  condition
+
 ### What theorem is needed
 
 **Chiral completion theorem**
@@ -110,6 +146,8 @@ Needed conclusion:
   - left-handed charge matching
 - use `GRAPH_FIRST_CHIRAL_COMPLETION_SEARCH_NOTE.md` as the current obstruction
   memo for why the right-handed sector is still missing
+- treat `CHIRAL_COMPLETION_NOTE.md` as a **conditional anomaly-completion
+  theorem**, not yet as a graph-canonical derivation of the full chiral sector
 
 ---
 
