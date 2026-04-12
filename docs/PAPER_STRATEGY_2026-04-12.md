@@ -1,258 +1,193 @@
-# Paper Strategy: "Physics from One Axiom"
+# Paper Strategy: `CI(3)` / `Z^3`
 
-**Date:** 2026-04-12
-**Status:** DRAFT — on review-active for discussion, not retention authority
-**Branch:** codex/review-active
-
----
-
-## The Story in One Paragraph
-
-A single algebraic structure — the Clifford algebra Cl(3) on a three-dimensional
-cubic lattice — contains Newtonian gravity, the Standard Model gauge group, three
-fermion generations, the Born rule, and the CMB spectral tilt. It predicts the
-dark matter ratio to 0.2%, the cosmological constant to 0.4%, the Jarlskog
-invariant to 2%, and the neutrino mass-squared ratio exactly. It requires no free
-parameters. It makes nine falsifiable predictions testable within the next decade.
+**Date:** 2026-04-12  
+**Status:** DRAFT for `codex/review-active` only  
+**Authority:** This strategy must match `docs/CI3_Z3_PUBLICATION_RETAIN_AUDIT_2026-04-12.md`
 
 ---
 
-## Paper 1: The Nature Letter
+## Working Thesis
 
-### Format
-- 4 pages + Extended Data + Supplementary Information
-- ~3000 words main text, ~30 display items allowed in ED/SI
+The publication should be written around the claims that are actually retained
+or narrowly bounded on the current review surface:
+
+- exact native cubic `Cl(3)` / `SU(2)` structure
+- a verified KS-surface commutant theorem giving `su(3) \oplus u(1)` once the
+  derived weak factor and compatible cubic exchange symmetry are fixed
+- left-handed charge/eigenvalue matching as a corollary of that commutant
+- exact taste-orbit algebra `8 = 1 + 1 + 3 + 3`, with physical generations
+  explicitly conditional
+- a short list of honest open problems and review-only lanes
+
+The paper should not claim a zero-free-parameter theory, native `Cl(3)`-alone
+closure of `SU(3)`, or full Standard Model completion.
+
+---
+
+## Safe Abstract
+
+We show that a cubic `Cl(3)`-based lattice construction gives exact native
+`SU(2)` structure, a basis-stable KS-surface commutant theorem with
+`su(3) \oplus u(1)` once the weak factor and residual cubic exchange symmetry
+are fixed, and an exact taste-orbit decomposition `8 = 1 + 1 + 3 + 3` on the
+audited `Z^3` surface. The `SU(3)` result is presented as a commutant theorem
+on the KS surface, not as a native `Cl(3)`-alone closure. Hypercharge is
+reported only as left-handed charge/eigenvalue matching; the physical
+identification of the abelian factor remains a separate question. The paper
+also records which phenomenology lanes remain review-only or bounded, so the
+submission surface stays aligned with the audit rather than outrunning it.
+
+---
+
+## Paper 1: Main Letter
+
+### Goal
+
+Keep the Nature-style letter narrowly tied to the audited retained results.
+The letter should be interesting on its own, but it must not rest on claims
+that still belong on `review-active`.
+
+### Suggested Title
+
+`Cl(3)` on `Z^3`: exact native `SU(2)`, a KS-surface `SU(3)` commutant, and
+audited taste-orbit structure
 
 ### Structure
 
-**Title:** "Gravity, gauge groups, and cosmology from Cl(3) on Z³"
+**1. Motivation and scope**
+- State the problem: derive as much structure as possible from the cubic
+  lattice lane while being explicit about what is retained and what is open.
+- Say up front that this is a claim-bounded paper, not a zero-free-parameter
+  endgame.
+- Frame the paper as a controlled audit of what survives publication review.
 
-**Opening (1 paragraph):** The unification problem. String theory, loop QG, and
-NCG each derive subsets of physics. None derives gravity + gauge groups +
-cosmological observables from a single input with zero free parameters. We show
-that Cl(3) on Z³ does.
+**2. Exact native cubic `Cl(3)` / `SU(2)`**
+- Retain the exact native cubic gauge result already promoted on `main`.
+- Present this as the clean positive result from the retained weak lane.
+- Do not re-open native cubic `SU(3)` here.
 
-**Section 1: The axiom and what it gives for free (~400 words)**
-- One axiom: Cl(3) on Z³ (qubits with nearest-neighbor interactions on a 3D grid)
-- Automatic: graph structure, unitarity, Born rule (I₃ < 10⁻¹⁶), d_local = 2
-- d = 3 forced (gravity sign + atomic stability)
-- Zero free parameters
+**3. KS-surface commutant theorem**
+- Present the commutant result as:
+  - derived `SU(2)` factor plus residual cubic exchange symmetry
+  - basis-stable `su(3) \oplus u(1)` commutant on the KS surface
+- Make clear this is a theorem on the KS tensor-factor surface.
+- Do not describe it as `Cl(3)`-alone closure.
+- Separate the algebraic theorem from the physical interpretation of the
+  abelian factor.
 
-**Section 2: Gravity (~400 words)**
-- Self-consistent Poisson (unique among 21 operators)
-- F = GM₁M₂/r² to sub-1% on 128³
-- Geodesic equation (5/5, Christoffel match to 10⁻⁷)
-- Gravitational waves from □f = ρ
+**4. Hypercharge as a corollary, not a closure claim**
+- Report left-handed charge/eigenvalue matching.
+- Avoid anomaly-free-closure language unless that is separately proved.
+- Use the phrase “hypercharge-like identification” or “left-handed matching”
+  if needed, but keep the abelian-factor identification open unless the audit
+  says otherwise.
 
-**Section 3: The Standard Model (~500 words)**
-- U(1) from edge phases (Coulomb confirmed)
-- SU(2) from bipartite → Cl(3) → [S_i, S_j] = iS_k (machine precision)
-- SU(3): commutant of {derived SU(2), residual cubic exchange} = su(3) ⊕ u(1)
-  - Proven basis-independent: all 3 axis choices, 1000 random conjugations, double commutant theorem
-  - Framing: "derived SU(2) plus residual cubic symmetry on Z³ forces su(3) ⊕ u(1)"
-  - Do NOT say: "Cl(3) alone derives SU(3)" — that claim is not earned
-  - Explicitly separate: (a) algebra closure of su(3) ⊕ u(1) commutant (PROVEN)
-    from (b) physical identification of the abelian factor as hypercharge (OPEN)
-  - Prior art: Furey, Stoica, Trayling — cite extensively
-  - Note: basis-independence proof appears to be new (not in existing literature)
-- 3 generations from Z₃ orbifold of 8 taste doublers
+**5. Taste-orbit algebra**
+- Retain the exact orbit structure `8 = 1 + 1 + 3 + 3`.
+- Present it as algebraic structure on the audited taste space.
+- If physical generations are discussed, mark them explicitly as conditional
+  on taste physicality rather than as a settled derivation.
 
-**Section 4: Quantitative predictions (~500 words)**
-- R = 5.48 (dark matter ratio, observed 5.47)
-- Ω_Λ = 0.682 (observed 0.685, via baryogenesis chain)
-- J = 3.1 × 10⁻⁵ (Jarlskog, PDG 3.08 × 10⁻⁵)
-- n_s = 1 - 2/N_e = 0.9667 (Planck 0.9649 ± 0.0042)
-  - (d-3) correction vanishes exactly at d = 3
-- sin²θ_W = 0.231 with taste threshold corrections
-- Neutrino Δm²₃₁/Δm²₂₁ = 32.6 (exact)
-- δ_CP = -103° from geometric CP violation (observed ~-90°)
-
-**Section 5: Falsifiable predictions (~400 words)**
-- Normal neutrino hierarchy (DUNE/JUNO 2027-2028)
-- w = -1 exactly (DESI)
-- Majorana neutrinos, m_ββ ~ 27 meV (LEGEND-200/nEXO)
-- τ_p ~ 10⁴⁷ yr (Hyper-K detection rules us out)
-- CPT exact, Lorentz violation at 10⁻³⁸ with cubic fingerprint
-- r ~ 0.0025 (LiteBIRD/CMB-S4)
-- Gravitational entanglement (diamond NV)
-- Born-gravity cross-constraint |β-1| ~ √|I₃| (unique, testable now)
-- GW echoes (review hold — mention as exploratory, not in main claims)
-
-**Section 6: What is not claimed (~300 words)**
-- "Cl(3) alone derives SU(3)" — we say "derived SU(2) + residual cubic exchange"
-- Physical identification of commutant U(1) as hypercharge (algebra proven, ID open)
-- Full nonlinear Einstein equations (weak-field only)
-- Specific Higgs mass (y_t not derived; CW is consistency check)
-- This is honest and essential — referees will look for overclaiming
-
-**Methods / Extended Data:**
-- Propagator construction and self-consistent iteration
-- Poisson uniqueness proof (21 operators)
-- Cl(3) algebra verification
-- Commutant computation for SU(3)
-- Taste decomposition and Z₃ generation mechanism
-- Dark matter ratio: taste Casimir + Sommerfeld + α_s robustness
-- Baryogenesis: Z₃ CP + CW phase transition + lattice MC (v/T = 0.73)
-- Primordial spectrum: graph growth → n_s = 1 - 2/N_e
-- Neutrino masses: Z₃ seesaw with complex breaking
-
-**Supplementary Information:**
-- All scripts (GitHub link)
-- Full numerical tables
-- Convergence studies
-- Literature comparison (Furey, Stoica, Trayling, etc.)
+**6. What the paper does not claim**
+- No native cubic `SU(3)` from `Cl(3)` alone.
+- No full Standard Model closure.
+- No zero-free-parameter claim.
+- No claim that the abelian factor is fully identified as hypercharge unless
+  the review docs explicitly close that step.
+- No claim that phenomenology lanes below are settled.
 
 ---
 
-## Paper 2: The PRD Companion
+## Paper 2: Technical Companion
 
-### Format
-- ~50 pages, full technical detail
-- Every derivation with proofs, convergence tests, error estimates
+### Purpose
 
-### Structure
-1. Introduction and axiom statement
-2. Dimension selection (6 arguments)
-3. Field equation uniqueness (21 operators)
-4. Newtonian gravity (mass law, product law, distance law)
-5. GR signatures (WEP, geodesics, factor-of-2, GW)
-6. Gauge groups (U(1), SU(2), SU(3) commutant, bounded claims)
-7. Generations (Z₃ orbifold, Wilson fragility test)
-8. Born rule and gravitational entanglement
-9. Dark matter ratio (taste Casimir, Sommerfeld, scheme independence)
-10. Cosmological constant (baryogenesis chain)
-11. Primordial spectrum (graph growth)
-12. Neutrino masses (Z₃ seesaw, complex breaking)
-13. Falsifiable predictions
-14. Honest negatives and open problems
-15. Conclusion
+Provide the full derivations, proofs, and negative controls that support the
+main letter, but keep the claim boundaries explicit.
 
-Submit to PRD same week as Nature letter.
+### Contents
 
----
+1. Native cubic `Cl(3)` / `SU(2)` derivation
+2. KS-surface commutant theorem and basis-independence checks
+3. Taste-orbit algebra `8 = 1 + 1 + 3 + 3`
+4. Left-handed charge matching and the bounded hypercharge discussion
+5. Explicit open problems and failure modes
+6. Review-only phenomenology lanes, clearly labeled as such
 
-## Paper 3+ : Companion Papers (after Nature decision)
+### What belongs here
 
-### 3a. Gravity sector → Classical and Quantum Gravity
-- F = GM₁M₂/r², geodesics, GW, background independence
-- Frozen stars (bounded Hartree claim only per codex)
-- Strong-field extension (if agent delivers)
+- the `SU(3)` commutant theorem on the KS surface
+- the basis-independence checks
+- the reviewed but still bounded hypercharge discussion
+- the exact orbit algebra
 
-### 3b. Gauge sector → JHEP
-- Cl(3) → SU(2) (rigorous)
-- SU(3) commutant argument + taste breaking
-- Z₃ generations, CKM, PMNS
-- Comparison to Furey/Stoica/Trayling
+### What stays out of the main claim set
 
-### 3c. Cosmology → JCAP
-- Dark matter ratio R = 5.48
-- Baryogenesis → Ω_Λ chain
-- n_s from graph growth
-- w = -1, graviton mass, monopoles
-
-### 3d. Experimental predictions → Nature Physics or PRL
-- Diamond NV experiment card
-- Born-gravity cross-constraint
-- Decoherence rate for experimentalist
+- neutrino global fits
+- Weinberg-angle threshold scans
+- `y_t` as a derived value
+- gravitational echoes
+- strong-field frozen-star extrapolations
+- cosmological closure claims that feed in observed values
 
 ---
 
-## Distribution Plan
+## Review-Only Lanes
 
-### Day 1
-1. Submit to **Nature** (letter format)
-2. Post on **arXiv** (hep-th primary; cross-list gr-qc, hep-lat, hep-ph, astro-ph.CO)
-3. Submit **PRD companion** (same week)
-4. Email to: diamond lab collaborator, 5-10 targeted physicists for early feedback
+These lanes can remain in the repo and can inform future companion papers, but
+they should not be promoted into the main `CI(3)` / `Z^3` manuscript unless
+their claim boundaries are rewritten and re-audited.
 
-### Day 1-7
-5. Monitor arXiv comments and social media response
-6. Prepare FAQ document for common objections (lattice QCD, taste physicality, etc.)
+### Keep as review-only / bounded
 
-### Week 2-4
-7. Nature editorial decision (desk reject or send to review)
-8. If desk reject: immediate resubmit to **PRL**
-9. If sent to review: prepare response to referee template
+- `SU(3)` native bridge beyond the KS surface
+- physical generations
+- `y_t` from `alpha_s`
+- Weinberg-angle threshold correction
+- neutrino complex `Z_3` fit
+- EWPT strength beyond the scalar-only surface
+- GW150914 echo analysis
+- frozen-star strong-field language
+- cosmology numbers that depend on observed inputs
 
-### Month 2-6
-10. Nature review cycle (expect 2-3 rounds)
-11. Submit companion papers to CQG/JHEP/JCAP
-12. Present at seminars (target: Perimeter, IAS, CERN-TH)
+### Why
 
-### Month 6+
-13. Diamond NV experiment begins (if collaborator engaged)
-14. LIGO O4 echo analysis (matched filter with frozen pipeline)
-15. Update arXiv with any experimental confirmations
+- these lanes are still scenario-dependent, fit-like, or explicitly exploratory
+- several of them still rely on imported normalization, observed targets, or
+  incomplete control surfaces
+- they should be kept visible, but not mixed into the submission narrative
 
 ---
 
-## Referee Strategy
+## Submission Ordering
 
-### Likely referee profiles
+### Now
 
-**Profile A: Lattice QCD expert**
-- Will immediately recognize staggered fermions
-- Objection: "this is just lattice QCD dressed up"
-- Response: WHY_NOT_JUST_LATTICE_QCD.md — 10 results LGT cannot produce
-- Key: gravitational entanglement (MI=2.3) and Born-gravity cross-constraint
+1. Lock the main manuscript to the audited core.
+2. Rewrite any strategy or summary docs so they reflect the same claim
+   boundaries.
+3. Keep the strong `SU(3)` bridge language confined to the KS-surface theorem.
 
-**Profile B: Quantum gravity theorist (LQG/strings)**
-- Will compare to existing programs
-- Objection: "what's new vs Furey/Connes/Wen?"
-- Response: the unification arrow. Nobody else gets R=5.48 + n_s + Ω_Λ
-- Key: the quantitative predictions, not the algebraic framework
+### Next
 
-**Profile C: Phenomenologist**
-- Will scrutinize the numbers
-- Objection: "how many of these are fits vs predictions?"
-- Response: be scrupulously honest. R, n_s, J are predictions. Neutrino
-  masses are bounded phenomenology. Higgs mass is consistency check.
-- Key: the honest negatives section earns trust
+4. If the native bridge theorem is later proved, update the manuscript plan.
+5. If not, leave the open theorem as an explicit limitation.
 
-**Profile D: Experimentalist**
-- Will want testable predictions with specific numbers
-- Objection: "when can we test this?"
-- Response: normal hierarchy (DUNE 2027), w=-1 (DESI 2026), m_ββ (2028+)
-- Key: the prediction table with experiments and dates
+### After that
 
-### Pre-submission checklist
-
-- [ ] All scripts run cleanly and reproduce claimed numbers
-- [ ] All notes align with codex retain audit (bounded claims only)
-- [ ] Furey/Stoica/Trayling cited in introduction and gauge section
-- [ ] SU(3) claim bounded per BOUNDED_NATIVE_GAUGE_NOTE.md
-- [ ] Neutrino section labeled as phenomenology, not derivation
-- [ ] Frozen stars labeled as exploratory (echo predictions in SI only)
-- [ ] No overclaiming in abstract or conclusions
-- [ ] GitHub repo is private until submission day
-- [ ] Diamond NV collaborator has reviewed experiment card
-- [ ] All co-author agreements in place
+6. Build companion papers only from lanes that have a clear retained or bounded
+   status.
 
 ---
 
-## Risk Matrix
+## Bottom Line
 
-| Risk | Probability | Impact | Mitigation |
-|------|------------|--------|------------|
-| Desk reject at Nature | 30% | Medium | Immediate PRL resubmit (P~90%) |
-| Referee says "just lattice QCD" | 40% | High | Rebuttal doc + 10 unique results |
-| Referee challenges SWAP₂₃ as "extra" | 15% | Medium | SWAP₂₃ is a cubic symmetry from the axiom + Furey literature supports |
-| Quantitative prediction found wrong | 5% | Fatal | Triple-check all numbers before submission |
-| Someone scoops on arXiv | 5% | Low | Submit simultaneously; the framework is the contribution |
-| δ_CP or hierarchy wrong (DUNE) | 15% | Medium | Framework survives; neutrino sector weakened |
-| Echo search null result | 50% | Low | Echo is exploratory, not a main claim |
+The safe paper is smaller than the old flagship version, but it is coherent:
 
----
+- exact native cubic `Cl(3)` / `SU(2)`
+- KS-surface `su(3) \oplus u(1)` commutant theorem
+- left-handed charge matching as a bounded corollary
+- exact taste-orbit algebra
+- explicit open problems where the audit still says “open”
 
-## Timeline
-
-| Date | Action |
-|------|--------|
-| Now | Close remaining agents (strong-field GR, top Yukawa) |
-| Next session | Write Nature letter draft |
-| +1 week | Internal review (codex audit of paper draft) |
-| +2 weeks | Diamond lab collaborator review |
-| +3 weeks | Submit Nature + arXiv + PRD |
-| +1 month | Nature editorial decision |
-| +3-6 months | Nature review cycle |
-| +6 months | Companion papers submitted |
+That is the manuscript strategy that matches the current review authority.
