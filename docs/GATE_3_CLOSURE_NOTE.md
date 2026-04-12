@@ -1,8 +1,10 @@
 # Gate 3: Top Yukawa -- Gauged Ward Identity
 
-**Status:** Closed -- gauged Ward identity proven  
+**Status:** BOUNDED — gauged bipartite Ward identity established, but full gauge-Yukawa normalization matching theorem still conditional  
 **Codex objection:** "still conditional on the missing gauged normalization identity"  
-**Script:** `frontier_yt_ward_identity.py` (25/25)
+**Script:** `frontier_yt_ward_identity.py` (25/25)  
+**What is proven:** {Eps, D_gauged} = 2m·I holds for arbitrary SU(3) link variables  
+**What remains:** The step y² = g² × Tr(P₊)/dim is a consistent identification, not yet a derived matching theorem
 
 ---
 
