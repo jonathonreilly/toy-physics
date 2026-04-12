@@ -1,0 +1,437 @@
+=====================================================================================
+FULL-CATALOG ECHO SEARCH: ABEDI REPRODUCTION + FROZEN-STAR PREDICTION
+=====================================================================================
+
+Available H1 event files: 73
+
+=====================================================================================
+PART A: ABEDI REPRODUCTION — GW150914 at ~100ms
+=====================================================================================
+
+  H1:
+    Blind sweep best: 138.4ms (SNR=4.832)
+    At Abedi ~100ms: SNR=3.158, sigma=-0.67
+    At prediction 67.5ms: SNR=3.000, sigma=-1.01
+    Sweep mean=3.203, std=0.831
+
+  L1:
+    Blind sweep best: 73.9ms (SNR=5.003)
+    At Abedi ~100ms: SNR=3.054, sigma=-1.05
+    At prediction 67.5ms: SNR=3.257, sigma=-0.64
+    Sweep mean=3.392, std=0.857
+
+=====================================================================================
+PART B: MULTI-EVENT STACK — EVENTS WITH KNOWN REMNANT PARAMS
+=====================================================================================
+
+  GW150914: M=63.1, a=0.67, t_echo=68.7ms
+    H1: pred_sigma=0.20, best=292.4ms
+    L1: pred_sigma=1.37, best=70.4ms
+    Combined: 1.11 sigma
+
+  GW151226: M=20.5, a=0.67, t_echo=22.0ms
+    H1: pred_sigma=-1.12, best=23.4ms
+    L1: pred_sigma=-0.64, best=21.6ms
+    Combined: -1.25 sigma
+
+  GW170104: M=48.9, a=0.67, t_echo=53.0ms
+    H1: pred_sigma=3.08, best=45.5ms
+    L1: pred_sigma=0.59, best=21.6ms
+    Combined: 2.59 sigma
+
+  GW170608: M=17.8, a=0.67, t_echo=19.0ms
+    H1: pred_sigma=0.00, best=26.3ms
+    L1: pred_sigma=0.00, best=22.8ms
+    Combined: 0.00 sigma
+
+  GW170729: M=79.5, a=0.67, t_echo=86.8ms
+    H1: pred_sigma=-1.66, best=24.5ms
+    L1: pred_sigma=-1.14, best=22.2ms
+    Combined: -1.98 sigma
+
+  GW170809: M=56.3, a=0.67, t_echo=61.2ms
+    H1: pred_sigma=-1.15, best=23.4ms
+    L1: pred_sigma=1.28, best=23.4ms
+    Combined: 0.09 sigma
+
+  GW170814: M=53.2, a=0.67, t_echo=57.8ms
+    H1: pred_sigma=0.29, best=21.6ms
+    L1: pred_sigma=-0.27, best=144.8ms
+    Combined: 0.01 sigma
+
+  GW170823: M=65.4, a=0.67, t_echo=71.2ms
+    H1: pred_sigma=-0.11, best=137.3ms
+    L1: pred_sigma=-1.24, best=23.9ms
+    Combined: -0.96 sigma
+
+  GW190403_051519: M=102.2, a=0.67, t_echo=112.0ms
+    H1: pred_sigma=0.64, best=24.5ms
+    L1: pred_sigma=-0.12, best=48.4ms
+    Combined: 0.37 sigma
+
+  GW190408_181802: M=41.1, a=0.67, t_echo=44.5ms
+    H1: pred_sigma=0.70, best=300.0ms
+    L1: pred_sigma=-0.75, best=29.8ms
+    Combined: -0.03 sigma
+
+  GW190413_052954: M=56.0, a=0.67, t_echo=60.8ms
+    H1: pred_sigma=0.09, best=24.5ms
+    L1: pred_sigma=0.93, best=56.5ms
+    Combined: 0.72 sigma
+
+  GW190413_134308: M=75.5, a=0.67, t_echo=82.4ms
+    H1: pred_sigma=-0.13, best=96.6ms
+    L1: pred_sigma=-0.02, best=24.5ms
+    Combined: -0.10 sigma
+
+  GW190421_213856: M=69.7, a=0.67, t_echo=76.0ms
+    H1: pred_sigma=2.95, best=23.9ms
+    L1: pred_sigma=-0.08, best=22.2ms
+    Combined: 2.02 sigma
+
+  GW190426_190642: M=172.9, a=0.67, t_echo=190.8ms
+    H1: pred_sigma=-0.37, best=32.7ms
+    L1: pred_sigma=1.15, best=26.9ms
+    Combined: 0.55 sigma
+
+  GW190503_185404: M=68.6, a=0.67, t_echo=74.7ms
+    H1: pred_sigma=-0.93, best=22.2ms
+    L1: pred_sigma=-1.29, best=28.0ms
+    Combined: -1.57 sigma
+
+  GW190512_180714: M=34.5, a=0.67, t_echo=37.2ms
+    H1: pred_sigma=-0.05, best=61.1ms
+    L1: pred_sigma=-0.59, best=46.6ms
+    Combined: -0.45 sigma
+
+  GW190513_205428: M=51.6, a=0.67, t_echo=56.0ms
+    H1: pred_sigma=0.12, best=137.3ms
+    L1: pred_sigma=0.26, best=40.2ms
+    Combined: 0.27 sigma
+
+  GW190514_065416: M=64.5, a=0.67, t_echo=70.2ms
+    H1: pred_sigma=0.88, best=29.8ms
+    L1: pred_sigma=-0.10, best=23.4ms
+    Combined: 0.56 sigma
+
+  GW190517_055101: M=59.3, a=0.67, t_echo=64.5ms
+    H1: pred_sigma=1.04, best=187.8ms
+    L1: pred_sigma=0.18, best=22.8ms
+    Combined: 0.86 sigma
+
+  GW190519_153544: M=101.0, a=0.67, t_echo=110.6ms
+    H1: pred_sigma=2.47, best=62.3ms
+    L1: pred_sigma=-1.64, best=273.3ms
+    Combined: 0.58 sigma
+
+  GW190521_074359: M=71.0, a=0.67, t_echo=77.4ms
+    H1: pred_sigma=0.08, best=118.1ms
+    L1: pred_sigma=0.98, best=277.9ms
+    Combined: 0.75 sigma
+
+  GW190527_092055: M=56.4, a=0.67, t_echo=61.3ms
+    H1: pred_sigma=-0.60, best=126.8ms
+    L1: pred_sigma=-0.23, best=23.4ms
+    Combined: -0.58 sigma
+
+  GW190602_175927: M=110.9, a=0.67, t_echo=121.6ms
+    H1: pred_sigma=-1.24, best=23.9ms
+    L1: pred_sigma=0.16, best=36.7ms
+    Combined: -0.76 sigma
+
+  GW190701_203306: M=90.2, a=0.67, t_echo=98.7ms
+    H1: pred_sigma=-0.12, best=21.6ms
+    L1: pred_sigma=2.14, best=28.6ms
+    Combined: 1.43 sigma
+
+  GW190706_222641: M=99.0, a=0.67, t_echo=108.4ms
+    H1: pred_sigma=-0.29, best=22.2ms
+    L1: pred_sigma=-0.21, best=24.5ms
+    Combined: -0.35 sigma
+
+  GW190707_093326: M=19.2, a=0.67, t_echo=20.5ms
+    H1: pred_sigma=0.00, best=226.8ms
+    L1: pred_sigma=0.00, best=24.5ms
+    Combined: 0.00 sigma
+
+  GW190719_215514: M=54.9, a=0.67, t_echo=59.6ms
+    H1: pred_sigma=-1.48, best=23.4ms
+    L1: pred_sigma=-0.06, best=26.3ms
+    Combined: -1.09 sigma
+
+  GW190720_000836: M=18.6, a=0.67, t_echo=19.9ms
+    H1: pred_sigma=0.00, best=42.0ms
+    L1: pred_sigma=0.00, best=295.4ms
+    Combined: 0.00 sigma
+
+  GW190727_060333: M=71.7, a=0.67, t_echo=78.2ms
+    H1: pred_sigma=-0.06, best=29.2ms
+    L1: pred_sigma=-0.98, best=134.4ms
+    Combined: -0.74 sigma
+
+  GW190728_064510: M=18.1, a=0.67, t_echo=19.3ms
+    H1: pred_sigma=0.00, best=102.4ms
+    Combined: 0.00 sigma
+
+  GW190731_140936: M=55.3, a=0.67, t_echo=60.1ms
+
+  GW190803_022701: M=62.8, a=0.67, t_echo=68.3ms
+    H1: pred_sigma=-1.35, best=23.9ms
+    L1: pred_sigma=-0.40, best=23.9ms
+    Combined: -1.24 sigma
+
+  GW190805_211137: M=52.2, a=0.67, t_echo=56.7ms
+
+  GW190828_063405: M=39.5, a=0.67, t_echo=42.7ms
+    H1: pred_sigma=1.71, best=35.6ms
+    L1: pred_sigma=-0.06, best=265.7ms
+    Combined: 1.17 sigma
+
+  GW190828_065509: M=29.5, a=0.67, t_echo=31.8ms
+    H1: pred_sigma=0.81, best=28.6ms
+    L1: pred_sigma=-0.11, best=32.1ms
+    Combined: 0.50 sigma
+
+  GW190915_235702: M=56.3, a=0.67, t_echo=61.2ms
+    H1: pred_sigma=0.67, best=24.5ms
+    L1: pred_sigma=-0.17, best=203.5ms
+    Combined: 0.36 sigma
+
+  GW190916_200658: M=16.4, a=0.67, t_echo=17.5ms
+
+  GW190917_114630: M=15.3, a=0.67, t_echo=16.3ms
+
+  GW190924_021846: M=13.7, a=0.67, t_echo=14.6ms
+    H1: pred_sigma=0.00, best=25.1ms
+    L1: pred_sigma=0.00, best=65.2ms
+    Combined: 0.00 sigma
+
+  GW190925_232845: M=28.4, a=0.67, t_echo=30.6ms
+
+  GW190926_050336: M=54.3, a=0.67, t_echo=59.0ms
+
+  GW190929_012149: M=89.3, a=0.67, t_echo=97.7ms
+
+  GW190930_133541: M=18.6, a=0.67, t_echo=19.9ms
+    H1: pred_sigma=0.00, best=114.0ms
+    L1: pred_sigma=0.00, best=29.2ms
+    Combined: 0.00 sigma
+
+  GW191103_012549: M=17.1, a=0.67, t_echo=18.3ms
+
+  GW191105_143521: M=17.7, a=0.67, t_echo=18.9ms
+
+  GW191109_010717: M=103.2, a=0.67, t_echo=113.1ms
+    H1: pred_sigma=0.13, best=43.1ms
+    L1: pred_sigma=1.38, best=24.5ms
+    Combined: 1.07 sigma
+
+  GW191113_071753: M=41.8, a=0.67, t_echo=45.2ms
+
+  GW191126_115259: M=18.3, a=0.67, t_echo=19.6ms
+
+  GW191127_050227: M=38.2, a=0.67, t_echo=41.3ms
+
+  GW191129_134029: M=16.7, a=0.67, t_echo=17.8ms
+
+  GW191204_110529: M=29.2, a=0.67, t_echo=31.4ms
+    H1: pred_sigma=-0.37, best=48.4ms
+    L1: pred_sigma=-2.21, best=162.8ms
+    Combined: -1.83 sigma
+
+  GW191215_223052: M=42.3, a=0.67, t_echo=45.8ms
+    H1: pred_sigma=-0.25, best=36.7ms
+    L1: pred_sigma=2.77, best=39.6ms
+    Combined: 1.79 sigma
+
+  GW191216_213338: M=18.6, a=0.67, t_echo=19.9ms
+    H1: pred_sigma=0.00, best=36.7ms
+    Combined: 0.00 sigma
+
+  GW191222_033537: M=76.2, a=0.67, t_echo=83.1ms
+    H1: pred_sigma=0.02, best=103.6ms
+    L1: pred_sigma=1.28, best=24.5ms
+    Combined: 0.92 sigma
+
+  GW191230_180458: M=56.3, a=0.67, t_echo=61.2ms
+
+  GW200128_022011: M=64.9, a=0.67, t_echo=70.7ms
+    H1: pred_sigma=-0.13, best=111.7ms
+    L1: pred_sigma=-2.30, best=80.9ms
+    Combined: -1.72 sigma
+
+  GW200129_065458: M=55.7, a=0.67, t_echo=60.5ms
+    H1: pred_sigma=0.66, best=46.0ms
+    L1: pred_sigma=1.43, best=271.5ms
+    Combined: 1.48 sigma
+
+  GW200202_154313: M=16.9, a=0.67, t_echo=18.0ms
+
+  GW200208_130117: M=54.7, a=0.67, t_echo=59.4ms
+
+  GW200208_222617: M=19.2, a=0.67, t_echo=20.5ms
+
+  GW200209_085452: M=44.5, a=0.67, t_echo=48.2ms
+    H1: pred_sigma=-0.89, best=116.9ms
+    L1: pred_sigma=0.01, best=273.8ms
+    Combined: -0.62 sigma
+
+  GW200210_092254: M=38.2, a=0.67, t_echo=41.3ms
+    H1: pred_sigma=0.08, best=36.7ms
+    L1: pred_sigma=-0.22, best=65.8ms
+    Combined: -0.10 sigma
+
+  GW200216_220804: M=89.1, a=0.67, t_echo=97.4ms
+
+  GW200219_094415: M=56.2, a=0.67, t_echo=61.1ms
+
+  GW200220_061928: M=122.7, a=0.67, t_echo=134.8ms
+
+  GW200220_124850: M=34.5, a=0.67, t_echo=37.2ms
+
+  GW200224_222234: M=57.7, a=0.67, t_echo=62.7ms
+    H1: pred_sigma=-0.96, best=94.8ms
+    L1: pred_sigma=-0.92, best=203.5ms
+    Combined: -1.33 sigma
+
+  GW200225_060421: M=27.5, a=0.67, t_echo=29.6ms
+    H1: pred_sigma=0.88, best=28.6ms
+    L1: pred_sigma=1.59, best=44.3ms
+    Combined: 1.75 sigma
+
+  GW200308_173609: M=42.7, a=0.67, t_echo=46.2ms
+
+  GW200311_115853: M=55.4, a=0.67, t_echo=60.2ms
+
+  GW200316_215756: M=21.2, a=0.67, t_echo=22.7ms
+
+  GW200322_091133: M=44.0, a=0.67, t_echo=47.6ms
+
+-------------------------------------------------------------------------------------
+STACKING (known PE events)
+-------------------------------------------------------------------------------------
+
+         event      M   t_pred    sigma
+      GW150914   63.1     68.7     1.11
+      GW151226   20.5     22.0    -1.25
+      GW170104   48.9     53.0     2.59
+      GW170608   17.8     19.0     0.00
+      GW170729   79.5     86.8    -1.98
+      GW170809   56.3     61.2     0.09
+      GW170814   53.2     57.8     0.01
+      GW170823   65.4     71.2    -0.96
+  GW190403_051519  102.2    112.0     0.37
+  GW190408_181802   41.1     44.5    -0.03
+  GW190413_052954   56.0     60.8     0.72
+  GW190413_134308   75.5     82.4    -0.10
+  GW190421_213856   69.7     76.0     2.02
+  GW190426_190642  172.9    190.8     0.55
+  GW190503_185404   68.6     74.7    -1.57
+  GW190512_180714   34.5     37.2    -0.45
+  GW190513_205428   51.6     56.0     0.27
+  GW190514_065416   64.5     70.2     0.56
+  GW190517_055101   59.3     64.5     0.86
+  GW190519_153544  101.0    110.6     0.58
+  GW190521_074359   71.0     77.4     0.75
+  GW190527_092055   56.4     61.3    -0.58
+  GW190602_175927  110.9    121.6    -0.76
+  GW190701_203306   90.2     98.7     1.43
+  GW190706_222641   99.0    108.4    -0.35
+  GW190707_093326   19.2     20.5     0.00
+  GW190719_215514   54.9     59.6    -1.09
+  GW190720_000836   18.6     19.9     0.00
+  GW190727_060333   71.7     78.2    -0.74
+  GW190728_064510   18.1     19.3     0.00
+  GW190803_022701   62.8     68.3    -1.24
+  GW190828_063405   39.5     42.7     1.17
+  GW190828_065509   29.5     31.8     0.50
+  GW190915_235702   56.3     61.2     0.36
+  GW190924_021846   13.7     14.6     0.00
+  GW190930_133541   18.6     19.9     0.00
+  GW191109_010717  103.2    113.1     1.07
+  GW191204_110529   29.2     31.4    -1.83
+  GW191215_223052   42.3     45.8     1.79
+  GW191216_213338   18.6     19.9     0.00
+  GW191222_033537   76.2     83.1     0.92
+  GW200128_022011   64.9     70.7    -1.72
+  GW200129_065458   55.7     60.5     1.48
+  GW200209_085452   44.5     48.2    -0.62
+  GW200210_092254   38.2     41.3    -0.10
+  GW200224_222234   57.7     62.7    -1.33
+  GW200225_060421   27.5     29.6     1.75
+
+  Stacked: 0.62 sigma
+  Positive: 22/47 (47%)
+  Mean: 0.090
+
+=====================================================================================
+PART C: ALL EVENTS (with estimated remnant params where needed)
+=====================================================================================
+  GW150914: +1.00σ (pred), t=69ms, Abedi: -0.54σ
+  GW151226: -1.43σ (pred), t=22ms, Abedi: -0.83σ
+  GW170104: +2.43σ (pred), t=53ms, Abedi: +1.42σ
+  GW170608: +0.00σ (pred), t=19ms, Abedi: +2.03σ
+  GW170729: -1.83σ (pred), t=87ms, Abedi: +0.91σ
+  GW170809: +0.04σ (pred), t=61ms, Abedi: -0.50σ
+  GW170814: -0.12σ (pred), t=58ms, Abedi: -0.22σ
+  GW170817: +0.61σ (pred), t=54ms, Abedi: -1.08σ
+  GW170823: -0.89σ (pred), t=71ms, Abedi: -0.51σ
+  GW190403_051519: +0.23σ (pred), t=112ms, Abedi: +2.31σ
+  GW190408_181802: -0.24σ (pred), t=44ms, Abedi: +1.60σ
+  GW190413_052954: +0.66σ (pred), t=61ms, Abedi: -0.30σ
+  GW190413_134308: -0.13σ (pred), t=82ms, Abedi: -0.63σ
+  GW190421_213856: +2.04σ (pred), t=76ms, Abedi: -1.43σ
+  GW190426_190642: +0.42σ (pred), t=191ms, Abedi: +1.95σ
+  GW190503_185404: -1.75σ (pred), t=75ms, Abedi: +0.57σ
+  GW190512_180714: -0.45σ (pred), t=37ms, Abedi: -1.63σ
+  GW190513_205428: +0.31σ (pred), t=56ms, Abedi: -0.27σ
+  GW190514_065416: +0.39σ (pred), t=70ms, Abedi: +0.67σ
+  GW190517_055101: +0.86σ (pred), t=64ms, Abedi: +1.10σ
+  GW190519_153544: +0.62σ (pred), t=111ms, Abedi: +0.96σ
+  GW190521_074359: +0.82σ (pred), t=77ms, Abedi: +0.36σ
+  GW190527_092055: -0.44σ (pred), t=61ms, Abedi: -1.40σ
+  GW190602_175927: -0.67σ (pred), t=122ms, Abedi: -1.28σ
+  GW190701_203306: +1.39σ (pred), t=99ms, Abedi: +1.12σ
+  GW190706_222641: -0.65σ (pred), t=108ms, Abedi: +1.65σ
+  GW190707_093326: +0.00σ (pred), t=21ms, Abedi: -1.48σ
+  GW190719_215514: -1.02σ (pred), t=60ms, Abedi: +0.15σ
+  GW190720_000836: +0.00σ (pred), t=20ms, Abedi: +1.42σ
+  GW190727_060333: -0.86σ (pred), t=78ms, Abedi: +2.06σ
+  GW190728_064510: +0.00σ (pred), t=19ms, Abedi: +0.35σ
+  GW190803_022701: -1.13σ (pred), t=68ms, Abedi: -0.88σ
+  GW190828_063405: +1.22σ (pred), t=43ms, Abedi: -0.00σ
+  GW190828_065509: +0.46σ (pred), t=32ms, Abedi: -1.11σ
+  GW190915_235702: +0.35σ (pred), t=61ms, Abedi: +0.91σ
+  GW190924_021846: +0.00σ (pred), t=15ms, Abedi: +0.45σ
+  GW190930_133541: +0.00σ (pred), t=20ms, Abedi: +0.83σ
+  GW191109_010717: +0.78σ (pred), t=113ms, Abedi: -1.24σ
+  GW191204_110529: -1.72σ (pred), t=31ms, Abedi: -0.09σ
+  GW191215_223052: +1.54σ (pred), t=46ms, Abedi: -2.19σ
+  GW191216_213338: +0.00σ (pred), t=20ms, Abedi: -0.41σ
+  GW191222_033537: +0.75σ (pred), t=83ms, Abedi: -0.47σ
+  GW200128_022011: -1.53σ (pred), t=71ms, Abedi: +1.72σ
+  GW200129_065458: +1.27σ (pred), t=61ms, Abedi: -1.92σ
+  GW200209_085452: -0.68σ (pred), t=48ms, Abedi: +0.51σ
+  GW200210_092254: -0.24σ (pred), t=41ms, Abedi: +1.99σ
+  GW200224_222234: -1.23σ (pred), t=63ms, Abedi: +0.08σ
+  GW200225_060421: +1.66σ (pred), t=30ms, Abedi: +2.23σ
+
+=====================================================================================
+FINAL SUMMARY
+=====================================================================================
+
+  FROZEN-STAR PREDICTION (all 48 events):
+    Stacked sigma: 0.41
+    Mean sigma: 0.060
+    Positive: 22/48 (46%)
+    Binomial p: 0.7646
+
+  ABEDI ~100ms (all 48 events):
+    Stacked sigma: 1.29
+    Mean sigma: 0.186
+    Positive: 25/48 (52%)
+
+  VERDICT: NULL RESULT — no echo detected
+
+  Total events analyzed: 48
+  Runtime: 40s (0.7 min)
