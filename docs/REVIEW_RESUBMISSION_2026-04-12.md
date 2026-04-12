@@ -92,11 +92,51 @@ What was done:
 **Re-check criteria:** Does the fixed-position result resolve the confound for
 the ordered-lattice surface? The random-DAG alpha≠1 remains a structural limitation.
 
-## Still Open (Not Fixed)
+## Additional Fixes (Second Pass)
 
-### Hold #1: Wilson Mutual-Attraction
-**Status:** Needs intervention-style observable, not another source-refresh lag.
-Not addressed in this pass.
+### Hold #1: Wilson Mutual-Attraction — Causal Intervention
+
+**Original flag:** Frozen/static-source control doesn't separate dynamic from
+static. Source-refresh discriminator too adiabatic.
+
+**Fix:** `scripts/frontier_wilson_intervention.py`
+**Log:** `logs/2026-04-12-wilson_intervention.txt`
+
+What was done:
+- 3 intervention types: source REMOVAL, DOUBLING, DISPLACEMENT at T/2
+- All 3 show causal signature: dynamic matches frozen BEFORE intervention, diverges AFTER
+- This IS the intervention-style observable the review requested
+
+**Re-check criteria:** Does the temporal localization of the response satisfy
+the causal discriminator requirement?
+
+### Hold #0 sublanes: Dimension + Poisson Bounded Companion Notes
+
+**Fix:** `docs/DIMENSION_EMERGENCE_BOUNDED_NOTE.md`, `docs/SELF_CONSISTENCY_POISSON_BOUNDED_NOTE.md`
+
+What was done:
+- Dimension: narrowed to "on regular cubic lattices, Poisson Green's function determines force-law exponent"
+- Poisson: narrowed to "preference among 21 tested operators, not uniqueness"
+- Both explicitly disclaim universality and mathematical proof claims
+
+**Re-check criteria:** Do the bounded notes meet main-bar retention standards?
+
+### Continuum Bridge Closure
+
+**Fix:** `scripts/frontier_continuum_bridge_closure.py`
+**Log:** `logs/2026-04-12-continuum_bridge_closure.txt`
+
+What was done:
+- Rigorous finite-size extrapolation from 31³ through 128³
+- Weighted mean scaled fit (N>=56): alpha = -0.9954 ± 0.0039 (0.46% from -1.0, 1.2 sigma)
+- Leading correction O(1/N^2.6) — boundary truncation, not physics
+- Multiple methods (linear, quadratic, Richardson) all converge
+- Conservative envelope: alpha = -1.0 ± 3.9%
+
+**Re-check criteria:** Does the convergence analysis close the continuum bridge
+at the bounded level?
+
+## Still Open (Not Fixed)
 
 ### Hold #3: Irregular Transport Portability
 **Status:** Needs portability-grade transport observable. Not addressed.
