@@ -89,19 +89,25 @@ Files:
 - `docs/OVERNIGHT_CLAUDE_AUDIT_2026-04-12.md`
 - `docs/EMERGENT_GR_SIGNATURES_NOTE.md`
 - `docs/ELECTROMAGNETISM_PROBE_NOTE.md`
+- `docs/EM_GRAVITY_COEXISTENCE_CONTROL_NOTE_2026-04-12.md`
+- `docs/SPATIAL_METRIC_DERIVATION_NOTE.md`
 - `docs/SECOND_QUANTIZED_PROTOTYPE_NOTE.md`
 - `docs/HOLOGRAPHIC_ENTROPY_NOTE.md`
 - `docs/HAWKING_ANALOG_NOTE.md`
 - `docs/DIMENSION_EMERGENCE_NOTE.md`
 - `docs/COSMOLOGICAL_EXPANSION_NOTE.md`
+- `docs/LATTICE_GAUGE_DISTINCTION_NOTE.md`
+- `docs/SELF_CONSISTENCY_FORCES_POISSON_NOTE.md`
 - `scripts/frontier_emergent_gr_signatures.py`
 - `scripts/frontier_electromagnetism_probe.py`
+- `scripts/frontier_spatial_metric_derivation.py`
 - `scripts/frontier_second_quantized_prototype.py`
 - `scripts/frontier_holographic_entropy.py`
 - `scripts/frontier_hawking_analog.py`
 - `scripts/frontier_dimension_emergence.py`
 - `scripts/frontier_cosmological_expansion.py`
 - `scripts/frontier_dispersion_relation.py`
+- `scripts/frontier_self_consistent_field_equation.py`
 
 Why held:
 
@@ -109,6 +115,8 @@ Why held:
   narrower than the overnight storyline
 - no overnight artifact is ready for direct `main` promotion without new
   bounded audit notes or additional controls
+- the latest Poisson/self-consistency, spatial-metric, and lattice-gauge notes
+  also remain review-only after audit
 
 #### A. Wilson mutual-attraction side lane
 

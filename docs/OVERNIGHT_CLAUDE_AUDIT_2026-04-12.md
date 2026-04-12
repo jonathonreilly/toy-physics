@@ -30,12 +30,17 @@ Files:
 - `scripts/frontier_emergent_gr_signatures.py`
 - `docs/ELECTROMAGNETISM_PROBE_NOTE.md`
 - `scripts/frontier_electromagnetism_probe.py`
+- `docs/SPATIAL_METRIC_DERIVATION_NOTE.md`
+- `scripts/frontier_spatial_metric_derivation.py`
+- `docs/EM_GRAVITY_COEXISTENCE_CONTROL_NOTE_2026-04-12.md`
 
 Safe read:
 
 - `S = L(1-f)` reproduces its own time-dilation and k-independence identities
 - the tested U(1) edge phases and Coulomb potential give bounded EM-style
   consistency checks on the audited surface
+- the spatial-metric note reduces to a weak-field consistency check, not an
+  unconditional derivation of the factor-of-2 row
 
 Blockers:
 
@@ -43,6 +48,8 @@ Blockers:
 - the factor-of-2 light-bending row is only conditional on an extra spatial
   metric factor not yet derived from the axioms
 - the EM probe does not run a coupled gravity+EM case
+- the gravity+EM coexistence claim remains blocked pending a factorial mixed
+  residual control on one shared packet experiment
 
 ### 2. Second-quantized / holographic / Hawking
 
@@ -82,6 +89,7 @@ Files:
 - `docs/COSMOLOGICAL_EXPANSION_NOTE.md`
 - `scripts/frontier_cosmological_expansion.py`
 - `scripts/frontier_dispersion_relation.py`
+- `docs/LATTICE_GAUGE_DISTINCTION_NOTE.md`
 
 Safe read:
 
@@ -97,6 +105,28 @@ Blockers:
   tautological exponential-growth row
 - dispersion scaling is anomalous, so the effective Planck-energy / Fermi-LAT
   reading is not ready for retention
+- the lattice-gauge distinction memo is useful reviewer framing, but not a
+  retained science claim
+
+### 4. Poisson-preference / field-equation memo
+
+Status: `hold`
+
+Files:
+
+- `docs/SELF_CONSISTENCY_FORCES_POISSON_NOTE.md`
+- `scripts/frontier_self_consistent_field_equation.py`
+
+Safe read:
+
+- unscreened Poisson is preferred over the tested alternatives on the audited
+  cubic surface when the target is an attractive near-Newtonian fixed point
+
+Blockers:
+
+- the current sweep does not prove uniqueness
+- screened Poisson remains attractive, so the note cannot claim that only
+  unscreened Poisson gives attractive self-consistency
 
 ## Promotion Decision
 

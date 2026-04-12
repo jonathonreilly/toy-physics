@@ -37,6 +37,9 @@ Files:
 - `scripts/frontier_emergent_gr_signatures.py`
 - `docs/ELECTROMAGNETISM_PROBE_NOTE.md`
 - `scripts/frontier_electromagnetism_probe.py`
+- `docs/EM_GRAVITY_COEXISTENCE_CONTROL_NOTE_2026-04-12.md`
+- `docs/SPATIAL_METRIC_DERIVATION_NOTE.md`
+- `scripts/frontier_spatial_metric_derivation.py`
 - `docs/SECOND_QUANTIZED_PROTOTYPE_NOTE.md`
 - `scripts/frontier_second_quantized_prototype.py`
 - `docs/HOLOGRAPHIC_ENTROPY_NOTE.md`
@@ -48,6 +51,9 @@ Files:
 - `docs/COSMOLOGICAL_EXPANSION_NOTE.md`
 - `scripts/frontier_cosmological_expansion.py`
 - `scripts/frontier_dispersion_relation.py`
+- `docs/LATTICE_GAUGE_DISTINCTION_NOTE.md`
+- `docs/SELF_CONSISTENCY_FORCES_POISSON_NOTE.md`
+- `scripts/frontier_self_consistent_field_equation.py`
 
 Why held:
 
@@ -55,10 +61,15 @@ Why held:
   the current `main` retention bar without substantial narrowing
 - GR-signatures and electromagnetism remain consistency checks rather than
   GR/Maxwell derivations
+- the spatial-metric step remains a weak-field consistency argument rather than
+  an unconditional derivation
+- the gravity+EM coexistence claim is still blocked pending a factorial control
 - second-quantized, holographic, and Hawking results remain prototype-scale
   field-theory probes
 - dimension and cosmology remain bounded proxy studies
 - the new dispersion runner is still an honest negative with anomalous scaling
+- the Poisson-preference note is review-grade evidence for preference among the
+  tested operators, not a uniqueness result
 
 Next control:
 
