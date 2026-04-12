@@ -1,61 +1,51 @@
 # Mac Mini Compute Backlog
 
-These scripts may need more compute than the laptop can handle in agent timeouts.
-Run them on the Mac Mini after pulling the latest branch.
-
-## Setup
-
+Pull latest before running:
 ```bash
-cd Physics-compute  # or wherever you cloned
+cd Physics-compute
 git pull origin claude/youthful-neumann
-pip3 install numpy scipy
 ```
 
-## Run 1: Dimension Selection (Priority 2 — MOST IMPORTANT)
+## Priority 1: d=3 Selection Attacks (RUN ALL)
 
-Tests whether self-consistency selects d_s=3. The 4D (6⁴=1296 sites) and 5D (4⁵=1024 sites) lattices need full eigendecomposition for the Poisson solver.
+These test whether d=3 is uniquely selected. Run all four:
+
+```bash
+# 1a. Atomic bound states — no stable atoms at d≥5?
+python3 scripts/frontier_bound_state_selection.py 2>&1 | tee ~/Desktop/bound_states.txt
+
+# 1b. Transfer matrix spectral radius — propagator diverges at d>3?
+python3 scripts/frontier_spectral_radius_dimension.py 2>&1 | tee ~/Desktop/spectral_radius.txt
+
+# 1c. Wave stability — ringing at d=4? (already done on laptop, but rerun for confirmation)
+python3 scripts/frontier_wave_stability_dimension.py 2>&1 | tee ~/Desktop/wave_stability.txt
+
+# 1d. Self-energy critical dimension — d=3 is the UV/IR transition?
+python3 scripts/frontier_self_energy_critical_dimension.py 2>&1 | tee ~/Desktop/self_energy.txt
+```
+
+Expected runtime: ~5-15 min total. The 4D/5D lattices (6⁴=1296, 4⁵=1024 sites) are the bottleneck.
+
+**What to report:** For each script, the summary table showing which dimensions pass/fail. The key question: does anything FAIL at d≥4 that passes at d=3?
+
+## Priority 2: Dimension Selection (if not already done)
 
 ```bash
 python3 scripts/frontier_dimension_selection.py 2>&1 | tee ~/Desktop/dimension_selection.txt
 ```
 
-Expected runtime: ~5-10 min. The 4D/5D Poisson solves are the bottleneck.
-
-**What to report:** The summary table showing which dimensions have all three properties (attractive + β≈1 + I₃=0). If only d=3 has all three, that's a Nature headline.
-
-## Run 2: Hierarchy Ratio (Priority 3)
-
-Tests gravity/EM coupling ratio constraints.
-
-```bash
-python3 scripts/frontier_hierarchy_ratio.py 2>&1 | tee ~/Desktop/hierarchy_ratio.txt
-```
-
-Expected runtime: ~3-5 min.
-
-**What to report:** Whether there's a natural G/q² ratio, and what it is.
-
-## Run 3: Background Independence (Priority 4)
-
-Tests effective geometry ≠ input graph.
+## Priority 3: Background Independence
 
 ```bash
 python3 scripts/frontier_background_independence.py 2>&1 | tee ~/Desktop/background_independence.txt
 ```
 
-Expected runtime: ~2-3 min.
-
-**What to report:** Whether the effective connectivity / distance / dimension change near a gravitational source.
-
-## Run 4: Distance Law (if not already done)
+## Priority 4: Distance Law (if not already done)
 
 ```bash
-python3 scripts/frontier_distance_law_definitive.py 2>&1 | tee ~/Desktop/distance_law_96.txt
+python3 scripts/frontier_distance_law_definitive.py 2>&1 | tee ~/Desktop/distance_law.txt
 ```
 
-## Priority Order
+## The d=3 question in one sentence
 
-1. dimension_selection (biggest needle mover)
-2. hierarchy_ratio
-3. background_independence
-4. distance_law (if not already run)
+If ANY of the Priority 1 scripts shows a hard failure at d≥4 that doesn't occur at d=3, we can derive "space is 3-dimensional" from the framework's axioms. That eliminates the last free parameter and makes the framework truly 2 axioms, 0 parameters.
