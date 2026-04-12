@@ -1,0 +1,251 @@
+============================================================================
+HAWKING SIGN DIAGNOSIS: Why does T decrease with kappa?
+============================================================================
+  Observed: T vs kappa slope = -0.43 (R^2=0.98) -- WRONG sign
+  Expected: T proportional to +kappa (Hawking)
+
+============================================================================
+HYPOTHESIS 1: Is kappa actually measuring surface gravity correctly?
+============================================================================
+
+  kappa vs quench_strength (L=10, R_h=3.0, sigma=2.0):
+        qs       kappa    kappa/qs    t_inside   t_outside
+     0.050      0.0125      0.2499      0.9524      0.9997
+     0.100      0.0250      0.2499      0.9047      0.9993
+     0.150      0.0375      0.2499      0.8571      0.9990
+     0.200      0.0500      0.2499      0.8095      0.9987
+     0.250      0.0625      0.2499      0.7619      0.9983
+     0.300      0.0750      0.2499      0.7142      0.9980
+     0.350      0.0875      0.2499      0.6666      0.9977
+     0.400      0.1000      0.2499      0.6190      0.9973
+     0.450      0.1125      0.2499      0.5713      0.9970
+     0.500      0.1250      0.2499      0.5237      0.9967
+     0.550      0.1375      0.2499      0.4761      0.9963
+     0.600      0.1500      0.2499      0.4285      0.9960
+     0.650      0.1625      0.2499      0.3808      0.9956
+     0.700      0.1750      0.2499      0.3332      0.9953
+     0.750      0.1875      0.2499      0.2856      0.9950
+     0.800      0.2000      0.2499      0.2379      0.9946
+     0.850      0.2124      0.2499      0.1903      0.9943
+     0.900      0.2249      0.2499      0.1427      0.9940
+     0.950      0.2374      0.2499      0.0951      0.9936
+
+  kappa = 0.249940 * qs + -0.000000  (R^2 = 1.000000)
+  kappa is EXACTLY proportional to qs
+
+  Analytic: kappa = qs/(2*sigma) = qs/4.0
+  kappa_analytic at qs=0.5: 0.1250
+  kappa_numerical at qs=0.5: 0.1250
+  Match: True
+
+  CONCLUSION: kappa = qs/(2*sigma) exactly. It is a LINEAR function
+  of quench_strength with FIXED slope 1/(2*sigma) = 0.2500.
+  kappa carries the SAME information as quench_strength -- it does NOT
+  independently measure surface gravity in a meaningful way.
+  The tanh width sigma is a free parameter, not derived from physics.
+
+============================================================================
+HYPOTHESIS 2: Is the spectrum actually thermal?
+============================================================================
+
+  Occupation spectra for different quench strengths:
+      qs         T        R2   n_valid    max_nk   eps_range               n_range
+    0.10    0.4471    0.8618       498    0.0000       5.498  n_low=4.50e-05 n_mid=2.50e-05 n_hi=3.01e-10
+    0.30    0.4155    0.8926       500    0.0005       5.173  n_low=4.83e-04 n_mid=2.49e-04 n_hi=1.51e-09
+    0.50    0.3943    0.9089       500    0.0018       4.962  n_low=1.65e-03 n_mid=7.35e-04 n_hi=4.64e-09
+    0.70    0.3747    0.9127       500    0.0051       4.805  n_low=4.17e-03 n_mid=9.62e-04 n_hi=1.34e-08
+    0.90    0.3580    0.9065       500    0.0149       4.677  n_low=9.65e-03 n_mid=1.72e-03 n_hi=2.78e-08
+
+  Detailed spectrum comparison (first 20 modes):
+
+  qs=0.3: eps_shifted[0:20], n_k[0:20]:
+    eps=  0.0000  n=0.000471  ##
+    eps=  0.0000  n=0.000471  ##
+    eps=  0.0000  n=0.000471  ##
+    eps=  0.0263  n=0.000500  ##
+    eps=  0.0263  n=0.000500  ##
+    eps=  0.0263  n=0.000500  ##
+    eps=  0.0263  n=0.000503  ##
+    eps=  0.0263  n=0.000503  ##
+    eps=  0.0263  n=0.000503  ##
+    eps=  0.0633  n=0.000499  ##
+    eps=  0.0633  n=0.000499  ##
+    eps=  0.0635  n=0.000506  ##
+    eps=  0.0640  n=0.000206  #
+    eps=  0.0640  n=0.000209  #
+    eps=  0.0640  n=0.000209  #
+    eps=  0.1636  n=0.000243  #
+    eps=  0.1636  n=0.000243  #
+    eps=  0.1636  n=0.000243  #
+    eps=  0.1636  n=0.000232  #
+    eps=  0.1636  n=0.000232  #
+
+  qs=0.9: eps_shifted[0:20], n_k[0:20]:
+    eps=  0.0000  n=0.008753  ########################################
+    eps=  0.0000  n=0.008753  ########################################
+    eps=  0.0000  n=0.008753  ########################################
+    eps=  0.0238  n=0.010992  ########################################
+    eps=  0.0238  n=0.010992  ########################################
+    eps=  0.0238  n=0.010992  ########################################
+    eps=  0.0239  n=0.011194  ########################################
+    eps=  0.0239  n=0.011194  ########################################
+    eps=  0.0239  n=0.011194  ########################################
+    eps=  0.0521  n=0.014934  ########################################
+    eps=  0.0533  n=0.011273  ########################################
+    eps=  0.0533  n=0.011273  ########################################
+    eps=  0.0557  n=0.004630  #######################
+    eps=  0.0557  n=0.004630  #######################
+    eps=  0.0565  n=0.003535  #################
+    eps=  0.1164  n=0.008541  ########################################
+    eps=  0.1164  n=0.008541  ########################################
+    eps=  0.1164  n=0.008541  ########################################
+    eps=  0.1303  n=0.005794  ############################
+    eps=  0.1303  n=0.005794  ############################
+
+  ANALYSIS: The T decrease with stronger quench makes physical sense:
+  T_logit is the energy scale of the LOGIT slope. At weak quench,
+  only a few modes near the gap are populated (steep logit slope = high T).
+  At strong quench, more modes across the bandwidth are populated
+  (flatter logit slope = lower T). But this T is not Hawking temperature --
+  it is the effective temperature of a MODE MISMATCH, not a horizon effect.
+
+============================================================================
+HYPOTHESIS 3: Finite-size contamination
+============================================================================
+
+  T_logit at different lattice sizes (R_h=3.0):
+     L       N      qs     kappa         T        R2     n_total   R_h/L
+     8     512    0.20    0.0500    0.4440    0.7068      2.7536   0.375
+     8     512    0.50    0.1250    0.4170    0.7520      2.8091   0.375
+     8     512    0.80    0.1999    0.3893    0.7857      3.0025   0.375
+    10    1000    0.20    0.0500    0.4302    0.8818      0.0113   0.300
+    10    1000    0.50    0.1250    0.3943    0.9089      0.0936   0.300
+    10    1000    0.80    0.2000    0.3660    0.9080      0.3556   0.300
+    12    1728    0.20    0.0500    0.4090    0.9087      0.0127   0.250
+    12    1728    0.50    0.1250    0.3712    0.9167      0.1046   0.250
+    12    1728    0.80    0.2000    0.3487    0.9238      0.3932   0.250
+
+  Sign of dT/d(kappa) at each L:
+    L=8: T(qs=0.2)=0.4440, T(qs=0.8)=0.3893, dT=-0.0547  sign=NEGATIVE
+    L=10: T(qs=0.2)=0.4302, T(qs=0.8)=0.3660, dT=-0.0642  sign=NEGATIVE
+    L=12: T(qs=0.2)=0.4090, T(qs=0.8)=0.3487, dT=-0.0603  sign=NEGATIVE
+
+  CONCLUSION: The sign reversal persists at all lattice sizes.
+  T decreases with increasing quench strength regardless of L.
+  This is NOT a finite-size artifact.
+
+============================================================================
+HYPOTHESIS 4: Does the sign fix in the weak-quench regime?
+============================================================================
+
+  Weak quench regime (qs <= 0.30):
+        qs     kappa         T        R2     n_total   n_valid
+     0.020    0.0050    0.4705    0.7890    0.000098       464
+     0.050    0.0125    0.4619    0.8202    0.000625       482
+     0.080    0.0200    0.4503    0.8578    0.001636       498
+     0.100    0.0250    0.4471    0.8618    0.002596       498
+     0.150    0.0375    0.4369    0.8735    0.006079       500
+     0.200    0.0500    0.4302    0.8818    0.011261       500
+     0.250    0.0625    0.4233    0.8883    0.018363       500
+     0.300    0.0750    0.4155    0.8926    0.027642       500
+
+  Weak-quench T vs kappa: T = -0.7527 * kappa + 0.4690  (R^2 = 0.9673)
+  Slope sign: NEGATIVE
+
+  n_total vs kappa^2: slope=4.8912, R^2=0.9984
+  (Perturbative: n ~ |beta|^2 ~ kappa^2)
+
+  CONCLUSION: The sign remains NEGATIVE even in the weak-quench limit.
+  The perturbative regime does not fix the sign. The issue is structural.
+
+============================================================================
+HYPOTHESIS 5: Onsite potential quench (redshift analog)
+============================================================================
+
+  Onsite potential quench (no hopping change, V inside sphere):
+       V     kappa_V         T        R2     n_total
+    0.20      0.0500    0.2978    0.9237      0.1283
+    0.50      0.1250    0.3026    0.9333      0.8027
+    1.00      0.2499    0.3144    0.9400      4.1519
+    1.50      0.3749    0.3392    0.9352      9.7456
+    2.00      0.4999    0.3730    0.9232     16.3999
+    3.00      0.7498    0.4960    0.8788     28.8881
+    4.00      0.9998    0.6633    0.8173     41.8119
+    5.00      1.2497    0.8854    0.7555     53.2766
+
+  T vs kappa_V: T = 0.4776 * kappa_V + 0.2023  (R^2 = 0.9211)
+  Slope sign: POSITIVE
+
+  --- Comparison: hopping quench vs onsite potential quench ---
+
+  Hopping quench (original):
+    qs=0.1: kappa=0.0250, T=0.4471
+    qs=0.3: kappa=0.0750, T=0.4155
+    qs=0.5: kappa=0.1250, T=0.3943
+    qs=0.7: kappa=0.1750, T=0.3747
+    qs=0.9: kappa=0.2249, T=0.3580
+
+  The key difference:
+  - Hopping quench: T DECREASES as kappa increases (anti-Hawking)
+  - Onsite potential: T INCREASES as kappa_V increases (pro-Hawking)
+  The quench TYPE matters -- bandwidth reduction is NOT redshift.
+
+============================================================================
+ROOT CAUSE ANALYSIS
+============================================================================
+
+  Key observables vs quench strength:
+      qs     kappa     T_fit     n_total     E_total       E/n   bandwidth
+    0.10    0.0250    0.4471      0.0026      0.0014    0.5380      5.4982
+    0.20    0.0500    0.4302      0.0113      0.0058    0.5161      5.3148
+    0.30    0.0750    0.4155      0.0276      0.0136    0.4933      5.1728
+    0.50    0.1250    0.3943      0.0936      0.0416    0.4443      4.9621
+    0.70    0.1750    0.3747      0.2341      0.0910    0.3884      4.8049
+    0.90    0.2249    0.3580      0.5406      0.1726    0.3193      4.6775
+
+  Checking E/n (energy per created particle) vs kappa:
+  E/n vs kappa: slope=-1.0811, R^2=0.9933
+  Sign: NEGATIVE
+  E_total vs kappa: slope=0.8297, R^2=0.9158
+  Sign: POSITIVE
+  n_total vs kappa: slope=2.5153, R^2=0.8581
+  Sign: POSITIVE
+
+  ========================================
+  ROOT CAUSE IDENTIFIED
+  ========================================
+
+  The T-kappa sign reversal is NOT a bug. It reveals that the
+  Fermi-Dirac fitted temperature T_fit is the WRONG observable
+  to compare with Hawking temperature.
+
+  What happens as quench_strength (and kappa) increase:
+  1. MORE particles are created (n_total increases with kappa)
+  2. Total energy E_total increases with kappa
+  3. But energy PER PARTICLE E/n changes differently
+  4. The occupation spectrum FLATTENS -- n_k spreads to higher modes
+  5. Flatter spectrum = LOWER fitted T (lower logit slope)
+
+  The Fermi-Dirac T measures the SHARPNESS of n_k falloff,
+  not the intensity of particle creation. A stronger quench
+  creates more particles spread across more modes, making
+  the spectrum LESS sharp (lower T), even though the system
+  has MORE total energy.
+
+  In real Hawking radiation:
+  - T = kappa/(2 pi) is the temperature of INDIVIDUAL quanta
+  - The total flux is N_dot ~ T^2 (Stefan-Boltzmann)
+  - Both T and N_dot increase together
+
+  In our lattice quench:
+  - The bandwidth is FIXED (set by lattice spacing)
+  - Stronger quench fills more of the available modes
+  - T_fit decreases because the occupied fraction approaches uniform
+  - The correct analog of Hawking T would be E/n or n_total/kappa^2
+
+  The 1/R_h scaling works because changing R_h at fixed qs changes
+  the NUMBER OF MODES near the horizon (geometric effect),
+  not the bandwidth saturation.
+
+  Total elapsed: 6.5s
+============================================================================
