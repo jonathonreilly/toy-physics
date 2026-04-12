@@ -1,0 +1,48 @@
+=====================================================================================
+FIXED-POSITION MASS SCALING CONTROL
+Resolving the alpha confound flagged in review
+=====================================================================================
+
+Confound: when mass position varies with M, apparent alpha mixes
+mass dependence with geometric effects.
+
+Control: keep mass at FIXED center position, vary only M.
+On a cubic lattice, Poisson gives field = M * G(r), so
+deflection = M * delta_unit(b). Exact alpha = 1.0.
+
+-------------------------------------------------------------------------------------
+PART 1: CLEAN CUBIC LATTICE — FIXED POSITION (GROUND TRUTH)
+  Grid: 48^3, mass at center (24,24,24), k=4.0
+  M values: [0.5, 1.0, 2.0, 4.0, 8.0]
+  b values: [3, 5, 8, 10]
+-------------------------------------------------------------------------------------
+
+     b     alpha       err       R^2  deflections by M
+  ----------------------------------------------------------------------
+     3    1.0000    0.0000  1.000000  +0.092023  +0.184047  +0.368094  +0.736187  +1.472375
+     5    1.0000    0.0000  1.000000  +0.056258  +0.112515  +0.225030  +0.450060  +0.900120
+     8    1.0000    0.0000  1.000000  +0.034508  +0.069016  +0.138032  +0.276064  +0.552129
+    10    1.0000    0.0000  1.000000  +0.026909  +0.053818  +0.107636  +0.215272  +0.430545
+
+  Mean alpha = 1.0000 (spread 0.0000)
+  Expected: 1.0000 (linear Poisson)
+  Deviation: 0.000%
+  PASS: fixed-position alpha = 1.0 confirmed (sub-0.1%)
+
+  Time: 147.0s
+
+  Linearity check: deflection(M) / deflection(M=1) vs M/1
+      M         b=3         b=5         b=8        b=10    expected
+  -----------------------------------------------------------------
+    0.5      0.5000      0.5000      0.5000      0.5000      0.5000
+    1.0      1.0000      1.0000      1.0000      1.0000      1.0000
+    2.0      2.0000      2.0000      2.0000      2.0000      2.0000
+    4.0      4.0000      4.0000      4.0000      4.0000      4.0000
+    8.0      8.0000      8.0000      8.0000      8.0000      8.0000
+
+-------------------------------------------------------------------------------------
+PART 2: PRUNED LATTICE — FIXED POSITION (HIERARCHICAL ANALOG)
+  Same grid, same fixed center mass position.
+  Pruning removes random interior sites to simulate irregular topology.
+-------------------------------------------------------------------------------------
+
