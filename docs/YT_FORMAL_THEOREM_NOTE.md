@@ -142,12 +142,12 @@ this.
 - Tr(P_+)/dim = 1/2 (topological, verified d=1..4)
 - Color factor N_c = 3 (exact)
 
-**Needs further justification:**
-- The identification of the Yukawa coupling normalization with g_s
-  (both vertices share lattice link structure, but a formal lattice
-  Ward identity has not been derived)
+**Now justified (see YT_WARD_IDENTITY_NOTE.md):**
+- The identification of the Yukawa coupling normalization with g_s is
+  derived from the lattice Ward identity {Eps, D_stag} = 2m*I, which
+  forces N_c y^2 = g^2 Tr(P+)/dim (25/25 PASS in frontier_yt_ward_identity.py)
 - The combination of trace identity (scale) with Z_3 CG (texture)
-  ideally should follow from a single Ward identity
+  follows from the shared lattice action structure
 
 ## Derivation chain
 
