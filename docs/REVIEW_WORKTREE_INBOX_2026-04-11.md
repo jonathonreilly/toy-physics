@@ -132,6 +132,39 @@ Promotion rule:
   a hold note that freezes the claim boundary
 - not a universal distance-law portability result
 
+### Historical bounded slice captured from `origin/codex/resonance-controls`
+
+- `docs/LENSING_H025_EXACT_EDGE_REFERENCE_NOTE.md`
+- `scripts/lensing_adjoint_kernel_reduced_model.py`
+- `scripts/infinite_lattice_green_kernel.py`
+- `docs/SPECTRAL_DIMENSION_CDT_AUDIT_2026-04-11.md`
+- `scripts/frontier_spectral_on_lattice_fluxnorm.py`
+- `scripts/frontier_geometric_baseline_control.py`
+- `scripts/frontier_phase_strip_control.py`
+- `docs/WAVE_DIRECT_DM_H025_FAM3_SEED0_CONTROL_NOTE.md`
+- `docs/WAVE_DIRECT_DM_H025_FAM3_SEED1_CONTROL_NOTE.md`
+- `docs/WAVE_DIRECT_DM_H025_THREE_FAMILY_TRANSFER_NOTE.md`
+- `docs/WAVE_DIRECT_DM_TRANSFER_DIAGNOSTIC_NOTE.md`
+- `docs/WAVE_STATIC_MATRIXFREE_MOVING_SOURCE_FIXED_BEAM_BOUNDARY_NOTE.md`
+- `scripts/wave_static_direct_probe.py`
+
+Current read:
+
+- lensing H=0.25 exact-edge note: bounded historical reference freeze for the
+  adjoint-kernel lane, not a new mechanism claim
+- spectral/CDT audit: bounded narrow-positive / bounded-negative audit; useful
+  as control-plane context, not a strong retained discovery
+- wave direct-`dM` Fam3 notes: bounded historical control closures for a narrow
+  transfer/compression lane, not a current `main` candidate
+- wave static matrix-free boundary note: bounded negative / diagnostic lane;
+  useful historical hold, not a promotion candidate
+
+Promotion rule:
+
+- do not promote any of this historical slice directly to `main`
+- if any of these lanes are reopened, write a fresh bounded audit note on top
+  of the imported artifacts rather than promoting the historical note itself
+
 ### 2026-04-12 migration from `claude/youthful-neumann`
 
 New bounded promotion candidates:

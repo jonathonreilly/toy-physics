@@ -100,16 +100,15 @@ This keeps the branch in the same honest box, but with a sharper read:
 
 So the best current read is:
 
-> the exact comparator is still not retained as a continuum-quality
-> moving-source baseline, but the medium-`H` large-box branch looks like
-> a plausible stabilization candidate rather than a dead end.
-
-The next decisive run on this branch is now:
-
-- `H = 0.25`
-- fixed beam `PW_phys = 6.0`
-- compare large field boxes directly (`9.0 -> 12.0`), not
-  `6.0 -> 9.0`
+> the medium-`H` "plausible stabilization candidate" is the wrong
+> baseline for this lane. The already-diagnosed `H = 0.25` replay on the
+> same branch is a wrong-baseline closure: `dM` stays fixed at
+> `+0.007212`, `dS` shifts only `3.28%` (`+0.013017 -> +0.013458`),
+> `rel_MS` shifts only `3.92%` (`44.59% -> 46.41%`), the residual stays
+> near `2e-10`, cached static solves stay at `13`, and matrix-free
+> iterations rise from `177` to `234`. The diagnosis is ordinary cost,
+> not cache blow-up and not a reproducible solver failure, so this is
+> runtime triage rather than a stabilization rescue.
 
 ## Artifact chain
 
@@ -117,3 +116,6 @@ The next decisive run on this branch is now:
 - [`scripts/wave_static_matrixfree_moving_source_fixed_beam_boundary_freeze.py`](../scripts/wave_static_matrixfree_moving_source_fixed_beam_boundary_freeze.py)
 - [`logs/2026-04-08-wave-static-matrixfree-moving-source-fixed-beam-boundary-h035.txt`](../logs/2026-04-08-wave-static-matrixfree-moving-source-fixed-beam-boundary-h035.txt)
 - [`logs/2026-04-08-wave-static-matrixfree-moving-source-fixed-beam-boundary-h035-wide.txt`](../logs/2026-04-08-wave-static-matrixfree-moving-source-fixed-beam-boundary-h035-wide.txt)
+- [`logs/2026-04-08-wave-static-matrixfree-moving-source-fixed-beam-boundary-h025-wide.txt`](../logs/2026-04-08-wave-static-matrixfree-moving-source-fixed-beam-boundary-h025-wide.txt)
+- [`logs/2026-04-09-wave-static-matrixfree-moving-source-fixed-beam-boundary-h025-wide.txt`](../logs/2026-04-09-wave-static-matrixfree-moving-source-fixed-beam-boundary-h025-wide.txt)
+- [`logs/2026-04-09-wave-static-largebox-runtime-triage.txt`](../logs/2026-04-09-wave-static-largebox-runtime-triage.txt)

@@ -153,6 +153,40 @@ Next control:
 - use the lane-specific blockers in `OVERNIGHT_CLAUDE_AUDIT_2026-04-12.md`
 - do not promote any of these files to `main` without a new bounded audit note
 
+### 0a. Historical resonance-controls slice
+
+Files:
+
+- `docs/LENSING_H025_EXACT_EDGE_REFERENCE_NOTE.md`
+- `scripts/lensing_adjoint_kernel_reduced_model.py`
+- `scripts/infinite_lattice_green_kernel.py`
+- `docs/SPECTRAL_DIMENSION_CDT_AUDIT_2026-04-11.md`
+- `scripts/frontier_spectral_on_lattice_fluxnorm.py`
+- `scripts/frontier_geometric_baseline_control.py`
+- `scripts/frontier_phase_strip_control.py`
+- `docs/WAVE_DIRECT_DM_H025_FAM3_SEED0_CONTROL_NOTE.md`
+- `docs/WAVE_DIRECT_DM_H025_FAM3_SEED1_CONTROL_NOTE.md`
+- `docs/WAVE_DIRECT_DM_H025_THREE_FAMILY_TRANSFER_NOTE.md`
+- `docs/WAVE_DIRECT_DM_TRANSFER_DIAGNOSTIC_NOTE.md`
+- `docs/WAVE_STATIC_MATRIXFREE_MOVING_SOURCE_FIXED_BEAM_BOUNDARY_NOTE.md`
+- `scripts/wave_static_direct_probe.py`
+
+Why held:
+
+- this is historical bounded lane material imported from
+  `origin/codex/resonance-controls`
+- the notes are useful as control/reference freezes and negative diagnostics
+- none of them currently clears the `main` retention bar
+- the honest value is preserving the lane state in the single review branch,
+  not promoting the historical artifacts themselves
+
+Next control:
+
+- no direct promotion
+- if the lensing, spectral/CDT, or wave direct-`dM` lanes are reopened, write a
+  fresh bounded audit note on the exact reopened surface instead of promoting
+  these historical notes as-is
+
 ### 1. Wilson mutual-attraction side lane
 
 Files:

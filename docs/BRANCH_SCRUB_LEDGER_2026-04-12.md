@@ -61,6 +61,40 @@ Archive readiness:
 
 - archive-ready once downstream references are switched to `review-active`
 
+### `origin/codex/resonance-controls`
+
+Status:
+
+- partially scrubbed into `codex/review-active`
+
+Captured in this pass:
+
+- `docs/LENSING_H025_EXACT_EDGE_REFERENCE_NOTE.md`
+- `scripts/lensing_adjoint_kernel_reduced_model.py`
+- `scripts/infinite_lattice_green_kernel.py`
+- `docs/SPECTRAL_DIMENSION_CDT_AUDIT_2026-04-11.md`
+- `scripts/frontier_spectral_on_lattice_fluxnorm.py`
+- `scripts/frontier_geometric_baseline_control.py`
+- `scripts/frontier_phase_strip_control.py`
+- `docs/WAVE_DIRECT_DM_H025_FAM3_SEED0_CONTROL_NOTE.md`
+- `docs/WAVE_DIRECT_DM_H025_FAM3_SEED1_CONTROL_NOTE.md`
+- `docs/WAVE_DIRECT_DM_H025_THREE_FAMILY_TRANSFER_NOTE.md`
+- `docs/WAVE_DIRECT_DM_TRANSFER_DIAGNOSTIC_NOTE.md`
+- `docs/WAVE_STATIC_MATRIXFREE_MOVING_SOURCE_FIXED_BEAM_BOUNDARY_NOTE.md`
+- `scripts/wave_static_direct_probe.py`
+
+Not yet archive-ready:
+
+- yes; do not archive or delete yet
+
+Reason:
+
+- the branch still contains a large exploratory surface beyond the historical
+  bounded slice above, including many older action-power, connectivity,
+  generated-geometry, and causal/wave notes
+- the imported slice preserves the cleanest repo-facing historical controls,
+  but the branch still needs further uniqueness review before archive
+
 ## Codex First-Pass Triage
 
 These statuses are mechanical only: whether the branch tip is already an

@@ -25,6 +25,7 @@ from __future__ import annotations
 
 import argparse
 import math
+import time
 from collections import defaultdict
 
 from kubo_continuum_limit import BETA, K_PER_H, PW_PHYS, SRC_LAYER_FRAC, grow, true_kubo_at_H
@@ -98,12 +99,44 @@ def compress_layers(edges):
     return rows
 
 
+def compress_midpoint_bins(edges, delta_x, delta_z):
+    """Bin edge midpoints on a fixed (x, z) grid and sum signed coefficients."""
+    by_bin = defaultdict(float)
+    for _layer, coeff, mx, mz in edges:
+        ix = math.floor(mx / delta_x)
+        iz = math.floor(mz / delta_z)
+        by_bin[(ix, iz)] += coeff
+
+    rows = []
+    for (ix, iz), c_sum in sorted(by_bin.items()):
+        if abs(c_sum) < 1e-15:
+            continue
+        rows.append(
+            {
+                "ix": ix,
+                "iz": iz,
+                "C": c_sum,
+                "x": (ix + 0.5) * delta_x,
+                "z": (iz + 0.5) * delta_z,
+            }
+        )
+    return rows
+
+
 def reduced_sum(rows, x_src, b, geom_key):
     total = 0.0
     for row in rows:
         x = row[f"x_{geom_key}"]
         z = row[f"z_{geom_key}"]
         r = math.sqrt((x - x_src) ** 2 + (z - b) ** 2) + 0.1
+        total += row["C"] / r
+    return total
+
+
+def reduced_sum_midpoint_bins(rows, x_src, b):
+    total = 0.0
+    for row in rows:
+        r = math.sqrt((row["x"] - x_src) ** 2 + (row["z"] - b) ** 2) + 0.1
         total += row["C"] / r
     return total
 
@@ -123,6 +156,14 @@ def summarize_model(label, bs, ys, ref):
         "mean_rel": mean_rel,
         "max_rel": max_rel,
     }
+
+
+def emit_progress(enabled, start_time, message):
+    """Emit a flushed phase marker for bounded long-running replays."""
+    if not enabled:
+        return
+    elapsed = time.perf_counter() - start_time
+    print(f"[progress +{elapsed:7.2f}s] {message}", flush=True)
 
 
 def main() -> None:
@@ -147,7 +188,13 @@ def main() -> None:
         default=[3.0],
         help="b values to cross-check with true_kubo_at_H when --truth-mode=spotcheck",
     )
+    parser.add_argument(
+        "--progress",
+        action="store_true",
+        help="emit flushed phase markers before the final summary table",
+    )
     args = parser.parse_args()
+    start_time = time.perf_counter()
 
     H = args.h
     NL = max(3, round(args.t_phys / H))
@@ -156,18 +203,41 @@ def main() -> None:
     x_src = round(NL * SRC_LAYER_FRAC) * H
     beta = args.beta
 
+    emit_progress(
+        args.progress,
+        start_time,
+        (
+            f"starting grow: T_phys={args.t_phys:g} H={H:g} NL={NL} PW={PW:g} "
+            f"seed={args.seed} drift={args.drift:.2f} restore={args.restore:.2f}"
+        ),
+    )
     pos, adj, _ = grow(args.seed, args.drift, args.restore, NL, PW, 3, H)
+    emit_progress(args.progress, start_time, f"grow complete: n_nodes={len(pos)}")
+    emit_progress(args.progress, start_time, "building free amplitudes and detector adjoint")
     A, lam, cz_free, T0, _ = build_free_and_adjoint(pos, adj, NL, PW, H, k_phase, beta)
+    emit_progress(args.progress, start_time, f"adjoint build complete: cz_free={cz_free:+.6f} T0={T0:.6e}")
+    emit_progress(args.progress, start_time, "extracting signed edge coefficients")
     edges = signed_edge_coefficients(pos, adj, H, k_phase, beta, A, lam)
+    emit_progress(args.progress, start_time, f"edge extraction complete: n_edges={len(edges)}")
+    emit_progress(args.progress, start_time, "compressing layer and midpoint-bin surrogates")
     layers = compress_layers(edges)
+    midpoint_dx = 0.5
+    midpoint_dz = 1.0
+    midpoint_bins = compress_midpoint_bins(edges, midpoint_dx, midpoint_dz)
+    emit_progress(
+        args.progress,
+        start_time,
+        f"compression complete: n_layer_terms={len(layers)} n_midpoint_bins={len(midpoint_bins)}",
+    )
 
     exact_vals = []
     red_signed = []
-    red_abs = []
+    red_midpoint = []
     for b in args.b_values:
+        emit_progress(args.progress, start_time, f"evaluating reduced models at b={b:g}")
         exact_vals.append(exact_edge_sum(edges, x_src, b))
         red_signed.append(reduced_sum(layers, x_src, b, "signed"))
-        red_abs.append(reduced_sum(layers, x_src, b, "abs"))
+        red_midpoint.append(reduced_sum_midpoint_bins(midpoint_bins, x_src, b))
 
     truth_targets = []
     if args.truth_mode == "full":
@@ -177,9 +247,11 @@ def main() -> None:
 
     truth_checks = {}
     for b in truth_targets:
+        emit_progress(args.progress, start_time, f"running truth harness at b={b:g}")
         true_kubo, _, _ = true_kubo_at_H(pos, adj, NL, PW, H, k_phase, x_src, b, beta=beta)
         truth_checks[b] = true_kubo
 
+    emit_progress(args.progress, start_time, "rendering summary table")
     print("=" * 100)
     print("LENSING ADJOINT KERNEL REDUCED MODEL")
     print("=" * 100)
@@ -190,7 +262,11 @@ def main() -> None:
     print(f"seed={args.seed}  drift={args.drift:.2f}  restore={args.restore:.2f}")
     print(f"x_src={x_src:.3f}  cz_free={cz_free:+.6f}  T0={T0:.6e}")
     print(f"b_values={args.b_values}")
-    print(f"n_edges={len(edges)}  n_layer_terms={len(layers)}")
+    print(
+        f"n_edges={len(edges)}  n_layer_terms={len(layers)}  "
+        f"n_midpoint_bins={len(midpoint_bins)}"
+    )
+    print(f"midpoint_bins: Delta_x={midpoint_dx:.2f}  Delta_z={midpoint_dz:.2f}")
     print()
     print("Exact factorization:")
     print("  kubo_true(b) = sum_e c_e / r_e(b)")
@@ -200,16 +276,16 @@ def main() -> None:
 
     print(
         f"{'b':>4s} {'exact_edge':>12s} {'truth chk':>12s} {'|Δ|':>10s}"
-        f" {'layer_signed':>14s} {'rel err':>10s} {'layer_abs':>12s} {'rel err':>10s}"
+        f" {'midpoint_bin':>14s} {'rel err':>10s} {'layer_signed':>14s} {'rel err':>10s}"
     )
-    for b, exact_k, rs, ra in zip(args.b_values, exact_vals, red_signed, red_abs):
+    for b, exact_k, rmid, rs in zip(args.b_values, exact_vals, red_midpoint, red_signed):
         truth = truth_checks.get(b, float("nan"))
         d_exact = abs(truth - exact_k) if b in truth_checks else float("nan")
+        err_mid = abs(rmid - exact_k) / abs(exact_k) if abs(exact_k) > 1e-15 else float("nan")
         err_signed = abs(rs - exact_k) / abs(exact_k) if abs(exact_k) > 1e-15 else float("nan")
-        err_abs = abs(ra - exact_k) / abs(exact_k) if abs(exact_k) > 1e-15 else float("nan")
         print(
             f"{b:4.1f} {exact_k:+12.6f} {truth:+12.6f} {d_exact:10.3e}"
-            f" {rs:+14.6f} {err_signed:10.2%} {ra:+12.6f} {err_abs:10.2%}"
+            f" {rmid:+14.6f} {err_mid:10.2%} {rs:+14.6f} {err_signed:10.2%}"
         )
 
     print()
@@ -229,8 +305,8 @@ def main() -> None:
     print("Model summary")
     for summary in [
         summarize_model("exact_edge", args.b_values, exact_vals, exact_vals),
+        summarize_model("midpoint_bin", args.b_values, red_midpoint, exact_vals),
         summarize_model("layer_signed", args.b_values, red_signed, exact_vals),
-        summarize_model("layer_abs", args.b_values, red_abs, exact_vals),
     ]:
         print(
             f"  {summary['label']:<12s} slope={summary['slope']:+.4f}  R²={summary['r2']:.4f}"
@@ -241,8 +317,8 @@ def main() -> None:
     print("Interpretation guide")
     print("  - exact_edge is the exact edge-level replay of the first-order observable")
     print("  - optional truth checks confirm the replay against true_kubo_at_H")
+    print("  - midpoint_bin is the fixed-grid midpoint-binned signed compression replay")
     print("  - layer_signed is the main reduced surrogate")
-    print("  - layer_abs is a control showing what happens if signed cancellation is discarded")
 
 
 if __name__ == "__main__":
