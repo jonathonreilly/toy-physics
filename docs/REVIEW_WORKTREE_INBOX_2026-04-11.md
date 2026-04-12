@@ -27,6 +27,8 @@ These are not review items anymore:
 - `scripts/frontier_perturbative_mass_law.py`
 - `scripts/frontier_continuum_limit.py`
 - `scripts/frontier_newton_systematic.py`
+- `docs/ACTION_UNIQUENESS_AUDIT_2026-04-11.md`
+- `scripts/action_uniqueness_investigation.py`
 - `docs/NEWTON_DERIVATION_NOTE.md`
 - `docs/NEWTON_PERSISTENT_PATTERN_CONTROL_NOTE_2026-04-11.md`
 
@@ -47,6 +49,11 @@ Status:
 - not both-masses closure
 - not action-reaction closure
 - not architecture-independent Newton closure
+- bounded-family action-uniqueness note
+- safe reading: weak-field-linear phase valleys are Newtonian on the tested
+  ordered-lattice family
+- not a theorem
+- not architecture-independent uniqueness
 
 ## Review Inventory
 
@@ -54,20 +61,6 @@ Status:
 
 Everything else in this review worktree is held pending a specific missing
 control or redesign step.
-
-#### 0. Action uniqueness
-
-Files:
-
-- `docs/ACTION_UNIQUENESS_AUDIT_2026-04-11.md`
-- `scripts/action_uniqueness_investigation.py`
-
-Status:
-
-- hold
-- the evidence supports a weak-field family law on one ordered-lattice setup
-- it does not justify architecture-independent uniqueness
-- the audit should stay at bounded family-level wording
 
 #### A. Wilson mutual-attraction side lane
 

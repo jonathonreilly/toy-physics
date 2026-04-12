@@ -10,6 +10,8 @@ control for each held lane.
 
 These are not part of the hold list:
 
+- `ACTION_UNIQUENESS_AUDIT_2026-04-11.md`
+- `scripts/action_uniqueness_investigation.py`
 - `STAGGERED_TEST_MASS_COMPANION_NOTE_2026-04-11.md`
 - `DISTANCE_LAW_3D_64_CLOSURE_NOTE_2026-04-11.md`
 - `WILSON_TEST_MASS_CONTINUUM_NOTE_2026-04-11.md`
@@ -17,24 +19,6 @@ These are not part of the hold list:
 - `NEWTON_PERSISTENT_PATTERN_CONTROL_NOTE_2026-04-11.md`
 
 ## Holds
-
-### 0. Action uniqueness
-
-Files:
-
-- `docs/ACTION_UNIQUENESS_AUDIT_2026-04-11.md`
-- `scripts/action_uniqueness_investigation.py`
-
-Why held:
-
-- the evidence supports a weak-field family law on one ordered-lattice setup
-- it does not justify architecture-independent uniqueness
-
-Next control:
-
-- keep the wording explicitly family-level, and
-- prove portability or a real persistent-pattern inertial object before
-  promoting the audit / script pair
 
 ### 1. Wilson mutual-attraction side lane
 

@@ -7,6 +7,10 @@
 
 **Bounded family-law keep, not a theorem.**
 
+This is already safe to retain on `main` as a bounded family-law note. The only
+blocked wording is theorem-level or architecture-independent uniqueness
+language.
+
 The script argues for a uniqueness result:
 
 - valley-linear is “forced by the axioms”
@@ -63,7 +67,7 @@ The stronger uniqueness language is still blocked by:
 - lack of proof across non-ordered or irregular graph families
 - the existence of other weak-field-linear valley actions with the same retained Newtonian behavior on this family
 
-## Promotion Guidance
+## Exact Promotion Guidance
 
 Promote only as a bounded family-law note if the wording stays at the family
 level:
