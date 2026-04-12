@@ -368,6 +368,33 @@ Current read:
 - they are useful for provenance and reopening old lanes, but not direct
   `main` promotion candidates on their historical wording
 
+### Historical Claude backreaction batch
+
+Captured from:
+
+- `origin/claude/backreaction-frontier`
+
+Files:
+
+- `docs/SOURCE_AWARE_MECHANISM_NOTE.md`
+- `scripts/backreaction_cross_family.py`
+- `scripts/backreaction_stability_map.py`
+- `scripts/dense_prune_gravity_repair.py`
+- `scripts/directional_b_overlap_onset_continuum_crowding_bridge.py`
+- `scripts/directional_b_overlap_onset_midlayer_sampling_holdout.py`
+- `scripts/directional_b_overlap_onset_occupancy_load_bridge.py`
+
+Current read:
+
+- this is a bounded historical batch from the source-aware / backreaction /
+  directional-`b` seam program
+- the mechanism note is useful because it narrows the old claim to
+  family-sensitive 3D source-aware behavior rather than a broad rescue
+- the scripts are reopening harnesses for cross-family transfer, stability-map,
+  dense-prune repair, and discrete-overlap bridge diagnostics
+- preserve on review for provenance and reopening, but none of this is a
+  direct `main` promotion target without a fresh bounded audit note
+
 ### 2026-04-12 migration from `claude/youthful-neumann`
 
 New bounded promotion candidates:

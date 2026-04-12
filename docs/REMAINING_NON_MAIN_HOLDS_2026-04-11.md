@@ -309,6 +309,33 @@ Next control:
 - if a lane from these collections is reopened, write a fresh bounded audit
   note on the exact rerun surface before considering `main`
 
+### 0f. Historical Claude backreaction / source-aware batch
+
+Files:
+
+- `docs/SOURCE_AWARE_MECHANISM_NOTE.md`
+- `scripts/backreaction_cross_family.py`
+- `scripts/backreaction_stability_map.py`
+- `scripts/dense_prune_gravity_repair.py`
+- `scripts/directional_b_overlap_onset_continuum_crowding_bridge.py`
+- `scripts/directional_b_overlap_onset_midlayer_sampling_holdout.py`
+- `scripts/directional_b_overlap_onset_occupancy_load_bridge.py`
+
+Why held:
+
+- this batch preserves historical source-aware / backreaction / directional-`b`
+  diagnostics from `origin/claude/backreaction-frontier`
+- the mechanism note is historically useful but still written as a bounded
+  family-sensitive explanation, not a retained mainline result
+- the scripts are reopening harnesses and diagnostic cards, not direct bounded
+  promotion candidates on the current retained science surface
+
+Next control:
+
+- no direct promotion
+- if the backreaction or source-aware lane is reopened, require a fresh bounded
+  audit note on the exact rerun surface before considering `main`
+
 ### 1. Wilson mutual-attraction side lane
 
 Files:

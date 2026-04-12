@@ -434,6 +434,50 @@ Reason:
 - these branches now function as historical provenance only; no additional
   branch-specific science remains stranded on the source tips
 
+### `origin/claude/backreaction-frontier`
+
+Status:
+
+- scrubbed into `codex/review-active`
+
+Captured in this pass:
+
+- `docs/SOURCE_AWARE_MECHANISM_NOTE.md`
+- `scripts/backreaction_cross_family.py`
+- `scripts/backreaction_stability_map.py`
+- `scripts/dense_prune_gravity_repair.py`
+- `scripts/directional_b_overlap_onset_continuum_crowding_bridge.py`
+- `scripts/directional_b_overlap_onset_midlayer_sampling_holdout.py`
+- `scripts/directional_b_overlap_onset_occupancy_load_bridge.py`
+
+Archive readiness:
+
+- archive-ready
+
+Reason:
+
+- the unique branch payload is now preserved on the active review branch
+- the remainder of the branch surface is already present on `main` or review as
+  historical notes, logs, and scripts
+- no additional branch-specific science remains stranded on the source tip
+
+### `origin/claude/youthful-neumann`
+
+Status:
+
+- live working branch; protected from archive/delete
+
+Archive readiness:
+
+- not archive-ready
+
+Reason:
+
+- this branch is an active Claude working directory and should be treated as
+  live source material, not as an archive candidate
+- capture from it should happen incrementally into `codex/review-active`, but
+  the branch itself should not be deleted or pruned while active work continues
+
 ## Codex First-Pass Triage
 
 These statuses are mechanical only: whether the branch tip is already an
@@ -510,6 +554,7 @@ do not need further science capture before archive:
 - `origin/claude/sleepy-cerf`
 - `origin/claude/gracious-pasteur`
 - `origin/claude/distracted-napier`
+- `origin/claude/backreaction-frontier`
 
 ### Likely archive-ready after one short verification pass
 
@@ -520,5 +565,7 @@ science branches, but they still need a quick final diff audit before delete:
 ### Still need uniqueness review before archive
 
 - none remaining in `codex/*`
-- next scrub stage is the remaining overlapping `claude/*` branches, then
-  `frontier/*`
+- `origin/claude/youthful-neumann` remains live and protected; capture from it
+  should continue incrementally into `codex/review-active`, but it is not an
+  archive candidate while active work continues
+- next scrub stage is `frontier/*`
