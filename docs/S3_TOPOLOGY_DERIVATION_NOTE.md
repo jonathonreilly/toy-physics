@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-12
 **Script:** `scripts/frontier_s3_topology_derivation.py`
-**Status:** BOUNDED -- local shell-growth evidence is real; closed-manifold step remains open
+**Status:** BOUNDED -- local shell-growth evidence is real; compactification remains open
 **PStack:** frontier-s3-topology-derivation
 
 ## What Is Actually Established
@@ -18,6 +18,7 @@ What is **not** established is the global closure step:
 - finite graph `->` compact continuum manifold is not derived
 - local growth `->` closed 3-manifold is not derived
 - `B^3 -> S^3` still needs an extra global compactification / closure input
+- no theorem currently forces the unique closed-manifold identification from the axioms alone
 
 That is the remaining topology gap.
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Closing the S^3 compactification gap
-======================================
+Bounding the S^3 compactification gap
+=====================================
 
 THE GAP (Codex objection):
   "A finite graph does not by itself specify a closed 3-manifold continuum
@@ -21,30 +21,28 @@ THE GAP (Codex objection):
   The question: does the DYNAMICS select a closed manifold, or is this
   additional input?
 
-FIVE CLOSURE STRATEGIES:
+  FIVE NECESSARY-STRUCTURE CHECKS:
 
-  1. Regularity from the Hamiltonian: if H couples each site to exactly
+    1. Regularity from the Hamiltonian: if H couples each site to exactly
      2d neighbors (uniform local dimension), the graph has no boundary.
-     This is a mild axiom (regularity), not a topology assumption.
+     This is a necessary structural condition, not a topology derivation.
 
-  2. Energy minimization: boundary nodes cost energy (fewer bonds).
-     The ground state of any reasonable Hamiltonian prefers a closed graph
+    2. Energy minimization: boundary nodes cost energy (fewer bonds).
+     The ground state of a toy hopping Hamiltonian prefers a closed graph
      over an open one with the same number of nodes.
 
-  3. Unitarity constraint (I_3 = 0): third-order interference vanishes
+    3. Unitarity constraint (I_3 = 0): third-order interference vanishes
      on closed graphs but may acquire boundary corrections on open graphs.
-     If I_3 = 0 is demanded by the Born rule, boundaries are excluded.
+     If I_3 = 0 is demanded by the Born rule, boundaries are disfavored.
 
-  4. Propagator completeness: on a graph with boundary, the propagator
-     sum-over-paths misses paths that would have continued past the edge.
-     This violates unitarity (probability leaks). Demanding unitary
-     evolution forces the graph to be closed.
+    4. Propagator completeness: on a graph with boundary, the propagator
+     sum-over-paths depends on the boundary condition. That is an
+     ambiguity, not yet a derived compactification.
 
-  5. Simply connected is the default: local growth from a seed produces
-     a simply connected space. The only way to get pi_1 != 0 is global
-     identification. But the only way to CLOSE a simply connected finite
-     graph is S^3 (by Perelman). No other topology is reachable by local
-     operations alone.
+    5. Simply connected is the default: local growth from a seed produces
+     a simply connected space in the tested shell-growth model. The only
+     way to get pi_1 != 0 is global identification, but the converse is
+     not a derivation: a compactification map still has to be supplied.
 
 PStack experiment: frontier-s3-compactification
 """
@@ -178,8 +176,9 @@ def test_1_regularity():
     On a cubic graph in 3D: z = 6 everywhere.
     This requires: NO BOUNDARY (every node must have 6 neighbors).
 
-    A finite graph with every node having degree 6 is a closed manifold.
-    No boundary identification is needed — it follows from regularity.
+    A finite graph with every node having degree 6 is boundary-free in
+    this toy model, but that does not yet prove the physical graph must
+    compactify that way from the axioms alone.
 """)
 
     print(f"  Numerical check: fraction of boundary nodes on open L^3 lattice")
@@ -198,14 +197,9 @@ def test_1_regularity():
   as N -> infinity. However, at ANY finite N, boundary nodes exist
   on an open lattice.
 
-  RESOLUTION: The regularity axiom (uniform z) FORCES the graph to
-  be closed. This is a consequence of the tensor product structure:
-  H = H_1 (x) ... (x) H_N with IDENTICAL local factors requires
-  identical local neighborhoods.
-
-  On a closed graph (no boundary), every node has z = 2d neighbors.
-  The resulting manifold is compact without boundary.
-  Perelman then gives S^3 (combined with simple connectivity).
+    RESOLUTION: The regularity axiom is a necessary condition for a
+    boundary-free graph model. It is not yet a derivation of the global
+    compactification map from the axioms alone.
 """)
 
     # Verify: on periodic lattice, all nodes have degree 6
@@ -215,7 +209,8 @@ def test_1_regularity():
     degrees = np.array(lap.diagonal()).flatten()
     all_regular = np.all(degrees == 6.0)
     print(f"  Verification: periodic {L_test}^3 lattice, all degrees = 6: {all_regular}")
-    print(f"  PASS: regularity -> closed graph -> compact manifold (no boundary)")
+    print(f"  PASS: regularity is compatible with a boundary-free graph model")
+    print(f"  NOTE: compactification from the axioms alone remains open")
 
     return {"all_regular": all_regular}
 
@@ -251,7 +246,7 @@ def test_2_energy():
     Difference: delta_N_bonds ~ 3L^2 ~ 3 N^{2/3}
 
     E_0(open) > E_0(periodic) because the open graph has fewer bonds.
-    The dynamics PREFERS the closed topology.
+    The toy dynamics prefers the closed topology.
 """)
 
     print(f"  Bond count comparison (open vs periodic L^3):")
@@ -331,7 +326,7 @@ def test_2_energy():
 
     all_closed_favored = all(energy_results) if energy_results else False
     print(f"\n  All lattices favor closed topology: {all_closed_favored}")
-    print(f"  PASS: energy minimization selects the closed graph"
+    print(f"  PASS: energy minimization favors the closed graph in the toy model"
           if all_closed_favored else
           f"  NOTE: energy comparison inconclusive at some sizes")
 
@@ -370,7 +365,8 @@ def test_3_unitarity():
     This is ADDITIONAL INPUT beyond the graph structure.
 
     On a closed graph (no boundary), the spectrum is UNIQUELY determined
-    by the graph. No boundary condition choice is needed.
+    by the graph. However, the axioms still need a compactification
+    theorem to justify that closure.
 
     The axiom says: "finite Hilbert space with local tensor product
     structure." This specifies the graph (via H) but NOT a boundary
@@ -414,10 +410,10 @@ def test_3_unitarity():
     The factor of ~4 difference between periodic and Dirichlet means
     the CC prediction would differ by a factor of 4 depending on BCs!
 
-    RESOLUTION: The axiom determines the Hamiltonian H uniquely.
-    H uniquely determines the spectrum. If the spectrum depended on
-    an unchosen BC, the physics would be underdetermined.
-    Therefore: no boundary -> closed graph -> unique spectrum.
+    RESOLUTION: Boundary conditions are an ambiguity in open toy models.
+    This is the precise blocker: we still need a theorem that the graph
+    implied by the axioms is boundary-free, not merely that boundary-free
+    models are better behaved.
 """)
 
     # Numerical verification with actual sparse Laplacian
@@ -449,9 +445,8 @@ def test_3_unitarity():
     print(f"    Ratio: {lam1_open / lam1_periodic:.4f}")
 
     print(f"\n  CONCLUSION: A graph with boundary introduces BC ambiguity.")
-    print(f"  The axiom (finite H with local structure) uniquely determines H,")
-    print(f"  which uniquely determines the spectrum only if there is no boundary.")
-    print(f"  PASS: spectral determinacy requires closed graph")
+    print(f"  This identifies the missing compactification theorem.")
+    print(f"  PASS: spectral determinacy highlights the boundary ambiguity")
 
     return {"lam1_open": lam1_open, "lam1_periodic": lam1_periodic}
 
@@ -485,7 +480,7 @@ def test_4_propagator():
     This means:
     1. The propagator on an open graph depends on the boundary condition.
     2. The propagator on a closed graph is determined by topology alone.
-    3. Since the axiom specifies H (not BCs), the graph must be closed.
+    3. Open graphs therefore expose the exact missing compactification step.
 """)
 
     # 1D demonstration (tractable exact computation)
@@ -590,11 +585,11 @@ def test_4_propagator():
        while open graphs show boundary reflections.
 
     Since the axiom specifies H uniquely (via the tensor product structure
-    and local couplings), and H on an open graph requires a BC choice,
-    the only self-consistent option is a closed graph with no boundary.
+    and local couplings), an open graph would require an extra BC choice.
+    This is the blocker, not a derivation of closure.
 """)
 
-    print(f"  PASS: propagator determinacy requires closed graph")
+    print(f"  PASS: propagator determinacy highlights the boundary ambiguity")
 
     return {"norm_conserved_open": abs(norm_open - 1.0) < 1e-10,
             "norm_conserved_periodic": abs(norm_periodic - 1.0) < 1e-10}
@@ -612,20 +607,13 @@ def test_5_growth_closure():
     On Z^3, this produces a ball B^3. The ball has a boundary.
     But the REGULARITY axiom (Test 1) requires no boundary.
 
-    The only way to reconcile:
-    1. Growth produces a ball (simply connected, with boundary)
-    2. Regularity requires no boundary
+    The remaining step is a compactification theorem that maps the ball
+    to a closed manifold while preserving the local growth structure.
+    The tested shell-growth data are compatible with S^3, but do not
+    force the identification.
 
-    is to CLOSE the ball. The closure of B^3 to a closed manifold is:
-    - If we identify the boundary to a point: S^3 (one-point compactification)
-    - If we identify opposite faces: T^3 (but this breaks simple connectivity)
-
-    Since the growth process is simply connected (Test established in
-    frontier_s3_topology_derivation.py, Attack 4), the only consistent
-    closure is S^3.
-
-    Numerical test: grow a graph on Z^3 and verify that when we close
-    it (make every node 6-regular), the resulting graph is simply connected.
+    Numerical test: grow a graph on Z^3 and verify that the local shell
+    data stay ball-like; the compactification map itself remains open.
     """
     print("\n" + "=" * 72)
     print("TEST 5: Local growth + regularity -> S^3 closure")
@@ -708,31 +696,27 @@ def test_5_growth_closure():
     print(f"""
   Closure method                pi_1    Simply connected?  Compatible with growth?
   --------------------------    -----   -----------------  -----------------------
-  One-point compactification    0       YES                YES (antipodal meeting)
+  One-point compactification    0       YES                CONDitional if supplied
   = S^3
 
-  Opposite-face identification  Z^3     NO                 NO (requires global info)
+  Opposite-face identification  Z^3     NO                 Not derived here
   = T^3
 
-  Antipodal identification      Z_2     NO                 NO (requires global info)
+  Antipodal identification      Z_2     NO                 Not derived here
   = RP^3
 
-  Quotient by Z_p               Z_p     NO                 NO (requires global info)
+  Quotient by Z_p               Z_p     NO                 Not derived here
   = L(p,q) lens space
 
-  The only closure that:
-    (a) makes every node 6-regular (no boundary)
-    (b) preserves simple connectivity (no non-contractible loops)
-    (c) can be achieved by local operations (growth fronts meeting)
-  is the S^3 closure.
+  The tested shell-growth data are compatible with S^3, but they do
+  not derive the compactification map.
 """)
 
     # Final check: the S^3 closure is the one-point compactification
-    print(f"  Mathematical fact: the one-point compactification of R^3 is S^3.")
-    print(f"  A ball B^3 with boundary collapsed to a point gives S^3.")
-    print(f"  This is the UNIQUE simply connected closure of B^3.")
-    print(f"  (All other closures introduce non-trivial pi_1.)")
-    print(f"\n  PASS: growth + regularity -> S^3 (unique simply connected closure)")
+    print(f"  Mathematical fact: if a one-point compactification map is supplied,")
+    print(f"  then a ball B^3 with boundary collapsed to a point gives S^3.")
+    print(f"  The unique-closure statement is conditional on that map.")
+    print(f"\n  PASS: local growth gives ball-like regions; compactification remains open")
 
     return {"results": results}
 
@@ -742,7 +726,7 @@ def test_5_growth_closure():
 # ============================================================================
 
 def synthesis(r1, r2, r3, r4, r5):
-    """Combine all five tests into the compactification closure."""
+    """Combine all five tests into a compactification status summary."""
     print("\n" + "=" * 72)
     print("SYNTHESIS: Closing the Compactification Gap")
     print("=" * 72)
@@ -753,7 +737,8 @@ def synthesis(r1, r2, r3, r4, r5):
     continuum limit, and the boundary identification step is additional
     topological input."
 
-  OUR RESPONSE: Three independent arguments close the gap.
+  OUR RESPONSE: Three independent arguments constrain the gap, but do
+  not yet derive the compactification theorem.
 
   ARGUMENT A — Regularity (Tests 1 + 2):
     The tensor product axiom H = H_1 (x) ... (x) H_N requires identical
@@ -762,8 +747,8 @@ def synthesis(r1, r2, r3, r4, r5):
     Furthermore, the ground state energy favors the closed topology
     (more bonds -> lower kinetic energy).
 
-    This is NOT an additional assumption. It follows from the tensor
-    product structure, which IS the axiom.
+    This is a necessary structural condition, but not yet a proof that
+    the graph-growth axioms uniquely force closure.
 
   ARGUMENT B — Spectral determinacy (Tests 3 + 4):
     On a graph with boundary, the Laplacian spectrum depends on the
@@ -772,8 +757,8 @@ def synthesis(r1, r2, r3, r4, r5):
     determined by the graph topology. Since the axiom specifies H
     uniquely, the graph must have no boundary.
 
-    This is a CONSISTENCY argument: the axiom is self-contained only
-    on a closed graph.
+    This is a CONSISTENCY argument: boundary conditions are extra input
+    in the toy models, but the axioms still need a compactification theorem.
 
   ARGUMENT C — Growth closure (Test 5):
     Local growth from a seed produces a simply connected ball B^3.
@@ -788,18 +773,18 @@ def synthesis(r1, r2, r3, r4, r5):
     as S^3 without any global identification.
 
   CONCLUSION:
-    The compactification is NOT additional input. It follows from:
-    1. Tensor product structure -> regularity -> no boundary
-    2. Spectral determinacy -> closed graph
-    3. Simple connectivity -> S^3 (Perelman)
+    The compactification is still additional input. The current tests show:
+    1. Tensor product structure is compatible with regularity
+    2. Spectral determinacy exposes boundary ambiguity
+    3. Simple connectivity is compatible with S^3 once closure is supplied
 
-    The full derivation chain is now:
+    The current justified chain is:
       finite H (axiom)
         -> finite graph
         -> regular graph (tensor product uniformity)
-        -> closed manifold (no boundary)
-        -> simply connected (local growth)
-        -> S^3 (Perelman)
+        -> ball-like local growth
+        -> conditional compactification input
+        -> S^3 (Perelman, if compactification is supplied)
         -> lambda_1 = 3/R^2
         -> Lambda_pred / Lambda_obs = 1/Omega_Lambda = {1/0.685:.4f}
 """)
@@ -811,11 +796,11 @@ def synthesis(r1, r2, r3, r4, r5):
         and r4.get("norm_conserved_periodic", False)
     )
 
-    status = "ALL TESTS PASS" if all_pass else "TESTS COMPLETE (see details above)"
+    status = "LOCAL CHECKS PASS; GLOBAL GAP STILL OPEN" if all_pass else "TESTS COMPLETE (see details above)"
 
     print(f"  STATUS: {status}")
-    print(f"  The compactification gap is CLOSED.")
-    print(f"  No additional topological input is required beyond the axiom.")
+    print(f"  The compactification gap remains OPEN.")
+    print(f"  A closed-manifold compactification map is still additional input.")
 
     return {"all_pass": all_pass, "status": status}
 
@@ -827,11 +812,11 @@ def synthesis(r1, r2, r3, r4, r5):
 def main():
     t0 = time.time()
 
-    print("CLOSING THE S^3 COMPACTIFICATION GAP")
+    print("BOUNDING THE S^3 COMPACTIFICATION GAP")
     print("=" * 72)
     print()
     print("Codex objection: boundary identification is additional input")
-    print("Response: regularity + spectral determinacy + growth closure -> S^3")
+    print("Response: regularity + spectral determinacy + growth -> conditional S^3")
     print()
 
     r1 = test_1_regularity()
@@ -850,21 +835,22 @@ def main():
     print(f"""
   {final['status']}
 
-  The compactification gap is closed by three independent arguments:
+  The compactification gap is not closed. The current tests supply:
 
   A. REGULARITY (from tensor product axiom):
-     Uniform local dimension -> uniform coordination number -> no boundary.
+     Uniform local dimension -> uniform coordination number is compatible
+     with a boundary-free graph model.
 
   B. SPECTRAL DETERMINACY (from uniqueness of H):
-     Boundary requires BC choice -> additional input -> inconsistent.
-     Closed graph -> unique spectrum -> self-contained.
+     Boundary requires BC choice -> additional input in toy models.
+     Closed graph would be self-contained, but it is not derived here.
 
   C. GROWTH CLOSURE (from local growth + regularity):
-     Ball B^3 + no boundary -> must close.
-     Simply connected closure -> S^3 (unique by Perelman).
+     Ball B^3 + closure theorem -> S^3 (unique by Perelman).
+     The closure theorem is still missing.
 
-  The S^3 topology is derived, not assumed.
-  The cosmological constant prediction Lambda = 3/R_H^2 is structural.
+  The S^3 topology is still conditional on the missing compactification map.
+  The cosmological constant prediction Lambda = 3/R_H^2 remains conditional.
 """)
 
 
