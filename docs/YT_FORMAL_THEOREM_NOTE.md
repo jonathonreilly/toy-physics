@@ -1,23 +1,29 @@
-# Formal Theorem: y_t = g_s / sqrt(6) from Chiral Projector
+# Conditional Theorem: y_t = g_s / sqrt(6) given the normalization identity
 
 ## Context
 
 The trace identity y_t = g_s/sqrt(6) was identified numerically in
 `frontier_yt_from_alpha_s.py`. The Z_3 CG analysis (`frontier_yt_z3_clebsch.py`)
 showed all CG coefficients are unity (Z_3 is abelian), giving Y = g_0 * I_3
-at the Planck scale. This note elevates the relation to a formal theorem
-with a complete proof chain, answering the referee question: "Why should the
-Yukawa operator be the chiral projector?"
+at the Planck scale. This note proves the projector factor and the color
+counting cleanly, but the final gauge-Yukawa normalization step remains
+conditional on a lattice Ward identity. The referee question is therefore
+sharpened to: "What part is actually derived, and what part is imported?"
 
 ## The Theorem
 
-**Theorem (Yukawa-Gauge Trace Identity).** On the d=3 staggered lattice with
-Cl(3) taste algebra and N_c colors, the Yukawa coupling of the heaviest
-fermion is:
+**Theorem (Conditional Yukawa-Gauge Trace Identity).** On the d=3 staggered
+lattice with Cl(3) taste algebra and N_c colors, if the gauge-Yukawa
+normalization is fixed by a single lattice Ward identity, then the Yukawa
+coupling of the heaviest fermion is:
 
     y_t = g_s / sqrt(2 * N_c) = g_s / sqrt(6)
 
 where g_s is the SU(3) gauge coupling and N_c = 3.
+
+The rigorous part of the proof is the projector trace factor
+`Tr(P_+)/dim = 1/2`; the missing step is the Ward identity that equates the
+Yukawa normalization with the gauge-link normalization.
 
 ## Proof
 
@@ -149,6 +155,28 @@ this.
 - The combination of trace identity (scale) with Z_3 CG (texture)
   ideally should follow from a single Ward identity
 
+## Missing Identity
+
+The exact missing statement is a lattice Ward identity of the form:
+
+    Z_Y = Z_g
+
+or equivalently, on the normalized trace convention used here,
+
+    N_c * y_t^2 = g_s^2 * Tr(P_+)/dim(taste)
+
+This note does not derive that identity. It assumes the gauge and Yukawa
+vertices share the same lattice normalization and then proves the projector
+factor that turns that normalization into `y_t = g_s / sqrt(6)`.
+See also [`YT_WARD_IDENTITY_BLOCKER_NOTE.md`](/private/tmp/physics-review-active/docs/YT_WARD_IDENTITY_BLOCKER_NOTE.md).
+
+Imported assumptions:
+- the gauge and Yukawa vertices are normalized by the same lattice link
+  coefficient
+- `g_s` is the appropriate renormalized gauge coupling to insert into the
+  Yukawa normalization step
+- the Ward identity does not introduce an extra independent vertex factor
+
 ## Derivation chain
 
     alpha_s(M_Pl) = 0.092  [V-scheme plaquette action]
@@ -157,7 +185,7 @@ this.
     g_s(M_Pl) = 1.075     [sqrt(4*pi*alpha_s)]
          |
          v
-    y_t(M_Pl) = 0.439     [g_s/sqrt(6), this theorem]
+    y_t(M_Pl) = 0.439     [g_s/sqrt(6), conditional on normalization identity]
          |
          v (1-loop SM RGE)
     y_t(M_Z) = 1.005

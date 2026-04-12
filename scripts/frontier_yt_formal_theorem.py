@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
 """
-Formal Theorem: y_t = g_s / sqrt(6) from Chiral Projector on Staggered Lattice
+Conditional Theorem: y_t = g_s / sqrt(6) given the normalization identity
 ===============================================================================
 
-GOAL: Elevate the numerical observation y_t = g_s/sqrt(6) to a formal theorem
-by constructing a rigorous proof that the Yukawa operator IS the chiral
-projector in the Cl(3) taste algebra, and that the trace identity follows
-from first principles of staggered lattice fermions.
+GOAL: Prove the projector factor and the trace identity cleanly, while
+isolating the remaining gauge-Yukawa normalization step as a separate
+Ward-identity problem.
 
 A referee asks: "Why should the Yukawa operator be the chiral projector?"
 
@@ -16,7 +15,7 @@ THE ANSWER (five steps):
     On the staggered lattice, the mass term is m * sum_x eps(x) chi_bar(x) chi(x)
     where eps(x) = (-1)^{x_1+x_2+x_3}. In the taste-momentum representation,
     eps(x) becomes Gamma_5, the chirality operator in the 8-dim taste space.
-    Therefore the Yukawa vertex IS Gamma_5 by construction.
+    Therefore the Yukawa vertex is Gamma_5 at the operator level.
 
   Step 2 (Chiral projector):
     The Higgs couples left-handed to right-handed fermions. The projectors
@@ -29,12 +28,11 @@ THE ANSWER (five steps):
     This 1/2 is a TOPOLOGICAL invariant -- it is the ratio of even to total
     sites on any bipartite lattice, independent of lattice size.
 
-  Step 4 (Color factor and the theorem):
-    The gauge coupling g_s enters because both gauge and Yukawa vertices
-    arise from the same lattice hopping structure. The Yukawa vertex
-    shares the link variable U_mu(x) = exp(ig_s A_mu). At tree level on
-    the lattice, y = g_s * sqrt(C_Y) where C_Y is the normalized Yukawa
-    Casimir from Step 3. With N_c = 3 colors:
+  Step 4 (Normalization step, still conditional):
+    If a lattice Ward identity identifies the Yukawa normalization with
+    the gauge-link normalization, then the gauge coupling g_s enters.
+    At tree level on the lattice, y = g_s * sqrt(C_Y) where C_Y is the
+    normalized Yukawa Casimir from Step 3. With N_c = 3 colors:
       N_c * y_t^2 = C_Y * g_s^2 = (1/2) * g_s^2
       y_t = g_s / sqrt(2*N_c) = g_s / sqrt(6)
 
@@ -46,7 +44,7 @@ WHAT THIS SCRIPT VERIFIES:
   Part 1: Staggered lattice mass term -> eps(x) = Gamma_5 (explicit construction)
   Part 2: Chiral projector properties (Hermiticity, idempotency, rank)
   Part 3: Trace identity is topological (independent of representation choice)
-  Part 4: The formal theorem with complete proof
+  Part 4: The conditional theorem and the proof boundary
   Part 5: 2-loop SM RGE running from M_Planck to M_Z
   Part 6: Robustness checks (scheme dependence, threshold effects)
 
@@ -407,9 +405,11 @@ def part2_projector_properties():
 
 def part3_formal_theorem(proj_data):
     """
-    THEOREM. On the d=3 staggered lattice with Cl(3) taste algebra and
-    N_c colors, the Yukawa coupling of the heaviest fermion to the Higgs
-    is related to the gauge coupling by:
+    CONDITIONAL THEOREM. On the d=3 staggered lattice with Cl(3) taste
+    algebra and N_c colors, if a lattice Ward identity fixes the Yukawa
+    normalization to the gauge-link normalization, then the Yukawa
+    coupling of the heaviest fermion to the Higgs is related to the gauge
+    coupling by:
 
         y_t = g_s / sqrt(2 * N_c) = g_s / sqrt(6)
 
@@ -447,31 +447,33 @@ def part3_formal_theorem(proj_data):
           y_t = g_s / sqrt(2 * N_c) = g_s / sqrt(6)     QED
     """
     print("\n" + "=" * 78)
-    print("PART 3: FORMAL THEOREM")
+    print("PART 3: CONDITIONAL THEOREM")
     print("=" * 78)
     print()
 
     C_Y = proj_data["C_Y"]
 
-    print("  THEOREM (Yukawa-Gauge Trace Identity)")
+    print("  CONDITIONAL THEOREM (Yukawa-Gauge Trace Identity)")
     print("  " + "=" * 60)
     print()
     print("  On the d=3 staggered lattice with Cl(3) taste algebra,")
-    print("  the top Yukawa coupling is:")
+    print("  if the missing normalization identity holds, then the top")
+    print("  Yukawa coupling is:")
     print()
     print("      y_t = g_s / sqrt(2 * N_c) = g_s / sqrt(6)")
     print()
     print("  where g_s is the SU(3) gauge coupling and N_c = 3.")
     print()
 
-    print("  PROOF:")
+    print("  DERIVED PARTS:")
     print("  " + "-" * 60)
     print()
     print("  Step 1 [Yukawa operator = Gamma_5]:")
     print("    The staggered mass term m*sum_x eps(x) chi_bar chi has")
     print("    taste structure eps -> Gamma_5 = i*gamma_1*gamma_2*gamma_3.")
     print("    The Higgs mechanism replaces m -> y*v/sqrt(2), preserving")
-    print("    the taste structure. So the Yukawa vertex IS Gamma_5.")
+    print("    the taste structure. So the Yukawa vertex is Gamma_5 up to")
+    print("    the normalization step handled separately below.")
     print()
     print("  Step 2 [Chiral projector]:")
     print("    The Higgs couples psi_L to psi_R. In taste space, psi_R is")
@@ -480,13 +482,14 @@ def part3_formal_theorem(proj_data):
     print()
     print("  Step 3 [Trace identity]:")
     print("    The total Yukawa coupling squared, summed over colors and")
-    print("    taste states, satisfies:")
+    print("    taste states, would satisfy:")
     print()
     print("      N_c * y_t^2 = g_s^2 * Tr(P_+^dag P_+) / dim(taste)")
     print()
     print("    The left side has N_c from the color trace.")
-    print("    The right side has g_s^2 because the Yukawa and gauge")
-    print("    vertices share the same lattice link structure.")
+    print("    The right side has g_s^2 only after the missing Ward")
+    print("    identity identifies the Yukawa normalization with the")
+    print("    gauge-link normalization.")
     print()
     print("  Step 4 [Projector trace]:")
     print(f"    Since P_+ is Hermitian and idempotent:")
@@ -552,9 +555,15 @@ def part3_formal_theorem(proj_data):
     print("  The coupling squared involves |y|^2 * Tr(P_+^dag P_+) = |y|^2 * dim/2,")
     print("  NOT |y|^2 * Tr(Gamma_5^dag Gamma_5) = |y|^2 * dim.")
     print()
-    print("  The factor of 1/2 from the projector is NOT a convention --")
+    print("  The factor of 1/2 from the projector is not a convention --")
     print("  it reflects the physical fact that only half the taste degrees")
     print("  of freedom participate in the Yukawa interaction.")
+    print()
+    print("  BLOCKER:")
+    print("    The remaining normalization step is not derived here.")
+    print("    Missing identity: Z_Y = Z_g, or equivalently")
+    print("    N_c * y_t^2 = g_s^2 * Tr(P_+)/dim(taste).")
+    print("    This script proves the projector factor, not the Ward identity.")
     print()
 
     return {
@@ -594,13 +603,14 @@ def part4_z3_consistency(theorem_data):
     print("    Z_3 is abelian => all CG coefficients = 1")
     print("    Yukawa texture at M_Pl: Y = g_0 * I_3 (degenerate)")
     print()
-    print("  From trace identity (this script):")
+    print("  From trace identity (conditional on normalization identity):")
     print(f"    g_0 = g_s / sqrt(6) = {yt:.4f}")
     print()
     print("  CONSISTENCY CHECK:")
     print("    The trace identity determines the MAGNITUDE of g_0.")
     print("    The Z_3 CG analysis determines the TEXTURE (diagonal).")
-    print("    Together: Y_ij(M_Pl) = (g_s/sqrt(6)) * delta_ij")
+    print("    Together, conditional on the normalization identity:")
+    print("    Y_ij(M_Pl) = (g_s/sqrt(6)) * delta_ij")
     print()
 
     # Build the full 3x3 Yukawa matrix at M_Planck
@@ -643,6 +653,7 @@ def part4_z3_consistency(theorem_data):
 
     print("  GENERATION COUNTING:")
     print("    Each generation independently satisfies:")
+    print("      If the normalization identity holds:")
     print("      N_c * y_k^2 = g_s^2 * Tr(P_+)/dim = g_s^2 / 2")
     print("    At M_Pl, all three are degenerate: y_1 = y_2 = y_3 = g_s/sqrt(6)")
     print("    Z_3 breaking during RG flow splits the degeneracy.")
@@ -1030,17 +1041,18 @@ def part6_robustness(theorem_data, rg_data):
 def part7_summary(theorem_data, rg_data):
     """Final summary with complete assessment."""
     print("\n" + "=" * 78)
-    print("SUMMARY: FORMAL THEOREM y_t = g_s / sqrt(6)")
+    print("SUMMARY: CONDITIONAL THEOREM y_t = g_s / sqrt(6)")
     print("=" * 78)
     print()
 
     g_s = theorem_data["g_s_planck"]
     yt_pl = theorem_data["yt_planck"]
 
-    print("  THE THEOREM:")
+    print("  THE THEOREM (conditional):")
     print("  " + "=" * 60)
     print()
-    print("  On the d=3 staggered lattice with Cl(3) taste algebra:")
+    print("  On the d=3 staggered lattice with Cl(3) taste algebra,")
+    print("  if the normalization identity holds:")
     print()
     print("      y_t = g_s / sqrt(2 * N_c) = g_s / sqrt(6)")
     print()
@@ -1049,7 +1061,8 @@ def part7_summary(theorem_data, rg_data):
     print("    2. Higgs mechanism preserves taste structure: Yukawa IS Gamma_5")
     print("    3. Chiral projector P_+ = (1+Gamma_5)/2 selects physical coupling")
     print("    4. Tr(P_+)/dim = 1/2 (topological invariant of bipartite lattice)")
-    print("    5. N_c * y_t^2 = g_s^2 * Tr(P_+)/dim => y_t = g_s/sqrt(2*N_c)")
+    print("    5. If the normalization identity holds,")
+    print("       N_c * y_t^2 = g_s^2 * Tr(P_+)/dim => y_t = g_s/sqrt(2*N_c)")
     print()
 
     print("  PREDICTION:")
@@ -1107,8 +1120,9 @@ def part7_summary(theorem_data, rg_data):
     print("      with the Z_3 texture. A fully rigorous proof would derive")
     print("      both from a single lattice Ward identity.")
     print()
-    print("  Status: y_t = g_s/sqrt(6) is a FORMAL THEOREM given the")
-    print("  two lemmas (mass term = Gamma_5, projector trace = 1/2).")
+    print("  Status: the projector factor and color trace are rigorous.")
+    print("  The missing lattice Ward identity is what upgrades the")
+    print("  conditional relation into a fully closed normalization theorem.")
     print("  The physical prediction m_t is within the expected ~5%")
     print("  uncertainty of the RG running procedure.")
     print()
@@ -1120,7 +1134,7 @@ def part7_summary(theorem_data, rg_data):
 
 def main():
     print("=" * 78)
-    print("FORMAL THEOREM: y_t = g_s / sqrt(6)")
+    print("CONDITIONAL THEOREM: y_t = g_s / sqrt(6)")
     print("Yukawa Coupling from Chiral Projector on Staggered Lattice")
     print("=" * 78)
     print()
