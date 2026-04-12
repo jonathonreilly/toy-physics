@@ -187,6 +187,34 @@ Next control:
   fresh bounded audit note on the exact reopened surface instead of promoting
   these historical notes as-is
 
+### 0b. Lensing / local-unitary / chiral exploratory side artifacts
+
+Files:
+
+- `docs/K_OSCILLATION_PREDICTION_NOTE.md`
+- `scripts/k_oscillation_prediction.py`
+- `scripts/lensing_beta_sweep_fine.py`
+- `scripts/frontier_local_unitary_lorentzian.py`
+- `scripts/frontier_chiral_two_body_superposition.py`
+
+Why held:
+
+- these are useful analytical or exploratory side-lane artifacts preserved from
+  `origin/codex/archive-claude-distracted-napier-20260411`,
+  `origin/codex/local-lorentzian-beamsplitter`, and
+  `origin/codex/chiral-harness-tests`
+- the `k`-oscillation note is a bounded lensing interpretation, not a retained
+  gravity closure result
+- the local-unitary Lorentzian and chiral two-body scripts are reopening
+  harnesses / diagnostics only, with no audited bounded note establishing a
+  `main` candidate
+
+Next control:
+
+- do not promote directly
+- if any of these side lanes are reopened, write a fresh bounded audit note on
+  the exact reopened surface before considering promotion
+
 ### 1. Wilson mutual-attraction side lane
 
 Files:

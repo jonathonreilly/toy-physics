@@ -65,7 +65,7 @@ Archive readiness:
 
 Status:
 
-- partially scrubbed into `codex/review-active`
+- scrubbed into `codex/review-active`
 
 Captured in this pass:
 
@@ -83,17 +83,16 @@ Captured in this pass:
 - `docs/WAVE_STATIC_MATRIXFREE_MOVING_SOURCE_FIXED_BEAM_BOUNDARY_NOTE.md`
 - `scripts/wave_static_direct_probe.py`
 
-Not yet archive-ready:
+Archive readiness:
 
-- yes; do not archive or delete yet
+- archive-ready
 
 Reason:
 
-- the branch still contains a large exploratory surface beyond the historical
-  bounded slice above, including many older action-power, connectivity,
-  generated-geometry, and causal/wave notes
-- the imported slice preserves the cleanest repo-facing historical controls,
-  but the branch still needs further uniqueness review before archive
+- the remaining branch diff after capture is older variants of files already
+  preserved on `main` or `codex/review-active`, plus historical logs
+- no additional branch-specific science paths remain stranded after the bounded
+  historical slice above was imported
 
 ### `origin/codex/irregular-sign-closure`
 
@@ -176,6 +175,88 @@ Reason:
 - the branch-specific payload is future-probe scaffolding for already-open
   lanes, and those scripts are now preserved on the active review branch
 
+### `origin/codex/archive-automation-backup-20260411`
+
+Status:
+
+- scrubbed into `codex/review-active`
+
+Captured in this pass:
+
+- no new science files needed capture; all branch payload already existed on
+  `main` and `codex/review-active`
+
+Archive readiness:
+
+- archive-ready
+
+Reason:
+
+- the direct-`dM` docs, scripts, and logs on this helper branch are already
+  preserved on the retained or active review surfaces
+- no branch-specific science remains stranded here
+
+### `origin/codex/archive-claude-distracted-napier-20260411`
+
+Status:
+
+- scrubbed into `codex/review-active`
+
+Captured in this pass:
+
+- `docs/K_OSCILLATION_PREDICTION_NOTE.md`
+- `scripts/k_oscillation_prediction.py`
+- `scripts/lensing_beta_sweep_fine.py`
+
+Archive readiness:
+
+- archive-ready
+
+Reason:
+
+- the branch-specific payload is the bounded lensing `k`-oscillation note and
+  its support scripts above, and those artifacts are now preserved on the
+  active review branch
+
+### `origin/codex/local-lorentzian-beamsplitter`
+
+Status:
+
+- scrubbed into `codex/review-active`
+
+Captured in this pass:
+
+- `scripts/frontier_local_unitary_lorentzian.py`
+
+Archive readiness:
+
+- archive-ready
+
+Reason:
+
+- the branch-specific payload is the local-unitary Lorentzian beam-splitter
+  harness above, and that script is now preserved on the active review branch
+
+### `origin/codex/chiral-harness-tests`
+
+Status:
+
+- scrubbed into `codex/review-active`
+
+Captured in this pass:
+
+- `scripts/frontier_chiral_two_body_superposition.py`
+
+Archive readiness:
+
+- archive-ready
+
+Reason:
+
+- relative to `main` and the active review branch, the remaining unique payload
+  on this branch is the narrow chiral two-body superposition diagnostic above,
+  and that script is now preserved on review
+
 ## Codex First-Pass Triage
 
 These statuses are mechanical only: whether the branch tip is already an
@@ -216,6 +297,12 @@ do not need further science capture before archive:
 - `origin/codex/source-weight-spectral`
 - `origin/codex/archive-main-retain-audit-20260411`
 - `origin/codex/archive-main-wilson-bounded-20260411`
+- `origin/codex/archive-automation-backup-20260411`
+- `origin/codex/archive-claude-distracted-napier-20260411`
+- `origin/codex/axiom-risk-ledger`
+- `origin/codex/chiral-harness-tests`
+- `origin/codex/local-lorentzian-beamsplitter`
+- `origin/codex/next-session-tests`
 
 ### Likely archive-ready after one short verification pass
 
@@ -225,12 +312,5 @@ science branches, but they still need a quick final diff audit before delete:
 
 ### Still need uniqueness review before archive
 
-- `origin/codex/archive-automation-backup-20260411`
-- `origin/codex/archive-claude-distracted-napier-20260411`
-- `origin/codex/archive-main-retain-audit-20260411`
-- `origin/codex/archive-main-wilson-bounded-20260411`
-- `origin/codex/axiom-risk-ledger`
-- `origin/codex/chiral-harness-tests`
-- `origin/codex/local-lorentzian-beamsplitter`
-- `origin/codex/next-session-tests`
-- `origin/codex/resonance-controls`
+- none remaining in `codex/*`
+- next scrub stage is `claude/*`, then `frontier/*`

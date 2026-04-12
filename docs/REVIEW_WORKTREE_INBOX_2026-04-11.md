@@ -214,6 +214,45 @@ Current read:
 - useful to preserve on review as reopening harnesses
 - not retained science and not a direct promotion target
 
+### Narrow capture from `origin/codex/archive-claude-distracted-napier-20260411`
+
+- `docs/K_OSCILLATION_PREDICTION_NOTE.md`
+- `scripts/k_oscillation_prediction.py`
+- `scripts/lensing_beta_sweep_fine.py`
+
+Current read:
+
+- bounded analytical side-note for the lensing `k·H` oscillation story
+- useful because it ties one measured oscillation period to an adjacent
+  impact-parameter field-phase contrast with no free parameters
+- still a lensing interpretation note, not a retained gravity closure result
+- the companion `β` sweep is supporting lane diagnostics, not a promotion
+  target on its own
+
+### Narrow capture from `origin/codex/local-lorentzian-beamsplitter`
+
+- `scripts/frontier_local_unitary_lorentzian.py`
+
+Current read:
+
+- exploratory local-unitary Lorentzian beam-splitter harness
+- useful as a reopening script for local/causal/Born-sign tests on a sparse
+  brick-wall unitary
+- no retained bounded note currently depends on it
+- preserve on review as future-probe scaffolding only
+
+### Narrow capture from `origin/codex/chiral-harness-tests`
+
+- `scripts/frontier_chiral_two_body_superposition.py`
+
+Current read:
+
+- narrow 1D theta-coupled chiral superposition diagnostic
+- tests whether the combined two-mass field matches the sum of individual
+  centroid shifts on that specific chiral lane
+- useful as a bounded nonlinear-diagnostic harness, not a retained physics
+  result
+
 ### 2026-04-12 migration from `claude/youthful-neumann`
 
 New bounded promotion candidates:
