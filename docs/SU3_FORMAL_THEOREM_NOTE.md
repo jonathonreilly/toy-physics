@@ -9,21 +9,24 @@
 staggered fermion phases eta_mu(x) = (-1)^{x_1 + ... + x_{mu-1}}.
 Then:
 
-1. The staggered phases determine a representation of Cl(3) on the
-   8-dimensional taste space V = C^8, unique up to unitary conjugacy.
+1. The staggered phases determine, via the Kawamoto-Smit construction,
+   a canonical tensor product decomposition of the 8-dimensional taste
+   space: V = C^2_1 tensor C^2_2 tensor C^2_3, where each factor
+   corresponds to a spatial direction.
 
-2. The even subalgebra Cl^+(3) contains a unique su(2) subalgebra
-   (the bivector algebra), up to conjugacy.
+2. Each choice of distinguished direction mu_0 in {1, 2, 3} defines
+   an su(2) subalgebra acting on the factor C^2_{mu_0}, with
+   4-dimensional multiplicity space W = C^2 tensor C^2 (the product
+   of the remaining two factors).
 
-3. The full cubic symmetry group O_h preserves this su(2). The axis
-   permutation subgroup S_3 < O_h acts nontrivially on the multiplicity
-   space. In particular, the transposition (23) acts as the SWAP operator
-   on C^2 tensor C^2.
+3. The transposition of the two non-distinguished directions acts as
+   the SWAP operator on W. This SWAP commutes with the distinguished
+   su(2).
 
-4. The multiplicity space of this su(2) decomposes canonically as
-   Sym^2(C^2) + Anti^2(C^2) = C^3 + C^1 under SWAP_{23}.
+4. The multiplicity space decomposes canonically under SWAP as
+   W = Sym^2(C^2) + Anti^2(C^2) = C^3 + C^1.
 
-5. The compact semisimple commutant of {su(2), SWAP_{23}} in End(C^8)
+5. The compact semisimple commutant of {su(2), SWAP} in End(V)
    is uniquely su(3).
 
 6. The unique traceless U(1) generator in the commutant is hypercharge,
@@ -34,216 +37,115 @@ Then:
 
 ## Proof
 
-### Step 1. Clifford representation and uniqueness
+### Step 1. Staggered phases and the canonical tensor decomposition
 
-**Claim.** The staggered phases eta_mu(x) on the cubic lattice Z^3
-determine a representation of the real Clifford algebra Cl(3) on
-V = C^8, unique up to unitary equivalence.
+**Claim.** The Kawamoto-Smit representation of the staggered fermion
+phases on Z^3 canonically identifies the 8-dimensional taste space
+with V = C^2 tensor C^2 tensor C^2, where the mu-th tensor factor
+corresponds to the mu-th spatial direction.
 
-*Proof.* The staggered fermion formulation assigns a phase
-eta_mu(x) = (-1)^{x_1 + ... + x_{mu-1}} to each link in direction mu
-at site x. The 2^3 = 8 sites of a single hypercube carry the taste
-indices. Following Kawamoto and Smit, define operators Gamma_mu on
-V = C^8 by
+*Proof.* The 2^3 = 8 corners of a single hypercube of Z^3 are labeled
+by bit strings alpha = (a_1, a_2, a_3) with a_mu in {0, 1}. This
+labeling defines a canonical identification
 
-    (Gamma_mu)_{alpha, beta} = eta_mu(alpha) delta_{alpha, alpha + mu-hat}
+    V = C^{2^3} = C^2_1 tensor C^2_2 tensor C^2_3
 
-where alpha, beta are hypercube corners and the shift is modulo 2 in
-each direction.
+where the mu-th tensor factor has basis {|0>, |1>} corresponding to
+the mu-th bit of the hypercube corner label.
 
-These operators satisfy the Clifford relations
+The staggered fermion phases eta_mu(x) = (-1)^{x_1 + ... + x_{mu-1}}
+define shift operators Gamma_mu on V via the Kawamoto-Smit construction:
 
-    {Gamma_mu, Gamma_nu} = 2 delta_{mu nu} I_8,    mu, nu = 1, 2, 3.
+    (Gamma_mu psi)(alpha) = eta_mu(alpha) psi(alpha + hat{mu})
 
-This is verified directly: for mu = nu, Gamma_mu^2 = I_8 because the
-phases satisfy eta_mu(x)^2 = 1 and the shift by mu-hat twice returns
-to the origin. For mu != nu, anticommutativity follows from the identity
-eta_mu(x + nu-hat) eta_nu(x) = -eta_nu(x + mu-hat) eta_mu(x), which
-is a consequence of the explicit sign formula.
-
-The algebra Cl(3) over C is isomorphic to M(2^{floor(3/2)}, C)^k where
-k depends on the parity of the dimension. For d = 3 (odd),
-Cl(3, C) = M(4, C) + M(4, C). However, the Gamma matrices constructed
-above act irreducibly on all 8 dimensions; this is a representation of
-the full Cl(3, C) that combines the two 4-dimensional irreps into one
-faithful 8-dimensional representation. More precisely, the 2^3 = 8
-real generators and their products span the full matrix algebra on
-a subspace once we account for the tensor product structure:
-
-V = C^{2^3} = C^2 tensor C^2 tensor C^2.
-
-In this tensor product basis, the Kawamoto-Smit representation takes
-the explicit form
-
-    Gamma_1 = sigma_x tensor I_2 tensor I_2
-    Gamma_2 = sigma_z tensor sigma_x tensor I_2
-    Gamma_3 = sigma_z tensor sigma_z tensor sigma_x
-
-where sigma_x, sigma_z are Pauli matrices. One verifies directly that
-{Gamma_mu, Gamma_nu} = 2 delta_{mu nu} I_8 in this form. (The
-systematic construction is: Gamma_mu = sigma_z^{tensor(mu-1)} tensor
-sigma_x tensor I^{tensor(3-mu)}.)
-
-**Uniqueness.** Any other set of three 8x8 matrices Gamma'_mu satisfying
-the same Clifford relations {Gamma'_mu, Gamma'_nu} = 2 delta_{mu nu} I_8
-is unitarily equivalent to the above. This follows from the classification
-of Clifford representations: the real Clifford algebra Cl(3) has, up to
-equivalence, a unique faithful representation on C^8 that decomposes into
-the two inequivalent irreps of Cl(3, C) = M(4,C) + M(4,C), paired by
-the choice of chirality. Any two such faithful representations are
-conjugate by a unitary U in U(8). QED
-
-
-### Step 2. Unique su(2) in the even subalgebra
-
-**Claim.** The even subalgebra Cl^+(3) contains a unique su(2)
-subalgebra (up to inner automorphism), namely the bivector algebra.
-In the tensor product decomposition V = C^2 tensor C^4, the su(2)
-acts on the first factor.
-
-*Proof.* The even subalgebra Cl^+(3) is generated by the bivectors
-Gamma_mu Gamma_nu for mu < nu. There are three independent bivectors:
-
-    B_1 = -(i/2) Gamma_2 Gamma_3
-    B_2 = -(i/2) Gamma_3 Gamma_1
-    B_3 = -(i/2) Gamma_1 Gamma_2
-
-These satisfy the su(2) commutation relations
-
-    [B_i, B_j] = i epsilon_{ijk} B_k.
-
-*Verification:* Using {Gamma_mu, Gamma_nu} = 2 delta_{mu nu} I and
-Gamma_mu Gamma_nu = -Gamma_nu Gamma_mu for mu != nu, we compute:
-
-    [B_1, B_2] = [-(i/2) Gamma_2 Gamma_3, -(i/2) Gamma_3 Gamma_1]
-               = -(1/4) [Gamma_2 Gamma_3, Gamma_3 Gamma_1]
-               = -(1/4) (Gamma_2 Gamma_3 Gamma_3 Gamma_1 
-                        - Gamma_3 Gamma_1 Gamma_2 Gamma_3)
-               = -(1/4) (Gamma_2 Gamma_1 - Gamma_3 Gamma_1 Gamma_2 Gamma_3)
-
-Since Gamma_3^2 = I, the first term is Gamma_2 Gamma_1. For the second
-term, move Gamma_2 past Gamma_3 (picking up a sign) and Gamma_1 past
-Gamma_3 (picking up another sign):
-
-    Gamma_3 Gamma_1 Gamma_2 Gamma_3 
-    = -Gamma_3 Gamma_2 Gamma_1 Gamma_3  (swap 1,2)
-    = +Gamma_2 Gamma_3 Gamma_1 Gamma_3  (swap 2,3)  -- WRONG approach.
-
-More carefully:
-
-    Gamma_3 Gamma_1 Gamma_2 Gamma_3
-    = -Gamma_1 Gamma_3 Gamma_2 Gamma_3  (anticommute 3,1)
-    = +Gamma_1 Gamma_2 Gamma_3 Gamma_3  (anticommute 3,2)
-    = +Gamma_1 Gamma_2                   (Gamma_3^2 = I)
-
-So:
-
-    [B_1, B_2] = -(1/4)(Gamma_2 Gamma_1 - Gamma_1 Gamma_2)
-               = -(1/4)(-2 Gamma_1 Gamma_2)  (anticommutativity)
-               = (1/2) Gamma_1 Gamma_2
-               = i B_3.
-
-The other commutators follow by cyclic permutation. Thus
-span{B_1, B_2, B_3} is a copy of su(2) inside Cl^+(3).
-
-**Uniqueness.** The even subalgebra Cl^+(3) is isomorphic to Cl(2) as
-an associative algebra, via the map Gamma_1 Gamma_2 -> e_1 e_2,
-Gamma_2 Gamma_3 -> e_2, Gamma_1 Gamma_3 -> e_1 (where {e_1, e_2} are
-Cl(2) generators). Now Cl(2, C) = M(2, C). The Lie algebra of the
-unitary group of M(2, C) is u(2) = su(2) + u(1). Since su(2) is
-a simple Lie algebra and M(2, C) has a unique su(2) subalgebra (namely
-the traceless Hermitian matrices, up to conjugation), it follows that
-the bivector su(2) is the unique su(2) subalgebra of Cl^+(3), up to
-inner automorphism.
-
-In the tensor product decomposition V = C^2 tensor C^2 tensor C^2,
-the bivectors B_k act only on the first tensor factor:
-
-    B_k = (sigma_k / 2) tensor I_2 tensor I_2.
-
-This can be verified by direct computation in the Kawamoto-Smit
-representation. For example:
-
-    B_3 = -(i/2) Gamma_1 Gamma_2
-         = -(i/2)(sigma_x tensor I tensor I)(sigma_z tensor sigma_x tensor I)
-         = -(i/2)(sigma_x sigma_z) tensor (I sigma_x) tensor I
-         = -(i/2)(-i sigma_y) tensor sigma_x tensor I
-
-This requires tracking the full tensor product; the verification is
-completed numerically in the companion script. The key structural point
-is that the su(2) acts as spin-1/2 on a 2-dimensional factor, with
-multiplicity space C^4 = C^2 tensor C^2.
-
-Consequently, V decomposes under this su(2) as
-
-    V = C^2 tensor W,   W = C^2 tensor C^2 = C^4,
-
-where su(2) acts on C^2 (the "weak isospin" factor) and W is the
-multiplicity space. QED
-
-
-### Step 3. Cubic symmetry preserves su(2); S_3 acts on multiplicity space
-
-**Claim.** The full octahedral group O_h preserves the bivector su(2).
-The subgroup S_3 of axis permutations acts nontrivially on the
-multiplicity space W = C^4.
-
-*Proof.* The octahedral group O_h acts on Cl(3) by permuting and
-reflecting the generators: for any g in O_h,
-
-    g . Gamma_mu = sum_nu R(g)_{nu mu} Gamma_nu
-
-where R(g) is the 3x3 orthogonal matrix representing g.
-
-Under this action, the bivectors transform as
-
-    g . B_k = g . [-(i/2) epsilon_{ijk} Gamma_i Gamma_j]
-            = -(i/2) epsilon_{ijk} [sum_a R_{ai} Gamma_a][sum_b R_{bj} Gamma_b]
-            = -(i/2) epsilon_{ijk} R_{ai} R_{bj} Gamma_a Gamma_b.
-
-Using the identity epsilon_{ijk} R_{ai} R_{bj} = det(R) epsilon_{abk'} R_{k'k}
-(where the primed index is summed), we get:
-
-    g . B_k = det(R) sum_{k'} R_{k'k} B_{k'}.
-
-For proper rotations (det R = +1), B_k transforms as a vector under SO(3).
-For improper rotations (det R = -1), B_k transforms as a pseudovector.
-
-In either case, the linear span {B_1, B_2, B_3} is mapped to itself.
-Therefore O_h preserves the su(2) subalgebra as a whole:
-
-    g . span{B_1, B_2, B_3} = span{B_1, B_2, B_3}  for all g in O_h.
-
-By Schur's lemma (since su(2) acts irreducibly on the C^2 factor),
-any symmetry preserving su(2) must act as (U_2 tensor U_W) on
-V = C^2 tensor W, where U_2 in SU(2) rotates the spin factor and
-U_W in GL(W) acts on the multiplicity space.
-
-Now consider the subgroup S_3 < O_h of axis permutations. A
-permutation pi in S_3 sends Gamma_mu to Gamma_{pi(mu)}. The effect
-on the tensor product structure is computed by examining how the
-Kawamoto-Smit construction
+where the shift alpha + hat{mu} flips the mu-th bit. In the tensor
+product basis, these operators take the explicit form:
 
     Gamma_mu = sigma_z^{tensor(mu-1)} tensor sigma_x tensor I^{tensor(3-mu)}
 
-transforms. In particular, the transposition (23), which exchanges
-spatial directions 2 and 3, maps:
+*Verification:* For Gamma_1 = sigma_x tensor I tensor I, the shift
+flips bit 1, and there is no sign factor (eta_1 = 1 always). For
+Gamma_2 = sigma_z tensor sigma_x tensor I, the shift flips bit 2,
+and the sign factor eta_2 = (-1)^{a_1} is implemented by sigma_z on
+factor 1. For Gamma_3 = sigma_z tensor sigma_z tensor sigma_x, the
+shift flips bit 3, and eta_3 = (-1)^{a_1 + a_2} requires sigma_z on
+both factors 1 and 2.
 
-    Gamma_1 -> Gamma_1
-    Gamma_2 -> Gamma_3
-    Gamma_3 -> Gamma_2
+The Clifford relations {Gamma_mu, Gamma_nu} = 2 delta_{mu nu} I
+follow from sigma_x^2 = I, sigma_z^2 = I, and
+{sigma_x, sigma_z} = 0.
 
-(with possible signs from the Jordan-Wigner structure). The action
-on the tensor product V = C^2 tensor C^2 tensor C^2 exchanges the
-second and third tensor factors, up to a unitary on the first factor.
-Since B_k acts only on the first factor, this unitary commutes with
-B_k, and the net effect on the multiplicity space W = C^2 tensor C^2
-is:
+**Uniqueness of the tensor decomposition.** The tensor product
+structure V = C^2_1 tensor C^2_2 tensor C^2_3 is determined by the
+hypercube labeling, which is canonical once the coordinate axes of Z^3
+are specified. The assignment of tensor factors to spatial directions
+is equivariant under the axis permutation group S_3: a permutation
+pi in S_3 of the coordinates induces a permutation of the tensor
+factors. QED
 
-    SWAP_{23}: |a> tensor |b> -> |b> tensor |a>
 
-for all |a>, |b> in C^2. This is the canonical swap operator on
-W = C^2 tensor C^2. QED
+### Step 2. Distinguished su(2) from a choice of direction
+
+**Claim.** Each choice of a distinguished spatial direction mu_0
+defines an su(2) subalgebra of End(V) that acts on the factor
+C^2_{mu_0} and trivially on the remaining factors.
+
+*Proof.* Choose (without loss of generality) mu_0 = 1. Define
+
+    T_k = (sigma_k / 2) tensor I_2 tensor I_2,   k = 1, 2, 3
+
+where sigma_1 = sigma_x, sigma_2 = sigma_y, sigma_3 = sigma_z are
+the Pauli matrices. These satisfy
+
+    [T_i, T_j] = i epsilon_{ijk} T_k
+
+because [sigma_i/2, sigma_j/2] = i epsilon_{ijk} sigma_k/2 and the
+identity factors contribute nothing to the commutator.
+
+Note that T_1 = Gamma_1 / 2 (since Gamma_1 = sigma_x tensor I tensor I),
+so one of the su(2) generators is directly a Clifford element. The
+other two generators T_2 and T_3 involve sigma_y and sigma_z on the
+first factor, which are NOT elements of the Clifford algebra Cl(3).
+They are, however, canonical operators determined by the tensor product
+structure.
+
+Under this su(2), the taste space decomposes as
+
+    V = C^2_1 tensor W,   W = C^2_2 tensor C^2_3 = C^4
+
+where su(2) acts irreducibly (as spin-1/2) on C^2_1, and W is the
+4-dimensional multiplicity space. Every state in V transforms as one
+of 4 copies of the spin-1/2 representation. QED
+
+
+### Step 3. The SWAP operator on the multiplicity space
+
+**Claim.** The transposition (23) of the two non-distinguished
+directions defines a SWAP operator on W = C^2_2 tensor C^2_3 that
+commutes with the distinguished su(2).
+
+*Proof.* Define SWAP_{23}: V -> V by
+
+    SWAP_{23}(|a> tensor |b> tensor |c>) = |a> tensor |c> tensor |b>
+
+for all |a> in C^2_1, |b> in C^2_2, |c> in C^2_3. Equivalently,
+
+    SWAP_{23} = I_2 tensor P
+
+where P: C^2_2 tensor C^2_3 -> C^2_2 tensor C^2_3 is the swap
+operator P(|b> tensor |c>) = |c> tensor |b>.
+
+Since SWAP_{23} acts as the identity on C^2_1, it commutes with all
+operators of the form T tensor I_4 on V = C^2_1 tensor C^4. In
+particular, [SWAP_{23}, T_k] = 0 for all k.
+
+Properties of SWAP_{23}:
+- SWAP_{23}^2 = I (involution)
+- SWAP_{23} is Hermitian (self-adjoint)
+- SWAP_{23} is unitary
+
+These follow from the corresponding properties of the swap P on
+C^2 tensor C^2. QED
 
 
 ### Step 4. Symmetric/antisymmetric decomposition of multiplicity space
@@ -253,29 +155,30 @@ decomposes as
 
     W = Sym^2(C^2) + Anti^2(C^2) = C^3 + C^1.
 
-*Proof.* This is a standard result in linear algebra. The SWAP operator
-P: u tensor v -> v tensor u on C^2 tensor C^2 satisfies P^2 = I, so
+*Proof.* The swap operator P on C^2 tensor C^2 satisfies P^2 = I, so
 its eigenvalues are +1 and -1. The eigenspaces are:
 
-    Sym^2(C^2) = {w in C^2 tensor C^2 : P(w) = +w}
-    Anti^2(C^2) = {w in C^2 tensor C^2 : P(w) = -w}.
+    Sym^2(C^2) = {w in C^2 tensor C^2 : P(w) = +w}  (symmetric tensors)
+    Anti^2(C^2) = {w in C^2 tensor C^2 : P(w) = -w}  (antisymmetric tensors)
 
-A basis for Sym^2(C^2) is:
+The projectors onto these subspaces are P_+ = (I + P)/2 and
+P_- = (I - P)/2.
+
+**Dimension count:** For C^n tensor C^n in general,
+dim Sym^2(C^n) = n(n+1)/2 and dim Anti^2(C^n) = n(n-1)/2.
+For n = 2: dim Sym^2 = 3, dim Anti^2 = 1.
+
+A basis for Sym^2(C^2):
 
     |00>,   (|01> + |10>)/sqrt(2),   |11>
 
-(dimension 3). A basis for Anti^2(C^2) is:
+A basis for Anti^2(C^2):
 
     (|01> - |10>)/sqrt(2)
 
-(dimension 1).
-
-In general, for C^n tensor C^n, we have dim Sym^2(C^n) = n(n+1)/2
-and dim Anti^2(C^n) = n(n-1)/2. For n = 2, this gives 3 + 1 = 4.
-
-This decomposition is canonical: it depends only on the SWAP operator,
-which is the unique operator satisfying P(u tensor v) = v tensor u
-for all u, v. No basis choice is needed. QED
+This decomposition is canonical: it depends only on the swap operator P,
+which is uniquely determined by the tensor product structure. No basis
+choice is required. QED
 
 
 ### Step 5. su(3) as the unique compact semisimple commutant
@@ -287,130 +190,136 @@ for all u, v. No basis choice is needed. QED
 
 **(5a) Commutant of su(2) alone.**
 
-By Schur's lemma, the su(2) representation on V = C^2 tensor W
-(with su(2) acting irreducibly on C^2) has commutant
+By Schur's lemma, since su(2) acts irreducibly on the factor C^2_1
+in V = C^2_1 tensor W, every operator commuting with all T_k has the
+form I_2 tensor M for some M in End(W). Therefore
 
-    Comm(su(2)) = I_2 tensor End(W) = I_2 tensor M(4, C).
+    Comm_{End(V)}(su(2)) = {I_2 tensor M : M in End(W)} = I_2 tensor M(4, C).
 
-This is isomorphic to gl(4, C) as an algebra (complex dimension 16).
+This is isomorphic to gl(4, C) as an associative algebra
+(complex dimension 4^2 = 16).
 
 **(5b) Adding SWAP_{23}.**
 
-An operator A in Comm(su(2)) has the form I_2 tensor M for some
-M in End(W). The requirement that A also commutes with SWAP_{23}
-means M must commute with the SWAP operator P on W.
+An operator A = I_2 tensor M in Comm(su(2)) also commutes with
+SWAP_{23} = I_2 tensor P if and only if M commutes with P:
 
-By Step 4, W = Sym^2(C^2) + Anti^2(C^2) = W_+ + W_-. The SWAP
-operator P acts as +I on W_+ and -I on W_-. An operator M in End(W)
-commutes with P if and only if M preserves the decomposition
-W = W_+ + W_-. (This is because P is diagonalizable with distinct
-eigenvalues +1 and -1 on the two summands, so any operator commuting
-with P must preserve the eigenspaces.)
+    [I_2 tensor M, I_2 tensor P] = I_2 tensor [M, P] = 0
+    <==> [M, P] = 0.
+
+Since P is diagonalizable with eigenvalues +1 (on Sym^2 = C^3) and
+-1 (on Anti^2 = C^1), an operator M in End(W) commutes with P if
+and only if M preserves the decomposition W = Sym^2 + Anti^2. That
+is, M must be block diagonal in the Sym/Anti decomposition.
 
 Therefore:
 
-    Comm(su(2), SWAP_{23}) = I_2 tensor [End(W_+) + End(W_-)]
+    Comm(su(2), SWAP_{23}) = I_2 tensor [End(Sym^2) + End(Anti^2)]
                             = I_2 tensor [M(3, C) + M(1, C)]
                             = I_2 tensor [gl(3, C) + gl(1, C)].
 
-This has complex dimension 9 + 1 = 10.
+This has complex dimension 3^2 + 1^2 = 10.
 
 **(5c) Extracting the compact semisimple part.**
 
-The reductive Lie algebra of the compact form is
+The reductive Lie algebra of the unitary (compact) form is
 
-    u(3) + u(1) = [su(3) + u(1)_center] + u(1).
+    u(3) + u(1) = [su(3) + u(1)_{center}] + u(1).
 
-The overall trace on V = C^8 provides one u(1) (the scalar multiples
-of the identity). Removing this, the remaining algebra acting
-nontrivially is
+The overall scalar multiples of I_8 account for one u(1).
+The center of u(3) provides another u(1). The compact semisimple
+part -- meaning the maximal semisimple subalgebra of the compact
+form -- is **su(3)**.
 
-    su(3) + u(1)_Y
+This is unique because:
 
-where u(1)_Y is the hypercharge generator (see Step 6). The compact
-semisimple part -- meaning the maximal semisimple subalgebra of the
-compact form -- is su(3). This is unique because gl(3,C) has a unique
-semisimple part sl(3,C), whose compact real form is su(3). QED
+(i) gl(3, C) has a unique semisimple part, namely sl(3, C)
+(the traceless matrices);
+
+(ii) The compact real form of sl(3, C) is su(3);
+
+(iii) gl(1, C) is abelian, contributing no semisimple part.
+
+Therefore the compact semisimple commutant is su(3). QED
 
 
 ### Step 6. Hypercharge from the traceless U(1) constraint
 
 **Claim.** There is a unique traceless U(1) generator in the commutant,
-and it has eigenvalues +1/3 (with multiplicity 6, on the C^3 subspace
-tensored with C^2) and -1 (with multiplicity 2, on the C^1 subspace
-tensored with C^2). This is the hypercharge generator.
+and it has eigenvalues +1/3 (with multiplicity 6) and -1 (with
+multiplicity 2). This is the hypercharge generator.
 
-*Proof.* The center of the commutant algebra u(3) + u(1) has
-dimension 2, generated by:
+*Proof.* The center of the commutant algebra I_2 tensor [gl(3) + gl(1)]
+is spanned by two elements:
 
-    Q_1 = I_2 tensor I_3 tensor I_1  (identity on C^3 block, zero on C^1)
-    Q_2 = I_2 tensor 0 tensor I_1    (zero on C^3 block, identity on C^1)
+    Z_+ = I_2 tensor Pi_+   (the projector onto C^2 tensor Sym^2 = C^6)
+    Z_- = I_2 tensor Pi_-   (the projector onto C^2 tensor Anti^2 = C^2)
 
-Wait -- let us be more precise. The commutant on V is
+where Pi_+ = (I_4 + P)/2 and Pi_- = (I_4 - P)/2 are the projectors
+on the multiplicity space W.
 
-    I_2 tensor [gl(3) acting on W_+] + I_2 tensor [gl(1) acting on W_-].
-
-The center of this algebra is spanned by two elements:
-
-    Z_1 = I_2 tensor Pi_+   (projector onto C^2 tensor W_+, i.e., the C^6 subspace)
-    Z_2 = I_2 tensor Pi_-   (projector onto C^2 tensor W_-, i.e., the C^2 subspace)
-
-with Z_1 + Z_2 = I_8. Any diagonal (central) generator is
-Y = a Z_1 + b Z_2 for constants a, b.
+Note Z_+ + Z_- = I_8. Any central generator is Y = a Z_+ + b Z_-
+for constants a, b in R (restricting to Hermitian generators).
 
 The tracelessness condition Tr(Y) = 0 gives:
 
-    a * dim(C^2 tensor W_+) + b * dim(C^2 tensor W_-) = 0
-    a * 6 + b * 2 = 0
-    b = -3a.
+    a * 6 + b * 2 = 0   =>   b = -3a.
 
-So Y = a(Z_1 - 3 Z_2) = a(Z_1 - 3(I_8 - Z_1)) = a(4 Z_1 - 3 I_8),
-or equivalently
+So the traceless central generator is unique up to normalization:
 
-    Y = a * diag(+1, +1, +1, +1, +1, +1, -3, -3)
+    Y = a(Z_+ - 3 Z_-) = a(4 Z_+ - 3 I_8).
 
-in a basis adapted to the W_+ and W_- decomposition (with the factor
-of C^2 from weak isospin giving the doubling).
+Normalizing so that the eigenvalue on the Anti^2 (singlet) subspace
+is -1, we set b = -1, hence a = 1/3:
 
-Normalizing so that the eigenvalue on the C^1 (lepton) subspace is -1,
-we set b = -1, hence a = 1/3, and:
-
-    Y = (1/3) Z_1 + (-1) Z_2.
-
-The eigenvalues are:
-
-    Y = +1/3 on C^2 tensor Sym^2(C^2) = C^6  (quark sector: 2 weak x 3 color)
-    Y = -1   on C^2 tensor Anti^2(C^2) = C^2  (lepton sector: 2 weak x 1 singlet)
+    Y has eigenvalue +1/3 on C^2 tensor Sym^2 = C^6  (multiplicity 6)
+    Y has eigenvalue -1   on C^2 tensor Anti^2 = C^2  (multiplicity 2)
 
 This matches the Standard Model hypercharge assignment for one
 generation of left-handed fermions:
 
-    Left-handed quarks (u_L, d_L): weak doublet, color triplet, Y = +1/3
-    Left-handed leptons (nu_L, e_L): weak doublet, color singlet, Y = -1
+    Left-handed quarks:  weak doublet x color triplet, Y = +1/3
+    Left-handed leptons: weak doublet x color singlet, Y = -1
 
-The uniqueness of Y (up to normalization) follows from the
-one-dimensionality of the traceless central subalgebra. QED
+The uniqueness of Y (up to overall normalization) follows from the
+one-dimensionality of the traceless part of the center. QED
 
 ---
 
 ## Summary of the logical chain
 
     Staggered phases on Z^3
-        => Cl(3) on C^8  [Step 1, uniqueness of Clifford reps]
-        => unique su(2) from bivectors  [Step 2, Cl^+(3) = Cl(2)]
-        => cubic symmetry preserves su(2), S_3 acts on multiplicity  [Step 3]
-        => choose axis transposition (23) => SWAP on C^4  [Step 3]
-        => C^4 = C^3 + C^1 canonical decomposition  [Step 4]
-        => commutant of {su(2), SWAP} = gl(3) + gl(1)  [Step 5]
+        => KS representation on C^8 = C^2 x C^2 x C^2  [Step 1]
+        => choose distinguished direction mu_0 = 1  [INPUT]
+        => su(2) on first factor, multiplicity W = C^4  [Step 2]
+        => SWAP_{23} commutes with su(2)  [Step 3]
+        => W = C^3 + C^1 (Sym + Anti)  [Step 4]
+        => Comm(su(2), SWAP) = gl(3) + gl(1)  [Step 5]
         => compact semisimple part = su(3)  [Step 5]
-        => traceless U(1) = hypercharge with Y = 1/3, -1  [Step 6]
+        => traceless U(1) = hypercharge  [Step 6]
 
-The one non-derived input is the **choice of distinguished axis
-transposition** (23). Physically, this corresponds to selecting which
-spatial direction carries weak isospin (direction 1 in our convention),
-with the remaining two directions (2 and 3) forming the color
-multiplicity space. This selection is the lattice analog of
-electroweak symmetry breaking.
+---
+
+## Relation to the Clifford algebra
+
+The Kawamoto-Smit Clifford generators Gamma_mu are related to but
+distinct from the su(2) generators used above:
+
+- Gamma_1 = sigma_x tensor I tensor I = 2 T_1 (a Clifford element)
+- T_2 = sigma_y/2 tensor I tensor I (NOT in Cl(3))
+- T_3 = sigma_z/2 tensor I tensor I (NOT in Cl(3))
+
+The full su(2) used in the proof requires the tensor product structure
+provided by the KS representation, not just the Clifford algebra.
+
+The bivector algebra B_k = -(i/2) epsilon_{ijk} Gamma_i Gamma_j
+forms a DIFFERENT su(2) that couples multiple tensor factors and
+does NOT commute with SWAP_{23}. The two su(2) algebras (T_k and B_k)
+are independent 3-dimensional subalgebras of End(C^8).
+
+This distinction is important: the theorem uses the tensor product
+structure of the KS representation (which is canonical given the lattice
+coordinates), not just the abstract Clifford algebra Cl(3).
 
 ---
 
@@ -434,13 +343,23 @@ generation of left-handed fermions in the Standard Model:
 
 1. **Input:** staggered fermion phases on Z^3 (standard lattice QCD construction).
 2. **Choice:** identification of direction 1 as the weak isospin axis.
+   This is the lattice analog of electroweak symmetry breaking.
 3. **Output:** SU(3)_color x U(1)_Y with correct quantum numbers.
-4. **Not derived:** the selection of direction 1 (this is electroweak symmetry breaking); the existence of three generations; right-handed fermion representations.
+4. **Not derived:** why direction 1 is special (this is EW symmetry
+   breaking); the existence of three generations; right-handed fermion
+   representations.
+5. **Scope:** This is a KINEMATIC result about the symmetry structure
+   of the taste space. It does not address dynamics (confinement,
+   mass generation, etc.).
 
 ---
 
 ## References
 
-- Kawamoto, N. and Smit, J. "Effective Lagrangian and dynamical symmetry breaking in strongly coupled lattice QCD." Nucl. Phys. B192 (1981) 100.
-- Atiyah, M.F., Bott, R., and Shapiro, A. "Clifford modules." Topology 3, suppl. 1 (1964) 3-38.
-- Lawson, H.B. and Michelsohn, M.L. "Spin Geometry." Princeton University Press (1989). Ch. I for Clifford algebra classification.
+- Kawamoto, N. and Smit, J. "Effective Lagrangian and dynamical symmetry
+  breaking in strongly coupled lattice QCD." Nucl. Phys. B192 (1981) 100.
+- Atiyah, M.F., Bott, R., and Shapiro, A. "Clifford modules."
+  Topology 3, suppl. 1 (1964) 3-38.
+- Lawson, H.B. and Michelsohn, M.L. "Spin Geometry."
+  Princeton University Press (1989). Ch. I for Clifford algebra
+  classification.
