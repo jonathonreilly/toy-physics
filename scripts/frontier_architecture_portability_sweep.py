@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Architecture portability sweep for mass law and gravitational attraction.
+Architecture portability sweep for source-mass scaling and gravitational attraction.
 
 Tests key observables across four lattice architectures:
   1. Ordered 3D cubic (baseline)
@@ -19,8 +19,8 @@ Acceptance gate:
   - If Born rule measured, I_3 < 1e-6 (finite-size floor on small lattices)
 
 Boundary:
-  This is a portability companion. It demonstrates architecture independence
-  of the mass law and attraction sign, not a standalone Newton closure.
+  This is a portability companion. It demonstrates architecture portability
+  of source-mass scaling and attraction sign, not a standalone Newton closure.
   Lattice sizes are kept small for tractability.
 """
 
@@ -741,7 +741,7 @@ def main() -> None:
     print("=" * 90)
     print(f"MASS={MASS}, DT={DT}, N_STEPS={N_STEPS}, REG={REG}")
     print(f"Source amplitudes: {SOURCE_AMPLITUDES}")
-    print("Goal: beta ~ 1.0, attractive force, I_3 ~ 0 across architectures")
+    print("Goal: beta ~ 1.0, attractive force, I_3 ~ 0 where measured")
     print()
 
     all_results = []
@@ -806,7 +806,7 @@ def main() -> None:
     # ---- Architecture 4: Random Geometric ----
     print()
     print("-" * 90)
-    print("ARCHITECTURE 4: Random Geometric Graph (side=10, n=100)")
+    print("ARCHITECTURE 4: Random Geometric Graph (2D mass-only, side=10, n=100)")
     print("-" * 90)
     lat = RandomGeometric(side=10, seed=42)
     res = run_mass_sweep_random_geometric(
@@ -817,6 +817,7 @@ def main() -> None:
     _print_sweep(res)
     all_results.append(res)
     res["I3"] = float("nan")  # irregular topology, no clean 3-slit
+    print("  Note: random geometric is 2D and mass-scaling only; no distance-law comparison.")
 
     # ---- Summary table ----
     print()
@@ -874,7 +875,7 @@ def main() -> None:
     print()
 
     overall = gate_beta and gate_attract and gate_born
-    print(f"  OVERALL: {'PASS — architecture independence established' if overall else 'FAIL — see details above'}")
+    print(f"  OVERALL: {'PASS — bounded source-mass portability companion established' if overall else 'FAIL — see details above'}")
     print()
     print(f"Elapsed: {time.time() - t0:.1f}s")
 

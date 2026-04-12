@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Establish architecture independence for the key retained observables:
+Assess source-mass portability for the key retained observables:
 mass exponent beta, gravitational attraction sign, and Born rule I_3.
 
 ## Architectures tested
@@ -12,7 +12,7 @@ mass exponent beta, gravitational attraction sign, and Born rule I_3.
 | 1 | Ordered 3D cubic | Regular, side=14 | Scalar Schrodinger, real hopping |
 | 2 | Staggered 3D cubic | Regular, side=14 | Parity-alternating mass, anti-Hermitian hopping |
 | 3 | Wilson 3D cubic | Regular, side=14 | Wilson fermion (mass + Wilson term) |
-| 4 | Random geometric | Irregular 2D, n=100 | Scalar Schrodinger, distance-weighted hopping |
+| 4 | Random geometric (2D, mass-only) | Irregular 2D, n=100 | Scalar Schrodinger, distance-weighted hopping |
 
 ## Protocol
 
@@ -48,6 +48,9 @@ lattices (3-slit barrier configuration, side=12).
 ## Boundary
 
 - This is a portability companion, not a standalone Newton closure.
+- It demonstrates architecture portability of source-mass scaling and
+  attraction sign across ordered 3D cubic, staggered 3D cubic, Wilson 3D
+  cubic, and a 2D random geometric control row.
 - Lattice sizes are small (side 10-14) for tractability; finite-size effects
   contribute to the I_3 floor (~1e-9 on ordered vs ~1e-11 on staggered).
 - The random geometric architecture is 2D (n=100), not 3D, so the distance
