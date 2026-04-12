@@ -19,6 +19,12 @@ These are not part of the hold list:
 - `WILSON_TEST_MASS_CONTINUUM_NOTE_2026-04-11.md`
 - `NEWTON_DERIVATION_NOTE.md`
 - `NEWTON_PERSISTENT_PATTERN_CONTROL_NOTE_2026-04-11.md`
+- `EMERGENT_PRODUCT_LAW_NOTE.md`
+- `EMERGENT_PRODUCT_LAW_AUDIT_2026-04-11.md`
+- `scripts/frontier_emergent_product_law.py`
+- `ARCHITECTURE_PORTABILITY_SWEEP_NOTE.md`
+- `ARCHITECTURE_PORTABILITY_AUDIT_2026-04-11.md`
+- `scripts/frontier_architecture_portability_sweep.py`
 
 ## Holds
 

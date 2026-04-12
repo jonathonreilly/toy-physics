@@ -33,6 +33,12 @@ These are not review items anymore:
 - `docs/NEWTON_PERSISTENT_PATTERN_CONTROL_NOTE_2026-04-11.md`
 - `docs/IRREGULAR_SIGN_CORE_PACKET_GATE_NOTE.md`
 - `scripts/frontier_irregular_sign_core_packet_gate.py`
+- `docs/EMERGENT_PRODUCT_LAW_NOTE.md`
+- `docs/EMERGENT_PRODUCT_LAW_AUDIT_2026-04-11.md`
+- `scripts/frontier_emergent_product_law.py`
+- `docs/ARCHITECTURE_PORTABILITY_SWEEP_NOTE.md`
+- `docs/ARCHITECTURE_PORTABILITY_AUDIT_2026-04-11.md`
+- `scripts/frontier_architecture_portability_sweep.py`
 
 Status:
 
@@ -56,63 +62,22 @@ Status:
   ordered-lattice family
 - not a theorem
 - not architecture-independent uniqueness
+- bounded-retained emergent cross-field product-law companion
+- safe reading: field-linearity product scaling on one audited open 3D
+  staggered surface
+- not full Newton closure
+- not architecture-independent product-law closure
+- bounded-retained architecture portability companion
+- safe reading: source-mass scaling and attractive-sign portability across the
+  audited ordered, staggered, Wilson, and 2D irregular control rows
+- not architecture-independent full Newton closure
+- not a universal distance-law portability result
 
 ## Review Inventory
 
-### 1. New Bounded Candidates Awaiting Audit
+Everything left in this review worktree is now on hold.
 
-These are now consolidated here from Claude frontier, but are not yet on
-`main` and are not yet approved. They need one last audit pass.
-
-#### A. Emergent product-law candidate
-
-Files:
-
-- `docs/EMERGENT_PRODUCT_LAW_NOTE.md`
-- `scripts/frontier_emergent_product_law.py`
-
-Current claim:
-
-- on the audited open 3D staggered cross-field Poisson surface, `F ~ M_A^alpha
-  M_B^beta` with `alpha ~ 1.015`, `beta ~ 0.986`, `R^2 > 0.99999`
-- the bilinear factor is not explicit in the Hamiltonian
-- frozen-field control stays near-identical
-
-Status:
-
-- approved for bounded promotion
-- audit note written at `docs/EMERGENT_PRODUCT_LAW_AUDIT_2026-04-11.md`
-
-Retained reading:
-
-- field-linearity emergence on this surface
-- not full Newton closure
-- not architecture-independent product-law derivation
-- frozen control stays near-identical on the same audited surface
-
-#### B. Architecture portability candidate
-
-Files:
-
-- `docs/ARCHITECTURE_PORTABILITY_SWEEP_NOTE.md`
-- `scripts/frontier_architecture_portability_sweep.py`
-
-Current claim:
-
-- source-mass exponent `beta ~ 1` and attractive sign survive on four
-  architectures:
-  - ordered 3D cubic
-  - staggered 3D cubic
-  - Wilson 3D cubic
-  - random geometric
-
-Audit focus:
-
-- confirm the architectures are being compared honestly
-- keep it bounded to mass-law/source-scaling portability
-- do not let it drift into architecture-independent full Newton closure
-
-### 2. Everything Else Left Is On Hold
+### 1. Everything Left Is On Hold
 
 Everything else in this review worktree is held pending a specific missing
 control or redesign step.
