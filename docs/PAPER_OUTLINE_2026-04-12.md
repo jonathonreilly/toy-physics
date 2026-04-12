@@ -22,12 +22,12 @@ gravitational and atomic stability bounds, exact SU(2) gauge structure from the
 bipartite Clifford bivectors, and structural SU(3) colour from a graph-first
 axis selector combined with the commutant theorem — yielding the decomposition
 C⁸ = (2,3) ⊕ (2,1) with left-handed charge assignment Y = +1/3 (quarks) and
-Y = −1 (leptons). The framework has no adjustable parameters. We present the
-structural backbone and its numerical verification, identify bounded
-phenomenological windows for the dark matter ratio (R ≈ 5.5), the cosmological
-energy density, and the CMB spectral tilt, and catalogue the open theorems
-required for full closure — chiral completion, generation physicality, and
-anomaly-complete hypercharge.
+Y = −1 (leptons). The retained structural backbone has no adjustable
+parameters; bounded phenomenological windows and still-open gates are reported
+separately. We identify bounded windows for the dark matter ratio (R ≈ 5.5),
+the cosmological energy density, and the CMB spectral tilt, and we catalogue
+the remaining theorems needed for full matter-sector closure — anomaly-complete
+hypercharge and generation physicality.
 
 ---
 
@@ -43,10 +43,9 @@ capture subsets but not the full picture.
 
 **Para 2: Our result.**
 We show that one structure — Cl(3) on Z³ — produces gravitational dynamics,
-SU(2) gauge structure, and structural SU(3) colour from a single lattice with
-no adjustable parameters. We separate retained structural results from bounded
-phenomenological windows and open theorems, and present all three layers
-explicitly.
+SU(2) gauge structure, and structural SU(3) colour from a single lattice. We
+separate retained structural results from bounded phenomenological windows and
+open theorems, and present all three layers explicitly.
 
 **Para 3: What is and isn't new.**
 Staggered fermions and taste algebras are standard (Kogut-Susskind 1975,
@@ -189,16 +188,18 @@ with explicit status labels.
 - Left-handed charge matching Y = +1/3, −1
 
 **What is bounded but promising:**
+- Anomaly-complete hypercharge on the right-handed template, conditional on the
+  separate graph-canonical completion step
+- Z₃ orbit counting for generations, conditional on the physicality theorem
 - Phenomenological windows for R, Λ, n_s, sin θ_C, J, sin²θ_W, m_t
 - Strong-field extension via S = L(1−tanh f)
 - Frozen star / information paradox resolution
 
 **What remains open (the two real gates):**
 
-*Work Package A: Chiral completion.* Derive or identify the right-handed
-singlet sector on the graph surface and verify anomaly cancellation across a
-full generation. This would upgrade the bounded abelian charge matching to
-anomaly-complete hypercharge.
+*Work Package A: Chiral completion.* Derive the right-handed singlet sector
+canonically on the graph surface, rather than by a template, and verify anomaly
+cancellation across a full generation.
 
 *Work Package B: Generation physicality.* Prove that the Z₃ taste orbits
 correspond to physical generations, not representation artifacts. This
