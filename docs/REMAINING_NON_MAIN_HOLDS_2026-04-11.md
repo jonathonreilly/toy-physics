@@ -76,9 +76,11 @@ Files:
 - `docs/IRREGULAR_ENDOGENOUS_SIGN_CLOSURE_NEXT_STEPS_2026-04-11.md`
 - `docs/IRREGULAR_ENDOGENOUS_SIGN_REINFORCEMENT_NOTE_2026-04-11.md`
 - `docs/IRREGULAR_ENDOGENOUS_SIGN_SIZE_PORTABILITY_NOTE_2026-04-11.md`
+- `docs/IRREGULAR_ENDOGENOUS_SIGN_THIRD_FAMILY_NOTE_2026-04-11.md`
 - `scripts/frontier_irregular_endogenous_sign_closure.py`
 - `scripts/frontier_irregular_endogenous_sign_reinforcement.py`
 - `scripts/frontier_irregular_endogenous_sign_size_portability.py`
+- `scripts/frontier_irregular_endogenous_sign_third_family.py`
 
 Why held:
 
@@ -89,7 +91,6 @@ Why held:
 
 Next control:
 
-- a third genuinely independent packet family, or
 - a different observable on the same irregular surface
 
 ### 4. Staggered two-body closure family
