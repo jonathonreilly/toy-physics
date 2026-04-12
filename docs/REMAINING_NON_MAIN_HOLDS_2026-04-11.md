@@ -28,6 +28,43 @@ These are not part of the hold list:
 
 ## Holds
 
+### 0. Overnight Claude audit bundle
+
+Files:
+
+- `docs/OVERNIGHT_CLAUDE_AUDIT_2026-04-12.md`
+- `docs/EMERGENT_GR_SIGNATURES_NOTE.md`
+- `scripts/frontier_emergent_gr_signatures.py`
+- `docs/ELECTROMAGNETISM_PROBE_NOTE.md`
+- `scripts/frontier_electromagnetism_probe.py`
+- `docs/SECOND_QUANTIZED_PROTOTYPE_NOTE.md`
+- `scripts/frontier_second_quantized_prototype.py`
+- `docs/HOLOGRAPHIC_ENTROPY_NOTE.md`
+- `scripts/frontier_holographic_entropy.py`
+- `docs/HAWKING_ANALOG_NOTE.md`
+- `scripts/frontier_hawking_analog.py`
+- `docs/DIMENSION_EMERGENCE_NOTE.md`
+- `scripts/frontier_dimension_emergence.py`
+- `docs/COSMOLOGICAL_EXPANSION_NOTE.md`
+- `scripts/frontier_cosmological_expansion.py`
+- `scripts/frontier_dispersion_relation.py`
+
+Why held:
+
+- the overnight branch contains useful new artifacts, but none of them crosses
+  the current `main` retention bar without substantial narrowing
+- GR-signatures and electromagnetism remain consistency checks rather than
+  GR/Maxwell derivations
+- second-quantized, holographic, and Hawking results remain prototype-scale
+  field-theory probes
+- dimension and cosmology remain bounded proxy studies
+- the new dispersion runner is still an honest negative with anomalous scaling
+
+Next control:
+
+- use the lane-specific blockers in `OVERNIGHT_CLAUDE_AUDIT_2026-04-12.md`
+- do not promote any of these files to `main` without a new bounded audit note
+
 ### 1. Wilson mutual-attraction side lane
 
 Files:

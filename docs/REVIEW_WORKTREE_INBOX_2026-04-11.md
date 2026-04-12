@@ -82,6 +82,34 @@ Everything left in this review worktree is now on hold.
 Everything else in this review worktree is held pending a specific missing
 control or redesign step.
 
+#### Overnight Claude bundle
+
+Files:
+
+- `docs/OVERNIGHT_CLAUDE_AUDIT_2026-04-12.md`
+- `docs/EMERGENT_GR_SIGNATURES_NOTE.md`
+- `docs/ELECTROMAGNETISM_PROBE_NOTE.md`
+- `docs/SECOND_QUANTIZED_PROTOTYPE_NOTE.md`
+- `docs/HOLOGRAPHIC_ENTROPY_NOTE.md`
+- `docs/HAWKING_ANALOG_NOTE.md`
+- `docs/DIMENSION_EMERGENCE_NOTE.md`
+- `docs/COSMOLOGICAL_EXPANSION_NOTE.md`
+- `scripts/frontier_emergent_gr_signatures.py`
+- `scripts/frontier_electromagnetism_probe.py`
+- `scripts/frontier_second_quantized_prototype.py`
+- `scripts/frontier_holographic_entropy.py`
+- `scripts/frontier_hawking_analog.py`
+- `scripts/frontier_dimension_emergence.py`
+- `scripts/frontier_cosmological_expansion.py`
+- `scripts/frontier_dispersion_relation.py`
+
+Why held:
+
+- the overnight branch contains real work, but the safe interpretation is
+  narrower than the overnight storyline
+- no overnight artifact is ready for direct `main` promotion without new
+  bounded audit notes or additional controls
+
 #### A. Wilson mutual-attraction side lane
 
 Source branches:
