@@ -1,0 +1,95 @@
+================================================================================
+HIERARCHY RATIO: G/e^2 FROM GRAPH STRUCTURE
+================================================================================
+
+Question: Does the framework produce a natural gravity/EM
+coupling ratio, and does it depend on lattice spacing?
+
+Method:
+  - Gravity coupling G_eff: from Poisson-solved 1/r field deflection
+  - EM coupling q_eff: from Coulomb potential V=Q/r deflection
+  - Both produce 1/r fields, but couple differently to the action:
+    Gravity: S = L*(1-phi)  [geometric, modifies path length]
+    EM:      phase += q*V   [potential energy, additive]
+
+--------------------------------------------------------------------------------
+PART 1: GRAVITY COUPLING
+--------------------------------------------------------------------------------
+
+  N= 20: s_eff = 0.038426, G_mean = 0.062964, dt = 0.0s
+  N= 31: s_eff = 0.056126, G_mean = 0.064124, dt = 1.0s
+  N= 40: s_eff = 0.061788, G_mean = 0.067478, dt = 6.6s
+  N= 48: s_eff = 0.065124, G_mean = 0.069120, dt = 28.6s
+  N= 56: s_eff = 0.067465, G_mean = 0.070289, dt = 80.4s
+  N= 64: s_eff = 0.069200, G_mean = 0.071119, dt = 195.5s
+
+--------------------------------------------------------------------------------
+PART 2: EM COUPLING
+--------------------------------------------------------------------------------
+
+  N= 20: q_mean = -0.774137, dt = 0.0s
+  N= 31: q_mean = -0.820605, dt = 0.0s
+  N= 40: q_mean = -0.859543, dt = 0.0s
+  N= 48: q_mean = -0.879263, dt = 0.0s
+  N= 56: q_mean = -0.891716, dt = 0.0s
+  N= 64: q_mean = -0.900026, dt = 0.0s
+
+================================================================================
+PART 3: HIERARCHY RATIO G_eff / q_eff^2
+================================================================================
+
+   N      G_eff      q_eff        G/q^2        G/q  log10(G/q^2)
+-----------------------------------------------------------------
+  20   0.062964  -0.774137     0.105064  -0.081334       -0.9785
+  31   0.064124  -0.820605     0.095226  -0.078143       -1.0212
+  40   0.067478  -0.859543     0.091333  -0.078504       -1.0394
+  48   0.069120  -0.879263     0.089406  -0.078611       -1.0486
+  56   0.070289  -0.891716     0.088396  -0.078824       -1.0536
+  64   0.071119  -0.900026     0.087796  -0.079019       -1.0565
+
+--------------------------------------------------------------------------------
+PART 4: SCALING WITH LATTICE SPACING
+--------------------------------------------------------------------------------
+
+If a = 1/N is the lattice spacing, how does G/q^2 scale with a?
+
+  G/q^2 ~ a^0.155  (R^2 = 0.9517)
+  Equivalently: G/q^2 ~ N^-0.155
+
+  WEAK SCALING: G/q^2 is approximately constant (no hierarchy mechanism).
+
+================================================================================
+SUMMARY
+================================================================================
+
+The gravity/EM coupling difference arises from HOW each field
+enters the path-sum action:
+  - Gravity modifies the geometric step length: S = L*(1-phi)
+  - EM adds a potential phase: phase += q*V
+
+This structural difference means:
+  - Gravity is inherently weaker at large distances because it
+    modifies the 'background' that all paths traverse
+  - EM is a direct phase coupling that doesn't dilute with geometry
+
+Mean G/q^2 across lattice sizes: 0.092870
+log10(G/q^2): -1.0321
+
+================================================================================
+BOUNDED CLAIMS
+================================================================================
+
+1. Gravity (scalar on nodes, geometric coupling S=L(1-phi)) and
+   EM (scalar potential, additive coupling phase+=qV) produce
+   different effective couplings from the same 1/r source field.
+
+2. The ratio G_eff/q_eff^2 is measured across lattice sizes
+   N = 20..64 to test for UV-cutoff dependence.
+
+3. If the ratio scales with lattice spacing, the hierarchy
+   between gravity and EM has a geometric/structural origin.
+
+4. Caveat: this is a simplified model. The full hierarchy requires
+   quantum field theory renormalization and running couplings.
+
+Total runtime: 312s (5.2 min)
