@@ -146,6 +146,9 @@ Why held:
   also remain review-only because they are fit-, scenario-, or
   still-changing-analysis surfaces rather than retained first-principles
   closure
+- the latest `SU3_BASIS_INDEPENDENCE` lane reduces the basis-choice objection,
+  but still leaves the canonical residual-symmetry and hypercharge
+  identification steps open
 - the later branch summary `REVIEW_THREAD_SUMMARY_2026-04-12.md` overstates
   several still-open blockers and must not be used as the retention authority
 

@@ -32,6 +32,8 @@ Current state:
 - newer `youthful-neumann` arrivals (`SU3_COMMUTANT`, `SU3_DYNAMICAL_SELECTION`,
   `NEUTRINO_MASSES`, revised frozen-stars runner) have been reviewed and do not
   change that decision
+- the newer `SU3_BASIS_INDEPENDENCE` note materially strengthens the commutant
+  argument, but it still does not clear the retained native-cubic `SU(3)` bar
 - later arrivals (`NEUTRINO_COMPLEX_Z3`, `EWPT_STRENGTH`, `EWPT_LATTICE_MC`,
   `WEINBERG_ANGLE_CORRECTION`, and the GW150914 echo stack) are also review-only:
   they strengthen exploration, but they do not yet clear the retained

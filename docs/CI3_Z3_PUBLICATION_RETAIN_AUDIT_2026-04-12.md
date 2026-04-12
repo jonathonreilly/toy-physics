@@ -176,6 +176,47 @@ Required rework:
 - keep as a review-only strengthening note unless the taste-breaking operator
   is derived on the retained cubic surface rather than prescribed
 
+### 4a. `SU(3)` basis-independence note narrows the presentation objection, but
+still does not close native cubic `SU(3)`
+
+Files:
+
+- `docs/SU3_BASIS_INDEPENDENCE_NOTE.md`
+- `scripts/frontier_su3_basis_independence.py`
+
+Current read:
+
+- this is a real improvement over the earlier commutant lane
+- it shows that the `SU(2) + SWAP` commutant result is stable across:
+  - several faithful `Cl(3)` representations
+  - all three tensor-factor choices
+  - unitary conjugation of the chosen setup
+- this substantially weakens the earlier “mere first-factor presentation”
+  objection
+
+Why not on `main`:
+
+- the script still defines the residual `SWAP` by hand relative to a chosen
+  weak factor, then checks stability under that construction
+- the random-conjugation tests conjugate `SWAP` together with `SU(2)`, which
+  shows isomorphism invariance of the chosen setup, but does not independently
+  derive the residual symmetry from the retained lattice construction
+- the remaining canonicality gap is now narrower but still real:
+  the note does not yet prove that the weak-preserving residual cubic symmetry
+  is selected intrinsically from the lattice, nor that the surviving abelian
+  factor deserves the hypercharge interpretation without extra input
+
+Required rework:
+
+- keep off `main`
+- use it as a strengthening note for the paper draft if needed, but do not
+  upgrade the retained claim past:
+  “the commutant theorem is robust across admissible representations and weak
+  axis choices”
+- to close the lane, derive the residual symmetry canonically from the lattice
+  stabilizer of the derived weak sector and separately justify the physical
+  identification of the surviving `u(1)`
+
 ### 5. Neutrino masses are a downstream phenomenology fit, not retained closure
 
 Files:
@@ -336,6 +377,7 @@ Files:
 - `docs/COMPLETE_DERIVATION_CHAIN_2026-04-12.md`
 - `docs/REVOLUTIONARY_IMPLICATIONS_NOTE.md`
 - `docs/SU3_COMMUTANT_NOTE.md`
+- `docs/SU3_BASIS_INDEPENDENCE_NOTE.md`
 - `docs/SU3_DYNAMICAL_SELECTION_NOTE.md`
 - `scripts/frontier_ultimate_simplification.py`
 - `scripts/frontier_su3_commutant.py`
@@ -352,6 +394,10 @@ Why held:
 - the newer commutant note changes the claim to `SU(2) + SWAP_23 -> su(3)+u(1)`,
   which is mathematically interesting but is **not** the same as native cubic
   `SU(3)` emergence from full `Cl(3)`
+- the newer basis-independence note shows that the `SU(2) + SWAP` commutant
+  theorem is robust across several representations and weak-axis choices, but
+  it still does not independently derive the residual symmetry or the
+  hypercharge interpretation from the retained lane
 - the newer dynamical-selection note still depends on modeled taste-breaking
   coefficients and partial small-volume controls
 
