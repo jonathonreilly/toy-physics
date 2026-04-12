@@ -201,6 +201,19 @@ Current read:
 - useful framing document for manuscript and review response work
 - not a retained physics result and not a promotion target for `main`
 
+### Narrow capture from `origin/codex/next-session-tests`
+
+- `scripts/frontier_lorentzian_weakfield_geodesic_refine.py`
+- `scripts/frontier_persistent_source_spectrum.py`
+
+Current read:
+
+- future-probe scaffolding for two explicitly open lanes:
+  - weak-field Lorentzian geodesic refinement
+  - source-consistency spectrum on the retained ordered lattice
+- useful to preserve on review as reopening harnesses
+- not retained science and not a direct promotion target
+
 ### 2026-04-12 migration from `claude/youthful-neumann`
 
 New bounded promotion candidates:

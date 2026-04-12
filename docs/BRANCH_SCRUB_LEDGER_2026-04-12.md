@@ -156,6 +156,26 @@ Reason:
 - the branch-specific payload is the reviewer-facing axiom risk note above, and
   that note is now preserved on the active review branch
 
+### `origin/codex/next-session-tests`
+
+Status:
+
+- scrubbed into `codex/review-active`
+
+Captured in this pass:
+
+- `scripts/frontier_lorentzian_weakfield_geodesic_refine.py`
+- `scripts/frontier_persistent_source_spectrum.py`
+
+Archive readiness:
+
+- archive-ready
+
+Reason:
+
+- the branch-specific payload is future-probe scaffolding for already-open
+  lanes, and those scripts are now preserved on the active review branch
+
 ## Codex First-Pass Triage
 
 These statuses are mechanical only: whether the branch tip is already an
