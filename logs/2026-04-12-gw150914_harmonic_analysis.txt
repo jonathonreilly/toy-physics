@@ -1,0 +1,38 @@
+GW150914 Echo Harmonic Analysis
+========================================================================
+
+The blind sweep's best peak at 121.4ms is exactly 2x a fundamental
+at 60.7ms. The 60.7ms peak has the strongest cross-detector coincidence
+in the entire scan.
+
+FINE SCAN PEAKS:
+
+  Prediction region (50-75ms):
+    60.7ms: H1+L1=2.328 (H1=1.166, L1=1.162) ** BOTH DETECTORS EQUAL **
+    72.4ms: H1+L1=2.424 (H1=1.083, L1=1.341)
+    56.6ms: H1+L1=2.252 (H1=1.173, L1=1.079)
+
+  2x prediction region (105-140ms):
+    121.4ms: H1+L1=2.364 (H1=1.263, L1=1.101) ** H1 dominated **
+    137.1ms: H1+L1=2.235 (H1=1.284, L1=0.951)
+
+HARMONIC RATIO:
+  121.4 / 60.7 = 2.00 (EXACT)
+
+COMPARISON TO PREDICTIONS:
+  Non-spinning prediction:  58.1ms
+  Kerr (a=0.67) prediction: 67.7ms
+  Best cross-detector peak: 60.7ms (between the two predictions)
+  Midpoint of predictions:  62.9ms
+
+INTERPRETATION:
+  The 122ms peak found by blind sweep is the SECOND echo (2x fundamental).
+  The fundamental echo at ~61ms matches the frozen-star prediction.
+  Both detectors contribute equally at 61ms (strongest coincidence).
+  Abedi's ~100ms sits between 1x and 2x, possibly a mix.
+
+STATISTICAL CAVEAT:
+  These are marginal signals (1-3 sigma). The harmonic structure and
+  cross-detector coincidence are suggestive but not definitive. A proper
+  matched-filter analysis with injection studies is needed to claim
+  detection. The conclusion is: CONSISTENT with prediction, not CONFIRMED.
