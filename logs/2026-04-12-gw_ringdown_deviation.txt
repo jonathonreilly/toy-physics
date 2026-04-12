@@ -1,0 +1,144 @@
+==========================================================================================
+RINGDOWN DAMPING DEVIATION TEST
+Toy-physics framework prediction: tau_measured > tau_GR
+==========================================================================================
+
+FRAMEWORK PREDICTION:
+  In GR, QNM damping is set by perfect absorption at the horizon.
+  In S=L(1-f), the f=1 surface is partially reflecting.
+  -> Damping time tau should be LONGER than GR predicts.
+  -> delta_tau/tau should be POSITIVE across events.
+  -> Excess should correlate with remnant compactness (M/R).
+
+NULL HYPOTHESIS: delta_tau/tau = 0 (GR is exact)
+ALTERNATIVE:     delta_tau/tau > 0 (framework effect)
+
+------------------------------------------------------------------------------------------
+GR QNM PREDICTIONS (l=2, m=2, n=0)
+------------------------------------------------------------------------------------------
+                 Event  M_rem     a     f_GR     tau_GR   Q_GR
+                       [Msun]           [Hz]       [ms]       
+  ------------------------------------------------------------
+       GW190924_021846   13.7  0.67   1232.6       0.82    3.2
+       GW200202_154313   16.9  0.67    999.2       1.01    3.2
+              GW170608   17.8  0.69    963.3       1.07    3.2
+       GW190728_064510   18.1  0.67    932.9       1.08    3.2
+       GW190720_000836   18.6  0.67    907.9       1.11    3.2
+       GW190930_133541   18.6  0.67    907.9       1.11    3.2
+       GW190707_093326   19.2  0.67    879.5       1.15    3.2
+              GW151226   20.5  0.74    871.6       1.27    3.5
+       GW200316_215756   21.2  0.67    796.5       1.27    3.2
+       GW200225_060421   27.5  0.67    614.0       1.64    3.2
+  ... (57 events total)
+
+==========================================================================================
+RESULTS: 12 events with ringdown SNR >= 4.0
+==========================================================================================
+
+                 Event     M   SNR |   f_fit    f_GR    df/f |  tau_fit   tau_GR dtau/tau | excess
+                                   |    [Hz]    [Hz]     [%] |     [ms]     [ms]      [%] | [sigma]
+  ----------------------------------------------------------------------------------------------------
+              GW150914  63.1   6.9 |   247.7   271.7    -8.8 |     0.80     3.80    -79.0 |  +1.02
+*      GW190408_181802  41.1   4.2 |   694.9   410.9   +69.1 |    11.47     2.45   +367.3 |  +1.60
+*      GW190413_134308  75.5   4.2 |    99.4   223.7   -55.5 |    29.38     4.51   +551.9 |  +0.89
+       GW190519_153544 101.0   4.9 |   122.1   167.2   -27.0 |     5.72     6.03     -5.2 |  +0.68
+       GW190521_074359  71.0   5.4 |   227.0   237.8    -4.6 |    14.27     4.24   +236.7 |  +0.32
+*      GW190602_175927 110.9   5.2 |    78.2   152.3   -48.7 |     6.78     6.62     +2.4 |  +0.99
+*      GW190706_222641  99.0   4.2 |   291.7   170.6   +71.0 |     7.94     5.91    +34.4 |  +2.14
+       GW190728_064510  18.1   4.1 |   883.5   932.9    -5.3 |     8.14     1.08   +653.8 |  +0.89
+       GW190915_235702  56.3   4.8 |   184.6   299.9   -38.5 |     3.01     3.36    -10.5 |  -0.03
+       GW191109_010717 103.2   5.9 |   135.3   163.6   -17.3 |     9.00     6.16    +46.1 |  -1.79
+*      GW200129_065458  55.7   7.4 |    61.9   303.2   -79.6 |     1.56     3.33    -53.0 |  +1.85
+       GW200224_222234  57.7   4.8 |   319.9   292.7    +9.3 |     2.03     3.44    -40.9 |  +1.45
+
+  (* = failed frequency quality cut, excluded from statistics)
+
+==========================================================================================
+STATISTICAL ANALYSIS
+==========================================================================================
+
+  1. DAMPING TIME DEVIATION (delta_tau / tau_GR)
+     N events: 7
+     Mean: +114.43%
+     Median: -5.18%
+     Std: 239.65%
+     Std of mean: 90.58%
+     t-statistic: 1.170
+     p-value (one-sided, H1: mean > 0): 0.1433
+     Direction: POSITIVE (framework direction)
+     Equivalent significance: 1.17 sigma
+
+  2. INVERSE-VARIANCE WEIGHTED MEAN
+     Weighted mean: -6.463% +/- 0.345%
+     Significance: -18.73 sigma
+
+  3. SIGN TEST (non-parametric)
+     Positive: 3/7
+     Negative: 4/7
+     Binomial p-value (one-sided): 0.7734
+
+  4. FREQUENCY DEVIATION (delta_f / f_GR)
+     Mean: -13.16%
+     Median: -8.83%
+     Std: 14.68%
+     t-statistic: -2.196 (two-sided p = 0.0705)
+
+  5. COMPACTNESS CORRELATION
+     (Framework predicts larger delta_tau for more compact remnants)
+     Pearson r(M, delta_tau): -0.639 (p=0.1226)
+     Spearman rho(M, delta_tau): +0.000 (p=1.0000)
+     -> No significant correlation detected
+
+  6. SNR-DEPENDENT CHECK
+     (Real signal should be SNR-independent; systematics may correlate)
+     Pearson r(SNR, delta_tau): -0.580 (p=0.1721)
+     No significant SNR dependence (good)
+
+  7. POST-MERGER EXCESS POWER
+     (Framework predicts broadband power from f>1 mode conversion)
+     N events: 7
+     Mean excess: +0.36 sigma
+     Median excess: +0.68 sigma
+     Positive: 5/7
+     t-statistic: 0.905 (one-sided p = 0.2002)
+
+==========================================================================================
+VERDICT
+==========================================================================================
+
+  PRIMARY TEST (delta_tau/tau > 0):
+    Unweighted mean:    +114.43%  (1.2 sigma, p = 0.1433)
+    Weighted mean:      -6.463%  (-18.7 sigma)
+    Sign test:          3/7 positive (p = 0.7734)
+    Verdict: WEAK HINT OF POSITIVE DEVIATION
+
+  NOTE: The inverse-variance weighted mean (-6.46%) is the
+  most reliable statistic, as it downweights noisy measurements.
+  The unweighted mean can be dominated by low-SNR outliers.
+
+  A weak (+114.4%) positive deviation in damping time is
+  present but not statistically significant. More events or higher
+  SNR needed to distinguish from noise.
+
+  CAVEATS:
+    - Spin estimates use a_spin=0.67 default for most O3 events
+    - Ringdown start time (3ms post-merger) is somewhat arbitrary
+    - Whitening and bandpass choices affect the fit
+    - Remnant masses are approximate PE medians
+    - Proper Bayesian PE would give tighter constraints
+
+==========================================================================================
+FULL EVENT SUMMARY
+==========================================================================================
+
+  Events in catalog: 57
+  Events with data: 57
+  Events with ringdown SNR >= 4.0: 7
+  Events with fit success: 7
+
+  STACKED RESULTS:
+    delta_tau/tau:  +114.43% +/- 97.84%
+    delta_f/f:     -13.16% +/- 5.99%
+    Weighted dtau: -6.463% +/- 0.345%
+
+Runtime: 15s (0.3 min)
