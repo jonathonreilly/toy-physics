@@ -152,6 +152,10 @@ Why held:
 - the later `SU3_FORMAL_THEOREM` verifier rewrite resolves the old script
   mismatch, but the lane is still held because the proved `su(2)` is now the
   KS tensor-factor `su(2)`, not the retained native `Cl(3)` / bivector lane
+- the new `NATIVE_OPERATOR_SEARCH_REPORT` confirms the low-degree native
+  operator search collapses to the known Clifford basis: singlets `I` and
+  `Gamma_5`, plus the obvious vector and bivector triplets; it does not
+  produce a canonical same-surface `S_3 -> Z_2` selector
 - the later `HYPERCHARGE_IDENTIFICATION` script gives the right left-handed
   `Y` ratio and charges, but its anomaly-based uniqueness language still
   exceeds what that left-handed surface proves

@@ -37,6 +37,10 @@ Current state:
 - the later `SU3_FORMAL_THEOREM` rewrite fixes the old verifier mismatch
   (`106/106` pass), but the theorem now closes a narrower KS tensor-factor
   commutant result rather than native `Cl(3)`-alone `SU(3)` emergence
+- the new `NATIVE_OPERATOR_SEARCH_REPORT` hardens the remaining hole: the
+  low-degree native Clifford algebra only yields the obvious vector and
+  bivector triplets plus singlets, with no same-surface `S_3 -> Z_2`
+  selector hiding in the low-degree operator span
 - the later `HYPERCHARGE_IDENTIFICATION` lane is still conditional on that
   commutant setup and should not be summarized as anomaly-free closure
 - the later `YT_FROM_ALPHA_S` lane remains review-only: useful constraint, but
