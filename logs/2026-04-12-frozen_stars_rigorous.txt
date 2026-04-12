@@ -89,20 +89,20 @@ PROBE 3: 3D lattice verification
   G = 0.5, N_particles = 8
      L   N_sites       width       f_max         E_kin   converged   iters    time (s)      status
      6       216      2.5214    1.831003    -36.728978        True      14         0.1      STABLE
-     8       512      3.2058    1.492013    -40.931933        True      14         0.1      STABLE
-    10      1000      3.8605    1.265435    -43.143106        True      15         0.2      STABLE
+     8       512      3.2058    1.492015    -40.931933        True      14         0.1      STABLE
+    10      1000      3.8604    1.265437    -43.143105        True      15         0.2      STABLE
     12      1728      4.4850    1.105417    -44.437058        True      15         0.4      STABLE
 
   3D width convergence:
     L=6: width = 2.5214 (in lattice spacings)
     L=8: width = 3.2058 (in lattice spacings)
-    L=10: width = 3.8605 (in lattice spacings)
+    L=10: width = 3.8604 (in lattice spacings)
     L=12: width = 4.4850 (in lattice spacings)
     Relative change (last two): 0.1618
     Width converged (< 5% change): False
 
   --- Attempting L=14 (2744 sites) ---
-  L=14: width = 5.0777, f_max = 0.987249, status = STABLE, time = 0.6s
+  L=14: width = 5.0777, f_max = 0.987232, status = STABLE, time = 0.6s
 
 ========================================================================
 PROBE 4: Compactness R_min/R_S vs mass (numerical)
@@ -170,12 +170,12 @@ PROBE 5: Gravitational wave echo time
   R_lr = 3 GM/c^2,  R_S = 2 GM/c^2
 
      M/M_sun       R_S (m)     R_min (m)   R_min/R_S    t_echo (s)   t_echo (ms)   f_echo (Hz)
-         1.0    2.9538e+03    1.7119e-16  5.7956e-20    9.8527e-06        0.0099   101494.8262
-         5.0    1.4769e+04    2.9274e-16  1.9821e-20    4.9264e-05        0.0493    20298.9652
-        10.0    2.9538e+04    3.6883e-16  1.2486e-20    9.8527e-05        0.0985    10149.4826
-        30.0    8.8615e+04    5.3194e-16  6.0028e-21    2.9558e-04        0.2956     3383.1609
-        60.0    1.7723e+05    6.7020e-16  3.7815e-21    5.9116e-04        0.5912     1691.5804
-       100.0    2.9538e+05    7.9461e-16  2.6901e-21    9.8527e-04        0.9853     1014.9483
+         1.0    2.9538e+03    1.7119e-16  5.7956e-20    8.8270e-04        0.8827     1132.8913
+         5.0    1.4769e+04    2.9274e-16  1.9821e-20    4.5192e-03        4.5192      221.2780
+        10.0    2.9538e+04    3.6883e-16  1.2486e-20    9.1295e-03        9.1295      109.5355
+        30.0    8.8615e+04    5.3194e-16  6.0028e-21    2.7821e-02       27.8214       35.9436
+        60.0    1.7723e+05    6.7020e-16  3.7815e-21    5.6189e-02       56.1891       17.7971
+       100.0    2.9538e+05    7.9461e-16  2.6901e-21    9.4320e-02       94.3195       10.6023
 
   Key physics:
   - Frozen star surface is at R_min << R_S (Planck-scale)
@@ -185,12 +185,12 @@ PROBE 5: Gravitational wave echo time
 
   Scaling: t_echo ~ (4GM/c^3) * ln(2GM / (c^2 l_Planck))
          ~ (M/M_sun) * 2e-5 s * ln(M/M_Planck)
-  M =    1.0 M_sun: ln(R_S/l_Pl) = 0.0, t_echo = 0.0099 ms
-  M =    5.0 M_sun: ln(R_S/l_Pl) = 0.0, t_echo = 0.0493 ms
-  M =   10.0 M_sun: ln(R_S/l_Pl) = 0.0, t_echo = 0.0985 ms
-  M =   30.0 M_sun: ln(R_S/l_Pl) = 0.0, t_echo = 0.2956 ms
-  M =   60.0 M_sun: ln(R_S/l_Pl) = 0.0, t_echo = 0.5912 ms
-  M =  100.0 M_sun: ln(R_S/l_Pl) = 0.0, t_echo = 0.9853 ms
+  M =    1.0 M_sun: ln(R_S/l_Pl) = 44.3, t_echo = 0.8827 ms
+  M =    5.0 M_sun: ln(R_S/l_Pl) = 45.4, t_echo = 4.5192 ms
+  M =   10.0 M_sun: ln(R_S/l_Pl) = 45.8, t_echo = 9.1295 ms
+  M =   30.0 M_sun: ln(R_S/l_Pl) = 46.6, t_echo = 27.8214 ms
+  M =   60.0 M_sun: ln(R_S/l_Pl) = 47.0, t_echo = 56.1891 ms
+  M =  100.0 M_sun: ln(R_S/l_Pl) = 47.4, t_echo = 94.3195 ms
 
 ========================================================================
 PROBE 6: GW150914 echo prediction — comparison with Abedi et al.
@@ -204,45 +204,45 @@ PROBE 6: GW150914 echo prediction — comparison with Abedi et al.
   Non-spinning prediction:
     R_min = 6.7757e-16 m
     R_min / R_S = 3.6997e-21
-    epsilon = 1.0000e+00
-    ln(1/epsilon) = 0.00
-    t_echo = 6.1087e-04 s = 0.6109 ms
+    epsilon = 3.6997e-21
+    ln(1/epsilon) = 47.05
+    t_echo = 5.8089e-02 s = 58.0887 ms
 
   Spinning prediction (a/M = 0.67):
     r_+ = 1.5955e+05 m (0.8712 R_S)
     r_- = 2.3592e+04 m (0.1288 R_S)
     R_lr(spin) = 1.8939e+05 m (1.0341 R_S)
-    Kerr tortoise factor = 2.4884e+21 m
-    t_echo (Kerr) = 1.9907e-04 s = 0.1991 ms
+    Kerr tortoise factor = 2.1492e+05 m
+    t_echo (Kerr) = 6.7651e-02 s = 67.6509 ms
 
   --- Comparison with Abedi et al. (2017) ---
   Abedi et al. claimed echo at ~2.9 sigma
   Their echo time: ~100 ms (order of magnitude)
-  Our prediction (non-spinning): 0.6109 ms
-  Our prediction (Kerr a=0.67): 0.1991 ms
+  Our prediction (non-spinning): 58.0887 ms
+  Our prediction (Kerr a=0.67): 67.6509 ms
 
-  Ratio (ours/Abedi): 0.0020
+  Ratio (ours/Abedi): 0.6765
 
   What Abedi's t_echo implies for the surface:
-    ln(1/epsilon) required: 0.00
-    epsilon = 1.0000e+00
-    Surface offset from R_S: 1.8314e+05 m
-    In Planck lengths: 1.1333e+40
+    ln(1/epsilon) required: 69.75
+    epsilon = 5.1169e-31
+    Surface offset from R_S: 9.3709e-26 m
+    In Planck lengths: 5.7988e+09
 
   Our framework prediction:
     Surface at R_min = N^(1/3) * l_Planck = 6.7757e-16 m
     Surface offset from R_S: 1.8314e+05 m
-    ln(1/epsilon) = 0.00
+    ln(1/epsilon) = 47.05
     This is the echo time from a Planck-scale frozen star
 
   --- Detectability ---
-  Our predicted echo time (0.199 ms) is
-  dominated by the ln(R_S/l_Pl) factor ~ 0
-  Echo frequency ~ 5023.39 Hz
+  Our predicted echo time (67.651 ms) is
+  dominated by the ln(R_S/l_Pl) factor ~ 47
+  Echo frequency ~ 14.78 Hz
   LIGO sensitive band: 10 - 1000 Hz
-  In LIGO band: False
-  Echo frequency above LIGO band
-  Would require high-freq detector
+  In LIGO band: True
+  PREDICTION: GW150914 should show echoes at f ~ 14.8 Hz
+  This is testable with existing LIGO data
 
 ========================================================================
 SUMMARY: Rigorous Frozen Star Predictions
@@ -273,12 +273,12 @@ SUMMARY: Rigorous Frozen Star Predictions
   5. GW ECHO TIME:
      t_echo ~ (4GM/c^3) * ln(2GM / c^2 l_Planck)
      Dominated by logarithmic factor ln(R_S/l_Planck) ~ 85-90
-     For GW150914: t_echo ~ 0.199 ms
+     For GW150914: t_echo ~ 67.651 ms
 
   6. GW150914 PREDICTION:
-     Non-spinning: t_echo = 0.6109 ms
-     Kerr (a=0.67): t_echo = 0.1991 ms
-     Echo frequency: 5023.4 Hz
+     Non-spinning: t_echo = 58.0887 ms
+     Kerr (a=0.67): t_echo = 67.6509 ms
+     Echo frequency: 14.8 Hz
      Abedi et al. claimed ~100 ms; our prediction differs because
      we place the surface at the Planck scale (not just outside R_S).
 
@@ -287,4 +287,4 @@ SUMMARY: Rigorous Frozen Star Predictions
   small lattices tested numerically. The echo time is a specific,
   testable prediction for LIGO/Einstein Telescope.
 
-Total elapsed: 408.5 s
+Total elapsed: 398.5 s

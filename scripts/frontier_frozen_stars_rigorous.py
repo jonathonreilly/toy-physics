@@ -805,8 +805,13 @@ def probe5_gw_echo_time():
         # where epsilon = (R_min - R_S)/R_S if R_min > R_S
         # or epsilon = l_Planck/R_S if R_min < R_S (Planck-scale correction)
 
-        # Use the Planck-scale cutoff formula (most physical):
-        epsilon = max(abs(R_min - R_S), L_PLANCK) / R_S
+        # epsilon = how close the surface is to R_S, measured from INSIDE
+        # For R_min << R_S: epsilon = R_min / R_S (Planck-scale surface)
+        # For R_min > R_S: epsilon = (R_min - R_S) / R_S
+        if R_min < R_S:
+            epsilon = max(R_min, L_PLANCK) / R_S
+        else:
+            epsilon = (R_min - R_S) / R_S
         t_echo = 2 * R_S / C * abs(math.log(epsilon))
 
         # Additional geometric factor from R_lr to R_S
@@ -885,7 +890,7 @@ def probe6_gw150914():
     # Non-spinning echo time
     N_p = M / M_NUCLEON
     R_min = N_p**(1/3) * L_PLANCK
-    epsilon = max(abs(R_min - R_S), L_PLANCK) / R_S
+    epsilon = max(R_min, L_PLANCK) / R_S  # surface at R_min << R_S
     t_echo_nonspinning = 2 * R_S / C * abs(math.log(epsilon))
     t_echo_nonspinning += 2 * (1.5 * R_S - R_S) / C  # light ring to R_S
 
@@ -915,7 +920,7 @@ def probe6_gw150914():
     #   t_echo(a) ~ (2/c) * (r_+^2 + a_phys^2)/(r_+ - r_-) * ln(1/epsilon)
 
     r_minus = R_S / 2 * (1 - math.sqrt(1 - a_spin**2))
-    a_phys = a_spin * G_SI * M / C  # a in meters
+    a_phys = a_spin * G_SI * M / C**2  # a in meters (GM/c^2 * chi)
 
     # Dominant logarithmic term for Kerr
     kerr_factor = (r_plus**2 + a_phys**2) / (r_plus - r_minus)
