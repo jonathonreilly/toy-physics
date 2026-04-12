@@ -24,8 +24,9 @@ decision document:
 Current state:
 
 - no broad `CI(3)` / `Z^3` promotion wave is approved
-- the exact cubic `Cl(3)` / `SU(2)` and taste-orbit algebra are the only
-  sub-lanes close to retainable, and both need narrowing before promotion
+- the exact cubic `Cl(3)` / `SU(2)` bounded gauge note is now on `main`
+- the taste-orbit algebra remains the next closest `CI(3)` / `Z^3` sub-lane,
+  but still needs narrowing before promotion
 - `SU(3)` / generations / dark matter / Higgs / cosmology / strong-field
   notes remain on review until their claim boundaries are rewritten
 - newer `youthful-neumann` arrivals (`SU3_COMMUTANT`, `SU3_DYNAMICAL_SELECTION`,
@@ -60,6 +61,8 @@ These are not review items anymore:
 - `docs/ARCHITECTURE_PORTABILITY_SWEEP_NOTE.md`
 - `docs/ARCHITECTURE_PORTABILITY_AUDIT_2026-04-11.md`
 - `scripts/frontier_architecture_portability_sweep.py`
+- `docs/BOUNDED_NATIVE_GAUGE_NOTE.md`
+- `scripts/frontier_non_abelian_gauge.py`
 
 Status:
 

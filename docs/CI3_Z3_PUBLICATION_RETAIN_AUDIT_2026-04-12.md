@@ -9,6 +9,18 @@ current `main` retention bar.
 
 No broad `CI(3)` / `Z^3` promotion wave should go to `main` in this pass.
 
+One bounded sub-lane is now retained on `main`:
+
+- `docs/BOUNDED_NATIVE_GAUGE_NOTE.md`
+- `scripts/frontier_non_abelian_gauge.py`
+
+That promotion is intentionally narrow:
+
+- retained: exact native cubic `Cl(3)` / `SU(2)` algebra
+- explicit open: native cubic `SU(3)`
+- not promoted: generations, dark matter, Higgs, cosmology, neutrino fits, or
+  strong-field phenomenology
+
 The lane is not blocked by lack of activity; it is blocked by claim hygiene:
 
 - the algebraic core and the phenomenology layer are currently mixed together
@@ -33,15 +45,10 @@ Safe reading:
 - native cubic staggered structure gives exact `Cl(3)` / `SU(2)` content
 - native cubic `SU(3)` is still negative or incomplete on the audited surface
 
-Why not yet on `main`:
+Current status:
 
-- the note currently sits beside later notes that claim native cubic `SU(3)`
-  closure, so promoting it alone would leave the lane internally contradictory
-
-Required rework:
-
-- write a fresh bounded note that explicitly freezes the current honest read:
-  `SU(2)` native positive, `SU(3)` native cubic not closed
+- this bounded note is now on `main`
+- it is the canonical retained entrypoint for the native gauge lane
 
 ### 2. Taste-orbit algebra, after stripping physical-generation language
 

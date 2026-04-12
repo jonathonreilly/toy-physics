@@ -133,6 +133,9 @@ Why held:
   observationally matched phenomenology, and exploratory astrophysics
 - the strongest `SU(3)` and generation claims still exceed what the current
   audited scripts establish
+- the bounded native cubic `Cl(3)` / `SU(2)` note is already retained on
+  `main`; what remains off `main` are the `SU(3)` / generations /
+  phenomenology / strong-field extensions
 - several phenomenology runners rely on observed cosmological or Standard Model
   inputs, so they are not first-principles retained predictions
 - the post-audit arrivals (`SU3_COMMUTANT`, `SU3_DYNAMICAL_SELECTION`,
