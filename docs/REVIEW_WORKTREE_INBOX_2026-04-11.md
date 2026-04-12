@@ -14,6 +14,21 @@ This inbox is intentionally strict:
   full Newton or Einstein closure unless the note explicitly says the missing
   controls are closed
 
+## 2026-04-12 Publication Audit
+
+For the `CI(3)` / `Z^3` publication lane, use this as the authoritative retain
+decision document:
+
+- `docs/CI3_Z3_PUBLICATION_RETAIN_AUDIT_2026-04-12.md`
+
+Current state:
+
+- no broad `CI(3)` / `Z^3` promotion wave is approved
+- the exact cubic `Cl(3)` / `SU(2)` and taste-orbit algebra are the only
+  sub-lanes close to retainable, and both need narrowing before promotion
+- `SU(3)` / generations / dark matter / Higgs / cosmology / strong-field
+  notes remain on review until their claim boundaries are rewritten
+
 ## Already On `main`
 
 These are not review items anymore:

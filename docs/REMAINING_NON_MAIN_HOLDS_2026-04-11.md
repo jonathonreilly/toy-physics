@@ -99,6 +99,49 @@ overnight hold bundle.
 
 ## Holds
 
+### CI(3) / Z^3 publication cluster
+
+Files:
+
+- `docs/CI3_Z3_PUBLICATION_RETAIN_AUDIT_2026-04-12.md`
+- `docs/ULTIMATE_SIMPLIFICATION_NOTE.md`
+- `docs/GENERATIONS_RIGOROUS_NOTE.md`
+- `docs/GENERATIONS_WEAKNESS_ANALYSIS_NOTE.md`
+- `docs/NON_ABELIAN_GAUGE_NOTE.md`
+- `docs/ALPHA_S_DETERMINATION_NOTE.md`
+- `docs/DM_RATIO_SOMMERFELD_NOTE.md`
+- `docs/ANNIHILATION_RATIO_NOTE.md`
+- `docs/DARK_MATTER_CLOSURE_NOTE.md`
+- `docs/HIGGS_MECHANISM_NOTE.md`
+- `docs/HIGGS_MASS_NOTE.md`
+- `docs/MASS_SPECTRUM_NOTE.md`
+- `docs/MASS_HIERARCHY_RG_NOTE.md`
+- `docs/OMEGA_LAMBDA_NOTE.md`
+- `docs/CC_VALUE_NOTE.md`
+- `docs/CC_FACTOR15_NOTE.md`
+- `docs/UV_IR_COSMOLOGICAL_NOTE.md`
+- `docs/FROZEN_STARS_NOTE.md`
+- `docs/STRONG_FIELD_GR_NOTE.md`
+- `docs/ACCESSIBLE_PREDICTION_NOTE.md`
+- `docs/COMPLETE_DERIVATION_CHAIN_2026-04-12.md`
+- `docs/REVOLUTIONARY_IMPLICATIONS_NOTE.md`
+- corresponding `frontier_*` runners on the same lane
+
+Why held:
+
+- the lane mixes exact algebraic statements, chosen embeddings, reviewer memos,
+  observationally matched phenomenology, and exploratory astrophysics
+- the strongest `SU(3)` and generation claims still exceed what the current
+  audited scripts establish
+- several phenomenology runners rely on observed cosmological or Standard Model
+  inputs, so they are not first-principles retained predictions
+
+Next control:
+
+- follow `docs/CI3_Z3_PUBLICATION_RETAIN_AUDIT_2026-04-12.md`
+- only promote after rewriting the lane into bounded algebra, explicit
+  conditional claims, and observational-input consistency notes
+
 ### 0. Overnight Claude audit bundle
 
 Files:
