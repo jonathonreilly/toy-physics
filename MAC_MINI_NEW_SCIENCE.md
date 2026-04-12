@@ -60,6 +60,20 @@ Confirm d=3 is highest dimension with stable atoms.
 python3 scripts/frontier_bound_state_selection.py 2>&1 | tee ~/Desktop/bound_states.txt
 ```
 
+## 7. Deep Experimental Literature Search
+
+The earlier literature search found no anomaly match. Look deeper at:
+- Precision tests of the equivalence principle (MICROSCOPE satellite, Eot-Wash)
+- Gravitational Aharonov-Bohm experiments
+- Atom interferometry gravity measurements (Stanford tower, MAGIS)
+- Any experiment measuring gravitational phases at quantum level
+
+```bash
+python3 scripts/frontier_deep_literature_search.py 2>&1 | tee logs/2026-04-12-deep-literature.txt
+```
+
+Even null results are useful -- they constrain the parameter space.
+
 ## Run-all one-liner
 
 ```bash
