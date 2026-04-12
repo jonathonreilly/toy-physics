@@ -129,15 +129,27 @@ Current read:
 Why not on `main`:
 
 - this does not repair the original native-cubic `SU(3)` claim
-- it introduces a new extra symmetry/identification layer rather than deriving
-  `SU(3)` from the original `Cl(3)` lane
+- `SWAP_23` is indeed a real cubic lattice symmetry, so the issue is **not**
+  that an unphysical operator was imported from outside the lattice
+- the unresolved step is subtler: the current derivation uses the residual
+  cubic exchange symmetry that preserves a chosen `SU(2)` factorization, and
+  the note does not yet show that this weak-preserving `3+1` split is forced
+  canonically and basis-independently by the retained cubic construction
+- as written, the result is a correct commutant theorem for
+  `SU(2)_weak + SWAP_23`, but it is not yet a closed derivation of
+  native-cubic `SU(3)` from the full `Cl(3) on Z^3` lane
 
 Required rework:
 
 - reframe as a bounded algebraic side result:
-  “with added `SU(2)` factorization plus `SWAP_23`, the commutant has a
+  “given the derived `SU(2)` factorization and the compatible residual cubic
+  exchange `SWAP_23`, the commutant has a
   `3+1` structure”
-- do not present it as closure of the original `Cl(3) on Z^3 => SU(3)` claim
+- if the goal is promotion beyond that, prove that the residual symmetry and
+  the resulting `3+1` decomposition are intrinsic to the lattice construction
+  rather than representation-level choices
+- until then, do not present it as closure of the original
+  `Cl(3) on Z^3 => SU(3)` claim
 
 ### 4. `SU(3)` dynamical-selection note strengthens the case, but does not close it
 

@@ -10,12 +10,14 @@ Pure algebraic computation on C^8 = (C^2)^{otimes 3} shows that
 within End(C^8). This is a bounded algebraic result: with the added
 SU(2) factorization plus SWAP_23, the commutant has a 3+1 structure.
 
-**This does NOT close the original "Cl(3) on Z³ ⇒ SU(3)" claim.**
+**This does NOT yet close the original "Cl(3) on Z³ ⇒ SU(3)" claim.**
 The full Cl(3) commutant is dim 8 (too small for su(3) + u(1)).
-SWAP_23 is a physical cubic symmetry, but introducing it as an
-additional constraint is a new identification layer, not a derivation
-from native Cl(3) alone. See BOUNDED_NATIVE_GAUGE_NOTE.md for the
-retained claim boundaries.
+`SWAP_23` is a real cubic lattice symmetry, not an alien extra axiom.
+The unresolved issue is that the present derivation is formulated after
+choosing the weak-preserving tensor-factor split, and it does not yet
+show that the resulting `3+1` decomposition is forced canonically and
+basis-independently by the retained cubic construction. See
+`BOUNDED_NATIVE_GAUGE_NOTE.md` for the retained claim boundaries.
 
 ## Setup
 
@@ -85,6 +87,9 @@ directions.  SWAP_23 is the **transposition of spatial directions
 This is physically natural: if the lattice has a Z_2 symmetry
 exchanging two spatial directions (e.g., a reflection or rotation
 in the 2-3 plane), then the gauge symmetry must commute with it.
+What remains to be shown for full closure is that this weak-preserving
+exchange symmetry is selected intrinsically by the retained lattice
+construction rather than by a convenient tensor-factor presentation.
 
 ### The 3 + 1 decomposition
 
