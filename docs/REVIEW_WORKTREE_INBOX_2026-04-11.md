@@ -28,6 +28,9 @@ Current state:
   sub-lanes close to retainable, and both need narrowing before promotion
 - `SU(3)` / generations / dark matter / Higgs / cosmology / strong-field
   notes remain on review until their claim boundaries are rewritten
+- newer `youthful-neumann` arrivals (`SU3_COMMUTANT`, `SU3_DYNAMICAL_SELECTION`,
+  `NEUTRINO_MASSES`, revised frozen-stars runner) have been reviewed and do not
+  change that decision
 
 ## Already On `main`
 

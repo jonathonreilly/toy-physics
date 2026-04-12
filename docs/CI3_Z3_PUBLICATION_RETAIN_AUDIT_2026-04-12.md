@@ -75,6 +75,113 @@ Required rework:
   - explicit hold: physical generations require taste physicality as a named
     axiom or separate closure argument
 
+## Post-Audit Arrivals On `review-active`
+
+These arrived after the first publication audit and do **not** change the
+current promotion decision.
+
+### 3. `SU(3)` commutant note does not close native cubic `SU(3)`
+
+Files:
+
+- `docs/SU3_COMMUTANT_NOTE.md`
+- `scripts/frontier_su3_commutant.py`
+
+Current read:
+
+- the mathematically interesting result is a commutant statement for
+  `SU(2)` on one tensor factor plus a discrete `SWAP_23` symmetry, yielding a
+  `gl(3) + gl(1)` decomposition
+- the script itself also shows that the **full** `Cl(3)` commutant is too
+  small (`dim = 8`) to give `su(3) + u(1)`
+
+Why not on `main`:
+
+- this does not repair the original native-cubic `SU(3)` claim
+- it introduces a new extra symmetry/identification layer rather than deriving
+  `SU(3)` from the original `Cl(3)` lane
+
+Required rework:
+
+- reframe as a bounded algebraic side result:
+  “with added `SU(2)` factorization plus `SWAP_23`, the commutant has a
+  `3+1` structure”
+- do not present it as closure of the original `Cl(3) on Z^3 => SU(3)` claim
+
+### 4. `SU(3)` dynamical-selection note strengthens the case, but does not close it
+
+Files:
+
+- `docs/SU3_DYNAMICAL_SELECTION_NOTE.md`
+- `scripts/frontier_su3_dynamical_selection.py`
+
+Current read:
+
+- useful stress-test against the original hand-embedding objection
+- still relies on inserted taste-breaking coefficients and small-volume
+  weak-coupling diagnostics
+
+Why not on `main`:
+
+- the triplet/singlet splitting is not computed from the retained cubic lane
+  itself; it is modeled via imported `O(a^2)` taste-breaking parameters
+- the confinement section is explicitly only partial on a small weak-coupling
+  lattice
+
+Required rework:
+
+- keep as a review-only strengthening note unless the taste-breaking operator
+  is derived on the retained cubic surface rather than prescribed
+
+### 5. Neutrino masses are a downstream phenomenology fit, not retained closure
+
+Files:
+
+- `docs/NEUTRINO_MASSES_NOTE.md`
+- `scripts/frontier_neutrino_masses.py`
+
+Current read:
+
+- interesting speculative seesaw / `Z_3` selection-rule exercise
+- multiple observables are obtained by best-fit scans over free structural and
+  breaking parameters
+
+Why not on `main`:
+
+- the runner fits or targets experimental mass ratios, mixing angles, and
+  cosmological bounds
+- the note itself acknowledges tuned breaking parameters and tensions
+
+Required rework:
+
+- keep off `main`
+- if reopened, rewrite as a bounded phenomenology note with explicit “fit, not
+  derivation” language
+
+### 6. Revised frozen-stars runner is still not retention-ready
+
+Files:
+
+- `scripts/frontier_frozen_stars_rigorous.py`
+
+Current read:
+
+- stronger than the original 1D-only toy because it adds a sparse 3D Hartree
+  surface and analytical scaling arguments
+- still a strong-field exploratory runner, not a retained compact-object card
+
+Why not on `main`:
+
+- the astrophysical interpretation still outruns the audited numerical surface
+- there is still no bounded note freezing the exact claim boundary for the new
+  script
+
+Required rework:
+
+- write a bounded note first
+- keep any claim at the level of “lattice self-gravity resists collapse on the
+  tested Hartree surfaces,” not echo/Kerr/astrophysical phenomenology
+
 ## Explicit Holds
 
 ### A. `SU(3)` from `Cl(3)` on `Z^3` is not retained
@@ -84,7 +191,11 @@ Files:
 - `docs/ULTIMATE_SIMPLIFICATION_NOTE.md`
 - `docs/COMPLETE_DERIVATION_CHAIN_2026-04-12.md`
 - `docs/REVOLUTIONARY_IMPLICATIONS_NOTE.md`
+- `docs/SU3_COMMUTANT_NOTE.md`
+- `docs/SU3_DYNAMICAL_SELECTION_NOTE.md`
 - `scripts/frontier_ultimate_simplification.py`
+- `scripts/frontier_su3_commutant.py`
+- `scripts/frontier_su3_dynamical_selection.py`
 
 Why held:
 
@@ -94,6 +205,11 @@ Why held:
 - that is a compatible embedding, not an emergent native-cubic derivation
 - the later narrative notes promote that embedding to “everything from Cl(3) on
   Z^3”, which is stronger than the audited code supports
+- the newer commutant note changes the claim to `SU(2) + SWAP_23 -> su(3)+u(1)`,
+  which is mathematically interesting but is **not** the same as native cubic
+  `SU(3)` emergence from full `Cl(3)`
+- the newer dynamical-selection note still depends on modeled taste-breaking
+  coefficients and partial small-volume controls
 
 What must be redone:
 
@@ -192,6 +308,7 @@ Files:
 - `docs/STRONG_FIELD_REGIME_NOTE.md`
 - `docs/ACCESSIBLE_PREDICTION_NOTE.md`
 - `scripts/frontier_frozen_stars.py`
+- `scripts/frontier_frozen_stars_rigorous.py`
 - `scripts/frontier_strong_field_gr.py`
 - `scripts/frontier_strong_field_regime.py`
 - `scripts/frontier_accessible_prediction.py`
@@ -200,6 +317,8 @@ Why held:
 
 - the frozen-stars runner is a 1D Hartree toy solver that is later interpreted
   as 3D compact-object phenomenology
+- the revised “rigorous” runner adds analytical scaling and a sparse 3D Hartree
+  surface, but still does not freeze a bounded astrophysical claim
 - the strong-field note itself does not close horizon, Kerr, ringdown, or
   post-Newtonian structure
 - the accessible-prediction lane is a memo/proposal card, not a result

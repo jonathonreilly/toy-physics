@@ -135,6 +135,9 @@ Why held:
   audited scripts establish
 - several phenomenology runners rely on observed cosmological or Standard Model
   inputs, so they are not first-principles retained predictions
+- the post-audit arrivals (`SU3_COMMUTANT`, `SU3_DYNAMICAL_SELECTION`,
+  `NEUTRINO_MASSES`, revised frozen-stars runner) strengthen exploration but do
+  not close the retained-core blockers
 
 Next control:
 
