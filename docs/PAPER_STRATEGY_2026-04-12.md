@@ -47,12 +47,14 @@ that Cl(3) on Z³ does.
 **Section 3: The Standard Model (~500 words)**
 - U(1) from edge phases (Coulomb confirmed)
 - SU(2) from bipartite → Cl(3) → [S_i, S_j] = iS_k (machine precision)
-- SU(3): commutant of {SU(2), spatial exchange} = su(3) ⊕ u(1) uniquely
-  - Both SU(2) and SWAP₂₃ come from the axiom (Cl(3) on Z³)
-  - Full derivation: bipartite → SU(2), cubic symmetry → SWAP₂₃, commutant → su(3) ⊕ u(1)
-  - Technical note in methods: Cl(3) algebra alone overconstrains (dim 8 commutant);
-    the derivation uses Cl(3) + cubic lattice symmetry, both part of the axiom
+- SU(3): commutant of {derived SU(2), residual cubic exchange} = su(3) ⊕ u(1)
+  - Proven basis-independent: all 3 axis choices, 1000 random conjugations, double commutant theorem
+  - Framing: "derived SU(2) plus residual cubic symmetry on Z³ forces su(3) ⊕ u(1)"
+  - Do NOT say: "Cl(3) alone derives SU(3)" — that claim is not earned
+  - Explicitly separate: (a) algebra closure of su(3) ⊕ u(1) commutant (PROVEN)
+    from (b) physical identification of the abelian factor as hypercharge (OPEN)
   - Prior art: Furey, Stoica, Trayling — cite extensively
+  - Note: basis-independence proof appears to be new (not in existing literature)
 - 3 generations from Z₃ orbifold of 8 taste doublers
 
 **Section 4: Quantitative predictions (~500 words)**
@@ -77,7 +79,8 @@ that Cl(3) on Z³ does.
 - GW echoes (review hold — mention as exploratory, not in main claims)
 
 **Section 6: What is not claimed (~300 words)**
-- SU(3) derived via commutant (solid), but referee may challenge SWAP₂₃ as "extra"
+- "Cl(3) alone derives SU(3)" — we say "derived SU(2) + residual cubic exchange"
+- Physical identification of commutant U(1) as hypercharge (algebra proven, ID open)
 - Full nonlinear Einstein equations (weak-field only)
 - Specific Higgs mass (y_t not derived; CW is consistency check)
 - This is honest and essential — referees will look for overclaiming
