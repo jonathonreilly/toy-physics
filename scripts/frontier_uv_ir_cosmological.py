@@ -896,11 +896,21 @@ def test6_spectral_gap():
         if len(nz) < 2:
             continue
         lambda_0 = nz[0]
-        lambda_1 = nz[1]
+        # For periodic BC, lowest eigenvalue is triply degenerate (3 spatial directions).
+        # Find the first DISTINCT eigenvalue above lambda_0.
+        distinct_tol = lambda_0 * 0.01  # eigenvalues within 1% are "same"
+        lambda_1 = lambda_0
+        for ev in nz:
+            if ev - lambda_0 > distinct_tol:
+                lambda_1 = ev
+                break
         gap = lambda_1 - lambda_0
         lambda_max = evals[-1] if n <= 8000 else 12.0  # theoretical max for 3D cubic
         bandwidth = lambda_max - lambda_0
         gap_bw_ratio = gap / bandwidth if bandwidth > 0 else 0
+
+        # Degeneracy count of lowest eigenvalue
+        n_degen = int(np.sum(np.abs(nz - lambda_0) < distinct_tol))
 
         results_p.append({
             'N': N,
@@ -908,13 +918,14 @@ def test6_spectral_gap():
             'lambda_0': lambda_0,
             'lambda_1': lambda_1,
             'gap': gap,
+            'n_degen': n_degen,
             'bandwidth': bandwidth,
             'gap_bw_ratio': gap_bw_ratio,
         })
 
         print(f"    N={N:2d}  n={n:5d}  lambda_0={lambda_0:.6f}  "
               f"lambda_1={lambda_1:.6f}  gap={gap:.6f}  "
-              f"gap/BW={gap_bw_ratio:.6f}")
+              f"degen={n_degen}  gap/BW={gap_bw_ratio:.6f}")
 
     # Check gap scaling
     Ns = np.array([r['N'] for r in results_p], dtype=float)
