@@ -757,7 +757,7 @@ def test5_pin_144_factor():
     print(f"    = {factor_exact:.6f}")
     print(f"    (The prior work quoted 1.44 using a different convention:")
     print(f"     Lambda ~ G*rho_vac ~ a^2/a^4 = 1/a^2 where a is a UV cutoff.")
-    print(f"     The 1/sqrt(3*Omega_L) derivation uses the Friedmann equation.)"))
+    print(f"     The 1/sqrt(3*Omega_L) derivation uses the Friedmann equation.)")
 
     # Numerical verification
     print(f"\n  Numerical checks with different boundary conditions:")
