@@ -1,12 +1,21 @@
-# SU(3) as Commutant of SU(2)_weak + Z_2 in Taste Space
+# SU(3) as Commutant of SU(2)_weak + SWAP_23 in Taste Space
+
+**Status:** BOUNDED SIDE RESULT — does not close native cubic SU(3)
+**Authority:** CI3_Z3_PUBLICATION_RETAIN_AUDIT_2026-04-12.md
 
 ## Summary
 
 Pure algebraic computation on C^8 = (C^2)^{otimes 3} shows that
 **su(3) + u(1) is the unique commutant** of {SU(2)_weak, SWAP_23}
-within End(C^8).  No physics assumptions are needed beyond the
-tensor product structure of the staggered lattice taste space and
-the identification of SU(2) with the first tensor factor.
+within End(C^8). This is a bounded algebraic result: with the added
+SU(2) factorization plus SWAP_23, the commutant has a 3+1 structure.
+
+**This does NOT close the original "Cl(3) on Z³ ⇒ SU(3)" claim.**
+The full Cl(3) commutant is dim 8 (too small for su(3) + u(1)).
+SWAP_23 is a physical cubic symmetry, but introducing it as an
+additional constraint is a new identification layer, not a derivation
+from native Cl(3) alone. See BOUNDED_NATIVE_GAUGE_NOTE.md for the
+retained claim boundaries.
 
 ## Setup
 

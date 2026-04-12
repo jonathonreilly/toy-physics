@@ -1,22 +1,28 @@
-# Frozen Stars Rigorous: 3D Verification + GW150914 Echo Prediction
+# Frozen Stars Rigorous: Bounded Hartree Note
 
 **Date:** 2026-04-12
 **Script:** `scripts/frontier_frozen_stars_rigorous.py`
 **Log:** `logs/2026-04-12-frozen_stars_rigorous.txt`
-**Status:** 6/6 probes PASS — 3D verified, echo time predicted
+**Status:** BOUNDED — lattice self-gravity resists collapse on tested Hartree surfaces
+**Authority:** CI3_Z3_PUBLICATION_RETAIN_AUDIT_2026-04-12.md
 
 ---
 
 ## Summary
 
 The original frozen star investigation (frontier_frozen_stars.py) was flagged by
-review as "extrapolated from a 1D Hartree toy" (P1-5). This rigorous follow-up
-addresses that objection with 6 probes including 3D lattice verification up to
-L=14 (2744 sites) and a specific GW150914 echo time prediction.
+review as "extrapolated from a 1D Hartree toy" (P1-5). This follow-up adds
+analytical scaling arguments and a sparse 3D Hartree surface (up to L=14, 2744
+sites).
 
-**Key result:** Fermi stabilization is lattice-size independent and persists in
-full 3D. The GW150914 echo time is 67.65 ms at 14.8 Hz — in the LIGO band and
-testable with existing data.
+**Bounded claim:** Lattice Fermi pressure resists gravitational collapse on all
+tested Hartree surfaces (1D up to N=1000, 3D up to L=14). The stabilization is
+lattice-size independent.
+
+**NOT retained as closure:** The GW150914 echo time, Kerr corrections,
+compact-object phenomenology, and astrophysical scaling extrapolations are
+EXPLORATORY and are not part of the bounded claim surface. They require a
+genuine 3D strong-field calculation to be retained.
 
 ---
 

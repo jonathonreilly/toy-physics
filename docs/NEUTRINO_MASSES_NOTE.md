@@ -1,8 +1,17 @@
 # Neutrino Mass Hierarchy from Z_3 Generation Structure
 
 **Date:** 2026-04-12
-**Status:** Rigorous development -- predictions numerically verified
+**Status:** BOUNDED PHENOMENOLOGY — fit, not derivation
+**Authority:** CI3_Z3_PUBLICATION_RETAIN_AUDIT_2026-04-12.md
 **Script:** `scripts/frontier_neutrino_masses.py`
+
+**Caveat:** This investigation uses the Z_3 selection rules to constrain the
+Majorana mass matrix to a 2-parameter form, then FITS the remaining parameters
+(rho = B/A, eta = eps/A, kappa, delta_D) to observed mass-squared differences
+and mixing angles. The results are a bounded phenomenological consistency check,
+not a parameter-free derivation. The Z_3 selection rules themselves are derived
+from the retained taste-orbit structure, but the specific mass ratios and mixing
+angles require fitted breaking parameters.
 
 ---
 
