@@ -58,8 +58,8 @@ review-only.
 The safest paper-facing statement is now:
 
 - bounded direct lattice contact-propagator observable: yes
-- exact continuum Sommerfeld equality: not yet proven on the lattice script
+- continuum Sommerfeld equality: supported by the analytic proof plus the
+  direct lattice computation, but still separate from the relic-abundance step
 - full freeze-out / relic-abundance closure: open
 
 That is the clean boundary to use in the manuscript and review docs.
-

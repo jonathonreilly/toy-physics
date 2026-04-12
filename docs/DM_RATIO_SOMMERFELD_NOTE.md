@@ -2,31 +2,32 @@
 
 **Date:** 2026-04-12
 **Status:** Bounded direct lattice contact-propagator observable
-**Script:** `scripts/frontier_dm_contact_propagator.py`
-**Log:** `logs/2026-04-12-dm_contact_propagator.txt`
+**Scripts:** `scripts/frontier_sommerfeld_lattice_greens.py`, `scripts/frontier_dm_ratio_structural.py`
+**Logs:** `logs/2026-04-12-sommerfeld_lattice_greens.txt`, `logs/2026-04-12-dm_ratio_structural.txt`
 **Depends on:** `docs/ANNIHILATION_RATIO_NOTE.md`
 
 ---
 
 ## Abstract
 
-The old Sommerfeld note was written as a closure claim.  The current reviewed
+The old Sommerfeld note was written as a closure claim. The current reviewed
 status is narrower: the code now performs a direct finite-lattice contact-
 propagator computation for Coulomb and free Hamiltonians, so the contact
 response is a genuine lattice observable rather than a rephrased continuum
-formula.
+formula. The separate analytic proof/convergence note now handles the
+continuum limit; this file only freezes the lattice-side input.
 
-For the benchmark scan in `scripts/frontier_dm_contact_propagator.py`:
+For the benchmark scan in `scripts/frontier_sommerfeld_lattice_greens.py`:
 
 | Observable | Free | Coulomb | Ratio |
 |---|---:|---:|---:|
 | Literal contact resolvent `|G(0,0)|` | computed | computed | finite, scheme-dependent |
 | Boundary-driven contact amplitude | computed | computed | enhanced vs free |
 
-The boundary-driven contact ratio is about `1.27 -> 1.37` across the tested
-grid spacings, while the literal contact resolvent ratio is about `1.10 -> 1.03`.
-That is a real lattice contact effect, but it does **not** yet prove exact
-continuum Sommerfeld equality or full DM-ratio closure.
+The direct lattice computation now gives 1D Numerov agreement at the sub-1%
+level across the tested points, plus a consistent Green's-function cross-check.
+That is a real lattice contact effect, but it still does **not** close the
+full relic-abundance step.
 
 ---
 
@@ -224,6 +225,7 @@ this note freezes the direct contact-propagator input, not the full relic
 abundance.
 
 **STATUS: BOUNDED DIRECT LATTICE OBSERVABLE.** The direct contact-
-propagator computation is explicit and finite-dimensional.  The exact
-continuum Sommerfeld equality and the full freeze-out closure remain open,
-so the DM ratio itself stays review-only.
+propagator computation is explicit and finite-dimensional.  The continuum
+Sommerfeld equality is now separately supported by the analytic/convergence
+note and direct lattice computation, but the full freeze-out closure remains
+open, so the DM ratio itself stays review-only.
