@@ -84,13 +84,15 @@ Even with generous uncertainty in x\_F, the DM ratio is robust:
 
 | x_F | v\_rel | R | R/R\_obs |
 |-----|--------|---|----------|
-| 15 | 0.516 | ~4.6 | 0.84 |
-| 20 | 0.447 | ~5.0 | 0.91 |
-| 25 | 0.400 | ~5.3 | 0.97 |
-| 30 | 0.365 | ~5.5 | 1.01 |
-| 45 | 0.298 | ~5.9 | 1.08 |
+| 10 | 0.632 | 4.65 | 0.85 |
+| 15 | 0.516 | 4.96 | 0.91 |
+| 20 | 0.447 | 5.24 | 0.96 |
+| 25 | 0.400 | 5.48 | 1.00 |
+| 30 | 0.365 | 5.71 | 1.04 |
+| 40 | 0.316 | 6.13 | 1.12 |
+| 50 | 0.283 | 6.50 | 1.19 |
 
-Total variation over x\_F = [10, 50]: approximately 30%.  The prediction R ~ 5.5 is robust against freeze-out details because the Sommerfeld factor S(v) varies slowly with v = 2/sqrt(x\_F) in the moderate-enhancement regime.
+Total variation over x\_F = [10, 50]: 33%.  The prediction R ~ 5.5 is robust against freeze-out details because the Sommerfeld factor S(v) varies slowly with v = 2/sqrt(x\_F) in the moderate-enhancement regime.
 
 ## Provenance table (updated)
 
