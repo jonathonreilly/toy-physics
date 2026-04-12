@@ -304,7 +304,29 @@ The following reclassifications were applied during the migration from
 
 Full classification: `docs/MIGRATION_AUDIT_2026-04-12.md`
 
+## 2026-04-12 Promotions Completed
+
+The following items were promoted to `main` as bounded note+runner pairs.
+They are no longer review candidates here:
+
+- `frontier_distance_law_definitive.py` + `DISTANCE_LAW_DEFINITIVE_NOTE.md`
+- `frontier_self_consistent_field_equation.py` + `SELF_CONSISTENCY_FORCES_POISSON_NOTE.md`
+- `frontier_action_normalization.py` + `ACTION_NORMALIZATION_NOTE.md`
+- `frontier_nonlinear_born_gravity.py` + `NONLINEAR_BORN_GRAVITY_NOTE.md`
+- `frontier_gravitational_entanglement.py` + `GRAVITATIONAL_ENTANGLEMENT_NOTE.md`
+- `frontier_wave_equation_gravity.py` + `WAVE_EQUATION_GRAVITY_NOTE.md`
+- `frontier_beyond_lattice_qcd.py` + `BEYOND_LATTICE_QCD_NOTE.md`
+- `em_gravity_coexistence_2x2.py` + `EM_GRAVITY_COEXISTENCE_2X2_NOTE.md`
+- `frontier_poisson_exhaustive_uniqueness.py` + `POISSON_EXHAUSTIVE_UNIQUENESS_NOTE.md`
+- `frontier_dimension_selection.py` + `DIMENSION_SELECTION_NOTE.md`
+- `frontier_bound_state_selection.py` + `BOUND_STATE_SELECTION_NOTE.md`
+- `frontier_background_independence.py` + `BACKGROUND_INDEPENDENCE_NOTE.md`
+- `frontier_tensor_network_connection.py` + `TENSOR_NETWORK_CONNECTION_NOTE.md`
+- `AXIOM_REDUCTION_NOTE.md` (memo only)
+- `frontier_grav_wave_post_newtonian.py` + `GRAVITATIONAL_WAVE_PROBE_NOTE.md`
+
 ## Bottom Line
 
-The review worktree now contains explicit holds only. Nothing else should be
+The review worktree now contains explicit holds only. The 15 bounded
+promotion candidates have been moved to `main`. Nothing else should be
 promoted without the missing control named in its section.

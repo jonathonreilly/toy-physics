@@ -454,11 +454,46 @@ If Claude continues from this review worktree, give these instructions:
 5. Do not restate Newton closure, Einstein-equation, or both-masses closure
    unless the missing controls above are actually closed.
 
+## 2026-04-12 Bounded Promotion to Main
+
+The following 15 bounded note+runner pairs were promoted to `main` on
+2026-04-12. They are no longer review candidates on this branch.
+
+Promoted items:
+
+1. `frontier_distance_law_definitive.py` + `DISTANCE_LAW_DEFINITIVE_NOTE.md`
+2. `frontier_self_consistent_field_equation.py` + `SELF_CONSISTENCY_FORCES_POISSON_NOTE.md`
+3. `frontier_action_normalization.py` + `ACTION_NORMALIZATION_NOTE.md`
+4. `frontier_nonlinear_born_gravity.py` + `NONLINEAR_BORN_GRAVITY_NOTE.md`
+5. `frontier_gravitational_entanglement.py` + `GRAVITATIONAL_ENTANGLEMENT_NOTE.md`
+6. `frontier_wave_equation_gravity.py` + `WAVE_EQUATION_GRAVITY_NOTE.md`
+7. `frontier_beyond_lattice_qcd.py` + `BEYOND_LATTICE_QCD_NOTE.md`
+8. `em_gravity_coexistence_2x2.py` + `EM_GRAVITY_COEXISTENCE_2X2_NOTE.md`
+9. `frontier_poisson_exhaustive_uniqueness.py` + `POISSON_EXHAUSTIVE_UNIQUENESS_NOTE.md`
+10. `frontier_dimension_selection.py` + `DIMENSION_SELECTION_NOTE.md`
+11. `frontier_bound_state_selection.py` + `BOUND_STATE_SELECTION_NOTE.md`
+12. `frontier_background_independence.py` + `BACKGROUND_INDEPENDENCE_NOTE.md`
+13. `frontier_tensor_network_connection.py` + `TENSOR_NETWORK_CONNECTION_NOTE.md`
+14. `AXIOM_REDUCTION_NOTE.md` (memo only, no runner)
+15. `frontier_grav_wave_post_newtonian.py` + `GRAVITATIONAL_WAVE_PROBE_NOTE.md`
+
+All promoted as bounded claims. No full Newton closure, unconditional
+spatial-metric derivation, or global Poisson uniqueness restated.
+
+Items NOT promoted (remain on hold):
+- spatial metric derivation (user hold)
+- GR signatures (consistency check, spatial metric gate not closed)
+- electromagnetism probe (staggered eps issue)
+- second quantized / holographic / Hawking (Paper 2)
+- dimension emergence / cosmology (bounded proxy)
+- independent spatial metric (user hold)
+- hierarchy ratio / literature search / dispersion (archive)
+
 ## Bottom Line
 
 After this consolidation:
 
-- `main` carries the retained baseline
+- `main` carries the retained baseline plus 15 newly promoted bounded probes
 - this review worktree carries only explicit holds from the non-`main` science
   surface
 - no important current frontier item should exist only on a deleted local path
