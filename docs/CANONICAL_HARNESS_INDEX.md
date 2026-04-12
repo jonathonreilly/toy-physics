@@ -276,6 +276,11 @@ derivation, or global Poisson uniqueness.
 - [`scripts/em_gravity_coexistence_2x2.py`](../scripts/em_gravity_coexistence_2x2.py)
 - [`docs/EM_GRAVITY_COEXISTENCE_2X2_NOTE.md`](EM_GRAVITY_COEXISTENCE_2X2_NOTE.md)
 
+### Bounded CI(3) / `Z^3` gauge algebra surface
+
+- [`scripts/frontier_non_abelian_gauge.py`](../scripts/frontier_non_abelian_gauge.py)
+- [`docs/BOUNDED_NATIVE_GAUGE_NOTE.md`](BOUNDED_NATIVE_GAUGE_NOTE.md)
+
 ### Dimension selection / bound states
 
 - [`scripts/frontier_dimension_selection.py`](../scripts/frontier_dimension_selection.py)
@@ -295,6 +300,8 @@ Reading boundary:
 - these are bounded frontier probes, not full derivations
 - distance law result is bounded to ordered-cubic/Dirichlet surface
 - Poisson uniqueness is a 21-operator family audit, not a global theorem
+- the bounded native gauge note retains exact native cubic `Cl(3)` / `SU(2)`
+  only; native cubic `SU(3)` remains explicitly open
 - dimension selection is bounded to the tested operator family
 - bound state result is bounded to tested potentials at d<=3
 - all wave/entanglement probes are bounded to the audited graph surfaces

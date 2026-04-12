@@ -198,6 +198,34 @@ The repo currently contains four different classes of publication material:
 - retain as a narrow continuation note
 - preserve the distance-law trend, not the stronger closure story
 
+### 1D. CI(3) / `Z^3` bounded algebraic gauge lane
+
+**Safe bounded material**
+
+- exact native cubic `Cl(3)` closure to an `SU(2)` subalgebra on the staggered
+  taste space
+- exact Casimir / chiral-structure checks at machine precision
+- explicit negative/open boundary for native cubic `SU(3)`
+
+**What is strong here**
+
+- this is the first CI(3) / `Z^3` note in the repo that cleanly separates the
+  one retention-safe positive from the still-open overclaims
+- the retained part is algebraic and replayable, not a downstream fit
+
+**What is bounded**
+
+- this is a bounded algebraic gauge note, not a full Standard Model derivation
+- native cubic `SU(3)` remains open
+- generations, dark-matter, Higgs, cosmology, and strong-field phenomenology
+  remain off the retained surface
+
+**Verdict**
+
+- preserve as a bounded retained companion on `main`
+- use it as the canonical CI(3) / `Z^3` gauge entrypoint until or unless the
+  native cubic `SU(3)` blocker is actually closed
+
 ### 2. Coin / Chiral / Dirac-Walk Lane
 
 **Safe positive package**
