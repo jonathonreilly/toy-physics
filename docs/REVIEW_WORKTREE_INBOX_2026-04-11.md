@@ -77,6 +77,10 @@ Current state:
   `(1,3)+(1,3)+(1,1)+(1,1)` sector from 4D doubling and a neutral singlet, the
   hypercharges are uniquely fixed; the graph-canonical derivation of that
   sector template is still open
+- the later `DM_RATIO_STRUCTURAL` lane strengthens the Sommerfeld/contact
+  story, but it is still review-only: the script does not directly compute the
+  claimed lattice Green's-function ratio and still reuses freeze-out /
+  Boltzmann machinery plus a perturbative annihilation ansatz
 - later arrivals (`NEUTRINO_COMPLEX_Z3`, `EWPT_STRENGTH`, `EWPT_LATTICE_MC`,
   `WEINBERG_ANGLE_CORRECTION`, and the GW150914 echo stack) are also review-only:
   they strengthen exploration, but they do not yet clear the retained

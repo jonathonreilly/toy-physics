@@ -518,11 +518,13 @@ Files:
 
 - `docs/ALPHA_S_DETERMINATION_NOTE.md`
 - `docs/DM_RATIO_SOMMERFELD_NOTE.md`
+- `docs/DM_RATIO_SOMMERFELD_NOTE.md`
 - `docs/ANNIHILATION_RATIO_NOTE.md`
 - `docs/DARK_MATTER_CLOSURE_NOTE.md`
 - `docs/DARK_MATTER_SINGLETS_NOTE.md`
 - `scripts/frontier_alpha_s_determination.py`
 - `scripts/frontier_dm_ratio_sommerfeld.py`
+- `scripts/frontier_dm_ratio_structural.py`
 - `scripts/frontier_annihilation_ratio.py`
 - `scripts/frontier_dark_matter_closure.py`
 
@@ -532,6 +534,14 @@ Why held:
   `Omega_DM/Omega_B`, and uses root-finding against the observed ratio
 - the Sommerfeld runner hard-codes observed abundance values and freeze-out
   parameters
+- the newer structural Sommerfeld runner improves the status of the contact
+  enhancement step, but it still does **not** compute the claimed lattice
+  Green's-function ratio directly; it re-expresses the continuum Coulomb /
+  Gamow formula and a leading WKB proxy instead
+- the same newer runner still imports freeze-out machinery through the
+  Boltzmann equation, `g_* = 106.75`, and a perturbative annihilation ansatz
+  `sigma v ~ pi alpha_s^2 / m^2`, so the full ratio is not yet derived from the
+  lattice axioms alone
 - the closure notes are often honest in the body, but the surrounding lane
   language still drifts toward “prediction”
 
@@ -539,6 +549,9 @@ What must be redone:
 
 - keep only a bounded consistency-window note unless the coupling is derived
   without matching to the observed dark-matter ratio
+- at most the newer Sommerfeld lane can currently be promoted later as a
+  bounded structural companion for the contact-enhancement factor alone, not as
+  full structural closure of `Omega_DM/Omega_B`
 
 ### C. Higgs / mass spectrum / hierarchy are not first-principles closures
 

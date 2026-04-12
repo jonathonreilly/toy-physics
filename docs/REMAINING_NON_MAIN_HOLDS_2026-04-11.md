@@ -130,6 +130,7 @@ Files:
 - `docs/S3_TOPOLOGY_DERIVATION_NOTE.md`
 - `docs/GRAPH_FIRST_CHIRAL_COMPLETION_SEARCH_NOTE.md`
 - `docs/CHIRAL_COMPLETION_NOTE.md`
+- `docs/DM_RATIO_SOMMERFELD_NOTE.md`
 - corresponding `frontier_*` runners on the same lane
 
 Why held:
@@ -196,6 +197,11 @@ Why held:
   `(1,3)+(1,3)+(1,1)+(1,1)` and imposing a neutral singlet `y4=0`; it does not
   yet derive that full right-handed sector graph-canonically from the retained
   surface
+- the later `DM_RATIO_STRUCTURAL` lane is still held because its strongest
+  claim surface exceeds the harness: the script does not directly evaluate the
+  claimed lattice propagator ratio at contact, and the full ratio still uses
+  imported freeze-out/Boltzmann machinery and a perturbative cross-section
+  ansatz
 - the later branch summary `REVIEW_THREAD_SUMMARY_2026-04-12.md` overstates
   several still-open blockers and must not be used as the retention authority
 
