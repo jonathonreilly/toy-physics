@@ -314,10 +314,18 @@ Current read:
   retained science notes
 - the runner set spans many unrelated lanes and still needs lane-by-lane
   classification before any direct `main` promotion is considered
+- the later classification pass found only one useful review-only addition not
+  already preserved elsewhere:
+  [WORK_BACKLOG_2026-04-10.md](WORK_BACKLOG_2026-04-10.md) `P4.5 - Staggered
+  Open-Cubic Two-Body Closure`
+- the remaining branch-specific drift was stale pathing, superseded note
+  wording, or duplicate summary text already preserved in lane-specific notes
 
 Promotion rule:
 
 - do not promote directly from this bulk import
+- use the lane-specific retained/hold notes already on review rather than the
+  large `spot-checks` branch narratives
 - first split into:
   - bounded promotion candidates with explicit note+runner pairing
   - explicit holds with a named blocker

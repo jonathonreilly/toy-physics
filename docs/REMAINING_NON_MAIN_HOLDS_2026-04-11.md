@@ -358,6 +358,9 @@ Files:
 - `docs/WHY_TRAJECTORIES_FAIL_2026-04-11.md`
 - `docs/WILSON_PARTNER_SOURCE_CROSSOVER_NOTE_2026-04-11.md`
 - the imported `frontier/spot-checks` runner batch now staged on review
+- one useful planning-only addition preserved separately in
+  [WORK_BACKLOG_2026-04-10.md](WORK_BACKLOG_2026-04-10.md):
+  `P4.5 - Staggered Open-Cubic Two-Body Closure`
 
 Why held:
 
@@ -365,16 +368,21 @@ Why held:
   not a retention decision
 - the batch mixes strategy / audit narratives with a broad runner surface
   spanning many unrelated lanes
-- many imported artifacts overlap lanes already retained, held, or superseded
-  elsewhere on `main` or `review-active`, but have not yet been classified
-  lane-by-lane on this branch
+- the imported artifacts were classified lane-by-lane after capture
+- the remaining text drift on `origin/frontier/spot-checks` turned out to be:
+  - stale absolute-path control-plane variants
+  - older notes superseded by newer review / `main` versions
+  - a Wilson both-masses summary already preserved in
+    [WILSON_BOTH_MASSES_ACCEL_NOTE_2026-04-11.md](WILSON_BOTH_MASSES_ACCEL_NOTE_2026-04-11.md)
+  - comment / docstring-only script framing drift on four Wilson / staggered
+    runners
 
 Next control:
 
-- split the imported `spot-checks` material by lane before any promotion
-- for science runners, require a bounded note+runner pair or an explicit hold
-- for strategy / audit / planning docs, classify as archive-only rather than
-  promotion candidates
+- no direct promotion from the bulk import
+- treat `origin/frontier/spot-checks` as archive-ready after this
+  classification pass
+- promote only bounded note+runner pairs already preserved elsewhere on review
 
 ### 1. Wilson mutual-attraction side lane
 

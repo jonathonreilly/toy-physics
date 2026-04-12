@@ -859,11 +859,15 @@ science branches, but they still need a quick final diff audit before delete:
   archive candidate while active work continues
 - `origin/frontier/spot-checks` now has all review-missing text artifacts
   imported to `codex/review-active`
-- current `spot-checks` remainder:
-  - `142` exact-match paths already duplicated on review
-  - `21` differing text paths still needing lane-by-lane classification
-  - `6` generated PNG outputs intentionally not imported
-- `spot-checks` is still not archive-ready until the remaining `21` differing
-  text files are classified
-- next scrub stage is the `spot-checks` 21-file classification pass and any
-  residual helper / automation refs after that
+- `spot-checks` remainder classification is now complete:
+  - `142` exact-match paths were already duplicated on review
+  - `21` differing text paths reduced to:
+    - stale absolute-path / control-plane drift
+    - older note variants superseded by newer review / `main` copies
+    - duplicate summary text already preserved in lane-specific notes
+    - four script files with comment / docstring framing drift only
+  - one useful planning-only addition was preserved on review in
+    [WORK_BACKLOG_2026-04-10.md](WORK_BACKLOG_2026-04-10.md)
+    under `P4.5 - Staggered Open-Cubic Two-Body Closure`
+  - `6` generated PNG outputs were intentionally not imported
+- `origin/frontier/spot-checks` is now archive-ready

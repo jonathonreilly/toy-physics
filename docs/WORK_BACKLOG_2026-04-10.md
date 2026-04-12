@@ -144,6 +144,39 @@ This backlog is ordered by value to the main project, not by ease.
   explicit architectural constraints.
 - Identify which graph families are structurally incompatible before coding.
 
+## P4.5 - Staggered Open-Cubic Two-Body Closure
+
+- Freeze the late 2026-04-11 open-cubic staggered notes as follows:
+  - bounded positives:
+    - [STAGGERED_NEWTON_REPRODUCTION_NOTE_2026-04-11.md](../docs/STAGGERED_NEWTON_REPRODUCTION_NOTE_2026-04-11.md)
+    - [STAGGERED_NEWTON_BLOCKING_SENSITIVITY_NOTE_2026-04-11.md](../docs/STAGGERED_NEWTON_BLOCKING_SENSITIVITY_NOTE_2026-04-11.md)
+    - [STAGGERED_SELF_CONSISTENT_TWO_BODY_NOTE_2026-04-11.md](../docs/STAGGERED_SELF_CONSISTENT_TWO_BODY_NOTE_2026-04-11.md)
+  - bounded negative / next-step memo:
+    - [STAGGERED_BOTH_MASSES_NOTE_2026-04-11.md](../docs/STAGGERED_BOTH_MASSES_NOTE_2026-04-11.md)
+    - [STAGGERED_TWO_BODY_NEXT_STEPS_NOTE_2026-04-11.md](../docs/STAGGERED_TWO_BODY_NEXT_STEPS_NOTE_2026-04-11.md)
+- Current honest state:
+  - the primary staggered architecture has a bounded open-cubic external-source
+    trajectory `d^-2` law
+  - it also has a bounded self-consistent two-body **force** channel
+  - it does **not** have a retained blocked-centroid both-masses or
+    trajectory-level two-body closure
+- Do not reopen another blocked-centroid packet-split mass sweep.
+- The observed failure mode is now explicit:
+  - blocking is good enough for single-packet envelope drift
+  - it is not good enough to decompose a pair-relative closing signal into two
+    packet-level mutual forces
+  - the `shared - self-only` trajectory residual is too small and too aliased
+    by parity-scale density reshuffling inside the coarse windows
+- Next observables to try, in order:
+  - local momentum flux around each packet
+  - mid-plane current between the packets
+  - a relative-coordinate density observable built directly from the blocked
+    density
+- Acceptance gate:
+  do not promote a staggered two-body lane until one of those observables gives
+  same-row inward sign on both packets, stable partner-mass normalization, and
+  materially better force-balance than the current blocked-centroid split.
+
 ## P5 - Documentation Hygiene
 
 - Keep the force-based staggered card separate from the repo-wide centroid card.
