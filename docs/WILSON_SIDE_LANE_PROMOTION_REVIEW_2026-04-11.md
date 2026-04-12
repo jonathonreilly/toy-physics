@@ -54,6 +54,24 @@ Outcome:
 So the side lane remains retained only as bounded evidence. The promotion bar
 is still not closed.
 
+## Causal Discriminator Exhausted
+
+The smallest clean discriminator on this open 3D Wilson surface is the
+three-way comparison:
+
+- `SHARED`
+- `SELF_ONLY`
+- `FROZEN_SOURCE`
+
+That discriminator has now been run, and it does **not** cleanly separate
+dynamic shared backreaction from a static explanation on this surface. The
+remaining `SHARED - FROZEN_SOURCE` gap is still contaminated enough that it
+cannot be promoted as a causal proof.
+
+So there is no further clean Wilson-side discriminator to add on this same
+surface without switching observables or geometry. The correct status is hold,
+not more branch sprawl.
+
 ## Retainable Now
 
 Retain as bounded Wilson-side evidence only:
