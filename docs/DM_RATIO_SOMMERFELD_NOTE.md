@@ -111,7 +111,7 @@ Numerical integration (10,000-point quadrature):
 | 0.100   | 1.740       | 0.929     | 1.650               | 5.68        | 1.04    |
 | 0.120   | 1.916       | 0.915     | 1.805               | 6.22        | 1.14    |
 
-Exact match at alpha_s = 0.092 (alpha_GUT = 1/10.9).
+Benchmark match at alpha_s = 0.092 (historical continuum comparison).
 
 ---
 
@@ -219,7 +219,9 @@ organized around three ingredients:
    together before annihilation, enhancing sigma_vis by a factor 1.59.
 
 The product (3/5) * 5.74 * 1.59 still matches observation numerically in the
-older continuum analysis, but the current reviewed status is narrower.
+older continuum analysis, but the current reviewed status is narrower:
+this note freezes the direct contact-propagator input, not the full relic
+abundance.
 
 **STATUS: BOUNDED DIRECT LATTICE OBSERVABLE.** The direct contact-
 propagator computation is explicit and finite-dimensional.  The exact

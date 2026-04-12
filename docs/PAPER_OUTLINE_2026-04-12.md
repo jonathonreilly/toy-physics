@@ -151,10 +151,10 @@ the structural backbone to any row would require closing the inputs listed.
 These windows are presented as evidence of structural compatibility, not as
 zero-parameter predictions.
 
-**The strongest entries** are those where the structural backbone directly
-constrains the output with minimal external input: the dark matter ratio
-(group theory + plaquette coupling) and the cosmological constant (spectral
-gap with zero parameters, off by a factor of 1.46).
+**The strongest entries** are the ones with the least imported machinery: the
+direct lattice DM contact-propagator enhancement and the cosmological-
+constant window. Both are still bounded, but they are the cleanest signals
+in the current review state.
 
 ---
 
@@ -196,7 +196,8 @@ with explicit status labels.
   template
 - Z₃ orbit counting for generations, conditional on the physicality theorem
 - Phenomenological windows for R, Λ, n_s, sin θ_C, J, sin²θ_W, m_t
-- Direct lattice DM contact-propagator enhancement in the attractive Coulomb channel
+- Direct lattice DM contact-propagator enhancement in the attractive Coulomb channel;
+  the full freeze-out/relic-abundance step remains open
 - Strong-field extension via S = L(1−tanh f)
 - Frozen star / information paradox resolution
 

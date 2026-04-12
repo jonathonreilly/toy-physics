@@ -1,10 +1,15 @@
 #!/usr/bin/env python3
 """
-DM Ratio Structural Closure: Sommerfeld from Lattice Propagator
-================================================================
+DM Ratio Structural Status: Sommerfeld from Lattice Propagator
+===============================================================
 
-Closes the "modelled" objection to the DM ratio R = Omega_DM/Omega_b = 5.48
-by deriving ALL ingredients from lattice structure and group theory.
+This file no longer claims full relic-abundance closure.
+
+What it now establishes is narrower:
+  - the direct lattice contact-propagator observable is real
+  - the Sommerfeld/contact enhancement is a bounded lattice input
+  - the freeze-out / relic-abundance step still imports Boltzmann/Friedmann
+    machinery unless a native replacement is derived
 
 The ratio R decomposes as:
   R = (3/5) * (f_vis/f_dark) * (S_vis/S_dark)
@@ -12,31 +17,24 @@ The ratio R decomposes as:
 where:
   - 3/5: mass-squared ratio from Hamming weights (lattice combinatorics)
   - f_vis/f_dark = C_2(8)/C_2(3) channel ratio (group theory)
-  - S_vis/S_dark: Sommerfeld enhancement ratio (THIS SCRIPT derives it)
+  - S_vis/S_dark: Sommerfeld/contact enhancement ratio (bounded input here)
 
-Codex flags items 3-4 (Sommerfeld S, freeze-out x_F) as "modelled."
-This script closes that gap via four attacks:
+Attack 1: direct lattice contact enhancement
+  Build finite radial Hamiltonians, invert (E - H), and measure the contact
+  response.  This is a genuine lattice observable, but it is not the full
+  relic abundance.
 
-Attack 1: Sommerfeld from the lattice propagator
-  The Sommerfeld factor S = |psi(0)|^2 / |psi_free(0)|^2 where psi satisfies
-  the Schrodinger equation with a Coulomb potential. On the lattice, this is
-  the Green's function G(r=0; E) of (-Delta + V) evaluated at contact.
-  We solve the radial Schrodinger equation on a discrete lattice and show
-  the result converges to the analytic Sommerfeld formula.
+Attack 2: freeze-out remains imported
+  The standard x_F ~ 25 treatment still enters through Boltzmann/Friedmann
+  thermodynamics.  The lattice provides inputs, not the decoupling law.
 
-Attack 2: Freeze-out x_F from the Boltzmann equation
-  x_F ~ 25 is NOT an assumption -- it follows from solving the Boltzmann
-  equation for any WIMP-like relic. We solve it from first principles and
-  show x_F is a LOGARITHMIC function of the cross-section, making the
-  result insensitive to the precise value of sigma.
+Attack 3: thermal inputs are standard
+  v_rel = 2/sqrt(x_F) is the usual thermal relation once freeze-out is
+  assumed.  It is not the missing theorem.
 
-Attack 3: v_rel from the thermal distribution
-  v_rel = 2/sqrt(x_F) follows from the equipartition theorem applied to
-  the kinetic energy of lattice modes at temperature T = m/x_F.
-
-Attack 4: Full structural chain
-  Assemble all pieces and show R = 5.48 with zero free parameters beyond
-  the gauge group structure.
+Attack 4: bounded DM status
+  Assemble the pieces that are actually supported and keep the full R claim
+  review-only until the freeze-out step is native.
 
 Self-contained: numpy + scipy only.
 PStack experiment: dm-ratio-structural-closure
@@ -112,14 +110,13 @@ ALPHA_V = ALPHA_BARE / U0**4             # V-scheme
 
 
 log("=" * 78)
-log("DM RATIO STRUCTURAL CLOSURE")
-log("Removing the 'modelled' objection from the Sommerfeld enhancement")
+log("DM RATIO STRUCTURAL STATUS")
+log("Direct lattice contact enhancement is real; full relic closure is not.")
 log("=" * 78)
 log()
-log("CLAIM: Every ingredient in R = Omega_DM/Omega_b = 5.48 is derived from")
-log("       lattice structure + group theory.  Nothing is imported from")
-log("       standard cosmological models beyond the existence of thermal")
-log("       equilibrium and the Boltzmann equation.")
+log("CLAIM: The direct contact-propagator and Sommerfeld/contact enhancement")
+log("       are lattice observables.  The full Omega_DM/Omega_b ratio still")
+log("       imports freeze-out / Boltzmann / Friedmann machinery.")
 log()
 
 
@@ -413,8 +410,8 @@ def compute_x_F(m_chi, sigma_v, g_eff=2, g_star=106.75):
     """
     Compute freeze-out parameter x_F = m/T_F from the Boltzmann equation.
 
-    This is the STANDARD result derived from first principles.
-    No cosmological model beyond thermal equilibrium + Friedmann equation.
+    This is the standard freeze-out result once the Boltzmann/Friedmann
+    layer is assumed.  The lattice does not yet replace that layer.
 
     Parameters
     ----------
@@ -796,29 +793,27 @@ log("           Green's function of the staggered Hamiltonian with the QCD")
 log("           Coulomb potential.  It converges to the analytic formula in")
 log("           the continuum limit (Attack 1).")
 log()
-log("    (b) x_F = solution of the Boltzmann equation on the lattice")
-log("        -> x_F ~ 25 is the GENERIC result of any thermal freeze-out")
-log("           with a perturbative annihilation cross-section.  It depends")
-log("           only LOGARITHMICALLY on the cross-section (Attack 2).")
+log("    (b) x_F remains imported freeze-out physics")
+log("        -> x_F ~ 25 is the generic result once the Boltzmann equation")
+log("           and Hubble expansion are assumed.  The lattice does not")
+log("           yet derive that decoupling law (Attack 2).")
 log()
-log("    (c) v_rel = 2/sqrt(x_F) from the lattice dispersion + equipartition")
-log("        -> This follows from the kinetic energy distribution of modes")
-log("           on the lattice at temperature T = m/x_F (Attack 3).")
+log("    (c) v_rel = 2/sqrt(x_F) is the standard thermal relation once")
+log("        freeze-out is imported (Attack 3).")
 log()
-log("  CONCLUSION: The full ratio R = 5.48 is determined by:")
-log("    1. The gauge group SU(3) x SU(2)  [group theory]")
-log("    2. The lattice plaquette action    [structural]")
-log("    3. Thermal equilibrium             [thermodynamics]")
+log("  CONCLUSION: The direct contact enhancement is supported, but the full")
+log("  ratio R still requires imported freeze-out / Boltzmann / Friedmann")
+log("  machinery.")
 log()
-log("  No additional assumptions, no free parameters, no BSM models.")
-log("  The 'modelled' objection is closed.")
+log("  The 'modelled' objection is only partially resolved: the contact")
+log("  enhancement is lattice-native, but the relic step remains open.")
 log()
 
 # --- Final answer ---
 log("  " + "=" * 60)
 log(f"  FINAL RESULT: R = {R_predicted:.4f}  (observed: {R_OBS:.4f})")
 log(f"                Deviation: {abs(R_predicted/R_OBS - 1)*100:.1f}%")
-log(f"                Status: FULLY STRUCTURAL")
+log(f"                Status: BOUNDED / REVIEW-ONLY")
 log("  " + "=" * 60)
 log()
 

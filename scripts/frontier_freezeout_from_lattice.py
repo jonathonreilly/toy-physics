@@ -3,33 +3,37 @@
 Freeze-Out from Lattice Thermodynamics
 =======================================
 
-Derives the freeze-out temperature x_F = m/T_F and relativistic degrees
-of freedom g_* from the lattice framework, removing imported Boltzmann/
-Friedmann cosmology.
+Diagnoses the freeze-out / relic-abundance gap for the DM ratio.
 
-The DM ratio currently uses x_F ~ 25 (from standard Boltzmann equation)
-and g_* = 106.75 (SM particle content).  Codex flags these as imported
-cosmological input.  This script shows they follow from the lattice
-structure through four independent attacks:
+The direct lattice contact-propagator lane is already a real observable.
+The open question is whether the relic-abundance step can be derived from
+the graph framework without importing Boltzmann/Friedmann freeze-out.
+
+This script records the exact boundary:
+
+  - the contact channel and lattice combinatorics are useful inputs
+  - the freeze-out parameter x_F and the relic abundance still rely on
+    standard thermal cosmology unless a native replacement is supplied
+
+Diagnostics:
 
 Attack 1: g_* from the taste spectrum
-  The 8 taste states determine the SM particle content.  The taste
-  decomposition 8 = (2,3) + (2,1) under SU(2) x SU(3) gives quarks
-  and leptons.  Counting d.o.f. with spin statistics reproduces
-  g_* = 106.75.
+  The SM counting can be reproduced once the full matter content is assumed.
+  That is a consistency check, not a lattice-only derivation of freeze-out.
 
-Attack 2: x_F from the lattice annihilation cross-section
-  The freeze-out condition Gamma_ann = H, with ALL inputs from the
-  lattice (alpha_s from plaquette, G from Poisson coupling, g_* from
-  Attack 1), yields x_F ~ 25.
+Attack 2: x_F from the freeze-out equation
+  The standard freeze-out condition Gamma_ann = H still enters through
+  Boltzmann/Friedmann thermodynamics.  The lattice supplies inputs, but
+  does not yet replace the cosmological decoupling calculation.
 
 Attack 3: The Boltzmann equation from the lattice master equation
-  The master equation for taste-state occupation numbers on the lattice
-  reduces to the Boltzmann equation in the continuum/thermodynamic limit.
+  The master-equation reduction is a thermodynamic-limit statement.  The
+  expansion term and decoupling criterion are still imported spacetime
+  dynamics unless a separate graph-native derivation is given.
 
 Attack 4: Insensitivity of R to x_F
-  The DM ratio R = Omega_DM/Omega_b varies by only ~20% over
-  x_F = [15, 45], making R robust against freeze-out details.
+  The ratio varies only moderately over x_F, which makes the fit robust.
+  Robustness does not make freeze-out native.
 
 Self-contained: numpy + scipy only.
 PStack experiment: freezeout-from-lattice
@@ -108,12 +112,11 @@ M_PLANCK = 1.2209e19  # GeV
 
 log("=" * 78)
 log("FREEZE-OUT FROM LATTICE THERMODYNAMICS")
-log("Deriving g_* and x_F without imported cosmology")
+log("Bounding the freeze-out/relic gap around the imported cosmology")
 log("=" * 78)
 log()
-log("GOAL: Show that the freeze-out parameters x_F ~ 25 and g_* = 106.75")
-log("follow from the lattice taste spectrum and structural couplings,")
-log("removing the 'imported cosmology' objection from the DM ratio.")
+log("GOAL: identify the exact boundary between lattice inputs and imported")
+log("cosmological freeze-out machinery.")
 log()
 
 
@@ -340,18 +343,18 @@ log("  The freeze-out condition is Gamma_ann(T_F) = H(T_F), where:")
 log("    Gamma_ann = n_eq(T) * <sigma*v>      [annihilation rate]")
 log("    H(T) = sqrt(8*pi*G*rho/3)            [Hubble rate]")
 log()
-log("  On the lattice, EVERY ingredient is structural:")
-log("    - <sigma*v> = pi * alpha_s^2 / m^2   [from gauge coupling]")
+log("  The freeze-out condition is the imported step:")
+log("    - <sigma*v> = pi * alpha_s^2 / m^2   [lattice/gauge input]")
 log("    - n_eq(T)   = g * (mT/2pi)^{3/2} * e^{-m/T}")
-log("                                          [from Boltzmann weight on lattice]")
-log("    - rho(T)    = (pi^2/30) * g_* * T^4  [from Attack 1 g_*]")
-log("    - G         = 1/M_Pl^2               [Poisson coupling on lattice]")
+log("                                          [thermal equilibrium]")
+log("    - rho(T)    = (pi^2/30) * g_* * T^4  [counting input]")
+log("    - G         = 1/M_Pl^2               [Poisson coupling]")
 log()
 
 log("  2A. Deriving x_F from the freeze-out equation")
 log("  " + "-" * 55)
 log()
-log("  The standard freeze-out equation:")
+log("  The standard freeze-out equation (imported cosmology):")
 log("    n_eq * <sigma*v> = H")
 log()
 log("  Substituting all ingredients:")
@@ -368,11 +371,11 @@ def compute_x_F(m_chi, sigma_v, g_eff=2, g_star=106.75):
     """
     Compute freeze-out parameter x_F = m/T_F.
 
-    All inputs are structural:
+    Inputs are mixed:
       - m_chi: mass (set by lattice scale)
       - sigma_v: from lattice alpha_s
       - g_eff: internal d.o.f. of DM
-      - g_star: from Attack 1
+      - g_star: conditional counting input from Attack 1
 
     Iteratively solves: x_F = ln(lambda) - 0.5*ln(x_F)
     """
@@ -402,7 +405,7 @@ log(f"    M_Pl = {M_PLANCK:.4e} GeV")
 log()
 
 # --- 2B: x_F vs mass (showing logarithmic insensitivity) ---
-log("  2B. x_F vs. DM mass (all inputs from lattice)")
+log("  2B. x_F vs. DM mass (fixed lattice inputs, imported freeze-out law)")
 log("  " + "-" * 55)
 log()
 
@@ -430,7 +433,8 @@ log(f"  x_F std:   {np.nanstd(valid):.1f}")
 log()
 log("  KEY: x_F depends LOGARITHMICALLY on m and sigma_v.")
 log("  Over 16 orders of magnitude in mass, x_F varies from ~15 to ~45.")
-log("  The value x_F ~ 25 is GENERIC for perturbative annihilation.")
+log("  The value x_F ~ 25 is GENERIC for perturbative annihilation once")
+log("  the Boltzmann/Friedmann layer is assumed.")
 log()
 
 # --- 2C: x_F with g_* from Attack 1 vs standard g_* ---
@@ -451,8 +455,8 @@ log(f"  x_F (standard g_* = 106.75):  {x_F_standard_gstar:.4f}")
 log(f"  Difference: {abs(x_F_lattice_gstar - x_F_standard_gstar):.6f}")
 log(f"  Relative:   {abs(x_F_lattice_gstar/x_F_standard_gstar - 1)*100:.4f}%")
 log()
-log("  RESULT: Since g_*(lattice) = g_*(SM) = 106.75 exactly,")
-log("  there is ZERO difference.  g_* was never an independent input.")
+log("  RESULT: This is a consistency check, not a native derivation of relic")
+log("  freeze-out.  The full matter-content assumption is still doing work.")
 log()
 
 
@@ -498,8 +502,8 @@ log("          a dilution term: dn/dt -> dn/dt + 3*H*n")
 log("          This is the COSMOLOGICAL input: the lattice is expanding.")
 log("          On the lattice, H comes from the Poisson coupling:")
 log("          H^2 = (8*pi*G/3) * rho")
-log("          where G = structural (self-consistent Poisson coupling)")
-log("          and rho = g_* * pi^2 * T^4 / 30 (from Attack 1).")
+log("          where G is the Poisson coupling input")
+log("          and rho = g_* * pi^2 * T^4 / 30 (from counting input).")
 log()
 log("  Step 4: The resulting equation is the Boltzmann equation:")
 log("          dn/dt + 3*H*n = -<sigma*v> * (n^2 - n_eq^2)")
@@ -584,21 +588,22 @@ else:
 log("  3C. What IS the minimal cosmological input?")
 log("  " + "-" * 55)
 log()
-log("  The Boltzmann equation follows from the lattice master equation")
-log("  with ONE cosmological input: the universe is EXPANDING (H > 0).")
+log("  The Boltzmann equation is treated as the imported freeze-out law")
+log("  that the lattice master equation would need to reproduce.")
 log()
 log("  This is minimal and unavoidable:")
 log("    - The expansion dilutes particle densities (3*H*n term)")
 log("    - Without expansion, all species reach chemical equilibrium")
 log("      and there is no relic abundance")
 log()
-log("  The value of H is NOT imported -- it follows from:")
+log("  The value of H is still an imported expansion law:")
 log("    H^2 = (8*pi*G/3) * rho")
-log("  where G is the self-consistent Poisson coupling (structural)")
+log("  where G is the Poisson coupling input")
 log("  and rho = g_* * T^4 * pi^2/30 (from Attack 1 + stat. mech.).")
 log()
-log("  Therefore: the Boltzmann equation and x_F are DERIVED from the")
-log("  lattice, with the sole physical assumption that the universe expands.")
+log("  Therefore: the current script does NOT derive the full relic step")
+log("  from the lattice.  It only shows where the imported freeze-out law")
+log("  enters and what a native replacement would need to reproduce.")
 log()
 
 
@@ -648,7 +653,7 @@ def dm_ratio_from_params(alpha_s, x_f):
     return R_BASE * S_vis / S_dark
 
 
-log("  Scanning R vs x_F with ALL inputs from the lattice:")
+log("  Scanning R vs x_F with fixed lattice inputs and imported freeze-out:")
 log(f"    alpha_s = {ALPHA_PLAQ:.6f} (plaquette)")
 log(f"    g_* = {g_star_computed} (Attack 1)")
 log()
@@ -722,17 +727,17 @@ log("  AFTER this analysis:")
 log()
 log("  | Parameter | Value | Source | Status |")
 log("  |-----------|-------|--------|--------|")
-log(f"  | g_*       | {g_star_computed} | Taste spectrum + spin-statistics | STRUCTURAL |")
-log(f"  | x_F       | 25 +/- 10 | Lattice Boltzmann eq. (log dependence) | STRUCTURAL |")
-log(f"  | v_rel     | 2/sqrt(x_F) | Equipartition on lattice | STRUCTURAL |")
-log(f"  | <sigma*v> | pi*alpha_s^2/m^2 | Plaquette coupling | STRUCTURAL |")
-log(f"  | H(T)      | sqrt(8piG*rho/3) | Poisson coupling + g_* | STRUCTURAL |")
+log(f"  | g_*       | {g_star_computed} | Taste spectrum + spin-statistics | COUNTING / CONDITIONAL |")
+log(f"  | x_F       | 25 +/- 10 | Boltzmann freeze-out | IMPORTED |")
+log(f"  | v_rel     | 2/sqrt(x_F) | Equipartition on lattice | IMPORTED THERMAL INPUT |")
+log(f"  | <sigma*v> | pi*alpha_s^2/m^2 | Plaquette coupling | INPUT |")
+log(f"  | H(T)      | sqrt(8piG*rho/3) | Friedmann expansion | IMPORTED |")
 log()
 log("  MINIMAL COSMOLOGICAL ASSUMPTION:")
-log("    The universe expands (H > 0).  Everything else follows from the lattice.")
+log("    The universe expands (H > 0).  Without that, no relic abundance.")
 log()
-log("  The Boltzmann equation itself is NOT imported -- it is the continuum")
-log("  limit of the lattice master equation for taste-state occupation.")
+log("  The Boltzmann equation remains imported unless a separate graph-native")
+log("  derivation is supplied.")
 log()
 log("  IMPACT ON R = Omega_DM/Omega_b:")
 log(f"    R(x_F=25, alpha_plaq) = {R_at_25:.3f}  (observed: {R_OBS:.3f})")
@@ -787,29 +792,28 @@ log("=" * 78)
 log("FINAL SUMMARY")
 log("=" * 78)
 log()
-log("  This script removes TWO 'imported cosmology' flags from the DM ratio:")
+log("  This script does NOT remove the freeze-out objection entirely:")
 log()
-log("  1. g_* = 106.75 is DERIVED from the taste spectrum.")
-log("     The particle content of the SM is encoded in the 8 taste states")
-log("     decomposed under SU(2) x SU(3).  Counting d.o.f. with spin")
-log("     statistics (7/8 for fermions) reproduces g_* exactly.")
+log("  1. g_* can be counted consistently once the full matter content is")
+log("     assumed, but that remains a counting identity, not the relic law.")
 log()
-log("  2. x_F ~ 25 is DERIVED from the lattice Boltzmann equation.")
-log("     The freeze-out condition uses only structural ingredients:")
-log("     alpha_s (plaquette), g_* (taste spectrum), and M_Pl (Poisson).")
-log("     x_F depends only LOGARITHMICALLY on the cross-section,")
-log("     making x_F ~ 25 a robust, generic result.")
+log("  2. x_F ~ 25 remains a standard freeze-out result once the Boltzmann")
+log("     equation and Hubble expansion are imported.")
 log()
-log("  3. The Boltzmann equation itself is NOT imported -- it is the")
-log("     continuum limit of the lattice master equation for taste states.")
+log("  3. The lattice master equation is a useful precursor, but it is not")
+log("     yet the native replacement for Boltzmann/Friedmann.")
 log()
 log("  4. Even if x_F were uncertain by a factor 2, the DM ratio R")
-log(f"     varies by only {pct_variation:.0f}% -- the prediction is ROBUST.")
+log(f"     varies by only {pct_variation:.0f}% -- that robustness does not")
+log("     close the relic step.")
 log()
-log("  REMAINING COSMOLOGICAL INPUT: The universe expands (H > 0).")
-log("  This is the ONE assumption that cannot be derived from the lattice")
-log("  alone -- it requires the DYNAMICAL statement that spacetime is")
-log("  expanding, not just that it has the correct dimensionality.")
+log("  REMAINING IMPORTED MACHINERY:")
+log("    - Boltzmann evolution for number density")
+log("    - Friedmann/Hubble expansion term 3Hn")
+log("    - decoupling criterion Gamma_ann = H")
+log("    - thermal equilibrium distribution")
+log("    - perturbative annihilation ansatz")
+log("    - a native replacement for x_F")
 log()
 
 # Write log
@@ -821,8 +825,8 @@ with open(LOG_FILE, "w") as f:
 log()
 log(f"  Log written to {LOG_FILE}")
 
-n_pass = 4  # All 4 attacks
-n_fail = 0
+diagnostic_passes = 4  # Four diagnostics ran successfully
+closure_passes = 0     # No freeze-out/relic closure is claimed
 log()
-log(f"  SCORECARD: {n_pass}/{n_pass + n_fail} attacks successful, {n_fail} failures")
-sys.exit(n_fail)
+log(f"  SCORECARD: {closure_passes} closures, {diagnostic_passes} diagnostic checks successful")
+sys.exit(0)

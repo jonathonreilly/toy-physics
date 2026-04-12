@@ -6,7 +6,9 @@ Sommerfeld Enhancement from Lattice Green's Function -- Direct Computation
 Computes the Sommerfeld enhancement factor S = |psi_C(0)|^2 / |psi_free(0)|^2
 directly on a LATTICE HAMILTONIAN, not from continuum formulas.
 
-This closes the "compute it, don't assert it" gap flagged by codex.
+This is a bounded direct lattice contact observable.  It fixes the
+"compute it, don't assert it" part of the DM analysis, but it does not by
+itself close the freeze-out / relic-abundance step.
 
 Method: NUMEROV INTEGRATION + PHASE SHIFT EXTRACTION
   Discretize the radial Schrodinger equation on N lattice sites.
