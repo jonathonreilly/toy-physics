@@ -662,6 +662,77 @@ Reason:
   files
 - no branch-specific science paths remain stranded on these source tips
 
+### Historical-variant `frontier/*` review-fixes batch
+
+Status:
+
+- scrubbed into `codex/review-active`
+
+Branches covered in this pass:
+
+- `origin/frontier/review-fixes-round6`
+
+Archive readiness:
+
+- archive-ready
+
+Reason:
+
+- the branch combines one exact-match retained two-body valley-linear harness
+  with the same older growth / dispersion / dimensionality script variants
+  already classified above
+- no branch-specific science paths remain stranded on this source tip
+
+### Large `frontier/*` exact-match and historical-variant batch
+
+Status:
+
+- scrubbed into `codex/review-active`
+
+Branches covered in this pass:
+
+- `origin/frontier/resonance`
+- `origin/frontier/unified-model`
+- `origin/frontier/chiral-moonshots`
+- `origin/frontier/critical-gaps`
+- `origin/frontier/publication-blockers`
+- `origin/frontier/final-two`
+- `origin/frontier/final-push`
+
+Archive readiness:
+
+- archive-ready
+
+Reason:
+
+- `resonance`, `unified-model`, and `chiral-moonshots` match the active
+  review branch exactly on their tracked paths
+- `critical-gaps`, `publication-blockers`, `final-two`, and `final-push`
+  differ only by older, less-cautious or superseded script framing on files
+  already preserved on review
+- no branch-specific science paths remain stranded on these source tips
+
+### Historical-variant `frontier/*` chiral moonshots branch
+
+Status:
+
+- scrubbed into `codex/review-active`
+
+Branches covered in this pass:
+
+- `origin/frontier/final-moonshots`
+
+Archive readiness:
+
+- archive-ready
+
+Reason:
+
+- all tracked paths already exist on the active review branch
+- the differing docs and sweep script are older, less-cautious chiral
+  synthesis/decoherence variants rather than unique science payload
+- no branch-specific science paths remain stranded on this source tip
+
 ## Codex First-Pass Triage
 
 These statuses are mechanical only: whether the branch tip is already an
@@ -764,6 +835,15 @@ do not need further science capture before archive:
 - `origin/frontier/spectral-on-lattice`
 - `origin/frontier/cleanup-experiments`
 - `origin/frontier/moonshot-round3`
+- `origin/frontier/review-fixes-round6`
+- `origin/frontier/resonance`
+- `origin/frontier/unified-model`
+- `origin/frontier/chiral-moonshots`
+- `origin/frontier/critical-gaps`
+- `origin/frontier/publication-blockers`
+- `origin/frontier/final-two`
+- `origin/frontier/final-push`
+- `origin/frontier/final-moonshots`
 
 ### Likely archive-ready after one short verification pass
 
@@ -778,4 +858,4 @@ science branches, but they still need a quick final diff audit before delete:
   should continue incrementally into `codex/review-active`, but it is not an
   archive candidate while active work continues
 - next scrub stage is the remaining larger `frontier/*` branches after the
-  Lorentzian / synthesis / unitary / chiral / dynamics / growth batches
+  Lorentzian / synthesis / unitary / chiral / dynamics / growth / review-fixes / large frontier batches; `spot-checks` is the largest unresolved frontier source
