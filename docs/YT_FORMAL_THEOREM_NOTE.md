@@ -81,7 +81,7 @@ dimension, or lattice size. Verified explicitly for d = 1, 2, 3, 4.
 
 5. **Result:**
 
-       y_t = g_s / sqrt(2 * N_c) = g_s / sqrt(6)    QED
+       y_t = g_s / sqrt(2 * N_c) = g_s / sqrt(6)    [conditional]
 
 ## Why the Yukawa operator IS the chiral projector
 
@@ -149,15 +149,15 @@ this.
 - Color factor N_c = 3 (exact)
 
 **Now justified (see YT_WARD_IDENTITY_NOTE.md):**
-- The identification of the Yukawa coupling normalization with g_s is
-  derived from the lattice Ward identity {Eps, D_stag} = 2m*I, which
-  forces N_c y^2 = g^2 Tr(P+)/dim (25/25 PASS in frontier_yt_ward_identity.py)
-- The combination of trace identity (scale) with Z_3 CG (texture)
-  follows from the shared lattice action structure
+- The lattice chiral Ward identity and projector factor are proven, giving the
+  sharp bound `Tr(P_+)/dim = 1/2` (25/25 PASS in frontier_yt_ward_identity.py)
+- The combination of trace identity (scale) with Z_3 CG (texture) is still
+  conditional on the gauge/Yukawa normalization matching theorem
 
 ## Missing Identity
 
-The exact missing statement is a lattice Ward identity of the form:
+The exact missing statement is a lattice Ward/Slavnov-Taylor identity of the
+form:
 
     Z_Y = Z_g
 
@@ -168,6 +168,7 @@ or equivalently, on the normalized trace convention used here,
 This note does not derive that identity. It assumes the gauge and Yukawa
 vertices share the same lattice normalization and then proves the projector
 factor that turns that normalization into `y_t = g_s / sqrt(6)`.
+The strongest safe claim is therefore conditional, not closed.
 See also [`YT_WARD_IDENTITY_BLOCKER_NOTE.md`](/private/tmp/physics-review-active/docs/YT_WARD_IDENTITY_BLOCKER_NOTE.md).
 
 Imported assumptions:

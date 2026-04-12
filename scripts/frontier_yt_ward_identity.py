@@ -3,10 +3,11 @@
 Lattice Ward Identity: Gauge-Yukawa Normalization y_t^2 = g_s^2 / (2 N_c)
 ==========================================================================
 
-GOAL: Derive the missing theorem step identified by codex review. The formal
+GOAL: Sharpen the missing theorem step identified by codex review. The formal
 theorem (frontier_yt_formal_theorem.py, 22/22 PASS) ASSUMES that the Yukawa
 coupling normalizes against the gauge coupling as y^2 = g^2 Tr(P+)/dim / N_c.
-This script DERIVES that relation from a lattice Ward identity.
+This script proves the chiral Ward identity and projector factor, but the
+gauge-Yukawa matching remains conditional on a separate normalization theorem.
 
 THE GAP IN THE PROOF CHAIN:
   The formal theorem establishes:
@@ -14,7 +15,8 @@ THE GAP IN THE PROOF CHAIN:
     (b) Tr(P+)/dim = 1/2 (topological)
     (c) y_t = g_s / sqrt(6)
   But step (c) assumes y and g are related through shared lattice structure
-  WITHOUT proving it. This script closes the gap.
+  WITHOUT proving it. This script sharpens the gap and isolates the remaining
+  matching theorem.
 
 THE WARD IDENTITY APPROACH:
 
@@ -195,8 +197,8 @@ def part1_chiral_ward_identity():
     This means: in the continuum limit of the staggered action, the
     coefficient of psi_bar gamma_mu A_mu psi is g (the gauge coupling)
     and the coefficient of psi_bar Gamma_5 psi is m (the bare mass).
-    Both inherit their normalization from the LATTICE action, where both
-    hopping and mass terms have coefficient 1 (in lattice units where a=1).
+  Both inherit their operator form from the LATTICE action, where both
+  hopping and mass terms have coefficient 1 (in lattice units where a=1).
 
     The Ward identity that relates them is the EQUATION OF MOTION:
 
@@ -1544,7 +1546,7 @@ def part5_numerical_ward_identity():
     print("  is the DIRECT ANALOG of the chiral projector P_+ = (I+Gamma_5)/2")
     print("  in taste space. Both have Tr/dim = 1/2.")
     print()
-    print("  This completes the Ward identity derivation:")
+    print("  This completes the Ward identity and projector-factor derivation:")
     print()
     print("    Lattice:  {Eps, D_stag} = 2m*I, Tr(P_even)/N = 1/2")
     print("    Taste:    {Gamma_5, D_taste} = 2m*I, Tr(P_+)/dim = 1/2")
@@ -1646,7 +1648,7 @@ def part6_consistency():
     print("  without proving WHY the Yukawa normalizes against the gauge")
     print("  coupling in this specific way.")
     print()
-    print("  THIS SCRIPT derives that relation from the LATTICE WARD IDENTITY:")
+    print("  THIS SCRIPT proves the Ward identity and projector factor:")
     print()
     print("    {Eps, D_stag} = 2m * I")
     print()
@@ -1658,7 +1660,7 @@ def part6_consistency():
     print("    - Produces the factor 1/2 from the chiral projector rank")
     print("    - Combined with N_c = 3, gives y = g/sqrt(6)")
     print()
-    print("  The proof chain is now COMPLETE:")
+    print("  The proof chain is now conditional:")
     print()
     print("    Staggered lattice")
     print("    => Ward identity: {Eps, D} = 2m*I")
@@ -1687,7 +1689,7 @@ def main():
     print("y_t^2 = g_s^2 * Tr(P_+) / [dim(taste) * N_c]")
     print("=" * 78)
     print()
-    print("Closing the gap in the formal theorem proof chain.")
+    print("Sharpening the gap in the formal theorem proof chain.")
     print("Deriving WHY the Yukawa coupling normalizes as y = g/sqrt(2*N_c).")
     print()
 
@@ -1712,14 +1714,15 @@ def main():
         print("\nWARNING: Some tests failed!")
         sys.exit(1)
     else:
-        print("\nAll tests passed. Ward identity derivation complete.")
+        print("\nAll tests passed. Ward identity boundary verified.")
         print()
         print("KEY RESULT: The lattice Ward identity {Eps, D_stag} = 2m*I")
-        print("derives the gauge-Yukawa normalization:")
+        print("proves the projector factor and chiral bound:")
         print()
         print("  N_c * y_t^2 = g_s^2 * Tr(P_+) / dim(taste) = g_s^2 / 2")
         print()
         print("  => y_t = g_s / sqrt(2 * N_c) = g_s / sqrt(6)")
+        print("  (conditional on Z_Y = Z_g for the full gauged action)")
         print()
 
     return FAIL_COUNT

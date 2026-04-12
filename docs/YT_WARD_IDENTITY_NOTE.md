@@ -9,7 +9,9 @@ But it ASSUMES the relation
     N_c * y_t^2 = g_s^2 * Tr(P_+) / dim(taste)
 
 without deriving WHY the Yukawa coupling normalizes against the gauge coupling this
-way. This note closes that gap using a lattice Ward identity.
+way. This note sharpens that gap: it proves the lattice chiral Ward identity and
+the projector factor, but the gauge-link normalization remains conditional on a
+separate Ward/Slavnov-Taylor matching theorem.
 
 ## The Ward Identity
 
@@ -42,7 +44,7 @@ Since M_mass = m * Eps and Eps^2 = I (each eps(x) = +/-1):
 
 **Step 3.** Combining: {Eps, D_stag} = {Eps, D_hop} + {Eps, M_mass} = 0 + 2m*I = 2m*I. QED.
 
-## From Ward Identity to Gauge-Yukawa Normalization
+## From Ward Identity to the Normalization Bound
 
 The Ward identity has three consequences:
 
@@ -83,7 +85,7 @@ The physical coupling-squared, traced over taste and color, satisfies:
     Yukawa: y^2 * N_c * Tr(P_+^dag P_+) / dim = y^2 * N_c * (1/2)
     Gauge:  g^2 * Tr(Gamma_mu^dag Gamma_mu) / dim = g^2 * 1
 
-The Ward identity (through the shared lattice normalization) forces:
+The remaining matching condition is:
 
     N_c * y^2 * Tr(P_+) / dim = g^2 * Tr(P_+) / dim
 
@@ -129,7 +131,7 @@ through four independent approaches:
 
 ## What This Adds to the Proof Chain
 
-The proof chain is now COMPLETE:
+The proof chain is now conditional:
 
     Staggered lattice (bipartite structure)
          |
@@ -137,7 +139,7 @@ The proof chain is now COMPLETE:
     Ward identity: {Eps, D_stag} = 2m*I          [this note]
          |
          v
-    N_c * y^2 = g^2 * Tr(P_+)/dim = g^2 / 2     [this note]
+    N_c * y^2 = g^2 * Tr(P_+)/dim = g^2 / 2     [conditional on Z_Y = Z_g]
          |
          v
     y_t = g_s / sqrt(6) = 0.439                   [formal theorem]
@@ -145,7 +147,8 @@ The proof chain is now COMPLETE:
          v (SM RGE running)
     m_t = 175 GeV (+1.1% from 173.0)              [formal theorem]
 
-Previously, step 2 was assumed. Now it is derived from the lattice Ward identity.
+Previously, step 2 was assumed. Now the projector factor is derived from the
+lattice Ward identity; the gauge-link matching identity remains open.
 
 ## Rigorous vs Further Work
 
@@ -156,11 +159,11 @@ Previously, step 2 was assumed. Now it is derived from the lattice Ward identity
 - The Yukawa operator is Gamma_5 / P_+ (from staggered mass term)
 
 **Needs further justification:**
-- The precise matching condition N_c y^2 = g^2 Tr(P+)/dim relies on both
-  vertices sharing the lattice normalization. A more rigorous derivation would
-  use the lattice Slavnov-Taylor identity for the full gauged action.
+- The precise matching condition N_c y^2 = g^2 Tr(P+)/dim still relies on a
+  lattice Ward/Slavnov-Taylor identity for the full gauged action.
 - The identification of N_c as the sole color factor (no C_F correction at
-  tree level) should be verified at one-loop order.
+  tree level) should be verified at one-loop order if the matching theorem is
+  promoted beyond the conditional statement.
 
 ## Scripts
 
