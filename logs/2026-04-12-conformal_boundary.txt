@@ -1,0 +1,170 @@
+Conformal boundary theory: 2D CFT structure unique to d=3 bulk
+========================================================================
+
+========================================================================
+TEST 1: CENTRAL CHARGE VS BULK DIMENSION
+========================================================================
+
+  --- d=2 (1D boundary) ---
+    dims=(40,), L_boundary=20, S=0.8876
+    dims=(60,), L_boundary=30, S=0.9601
+    dims=(80,), L_boundary=40, S=1.0105
+    dims=(100,), L_boundary=50, S=1.0492
+    dims=(140,), L_boundary=70, S=1.1070
+    dims=(200,), L_boundary=100, S=1.1677
+
+    Log fit:    S = 0.1739 * ln(L) + 0.3679, R^2 = 0.9999
+    Linear fit: S = 0.0033 * L + 0.8580, R^2 = 0.9381
+    Best scaling: log
+    Central charge c = 1.0436 (c/6 = 0.1739)
+
+  --- d=3 (2D boundary) ---
+    dims=(8, 8, 8), |boundary|=64, |left|=32, L_eff=32, S=13.7483
+    dims=(10, 10, 10), |boundary|=100, |left|=50, L_eff=50, S=20.8800
+    dims=(12, 12, 12), |boundary|=144, |left|=72, L_eff=72, S=30.1637
+    dims=(14, 14, 14), |boundary|=196, |left|=98, L_eff=98, S=40.6757
+    dims=(16, 16, 16), |boundary|=256, |left|=128, L_eff=128, S=52.5769
+    dims=(20, 20, 20): N=8000 too large, skipping
+
+    Log fit:    S = 27.7215 * ln(L) + -85.3284, R^2 = 0.9622
+    Linear fit: S = 0.4058 * L + 0.7646, R^2 = 0.9999
+    Best scaling: linear
+    Central charge c = 83.1646 (c/3 = 27.7215)
+
+  --- d=4 (3D boundary) ---
+    dims=(5, 5, 5, 5), |boundary|=125, |left|=50, L_eff=7, S=21.0190
+    dims=(6, 6, 6, 6), |boundary|=216, |left|=108, L_eff=10, S=43.1859
+    dims=(7, 7, 7, 7), |boundary|=343, |left|=147, L_eff=12, S=58.7736
+    dims=(8, 8, 8, 8), |boundary|=512, |left|=256, L_eff=16, S=99.4625
+
+    Log fit:    S = 93.2529 * ln(L) + -166.0051, R^2 = 0.9520
+    Linear fit: S = 8.7302 * L + -42.6040, R^2 = 0.9922
+    Best scaling: linear
+    Log coefficient = 93.2529 (not a central charge for d>3)
+
+  --- d=5 (4D boundary) ---
+    dims=(4, 4, 4, 4, 4), |boundary|=256, |left|=128, L_eff=5, S=49.8352
+    dims=(5, 5, 5, 5, 5), |boundary|=625, |left|=250, L_eff=6, S=93.4815
+
+    Log fit:    S = 239.3914 * ln(L) + -335.4504, R^2 = 1.0000
+    Linear fit: S = 43.6462 * L + -168.3959, R^2 = 1.0000
+    Best scaling: linear
+    Log coefficient = 239.3914 (not a central charge for d>3)
+
+  GATE 1a (d=3 boundary has CFT central charge c ~ 1): FAIL
+    c = 83.1646
+  GATE 1b (d=4 boundary scaling differs from CFT): PASS
+
+========================================================================
+TEST 2: CONFORMAL SCALING OF BOUNDARY CORRELATORS
+========================================================================
+
+  --- d=3 bulk (2D boundary) ---
+    Lattice: (12, 12, 12), N=1728
+    Boundary sites: 144
+    Distance range: 1.0 to 14.9
+    Power law fit: C(r) ~ r^{-1.4817}
+    Scaling dimension Delta = 0.7409
+    R^2 = 0.682478
+    Delta (short range only) = 0.9147
+    Delta stability: |Delta - Delta_short| = 0.1739
+
+  --- d=4 bulk (3D boundary) ---
+    Lattice: (7, 7, 7, 7), N=2401
+    Boundary sites: 343
+    Distance range: 1.0 to 10.4
+    Power law fit: C(r) ~ r^{-0.5930}
+    Scaling dimension Delta = 0.2965
+    R^2 = 0.161634
+    Delta (short range only) = 0.6439
+    Delta stability: |Delta - Delta_short| = 0.3475
+
+  GATE 2a (d=3 boundary has clean power-law correlators): FAIL
+  GATE 2b (d=3 scaling more robust than d=4): PASS
+
+========================================================================
+TEST 3: MODULAR INVARIANCE (d=3 BULK, 2D BOUNDARY)
+========================================================================
+
+  --- Direct torus test: Z(Lx,Ly) vs Z(Ly,Lx) ---
+    ( 6 x 12) vs (12 x  6): ln Z = 5.743977 vs 5.743977, |diff| = 0.000000, ratio = 1.000000
+    ( 8 x 12) vs (12 x  8): ln Z = 7.662810 vs 7.662810, |diff| = 0.000000, ratio = 1.000000
+    ( 8 x 16) vs (16 x  8): ln Z = 10.217081 vs 10.217081, |diff| = 0.000000, ratio = 1.000000
+    (10 x 14) vs (14 x 10): ln Z = 11.174928 vs 11.174928, |diff| = 0.000000, ratio = 1.000000
+
+  --- Spectral structure test ---
+
+    First 20 energy levels:
+          (8x12)        (12x8)        |diff|
+        0.000000      0.000000      0.000000
+        0.267949      0.267949      0.000000
+        0.267949      0.267949      0.000000
+        0.585786      0.585786      0.000000
+        0.585786      0.585786      0.000000
+        0.853736      0.853736      0.000000
+        0.853736      0.853736      0.000000
+        0.853736      0.853736      0.000000
+        0.853736      0.853736      0.000000
+        1.000000      1.000000      0.000000
+        1.000000      1.000000      0.000000
+        1.585786      1.585786      0.000000
+        1.585786      1.585786      0.000000
+        1.585786      1.585786      0.000000
+        1.585786      1.585786      0.000000
+        2.000000      2.000000      0.000000
+        2.000000      2.000000      0.000000
+        2.000000      2.000000      0.000000
+        2.000000      2.000000      0.000000
+        2.267949      2.267949      0.000000
+
+    Mean |E_k - E'_k| = 6.49e-15
+    Max  |E_k - E'_k| = 1.38e-14
+    Spectra match (modular S): YES
+
+  --- T-transformation (Dehn twist) test ---
+    Regular torus (10x10): ln Z = 7.982100
+    Twisted torus (10x10): ln Z = 7.982100
+    Ratio = 1.000000
+    |1 - ratio| = 0.000000
+    T-invariance (|1-ratio| < 0.15): YES
+
+  --- d=4 comparison: 3D boundary has no modular invariance ---
+    3D torus (6x6x8) vs (8x6x6):
+    ln Z = 7.483162 vs 7.483162
+    Ratio = 1.000000
+    Max spectral diff = 0.000000
+
+    Note: 3D torus axis permutation preserves spectrum (lattice symmetry)
+    But this is NOT modular invariance -- it is geometric symmetry.
+    True modular invariance (infinite Virasoro) only exists in 2D.
+
+  GATE 3 (d=3 boundary shows 2D modular structure): PASS
+
+========================================================================
+SYNTHESIS: CONFORMAL BOUNDARY THEORY
+========================================================================
+
+  Gate results:
+    1a: d=3 boundary has CFT central charge: FAIL
+    1b: d=4 boundary scaling differs: PASS
+    2a: d=3 power-law correlators: FAIL
+    2b: d=3 scaling more robust than d=4: PASS
+    3: d=3 modular structure: PASS
+
+  Passed: 3/5
+
+  Key findings:
+    d=3 central charge: c = 83.1646
+    d=2 central charge: c = 1.0436
+    d=3 scaling dimension: Delta = 0.7409 (R^2 = 0.6825)
+    d=4 scaling dimension: Delta = 0.2965 (R^2 = 0.1616)
+    d=3 modular S (spectral match): True
+    d=3 modular T (Dehn twist ratio): 1.000000000000002
+
+  Physics interpretation:
+    MODERATE EVIDENCE: The d=3 boundary shows CFT-like features
+    that partially distinguish it from higher dimensions.
+
+  Overall: d=3 conformal boundary PARTIAL
+
+Total runtime: 27.1s

@@ -1,0 +1,149 @@
+================================================================================
+GEODESIC EQUATION: PROPAGATOR vs CONFORMAL-METRIC GEODESICS
+================================================================================
+
+Lattice: 31x31x31
+Mass at: (15, 15, 15), strength: 0.8
+
+Solving Poisson equation for gravitational field...
+  max |f| = 0.198473
+  f at mass = 0.198473
+  Weak field: f << 1 ? YES
+
+================================================================================
+TEST 1: SINGLE GEODESIC TRAJECTORY
+================================================================================
+
+Initial position: [ 3. 20. 15.]
+Initial velocity: [0.3 0.  0. ] (speed = 0.3)
+Impact parameter: 5.0
+dt = 0.2, steps = 120
+
+Integrating geodesic equation (RK4)...
+  Start: (3.00, 20.00, 15.00)
+  End:   (10.21, 20.01, 15.00)
+  Transverse deflection (y): 0.006808
+  Deflection angle: 0.002757 rad = 0.1579 deg
+
+================================================================================
+TEST 2: EIKONAL RAY TRACING (cross-check)
+================================================================================
+
+Integrating eikonal equation...
+  Start: (3.00, 20.00, 15.00)
+  End:   (26.88, 19.71, 15.00)
+  Transverse deflection (y): -0.288428
+  Deflection angle: 0.024344 rad = 1.3948 deg
+
+  Eikonal/Geodesic deflection ratio: 8.8309
+  Agreement: POOR
+
+================================================================================
+TEST 3: PROPAGATOR WAVEPACKET TRAJECTORY
+================================================================================
+
+Propagator lattice: 21x21x21
+Solving Poisson for propagator lattice...
+  max |f| = 0.196610
+
+Wavepacket center: [ 2. 14. 10.]
+Wavenumber: k0 = [1.5 0.  0. ]
+Sigma: 1.5
+Impact parameter: 4.0
+
+Building propagator matrix...
+Creating initial wavepacket...
+Propagating for 30 steps...
+  Start centroid: (2.15, 14.00, 10.00)
+  End centroid:   (3.75, 13.81, 10.00)
+  Transverse deflection (y): -0.187515
+
+  Geodesic deflection on same lattice: 0.005759
+  Propagator/Geodesic deflection ratio: -32.5622
+
+================================================================================
+TEST 4: DEFLECTION vs IMPACT PARAMETER
+================================================================================
+
+Speed = 0.3, dt = 0.2, steps = 120
+Lattice: 31x31x31
+
+    b    theta_geo    theta_eik      ratio     dy_geo
+-------------------------------------------------------
+  3.0     0.002496     0.046037    18.4453     0.0056
+  5.0     0.002757     0.024344     8.8309     0.0068
+  7.0     0.002522     0.015879     6.2957     0.0067
+  9.0     0.002180     0.011467     5.2600     0.0061
+
+--- 1/b scaling check ---
+    b    theta_geo      theta*b     expected
+---------------------------------------------
+  3.0     0.002496     0.007488
+  5.0     0.002757     0.013783
+  7.0     0.002522     0.017655
+  9.0     0.002180     0.019621
+
+theta*b spread: 0.8290
+1/b scaling: WEAK
+
+================================================================================
+TEST 5: POINT-BY-POINT TRAJECTORY COMPARISON
+================================================================================
+
+Impact parameter b = 5.0
+
+  step    x_geo    y_geo    x_eik    y_eik       |dr|
+-------------------------------------------------------
+     0     3.00    20.00     3.00    20.00     0.0000
+    20     4.20    20.00     6.99    20.00     2.7919
+    40     5.40    20.00    10.97    19.99     5.5733
+    60     6.60    20.00    14.94    19.96     8.3398
+    80     7.81    20.00    18.91    19.90    11.1042
+   100     9.01    20.00    22.89    19.81    13.8814
+   120    10.21    20.01    26.88    19.71    16.6682
+
+Max deviation: 16.668215
+Path length: 7.21
+Relative deviation: 2.31e+00
+
+================================================================================
+TEST 6: CHRISTOFFEL SYMBOL VERIFICATION
+================================================================================
+
+Test point: [12. 19. 15.]
+f = 0.009008
+grad f = [0.001517, -0.002026, 0.000000]
+Omega = 0.990992
+
+d ln Omega = [-0.001531, 0.002044, -0.000000]
+
+Selected Christoffel symbols (analytic):
+  Gamma^x_xx = -0.001531
+  Gamma^x_xy = 0.002044
+  Gamma^x_yy = 0.001531
+  Gamma^x_zz = 0.001531
+  Gamma^y_xx = -0.002044
+  Gamma^y_xy = -0.001531
+  Gamma^y_yy = 0.002044
+  Gamma^y_zz = -0.002044
+  Gamma^z_xz = -0.001531
+  Gamma^z_yz = 0.002044
+
+Max |Gamma_analytic - Gamma_numerical| = 2.34e-07
+Christoffel symbol consistency: PASS
+
+================================================================================
+SUMMARY
+================================================================================
+
+1. Christoffel symbols (analytic vs numerical): PASS (err=2.34e-07)
+2. Eikonal/Geodesic agreement: FAIL
+3. Trajectory deviation: FAIL (rel=2.31e+00)
+4. 1/b deflection scaling: FAIL
+
+Result: 1/4 tests passed
+
+CONCLUSION: Geodesic agreement is partial or weak.
+Further investigation needed.
+
+Elapsed: 1.52s
