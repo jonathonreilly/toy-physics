@@ -478,6 +478,98 @@ Reason:
 - capture from it should happen incrementally into `codex/review-active`, but
   the branch itself should not be deleted or pruned while active work continues
 
+### Single-artifact `frontier/*` historical-variant batch
+
+Status:
+
+- scrubbed into `codex/review-active`
+
+Branches covered in this pass:
+
+- `origin/frontier/3d-convergence`
+- `origin/frontier/chiral-closure-card`
+- `origin/frontier/chiral-wider`
+- `origin/frontier/cleanup`
+- `origin/frontier/decoherence-suppression`
+- `origin/frontier/honest-closure`
+- `origin/frontier/local-unitary`
+- `origin/frontier/session-writeup`
+
+Archive readiness:
+
+- archive-ready
+
+Reason:
+
+- spot checks confirm these branch tips only differ by historical variants of
+  files already preserved on the active review branch
+- no branch-specific science paths remain stranded on these source tips
+
+### Two-file `frontier/*` exact-match batch
+
+Status:
+
+- scrubbed into `codex/review-active`
+
+Branches covered in this pass:
+
+- `origin/frontier/chiral-validation`
+- `origin/frontier/lorentzian-beamsplitter`
+
+Archive readiness:
+
+- archive-ready
+
+Reason:
+
+- both branch file pairs match the active review branch exactly
+- no branch-specific science paths remain stranded on these source tips
+
+### Mixed small `frontier/*` batch
+
+Status:
+
+- scrubbed into `codex/review-active`
+
+Branches covered in this pass:
+
+- `origin/frontier/phase-metric`
+- `origin/frontier/lorentzian-closure`
+
+Archive readiness:
+
+- archive-ready
+
+Reason:
+
+- `phase-metric` differs only by older reporting / logging text around files
+  already preserved on review
+- `lorentzian-closure` carried one branch-specific neighboring-window script;
+  that `k=8` card was captured onto review as a historical exploratory variant
+- no branch-specific science paths remain stranded on these source tips
+
+### Follow-on small `frontier/*` batch
+
+Status:
+
+- scrubbed into `codex/review-active`
+
+Branches covered in this pass:
+
+- `origin/frontier/synthesis-and-next`
+- `origin/frontier/unitary-linear`
+
+Archive readiness:
+
+- archive-ready
+
+Reason:
+
+- `unitary-linear` matches the active review branch exactly
+- `synthesis-and-next` differs only by an older overclaiming synthesis doc and
+  one script already preserved on review
+- no branch-specific science paths remain stranded on these source tips
+
 ## Codex First-Pass Triage
 
 These statuses are mechanical only: whether the branch tip is already an
@@ -555,6 +647,20 @@ do not need further science capture before archive:
 - `origin/claude/gracious-pasteur`
 - `origin/claude/distracted-napier`
 - `origin/claude/backreaction-frontier`
+- `origin/frontier/3d-convergence`
+- `origin/frontier/chiral-closure-card`
+- `origin/frontier/chiral-wider`
+- `origin/frontier/cleanup`
+- `origin/frontier/decoherence-suppression`
+- `origin/frontier/honest-closure`
+- `origin/frontier/local-unitary`
+- `origin/frontier/session-writeup`
+- `origin/frontier/chiral-validation`
+- `origin/frontier/lorentzian-beamsplitter`
+- `origin/frontier/phase-metric`
+- `origin/frontier/lorentzian-closure`
+- `origin/frontier/synthesis-and-next`
+- `origin/frontier/unitary-linear`
 
 ### Likely archive-ready after one short verification pass
 
@@ -568,4 +674,5 @@ science branches, but they still need a quick final diff audit before delete:
 - `origin/claude/youthful-neumann` remains live and protected; capture from it
   should continue incrementally into `codex/review-active`, but it is not an
   archive candidate while active work continues
-- next scrub stage is `frontier/*`
+- next scrub stage is the remaining larger `frontier/*` branches after the
+  small Lorentzian / synthesis / unitary batches

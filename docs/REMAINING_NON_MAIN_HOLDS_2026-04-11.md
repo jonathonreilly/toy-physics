@@ -196,6 +196,7 @@ Files:
 - `scripts/lensing_beta_sweep_fine.py`
 - `scripts/frontier_local_unitary_lorentzian.py`
 - `scripts/frontier_chiral_two_body_superposition.py`
+- `scripts/frontier_lorentzian_k8_card.py`
 
 Why held:
 
@@ -208,6 +209,8 @@ Why held:
 - the local-unitary Lorentzian and chiral two-body scripts are reopening
   harnesses / diagnostics only, with no audited bounded note establishing a
   `main` candidate
+- the `k=8` Lorentzian card is a historical adjacent-window script, not a
+  bounded note+runner pair and not a retained closure artifact
 
 Next control:
 

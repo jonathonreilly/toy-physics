@@ -214,6 +214,23 @@ Current read:
 - useful to preserve on review as reopening harnesses
 - not retained science and not a direct promotion target
 
+### Narrow capture from `origin/frontier/lorentzian-closure`
+
+- `scripts/frontier_lorentzian_k8_card.py`
+
+Current read:
+
+- historical adjacent-`k` variant of the Lorentzian split-delay full-card lane
+- useful to preserve on review so the branch tip no longer carries unique
+  neighboring-window payload
+- not a current `main` candidate and not a bounded note+runner pair on its own
+
+Promotion rule:
+
+- do not promote this script directly to `main`
+- if the Lorentzian window lane is reopened, write a fresh bounded audit note
+  over the full `k`-window instead of promoting a single `k=8` script
+
 ### Narrow capture from `origin/codex/archive-claude-distracted-napier-20260411`
 
 - `docs/K_OSCILLATION_PREDICTION_NOTE.md`
