@@ -37,6 +37,22 @@ python3 scripts/frontier_distance_law_64_frozen_control.py 2>&1 | tee ~/Desktop/
 
 Expected runtime: ~2 min. Compares dynamic Poisson vs hand-crafted 1/r vs analytic sum.
 
+## Run 4: Frozen Stars Rigorous (6-probe)
+
+```bash
+python3 scripts/frontier_frozen_stars_rigorous.py 2>&1 | tee ~/Desktop/frozen_stars_rigorous.txt
+```
+
+Expected runtime: ~10-20 min. The 3D L=14 eigendecomposition (2744 sites) is the bottleneck.
+
+**What to report:**
+- Analytical R_min/R_S formula — does it agree with numerics?
+- 1D convergence: does Fermi stabilization hold at N=500, 1000?
+- 3D verification: does stabilization persist at L=12, 14?
+- Compactness ratio at physical masses
+- **GW150914 echo time in milliseconds** — this is the headline number
+- Comparison to Abedi et al. (2017) claimed ~100 ms echoes
+
 ## What to report back
 
 From each run, copy the output sections:
