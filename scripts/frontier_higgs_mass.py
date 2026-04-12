@@ -70,11 +70,16 @@ np.set_printoptions(precision=6, linewidth=120)
 # Physical constants (in lattice units where a = 1)
 # ============================================================================
 
-# SM couplings at the weak scale
-G_WEAK = 0.653        # SU(2) gauge coupling g
-G_PRIME = 0.350       # U(1) hypercharge coupling g'
-Y_TOP = 0.995         # Top Yukawa coupling
-G_STRONG = 1.221      # SU(3) strong coupling (for reference)
+# CAVEAT (review P1): These are INJECTED Standard Model couplings at the
+# weak scale, not derived from Cl(3)/Z^3. This script is a CONSISTENCY
+# CHECK: "given SM couplings, does CW on a lattice with Planck-scale cutoff
+# give a Higgs mass in the right range?" It is NOT a first-principles
+# derivation of m_H. A true derivation would need couplings from the
+# lattice structure (see frontier_gauge_unification.py for that direction).
+G_WEAK = 0.653        # SU(2) gauge coupling g [SM input]
+G_PRIME = 0.350       # U(1) hypercharge coupling g' [SM input]
+Y_TOP = 0.995         # Top Yukawa coupling [SM input]
+G_STRONG = 1.221      # SU(3) strong coupling [SM input]
 
 # Weinberg angle
 SIN2_THETA_W = G_PRIME**2 / (G_WEAK**2 + G_PRIME**2)

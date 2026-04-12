@@ -50,7 +50,13 @@ t_Planck = l_Planck / c                         # 5.391e-44 s
 H_0 = 67.4e3 / (3.0857e22)                     # 1/s
 R_Hubble = c / H_0                              # ~ 1.37e26 m
 Lambda_obs = 1.1056e-52                         # m^{-2}
-Omega_Lambda = 0.685
+# CAVEAT (review P1): Omega_Lambda is an OBSERVED input here, used to
+# compute the factor decomposition Lambda_obs = (spectral gap) * f(topology).
+# This script shows self-consistency (the S^3 spectral gap accounts for the
+# factor of 15), NOT a parameter-free derivation of Omega_Lambda. For the
+# parameter-free chain, see frontier_baryogenesis.py which derives Omega_m
+# from eta, giving Omega_Lambda = 1 - Omega_m without feeding in Omega_Lambda.
+Omega_Lambda = 0.685                             # [observed input, not derived here]
 t_universe = 13.8e9 * 3.156e7                   # seconds
 
 N_side = R_Hubble / l_Planck                    # ~ 8.5e60

@@ -782,14 +782,18 @@ def test_one_liner():
     # The SU(3) generators mix the three "color" directions defined by
     # which tensor factor the qubit lives in.
 
-    # Concrete construction: embed 3x3 Gell-Mann in 8x8 space
-    # via the three "flavor" directions.
-    # Each tensor factor (C^2) contributes one "quark direction."
+    # CAVEAT (review P1): This construction EMBEDS Gell-Mann matrices into
+    # the taste space by hand-picking 3 of 4 basis states. It demonstrates
+    # that SU(3) is COMPATIBLE with the Cl(3) taste algebra, but does NOT
+    # prove that SU(3) is the UNIQUE or preferred subalgebra. The selection
+    # of the triplet subspace needs an intrinsic justification (e.g., from
+    # dynamics or a symmetry-breaking pattern). Status: SU(3) compatible,
+    # not yet derived as the unique emergent gauge group.
 
     # Block decomposition: 8 = (2,2,2) = (2 x 4) where 4 = 2 x 2
     # Under the first SU(2): 8 = 4(+) + 4(-)
-    # Within the 4-dim subspace, we have C^2 x C^2, and can embed SU(3)
-    # using the Gell-Mann trick: take 3 of the 4 states as "colors"
+    # Within the 4-dim subspace, we have C^2 x C^2
+    # Pick 3 of the 4 states as "colors" — this is the hand-embedding step
 
     # Projectors onto definite sigma_z eigenvalue of first factor
     P_up = np.kron(np.kron(np.array([[1, 0], [0, 0]], dtype=complex), I2), I2)
@@ -828,7 +832,7 @@ def test_one_liner():
     print(f"  Structure constant f_123 = {f123_norm.real:.4f} (expected: 1.0)")
 
     results["su3"] = closes_su3
-    scoreboard.append(("SU(3) from taste algebra (3 of 8 states)", closes_su3))
+    scoreboard.append(("SU(3) compatible embedding in taste algebra (not yet uniquely derived)", closes_su3))
 
     # (c) U(1) from sublattice parity
     print("\n--- (c) U(1) from sublattice parity ---")
