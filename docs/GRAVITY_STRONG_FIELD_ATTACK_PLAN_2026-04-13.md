@@ -3,7 +3,9 @@
 **Date:** 2026-04-13  
 **Branch:** `codex/review-active`  
 **Purpose:** Codex-owned research plan for the strongest remaining gravity upside:
-full nonlinear / strong-field closure beyond the retained weak-field surface.
+full nonlinear / strong-field closure beyond the retained weak-field surface,
+now understood as a **3D shell/junction theorem plus a 3+1 spacetime lift**,
+not a symmetric 4D lattice derivation.
 
 ## Current honest state
 
@@ -413,9 +415,9 @@ Those are not the live blocker.
 
 The live blocker is:
 
-> The repo does not yet derive a nonlinear **4D spacetime closure** tying the
-> spatial conformal factor, the temporal sector, and matter backreaction into
-> one self-consistent strong-field equation.
+> The repo does not yet derive a nonlinear **3+1 spacetime lift** tying the
+> already-sharp spatial shell/junction law to the temporal sector and matter
+> backreaction in one self-consistent strong-field equation.
 
 Concretely, the current strong-field branch still relies on two load-bearing
 extensions that are not yet theorem-grade:
@@ -444,7 +446,19 @@ again:
    and the derivation of the static isotropic bridge from the lattice closure
    itself
 6. after that, the resulting exterior-plus-band construction still has to be
-   promoted to a theorem-grade nonlinear 4D closure
+   promoted to a theorem-grade nonlinear **3+1** closure
+
+More concretely now:
+
+7. the spatial side is no longer the vague part of the problem:
+   on the current star-supported source class, the shell kernel, reduced
+   junction operator, anisotropic correction mode, and support-renormalized
+   amplitude law are already solved natively on the **3D** lattice
+8. the remaining theorem is therefore not “derive symmetric 4D gravity from
+   scratch,” but:
+   - identify the exact local **3D shell/junction functional**
+   - prove its temporal / lapse lift
+   - promote that pair to the final nonlinear **3+1** Einstein-Regge closure
 
 Until those are replaced by a genuine nonlinear closure, the following stay
 bounded or conditional:
@@ -457,15 +471,16 @@ bounded or conditional:
 ## Best derivation route already latent in the repo
 
 The shortest credible route is **not** another phenomenology note. It is a
-propagator-based metric reconstruction program:
+propagator-based **3D-to-3+1** metric reconstruction program:
 
-1. start from the exact lattice propagator in background field form, not from
-   Schwarzschild
-2. derive the strong-field **spatial** metric from propagator decay / path cost
+1. start from the exact **spatial** lattice propagator / DtN / shell data in
+   background field form, not from Schwarzschild
+2. derive the strong-field **3D shell/junction law** from that propagator data
    without importing the continuum metric interpretation by hand
-3. derive the strong-field **temporal** component from the phase / time-dilation
-   sector on the same background
-4. combine them into a single 4D metric candidate
+3. derive the strong-field **temporal** component from the same background,
+   i.e. as a lift of the same solved spatial object rather than as an
+   independent sector
+4. combine them into a single **3+1** metric / junction candidate
 5. compute Ricci / Einstein residuals or a Regge-lattice analog and test
    whether a closed nonlinear vacuum equation is actually satisfied
 
@@ -475,6 +490,15 @@ This route stays on the framework’s strongest native surface:
 - propagator-defined geometry
 - self-consistency closure
 - already-retained weak-field gravity
+
+It also matches the actual structure of the current branch:
+
+- all exact strong-field objects extracted so far are fundamentally **spatial**
+  (`G_0`, shell source, DtN kernel, orbit channels, reduced junction operator,
+  support-renormalized amplitude law)
+- the temporal sector is a derived **lift** from those spatial objects
+- so the final gravity theorem should be framed as:
+  **exact 3D shell/junction closure -> exact 3+1 spacetime lift**
 
 ## Specific files to reuse
 
@@ -522,12 +546,13 @@ Required outcome:
 
 This is the highest-leverage step.
 
-### Attack 2: derive `g_tt` and `g_ij` from the same object
+### Attack 2: derive the 3+1 lift from the already-solved spatial object
 
 Current gap:
 
-- spatial and temporal sectors are still split
-- no full spacetime horizon statement is possible without both
+- the spatial shell/junction side is much sharper than the temporal side
+- no full spacetime statement is possible until the temporal/lapse sector is
+  proved to be the lift of that same spatial object
 
 Current bridge result:
 
@@ -585,11 +610,11 @@ Current bridge result:
 
 Required outcome:
 
-- derive the temporal redshift factor from the exact same strong-field closure
-  that gives the spatial metric, in a way stronger than the current bounded
-  static-isotropic bridge
-- remove the current mismatch where the spatial branch looks stronger than the
-  temporal branch
+- derive the temporal redshift factor from the exact same spatial shell /
+  junction closure that now drives the strong-field exterior law, in a way
+  stronger than the current bounded static-isotropic bridge
+- remove the current mismatch where the exact **3D** branch is stronger than
+  the temporal / 3+1 lift
 - derive the microscopic-to-macroscopic matching rule that sends the exact
   lattice field to the coarse-grained radial harmonic exterior law
 - or derive the effective source/coarse-graining theorem that forces that
@@ -604,7 +629,7 @@ Required outcome:
   derive the universal shell kernel itself from the microscopic lattice
   dynamics and promote it to the shell stress / matching law of the nonlinear
   closure
-- and, before the full 4D lift, derive the perturbative correction operator
+- and, before the full 3+1 lift, derive the perturbative correction operator
   that controls the finite-rank non-`O_h` junction deviation with a bounded
   `O(\epsilon^2)` remainder
 
@@ -635,16 +660,21 @@ This lane is worth promoting only if all of the following hold:
 
 1. the nonlinear closure is derived from the exact lattice framework, not
    inserted as a closure ansatz
-2. `g_tt` and `g_ij` come from the same strong-field derivation
-3. the resulting metric satisfies a real nonlinear field equation or Regge
+2. the exact **3D** shell/junction law is derived natively from the lattice
+   and not merely extracted as a fitted or bounded effective law
+3. `g_tt` and `g_ij` come from the same strong-field derivation, i.e. one
+   common **3+1** lift of that 3D shell/junction law
+4. the resulting metric satisfies a real nonlinear field equation or Regge
    analog with controlled residuals
-4. downstream no-horizon / strong-field claims are reclassified against that
+5. downstream no-horizon / strong-field claims are reclassified against that
    derived metric, not inherited from older notes
 
 ## Practical conclusion
 
 The gravity upside is still real, but the branch should stop acting as if the
-main task is “derive more GR signatures.” The actual task is:
+main task is “derive more GR signatures” or “derive symmetric 4D lattice
+gravity.” The actual task is:
 
-> derive one nonlinear spacetime closure that replaces the current strong-field
-> ansatzes with a genuine lattice theorem.
+> derive one exact **3D shell/junction theorem** and its nonlinear **3+1**
+> spacetime lift, replacing the remaining strong-field ansatzes with a genuine
+> lattice theorem.
