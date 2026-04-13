@@ -232,11 +232,13 @@ language. Exact blockers to gravity-companion promotion:
 **Primary files**
 
 - `docs/YT_FLAGSHIP_CLOSURE_NOTE.md`
+- `docs/YT_BOUNDARY_RESOLUTION_NOTE.md`
 - `docs/WILSONIAN_EFT_DERIVATION_NOTE.md`
 - `docs/YT_MATCHING_COMPUTED_NOTE.md`
 - `docs/YT_CL3_PRESERVATION_NOTE.md`
 - `docs/RENORMALIZED_YT_THEOREM_NOTE.md`
 - `scripts/frontier_yt_cl3_preservation.py`
+- `scripts/frontier_yt_boundary_resolution.py`
 - `scripts/frontier_yt_matching_coefficient.py`
 - `scripts/frontier_yt_matching_computed.py`
 - `scripts/frontier_wilsonian_eft.py`
@@ -248,52 +250,62 @@ language. Exact blockers to gravity-companion promotion:
    - Feshbach is now verified on the actual staggered `Cl(3)` / `Z^3`
      Hamiltonian
    - `b_2 = 19/6` bookkeeping is corrected
+   - the V-scheme to `\\overline{MS}` conversion itself is a real step forward
    - do not spend more time re-litigating those fixed points
-2. do **not** redo solved sub-steps
+2. the new boundary-resolution note is **not** full closure
+   - the current script runs `g_3^\\overline{MS}` up from observed
+     `alpha_s(M_Z)` to get `g_3(M_Pl)`
+   - it then imposes a different high-scale coupling on `y_t` alone via the
+     converted lattice boundary
+   - that breaks the exact boundary relation `y_t = g_s / sqrt(6)` by using
+     one coupling for `y_t` and another for gauge evolution
+3. do **not** redo solved sub-steps
    - `Cl(3)` preservation under RG is already the right surface
    - Feshbach on the actual Hamiltonian is already verified
    - the 1-loop bookkeeping bug is fixed
    - the lattice matching coefficient itself is already narrowed to
      sub-percent scale
-3. the live blocker is now the real low-energy matching bridge
-   - interacting gauge/Higgs operator content on the actual framework surface
-   - thresholded running from `M_Pl` to `M_Z`
-   - lattice / V-scheme to `\\overline{MS}` boundary conversion for `g_s`
-     and `y_t`
-4. `alpha_s(M_Pl)` remains bounded as a chain, not as a free parameter
-   - the issue is scheme/matching precision, not missing conceptual structure
-5. the lane is now a quantitative precision problem
-   - if you can compute the matching cleanly, the lane likely closes
-   - if not, keep it sharply bounded and stop calling it conceptually open
+4. the live blocker is now one **self-consistent** high-scale boundary for
+   both `g_3` and `y_t`
+   - derive `g_3^\\overline{MS}(M_Pl)` from the framework boundary itself, not
+     from observed `alpha_s(M_Z)`
+   - or give one explicit imported low-energy anchor and stop calling the lane
+     closed
+5. thresholded running still matters, but the conceptual mismatch is now clear
+   - the same boundary object must drive both `g_3` and `y_t`
+   - otherwise the lane stays bounded even if the final `m_t` number looks good
 
 **What counts as success**
 
 - best-case success:
-  - compute the actual lattice-to-`\\overline{MS}` matching for the relevant
-    Yukawa/gauge operators at `M_Pl`
-  - run the thresholded 2-loop chain with that boundary and close the residual
+  - compute one actual lattice/V-scheme to `\\overline{MS}` boundary at `M_Pl`
+    that sets both `g_3` and `y_t`
+  - run the thresholded 2-loop chain with that common boundary and close the
+    residual
 - second-best success:
-  - close the interacting operator-identification step cleanly and isolate the
-    remaining uncertainty to one explicit matching coefficient
+  - isolate the lane to one explicit imported low-energy anchor
+    (for example `alpha_s(M_Z)`) and state that honestly
 - minimum acceptable success:
   - keep the flagship note honest and bounded with the residual written as a
-    precision/matching problem rather than a vague “continuum bridge”
+    self-consistent boundary problem rather than a vague “continuum bridge”
 
 **What does not count**
 
 - re-proving Feshbach on toy systems
 - presenting corrected beta coefficients as if that alone closes the lane
-- saying “the rest is just standard running” unless the actual scheme matching
+- using observed `alpha_s(M_Z)` to build `g_3(M_Pl)` while calling the full
+  high-scale boundary framework-derived
+- using one high-scale coupling for `y_t` and a different one for `g_3`
+- saying “the rest is just standard running” unless the actual common boundary
   is computed on the framework surface
 
 **Preferred attack order**
 
 1. do **not** re-prove Feshbach or the sub-percent matching coefficient
-2. compute the actual boundary conversion from the framework lattice/V-scheme
-   surface to `\\overline{MS}` at `M_Pl`
-3. run the full thresholded 2-loop chain from that boundary
-4. isolate any remaining discrepancy as a small boundary/scheme residual,
-   not a vague continuum objection
+2. derive one common framework boundary for both `g_3` and `y_t` at `M_Pl`
+3. only then run the full thresholded 2-loop chain from that boundary
+4. if that fails, isolate exactly which low-energy anchor is still imported
+5. keep the lane bounded unless the split-boundary problem is gone
 
 ### Target C: CKM / flavor
 
@@ -305,7 +317,9 @@ language. Exact blockers to gravity-companion promotion:
 **Primary files**
 
 - `docs/CKM_*`
+- `docs/CKM_FULL_CLOSURE_NOTE.md`
 - `scripts/frontier_ckm_*`
+- `scripts/frontier_ckm_full_closure.py`
 
 **Current blockers**
 
@@ -316,17 +330,18 @@ language. Exact blockers to gravity-companion promotion:
    - the exact `2x2` `2-3` block diagonalization is already done
    - the ratio route `c_23^u/c_23^d` is already done
    - the full `3x3` NNI `V_ub` route is already done as a bounded result
-3. the real remaining blocker is quantitative closure
-   - absolute `2-3` overlap scale `S_23` is still not derived sharply
-   - `c_13` / phase control is still not sharp enough for `V_ub`
-   - `V_cb` and `V_ub` remain the actual publication blockers
-4. current best reading of the gap
-   - the ratio route is useful but too small by itself
+3. the new full-closure script does **not** derive `V_cb`
+   - it explicitly solves `c_23^d` by matching `V_cb` to PDG
+   - do **not** cite that as a first-principles closure
+4. the real remaining blocker is quantitative closure
+   - absolute `c_23` / `S_23` normalization independent of PDG input
+   - `c_13` suppression and phase control strong enough for `V_ub`
+   - a phase structure strong enough to resolve the `J`-`V_ub` tension
+5. current best reading of the gap
+   - `K` is only O(1)-derived and still needs a non-perturbative form factor
+   - the lattice `c_13` story can fit `V_ub` or `J`, but not both with the
+     current single-phase embedding
    - invariants are consistency checks, not closure
-   - the highest-value missing derivations are now:
-     - absolute `S_23`
-     - sharp `c_13`
-     - phase-aware full `3x3` NNI diagonalization
 
 **Preferred execution routes**
 
@@ -341,19 +356,20 @@ language. Exact blockers to gravity-companion promotion:
    - do not spend more time re-deriving a 1-5% EW asymmetry unless you are
      materially changing the result
 
-3. derive the **absolute** `S_23` overlap scale analytically
+3. derive the **absolute** `S_23` / `c_23` normalization analytically
    - do not treat cluster compute as the first choice
    - use the continuum / Symanzik taste-splitting machinery if possible
-   - this is now the highest-value unsolved piece for `V_cb`
+   - this is now the highest-value unsolved piece for making `V_cb` truly
+     first-principles
 
-4. close `V_ub` by deriving `c_13` and the relevant phase structure
-   - the latest note shows `V_ub` is highly sensitive to residual `c_13`
-   - deriving `c_13` from first principles is more valuable now than redoing
-     crude mass-ratio estimates
+4. close `V_ub` by deriving `c_13` and the relevant up/down phase structure
+   - the latest note shows the real issue is the `J`-`V_ub` tension
+   - deriving `c_13` without fixing the phase structure is not enough
 
 5. use invariants only as a consistency layer
    - they do not independently close `V_cb`
-   - use them after `S_23` / `c_13` are sharpened, not instead of that work
+   - use them after `S_23` / `c_13` / phase are sharpened, not instead of
+     that work
 
 6. cluster-compute fallback
    - only fall back to `L >= 32` / dynamical overlap production if the ratio /
@@ -377,6 +393,7 @@ language. Exact blockers to gravity-companion promotion:
 
 - route pruning alone
 - bounded structural flavor patterns sold as a full CKM theorem
+- calibrating `c_23^d` from PDG `V_cb` and then calling `V_cb` derived
 - saying the lane is “computational only” without also tightening the actual
   paper-safe bounded wording
 

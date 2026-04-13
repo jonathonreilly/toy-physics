@@ -179,28 +179,34 @@ Current safe state:
 
 - bare UV theorem closed
 - `Cl(3)` preservation under RG exact
-- the Wilsonian route is materially better than before
+- the Wilsonian / matching route is materially better than before
   - Feshbach is now verified on the actual `Cl(3)` / `Z^3` Hamiltonian
   - the one-loop bookkeeping bug (`b_2`) is corrected
   - the lattice matching coefficient is already computed at sub-percent scale
+  - V-scheme to `\overline{MS}` conversion is a real narrowing of the old gap
 - therefore still bounded:
-  - interacting boundary conversion on the real Hamiltonian surface
-  - `alpha_s(M_Pl)` / boundary chain
-  - lattice / V-scheme to `\overline{MS}` matching
+  - one self-consistent high-scale boundary for both `g_3` and `y_t`
+  - the current boundary-resolution script still uses observed `alpha_s(M_Z)`
+    to generate `g_3(M_Pl)`
+  - the same script then uses a different high-scale coupling for `y_t`
+    than for gauge evolution, so the exact boundary relation
+    `y_t = g_s / sqrt(6)` is not enforced on one common boundary surface
   - thresholded running down to `M_Z`
 
 Paper-safe read:
 
-> The UV theorem surface is strong, but the remaining issue is now a real
-> boundary / matching / scheme problem, not the old toy-model objection.
+> The UV theorem surface is strong, but the remaining issue is now a
+> self-consistent boundary problem: the same framework boundary must set both
+> `g_3` and `y_t`, not one coupling for Yukawa data and another for gauge
+> running.
 
 Best attack:
 
 1. do not re-prove Feshbach or the sub-percent matching coefficient
-2. compute the actual lattice/V-scheme to `\overline{MS}` boundary conversion
-   for `g_s` and `y_t` at `M_Pl`
-3. rerun the full thresholded 2-loop chain with that boundary
-4. isolate any remaining discrepancy as a small boundary residual
+2. derive one common framework boundary for both `g_3` and `y_t` at `M_Pl`
+3. only then rerun the full thresholded 2-loop chain
+4. if a low-energy anchor is still needed, isolate it explicitly and keep the
+   lane bounded
 
 ### 3. CKM / quantitative flavor closure
 
@@ -212,30 +218,33 @@ Current safe state:
 - the ratio route is already done
 - the full `3x3` `V_ub` route is already done as a bounded result
 - still open:
-  - sharp `V_cb`
-  - sharp `V_ub`
-  - first-principles control of absolute `S_23`
-  - first-principles control of `c_13` / phase
+  - first-principles control of absolute `c_23` / `S_23`
+  - first-principles control of `c_13`
+  - phase structure strong enough to resolve the `J`-`V_ub` tension
 
 Current best reading:
 
 - this is still not obviously a pure cluster-compute wall
-- the ratio route is useful, but too small by itself to close `V_cb`
-- invariants are useful, but do not independently solve for `V_cb`
+- the new full-closure script still calibrates `c_23^d` from PDG `V_cb`,
+  so it does **not** close `V_cb` from first principles
+- `K` is only O(1)-derived and still needs a non-perturbative form factor
+- the lattice `c_13` story can fit `V_ub` or `J`, but not both with the
+  current single-phase embedding
+- invariants are useful, but do not independently solve the lane
 - the highest-value unsolved targets are now:
-  - absolute `S_23`
+  - absolute `S_23` / `c_23`
   - residual `c_13`
-  - phase-aware full `3x3` NNI closure
+  - up/down phase embedding that resolves the `J`-`V_ub` tension
 
 Preferred routes:
 
 1. use the exact `V_cb` formula already on branch as the baseline
 2. use the ratio route only as an input reduction step, not as the closure
-3. derive the absolute `S_23` overlap scale analytically from the continuum /
-   Symanzik taste-splitting machinery if possible
-4. derive `c_13` and the relevant phase structure for `V_ub`
+3. derive the absolute `S_23` / `c_23` normalization analytically from the
+   continuum / Symanzik taste-splitting machinery if possible
+4. derive `c_13` and the up/down phase structure together
 5. use invariant/Jarlskog relations built from derived quantities, not PDG angles,
-   only as a consistency layer after `S_23` / `c_13` sharpen
+   only as a consistency layer after `S_23` / `c_13` / phase sharpen
 
 Only if those fail cleanly should the lane be treated as compute-limited.
 
