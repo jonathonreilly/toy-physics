@@ -132,29 +132,46 @@ Current strongest useful work:
 - `DM_INVARIANT_BRIDGE_NOTE.md`
 - `DM_K_INDEPENDENCE_NOTE.md`
 - `DM_DIRECT_OBSERVABLE_NOTE.md`
+- `DM_BOUNCE_WALL_NOTE.md`
+- `DM_TRANSPORT_DERIVED_NOTE.md`
+- `BBN_FROM_FRAMEWORK_NOTE.md`
 
 Current blockers:
 
 - the baryogenesis chain is now much narrower than before
   - `J_Z3`, `v(T_c)/T_c`, and `Gamma_sph/T^4` are already the strongest part
     of the chain
-- the live blocker is now the transport sector behind `eta`
-  - denominator still imports baryon abundance through `v_w`, `L_w*T`, `D_q*T`
+- the BBN/nuclear-physics objection is largely gone in principle
+  - `eta -> Omega_b` really is counting once `m_p`, `G`, and `H_0` are taken
+    from accepted framework authority
+  - if the BBN runner is used, it must stop hardcoding measured `m_p`, `G`,
+    and `H_0` under `[DERIVED]` without pointing to that authority
+- `L_w*T` is no longer the main blocker
+  - the bounce/profile route is now the strongest transport sub-result
+- the live blocker is now the remaining transport sector behind `eta`
+  - `D_q*T` still comes from plugging framework `alpha_s` into imported
+    AMY/Moore kinetic-theory formulas and adopted NLO factors
+  - `v_w` still comes from plugging framework couplings into pressure/friction
+    estimates and then adopting a literature-style `0.01-0.10` range
 - relic-ratio / cosmological bridge is therefore still not closed
 - `g = 1` and `k = 0` remain bounded framework inputs where used
 
 Paper-safe read:
 
-> Structural DM inputs are materially stronger, but the full relic mapping
-> remains bounded because `eta` is still conditional on imported transport
-> coefficients.
+> Structural DM inputs are materially stronger. The BBN objection is mostly
+> retired and `L_w*T` is substantially narrowed, but the full relic mapping
+> remains bounded because `eta` still depends on transport formulas that are
+> not yet native lattice derivations.
 
 Best attack:
 
-1. derive `L_w*T` from the existing framework `V_eff` / bounce profile
-2. derive `D_q*T` from kinetic theory / Kubo on the framework coupling surface
-3. derive `v_w` from hydrodynamics only if the first two are not enough
-4. then promote `eta` and the full relic ratio
+1. do not spend more time on BBN rhetoric or `L_w*T` unless a real bug appears
+2. derive `D_q*T` from an actual framework Green-Kubo / transport computation
+3. derive `v_w` from actual wall-friction / Boltzmann closure on the same
+   framework surface
+4. if 2-3 fail, freeze the lane honestly as “framework baryogenesis plus
+   standard transport closure”
+5. only then promote `eta` and the full relic ratio
 
 ### 2. Renormalized `y_t`
 

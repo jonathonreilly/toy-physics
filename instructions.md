@@ -154,31 +154,52 @@ language. Exact blockers to gravity-companion promotion:
    - `J_Z3`, `v(T_c)/T_c`, and `Gamma_sph/T^4` are already derived on the
      current branch
    - the invariant-bridge note correctly narrows the old normalization gap
-2. relic bridge is now:
+   - the BBN/nuclear-physics objection is no longer the productive fight:
+     `eta -> Omega_b` is counting once `m_p`, `G`, and `H_0` are taken from
+     accepted framework authority
+2. if you touch the BBN note or runner, keep the standard honest boundary
+   - do **not** hardcode measured `m_p`, `G`, or `H_0` and label them
+     `[DERIVED]` without pointing to the actual framework authority
+   - the safe claim is: no nuclear reaction rates are needed for
+     `eta -> Omega_b`
+3. `L_w*T` is no longer the main blocker
+   - the bounce / profile route is already the strongest transport sub-result
+   - do **not** spend more time there unless you find a concrete bug
+4. relic bridge is now:
    - numerator derived
-   - baryogenesis chain structurally derived except for the transport sector
-   - denominator still imports `eta` through three transport quantities:
-     `v_w`, `L_w*T`, `D_q*T`
-3. Stosszahlansatz is now a strong sub-result, but not the full lane
+   - baryogenesis chain structurally derived except for transport
+   - the remaining live transport blockers are `D_q*T` and `v_w`
+5. Stosszahlansatz is now a strong sub-result, but not the full lane
    - do not keep re-fighting the same coarse-graining objection
    - the remaining issue is not “does factorization exist?” but “can the full
      relic bridge be closed without imported cosmology?”
-4. bounded framework inputs still need honest handling
+6. current transport routes are still bounded
+   - `D_q*T`: present route plugs framework `alpha_s` into AMY/Moore kinetic
+     theory and adopts literature collision-integral / NLO factors
+   - `v_w`: present route plugs framework couplings into pressure/friction
+     estimates and then adopts a literature-style `0.01-0.10` range
+   - those are useful bounded transport closures, not yet native lattice
+     derivations
+7. bounded framework inputs still need honest handling
    - `g = 1` is still a framework-defining coefficient, not a theorem
    - `k = 0` remains bounded if used in Newtonian cosmology
-   - no “zero imports / pure graph theory” language while `eta` is imported
+   - no “zero imports / pure graph theory” language while transport formulas
+     are still imported
 
 **What counts as success**
 
 - best-case success:
-  - derive `eta` from the framework by closing the baryogenesis chain
+  - derive `D_q*T` and `v_w` from actual framework transport dynamics
+  - derive `eta` from the framework by closing the transport sector
   - then update the relic bridge note so `R` is genuinely parameter-free
 - second-best success:
-  - prove a tighter framework-internal `eta` window from baryogenesis inputs
-  - and state the lane as “derived up to one cosmological input” with no
+  - prove a tighter framework-internal `eta` window using the current
+    transport ranges
+  - and state the lane as “derived up to standard transport formulas” with no
     remaining ambiguity
 - minimum acceptable success:
-  - one authority note states plainly that the live blocker is `eta`
+  - one authority note states plainly that the live blockers are `D_q*T`,
+    `v_w`, and therefore `eta`
   - the note, runner, and packet stop pretending the lane is otherwise closed
 
 **What does not count**
@@ -187,17 +208,20 @@ language. Exact blockers to gravity-companion promotion:
 - calling cosmological cancellation exact without a real derivation check
 - calling the whole lane “pure graph theory” while still using imported bridge
   structure
+- plugging framework couplings into AMY/Moore or Moore-Prokopec formulas and
+  then calling the transport sector fully first-principles derived
 
 **Preferred attack order**
 
-1. do **not** spend more time trying to close `v(T_c)/T_c`
-   - that step is already the strongest part of the baryogenesis chain
-2. derive `L_w*T` from the bounce/profile equation using the existing
-   framework `V_eff`
-3. derive `D_q*T` from kinetic theory / Kubo on the framework coupling surface
-4. derive `v_w` from hydrodynamics only if needed last
-5. once the transport sector is closed or tightly bounded, update `eta`
-   and then the full relic ratio
+1. do **not** spend more time on `v(T_c)/T_c`, BBN nuclear-physics rhetoric,
+   or `L_w*T` unless you find a concrete mathematical bug
+2. derive `D_q*T` from an actual framework Green-Kubo / correlator /
+   transport computation if possible
+3. derive `v_w` from actual wall-friction / Boltzmann closure on the same
+   framework surface, not just literature scaling
+4. if 2-3 fail, freeze the lane honestly as “framework baryogenesis plus
+   standard transport closure”
+5. only then update `eta` and the full relic ratio
 
 ### Target B: Renormalized `y_t`
 
