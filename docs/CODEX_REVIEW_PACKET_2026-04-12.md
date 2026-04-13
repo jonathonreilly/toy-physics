@@ -855,3 +855,67 @@ The 16 FAILs are all documented, honest, and diagnostic (not theorem failures):
 - Gate 4: 1 FAIL is expected scheme mismatch (V-scheme vs MS-bar)
 - CKM: no new FAILs (obstruction is analytic, tested as PASS)
 - Nielsen-Ninomiya extension: 0 FAILs (all 60 checks are exact and pass)
+
+---
+
+## Gate 1 UPDATE: Continuous vs Discrete Anomaly Generation Forcing (Cross-Lane 4A)
+
+### Files changed (new)
+- `scripts/frontier_generation_anomaly_forces_three.py` -- PASS=51 FAIL=0 (all EXACT)
+- `docs/GENERATION_ANOMALY_FORCES_THREE_NOTE.md`
+
+### Commands run
+```bash
+python3 scripts/frontier_generation_anomaly_forces_three.py
+# Exit code: 0
+# PASS=51 FAIL=0 -- all EXACT
+```
+
+### Status: BOUNDED (conditional on taste-physicality; generation physicality still OPEN)
+
+### What was done
+
+Investigated connection 4A from CROSS_LANE_REUSE_MAP.md: whether continuous
+gauge anomaly cancellation forces the three-generation interpretation of the
+24 LH taste states.
+
+Two interpretations compared:
+- (A) All 24 LH states as one generation (no generation structure)
+- (B) Three generations of 8 LH states each (Z_3 orbit interpretation)
+
+Key results:
+
+1. **NEGATIVE (continuous anomalies):** Anomaly traces are linear in fermion
+   content. If each 8-state generation is anomaly-free (with its RH
+   completion), then N copies are also anomaly-free. Continuous gauge anomaly
+   cancellation does NOT distinguish (A) from (B). Both interpretations
+   cancel all anomalies with 3 copies of the standard RH sector.
+
+2. **POSITIVE (discrete Z_3 anomaly):** The Dai-Freed invariant (from
+   GENERATION_ANOMALY_OBSTRUCTION_NOTE.md) provides the generation-forcing
+   obstruction. Identifying T_1 and T_2 (declaring them the same sector)
+   changes nu_total from 1 to 2 (mod 3), violating 't Hooft anomaly matching.
+
+3. **COMBINED forcing:** Discrete anomaly (Leg 1: sectors cannot be merged) +
+   continuous anomaly (Leg 2: each sector needs independent RH completion) =
+   3 independent anomaly-free SM generations. This is conditional on taste-
+   physicality (A1) and 't Hooft anomaly matching applicability (A3).
+
+4. **Time theorem independence:** The anomaly-forces-time theorem works for
+   any N >= 1 generations. It does NOT implicitly assume 3 generations. No
+   circular closure between time and generation derivations. The dependency
+   is one-way: generation theorem uses time theorem (for chirality), but not
+   vice versa.
+
+### Why the claim is not overstated
+
+The note says BOUNDED, not CLOSED. The script has 51 EXACT checks and 0
+FAILs. Three negative results are documented honestly:
+1. Continuous anomalies alone do not force 3 generations (the hoped-for
+   unconditional theorem does not exist)
+2. No circular closure with the time theorem
+3. Taste-physicality remains the central open assumption
+
+The combined discrete+continuous argument is a real advance over either
+alone, but generation physicality remains OPEN per review.md because the
+argument is conditional on taste-physicality.
