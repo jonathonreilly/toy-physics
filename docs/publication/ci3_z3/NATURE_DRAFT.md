@@ -37,8 +37,11 @@ The first retained structural result is weak-field gravity on the cubic
 lattice. On the current paper-safe surface, Poisson is the unique
 self-consistent local field equation in the audited operator family, and the
 lattice Green's function on `Z^3` yields the inverse-square Newton law. That
-is the correct gravity claim to carry. Broader GR-signature results exist, but
-they remain bounded and should not be confused with the retained Newton/Poisson
+is the correct gravity claim to carry. On the same retained action surface,
+two additional weak-field corollaries are now safe to state compactly:
+universal k-independent deflection (weak equivalence principle) and weak-field
+gravitational time dilation. Broader GR-signature results still remain bounded
+and should not be confused with the retained Newton/Poisson/WEP/time-dilation
 core.
 
 The next retained result is exact native `SU(2)` on the cubic lattice.
@@ -89,13 +92,14 @@ difference between the present paper and a fully closed unification claim.
 
 The claim surface is therefore disciplined and unusually strong. On the
 retained cubic graph, `Cl(3)` yields weak-field gravity through the
-Poisson/Newton chain, exact `SU(2)`, graph-first structural `SU(3)`,
-anomaly-forced `3+1`, a full-framework one-generation Standard Model closure,
-and a retained three-generation matter structure. Exact `I_3 = 0` and exact
-CPT provide additional consistency theorems on the same surface. The strongest
-objection is no longer that the framework lacks matter structure. It is that
-topology, relic mapping, renormalized matching, and quantitative flavor are
-not yet fully closed.
+Poisson/Newton chain together with weak-field WEP and time dilation,
+exact `SU(2)`, graph-first structural `SU(3)`, anomaly-forced `3+1`, a
+full-framework one-generation Standard Model closure, and a retained
+three-generation matter structure. Exact `I_3 = 0` and exact CPT provide
+additional consistency theorems on the same surface. The strongest objection
+is no longer that the framework lacks matter structure. It is that topology,
+relic mapping, renormalized matching, and quantitative flavor are not yet
+fully closed.
 
 ## Figure Callouts
 

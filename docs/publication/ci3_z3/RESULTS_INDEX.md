@@ -12,6 +12,7 @@ For the claim-by-claim derivation/validation pairing, use
 |---|---|---|
 | Framework / claim surface | [CI3_Z3_PUBLICATION_STATE_2026-04-12.md](../../CI3_Z3_PUBLICATION_STATE_2026-04-12.md) | n/a |
 | Weak-field gravity (`Poisson` / Newton chain) | [CI3_Z3_PUBLICATION_STATE_2026-04-12.md](../../CI3_Z3_PUBLICATION_STATE_2026-04-12.md) | [frontier_self_consistent_field_equation.py](../../../scripts/frontier_self_consistent_field_equation.py), [frontier_poisson_exhaustive_uniqueness.py](../../../scripts/frontier_poisson_exhaustive_uniqueness.py), [frontier_newton_derived.py](../../../scripts/frontier_newton_derived.py) |
+| Weak-field gravity corollaries (WEP / time dilation) | [BROAD_GRAVITY_DERIVATION_NOTE.md](../../BROAD_GRAVITY_DERIVATION_NOTE.md), [GRAVITY_CLEAN_DERIVATION_NOTE.md](../../GRAVITY_CLEAN_DERIVATION_NOTE.md) | [frontier_broad_gravity.py](../../../scripts/frontier_broad_gravity.py) |
 | Native gauge algebra | [BOUNDED_NATIVE_GAUGE_NOTE.md](../../BOUNDED_NATIVE_GAUGE_NOTE.md) | [frontier_non_abelian_gauge.py](../../../scripts/frontier_non_abelian_gauge.py) |
 | Graph-first structural `SU(3)` | [GRAPH_FIRST_SU3_INTEGRATION_NOTE.md](../../GRAPH_FIRST_SU3_INTEGRATION_NOTE.md) | [frontier_graph_first_su3_integration.py](../../../scripts/frontier_graph_first_su3_integration.py) |
 | Left-handed charge matching on selected-axis surface | [GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md](../../GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md) | [frontier_graph_first_su3_integration.py](../../../scripts/frontier_graph_first_su3_integration.py) |
@@ -26,6 +27,8 @@ For the claim-by-claim derivation/validation pairing, use
 - Nature main text:
   - framework statement
   - weak-field gravity through the Poisson / Newton chain
+  - weak-field WEP and time dilation as compact corollaries on that same
+    gravity surface
   - exact native `SU(2)`
   - graph-first structural `SU(3)`
   - selected-axis left-handed charge matching as a corollary
@@ -34,7 +37,8 @@ For the claim-by-claim derivation/validation pairing, use
   - three-generation matter structure
   - exact `I_3 = 0` and CPT as compact supporting theorems
 - SI / arXiv:
-  - bounded weak-field GR companions beyond Newton / Poisson
+  - bounded weak-field GR companions beyond Newton / Poisson / WEP /
+    time-dilation
   - derivation chains
   - bounded phenomenology
   - live-gate notes and negative results

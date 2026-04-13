@@ -13,6 +13,7 @@ Companion captions live in [FIGURE_CAPTIONS.md](./FIGURE_CAPTIONS.md).
 - purpose: one-page visual of the retained backbone
 - content:
   - `Cl(3)` on `Z^3`
+  - weak-field gravity through Poisson / Newton together with WEP / time dilation
   - exact native `SU(2)`
   - graph-first structural `SU(3)`
   - anomaly-forced `3+1`
@@ -45,13 +46,16 @@ Companion captions live in [FIGURE_CAPTIONS.md](./FIGURE_CAPTIONS.md).
   - [frontier_generation_axiom_boundary.py](/private/tmp/physics-publication-prep/scripts/frontier_generation_axiom_boundary.py)
 - status: concept figure needed; do not use old overclaiming hierarchy plots
 
-### Extended Data candidate. Exact `I_3 = 0` and CPT
+### Extended Data candidate. Weak-field gravity corollaries plus exact `I_3 = 0` and CPT
 
-- purpose: carry exact supporting theorems without stealing main-text space
+- purpose: carry compact gravity corollaries and exact supporting theorems
+  without stealing main-text space
 - source notes:
+  - [BROAD_GRAVITY_DERIVATION_NOTE.md](../../BROAD_GRAVITY_DERIVATION_NOTE.md)
   - [I3_ZERO_EXACT_THEOREM_NOTE.md](../../I3_ZERO_EXACT_THEOREM_NOTE.md)
   - [CPT_EXACT_NOTE.md](../../CPT_EXACT_NOTE.md)
 - source runners:
+  - [frontier_broad_gravity.py](/private/tmp/physics-publication-prep/scripts/frontier_broad_gravity.py)
   - [frontier_born_rule_derived.py](/private/tmp/physics-publication-prep/scripts/frontier_born_rule_derived.py)
   - [frontier_cpt_exact.py](/private/tmp/physics-publication-prep/scripts/frontier_cpt_exact.py)
 - status: optional depending on venue length

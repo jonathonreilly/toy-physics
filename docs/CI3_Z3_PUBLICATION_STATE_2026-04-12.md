@@ -20,6 +20,10 @@ The current retained backbone is:
   - Poisson is the unique self-consistent local field equation in the audited
     operator family
   - the lattice Green's function yields Newton's inverse-square law on `Z^3`
+  - weak equivalence principle is retained as a weak-field corollary of the
+    derived action
+  - weak-field gravitational time dilation is retained on the same Poisson /
+    Newton surface
 - exact native `Cl(3)` / `SU(2)` on `Z^3`
 - graph-first weak-axis selector
 - graph-first structural `su(3)` closure
@@ -42,6 +46,9 @@ surface:
 - exact/structural weak-field gravity chain:
   - Poisson self-consistency and operator-family uniqueness
   - Newton law from lattice Green's function asymptotics on `Z^3`
+  - weak equivalence principle from the derived eikonal action
+  - weak-field time dilation from the same action on the retained Poisson
+    profile
 - exact no-third-order-interference / `I_3 = 0` theorem on the Hilbert surface
   Note: this is **not** a standalone derivation of the Born rule from nothing;
   the safe statement is exact pairwise interference on the accepted Hilbert
@@ -73,9 +80,9 @@ The following are useful and may appear in SI or a bounded phenomenology
 section, but they are not yet retained closure:
 
 - weak-field GR-signature companions beyond Newton/Poisson:
-  - WEP / time-dilation / conformal-metric / geodesic / light-bending notes
-  - these remain useful, but the full GR bundle is still not the paper-safe
-    closure surface
+  - conformal-metric / geodesic / light-bending notes
+  - these remain useful, but the broader GR bundle is still not the paper-safe
+    closure surface beyond the retained WEP / time-dilation corollaries
 - `S^3` cap-map uniqueness
 - direct lattice DM contact enhancement
 - DM coarse-graining / Stosszahlansatz notes
@@ -123,7 +130,8 @@ batches:
 ## Current paper-safe summary
 
 > `Cl(3)` on `Z^3` yields weak-field gravity through the Poisson/Newton chain,
-> exact `SU(2)`, graph-first structural `SU(3)`, a full-framework
+> weak-field WEP and gravitational time dilation as corollaries of that same
+> surface, exact `SU(2)`, graph-first structural `SU(3)`, a full-framework
 > one-generation Standard Model closure, and a retained three-generation
 > matter structure in the same framework. The remaining live paper gates are
 > topology/compactification, DM relic mapping, renormalized `y_t`, and

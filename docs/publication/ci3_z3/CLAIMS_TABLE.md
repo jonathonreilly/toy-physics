@@ -10,6 +10,8 @@ validation map says how each claim is evidenced and released.
 |---|---|---|---|---|
 | `Cl(3)` on `Z^3` is the working physical theory | retained framework statement | main text | [Publication state](../../CI3_Z3_PUBLICATION_STATE_2026-04-12.md) | n/a |
 | weak-field gravity from the Poisson / Newton chain on `Z^3` | retained | main text | [Publication state](../../CI3_Z3_PUBLICATION_STATE_2026-04-12.md) | [frontier_self_consistent_field_equation.py](../../../scripts/frontier_self_consistent_field_equation.py), [frontier_poisson_exhaustive_uniqueness.py](../../../scripts/frontier_poisson_exhaustive_uniqueness.py), [frontier_newton_derived.py](../../../scripts/frontier_newton_derived.py) |
+| weak-field WEP from the derived lattice action | retained corollary | main text or Extended Data corollary | [BROAD_GRAVITY_DERIVATION_NOTE.md](../../BROAD_GRAVITY_DERIVATION_NOTE.md) | [frontier_broad_gravity.py](../../../scripts/frontier_broad_gravity.py) |
+| weak-field gravitational time dilation on the retained Poisson/Newton surface | retained corollary | main text or Extended Data corollary | [BROAD_GRAVITY_DERIVATION_NOTE.md](../../BROAD_GRAVITY_DERIVATION_NOTE.md), [GRAVITY_CLEAN_DERIVATION_NOTE.md](../../GRAVITY_CLEAN_DERIVATION_NOTE.md) | [frontier_broad_gravity.py](../../../scripts/frontier_broad_gravity.py) |
 | exact native `SU(2)` from cubic `Cl(3)` | retained | main text | [BOUNDED_NATIVE_GAUGE_NOTE.md](../../BOUNDED_NATIVE_GAUGE_NOTE.md) | [frontier_non_abelian_gauge.py](../../../scripts/frontier_non_abelian_gauge.py) |
 | graph-first structural `SU(3)` closure | retained | main text | [GRAPH_FIRST_SU3_INTEGRATION_NOTE.md](../../GRAPH_FIRST_SU3_INTEGRATION_NOTE.md) | [frontier_graph_first_su3_integration.py](../../../scripts/frontier_graph_first_su3_integration.py) |
 | left-handed `+1/3` / `-1` charge matching on the selected-axis surface | retained corollary | main text or SI corollary | [GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md](../../GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md) | [frontier_graph_first_su3_integration.py](../../../scripts/frontier_graph_first_su3_integration.py) |
@@ -28,7 +30,7 @@ cleanly or closed.
 
 | Claim | Status | Placement | Authority |
 |---|---|---|---|
-| weak-field GR-signature companions beyond Newton/Poisson | bounded | arXiv / SI only | `review-active` bounded gravity notes |
+| weak-field GR-signature companions beyond Newton/Poisson/WEP/time-dilation | bounded | arXiv / SI only | `review-active` bounded gravity notes |
 | `S^3` cap-map / topology attack surface | bounded | arXiv / SI only | `review-active` bounded topology notes |
 | direct lattice DM contact enhancement and bounded relic chain | bounded | arXiv / SI only | `review-active` bounded DM notes |
 | renormalized `y_t` bridge | bounded | arXiv / SI only | `review-active` bounded `y_t` notes |

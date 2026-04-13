@@ -38,12 +38,14 @@ their actual audited status.
 The gravity claim that currently clears the audit bar is weak-field and
 specific. On the retained lattice surface, Poisson is the unique
 self-consistent local field equation in the audited operator family, and the
-lattice Green's function on `Z^3` yields the inverse-square Newton law. This is
+lattice Green's function on `Z^3` yields the inverse-square Newton law. On the
+same retained action surface, weak equivalence principle and weak-field
+gravitational time dilation are now also safe as derived corollaries. This is
 the correct flagship gravity statement.
 
-Broader GR-signature notes exist and some are strong, but they still mix exact,
-bounded, and conditional steps. They therefore belong in bounded sections
-rather than in the retained backbone.
+Broader GR-signature notes still mix exact, bounded, and conditional steps.
+Conformal-metric, geodesic, and light-bending results therefore remain in the
+bounded sections rather than in the retained backbone.
 
 ### 2.2 Exact native `SU(2)`
 
@@ -104,11 +106,12 @@ interacting extension, not the free theorem itself.
 
 ## 4. Bounded but Important Lanes
 
-### 4.0 Weak-field GR companions beyond Newton/Poisson
+### 4.0 Residual weak-field GR companions beyond Newton/Poisson/WEP/time dilation
 
-WEP, time-dilation, conformal-metric, geodesic, and light-bending notes are
-important and should stay visible. The current safe reading is that they are
-bounded companions to the retained Newton/Poisson core rather than part of the
+The current gravity audit now splits this cleanly. WEP and weak-field time
+dilation are retained corollaries of the derived action on the retained
+Poisson/Newton surface. Conformal-metric, geodesic, and light-bending notes
+are still important, but they remain bounded companions rather than part of the
 paper-safe retained backbone.
 
 ### 4.1 `S^3` topology / compactification
@@ -191,10 +194,11 @@ The canonical figure inventory is [FIGURE_PLAN.md](./FIGURE_PLAN.md).
 The current state of the project is no longer that of a promising discrete toy
 model, but it is also not yet a fully closed unification paper. The retained
 backbone is broad and nontrivial: weak-field gravity through the Poisson/Newton
-chain, exact native `SU(2)`, graph-first structural `SU(3)`, anomaly-forced
-`3+1`, a full-framework one-generation Standard Model closure, and a retained
-three-generation matter structure. Exact `I_3 = 0` and exact CPT strengthen the
-same framework surface.
+chain together with weak-field WEP and time dilation, exact native `SU(2)`,
+graph-first structural `SU(3)`, anomaly-forced `3+1`, a full-framework
+one-generation Standard Model closure, and a retained three-generation matter
+structure. Exact `I_3 = 0` and exact CPT strengthen the same framework
+surface.
 
 The remaining bridge problems are explicit. They should stay explicit. That is
 the correct arXiv posture and the strongest way to make the retained theorem

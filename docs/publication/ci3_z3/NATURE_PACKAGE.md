@@ -5,7 +5,8 @@
 > `Cl(3)` on `Z^3` yields exact `SU(2)`, graph-first structural `SU(3)`,
 > anomaly-forced `3+1`, a full-framework one-generation Standard Model closure,
 > a retained three-generation matter structure in the same framework, and
-> weak-field gravity through the Poisson / Newton chain.
+> weak-field gravity through the Poisson / Newton chain together with
+> weak-field WEP and gravitational time dilation.
 
 ## What belongs in the letter
 
@@ -17,6 +18,7 @@
 - [Submission checklist](./SUBMISSION_CHECKLIST.md)
 - framework sentence
 - weak-field gravity through the Poisson / Newton chain
+- weak-field WEP and time dilation as compact corollaries on that same gravity surface
 - exact native `SU(2)`
 - graph-first structural `SU(3)`
 - anomaly-forced `3+1`
@@ -29,7 +31,8 @@
 ## What stays out of the letter body
 
 - bounded DM relic arguments
-- bounded weak-field GR-signature companions beyond Newton / Poisson
+- bounded weak-field GR-signature companions beyond Newton / Poisson / WEP /
+  time-dilation
 - bounded `S^3` topology attacks
 - bounded renormalized `y_t` chains
 - bounded CKM / Higgs `Z_3` routes

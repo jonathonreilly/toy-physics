@@ -38,6 +38,7 @@ Framework sentence:
 Retained backbone:
 
 - weak-field gravity from the Poisson / Newton chain
+- weak-field WEP and time dilation as retained corollaries on that gravity surface
 - exact native `Cl(3)` / `SU(2)`
 - graph-first structural `SU(3)`
 - anomaly-forced `3+1`
