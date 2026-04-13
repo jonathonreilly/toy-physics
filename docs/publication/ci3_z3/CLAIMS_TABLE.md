@@ -5,6 +5,7 @@
 | Claim | Status | Placement | Authority | Primary runner |
 |---|---|---|---|---|
 | `Cl(3)` on `Z^3` is the working physical theory | retained framework statement | main text | [Publication state](../../CI3_Z3_PUBLICATION_STATE_2026-04-12.md) | n/a |
+| weak-field gravity from the Poisson / Newton chain on `Z^3` | retained | main text | [Publication state](../../CI3_Z3_PUBLICATION_STATE_2026-04-12.md) | [frontier_self_consistent_field_equation.py](../../../scripts/frontier_self_consistent_field_equation.py), [frontier_poisson_exhaustive_uniqueness.py](../../../scripts/frontier_poisson_exhaustive_uniqueness.py), [frontier_newton_derived.py](../../../scripts/frontier_newton_derived.py) |
 | exact native `SU(2)` from cubic `Cl(3)` | retained | main text | [BOUNDED_NATIVE_GAUGE_NOTE.md](../../BOUNDED_NATIVE_GAUGE_NOTE.md) | [frontier_non_abelian_gauge.py](../../../scripts/frontier_non_abelian_gauge.py) |
 | graph-first structural `SU(3)` closure | retained | main text | [GRAPH_FIRST_SU3_INTEGRATION_NOTE.md](../../GRAPH_FIRST_SU3_INTEGRATION_NOTE.md) | [frontier_graph_first_su3_integration.py](../../../scripts/frontier_graph_first_su3_integration.py) |
 | left-handed `+1/3` / `-1` charge matching on the selected-axis surface | retained corollary | main text or SI corollary | [GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md](../../GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md) | [frontier_graph_first_su3_integration.py](../../../scripts/frontier_graph_first_su3_integration.py) |
@@ -13,6 +14,7 @@
 | three-generation matter structure in the framework | retained | main text | [GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md](../../GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md) | [frontier_generation_fermi_point.py](../../../scripts/frontier_generation_fermi_point.py), [frontier_generation_rooting_undefined.py](../../../scripts/frontier_generation_rooting_undefined.py), [frontier_generation_axiom_boundary.py](../../../scripts/frontier_generation_axiom_boundary.py) |
 | exact `I_3 = 0` / no third-order interference on the Hilbert surface | retained exact companion | main text or Extended Data | [I3_ZERO_EXACT_THEOREM_NOTE.md](../../I3_ZERO_EXACT_THEOREM_NOTE.md) | [frontier_born_rule_derived.py](../../../scripts/frontier_born_rule_derived.py) |
 | exact CPT on the free staggered lattice | retained exact companion | main text or Extended Data | [CPT_EXACT_NOTE.md](../../CPT_EXACT_NOTE.md) | [frontier_cpt_exact.py](../../../scripts/frontier_cpt_exact.py) |
+| single-axiom Hilbert/locality reduction | SI framing only | SI / framing box | [SINGLE_AXIOM_HILBERT_NOTE.md](../../SINGLE_AXIOM_HILBERT_NOTE.md), [SINGLE_AXIOM_INFORMATION_NOTE.md](../../SINGLE_AXIOM_INFORMATION_NOTE.md) | [frontier_single_axiom_hilbert.py](../../../scripts/frontier_single_axiom_hilbert.py), [frontier_single_axiom_information.py](../../../scripts/frontier_single_axiom_information.py) |
 
 ## Bounded companions
 
@@ -22,11 +24,19 @@ cleanly or closed.
 
 | Claim | Status | Placement | Authority |
 |---|---|---|---|
+| weak-field GR-signature companions beyond Newton/Poisson | bounded | arXiv / SI only | `review-active` bounded gravity notes |
 | `S^3` cap-map / topology attack surface | bounded | arXiv / SI only | `review-active` bounded topology notes |
 | direct lattice DM contact enhancement and bounded relic chain | bounded | arXiv / SI only | `review-active` bounded DM notes |
 | renormalized `y_t` bridge | bounded | arXiv / SI only | `review-active` bounded `y_t` notes |
 | CKM / Higgs `Z_3` route | bounded | arXiv / SI only | `review-active` bounded CKM notes |
 | cosmology windows (`w=-1`, graviton mass, `Omega_Lambda`, `n_s`) | bounded / conditional | arXiv companion only | `review-active` bounded cosmology notes |
+| Higgs / Coleman-Weinberg mass lane | bounded | arXiv companion only | `claude/youthful-neumann` Higgs derivation note + runner |
+| proton lifetime | bounded sharp prediction | arXiv companion only | `claude/youthful-neumann` proton lifetime note + runner |
+| Lorentz-violation cubic fingerprint | bounded sharp prediction | arXiv companion only | `claude/youthful-neumann` Lorentz-violation note + runner |
+| BH entropy / RT ratio | bounded companion | arXiv companion only | `claude/youthful-neumann` BH entropy note + runner |
+| gravitational decoherence | bounded companion | arXiv companion only | `claude/youthful-neumann` grav-decoherence note + runner |
+| magnetic monopole mass | bounded companion | arXiv companion only | `claude/youthful-neumann` monopole note + runner |
+| GW echo timing | bounded / off-scope companion | later companion paper only | `claude/youthful-neumann` GW echo note + runner |
 
 ## Open paper gates
 

@@ -5,14 +5,15 @@
 We present the current retained theorem surface of the `Cl(3)` on `Z^3`
 framework. The main claim is not that every phenomenological lane is already
 closed, but that a broad structural backbone now survives direct audit on one
-discrete theory: exact native `SU(2)`, graph-first structural `SU(3)`,
-anomaly-forced `3+1`, a full-framework one-generation Standard Model closure,
-and a retained three-generation matter structure. We also retain exact
-supporting theorems for vanishing third-order interference (`I_3 = 0`) on the
-Hilbert surface and exact CPT on the free staggered lattice. We separate this
-retained backbone from bounded phenomenology and from four still-live bridge
-problems: `S^3` compactification, dark-matter relic mapping, renormalized
-top-Yukawa matching, and quantitative flavor closure.
+discrete theory: weak-field gravity through the Poisson/Newton chain, exact
+native `SU(2)`, graph-first structural `SU(3)`, anomaly-forced `3+1`, a
+full-framework one-generation Standard Model closure, and a retained
+three-generation matter structure. We also retain exact supporting theorems for
+vanishing third-order interference (`I_3 = 0`) on the Hilbert surface and exact
+CPT on the free staggered lattice. We separate this retained backbone from
+bounded phenomenology and from four still-live bridge problems: `S^3`
+compactification, dark-matter relic mapping, renormalized top-Yukawa matching,
+and quantitative flavor closure.
 
 ## 1. Introduction
 
@@ -32,13 +33,25 @@ their actual audited status.
 
 ## 2. Retained Framework Surface
 
-### 2.1 Exact native `SU(2)`
+### 2.1 Weak-field gravity from the Poisson / Newton chain
+
+The gravity claim that currently clears the audit bar is weak-field and
+specific. On the retained lattice surface, Poisson is the unique
+self-consistent local field equation in the audited operator family, and the
+lattice Green's function on `Z^3` yields the inverse-square Newton law. This is
+the correct flagship gravity statement.
+
+Broader GR-signature notes exist and some are strong, but they still mix exact,
+bounded, and conditional steps. They therefore belong in bounded sections
+rather than in the retained backbone.
+
+### 2.2 Exact native `SU(2)`
 
 The cubic `Cl(3)` bivectors close exactly into the weak algebra. This remains
 the strongest native gauge statement on the framework surface and does not rely
 on downstream phenomenology.
 
-### 2.2 Graph-first structural `SU(3)`
+### 2.3 Graph-first structural `SU(3)`
 
 The safe `SU(3)` statement is graph-first. A selector on the canonical
 cube-shift graph chooses a weak axis directly on the graph; on that selected
@@ -51,7 +64,7 @@ On that same selected-axis surface, the framework also retains left-handed
 carefully outside the anomaly-complete one-generation branch; the safe statement
 here is retained left-handed matching, not unrestricted hypercharge closure.
 
-### 2.3 Anomaly-forced `3+1`
+### 2.4 Anomaly-forced `3+1`
 
 The spatial graph by itself fixes the left-handed surface but does not provide
 chirality. The anomaly-forces-time theorem closes the `3+1` lane on the
@@ -59,14 +72,14 @@ single-clock codimension-1 surface: chirality requires even total dimension,
 while multi-time continuations conflict with the framework’s one-clock state
 semantics. The paper-safe claim is therefore that the framework selects `3+1`.
 
-### 2.4 Full-framework one-generation closure
+### 2.5 Full-framework one-generation closure
 
 Once the temporal direction is derived, chirality is available. The spatial
 graph fixes the left-handed gauge and matter structure, and anomaly cancellation
 fixes the right-handed singlet completion on the Standard Model branch. That is
 the current one-generation closure surface.
 
-### 2.5 Three-generation matter structure
+### 2.6 Three-generation matter structure
 
 The exact orbit algebra `8 = 1 + 1 + 3 + 3` remains central. On the present
 framework surface the lattice is physical rather than a regulator, so the three
@@ -90,6 +103,13 @@ finite-lattice theorem on the retained framework surface. The open step is the
 interacting extension, not the free theorem itself.
 
 ## 4. Bounded but Important Lanes
+
+### 4.0 Weak-field GR companions beyond Newton/Poisson
+
+WEP, time-dilation, conformal-metric, geodesic, and light-bending notes are
+important and should stay visible. The current safe reading is that they are
+bounded companions to the retained Newton/Poisson core rather than part of the
+paper-safe retained backbone.
 
 ### 4.1 `S^3` topology / compactification
 
@@ -169,10 +189,11 @@ The canonical figure inventory is [FIGURE_PLAN.md](./FIGURE_PLAN.md).
 
 The current state of the project is no longer that of a promising discrete toy
 model, but it is also not yet a fully closed unification paper. The retained
-backbone is broad and nontrivial: exact native `SU(2)`, graph-first structural
-`SU(3)`, anomaly-forced `3+1`, a full-framework one-generation Standard Model
-closure, and a retained three-generation matter structure. Exact `I_3 = 0` and
-exact CPT strengthen the same framework surface.
+backbone is broad and nontrivial: weak-field gravity through the Poisson/Newton
+chain, exact native `SU(2)`, graph-first structural `SU(3)`, anomaly-forced
+`3+1`, a full-framework one-generation Standard Model closure, and a retained
+three-generation matter structure. Exact `I_3 = 0` and exact CPT strengthen the
+same framework surface.
 
 The remaining bridge problems are explicit. They should stay explicit. That is
 the correct arXiv posture and the strongest way to make the retained theorem

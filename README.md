@@ -7,6 +7,8 @@ organized around the current `Cl(3)` on `Z^3` publication package.
 
 - Publication package:
   [`docs/publication/ci3_z3/README.md`](docs/publication/ci3_z3/README.md)
+- Full claim ledger:
+  [`docs/publication/ci3_z3/FULL_CLAIM_LEDGER.md`](docs/publication/ci3_z3/FULL_CLAIM_LEDGER.md)
 - Submission checklist:
   [`docs/publication/ci3_z3/SUBMISSION_CHECKLIST.md`](docs/publication/ci3_z3/SUBMISSION_CHECKLIST.md)
 - Figure plan:
@@ -26,7 +28,8 @@ organized around the current `Cl(3)` on `Z^3` publication package.
 
 - **Framework statement:** `Cl(3)` on `Z^3` is the physical theory
 - **Retained paper core:** exact native `SU(2)`, graph-first structural
-  `SU(3)`, anomaly-forced `3+1`, full-framework one-generation closure, and
+  `SU(3)`, weak-field gravity from the Poisson / Newton chain,
+  anomaly-forced `3+1`, full-framework one-generation closure, and
   three-generation matter structure
 - **Four live paper gates:** `S^3`, DM relic mapping, renormalized `y_t`, and
   CKM / flavor closure

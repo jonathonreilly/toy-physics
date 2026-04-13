@@ -9,6 +9,7 @@ explicit status labels.
 ## Include
 
 - [arXiv draft](./ARXIV_DRAFT.md)
+- [Full claim ledger](./FULL_CLAIM_LEDGER.md)
 - [Figure plan](./FIGURE_PLAN.md)
 - [Figure captions](./FIGURE_CAPTIONS.md)
 - [Submission checklist](./SUBMISSION_CHECKLIST.md)

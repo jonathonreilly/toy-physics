@@ -10,6 +10,7 @@ Use this package instead of browsing raw repo chronology.
 - [Nature package](./NATURE_PACKAGE.md)
 - [arXiv package](./ARXIV_PACKAGE.md)
 - [Claims table](./CLAIMS_TABLE.md)
+- [Full claim ledger](./FULL_CLAIM_LEDGER.md)
 - [Results index](./RESULTS_INDEX.md)
 - [Reproduce guide](./REPRODUCE.md)
 - [Submission checklist](./SUBMISSION_CHECKLIST.md)
@@ -35,6 +36,7 @@ Framework sentence:
 
 Retained backbone:
 
+- weak-field gravity from the Poisson / Newton chain
 - exact native `Cl(3)` / `SU(2)`
 - graph-first structural `SU(3)`
 - anomaly-forced `3+1`

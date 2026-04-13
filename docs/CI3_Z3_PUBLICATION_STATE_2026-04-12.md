@@ -1,7 +1,7 @@
 # CI(3) / Z^3 Publication State
 
-**Date:** 2026-04-12  
-**Branch:** `codex/review-active`  
+**Date:** 2026-04-13  
+**Branch:** `codex/publication-prep`  
 **Status:** Codex-owned publication authority for the current flagship paper surface
 
 ## Framework sentence
@@ -16,6 +16,10 @@ paper surface.
 
 The current retained backbone is:
 
+- weak-field gravity on the lattice surface:
+  - Poisson is the unique self-consistent local field equation in the audited
+    operator family
+  - the lattice Green's function yields Newton's inverse-square law on `Z^3`
 - exact native `Cl(3)` / `SU(2)` on `Z^3`
 - graph-first weak-axis selector
 - graph-first structural `su(3)` closure
@@ -35,6 +39,9 @@ The current retained backbone is:
 These are exact or exact-enough supporting results on the current paper
 surface:
 
+- exact/structural weak-field gravity chain:
+  - Poisson self-consistency and operator-family uniqueness
+  - Newton law from lattice Green's function asymptotics on `Z^3`
 - exact no-third-order-interference / `I_3 = 0` theorem on the Hilbert surface
   Note: this is **not** a standalone derivation of the Born rule from nothing;
   the safe statement is exact pairwise interference on the accepted Hilbert
@@ -52,11 +59,23 @@ The remaining live paper gates are:
 3. renormalized `y_t` matching
 4. CKM / quantitative flavor closure
 
+Overnight Claude work on `2026-04-13` did **not** promote any of these four
+gates. It materially strengthened each lane, but the audit bar remains:
+
+- `S^3`: still bounded even after the cap-closure case and theorem-application notes
+- DM relic mapping: still bounded even after Stosszahlansatz / Friedmann tightening
+- renormalized `y_t`: still bounded even after coefficient / matching notes
+- CKM: still bounded even after NNI / coefficient / `c_23` work
+
 ## Honest bounded lanes
 
 The following are useful and may appear in SI or a bounded phenomenology
 section, but they are not yet retained closure:
 
+- weak-field GR-signature companions beyond Newton/Poisson:
+  - WEP / time-dilation / conformal-metric / geodesic / light-bending notes
+  - these remain useful, but the full GR bundle is still not the paper-safe
+    closure surface
 - `S^3` cap-map uniqueness
 - direct lattice DM contact enhancement
 - DM coarse-graining / Stosszahlansatz notes
@@ -64,6 +83,24 @@ section, but they are not yet retained closure:
 - CKM/Higgs `Z_3` selection arguments
 - gauge-coupling normalization notes
 - cosmology companions such as `w = -1`, graviton mass, `Omega_Lambda`, `n_s`
+- Higgs / Coleman-Weinberg mass notes
+- proton lifetime, Lorentz-violation, BH-entropy, gravitational-decoherence,
+  magnetic-monopole, and GW-echo companion predictions
+
+## Overnight audit additions tracked in the ledger
+
+The full claim ledger now also tracks the overnight companion claims that are
+scientifically relevant but not part of the flagship backbone:
+
+- Higgs / Coleman-Weinberg mechanism and bounded Higgs-mass lane
+- proton lifetime
+- Lorentz-violation cubic fingerprint
+- BH entropy / RT ratio
+- gravitational decoherence
+- magnetic monopole mass
+- GW echo timing
+
+See [FULL_CLAIM_LEDGER.md](publication/ci3_z3/FULL_CLAIM_LEDGER.md).
 
 ## Publication rule
 
@@ -85,8 +122,9 @@ batches:
 
 ## Current paper-safe summary
 
-> `Cl(3)` on `Z^3` yields exact `SU(2)`, graph-first structural `SU(3)`, a
-> full-framework one-generation Standard Model closure, and a retained
-> three-generation matter structure in the same framework. The remaining live
-> paper gates are topology/compactification, DM relic mapping, renormalized
-> `y_t`, and quantitative flavor closure.
+> `Cl(3)` on `Z^3` yields weak-field gravity through the Poisson/Newton chain,
+> exact `SU(2)`, graph-first structural `SU(3)`, a full-framework
+> one-generation Standard Model closure, and a retained three-generation
+> matter structure in the same framework. The remaining live paper gates are
+> topology/compactification, DM relic mapping, renormalized `y_t`, and
+> quantitative flavor closure.

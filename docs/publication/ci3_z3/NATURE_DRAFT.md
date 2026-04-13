@@ -1,28 +1,30 @@
-# Gauge Structure, `3+1`, and Matter from a Cubic `Cl(3)` Lattice
+# Gravity, Gauge Structure, `3+1`, and Matter from a Cubic `Cl(3)` Lattice
 
 ## Abstract
 
 We study the hypothesis that `Cl(3)` on the cubic lattice `Z^3` is the physical
 theory and ask how much known structure survives direct audit on that exact
-discrete surface. On the retained theorem surface, the lattice carries exact
-native `SU(2)` through the Clifford bivectors, graph-first structural `SU(3)`
-through a selector on the canonical cube-shift graph, anomaly-forced `3+1`
-closure on a single-clock codimension-1 surface, a full-framework one-generation
-Standard Model closure, and a retained three-generation matter structure through
-the exact orbit algebra `8 = 1 + 1 + 3 + 3`. We also retain exact companion
-theorems for vanishing third-order interference (`I_3 = 0`) on the Hilbert
-surface and exact CPT on the free staggered lattice. The remaining attack
-surface is explicit and narrower: topology / `S^3` compactification, dark-matter
-relic mapping, renormalized top-Yukawa matching, and quantitative flavor
-closure.
+discrete surface. On the retained theorem surface, the lattice carries a
+weak-field gravity chain through Poisson self-consistency and the lattice
+Green's function on `Z^3`, exact native `SU(2)` through the Clifford bivectors,
+graph-first structural `SU(3)` through a selector on the canonical cube-shift
+graph, anomaly-forced `3+1` closure on a single-clock codimension-1 surface, a
+full-framework one-generation Standard Model closure, and a retained
+three-generation matter structure through the exact orbit algebra
+`8 = 1 + 1 + 3 + 3`. We also retain exact companion theorems for vanishing
+third-order interference (`I_3 = 0`) on the Hilbert surface and exact CPT on
+the free staggered lattice. The remaining attack surface is explicit and
+narrower: topology / `S^3` compactification, dark-matter relic mapping,
+renormalized top-Yukawa matching, and quantitative flavor closure.
 
 ## Main Text
 
 Modern high-energy theory still lacks a compact framework that derives gauge
-structure, spacetime dimension, and matter organization from one common
-substrate without introducing large amounts of extra architecture. The program
-studied here takes the opposite approach: fix one discrete theory and keep only
-what survives direct audit on that exact surface. The framework sentence is:
+structure, weak-field gravity, spacetime dimension, and matter organization
+from one common substrate without introducing large amounts of extra
+architecture. The program studied here takes the opposite approach: fix one
+discrete theory and keep only what survives direct audit on that exact surface.
+The framework sentence is:
 
 > We take `Cl(3)` on `Z^3` as the physical theory. Everything else is derived.
 
@@ -31,7 +33,15 @@ than a full-unification victory claim. The present letter is organized around
 the retained theorem surface only. Bounded phenomenological bridges remain
 valuable, but they are not part of the core claim stack of this version.
 
-The first retained result is exact native `SU(2)` on the cubic lattice.
+The first retained structural result is weak-field gravity on the cubic
+lattice. On the current paper-safe surface, Poisson is the unique
+self-consistent local field equation in the audited operator family, and the
+lattice Green's function on `Z^3` yields the inverse-square Newton law. That
+is the correct gravity claim to carry. Broader GR-signature results exist, but
+they remain bounded and should not be confused with the retained Newton/Poisson
+core.
+
+The next retained result is exact native `SU(2)` on the cubic lattice.
 Clifford bivectors close with the weak algebra directly on the `Cl(3)` surface.
 The second retained gauge result is graph-first structural `SU(3)`. A selector
 on the canonical cube-shift graph fixes a weak axis, after which the selected
@@ -78,20 +88,22 @@ Quantitative flavor closure is also still open. These four problems define the
 difference between the present paper and a fully closed unification claim.
 
 The claim surface is therefore disciplined and unusually strong. On the
-retained cubic graph, `Cl(3)` yields exact `SU(2)`, graph-first structural
-`SU(3)`, anomaly-forced `3+1`, a full-framework one-generation Standard Model
-closure, and a retained three-generation matter structure. Exact `I_3 = 0` and
-exact CPT provide additional consistency theorems on the same surface. The
-strongest objection is no longer that the framework lacks matter structure. It
-is that topology, relic mapping, renormalized matching, and quantitative flavor
-are not yet fully closed.
+retained cubic graph, `Cl(3)` yields weak-field gravity through the
+Poisson/Newton chain, exact `SU(2)`, graph-first structural `SU(3)`,
+anomaly-forced `3+1`, a full-framework one-generation Standard Model closure,
+and a retained three-generation matter structure. Exact `I_3 = 0` and exact
+CPT provide additional consistency theorems on the same surface. The strongest
+objection is no longer that the framework lacks matter structure. It is that
+topology, relic mapping, renormalized matching, and quantitative flavor are
+not yet fully closed.
 
 ## Figure Callouts
 
 - `Fig. 1`: framework derivation map from `Cl(3)` on `Z^3` to the retained backbone
-- `Fig. 2`: graph-first selector and structural `SU(3)` closure
-- `Fig. 3`: anomaly-forced `3+1` single-clock closure chain
-- `Fig. 4`: exact orbit algebra `8 = 1 + 1 + 3 + 3` and retained three-generation matter structure
+- `Fig. 2`: Poisson / Newton weak-field gravity chain on `Z^3`
+- `Fig. 3`: graph-first selector and structural `SU(3)` closure
+- `Fig. 4`: anomaly-forced `3+1` single-clock closure chain
+- `Fig. 5`: exact orbit algebra `8 = 1 + 1 + 3 + 3` and retained three-generation matter structure
 
 ## Code Availability
 

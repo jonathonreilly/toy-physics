@@ -8,6 +8,7 @@ branch.
 | Section | Note | Runner |
 |---|---|---|
 | Framework / claim surface | [CI3_Z3_PUBLICATION_STATE_2026-04-12.md](../../CI3_Z3_PUBLICATION_STATE_2026-04-12.md) | n/a |
+| Weak-field gravity (`Poisson` / Newton chain) | [CI3_Z3_PUBLICATION_STATE_2026-04-12.md](../../CI3_Z3_PUBLICATION_STATE_2026-04-12.md) | [frontier_self_consistent_field_equation.py](../../../scripts/frontier_self_consistent_field_equation.py), [frontier_poisson_exhaustive_uniqueness.py](../../../scripts/frontier_poisson_exhaustive_uniqueness.py), [frontier_newton_derived.py](../../../scripts/frontier_newton_derived.py) |
 | Native gauge algebra | [BOUNDED_NATIVE_GAUGE_NOTE.md](../../BOUNDED_NATIVE_GAUGE_NOTE.md) | [frontier_non_abelian_gauge.py](../../../scripts/frontier_non_abelian_gauge.py) |
 | Graph-first structural `SU(3)` | [GRAPH_FIRST_SU3_INTEGRATION_NOTE.md](../../GRAPH_FIRST_SU3_INTEGRATION_NOTE.md) | [frontier_graph_first_su3_integration.py](../../../scripts/frontier_graph_first_su3_integration.py) |
 | Left-handed charge matching on selected-axis surface | [GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md](../../GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md) | [frontier_graph_first_su3_integration.py](../../../scripts/frontier_graph_first_su3_integration.py) |
@@ -21,6 +22,7 @@ branch.
 
 - Nature main text:
   - framework statement
+  - weak-field gravity through the Poisson / Newton chain
   - exact native `SU(2)`
   - graph-first structural `SU(3)`
   - selected-axis left-handed charge matching as a corollary
@@ -29,6 +31,7 @@ branch.
   - three-generation matter structure
   - exact `I_3 = 0` and CPT as compact supporting theorems
 - SI / arXiv:
+  - bounded weak-field GR companions beyond Newton / Poisson
   - derivation chains
   - bounded phenomenology
   - live-gate notes and negative results
