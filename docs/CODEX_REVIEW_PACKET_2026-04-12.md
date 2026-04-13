@@ -273,6 +273,69 @@ until the discrete-to-continuum bridge is rigorously established.
 
 ---
 
+## Gate 5: CKM -- Higgs Z_3 Charge Universality
+
+### Files changed (new)
+- `scripts/frontier_ckm_higgs_z3_universal.py` -- PASS=8 FAIL=0
+- `docs/CKM_HIGGS_Z3_UNIVERSAL_NOTE.md`
+
+### Commands run
+```bash
+python3 scripts/frontier_ckm_higgs_z3_universal.py
+# Exit code: 0
+# PASS=8 FAIL=0
+```
+
+### Status: BOUNDED (sharp obstruction proved)
+
+### What was done
+
+Investigated whether the Higgs Z_3 charge delta=1 can be made
+L-independent, which is the blocker for promoting CKM from bounded
+to closed status.
+
+Result: **Sharp analytic obstruction proved.** The staggered mass
+operator eps(x) = (-1)^{sum x_i} does NOT carry a well-defined Z_3
+charge. Specifically:
+
+1. **Equal weight on delta=1 and delta=2:** The Z_3 transition
+   magnitude |<z+delta|eps|z>| is exactly identical for delta=1 and
+   delta=2, for all L, in all dimensions. This follows from
+   |phi_1| = |phi_2| = pi/3 in the geometric sum.
+
+2. **Vanishes for L divisible by 6:** All Z_3 transition elements
+   are exactly zero when L is a multiple of 6 (including the
+   thermodynamic limit).
+
+3. **Decays as O(1/L^d):** For L not divisible by 6, magnitudes
+   vanish in the continuum limit.
+
+4. **L=8 false positive diagnosed:** The existing script's check
+   `charge_1 > max(charge_0, charge_2)` passed because charge_1 =
+   charge_2, not because charge_1 was dominant. It was a tie.
+
+Verified numerically at L = 4, 6, 8, 10, 12, 16, 20, 24, 30, 36, 48
+in d = 3 dimensions. Factorized formula cross-checked against direct
+lattice computation at L = 4 and L = 8.
+
+### Why the claim is not overstated
+
+The note says BOUNDED, not CLOSED. The obstruction is a theorem (analytic
+proof from geometric sums), not a numerical observation. The note
+documents four potential alternative routes that might eventually close
+the gap, none of which has been developed. This is consistent with
+review.md: "CKM remains bounded until the Higgs Z_3 charge is
+L-independent." The analysis shows the specific mechanism tried
+(staggered mass operator decomposition) cannot work, and documents why.
+
+### Supersedes
+
+This analysis supersedes the Higgs Z_3 charge claims in
+`scripts/frontier_ckm_interpretation_derivation.py` Part 2, which
+reported "delta = 1 CONFIRMED" at L=8. That was a false positive.
+
+---
+
 ## Guardrails Compliance
 
 - No theorem assumptions were silently widened
@@ -302,7 +365,8 @@ until the discrete-to-continuum bridge is rigorously established.
 | frontier_renormalized_yt_wildcard.py | 31 | 0 | Exact |
 | frontier_slavnov_taylor_completion.py | 26 | 0 | Exact |
 | frontier_s3_discrete_continuum.py | 4 | 2 | Exact + bounded |
-| **TOTAL** | **336** | **13** | |
+| frontier_ckm_higgs_z3_universal.py | 8 | 0 | Exact (obstruction) |
+| **TOTAL** | **344** | **13** | |
 
 The 11 FAILs are all documented, honest, and diagnostic (not theorem failures):
 - Gate 1: 6 FAILs in main script are honest obstructions that led to the gap-closure work; 1 FAIL is the hierarchy shortfall before synthesis
