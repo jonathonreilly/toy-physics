@@ -120,3 +120,8 @@ Before a claim enters the manuscript, it must satisfy one of:
 3. It appears in Section 4 and is clearly labeled as off-scope or historical.
 
 If a claim is not here, add it before using it.
+
+In the publication package, that is still not sufficient. A manuscript-facing
+claim must also appear in
+[DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md) with both its
+safe theorem boundary and its validation path.

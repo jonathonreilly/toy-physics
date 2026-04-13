@@ -10,6 +10,7 @@
 ## What belongs in the letter
 
 - [Nature draft](./NATURE_DRAFT.md)
+- [Derivation / validation map](./DERIVATION_VALIDATION_MAP.md)
 - [Full claim ledger](./FULL_CLAIM_LEDGER.md)
 - [Figure plan](./FIGURE_PLAN.md)
 - [Figure captions](./FIGURE_CAPTIONS.md)
@@ -44,13 +45,14 @@ Do not sell “full unification closure.” Sell:
 
 ## Build rule
 
-The letter should be buildable from four sources only:
+The letter should be buildable from one small authority set only:
 
 - [NATURE_DRAFT.md](./NATURE_DRAFT.md)
 - [CLAIMS_TABLE.md](./CLAIMS_TABLE.md)
+- [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md)
 - [FULL_CLAIM_LEDGER.md](./FULL_CLAIM_LEDGER.md)
 - [FIGURE_PLAN.md](./FIGURE_PLAN.md)
 - [FIGURE_CAPTIONS.md](./FIGURE_CAPTIONS.md)
 
-If a claim is not stable across those three files, it is not ready for the
+If a claim is not stable across those files, it is not ready for the
 submission version.

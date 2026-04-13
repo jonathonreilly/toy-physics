@@ -7,15 +7,19 @@ Important:
 
 - many files here are historical
 - log presence does not imply current retained status
-- use lane notes and manifests first, raw logs second
+- use the publication package first, raw logs second
 
 Start from:
 
-- [`docs/repo/LANE_STATUS_BOARD.md`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/docs/repo/LANE_STATUS_BOARD.md)
-- [`docs/lanes/README.md`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/docs/lanes/README.md)
+- [`docs/publication/ci3_z3/README.md`](/private/tmp/physics-publication-prep/docs/publication/ci3_z3/README.md)
+- [`docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md`](/private/tmp/physics-publication-prep/docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md)
+- [`docs/publication/ci3_z3/REPRODUCE.md`](/private/tmp/physics-publication-prep/docs/publication/ci3_z3/REPRODUCE.md)
 
 Use logs when you need:
 
 - raw printed metrics from an older retained note
 - forensic context for a historical rerun
 - confirmation of a frozen batch artifact
+
+For release-quality retained evidence, prefer files under
+`logs/retained/`.

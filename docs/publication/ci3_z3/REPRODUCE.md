@@ -22,6 +22,8 @@ python3 scripts/frontier_born_rule_derived.py
 ## Expected use
 
 - use the note paired with each runner as the claim boundary
+- use [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md) to see
+  which derivation note and release artifact each runner supports
 - do not elevate bounded lanes from raw stdout alone
 - runner names are historical in a few places:
   - `frontier_born_rule_derived.py` supports the retained `I_3 = 0` theorem,
@@ -35,5 +37,7 @@ For GitHub or submission support:
 
 - pin the exact commit hash
 - archive raw stdout logs per runner under `outputs/` or `logs/`
+- archive retained logs under `logs/retained/` and figure-prep data under
+  `outputs/figures/`
 - keep a one-line status ledger: `retained`, `bounded`, or `open`
 - before release, check [SUBMISSION_CHECKLIST.md](./SUBMISSION_CHECKLIST.md)

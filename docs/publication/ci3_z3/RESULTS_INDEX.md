@@ -3,6 +3,9 @@
 This maps manuscript sections to the primary note+runner artifacts on this
 branch.
 
+For the claim-by-claim derivation/validation pairing, use
+[DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md).
+
 ## Main-text core
 
 | Section | Note | Runner |
@@ -41,3 +44,5 @@ branch.
 - Use [FIGURE_PLAN.md](./FIGURE_PLAN.md) as the canonical figure inventory.
 - No manuscript figure should be sourced from a note or runner that is not also
   represented in [CLAIMS_TABLE.md](./CLAIMS_TABLE.md).
+- No manuscript section should rely on a claim that is missing from
+  [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md).

@@ -162,7 +162,8 @@ The arXiv version should point directly to the curated publication package:
 - [FIGURE_PLAN.md](./FIGURE_PLAN.md)
 
 Every retained or bounded statement in the manuscript should map to one note and
-one primary runner through those documents.
+one primary runner through those documents, with the claim-level evidence
+contract recorded in [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md).
 
 ## 7. Package Rule
 

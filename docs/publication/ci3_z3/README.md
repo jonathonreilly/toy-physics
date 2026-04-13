@@ -10,6 +10,7 @@ Use this package instead of browsing raw repo chronology.
 - [Nature package](./NATURE_PACKAGE.md)
 - [arXiv package](./ARXIV_PACKAGE.md)
 - [Claims table](./CLAIMS_TABLE.md)
+- [Derivation / validation map](./DERIVATION_VALIDATION_MAP.md)
 - [Full claim ledger](./FULL_CLAIM_LEDGER.md)
 - [Results index](./RESULTS_INDEX.md)
 - [Reproduce guide](./REPRODUCE.md)
@@ -58,11 +59,20 @@ The Nature surface should carry the retained backbone and only the tightest
 bounded companions. The arXiv surface can carry the full derivation chain, SI,
 and clearly labeled bounded lanes.
 
+Every promoted claim must have both:
+
+- one derivation authority note
+- one validation path, usually a runner with a pinned pass summary
+
+That contract lives in
+[DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md).
+
 ## Immediate editorial objective
 
 Before the four live gates close, the repo should already be ready to publish:
 
 - one canonical claim ledger
+- one derivation / validation map
 - one manuscript source for the letter
 - one longer arXiv source
 - one reproducibility surface for GitHub

@@ -9,6 +9,7 @@ explicit status labels.
 ## Include
 
 - [arXiv draft](./ARXIV_DRAFT.md)
+- [Derivation / validation map](./DERIVATION_VALIDATION_MAP.md)
 - [Full claim ledger](./FULL_CLAIM_LEDGER.md)
 - [Figure plan](./FIGURE_PLAN.md)
 - [Figure captions](./FIGURE_CAPTIONS.md)
@@ -33,4 +34,5 @@ explicit status labels.
 
 The arXiv package is allowed to be longer, not looser. Every bounded section
 must end with its actual current status and must not silently outrun
-[CLAIMS_TABLE.md](./CLAIMS_TABLE.md).
+[CLAIMS_TABLE.md](./CLAIMS_TABLE.md) or
+[DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md).

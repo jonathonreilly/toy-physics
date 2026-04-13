@@ -109,12 +109,15 @@ not yet fully closed.
 
 The public code surface for this manuscript should be the curated publication
 package rooted at [README.md](./README.md), with claims pinned through
-[CLAIMS_TABLE.md](./CLAIMS_TABLE.md), runner mappings in
+[CLAIMS_TABLE.md](./CLAIMS_TABLE.md), derivation/validation pairing in
+[DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md), runner mappings in
 [RESULTS_INDEX.md](./RESULTS_INDEX.md), and exact execution instructions in
 [REPRODUCE.md](./REPRODUCE.md).
 
 ## Data Availability
 
 All numerical outputs used to support retained and bounded claims should be
-generated from the pinned runners listed in [RESULTS_INDEX.md](./RESULTS_INDEX.md)
-and archived under the corresponding release commit.
+generated from the pinned runners listed in [RESULTS_INDEX.md](./RESULTS_INDEX.md),
+paired with their derivation authority in
+[DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md), and archived
+under the corresponding release commit.

@@ -1,5 +1,9 @@
 # Claims Table
 
+Use [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md) alongside
+this table. This file says what the paper may claim. The derivation /
+validation map says how each claim is evidenced and released.
+
 ## Retained core
 
 | Claim | Status | Placement | Authority | Primary runner |
@@ -44,3 +48,10 @@ cleanly or closed.
 2. DM relic mapping
 3. renormalized `y_t` matching
 4. CKM / quantitative flavor closure
+
+## Packaging rule
+
+No manuscript claim is ready until it appears in both:
+
+- this table
+- [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md)

@@ -6,7 +6,8 @@ submission without re-litigating claim status at the last minute.
 ## 1. Claim hygiene
 
 - every statement in the manuscript appears in [CLAIMS_TABLE.md](./CLAIMS_TABLE.md)
-- every retained claim has one authority note and one primary runner
+- every retained claim appears in [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md)
+- every retained claim has one authority note and one validation path
 - every bounded lane is labeled `bounded` in both the manuscript and GitHub
 - no stale review packet or pitch memo is linked as science authority
 
@@ -31,19 +32,22 @@ submission without re-litigating claim status at the last minute.
 - front door is [README.md](/private/tmp/physics-publication-prep/README.md)
 - publication navigation starts at [README.md](/private/tmp/physics-publication-prep/docs/publication/ci3_z3/README.md)
 - every linked runner executes from the repo root
-- raw logs for retained runners are archived under `logs/` or `outputs/`
+- raw logs for retained runners are archived under `logs/retained/`
+- figure-prep artifacts are archived under `outputs/figures/`
 - obsolete scratch notes stay in work history, not the front-door package
 
 ## 5. Figures and tables
 
 - each planned figure has one source runner or one explicit data-prep note
 - the claims table is the manuscript truth source
+- the derivation / validation map is the evidence truth source
 - the results index maps every section to one authority note and runner
 - venue-facing figure captions use `retained`, `bounded`, or `open` wording consistently
 
 ## 6. Before submission
 
 - freeze one commit hash for the public package
+- freeze [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md) with the same commit hash
 - record exact runner versions and expected pass summaries
 - regenerate manuscript figures from pinned data
 - proofread title, abstract, and conclusion against the claims table
