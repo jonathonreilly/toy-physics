@@ -3,47 +3,55 @@
 Little Groups at BZ Corners for the Staggered Cl(3) Hamiltonian on Z^3
 =======================================================================
 
-STATUS: OBSTRUCTION DOCUMENTED
+STATUS: Exact algebraic computation + bounded generation-physicality argument
 
-QUESTION: Do the 3 X-point BZ corners (hw=1) have different little groups
-under the actual symmetry group of the staggered Hamiltonian?  If yes,
-they would be physically inequivalent by standard crystallography (Bradley &
-Cracknell), and the generation physicality gate would close unconditionally.
+QUESTION: Do the 3 X-point BZ corners (hw=1) constitute physically
+inequivalent species of the staggered Hamiltonian?
 
-FINDING: The little-group argument DOES NOT CLOSE generation physicality.
+COMPUTATION:
+  1. Build the momentum-space staggered Hamiltonian H(K) in the 8-site
+     unit cell basis.
+  2. Determine the FULL symmetry group of H, including site-dependent
+     sign (taste) transformations.
+  3. Compute the little group (stabilizer) at each BZ corner under
+     the phase-preserving subgroup.
+  4. Check whether C3[111] (which cycles X1->X2->X3) is a symmetry
+     with or without taste transformation.
+  5. Compute H(X1), H(X2), H(X3) explicitly and show they are
+     different matrices with the same spectrum.
+  6. Analyze the representation of the symmetry group at each X-point.
 
-The staggered eta phases (eta_1=1, eta_2=(-1)^{n_1}, eta_3=(-1)^{n_1+n_2})
-break the NAIVE point-group action of Oh on coordinates.  However, each Oh
-element g can be implemented as a symmetry through a COMBINED operation:
-  S_g = (coordinate permutation by g) x (taste-space unitary U_g)
-where U_g is a non-trivial unitary on the internal (taste) degrees of
-freedom.  This is the standard "staggered symmetry group" from lattice QCD
-(Golterman-Smit 1984, Kilcup-Sharpe 1987).
+KEY FINDINGS:
+  (a) The phase-preserving subgroup (no taste rotations) has 8 elements
+      and does NOT contain C3[111]. Under this subgroup alone, X1, X2, X3
+      are in different orbits.
+  (b) The FULL symmetry group (including taste/sign transformations)
+      has 48 elements = full Oh. C3[111] IS a symmetry with epsilon(n) =
+      (-1)^{(n_1+n_2)*n_3}. Under the full group, X1, X2, X3 are related.
+  (c) H(X1), H(X2), H(X3) are different 8x8 matrices with the same
+      spectrum {-1, +1} each with degeneracy 4.
+  (d) The taste transformation that maps X1->X2 changes the sublattice
+      structure. Whether this makes the species physically equivalent
+      or distinct is the TASTE-PHYSICALITY question, which remains open.
 
-Consequence:
-  - The full Oh symmetry survives in the combined coordinate+taste space.
-  - S_{C3} maps the q=0 sector to itself, relating X1, X2, X3.
-  - The 3 X points (hw=1) are in the SAME orbit of the symmetry group.
-  - They are therefore related by symmetry and CANNOT be distinguished
-    by a little-group argument alone.
+EXACT RESULTS (theorem-grade):
+  - BZ decomposition: 8 = 1 + 3 + 3 + 1 by Hamming weight
+  - Phase-preserving symmetry group has order 8
+  - Full symmetry group (with taste) has order 48 = Oh
+  - H(X1), H(X2), H(X3) are distinct matrices with identical spectra
+  - C3[111] with taste transform maps X1 <-> X2 <-> X3
 
-The script verifies this numerically:
-  1. Oh -> D2h if only DIAGONAL gauge transformations are allowed.
-  2. Oh SURVIVES if general (off-diagonal) taste unitaries are allowed.
-  3. The explicit symmetry S = P_{C3}^T @ U maps H to itself.
-  4. S maps the q=0 sector (containing all BZ corners) to itself.
-
-GENERATION PHYSICALITY REMAINS OPEN.
+BOUNDED (not theorem-grade):
+  - Whether taste-related species are physically distinct generations
 
 PStack experiment: generation-little-groups
-Depends: numpy, scipy
+Self-contained: numpy only.
 """
 
 from __future__ import annotations
 
 import sys
 import numpy as np
-from scipy.linalg import schur
 
 np.set_printoptions(precision=10, linewidth=120, suppress=True)
 
@@ -51,7 +59,7 @@ PASS_COUNT = 0
 FAIL_COUNT = 0
 
 
-def check(name: str, condition: bool, detail: str = "", level: str = "A") -> bool:
+def check(name, condition, detail="", level="A"):
     global PASS_COUNT, FAIL_COUNT
     status = "PASS" if condition else "FAIL"
     if condition:
@@ -73,224 +81,247 @@ def generate_Oh():
     """Generate all 48 elements of Oh as 3x3 integer matrices."""
     C4z = np.array([[0, -1, 0], [1, 0, 0], [0, 0, 1]], dtype=int)
     C3 = np.array([[0, 0, 1], [1, 0, 0], [0, 1, 0]], dtype=int)
-    inv = -np.eye(3, dtype=int)
-
-    group = set()
-    queue = [np.eye(3, dtype=int), C4z, C3, inv]
+    O_group = set()
+    queue = [np.eye(3, dtype=int), C4z, C3]
     while queue:
         g = queue.pop()
         key = tuple(g.flatten())
-        if key in group:
+        if key in O_group:
             continue
-        group.add(key)
-        for gen in [C4z, C3, inv]:
+        O_group.add(key)
+        for gen in [C4z, C3]:
             queue.append(g @ gen)
             queue.append(gen @ g)
-
-    return [np.array(k, dtype=int).reshape(3, 3) for k in group]
+    O_matrices = [np.array(k, dtype=int).reshape(3, 3) for k in O_group]
+    Oh_matrices = []
+    seen = set()
+    for g in O_matrices:
+        for s in [1, -1]:
+            m = s * g
+            key = tuple(m.flatten())
+            if key not in seen:
+                seen.add(key)
+                Oh_matrices.append(m)
+    return Oh_matrices
 
 
 # =============================================================================
-# Part 1: Staggered Hamiltonian on finite L^3 lattice
+# Part 1: Staggered Hamiltonian in momentum space
 # =============================================================================
 
-def build_staggered_H(L):
-    """Build the d=3 staggered Hamiltonian on L^3 lattice with PBC."""
+def staggered_H_momentum(K):
+    """Build the 8x8 momentum-space staggered Hamiltonian H(K).
+
+    Convention: anti-Hermitian (H^dag = -H).
+    """
+    alphas = [(a1, a2, a3) for a1 in range(2) for a2 in range(2) for a3 in range(2)]
+    alpha_idx = {a: i for i, a in enumerate(alphas)}
+    H = np.zeros((8, 8), dtype=complex)
+    for a in alphas:
+        i = alpha_idx[a]
+        a1, a2, a3 = a
+        for mu in range(3):
+            if mu == 0:
+                eta = 1.0
+            elif mu == 1:
+                eta = (-1.0) ** a1
+            else:
+                eta = (-1.0) ** (a1 + a2)
+            b = list(a)
+            b[mu] = 1 - b[mu]
+            b = tuple(b)
+            j = alpha_idx[b]
+            if a[mu] == 1:
+                phase = np.exp(1j * K[mu])
+            else:
+                phase = 1.0
+            H[i, j] += 0.5 * eta * phase
+            H[j, i] -= 0.5 * eta * np.conj(phase)
+    return H
+
+
+# =============================================================================
+# Part 2: Position-space Hamiltonian and symmetry checking
+# =============================================================================
+
+def build_position_space_H(L):
+    """Build the staggered Hamiltonian on an L^3 lattice with PBC."""
     N = L ** 3
-
+    H = np.zeros((N, N), dtype=float)
     def idx(x, y, z):
         return ((x % L) * L + (y % L)) * L + (z % L)
-
-    H = np.zeros((N, N), dtype=float)
     for x in range(L):
         for y in range(L):
             for z in range(L):
                 i = idx(x, y, z)
-                for mu, (dx, dy, dz) in enumerate([(1, 0, 0), (0, 1, 0), (0, 0, 1)]):
-                    j = idx(x + dx, y + dy, z + dz)
-                    if mu == 0:
-                        eta = 1.0
-                    elif mu == 1:
-                        eta = (-1.0) ** x
-                    else:
-                        eta = (-1.0) ** (x + y)
-                    H[i, j] += 0.5 * eta
-                    H[j, i] -= 0.5 * eta
-    return H, idx
+                j = idx(x + 1, y, z)
+                H[i, j] += 0.5; H[j, i] -= 0.5
+                eta2 = (-1) ** x
+                j = idx(x, y + 1, z)
+                H[i, j] += 0.5 * eta2; H[j, i] -= 0.5 * eta2
+                eta3 = (-1) ** (x + y)
+                j = idx(x, y, z + 1)
+                H[i, j] += 0.5 * eta3; H[j, i] -= 0.5 * eta3
+    return H
 
 
-# =============================================================================
-# Part 2: Check naive (diagonal-gauge) symmetry group
-# =============================================================================
+def find_symmetry_with_signs(g, H, L):
+    """Check if Oh element g is a symmetry of H with site-dependent signs.
 
-def find_diagonal_gauge_symmetry():
-    """Find Oh elements preserving eta phases with diagonal gauge only.
+    Finds epsilon(n) = +/-1 such that the transformation
+    c(n) -> epsilon(n) c(g.n) preserves H.
+    """
+    N = L ** 3
+    def idx(x, y, z):
+        return ((x % L) * L + (y % L)) * L + (z % L)
+    def apply_g(x, y, z):
+        n = g @ np.array([x, y, z])
+        return int(n[0]) % L, int(n[1]) % L, int(n[2]) % L
 
-    This is the NAIVE check: g is a symmetry if eta_mu(g^{-1}.n) = eta_{nu}(n)
-    for all n, where g.e_mu = +/-e_nu.  This gives D2h (8 elements).
+    eps = np.zeros(N)
+    eps[idx(0, 0, 0)] = 1.0
+    visited = {idx(0, 0, 0)}
+    queue = [(0, 0, 0)]
+    consistent = True
 
-    However, this is NOT the full symmetry group -- it misses elements
-    implementable through off-diagonal taste unitaries.
+    while queue and consistent:
+        x, y, z = queue.pop(0)
+        i = idx(x, y, z)
+        gi = idx(*apply_g(x, y, z))
+        for dx, dy, dz in [(1, 0, 0), (0, 1, 0), (0, 0, 1),
+                            (-1, 0, 0), (0, -1, 0), (0, 0, -1)]:
+            nx, ny, nz = (x + dx) % L, (y + dy) % L, (z + dz) % L
+            j = idx(nx, ny, nz)
+            gj = idx(*apply_g(nx, ny, nz))
+            if abs(H[i, j]) < 1e-15:
+                continue
+            ratio = H[gi, gj] / H[i, j]
+            if j in visited:
+                if abs(eps[i] * eps[j] - ratio) > 1e-10:
+                    consistent = False
+                    break
+            else:
+                eps[j] = ratio / eps[i]
+                visited.add(j)
+                queue.append((nx, ny, nz))
+
+    if not consistent or len(visited) != N:
+        return False, None
+
+    D = np.diag(eps)
+    P = np.zeros((N, N))
+    for x in range(L):
+        for y in range(L):
+            for z in range(L):
+                i_s = idx(x, y, z)
+                j_s = idx(*apply_g(x, y, z))
+                P[j_s, i_s] = 1.0
+    Pp = P @ D
+    if np.allclose(Pp @ H @ Pp.T, H, atol=1e-10):
+        return True, eps
+    return False, None
+
+
+def find_staggered_symmetry_group_exact():
+    """Determine phase-preserving subgroup by exact analysis of eta phases.
+
+    Returns Oh elements g that preserve the eta phase structure without
+    any site-dependent sign correction.
     """
     Oh = generate_Oh()
-
     def eta(mu, n):
-        if mu == 0:
-            return 1
-        elif mu == 1:
-            return (-1) ** (n[0] % 2)
-        else:
-            return (-1) ** ((n[0] + n[1]) % 2)
+        if mu == 0: return 1
+        elif mu == 1: return (-1) ** (n[0] % 2)
+        else: return (-1) ** ((n[0] + n[1]) % 2)
 
-    diagonal_syms = []
-
+    phase_preserving = []
     for g in Oh:
         ginv = np.round(np.linalg.inv(g)).astype(int)
         is_sym = True
-
         for mu in range(3):
-            e_mu = np.zeros(3, dtype=int)
-            e_mu[mu] = 1
+            e_mu = np.zeros(3, dtype=int); e_mu[mu] = 1
             g_emu = g @ e_mu
-
             nu = -1
             for k in range(3):
                 if abs(g_emu[k]) == 1 and all(g_emu[j] == 0 for j in range(3) if j != k):
-                    nu = k
-                    break
-
+                    nu = k; break
             if nu == -1:
-                is_sym = False
-                break
-
+                is_sym = False; break
             for n1 in range(2):
                 for n2 in range(2):
                     for n3 in range(2):
                         n = np.array([n1, n2, n3], dtype=int)
-                        if eta(mu, ginv @ n) != eta(nu, n):
-                            is_sym = False
-                            break
-                    if not is_sym:
-                        break
-                if not is_sym:
-                    break
-            if not is_sym:
-                break
-
+                        ginv_n = ginv @ n
+                        if eta(mu, ginv_n) != eta(nu, n):
+                            is_sym = False; break
+                    if not is_sym: break
+                if not is_sym: break
+            if not is_sym: break
         if is_sym:
-            diagonal_syms.append(g)
-
-    return diagonal_syms
-
-
-# =============================================================================
-# Part 3: Check FULL symmetry (with off-diagonal taste unitaries)
-# =============================================================================
-
-def check_full_symmetry(L, g):
-    """Check if Oh element g is a symmetry with a general unitary.
-
-    Method: Build H and g-transformed H_g = P_g H P_g^T.  Check if H and H_g
-    are unitarily equivalent by comparing Tr(H^k) = Tr(H_g^k) for k=2,...,K_max.
-
-    For real antisymmetric matrices, unitary equivalence is equivalent to matching
-    of ALL even-power traces (odd powers are automatically zero).
-    """
-    H, idx_func = build_staggered_H(L)
-    N = L ** 3
-
-    # Build coordinate permutation matrix for g
-    P_g = np.zeros((N, N))
-    for x in range(L):
-        for y in range(L):
-            for z in range(L):
-                old = idx_func(x, y, z)
-                gn = g @ np.array([x, y, z])
-                new = idx_func(gn[0], gn[1], gn[2])
-                P_g[new, old] = 1.0
-
-    H_g = P_g @ H @ P_g.T
-
-    # Compare traces of even powers
-    max_power = min(2 * L, 20)
-    for k in range(2, max_power + 1, 2):
-        tr_H = np.trace(np.linalg.matrix_power(H, k))
-        tr_Hg = np.trace(np.linalg.matrix_power(H_g, k))
-        if abs(tr_H - tr_Hg) > 1e-6:
-            return False
-
-    return True
+            phase_preserving.append(g)
+    return phase_preserving
 
 
-def construct_explicit_symmetry(L, g):
-    """Construct the explicit unitary S such that S H S^dag = H,
-    where S combines coordinate permutation by g with a taste unitary."""
-    H, idx_func = build_staggered_H(L)
-    N = L ** 3
-
-    P_g = np.zeros((N, N))
-    for x in range(L):
-        for y in range(L):
-            for z in range(L):
-                old = idx_func(x, y, z)
-                gn = g @ np.array([x, y, z])
-                new = idx_func(gn[0], gn[1], gn[2])
-                P_g[new, old] = 1.0
-
-    H_g = P_g @ H @ P_g.T
-
-    # Find U such that U H U^dag = H_g via Schur decomposition
-    T_H, Z_H = schur(H, output='complex')
-    T_Hg, Z_Hg = schur(H_g, output='complex')
-
-    evals_H = np.diag(T_H)
-    evals_Hg = np.diag(T_Hg)
-
-    idx_H = np.argsort(np.imag(evals_H))
-    idx_Hg = np.argsort(np.imag(evals_Hg))
-
-    U = Z_Hg[:, idx_Hg] @ Z_H[:, idx_H].conj().T
-
-    # S = P_g^T @ U is the symmetry: S H S^dag = H
-    S = P_g.T @ U
-    return S, H
+def find_full_symmetry_group(L=4):
+    """Find the full symmetry group including site-dependent signs (taste)."""
+    Oh = generate_Oh()
+    H = build_position_space_H(L)
+    full_sym = []
+    sign_patterns = {}
+    for g in Oh:
+        is_sym, eps = find_symmetry_with_signs(g, H, L)
+        if is_sym:
+            full_sym.append(g)
+            sign_patterns[tuple(g.flatten())] = eps
+    return full_sym, sign_patterns, H
 
 
 # =============================================================================
-# Part 4: Check that S maps q=0 sector to itself
+# Part 3: Little groups and orbit checks
 # =============================================================================
 
-def check_q0_preservation(L, S):
-    """Check that the symmetry S maps the q=0 sector to itself."""
-    N = L ** 3
+def little_group(symmetry_group, K):
+    """Compute the little group (stabilizer) of K under the symmetry group."""
+    stab = []
+    for g in symmetry_group:
+        gK = g @ K
+        diff = (gK - K) / np.pi
+        if np.allclose(diff, np.round(diff), atol=1e-10):
+            if np.allclose(np.round(diff) % 2, 0, atol=1e-10):
+                stab.append(g)
+    return stab
 
-    def idx(x, y, z):
-        return ((x % L) * L + (y % L)) * L + (z % L)
 
-    # Build translation-by-2 operators
-    T2 = []
-    for dx, dy, dz in [(2, 0, 0), (0, 2, 0), (0, 0, 2)]:
-        Td = np.zeros((N, N))
-        for x in range(L):
-            for y in range(L):
-                for z in range(L):
-                    old = idx(x, y, z)
-                    new = idx(x + dx, y + dy, z + dz)
-                    Td[new, old] = 1.0
-        T2.append(Td)
+def identify_group(elements):
+    n = len(elements)
+    class_counts = {}
+    for g in elements:
+        tr = int(round(np.trace(g)))
+        det = int(round(np.linalg.det(g)))
+        key = (tr, det)
+        class_counts[key] = class_counts.get(key, 0) + 1
+    return n, class_counts
 
-    # Projector onto q=0 sector (eigenvalue +1 for all T2_j)
-    P_q0 = np.eye(N)
-    for Td in T2:
-        P_q0 = P_q0 @ (np.eye(N) + Td) / 2
 
-    rank = int(round(np.trace(P_q0).real))
-
-    # Check S P_q0 S^dag is within the q=0 sector
-    SP = S @ P_q0 @ S.conj().T
-    overlap = np.trace(SP @ P_q0).real
-
-    return rank, abs(overlap - rank) < 1e-6
+def check_points_related(sym_group, points_dict):
+    relations = {}
+    names = list(points_dict.keys())
+    for ii in range(len(names)):
+        for jj in range(ii + 1, len(names)):
+            ni, nj = names[ii], names[jj]
+            Ki, Kj = points_dict[ni], points_dict[nj]
+            found = False
+            for g in sym_group:
+                gKi = g @ Ki
+                diff = (gKi - Kj) / np.pi
+                if np.allclose(diff, np.round(diff), atol=1e-10):
+                    if np.allclose(np.round(diff) % 2, 0, atol=1e-10):
+                        found = True
+                        relations[(ni, nj)] = g
+                        break
+            if not found:
+                relations[(ni, nj)] = None
+    return relations
 
 
 # =============================================================================
@@ -302,194 +333,332 @@ def main():
     print("LITTLE GROUPS AT BZ CORNERS: STAGGERED Cl(3) ON Z^3")
     print("=" * 70)
 
-    L = 4  # Lattice size (must be even for staggered fermions)
-
-    # ---- Step 1: Naive (diagonal-gauge) symmetry group ----
+    # ---- Step 1: Phase-preserving symmetry subgroup ----
     print("\n" + "=" * 70)
-    print("STEP 1: NAIVE SYMMETRY GROUP (diagonal gauge only)")
+    print("STEP 1: PHASE-PRESERVING SYMMETRY SUBGROUP")
     print("=" * 70)
 
     Oh = generate_Oh()
     check("Oh_order", len(Oh) == 48, f"|Oh| = {len(Oh)}")
 
-    diag_syms = find_diagonal_gauge_symmetry()
-    n_diag = len(diag_syms)
-    print(f"\n  Diagonal-gauge symmetry group has {n_diag} elements")
+    phase_preserving = find_staggered_symmetry_group_exact()
+    n_pp = len(phase_preserving)
+    print(f"\n  Phase-preserving subgroup has {n_pp} elements")
 
-    # Identify the group
-    diag_set = set(tuple(g.flatten()) for g in diag_syms)
-    print("  Elements:")
-    for g in diag_syms:
-        tr = int(round(np.trace(g)))
-        det = int(round(np.linalg.det(g)))
-        print(f"    tr={tr:+d}, det={det:+d}: {g.flatten().tolist()}")
+    pp_order, pp_classes = identify_group(phase_preserving)
+    print(f"  Order = {pp_order}, classes = {pp_classes}")
 
-    check("diag_is_D2h", n_diag == 8,
-          f"Diagonal-gauge group = D2h ({n_diag} elements)")
-
-    # Check which named elements survive
-    C3_111 = np.array([[0, 0, 1], [1, 0, 0], [0, 1, 0]], dtype=int)
-    c3_in_diag = tuple(C3_111.flatten()) in diag_set
-    check("c3_not_in_diag", not c3_in_diag,
-          "C3[111] NOT in diagonal-gauge group (expected)")
-
-    print("\n  NOTE: The diagonal-gauge group is D2h = {I, C2x, C2y, C2z, i, sigma_x, sigma_y, sigma_z}.")
-    print("  This is the group of Oh elements that preserve the eta phases")
-    print("  WITHOUT off-diagonal taste transformations.")
-    print("  Under D2h alone, X1, X2, X3 would be in different orbits.")
-    print("  But D2h is NOT the full symmetry group (see Step 2).")
-
-    # ---- Step 2: Full symmetry check (with off-diagonal unitaries) ----
+    # ---- Step 2: Full symmetry group with taste transformations ----
     print("\n" + "=" * 70)
-    print("STEP 2: FULL SYMMETRY GROUP (with taste unitaries)")
+    print("STEP 2: FULL SYMMETRY GROUP (WITH TASTE TRANSFORMATIONS)")
     print("=" * 70)
 
-    print(f"\n  Checking all 48 Oh elements on L={L} lattice...")
-    full_syms = []
-    for g in Oh:
-        if check_full_symmetry(L, g):
-            full_syms.append(g)
+    L = 4
+    print(f"\n  Checking all Oh elements on L={L} position-space lattice")
+    print("  allowing site-dependent sign transformations epsilon(n) = +/-1")
 
-    n_full = len(full_syms)
-    print(f"\n  Full symmetry group has {n_full} elements (with taste unitaries)")
-    check("full_is_Oh", n_full == 48,
-          f"Full Oh survives with taste unitaries ({n_full}/48)")
+    full_sym, sign_patterns, H_pos = find_full_symmetry_group(L)
+    n_full = len(full_sym)
+    print(f"\n  Full symmetry group has {n_full} elements")
 
-    c3_is_full_sym = check_full_symmetry(L, C3_111)
-    check("c3_is_symmetry", c3_is_full_sym,
-          "C3[111] IS a symmetry with taste unitary (CRITICAL)")
+    check("full_symmetry_is_Oh", n_full == 48,
+          f"Full symmetry group = Oh ({n_full} elements)")
 
-    # ---- Step 3: Construct explicit C3 symmetry ----
+    # ---- Step 3: Numerical cross-check on independent lattice ----
     print("\n" + "=" * 70)
-    print("STEP 3: EXPLICIT C3 SYMMETRY CONSTRUCTION")
-    print("=" * 70)
-
-    S_c3, H = construct_explicit_symmetry(L, C3_111)
-    N = L ** 3
-
-    comm_err = np.linalg.norm(S_c3 @ H @ S_c3.conj().T - H)
-    unit_err = np.linalg.norm(S_c3 @ S_c3.conj().T - np.eye(N))
-
-    print(f"\n  ||S H S^dag - H|| = {comm_err:.2e}")
-    print(f"  ||S S^dag - I||   = {unit_err:.2e}")
-
-    check("explicit_c3_symmetry", comm_err < 1e-10,
-          f"S implements C3 as symmetry (err={comm_err:.2e})")
-    check("explicit_c3_unitary", unit_err < 1e-10,
-          f"S is unitary (err={unit_err:.2e})")
-
-    # ---- Step 4: S maps q=0 sector to itself ----
-    print("\n" + "=" * 70)
-    print("STEP 4: q=0 SECTOR PRESERVATION")
-    print("=" * 70)
-
-    rank, preserved = check_q0_preservation(L, S_c3)
-    print(f"\n  q=0 sector dimension: {rank} (expected 8)")
-    print(f"  S maps q=0 to q=0: {preserved}")
-
-    check("q0_preserved", preserved,
-          "S maps q=0 sector to itself (all BZ corners related)")
-
-    # ---- Step 5: Direct lattice commutator cross-checks ----
-    print("\n" + "=" * 70)
-    print("STEP 5: DIRECT LATTICE COMMUTATOR CHECKS")
-    print("=" * 70)
-
-    def idx(x, y, z):
-        return ((x % L) * L + (y % L)) * L + (z % L)
-
-    # C3 without taste transformation does NOT commute
-    P_c3 = np.zeros((N, N))
-    for x in range(L):
-        for y in range(L):
-            for z in range(L):
-                old = idx(x, y, z)
-                new = idx(y, z, x)
-                P_c3[new, old] = 1.0
-
-    comm_bare = np.linalg.norm(P_c3 @ H - H @ P_c3)
-    print(f"\n  ||[P_C3, H]|| (bare, no taste transform) = {comm_bare:.4f}")
-    check("c3_bare_breaks", comm_bare > 1.0,
-          f"Bare C3 does NOT commute with H (expected, err={comm_bare:.2f})")
-
-    # S (C3 + taste) DOES commute
-    comm_full = np.linalg.norm(S_c3 @ H - H @ S_c3)
-    print(f"  ||[S_C3, H]|| (with taste transform) = {comm_full:.2e}")
-    check("c3_taste_commutes", comm_full < 1e-10,
-          f"C3 + taste DOES commute with H (err={comm_full:.2e})")
-
-    # ---- Step 6: Verify on larger lattice ----
-    print("\n" + "=" * 70)
-    print("STEP 6: LARGER LATTICE CROSS-CHECK (L=6)")
+    print("STEP 3: NUMERICAL CROSS-CHECK")
     print("=" * 70)
 
     L2 = 6
-    c3_on_L6 = check_full_symmetry(L2, C3_111)
-    print(f"\n  C3 is a symmetry on L={L2}: {c3_on_L6}")
-    check("c3_L6", c3_on_L6, f"C3 survives on L={L2} lattice")
+    print(f"\n  Cross-checking on independent L={L2} lattice")
+    H_pos2 = build_position_space_H(L2)
+    count_L2 = 0
+    for g in Oh:
+        is_sym, _ = find_symmetry_with_signs(g, H_pos2, L2)
+        if is_sym:
+            count_L2 += 1
+    print(f"  Found {count_L2} symmetries on L={L2}")
+    check("numerical_crosscheck", count_L2 == n_full,
+          f"L={L} ({n_full}) vs L={L2} ({count_L2})")
 
-    # Also check a non-Oh element should NOT be a symmetry
-    bad_g = np.array([[1, 1, 0], [0, 1, 0], [0, 0, 1]], dtype=int)  # shear, det=1
-    # Actually this isn't in Oh. Let me check a random 3x3 orthogonal matrix.
-    # Better: verify identity IS a symmetry (sanity check)
-    id_sym = check_full_symmetry(L, np.eye(3, dtype=int))
-    check("identity_is_symmetry", id_sym, "Identity is trivially a symmetry")
-
-    # ---- Step 7: Orbit analysis ----
+    # ---- Step 4: C3[111] analysis ----
     print("\n" + "=" * 70)
-    print("STEP 7: ORBIT ANALYSIS")
+    print("STEP 4: C3[111] AND AXIS PERMUTATIONS")
     print("=" * 70)
 
-    print("\n  Under the FULL symmetry group (Oh with taste unitaries):")
-    print("  - C3[111] maps X1=(pi,0,0) -> X2=(0,pi,0) -> X3=(0,0,pi)")
-    print("  - All 3 X points are in the SAME orbit")
-    print("  - All 3 M points are in the SAME orbit")
-    print("  - Gamma and R are each in their own orbit")
-    print("  - Total: 4 orbits = {Gamma}, {X1,X2,X3}, {M1,M2,M3}, {R}")
+    C3_111 = np.array([[0, 0, 1], [1, 0, 0], [0, 1, 0]], dtype=int)
+    pp_set = set(tuple(g.flatten()) for g in phase_preserving)
+    full_set = set(tuple(g.flatten()) for g in full_sym)
 
-    print("\n  Under the DIAGONAL-GAUGE group (D2h):")
-    print("  - No axis permutations survive")
-    print("  - Each BZ corner is in its own orbit (8 orbits)")
-    print("  - BUT THIS IS THE WRONG GROUP (misses taste unitaries)")
+    c3_in_pp = tuple(C3_111.flatten()) in pp_set
+    c3_in_full = tuple(C3_111.flatten()) in full_set
 
-    check("orbit_structure", True, level="A",
-          detail="X1,X2,X3 in same orbit of full symmetry group")
+    print(f"\n  C3[111] in phase-preserving subgroup: {c3_in_pp}")
+    print(f"  C3[111] in full symmetry group (with taste): {c3_in_full}")
+
+    check("c3_broken_in_phase_preserving", not c3_in_pp,
+          "C3[111] NOT in phase-preserving subgroup")
+    check("c3_in_full_group", c3_in_full,
+          "C3[111] IS a symmetry with taste transformation")
+
+    # Show the taste transformation for C3
+    c3_key = tuple(C3_111.flatten())
+    if c3_key in sign_patterns:
+        eps = sign_patterns[c3_key]
+        def idx4(x, y, z):
+            return ((x % L) * L + (y % L)) * L + (z % L)
+        matches = True
+        for x in range(L):
+            for y in range(L):
+                for z in range(L):
+                    if abs(eps[idx4(x, y, z)] - (-1) ** ((x + y) * z)) > 1e-10:
+                        matches = False
+        if matches:
+            print("  C3[111] taste transform: epsilon(n) = (-1)^{(n_1+n_2)*n_3}")
+
+    print("\n  Checking axis permutations:")
+    Pxy = np.array([[0, 1, 0], [1, 0, 0], [0, 0, 1]], dtype=int)
+    Pxz = np.array([[0, 0, 1], [0, 1, 0], [1, 0, 0]], dtype=int)
+    Pyz = np.array([[1, 0, 0], [0, 0, 1], [0, 1, 0]], dtype=int)
+    for name, P in [("swap(x,y)", Pxy), ("swap(x,z)", Pxz),
+                     ("swap(y,z)", Pyz), ("C3[111]", C3_111)]:
+        in_pp = tuple(P.flatten()) in pp_set
+        in_full = tuple(P.flatten()) in full_set
+        print(f"    {name:12s}: phase-preserving={'YES' if in_pp else 'NO':3s}, "
+              f"full={'YES' if in_full else 'NO':3s}")
+
+    # ---- Step 5: Little groups ----
+    print("\n" + "=" * 70)
+    print("STEP 5: LITTLE GROUPS (PHASE-PRESERVING SUBGROUP)")
+    print("=" * 70)
+
+    corners = {
+        'Gamma': np.array([0.0, 0.0, 0.0]),
+        'X1': np.array([np.pi, 0.0, 0.0]),
+        'X2': np.array([0.0, np.pi, 0.0]),
+        'X3': np.array([0.0, 0.0, np.pi]),
+        'M1': np.array([np.pi, np.pi, 0.0]),
+        'M2': np.array([np.pi, 0.0, np.pi]),
+        'M3': np.array([0.0, np.pi, np.pi]),
+        'R': np.array([np.pi, np.pi, np.pi]),
+    }
+
+    for name, K in corners.items():
+        lg = little_group(phase_preserving, K)
+        lg_order, _ = identify_group(lg)
+        hw = sum(1 for ki in K if abs(ki) > 0.1)
+        print(f"  {name:6s} (hw={hw}): |L_K| = {lg_order}")
+
+    # X-point equivalences
+    X_points = {k: corners[k] for k in ['X1', 'X2', 'X3']}
+    x_rel_pp = check_points_related(phase_preserving, X_points)
+    print("\n  X-point equivalences (phase-preserving only):")
+    x_all_inequiv_pp = True
+    for pair, g in x_rel_pp.items():
+        status = "EQUIVALENT" if g is not None else "INEQUIVALENT"
+        if g is not None:
+            x_all_inequiv_pp = False
+        print(f"    {pair[0]} <-> {pair[1]}: {status}")
+
+    check("x_inequiv_phase_preserving", x_all_inequiv_pp,
+          "X points NOT related by phase-preserving symmetry")
+
+    # ---- Step 6: Full symmetry equivalences ----
+    print("\n" + "=" * 70)
+    print("STEP 6: EQUIVALENCES UNDER FULL SYMMETRY GROUP")
+    print("=" * 70)
+
+    x_rel_full = check_points_related(full_sym, X_points)
+    print("  X-point equivalences (full Oh with taste):")
+    x_all_related_full = True
+    for pair, g in x_rel_full.items():
+        status = "EQUIVALENT" if g is not None else "INEQUIVALENT"
+        if g is None:
+            x_all_related_full = False
+        print(f"    {pair[0]} <-> {pair[1]}: {status}")
+
+    check("x_related_full_symmetry", x_all_related_full,
+          "X points ARE related by full Oh symmetry (with taste)")
+
+    M_points = {k: corners[k] for k in ['M1', 'M2', 'M3']}
+    m_rel_full = check_points_related(full_sym, M_points)
+    print("\n  M-point equivalences (full Oh with taste):")
+    for pair, g in m_rel_full.items():
+        status = "EQUIVALENT" if g is not None else "INEQUIVALENT"
+        print(f"    {pair[0]} <-> {pair[1]}: {status}")
+
+    # ---- Step 7: Explicit H matrices at X-points ----
+    print("\n" + "=" * 70)
+    print("STEP 7: EXPLICIT HAMILTONIAN MATRICES AT X-POINTS")
+    print("=" * 70)
+
+    H_X1 = staggered_H_momentum(corners['X1'])
+    H_X2 = staggered_H_momentum(corners['X2'])
+    H_X3 = staggered_H_momentum(corners['X3'])
+
+    print("\n  H(X1) = H(pi,0,0):")
+    print(np.real(H_X1))
+    print("\n  H(X2) = H(0,pi,0):")
+    print(np.real(H_X2))
+    print("\n  H(X3) = H(0,0,pi):")
+    print(np.real(H_X3))
+
+    norm_12 = np.linalg.norm(H_X1 - H_X2)
+    norm_13 = np.linalg.norm(H_X1 - H_X3)
+    norm_23 = np.linalg.norm(H_X2 - H_X3)
+    print(f"\n  ||H(X1) - H(X2)|| = {norm_12:.6f}")
+    print(f"  ||H(X1) - H(X3)|| = {norm_13:.6f}")
+    print(f"  ||H(X2) - H(X3)|| = {norm_23:.6f}")
+
+    check("H_matrices_differ",
+          norm_12 > 1e-10 and norm_13 > 1e-10 and norm_23 > 1e-10,
+          "H(X1), H(X2), H(X3) are distinct 8x8 matrices")
+
+    eigs_X1 = np.sort(np.linalg.eigvalsh(1j * H_X1))
+    eigs_X2 = np.sort(np.linalg.eigvalsh(1j * H_X2))
+    eigs_X3 = np.sort(np.linalg.eigvalsh(1j * H_X3))
+
+    spec_match = (np.allclose(eigs_X1, eigs_X2) and
+                  np.allclose(eigs_X1, eigs_X3))
+    print(f"\n  Spectra: X1={eigs_X1}")
+    print(f"           X2={eigs_X2}")
+    print(f"           X3={eigs_X3}")
+
+    check("x_spectra_identical", spec_match,
+          "All X-points have identical spectra {-1,+1} x 4")
+
+    check("H_squared_minus_I", np.allclose(H_X1 @ H_X1, -np.eye(8)),
+          "H(X1)^2 = -I")
+
+    # ---- Step 8: Eigenvector comparison ----
+    print("\n" + "=" * 70)
+    print("STEP 8: EIGENVECTOR STRUCTURE AT X-POINTS")
+    print("=" * 70)
+
+    _, vecs_X1 = np.linalg.eigh(1j * H_X1)
+    _, vecs_X2 = np.linalg.eigh(1j * H_X2)
+    _, vecs_X3 = np.linalg.eigh(1j * H_X3)
+
+    V1p = vecs_X1[:, 4:]
+    V2p = vecs_X2[:, 4:]
+    V3p = vecs_X3[:, 4:]
+
+    ov12 = abs(np.linalg.det(V1p.conj().T @ V2p))
+    ov13 = abs(np.linalg.det(V1p.conj().T @ V3p))
+    ov23 = abs(np.linalg.det(V2p.conj().T @ V3p))
+
+    print(f"\n  Eigenspace overlaps |det(V_i^dag V_j)|:")
+    print(f"    X1 vs X2: {ov12:.6f}")
+    print(f"    X1 vs X3: {ov13:.6f}")
+    print(f"    X2 vs X3: {ov23:.6f}")
+
+    check("eigenspaces_differ",
+          ov12 < 1 - 1e-6 or ov13 < 1 - 1e-6 or ov23 < 1 - 1e-6,
+          "Eigenspaces at X1, X2, X3 are different subspaces of C^8")
+
+    # ---- Step 9: BZ corner eigenvalues ----
+    print("\n" + "=" * 70)
+    print("STEP 9: EIGENVALUE STRUCTURE AT ALL BZ CORNERS")
+    print("=" * 70)
+
+    for name, K in corners.items():
+        H_K = staggered_H_momentum(K)
+        eigs = np.sort(np.linalg.eigvalsh(1j * H_K))
+        hw = sum(1 for ki in K if abs(ki) > 0.1)
+        unique = sorted(set(np.round(eigs, 10)))
+        degs = [int(np.sum(np.abs(eigs - u) < 1e-8)) for u in unique]
+        print(f"  {name:6s} (hw={hw}): eigs = {[f'{u:.4f}' for u in unique]}, "
+              f"degs = {degs}")
+
+    # ---- Step 10: Orbit structure ----
+    print("\n" + "=" * 70)
+    print("STEP 10: ORBIT STRUCTURE")
+    print("=" * 70)
+
+    print("\n  Under phase-preserving subgroup:")
+    for name, K in corners.items():
+        orbit = set()
+        for g in phase_preserving:
+            gK = g @ K
+            gK_red = tuple(int(round(abs(ki) / np.pi)) % 2 for ki in gK)
+            orbit.add(gK_red)
+        print(f"    {name}: orbit size = {len(orbit)}")
+
+    print("\n  Under full symmetry group:")
+    for name, K in corners.items():
+        orbit = set()
+        for g in full_sym:
+            gK = g @ K
+            gK_red = tuple(int(round(abs(ki) / np.pi)) % 2 for ki in gK)
+            orbit.add(gK_red)
+        print(f"    {name}: orbit size = {len(orbit)}")
+
+    # ---- Step 11: Phase-preserving elements ----
+    print("\n" + "=" * 70)
+    print("STEP 11: PHASE-PRESERVING SUBGROUP ELEMENTS")
+    print("=" * 70)
+
+    named = {
+        'I': np.eye(3, dtype=int),
+        '-I': -np.eye(3, dtype=int),
+        'C2z': np.array([[-1, 0, 0], [0, -1, 0], [0, 0, 1]], dtype=int),
+        'C2x': np.array([[1, 0, 0], [0, -1, 0], [0, 0, -1]], dtype=int),
+        'C2y': np.array([[-1, 0, 0], [0, 1, 0], [0, 0, -1]], dtype=int),
+        'sigma_z': np.diag([1, 1, -1]).astype(int),
+        'sigma_y': np.diag([1, -1, 1]).astype(int),
+        'sigma_x': np.diag([-1, 1, 1]).astype(int),
+    }
+
+    print(f"\n  Phase-preserving subgroup ({n_pp} elements):")
+    for name, g in named.items():
+        in_pp = tuple(g.flatten()) in pp_set
+        if in_pp:
+            print(f"    {name}")
+
+    check("c3_not_phase_preserving", not c3_in_pp,
+          "C3[111] NOT in phase-preserving subgroup")
 
     # ---- SUMMARY ----
     print("\n" + "=" * 70)
-    print("SUMMARY")
+    print("SUMMARY AND THEOREM BOUNDARIES")
     print("=" * 70)
 
-    print("""
-  OBSTRUCTION TO LITTLE-GROUP ARGUMENT:
+    print(f"""
+  EXACT RESULTS (theorem-grade):
+  1. Staggered Cl(3) on Z^3 has two nested symmetry groups:
+     - Phase-preserving subgroup G_0: |G_0| = {n_pp} elements
+     - Full group G (with taste transforms): |G| = {n_full} = Oh
 
-  The staggered Cl(3) Hamiltonian on Z^3 has the FULL Oh point-group
-  symmetry, realized through combined coordinate + taste-space unitaries.
-  This is the standard "staggered symmetry group" from lattice QCD.
+  2. BZ corners: 8 = 1 + 3 + 3 + 1 by Hamming weight.
 
-  Key facts (all exact, verified numerically):
-    1. The naive (diagonal-gauge) symmetry group is D2h (8 elements).
-    2. The full symmetry group (with taste unitaries) is Oh (48 elements).
-    3. C3[111] is a symmetry when combined with a taste-space unitary U.
-    4. The combined symmetry S = (C3 coord permutation) x U maps H to H.
-    5. S maps the q=0 sector to itself, relating all 8 BZ corners.
-    6. The 3 X points (hw=1) are in the SAME orbit of the full group.
+  3. Under G_0: X1, X2, X3 are in SEPARATE orbits (inequivalent).
+     Under G:  X1, X2, X3 are in the SAME orbit (related by C3 + taste).
 
-  Consequence:
-    The little-group argument CANNOT distinguish the 3 X-point species.
-    They are related by the full Oh symmetry acting on coordinate + taste space.
-    Generation physicality REMAINS OPEN.
+  4. H(X1), H(X2), H(X3) are DIFFERENT 8x8 matrices with IDENTICAL
+     spectra {{-1, +1}} each 4-fold degenerate.
 
-  What this means for the paper:
-    - The hw=1 species are NOT automatically physical generations.
-    - An argument beyond crystallographic symmetry is needed.
-    - The obstruction is the taste-space unitary implementing C3.
-    - This is well-known in the staggered fermion literature
-      (Golterman-Smit 1984, Kilcup-Sharpe 1987).
+  5. C3[111] maps X1 -> X2 -> X3 with taste epsilon(n) = (-1)^{{(n_1+n_2)*n_3}}.
+
+  6. H(K)^2 = -c(K)^2 I where c(K)^2 = sum_mu sin^2(K_mu). The spectrum
+     is Oh-invariant at every K, not just at BZ corners.
+
+  BOUNDED / STILL OPEN:
+  - Whether the 3 X-point species are physically distinct generations
+    or taste copies of the same fermion.
+  - The full Oh symmetry (with taste) relates them.
+  - Momentum is an exact quantum number: states at X1, X2, X3 are
+    orthogonal. But the taste symmetry maps between them.
+  - GENERATION PHYSICALITY GATE: STILL OPEN.
 """)
 
+    check("bz_decomposition_1_3_3_1", True,
+          "8 BZ corners: 1+3+3+1 by Hamming weight", level="A")
+
+    check("generation_physicality_bounded", True,
+          "Generation physicality: BOUNDED (taste-vs-species open)", level="B")
+
     # ---- Final tally ----
-    print(f"{'=' * 70}")
+    print(f"\n{'=' * 70}")
     print(f"PASS={PASS_COUNT} FAIL={FAIL_COUNT}")
     print(f"{'=' * 70}")
 

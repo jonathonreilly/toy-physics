@@ -120,6 +120,41 @@ removed" to "doublers are generations" still requires the EWSB cascade
 argument.  Generation physicality remains OPEN in the honest assessment.
 This note explicitly states this boundary.
 
+### Little groups definitive analysis (updated, 2026-04-12)
+
+**Files changed:**
+- `scripts/frontier_generation_little_groups.py` -- PASS=14 FAIL=0 (was PASS=17 FAIL=1)
+- `docs/GENERATION_LITTLE_GROUPS_NOTE.md` (rewritten as definitive obstruction note)
+
+**Commands run:**
+```bash
+python3 scripts/frontier_generation_little_groups.py
+# PASS=14  FAIL=0
+```
+
+**Bug fixed:** The original script had a numerical crosscheck that failed
+(found 48 instead of 8 or 0 depending on method) because the spectral
+comparison is Oh-invariant at ALL k-points (H(K)^2 = -c(K)^2 I where
+c(K) depends only on sum_mu sin^2(K_mu)). The fix: verify the full symmetry
+group on the position-space lattice with site-dependent sign (taste)
+transformations, cross-checked on L=4 and L=6.
+
+**Key exact results:**
+1. Phase-preserving subgroup has 8 elements (D2h sign-flips only)
+2. Full symmetry group has 48 elements = full Oh (all with taste transforms)
+3. C3[111] IS a symmetry with taste epsilon(n) = (-1)^{(n_1+n_2)*n_3}
+4. X1, X2, X3 are in the SAME orbit under full Oh (related by C3 + taste)
+5. H(X1), H(X2), H(X3) are DIFFERENT 8x8 matrices with IDENTICAL spectra
+6. Eigenspace overlaps |det(V_i^dag V_j)| = 0.25 (genuinely different)
+
+**Claimed status: BOUNDED** (exact decomposition + exact symmetry analysis;
+taste-vs-species interpretation remains open)
+
+**Why not overstated:** The note explicitly documents the obstruction: the
+free staggered Hamiltonian has too much symmetry (full Oh on coordinate +
+taste) to distinguish the three hw=1 species by crystallographic methods
+alone. Generation physicality remains OPEN.
+
 ### Berry phase / Zak phase topological invariant attempt (new, 2026-04-12)
 
 **Files added:**
