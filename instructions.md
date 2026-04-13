@@ -47,10 +47,14 @@ If any of those fail, the lane stays `bounded` or `open`.
    - new useful work:
      - `GRAVITY_CLEAN_DERIVATION_NOTE.md`
      - `GRAVITY_FULL_SELF_CONSISTENCY_NOTE.md`
+     - `BROAD_GRAVITY_DERIVATION_NOTE.md`
    - these significantly strengthen the weak-field gravity writeup
-   - open for promotion: broader gravity bundle only
+   - weak-field corollaries now likely promotable:
+     - WEP
+     - gravitational time dilation
+   - open for promotion: the rest of the broader gravity bundle only
    - target items:
-     - WEP / time dilation / conformal metric / geodesic / light bending
+     - conformal metric / geodesic / light bending
      - strong-field / frozen-star / echo package
    - do not spend time re-proving Newton unless needed for a new closure step
    - the current load-bearing weak point is how strongly you phrase the full
@@ -63,6 +67,8 @@ If any of those fail, the lane stays `bounded` or `open`.
    - if you cannot defend `L^{-1} = G_0` as the framework’s own closure
      condition cleanly, do not call the whole weak-field chain “zero bounded”
    - broad gravity is still separate and still open
+   - do not keep spending time trying to "re-close" WEP or time dilation
+     unless you are only cleaning wording or package alignment
 
 2. **`S^3` compactification / topology closure**
    - new useful work:
@@ -146,29 +152,44 @@ closure standard.
 
 - `docs/GRAVITY_CLEAN_DERIVATION_NOTE.md`
 - `docs/GRAVITY_FULL_SELF_CONSISTENCY_NOTE.md`
+- `docs/BROAD_GRAVITY_DERIVATION_NOTE.md`
 - `scripts/frontier_gravity_clean_derivation.py`
 - `scripts/frontier_gravity_full_self_consistency.py`
+- `scripts/frontier_broad_gravity.py`
 
 **What counts as success**
 
 - the note and script explicitly say:
   - weak-field core retained
+  - WEP and time dilation are acceptable weak-field derived corollaries
   - broad gravity still separate
   - `L^{-1} = G_0` is the framework’s closure condition for self-consistency
     rather than a theorem of pure algebra
 - no “zero bounded steps” phrasing unless that distinction is carried
   explicitly
 - the packet no longer suppresses gravity as a live publication gate
+- the broad-gravity bundle keeps:
+  - WEP and time dilation promoted
+  - conformal metric, geodesic, and light bending bounded
+  - strong-field open
+- the broad-gravity runner stops mixing:
+  - theorem exactness from the retained Poisson/Newton chain
+  - finite-lattice numerical confirmation that is still visibly biased
 
 **What does not count**
 
 - rearguing geodesics / GW / echoes
 - calling broad gravity closed
 - treating `L^{-1} = G_0` as if no framework-level premise remains
+- using finite-lattice time-dilation profile mismatch as if it disproves the
+  theorem path from the retained Poisson/Newton chain
+- using that same theorem path to label every numerical confirmation `EXACT`
+  when the check itself is still finite-size biased
 
 **Fallback if closure fails**
 
 - keep weak-field gravity retained
+- keep WEP and time dilation promoted as weak-field corollaries
 - keep broad gravity open
 - make the closure-condition wording honest
 

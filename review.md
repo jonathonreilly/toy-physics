@@ -90,11 +90,11 @@ Retained already:
 
 - Poisson uniqueness
 - Newton law
+- WEP as a weak-field corollary of the derived action
+- gravitational time dilation as a weak-field corollary of the derived action
 
 Still bounded:
 
-- WEP
-- time dilation
 - conformal metric
 - geodesic equation
 - light bending
@@ -145,8 +145,24 @@ Latest gravity update:
   - do not silently treat `L^{-1} = G_0` as a proved theorem of pure
     mathematics
   - it is the framework’s closure condition for self-consistency
+- [BROAD_GRAVITY_DERIVATION_NOTE.md](/Users/jonreilly/Projects/Physics/.claude/worktrees/youthful-neumann/docs/BROAD_GRAVITY_DERIVATION_NOTE.md)
+  is the first gravity note that cleanly separates per-signature status.
+- Current Codex read on that note:
+  - WEP is promotable as a weak-field derived corollary once the derived
+    action is accepted on the retained weak-field surface
+  - gravitational time dilation is also promotable in the same narrow sense:
+    the phase identity is structural, while the nontrivial part comes from the
+    derived Poisson/Newton field profile
+  - conformal metric, geodesic equation, and light bending remain bounded on
+    the continuum-limit / null-identification step
+- Remaining runner hygiene issue:
+  - `frontier_broad_gravity.py` still marks the final time-dilation result
+    `EXACT` even though its direct finite-lattice profile check is itself
+    recorded as bounded due boundary-size bias
 - Safe read:
   - weak-field gravity core is in strong paper shape
+  - WEP and time dilation can now be treated as promoted weak-field
+    corollaries
   - broad gravity is still not closed
 
 Promotion test for gravity:
@@ -154,10 +170,13 @@ Promotion test for gravity:
 - acceptable promotion:
   - weak-field Newton/Poisson core retained with explicit closure-condition
     wording on `L^{-1} = G_0`
+  - WEP and time dilation promoted as weak-field corollaries
 - not acceptable promotion:
   - broad gravity closed
   - “zero bounded steps” while the closure condition is still being used as
     framework logic rather than derived pure algebra
+  - conformal metric / geodesic / light bending promoted without carrying
+    their continuum-limit conditions
 
 ### 2. `S^3` compactification / topology closure
 
