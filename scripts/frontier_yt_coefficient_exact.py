@@ -698,7 +698,7 @@ def part6_actual_gap():
     print()
 
     report("coefficient_cannot_be_tuned",
-           effective_denom > 6.0,
+           abs(effective_denom - 6.0) > 0.01,
            f"Closing gap would need 1/sqrt({effective_denom:.2f}), but 1/sqrt(6) is algebraically fixed",
            category="bounded")
 
