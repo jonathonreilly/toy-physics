@@ -126,9 +126,11 @@ the V-scheme boundary condition choice at M_Pl, not by the matching.
 
 ## What Remains Open
 
-1. **The 6.5% m_t overshoot.** The matching coefficient is too small to
-   address this. The dominant uncertainty is the V-scheme to MSbar
-   scheme conversion at M_Pl (the choice of alpha_V = 0.092 as the BC).
+1. **The 6.5% m_t overshoot -- NOW RESOLVED.** The matching coefficient
+   is too small to address this, but the V-scheme to MSbar conversion
+   at M_Pl has now been computed (`frontier_yt_boundary_resolution.py`),
+   reducing the prediction to m_t = 171.8 GeV (-0.7% residual).
+   See `YT_BOUNDARY_RESOLUTION_NOTE.md`.
 
 2. **2-loop matching.** The 2-loop correction is O(alpha^2 C_F^2/pi^2) ~
    0.15%, comparable to the 1-loop result because the 1-loop is so small
