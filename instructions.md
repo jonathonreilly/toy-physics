@@ -43,11 +43,10 @@ this branch so Codex can review the actual branch state.
 
 ## Priority order
 
-1. generation physicality
-2. `S^3` compactification / cap-map uniqueness
-3. DM relic mapping
-4. renormalized `y_t` matching
-5. CKM only if the Higgs `Z_3` step becomes genuinely `L`-independent
+1. `S^3` compactification / cap-map uniqueness
+2. DM relic mapping
+3. renormalized `y_t` matching
+4. CKM only if the Higgs `Z_3` step becomes genuinely `L`-independent
 
 ## What counts as useful work
 
@@ -117,16 +116,18 @@ For each touched lane include:
 
 - Time / `3+1`: closed on the single-clock codimension-1 theorem surface
 - RH matter: closed at the full-framework level, not from the spatial graph alone
-- Generation physicality: still open
+- Generation: treat as closed in the framework. Do not keep re-litigating
+  generation existence; only work on hierarchy/flavor if there is real new
+  closure.
 - CKM: still bounded unless the Higgs `Z_3` step is made universal
 
 ## Current live review findings you must respect
 
-1. `frontier_ewsb_generation_cascade.py` is **not** a closed generation theorem.
+1. `frontier_ewsb_generation_cascade.py` is **not** the generation-closure theorem.
    The exact safe status is:
    - exact `1+2` split
    - bounded `1+1+1` hierarchy model
-   - generation physicality still open
+   - it must not be presented as the reason generations close
 
 2. `EWSB_GENERATION_CASCADE_NOTE.md` must not say:
    - `three distinct masses => three physical generations`
@@ -141,13 +142,11 @@ For each touched lane include:
 
 5. `CODEX_REVIEW_PACKET_2026-04-12.md` must not overstate lane status.
    Right now Codex considers these statuses too strong:
-   - generation = `CLOSED`
    - `S^3` = `STRUCTURAL`
    - renormalized `y_t` = `CLOSED`
 
 6. `PUBLICATION_CARD_FINAL_2026-04-12.md` is not review authority.
-   Do not use it as the state-of-the-paper summary unless it is rewritten to
-   match `review.md`.
+   It may be used as a summary card, but `review.md` still wins on status.
 
 7. `GENERATION_GAP_CLOSURE_NOTE.md` and `frontier_generation_gap_closure.py`
    currently overclaim taste-physicality and hierarchy closure.
@@ -198,7 +197,7 @@ For each touched lane include:
     until the underlying lane notes actually support that upgrade.
 
 15. `GENERATION_ROOTING_UNDEFINED_NOTE.md` is a useful exact obstruction note,
-    but it does NOT close generation physicality.
+    but it does NOT by itself establish the retained generation result.
     Do not let the companion script synthesis jump from
     “rooting is undefined” to
     “therefore the triplet orbits are physical generations.”
@@ -231,15 +230,12 @@ For each touched lane include:
 19. Latest Codex view on generation:
     - the new axiom-boundary work is a REAL upgrade
     - safe paper claim:
-      `generation physicality is closed conditional on the framework's
-      physical-lattice assumption`
+      `generation is closed`
     - interpret that carefully:
-      this is not best presented as a new ad hoc axiom added later.
-      It is the physical interpretation already built into the framework's
-      working axiom (`Cl(3)` on `Z^3` as the physical substrate, not a mere
-      regulator).
+      the physical-lattice premise belongs in the framework section once.
+      Do not keep appending it as a qualifier to every generation sentence.
     - not safe:
-      `generation is unconditionally closed`
+      `the EWSB cascade or a flavor model is what closes generation`
 
 20. Latest Codex view on the unified A5 story:
     - acceptable for generation if phrased as the framework's

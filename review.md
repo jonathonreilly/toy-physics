@@ -21,6 +21,9 @@ there.
 
 ## Closed enough for the paper backbone
 
+- The framework statement is:
+  - we take `Cl(3)` on `Z^3` as the physical theory
+  - everything else is derived
 - exact native `Cl(3)` / `SU(2)`
 - graph-first structural `SU(3)` closure
 - left-handed charge matching on the selected-axis surface
@@ -30,6 +33,9 @@ there.
   - derived time gives chirality
   - anomaly cancellation fixes the right-handed singlet completion on the
     Standard Model branch
+- three-generation matter closure in the framework:
+  - exact orbit algebra `8 = 1 + 1 + 3 + 3`
+  - irremovable species structure on the physical lattice
 
 ## Important boundary on RH matter
 
@@ -48,43 +54,44 @@ Not paper-safe:
 
 ## Still open high-impact gates
 
-1. **Generation physicality**
-2. **`S^3` compactification / cap-map uniqueness**
-3. **DM relic mapping**
-4. **Renormalized `y_t` matching**
+1. **`S^3` compactification / cap-map uniqueness**
+2. **DM relic mapping**
+3. **Renormalized `y_t` matching**
+4. **CKM quantitative closure**
 
 ## Lane-by-lane audited status
 
-### 1. Generation physicality
+### 1. Generation
 
 Closed:
 
 - exact orbit algebra `8 = 1 + 1 + 3 + 3`
 - exact `1+2` split from weak-axis selection / EWSB
+- three-generation matter closure in the framework
 
-Open:
+Still bounded:
 
-- canonical theorem that the triplet orbit sectors are physical fermion
-  generations rather than taste sectors / model sectors
+- `1+1+1` hierarchy beyond the exact three-species result
 - interpretation of the two singlets
+- CKM / flavor data
 
 Current live objection:
 
 - `frontier_ewsb_generation_cascade.py` and `EWSB_GENERATION_CASCADE_NOTE.md`
-  still over-close this gate if they promote a modeled 3-way mass matrix to
-  theorem-grade generation closure
+  still over-close the hierarchy/flavor lane if they promote a modeled 3-way
+  mass matrix to theorem-grade generation closure
 
 Latest Codex review finding:
 
 - the pushed generation-cascade lane still builds the final 3-way split from
-  benchmark inputs and then promotes it to `GENERATION PHYSICALITY GATE:
-  CLOSED`
-- that is not allowed on the current audited surface
+  benchmark inputs and then promotes it to a total matter-gate closure
+- that is not allowed on the current audited surface; generation existence is
+  retained, hierarchy/flavor are not
 
 Paper-safe wording:
 
-> exact `1+2` split; bounded `1+1+1` hierarchy model; generation physicality
-> still open
+> exact three-species matter structure; exact `1+2` split; bounded `1+1+1`
+> hierarchy model and bounded flavor closure
 
 ### 2. S^3 / compactification
 
@@ -169,7 +176,8 @@ Paper-safe wording:
 
 Do not claim any of the following unless you genuinely close them:
 
-- “generation physicality gate closed”
+- “generation physicality gate closed” as if the EWSB cascade or a flavor
+  model were the closure mechanism
 - “three distinct masses => three physical generations”
 - “CKM derived” unless Higgs `Z_3` is `L`-independent
 - “RH sector derived from the spatial graph alone”
@@ -182,7 +190,7 @@ Do not claim any of the following unless you genuinely close them:
 These are the active findings you should assume are live unless you actually
 fix them on the pushed Claude branch:
 
-1. Generation cascade still over-closes the matter gate.
+1. Generation cascade still over-closes the hierarchy/flavor lane.
 2. Generation cascade note still claims gate closure beyond the audited surface.
 3. CKM remains bounded until the Higgs `Z_3` charge is `L`-independent.
 4. `CODEX_REVIEW_PACKET_2026-04-12.md` currently overstates multiple lane
@@ -192,8 +200,9 @@ fix them on the pushed Claude branch:
    hierarchy closure.
 6. `RENORMALIZED_YT_THEOREM_NOTE.md` still marks closed what its own runner
    classifies as bounded.
-7. `PUBLICATION_CARD_FINAL_2026-04-12.md` still outruns the audited paper
-   state and is not a review-state authority document.
+7. `PUBLICATION_CARD_FINAL_2026-04-12.md` is still not review authority.
+   It may summarize the paper state, but `review.md` remains the control-plane
+   source of truth.
 8. `DM_RELIC_GAP_CLOSURE_NOTE.md` still overclaims closure of the DM relic
    lane. The honest Codex state is still bounded/open even after the new
    thermodynamic-limit work.
@@ -213,12 +222,9 @@ fix them on the pushed Claude branch:
     but phrases like `this is exactly the SM generation structure` are still
     too strong. Keep it as commutant-inequivalence support, not closure.
 15. `GENERATION_AXIOM_BOUNDARY_THEOREM_NOTE.md` is a real upgrade. The current
-    safe reading is: generation physicality is closed conditional on the
-    framework's physical-lattice assumption. That should be presented as part
-    of the framework's working axiom/interpretation, not as a newly added
-    standalone postulate discovered late in the project. The remaining
-    non-derived content is that framework assumption itself, not an additional
-    missing theorem.
+    safe reading is: generation is closed in the framework. If the physical
+    lattice premise is mentioned, it should appear once in the framework
+    section, not as a repeated qualifier on every generation statement.
 16. `UNIFIED_AXIOM_BOUNDARY_NOTE.md` currently overstates the same-A5 collapse
     for all four lanes. It is acceptable for generation, but not yet for
     `S^3`, DM relic mapping, or renormalized `y_t`, because those notes still
@@ -243,8 +249,8 @@ They should be treated as:
 - `S^3` V4 boundary note
 - `SU(3)` companion strengthening note
 
-They do **not** by themselves upgrade generation, `S^3`, or renormalized
-`y_t` to closed status.
+They do **not** by themselves upgrade `S^3` or renormalized `y_t` to closed
+status, and they do not close the hierarchy/flavor part of the generation lane.
 
 Additional honest bounded additions from the latest Claude batch:
 
@@ -271,17 +277,16 @@ These are useful as:
 - a bounded strengthening of the generation obstruction story
 - a bounded negative result clarifying that the IR fixed-point story does not
   close renormalized `y_t`
-- a bounded anomaly-based strengthening of the generation case that still
-  leaves generation physicality open
+- a bounded anomaly-based strengthening of the generation case
 - a bounded clarification that the DM continuum-limit issue is really a
   thermodynamic-limit issue, without upgrading the full DM relic lane
-- a sharp negative result on the little-group route to generation physicality
+- a sharp negative result on the little-group route to quantitative flavor
 - a sharp rooting obstruction that still stops short of full generation closure
 - a bounded commutant-inequivalence result that strengthens the generation case
-- a sharp axiom-boundary theorem showing generation closes conditional on A5
+- a sharp boundary theorem showing generation is part of the retained framework surface
 - a bounded correction that removes the RP^3 false lead without closing `S^3`
 - an honest negative result that self-duality does not elevate `g_bare = 1`
-- a good map of the exact logical gap in generation physicality
+- a good map of the remaining logical gap in hierarchy / flavor closure
 - a bounded gauge-universality result that still leaves physical generation ID open
 - an honest bounded assessment of the mass-hierarchy story
 - a useful planning note for the next critique targets
@@ -296,10 +301,10 @@ Packet authority rule:
 
 ## Best next work
 
-1. either close generation physicality or prove a sharp obstruction
-2. either close `S^3` compactification or prove a sharp obstruction
-3. tighten DM relic mapping
-4. tighten renormalized `y_t`
+1. either close `S^3` compactification or prove a sharp obstruction
+2. tighten DM relic mapping
+3. tighten renormalized `y_t`
+4. tighten CKM / flavor closure
 
 ## Required review handoff
 
