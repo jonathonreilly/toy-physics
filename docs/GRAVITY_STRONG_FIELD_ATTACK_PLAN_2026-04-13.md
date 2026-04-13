@@ -182,6 +182,32 @@ New exact shell-kernel derivation extracted after that:
   shell stress / sewing law this exact DtN kernel represents in the nonlinear
   4D closure
 
+New exact/bounded orbit-channel reduction extracted after that:
+
+- the anisotropic sewing-shell remainder is no longer an uncontrolled angular
+  sector for the current exact source families
+- its orbit-sum support is confined to four cubic orbit channels
+  `(3,2,2)`, `(3,3,0)`, `(4,1,0)`, `(4,1,1)` with exact shellwise cancellation
+- after normalizing by one anchor channel amplitude, both the orbit-sum vector
+  and the shell-mean exterior response are identical across the exact local
+  `O_h` family and the broader exact finite-rank family
+- see `docs/ORBIT_CHANNEL_SHELL_REMAINDER_NOTE.md`
+- the shell-mean anisotropic correction stays below `8.1%` of the radial-shell
+  contribution outside the sewing band
+- this removes “large uncontrolled anisotropic shell sector” from the live
+  blocker list and narrows the remaining problem to deriving the amplitude and
+  stress meaning of one universal cubic orbit-channel correction
+
+New exact/bounded reduced-mode origin extracted after that:
+
+- the universal anisotropic orbit-channel pattern is not just shared by the
+  two current exact source families
+- on the reduced orbit/shell-mean surface, it is already the unique exact DtN
+  mode induced by the star-support point-Green columns
+- see `docs/DTN_ORBIT_MODE_NOTE.md`
+- this removes “family-coincidence only” from the live blocker list and
+  leaves the amplitude / shell-stress interpretation as the next gravity step
+
 ## Do not retread these solved or near-solved substeps
 
 The attack should **not** spend time redoing the following:
@@ -217,7 +243,7 @@ At the current Codex state, the live gravity gap is even narrower in practice:
 4. the near-source region must be sewn to that monopole-dominated exterior in
    one common nonlinear 4D closure
 
-After the shell-projector and localized-sewing results, this can be tightened
+After the DtN-kernel and orbit-channel results, this can be tightened
 again:
 
 3. shell-level coarse-graining is no longer the blocker for the current

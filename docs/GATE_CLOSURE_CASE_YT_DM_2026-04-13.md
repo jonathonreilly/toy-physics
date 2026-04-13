@@ -133,11 +133,21 @@ Transport (coupled fixed-point)
 - ❌ Imported Boltzmann/Friedmann — proved as lattice theorem (21/21)
 - ❌ Post-hoc 8/3 multiplier — built into the source term
 
-### The one boundary condition
+### External inputs used in the current YT / DM case
 
-T_CMB = 2.7255 K tells us WHERE on the expansion timeline we are.
-This is an observation ("what time is it?"), not physics. Every
-cosmological calculation uses it. It is not a free parameter.
+The current YT / DM package should not describe itself as having only one
+boundary condition.
+
+- `T_CMB = 2.7255 K` is the cosmological boundary condition that fixes where
+  on the expansion timeline the relic calculation is evaluated.
+- `H_0 = 67.4 km/s/Mpc` enters when converting the derived matter densities
+  into `Omega` parameters.
+- `v = 246 GeV` remains the electroweak-scale boundary input. It is not a
+  cosmological datum; it is the unresolved hierarchy input.
+
+This distinction matters because the current framework closes much more of the
+EWSB structure than the Standard Model, but it does **not** yet derive the
+absolute electroweak scale.
 
 ### The v/T question
 
