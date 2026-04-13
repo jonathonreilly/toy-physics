@@ -245,6 +245,10 @@ Additional honest bounded additions from the latest Claude batch:
 - `docs/GENERATION_ROOTING_UNDEFINED_NOTE.md`
 - `docs/RP3_VS_S3_NOTE.md`
 - `docs/G_BARE_SELF_DUALITY_NOTE.md`
+- `docs/GENERATION_PHYSICALITY_DEEP_ANALYSIS.md`
+- `docs/GAUGE_UNIVERSALITY_ALGEBRAIC_DERIVATION.md`
+- `docs/MASS_HIERARCHY_HONEST_ASSESSMENT_NOTE.md`
+- `docs/REMAINING_CRITIQUE_TARGETS_2026-04-12.md`
 
 These are useful as:
 
@@ -259,6 +263,10 @@ These are useful as:
 - a sharp rooting obstruction that still stops short of full generation closure
 - a bounded correction that removes the RP^3 false lead without closing `S^3`
 - an honest negative result that self-duality does not elevate `g_bare = 1`
+- a good map of the exact logical gap in generation physicality
+- a bounded gauge-universality result that still leaves physical generation ID open
+- an honest bounded assessment of the mass-hierarchy story
+- a useful planning note for the next critique targets
 
 Packet authority rule:
 

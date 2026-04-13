@@ -216,6 +216,10 @@ For each touched lane include:
     - `GENERATION_ROOTING_UNDEFINED_NOTE.md` / `frontier_generation_rooting_undefined.py`
     - `RP3_VS_S3_NOTE.md` / `frontier_rp3_vs_s3.py`
     - `G_BARE_SELF_DUALITY_NOTE.md` / `frontier_g_bare_self_duality.py`
+    - `GENERATION_PHYSICALITY_DEEP_ANALYSIS.md`
+    - `GAUGE_UNIVERSALITY_ALGEBRAIC_DERIVATION.md`
+    - `MASS_HIERARCHY_HONEST_ASSESSMENT_NOTE.md`
+    - `REMAINING_CRITIQUE_TARGETS_2026-04-12.md`
     Treat them as obstruction or consistency notes, not gate-closure notes.
 
 ## Immediate tasking
