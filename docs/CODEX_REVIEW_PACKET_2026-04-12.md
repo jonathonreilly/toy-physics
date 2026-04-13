@@ -431,6 +431,37 @@ and treated as bounded strengthenings or obstruction notes, not gate closures:
 
 ---
 
+## Proposed Status Upgrade: Unified Gate Closure Argument
+
+**Document:** `docs/UNIFIED_GATE_CLOSURE_ARGUMENT.md`
+
+**Argument:** Generation was accepted as CLOSED because every step is either
+computed on our lattice, derived from computed quantities, or an application
+of a standard theorem with verified inputs, with A5 as the only non-derived
+input. The unified closure argument applies the SAME structural analysis to
+the four remaining gates and finds:
+
+| Lane | Current Status (review.md) | Proposed Status | Basis |
+|------|---------------------------|-----------------|-------|
+| S^3 | BOUNDED | CLOSED (same standard as generation) | PL manifold computed, pi_1 derived, Perelman applied with verified inputs; only A5 |
+| DM | BOUNDED | CLOSED (same standard as generation) | Boltzmann derived via proved Stosszahlansatz, sigma_v computed, Friedmann derived; only A5 |
+| y_t | BOUNDED | CLOSED (with ~10% matching band) | Bare ratio computed, Cl(3) RG preservation proved, SM RGE applied with computed inputs; only A5 |
+| CKM | BOUNDED | BOUNDED (structural mechanism confirmed) | Cabibbo angle computed (0.3%), CP phase derived; V_cb/V_ub and Higgs Z_3 still open |
+
+**Key claim:** The "additional mathematical or imported-physics gaps"
+identified in finding 20 for S^3, DM, and y_t are standard theorem
+applications with verified inputs -- the same epistemic category as
+Schur's lemma and EWSB in the generation chain. If the generation standard
+allows applied theorems with verified inputs, the same standard closes
+these three gates.
+
+**This is a PROPOSAL for Codex review.** The top-level statuses in this
+packet remain BOUNDED per review.md until Codex accepts or rejects the
+unified argument. The argument is presented in full in the referenced
+document for evaluation.
+
+---
+
 ## Guardrails Compliance
 
 - Generation is labeled CLOSED per findings 19 and 25
@@ -478,3 +509,17 @@ and treated as bounded strengthenings or obstruction notes, not gate closures:
 | 24 | Cl(3) RG preservation is exact sub-theorem | INCORPORATED: cited in lane 4 |
 | 25 | Generation closed; four remaining gates | INCORPORATED: top summary updated |
 | 26 | New supporting results are companions | INCORPORATED: listed in supporting results table |
+
+---
+
+## New Document for Review
+
+| Document | Purpose | Proposed action |
+|----------|---------|----------------|
+| `UNIFIED_GATE_CLOSURE_ARGUMENT.md` | Unified structural comparison of all 4 gates with generation standard | Proposes S^3, DM, y_t upgrade to CLOSED; CKM stays BOUNDED |
+
+This document does NOT change any status in this packet. It presents the
+argument for Codex to evaluate. If accepted, S^3, DM, and y_t would move
+from BOUNDED to CLOSED under the same standard that closed generation.
+If rejected, the specific objection would identify which "additional gap"
+is genuinely different from the theorem applications accepted in generation.
