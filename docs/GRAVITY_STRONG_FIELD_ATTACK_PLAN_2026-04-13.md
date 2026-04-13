@@ -106,6 +106,17 @@ New bounded same-source metric result extracted after that:
 - this removes the easy hope that the remaining gravity gap is just a tiny
   low-order metric reparameterization of the same exact field
 
+New bounded coarse-grained exterior-law result extracted after that:
+
+- projecting the exact lattice exterior data onto the unique radial harmonic
+  law `phi_eff = a/r` outside a finite matching radius gives a vacuum-close
+  static isotropic exterior metric on both the exact local `O_h` source class
+  and the broader exact finite-rank source class
+- see `docs/COARSE_GRAINED_EXTERIOR_LAW_NOTE.md`
+- this means the remaining gravity problem is now much more explicitly the
+  microscopic-to-macroscopic matching theorem, not the macroscopic exterior
+  law itself
+
 ## Do not retread these solved or near-solved substeps
 
 The attack should **not** spend time redoing the following:
@@ -238,6 +249,10 @@ Current bridge result:
 - the new same-source ansatz scan sharpens it again:
   small nonlinear same-source metric deformations do not remove the residual,
   so the remaining gap is not just the linear closure choice
+- the new coarse-grained exterior-law result sharpens it again:
+  after harmonic coarse-graining, the exterior law is already vacuum-close, so
+  the live blocker is the matching from the exact lattice field to that
+  coarse-grained exterior representative
 
 Required outcome:
 
@@ -246,9 +261,10 @@ Required outcome:
   static-isotropic bridge
 - remove the current mismatch where the spatial branch looks stronger than the
   temporal branch
-- derive why the physical source law reduces to a narrower effective exterior
-  class than the full local `O_h` family, or derive the corrected nonlinear
-  exterior metric law for that full class
+- derive the microscopic-to-macroscopic matching rule that sends the exact
+  lattice field to the coarse-grained radial harmonic exterior law
+- or derive the effective source/coarse-graining theorem that forces that
+  projection from the lattice dynamics itself
 
 ### Attack 3: only after metric closure, revisit horizon / echo claims
 
