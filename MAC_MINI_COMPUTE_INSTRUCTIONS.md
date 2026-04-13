@@ -5,7 +5,7 @@ Run these scripts on the Mac Mini to close the distance law gap.
 ## Setup
 
 ```bash
-git clone https://github.com/jonathonreilly/toy-physics.git Physics-compute
+git clone https://github.com/jonathonreilly/cl3-lattice-framework.git Physics-compute
 cd Physics-compute
 git checkout claude/youthful-neumann
 pip3 install numpy scipy
