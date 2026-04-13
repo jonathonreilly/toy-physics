@@ -142,6 +142,32 @@ New exact/bounded matching-decomposition result extracted after that:
   now specifically the shell/angular coarse-graining of the zero-monopole
   remainder and the near-source sewing to the 4D metric
 
+New exact/bounded shell-projector result extracted after that:
+
+- for the seven-point star support
+  `S = {0, ±e_x, ±e_y, ±e_z}`, the shell-mean profiles of the seven point-Green
+  columns agree to machine precision on every tested shell
+- by linearity, any exact source supported on `S` therefore has shell-averaged
+  exterior field fixed exactly by total charge:
+  `<phi>_shell = Q K_shell`
+- see `docs/STAR_SUPPORT_SHELL_PROJECTOR_NOTE.md`
+- this applies directly to both the exact local `O_h` family and the broader
+  exact finite-rank family already on the branch
+- this removes shell-level coarse-graining itself as the live blocker for the
+  current star-supported source classes
+
+New bounded sewing-band result extracted after that:
+
+- once the exact shell projector is imposed, a smooth blend of
+  `(psi, alpha psi)` between the microscopic interior and the charge-fixed
+  radial harmonic exterior localizes the remaining nonvacuum content to a
+  finite matching shell `3.0 < r < 5.0`
+- outside that shell, the exterior residual is already `~1e-6` to `~3e-6`
+  across both exact source families
+- see `docs/LOCALIZED_SEWING_BAND_NOTE.md`
+- this does not derive the sewing-shell dynamics, but it shows the remaining
+  mismatch does not need to leak into the macroscopic exterior
+
 ## Do not retread these solved or near-solved substeps
 
 The attack should **not** spend time redoing the following:
@@ -176,6 +202,16 @@ At the current Codex state, the live gravity gap is even narrower in practice:
    shell/angular coarse-graining that defines the macroscopic exterior metric
 4. the near-source region must be sewn to that monopole-dominated exterior in
    one common nonlinear 4D closure
+
+After the shell-projector and localized-sewing results, this can be tightened
+again:
+
+3. shell-level coarse-graining is no longer the blocker for the current
+   star-supported exact source classes
+4. the live blocker is the derivation of the finite sewing-shell dynamics /
+   effective source law that replaces the current bounded blend
+5. after that, the resulting exterior-plus-band construction still has to be
+   promoted to a theorem-grade nonlinear 4D closure
 
 Until those are replaced by a genuine nonlinear closure, the following stay
 bounded or conditional:
