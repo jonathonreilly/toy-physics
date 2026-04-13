@@ -168,6 +168,20 @@ New bounded sewing-band result extracted after that:
 - this does not derive the sewing-shell dynamics, but it shows the remaining
   mismatch does not need to leak into the macroscopic exterior
 
+New exact shell-kernel derivation extracted after that:
+
+- the universal sewing-shell profile is now derived as the exact discrete
+  Dirichlet-to-Neumann shell source of the centered point-Green exterior trace
+- see `docs/DISCRETE_DTN_SHELL_KERNEL_NOTE.md`
+- the normalized shell kernel agrees to machine precision across all seven
+  star-support point-Green columns and matches the previously extracted
+  universal shell profile of both the exact local `O_h` family and the broader
+  exact finite-rank family
+- this removes “derive the universal shell kernel itself” from the live
+  blocker list and replaces it with the interpretation problem: what effective
+  shell stress / sewing law this exact DtN kernel represents in the nonlinear
+  4D closure
+
 ## Do not retread these solved or near-solved substeps
 
 The attack should **not** spend time redoing the following:
@@ -209,8 +223,10 @@ again:
 3. shell-level coarse-graining is no longer the blocker for the current
    star-supported exact source classes
 4. the live blocker is the derivation of the finite sewing-shell dynamics /
-   effective source law that replaces the current bounded blend
-5. after that, the resulting exterior-plus-band construction still has to be
+   effective shell-stress law represented by the exact DtN shell kernel
+5. the zero-monopole anisotropic shell correction still has to be controlled
+   at theorem grade
+6. after that, the resulting exterior-plus-band construction still has to be
    promoted to a theorem-grade nonlinear 4D closure
 
 Until those are replaced by a genuine nonlinear closure, the following stay
