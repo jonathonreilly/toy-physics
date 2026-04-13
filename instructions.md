@@ -168,8 +168,10 @@ language. Exact blockers to gravity-companion promotion:
 4. relic bridge is now:
    - numerator derived
    - baryogenesis chain structurally derived except for transport
-   - the remaining live transport blockers are `D_q*T`, `v_w`, and therefore
-     the still-unreconciled `eta` surface
+   - the remaining live transport blockers are now:
+     - imported `C_tr`
+     - imported non-perturbative EWPT calibration entering `v(T_n)/T_n`
+     - and therefore the still-unreconciled `eta` surface
 5. Stosszahlansatz is now a strong sub-result, but not the full lane
    - do not keep re-fighting the same coarse-graining objection
    - the remaining issue is not “does factorization exist?” but “can the full
@@ -193,10 +195,9 @@ language. Exact blockers to gravity-companion promotion:
        the quoted value
      - so this is best treated as strong native bounded support unless you can
        remove the residual one-loop / static-screening dependence
-   - `v_w`: this is now the cleaner primary transport blocker
+   - `v_w` is improved, but it is not the only blocker anymore
      - the present route still leans on perturbative CW / bag-model driving
-       pressure and the imported non-perturbative enhancement `R_NP = 1.5`
-       from 2HDM lattice studies
+       pressure and earlier imported non-perturbative enhancements
    - so the transport sector is narrower, but not closed
 8. the branch still contains an internal EWPT/baryogenesis regime mismatch
    - older notes still lean on a partial-washout window near `v/T ~ 0.5`
@@ -210,11 +211,21 @@ language. Exact blockers to gravity-companion promotion:
    - `k = 0` remains bounded if used in Newtonian cosmology
    - no “zero imports / pure graph theory” language while transport formulas
      are still imported
+10. the new taste-enhanced `eta` route is **not** closure authority
+   - do **not** call DM closed by multiplying the already-bounded
+     `eta_coupled` by `8/3`
+   - the current note assumes the taste-trace enhancement propagates
+     coherently through transport without re-solving the transport system
+   - it leaves the imported `C_tr` calibration and imported
+     non-perturbative `v(T_n)/T_n` calibration untouched
+   - until the transport equations themselves are rebuilt with the explicit
+     taste-enhanced source on the same native surface, this stays bounded
 
 **What counts as success**
 
 - best-case success:
-  - derive `D_q*T` and `v_w` from actual framework transport dynamics
+  - derive `C_tr`, `v(T_n)/T_n`, `D_q*T`, and `v_w` from actual framework
+    transport / EWPT dynamics
   - derive `eta` from the framework by closing the transport sector
   - then update the relic bridge note so `R` is genuinely parameter-free
 - second-best success:
@@ -223,8 +234,8 @@ language. Exact blockers to gravity-companion promotion:
   - and state the lane as “derived up to standard transport formulas” with no
     remaining ambiguity
 - minimum acceptable success:
-  - one authority note states plainly that the live blockers are `D_q*T`,
-    `v_w`, and therefore `eta`
+  - one authority note states plainly that the live blockers are imported
+    `C_tr`, imported non-perturbative `v(T_n)/T_n`, and therefore `eta`
   - the note, runner, and packet stop pretending the lane is otherwise closed
 
 **What does not count**
@@ -241,20 +252,22 @@ language. Exact blockers to gravity-companion promotion:
 1. first derive `T_n` from the existing effective potential + bounce machinery
    rather than scanning it
    - use the nucleation condition `S_3(T_n)/T_n ~ 140`
-2. rebuild `v_w` on one reconciled native surface:
+2. derive the wall-local CP source on the physical taste space directly
+   - no post-hoc `8/3` multiplier on top of an already-bounded transport solve
+3. derive the transport prefactor `C_tr` from the framework transport system
+   instead of FHS calibration
+4. rebuild `v_w` on one reconciled native surface:
    - native Daisy EWPT
    - native / HTL `D_q*T`
    - native bounce wall profile
-   - no stale `R_NP = 1.5`
-3. solve the **coupled** transport fixed point instead of treating
+   - no stale imported non-perturbative enhancement
+5. solve the **coupled** transport fixed point instead of treating
    `D_q*T`, `v_w`, and `L_w*T` as independent knobs
-4. only if there is real mathematical leverage, upgrade `D_q*T` beyond the
+6. only if there is real mathematical leverage, upgrade `D_q*T` beyond the
    present one-loop / static-screened surface
-5. derive the CP source from the wall profile / `Z_3` phase structure instead
-   of leaving it as a compact ansatz
-6. if 1-5 fail, freeze the lane honestly as “framework baryogenesis plus
+7. if 1-6 fail, freeze the lane honestly as “framework baryogenesis plus
    standard transport closure”
-7. only then update `eta` and the full relic ratio
+8. only then update `eta` and the full relic ratio
 
 ### Target B: Renormalized `y_t`
 
@@ -319,6 +332,11 @@ language. Exact blockers to gravity-companion promotion:
      framework surface
    - what is still missing is the framework derivation of the gauge-side
      crossover to the perturbative trajectory used below `M_Pl`
+7. the new “gauge crossover theorem” is still not closure authority
+   - the current script still seeds the gauge trajectory from observed
+     `alpha_s(M_Z)` when it builds `g_3(M_Pl)`
+   - so the successful `m_t` number is still produced on an
+     observed-seeded gauge path, not a fully framework-derived crossover map
 
 **What counts as success**
 
@@ -408,6 +426,15 @@ language. Exact blockers to gravity-companion promotion:
    - the new `Z_3^3` phase work boosts `J` substantially, but the best current
      joint result still overshoots `V_ub` and undershoots `delta_CP`
    - invariants are still consistency checks, not closure
+7. the new mass-basis NNI route is a bounded strengthening, not closure
+   - it improves `|V_ub|` numerically by converting the Schur-complement
+     result into the mass-eigenvalue NNI basis
+   - but the current script still uses PDG quark masses directly and fitted
+     geometric NNI coefficients from earlier bounded work
+   - it does not derive the geometric coefficients or physical mass ratios on
+     one common first-principles closure surface
+   - and the phase sector is still open: `J`, `rho_bar`, and `eta_bar` remain
+     far off
 
 **Preferred execution routes**
 
@@ -432,12 +459,15 @@ language. Exact blockers to gravity-companion promotion:
 4. derive `c_13` analytically from the full `3x3` NNI structure
    - Schur-complement / effective-mass-matrix route is preferred
    - do not treat PDG-anchored `V_ub` fits as closure authority
-5. derive the surviving rephasing-invariant CKM phase from invariants built
+5. derive the mass-basis suppression from framework-derived mass ratios and
+   framework-derived geometric coefficients, not PDG masses plus fitted
+   coefficients
+6. derive the surviving rephasing-invariant CKM phase from invariants built
    from the same EWSB-dressed mass matrices
    - do not use PDG-based `chi^2` optimization of `c_13 / c_23` as closure
-6. multi-`L` ratio/normalization evidence is useful only as support for 3-5,
+7. multi-`L` ratio/normalization evidence is useful only as support for 3-6,
    not as a substitute for them
-7. cluster-compute fallback
+8. cluster-compute fallback
    - only fall back to targeted compute on one scalar quantity
      (`K_23` or physical `c_13`) if the analytic routes fail cleanly
 
