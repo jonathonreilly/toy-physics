@@ -23,6 +23,15 @@ The strongest currently defensible strong-field statement is narrower:
 - this is **not** the same thing as a fully derived strong-field spacetime
   metric
 
+New exact foothold now extracted on this branch:
+
+- for a rank-one additive attractive local potential,
+  the strong-field enhancement factor used in the point-source note is an
+  exact resolvent identity
+- see `docs/STRONG_FIELD_RESOLVENT_CLOSURE_NOTE.md`
+- this removes one heuristic from the current point-source closure, but it does
+  **not** yet produce the full strong-field spacetime metric
+
 ## Do not retread these solved or near-solved substeps
 
 The attack should **not** spend time redoing the following:
@@ -89,9 +98,11 @@ These are the strongest starting points already in the repo:
 - `docs/BROAD_GRAVITY_DERIVATION_NOTE.md`
 - `docs/SPATIAL_METRIC_DERIVATION_NOTE.md`
 - `docs/STRONG_FIELD_METRIC_NOTE.md`
+- `docs/STRONG_FIELD_RESOLVENT_CLOSURE_NOTE.md`
 - `docs/LATTICE_NO_HORIZON_NOTE.md`
 - `scripts/frontier_broad_gravity.py`
 - `scripts/frontier_strong_field_metric.py`
+- `scripts/frontier_strong_field_resolvent_closure.py`
 - `scripts/frontier_strong_field_extension.py`
 - `scripts/frontier_lattice_no_horizon.py`
 
@@ -106,6 +117,12 @@ Current gap:
 
 - the point-source fixed-point equation is elegant, but the backreaction law is
   not yet derived from the exact lattice propagator
+
+Current status update:
+
+- the rank-one local-source version of that enhancement law is now exact
+- the remaining issue is extending that exact closure beyond the rank-one local
+  model to the actual physical matter source / strong-field Hamiltonian
 
 Required outcome:
 
