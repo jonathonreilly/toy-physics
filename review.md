@@ -197,6 +197,29 @@ Paper-safe wording:
 > structural DM inputs plus bounded relic mapping; not first-principles relic
 > closure.
 
+Latest DM update:
+
+- [DM_CLEAN_DERIVATION_NOTE.md](/Users/jonreilly/Projects/Physics/.claude/worktrees/youthful-neumann/docs/DM_CLEAN_DERIVATION_NOTE.md)
+  is still the strongest honest base note for the lane.
+- [DM_STOSSZAHLANSATZ_THEOREM_NOTE.md](/Users/jonreilly/Projects/Physics/.claude/worktrees/youthful-neumann/docs/DM_STOSSZAHLANSATZ_THEOREM_NOTE.md)
+  is a real sub-result and narrows the coarse-graining objection.
+- [DM_K_INDEPENDENCE_NOTE.md](/Users/jonreilly/Projects/Physics/.claude/worktrees/youthful-neumann/docs/DM_K_INDEPENDENCE_NOTE.md)
+  is useful: it can demote `k = 0` from a serious bound to a numerically
+  irrelevant sensitivity issue for freeze-out.
+- But the lane is still not promoted because the newest “graph-native” closure
+  attempt still overreaches:
+  - `DM_GRAPH_NATIVE_NOTE.md` says `R` is derived from pure graph theory with
+    no imported physics
+  - `frontier_dm_graph_native.py` marks cosmological-factor cancellation as
+    `EXACT` with a literal `True`, not a real derivation check
+  - `DM_G_BARE_FROM_HAMILTONIAN_NOTE.md` says the framework lacks the
+    Wilson/path-integral coupling route, while the graph-native chain later
+    uses a plaquette/Wilson-style action to compute `alpha_s`
+- Safe read:
+  - DM is materially strengthened
+  - Stosszahlansatz and `k` sensitivity are improved
+  - full relic mapping is still bounded
+
 ### 4. Renormalized `y_t`
 
 Current status:
@@ -279,6 +302,14 @@ These files are not reliable if they conflict with the audited state:
   - only three live gates remain
   - `S^3` is closed
   - gravity is no longer a live publication-critical lane
+- `docs/DM_GRAPH_NATIVE_NOTE.md` if it is used as authority that the DM lane
+  is now “pure graph theory” with zero imports
+- `docs/DM_G_BARE_FROM_HAMILTONIAN_NOTE.md` if it is used to upgrade
+  `g_bare = 1` to exact without resolving its tension with later
+  plaquette/Wilson-style `alpha_s` steps
+- `scripts/frontier_dm_graph_native.py` if it is used as proof that
+  cosmological-factor cancellation is exact when that step is currently
+  asserted by a hardcoded pass rather than derived
 - any `*_FULL_CLOSURE_*` note for `S^3`, DM, `y_t`, or gauge couplings
 - any note that says “Born rule derived” instead of exact `I_3 = 0`
 - `scripts/frontier_gravity_poisson_derived.py` if it is used as proof that
@@ -309,6 +340,9 @@ Also do not say:
 - Poisson uniqueness fully derived from a finite operator-family sweep
 - the full self-consistency `=>` Poisson step is a pure theorem with zero
   framework-level closure condition
+- `R = Omega_DM/Omega_b` derived from pure graph theory with zero imports
+  unless the ratio-cancellation and `g_bare` steps are actually discharged at
+  the paper bar
 - geodesic / GW sub-bundle fully derived without noting the conformal-metric,
   WKB, or d'Alembertian-promotion assumptions
 - strong-field / frozen-star / echo package is part of the retained flagship

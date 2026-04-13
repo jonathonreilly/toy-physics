@@ -80,13 +80,30 @@ If any of those fail, the lane stays `bounded` or `open`.
      explicitly discharged too
 
 3. **DM relic mapping**
-   - the latest flagship note is better, but the paper bar is still stricter
-   - do not call Stosszahlansatz, the Boltzmann coarse-graining step, or the
-     `sigma v` coefficient fully `derived` unless the note/script becomes a
-     self-contained theorem-grade lattice derivation
+   - useful new work:
+     - `DM_CLEAN_DERIVATION_NOTE.md`
+     - `DM_STOSSZAHLANSATZ_THEOREM_NOTE.md`
+     - `DM_K_INDEPENDENCE_NOTE.md`
+   - those are real improvements
+   - however the lane is still not closed at the paper bar
+   - do not use the newest closure rhetoric as authority:
+     - `DM_GRAPH_NATIVE_NOTE.md`
+     - `DM_G_BARE_FROM_HAMILTONIAN_NOTE.md`
+     - `DM_CLOSURE_CASE_NOTE.md`
+     - `scripts/frontier_dm_graph_native.py`
+   - specific current objections:
+     - `g_bare = 1` is still not promoted to exact at the publication bar
+     - `frontier_dm_graph_native.py` marks cosmological-factor cancellation as
+       `EXACT` with a literal hardcoded pass rather than a derived check
+     - the “pure graph theory / no imports” wording is still too strong
+     - `DM_G_BARE_FROM_HAMILTONIAN_NOTE.md` says the framework lacks the
+       Wilson/path-integral coupling route, while the graph-native chain later
+       uses a plaquette/Wilson-style action to compute `alpha_s`
    - the current safe status is:
-     - structural DM inputs strengthened
-     - relic mapping still bounded
+     - structural DM inputs materially strengthened
+     - Stosszahlansatz improved
+     - `k = 0` sensitivity likely demoted to negligible
+     - full relic mapping still bounded
 
 4. **Renormalized `y_t` matching**
    - the current safe status is:
