@@ -127,6 +127,21 @@ New bounded matching-window result extracted after that:
 - this sharpens the remaining gravity target from “find some matching” to
   “derive why this finite matching window emerges from the exact lattice data”
 
+New exact/bounded matching-decomposition result extracted after that:
+
+- the exact exterior field now admits a lattice-native decomposition
+  `phi = Q G_0 + h`, where `Q` is the conserved enclosed discrete charge,
+  `G_0` is the unit point-source lattice Green function, and the remainder
+  `h` carries zero monopole charge
+- see `docs/FLUX_FIXED_MATCHING_DECOMPOSITION_NOTE.md`
+- for the exact local `O_h` source family, the shell data are already exactly
+  captured by `Q G_0` outside the source
+- for the broader exact finite-rank source family, the shell-level mismatch is
+  already at the percent level by `R_match ~ 3 - 4.5`
+- this means the matching problem is no longer “find the monopole law”; it is
+  now specifically the shell/angular coarse-graining of the zero-monopole
+  remainder and the near-source sewing to the 4D metric
+
 ## Do not retread these solved or near-solved substeps
 
 The attack should **not** spend time redoing the following:
@@ -154,6 +169,13 @@ extensions that are not yet theorem-grade:
 2. the backreaction law used in the fixed-point solve is inserted as a
    self-consistency ansatz rather than derived from the exact lattice
    propagator / Hamiltonian
+
+At the current Codex state, the live gravity gap is even narrower in practice:
+
+3. the zero-monopole harmonic remainder must be shown to decouple under the
+   shell/angular coarse-graining that defines the macroscopic exterior metric
+4. the near-source region must be sewn to that monopole-dominated exterior in
+   one common nonlinear 4D closure
 
 Until those are replaced by a genuine nonlinear closure, the following stay
 bounded or conditional:
