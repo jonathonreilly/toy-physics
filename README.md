@@ -1,42 +1,29 @@
 # Discrete Event-Network Physics Repo
 
-This repo is a research codebase for discrete graph- and lattice-based toy
-physics architectures. It is no longer small enough to navigate by chronology,
-so the repo now has an explicit navigation layer.
+This repo contains multiple historical physics programs, but this branch is
+organized around the current `Cl(3)` on `Z^3` publication package.
 
 ## Start Here
 
-- Current entrypoint:
-  [`docs/START_HERE.md`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/docs/START_HERE.md)
-- Lane map:
-  [`docs/repo/LANE_STATUS_BOARD.md`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/docs/repo/LANE_STATUS_BOARD.md)
-- Repo organization:
-  [`docs/repo/REPO_ORGANIZATION.md`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/docs/repo/REPO_ORGANIZATION.md)
-- Root-file guide:
-  [`docs/repo/ROOT_FILE_GUIDE.md`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/docs/repo/ROOT_FILE_GUIDE.md)
-- Lane manifests:
-  [`docs/lanes/README.md`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/docs/lanes/README.md)
-- Publication-discovery log:
-  [`docs/POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/docs/POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md)
-- Publication-discovery audit:
-  [`docs/PUBLICATION_DISCOVERY_AUDIT_2026-04-11.md`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/docs/PUBLICATION_DISCOVERY_AUDIT_2026-04-11.md)
+- Publication package:
+  [`docs/publication/ci3_z3/README.md`](/private/tmp/physics-publication-prep/docs/publication/ci3_z3/README.md)
+- Current paper state:
+  [`docs/CI3_Z3_PUBLICATION_STATE_2026-04-12.md`](/private/tmp/physics-publication-prep/docs/CI3_Z3_PUBLICATION_STATE_2026-04-12.md)
+- Paper outline:
+  [`docs/PAPER_OUTLINE_2026-04-12.md`](/private/tmp/physics-publication-prep/docs/PAPER_OUTLINE_2026-04-12.md)
+- Flagship contribution statement:
+  [`docs/FLAGSHIP_PAPER_CONTRIBUTION_STATEMENT_NOTE.md`](/private/tmp/physics-publication-prep/docs/FLAGSHIP_PAPER_CONTRIBUTION_STATEMENT_NOTE.md)
 - Retained runner map:
-  [`docs/CANONICAL_HARNESS_INDEX.md`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/docs/CANONICAL_HARNESS_INDEX.md)
-- Bug / rerun workflow:
-  [`docs/repo/RETEST_PLAYBOOK.md`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/docs/repo/RETEST_PLAYBOOK.md)
-- Recent frontier retain audit:
-  [`docs/CLAUDE_FRONTIER_RETAIN_AUDIT_2026-04-11.md`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/docs/CLAUDE_FRONTIER_RETAIN_AUDIT_2026-04-11.md)
+  [`docs/CANONICAL_HARNESS_INDEX.md`](/private/tmp/physics-publication-prep/docs/CANONICAL_HARNESS_INDEX.md)
 
-## Current Repo Reality
+## Current Branch Reality
 
-- **Primary retained lane:** staggered fermion with corrected parity coupling
-- **Cleanest retained directional result:** exact lattice-force canonical card
-- **Strongest graph-native companion package:** cycle battery, scaled cycle
-  battery, self-gravity, two-field wave, retarded closure, and DAG
-  compatibility
-- **Main open blocker:** no frozen sign-selective endogenous irregular-graph
-  observable
-- **Exploratory reopen:** emergent geometry growth
+- **Framework statement:** `Cl(3)` on `Z^3` is the physical theory
+- **Retained paper core:** exact native `SU(2)`, graph-first structural
+  `SU(3)`, anomaly-forced `3+1`, full-framework one-generation closure, and
+  three-generation matter structure
+- **Four live paper gates:** `S^3`, DM relic mapping, renormalized `y_t`, and
+  CKM / flavor closure
 
 The older mirror, ordered-lattice, action-power, and coin-walk programs are
 still in the repo. They are indexed as historical or bounded lanes, not
@@ -77,7 +64,7 @@ Use the lane board, not file-name prominence, to know which one you are in.
 
 ## Rules For Reading Claims
 
-- Use the lane board before trusting an old flagship note.
-- Keep exact lattice-force claims separate from irregular-graph proxy claims.
-- If a result is not represented by a runner + retained note + lane status,
-  treat it as exploratory.
+- Use the publication package before trusting an old note by filename alone.
+- Keep retained, bounded, and open lanes separate.
+- If a result is not represented by a runner + note + explicit status, treat
+  it as exploratory.

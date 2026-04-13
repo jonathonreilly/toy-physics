@@ -1,108 +1,125 @@
 # Flagship Paper Contribution Statement Note
 
-**Date:** 2026-04-05  
-**Status:** adversarial framing note for the current retained portfolio on `main`
+**Date:** 2026-04-12  
+**Status:** publication-facing framing for the `CI(3)` / `Z^3` lane; bounded by `CI3_Z3_PUBLICATION_RETAIN_AUDIT_2026-04-12.md`
 
 ## Purpose
 
-This note answers one narrow question:
+This note states the strongest manuscript claim that is currently audit-safe.
+It separates:
 
-- what is the strongest flagship-paper contribution statement if the wide-family
-  `h = 0.125` bridge fails?
-- what is the strongest flagship-paper contribution statement if that bridge
-  succeeds?
+- what is retained now
+- what now closes structurally via the graph-first `SU(3)` route
+- what still remains bounded after that closure
+- what remains review-only phenomenology
 
-This is a framing note only.
-It does **not** claim a new physics result.
+This is a framing note only. It does **not** claim a new physics result.
 
-## Retained anchors on `main`
+Framework sentence:
 
-The contribution statement must be grounded in the retained `main` chain only:
+> We take `Cl(3)` on `Z^3` as the physical theory. Everything else is derived.
 
-- [`docs/SOURCE_RESOLVED_WAVEFIELD_MECHANISM_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/SOURCE_RESOLVED_WAVEFIELD_MECHANISM_NOTE.md)
-- [`docs/CLAUDE_COMPLEX_ACTION_CARRYOVER_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/CLAUDE_COMPLEX_ACTION_CARRYOVER_NOTE.md)
-- [`docs/CLAUDE_COMPLEX_ACTION_GROWN_COMPANION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/CLAUDE_COMPLEX_ACTION_GROWN_COMPANION_NOTE.md)
-- [`docs/ELECTROSTATICS_CARD_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ELECTROSTATICS_CARD_NOTE.md)
-- [`docs/ELECTROSTATICS_SUPERPOSITION_PROXY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ELECTROSTATICS_SUPERPOSITION_PROXY_NOTE.md)
-- [`docs/PROPAGATOR_FAMILY_UNIFICATION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/PROPAGATOR_FAMILY_UNIFICATION_NOTE.md)
-- [`docs/DIAMOND_NV_PHASE_RAMP_SIGNAL_BUDGET_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/DIAMOND_NV_PHASE_RAMP_SIGNAL_BUDGET_NOTE.md)
-- [`docs/WIDE_FAMILY_H0125_BRIDGE_REOPEN_AUDIT.md`](/Users/jonreilly/Projects/Physics/docs/WIDE_FAMILY_H0125_BRIDGE_REOPEN_AUDIT.md)
-- [`docs/TESTABLE_PREDICTIONS_MAP_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/TESTABLE_PREDICTIONS_MAP_NOTE.md)
+## Paper-safe now
 
-## If the wide-family bridge fails
+The current retained core is now materially stronger:
 
-If the wide-family `h = 0.125` bridge does not retain, the flagship paper
-should be framed as a **review-safe propagator-family paper**, not as a
-continuum theorem.
+- exact native cubic `Cl(3)` / `SU(2)` on `Z^3`
+- graph-first weak-axis selector on the canonical cube-shift surface
+- graph-first integration theorem: once the selector picks an axis, the
+  selected graph fibers carry weak `su(2)`, the residual swap of the other two
+  axes yields the `3 \oplus 1` split, and the joint commutant has
+  `su(3) \oplus u(1)` structure
+- exact orbit algebra on the cubic taste space: `8 = 1 + 1 + 3 + 3`, as an
+  algebraic statement
+- three-generation matter closure in the framework:
+  - the exact `1 + 1 + 3 + 3` orbit structure is retained
+  - the framework treats the cubic lattice as physical rather than as a
+    regulator
+  - so the three species are part of the retained matter surface
+- left-handed charge/eigenvalue matching on the selected-axis commutant
+  surface, if presented as a
+  corollary of the commutant theorem rather than as hypercharge closure
+- anomaly-forced `3+1` closure on the single-clock theorem surface
+- full-framework one-generation completion:
+  - spatial graph fixes the left-handed gauge/matter structure
+  - derived time supplies chirality
+  - anomaly cancellation fixes the right-handed singlet completion on the
+    Standard Model branch
 
-### Contribution statement
+The paper-safe language is therefore:
 
-The paper would say:
+> On the retained cubic graph, `Cl(3)` yields exact `SU(2)`. The canonical
+> graph-shift selector derives a weak axis directly on the graph surface, and
+> the selected graph fibers plus the residual cubic swap give a commutant with
+> `su(3) \oplus u(1)` structure.
 
-> A fixed path-sum propagator on causal graphs supports a coherent family of
-> retained scalar couplings: a phase-ramp wavefield mechanism, a narrow
-> complex-action crossover, and an electrostatics-like sign law. The retained
-> result is a family of fixed-field coupling laws on ordered and retained grown
-> families, not a geometry-generic continuum derivation.
+That sentence is now defensible.
 
-### Thinnest remaining gap
+## Still bounded after the graph-first closure
 
-The gap would be:
+The strongest remaining open points are now narrower:
 
-- outside-exact-lattice transfer
-- especially the wide-family `h = 0.125` bridge
-- plus any stronger geometry-generic statement beyond the current retained
-  pockets
+- a full physical identification of the surviving abelian factor as hypercharge
+  `U(1)_Y` beyond the now-closed one-generation branch
+- detailed hierarchy / CKM closure beyond the exact three-species result
+- a final manuscript argument for whether the graph-first route should be
+  presented as the primary closure path or alongside the older KS language
 
-In this case, the paper is still exciting because it has a coherent mechanism
-portfolio, but its strongest claim remains **family-level** rather than
-**bridge-level**.
+Until those steps are written cleanly, the following claims stay bounded:
 
-## If the wide-family bridge succeeds
+- any manuscript line that treats the abelian factor as fully closed for the
+  full flavor sector rather than as one-generation-complete / left-handed matched
+- detailed hierarchy / CKM closure
+- downstream claims that rely on the abelian factor being fully fixed beyond
+  the current one-generation surface
 
-If the wide-family `h = 0.125` bridge does retain, the flagship paper can say
-something materially stronger while still staying review-safe.
+## Review-only phenomenology
 
-### Contribution statement
+The following lanes are not paper-safe as retained closure and must remain
+review-only unless the underlying inputs are removed:
 
-The paper would say:
+- neutrino fits and mass-mixing outputs
+- Weinberg-angle threshold corrections
+- electroweak phase transition / baryogenesis numbers
+- dark-matter and cosmology numbers
+- top Yukawa / Higgs-mass constraint
+- frozen stars / strong-field claims
+- GW echo searches and publication-card acceptance language
 
-> The same fixed-field propagator family survives a wider `h = 0.125`
-> continuation on the dense `1/L^2 + h^2` lane, showing that the wavefield,
-> complex-action, and scalar sign-law observables are not just exact-lattice
-> pockets but remain visible on a wider finite-lattice bridge.
+These lanes may still be useful as supporting or exploratory material, but they
+do not belong in the flagship contribution statement.
 
-### Thinnest remaining gap
+## Literature Context
 
-If that happens, the bottleneck shifts. The remaining gap becomes:
+The KS spin-taste decomposition is standard staggered-fermion technology.
+That matters for the manuscript because it means the paper-safe novelty is not
+"we invented the KS basis," but rather:
 
-- a principled derivation of the scalar couplings, rather than a curated family
-  of couplings
-- a stronger external signal budget, especially for the diamond / NV
-  phase-quadrature protocol
-- eventual geometry-generic transfer beyond the widened bridge
+- the audited native cubic `Cl(3)` / `SU(2)` result
+- the graph-first selector derivation on the canonical cube-shift surface
+- the graph-first integration of that selector into the bounded
+  `su(3) \oplus u(1)` commutant theorem
 
-In this case, the paper becomes more than a mechanism portfolio. It becomes a
-continuity / robustness paper for a fixed propagator family.
+## Recommended Flagship Statement
 
-## What not to say in either branch
+Use this as the honest summary now:
 
-Do **not** promote any of the following unless a future retained chain
-explicitly earns them:
+> The retained cubic graph yields exact `Cl(3)` / `SU(2)` structure. A
+> graph-first selector on the canonical cube-shift surface derives a weak axis,
+> and the selected graph fibers plus residual cubic swap have commutant
+> `su(3) \oplus u(1)`. The spatial graph fixes the left-handed gauge/matter
+> structure, the derived temporal direction supplies chirality, and anomaly
+> cancellation closes one Standard Model generation. The exact `1 + 1 + 3 + 3`
+> orbit structure supplies three matter species in the same framework.
+> Quantitative flavor closure and downstream phenomenology remain bounded or
+> review-only.
 
-- full electromagnetism
-- continuum closure
-- self-gravity as a retained mechanism
-- QNM / BMV / horizon thermodynamics as retained claims
-- a single theorem that forces belief on its own
+## What Not To Say
 
-## Review-safe takeaway
+Do **not** say any of the following unless a future retained chain explicitly
+earns them:
 
-The strongest honest framing today is:
-
-- if the bridge fails, the paper is a narrow fixed-propagator family paper
-- if the bridge succeeds, the paper becomes a finite-lattice continuity paper
-  for the same propagator family
-
-Either way, the correct center of gravity is the **propagator family**, not a
-grand unified claim.
+- full anomaly-complete hypercharge closure is done
+- the spatial graph alone derives the right-handed sector
+- zero free parameters
+- review-only phenomenology is already retained closure
