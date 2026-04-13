@@ -325,6 +325,15 @@ Current bridge result:
   the matching is not infinitely vague; it appears in a finite radial band
   around `R ~ 4 - 4.5`, so the theorem target is now the mechanism for that
   crossover
+- the new sewing-shell source result sharpens it again:
+  the sewing shell is no longer only a bounded blend region; for the current
+  exact source families it is represented exactly by a lattice shell source
+  `sigma_R = H_0 (Pi_R^ext phi)` supported in the same finite band
+  `3 < r <= 5`
+  - see `docs/SEWING_SHELL_SOURCE_THEOREM_NOTE.md`
+  - this removes “does an exact sewing shell exist?” as the blocker and
+    replaces it with the narrower problem of interpreting that exact shell
+    source as the effective stress / matching law of the 4D closure
 
 Required outcome:
 
@@ -337,6 +346,9 @@ Required outcome:
   lattice field to the coarse-grained radial harmonic exterior law
 - or derive the effective source/coarse-graining theorem that forces that
   projection from the lattice dynamics itself
+- more sharply now:
+  derive the continuum / effective-stress meaning of the exact shell source
+  `sigma_R` and show that it generates the correct nonlinear sewing law
 
 ### Attack 3: only after metric closure, revisit horizon / echo claims
 
