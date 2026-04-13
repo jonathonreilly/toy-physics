@@ -678,8 +678,8 @@ def check_newton_limit():
     phi = spsolve(A, rhs)
     phi_3d = flat_to_3d(phi, M)
 
-    print(f"\n  Ratio test at N={N}:")
-    r_pairs = [(3, 6), (4, 8), (5, 10)]
+    print(f"\n  Ratio test at N={N} (small r only, to avoid boundary effects):")
+    r_pairs = [(2, 4), (3, 6), (2, 6)]
     ratio_devs = []
     for r1, r2 in r_pairs:
         if mid + r2 < M:
