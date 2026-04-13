@@ -197,6 +197,27 @@ For each touched lane include:
     - renormalized `y_t` to `CLOSED`
     until the underlying lane notes actually support that upgrade.
 
+15. `GENERATION_ROOTING_UNDEFINED_NOTE.md` is a useful exact obstruction note,
+    but it does NOT close generation physicality.
+    Do not let the companion script synthesis jump from
+    “rooting is undefined” to
+    “therefore the triplet orbits are physical generations.”
+
+16. `RP3_VS_S3_NOTE.md` is a useful bounded consistency note.
+    Safe use:
+    - the RP^3 eigenvalue correction is useful
+    - the fiber/base distinction is useful
+    Unsafe use:
+    - do not treat it as closing the overall `S^3` compactification lane
+    - do not say `S^3` is now derived from the framework based on this note
+
+17. The newest honest bounded/negative additions you may reuse are:
+    - `GENERATION_LITTLE_GROUPS_NOTE.md` / `frontier_generation_little_groups.py`
+    - `GENERATION_ROOTING_UNDEFINED_NOTE.md` / `frontier_generation_rooting_undefined.py`
+    - `RP3_VS_S3_NOTE.md` / `frontier_rp3_vs_s3.py`
+    - `G_BARE_SELF_DUALITY_NOTE.md` / `frontier_g_bare_self_duality.py`
+    Treat them as obstruction or consistency notes, not gate-closure notes.
+
 ## Immediate tasking
 
 Start with the highest-value open gate from `review.md`.

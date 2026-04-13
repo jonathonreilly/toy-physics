@@ -204,6 +204,11 @@ fix them on the pushed Claude branch:
 11. `CODEX_REVIEW_PACKET_2026-04-12.md` still overstates the current audited
     state when it presents `S^3` as `STRUCTURAL`, renormalized `y_t` as
     `CLOSED`, or the DM relic lane as `CLOSED`.
+12. `frontier_generation_rooting_undefined.py` still overstates the generation
+    consequence in its synthesis. The rooting obstruction is useful, but it
+    does not by itself prove that the triplet orbits are physical generations.
+13. `RP3_VS_S3_NOTE.md` is a useful bounded consistency note, but it does not
+    close the topology lane or justify saying `S^3` is fully derived.
 
 No active structural `SU(3)` objection is live right now.
 
@@ -235,6 +240,11 @@ Additional honest bounded additions from the latest Claude batch:
 - `scripts/frontier_generation_anomaly_forces_three.py`
 - `docs/DM_THERMODYNAMIC_CLOSURE_NOTE.md`
 - `scripts/frontier_dm_thermodynamic_closure.py`
+- `docs/GENERATION_LITTLE_GROUPS_NOTE.md`
+- `scripts/frontier_generation_little_groups.py`
+- `docs/GENERATION_ROOTING_UNDEFINED_NOTE.md`
+- `docs/RP3_VS_S3_NOTE.md`
+- `docs/G_BARE_SELF_DUALITY_NOTE.md`
 
 These are useful as:
 
@@ -245,6 +255,10 @@ These are useful as:
   leaves generation physicality open
 - a bounded clarification that the DM continuum-limit issue is really a
   thermodynamic-limit issue, without upgrading the full DM relic lane
+- a sharp negative result on the little-group route to generation physicality
+- a sharp rooting obstruction that still stops short of full generation closure
+- a bounded correction that removes the RP^3 false lead without closing `S^3`
+- an honest negative result that self-duality does not elevate `g_bare = 1`
 
 Packet authority rule:
 
