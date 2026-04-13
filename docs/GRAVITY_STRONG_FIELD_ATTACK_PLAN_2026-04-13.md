@@ -342,6 +342,13 @@ Current bridge result:
   - this reduces the remaining target further: derive the radial shell profile
     and control the anisotropic remainder, rather than derive an arbitrary
     shell law from scratch
+- the new universal-shell-profile result sharpens it again:
+  for the current exact source families, the normalized radial shell profile
+  is identical to machine precision
+  - see `docs/UNIVERSAL_SHELL_PROFILE_NOTE.md`
+  - this removes family-dependence of the radial shell law as a blocker and
+    leaves the real target as the microscopic derivation and effective-stress
+    interpretation of one universal shell kernel
 
 Required outcome:
 
@@ -360,6 +367,10 @@ Required outcome:
 - more sharply still:
   derive the radial shell profile from the microscopic lattice dynamics and
   show the zero-monopole shell anisotropy is a controlled subleading stress
+- more sharply still:
+  derive the universal shell kernel itself from the microscopic lattice
+  dynamics and promote it to the shell stress / matching law of the nonlinear
+  closure
 
 ### Attack 3: only after metric closure, revisit horizon / echo claims
 
