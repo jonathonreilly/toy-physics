@@ -208,6 +208,23 @@ New exact/bounded reduced-mode origin extracted after that:
 - this removes “family-coincidence only” from the live blocker list and
   leaves the amplitude / shell-stress interpretation as the next gravity step
 
+New exact/bounded one-parameter shell-law result extracted after that:
+
+- on the current star-supported exact source class, the reduced sewing-shell
+  law is fixed entirely by total charge `Q`
+- the exact reduced law has the form
+  `sigma_red(Q) = Q * (k_rad + c_aniso * m_orb)`
+  with:
+  - exact radial DtN shell kernel `k_rad`
+  - exact reduced anisotropic DtN mode `m_orb`
+  - exact lattice constant `c_aniso = 0.081435402995901`
+- the exact local `O_h` and broader finite-rank source families satisfy that
+  same one-parameter reduced shell law to machine precision
+- see `docs/ONE_PARAMETER_REDUCED_SHELL_LAW_NOTE.md`
+- this removes “free anisotropic shell amplitude” from the live blocker list
+  and leaves the nonlinear shell-stress / junction interpretation as the next
+  gravity step
+
 ## Do not retread these solved or near-solved substeps
 
 The attack should **not** spend time redoing the following:
@@ -248,11 +265,9 @@ again:
 
 3. shell-level coarse-graining is no longer the blocker for the current
    star-supported exact source classes
-4. the live blocker is the derivation of the finite sewing-shell dynamics /
-   effective shell-stress law represented by the exact DtN shell kernel
-5. the zero-monopole anisotropic shell correction still has to be controlled
-   at theorem grade
-6. after that, the resulting exterior-plus-band construction still has to be
+4. the live blocker is the nonlinear shell-stress / junction interpretation
+   of the exact one-parameter reduced shell law
+5. after that, the resulting exterior-plus-band construction still has to be
    promoted to a theorem-grade nonlinear 4D closure
 
 Until those are replaced by a genuine nonlinear closure, the following stay
