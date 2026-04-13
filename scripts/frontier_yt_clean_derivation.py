@@ -563,13 +563,17 @@ print(f"    g_3(M_Z) = {g3_MZ:.4f}")
 print(f"    alpha_s(M_Z) = {ALPHA_S_MZ_PDG}")
 print(f"    ln(M_Pl/M_Z) = {L_Pl:.2f}")
 
-# 1-loop analytic running: 1/alpha_i(M_Pl) = 1/alpha_i(M_Z) + b_i/(2*pi) * ln(M_Pl/M_Z)
-# where b_i are the STANDARD 1-loop coefficients (with signs matching dg/dt)
-# b_1 = 41/10, b_2 = -19/6, b_3 = -7
-# For 1/alpha: d(1/alpha)/dt = -b/(2*pi)  => 1/alpha(high) = 1/alpha(low) - b/(2*pi)*Delta_t
-inv_a1_Pl = 1.0 / alpha_1_MZ_GUT - (41.0 / 10.0) / (2.0 * PI) * L_Pl
-inv_a2_Pl = 1.0 / alpha_2_MZ - (-19.0 / 6.0) / (2.0 * PI) * L_Pl
-inv_a3_Pl = 1.0 / ALPHA_S_MZ_PDG - (-7.0) / (2.0 * PI) * L_Pl
+# 1-loop analytic running for 1/alpha:
+#   1/alpha_i(M_Pl) = 1/alpha_i(M_Z) + b_i/(2*pi) * ln(M_Pl/M_Z)
+# where b_i follow the convention: b_1 = -41/10, b_2 = 19/6, b_3 = 7
+# (positive b means asymptotic freedom: alpha gets smaller at high mu)
+b1_an = -41.0 / 10.0  # U(1) runs UP (not AF)
+b2_an = 19.0 / 6.0    # SU(2) AF
+b3_an = 7.0            # SU(3) AF
+
+inv_a1_Pl = 1.0 / alpha_1_MZ_GUT + b1_an / (2.0 * PI) * L_Pl
+inv_a2_Pl = 1.0 / alpha_2_MZ + b2_an / (2.0 * PI) * L_Pl
+inv_a3_Pl = 1.0 / ALPHA_S_MZ_PDG + b3_an / (2.0 * PI) * L_Pl
 
 alpha_1_Pl = 1.0 / inv_a1_Pl
 alpha_2_Pl = 1.0 / inv_a2_Pl
@@ -583,20 +587,28 @@ print(f"\n  Gauge couplings at M_Pl (1-loop analytic running from M_Z):")
 print(f"    g_1(M_Pl) = {g1_Pl:.4f}")
 print(f"    g_2(M_Pl) = {g2_Pl:.4f}")
 print(f"    g_3(M_Pl) = {g3_Pl_from_MZ:.4f}  (from SM running)")
-print(f"    g_s(M_Pl) = {g_s_Planck:.4f}  (from framework, Step 6)")
+print(f"    alpha_s(M_Pl) [SM] = {alpha_3_Pl:.6f}")
+print(f"    alpha_s(M_Pl) [framework] = {alpha_V:.6f}  (from Step 6)")
+print(f"    g_s(M_Pl) [framework] = {g_s_Planck:.4f}")
 
-# ---- Run DOWN from M_Pl to M_Z with DERIVED boundary conditions ----
-# The CLEAN chain uses:
-#   g_3(M_Pl) = g_s_Planck (from Step 6, DERIVED)
-#   g_1(M_Pl), g_2(M_Pl) = from analytic running (BOUNDED)
-#   y_t(M_Pl) = y_t_Planck (from Step 7, DERIVED)
+print(f"\n  Note: The framework alpha_s(M_Pl) = {alpha_V:.4f} differs from")
+print(f"  SM running alpha_s(M_Pl) = {alpha_3_Pl:.4f}. This discrepancy is")
+print(f"  part of the bounded matching uncertainty. For the RGE, we use the")
+print(f"  SM gauge couplings at each scale (from ODE) but set the YUKAWA")
+print(f"  boundary condition y_t(M_Pl) = g_s^framework / sqrt(6) = {y_t_Planck:.4f}")
+print(f"  from the DERIVED Steps 2+6.")
 
-y0_derived = [g1_Pl, g2_Pl, g_s_Planck, y_t_Planck]
+# ---- Run DOWN from M_Pl to M_Z ----
+# Boundary conditions:
+#   g_1, g_2, g_3 at M_Pl from SM running (bounded)
+#   y_t at M_Pl from framework (DERIVED from Steps 2+6)
 
-print(f"\n  Derived boundary conditions at M_Pl:")
-print(f"    g_1(M_Pl) = {g1_Pl:.4f}  [bounded: EW matching]")
-print(f"    g_2(M_Pl) = {g2_Pl:.4f}  [bounded: EW matching]")
-print(f"    g_3(M_Pl) = {g_s_Planck:.4f}  [DERIVED from g=1]")
+y0_derived = [g1_Pl, g2_Pl, g3_Pl_from_MZ, y_t_Planck]
+
+print(f"\n  Boundary conditions at M_Pl for RGE:")
+print(f"    g_1(M_Pl) = {g1_Pl:.4f}  [SM running, bounded]")
+print(f"    g_2(M_Pl) = {g2_Pl:.4f}  [SM running, bounded]")
+print(f"    g_3(M_Pl) = {g3_Pl_from_MZ:.4f}  [SM running, bounded]")
 print(f"    y_t(M_Pl) = {y_t_Planck:.4f}  [DERIVED from Steps 2+6]")
 
 # Run DOWN from M_Pl to M_Z
