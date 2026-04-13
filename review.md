@@ -189,17 +189,27 @@ What improved:
 - cap-map uniqueness
 - theorem-application notes
 - PL / closure-case notes
+- a dedicated boundary-link theorem note now attacks the exact missing local
+  lemma directly
 
 Why still not promoted:
 
-- the strongest new general-`R` note still contains one load-bearing
-  unproved step at the publication bar:
-  - it asserts for all `R` that every boundary-vertex link
-    `link(v, B_R)` is a PL 2-disk, but the current runner support remains
-    finite-`R`
+- the old missing disk-lemma objection has shifted into a new, narrower one:
+  - [S3_BOUNDARY_LINK_THEOREM_NOTE.md](/Users/jonreilly/Projects/Physics/.claude/worktrees/youthful-neumann/docs/S3_BOUNDARY_LINK_THEOREM_NOTE.md)
+    now directly targets the all-`R` disk lemma
+  - but its proof still does not cleanly discharge the decisive all-`R`
+    connectedness / complement-connectedness step
+  - the note itself walks through several abandoned arguments and then lands on
+    “verified computationally for `R=2..10`” plus “the path can be shortened
+    by starring through `v`”
+  - that is stronger than before, but still not theorem-grade closure at the
+    paper bar
 - the general-`R` runner still classifies the lane as having “no bounded
   claims” even though it only checks concrete `R` values and then leans on a
   general theorem application
+- the new boundary-link runner does the same thing:
+  - it labels the theorem `EXACT`
+  - but it describes itself as computational evidence for the general proof
 - the cap-uniqueness note is stronger and useful, but it is itself still
   honestly bounded because it relies on cited topology infrastructure and the
   framework’s closure requirement
@@ -211,6 +221,9 @@ Paper-safe wording:
 
 Latest `S^3` update:
 
+- [S3_BOUNDARY_LINK_THEOREM_NOTE.md](/Users/jonreilly/Projects/Physics/.claude/worktrees/youthful-neumann/docs/S3_BOUNDARY_LINK_THEOREM_NOTE.md)
+  is directionally the right move. It attacks the exact local lemma that was
+  missing before.
 - [S3_GENERAL_R_DERIVATION_NOTE.md](/Users/jonreilly/Projects/Physics/.claude/worktrees/youthful-neumann/docs/S3_GENERAL_R_DERIVATION_NOTE.md)
   is the strongest topology note so far.
 - It gives a real general-`R` theorem chain for the standard cone-capped
@@ -218,11 +231,13 @@ Latest `S^3` update:
 - [S3_CAP_UNIQUENESS_NOTE.md](/Users/jonreilly/Projects/Physics/.claude/worktrees/youthful-neumann/docs/S3_CAP_UNIQUENESS_NOTE.md)
   is now the honest note for uniqueness / selection.
 - But the lane is still not closed. The current sharp blocker is:
-  - the general-`R` derivation promotes “all `R >= 2`” without fully proving
-    the boundary-link disk claim at that same theorem grade
-  - the runner support is still finite-`R` computational evidence plus cited
-    topology, not a complete in-framework derivation of every load-bearing
-    hypothesis
+  - the boundary-link note still has not given a clean all-`R` proof that the
+    present and absent octahedral-triangle sets have the connectivity
+    properties it uses
+  - the proof still leans on computational verification to prop up the
+    supposed general argument
+  - the runners are still finite-`R` support scripts, not direct theorem
+    checkers for the general all-`R` statement
 - So:
   - acceptable as a strong bounded theorem for the chosen cone-cap family
   - acceptable as a strong bounded uniqueness/selection note
@@ -231,13 +246,18 @@ Latest `S^3` update:
 Promotion test for `S^3`:
 
 - acceptable promotion:
-  - a theorem that closes the all-`R` boundary-link disk step in-framework and
-    aligns the runner with that theorem-grade claim
+  - a theorem that closes the all-`R` boundary-link step in-framework and does
+    so without relying on “verified at `R=2..10`” as part of the proof
+  - specifically, the connectedness / complement-connectedness step has to be
+    proved cleanly for all `R`, not argued heuristically from star-convexity
+    and then checked numerically
   - or a narrower promoted claim explicitly limited to the chosen cone-cap
     family and still marked bounded
 - not acceptable promotion:
   - packet says `S^3` closed
   - finite-`R` recognition is used as the theorem itself
+  - a boundary-link note marked `EXACT` whose key argument still ends in
+    computational verification
   - the general-`R` note says “PROMOTE to CLOSED” while the cap-uniqueness
     note remains honestly bounded and the runner still only verifies examples
 

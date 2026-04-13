@@ -101,6 +101,14 @@ If any of those fail, the lane stays `bounded` or `open`.
      - `scripts/frontier_dm_graph_native.py`
    - specific current objections:
      - `g_bare = 1` is still not promoted to exact at the publication bar
+       - why:
+         - the current argument fixes the coefficient of the nearest-neighbor
+           Hamiltonian / hopping term, but that can still be a choice of
+           normalization or units rather than a derived physical gauge coupling
+         - to promote `g_bare = 1`, you must show that this fixed coefficient is
+           invariantly the same coupling that later enters the annihilation /
+           relic calculation, not just that the Hamiltonian can be written with
+           coefficient `1` in lattice units
      - `frontier_dm_graph_native.py` marks cosmological-factor cancellation as
        `EXACT` with a literal hardcoded pass rather than a derived check
      - the “pure graph theory / no imports” wording is still too strong
@@ -176,6 +184,23 @@ closure standard.
   - theorem exactness from the retained Poisson/Newton chain
   - finite-lattice numerical confirmation that is still visibly biased
 
+**Current precise blocker**
+
+- `GRAVITY_CLEAN_DERIVATION_NOTE.md` still risks collapsing two distinct
+  things:
+  - the framework closure condition `L^{-1} = G_0`
+  - a pure algebra theorem with no remaining premise
+- that distinction matters because the current paper bar accepts the former
+  but not the rhetorical move that it was proved with zero framework input
+- `frontier_broad_gravity.py` still mixes:
+  - theorem-backed exact corollaries from the retained Poisson/Newton chain
+  - direct finite-lattice profile checks that remain boundary-biased
+- broad gravity remains blocked on the continuum-limit bundle:
+  - conformal metric identification
+  - geodesic equation
+  - light bending
+  - strong-field extension
+
 **What does not count**
 
 - rearguing geodesics / GW / echoes
@@ -202,10 +227,12 @@ closure standard.
 
 **Files you should treat as primary**
 
+- `docs/S3_BOUNDARY_LINK_THEOREM_NOTE.md`
 - `docs/S3_GENERAL_R_DERIVATION_NOTE.md`
 - `docs/S3_CAP_UNIQUENESS_NOTE.md`
 - `docs/S3_RECOGNITION_GENERAL_NOTE.md`
 - `docs/S3_SHELLABILITY_NOTE.md`
+- `scripts/frontier_s3_boundary_link_theorem.py`
 - `scripts/frontier_s3_general_r.py`
 - `scripts/frontier_s3_cap_uniqueness.py`
 - `scripts/frontier_s3_recognition_general.py`
@@ -216,9 +243,13 @@ closure standard.
 Either:
 - a new note/script pair closes the actual remaining theorem gap at the
   framework bar:
-  - prove the boundary-vertex step used in the general-`R` derivation
-    constructively for all `R`:
-    - `link(v, B_R)` is a PL 2-disk for every boundary vertex
+  - prove the remaining boundary-link theorem step constructively for all
+    `R`, with no fallback to “verified at `R=2..10` so the general argument is
+    evident”
+  - more specifically:
+    - if `link(v, B_R)` is the theorem target, the proof must make the
+      connectedness and complement-connectedness claims theorem-grade for all
+      `R`, not just computationally supported
   - make the runner test that theorem rather than only finite-`R`
     exemplars or `H_1 = 0`
   - align the general-`R` note with the cap-uniqueness note on what is still
@@ -233,21 +264,28 @@ Or:
 
 **Current precise blocker**
 
-- `S3_GENERAL_R_DERIVATION_NOTE.md` still jumps from:
-  - finite-`R` computational support
-  - cited topology infrastructure
-  to:
-  - “PROMOTE to CLOSED”
-- the load-bearing missing proof step is:
-  - the general all-`R` claim that every boundary-vertex link in the cubical
-    ball is a PL 2-disk
-- `frontier_s3_general_r.py` still says “no bounded claims” even though it
-  verifies concrete `R` values and uses those checks as support for a general
-  theorem rather than proving the theorem itself
+- the old blocker has moved, but it has not disappeared:
+  - `S3_BOUNDARY_LINK_THEOREM_NOTE.md` now targets the right missing lemma
+  - but its proof of connectedness / complement-connectedness still falls back
+    to geometric rhetoric plus computational support
+- the specific failure mode is:
+  - the note walks through several aborted connectedness arguments
+  - then ends on “the path can be shortened by starring through `v`” and
+    “verified computationally for `R=2..10`”
+  - that is not the same thing as a clean all-`R` theorem
+- `frontier_s3_boundary_link_theorem.py` also still labels the result
+  `EXACT` while describing itself as computational evidence for the general
+  proof
+- so the remaining burden is now precise:
+  - either give a theorem-grade all-`R` proof that the present and absent
+    octahedral-triangle sets are connected in the required way
+  - or keep the whole topology lane bounded and stop promoting it to closed
 
 **What does not count**
 
 - finite-`R` recognition being presented as the theorem itself
+- a boundary-link theorem note whose decisive connectedness step ends in
+  “verified computationally” or “geometrically evident”
 - packet/table claiming `S^3` is closed while the strongest honest note still
   relies on cited infrastructure and finite-`R` support
 - calling the lane closed because Perelman is cited if the hypotheses are not
@@ -285,6 +323,10 @@ Or:
 Either:
 - `g_bare = 1` is closed at the same bar as the rest of the paper with no
   tension against the later `alpha_s` derivation route
+  - this means:
+    - not merely “the Hamiltonian coefficient can be normalized to 1”
+    - but “the physical coupling used later in the DM rate is uniquely fixed
+      by the framework and that value is 1 in a non-conventional sense”
 - the relic-ratio cancellation route is actually derived and checked, not
   asserted by literal `True` passes
 - the note/script stop saying “pure graph theory / zero imports” unless both
@@ -297,6 +339,26 @@ Or:
   - `k` numerically irrelevant
   - `g_bare` / ratio bridge still bounded
 
+**Current precise blocker**
+
+- the present `g_bare = 1` route does not yet derive a physical coupling; it
+  only fixes the coefficient of the nearest-neighbor KS / hopping term in a
+  chosen lattice normalization
+- that can still be a units or convention choice unless Claude proves the same
+  invariant quantity is exactly the coupling later used in:
+  - `sigma v`
+  - relic matching
+  - any later `alpha_s` or plaquette route
+- the current graph-native chain also still asserts a crucial bridge step
+  rather than deriving it:
+  - cosmological-factor cancellation in `Omega_DM/Omega_b` is marked exact by
+    a literal `True`
+- there is also still an internal inconsistency to resolve:
+  - one note says the framework does not really have the Wilson / plaquette
+    coupling route
+  - a later chain uses a Wilson / plaquette style action to recover
+    `alpha_s`
+
 **What does not count**
 
 - replacing one bounded bridge with rhetoric about A5
@@ -304,6 +366,9 @@ Or:
   exact cosmology cancellation
 - declaring `g_bare` exact while simultaneously using a Wilson/plaquette route
   that the same argument said the framework does not have
+- declaring `g_bare = 1` exact when the only thing shown is a convention-fixed
+  KS Hamiltonian normalization with no invariant bridge to the later physical
+  coupling used in `sigma v` or relic matching
 
 **Fallback if closure fails**
 
@@ -333,6 +398,20 @@ Or:
 - no note/script says SM running and `alpha_s(M_Pl)` are fully discharged
   unless the actual derivation is explicit and self-contained
 
+**Current precise blocker**
+
+- the lane is no longer blocked on lattice-side RG structure:
+  - `Cl(3)` preservation under block-spin RG is exact
+- it is still blocked on the continuum bridge:
+  - low-energy SM running is being treated as “just mathematics” rather than
+    as a derived framework map
+  - the `alpha_s(M_Pl)` chain still depends on normalization / matching
+    structure not yet fixed in a theorem-grade way
+  - the lattice-to-continuum identification of the renormalized quantity is
+    still not cleanly discharged
+- so the real failure mode is not “the note is too optimistic”; it is that the
+  final quantity still depends on an unresolved matching map
+
 **Fallback if closure fails**
 
 - keep `y_t` as a live bounded gate with one sharply stated residual
@@ -355,6 +434,21 @@ Or:
   - exact structural flavor results
   - bounded coefficient/hierarchy results
   - what is still not derived
+
+**Current precise blocker**
+
+- the lane still lacks a single quantitative closure chain from framework data
+  to physical CKM coefficients
+- the sharp remaining issues are:
+  - Higgs `Z_3` / scalar charge assignment is still not universal enough at the
+    paper bar
+  - coefficient / hierarchy inputs are improved but still not ab initio enough
+    for flagship promotion
+  - several notes prune routes or sharpen obstructions, but obstruction work is
+    not closure
+- if Claude wants promotion here, it needs one authority note and one runner
+  that land the actual coefficient story, not another support note about why a
+  weaker route fails
 
 **Fallback if closure fails**
 
