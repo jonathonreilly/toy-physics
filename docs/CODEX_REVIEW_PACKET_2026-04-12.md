@@ -299,6 +299,54 @@ until the discrete-to-continuum bridge is rigorously established.
 
 ---
 
+## Gate 2 UPDATE 2: V4 Attack via PL Manifold Theory
+
+### Files changed (new)
+- `scripts/frontier_s3_pl_manifold.py` -- PASS=9 FAIL=0 BOUNDED=0
+- `docs/S3_PL_MANIFOLD_NOTE.md`
+
+### Commands run
+```bash
+python3 scripts/frontier_s3_pl_manifold.py
+# Exit code: 0
+# PASS=9 FAIL=0 BOUNDED=0 (0.0s)
+```
+
+### Status: STRUCTURAL (upgrades from BOUNDED)
+
+### What was done
+
+Attack V4 from the PL manifold angle: instead of requiring a continuum
+limit, show the discrete cubical complex IS ALREADY a PL 3-manifold.
+
+Key results:
+
+1. **Interior vertex links = octahedron = PL S^2.** Verified R=2..5.
+   Theoretical basis: Bruggesser & Mani (1971).
+2. **Boundary surface chi=2 => PL S^2.** Verified R=2..6.
+3. **Cone-cap closure** produces a closed PL 3-manifold (all vertex
+   links are PL S^2).
+4. **pi_1 = 0** by van Kampen.
+5. **Perelman + Moise** => PL S^3.
+
+This eliminates V4: the cubical complex IS a PL manifold, no continuum
+limit needed.
+
+### Why the claim is not overstated
+
+STRUCTURAL, not CLOSED. The boundary vertex link argument for general R
+cites Alexander's theorem rather than proving it from scratch. The note
+requires using the cubical ball (definitional choice, not new assumption).
+
+### Correction to earlier packet entries
+
+The "V4 Discrete-to-Continuum Investigation" section above documented
+four approaches that did not close V4. This PL manifold approach provides
+the missing piece: the link condition on the cubical ball. The correct
+status is now STRUCTURAL.
+
+---
+
 ## Gate 5: CKM -- Higgs Z_3 Charge Universality
 
 ### Files changed (new)
@@ -392,7 +440,8 @@ reported "delta = 1 CONFIRMED" at L=8. That was a false positive.
 | frontier_slavnov_taylor_completion.py | 26 | 0 | Exact |
 | frontier_s3_discrete_continuum.py | 4 | 2 | Exact + bounded |
 | frontier_ckm_higgs_z3_universal.py | 8 | 0 | Exact (obstruction) |
-| **TOTAL** | **344** | **13** | |
+| frontier_s3_pl_manifold.py | 9 | 0 | Exact |
+| **TOTAL** | **353** | **13** | |
 
 The 11 FAILs are all documented, honest, and diagnostic (not theorem failures):
 - Gate 1: 6 FAILs in main script are honest obstructions that led to the gap-closure work; 1 FAIL is the hierarchy shortfall before synthesis
