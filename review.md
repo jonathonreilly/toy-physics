@@ -34,6 +34,17 @@ These are already retained at the current paper bar:
 - exact `I_3 = 0`
 - exact CPT
 
+## Core publication caveats
+
+These stay explicit even if every remaining live gate closes:
+
+- individual fermion masses are not fully first-principles derived
+  - safe claim: retained matter structure, bounded hierarchy/flavor support,
+    and selected quantitative windows
+- the strong CP problem is not addressed
+- `alpha_EM = 1/137` is not derived
+- gravity is still a weak-field framework result, not full nonlinear GR
+
 ## Framework-premise rule
 
 Codex accepts the framework premise:
@@ -83,15 +94,14 @@ Current strongest useful work:
 - `DM_STOSSZAHLANSATZ_THEOREM_NOTE.md`
 - `DM_INVARIANT_BRIDGE_NOTE.md`
 - `DM_K_INDEPENDENCE_NOTE.md`
+- `DM_DIRECT_OBSERVABLE_NOTE.md`
 
 Current blockers:
 
-- `g_bare = 1` is still not promoted at the paper bar
-  - reason:
-    - the fixed nearest-neighbor Hamiltonian coefficient may still be a
-      normalization/units choice
-    - it is not yet shown to be invariantly the same physical coupling later
-      used in the annihilation / relic calculation
+- the old coupling-identity objection is now narrower
+  - if `sigma_v` is treated as a direct observable of `H` via the T-matrix,
+    the “is `g_bare` the same coupling?” objection mostly dissolves
+  - this helps, but it does not close the lane
 - relic-ratio / cosmological cancellation bridge is still not theorem-grade
 - Boltzmann / Stosszahlansatz coarse-graining is improved but still not fully
   internalized
@@ -107,10 +117,22 @@ Current safe state:
 
 - bare UV theorem closed
 - `Cl(3)` preservation under RG exact
-- still bounded:
+- the new Wilsonian-EFT close-claim does **not** yet clear the paper bar
+  - reason 1:
+    - the current note/runner verify Feshbach projection on toy Hamiltonians,
+      not on the actual `Cl(3)` / `Z^3` Hamiltonian
+  - reason 2:
+    - symmetry preservation plus generic EFT logic does not by itself identify
+      the exact low-energy SM matching surface for this framework
+  - reason 3:
+    - the runner’s one-loop EFT bookkeeping is not yet publication-safe
+      (for example `b_2 = 10/3` appears where the SM value with three
+      generations and one Higgs doublet is `19/6`)
+- therefore still bounded:
   - low-energy continuum running
   - `alpha_s(M_Pl)` chain
   - lattice-to-continuum matching
+  - actual low-energy EFT identification on the real Hamiltonian surface
 
 Paper-safe read:
 
@@ -121,9 +143,11 @@ Paper-safe read:
 Current safe state:
 
 - route pruning and bounded structural flavor notes are useful
+- the old Higgs `Z_3` universality blocker is no longer the main issue
 - still open:
-  - Higgs `Z_3` universality at flagship bar
-  - ab initio coefficient / hierarchy closure
+  - ab initio O(1) NNI / overlap coefficients
+  - quantitative `V_cb` / `V_ub` closure
+  - larger-compute or analytic overlap route
 
 Paper-safe read:
 
@@ -175,6 +199,8 @@ Operational consequence:
 - do not keep treating `S^3` as a live gate
 - only touch `S^3` now for wording/package alignment if stale docs still say
   bounded
+- the computational runners are support for the retained theorem chain, not the
+  whole closure authority by themselves
 
 ## Packet alignment rule
 

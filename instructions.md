@@ -60,6 +60,18 @@ Only these three are still live flagship gates:
 2. **Renormalized `y_t` matching**
 3. **CKM / quantitative flavor closure**
 
+## Non-negotiable paper caveats
+
+These caveats must stay explicit in any honest flagship submission:
+
+- individual fermion masses are **not** fully predicted from first principles
+  - safe claim: retained matter structure and bounded hierarchy/flavor support
+- the strong CP problem is **not** addressed
+- `alpha_EM = 1/137` is **not** derived
+- gravity is retained only on the weak-field surface
+  - safe claim: Poisson / Newton core + weak-field WEP + weak-field time dilation
+  - not safe: full nonlinear GR closure
+
 ## Important but not a flagship live gate
 
 **Broad gravity beyond the retained weak-field core** is still bounded, but it
@@ -106,19 +118,26 @@ lane-specific rescue axiom to skip missing mathematics or physics.
 
 **Current blockers**
 
-1. `g_bare = 1`
-   - the current argument fixes the coefficient of the nearest-neighbor
-     Hamiltonian / hopping term
-   - that may still be only a normalization or units choice
-   - it is not yet shown to be invariantly the same physical coupling that
-     later enters annihilation / relic calculations
+1. direct observable route is not the same as relic closure
+   - the new T-matrix / direct-observable notes correctly narrow the old
+     “is `g_bare` the same coupling?” objection
+   - if `sigma_v` is computed directly from `H`, that coupling-identity issue
+     is mostly dissolved
+   - that does **not** close the lane by itself because `R = Omega_DM/Omega_b`
+     still needs the relic-ratio / cosmology bridge
 2. relic-ratio / cosmology cancellation bridge
    - no hardcoded `True`
-   - no “pure graph theory / zero imports” rhetoric unless the cancellation is
-     actually derived and checked
+   - no “pure graph theory / zero imports” rhetoric unless the cancellation
+     itself is actually derived and checked
 3. Boltzmann / Stosszahlansatz coarse-graining
    - improved, but still not yet automatically a theorem-grade first-principles
      bridge
+4. route discipline
+   - if using a direct `H -> T -> sigma_v` route, keep the claim at the
+     cross-section level unless the relic bridge is also discharged
+   - if using a plaquette / coupling route, explain clearly why the
+     Hamiltonian coefficient is part of the framework definition rather than a
+     separately derived observable
 
 **What counts as success**
 
@@ -129,8 +148,7 @@ lane-specific rescue axiom to skip missing mathematics or physics.
 
 **What does not count**
 
-- saying the Hamiltonian can be written with coefficient `1` in lattice units
-  and calling that “physical `g_bare = 1`”
+- dissolving the old `g_bare` objection while leaving the relic bridge open
 - calling cosmological cancellation exact without a real derivation check
 - calling the whole lane “pure graph theory” while still using imported bridge
   structure
@@ -152,17 +170,34 @@ lane-specific rescue axiom to skip missing mathematics or physics.
 
 **Current blockers**
 
-- low-energy continuum running
-- `alpha_s(M_Pl)` chain
-- lattice-to-continuum matching
+1. the new Wilsonian-EFT close-claim is stronger than the actual evidence
+   - Feshbach projection is an exact QM identity, but the current note/runner
+     only verify it on toy Hamiltonians, not on the actual `Cl(3)` / `Z^3`
+     Hamiltonian
+2. EFT/operator-identification gap
+   - symmetry preservation plus generic EFT logic does not by itself prove that
+     the actual low-energy effective theory is the exact SM matching surface
+3. coefficient/physics hygiene
+   - the current Wilsonian runner uses incorrect one-loop SM beta-coefficient
+     bookkeeping (for example `b_2 = 10/3` instead of the SM `19/6` with three
+     generations and one Higgs doublet)
+   - until that is fixed, the closure claim is not publication-safe
+4. the practical bounded pieces remain:
+   - low-energy continuum running
+   - `alpha_s(M_Pl)` chain
+   - lattice-to-continuum matching
 
 **What counts as success**
 
-- those three residuals are actually discharged, or
+- the Wilsonian route is rebuilt on the actual lattice Hamiltonian with correct
+  EFT bookkeeping, or
+- the lane is kept sharply bounded with the residuals stated plainly, or
 - the flagship note is made cleanly bounded with no over-closure rhetoric
 
 **What does not count**
 
+- saying “Feshbach projection exists for any Hamiltonian” and treating that as
+  proof of the actual SM low-energy bridge for this framework
 - saying the remaining steps are “just mathematics” unless the note/script
   actually closes them at the paper bar
 
@@ -179,8 +214,13 @@ lane-specific rescue axiom to skip missing mathematics or physics.
 
 **Current blockers**
 
-- Higgs `Z_3` universality at flagship bar
-- ab initio coefficient / hierarchy closure
+1. Higgs `Z_3` universality is no longer the main conceptual blocker
+   - the latest honest read is that the Higgs VEV is democratic, so the old
+     universality obstruction should not be used as the primary stop sign
+2. the real remaining blocker is quantitative closure
+   - ab initio O(1) NNI / overlap coefficients are still not derived sharply
+   - `V_cb` and `V_ub` remain off by factor-level errors
+   - larger lattice compute or a real analytic overlap route is still needed
 
 **What counts as success**
 
@@ -190,6 +230,8 @@ lane-specific rescue axiom to skip missing mathematics or physics.
 
 - route pruning alone
 - bounded structural flavor patterns sold as a full CKM theorem
+- saying the lane is “computational only” without also tightening the actual
+  paper-safe bounded wording
 
 ### Target D: Broad gravity wording/package alignment only
 
@@ -234,6 +276,11 @@ For any lane you touch:
 must say the same thing.
 
 If they disagree, the lane is not closed.
+
+For `S^3`, the retained closure now lives in the theorem-note + accepted
+topology-infrastructure chain. The computational runners are supporting
+evidence, not the whole closure by themselves. Do not rely on runner headers
+alone as the closure authority.
 
 ## Non-authority docs
 
