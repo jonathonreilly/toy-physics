@@ -2,7 +2,7 @@
 
 **Script:** `scripts/frontier_generation_gap_closure.py`
 **Date:** 2026-04-12
-**Status:** Gap 1 CLOSED (taste-physicality). Gap 2 CLOSED (mass hierarchy, order-of-magnitude, via EWSB+RG synthesis).
+**Status:** Gap 1 BOUNDED (taste-physicality conditional on framework). Gap 2 BOUNDED (mass hierarchy, order-of-magnitude, via EWSB+RG synthesis). Per review.md: generation physicality is still open.
 
 ---
 

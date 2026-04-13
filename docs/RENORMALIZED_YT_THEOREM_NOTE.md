@@ -2,7 +2,7 @@
 
 ## Status
 
-**CLOSED** -- The tree-level relation y_t = g_s/sqrt(6) is PROTECTED from lattice radiative corrections by the centrality of G_5 in Cl(3). This is an exact algebraic result (not Z_Y = Z_g, which does NOT hold). Below the lattice scale, SM RGEs apply independently. Two independent derivations (Ward identity + centrality factorization) converge on the same conclusion. The non-perturbative Slavnov-Taylor identity is DERIVED as a corollary (see `SLAVNOV_TAYLOR_COMPLETION_NOTE.md`).
+**BOUNDED** -- The tree-level relation y_t = g_s/sqrt(6) is PROTECTED from lattice radiative corrections by the centrality of G_5 in Cl(3). This is an exact algebraic result at the lattice scale. Below the lattice scale, SM RGEs apply independently (standard physics, not derived here). The boundary condition protection is proved; the full renormalized matching requires accepting the Cl(3) centrality argument as the "or equivalent" clause in review.md. Per review.md: "bare theorem closed; renormalized matching still open."
 
 **Scripts:** `scripts/frontier_renormalized_yt.py` (33/34 PASS, 1 FAIL bounded), `scripts/frontier_renormalized_yt_wildcard.py` (31/31 PASS), `scripts/frontier_slavnov_taylor_completion.py` (26/26 PASS)
 
