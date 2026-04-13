@@ -34,6 +34,14 @@ than a full-unification victory claim. The present letter is organized around
 the retained theorem surface only. Bounded phenomenological bridges remain
 valuable, but they are not part of the core claim stack of this version.
 
+The present paper also uses a small explicit set of external inputs where the
+framework is not yet closed. Two of them are cosmological boundary conditions,
+`T_CMB = 2.7255 K` and `H_0 = 67.4 km/s/Mpc`, which specify the universe /
+epoch being matched. The third is different in kind: `v = 246 GeV` is the
+electroweak-scale boundary input, i.e. the unresolved hierarchy datum. This
+letter therefore treats the electroweak scale honestly as an external input
+rather than presenting it as already derived.
+
 The first retained structural result is weak-field gravity on the cubic
 lattice. On the current paper-safe surface, Poisson is the unique
 self-consistent local field equation in the audited operator family, and the

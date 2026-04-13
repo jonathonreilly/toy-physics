@@ -4,6 +4,20 @@ Use [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md) alongside
 this table. This file says what the paper may claim. The derivation /
 validation map says how each claim is evidenced and released.
 
+## External inputs
+
+The current paper conditions some phenomenology on three explicit external
+inputs:
+
+- cosmological boundary conditions:
+  - `T_CMB = 2.7255 K`
+  - `H_0 = 67.4 km/s/Mpc`
+- electroweak-scale boundary input:
+  - `v = 246 GeV`
+
+`v` should not be described as just another cosmological boundary condition.
+It is the unresolved electroweak-scale / hierarchy input.
+
 ## Retained core
 
 | Claim | Status | Placement | Authority | Primary runner |

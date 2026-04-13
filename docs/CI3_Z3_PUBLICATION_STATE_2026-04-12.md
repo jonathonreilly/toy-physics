@@ -12,6 +12,22 @@ This document is the current publication-facing state for that framework. It
 supersedes older narrower retain audits where they conflict with the present
 paper surface.
 
+## External inputs used in the current paper
+
+The framework sentence is ontological, not a claim that every phenomenological
+normalization is already closed. The current paper still conditions some
+downstream phenomenology on a small set of external inputs:
+
+- cosmological boundary conditions:
+  - `T_CMB = 2.7255 K`
+  - `H_0 = 67.4 km/s/Mpc`
+- electroweak-scale boundary input:
+  - `v = 246 GeV`
+
+The cosmological inputs specify which universe / epoch is being matched.
+The electroweak-scale input is different in kind: it is the unresolved
+hierarchy input, not merely a "where/when are we?" datum.
+
 ## Retained backbone
 
 The current retained backbone is:
@@ -117,6 +133,9 @@ See [FULL_CLAIM_LEDGER.md](publication/ci3_z3/FULL_CLAIM_LEDGER.md).
 For the flagship paper:
 
 - the main text should lead with the retained backbone
+- the external-input split must stay explicit:
+  - `T_CMB` and `H_0` are cosmological boundary conditions
+  - `v` is an electroweak-scale boundary input
 - the three live gates must remain explicitly open or bounded
 - no note or script may promote a bounded lane to `CLOSED` unless the theorem
   survives direct Codex review on this branch

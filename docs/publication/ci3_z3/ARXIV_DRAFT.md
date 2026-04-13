@@ -31,6 +31,14 @@ is already finished. The correct reading is that the retained backbone now lives
 on one exact discrete surface, while bounded and open lanes are reported with
 their actual audited status.
 
+The current paper also conditions some phenomenology on a small explicit set
+of external inputs. Two are cosmological boundary conditions,
+`T_CMB = 2.7255 K` and `H_0 = 67.4 km/s/Mpc`, which specify the universe /
+epoch being matched. The third is different in kind: `v = 246 GeV` is the
+electroweak-scale boundary input, i.e. the unresolved hierarchy datum. The
+framework closes the EWSB structure more strongly than the Standard Model, but
+it does not yet derive the absolute electroweak scale.
+
 ## 2. Retained Framework Surface
 
 ### 2.1 Weak-field gravity from the Poisson / Newton chain
