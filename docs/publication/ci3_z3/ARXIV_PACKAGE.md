@@ -8,6 +8,7 @@ explicit status labels.
 
 ## Include
 
+- [arXiv draft](./ARXIV_DRAFT.md)
 - full outline / manuscript source
 - retained notes and runners
 - bounded-lane notes for:

@@ -8,6 +8,7 @@
 
 ## What belongs in the letter
 
+- [Nature draft](./NATURE_DRAFT.md)
 - framework sentence
 - exact native `SU(2)`
 - graph-first structural `SU(3)`

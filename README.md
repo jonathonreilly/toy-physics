@@ -6,15 +6,17 @@ organized around the current `Cl(3)` on `Z^3` publication package.
 ## Start Here
 
 - Publication package:
-  [`docs/publication/ci3_z3/README.md`](/private/tmp/physics-publication-prep/docs/publication/ci3_z3/README.md)
+  [`docs/publication/ci3_z3/README.md`](docs/publication/ci3_z3/README.md)
 - Current paper state:
-  [`docs/CI3_Z3_PUBLICATION_STATE_2026-04-12.md`](/private/tmp/physics-publication-prep/docs/CI3_Z3_PUBLICATION_STATE_2026-04-12.md)
+  [`docs/CI3_Z3_PUBLICATION_STATE_2026-04-12.md`](docs/CI3_Z3_PUBLICATION_STATE_2026-04-12.md)
 - Paper outline:
-  [`docs/PAPER_OUTLINE_2026-04-12.md`](/private/tmp/physics-publication-prep/docs/PAPER_OUTLINE_2026-04-12.md)
+  [`docs/PAPER_OUTLINE_2026-04-12.md`](docs/PAPER_OUTLINE_2026-04-12.md)
 - Flagship contribution statement:
-  [`docs/FLAGSHIP_PAPER_CONTRIBUTION_STATEMENT_NOTE.md`](/private/tmp/physics-publication-prep/docs/FLAGSHIP_PAPER_CONTRIBUTION_STATEMENT_NOTE.md)
+  [`docs/FLAGSHIP_PAPER_CONTRIBUTION_STATEMENT_NOTE.md`](docs/FLAGSHIP_PAPER_CONTRIBUTION_STATEMENT_NOTE.md)
 - Retained runner map:
-  [`docs/CANONICAL_HARNESS_INDEX.md`](/private/tmp/physics-publication-prep/docs/CANONICAL_HARNESS_INDEX.md)
+  [`docs/CANONICAL_HARNESS_INDEX.md`](docs/CANONICAL_HARNESS_INDEX.md)
+- Work-history lane:
+  [`docs/work_history/README.md`](docs/work_history/README.md)
 
 ## Current Branch Reality
 

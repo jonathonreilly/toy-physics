@@ -12,15 +12,17 @@ Use this package instead of browsing raw repo chronology.
 - [Claims table](./CLAIMS_TABLE.md)
 - [Results index](./RESULTS_INDEX.md)
 - [Reproduce guide](./REPRODUCE.md)
+- [Nature draft](./NATURE_DRAFT.md)
+- [arXiv draft](./ARXIV_DRAFT.md)
 - [Publication card](./PUBLICATION_CARD.md)
 - [Impact map](./IMPACT_MAP.md)
 
 ## Core authority docs on this branch
 
-- [Publication state](/private/tmp/physics-publication-prep/docs/CI3_Z3_PUBLICATION_STATE_2026-04-12.md)
-- [Paper outline](/private/tmp/physics-publication-prep/docs/PAPER_OUTLINE_2026-04-12.md)
-- [Flagship contribution statement](/private/tmp/physics-publication-prep/docs/FLAGSHIP_PAPER_CONTRIBUTION_STATEMENT_NOTE.md)
-- [Gauge/matter closure gates](/private/tmp/physics-publication-prep/docs/GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md)
+- [Publication state](../../CI3_Z3_PUBLICATION_STATE_2026-04-12.md)
+- [Paper outline](../../PAPER_OUTLINE_2026-04-12.md)
+- [Flagship contribution statement](../../FLAGSHIP_PAPER_CONTRIBUTION_STATEMENT_NOTE.md)
+- [Gauge/matter closure gates](../../GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md)
 
 ## Current paper surface
 
