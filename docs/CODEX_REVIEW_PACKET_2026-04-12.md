@@ -660,6 +660,44 @@ alone nor together do they close the generation physicality gate.
 | frontier_generation_nielsen_ninomiya.py | 60 | 0 | Exact |
 | **TOTAL** | **449** | **16** | |
 
+---
+
+## Gate 1 Addendum: K-Theory Classification Attempt
+
+### Files changed
+- `scripts/frontier_generation_ktheory.py` -- PASS=21 FAIL=0
+- `docs/GENERATION_KTHEORY_NOTE.md`
+
+### Commands run
+```
+python3 scripts/frontier_generation_ktheory.py
+```
+
+### Exit code
+0
+
+### Claimed status: BOUNDED
+
+### Why this is not overstated
+
+The script attempts equivariant K-theory classification K_{Z_3}(T^3)
+of the Z_3 taste sectors and finds a clean obstruction: the naive
+taste Z_3 permutation P is not a symmetry of the Bloch Hamiltonian
+H(k) in the Kawamoto-Smit basis.  Specifically, P does not permute
+the KS gamma matrices, and P H(k) P^{-1} != H(sigma(k)).
+
+Even if the Z_3 were a symmetry, K_{Z_3}(T^3) = Z^{12} would give
+invariants (rank, Chern numbers) per sector.  All Chern numbers
+vanish for the free fermion, so the only content would be (rank,
+irrep label) -- identical to existing group-theory results.
+
+The script does not claim to close any gate.  It documents the
+obstruction honestly and confirms generation physicality remains
+open.  This is a clean negative result that narrows the space of
+possible approaches.
+
+---
+
 The 16 FAILs are all documented, honest, and diagnostic (not theorem failures):
 - Gate 1: 6 FAILs in main script are honest obstructions that led to the gap-closure work; 1 FAIL is the hierarchy shortfall before synthesis; 3 FAILs in axiom-first script are honest obstructions (eta phase breaking, lattice-is-physical axiom, Z_2 breaking parameter)
 - Gate 2: 2 FAILs in original script are the gaps that were subsequently closed
