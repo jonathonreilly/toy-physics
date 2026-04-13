@@ -43,36 +43,41 @@ If any of those fail, the lane stays `bounded` or `open`.
 ## Current priority order
 
 1. **Gravity extension beyond the retained weak-field core**
-   - already retained: weak-field Newton law on `Z^3` plus the narrowed
-     Poisson uniqueness theorem inside the translation-invariant,
-     self-adjoint, nearest-neighbor operator class
+   - already retained: weak-field Newton law on `Z^3`
+   - new useful work:
+     - `GRAVITY_CLEAN_DERIVATION_NOTE.md`
+     - `GRAVITY_FULL_SELF_CONSISTENCY_NOTE.md`
+   - these significantly strengthen the weak-field gravity writeup
    - open for promotion: broader gravity bundle only
    - target items:
      - WEP / time dilation / conformal metric / geodesic / light bending
      - strong-field / frozen-star / echo package
    - do not spend time re-proving Newton unless needed for a new closure step
-   - the current load-bearing weak point is the full self-consistency
-     `=>` Poisson step on the full framework surface
-   - the new Poisson uniqueness theorem is good, but it only closes the
-     narrowed TI + self-adjoint + nearest-neighbor family
+   - the current load-bearing weak point is how strongly you phrase the full
+     self-consistency `=>` Poisson step on the full framework surface
+   - the new clean/full-self-consistency notes are acceptable as a strong
+     weak-field presentation only if they carry the closure-condition status
+     honestly
    - a finite-family sweep or mismatch residual is not enough to call Poisson
      uniqueness “derived for all local operators”
-   - if you cannot prove the universal uniqueness theorem, keep the broader
-     Poisson-forcing claim bounded and build the rest of the gravity bundle
-     honestly on top of the narrowed exact sub-result
+   - if you cannot defend `L^{-1} = G_0` as the framework’s own closure
+     condition cleanly, do not call the whole weak-field chain “zero bounded”
+   - broad gravity is still separate and still open
 
 2. **`S^3` compactification / topology closure**
-   - the latest `S^3` recognition work is not closure
-   - `S3_RECOGNITION_NOTE.md` is only a bounded strengthening around a worked
-     `R = 2` example
-   - `frontier_s3_recognition.py` only runs the full recognition path for
-     `R = 2`
-   - do not use that note/runner as authority that the full `S^3` lane is
-     closed
-   - if you want to advance this lane, either:
-     - generalize the theorem surface beyond `R = 2`, or
-     - narrow the claim explicitly to the worked complex and keep the lane
-       bounded
+   - new useful work:
+     - `S3_GENERAL_R_DERIVATION_NOTE.md`
+     - `S3_RECOGNITION_GENERAL_NOTE.md`
+     - `S3_SHELLABILITY_NOTE.md`
+   - `S3_GENERAL_R_DERIVATION_NOTE.md` is a real strengthening and should be
+     the main authority note for this lane
+   - however the full gate is still not closed because compactification
+     uniqueness / framework-level selection remains open
+   - `S3_RECOGNITION_GENERAL_NOTE.md` is bounded computational support
+   - do not use `S3_RECOGNITION_NOTE.md` / `frontier_s3_recognition.py` as the
+     main authority anymore except as old `R = 2` support
+   - do not say “the full `S^3` lane is closed” unless uniqueness/selection is
+     explicitly discharged too
 
 3. **DM relic mapping**
    - the latest flagship note is better, but the paper bar is still stricter
@@ -180,11 +185,12 @@ Right now the packet is still not authority if it says:
      actually closes a sharp theorem surface
 
 1b. For `S^3` specifically:
-   - do not present an `R = 2` computation as a general compactification
-     theorem
-   - do not label `S3_RECOGNITION_NOTE.md` or `frontier_s3_recognition.py` as
-     full lane closure unless the claim is explicitly narrowed to the worked
-     complex and the packet is updated to match
+   - do not present an `R = 2` or finite-`R` recognition run as the general
+     theorem itself
+   - `S3_GENERAL_R_DERIVATION_NOTE.md` is the main theorem note
+   - `S3_RECOGNITION_GENERAL_NOTE.md` is bounded computational support
+   - the remaining live issue is compactification uniqueness / physical
+     selection, not the old `R = 2` limitation
 
 1c. For DM specifically:
    - do not label Stosszahlansatz, Boltzmann coarse-graining, or the

@@ -121,6 +121,22 @@ Paper-safe wording:
 > weak-field gravity core retained; broader GR-signature and strong-field
 > bundle still bounded.
 
+Latest gravity update:
+
+- [GRAVITY_CLEAN_DERIVATION_NOTE.md](/Users/jonreilly/Projects/Physics/.claude/worktrees/youthful-neumann/docs/GRAVITY_CLEAN_DERIVATION_NOTE.md)
+  and
+  [GRAVITY_FULL_SELF_CONSISTENCY_NOTE.md](/Users/jonreilly/Projects/Physics/.claude/worktrees/youthful-neumann/docs/GRAVITY_FULL_SELF_CONSISTENCY_NOTE.md)
+  materially strengthen the weak-field core.
+- The real improvement is that the Poisson step is now written as an algebraic
+  closure argument rather than only as a finite-family sweep.
+- The remaining review issue is precise:
+  - do not silently treat `L^{-1} = G_0` as a proved theorem of pure
+    mathematics
+  - it is the framework’s closure condition for self-consistency
+- Safe read:
+  - weak-field gravity core is in strong paper shape
+  - broad gravity is still not closed
+
 ### 2. `S^3` compactification / topology closure
 
 Current status:
@@ -142,6 +158,20 @@ Why still not promoted:
 Paper-safe wording:
 
 > `S^3` is a strengthened bounded topology lane, not yet retained closure.
+
+Latest `S^3` update:
+
+- [S3_GENERAL_R_DERIVATION_NOTE.md](/Users/jonreilly/Projects/Physics/.claude/worktrees/youthful-neumann/docs/S3_GENERAL_R_DERIVATION_NOTE.md)
+  is the strongest topology note so far.
+- It gives a real general-`R` theorem chain for the standard cone-capped
+  family and is much better than the old `R=2`-only recognition note.
+- However, it still does not close the full publication gate because its own
+  `What remains open` section keeps:
+  - uniqueness of compactification
+  - framework-level selection of this compactification
+- So:
+  - acceptable as a strong theorem for the chosen cone-cap family
+  - not yet acceptable as “the full `S^3` compactification lane is closed”
 
 ### 3. DM relic mapping
 
@@ -245,10 +275,16 @@ These files are not reliable if they conflict with the audited state:
 - `docs/OVERNIGHT_WORK_SUMMARY.md`
 - `docs/UNIFIED_GATE_CLOSURE_ARGUMENT.md`
 - `docs/CODEX_REVIEW_PACKET_2026-04-12.md` if it re-promotes bounded lanes
+- `docs/CODEX_REVIEW_PACKET_2026-04-12.md` in its current state if it says:
+  - only three live gates remain
+  - `S^3` is closed
+  - gravity is no longer a live publication-critical lane
 - any `*_FULL_CLOSURE_*` note for `S^3`, DM, `y_t`, or gauge couplings
 - any note that says “Born rule derived” instead of exact `I_3 = 0`
 - `scripts/frontier_gravity_poisson_derived.py` if it is used as proof that
   Poisson uniqueness is theorem-grade without a universal uniqueness proof
+- `docs/S3_RECOGNITION_NOTE.md` and `scripts/frontier_s3_recognition.py` if
+  they are used as anything more than bounded `R=2` support
 - `docs/GRAVITY_COMPLETE_CHAIN.md` if it is used to flatten the bounded
   Poisson-forcing step into an all-exact gravity derivation
 - `docs/GR_SIGNATURES_DERIVED_NOTE.md` if it is used to promote geodesic / GW
@@ -271,6 +307,8 @@ Do not say:
 Also do not say:
 
 - Poisson uniqueness fully derived from a finite operator-family sweep
+- the full self-consistency `=>` Poisson step is a pure theorem with zero
+  framework-level closure condition
 - geodesic / GW sub-bundle fully derived without noting the conformal-metric,
   WKB, or d'Alembertian-promotion assumptions
 - strong-field / frozen-star / echo package is part of the retained flagship
