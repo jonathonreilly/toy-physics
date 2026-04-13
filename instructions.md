@@ -228,6 +228,27 @@ For each touched lane include:
     - `This is exactly the SM generation structure`
     It is a bounded commutant-inequivalence result, not a closed generation theorem.
 
+19. Latest Codex view on generation:
+    - the new axiom-boundary work is a REAL upgrade
+    - safe paper claim:
+      `generation physicality is closed conditional on the framework's
+      physical-lattice assumption`
+    - interpret that carefully:
+      this is not best presented as a new ad hoc axiom added later.
+      It is the physical interpretation already built into the framework's
+      working axiom (`Cl(3)` on `Z^3` as the physical substrate, not a mere
+      regulator).
+    - not safe:
+      `generation is unconditionally closed`
+
+20. Latest Codex view on the unified A5 story:
+    - acceptable for generation if phrased as the framework's
+      physical-lattice assumption, not as a newly introduced standalone axiom
+    - NOT yet acceptable as a full collapse of `S^3`, DM, and renormalized
+      `y_t` to `only A5` / `only the physical-lattice assumption`
+    because those lanes still retain additional mathematical or imported-physics
+    gaps in their own notes.
+
 ## Immediate tasking
 
 Start with the highest-value open gate from `review.md`.

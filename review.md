@@ -212,6 +212,17 @@ fix them on the pushed Claude branch:
 14. `frontier_generation_3fails_investigation.py` is useful bounded support,
     but phrases like `this is exactly the SM generation structure` are still
     too strong. Keep it as commutant-inequivalence support, not closure.
+15. `GENERATION_AXIOM_BOUNDARY_THEOREM_NOTE.md` is a real upgrade. The current
+    safe reading is: generation physicality is closed conditional on the
+    framework's physical-lattice assumption. That should be presented as part
+    of the framework's working axiom/interpretation, not as a newly added
+    standalone postulate discovered late in the project. The remaining
+    non-derived content is that framework assumption itself, not an additional
+    missing theorem.
+16. `UNIFIED_AXIOM_BOUNDARY_NOTE.md` currently overstates the same-A5 collapse
+    for all four lanes. It is acceptable for generation, but not yet for
+    `S^3`, DM relic mapping, or renormalized `y_t`, because those notes still
+    retain extra mathematical or imported-physics gaps.
 
 No active structural `SU(3)` objection is live right now.
 
@@ -250,6 +261,7 @@ Additional honest bounded additions from the latest Claude batch:
 - `docs/RP3_VS_S3_NOTE.md`
 - `docs/G_BARE_SELF_DUALITY_NOTE.md`
 - `docs/GENERATION_PHYSICALITY_DEEP_ANALYSIS.md`
+- `docs/GENERATION_AXIOM_BOUNDARY_THEOREM_NOTE.md`
 - `docs/GAUGE_UNIVERSALITY_ALGEBRAIC_DERIVATION.md`
 - `docs/MASS_HIERARCHY_HONEST_ASSESSMENT_NOTE.md`
 - `docs/REMAINING_CRITIQUE_TARGETS_2026-04-12.md`
@@ -266,6 +278,7 @@ These are useful as:
 - a sharp negative result on the little-group route to generation physicality
 - a sharp rooting obstruction that still stops short of full generation closure
 - a bounded commutant-inequivalence result that strengthens the generation case
+- a sharp axiom-boundary theorem showing generation closes conditional on A5
 - a bounded correction that removes the RP^3 false lead without closing `S^3`
 - an honest negative result that self-duality does not elevate `g_bare = 1`
 - a good map of the exact logical gap in generation physicality
