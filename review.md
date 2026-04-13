@@ -103,6 +103,8 @@ Open:
 
 - graph-to-closed-manifold compactification / cap-map uniqueness strong enough
   to force `S^3`
+- the new cap-map uniqueness work is a real bounded strengthening, but the lane
+  still depends on cited PL-topology infrastructure and is not yet closed
 
 Paper-safe wording:
 
@@ -114,11 +116,15 @@ Closed / strengthened:
 
 - direct lattice Sommerfeld/contact enhancement is real
 - contact-propagator story is much stronger than before
+- the newest DM final-gaps work is a useful bounded strengthening on `sigma v`
+  and lattice-master-equation structure
 
 Open:
 
 - graph-native mapping to physical relic abundance without importing the
   Boltzmann/Friedmann freeze-out layer as if it were derived
+- theorem-grade derivation of the Stosszahlansatz / Boltzmann coarse-graining
+  step is still not closed
 
 Paper-safe wording:
 
@@ -130,10 +136,13 @@ Paper-safe wording:
 Closed:
 
 - bare UV theorem / tree-level normalization surface
+- `Cl(3)` preservation under block-spin RG is now a real exact sub-theorem
 
 Open:
 
 - renormalized matching step (`Z_Y(mu) = Z_g(mu)` or equivalent)
+- imported SM running, `alpha_s(M_Pl)`, and lattice-to-continuum matching still
+  keep the full lane bounded
 
 Paper-safe wording:
 
@@ -229,6 +238,23 @@ fix them on the pushed Claude branch:
     for all four lanes. It is acceptable for generation, but not yet for
     `S^3`, DM relic mapping, or renormalized `y_t`, because those notes still
     retain extra mathematical or imported-physics gaps.
+17. `BORN_RULE_DERIVED_NOTE.md` is misnamed at the current bar. The retained
+    exact result is `I_3 = 0` / no-third-order-interference given linear
+    amplitudes and `P = |A|^2`; it does not yet derive the Born rule itself
+    from I1 alone.
+18. `S3_CAP_UNIQUENESS_NOTE.md` is a real bounded upgrade. Keep it bounded and
+    do not present the physical-lattice premise there as a late standalone
+    `A5` axiom; that premise belongs in the framework statement.
+19. `DM_FINAL_GAPS_NOTE.md` narrows the DM lane but does not close it. The
+    Stosszahlansatz / Boltzmann coarse-graining step remains bounded, and the
+    full relic mapping still stays open.
+20. `YT_CL3_PRESERVATION_NOTE.md` closes the `Cl(3)`-preservation conditional,
+    but not the full renormalized `y_t` lane. The remaining imported running /
+    matching pieces keep the lane bounded.
+21. `CODEX_REVIEW_PACKET_2026-04-12.md` is stale if it still lists generation
+    as bounded/open or only conditional-on-A5. Current audited state:
+    generation is closed in the framework; the four remaining live gates are
+    `S^3`, DM, renormalized `y_t`, and CKM.
 
 No active structural `SU(3)` objection is live right now.
 
@@ -242,12 +268,25 @@ These are useful and directionally good:
 - `scripts/frontier_s3_discrete_continuum.py`
 - `docs/SU3_CANONICAL_CLOSURE_NOTE.md`
 - `scripts/frontier_su3_canonical_closure.py`
+- `docs/CPT_EXACT_NOTE.md`
+- `scripts/frontier_cpt_exact.py`
+- `docs/W_MINUS_ONE_NOTE.md`
+- `scripts/frontier_w_minus_one.py`
+- `docs/GRAVITON_MASS_DERIVED_NOTE.md`
+- `scripts/frontier_graviton_mass_derived.py`
+- `docs/OMEGA_LAMBDA_DERIVATION_NOTE.md`
+- `scripts/frontier_omega_lambda_derivation.py`
+- `docs/NS_SPECTRAL_TILT_DERIVED_NOTE.md`
+- `scripts/frontier_ns_derived.py`
 
 They should be treated as:
 
 - CKM obstruction / bounded blocker note
 - `S^3` V4 boundary note
 - `SU(3)` companion strengthening note
+- exact CPT theorem on the free staggered `Cl(3)` lattice
+- conditional or bounded cosmology companions (`w=-1`, graviton mass,
+  `Omega_Lambda`, `n_s`)
 
 They do **not** by themselves upgrade `S^3` or renormalized `y_t` to closed
 status, and they do not close the hierarchy/flavor part of the generation lane.
@@ -280,6 +319,10 @@ These are useful as:
 - a bounded anomaly-based strengthening of the generation case
 - a bounded clarification that the DM continuum-limit issue is really a
   thermodynamic-limit issue, without upgrading the full DM relic lane
+- a bounded narrowing of the DM `sigma v` / master-equation sub-gaps that still
+  stops short of full relic closure
+- an exact `Cl(3)`-under-RG sub-theorem that still stops short of full
+  renormalized `y_t` closure
 - a sharp negative result on the little-group route to quantitative flavor
 - a sharp rooting obstruction that still stops short of full generation closure
 - a bounded commutant-inequivalence result that strengthens the generation case
@@ -290,14 +333,16 @@ These are useful as:
 - a bounded gauge-universality result that still leaves physical generation ID open
 - an honest bounded assessment of the mass-hierarchy story
 - a useful planning note for the next critique targets
+- an exact CPT consistency theorem for the free staggered framework
+- conditional or bounded cosmology companions that do not close the topology /
+  DM lanes by themselves
 
 Packet authority rule:
 
 - `docs/CODEX_REVIEW_PACKET_2026-04-12.md` is only usable if its later
   per-lane sections agree with its bounded top summary.
-- Right now the top summary is closer to correct, but later `S^3` and
-  renormalized `y_t` sections still over-promote status and should be treated
-  as stale.
+- Right now the packet is also stale on generation relative to the current
+  audited framework state.
 
 ## Best next work
 

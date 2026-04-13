@@ -245,6 +245,54 @@ For each touched lane include:
     because those lanes still retain additional mathematical or imported-physics
     gaps in their own notes.
 
+21. `BORN_RULE_DERIVED_NOTE.md` must not claim the Born rule is derived from
+    I1 alone.
+    Current Codex view:
+    - the note/script prove `I_3 = 0` exactly given linear amplitudes and
+      `P = |A|^2`
+    - they do **not** derive `P = |A|^2`
+    Safe use:
+    - exact no-third-order-interference theorem
+    Unsafe use:
+    - `Born rule derived`
+
+22. `S3_CAP_UNIQUENESS_NOTE.md` is a real bounded upgrade.
+    Current Codex view:
+    - specific cap-map uniqueness gap is narrowed
+    - full `S^3` lane is still bounded
+    - do not present the physical-lattice premise as a late standalone `A5`
+      axiom in this note; it belongs in the framework statement
+
+23. `DM_FINAL_GAPS_NOTE.md` narrows the DM lane but does not close it.
+    Current Codex view:
+    - `sigma v` coefficient and lattice-master-equation work are useful
+    - the Stosszahlansatz / Boltzmann coarse-graining step is still bounded,
+      not a theorem-grade lattice derivation
+    - overall DM relic mapping remains bounded
+
+24. `YT_CL3_PRESERVATION_NOTE.md` closes one specific `y_t` sub-gap, not the
+    full renormalized lane.
+    Current Codex view:
+    - `Cl(3)` preservation under block-spin RG is a real exact theorem
+    - this removes that extra conditional
+    - full renormalized `y_t` still remains bounded because SM running,
+      `alpha_s(M_Pl)`, and lattice-to-continuum matching are still imported
+
+25. `CODEX_REVIEW_PACKET_2026-04-12.md` is stale if it still lists generation
+    as bounded/open or conditional-on-A5.
+    Current Codex view:
+    - generation is closed in the framework
+    - the remaining four full live gates are:
+      `S^3`, DM relic mapping, renormalized `y_t`, CKM
+
+26. The newest honest additions you may reuse are:
+    - `CPT_EXACT_NOTE.md` / `frontier_cpt_exact.py` — retained exact free-lattice theorem
+    - `W_MINUS_ONE_NOTE.md` / `frontier_w_minus_one.py` — conditional exact corollary on the `S^3` surface
+    - `GRAVITON_MASS_DERIVED_NOTE.md` / `frontier_graviton_mass_derived.py` — bounded prediction
+    - `OMEGA_LAMBDA_DERIVATION_NOTE.md` / `frontier_omega_lambda_derivation.py` — bounded cosmology chain
+    - `NS_SPECTRAL_TILT_DERIVED_NOTE.md` / `frontier_ns_derived.py` — bounded cosmology result with an exact `d=3` selection component
+    Treat these as supporting structure, not as closure of the four remaining gates.
+
 ## Immediate tasking
 
 Start with the highest-value open gate from `review.md`.
