@@ -37,6 +37,7 @@ Retained backbone:
 
 - exact native `Cl(3)` / `SU(2)`
 - graph-first structural `SU(3)`
+- anomaly-forced `3+1`
 - full-framework one-generation closure
 - three-generation matter structure in the framework
 - exact `I_3 = 0` theorem on the Hilbert surface

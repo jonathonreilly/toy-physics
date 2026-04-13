@@ -46,6 +46,11 @@ surface the graph fibers carry weak `su(2)`, the residual cubic swap produces
 the `3 \oplus 1` split, and the joint commutant carries structural
 `su(3) \oplus u(1)`.
 
+On that same selected-axis surface, the framework also retains left-handed
+`+1/3` / `-1` charge matching. The abelian factor should still be described
+carefully outside the anomaly-complete one-generation branch; the safe statement
+here is retained left-handed matching, not unrestricted hypercharge closure.
+
 ### 2.3 Anomaly-forced `3+1`
 
 The spatial graph by itself fixes the left-handed surface but does not provide

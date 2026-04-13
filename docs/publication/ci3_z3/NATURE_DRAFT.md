@@ -1,4 +1,4 @@
-# Gravity, Gauge Structure, and Matter from a Cubic `Cl(3)` Lattice
+# Gauge Structure, `3+1`, and Matter from a Cubic `Cl(3)` Lattice
 
 ## Abstract
 
@@ -39,6 +39,9 @@ fibers carry weak `su(2)`, the residual swap of the remaining two axes yields a
 `3 \oplus 1` split, and the joint commutant carries structural
 `su(3) \oplus u(1)` [Fig. 1, Fig. 2]. This graph-first closure is the correct
 paper-safe replacement for the older commutant-only presentation.
+On the same selected-axis surface, the abelian factor carries retained
+left-handed `+1/3` / `-1` charge matching, while full anomaly-complete
+hypercharge identification remains absorbed into the one-generation closure.
 
 The matter story is now full-framework rather than purely spatial. The spatial
 graph fixes the left-handed gauge and matter surface. Anomaly analysis then
@@ -55,8 +58,7 @@ escape route in which the triplet sectors are dismissed as disposable taste
 artifacts is no longer available. The retained paper claim is therefore not
 merely that family-like structure appears, but that the framework carries a
 three-generation matter structure [Fig. 4]. What remains outside the retained
-core is narrower: detailed `1+1+1` hierarchy, the precise role of the two
-singlets, and quantitative CKM closure.
+core is narrower: detailed `1+1+1` hierarchy and quantitative CKM closure.
 
 Two exact companion theorems strengthen this surface without widening it. The
 first is exact vanishing of the Sorkin parameter `I_3` on the Hilbert surface.
