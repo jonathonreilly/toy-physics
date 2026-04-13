@@ -124,6 +124,10 @@ So gravity-companion cleanup should only downgrade stale wording, not promote.
 Current strongest useful work:
 
 - `DM_CLEAN_DERIVATION_NOTE.md`
+- `DM_RELIC_BRIDGE_NOTE.md`
+- `ETA_FROM_FRAMEWORK_NOTE.md`
+- `BARYOGENESIS_NOTE.md`
+- `EWPT_STRENGTH_NOTE.md`
 - `DM_STOSSZAHLANSATZ_THEOREM_NOTE.md`
 - `DM_INVARIANT_BRIDGE_NOTE.md`
 - `DM_K_INDEPENDENCE_NOTE.md`
@@ -131,23 +135,26 @@ Current strongest useful work:
 
 Current blockers:
 
-- the live blocker is now `eta`
-  - numerator / cross-section side is much stronger
-  - denominator still imports baryon abundance through baryogenesis
+- the baryogenesis chain is now much narrower than before
+  - `J_Z3`, `v(T_c)/T_c`, and `Gamma_sph/T^4` are already the strongest part
+    of the chain
+- the live blocker is now the transport sector behind `eta`
+  - denominator still imports baryon abundance through `v_w`, `L_w*T`, `D_q*T`
 - relic-ratio / cosmological bridge is therefore still not closed
 - `g = 1` and `k = 0` remain bounded framework inputs where used
 
 Paper-safe read:
 
 > Structural DM inputs are materially stronger, but the full relic mapping
-> remains bounded because `eta` is not yet derived from the framework.
+> remains bounded because `eta` is still conditional on imported transport
+> coefficients.
 
 Best attack:
 
-1. derive `v(T_c)/T_c` nonperturbatively on the framework surface
-2. derive the baryogenesis transport / CP-source prefactor from the `Z_3`
-   phase structure
-3. only then promote `eta` and the full relic ratio
+1. derive `L_w*T` from the existing framework `V_eff` / bounce profile
+2. derive `D_q*T` from kinetic theory / Kubo on the framework coupling surface
+3. derive `v_w` from hydrodynamics only if the first two are not enough
+4. then promote `eta` and the full relic ratio
 
 ### 2. Renormalized `y_t`
 
@@ -158,8 +165,9 @@ Current safe state:
 - the Wilsonian route is materially better than before
   - Feshbach is now verified on the actual `Cl(3)` / `Z^3` Hamiltonian
   - the one-loop bookkeeping bug (`b_2`) is corrected
+  - the lattice matching coefficient is already computed at sub-percent scale
 - therefore still bounded:
-  - interacting low-energy EFT identification on the real Hamiltonian surface
+  - interacting boundary conversion on the real Hamiltonian surface
   - `alpha_s(M_Pl)` / boundary chain
   - lattice / V-scheme to `\overline{MS}` matching
   - thresholded running down to `M_Z`
@@ -167,15 +175,15 @@ Current safe state:
 Paper-safe read:
 
 > The UV theorem surface is strong, but the remaining issue is now a real
-> matching / scheme problem, not the old toy-model objection.
+> boundary / matching / scheme problem, not the old toy-model objection.
 
 Best attack:
 
-1. extend the EFT identification from free-fermion operator content to the
-   interacting gauge/Higgs surface actually needed for `y_t`
-2. compute the lattice/V-scheme to `\overline{MS}` matching coefficient for
-   `y_t` and `g_s` at `M_Pl`
+1. do not re-prove Feshbach or the sub-percent matching coefficient
+2. compute the actual lattice/V-scheme to `\overline{MS}` boundary conversion
+   for `g_s` and `y_t` at `M_Pl`
 3. rerun the full thresholded 2-loop chain with that boundary
+4. isolate any remaining discrepancy as a small boundary residual
 
 ### 3. CKM / quantitative flavor closure
 
@@ -183,6 +191,9 @@ Current safe state:
 
 - route pruning and bounded structural flavor notes are useful
 - the old Higgs `Z_3` universality blocker is no longer the main issue
+- the exact `2x2` `2-3` block route is already done
+- the ratio route is already done
+- the full `3x3` `V_ub` route is already done as a bounded result
 - still open:
   - sharp `V_cb`
   - sharp `V_ub`
@@ -201,15 +212,14 @@ Current best reading:
 
 Preferred routes:
 
-1. derive `V_cb` from the exact `2-3` NNI formula with explicit
-   `c_23^u`, `c_23^d`, `delta_23`
-2. derive the ratio `c_23^u/c_23^d` analytically from common overlap cancellation
-   plus sector-dependent EW / radiative weights
+1. use the exact `V_cb` formula already on branch as the baseline
+2. use the ratio route only as an input reduction step, not as the closure
 3. derive the absolute `S_23` overlap scale analytically from the continuum /
    Symanzik taste-splitting machinery if possible
 4. derive `c_13` and the relevant phase structure for `V_ub`
 5. use invariant/Jarlskog relations built from derived quantities, not PDG angles,
    only as a consistency layer after `S_23` / `c_13` sharpen
+
 Only if those fail cleanly should the lane be treated as compute-limited.
 
 Paper-safe read:

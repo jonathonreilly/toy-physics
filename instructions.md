@@ -133,23 +133,32 @@ language. Exact blockers to gravity-companion promotion:
 **Primary files**
 
 - `docs/DM_CLEAN_DERIVATION_NOTE.md`
+- `docs/DM_RELIC_BRIDGE_NOTE.md`
+- `docs/ETA_FROM_FRAMEWORK_NOTE.md`
+- `docs/BARYOGENESIS_NOTE.md`
+- `docs/EWPT_STRENGTH_NOTE.md`
 - `docs/DM_STOSSZAHLANSATZ_THEOREM_NOTE.md`
 - `docs/DM_INVARIANT_BRIDGE_NOTE.md`
 - `docs/DM_K_INDEPENDENCE_NOTE.md`
 - `scripts/frontier_dm_stosszahlansatz.py`
 - `scripts/frontier_dm_graph_native.py`
 - `scripts/frontier_dm_k_independence.py`
+- `scripts/frontier_eta_from_framework.py`
+- `scripts/frontier_baryogenesis.py`
+- `scripts/frontier_ewpt_gauge_closure.py`
 
 **Current blockers**
 
-1. the live blocker is now `eta`, not the old coupling-identity objection
-   - `sigma_v` as a direct observable of `H` is useful
+1. do **not** redo the pieces that are already in
+   - `sigma_v` as a direct observable of `H` is already the right surface
+   - `J_Z3`, `v(T_c)/T_c`, and `Gamma_sph/T^4` are already derived on the
+     current branch
    - the invariant-bridge note correctly narrows the old normalization gap
-   - neither closes `R = Omega_DM / Omega_b` because the denominator still
-     uses imported baryon abundance
 2. relic bridge is now:
-   - numerator largely derived
-   - denominator still imported through baryogenesis / `eta`
+   - numerator derived
+   - baryogenesis chain structurally derived except for the transport sector
+   - denominator still imports `eta` through three transport quantities:
+     `v_w`, `L_w*T`, `D_q*T`
 3. Stosszahlansatz is now a strong sub-result, but not the full lane
    - do not keep re-fighting the same coarse-graining objection
    - the remaining issue is not “does factorization exist?” but “can the full
@@ -181,11 +190,14 @@ language. Exact blockers to gravity-companion promotion:
 
 **Preferred attack order**
 
-1. derive the electroweak phase-transition strength `v(T_c)/T_c`
-   nonperturbatively on the framework surface
-2. derive the baryogenesis transport / CP-source prefactor from the `Z_3`
-   phase structure rather than parameterizing it
-3. only after that, promote `eta` and then the full relic ratio
+1. do **not** spend more time trying to close `v(T_c)/T_c`
+   - that step is already the strongest part of the baryogenesis chain
+2. derive `L_w*T` from the bounce/profile equation using the existing
+   framework `V_eff`
+3. derive `D_q*T` from kinetic theory / Kubo on the framework coupling surface
+4. derive `v_w` from hydrodynamics only if needed last
+5. once the transport sector is closed or tightly bounded, update `eta`
+   and then the full relic ratio
 
 ### Target B: Renormalized `y_t`
 
@@ -196,10 +208,14 @@ language. Exact blockers to gravity-companion promotion:
 **Primary files**
 
 - `docs/YT_FLAGSHIP_CLOSURE_NOTE.md`
+- `docs/WILSONIAN_EFT_DERIVATION_NOTE.md`
+- `docs/YT_MATCHING_COMPUTED_NOTE.md`
 - `docs/YT_CL3_PRESERVATION_NOTE.md`
 - `docs/RENORMALIZED_YT_THEOREM_NOTE.md`
 - `scripts/frontier_yt_cl3_preservation.py`
 - `scripts/frontier_yt_matching_coefficient.py`
+- `scripts/frontier_yt_matching_computed.py`
+- `scripts/frontier_wilsonian_eft.py`
 - `scripts/frontier_yt_full_closure.py`
 
 **Current blockers**
@@ -209,13 +225,20 @@ language. Exact blockers to gravity-companion promotion:
      Hamiltonian
    - `b_2 = 19/6` bookkeeping is corrected
    - do not spend more time re-litigating those fixed points
-2. the live blocker is now the real low-energy matching bridge
+2. do **not** redo solved sub-steps
+   - `Cl(3)` preservation under RG is already the right surface
+   - Feshbach on the actual Hamiltonian is already verified
+   - the 1-loop bookkeeping bug is fixed
+   - the lattice matching coefficient itself is already narrowed to
+     sub-percent scale
+3. the live blocker is now the real low-energy matching bridge
    - interacting gauge/Higgs operator content on the actual framework surface
    - thresholded running from `M_Pl` to `M_Z`
-   - lattice / V-scheme to `\\overline{MS}` matching for `y_t` and `g_s`
-3. `alpha_s(M_Pl)` remains bounded as a chain, not as a free parameter
+   - lattice / V-scheme to `\\overline{MS}` boundary conversion for `g_s`
+     and `y_t`
+4. `alpha_s(M_Pl)` remains bounded as a chain, not as a free parameter
    - the issue is scheme/matching precision, not missing conceptual structure
-4. the lane is now a quantitative precision problem
+5. the lane is now a quantitative precision problem
    - if you can compute the matching cleanly, the lane likely closes
    - if not, keep it sharply bounded and stop calling it conceptually open
 
@@ -241,11 +264,12 @@ language. Exact blockers to gravity-companion promotion:
 
 **Preferred attack order**
 
-1. extend the Wilsonian note from free-fermion operator content to the actual
-   interacting gauge/Higgs matching surface needed for `y_t`
-2. compute the lattice/V-scheme to `\\overline{MS}` matching coefficient for
-   `y_t` and `g_s` at `M_Pl`
-3. rerun the full thresholded 2-loop chain and measure the residual honestly
+1. do **not** re-prove Feshbach or the sub-percent matching coefficient
+2. compute the actual boundary conversion from the framework lattice/V-scheme
+   surface to `\\overline{MS}` at `M_Pl`
+3. run the full thresholded 2-loop chain from that boundary
+4. isolate any remaining discrepancy as a small boundary/scheme residual,
+   not a vague continuum objection
 
 ### Target C: CKM / flavor
 
@@ -264,11 +288,15 @@ language. Exact blockers to gravity-companion promotion:
 1. Higgs `Z_3` universality is no longer the main conceptual blocker
    - the latest honest read is that the Higgs VEV is democratic, so the old
      universality obstruction should not be used as the primary stop sign
-2. the real remaining blocker is quantitative closure
+2. do **not** redo the solved structural pieces
+   - the exact `2x2` `2-3` block diagonalization is already done
+   - the ratio route `c_23^u/c_23^d` is already done
+   - the full `3x3` NNI `V_ub` route is already done as a bounded result
+3. the real remaining blocker is quantitative closure
    - absolute `2-3` overlap scale `S_23` is still not derived sharply
    - `c_13` / phase control is still not sharp enough for `V_ub`
    - `V_cb` and `V_ub` remain the actual publication blockers
-3. current best reading of the gap
+4. current best reading of the gap
    - the ratio route is useful but too small by itself
    - invariants are consistency checks, not closure
    - the highest-value missing derivations are now:
@@ -279,18 +307,15 @@ language. Exact blockers to gravity-companion promotion:
 **Preferred execution routes**
 
 1. exact `V_cb` route from the full `2-3` NNI formula
-   - stop leaning on the crude linear `m_s/m_b - m_c/m_t` estimate as the main
-     quantitative route
-   - work from the full `2x2` `2-3` block diagonalization with
-     `c_23^u`, `c_23^d`, and `delta_23` explicit
-   - prove that only a modest `O(10%)` asymmetry is needed to land near PDG
+   - this step is already done; use it as the baseline and do not redo the
+     old crude mass-ratio estimate work
+   - the remaining task is not the formula, but the first-principles inputs
+     to that formula
 
 2. derive the **ratio** `c_23^u/c_23^d`, not the absolute coefficients
-   - factor the coefficient into common lattice overlap times sector-dependent
-     EW / radiative weighting
-   - if the common overlap cancels, the remaining up/down asymmetry may be
-     derivable without cluster-scale production
-   - this is the best current non-cluster route
+   - this step is also already done; use it and move on
+   - do not spend more time re-deriving a 1-5% EW asymmetry unless you are
+     materially changing the result
 
 3. derive the **absolute** `S_23` overlap scale analytically
    - do not treat cluster compute as the first choice
