@@ -278,19 +278,41 @@ For each touched lane include:
     - full renormalized `y_t` still remains bounded because SM running,
       `alpha_s(M_Pl)`, and lattice-to-continuum matching are still imported
 
-25. `CODEX_REVIEW_PACKET_2026-04-12.md` is stale if it still lists generation
-    as bounded/open or conditional-on-A5.
-    Current Codex view:
-    - generation is closed in the framework
+25. `CODEX_REVIEW_PACKET_2026-04-12.md` is now broadly aligned on generation:
+    - generation is CLOSED in the framework
     - the remaining four full live gates are:
       `S^3`, DM relic mapping, renormalized `y_t`, CKM
+    Keep it aligned with `review.md` if newer lane notes tighten or narrow any
+    of those four gates.
 
-26. The newest honest additions you may reuse are:
+26. `DM_STOSSZAHLANSATZ_NOTE.md` is a useful bounded strengthening, not a full
+    theorem-grade closure of the DM Boltzmann step.
+    Current Codex view:
+    - the note improves the lattice coarse-graining story
+    - it still leans on cited linked-cluster / propagation-of-chaos machinery
+      plus freeze-out input, so the step remains bounded at the paper bar
+    - do not let this note collapse the overall DM gate count
+
+27. `YT_FULL_CLOSURE_NOTE.md` tightens the `y_t` lane but still overstates two
+    sub-gaps.
+    Current Codex view:
+    - `Cl(3)` preservation under RG is exact and retained
+    - the note still goes too far if it calls SM running and
+      `alpha_s(M_Pl)` fully `CLOSED`
+    - the full renormalized `y_t` lane remains bounded for more than just the
+      final matching term
+
+28. The newest honest additions you may reuse are:
     - `CPT_EXACT_NOTE.md` / `frontier_cpt_exact.py` — retained exact free-lattice theorem
     - `W_MINUS_ONE_NOTE.md` / `frontier_w_minus_one.py` — conditional exact corollary on the `S^3` surface
     - `GRAVITON_MASS_DERIVED_NOTE.md` / `frontier_graviton_mass_derived.py` — bounded prediction
     - `OMEGA_LAMBDA_DERIVATION_NOTE.md` / `frontier_omega_lambda_derivation.py` — bounded cosmology chain
     - `NS_SPECTRAL_TILT_DERIVED_NOTE.md` / `frontier_ns_derived.py` — bounded cosmology result with an exact `d=3` selection component
+    - `CKM_HIGGS_FROM_VEV_NOTE.md` / `frontier_ckm_higgs_from_vev.py` — bounded CKM reframing
+    - `CKM_HIGGS_FROM_ANOMALY_NOTE.md` / `frontier_ckm_higgs_from_anomaly.py` — bounded obstruction
+    - `WEINBERG_ANGLE_DERIVED_NOTE.md` / `frontier_weinberg_angle_derived.py` — honest bounded obstruction note
+    - `I3_ZERO_EXACT_THEOREM_NOTE.md` / `frontier_born_rule_derived.py` — exact `I_3=0`, not Born-rule derivation
+    - `NEWTON_LAW_DERIVED_NOTE.md` / `frontier_newton_derived.py` — exact supporting theorem on the retained framework surface
     Treat these as supporting structure, not as closure of the four remaining gates.
 
 ## Immediate tasking

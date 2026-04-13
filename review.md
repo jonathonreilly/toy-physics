@@ -251,10 +251,17 @@ fix them on the pushed Claude branch:
 20. `YT_CL3_PRESERVATION_NOTE.md` closes the `Cl(3)`-preservation conditional,
     but not the full renormalized `y_t` lane. The remaining imported running /
     matching pieces keep the lane bounded.
-21. `CODEX_REVIEW_PACKET_2026-04-12.md` is stale if it still lists generation
-    as bounded/open or only conditional-on-A5. Current audited state:
-    generation is closed in the framework; the four remaining live gates are
-    `S^3`, DM, renormalized `y_t`, and CKM.
+21. `CODEX_REVIEW_PACKET_2026-04-12.md` is now broadly aligned on generation
+    and the four live gates. Keep it synced to `review.md` if newer lane notes
+    tighten those four statuses.
+22. `DM_STOSSZAHLANSATZ_NOTE.md` is a useful bounded strengthening, but it does
+    not yet close the DM Boltzmann/Stosszahlansatz step at the paper bar. The
+    argument still leans on cited linked-cluster / propagation-of-chaos
+    machinery plus freeze-out inputs.
+23. `YT_FULL_CLOSURE_NOTE.md` tightens the `y_t` lane but still overstates two
+    sub-gaps. `Cl(3)` RG preservation is exact, but SM running and
+    `alpha_s(M_Pl)` should not yet be treated as fully closed theorem-grade
+    sub-gaps.
 
 No active structural `SU(3)` objection is live right now.
 
@@ -278,6 +285,15 @@ These are useful and directionally good:
 - `scripts/frontier_omega_lambda_derivation.py`
 - `docs/NS_SPECTRAL_TILT_DERIVED_NOTE.md`
 - `scripts/frontier_ns_derived.py`
+- `docs/CKM_HIGGS_FROM_VEV_NOTE.md`
+- `scripts/frontier_ckm_higgs_from_vev.py`
+- `docs/CKM_HIGGS_FROM_ANOMALY_NOTE.md`
+- `scripts/frontier_ckm_higgs_from_anomaly.py`
+- `docs/WEINBERG_ANGLE_DERIVED_NOTE.md`
+- `scripts/frontier_weinberg_angle_derived.py`
+- `docs/I3_ZERO_EXACT_THEOREM_NOTE.md`
+- `docs/NEWTON_LAW_DERIVED_NOTE.md`
+- `scripts/frontier_newton_derived.py`
 
 They should be treated as:
 
@@ -287,6 +303,10 @@ They should be treated as:
 - exact CPT theorem on the free staggered `Cl(3)` lattice
 - conditional or bounded cosmology companions (`w=-1`, graviton mass,
   `Omega_Lambda`, `n_s`)
+- bounded CKM reframing / obstruction notes
+- honest Weinberg-angle obstruction note
+- exact `I_3 = 0` theorem
+- exact Newton-law supporting theorem on the retained framework surface
 
 They do **not** by themselves upgrade `S^3` or renormalized `y_t` to closed
 status, and they do not close the hierarchy/flavor part of the generation lane.
@@ -336,13 +356,18 @@ These are useful as:
 - an exact CPT consistency theorem for the free staggered framework
 - conditional or bounded cosmology companions that do not close the topology /
   DM lanes by themselves
+- bounded CKM route-pruning notes that still leave flavor open
+- a good negative Weinberg-angle obstruction note
+- an exact no-third-order-interference theorem with corrected title
+- a strong exact Newton-law companion theorem that is not one of the four live
+  remaining gates
 
 Packet authority rule:
 
 - `docs/CODEX_REVIEW_PACKET_2026-04-12.md` is only usable if its later
   per-lane sections agree with its bounded top summary.
-- Right now the packet is also stale on generation relative to the current
-  audited framework state.
+- Right now the packet is broadly aligned on generation and the four live
+  gates; keep it aligned with newer lane notes.
 
 ## Best next work
 
