@@ -191,29 +191,23 @@ What improved:
 - PL / closure-case notes
 - a dedicated boundary-link theorem note now attacks the exact missing local
   lemma directly
+- the boundary-link theorem now has a real coordinate-separability proof for
+  present/absent set connectivity, not just heuristic-plus-computation support
 
 Why still not promoted:
 
-- the old missing disk-lemma objection has shifted into a new, narrower one:
-  - [S3_BOUNDARY_LINK_THEOREM_NOTE.md](/Users/jonreilly/Projects/Physics/.claude/worktrees/youthful-neumann/docs/S3_BOUNDARY_LINK_THEOREM_NOTE.md)
-    now directly targets the all-`R` disk lemma
-  - but its proof still does not cleanly discharge the decisive all-`R`
-    connectedness / complement-connectedness step
-  - the note itself walks through several abandoned arguments and then lands on
-    “verified computationally for `R=2..10`” plus “the path can be shortened
-    by starring through `v`”
-  - that is stronger than before, but still not theorem-grade closure at the
-    paper bar
-- the general-`R` runner still classifies the lane as having “no bounded
-  claims” even though it only checks concrete `R` values and then leans on a
-  general theorem application
-- the new boundary-link runner does the same thing:
-  - it labels the theorem `EXACT`
-  - but it describes itself as computational evidence for the general proof
-- the cap-uniqueness note is stronger and useful, but it is itself still
-  honestly bounded because it relies on cited topology infrastructure and the
-  framework’s closure requirement
-- the packet and status prose are still too eager to count this lane as closed
+- the old local-disk blocker is now substantially resolved
+- the remaining issue is narrower and higher-level:
+  - [S3_CAP_UNIQUENESS_NOTE.md](/Users/jonreilly/Projects/Physics/.claude/worktrees/youthful-neumann/docs/S3_CAP_UNIQUENESS_NOTE.md)
+    still self-classifies as `BOUNDED`
+  - its reason is not the old local combinatorics gap; it is that the final
+    uniqueness/selection step still leans on cited PL-topology infrastructure
+    and the framework’s physical-lattice / closure premise
+- so the lane is now in an authority mismatch state:
+  - the local boundary-link theorem is strong
+  - the general-`R` note and packet already promote to `CLOSED`
+  - but the strongest uniqueness/selection note is still honestly bounded
+- until that mismatch is resolved, the lane is not yet paper-promoted here
 
 Paper-safe wording:
 
@@ -222,8 +216,7 @@ Paper-safe wording:
 Latest `S^3` update:
 
 - [S3_BOUNDARY_LINK_THEOREM_NOTE.md](/Users/jonreilly/Projects/Physics/.claude/worktrees/youthful-neumann/docs/S3_BOUNDARY_LINK_THEOREM_NOTE.md)
-  is directionally the right move. It attacks the exact local lemma that was
-  missing before.
+  is real progress and likely clears the old local-disk objection.
 - [S3_GENERAL_R_DERIVATION_NOTE.md](/Users/jonreilly/Projects/Physics/.claude/worktrees/youthful-neumann/docs/S3_GENERAL_R_DERIVATION_NOTE.md)
   is the strongest topology note so far.
 - It gives a real general-`R` theorem chain for the standard cone-capped
@@ -231,13 +224,16 @@ Latest `S^3` update:
 - [S3_CAP_UNIQUENESS_NOTE.md](/Users/jonreilly/Projects/Physics/.claude/worktrees/youthful-neumann/docs/S3_CAP_UNIQUENESS_NOTE.md)
   is now the honest note for uniqueness / selection.
 - But the lane is still not closed. The current sharp blocker is:
-  - the boundary-link note still has not given a clean all-`R` proof that the
-    present and absent octahedral-triangle sets have the connectivity
-    properties it uses
-  - the proof still leans on computational verification to prop up the
-    supposed general argument
-  - the runners are still finite-`R` support scripts, not direct theorem
-    checkers for the general all-`R` statement
+  - the remaining disagreement is no longer local combinatorics
+  - it is whether the final compactification uniqueness / selection step is
+    acceptable at the flagship paper bar when it is carried by:
+    - the framework’s physical-lattice / closure premise
+    - cited PL-topology infrastructure
+    - Perelman / Moise with hypotheses checked
+  - the current branch still answers that question inconsistently:
+    - `S3_CAP_UNIQUENESS_NOTE.md` says bounded
+    - `S3_GENERAL_R_DERIVATION_NOTE.md` says closed
+    - `CODEX_REVIEW_PACKET_2026-04-12.md` says closed
 - So:
   - acceptable as a strong bounded theorem for the chosen cone-cap family
   - acceptable as a strong bounded uniqueness/selection note
@@ -246,20 +242,21 @@ Latest `S^3` update:
 Promotion test for `S^3`:
 
 - acceptable promotion:
-  - a theorem that closes the all-`R` boundary-link step in-framework and does
-    so without relying on “verified at `R=2..10`” as part of the proof
-  - specifically, the connectedness / complement-connectedness step has to be
-    proved cleanly for all `R`, not argued heuristically from star-convexity
-    and then checked numerically
-  - or a narrower promoted claim explicitly limited to the chosen cone-cap
-    family and still marked bounded
+  - one authority note makes the final load-bearing assumptions explicit and
+    defends them at the same bar we already accept elsewhere in the paper:
+    - the lattice is physical
+    - Kawamoto-Smit homogeneity forces closure
+    - boundary-link theorem is proved for all `R`
+    - cap uniqueness up to PL homeomorphism is carried by cited standard
+      topology infrastructure
+    - Perelman / Moise are applied with verified hypotheses
+  - and all authority docs then agree on the same status
 - not acceptable promotion:
-  - packet says `S^3` closed
+  - packet says `S^3` closed while the primary uniqueness note still says
+    bounded
   - finite-`R` recognition is used as the theorem itself
-  - a boundary-link note marked `EXACT` whose key argument still ends in
-    computational verification
-  - the general-`R` note says “PROMOTE to CLOSED” while the cap-uniqueness
-    note remains honestly bounded and the runner still only verifies examples
+  - the status disagreement between general-`R`, cap-uniqueness, and packet is
+    left unresolved
 
 ### 3. DM relic mapping
 
@@ -294,33 +291,42 @@ Latest DM update:
 - [DM_K_INDEPENDENCE_NOTE.md](/Users/jonreilly/Projects/Physics/.claude/worktrees/youthful-neumann/docs/DM_K_INDEPENDENCE_NOTE.md)
   is useful: it can demote `k = 0` from a serious bound to a numerically
   irrelevant sensitivity issue for freeze-out.
+- [DM_INVARIANT_BRIDGE_NOTE.md](/Users/jonreilly/Projects/Physics/.claude/worktrees/youthful-neumann/docs/DM_INVARIANT_BRIDGE_NOTE.md)
+  is a real improvement.
+  - it resolves the specific objection that the `alpha_s` in `sigma v` might be
+    a different quantity from the coupling extracted from the plaquette
+  - it shows the bridge from fixed `H(g=1)` to `<P>` to `alpha_V` to `sigma v`
+    is invariant once the Hamiltonian is fixed
 - But the lane is still not promoted because the newest “graph-native” closure
   attempt still overreaches:
   - `DM_GRAPH_NATIVE_NOTE.md` says `R` is derived from pure graph theory with
     no imported physics
   - `frontier_dm_graph_native.py` marks cosmological-factor cancellation as
     `EXACT` with a literal `True`, not a real derivation check
-  - `DM_G_BARE_FROM_HAMILTONIAN_NOTE.md` says the framework lacks the
-    Wilson/path-integral coupling route, while the graph-native chain later
-    uses a plaquette/Wilson-style action to compute `alpha_s`
+  - the invariant bridge still keeps the decisive normalization point bounded:
+    why the framework Hamiltonian has coefficient `g=1` in the first place
+  - cosmological-factor cancellation in the relic ratio is still asserted more
+    strongly than it is derived
 - Safe read:
   - DM is materially strengthened
-  - Stosszahlansatz and `k` sensitivity are improved
+  - Stosszahlansatz, `k` sensitivity, and the `alpha_s`-bridge are improved
   - full relic mapping is still bounded
 
 Promotion test for DM:
 
 - acceptable promotion:
-  - `g_bare = 1` and the relic-ratio cancellation route are both discharged at
-    the same publication bar as the rest of the framework
+  - the lane no longer depends on an ambiguous normalization bridge:
+    `alpha_s` in `sigma v` is explicitly the same invariant observable
+  - `g=1` is either derived from deeper structure or explicitly accepted as a
+    framework-defining choice that the lane is allowed to lean on
+  - the relic-ratio cancellation route is actually derived and checked, not
+    asserted by packet rhetoric or literal `True` passes
   - the support script actually checks those claims rather than hardcoding
     exact passes
-  - the note/script no longer conflict on whether Wilson/plaquette-style
-    structure is available inside the framework
 - not acceptable promotion:
-  - “pure graph theory / zero imports” wording while `g_bare` is still
-    framework-dependent and the ratio-cancellation step is asserted rather
-    than derived
+  - “pure graph theory / zero imports” wording while `g=1` is still a
+    framework choice and the ratio-cancellation step is asserted rather than
+    derived
 
 ### 4. Renormalized `y_t`
 

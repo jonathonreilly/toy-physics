@@ -243,17 +243,19 @@ closure standard.
 Either:
 - a new note/script pair closes the actual remaining theorem gap at the
   framework bar:
-  - prove the remaining boundary-link theorem step constructively for all
-    `R`, with no fallback to “verified at `R=2..10` so the general argument is
-    evident”
-  - more specifically:
-    - if `link(v, B_R)` is the theorem target, the proof must make the
-      connectedness and complement-connectedness claims theorem-grade for all
-      `R`, not just computationally supported
-  - make the runner test that theorem rather than only finite-`R`
-    exemplars or `H_1 = 0`
-  - align the general-`R` note with the cap-uniqueness note on what is still
-    cited infrastructure versus what is proved inside the framework
+  - resolve the remaining STATUS mismatch between the three authority layers:
+    - `S3_BOUNDARY_LINK_THEOREM_NOTE.md`
+    - `S3_CAP_UNIQUENESS_NOTE.md`
+    - `S3_GENERAL_R_DERIVATION_NOTE.md`
+  - if you want promotion to `CLOSED`, one authority note must state the final
+    load-bearing assumptions explicitly and defend them at the same bar we
+    already accept elsewhere:
+    - physical lattice premise
+    - Kawamoto-Smit closure requirement
+    - all-`R` boundary-link theorem
+    - cited PL-topology uniqueness infrastructure
+    - Perelman / Moise with hypotheses checked
+  - the packet and all topology notes must then agree on the same status
 
 Or:
 - every authority file says the same narrower thing:
@@ -264,30 +266,26 @@ Or:
 
 **Current precise blocker**
 
-- the old blocker has moved, but it has not disappeared:
-  - `S3_BOUNDARY_LINK_THEOREM_NOTE.md` now targets the right missing lemma
-  - but its proof of connectedness / complement-connectedness still falls back
-    to geometric rhetoric plus computational support
-- the specific failure mode is:
-  - the note walks through several aborted connectedness arguments
-  - then ends on “the path can be shortened by starring through `v`” and
-    “verified computationally for `R=2..10`”
-  - that is not the same thing as a clean all-`R` theorem
-- `frontier_s3_boundary_link_theorem.py` also still labels the result
-  `EXACT` while describing itself as computational evidence for the general
-  proof
-- so the remaining burden is now precise:
-  - either give a theorem-grade all-`R` proof that the present and absent
-    octahedral-triangle sets are connected in the required way
-  - or keep the whole topology lane bounded and stop promoting it to closed
+- the old local-disk blocker is no longer the main issue
+- the new boundary-link theorem is likely strong enough to clear that local
+  objection
+- the remaining failure mode is now higher-level:
+  - the branch does not yet have one consistent authority answer to
+    “is the full `S^3` lane closed?”
+  - `S3_CAP_UNIQUENESS_NOTE.md` still says bounded because the final
+    uniqueness/selection step leans on cited PL-topology infrastructure and
+    the framework closure premise
+  - `S3_GENERAL_R_DERIVATION_NOTE.md` and the packet already promote to closed
+- so the real burden is now:
+  - either explicitly defend why that cited topology infrastructure is
+    acceptable at the paper bar and harmonize the notes
+  - or keep the lane bounded and harmonize the notes the other way
 
 **What does not count**
 
 - finite-`R` recognition being presented as the theorem itself
-- a boundary-link theorem note whose decisive connectedness step ends in
-  “verified computationally” or “geometrically evident”
-- packet/table claiming `S^3` is closed while the strongest honest note still
-  relies on cited infrastructure and finite-`R` support
+- packet/table claiming `S^3` is closed while the primary uniqueness note still
+  says bounded
 - calling the lane closed because Perelman is cited if the hypotheses are not
   all proved in-framework at the same theorem grade
 
@@ -341,34 +339,31 @@ Or:
 
 **Current precise blocker**
 
-- the present `g_bare = 1` route does not yet derive a physical coupling; it
-  only fixes the coefficient of the nearest-neighbor KS / hopping term in a
-  chosen lattice normalization
-- that can still be a units or convention choice unless Claude proves the same
-  invariant quantity is exactly the coupling later used in:
-  - `sigma v`
-  - relic matching
-  - any later `alpha_s` or plaquette route
-- the current graph-native chain also still asserts a crucial bridge step
-  rather than deriving it:
-  - cosmological-factor cancellation in `Omega_DM/Omega_b` is marked exact by
-    a literal `True`
-- there is also still an internal inconsistency to resolve:
-  - one note says the framework does not really have the Wilson / plaquette
-    coupling route
-  - a later chain uses a Wilson / plaquette style action to recover
-    `alpha_s`
+- the normalization objection has narrowed:
+  - `DM_INVARIANT_BRIDGE_NOTE.md` now makes a good case that the `alpha_s`
+    entering `sigma v` is the same invariant observable extracted from the
+    plaquette once the Hamiltonian is fixed
+- the remaining blocker is one level earlier:
+  - why the framework Hamiltonian has coefficient `g=1`
+  - that is still a framework-defining choice, not a theorem from deeper
+    structure
+- the other remaining blocker is later in the chain:
+  - cosmological-factor cancellation in `Omega_DM/Omega_b` still is not
+    derived at the same bar as the rest of the lane
+- so the lane is no longer blocked on “is this the same coupling?”
+  - it is blocked on:
+    - why `g=1`
+    - whether the relic-ratio bridge is really derived
 
 **What does not count**
 
 - replacing one bounded bridge with rhetoric about A5
 - calling the lane closed while `frontier_dm_graph_native.py` still hardcodes
   exact cosmology cancellation
-- declaring `g_bare` exact while simultaneously using a Wilson/plaquette route
-  that the same argument said the framework does not have
 - declaring `g_bare = 1` exact when the only thing shown is a convention-fixed
-  KS Hamiltonian normalization with no invariant bridge to the later physical
-  coupling used in `sigma v` or relic matching
+  KS Hamiltonian normalization without either:
+  - a derivation of why the framework fixes that coefficient
+  - or an explicit statement that this is a framework-defining choice
 
 **Fallback if closure fails**
 
