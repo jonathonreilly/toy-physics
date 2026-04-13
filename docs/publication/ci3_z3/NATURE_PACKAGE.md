@@ -10,6 +10,7 @@
 
 - [Nature draft](./NATURE_DRAFT.md)
 - [Figure plan](./FIGURE_PLAN.md)
+- [Figure captions](./FIGURE_CAPTIONS.md)
 - [Submission checklist](./SUBMISSION_CHECKLIST.md)
 - framework sentence
 - exact native `SU(2)`
@@ -39,11 +40,12 @@ Do not sell “full unification closure.” Sell:
 
 ## Build rule
 
-The letter should be buildable from three sources only:
+The letter should be buildable from four sources only:
 
 - [NATURE_DRAFT.md](./NATURE_DRAFT.md)
 - [CLAIMS_TABLE.md](./CLAIMS_TABLE.md)
 - [FIGURE_PLAN.md](./FIGURE_PLAN.md)
+- [FIGURE_CAPTIONS.md](./FIGURE_CAPTIONS.md)
 
 If a claim is not stable across those three files, it is not ready for the
 submission version.

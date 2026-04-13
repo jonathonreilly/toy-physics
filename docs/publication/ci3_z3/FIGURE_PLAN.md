@@ -4,6 +4,8 @@ This is the current manuscript figure map. It is intentionally conservative:
 only figures that strengthen the retained backbone or cleanly illustrate bounded
 companions belong in the first public package.
 
+Companion captions live in [FIGURE_CAPTIONS.md](./FIGURE_CAPTIONS.md).
+
 ## Nature letter figure set
 
 ### Figure 1. Framework and derivation map

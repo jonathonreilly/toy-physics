@@ -10,6 +10,7 @@ explicit status labels.
 
 - [arXiv draft](./ARXIV_DRAFT.md)
 - [Figure plan](./FIGURE_PLAN.md)
+- [Figure captions](./FIGURE_CAPTIONS.md)
 - [Submission checklist](./SUBMISSION_CHECKLIST.md)
 - full outline / manuscript source
 - retained notes and runners

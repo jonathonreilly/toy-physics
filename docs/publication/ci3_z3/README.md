@@ -14,6 +14,7 @@ Use this package instead of browsing raw repo chronology.
 - [Reproduce guide](./REPRODUCE.md)
 - [Submission checklist](./SUBMISSION_CHECKLIST.md)
 - [Figure plan](./FIGURE_PLAN.md)
+- [Figure captions](./FIGURE_CAPTIONS.md)
 - [Nature draft](./NATURE_DRAFT.md)
 - [arXiv draft](./ARXIV_DRAFT.md)
 - [Publication card](./PUBLICATION_CARD.md)
