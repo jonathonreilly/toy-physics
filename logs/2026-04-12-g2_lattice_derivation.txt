@@ -1,9 +1,9 @@
 ==============================================================================
-DERIVING g_2^2 FROM THE STAGGERED LATTICE ACTION
+BOUNDED g_2^2 FROM THE STAGGERED LATTICE ACTION
 ==============================================================================
 
 ==============================================================================
-SECTION 1: ANALYTIC DERIVATION
+SECTION 1: ANALYTIC BOUND / CONDITIONAL DERIVATION
 ==============================================================================
 
   THE STAGGERED GAUGED HOPPING OPERATOR in d spatial dimensions:
@@ -382,19 +382,19 @@ to a weak background gauge field on finite lattices.
        L       N               D         D*(d+1)
     ----  ------  --------------  --------------
        4      16   2499.91160747   7499.73482240
-       6      36   1111.02978197   3333.08934592
-       8      64    624.93130986   1874.79392958
-      10     100    399.94217545   1199.82652635
+       6      36   1111.02978196   3333.08934589
+       8      64    624.93130984   1874.79392953
+      10     100    399.94217546   1199.82652639
       12     144    277.72838263    833.18514790
       14     196    204.03871511    612.11614533
 
   d = 3:
        L       N               D         D*(d+1)
     ----  ------  --------------  --------------
-       4      64   1249.98221934   4999.92887737
-       6     216    370.35109464   1481.40437856
-       8     512    156.23541650    624.94166602
-      10    1000     79.98950305    319.95801219
+       4      64   1249.98221936   4999.92887746
+       6     216    370.35109463   1481.40437851
+       8     512    156.23541649    624.94166597
+      10    1000     79.98950299    319.95801196
 
   INTERPRETATION:
   ---------------
@@ -446,13 +446,13 @@ Compare theta-response in d dimensions to test g^2 = 1/(d+1)
     dE/|E_0| * (d+1) = -0.02163245
 
   d=2, L=10: E_0=-47.609285, E(theta)=-47.779914, dE/|E_0|=-0.00358393
-    Drude weight D = 399.94217545
-    D / (1/d) = 799.88435090  (should be universal if D ~ 1/d)
+    Drude weight D = 399.94217546
+    D / (1/d) = 799.88435093  (should be universal if D ~ 1/d)
     dE/|E_0| * (d+1) = -0.01075179
 
   d=3, L=8: E_0=-304.678501, E(theta)=-305.039962, dE/|E_0|=-0.00118637
-    Drude weight D = 156.23541650
-    D / (1/d) = 468.70624951  (should be universal if D ~ 1/d)
+    Drude weight D = 156.23541649
+    D / (1/d) = 468.70624948  (should be universal if D ~ 1/d)
     dE/|E_0| * (d+1) = -0.00474547
 
 ==============================================================================
@@ -506,9 +506,9 @@ Verify the conserved current satisfies the lattice Ward identity
   Ward identity verification (max |div J|):
 
     d=2, L=4: max|div J| = 3.61e-16
-    d=2, L=6: max|div J| = 3.89e-16
-    d=2, L=8: max|div J| = 3.89e-16
-    d=3, L=4: max|div J| = 4.72e-16
+    d=2, L=6: max|div J| = 4.72e-16
+    d=2, L=8: max|div J| = 6.38e-16
+    d=3, L=4: max|div J| = 9.71e-16
     d=3, L=6: max|div J| = 6.38e-16
 
   The Ward identity should be satisfied to machine precision (~ 1e-14).
@@ -733,7 +733,7 @@ Verify g^2 = 1/(d+1) via the fermion-induced plaquette weight
 SECTION 9: SUMMARY AND ASSESSMENT
 ==============================================================================
 
-  THE DERIVATION OF g_2^2 = 1/(d+1)
+  THE BOUNDED NORMALIZATION STATEMENT FOR g_2^2 = 1/(d+1)
   ====================================
 
   PREMISE: The staggered Dirac operator on a d-dimensional cubic lattice:
@@ -787,8 +787,9 @@ SECTION 9: SUMMARY AND ASSESSMENT
   direction has the GEOMETRICALLY DETERMINED weight 1/(d+1) of the
   total action.
 
-  This is NOT reverse-engineering: we compute the weight 1/2 per
-  direction and (d+1)/2 total from the staggered action directly.
+  This is not reverse-engineering of observed couplings: we compute
+  the weight 1/2 per direction and (d+1)/2 total from the staggered
+  action directly.
   The ratio gives g^2 = 1/(d+1) without reference to any observed
   coupling value.
 
@@ -825,14 +826,15 @@ SECTION 9: SUMMARY AND ASSESSMENT
   free hopping times the geometric coupling factor.
 
   The geometric coupling factor is 1/sqrt(d+1) per direction
-  (equal partition of unit total coupling across d+1 directions).
+  if the equal-partition principle holds across d+1 directions.
   So g = 1/sqrt(d+1), g^2 = 1/(d+1).
 
   This relies on the EQUAL PARTITION PRINCIPLE: the total gauge
   coupling (analogous to g_3^2 = 1 for SU(3)) is UNIT, and it is
   distributed equally across d+1 spacetime directions because
   the Z_2 bipartite parity (-1)^{sum x_mu} depends on all coordinates
-  democratically.
+  democratically. That principle is motivated by the staggered
+  structure but is not yet derived from it.
 
   ASSESSMENT
   ==========
@@ -851,18 +853,15 @@ SECTION 9: SUMMARY AND ASSESSMENT
     structure, but is not proven from first principles.
   - It is an ASSUMPTION that the total coupling is 1 (like g_3^2 = 1).
 
-  Status: DERIVED with one assumption (equal partition of unit total
+  Status: BOUNDED with one assumption (equal partition of unit total
   coupling across spacetime directions).
 
   Previous status: REVERSE-ENGINEERED (run observed couplings to Planck,
   note proximity to 1/4).
 
-  Improvement: The derivation starts from the staggered action structure
-  and arrives at 1/(d+1) without using any observed coupling values.
-  The remaining assumption (equal partition) is a geometric principle,
-  not an empirical fit.
+  Improvement: The analysis starts from the staggered action structure
+  and isolates 1/(d+1) without using observed coupling values.
+  The remaining assumption (equal partition) is the exact blocker:
+  it is a geometric principle, not yet a theorem from the graph/staggered
+  structure alone.
 
-
-==============================================================================
-Results saved to logs/2026-04-12-g2_lattice_derivation.txt
-==============================================================================

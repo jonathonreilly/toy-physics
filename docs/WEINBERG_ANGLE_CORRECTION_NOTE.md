@@ -3,12 +3,15 @@
 **PStack experiment:** weinberg-angle-correction
 **Script:** `scripts/frontier_weinberg_angle_correction.py`
 **Date:** 2026-04-12
+**Status:** review-only scenario scan. The fixed-coupling scan can hit the
+measured value for some taste assignments, but the self-consistent solve does
+not close the gap, so the taste assignments remain model-dependent.
 
 ## Motivation
 
-The Cl(3) framework predicts sin^2(theta_W) = 3/8 = 0.375 at the Planck
-scale, the same GUT relation as SU(5)/SO(10). Running to M_Z with SM
-beta functions, the correct Weinberg angle formula gives:
+The Cl(3) framework supplies the Planck-scale boundary condition
+sin^2(theta_W) = 3/8 = 0.375. Running to M_Z with SM beta functions and the
+correct GUT-normalized formula gives:
 
     sin^2(theta_W)(M_Z) = 0.176
 
@@ -22,17 +25,21 @@ The correct formula is:
 
 which reduces to 3/8 at unification and 0.231 for the measured couplings.
 
-## The taste threshold mechanism
+## The taste threshold hypothesis
 
-Each SM fermion field on the staggered lattice has 2^3 = 8 taste components
-decomposing as 1 + 3 + 3* + 1 under SU(3)_c. The h=1 triplet becomes the
-light SM fermion; the remaining states are heavy (M ~ M_taste).
+This note does not derive the taste assignment. It tests several candidate
+assignments for how an 8-state staggered taste multiplet could enter the
+threshold running.
 
-Taste partners carry the **same gauge quantum numbers** as SM fermions,
-analogous to SUSY partners. Above M_taste, these extra states modify the
-beta function running by adding matter content.
+In the modeled scenarios below, the taste partners are treated as copies of
+the same gauge representations above a threshold M_taste, analogous to how
+SUSY thresholds modify running. That identification is a modeling choice, not
+a derived result of this note.
 
 ## Three scenarios
+
+These scenarios are hypotheses used to probe sensitivity to the unresolved
+taste mapping.
 
 | Scenario | Content above M_taste | delta_b_1 | delta_b_2 | delta_b_3 |
 |----------|----------------------|-----------|-----------|-----------|
@@ -42,7 +49,8 @@ beta function running by adding matter content.
 
 ## Results
 
-With the unified coupling alpha_U = 0.022 (mean of SM extrapolation to M_Planck):
+With the unified coupling alpha_U = 0.022 (mean of the SM-only extrapolation to
+M_Planck), the fixed-coupling scan gives:
 
 | Scenario | sin^2_W achieved | M_taste required | Deviation |
 |----------|-----------------|-----------------|-----------|
@@ -53,59 +61,57 @@ With the unified coupling alpha_U = 0.022 (mean of SM extrapolation to M_Planck)
 | MSSM (M_SUSY = 1 TeV) | 0.229 | 10^3 GeV | -1.2% |
 | Measured (PDG 2024) | 0.231 | -- | 0% |
 
+The self-consistent solve, which recomputes the unified coupling after the
+thresholds are included, does not keep the 0.231 match. In that solve the
+best values stay near the SM-like 0.176-0.181 range, so the threshold
+correction remains scenario-dependent rather than derived.
+
 ## Key physics
 
-1. **Direction of correction:** SM-only running overshoots the divergence
-   between alpha_1 and alpha_2, giving sin^2_W too low. Extra matter above
-   M_taste slows the divergence, raising sin^2_W toward 3/8.
+1. **Direction of correction:** SM-only running lands low at sin^2_W = 0.176.
+   Extra matter above M_taste can move the fixed-coupling scan upward toward
+   0.231, but the self-consistent solve does not preserve that improvement.
 
-2. **Scenario I (full taste)** is the most physically motivated: above
-   M_taste ~ 10^17 GeV (= alpha * M_Planck), all 8 tastes are active.
-   With delta_b equal for all three couplings, the correction acts by
-   reducing the overall running range while preserving the ratio.
+2. **Scenario I (full taste)** is the cleanest fixed-coupling fit: above
+   M_taste ~ 10^17 GeV, the scan can hit 0.231. But because the full solve
+   readjusts alpha_U, this is not yet a retained prediction.
 
-3. **Scenario II (structured)** has asymmetric corrections (delta_b_1
-   differs from delta_b_2), which more directly shifts sin^2_W. It
-   achieves the target at a lower M_taste ~ 6 x 10^11 GeV.
+3. **Scenario II (structured)** also hits 0.231 in the fixed-coupling scan,
+   but it depends on a specific taste mapping that remains unresolved.
 
 4. **Self-consistent caveat:** When alpha_U is re-determined self-consistently
    (accounting for modified running above M_taste), the improvement is
-   partially lost. The self-consistent sin^2_W stays near 0.176 because
-   the unified coupling adjusts to absorb the threshold correction.
+   absorbed back toward the SM-like result. That is the reason this lane
+   remains review-only.
 
 ## Comparison with MSSM
 
 | Feature | MSSM | Cl(3) taste |
 |---------|------|-------------|
 | New particle content | Sparticles (many) | None (lattice structure) |
-| Free parameters | M_SUSY, tan(beta), ... | M_taste (1 parameter) |
-| Threshold scale | ~1 TeV | ~10^17 GeV |
-| Unification scale | 2 x 10^16 GeV | 1.2 x 10^19 GeV |
-| sin^2_W achieved | 0.229 | 0.231 |
-| Mechanism | SUSY matter shifts betas | Taste matter shifts betas |
-
-Both frameworks use the same physical mechanism (extra matter content modifies
-the beta function running between the threshold and unification scales).
+| Free parameters | M_SUSY, tan(beta), ... | M_taste (scenario choice) |
+| Threshold scale | ~1 TeV | scenario-dependent |
+| Unification scale | 2 x 10^16 GeV | Planck-scale boundary condition |
+| sin^2_W achieved | 0.229 | 0.231 in fixed-coupling scan only |
+| Mechanism | SUSY matter shifts betas | Hypothesized taste matter shifts betas |
 
 ## Honest assessment
 
 **What works:**
-- The taste spectrum provides a natural source of threshold corrections
-- The full 8-fold taste scenario matches at M_taste ~ 10^17 GeV, which is
-  the physically expected taste-breaking scale (alpha * M_Planck)
-- The mechanism is parameter-efficient (one parameter vs many in MSSM)
-- The correction goes in the right direction
+- The fixed-coupling scan shows that some taste assignments can hit the
+  measured sin^2(theta_W)
+- The result is transparent about which taste assignments are being assumed
+- The scan makes the model-dependence explicit instead of hiding it
 
 **What needs work:**
-- The self-consistent alpha_U determination partially absorbs the correction
-- The structured taste scenario requires M_taste ~ 6 x 10^11 GeV, which is
-  far below the Planck scale and needs physical justification
-- The precise taste partner quantum numbers depend on the spin-taste mapping,
-  which is model-dependent
+- The taste assignments are unresolved and scenario-dependent
+- The self-consistent alpha_U determination does not preserve the 0.231 match
+- A derivation of the taste mapping from the retained cubic lane is still missing
 - 2-loop corrections and gravity effects near M_Planck are not included
 
 **Bottom line:**
-The Cl(3) framework provides a qualitatively correct picture for the Weinberg
-angle, with the taste spectrum playing the same role as SUSY partners in the
-MSSM. Quantitative precision requires a self-consistent determination of both
-the unification coupling and the taste-breaking scale from the lattice dynamics.
+This is a review-only scenario scan, not a retained derivation. The fixed-
+coupling scan can reproduce the measured Weinberg angle for some taste
+assignments, but the self-consistent solve does not close the gap. The note
+should therefore be read as a bounded consistency study with unresolved taste
+assignments.
