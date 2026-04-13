@@ -130,7 +130,7 @@ V_EW = 246.0             # Higgs VEV (GeV)
 T_EW = 160.0             # EW phase transition temperature (GeV)
 M_PL = 1.22e19           # Planck mass (GeV)
 M_PL_RED = 2.435e18      # Reduced Planck mass (GeV)
-G_STAR = 110.75          # Relativistic d.o.f. (SM + 4 taste scalars)
+G_STAR = 106.75          # Relativistic d.o.f. (SM thermal plasma, hw=0 tastes only)
 
 # SU(3) group theory
 C_F = 4.0 / 3.0

@@ -230,12 +230,12 @@ def part2_sphaleron_rate():
     log(f"    Gamma_ws/T^4 = {gamma_over_t4:.4e}")
 
     # --- Hubble rate at T_EW ---
-    g_star = 106.75 + 4.0  # SM + 4 extra taste scalar d.o.f.
+    g_star = 106.75  # SM thermal plasma (hw=0 tastes only; heavy tastes decoupled)
     rho = (PI**2 / 30) * g_star * T**4
     H_ew = np.sqrt(8 * PI * rho / (3 * M_PL_RED**2))
 
     log(f"\n  Hubble rate at T_EW = {T:.0f} GeV:")
-    log(f"    g_* = {g_star:.2f}  (SM + taste scalars)")
+    log(f"    g_* = {g_star:.2f}  (SM thermal plasma; taste enhancement enters via S_CP)")
     log(f"    H = {H_ew:.4e} GeV")
 
     # Sphalerons vs Hubble

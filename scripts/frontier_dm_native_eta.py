@@ -95,7 +95,7 @@ TASTE_RATIO = N_TASTE / N_GEN  # = 8/3
 # Cosmological
 T_EW = 160.0
 M_PL_RED = 2.435e18     # Reduced Planck mass (GeV)
-G_STAR = 110.75          # Relativistic d.o.f. (SM + 4 taste scalars)
+G_STAR = 106.75          # Relativistic d.o.f. (SM thermal plasma, hw=0 tastes only)
 
 # SU(3) group theory
 C_F_SU3 = 4.0 / 3.0

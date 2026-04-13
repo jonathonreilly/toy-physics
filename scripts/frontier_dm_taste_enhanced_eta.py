@@ -104,7 +104,7 @@ ALPHA_W = G_WEAK**2 / (4 * PI)
 # SM masses (GeV)
 V_EW = 246.0             # Higgs VEV (GeV)
 M_PL_RED = 2.435e18      # Reduced Planck mass (GeV)
-G_STAR = 110.75          # Relativistic d.o.f. (SM + 4 taste scalars)
+G_STAR = 106.75          # Relativistic d.o.f. (SM thermal plasma, hw=0 tastes only)
 
 # SU(3) group theory
 C_F_SU3 = 4.0 / 3.0     # Casimir of fundamental rep of SU(3)
@@ -299,13 +299,12 @@ def part1_taste_enhanced_sphaleron():
     # The factor 8/3 arises differently: from the NORMALIZATION of the
     # baryon number density. In the standard formula:
     #   n_B/s = (N_f/4g_*) * Gamma_sph * mu_L / T
-    # where g_* counts ALL degrees of freedom including taste states.
+    # where g_* counts relativistic degrees of freedom in the thermal plasma.
     #
-    # With taste states physical, g_* increases by the taste contribution.
-    # But we already included taste scalars in g_* = 110.75.
-    # The taste FERMIONS would add:
-    #   Delta g_* = 7/8 * 2 * N_c * (N_taste - 1) * 2 * N_gen
-    # But this is huge and would change the EW phase transition itself.
+    # The heavy taste states (hw > 0) have masses ~ M_Planck and are
+    # Boltzmann-suppressed at T_EW ~ 160 GeV. They do NOT contribute to g_*.
+    # The taste enhancement enters via S_CP (all 8 tastes active in sphaleron),
+    # not via g_*. See GSTAR_RECONCILIATION_NOTE.md.
     #
     # The correct approach: the taste states are NOT extra degrees of
     # freedom in the THERMODYNAMIC sense -- they are the lattice
