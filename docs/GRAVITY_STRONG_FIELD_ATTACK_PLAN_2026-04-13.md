@@ -86,6 +86,26 @@ New exact/bounded asymptotic reduction extracted after that:
   exact source class; the remaining gap is why the physical source lands in,
   or flows to, that cubic-symmetric sector strongly enough near the source
 
+New exact/bounded local-source-class result extracted after that:
+
+- the most general real symmetric local `O_h`-invariant source operator on the
+  star support has an exact five-parameter commutant, and the corresponding
+  invariant bare source vector has exact dimension two
+- scanning that full exact local cubic source class materially lowers the
+  direct 4D residual floor, but does **not** remove it
+- see `docs/OH_SOURCE_CLASS_NOTE.md`
+- this removes “wrong local cubic source family” as the main explanation for
+  the remaining residual and pushes the live blocker onto near-source matching
+  or the exterior metric law itself
+
+New bounded same-source metric result extracted after that:
+
+- allowing the direct metric closure to deform within the simplest nonlinear
+  same-source quadratic family improves the 4D residual only marginally
+- see `docs/SAME_SOURCE_METRIC_ANSATZ_SCAN_NOTE.md`
+- this removes the easy hope that the remaining gravity gap is just a tiny
+  low-order metric reparameterization of the same exact field
+
 ## Do not retread these solved or near-solved substeps
 
 The attack should **not** spend time redoing the following:
@@ -212,15 +232,23 @@ Current bridge result:
 - the new cubic-monopole reduction result sharpens it again:
   for the exact `O_h`-symmetric source class, the isotropic reduction is
   asymptotically justified and the first anisotropic correction is controlled
+- the new exact local-source-class scan sharpens it once more:
+  even the full exact local `O_h` family does not close the direct metric,
+  so the remaining gap is not source-family freedom by itself
+- the new same-source ansatz scan sharpens it again:
+  small nonlinear same-source metric deformations do not remove the residual,
+  so the remaining gap is not just the linear closure choice
 
 Required outcome:
 
 - derive the temporal redshift factor from the exact same strong-field closure
-  that gives the spatial metric
+  that gives the spatial metric, in a way stronger than the current bounded
+  static-isotropic bridge
 - remove the current mismatch where the spatial branch looks stronger than the
   temporal branch
-- derive why the physical source law reduces to the cubic-symmetric source
-  class strongly enough in the exterior / near-source matching region
+- derive why the physical source law reduces to a narrower effective exterior
+  class than the full local `O_h` family, or derive the corrected nonlinear
+  exterior metric law for that full class
 
 ### Attack 3: only after metric closure, revisit horizon / echo claims
 
