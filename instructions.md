@@ -69,15 +69,17 @@ If any of those fail, the lane stays `bounded` or `open`.
      - `S3_GENERAL_R_DERIVATION_NOTE.md`
      - `S3_RECOGNITION_GENERAL_NOTE.md`
      - `S3_SHELLABILITY_NOTE.md`
+     - `S3_CAP_UNIQUENESS_NOTE.md`
    - `S3_GENERAL_R_DERIVATION_NOTE.md` is a real strengthening and should be
      the main authority note for this lane
-   - however the full gate is still not closed because compactification
-     uniqueness / framework-level selection remains open
+   - however the full gate is still not closed
    - `S3_RECOGNITION_GENERAL_NOTE.md` is bounded computational support
    - do not use `S3_RECOGNITION_NOTE.md` / `frontier_s3_recognition.py` as the
      main authority anymore except as old `R = 2` support
-   - do not say “the full `S^3` lane is closed” unless uniqueness/selection is
-     explicitly discharged too
+   - `S3_CAP_UNIQUENESS_NOTE.md` is the honest status note for uniqueness and
+     selection: strong, useful, still bounded
+   - do not say “the full `S^3` lane is closed” unless the exact remaining
+     issues below are actually discharged
 
 3. **DM relic mapping**
    - useful new work:
@@ -180,32 +182,60 @@ closure standard.
 **Files you should treat as primary**
 
 - `docs/S3_GENERAL_R_DERIVATION_NOTE.md`
+- `docs/S3_CAP_UNIQUENESS_NOTE.md`
 - `docs/S3_RECOGNITION_GENERAL_NOTE.md`
 - `docs/S3_SHELLABILITY_NOTE.md`
 - `scripts/frontier_s3_general_r.py`
+- `scripts/frontier_s3_cap_uniqueness.py`
 - `scripts/frontier_s3_recognition_general.py`
 - `scripts/frontier_s3_shellability.py`
 
 **What counts as success**
 
 Either:
-- a new note/script pair closes uniqueness / selection of the cone-cap
-  compactification at the framework bar
+- a new note/script pair closes the actual remaining theorem gap at the
+  framework bar:
+  - prove the boundary-vertex step used in the general-`R` derivation
+    constructively for all `R`:
+    - `link(v, B_R)` is a PL 2-disk for every boundary vertex
+  - make the runner test that theorem rather than only finite-`R`
+    exemplars or `H_1 = 0`
+  - align the general-`R` note with the cap-uniqueness note on what is still
+    cited infrastructure versus what is proved inside the framework
 
 Or:
 - every authority file says the same narrower thing:
-  - general-`R` theorem for the chosen cone-cap family is strong
-  - full `S^3` publication gate still open on uniqueness / selection
+  - general-`R` theorem for the chosen cone-cap family is strong bounded
+    support
+  - cap uniqueness / selection is strong bounded support
+  - full `S^3` publication gate still open
+
+**Current precise blocker**
+
+- `S3_GENERAL_R_DERIVATION_NOTE.md` still jumps from:
+  - finite-`R` computational support
+  - cited topology infrastructure
+  to:
+  - “PROMOTE to CLOSED”
+- the load-bearing missing proof step is:
+  - the general all-`R` claim that every boundary-vertex link in the cubical
+    ball is a PL 2-disk
+- `frontier_s3_general_r.py` still says “no bounded claims” even though it
+  verifies concrete `R` values and uses those checks as support for a general
+  theorem rather than proving the theorem itself
 
 **What does not count**
 
 - finite-`R` recognition being presented as the theorem itself
-- packet/table claiming `S^3` is closed while the theorem note still lists
-  uniqueness / selection as open
+- packet/table claiming `S^3` is closed while the strongest honest note still
+  relies on cited infrastructure and finite-`R` support
+- calling the lane closed because Perelman is cited if the hypotheses are not
+  all proved in-framework at the same theorem grade
 
 **Fallback if closure fails**
 
 - promote `S3_GENERAL_R_DERIVATION_NOTE.md` as the main bounded theorem note
+- keep `S3_CAP_UNIQUENESS_NOTE.md` as the honest uniqueness/selection note
 - keep `S^3` as a live gate
 
 ### Target C: DM relic mapping

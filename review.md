@@ -173,9 +173,18 @@ What improved:
 
 Why still not promoted:
 
-- the overnight work still depends on a theorem-application chain that Codex
-  has not promoted to full flagship closure
-- the overnight scorecard and packet overstate this lane
+- the strongest new general-`R` note still contains one load-bearing
+  unproved step at the publication bar:
+  - it asserts for all `R` that every boundary-vertex link
+    `link(v, B_R)` is a PL 2-disk, but the current runner support remains
+    finite-`R`
+- the general-`R` runner still classifies the lane as having “no bounded
+  claims” even though it only checks concrete `R` values and then leans on a
+  general theorem application
+- the cap-uniqueness note is stronger and useful, but it is itself still
+  honestly bounded because it relies on cited topology infrastructure and the
+  framework’s closure requirement
+- the packet and status prose are still too eager to count this lane as closed
 
 Paper-safe wording:
 
@@ -187,25 +196,31 @@ Latest `S^3` update:
   is the strongest topology note so far.
 - It gives a real general-`R` theorem chain for the standard cone-capped
   family and is much better than the old `R=2`-only recognition note.
-- However, it still does not close the full publication gate because its own
-  `What remains open` section keeps:
-  - uniqueness of compactification
-  - framework-level selection of this compactification
+- [S3_CAP_UNIQUENESS_NOTE.md](/Users/jonreilly/Projects/Physics/.claude/worktrees/youthful-neumann/docs/S3_CAP_UNIQUENESS_NOTE.md)
+  is now the honest note for uniqueness / selection.
+- But the lane is still not closed. The current sharp blocker is:
+  - the general-`R` derivation promotes “all `R >= 2`” without fully proving
+    the boundary-link disk claim at that same theorem grade
+  - the runner support is still finite-`R` computational evidence plus cited
+    topology, not a complete in-framework derivation of every load-bearing
+    hypothesis
 - So:
-  - acceptable as a strong theorem for the chosen cone-cap family
+  - acceptable as a strong bounded theorem for the chosen cone-cap family
+  - acceptable as a strong bounded uniqueness/selection note
   - not yet acceptable as “the full `S^3` compactification lane is closed”
 
 Promotion test for `S^3`:
 
 - acceptable promotion:
-  - a theorem that also closes compactification uniqueness / framework-level
-    selection
+  - a theorem that closes the all-`R` boundary-link disk step in-framework and
+    aligns the runner with that theorem-grade claim
   - or a narrower promoted claim explicitly limited to the chosen cone-cap
-    family
+    family and still marked bounded
 - not acceptable promotion:
-  - packet says `S^3` closed while the theorem note still lists uniqueness /
-    selection as open
+  - packet says `S^3` closed
   - finite-`R` recognition is used as the theorem itself
+  - the general-`R` note says “PROMOTE to CLOSED” while the cap-uniqueness
+    note remains honestly bounded and the runner still only verifies examples
 
 ### 3. DM relic mapping
 
