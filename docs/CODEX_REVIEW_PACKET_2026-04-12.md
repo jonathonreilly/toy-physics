@@ -210,6 +210,69 @@ This uses the KS tensor product structure, not abstract Cl(3) alone. It does not
 
 ---
 
+## Gate 2 UPDATE: V4 Discrete-to-Continuum Investigation
+
+### Files changed (new)
+- `scripts/frontier_s3_discrete_continuum.py` -- EXACT PASS=3 FAIL=0, BOUNDED PASS=1 FAIL=2
+- `docs/S3_DISCRETE_CONTINUUM_NOTE.md`
+- `docs/S3_COMPACTIFICATION_PAPER_NOTE.md` (already existed, consistent with this finding)
+
+### Commands run
+```bash
+python3 scripts/frontier_s3_discrete_continuum.py
+# Exit code: 0
+# EXACT: PASS=3 FAIL=0
+# BOUNDED: PASS=1 FAIL=2
+```
+
+### Status: BOUNDED (unchanged from review.md)
+
+### What was done
+
+Four approaches to closing V4 (discrete-to-continuum gap) were investigated:
+
+1. **Gromov-Hausdorff:** Z^3 ball is bilipschitz to Euclidean ball (K=sqrt(3),
+   confirmed). But GH convergence of the DOUBLED ball to S^3 is not proved --
+   the gluing map is combinatorial, not smooth.
+
+2. **Spectral (Cheeger-Colding):** lambda_1 * R^2 computed for R=2..7 on the
+   doubled ball. Extrapolation gives 3.19 vs S^3 target 3.0 (6% deviation).
+   Consistent but not conclusive. Cheeger-Colding does not obviously apply to
+   graph sequences.
+
+3. **Combinatorial manifold (link condition):** Interior passes (all deg-6,
+   octahedral links = S^2). Boundary FAILS -- antipodal identification does not
+   restore degree 6 at the gluing seam. Only 34% of boundary vertices get
+   degree 6. Barycentric subdivision would fix this but has not been done.
+
+4. **Quasi-isometry:** Confirmed (K=sqrt(3), C=0) but IRRELEVANT -- QI is too
+   coarse to determine manifold topology.
+
+### Honest verdict
+
+V4 is genuinely hard open mathematics. None of the four approaches closes it.
+The gap is standard in lattice field theory (every lattice QCD paper makes the
+same assumption) but is not a rigorous mathematical theorem.
+
+The most tractable route to closure is Option A: prove that barycentric
+subdivision of the doubled Z^3 ball boundary produces a combinatorial manifold.
+This is standard PL topology but requires explicit construction.
+
+### Why the claim is not overstated
+
+The note and script both say BOUNDED, not CLOSED or STRUCTURAL. The script
+has an explicit "V4 closed by any approach: FAIL" bounded check. The note
+documents four specific options for future closure and recommends paper-safe
+language that acknowledges the gap. This is consistent with review.md which
+says "topology lane is bounded until compactification is derived."
+
+**Correction to earlier review packet:** The earlier Gate 2 section above
+claims "Final status: STRUCTURAL." Per review.md and this investigation,
+the correct status is BOUNDED. The V4 gap prevents STRUCTURAL or CLOSED
+until the discrete-to-continuum bridge is rigorously established.
+
+---
+
 ## Guardrails Compliance
 
 - No theorem assumptions were silently widened
@@ -238,7 +301,8 @@ This uses the KS tensor product structure, not abstract Cl(3) alone. It does not
 | frontier_renormalized_yt.py | 33 | 1 | Exact + bounded |
 | frontier_renormalized_yt_wildcard.py | 31 | 0 | Exact |
 | frontier_slavnov_taylor_completion.py | 26 | 0 | Exact |
-| **TOTAL** | **332** | **11** | |
+| frontier_s3_discrete_continuum.py | 4 | 2 | Exact + bounded |
+| **TOTAL** | **336** | **13** | |
 
 The 11 FAILs are all documented, honest, and diagnostic (not theorem failures):
 - Gate 1: 6 FAILs in main script are honest obstructions that led to the gap-closure work; 1 FAIL is the hierarchy shortfall before synthesis
