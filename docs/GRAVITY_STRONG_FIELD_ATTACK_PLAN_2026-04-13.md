@@ -117,6 +117,16 @@ New bounded coarse-grained exterior-law result extracted after that:
   microscopic-to-macroscopic matching theorem, not the macroscopic exterior
   law itself
 
+New bounded matching-window result extracted after that:
+
+- the coarse-grained radial harmonic exterior law does not merely become good
+  asymptotically; it becomes vacuum-close in a finite matching band around
+  `R_match ~ 4.0 - 4.5` across both the exact local `O_h` family and the
+  broader exact finite-rank source family
+- see `docs/MATCHING_RADIUS_WINDOW_NOTE.md`
+- this sharpens the remaining gravity target from “find some matching” to
+  “derive why this finite matching window emerges from the exact lattice data”
+
 ## Do not retread these solved or near-solved substeps
 
 The attack should **not** spend time redoing the following:
@@ -253,6 +263,10 @@ Current bridge result:
   after harmonic coarse-graining, the exterior law is already vacuum-close, so
   the live blocker is the matching from the exact lattice field to that
   coarse-grained exterior representative
+- the new matching-window result sharpens it once more:
+  the matching is not infinitely vague; it appears in a finite radial band
+  around `R ~ 4 - 4.5`, so the theorem target is now the mechanism for that
+  crossover
 
 Required outcome:
 
