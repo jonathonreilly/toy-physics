@@ -73,6 +73,10 @@ Unique fingerprint distinguishes from LQG/DSR/foam.
 Area law R²=0.9997. RT ratio = 0.2364 (5.4% from 1/4). Species-universal.
 Gravity reduces entanglement (consistent with Ryu-Takayanagi).
 
+### Gravitational Decoherence DERIVED (7/7 PASS)
+γ = 52.6 Hz at m=10pg, δx=1μm. BMV: γ=0.25 Hz, Φ=12.4 rad (detectable).
+Lattice form factor correction 10⁻⁵⁸. Born rule connection: Δγ/γ = (β-1).
+
 ## What Remains
 
 ### CKM:
