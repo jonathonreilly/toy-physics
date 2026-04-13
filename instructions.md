@@ -129,6 +129,186 @@ If any of those fail, the lane stays `bounded` or `open`.
    These are worth tightening, but they are not allowed to displace the live
    publication gates.
 
+## Exact execution targets
+
+Use the following as the actual work queue. Do not improvise a different
+closure standard.
+
+### Target A: Gravity weak-field paper surface
+
+**Goal**
+
+- make the weak-field gravity core paper-safe and internally consistent
+
+**Files you should treat as primary**
+
+- `docs/GRAVITY_CLEAN_DERIVATION_NOTE.md`
+- `docs/GRAVITY_FULL_SELF_CONSISTENCY_NOTE.md`
+- `scripts/frontier_gravity_clean_derivation.py`
+- `scripts/frontier_gravity_full_self_consistency.py`
+
+**What counts as success**
+
+- the note and script explicitly say:
+  - weak-field core retained
+  - broad gravity still separate
+  - `L^{-1} = G_0` is the framework’s closure condition for self-consistency
+    rather than a theorem of pure algebra
+- no “zero bounded steps” phrasing unless that distinction is carried
+  explicitly
+- the packet no longer suppresses gravity as a live publication gate
+
+**What does not count**
+
+- rearguing geodesics / GW / echoes
+- calling broad gravity closed
+- treating `L^{-1} = G_0` as if no framework-level premise remains
+
+**Fallback if closure fails**
+
+- keep weak-field gravity retained
+- keep broad gravity open
+- make the closure-condition wording honest
+
+### Target B: S^3 topology lane
+
+**Goal**
+
+- either close the remaining compactification-uniqueness / selection issue
+  or state it explicitly and stop overclaiming closure
+
+**Files you should treat as primary**
+
+- `docs/S3_GENERAL_R_DERIVATION_NOTE.md`
+- `docs/S3_RECOGNITION_GENERAL_NOTE.md`
+- `docs/S3_SHELLABILITY_NOTE.md`
+- `scripts/frontier_s3_general_r.py`
+- `scripts/frontier_s3_recognition_general.py`
+- `scripts/frontier_s3_shellability.py`
+
+**What counts as success**
+
+Either:
+- a new note/script pair closes uniqueness / selection of the cone-cap
+  compactification at the framework bar
+
+Or:
+- every authority file says the same narrower thing:
+  - general-`R` theorem for the chosen cone-cap family is strong
+  - full `S^3` publication gate still open on uniqueness / selection
+
+**What does not count**
+
+- finite-`R` recognition being presented as the theorem itself
+- packet/table claiming `S^3` is closed while the theorem note still lists
+  uniqueness / selection as open
+
+**Fallback if closure fails**
+
+- promote `S3_GENERAL_R_DERIVATION_NOTE.md` as the main bounded theorem note
+- keep `S^3` as a live gate
+
+### Target C: DM relic mapping
+
+**Goal**
+
+- either genuinely close the remaining normalization / ratio-cancellation
+  bridge, or narrow the lane to the honest strengthened bounded state
+
+**Files you should treat as primary**
+
+- `docs/DM_CLEAN_DERIVATION_NOTE.md`
+- `docs/DM_STOSSZAHLANSATZ_THEOREM_NOTE.md`
+- `docs/DM_K_INDEPENDENCE_NOTE.md`
+
+**Files not to use as closure authority unless fixed**
+
+- `docs/DM_GRAPH_NATIVE_NOTE.md`
+- `docs/DM_G_BARE_FROM_HAMILTONIAN_NOTE.md`
+- `docs/DM_CLOSURE_CASE_NOTE.md`
+- `scripts/frontier_dm_graph_native.py`
+- `scripts/frontier_dm_g_bare_from_hamiltonian.py`
+
+**What counts as success**
+
+Either:
+- `g_bare = 1` is closed at the same bar as the rest of the paper with no
+  tension against the later `alpha_s` derivation route
+- the relic-ratio cancellation route is actually derived and checked, not
+  asserted by literal `True` passes
+- the note/script stop saying “pure graph theory / zero imports” unless both
+  of the above are genuinely resolved
+
+Or:
+- the lane is rewritten as:
+  - strengthened bounded DM derivation
+  - Stosszahlansatz improved
+  - `k` numerically irrelevant
+  - `g_bare` / ratio bridge still bounded
+
+**What does not count**
+
+- replacing one bounded bridge with rhetoric about A5
+- calling the lane closed while `frontier_dm_graph_native.py` still hardcodes
+  exact cosmology cancellation
+- declaring `g_bare` exact while simultaneously using a Wilson/plaquette route
+  that the same argument said the framework does not have
+
+**Fallback if closure fails**
+
+- preserve the improved bounded sub-results
+- explicitly keep DM as a live gate
+
+### Target D: Renormalized y_t
+
+**Goal**
+
+- tighten the lane to a single explicit residual or keep it honestly bounded
+
+**Files you should treat as primary**
+
+- `docs/YT_CLEAN_DERIVATION_NOTE.md`
+- `docs/RENORMALIZED_YT_CLEAN_THEOREM_NOTE.md`
+- `docs/YT_MATCHING_COMPUTED_NOTE.md`
+- `scripts/frontier_yt_clean_derivation.py`
+- `scripts/frontier_yt_matching_computed.py`
+
+**What counts as success**
+
+- one authority note says exactly:
+  - bare theorem closed
+  - which renormalized pieces are exact
+  - which residual remains bounded
+- no note/script says SM running and `alpha_s(M_Pl)` are fully discharged
+  unless the actual derivation is explicit and self-contained
+
+**Fallback if closure fails**
+
+- keep `y_t` as a live bounded gate with one sharply stated residual
+
+### Target E: CKM
+
+**Goal**
+
+- do not force closure rhetoric; keep the lane honest unless the Higgs `Z_3`
+  and coefficient story actually close
+
+**Files you should treat as primary**
+
+- `docs/CKM_CLEAN_DERIVATION_NOTE.md`
+- the latest CKM production scripts on this branch
+
+**What counts as success**
+
+- the note cleanly separates:
+  - exact structural flavor results
+  - bounded coefficient/hierarchy results
+  - what is still not derived
+
+**Fallback if closure fails**
+
+- leave CKM bounded and move on
+
 ## What counts as useful work
 
 Useful:
@@ -167,6 +347,14 @@ The script must:
 - end with a clear status summary
 - separate exact checks from bounded/model checks
 - avoid unconditional theorem passes for things that were only argued in prose
+
+In addition, every lane update must end with an explicit one-line decision:
+
+- `PROMOTE`
+- `KEEP BOUNDED`
+- `KEEP OPEN`
+
+Do not leave the status implicit.
 
 ## Mandatory handoff rule
 

@@ -72,6 +72,18 @@ close:
 
 These are the real remaining publication-critical items.
 
+## Promotion tests
+
+For any live gate, the question is not “is there a stronger note now?” but:
+
+1. what exact claim is being promoted?
+2. what file is the authority for that claim?
+3. what premise still remains?
+4. does the script actually test that premise, or just assert it?
+5. if the lane is still bounded, is the residual now sharply narrower?
+
+If those are not answered explicitly, the gate is not promoted.
+
 ### 1. Gravity extension beyond the retained weak-field core
 
 Retained already:
@@ -137,6 +149,16 @@ Latest gravity update:
   - weak-field gravity core is in strong paper shape
   - broad gravity is still not closed
 
+Promotion test for gravity:
+
+- acceptable promotion:
+  - weak-field Newton/Poisson core retained with explicit closure-condition
+    wording on `L^{-1} = G_0`
+- not acceptable promotion:
+  - broad gravity closed
+  - “zero bounded steps” while the closure condition is still being used as
+    framework logic rather than derived pure algebra
+
 ### 2. `S^3` compactification / topology closure
 
 Current status:
@@ -172,6 +194,18 @@ Latest `S^3` update:
 - So:
   - acceptable as a strong theorem for the chosen cone-cap family
   - not yet acceptable as “the full `S^3` compactification lane is closed”
+
+Promotion test for `S^3`:
+
+- acceptable promotion:
+  - a theorem that also closes compactification uniqueness / framework-level
+    selection
+  - or a narrower promoted claim explicitly limited to the chosen cone-cap
+    family
+- not acceptable promotion:
+  - packet says `S^3` closed while the theorem note still lists uniqueness /
+    selection as open
+  - finite-`R` recognition is used as the theorem itself
 
 ### 3. DM relic mapping
 
@@ -220,6 +254,20 @@ Latest DM update:
   - Stosszahlansatz and `k` sensitivity are improved
   - full relic mapping is still bounded
 
+Promotion test for DM:
+
+- acceptable promotion:
+  - `g_bare = 1` and the relic-ratio cancellation route are both discharged at
+    the same publication bar as the rest of the framework
+  - the support script actually checks those claims rather than hardcoding
+    exact passes
+  - the note/script no longer conflict on whether Wilson/plaquette-style
+    structure is available inside the framework
+- not acceptable promotion:
+  - “pure graph theory / zero imports” wording while `g_bare` is still
+    framework-dependent and the ratio-cancellation step is asserted rather
+    than derived
+
 ### 4. Renormalized `y_t`
 
 Current status:
@@ -242,6 +290,15 @@ Paper-safe wording:
 
 > bare theorem closed; renormalized `y_t` still bounded.
 
+Promotion test for `y_t`:
+
+- acceptable promotion:
+  - one authority note identifies exactly one residual and that residual is
+    actually computed away
+- not acceptable promotion:
+  - calling SM running or `alpha_s(M_Pl)` “not an import” as if that alone
+    closes the lane
+
 ### 5. CKM / flavor
 
 Current status:
@@ -263,6 +320,13 @@ Why still not promoted:
 Paper-safe wording:
 
 > bounded flavor support, not a closed CKM theorem.
+
+Promotion test for CKM:
+
+- acceptable promotion:
+  - Higgs `Z_3` / coefficient / hierarchy story is quantitatively closed
+- not acceptable promotion:
+  - structural flavor support being rephrased as quantitative CKM closure
 
 ## Companion claims that matter but are not core promotions
 
@@ -355,5 +419,30 @@ Before a claim is promoted into the flagship paper surface, it must either:
 1. already be retained in the authority docs above, or
 2. be added to the canonical ledger with honest bounded wording, or
 3. be explicitly labeled off-scope / companion / stale
+
+## Immediate execution map
+
+If Claude wants the shortest path to useful work:
+
+1. **Gravity**
+   - either make the weak-field note honest on the closure-condition status
+   - or close a broader gravity sub-bundle with assumptions carried explicitly
+
+2. **S^3**
+   - either close uniqueness / selection
+   - or rewrite the packet and lane notes so the family theorem is promoted
+     without overstating full compactification closure
+
+3. **DM**
+   - either reconcile `g_bare` / Wilson-action tension and derive the ratio
+     cancellation properly
+   - or keep the lane bounded and preserve only the sharpened sub-results
+
+4. **y_t**
+   - either compute away the last residual
+   - or keep one sharp bounded authority note
+
+5. **CKM**
+   - only pursue if a real quantitative closure route exists
 
 If a claim is not on the ledger, add it before using it in a paper-facing way.
