@@ -257,6 +257,47 @@ New exact/bounded reduced shell-stress lift extracted after that:
   the live blocker list and leaves the local whole-shell lift and the bridge
   derivation itself as the next targets
 
+New exact/bounded reduced whole-shell stress lift extracted after that:
+
+- on the full sewing band `3 < r <= 5`, the reduced radial source profile per
+  unit charge and reduced exterior-projector potential profile per unit charge
+  are exact and universal across the star-support point-Green columns
+- on the inner half `3 < r <= 4`, the reduced exterior-projector potential
+  vanishes exactly, while on the outer half `4 < r <= 5` it matches the
+  previously derived DtN-side profile
+- under the static isotropic conformal bridge, this gives one exact
+  charge-parameterized reduced whole-shell stress family:
+  - `rho_Q(r) = Q k(r) / (2 pi (1 + Q u(r))^5)`
+  - `S_Q(r) = 0.5 rho_Q(r) (1/alpha_Q(r) - 1)`
+  - `alpha_Q(r) = (1 - Q u(r)) / (1 + Q u(r))`
+- the exact local `O_h` and broader finite-rank source families satisfy that
+  same reduced whole-shell stress law to machine precision
+- see `docs/REDUCED_WHOLE_SHELL_STRESS_LAW_NOTE.md`
+- this removes “reduced whole-shell stress lift on the current bridge surface”
+  from the live blocker list and leaves the local/angular lift and the bridge
+  derivation itself as the next targets
+
+New exact/bounded orbit-resolved whole-shell law extracted after that:
+
+- on the full sewing band `3 < r <= 5`, the orbit-mean exterior-projector
+  potential profile per unit charge and orbit-mean shell-source profile per
+  unit charge are exact and universal across the exact local `O_h` and broader
+  exact finite-rank source families
+- for the exact local `O_h` family, that orbit-mean law is already pointwise
+  exact on each orbit
+- for the broader exact finite-rank family, the remaining within-orbit
+  correction stays small:
+  - `u` below about `1.4%`
+  - `k` below about `1.7%`
+  - bridge-side `rho` below about `1.4%`
+  - bridge-side `S` below about `2.7%`
+- the universal orbit-mean profiles already predict the finite-rank orbit-mean
+  bridge stress law with tiny absolute error
+- see `docs/ORBIT_MEAN_WHOLE_SHELL_STRESS_LAW_NOTE.md`
+- this removes “generic local/angular shell freedom” from the live blocker list
+  and leaves the bridge derivation itself plus the final pointwise 4D lift as
+  the remaining targets
+
 ## Do not retread these solved or near-solved substeps
 
 The attack should **not** spend time redoing the following:
