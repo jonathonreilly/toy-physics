@@ -182,6 +182,21 @@ For each touched lane include:
     - DM relic mapping as `CLOSED`
     unless the underlying notes and runners genuinely support those statuses
 
+13. The newest honest bounded additions are:
+    - `GENERATION_ANOMALY_FORCES_THREE_NOTE.md`
+    - `frontier_generation_anomaly_forces_three.py`
+    - `DM_THERMODYNAMIC_CLOSURE_NOTE.md`
+    - `frontier_dm_thermodynamic_closure.py`
+    These are useful. They may be cited as bounded strengthenings, but they do
+    not upgrade the corresponding gates to closed status.
+
+14. `CODEX_REVIEW_PACKET_2026-04-12.md` is still not self-consistent all the
+    way through.
+    Even if the top summary is bounded, later sections must not re-promote:
+    - `S^3` to `STRUCTURAL`
+    - renormalized `y_t` to `CLOSED`
+    until the underlying lane notes actually support that upgrade.
+
 ## Immediate tasking
 
 Start with the highest-value open gate from `review.md`.

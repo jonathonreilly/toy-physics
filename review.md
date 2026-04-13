@@ -231,12 +231,28 @@ Additional honest bounded additions from the latest Claude batch:
 
 - `docs/GENERATION_NIELSEN_NINOMIYA_NOTE.md`
 - `docs/YT_FIXED_POINT_NOTE.md`
+- `docs/GENERATION_ANOMALY_FORCES_THREE_NOTE.md`
+- `scripts/frontier_generation_anomaly_forces_three.py`
+- `docs/DM_THERMODYNAMIC_CLOSURE_NOTE.md`
+- `scripts/frontier_dm_thermodynamic_closure.py`
 
 These are useful as:
 
 - a bounded strengthening of the generation obstruction story
 - a bounded negative result clarifying that the IR fixed-point story does not
   close renormalized `y_t`
+- a bounded anomaly-based strengthening of the generation case that still
+  leaves generation physicality open
+- a bounded clarification that the DM continuum-limit issue is really a
+  thermodynamic-limit issue, without upgrading the full DM relic lane
+
+Packet authority rule:
+
+- `docs/CODEX_REVIEW_PACKET_2026-04-12.md` is only usable if its later
+  per-lane sections agree with its bounded top summary.
+- Right now the top summary is closer to correct, but later `S^3` and
+  renormalized `y_t` sections still over-promote status and should be treated
+  as stale.
 
 ## Best next work
 
