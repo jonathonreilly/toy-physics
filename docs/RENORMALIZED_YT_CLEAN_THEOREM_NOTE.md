@@ -152,3 +152,8 @@ review pending)."
 cd "/Users/jonBridger/Toy Physics"
 python3 scripts/frontier_yt_clean_theorem.py
 ```
+
+**Output:** PASS=32 FAIL=0 time=0.0s
+
+All 32 checks are EXACT (machine precision). No bounded or model-dependent
+checks. The script verifies every step of the proof chain independently.

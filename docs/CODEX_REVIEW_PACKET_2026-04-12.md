@@ -40,9 +40,9 @@ python3 scripts/frontier_generation_synthesis.py
 
 ### Final status: BOUNDED (Fermi-point spectral theorem exact; physical ID requires lattice-is-physical assumption)
 
-### What closed and why
+### What was bounded and why
 
-**Taste-physicality (was axiom, now theorem):** Five independent proofs that Cl(3) on Z^3 has no well-defined continuum limit:
+**Taste-physicality (was axiom, now theorem within framework):** Five independent proofs that Cl(3) on Z^3 has no well-defined continuum limit:
 - No tunable bare coupling → no Line of Constant Physics → no a→0 procedure
 - Forced continuum limit gives 8 degenerate massless fermions (trivial, no generations)
 - Hamiltonian formulation → no path-integral determinant → fourth-root trick unavailable
@@ -50,7 +50,7 @@ python3 scripts/frontier_generation_synthesis.py
 
 **Superselection (new theorem):** Z_3 symmetry → Schur's lemma → generations are superselection sectors. Any Z_3-invariant operator is block-diagonal (verified to 10^-15). 't Hooft anomaly: merging any two generations changes Z_3 anomaly from 0→2 mod 3.
 
-**Mass hierarchy (was 1.5x short, now closed):** EWSB cascade (log enhancement ~38 for heavy generation) + strong-coupling RG (Δγ=0.173) together exceed the requirement for all three SM sectors. Up-quark margin is thin (4%).
+**Mass hierarchy (was 1.5x short, now bounded):** EWSB cascade (log enhancement ~38 for heavy generation) + strong-coupling RG (Δγ=0.173) together exceed the requirement for all three SM sectors. Up-quark margin is thin (4%).
 
 **Indirect proof (generation synthesis, 36/36 PASS):** Reductio ad absurdum — IF taste doublers are unphysical, THEN: (1) Cl(3) algebra breaks, (2) gauge anomaly cancellation fails, (3) 3+1 spacetime derivation collapses, (4) charge conjugation lost, (5) N_g=3 unexplained, (6) superselection destroyed. This is "rooting is self-contradictory within the framework" — analogous to string theory's d=10 from worldsheet anomaly cancellation.
 
@@ -265,7 +265,7 @@ python3 scripts/frontier_s3_synthesis.py
 
 ### Final status: BOUNDED (PL manifold provides bounded structural attack on V4)
 
-### What closed and why
+### What was bounded and why
 
 **G1/A4 (homogeneity, was imported):** Three independent derivations:
 - Gauge equivalence: Schur's lemma → site-dependent basis = pure gauge (verified 10^-15)
@@ -317,7 +317,7 @@ python3 scripts/frontier_dm_relic_synthesis.py
 
 ### Final status: BOUNDED (one-parameter consistency window, R=5.48 at g_bare=1)
 
-### What closed and why
+### What was bounded and why
 
 **H > 0 (was imported):** Finite graph → spectral gap λ_1 > 0 → vacuum energy ρ_vac > 0 → Λ > 0 → H^2 ≥ Λ/3 > 0. Sign selected by 2nd law (entropy increase). R is insensitive to the magnitude of H (elasticity 0.06 via x_F), so the CC magnitude problem does not propagate.
 
@@ -547,8 +547,8 @@ Key results:
 4. **pi_1 = 0** by van Kampen.
 5. **Perelman + Moise** => PL S^3.
 
-This eliminates V4: the cubical complex IS a PL manifold, no continuum
-limit needed.
+This narrows V4: the cubical complex IS a PL manifold, no continuum
+limit needed. Full closure of V4 still requires cited proof for general R.
 
 ### Why the claim is not overstated
 
@@ -1057,3 +1057,58 @@ obstructions. The script has 5 NEGATIVE checks that are all PASS (correctly
 identifying what does NOT work). The g_bare lane remains BOUNDED, consistent
 with review.md finding 10 (G_BARE_DERIVATION_NOTE.md is still a bounded
 normalization argument).
+
+---
+
+### Sharp obstruction note for generation physicality (new, 2026-04-12)
+
+**Files added:**
+- `docs/GENERATION_PHYSICALITY_OBSTRUCTION_NOTE.md`
+- `scripts/frontier_generation_physicality_obstruction.py` -- PASS=24 FAIL=0
+
+**Commands run:**
+```bash
+python3 scripts/frontier_generation_physicality_obstruction.py
+# PASS=24  FAIL=0
+```
+
+**What this proves:** The generation physicality gate CANNOT be closed at
+the mathematical level. The obstruction is sharp and irreducible:
+
+1. All 11 independent mathematical approaches to generation physicality
+   have been completed (Fermi-point, rooting, gauge universality, commutant
+   inequivalence, EWSB split, Z_3 anomaly, scattering, universality class,
+   five-fold consistency, Oh symmetry, Cl(3) universality).
+
+2. Every approach proves properties of the lattice taste structure but
+   requires axiom (A0) -- the lattice-is-physical postulate -- for the
+   final identification with physical fermion generations.
+
+3. Axiom (A0) is irreducible because it is ontological (maps mathematical
+   objects to physical objects), and no theorem in mathematical physics
+   derives physical applicability from within a formalism.
+
+4. Conditional on (A0), generation physicality IS closed: 3 irremovable
+   species, each with the same gauge rep (gauge universality), different
+   masses (EWSB), prevented from identification (Z_3 anomaly).
+
+5. (A0) is well-motivated by 5 independent arguments: no continuum limit,
+   event-network ontology, graphene analogy, five-fold consistency, no
+   alternative theory.
+
+6. Every other framework prediction (gauge groups, spacetime, anomaly
+   cancellation) also requires (A0), so generation physicality is on the
+   same footing.
+
+**Claimed status: SHARP OBSTRUCTION**
+- Conditional on (A0): CLOSED
+- Unconditional: IRREDUCIBLY OPEN
+
+**Why the claim is not overstated:** This is explicitly an obstruction note,
+not a closure note. It does not claim "generation physicality gate: closed."
+It claims the gate cannot be closed without (A0) and identifies (A0) as
+irreducible. The conditional closure claim is supported by the full chain
+of 11 exact results enumerated in the note. The script verifies each result
+independently (9 exact algebraic checks, 4 supporting references to other
+scripts, 11 obstruction route checks). This is exactly the "sharp obstruction"
+that review.md asks for as an alternative to closing the gate.
