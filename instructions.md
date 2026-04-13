@@ -57,6 +57,26 @@ These caveats must stay explicit in any honest flagship submission:
 Everything outside the three live gates is out of scope unless Codex
 explicitly asks for wording/package alignment.
 
+If Codex explicitly asks for gravity companion cleanup, do **not** try to
+promote broad gravity. The only acceptable work is to remove stale promotion
+language. Exact blockers to gravity-companion promotion:
+
+1. strong-field package
+   - zero-echo amplitude is **not** theorem-grade while it still depends on
+     the unresolved strong-field metric between `R_min` and `R_S`
+   - “no singularity” must **not** be promoted beyond the current Hartree /
+     collapse-floor support
+2. broad eikonal package
+   - geodesic equation remains conditional on the smooth-metric / continuum
+     identification
+   - conformal metric remains conditional on the same identification
+   - factor-of-2 light bending remains conditional on conformal metric +
+     null-ray identification
+3. paper-safe gravity surface remains only:
+   - Poisson / Newton weak-field core
+   - weak-field WEP
+   - weak-field time dilation
+
 ## Exact work queue
 
 ### Target A: DM relic mapping

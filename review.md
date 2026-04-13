@@ -63,6 +63,22 @@ Routine review should focus on:
 
 Everything else is out of scope unless Codex explicitly asks for cleanup.
 
+If gravity companion docs are touched for cleanup, the promotion blockers are:
+
+1. strong-field gravity
+   - zero-echo amplitude is still conditional on the unresolved strong-field
+     metric choice
+   - “no singularity” is still bounded on the current Hartree / collapse-floor
+     support
+2. broad eikonal bundle
+   - geodesic equation remains conditional on smooth-metric / continuum
+     identification
+   - conformal metric remains conditional on the same step
+   - factor-of-2 light bending remains conditional on conformal metric +
+     null-ray identification
+
+So gravity-companion cleanup should only downgrade stale wording, not promote.
+
 ## Lane-by-lane review state
 
 ### 1. DM relic mapping
@@ -150,6 +166,16 @@ Only if those fail cleanly should the lane be treated as compute-limited.
 Paper-safe read:
 
 > CKM remains bounded; structure improved, quantitative closure not there yet.
+
+## Promotion rule
+
+Only report work as promotable when the exact blocker for that lane is gone.
+
+- DM: relic bridge itself must be closed, not just the old `g_bare` objection
+- `y_t`: actual low-energy EFT/matching bridge must be closed on the real
+  Hamiltonian, not a toy route
+- CKM: `V_cb` / `V_ub` must be quantitatively sharpened, not just structurally
+  bounded
 
 ## Packet alignment rule
 
