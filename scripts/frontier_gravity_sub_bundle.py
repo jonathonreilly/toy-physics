@@ -46,46 +46,34 @@ except ImportError:
 # ===================================================================
 
 def solve_poisson_sparse(N, mass_pos, mass_strength=1.0):
-    """Solve nabla^2 phi = -rho on NxNxN lattice with Dirichlet BC."""
+    """Solve nabla^2 phi = -rho on NxNxN lattice with Dirichlet BC.
+
+    Uses vectorized construction of the 3D Laplacian via Kronecker products.
+    """
     M = N - 2
-    n_interior = M * M * M
+    n = M * M * M
 
-    def idx(i, j, k):
-        return i * M * M + j * M + k
+    # 1D Laplacian on M points with Dirichlet BC
+    e = np.ones(M)
+    L1 = sparse.diags([-e[1:], 2 * e, -e[:-1]], [-1, 0, 1], shape=(M, M), format='csc')
+    I1 = sparse.eye(M, format='csc')
 
-    rows, cols, vals = [], [], []
-    rhs = np.zeros(n_interior)
+    # 3D Laplacian = L_x (x) I_y (x) I_z + I_x (x) L_y (x) I_z + I_x (x) I_y (x) L_z
+    A = (sparse.kron(sparse.kron(L1, I1), I1) +
+         sparse.kron(sparse.kron(I1, L1), I1) +
+         sparse.kron(sparse.kron(I1, I1), L1)).tocsc()
+
+    rhs = np.zeros(n)
     mx, my, mz = mass_pos
     mi, mj, mk = mx - 1, my - 1, mz - 1
+    src_idx = mi * M * M + mj * M + mk
+    if 0 <= src_idx < n:
+        rhs[src_idx] = mass_strength
 
-    for i in range(M):
-        for j in range(M):
-            for k in range(M):
-                c = idx(i, j, k)
-                rows.append(c); cols.append(c); vals.append(-6.0)
-                if i > 0:
-                    rows.append(c); cols.append(idx(i - 1, j, k)); vals.append(1.0)
-                if i < M - 1:
-                    rows.append(c); cols.append(idx(i + 1, j, k)); vals.append(1.0)
-                if j > 0:
-                    rows.append(c); cols.append(idx(i, j - 1, k)); vals.append(1.0)
-                if j < M - 1:
-                    rows.append(c); cols.append(idx(i, j + 1, k)); vals.append(1.0)
-                if k > 0:
-                    rows.append(c); cols.append(idx(i, j, k - 1)); vals.append(1.0)
-                if k < M - 1:
-                    rows.append(c); cols.append(idx(i, j, k + 1)); vals.append(1.0)
-                if i == mi and j == mj and k == mk:
-                    rhs[c] = -mass_strength
-
-    A = sparse.csr_matrix((vals, (rows, cols)), shape=(n_interior, n_interior))
     phi_interior = spsolve(A, rhs)
 
     field = np.zeros((N, N, N))
-    for i in range(M):
-        for j in range(M):
-            for k in range(M):
-                field[i + 1, j + 1, k + 1] = phi_interior[idx(i, j, k)]
+    field[1:N-1, 1:N-1, 1:N-1] = phi_interior.reshape((M, M, M))
     return field
 
 
