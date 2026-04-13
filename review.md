@@ -149,27 +149,32 @@ Current blockers:
 - `L_w*T` is no longer the main blocker
   - the bounce/profile route is now the strongest transport sub-result
 - the live blocker is now the remaining transport sector behind `eta`
-  - `D_q*T` is stronger than before, but the Green-Kubo route still lands on
-    an analytic continuum-limit Coulomb-log formula with inserted
-    `C_0 = 0.5`, and the spectral route reuses the same analytic width
-  - `v_w` is also stronger than before, but the Boltzmann-closure route still
-    leans on perturbative CW / bag-model driving pressure and the imported
-    `R_NP = 1.5` enhancement from 2HDM lattice studies
+  - the old `D_q*T` Coulomb-log / inserted-`C_0` objection is mostly retired
+    by the new native lattice mode-sum route
+  - but that new `D_q*T` value is still only a one-loop, static-screened
+    lattice transport computation with real finite-`L` soft-mode bias, so it
+    should be treated as strong native bounded support rather than the final
+    transport theorem
+  - `v_w` is now the cleaner primary blocker
+    - the present route still leans on perturbative CW / bag-model driving
+      pressure and the imported `R_NP = 1.5` enhancement from 2HDM lattice
+      studies
 - relic-ratio / cosmological bridge is therefore still not closed
 - `g = 1` and `k = 0` remain bounded framework inputs where used
 
 Paper-safe read:
 
 > Structural DM inputs are materially stronger. The BBN objection is mostly
-> retired and `L_w*T` is substantially narrowed, but the full relic mapping
-> remains bounded because `eta` still depends on transport formulas that are
-> not yet native lattice derivations.
+> retired, `L_w*T` is substantially narrowed, and `D_q*T` now has a native
+> one-loop lattice route. The full relic mapping still remains bounded because
+> `eta` still depends on transport closure that is not yet fully native at the
+> paper bar, especially `v_w`.
 
 Best attack:
 
 1. do not spend more time on BBN rhetoric or `L_w*T` unless a real bug appears
-2. convert the current `D_q*T` route from analytic continuum-matched support
-   into a genuinely native lattice transport result
+2. if `D_q*T` is touched again, the only high-value move is to upgrade it
+   beyond the present one-loop / static-screened native lattice surface
 3. derive `v_w` without imported `R_NP` / bag-model driving-pressure structure
 4. if 2-3 fail, freeze the lane honestly as “framework baryogenesis plus
    standard transport closure”
@@ -190,17 +195,21 @@ Current safe state:
   - the old split-boundary objection is no longer the best description
   - the new script really does derive one framework coupling and enforce
     `y_t = g_s / sqrt(6)` at the framework boundary
-  - but the fully unified boundary is non-perturbative and hits a Landau pole
+  - but the framework `alpha_s(M_Pl)` is about `4.4x` the perturbative SM
+    value obtained by running observed `alpha_s(M_Z)` upward
+  - perturbative running of the framework coupling breaks down near
+    `10^15.8 GeV`
   - the quoted successful `m_t` prediction still uses the framework Yukawa
     boundary together with the perturbative SM gauge trajectory generated from
     observed `alpha_s(M_Z)`
-  - so the remaining blocker is the strong-to-perturbative gauge crossover,
-    not the old “two unrelated UV couplings” problem
-  - thresholded running down to `M_Z`
+  - so the remaining blocker is now a concrete non-perturbative gauge
+    crossover / step-scaling problem, not the old “two unrelated UV
+    couplings” problem
+  - thresholded running down to `M_Z` still matters after that crossover
 
 Paper-safe read:
 
-> The UV theorem surface is strong, but the remaining issue is now a
+> The UV theorem surface is strong, but the remaining issue is now a concrete
 > framework-to-SM crossover problem: the common framework boundary is real,
 > but the gauge-side handoff to the perturbative running used below `M_Pl` is
 > not yet derived from the same framework surface.
@@ -209,7 +218,8 @@ Best attack:
 
 1. do not re-prove Feshbach or the sub-percent matching coefficient
 2. derive the framework-to-perturbative gauge crossover from the same boundary
-   that fixes `y_t(M_Pl)`
+   that fixes `y_t(M_Pl)`, with lattice step-scaling as the clearest current
+   route
 3. only then rerun the full thresholded 2-loop chain
 4. if a low-energy gauge anchor is still needed, isolate it explicitly and
    keep the lane bounded
@@ -249,11 +259,15 @@ Preferred routes:
 
 1. use the exact `V_cb` formula already on branch as the baseline
 2. use the ratio route only as an input reduction step, not as the closure
-3. derive the absolute `S_23` / `c_23` normalization analytically from the
+3. cheapest next route:
+   - tighten `c_12/c_23` on multi-`L` data with enough configurations
+   - use that to reduce the residual sector-correction ambiguity before
+     reaching for large-`L` brute force
+4. derive the absolute `S_23` / `c_23` normalization analytically from the
    continuum / Symanzik taste-splitting machinery and remove the residual
    sector-dependent correction
-4. derive `c_13` and the up/down phase structure together
-5. use invariant/Jarlskog relations built from derived quantities, not PDG
+5. derive `c_13` and the up/down phase structure together
+6. use invariant/Jarlskog relations built from derived quantities, not PDG
    angles, only as a consistency layer after `S_23` / `c_13` / phase sharpen
 
 Only if those fail cleanly should the lane be treated as compute-limited.
