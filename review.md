@@ -159,6 +159,12 @@ Current blockers:
     - the present route still leans on perturbative CW / bag-model driving
       pressure and the imported `R_NP = 1.5` enhancement from 2HDM lattice
       studies
+- the branch still contains an internal EWPT/baryogenesis regime mismatch
+  - older notes still use a partial-washout regime near `v/T ~ 0.5`
+  - newer native EWPT notes give a strong first-order surface with
+    `v(T_c)/T_c > 1`
+  - until one note states which of `v(T_c)/T_c`, `v(T_n)/T_n`, or wall-local
+    `v/T` is the real baryogenesis input, the lane is not promotable
 - relic-ratio / cosmological bridge is therefore still not closed
 - `g = 1` and `k = 0` remain bounded framework inputs where used
 
@@ -172,13 +178,19 @@ Paper-safe read:
 
 Best attack:
 
-1. do not spend more time on BBN rhetoric or `L_w*T` unless a real bug appears
-2. if `D_q*T` is touched again, the only high-value move is to upgrade it
-   beyond the present one-loop / static-screened native lattice surface
-3. derive `v_w` without imported `R_NP` / bag-model driving-pressure structure
-4. if 2-3 fail, freeze the lane honestly as “framework baryogenesis plus
+1. first derive `T_n` from the existing bounce / effective-potential surface
+   using `S_3(T_n)/T_n ~ 140`
+2. rebuild `v_w` on the reconciled native EWPT + HTL + bounce surface, with
+   no stale `R_NP = 1.5`
+3. solve the coupled transport fixed point instead of scanning `D_q*T`,
+   `v_w`, and `L_w*T` independently
+4. only if there is real leverage, upgrade `D_q*T` beyond the present one-loop
+   / static-screened native surface
+5. derive the CP source from the wall profile / `Z_3` phase structure rather
+   than compact ansatz form
+6. if 1-5 fail, freeze the lane honestly as “framework baryogenesis plus
    standard transport closure”
-5. only then promote `eta` and the full relic ratio
+7. only then promote `eta` and the full relic ratio
 
 ### 2. Renormalized `y_t`
 
@@ -217,12 +229,21 @@ Paper-safe read:
 Best attack:
 
 1. do not re-prove Feshbach or the sub-percent matching coefficient
-2. derive the framework-to-perturbative gauge crossover from the same boundary
-   that fixes `y_t(M_Pl)`, with lattice step-scaling as the clearest current
-   route
-3. only then rerun the full thresholded 2-loop chain
-4. if a low-energy gauge anchor is still needed, isolate it explicitly and
-   keep the lane bounded
+2. preferred route:
+   - place the actual `Cl(3)` / `Z^3` Hamiltonian in a slowly varying SU(3)
+     background field
+   - do the same low/high-energy Schur-complement / Feshbach projection on
+     that real Hamiltonian
+   - extract the induced low-energy gauge-kinetic coefficient
+   - use that as the finite crossover map from the framework boundary to the
+     perturbative SM trajectory
+3. keep `y_t / g_3 = 1/sqrt(6)` on that effective boundary, not on the raw
+   plaquette coupling
+4. only then rerun the full thresholded 2-loop chain
+5. lattice step-scaling is fallback if the background-field effective-coupling
+   route fails cleanly
+6. if a low-energy gauge anchor is still needed after that, isolate it
+   explicitly and keep the lane bounded
 
 ### 3. CKM / quantitative flavor closure
 
@@ -259,18 +280,17 @@ Preferred routes:
 
 1. use the exact `V_cb` formula already on branch as the baseline
 2. use the ratio route only as an input reduction step, not as the closure
-3. cheapest next route:
-   - tighten `c_12/c_23` on multi-`L` data with enough configurations
-   - use that to reduce the residual sector-correction ambiguity before
-     reaching for large-`L` brute force
-4. derive the absolute `S_23` / `c_23` normalization analytically from the
-   continuum / Symanzik taste-splitting machinery and remove the residual
-   sector-dependent correction
-5. derive `c_13` and the up/down phase structure together
-6. use invariant/Jarlskog relations built from derived quantities, not PDG
-   angles, only as a consistency layer after `S_23` / `c_13` / phase sharpen
-
-Only if those fail cleanly should the lane be treated as compute-limited.
+3. highest-value next route:
+   - derive the absolute `S_23` / `c_23` normalization analytically from the
+     existing sector-correction machinery, with no PDG back-calibration
+4. derive `c_13` analytically from the full `3x3` NNI structure
+   - Schur-complement / effective-mass-matrix route is preferred
+5. derive the surviving rephasing-invariant CKM phase from invariants built
+   from the same EWSB-dressed mass matrices
+6. use multi-`L` ratio/normalization evidence only as support for 3-5, not as
+   a substitute for them
+7. only if 3-6 fail cleanly should the lane be treated as compute-limited,
+   and then only on one scalar quantity (`K_23` or physical `c_13`)
 
 Paper-safe read:
 
