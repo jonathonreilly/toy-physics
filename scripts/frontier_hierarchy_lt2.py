@@ -66,7 +66,7 @@ np.set_printoptions(precision=10, linewidth=120, suppress=True)
 # Physical constants
 # ============================================================================
 
-M_PL_GEV = 2.435e18
+M_PL_GEV = 1.2209e19    # Planck mass (non-reduced), consistent with hierarchy scripts
 V_EW_GEV = 246.22
 ALPHA_LM = 0.0906
 
