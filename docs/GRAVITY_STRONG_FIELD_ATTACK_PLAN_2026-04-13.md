@@ -239,6 +239,24 @@ New exact/bounded reduced-junction operator result extracted after that:
   and pushes the remaining gravity problem onto the lift from reduced
   shell/exterior data to the full nonlinear 4D closure
 
+New exact/bounded reduced shell-stress lift extracted after that:
+
+- on the outer half of the sewing band `4 < r <= 5`, the reduced outer-shell
+  source profile per unit charge and the reduced exterior potential profile per
+  unit charge are exact and universal across the star-support point-Green
+  columns
+- under the static isotropic conformal bridge, this gives one exact
+  charge-parameterized reduced shell-stress family:
+  - `rho_Q(r) = Q k(r) / (2 pi (1 + Q u(r))^5)`
+  - `S_Q(r) = 0.5 rho_Q(r) (1/alpha_Q(r) - 1)`
+  - `alpha_Q(r) = (1 - Q u(r)) / (1 + Q u(r))`
+- the exact local `O_h` and broader finite-rank source families satisfy that
+  reduced outer-shell stress law to machine precision
+- see `docs/REDUCED_OUTER_SHELL_STRESS_LAW_NOTE.md`
+- this removes “reduced shell-stress lift on the DtN side of the shell” from
+  the live blocker list and leaves the local whole-shell lift and the bridge
+  derivation itself as the next targets
+
 ## Do not retread these solved or near-solved substeps
 
 The attack should **not** spend time redoing the following:
@@ -281,8 +299,9 @@ again:
    star-supported exact source classes
 4. the reduced shell/exterior junction law itself is no longer the blocker on
    the current exact source class
-5. the live blocker is the lift from that exact reduced junction operator to a
-   full nonlinear 4D shell-stress / Einstein-Regge closure
+5. the live blocker is now the full local lift across the whole sewing band
+   and the derivation of the static isotropic bridge from the lattice closure
+   itself
 6. after that, the resulting exterior-plus-band construction still has to be
    promoted to a theorem-grade nonlinear 4D closure
 
