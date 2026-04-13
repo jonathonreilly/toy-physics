@@ -3,7 +3,7 @@
 Graph-Native Derivation: R = Omega_DM / Omega_b from PURE GRAPH THEORY
 =======================================================================
 
-STATUS: EXACT chain with ONE lattice-normalization input (g=1 forced)
+STATUS: BOUNDED -- g_bare = 1 is a framework coefficient, not a derived theorem
 
 This script derives R = Omega_DM / Omega_b entirely from graph-theoretic
 operations on Z^3 with Cl(3) at each site.  Every step is a graph-native
@@ -23,18 +23,16 @@ THE GRAPH-NATIVE CHAIN:
   Step 11: Sommerfeld enhancement from lattice Schrodinger equation
   Step 12: R = (3/5) * (155/27) * S_vis = 5.48
 
-WHY g_bare = 1 IS FORCED (not chosen):
-  The Kogut-Susskind Hamiltonian on Z^3 is H = -Delta (the graph Laplacian).
-  The hopping parameter t = 1 is the DEFINITION of the graph adjacency.
-  The gauge coupling enters through the SAME hopping: H = -sum U_mu(x).
-  With t = 1 (graph normalization), we have g^2 = 4*pi*t = 4*pi*1.
-  But in the KS convention, the gauge action is S = (1/g^2) sum Re Tr(1-P),
-  and the Hamiltonian H = (g^2/2) E^2 - (1/g^2) sum Re Tr P.
-  Self-consistency L = H requires the coefficient of the kinetic (electric)
-  and magnetic terms to match, which at the graph-natural normalization
-  forces g = 1.  This is a CONSTRAINT, not a parameter choice.
+WHY g_bare = 1 IS BOUNDED (not EXACT):
+  The KS Hamiltonian H = sum eta_ij U_ij has coefficient 1 on every link.
+  This is the framework's Hamiltonian coefficient.  The plaquette P is an
+  OBSERVABLE of H, and alpha_s is extracted from <P>.  So g = 1 is the
+  input and alpha_s = 0.092 is the output -- these are consistent.
+  However, whether the framework FORCES g = 1 or merely ADOPTS it is a
+  foundational commitment, not a theorem.  The self-dual argument is
+  suggestive but not forcing.
 
-ZERO FREE PARAMETERS: every number comes from the graph.
+BOUNDED INPUTS: g_bare = 1 (Hamiltonian coefficient, not derived theorem).
 
 Self-contained: numpy only.
 PStack experiment: dm-graph-native
@@ -390,35 +388,28 @@ log()
 # ============================================================================
 
 log("=" * 78)
-log("STEP 8: g_bare = 1 FORCED by graph self-consistency (NOT A FREE PARAMETER)")
+log("STEP 8: g_bare = 1 -- Hamiltonian coefficient (BOUNDED)")
 log("=" * 78)
 log()
 
-log("  ARGUMENT: The Kogut-Susskind Hamiltonian on Z^3 is:")
-log("    H_KS = (g^2/2) sum_links E^2 - (1/g^2) sum_plaq Re Tr(1 - P)")
+log("  The KS Hamiltonian on Z^3 is H = sum eta_ij U_ij.")
+log("  The coefficient on every link is 1.  This is the framework's")
+log("  Hamiltonian coefficient -- it defines the dynamics.")
 log()
-log("  The graph Laplacian is:")
-log("    H_graph = -Delta = sum_<x,y> (f(x) - f(y))^2")
+log("  The plaquette P = Re Tr(U1 U2 U3* U4*) is an OBSERVABLE of H.")
+log("  alpha_s (Step 9) is EXTRACTED from <P>, not from a Wilson action parameter.")
+log("  So: g = 1 is the input (Hamiltonian coefficient),")
+log("      alpha_s = 0.092 is the output (measured observable).")
 log()
-log("  The hopping parameter t of the graph is t = 1 (by definition of Z^3).")
-log("  The nearest-neighbor structure IS the gauge connection.")
+log("  WHY BOUNDED: whether the framework FORCES g = 1 or merely ADOPTS it")
+log("  is a foundational commitment.  The self-dual argument (beta = 2*N_c)")
+log("  is suggestive but not a derivation.  A referee can argue this is a")
+log("  convention choice, not a theorem.")
 log()
-log("  Self-consistency requirement: L = H")
-log("    The Lagrangian (path integral weight) and Hamiltonian must agree.")
-log("    On a self-dual lattice (hypercubic), this requires the electric")
-log("    and magnetic coefficients to be equal: g^2/2 = 1/g^2.")
-log("    Solution: g^4 = 2, i.e. g^2 = sqrt(2).")
-log()
-log("  HOWEVER, the standard KS normalization absorbs this into the")
-log("  definition of E and B fields.  In the convention where:")
-log("    S_gauge = beta * sum_plaq (1 - (1/N_c) Re Tr P)")
-log("    beta = 2*N_c / g^2")
-log()
-log("  The SELF-DUAL point for SU(N_c) on a hypercubic lattice is:")
-log("    beta = 2*N_c  <=>  g = 1")
-log()
-log("  This is the point where the lattice theory has maximal symmetry --")
-log("  the coupling is fixed by the graph structure, not chosen by hand.")
+log("  NOTE: The previous note DM_G_BARE_FROM_HAMILTONIAN_NOTE.md claimed")
+log("  the framework 'lacks the Wilson action.'  This was contradictory --")
+log("  Step 9 computes alpha_s from the plaquette, which IS a Wilson-style")
+log("  observable.  That note is now superseded.")
 log()
 
 G_BARE = 1.0
@@ -429,10 +420,10 @@ log(f"  beta = 2*N_c/g^2 = {BETA}")
 log(f"  Self-dual point: beta = 2*N_c = {2*N_C}  ✓")
 log()
 
-# Verify self-dual point
-record("g_bare_selfdual", "EXACT",
+# Verify self-dual point -- but this is a BOUNDED argument, not a theorem
+record("g_bare_selfdual", "BOUNDED",
        abs(BETA - 2*N_C) < 1e-14,
-       f"beta = {BETA}, self-dual point = {2*N_C}")
+       f"beta = {BETA}, self-dual point = {2*N_C} (framework coefficient, not derived)")
 
 # Check: the Cl(3) algebra normalization {gamma_mu, gamma_nu} = 2*delta
 # forces the generator norms, which propagate to g = 1
@@ -444,9 +435,9 @@ log("  The coupling g relates to the field strength F ~ dA + g*A^2.")
 log("  With unit-norm generators, g = 1 is the natural scale.")
 log()
 
-record("clifford_norm", "EXACT",
+record("clifford_norm", "BOUNDED",
        True,
-       "{gamma_mu, gamma_nu} = 2*delta forces ||gamma|| = 1 -> g = 1")
+       "{gamma_mu, gamma_nu} = 2*delta -> ||gamma|| = 1 -> g = 1 (suggestive, not forcing)")
 
 log()
 
@@ -876,7 +867,7 @@ provenance = [
     ("SU(2) gauge group", "EXACT", "Even subalgebra of Cl(3)"),
     ("C_F = 4/3", "EXACT", "Casimir of derived SU(3)"),
     ("Channel ratio 155/27", "EXACT", "Group theory of derived gauge groups"),
-    ("g_bare = 1", "EXACT", "KS self-dual point forced by graph normalization"),
+    ("g_bare = 1", "BOUNDED", "Hamiltonian coefficient (framework premise, not derived)"),
     ("alpha_s = 0.0923", "DERIVED", "Plaquette action with g_bare = 1"),
     ("V(r) = -C_F*alpha/r", "EXACT", "Lattice Laplacian Green's function (Watson 1939)"),
     ("Sommerfeld S_vis", "DERIVED", "Lattice Schrodinger equation with lattice V(r)"),
@@ -904,10 +895,10 @@ log("    - g_bare = 1 classified as BOUNDED (convention/assumption)")
 log("    - k = 0 (flatness) classified as BOUNDED")
 log("    - Overall status: BOUNDED (2 irreducible inputs)")
 log()
-log("  THIS derivation (graph-native):")
-log("    - g_bare = 1 classified as EXACT (forced by KS self-duality)")
-log("    - k = 0 NOT NEEDED (R is a RATIO; Friedmann factors cancel)")
-log("    - Overall status: DERIVED from graph structure alone")
+log("  THIS derivation (corrected graph-native):")
+log("    - g_bare = 1 classified as BOUNDED (Hamiltonian coefficient)")
+log("    - k = 0 cancellation in ratio is BOUNDED (structural argument)")
+log("    - Overall status: BOUNDED (structural backbone strong, g_bare open)")
 log()
 log("  KEY INSIGHT: R = Omega_DM/Omega_b is a RATIO.")
 log("  The absolute relic density Omega_i depends on H(T), M_Pl, g_*, etc.")
@@ -918,9 +909,17 @@ log("    3. Sommerfeld ratio (lattice Green's function)")
 log("  The cosmological factors CANCEL in the ratio.")
 log()
 
-record("ratio_cancellation", "EXACT",
-       True,
-       "Cosmological factors (H, M_Pl, g_*) cancel in Omega_DM/Omega_b")
+# NOTE: The claim that cosmological factors "cancel in the ratio" is an
+# ARGUMENT, not a derived check.  The Lee-Weinberg formula gives
+# Omega_i ~ m_i^2 / (sigma_i * M_Pl^2 * sqrt(g_*) * x_F^{1/2}).
+# In the ratio R = Omega_DM/Omega_b, M_Pl and g_* cancel IF both species
+# freeze out under the same cosmological expansion.  This is plausible
+# but not a lattice theorem -- it requires that H(T) applies to both
+# sectors identically.  Marking as BOUNDED.
+ratio_cancel_check = True  # structural argument, not computed
+record("ratio_cancellation", "BOUNDED",
+       ratio_cancel_check,
+       "Cosmological factors cancel in ratio (structural argument, not lattice theorem)")
 
 log()
 
@@ -1002,8 +1001,9 @@ else:
 log()
 log("=" * 78)
 log(f"  RESULT: R = {R_FINAL:.4f}  (observed: {R_OBS:.4f}, deviation: {deviation_pct:.2f}%)")
-log(f"  STATUS: DERIVED from pure graph theory on Z^3 with Cl(3)")
-log(f"  FREE PARAMETERS: ZERO (g_bare = 1 forced by self-dual point)")
+log(f"  STATUS: BOUNDED -- structural backbone strong, g_bare = 1 remains bounded")
+log(f"  BOUNDED INPUTS: g_bare = 1 (Hamiltonian coefficient, not derived theorem)")
+log(f"  DECISION: KEEP BOUNDED")
 log("=" * 78)
 
 

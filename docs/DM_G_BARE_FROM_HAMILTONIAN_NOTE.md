@@ -1,6 +1,21 @@
 # g_bare = 1 Is Not an Assumption: Absence of Free Parameter in H
 
-**Status upgrade:** g_bare = 1 changes from **BOUNDED** to **EXACT**.
+> **SUPERSEDED** -- This note is no longer closure authority.
+> It contains an internal contradiction: it claims the framework "lacks
+> the Wilson/path-integral coupling route" (Premise 4-5), while the
+> graph-native chain (DM_GRAPH_NATIVE_NOTE.md, Step 9) computes alpha_s
+> from the plaquette, which IS a Wilson-style observable.
+>
+> The honest resolution is in **DM_CLEAN_DERIVATION_NOTE.md** (Steps 5-6):
+> g = 1 is the Hamiltonian coefficient (BOUNDED input); alpha_s is the
+> resulting observable (DERIVED output). These are consistent, but g = 1
+> remains bounded, not exact.
+>
+> **Do not use this note as authority for g_bare = EXACT.**
+
+~~**Status upgrade:** g_bare = 1 changes from **BOUNDED** to **EXACT**.~~
+
+**Status: SUPERSEDED** -- see DM_CLEAN_DERIVATION_NOTE.md
 
 **Script:** `scripts/frontier_dm_g_bare_from_hamiltonian.py`
 

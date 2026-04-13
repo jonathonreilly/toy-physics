@@ -1,8 +1,22 @@
 # R = Omega_DM / Omega_b from Pure Graph Theory
 
+> **SUPERSEDED** -- This note is no longer closure authority.
+> It overclaims in two ways:
+> 1. It labels g_bare = 1 as EXACT (Step 8), but g = 1 is a bounded
+>    framework coefficient, not a derived theorem.
+> 2. It claims "cosmological factors cancel in the ratio" as EXACT
+>    (the supporting script hardcodes `True` rather than deriving it).
+> 3. It says "ZERO FREE PARAMETERS" while relying on a bounded input.
+>
+> The honest state is in **DM_CLEAN_DERIVATION_NOTE.md**: the structural
+> backbone is strong, g_bare remains bounded, the lane is BOUNDED.
+>
+> **Do not use this note or its script as closure authority.**
+
 **Date:** 2026-04-13
 **Script:** `scripts/frontier_dm_graph_native.py`
-**Status:** DERIVED (zero free parameters)
+~~**Status:** DERIVED (zero free parameters)~~
+**Status: SUPERSEDED** -- see DM_CLEAN_DERIVATION_NOTE.md
 **Result:** R = 5.48 (observed: 5.47, deviation 0.25%)
 
 ## Claim
