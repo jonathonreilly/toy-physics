@@ -1,315 +1,204 @@
 # Codex Review State
 
-**Date:** 2026-04-12  
-**Source of truth:** audited state of `origin/codex/review-active`  
-**Purpose:** this is the single review snapshot Claude should obey while
-working in `claude/youthful-neumann`
+**Date:** 2026-04-13  
+**Primary audited source:** `origin/codex/review-active`  
+**Canonical claims ledger:** `origin/codex/publication-prep`
 
-If an older note/script conflicts with this file, this file wins.
+If any older note, packet, scorecard, or summary conflicts with this file, this
+file wins.
 
-## Review authority
+## Authority stack
 
-Treat this file as the compact execution-facing summary of the audited state.
-The deeper Codex authority stack on `review-active` is:
+Use these as the real Codex authority documents:
 
-1. `docs/CI3_Z3_PUBLICATION_RETAIN_AUDIT_2026-04-12.md`
-2. `docs/GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md`
-3. `docs/PAPER_OUTLINE_REVIEW_2026-04-12.md`
+1. [/private/tmp/physics-review-active/docs/CI3_Z3_PUBLICATION_STATE_2026-04-12.md](/private/tmp/physics-review-active/docs/CI3_Z3_PUBLICATION_STATE_2026-04-12.md)
+2. [/private/tmp/physics-review-active/docs/FULL_CLAIM_LEDGER.md](/private/tmp/physics-review-active/docs/FULL_CLAIM_LEDGER.md)
+3. [/private/tmp/physics-publication-prep/docs/publication/ci3_z3/FULL_CLAIM_LEDGER.md](/private/tmp/physics-publication-prep/docs/publication/ci3_z3/FULL_CLAIM_LEDGER.md)
 
-You do not need to read those unless a Codex review specifically sends you
-there.
+## Core publication caveats
 
-## Closed enough for the paper backbone
+These stay explicit even if every remaining live gate closes:
 
-- The framework statement is:
-  - we take `Cl(3)` on `Z^3` as the physical theory
-  - everything else is derived
-- exact native `Cl(3)` / `SU(2)`
-- graph-first structural `SU(3)` closure
-- left-handed charge matching on the selected-axis surface
-- time / `3+1` closure on the single-clock codimension-1 theorem surface
-- full-framework one-generation matter closure:
-  - spatial graph gives the left-handed gauge/matter structure
-  - derived time gives chirality
-  - anomaly cancellation fixes the right-handed singlet completion on the
-    Standard Model branch
-- three-generation matter closure in the framework:
-  - exact orbit algebra `8 = 1 + 1 + 3 + 3`
-  - irremovable species structure on the physical lattice
+- individual fermion masses are not fully first-principles derived
+  - safe claim: retained matter structure, bounded hierarchy/flavor support,
+    and selected quantitative windows
+- the strong CP problem is not addressed
+- `alpha_EM = 1/137` is not derived
+- gravity is still a weak-field framework result, not full nonlinear GR
 
-## Important boundary on RH matter
+## Framework-premise rule
 
-This is closed only in the **full-framework** sense.
+Codex accepts the framework premise:
 
-Paper-safe statement:
+> We take `Cl(3)` on `Z^3` as the physical theory.
 
-> The spatial graph determines the left-handed gauge algebra and matter
-> structure. The derived temporal direction supplies chirality. Anomaly
-> cancellation then fixes the right-handed singlet completion on the Standard
-> Model branch.
+That premise can close artifact-vs-physical disputes. It does **not** replace
+missing bridge derivations.
 
-Not paper-safe:
+So:
 
-> The spatial graph alone canonically derives the right-handed sector.
+- yes:
+  - generation closure can lean on the framework premise
+  - `S^3` can lean on accepted topology infrastructure plus the framework
+    premise already built into the theory statement
+- no:
+  - DM, `y_t`, or CKM cannot be declared closed just by repeating that the
+    graph is physical
 
-## Still open high-impact gates
+## Remaining live publication gates
 
-1. **`S^3` compactification / cap-map uniqueness**
-2. **DM relic mapping**
-3. **Renormalized `y_t` matching**
-4. **CKM quantitative closure**
+These are the only three remaining flagship live gates:
 
-## Lane-by-lane audited status
+1. **DM relic mapping**
+2. **Renormalized `y_t` matching**
+3. **CKM / quantitative flavor closure**
 
-### 1. Generation
+## Focus rule
 
-Closed:
+Routine review should focus on:
 
-- exact orbit algebra `8 = 1 + 1 + 3 + 3`
-- exact `1+2` split from weak-axis selection / EWSB
-- three-generation matter closure in the framework
+1. DM relic mapping
+2. renormalized `y_t`
+3. CKM
 
-Still bounded:
+Everything else is out of scope unless Codex explicitly asks for cleanup.
 
-- `1+1+1` hierarchy beyond the exact three-species result
-- interpretation of the two singlets
-- CKM / flavor data
+If gravity companion docs are touched for cleanup, the promotion blockers are:
 
-Current live objection:
+1. strong-field gravity
+   - zero-echo amplitude is still conditional on the unresolved strong-field
+     metric choice
+   - “no singularity” is still bounded on the current Hartree / collapse-floor
+     support
+2. broad eikonal bundle
+   - geodesic equation remains conditional on smooth-metric / continuum
+     identification
+   - conformal metric remains conditional on the same step
+   - factor-of-2 light bending remains conditional on conformal metric +
+     null-ray identification
 
-- `frontier_ewsb_generation_cascade.py` and `EWSB_GENERATION_CASCADE_NOTE.md`
-  still over-close the hierarchy/flavor lane if they promote a modeled 3-way
-  mass matrix to theorem-grade generation closure
+So gravity-companion cleanup should only downgrade stale wording, not promote.
 
-Latest Codex review finding:
+## Lane-by-lane review state
 
-- the pushed generation-cascade lane still builds the final 3-way split from
-  benchmark inputs and then promotes it to a total matter-gate closure
-- that is not allowed on the current audited surface; generation existence is
-  retained, hierarchy/flavor are not
+### 1. DM relic mapping
 
-Paper-safe wording:
+Current strongest useful work:
 
-> exact three-species matter structure; exact `1+2` split; bounded `1+1+1`
-> hierarchy model and bounded flavor closure
+- `DM_CLEAN_DERIVATION_NOTE.md`
+- `DM_STOSSZAHLANSATZ_THEOREM_NOTE.md`
+- `DM_INVARIANT_BRIDGE_NOTE.md`
+- `DM_K_INDEPENDENCE_NOTE.md`
+- `DM_DIRECT_OBSERVABLE_NOTE.md`
 
-### 2. S^3 / compactification
+Current blockers:
 
-Closed:
+- the old coupling-identity objection is now narrower
+  - if `sigma_v` is treated as a direct observable of `H` via the T-matrix,
+    the “is `g_bare` the same coupling?” objection mostly dissolves
+  - this helps, but it does not close the lane
+- relic-ratio / cosmological cancellation bridge is still not theorem-grade
+- Boltzmann / Stosszahlansatz coarse-graining is improved but still not fully
+  internalized
 
-- local shell-growth / ball-like topology diagnostics
+Paper-safe read:
 
-Open:
+> Structural DM inputs are materially stronger, but the full relic mapping
+> remains bounded.
 
-- graph-to-closed-manifold compactification / cap-map uniqueness strong enough
-  to force `S^3`
+### 2. Renormalized `y_t`
 
-Paper-safe wording:
+Current safe state:
 
-> topology lane is bounded until compactification is derived
+- bare UV theorem closed
+- `Cl(3)` preservation under RG exact
+- the new Wilsonian-EFT close-claim does **not** yet clear the paper bar
+  - reason 1:
+    - the current note/runner verify Feshbach projection on toy Hamiltonians,
+      not on the actual `Cl(3)` / `Z^3` Hamiltonian
+  - reason 2:
+    - symmetry preservation plus generic EFT logic does not by itself identify
+      the exact low-energy SM matching surface for this framework
+  - reason 3:
+    - the runner’s one-loop EFT bookkeeping is not yet publication-safe
+      (for example `b_2 = 10/3` appears where the SM value with three
+      generations and one Higgs doublet is `19/6`)
+- therefore still bounded:
+  - low-energy continuum running
+  - `alpha_s(M_Pl)` chain
+  - lattice-to-continuum matching
+  - actual low-energy EFT identification on the real Hamiltonian surface
 
-### 3. DM relic mapping
+Paper-safe read:
 
-Closed / strengthened:
+> The UV theorem surface is strong, but the low-energy bridge remains bounded.
 
-- direct lattice Sommerfeld/contact enhancement is real
-- contact-propagator story is much stronger than before
+### 3. CKM / quantitative flavor closure
 
-Open:
+Current safe state:
 
-- graph-native mapping to physical relic abundance without importing the
-  Boltzmann/Friedmann freeze-out layer as if it were derived
+- route pruning and bounded structural flavor notes are useful
+- the old Higgs `Z_3` universality blocker is no longer the main issue
+- still open:
+  - sharp `V_cb`
+  - sharp `V_ub`
+  - first-principles control of the `2-3` asymmetry / NNI coefficients
 
-Paper-safe wording:
+Current best reading:
 
-> structural DM inputs plus universal thermal freeze-out; bounded consistency,
-> not first-principles relic closure
+- this is not obviously a pure cluster-compute wall
+- the exact NNI / Fritzsch-type `2-3` formula already lands fairly close to
+  PDG if the residual `c_23^u/c_23^d` asymmetry is modest
+- the highest-value target is therefore the **ratio / asymmetry** controlling
+  `c_23^u/c_23^d`, not brute-force absolute overlap closure
 
-### 4. Renormalized y_t
+Preferred routes:
 
-Closed:
+1. derive `V_cb` from the exact `2-3` NNI formula with explicit
+   `c_23^u`, `c_23^d`, `delta_23`
+2. derive the ratio `c_23^u/c_23^d` analytically from common overlap cancellation
+   plus sector-dependent EW / radiative weights
+3. derive `V_ub` from NNI + `c_13` suppression + up-sector dominance
+4. use invariant/Jarlskog relations built from derived quantities, not PDG angles
 
-- bare UV theorem / tree-level normalization surface
+Only if those fail cleanly should the lane be treated as compute-limited.
 
-Open:
+Paper-safe read:
 
-- renormalized matching step (`Z_Y(mu) = Z_g(mu)` or equivalent)
+> CKM remains bounded; structure improved, quantitative closure not there yet.
 
-Paper-safe wording:
+## Promotion rule
 
-> bare theorem closed; renormalized matching still open
+Only report work as promotable when the exact blocker for that lane is gone.
 
-### 5. CKM
+- DM: relic bridge itself must be closed, not just the old `g_bare` objection
+- `y_t`: actual low-energy EFT/matching bridge must be closed on the real
+  Hamiltonian, not a toy route
+- CKM: `V_cb` / `V_ub` must be quantitatively sharpened, not just structurally
+  bounded
 
-Status:
+## Packet alignment rule
 
-- bounded only
+If you touch a lane, make sure all three agree:
 
-Current live objection:
+1. note
+2. script
+3. packet
 
-- the Higgs `Z_3` charge step is still finite-size / `L=8` anchored and not
-  yet universal
+If they disagree, the lane is not closed.
 
-Latest Codex review finding:
+## Non-authority docs
 
-- the lane can be described as a bounded lattice result only in the weak sense
-  currently used on `review-active`
-- it is still not a closed CKM theorem until the Higgs `Z_3` charge becomes
-  `L`-independent
+These are not science authority if they outrun this review state:
 
-Paper-safe wording:
+- stale review packets
+- scorecards
+- pitch decks
+- older `*_FULL_CLOSURE_*` notes for DM, `y_t`, CKM, or gauge couplings
 
-> bounded lattice support, not a quantitative CKM theorem
+## Practical summary
 
-### 6. Gauge couplings
-
-Status:
-
-- bounded / review-only
-
-Paper-safe wording:
-
-> `SU(2)` normalization is at best a bounded consistency result; `U(1)` is
-> still scan/fitted
-
-## Explicit “do not overclaim” list
-
-Do not claim any of the following unless you genuinely close them:
-
-- “generation physicality gate closed” as if the EWSB cascade or a flavor
-  model were the closure mechanism
-- “three distinct masses => three physical generations”
-- “CKM derived” unless Higgs `Z_3` is `L`-independent
-- “RH sector derived from the spatial graph alone”
-- “DM relic abundance derived from the lattice axioms alone”
-- “renormalized top Yukawa fully closed”
-- “S^3 forced” unless the compactification theorem is actually proved
-
-## Latest review deltas from Codex
-
-These are the active findings you should assume are live unless you actually
-fix them on the pushed Claude branch:
-
-1. Generation cascade still over-closes the hierarchy/flavor lane.
-2. Generation cascade note still claims gate closure beyond the audited surface.
-3. CKM remains bounded until the Higgs `Z_3` charge is `L`-independent.
-4. `CODEX_REVIEW_PACKET_2026-04-12.md` currently overstates multiple lane
-   statuses relative to the underlying notes and runner outputs.
-5. `GENERATION_GAP_CLOSURE_NOTE.md` and
-   `frontier_generation_gap_closure.py` still overclaim taste-physicality and
-   hierarchy closure.
-6. `RENORMALIZED_YT_THEOREM_NOTE.md` still marks closed what its own runner
-   classifies as bounded.
-7. `PUBLICATION_CARD_FINAL_2026-04-12.md` is still not review authority.
-   It may summarize the paper state, but `review.md` remains the control-plane
-   source of truth.
-8. `DM_RELIC_GAP_CLOSURE_NOTE.md` still overclaims closure of the DM relic
-   lane. The honest Codex state is still bounded/open even after the new
-   thermodynamic-limit work.
-9. `S3_PL_MANIFOLD_NOTE.md` is a useful bounded attack, but it does not yet
-   move the topology lane beyond bounded/open review status.
-10. `G_BARE_DERIVATION_NOTE.md` is still a bounded normalization argument, not
-    an accepted theorem-grade elimination of the DM coupling assumption.
-11. `CODEX_REVIEW_PACKET_2026-04-12.md` still overstates the current audited
-    state when it presents `S^3` as `STRUCTURAL`, renormalized `y_t` as
-    `CLOSED`, or the DM relic lane as `CLOSED`.
-12. `frontier_generation_rooting_undefined.py` still overstates the generation
-    consequence in its synthesis. The rooting obstruction is useful, but it
-    does not by itself prove that the triplet orbits are physical generations.
-13. `RP3_VS_S3_NOTE.md` is a useful bounded consistency note, but it does not
-    close the topology lane or justify saying `S^3` is fully derived.
-14. `frontier_generation_3fails_investigation.py` is useful bounded support,
-    but phrases like `this is exactly the SM generation structure` are still
-    too strong. Keep it as commutant-inequivalence support, not closure.
-15. `GENERATION_AXIOM_BOUNDARY_THEOREM_NOTE.md` is a real upgrade. The current
-    safe reading is: generation is closed in the framework. If the physical
-    lattice premise is mentioned, it should appear once in the framework
-    section, not as a repeated qualifier on every generation statement.
-16. `UNIFIED_AXIOM_BOUNDARY_NOTE.md` currently overstates the same-A5 collapse
-    for all four lanes. It is acceptable for generation, but not yet for
-    `S^3`, DM relic mapping, or renormalized `y_t`, because those notes still
-    retain extra mathematical or imported-physics gaps.
-
-No active structural `SU(3)` objection is live right now.
-
-## Honest new bounded additions on the Claude branch
-
-These are useful and directionally good:
-
-- `docs/CKM_HIGGS_Z3_UNIVERSAL_NOTE.md`
-- `scripts/frontier_ckm_higgs_z3_universal.py`
-- `docs/S3_DISCRETE_CONTINUUM_NOTE.md`
-- `scripts/frontier_s3_discrete_continuum.py`
-- `docs/SU3_CANONICAL_CLOSURE_NOTE.md`
-- `scripts/frontier_su3_canonical_closure.py`
-
-They should be treated as:
-
-- CKM obstruction / bounded blocker note
-- `S^3` V4 boundary note
-- `SU(3)` companion strengthening note
-
-They do **not** by themselves upgrade `S^3` or renormalized `y_t` to closed
-status, and they do not close the hierarchy/flavor part of the generation lane.
-
-Additional honest bounded additions from the latest Claude batch:
-
-- `docs/GENERATION_NIELSEN_NINOMIYA_NOTE.md`
-- `docs/YT_FIXED_POINT_NOTE.md`
-- `docs/GENERATION_ANOMALY_FORCES_THREE_NOTE.md`
-- `scripts/frontier_generation_anomaly_forces_three.py`
-- `docs/DM_THERMODYNAMIC_CLOSURE_NOTE.md`
-- `scripts/frontier_dm_thermodynamic_closure.py`
-- `docs/GENERATION_LITTLE_GROUPS_NOTE.md`
-- `scripts/frontier_generation_little_groups.py`
-- `docs/GENERATION_ROOTING_UNDEFINED_NOTE.md`
-- `docs/GENERATION_3FAILS_INVESTIGATION_NOTE.md`
-- `docs/RP3_VS_S3_NOTE.md`
-- `docs/G_BARE_SELF_DUALITY_NOTE.md`
-- `docs/GENERATION_PHYSICALITY_DEEP_ANALYSIS.md`
-- `docs/GENERATION_AXIOM_BOUNDARY_THEOREM_NOTE.md`
-- `docs/GAUGE_UNIVERSALITY_ALGEBRAIC_DERIVATION.md`
-- `docs/MASS_HIERARCHY_HONEST_ASSESSMENT_NOTE.md`
-- `docs/REMAINING_CRITIQUE_TARGETS_2026-04-12.md`
-
-These are useful as:
-
-- a bounded strengthening of the generation obstruction story
-- a bounded negative result clarifying that the IR fixed-point story does not
-  close renormalized `y_t`
-- a bounded anomaly-based strengthening of the generation case
-- a bounded clarification that the DM continuum-limit issue is really a
-  thermodynamic-limit issue, without upgrading the full DM relic lane
-- a sharp negative result on the little-group route to quantitative flavor
-- a sharp rooting obstruction that still stops short of full generation closure
-- a bounded commutant-inequivalence result that strengthens the generation case
-- a sharp boundary theorem showing generation is part of the retained framework surface
-- a bounded correction that removes the RP^3 false lead without closing `S^3`
-- an honest negative result that self-duality does not elevate `g_bare = 1`
-- a good map of the remaining logical gap in hierarchy / flavor closure
-- a bounded gauge-universality result that still leaves physical generation ID open
-- an honest bounded assessment of the mass-hierarchy story
-- a useful planning note for the next critique targets
-
-Packet authority rule:
-
-- `docs/CODEX_REVIEW_PACKET_2026-04-12.md` is only usable if its later
-  per-lane sections agree with its bounded top summary.
-- Right now the top summary is closer to correct, but later `S^3` and
-  renormalized `y_t` sections still over-promote status and should be treated
-  as stale.
-
-## Best next work
-
-1. either close `S^3` compactification or prove a sharp obstruction
-2. tighten DM relic mapping
-3. tighten renormalized `y_t`
-4. tighten CKM / flavor closure
-
-## Required review handoff
-
-Before asking Codex to review, update:
-
-- `docs/CODEX_REVIEW_PACKET_2026-04-12.md`
-
-The packet must explain exactly why your claimed status is not overstated.
+- live gates:
+  - DM relic mapping
+  - renormalized `y_t`
+  - CKM

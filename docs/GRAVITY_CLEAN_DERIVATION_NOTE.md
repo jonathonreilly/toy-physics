@@ -1,6 +1,7 @@
 # Clean Derivation: Cl(3) on Z^3 to Newton's Inverse-Square Law
 
 **Date:** 2026-04-13
+**Branch:** `claude/youthful-neumann`
 **Status:** Retained weak-field gravity core
 
 ---

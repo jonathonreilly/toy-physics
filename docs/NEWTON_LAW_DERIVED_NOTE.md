@@ -88,15 +88,11 @@ a macroscopic force law emerges from the framework without additional input:
 This closes the loop from the framework axiom Cl(3) on Z^3 to Newton's
 law with no free parameters beyond the overall coupling normalization.
 
-This is the retained weak-field gravity claim. Broader GR-signature notes
-(WEP, time dilation, light bending, geodesics, strong-field extension) should
-still be carried separately with their actual bounded status.
-
 ## Commands Run
 
 ```bash
-cd /Users/jonreilly/Projects/Physics
-python3 scripts/frontier_newton_derived.py
+cd /Users/jonBridger/Toy\ Physics
+python scripts/frontier_newton_derived.py
 ```
 
 ## Supporting Evidence

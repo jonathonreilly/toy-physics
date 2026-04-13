@@ -24,8 +24,16 @@ TWO specific such gaps:
    imported), and the Boltzmann equation follows via Stosszahlansatz guaranteed
    by the spectral gap.
 
-The overall DM lane remains BOUNDED because g_bare = 1 and the full
-Friedmann equation are not derived from axioms.
+The overall DM lane remains BOUNDED because the Friedmann equation for
+the radiation-dominated era is imported GR. This is a genuine physics
+import, not merely an interpretive commitment: Newtonian cosmology works
+for dust (pressure-free matter) but NOT for radiation, because in GR
+pressure contributes to gravity via the active gravitational mass
+rho + 3p. For radiation (p = rho/3), the pressure contribution doubles
+the deceleration compared to the Newtonian dust case. The lattice
+Poisson equation provides G and rho(T), but the Friedmann equation
+H^2 = (8 pi G / 3) rho in the radiation era requires the full
+stress-energy coupling of GR. This is the primary remaining import.
 
 ---
 
@@ -144,20 +152,26 @@ Key algebraic result (Test 1E):
 
 ## What Remains Open
 
-1. **g_bare = 1.** The self-dual point argument makes g=1 distinguished but
-   does not uniquely force it. This remains the primary BOUNDED dependency.
+1. **Friedmann equation for radiation era (primary gap).** The Friedmann
+   equation H^2 = (8 pi G / 3) rho requires GR, not just the lattice
+   Poisson equation. This is because in the radiation-dominated era
+   (p = rho/3), pressure contributes to the gravitational source through
+   the active gravitational mass rho + 3p. Newtonian cosmology (which
+   the lattice Poisson equation provides) works for dust but gives the
+   wrong expansion rate for radiation by a factor of 2 in the deceleration.
+   Freeze-out occurs in the radiation era (T_F ~ m/25 >> T_eq), so this
+   import is directly relevant to the DM prediction.
 
-2. **Friedmann equation details.** The chain spectral gap -> vacuum energy ->
-   Lambda > 0 -> H > 0 is suggestive, but the full temperature-dependent
-   Friedmann equation H(T) = sqrt(8*pi*G*rho(T)/3) is not rigorously derived
-   from lattice axioms.
+2. **g_bare = 1.** The self-dual point argument makes g=1 distinguished but
+   does not uniquely force it. This is a secondary BOUNDED dependency.
 
 3. **Non-perturbative corrections.** The Born approximation captures the
    leading alpha^2 term. Higher-order corrections (Sommerfeld enhancement)
    are computed separately but still at fixed order.
 
 4. **Overall DM lane status.** Even with sigma_v and Boltzmann now derived,
-   the lane remains BOUNDED because of g_bare and Friedmann.
+   the lane remains BOUNDED because the Friedmann equation for radiation
+   is imported GR. This is a real physics gap, not an interpretive one.
 
 ---
 
