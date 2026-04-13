@@ -78,7 +78,7 @@ In d=3, G_5 is in the center of Cl(3). Central elements are preserved by all alg
 
 ## What Remains Open
 
-1. **Non-perturbative Slavnov-Taylor identity.** **CLOSED.** The lattice Slavnov-Taylor identity is derived as a corollary of the Ward identity {Eps, D} = 2mI, the bipartite property {Eps, D_hop} = 0, and G5 centrality. The derivation chain is: (B) implies {Eps, Lambda_mu} = 0 (gauge vertex in hopping sector), (C) implies D[G5] = G5 * D[I] (Yukawa factorization), and together these give the ST identity non-perturbatively. See `SLAVNOV_TAYLOR_COMPLETION_NOTE.md` and `frontier_slavnov_taylor_completion.py` (26/26 PASS).
+1. **Non-perturbative Slavnov-Taylor identity.** **BOUNDED (derived within framework).** The lattice Slavnov-Taylor identity is derived as a corollary of the Ward identity {Eps, D} = 2mI, the bipartite property {Eps, D_hop} = 0, and G5 centrality. The derivation chain is: (B) implies {Eps, Lambda_mu} = 0 (gauge vertex in hopping sector), (C) implies D[G5] = G5 * D[I] (Yukawa factorization), and together these give the ST identity non-perturbatively. See `SLAVNOV_TAYLOR_COMPLETION_NOTE.md` and `frontier_slavnov_taylor_completion.py` (26/26 PASS).
 
 2. **Lattice-to-continuum matching.** The identity Z_Y = Z_g holds on the d=3 LATTICE. The transition to the 4D SM continuum at the Planck scale introduces SM-specific radiative corrections that break this relation. The breaking is perturbatively small (the SM RG running from y_t(M_Pl) = 0.439 gives m_t = 175 GeV, +1.1% from observed). The matching coefficient at the lattice-to-SM boundary is not derived here.
 

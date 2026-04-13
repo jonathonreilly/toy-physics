@@ -1,10 +1,10 @@
-# DM Relic Gap Closure: From BOUNDED to CLOSED
+# DM Relic Gap Bounding: From BOUNDED to Tighter BOUNDED
 
 ## Status
 
-**CLOSED** -- all 11 tests pass, zero irreducible imports for dimensionless R.
+**BOUNDED** -- all 11 tests pass, zero irreducible imports for dimensionless R. Per review.md: DM relic mapping gate remains BOUNDED.
 
-Starting from the BOUNDED result (R = 5.66, 3.4% from observed, two imports), this note resolves all four open items:
+Starting from the BOUNDED result (R = 5.66, 3.4% from observed, two imports), this note bounds all four open items:
 
 | Item | Before | After |
 |------|--------|-------|
@@ -14,7 +14,7 @@ Starting from the BOUNDED result (R = 5.66, 3.4% from observed, two imports), th
 | Stefan-Boltzmann | FAIL on finite lattice | PROVED in thermo limit |
 | Imported assumptions | 2 | 0 |
 
-## Closure 1: Expansion (H > 0) Derived from Graph Finiteness
+## Bounding 1: Expansion (H > 0) Derived from Graph Finiteness
 
 **Theorem (Expansion from finiteness).** Let G be a finite connected graph with N vertices and combinatorial Laplacian L. Then H > 0 follows from a chain of standard results:
 
@@ -32,7 +32,7 @@ No step requires importing "the universe expands" as an external assumption. It 
 
 **Alternative derivation:** The spectral gap shrinks as N grows: lambda_1 ~ (2*pi)^2 / L^2 ~ (2*pi)^2 / N^{2/3}. Verified numerically: lambda_1 * L^2 -> (2*pi)^2 = 39.478 monotonically (0.8% at L=20). As the graph grows, the spectral gap decreases, the effective temperature drops, and the graph cools -- exactly reproducing the cosmological expansion-cooling relation T ~ 1/a.
 
-## Closure 2: Calibration Scale Eliminated
+## Bounding 2: Calibration Scale Eliminated
 
 **Theorem (R is dimensionless).** The DM-to-baryon ratio R = Omega_DM/Omega_B depends only on dimensionless quantities:
 
@@ -49,7 +49,7 @@ No physical units (GeV, meters, seconds) appear in R. The calibration scale is n
 
 The mass scale enters R indirectly through x_F = m/T_F, which depends logarithmically on m/M_Pl. But R varies only ~20% over x_F = [15, 39], making this dependence negligible. The elasticity (dR/R)/(dx/x) = 0.06 at x_F = 25.
 
-## Closure 3: The 3.4% Gap Identified and Reduced
+## Bounding 3: The 3.4% Gap Identified and Reduced
 
 **Diagnosis:** The gap comes entirely from the freeze-out ratio x_F, not from structural factors.
 
@@ -80,7 +80,7 @@ The dominant error is the finite-lattice x_F shift, which is a discretization ar
 
 **Thermodynamic-limit result:** R = 5.56, 1.7% from observed (down from 3.4%).
 
-## Closure 4: Stefan-Boltzmann Convergence
+## Bounding 4: Stefan-Boltzmann Convergence
 
 **Theorem (Stefan-Boltzmann on Z^3).** In the thermodynamic limit, the Bose-Einstein energy density on the periodic cubic lattice satisfies rho(T) = (pi^2/30) * T^4 * (1 + O((aT)^2)), where a is the lattice spacing.
 
@@ -112,9 +112,9 @@ The dominant error is the finite-lattice x_F shift, which is a discretization ar
 | Friedmann equation | Poisson coupling + spectral rho | DERIVED |
 | rho ~ T^4 | BZ integral + Bose-Einstein | DERIVED |
 | H > 0 (expansion) | Spectral gap -> vacuum energy | DERIVED |
-| Calibration scale | Not needed for R | CLOSED |
+| Calibration scale | Not needed for R | BOUNDED (eliminated) |
 
-**9 NATIVE, 4 DERIVED, 1 CLOSED, 0 IMPORTED.**
+**9 NATIVE, 4 DERIVED, 1 BOUNDED (eliminated), 0 IMPORTED.**
 
 ## Honest Limitations
 
@@ -132,7 +132,7 @@ The dominant error is the finite-lattice x_F shift, which is a discretization ar
 
 **After:** "R = 5.56 from graph structure alone, with zero irreducible imports for dimensionless observables. Expansion follows from finiteness (spectral gap -> vacuum energy -> Lambda > 0). The calibration scale drops out of R because it is a dimensionless ratio of graph eigenvalues and group-theory numbers."
 
-The DM relic mapping gate is **CLOSED**.
+The DM relic mapping gate is **BOUNDED** (tightened from previous status, but not closed per review.md).
 
 ## Commands Run
 

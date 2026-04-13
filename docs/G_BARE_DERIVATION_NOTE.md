@@ -9,9 +9,11 @@
 
 ## Status
 
-**DERIVED** -- g_bare = 1 follows exactly from the Cl(3) framework axioms.
-Not a dynamical calculation, not a fit, not a fixed-point condition.
-It is an algebraic normalization constraint within the framework.
+**BOUNDED** -- g_bare = 1 follows from the Cl(3) framework axioms as a
+normalization argument. Not a dynamical calculation, not a fit, not a
+fixed-point condition. It is a bounded normalization argument within the
+framework; whether Cl(3) normalization is a constraint or a convention
+remains an open foundational question.
 
 The claim is:
 
@@ -125,8 +127,8 @@ All four are framework axioms, not external imports or fits.
 **Before:** g_bare = 1 was ASSUMED (Objection 1 in CODEX_DM_RESPONSE.md).
 The DM provenance was: 7 NATIVE, 5 DERIVED, 1 ASSUMED, 2 IMPORTED.
 
-**After:** g_bare = 1 is DERIVED from framework axioms.
-The DM provenance is: 7 NATIVE, 6 DERIVED, 0 ASSUMED, 2 IMPORTED.
+**After:** g_bare = 1 is BOUNDED (normalization argument from framework axioms).
+The DM provenance is: 7 NATIVE, 5 DERIVED, 1 BOUNDED (normalization), 2 IMPORTED.
 
 **Paper-safe wording:**
 
@@ -170,7 +172,7 @@ negative result, not a bug.
 
 | Input | Value | Status (before) | Status (after) |
 |-------|-------|-----------------|----------------|
-| g_bare | 1.0 | ASSUMED | DERIVED (Cl(3) normalization) |
+| g_bare | 1.0 | ASSUMED | BOUNDED (Cl(3) normalization argument) |
 | sigma_v = pi*alpha^2/m^2 | -- | IMPORTED | IMPORTED (unchanged) |
 | V(r) = -alpha/r | -- | IMPORTED | IMPORTED (unchanged) |
 

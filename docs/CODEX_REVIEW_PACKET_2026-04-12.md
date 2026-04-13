@@ -263,7 +263,7 @@ python3 scripts/frontier_s3_gap_closure.py
 python3 scripts/frontier_s3_synthesis.py
 ```
 
-### Final status: STRUCTURAL
+### Final status: BOUNDED (PL manifold provides bounded structural attack on V4)
 
 ### What closed and why
 
@@ -338,7 +338,7 @@ R = 5.48 ± 0.19 (from x_F uncertainty in [20,30]). The central value matches to
 - `scripts/frontier_renormalized_yt.py` — PASS=33 FAIL=1 (Ward identity + bipartite)
 - `scripts/frontier_renormalized_yt_wildcard.py` — PASS=31 FAIL=0 (Cl(3) centrality)
 - `scripts/frontier_slavnov_taylor_completion.py` — PASS=26 FAIL=0 (ST identity derived)
-- `docs/RENORMALIZED_YT_THEOREM_NOTE.md` (updated: reframed, CLOSED)
+- `docs/RENORMALIZED_YT_THEOREM_NOTE.md` (updated: reframed, BOUNDED)
 - `docs/RENORMALIZED_YT_WILDCARD_NOTE.md`
 - `docs/SLAVNOV_TAYLOR_COMPLETION_NOTE.md`
 
@@ -349,9 +349,9 @@ python3 scripts/frontier_renormalized_yt_wildcard.py
 python3 scripts/frontier_slavnov_taylor_completion.py
 ```
 
-### Final status: CLOSED
+### Final status: BOUNDED (BC protection proved; renormalized matching still open per review.md)
 
-### What closed and why
+### What was bounded and why
 
 **Reframing:** The original question "does Z_Y = Z_g hold?" was the wrong question. Z_Y ≠ Z_g on the lattice (ratio ~-2 at 1-loop). What matters: is the UV boundary condition y_t = g_s/√6 protected from lattice radiative corrections? Answer: YES.
 
@@ -530,7 +530,7 @@ python3 scripts/frontier_s3_pl_manifold.py
 # PASS=9 FAIL=0 BOUNDED=0 (0.0s)
 ```
 
-### Status: STRUCTURAL (upgrades from BOUNDED)
+### Status: BOUNDED (bounded structural attack on V4)
 
 ### What was done
 
@@ -552,7 +552,7 @@ limit needed.
 
 ### Why the claim is not overstated
 
-STRUCTURAL, not CLOSED. The boundary vertex link argument for general R
+BOUNDED (bounded structural attack). The boundary vertex link argument for general R
 cites Alexander's theorem rather than proving it from scratch. The note
 requires using the cubical ball (definitional choice, not new assumption).
 
@@ -561,7 +561,7 @@ requires using the cubical ball (definitional choice, not new assumption).
 The "V4 Discrete-to-Continuum Investigation" section above documented
 four approaches that did not close V4. This PL manifold approach provides
 the missing piece: the link condition on the cubical ball. The correct
-status is now STRUCTURAL.
+status is now BOUNDED (with structural progress via PL manifold approach).
 
 ---
 

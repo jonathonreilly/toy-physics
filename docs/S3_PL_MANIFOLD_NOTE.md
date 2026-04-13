@@ -9,11 +9,12 @@
 
 ## Status
 
-**STRUCTURAL** (upgrades from BOUNDED)
+**BOUNDED** (bounded structural attack on V4)
 
-The PL manifold approach eliminates the discrete-to-continuum gap (V4)
+The PL manifold approach narrows the discrete-to-continuum gap (V4)
 at the structural level. The cubical complex IS a PL 3-manifold; no
 continuum limit is needed. Perelman applies directly via Moise's theorem.
+This is a bounded structural attack, not a full resolution of V4.
 
 NOT claiming CLOSED: the boundary-vertex link verification after cone-cap
 is computed for R <= 4 only, not proved for general R. A general proof
@@ -27,11 +28,11 @@ but we have not written the formal citation chain.
 **Claim (structural):** The Z^3 cubical ball, closed by a cone cap, is a
 PL 3-manifold. Combined with van Kampen (pi_1 = 0) and the PL Poincare
 conjecture (Perelman + Moise), the closed complex is PL-homeomorphic to
-S^3. This eliminates the V4 discrete-to-continuum gap: no Gromov-Hausdorff
+S^3. This narrows the V4 discrete-to-continuum gap: no Gromov-Hausdorff
 limit, spectral convergence, or universality-class argument is required.
 
 **Not claimed:** "S^3 forced" or "V4 closed." The status upgrades from
-BOUNDED to STRUCTURAL but the full closure requires a cited proof that
+BOUNDED with structural progress, but the full closure requires a cited proof that
 cone-capping a convex cubical PL 3-ball always produces a PL 3-sphere.
 
 ---
@@ -109,7 +110,7 @@ By the Poincare conjecture (Perelman 2003) and Moise's theorem (1952):
   homeomorphism is a PL homeomorphism.
 - Therefore M is PL-homeomorphic to S^3.
 
-### Why this eliminates V4
+### Why this narrows V4
 
 The previous S^3 derivation had a gap at Step 5: Perelman applies to
 smooth (or topological) manifolds, but the Z^3 construction is discrete.
@@ -118,7 +119,7 @@ Gromov-Hausdorff convergence, spectral convergence, or a
 universality-class argument -- none of which were rigorous for this graph
 family.
 
-The PL approach eliminates this gap entirely:
+The PL approach significantly narrows this gap:
 
 - The cubical complex IS a PL 3-manifold (by the link condition).
 - A PL 3-manifold IS a topological 3-manifold (by Moise).
@@ -179,16 +180,17 @@ assumption.
 
 ## How This Changes The Paper
 
-### Upgrade from BOUNDED to STRUCTURAL
+### Bounded structural attack on V4
 
 The S^3 topology lane was previously BOUNDED because of V4 (the
 discrete-to-continuum gap rated HIGH risk in the adversarial note). The
-PL manifold approach upgrades this to STRUCTURAL:
+PL manifold approach provides a bounded structural attack:
 
 - The fundamental obstruction (applying Perelman to a discrete object)
-  is resolved by showing the discrete object IS a PL manifold.
+  is narrowed by showing the discrete object IS a PL manifold.
 - The remaining items are standard PL topology citations, not fundamental
   gaps.
+- Status remains BOUNDED per review.md until full closure is achieved.
 
 ### Paper-safe language
 
@@ -205,7 +207,7 @@ Proposed upgrade:
 NOT paper-safe:
 > S^3 forced / compactification fully derived / V4 closed.
 
-The upgrade to STRUCTURAL (not CLOSED) is honest because the boundary
+The status remains BOUNDED because the boundary
 link argument cites a standard theorem rather than proving it from scratch
 for this specific complex. If Codex requires an explicit proof, the
 theorem (Alexander/Newman/Rourke-Sanderson) is well-established and the

@@ -8,13 +8,13 @@
 
 ## Status
 
-**Gap 1 (taste-physicality): CLOSED.** Taste-physicality is promoted from axiom
-to theorem. Five independent arguments prove that the framework Cl(3) on Z^3
+**Gap 1 (taste-physicality): BOUNDED.** Taste-physicality is promoted from axiom
+to theorem within the framework. Five independent arguments prove that the framework Cl(3) on Z^3
 has no well-defined continuum limit, making the lattice spacing a physical UV
 cutoff. The identification a = l_Planck is the unique dimensionally consistent
 choice.
 
-**Gap 2 (mass hierarchy): CLOSED (order-of-magnitude).** Two complementary
+**Gap 2 (mass hierarchy): BOUNDED (order-of-magnitude).** Two complementary
 mechanisms combine to produce the observed fermion mass hierarchy:
 
 (A) EWSB cascade (frontier_ewsb_generation_cascade.py, 29/29 PASS): EWSB
@@ -32,7 +32,7 @@ sector from 0.26 (RG alone) to 0.167 (EWSB+RG). The strong-coupling
 Delta(gamma)_13 = 0.173 EXCEEDS this reduced requirement by 4%.
 
 Synthesis (frontier_mass_hierarchy_synthesis.py, 15/15 PASS): all three SM
-sectors are closed at the order-of-magnitude level. The combination is not
+sectors are bounded at the order-of-magnitude level. The combination is not
 double-counting: EWSB determines the BOUNDARY CONDITION at the EW scale
 (which generation couples directly to VEV), while RG running determines the
 EVOLUTION from Planck to EW (exponential amplification of taste-dependent
@@ -67,7 +67,7 @@ identification that makes framework gravity match physical gravity.
 differences, not discretization artifacts. The 1+3+3+1 orbit decomposition
 describes physical fermion generations, not lattice doublers.
 
-### Claim 2 (Mass Hierarchy -- Closed, order-of-magnitude)
+### Claim 2 (Mass Hierarchy -- Bounded, order-of-magnitude)
 
 Two complementary mechanisms combine to produce the mass hierarchy:
 
@@ -87,7 +87,7 @@ The EWSB log enhancement reduces the required Delta(gamma) for each sector:
 - 0.09 for leptons (was 0.18 without EWSB -- SUFFICIENT, margin +99%)
 - 0.17 for up quarks (was 0.26 without EWSB -- SUFFICIENT, margin +4%)
 
-The strong-coupling Delta(gamma)_13 = 0.173 closes ALL three sectors.
+The strong-coupling Delta(gamma)_13 = 0.173 bounds ALL three sectors at order-of-magnitude level.
 The mechanism is structural. Quantitative precision (beyond order-of-magnitude)
 requires the full non-perturbative SU(3) calculation.
 
@@ -149,7 +149,7 @@ trick (det(D_stag) = det(D_Dirac)^{1/4}) is unavailable. All 8 taste states
 are physical Hilbert space degrees of freedom in (C^2)^{tensor N}. Removing
 them would require an additional projection not present in the axiom.
 
-### Gap 2: Mass Hierarchy (7 tests, 7 PASS -- synthesis closes shortfall)
+### Gap 2: Mass Hierarchy (7 tests, 7 PASS -- synthesis bounds shortfall)
 
 **2A. [BOUNDED] RG running converts linear to approximately geometric.**
 With taste-dependent anomalous dimension Delta(gamma), the bare Wilson ratio
@@ -169,7 +169,7 @@ The non-perturbative blocking estimate (from frontier_mass_hierarchy_rg.py)
 gives Delta(gamma)_13 = 0.173. RG alone requires 0.26 for up quarks (1.5x
 shortfall). But with the EWSB cascade log enhancement (log(M_Pl/v) ~ 38),
 the requirement drops to 0.167. The strong-coupling Delta(gamma)_13 = 0.173
-exceeds this by 4%. All three SM sectors are closed.
+exceeds this by 4%. All three SM sectors are bounded at order-of-magnitude level.
 
 **2D. [EXACT] Z_3 Froggatt-Nielsen gives degenerate masses.**
 A pure Z_3-circulant mass matrix M = epsilon * P_{Z_3} has eigenvalues
@@ -183,7 +183,7 @@ The EWSB log enhancement reduces the required Delta(gamma) for each sector:
 - Down quarks: dg_13 = 0.052 (strong-coupling 0.173, margin +230%)
 - Leptons: dg_13 = 0.087 (strong-coupling 0.173, margin +99%)
 - Up quarks: dg_13 = 0.167 (strong-coupling 0.173, margin +4%)
-All sectors closed at order-of-magnitude level.
+All sectors bounded at order-of-magnitude level.
 
 **2F. [BOUNDED] EWSB cascade provides log(M_Pl/v) enhancement.**
 The EWSB mechanism (frontier_ewsb_generation_cascade.py, 29/29 PASS) shows
@@ -198,12 +198,12 @@ couples to VEV). The RG running determines the EVOLUTION from Planck to EW
 (exponential amplification). These are physically distinct: EWSB operates at
 one scale, RG integrates over all scales. The synthesis script
 (frontier_mass_hierarchy_synthesis.py, 15/15 PASS) confirms all three SM
-sectors are closed when both mechanisms are included.
+sectors are bounded when both mechanisms are included.
 
-**GAP2 overall: CLOSED (order-of-magnitude).** The combination of EWSB cascade
-and strong-coupling RG running closes the mass hierarchy for all three SM
+**GAP2 overall: BOUNDED (order-of-magnitude).** The combination of EWSB cascade
+and strong-coupling RG running bounds the mass hierarchy for all three SM
 sectors. The up-quark sector, previously short by factor 1.5x in Delta(gamma),
-is closed with 4% margin when the EWSB log enhancement is included.
+is bounded with 4% margin when the EWSB log enhancement is included.
 Quantitative precision beyond order-of-magnitude requires the full
 non-perturbative SU(3) calculation.
 
@@ -211,7 +211,7 @@ non-perturbative SU(3) calculation.
 
 ## What Remains Open
 
-### After Gap 1 closure:
+### After Gap 1 (bounded):
 
 1. **a = l_Planck identification.** Taste-physicality (the lattice is
    fundamental, not a regulator) is now a theorem. But the specific
@@ -222,10 +222,10 @@ non-perturbative SU(3) calculation.
    ratios are r-independent (always 1:2:3), but the absolute mass scale depends
    on r. A derivation of r from the framework axioms is not available.
 
-### After Gap 2 (closed, order-of-magnitude):
+### After Gap 2 (bounded, order-of-magnitude):
 
 3. **Quantitative precision.** The EWSB+RG synthesis closes all three SM
-   sectors at order-of-magnitude level. The up-quark sector is closed with
+   sectors at order-of-magnitude level. The up-quark sector is bounded with
    only 4% margin (strong-coupling Delta(gamma)_13 = 0.173 vs required 0.167).
    A full non-perturbative SU(3) calculation would determine whether this
    thin margin persists or widens. The log-space agreement for m_t/m_u is
@@ -248,10 +248,10 @@ non-perturbative SU(3) calculation.
 
 ## How This Changes The Paper
 
-1. **Gate 2 status upgrade.** The taste-physicality obstruction (previously
-   C1 in GENERATION_PHYSICALITY_THEOREM_NOTE) is RESOLVED. Gate 2 moves from
-   "bounded -- conditional theorem" to "bounded -- theorem on taste-physicality,
-   bounded on mass hierarchy."
+1. **Gate 2 status update.** The taste-physicality obstruction (previously
+   C1 in GENERATION_PHYSICALITY_THEOREM_NOTE) is narrowed. Gate 2 moves from
+   "bounded -- conditional theorem" to "bounded -- theorem on taste-physicality
+   within the framework, bounded on mass hierarchy."
 
 2. **The conditional theorem becomes unconditional (for taste-physicality).**
    The result "Z_3 orbits = physical generations" no longer depends on an
@@ -264,11 +264,11 @@ non-perturbative SU(3) calculation.
    Physics, and no fourth-root trick. The continuum limit, if forced, gives a
    trivial theory of 8 degenerate massless fermions."
 
-4. **The mass hierarchy is closed at order-of-magnitude.** The combination of
+4. **The mass hierarchy is bounded at order-of-magnitude.** The combination of
    EWSB cascade (log(M_Pl/v) enhancement for the heavy generation) and
    strong-coupling RG running (Delta(gamma)_13 ~ 0.17) closes all three SM
    sectors. The up-quark sector, previously short by factor 1.5x in
-   Delta(gamma), is closed with 4% margin when EWSB is included. The paper
+   Delta(gamma), is bounded with 4% margin when EWSB is included. The paper
    should present this as a structural result with order-of-magnitude agreement,
    noting that precision beyond this requires non-perturbative SU(3) computation.
 
@@ -295,4 +295,4 @@ Synthesis script: PASS=15 FAIL=0.
 Gap 1 (taste-physicality): 6/6 PASS (4 EXACT, 1 BOUNDED, 1 EXACT synthesis).
 Gap 2 (mass hierarchy): 7/7 PASS after EWSB+RG synthesis (2 EXACT, 5 BOUNDED).
   Previously 4/5 with 1 FAIL (up-quark shortfall).
-  Synthesis closes the shortfall: strong-coupling dg_13=0.173 >= EWSB-reduced req=0.167.
+  Synthesis bounds the shortfall: strong-coupling dg_13=0.173 >= EWSB-reduced req=0.167.

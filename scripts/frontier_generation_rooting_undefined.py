@@ -674,13 +674,15 @@ def synthesis():
 
     Each obstruction is independently fatal.
 
-  CONSEQUENCE FOR GENERATION PHYSICALITY:
+  CONSEQUENCE (ROOTING OBSTRUCTION -- does NOT close generation physicality):
     The 8 taste states are PERMANENT features of the Hamiltonian formulation
     on Z^3.  They cannot be removed by any operation consistent with axioms
-    (A1)-(A4).  Therefore:
-      - The Z_3 orbit structure 8 = 1 + 1 + 3 + 3 is physical.
-      - The triplet orbits are physical degrees of freedom.
-      - EWSB cascade to 3 generations acts on physical states.
+    (A1)-(A4).  This is a rooting obstruction:
+      - The Z_3 orbit structure 8 = 1 + 1 + 3 + 3 cannot be reduced.
+      - The triplet orbits cannot be projected away.
+      - Whether these orbits correspond to physical SM generations
+        remains an open interpretive question (generation physicality
+        is still BOUNDED, not closed).
 
   RESPONSE TO "USE A PATH INTEGRAL INSTEAD":
     The framework is defined by (A1)-(A4).  A path integral formulation

@@ -581,9 +581,9 @@ def main():
   distinguished by different eigenvalues of commutant generators --
   i.e., they carry different internal quantum numbers.
 
-  This is the operational definition of "three physically distinct
-  generations": same gauge group, inequivalent representations at the
-  Fermi surface.
+  This is consistent with the structure of "three physically distinct
+  generations" (same gauge group, inequivalent representations at the
+  Fermi surface), but the identification is bounded, not closed.
 
   CAVEAT (keeps this BOUNDED, not closed):
   The commutant of Cl(3) in End(C^8) includes generators beyond the
@@ -640,9 +640,11 @@ def main():
     BZ corners.  This means the three species are distinguished by internal
     quantum numbers that are NOT gauge charges.
 
-    This is exactly the SM generation structure:
-    - All generations have the SAME gauge quantum numbers (Cl(3) part universal)
-    - Generations are distinguished by other quantum numbers (commutant-only part)
+    This is a bounded commutant-inequivalence result consistent with SM
+    generation structure, but does not close generation physicality:
+    - All corners have the SAME gauge quantum numbers (Cl(3) part universal)
+    - Corners are distinguished by other quantum numbers (commutant-only part)
+    - Whether these distinguish physical SM generations remains open
 
   STATUS: BOUNDED (exact algebra, bounded physical interpretation)
     The inequivalence of the non-Cl(3) commutant projection is an exact
