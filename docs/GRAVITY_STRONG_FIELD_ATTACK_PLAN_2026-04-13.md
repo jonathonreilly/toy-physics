@@ -298,6 +298,43 @@ New exact/bounded orbit-resolved whole-shell law extracted after that:
   and leaves the bridge derivation itself plus the final pointwise 4D lift as
   the remaining targets
 
+New exact/bounded same-charge bridge closure extracted after that:
+
+- for an exact exterior field `phi_ext` with shell source `sigma_R` and total
+  shell charge `Q`, any common-harmonic bridge family
+  `psi_c = 1 + c phi_ext`, `chi_c = 1 - c phi_ext` carries shell charges
+  `+cQ` and `-cQ`
+- exact same-source / same-charge inheritance therefore fixes `c = 1`
+- the unique same-charge common-harmonic bridge on the current exact source
+  classes is:
+  - `psi = 1 + phi_ext`
+  - `chi = alpha psi = 1 - phi_ext`
+- both are exact exterior harmonic functions outside the sewing shell
+- off-diagonal coefficient mismatch in the natural two-parameter common-
+  harmonic metric family worsens the exterior 4D vacuum residual by more than
+  an order of magnitude on both current exact source families
+- see `docs/NATIVE_STATIC_BRIDGE_CLOSURE_NOTE.md`
+- this removes “bridge derivation itself” from the live blocker list and
+  leaves the final pointwise 4D Einstein/Regge lift as the remaining target
+
+New exact/bounded pointwise shell closure extracted after that:
+
+- on the exact local `O_h` source class, the whole-shell exterior-projector
+  profile and shell-source profile are already pointwise exact on each cubic
+  orbit across `3 < r <= 5`
+- with the same-charge bridge fixed, the induced whole-shell bridge density
+  `rho` and stress-trace `S` are also pointwise exact on each orbit
+- on the broader exact finite-rank family, the remaining within-orbit
+  correction stays small:
+  - `u` below about `1.4%`
+  - `k` below about `1.7%`
+  - `rho` below about `1.4%`
+  - `S` below about `2.7%`
+- see `docs/OH_POINTWISE_SHELL_CLOSURE_NOTE.md`
+- this removes “local/angular shell freedom on the symmetric source class”
+  from the live blocker list and leaves the final Einstein/Regge lift beyond
+  the current bridge surface as the main remaining gravity target
+
 ## Do not retread these solved or near-solved substeps
 
 The attack should **not** spend time redoing the following:
