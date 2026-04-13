@@ -1,10 +1,10 @@
 # EWSB Generation Cascade: Mass Hierarchy from CW Symmetry Breaking
 
 **Script**: `scripts/frontier_ewsb_generation_cascade.py`
-**Status**: 29/29 checks pass
+**Status**: exact `1+2` boundary verified; bounded `1+1+1` model support
 **Depends on**: `frontier_graph_first_selector_derivation`, `frontier_ewsb_s3_breaking`, `frontier_generation_physicality`, `frontier_matter_assignment_theorem`
 
-## Theorem (EWSB generation cascade)
+## Strongest Safe Result
 
 Let V_sel = 32 sum_{i<j} phi_i^2 phi_j^2 be the graph-shift selector on the 3-cube taste graph. Then:
 
@@ -12,11 +12,17 @@ Let V_sel = 32 sum_{i<j} phi_i^2 phi_j^2 be the graph-shift selector on the 3-cu
 
 2. **The selected axis breaks Z_3 cyclic symmetry**: the orbit member whose "1" is in the selected direction is distinguished from the other two.
 
-3. **At the Z_2-symmetric point**: M = diag(m_v, m_0, m_0). The Kawamoto-Smit Jordan-Wigner structure further breaks Z_2, giving M = diag(m_v, m_2, m_3) with m_2 != m_3.
+3. **At the exact symmetry level**: the selected axis gives a `1+2` mass structure,
+   `M = diag(m_v, m_0, m_0)`.
 
-4. **The hierarchy is m_v >> m_2, m_3** because the weak-direction member couples directly to the Higgs VEV while the color-direction members couple only radiatively.
+4. **A bounded hierarchy mechanism exists**: the weak-direction member couples
+   directly to the Higgs VEV while the color-direction members couple only
+   radiatively.
 
-5. **Three distinct masses from the EWSB cascade** (bounded model). The 1+2 split is structural; the full 1+1+1 hierarchy is a bounded model result. Generation physicality remains open per review.md.
+5. **What remains open**: the further `Z_2 -> trivial` split giving
+   `m_2 != m_3` is not derived from first principles on the current surface.
+   The Jordan-Wigner / taste-breaking section below is a bounded mechanism
+   model, not a closed theorem.
 
 ## Key Insight
 
@@ -32,7 +38,7 @@ The CW selector that determines the weak axis also breaks the Z_3 generation sym
 
 With the VEV phi = (v, 0, 0), the Yukawa mass operator is M = y*v*Gamma_1. Since Gamma_1^2 = I_8, all orbit members get the same tree-level mass. The splitting must come from higher-order (radiative) effects.
 
-The gauge-scalar coupling Tr[B_k Gamma_mu B_k Gamma_mu] is direction-dependent: it equals +2 when k = mu and -2 otherwise. This JW asymmetry drives the mass splitting.
+The gauge-scalar coupling Tr[B_k Gamma_mu B_k Gamma_mu] is direction-dependent, so direction 1 is distinguished from directions 2,3. The exact residual `1+2` statement is established by the selector/Hessian/intermediate-state structure, not by requiring the bare direction-2 and direction-3 traces to coincide entrywise.
 
 ### Step 2: Z_3 breaking
 
@@ -71,18 +77,27 @@ Three hierarchy mechanisms are consistent with observations:
 
 The pure loop-suppression factor g^2/(16pi^2) ~ 0.003 matches the charm/top ratio to within an order of magnitude. The up/top ratio requires either large logs or a Froggatt-Nielsen-like suppression from the Z_3 structure.
 
-## Gate Closure
+## Current Boundary
 
-This result closes the **generation physicality gate**: the three fermion generations are not an independent input to the theory. They emerge automatically from the same Coleman-Weinberg mechanism that:
-1. Generates the Higgs VEV (V_sel minimization)
-2. Selects the weak axis (S_3 -> Z_2 breaking)
-3. Breaks Z_3 generation symmetry (VEV projection asymmetry)
-4. Splits all three generation masses (JW structure cascade)
+What is exact:
+1. the selector picks a weak axis
+2. the selected axis distinguishes one orbit member from the residual pair
+3. the symmetry-level generation structure is `1 + 2`
+
+What is bounded/model-level:
+1. the residual `2 -> 1 + 1` split
+2. the order-of-magnitude hierarchy estimates
+
+So this lane strengthens the generation story, but it does **not** by itself
+close the generation physicality gate.
 
 ## Caveats
 
 1. **Quantitative precision**: The mass ratios are order-of-magnitude, not exact. A full computation would require the 2-loop CW potential with the complete lattice dispersion relation.
 
-2. **JW beta coefficient**: The JW correction parameter beta_JW = 0.1 used in the Z_2 breaking calculation is a model input, not derived from first principles. A lattice perturbation theory computation at O(g^2 a^2) would determine this.
+2. **JW beta coefficient**: The JW correction parameter beta_JW = 0.1 used in the
+   residual `Z_2`-breaking calculation is a model input, not derived from first
+   principles. A lattice perturbation theory computation at O(g^2 a^2) would
+   be needed to promote this section.
 
 3. **Tree-level degeneracy**: At tree level, all orbit members have the same mass. The hierarchy is entirely radiative, which is physically correct (SM Yukawa hierarchies are not explained at tree level either) but requires the full loop computation for precision.

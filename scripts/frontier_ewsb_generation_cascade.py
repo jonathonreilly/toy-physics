@@ -1,26 +1,26 @@
 #!/usr/bin/env python3
 """
-EWSB Generation Cascade: Mass Hierarchy from CW Symmetry Breaking
-===================================================================
+EWSB Generation Cascade: exact 1+2 split and bounded hierarchy mechanism
+=========================================================================
 
-THEOREM (EWSB generation cascade):
+Strongest safe statement on the current surface:
   The Coleman-Weinberg selector V_sel = 32 sum_{i<j} phi_i^2 phi_j^2 selects
-  one axis as "weak" (S_3 -> Z_2 breaking = EWSB on the lattice).  This ALSO
-  breaks the Z_3 generation symmetry, because the three orbit members project
-  differently onto the selected axis.
+  one axis as "weak" (S_3 -> Z_2 breaking = EWSB on the lattice). This
+  distinguishes one orbit member from the residual pair and gives an exact
+  symmetry-level `1+2` generation structure.
 
-  Consequence:  EWSB -> Z_3 breaking -> 3 distinct masses -> 3 physical
-  generations.  The generation structure is not an independent input -- it is
-  a consequence of the same CW mechanism that determines the weak axis.
+What is not yet closed:
+  The further `2 -> 1 + 1` split and realistic three-mass hierarchy still
+  depend on additional taste-breaking structure. The Jordan-Wigner section
+  below is therefore a bounded mechanism model, not a first-principles
+  generation-closure theorem.
 
 OUTLINE:
   Step 1 -- EWSB mass matrix on taste space with VEV phi = (v, 0, 0).
   Step 2 -- Z_3 breaking: the cyclic permutation sigma is no longer a symmetry.
-  Step 3 -- Cascade to the color sector: residual Z_2 between directions 2,3
-            is broken by taste scalar self-interactions.
-  Step 4 -- Quantitative mass ratios from the CW cascade.
-  Step 5 -- The theorem: EWSB => distinct generation masses, closing the
-            generation physicality gate.
+  Step 3 -- Bounded model for breaking the residual Z_2 between directions 2,3.
+  Step 4 -- Bounded quantitative hierarchy estimates.
+  Step 5 -- Exact boundary theorem plus open obstruction.
 
 Depends on: frontier_graph_first_selector_derivation (V_sel),
             frontier_ewsb_s3_breaking (CW mechanism),
@@ -310,9 +310,12 @@ def step1_ewsb_mass_matrix():
     check("direction-1-distinct",
           dir1_differs,
           f"coupling to dir 1 differs from dirs 2,3")
-    check("directions-2-3-related",
-          True,  # They may differ due to JW but are related by SWAP_23
-          "dirs 2,3 related by residual Z_2")
+
+    # The bare JW trace data need not already realize the exact residual-Z2
+    # degeneracy on this surface; the exact `1+2` statement is established below
+    # from the selector/Hessian/intermediate-state structure instead.
+    print("  Informational: dir-2/3 bare couplings "
+          f"{'match' if dir23_same else 'do not match'} at this level.")
 
     return gammas, bivectors
 
@@ -529,8 +532,7 @@ def step2_z3_breaking(gammas, bivectors):
 # =============================================================================
 
 def step3_color_cascade():
-    """The residual Z_2 between directions 2 and 3 is broken by
-    taste scalar self-interactions in the color sector."""
+    """Bounded model for breaking the residual Z_2 between directions 2 and 3."""
     print("\n" + "=" * 78)
     print("STEP 3: CASCADE TO COLOR SECTOR -- Z_2 BREAKING")
     print("=" * 78)
@@ -753,7 +755,7 @@ def step3_color_cascade():
         print(f"    mu={mu+1} (n_JW={n_JW[mu]}): delta_m^2 = {delta_m2[mu]:.6f}")
 
     z2_split = abs(delta_m2[1] - delta_m2[2])
-    check("JW-Z2-breaking",
+    check("model-JW-Z2-breaking",
           z2_split > 1e-10,
           f"|delta_m2(dir2) - delta_m2(dir3)| = {z2_split:.6f}")
 
@@ -764,7 +766,7 @@ def step3_color_cascade():
     print(f"\n  CW potential Z_2 splitting from JW structure:")
     print(f"    delta V ~ delta_m2(2)^2 - delta_m2(3)^2 = {delta_V_JW:.8e}")
 
-    check("CW-Z2-splitting-nonzero",
+    check("model-CW-Z2-splitting-nonzero",
           abs(delta_V_JW) > 1e-15,
           f"|delta V| = {abs(delta_V_JW):.4e}")
 
@@ -776,7 +778,7 @@ def step3_color_cascade():
 # =============================================================================
 
 def step4_mass_ratios():
-    """Can the EWSB cascade produce the observed mass hierarchy?"""
+    """Bounded quantitative hierarchy estimates from the cascade model."""
     print("\n" + "=" * 78)
     print("STEP 4: QUANTITATIVE MASS RATIOS FROM THE CW CASCADE")
     print("=" * 78)
@@ -823,7 +825,7 @@ def step4_mass_ratios():
     ratio_predicted_13 = g2_over_16pi2**2
     ratio_observed_13 = m_up / m_top
 
-    check("loop-hierarchy-order-of-magnitude",
+    check("model-loop-hierarchy-order-of-magnitude",
           0.001 < ratio_predicted_12 < 0.01 and 0.001 < ratio_observed_12 < 0.01,
           f"pred={ratio_predicted_12:.4f}, obs={ratio_observed_12:.4f}")
 
@@ -848,7 +850,7 @@ def step4_mass_ratios():
     print(f"    Predicted: 1 : {ratio_enhanced_12:.4f} : {ratio_enhanced_13:.6f}")
     print(f"    Observed:  1 : {ratio_observed_12:.4f} : {ratio_observed_13:.6e}")
 
-    check("log-enhanced-charm-top",
+    check("model-log-enhanced-charm-top",
           0.01 < ratio_enhanced_12 < 1.0,
           f"pred={ratio_enhanced_12:.4f}, obs={ratio_observed_12:.4f}")
 
@@ -900,10 +902,10 @@ def step4_mass_ratios():
     print("  (m_top >> m_charm >> m_up) with the right parametric structure.")
     print("  Quantitative precision requires the full 2-loop CW computation.")
 
-    check("hierarchy-direction-correct",
-          True,
-          "CW cascade gives m_3 > m_2 > m_1")
-    check("hierarchy-parametric-match",
+    check("model-hierarchy-direction-correct",
+          ratio_observed_12 > ratio_observed_13,
+          "observed hierarchy satisfies m_3 > m_2 > m_1")
+    check("model-hierarchy-parametric-match",
           0.0001 < ratio_predicted_12 < 0.1,
           f"pred ~ {ratio_predicted_12:.4f}, obs ~ {ratio_observed_12:.4f}")
 
@@ -922,7 +924,7 @@ def step4_mass_ratios():
 # =============================================================================
 
 def step5_theorem():
-    """Prove the main theorem: EWSB => Z_3 breaking => 3 distinct masses."""
+    """Prove the exact 1+2 split and isolate the open 2->1+1 step."""
     print("\n" + "=" * 78)
     print("STEP 5: THE EWSB GENERATION CASCADE THEOREM")
     print("=" * 78)
@@ -932,7 +934,7 @@ def step5_theorem():
 
     # THEOREM STATEMENT:
     print("""
-  THEOREM (EWSB generation cascade).
+  STRONGEST SAFE RESULT.
   Let V_sel = 32 sum_{i<j} phi_i^2 phi_j^2 be the graph-shift selector
   on the 3-cube taste graph.  Then:
 
@@ -942,16 +944,13 @@ def step5_theorem():
       whose "1" is in the selected direction is distinguished from the
       other two.
 
-  (3) At the Z_2-symmetric point: M = diag(m_v, m_0, m_0).
-      The Kawamoto-Smit JW structure further breaks Z_2, giving
-      M = diag(m_v, m_2, m_3) with m_2 != m_3.
+  (3) At the exact symmetry level: M = diag(m_v, m_0, m_0).
 
-  (4) The hierarchy is m_v >> m_2, m_3 because the weak-direction
-      member couples directly to the Higgs VEV while the color-direction
-      members couple only radiatively.
+  (4) A bounded hierarchy model can further split the residual pair.
 
-  (5) Three distinct masses => three physical generations.  The generation
-      structure is a CONSEQUENCE of EWSB, not an independent input.
+  (5) The current surface therefore supports an exact `1+2` generation
+      structure plus a bounded `1+1+1` hierarchy mechanism, but not a
+      closed generation-physicality theorem.
   """)
 
     # PROOF of (1): V_sel has exactly 3 degenerate minima at the axis
@@ -1060,9 +1059,25 @@ def step5_theorem():
         print(f"    Gamma_1 |{s}> -> |{target_state}> (hw={sum(target_state)})")
 
     # (1,0,0) -> hw=0 singlet: gets a different self-energy from T_2 targets
-    check("direction-dependent-intermediate",
-          True,
-          "(1,0,0)->singlet(hw=0), (0,1,0)->(1,1,0), (0,0,1)->(1,0,1) in T_2(hw=2)")
+    target_states = []
+    for s in T1_states:
+        idx = state_index(s)
+        target = None
+        for s2 in taste_states():
+            j = state_index(s2)
+            if abs(gammas[0][j, idx]) > 1e-10:
+                target = s2
+                break
+        target_states.append(target)
+
+    exact_1plus2 = (
+        sum(target_states[0]) == 0 and
+        sum(target_states[1]) == 2 and
+        sum(target_states[2]) == 2
+    )
+    check("exact-1plus2-intermediate-structure",
+          exact_1plus2,
+          "(1,0,0)->singlet(hw=0), others -> T_2(hw=2)")
 
     # PROOF of (4): Hierarchy mechanism.
     print("\n  --- Proof of (4): Mass hierarchy ---")
@@ -1076,8 +1091,8 @@ def step5_theorem():
     print()
     print("    Result: m_weak-direction >> m_color-directions")
 
-    # PROOF of (5): Three distinct masses => three generations.
-    print("\n  --- Proof of (5): Three physical generations ---")
+    # Bounded model for the residual 2 -> 1+1 split.
+    print("\n  --- Bounded model for the residual 2 -> 1+1 split ---")
 
     # Construct the full 3x3 generation mass matrix:
     # M = m_0 * I_3 + delta_M
@@ -1122,7 +1137,7 @@ def step5_theorem():
     # FINAL RESULT:
     print("""
   =====================================================================
-  THEOREM PROVED.
+  EXACT BOUNDARY + BOUNDED MODEL VERIFIED.
 
   The EWSB mechanism (CW selector V_sel on the 3-cube taste graph):
 
@@ -1131,19 +1146,16 @@ def step5_theorem():
     (2) Breaks the Z_3 generation symmetry: the orbit member whose "1"
         is in the weak direction is distinguished from the others.
 
-    (3) Gives M = diag(m_v, m_2, m_3) with m_v >> m_2 > m_3 via:
-        - m_v: direct VEV coupling (tree-level Yukawa)
-        - m_2, m_3: radiative coupling (1-loop suppressed)
-        - m_2 != m_3: JW asymmetry in the Kawamoto-Smit representation
+    (3) Gives an EXACT symmetry-level `1+2` mass structure:
+        one weak-direction state plus one residual Z_2 pair.
 
-    (4) Three distinct masses from EWSB cascade (bounded model).
+    (4) A bounded Jordan-Wigner / taste-breaking model can split the
+        residual pair and produce a plausible 1+1+1 hierarchy.
 
-    (5) The 1+2 split is a structural consequence of EWSB.
-        The full 1+1+1 hierarchy is a bounded model result.
-        Generation physicality remains open (see review.md).
+    (5) This strengthens the generation story but does NOT close the
+        generation physicality gate on the current first-principles surface.
 
-  GENERATION PHYSICALITY GATE: BOUNDED (not closed).
-  Exact: 1+2 split. Bounded: 1+1+1 hierarchy. Open: physicality.
+  GENERATION PHYSICALITY GATE: STILL OPEN.
   =====================================================================
   """)
 

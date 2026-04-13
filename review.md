@@ -124,30 +124,54 @@ So gravity-companion cleanup should only downgrade stale wording, not promote.
 Current strongest useful work:
 
 - `DM_CLEAN_DERIVATION_NOTE.md`
+- `DM_RELIC_BRIDGE_NOTE.md`
+- `ETA_FROM_FRAMEWORK_NOTE.md`
+- `BARYOGENESIS_NOTE.md`
+- `EWPT_STRENGTH_NOTE.md`
 - `DM_STOSSZAHLANSATZ_THEOREM_NOTE.md`
 - `DM_INVARIANT_BRIDGE_NOTE.md`
 - `DM_K_INDEPENDENCE_NOTE.md`
 - `DM_DIRECT_OBSERVABLE_NOTE.md`
+- `DM_BOUNCE_WALL_NOTE.md`
+- `DM_TRANSPORT_DERIVED_NOTE.md`
+- `BBN_FROM_FRAMEWORK_NOTE.md`
 
 Current blockers:
 
-- the live blocker is now `eta`
-  - numerator / cross-section side is much stronger
-  - denominator still imports baryon abundance through baryogenesis
+- the baryogenesis chain is now much narrower than before
+  - `J_Z3`, `v(T_c)/T_c`, and `Gamma_sph/T^4` are already the strongest part
+    of the chain
+- the BBN/nuclear-physics objection is largely gone in principle
+  - `eta -> Omega_b` really is counting once `m_p`, `G`, and `H_0` are taken
+    from accepted framework authority
+  - if the BBN runner is used, it must stop hardcoding measured `m_p`, `G`,
+    and `H_0` under `[DERIVED]` without pointing to that authority
+- `L_w*T` is no longer the main blocker
+  - the bounce/profile route is now the strongest transport sub-result
+- the live blocker is now the remaining transport sector behind `eta`
+  - `D_q*T` still comes from plugging framework `alpha_s` into imported
+    AMY/Moore kinetic-theory formulas and adopted NLO factors
+  - `v_w` still comes from plugging framework couplings into pressure/friction
+    estimates and then adopting a literature-style `0.01-0.10` range
 - relic-ratio / cosmological bridge is therefore still not closed
 - `g = 1` and `k = 0` remain bounded framework inputs where used
 
 Paper-safe read:
 
-> Structural DM inputs are materially stronger, but the full relic mapping
-> remains bounded because `eta` is not yet derived from the framework.
+> Structural DM inputs are materially stronger. The BBN objection is mostly
+> retired and `L_w*T` is substantially narrowed, but the full relic mapping
+> remains bounded because `eta` still depends on transport formulas that are
+> not yet native lattice derivations.
 
 Best attack:
 
-1. derive `v(T_c)/T_c` nonperturbatively on the framework surface
-2. derive the baryogenesis transport / CP-source prefactor from the `Z_3`
-   phase structure
-3. only then promote `eta` and the full relic ratio
+1. do not spend more time on BBN rhetoric or `L_w*T` unless a real bug appears
+2. derive `D_q*T` from an actual framework Green-Kubo / transport computation
+3. derive `v_w` from actual wall-friction / Boltzmann closure on the same
+   framework surface
+4. if 2-3 fail, freeze the lane honestly as “framework baryogenesis plus
+   standard transport closure”
+5. only then promote `eta` and the full relic ratio
 
 ### 2. Renormalized `y_t`
 
@@ -155,27 +179,34 @@ Current safe state:
 
 - bare UV theorem closed
 - `Cl(3)` preservation under RG exact
-- the Wilsonian route is materially better than before
+- the Wilsonian / matching route is materially better than before
   - Feshbach is now verified on the actual `Cl(3)` / `Z^3` Hamiltonian
   - the one-loop bookkeeping bug (`b_2`) is corrected
+  - the lattice matching coefficient is already computed at sub-percent scale
+  - V-scheme to `\overline{MS}` conversion is a real narrowing of the old gap
 - therefore still bounded:
-  - interacting low-energy EFT identification on the real Hamiltonian surface
-  - `alpha_s(M_Pl)` / boundary chain
-  - lattice / V-scheme to `\overline{MS}` matching
+  - one self-consistent high-scale boundary for both `g_3` and `y_t`
+  - the current boundary-resolution script still uses observed `alpha_s(M_Z)`
+    to generate `g_3(M_Pl)`
+  - the same script then uses a different high-scale coupling for `y_t`
+    than for gauge evolution, so the exact boundary relation
+    `y_t = g_s / sqrt(6)` is not enforced on one common boundary surface
   - thresholded running down to `M_Z`
 
 Paper-safe read:
 
-> The UV theorem surface is strong, but the remaining issue is now a real
-> matching / scheme problem, not the old toy-model objection.
+> The UV theorem surface is strong, but the remaining issue is now a
+> self-consistent boundary problem: the same framework boundary must set both
+> `g_3` and `y_t`, not one coupling for Yukawa data and another for gauge
+> running.
 
 Best attack:
 
-1. extend the EFT identification from free-fermion operator content to the
-   interacting gauge/Higgs surface actually needed for `y_t`
-2. compute the lattice/V-scheme to `\overline{MS}` matching coefficient for
-   `y_t` and `g_s` at `M_Pl`
-3. rerun the full thresholded 2-loop chain with that boundary
+1. do not re-prove Feshbach or the sub-percent matching coefficient
+2. derive one common framework boundary for both `g_3` and `y_t` at `M_Pl`
+3. only then rerun the full thresholded 2-loop chain
+4. if a low-energy anchor is still needed, isolate it explicitly and keep the
+   lane bounded
 
 ### 3. CKM / quantitative flavor closure
 
@@ -183,33 +214,38 @@ Current safe state:
 
 - route pruning and bounded structural flavor notes are useful
 - the old Higgs `Z_3` universality blocker is no longer the main issue
+- the exact `2x2` `2-3` block route is already done
+- the ratio route is already done
+- the full `3x3` `V_ub` route is already done as a bounded result
 - still open:
-  - sharp `V_cb`
-  - sharp `V_ub`
-  - first-principles control of absolute `S_23`
-  - first-principles control of `c_13` / phase
+  - first-principles control of absolute `c_23` / `S_23`
+  - first-principles control of `c_13`
+  - phase structure strong enough to resolve the `J`-`V_ub` tension
 
 Current best reading:
 
 - this is still not obviously a pure cluster-compute wall
-- the ratio route is useful, but too small by itself to close `V_cb`
-- invariants are useful, but do not independently solve for `V_cb`
+- the new full-closure script still calibrates `c_23^d` from PDG `V_cb`,
+  so it does **not** close `V_cb` from first principles
+- `K` is only O(1)-derived and still needs a non-perturbative form factor
+- the lattice `c_13` story can fit `V_ub` or `J`, but not both with the
+  current single-phase embedding
+- invariants are useful, but do not independently solve the lane
 - the highest-value unsolved targets are now:
-  - absolute `S_23`
+  - absolute `S_23` / `c_23`
   - residual `c_13`
-  - phase-aware full `3x3` NNI closure
+  - up/down phase embedding that resolves the `J`-`V_ub` tension
 
 Preferred routes:
 
-1. derive `V_cb` from the exact `2-3` NNI formula with explicit
-   `c_23^u`, `c_23^d`, `delta_23`
-2. derive the ratio `c_23^u/c_23^d` analytically from common overlap cancellation
-   plus sector-dependent EW / radiative weights
-3. derive the absolute `S_23` overlap scale analytically from the continuum /
-   Symanzik taste-splitting machinery if possible
-4. derive `c_13` and the relevant phase structure for `V_ub`
+1. use the exact `V_cb` formula already on branch as the baseline
+2. use the ratio route only as an input reduction step, not as the closure
+3. derive the absolute `S_23` / `c_23` normalization analytically from the
+   continuum / Symanzik taste-splitting machinery if possible
+4. derive `c_13` and the up/down phase structure together
 5. use invariant/Jarlskog relations built from derived quantities, not PDG angles,
-   only as a consistency layer after `S_23` / `c_13` sharpen
+   only as a consistency layer after `S_23` / `c_13` / phase sharpen
+
 Only if those fail cleanly should the lane be treated as compute-limited.
 
 Paper-safe read:

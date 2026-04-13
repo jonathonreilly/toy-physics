@@ -1,5 +1,9 @@
 # Closing the S^3 Compactification Gap
 
+> Superseded in part by `S3_COMPACTIFICATION_THEOREM_NOTE.md`.
+> The boundary-shell theorem is now stronger than this note, but the
+> fully axiomatic forcing of the cap map remains open.
+
 **Date:** 2026-04-12
 **Script:** `scripts/frontier_s3_compactification.py`
 **Status:** ALL TESTS PASS

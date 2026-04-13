@@ -12,21 +12,15 @@ normalization formula for the Weinberg angle.)
 This is the SAME problem that SU(5) GUTs face. Standard GUTs solve it with
 threshold corrections from heavy particles at the unification scale.
 
-In our Cl(3) framework, the "heavy particles" are the TASTE PARTNERS of
-SM fermions. Each staggered fermion field has 2^3 = 8 taste components.
-One taste (h=1 triplet) becomes the light SM fermion. The other 7 taste
-components are heavy, with masses set by the taste-breaking scale.
-
-KEY PHYSICS: The taste partners carry the SAME gauge quantum numbers as
-their light SM counterparts (they are copies in taste space, not flavor
-space). This is exactly analogous to how SUSY partners carry the same
-gauge quantum numbers as SM particles -- the extra states double (or in
-our case, octuple) the matter content of the theory above the threshold.
+This script does NOT derive the taste assignments from the retained cubic
+lane. It evaluates several candidate threshold patterns for an 8-state taste
+multiplet and checks how sensitive sin^2(theta_W) is to that unresolved
+mapping. The results are therefore scenario-dependent and review-only.
 
 This script computes:
-1. The taste spectrum: 8 = 1 + 3 + 3* + 1 decomposition
-2. Beta function modification from 7 extra taste partners per SM fermion
-3. Two-stage running: SM below M_taste, SM + taste above M_taste
+1. Candidate taste decompositions and threshold patterns
+2. Beta function modifications under those candidate assignments
+3. Two-stage running: SM below M_taste, candidate threshold above M_taste
 4. The corrected sin^2(theta_W) at M_Z vs M_taste
 5. Comparison with MSSM threshold corrections
 
@@ -144,7 +138,10 @@ log("=" * 78)
 log()
 
 log("  In the Cl(3) framework, staggered fermions on the cubic lattice Z^3")
-log("  have 2^3 = 8 taste components. These decompose by Hamming weight h:")
+log("  are modeled with 2^3 = 8 taste components. The mapping of those")
+log("  taste states to SM fields is NOT derived here; it is scanned below.")
+log()
+log("  One illustrative decomposition by Hamming weight h is:")
 log()
 log("    h=0: |000>              -- 1 state  (scalar taste)")
 log("    h=1: |100>,|010>,|001>  -- 3 states (vector taste) -> SU(3)_c fund")
@@ -154,16 +151,16 @@ log()
 
 log("  KEY INSIGHT: Taste partners and SM quantum numbers")
 log("  " + "-" * 60)
-log("  Each SM fermion field is described by a staggered field with 8 tastes.")
-log("  The h=1 triplet is the light SM fermion (color fundamental).")
-log("  The other 7 taste components are HEAVY PARTNERS of the same field.")
+log("  Each candidate assignment treats the 8 tastes as a staggered field.")
+log("  The light/heavy split and the SM quantum numbers are hypothesis choices")
+log("  that this script scans rather than derives.")
 log()
-log("  These taste partners carry the SAME gauge quantum numbers as the")
-log("  light SM fermion, because taste is an INTERNAL lattice symmetry")
-log("  that commutes with the gauge symmetry (in the continuum limit).")
+log("  In the modeled scenarios below, the heavy states are taken to carry")
+log("  the same gauge quantum numbers as the light field. That is a modeling")
+log("  assumption, not a derived result of this note.")
 log()
-log("  This is directly analogous to SUSY, where squarks carry the same")
-log("  color and electroweak charges as quarks.")
+log("  This is directly analogous to SUSY threshold scans, where extra matter")
+log("  shifts the beta functions once it is activated above a threshold.")
 log()
 
 # Taste-breaking mass spectrum
@@ -171,7 +168,7 @@ log("  TASTE-BREAKING MASS SPECTRUM:")
 log()
 log("  The taste-breaking Hamiltonian from lattice perturbation theory")
 log("  splits the 8 degenerate states. The splitting is parametrized by")
-log("  the Hamming distance from the h=1 reference state.")
+log("  the Hamming distance from the chosen reference state.")
 log()
 log("  From frontier_su3_taste_breaking.py:")
 log("    Delta m^2(h) = c_1 * h + c_2 * h*(h-1)/2")
@@ -189,8 +186,7 @@ for h in range(4):
         f"relative to h=1: {dm2_rel:+.3f}")
 
 log()
-log("  The h=1 state (3 components) becomes light (SM quarks).")
-log("  The remaining 5 states get Planck-scale masses from taste breaking.")
+log("  These masses are illustrative inputs, not a derived taste assignment.")
 log()
 
 
@@ -281,18 +277,11 @@ log()
 
 # For reference: also compute with fewer extra tastes
 # Scenario A: only the 3* antitriplet (3 states) contribute as extra matter.
-# The 3* has the same Dynkin index as the 3 for SU(3) and SU(2).
-# Effectively adds 1 more "generation equivalent" per actual generation:
-# delta_b = N_g * b_matter_per_gen (one extra taste copy in 3*)
-# Plus 2 singlets (h=0, h=3) which contribute only to b_1.
+# The 3* has the same Dynkin index as the 3 for SU(3) and SU(2), but here
+# it is only used as part of the chosen scenario definition.
 
-# Actually let's be more careful. The h=2 (3*) taste partner of a quark
-# carries the same SU(2)_L and U(1)_Y charges as the quark (since it's
-# a taste copy), but its SU(3) representation is 3* instead of 3.
-# For beta functions, the Dynkin index T(3*) = T(3) = 1/2, so the
-# SU(3) contribution is the same. For SU(2) and U(1), the charges
-# are the same by the taste argument. So the 3* contributes exactly
-# like an additional generation.
+# The h=2 (3*) partner of a quark is treated here as a taste copy in the
+# same charge class. That is an assumption of this scenario scan.
 
 # Scenario A: h=2 antitriplet partners only (most conservative)
 delta_b_3star = N_g * b_matter_per_gen
@@ -327,8 +316,8 @@ log()
 # are color singlets and contribute ZERO to b_3.
 # The h=2 (3*) taste partners of quarks contribute T(3*)=1/2, same as quarks.
 #
-# For b_1 and b_2, ALL taste partners contribute since they carry the
-# same electroweak charges regardless of their color representation.
+# For b_1 and b_2, the modeled taste partners are taken to carry the
+# same electroweak charges. That is a scenario choice.
 
 # Let me compute this properly per generation.
 # Per SM generation:
@@ -521,7 +510,7 @@ log("    Per lepton: (3, 3*, 1) or similar -> 7 heavy partners")
 log("  And some of the lepton's heavy partners are COLORED EXOTICS.")
 log()
 
-# This is getting into model-dependent territory. Let me define clean scenarios.
+# This is model-dependent territory. Define candidate scenarios.
 
 log("  We define three clean scenarios for the threshold correction:")
 log()
@@ -530,12 +519,12 @@ log()
 # Above M_taste, the full 8-fold taste degeneracy is restored.
 # Every SM fermion has 8 copies, so the matter sector is multiplied by 8.
 # The extra 7 copies contribute 7x the SM matter to the betas.
-# This is model-independent (doesn't depend on taste -> SM mapping details).
+# This is an illustrative hypothesis, not a derived mapping.
 
 delta_b_I = 7 * N_g * b_matter_per_gen
 b_I = b_SM + delta_b_I
 
-log("  SCENARIO I: Universal 8-fold taste (model-independent)")
+log("  SCENARIO I: Universal 8-fold taste (illustrative model)")
 log(f"    delta_b = 7 * {N_g} * b_matter/gen = {delta_b_I}")
 log(f"    b_above = {b_I}")
 log()
@@ -558,7 +547,7 @@ extra_b_lepton_partners = 7 * np.array([b1_leptons_per_gen, b2_leptons_per_gen, 
 delta_b_II = N_g * (extra_b_quark_3star + extra_b_quark_singlets + extra_b_lepton_partners)
 b_II = b_SM + delta_b_II
 
-log("  SCENARIO II: Structured taste (3* quarks + singlet partners)")
+log("  SCENARIO II: Structured taste (illustrative model)")
 log(f"    delta_b = {delta_b_II}")
 log(f"    b_above = {b_II}")
 log()
@@ -568,7 +557,7 @@ log()
 delta_b_III = N_g * extra_b_quark_3star
 b_III = b_SM + delta_b_III
 
-log("  SCENARIO III: Minimal (3* quark partner only)")
+log("  SCENARIO III: Minimal (illustrative model)")
 log(f"    delta_b = {delta_b_III}")
 log(f"    b_above = {b_III}")
 log()
@@ -603,7 +592,7 @@ log("  Running prescription:")
 log("    Stage 1 (M_Z -> M_taste): SM beta functions")
 log("    Stage 2 (M_taste -> M_Planck): SM + taste partner betas")
 log()
-log("  Starting from unified coupling at M_Planck:")
+log("  Starting from a unified coupling at M_Planck:")
 log(f"    alpha_U = {alpha_U:.6f} (1/{inv_alpha_U:.1f})")
 log(f"    (mean of extrapolated 1/alpha_i at M_Planck)")
 log()
@@ -938,32 +927,27 @@ log("       as reported in the gauge unification note, which used a wrong formul
 log("     - The correction needs to RAISE sin^2_W from 0.176 to 0.231.")
 log("     - The taste spectrum provides this: extra matter above M_taste")
 log("       makes the couplings diverge less, keeping sin^2_W closer to 3/8.")
-log("     - Scenario II (structured taste) achieves exact match at M_taste ~ 6x10^11 GeV.")
-log("     - Full 8-fold taste (Scenario I) matches at M_taste ~ 10^17 GeV,")
-log("       which is physically natural for taste-breaking at O(alpha * M_Planck).")
+log("     - Scenario II (structured taste) achieves exact match in the")
+log("       fixed-alpha scan at M_taste ~ 6x10^11 GeV.")
+log("     - Full 8-fold taste (Scenario I) matches in the fixed-alpha scan")
+log("       at M_taste ~ 10^17 GeV.")
 log()
 log("  6. COMPARISON WITH MSSM:")
 log("     - MSSM: threshold at M_SUSY ~ 1 TeV, runs to M_GUT ~ 2x10^16 GeV")
-log("     - Taste: threshold at M_taste ~ 10^16 GeV, runs to M_Planck ~ 10^19 GeV")
-log("     - Both use the same mechanism (extra matter shifts beta functions)")
+log("     - Taste: threshold is scenario-dependent and not yet derived")
+log("     - Both use threshold matter to shift beta functions in the scan")
 log("     - MSSM requires NEW particle content (sparticles)")
-log("     - Taste uses EXISTING lattice structure (no new particles needed)")
+log("     - Taste uses a modeled lattice threshold, not a retained derivation")
 log()
 log("  HONEST ASSESSMENT:")
 log("  " + "-" * 60)
 log("  The corrected calculation reveals that Planck-scale unification with")
 log("  SM-only running gives sin^2_W = 0.176, BELOW the measured 0.231.")
 log("  (The gauge unification note's 0.263 used an incorrect normalization.)")
-log("  The taste spectrum provides threshold corrections that raise sin^2_W")
-log("  toward 0.231 by adding extra matter above M_taste, which slows the")
-log("  divergence of the running couplings. The full 8-fold taste scenario")
-log("  matches at M_taste ~ 10^17 GeV, physically natural for a ~ 1/M_Planck.")
-log("  This is a ONE-PARAMETER fit comparable in quality to the MSSM.")
-log("  The main caveat: the self-consistent alpha_U (accounting for the")
-log("  modified running) gives a different unification coupling that pushes")
-log("  sin^2_W back toward 0.176. Fully closing the gap requires the")
-log("  unification coupling itself to be determined by the Cl(3) algebra")
-log("  rather than by matching to the measured SM couplings.")
+log("  Some candidate taste assignments can hit 0.231 in the fixed-alpha scan,")
+log("  but the self-consistent alpha_U solve does not preserve that match.")
+log("  Therefore this lane is a scenario-dependent threshold study, not a")
+log("  retained derivation of the Weinberg angle.")
 log()
 
 
