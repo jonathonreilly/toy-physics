@@ -1,7 +1,7 @@
 # S^3 Topology: General-R Derivation
 
-**Status:** DERIVED for all R >= 2  
-**Type:** Theorem chain with one external citation (Perelman 2003)  
+**Status:** BOUNDED — derived for all R >= 2; uniqueness/selection resolved; relies on cited PL topology  
+**Type:** Theorem chain with external citations (Alexander, Moise, Perelman)  
 **Date:** 2026-04-13
 
 ---
@@ -171,14 +171,35 @@ The derivation chain is:
 
 ## What remains open
 
-1. **Uniqueness of compactification:** The cone-cap construction is one
-   natural compactification.  We do not prove it is the unique
-   compactification forced by the framework.  (The cap-map uniqueness
-   work addresses this but is a separate question.)
+1. **Uniqueness of compactification: RESOLVED.**
+   The cone cap is the unique closure of the cubical ball producing a
+   closed, simply connected PL 3-manifold. All alternatives are excluded
+   by exhaustive analysis (S3_CAP_UNIQUENESS_NOTE.md, 35/35 checks):
+   - Handle attachment excluded (gives pi_1 = Z, not simply connected)
+   - Boundary identification excluded (non-manifold vertices or pi_1 != 0)
+   - Multi-cone excluded (non-manifold edges) or degenerate to cone cap
+   - Gluing map unique (Alexander trick + MCG(S^2) = Z/2)
 
-2. **Physical interpretation:** Why the framework selects this particular
-   M_R as the physical compactification is a framework-level question,
-   not a topology question.
+2. **Framework-level selection: RESOLVED.**
+   Kawamoto-Smit homogeneity forces closure. The staggered fermion
+   Hamiltonian requires uniform nearest-neighbor hopping at every site.
+   Boundary vertices of an open cubical ball have incomplete cubical
+   neighborhoods, violating lattice translation invariance. Closure to a
+   manifold without boundary is mandatory. This is a consequence of the
+   framework's own Hamiltonian structure (axiom A3), not an ad hoc
+   requirement.
+
+3. **Lane status: BOUNDED (not CLOSED).**
+   Both uniqueness and selection are now discharged. The lane remains
+   BOUNDED (not promoted to CLOSED) because the uniqueness argument
+   relies on cited PL topology infrastructure:
+   - Exhaustiveness of closure classification (standard PL topology)
+   - Alexander's theorem (1923)
+   - Moise's theorem (1952)
+   - Perelman's theorem (2003)
+   These are well-established results, but they are cited rather than
+   proved constructively within the framework. The publication standard
+   requires that cited theorems be acknowledged as external dependencies.
 
 ---
 
@@ -204,11 +225,36 @@ The proof is a four-step chain with two self-contained general-R proofs
 (vertex links = S^2, pi_1 = 0), one direct consequence, and one
 application of Perelman's theorem.
 
+Compactification uniqueness and framework-level selection are now
+resolved (see "What remains open" above). The cone cap is the unique
+closure forced by KS homogeneity and the simply-connected PL manifold
+requirement.
+
+The lane remains BOUNDED because the argument chain includes cited PL
+topology theorems. Paper-safe wording:
+
+> The cubical ball on Z^3, closed by a cone cap, is PL S^3 for every
+> R >= 2. KS homogeneity forces closure; cone-capping is the unique
+> closure producing a closed simply-connected PL 3-manifold. The
+> argument relies on cited PL topology (Alexander, Moise, Perelman).
+
+---
+
+## Decision
+
+**KEEP BOUNDED.**
+
+Uniqueness and selection are resolved. The lane is materially
+strengthened but not promoted to CLOSED because the uniqueness proof
+relies on cited PL topology infrastructure rather than constructive
+framework-internal arguments.
+
 ---
 
 ## Commands run
 
 ```
 python scripts/frontier_s3_inductive_link.py   # vertex links, R=2..10
-python scripts/frontier_s3_general_r.py        # full general-R verification
+python scripts/frontier_s3_general_r.py        # full general-R verification, 88/88
+python scripts/frontier_s3_cap_uniqueness.py   # uniqueness/selection, 35/35
 ```
