@@ -3,7 +3,7 @@
 CPT Exact Preservation in the Cl(3) Staggered Framework on Z^3
 ================================================================
 
-STATUS: EXACT theorem on finite lattice
+STATUS: EXACT theorem on even periodic lattices
 
 THEOREM (CPT Invariance):
   The staggered Cl(3) Hamiltonian on Z^3 with periodic boundary conditions
@@ -114,6 +114,8 @@ def build_full_hamiltonian(L):
     This is the anti-Hermitian hopping operator; the physical (Hermitian)
     Hamiltonian is iH.
     """
+    if L % 2 != 0:
+        raise ValueError("CPT runner requires even L for bipartite periodic Z^3.")
     N = L ** 3
 
     def site_to_idx(x, y, z):

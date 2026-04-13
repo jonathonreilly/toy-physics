@@ -2,7 +2,12 @@
 
 **Date:** 2026-04-13
 **Lane:** Renormalized y_t matching
-**Status:** CLOSED -- the irreducible residual is resolved via Feshbach projection
+**Status:** BOUNDED -- useful EFT support note, not closure of the `y_t` lane
+
+**Codex audit note:** this file is not publication authority for `y_t`
+closure. Its numerical verification is on toy Hamiltonians, not the actual
+`Cl(3)` / `Z^3` Hamiltonian, and the low-energy matching bridge therefore
+remains bounded at the flagship paper bar.
 
 ---
 
@@ -110,7 +115,7 @@ a mathematical result about the operator basis, not a physical assumption.
 The beta function coefficients are determined by the gauge group and matter
 content:
 - b_3 = (11 * 3 - 2 * 6) / 3 = 7  (SU(3) with 6 flavors)
-- b_2 = (22 - 4 * 3) / 3 = 10/3  (SU(2) with 3 generations)
+- b_2 = 19/6 for the Standard Model with 3 generations and 1 Higgs doublet
 
 Every numerical input is derived from the framework. The beta functions are
 CONSEQUENCES of H_eff, describing how the effective couplings change as the
@@ -126,8 +131,9 @@ cutoff is lowered.
 | alpha_s(M_Pl) chain | Continuum scheme exists | V-scheme is defined within H_eff |
 | Lattice-to-continuum matching | Continuum theory to match to | H_eff is that theory |
 
-All three blockers close simultaneously because they share the same root cause,
-and that root cause is resolved.
+These three blockers are conceptually related, but they do **not** all close
+here. The actual low-energy matching bridge on the physical lattice surface
+remains bounded.
 
 ---
 
@@ -189,7 +195,7 @@ well-defined low-energy QFT description?" -- is answered YES, via Feshbach
 projection. The derivation uses only quantum mechanics, linear algebra, and
 group theory.
 
-**Lane status: CLOSED -> DERIVED.**
+**Lane status: remains BOUNDED.**
 
 ---
 
@@ -199,7 +205,8 @@ group theory.
   for lattice sizes L = 16, 32, 64, 128 (all PASS)
 - Symmetry preservation: |[H_eff, P_eff]| ~ 10^{-15} (VERIFIED)
 - Lattice artifacts at M_Z: (M_Z/M_Pl)^2 ~ 5.6 x 10^{-35} (negligible)
-- Beta coefficients: b_3 = 7, b_2 = 10/3 (from derived particle content)
+- Beta coefficients: `b_3 = 7`, `b_2 = 19/6` for the Standard Model
+  bookkeeping used in low-energy EFT discussions
 - Consistency: alpha_s(M_Pl) = 0.019 from 2-loop running vs alpha_V = 0.093
   from tadpole improvement (discrepancy expected from non-perturbative effects)
 

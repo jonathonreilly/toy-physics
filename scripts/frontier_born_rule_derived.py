@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Born rule derivation from lattice propagator structure.
+"""Exact I_3 = 0 / pairwise interference theorem on the Hilbert surface.
 
 Theorem: The Sorkin parameter I_3 = 0 exactly for any propagator
 K(x,y) = <x|exp(-iHt)|y> on the Cl(3)-on-Z^3 lattice.
@@ -48,7 +48,7 @@ The argument:
 This script verifies the algebraic identity symbolically and numerically,
 then runs the lattice Sorkin test as a cross-check.
 
-PStack experiment: born-rule-derived
+PStack experiment: i3-zero-exact
 """
 
 from __future__ import annotations
@@ -60,12 +60,13 @@ import sys
 
 def main() -> None:
     print("=" * 72)
-    print("BORN RULE DERIVED FROM LATTICE PROPAGATOR STRUCTURE")
+    print("EXACT I_3 = 0 / PAIRWISE INTERFERENCE THEOREM")
     print("=" * 72)
     print()
 
     pass_count = 0
     fail_count = 0
+    assertion_count = 0
 
     # =================================================================
     # EXACT CHECK 1: Algebraic identity I_3 = 0 for arbitrary amplitudes
@@ -113,7 +114,7 @@ def main() -> None:
     # =================================================================
     # EXACT CHECK 2: Symbolic expansion proof
     # =================================================================
-    print("EXACT CHECK 2: Symbolic expansion")
+    print("ASSERTION BLOCK 2: Symbolic expansion")
     print("-" * 50)
     print("  Writing A = a + ib, B = c + id, C = e + if (all real)")
     print()
@@ -142,14 +143,14 @@ def main() -> None:
     print("  (same for bd, bf, df)")
     print()
     print("  ALL coefficients vanish. I_3 = 0 is an algebraic identity.")
-    print("  Result: PASS (exact symbolic proof)")
-    pass_count += 1
+    print("  Result: ASSERTION (proof block, not a numerical check)")
+    assertion_count += 1
     print()
 
     # =================================================================
     # EXACT CHECK 3: Higher-order Sorkin parameters
     # =================================================================
-    print("EXACT CHECK 3: I_4 (fourth-order) is NOT generally zero")
+    print("EXACT CHECK 3: I_4 also vanishes for quadratic probabilities")
     print("-" * 50)
     print("  I_4 uses 4 slits with inclusion-exclusion depth 4.")
     print("  For Born rule (P = |A|^2), I_n = 0 for all n >= 3.")
@@ -388,7 +389,7 @@ def main() -> None:
     # =================================================================
     # EXACT CHECK 8: The theorem statement
     # =================================================================
-    print("EXACT CHECK 8: Theorem statement")
+    print("ASSERTION BLOCK 8: Theorem statement")
     print("-" * 50)
     print()
     print("  THEOREM (Born rule from Hilbert space).")
@@ -430,28 +431,29 @@ def main() -> None:
     print("  STATUS: This is an exact theorem. No lattice-specific")
     print("  details, finite-size effects, or model assumptions enter.")
     print("  It is a consequence of axiom I1 alone.")
-    pass_count += 1  # theorem statement check
+    assertion_count += 1
     print()
 
     # =================================================================
     # SUMMARY
     # =================================================================
     print("=" * 72)
-    print(f"SUMMARY: PASS={pass_count} FAIL={fail_count}")
+    print(f"SUMMARY: COMPUTED_PASS={pass_count} ASSERTION={assertion_count} FAIL={fail_count}")
     print("=" * 72)
     print()
     print("  Exact checks:")
     print("    1. Algebraic identity I_3 = 0 for random amplitudes: PASS")
-    print("    2. Symbolic expansion proof: PASS")
+    print("    2. Symbolic expansion proof: ASSERTION")
     print("    3. I_4 = 0 for Born rule: PASS")
     print("    4. I_n = 0 for n = 3..7: PASS")
     print("    5. Non-Born rules give I_3 != 0: PASS")
     print("    6. 1D lattice propagator I_3 = 0: PASS")
     print("    7. 3D staggered lattice propagator I_3 = 0: PASS")
-    print("    8. Theorem statement: PASS")
+    print("    8. Theorem statement: ASSERTION")
     print()
-    print("  No bounded or model-dependent checks in this script.")
-    print("  All results are exact consequences of Hilbert space axiom I1.")
+    print("  Six checks are computed exactly; two blocks restate the proof.")
+    print("  Historical filename retained, but the safe claim is exact I_3 = 0,")
+    print("  not a freestanding derivation of the Born rule from nothing.")
 
     sys.exit(0 if fail_count == 0 else 1)
 

@@ -1,15 +1,17 @@
 # S^3 via Shellability of Cone-Capped Freudenthal Cubical Ball
 
-**Status**: EXACT -- constructive shelling orders verified computationally for R=2..5 (32/32 checks pass). General-R argument by structural induction.
+**Status**: BOUNDED SUPPORT -- constructive shelling orders verified computationally for `R=2..5`; the general-`R` induction remains supporting evidence, not standalone closure authority.
 
 **Script**: `scripts/frontier_s3_shellability.py`
 
 ## Result
 
-**Theorem.** For every R >= 2, the simplicial complex
+**Supporting result.** For `R = 2, 3, 4, 5`, the simplicial complex
 M_R = B_R cup cone(dB_R), obtained by Freudenthal-triangulating the
 cubical ball B_R in Z^3 and coning its boundary to an apex, is PL
-homeomorphic to S^3.
+homeomorphic to S^3. The general-`R` extrapolation is useful support for the
+accepted topology route, but this note is not itself the primary all-`R`
+closure authority.
 
 **Proof method**: Constructive shellability (no Perelman, no recognition algorithm).
 
@@ -74,8 +76,8 @@ re-gluing yields S^3).
 
 ## Significance
 
-This provides a **constructive, Perelman-free proof** that the
-compactification M_R is S^3 for all R. Unlike the previous collapse-based
+This provides a constructive finite-`R` support path for the
+compactification family. Unlike the previous collapse-based
 approach (which used randomized search and could get stuck for large R),
 the shelling order is deterministic and verified to work at every step.
 

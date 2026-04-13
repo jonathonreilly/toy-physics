@@ -58,8 +58,8 @@ surface:
 - exact no-third-order-interference / `I_3 = 0` theorem on the Hilbert surface
   Note: this is **not** a standalone derivation of the Born rule from nothing;
   the safe statement is exact pairwise interference on the accepted Hilbert
-  probability surface.
-- exact CPT theorem for the free staggered `Cl(3)` lattice
+  probability surface, and the runner name is historical.
+- exact CPT theorem for the free staggered `Cl(3)` lattice on even periodic lattices
 - exact native cubic `SU(2)` algebra
 - exact graph-first `su(3)` commutant closure on the retained selector surface
 

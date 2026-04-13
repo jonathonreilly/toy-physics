@@ -54,12 +54,12 @@ Keep it in the repo if useful, but do not cite it in the paper path.
 | Exact native `SU(2)` from cubic `Cl(3)` | promoted | main text | [BOUNDED_NATIVE_GAUGE_NOTE.md](BOUNDED_NATIVE_GAUGE_NOTE.md) | `frontier_non_abelian_gauge.py` |
 | Graph-first structural `SU(3)` | promoted | main text | [GRAPH_FIRST_SU3_INTEGRATION_NOTE.md](GRAPH_FIRST_SU3_INTEGRATION_NOTE.md) | `frontier_graph_first_su3_integration.py` |
 | Left-handed `+1/3` / `-1` charge matching | promoted corollary | main text or SI corollary | [GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md](GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md) | `frontier_graph_first_su3_integration.py` |
-| Anomaly-forced `3+1` closure | promoted | main text | [ANOMALY_FORCES_TIME_THEOREM.md](ANOMALY_FORCES_TIME_THEOREM.md) | `frontier_anomaly_forces_time.py` |
+| Anomaly-forced `3+1` closure | promoted | main text | [ANOMALY_FORCES_TIME_THEOREM.md](ANOMALY_FORCES_TIME_THEOREM.md) | `frontier_anomaly_forces_time.py` (theorem note is the authority; runner score mixes computed checks and labeled assertions) |
 | `S^3` compactification / topology closure | promoted | main text or SI theorem box | `youthful-neumann: docs/S3_GENERAL_R_DERIVATION_NOTE.md`, `youthful-neumann: docs/S3_CAP_UNIQUENESS_NOTE.md` | `frontier_s3_boundary_link_theorem.py`, `frontier_s3_cap_uniqueness.py`, `frontier_s3_general_r.py` |
 | Full-framework one-generation matter closure | promoted | main text | [GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md](GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md) | `frontier_right_handed_sector.py` |
 | Three-generation matter structure in the framework | promoted | main text | [GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md](GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md) | `frontier_generation_fermi_point.py`, `frontier_generation_rooting_undefined.py`, `frontier_generation_axiom_boundary.py` |
-| Exact `I_3 = 0` / no third-order interference | promoted exact companion | main text or Extended Data | [I3_ZERO_EXACT_THEOREM_NOTE.md](I3_ZERO_EXACT_THEOREM_NOTE.md) | `frontier_born_rule_derived.py` |
-| Exact CPT on the free staggered lattice | promoted exact companion | main text or Extended Data | [CPT_EXACT_NOTE.md](CPT_EXACT_NOTE.md) | `frontier_cpt_exact.py` |
+| Exact `I_3 = 0` / no third-order interference | promoted exact companion | main text or Extended Data | [I3_ZERO_EXACT_THEOREM_NOTE.md](I3_ZERO_EXACT_THEOREM_NOTE.md) | `frontier_born_rule_derived.py` (historical runner name; safe claim is exact `I_3 = 0`) |
+| Exact CPT on the free staggered lattice | promoted exact companion | main text or Extended Data | [CPT_EXACT_NOTE.md](CPT_EXACT_NOTE.md) | `frontier_cpt_exact.py` (even periodic lattices only) |
 
 ## 2. Live flagship gates
 
@@ -110,7 +110,9 @@ These files should not drive publication claims unless they are rewritten.
 |---|---|---|
 | stale review packets / publication cards that overclaim closed gates | stale / not-for-paper | they repeatedly outran the audited state |
 | older bounded-only `S^3` audit notes before the general-`R` / cap-uniqueness harmonization | stale / historical authority only | they document the earlier narrower bar, but no longer define the publication state |
+| `S3_SHELLABILITY_NOTE.md` as standalone all-`R` closure authority | support only, not primary authority | finite-`R` constructive support is useful, but this note is not the accepted closure route by itself |
 | older full-closure notes for DM, `y_t`, CKM, or gauge couplings | stale / not-for-paper | these often converted bounded sub-results into full-closure prose |
+| `WILSONIAN_EFT_DERIVATION_NOTE.md` / `frontier_wilsonian_eft.py` as `y_t` closure authority | stale / bounded-only | the current evidence is on toy Hamiltonians and does not discharge the real low-energy matching bridge on the physical lattice surface |
 | misnamed “Born rule derived” notes | stale until renamed / narrowed | the safe claim is exact `I_3 = 0`, not a standalone Born-rule derivation |
 | overnight summary / scorecard / unified-closure docs that mark DM or `y_t` as closed | stale / not-for-paper | those lanes remain bounded, so these summary docs are not authority by themselves |
 
