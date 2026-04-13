@@ -67,10 +67,18 @@ np.set_printoptions(precision=10, suppress=True, linewidth=120)
 
 PASS_COUNT = 0
 FAIL_COUNT = 0
+ASSERTION_COUNT = 0
 
 
-def check(name, condition, detail=""):
-    global PASS_COUNT, FAIL_COUNT
+def check(name, condition, detail="", kind="COMPUTED", count=True):
+    global PASS_COUNT, FAIL_COUNT, ASSERTION_COUNT
+    if not count:
+        ASSERTION_COUNT += 1
+        msg = f"  [ASSERTION] {name}"
+        if detail:
+            msg += f"  ({detail})"
+        print(msg)
+        return True
     status = "PASS" if condition else "FAIL"
     if condition:
         PASS_COUNT += 1
@@ -278,7 +286,8 @@ def step2_anomaly_cancellation():
     print("    u_R^c: 1 singlet in bar3, A(bar3)=-1 => contribution = -1")
     print("    d_R^c: 1 singlet in bar3, A(bar3)=-1 => contribution = -1")
     print("    Total: 2 - 1 - 1 = 0")
-    check("SU(3)^3 anomaly = 0", True, "2 - 1 - 1 = 0")
+    su3_cubic = 2 - 1 - 1
+    check("SU(3)^3 anomaly = 0", su3_cubic == 0, "2 - 1 - 1 = 0")
     print()
 
     print("  RESULT: Anomaly cancellation requires an SU(2)-singlet right-handed")
@@ -539,8 +548,9 @@ def step4_unique_time():
     print("  compatibility conditions beyond the graph semantics.")
     print()
     check("single-clock evolution uses one real parameter",
-          np.array([0.0, 1.0]).ndim == 1,
-          "graph evolution is parameterized by one time variable t")
+          True,
+          "framework assumption: one Hamiltonian clock U(t)",
+          count=False)
     print()
 
     # Argument 4: d_t = 0
@@ -550,7 +560,10 @@ def step4_unique_time():
     print("  With d_t = 0 there is no time evolution, no propagating particles,")
     print("  no scattering amplitudes. This is not physics.")
     print()
-    check("d_t = 0: no time evolution, no physics", True)
+    check("d_t = 0: no time evolution, no physics",
+          True,
+          "textbook interpretive statement, not a numerical check",
+          count=False)
     print()
 
     # Summary
@@ -759,8 +772,8 @@ def main():
     bonus_charge_table()
 
     print("\n" + "=" * 72)
-    print(f"FINAL SCORE: {PASS_COUNT}/{PASS_COUNT + FAIL_COUNT} checks passed, "
-          f"{FAIL_COUNT} failed")
+    print(f"FINAL SCORE: {PASS_COUNT} computed PASS, {ASSERTION_COUNT} assertion, "
+          f"{FAIL_COUNT} FAIL")
     print("=" * 72)
 
     if FAIL_COUNT > 0:

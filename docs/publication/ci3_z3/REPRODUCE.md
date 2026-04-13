@@ -28,8 +28,13 @@ python3 scripts/frontier_born_rule_derived.py
 - runner names are historical in a few places:
   - `frontier_born_rule_derived.py` supports the retained `I_3 = 0` theorem,
     not a freestanding full Born-rule derivation
+  - `frontier_cpt_exact.py` is an exact theorem runner on even periodic
+    lattices only
   - `frontier_newton_derived.py` supports the retained weak-field Newton /
     Poisson claim, not the full GR-signature bundle
+- `frontier_anomaly_forces_time.py` mixes computed checks with labeled
+  assertions; use the theorem note as the claim boundary rather than the raw
+  scoreboard
 
 ## Packaging rule
 
