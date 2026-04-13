@@ -225,6 +225,20 @@ New exact/bounded one-parameter shell-law result extracted after that:
   and leaves the nonlinear shell-stress / junction interpretation as the next
   gravity step
 
+New exact/bounded reduced-junction operator result extracted after that:
+
+- on the current exact star-supported source class, the reduced sewing-shell
+  law is already one exact rank-one operator
+- the reduced-junction matrix factors as
+  `J_red = v_red * (1,1,...,1)`, i.e. one fixed reduced junction vector
+  composed with the total-charge functional
+- the exact local `O_h` and broader finite-rank source families lie on that
+  same reduced-junction image to machine precision
+- see `docs/REDUCED_JUNCTION_OPERATOR_NOTE.md`
+- this removes “unknown reduced junction operator” from the live blocker list
+  and pushes the remaining gravity problem onto the lift from reduced
+  shell/exterior data to the full nonlinear 4D closure
+
 ## Do not retread these solved or near-solved substeps
 
 The attack should **not** spend time redoing the following:
@@ -265,9 +279,11 @@ again:
 
 3. shell-level coarse-graining is no longer the blocker for the current
    star-supported exact source classes
-4. the live blocker is the nonlinear shell-stress / junction interpretation
-   of the exact one-parameter reduced shell law
-5. after that, the resulting exterior-plus-band construction still has to be
+4. the reduced shell/exterior junction law itself is no longer the blocker on
+   the current exact source class
+5. the live blocker is the lift from that exact reduced junction operator to a
+   full nonlinear 4D shell-stress / Einstein-Regge closure
+6. after that, the resulting exterior-plus-band construction still has to be
    promoted to a theorem-grade nonlinear 4D closure
 
 Until those are replaced by a genuine nonlinear closure, the following stay
