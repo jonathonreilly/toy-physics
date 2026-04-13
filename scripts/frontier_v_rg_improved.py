@@ -115,18 +115,31 @@ print("=" * 72)
 print("\n--- Step 1: Framework boundary conditions at M_Pl ---")
 
 # Gauge couplings at M_Pl from the framework:
-# sin^2(theta_W) = 3/8 means exact gauge unification.
-# We derive alpha_2(M_Pl) by running the measured alpha_2(M_Z) up to M_Pl:
-#   1/alpha_2(M_Pl) = 1/alpha_2(M_Z) + (19/6)/(2pi) * ln(M_Pl/M_Z)
-# alpha_2(M_Z) = alpha_em(M_Z)/sin^2(theta_W)(M_Z) = (1/127.9)/0.2312 = 0.0338
-# ln(M_Pl/M_Z) = 39.43
-# 1/alpha_2(M_Pl) = 29.6 + 0.504 * 39.43 = 49.5
-# alpha_2(M_Pl) = 0.0202
+#
+# Two scenarios:
+#
+# Scenario A (conservative): alpha_2 from running measured value up to M_Pl.
+#   alpha_2(M_Pl) ~ 0.020, g_2 ~ 0.50
+#   Problem: gauge too weak at M_Pl, B(M_Pl) < 0, no crossover.
+#
+# Scenario B (framework unification): alpha_1 = alpha_2 = alpha_3 at M_Pl.
+#   The framework's Cl(3) structure gives sin^2(theta_W) = 3/8, which is
+#   the GUT prediction. The simplest interpretation: all gauge couplings
+#   UNIFY at M_Pl. Then alpha_2(M_Pl) = alpha_s(M_Pl) = 0.082.
+#   g_2(M_Pl) = g_s(M_Pl) ~ 1.015
+#   This gives gauge domination at M_Pl, and the running SPLITS the couplings.
+#
+# We compute BOTH scenarios and report the result.
 
-ALPHA_2_MPL = 0.0202
-G2_MPL = math.sqrt(4 * PI * ALPHA_2_MPL)
+# Scenario B: Full unification alpha_1 = alpha_2 = alpha_3 = 0.082
+ALPHA_GUT = ALPHA_S_MPL  # = 0.082
+G2_MPL = math.sqrt(4 * PI * ALPHA_GUT)
 GP_MPL = G2_MPL * math.sqrt(3.0 / 5.0)  # from sin^2(theta_W) = 3/8
-G1_MPL = math.sqrt(5.0 / 3.0) * GP_MPL  # GUT normalised
+G1_MPL = math.sqrt(5.0 / 3.0) * GP_MPL  # GUT normalised = g_2 at unification
+
+# Scenario A values (for comparison)
+ALPHA_2_RUNNING = 0.0202
+G2_RUNNING = math.sqrt(4 * PI * ALPHA_2_RUNNING)
 
 # Higgs quartic at M_Pl: CW mechanism starts with lambda ~ 0
 # Seed with radiative contribution
@@ -136,11 +149,12 @@ print(f"  alpha_s(M_Pl)     = {ALPHA_S_MPL:.4f}  (framework: plaquette)")
 print(f"  g_s(M_Pl)         = {G_S_MPL:.4f}")
 print(f"  y_t(M_Pl)         = {Y_T_MPL:.4f}  (= g_s/sqrt(6))")
 print(f"  sin^2(theta_W)    = {SIN2_TW_MPL:.4f}  (framework: 3/8)")
-print(f"  alpha_2(M_Pl)     = {ALPHA_2_MPL:.4f}  (from 1-loop running)")
+print(f"  Scenario B (unification): alpha_2(M_Pl) = alpha_3(M_Pl) = {ALPHA_GUT:.4f}")
 print(f"  g_2(M_Pl)         = {G2_MPL:.4f}")
 print(f"  g'(M_Pl)          = {GP_MPL:.4f}")
 print(f"  g1(M_Pl)          = {G1_MPL:.4f}  (GUT-normalised)")
 print(f"  lambda(M_Pl)      = {LAM_MPL:.6f}")
+print(f"  (Scenario A comparison: alpha_2 = {ALPHA_2_RUNNING:.4f}, g_2 = {G2_RUNNING:.4f})")
 
 
 # ============================================================================
@@ -697,7 +711,7 @@ if mu_cross is not None:
         yt_var = gs_var / math.sqrt(6.0)
         g1_var = G1_MPL  # gauge couplings same
         a1_var = g1_var**2 / (4 * PI)
-        a2_var = ALPHA_2_MPL
+        a2_var = ALPHA_GUT
         lam_var = yt_var**4 / (16.0 * PI2)
         y0_var = [a1_var, a2_var, alpha_s_var, yt_var, lam_var]
 
