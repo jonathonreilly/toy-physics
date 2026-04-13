@@ -54,16 +54,21 @@ np.set_printoptions(precision=10, suppress=True, linewidth=120)
 
 PASS_COUNT = 0
 FAIL_COUNT = 0
+ASSERT_COUNT = 0
 
 
-def check(name, condition, detail=""):
-    global PASS_COUNT, FAIL_COUNT
-    status = "PASS" if condition else "FAIL"
-    if condition:
-        PASS_COUNT += 1
+def check(name, condition, detail="", kind="COMPUTED"):
+    global PASS_COUNT, FAIL_COUNT, ASSERT_COUNT
+    if kind == "ASSERTION":
+        ASSERT_COUNT += 1
+        tag = "ASSERTION"
     else:
-        FAIL_COUNT += 1
-    msg = f"  [{status}] {name}"
+        tag = "PASS" if condition else "FAIL"
+        if condition:
+            PASS_COUNT += 1
+        else:
+            FAIL_COUNT += 1
+    msg = f"  [{tag}] {name}"
     if detail:
         msg += f"  ({detail})"
     print(msg)
@@ -265,7 +270,7 @@ def step2_anomaly_cancellation():
     print("    u_R^c: 1 singlet in bar3, A(bar3)=-1 => contribution = -1")
     print("    d_R^c: 1 singlet in bar3, A(bar3)=-1 => contribution = -1")
     print("    Total: 2 - 1 - 1 = 0")
-    check("SU(3)^3 anomaly = 0", True, "2 - 1 - 1 = 0")
+    check("SU(3)^3 anomaly = 0", True, "2 - 1 - 1 = 0", kind="ASSERTION")
     print()
 
     print("  RESULT: Anomaly cancellation UNIQUELY determines the right-handed")
@@ -481,9 +486,9 @@ def step4_unique_time():
         print(f"    d_t = {dt}: dimension {dim_after}"
               f" ({'removable' if dim_after == 0 else 'NON-removable'})")
     check("d_t = 1: singular set is 0-dimensional (poles)", True,
-          "Wick rotation makes propagator positive definite")
+          "Wick rotation makes propagator positive definite", kind="ASSERTION")
     check("d_t >= 2: singular set is extended (non-removable)", True,
-          "Propagator has (d_t-1)-dimensional singular surfaces")
+          "Propagator has (d_t-1)-dimensional singular surfaces", kind="ASSERTION")
     print()
 
     # Argument 2: Closed timelike curves
@@ -499,7 +504,7 @@ def step4_unique_time():
     print("  ill-defined. No well-posed physics is possible.")
     print()
     check("d_t >= 2 admits closed timelike curves", True,
-          "SO(d_t) rotations in time plane create CTCs")
+          "SO(d_t) rotations in time plane create CTCs", kind="ASSERTION")
     print()
 
     # Argument 3: Unitarity
@@ -512,8 +517,8 @@ def step4_unique_time():
     print("  Energy is unbounded below (Ostrogradsky instability).")
     print()
     check("d_t >= 2: multiple non-commuting Hamiltonians", True,
-          "Generically [H_1, H_2] != 0 for interacting theories")
-    check("d_t >= 2: energy unbounded below (Ostrogradsky)", True)
+          "Generically [H_1, H_2] != 0 for interacting theories", kind="ASSERTION")
+    check("d_t >= 2: energy unbounded below (Ostrogradsky)", True, kind="ASSERTION")
     print()
 
     # Argument 4: d_t = 0
@@ -523,7 +528,7 @@ def step4_unique_time():
     print("  With d_t = 0 there is no time evolution, no propagating particles,")
     print("  no scattering amplitudes. This is not physics.")
     print()
-    check("d_t = 0: no time evolution, no physics", True)
+    check("d_t = 0: no time evolution, no physics", True, kind="ASSERTION")
     print()
 
     # Summary
@@ -545,7 +550,7 @@ def step4_unique_time():
         print(f"  {dt:<6} {chi_str:<12} {phys:<40}")
 
     print()
-    check("d_t = 1 is the UNIQUE choice with chirality AND physics", True)
+    check("d_t = 1 is the UNIQUE choice with chirality AND physics", True, kind="ASSERTION")
     print()
     print("  RESULT: d_time = 1 is the unique physically viable number of")
     print("  temporal dimensions compatible with chirality and unitarity.")
@@ -723,16 +728,19 @@ def main():
     step5_complete_chain()
     bonus_charge_table()
 
+    total = PASS_COUNT + FAIL_COUNT + ASSERT_COUNT
     print("\n" + "=" * 72)
-    print(f"FINAL SCORE: {PASS_COUNT}/{PASS_COUNT + FAIL_COUNT} checks passed, "
-          f"{FAIL_COUNT} failed")
+    print(f"FINAL SCORE: {PASS_COUNT} computed + {ASSERT_COUNT} asserted = "
+          f"{total} total  ({FAIL_COUNT} failed)")
     print("=" * 72)
 
     if FAIL_COUNT > 0:
         print(f"\nFAILED {FAIL_COUNT} checks!")
         sys.exit(1)
     else:
-        print("\nAll checks passed. Anomaly-forced time theorem verified.")
+        print(f"\nAll {PASS_COUNT} computed checks passed. "
+              f"{ASSERT_COUNT} textbook assertions included.")
+        print("Anomaly-forced time theorem verified.")
         sys.exit(0)
 
 

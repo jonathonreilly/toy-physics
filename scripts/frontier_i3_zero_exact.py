@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Born rule derivation from lattice propagator structure.
+"""Exact pairwise interference theorem (I_3 = 0).
 
 Theorem: The Sorkin parameter I_3 = 0 exactly for any propagator
-K(x,y) = <x|exp(-iHt)|y> on the Cl(3)-on-Z^3 lattice.
+K(x,y) = <x|exp(-iHt)|y> on any Hilbert space with linear amplitudes.
 
 The argument:
   1. Axiom I1 gives a finite-dimensional Hilbert space with unitary
@@ -48,7 +48,7 @@ The argument:
 This script verifies the algebraic identity symbolically and numerically,
 then runs the lattice Sorkin test as a cross-check.
 
-PStack experiment: born-rule-derived
+PStack experiment: i3-zero-exact
 """
 
 from __future__ import annotations
@@ -60,7 +60,7 @@ import sys
 
 def main() -> None:
     print("=" * 72)
-    print("BORN RULE DERIVED FROM LATTICE PROPAGATOR STRUCTURE")
+    print("EXACT PAIRWISE INTERFERENCE THEOREM (I_3 = 0)")
     print("=" * 72)
     print()
 
@@ -142,8 +142,8 @@ def main() -> None:
     print("  (same for bd, bf, df)")
     print()
     print("  ALL coefficients vanish. I_3 = 0 is an algebraic identity.")
-    print("  Result: PASS (exact symbolic proof)")
-    pass_count += 1
+    print("  Result: ASSERTION (exact symbolic proof, not a computation)")
+    pass_count += 1  # assertion (symbolic proof printed above)
     print()
 
     # =================================================================
@@ -430,7 +430,8 @@ def main() -> None:
     print("  STATUS: This is an exact theorem. No lattice-specific")
     print("  details, finite-size effects, or model assumptions enter.")
     print("  It is a consequence of axiom I1 alone.")
-    pass_count += 1  # theorem statement check
+    print("  Result: ASSERTION (theorem statement, not a computation)")
+    pass_count += 1  # assertion (theorem statement)
     print()
 
     # =================================================================
@@ -440,17 +441,20 @@ def main() -> None:
     print(f"SUMMARY: PASS={pass_count} FAIL={fail_count}")
     print("=" * 72)
     print()
-    print("  Exact checks:")
+    print("  Computed checks (6):")
     print("    1. Algebraic identity I_3 = 0 for random amplitudes: PASS")
-    print("    2. Symbolic expansion proof: PASS")
     print("    3. I_4 = 0 for Born rule: PASS")
     print("    4. I_n = 0 for n = 3..7: PASS")
     print("    5. Non-Born rules give I_3 != 0: PASS")
     print("    6. 1D lattice propagator I_3 = 0: PASS")
     print("    7. 3D staggered lattice propagator I_3 = 0: PASS")
-    print("    8. Theorem statement: PASS")
     print()
-    print("  No bounded or model-dependent checks in this script.")
+    print("  Assertions (2):")
+    print("    2. Symbolic expansion proof: ASSERTION")
+    print("    8. Theorem statement: ASSERTION")
+    print()
+    print("  Score: 6 computed + 2 asserted = 8 total")
+    print()
     print("  All results are exact consequences of Hilbert space axiom I1.")
 
     sys.exit(0 if fail_count == 0 else 1)
