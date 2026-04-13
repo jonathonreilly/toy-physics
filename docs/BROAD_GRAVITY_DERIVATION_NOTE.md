@@ -440,6 +440,45 @@ bending with it. The continuum-limit condition is standard but real.
 
 ---
 
+## Script Check Classification
+
+The runner `scripts/frontier_broad_gravity.py` cleanly separates two tiers
+of checks. This distinction matters because the finite-lattice numerics
+are boundary-biased and must not be conflated with theorem-grade results.
+
+### TIER 1: EXACT (from retained Poisson/Newton chain)
+
+These checks verify algebraic identities and definitions that hold for
+**any** lattice size and **any** boundary conditions. They have no
+finite-size bias.
+
+| Check | Why EXACT |
+|-------|----------|
+| KS construction: H symmetric, PSD, degree structure | Algebraic identity of graph Laplacian |
+| Self-consistency: H * G_0 = projector, G_0 inverts H | Linear algebra identity; holds for any N |
+| WEP: deflection/k is k-independent | Algebraic: k factors out of delta S = 0 |
+| WEP: k-independent for random field (control) | Same algebraic cancellation, any field |
+| Time dilation: phase identity (1-phi)/(1-phi) = 1 | Tautological for S = kL(1-phi) |
+| Action: Tr(H+phi) - Tr(H) = Tr(phi) | Linearity of trace |
+
+### TIER 2: BOUNDED (finite-lattice confirmation)
+
+These checks compare finite-lattice numerical values to continuum
+predictions. They are subject to Dirichlet BC bias and finite-size
+effects. They **confirm** the theorems but are **not** the theorems.
+
+| Check | Why BOUNDED |
+|-------|------------|
+| Green's function: 1/r scaling (N=41) | Dirichlet BC bias at boundary |
+| Time dilation: phi matches 1/r profile (N=31) | Dirichlet BC bias visible at small/large r |
+| Geodesic: Newtonian-limit acceleration (N=31) | Finite lattice + continuum limit required |
+| Geodesic: 1/b deflection scaling (N=31) | Finite-lattice fit, boundary-biased |
+| Conformal metric: action isotropy (N=31) | Lattice artifacts, size-dependent |
+| Conformal metric: g_ij identification | Continuum limit required |
+| Light bending: factor of 2 (N=31) | Finite lattice + conformal metric conditional |
+
+---
+
 ## What Is Actually Proved
 
 **Promotable to derived (2 signatures):**
