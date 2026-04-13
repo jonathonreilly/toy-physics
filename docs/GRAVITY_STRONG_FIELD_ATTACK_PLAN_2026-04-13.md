@@ -61,6 +61,19 @@ New bounded bridge sharpened after that:
   has not yet been derived from the lattice closure rather than imported as
   the correct exterior target
 
+New exact/bounded split extracted after that:
+
+- the exact source-model foothold now extends further to a finite-rank
+  positive-semidefinite support operator, not just a diagonal support source
+- see `docs/FINITE_RANK_GRAVITY_RESIDUAL_NOTE.md`
+- the direct common-source 4D metric candidate built from that exact field has
+  a nonzero vacuum Einstein residual outside the source
+- the monopole-projected isotropic candidate built from the same exact field
+  reduces that residual by roughly `6.5e2`
+- this pinpoints the remaining gap:
+  the theorem-grade reduction from the exact finite-rank harmonic exterior
+  field to the isotropic-vacuum surface
+
 ## Do not retread these solved or near-solved substeps
 
 The attack should **not** spend time redoing the following:
@@ -152,6 +165,8 @@ Current status update:
 - the rank-one local-source version of that enhancement law is now exact
 - the same exact closure now extends to a finite-support diagonal attractive
   source class
+- the same exact closure now extends again to a finite-rank correlated support
+  operator
 - the remaining issue is upgrading that exact source class to the actual
   physical matter source / strong-field Hamiltonian
 
@@ -179,6 +194,9 @@ Current bridge result:
 - the finite-support source theorem now provides one exact exterior harmonic
   object that both sectors can share, but the reduction to the static isotropic
   vacuum bridge is still a bounded step
+- the new finite-rank residual test sharpens that further:
+  the direct common-source candidate is not yet vacuum-closed, while the
+  monopole/isotropic projection of the same exact field is nearly vacuum
 
 Required outcome:
 
