@@ -55,6 +55,7 @@ Keep it in the repo if useful, but do not cite it in the paper path.
 | Graph-first structural `SU(3)` | promoted | main text | [GRAPH_FIRST_SU3_INTEGRATION_NOTE.md](../../GRAPH_FIRST_SU3_INTEGRATION_NOTE.md) | `frontier_graph_first_su3_integration.py` |
 | Left-handed `+1/3` / `-1` charge matching | promoted corollary | main text or SI corollary | [GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md](../../GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md) | `frontier_graph_first_su3_integration.py` |
 | Anomaly-forced `3+1` closure | promoted | main text | [ANOMALY_FORCES_TIME_THEOREM.md](../../ANOMALY_FORCES_TIME_THEOREM.md) | `frontier_anomaly_forces_time.py` |
+| `S^3` compactification / topology closure | promoted | main text or SI theorem box | `youthful-neumann: docs/S3_GENERAL_R_DERIVATION_NOTE.md`, `youthful-neumann: docs/S3_CAP_UNIQUENESS_NOTE.md` | `frontier_s3_boundary_link_theorem.py`, `frontier_s3_cap_uniqueness.py`, `frontier_s3_general_r.py` |
 | Full-framework one-generation matter closure | promoted | main text | [GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md](../../GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md) | `frontier_right_handed_sector.py` |
 | Three-generation matter structure in the framework | promoted | main text | [GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md](../../GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md) | `frontier_generation_fermi_point.py`, `frontier_generation_rooting_undefined.py`, `frontier_generation_axiom_boundary.py` |
 | Exact `I_3 = 0` / no third-order interference | promoted exact companion | main text or Extended Data | [I3_ZERO_EXACT_THEOREM_NOTE.md](../../I3_ZERO_EXACT_THEOREM_NOTE.md) | `frontier_born_rule_derived.py` |
@@ -64,7 +65,6 @@ Keep it in the repo if useful, but do not cite it in the paper path.
 
 | Claim family | Status | Why not promoted yet | Authority |
 |---|---|---|---|
-| `S^3` compactification / topology closure | bounded/open | cap-map and cap-link work materially improve the lane, but the full topology closure still does not clear the paper bar | bounded `S3_*` notes on `review-active` and `youthful-neumann` |
 | DM relic mapping | bounded/open | direct lattice enhancement is real; Stosszahlansatz / Boltzmann / Friedmann / relic bridge remain bounded at the paper bar | bounded `DM_*` notes on `review-active` and `youthful-neumann` |
 | Renormalized `y_t` matching | bounded/open | UV theorem surface is strong; low-energy running / `alpha_s(M_Pl)` / matching still depend on bounded bridge structure | bounded `YT_*` notes on `review-active` and `youthful-neumann` |
 | CKM / quantitative flavor closure | bounded/open | overnight NNI / coefficient work improves the fit, but Higgs `Z_3` universality and ab initio coefficient closure still do not clear the bar | bounded `CKM_*` notes on `review-active` and `youthful-neumann` |
@@ -79,7 +79,7 @@ explicit paper decision even if the answer is “bounded only.”
 | Residual weak-field GR-signature bundle (conformal metric, geodesic, light bending) | keep as bounded support, not retained backbone | the action-level chain is stronger now, but these steps still consume continuum / null-identification structure beyond the retained weak-field corollaries | [BROAD_GRAVITY_DERIVATION_NOTE.md](../../BROAD_GRAVITY_DERIVATION_NOTE.md), [EMERGENT_GR_SIGNATURES_NOTE.md](../../EMERGENT_GR_SIGNATURES_NOTE.md), [GEODESIC_EQUATION_NOTE.md](../../GEODESIC_EQUATION_NOTE.md) |
 | Strong-field GR extension | bounded only | useful extension path, not a paper-safe closure surface | [STRONG_FIELD_EXTENSION_NOTE.md](../../STRONG_FIELD_EXTENSION_NOTE.md) |
 | Gauge-coupling normalization (`g_bare`, `g_2`, `U(1)`) | bounded only | several notes exist, but the normalization vulnerability is still real | [G_BARE_DERIVATION_NOTE.md](../../G_BARE_DERIVATION_NOTE.md), [G2_EQUAL_PARTITION_BOUNDED_NOTE.md](../../G2_EQUAL_PARTITION_BOUNDED_NOTE.md) |
-| Cosmology companions (`w=-1`, graviton mass, `Omega_Lambda`, `n_s`) | bounded / conditional companion only | good signals, but they sit on bounded topology / imported cosmology inputs | [W_MINUS_ONE_NOTE.md](/Users/jonreilly/Projects/Physics/.claude/worktrees/youthful-neumann/docs/W_MINUS_ONE_NOTE.md), [GRAVITON_MASS_DERIVED_NOTE.md](../../GRAVITON_MASS_DERIVED_NOTE.md), [OMEGA_LAMBDA_DERIVATION_NOTE.md](../../OMEGA_LAMBDA_DERIVATION_NOTE.md) |
+| Cosmology companions (`w=-1`, graviton mass, `Omega_Lambda`, `n_s`) | bounded / conditional companion only | good signals, but they still sit on imported cosmology inputs or additional matching structure beyond the retained topology result | [W_MINUS_ONE_NOTE.md](/Users/jonreilly/Projects/Physics/.claude/worktrees/youthful-neumann/docs/W_MINUS_ONE_NOTE.md), [GRAVITON_MASS_DERIVED_NOTE.md](../../GRAVITON_MASS_DERIVED_NOTE.md), [OMEGA_LAMBDA_DERIVATION_NOTE.md](../../OMEGA_LAMBDA_DERIVATION_NOTE.md) |
 | Newton / gravity title claim in the letter | promote weak-field only | the paper had drifted into omitting gravity entirely; the audit says weak-field Newton/Poisson belongs back, while the broader GR claim must stay narrower | authority docs above |
 | Higgs / Coleman-Weinberg mass lane | bounded companion only | the structural Higgs mechanism and hierarchy result are real, but `m_H = 125 GeV` still needs bounded SM/Yukawa input | `claude/youthful-neumann: docs/HIGGS_MASS_DERIVED_NOTE.md`, `scripts/frontier_higgs_mass_derived.py` |
 | Proton lifetime prediction | bounded companion only | sharp falsifiable prediction, but it still depends on imported EFT decay-rate machinery and unified-coupling input | `claude/youthful-neumann: docs/PROTON_LIFETIME_DERIVED_NOTE.md`, `scripts/frontier_proton_lifetime_derived.py` |
@@ -109,9 +109,10 @@ These files should not drive publication claims unless they are rewritten.
 | File family | Status | Why unsafe |
 |---|---|---|
 | stale review packets / publication cards that overclaim closed gates | stale / not-for-paper | they repeatedly outran the audited state |
-| older full-closure notes for DM, `y_t`, `S^3`, CKM, or gauge couplings | stale / not-for-paper | these often converted bounded sub-results into full-closure prose |
+| older bounded-only `S^3` audit notes before the general-`R` / cap-uniqueness harmonization | stale / historical authority only | they document the earlier narrower bar, but no longer define the publication state |
+| older full-closure notes for DM, `y_t`, CKM, or gauge couplings | stale / not-for-paper | these often converted bounded sub-results into full-closure prose |
 | misnamed “Born rule derived” notes | stale until renamed / narrowed | the safe claim is exact `I_3 = 0`, not a standalone Born-rule derivation |
-| overnight summary / scorecard / unified-closure docs that mark `S^3`, DM, or `y_t` as closed | stale / not-for-paper | the overnight audit did not promote any of the four live gates, so these summary docs are not authority by themselves |
+| overnight summary / scorecard / unified-closure docs that mark DM or `y_t` as closed | stale / not-for-paper | those lanes remain bounded, so these summary docs are not authority by themselves |
 
 ## 6. Ledger rule for manuscript work
 

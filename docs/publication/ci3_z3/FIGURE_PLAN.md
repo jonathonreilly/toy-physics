@@ -60,30 +60,36 @@ Companion captions live in [FIGURE_CAPTIONS.md](./FIGURE_CAPTIONS.md).
   - [frontier_cpt_exact.py](/private/tmp/physics-publication-prep/scripts/frontier_cpt_exact.py)
 - status: optional depending on venue length
 
+### Extended Data candidate. Retained `S^3` compactification / topology closure
+
+- purpose: show the cone-cap family, boundary-link structure, and the retained
+  topology closure without bloating the main text
+- source notes:
+  - [S3_GENERAL_R_DERIVATION_NOTE.md](../../S3_GENERAL_R_DERIVATION_NOTE.md)
+  - [S3_CAP_UNIQUENESS_NOTE.md](../../S3_CAP_UNIQUENESS_NOTE.md)
+- source runners:
+  - [frontier_s3_boundary_link_theorem.py](/private/tmp/physics-publication-prep/scripts/frontier_s3_boundary_link_theorem.py)
+  - [frontier_s3_cap_uniqueness.py](/private/tmp/physics-publication-prep/scripts/frontier_s3_cap_uniqueness.py)
+  - [frontier_s3_general_r.py](/private/tmp/physics-publication-prep/scripts/frontier_s3_general_r.py)
+- status: optional depending on venue length
+
 ## arXiv-only companion figures
 
-### Figure A1. Bounded topology lane
-
-- purpose: show the cap-map / cone-cap construction and clearly label the lane as bounded
-- source notes:
-  - `review-active` bounded `S^3` notes
-- status: wait until the topology lane stabilizes
-
-### Figure A2. Bounded DM lane
+### Figure A1. Bounded DM lane
 
 - purpose: show what is exact, derived, and bounded in the DM relic chain
 - source notes:
   - `review-active` bounded DM notes
 - status: wait until DM language stabilizes
 
-### Figure A3. Bounded renormalized `y_t` lane
+### Figure A2. Bounded renormalized `y_t` lane
 
 - purpose: show exact UV theorem versus bounded low-energy bridge
 - source notes:
   - `review-active` bounded `y_t` notes
 - status: wait until `y_t` language stabilizes
 
-### Figure A4. Bounded CKM lane
+### Figure A3. Bounded CKM lane
 
 - purpose: show route-pruning and the remaining Higgs `Z_3` obstruction
 - source notes:

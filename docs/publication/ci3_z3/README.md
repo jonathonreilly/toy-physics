@@ -42,6 +42,7 @@ Retained backbone:
 - exact native `Cl(3)` / `SU(2)`
 - graph-first structural `SU(3)`
 - anomaly-forced `3+1`
+- retained `S^3` compactification / topology closure
 - full-framework one-generation closure
 - three-generation matter structure in the framework
 - exact `I_3 = 0` theorem on the Hilbert surface
@@ -49,10 +50,9 @@ Retained backbone:
 
 Live high-impact gates:
 
-1. `S^3` compactification / topology closure
-2. DM relic mapping
-3. renormalized `y_t` matching
-4. CKM / quantitative flavor closure
+1. DM relic mapping
+2. renormalized `y_t` matching
+3. CKM / quantitative flavor closure
 
 ## Publication rule
 
@@ -70,7 +70,7 @@ That contract lives in
 
 ## Immediate editorial objective
 
-Before the four live gates close, the repo should already be ready to publish:
+Before the three live gates close, the repo should already be ready to publish:
 
 - one canonical claim ledger
 - one derivation / validation map

@@ -16,6 +16,7 @@ validation map says how each claim is evidenced and released.
 | graph-first structural `SU(3)` closure | retained | main text | [GRAPH_FIRST_SU3_INTEGRATION_NOTE.md](../../GRAPH_FIRST_SU3_INTEGRATION_NOTE.md) | [frontier_graph_first_su3_integration.py](../../../scripts/frontier_graph_first_su3_integration.py) |
 | left-handed `+1/3` / `-1` charge matching on the selected-axis surface | retained corollary | main text or SI corollary | [GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md](../../GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md) | [frontier_graph_first_su3_integration.py](../../../scripts/frontier_graph_first_su3_integration.py) |
 | anomaly-forced `3+1` closure | retained | main text | [ANOMALY_FORCES_TIME_THEOREM.md](../../ANOMALY_FORCES_TIME_THEOREM.md) | [frontier_anomaly_forces_time.py](../../../scripts/frontier_anomaly_forces_time.py) |
+| retained `S^3` compactification / topology closure | retained | main text or SI theorem box | [/Users/jonreilly/Projects/Physics/.claude/worktrees/youthful-neumann/docs/S3_GENERAL_R_DERIVATION_NOTE.md](/Users/jonreilly/Projects/Physics/.claude/worktrees/youthful-neumann/docs/S3_GENERAL_R_DERIVATION_NOTE.md), [/Users/jonreilly/Projects/Physics/.claude/worktrees/youthful-neumann/docs/S3_CAP_UNIQUENESS_NOTE.md](/Users/jonreilly/Projects/Physics/.claude/worktrees/youthful-neumann/docs/S3_CAP_UNIQUENESS_NOTE.md) | [frontier_s3_boundary_link_theorem.py](../../../scripts/frontier_s3_boundary_link_theorem.py), [frontier_s3_cap_uniqueness.py](../../../scripts/frontier_s3_cap_uniqueness.py), [frontier_s3_general_r.py](../../../scripts/frontier_s3_general_r.py) |
 | full-framework one-generation matter closure | retained | main text | [GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md](../../GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md) | [frontier_right_handed_sector.py](../../../scripts/frontier_right_handed_sector.py) |
 | three-generation matter structure in the framework | retained | main text | [GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md](../../GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md) | [frontier_generation_fermi_point.py](../../../scripts/frontier_generation_fermi_point.py), [frontier_generation_rooting_undefined.py](../../../scripts/frontier_generation_rooting_undefined.py), [frontier_generation_axiom_boundary.py](../../../scripts/frontier_generation_axiom_boundary.py) |
 | exact `I_3 = 0` / no third-order interference on the Hilbert surface | retained exact companion | main text or Extended Data | [I3_ZERO_EXACT_THEOREM_NOTE.md](../../I3_ZERO_EXACT_THEOREM_NOTE.md) | [frontier_born_rule_derived.py](../../../scripts/frontier_born_rule_derived.py) |
@@ -31,7 +32,6 @@ cleanly or closed.
 | Claim | Status | Placement | Authority |
 |---|---|---|---|
 | weak-field GR-signature companions beyond Newton/Poisson/WEP/time-dilation | bounded | arXiv / SI only | `review-active` bounded gravity notes |
-| `S^3` cap-map / topology attack surface | bounded | arXiv / SI only | `review-active` bounded topology notes |
 | direct lattice DM contact enhancement and bounded relic chain | bounded | arXiv / SI only | `review-active` bounded DM notes |
 | renormalized `y_t` bridge | bounded | arXiv / SI only | `review-active` bounded `y_t` notes |
 | CKM / Higgs `Z_3` route | bounded | arXiv / SI only | `review-active` bounded CKM notes |
@@ -46,10 +46,9 @@ cleanly or closed.
 
 ## Open paper gates
 
-1. `S^3` compactification / topology closure
-2. DM relic mapping
-3. renormalized `y_t` matching
-4. CKM / quantitative flavor closure
+1. DM relic mapping
+2. renormalized `y_t` matching
+3. CKM / quantitative flavor closure
 
 ## Packaging rule
 

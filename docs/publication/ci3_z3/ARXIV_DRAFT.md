@@ -7,13 +7,13 @@ framework. The main claim is not that every phenomenological lane is already
 closed, but that a broad structural backbone now survives direct audit on one
 discrete theory: weak-field gravity through the Poisson/Newton chain, exact
 native `SU(2)`, graph-first structural `SU(3)`, anomaly-forced `3+1`, a
-full-framework one-generation Standard Model closure, and a retained
-three-generation matter structure. We also retain exact supporting theorems for
-vanishing third-order interference (`I_3 = 0`) on the Hilbert surface and exact
-CPT on the free staggered lattice. We separate this retained backbone from
-bounded phenomenology and from four still-live bridge problems: `S^3`
-compactification, dark-matter relic mapping, renormalized top-Yukawa matching,
-and quantitative flavor closure.
+retained `S^3` compactification / topology closure, a full-framework
+one-generation Standard Model closure, and a retained three-generation matter
+structure. We also retain exact supporting theorems for vanishing
+third-order interference (`I_3 = 0`) on the Hilbert surface and exact CPT on
+the free staggered lattice. We separate this retained backbone from bounded
+phenomenology and from three still-live bridge problems: dark-matter relic
+mapping, renormalized top-Yukawa matching, and quantitative flavor closure.
 
 ## 1. Introduction
 
@@ -89,6 +89,15 @@ triplet sectors are retained as physical species structure within the theory.
 What remains bounded is detailed hierarchy and quantitative flavor data, not the
 existence of three species itself.
 
+### 2.7 Retained `S^3` compactification / topology closure
+
+The current topology result is no longer a tentative appendix claim. On the
+accepted paper bar, the cone-cap family closes the compactification/classification
+route strongly enough to retain `PL S^3` as part of the framework surface. The
+key point for the manuscript is that `S^3` itself is no longer one of the live
+flagship gates. What remains bounded are downstream cosmology companions that
+consume the retained topology result, not the topology claim itself.
+
 ## 3. Exact Supporting Theorems
 
 ### 3.1 Exact `I_3 = 0`
@@ -114,13 +123,13 @@ Poisson/Newton surface. Conformal-metric, geodesic, and light-bending notes
 are still important, but they remain bounded companions rather than part of the
 paper-safe retained backbone.
 
-### 4.1 `S^3` topology / compactification
+### 4.1 Residual topology companions after retained `S^3` closure
 
-The topology lane is materially stronger than it was earlier in the review
-cycle. Cap-map and cap-link attacks narrow the gap, direct homology on the
-cone-capped complex is now computed, and the note surface is cleaner. The safe
-reading remains bounded: `S^3` is not yet fully forced from first principles at
-the paper bar.
+Retaining `S^3` does not automatically retain every topology-driven cosmology
+corollary. Spectral, cosmological-constant, and other downstream companions
+should still be treated claim-by-claim. The correct arXiv posture is therefore
+to carry `S^3` itself as retained while keeping its dependent cosmology chains
+honestly bounded unless their own bridge steps are closed.
 
 ### 4.2 Dark-matter relic mapping
 
@@ -200,6 +209,7 @@ one-generation Standard Model closure, and a retained three-generation matter
 structure. Exact `I_3 = 0` and exact CPT strengthen the same framework
 surface.
 
-The remaining bridge problems are explicit. They should stay explicit. That is
-the correct arXiv posture and the strongest way to make the retained theorem
-surface legible to hostile readers.
+The remaining bridge problems are explicit: dark-matter relic mapping,
+renormalized `y_t`, and quantitative flavor closure. They should stay explicit.
+That is the correct arXiv posture and the strongest way to make the retained
+theorem surface legible to hostile readers.

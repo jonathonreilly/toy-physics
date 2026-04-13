@@ -28,11 +28,12 @@ organized around the current `Cl(3)` on `Z^3` publication package.
 
 - **Framework statement:** `Cl(3)` on `Z^3` is the physical theory
 - **Retained paper core:** exact native `SU(2)`, graph-first structural
-  `SU(3)`, weak-field gravity from the Poisson / Newton chain,
-  anomaly-forced `3+1`, full-framework one-generation closure, and
-  three-generation matter structure
-- **Four live paper gates:** `S^3`, DM relic mapping, renormalized `y_t`, and
-  CKM / flavor closure
+  `SU(3)`, weak-field gravity from the Poisson / Newton chain together with
+  weak-field WEP and time dilation, anomaly-forced `3+1`, retained `S^3`
+  compactification / topology closure, full-framework one-generation closure,
+  and three-generation matter structure
+- **Three live paper gates:** DM relic mapping, renormalized `y_t`, and CKM /
+  flavor closure
 
 The older mirror, ordered-lattice, action-power, and coin-walk programs are
 still in the repo. They are indexed as historical or bounded lanes, not

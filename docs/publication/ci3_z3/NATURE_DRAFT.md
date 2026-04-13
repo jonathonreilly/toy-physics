@@ -9,13 +9,14 @@ weak-field gravity chain through Poisson self-consistency and the lattice
 Green's function on `Z^3`, exact native `SU(2)` through the Clifford bivectors,
 graph-first structural `SU(3)` through a selector on the canonical cube-shift
 graph, anomaly-forced `3+1` closure on a single-clock codimension-1 surface, a
-full-framework one-generation Standard Model closure, and a retained
-three-generation matter structure through the exact orbit algebra
-`8 = 1 + 1 + 3 + 3`. We also retain exact companion theorems for vanishing
+retained `S^3` compactification / topology closure, a full-framework
+one-generation Standard Model closure, and a retained three-generation matter
+structure through the exact orbit algebra `8 = 1 + 1 + 3 + 3`. We also retain
+exact companion theorems for vanishing
 third-order interference (`I_3 = 0`) on the Hilbert surface and exact CPT on
 the free staggered lattice. The remaining attack surface is explicit and
-narrower: topology / `S^3` compactification, dark-matter relic mapping,
-renormalized top-Yukawa matching, and quantitative flavor closure.
+narrower: dark-matter relic mapping, renormalized top-Yukawa matching, and
+quantitative flavor closure.
 
 ## Main Text
 
@@ -65,6 +66,13 @@ chirality is available and anomaly cancellation fixes the right-handed singlet
 completion on the Standard Model branch. This closes one full generation at the
 framework level.
 
+The retained topology statement now sits on the same audited surface. For the
+cone-cap family, the boundary-link and cap-uniqueness route closes the
+compactification/classification chain on the accepted paper bar, so the capped
+complex is retained as `PL S^3`. That result narrows the topology discussion in
+this version: the paper no longer treats `S^3` itself as a live gate, only the
+downstream cosmology bridges that consume it.
+
 The three-generation step sits on the exact orbit algebra `8 = 1 + 1 + 3 + 3`.
 Because the lattice is treated as physical rather than as a regulator, the old
 escape route in which the triplet sectors are dismissed as disposable taste
@@ -81,33 +89,33 @@ on the free staggered `Cl(3)` lattice. These exact companions matter because
 they live on the same audited discrete structure rather than entering as
 separate continuum postulates.
 
-The remaining bridge problems should be stated directly. The topology lane has
-improved materially, but `S^3` compactification is still not at the paper bar.
-The dark-matter lane now has a real lattice contact-enhancement story, but the
-full relic mapping is still bounded by coarse-graining and cosmology inputs.
+The remaining bridge problems should be stated directly. The dark-matter lane
+now has a real lattice contact-enhancement story, but the full relic mapping is
+still bounded by coarse-graining, normalization, and cosmology inputs.
 The renormalized `y_t` lane has a strong UV theorem surface and exact `Cl(3)`
 preservation under block-spin RG, but its low-energy bridge remains bounded.
-Quantitative flavor closure is also still open. These four problems define the
+Quantitative flavor closure is also still open. These three problems define the
 difference between the present paper and a fully closed unification claim.
 
 The claim surface is therefore disciplined and unusually strong. On the
 retained cubic graph, `Cl(3)` yields weak-field gravity through the
 Poisson/Newton chain together with weak-field WEP and time dilation,
-exact `SU(2)`, graph-first structural `SU(3)`, anomaly-forced `3+1`, a
-full-framework one-generation Standard Model closure, and a retained
-three-generation matter structure. Exact `I_3 = 0` and exact CPT provide
-additional consistency theorems on the same surface. The strongest objection
-is no longer that the framework lacks matter structure. It is that topology,
-relic mapping, renormalized matching, and quantitative flavor are not yet
-fully closed.
+exact `SU(2)`, graph-first structural `SU(3)`, anomaly-forced `3+1`, retained
+`S^3` compactification / topology closure, a full-framework one-generation
+Standard Model closure, and a retained three-generation matter structure.
+Exact `I_3 = 0` and exact CPT provide additional consistency theorems on the
+same surface. The strongest objection is no longer that the framework lacks
+matter structure or topology. It is that relic mapping, renormalized matching,
+and quantitative flavor are not yet fully closed.
 
 ## Figure Callouts
 
 - `Fig. 1`: framework derivation map from `Cl(3)` on `Z^3` to the retained backbone
-- `Fig. 2`: Poisson / Newton weak-field gravity chain on `Z^3`
-- `Fig. 3`: graph-first selector and structural `SU(3)` closure
-- `Fig. 4`: anomaly-forced `3+1` single-clock closure chain
-- `Fig. 5`: exact orbit algebra `8 = 1 + 1 + 3 + 3` and retained three-generation matter structure
+- `Fig. 2`: graph-first selector and structural `SU(3)` closure
+- `Fig. 3`: anomaly-forced `3+1` single-clock closure chain
+- `Fig. 4`: exact orbit algebra `8 = 1 + 1 + 3 + 3` and retained three-generation matter structure
+- `Extended Data Fig. 1`: weak-field gravity corollaries together with exact `I_3 = 0` and CPT
+- `Extended Data Fig. 2`: retained `S^3` compactification / topology closure
 
 ## Code Availability
 

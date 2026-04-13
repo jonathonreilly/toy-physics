@@ -14,16 +14,17 @@ submission without re-litigating claim status at the last minute.
 ## 2. Nature package
 
 - keep the main text on the retained backbone only
-- state the four live gates in one disciplined paragraph
+- state the three live gates in one disciplined paragraph
 - move exact `I_3 = 0` and CPT to compact support or Extended Data if space is tight
-- keep DM, `S^3`, renormalized `y_t`, and CKM out of the core claim stack
+- keep DM, renormalized `y_t`, and CKM out of the core claim stack
 - ensure title, abstract, and discussion do not say or imply “full closure”
 
 ## 3. arXiv package
 
 - use the same backbone as the letter
 - add derivation scaffolding and negative results
-- include bounded notes for the four live gates
+- include retained topology notes for `S^3`
+- include bounded notes for the three live gates
 - include exact supporting theorems and honest bounded companions
 - preserve route-pruning and obstruction notes that prevent overclaiming
 
@@ -51,9 +52,9 @@ submission without re-litigating claim status at the last minute.
 - record exact runner versions and expected pass summaries
 - regenerate manuscript figures from pinned data
 - proofread title, abstract, and conclusion against the claims table
-- confirm the four live gates are still described honestly if they remain open
+- confirm the three live gates are still described honestly if they remain open
 
-## 7. If the four gates close before submission
+## 7. If the three gates close before submission
 
 - update [CLAIMS_TABLE.md](./CLAIMS_TABLE.md)
 - update [NATURE_DRAFT.md](./NATURE_DRAFT.md) and [ARXIV_DRAFT.md](./ARXIV_DRAFT.md)

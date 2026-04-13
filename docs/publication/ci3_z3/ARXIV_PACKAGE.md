@@ -16,8 +16,8 @@ explicit status labels.
 - [Submission checklist](./SUBMISSION_CHECKLIST.md)
 - full outline / manuscript source
 - retained notes and runners
+- retained topology notes and runners for `S^3`
 - bounded-lane notes for:
-  - `S^3`
   - DM relic mapping
   - renormalized `y_t`
   - CKM

@@ -11,8 +11,9 @@ These are first-pass publication captions aligned to
 single discrete framework yields weak-field gravity through the
 Poisson/Newton chain together with weak-field WEP and time dilation, exact
 native `SU(2)`, graph-first structural `SU(3)`, anomaly-forced `3+1`, a
-full-framework one-generation closure, and a retained three-generation matter
-structure. The four remaining live bridges are shown separately as
+retained `S^3` compactification / topology closure, a full-framework
+one-generation closure, and a retained three-generation matter structure. The
+three remaining live bridges are shown separately as
 bounded/open lanes rather than folded into the main claim.
 
 ### Figure 2. Graph-first structural `SU(3)`
@@ -51,27 +52,27 @@ widening the main paper claim.
 
 ## arXiv companion figures
 
-### Figure A1. Bounded `S^3` lane
+### Extended Data Figure 2. Retained `S^3` compactification / topology closure
 
-Cone-cap and cap-link constructions materially narrow the topology attack
-surface, and direct homology on the capped complex matches the `S^3` pattern.
-The lane remains bounded because the final compactification / classification
-bridge is not yet promoted to a retained theorem.
+Cone-cap and cap-link constructions close the retained topology lane on the
+accepted paper bar. The figure should show the cone-cap family, the boundary-link
+structure, and the compactification/classification route that identifies the
+closed simply connected capped complex with `PL S^3`.
 
-### Figure A2. Bounded DM lane
+### Figure A1. Bounded DM lane
 
 The lattice contact-enhancement and relic-chain story is stronger than before,
 but the full relic mapping remains bounded. The figure should distinguish exact,
 derived, and bounded pieces of the chain rather than presenting the lane as
 closed.
 
-### Figure A3. Bounded renormalized `y_t`
+### Figure A2. Bounded renormalized `y_t`
 
 The UV algebraic theorem and `Cl(3)` preservation under block-spin RG are
 retained. The low-energy bridge remains bounded because the matching and
 continuum-running chain are not yet fully internal to the framework.
 
-### Figure A4. Bounded CKM lane
+### Figure A3. Bounded CKM lane
 
 Current flavor work supplies route-pruning, direct negative results, and bounded
 EWSB structure. The figure should make clear that the lane remains bounded and
