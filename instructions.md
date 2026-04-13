@@ -214,6 +214,7 @@ For each touched lane include:
 17. The newest honest bounded/negative additions you may reuse are:
     - `GENERATION_LITTLE_GROUPS_NOTE.md` / `frontier_generation_little_groups.py`
     - `GENERATION_ROOTING_UNDEFINED_NOTE.md` / `frontier_generation_rooting_undefined.py`
+    - `GENERATION_3FAILS_INVESTIGATION_NOTE.md` / `frontier_generation_3fails_investigation.py`
     - `RP3_VS_S3_NOTE.md` / `frontier_rp3_vs_s3.py`
     - `G_BARE_SELF_DUALITY_NOTE.md` / `frontier_g_bare_self_duality.py`
     - `GENERATION_PHYSICALITY_DEEP_ANALYSIS.md`
@@ -221,6 +222,11 @@ For each touched lane include:
     - `MASS_HIERARCHY_HONEST_ASSESSMENT_NOTE.md`
     - `REMAINING_CRITIQUE_TARGETS_2026-04-12.md`
     Treat them as obstruction or consistency notes, not gate-closure notes.
+
+18. `GENERATION_3FAILS_INVESTIGATION_NOTE.md` is acceptable as bounded support.
+    But the companion script must not say:
+    - `This is exactly the SM generation structure`
+    It is a bounded commutant-inequivalence result, not a closed generation theorem.
 
 ## Immediate tasking
 

@@ -209,6 +209,9 @@ fix them on the pushed Claude branch:
     does not by itself prove that the triplet orbits are physical generations.
 13. `RP3_VS_S3_NOTE.md` is a useful bounded consistency note, but it does not
     close the topology lane or justify saying `S^3` is fully derived.
+14. `frontier_generation_3fails_investigation.py` is useful bounded support,
+    but phrases like `this is exactly the SM generation structure` are still
+    too strong. Keep it as commutant-inequivalence support, not closure.
 
 No active structural `SU(3)` objection is live right now.
 
@@ -243,6 +246,7 @@ Additional honest bounded additions from the latest Claude batch:
 - `docs/GENERATION_LITTLE_GROUPS_NOTE.md`
 - `scripts/frontier_generation_little_groups.py`
 - `docs/GENERATION_ROOTING_UNDEFINED_NOTE.md`
+- `docs/GENERATION_3FAILS_INVESTIGATION_NOTE.md`
 - `docs/RP3_VS_S3_NOTE.md`
 - `docs/G_BARE_SELF_DUALITY_NOTE.md`
 - `docs/GENERATION_PHYSICALITY_DEEP_ANALYSIS.md`
@@ -261,6 +265,7 @@ These are useful as:
   thermodynamic-limit issue, without upgrading the full DM relic lane
 - a sharp negative result on the little-group route to generation physicality
 - a sharp rooting obstruction that still stops short of full generation closure
+- a bounded commutant-inequivalence result that strengthens the generation case
 - a bounded correction that removes the RP^3 false lead without closing `S^3`
 - an honest negative result that self-duality does not elevate `g_bare = 1`
 - a good map of the exact logical gap in generation physicality
