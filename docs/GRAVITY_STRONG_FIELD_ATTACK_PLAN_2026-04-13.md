@@ -239,6 +239,18 @@ New exact/bounded reduced-junction operator result extracted after that:
   and pushes the remaining gravity problem onto the lift from reduced
   shell/exterior data to the full nonlinear 4D closure
 
+New exact/bounded discrete shell-action result extracted after that:
+
+- the charge-normalized exact reduced junction vector now admits a discrete
+  quadratic shell action `J(z) = 1/2 ||z - v_red||^2` whose stationary point
+  is the exact reduced junction law
+- on the exact local `O_h` class, zero orbit spread on `3 < r <= 5` lifts that
+  reduced stationarity point to the exact pointwise shell law
+- see `docs/OH_DISCRETE_SHELL_ACTION_NOTE.md`
+- this removes the last "no variational interpretation" ambiguity, but it does
+  **not** yet derive the shell action itself from the microscopic lattice
+  Hamiltonian or a genuine simplicial Regge action
+
 New exact/bounded reduced shell-stress lift extracted after that:
 
 - on the outer half of the sewing band `4 < r <= 5`, the reduced outer-shell
@@ -334,6 +346,39 @@ New exact/bounded pointwise shell closure extracted after that:
 - this removes “local/angular shell freedom on the symmetric source class”
   from the live blocker list and leaves the final Einstein/Regge lift beyond
   the current bridge surface as the main remaining gravity target
+
+New exact/bounded perturbative junction-stability result extracted after that:
+
+- on the exact local `O_h` source class, the whole-shell bridge law is
+  pointwise exact on each orbit
+- on the broader exact finite-rank family, the non-`O_h` departure is a small
+  within-orbit perturbation rather than a new shell law:
+  - `u` and bridge-side `rho` spread below about `1.3905%`
+  - `k` spread below about `1.6747%`
+  - bridge-side `S` spread below about `2.6295%`
+- after subtracting the orbit-mean base law, the first-order Taylor correction
+  leaves only a second-order remainder:
+  - relative residual in `rho` about `2.18e-5`
+  - relative residual in `S` about `3.54e-5`
+- see `docs/PERTURBATIVE_JUNCTION_STABILITY_NOTE.md`
+- this means the broader finite-rank non-`O_h` family is a controlled
+  perturbation of the exact `O_h` junction law, not a separate closure
+  branch
+
+New exact/bounded projected-correction result extracted after that:
+
+- on the active sewing-band orbit quotient, the non-`O_h` correction is an
+  exact projected DtN / Schur-complement operator built directly from the
+  microscopic lattice solve
+- the projected operator has exact pairwise antisymmetry between
+  `(3,2,2) <-> (4,1,0)` and `(3,3,0) <-> (4,1,1)`, so the active correction
+  factors through the two pair channels
+- its leading output mode aligns with the universal active orbit pattern
+  already extracted from the exact local `O_h` and finite-rank families
+- see `docs/FINITE_RANK_DTN_CORRECTION_OPERATOR_NOTE.md`
+- this removes “the correction is only a post hoc fit” from the live blocker
+  list and narrows the remaining problem to the scalar amplitude on the active
+  pair quotient and its promotion to the full 4D closure
 
 ## Do not retread these solved or near-solved substeps
 
@@ -541,6 +586,9 @@ Required outcome:
   derive the universal shell kernel itself from the microscopic lattice
   dynamics and promote it to the shell stress / matching law of the nonlinear
   closure
+- and, before the full 4D lift, derive the perturbative correction operator
+  that controls the finite-rank non-`O_h` junction deviation with a bounded
+  `O(\epsilon^2)` remainder
 
 ### Attack 3: only after metric closure, revisit horizon / echo claims
 
