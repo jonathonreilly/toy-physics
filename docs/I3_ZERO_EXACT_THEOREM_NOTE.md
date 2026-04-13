@@ -1,16 +1,22 @@
-# Born Rule Derived from Lattice Propagator Structure
+# I_3 = 0 Exact Theorem (No Third-Order Interference)
 
 **Date:** 2026-04-12
 **Branch:** `claude/youthful-neumann`
 **Script:** `scripts/frontier_born_rule_derived.py`
 
+**Note:** This file was previously named `BORN_RULE_DERIVED_NOTE.md`. Per
+Codex finding 21, the retained exact result is I_3 = 0 given linear
+amplitudes and P = |A|^2. The note does NOT derive P = |A|^2 (the Born rule)
+from I1 alone. The title has been corrected accordingly.
+
 ---
 
 ## Status
 
-**Exact theorem.** The Born rule (I_3 = 0, no third-order interference)
-is an algebraic identity that follows from axiom I1 (finite tensor product
-Hilbert space) alone. No lattice-specific details enter.
+**Exact theorem.** I_3 = 0 (no third-order interference) is an algebraic
+identity that follows from linear amplitude composition and P = |A|^2.
+No lattice-specific details enter. This does NOT derive the Born rule itself;
+it assumes P = |A|^2 and proves the Sorkin parameter vanishes.
 
 ---
 
@@ -89,11 +95,11 @@ I_3 = 0 and linear amplitude composition.
 Nothing remains open for this specific result. I_3 = 0 is a closed
 algebraic identity.
 
-The deeper question -- WHY does the framework use a Hilbert space
-(axiom I1) in the first place -- is not addressed here. That is the
-foundational ontological commitment of the framework. This note shows
-that once I1 is accepted, the Born rule and pairwise interference
-structure are automatic consequences.
+The deeper question -- WHY does the framework use P = |A|^2 -- is not
+addressed here. That is the foundational ontological commitment (axiom I1
+gives a Hilbert space; the unique unitary-invariant probability measure is
+|A|^2). This note shows that once P = |A|^2 and linear amplitudes are
+accepted, zero third-order interference is an automatic consequence.
 
 ---
 
@@ -101,20 +107,19 @@ structure are automatic consequences.
 
 This result belongs in the framework foundations section. It establishes:
 
-1. The Born rule is not an additional axiom. It is derived from I1.
-2. The absence of third-order interference (Sorkin I_3 = 0) is an
-   exact consequence.
-3. This matches the known result that quantum mechanics is the unique
-   theory with pairwise interference and linear amplitude composition
-   (Sorkin 1994, Ududec/Barnum/Emerson 2011).
+1. Given linear amplitude composition and P = |A|^2, the Sorkin parameter
+   I_3 vanishes identically. All multi-path interference is pairwise.
+2. The converse also holds: P = |A|^2 is the unique probability rule
+   compatible with I_3 = 0 and linear amplitudes.
+3. This does NOT derive P = |A|^2 from I1 alone. The Born rule is an
+   assumption (via the Hilbert space axiom), not a derived consequence.
 
 **Paper-safe wording:**
 
-> The Born rule P = |psi|^2 follows from the Hilbert space axiom (I1).
-> The Sorkin parameter I_3 vanishes identically for any complex
-> amplitudes satisfying linear composition, confirming that all
-> multi-path interference is pairwise. This is an algebraic identity
-> independent of the lattice structure.
+> Given the Hilbert-space axiom (I1) and the resulting Born rule P = |A|^2,
+> the Sorkin parameter I_3 vanishes identically for any complex amplitudes
+> satisfying linear composition. All multi-path interference is pairwise.
+> This is an algebraic identity independent of the lattice structure.
 
 ---
 
