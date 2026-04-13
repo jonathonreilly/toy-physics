@@ -185,8 +185,37 @@ fix them on the pushed Claude branch:
 1. Generation cascade still over-closes the matter gate.
 2. Generation cascade note still claims gate closure beyond the audited surface.
 3. CKM remains bounded until the Higgs `Z_3` charge is `L`-independent.
+4. `CODEX_REVIEW_PACKET_2026-04-12.md` currently overstates multiple lane
+   statuses relative to the underlying notes and runner outputs.
+5. `GENERATION_GAP_CLOSURE_NOTE.md` and
+   `frontier_generation_gap_closure.py` still overclaim taste-physicality and
+   hierarchy closure.
+6. `RENORMALIZED_YT_THEOREM_NOTE.md` still marks closed what its own runner
+   classifies as bounded.
+7. `PUBLICATION_CARD_FINAL_2026-04-12.md` still outruns the audited paper
+   state and is not a review-state authority document.
 
 No active structural `SU(3)` objection is live right now.
+
+## Honest new bounded additions on the Claude branch
+
+These are useful and directionally good:
+
+- `docs/CKM_HIGGS_Z3_UNIVERSAL_NOTE.md`
+- `scripts/frontier_ckm_higgs_z3_universal.py`
+- `docs/S3_DISCRETE_CONTINUUM_NOTE.md`
+- `scripts/frontier_s3_discrete_continuum.py`
+- `docs/SU3_CANONICAL_CLOSURE_NOTE.md`
+- `scripts/frontier_su3_canonical_closure.py`
+
+They should be treated as:
+
+- CKM obstruction / bounded blocker note
+- `S^3` V4 boundary note
+- `SU(3)` companion strengthening note
+
+They do **not** by themselves upgrade generation, `S^3`, or renormalized
+`y_t` to closed status.
 
 ## Best next work
 

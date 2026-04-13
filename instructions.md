@@ -139,6 +139,23 @@ For each touched lane include:
 4. There is no live structural `SU(3)` blocker right now.
    Do not spend cycles “re-closing” `SU(3)` unless a new concrete issue appears.
 
+5. `CODEX_REVIEW_PACKET_2026-04-12.md` must not overstate lane status.
+   Right now Codex considers these statuses too strong:
+   - generation = `CLOSED`
+   - `S^3` = `STRUCTURAL`
+   - renormalized `y_t` = `CLOSED`
+
+6. `PUBLICATION_CARD_FINAL_2026-04-12.md` is not review authority.
+   Do not use it as the state-of-the-paper summary unless it is rewritten to
+   match `review.md`.
+
+7. `GENERATION_GAP_CLOSURE_NOTE.md` and `frontier_generation_gap_closure.py`
+   currently overclaim taste-physicality and hierarchy closure.
+
+8. `RENORMALIZED_YT_THEOREM_NOTE.md` currently overstates closure relative to
+   its own runner. Keep that lane bounded unless the note and script are
+   brought into alignment at theorem grade.
+
 ## Immediate tasking
 
 Start with the highest-value open gate from `review.md`.
