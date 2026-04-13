@@ -49,6 +49,12 @@ If any of those fail, the lane stays `bounded` or `open`.
      - WEP / time dilation / conformal metric / geodesic / light bending
      - strong-field / frozen-star / echo package
    - do not spend time re-proving Newton unless needed for a new closure step
+   - the current load-bearing weak point is the Poisson-forcing step
+   - a finite-family sweep or mismatch residual is not enough to call Poisson
+     uniqueness “derived for all local operators”
+   - if you cannot prove the universal uniqueness theorem, keep Poisson as the
+     weakest bounded link and build the rest of the gravity bundle honestly on
+     top of that
 
 2. **`S^3` compactification / topology closure**
 
@@ -126,6 +132,14 @@ note/script pair exactly. If it overstates anything, it is not authority.
 1. Do not call `S^3`, DM relic mapping, renormalized `y_t`, CKM, or the broad
    gravity bundle `closed` unless the underlying runner and note support that
    status directly.
+
+1a. For gravity specifically:
+   - `time dilation` and eikonal `WEP` are not standalone closure wins; they
+     are built-in action identities once `S = L(1-f)` is accepted
+   - geodesic / conformal-metric / GW results must carry their continuum-limit,
+     WKB, or wave-equation-promotion assumptions explicitly
+   - strong-field / frozen-star / echo work is companion-level unless it
+     actually closes a sharp theorem surface
 
 2. Do not use “Born rule derived.”
    Safe statement:

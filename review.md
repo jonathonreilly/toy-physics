@@ -74,6 +74,28 @@ What does **not** count:
 - a blanket “gravity derived” statement that merges weak-field and strong-field
   claims without separating them
 
+Latest gravity-bundle review:
+
+- [GRAVITY_SUB_BUNDLE_NOTE.md](/Users/jonreilly/Projects/Physics/.claude/worktrees/youthful-neumann/docs/GRAVITY_SUB_BUNDLE_NOTE.md) is directionally good and is the right kind of tier-separation note.
+- It usefully distinguishes:
+  - retained Newton/Poisson core
+  - built-in action identities
+  - conditional continuum/eikonal claims
+  - strong-field companion work
+- But the load-bearing weak point remains the Poisson-forcing step.
+  - the note itself marks Poisson as `BOUNDED`
+  - the new runner still overstates that step as fully derived
+- Current Codex bar:
+  - Newton from Poisson is strong
+  - broad gravity is still not closed
+  - gravity promotion now depends mainly on whether Poisson uniqueness can be
+    raised from finite-family/numerical evidence to theorem-grade closure
+
+Paper-safe wording:
+
+> weak-field gravity core retained; broader GR-signature and strong-field
+> bundle still bounded.
+
 ### 2. `S^3` compactification / topology closure
 
 Current status:
@@ -200,6 +222,13 @@ These files are not reliable if they conflict with the audited state:
 - `docs/CODEX_REVIEW_PACKET_2026-04-12.md` if it re-promotes bounded lanes
 - any `*_FULL_CLOSURE_*` note for `S^3`, DM, `y_t`, or gauge couplings
 - any note that says “Born rule derived” instead of exact `I_3 = 0`
+- `scripts/frontier_gravity_poisson_derived.py` if it is used as proof that
+  Poisson uniqueness is theorem-grade without a universal uniqueness proof
+- `docs/GRAVITY_COMPLETE_CHAIN.md` if it is used to flatten the bounded
+  Poisson-forcing step into an all-exact gravity derivation
+- `docs/GR_SIGNATURES_DERIVED_NOTE.md` if it is used to promote geodesic / GW
+  sub-results without carrying their continuum-limit and wave-promotion
+  assumptions
 
 ## Hard “do not overclaim” list
 
@@ -213,6 +242,14 @@ Do not say:
 - Born rule derived
 - generation closed because of the EWSB cascade
 - RH sector derived from the spatial graph alone
+
+Also do not say:
+
+- Poisson uniqueness fully derived from a finite operator-family sweep
+- geodesic / GW sub-bundle fully derived without noting the conformal-metric,
+  WKB, or d'Alembertian-promotion assumptions
+- strong-field / frozen-star / echo package is part of the retained flagship
+  core
 
 ## The current Codex publication bar
 
