@@ -1,5 +1,8 @@
 # CI(3) / Z^3 Publication Retain Audit
 
+> Historical retain audit. For the current flagship paper surface, use
+> `docs/CI3_Z3_PUBLICATION_STATE_2026-04-12.md` as the active authority.
+
 **Date:** 2026-04-12  
 **Branch:** `codex/review-active`  
 **Scope:** publication-facing review of the `CI(3)` / `Z^3` lane against the

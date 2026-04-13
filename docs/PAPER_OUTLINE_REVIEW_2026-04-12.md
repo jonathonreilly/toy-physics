@@ -187,7 +187,7 @@ If the full paper is still the target, the correct structure is:
 
 1. A main claim surface built around:
    - gravity
-   - Born rule
+   - exact `I_3 = 0` / pairwise interference on the Hilbert surface
    - dimension selection
    - exact native `SU(2)`
    - graph-first structural `SU(3)`

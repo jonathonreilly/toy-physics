@@ -16,8 +16,9 @@
 ## Abstract (~150 words)
 
 We show that the Clifford algebra Cl(3) realised on a cubic lattice Z³ produces:
-Newtonian gravity to sub-percent accuracy on lattices up to 128³, the Born rule
-as an automatic consequence of unitarity, three spatial dimensions from
+Newtonian gravity to sub-percent accuracy on lattices up to 128³, an exact
+`I_3 = 0` / no-third-order-interference theorem on the Hilbert surface, three
+spatial dimensions from
 gravitational and atomic stability bounds, exact SU(2) gauge structure from the
 bipartite Clifford bivectors, and structural SU(3) colour from a graph-first
 axis selector combined with the commutant theorem — yielding the decomposition
@@ -74,7 +75,8 @@ the explicit `Cl(3)` / `Z³` level and defer the fuller reduction argument to
 SI so the main text stays tied to the audited lattice derivations.
 
 **Automatic consequences:**
-- Graph structure, unitarity, Born rule (I₃ < 10⁻¹⁶)
+- Graph structure, unitarity, exact `I_3 = 0` / pairwise interference on the
+  Hilbert surface
 - Local Hilbert space dimension d = 2
 
 **Dimension selection (d = 3):**
@@ -186,7 +188,7 @@ in the current review state.
 | Prediction | Mechanism | Test |
 |---|---|---|
 | d = 3 | Gravity sign + atomic stability | Confirmed |
-| Born rule I₃ = 0 | Unitarity + self-consistency | Sinha et al. (confirmed) |
+| `I_3 = 0` / no third-order interference | Hilbert surface + linear amplitudes | Sinha et al. (confirmed) |
 | Gravity ∝ 1/r² | Poisson uniqueness on Z³ | Sub-1% confirmed |
 | SU(2) exact | Cl(3) bivectors | Machine precision |
 | Structural SU(3) | Graph-shift + commutant | 106/106 pass |
@@ -205,7 +207,7 @@ with explicit status labels.
 
 **What is closed:**
 - Gravity from self-consistent Poisson (weak-field, with 1PN extension)
-- Born rule from unitarity
+- exact `I_3 = 0` / pairwise interference on the Hilbert surface
 - d = 3 from 6 independent arguments
 - Exact SU(2) from Cl(3) bivectors
 - Structural SU(3) from graph-first selector + commutant theorem
