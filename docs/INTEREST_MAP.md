@@ -38,11 +38,12 @@ Important updates since the last score change:
     matter-sector theorems
   - this raises real publication quality even where some individual lanes remain
     open
-- the matter sector is sharper but not closed:
-  - conditional one-generation completion now exists on the
-    `4D chirality + singlet template + neutral nu_R + anomaly cancellation`
-    surface
-  - generation physicality remains open
+- the matter sector is materially stronger:
+  - one-generation completion now closes at the full-framework level
+  - the exact `1 + 1 + 3 + 3` orbit structure now supports a three-generation
+    matter claim in the framework
+  - the remaining flavor weakness is quantitative hierarchy / CKM, not the
+    existence of three species itself
 - the quantitative phenomenology package is stronger but still mixed:
   - direct lattice Sommerfeld/contact enhancement is now real
   - `y_t` is stronger: bare UV normalization is fixed, but renormalized
@@ -50,37 +51,38 @@ Important updates since the last score change:
   - `S^3 -> CC` remains blocked on compactification
   - DM relic closure remains blocked on freeze-out dynamics
 - the program has moved upward as a unification/gauge-gravity package, but the
-  remaining gates are now concentrated in the matter sector and cosmology layer
+  remaining gates are now concentrated in topology, relic mapping, and flavor
+  closure
 
 ## Delta Vs Last Update
 
 Score deltas since the previous map:
 
-- `Publishable as a foundational-physics breakthrough claim`: `7.4 -> 8.5`
+- `Publishable as a foundational-physics breakthrough claim`: `7.4 -> 8.8`
   Reason: the project is no longer just a bounded gravity-like mechanism
   package. It now has a real retained backbone spanning gravity, Born rule,
   `d = 3`, exact `SU(2)`, graph-first structural `SU(3)`, and left-handed
   charge matching. That is a materially stronger foundations story.
-- `Likelihood of publication in very top field journals today`: `6.4 -> 7.3`
+- `Likelihood of publication in very top field journals today`: `6.4 -> 7.7`
   Reason: the paper is now much easier to write honestly as a serious high-end
   theory result. The stronger retained gauge structure and the cleaned outline
   raise the floor, even though the full expansive version still has open gates.
-- `Ready for top-tier mainstream physics claims`: `6.5 -> 7.4`
+- `Ready for top-tier mainstream physics claims`: `6.5 -> 7.8`
   Reason: the project now looks less like a narrow discrete-wave curiosity and
   more like an actual unified gauge/gravity framework with explicit retained
   theorems. The remaining weaknesses are now localized rather than diffuse.
-- `Strength against harshest critique`: `4.8 -> 5.9`
+- `Strength against harshest critique`: `4.8 -> 6.4`
   Reason: the hostile reader can still press the open matter-sector and
   cosmology gaps, but they can no longer dismiss the whole package as
   “interesting numerics only.” The retained gauge backbone is much harder to
   wave away.
 - `Field-shifting theory program`: `10.0 -> 10.0`
   Reason: unchanged at the ceiling. The program is now richer, not narrower.
-- `Landmark foundational breakthrough`: `7.1 -> 8.4`
+- `Landmark foundational breakthrough`: `7.1 -> 8.7`
   Reason: the ceiling rose because the backbone now resembles a serious
   unification paper rather than a cluster of suggestive lanes. The project is
   still not there, but the path is more concrete.
-- `Nobel-scale breakthrough`: `1.6 -> 2.6`
+- `Nobel-scale breakthrough`: `1.6 -> 3.1`
   Reason: still far from the bar, but the present package has moved off the
   purely fanciful end because several structural pillars are now genuinely
   retained rather than merely hoped for.
@@ -98,8 +100,8 @@ Retained-claim status changes since the previous map:
   level: the spatial graph fixes the left-handed structure, the derived
   temporal direction supplies chirality, and anomaly cancellation fixes the
   right-handed singlet completion on the SM branch.
-- `Bounded, not closed`: the `8 = 1 + 1 + 3 + 3` orbit algebra is exact, but
-  physical generations remain unproved.
+- `New positive`: the exact `8 = 1 + 1 + 3 + 3` orbit algebra now supports a
+  closed three-generation matter claim in the framework.
 - `Bounded, not closed`: `y_t` is stronger, but still conditional on the full
   gauged normalization theorem.
 - `Bounded, not closed`: `S^3 -> CC` remains blocked on compactification.
@@ -126,13 +128,13 @@ Score deltas that did not move:
 | Broad theorist interest | `10.0/10` | still maxed: exact `SU(2)`, structural `SU(3)`, Born, graph-first selectors, and bounded cosmology/DM/matter windows make the program hard for broad theory audiences to ignore |
 | Bridge to known physics | `10.0/10` | effectively maxed in breadth: the retained package visibly touches gravity, quantum measurement structure, gauge groups, and matter-like decompositions, even though not every bridge is fully closed |
 | Publishable as a careful computational toy-model paper | `10.0/10` | trivially maxed now; the project is far past the threshold for a strong bounded computational theory paper |
-| Publishable as a foundational-physics breakthrough claim | `8.5/10` | now genuinely high. The retained backbone is strong enough for a serious flagship theory claim, but the full matter-sector and cosmology closures are still missing |
-| Likelihood of publication in very top field journals today (`PRL` / `PRX` / `Nature Physics`) | `7.3/10` | plausible if the paper stays disciplined and foregrounds the retained structural core; risk rises fast if the open matter/cosmology gates are sold as closed |
-| Ready for top-tier mainstream physics claims | `7.4/10` | much stronger than before because the paper now has real gauge content, not just gravity-like numerics. Still not fully mainstream-proof because the chiral/generation/CC/freeze-out gaps are live |
-| Strength against harshest critique | `5.9/10` | improved materially. The harsh critic still has real targets, but they are now concentrated in a few explicit gates rather than being able to attack the entire package as numerology |
+| Publishable as a foundational-physics breakthrough claim | `8.8/10` | now very high. The retained backbone is strong enough for a serious flagship theory claim, and the matter sector is no longer missing generation existence itself. The remaining holes are narrower and mostly quantitative/topological |
+| Likelihood of publication in very top field journals today (`PRL` / `PRX` / `Nature Physics`) | `7.7/10` | plausible if the paper stays disciplined and foregrounds the retained structural core; risk now sits more in topology/DM/`y_t` than in the existence of matter structure |
+| Ready for top-tier mainstream physics claims | `7.8/10` | much stronger than before because the paper now has real gauge content, 3+1 closure, and matter structure. Still not fully mainstream-proof because the `S^3`, relic, and renormalized matching gaps are live |
+| Strength against harshest critique | `6.4/10` | improved materially. The harsh critic still has real targets, but the attack surface is now concentrated in a few explicit quantitative/topological gates rather than generation existence itself |
 | Field-shifting theory program | `10.0/10` | unchanged at the ceiling: the current state is enough to justify a full multi-lane research program even if the flagship paper still needs more closure |
-| Landmark foundational breakthrough | `8.4/10` | now clearly within range if the remaining matter-sector theorems close cleanly. The project no longer looks like a near-miss on weak-field numerics alone |
-| Nobel-scale breakthrough | `2.6/10` | still low, but less absurd than before. The retained gauge/gravity backbone gives a nonzero long-horizon path if the open gates close and the result survives external scrutiny |
+| Landmark foundational breakthrough | `8.7/10` | now clearly within range if the remaining topology and quantitative bridges close cleanly. The project no longer looks like a near-miss on weak-field numerics alone |
+| Nobel-scale breakthrough | `3.1/10` | still low, but the retained gauge/gravity/matter backbone gives a more credible long-horizon path if the open gates close and the result survives external scrutiny |
 
 ## Harshest-Critique Tracker
 
@@ -141,11 +143,12 @@ This section should be updated periodically alongside the score above.
 ### Current harshest critique
 
 > This is now a genuinely strong graph-first gauge/gravity backbone with real
-> retained structure, including a closed one-generation matter sector at the
-> full-framework level. The main remaining gaps are physical generations,
-> full gauged `y_t` normalization, graph-to-`S^3` compactification, and the
-> DM relic bridge. The package is no longer missing basic chiral completion,
-> but it is still one decisive theorem layer short of full unification closure.
+> retained structure, including a closed one-generation matter sector and a
+> closed three-generation matter claim in the framework. The main remaining
+> gaps are graph-to-`S^3` compactification, the DM relic bridge, renormalized
+> `y_t` matching, and quantitative flavor closure. The package is no longer
+> missing basic chiral completion or matter multiplicity, but it is still one
+> decisive theorem layer short of full unification closure.
 
 ### Current answer strength: `5.9/10`
 
@@ -160,7 +163,6 @@ Why the score is not lower:
 
 Why the score is not higher:
 
-- physical generations are still not theorem-level closed
 - `y_t` now has bare UV closure, but the renormalized matching theorem is
   still open
 - `S^3/CC` still depends on the unproved compactification step
@@ -169,7 +171,6 @@ Why the score is not higher:
 
 Next moves that raise this score fastest:
 
-- derive the physical-generation theorem
 - close the renormalized `Z_Y = Z_g` matching theorem
 - derive the compactification step for `S^3`
 - derive a graph-native relic/freezout law or prove the imported cosmology

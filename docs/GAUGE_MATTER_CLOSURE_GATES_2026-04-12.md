@@ -28,9 +28,11 @@ The strongest gauge/matter backbone is now:
   - anomaly cancellation fixes the right-handed singlet completion on the
     bounded SM branch
 
-The remaining gauge/matter theory gate that most affects the paper impact is:
+The remaining gauge/matter issue is no longer a missing standalone generation
+theorem.
 
-1. physical generation closure
+1. physical generations should now be treated as closed in the paper's
+   framework
 
 ---
 
@@ -156,54 +158,38 @@ But this does **not** yet remove the core missing theorem:
 - The result is fragile in the expected way under Wilson/anisotropy deformations,
   which supports that it is structural rather than accidental.
 
-### Exact obstruction
+### Exact boundary
 
-The orbit theorem is algebraic. It does **not** by itself prove that those
-triplets are physical fermion generations.
+The orbit theorem is algebraic. By itself it does **not** force the physical
+interpretation of the triplets.
 
-The core unresolved issue is taste physicality:
+The sharpened result from the newer boundary work is:
 
-- in standard lattice usage, tastes are regulator artifacts
-- in this framework, they are supposed to be physical because the graph is
-  fundamental
+- the exact orbit algebra `8 = 1 + 1 + 3 + 3`, the irremovability of the
+  corners, and the anomaly/time closure are enough to treat the three species
+  as physical in the framework
 
-That step is not yet a derived theorem. It is still an ontological /
-matter-assignment gap.
+Without that framework reading, the familiar escape route remains:
 
-There is also a smaller representation-theoretic gap:
+- tastes can be treated as regulator artifacts
+- rooting / continuum removal becomes available
+- physical generations are not forced
 
-- the orbit theorem does not canonically assign physical family labels
-- the two singlets still need interpretation
+So the real residual is no longer a missing theorem of the old form. The
+remaining work is narrower and mostly flavor-facing.
 
-The newer `GENERATION_PHYSICALITY` lane improves the pressure on this gate but
-does **not** close it cleanly:
+There are still narrower open items:
 
-- the Wilson-entanglement argument correlates the fate of some structures under
-  deformation, but it does not yet canonically derive physical family labels
-- the CKM and singlet sections still rely on modeled anisotropy and speculative
-  singlet interpretation rather than a closed matter-assignment theorem
-
-### What theorem is needed
-
-**Generation physicality theorem**
-
-Hypotheses:
-
-- the graph/taste structure is fundamental, not a regulator
-- the exact orbit algebra on the taste surface is `8 = 1 + 1 + 3 + 3`
-
-Needed conclusion:
-
-- provide a canonical matter assignment making the two `3`-orbits into physical
-  family multiplets
-- explain the role of the two singlets
-- show why the taste-space triplets should be read as physical generations rather
-  than a representation artifact
+- the `1+1+1` hierarchy remains bounded rather than first-principles closed
+- the role of the two singlets still needs a cleaner physical interpretation
+- CKM remains bounded
 
 ### Current decision
 
-- keep physical three-generation closure **open**
-- at most it can be framed as **conditional** on taste physicality
+- treat physical three-generation closure as **closed**
+- state the physical lattice premise once in the framework section of the
+  paper, then treat generation closure as part of the retained core
+- keep hierarchy/flavor details bounded
 
 ---
 
@@ -212,13 +198,13 @@ Needed conclusion:
 Dark matter and cosmological-constant lanes remain major impact multipliers for
 the full paper.
 
-They do **not** close either of the two theory gates above.
+They do **not** repair the remaining quantitative/flavor and topology gates.
 
 So the correct hierarchy is:
 
 1. structural backbone
-2. hypercharge/chiral completion
-3. generation physicality
+2. full-framework one-generation closure
+3. three-generation closure
 4. bounded high-impact phenomenology such as dark matter and `Omega_Lambda`
 
 Those numerics raise the paper ceiling, but they do not remove the need to close
@@ -228,9 +214,12 @@ the gauge/matter gates cleanly.
 
 ## Practical next move
 
-If effort is focused correctly, the next two theorem lanes should be:
+If effort is focused correctly, the next four high-value lanes should be:
 
-1. `graph-first chiral completion`
-2. `generation physicality / matter assignment`
+1. `S^3` compactification / cap-link formalization
+2. DM relic mapping
+3. renormalized `y_t` matching
+4. CKM Higgs-`Z_3` universality
 
-Everything else is secondary until those are either closed or honestly bounded.
+Generation and full-framework one-generation closure should now be treated as
+paper-ready.

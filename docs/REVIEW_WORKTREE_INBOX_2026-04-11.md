@@ -62,9 +62,9 @@ Current state:
 - the later `YT_FORMAL_THEOREM` lane materially strengthens the top-Yukawa
   story, but it is still review-only because the gauge-Yukawa normalization
   step is stated rather than derived from a lattice Ward identity
-- the later `GENERATION_PHYSICALITY` lane is also review-only: it sharpens the
-  taste-physicality case, but the Wilson-entanglement conclusion and singlet /
-  CKM interpretations still overrun what the script cleanly proves
+- the later generation-boundary work materially upgrades the lane: generation
+  should now be treated as retained in the framework, while hierarchy / singlet
+  interpretation / CKM remain bounded
 - the later `S3_TOPOLOGY_DERIVATION` lane is not yet a retained CC upgrade:
   finite graph -> compact manifold and the final `B^3 -> S^3` compactification
   step are still stronger in prose than in proof

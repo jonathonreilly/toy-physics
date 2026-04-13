@@ -22,7 +22,6 @@ But the outline still promotes several review-only or scenario-dependent lanes a
 if they were already retained closure:
 
 - anomaly-complete hypercharge
-- physical three-generation closure
 - Weinberg-angle threshold correction
 - neutrino fit outputs
 - `y_t` closure
@@ -55,15 +54,17 @@ That is not consistent with the current audit.
 - Move all fit- or scenario-dependent numbers out of the abstract unless their
   underlying lanes are independently upgraded first.
 
-### 2. Gauge section overstates hypercharge and generations
+### 2. Gauge section overstates hypercharge and misstates the generation boundary
 
 The gauge section is close on `SU(2)` and structural `SU(3)`, but it still goes
 too far in two places:
 
 - it treats the traceless abelian factor as fully identified hypercharge
-- it treats `8 = 1 + 1 + 3 + 3` as already physical three-generation closure
+- it does not state the generation result on the right surface
 
-The current audit does not support either of those at full strength.
+The current audit does not support hypercharge at full strength, and it
+requires the generation claim to be presented as part of the framework rather
+than as something separately re-proved by the EWSB cascade.
 
 **Required fix:**
 
@@ -71,7 +72,8 @@ The current audit does not support either of those at full strength.
   - structural `su(3) \oplus u(1)` closure
   - bounded left-handed charge matching
 - Move anomaly-complete hypercharge to an explicit open theorem.
-- Move physical generations to an explicit open theorem.
+- Present generations as closed in the framework.
+- Do not use the EWSB cascade or CKM lane as the closure mechanism.
 
 ### 3. The centrepiece prediction table is not manuscript-safe
 
@@ -123,8 +125,8 @@ state.
 **Required fix:**
 
 - Update the discussion to reflect the graph-first structural closure.
-- Keep only the remaining bounded point: anomaly-complete hypercharge /
-  chiral completion.
+- Keep only the remaining bounded points: detailed flavor closure and the
+  phenomenology/topology bridges.
 
 ---
 
@@ -133,34 +135,25 @@ state.
 If the goal is the fully expansive paper, the remaining work is now sharply
 defined.
 
-### Work package A. Chiral completion theorem
+### Work package A. Generation hierarchy / flavor cleanup
 
-This is now the most important open theorem.
+The exact orbit algebra is real, and the generation claim should now be treated
+as part of the framework.
 
-Need:
+What is still missing is narrower:
 
-1. derive or identify the right-handed singlet sector on the graph surface
-2. extend the graph-first `Y` assignment to the full chiral generation
-3. verify:
-   - `Tr[Y] = 0`
-   - `Tr[Y^3] = 0`
-   - `Tr[SU(3)^2 Y] = 0`
-   - `Tr[SU(2)^2 Y] = 0`
+1. a first-principles `1+1+1` hierarchy rather than a bounded model
+2. a clean explanation of the two singlets
+3. a sharper route from the generation closure to CKM / flavor quantities
 
-Without this, the paper has structural color closure but not anomaly-complete
-hypercharge closure.
-
-### Work package B. Generation physicality theorem
-
-The exact orbit algebra is real.
-The physical interpretation as three generations is not yet closed.
+### Work package B. Topology / compactification
 
 Need:
 
-1. a canonical matter assignment on the taste orbit structure
-2. a proof that the `3`-orbits correspond to physical generations rather than
-   a representation artifact
-3. a clean explanation of the two singlets and why they do not spoil the claim
+1. close the `S^3` cap-map / compactification step strongly enough to move the
+   topology lane from bounded to structural
+2. remove the remaining gap between the local shell-growth result and the full
+   global compactification theorem
 
 ### Work package C. Phenomenology triage
 
@@ -200,8 +193,13 @@ If the full paper is still the target, the correct structure is:
    - graph-first structural `SU(3)`
 2. A clearly bounded gauge statement:
    - abelian factor currently hypercharge-like / left-handed matched
-   - anomaly-complete completion still to be written cleanly
-3. A second-layer phenomenology section that is explicitly labeled by status:
+   - anomaly-complete completion is closed only at the full-framework,
+     one-generation level
+3. A framework statement made explicit once:
+   - the lattice is physical, not a regulator
+   - within that framework, the `1+1+3+3` orbit structure is physical
+     generation structure
+4. A second-layer phenomenology section that is explicitly labeled by status:
    - retained
    - bounded phenomenology
    - exploratory / future test
@@ -214,8 +212,8 @@ state.
 ## Non-negotiable edits before submission
 
 - Rewrite the abstract.
-- Rewrite the gauge section to stop treating hypercharge and generations as
-  fully closed.
+- Rewrite the gauge section to stop treating hypercharge as fully closed and to
+  state the generation result on the explicit framework surface.
 - Split or demote Table 1.
 - Remove unfinished prediction lanes from the main claim surface.
 - Make the discussion consistent with the graph-first `SU(3)` closure.

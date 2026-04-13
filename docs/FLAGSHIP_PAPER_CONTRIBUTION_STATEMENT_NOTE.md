@@ -15,6 +15,10 @@ It separates:
 
 This is a framing note only. It does **not** claim a new physics result.
 
+Framework sentence:
+
+> We take `Cl(3)` on `Z^3` as the physical theory. Everything else is derived.
+
 ## Paper-safe now
 
 The current retained core is now materially stronger:
@@ -27,6 +31,11 @@ The current retained core is now materially stronger:
   `su(3) \oplus u(1)` structure
 - exact orbit algebra on the cubic taste space: `8 = 1 + 1 + 3 + 3`, as an
   algebraic statement
+- three-generation matter closure in the framework:
+  - the exact `1 + 1 + 3 + 3` orbit structure is retained
+  - the framework treats the cubic lattice as physical rather than as a
+    regulator
+  - so the three species are part of the retained matter surface
 - left-handed charge/eigenvalue matching on the selected-axis commutant
   surface, if presented as a
   corollary of the commutant theorem rather than as hypercharge closure
@@ -50,17 +59,17 @@ That sentence is now defensible.
 
 The strongest remaining open points are now narrower:
 
-- physical generation closure
 - a full physical identification of the surviving abelian factor as hypercharge
   `U(1)_Y` beyond the now-closed one-generation branch
+- detailed hierarchy / CKM closure beyond the exact three-species result
 - a final manuscript argument for whether the graph-first route should be
   presented as the primary closure path or alongside the older KS language
 
 Until those steps are written cleanly, the following claims stay bounded:
 
-- physical three-generation closure
 - any manuscript line that treats the abelian factor as fully closed for the
   full flavor sector rather than as one-generation-complete / left-handed matched
+- detailed hierarchy / CKM closure
 - downstream claims that rely on the abelian factor being fully fixed beyond
   the current one-generation surface
 
@@ -100,8 +109,10 @@ Use this as the honest summary now:
 > and the selected graph fibers plus residual cubic swap have commutant
 > `su(3) \oplus u(1)`. The spatial graph fixes the left-handed gauge/matter
 > structure, the derived temporal direction supplies chirality, and anomaly
-> cancellation closes one Standard Model generation. Physical generations and
-> downstream phenomenology remain open or review-only.
+> cancellation closes one Standard Model generation. The exact `1 + 1 + 3 + 3`
+> orbit structure supplies three matter species in the same framework.
+> Quantitative flavor closure and downstream phenomenology remain bounded or
+> review-only.
 
 ## What Not To Say
 

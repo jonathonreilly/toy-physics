@@ -22,12 +22,13 @@ gravitational and atomic stability bounds, exact SU(2) gauge structure from the
 bipartite Clifford bivectors, and structural SU(3) colour from a graph-first
 axis selector combined with the commutant theorem — yielding the decomposition
 C⁸ = (2,3) ⊕ (2,1) with left-handed charge assignment Y = +1/3 (quarks) and
-Y = −1 (leptons). A conditional 4D chiral completion of one SM generation is
-now available on a right-handed singlet template, while the remaining open
-matter-sector theorem is the graph-canonical derivation of that template and
-the physical-generation assignment. The retained structural backbone has no
-adjustable parameters; bounded phenomenological windows and still-open gates
-are reported separately.
+Y = −1 (leptons). Anomaly-forced 3+1 closure supplies chirality, so one full
+Standard Model generation closes at the framework level; the exact orbit
+algebra `8 = 1 + 1 + 3 + 3` then gives a three-generation matter structure in
+the same framework. The remaining open gates are graph-to-S³ compactification,
+dark-matter relic mapping, renormalized top-Yukawa matching, and bounded flavor
+closure. The retained structural backbone has no adjustable parameters;
+bounded phenomenological windows and still-open gates are reported separately.
 
 ---
 
@@ -63,7 +64,8 @@ closure from phenomenological extension. We cite predecessors throughout.
 
 ### 2. The axiom and its consequences (~400 words)
 
-**The axiom:** Cl(3) on Z³ — staggered fermion phases on a cubic lattice.
+**The axiom:** We take `Cl(3)` on `Z³` as the physical theory. Everything
+else is derived.
 
 **Framing note:** In the broader architecture, this working axiom can be read
 as the concrete cubic realization of a more compressed single-axiom
@@ -118,19 +120,19 @@ The traceless U(1) generator assigns Y = +1/3 (6 quark states) and Y = −1
 Q = T₃ + Y/2 give (+2/3, −1/3, 0, −1) — matching one generation of
 left-handed SM fermions.
 
-**BOUNDED: Hypercharge identification**
-The charge matching is correct for left-handed fermions. A conditional
-one-generation completion now exists: in the 4D taste space, chirality gives
-an `8_L ⊕ 8_R` split, and anomaly cancellation uniquely fixes the right-handed
-hypercharges on the singlet template once the neutral-neutrino condition is
-imposed. The remaining open step is not anomaly solving itself, but the
-graph-canonical derivation of that right-handed representation template
-(Work Package A, see Discussion).
+**RETAINED: One-generation completion**
+The charge matching is correct for left-handed fermions. In the 4D taste
+space, chirality gives an `8_L ⊕ 8_R` split, and anomaly cancellation fixes
+the right-handed completion on the Standard Model branch. The paper-safe
+statement is that the spatial graph fixes the left-handed gauge/matter
+structure, the derived temporal direction supplies chirality, and anomaly
+cancellation closes one full Standard Model generation.
 
-**BOUNDED: Three generations**
-The Z₃ orbifold of 8 taste states produces orbits of size 3, consistent with
-three generations. The physical identification of taste orbits with SM
-generations requires a separate physicality theorem (Work Package B).
+**RETAINED: Three generations**
+The Z₃ action on the 8 taste states produces the exact orbit algebra
+`8 = 1 + 1 + 3 + 3`. In the framework, this closes the three-generation matter
+structure. What remains bounded is not the existence of three species, but the
+detailed `1+1+1` hierarchy and flavor data.
 
 [Extended Data Fig. 3: Commutant dimension hierarchy; Fig. 4: Graph-shift
 selector on φ-sphere; Table 2: C⁸ quantum numbers]
@@ -216,9 +218,9 @@ with explicit status labels.
   - anomaly cancellation fixes the right-handed singlet completion on the SM branch
 
 **What is bounded but promising:**
-- Z₃ orbit counting for generations, conditional on the physicality theorem
 - Gauge couplings and CKM lanes: review-only until a true lattice coupling
   observable and a quantitative CKM theorem exist
+- Detailed hierarchy and flavor structure beyond the exact three-species result
 - Phenomenological windows for R, Λ, n_s, sin θ_C, J, sin²θ_W, m_t
 - Direct lattice DM contact-propagator enhancement in the attractive Coulomb channel;
   the full freeze-out/relic-abundance step remains open
@@ -227,18 +229,16 @@ with explicit status labels.
 
 **What remains open (the real gates):**
 
-*Work Package A: Generation physicality.* Prove that the Z₃ taste orbits
-correspond to physical generations, not representation artifacts. This
-requires a canonical matter assignment and an explanation of the singlet
-states.
-
-*Work Package B: Topology / compactification.* Close the `S^3` cap-map /
+*Work Package A: Topology / compactification.* Close the `S^3` cap-map /
 compactification step cleanly enough to move the CC lane from bounded to
 structural.
 
-*Work Package C: Quantitative bridges.* Close the renormalized `y_t` matching
+*Work Package B: Quantitative bridges.* Close the renormalized `y_t` matching
 theorem and the DM relic mapping from the native graph freeze-out law to the
 physical cosmological abundance.
+
+*Work Package C: Flavor closure.* Upgrade CKM and detailed hierarchy from
+bounded support to a quantitative theorem.
 
 **Relationship to prior work:** We build on Kogut-Susskind, Furey, Stoica,
 Trayling-Baylis, and the lattice QCD community. Our contribution is the
@@ -289,12 +289,13 @@ separation of structural closure from phenomenological extension.
 
 ## Open theory gates (not paper blockers — future work)
 
-### A. Generation physicality theorem
-Prove Z₃ taste orbits = physical generations with canonical matter assignment
-
-### B. Topology / compactification theorem
+### A. Topology / compactification theorem
 Prove the graph-to-closed-manifold compactification step strongly enough to
 force `S^3`
 
-### C. Phenomenology upgrade
+### B. Phenomenology upgrade
 For each bounded window, either derive from backbone or label as consistency
+
+### C. Flavor upgrade
+Promote CKM and detailed hierarchy from bounded support to theorem-level
+closure

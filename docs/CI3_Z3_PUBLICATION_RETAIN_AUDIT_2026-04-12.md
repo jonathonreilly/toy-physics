@@ -50,7 +50,7 @@ Current status:
 - this bounded note is now on `main`
 - it is the canonical retained entrypoint for the native gauge lane
 
-### 2. Taste-orbit algebra, after stripping physical-generation language
+### 2. Taste-orbit algebra and generation boundary
 
 Files:
 
@@ -66,21 +66,26 @@ Safe reading:
 
 - exact orbit structure `8 = 1 + 1 + 3 + 3` under the audited `Z_3` action
 - the orbit theorem itself is real
-- Wilson deformation does track the fragility of the same taste structure
+- Wilson deformation tracks the fragility of the same taste structure
+- the later generation-boundary work sharpens the state further:
+  in this framework, the lattice is physical rather than a regulator, so the
+  three-generation matter claim should be treated as part of the framework
+  surface rather than as a separate missing theorem
 
 Why not yet on `main`:
 
-- the current notes jump from orbit structure to “three physical generations”
-  without clearing the taste-physicality / regulator objection
-- the adversarial note itself explains that the physical content is conditional
-  on treating tastes as fundamental degrees of freedom
+- the older notes still phrase this as an open theorem or overclose it via the
+  EWSB hierarchy model
+- the paper-safe framing now needs to be rewritten consistently before
+  promotion: generation is retained in the framework, while hierarchy / CKM
+  remain bounded
 
 Required rework:
 
-- split the claim in two:
-  - retained algebraic result: exact orbit structure on the cubic taste space
-  - explicit hold: physical generations require taste physicality as a named
-    axiom or separate closure argument
+- promote only the narrowed claim surface:
+  - retained: exact orbit structure and three-generation matter closure in the
+    framework
+  - bounded: detailed `1+1+1` hierarchy, singlet interpretation, CKM/flavor
 
 ## Post-Audit Arrivals On `review-active`
 
