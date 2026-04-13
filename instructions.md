@@ -168,12 +168,22 @@ language. Exact blockers to gravity-companion promotion:
 4. relic bridge is now:
    - numerator derived
    - baryogenesis chain structurally derived except for transport
-   - the remaining live transport blockers are `D_q*T` and `v_w`
+   - the remaining live transport blockers are `D_q*T`, `v_w`, and therefore
+     the still-unreconciled `eta` surface
 5. Stosszahlansatz is now a strong sub-result, but not the full lane
    - do not keep re-fighting the same coarse-graining objection
    - the remaining issue is not “does factorization exist?” but “can the full
      relic bridge be closed without imported cosmology?”
-6. latest transport routes are stronger, but the lane is still not closed
+6. the new Boltzmann-theorem path is useful, but not closure authority for DM
+   - do **not** call the full relic mapping or `R = 5.48` a theorem from that
+     note
+   - the current script verifies the master-equation structure only on a small
+     1D toy interaction model
+   - the thermodynamic-limit and expansion pieces still lean on standard
+     Riemann/Weyl/Newtonian-cosmology structure
+   - treat it as a bounded Boltzmann-reduction strengthening, not as a
+     replacement for the live `eta` / transport blocker
+7. latest transport routes are stronger, but the lane is still not closed
    - `D_q*T`: the old Coulomb-log / inserted-`C_0` objection is mostly gone
      because the new native mode-sum script does compute the width directly on
      the lattice
@@ -188,7 +198,14 @@ language. Exact blockers to gravity-companion promotion:
        pressure and the imported non-perturbative enhancement `R_NP = 1.5`
        from 2HDM lattice studies
    - so the transport sector is narrower, but not closed
-7. bounded framework inputs still need honest handling
+8. the branch still contains an internal EWPT/baryogenesis regime mismatch
+   - older notes still lean on a partial-washout window near `v/T ~ 0.5`
+   - newer native EWPT work gives a strong first-order surface with
+     `v(T_c)/T_c > 1`
+   - do **not** promote DM until one authority note states clearly which of
+     `v(T_c)/T_c`, `v(T_n)/T_n`, or wall-local `v/T` actually enters the
+     baryogenesis source
+9. bounded framework inputs still need honest handling
    - `g = 1` is still a framework-defining coefficient, not a theorem
    - `k = 0` remains bounded if used in Newtonian cosmology
    - no “zero imports / pure graph theory” language while transport formulas
@@ -221,15 +238,23 @@ language. Exact blockers to gravity-companion promotion:
 
 **Preferred attack order**
 
-1. do **not** spend more time on `v(T_c)/T_c`, BBN nuclear-physics rhetoric,
-   or `L_w*T` unless you find a concrete mathematical bug
-2. if you touch `D_q*T`, the only useful move now is upgrading the native
-   lattice computation beyond the current one-loop / static-screened surface
-3. derive `v_w` from actual wall-friction / Boltzmann closure on the same
-   framework surface, not just literature scaling
-4. if 2-3 fail, freeze the lane honestly as “framework baryogenesis plus
+1. first derive `T_n` from the existing effective potential + bounce machinery
+   rather than scanning it
+   - use the nucleation condition `S_3(T_n)/T_n ~ 140`
+2. rebuild `v_w` on one reconciled native surface:
+   - native Daisy EWPT
+   - native / HTL `D_q*T`
+   - native bounce wall profile
+   - no stale `R_NP = 1.5`
+3. solve the **coupled** transport fixed point instead of treating
+   `D_q*T`, `v_w`, and `L_w*T` as independent knobs
+4. only if there is real mathematical leverage, upgrade `D_q*T` beyond the
+   present one-loop / static-screened surface
+5. derive the CP source from the wall profile / `Z_3` phase structure instead
+   of leaving it as a compact ansatz
+6. if 1-5 fail, freeze the lane honestly as “framework baryogenesis plus
    standard transport closure”
-5. only then update `eta` and the full relic ratio
+7. only then update `eta` and the full relic ratio
 
 ### Target B: Renormalized `y_t`
 
@@ -275,14 +300,20 @@ language. Exact blockers to gravity-companion promotion:
    - the 1-loop bookkeeping bug is fixed
    - the lattice matching coefficient itself is already narrowed to
      sub-percent scale
-4. the live blocker is now one **self-consistent** framework-to-SM crossover
+4. the new scheme-independence theorem is a useful UV sub-result, not lane
+   closure
+   - it strengthens the claim that the UV ratio `y_t / g_3 = 1/sqrt(6)` is
+     protected
+   - it does **not** derive the framework-to-SM gauge crossover
+   - do **not** cite the current script as an all-orders vertex-renormalization
+     proof; it checks Ward / propagator identities, not full `Z_y / Z_g`
+5. the live blocker is now one **self-consistent** framework-to-SM crossover
    - derive how the strong framework boundary hands off to the perturbative
      SM gauge trajectory
-   - the natural route is lattice step-scaling or an equivalent
-     non-perturbative matching computation
-   - or isolate the low-energy gauge anchor explicitly and keep the lane
-     bounded
-5. thresholded running still matters, but the conceptual mismatch is now
+   - the preferred route is a one-shot non-perturbative finite matching
+     theorem on the actual Hamiltonian, not a huge step-scaling march
+   - lattice step-scaling is fallback if that cleaner route fails
+6. thresholded running still matters, but the conceptual mismatch is now
    “framework strong boundary vs perturbative SM running”
    - the common boundary relation `y_t = g_3/sqrt(6)` is now enforced on the
      framework surface
@@ -318,12 +349,19 @@ language. Exact blockers to gravity-companion promotion:
 1. do **not** re-prove Feshbach or the sub-percent matching coefficient
 2. do **not** spend more time on the old “two unrelated UV couplings” story;
    that is no longer the real blocker
-3. derive the non-perturbative gauge crossover / step-scaling from the
-   framework boundary to the perturbative SM trajectory
-4. only then run the full thresholded 2-loop chain from that common handoff
-5. if that fails, isolate exactly which low-energy gauge anchor is still
-   imported
-6. keep the lane bounded unless the crossover is actually derived
+3. preferred route:
+   - place the actual `Cl(3)` / `Z^3` Hamiltonian in a slowly varying SU(3)
+     background field
+   - do the same low/high-energy Schur-complement / Feshbach projection
+     already verified on the real Hamiltonian
+   - extract the induced low-energy gauge-kinetic coefficient
+   - use that as the one-shot framework-to-SM crossover map
+4. keep `y_t / g_3 = 1/sqrt(6)` on that effective boundary, not on the raw
+   plaquette coupling
+5. only then run the full thresholded 2-loop chain from that common handoff
+6. lattice step-scaling is fallback if 3-5 fail cleanly
+7. if all of that fails, isolate exactly which low-energy gauge anchor is
+   still imported and keep the lane bounded
 
 ### Target C: CKM / flavor
 
@@ -348,16 +386,21 @@ language. Exact blockers to gravity-companion promotion:
    - the exact `2x2` `2-3` block diagonalization is already done
    - the ratio route `c_23^u/c_23^d` is already done
    - the full `3x3` NNI `V_ub` route is already done as a bounded result
-3. the new full-closure script does **not** derive `V_cb`
+3. the new Wolfenstein-cascade note is useful structurally, but it is **not**
+   closure authority
+   - lambda still uses an empirical `R_overlap = lambda_PDG / lambda_bare`
+   - the absolute `c_23` scale still comes from `V_cb` matching
+   - the phase sector still chooses `c_13 / c_23` by PDG-based optimization
+4. the new full-closure script does **not** derive `V_cb`
    - it explicitly solves `c_23^d` by matching `V_cb` to PDG
    - do **not** cite that as a first-principles closure
-4. the real remaining blocker is quantitative closure
+5. the real remaining blocker is quantitative closure
    - absolute `c_23` / `S_23` normalization is improved but still bounded
      rather than theorem-grade
    - `c_13` suppression and phase control are still not jointly derived well
      enough for `V_ub` and `J`
    - the `J`-`V_ub` tension is reduced, not eliminated
-5. current best reading of the gap
+6. current best reading of the gap
    - the new absolute-`S_23` route predicts `V_cb` within about `4.6%`
      without using PDG `V_cb`, which is real progress
    - but `K` still has `O(20%)` spread and a remaining EWSB sector correction,
@@ -379,33 +422,24 @@ language. Exact blockers to gravity-companion promotion:
    - do not spend more time re-deriving a 1-5% EW asymmetry unless you are
      materially changing the result
 
-3. cheapest next route: sharpen the ratio / normalization evidence before
-   brute-force compute
-   - multi-`L` measurement of `c_12/c_23` with enough configurations is now
-     the cheapest non-circular way to reduce the normalization uncertainty
-   - use that to tighten the residual sector correction before reaching for
-     large-`L` brute force
-4. derive the **absolute** `S_23` / `c_23` normalization analytically
+3. highest-value next route: derive the **absolute** `S_23` / `c_23`
+   normalization analytically
    - do not treat cluster compute as the first choice
-   - use the continuum / Symanzik taste-splitting machinery and the new
-     multi-`L` normalization evidence
-   - the concrete remaining target is to remove the residual sector-dependent
-     `K` / EWSB correction and reduce the current `~5%` `V_cb` gap
-
-5. close `V_ub` by deriving `c_13` and the relevant up/down phase structure
-   - the latest note shows the real issue is the `J`-`V_ub` tension
-   - deriving `c_13` without fixing the phase structure is not enough
-   - deriving a better phase embedding without fixing `c_13` is also not
-     enough
-
-6. use invariants only as a consistency layer
-   - they do not independently close `V_cb`
-   - use them after `S_23` / `c_13` / phase are sharpened, not instead of
-     that work
-
+   - use the exact `V_cb` formula already on branch plus the sector-correction
+     machinery
+   - remove the residual sector-dependent `K` / EWSB correction without PDG
+     back-calibration
+4. derive `c_13` analytically from the full `3x3` NNI structure
+   - Schur-complement / effective-mass-matrix route is preferred
+   - do not treat PDG-anchored `V_ub` fits as closure authority
+5. derive the surviving rephasing-invariant CKM phase from invariants built
+   from the same EWSB-dressed mass matrices
+   - do not use PDG-based `chi^2` optimization of `c_13 / c_23` as closure
+6. multi-`L` ratio/normalization evidence is useful only as support for 3-5,
+   not as a substitute for them
 7. cluster-compute fallback
-   - only fall back to `L >= 32` / dynamical overlap production if the ratio /
-     analytic routes fail cleanly
+   - only fall back to targeted compute on one scalar quantity
+     (`K_23` or physical `c_13`) if the analytic routes fail cleanly
 
 **Routes to stop overusing**
 
