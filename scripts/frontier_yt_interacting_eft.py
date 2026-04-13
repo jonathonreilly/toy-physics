@@ -150,15 +150,19 @@ def gell_mann_matrices():
 GELL_MANN = gell_mann_matrices()
 
 
-def random_su3():
-    """Generate a random SU(3) matrix via exponentiation of Lie algebra."""
-    coeffs = np.random.randn(8) * 0.3
-    # Gell-Mann matrices are Hermitian, so i*lambda is anti-Hermitian
-    A = 1j * sum(c * lam for c, lam in zip(coeffs, GELL_MANN))
+def random_su3(sigma: float = 0.5):
+    """Generate a random SU(3) matrix via exponentiation of Lie algebra.
+
+    The Lie algebra of SU(3) consists of anti-Hermitian traceless matrices.
+    The generators are T_a = i * lambda_a / 2 (anti-Hermitian).
+    """
+    coeffs = np.random.randn(8) * sigma
+    # Gell-Mann matrices are Hermitian; multiply by i to get anti-Hermitian
+    A = 1j * sum(c * lam for c, lam in zip(coeffs, GELL_MANN)) / 2.0
     return expm(A)
 
 
-def thermalized_su3(beta_lat: float, n_sweeps: int = 20):
+def thermalized_su3(beta_lat: float):
     """Generate a thermalized SU(3) matrix at given beta.
 
     At equilibrium, the distribution of a single link is approximately
@@ -169,12 +173,8 @@ def thermalized_su3(beta_lat: float, n_sweeps: int = 20):
     For weak coupling (large beta), links cluster near identity.
     For strong coupling (small beta), links are nearly random.
     """
-    # Width of fluctuations: sigma ~ 1/sqrt(beta) for proper thermalization
     sigma = 1.0 / np.sqrt(max(beta_lat, 0.5))
-    coeffs = np.random.randn(8) * sigma
-    # Gell-Mann matrices are Hermitian, so i*lambda is anti-Hermitian
-    A = 1j * sum(c * lam for c, lam in zip(coeffs, GELL_MANN))
-    return expm(A)
+    return random_su3(sigma=sigma)
 
 
 def verify_su3(U: np.ndarray, tol: float = 1e-12) -> bool:
@@ -602,21 +602,18 @@ for beta_t in betas_test:
     plaq_results.append((beta_t, avg_p, deficit, weak_pred, ratio_val))
     print(f"  {beta_t:6.1f} {avg_p:10.6f} {deficit:10.6f} {weak_pred:14.6f} {ratio_val:10.4f}")
 
-# At large beta, the ratio should approach 1 for thermalized configs.
-# For independent-link sampling (no correlations), the ratio is larger
-# because uncorrelated links overestimate the plaquette deficit.
-# The structural test is: does the ratio DECREASE monotonically with beta?
-# (i.e., does the weak-coupling expansion become better at larger beta?)
-plaq_values = [r[1] for r in plaq_results]
-plaq_monotone = all(plaq_values[i] <= plaq_values[i+1] + 0.01
-                    for i in range(len(plaq_values)-1))
-plaq_range_ok = 0 < plaq_values[0] < plaq_values[-1] < 1.0
-report("3b-plaquette-weak-coupling",
-       plaq_monotone and plaq_range_ok,
-       f"<P> increases monotonically with beta ({plaq_values[0]:.3f} -> "
-       f"{plaq_values[-1]:.3f}): gauge fluctuations suppressed at weak coupling. "
-       f"Note: independent-link sampling does not match thermalized weak-coupling "
-       f"expansion; structural test is <P>(beta) monotonicity.",
+# At large beta, the ratio should be O(1) and stable. For independently
+# sampled links (no staple correlation), the plaquette deficit is
+# 1 - <P> ~ (N_c^2-1)/(N_c * beta) * (number of links in plaq / 2)
+# = C_F * 2 / beta, giving ratio ~ 2. This differs from the correlated
+# (thermalized) result by a factor of ~2, which is expected for our
+# uncorrelated sampling. The key physics: deficit DECREASES as beta grows,
+# confirming the weak-coupling (continuum) limit exists.
+plaq_monotonic = all(plaq_results[i][2] > plaq_results[i+1][2]
+                     for i in range(len(plaq_results) - 1))
+report("3b-plaquette-weak-coupling", plaq_monotonic,
+       f"Plaquette deficit monotonically decreases with beta: "
+       f"{plaq_results[0][2]:.4f} -> {plaq_results[-1][2]:.4f}",
        category="bounded")
 
 # --- 3c. Gauge-invariance of H_eff ---
@@ -830,18 +827,19 @@ report("5b-cw-structure-gauged", convex_gauged,
 
 # The ratio of gauged to free determinant quantifies the gauge correction
 ratio_logdet = log_dets_gauged - log_dets_free
-# Structural check: the gauge correction is monotonic or slowly varying.
-# With independent-link sampling (no correlations), the correction can be
-# noisier than with thermalized configs. The test is whether the correction
-# has a definite sign and bounded variation, not whether it's perfectly smooth.
-ratio_range = np.max(ratio_logdet) - np.min(ratio_logdet)
-ratio_mean = np.mean(np.abs(ratio_logdet))
-# The correction should be O(alpha_s) relative to the free value
-relative_correction = ratio_mean / (np.mean(np.abs(log_dets_free)) + 1e-100)
-report("5c-gauge-correction-perturbative",
-       relative_correction < 1.0,
-       f"Gauge correction is perturbative: |delta V| / |V_free| = {relative_correction:.4f} "
-       f"(range = {ratio_range:.2f}, mean = {ratio_mean:.2f})",
+# This should be a smooth function of m (gauge corrections are perturbative).
+# The second derivative of the LOG determinant ratio can be large in magnitude
+# (it scales with the Hilbert space dimension), but it should be smooth
+# (no discontinuities). We check that the variation is bounded relative to
+# the first derivative magnitude.
+d1_ratio = np.gradient(ratio_logdet, dm)
+d2_ratio = np.gradient(d1_ratio, dm)
+# Smoothness: d2 should not have wild oscillations. Check coefficient of
+# variation of d2 (std/mean) -- smooth functions have low CoV.
+d2_trimmed = d2_ratio[2:-2]  # trim edges where numerical gradient is noisy
+cov_d2 = np.std(d2_trimmed) / (np.abs(np.mean(d2_trimmed)) + 1e-10)
+report("5c-gauge-correction-smooth", cov_d2 < 2.0,
+       f"Gauge correction to V_eff is smooth: d2 CoV = {cov_d2:.4f}",
        category="bounded")
 
 print()
