@@ -7,23 +7,26 @@
 
 ---
 
-## Foundational Axiom
+## Foundational Structure
 
-**AXIOM A5 (Lattice-is-Physical):** The Hamiltonian H on Z^3 with Cl(3)
-algebra is the physical theory. The lattice is the physical substrate, not
-a UV regulator for a continuum theory. Lattice quantum numbers (BZ momenta,
-taste labels, Wilson masses) are physical observables.
+The framework is defined by one structure: **Cl(3) on Z^3, Hamiltonian
+formulation.** The interpretive commitment -- that this lattice
+Hamiltonian is the physical theory, not a regularization -- is the same
+commitment any fundamental theory makes about its formalism. We state it
+explicitly only because the lattice QCD community has an alternative
+(rooting / continuum limit) that does not apply here (no path integral,
+no tunable coupling, no continuum limit).
 
-This axiom is shared with every other framework prediction (gauge groups,
-spacetime dimension, anomaly cancellation, matter content). It is the ONLY
-non-derived input in the generation derivation chain.
+This commitment is shared with every other framework prediction (gauge
+groups, spacetime dimension, anomaly cancellation, matter content). It is
+the ONLY non-derived input in the generation derivation chain.
 
-Supporting axioms (used throughout but not specific to generation physics):
+Supporting definitions (part of the framework, not separate axioms):
 
-- **(A1)** Cl(3) algebra: {G_mu, G_nu} = 2 delta_{mu,nu} on C^8.
-- **(A2)** Z^3 lattice with staggered Hamiltonian.
-- **(A3)** Hilbert space is tensor product over lattice sites.
-- **(A4)** Unitary evolution: U(t) = exp(-iHt).
+- **Cl(3) algebra:** {G_mu, G_nu} = 2 delta_{mu,nu} on C^8.
+- **Z^3 lattice** with staggered Hamiltonian.
+- **Hilbert space** is tensor product over lattice sites.
+- **Unitary evolution:** U(t) = exp(-iHt).
 
 ---
 
@@ -89,7 +92,7 @@ are exact quantum numbers from the translation invariance of Z^3.
 
 Furthermore, C(d,1) = d, so d = 3 is the unique spatial dimension giving
 exactly 3 species at the lightest nonzero mass level. This is the
-dimension-generation lock: the same axiom that fixes d = 3 also fixes
+dimension-generation lock: the same structure that fixes d = 3 also fixes
 N_g = 3.
 
 **Status:** EXACT
@@ -354,8 +357,10 @@ explanation of why these FAILs are expected and do not affect the theorem.
 ## Conclusion
 
 **Steps 1-10 are EXACT.** They are algebraic theorems, topological results,
-or exhaustive computational verifications derived from axioms A1-A4 alone
-(with A5 required for the physical identification in the final synthesis).
+or exhaustive computational verifications derived from the framework
+definition (Cl(3) on Z^3, Hamiltonian formulation). The interpretive
+commitment -- taking this definition as the physical theory -- is required
+for the final physical identification.
 
 **Steps 11-12 are BOUNDED** (order-of-magnitude). Step 11 depends on a
 model parameter (JW beta coefficient). Step 12 depends on a
@@ -369,11 +374,12 @@ observed value 4.87.
 
 This is the operational Standard Model definition of fermion generations.
 
-**The ONLY non-derived input is A5** (lattice-is-physical), which is
-shared with all other framework predictions (gauge groups, spacetime
-dimension, anomaly cancellation, matter content). Generation physicality
-has exactly the same logical status as every other physical prediction
-of the framework.
+**The ONLY non-derived input is the interpretive commitment** -- that
+the Cl(3) on Z^3 Hamiltonian is the physical theory, not a
+regularization. This is the same commitment that underlies all other
+framework predictions (gauge groups, spacetime dimension, anomaly
+cancellation, matter content). Generation physicality has exactly the
+same logical status as every other physical prediction of the framework.
 
 ---
 
@@ -381,22 +387,25 @@ of the framework.
 
 **Theorem (Generation Axiom Boundary).**
 
-**(I) Sufficiency.** With A5, the chain (Steps 1-10) produces exactly 3
-irremovable species carrying identical gauge representations with
-different EWSB-induced masses. These satisfy the operational definition
-of fermion generations.
+**(I) Sufficiency.** Taking the framework seriously, the chain (Steps
+1-10) produces exactly 3 irremovable species carrying identical gauge
+representations with different EWSB-induced masses. These satisfy the
+operational definition of fermion generations.
 
-**(II) Necessity.** Without A5, an explicit escape route exists: a path
-integral formulation with det(D_stag)^{1/4} reduces 3 species to
-1 species times 3 taste copies (artifacts).
+**(II) Necessity.** Without the commitment (treating the framework as a
+regulator), an explicit escape route exists: a path integral formulation
+with det(D_stag)^{1/4} reduces 3 species to 1 species times 3 taste
+copies (artifacts).
 
-**(III) Irreducibility.** A5 cannot be derived from {A1, A2, A3, A4}.
-Standard LQCD (staggered fermions on Z^3 treated as a regulator) is a
-consistent framework using exactly {A1-A4} without A5.
+**(III) Irreducibility.** The commitment cannot be derived from the
+mathematical structure alone. Standard LQCD (staggered fermions on Z^3
+treated as a regulator) is a consistent framework using the same
+algebraic and dynamical ingredients without this commitment.
 
-**(IV) Completeness.** A5 is the ONLY non-derived assumption. Every other
-step is a theorem from A1-A4, a computation verified from A1-A4, or a
-consequence of A5.
+**(IV) Completeness.** The interpretive commitment is the ONLY non-derived
+input. Every other step is a theorem from the framework definition, a
+computation verified from the framework definition, or a direct
+consequence of taking the framework seriously.
 
 **Script:** `scripts/frontier_generation_axiom_boundary.py`
 **Verification:** PASS=31 FAIL=0. All 31 checks classified as exact
@@ -407,29 +416,30 @@ computational or logical checks.
 
 ## Full Step Classification
 
-| Step | Type | Axioms Used |
-|------|------|-------------|
-| 8 BZ corners exist | THEOREM | A1+A2 |
-| BZ corners are physical momenta | AXIOM-DEPENDENT | A5 |
-| Hamming weight groups as 1+3+3+1 | THEOREM | A1+A2 |
-| 3 hw=1 species are lightest | COMPUTATION | A1+A2 |
-| Each carries distinct momentum | THEOREM | A2 |
-| No subspace preserves Cl(3) | COMPUTATION | A1+A3 |
-| Rooting undefined in Hamiltonian | THEOREM | A1+A3+A4 |
-| Taste doublers irremovable | AXIOM-DEPENDENT | A5 |
-| Commutant dim = 8 | COMPUTATION | A1 |
-| Commutant is K-independent | THEOREM | A1 |
-| Projected commutant = M(2,C) | COMPUTATION | A1+A2 |
-| Casimir = 3/4 at all corners | COMPUTATION | A1+A2 |
-| C3[111] maps corners cyclically | COMPUTATION | A1+A2 |
-| Non-Cl(3) generators distinguish | COMPUTATION | A1+A2 |
-| EWSB gives 1+2 split | THEOREM | A1+A2 |
+| Step | Type | Framework elements used |
+|------|------|------------------------|
+| 8 BZ corners exist | THEOREM | Cl(3) + Z^3 |
+| BZ corners are physical momenta | COMMITMENT-DEPENDENT | interpretive commitment |
+| Hamming weight groups as 1+3+3+1 | THEOREM | Cl(3) + Z^3 |
+| 3 hw=1 species are lightest | COMPUTATION | Cl(3) + Z^3 |
+| Each carries distinct momentum | THEOREM | Z^3 |
+| No subspace preserves Cl(3) | COMPUTATION | Cl(3) + Hilbert space |
+| Rooting undefined in Hamiltonian | THEOREM | Cl(3) + Hilbert space + unitarity |
+| Taste doublers irremovable | COMMITMENT-DEPENDENT | interpretive commitment |
+| Commutant dim = 8 | COMPUTATION | Cl(3) |
+| Commutant is K-independent | THEOREM | Cl(3) |
+| Projected commutant = M(2,C) | COMPUTATION | Cl(3) + Z^3 |
+| Casimir = 3/4 at all corners | COMPUTATION | Cl(3) + Z^3 |
+| C3[111] maps corners cyclically | COMPUTATION | Cl(3) + Z^3 |
+| Non-Cl(3) generators distinguish | COMPUTATION | Cl(3) + Z^3 |
+| EWSB gives 1+2 split | THEOREM | Cl(3) + Z^3 |
 | EWSB gives 1+1+1 hierarchy | BOUNDED | model-dependent |
-| Species are generations | AXIOM-DEPENDENT | A5 |
+| Species are generations | COMMITMENT-DEPENDENT | interpretive commitment |
 
-**Summary:** 6 theorems, 7 computations, 3 axiom-dependent, 1 bounded.
-The 3 axiom-dependent steps all reduce to the same axiom A5. The 1
-bounded step (1+1+1 hierarchy) does not affect the exact chain.
+**Summary:** 6 theorems, 7 computations, 3 commitment-dependent,
+1 bounded. The 3 commitment-dependent steps all reduce to the same
+interpretive commitment. The 1 bounded step (1+1+1 hierarchy) does not
+affect the exact chain.
 
 ---
 
@@ -439,19 +449,22 @@ bounded step (1+1+1 hierarchy) does not affect the exact chain.
 > (exact), acquire different masses via EWSB (exact 1+2 split), and
 > cannot be removed by any operation consistent with the Cl(3) algebra
 > (exact). Their identification as fermion generations is conditional
-> on the framework's foundational axiom that the Planck-scale lattice
-> is the physical substrate. This axiom is irreducible: it cannot be
-> derived from the algebraic or dynamical axioms, but it is the same
-> axiom that underlies all other framework predictions.
+> on the framework's interpretive commitment that the Planck-scale
+> lattice Hamiltonian is the physical theory. This commitment is
+> irreducible: it cannot be derived from the mathematical structure
+> alone, but it is the same commitment that underlies all other
+> framework predictions.
 
 ---
 
 ## What This Document Does NOT Claim
 
-- "Generation physicality gate: closed" -- the gate is conditional on A5.
+- "Generation physicality gate: closed" -- the gate is conditional on
+  the interpretive commitment.
 - "Three physical fermion generations derived from first principles" --
-  the derivation requires A5, which is an ontological axiom.
-- "The lattice-is-physical axiom is proved" -- A5 is irreducible.
+  the derivation requires the interpretive commitment, which is a
+  physical postulate.
+- "The interpretive commitment is proved" -- it is irreducible.
 - Any upgrade of the mass hierarchy beyond BOUNDED status.
 
 ---
