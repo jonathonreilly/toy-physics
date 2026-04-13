@@ -64,7 +64,12 @@ All structural predictions correct: c12>c23, c12_u>c12_d, c13 suppressed.
 τ_p ~ 4×10^47 years from Cl(3) leptoquark operators + M_X = M_Planck.
 Sharp falsifiable: Hyper-K detection at 10^35 rules out framework.
 
-### Lorentz Violation — agent running
+### Lorentz Violation DERIVED (29/29 PASS)
+Cubic harmonic fingerprint Y₄₀ + √(5/14)(Y₄₄ + Y₄₋₄) from Oh symmetry.
+Suppression (E/E_Planck)² ~ 10⁻³⁸ at 1 GeV. Below all bounds by 7+ orders.
+Unique fingerprint distinguishes from LQG/DSR/foam.
+
+### Black Hole Entropy — agent running
 
 ## What Remains
 
