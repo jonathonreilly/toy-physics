@@ -327,16 +327,23 @@ def part3_abstract_vs_ks(gammas, G123):
 
 def part4_sector_decomposition(gammas, P):
     """
-    Decompose every Cl(3) basis element into Z_3 sectors.
+    Decompose every Cl(3) basis element into Z_3 sectors under conjugation.
+
+    The Z_3 charge of an operator M under conjugation is defined by:
+      P M P^{-1} = omega^q M  (if M has pure charge q)
+
+    For mixed operators, the charge-q component is:
+      M_q = (M + omega^{-q} (P M P^{-1}) + omega^{-2q} (P^2 M P^{-2})) / 3
     """
     print("\n" + "=" * 72)
-    print("PART 4: Z_3 SECTOR DECOMPOSITION OF Cl(3) BASIS")
+    print("PART 4: Z_3 SECTOR DECOMPOSITION OF Cl(3) BASIS (CONJUGATION)")
     print("=" * 72)
 
     G1, G2, G3 = gammas
     Pi = P.conj().T
     omega = np.exp(2j * np.pi / 3)
     P2 = P @ P
+    P2i = P2.conj().T
 
     basis = {
         'I':     np.eye(8, dtype=complex),
@@ -349,18 +356,19 @@ def part4_sector_decomposition(gammas, P):
         'G_123': G1 @ G2 @ G3,
     }
 
-    print(f"\n  {'Element':>8s}  {'||F_0 M||':>10s}  {'||F_1 M||':>10s}  {'||F_2 M||':>10s}  Z_3 charge")
+    print(f"\n  Z_3 charge under conjugation: P M P^{{-1}} decomposition")
+    print(f"  {'Element':>8s}  {'||M_0||':>10s}  {'||M_1||':>10s}  {'||M_2||':>10s}  Z_3 charge")
     print(f"  {'-'*8:>8s}  {'-'*10:>10s}  {'-'*10:>10s}  {'-'*10:>10s}  {'---'}")
 
     for name, M in basis.items():
+        # Compute P M P^{-1} and P^2 M P^{-2}
+        conj1 = P @ M @ Pi
+        conj2 = P2 @ M @ P2i
         norms = []
         for q in range(3):
-            Fq = (np.eye(8) + omega**(-q) * P + omega**(-2*q) * P2) / 3.0
-            # The Z_3 projected operator: project by conjugation
-            # P M P^{-1} = sum_q omega^q M_q, so M_q = F_q M
-            # (left projection for the transformation under conjugation)
-            proj = Fq @ M
-            norms.append(np.linalg.norm(proj, 'fro'))
+            # Charge-q component under conjugation
+            Mq = (M + omega**(-q) * conj1 + omega**(-2*q) * conj2) / 3.0
+            norms.append(np.linalg.norm(Mq, 'fro'))
 
         # Determine charge
         tol = 1e-10
@@ -383,11 +391,12 @@ def part4_sector_decomposition(gammas, P):
     for a in alphas:
         eps_taste[alpha_idx[a], alpha_idx[a]] = (-1.0) ** (a[0] + a[1] + a[2])
 
+    conj1_eps = P @ eps_taste @ Pi
+    conj2_eps = P2 @ eps_taste @ P2i
     norms_eps = []
     for q in range(3):
-        Fq = (np.eye(8) + omega**(-q) * P + omega**(-2*q) * P2) / 3.0
-        proj = Fq @ eps_taste
-        norms_eps.append(np.linalg.norm(proj, 'fro'))
+        Mq = (eps_taste + omega**(-q) * conj1_eps + omega**(-2*q) * conj2_eps) / 3.0
+        norms_eps.append(np.linalg.norm(Mq, 'fro'))
 
     if norms_eps[1] < 1e-10 and norms_eps[2] < 1e-10:
         eps_charge = "0 (pure)"
@@ -397,24 +406,26 @@ def part4_sector_decomposition(gammas, P):
     print(f"  {'eps':>8s}  {norms_eps[0]:10.6f}  {norms_eps[1]:10.6f}  {norms_eps[2]:10.6f}  {eps_charge}")
 
     # Key check
-    check("eps(taste) is pure charge 0",
+    check("eps(taste) is pure charge 0 under conjugation",
           norms_eps[1] < 1e-10 and norms_eps[2] < 1e-10,
-          f"||F_1 eps|| = {norms_eps[1]:.2e}, ||F_2 eps|| = {norms_eps[2]:.2e}")
+          f"||M_1|| = {norms_eps[1]:.2e}, ||M_2|| = {norms_eps[2]:.2e}")
 
     # Check if ANY Cl(3) element has pure charge 1
     pure_charge_1 = []
     for name, M in basis.items():
+        conj1 = P @ M @ Pi
+        conj2 = P2 @ M @ P2i
         norms = []
         for q in range(3):
-            Fq = (np.eye(8) + omega**(-q) * P + omega**(-2*q) * P2) / 3.0
-            norms.append(np.linalg.norm(Fq @ M, 'fro'))
+            Mq = (M + omega**(-q) * conj1 + omega**(-2*q) * conj2) / 3.0
+            norms.append(np.linalg.norm(Mq, 'fro'))
         if norms[0] < 1e-10 and norms[2] < 1e-10 and norms[1] > 1e-10:
             pure_charge_1.append(name)
 
     print(f"\n  Cl(3) elements with pure Z_3 charge 1: {pure_charge_1 if pure_charge_1 else 'NONE'}")
     check("No Cl(3) basis element has pure Z_3 charge 1",
           len(pure_charge_1) == 0,
-          "the individual generators mix under Z_3")
+          "all generators mix under Z_3 conjugation")
 
 
 # =============================================================================
