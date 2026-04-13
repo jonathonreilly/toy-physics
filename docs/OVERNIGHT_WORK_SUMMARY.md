@@ -97,6 +97,7 @@ In LIGO band, testable with existing data. Log-insensitive to surface location.
 | 6 | Monopole mass | PASS | M = 1.43 M_Pl |
 | 7 | GW echo | 20/20 | t = 67.66 ms, 14.8 Hz |
 | 8 | Higgs mass CW | 7/9 | CW mechanism derived, m_H needs y_t |
+| 9 | CKM c23 analytic | 16/16 | c23_u improved 55%→38% off, ratio method |
 
 ## What Remains
 
