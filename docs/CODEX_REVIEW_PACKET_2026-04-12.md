@@ -9,14 +9,14 @@ remaining gaps are.
 
 ## Top-Level Summary
 
-Generation and S^3 are **CLOSED**. The three remaining live gates are
+Generation and `S^3` are **CLOSED**. The three remaining live gates are
 **BOUNDED** with genuine remaining gaps that are not interpretive
 commitments but real missing physics or mathematics.
 
 | Lane | Status | Primary remaining gap |
 |------|--------|----------------------|
 | 1. Generation physicality | CLOSED | -- (closed in the framework) |
-| 2. S^3 compactification | CLOSED | -- (every input verified, theorems applied) |
+| 2. S^3 compactification | CLOSED | -- (accepted topology infrastructure applied to verified inputs) |
 | 3. DM relic mapping | BOUNDED | Friedmann equation for radiation era requires GR |
 | 4. Renormalized y_t | BOUNDED | Matching coefficient genuinely unknown at ~10% |
 | 5. CKM | BOUNDED | Quantitative hierarchy unsolved |

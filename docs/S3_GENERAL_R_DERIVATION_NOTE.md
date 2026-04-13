@@ -1,6 +1,6 @@
 # S^3 Topology: General-R Derivation
 
-**Status:** PROMOTE — derived for all R >= 2; two independent proof paths (computational + general)  
+**Status:** CLOSED — derived for all R >= 2; two independent proof paths (computational + general)  
 **Type:** Constructive computation (R=2..6) + theorem chain with standard mathematical citation (Perelman 2003)  
 **Date:** 2026-04-13
 
@@ -189,7 +189,7 @@ The derivation chain is:
    framework's own Hamiltonian structure (axiom A3), not an ad hoc
    requirement.
 
-3. **Lane status: PROMOTE to CLOSED.**
+3. **Lane status: CLOSED.**
    Both uniqueness and selection are discharged. The S^3 identification
    is derived for all R via two independent proof paths:
    - PATH 1 (computational, zero citations): Recognition algorithm and
