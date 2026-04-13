@@ -74,6 +74,18 @@ New exact/bounded split extracted after that:
   the theorem-grade reduction from the exact finite-rank harmonic exterior
   field to the isotropic-vacuum surface
 
+New exact/bounded asymptotic reduction extracted after that:
+
+- for the exact cubic-symmetric finite-rank source class, the renormalized
+  support source and the exact exterior field are both `O_h`-invariant
+- the first non-monopole exterior correction is the unique cubic `l=4` mode
+- the relative exterior anisotropy decays with a bounded slope consistent with
+  quartic suppression, and is already `~1.6e-3` by radius `r = 6`
+- see `docs/CUBIC_MONOPOLE_REDUCTION_NOTE.md`
+- this means the asymptotic isotropic reduction is no longer ad hoc for that
+  exact source class; the remaining gap is why the physical source lands in,
+  or flows to, that cubic-symmetric sector strongly enough near the source
+
 ## Do not retread these solved or near-solved substeps
 
 The attack should **not** spend time redoing the following:
@@ -197,6 +209,9 @@ Current bridge result:
 - the new finite-rank residual test sharpens that further:
   the direct common-source candidate is not yet vacuum-closed, while the
   monopole/isotropic projection of the same exact field is nearly vacuum
+- the new cubic-monopole reduction result sharpens it again:
+  for the exact `O_h`-symmetric source class, the isotropic reduction is
+  asymptotically justified and the first anisotropic correction is controlled
 
 Required outcome:
 
@@ -204,6 +219,8 @@ Required outcome:
   that gives the spatial metric
 - remove the current mismatch where the spatial branch looks stronger than the
   temporal branch
+- derive why the physical source law reduces to the cubic-symmetric source
+  class strongly enough in the exterior / near-source matching region
 
 ### Attack 3: only after metric closure, revisit horizon / echo claims
 
