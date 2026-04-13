@@ -32,6 +32,15 @@ New exact foothold now extracted on this branch:
 - this removes one heuristic from the current point-source closure, but it does
   **not** yet produce the full strong-field spacetime metric
 
+New exact foothold extracted after that:
+
+- the same resolvent program now extends beyond the rank-one source to a
+  finite-support diagonal attractive source class
+- the exact field can be written as `phi = G_0 P (I - V G_S)^-1 m`
+- see `docs/DISTRIBUTED_SOURCE_SPACETIME_CLOSURE_NOTE.md`
+- this removes the "point source only" limitation from the exact source-model
+  foothold, but still does **not** derive the physical matter source class
+
 New bounded bridge now extracted on this branch:
 
 - for the standard static isotropic vacuum system, the spatial conformal factor
@@ -41,6 +50,16 @@ New bounded bridge now extracted on this branch:
 - see `docs/STATIC_ISOTROPIC_VACUUM_BRIDGE_NOTE.md`
 - this is **not** a framework derivation of full GR; it sharpens the temporal
   sector target by showing what a common static vacuum closure would force
+
+New bounded bridge sharpened after that:
+
+- the finite-support source theorem now provides one common exterior harmonic
+  field that can drive both `psi` and `alpha` through
+  `psi = 1 + phi`, `alpha psi = 1 - phi`
+- see `docs/DISTRIBUTED_SOURCE_SPACETIME_CLOSURE_NOTE.md`
+- this is still **bounded**, because the static isotropic vacuum bridge itself
+  has not yet been derived from the lattice closure rather than imported as
+  the correct exterior target
 
 ## Do not retread these solved or near-solved substeps
 
@@ -131,8 +150,10 @@ Current gap:
 Current status update:
 
 - the rank-one local-source version of that enhancement law is now exact
-- the remaining issue is extending that exact closure beyond the rank-one local
-  model to the actual physical matter source / strong-field Hamiltonian
+- the same exact closure now extends to a finite-support diagonal attractive
+  source class
+- the remaining issue is upgrading that exact source class to the actual
+  physical matter source / strong-field Hamiltonian
 
 Required outcome:
 
@@ -155,6 +176,9 @@ Current bridge result:
   function once the harmonic spatial data are fixed
 - so the real unresolved issue is no longer “guess a lapse,” but “derive why
   the lattice strong-field closure reduces to this common harmonic system”
+- the finite-support source theorem now provides one exact exterior harmonic
+  object that both sectors can share, but the reduction to the static isotropic
+  vacuum bridge is still a bounded step
 
 Required outcome:
 
