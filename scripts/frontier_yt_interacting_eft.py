@@ -153,8 +153,8 @@ GELL_MANN = gell_mann_matrices()
 def random_su3():
     """Generate a random SU(3) matrix via exponentiation of Lie algebra."""
     coeffs = np.random.randn(8) * 0.3
-    A = sum(c * lam for c, lam in zip(coeffs, GELL_MANN))
-    A = (A - A.conj().T) / 2  # anti-Hermitian
+    # Gell-Mann matrices are Hermitian, so i*lambda is anti-Hermitian
+    A = 1j * sum(c * lam for c, lam in zip(coeffs, GELL_MANN))
     return expm(A)
 
 
@@ -172,8 +172,8 @@ def thermalized_su3(beta_lat: float, n_sweeps: int = 20):
     # Width of fluctuations: sigma ~ 1/sqrt(beta) for proper thermalization
     sigma = 1.0 / np.sqrt(max(beta_lat, 0.5))
     coeffs = np.random.randn(8) * sigma
-    A = sum(c * lam for c, lam in zip(coeffs, GELL_MANN))
-    A = (A - A.conj().T) / 2  # anti-Hermitian
+    # Gell-Mann matrices are Hermitian, so i*lambda is anti-Hermitian
+    A = 1j * sum(c * lam for c, lam in zip(coeffs, GELL_MANN))
     return expm(A)
 
 
