@@ -173,13 +173,16 @@ language. Exact blockers to gravity-companion promotion:
    - do not keep re-fighting the same coarse-graining objection
    - the remaining issue is not “does factorization exist?” but “can the full
      relic bridge be closed without imported cosmology?”
-6. current transport routes are still bounded
-   - `D_q*T`: present route plugs framework `alpha_s` into AMY/Moore kinetic
-     theory and adopts literature collision-integral / NLO factors
-   - `v_w`: present route plugs framework couplings into pressure/friction
-     estimates and then adopts a literature-style `0.01-0.10` range
-   - those are useful bounded transport closures, not yet native lattice
-     derivations
+6. latest transport routes are stronger, but still bounded at the paper bar
+   - `D_q*T`: the Green-Kubo route is a real improvement, but the primary
+     value still comes from the analytic continuum-limit Coulomb-log formula
+     with an inserted constant `C_0 = 0.5`; the finite-lattice spectral route
+     reuses the same analytic width rather than closing the transport
+     coefficient natively from lattice data
+   - `v_w`: the Boltzmann-closure route is also stronger, but it still leans
+     on perturbative CW / bag-model driving pressure and the imported
+     non-perturbative enhancement `R_NP = 1.5` from 2HDM lattice studies
+   - so the transport sector is narrower, not closed
 7. bounded framework inputs still need honest handling
    - `g = 1` is still a framework-defining coefficient, not a theorem
    - `k = 0` remains bounded if used in Newtonian cosmology
@@ -252,28 +255,34 @@ language. Exact blockers to gravity-companion promotion:
    - `b_2 = 19/6` bookkeeping is corrected
    - the V-scheme to `\\overline{MS}` conversion itself is a real step forward
    - do not spend more time re-litigating those fixed points
-2. the new boundary-resolution note is **not** full closure
-   - the current script runs `g_3^\\overline{MS}` up from observed
-     `alpha_s(M_Z)` to get `g_3(M_Pl)`
-   - it then imposes a different high-scale coupling on `y_t` alone via the
-     converted lattice boundary
-   - that breaks the exact boundary relation `y_t = g_s / sqrt(6)` by using
-     one coupling for `y_t` and another for gauge evolution
+2. the new boundary-resolution note is **still not** full closure
+   - the old split-boundary objection is narrower now: the script does derive
+     one framework coupling that sets both `g_3(M_Pl)` and `y_t(M_Pl)`
+   - but the fully unified boundary is non-perturbative and hits a Landau pole
+     under the SM RGE
+   - the quoted successful `m_t` prediction still uses the framework Yukawa
+     boundary together with the perturbative SM gauge trajectory generated from
+     observed `alpha_s(M_Z)`
+   - so the remaining blocker is no longer “two different couplings at the
+     same boundary,” but a real strong-to-perturbative crossover / matching
+     problem
 3. do **not** redo solved sub-steps
    - `Cl(3)` preservation under RG is already the right surface
    - Feshbach on the actual Hamiltonian is already verified
    - the 1-loop bookkeeping bug is fixed
    - the lattice matching coefficient itself is already narrowed to
      sub-percent scale
-4. the live blocker is now one **self-consistent** high-scale boundary for
-   both `g_3` and `y_t`
-   - derive `g_3^\\overline{MS}(M_Pl)` from the framework boundary itself, not
-     from observed `alpha_s(M_Z)`
-   - or give one explicit imported low-energy anchor and stop calling the lane
-     closed
-5. thresholded running still matters, but the conceptual mismatch is now clear
-   - the same boundary object must drive both `g_3` and `y_t`
-   - otherwise the lane stays bounded even if the final `m_t` number looks good
+4. the live blocker is now one **self-consistent** framework-to-SM crossover
+   - derive how the strong framework boundary hands off to the perturbative
+     SM gauge trajectory
+   - or isolate the low-energy gauge anchor explicitly and keep the lane
+     bounded
+5. thresholded running still matters, but the conceptual mismatch is now
+   “framework strong boundary vs perturbative SM running”
+   - the common boundary relation `y_t = g_3/sqrt(6)` is now enforced on the
+     framework surface
+   - what is still missing is the framework derivation of the gauge-side
+     crossover to the perturbative trajectory used below `M_Pl`
 
 **What counts as success**
 
@@ -334,14 +343,19 @@ language. Exact blockers to gravity-companion promotion:
    - it explicitly solves `c_23^d` by matching `V_cb` to PDG
    - do **not** cite that as a first-principles closure
 4. the real remaining blocker is quantitative closure
-   - absolute `c_23` / `S_23` normalization independent of PDG input
-   - `c_13` suppression and phase control strong enough for `V_ub`
-   - a phase structure strong enough to resolve the `J`-`V_ub` tension
+   - absolute `c_23` / `S_23` normalization is improved but still bounded
+     rather than theorem-grade
+   - `c_13` suppression and phase control are still not jointly derived well
+     enough for `V_ub` and `J`
+   - the `J`-`V_ub` tension is reduced, not eliminated
 5. current best reading of the gap
-   - `K` is only O(1)-derived and still needs a non-perturbative form factor
-   - the lattice `c_13` story can fit `V_ub` or `J`, but not both with the
-     current single-phase embedding
-   - invariants are consistency checks, not closure
+   - the new absolute-`S_23` route predicts `V_cb` within about `4.6%`
+     without using PDG `V_cb`, which is real progress
+   - but `K` still has `O(20%)` spread and a remaining EWSB sector correction,
+     so the absolute normalization is not yet closed
+   - the new `Z_3^3` phase work boosts `J` substantially, but the best current
+     joint result still overshoots `V_ub` and undershoots `delta_CP`
+   - invariants are still consistency checks, not closure
 
 **Preferred execution routes**
 
@@ -358,13 +372,16 @@ language. Exact blockers to gravity-companion promotion:
 
 3. derive the **absolute** `S_23` / `c_23` normalization analytically
    - do not treat cluster compute as the first choice
-   - use the continuum / Symanzik taste-splitting machinery if possible
-   - this is now the highest-value unsolved piece for making `V_cb` truly
-     first-principles
+   - use the continuum / Symanzik taste-splitting machinery and the new
+     multi-`L` normalization evidence
+   - the concrete remaining target is to remove the residual sector-dependent
+     `K` / EWSB correction and reduce the current `~5%` `V_cb` gap
 
 4. close `V_ub` by deriving `c_13` and the relevant up/down phase structure
    - the latest note shows the real issue is the `J`-`V_ub` tension
    - deriving `c_13` without fixing the phase structure is not enough
+   - deriving a better phase embedding without fixing `c_13` is also not
+     enough
 
 5. use invariants only as a consistency layer
    - they do not independently close `V_cb`
@@ -378,7 +395,7 @@ language. Exact blockers to gravity-companion promotion:
 **Routes to stop overusing**
 
 - do not keep presenting “needs more compute” as the only path without first
-  exhausting the analytic `S_23` / `c_13` routes
+  exhausting the analytic `S_23` / `c_13` / phase routes
 - do not chase Higgs `Z_3` universality as the main blocker
 - do not spend time deriving all four absolute NNI coefficients if `S_23`
   and `c_13` can close the lane sooner
