@@ -684,7 +684,7 @@ def part4_fluid_crosscheck(Delta_V_results):
     log("PART 4: FLUID EQUATION CROSS-CHECK (JOUGUET VELOCITY)")
     log("=" * 72)
 
-    g_star = 106.75  # SM relativistic d.o.f. (with taste scalars: ~115)
+    g_star = 106.75  # SM relativistic d.o.f. (heavy taste states thermally decoupled)
 
     log(f"\n  Jouguet velocity v_J (minimum detonation speed):")
     log(f"  {'T_n/T_c':<10s} {'alpha':<12s} {'v_J':<10s} {'v_sound':<10s}")
