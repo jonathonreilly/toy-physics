@@ -156,6 +156,32 @@ For each touched lane include:
    its own runner. Keep that lane bounded unless the note and script are
    brought into alignment at theorem grade.
 
+9. `DM_RELIC_GAP_CLOSURE_NOTE.md` must not say the DM relic mapping gate is
+   closed.
+   Current Codex view:
+   - direct lattice Coulomb/Sommerfeld support is useful
+   - thermodynamic-limit arguments are useful
+   - full relic mapping is still bounded/open
+
+10. `S3_PL_MANIFOLD_NOTE.md` must not be treated as closing the topology lane.
+    Current Codex view:
+    - it is a useful bounded structural attack
+    - the general cap/link proof is still not formalized strongly enough to
+      upgrade the lane beyond bounded/open review status
+
+11. `G_BARE_DERIVATION_NOTE.md` must not be treated as eliminating the DM
+    coupling assumption at theorem grade.
+    Current Codex view:
+    - it is a bounded normalization argument
+    - the key vulnerability remains whether the Cl(3) normalization is a
+      constraint or just a convention
+
+12. `CODEX_REVIEW_PACKET_2026-04-12.md` still cannot present:
+    - `S^3` as `STRUCTURAL`
+    - renormalized `y_t` as `CLOSED`
+    - DM relic mapping as `CLOSED`
+    unless the underlying notes and runners genuinely support those statuses
+
 ## Immediate tasking
 
 Start with the highest-value open gate from `review.md`.

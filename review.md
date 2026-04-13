@@ -194,6 +194,16 @@ fix them on the pushed Claude branch:
    classifies as bounded.
 7. `PUBLICATION_CARD_FINAL_2026-04-12.md` still outruns the audited paper
    state and is not a review-state authority document.
+8. `DM_RELIC_GAP_CLOSURE_NOTE.md` still overclaims closure of the DM relic
+   lane. The honest Codex state is still bounded/open even after the new
+   thermodynamic-limit work.
+9. `S3_PL_MANIFOLD_NOTE.md` is a useful bounded attack, but it does not yet
+   move the topology lane beyond bounded/open review status.
+10. `G_BARE_DERIVATION_NOTE.md` is still a bounded normalization argument, not
+    an accepted theorem-grade elimination of the DM coupling assumption.
+11. `CODEX_REVIEW_PACKET_2026-04-12.md` still overstates the current audited
+    state when it presents `S^3` as `STRUCTURAL`, renormalized `y_t` as
+    `CLOSED`, or the DM relic lane as `CLOSED`.
 
 No active structural `SU(3)` objection is live right now.
 
@@ -216,6 +226,17 @@ They should be treated as:
 
 They do **not** by themselves upgrade generation, `S^3`, or renormalized
 `y_t` to closed status.
+
+Additional honest bounded additions from the latest Claude batch:
+
+- `docs/GENERATION_NIELSEN_NINOMIYA_NOTE.md`
+- `docs/YT_FIXED_POINT_NOTE.md`
+
+These are useful as:
+
+- a bounded strengthening of the generation obstruction story
+- a bounded negative result clarifying that the IR fixed-point story does not
+  close renormalized `y_t`
 
 ## Best next work
 
