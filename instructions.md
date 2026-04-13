@@ -40,6 +40,51 @@ Only these three are still live flagship gates:
 2. **Renormalized `y_t` matching**
 3. **CKM / quantitative flavor closure**
 
+## Deferred backlog after the 3 live gates
+
+Do **not** work these until DM, `y_t`, and CKM are actually closed or Codex
+explicitly reprioritizes them.
+
+These are honest framework limitations to acknowledge and, only later, attack:
+
+1. **Individual fermion masses not fully predicted**
+   - safe current claim:
+     - hierarchy structure is derived
+     - one heavy / two lighter family structure is in
+     - top mass has a bounded quantitative route
+   - not yet derived:
+     - `m_e`, `m_mu`, `m_u`, `m_d`, `m_s`, `m_c`, `m_b` individually
+   - if worked later:
+     - treat this as a post-flagship flavor-completion program, not as a
+       hidden promise in the current paper
+
+2. **`alpha_EM = 1/137` not derived**
+   - safe current claim:
+     - `sin^2(theta_W) = 3/8` at unification is structural
+     - low-energy value uses running / threshold structure
+   - not yet derived:
+     - the absolute electromagnetic coupling itself from the lattice
+   - if worked later:
+     - attack this as a genuine lattice normalization / coupling-selection
+       problem, not as a minor afterthought
+
+3. **Strong CP problem untouched**
+   - safe current claim:
+     - the framework currently has no explanation for `theta_QCD = 0`
+   - if worked later:
+     - this is a separate program, not a cleanup note
+
+4. **Full nonlinear GR not derived**
+   - safe current claim:
+     - weak-field gravity is retained
+     - weak-field WEP and time dilation are retained corollaries
+     - 1PN-style extensions may be useful bounded companions
+   - not safe:
+     - full Einstein-equation closure
+   - if worked later:
+     - attack this as a separate gravity-completion lane after the flagship
+       three gates are done
+
 ## Non-negotiable paper caveats
 
 These caveats must stay explicit in any honest flagship submission:
@@ -97,33 +142,35 @@ language. Exact blockers to gravity-companion promotion:
 
 **Current blockers**
 
-1. direct observable route is not the same as relic closure
-   - the new T-matrix / direct-observable notes correctly narrow the old
-     “is `g_bare` the same coupling?” objection
-   - if `sigma_v` is computed directly from `H`, that coupling-identity issue
-     is mostly dissolved
-   - that does **not** close the lane by itself because `R = Omega_DM/Omega_b`
-     still needs the relic-ratio / cosmology bridge
-2. relic-ratio / cosmology cancellation bridge
-   - no hardcoded `True`
-   - no “pure graph theory / zero imports” rhetoric unless the cancellation
-     itself is actually derived and checked
-3. Boltzmann / Stosszahlansatz coarse-graining
-   - improved, but still not yet automatically a theorem-grade first-principles
-     bridge
-4. route discipline
-   - if using a direct `H -> T -> sigma_v` route, keep the claim at the
-     cross-section level unless the relic bridge is also discharged
-   - if using a plaquette / coupling route, explain clearly why the
-     Hamiltonian coefficient is part of the framework definition rather than a
-     separately derived observable
+1. the live blocker is now `eta`, not the old coupling-identity objection
+   - `sigma_v` as a direct observable of `H` is useful
+   - the invariant-bridge note correctly narrows the old normalization gap
+   - neither closes `R = Omega_DM / Omega_b` because the denominator still
+     uses imported baryon abundance
+2. relic bridge is now:
+   - numerator largely derived
+   - denominator still imported through baryogenesis / `eta`
+3. Stosszahlansatz is now a strong sub-result, but not the full lane
+   - do not keep re-fighting the same coarse-graining objection
+   - the remaining issue is not “does factorization exist?” but “can the full
+     relic bridge be closed without imported cosmology?”
+4. bounded framework inputs still need honest handling
+   - `g = 1` is still a framework-defining coefficient, not a theorem
+   - `k = 0` remains bounded if used in Newtonian cosmology
+   - no “zero imports / pure graph theory” language while `eta` is imported
 
 **What counts as success**
 
-- one authority note states exactly what is derived and what still uses
-  coarse-graining
-- the runner checks the bridge it claims to check
-- no mismatch between note and runner
+- best-case success:
+  - derive `eta` from the framework by closing the baryogenesis chain
+  - then update the relic bridge note so `R` is genuinely parameter-free
+- second-best success:
+  - prove a tighter framework-internal `eta` window from baryogenesis inputs
+  - and state the lane as “derived up to one cosmological input” with no
+    remaining ambiguity
+- minimum acceptable success:
+  - one authority note states plainly that the live blocker is `eta`
+  - the note, runner, and packet stop pretending the lane is otherwise closed
 
 **What does not count**
 
@@ -131,6 +178,14 @@ language. Exact blockers to gravity-companion promotion:
 - calling cosmological cancellation exact without a real derivation check
 - calling the whole lane “pure graph theory” while still using imported bridge
   structure
+
+**Preferred attack order**
+
+1. derive the electroweak phase-transition strength `v(T_c)/T_c`
+   nonperturbatively on the framework surface
+2. derive the baryogenesis transport / CP-source prefactor from the `Z_3`
+   phase structure rather than parameterizing it
+3. only after that, promote `eta` and then the full relic ratio
 
 ### Target B: Renormalized `y_t`
 
@@ -149,36 +204,48 @@ language. Exact blockers to gravity-companion promotion:
 
 **Current blockers**
 
-1. the new Wilsonian-EFT close-claim is stronger than the actual evidence
-   - Feshbach projection is an exact QM identity, but the current note/runner
-     only verify it on toy Hamiltonians, not on the actual `Cl(3)` / `Z^3`
+1. the old toy-model objection is mostly gone
+   - Feshbach is now verified on the actual staggered `Cl(3)` / `Z^3`
      Hamiltonian
-2. EFT/operator-identification gap
-   - symmetry preservation plus generic EFT logic does not by itself prove that
-     the actual low-energy effective theory is the exact SM matching surface
-3. coefficient/physics hygiene
-   - the current Wilsonian runner uses incorrect one-loop SM beta-coefficient
-     bookkeeping (for example `b_2 = 10/3` instead of the SM `19/6` with three
-     generations and one Higgs doublet)
-   - until that is fixed, the closure claim is not publication-safe
-4. the practical bounded pieces remain:
-   - low-energy continuum running
-   - `alpha_s(M_Pl)` chain
-   - lattice-to-continuum matching
+   - `b_2 = 19/6` bookkeeping is corrected
+   - do not spend more time re-litigating those fixed points
+2. the live blocker is now the real low-energy matching bridge
+   - interacting gauge/Higgs operator content on the actual framework surface
+   - thresholded running from `M_Pl` to `M_Z`
+   - lattice / V-scheme to `\\overline{MS}` matching for `y_t` and `g_s`
+3. `alpha_s(M_Pl)` remains bounded as a chain, not as a free parameter
+   - the issue is scheme/matching precision, not missing conceptual structure
+4. the lane is now a quantitative precision problem
+   - if you can compute the matching cleanly, the lane likely closes
+   - if not, keep it sharply bounded and stop calling it conceptually open
 
 **What counts as success**
 
-- the Wilsonian route is rebuilt on the actual lattice Hamiltonian with correct
-  EFT bookkeeping, or
-- the lane is kept sharply bounded with the residuals stated plainly, or
-- the flagship note is made cleanly bounded with no over-closure rhetoric
+- best-case success:
+  - compute the actual lattice-to-`\\overline{MS}` matching for the relevant
+    Yukawa/gauge operators at `M_Pl`
+  - run the thresholded 2-loop chain with that boundary and close the residual
+- second-best success:
+  - close the interacting operator-identification step cleanly and isolate the
+    remaining uncertainty to one explicit matching coefficient
+- minimum acceptable success:
+  - keep the flagship note honest and bounded with the residual written as a
+    precision/matching problem rather than a vague “continuum bridge”
 
 **What does not count**
 
-- saying “Feshbach projection exists for any Hamiltonian” and treating that as
-  proof of the actual SM low-energy bridge for this framework
-- saying the remaining steps are “just mathematics” unless the note/script
-  actually closes them at the paper bar
+- re-proving Feshbach on toy systems
+- presenting corrected beta coefficients as if that alone closes the lane
+- saying “the rest is just standard running” unless the actual scheme matching
+  is computed on the framework surface
+
+**Preferred attack order**
+
+1. extend the Wilsonian note from free-fermion operator content to the actual
+   interacting gauge/Higgs matching surface needed for `y_t`
+2. compute the lattice/V-scheme to `\\overline{MS}` matching coefficient for
+   `y_t` and `g_s` at `M_Pl`
+3. rerun the full thresholded 2-loop chain and measure the residual honestly
 
 ### Target C: CKM / flavor
 
@@ -198,14 +265,16 @@ language. Exact blockers to gravity-companion promotion:
    - the latest honest read is that the Higgs VEV is democratic, so the old
      universality obstruction should not be used as the primary stop sign
 2. the real remaining blocker is quantitative closure
-   - ab initio O(1) NNI / overlap coefficients are still not derived sharply
-   - `V_cb` and `V_ub` remain off by factor-level errors
+   - absolute `2-3` overlap scale `S_23` is still not derived sharply
+   - `c_13` / phase control is still not sharp enough for `V_ub`
+   - `V_cb` and `V_ub` remain the actual publication blockers
 3. current best reading of the gap
-   - this is probably **not** “derive every overlap coefficient at `L >= 32` or fail”
-   - the strongest exact formulas already put `V_cb` close to PDG if the
-     residual `2-3` asymmetry is only modest
-   - the high-value target is the **ratio / asymmetry** controlling `c_23^u/c_23^d`,
-     not the absolute coefficients by brute force
+   - the ratio route is useful but too small by itself
+   - invariants are consistency checks, not closure
+   - the highest-value missing derivations are now:
+     - absolute `S_23`
+     - sharp `c_13`
+     - phase-aware full `3x3` NNI diagonalization
 
 **Preferred execution routes**
 
@@ -223,34 +292,37 @@ language. Exact blockers to gravity-companion promotion:
      derivable without cluster-scale production
    - this is the best current non-cluster route
 
-3. close `V_ub` analytically from NNI + `c_13` suppression
-   - use the already-retained structural `c_13` suppression
-   - test whether the framework implies up-sector dominance for the `1-3`
-     rotation, giving `|V_ub| ~ sqrt(m_u/m_t)` or the equivalent exact NNI
-     asymptotic
+3. derive the **absolute** `S_23` overlap scale analytically
+   - do not treat cluster compute as the first choice
+   - use the continuum / Symanzik taste-splitting machinery if possible
+   - this is now the highest-value unsolved piece for `V_cb`
 
-4. use CKM invariants rather than raw overlap amplitudes
-   - if `V_us` is sharp and `V_ub` can be sharpened, use the derived phase scale
-     and Jarlskog/invariant relations to solve for `V_cb`
-   - do not import PDG angles for this route
+4. close `V_ub` by deriving `c_13` and the relevant phase structure
+   - the latest note shows `V_ub` is highly sensitive to residual `c_13`
+   - deriving `c_13` from first principles is more valuable now than redoing
+     crude mass-ratio estimates
 
-5. cluster-compute fallback
+5. use invariants only as a consistency layer
+   - they do not independently close `V_cb`
+   - use them after `S_23` / `c_13` are sharpened, not instead of that work
+
+6. cluster-compute fallback
    - only fall back to `L >= 32` / dynamical overlap production if the ratio /
-     invariant routes fail cleanly
+     analytic routes fail cleanly
 
 **Routes to stop overusing**
 
 - do not keep presenting “needs more compute” as the only path without first
-  exhausting the ratio / invariant routes
+  exhausting the analytic `S_23` / `c_13` routes
 - do not chase Higgs `Z_3` universality as the main blocker
-- do not spend time deriving all four absolute NNI coefficients if a sharp
-  `c_23^u/c_23^d` or invariant route can close the lane sooner
+- do not spend time deriving all four absolute NNI coefficients if `S_23`
+  and `c_13` can close the lane sooner
 
 **What counts as success**
 
 - real quantitative closure with note/script/packet aligned
 - or a clear proof that the remaining obstacle is specifically the unresolved
-  `c_23^u/c_23^d` asymmetry / invariant input, not a vague “more compute”
+  absolute `S_23` / `c_13` / phase input, not a vague “more compute”
 
 **What does not count**
 

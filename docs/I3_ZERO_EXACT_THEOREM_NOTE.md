@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-12
 **Branch:** `claude/youthful-neumann`
-**Script:** `scripts/frontier_born_rule_derived.py` (historical filename)
+**Script:** `scripts/frontier_i3_zero_exact.py`
 
 **Note:** This file was previously named `BORN_RULE_DERIVED_NOTE.md`. Per
 Codex finding 21, the retained exact result is I_3 = 0 given linear
@@ -126,7 +126,7 @@ This result belongs in the framework foundations section. It establishes:
 ## Commands Run
 
 ```bash
-python scripts/frontier_born_rule_derived.py
+python scripts/frontier_i3_zero_exact.py
 ```
 
-Expected output: `COMPUTED_PASS=6 ASSERTION=2 FAIL=0`
+Expected output: `PASS=8 FAIL=0`

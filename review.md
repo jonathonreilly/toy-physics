@@ -53,6 +53,44 @@ These are the only three remaining flagship live gates:
 2. **Renormalized `y_t` matching**
 3. **CKM / quantitative flavor closure**
 
+## Deferred post-gate backlog
+
+These are real framework limitations, but they are **not** current flagship
+gate work. Claude should only touch them after the three live gates close, or
+if Codex explicitly reprioritizes.
+
+1. **Individual fermion masses**
+   - current safe state:
+     - hierarchy / structure support is real
+     - top has a bounded quantitative lane
+   - current limitation:
+     - no first-principles derivation of the individual charged-lepton and
+       light-/mid-quark masses
+
+2. **`alpha_EM = 1/137`**
+   - current safe state:
+     - structural electroweak-angle work exists
+   - current limitation:
+     - absolute EM coupling not derived from the lattice framework itself
+
+3. **Strong CP**
+   - current safe state:
+     - untouched
+   - current limitation:
+     - no explanation for `theta_QCD = 0`
+
+4. **Full nonlinear GR**
+   - current safe state:
+     - weak-field gravity retained
+     - broad and strong-field gravity remain bounded companion work
+   - current limitation:
+     - not a full Einstein-equation derivation
+
+Paper rule:
+
+- acknowledge these honestly in the paper caveats
+- do not let them distract from closing DM, `y_t`, and CKM first
+
 ## Focus rule
 
 Routine review should focus on:
@@ -93,18 +131,23 @@ Current strongest useful work:
 
 Current blockers:
 
-- the old coupling-identity objection is now narrower
-  - if `sigma_v` is treated as a direct observable of `H` via the T-matrix,
-    the “is `g_bare` the same coupling?” objection mostly dissolves
-  - this helps, but it does not close the lane
-- relic-ratio / cosmological cancellation bridge is still not theorem-grade
-- Boltzmann / Stosszahlansatz coarse-graining is improved but still not fully
-  internalized
+- the live blocker is now `eta`
+  - numerator / cross-section side is much stronger
+  - denominator still imports baryon abundance through baryogenesis
+- relic-ratio / cosmological bridge is therefore still not closed
+- `g = 1` and `k = 0` remain bounded framework inputs where used
 
 Paper-safe read:
 
 > Structural DM inputs are materially stronger, but the full relic mapping
-> remains bounded.
+> remains bounded because `eta` is not yet derived from the framework.
+
+Best attack:
+
+1. derive `v(T_c)/T_c` nonperturbatively on the framework surface
+2. derive the baryogenesis transport / CP-source prefactor from the `Z_3`
+   phase structure
+3. only then promote `eta` and the full relic ratio
 
 ### 2. Renormalized `y_t`
 
@@ -112,26 +155,27 @@ Current safe state:
 
 - bare UV theorem closed
 - `Cl(3)` preservation under RG exact
-- the new Wilsonian-EFT close-claim does **not** yet clear the paper bar
-  - reason 1:
-    - the current note/runner verify Feshbach projection on toy Hamiltonians,
-      not on the actual `Cl(3)` / `Z^3` Hamiltonian
-  - reason 2:
-    - symmetry preservation plus generic EFT logic does not by itself identify
-      the exact low-energy SM matching surface for this framework
-  - reason 3:
-    - the runner’s one-loop EFT bookkeeping is not yet publication-safe
-      (for example `b_2 = 10/3` appears where the SM value with three
-      generations and one Higgs doublet is `19/6`)
+- the Wilsonian route is materially better than before
+  - Feshbach is now verified on the actual `Cl(3)` / `Z^3` Hamiltonian
+  - the one-loop bookkeeping bug (`b_2`) is corrected
 - therefore still bounded:
-  - low-energy continuum running
-  - `alpha_s(M_Pl)` chain
-  - lattice-to-continuum matching
-  - actual low-energy EFT identification on the real Hamiltonian surface
+  - interacting low-energy EFT identification on the real Hamiltonian surface
+  - `alpha_s(M_Pl)` / boundary chain
+  - lattice / V-scheme to `\overline{MS}` matching
+  - thresholded running down to `M_Z`
 
 Paper-safe read:
 
-> The UV theorem surface is strong, but the low-energy bridge remains bounded.
+> The UV theorem surface is strong, but the remaining issue is now a real
+> matching / scheme problem, not the old toy-model objection.
+
+Best attack:
+
+1. extend the EFT identification from free-fermion operator content to the
+   interacting gauge/Higgs surface actually needed for `y_t`
+2. compute the lattice/V-scheme to `\overline{MS}` matching coefficient for
+   `y_t` and `g_s` at `M_Pl`
+3. rerun the full thresholded 2-loop chain with that boundary
 
 ### 3. CKM / quantitative flavor closure
 
@@ -142,15 +186,18 @@ Current safe state:
 - still open:
   - sharp `V_cb`
   - sharp `V_ub`
-  - first-principles control of the `2-3` asymmetry / NNI coefficients
+  - first-principles control of absolute `S_23`
+  - first-principles control of `c_13` / phase
 
 Current best reading:
 
-- this is not obviously a pure cluster-compute wall
-- the exact NNI / Fritzsch-type `2-3` formula already lands fairly close to
-  PDG if the residual `c_23^u/c_23^d` asymmetry is modest
-- the highest-value target is therefore the **ratio / asymmetry** controlling
-  `c_23^u/c_23^d`, not brute-force absolute overlap closure
+- this is still not obviously a pure cluster-compute wall
+- the ratio route is useful, but too small by itself to close `V_cb`
+- invariants are useful, but do not independently solve for `V_cb`
+- the highest-value unsolved targets are now:
+  - absolute `S_23`
+  - residual `c_13`
+  - phase-aware full `3x3` NNI closure
 
 Preferred routes:
 
@@ -158,9 +205,11 @@ Preferred routes:
    `c_23^u`, `c_23^d`, `delta_23`
 2. derive the ratio `c_23^u/c_23^d` analytically from common overlap cancellation
    plus sector-dependent EW / radiative weights
-3. derive `V_ub` from NNI + `c_13` suppression + up-sector dominance
-4. use invariant/Jarlskog relations built from derived quantities, not PDG angles
-
+3. derive the absolute `S_23` overlap scale analytically from the continuum /
+   Symanzik taste-splitting machinery if possible
+4. derive `c_13` and the relevant phase structure for `V_ub`
+5. use invariant/Jarlskog relations built from derived quantities, not PDG angles,
+   only as a consistency layer after `S_23` / `c_13` sharpen
 Only if those fail cleanly should the lane be treated as compute-limited.
 
 Paper-safe read:
@@ -173,9 +222,9 @@ Only report work as promotable when the exact blocker for that lane is gone.
 
 - DM: relic bridge itself must be closed, not just the old `g_bare` objection
 - `y_t`: actual low-energy EFT/matching bridge must be closed on the real
-  Hamiltonian, not a toy route
-- CKM: `V_cb` / `V_ub` must be quantitatively sharpened, not just structurally
-  bounded
+  Hamiltonian with real matching, not just operator-content arguments
+- CKM: `V_cb` / `V_ub` must be quantitatively sharpened through `S_23`,
+  `c_13`, and phase control, not just structure or ratio routes
 
 ## Packet alignment rule
 

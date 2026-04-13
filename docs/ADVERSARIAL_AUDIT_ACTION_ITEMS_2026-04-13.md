@@ -87,30 +87,36 @@ are correct but not computationally verified by this script.
 
 ---
 
-## Item 4: S³ shellability general-R argument is not constructive
+## Item 4: S³ shellability general-R argument is not constructive -- RESOLVED
 
-**Script:** `frontier_s3_shellability.py` (32/32 PASS)
+**Script:** `frontier_s3_shellability.py` (72/72 PASS)
 
-**Problem:** The shellability construction is verified computationally for
-R = 2, 3, 4, 5 (32/32 genuine checks). The general-R argument ("structural
-induction on the shelling construction") is prose in the docstring, not a
-verified computation. R=1 gives zero cubes (vacuous pass).
+**Problem:** The shellability construction was verified computationally for
+R = 2, 3, 4, 5 only (32/32 checks). The general-R argument was prose only.
 
 **Referee attack:** "You've verified S³ for 4 values of R. That's not a proof
 for all R. How do I know R = 100 works?"
 
-**Proposed fix:**
-- Extend computation to R = 6, 7, 8, 9, 10 (should be feasible — the R=5
-  complex has 2448 tets, R=10 might have ~20000). If all pass, the inductive
-  pattern is much more convincing.
-- Alternatively: prove that the Phase 1 + Phase 2 shelling strategy works for
-  general R by showing the attachment property is maintained at each step
-  (this may be a short combinatorial argument)
-- Document honestly: "constructively verified for R ≤ N, argued for general R
-  by structural induction"
+**Resolution:** Extended computation to R = 2..10. All 9 values pass (72/72
+checks). R=10 has 22,896 tetrahedra and completes in ~4 seconds. Summary:
 
-**Impact on paper:** Moderate — S³ is a newly closed gate. The proof should be
-as tight as possible. Running R up to 10 is cheap insurance.
+| R  | Verts | Tets   | chi | Links | Bd S² | Shell | S³     | Time |
+|----|-------|--------|-----|-------|-------|-------|--------|------|
+| 2  |    28 |     96 |   0 | OK    | S²    | YES   | PROVED | 0.0s |
+| 3  |   118 |    528 |   0 | OK    | S²    | YES   | PROVED | 0.0s |
+| 4  |   252 |  1,200 |   0 | OK    | S²    | YES   | PROVED | 0.0s |
+| 5  |   486 |  2,448 |   0 | OK    | S²    | YES   | PROVED | 0.1s |
+| 6  |   832 |  4,320 |   0 | OK    | S²    | YES   | PROVED | 0.2s |
+| 7  | 1,414 |  7,536 |   0 | OK    | S²    | YES   | PROVED | 0.5s |
+| 8  | 2,104 | 11,376 |   0 | OK    | S²    | YES   | PROVED | 1.0s |
+| 9  | 3,066 | 16,800 |   0 | OK    | S²    | YES   | PROVED | 2.0s |
+| 10 | 4,140 | 22,896 |   0 | OK    | S²    | YES   | PROVED | 3.6s |
+
+Constructively verified for R = 2..10; argued for general R by structural
+induction on the shelling order.
+
+**Impact on paper:** Resolved. The constructive verification over 9 values
+(up to 22,896 tets) makes the inductive argument much more convincing.
 
 ---
 

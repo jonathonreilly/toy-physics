@@ -56,7 +56,7 @@ SHELLING VERIFICATION:
 
 TESTS:
   EXACT:
-    E1: Shelling order is valid for R=1,2,3,4,5 (every tet attaches correctly)
+    E1: Shelling order is valid for R=2,3,...,10 (every tet attaches correctly)
     E2: Number of tets in shelling = total tets in M_R
     E3: All vertex links are S^2 (closed PL 3-manifold)
     E4: Euler characteristic chi = 0
@@ -839,7 +839,7 @@ def main():
 
     # R=1 has no cubes (sqrt(3) > 1), so the cubical ball is empty.
     # The construction is meaningful starting at R=2.
-    R_values = [2, 3, 4, 5]
+    R_values = [2, 3, 4, 5, 6, 7, 8, 9, 10]
     results = {}
 
     for R in R_values:
@@ -903,7 +903,7 @@ def main():
     print("  The shelling construction works for ALL R >= 1 because:")
     print()
     print("  (A) CONE PHASE: The boundary dB_R is always a connected 2-sphere")
-    print("      (proved by Euler characteristic + link checks for R=1..5,")
+    print("      (proved by Euler characteristic + link checks for R=2..10,")
     print("      and by the general theory of cubical ball boundaries on Z^3).")
     print("      BFS on the dual graph of any connected 2-sphere triangulation")
     print("      produces a valid shelling of the cone tetrahedra, because")
@@ -936,7 +936,7 @@ def main():
     all_pass = n_proved == len(R_values) and FAIL_COUNT == 0
     if all_pass:
         print(f"RESULT: {PASS_COUNT}/{PASS_COUNT + FAIL_COUNT} checks passed.")
-        print("SHELLABILITY PROOF COMPLETE: M_R ~ PL S^3 for R = 1..5,")
+        print("SHELLABILITY PROOF COMPLETE: M_R ~ PL S^3 for R = 2..10,")
         print("with constructive shelling orders verified computationally.")
         print("General-R argument by structural induction on the shelling order.")
     else:
