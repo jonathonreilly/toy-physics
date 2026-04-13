@@ -83,6 +83,43 @@ Key results:
 
 **Why this is not overstated:** The scattering distinguishability is a theorem about taste-space Z_3 structure on the isotropic lattice. It does not prove taste = physical generations. The interpretive gap remains the core obstruction. This is labeled BOUNDED because it adds operational evidence but requires the same taste-physicality interpretive assumption that the wildcard superselection result requires. Generation physicality remains OPEN in the honest assessment.
 
+### Rooting-undefined theorem (new, 2026-04-12)
+
+**Files added:**
+- `scripts/frontier_generation_rooting_undefined.py` -- PASS=37 FAIL=0 (all EXACT)
+- `docs/GENERATION_ROOTING_UNDEFINED_NOTE.md`
+
+**Commands run:**
+```bash
+python3 scripts/frontier_generation_rooting_undefined.py
+# PASS=37  FAIL=0
+```
+
+**What this proves:** The fourth-root trick (or any Hamiltonian analogue)
+is not a well-defined operation in the Cl(3) on Z^3 framework.  Three
+independent obstructions:
+
+1. **Cl(3) irreducibility:** No proper subspace of C^8 carries the Cl(3)
+   algebra under projected KS gammas.  Exhaustive search over all 246
+   proper subsets + 200 random unitary rotations: none preserve Cl(3).
+
+2. **Taste transitivity:** The taste permutation group (Z_2)^3 acts
+   transitively on the 8 BZ corners.  No proper subset of corners is
+   closed under all taste flips (verified exhaustively).
+
+3. **Spectral change:** Projected Hamiltonian PHP has different spectrum
+   from H (27/27 eigenvalues differ at L=4 and L=6; no rescaling matches).
+
+**Claimed status: EXACT obstruction** (blocks the rooting objection to
+taste-physicality; does NOT by itself close the generation gate)
+
+**Why this is not overstated:** This theorem proves "rooting is undefined"
+within the Hamiltonian formulation.  It does NOT prove "taste doublers ARE
+physical generations."  The interpretive step from "doublers cannot be
+removed" to "doublers are generations" still requires the EWSB cascade
+argument.  Generation physicality remains OPEN in the honest assessment.
+This note explicitly states this boundary.
+
 ### Berry phase / Zak phase topological invariant attempt (new, 2026-04-12)
 
 **Files added:**
