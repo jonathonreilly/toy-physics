@@ -956,3 +956,69 @@ FAILs. Three negative results are documented honestly:
 The combined discrete+continuous argument is a real advance over either
 alone, but generation physicality remains OPEN per review.md because the
 argument is conditional on taste-physicality.
+
+---
+
+## Gate 3 UPDATE: Self-Duality Investigation for g_bare=1
+
+### Files added
+- `scripts/frontier_g_bare_self_duality.py` -- PASS=20 FAIL=0 (10 EXACT, 5 BOUNDED, 5 NEGATIVE)
+- `docs/G_BARE_SELF_DUALITY_NOTE.md`
+
+### Commands run
+```bash
+python3 scripts/frontier_g_bare_self_duality.py
+# Exit code: 0
+# PASS=20 FAIL=0
+```
+
+### What was investigated
+
+Can the "self-dual point" argument elevate g_bare=1 from BOUNDED to theorem
+grade? The sigma_v agent found that g=1 gives beta=2*N_c=6, claimed to be
+the self-dual point of SU(3) lattice gauge theory.
+
+### Finding: NEGATIVE (honest obstruction)
+
+Self-duality at beta=6 CANNOT be elevated to a theorem in 4D. The precise
+obstructions documented and verified in the script:
+
+1. **No exact KW duality in 4D.** Kramers-Wannier duality requires plaquette
+   independence (2D factorization). In 4D, the Bianchi identity creates
+   correlations that destroy this factorization. The exact Z_2 and Z_3
+   self-dual points in 2D are computed and shown to NOT be beta=2*N.
+
+2. **beta=2*N_c is NOT a symmetric balance point.** The strong-coupling
+   parameter u = 1/N_c = 0.33 and weak-coupling parameter g^2 = 1 are
+   NOT equal. The actual balance point would be beta = 2*N^{3/2} = 10.4.
+
+3. **No bulk phase transition at beta=6.** SU(3) in 4D has no bulk transition
+   at any beta (analytic crossover for N_c >= 3). The N_t=8 deconfinement
+   transition at beta_c=6.06 is a finite-temperature effect, not a bulk selection.
+
+4. **Large-N scaling breaks the argument.** At large N, beta=2*N has 't Hooft
+   coupling lambda=N which diverges. The "self-dual" point moves to deep
+   strong coupling in the 't Hooft limit.
+
+5. **Hopping parameter kappa is independent of g.** kappa governs fermion
+   propagation and does not constrain the gauge coupling.
+
+6. **Free energy has no visible duality symmetry at beta=6.** F(beta) is
+   smooth and monotonic.
+
+### Claimed status: BOUNDED (unchanged from before)
+
+g_bare=1 remains supported by two complementary bounded arguments:
+- Route 1: Cl(3) normalization (primary, exact given axioms, but axioms
+  might be viewed as definitional)
+- Route 2: Self-dual heuristic (secondary, bounded, confirmed cannot be
+  upgraded to theorem)
+
+### Why the claim is not overstated
+
+This is an honest negative result. The note explicitly says the self-duality
+argument CANNOT be elevated to theorem grade and documents the precise
+obstructions. The script has 5 NEGATIVE checks that are all PASS (correctly
+identifying what does NOT work). The g_bare lane remains BOUNDED, consistent
+with review.md finding 10 (G_BARE_DERIVATION_NOTE.md is still a bounded
+normalization argument).
