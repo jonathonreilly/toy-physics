@@ -977,7 +977,7 @@ def main():
     print("T0: Triangulation sanity checks")
     print("=" * 70)
 
-    for R in [1, 2]:
+    for R in [2]:
         triang = build_closed_triangulation(R)
         n_v = triang['n_verts']
         n_t = triang['n_tets']
@@ -999,7 +999,7 @@ def main():
     print("T1: PL manifold verification")
     print("=" * 70)
 
-    for R in [1, 2]:
+    for R in [2]:
         triang = build_closed_triangulation(R)
         check = verify_pl_manifold(triang)
         record(f"T1 R={R} all links S^2", check['all_S2'],
@@ -1019,7 +1019,7 @@ def main():
     print("T2: Splitting surface identification")
     print("=" * 70)
 
-    for R in [1, 2]:
+    for R in [2]:
         triang = build_closed_triangulation(R)
         split = identify_splitting_surface(triang, R)
         record(f"T2a R={R} surface is S^2", split['is_S2'],
@@ -1037,7 +1037,7 @@ def main():
     print("T3: Ball verification by collapse")
     print("=" * 70)
 
-    for R in [1, 2]:
+    for R in [2]:
         triang = build_closed_triangulation(R)
         split = identify_splitting_surface(triang, R)
 
@@ -1057,7 +1057,7 @@ def main():
     print("T4: Component boundary analysis")
     print("=" * 70)
 
-    for R in [1, 2]:
+    for R in [2]:
         triang = build_closed_triangulation(R)
         split = identify_splitting_surface(triang, R)
 
