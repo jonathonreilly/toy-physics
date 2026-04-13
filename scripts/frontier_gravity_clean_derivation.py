@@ -3,13 +3,15 @@
 Clean Derivation: Cl(3) on Z^3 --> Newton's Inverse-Square Law
 ================================================================
 
-Every step DERIVED, THEOREM, or DEFINITION. No BOUNDED steps.
+Every step DERIVED, THEOREM, or DEFINITION.
+Step 3 is DERIVED via the framework's self-consistency closure condition.
+L^{-1} = G_0 is the framework's closure requirement, not a theorem of pure algebra.
 
 THE CHAIN:
 
   Step 1  [DERIVED]    Cl(3) on Z^3 --> H = -Delta_lat  (KS construction)
   Step 2  [DEFINITION] G_0 = H^{-1} = (-Delta_lat)^{-1}
-  Step 3  [DERIVED]    Self-consistency: L^{-1} = G_0 => L = -Delta  (exact)
+  Step 3  [DERIVED]    Self-consistency: L^{-1} = G_0 => L = -Delta  (closure condition)
   Step 4  [DERIVED]    Poisson: (-Delta) phi = rho
   Step 5  [THEOREM]    G(r) --> 1/(4 pi r)  (Maradudin et al.)
   Step 6  [DERIVED]    phi = -G_N M / r
@@ -377,27 +379,33 @@ def check_step2_propagator_definition():
 
 def check_step3_self_consistency(G_0_ref, A_ref, M_ref):
     """
-    STEP 3 [DERIVED]: The self-consistency argument.
+    STEP 3 [DERIVED]: The self-consistency closure condition.
 
     L^{-1} = G_0 = (-Delta)^{-1}  =>  L = -Delta.
 
-    This is an algebraic identity, verified by:
+    L^{-1} = G_0 is the framework's own closure requirement -- it determines
+    L from the propagator. This is not a theorem of pure algebra; it is a
+    physical closure condition within the framework. Verified by:
     CHECK 4: Mismatch M(L) = 0 for L = -Delta
     CHECK 5: M(L) > 0 for every alternative operator
     CHECK 6: In (-Delta)^alpha family, unique minimum at alpha = 1
     """
     print()
     print("=" * 78)
-    print("STEP 3 [DERIVED]: Self-consistency forces L = -Delta_lat")
-    print("  L^{-1} = G_0  =>  L = G_0^{-1} = H = -Delta  (algebra)")
+    print("STEP 3 [DERIVED]: Self-consistency closure condition forces L = -Delta_lat")
+    print("  L^{-1} = G_0  =>  L = G_0^{-1} = H = -Delta  (closure condition)")
     print("=" * 78)
     print()
     print("  The argument:")
-    print("    Self-consistency requires L^{-1} = G_0.")
+    print("    The framework's closure condition requires L^{-1} = G_0.")
     print("    G_0 = (-Delta)^{-1}  (Step 2).")
-    print("    Therefore L = (-Delta)^{-1})^{-1} = -Delta.  QED.")
+    print("    Therefore L = (-Delta)^{-1})^{-1} = -Delta.")
     print()
-    print("  The checks below VERIFY this algebraic identity numerically.")
+    print("  L^{-1} = G_0 is the framework's own closure requirement.")
+    print("  This is not a theorem of pure algebra; it is a physical")
+    print("  closure condition within the framework.")
+    print()
+    print("  The checks below VERIFY this closure condition numerically.")
     print("  They are not the derivation; they are confirmation.")
     print()
 
@@ -808,7 +816,8 @@ def main():
     print("CLEAN DERIVATION: Cl(3) on Z^3 --> Newton's F = G M1 M2 / r^2")
     print("=" * 78)
     print()
-    print("Every step is DERIVED, THEOREM, or DEFINITION. No BOUNDED steps.")
+    print("Every step is DERIVED, THEOREM, or DEFINITION.")
+    print("Step 3 uses the framework's closure condition (not pure algebra).")
     print()
     print("THE CHAIN:")
     print()
@@ -816,7 +825,7 @@ def main():
     print()
     print("  Step 1  [DERIVED]    H = -Delta_lat  (KS construction)")
     print("  Step 2  [DEFINITION] G_0 = H^{-1} = (-Delta)^{-1}")
-    print("  Step 3  [DERIVED]    L^{-1} = G_0 => L = -Delta  (algebra)")
+    print("  Step 3  [DERIVED]    L^{-1} = G_0 => L = -Delta  (closure condition)")
     print("  Step 4  [DERIVED]    (-Delta) phi = rho  (Poisson equation)")
     print("  Step 5  [THEOREM]    G(r) -> 1/(4 pi r)  (Maradudin et al.)")
     print("  Step 6  [DERIVED]    phi = -G_N M / r")
@@ -850,7 +859,7 @@ def main():
     print()
     print("  1. Cl(3) on Z^3 --> H = -Delta_lat         [DERIVED:  KS construction]")
     print("  2. G_0 = H^{-1} = (-Delta)^{-1}            [DEFINITION]")
-    print("  3. L^{-1} = G_0 => L = -Delta              [DERIVED:  algebraic identity]")
+    print("  3. L^{-1} = G_0 => L = -Delta              [DERIVED:  closure condition]")
     print("     Mismatch = 0 for Poisson, > 0 for all 10 alternatives.")
     print("     Parametric family: unique minimum at alpha = 1.0.")
     print("  4. (-Delta) phi = rho (Poisson equation)    [DERIVED:  from Step 3]")
@@ -862,7 +871,9 @@ def main():
     print("     F/M relative spread < 1e-10 (exact proportionality).")
     print("  9. Exponent 2 = d-1 = 3-1                   [DERIVED:  d=3 from Cl(3)]")
     print()
-    print("Classification: 7 DERIVED, 1 THEOREM, 1 DEFINITION, 0 BOUNDED.")
+    print("Classification: 7 DERIVED, 1 THEOREM, 1 DEFINITION.")
+    print("Note: Step 3 is DERIVED via the framework's closure condition,")
+    print("not via pure algebra. L^{-1} = G_0 is a physical requirement.")
     print("Free parameters: 0.")
     print()
 

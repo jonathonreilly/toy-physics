@@ -10,14 +10,16 @@
 
 This note presents the complete derivation chain from the single axiom
 Cl(3) on Z^3 to Newton's law F = G M_1 M_2 / r^2. Every step is
-classified as DERIVED, THEOREM, or DEFINITION. There are no BOUNDED
-steps. The chain has nine links and zero free parameters.
+classified as DERIVED, THEOREM, or DEFINITION. The chain has nine links
+and zero free parameters.
 
 The critical reframing compared to earlier notes: the self-consistency
-step is not a numerical search over operator families. It is an
-algebraic identity. The propagator's Green's function G_0 = H^{-1}
-defines the field operator L = G_0^{-1} = H = -Delta. This is 12/12
-exact.
+step is not a numerical search over operator families. The propagator's
+Green's function G_0 = H^{-1} determines the field operator
+L = G_0^{-1} = H = -Delta. L^{-1} = G_0 is the framework's closure
+condition for self-consistency rather than a theorem of pure algebra.
+It is a physical statement: the framework requires the propagator and
+field to be self-consistent, and that requirement determines L.
 
 ---
 
@@ -89,7 +91,7 @@ this graph: the response at site y to a unit source at site x.
 
 ### Step 3: Self-consistency L^{-1} = G_0 forces L = -Delta_lat
 
-**Classification: DERIVED (12/12 exact algebraic identity)**
+**Classification: DERIVED via the framework's self-consistency closure condition. L^{-1} = G_0 is the framework's own closure requirement -- it determines L from the propagator. This is not a theorem of pure algebra; it is a physical closure condition within the framework.**
 
 The gravitational field phi is sourced by the propagator density
 rho = |psi|^2 via a linear field operator L:
@@ -114,9 +116,12 @@ Invert both sides:
 
     L = G_0^{-1} = -Delta_lat
 
-**This is an algebraic identity, not a numerical search.** The operator
-L is not selected from a family by fitting or sweeping. It is determined
-uniquely by inverting the propagator's Green's function. The result is:
+**This is the framework's closure condition, not a numerical search.**
+L^{-1} = G_0 is the framework's own closure requirement -- it determines
+L from the propagator. This is not a theorem of pure algebra; it is a
+physical closure condition within the framework. The operator L is not
+selected from a family by fitting or sweeping. It is determined uniquely
+by the self-consistency requirement. The result is:
 
     (-Delta_lat) phi = -kappa rho
 
@@ -127,17 +132,18 @@ a numerical sweep over 21 operators, finding that only the Poisson
 operator gives zero mismatch. But the sweep is verification, not the
 argument. The argument is:
 
-    L^{-1} = G_0  (self-consistency)
+    L^{-1} = G_0  (framework closure condition)
     G_0 = (-Delta)^{-1}  (Step 2)
-    => L = -Delta  (algebra)
+    => L = -Delta  (inversion)
 
-This is a three-line algebraic derivation. The numerical checks confirm
-it: the mismatch M(L) = ||L^{-1} delta - G_0 delta|| / ||G_0 delta||
-is exactly zero for L = -Delta and nonzero for every alternative
-operator tested (10 alternatives, all M > 0.28). The parametric family
-(-Delta)^alpha has M(alpha) uniquely minimized at alpha = 1.0 with
-M(1.0) < 6e-16. These are confirmations of an algebraic fact, not the
-derivation itself.
+This is a three-line derivation from the framework's closure condition.
+The numerical checks confirm it: the mismatch
+M(L) = ||L^{-1} delta - G_0 delta|| / ||G_0 delta|| is exactly zero
+for L = -Delta and nonzero for every alternative operator tested
+(10 alternatives, all M > 0.28). The parametric family (-Delta)^alpha
+has M(alpha) uniquely minimized at alpha = 1.0 with M(1.0) < 6e-16.
+These are confirmations of the closure condition, not the derivation
+itself.
 
 **Assumptions consumed:**
 - Self-consistency: the propagator sources the field it propagates in.
@@ -325,7 +331,7 @@ Step 2  [DEFINITION] G_0 = H^{-1} = (-Delta_lat)^{-1}
                      (propagator defined as Hamiltonian inverse)
 
 Step 3  [DERIVED]    Self-consistency L^{-1} = G_0 => L = -Delta_lat
-                     (12/12 exact algebraic identity)
+                     (framework closure condition, not pure algebra)
 
 Step 4  [DERIVED]    Poisson equation: (-Delta) phi = rho
                      (from Step 3, with rho = |psi|^2)
@@ -346,7 +352,10 @@ Step 9  [DERIVED]    Exponent 2 = d - 1 = 3 - 1
                      (d = 3 from Cl(3))
 ```
 
-Classification counts: 7 DERIVED, 1 THEOREM, 1 DEFINITION, 0 BOUNDED.
+Classification counts: 7 DERIVED, 1 THEOREM, 1 DEFINITION.
+Note: Step 3 is DERIVED via the framework's closure condition, not via
+pure algebra. The closure condition L^{-1} = G_0 is a physical
+requirement of self-consistency within the framework.
 
 ---
 
@@ -360,15 +369,19 @@ reframes the argument:
 > We swept 21 operators and found only Poisson gives an attractive
 > self-consistent fixed point. This is numerical evidence, not a proof.
 
-**New framing (DERIVED):**
+**New framing (DERIVED via closure condition):**
 > Self-consistency requires L^{-1} = G_0. Since G_0 = (-Delta)^{-1},
-> we have L = -Delta. This is algebra. The 21-operator sweep is
-> verification of the algebraic identity, not the argument itself.
+> we have L = -Delta. L^{-1} = G_0 is the framework's closure condition
+> for self-consistency rather than a theorem of pure algebra. The
+> 21-operator sweep is verification of this closure condition, not the
+> argument itself.
 
 The key insight: the self-consistency condition L^{-1} = G_0 is not a
 constraint that must be checked operator-by-operator. It is a direct
 equation whose solution is L = G_0^{-1} = H = -Delta_lat. The operator
-L is computed, not searched for.
+L is computed, not searched for. But the condition itself is a physical
+closure requirement of the framework, not a mathematical theorem that
+follows from axioms alone.
 
 The lattice Green's function theorem (Step 5) is classified as THEOREM,
 not as imported physics. It is a result of pure mathematics about the
@@ -418,17 +431,20 @@ from the single axiom Cl(3) on Z^3.
 The gravity derivation chain is now clean:
 
 > Starting from Cl(3) on Z^3, the staggered Hamiltonian is the negative
-> graph Laplacian (KS construction). Self-consistency of the
-> propagator-field loop uniquely determines the field equation as the
-> lattice Poisson equation (algebraic identity). The Poisson Green's
-> function on Z^3 converges to 1/(4 pi r) at large distances (theorem of
-> lattice potential theory). Combining these yields Newton's
+> graph Laplacian (KS construction). The framework's self-consistency
+> closure condition (L^{-1} = G_0) uniquely determines the field equation
+> as the lattice Poisson equation. This is not a theorem of pure algebra;
+> it is a physical closure condition within the framework. The Poisson
+> Green's function on Z^3 converges to 1/(4 pi r) at large distances
+> (theorem of lattice potential theory). Combining these yields Newton's
 > inverse-square law F = G M_1 M_2 / r^2 with the product structure
 > emergent from linearity, the exponent from d = 3, and zero free
 > parameters.
 
 This addresses the circularity objection directly: Poisson is not
-assumed, it is derived from self-consistency in three lines of algebra.
+assumed, it is derived from the framework's self-consistency closure
+condition. The closure condition is a physical requirement, not pure
+algebra.
 
 ---
 
