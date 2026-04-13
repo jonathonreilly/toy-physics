@@ -5,11 +5,11 @@
 
 ## Summary
 
-All four gates addressed. Three upgraded to CLOSED, one to STRUCTURAL:
+All four gates addressed. Two upgraded to CLOSED, one to STRUCTURAL, one BOUNDED:
 
 | Gate | Before | After | Key scripts |
 |------|--------|-------|-------------|
-| 1. Generation physicality | OPEN | CLOSED (order-of-magnitude on hierarchy) | 6 scripts, 3 notes |
+| 1. Generation physicality | OPEN | BOUNDED (see axiom-first update below) | 7 scripts, 4 notes |
 | 2. S^3 compactification | BOUNDED | STRUCTURAL | 5 scripts, 4 notes |
 | 3. DM relic mapping | BOUNDED (2 imports) | BOUNDED (1 assumed + 2 imported, R=5.48) | 4 scripts, 3 notes + CODEX_DM_RESPONSE.md |
 | 4. Renormalized y_t | OPEN | CLOSED (ST identity derived) | 3 scripts, 3 notes |
@@ -410,6 +410,88 @@ reported "delta = 1 CONFIRMED" at L=8. That was a false positive.
 
 ---
 
+## Gate 1 UPDATE: Axiom-First Generation Physicality Attack
+
+### Files changed (new)
+- `scripts/frontier_generation_axiom_first.py` -- PASS=36 FAIL=3
+- `docs/GENERATION_AXIOM_FIRST_NOTE.md`
+
+### Commands run
+```bash
+python3 scripts/frontier_generation_axiom_first.py
+# Exit code: 0
+# PASS=36 FAIL=3 (3 expected honest obstructions)
+```
+
+### Status: BOUNDED (unchanged)
+
+### What was done
+
+Axiom-first attack on generation physicality using ONLY Z^3 graph structure
+and Cl(3) algebra. No physics input. Seven levels of analysis:
+
+1. **Z_3 is geometric (Oh element):** The cyclic permutation sigma is
+   verified as one of the 48 elements of Oh. Z_3 is normal in S_3.
+
+2. **Z_3 commutes with Wilson mass matrix:** [M_Wilson(iso), U(sigma)] = 0
+   exactly. This is because Wilson mass depends only on Hamming weight,
+   which is permutation-invariant.
+
+3. **1+3+3+1 is unique Oh-compatible decomposition:** S_3 acts transitively
+   on hw=1 and hw=2 classes (no finer partition). Hamming weight is
+   Oh-invariant (no coarser partition merging hw classes).
+
+4. **EWSB breaks Z_3 -> Z_2:** Wilson masses split as 1+2 within each
+   orbit. Residual Z_2 (swap of non-EWSB axes) protects the doublet.
+
+5. **d=3 uniquely gives two size-3 orbits:** Verified for d=1..19.
+
+**NEW FINDING (not in previous notes):**
+
+6. **Gamma matrices do NOT commute with Z_3.** The Kawamoto-Smit Gamma
+   matrices (encoding hopping via staggered eta phases) break the Z_3
+   permutation symmetry. Neither individual Gamma_mu NOR the isotropic sum
+   commutes with Z_3. The position-space staggered Hamiltonian also does
+   not commute with the naive spatial Z_3 operator.
+
+   This means Z_3 is an exact symmetry of the MASS SPECTRUM (Wilson masses)
+   but NOT of the full Hamiltonian. The orbits label mass levels, but
+   transitions between Z_3 sectors are not strictly forbidden by the full
+   dynamics.
+
+   This is a NEW OBSTRUCTION not clearly identified in previous notes.
+   Previous notes (GENERATION_PHYSICALITY_THEOREM_NOTE,
+   GENERATION_GAP_CLOSURE_NOTE) discussed Z_3 as if it were a symmetry of
+   the full Hamiltonian. The axiom-first analysis reveals it is only a
+   symmetry of the mass matrix.
+
+### Three honest obstructions (expected FAILs)
+
+- **6F:** Z_3 is exact on Wilson mass but NOT on hopping (eta phases)
+- **6G:** Lattice-is-physical axiom not derivable from graph structure alone
+- **6H:** 1+1+1 hierarchy requires Z_2 breaking (free parameter)
+
+### Why the claim is not overstated
+
+The status is BOUNDED, not CLOSED. The script has 3 explicit FAIL tests
+documenting the obstructions. The note identifies a new obstruction (Z_3 does
+not commute with the hopping operator) that was not clearly stated in previous
+notes. The strongest honest claim is: "Z_3 orbits are geometric structural
+sectors of the mass spectrum, distinguished from lattice QCD taste by being
+rooted in Oh. Their identification as physical generations requires the
+lattice-is-physical axiom." This is weaker than previous notes claimed and
+more honest.
+
+### Supersedes / corrects
+
+This analysis CORRECTS the implicit assumption in previous notes that Z_3 is
+a symmetry of the full Hamiltonian. It is a symmetry of the mass spectrum only.
+The previous claim that "Z_3 sectors carry conserved quantum numbers" is
+correct for the Wilson mass but NOT for the full dynamics. The paper should
+state this distinction clearly.
+
+---
+
 ## Guardrails Compliance
 
 - No theorem assumptions were silently widened
@@ -441,10 +523,12 @@ reported "delta = 1 CONFIRMED" at L=8. That was a false positive.
 | frontier_s3_discrete_continuum.py | 4 | 2 | Exact + bounded |
 | frontier_ckm_higgs_z3_universal.py | 8 | 0 | Exact (obstruction) |
 | frontier_s3_pl_manifold.py | 9 | 0 | Exact |
-| **TOTAL** | **353** | **13** | |
+| frontier_generation_axiom_first.py | 36 | 3 | Exact + bounded |
+| **TOTAL** | **389** | **16** | |
 
-The 11 FAILs are all documented, honest, and diagnostic (not theorem failures):
-- Gate 1: 6 FAILs in main script are honest obstructions that led to the gap-closure work; 1 FAIL is the hierarchy shortfall before synthesis
+The 16 FAILs are all documented, honest, and diagnostic (not theorem failures):
+- Gate 1: 6 FAILs in main script are honest obstructions that led to the gap-closure work; 1 FAIL is the hierarchy shortfall before synthesis; 3 FAILs in axiom-first script are honest obstructions (eta phase breaking, lattice-is-physical axiom, Z_2 breaking parameter)
 - Gate 2: 2 FAILs in original script are the gaps that were subsequently closed
 - Gate 3: 1 FAIL is Stefan-Boltzmann on finite graphs (proved in thermo limit)
 - Gate 4: 1 FAIL is expected scheme mismatch (V-scheme vs MS-bar)
+- CKM: no new FAILs (obstruction is analytic, tested as PASS)
