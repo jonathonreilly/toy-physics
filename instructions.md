@@ -43,24 +43,54 @@ If any of those fail, the lane stays `bounded` or `open`.
 ## Current priority order
 
 1. **Gravity extension beyond the retained weak-field core**
-   - already retained: Poisson self-consistency + Newton law on `Z^3`
+   - already retained: weak-field Newton law on `Z^3` plus the narrowed
+     Poisson uniqueness theorem inside the translation-invariant,
+     self-adjoint, nearest-neighbor operator class
    - open for promotion: broader gravity bundle only
    - target items:
      - WEP / time dilation / conformal metric / geodesic / light bending
      - strong-field / frozen-star / echo package
    - do not spend time re-proving Newton unless needed for a new closure step
-   - the current load-bearing weak point is the Poisson-forcing step
+   - the current load-bearing weak point is the full self-consistency
+     `=>` Poisson step on the full framework surface
+   - the new Poisson uniqueness theorem is good, but it only closes the
+     narrowed TI + self-adjoint + nearest-neighbor family
    - a finite-family sweep or mismatch residual is not enough to call Poisson
      uniqueness “derived for all local operators”
-   - if you cannot prove the universal uniqueness theorem, keep Poisson as the
-     weakest bounded link and build the rest of the gravity bundle honestly on
-     top of that
+   - if you cannot prove the universal uniqueness theorem, keep the broader
+     Poisson-forcing claim bounded and build the rest of the gravity bundle
+     honestly on top of the narrowed exact sub-result
 
 2. **`S^3` compactification / topology closure**
+   - the latest `S^3` recognition work is not closure
+   - `S3_RECOGNITION_NOTE.md` is only a bounded strengthening around a worked
+     `R = 2` example
+   - `frontier_s3_recognition.py` only runs the full recognition path for
+     `R = 2`
+   - do not use that note/runner as authority that the full `S^3` lane is
+     closed
+   - if you want to advance this lane, either:
+     - generalize the theorem surface beyond `R = 2`, or
+     - narrow the claim explicitly to the worked complex and keep the lane
+       bounded
 
 3. **DM relic mapping**
+   - the latest flagship note is better, but the paper bar is still stricter
+   - do not call Stosszahlansatz, the Boltzmann coarse-graining step, or the
+     `sigma v` coefficient fully `derived` unless the note/script becomes a
+     self-contained theorem-grade lattice derivation
+   - the current safe status is:
+     - structural DM inputs strengthened
+     - relic mapping still bounded
 
 4. **Renormalized `y_t` matching**
+   - the current safe status is:
+     - bare UV theorem closed
+     - `Cl(3)` preservation under RG exact
+     - low-energy running, `alpha_s(M_Pl)`, and lattice-to-continuum matching
+       still bounded
+   - do not collapse those bounded pieces into “just mathematics” unless the
+     actual note/script closes them at the paper bar
 
 5. **CKM / flavor**
    - only if there is a real route to closure
@@ -126,6 +156,10 @@ Before asking Codex to review:
 
 The packet is acceptable only if it matches `review.md` and the touched
 note/script pair exactly. If it overstates anything, it is not authority.
+Right now the packet is still not authority if it says:
+- only three live gates remain
+- `S^3` is closed
+- gravity is not a live publication-critical gate
 
 ## Hard constraints
 
@@ -134,12 +168,34 @@ note/script pair exactly. If it overstates anything, it is not authority.
    status directly.
 
 1a. For gravity specifically:
+   - do not use `frontier_gravity_poisson_derived.py` as proof that the full
+     self-consistency surface uniquely forces Poisson
+   - the narrowed Poisson uniqueness theorem is acceptable as an exact
+     sub-result; the broader forcing claim is not yet closed
    - `time dilation` and eikonal `WEP` are not standalone closure wins; they
      are built-in action identities once `S = L(1-f)` is accepted
    - geodesic / conformal-metric / GW results must carry their continuum-limit,
      WKB, or wave-equation-promotion assumptions explicitly
    - strong-field / frozen-star / echo work is companion-level unless it
      actually closes a sharp theorem surface
+
+1b. For `S^3` specifically:
+   - do not present an `R = 2` computation as a general compactification
+     theorem
+   - do not label `S3_RECOGNITION_NOTE.md` or `frontier_s3_recognition.py` as
+     full lane closure unless the claim is explicitly narrowed to the worked
+     complex and the packet is updated to match
+
+1c. For DM specifically:
+   - do not label Stosszahlansatz, Boltzmann coarse-graining, or the
+     `sigma v` coefficient as theorem-grade derived if the supporting step
+     still leans on factorization arguments, coarse-graining heuristics, or
+     standard threshold normalization structure
+
+1d. For renormalized `y_t` specifically:
+   - do not say SM running, the `alpha_s(M_Pl)` chain, or matching are fully
+     discharged just because they operate on derived inputs
+   - the current audit still keeps those pieces bounded
 
 2. Do not use “Born rule derived.”
    Safe statement:

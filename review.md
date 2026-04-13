@@ -43,6 +43,31 @@ These are already strong enough for the flagship paper surface:
 - exact `I_3 = 0` / no-third-order interference
 - exact CPT on the free staggered lattice
 
+## Framework-premise rule
+
+Codex accepts the physical-graph premise at the paper bar, but only in its
+proper place:
+
+- acceptable:
+  - the framework statement itself says `Cl(3)` on `Z^3` is the physical theory
+- not acceptable:
+  - introducing “the graph/lattice is physical” later as a new rescue axiom
+    for one specific lane
+
+This premise can resolve interpretation-dependent disputes such as
+artifact-vs-physical questions. That is why generation physicality is now
+closed in the framework.
+
+This premise does **not** by itself close bridge-derivation lanes that still
+need real mathematics or physics. In particular, it does not automatically
+close:
+
+- gravity extension beyond the retained weak-field core
+- `S^3`
+- DM relic mapping
+- renormalized `y_t`
+- CKM / flavor
+
 ## Key open items for a clean publication
 
 These are the real remaining publication-critical items.
