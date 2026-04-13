@@ -124,36 +124,32 @@ Current safe state:
 - route pruning and bounded structural flavor notes are useful
 - the old Higgs `Z_3` universality blocker is no longer the main issue
 - still open:
-  - ab initio O(1) NNI / overlap coefficients
-  - quantitative `V_cb` / `V_ub` closure
-  - larger-compute or analytic overlap route
+  - sharp `V_cb`
+  - sharp `V_ub`
+  - first-principles control of the `2-3` asymmetry / NNI coefficients
+
+Current best reading:
+
+- this is not obviously a pure cluster-compute wall
+- the exact NNI / Fritzsch-type `2-3` formula already lands fairly close to
+  PDG if the residual `c_23^u/c_23^d` asymmetry is modest
+- the highest-value target is therefore the **ratio / asymmetry** controlling
+  `c_23^u/c_23^d`, not brute-force absolute overlap closure
+
+Preferred routes:
+
+1. derive `V_cb` from the exact `2-3` NNI formula with explicit
+   `c_23^u`, `c_23^d`, `delta_23`
+2. derive the ratio `c_23^u/c_23^d` analytically from common overlap cancellation
+   plus sector-dependent EW / radiative weights
+3. derive `V_ub` from NNI + `c_13` suppression + up-sector dominance
+4. use invariant/Jarlskog relations built from derived quantities, not PDG angles
+
+Only if those fail cleanly should the lane be treated as compute-limited.
 
 Paper-safe read:
 
 > CKM remains bounded; structure improved, quantitative closure not there yet.
-
-### 4. Broad gravity companion bundle
-
-Current accepted split:
-
-- retained:
-  - weak-field Newton / Poisson
-  - weak-field WEP
-  - weak-field time dilation
-- bounded:
-  - conformal metric
-  - geodesic equation
-  - light bending
-  - strong-field
-
-Important wording rule:
-
-- `L^{-1} = G_0` is accepted as the framework’s closure condition for
-  self-consistency
-- it is **not** to be sold as a theorem of pure algebra with zero remaining
-  premise
-- finite-lattice profile checks remain bounded even when they support a
-  retained theorem path
 
 ## Packet alignment rule
 

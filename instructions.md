@@ -165,6 +165,7 @@ explicitly asks for wording/package alignment.
 **Goal**
 
 - close a real quantitative route or stop at one sharp bounded authority note
+- do **not** assume the only remaining route is bigger lattice compute
 
 **Primary files**
 
@@ -179,11 +180,57 @@ explicitly asks for wording/package alignment.
 2. the real remaining blocker is quantitative closure
    - ab initio O(1) NNI / overlap coefficients are still not derived sharply
    - `V_cb` and `V_ub` remain off by factor-level errors
-   - larger lattice compute or a real analytic overlap route is still needed
+3. current best reading of the gap
+   - this is probably **not** “derive every overlap coefficient at `L >= 32` or fail”
+   - the strongest exact formulas already put `V_cb` close to PDG if the
+     residual `2-3` asymmetry is only modest
+   - the high-value target is the **ratio / asymmetry** controlling `c_23^u/c_23^d`,
+     not the absolute coefficients by brute force
+
+**Preferred execution routes**
+
+1. exact `V_cb` route from the full `2-3` NNI formula
+   - stop leaning on the crude linear `m_s/m_b - m_c/m_t` estimate as the main
+     quantitative route
+   - work from the full `2x2` `2-3` block diagonalization with
+     `c_23^u`, `c_23^d`, and `delta_23` explicit
+   - prove that only a modest `O(10%)` asymmetry is needed to land near PDG
+
+2. derive the **ratio** `c_23^u/c_23^d`, not the absolute coefficients
+   - factor the coefficient into common lattice overlap times sector-dependent
+     EW / radiative weighting
+   - if the common overlap cancels, the remaining up/down asymmetry may be
+     derivable without cluster-scale production
+   - this is the best current non-cluster route
+
+3. close `V_ub` analytically from NNI + `c_13` suppression
+   - use the already-retained structural `c_13` suppression
+   - test whether the framework implies up-sector dominance for the `1-3`
+     rotation, giving `|V_ub| ~ sqrt(m_u/m_t)` or the equivalent exact NNI
+     asymptotic
+
+4. use CKM invariants rather than raw overlap amplitudes
+   - if `V_us` is sharp and `V_ub` can be sharpened, use the derived phase scale
+     and Jarlskog/invariant relations to solve for `V_cb`
+   - do not import PDG angles for this route
+
+5. cluster-compute fallback
+   - only fall back to `L >= 32` / dynamical overlap production if the ratio /
+     invariant routes fail cleanly
+
+**Routes to stop overusing**
+
+- do not keep presenting “needs more compute” as the only path without first
+  exhausting the ratio / invariant routes
+- do not chase Higgs `Z_3` universality as the main blocker
+- do not spend time deriving all four absolute NNI coefficients if a sharp
+  `c_23^u/c_23^d` or invariant route can close the lane sooner
 
 **What counts as success**
 
 - real quantitative closure with note/script/packet aligned
+- or a clear proof that the remaining obstacle is specifically the unresolved
+  `c_23^u/c_23^d` asymmetry / invariant input, not a vague “more compute”
 
 **What does not count**
 
