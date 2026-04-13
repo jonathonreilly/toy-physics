@@ -334,6 +334,14 @@ Current bridge result:
   - this removes “does an exact sewing shell exist?” as the blocker and
     replaces it with the narrower problem of interpreting that exact shell
     source as the effective stress / matching law of the 4D closure
+- the new radial-shell result sharpens it once more:
+  the exact shell source already collapses strongly onto a purely radial shell
+  law carrying the full total charge, with a zero-monopole anisotropic
+  remainder
+  - see `docs/RADIAL_SHELL_MATCHING_LAW_NOTE.md`
+  - this reduces the remaining target further: derive the radial shell profile
+    and control the anisotropic remainder, rather than derive an arbitrary
+    shell law from scratch
 
 Required outcome:
 
@@ -349,6 +357,9 @@ Required outcome:
 - more sharply now:
   derive the continuum / effective-stress meaning of the exact shell source
   `sigma_R` and show that it generates the correct nonlinear sewing law
+- more sharply still:
+  derive the radial shell profile from the microscopic lattice dynamics and
+  show the zero-monopole shell anisotropy is a controlled subleading stress
 
 ### Attack 3: only after metric closure, revisit horizon / echo claims
 
