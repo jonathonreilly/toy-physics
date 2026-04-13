@@ -380,6 +380,24 @@ New exact/bounded projected-correction result extracted after that:
   list and narrows the remaining problem to the scalar amplitude on the active
   pair quotient and its promotion to the full 4D closure
 
+New exact support-amplitude result extracted after that:
+
+- on the current star-supported source class, the microscopic map from the
+  renormalized support vector `q_eff = (I - W G_S)^-1 m` to the active shell
+  correction is already rank one
+- the exact support-to-active response operator factors as
+  `A_active = m_active * 1^T`
+  so the active non-`O_h` shell correction obeys
+  `delta_sigma_active = Q_eff * m_active`
+  with `Q_eff = 1^T q_eff`
+- the same scalar-amplitude law holds on the reduced active pair quotient
+- the exact local `O_h` and broader finite-rank source families satisfy that
+  support-renormalized amplitude law exactly
+- see `docs/SUPPORT_RENORMALIZED_ACTIVE_AMPLITUDE_NOTE.md`
+- this removes “derive the scalar amplitude on the active pair quotient” from
+  the live blocker list and leaves the final nonlinear 4D lift as the main
+  remaining gravity problem on the current source class
+
 ## Do not retread these solved or near-solved substeps
 
 The attack should **not** spend time redoing the following:
