@@ -155,10 +155,11 @@ Current blockers:
     lattice transport computation with real finite-`L` soft-mode bias, so it
     should be treated as strong native bounded support rather than the final
     transport theorem
-  - `v_w` is now the cleaner primary blocker
-    - the present route still leans on perturbative CW / bag-model driving
-      pressure and the imported `R_NP = 1.5` enhancement from 2HDM lattice
-      studies
+  - the latest coupled-transport route is a bounded strengthening, not
+    closure
+    - it still imports `C_tr`
+    - it still imports non-perturbative EWPT calibration entering `v(T_n)/T_n`
+  - `v_w` is improved, but it is no longer the only honest blocker
 - the new Boltzmann-theorem note is a strengthening, not closure authority
   - its script verifies the master-equation structure only on a small 1D toy
     interaction model
@@ -172,6 +173,13 @@ Current blockers:
   - until one note states which of `v(T_c)/T_c`, `v(T_n)/T_n`, or wall-local
     `v/T` is the real baryogenesis input, the lane is not promotable
 - relic-ratio / cosmological bridge is therefore still not closed
+- the new taste-enhanced `eta` note is **not** closure authority
+  - it multiplies the already-bounded `eta_coupled` result by a post-hoc `8/3`
+    trace factor
+  - that does not rebuild the transport equations with the explicit
+    taste-enhanced source
+  - it also leaves the imported `C_tr` calibration and imported
+    non-perturbative `v(T_n)/T_n` calibration untouched
 - `g = 1` and `k = 0` remain bounded framework inputs where used
 
 Paper-safe read:
@@ -179,24 +187,27 @@ Paper-safe read:
 > Structural DM inputs are materially stronger. The BBN objection is mostly
 > retired, `L_w*T` is substantially narrowed, and `D_q*T` now has a native
 > one-loop lattice route. The full relic mapping still remains bounded because
-> `eta` still depends on transport closure that is not yet fully native at the
-> paper bar, especially `v_w`.
+> `eta` still depends on imported `C_tr`, imported non-perturbative
+> `v(T_n)/T_n`, and transport closure that is not yet fully native at the
+> paper bar.
 
 Best attack:
 
 1. first derive `T_n` from the existing bounce / effective-potential surface
    using `S_3(T_n)/T_n ~ 140`
-2. rebuild `v_w` on the reconciled native EWPT + HTL + bounce surface, with
-   no stale `R_NP = 1.5`
-3. solve the coupled transport fixed point instead of scanning `D_q*T`,
+2. derive the wall-local CP source directly on the physical taste space; do
+   not use a post-hoc `8/3` multiplier as closure
+3. derive the transport prefactor `C_tr` from the framework transport system
+   instead of FHS calibration
+4. rebuild `v_w` on the reconciled native EWPT + HTL + bounce surface, with
+   no stale imported non-perturbative enhancement
+5. solve the coupled transport fixed point instead of scanning `D_q*T`,
    `v_w`, and `L_w*T` independently
-4. only if there is real leverage, upgrade `D_q*T` beyond the present one-loop
+6. only if there is real leverage, upgrade `D_q*T` beyond the present one-loop
    / static-screened native surface
-5. derive the CP source from the wall profile / `Z_3` phase structure rather
-   than compact ansatz form
-6. if 1-5 fail, freeze the lane honestly as “framework baryogenesis plus
+7. if 1-6 fail, freeze the lane honestly as “framework baryogenesis plus
    standard transport closure”
-7. only then promote `eta` and the full relic ratio
+8. only then promote `eta` and the full relic ratio
 
 ### 2. Renormalized `y_t`
 
@@ -223,6 +234,8 @@ Current safe state:
   - so the remaining blocker is now a concrete non-perturbative gauge
     crossover / step-scaling problem, not the old “two unrelated UV
     couplings” problem
+  - the new “gauge crossover theorem” therefore still does not close the lane;
+    it leaves the gauge trajectory observed-seeded
   - thresholded running down to `M_Z` still matters after that crossover
   - the new scheme-independence theorem is useful UV support, but it does not
     close the lane
@@ -282,6 +295,11 @@ Current best reading:
   - the lattice `c_13` story is still not sharp enough
   - the new `Z_3^3` phase work improves `J` substantially, but the best joint
     result still overshoots `V_ub` and undershoots `delta_CP`
+  - the new mass-basis NNI route is a real bounded strengthening for `V_ub`,
+    but it still uses PDG quark masses directly and fitted geometric NNI
+    coefficients from earlier bounded work
+  - it also leaves the phase sector open: `J`, `rho_bar`, and `eta_bar`
+    remain far off
   - the new Wolfenstein-cascade note is useful structurally, but not closure
     authority
     - lambda still uses an empirical `R_overlap = lambda_PDG / lambda_bare`
@@ -292,6 +310,8 @@ Current best reading:
   - absolute `S_23` / `c_23` with the residual sector correction removed
   - residual `c_13`
   - up/down phase embedding that resolves the remaining `J`-`V_ub` tension
+  - and the mass-basis suppression itself must be put on a framework-derived
+    surface rather than PDG masses plus fitted geometric coefficients
 
 Preferred routes:
 
@@ -302,11 +322,14 @@ Preferred routes:
      existing sector-correction machinery, with no PDG back-calibration
 4. derive `c_13` analytically from the full `3x3` NNI structure
    - Schur-complement / effective-mass-matrix route is preferred
-5. derive the surviving rephasing-invariant CKM phase from invariants built
+5. derive the mass-basis suppression from framework-derived mass ratios and
+   framework-derived geometric coefficients, not PDG masses plus fitted
+   coefficients
+6. derive the surviving rephasing-invariant CKM phase from invariants built
    from the same EWSB-dressed mass matrices
-6. use multi-`L` ratio/normalization evidence only as support for 3-5, not as
+7. use multi-`L` ratio/normalization evidence only as support for 3-6, not as
    a substitute for them
-7. only if 3-6 fail cleanly should the lane be treated as compute-limited,
+8. only if 3-7 fail cleanly should the lane be treated as compute-limited,
    and then only on one scalar quantity (`K_23` or physical `c_13`)
 
 Paper-safe read:
