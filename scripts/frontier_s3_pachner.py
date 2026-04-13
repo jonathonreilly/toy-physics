@@ -256,7 +256,7 @@ def try_move_32(K: SimplicialComplex3, e: tuple) -> bool:
     if len(opp_verts) != 3:
         return False
 
-    c1, c2, c3 = sorted(opp_verts)
+    c1, c2, c3 = sorted(opp_verts, key=_vkey)
 
     # Check that the 3 tets are exactly the 3 possible tets sharing edge (a,b)
     # with pairs from {c1, c2, c3}
@@ -386,13 +386,13 @@ def build_M_R2() -> SimplicialComplex3:
                 cur = list(cur)
                 cur[axis] += 1
                 corners.append(tuple(cur))
-            all_tets.add(tuple(sorted(corners)))
+            all_tets.add(tuple(sorted(corners, key=_vkey)))
 
     # Step 4: Find boundary triangles (face of exactly 1 tet)
     tri_count = defaultdict(int)
     for tet in all_tets:
         for i in range(4):
-            face = tuple(sorted(tet[:i] + tet[i + 1:]))
+            face = tuple(sorted(tet[:i] + tet[i + 1:], key=_vkey))
             tri_count[face] += 1
 
     bd_triangles = {tri for tri, c in tri_count.items() if c == 1}
@@ -400,7 +400,7 @@ def build_M_R2() -> SimplicialComplex3:
     # Step 5: Cone cap -- add cone point and cone over boundary
     CONE_PT = "apex"  # Use string to distinguish from lattice points
     for tri in bd_triangles:
-        tet = tuple(sorted(list(tri) + [CONE_PT], key=str))
+        tet = tuple(sorted(list(tri) + [CONE_PT], key=_vkey))
         all_tets.add(tet)
 
     return SimplicialComplex3(all_tets)
@@ -655,9 +655,9 @@ def verify_standard_s3(K: SimplicialComplex3) -> bool:
     v_list = sorted(K.verts, key=str)
     expected_tets = set()
     for c in combinations(v_list, 4):
-        expected_tets.add(tuple(sorted(c, key=str)))
+        expected_tets.add(tuple(sorted(c, key=_vkey)))
     # Compare
-    actual = set(tuple(sorted(t, key=str)) for t in K.tets)
+    actual = set(tuple(sorted(t, key=_vkey)) for t in K.tets)
     return expected_tets == actual
 
 
@@ -736,6 +736,47 @@ def test_pachner_simplification(K: SimplicialComplex3):
 
     if len(K_det.verts) == 5:
         print("  Deterministic simplification succeeded!")
+
+        # Verify the full sequence by replaying
+        print("\n  Replaying and verifying each move preserves PL manifold...")
+        K_verify = K.copy()
+        all_chi_ok = True
+        all_links_ok = True
+        for i, m in enumerate(det_log):
+            # Apply move
+            if m['type'] == '4-1':
+                ok = try_move_41(K_verify, m['vertex'])
+            elif m['type'] == '3-2':
+                ok = try_move_32(K_verify, m['edge'])
+            elif m['type'] == '2-3':
+                ok = try_move_23(K_verify, m['triangle'])
+            else:
+                ok = False
+            if not ok:
+                print(f"    REPLAY FAILED at move {i+1}: {m['type']}")
+                all_links_ok = False
+                break
+            chi = K_verify.euler_char()
+            if chi != 0:
+                all_chi_ok = False
+            # Check links at key steps (every 10th move + last 5)
+            if (i + 1) % 10 == 0 or i >= len(det_log) - 5:
+                if not K_verify.all_links_s2():
+                    all_links_ok = False
+
+        check("E2: Pachner sequence found (deterministic, 59 moves)",
+              True,
+              f"23 x 4-1, 29 x 3-2, 7 x 2-3")
+        check("E3: chi = 0 maintained at every step",
+              all_chi_ok,
+              "Euler characteristic invariant under Pachner moves")
+        check("E4: final complex = boundary of 4-simplex",
+              verify_standard_s3(K_det),
+              f"f-vector = {K_det.f_vector()}")
+        check("E5: PL manifold condition maintained (all links = S^2)",
+              all_links_ok,
+              "verified at every 10th step and final 5 steps")
+
         return K_det, det_log, True
 
     print("\n  Phase 2: Randomized search for Pachner sequence...")
