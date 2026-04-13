@@ -174,7 +174,16 @@ language. Exact blockers to gravity-companion promotion:
    - do not keep re-fighting the same coarse-graining objection
    - the remaining issue is not “does factorization exist?” but “can the full
      relic bridge be closed without imported cosmology?”
-6. latest transport routes are stronger, but the lane is still not closed
+6. the new Boltzmann-theorem path is useful, but not closure authority for DM
+   - do **not** call the full relic mapping or `R = 5.48` a theorem from that
+     note
+   - the current script verifies the master-equation structure only on a small
+     1D toy interaction model
+   - the thermodynamic-limit and expansion pieces still lean on standard
+     Riemann/Weyl/Newtonian-cosmology structure
+   - treat it as a bounded Boltzmann-reduction strengthening, not as a
+     replacement for the live `eta` / transport blocker
+7. latest transport routes are stronger, but the lane is still not closed
    - `D_q*T`: the old Coulomb-log / inserted-`C_0` objection is mostly gone
      because the new native mode-sum script does compute the width directly on
      the lattice
@@ -189,14 +198,14 @@ language. Exact blockers to gravity-companion promotion:
        pressure and the imported non-perturbative enhancement `R_NP = 1.5`
        from 2HDM lattice studies
    - so the transport sector is narrower, but not closed
-7. the branch still contains an internal EWPT/baryogenesis regime mismatch
+8. the branch still contains an internal EWPT/baryogenesis regime mismatch
    - older notes still lean on a partial-washout window near `v/T ~ 0.5`
    - newer native EWPT work gives a strong first-order surface with
      `v(T_c)/T_c > 1`
    - do **not** promote DM until one authority note states clearly which of
      `v(T_c)/T_c`, `v(T_n)/T_n`, or wall-local `v/T` actually enters the
      baryogenesis source
-8. bounded framework inputs still need honest handling
+9. bounded framework inputs still need honest handling
    - `g = 1` is still a framework-defining coefficient, not a theorem
    - `k = 0` remains bounded if used in Newtonian cosmology
    - no “zero imports / pure graph theory” language while transport formulas
@@ -291,13 +300,20 @@ language. Exact blockers to gravity-companion promotion:
    - the 1-loop bookkeeping bug is fixed
    - the lattice matching coefficient itself is already narrowed to
      sub-percent scale
-4. the live blocker is now one **self-consistent** framework-to-SM crossover
+4. the new scheme-independence theorem is a useful UV sub-result, not lane
+   closure
+   - it strengthens the claim that the UV ratio `y_t / g_3 = 1/sqrt(6)` is
+     protected
+   - it does **not** derive the framework-to-SM gauge crossover
+   - do **not** cite the current script as an all-orders vertex-renormalization
+     proof; it checks Ward / propagator identities, not full `Z_y / Z_g`
+5. the live blocker is now one **self-consistent** framework-to-SM crossover
    - derive how the strong framework boundary hands off to the perturbative
      SM gauge trajectory
    - the preferred route is a one-shot non-perturbative finite matching
      theorem on the actual Hamiltonian, not a huge step-scaling march
    - lattice step-scaling is fallback if that cleaner route fails
-5. thresholded running still matters, but the conceptual mismatch is now
+6. thresholded running still matters, but the conceptual mismatch is now
    “framework strong boundary vs perturbative SM running”
    - the common boundary relation `y_t = g_3/sqrt(6)` is now enforced on the
      framework surface
@@ -370,16 +386,21 @@ language. Exact blockers to gravity-companion promotion:
    - the exact `2x2` `2-3` block diagonalization is already done
    - the ratio route `c_23^u/c_23^d` is already done
    - the full `3x3` NNI `V_ub` route is already done as a bounded result
-3. the new full-closure script does **not** derive `V_cb`
+3. the new Wolfenstein-cascade note is useful structurally, but it is **not**
+   closure authority
+   - lambda still uses an empirical `R_overlap = lambda_PDG / lambda_bare`
+   - the absolute `c_23` scale still comes from `V_cb` matching
+   - the phase sector still chooses `c_13 / c_23` by PDG-based optimization
+4. the new full-closure script does **not** derive `V_cb`
    - it explicitly solves `c_23^d` by matching `V_cb` to PDG
    - do **not** cite that as a first-principles closure
-4. the real remaining blocker is quantitative closure
+5. the real remaining blocker is quantitative closure
    - absolute `c_23` / `S_23` normalization is improved but still bounded
      rather than theorem-grade
    - `c_13` suppression and phase control are still not jointly derived well
      enough for `V_ub` and `J`
    - the `J`-`V_ub` tension is reduced, not eliminated
-5. current best reading of the gap
+6. current best reading of the gap
    - the new absolute-`S_23` route predicts `V_cb` within about `4.6%`
      without using PDG `V_cb`, which is real progress
    - but `K` still has `O(20%)` spread and a remaining EWSB sector correction,

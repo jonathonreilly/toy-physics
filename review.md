@@ -159,6 +159,12 @@ Current blockers:
     - the present route still leans on perturbative CW / bag-model driving
       pressure and the imported `R_NP = 1.5` enhancement from 2HDM lattice
       studies
+- the new Boltzmann-theorem note is a strengthening, not closure authority
+  - its script verifies the master-equation structure only on a small 1D toy
+    interaction model
+  - the thermodynamic-limit and expansion steps still lean on standard
+    Riemann/Weyl/Newtonian-cosmology structure
+  - it therefore does **not** retire the live `eta` / transport blocker
 - the branch still contains an internal EWPT/baryogenesis regime mismatch
   - older notes still use a partial-washout regime near `v/T ~ 0.5`
   - newer native EWPT notes give a strong first-order surface with
@@ -218,6 +224,12 @@ Current safe state:
     crossover / step-scaling problem, not the old “two unrelated UV
     couplings” problem
   - thresholded running down to `M_Z` still matters after that crossover
+  - the new scheme-independence theorem is useful UV support, but it does not
+    close the lane
+    - it strengthens the claim that the UV ratio is protected
+    - but its current script checks Ward / propagator identities, not a full
+      all-orders vertex-renormalization equality
+    - it therefore does **not** remove the gauge-crossover blocker
 
 Paper-safe read:
 
@@ -270,6 +282,11 @@ Current best reading:
   - the lattice `c_13` story is still not sharp enough
   - the new `Z_3^3` phase work improves `J` substantially, but the best joint
     result still overshoots `V_ub` and undershoots `delta_CP`
+  - the new Wolfenstein-cascade note is useful structurally, but not closure
+    authority
+    - lambda still uses an empirical `R_overlap = lambda_PDG / lambda_bare`
+    - the absolute `c_23` scale still comes from `V_cb` matching
+    - the phase sector still optimizes `c_13 / c_23` against PDG observables
 - invariants are useful, but do not independently solve the lane
 - the highest-value unsolved targets are now:
   - absolute `S_23` / `c_23` with the residual sector correction removed
