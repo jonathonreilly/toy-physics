@@ -334,18 +334,51 @@ def _perm_sign(perm_from, perm_to):
 # Homology computation via rank of boundary matrices
 # =============================================================================
 
-def matrix_rank_over_Z(M):
+def matrix_rank_over_Q(M):
     """
-    Compute rank of integer matrix M over Z using SVD on float64.
-    For our small matrices this is exact (entries are -1, 0, +1).
-    We verify by checking that singular values are well-separated from zero.
+    Compute rank of integer matrix M over Q using fraction-free
+    Gaussian elimination with GCD reduction.
     """
+    from math import gcd
     if M.shape[0] == 0 or M.shape[1] == 0:
         return 0
-    # Use SVD
-    U, s, Vt = np.linalg.svd(M.astype(np.float64), full_matrices=False)
-    # Threshold: singular values above 0.5 are nonzero (entries are integers)
-    rank = int(np.sum(s > 0.5))
+
+    m, n = M.shape
+    A = [[int(M[i, j]) for j in range(n)] for i in range(m)]
+
+    rank = 0
+    pivot_col = 0
+    while rank < m and pivot_col < n:
+        # Find pivot in current column
+        pivot_row = None
+        for r in range(rank, m):
+            if A[r][pivot_col] != 0:
+                pivot_row = r
+                break
+        if pivot_row is None:
+            pivot_col += 1
+            continue
+        # Swap
+        if pivot_row != rank:
+            A[rank], A[pivot_row] = A[pivot_row], A[rank]
+        # Eliminate below
+        for r in range(rank + 1, m):
+            if A[r][pivot_col] != 0:
+                factor_r = A[r][pivot_col]
+                factor_p = A[rank][pivot_col]
+                for c in range(n):
+                    A[r][c] = factor_p * A[r][c] - factor_r * A[rank][c]
+                # GCD reduction to prevent integer blowup
+                g = 0
+                for c in range(n):
+                    if A[r][c] != 0:
+                        g = gcd(g, abs(A[r][c]))
+                if g > 1:
+                    for c in range(n):
+                        A[r][c] //= g
+        rank += 1
+        pivot_col += 1
+
     return rank
 
 
@@ -372,9 +405,9 @@ def compute_homology(chain_data):
     n2 = chain_data['n_tris']
     n3 = chain_data['n_tets']
 
-    rank_d1 = matrix_rank_over_Z(d1)
-    rank_d2 = matrix_rank_over_Z(d2)
-    rank_d3 = matrix_rank_over_Z(d3)
+    rank_d1 = matrix_rank_over_Q(d1)
+    rank_d2 = matrix_rank_over_Q(d2)
+    rank_d3 = matrix_rank_over_Q(d3)
 
     h0 = n0 - rank_d1
     h1 = (n1 - rank_d1) - rank_d2
