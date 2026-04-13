@@ -15,25 +15,6 @@ Use these as the real Codex authority documents:
 2. [/private/tmp/physics-review-active/docs/FULL_CLAIM_LEDGER.md](/private/tmp/physics-review-active/docs/FULL_CLAIM_LEDGER.md)
 3. [/private/tmp/physics-publication-prep/docs/publication/ci3_z3/FULL_CLAIM_LEDGER.md](/private/tmp/physics-publication-prep/docs/publication/ci3_z3/FULL_CLAIM_LEDGER.md)
 
-## Retained paper surface
-
-These are already retained at the current paper bar:
-
-- framework statement:
-  - `Cl(3)` on `Z^3` is the physical theory
-- weak-field gravity core:
-  - Poisson / Newton
-  - weak-field WEP
-  - weak-field gravitational time dilation
-- exact native `SU(2)`
-- graph-first structural `SU(3)`
-- anomaly-forced `3+1`
-- retained `S^3` compactification / topology closure
-- full-framework one-generation matter closure
-- three-generation matter structure
-- exact `I_3 = 0`
-- exact CPT
-
 ## Core publication caveats
 
 These stay explicit even if every remaining live gate closes:
@@ -72,17 +53,15 @@ These are the only three remaining flagship live gates:
 2. **Renormalized `y_t` matching**
 3. **CKM / quantitative flavor closure**
 
-## Residual bounded companion bundle
+## Focus rule
 
-Broad gravity beyond the retained weak-field core is still bounded:
+Routine review should focus on:
 
-- conformal metric
-- geodesic equation
-- light bending
-- strong-field / frozen-star / echo package
+1. DM relic mapping
+2. renormalized `y_t`
+3. CKM
 
-This is still worth tracking, but it is not one of the three flagship live
-gates.
+Everything else is out of scope unless Codex explicitly asks for cleanup.
 
 ## Lane-by-lane review state
 
@@ -176,32 +155,6 @@ Important wording rule:
 - finite-lattice profile checks remain bounded even when they support a
   retained theorem path
 
-## S^3 status
-
-`S^3` is now treated as closed at the accepted paper bar.
-
-Why:
-
-- the all-`R` boundary-link theorem closes the old local disk-step objection
-- the cone cap is accepted as the unique closure up to PL homeomorphism on the
-  framework surface
-- standard cited topology infrastructure is acceptable here:
-  - Alexander trick
-  - MCG(`S^2`)
-  - van Kampen
-  - Perelman
-  - Moise
-- the framework sentence already treats the lattice as physical, so that
-  premise is not a late rescue axiom
-
-Operational consequence:
-
-- do not keep treating `S^3` as a live gate
-- only touch `S^3` now for wording/package alignment if stale docs still say
-  bounded
-- the computational runners are support for the retained theorem chain, not the
-  whole closure authority by themselves
-
 ## Packet alignment rule
 
 If you touch a lane, make sure all three agree:
@@ -223,19 +176,7 @@ These are not science authority if they outrun this review state:
 
 ## Practical summary
 
-- closed/retained:
-  - gravity weak-field core + WEP/time dilation
-  - `SU(2)`
-  - `SU(3)`
-  - `3+1`
-  - `S^3`
-  - one-generation closure
-  - three-generation matter structure
-  - `I_3 = 0`
-  - CPT
 - live gates:
   - DM relic mapping
   - renormalized `y_t`
   - CKM
-- bounded companion bundle:
-  - broad gravity beyond weak-field core

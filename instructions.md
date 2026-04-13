@@ -32,26 +32,6 @@ Land all real work here and push it:
 
 Do not leave real fixes only in local notes, packets, or scorecards.
 
-## Current retained paper surface
-
-These are already retained at the paper bar. Do not spend theorem time trying
-to re-close them unless you are fixing stale wording.
-
-- framework statement:
-  - `Cl(3)` on `Z^3` is the physical theory
-- weak-field gravity core:
-  - Poisson / Newton chain
-  - weak-field WEP
-  - weak-field gravitational time dilation
-- exact native `SU(2)`
-- graph-first structural `SU(3)`
-- anomaly-forced `3+1`
-- retained `S^3` compactification / topology closure
-- full-framework one-generation matter closure
-- three-generation matter structure
-- exact `I_3 = 0`
-- exact CPT
-
 ## Remaining live publication gates
 
 Only these three are still live flagship gates:
@@ -72,31 +52,10 @@ These caveats must stay explicit in any honest flagship submission:
   - safe claim: Poisson / Newton core + weak-field WEP + weak-field time dilation
   - not safe: full nonlinear GR closure
 
-## Important but not a flagship live gate
+## Scope rule
 
-**Broad gravity beyond the retained weak-field core** is still bounded, but it
-is no longer one of the three flagship live gates. Treat it as a companion
-bundle:
-
-- bounded:
-  - conformal metric
-  - geodesic equation
-  - light bending
-  - strong-field / frozen-star / echo package
-- only work this lane if:
-  - you are cleaning wording/package alignment, or
-  - you have a genuinely new exact sub-theorem
-
-## Framework-premise rule
-
-Codex accepts the framework premise:
-
-> We take `Cl(3)` on `Z^3` as the physical theory.
-
-This can resolve artifact-vs-physical disputes. It is why generation closed.
-
-It is **not** acceptable to reintroduce “the graph is physical” later as a
-lane-specific rescue axiom to skip missing mathematics or physics.
+Everything outside the three live gates is out of scope unless Codex
+explicitly asks for wording/package alignment.
 
 ## Exact work queue
 
@@ -233,38 +192,6 @@ lane-specific rescue axiom to skip missing mathematics or physics.
 - saying the lane is “computational only” without also tightening the actual
   paper-safe bounded wording
 
-### Target D: Broad gravity wording/package alignment only
-
-**Goal**
-
-- keep the retained gravity split honest and stable
-
-**Primary files**
-
-- `docs/GRAVITY_CLEAN_DERIVATION_NOTE.md`
-- `docs/BROAD_GRAVITY_DERIVATION_NOTE.md`
-- `docs/GRAVITY_FULL_SELF_CONSISTENCY_NOTE.md`
-- `scripts/frontier_broad_gravity.py`
-
-**Current accepted split**
-
-- retained:
-  - weak-field Newton / Poisson
-  - weak-field WEP
-  - weak-field time dilation
-- bounded:
-  - conformal metric
-  - geodesic equation
-  - light bending
-  - strong-field
-
-**Required wording**
-
-- `L^{-1} = G_0` is the framework’s closure condition for self-consistency
-- it is not a theorem of pure algebra with zero remaining premise
-- finite-lattice profile checks stay bounded even when they support a retained
-  theorem path
-
 ## Status-alignment rule
 
 For any lane you touch:
@@ -277,11 +204,6 @@ must say the same thing.
 
 If they disagree, the lane is not closed.
 
-For `S^3`, the retained closure now lives in the theorem-note + accepted
-topology-infrastructure chain. The computational runners are supporting
-evidence, not the whole closure by themselves. Do not rely on runner headers
-alone as the closure authority.
-
 ## Non-authority docs
 
 Do not use these as closure authority if they outrun `review.md`:
@@ -293,10 +215,8 @@ Do not use these as closure authority if they outrun `review.md`:
 
 ## Current execution summary
 
-- `S^3` is closed
-- the remaining flagship live gates are:
+- only report on:
   - DM relic mapping
   - renormalized `y_t`
   - CKM
-- broad gravity beyond the retained weak-field core is still bounded companion
-  work, not a live flagship gate
+- everything else is out of scope unless Codex explicitly asks for cleanup
