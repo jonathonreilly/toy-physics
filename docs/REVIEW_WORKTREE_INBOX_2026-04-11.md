@@ -68,6 +68,19 @@ Current state:
 - the later `S3_TOPOLOGY_DERIVATION` lane is not yet a retained CC upgrade:
   finite graph -> compact manifold and the final `B^3 -> S^3` compactification
   step are still stronger in prose than in proof
+- the latest honest `youthful-neumann` additions worth keeping on review are:
+  - `docs/CKM_HIGGS_Z3_UNIVERSAL_NOTE.md` /
+    `scripts/frontier_ckm_higgs_z3_universal.py`
+    Safe reading: sharp obstruction note; CKM remains bounded until the Higgs
+    `Z_3` charge becomes `L`-independent.
+  - `docs/S3_DISCRETE_CONTINUUM_NOTE.md` /
+    `scripts/frontier_s3_discrete_continuum.py`
+    Safe reading: V4 boundary note; `S^3` compactification remains bounded /
+    open on the discrete-to-continuum gap.
+  - `docs/SU3_CANONICAL_CLOSURE_NOTE.md` /
+    `scripts/frontier_su3_canonical_closure.py`
+    Safe reading: strengthening companion for the already-audited graph-first
+    `SU(3)` route; no new structural `SU(3)` blocker.
 - the new `GRAPH_FIRST_CHIRAL_COMPLETION_SEARCH` lane is a useful gate memo:
   it shows the current left-handed graph-first surface has no one-particle
   weak singlets and does not naturally produce a low-degree right-handed
