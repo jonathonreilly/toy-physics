@@ -231,15 +231,11 @@ with explicit status labels.
 
 **What remains open (the real gates):**
 
-*Work Package A: Topology / compactification.* Close the `S^3` cap-map /
-compactification step cleanly enough to move the CC lane from bounded to
-structural.
-
-*Work Package B: Quantitative bridges.* Close the renormalized `y_t` matching
+*Work Package A: Quantitative bridges.* Close the renormalized `y_t` matching
 theorem and the DM relic mapping from the native graph freeze-out law to the
 physical cosmological abundance.
 
-*Work Package C: Flavor closure.* Upgrade CKM and detailed hierarchy from
+*Work Package B: Flavor closure.* Upgrade CKM and detailed hierarchy from
 bounded support to a quantitative theorem.
 
 **Relationship to prior work:** We build on Kogut-Susskind, Furey, Stoica,
@@ -291,13 +287,9 @@ separation of structural closure from phenomenological extension.
 
 ## Open theory gates (not paper blockers — future work)
 
-### A. Topology / compactification theorem
-Prove the graph-to-closed-manifold compactification step strongly enough to
-force `S^3`
-
-### B. Phenomenology upgrade
+### A. Phenomenology upgrade
 For each bounded window, either derive from backbone or label as consistency
 
-### C. Flavor upgrade
+### B. Flavor upgrade
 Promote CKM and detailed hierarchy from bounded support to theorem-level
 closure

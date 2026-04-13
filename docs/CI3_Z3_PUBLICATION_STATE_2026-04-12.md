@@ -29,6 +29,12 @@ The current retained backbone is:
 - graph-first structural `su(3)` closure
 - left-handed charge matching on the selected-axis surface
 - anomaly-forced `3+1` closure on the single-clock codimension-1 theorem surface
+- retained `S^3` compactification / topology closure:
+  - the cone-capped cubical ball yields a compact closed simply connected PL
+    3-manifold for all `R >= 2`
+  - the cone cap is unique up to PL homeomorphism on the accepted framework
+    surface
+  - Perelman + Moise identify the result as `PL S^3`
 - full-framework one-generation closure:
   - the spatial graph fixes the left-handed gauge/matter structure
   - derived time supplies chirality
@@ -61,15 +67,13 @@ surface:
 
 The remaining live paper gates are:
 
-1. `S^3` compactification / topology closure
-2. DM relic mapping
-3. renormalized `y_t` matching
-4. CKM / quantitative flavor closure
+1. DM relic mapping
+2. renormalized `y_t` matching
+3. CKM / quantitative flavor closure
 
-Overnight Claude work on `2026-04-13` did **not** promote any of these four
-gates. It materially strengthened each lane, but the audit bar remains:
+Recent Claude work and direct Codex review materially narrowed the attack
+surface. The audit bar now remains:
 
-- `S^3`: still bounded even after the cap-closure case and theorem-application notes
 - DM relic mapping: still bounded even after Stosszahlansatz / Friedmann tightening
 - renormalized `y_t`: still bounded even after coefficient / matching notes
 - CKM: still bounded even after NNI / coefficient / `c_23` work
@@ -83,7 +87,6 @@ section, but they are not yet retained closure:
   - conformal-metric / geodesic / light-bending notes
   - these remain useful, but the broader GR bundle is still not the paper-safe
     closure surface beyond the retained WEP / time-dilation corollaries
-- `S^3` cap-map uniqueness
 - direct lattice DM contact enhancement
 - DM coarse-graining / Stosszahlansatz notes
 - renormalized `y_t` running and matching notes
@@ -99,7 +102,7 @@ section, but they are not yet retained closure:
 For the flagship paper:
 
 - the main text should lead with the retained backbone
-- the four live gates must remain explicitly open or bounded
+- the three live gates must remain explicitly open or bounded
 - no note or script may promote a bounded lane to `CLOSED` unless the theorem
   survives direct Codex review on this branch
 
@@ -116,8 +119,8 @@ batches:
 
 > `Cl(3)` on `Z^3` yields weak-field gravity through the Poisson/Newton chain,
 > weak-field WEP and gravitational time dilation as corollaries of that same
-> surface, exact `SU(2)`, graph-first structural `SU(3)`, a full-framework
+> surface, exact `SU(2)`, graph-first structural `SU(3)`, a retained `S^3`
+> compactification on the accepted topology infrastructure, a full-framework
 > one-generation Standard Model closure, and a retained three-generation
 > matter structure in the same framework. The remaining live paper gates are
-> topology/compactification, DM relic mapping, renormalized `y_t`, and
-> quantitative flavor closure.
+> DM relic mapping, renormalized `y_t`, and quantitative flavor closure.

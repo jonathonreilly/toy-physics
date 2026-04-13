@@ -14,7 +14,9 @@ This card is a review-state summary, not a pitch deck.
 |---|---|---|
 | `d = 3` spatial | Retained | gravity sign + atomic stability |
 | Gravity / Poisson backbone | Retained | operator audit + sub-1% distance law |
-| Born rule | Retained | automatic from unitarity |
+| Weak-field WEP / time dilation | Retained corollaries | derived on the retained weak-field gravity surface |
+| `S^3` compactification / topology closure | Retained | cone-cap family + accepted compactification/classification infrastructure |
+| Exact `I_3 = 0` | Retained exact companion | exact no-third-order-interference theorem on the Hilbert surface |
 | Exact `SU(2)` | Retained | native `Cl(3)` bivectors |
 | Structural `SU(3)` | Retained | graph-first selector + commutant |
 | Left-handed charge matching | Retained | `C^8 = (2,3)_{+1/3} \oplus (2,1)_{-1}` |
@@ -26,7 +28,6 @@ This card is a review-state summary, not a pitch deck.
 
 | Gate | Status | What is still missing |
 |---|---|---|
-| `S^3` compactification | Open / bounded | cap-link / compactification theorem strong enough for structural topology closure |
 | DM relic mapping | Open / bounded | native bridge from lattice thermodynamics to physical relic abundance without overclaiming Boltzmann/Friedmann imports |
 | Renormalized `y_t` | Open / bounded | renormalized matching beyond the bare UV theorem |
 | CKM / flavor closure | Open / bounded | Higgs `Z_3` universality and quantitative flavor theorem |
@@ -66,10 +67,9 @@ The important upgrade is in the matter sector:
 
 That shifts the main open-gate stack to:
 
-1. `S^3` compactification
-2. DM relic mapping
-3. renormalized `y_t`
-4. CKM / flavor
+1. DM relic mapping
+2. renormalized `y_t`
+3. CKM / flavor
 
 ---
 
