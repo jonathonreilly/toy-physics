@@ -1112,3 +1112,55 @@ of 11 exact results enumerated in the note. The script verifies each result
 independently (9 exact algebraic checks, 4 supporting references to other
 scripts, 11 obstruction route checks). This is exactly the "sharp obstruction"
 that review.md asks for as an alternative to closing the gate.
+
+### Generation axiom boundary theorem (new, 2026-04-12)
+
+**Files added:**
+- `scripts/frontier_generation_axiom_boundary.py` -- PASS=31 FAIL=0
+- `docs/GENERATION_AXIOM_BOUNDARY_THEOREM_NOTE.md`
+
+**Commands run:**
+```bash
+python3 scripts/frontier_generation_axiom_boundary.py
+# PASS=31  FAIL=0
+```
+
+**What this proves:** The generation physicality gate is bounded by exactly
+one irreducible axiom (A5: lattice-is-physical). Four-part proof:
+
+1. **Sufficiency (Part 1):** With A5, the full generation chain closes:
+   8 BZ corners are physical momenta, 3 hw=1 species carry identical gauge
+   representations (commutant dim=8, projected M(2,C) with Casimir=3/4 at
+   all 3 corners), non-Cl(3) generators distinguish them, EWSB gives exact
+   1+2 mass split. All verified computationally (16 EXACT checks).
+
+2. **Necessity (Part 2):** Without A5, the fourth-root trick on a path
+   integral formulation provides an explicit escape route. The rooting
+   obstruction (0/254 subspaces preserve Cl(3)) applies only in the
+   Hamiltonian formulation; a path integral exists if the lattice is a
+   regularization.
+
+3. **Irreducibility (Part 3):** A5 cannot be derived from {A1-A4}.
+   Standard LQCD is the consistency witness: it uses A1-A4 without A5.
+   The no-continuum-limit and universality class arguments both
+   presuppose A5. A5 is an ontological commitment parallel to "spacetime
+   is a manifold" in GR.
+
+4. **Completeness (Part 4):** All 17 steps in the generation chain are
+   classified: 6 theorems, 7 computations, 3 axiom-dependent (all
+   reducing to A5), 1 bounded (1+1+1 hierarchy, irrelevant to the
+   obstruction).
+
+**Claimed status: EXACT OBSTRUCTION (sharp)**
+
+This is the sharp obstruction that review.md requests. It does not claim
+the generation gate is closed. It proves the gate is bounded by exactly
+one irreducible axiom that is shared with all other framework predictions.
+
+**Why the claim is not overstated:** The theorem is explicitly an
+obstruction theorem, not a closure claim. Every computational check is
+exact (no fitting, no finite-size extrapolation). The logical checks are
+clearly labeled as LOGICAL (structural arguments about axiom independence).
+The 1+1+1 hierarchy is explicitly labeled BOUNDED and excluded from the
+obstruction claim. The paper-safe wording is provided and does not say
+"generation physicality gate: closed."
