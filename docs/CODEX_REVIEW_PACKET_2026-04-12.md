@@ -83,6 +83,49 @@ Key results:
 
 **Why this is not overstated:** The scattering distinguishability is a theorem about taste-space Z_3 structure on the isotropic lattice. It does not prove taste = physical generations. The interpretive gap remains the core obstruction. This is labeled BOUNDED because it adds operational evidence but requires the same taste-physicality interpretive assumption that the wildcard superselection result requires. Generation physicality remains OPEN in the honest assessment.
 
+### Berry phase / Zak phase topological invariant attempt (new, 2026-04-12)
+
+**Files added:**
+- `scripts/frontier_generation_berry_phase.py` -- PASS=15 FAIL=10
+- `docs/GENERATION_BERRY_PHASE_NOTE.md`
+
+**Commands run:**
+```bash
+python3 scripts/frontier_generation_berry_phase.py
+# PASS=15  FAIL=10
+```
+
+**What this attempted:** Compute Berry phase (Zak phase) topological
+invariants for each Z_3 sector of the staggered Cl(3) Hamiltonian.
+If sectors carried distinct quantized Berry phases (e.g., 0, 2pi/3,
+4pi/3), they would be topologically distinguishable -- an unconditional
+mathematical result analogous to the Fu-Kane Z_2 invariant.
+
+**Key construction:** Used the symmetric staggered phases
+eta_mu = (-1)^{sum_{nu!=mu} x_nu} which give EXACT Z_3 commutation
+[H, P] = 0 on the isotropic line k1=k2=k3.
+
+**Result: NEGATIVE.** The sector-restricted Berry phases are ALL ZERO
+on the isotropic line (gamma_0 = gamma_1 = gamma_2 = 0 mod 2pi).
+The Berry phase does NOT provide an unconditional topological invariant
+distinguishing Z_3 sectors.
+
+**Partial positive:** With Z_3-invariant perturbations, 189/256
+parameter configurations give distinct sector Berry phases. On the
+Z_3-twisted loop, one triplet orbit shows ~2pi/3 phase shifts
+(error = 0.025). Both are BOUNDED (model-dependent).
+
+**Claimed status: NEGATIVE/BOUNDED** -- honest negative finding.
+Generation physicality remains OPEN.
+
+**Why this is not overstated:** This is an honest negative result.
+The Berry phase approach was tested as a potential unconditional
+topological theorem and found wanting. The obstruction is identified:
+on the isotropic line, the restricted Hamiltonian within each sector
+has theta-independent eigenvectors (up to trivial phases), so Berry
+phases are trivially zero. The perturbation-dependent distinction
+is MODEL-DEPENDENT and cannot close the generation physicality gate.
+
 ---
 
 ## Gate 2: S^3 Compactification
