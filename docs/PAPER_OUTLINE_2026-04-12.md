@@ -45,7 +45,11 @@ capture subsets but not the full picture.
 We show that one structure — Cl(3) on Z³ — produces gravitational dynamics,
 SU(2) gauge structure, and structural SU(3) colour from a single lattice. We
 separate retained structural results from bounded phenomenological windows and
-open theorems, and present all three layers explicitly.
+open theorems, and present all three layers explicitly. For this paper we use
+`Cl(3)` on `Z³` as the concrete working axiom; the more compressed
+single-axiom Hilbert/locality formulation is treated as background framing and
+summarized in Supplementary Information rather than carried in the main-text
+derivations.
 
 **Para 3: What is and isn't new.**
 Staggered fermions and taste algebras are standard (Kogut-Susskind 1975,
@@ -60,6 +64,12 @@ closure from phenomenological extension. We cite predecessors throughout.
 ### 2. The axiom and its consequences (~400 words)
 
 **The axiom:** Cl(3) on Z³ — staggered fermion phases on a cubic lattice.
+
+**Framing note:** In the broader architecture, this working axiom can be read
+as the concrete cubic realization of a more compressed single-axiom
+Hilbert/locality framework. For the paper, we keep the main theorem surface at
+the explicit `Cl(3)` / `Z³` level and defer the fuller reduction argument to
+SI so the main text stays tied to the audited lattice derivations.
 
 **Automatic consequences:**
 - Graph structure, unitarity, Born rule (I₃ < 10⁻¹⁶)
@@ -257,13 +267,14 @@ separation of structural closure from phenomenological extension.
 ## Supplementary Information
 
 1. Theorem 1: SU(3) commutant (6-step proof with intertwiner)
-2. Graph-first selector derivation
-3. Basis-independence verification (5 arguments)
-4. Phenomenological extensions (DM ratio, CC, n_s, neutrinos, y_t) — each with
+2. Single-axiom Hilbert/locality reduction and specialization to `Cl(3)` on `Z³`
+3. Graph-first selector derivation
+4. Basis-independence verification (5 arguments)
+5. Phenomenological extensions (DM ratio, CC, n_s, neutrinos, y_t) — each with
    explicit status and dependencies
-5. Negative results and failed approaches
-6. Literature comparison (vs Furey, Stoica, Trayling, Connes, Wen)
-7. All scripts with run instructions (GitHub link)
+6. Negative results and failed approaches
+7. Literature comparison (vs Furey, Stoica, Trayling, Connes, Wen)
+8. All scripts with run instructions (GitHub link)
 
 ---
 
