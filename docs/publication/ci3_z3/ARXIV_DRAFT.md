@@ -149,7 +149,20 @@ The arXiv version should point directly to:
 That repo surface now exists in `docs/publication/ci3_z3/` and should be the
 only public-facing navigation layer used in the paper.
 
-## 7. Manuscript Strategy
+## 7. Submission and Release Workflow
+
+The arXiv version should be assembled from the same curated package as the
+letter, not from ad hoc note selection. The working release documents are:
+
+- [CLAIMS_TABLE.md](./CLAIMS_TABLE.md)
+- [RESULTS_INDEX.md](./RESULTS_INDEX.md)
+- [REPRODUCE.md](./REPRODUCE.md)
+- [SUBMISSION_CHECKLIST.md](./SUBMISSION_CHECKLIST.md)
+- [FIGURE_PLAN.md](./FIGURE_PLAN.md)
+
+That package should be pinned to one commit hash before public release.
+
+## 8. Manuscript Strategy
 
 The clean split is:
 
@@ -165,7 +178,7 @@ The clean split is:
 This avoids the old problem where the paper oscillated between an overclaim
 stack and an underconfident outline.
 
-## 8. Conclusion
+## 9. Conclusion
 
 The current state of the project is stronger than a “promising discrete toy
 model,” but not yet a fully closed unification paper. The retained backbone is

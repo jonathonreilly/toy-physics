@@ -12,6 +12,8 @@ Use this package instead of browsing raw repo chronology.
 - [Claims table](./CLAIMS_TABLE.md)
 - [Results index](./RESULTS_INDEX.md)
 - [Reproduce guide](./REPRODUCE.md)
+- [Submission checklist](./SUBMISSION_CHECKLIST.md)
+- [Figure plan](./FIGURE_PLAN.md)
 - [Nature draft](./NATURE_DRAFT.md)
 - [arXiv draft](./ARXIV_DRAFT.md)
 - [Publication card](./PUBLICATION_CARD.md)
@@ -51,3 +53,13 @@ Live high-impact gates:
 The Nature surface should carry the retained backbone and only the tightest
 bounded companions. The arXiv surface can carry the full derivation chain, SI,
 and clearly labeled bounded lanes.
+
+## Immediate editorial objective
+
+Before the four live gates close, the repo should already be ready to publish:
+
+- one canonical claim ledger
+- one manuscript source for the letter
+- one longer arXiv source
+- one reproducibility surface for GitHub
+- one checklist that makes the final promotion to submission mechanical

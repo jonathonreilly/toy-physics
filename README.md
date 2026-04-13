@@ -7,6 +7,10 @@ organized around the current `Cl(3)` on `Z^3` publication package.
 
 - Publication package:
   [`docs/publication/ci3_z3/README.md`](docs/publication/ci3_z3/README.md)
+- Submission checklist:
+  [`docs/publication/ci3_z3/SUBMISSION_CHECKLIST.md`](docs/publication/ci3_z3/SUBMISSION_CHECKLIST.md)
+- Figure plan:
+  [`docs/publication/ci3_z3/FIGURE_PLAN.md`](docs/publication/ci3_z3/FIGURE_PLAN.md)
 - Current paper state:
   [`docs/CI3_Z3_PUBLICATION_STATE_2026-04-12.md`](docs/CI3_Z3_PUBLICATION_STATE_2026-04-12.md)
 - Paper outline:

@@ -9,6 +9,8 @@
 ## What belongs in the letter
 
 - [Nature draft](./NATURE_DRAFT.md)
+- [Figure plan](./FIGURE_PLAN.md)
+- [Submission checklist](./SUBMISSION_CHECKLIST.md)
 - framework sentence
 - exact native `SU(2)`
 - graph-first structural `SU(3)`
@@ -34,3 +36,14 @@ Do not sell “full unification closure.” Sell:
 - a retained structural backbone
 - explicit separation of retained vs bounded
 - four visible bridge problems still open
+
+## Build rule
+
+The letter should be buildable from three sources only:
+
+- [NATURE_DRAFT.md](./NATURE_DRAFT.md)
+- [CLAIMS_TABLE.md](./CLAIMS_TABLE.md)
+- [FIGURE_PLAN.md](./FIGURE_PLAN.md)
+
+If a claim is not stable across those three files, it is not ready for the
+submission version.

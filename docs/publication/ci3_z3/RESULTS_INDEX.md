@@ -30,3 +30,9 @@ branch.
   - derivation chains
   - bounded phenomenology
   - live-gate notes and negative results
+
+## Figure sources
+
+- Use [FIGURE_PLAN.md](./FIGURE_PLAN.md) as the canonical figure inventory.
+- No manuscript figure should be sourced from a note or runner that is not also
+  represented in [CLAIMS_TABLE.md](./CLAIMS_TABLE.md).

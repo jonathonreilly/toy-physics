@@ -31,3 +31,4 @@ For GitHub or submission support:
 - pin the exact commit hash
 - archive raw stdout logs per runner under `outputs/` or `logs/`
 - keep a one-line status ledger: `retained`, `bounded`, or `open`
+- before release, check [SUBMISSION_CHECKLIST.md](./SUBMISSION_CHECKLIST.md)

@@ -142,7 +142,21 @@ These are substantial problems, but they no longer erase the structural
 backbone. They now define the difference between a strong flagship theory paper
 and a fully closed unification paper.
 
-## 7. Discussion
+## 7. Code and Reproducibility
+
+The public-facing code and note surface for this letter should be limited to
+the curated publication package on the corresponding commit. The minimal release
+bundle is:
+
+- the claims ledger in [CLAIMS_TABLE.md](./CLAIMS_TABLE.md)
+- the section-to-runner map in [RESULTS_INDEX.md](./RESULTS_INDEX.md)
+- the exact-runner instructions in [REPRODUCE.md](./REPRODUCE.md)
+- the manuscript asset map in [FIGURE_PLAN.md](./FIGURE_PLAN.md)
+
+This keeps the public release aligned to the retained theorem surface instead
+of the full internal repo chronology.
+
+## 8. Discussion
 
 The correct claim surface is therefore disciplined and unusually strong. On the
 retained cubic graph, `Cl(3)` yields exact `SU(2)`, graph-first structural
