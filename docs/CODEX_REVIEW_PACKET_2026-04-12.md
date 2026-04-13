@@ -552,6 +552,78 @@ state this distinction clearly.
 
 ---
 
+## Gate 1 UPDATE 2: Nielsen-Ninomiya-Z_3 Topological Forcing
+
+### Files changed (new)
+- `scripts/frontier_generation_nielsen_ninomiya.py` -- PASS=60 FAIL=0 (all EXACT)
+- `docs/GENERATION_NIELSEN_NINOMIYA_NOTE.md`
+
+### Commands run
+```bash
+python3 scripts/frontier_generation_nielsen_ninomiya.py
+# Exit code: 0
+# EXACT: 60 checks, BOUNDED: 0 checks
+# PASS=60 FAIL=0
+```
+
+### Status: BOUNDED (strengthens generation physicality, does not close)
+
+### What was done
+
+Extended the Nielsen-Ninomiya no-go theorem to show that the Poincare-Hopf
+topological index that enforces fermion doubling ALSO enforces the specific
+1+3+3+1 Z_3 orbit decomposition on the staggered Cl(3) lattice.
+
+Key results (all EXACT):
+
+1. **Poincare-Hopf index is (-1)^|s|:** The Jacobian of the staggered
+   dispersion v(p) = (sin p1, sin p2, sin p3) at corner s has determinant
+   (-1)^{s1+s2+s3}. This is the Hamming weight, which is Z_3-invariant.
+
+2. **Index is orbit-constant:** Because |sigma(s)| = |s| for the Z_3
+   generator sigma: (s1,s2,s3) -> (s2,s3,s1), the Poincare-Hopf index
+   is constant on each Z_3 orbit.
+
+3. **Topological constraint forces structure:** The constraint
+   sum(ind) = chi(T^3) = 0 with the orbit sizes 1+3+3+1 admits only
+   the alternating sign pattern (+1, -1, +1, -1) by Hamming weight.
+
+4. **Rooting obstruction:** Of 14 non-trivial proper subsets of orbits,
+   12 violate Poincare-Hopf. The 2 that satisfy it ({T_1,T_2} and
+   {S_0,S_3}) keep both triplets or both singlets -- neither reduces
+   the number of generation families.
+
+5. **No single-triplet rooting:** Keeping one triplet orbit and discarding
+   the other always violates the topological constraint, regardless of
+   which singlets are kept.
+
+6. **Dimension uniqueness:** d=3 is the unique dimension where the family
+   orbit size C(d,1) equals 3.
+
+7. **Cl(3) connection:** The Z_3 automorphism on Cl(3) generators
+   (e1->e2->e3->e1) reproduces the BZ corner orbit structure exactly.
+   The pseudoscalar e1e2e3 is Z_3-invariant (verified algebraically).
+
+8. **Lattice verification:** Explicit staggered Dirac operator on L=4
+   confirms exactly 8 zero modes.
+
+### Why the claim is not overstated
+
+The note says BOUNDED, not CLOSED. The theorem is purely
+algebraic/topological and does not address the interpretive gap
+(taste = generations?). The note explicitly lists three open
+obstructions: taste-physicality gap, S_3 -> Z_3 breaking origin,
+and singlet interpretation. The paper-safe wording avoids claiming
+generation physicality closure. This is consistent with review.md:
+"generation physicality still open."
+
+The new content adds a topological (Poincare-Hopf) obstruction to
+selective rooting, complementing the algebraic ('t Hooft anomaly)
+obstruction in `GENERATION_ANOMALY_OBSTRUCTION_NOTE.md`. Neither
+alone nor together do they close the generation physicality gate.
+
+---
+
 ## Guardrails Compliance
 
 - No theorem assumptions were silently widened
@@ -559,6 +631,7 @@ state this distinction clearly.
 - The mass hierarchy closure is explicitly order-of-magnitude (4% margin)
 - Obstructions found (main generation agent: taste-physicality was axiom) were documented and then closed
 - No cycles spent on prose before theorem surface was right
+- Nielsen-Ninomiya extension is labeled BOUNDED with explicit honest assessment
 
 ## Test Summary
 
@@ -584,7 +657,8 @@ state this distinction clearly.
 | frontier_ckm_higgs_z3_universal.py | 8 | 0 | Exact (obstruction) |
 | frontier_s3_pl_manifold.py | 9 | 0 | Exact |
 | frontier_generation_axiom_first.py | 36 | 3 | Exact + bounded |
-| **TOTAL** | **389** | **16** | |
+| frontier_generation_nielsen_ninomiya.py | 60 | 0 | Exact |
+| **TOTAL** | **449** | **16** | |
 
 The 16 FAILs are all documented, honest, and diagnostic (not theorem failures):
 - Gate 1: 6 FAILs in main script are honest obstructions that led to the gap-closure work; 1 FAIL is the hierarchy shortfall before synthesis; 3 FAILs in axiom-first script are honest obstructions (eta phase breaking, lattice-is-physical axiom, Z_2 breaking parameter)
@@ -592,3 +666,4 @@ The 16 FAILs are all documented, honest, and diagnostic (not theorem failures):
 - Gate 3: 1 FAIL is Stefan-Boltzmann on finite graphs (proved in thermo limit)
 - Gate 4: 1 FAIL is expected scheme mismatch (V-scheme vs MS-bar)
 - CKM: no new FAILs (obstruction is analytic, tested as PASS)
+- Nielsen-Ninomiya extension: 0 FAILs (all 60 checks are exact and pass)
