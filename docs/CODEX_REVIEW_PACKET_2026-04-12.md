@@ -57,6 +57,32 @@ python3 scripts/frontier_generation_synthesis.py
 ### Why the claim is not overstated
 The taste-physicality argument is conditional on the Cl(3) framework — a referee who puts in the SM gauge group and N_g=3 by hand can root without contradiction. For Nature framing: "the framework is internally consistent only if doublers are physical." The mass hierarchy closure is order-of-magnitude (4% margin for up quarks), not precision. The taste-physicality, superselection, and indirect proof results are exact algebra. The CP phase prediction δ=2π/3 giving J_Z3/J_PDG=2.48 is parameter-free but only factor-2.5 agreement.
 
+### Scattering distinguishability (new, 2026-04-12)
+
+**Files added:**
+- `scripts/frontier_generation_scattering.py` -- PASS=16 FAIL=0 (all EXACT)
+- `docs/GENERATION_SCATTERING_NOTE.md`
+
+**Commands run:**
+```bash
+python3 scripts/frontier_generation_scattering.py
+# 16 PASS / 0 FAIL (2.4s)
+```
+
+**What this adds:** Operational (quantum measurement-theoretic) proof that Z_3 taste sectors produce measurably different scattering outcomes on the actual lattice Hamiltonian.
+
+Key results:
+1. 2-particle S-matrix is block-diagonal in Z_3 charge (off-block < 1e-15)
+2. Scattering probabilities differ between (T_1,T_1) and (T_1,T_2) by 0.5-17% across coupling strengths
+3. 2-particle Z_3 charge sectors have structurally different dimensions: dim(q=0)=24, dim(q=1)=20, dim(q=2)=20
+4. Distinguishability survives gauge averaging over 20 random SU(3) link configs (20/20)
+5. Generic across 50/50 random input state pairs
+6. Persists on L=6 (difference = 1.6e-2)
+
+**Claimed status: BOUNDED** (strengthens generation physicality argument but does NOT close the gate)
+
+**Why this is not overstated:** The scattering distinguishability is a theorem about taste-space Z_3 structure on the isotropic lattice. It does not prove taste = physical generations. The interpretive gap remains the core obstruction. This is labeled BOUNDED because it adds operational evidence but requires the same taste-physicality interpretive assumption that the wildcard superselection result requires. Generation physicality remains OPEN in the honest assessment.
+
 ---
 
 ## Gate 2: S^3 Compactification
