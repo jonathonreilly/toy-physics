@@ -5,14 +5,14 @@
 
 ## Summary
 
-All four gates addressed. Two upgraded to CLOSED, one to STRUCTURAL, one BOUNDED:
+All four gates addressed. All remain BOUNDED per review.md authority:
 
 | Gate | Before | After | Key scripts |
 |------|--------|-------|-------------|
-| 1. Generation physicality | OPEN | BOUNDED (see axiom-first update below) | 7 scripts, 4 notes |
-| 2. S^3 compactification | BOUNDED | STRUCTURAL | 5 scripts, 4 notes |
-| 3. DM relic mapping | BOUNDED (2 imports) | BOUNDED (1 assumed + 2 imported, R=5.48) | 4 scripts, 3 notes + CODEX_DM_RESPONSE.md |
-| 4. Renormalized y_t | OPEN | CLOSED (ST identity derived) | 3 scripts, 3 notes |
+| 1. Generation physicality | OPEN | BOUNDED (conditional taste-physicality; hierarchy order-of-magnitude) | 7+ scripts, 4+ notes |
+| 2. S^3 compactification | BOUNDED | BOUNDED (PL manifold promising; V4 narrowed but not closed) | 8+ scripts, 8+ notes |
+| 3. DM relic mapping | BOUNDED | BOUNDED (g_bare derived; σv+Coulomb from lattice; coefficient needs thermo limit) | 6+ scripts, 5+ notes |
+| 4. Renormalized y_t | OPEN | BOUNDED (BC protection proved; "or equivalent" argument pending Codex acceptance) | 3 scripts, 3 notes |
 
 ---
 
@@ -624,6 +624,69 @@ alone nor together do they close the generation physicality gate.
 
 ---
 
+## Gate 3 UPDATE: DM Thermodynamic Closure
+
+### Files changed (new)
+- `scripts/frontier_dm_thermodynamic_closure.py` -- PASS=15 FAIL=0 (EXACT=7 DERIVED=8)
+- `docs/DM_THERMODYNAMIC_CLOSURE_NOTE.md`
+
+### Commands run
+```bash
+python3 scripts/frontier_dm_thermodynamic_closure.py
+# Exit code: 0
+# PASS=15 FAIL=0 (EXACT=7 DERIVED=8 BOUNDED=0)
+```
+
+### Status: BOUNDED (unchanged, internal inconsistency resolved)
+
+### What was done
+
+The DM lane documentation (DM_SIGMA_V_LATTICE_NOTE.md, DM_RELIC_GAP_CLOSURE_NOTE.md)
+listed "continuum limit" as a remaining dependency for C -> pi (sigma_v coefficient)
+and rho ~ T^4 (Stefan-Boltzmann). This was a misidentification. These are
+THERMODYNAMIC limits (a = l_Planck fixed, N -> infinity), not the forbidden
+continuum limit (a -> 0, which does not exist per the taste-physicality theorem).
+
+Key results:
+
+1. **Two limits are structurally different.** Continuum limit changes UV physics
+   (forbidden). Thermodynamic limit only adds IR modes (standard, exists).
+
+2. **Weyl's law on PL manifolds guarantees convergence.** The PL manifold result
+   (S3_PL_MANIFOLD_NOTE.md) + Moise's theorem -> Weyl's law applies to our
+   lattice. Eigenvalue counting converges at rate O(L^{-1.84}).
+
+3. **Finite-size corrections negligible at physical N.** At V ~ 10^180 Planck
+   volumes: |correction| ~ 10^{-96} for Weyl counting, (aT)^2 ~ 10^{-35} for
+   Stefan-Boltzmann.
+
+4. **Lattice energy density converges to BZ integral.** rho_lat/rho_BZ = 0.993
+   at L=16 (not to the continuum SB -- the BZ integral at fixed a IS the target).
+
+5. **Taste-physicality cross-check.** Continuum limit destroys generation
+   structure (only 1/8 states survive). Thermodynamic limit preserves all 8
+   taste states and the 1+3+3+1 orbit decomposition.
+
+### Why the claim is not overstated
+
+The note says BOUNDED, not CLOSED or STRUCTURAL. The overall DM lane status is
+unchanged -- g_bare = 1 and the Boltzmann/Friedmann mapping remain as BOUNDED
+dependencies. What is resolved is an internal documentation inconsistency: the
+word "continuum limit" was used where "thermodynamic limit" was correct. The
+distinction matters because the continuum limit is FORBIDDEN by the
+taste-physicality theorem, while the thermodynamic limit exists and is guaranteed
+by Weyl's law.
+
+### Supersedes / corrects
+
+This corrects the dependency description in:
+- DM_SIGMA_V_LATTICE_NOTE.md: "The coefficient C = pi is a continuum-limit
+  statement" -> it is a thermodynamic-limit statement
+- DM_RELIC_GAP_CLOSURE_NOTE.md: "Thermodynamic limit" item -> correctly
+  identified but now has a proof via Weyl's law + PL manifold
+
+---
+
 ## Guardrails Compliance
 
 - No theorem assumptions were silently widened
@@ -658,7 +721,8 @@ alone nor together do they close the generation physicality gate.
 | frontier_s3_pl_manifold.py | 9 | 0 | Exact |
 | frontier_generation_axiom_first.py | 36 | 3 | Exact + bounded |
 | frontier_generation_nielsen_ninomiya.py | 60 | 0 | Exact |
-| **TOTAL** | **449** | **16** | |
+| frontier_dm_thermodynamic_closure.py | 15 | 0 | Exact + derived |
+| **TOTAL** | **464** | **16** | |
 
 ---
 

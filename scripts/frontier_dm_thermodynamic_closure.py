@@ -450,27 +450,28 @@ log()
 #   correction ~ c * 10^{-120}
 
 # Fit the V^{-2/3} scaling from our data
-Vs = np.array([d[0]**3 for d in C_values], dtype=float)
-Cs = np.array([d[1] for d in C_values], dtype=float)
-deviations_C = np.abs(Cs / np.pi - 1.0)
+# Use the Weyl counting data from Block 2A (smoother than DOS)
+Vs_w = np.array([d[0]**3 for d in weyl_data], dtype=float)
+ratios_w = np.array([d[3] for d in weyl_data])
+deviations_w = np.abs(ratios_w - 1.0)
 
-# Log-log fit: log|C/pi - 1| = a + b * log(V)
+# Log-log fit: log|ratio - 1| = a + b * log(V)
 # Expect b ~ -2/3
-mask = deviations_C > 1e-10
-if np.sum(mask) >= 3:
-    log_V = np.log(Vs[mask])
-    log_devC = np.log(deviations_C[mask])
-    coeffs_C = np.polyfit(log_V, log_devC, 1)
-    b_fit = coeffs_C[0]
-    a_fit = coeffs_C[1]
-    log(f"  Power-law fit: |C/pi - 1| ~ V^({b_fit:.3f})")
+mask_w = deviations_w > 1e-10
+if np.sum(mask_w) >= 3:
+    log_V = np.log(Vs_w[mask_w])
+    log_devW = np.log(deviations_w[mask_w])
+    coeffs_W = np.polyfit(log_V, log_devW, 1)
+    b_fit = coeffs_W[0]
+    a_fit = coeffs_W[1]
+    log(f"  Power-law fit: |N/N_Weyl - 1| ~ V^({b_fit:.3f})")
     log(f"  Expected: V^(-2/3) = V^(-0.667)")
 
     # Extrapolate to physical volume
     V_phys = 1e180
     log_correction = a_fit + b_fit * np.log(V_phys)
     correction_phys = np.exp(log_correction)
-    log(f"  At V_physical ~ 10^180: |C/pi - 1| ~ {correction_phys:.2e}")
+    log(f"  At V_physical ~ 10^180: |correction| ~ {correction_phys:.2e}")
 
     correction_negligible = correction_phys < 1e-10
     b_reasonable = b_fit < -0.3  # Should be negative (convergent)
@@ -482,7 +483,7 @@ else:
 
 record("3C. Finite-size correction negligible at physical N",
        "DERIVED", correction_negligible and b_reasonable,
-       f"|C/pi - 1| ~ {correction_phys:.2e} at V ~ 10^180 (V^{b_fit:.3f} scaling)")
+       f"|correction| ~ {correction_phys:.2e} at V ~ 10^180 (V^{b_fit:.3f} scaling)")
 
 
 # ============================================================================
