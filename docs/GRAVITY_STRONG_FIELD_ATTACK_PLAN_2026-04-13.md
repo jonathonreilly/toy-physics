@@ -32,6 +32,16 @@ New exact foothold now extracted on this branch:
 - this removes one heuristic from the current point-source closure, but it does
   **not** yet produce the full strong-field spacetime metric
 
+New bounded bridge now extracted on this branch:
+
+- for the standard static isotropic vacuum system, the spatial conformal factor
+  `psi` and the combination `alpha psi` are both harmonic outside the source
+- this fixes the isotropic Schwarzschild lapse once the spatial harmonic data
+  are given
+- see `docs/STATIC_ISOTROPIC_VACUUM_BRIDGE_NOTE.md`
+- this is **not** a framework derivation of full GR; it sharpens the temporal
+  sector target by showing what a common static vacuum closure would force
+
 ## Do not retread these solved or near-solved substeps
 
 The attack should **not** spend time redoing the following:
@@ -138,6 +148,13 @@ Current gap:
 
 - spatial and temporal sectors are still split
 - no full spacetime horizon statement is possible without both
+
+Current bridge result:
+
+- on the static isotropic vacuum surface, `g_tt` is not an arbitrary extra
+  function once the harmonic spatial data are fixed
+- so the real unresolved issue is no longer “guess a lapse,” but “derive why
+  the lattice strong-field closure reduces to this common harmonic system”
 
 Required outcome:
 
