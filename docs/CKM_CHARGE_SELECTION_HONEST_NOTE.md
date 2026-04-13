@@ -1,9 +1,18 @@
 # CKM Charge Selection -- Honest Status Note
 
-**Date:** 2026-04-12  
-**Status:** Reframed after codex review. This is a charge-pattern selection lane, not a CKM derivation.  
+**Date:** 2026-04-12 (updated)  
+**Status:** BOUNDED -- quantitative hierarchy unsolved.  
 **Script:** `scripts/frontier_ckm_dynamical_selection.py`  
 **Review source:** `docs/CODEX_MACMINI_FEEDBACK_CKM_GAUGE_2026-04-12.md`
+
+**Primary gap:** The quantitative CKM hierarchy (why V_us ~ 0.22,
+V_cb ~ 0.04, V_ub ~ 0.004) is not derived from the lattice. The
+framework provides the Z_3 symmetry structure that gives three
+generations and suggests a Froggatt-Nielsen-like texture, but the
+specific quantitative values of the mixing angles remain open. This is
+a genuine unsolved physics problem, not a matter of precision or
+matching coefficients -- the mechanism that generates the observed
+hierarchy has not been identified within the framework.
 
 ---
 

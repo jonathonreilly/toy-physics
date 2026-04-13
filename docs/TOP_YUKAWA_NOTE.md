@@ -121,16 +121,40 @@ y_t = 0.46, lambda = 0.12, still far from the observed value.
 
 ## Status
 
-**y_t is CONSTRAINED but not yet fully DERIVED.**
+**BOUNDED -- honest ~10% matching uncertainty.**
 
 The lattice framework narrows the allowed range significantly
 (10x focusing from IR fixed point) and provides naturalness
 without fine-tuning. The observed value y_t = 0.994 is
 consistent with all lattice constraints.
 
+### The honest gap: matching coefficient
+
+The bare UV theorem gives y_t = g_s / sqrt(6) at the Planck
+scale. RGE running to the electroweak scale gives a central
+prediction of m_t = 184 GeV, which is 6.5% above the observed
+173.0 GeV. The prediction only hits the observed value within
+the ~10% uncertainty band from the matching coefficient -- the
+unknown threshold correction at the lattice-to-continuum boundary.
+
+This matching coefficient is genuinely unknown. It is not a
+tunable parameter that can be fitted; it requires a computation
+(lattice-to-continuum matching at the Planck scale) that has
+not been performed. The ~10% uncertainty is an honest estimate
+of the size of this unknown correction, based on typical
+threshold effects in GUT-scale matching.
+
+The prediction is therefore: m_t = 184 +/- 18 GeV, where the
+18 GeV uncertainty comes from the matching coefficient. The
+observed 173.0 GeV falls within this band but is not at the
+central value. This is an honest BOUNDED result, not a
+precision prediction.
+
 To complete the derivation, we need to extract the bare Yukawa
-coupling from the Cl(3) algebraic structure, analogous to how
-sin^2(theta_W) = 3/8 comes from the Clifford algebra.
+coupling from the Cl(3) algebraic structure AND compute the
+matching coefficient at the lattice-continuum boundary. The
+former gives sin^2(theta_W) = 3/8 by analogy; the latter is
+the genuinely hard open problem.
 
 ## Script
 
