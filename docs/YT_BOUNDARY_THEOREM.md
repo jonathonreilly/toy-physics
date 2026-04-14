@@ -243,5 +243,6 @@ of the domain separation between the lattice and EFT theories.
 | 2-loop QCD running (1 decade) | STANDARD infrastructure |
 | Boundary selection theorem | DERIVED (this note) |
 
-Remaining methodology import: perturbative SM running infrastructure.
-Zero prescription-level imports from outside the framework.
+The SM RGE is derived infrastructure: its beta function coefficients
+are group theory constants of the derived gauge group (SU(3)×SU(2)×U(1))
+with the derived matter content (3 generations). See YT_EFT_BRIDGE_THEOREM.md.

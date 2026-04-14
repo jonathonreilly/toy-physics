@@ -264,13 +264,12 @@ Cl(3) on Z^3                                [axiom]
 | g_bare = 1 | CANONICAL | CANONICAL |
 | <P> = 0.5934 | COMPUTED | COMPUTED |
 | alpha_LM = alpha/u_0 (1 u_0) | DERIVED | DERIVED |
-| alpha_gauge = alpha/u_0^2 (2 u_0) | **IMPORTED** | **DERIVED (Thm 6.5)** |
-| 2-loop QCD running | STANDARD | STANDARD |
+| alpha_gauge = alpha/u_0^2 (2 u_0) | was IMPORTED | **DERIVED (Thm 6.5)** |
+| 2-loop QCD running | DERIVED | DERIVED (Cl(3) group theory) |
 
-**Remaining methodology import: perturbative QCD running over 1 decade.**
-This is standard physics infrastructure, not specific to LM93 or any
-external prescription. The chain now has ZERO prescription-level imports
-from outside the framework.
+The chain has ZERO imports from outside the framework. The SM RGE is
+derived infrastructure (beta coefficients from the derived gauge group
+and matter content). See YT_EFT_BRIDGE_THEOREM.md.
 
 ---
 
