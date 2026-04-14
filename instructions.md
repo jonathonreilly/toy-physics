@@ -314,15 +314,14 @@ Ignore gravity unless Codex explicitly reprioritizes it.
      - until they are rewritten onto one consistent surface, treat
        `YT_ZERO_IMPORT_CLOSURE_NOTE.md` plus the reviewed scripts as the safer
        authority
-5. the latest route still hardcodes the plaquette benchmark
-   - `frontier_zero_import_chain.py` still takes `PLAQ_MC = 0.5934` as a
-     well-established reference value
-   - the small `L=4` Metropolis run is only a sanity check, not the final
-     same-surface computation
-   - if you want strict zero-import language, either compute the final
-     plaquette on the same surface or label the accepted benchmark honestly
-   - do **not** write “computed from the theory” in a way that hides this
-     distinction
+5. the plaquette objection is no longer the main blocker
+   - `frontier_zero_import_chain.py` now computes the plaquette on the same
+     surface via multi-`L` SU(3) Monte Carlo and uses the largest-`L` value as
+     the authoritative input
+   - the infinite-volume `0.5934` number is now comparison-only, not a
+     load-bearing input
+   - do **not** spend time reopening the old “hardcoded benchmark” objection
+     unless the chain regresses
 6. deriving `n_link(Pi) = 2` is real progress, but it is not the full closure
    - `frontier_vertex_power.py` does derive that the vacuum-polarization
      operator has 2 link insertions
@@ -330,12 +329,11 @@ Ignore gravity unless Codex explicitly reprioritizes it.
      `n_link` gauge links uses `alpha_bare / u_0^{n_link}`
    - until that map itself is derived framework-natively, do **not** say the
      last prescription-level import is gone
-7. the branch currently contains a direct contradiction on that exact point
-   - `frontier_vertex_power.py` says the vertex `u_0^2` rule is now derived
-   - `frontier_native_matching.py` still says the vertex `u_0^2` rule remains
-     an imported LM methodology element
-   - resolve that contradiction on one consistent authority surface before
-     making any stronger claim
+7. `frontier_native_matching.py` no longer carries the older contradiction
+   - the latest remote head now agrees that the vertex `u_0^2` prescription is
+     being claimed as derived
+   - the remaining issue is narrower: whether that derivation really internalizes
+     the LM operator-to-coupling map, not whether the branch contradicts itself
 8. the older gauge-crossover theorem is still bounded support, not closure
    authority
    - its exactness language around Feshbach-preserved gauge coupling and the
@@ -347,29 +345,25 @@ Ignore gravity unless Codex explicitly reprioritizes it.
    - then rerun the zero-import chain on that derived prescription
    - only after that should you worry about squeezing the remaining `4.2%`
      `m_t` residual with improved running or thresholds
-10. keep the authority surface single and non-contradictory
+10. keep the authority surface single and current
    - after any new result, update or retract the stale `y_t` closure notes in
      the same change
-   - there should not be one file saying “last import closed” and another
-     saying the same step is still imported
+   - do **not** let older closure-language notes outrank the newest bounded
+     or corrected authority surface
 
 **What counts as success**
 
 - best-case success:
   - derive the LM link-counting rule itself on the framework surface, not
     just the `n_link = 2` count
-  - compute the plaquette on the same final surface instead of importing the
-    accepted `0.5934` benchmark
   - rerun the zero-import chain from that cleaned-up boundary and close the
     `m_t` residual
 - second-best success:
   - isolate the lane to the one remaining honest methodology import
-    (the LM map from link count to physical coupling), plus any accepted
-    plaquette benchmark that still remains
+    (the LM map from link count to physical coupling)
   - and state that plainly in one authority note
 - minimum acceptable success:
-  - keep the flagship note honest and bounded with the contradiction between
-    `frontier_vertex_power.py` and `frontier_native_matching.py` removed
+  - keep the flagship note honest and bounded
   - and with the remaining blocker written as the LM methodology bridge, not
     as the old broad crossover story
 
@@ -377,12 +371,8 @@ Ignore gravity unless Codex explicitly reprioritizes it.
 
 - re-proving Feshbach on toy systems
 - presenting corrected beta coefficients as if that alone closes the lane
-- calling `alpha_s` or `y_t` “zero import” while the final chain still
-  hardcodes `PLAQ_MC = 0.5934` as an accepted reference value
 - calling the lane closed while the script that supposedly closes the last
   import still assumes the LM operator-to-coupling rule it claims to retire
-- leaving `frontier_vertex_power.py` and `frontier_native_matching.py` in
-  direct contradiction on whether the vertex `u_0^2` rule is imported
 - using agreement with PDG as proof that the methodology itself is derived
 
 **Preferred attack order**
@@ -390,24 +380,21 @@ Ignore gravity unless Codex explicitly reprioritizes it.
 1. do **not** re-prove Feshbach or the sub-percent matching coefficient
 2. do **not** spend more time on the old observed-seeded crossover complaint;
    the newest zero-import route is the right surface now
-3. first resolve the contradiction:
-   - either make `frontier_native_matching.py` agree that the vertex `u_0^2`
-     rule is framework-derived
-   - or make `frontier_vertex_power.py` admit that the LM rule is still a
-     methodology import
-4. then attack the real remaining theorem:
+3. do **not** spend more time reopening the old plaquette-benchmark objection
+   - the latest zero-import chain now uses same-surface multi-`L` Monte Carlo
+     for the authoritative plaquette
+4. attack the real remaining theorem:
    - derive why an operator with `n_link` gauge links uses the physical
      coupling `alpha_bare / u_0^{n_link}` on the framework surface
    - do **not** just recount the links again
-5. in parallel, if strict zero-import wording still matters, replace the
-   accepted plaquette benchmark with a same-surface final computation
-   - or explicitly downgrade the claim to “benchmark-seeded but no observed SM
-     input”
-6. only after 3-5 are clean, rerun the zero-import chain and see whether
+5. then tighten the authority surface:
+   - rewrite or retract older closure-language notes so they do not outrank the
+     newest bounded authority
+6. only after 4-5 are clean, rerun the zero-import chain and see whether
    the remaining `m_t` residual persists
 7. if the residual still sits at a few percent, then and only then attack
    2-loop Yukawa running / thresholds as the remaining quantitative issue
-8. if 3-7 fail, isolate exactly the one remaining methodology import and keep
+8. if 4-7 fail, isolate exactly the one remaining methodology import and keep
    the lane bounded
 
 ### Target C: CKM / flavor

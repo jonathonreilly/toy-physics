@@ -229,14 +229,16 @@ Current safe state:
     - but it still assumes the LM rule that an operator with `n_link` links
       uses `alpha_bare / u_0^{n_link}`
     - so it derives the count, not yet the physical coupling map
-  - the branch also contains a direct contradiction on this exact point
-    - `frontier_vertex_power.py` says the last import is closed
-    - `frontier_native_matching.py` still says the vertex `u_0^2` rule
-      remains an imported LM methodology element
-  - the zero-import chain still hardcodes `PLAQ_MC = 0.5934` as an accepted
-    benchmark and uses the small `L=4` Metropolis run only as a sanity check
-  - so the strict “zero-import” wording is still not honest unless that final
-    plaquette value is computed on the same authority surface
+  - the older contradiction with `frontier_native_matching.py` is gone on the
+    latest remote head
+    - both main scripts now claim the vertex `u_0^2` prescription is derived
+    - the review question is therefore narrower: whether that claim is actually
+      justified, not whether the branch contradicts itself
+  - the old plaquette-benchmark objection is also largely gone
+    - `frontier_zero_import_chain.py` now computes the plaquette on the same
+      surface using multi-`L` SU(3) Monte Carlo and uses the largest-`L` value
+      as authoritative
+    - the `0.5934` benchmark is comparison-only, not the load-bearing input
   - the older gauge-crossover theorem remains bounded support only
     - its exactness language about projected gauge preservation /
       Ward-identity preservation still outruns the current proof surface
@@ -247,27 +249,23 @@ Paper-safe read:
 > progress. But the lane is still bounded because the last load-bearing step is
 > now the LM methodology bridge itself: the branch has derived `n_link(Pi)=2`,
 > but not yet the framework-native theorem that turns that count into the
-> physical coupling prescription `alpha_bare / u_0^2`. The same branch also
-> still uses an accepted plaquette benchmark rather than a same-surface final
-> plaquette computation.
+> physical coupling prescription `alpha_bare / u_0^2`.
 
 Best attack:
 
 1. do not re-prove Feshbach or the sub-percent matching coefficient
 2. do not spend more time on the old observed-seeded crossover complaint; the
    newest zero-import route is the right surface now
-3. first resolve the direct contradiction between
-   `frontier_vertex_power.py` and `frontier_native_matching.py`
-4. then derive the load-bearing map from operator link count to physical
+3. do not reopen the old plaquette-benchmark objection unless the chain
+   regresses; that is no longer the main blocker
+4. derive the load-bearing map from operator link count to physical
    coupling on the framework surface; counting `n_link = 2` again is not enough
-5. if strict zero-import wording still matters, replace the accepted
-   `PLAQ_MC = 0.5934` benchmark with a same-surface final plaquette computation
-   - if that is too expensive or noisy, downgrade the wording instead of
-     pretending the benchmark is a computed final value
-6. only after 3-5 are clean, rerun the zero-import chain
+5. then rewrite or retract the stale closure-language notes so they do not
+   outrank the newest bounded authority
+6. only after 4-5 are clean, rerun the zero-import chain
 7. if a few-percent `m_t` residual remains after that, then treat improved
    Yukawa running / thresholds as the next quantitative sub-problem
-8. if 3-7 fail, freeze the lane honestly as “zero-import up to the LM
+8. if 4-7 fail, freeze the lane honestly as “zero-import up to the LM
    methodology bridge”
 
 ### 3. CKM / quantitative flavor closure
