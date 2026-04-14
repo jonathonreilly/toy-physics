@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Finite-rank strong-field source closure and 4D residual test.
+"""Finite-rank strong-field source closure and `3+1` residual test.
 
 Exact content:
   1. Finite-rank Woodbury / Dyson identity for H_V = H_0 - P W P^T with
@@ -10,9 +10,9 @@ Exact content:
 Bounded content:
   4. Shell-averaged exterior field is monopole-dominated.
   5. The direct common-source metric candidate built from the exact phi has a
-     nonzero 4D Einstein residual outside the source.
+     nonzero `3+1` Einstein residual outside the source.
   6. The monopole-projected isotropic candidate from the same phi has a much
-     smaller 4D Einstein residual.
+     smaller `3+1` Einstein residual.
 
 This sharpens the remaining gravity blocker: the exact strong-field source
 model is now broader than the old diagonal class, but the exact field still
@@ -327,13 +327,13 @@ def bounded_metric_residual_tests(phi_full: np.ndarray, a_fit: float) -> None:
     improvement = direct_max / max(mono_max, 1e-15)
 
     record(
-        "direct common-source candidate has bounded nonzero 4D residual",
+        "direct common-source candidate has bounded nonzero `3+1` residual",
         direct_max > 1e-3,
         f"max |G_mu_nu|={direct_max:.3e} across {len(sample_points)} exterior probes",
         status="BOUNDED",
     )
     record(
-        "monopole-projected isotropic candidate sharply reduces 4D residual",
+        "monopole-projected isotropic candidate sharply reduces `3+1` residual",
         mono_max < direct_max * 0.1,
         f"direct max={direct_max:.3e}, monopole max={mono_max:.3e}, improvement={improvement:.1f}x",
         status="BOUNDED",
@@ -347,7 +347,7 @@ def bounded_metric_residual_tests(phi_full: np.ndarray, a_fit: float) -> None:
 
 
 def main() -> None:
-    print("Finite-rank strong-field closure and 4D Einstein-residual test")
+    print("Finite-rank strong-field closure and `3+1` Einstein-residual test")
     print("=" * 72)
     phi_full, support, interior, q_eff = exact_finite_rank_field()
     a_fit, b_fit, rel_rms = shell_average_monopole_fit(phi_full)

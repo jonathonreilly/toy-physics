@@ -16,7 +16,7 @@ Bounded witness:
   4. Explicit vector-shift and traceless-shear perturbations with the same
      scalar boundary data produce different Einstein-tensor channels.
   5. Hence no scalar-trace-only completion principle can determine the full
-     4D metric on the current branch. A genuinely tensor-valued matching law
+     `3+1` metric on the current branch. A genuinely tensor-valued matching law
      is required for full nonlinear GR.
 """
 
@@ -128,7 +128,7 @@ def main() -> None:
         status="BOUNDED",
     )
     record(
-        "no completion principle that factors only through the current scalar shell trace / Schur data can determine the full 4D metric on this branch",
+        "no completion principle that factors only through the current scalar shell trace / Schur data can determine the full `3+1` metric on this branch",
         same_scalar_data(base_oh, vec_oh)
         and same_scalar_data(base_oh, ten_oh)
         and same_scalar_data(base_fr, vec_fr)
