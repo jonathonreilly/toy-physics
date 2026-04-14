@@ -4,6 +4,9 @@
 **Depends on**: `CKM_SCHUR_COMPLEMENT_THEOREM`, `CKM_WOLFENSTEIN_CASCADE_THEOREM`, `EWSB_GENERATION_CASCADE`
 **Script**: `scripts/frontier_ckm_mass_basis_nni.py`
 
+**Current publication disposition:** bounded flavor companion only. Not on the
+retained flagship claim surface.
+
 ---
 
 ## The Problem

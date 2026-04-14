@@ -4,6 +4,9 @@
 **Date:** 2026-04-12
 **Status:** BOUNDED PREDICTION
 
+**Current publication disposition:** bounded/conditional cosmology companion
+only. Not on the retained flagship claim surface.
+
 ## Theorem / Claim
 
 On S^3 of radius R = c/H_0, the transverse-traceless graviton has a

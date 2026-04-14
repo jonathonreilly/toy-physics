@@ -1,5 +1,8 @@
 # Primordial Power Spectrum from Graph Growth
 
+**Current publication disposition:** bounded/conditional cosmology companion
+only. Not on the retained flagship claim surface.
+
 ## Question
 
 Does the graph growth process produce a primordial power spectrum with

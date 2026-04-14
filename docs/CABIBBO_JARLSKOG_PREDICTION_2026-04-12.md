@@ -4,6 +4,10 @@
 **Status:** Honest reframing after codex review. Separates what is derived from what is input.  
 **Script:** `scripts/frontier_baryogenesis.py` (tests 1-2)
 
+**Current publication disposition:** frozen pending authority refresh. This is
+not the normalized current authority surface for retained or bounded flavor
+claims.
+
 ---
 
 ## The Results

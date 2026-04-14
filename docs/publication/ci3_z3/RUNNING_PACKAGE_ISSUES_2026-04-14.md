@@ -44,6 +44,24 @@ the current matrix/ledger terminology. The package is much cleaner than before,
 but not every companion row yet has a freshly normalized single-note authority
 surface on `main`.
 
+Current sharpened read:
+
+- normalized in this pass:
+  - `\Omega_\Lambda`
+  - `n_s`
+  - `w`
+  - `\Lambda`
+  - graviton mass
+  - BH entropy
+  - gravitational decoherence
+  - proton lifetime
+  - Lorentz-violation fingerprint
+  - monopole mass
+  - CKM mass-basis NNI bounded route
+- still needing separate authority refresh:
+  - Cabibbo angle / Jarlskog combined route note
+  - `y_t` bounded authority surfaces once the lane itself settles
+
 ### `I04` Legacy docs tree remains noisy outside the curated package
 
 The front door is now clean, but `docs/` still contains a large amount of

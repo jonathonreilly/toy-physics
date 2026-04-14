@@ -4,6 +4,9 @@
 **Script:** `scripts/frontier_grav_decoherence_derived.py`
 **Depends on:** `frontier_newton_derived.py` (lattice Green's function), `frontier_dm_coulomb_from_lattice.py` (subtracted Fourier integral)
 
+**Current publication disposition:** bounded companion only. Not on the
+retained flagship claim surface.
+
 ---
 
 ## Derivation Chain

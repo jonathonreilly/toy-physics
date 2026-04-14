@@ -4,6 +4,9 @@
 **Script:** `scripts/frontier_monopole_derived.py`
 **Status:** Derived -- M_mono ~ 1.4 M_Planck from lattice axioms
 
+**Current publication disposition:** bounded companion only. Not on the
+retained flagship claim surface.
+
 ## Summary
 
 The monopole mass M_mono ~ 1.4 M_Planck is derived from the lattice axioms

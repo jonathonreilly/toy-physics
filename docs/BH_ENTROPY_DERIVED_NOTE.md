@@ -4,6 +4,9 @@
 
 **Script**: `scripts/frontier_bh_entropy_derived.py`
 
+**Current publication disposition:** bounded companion only. The derivation is
+carried as companion material, not as part of the retained flagship core.
+
 ## Result
 
 The Bekenstein-Hawking entropy formula S_BH = A/(4 l_P^2) is derived from the lattice framework through the following chain:

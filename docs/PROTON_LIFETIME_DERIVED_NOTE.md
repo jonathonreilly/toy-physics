@@ -9,6 +9,9 @@ lattice-derived ingredients (leptoquark operators, mediating scale M_X = M_Planc
 are exact framework consequences, but the decay rate formula and coupling constant
 are imported from standard EFT / gauge unification.
 
+**Current publication disposition:** bounded companion only. Not on the
+retained flagship claim surface.
+
 ## Theorem / Claim
 
 **Claim:** The Cl(3)-on-Z^3 framework predicts the proton lifetime

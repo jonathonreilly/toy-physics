@@ -3,6 +3,9 @@
 **Date:** 2026-04-12
 **Status:** Strongest distinctive prediction. Ready for review.
 
+**Current publication disposition:** bounded/conditional cosmology companion
+only. Not on the retained flagship claim surface.
+
 ## The Problem
 
 The cosmological constant Λ is the worst prediction in physics:

@@ -4,6 +4,9 @@
 **PStack:** `frontier-dark-energy-eos`
 **Date:** 2026-04-12
 
+**Current publication disposition:** bounded/conditional cosmology companion
+only. Not on the retained flagship claim surface.
+
 ## Result
 
 **w = -1 exactly** (cosmological constant), with corrections suppressed by (l_P/R_H)^2 ~ 10^-122.

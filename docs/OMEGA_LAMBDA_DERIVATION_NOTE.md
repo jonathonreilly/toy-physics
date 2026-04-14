@@ -6,6 +6,9 @@
 observed Omega_b.  The chain uses one derived quantity (R) with zero
 additional free parameters.  Eta is imported from observation.
 
+**Current publication disposition:** bounded/conditional cosmology companion
+only. Not on the retained flagship claim surface.
+
 ## Theorem / Claim
 
 Given the observed baryon density Omega_b = 0.0493, the framework predicts

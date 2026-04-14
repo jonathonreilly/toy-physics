@@ -4,6 +4,9 @@
 **PStack:** `frontier-lorentz-violation-derived`
 **Status:** 29/29 checks pass (0 failures)
 
+**Current publication disposition:** bounded companion only. Not on the
+retained flagship claim surface.
+
 ## Derivation chain
 
 The five-step derivation proceeds from the single axiom that the
