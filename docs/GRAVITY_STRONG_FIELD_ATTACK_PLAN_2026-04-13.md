@@ -822,6 +822,26 @@ New exact/bounded tensor-matching localization extracted after that:
   - the symmetric positive-definite tensor boundary kernel `K_tensor`
 - see `docs/TENSOR_COMPLETION_NO_GO_OR_EXTENSION_NOTE.md`
 
+New exact/bounded universal-kernel obstruction and selector-normalized
+narrowing extracted after that:
+
+- the raw family-universal positive `K_tensor` theorem fails on the current
+  audited restricted class
+- see `docs/TENSOR_UNIVERSAL_KERNEL_OBSTRUCTION_NOTE.md`
+- but that failure is no longer structureless:
+  - after normalizing by the dominant traceless-shear response `eta_11`, the
+    tensor-kernel shape mismatch drops from `2.62e-01` to `4.26e-02`
+  - the normalized source-map mismatch drops to `4.55e-02`
+  - the scalar-derived tensor-drive coefficient
+    `c_eta = eta_floor_tf / |I_scalar|` differs by only `7.18e-02`
+  - one common selector-normalized candidate predicts both families within
+    about `5% - 7%`
+- see `docs/TENSOR_SELECTOR_NORMALIZED_KERNEL_NOTE.md`
+- this means the missing gravity principle is now best understood as:
+  - a selector / coarse-graining / microscopic source law that fixes the
+    normalization of the tensor channels
+  - not a wholly different tensor-kernel shape on each family
+
 ### Attack 3: only after metric closure, revisit horizon / echo claims
 
 Current gap:
