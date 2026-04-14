@@ -121,6 +121,8 @@ The route has:
 - [`frontier_universal_gr_tensor_quotient_uniqueness.py`](../scripts/frontier_universal_gr_tensor_quotient_uniqueness.py)
 - [`UNIVERSAL_GR_TENSOR_ACTION_BLOCKER_NOTE.md`](./UNIVERSAL_GR_TENSOR_ACTION_BLOCKER_NOTE.md)
 - [`frontier_universal_gr_tensor_action_blocker.py`](../scripts/frontier_universal_gr_tensor_action_blocker.py)
+- [`UNIVERSAL_GR_POLARIZATION_FRAME_BUNDLE_BLOCKER_NOTE.md`](./UNIVERSAL_GR_POLARIZATION_FRAME_BUNDLE_BLOCKER_NOTE.md)
+- [`frontier_universal_gr_polarization_frame_bundle.py`](../scripts/frontier_universal_gr_polarization_frame_bundle.py)
 
 The new candidate says the direct universal route is exact at the scalar
 observable principle level and exact at the `3+1` kinematic lift level, and it
@@ -144,7 +146,7 @@ The remaining blocker is therefore:
 
 - does a curvature-localization map exist that identifies the unique
   symmetric `3+1` Hessian kernel with the Einstein/Regge tensor law on the
-  full metric space?
+  full `3+1` metric space?
 - if not, what is the single missing primitive needed to make that
   localization exact?
 
@@ -159,6 +161,9 @@ The missing primitive is therefore not just `Pi_curv` itself. It is a
 covariant `3+1` polarization frame, or equivalent projector bundle, that
 canonically splits the symmetric kernel into lapse, shift, and spatial
 trace/shear channels before curvature localization.
+
+This is the smallest universal-route primitive that is still not in the
+current atlas.
 
 ## Formal support check
 
