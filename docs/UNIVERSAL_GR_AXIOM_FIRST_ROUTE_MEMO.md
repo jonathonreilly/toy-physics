@@ -148,6 +148,9 @@ The remaining blocker is therefore:
 - if not, what is the single missing primitive needed to make that
   localization exact?
 
+The sharper blocker note now names the missing primitive explicitly as a
+covariant `3+1` curvature-localization operator `Pi_curv`.
+
 ## Formal support check
 
 Use [`frontier_universal_gr_axiom_first_route_scan.py`](../scripts/frontier_universal_gr_axiom_first_route_scan.py)
@@ -161,6 +164,10 @@ structure.
 Use [`frontier_universal_gr_tensor_quotient_uniqueness.py`](../scripts/frontier_universal_gr_tensor_quotient_uniqueness.py)
 to audit the quotient-uniqueness candidate and the finite prototype rank
 check.
+
+Use [`frontier_universal_gr_curvature_localization_blocker.py`](../scripts/frontier_universal_gr_curvature_localization_blocker.py)
+to confirm that the current stack stops at the localization primitive and does
+not yet supply Einstein/Regge dynamics.
 
 The expected outcome is that the observable-principle / variational-action
 family ranks above the restricted tensor ladder for a direct-to-universal-GR

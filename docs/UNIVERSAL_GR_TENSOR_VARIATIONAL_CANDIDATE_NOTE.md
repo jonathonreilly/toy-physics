@@ -98,6 +98,10 @@ The remaining theorem is now sharply localized:
 3. prove the candidate cannot be promoted without a new curvature-localization
    primitive
 
+The current stack does not yet supply that curvature-localization primitive.
+The Hessian candidate is exact as a tensor-valued variational object, but it
+still has no exact map into Einstein/Regge curvature channels on `PL S^3 x R`.
+
 So the direct universal route is now one step more concrete:
 
 > scalar observable principle + exact `3+1` lift + exact tensor-valued

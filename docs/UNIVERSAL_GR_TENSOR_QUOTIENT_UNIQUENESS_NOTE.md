@@ -59,6 +59,12 @@ The remaining task is a curvature-localization map:
 If that map is derived, the direct universal route advances from tensor
 candidate to genuine metric dynamics.
 
+The minimal missing primitive is now sharper than a generic action gap:
+
+> a covariant `3+1` curvature-localization operator `Pi_curv` that splits the
+> symmetric quotient kernel into lapse, shift, and spatial trace/shear
+> channels and identifies those channels with the Einstein/Regge law.
+
 ## Honest status
 
 The current direct-universal route is:

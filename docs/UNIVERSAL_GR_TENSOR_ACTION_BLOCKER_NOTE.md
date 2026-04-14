@@ -72,8 +72,9 @@ that could upgrade the scalar generator into a full `3+1` metric law.
 
 The remaining missing primitive can now be stated more sharply:
 
-1. a curvature-localization map that identifies the unique symmetric `3+1`
-   Hessian kernel with the Einstein/Regge tensor law on the full metric space
+1. a curvature-localization map `Pi_curv` that identifies the unique symmetric
+   `3+1` Hessian kernel with the Einstein/Regge tensor law on the full metric
+   space
 2. if that fails, one additional primitive that makes that localization exact
 
 Without one of those, the observable principle remains scalar-only at the
