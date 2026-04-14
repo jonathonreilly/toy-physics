@@ -76,7 +76,7 @@ The 10 routes below are meant as research architectures, not claims of closure.
 - **Main risk/blocker:** this route still needs a tensor-valued readout of the resolvent data, not just the scalar harmonic exterior.
 - **Status:** speculative.
 
-## 8. Discrete 4D variational action route
+## 8. Discrete `3+1` variational action route
 
 - **One-line theorem idea:** derive a full discrete gravitational action on the framework side whose Euler-Lagrange equations are exactly the GR field equations on the retained class.
 - **Uses:** exact microscopic boundary action, exact discrete Dirichlet principle, exact shell action, same-charge bridge, static isotropic vacuum bridge.

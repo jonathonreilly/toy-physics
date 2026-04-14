@@ -15,18 +15,19 @@ Bounded content:
   4. The corresponding isotropic metric candidate is vacuum-close, but the
      direct same-source metric still carries a nonzero Einstein residual.
   5. Therefore the finite-rank family supports a clean scalar source-to-metric
-     path, but not full tensorial 4D closure.
+     path, but not full tensorial `3+1` closure.
 """
 
 from __future__ import annotations
 
 from dataclasses import dataclass
 from importlib.machinery import SourceFileLoader
+from pathlib import Path
 
 import numpy as np
 
 
-ROOT = "/private/tmp/physics-review-active"
+ROOT = Path(__file__).resolve().parent.parent
 
 
 @dataclass
@@ -50,15 +51,15 @@ def record(name: str, ok: bool, detail: str, status: str = "EXACT") -> None:
 
 finite_rank = SourceFileLoader(
     "finite_rank_metric",
-    f"{ROOT}/scripts/frontier_finite_rank_gravity_residual.py",
+    str(ROOT / "scripts" / "frontier_finite_rank_gravity_residual.py"),
 ).load_module()
 coarse = SourceFileLoader(
     "coarse_grained_exterior_law",
-    f"{ROOT}/scripts/frontier_coarse_grained_exterior_law.py",
+    str(ROOT / "scripts" / "frontier_coarse_grained_exterior_law.py"),
 ).load_module()
 schur = SourceFileLoader(
     "oh_schur_boundary_action",
-    f"{ROOT}/scripts/frontier_oh_schur_boundary_action.py",
+    str(ROOT / "scripts" / "frontier_oh_schur_boundary_action.py"),
 ).load_module()
 
 
@@ -119,7 +120,7 @@ def main() -> int:
         status="BOUNDED",
     )
     record(
-        "the coarse-grained isotropic candidate strongly improves the finite-rank 4D residual",
+        "the coarse-grained isotropic candidate strongly improves the finite-rank `3+1` residual",
         best[4] > 1e-3 and coarse_report["improvement"] > 1e3,
         (
             f"direct={best[4]:.3e}, coarse={best[5]:.3e}, "
@@ -132,7 +133,7 @@ def main() -> int:
     print("BLOCKER")
     print("=" * 78)
     print(
-        "The finite-rank family still does not supply an exact tensorial 4D matching "
+        "The finite-rank family still does not supply an exact tensorial `3+1` matching "
         "map. The direct common-source metric remains nonzero, so this route closes "
         "the scalar exterior architecture but not full nonlinear GR."
     )

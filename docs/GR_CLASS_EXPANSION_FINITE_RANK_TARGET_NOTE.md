@@ -25,7 +25,7 @@ The current restricted surface already gives:
 - exact local `3+1` lift on the restricted strong-field class
 - exact bilinear Route-2 carrier/action as a construction
 
-What it does **not** yet give is a theorem-grade tensorial 4D metric law
+What it does **not** yet give is a theorem-grade tensorial `3+1` metric law
 beyond the current star-supported/static-conformal restricted class.
 
 The next honest widening is therefore not a new shell law or another tensor
@@ -47,7 +47,7 @@ The exact Route-2 carrier/action remains useful as:
 - an exact tensorized construction on the current restricted class
 
 But it does **not** naturally extend as an exact tensor dynamics law on the
-wider class. The wider finite-rank route still leaves a nonzero direct 4D
+wider class. The wider finite-rank route still leaves a nonzero direct `3+1`
 Einstein residual, so the exact carrier/action breaks immediately as a full
 tensor-identification theorem once we ask for a broader class than the current
 restricted one.
@@ -95,7 +95,7 @@ The companion runner checks:
 - exact finite-rank source-to-exterior closure
 - exact boundary-action stationarity
 - bounded coarse-grained scalar exterior metric reduction
-- nonzero direct 4D metric residual
+- nonzero direct `3+1` metric residual
 
 That combination is enough to support the class-expansion answer above.
 

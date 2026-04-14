@@ -15,7 +15,7 @@ The best direct route is:
 > observable/self-consistency principle, then recover Einstein/Regge dynamics
 > as its Euler-Lagrange content.
 
-The concrete implementation of that route is a discrete 4D variational action.
+The concrete implementation of that route is a discrete `3+1` variational action.
 The restricted tensor ladder is useful only as a test bench and blocker
 localizer.
 
@@ -39,7 +39,7 @@ starting from a special shell/source class.
   closure for Poisson, but no exact tensor-valued action or tensor-valued
   uniqueness theorem at the full metric level.
 
-### 2. Discrete 4D variational action route
+### 2. Discrete `3+1` variational action route
 
 - **Core idea:** build the universal gravity law as a discrete local action on
   the full spacetime side, then derive the field equations as stationarity.
@@ -97,7 +97,7 @@ not as the main proof architecture.
 ## Single best candidate route
 
 The single best candidate is the **observable-principle effective-action
-route**, with the **discrete 4D variational action** as the concrete theorem
+route**, with the **discrete `3+1` variational action** as the concrete theorem
 form.
 
 Why this wins conceptually:
@@ -141,4 +141,3 @@ class language versus axiom-principle / action / self-consistency language.
 The expected outcome is that the observable-principle / variational-action
 family ranks above the restricted tensor ladder for a direct-to-universal-GR
 program.
-

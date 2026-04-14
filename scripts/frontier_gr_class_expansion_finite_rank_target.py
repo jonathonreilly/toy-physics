@@ -90,7 +90,7 @@ def main() -> int:
         status="BOUNDED",
     )
     record(
-        "the direct 4D metric residual remains nonzero",
+        "the direct `3+1` metric residual remains nonzero",
         best[4] > 0,
         f"direct residual={best[4]:.3e}",
         status="BOUNDED",
@@ -102,7 +102,7 @@ def main() -> int:
     print(
         "The finite-rank route widens the class cleanly: exact source-to-exterior "
         "closure and exact boundary-action stationarity survive. But the direct "
-        "4D tensor metric residual stays nonzero, so the exact Route-2 carrier/action "
+        "`3+1` tensor metric residual stays nonzero, so the exact Route-2 carrier/action "
         "does not naturally extend as a full tensor dynamics law beyond the current "
         "restricted class."
     )

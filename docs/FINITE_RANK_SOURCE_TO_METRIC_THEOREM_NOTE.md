@@ -61,7 +61,7 @@ the retained bridge law.
 
 Shell averaging the exact finite-rank exterior field and projecting it onto
 the unique radial harmonic law `phi_eff(r) = a/r` gives a static isotropic
-metric candidate with strongly reduced 4D vacuum residual.
+`3+1` metric candidate with strongly reduced vacuum residual.
 
 On the exact finite-rank family, the best matching radius in the current scan
 is `R_match = 5.0`:
@@ -73,13 +73,13 @@ is `R_match = 5.0`:
 So the finite-rank family does support a clean source-to-exterior-metric
 architecture at the scalar/isotropic level.
 
-## Sharp blocker: the tensorial 4D matching map is still missing
+## Sharp blocker: the tensorial `3+1` matching map is still missing
 
 The direct common-source metric candidate built from the exact finite-rank
 field still has a nonzero Einstein residual.
 
 That means the exact finite-rank source family does **not** by itself supply a
-theorem-grade tensorial map from microscopic source data to the full 4D
+theorem-grade tensorial map from microscopic source data to the full `3+1`
 metric.
 
 What is missing is the same thing the current gravity frontier has already
@@ -100,7 +100,7 @@ the current tensor residual route:
 - exact finite-rank source-to-exterior closure: yes
 - exact microscopic boundary-action closure: yes
 - bounded coarse-grained source-to-metric reduction: yes
-- full tensorial 4D closure / full nonlinear GR: no
+- full tensorial `3+1` closure / full nonlinear GR: no
 
 So this route is a real end-to-end source architecture, but it still needs a
 new tensorial matching principle before it can become full GR.

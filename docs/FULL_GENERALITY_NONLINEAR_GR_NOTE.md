@@ -67,7 +67,7 @@ fit.”
 
 The obstruction is that the current exact source and bridge packages only fix
 the scalar/static sector. They do not provide a theorem that promotes that
-sector to the full tensorial 4D metric.
+sector to the full tensorial `3+1` metric.
 
 What is missing is a **tensorial matching / selection principle** that would:
 
@@ -85,10 +85,10 @@ current branch does not yet derive.
 
 The current branch shows that:
 
-- the direct microscopic 4D candidate still has a nonzero Einstein residual
+- the direct microscopic `3+1` candidate still has a nonzero Einstein residual
 - the coarse-grained exterior projection sharply reduces that residual
 - the residual reduction is real, but it is a projection result, not a full
-  4D tensorial closure theorem
+  `3+1` tensorial closure theorem
 
 So the codebase has a **good scalar exterior route** and a **sharp tensorial
 obstruction**. It does not yet have full nonlinear GR.
@@ -97,7 +97,7 @@ obstruction**. It does not yet have full nonlinear GR.
 
 The exact blocker is:
 
-> no theorem yet derives the tensorial 4D matching map from the microscopic
+> no theorem yet derives the tensorial `3+1` matching map from the microscopic
 > exact source field to the macroscopic exterior metric
 
 Equivalent phrasing:
@@ -113,11 +113,11 @@ general.
 To turn the bounded route into a full nonlinear GR closure, the next theorem
 would need to show one of:
 
-1. the exact microscopic source data uniquely determine the full 4D metric
+1. the exact microscopic source data uniquely determine the full `3+1` metric
    sector, including non-isotropic and dynamical components
 2. the coarse-grained exterior harmonic law is the unique tensorial completion
    of the microscopic bridge data
-3. the 4D Einstein / Regge residual vanishes for the lifted field without
+3. the `3+1` Einstein / Regge residual vanishes for the lifted field without
    imposing any static isotropic ansatz by hand
 
 None of those are yet present on the branch.
@@ -127,6 +127,6 @@ None of those are yet present on the branch.
 - **Credible route present:** yes, to a coarse-grained scalar exterior law
 - **Full nonlinear GR closable now:** no
 - **Missing principle:** tensorial matching / completion from microscopic source
-  data to the full 4D metric
+  data to the full `3+1` metric
 
 So the remaining gap is localized, but it is still a genuine next-paper gap.

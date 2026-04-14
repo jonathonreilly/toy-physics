@@ -46,7 +46,7 @@ That is the exact degeneracy.
 
 ## Tensorial witness
 
-The companion verifier evaluates the full 4D Einstein tensor on those probes.
+The companion verifier evaluates the full `3+1` Einstein tensor on those probes.
 
 Result:
 
@@ -68,7 +68,7 @@ This is not just a bounded “the scalar bridge is incomplete” statement.
 It is a genuine no-go for a whole class of hoped-for completions:
 
 > no completion principle that factors only through the current scalar shell
-> trace / Schur boundary data can determine the full 4D metric on this branch.
+> trace / Schur boundary data can determine the full `3+1` metric on this branch.
 
 Equivalently:
 

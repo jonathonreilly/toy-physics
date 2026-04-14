@@ -4,7 +4,7 @@
 This runner does not re-prove the restricted bridge package. It uses the
 existing exact finite-rank and exact local O_h source closures as inputs and
 tests whether the coarse-grained exterior scalar law is enough to close the
-full 4D nonlinear GR gap.
+full `3+1` nonlinear GR gap.
 
 Result categories:
 - EXACT: restricted source-package inputs already available on the branch
@@ -93,7 +93,7 @@ def main() -> int:
         tensorial_gap,
         (
             "direct microscopic residual remains nonzero after the branch's best scalar projection; "
-            "the current machinery fixes only scalar/static exterior data, not the full tensorial 4D metric"
+            "the current machinery fixes only scalar/static exterior data, not the full tensorial `3+1` metric"
         ),
     )
 
