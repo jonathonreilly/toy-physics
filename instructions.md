@@ -76,11 +76,9 @@ These are honest framework limitations to acknowledge and, only later, attack:
 
 4. **Full nonlinear GR not derived**
    - safe current claim:
-     - weak-field gravity is retained
-     - weak-field WEP and time dilation are retained corollaries
-     - 1PN-style extensions may be useful bounded companions
+     - gravity is deferred from Claude gate work
    - not safe:
-     - full Einstein-equation closure
+     - full nonlinear GR in full generality
    - if worked later:
      - attack this as a separate gravity-completion lane after the flagship
        three gates are done
@@ -93,34 +91,14 @@ These caveats must stay explicit in any honest flagship submission:
   - safe claim: retained matter structure and bounded hierarchy/flavor support
 - the strong CP problem is **not** addressed
 - `alpha_EM = 1/137` is **not** derived
-- gravity is retained only on the weak-field surface
-  - safe claim: Poisson / Newton core + weak-field WEP + weak-field time dilation
-  - not safe: full nonlinear GR closure
+- full nonlinear GR is **not** a current Claude lane
 
 ## Scope rule
 
 Everything outside the three live gates is out of scope unless Codex
 explicitly asks for wording/package alignment.
 
-If Codex explicitly asks for gravity companion cleanup, do **not** try to
-promote broad gravity. The only acceptable work is to remove stale promotion
-language. Exact blockers to gravity-companion promotion:
-
-1. strong-field package
-   - zero-echo amplitude is **not** theorem-grade while it still depends on
-     the unresolved strong-field metric between `R_min` and `R_S`
-   - “no singularity” must **not** be promoted beyond the current Hartree /
-     collapse-floor support
-2. broad eikonal package
-   - geodesic equation remains conditional on the smooth-metric / continuum
-     identification
-   - conformal metric remains conditional on the same identification
-   - factor-of-2 light bending remains conditional on conformal metric +
-     null-ray identification
-3. paper-safe gravity surface remains only:
-   - Poisson / Newton weak-field core
-   - weak-field WEP
-   - weak-field time dilation
+Ignore gravity unless Codex explicitly reprioritizes it.
 
 ## Exact work queue
 
@@ -278,14 +256,20 @@ language. Exact blockers to gravity-companion promotion:
 **Primary files**
 
 - `docs/YT_FLAGSHIP_CLOSURE_NOTE.md`
+- `docs/YT_ZERO_IMPORT_CLOSURE_NOTE.md`
 - `docs/YT_BOUNDARY_RESOLUTION_NOTE.md`
 - `docs/YT_GAUGE_CROSSOVER_THEOREM.md`
+- `docs/YT_MATCHING_NATIVE_NOTE.md`
+- `docs/YT_VERTEX_POWER_DERIVATION.md`
 - `docs/G_BARE_DERIVATION_NOTE.md`
 - `docs/WILSONIAN_EFT_DERIVATION_NOTE.md`
 - `docs/YT_MATCHING_COMPUTED_NOTE.md`
 - `docs/YT_CL3_PRESERVATION_NOTE.md`
 - `docs/RENORMALIZED_YT_THEOREM_NOTE.md`
 - `scripts/frontier_alpha_s_determination.py`
+- `scripts/frontier_zero_import_chain.py`
+- `scripts/frontier_native_matching.py`
+- `scripts/frontier_vertex_power.py`
 - `scripts/frontier_yt_cl3_preservation.py`
 - `scripts/frontier_yt_boundary_resolution.py`
 - `scripts/frontier_yt_unified_boundary.py`
@@ -297,121 +281,118 @@ language. Exact blockers to gravity-companion promotion:
 
 **Current blockers**
 
-1. the old toy-model objection is mostly gone
+1. the old toy-model / split-boundary objection is no longer the main fight
    - Feshbach is now verified on the actual staggered `Cl(3)` / `Z^3`
      Hamiltonian
    - `b_2 = 19/6` bookkeeping is corrected
-   - the V-scheme to `\\overline{MS}` conversion itself is a real step forward
-   - do not spend more time re-litigating those fixed points
-2. the new gauge-crossover diagnosis is the right blocker
-   - the old split-boundary objection is narrower now: the script really does
-     derive one framework coupling that sets both `g_3(M_Pl)` and `y_t(M_Pl)`
-   - but the framework `alpha_s(M_Pl)` is about `4.4x` the perturbative SM
-     value obtained by running observed `alpha_s(M_Z)` upward
-   - running the framework coupling downward with perturbative QCD hits
-     breakdown near `10^15.8 GeV`
-   - so the remaining blocker is now a concrete non-perturbative gauge
-     crossover / step-scaling problem, not a vague UV-boundary mismatch
-3. do **not** redo solved sub-steps
+   - the new zero-import route is the right live surface
+   - do **not** spend more time re-litigating the already-fixed toy issues
+2. do **not** redo solved sub-steps
    - `Cl(3)` preservation under RG is already the right surface
    - Feshbach on the actual Hamiltonian is already verified
    - the 1-loop bookkeeping bug is fixed
    - the lattice matching coefficient itself is already narrowed to
      sub-percent scale
-4. electroweak inputs are no longer the productive objection here
+3. electroweak inputs are no longer the productive objection here
    - do **not** spend time arguing that the lane is open merely because the
      scripts use electroweak inputs such as `v`, `sin^2(theta_W)`, or
      low-energy electroweak boundary data
    - on the current Codex-side paper surface, those are fair game
-   - the remaining blockers are instead the strong-coupling normalization and
-     crossover map
-5. `alpha_s` itself is still not a zero-import standalone closure
-   - `g_bare = 1` is still only **BOUNDED**, not theorem-grade exact
-   - the current `alpha_s` runner still uses imported plaquette-to-`V` and
-     `V`-to-`\overline{MS}` matching coefficients
-   - unless you actually internalize those coefficients on the same framework
-     surface, do **not** call the absolute strong coupling “zero import”
-6. the new scheme-independence theorem is a useful UV sub-result, not lane
-   closure
-   - it strengthens the claim that the UV ratio `y_t / g_3 = 1/sqrt(6)` is
-     protected
-   - it does **not** derive the framework-to-SM gauge crossover
-   - do **not** cite the current script as an all-orders vertex-renormalization
-     proof; it checks Ward / propagator identities, not full `Z_y / Z_g`
-7. the live blocker is now one **self-consistent** framework-to-SM crossover
-   - derive how the strong framework boundary hands off to the perturbative
-     SM gauge trajectory
-   - the preferred route is a one-shot non-perturbative finite matching
-     theorem on the actual Hamiltonian, not a huge step-scaling march
-   - lattice step-scaling is fallback if that cleaner route fails
-8. thresholded running still matters, but the conceptual mismatch is now
-   “framework strong boundary vs perturbative SM running”
-   - the common boundary relation `y_t = g_3/sqrt(6)` is now enforced on the
-     framework surface
-   - what is still missing is the framework derivation of the gauge-side
-     crossover to the perturbative trajectory used below `M_Pl`
-9. the new “gauge crossover theorem” is still not closure authority
-   - the current script still seeds the gauge trajectory from observed
-     `alpha_s(M_Z)` when it builds `g_3(M_Pl)`
-   - so the successful `m_t` number is still produced on an
-     observed-seeded gauge path, not a fully framework-derived crossover map
-   - its exactness claims around Feshbach-preserved gauge coupling and the
-     projected Ward identity still outrun the current proof surface
-10. the load-bearing external content is now very specific
-   - if you can derive the plaquette-to-`V` and `V`-to-`\overline{MS}`
-     coefficients on the framework surface, or replace them with a native
-     background-field crossover theorem, the lane changes materially
-   - if you cannot, keep the lane bounded and say so plainly
+   - the remaining blockers are now the plaquette / LM methodology surface
+     and the quantitative residual in the zero-import chain
+4. the latest zero-import route is stronger, but it is still not closure
+   - the newest flagship note still labels the lane **BOUNDED**
+   - its zero-import result is:
+     - `alpha_s(M_Z) = 0.1182`
+     - `m_t = 165.4 GeV`
+     - about `-4.2%` on `m_t`
+   - do **not** promote `y_t` closed from that note
+5. the latest route still hardcodes the plaquette benchmark
+   - `frontier_zero_import_chain.py` still takes `PLAQ_MC = 0.5934` as a
+     well-established reference value
+   - the small `L=4` Metropolis run is only a sanity check, not the final
+     same-surface computation
+   - if you want strict zero-import language, either compute the final
+     plaquette on the same surface or label the accepted benchmark honestly
+6. deriving `n_link(Pi) = 2` is real progress, but it is not the full closure
+   - `frontier_vertex_power.py` does derive that the vacuum-polarization
+     operator has 2 link insertions
+   - but it still assumes the Lepage-Mackenzie rule that an operator with
+     `n_link` gauge links uses `alpha_bare / u_0^{n_link}`
+   - until that map itself is derived framework-natively, do **not** say the
+     last prescription-level import is gone
+7. the branch currently contains a direct contradiction on that exact point
+   - `frontier_vertex_power.py` says the vertex `u_0^2` rule is now derived
+   - `frontier_native_matching.py` still says the vertex `u_0^2` rule remains
+     an imported LM methodology element
+   - resolve that contradiction on one consistent authority surface before
+     making any stronger claim
+8. the older gauge-crossover theorem is still bounded support, not closure
+   authority
+   - its exactness language around Feshbach-preserved gauge coupling and the
+     projected Ward identity still outruns the current proof surface
+   - do **not** cite it as an all-orders continuum matching theorem
+9. the live blocker is now one narrow methodology / observable bridge
+   - derive the map from operator link counting to the physical effective
+     coupling on the framework surface
+   - then rerun the zero-import chain on that derived prescription
+   - only after that should you worry about squeezing the remaining `4.2%`
+     `m_t` residual with improved running or thresholds
 
 **What counts as success**
 
 - best-case success:
-  - derive one actual framework-native plaquette/lattice to
-    `\\overline{MS}` crossover at `M_Pl` that sets both `g_3` and `y_t`
-  - run the thresholded 2-loop chain with that common boundary and close the
-    residual
+  - derive the LM link-counting rule itself on the framework surface, not
+    just the `n_link = 2` count
+  - compute the plaquette on the same final surface instead of importing the
+    accepted `0.5934` benchmark
+  - rerun the zero-import chain from that cleaned-up boundary and close the
+    `m_t` residual
 - second-best success:
-  - isolate the lane to the remaining explicit imported ingredients
-    (for example bounded `g_bare = 1` and/or imported matching coefficients)
-    and state that honestly
+  - isolate the lane to the one remaining honest methodology import
+    (the LM map from link count to physical coupling), plus any accepted
+    plaquette benchmark that still remains
+  - and state that plainly in one authority note
 - minimum acceptable success:
-  - keep the flagship note honest and bounded with the residual written as a
-    self-consistent boundary problem rather than a vague “continuum bridge”
+  - keep the flagship note honest and bounded with the contradiction between
+    `frontier_vertex_power.py` and `frontier_native_matching.py` removed
+  - and with the remaining blocker written as the LM methodology bridge, not
+    as the old broad crossover story
 
 **What does not count**
 
 - re-proving Feshbach on toy systems
 - presenting corrected beta coefficients as if that alone closes the lane
-- calling `alpha_s` or `y_t` “zero import” while the absolute boundary still
-  comes through imported plaquette-to-`V` / `V`-to-`\overline{MS}` matching
-- using observed `alpha_s(M_Z)` to build `g_3(M_Pl)` while calling the full
-  high-scale boundary framework-derived
-- using one high-scale coupling for `y_t` and a different one for `g_3`
-- saying “the rest is just standard running” unless the actual common boundary
-  is computed on the framework surface
+- calling `alpha_s` or `y_t` “zero import” while the final chain still
+  hardcodes `PLAQ_MC = 0.5934` as an accepted reference value
+- calling the lane closed while the script that supposedly closes the last
+  import still assumes the LM operator-to-coupling rule it claims to retire
+- leaving `frontier_vertex_power.py` and `frontier_native_matching.py` in
+  direct contradiction on whether the vertex `u_0^2` rule is imported
+- using agreement with PDG as proof that the methodology itself is derived
 
 **Preferred attack order**
 
 1. do **not** re-prove Feshbach or the sub-percent matching coefficient
-2. do **not** spend more time on the old “two unrelated UV couplings” story;
-   that is no longer the real blocker
-3. preferred route:
-   - place the actual `Cl(3)` / `Z^3` Hamiltonian in a slowly varying SU(3)
-     background field
-   - do the same low/high-energy Schur-complement / Feshbach projection
-     already verified on the real Hamiltonian
-   - extract the induced low-energy gauge-kinetic coefficient
-   - use that as the one-shot framework-to-SM crossover map
-4. in parallel, if there is a clean route, derive or replace the imported
-   plaquette-to-`V` and `V`-to-`\overline{MS}` coefficients on the same
-   framework surface
-5. keep `y_t / g_3 = 1/sqrt(6)` on that effective boundary, not on the raw
-   plaquette coupling
-6. only then run the full thresholded 2-loop chain from that common handoff
-7. lattice step-scaling is fallback if 3-6 fail cleanly
-8. if all of that fails, isolate exactly which low-energy gauge anchor or
-   imported matching coefficient is
-   still imported and keep the lane bounded
+2. do **not** spend more time on the old observed-seeded crossover complaint;
+   the newest zero-import route is the right surface now
+3. first resolve the contradiction:
+   - either make `frontier_native_matching.py` agree that the vertex `u_0^2`
+     rule is framework-derived
+   - or make `frontier_vertex_power.py` admit that the LM rule is still a
+     methodology import
+4. then attack the real remaining theorem:
+   - derive why an operator with `n_link` gauge links uses the physical
+     coupling `alpha_bare / u_0^{n_link}` on the framework surface
+   - do **not** just recount the links again
+5. in parallel, if strict zero-import wording still matters, replace the
+   accepted plaquette benchmark with a same-surface final computation
+6. only after 3-5 are clean, rerun the zero-import chain and see whether
+   the remaining `m_t` residual persists
+7. if the residual still sits at a few percent, then and only then attack
+   2-loop Yukawa running / thresholds as the remaining quantitative issue
+8. if 3-7 fail, isolate exactly the one remaining methodology import and keep
+   the lane bounded
 
 ### Target C: CKM / flavor
 

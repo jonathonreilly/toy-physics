@@ -24,7 +24,7 @@ These stay explicit even if every remaining live gate closes:
     and selected quantitative windows
 - the strong CP problem is not addressed
 - `alpha_EM = 1/137` is not derived
-- gravity is still a weak-field framework result, not full nonlinear GR
+- full nonlinear GR is not a current Claude review lane
 
 ## Framework-premise rule
 
@@ -81,10 +81,9 @@ if Codex explicitly reprioritizes.
 
 4. **Full nonlinear GR**
    - current safe state:
-     - weak-field gravity retained
-     - broad and strong-field gravity remain bounded companion work
+     - deferred from Claude gate work
    - current limitation:
-     - not a full Einstein-equation derivation
+     - not a full Einstein-equation derivation in full generality
 
 Paper rule:
 
@@ -101,21 +100,7 @@ Routine review should focus on:
 
 Everything else is out of scope unless Codex explicitly asks for cleanup.
 
-If gravity companion docs are touched for cleanup, the promotion blockers are:
-
-1. strong-field gravity
-   - zero-echo amplitude is still conditional on the unresolved strong-field
-     metric choice
-   - “no singularity” is still bounded on the current Hartree / collapse-floor
-     support
-2. broad eikonal bundle
-   - geodesic equation remains conditional on smooth-metric / continuum
-     identification
-   - conformal metric remains conditional on the same step
-   - factor-of-2 light bending remains conditional on conformal metric +
-     null-ray identification
-
-So gravity-companion cleanup should only downgrade stale wording, not promote.
+Ignore gravity unless Codex explicitly asks for gravity cleanup.
 
 ## Lane-by-lane review state
 
@@ -215,75 +200,62 @@ Current safe state:
 
 - bare UV theorem closed
 - `Cl(3)` preservation under RG exact
-- the Wilsonian / matching route is materially better than before
-  - Feshbach is now verified on the actual `Cl(3)` / `Z^3` Hamiltonian
+- the zero-import route is materially better than the older observed-seeded
+  crossover route
+  - Feshbach is verified on the actual `Cl(3)` / `Z^3` Hamiltonian
   - the one-loop bookkeeping bug (`b_2`) is corrected
-  - the lattice matching coefficient is already computed at sub-percent scale
-  - V-scheme to `\overline{MS}` conversion is a real narrowing of the old gap
+  - the operator count `n_link(Pi) = 2` is now explicitly derived
 - electroweak inputs are no longer the productive objection on this lane
   - on the current Codex-side paper surface, using `v`, low-energy electroweak
     inputs, and the strengthened electroweak/hierarchy package is fair game
 - therefore still bounded:
-  - the old split-boundary objection is no longer the best description
-  - the new script really does derive one framework coupling and enforce
-    `y_t = g_s / sqrt(6)` at the framework boundary
-  - but `alpha_s` is still not a strict zero-import standalone closure
-    - `g_bare = 1` remains bounded, not theorem-grade exact
-    - the absolute plaquette-to-`V` and `V`-to-`\overline{MS}` matching still
-      uses imported lattice/QCD coefficients
-  - but the framework `alpha_s(M_Pl)` is about `4.4x` the perturbative SM
-    value obtained by running observed `alpha_s(M_Z)` upward
-  - perturbative running of the framework coupling breaks down near
-    `10^15.8 GeV`
-  - the quoted successful `m_t` prediction still uses the framework Yukawa
-    boundary together with the perturbative SM gauge trajectory generated from
-    observed `alpha_s(M_Z)`
-  - so the remaining blocker is now a concrete non-perturbative gauge
-    crossover / step-scaling problem, not the old “two unrelated UV
-    couplings” problem
-  - the new “gauge crossover theorem” therefore still does not close the lane;
-    it leaves the gauge trajectory observed-seeded
-  - its exactness language still outruns the current proof surface
-    - Feshbach-preserved gauge coupling and projected Ward-identity
-      preservation are supported by strong formal reasoning plus finite
-      numerical verification, not yet a full all-orders continuum matching
-      proof
-  - thresholded running down to `M_Z` still matters after that crossover
-  - the new scheme-independence theorem is useful UV support, but it does not
-    close the lane
-    - it strengthens the claim that the UV ratio is protected
-    - but its current script checks Ward / propagator identities, not a full
-      all-orders vertex-renormalization equality
-    - it therefore does **not** remove the gauge-crossover blocker
+  - the newest flagship note still labels the lane `BOUNDED`
+  - the zero-import chain gives:
+    - `alpha_s(M_Z) = 0.1182`
+    - `m_t = 165.4 GeV`
+    - about `-4.2%` on `m_t`
+  - the remaining blocker is no longer the old observed-seeded gauge path;
+    it is now the LM methodology bridge itself
+    - `frontier_vertex_power.py` derives `n_link(Pi) = 2`
+    - but it still assumes the LM rule that an operator with `n_link` links
+      uses `alpha_bare / u_0^{n_link}`
+    - so it derives the count, not yet the physical coupling map
+  - the branch also contains a direct contradiction on this exact point
+    - `frontier_vertex_power.py` says the last import is closed
+    - `frontier_native_matching.py` still says the vertex `u_0^2` rule
+      remains an imported LM methodology element
+  - the zero-import chain still hardcodes `PLAQ_MC = 0.5934` as an accepted
+    benchmark and uses the small `L=4` Metropolis run only as a sanity check
+  - the older gauge-crossover theorem remains bounded support only
+    - its exactness language about projected gauge preservation /
+      Ward-identity preservation still outruns the current proof surface
 
 Paper-safe read:
 
-> The UV theorem surface is strong, but the remaining issue is now a concrete
-> framework-to-SM crossover problem: the common framework boundary is real,
-> but the absolute strong-coupling normalization and the gauge-side handoff to
-> the perturbative running used below `M_Pl` are not yet derived on one fully
-> framework-native surface.
+> The UV theorem surface is strong, and the newest zero-import route is real
+> progress. But the lane is still bounded because the last load-bearing step is
+> now the LM methodology bridge itself: the branch has derived `n_link(Pi)=2`,
+> but not yet the framework-native theorem that turns that count into the
+> physical coupling prescription `alpha_bare / u_0^2`. The same branch also
+> still uses an accepted plaquette benchmark rather than a same-surface final
+> plaquette computation.
 
 Best attack:
 
 1. do not re-prove Feshbach or the sub-percent matching coefficient
-2. preferred route:
-   - place the actual `Cl(3)` / `Z^3` Hamiltonian in a slowly varying SU(3)
-     background field
-   - do the same low/high-energy Schur-complement / Feshbach projection on
-     that real Hamiltonian
-   - extract the induced low-energy gauge-kinetic coefficient
-   - use that as the finite crossover map from the framework boundary to the
-     perturbative SM trajectory
-3. if possible, replace or derive the imported plaquette-to-`V` and
-   `V`-to-`\overline{MS}` coefficients on the same framework surface
-4. keep `y_t / g_3 = 1/sqrt(6)` on that effective boundary, not on the raw
-   plaquette coupling
-5. only then rerun the full thresholded 2-loop chain
-6. lattice step-scaling is fallback if the background-field effective-coupling
-   route fails cleanly
-7. if a low-energy gauge anchor or imported matching coefficient is still
-   needed after that, isolate it explicitly and keep the lane bounded
+2. do not spend more time on the old observed-seeded crossover complaint; the
+   newest zero-import route is the right surface now
+3. first resolve the direct contradiction between
+   `frontier_vertex_power.py` and `frontier_native_matching.py`
+4. then derive the load-bearing map from operator link count to physical
+   coupling on the framework surface; counting `n_link = 2` again is not enough
+5. if strict zero-import wording still matters, replace the accepted
+   `PLAQ_MC = 0.5934` benchmark with a same-surface final plaquette computation
+6. only after 3-5 are clean, rerun the zero-import chain
+7. if a few-percent `m_t` residual remains after that, then treat improved
+   Yukawa running / thresholds as the next quantitative sub-problem
+8. if 3-7 fail, freeze the lane honestly as “zero-import up to the LM
+   methodology bridge”
 
 ### 3. CKM / quantitative flavor closure
 
