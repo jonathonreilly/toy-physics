@@ -117,3 +117,22 @@ success" per Codex instructions.
 with v derived and y_t = 1 from RG quasi-fixed point structure.
 
 All three readings are honest and well-supported.
+
+## Boundary Selection Theorem (2026-04-14)
+
+The Codex-identified blocker -- g_3(M_Pl)_SM = 0.487 vs g_lattice = 1.067
+on the same RGE trajectory -- is resolved by the Boundary Selection Theorem
+(`docs/YT_BOUNDARY_THEOREM.md`, `scripts/frontier_yt_boundary_consistency.py`):
+
+- The physical crossover endpoint is v, not M_Pl.
+- The SM EFT is valid below v; the lattice theory above v.
+- The Ward identity y_t/g_s = 1/sqrt(6) holds in the lattice theory.
+- The SM RGE backward extrapolation to M_Pl is a mathematical BC transfer.
+- g_3(M_Pl)_SM != g_lattice is EXPECTED (different theories).
+- Option B (SM Ward identity at M_Pl) gives m_t = 105.6 GeV (-39%), WRONG.
+- The existing chain (Option A, v-endpoint) is the correct and only
+  consistent approach.
+
+The boundary theorem does not change the numerical predictions. It resolves
+the conceptual blocker by proving that the g_3 discrepancy at M_Pl is a
+feature of the EFT matching structure, not an inconsistency.

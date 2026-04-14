@@ -2,9 +2,10 @@
 
 **Date:** 2026-04-13
 **Lane:** Renormalized y_t matching (priority 4)
-**Status:** CLOSED (residual < 2%, within matching precision)
-**Updated:** V-scheme to MSbar conversion now computed
-(see `YT_BOUNDARY_RESOLUTION_NOTE.md` and `frontier_yt_boundary_resolution.py`)
+**Status:** BOUNDED (see `YT_BOUNDARY_THEOREM.md` for current authority)
+**Updated:** 2026-04-14 -- boundary selection theorem resolves the
+g_3(M_Pl) discrepancy; status downgraded to BOUNDED per Codex review.
+See `YT_BOUNDARY_THEOREM.md` and `frontier_yt_boundary_consistency.py`.
 
 ---
 

@@ -4,8 +4,8 @@
 - `scripts/frontier_yt_unified_boundary.py` (current, unified boundary)
 - `scripts/frontier_yt_boundary_resolution.py` (previous, split boundary)
 
-**Status:** Gate CLOSED (residual < 2%)
-**Date:** 2026-04-13
+**Status:** SUPERSEDED by `YT_BOUNDARY_THEOREM.md` (2026-04-14)
+**Date:** 2026-04-13 (original), 2026-04-14 (status update)
 
 ## Codex Blocker (now resolved)
 
