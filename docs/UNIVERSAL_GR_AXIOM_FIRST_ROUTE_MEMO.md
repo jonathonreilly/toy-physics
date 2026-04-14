@@ -110,32 +110,40 @@ Why this wins conceptually:
 
 ## Current theorem step
 
-The current direct-universal theorem step is not a closure claim. It is a
-sharp blocker note:
+The current direct-universal theorem step is now more concrete than the
+original blocker note.
 
+The route has:
+
+- [`UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md`](./UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md)
+- [`frontier_universal_gr_tensor_variational_candidate.py`](../scripts/frontier_universal_gr_tensor_variational_candidate.py)
 - [`UNIVERSAL_GR_TENSOR_ACTION_BLOCKER_NOTE.md`](./UNIVERSAL_GR_TENSOR_ACTION_BLOCKER_NOTE.md)
 - [`frontier_universal_gr_tensor_action_blocker.py`](../scripts/frontier_universal_gr_tensor_action_blocker.py)
 
-That blocker says the direct universal route is exact at the scalar observable
-principle level and exact at the `3+1` kinematic lift level, but still missing
-the first exact tensor-valued action or uniqueness theorem on the full metric
-space.
+The new candidate says the direct universal route is exact at the scalar
+observable principle level and exact at the `3+1` kinematic lift level, and it
+now has the first tensor-valued `3+1` variational candidate:
 
-The minimal missing primitive is therefore:
+`S_GR^cand[h] := 1/2 * D^2 W[g_*](h, h)`
 
-1. an exact tensor-valued `3+1` variational action
-2. or an exact tensor-valued source operator on `PL S^3 x R`
-3. or an exact uniqueness theorem forcing Einstein/Regge dynamics from the
-   observable principle
+That candidate is still not a closure claim.
 
-Until one of those lands, the direct route remains the best architecture but
-not a closure theorem.
+The remaining blocker is now the exact identification problem:
+
+- does the Hessian kernel equal the Einstein/Regge tensor law on the full
+  `3+1` metric space?
+- if not, what is the single missing primitive needed to make that
+  identification exact?
 
 ## Formal support check
 
 Use [`frontier_universal_gr_axiom_first_route_scan.py`](../scripts/frontier_universal_gr_axiom_first_route_scan.py)
 to score the route survey by how strongly each route depends on restricted
 class language versus axiom-principle / action / self-consistency language.
+
+Use [`frontier_universal_gr_tensor_variational_candidate.py`](../scripts/frontier_universal_gr_tensor_variational_candidate.py)
+to audit the new tensor-valued variational candidate and its symmetry/bilinear
+structure.
 
 The expected outcome is that the observable-principle / variational-action
 family ranks above the restricted tensor ladder for a direct-to-universal-GR

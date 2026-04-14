@@ -6,7 +6,8 @@ This is not a closure proof. It checks that the current atlas really gives:
 1. an exact scalar observable generator from the axiom-side observable
    principle;
 2. an exact `3+1` kinematic lift on `PL S^3 x R`;
-3. no exact tensor-valued action or uniqueness theorem on the direct route.
+3. an exact tensor-valued variational candidate whose Einstein/Regge
+   identification is still missing.
 """
 
 from __future__ import annotations
@@ -22,6 +23,7 @@ OBSERVABLE = DOCS / "OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md"
 ROUTE2 = DOCS / "S3_TIME_SPACETIME_OBSERVABLE_ROUTE_NOTE.md"
 HESSIAN = DOCS / "S3_TIME_OBSERVABLE_HESSIAN_ROUTE_NOTE.md"
 BLOCKER = DOCS / "UNIVERSAL_GR_TENSOR_ACTION_BLOCKER_NOTE.md"
+CANDIDATE = DOCS / "UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md"
 
 
 @dataclass
@@ -44,6 +46,7 @@ def main() -> int:
     r2 = read(ROUTE2)
     hess = read(HESSIAN)
     blk = read(BLOCKER)
+    cand = read(CANDIDATE)
 
     checks = [
         Check(
@@ -64,14 +67,17 @@ def main() -> int:
             "the route-2 Hessian remains scalar-valued",
         ),
         Check(
-            "tensor-valued action is still missing",
-            has(blk, "blocked at the tensor-valued action / uniqueness level"),
-            "blocker note states the missing tensor action level explicitly",
+            "tensor-valued candidate is exact but not yet identified",
+            has(cand, "metric-source hessian")
+            and has(blk, "not yet identified with")
+            and has(blk, "einstein/regge"),
+            "candidate is exact as a construction, but the Einstein/Regge identification is still open",
         ),
         Check(
-            "minimal missing primitive is explicit",
-            has(blk, "tensor-valued `3+1` variational action"),
-            "blocker note names the missing primitive",
+            "missing identification is now sharp",
+            has(blk, "exact identification of the tensor-valued `3+1` Hessian")
+            and has(blk, "einstein/regge tensor law"),
+            "blocker note names the exact remaining identification problem",
         ),
     ]
 

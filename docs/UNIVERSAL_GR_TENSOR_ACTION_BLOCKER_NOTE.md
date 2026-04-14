@@ -13,15 +13,16 @@ The current axiom-first stack gives:
 
 - an exact scalar observable generator from the axiom-side observable principle
 - an exact `3+1` kinematic lift on `PL S^3 x R`
+- an exact tensor-valued variational candidate on that lifted background
 
 It does **not** yet give:
 
-- an exact tensor-valued `3+1` action
-- an exact tensor-valued uniqueness theorem forcing Einstein/Regge dynamics at
-  the full metric level
+- an exact tensor-valued `3+1` action identified with Einstein/Regge dynamics
+  at the full metric level
+- an exact tensor-valued uniqueness theorem forcing that identification
 
 So the current theorem step is not a closure claim. It is the exact minimal
-missing primitive for the direct universal route.
+missing identification for the direct universal route.
 
 ## What is exact already
 
@@ -45,20 +46,30 @@ background scaffold.
 
 This is a kinematic statement, not a metric carrier.
 
+### Tensor variational candidate
+
+The scalar generator can be lifted into a tensor-valued quadratic form by
+taking its metric-source Hessian on the lifted background:
+
+`S_GR^cand[h] := 1/2 * D^2 W[g_*](h, h)`
+
+This is the first exact tensor-valued variational candidate on the direct
+route. It is exact as a construction, but not yet identified with
+Einstein/Regge dynamics.
+
 ## What is missing
 
 The direct universal route still lacks the first exact tensor-valued object
 that could upgrade the scalar generator into a full `3+1` metric law.
 
-The missing primitive can be stated in three equivalent ways:
+The remaining missing primitive can now be stated more sharply:
 
-1. an exact tensor-valued action density on `PL S^3 x R`
-2. an exact tensor-valued source operator on the full `3+1` metric space
-3. an exact uniqueness theorem forcing Einstein/Regge dynamics from the
-   observable principle
+1. exact identification of the Hessian kernel with the Einstein/Regge tensor
+   law on the full `3+1` metric space
+2. if that fails, one additional primitive that makes the identification exact
 
-Without one of those, the observable principle remains scalar-only and the
-direct universal route cannot close full GR.
+Without one of those, the observable principle remains scalar-only at the
+closure level and the direct universal route cannot close full GR.
 
 ## Why the current route survey points here
 
@@ -72,17 +83,17 @@ What the survey now makes explicit is the failure mode:
 
 - the scalar generator is exact
 - the `3+1` kinematic lift is exact
-- but no exact tensor-valued action or tensor-valued uniqueness theorem has
-  yet been built on top of them
+- but the Einstein/Regge identification of the tensor Hessian has not yet been
+  made exact
 
 So the universal route is not wrong. It is incomplete at exactly one primitive.
 
 ## Minimal missing primitive
 
-The smallest honest missing object is:
+The smallest honest missing object is now:
 
-> an exact tensor-valued `3+1` variational action, or equivalently an exact
-> tensor-valued source operator, on the `PL S^3 x R` background
+> exact identification of the tensor-valued `3+1` Hessian with the
+> Einstein/Regge tensor law on the `PL S^3 x R` background
 
 This is the thing that must be derived or axiomatized next.
 
