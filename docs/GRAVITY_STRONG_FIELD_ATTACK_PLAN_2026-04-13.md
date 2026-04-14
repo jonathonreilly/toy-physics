@@ -1083,3 +1083,34 @@ generic finite-support sources on the current box rather than only the
 star-supported benchmark geometry. The remaining freedom is now best understood
 as genuinely beyond the current static conformal local-scalar bridge class and
 ultimately as a missing tensorial completion principle for full 4D gravity.
+
+## Route 2 primitive build program
+
+The route-2 (`S^3` + anomaly-forced-time) work now has a clean axiom-first
+shape:
+
+- exact `S^3`
+- exact single-clock `3+1`
+- exact route-2 background `PL S^3 x R`
+- exact slice generator `Lambda_R`
+- bounded transfer / kinetic semigroup `T_R = exp(-Lambda_R)`
+
+What it does **not** yet have is the tensor-valued dynamics carrier that turns
+that semigroup into a GR law.
+
+The current best reduction is now:
+
+1. the smallest missing primitive is an exact tensor-valued support observable
+   on `A1 x {E_x, T1x}`
+2. once that exists, the next theorem is its exact endpoint coefficient law at
+   `e0` and `s / sqrt(6)`
+3. only then does it make sense to derive the support-to-slice time-coupling
+   law on `PL S^3 x R`
+4. only after that can the route close an exact spacetime dynamics action or
+   uniqueness theorem
+
+So Route 2 is no longer best thought of as "keep trying to derive GR directly."
+It is now a tool-building program with one explicit first target:
+
+> derive the exact tensor-valued support observable on the microscopic
+> `A1 x {E_x, T1x}` block.
