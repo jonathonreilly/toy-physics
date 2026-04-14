@@ -856,10 +856,17 @@ New exact/bounded selector-transfer reduction extracted after that:
 - see `docs/TENSOR_SELECTOR_TRANSFER_LAW_NOTE.md`
 - the fitted values differ by only `7.18e-02`, and the common
   selector-transfer candidate predicts both families within about `5% - 7%`
-- this means the open gravity target is now narrower again:
-  - derive the transfer coefficient `tau_tensor` from the microscopic lift of
-    the exact reduced anisotropic DtN mode
-  - not a whole new tensor normalization law
+- but the next obstruction is now also explicit:
+  - the exact local `O_h` and finite-rank families already share the full
+    retained reduced shell law
+  - they also share the same active orbit direction on the projected
+    microscopic tensor-correction quotient
+  - yet `tau_tensor` still differs by `7.18e-02`
+- see `docs/TENSOR_TRANSFER_COEFFICIENT_OBSTRUCTION_NOTE.md`
+- so the open gravity target is now narrower again:
+  - derive the transfer coefficient `tau_tensor` from additional microscopic
+    source/lift data beyond the current reduced shell surface
+  - not from another rewrite of the retained shell toolbox alone
 
 ### Attack 3: only after metric closure, revisit horizon / echo claims
 
