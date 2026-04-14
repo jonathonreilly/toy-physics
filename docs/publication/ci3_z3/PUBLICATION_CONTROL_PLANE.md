@@ -67,6 +67,8 @@ Canonical files:
 | [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md) | evidence contract for retained/manuscript-facing claims |
 | [QUANTITATIVE_SUMMARY_TABLE.md](./QUANTITATIVE_SUMMARY_TABLE.md) | reviewer-facing prediction/observation table |
 | [RESULTS_INDEX.md](./RESULTS_INDEX.md) | manuscript section to note/runner map |
+| [REPRODUCIBILITY_FREEZE_2026-04-14.md](./REPRODUCIBILITY_FREEZE_2026-04-14.md) | current pinned release slice |
+| [STALE_AUTHORITY_AUDIT_2026-04-14.md](./STALE_AUTHORITY_AUDIT_2026-04-14.md) | quarantine list for stale authority |
 | [NATURE_PACKAGE.md](./NATURE_PACKAGE.md) | letter package rule set |
 | [ARXIV_PACKAGE.md](./ARXIV_PACKAGE.md) | long-form package rule set |
 | [SUBMISSION_CHECKLIST.md](./SUBMISSION_CHECKLIST.md) | final pre-submission operational checklist |
@@ -88,7 +90,20 @@ this order:
    [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md)
 6. only then update manuscript prose
 
-## 4. Reviewer-safety rules
+## 4. Hard-gate policy for new science
+
+No new science result should enter the package out of order.
+
+- No manuscript claim unless it appears in
+  [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md).
+- No retained claim unless it also appears in
+  [CLAIMS_TABLE.md](./CLAIMS_TABLE.md).
+- No retained manuscript-facing claim unless it also appears in
+  [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md).
+- No draft-only promotion. Update the matrix and ledger before updating the
+  drafts.
+
+## 5. Reviewer-safety rules
 
 - If a result is not in the matrix, it is not publication-captured.
 - If it is in the matrix but not in the claims table, it is not on the
@@ -97,7 +112,7 @@ this order:
 - If a result is in the manuscript, it must also appear in the derivation /
   validation map.
 
-## 5. Current package shape
+## 6. Current package shape
 
 As of this date:
 

@@ -68,6 +68,9 @@ Also still open:
    - [NATURE_DRAFT.md](./NATURE_DRAFT.md)
    - [ARXIV_DRAFT.md](./ARXIV_DRAFT.md)
 
+If you need to know what is historically present but no longer safe as
+authority, use [STALE_AUTHORITY_AUDIT_2026-04-14.md](./STALE_AUTHORITY_AUDIT_2026-04-14.md).
+
 ## Package rule
 
 - If a result is in the repo but not in the matrix, it is not publication-captured yet.

@@ -15,6 +15,9 @@ submission without re-litigating claim status at the last minute.
   [FULL_CLAIM_LEDGER.md](./FULL_CLAIM_LEDGER.md)
 - every bounded lane is labeled `bounded` in both the manuscript and GitHub
 - no stale review packet or pitch memo is linked as science authority
+- every stale-authority family is either quarantined in
+  [STALE_AUTHORITY_AUDIT_2026-04-14.md](./STALE_AUTHORITY_AUDIT_2026-04-14.md)
+  or documented in [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md)
 
 ## 2. Nature package
 
@@ -59,6 +62,7 @@ submission without re-litigating claim status at the last minute.
 - freeze one commit hash for the public package
 - freeze [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md) with the same commit hash
 - freeze [QUANTITATIVE_SUMMARY_TABLE.md](./QUANTITATIVE_SUMMARY_TABLE.md) with the same commit hash
+- freeze [REPRODUCIBILITY_FREEZE_2026-04-14.md](./REPRODUCIBILITY_FREEZE_2026-04-14.md) or its successor with the same commit hash
 - record exact runner versions and expected pass summaries
 - regenerate manuscript figures from pinned data
 - proofread title, abstract, and conclusion against the claims table

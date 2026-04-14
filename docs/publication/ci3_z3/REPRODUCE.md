@@ -46,3 +46,15 @@ For GitHub or submission support:
   `outputs/figures/`
 - keep a one-line status ledger: `retained`, `bounded`, or `open`
 - before release, check [SUBMISSION_CHECKLIST.md](./SUBMISSION_CHECKLIST.md)
+
+## Current selective freeze
+
+The current pinned release slice is recorded in:
+
+- [REPRODUCIBILITY_FREEZE_2026-04-14.md](./REPRODUCIBILITY_FREEZE_2026-04-14.md)
+
+This freeze includes:
+
+- one retained quantitative log
+- one bounded quantitative log
+- runner-backed figure-input logs for the current main figure candidates

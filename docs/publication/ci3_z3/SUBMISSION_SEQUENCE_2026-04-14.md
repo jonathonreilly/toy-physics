@@ -61,6 +61,7 @@ This file answers one question:
 1. rewrite or quarantine old closure-language notes
 2. do not allow branch-local scorecards to outrank the matrix
 3. keep stale review packets out of the manuscript path
+4. maintain [STALE_AUTHORITY_AUDIT_2026-04-14.md](./STALE_AUTHORITY_AUDIT_2026-04-14.md)
 
 ## Phase 6. Reproducibility freeze
 
@@ -68,6 +69,8 @@ This file answers one question:
 2. archive figure-prep artifacts
 3. pin one public commit hash
 4. record exact runner pass summaries
+5. maintain a release-freeze note like
+   [REPRODUCIBILITY_FREEZE_2026-04-14.md](./REPRODUCIBILITY_FREEZE_2026-04-14.md)
 
 ## Phase 7. Fold in late scientific closures cleanly
 

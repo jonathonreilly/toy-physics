@@ -32,6 +32,8 @@ That path makes four things explicit:
 - [Claims table](./CLAIMS_TABLE.md)
 - [Publication matrix](./PUBLICATION_MATRIX.md)
 - [Quantitative summary table](./QUANTITATIVE_SUMMARY_TABLE.md)
+- [Reproducibility freeze](./REPRODUCIBILITY_FREEZE_2026-04-14.md)
+- [Stale-authority audit](./STALE_AUTHORITY_AUDIT_2026-04-14.md)
 - [Frozen-out registry](./FROZEN_OUT_REGISTRY.md)
 - [Remote branch audit](./REMOTE_BRANCH_AUDIT_2026-04-14.md)
 - [Derivation / validation map](./DERIVATION_VALIDATION_MAP.md)
