@@ -26,14 +26,14 @@ Companion captions live in [FIGURE_CAPTIONS.md](./FIGURE_CAPTIONS.md).
 
 - purpose: show selector, weak axis, residual swap, and `3 ⊕ 1` split
 - source note: [GRAPH_FIRST_SU3_INTEGRATION_NOTE.md](../../GRAPH_FIRST_SU3_INTEGRATION_NOTE.md)
-- source runner: [frontier_graph_first_su3_integration.py](/private/tmp/physics-publication-prep/scripts/frontier_graph_first_su3_integration.py)
+- source runner: [frontier_graph_first_su3_integration.py](../../../scripts/frontier_graph_first_su3_integration.py)
 - status: data available, publication figure not yet drawn
 
 ### Figure 3. Anomaly-forced `3+1`
 
 - purpose: show the closure chain from left-handed anomaly to single-clock `3+1`
 - source note: [ANOMALY_FORCES_TIME_THEOREM.md](../../ANOMALY_FORCES_TIME_THEOREM.md)
-- source runner: [frontier_anomaly_forces_time.py](/private/tmp/physics-publication-prep/scripts/frontier_anomaly_forces_time.py)
+- source runner: [frontier_anomaly_forces_time.py](../../../scripts/frontier_anomaly_forces_time.py)
 - status: summary figure needed
 
 ### Figure 4. Three-generation matter structure
@@ -41,9 +41,9 @@ Companion captions live in [FIGURE_CAPTIONS.md](./FIGURE_CAPTIONS.md).
 - purpose: display exact orbit structure `8 = 1 + 1 + 3 + 3` and the physical-lattice interpretation
 - source note: [GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md](../../GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md)
 - source runners:
-  - [frontier_generation_fermi_point.py](/private/tmp/physics-publication-prep/scripts/frontier_generation_fermi_point.py)
-  - [frontier_generation_rooting_undefined.py](/private/tmp/physics-publication-prep/scripts/frontier_generation_rooting_undefined.py)
-  - [frontier_generation_axiom_boundary.py](/private/tmp/physics-publication-prep/scripts/frontier_generation_axiom_boundary.py)
+  - [frontier_generation_fermi_point.py](../../../scripts/frontier_generation_fermi_point.py)
+  - [frontier_generation_rooting_undefined.py](../../../scripts/frontier_generation_rooting_undefined.py)
+  - [frontier_generation_axiom_boundary.py](../../../scripts/frontier_generation_axiom_boundary.py)
 - status: concept figure needed; do not use old overclaiming hierarchy plots
 
 ### Extended Data candidate. Weak-field gravity corollaries plus exact `I_3 = 0` and CPT
@@ -55,9 +55,9 @@ Companion captions live in [FIGURE_CAPTIONS.md](./FIGURE_CAPTIONS.md).
   - [I3_ZERO_EXACT_THEOREM_NOTE.md](../../I3_ZERO_EXACT_THEOREM_NOTE.md)
   - [CPT_EXACT_NOTE.md](../../CPT_EXACT_NOTE.md)
 - source runners:
-  - [frontier_broad_gravity.py](/private/tmp/physics-publication-prep/scripts/frontier_broad_gravity.py)
-  - [frontier_born_rule_derived.py](/private/tmp/physics-publication-prep/scripts/frontier_born_rule_derived.py)
-  - [frontier_cpt_exact.py](/private/tmp/physics-publication-prep/scripts/frontier_cpt_exact.py)
+  - [frontier_broad_gravity.py](../../../scripts/frontier_broad_gravity.py)
+  - [frontier_born_rule_derived.py](../../../scripts/frontier_born_rule_derived.py)
+  - [frontier_cpt_exact.py](../../../scripts/frontier_cpt_exact.py)
 - status: optional depending on venue length
 
 ### Extended Data candidate. Retained `S^3` compactification / topology closure
@@ -68,9 +68,9 @@ Companion captions live in [FIGURE_CAPTIONS.md](./FIGURE_CAPTIONS.md).
   - [S3_GENERAL_R_DERIVATION_NOTE.md](../../S3_GENERAL_R_DERIVATION_NOTE.md)
   - [S3_CAP_UNIQUENESS_NOTE.md](../../S3_CAP_UNIQUENESS_NOTE.md)
 - source runners:
-  - [frontier_s3_boundary_link_theorem.py](/private/tmp/physics-publication-prep/scripts/frontier_s3_boundary_link_theorem.py)
-  - [frontier_s3_cap_uniqueness.py](/private/tmp/physics-publication-prep/scripts/frontier_s3_cap_uniqueness.py)
-  - [frontier_s3_general_r.py](/private/tmp/physics-publication-prep/scripts/frontier_s3_general_r.py)
+  - [frontier_s3_boundary_link_theorem.py](../../../scripts/frontier_s3_boundary_link_theorem.py)
+  - [frontier_s3_cap_uniqueness.py](../../../scripts/frontier_s3_cap_uniqueness.py)
+  - [frontier_s3_general_r.py](../../../scripts/frontier_s3_general_r.py)
 - status: optional depending on venue length
 
 ## arXiv-only companion figures
@@ -79,19 +79,22 @@ Companion captions live in [FIGURE_CAPTIONS.md](./FIGURE_CAPTIONS.md).
 
 - purpose: show what is exact, derived, and bounded in the DM relic chain
 - source notes:
-  - `review-active` bounded DM notes
+  - [DM_RELIC_PAPER_NOTE.md](../../DM_RELIC_PAPER_NOTE.md)
+  - [OMEGA_LAMBDA_DERIVATION_NOTE.md](../../OMEGA_LAMBDA_DERIVATION_NOTE.md)
 - status: wait until DM language stabilizes
 
 ### Figure A2. Bounded renormalized `y_t` lane
 
 - purpose: show exact UV theorem versus bounded low-energy bridge
 - source notes:
-  - `review-active` bounded `y_t` notes
+  - [YT_ZERO_IMPORT_CLOSURE_NOTE.md](../../YT_ZERO_IMPORT_CLOSURE_NOTE.md)
+  - [YT_GAUGE_CROSSOVER_THEOREM.md](../../YT_GAUGE_CROSSOVER_THEOREM.md)
 - status: wait until `y_t` language stabilizes
 
 ### Figure A3. Bounded CKM lane
 
 - purpose: show route-pruning and the remaining Higgs `Z_3` obstruction
 - source notes:
-  - `review-active` bounded CKM notes
+  - [CKM_MASS_BASIS_NNI_NOTE.md](../../CKM_MASS_BASIS_NNI_NOTE.md)
+  - [CABIBBO_JARLSKOG_PREDICTION_2026-04-12.md](../../CABIBBO_JARLSKOG_PREDICTION_2026-04-12.md)
 - status: hold until CKM work stops moving

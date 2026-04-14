@@ -32,9 +32,9 @@ The current flagship package is not “everything in the repo.” It is:
 ## What is quantitatively impressive but still bounded
 
 - DM ratio `R = 5.48` vs `5.47`
-- `\alpha_s(M_Z) = 0.1182` on the current zero-import chain
+- `\alpha_s(M_Z) = 0.1181` on the current zero-import chain
 - `m_t = 171.0 GeV` on the best import-allowed route
-- `m_t = 165.4 GeV` on the current zero-import route
+- `m_t = 169.4 GeV` on the current zero-import 2-loop route
 - CKM magnitude package with strong `|V_us|`, `|V_cb|`, `|V_ub|` agreement
 - Cabibbo and partial Jarlskog matches
 - cosmology companions such as `\Omega_\Lambda`, `n_s`, `w = -1`

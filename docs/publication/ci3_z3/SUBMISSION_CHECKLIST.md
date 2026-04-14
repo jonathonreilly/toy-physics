@@ -38,10 +38,10 @@ submission without re-litigating claim status at the last minute.
 
 ## 4. GitHub surface
 
-- front door is [README.md](/private/tmp/physics-publication-prep/README.md)
-- publication navigation starts at [README.md](/private/tmp/physics-publication-prep/docs/publication/ci3_z3/README.md)
+- front door is [README.md](../../../README.md)
+- publication navigation starts at [README.md](./README.md)
 - package architecture is defined by
-  [PUBLICATION_CONTROL_PLANE.md](/private/tmp/physics-publication-prep/docs/publication/ci3_z3/PUBLICATION_CONTROL_PLANE.md)
+  [PUBLICATION_CONTROL_PLANE.md](./PUBLICATION_CONTROL_PLANE.md)
 - every linked runner executes from the repo root
 - raw logs for retained runners are archived under `logs/retained/`
 - figure-prep artifacts are archived under `outputs/figures/`

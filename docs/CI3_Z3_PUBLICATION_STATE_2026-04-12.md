@@ -115,8 +115,8 @@ current publication surface and must stay visible through the matrix and
 ledger:
 
 - DM ratio `R = 5.48` vs `5.47`
-- zero-import `\alpha_s(M_Z) = 0.1182`
-- zero-import `m_t = 165.4 GeV`
+- zero-import `\alpha_s(M_Z) = 0.1181`
+- zero-import `m_t = 169.4 GeV` on the current 2-loop bounded route
 - best import-allowed `m_t = 171.0 GeV`
 - CKM magnitude package with strong `|V_us|`, `|V_cb|`, `|V_ub|`
 - Cabibbo and partial Jarlskog companions
@@ -171,7 +171,8 @@ Recent Claude work and direct Codex review materially narrowed the attack
 surface. The audit bar now remains:
 
 - DM relic mapping: still bounded even after Stosszahlansatz / Friedmann tightening
-- renormalized `y_t`: still bounded even after coefficient / matching notes
+- renormalized `y_t`: still bounded even after the coupling-map theorem and
+  the 2-loop zero-import chain
 - CKM: still bounded even after NNI / coefficient / `c_23` work
 
 ## Honest bounded lanes

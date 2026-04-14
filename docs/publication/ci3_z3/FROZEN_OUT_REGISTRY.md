@@ -48,7 +48,7 @@ results remain bounded.
 **Captured work:**
 
 - import-allowed `m_t \approx 171 GeV`
-- zero-import chain with `\alpha_s(M_Z) = 0.1182`, `m_t = 165.4 GeV`
+- zero-import 2-loop chain with `\alpha_s(M_Z) = 0.1181`, `m_t = 169.4 GeV`
 - hierarchy-linked gauge and vertex matching work
 
 **Primary sources:**
@@ -58,10 +58,10 @@ results remain bounded.
 
 **Needed to unfreeze:**
 
-- derive the operator-to-coupling map without leaning on imported LM
-  methodology
-- remove remaining benchmark-only plaquette use if strict zero-import wording
-  is desired
+- convert the strengthened coupling-map theorem and 2-loop chain into one
+  consistent theorem-grade authority surface
+- close the remaining low-energy crossover / matching uncertainty that keeps
+  the latest zero-import note at `BOUNDED`
 
 ### `F03` CKM / flavor quantitative portfolio
 

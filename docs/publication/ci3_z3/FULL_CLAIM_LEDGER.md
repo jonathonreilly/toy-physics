@@ -48,7 +48,7 @@ These rows correspond to Section A of
 |---|---|---|---|
 | `Cl(3)` on `Z^3` is the working physical theory | promoted | framework sentence and ontological surface for the manuscript | [CI3_Z3_PUBLICATION_STATE_2026-04-12.md](../../CI3_Z3_PUBLICATION_STATE_2026-04-12.md) |
 | anomaly-forced `3+1` | promoted | single-clock codimension-1 theorem survives direct audit | [ANOMALY_FORCES_TIME_THEOREM.md](../../ANOMALY_FORCES_TIME_THEOREM.md) |
-| retained `S^3` compactification / topology closure | promoted | cone-cap family now clears the accepted topology bar and is no longer a live gate | `claude/youthful-neumann: S3_GENERAL_R_DERIVATION_NOTE.md`, `S3_CAP_UNIQUENESS_NOTE.md` |
+| retained `S^3` compactification / topology closure | promoted | cone-cap family now clears the accepted topology bar and is no longer a live gate | [S3_GENERAL_R_DERIVATION_NOTE.md](../../S3_GENERAL_R_DERIVATION_NOTE.md), [S3_CAP_UNIQUENESS_NOTE.md](../../S3_CAP_UNIQUENESS_NOTE.md) |
 
 ### Gravity
 
@@ -89,35 +89,35 @@ external reviewer will ask about them whether or not they are retained.
 |---|---|---|---|---|
 | Dark matter ratio `R` | bounded | structurally strong, but still tied to bounded relic/transport bridge | [DM_RELIC_PAPER_NOTE.md](../../DM_RELIC_PAPER_NOTE.md) | matrix row `Dark matter ratio \`R\``, `F01` |
 | `\Omega_\Lambda` conditional chain | bounded/conditional | depends on observed `\eta`, flatness, and bounded DM chain | [OMEGA_LAMBDA_DERIVATION_NOTE.md](../../OMEGA_LAMBDA_DERIVATION_NOTE.md) | matrix row `\Omega_\Lambda conditional chain`, `F01`, `F04` |
-| Spectral tilt `n_s` | bounded/conditional | cosmology bridge remains conditional | `claude/youthful-neumann: PRIMORDIAL_SPECTRUM_NOTE.md` | matrix row `Spectral tilt \`n_s\``, `F04` |
-| Dark energy EOS `w` | bounded/conditional | interesting but topology/cosmology dependent | `claude/youthful-neumann: DARK_ENERGY_EOS_NOTE.md` | matrix row `Dark energy EOS \`w\``, `F04` |
-| Cosmological constant `\Lambda` | bounded/conditional | depends on retained topology plus additional cosmology identification | `claude/youthful-neumann: COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md` | matrix row `Cosmological constant \`\Lambda\``, `F04` |
+| Spectral tilt `n_s` | bounded/conditional | cosmology bridge remains conditional | [PRIMORDIAL_SPECTRUM_NOTE.md](../../PRIMORDIAL_SPECTRUM_NOTE.md) | matrix row `Spectral tilt \`n_s\``, `F04` |
+| Dark energy EOS `w` | bounded/conditional | interesting but topology/cosmology dependent | [DARK_ENERGY_EOS_NOTE.md](../../DARK_ENERGY_EOS_NOTE.md) | matrix row `Dark energy EOS \`w\``, `F04` |
+| Cosmological constant `\Lambda` | bounded/conditional | depends on retained topology plus additional cosmology identification | [COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md](../../COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md) | matrix row `Cosmological constant \`\Lambda\``, `F04` |
 
 ### `y_t` / `\alpha_s` portfolio
 
 | Quantity / lane | Current decision | Why not promoted | Primary authority | Matrix / freeze reference |
 |---|---|---|---|---|
-| `\alpha_s(M_Z)` zero-import route | bounded | numerically strong, but the operator-to-coupling methodology bridge is still not fully internalized | `claude/youthful-neumann: YT_ZERO_IMPORT_CLOSURE_NOTE.md` | matrix row `\alpha_s(M_Z) zero-import route`, `F02` |
-| top mass `m_t` zero-import route | bounded | same zero-import chain remains bounded despite strong value | `claude/youthful-neumann: YT_ZERO_IMPORT_CLOSURE_NOTE.md` | matrix row `top mass \`m_t\` zero-import route`, `F02` |
-| top mass `m_t` import-allowed route | bounded | closer numerically, but still depends on imported matching coefficients | `claude/youthful-neumann: YT_GAUGE_CROSSOVER_THEOREM.md` | matrix row `top mass \`m_t\` import-allowed route`, `F02` |
+| `\alpha_s(M_Z)` zero-import route | bounded | numerically strong, and the new coupling-map theorem materially narrows the old LM objection, but the latest authority still keeps the full low-energy chain bounded | [YT_ZERO_IMPORT_CLOSURE_NOTE.md](../../YT_ZERO_IMPORT_CLOSURE_NOTE.md) | matrix row `\alpha_s(M_Z) zero-import route`, `F02` |
+| top mass `m_t` zero-import route | bounded | the new 2-loop zero-import chain improves the lane to `169.4 GeV` (`-1.9%`), but the same authority still classifies the gate as bounded rather than closed | [YT_ZERO_IMPORT_CLOSURE_NOTE.md](../../YT_ZERO_IMPORT_CLOSURE_NOTE.md) | matrix row `top mass \`m_t\` zero-import route`, `F02` |
+| top mass `m_t` import-allowed route | bounded | closer numerically, but still depends on imported matching coefficients | [YT_GAUGE_CROSSOVER_THEOREM.md](../../YT_GAUGE_CROSSOVER_THEOREM.md) | matrix row `top mass \`m_t\` import-allowed route`, `F02` |
 
 ### Flavor / CKM portfolio
 
 | Quantity / lane | Current decision | Why not promoted | Primary authority | Matrix / freeze reference |
 |---|---|---|---|---|
-| CKM magnitude package `|V_us|`, `|V_cb|`, `|V_ub|` | bounded | improved magnitude story is real, but coefficient and phase closure still fail the flagship bar | `claude/youthful-neumann: CKM_MASS_BASIS_NNI_NOTE.md` | matrix row `CKM magnitudes`, `F03` |
-| Cabibbo angle `0.2236` vs `0.2243` | bounded / fitted | close numerically, but still sits on a fitted flavor surface | `claude/youthful-neumann: CABIBBO_JARLSKOG_PREDICTION_2026-04-12.md` | matrix row `Cabibbo angle`, `F03` |
-| Jarlskog invariant | bounded / partial | partial CP closure only; not safe as promoted CKM theorem | `claude/youthful-neumann: CABIBBO_JARLSKOG_PREDICTION_2026-04-12.md` | matrix row `Jarlskog invariant`, `F03` |
+| CKM magnitude package `|V_us|`, `|V_cb|`, `|V_ub|` | bounded | improved magnitude story is real, but coefficient and phase closure still fail the flagship bar | [CKM_MASS_BASIS_NNI_NOTE.md](../../CKM_MASS_BASIS_NNI_NOTE.md) | matrix row `CKM magnitudes`, `F03` |
+| Cabibbo angle `0.2236` vs `0.2243` | bounded / fitted | close numerically, but still sits on a fitted flavor surface | [CABIBBO_JARLSKOG_PREDICTION_2026-04-12.md](../../CABIBBO_JARLSKOG_PREDICTION_2026-04-12.md) | matrix row `Cabibbo angle`, `F03` |
+| Jarlskog invariant | bounded / partial | partial CP closure only; not safe as promoted CKM theorem | [CABIBBO_JARLSKOG_PREDICTION_2026-04-12.md](../../CABIBBO_JARLSKOG_PREDICTION_2026-04-12.md) | matrix row `Jarlskog invariant`, `F03` |
 
 ### Higgs and sharp companions
 
 | Quantity / lane | Current decision | Why not promoted | Primary authority | Matrix / freeze reference |
 |---|---|---|---|---|
-| Higgs mass `m_H` | open/bounded | `v` is now retained, but the Higgs mass package is still not closed | `claude/youthful-neumann: HIGGS_MASS_DERIVED_NOTE.md` | matrix row `Higgs mass \`m_H\``, `F05` |
-| Bekenstein-Hawking entropy | bounded companion | useful companion signal, not part of flagship theorem spine | `claude/youthful-neumann: BH_ENTROPY_DERIVED_NOTE.md` | matrix row `Bekenstein-Hawking entropy`, `F07` |
-| Proton lifetime | bounded sharp prediction | later companion or appendix material, not flagship core | `claude/youthful-neumann: PROTON_LIFETIME_DERIVED_NOTE.md` | matrix row `Proton lifetime`, `F07` |
-| Lorentz-violation fingerprint | bounded sharp prediction | interesting companion phenomenology, not retained backbone | `claude/youthful-neumann: LORENTZ_VIOLATION_DERIVED_NOTE.md` | matrix row `Lorentz-violation fingerprint`, `F07` |
-| Magnetic monopole mass | bounded sharp prediction | imported phenomenology layer still present | `claude/youthful-neumann: MONOPOLE_DERIVED_NOTE.md` | matrix row `Magnetic monopole mass`, `F07` |
+| Higgs mass `m_H` | open/bounded | `v` is now retained, but the Higgs mass package is still not closed | [HIGGS_MASS_DERIVED_NOTE.md](../../HIGGS_MASS_DERIVED_NOTE.md) | matrix row `Higgs mass \`m_H\``, `F05` |
+| Bekenstein-Hawking entropy | bounded companion | useful companion signal, not part of flagship theorem spine | [BH_ENTROPY_DERIVED_NOTE.md](../../BH_ENTROPY_DERIVED_NOTE.md) | matrix row `Bekenstein-Hawking entropy`, `F07` |
+| Proton lifetime | bounded sharp prediction | later companion or appendix material, not flagship core | [PROTON_LIFETIME_DERIVED_NOTE.md](../../PROTON_LIFETIME_DERIVED_NOTE.md) | matrix row `Proton lifetime`, `F07` |
+| Lorentz-violation fingerprint | bounded sharp prediction | interesting companion phenomenology, not retained backbone | [LORENTZ_VIOLATION_DERIVED_NOTE.md](../../LORENTZ_VIOLATION_DERIVED_NOTE.md) | matrix row `Lorentz-violation fingerprint`, `F07` |
+| Magnetic monopole mass | bounded sharp prediction | imported phenomenology layer still present | [MONOPOLE_DERIVED_NOTE.md](../../MONOPOLE_DERIVED_NOTE.md) | matrix row `Magnetic monopole mass`, `F07` |
 
 ## 4. Live flagship gates aligned to the matrix
 
@@ -126,9 +126,9 @@ These rows correspond to Section C of
 
 | Gate | Current best read | Why still open | Main authority |
 |---|---|---|---|
-| DM relic mapping | structural ratio is strong, full relic bridge still bounded | graph-to-relic transport and normalization closure still missing | `codex/review-active`, `claude/youthful-neumann` DM notes |
-| Renormalized `y_t` matching | multiple honest bounded readings | the last methodology / matching bridge still does not clear the theorem bar | `claude/youthful-neumann` `YT_*` notes |
-| CKM / quantitative flavor | some bounded matches are strong | coefficient and phase closure still absent | `claude/youthful-neumann` and `codex/review-active` `CKM_*` notes |
+| DM relic mapping | structural ratio is strong, full relic bridge still bounded | graph-to-relic transport and normalization closure still missing | [DM_RELIC_PAPER_NOTE.md](../../DM_RELIC_PAPER_NOTE.md), [OMEGA_LAMBDA_DERIVATION_NOTE.md](../../OMEGA_LAMBDA_DERIVATION_NOTE.md) |
+| Renormalized `y_t` matching | zero-import 2-loop route plus import-allowed crossover route | the lane is materially narrower, but the current authority still keeps the final crossover/matching bridge bounded and does not self-promote closure | [YT_ZERO_IMPORT_CLOSURE_NOTE.md](../../YT_ZERO_IMPORT_CLOSURE_NOTE.md), [YT_GAUGE_CROSSOVER_THEOREM.md](../../YT_GAUGE_CROSSOVER_THEOREM.md) |
+| CKM / quantitative flavor | some bounded matches are strong | coefficient and phase closure still absent | [CKM_MASS_BASIS_NNI_NOTE.md](../../CKM_MASS_BASIS_NNI_NOTE.md), [CABIBBO_JARLSKOG_PREDICTION_2026-04-12.md](../../CABIBBO_JARLSKOG_PREDICTION_2026-04-12.md) |
 
 ## 5. Frozen-out families aligned to the matrix
 

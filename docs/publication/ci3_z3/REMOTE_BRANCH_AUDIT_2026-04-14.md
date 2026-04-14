@@ -135,7 +135,8 @@ Key harvest from this branch:
 **Use:** primary source for:
 
 - current DM relic and ratio notes
-- current `y_t` / `\alpha_s` bounded notes
+- current `y_t` / `\alpha_s` bounded notes, including the coupling-map theorem
+  and the 2-loop zero-import `m_t = 169.4 GeV` chain
 - current CKM bounded notes
 - current `S^3` theorem notes used by the publication package
 - many companion prediction notes

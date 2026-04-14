@@ -34,9 +34,9 @@ Retained core:
 Observation-facing bounded portfolio:
 
 - DM ratio `R = 5.48` vs `5.47`
-- zero-import `alpha_s(M_Z) = 0.1182`
+- zero-import `alpha_s(M_Z) = 0.1181`
 - best import-allowed `m_t = 171.0 GeV`
-- zero-import `m_t = 165.4 GeV`
+- zero-import `m_t = 169.4 GeV` on the current 2-loop bounded route
 - CKM magnitude package
 - cosmology companions such as `Omega_Lambda`, `n_s`, `w = -1`
 - Higgs and sharp companion predictions
