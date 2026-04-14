@@ -24,6 +24,10 @@ compact-object phenomenology, and astrophysical scaling extrapolations are
 EXPLORATORY and are not part of the bounded claim surface. They require a
 genuine 3D strong-field calculation to be retained.
 
+The current main-branch companion authority for the echo question is now
+[GW_ECHO_NULL_RESULT_NOTE.md](GW_ECHO_NULL_RESULT_NOTE.md). The timing sections
+below remain route history rather than current authority.
+
 ---
 
 ## Probe 1: Analytical Scaling (lattice-size independent)
@@ -98,66 +102,18 @@ hard floor dominates.
 
 ---
 
-## Probe 5: Gravitational Wave Echo Time
+## Historical compact-object route note
 
-Echo time formula:
-  t_echo = 2 * integral(R_min to R_lr) dr / [c(1 - R_S/r)]
+Earlier versions of this note carried a positive timing-family echo estimate.
+That route work has now been moved out of the main authority path:
 
-where R_lr = 3GM/c^2 (light ring), R_min = N^{1/3} l_Planck (frozen star surface).
+- current accepted companion result:
+  [GW_ECHO_NULL_RESULT_NOTE.md](GW_ECHO_NULL_RESULT_NOTE.md)
+- historical timing-family route note:
+  [work_history/GW_ECHO_TIMING_ROUTE_NOTE.md](work_history/GW_ECHO_TIMING_ROUTE_NOTE.md)
 
-The integral is dominated by the logarithmic divergence near R_S:
-  t_echo ~ (4GM/c^3) * ln(2GM / c^2 l_Planck)
-
-| M / M_sun | t_echo (ms) | f_echo (Hz) | ln(R_S/l_Pl) |
-|-----------|-------------|-------------|---------------|
-| 1.0 | 0.88 | 1133 | 44.3 |
-| 5.0 | 4.52 | 221 | 45.4 |
-| 10.0 | 9.13 | 110 | 45.8 |
-| 30.0 | 27.8 | 35.9 | 46.6 |
-| 60.0 | 56.2 | 17.8 | 47.0 |
-| 100.0 | 94.3 | 10.6 | 47.4 |
-
-All echo frequencies are in the LIGO sensitive band (10-1000 Hz).
-
----
-
-## Probe 6: GW150914 Prediction
-
-**GW150914 remnant:** M = 62 M_sun, spin a/M = 0.67
-
-| Parameter | Non-spinning | Kerr (a=0.67) |
-|-----------|-------------|---------------|
-| R_min (m) | 6.78e-16 | 6.78e-16 |
-| R_min / R_S | 3.70e-21 | 3.70e-21 |
-| epsilon | 3.70e-21 | — |
-| ln(1/epsilon) | 47.05 | — |
-| **t_echo** | **58.09 ms** | **67.65 ms** |
-| **f_echo** | **17.2 Hz** | **14.8 Hz** |
-
-### Comparison with Abedi et al. (2017)
-
-Abedi et al. claimed echoes at ~2.9 sigma with t_echo ~ 100 ms.
-
-| Quantity | Our prediction | Abedi et al. |
-|----------|---------------|-------------|
-| t_echo | 67.65 ms | ~100 ms |
-| Ratio | 0.68 | 1.00 |
-| Surface epsilon | 3.7e-21 | 5.1e-31 |
-| Surface offset | ~ R_S | 5.8e9 l_Planck |
-
-The discrepancy: we place the surface at the Planck scale (epsilon ~ 10^-21),
-while Abedi's 100 ms requires the surface at ~6 billion Planck lengths above
-R_S (epsilon ~ 10^-31). Our prediction is more conservative.
-
-**If echoes are detected at ~68 ms rather than ~100 ms, it would support
-the Planck-scale frozen star over other ECO models.**
-
-### Detectability
-
-- Echo frequency 14.8 Hz is in the LIGO sensitive band
-- Testable with existing O1/O2/O3 data (no new observations needed)
-- Einstein Telescope will have better low-frequency sensitivity
-- LISA (mHz band) would see echoes from supermassive mergers
+The bounded claim in this note is the lattice self-gravity stabilization
+surface, not compact-object echo phenomenology.
 
 ---
 
@@ -167,11 +123,9 @@ the Planck-scale frozen star over other ECO models.**
 - Analytical scaling argument (lattice-size independent)
 - 1D convergence verified to N=1000
 - 3D stabilization verified to L=14 (2744 sites)
-- Echo time formula is standard GR (proper-time integral)
 
 ### What is estimated
 - Mapping 1D/3D lattice results to astrophysical masses uses analytical scaling
-- Kerr correction assumes standard Boyer-Lindquist tortoise coordinate
 - The frozen star EOS at nuclear density is not modeled (we jump from lattice
   Fermi gas to Planck-scale hard floor)
 
@@ -179,7 +133,6 @@ the Planck-scale frozen star over other ECO models.**
 - 3D lattices with L > 14 to fully converge the 3D width
 - Include angular momentum in the self-consistent solve
 - Model the transition from nuclear EOS to lattice EOS
-- Compute the full ringdown waveform (not just echo time)
 
 ---
 

@@ -125,7 +125,7 @@ external reviewer will ask about them whether or not they are retained.
 | Proton lifetime | bounded sharp prediction | later companion or appendix material, not flagship core | [PROTON_LIFETIME_DERIVED_NOTE.md](../../PROTON_LIFETIME_DERIVED_NOTE.md) | matrix row `Proton lifetime`, `F07` |
 | Lorentz-violation fingerprint | bounded sharp prediction | interesting companion phenomenology, not retained backbone | [LORENTZ_VIOLATION_DERIVED_NOTE.md](../../LORENTZ_VIOLATION_DERIVED_NOTE.md) | matrix row `Lorentz-violation fingerprint`, `F07` |
 | Magnetic monopole mass | bounded sharp prediction | imported phenomenology layer still present | [MONOPOLE_DERIVED_NOTE.md](../../MONOPOLE_DERIVED_NOTE.md) | matrix row `Magnetic monopole mass`, `F07` |
-| GW echo timing | bounded / off-scope companion | sharp later-paper compact-object prediction, but not safe for flagship gravity claims | [GW_ECHO_DERIVED_NOTE.md](../../GW_ECHO_DERIVED_NOTE.md) | matrix row `GW echo timing`, `F07` |
+| GW echo null result | bounded / off-scope companion | later work resolved the compact-object echo question to observational silence rather than a positive timing prediction; this remains companion-only material | [GW_ECHO_NULL_RESULT_NOTE.md](../../GW_ECHO_NULL_RESULT_NOTE.md) | matrix row `GW echo null result`, `F07` |
 
 ## 4. Live flagship gates aligned to the matrix
 

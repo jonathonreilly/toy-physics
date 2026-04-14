@@ -15,6 +15,8 @@ If you are new to the repo, read these first:
 4. [Quantitative summary table](./QUANTITATIVE_SUMMARY_TABLE.md)
 5. [Claims table](./CLAIMS_TABLE.md)
 6. [Frozen-out registry](./FROZEN_OUT_REGISTRY.md)
+7. [Derivation atlas](./DERIVATION_ATLAS.md)
+8. [Running package issues](./RUNNING_PACKAGE_ISSUES_2026-04-14.md)
 
 That path makes four things explicit:
 
@@ -37,7 +39,9 @@ That path makes four things explicit:
 - [Frozen-out registry](./FROZEN_OUT_REGISTRY.md)
 - [Remote branch audit](./REMOTE_BRANCH_AUDIT_2026-04-14.md)
 - [Derivation / validation map](./DERIVATION_VALIDATION_MAP.md)
+- [Derivation atlas](./DERIVATION_ATLAS.md)
 - [Full claim ledger](./FULL_CLAIM_LEDGER.md)
+- [Running package issues](./RUNNING_PACKAGE_ISSUES_2026-04-14.md)
 - [Results index](./RESULTS_INDEX.md)
 - [Reproduce guide](./REPRODUCE.md)
 - [Submission checklist](./SUBMISSION_CHECKLIST.md)

@@ -38,6 +38,8 @@ Status labels used on this branch:
    - the master inventory of promoted, bounded, open, and frozen-out results
 4. [Quantitative Summary Table](docs/publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md)
    - the compact prediction-versus-observation table
+5. [Derivation Atlas](docs/publication/ci3_z3/DERIVATION_ATLAS.md)
+   - reusable theorem/subderivation toolbox for continuing the open lanes without redoing closed work
 
 If you need the package internals after that, use
 [docs/publication/ci3_z3/README.md](docs/publication/ci3_z3/README.md).

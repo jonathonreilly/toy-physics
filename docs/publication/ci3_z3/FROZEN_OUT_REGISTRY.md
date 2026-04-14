@@ -149,7 +149,7 @@ are still bounded.
 - broader GR-signature bundle
 - Born-gravity cross-constraint
 - BMV / experimental prediction cards
-- frozen-star / echo program
+- frozen-star / null-echo program
 - full nonlinear GR / tensor-completion gap
 
 **Primary sources:**
@@ -157,7 +157,7 @@ are still bounded.
 - gravity no-go and tensor-gap notes on `main`
 - [ACCESSIBLE_PREDICTION_NOTE.md](../../ACCESSIBLE_PREDICTION_NOTE.md)
 - [FROZEN_STARS_RIGOROUS_NOTE.md](../../FROZEN_STARS_RIGOROUS_NOTE.md)
-- [GW_ECHO_DERIVED_NOTE.md](../../GW_ECHO_DERIVED_NOTE.md)
+- [GW_ECHO_NULL_RESULT_NOTE.md](../../GW_ECHO_NULL_RESULT_NOTE.md)
 
 **Needed to unfreeze:**
 
@@ -177,7 +177,7 @@ spine.
 - BH entropy / RT ratio
 - gravitational decoherence
 - magnetic monopole mass
-- GW echo timing
+- GW echo null result
 
 **Primary sources:**
 
@@ -186,7 +186,7 @@ spine.
 - [BH_ENTROPY_DERIVED_NOTE.md](../../BH_ENTROPY_DERIVED_NOTE.md)
 - [GRAV_DECOHERENCE_DERIVED_NOTE.md](../../GRAV_DECOHERENCE_DERIVED_NOTE.md)
 - [MONOPOLE_DERIVED_NOTE.md](../../MONOPOLE_DERIVED_NOTE.md)
-- [GW_ECHO_DERIVED_NOTE.md](../../GW_ECHO_DERIVED_NOTE.md)
+- [GW_ECHO_NULL_RESULT_NOTE.md](../../GW_ECHO_NULL_RESULT_NOTE.md)
 
 **Needed to unfreeze:**
 

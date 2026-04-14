@@ -2,6 +2,10 @@
 
 This file is the evidence contract for the publication package.
 
+It is claim-level, not tool-level. For reusable subderivations and theorem
+tools that can be applied to new lanes, also use
+[DERIVATION_ATLAS.md](./DERIVATION_ATLAS.md).
+
 It covers the retained and manuscript-facing claims only. For the full
 branch-audited capture of bounded and frozen-out workstreams, use
 [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md),

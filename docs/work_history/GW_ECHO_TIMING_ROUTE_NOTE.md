@@ -1,8 +1,15 @@
+# GW150914 Echo Timing Route Note
+
+**Status:** historical route note only. The accepted current framework
+companion result on `main` is
+[../GW_ECHO_NULL_RESULT_NOTE.md](../GW_ECHO_NULL_RESULT_NOTE.md): no detectable
+echoes.
+
 # GW150914 Echo Prediction: Derived from Lattice Axioms
 
 **Date:** 2026-04-12
 **Script:** `scripts/frontier_gw_echo_derived.py`
-**Status:** DERIVED — zero-parameter prediction, 20/20 checks pass
+**Status:** historical route note — superseded on the current authority surface
 **Depends on:** `scripts/frontier_frozen_stars_rigorous.py`, `docs/FROZEN_STARS_RIGOROUS_NOTE.md`
 
 ---

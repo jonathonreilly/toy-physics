@@ -79,7 +79,7 @@ not promoted.
 | Proton lifetime | proton decay companion | `\tau_p ~ 4 x 10^47 yr` | lower bounds only | bounded sharp prediction | imported EFT decay-rate layer | later companion or arXiv appendix | [PROTON_LIFETIME_DERIVED_NOTE.md](../../PROTON_LIFETIME_DERIVED_NOTE.md) | `F07` |
 | Lorentz-violation fingerprint | Lorentz companion | cubic `(E/E_{Pl})^2` fingerprint | experimental bounds only | bounded sharp prediction | companion phenomenology | later companion or arXiv appendix | [LORENTZ_VIOLATION_DERIVED_NOTE.md](../../LORENTZ_VIOLATION_DERIVED_NOTE.md) | `F07` |
 | Magnetic monopole mass | monopole companion | `1.43 M_{Pl}` | lower bounds only | bounded sharp prediction | companion phenomenology | later companion or arXiv appendix | [MONOPOLE_DERIVED_NOTE.md](../../MONOPOLE_DERIVED_NOTE.md) | `F07` |
-| GW echo timing | frozen-star / echo companion | `t_echo = 67.66 ms`, `f_echo = 14.8 Hz` for GW150914 | no confirmed echo detection; earlier claim family near `~100 ms` remains unconfirmed | bounded / off-scope companion | strong-field compact-object identification layer | later companion paper only | [GW_ECHO_DERIVED_NOTE.md](../../GW_ECHO_DERIVED_NOTE.md) | `F07` |
+| GW echo null result | frozen-star / echo companion | no detectable echoes; the evanescent barrier drives coherent return effectively to zero | full-catalog stack remains null (`0.41 sigma` frozen-star, `1.29 sigma` Abedi-style) | bounded / off-scope companion | strong-field compact-object identification layer | later companion paper only | [GW_ECHO_NULL_RESULT_NOTE.md](../../GW_ECHO_NULL_RESULT_NOTE.md) | `F07` |
 
 ## C. Live flagship gates
 
@@ -99,7 +99,7 @@ not promoted.
 | cosmology companion portfolio | conditional / bounded | `F04` |
 | Higgs and mass-spectrum portfolio | not closed | `F05` |
 | gravity companions beyond retained weak-field + restricted strong-field package | bounded / later-paper material | `F06` |
-| sharp companion predictions (proton, Lorentz, BH, decoherence, monopole, echoes) | companion-only material | `F07` |
+| sharp companion predictions (proton, Lorentz, BH, decoherence, monopole, null-echo phenomenology) | companion-only material | `F07` |
 | branch-local inventories and stale strategy docs | inventory only, not authority | `F08` |
 
 ## Matrix rule

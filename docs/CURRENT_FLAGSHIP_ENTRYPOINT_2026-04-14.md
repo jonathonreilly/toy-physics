@@ -87,6 +87,10 @@ The authoritative publication package on this branch lives under:
   - explanatory claim ledger behind the matrix and drafts
 - [publication/ci3_z3/FROZEN_OUT_REGISTRY.md](publication/ci3_z3/FROZEN_OUT_REGISTRY.md)
   - publication-relevant work intentionally kept out of the current flagship surface
+- [publication/ci3_z3/DERIVATION_ATLAS.md](publication/ci3_z3/DERIVATION_ATLAS.md)
+  - reusable theorem/subderivation toolbox for extending the framework without redoing earlier work
+- [publication/ci3_z3/RUNNING_PACKAGE_ISSUES_2026-04-14.md](publication/ci3_z3/RUNNING_PACKAGE_ISSUES_2026-04-14.md)
+  - live consistency register for package mismatches and cleanup follow-up
 
 If you are reviewing the paper, that package is the authority surface.
 

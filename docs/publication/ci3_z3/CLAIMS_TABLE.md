@@ -66,7 +66,7 @@ cleanly or closed.
 | BH entropy / RT ratio | bounded companion | arXiv companion only | [BH_ENTROPY_DERIVED_NOTE.md](../../BH_ENTROPY_DERIVED_NOTE.md) |
 | gravitational decoherence | bounded companion | arXiv companion only | [GRAV_DECOHERENCE_DERIVED_NOTE.md](../../GRAV_DECOHERENCE_DERIVED_NOTE.md) |
 | magnetic monopole mass | bounded companion | arXiv companion only | [MONOPOLE_DERIVED_NOTE.md](../../MONOPOLE_DERIVED_NOTE.md) |
-| GW echo timing | bounded / off-scope companion | later companion paper only | [GW_ECHO_DERIVED_NOTE.md](../../GW_ECHO_DERIVED_NOTE.md) |
+| GW echo null result / observational silence of frozen stars | bounded / off-scope companion | later companion paper only | [GW_ECHO_NULL_RESULT_NOTE.md](../../GW_ECHO_NULL_RESULT_NOTE.md) |
 
 The branch-audited quantitative portfolio behind these rows is catalogued in
 [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md). Every intentionally excluded

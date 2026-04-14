@@ -232,7 +232,7 @@ scientifically relevant but not part of the flagship backbone:
 - BH entropy / RT ratio
 - gravitational decoherence
 - magnetic monopole mass
-- GW echo timing
+- GW echo null result / observational silence of frozen stars
 
 See [FULL_CLAIM_LEDGER.md](publication/ci3_z3/FULL_CLAIM_LEDGER.md).
 
