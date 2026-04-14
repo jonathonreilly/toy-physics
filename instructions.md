@@ -258,6 +258,8 @@ Ignore gravity unless Codex explicitly reprioritizes it.
 - `docs/YT_FLAGSHIP_CLOSURE_NOTE.md`
 - `docs/YT_ZERO_IMPORT_CLOSURE_NOTE.md`
 - `docs/YT_BOUNDARY_RESOLUTION_NOTE.md`
+- `docs/YT_BOUNDARY_THEOREM.md`
+- `docs/YT_EFT_BRIDGE_THEOREM.md`
 - `docs/YT_GAUGE_CROSSOVER_THEOREM.md`
 - `docs/YT_MATCHING_NATIVE_NOTE.md`
 - `docs/YT_VERTEX_POWER_DERIVATION.md`
@@ -273,6 +275,8 @@ Ignore gravity unless Codex explicitly reprioritizes it.
 - `scripts/frontier_yt_2loop_chain.py`
 - `scripts/frontier_yt_cl3_preservation.py`
 - `scripts/frontier_yt_boundary_resolution.py`
+- `scripts/frontier_yt_boundary_consistency.py`
+- `scripts/frontier_yt_eft_bridge.py`
 - `scripts/frontier_yt_unified_boundary.py`
 - `scripts/frontier_yt_gauge_crossover_theorem.py`
 - `scripts/frontier_yt_matching_coefficient.py`
@@ -301,20 +305,27 @@ Ignore gravity unless Codex explicitly reprioritizes it.
    - on the current Codex-side paper surface, those are fair game
    - the remaining blocker is now the framework-to-EFT bridge at `v`
      inside the zero-import chain
-4. the latest zero-import route is stronger, but it is still not closure
-   - the newest flagship note still labels the lane **BOUNDED**
-   - its zero-import result is:
+4. the branch now has a sharper contradiction, not a clean closure
+   - the current zero-import authority note still says **BOUNDED** and still
+     presents:
      - `alpha_s(M_Z) = 0.1181`
      - `m_t = 169.4 GeV` (2-loop y_t, `frontier_yt_2loop_chain.py`)
-     - about `-1.9%` on `m_t` (supersedes 1-loop: 165.4 GeV, -4.2%)
-   - do **not** promote `y_t` closed from that note
-   - do **not** let older “CLOSED” `y_t` notes outrank that newer bounded
-     authority
-     - `YT_FLAGSHIP_CLOSURE_NOTE.md` and `YT_BOUNDARY_RESOLUTION_NOTE.md`
-       contain stronger closure language than the current honest state
-     - until they are rewritten onto one consistent surface, treat
-       `YT_ZERO_IMPORT_CLOSURE_NOTE.md` plus the reviewed scripts as the safer
-       authority
+     - about `-1.9%` on `m_t`
+   - the new EFT-bridge files claim to resolve the last blocker, but the
+     actual direct `v`-matching script gives:
+     - `y_t(v) = g_s(v)/sqrt(6) = 0.465`
+     - `m_t(tree) = 81.0 GeV`
+     - `m_t(pole) ≈ 87.0 GeV`
+   - at the same time, that same script still reports the older backward-Ward
+     route as `169.4 GeV`
+   - so the live problem is now:
+     - one note family says the `169.4 GeV` route is the promoted zero-import
+       prediction
+     - one script says the direct framework-native `v` bridge gives `81–87 GeV`
+       and that this direct bridge is the correct one
+   - do **not** promote `y_t` closed while those two surfaces coexist
+   - do **not** let any “CLOSED” or “DERIVED final blocker resolved” note
+     outrank that contradiction
 5. the plaquette objection is no longer the main blocker
    - `frontier_zero_import_chain.py` now computes the plaquette on the same
      surface via multi-`L` SU(3) Monte Carlo and uses the largest-`L` value as
@@ -345,13 +356,20 @@ Ignore gravity unless Codex explicitly reprioritizes it.
      endpoint is `v`, not `M_Pl`
    - do **not** keep re-fighting the stale `g_3(M_Pl)_SM = 0.487` versus
      `g_lattice = 1.067` objection as if it were still the live blocker
-10. the live blocker is now the last framework-to-EFT bridge theorem at `v`
-   - the current zero-import 2-loop chain is still honestly `BOUNDED`
-   - what is still missing is one of:
-     - a framework-native derivation of the one-family / taste-projected
-       `y_t(v)` directly from the lattice side
-     - or a framework-native step-scaling / RG bridge from `v` to `M_Z`
-       so the present SM running is no longer the last methodology import
+10. the live blocker is now more specific than before:
+   - resolve the **direct-`v` bridge vs backward-`M_Pl` bridge** contradiction
+   - only two honest outcomes are acceptable:
+     - **Outcome A:** the direct `v` bridge is correct
+       - then the framework’s zero-import `y_t` prediction is presently
+         `81–87 GeV`, not `169.4 GeV`
+       - in that case the lane is not closable on the current zero-import
+         surface, and the authority notes must say that plainly
+     - **Outcome B:** the backward `M_Pl` Ward-transfer route is the right
+       predictive bridge
+       - then prove why using the SM RGE above `v` is a valid
+         framework-native surrogate for the lattice RG / taste staircase
+       - and make that proof consistent with `YT_BOUNDARY_THEOREM.md`
+   - until one of those is established, the lane stays bounded
 11. do **not** spend time squeezing the remaining `1.9%` residual until 10 is fixed
    - the residual is now a downstream quantitative issue
 12. keep the authority surface single and current
@@ -363,20 +381,22 @@ Ignore gravity unless Codex explicitly reprioritizes it.
 **What counts as success**
 
 - best-case success:
-  - derive the last framework-native bridge theorem at `v`:
-    - either direct one-family / taste-projected `y_t(v)` from the lattice
-    - or a framework-native step-scaling bridge from `v` to `M_Z`
-  - rerun the chain on that one clean surface
-  - close the lane only if the authority note and the numerics agree on the
-    same import class and same physical endpoint
+  - produce one final bridge theorem and one final runner that agree on the
+    same physical surface
+  - either:
+    - direct `v` matching is proven correct and its numerical consequence is
+      accepted honestly
+    - or the backward `M_Pl` Ward-transfer route is proven to be the correct
+      framework-native bridge despite the EFT domain issue
+  - only then close the lane, and only if the authority note, runner, and
+    quoted `m_t` all agree on the same import class and same physical endpoint
 - second-best success:
-  - isolate the lane to the one remaining honest theorem gap:
-    the framework-to-EFT bridge at `v`
-  - and state that plainly in one authority note
+  - collapse the lane to one honest bounded authority note that states exactly
+    which bridge is favored and why the alternative fails
 - minimum acceptable success:
   - keep the flagship note honest and bounded
-  - and with the remaining blocker written as the framework-to-EFT bridge,
-    not as the old broad crossover story
+  - and with the remaining blocker written as the unresolved direct-vs-backward
+    bridge contradiction, not as the old broad crossover story
 
 **What does not count**
 
@@ -397,12 +417,18 @@ Ignore gravity unless Codex explicitly reprioritizes it.
 4. treat the physical endpoint as `v` unless you produce a real theorem that
    overrules `YT_BOUNDARY_THEOREM.md`
 5. attack the real remaining theorem:
-   - derive the one-family / taste-projected `y_t(v)` from the lattice side
-   - or derive a framework-native step-scaling bridge from `v` to `M_Z`
+   - decide whether the direct `v` bridge or the backward `M_Pl` Ward-transfer
+     bridge is the physical one
+   - if direct `v` wins, make the note/runner surface admit the `81–87 GeV`
+     consequence honestly
+   - if backward `M_Pl` wins, derive why that transfer is framework-native and
+     not a use of the wrong theory in the wrong regime
    - do **not** just recount links or rerun the same old boundary numerics
 6. then tighten the authority surface:
    - rewrite or retract older closure-language notes so they do not outrank the
-     newest bounded authority
+     newest corrected authority
+   - ensure `YT_EFT_BRIDGE_THEOREM.md`, `YT_ZERO_IMPORT_CLOSURE_NOTE.md`, and
+     the primary runner all say the same thing
 7. only after 4-6 are clean, rerun the zero-import chain and see whether
    the remaining `m_t` residual persists on the now-single boundary surface
 8. if the residual still sits at a few percent, then and only then attack

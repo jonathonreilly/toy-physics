@@ -212,6 +212,7 @@ Current safe state:
   - the current safest authority surface is:
     - `YT_ZERO_IMPORT_CLOSURE_NOTE.md`
     - `frontier_yt_2loop_chain.py`
+    - `YT_BOUNDARY_THEOREM.md`
     - `YT_VERTEX_POWER_DERIVATION.md`
     - `YT_GAUGE_CROSSOVER_THEOREM.md`
   - do **not** let older closure-language notes outrank that newer bounded
@@ -243,28 +244,36 @@ Current safe state:
     - `YT_BOUNDARY_THEOREM.md` establishes that the physical endpoint is `v`
     - the old `g_3(M_Pl)_SM = 0.487` versus `g_lattice = 1.067` mismatch is
       no longer the live blocker
-  - the actual remaining gap is now the last framework-to-EFT bridge at `v`
-    - the zero-import 2-loop chain is still strong and bounded
-    - but the branch still has not fully internalized the bridge from the
-      lattice theory at `v` to the one-family low-energy EFT prediction
-    - the closure bar is now:
-      - derive the one-family / taste-projected `y_t(v)` directly from the
-        lattice side
-      - or derive a framework-native step-scaling / RG bridge from `v` to
-        `M_Z` so the current SM running is no longer the last methodology
-        import
+  - the newest remote sharpens the problem into one contradiction
+    - `YT_EFT_BRIDGE_THEOREM.md` says the final EFT bridge blocker is derived
+    - but `frontier_yt_eft_bridge.py` makes the direct `v`-matching route
+      explicit and gets:
+      - `y_t(v) = g_s(v)/sqrt(6) = 0.465`
+      - `m_t(tree) = 81.0 GeV`
+      - `m_t(pole) ≈ 87.0 GeV`
+    - that same script still reproduces the older backward-Ward route:
+      - `m_t = 169.4 GeV`
+    - and it explicitly says the direct `v` bridge is the correct one
+  - therefore the lane is not “one small methodology import away” anymore
+    - the live problem is deciding which bridge is physically correct:
+      - direct `v` matching
+      - or backward `M_Pl` Ward transfer
+    - if direct `v` matching is correct, the zero-import `y_t` prediction is
+      currently far from observation
+    - if backward `M_Pl` transfer is correct, the branch still owes a theorem
+      explaining why that SM RGE continuation above `v` is a valid
+      framework-native surrogate for lattice RG / taste-staircase evolution
   - the older gauge-crossover theorem remains bounded support only
     - its exactness language still outruns the current proof surface
 
 Paper-safe read:
 
-> The UV theorem surface is strong, and the zero-import route with 2-loop y_t
-> RGE gives m_t = 169.4 GeV (-1.9%). The old LM/plaquette objections and the
-> old boundary-mismatch objection are now materially narrowed. The lane is
-> still bounded because the branch has not yet fully internalized the
-> framework-to-EFT bridge at `v`: it still needs either a direct derivation of
-> the one-family / taste-projected `y_t(v)` or a framework-native step-scaling
-> bridge from `v` to `M_Z`.
+> The UV theorem surface is strong, and the old LM/plaquette and boundary-
+> mismatch objections are materially narrowed. The lane is still bounded
+> because the current branch contains two incompatible bridge surfaces:
+> a direct `v`-matching route giving `m_t ≈ 81–87 GeV`, and a backward-Ward
+> route giving `m_t = 169.4 GeV`. The remaining job is to prove which bridge is
+> the physical one and collapse the authority surface to one consistent story.
 
 Best attack:
 
@@ -275,16 +284,22 @@ Best attack:
    regresses; that is no longer the main blocker
 4. take `v` as the physical endpoint unless a stronger theorem overturns
    `YT_BOUNDARY_THEOREM.md`
-5. derive the last framework-to-EFT bridge:
-   - direct one-family / taste-projected `y_t(v)` from the lattice side
-   - or a framework-native step-scaling bridge from `v` to `M_Z`
+5. resolve the direct-`v` vs backward-`M_Pl` bridge contradiction
+   - if direct `v` matching is the correct bridge, then the note/runner
+     surface must admit the `81–87 GeV` consequence honestly
+   - if backward `M_Pl` transfer is the correct bridge, derive why the SM RGE
+     continuation above `v` is a valid framework-native proxy for the lattice
+     RG / taste staircase
 6. then rewrite or retract the stale closure-language notes so they do not
-   outrank the newest bounded authority
-7. only after 4-6 are clean, rerun the zero-import chain
-8. if a few-percent `m_t` residual remains after that, then treat improved
-   Yukawa running / thresholds as the next quantitative sub-problem
-9. if 4-8 fail, freeze the lane honestly as “zero-import up to the
-   framework-to-EFT bridge theorem”
+   outrank the corrected authority
+   - `YT_EFT_BRIDGE_THEOREM.md`
+   - `YT_ZERO_IMPORT_CLOSURE_NOTE.md`
+   - the primary runner must all agree
+7. only after 4-6 are clean, rerun the final zero-import chain
+8. only after one bridge is proven should the remaining `m_t` residual be
+   treated as a quantitative thresholds / running issue
+9. if 4-8 fail, freeze the lane honestly as “bounded pending resolution of the
+   direct-vs-backward bridge theorem”
 
 ### 3. CKM / quantitative flavor closure
 
