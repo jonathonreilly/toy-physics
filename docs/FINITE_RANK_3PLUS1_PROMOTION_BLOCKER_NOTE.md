@@ -54,6 +54,16 @@ rank two on the active pair quotient, but the support span can only align with
 one of the two active singular directions. The orthogonal active direction is
 not canonically sourced by the current finite-rank support data.
 
+The singular-value audit makes this precise:
+
+- support singular spectrum: one dominant mode, the rest numerical nulls
+- active pair quotient singular spectrum: two genuine modes
+- two valid `3+1` completions differ by a large frame rotation
+
+In the current exact run, the frame delta between two valid completions is
+`1.149e+00`. That is not a numerical accident; it is the exact signature of a
+noncanonical polarization choice on the current support stack.
+
 The full `3+1` metric, by contrast, needs a tensor polarization split into at
 least:
 

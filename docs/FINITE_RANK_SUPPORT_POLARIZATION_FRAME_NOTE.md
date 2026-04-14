@@ -31,6 +31,20 @@ The exact finite-rank result is:
 So the current finite-rank support data do **not** determine a canonical
 support-side polarization frame.
 
+The singular-value form of the obstruction is equally sharp:
+
+- support singular spectrum: one dominant mode, the rest numerically null
+- active singular spectrum: two genuine modes on the quotient
+- any `3+1` completion built from the present support data therefore depends
+  on choosing a noncanonical complement in the active quotient
+
+In the current exact run, the support singular values are
+`[5.228722e-01, 2.490647e-16, 1.579670e-16, 9.311859e-17]`, while the active
+quotient singular values are
+`[1.344739e+00, 1.134967e+00, 2.612207e-16, 1.917211e-17]`.
+That is the concrete reason the support-side polarization frame cannot be
+canonical on this class.
+
 ## Why this blocks `Pi_3+1`
 
 The full `3+1` lift needs at least three distinct tensor channels:
@@ -70,6 +84,10 @@ The smallest extra primitive needed beyond the current support stack is:
 > a tensor-valued support-side polarization frame with rank at least three
 > before scalar renormalization, i.e. two additional independent support
 > generators beyond total charge.
+
+Equivalently, the current stack needs at least one additional tensor channel
+that survives renormalization so the second active quotient mode is sourced
+canonically instead of by an arbitrary complement.
 
 That is the minimal ingredient required to source the additional active
 directions canonically.

@@ -101,6 +101,17 @@ is:
 > with exact microscopic boundary action, bounded scalar metric reduction,
 > and the exact scalar active-quotient amplitude law.
 
+The obstruction to promoting that scalar widening into a full `3+1` tensor
+law is now explicit in the support-frame audit:
+
+- the support side remains rank one after renormalization
+- the active quotient remains rank two
+- the two active quotient modes cannot be sourced canonically from the
+  current support span
+
+So the widening route is exact up to the active quotient, but it still lacks
+the support-side polarization frame needed for a canonical `Pi_3+1` lift.
+
 That is the next theorem to promote if we want to widen the gravity class
 without overclaiming universal GR.
 
