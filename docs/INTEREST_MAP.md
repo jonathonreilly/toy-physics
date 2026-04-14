@@ -1,6 +1,6 @@
 # Interest Map
 
-**Date:** 2026-04-13  
+**Date:** 2026-04-14  
 **Status:** internal program-calibration note -- revised after hierarchy closure
 and restricted strong-field gravity promotion on the current `CI(3)` / `Z^3`
 paper surface
@@ -24,7 +24,8 @@ upgrades:
 - the electroweak hierarchy / `v` lane is now treated as closed at the current
   paper bar
 - gravity is no longer weak-field only; it now has a retained restricted
-  strong-field theorem on the current bridge surface
+  strong-field theorem on the current bridge surface, plus a sharp no-go for
+  any scalar-trace-only tensor completion on that same class
 
 ## Important updates since the last score change
 
@@ -53,6 +54,8 @@ upgrades:
   - the bridge package now also widens beyond compact finite support to
     sufficiently fast noncompact tails, while generic long-range algebraic
     tails remain sharply obstructed by low-moment growth
+  - the scalar bridge is now sharply ruled out as a complete tensor
+    completion principle; the remaining gap is genuinely tensor-valued
 - the paper framework is cleaner:
   - external inputs are now reduced to cosmological state data
     `T_CMB` and `H_0`
@@ -67,7 +70,8 @@ upgrades:
 - the highest remaining gravity upside is now genuinely about generality:
   - beyond the current static conformal bridge
   - beyond finite-support closure on the current box
-  - full nonlinear GR in full generality
+  - full nonlinear GR in full generality, now understood as a tensor-valued
+    matching/completion theorem rather than a scalar repackaging problem
 
 ## Delta Vs Last Update
 
@@ -125,7 +129,8 @@ Retained-claim status changes since the previous map:
 - `Still open`: DM relic mapping, renormalized `y_t`, CKM / flavor.
 - `Still open`: a genuinely universal nonlocal / tensor bridge principle for
   arbitrary algebraic long-range tails.
-- `Still open`: full nonlinear GR in full generality.
+- `Still open`: full nonlinear GR in full generality, now localized to the
+  missing tensor-valued completion theorem.
 
 Score deltas that did not move:
 
@@ -149,7 +154,7 @@ Score deltas that did not move:
 | Publishable as a foundational-physics breakthrough claim | `9.4/10` | now very high. The flagship paper can honestly present a retained backbone with gravity, gauge structure, matter structure, `3+1`, and a derived electroweak scale. The remaining holes are real but narrow |
 | Likelihood of publication in very top field journals today (`PRL` / `PRX` / `Nature Physics`) | `8.5/10` | plausible if the paper stays disciplined and keeps the remaining three live gates clearly bounded. The package is now much less dependent on speculative forward claims |
 | Ready for top-tier mainstream physics claims | `8.6/10` | substantially stronger than before because the project no longer needs to hide behind “interesting framework, missing scale.” The remaining weaknesses are now concrete theorem gaps, not diffuse incompleteness |
-| Strength against harshest critique | `7.8/10` | materially improved. The harsh critic still has real targets, but the easy dismissals are gone. The attack surface is now full-GR generality plus three precise quantitative matter-sector bridges, and it is no longer limited to compact-support or star-specific gravity |
+| Strength against harshest critique | `7.8/10` | materially improved. The harsh critic still has real targets, but the easy dismissals are gone. The attack surface is now full-GR tensor completion plus three precise quantitative matter-sector bridges, and it is no longer limited to compact-support or star-specific gravity |
 | Field-shifting theory program | `10.0/10` | still maxed: even if no additional gate closed this week, the repo already justifies a broad multi-lane research program |
 | Landmark foundational breakthrough | `9.3/10` | clearly within range if the remaining three live gates close cleanly and the restricted gravity theorem broadens further |
 | Nobel-scale breakthrough | `4.6/10` | still low relative to the true bar, but no longer remote in the same way. The package now has enough retained backbone that a path to that territory is at least intelligible |
