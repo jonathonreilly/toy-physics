@@ -22,7 +22,7 @@ It does **not** yet give:
 - an exact tensor-valued uniqueness theorem forcing that identification
 
 So the current theorem step is not a closure claim. It is the exact minimal
-missing identification for the direct universal route.
+missing localization primitive for the direct universal route.
 
 ## What is exact already
 
@@ -72,10 +72,12 @@ that could upgrade the scalar generator into a full `3+1` metric law.
 
 The remaining missing primitive can now be stated more sharply:
 
-1. a curvature-localization map `Pi_curv` that identifies the unique symmetric
-   `3+1` Hessian kernel with the Einstein/Regge tensor law on the full metric
-   space
-2. if that fails, one additional primitive that makes that localization exact
+1. a covariant `3+1` polarization-frame / projector bundle with a
+   distinguished connection that canonically splits lapse, shift, and spatial
+   trace/shear before localization
+2. the induced curvature-localization map `Pi_curv` that identifies the
+   unique symmetric `3+1` Hessian kernel with the Einstein/Regge tensor law
+   on the full metric space
 
 Without one of those, the observable principle remains scalar-only at the
 closure level and the direct universal route cannot close full GR.
@@ -102,9 +104,9 @@ localization primitive.
 
 The smallest honest missing object is now:
 
-> a curvature-localization map that carries the unique symmetric `3+1`
-> Hessian kernel to the Einstein/Regge tensor law on the `PL S^3 x R`
-> background
+> a covariant `3+1` polarization-frame / projector bundle with a
+> distinguished connection, together with the induced curvature-localization
+> map `Pi_curv` on `PL S^3 x R`
 
 This is the thing that must be derived or axiomatized next.
 

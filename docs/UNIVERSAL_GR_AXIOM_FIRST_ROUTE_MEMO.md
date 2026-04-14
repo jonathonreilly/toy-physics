@@ -121,6 +121,7 @@ The route has:
 - [`frontier_universal_gr_tensor_quotient_uniqueness.py`](../scripts/frontier_universal_gr_tensor_quotient_uniqueness.py)
 - [`UNIVERSAL_GR_TENSOR_ACTION_BLOCKER_NOTE.md`](./UNIVERSAL_GR_TENSOR_ACTION_BLOCKER_NOTE.md)
 - [`frontier_universal_gr_tensor_action_blocker.py`](../scripts/frontier_universal_gr_tensor_action_blocker.py)
+- [`UNIVERSAL_GR_POLARIZATION_FRAME_BUNDLE_ATTEMPT.md`](./UNIVERSAL_GR_POLARIZATION_FRAME_BUNDLE_ATTEMPT.md)
 - [`UNIVERSAL_GR_POLARIZATION_FRAME_BUNDLE_BLOCKER_NOTE.md`](./UNIVERSAL_GR_POLARIZATION_FRAME_BUNDLE_BLOCKER_NOTE.md)
 - [`frontier_universal_gr_polarization_frame_bundle.py`](../scripts/frontier_universal_gr_polarization_frame_bundle.py)
 
@@ -157,10 +158,17 @@ The latest blocker audit sharpens this further:
   polarization frame is changed
 - so the current stack does not supply a canonical `Pi_curv`
 
+The latest bundle attempt makes the obstruction sharper:
+
+- the quotient kernel is unique
+- the localized channel coefficients change under valid `3+1` frame rotations
+- so the current stack determines an associated family of candidate
+  localizations, not a canonical section or projector bundle
+
 The missing primitive is therefore not just `Pi_curv` itself. It is a
-covariant `3+1` polarization frame, or equivalent projector bundle, that
-canonically splits the symmetric kernel into lapse, shift, and spatial
-trace/shear channels before curvature localization.
+covariant `3+1` polarization-frame / projector bundle, with a distinguished
+connection, that canonically splits the symmetric kernel into lapse, shift,
+and spatial trace/shear channels before curvature localization.
 
 This is the smallest universal-route primitive that is still not in the
 current atlas.

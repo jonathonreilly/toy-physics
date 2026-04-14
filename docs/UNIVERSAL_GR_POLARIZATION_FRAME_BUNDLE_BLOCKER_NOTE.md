@@ -10,7 +10,7 @@ already in hand
 
 ## Verdict
 
-The direct universal route is still blocked.
+The direct universal route is still blocked, and the block is now exact.
 
 The current axiom-first stack gives:
 
@@ -21,14 +21,14 @@ The current axiom-first stack gives:
 
 It does **not** yet give:
 
-- a covariant `3+1` polarization frame bundle that canonically splits the
-  symmetric Hessian kernel into lapse, shift, and spatial trace/shear
-  channels before localization
+- a covariant `3+1` polarization-frame / projector bundle that canonically
+  splits the symmetric Hessian kernel into lapse, shift, and spatial
+  trace/shear channels before localization
 - an exact curvature-localization operator `Pi_curv` derivable from the
   current stack alone
 
-So the remaining gap is no longer a scalar or quotient-uniqueness problem.
-It is the missing covariant frame / projector bundle itself.
+So the remaining gap is no longer a scalar, quotient-uniqueness, or generic
+action problem. It is the missing covariant frame / projector bundle itself.
 
 The current runner checks whether a canonical `Pi_curv` can be reconstructed
 from the present quotient kernel by comparing two valid `3+1` polarization
@@ -93,11 +93,12 @@ dynamics law.
 
 The smallest honest missing object is now:
 
-> a covariant `3+1` polarization frame bundle, or equivalent projector bundle,
-> that canonically splits the unique symmetric Hessian kernel into lapse,
-> shift, and spatial trace/shear channels before localization.
+> a covariant `3+1` polarization-frame / projector bundle, equipped with a
+> distinguished connection, that canonically splits the unique symmetric
+> Hessian kernel into lapse, shift, and spatial trace/shear channels before
+> localization.
 
-Equivalently, the missing primitive is a covariant `3+1`
+Equivalently, the missing primitive is still a covariant `3+1`
 curvature-localization operator `Pi_curv`, but the current stack shows that
 `Pi_curv` is not derivable without that extra frame primitive.
 

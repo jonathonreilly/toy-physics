@@ -28,10 +28,10 @@ So the remaining gap is no longer a scalar or quotient-uniqueness problem.
 It is the missing localization map itself.
 
 The current runner now also checks whether that localization map can be
-reconstructed from the present quotient kernel plus a choice of channel frame.
-It cannot. Two valid `3+1` polarization frames give different localized
-channel coefficients for the same tensor candidate, so the current stack does
-not supply a canonical `Pi_curv`.
+reconstructed from the present quotient kernel plus a choice of channel
+frame. It cannot. Two valid `3+1` polarization frames give different
+localized channel coefficients for the same tensor candidate, so the current
+stack does not supply a canonical `Pi_curv`.
 
 ## What is exact already
 
@@ -90,9 +90,10 @@ dynamics law.
 
 The smallest honest missing object is now:
 
-> a covariant `3+1` polarization frame, or equivalent projector bundle, that
-> canonically splits the unique symmetric Hessian kernel into lapse, shift,
-> and spatial trace/shear channels before localization.
+> a covariant `3+1` polarization-frame / projector bundle, with a
+> distinguished connection, that canonically splits the unique symmetric
+> Hessian kernel into lapse, shift, and spatial trace/shear channels before
+> localization.
 
 Equivalently, the missing primitive is still a covariant `3+1`
 curvature-localization operator `Pi_curv`, but the current stack shows that

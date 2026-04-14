@@ -286,9 +286,9 @@ def main() -> int:
         Check(
             "curvature-localization blocker isolates the missing primitive",
             has(curv, "Pi_curv")
-            and has(curv, "covariant `3+1` polarization frame")
-            and has(curv, "projector bundle"),
-            "the missing object is now named as a frame primitive plus Pi_curv",
+            and has(curv, "covariant `3+1` polarization-frame / projector bundle")
+            and has(curv, "distinguished connection"),
+            "the missing object is now named as a covariant frame bundle plus Pi_curv",
         ),
         Check(
             "localization coefficients depend on frame choice",
