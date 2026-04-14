@@ -253,6 +253,21 @@ New exact/bounded discrete shell-action result extracted after that:
   **not** yet derive the shell action itself from the microscopic lattice
   Hamiltonian or a genuine simplicial Regge action
 
+New broader-support result extracted after that:
+
+- the exact bridge package now widens beyond compact finite support to
+  noncompact source tails with sufficiently fast decay
+- exponentially localized tails are truncation-stable on the current box
+- steep algebraic tails remain compatible only while the low moments stay
+  finite
+- generic long-range power-law tails are obstructed:
+  - `p <= 3` fails already at the monopole level
+  - `3 < p <= 5` fails the finite-shell / quadrupole closure test
+- see `docs/BROADER_SUPPORT_CLASS_GRAVITY_NOTE.md`
+- this means the live blocker is no longer “compact vs noncompact” in the
+  abstract; it is the exact low-moment decay threshold, and beyond that a
+  genuinely nonlocal or tensorially broader bridge principle
+
 New exact/bounded reduced shell-stress lift extracted after that:
 
 - on the outer half of the sewing band `4 < r <= 5`, the reduced outer-shell

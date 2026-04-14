@@ -50,6 +50,9 @@ upgrades:
   - the bridge-side closure is now support-agnostic across generic finite
     support inside the current Dirichlet box, not just the original
     star-supported benchmark geometry
+  - the bridge package now also widens beyond compact finite support to
+    sufficiently fast noncompact tails, while generic long-range algebraic
+    tails remain sharply obstructed by low-moment growth
 - the paper framework is cleaner:
   - external inputs are now reduced to cosmological state data
     `T_CMB` and `H_0`
@@ -83,11 +86,12 @@ Score deltas since the previous map:
   Reason: the package now looks less like a striking structural framework with
   missing scales and more like an actual unification paper with three sharply
   defined remaining quantitative gates.
-- `Strength against harshest critique`: `6.4 -> 7.6`
+- `Strength against harshest critique`: `6.4 -> 7.8`
   Reason: the hostile line can no longer say “weak-field only” or
   “electroweak scale still external.” The attack surface is now concentrated in
   full-GR generality, DM transport/relic closure, renormalized `y_t`, and CKM
-  flavor/phase closure.
+  flavor/phase closure. The gravity side also no longer looks star-specific or
+  compact-support-only; that removes another easy dismissal.
 - `Field-shifting theory program`: `10.0 -> 10.0`
   Reason: unchanged at the ceiling. The program is now broader and more
   coherent, not less.
@@ -113,9 +117,14 @@ Retained-claim status changes since the previous map:
 - `New positive`: the support-class objection is narrower because the bridge
   package now extends beyond the star-supported benchmark to generic finite
   support on the current box.
+- `New positive`: the bridge package now extends beyond compact support to
+  sufficiently fast noncompact tails; generic long-range power-law tails are
+  now sharply obstructed rather than vaguely open.
 - `Bounded, not closed`: the Higgs-mass package remains separate from the
   electroweak-scale closure.
 - `Still open`: DM relic mapping, renormalized `y_t`, CKM / flavor.
+- `Still open`: a genuinely universal nonlocal / tensor bridge principle for
+  arbitrary algebraic long-range tails.
 - `Still open`: full nonlinear GR in full generality.
 
 Score deltas that did not move:
@@ -140,7 +149,7 @@ Score deltas that did not move:
 | Publishable as a foundational-physics breakthrough claim | `9.4/10` | now very high. The flagship paper can honestly present a retained backbone with gravity, gauge structure, matter structure, `3+1`, and a derived electroweak scale. The remaining holes are real but narrow |
 | Likelihood of publication in very top field journals today (`PRL` / `PRX` / `Nature Physics`) | `8.5/10` | plausible if the paper stays disciplined and keeps the remaining three live gates clearly bounded. The package is now much less dependent on speculative forward claims |
 | Ready for top-tier mainstream physics claims | `8.6/10` | substantially stronger than before because the project no longer needs to hide behind “interesting framework, missing scale.” The remaining weaknesses are now concrete theorem gaps, not diffuse incompleteness |
-| Strength against harshest critique | `7.6/10` | materially improved. The harsh critic still has real targets, but the easy dismissals are gone. The attack surface is now full-GR generality plus three precise quantitative matter-sector bridges |
+| Strength against harshest critique | `7.8/10` | materially improved. The harsh critic still has real targets, but the easy dismissals are gone. The attack surface is now full-GR generality plus three precise quantitative matter-sector bridges, and it is no longer limited to compact-support or star-specific gravity |
 | Field-shifting theory program | `10.0/10` | still maxed: even if no additional gate closed this week, the repo already justifies a broad multi-lane research program |
 | Landmark foundational breakthrough | `9.3/10` | clearly within range if the remaining three live gates close cleanly and the restricted gravity theorem broadens further |
 | Nobel-scale breakthrough | `4.6/10` | still low relative to the true bar, but no longer remote in the same way. The package now has enough retained backbone that a path to that territory is at least intelligible |
