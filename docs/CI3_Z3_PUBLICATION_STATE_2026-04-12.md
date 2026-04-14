@@ -44,6 +44,15 @@ The current retained backbone is:
     derived action
   - weak-field gravitational time dilation is retained on the same Poisson /
     Newton surface
+- restricted strong-field gravity closure on the current star-supported class:
+  - exact shell source on the sewing band `3 < r <= 5`
+  - unique same-charge bridge `psi = 1 + phi_ext`, `chi = 1 - phi_ext`
+  - exact local static conformal constraint lift on that bridge
+  - exact microscopic Schur-complement shell boundary action
+  - exact on the local `O_h` shell class and exact bridge-side closure across
+    the broader star-supported finite-rank class
+  - carried as an Extended Data / arXiv theorem, not as a full nonlinear-GR
+    flagship claim
 - exact native `Cl(3)` / `SU(2)` on `Z^3`
 - graph-first weak-axis selector
 - graph-first structural `su(3)` closure
@@ -81,6 +90,13 @@ surface:
   - weak equivalence principle from the derived eikonal action
   - weak-field time dilation from the same action on the retained Poisson
     profile
+- exact restricted strong-field bridge theorem on the current star-supported
+  class:
+  - exact shell source on `3 < r <= 5`
+  - exact same-charge bridge
+  - exact local shell-to-`3+1` static conformal constraint lift
+  - exact microscopic Schur boundary action
+  - exact source-class extension across the star-supported finite-rank sector
 - exact no-third-order-interference / `I_3 = 0` theorem on the Hilbert surface
   Note: this is **not** a standalone derivation of the Born rule from nothing;
   the safe statement is exact pairwise interference on the accepted Hilbert
@@ -120,6 +136,10 @@ section, but they are not yet retained closure:
   - conformal-metric / geodesic / light-bending notes
   - these remain useful, but the broader GR bundle is still not the paper-safe
     closure surface beyond the retained WEP / time-dilation corollaries
+- full nonlinear / fully general strong-field GR:
+  - the new restricted strong-field theorem is retained
+  - what remains bounded is the extension beyond the current static conformal
+    bridge and beyond the current source/support classes
 - direct lattice DM contact enhancement
 - DM coarse-graining / Stosszahlansatz notes
 - renormalized `y_t` running and matching notes

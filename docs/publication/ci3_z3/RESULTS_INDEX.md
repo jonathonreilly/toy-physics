@@ -13,6 +13,7 @@ For the claim-by-claim derivation/validation pairing, use
 | Framework / claim surface | [CI3_Z3_PUBLICATION_STATE_2026-04-12.md](../../CI3_Z3_PUBLICATION_STATE_2026-04-12.md) | n/a |
 | Weak-field gravity (`Poisson` / Newton chain) | [CI3_Z3_PUBLICATION_STATE_2026-04-12.md](../../CI3_Z3_PUBLICATION_STATE_2026-04-12.md) | [frontier_self_consistent_field_equation.py](../../../scripts/frontier_self_consistent_field_equation.py), [frontier_poisson_exhaustive_uniqueness.py](../../../scripts/frontier_poisson_exhaustive_uniqueness.py), [frontier_newton_derived.py](../../../scripts/frontier_newton_derived.py) |
 | Weak-field gravity corollaries (WEP / time dilation) | [BROAD_GRAVITY_DERIVATION_NOTE.md](../../BROAD_GRAVITY_DERIVATION_NOTE.md), [GRAVITY_CLEAN_DERIVATION_NOTE.md](../../GRAVITY_CLEAN_DERIVATION_NOTE.md) | [frontier_broad_gravity.py](../../../scripts/frontier_broad_gravity.py) |
+| Restricted strong-field gravity closure on the star-supported finite-rank class | [RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md](../../RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md), [OH_STATIC_CONSTRAINT_LIFT_NOTE.md](../../OH_STATIC_CONSTRAINT_LIFT_NOTE.md), [OH_SCHUR_BOUNDARY_ACTION_NOTE.md](../../OH_SCHUR_BOUNDARY_ACTION_NOTE.md), [STAR_SUPPORTED_BRIDGE_CLASS_NOTE.md](../../STAR_SUPPORTED_BRIDGE_CLASS_NOTE.md) | [frontier_oh_static_constraint_lift.py](../../../scripts/frontier_oh_static_constraint_lift.py), [frontier_oh_schur_boundary_action.py](../../../scripts/frontier_oh_schur_boundary_action.py), [frontier_star_supported_bridge_class.py](../../../scripts/frontier_star_supported_bridge_class.py) |
 | Native gauge algebra | [BOUNDED_NATIVE_GAUGE_NOTE.md](../../BOUNDED_NATIVE_GAUGE_NOTE.md) | [frontier_non_abelian_gauge.py](../../../scripts/frontier_non_abelian_gauge.py) |
 | Graph-first structural `SU(3)` | [GRAPH_FIRST_SU3_INTEGRATION_NOTE.md](../../GRAPH_FIRST_SU3_INTEGRATION_NOTE.md) | [frontier_graph_first_su3_integration.py](../../../scripts/frontier_graph_first_su3_integration.py) |
 | Left-handed charge matching on selected-axis surface | [GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md](../../GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md) | [frontier_graph_first_su3_integration.py](../../../scripts/frontier_graph_first_su3_integration.py) |
@@ -31,6 +32,9 @@ For the claim-by-claim derivation/validation pairing, use
   - weak-field gravity through the Poisson / Newton chain
   - weak-field WEP and time dilation as compact corollaries on that same
     gravity surface
+  - restricted strong-field gravity closure on the current star-supported
+    finite-rank class as an Extended Data / SI theorem, not the flagship
+    gravity headline
   - exact native `SU(2)`
   - graph-first structural `SU(3)`
   - selected-axis left-handed charge matching as a corollary
@@ -42,6 +46,7 @@ For the claim-by-claim derivation/validation pairing, use
   - exact `I_3 = 0` and CPT as compact supporting theorems
 - SI / arXiv:
   - bounded weak-field GR companions beyond Newton / Poisson / WEP / time-dilation
+  - bounded fully general strong-field / nonlinear GR beyond the restricted shell theorem
   - derivation chains
   - bounded phenomenology
   - three live-gate notes and negative results

@@ -56,6 +56,14 @@ gravitational time dilation. Broader GR-signature results still remain bounded
 and should not be confused with the retained Newton/Poisson/WEP/time-dilation
 core.
 
+A second gravity result is now retained, but only with a strict qualifier:
+on the exact star-supported finite-rank shell class, the framework admits a
+restricted strong-field closure under the native static conformal bridge. The
+exact shell source, same-charge bridge, local static constraints, and
+microscopic Schur boundary action all close on that class. Because this is not
+yet full nonlinear GR in full generality, it belongs in Extended Data / SI
+rather than as the flagship gravity headline.
+
 The next retained result is exact native `SU(2)` on the cubic lattice.
 Clifford bivectors close with the weak algebra directly on the `Cl(3)` surface.
 The second retained gauge result is graph-first structural `SU(3)`. A selector

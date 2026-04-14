@@ -58,6 +58,13 @@ Broader GR-signature notes still mix exact, bounded, and conditional steps.
 Conformal-metric, geodesic, and light-bending results therefore remain in the
 bounded sections rather than in the retained backbone.
 
+Separately, the current review package now supports a retained restricted
+strong-field theorem: on the exact star-supported finite-rank shell class, the
+framework has an exact shell source, a unique same-charge bridge, an exact
+local static-constraint lift, and an exact microscopic Schur boundary action.
+This is not promoted as full nonlinear GR, but it is strong enough to retain
+as an Extended Data / theorem-box result with its source-class qualifier intact.
+
 ### 2.2 Exact native `SU(2)`
 
 The cubic `Cl(3)` bivectors close exactly into the weak algebra. This remains
