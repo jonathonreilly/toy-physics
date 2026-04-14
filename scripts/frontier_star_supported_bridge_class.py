@@ -23,7 +23,7 @@ Bounded consequence:
 from __future__ import annotations
 
 from dataclasses import dataclass
-from importlib.machinery import SourceFileLoader
+from _frontier_loader import load_frontier
 
 import numpy as np
 
@@ -47,18 +47,9 @@ def record(name: str, ok: bool, detail: str, status: str = "EXACT") -> None:
         print(f"    {detail}")
 
 
-finite_rank = SourceFileLoader(
-    "finite_rank_metric",
-    "/private/tmp/physics-review-active/scripts/frontier_finite_rank_gravity_residual.py",
-).load_module()
-static_lift = SourceFileLoader(
-    "oh_static_constraint_lift",
-    "/private/tmp/physics-review-active/scripts/frontier_oh_static_constraint_lift.py",
-).load_module()
-schur = SourceFileLoader(
-    "oh_schur_boundary_action",
-    "/private/tmp/physics-review-active/scripts/frontier_oh_schur_boundary_action.py",
-).load_module()
+finite_rank = load_frontier("finite_rank_metric", "frontier_finite_rank_gravity_residual.py")
+static_lift = load_frontier("oh_static_constraint_lift", "frontier_oh_static_constraint_lift.py")
+schur = load_frontier("oh_schur_boundary_action", "frontier_oh_schur_boundary_action.py")
 
 
 STAR_COORDS = [

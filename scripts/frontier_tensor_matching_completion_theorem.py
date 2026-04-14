@@ -28,7 +28,7 @@ remaining missing principle currently visible on the branch.
 from __future__ import annotations
 
 from dataclasses import dataclass
-from importlib.machinery import SourceFileLoader
+from _frontier_loader import load_frontier
 
 
 @dataclass
@@ -50,18 +50,9 @@ def record(name: str, ok: bool, detail: str, status: str = "EXACT") -> None:
         print(f"    {detail}")
 
 
-tcomp = SourceFileLoader(
-    "tensor_completion",
-    "/private/tmp/physics-review-active/scripts/frontier_tensorial_einstein_regge_completion.py",
-).load_module()
-same_source = SourceFileLoader(
-    "same_source_metric",
-    "/private/tmp/physics-review-active/scripts/frontier_same_source_metric_ansatz_scan.py",
-).load_module()
-coarse = SourceFileLoader(
-    "coarse_grained",
-    "/private/tmp/physics-review-active/scripts/frontier_coarse_grained_exterior_law.py",
-).load_module()
+tcomp = load_frontier("tensor_completion", "frontier_tensorial_einstein_regge_completion.py")
+same_source = load_frontier("same_source_metric", "frontier_same_source_metric_ansatz_scan.py")
+coarse = load_frontier("coarse_grained", "frontier_coarse_grained_exterior_law.py")
 
 
 @dataclass

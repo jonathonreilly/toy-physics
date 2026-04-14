@@ -16,18 +16,14 @@ classes already on the branch.
 from __future__ import annotations
 
 from dataclasses import dataclass
-from importlib.machinery import SourceFileLoader
+from _frontier_loader import load_frontier
 
 import numpy as np
 
 
-ROOT = "/private/tmp/physics-review-active"
 AMPLITUDE = 0.02
 
-tm = SourceFileLoader(
-    "tensor_matching",
-    f"{ROOT}/scripts/frontier_tensor_matching_completion_theorem.py",
-).load_module()
+tm = load_frontier("tensor_matching", "frontier_tensor_matching_completion_theorem.py")
 
 
 @dataclass
