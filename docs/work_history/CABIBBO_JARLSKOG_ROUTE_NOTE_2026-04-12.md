@@ -1,12 +1,21 @@
+# Cabibbo Angle and Jarlskog Route Note
+
+**Status:** historical route note only. The current main-branch authority
+surface is split:
+
+- Cabibbo bounded companion:
+  [../CABIBBO_BOUND_NOTE.md](../CABIBBO_BOUND_NOTE.md)
+- Jarlskog bounded companion:
+  [../JARLSKOG_PHASE_BOUND_NOTE.md](../JARLSKOG_PHASE_BOUND_NOTE.md)
+
 # Cabibbo Angle and Jarlskog Invariant -- Derived vs Fitted
 
 **Date:** 2026-04-12  
 **Status:** Honest reframing after codex review. Separates what is derived from what is input.  
 **Script:** `scripts/frontier_baryogenesis.py` (tests 1-2)
 
-**Current publication disposition:** frozen pending authority refresh. This is
-not the normalized current authority surface for retained or bounded flavor
-claims.
+**Current publication disposition:** historical route note; superseded on the
+main authority path.
 
 ---
 

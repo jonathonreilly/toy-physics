@@ -58,8 +58,12 @@ Current sharpened read:
   - Lorentz-violation fingerprint
   - monopole mass
   - CKM mass-basis NNI bounded route
+- fixed in a later pass:
+  - Cabibbo/Jarlskog combined route note split into:
+    - active bounded Cabibbo authority on `main`
+    - active bounded Jarlskog authority on `main`
+    - historical combined route note in work history
 - still needing separate authority refresh:
-  - Cabibbo angle / Jarlskog combined route note
   - `y_t` bounded authority surfaces once the lane itself settles
 
 ### `I04` Legacy docs tree remains noisy outside the curated package

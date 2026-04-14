@@ -95,6 +95,7 @@ Companion captions live in [FIGURE_CAPTIONS.md](./FIGURE_CAPTIONS.md).
 
 - purpose: show route-pruning and the remaining Higgs `Z_3` obstruction
 - source notes:
+  - [CABIBBO_BOUND_NOTE.md](../../CABIBBO_BOUND_NOTE.md)
   - [CKM_MASS_BASIS_NNI_NOTE.md](../../CKM_MASS_BASIS_NNI_NOTE.md)
-  - [CABIBBO_JARLSKOG_PREDICTION_2026-04-12.md](../../CABIBBO_JARLSKOG_PREDICTION_2026-04-12.md)
+  - [JARLSKOG_PHASE_BOUND_NOTE.md](../../JARLSKOG_PHASE_BOUND_NOTE.md)
 - status: hold until CKM work stops moving

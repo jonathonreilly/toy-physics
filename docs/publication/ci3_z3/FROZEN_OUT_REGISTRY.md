@@ -72,13 +72,16 @@ matches are strong.
 **Captured work:**
 
 - mass-basis NNI `|V_us|`, `|V_cb|`, `|V_ub|` package
-- Cabibbo and partial Jarlskog matches
+- bounded Cabibbo companion on `main`
+- bounded Jarlskog phase companion
+- historical combined Cabibbo/Jarlskog route note
 - multiple CKM route diagnostics, negative results, and sharpenings
 
 **Primary sources:**
 
-- `claude/youthful-neumann`: `CKM_MASS_BASIS_NNI_NOTE.md`,
-  `CABIBBO_JARLSKOG_PREDICTION_2026-04-12.md`
+- `main`: `CKM_MASS_BASIS_NNI_NOTE.md`,
+  `CABIBBO_BOUND_NOTE.md`, `JARLSKOG_PHASE_BOUND_NOTE.md`
+- work history: `CABIBBO_JARLSKOG_ROUTE_NOTE_2026-04-12.md`
 - `codex/review-active`: bounded `CKM_*` notes
 
 **Needed to unfreeze:**

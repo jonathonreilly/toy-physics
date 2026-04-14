@@ -58,7 +58,7 @@ cleanly or closed.
 | full nonlinear / fully general strong-field GR beyond the restricted shell theorem | bounded | arXiv / SI only | [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md) `F06` |
 | direct lattice DM contact enhancement and bounded relic chain | bounded | arXiv / SI only | [DM_RELIC_PAPER_NOTE.md](../../DM_RELIC_PAPER_NOTE.md), [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md) `F01` |
 | renormalized `y_t` bridge | bounded | arXiv / SI only | [YT_ZERO_IMPORT_CLOSURE_NOTE.md](../../YT_ZERO_IMPORT_CLOSURE_NOTE.md), [YT_GAUGE_CROSSOVER_THEOREM.md](../../YT_GAUGE_CROSSOVER_THEOREM.md) |
-| CKM / Higgs `Z_3` route | bounded | arXiv / SI only | [CKM_MASS_BASIS_NNI_NOTE.md](../../CKM_MASS_BASIS_NNI_NOTE.md), [CABIBBO_JARLSKOG_PREDICTION_2026-04-12.md](../../CABIBBO_JARLSKOG_PREDICTION_2026-04-12.md) |
+| CKM / Higgs `Z_3` route | bounded | arXiv / SI only | [CABIBBO_BOUND_NOTE.md](../../CABIBBO_BOUND_NOTE.md), [CKM_MASS_BASIS_NNI_NOTE.md](../../CKM_MASS_BASIS_NNI_NOTE.md), [JARLSKOG_PHASE_BOUND_NOTE.md](../../JARLSKOG_PHASE_BOUND_NOTE.md) |
 | cosmology windows (`w=-1`, graviton mass, `Omega_Lambda`, `n_s`) | bounded / conditional | arXiv companion only | [OMEGA_LAMBDA_DERIVATION_NOTE.md](../../OMEGA_LAMBDA_DERIVATION_NOTE.md), [PRIMORDIAL_SPECTRUM_NOTE.md](../../PRIMORDIAL_SPECTRUM_NOTE.md), [DARK_ENERGY_EOS_NOTE.md](../../DARK_ENERGY_EOS_NOTE.md), [GRAVITON_MASS_DERIVED_NOTE.md](../../GRAVITON_MASS_DERIVED_NOTE.md) |
 | Higgs mass / Coleman-Weinberg mass lane (`m_H = 125 GeV`) | bounded | arXiv companion only | [HIGGS_MASS_DERIVED_NOTE.md](../../HIGGS_MASS_DERIVED_NOTE.md) |
 | proton lifetime | bounded sharp prediction | arXiv companion only | [PROTON_LIFETIME_DERIVED_NOTE.md](../../PROTON_LIFETIME_DERIVED_NOTE.md) |
