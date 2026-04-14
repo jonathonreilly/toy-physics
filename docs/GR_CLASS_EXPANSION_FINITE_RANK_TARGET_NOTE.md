@@ -3,7 +3,7 @@
 **Date:** 2026-04-14  
 **Branch:** `codex/review-active`  
 **Script:** `scripts/frontier_gr_class_expansion_finite_rank_target.py`  
-**Status:** exact widening candidate beyond the current star-supported/static-conformal restricted class; exact projected DtN correction operator in hand; not full GR
+**Status:** exact widening candidate beyond the current star-supported/static-conformal restricted class; exact projected DtN correction operator and exact support-renormalized active-shell amplitude law in hand; not full GR
 
 ## Question
 
@@ -24,6 +24,7 @@ The current restricted surface already gives:
 - exact microscopic Schur boundary action
 - exact local `3+1` lift on the restricted strong-field class
 - exact bilinear Route-2 carrier/action as a construction
+- exact scalar active-quotient amplitude law through support renormalization
 
 What it does **not** yet give is a theorem-grade tensorial `3+1` metric law
 beyond the current star-supported/static-conformal restricted class.
@@ -34,8 +35,8 @@ structure and the exact projected DtN correction operator on the active orbit
 quotient:
 
 > exact finite-rank source-to-exterior closure plus exact microscopic boundary
-> action, with bounded scalar metric reduction and an exact projected DtN
-> correction operator.
+> action, with bounded scalar metric reduction, an exact projected DtN
+> correction operator, and an exact scalar active-quotient amplitude law.
 
 That is already present in the finite-rank gravity route on the branch.
 
@@ -63,6 +64,7 @@ restricted one.
 So the honest split is:
 
 - source/exterior and boundary-action structure: extends cleanly
+- exact scalar active-quotient amplitude law: extends cleanly
 - exact GR tensor dynamics identification: breaks at the current class edge
 
 ## Why widening looks more promising than direct universal GR
@@ -91,7 +93,8 @@ The smallest honest class-expansion target beyond the current restricted class
 is:
 
 > exact finite-rank source-to-metric closure on the current bridge surface,
-> with exact microscopic boundary action and bounded scalar metric reduction.
+> with exact microscopic boundary action, bounded scalar metric reduction,
+> and the exact scalar active-quotient amplitude law.
 
 That is the next theorem to promote if we want to widen the gravity class
 without overclaiming universal GR.
@@ -102,6 +105,7 @@ The companion runner checks:
 
 - exact finite-rank source-to-exterior closure
 - exact boundary-action stationarity
+- exact scalar active-quotient amplitude law
 - bounded coarse-grained scalar exterior metric reduction
 - nonzero direct `3+1` metric residual
 

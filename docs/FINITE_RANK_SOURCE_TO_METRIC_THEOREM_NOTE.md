@@ -3,7 +3,7 @@
 **Date:** 2026-04-14  
 **Branch:** `codex/review-active`  
 **Script:** `scripts/frontier_finite_rank_source_to_metric_theorem.py`  
-**Status:** exact finite-rank source-to-exterior theorem plus exact projected DtN correction operator; bounded `3+1` metric reduction; not full nonlinear GR
+**Status:** exact finite-rank source-to-exterior theorem plus exact projected DtN correction operator and exact support-renormalized active-shell amplitude law; bounded `3+1` metric reduction; not full nonlinear GR
 
 ## Purpose
 
@@ -68,6 +68,21 @@ This is the sharpest exact widening theorem currently in hand because it closes
 the active non-`O_h` ambiguity at the operator level while keeping the same
 source renormalization and boundary-action structure.
 
+## New exact scalar theorem: support-renormalized active-shell amplitude law
+
+The same finite-rank source family also determines the active-quotient scalar
+amplitude exactly.
+
+Let `q_eff` be the renormalized support weights and `Q_eff = 1^T q_eff`.
+Then the active correction obeys
+
+`delta_sigma_active = Q_eff * m_active`
+
+and the same law holds on the active pair quotient.
+
+So the scalar amplitude on the active quotient is not a fitted consequence of
+the DtN operator. It is an exact support-renormalization theorem.
+
 ## Bounded theorem: the exterior field coarse-grains to a near-vacuum isotropic metric
 
 Shell averaging the exact finite-rank exterior field and projecting it onto
@@ -93,15 +108,15 @@ That means the exact finite-rank source family does **not** by itself supply a
 theorem-grade tensorial map from microscopic source data to the full `3+1`
 metric.
 
-What is missing is the same thing the current gravity frontier has already
-localized elsewhere:
+What is missing is now sharper:
 
 > a tensorial matching/completion principle that promotes the exact scalar
-> exterior law to the full lapse-shift-spatial metric.
+> active-quotient law to the full lapse-shift-spatial metric.
 
 So route 3 is cleaner than the current `eta_floor_tf` endpoint route because
 it starts from exact finite-rank source renormalization and exact retained
-boundary/action laws, but it still stops at the scalar/static exterior sector.
+boundary/action laws, but it still stops at the scalar/active quotient before
+the tensorial `3+1` metric law.
 
 ## Verdict
 

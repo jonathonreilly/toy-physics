@@ -3,7 +3,7 @@
 **Date:** 2026-04-13  
 **Branch:** `codex/review-active`  
 **Script:** `scripts/frontier_finite_rank_dtn_correction_operator.py`  
-**Status:** Exact projected microscopic correction operator plus bounded active-mode consequence
+**Status:** Exact projected microscopic correction operator plus exact support-renormalized active-shell amplitude law; bounded `3+1` metric reduction
 
 ## Purpose
 
@@ -54,6 +54,19 @@ So the correction operator factors through the two pair channels
 This is the finite-dimensional quotient of the microscopic DtN map that
 governs the non-`O_h` sewing-band deviation.
 
+## Exact scalar amplitude law on the active quotient
+
+The projected operator does more than isolate a leading mode. On the active
+pair quotient, the support-renormalized response factors exactly through the
+total renormalized support charge:
+
+`delta_sigma_active = Q_eff * m_active`
+
+with `Q_eff = 1^T q_eff`.
+
+The same scalar-amplitude law holds on both the exact local `O_h` family and
+the broader finite-rank family.
+
 ## Bounded active-mode consequence
 
 On that reduced pair quotient, the operator has two nonzero singular values.
@@ -84,8 +97,7 @@ This note still does **not** close:
 1. the derivation of the full `3+1` spacetime closure
 2. the lift from the active pair quotient to the complete nonlinear sewing
    law
-3. the exact scalar amplitude relation between the support Schur complement
-   and the observed active singular mode
+3. the tensorial `3+1` promotion of the scalar active-quotient law
 
 ## Updated gravity target
 
@@ -93,6 +105,5 @@ After this note, the perturbative target narrows again:
 
 - the non-`O_h` correction is an exact projected DtN / Schur-complement
   operator on the active orbit quotient
-- the remaining theorem target is to derive the scalar amplitude on that
-  quotient directly from the support renormalization, then promote the result
-into the full `3+1` closure
+- the remaining theorem target is now the tensorial `3+1` promotion of the
+  exact scalar active-quotient law
