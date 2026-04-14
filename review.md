@@ -211,9 +211,9 @@ Current safe state:
 - therefore still bounded:
   - the current safest authority surface is:
     - `YT_ZERO_IMPORT_CLOSURE_NOTE.md`
-    - `frontier_zero_import_chain.py`
-    - `YT_MATCHING_NATIVE_NOTE.md`
-    - `frontier_native_matching.py`
+    - `frontier_yt_2loop_chain.py`
+    - `YT_VERTEX_POWER_DERIVATION.md`
+    - `YT_GAUGE_CROSSOVER_THEOREM.md`
   - do **not** let older closure-language notes outrank that newer bounded
     authority
     - `YT_FLAGSHIP_CLOSURE_NOTE.md` and `YT_BOUNDARY_RESOLUTION_NOTE.md`
@@ -224,35 +224,40 @@ Current safe state:
     - `m_t = 169.4 GeV` (2-loop y_t RGE, via `frontier_yt_2loop_chain.py`)
     - about `-1.9%` on `m_t`
     - the earlier 1-loop result (`m_t = 165.4 GeV`, `-4.2%`) is superseded
-  - the remaining blocker is no longer the old observed-seeded gauge path;
-    it is now the LM methodology bridge itself
+  - the remaining blocker is no longer the old observed-seeded gauge path or
+    the stale plaquette objection
+  - the branch has materially narrowed the old LM objection
     - `frontier_vertex_power.py` derives `n_link(Pi) = 2`
-    - the Coupling Map Theorem (YT_VERTEX_POWER_DERIVATION.md, Part 6) derives
-      the coupling map `alpha_bare / u_0^{n_link}` from the partition function
-    - the review question is whether that derivation fully internalizes the map
+    - the Coupling Map Theorem (YT_VERTEX_POWER_DERIVATION.md, Part 6) now
+      claims to derive `alpha_bare / u_0^{n_link}` from the partition function
   - the older contradiction with `frontier_native_matching.py` is gone on the
     latest remote head
     - both main scripts now claim the vertex `u_0^2` prescription is derived
-    - the review question is therefore narrower: whether that claim is actually
-      justified, not whether the branch contradicts itself
+    - so the review question is no longer whether the branch contradicts itself
   - the old plaquette-benchmark objection is also largely gone
     - `frontier_zero_import_chain.py` now computes the plaquette on the same
       surface using multi-`L` SU(3) Monte Carlo and uses the largest-`L` value
       as authoritative
     - the `0.5934` benchmark is comparison-only, not the load-bearing input
+  - the actual remaining gap is the boundary-consistency theorem
+    - the current 2-loop zero-import run gives a strong bounded result
+    - but it matches `y_t(M_Pl)` to the Ward BC while the same run gives
+      `g_3(M_Pl) = 0.487`, not the framework value `1.067`
+    - and the script itself says why: the current setup fixes `alpha_s(v)`,
+      not one self-consistent `g_3(M_Pl)` trajectory
   - the older gauge-crossover theorem remains bounded support only
-    - its exactness language about projected gauge preservation /
-      Ward-identity preservation still outruns the current proof surface
+    - its exactness language still outruns the current proof surface
 
 Paper-safe read:
 
 > The UV theorem surface is strong, and the zero-import route with 2-loop y_t
-> RGE gives m_t = 169.4 GeV (-1.9%). The Coupling Map Theorem
-> (YT_VERTEX_POWER_DERIVATION.md, Part 6) derives the coupling map
-> alpha_bare / u_0^{n_link} from the partition function. The lane is still
-> bounded because Codex has not yet accepted that derivation as fully
-> framework-native (the review question is whether the change-of-variables
-> proof constitutes a complete internalization of the LM map).
+> RGE gives m_t = 169.4 GeV (-1.9%). The old LM/plaquette objections are now
+> materially narrower. The lane is still bounded because the current chain
+> does not yet live on one self-consistent renormalized boundary surface:
+> it enforces the Ward condition on `y_t(M_Pl)` while the same run gives
+> a different `g_3(M_Pl)` than the framework value. The last theorem is to
+> derive whether the physical crossover endpoint is at `v` or at `M_Pl`, and
+> then run the entire gauge/Yukawa chain on that single surface.
 
 Best attack:
 
@@ -261,15 +266,18 @@ Best attack:
    newest zero-import route is the right surface now
 3. do not reopen the old plaquette-benchmark objection unless the chain
    regresses; that is no longer the main blocker
-4. derive the load-bearing map from operator link count to physical
-   coupling on the framework surface; counting `n_link = 2` again is not enough
+4. derive the boundary-selection theorem:
+   - either the physical crossover endpoint is `v`, in which case the lane
+     should be rewritten as an electroweak-endpoint closure
+   - or the endpoint is `M_Pl`, in which case `g_3(M_Pl)` and
+     `y_t(M_Pl)=g_3(M_Pl)/sqrt(6)` must close on one single trajectory
 5. then rewrite or retract the stale closure-language notes so they do not
    outrank the newest bounded authority
 6. only after 4-5 are clean, rerun the zero-import chain
 7. if a few-percent `m_t` residual remains after that, then treat improved
    Yukawa running / thresholds as the next quantitative sub-problem
-8. if 4-7 fail, freeze the lane honestly as “zero-import up to the LM
-   methodology bridge”
+8. if 4-7 fail, freeze the lane honestly as “zero-import up to the
+   boundary/crossover theorem”
 
 ### 3. CKM / quantitative flavor closure
 
@@ -343,10 +351,9 @@ Paper-safe read:
 Only report work as promotable when the exact blocker for that lane is gone.
 
 - DM: relic bridge itself must be closed, not just the old `g_bare` objection
-- `y_t`: actual framework-to-perturbative gauge crossover must be derived, not
-  just the common UV boundary on the strong side, and not while the viable
-  path still leans on imported matching coefficients or an observed-seeded
-  gauge trajectory
+- `y_t`: actual framework-to-perturbative boundary selection must be derived,
+  not mixed between `v` and `M_Pl`, and not while the viable path still lacks
+  one single self-consistent gauge/Yukawa trajectory
 - CKM: `V_cb` / `V_ub` must be quantitatively sharpened through absolute
   `S_23`, `c_13`, and phase control, not just structure or ratio routes
 

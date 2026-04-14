@@ -270,6 +270,7 @@ Ignore gravity unless Codex explicitly reprioritizes it.
 - `scripts/frontier_zero_import_chain.py`
 - `scripts/frontier_native_matching.py`
 - `scripts/frontier_vertex_power.py`
+- `scripts/frontier_yt_2loop_chain.py`
 - `scripts/frontier_yt_cl3_preservation.py`
 - `scripts/frontier_yt_boundary_resolution.py`
 - `scripts/frontier_yt_unified_boundary.py`
@@ -298,8 +299,8 @@ Ignore gravity unless Codex explicitly reprioritizes it.
      scripts use electroweak inputs such as `v`, `sin^2(theta_W)`, or
      low-energy electroweak boundary data
    - on the current Codex-side paper surface, those are fair game
-   - the remaining blockers are now the plaquette / LM methodology surface
-     and the quantitative residual in the zero-import chain
+   - the remaining blocker is the boundary / crossover consistency surface
+     inside the zero-import chain
 4. the latest zero-import route is stronger, but it is still not closure
    - the newest flagship note still labels the lane **BOUNDED**
    - its zero-import result is:
@@ -325,27 +326,33 @@ Ignore gravity unless Codex explicitly reprioritizes it.
 6. deriving `n_link(Pi) = 2` is real progress, but it is not the full closure
    - `frontier_vertex_power.py` does derive that the vacuum-polarization
      operator has 2 link insertions
-   - but it still assumes the Lepage-Mackenzie rule that an operator with
-     `n_link` gauge links uses `alpha_bare / u_0^{n_link}`
-   - until that map itself is derived framework-natively, do **not** say the
-     last prescription-level import is gone
+   - the latest branch also contains the Coupling Map Theorem claiming to
+     derive `alpha_bare / u_0^{n_link}` from the partition function
+   - do **not** spend time re-raising the old plain-LM objection unless you
+     find a concrete gap in that actual derivation
 7. `frontier_native_matching.py` no longer carries the older contradiction
    - the latest remote head now agrees that the vertex `u_0^2` prescription is
      being claimed as derived
-   - the remaining issue is narrower: whether that derivation really internalizes
-     the LM operator-to-coupling map, not whether the branch contradicts itself
+   - the remaining issue is narrower: whether the lane now has one single
+     self-consistent gauge/Yukawa boundary surface
 8. the older gauge-crossover theorem is still bounded support, not closure
    authority
    - its exactness language around Feshbach-preserved gauge coupling and the
      projected Ward identity still outruns the current proof surface
    - do **not** cite it as an all-orders continuum matching theorem
-9. the live blocker is now one narrow methodology / observable bridge
-   - derive the map from operator link counting to the physical effective
-     coupling on the framework surface
-   - then rerun the zero-import chain on that derived prescription
-   - only after that should you worry about squeezing the remaining `1.9%`
-     `m_t` residual with higher-order corrections or scheme matching
-10. keep the authority surface single and current
+9. the live blocker is now one narrow boundary-consistency theorem
+   - the current 2-loop zero-import run matches the Ward condition by solving
+     for `y_t(M_Pl)`, but on that same run the gauge trajectory gives
+     `g_3(M_Pl) = 0.487`, not the framework value `1.067`
+   - the script itself says why: the current setup fixes `alpha_s(v)`, not
+     one self-consistent `g_3(M_Pl)` trajectory
+   - the last theorem is therefore:
+     - either derive that the physical crossover endpoint is **at `v`**
+     - or derive a framework-native **Planck-boundary** crossover that makes
+       `g_3(M_Pl)` and `y_t(M_Pl)=g_3(M_Pl)/sqrt(6)` close on one trajectory
+10. do **not** spend time squeezing the remaining `1.9%` residual until 9 is fixed
+   - the residual is no longer the main blocker
+11. keep the authority surface single and current
    - after any new result, update or retract the stale `y_t` closure notes in
      the same change
    - do **not** let older closure-language notes outrank the newest bounded
@@ -354,25 +361,27 @@ Ignore gravity unless Codex explicitly reprioritizes it.
 **What counts as success**
 
 - best-case success:
-  - derive the LM link-counting rule itself on the framework surface, not
-    just the `n_link = 2` count
-  - rerun the zero-import chain from that cleaned-up boundary and close the
-    `m_t` residual
+  - derive one single framework-native boundary theorem:
+    - either `v` is the physical crossover endpoint
+    - or `M_Pl` is, with one self-consistent `g_3(M_Pl)` / `y_t(M_Pl)` trajectory
+  - rerun the 2-loop chain on that one surface
+  - close the lane only if the authority note and the numerics agree on the
+    same surface
 - second-best success:
-  - isolate the lane to the one remaining honest methodology import
-    (the LM map from link count to physical coupling)
+  - isolate the lane to the one remaining honest theorem gap:
+    the physical crossover endpoint / boundary-selection theorem
   - and state that plainly in one authority note
 - minimum acceptable success:
   - keep the flagship note honest and bounded
-  - and with the remaining blocker written as the LM methodology bridge, not
-    as the old broad crossover story
+  - and with the remaining blocker written as the boundary-consistency theorem,
+    not as the old broad crossover story
 
 **What does not count**
 
 - re-proving Feshbach on toy systems
 - presenting corrected beta coefficients as if that alone closes the lane
-- calling the lane closed while the script that supposedly closes the last
-  import still assumes the LM operator-to-coupling rule it claims to retire
+- calling the lane closed while the 2-loop chain still uses a mixed boundary
+  surface (`y_t(M_Pl)` matched, `g_3(M_Pl)` inconsistent)
 - using agreement with PDG as proof that the methodology itself is derived
 
 **Preferred attack order**
@@ -384,17 +393,20 @@ Ignore gravity unless Codex explicitly reprioritizes it.
    - the latest zero-import chain now uses same-surface multi-`L` Monte Carlo
      for the authoritative plaquette
 4. attack the real remaining theorem:
-   - derive why an operator with `n_link` gauge links uses the physical
-     coupling `alpha_bare / u_0^{n_link}` on the framework surface
-   - do **not** just recount the links again
+   - determine whether the physical crossover is anchored at `v` or at `M_Pl`
+   - if `v`: prove that and rewrite the lane around an electroweak-endpoint
+     closure
+   - if `M_Pl`: derive one self-consistent framework-native trajectory for
+     both `g_3(M_Pl)` and `y_t(M_Pl)`
+   - do **not** just recount links or rerun the same mixed-boundary numerics
 5. then tighten the authority surface:
    - rewrite or retract older closure-language notes so they do not outrank the
      newest bounded authority
 6. only after 4-5 are clean, rerun the zero-import chain and see whether
-   the remaining `m_t` residual persists
+   the remaining `m_t` residual persists on the now-single boundary surface
 7. if the residual still sits at a few percent, then and only then attack
    2-loop Yukawa running / thresholds as the remaining quantitative issue
-8. if 4-7 fail, isolate exactly the one remaining methodology import and keep
+8. if 4-7 fail, isolate exactly the one remaining boundary theorem and keep
    the lane bounded
 
 ### Target C: CKM / flavor
