@@ -28,8 +28,12 @@ The full branch-audited publication capture is now explicit:
 - retained flagship claims live in [CLAIMS_TABLE.md](./CLAIMS_TABLE.md)
 - the full quantitative and workstream portfolio lives in
   [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md)
+- the reviewer-facing quantitative rows are summarized in
+  [QUANTITATIVE_SUMMARY_TABLE.md](./QUANTITATIVE_SUMMARY_TABLE.md)
 - intentionally excluded families live in
   [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md)
+- the package architecture itself lives in
+  [PUBLICATION_CONTROL_PLANE.md](./PUBLICATION_CONTROL_PLANE.md)
 
 The working framework sentence is:
 
@@ -212,6 +216,7 @@ These negatives are part of what makes the retained backbone credible.
 The arXiv version should point directly to the curated publication package:
 
 - [CLAIMS_TABLE.md](./CLAIMS_TABLE.md)
+- [QUANTITATIVE_SUMMARY_TABLE.md](./QUANTITATIVE_SUMMARY_TABLE.md)
 - [RESULTS_INDEX.md](./RESULTS_INDEX.md)
 - [REPRODUCE.md](./REPRODUCE.md)
 - [SUBMISSION_CHECKLIST.md](./SUBMISSION_CHECKLIST.md)

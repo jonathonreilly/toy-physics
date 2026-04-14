@@ -4,7 +4,8 @@ This file is the evidence contract for the publication package.
 
 It covers the retained and manuscript-facing claims only. For the full
 branch-audited capture of bounded and frozen-out workstreams, use
-[PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md) and
+[PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md),
+[QUANTITATIVE_SUMMARY_TABLE.md](./QUANTITATIVE_SUMMARY_TABLE.md), and
 [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md).
 
 Every paper-facing claim must have:
@@ -63,6 +64,8 @@ authority note, not only in the manuscript prose.
 For publication organization:
 
 - retained claims belong here and in [CLAIMS_TABLE.md](./CLAIMS_TABLE.md)
+- reviewer-facing quantitative rows belong in
+  [QUANTITATIVE_SUMMARY_TABLE.md](./QUANTITATIVE_SUMMARY_TABLE.md)
 - bounded or frozen-out work belongs in
   [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md) and, when excluded,
   [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md)

@@ -7,6 +7,7 @@ validation map says how each claim is evidenced and released.
 For the full branch-audited publication capture, also use:
 
 - [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md)
+- [QUANTITATIVE_SUMMARY_TABLE.md](./QUANTITATIVE_SUMMARY_TABLE.md)
 - [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md)
 - [REMOTE_BRANCH_AUDIT_2026-04-14.md](./REMOTE_BRANCH_AUDIT_2026-04-14.md)
 

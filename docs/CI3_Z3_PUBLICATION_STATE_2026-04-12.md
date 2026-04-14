@@ -15,8 +15,10 @@ paper surface.
 The package now also carries a branch-audited publication-capture layer:
 
 - [publication/ci3_z3/PUBLICATION_MATRIX.md](publication/ci3_z3/PUBLICATION_MATRIX.md)
+- [publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md](publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md)
 - [publication/ci3_z3/FROZEN_OUT_REGISTRY.md](publication/ci3_z3/FROZEN_OUT_REGISTRY.md)
 - [publication/ci3_z3/REMOTE_BRANCH_AUDIT_2026-04-14.md](publication/ci3_z3/REMOTE_BRANCH_AUDIT_2026-04-14.md)
+- [publication/ci3_z3/PUBLICATION_CONTROL_PLANE.md](publication/ci3_z3/PUBLICATION_CONTROL_PLANE.md)
 
 Those files exist so no branch-local result family is silently lost between the
 retained theorem core and the broader bounded portfolio.
@@ -34,8 +36,10 @@ This state doc defines the retained paper framework inside that broader capture
 surface. The full package must therefore be read together with:
 
 - [publication/ci3_z3/PUBLICATION_MATRIX.md](publication/ci3_z3/PUBLICATION_MATRIX.md)
+- [publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md](publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md)
 - [publication/ci3_z3/FULL_CLAIM_LEDGER.md](publication/ci3_z3/FULL_CLAIM_LEDGER.md)
 - [publication/ci3_z3/FROZEN_OUT_REGISTRY.md](publication/ci3_z3/FROZEN_OUT_REGISTRY.md)
+- [publication/ci3_z3/PUBLICATION_CONTROL_PLANE.md](publication/ci3_z3/PUBLICATION_CONTROL_PLANE.md)
 
 ## External inputs used in the current paper
 
@@ -206,6 +210,12 @@ part of the retained flagship core:
 - gravity companions beyond retained weak-field plus restricted strong-field package
 - sharp companion predictions
 - branch-local inventories and stale strategy docs
+
+The package-control docs now make that split operational:
+
+- [publication/ci3_z3/PUBLICATION_CONTROL_PLANE.md](publication/ci3_z3/PUBLICATION_CONTROL_PLANE.md)
+- [publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md](publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md)
+- [publication/ci3_z3/SUBMISSION_SEQUENCE_2026-04-14.md](publication/ci3_z3/SUBMISSION_SEQUENCE_2026-04-14.md)
 
 If a reviewer asks “what happened to X?”, the answer should now live in the
 matrix or registry rather than in branch-local notes only.

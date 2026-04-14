@@ -12,8 +12,9 @@ If you are new to the repo, read these first:
 1. [External reviewer guide](./EXTERNAL_REVIEWER_GUIDE.md)
 2. [Publication state](../../CI3_Z3_PUBLICATION_STATE_2026-04-12.md)
 3. [Publication matrix](./PUBLICATION_MATRIX.md)
-4. [Claims table](./CLAIMS_TABLE.md)
-5. [Frozen-out registry](./FROZEN_OUT_REGISTRY.md)
+4. [Quantitative summary table](./QUANTITATIVE_SUMMARY_TABLE.md)
+5. [Claims table](./CLAIMS_TABLE.md)
+6. [Frozen-out registry](./FROZEN_OUT_REGISTRY.md)
 
 That path makes four things explicit:
 
@@ -27,8 +28,10 @@ That path makes four things explicit:
 - [External reviewer guide](./EXTERNAL_REVIEWER_GUIDE.md)
 - [Nature package](./NATURE_PACKAGE.md)
 - [arXiv package](./ARXIV_PACKAGE.md)
+- [Publication control plane](./PUBLICATION_CONTROL_PLANE.md)
 - [Claims table](./CLAIMS_TABLE.md)
 - [Publication matrix](./PUBLICATION_MATRIX.md)
+- [Quantitative summary table](./QUANTITATIVE_SUMMARY_TABLE.md)
 - [Frozen-out registry](./FROZEN_OUT_REGISTRY.md)
 - [Remote branch audit](./REMOTE_BRANCH_AUDIT_2026-04-14.md)
 - [Derivation / validation map](./DERIVATION_VALIDATION_MAP.md)
@@ -36,6 +39,7 @@ That path makes four things explicit:
 - [Results index](./RESULTS_INDEX.md)
 - [Reproduce guide](./REPRODUCE.md)
 - [Submission checklist](./SUBMISSION_CHECKLIST.md)
+- [Submission sequence](./SUBMISSION_SEQUENCE_2026-04-14.md)
 - [Figure plan](./FIGURE_PLAN.md)
 - [Figure captions](./FIGURE_CAPTIONS.md)
 - [Nature draft](./NATURE_DRAFT.md)
@@ -108,7 +112,9 @@ That contract lives in
 The repo-wide capture contract now also includes:
 
 - [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md)
+- [QUANTITATIVE_SUMMARY_TABLE.md](./QUANTITATIVE_SUMMARY_TABLE.md)
 - [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md)
+- [PUBLICATION_CONTROL_PLANE.md](./PUBLICATION_CONTROL_PLANE.md)
 
 Those files exist so bounded and frozen-out work is not silently lost while the
 flagship claims remain disciplined.

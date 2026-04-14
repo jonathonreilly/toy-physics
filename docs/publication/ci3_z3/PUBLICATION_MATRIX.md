@@ -16,9 +16,11 @@ branches should appear here exactly once with one of four dispositions:
 Use this file together with:
 
 - [REMOTE_BRANCH_AUDIT_2026-04-14.md](./REMOTE_BRANCH_AUDIT_2026-04-14.md)
+- [QUANTITATIVE_SUMMARY_TABLE.md](./QUANTITATIVE_SUMMARY_TABLE.md)
 - [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md)
 - [CLAIMS_TABLE.md](./CLAIMS_TABLE.md)
 - [FULL_CLAIM_LEDGER.md](./FULL_CLAIM_LEDGER.md)
+- [PUBLICATION_CONTROL_PLANE.md](./PUBLICATION_CONTROL_PLANE.md)
 
 ## Branch/workstream coverage
 

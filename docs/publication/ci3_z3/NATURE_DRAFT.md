@@ -37,8 +37,11 @@ valuable, but they are not part of the core claim stack of this version.
 
 The broader branch-audited quantitative portfolio still exists, but it is kept
 separate from the retained theorem core. The canonical capture lives in
-[PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md), with intentionally excluded
-families documented in [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md).
+[PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md), the reviewer-facing summary
+lives in [QUANTITATIVE_SUMMARY_TABLE.md](./QUANTITATIVE_SUMMARY_TABLE.md), and
+intentionally excluded families are documented in
+[FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md). The package architecture
+itself is defined in [PUBLICATION_CONTROL_PLANE.md](./PUBLICATION_CONTROL_PLANE.md).
 
 The present paper still uses a small explicit set of external inputs where the
 framework is not yet closed, but they are now cosmological only:
@@ -158,8 +161,9 @@ The public code surface for this manuscript should be the curated publication
 package rooted at [README.md](./README.md), with claims pinned through
 [CLAIMS_TABLE.md](./CLAIMS_TABLE.md), derivation/validation pairing in
 [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md), runner mappings in
-[RESULTS_INDEX.md](./RESULTS_INDEX.md), and exact execution instructions in
-[REPRODUCE.md](./REPRODUCE.md).
+[RESULTS_INDEX.md](./RESULTS_INDEX.md), quantitative portfolio capture in
+[QUANTITATIVE_SUMMARY_TABLE.md](./QUANTITATIVE_SUMMARY_TABLE.md), and exact
+execution instructions in [REPRODUCE.md](./REPRODUCE.md).
 
 ## Data Availability
 

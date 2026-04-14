@@ -59,11 +59,12 @@ Also still open:
 
 1. [CI3_Z3_PUBLICATION_STATE_2026-04-12.md](../../CI3_Z3_PUBLICATION_STATE_2026-04-12.md)
 2. [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md)
-3. [CLAIMS_TABLE.md](./CLAIMS_TABLE.md)
-4. [FULL_CLAIM_LEDGER.md](./FULL_CLAIM_LEDGER.md)
-5. [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md)
-6. [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md)
-7. then the manuscript surfaces:
+3. [QUANTITATIVE_SUMMARY_TABLE.md](./QUANTITATIVE_SUMMARY_TABLE.md)
+4. [CLAIMS_TABLE.md](./CLAIMS_TABLE.md)
+5. [FULL_CLAIM_LEDGER.md](./FULL_CLAIM_LEDGER.md)
+6. [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md)
+7. [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md)
+8. then the manuscript surfaces:
    - [NATURE_DRAFT.md](./NATURE_DRAFT.md)
    - [ARXIV_DRAFT.md](./ARXIV_DRAFT.md)
 
@@ -73,3 +74,5 @@ Also still open:
 - If it is in the matrix but not in the claims table, it is not on the retained
   flagship claim surface.
 - If it is important but excluded, it should appear in the frozen-out registry.
+- If you are editing the package rather than reviewing it, use
+  [PUBLICATION_CONTROL_PLANE.md](./PUBLICATION_CONTROL_PLANE.md).

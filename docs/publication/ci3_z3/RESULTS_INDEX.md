@@ -10,6 +10,9 @@ For the repo-wide capture across remote branches and branch-local workstreams,
 use [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md) and
 [REMOTE_BRANCH_AUDIT_2026-04-14.md](./REMOTE_BRANCH_AUDIT_2026-04-14.md).
 
+For the reviewer-facing prediction/observation rows, use
+[QUANTITATIVE_SUMMARY_TABLE.md](./QUANTITATIVE_SUMMARY_TABLE.md).
+
 ## Main-text core
 
 | Section | Note | Runner |
@@ -66,6 +69,7 @@ use [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md) and
 ## Bounded and frozen-out surfaces
 
 - The observation-facing quantitative portfolio is catalogued in
-  [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md).
+  [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md) and summarized in
+  [QUANTITATIVE_SUMMARY_TABLE.md](./QUANTITATIVE_SUMMARY_TABLE.md).
 - Important excluded workstreams are catalogued in
   [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md).
