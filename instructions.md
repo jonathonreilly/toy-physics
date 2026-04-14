@@ -298,34 +298,31 @@ Ignore gravity unless Codex explicitly reprioritizes it.
    - the 1-loop bookkeeping bug is fixed
    - the lattice matching coefficient itself is already narrowed to
      sub-percent scale
-3. electroweak inputs are no longer the productive objection here
-   - do **not** spend time arguing that the lane is open merely because the
-     scripts use electroweak inputs such as `v`, `sin^2(theta_W)`, or
-     low-energy electroweak boundary data
-   - on the current Codex-side paper surface, those are fair game
-   - the remaining blocker is now the framework-to-EFT bridge at `v`
-     inside the zero-import chain
-4. the branch now has a sharper contradiction, not a clean closure
-   - the current zero-import authority note still says **BOUNDED** and still
-     presents:
-     - `alpha_s(M_Z) = 0.1181`
-     - `m_t = 169.4 GeV` (2-loop y_t, `frontier_yt_2loop_chain.py`)
-     - about `-1.9%` on `m_t`
-   - the new EFT-bridge files claim to resolve the last blocker, but the
-     actual direct `v`-matching script gives:
-     - `y_t(v) = g_s(v)/sqrt(6) = 0.465`
-     - `m_t(tree) = 81.0 GeV`
-     - `m_t(pole) ≈ 87.0 GeV`
-   - at the same time, that same script still reports the older backward-Ward
-     route as `169.4 GeV`
-   - so the live problem is now:
-     - one note family says the `169.4 GeV` route is the promoted zero-import
-       prediction
-     - one script says the direct framework-native `v` bridge gives `81–87 GeV`
-       and that this direct bridge is the correct one
-   - do **not** promote `y_t` closed while those two surfaces coexist
-   - do **not** let any “CLOSED” or “DERIVED final blocker resolved” note
-     outrank that contradiction
+3. derived electroweak structure is fair game, but strict zero-import still has
+   two live blockers
+   - on the current Codex-side paper surface, derived `v` is fair framework
+     input; do **not** spend time re-arguing that derived `v` itself keeps the
+     lane open
+   - however, the current strict zero-import runner still seeds:
+     - `g_1(v)` from observed `alpha_EM(M_Z)`
+     - `g_2(v)` from observed `sin^2(theta_W)(M_Z)`
+     - `lambda(v) = 0.129`
+   - that means the current best result can be fair as an
+     electroweak-assisted / import-allowed surface, but **not** as strict
+     zero-import
+4. the old bridge contradiction is no longer the main fight
+   - the latest branch has collapsed the direct-`v` vs backward-Ward split into
+     one preferred bridge surface
+   - do **not** keep burning context on the stale “81–87 GeV direct bridge vs
+     169.4 GeV backward bridge” contradiction as if that were still the live
+     blocker
+   - the live theorem gap is now narrower:
+     - derive the framework-to-EFT RG bridge rather than asserting that the
+       SM 2-loop RGE above `v` is the framework’s perturbative RG flow
+   - coefficient tracing to the derived gauge group and matter content is not,
+     by itself, a proof of that identification
+   - do **not** promote `y_t` closed until the runner, theorem note, and
+     authority note all agree on one strict zero-import surface
 5. the plaquette objection is no longer the main blocker
    - `frontier_zero_import_chain.py` now computes the plaquette on the same
      surface via multi-`L` SU(3) Monte Carlo and uses the largest-`L` value as
@@ -357,19 +354,14 @@ Ignore gravity unless Codex explicitly reprioritizes it.
    - do **not** keep re-fighting the stale `g_3(M_Pl)_SM = 0.487` versus
      `g_lattice = 1.067` objection as if it were still the live blocker
 10. the live blocker is now more specific than before:
-   - resolve the **direct-`v` bridge vs backward-`M_Pl` bridge** contradiction
-   - only two honest outcomes are acceptable:
-     - **Outcome A:** the direct `v` bridge is correct
-       - then the framework’s zero-import `y_t` prediction is presently
-         `81–87 GeV`, not `169.4 GeV`
-       - in that case the lane is not closable on the current zero-import
-         surface, and the authority notes must say that plainly
-     - **Outcome B:** the backward `M_Pl` Ward-transfer route is the right
-       predictive bridge
-       - then prove why using the SM RGE above `v` is a valid
-         framework-native surrogate for the lattice RG / taste staircase
-       - and make that proof consistent with `YT_BOUNDARY_THEOREM.md`
-   - until one of those is established, the lane stays bounded
+   - strict zero-import requires closing **both** of these:
+     - remove or derive the observed electroweak seeds
+       (`g_1(v)`, `g_2(v)`, `lambda(v)`)
+     - derive the RG-flow identification above `v`, rather than merely
+       asserting that the SM 2-loop RGE is the framework-native perturbative
+       surrogate
+   - until both are established, the lane stays bounded on a strict
+     zero-import surface
 11. do **not** spend time squeezing the remaining `1.9%` residual until 10 is fixed
    - the residual is now a downstream quantitative issue
 12. keep the authority surface single and current
@@ -381,22 +373,23 @@ Ignore gravity unless Codex explicitly reprioritizes it.
 **What counts as success**
 
 - best-case success:
-  - produce one final bridge theorem and one final runner that agree on the
-    same physical surface
-  - either:
-    - direct `v` matching is proven correct and its numerical consequence is
-      accepted honestly
-    - or the backward `M_Pl` Ward-transfer route is proven to be the correct
-      framework-native bridge despite the EFT domain issue
+  - produce one final strict zero-import theorem surface and one final runner
+    that agree on the same physical surface
+  - specifically:
+    - derive or eliminate the observed electroweak seeds
+      (`g_1(v)`, `g_2(v)`, `lambda(v)`)
+    - derive the lattice/taste-staircase to EFT step-scaling identification
+      above `v`
   - only then close the lane, and only if the authority note, runner, and
-    quoted `m_t` all agree on the same import class and same physical endpoint
+    quoted `m_t` all agree on the same strict zero-import import class
 - second-best success:
   - collapse the lane to one honest bounded authority note that states exactly
-    which bridge is favored and why the alternative fails
+    that the remaining blockers are the EW-seeded inputs and the missing RG
+    derivation
 - minimum acceptable success:
   - keep the flagship note honest and bounded
-  - and with the remaining blocker written as the unresolved direct-vs-backward
-    bridge contradiction, not as the old broad crossover story
+  - and with the remaining blockers written as the EW-seeded inputs plus the
+    still-asserted RG bridge, not the old broad crossover story
 
 **What does not count**
 
@@ -409,31 +402,36 @@ Ignore gravity unless Codex explicitly reprioritizes it.
 **Preferred attack order**
 
 1. do **not** re-prove Feshbach or the sub-percent matching coefficient
-2. do **not** spend more time on the old observed-seeded crossover complaint;
-   the newest zero-import route is the right surface now
+2. treat derived `v` as fair framework input, but do **not** let the runner
+   keep observed `g_1(v)`, `g_2(v)`, or `lambda(v)` if the claim is strict
+   zero-import
 3. do **not** spend more time reopening the old plaquette-benchmark objection
    - the latest zero-import chain now uses same-surface multi-`L` Monte Carlo
      for the authoritative plaquette
 4. treat the physical endpoint as `v` unless you produce a real theorem that
    overrules `YT_BOUNDARY_THEOREM.md`
 5. attack the real remaining theorem:
-   - decide whether the direct `v` bridge or the backward `M_Pl` Ward-transfer
-     bridge is the physical one
-   - if direct `v` wins, make the note/runner surface admit the `81–87 GeV`
-     consequence honestly
-   - if backward `M_Pl` wins, derive why that transfer is framework-native and
-     not a use of the wrong theory in the wrong regime
-   - do **not** just recount links or rerun the same old boundary numerics
-6. then tighten the authority surface:
+   - derive the lattice/taste-staircase to EFT RG bridge above `v`
+   - do **not** just say “the coefficients match, therefore the flows are the
+     same”
+   - the bar is a real framework-native step-scaling or perturbative-surrogate
+     derivation
+6. in parallel or after 5, remove or derive the observed EW seeds:
+   - `g_1(v)`
+   - `g_2(v)`
+   - `lambda(v)`
+   - if you cannot do that, explicitly downgrade the lane to electroweak-
+     assisted / import-allowed instead of calling it strict zero-import
+7. then tighten the authority surface:
    - rewrite or retract older closure-language notes so they do not outrank the
      newest corrected authority
    - ensure `YT_EFT_BRIDGE_THEOREM.md`, `YT_ZERO_IMPORT_CLOSURE_NOTE.md`, and
      the primary runner all say the same thing
-7. only after 4-6 are clean, rerun the zero-import chain and see whether
+8. only after 4-7 are clean, rerun the zero-import chain and see whether
    the remaining `m_t` residual persists on the now-single boundary surface
-8. if the residual still sits at a few percent, then and only then attack
+9. if the residual still sits at a few percent, then and only then attack
    2-loop Yukawa running / thresholds as the remaining quantitative issue
-9. if 4-8 fail, isolate exactly the one remaining bridge theorem and keep
+10. if 4-9 fail, isolate exactly the one remaining theorem and keep
    the lane bounded
 
 ### Target C: CKM / flavor
