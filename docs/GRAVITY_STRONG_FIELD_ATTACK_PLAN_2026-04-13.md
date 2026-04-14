@@ -893,6 +893,24 @@ New exact/bounded selector-transfer reduction extracted after that:
   - not from another rewrite of orbit-summed shell data or the retained
     reduced shell toolbox alone
 
+New exact/bounded tensor-boundary-drive reduction extracted after that:
+
+- the current frontier is now best phrased directly at the level of the tensor
+  boundary drive `eta_floor_tf`, not just the derived ratio
+  `c_eta = eta_floor_tf / |I_scalar|`
+- on the exact star-supported source class, the scalar action is already exact
+  and irrep-isotropic inside the `E` and `T1` support irreps
+- see `docs/TENSOR_BOUNDARY_DRIVE_TWO_CHANNEL_NOTE.md`
+- the numerator `eta_floor_tf` is bright only on the aligned channels `E_x`
+  and `T1x`, while `E_perp`, `T1y`, and `T1z` are dark to numerical precision
+- the bright-channel response of `eta_floor_tf` is already close to affine in
+  the tested amplitude window
+- this means the remaining full-GR gap is now narrower still:
+  - derive the exact two-channel law for `eta_floor_tf(E_x, T1x)`
+  - then recover `c_eta` and the tensor completion as derived quantities
+  - not by further reworking the scalar denominator, which is already exact on
+    the current audited exact source class
+
 ### Attack 3: only after metric closure, revisit horizon / echo claims
 
 Current gap:
