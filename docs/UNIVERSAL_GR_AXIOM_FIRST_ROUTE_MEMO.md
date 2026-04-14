@@ -108,29 +108,28 @@ Why this wins conceptually:
 3. It has the right failure mode: if it fails, the failure is a missing tensor
    action/uniqueness theorem, not another local fit.
 
-## Sharp blocker
+## Current theorem step
 
-The direct universal route still collapses to a restricted-class foothold if we
-insist on an exact theorem today.
+The current direct-universal theorem step is not a closure claim. It is a
+sharp blocker note:
 
-Reason:
+- [`UNIVERSAL_GR_TENSOR_ACTION_BLOCKER_NOTE.md`](./UNIVERSAL_GR_TENSOR_ACTION_BLOCKER_NOTE.md)
+- [`frontier_universal_gr_tensor_action_blocker.py`](../scripts/frontier_universal_gr_tensor_action_blocker.py)
 
-- the branch already has a universal scalar self-consistency closure for
-  Poisson
-- the branch already has exact scalar boundary/action structure
-- but it does **not** yet have an exact tensor-valued action or observable on
-  the full metric space
+That blocker says the direct universal route is exact at the scalar observable
+principle level and exact at the `3+1` kinematic lift level, but still missing
+the first exact tensor-valued action or uniqueness theorem on the full metric
+space.
 
-So the current universal route is conceptually right, but technically it still
-needs one of:
+The minimal missing primitive is therefore:
 
-1. an exact tensor-valued action derived from the axiom-side observable
-   principle
-2. an exact tensor-valued uniqueness theorem forcing Einstein/Regge dynamics
-3. a principled spacetime lift that makes the tensor action inevitable
+1. an exact tensor-valued `3+1` variational action
+2. or an exact tensor-valued source operator on `PL S^3 x R`
+3. or an exact uniqueness theorem forcing Einstein/Regge dynamics from the
+   observable principle
 
-If none of those lands, the direct route falls back to the restricted-class
-foothold as a diagnostic, not a closure.
+Until one of those lands, the direct route remains the best architecture but
+not a closure theorem.
 
 ## Formal support check
 
