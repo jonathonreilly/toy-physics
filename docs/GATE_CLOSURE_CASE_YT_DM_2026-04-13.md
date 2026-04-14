@@ -136,18 +136,19 @@ Transport (coupled fixed-point)
 ### External inputs used in the current YT / DM case
 
 The current YT / DM package should not describe itself as having only one
-boundary condition.
+boundary condition, but the electroweak hierarchy situation has changed.
 
 - `T_CMB = 2.7255 K` is the cosmological boundary condition that fixes where
   on the expansion timeline the relic calculation is evaluated.
 - `H_0 = 67.4 km/s/Mpc` enters when converting the derived matter densities
   into `Omega` parameters.
-- `v = 246 GeV` remains the electroweak-scale boundary input. It is not a
-  cosmological datum; it is the unresolved hierarchy input.
+- `v` is no longer a paper-surface boundary input on `codex/review-active`.
+  The exact minimal hierarchy block plus the source-response observable
+  principle now give `v = 245.080424447914 GeV`, within `0.4628%` of the
+  measured electroweak scale.
 
-This distinction matters because the current framework closes much more of the
-EWSB structure than the Standard Model, but it does **not** yet derive the
-absolute electroweak scale.
+So the live YT / DM gap is no longer “we still import the electroweak scale.”
+It is the matching / transport bridge itself.
 
 ### The v/T question
 
