@@ -1,5 +1,16 @@
 # Route 2 Primitive Chain: Axiom-First Build Program
 
+Update on 2026-04-14:
+
+- `P1` is now closed in bilinear form by
+  [S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md](./S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md)
+- `P2` is now closed at the carrier level by the exact endpoint columns of `K_R`
+- `P3` is now closed as an exact construction by
+  [S3_TIME_BILINEAR_TENSOR_ACTION_NOTE.md](./S3_TIME_BILINEAR_TENSOR_ACTION_NOTE.md)
+
+The remaining blocker is `P4`: the final Einstein/Regge dynamics identification
+of the exact carrier/action, not the absence of an exact tensor primitive.
+
 **Date:** 2026-04-14  
 **Branch:** `codex/review-active`  
 **Purpose:** identify the missing Route-2 primitives cleanly, rank them by

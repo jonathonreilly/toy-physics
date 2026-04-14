@@ -1,5 +1,14 @@
 # Route 2 Exact Tensorized Action/Coupling Law on `PL S^3 x R`
 
+Superseded on 2026-04-14 by:
+
+- [S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md](./S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md)
+- [S3_TIME_BILINEAR_TENSOR_ACTION_NOTE.md](./S3_TIME_BILINEAR_TENSOR_ACTION_NOTE.md)
+
+This note remains correct as a statement about the **old linear-support-observable
+attempt**. It is no longer the current frontier, because Route 2 now has an
+exact bilinear microscopic tensor carrier `K_R`.
+
 **Date:** 2026-04-14  
 **Branch:** `codex/review-active`  
 **Ownership:** Route 2 / action-coupling pass  
@@ -159,4 +168,3 @@ The smallest new primitive still required is:
   `A1 x {E_x, T1x}`
 
 with exact endpoint coefficients and an exact support-to-slice coupling law.
-

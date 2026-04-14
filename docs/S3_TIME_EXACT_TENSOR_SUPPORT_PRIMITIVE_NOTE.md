@@ -1,5 +1,12 @@
 # Exact Tensor Support Primitive Attempt on `A1 x {E_x, T1x}`
 
+Superseded on 2026-04-14 by
+[S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md](./S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md).
+
+This note is still the correct obstruction for the **linear** support-observable
+attempt. The current frontier is the exact bilinear carrier `K_R`, which avoids
+that linear-support no-go.
+
 **Date:** 2026-04-14  
 **Branch:** `codex/review-active`  
 **Scope:** microscopic support block `A1 x {E_x, T1x}`  
