@@ -4,6 +4,12 @@ Use [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md) alongside
 this table. This file says what the paper may claim. The derivation /
 validation map says how each claim is evidenced and released.
 
+For the full branch-audited publication capture, also use:
+
+- [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md)
+- [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md)
+- [REMOTE_BRANCH_AUDIT_2026-04-14.md](./REMOTE_BRANCH_AUDIT_2026-04-14.md)
+
 ## External inputs
 
 The current paper conditions phenomenology on two explicit cosmological
@@ -58,6 +64,10 @@ cleanly or closed.
 | gravitational decoherence | bounded companion | arXiv companion only | `claude/youthful-neumann` grav-decoherence note + runner |
 | magnetic monopole mass | bounded companion | arXiv companion only | `claude/youthful-neumann` monopole note + runner |
 | GW echo timing | bounded / off-scope companion | later companion paper only | `claude/youthful-neumann` GW echo note + runner |
+
+The branch-audited quantitative portfolio behind these rows is catalogued in
+[PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md). Every intentionally excluded
+family is documented in [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md).
 
 ## Open paper gates
 

@@ -10,6 +10,9 @@ Use this package instead of browsing raw repo chronology.
 - [Nature package](./NATURE_PACKAGE.md)
 - [arXiv package](./ARXIV_PACKAGE.md)
 - [Claims table](./CLAIMS_TABLE.md)
+- [Publication matrix](./PUBLICATION_MATRIX.md)
+- [Frozen-out registry](./FROZEN_OUT_REGISTRY.md)
+- [Remote branch audit](./REMOTE_BRANCH_AUDIT_2026-04-14.md)
 - [Derivation / validation map](./DERIVATION_VALIDATION_MAP.md)
 - [Full claim ledger](./FULL_CLAIM_LEDGER.md)
 - [Results index](./RESULTS_INDEX.md)
@@ -28,6 +31,7 @@ Use this package instead of browsing raw repo chronology.
 - [Paper outline](../../PAPER_OUTLINE_2026-04-12.md)
 - [Flagship contribution statement](../../FLAGSHIP_PAPER_CONTRIBUTION_STATEMENT_NOTE.md)
 - [Gauge/matter closure gates](../../GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md)
+- [Remote branch audit](./REMOTE_BRANCH_AUDIT_2026-04-14.md)
 
 ## Current paper surface
 
@@ -67,6 +71,14 @@ Every promoted claim must have both:
 
 That contract lives in
 [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md).
+
+The repo-wide capture contract now also includes:
+
+- [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md)
+- [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md)
+
+Those files exist so bounded and frozen-out work is not silently lost while the
+flagship claims remain disciplined.
 
 ## Immediate editorial objective
 

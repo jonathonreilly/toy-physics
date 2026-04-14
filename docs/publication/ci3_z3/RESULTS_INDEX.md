@@ -6,6 +6,10 @@ branch.
 For the claim-by-claim derivation/validation pairing, use
 [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md).
 
+For the repo-wide capture across remote branches and branch-local workstreams,
+use [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md) and
+[REMOTE_BRANCH_AUDIT_2026-04-14.md](./REMOTE_BRANCH_AUDIT_2026-04-14.md).
+
 ## Main-text core
 
 | Section | Note | Runner |
@@ -58,3 +62,10 @@ For the claim-by-claim derivation/validation pairing, use
   represented in [CLAIMS_TABLE.md](./CLAIMS_TABLE.md).
 - No manuscript section should rely on a claim that is missing from
   [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md).
+
+## Bounded and frozen-out surfaces
+
+- The observation-facing quantitative portfolio is catalogued in
+  [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md).
+- Important excluded workstreams are catalogued in
+  [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md).

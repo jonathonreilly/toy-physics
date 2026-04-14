@@ -14,6 +14,12 @@ This file is stricter than a backlog and broader than the retained paper
 surface. It exists so claims are not silently lost between `review-active`,
 `publication-prep`, `main`, and the Claude worktree.
 
+The package now uses three linked capture documents:
+
+- [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md) for one-line status capture
+- this ledger for claim-family reasoning and bucket discipline
+- [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md) for intentionally excluded work
+
 ## Bucket rules
 
 ### `promoted`

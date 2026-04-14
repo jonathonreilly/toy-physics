@@ -23,6 +23,14 @@ is not to widen the claim surface, but to make the theorem stack explicit,
 preserve bounded phenomenology honestly, and keep the negative results that stop
 the project from drifting into overclaim.
 
+The full branch-audited publication capture is now explicit:
+
+- retained flagship claims live in [CLAIMS_TABLE.md](./CLAIMS_TABLE.md)
+- the full quantitative and workstream portfolio lives in
+  [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md)
+- intentionally excluded families live in
+  [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md)
+
 The working framework sentence is:
 
 > We take `Cl(3)` on `Z^3` as the physical theory. Everything else is derived.

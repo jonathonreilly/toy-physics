@@ -35,6 +35,11 @@ than a full-unification victory claim. The present letter is organized around
 the retained theorem surface only. Bounded phenomenological bridges remain
 valuable, but they are not part of the core claim stack of this version.
 
+The broader branch-audited quantitative portfolio still exists, but it is kept
+separate from the retained theorem core. The canonical capture lives in
+[PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md), with intentionally excluded
+families documented in [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md).
+
 The present paper still uses a small explicit set of external inputs where the
 framework is not yet closed, but they are now cosmological only:
 `T_CMB = 2.7255 K` and `H_0 = 67.4 km/s/Mpc`, which specify the universe /

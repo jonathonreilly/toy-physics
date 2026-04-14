@@ -12,6 +12,15 @@ This document is the current publication-facing state for that framework. It
 supersedes older narrower retain audits where they conflict with the present
 paper surface.
 
+The package now also carries a branch-audited publication-capture layer:
+
+- [publication/ci3_z3/PUBLICATION_MATRIX.md](publication/ci3_z3/PUBLICATION_MATRIX.md)
+- [publication/ci3_z3/FROZEN_OUT_REGISTRY.md](publication/ci3_z3/FROZEN_OUT_REGISTRY.md)
+- [publication/ci3_z3/REMOTE_BRANCH_AUDIT_2026-04-14.md](publication/ci3_z3/REMOTE_BRANCH_AUDIT_2026-04-14.md)
+
+Those files exist so no branch-local result family is silently lost between the
+retained theorem core and the broader bounded portfolio.
+
 ## External inputs used in the current paper
 
 The framework sentence is ontological, not a claim that every phenomenological
