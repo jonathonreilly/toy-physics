@@ -650,6 +650,30 @@ New exact/bounded local shell-to-`3+1` lift extracted after that:
 - this removes the shell-to-`3+1` lift itself from the live blocker list on
   the current bridge surface
 
+New exact/bounded microscopic shell-action result extracted after that:
+
+- on the exterior domain with inner trace `Gamma_R`, the shell boundary energy
+  is the exact Schur complement of the lattice Laplacian
+- its gradient equals the microscopic shell trace flux exactly
+- on both the exact local `O_h` class and the broader finite-rank class, the
+  exact shell trace is the stationary point of the same microscopic sourced
+  boundary action
+- see `docs/OH_SCHUR_BOUNDARY_ACTION_NOTE.md`
+- this removes the microscopic shell-action gap on the current source classes
+
+## Current promotable gravity statement
+
+At this point the branch supports a real **restricted strong-field closure**
+statement:
+
+- on the exact local `O_h` star-supported source class, the framework has
+  exact shell source, exact same-charge bridge, exact local shell-to-`3+1`
+  static conformal lift, and exact microscopic Schur boundary action
+- on the broader finite-rank family, the same closure package persists with
+  only the already-controlled small within-orbit deformation
+
+See `docs/RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md`.
+
 ### Attack 3: only after metric closure, revisit horizon / echo claims
 
 Current gap:
