@@ -259,17 +259,15 @@ Cl(3) on Z^3                                [axiom]
 
 ### 5.3 Import status
 
-| Element | Previous | Now |
-|---------|----------|-----|
-| g_bare = 1 | CANONICAL | CANONICAL |
-| <P> = 0.5934 | COMPUTED | COMPUTED |
-| alpha_LM = alpha/u_0 (1 u_0) | DERIVED | DERIVED |
-| alpha_gauge = alpha/u_0^2 (2 u_0) | was IMPORTED | **DERIVED (Thm 6.5)** |
-| 2-loop QCD running | DERIVED | DERIVED (Cl(3) group theory) |
+| Element | Status |
+|---------|--------|
+| g_bare = 1 | CANONICAL (Cl(3) unit-norm generators) |
+| ⟨P⟩ = 0.5934 | COMPUTED (SU(3) MC at β = 6) |
+| α_LM = α_bare/u₀ | DERIVED (1 link per hop, Thm 6.5) |
+| α_gauge = α_bare/u₀² | DERIVED (2 links per vertex, Thm 6.5) |
+| 2-loop QCD running | DERIVED (Cl(3) group theory coefficients) |
 
-The chain has ZERO imports from outside the framework. The SM RGE is
-derived infrastructure (beta coefficients from the derived gauge group
-and matter content). See YT_EFT_BRIDGE_THEOREM.md.
+Zero imports. See YT_EFT_BRIDGE_THEOREM.md.
 
 ---
 
