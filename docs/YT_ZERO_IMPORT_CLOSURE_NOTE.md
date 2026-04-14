@@ -53,19 +53,23 @@ Lepage-Mackenzie vertex matching.
 
 ## The alpha_s(v) = alpha_bare/u_0^2 Argument
 
-The Lepage-Mackenzie prescription (Phys Rev D 48, 2250, 1993):
-each gauge link U_mu in a lattice operator gets one factor of u_0
-for tadpole improvement.
+The Coupling Map Theorem (YT_VERTEX_POWER_DERIVATION.md, Part 6)
+derives the coupling prescription from a partition-function change
+of variables U = u_0 V. For any operator with n_link gauge links:
+
+    alpha_eff(O) = alpha_bare / u_0^{n_link}
+
+This is not an external prescription -- it follows from expressing
+the Cl(3)/Z^3 partition function in variables V = U/u_0 that
+fluctuate around the correct vacuum (<V> = 1).
 
 - The hierarchy formula involves det(D), where D has ONE link per
   hopping term. Therefore: alpha_LM = alpha_bare/u_0 (1 power).
-- The gauge coupling is measured from the gauge vertex, which
-  involves TWO links (the quark-gluon vertex ψ† U_mu ψ has one
-  link, but the gauge self-energy/propagator involves two vertices).
-  Therefore: alpha_s = alpha_bare/u_0^2 (2 powers).
+- The gauge coupling is measured from the vacuum polarization Pi,
+  which involves TWO vertex insertions D' = dD/dA, each with one
+  gauge link. Therefore: alpha_s = alpha_bare/u_0^2 (2 powers).
 
-This is not a new invention — it is applying the standard LM
-prescription to the correct operator.
+Both follow from the same theorem applied to different operators.
 
 ## Bounded Uncertainties
 

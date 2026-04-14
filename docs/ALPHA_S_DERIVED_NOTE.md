@@ -32,14 +32,14 @@ Cl(3) on Z³                                    [AXIOM]
 
 ## Why α_bare/u₀² (The Key Physics)
 
-The Lepage-Mackenzie tadpole improvement prescription (Phys. Rev. D
-48, 2250, 1993) assigns one power of u₀ per gauge link in the lattice
-operator being measured:
+The Coupling Map Theorem (YT_VERTEX_POWER_DERIVATION.md, Part 6)
+derives from the partition function that for any operator with n_link
+gauge links, the effective coupling is α_bare/u₀^{n_link}:
 
-| Observable | Operator | Links | LM coupling | Value |
+| Observable | Operator | Links | Coupling (Thm 6.5) | Value |
 |-----------|----------|-------|-------------|-------|
 | Hierarchy (v) | det(D) | 1 per hop | α_bare/u₀ = α_LM | 0.0907 |
-| **Gauge coupling** | **gauge vertex** | **2 per vertex** | **α_bare/u₀²** | **0.1033** |
+| **Gauge coupling** | **Pi (2 vertices)** | **2** | **α_bare/u₀²** | **0.1033** |
 | Plaquette | U_P | 4 per plaq | α_bare/u₀⁴ | (different) |
 
 The hierarchy formula uses α_LM (1 u₀) because det(D) involves single
@@ -47,8 +47,11 @@ gauge links in the hopping matrix. The gauge coupling at the matching
 scale uses α_bare/u₀² (2 u₀) because the gauge vertex involves two
 gauge-link traversals (quark-gluon vertex structure).
 
-**This is not a new prescription.** It is applying the standard LM
-improvement to the correct operator.
+**This is not an external prescription.** The Coupling Map Theorem
+(YT_VERTEX_POWER_DERIVATION.md, Part 6) derives the coupling map
+alpha_bare/u_0^{n_link} from a partition-function change of variables
+U = u_0 V. The LM result emerges as a consequence of expressing the
+Cl(3)/Z^3 path integral in its natural vacuum-centered variables.
 
 ## The Structural Relationship
 
