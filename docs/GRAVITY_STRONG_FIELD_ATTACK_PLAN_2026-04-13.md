@@ -747,6 +747,19 @@ that:
 - this removes the most obvious “hidden nonlinear local scalar bridge” escape
   hatch from the broader finite-support class as well
 
+New bounded full-generality obstruction extracted after that:
+
+- the branch now has a credible route to a coarse-grained scalar exterior law
+  with sharply reduced residuals on the exact local `O_h` and finite-rank
+  source families, but this does **not** close full nonlinear GR
+- the remaining missing principle is now localized as a tensorial matching /
+  completion theorem from the microscopic source data to the full 4D metric,
+  including non-spherical and time-dependent sectors
+- see `docs/FULL_GENERALITY_NONLINEAR_GR_NOTE.md`
+- this means the remaining gap is not “slightly better shell fitting”; it is
+  the absence of a theorem deriving the full lapse-shift-spatial metric from
+  the current scalar/static bridge machinery
+
 New exact/bounded bridge-variational result extracted after that:
 
 - the exact microscopic Schur boundary action admits a strict positive-definite
@@ -808,4 +821,5 @@ gravity.” The actual task is:
 With the latest support-class widening, that theorem is now best phrased for
 generic finite-support sources on the current box rather than only the
 star-supported benchmark geometry. The remaining freedom is now best understood
-as genuinely beyond the current static conformal local-scalar bridge class.
+as genuinely beyond the current static conformal local-scalar bridge class and
+ultimately as a missing tensorial completion principle for full 4D gravity.
