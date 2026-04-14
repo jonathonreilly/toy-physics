@@ -9,11 +9,14 @@ This is not a closure proof. It checks that the current atlas gives:
 3. the exact tensor-valued variational candidate;
 4. the exact unique symmetric `3+1` quotient kernel;
 5. a sharpened blocker stating that the missing primitive is a covariant
-   curvature-localization operator `Pi_curv`.
+   curvature-localization operator `Pi_curv`;
+6. a frame-dependence check showing that the current stack does not supply a
+   canonical `Pi_curv` from the quotient kernel alone.
 """
 
 from __future__ import annotations
 
+import math
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Sequence
@@ -119,6 +122,93 @@ def max_symmetry_error(matrix: Sequence[Sequence[float]]) -> float:
     return err
 
 
+def matmul(a: Sequence[Sequence[float]], b: Sequence[Sequence[float]]) -> list[list[float]]:
+    n = len(a)
+    m = len(b[0]) if b else 0
+    out = [[0.0 for _ in range(m)] for _ in range(n)]
+    for i in range(n):
+        for k in range(len(b)):
+            aik = a[i][k]
+            if abs(aik) <= 1e-15:
+                continue
+            for j in range(m):
+                out[i][j] += aik * b[k][j]
+    return out
+
+
+def transpose(a: Sequence[Sequence[float]]) -> list[list[float]]:
+    return [list(row) for row in zip(*a)]
+
+
+def conj(rot: Sequence[Sequence[float]], m: Sequence[Sequence[float]]) -> list[list[float]]:
+    return matmul(matmul(transpose(rot), m), rot)
+
+
+def sym(i: int, j: int, n: int = 4) -> list[list[float]]:
+    m = [[0.0 for _ in range(n)] for _ in range(n)]
+    if i == j:
+        m[i][j] = 1.0
+    else:
+        scale = 2.0 ** 0.5
+        m[i][j] = 1.0 / scale
+        m[j][i] = 1.0 / scale
+    return m
+
+
+def diag(vals: Sequence[float]) -> list[list[float]]:
+    n = len(vals)
+    m = [[0.0 for _ in range(n)] for _ in range(n)]
+    for i, v in enumerate(vals):
+        m[i][i] = float(v)
+    return m
+
+
+def canonical_polarization_frame() -> list[list[list[float]]]:
+    """A fixed lapse/shift/trace/shear basis on the symmetric `3+1` sector."""
+
+    sqrt2 = 2.0 ** 0.5
+    sqrt3 = 3.0 ** 0.5
+    sqrt6 = 6.0 ** 0.5
+    return [
+        sym(0, 0),
+        sym(0, 1),
+        sym(0, 2),
+        sym(0, 3),
+        diag((0.0, 1.0 / sqrt3, 1.0 / sqrt3, 1.0 / sqrt3)),
+        diag((0.0, 1.0 / sqrt2, -1.0 / sqrt2, 0.0)),
+        diag((0.0, 1.0 / sqrt6, 1.0 / sqrt6, -2.0 / sqrt6)),
+        sym(1, 2),
+        sym(1, 3),
+        sym(2, 3),
+    ]
+
+
+def rotated_polarization_frame(theta: float) -> list[list[list[float]]]:
+    """Rotate the spatial `1-2` plane of the canonical polarization frame."""
+
+    c = math.cos(theta)
+    s = math.sin(theta)
+    rot = [
+        [1.0, 0.0, 0.0, 0.0],
+        [0.0, c, -s, 0.0],
+        [0.0, s, c, 0.0],
+        [0.0, 0.0, 0.0, 1.0],
+    ]
+    return [conj(rot, basis) for basis in canonical_polarization_frame()]
+
+
+def response_vector(
+    h: Sequence[Sequence[float]],
+    frame: Sequence[Sequence[Sequence[float]]],
+    d: Sequence[float],
+) -> list[float]:
+    return [bilinear(h, basis, d) for basis in frame]
+
+
+def max_abs_delta(a: Sequence[float], b: Sequence[float]) -> float:
+    return max(abs(x - y) for x, y in zip(a, b))
+
+
 def main() -> int:
     obs = read(OBSERVABLE)
     route2 = read(ROUTE2)
@@ -137,6 +227,18 @@ def main() -> int:
 
     scalar_direct = bilinear(I, I, d)
     scalar_expected = -sum(1.0 / (x * x) for x in d)
+
+    h_test = (
+        (1.0, 0.35, -0.22, 0.18),
+        (0.35, -0.75, 0.14, 0.07),
+        (-0.22, 0.14, 0.41, -0.19),
+        (0.18, 0.07, -0.19, -0.28),
+    )
+    frame_a = canonical_polarization_frame()
+    frame_b = rotated_polarization_frame(math.pi / 6.0)
+    resp_a = response_vector(h_test, frame_a, d)
+    resp_b = response_vector(h_test, frame_b, d)
+    frame_delta = max_abs_delta(resp_a, resp_b)
 
     checks = [
         Check(
@@ -183,8 +285,15 @@ def main() -> int:
         ),
         Check(
             "curvature-localization blocker isolates the missing primitive",
-            has(curv, "Pi_curv") and has(curv, "covariant `3+1` curvature-localization operator"),
-            "the missing object is now named explicitly",
+            has(curv, "Pi_curv")
+            and has(curv, "covariant `3+1` polarization frame")
+            and has(curv, "projector bundle"),
+            "the missing object is now named as a frame primitive plus Pi_curv",
+        ),
+        Check(
+            "localization coefficients depend on frame choice",
+            frame_delta > 1e-6,
+            f"max channel delta across two valid polarization frames = {frame_delta:.3e}",
         ),
     ]
 
@@ -203,6 +312,9 @@ def main() -> int:
     print(f"gram_rank       = {rank(gram)}")
     print(f"gram_size       = {len(gram)}")
     print(f"symmetry_error  = {max_symmetry_error(gram):.12e}")
+    print(f"frame_delta     = {frame_delta:.12e}")
+    print(f"resp_a[0:4]     = {[f'{x:.6e}' for x in resp_a[:4]]}")
+    print(f"resp_b[0:4]     = {[f'{x:.6e}' for x in resp_b[:4]]}")
 
     print("\n" + "=" * 78)
     print("SUMMARY")
@@ -215,7 +327,8 @@ def main() -> int:
             "Direct-universal progress: the scalar observable principle and the "
             "3+1 lift now support an exact tensor-valued variational candidate "
             "with a unique symmetric quotient kernel, but the exact curvature-"
-            "localization operator is still missing."
+            "localization operator is still missing and is frame-dependent on "
+            "the current stack."
         )
         return 0
 

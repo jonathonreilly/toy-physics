@@ -27,6 +27,12 @@ It does **not** yet give:
 So the remaining gap is no longer a scalar or quotient-uniqueness problem.
 It is the missing localization map itself.
 
+The current runner now also checks whether that localization map can be
+reconstructed from the present quotient kernel plus a choice of channel frame.
+It cannot. Two valid `3+1` polarization frames give different localized
+channel coefficients for the same tensor candidate, so the current stack does
+not supply a canonical `Pi_curv`.
+
 ## What is exact already
 
 ### Scalar generator
@@ -84,13 +90,16 @@ dynamics law.
 
 The smallest honest missing object is now:
 
-> a covariant `3+1` curvature-localization operator `Pi_curv` that maps the
-> unique symmetric Hessian kernel to the lapse/shift/spatial Einstein/Regge
-> curvature decomposition on `PL S^3 x R`.
+> a covariant `3+1` polarization frame, or equivalent projector bundle, that
+> canonically splits the unique symmetric Hessian kernel into lapse, shift,
+> and spatial trace/shear channels before localization.
 
-Equivalently, the missing primitive is an exact tensor-valued localization map
-that turns the quotient kernel into a curvature law rather than merely a
-bilinear form.
+Equivalently, the missing primitive is still a covariant `3+1`
+curvature-localization operator `Pi_curv`, but the current stack shows that
+`Pi_curv` is not derivable without that extra frame primitive.
+
+The localization operator itself would then turn the quotient kernel into a
+curvature law rather than merely a bilinear form.
 
 ## Honest status
 

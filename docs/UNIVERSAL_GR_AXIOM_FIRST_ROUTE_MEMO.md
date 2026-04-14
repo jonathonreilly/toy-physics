@@ -148,8 +148,17 @@ The remaining blocker is therefore:
 - if not, what is the single missing primitive needed to make that
   localization exact?
 
-The sharper blocker note now names the missing primitive explicitly as a
-covariant `3+1` curvature-localization operator `Pi_curv`.
+The latest blocker audit sharpens this further:
+
+- the quotient kernel is unique
+- the localized channel coefficients change when the valid `3+1`
+  polarization frame is changed
+- so the current stack does not supply a canonical `Pi_curv`
+
+The missing primitive is therefore not just `Pi_curv` itself. It is a
+covariant `3+1` polarization frame, or equivalent projector bundle, that
+canonically splits the symmetric kernel into lapse, shift, and spatial
+trace/shear channels before curvature localization.
 
 ## Formal support check
 
