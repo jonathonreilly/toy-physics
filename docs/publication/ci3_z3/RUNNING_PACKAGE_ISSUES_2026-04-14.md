@@ -33,7 +33,12 @@ into work history.
 single place to find reusable subderivations and theorem tools for closing the
 remaining stack.
 
-**Fix:** added [DERIVATION_ATLAS.md](./DERIVATION_ATLAS.md).
+**Fix:** added and expanded [DERIVATION_ATLAS.md](./DERIVATION_ATLAS.md) into
+the canonical main-branch toolbox for:
+
+- retained derivation components
+- closed subderivations on open lanes
+- canonical authority selection when multiple route variants existed
 
 ## Still open / follow-up
 
@@ -86,6 +91,20 @@ The next writing pass still needs:
 The matrix already captures the rows, but some families still point to mixed
 route-history notes. Over time, each bounded row should converge toward one
 current authority note on `main`.
+
+### `I07` Some canonical atlas rows still depend on umbrella notes
+
+The derivation atlas is now broad enough to function as the main toolbox, but a
+few retained matter rows still point to umbrella authorities such as
+`GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md` instead of fully split standalone
+component notes. That is acceptable for now, but the long-term cleaner state is
+one standalone canonical note per atlas row.
+
+### `I08` Imported tool notes still carry some branch-local headers
+
+Several newly imported toolbox notes still mention their source branch/date
+context in the document header. The authority paths are now on `main`, so this
+is only a documentation-polish issue, not a logic or package-consistency gap.
 
 ## Audit rule
 
