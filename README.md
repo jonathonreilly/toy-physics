@@ -1,83 +1,68 @@
-# Discrete Event-Network Physics Repo
+# Physics Repo
 
-This repo is a research codebase for discrete graph- and lattice-based toy
-physics architectures. It is no longer small enough to navigate by chronology,
-so the repo now has an explicit navigation layer.
+This repo contains several generations of discrete-physics work. The current
+flagship publication surface is the **`Cl(3)` on `Z^3`** program. A reviewer
+should not infer the current claim surface from file prominence or raw repo
+chronology.
 
-## Start Here
+## Start Here If You Are Reviewing The Current Paper
 
-- Current entrypoint:
-  [`docs/START_HERE.md`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/docs/START_HERE.md)
-- Lane map:
-  [`docs/repo/LANE_STATUS_BOARD.md`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/docs/repo/LANE_STATUS_BOARD.md)
-- Repo organization:
-  [`docs/repo/REPO_ORGANIZATION.md`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/docs/repo/REPO_ORGANIZATION.md)
-- Root-file guide:
-  [`docs/repo/ROOT_FILE_GUIDE.md`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/docs/repo/ROOT_FILE_GUIDE.md)
-- Lane manifests:
-  [`docs/lanes/README.md`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/docs/lanes/README.md)
-- Publication-discovery log:
-  [`docs/POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/docs/POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md)
-- Publication-discovery audit:
-  [`docs/PUBLICATION_DISCOVERY_AUDIT_2026-04-11.md`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/docs/PUBLICATION_DISCOVERY_AUDIT_2026-04-11.md)
-- Retained runner map:
-  [`docs/CANONICAL_HARNESS_INDEX.md`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/docs/CANONICAL_HARNESS_INDEX.md)
-- Bug / rerun workflow:
-  [`docs/repo/RETEST_PLAYBOOK.md`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/docs/repo/RETEST_PLAYBOOK.md)
-- Recent frontier retain audit:
-  [`docs/CLAUDE_FRONTIER_RETAIN_AUDIT_2026-04-11.md`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/docs/CLAUDE_FRONTIER_RETAIN_AUDIT_2026-04-11.md)
+1. Read [docs/CURRENT_FLAGSHIP_ENTRYPOINT_2026-04-14.md](/Users/jonreilly/Projects/Physics/docs/CURRENT_FLAGSHIP_ENTRYPOINT_2026-04-14.md)
+2. Then use the curated publication package on branch `codex/publication-prep`
+   under `docs/publication/ci3_z3/`
+3. Treat the publication matrix and claim ledger there as the canonical capture
+   surface
 
-## Current Repo Reality
+## Current Flagship Paper Surface
 
-- **Primary retained lane:** staggered fermion with corrected parity coupling
-- **Cleanest retained directional result:** exact lattice-force canonical card
-- **Strongest graph-native companion package:** cycle battery, scaled cycle
-  battery, self-gravity, two-field wave, retarded closure, and DAG
-  compatibility
-- **Main open blocker:** no frozen sign-selective endogenous irregular-graph
-  observable
-- **Exploratory reopen:** emergent geometry growth
+Retained core:
 
-The older mirror, ordered-lattice, action-power, and coin-walk programs are
-still in the repo. They are indexed as historical or bounded lanes, not
-deleted.
+- `Cl(3)` on `Z^3` as the working physical theory
+- weak-field gravity through the Poisson / Newton chain
+- weak-field WEP and time dilation on that same retained gravity surface
+- restricted strong-field gravity closure on the current star-supported
+  finite-rank class
+- exact native `SU(2)`
+- graph-first structural `SU(3)`
+- anomaly-forced `3+1`
+- derived electroweak scale `v = 245.08 GeV` (`0.46%` low relative to `246.22 GeV`)
+- retained `S^3` compactification / topology closure
+- full-framework one-generation matter closure
+- retained three-generation matter structure
+- exact `I_3 = 0`
+- exact CPT on the free staggered lattice
 
-## Whole-Repo Program Families
+Observation-facing bounded portfolio:
 
-This repo now treats `main` as a set of major lane families, not one flat pile
-of scripts:
+- DM ratio `R = 5.48` vs `5.47`
+- zero-import `alpha_s(M_Z) = 0.1182`
+- best import-allowed `m_t = 171.0 GeV`
+- zero-import `m_t = 165.4 GeV`
+- CKM magnitude package
+- cosmology companions such as `Omega_Lambda`, `n_s`, `w = -1`
+- Higgs and sharp companion predictions
 
-- current mainline: staggered fermion + parity coupling
-- exact historical flagship: mirror / exact geometry / `Z2 x Z2`
-- historical retained bridge: ordered lattice / dense spent-delay
-- historical retained bridge: nearest-neighbor refinement
-- historical retained bridge: structured chokepoint / generated symmetry
-- historical bounded families: action-power / valley-linear / dimension-dependent kernel
-- historical bounded families: Gate B / generated geometry / source-resolved
-- historical blocked lane: coin / chiral / Dirac-walk
-- historical controls: scalar / KG and moonshot horizon probes
+Live flagship gates:
 
-Use the lane board, not file-name prominence, to know which one you are in.
+1. DM relic mapping
+2. renormalized `y_t` matching
+3. CKM / quantitative flavor closure
 
-## Repo Layout
+## What This Repo Also Contains
 
-- `scripts/`
-  - runners and probes
-  - `frontier_*` is the active frontier namespace
-- `scripts/README.md`
-  - code-side navigation guide
-- `docs/`
-  - retained notes, synthesis, audits, and historical writeups
-- `docs/repo/`
-  - organization and navigation docs
-- `docs/lanes/`
-  - lane-by-lane manifests for the whole repo
-- `outputs/`, `logs/`
-  - run artifacts
+The repo still contains older programs, bridge attempts, and historical
+families. They are not deleted, but they are not the default paper entrypoint.
 
-## Rules For Reading Claims
+If you need repo archaeology rather than the current paper surface, use:
 
-- Use the lane board before trusting an old flagship note.
-- Keep exact lattice-force claims separate from irregular-graph proxy claims.
-- If a result is not represented by a runner + retained note + lane status,
-  treat it as exploratory.
+- [docs/START_HERE.md](/Users/jonreilly/Projects/Physics/docs/START_HERE.md)
+- [docs/repo/LANE_STATUS_BOARD.md](/Users/jonreilly/Projects/Physics/docs/repo/LANE_STATUS_BOARD.md)
+- [docs/repo/REPO_ORGANIZATION.md](/Users/jonreilly/Projects/Physics/docs/repo/REPO_ORGANIZATION.md)
+
+## Reading Rule
+
+- Do not use old flagship notes as authority without checking the current
+  publication package.
+- If a result is not in the publication matrix, it is not publication-captured.
+- If it is in the matrix but not in the claims table, it is not on the retained
+  flagship claim surface.
