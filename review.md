@@ -220,10 +220,17 @@ Current safe state:
   - the one-loop bookkeeping bug (`b_2`) is corrected
   - the lattice matching coefficient is already computed at sub-percent scale
   - V-scheme to `\overline{MS}` conversion is a real narrowing of the old gap
+- electroweak inputs are no longer the productive objection on this lane
+  - on the current Codex-side paper surface, using `v`, low-energy electroweak
+    inputs, and the strengthened electroweak/hierarchy package is fair game
 - therefore still bounded:
   - the old split-boundary objection is no longer the best description
   - the new script really does derive one framework coupling and enforce
     `y_t = g_s / sqrt(6)` at the framework boundary
+  - but `alpha_s` is still not a strict zero-import standalone closure
+    - `g_bare = 1` remains bounded, not theorem-grade exact
+    - the absolute plaquette-to-`V` and `V`-to-`\overline{MS}` matching still
+      uses imported lattice/QCD coefficients
   - but the framework `alpha_s(M_Pl)` is about `4.4x` the perturbative SM
     value obtained by running observed `alpha_s(M_Z)` upward
   - perturbative running of the framework coupling breaks down near
@@ -236,6 +243,11 @@ Current safe state:
     couplings” problem
   - the new “gauge crossover theorem” therefore still does not close the lane;
     it leaves the gauge trajectory observed-seeded
+  - its exactness language still outruns the current proof surface
+    - Feshbach-preserved gauge coupling and projected Ward-identity
+      preservation are supported by strong formal reasoning plus finite
+      numerical verification, not yet a full all-orders continuum matching
+      proof
   - thresholded running down to `M_Z` still matters after that crossover
   - the new scheme-independence theorem is useful UV support, but it does not
     close the lane
@@ -248,8 +260,9 @@ Paper-safe read:
 
 > The UV theorem surface is strong, but the remaining issue is now a concrete
 > framework-to-SM crossover problem: the common framework boundary is real,
-> but the gauge-side handoff to the perturbative running used below `M_Pl` is
-> not yet derived from the same framework surface.
+> but the absolute strong-coupling normalization and the gauge-side handoff to
+> the perturbative running used below `M_Pl` are not yet derived on one fully
+> framework-native surface.
 
 Best attack:
 
@@ -262,13 +275,15 @@ Best attack:
    - extract the induced low-energy gauge-kinetic coefficient
    - use that as the finite crossover map from the framework boundary to the
      perturbative SM trajectory
-3. keep `y_t / g_3 = 1/sqrt(6)` on that effective boundary, not on the raw
+3. if possible, replace or derive the imported plaquette-to-`V` and
+   `V`-to-`\overline{MS}` coefficients on the same framework surface
+4. keep `y_t / g_3 = 1/sqrt(6)` on that effective boundary, not on the raw
    plaquette coupling
-4. only then rerun the full thresholded 2-loop chain
-5. lattice step-scaling is fallback if the background-field effective-coupling
+5. only then rerun the full thresholded 2-loop chain
+6. lattice step-scaling is fallback if the background-field effective-coupling
    route fails cleanly
-6. if a low-energy gauge anchor is still needed after that, isolate it
-   explicitly and keep the lane bounded
+7. if a low-energy gauge anchor or imported matching coefficient is still
+   needed after that, isolate it explicitly and keep the lane bounded
 
 ### 3. CKM / quantitative flavor closure
 
@@ -343,7 +358,9 @@ Only report work as promotable when the exact blocker for that lane is gone.
 
 - DM: relic bridge itself must be closed, not just the old `g_bare` objection
 - `y_t`: actual framework-to-perturbative gauge crossover must be derived, not
-  just the common UV boundary on the strong side
+  just the common UV boundary on the strong side, and not while the viable
+  path still leans on imported matching coefficients or an observed-seeded
+  gauge trajectory
 - CKM: `V_cb` / `V_ub` must be quantitatively sharpened through absolute
   `S_23`, `c_13`, and phase control, not just structure or ratio routes
 

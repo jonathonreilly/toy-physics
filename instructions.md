@@ -279,12 +279,17 @@ language. Exact blockers to gravity-companion promotion:
 
 - `docs/YT_FLAGSHIP_CLOSURE_NOTE.md`
 - `docs/YT_BOUNDARY_RESOLUTION_NOTE.md`
+- `docs/YT_GAUGE_CROSSOVER_THEOREM.md`
+- `docs/G_BARE_DERIVATION_NOTE.md`
 - `docs/WILSONIAN_EFT_DERIVATION_NOTE.md`
 - `docs/YT_MATCHING_COMPUTED_NOTE.md`
 - `docs/YT_CL3_PRESERVATION_NOTE.md`
 - `docs/RENORMALIZED_YT_THEOREM_NOTE.md`
+- `scripts/frontier_alpha_s_determination.py`
 - `scripts/frontier_yt_cl3_preservation.py`
 - `scripts/frontier_yt_boundary_resolution.py`
+- `scripts/frontier_yt_unified_boundary.py`
+- `scripts/frontier_yt_gauge_crossover_theorem.py`
 - `scripts/frontier_yt_matching_coefficient.py`
 - `scripts/frontier_yt_matching_computed.py`
 - `scripts/frontier_wilsonian_eft.py`
@@ -313,41 +318,62 @@ language. Exact blockers to gravity-companion promotion:
    - the 1-loop bookkeeping bug is fixed
    - the lattice matching coefficient itself is already narrowed to
      sub-percent scale
-4. the new scheme-independence theorem is a useful UV sub-result, not lane
+4. electroweak inputs are no longer the productive objection here
+   - do **not** spend time arguing that the lane is open merely because the
+     scripts use electroweak inputs such as `v`, `sin^2(theta_W)`, or
+     low-energy electroweak boundary data
+   - on the current Codex-side paper surface, those are fair game
+   - the remaining blockers are instead the strong-coupling normalization and
+     crossover map
+5. `alpha_s` itself is still not a zero-import standalone closure
+   - `g_bare = 1` is still only **BOUNDED**, not theorem-grade exact
+   - the current `alpha_s` runner still uses imported plaquette-to-`V` and
+     `V`-to-`\overline{MS}` matching coefficients
+   - unless you actually internalize those coefficients on the same framework
+     surface, do **not** call the absolute strong coupling “zero import”
+6. the new scheme-independence theorem is a useful UV sub-result, not lane
    closure
    - it strengthens the claim that the UV ratio `y_t / g_3 = 1/sqrt(6)` is
      protected
    - it does **not** derive the framework-to-SM gauge crossover
    - do **not** cite the current script as an all-orders vertex-renormalization
      proof; it checks Ward / propagator identities, not full `Z_y / Z_g`
-5. the live blocker is now one **self-consistent** framework-to-SM crossover
+7. the live blocker is now one **self-consistent** framework-to-SM crossover
    - derive how the strong framework boundary hands off to the perturbative
      SM gauge trajectory
    - the preferred route is a one-shot non-perturbative finite matching
      theorem on the actual Hamiltonian, not a huge step-scaling march
    - lattice step-scaling is fallback if that cleaner route fails
-6. thresholded running still matters, but the conceptual mismatch is now
+8. thresholded running still matters, but the conceptual mismatch is now
    “framework strong boundary vs perturbative SM running”
    - the common boundary relation `y_t = g_3/sqrt(6)` is now enforced on the
      framework surface
    - what is still missing is the framework derivation of the gauge-side
      crossover to the perturbative trajectory used below `M_Pl`
-7. the new “gauge crossover theorem” is still not closure authority
+9. the new “gauge crossover theorem” is still not closure authority
    - the current script still seeds the gauge trajectory from observed
      `alpha_s(M_Z)` when it builds `g_3(M_Pl)`
    - so the successful `m_t` number is still produced on an
      observed-seeded gauge path, not a fully framework-derived crossover map
+   - its exactness claims around Feshbach-preserved gauge coupling and the
+     projected Ward identity still outrun the current proof surface
+10. the load-bearing external content is now very specific
+   - if you can derive the plaquette-to-`V` and `V`-to-`\overline{MS}`
+     coefficients on the framework surface, or replace them with a native
+     background-field crossover theorem, the lane changes materially
+   - if you cannot, keep the lane bounded and say so plainly
 
 **What counts as success**
 
 - best-case success:
-  - compute one actual lattice/V-scheme to `\\overline{MS}` boundary at `M_Pl`
-    that sets both `g_3` and `y_t`
+  - derive one actual framework-native plaquette/lattice to
+    `\\overline{MS}` crossover at `M_Pl` that sets both `g_3` and `y_t`
   - run the thresholded 2-loop chain with that common boundary and close the
     residual
 - second-best success:
-  - isolate the lane to one explicit imported low-energy anchor
-    (for example `alpha_s(M_Z)`) and state that honestly
+  - isolate the lane to the remaining explicit imported ingredients
+    (for example bounded `g_bare = 1` and/or imported matching coefficients)
+    and state that honestly
 - minimum acceptable success:
   - keep the flagship note honest and bounded with the residual written as a
     self-consistent boundary problem rather than a vague “continuum bridge”
@@ -356,6 +382,8 @@ language. Exact blockers to gravity-companion promotion:
 
 - re-proving Feshbach on toy systems
 - presenting corrected beta coefficients as if that alone closes the lane
+- calling `alpha_s` or `y_t` “zero import” while the absolute boundary still
+  comes through imported plaquette-to-`V` / `V`-to-`\overline{MS}` matching
 - using observed `alpha_s(M_Z)` to build `g_3(M_Pl)` while calling the full
   high-scale boundary framework-derived
 - using one high-scale coupling for `y_t` and a different one for `g_3`
@@ -374,11 +402,15 @@ language. Exact blockers to gravity-companion promotion:
      already verified on the real Hamiltonian
    - extract the induced low-energy gauge-kinetic coefficient
    - use that as the one-shot framework-to-SM crossover map
-4. keep `y_t / g_3 = 1/sqrt(6)` on that effective boundary, not on the raw
+4. in parallel, if there is a clean route, derive or replace the imported
+   plaquette-to-`V` and `V`-to-`\overline{MS}` coefficients on the same
+   framework surface
+5. keep `y_t / g_3 = 1/sqrt(6)` on that effective boundary, not on the raw
    plaquette coupling
-5. only then run the full thresholded 2-loop chain from that common handoff
-6. lattice step-scaling is fallback if 3-5 fail cleanly
-7. if all of that fails, isolate exactly which low-energy gauge anchor is
+6. only then run the full thresholded 2-loop chain from that common handoff
+7. lattice step-scaling is fallback if 3-6 fail cleanly
+8. if all of that fails, isolate exactly which low-energy gauge anchor or
+   imported matching coefficient is
    still imported and keep the lane bounded
 
 ### Target C: CKM / flavor
