@@ -1,6 +1,6 @@
 # CI(3) / Z^3 Publication State
 
-**Date:** 2026-04-13  
+**Date:** 2026-04-14  
 **Branch:** `codex/publication-prep`  
 **Status:** Codex-owned publication authority for the current flagship paper surface
 
@@ -20,6 +20,22 @@ The package now also carries a branch-audited publication-capture layer:
 
 Those files exist so no branch-local result family is silently lost between the
 retained theorem core and the broader bounded portfolio.
+
+## Matrix-aligned paper framework
+
+The publication package now has four layers:
+
+1. retained core
+2. observation-facing bounded portfolio
+3. live flagship gates
+4. frozen-out but documented families
+
+This state doc defines the retained paper framework inside that broader capture
+surface. The full package must therefore be read together with:
+
+- [publication/ci3_z3/PUBLICATION_MATRIX.md](publication/ci3_z3/PUBLICATION_MATRIX.md)
+- [publication/ci3_z3/FULL_CLAIM_LEDGER.md](publication/ci3_z3/FULL_CLAIM_LEDGER.md)
+- [publication/ci3_z3/FROZEN_OUT_REGISTRY.md](publication/ci3_z3/FROZEN_OUT_REGISTRY.md)
 
 ## External inputs used in the current paper
 
@@ -88,6 +104,21 @@ The current retained backbone is:
   - exact orbit algebra `8 = 1 + 1 + 3 + 3`
   - physical species structure on the lattice surface
 
+## Observation-facing bounded portfolio that the framework now covers
+
+These are not all promoted into the retained backbone, but they are part of the
+current publication surface and must stay visible through the matrix and
+ledger:
+
+- DM ratio `R = 5.48` vs `5.47`
+- zero-import `\alpha_s(M_Z) = 0.1182`
+- zero-import `m_t = 165.4 GeV`
+- best import-allowed `m_t = 171.0 GeV`
+- CKM magnitude package with strong `|V_us|`, `|V_cb|`, `|V_ub|`
+- Cabibbo and partial Jarlskog companions
+- `\Omega_\Lambda`, `n_s`, `w = -1`, and `\Lambda` cosmology companions
+- Higgs, BH-entropy, proton-lifetime, Lorentz, and monopole companions
+
 ## Exact supporting theorems now safe to carry
 
 These are exact or exact-enough supporting results on the current paper
@@ -129,6 +160,9 @@ The remaining live paper gates are:
 2. renormalized `y_t` matching
 3. CKM / quantitative flavor closure
 
+Those are the only live flagship gates. Everything else in the package should
+now be legible as either retained, bounded, or explicitly frozen-out.
+
 Recent Claude work and direct Codex review materially narrowed the attack
 surface. The audit bar now remains:
 
@@ -158,6 +192,23 @@ section, but they are not yet retained closure:
 - Higgs mass / Coleman-Weinberg notes (`m_H` still bounded even though `v` is now derived)
 - proton lifetime, Lorentz-violation, BH-entropy, gravitational-decoherence,
   magnetic-monopole, and GW-echo companion predictions
+
+## Frozen-out work families
+
+The matrix and registry now explicitly track the major families that are not
+part of the retained flagship core:
+
+- DM quantitative companion portfolio
+- `y_t` / `\alpha_s` quantitative companion portfolio
+- CKM / flavor quantitative companion portfolio
+- cosmology companion portfolio
+- Higgs and mass-spectrum portfolio
+- gravity companions beyond retained weak-field plus restricted strong-field package
+- sharp companion predictions
+- branch-local inventories and stale strategy docs
+
+If a reviewer asks “what happened to X?”, the answer should now live in the
+matrix or registry rather than in branch-local notes only.
 
 ## Overnight audit additions tracked in the ledger
 

@@ -3,15 +3,22 @@
 ## Main claim
 
 > `Cl(3)` on `Z^3` yields exact `SU(2)`, graph-first structural `SU(3)`,
-> anomaly-forced `3+1`, retained `S^3` compactification / topology closure,
-> a full-framework one-generation Standard Model closure, a retained
-> three-generation matter structure in the same framework, and weak-field
-> gravity through the Poisson / Newton chain together with weak-field WEP and
-> gravitational time dilation.
+> anomaly-forced `3+1`, a derived electroweak scale `v`, retained `S^3`
+> compactification / topology closure, a full-framework one-generation
+> Standard Model closure, a retained three-generation matter structure in the
+> same framework, and weak-field gravity through the Poisson / Newton chain
+> together with weak-field WEP and gravitational time dilation.
+
+Current flagship quantitative anchor:
+
+- `v = 245.080424447914 GeV`
+- `0.4628%` low relative to `246.22 GeV`
 
 ## What belongs in the letter
 
+- [External reviewer guide](./EXTERNAL_REVIEWER_GUIDE.md)
 - [Nature draft](./NATURE_DRAFT.md)
+- [Publication matrix](./PUBLICATION_MATRIX.md)
 - [Derivation / validation map](./DERIVATION_VALIDATION_MAP.md)
 - [Full claim ledger](./FULL_CLAIM_LEDGER.md)
 - [Figure plan](./FIGURE_PLAN.md)
@@ -23,6 +30,7 @@
 - exact native `SU(2)`
 - graph-first structural `SU(3)`
 - anomaly-forced `3+1`
+- electroweak hierarchy / `v`
 - retained `S^3` compactification / topology closure
 - full-framework one-generation closure
 - three-generation matter structure in the framework
@@ -32,6 +40,8 @@
 
 ## What stays out of the letter body
 
+- the broader observation-facing bounded portfolio should be visible in the
+  package, but not all of it belongs in the letter body
 - bounded DM relic arguments
 - bounded weak-field GR-signature companions beyond Newton / Poisson / WEP /
   time-dilation
@@ -44,6 +54,7 @@
 Do not sell “full unification closure.” Sell:
 
 - a retained structural backbone
+- one closed quantitative flagship result (`v`)
 - explicit separation of retained vs bounded
 - three visible bridge problems still open
 

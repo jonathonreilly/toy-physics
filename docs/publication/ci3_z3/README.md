@@ -5,8 +5,26 @@ This directory is the publication-facing entrypoint for the current `Cl(3)` on
 
 Use this package instead of browsing raw repo chronology.
 
+## External reviewer read order
+
+If you are new to the repo, read these first:
+
+1. [External reviewer guide](./EXTERNAL_REVIEWER_GUIDE.md)
+2. [Publication state](../../CI3_Z3_PUBLICATION_STATE_2026-04-12.md)
+3. [Publication matrix](./PUBLICATION_MATRIX.md)
+4. [Claims table](./CLAIMS_TABLE.md)
+5. [Frozen-out registry](./FROZEN_OUT_REGISTRY.md)
+
+That path makes four things explicit:
+
+- retained core
+- observation-facing bounded portfolio
+- live gates
+- frozen-out but documented work
+
 ## Start here
 
+- [External reviewer guide](./EXTERNAL_REVIEWER_GUIDE.md)
 - [Nature package](./NATURE_PACKAGE.md)
 - [arXiv package](./ARXIV_PACKAGE.md)
 - [Claims table](./CLAIMS_TABLE.md)
@@ -43,14 +61,29 @@ Retained backbone:
 
 - weak-field gravity from the Poisson / Newton chain
 - weak-field WEP and time dilation as retained corollaries on that gravity surface
+- restricted strong-field gravity closure on the current star-supported
+  finite-rank class under the exact static conformal bridge
 - exact native `Cl(3)` / `SU(2)`
 - graph-first structural `SU(3)`
 - anomaly-forced `3+1`
+- electroweak hierarchy / `v`:
+  - `245.080424447914 GeV`
+  - `0.4628%` low relative to `246.22 GeV`
 - retained `S^3` compactification / topology closure
 - full-framework one-generation closure
 - three-generation matter structure in the framework
 - exact `I_3 = 0` theorem on the Hilbert surface
 - exact CPT theorem on the free staggered lattice
+
+Observation-facing bounded portfolio:
+
+- DM ratio `R = 5.48` vs `5.47`
+- zero-import `\alpha_s(M_Z) = 0.1182`
+- best import-allowed `m_t = 171.0 GeV`
+- zero-import `m_t = 165.4 GeV`
+- CKM magnitude package with strong `|V_us|`, `|V_cb|`, `|V_ub|`
+- cosmology companions such as `\Omega_\Lambda`, `n_s`, `w = -1`
+- Higgs and sharp companion predictions
 
 Live high-impact gates:
 
