@@ -1,25 +1,25 @@
-# Physics Repo
+# Cl(3)/Z^3 Physics Framework
 
-This repo is a graph-first theoretical physics program built around one working
-axiom:
+This repository contains a discrete-axiom physics program built around one
+working premise:
 
 - physical theory is `Cl(3)` on `Z^3`
 
-The current flagship goal is not “collect every exploratory note.” It is to
-test whether that single discrete axiom can recover a serious unified package:
+The central question is:
 
-- gauge and matter structure
-- effective `3+1`
-- electroweak scale
-- gravity
-- and a broader prediction portfolio against observation
+> if the lattice is treated as physical rather than as a regulator, how much of
+> observed physics can be recovered from that single starting point?
 
-The repo contains both the current flagship paper surface and the older
-exploration history that led to it.
+The current audited paper surface on `main` is organized around that question.
+It includes:
 
-This branch is organized around the current `Cl(3)` on `Z^3` publication
-package. Review the package through the curated control plane, not raw repo
-chronology.
+- a retained theorem core
+- a broader bounded quantitative portfolio against observation
+- a small number of live flagship gates that are still being closed
+
+The repo also contains the work history that led to the current package, but
+the front door for external review is the curated publication surface, not raw
+repo chronology.
 
 Status labels used on this branch:
 
@@ -29,12 +29,18 @@ Status labels used on this branch:
 
 ## Start Here If You Are Reviewing The Current Paper
 
-1. [docs/CURRENT_FLAGSHIP_ENTRYPOINT_2026-04-14.md](docs/CURRENT_FLAGSHIP_ENTRYPOINT_2026-04-14.md)
-2. [docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md](docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md)
-3. [docs/publication/ci3_z3/README.md](docs/publication/ci3_z3/README.md)
-4. [docs/publication/ci3_z3/PUBLICATION_CONTROL_PLANE.md](docs/publication/ci3_z3/PUBLICATION_CONTROL_PLANE.md)
-5. [docs/publication/ci3_z3/PUBLICATION_MATRIX.md](docs/publication/ci3_z3/PUBLICATION_MATRIX.md)
-6. [docs/publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md](docs/publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md)
+1. [Current Flagship Entrypoint](docs/CURRENT_FLAGSHIP_ENTRYPOINT_2026-04-14.md)
+   - one-page statement of what the current paper is, what is retained, what
+     is bounded, and what is still open
+2. [External Reviewer Guide](docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md)
+   - the intended read order for an outside reviewer
+3. [Publication Matrix](docs/publication/ci3_z3/PUBLICATION_MATRIX.md)
+   - the master inventory of promoted, bounded, open, and frozen-out results
+4. [Quantitative Summary Table](docs/publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md)
+   - the compact prediction-versus-observation table
+
+If you need the package internals after that, use
+[docs/publication/ci3_z3/README.md](docs/publication/ci3_z3/README.md).
 
 ## Current Flagship Paper Surface
 
@@ -71,21 +77,10 @@ Live flagship gates:
 2. renormalized `y_t` matching
 3. CKM / quantitative flavor closure
 
-## What Else The Repo Contains
+## If You Want More Than The Current Paper
 
-This repo still contains older programs, bridge attempts, and historical
-families. They are not deleted, but they are not the current paper entrypoint.
+For repo history and older workstreams, start with
+[docs/START_HERE.md](docs/START_HERE.md).
 
-If you need repo archaeology instead of the flagship paper surface, use:
-
-- [docs/START_HERE.md](docs/START_HERE.md)
-- [docs/repo/LANE_STATUS_BOARD.md](docs/repo/LANE_STATUS_BOARD.md)
-- [docs/repo/REPO_ORGANIZATION.md](docs/repo/REPO_ORGANIZATION.md)
-- [docs/work_history/README.md](docs/work_history/README.md)
-
-## Reading Rule
-
-- If a result is not in the publication matrix, it is not publication-captured.
-- If it is in the matrix but not in the claims table, it is not on the
-  retained flagship claim surface.
-- If it is important but excluded, it should appear in the frozen-out registry.
+For claim status, the canonical inventory is the
+[Publication Matrix](docs/publication/ci3_z3/PUBLICATION_MATRIX.md).

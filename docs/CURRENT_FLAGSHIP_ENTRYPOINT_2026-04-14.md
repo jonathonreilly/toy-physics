@@ -6,15 +6,15 @@ surface
 
 This is the correct root-level entrypoint for an external reviewer.
 
-The program claim is simple to state:
+The program is simple to state:
 
 > start from the discrete axiom `Cl(3)` on `Z^3`, treat the lattice as
 > physical rather than as a regulator, and ask how much of observed physics can
 > be recovered from that one starting point.
 
-This repo is the working record of that program. The current paper surface is
-the audited subset of results that survived review and are organized for
-external reading.
+This repository is the working record of that program. The current paper
+surface is the audited subset of results that survived review and are organized
+for external reading.
 
 Status labels used below:
 
@@ -24,13 +24,15 @@ Status labels used below:
 
 ## What The Current Paper Actually Is
 
-The current flagship paper is **not** a summary of everything in this repo.
-It is a disciplined `Cl(3)` on `Z^3` package with:
+The current flagship paper is a disciplined `Cl(3)` on `Z^3` package with:
 
 1. a retained theorem core
 2. a broader observation-facing bounded portfolio
 3. three live flagship gates
 4. an explicit frozen-out registry so important work is not lost
+
+It is not intended as a claim that every exploratory result in the repository
+belongs on the current flagship surface.
 
 ## Retained Core
 
@@ -74,18 +76,23 @@ into the retained flagship surface.
 The authoritative publication package on this branch lives under:
 
 - [publication/ci3_z3/README.md](publication/ci3_z3/README.md)
+  - package map and reviewer-facing entry to the curated publication surface
 - [CI3_Z3_PUBLICATION_STATE_2026-04-12.md](CI3_Z3_PUBLICATION_STATE_2026-04-12.md)
+  - compact current-state summary of the flagship package
 - [publication/ci3_z3/PUBLICATION_MATRIX.md](publication/ci3_z3/PUBLICATION_MATRIX.md)
+  - canonical inventory of promoted, bounded, open, and frozen-out results
 - [publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md](publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md)
+  - compact prediction-versus-observation table
 - [publication/ci3_z3/FULL_CLAIM_LEDGER.md](publication/ci3_z3/FULL_CLAIM_LEDGER.md)
+  - explanatory claim ledger behind the matrix and drafts
 - [publication/ci3_z3/FROZEN_OUT_REGISTRY.md](publication/ci3_z3/FROZEN_OUT_REGISTRY.md)
+  - publication-relevant work intentionally kept out of the current flagship surface
 
 If you are reviewing the paper, that package is the authority surface.
 
-## Reading Rule
+## Claim Status Rule
 
-- If a result is not in the publication matrix, it is not publication-captured
-  yet.
-- If it is in the matrix but not in the claims table, it is not on the
-  retained flagship claim surface.
-- If it is important but excluded, it should appear in the frozen-out registry.
+- the publication matrix is the canonical inventory
+- the claims table is the promoted flagship claim surface
+- the frozen-out registry records important work that is not on the current
+  flagship surface

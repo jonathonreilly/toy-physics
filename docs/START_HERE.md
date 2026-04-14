@@ -3,13 +3,14 @@
 **Date:** 2026-04-14  
 **Purpose:** root-repo navigation entrypoint
 
-This repo is a graph-first physics program asking one concrete question:
+This repository is a discrete-axiom physics program asking one concrete
+question:
 
 > can a single discrete axiom, `Cl(3)` on `Z^3`, recover a nontrivial unified
 > physics package rather than only a toy model?
 
-The current answer on this branch is: partially yes. Some lanes are retained,
-some are quantitatively strong but still bounded, and a few flagship gates are
+The current answer on `main` is: partially yes. Some lanes are retained, some
+are quantitatively strong but still bounded, and a few flagship gates are
 still open.
 
 This repo is too large to understand by browsing filenames. There are two
@@ -31,17 +32,15 @@ Status labels used in the current package:
 Start with:
 
 1. [CURRENT_FLAGSHIP_ENTRYPOINT_2026-04-14.md](CURRENT_FLAGSHIP_ENTRYPOINT_2026-04-14.md)
+   - one-page overview of the current flagship paper surface
 2. [publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md](publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md)
+   - the read order for an outside reviewer
+3. [publication/ci3_z3/PUBLICATION_MATRIX.md](publication/ci3_z3/PUBLICATION_MATRIX.md)
+   - the canonical result inventory
+4. [publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md](publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md)
+   - the compact prediction-versus-observation table
 
-That document tells you:
-
-- what the current paper actually claims
-- what is retained
-- what is quantitatively strong but still bounded
-- what is still open
-- where the curated publication package lives
-
-Do **not** start with old lane summaries, old flagship notes, or raw
+Do **not** start with old lane summaries, side-branch notes, or raw
 chronology.
 
 ## If You Need Repo Archaeology
@@ -82,7 +81,8 @@ The current flagship publication package is:
 If you only want the current paper surface:
 
 1. [CURRENT_FLAGSHIP_ENTRYPOINT_2026-04-14.md](CURRENT_FLAGSHIP_ENTRYPOINT_2026-04-14.md)
-2. then the curated publication package under `docs/publication/ci3_z3/`
+2. [publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md](publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md)
+3. [publication/ci3_z3/PUBLICATION_MATRIX.md](publication/ci3_z3/PUBLICATION_MATRIX.md)
 
 If you want the rest of the repo after that:
 
