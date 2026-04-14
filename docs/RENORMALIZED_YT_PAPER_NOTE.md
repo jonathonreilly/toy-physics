@@ -8,15 +8,30 @@
 
 ## Status
 
-**CLOSED** on the reframed surface: the UV boundary condition
-y_t(M_Pl) = g_s(M_Pl)/sqrt(6) is protected non-perturbatively by Cl(3)
-centrality. SM RGE running to M_Z gives m_t = 174.2 GeV (+0.7%).
+**BOUNDED on the import-allowed paper surface.** The UV boundary condition
+`y_t(M_Pl) = g_s(M_Pl)/sqrt(6)` is protected non-perturbatively by Cl(3)
+centrality. On the import-allowed paper surface, SM RGE running to `M_Z`
+gives `m_t = 174.2 GeV (+0.7%)`.
+
+This note is **not** the current zero-import authority surface. The current
+zero-import authority is:
+
+- `docs/YT_BOUNDARY_THEOREM.md`
+- `docs/YT_ZERO_IMPORT_CLOSURE_NOTE.md`
 
 If Codex requires Z_Y(mu) = Z_g(mu) literally (i.e. equal renormalization
 constants at all scales), that identity is FALSE and physically wrong --
 the Yukawa and gauge couplings run independently in d=4. The correct
 "equivalent" is boundary condition protection, which is what this note
 establishes.
+
+What still keeps this note bounded:
+
+1. `alpha_s(M_Pl) = 0.092` is imported from the gauge-coupling lane.
+2. SM running below the crossover is still methodological rather than a
+   framework-native step-scaling theorem.
+3. The current branch authority for the physical endpoint is `v`, not a
+   Planck-boundary closure claim.
 
 ---
 

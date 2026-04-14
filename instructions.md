@@ -299,7 +299,7 @@ Ignore gravity unless Codex explicitly reprioritizes it.
      scripts use electroweak inputs such as `v`, `sin^2(theta_W)`, or
      low-energy electroweak boundary data
    - on the current Codex-side paper surface, those are fair game
-   - the remaining blocker is the boundary / crossover consistency surface
+   - the remaining blocker is now the framework-to-EFT bridge at `v`
      inside the zero-import chain
 4. the latest zero-import route is stronger, but it is still not closure
    - the newest flagship note still labels the lane **BOUNDED**
@@ -340,19 +340,21 @@ Ignore gravity unless Codex explicitly reprioritizes it.
    - its exactness language around Feshbach-preserved gauge coupling and the
      projected Ward identity still outruns the current proof surface
    - do **not** cite it as an all-orders continuum matching theorem
-9. the live blocker is now one narrow boundary-consistency theorem
-   - the current 2-loop zero-import run matches the Ward condition by solving
-     for `y_t(M_Pl)`, but on that same run the gauge trajectory gives
-     `g_3(M_Pl) = 0.487`, not the framework value `1.067`
-   - the script itself says why: the current setup fixes `alpha_s(v)`, not
-     one self-consistent `g_3(M_Pl)` trajectory
-   - the last theorem is therefore:
-     - either derive that the physical crossover endpoint is **at `v`**
-     - or derive a framework-native **Planck-boundary** crossover that makes
-       `g_3(M_Pl)` and `y_t(M_Pl)=g_3(M_Pl)/sqrt(6)` close on one trajectory
-10. do **not** spend time squeezing the remaining `1.9%` residual until 9 is fixed
-   - the residual is no longer the main blocker
-11. keep the authority surface single and current
+9. the old boundary-consistency blocker is now resolved on the latest branch
+   - `YT_BOUNDARY_THEOREM.md` establishes that the physical crossover
+     endpoint is `v`, not `M_Pl`
+   - do **not** keep re-fighting the stale `g_3(M_Pl)_SM = 0.487` versus
+     `g_lattice = 1.067` objection as if it were still the live blocker
+10. the live blocker is now the last framework-to-EFT bridge theorem at `v`
+   - the current zero-import 2-loop chain is still honestly `BOUNDED`
+   - what is still missing is one of:
+     - a framework-native derivation of the one-family / taste-projected
+       `y_t(v)` directly from the lattice side
+     - or a framework-native step-scaling / RG bridge from `v` to `M_Z`
+       so the present SM running is no longer the last methodology import
+11. do **not** spend time squeezing the remaining `1.9%` residual until 10 is fixed
+   - the residual is now a downstream quantitative issue
+12. keep the authority surface single and current
    - after any new result, update or retract the stale `y_t` closure notes in
      the same change
    - do **not** let older closure-language notes outrank the newest bounded
@@ -361,19 +363,19 @@ Ignore gravity unless Codex explicitly reprioritizes it.
 **What counts as success**
 
 - best-case success:
-  - derive one single framework-native boundary theorem:
-    - either `v` is the physical crossover endpoint
-    - or `M_Pl` is, with one self-consistent `g_3(M_Pl)` / `y_t(M_Pl)` trajectory
-  - rerun the 2-loop chain on that one surface
+  - derive the last framework-native bridge theorem at `v`:
+    - either direct one-family / taste-projected `y_t(v)` from the lattice
+    - or a framework-native step-scaling bridge from `v` to `M_Z`
+  - rerun the chain on that one clean surface
   - close the lane only if the authority note and the numerics agree on the
-    same surface
+    same import class and same physical endpoint
 - second-best success:
   - isolate the lane to the one remaining honest theorem gap:
-    the physical crossover endpoint / boundary-selection theorem
+    the framework-to-EFT bridge at `v`
   - and state that plainly in one authority note
 - minimum acceptable success:
   - keep the flagship note honest and bounded
-  - and with the remaining blocker written as the boundary-consistency theorem,
+  - and with the remaining blocker written as the framework-to-EFT bridge,
     not as the old broad crossover story
 
 **What does not count**
@@ -392,21 +394,20 @@ Ignore gravity unless Codex explicitly reprioritizes it.
 3. do **not** spend more time reopening the old plaquette-benchmark objection
    - the latest zero-import chain now uses same-surface multi-`L` Monte Carlo
      for the authoritative plaquette
-4. attack the real remaining theorem:
-   - determine whether the physical crossover is anchored at `v` or at `M_Pl`
-   - if `v`: prove that and rewrite the lane around an electroweak-endpoint
-     closure
-   - if `M_Pl`: derive one self-consistent framework-native trajectory for
-     both `g_3(M_Pl)` and `y_t(M_Pl)`
-   - do **not** just recount links or rerun the same mixed-boundary numerics
-5. then tighten the authority surface:
+4. treat the physical endpoint as `v` unless you produce a real theorem that
+   overrules `YT_BOUNDARY_THEOREM.md`
+5. attack the real remaining theorem:
+   - derive the one-family / taste-projected `y_t(v)` from the lattice side
+   - or derive a framework-native step-scaling bridge from `v` to `M_Z`
+   - do **not** just recount links or rerun the same old boundary numerics
+6. then tighten the authority surface:
    - rewrite or retract older closure-language notes so they do not outrank the
      newest bounded authority
-6. only after 4-5 are clean, rerun the zero-import chain and see whether
+7. only after 4-6 are clean, rerun the zero-import chain and see whether
    the remaining `m_t` residual persists on the now-single boundary surface
-7. if the residual still sits at a few percent, then and only then attack
+8. if the residual still sits at a few percent, then and only then attack
    2-loop Yukawa running / thresholds as the remaining quantitative issue
-8. if 4-7 fail, isolate exactly the one remaining boundary theorem and keep
+9. if 4-8 fail, isolate exactly the one remaining bridge theorem and keep
    the lane bounded
 
 ### Target C: CKM / flavor

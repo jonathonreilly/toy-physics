@@ -1,9 +1,23 @@
 # Authority Note: Renormalized y_t Lane
 
+## Authority Notice
+
+**SUPERSEDED as current lane authority** by:
+
+- `docs/YT_BOUNDARY_THEOREM.md`
+- `docs/YT_ZERO_IMPORT_CLOSURE_NOTE.md`
+- `docs/RENORMALIZED_YT_PAPER_NOTE.md`
+
+This note records the older Planck-boundary derivation surface. It remains
+useful as a historical derivation audit, but it is **not** the current
+review/promotion surface after the boundary-selection theorem moved the
+physical crossover endpoint to `v`.
+
 **Date:** 2026-04-13
 **Lane:** Renormalized y_t matching (priority 4)
-**Status:** BOUNDED
-**Decision:** KEEP BOUNDED (one explicit residual: QFT as EFT below M_Pl)
+**Status:** HISTORICAL / BOUNDED
+**Decision:** KEEP as historical bounded derivation note; do not use as the
+current flagship authority surface.
 
 ---
 

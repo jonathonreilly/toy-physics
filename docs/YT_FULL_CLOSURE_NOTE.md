@@ -1,8 +1,24 @@
 # y_t Full Closure: Tracing All Inputs to the Framework
 
+## Authority Notice
+
+**SUPERSEDED as current lane authority** by:
+
+- `docs/YT_BOUNDARY_THEOREM.md`
+- `docs/YT_ZERO_IMPORT_CLOSURE_NOTE.md`
+- `docs/RENORMALIZED_YT_PAPER_NOTE.md`
+
+This note captures the older Planck-boundary / matching-band route centered on
+`m_t ~ 184 GeV`. It remains useful as a historical sub-gap inventory, but it
+is **not** the current authority surface for the renormalized `y_t` lane after
+the boundary-selection theorem moved the physical crossover endpoint to `v`.
+
 ## Status
 
-**BOUNDED** -- The renormalized y_t lane is tightened from "bounded with unspecified imports" to "bounded with all inputs traced to the framework and a single ~10% computable matching uncertainty."
+**HISTORICAL / BOUNDED** -- This note tightens the older Planck-boundary
+presentation from "bounded with unspecified imports" to "bounded with all
+inputs traced to the framework and a single ~10% computable matching
+uncertainty." It is not the current flagship lane status.
 
 **Script:** `scripts/frontier_yt_full_closure.py`
 

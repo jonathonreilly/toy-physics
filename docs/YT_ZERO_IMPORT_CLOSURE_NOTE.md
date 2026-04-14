@@ -5,6 +5,12 @@
 **Scripts:** `scripts/frontier_zero_import_chain.py` (1-loop y_t),
 `scripts/frontier_yt_2loop_chain.py` (2-loop y_t, authoritative)
 
+**Current authority notice:** This note, together with
+`docs/YT_BOUNDARY_THEOREM.md`, is the current zero-import authority surface
+for the renormalized `y_t` lane. Older Planck-boundary / matching-band notes
+such as `YT_FULL_CLOSURE_NOTE.md` and `YT_CLEAN_DERIVATION_NOTE.md` are
+historical derivation audits, not the current flagship authority surface.
+
 ## Result
 
 | Observable | Predicted | Observed | Deviation |
@@ -136,3 +142,15 @@ on the same RGE trajectory -- is resolved by the Boundary Selection Theorem
 The boundary theorem does not change the numerical predictions. It resolves
 the conceptual blocker by proving that the g_3 discrepancy at M_Pl is a
 feature of the EFT matching structure, not an inconsistency.
+
+## Exact Remaining Gap
+
+The remaining blocker is no longer the old boundary mismatch. It is the last
+framework-to-EFT bridge theorem at `v`:
+
+1. derive the one-family / taste-projected `y_t(v)` directly from the
+   lattice side, or
+2. derive a framework-native step-scaling bridge from `v` to `M_Z`
+
+Until one of those is done, the lane remains honestly **BOUNDED** rather than
+fully unbounded.

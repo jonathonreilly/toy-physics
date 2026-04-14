@@ -239,25 +239,32 @@ Current safe state:
       surface using multi-`L` SU(3) Monte Carlo and uses the largest-`L` value
       as authoritative
     - the `0.5934` benchmark is comparison-only, not the load-bearing input
-  - the actual remaining gap is the boundary-consistency theorem
-    - the current 2-loop zero-import run gives a strong bounded result
-    - but it matches `y_t(M_Pl)` to the Ward BC while the same run gives
-      `g_3(M_Pl) = 0.487`, not the framework value `1.067`
-    - and the script itself says why: the current setup fixes `alpha_s(v)`,
-      not one self-consistent `g_3(M_Pl)` trajectory
+  - the old boundary-consistency blocker is now resolved on the latest branch
+    - `YT_BOUNDARY_THEOREM.md` establishes that the physical endpoint is `v`
+    - the old `g_3(M_Pl)_SM = 0.487` versus `g_lattice = 1.067` mismatch is
+      no longer the live blocker
+  - the actual remaining gap is now the last framework-to-EFT bridge at `v`
+    - the zero-import 2-loop chain is still strong and bounded
+    - but the branch still has not fully internalized the bridge from the
+      lattice theory at `v` to the one-family low-energy EFT prediction
+    - the closure bar is now:
+      - derive the one-family / taste-projected `y_t(v)` directly from the
+        lattice side
+      - or derive a framework-native step-scaling / RG bridge from `v` to
+        `M_Z` so the current SM running is no longer the last methodology
+        import
   - the older gauge-crossover theorem remains bounded support only
     - its exactness language still outruns the current proof surface
 
 Paper-safe read:
 
 > The UV theorem surface is strong, and the zero-import route with 2-loop y_t
-> RGE gives m_t = 169.4 GeV (-1.9%). The old LM/plaquette objections are now
-> materially narrower. The lane is still bounded because the current chain
-> does not yet live on one self-consistent renormalized boundary surface:
-> it enforces the Ward condition on `y_t(M_Pl)` while the same run gives
-> a different `g_3(M_Pl)` than the framework value. The last theorem is to
-> derive whether the physical crossover endpoint is at `v` or at `M_Pl`, and
-> then run the entire gauge/Yukawa chain on that single surface.
+> RGE gives m_t = 169.4 GeV (-1.9%). The old LM/plaquette objections and the
+> old boundary-mismatch objection are now materially narrowed. The lane is
+> still bounded because the branch has not yet fully internalized the
+> framework-to-EFT bridge at `v`: it still needs either a direct derivation of
+> the one-family / taste-projected `y_t(v)` or a framework-native step-scaling
+> bridge from `v` to `M_Z`.
 
 Best attack:
 
@@ -266,18 +273,18 @@ Best attack:
    newest zero-import route is the right surface now
 3. do not reopen the old plaquette-benchmark objection unless the chain
    regresses; that is no longer the main blocker
-4. derive the boundary-selection theorem:
-   - either the physical crossover endpoint is `v`, in which case the lane
-     should be rewritten as an electroweak-endpoint closure
-   - or the endpoint is `M_Pl`, in which case `g_3(M_Pl)` and
-     `y_t(M_Pl)=g_3(M_Pl)/sqrt(6)` must close on one single trajectory
-5. then rewrite or retract the stale closure-language notes so they do not
+4. take `v` as the physical endpoint unless a stronger theorem overturns
+   `YT_BOUNDARY_THEOREM.md`
+5. derive the last framework-to-EFT bridge:
+   - direct one-family / taste-projected `y_t(v)` from the lattice side
+   - or a framework-native step-scaling bridge from `v` to `M_Z`
+6. then rewrite or retract the stale closure-language notes so they do not
    outrank the newest bounded authority
-6. only after 4-5 are clean, rerun the zero-import chain
-7. if a few-percent `m_t` residual remains after that, then treat improved
+7. only after 4-6 are clean, rerun the zero-import chain
+8. if a few-percent `m_t` residual remains after that, then treat improved
    Yukawa running / thresholds as the next quantitative sub-problem
-8. if 4-7 fail, freeze the lane honestly as “zero-import up to the
-   boundary/crossover theorem”
+9. if 4-8 fail, freeze the lane honestly as “zero-import up to the
+   framework-to-EFT bridge theorem”
 
 ### 3. CKM / quantitative flavor closure
 

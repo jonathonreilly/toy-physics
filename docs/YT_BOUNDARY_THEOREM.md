@@ -1,8 +1,13 @@
 # Boundary Selection Theorem: v is the Physical Crossover Endpoint
 
 **Date:** 2026-04-14
-**Status:** THEOREM -- resolves the boundary-consistency blocker
+**Status:** THEOREM -- resolves the old boundary-consistency blocker
 **Script:** `scripts/frontier_yt_boundary_consistency.py`
+
+**Authority role:** This theorem is part of the current zero-import authority
+surface together with `docs/YT_ZERO_IMPORT_CLOSURE_NOTE.md`. It resolves the
+old `g_3(M_Pl)_SM` versus `g_lattice` mismatch objection, but it does **not**
+by itself make the lane unbounded.
 
 ---
 
@@ -18,7 +23,7 @@ value `g_lattice(M_Pl) = sqrt(4 pi alpha_LM) = 1.067`. The 2.2x discrepancy
 means the Ward identity `y_t/g_3 = 1/sqrt(6)` is NOT satisfied at `M_Pl`
 in the SM EFT: the ratio `y_t/g_3 = 0.436/0.487 = 0.895`, not `0.408`.
 
-Codex's instruction: derive whether the physical crossover endpoint is at
+Codex's instruction was: derive whether the physical crossover endpoint is at
 `v` or at `M_Pl`, then run the entire gauge/Yukawa chain on one surface.
 
 ---
@@ -27,6 +32,12 @@ Codex's instruction: derive whether the physical crossover endpoint is at
 
 The physical crossover endpoint is `v`, not `M_Pl`. The discrepancy is
 expected and required.
+
+What remains after this theorem is narrower:
+
+- derive the framework-to-EFT bridge at `v` fully internally
+- either as a direct one-family / taste-projected `y_t(v)` derivation
+- or as a framework-native step-scaling bridge from `v` to `M_Z`
 
 ---
 
