@@ -964,6 +964,28 @@ New bounded mechanics explanation extracted after that:
   - derive the scalar background-shape law
     `r -> (gamma_E(r), gamma_T(r))`
 
+New bounded projective-compatibility result extracted after that:
+
+- the exact local `O_h` and finite-rank scalar baselines are already closely
+  tracked by one common projective `A1` shape law
+- see `docs/TENSOR_A1_PROJECTIVE_COMPATIBILITY_NOTE.md`
+- so the remaining gravity gap is no longer family dependence in any serious
+  sense
+- it is the exact derivation of the projective scalar shape law itself
+
+New exact axiom-first blocker extracted after that:
+
+- the symbolic foothold is real:
+  - exact shell amplitude law
+  - exact bright-channel selection
+  - bounded projective `A1` compatibility
+- but the current load-bearing tensor observable is still numerical
+- see `docs/TENSOR_AXIOM_FIRST_BLOCKER_NOTE.md`
+- so the exact next theorem target is now completely explicit:
+  - replace `eta_floor_tf` by an exact tensor boundary observable on the
+    `A1 x {E_x, T1x}` block
+  - then derive `r -> (gamma_E(r), gamma_T(r))` axiom-first
+
 ### Attack 3: only after metric closure, revisit horizon / echo claims
 
 Current gap:
