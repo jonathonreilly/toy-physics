@@ -16,7 +16,8 @@ If you are new to the repo, read these first:
 5. [Claims table](./CLAIMS_TABLE.md)
 6. [Frozen-out registry](./FROZEN_OUT_REGISTRY.md)
 7. [Derivation atlas](./DERIVATION_ATLAS.md)
-   - reusable theorem/subderivation toolbox for extending the open lanes
+   - reusable theorem/subderivation toolbox for extending the open lanes, with
+     inline import class and last-audited coverage notes
 8. [Derivation / validation map](./DERIVATION_VALIDATION_MAP.md)
    - claim-level evidence contract for retained manuscript-facing claims
 9. [Running package issues](./RUNNING_PACKAGE_ISSUES_2026-04-14.md)

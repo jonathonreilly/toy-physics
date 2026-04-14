@@ -66,6 +66,28 @@ index, and figure plan now point to those notes directly.
 authority/tool notes. Main-branch status is now expressed through the package
 control plane rather than in per-note branch tags.
 
+### `I09` Retained-claim atlas completeness was not explicitly audited
+
+**Problem:** the atlas had been expanded substantially, but retained-claim
+coverage had not yet been checked row-by-row against the actual retained claim
+surface.
+
+**Fix:** the atlas now carries an explicit last-audited coverage note, and the
+row-by-row pass found and fixed two real omissions:
+
+- generation-axiom boundary theorem was added as an explicit atlas tool
+- hierarchy exponent `16 = 2 x 2^3` was added as an explicit atlas tool
+
+### `I10` Atlas rows did not expose import class explicitly
+
+**Problem:** the derivation atlas mixed pure framework tools with
+bridge-conditioned and observation-conditioned rows, but it did not surface
+that distinction explicitly enough for safe reuse.
+
+**Fix:** the atlas now carries import class inline in the
+`Status / import class` field, and the most easily misread `\alpha_s` / `y_t`
+rows no longer read like clean zero-input tools.
+
 ## Still open / follow-up
 
 ### `I03` Bounded companion authority normalization is incomplete
