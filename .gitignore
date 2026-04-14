@@ -6,4 +6,6 @@ __pycache__/
 .ipynb_checkpoints/
 logs/*
 !logs/README.md
+!logs/retained/
+!logs/retained/README.md
 .claude/worktrees/
