@@ -842,6 +842,25 @@ narrowing extracted after that:
     normalization of the tensor channels
   - not a wholly different tensor-kernel shape on each family
 
+New exact/bounded selector-transfer reduction extracted after that:
+
+- the exact reduced shell law already fixes the anisotropic shell amplitude
+  scale with one exact lattice constant
+  `A_aniso = c_aniso * Q`, where
+  `c_aniso = 0.081435402995901`
+- see `docs/ONE_PARAMETER_REDUCED_SHELL_LAW_NOTE.md`
+- the remaining tensor normalization can now be written as
+  `c_eta = tau_tensor * c_aniso`
+  with one near-universal transfer coefficient on the audited restricted
+  classes
+- see `docs/TENSOR_SELECTOR_TRANSFER_LAW_NOTE.md`
+- the fitted values differ by only `7.18e-02`, and the common
+  selector-transfer candidate predicts both families within about `5% - 7%`
+- this means the open gravity target is now narrower again:
+  - derive the transfer coefficient `tau_tensor` from the microscopic lift of
+    the exact reduced anisotropic DtN mode
+  - not a whole new tensor normalization law
+
 ### Attack 3: only after metric closure, revisit horizon / echo claims
 
 Current gap:
