@@ -46,6 +46,14 @@ factors through a single channel:
 That means the exact current stack carries one active scalar degree of freedom
 after quotienting.
 
+The active orbit quotient itself does have a nontrivial second direction on the
+projected DtN side, but the support side does not provide a second canonical
+generator for it. Concretely, the exact support response matrix has identical
+columns, so its image is one-dimensional. The exact projected DtN operator is
+rank two on the active pair quotient, but the support span can only align with
+one of the two active singular directions. The orthogonal active direction is
+not canonically sourced by the current finite-rank support data.
+
 The full `3+1` metric, by contrast, needs a tensor polarization split into at
 least:
 
@@ -80,8 +88,14 @@ quotient collapses to rank one.
 The minimal extra primitive is therefore:
 
 > a tensor-valued support-side polarization frame on the active quotient,
-> with at least three independent channels for lapse, shift, and
-> spatial-trace/shear before the scalar renormalization step.
+> with rank at least three before the scalar renormalization step, so that
+> lapse, shift, and spatial-trace/shear are all represented by independent
+> support-side generators rather than by the single scalar total-charge mode.
+
+The current stack only supplies one support-side generator after
+renormalization, so the missing primitive is not a better scalar fit. It is
+the extra tensorial support frame needed to source the second active direction
+canonically before any scalar collapse.
 
 ## Verdict
 

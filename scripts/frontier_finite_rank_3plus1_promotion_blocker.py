@@ -5,8 +5,9 @@ This runner checks whether the exact projected DtN correction operator plus the
 exact scalar active-quotient amplitude law already force a full lapse-shift-
 spatial `3+1` matching map on the finite-rank widening lane.
 
-The answer should be no if the exact stack is still scalar after quotienting;
-the remaining missing primitive is then the tensor polarization lift.
+The answer should be no if the exact support stack is still rank one after
+renormalization; in that case the remaining missing primitive is the tensor
+polarization lift `Pi_3+1`.
 """
 
 from __future__ import annotations
@@ -67,6 +68,14 @@ def main() -> int:
     support_op, support_pair_op = support_mod.support_to_active_operator()
     support_rank = int(np.linalg.matrix_rank(support_op, tol=1e-12))
     support_pair_rank = int(np.linalg.matrix_rank(support_pair_op, tol=1e-12))
+    support_u, support_s, support_vt = np.linalg.svd(support_op, full_matrices=False)
+    active_u, active_s, active_vt = np.linalg.svd(active_op, full_matrices=False)
+    support_basis = support_u[:, 0]
+    active_mode_1 = active_u[:, 0]
+    active_mode_2 = active_u[:, 1]
+    support_norm = float(np.linalg.norm(support_basis))
+    resid_mode_1 = float(np.linalg.norm(active_mode_1 - support_basis * (support_basis @ active_mode_1) / (support_norm**2)))
+    resid_mode_2 = float(np.linalg.norm(active_mode_2 - support_basis * (support_basis @ active_mode_2) / (support_norm**2)))
 
     q_oh, vec_oh = support_mod.oh_q_eff()
     q_fr, vec_fr = support_mod.finite_rank_q_eff()
@@ -88,9 +97,12 @@ def main() -> int:
 
     print(f"active-op rank = {active_rank}")
     print(f"pair quotient rank = {pair_rank}")
+    print(f"active-op singular values = {np.array2string(active_s, precision=6, floatmode='fixed')}")
+    print(f"support singular values = {np.array2string(support_s, precision=6, floatmode='fixed')}")
     print(f"pair-quotient singular values = {np.array2string(singular_values, precision=6, floatmode='fixed')}")
     print(f"support-to-active rank = {support_rank}")
     print(f"support-to-active pair rank = {support_pair_rank}")
+    print(f"support-span residuals vs active modes = ({resid_mode_1:.3e}, {resid_mode_2:.3e})")
     print(f"Q_eff(local O_h) = {qsum_oh:.8f}")
     print(f"Q_eff(finite-rank) = {qsum_fr:.8f}")
     print(
@@ -118,6 +130,12 @@ def main() -> int:
         status="BOUNDED",
     )
     record(
+        "the second active quotient mode is not sourced canonically by the current support span",
+        resid_mode_2 > 0.9 and resid_mode_1 < 0.2,
+        f"support-span residuals vs active modes: mode1={resid_mode_1:.3e}, mode2={resid_mode_2:.3e}",
+        status="BOUNDED",
+    )
+    record(
         "the scalar active-quotient amplitude law holds at machine precision",
         err_oh < 1e-12 and err_fr < 1e-12 and scalar_err_oh < 1e-12 and scalar_err_fr < 1e-12,
         (
@@ -141,8 +159,9 @@ def main() -> int:
         "themselves, supply a full lapse-shift-spatial `3+1` matching map. The missing "
         "primitive is an exact `3+1` polarization lift `Pi_3+1` that separates the active "
         "scalar quotient into lapse, shift, and spatial-trace/shear channels. The current "
-        "stack can only supply one scalar support channel after renormalization, so the lift "
-        "cannot be derived canonically from the existing finite-rank data alone."
+        "support response matrix has identical columns and rank one, so the support span "
+        "cannot canonically source the second active quotient mode. The lift therefore "
+        "cannot be derived from the existing finite-rank data alone."
     )
 
     print("\n" + "=" * 78)
