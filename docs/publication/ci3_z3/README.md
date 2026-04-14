@@ -81,6 +81,21 @@ Retained backbone:
 - exact `I_3 = 0` theorem on the Hilbert surface
 - exact CPT theorem on the free staggered lattice
 
+Reviewer-facing framing notes:
+
+- `v` is a retained exact minimal-block theorem together with a pinned
+  numerical evaluation on the current `u_0` / plaquette surface; do not read
+  the number as a separate claim from the theorem.
+- graph-first structural `SU(3)` is presented as a selector-uniqueness
+  statement on the canonical cube-shift graph, not as an arbitrary commutant
+  observation.
+- the three-generation claim is a physical-species statement, not a disposable
+  taste-artifact statement.
+- the gravity claim uses a self-consistency principle: Poisson is the unique
+  local fixed point in the audited operator family.
+- the paper is positioned against other discrete/unification programs only at a
+  compact framing level; it is not trying to be a survey.
+
 Observation-facing bounded portfolio:
 
 - DM ratio `R = 5.48` vs `5.47`

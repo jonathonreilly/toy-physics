@@ -8,13 +8,14 @@ closed, but that a broad structural backbone now survives direct audit on one
 discrete theory: weak-field gravity through the Poisson/Newton chain, exact
 native `SU(2)`, graph-first structural `SU(3)`, anomaly-forced `3+1`, a
 retained `S^3` compactification / topology closure, a full-framework
-one-generation Standard Model closure, a derived electroweak hierarchy /
-electroweak scale on the exact minimal `3+1` block, and a retained
-three-generation matter structure. We also retain exact supporting theorems for vanishing
-third-order interference (`I_3 = 0`) on the Hilbert surface and exact CPT on
-the free staggered lattice. We separate this retained backbone from bounded
-phenomenology and from three still-live bridge problems: dark-matter relic
-mapping, renormalized top-Yukawa matching, and quantitative flavor closure.
+one-generation Standard Model closure, a derived electroweak hierarchy theorem
+whose pinned evaluation on the exact minimal `3+1` block yields the
+electroweak scale, and a retained three-generation matter structure. We also
+retain exact supporting theorems for vanishing third-order interference
+(`I_3 = 0`) on the Hilbert surface and exact CPT on the free staggered
+lattice. We separate this retained backbone from bounded phenomenology and
+from three still-live bridge problems: dark-matter relic mapping, renormalized
+top-Yukawa matching, and quantitative flavor closure.
 
 ## 1. Introduction
 
@@ -54,6 +55,12 @@ Gaussian fixes the hierarchy normalization and yields
 `v = 245.080424447914 GeV`, within `0.4628%` of the measured electroweak
 scale, without electroweak input.
 
+The appropriate positioning against other discrete or unification programs is
+compact, not encyclopedic. This work should be read as a graph-first retained
+backbone on a single audited `Cl(3)` / `Z^3` surface, not as a claim to absorb
+every regulator-based lattice program, every algebraic discrete program, or
+every continuum unification framework.
+
 ## 2. Retained Framework Surface
 
 ### 2.1 Weak-field gravity from the Poisson / Newton chain
@@ -65,6 +72,11 @@ lattice Green's function on `Z^3` yields the inverse-square Newton law. On the
 same retained action surface, weak equivalence principle and weak-field
 gravitational time dilation are now also safe as derived corollaries. This is
 the correct flagship gravity statement.
+
+Here the self-consistency principle should be read literally: within the
+audited local operator family, Poisson is the unique fixed point compatible
+with the retained action and symmetry constraints. It is not being introduced
+as an extra phenomenological axiom.
 
 Broader GR-signature notes still mix exact, bounded, and conditional steps.
 Conformal-metric, geodesic, and light-bending results therefore remain in the
@@ -89,7 +101,10 @@ The safe `SU(3)` statement is graph-first. A selector on the canonical
 cube-shift graph chooses a weak axis directly on the graph; on that selected
 surface the graph fibers carry weak `su(2)`, the residual cubic swap produces
 the `3 \oplus 1` split, and the joint commutant carries structural
-`su(3) \oplus u(1)`.
+`su(3) \oplus u(1)`. The reviewer-facing uniqueness statement is that the
+canonical selector is fixed up to graph automorphism on the audited graph
+family; alternative selector families fail the same charge and commutant
+audit, so the graph-first `SU(3)` claim is not an arbitrary choice of basis.
 
 On that same selected-axis surface, the framework also retains left-handed
 `+1/3` / `-1` charge matching. The abelian factor should still be described
@@ -122,7 +137,9 @@ multiplicative on independent subsystems, so `log|Z|` is the unique additive
 CPT-even scalar generator, and local scalar observables are its source-response
 coefficients. The resulting curvature kernel depends only on the
 sign/conjugation-invariant temporal weight `sin^2 omega`, so the unique
-minimal resolved orbit is `L_t = 4`. This gives
+minimal resolved orbit is `L_t = 4`. The exact theorem is the minimal-block
+source-response structure; the quoted number is the pinned evaluation on the
+current `u_0` / plaquette surface. This gives
 `v = 245.080424447914 GeV`, `0.4628%` below `246.22 GeV`, without electroweak
 input.
 
@@ -134,6 +151,10 @@ mass `m_H = 125 GeV`.
 The exact orbit algebra `8 = 1 + 1 + 3 + 3` remains central. On the present
 framework surface the lattice is physical rather than a regulator, so the three
 triplet sectors are retained as physical species structure within the theory.
+They are not regulator degeneracies that disappear under continuum removal; the
+same selector and charge audit that fixes the retained gauge surface also keeps
+the triplet structure visible, so the family structure is part of the ontology
+rather than a taste artifact.
 What remains bounded is detailed fermion-mass hierarchy and quantitative flavor
 data, not the existence of three species itself.
 

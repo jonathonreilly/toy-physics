@@ -37,6 +37,11 @@ The publication package now has four distinct layers:
 
 This ledger mirrors those four layers directly.
 
+Positioning note: this package is deliberately narrower than a survey of all
+discrete or unification programs. It compares against the standard alternatives
+only at the level needed to justify the retained backbone and the bounded
+companion portfolio.
+
 ## 2. Retained core aligned to the matrix
 
 These rows correspond to Section A of
@@ -64,16 +69,16 @@ These rows correspond to Section A of
 | Claim family | Current decision | Why it is retained | Primary authority |
 |---|---|---|---|
 | exact native `SU(2)` | promoted | exact weak algebra on the cubic Clifford surface | [BOUNDED_NATIVE_GAUGE_NOTE.md](../../BOUNDED_NATIVE_GAUGE_NOTE.md) |
-| graph-first structural `SU(3)` | promoted | selector + commutant closure now defines the safe `SU(3)` statement | [GRAPH_FIRST_SU3_INTEGRATION_NOTE.md](../../GRAPH_FIRST_SU3_INTEGRATION_NOTE.md) |
+| graph-first structural `SU(3)` | promoted | selector + commutant closure now defines the safe `SU(3)` statement; selector is unique up to graph automorphism | [GRAPH_FIRST_SU3_INTEGRATION_NOTE.md](../../GRAPH_FIRST_SU3_INTEGRATION_NOTE.md) |
 | left-handed charge matching | promoted corollary | safe selected-axis charge surface on the retained graph-first package | [GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md](../../GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md) |
 | one-generation closure | promoted | anomaly-complete right-handed completion now survives direct audit | [GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md](../../GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md) |
-| three-generation structure | promoted | exact orbit algebra `8 = 1 + 1 + 3 + 3` is retained as physical species structure | [GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md](../../GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md) |
+| three-generation structure | promoted | exact orbit algebra `8 = 1 + 1 + 3 + 3` is retained as physical species structure, not as a taste artifact | [GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md](../../GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md) |
 
 ### Electroweak hierarchy and exact companions
 
 | Claim family | Current decision | Why it is retained | Primary authority |
 |---|---|---|---|
-| electroweak scale `v` | promoted | exact minimal hierarchy block plus axiom-native observable principle now clear the paper bar | [OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md](../../OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md) |
+| electroweak scale `v` | promoted | exact minimal hierarchy theorem plus axiom-native observable principle now clear the paper bar; the numerical value is a pinned evaluation on the current `u_0` / plaquette surface | [OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md](../../OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md) |
 | exact `I_3 = 0` | promoted exact companion | safe statement is exact no-third-order interference on the Hilbert surface | [I3_ZERO_EXACT_THEOREM_NOTE.md](../../I3_ZERO_EXACT_THEOREM_NOTE.md) |
 | exact CPT | promoted exact companion | exact free staggered-lattice theorem on the retained framework surface | [CPT_EXACT_NOTE.md](../../CPT_EXACT_NOTE.md) |
 

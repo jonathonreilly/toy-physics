@@ -10,8 +10,9 @@ Green's function on `Z^3`, exact native `SU(2)` through the Clifford bivectors,
 graph-first structural `SU(3)` through a selector on the canonical cube-shift
 graph, anomaly-forced `3+1` closure on a single-clock codimension-1 surface, a
 retained `S^3` compactification / topology closure, a full-framework
-one-generation Standard Model closure, a derived electroweak hierarchy /
-electroweak scale on the exact minimal `3+1` block, and a retained
+one-generation Standard Model closure, a derived electroweak hierarchy theorem
+whose pinned evaluation on the exact minimal `3+1` block yields the
+electroweak scale, and a retained
 three-generation matter structure through the exact orbit algebra
 `8 = 1 + 1 + 3 + 3`. We also retain exact companion theorems for vanishing
 third-order interference (`I_3 = 0`) on the Hilbert surface and exact CPT on
@@ -43,6 +44,10 @@ intentionally excluded families are documented in
 [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md). The package architecture
 itself is defined in [PUBLICATION_CONTROL_PLANE.md](./PUBLICATION_CONTROL_PLANE.md).
 
+Relative to standard discrete-program alternatives, the present paper should be
+read narrowly: it is a graph-first retained-backbone paper, not a survey of all
+possible unification or lattice programs.
+
 The present paper still uses a small explicit set of external inputs where the
 framework is not yet closed, but they are now cosmological only:
 `T_CMB = 2.7255 K` and `H_0 = 67.4 km/s/Mpc`, which specify the universe /
@@ -57,8 +62,10 @@ The first retained structural result is weak-field gravity on the cubic
 lattice. On the current paper-safe surface, Poisson is the unique
 self-consistent local field equation in the audited operator family, and the
 lattice Green's function on `Z^3` yields the inverse-square Newton law. That
-is the correct gravity claim to carry. On the same retained action surface,
-two additional weak-field corollaries are now safe to state compactly:
+is the correct gravity claim to carry. Here “self-consistent” means the
+audited local operator family has a unique fixed point, not a separate
+postulate. On the same retained action surface, two additional weak-field
+corollaries are now safe to state compactly:
 universal k-independent deflection (weak equivalence principle) and weak-field
 gravitational time dilation. Broader GR-signature results still remain bounded
 and should not be confused with the retained Newton/Poisson/WEP/time-dilation
@@ -78,8 +85,11 @@ The second retained gauge result is graph-first structural `SU(3)`. A selector
 on the canonical cube-shift graph fixes a weak axis, after which the selected
 fibers carry weak `su(2)`, the residual swap of the remaining two axes yields a
 `3 \oplus 1` split, and the joint commutant carries structural
-`su(3) \oplus u(1)` [Fig. 1, Fig. 2]. This graph-first closure is the correct
-paper-safe replacement for the older commutant-only presentation.
+`su(3) \oplus u(1)` [Fig. 1, Fig. 2]. The reviewer-facing point is selector
+uniqueness: the canonical selector is fixed up to graph automorphism on the
+audited graph family, and alternative selector families fail the same charge
+and commutant audit. This graph-first closure is the correct paper-safe
+replacement for the older commutant-only presentation.
 On the same selected-axis surface, the abelian factor carries retained
 left-handed `+1/3` / `-1` charge matching, while full anomaly-complete
 hypercharge identification remains absorbed into the one-generation closure.
@@ -105,18 +115,21 @@ minimal APBC hierarchy block, the determinant exponent is exactly
 `16 = 2 x 2^3`, the local scalar observable is fixed internally by the unique
 additive CPT-even source generator `log|det(D+J)|`, and the resulting
 sign/conjugation-closed temporal kernel selects the unique minimal resolved
-orbit `L_t = 4`. This gives the electroweak scale quoted above. What remains
-bounded here is not the hierarchy / `v` lane, but the physical Higgs mass
-`m_H = 125 GeV`.
+orbit `L_t = 4`. The theorem is the exact minimal-block source-response
+structure; the quoted number is the pinned evaluation on the current `u_0` /
+plaquette surface. What remains bounded here is not the hierarchy / `v` lane,
+but the physical Higgs mass `m_H = 125 GeV`.
 
 The three-generation step sits on the exact orbit algebra `8 = 1 + 1 + 3 + 3`.
 Because the lattice is treated as physical rather than as a regulator, the old
 escape route in which the triplet sectors are dismissed as disposable taste
-artifacts is no longer available. The retained paper claim is therefore not
-merely that family-like structure appears, but that the framework carries a
-three-generation matter structure [Fig. 4]. What remains outside the retained
-core is narrower: detailed fermion-mass `1+1+1` hierarchy and quantitative
-CKM closure.
+artifacts is no longer available. The triplet sectors are not regulator
+degeneracies that disappear under continuum removal; they survive the same
+selector and charge audit that fixes the retained gauge surface. The retained
+paper claim is therefore not merely that family-like structure appears, but
+that the framework carries a three-generation matter structure [Fig. 4]. What
+remains outside the retained core is narrower: detailed fermion-mass `1+1+1`
+hierarchy and quantitative CKM closure.
 
 Two exact companion theorems strengthen this surface without widening it. The
 first is exact vanishing of the Sorkin parameter `I_3` on the Hilbert surface.
@@ -145,6 +158,11 @@ provide additional consistency theorems on the same surface. The strongest
 objection is no longer that the framework lacks matter structure, topology, or
 an electroweak hierarchy mechanism. It is that relic mapping, renormalized
 matching, and quantitative flavor are not yet fully closed.
+
+Comparative positioning should stay compact. The manuscript is not claiming to
+replace every discrete or unification program; it is claiming that one audited
+`Cl(3)` / `Z^3` surface already carries a broad retained backbone plus a sharp
+set of bounded remaining gates.
 
 ## Figure Callouts
 

@@ -29,6 +29,15 @@ The current flagship package is not “everything in the repo.” It is:
 - exact `I_3 = 0`
 - exact CPT on the free staggered lattice
 
+Three framing points matter for reading the retained core:
+
+- `v` is a theorem plus a pinned numerical evaluation on the current `u_0` /
+  plaquette surface, not two separate claims.
+- graph-first structural `SU(3)` is a selector-uniqueness statement on the
+  canonical cube-shift graph, not just a commutant observation.
+- the three-generation claim treats the triplet sectors as physical species,
+  not as regulator taste artifacts.
+
 ## What is quantitatively impressive but still bounded
 
 - DM ratio `R = 5.48` vs `5.47`
@@ -42,6 +51,11 @@ The current flagship package is not “everything in the repo.” It is:
 
 These are real results, but they are **not** all promoted into the retained
 paper core.
+
+The most important gravity companion point is also framed carefully: the
+paper’s gravity self-consistency claim is that Poisson is the unique local
+fixed point in the audited operator family, while broader strong-field
+generality remains restricted.
 
 ## What is still open
 
