@@ -54,7 +54,11 @@ least:
 - spatial trace / shear
 
 The current exact finite-rank stack does not contain an exact operator that
-splits the scalar active quotient into those distinct tensor channels.
+splits the scalar active quotient into those distinct tensor channels. The
+projected DtN operator is already rank two on the active orbit pair quotient,
+but the support-renormalized source side still collapses to rank one. So there
+is no canonical exact path from the scalar quotient to a lapse/shift/shear
+polarization frame.
 
 So the best honest conclusion is:
 
@@ -68,9 +72,16 @@ The missing primitive is now sharper than the previous blocker:
 > an exact `3+1` polarization lift `Pi_3+1` that maps the scalar active
 > quotient into independent lapse, shift, and spatial-trace/shear channels.
 
-Equivalently, the finite-rank lane still lacks a tensor-valued quotient
-operator that separates the exact scalar active amplitude into the metric
-components needed for full `3+1` closure.
+Equivalently, the finite-rank lane still lacks a tensor-valued support
+observable or polarization frame that resolves the exact scalar active
+amplitude into the metric components needed for full `3+1` closure before the
+quotient collapses to rank one.
+
+The minimal extra primitive is therefore:
+
+> a tensor-valued support-side polarization frame on the active quotient,
+> with at least three independent channels for lapse, shift, and
+> spatial-trace/shear before the scalar renormalization step.
 
 ## Verdict
 

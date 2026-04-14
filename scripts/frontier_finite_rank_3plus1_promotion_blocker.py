@@ -109,6 +109,15 @@ def main() -> int:
         f"support rank={support_rank}, pair rank={support_pair_rank}",
     )
     record(
+        "the exact support side supplies only one scalar polarization channel after renormalization",
+        support_rank == 1 and support_pair_rank == 1 and pair_rank == 2,
+        (
+            f"support rank={support_rank}, pair rank={support_pair_rank}, "
+            f"active-op pair rank={pair_rank}"
+        ),
+        status="BOUNDED",
+    )
+    record(
         "the scalar active-quotient amplitude law holds at machine precision",
         err_oh < 1e-12 and err_fr < 1e-12 and scalar_err_oh < 1e-12 and scalar_err_fr < 1e-12,
         (
@@ -131,7 +140,9 @@ def main() -> int:
         "law still collapse to a scalar quotient after renormalization. They do not, by "
         "themselves, supply a full lapse-shift-spatial `3+1` matching map. The missing "
         "primitive is an exact `3+1` polarization lift `Pi_3+1` that separates the active "
-        "scalar quotient into lapse, shift, and spatial-trace/shear channels."
+        "scalar quotient into lapse, shift, and spatial-trace/shear channels. The current "
+        "stack can only supply one scalar support channel after renormalization, so the lift "
+        "cannot be derived canonically from the existing finite-rank data alone."
     )
 
     print("\n" + "=" * 78)
