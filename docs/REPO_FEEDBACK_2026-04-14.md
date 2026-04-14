@@ -4,17 +4,17 @@ External-eye review of the `cl3-lattice-framework` repository as a first-time
 visitor would encounter it. Covers: interest level, impact potential, and the
 biggest gaps a reviewer or referee would raise.
 
-**Revision 2** (post-Codex cleanup): updated after 20+ new derivation notes,
-expanded script coverage, tighter publication matrix, and stale-authority audit
-landed on `main`. Papers have not been written yet; this review assesses the
-repo and its supporting evidence, not a manuscript.
+**Revision 3** (post-framing pass): updated after Codex sharpened the README,
+START_HERE, CURRENT_FLAGSHIP_ENTRYPOINT, EXTERNAL_REVIEWER_GUIDE, and both
+draft manuscripts. Papers have not been written yet (the drafts are structured
+outlines, not finished manuscripts); this review assesses the repo surface and
+its supporting evidence.
 
 ---
 
 ## How Interesting Is This Paper?
 
-**Very interesting -- 8.5/10.** (Up from 8 after the expanded companion
-portfolio.)
+**Very interesting -- 8.5/10.**
 
 The core idea -- take Cl(3) on Z^3 literally as the physical theory (not a
 regulator) and derive everything from it -- is genuinely novel. Most lattice
@@ -30,7 +30,7 @@ physics.
 
 The breadth of the bounded portfolio (DM ratio, alpha_s, m_t, CKM magnitudes,
 cosmology, Higgs mass window, proton lifetime, Lorentz violation, monopole mass,
-BH entropy) now gives the framework genuine phenomenological surface area, even
+BH entropy) gives the framework genuine phenomenological surface area, even
 where results remain conditional.
 
 ---
@@ -56,226 +56,193 @@ the three gates close.
 
 ---
 
-## What Changed After Codex Cleanup
+## What Changed In This Pass (Rev 3 vs Rev 2)
 
-- **16 new derivation/authority notes** now back every bounded companion row
-  (DM relic, y_t closure, CKM mass-basis NNI, Higgs mass, proton lifetime,
-  Lorentz violation, monopole, BH entropy, cosmological constant, dark energy
-  EOS, primordial spectrum, S^3 cap uniqueness, S^3 general-R, y_t vertex
-  power, y_t gauge crossover theorem, y_t zero-import closure).
-- **~20 new frontier scripts** with genuine computational verification.
-- **m_t zero-import improved** from 165.4 GeV (-4.2%) to 169.4 GeV (-1.9%) via
-  a 2-loop chain.
-- **Stale-authority audit** quarantines old docs that previously cluttered the
-  claim surface.
-- **Publication matrix** now has every row cross-referenced to authority note +
-  runner + frozen-out registry entry.
-- Every claim in the matrix now has both a derivation note AND a runner script.
+Codex addressed several of the front-door issues flagged in revision 2:
 
----
+1. **README now leads with the research question.** The opening paragraph
+   frames this as "a graph-first theoretical physics program built around one
+   working axiom" and states the goal (recover gauge/matter/gravity/3+1/EW
+   scale). This replaces the old bare bullet list. Status labels
+   (retained/bounded/live gate) are defined up front.
 
-## The Front Door Experience
+2. **START_HERE now has a motivating question.** The blockquote "can a single
+   discrete axiom recover a nontrivial unified physics package?" gives a
+   newcomer an immediate hook.
 
-### What works well
+3. **CURRENT_FLAGSHIP_ENTRYPOINT now opens with the existential claim.** The
+   blockquote "start from the discrete axiom Cl(3) on Z^3, treat the lattice as
+   physical rather than as a regulator, and ask how much of observed physics can
+   be recovered" is exactly the framing a reviewer needs. Status labels are
+   defined inline.
 
-- The README -> CURRENT_FLAGSHIP_ENTRYPOINT -> publication package path is clear
-  and disciplined.
-- The four-tier system (retained / bounded / open / frozen-out) is now backed by
-  actual authority notes for every row.
-- Every claim in the matrix has both a derivation note AND a runner script.
-  That dual-evidence contract is rare and impressive.
-- The FROZEN_OUT_REGISTRY and STALE_AUTHORITY_AUDIT are genuine quality controls
-  not seen in other physics repos.
-- The EXTERNAL_REVIEWER_GUIDE gives a clean three-tier orientation.
+4. **EXTERNAL_REVIEWER_GUIDE now addresses three framing points.** It explains:
+   (a) v is a theorem + pinned evaluation, not two separate claims;
+   (b) SU(3) is a selector-uniqueness statement, not an arbitrary commutant;
+   (c) three generations are physical species, not disposable taste artifacts.
+   These are direct responses to the reviewer-attack items flagged in Rev 2.
 
-### What still feels off
+5. **NATURE_DRAFT and ARXIV_DRAFT are substantially better.** They are still
+   structured outlines (not finished papers), but they now contain:
+   - An abstract that states retained claims precisely
+   - The self-consistency argument framed as "unique fixed point in the audited
+     operator family" rather than as a separate postulate
+   - A selector-uniqueness argument for SU(3) ("alternative selector families
+     fail the same charge and commutant audit")
+   - A defense of three generations ("the same selector and charge audit that
+     fixes the retained gauge surface also keeps the triplet structure visible")
+   - A clear statement that "the claim surface is disciplined and unusually
+     strong" followed immediately by "the remaining bridge problems should be
+     stated directly"
+   - Compact comparative positioning against other programs
+   - Explicit negative results in the arXiv draft (Section 5)
+   - Strong-field gravity correctly qualified as "not full nonlinear GR in full
+     generality" throughout
 
-- The README title is "Physics Repo" -- tells a visitor nothing. The framework
-  sentence ("We take Cl(3) on Z^3 as the physical theory") is buried in the
-  publication package README, not up front.
-- A visitor's first impression is a bullet list of claims with no compelling
-  hook. There is no abstract, no "here is why you should care" paragraph.
-- The sheer volume of docs (40+ in `/docs/`, 22 in `publication/ci3_z3/`) is
-  intimidating without a single one-page summary that a newcomer could read in
-  five minutes.
-
----
-
-## What Is Genuinely Strong
-
-### Retained results that would survive hostile review
-
-1. **Newton's law from self-consistency.** The 9-step Poisson chain is clean,
-   zero free parameters, numerically verified. The closure condition L^{-1} =
-   G_0 is a physical postulate, not a theorem, but it is a good postulate --
-   transparent and minimal. (8.5/10)
-
-2. **Exact SU(2).** Trivially correct from Cl(3) bivectors. Unassailable.
-   (9.5/10)
-
-3. **CPT exact.** Verified to machine precision on the free lattice. Modest
-   claim, modest scope, bulletproof within that scope. (9.5/10)
-
-4. **Anomaly-forced d_t = 1.** The logic (anomaly cancellation + chirality
-   requires even total d + single-clock excludes d_t > 1) is sound. The
-   single-clock assumption is stated, not smuggled. (7.5/10)
-
-5. **Electroweak scale v = 245.08 GeV.** The observable principle (additive +
-   CPT-even forces log|det|) is mathematically forced on the minimal block. The
-   0.46% residual lives in the u_0 baseline. The orbit selection L_t = 4 is
-   unique. This is the most quotable result. (8.5/10 for the derivation
-   structure; see caveats on framing below.)
-
-6. **S^3 topology.** The general-R proof (van Kampen + Perelman) is rigorous.
-   Cap uniqueness is mostly solid but relies on boundary chi = 2 being verified
-   only for R <= 10, not proved in general. (7.5/10)
-
-7. **WEP and time dilation.** Genuine weak-field corollaries of the derived
-   action. k-independence is non-trivial. (8/10)
-
-### Computational standouts
-
-Two scripts deserve special mention as models of honest scientific reporting:
-
-- `frontier_higgs_mass_derived.py` explicitly marks its own Tier 3 as FAIL,
-  scores itself 85%. This is what intellectual honesty looks like.
-- `frontier_cosmological_constant.py` concludes "the framework does NOT solve
-  the cosmological constant problem." A negative result reported honestly.
-
-Overall, 7 of 10 sampled scripts perform genuine numerical computation with
-honest PASS/FAIL/BOUNDED classification.
+6. **Publication package README now has "reviewer-facing framing notes."** These
+   explain the gravity self-consistency principle, the SU(3) selector-uniqueness
+   framing, the three-generation physical-species interpretation, and the v
+   theorem + evaluation relationship.
 
 ---
 
-## What Is Honestly Bounded (and the docs say so)
+## What Now Works Well (Front Door)
 
-- **DM ratio R = 5.48 vs 5.47.** Good match, but g_bare = 1 is assumed, not
-  derived. The DM_RELIC_PAPER_NOTE has the best provenance labeling in the repo
-  (7 NATIVE / 5 DERIVED / 1 ASSUMED / 2 IMPORTED).
-- **alpha_s(M_Z) = 0.1181.** Multiple independent methods converge. Real
-  result, bounded by the coupling-map assumption.
-- **m_t = 169.4 GeV (zero-import).** Improved from 165.4, now -1.9% off. But
-  the 2-loop forward run crashes and success depends on the backward run. The
-  y_t chain is the weakest computational link.
-- **CKM magnitudes.** V_us and V_cb are excellent. V_ub improved from 5.3x PDG
-  to 1.14x via mass-basis NNI normalization. But Jarlskog invariant is still
-  suppressed 7x. The framework is missing something fundamental about CP
-  violation.
-- **Cosmology companions.** Lambda, w = -1, Omega_Lambda, n_s all follow from
-  defining dark energy as the S^3 spectral gap. The arithmetic works but these
-  are parameterizations, not predictions. Correctly frozen out (F04).
-- **Higgs mass.** v is derived but m_H is not. The Coleman-Weinberg window
-  gives the right order of magnitude with m_H/m_W ~ 1.85 (SM value 1.56, 19%
-  high). Correctly classified as open/bounded.
+- **The research question is front and center.** A visitor immediately
+  understands what the program is trying to do.
+- **Status labels are defined early.** Retained / bounded / live gate are
+  explained before the bullet lists, so a newcomer knows what the categories
+  mean.
+- **The three hardest reviewer attacks are pre-addressed.** Selector uniqueness,
+  taste-as-generations, and the v theorem/evaluation distinction are now
+  explicitly framed in the reviewer guide and the pub-package README.
+- **The Nature draft reads like a paper outline, not a claim list.** It has an
+  abstract, a logical flow, figure callouts, and a conclusion. It still needs
+  equations, but the argumentative structure is present.
+- **The arXiv draft has honest negative results.** Section 5 ("Negative Results
+  That Matter") is rare and strengthens credibility.
+- **Strong-field gravity is properly qualified everywhere.** "Not full nonlinear
+  GR in full generality" appears consistently across README, START_HERE,
+  flagship entrypoint, and both drafts.
 
 ---
 
-## What Is Weaker Than The Docs Suggest
+## What Still Needs Work
 
-### 1. "Zero-import" language is too generous
+### 1. The drafts are outlines, not manuscripts (Still critical, but improving)
 
-Several notes claim "zero imports" while using standard 2-loop SM RGE running,
-Lepage-Mackenzie coefficients, and V-to-MSbar conversion formulas. These are
-standard tools, but they are still external theoretical infrastructure. The
-honest framing is "zero *electroweak* imports," not "zero imports."
+The Nature and arXiv drafts now have argumentative structure, but they still
+contain zero equations, zero inline derivations, and zero proofs. Every
+technical claim defers to an external derivation note or runner script.
 
-### 2. Cosmological predictions are parameterizations
+For publication, the arXiv draft needs at minimum:
+- The Poisson self-consistency argument (the 9-step chain, or at least the key
+  steps)
+- The anomaly-forces-time proof (the chirality + single-clock argument)
+- The observable-principle theorem (additive + CPT-even forces log|det|)
+- The hierarchy block calculation (determinant exponent = 16, orbit selection)
+- The SU(3) commutant calculation (at least a sketch)
+- The S^3 general-R proof (van Kampen + Perelman, compactly)
 
-Lambda = 3/R_H^2 gives Lambda to within factor 1.46 of observation. But the
-remaining factor 1.46 is just 1/Omega_Lambda -- circular if you already need the
-matter content. The coincidence-problem "resolution" (R = R_H by fiat) is
-asserting a solution, not deriving one. The quantitative summary table presents
-these as "near-match" without flagging the by-construction aspect.
+The Nature draft can be shorter, but it needs at least one worked example
+(probably the Poisson chain or the hierarchy calculation) to show a referee that
+the math is real.
 
-### 3. BH entropy S/S_max ~ 0.24
+**Status: upgraded from "critical" to "critical but the scaffold is ready."**
 
-Presented as "5.4% from 1/4" but really a 5% numerical coincidence on a 2D
-lattice. No derivation of why the RT ratio should be 1/4. The identification
-(lattice entanglement = gravity) is asserted, not proved.
+### 2. SU(3) selector uniqueness now has a claim but not a proof
 
-### 4. Graph-first SU(3) selector
+The drafts now say "alternative selector families fail the same charge and
+commutant audit." This is the right claim to make. But the proof is not shown
+in the manuscript or in the reviewer guide. A referee will ask: how many
+selectors were tested? What do the failing ones look like? Is there a
+classification theorem or just an enumeration?
 
-Still the same gap: the cube-shift selector is introduced geometrically but not
-forced by Cl(3) + Z^3 alone. No enumeration of alternative selectors. This will
-be the first thing a lattice gauge theorist attacks.
+**Fix:** The arXiv draft needs either an inline proof sketch or a clear pointer
+to the derivation note with enough detail that a reviewer can verify the
+uniqueness claim without running the script.
 
-### 5. Three generations
+### 3. Three-generation defense is stated but not argued
 
-The orbit algebra 8 = 1 + 1 + 3 + 3 is exact. But calling this "three
-generations" rather than "staggered tastes" is the single boldest interpretive
-choice in the framework, and the docs do not adequately defend it. Standard
-lattice QCD treats this exact same structure as an artifact to be removed via
-rooting. You need a killer argument for why it is physical here.
+The drafts now say "the same selector and charge audit that fixes the retained
+gauge surface also keeps the triplet structure visible." This is the right
+framing. But a lattice QCD practitioner will still ask: if I use rooting, do
+the triplet sectors disappear? If they do, your "physical species" claim is
+convention-dependent. If they don't, you have a real result.
 
-### 6. The y_t chain needs work
+**Fix:** The paper needs to either (a) show that rooting is inconsistent on
+Cl(3), or (b) identify an observable that distinguishes physical generations
+from taste artifacts. The current framing asserts but does not demonstrate.
 
-`frontier_yt_2loop_chain.py` is the weakest script in the set. The forward
-integration (Approach B) crashes. Success depends entirely on the backward run
-with CMT-derived coupling as input, then recovering the Ward identity -- which
-is somewhat circular. The 2% pass criterion is asserted, not derived. This
-script backs one of the three live gates and needs tightening before anyone
-external runs it.
+### 4. The v framing is clearer but still risks "exact theorem" misreading
 
----
+The reviewer guide now explains "v is a theorem plus a pinned numerical
+evaluation on the current u_0 / plaquette surface, not two separate claims."
+This is correct and much better than before. But "exact theorem" still appears
+in the claims table and the Nature draft. A reviewer seeing "exact theorem"
+next to a 0.46% error will be confused.
 
-## What a Referee Would Hit Hardest
+**Fix:** Consider replacing "exact theorem" with "exact hierarchy theorem" or
+"derived hierarchy relation" in the claims table. The theorem *is* exact (the
+functional form, orbit selection, and selector correction). The number is
+derived on a specific plaquette surface. Separating these two in the labeling
+prevents misreading.
 
-In priority order (updated from first review):
+### 5. Closure condition framing improved but needs more
 
-### 1. "Why is your lattice physical and not a regulator?"
+The drafts now say "Poisson is the unique local fixed point in the audited
+operator family" and clarify "self-consistent means the audited local operator
+family has a unique fixed point, not a separate postulate." This is better than
+"assumed the answer." But the phrase "audited operator family" is still not
+defined in the manuscript. What operators are in the family? Why that family?
 
-This is the existential question. Every lattice QFT paper in history treats the
-lattice as a computational tool. This paper claims it is ontological. The
-defense needs to be front and center in any manuscript, not buried in SI
-framing. Without a clear answer, a referee will not engage with the rest.
+**Fix:** The arXiv draft should define the operator family explicitly (even if
+briefly: "all symmetric local operators up to range R on Z^3") so a reviewer
+can evaluate the uniqueness claim.
 
-### 2. "You derive gauge groups but not masses or mixing -- what does this predict?"
+### 6. Comparative positioning is stated but empty
 
-The retained core gives structure (gauge groups, spacetime dimension, topology,
-electroweak scale). The bounded portfolio gives numbers (masses, mixing,
-cosmology). But the numbers all require imports or assumptions. The gap between
-structure and phenomenology is the real vulnerability.
+The Nature draft says "relative to standard discrete-program alternatives, the
+present paper should be read narrowly." The arXiv draft says "appropriate
+positioning against other discrete or unification programs is compact, not
+encyclopedic." Both say "this is not a survey." That is fine positioning
+language, but neither draft actually names a single alternative approach.
 
-### 3. SU(3) selector uniqueness
+A reviewer in string theory, LQG, or noncommutative geometry will want to know:
+how does this compare? What does Cl(3)/Z^3 do that those programs don't? What
+do they do that this program can't? Even two sentences per alternative would
+help.
 
-How many selectors exist on the cube-shift graph? What do the others give? If
-only one gives SU(3), prove it. If many do, explain why this one is physical.
+### 7. Figures still do not exist
 
-### 4. Staggered tastes as generations
+Both drafts now have explicit figure callouts (Fig. 1--4 plus Extended Data
+Fig. 1--2), and the figure plan exists. But the actual figures have not been
+generated. This is a practical blocker for any submission.
 
-Every lattice practitioner will say "those are doublers, not generations." The
-paper needs either: (a) a physical observable that distinguishes the
-interpretation, or (b) a proof that the standard rooting/taste-removal procedure
-fails on Cl(3).
+### 8. The y_t chain is still the weakest link
 
-### 5. The 0.46% -- prediction or fit?
-
-If u_0 is imported, the electroweak scale result is a one-parameter fit, not a
-zero-parameter prediction. The derivation of the functional form and orbit
-selection is genuine, but the headline number depends on the baseline. The
-framing as "exact theorem" will draw fire.
-
-### 6. Closure condition L^{-1} = G_0
-
-The linchpin of gravity. Physically motivated, but a postulate, not a theorem.
-A hostile reviewer will say "you assumed Poisson." The defense should frame it
-as the framework's defining physical postulate and argue minimality/uniqueness.
-
-### 7. Continuum limit
-
-If the lattice is physical, what sets the lattice spacing? Is it Planck-scale?
-How do continuum-looking phenomena (geodesics, light bending, Riemannian
-geometry) emerge? This is not addressed in the current docs.
-
-### 8. No comparison with existing approaches
-
-No discussion of string theory, loop quantum gravity, Connes' noncommutative
-geometry, or other discrete/algebraic approaches to unification. Reviewers in
-those communities will want positioning.
+No changes to the y_t scripts or notes in this pass. The forward-run crash in
+`frontier_yt_2loop_chain.py` is still present. The bounded m_t = 169.4 GeV
+result (-1.9%) is real but the validation chain backing it needs tightening.
 
 ---
 
-## Technical Rigor Summary (Revised)
+## Items From Rev 2 That Are Now Resolved Or Improved
+
+| Issue (Rev 2) | Status (Rev 3) |
+|----------------|----------------|
+| README title "Physics Repo" tells visitor nothing | **Partially fixed.** Title is still "Physics Repo" but opening paragraph now frames the research question clearly |
+| No "why should I care" paragraph | **Fixed.** START_HERE and flagship entrypoint both open with motivating blockquotes |
+| Status labels undefined | **Fixed.** Retained/bounded/live gate defined in README, START_HERE, and flagship entrypoint |
+| SU(3) selector uniqueness not addressed | **Partially fixed.** Uniqueness claim now stated in drafts and reviewer guide; proof not yet shown |
+| Three-generation claim not defended | **Partially fixed.** Physical-species framing now explicit; rooting argument not yet made |
+| Strong-field gravity overqualified | **Fixed.** "Not full nonlinear GR in full generality" appears consistently throughout |
+| v framing as "exact theorem" misleading | **Partially fixed.** Reviewer guide clarifies theorem + evaluation; "exact theorem" label persists in claims table |
+| No comparative positioning | **Partially fixed.** Positioning language exists; specific alternatives not yet named |
+
+---
+
+## Technical Rigor Summary (Unchanged from Rev 2)
 
 | Component | Status | Rigor |
 |-----------|--------|-------|
@@ -308,11 +275,7 @@ those communities will want positioning.
 
 ---
 
-## Computational Honesty Audit
-
-Scripts were sampled and graded on: whether they compute or just print,
-independence of verification, honest PASS/FAIL/BOUNDED classification, and
-absence of tautological hardcoded targets.
+## Computational Honesty Audit (Unchanged from Rev 2)
 
 | Script | Honesty | Independence | Overall |
 |--------|---------|-------------|---------|
@@ -329,62 +292,49 @@ absence of tautological hardcoded targets.
 
 ---
 
-## Strengths Worth Highlighting
-
-1. **Exceptional organizational transparency.** The retained / bounded /
-   frozen-out taxonomy is better than most published theoretical physics. The
-   FROZEN_OUT_REGISTRY and STALE_AUTHORITY_AUDIT are genuine quality controls.
-2. **No circular reasoning detected** in the core derivation chain. The
-   framework carefully distinguishes verification from derivation.
-3. **Computational verification is thorough.** Machine-precision checks, honest
-   EXACT vs BOUNDED classification in every runner. Two scripts
-   (higgs_mass_derived, cosmological_constant) set the standard for honest
-   self-assessment.
-4. **Self-aware about gaps.** The three live gates are explicitly named and
-   honestly bounded. No overclaiming in the retained core.
-5. **Zero adjustable parameters** in the retained core (conditional on the
-   self-consistency closure axiom and the graph-first selector).
-6. **Every claim is dual-evidenced.** The derivation/validation map enforces
-   one authority note + one runner per claim. This contract is rare in
-   theoretical physics.
-
----
-
 ## Overall Rating (Revised)
 
-| Dimension | Score | Comment |
-|-----------|-------|---------|
-| Scientific interest | 8.5/10 | Up from 8. Expanded companion portfolio shows genuine breadth |
-| Retained core rigor | 7.5/10 | Gravity, SU(2), CPT, anomaly-forced 3+1 are solid. SU(3) and three-gen are weak links |
-| Bounded portfolio quality | 7/10 | Improved. DM, alpha_s, CKM are real results. y_t chain needs work |
-| Organizational discipline | 9.5/10 | Best seen in a physics repo. Frozen-out registry and stale audit are exceptional |
-| Publication readiness | 4/10 | No manuscript exists. The infrastructure is ready; the writing is not |
-| Likely referee survival | 6/10 | The existential questions (lattice-as-physics, taste-as-generations, SU(3) uniqueness) are not yet answered |
-
-**Net:** The science got meaningfully stronger with the Codex cleanup. The repo
-is now a well-organized research program with genuine results, honest
-self-assessment, and clear open problems. The gap is no longer "do you have
-results?" -- it is "can you write a paper that survives the five questions
-above?"
+| Dimension | Rev 2 | Rev 3 | Comment |
+|-----------|-------|-------|---------|
+| Scientific interest | 8.5/10 | 8.5/10 | Unchanged |
+| Retained core rigor | 7.5/10 | 7.5/10 | Unchanged -- no new derivations, just better framing |
+| Bounded portfolio quality | 7/10 | 7/10 | Unchanged -- no new results this pass |
+| Organizational discipline | 9.5/10 | 9.5/10 | Already excellent; maintained |
+| Front-door clarity | 5/10 | 7.5/10 | **Major improvement.** Research question front and center, status labels defined, reviewer attacks pre-addressed |
+| Publication readiness (drafts) | 4/10 | 5.5/10 | **Improved.** Drafts now have argumentative structure and abstracts. Still no equations. Scaffold is ready for writing |
+| Likely referee survival | 6/10 | 6.5/10 | **Slight improvement.** Selector uniqueness and taste-as-generations are now framed, but not yet proved. Existential defense is now stated up front |
 
 ---
 
-## Priority Actions for Manuscript
+## Priority Actions (Updated)
 
-1. **Write the paper.** The infrastructure is ready. The arXiv draft needs
-   actual equations -- at minimum the Poisson chain, the anomaly-forces-time
-   proof, the observable-principle theorem, and the hierarchy block calculation.
-2. **Lead with the existential defense.** "Why is the lattice physical?" must
-   be the first thing a reader encounters, not an afterthought.
-3. **Address SU(3) selector uniqueness.** Enumerate alternatives or prove the
-   selector is forced.
-4. **Defend tastes as generations.** Either show rooting fails on Cl(3) or
-   identify an observable that distinguishes the interpretations.
-5. **Fix the "exact theorem" framing for v.** Separate what is derived
-   (functional form, orbit, selector correction) from what is imported (u_0).
-6. **Generate figures.** Derivation flowchart, lattice/taste diagrams,
-   numerical convergence plots.
-7. **Add positioning.** Compare with string theory, LQG, noncommutative
-   geometry, other discrete models.
-8. **Tighten the y_t chain.** Fix or explain the forward-run crash. Justify
-   the pass criterion independently.
+### Highest priority (blockers for any submission)
+
+1. **Write equations into the arXiv draft.** The scaffold is ready. Fill in:
+   Poisson chain, anomaly-forces-time proof, observable-principle theorem,
+   hierarchy block calculation, SU(3) commutant sketch, S^3 proof sketch.
+2. **Generate figures.** Fig. 1--4 and Extended Data Fig. 1--2 are called out
+   in both drafts. They need to exist.
+3. **Prove SU(3) selector uniqueness** or provide an explicit enumeration of
+   tested selectors with their failure modes.
+
+### High priority (would significantly strengthen the paper)
+
+4. **Defend tastes as generations.** Show rooting is inconsistent on Cl(3), or
+   identify a physical observable that distinguishes the interpretations.
+5. **Define "audited operator family" explicitly** so the Poisson uniqueness
+   claim is verifiable from the manuscript alone.
+6. **Replace "exact theorem" label** for v in the claims table with "exact
+   hierarchy theorem" or similar, to separate the theorem from the numerical
+   evaluation.
+7. **Name specific alternative programs** in the comparative positioning
+   (string theory, LQG, Connes NCG, causal sets -- even two sentences each).
+
+### Medium priority (would improve robustness)
+
+8. **Fix the y_t forward-run crash** or explain why backward-run validation is
+   sufficient and independent.
+9. **Address the Jarlskog 7x suppression** -- this is an honest failure that
+   needs at least a hypothesis for what is missing.
+10. **Tighten cosmology companion framing** to flag explicitly where matches are
+    by construction vs. genuine predictions.
