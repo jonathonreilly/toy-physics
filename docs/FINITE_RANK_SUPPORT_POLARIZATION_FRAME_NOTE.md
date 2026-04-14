@@ -1,26 +1,26 @@
-# Finite-Rank Support Polarization Frame: Exact Blocker on the Current Class
+# Finite-Rank Support Polarization Frame: Exact Support-Side Specialization and Blocker
 
 **Date:** 2026-04-14  
 **Branch:** `codex/review-active`  
 **Script:** `scripts/frontier_finite_rank_support_polarization_frame.py`  
-**Status:** exact support-side attempt fails; the current finite-rank support stack is rank one after renormalization, so no canonical `Pi_3+1` polarization lift is available from the existing support data alone
+**Status:** strongest exact support-side specialization exists as the Route 2 bilinear carrier; the current finite-rank support stack is still rank one after renormalization, so no canonical `Pi_3+1` polarization lift is available from the existing support data alone
 
 ## Purpose
 
-This note pushes directly on the last missing finite-rank primitive:
-an exact support-side tensor polarization frame that would separate lapse,
-shift, and spatial trace/shear before quotient collapse.
+This note pushes directly on the support-side specialization of the shared
+`3+1` polarization-bundle primitive.
 
-The question is whether the current finite-rank support stack already contains
-such a frame, or whether the finite-rank widening lane really needs one more
-support-side primitive before full `3+1` closure.
+The question is whether the current finite-rank support stack, together with
+the exact Route 2 interface, already contains a canonical support-side
+polarization frame or whether the widening lane still needs extra support
+generators before full `3+1` closure.
 
-## Exact support-side result
+## Strongest exact support-side construction
 
 Let `A_support` denote the support-to-active response operator from the exact
 finite-rank support stack.
 
-The exact finite-rank result is:
+The exact finite-rank support result is:
 
 - `A_support` has rank one after renormalization
 - the active pair quotient has rank two
@@ -30,6 +30,22 @@ The exact finite-rank result is:
 
 So the current finite-rank support data do **not** determine a canonical
 support-side polarization frame.
+
+However, the strongest exact support-side specialization available on the
+current stack is not the scalar line alone. It is the exact Route 2 bilinear
+carrier
+
+`K_R(q) = (u_E, u_T, delta_A1 u_E, delta_A1 u_T)`
+
+with
+
+- `u_E = <E_x, q>`
+- `u_T = <T1x, q>`
+- `delta_A1 = phi_support(center)/Q - phi_support(arm_mean)/Q`
+
+This is the exact support-side tensor carrier already isolated by the Route 2
+interface. It is the maximal exact support-side polarization prototype we can
+build from the current support stack without inventing new generators.
 
 The singular-value form of the obstruction is equally sharp:
 
@@ -45,7 +61,7 @@ quotient singular values are
 That is the concrete reason the support-side polarization frame cannot be
 canonical on this class.
 
-## Why this blocks `Pi_3+1`
+## Why this still blocks `Pi_3+1`
 
 The full `3+1` lift needs at least three distinct tensor channels:
 
@@ -54,16 +70,18 @@ The full `3+1` lift needs at least three distinct tensor channels:
 - spatial trace / shear
 
 The current exact support stack only supplies one canonical generator after
-renormalization. Any completion to a full polarization frame therefore depends
-on an arbitrary choice outside the support data themselves.
+renormalization. The exact carrier `K_R` gives a two-channel support-side
+polarization prototype, but it still does not canonically split lapse, shift,
+and spatial trace/shear. Any completion to a full polarization frame therefore
+depends on an arbitrary choice outside the support data themselves.
 
 That means the current finite-rank support stack cannot define an exact
 `Pi_3+1` lift on its own.
 
 ## Sharp blocker
 
-The exact blocker is not a missing scalar law. The scalar law is already
-exact.
+The exact blocker is not a missing scalar law. The scalar law and the exact
+Route 2 bilinear carrier are already exact.
 
 The blocker is:
 
@@ -99,6 +117,7 @@ The finite-rank widening lane now has:
 - exact projected DtN correction operator: yes
 - exact support-renormalized scalar active-quotient law: yes
 - exact support-side tensor polarization frame: no
+- exact support-side bilinear carrier specialization: yes
 
 So the remaining widening-lane theorem target is not another scalar quotient
 law. It is the missing tensor-valued support frame needed to realize an exact

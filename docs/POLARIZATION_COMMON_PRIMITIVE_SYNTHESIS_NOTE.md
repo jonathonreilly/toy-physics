@@ -33,7 +33,10 @@ The finite-rank blocker is support-side and pre-collapse:
 
 - the support response collapses to rank one after renormalization
 - the active quotient remains rank two
-- the missing object is a support-side polarization frame with enough
+- the strongest exact support-side specialization already in hand is the
+  Route 2 bilinear carrier
+  `K_R(q) = (u_E, u_T, delta_A1 u_E, delta_A1 u_T)`
+- the missing object is still a support-side polarization frame with enough
   independent generators to lift the scalar active quotient canonically
 
 This is the `Pi_3+1` side of the story.
@@ -79,6 +82,7 @@ two lanes because it already separates:
 - the exact scalar background datum `delta_A1`
 - the aligned bright channels `E_x` and `T1x`
 - the exact `PL S^3 x R` semigroup factor `exp(-t Lambda_R)`
+- the exact support-side bilinear carrier `K_R`
 
 That stack does **not** yet close either lane by itself, but it gives the
 common bundle a concrete place to act.
@@ -102,4 +106,3 @@ The exact common primitive to pursue is:
 > a covariant `3+1` polarization-frame / projector bundle that canonically
 > splits lapse, shift, and spatial trace/shear, with support-side and
 > curvature-side specializations.
-

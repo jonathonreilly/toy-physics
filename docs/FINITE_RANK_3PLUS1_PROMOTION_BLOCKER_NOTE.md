@@ -3,7 +3,7 @@
 **Date:** 2026-04-14  
 **Branch:** `codex/review-active`  
 **Script:** `scripts/frontier_finite_rank_3plus1_promotion_blocker.py`  
-**Status:** exact finite-rank projected DtN operator plus exact scalar active-quotient amplitude law; `3+1` tensor promotion still blocked
+**Status:** exact finite-rank projected DtN operator plus exact scalar active-quotient amplitude law and exact Route 2 bilinear support carrier; `3+1` tensor promotion still blocked
 
 ## Purpose
 
@@ -26,11 +26,20 @@ the active orbit quotient, and after support renormalization the active
 correction collapses exactly through the scalar total charge
 `Q_eff = 1^T q_eff`.
 
+The current Route 2 interface also supplies an exact support-side bilinear
+carrier
+
+`K_R(q) = (u_E, u_T, delta_A1 u_E, delta_A1 u_T)`
+
+with `u_E = <E_x, q>`, `u_T = <T1x, q>`, and the exact scalar background
+datum `delta_A1`.
+
 So the current finite-rank exact data determine:
 
 - the active orbit quotient operator
 - the scalar active-quotient amplitude
 - the scalar/isotropic exterior reduction
+- the exact support-side bilinear carrier on the bright support channels
 
 That is enough for the source-to-exterior and scalar source-to-metric
 architecture.
@@ -74,9 +83,11 @@ least:
 The current exact finite-rank stack does not contain an exact operator that
 splits the scalar active quotient into those distinct tensor channels. The
 projected DtN operator is already rank two on the active orbit pair quotient,
-but the support-renormalized source side still collapses to rank one. So there
-is no canonical exact path from the scalar quotient to a lapse/shift/shear
-polarization frame.
+but the support-renormalized source side still collapses to rank one. The
+exact support-side bilinear carrier `K_R` is the strongest exact support-side
+specialization we currently have, but it still does not canonically source the
+second active quotient mode. So there is no canonical exact path from the
+scalar quotient to a lapse/shift/shear polarization frame.
 
 So the best honest conclusion is:
 

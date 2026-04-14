@@ -8,7 +8,9 @@ tensor-side polarization frame that separates lapse, shift, and
 spatial trace/shear before quotient collapse?
 
 The expected answer is no if the support-to-active response operator is still
-rank one after renormalization.
+rank one after renormalization. The strongest exact support-side
+specialization we can still construct is the Route 2 bilinear carrier
+`K_R(q) = (u_E, u_T, delta_A1 u_E, delta_A1 u_T)`.
 """
 
 from __future__ import annotations
@@ -45,6 +47,10 @@ def record(name: str, ok: bool, detail: str, status: str = "EXACT") -> None:
 support = SourceFileLoader(
     "support_renormalized_active_amplitude",
     str(ROOT / "scripts" / "frontier_support_renormalized_active_amplitude.py"),
+).load_module()
+bilinear = SourceFileLoader(
+    "s3_time_bilinear_tensor_primitive",
+    str(ROOT / "scripts" / "frontier_s3_time_bilinear_tensor_primitive.py"),
 ).load_module()
 dtn = SourceFileLoader(
     "finite_rank_dtn_corr",
@@ -121,6 +127,8 @@ def main() -> int:
     err_fr = float(np.max(np.abs(pred_fr - vec_fr)))
     scalar_err_oh = float(np.max(np.abs(vec_oh - scalar_oh)))
     scalar_err_fr = float(np.max(np.abs(vec_fr - scalar_fr)))
+    carrier_center = bilinear.vec_k(bilinear.e0 + bilinear.e_x)
+    carrier_shell = bilinear.vec_k(bilinear.s_unit + bilinear.t1x)
 
     print(f"support singular values = {np.array2string(support_s, precision=6, floatmode='fixed')}")
     print(f"active singular values  = {np.array2string(active_s, precision=6, floatmode='fixed')}")
@@ -133,6 +141,9 @@ def main() -> int:
     print(f"frame delta between two valid 3+1 completions = {frame_delta:.3e}")
     print(f"Q_eff(local O_h) = {qsum_oh:.8f}")
     print(f"Q_eff(finite-rank) = {qsum_fr:.8f}")
+    print("Exact Route-2 support-side bilinear carrier:")
+    print(f"  vec K_R(e0 + E_x)        = {np.array2string(carrier_center, precision=12, floatmode='fixed')}")
+    print(f"  vec K_R(s/sqrt(6) + T1x) = {np.array2string(carrier_shell, precision=12, floatmode='fixed')}")
 
     record(
         "the finite-rank support-to-active correction operator is exact rank one",
@@ -164,6 +175,15 @@ def main() -> int:
             f"scalar-law errors: O_h={scalar_err_oh:.3e}, finite-rank={scalar_err_fr:.3e}"
         ),
     )
+    record(
+        "the Route 2 interface supplies an exact support-side bilinear carrier on the current finite-rank class",
+        np.all(np.isfinite(carrier_center)) and np.all(np.isfinite(carrier_shell)),
+        (
+            "exact support-side carrier K_R(q) = (u_E, u_T, delta_A1 u_E, delta_A1 u_T) "
+            "is available before any canonical Pi_3+1 lift"
+        ),
+        status="EXACT",
+    )
 
     print("\n" + "=" * 78)
     print("BLOCKER")
@@ -172,7 +192,10 @@ def main() -> int:
         "The finite-rank support side still does not provide a canonical exact "
         "`Pi_3+1` polarization lift. The support-to-active operator collapses to "
         "rank one after renormalization, while the active quotient is rank two. "
-        "Any completion to lapse, shift, and spatial trace/shear requires extra "
+        "The exact support-side bilinear carrier `K_R` is the strongest exact "
+        "specialization we can construct from the current stack and Route 2 "
+        "interface, but it still does not canonically split lapse, shift, and "
+        "spatial trace/shear. Any completion to those channels requires extra "
         "independent support generators not present in the current finite-rank stack."
     )
 

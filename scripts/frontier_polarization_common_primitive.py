@@ -75,8 +75,9 @@ def main() -> int:
 
     record(
         "finite-rank blocker asks for a support-side polarization lift before scalar collapse",
-        has(finite_rank, "Pi_3+1") and has(finite_rank, "tensor-valued support-side polarization frame"),
-        "finite-rank lane is explicitly pre-collapse and support-side",
+        has(finite_rank, "Pi_3+1") and has(finite_rank, "tensor-valued support-side polarization frame")
+        and has(finite_frame, "K_R(q)"),
+        "finite-rank lane is explicitly pre-collapse and support-side, with exact carrier K_R now spelled out",
     )
     record(
         "finite-rank support-frame note shows the current support side is rank one after renormalization",
@@ -115,7 +116,7 @@ def main() -> int:
         "Smallest common primitive: a covariant `3+1` polarization-frame / projector "
         "bundle with support-side and curvature-side specializations."
     )
-    print("Support specialization: `Pi_3+1` before scalar collapse.")
+    print("Support specialization: exact bilinear carrier `K_R` before canonical `Pi_3+1`.")
     print("Curvature specialization: `Pi_curv` before Einstein/Regge localization.")
 
     n_pass = sum(c.ok for c in CHECKS)
