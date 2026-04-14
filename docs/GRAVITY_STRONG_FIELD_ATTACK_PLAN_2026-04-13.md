@@ -863,10 +863,17 @@ New exact/bounded selector-transfer reduction extracted after that:
     microscopic tensor-correction quotient
   - yet `tau_tensor` still differs by `7.18e-02`
 - see `docs/TENSOR_TRANSFER_COEFFICIENT_OBSTRUCTION_NOTE.md`
+- and the next localization is now sharper still:
+  - the two families also share identical orbit-summed shell-source data on
+    the sewing band
+  - the distinguishing datum is microscopic intra-orbit shell-source fine
+    structure
+- see `docs/TENSOR_INTRAORBIT_SOURCE_LAW_NOTE.md`
 - so the open gravity target is now narrower again:
-  - derive the transfer coefficient `tau_tensor` from additional microscopic
-    source/lift data beyond the current reduced shell surface
-  - not from another rewrite of the retained shell toolbox alone
+  - derive the transfer coefficient `tau_tensor` from an intra-orbit
+    shell-to-tensor lift law on the sewing band
+  - not from another rewrite of orbit-summed shell data or the retained
+    reduced shell toolbox alone
 
 ### Attack 3: only after metric closure, revisit horizon / echo claims
 
