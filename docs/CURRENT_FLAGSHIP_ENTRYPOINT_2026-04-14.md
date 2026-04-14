@@ -6,6 +6,22 @@ surface
 
 This is the correct root-level entrypoint for an external reviewer.
 
+The program claim is simple to state:
+
+> start from the discrete axiom `Cl(3)` on `Z^3`, treat the lattice as
+> physical rather than as a regulator, and ask how much of observed physics can
+> be recovered from that one starting point.
+
+This repo is the working record of that program. The current paper surface is
+the audited subset of results that survived review and are organized for
+external reading.
+
+Status labels used below:
+
+- `retained`: on the current flagship claim surface
+- `bounded`: quantitatively strong, but not promoted as fully closed
+- `live gate`: still open and under active work
+
 ## What The Current Paper Actually Is
 
 The current flagship paper is **not** a summary of everything in this repo.
@@ -22,7 +38,7 @@ It is a disciplined `Cl(3)` on `Z^3` package with:
 - weak-field gravity through the Poisson / Newton chain
 - weak-field WEP and time dilation
 - restricted strong-field gravity closure on the current star-supported
-  finite-rank class
+  finite-rank class, not full nonlinear GR in full generality
 - exact native `SU(2)`
 - graph-first structural `SU(3)`
 - anomaly-forced `3+1`
@@ -42,7 +58,7 @@ It is a disciplined `Cl(3)` on `Z^3` package with:
 - CKM magnitude package
 - Cabibbo and partial Jarlskog companions
 - cosmology companions such as `Omega_Lambda`, `n_s`, `w = -1`, `Lambda`
-- Higgs and sharp companion predictions
+- bounded Higgs lane and sharp companion predictions
 
 These results matter and should be visible, but they are **not all promoted**
 into the retained flagship surface.

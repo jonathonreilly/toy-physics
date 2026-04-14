@@ -3,6 +3,15 @@
 **Date:** 2026-04-14  
 **Purpose:** root-repo navigation entrypoint
 
+This repo is a graph-first physics program asking one concrete question:
+
+> can a single discrete axiom, `Cl(3)` on `Z^3`, recover a nontrivial unified
+> physics package rather than only a toy model?
+
+The current answer on this branch is: partially yes. Some lanes are retained,
+some are quantitatively strong but still bounded, and a few flagship gates are
+still open.
+
 This repo is too large to understand by browsing filenames. There are two
 different entry modes:
 
@@ -11,11 +20,18 @@ different entry modes:
 
 Use the right one.
 
+Status labels used in the current package:
+
+- `retained`: on the current flagship claim surface
+- `bounded`: quantitatively strong, but not promoted as fully closed
+- `live gate`: still open and under active work
+
 ## If You Are Reviewing The Current Paper
 
 Start with:
 
 1. [CURRENT_FLAGSHIP_ENTRYPOINT_2026-04-14.md](CURRENT_FLAGSHIP_ENTRYPOINT_2026-04-14.md)
+2. [publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md](publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md)
 
 That document tells you:
 
@@ -48,10 +64,11 @@ The current flagship publication package is:
 - framework: `Cl(3)` on `Z^3`
 - retained core: gauge/matter backbone, anomaly-forced `3+1`, derived
   electroweak scale, weak-field gravity, restricted strong-field gravity
-  theorem, retained `S^3`, one-generation closure, three-generation structure,
-  exact `I_3 = 0`, exact CPT
+  theorem (not full nonlinear GR), retained `S^3`, one-generation closure,
+  three-generation structure, exact `I_3 = 0`, exact CPT
 - bounded observation-facing portfolio: DM ratio, `alpha_s`, `m_t`, CKM
-  magnitudes, cosmology companions, Higgs and sharp companion predictions
+  magnitudes, cosmology companions, bounded Higgs lane, and sharp companion
+  predictions
 - live gates: DM relic mapping, renormalized `y_t`, CKM / quantitative flavor
 
 ## What Not To Do

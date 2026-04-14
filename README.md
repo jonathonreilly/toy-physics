@@ -1,16 +1,40 @@
 # Physics Repo
 
+This repo is a graph-first theoretical physics program built around one working
+axiom:
+
+- physical theory is `Cl(3)` on `Z^3`
+
+The current flagship goal is not “collect every exploratory note.” It is to
+test whether that single discrete axiom can recover a serious unified package:
+
+- gauge and matter structure
+- effective `3+1`
+- electroweak scale
+- gravity
+- and a broader prediction portfolio against observation
+
+The repo contains both the current flagship paper surface and the older
+exploration history that led to it.
+
 This branch is organized around the current `Cl(3)` on `Z^3` publication
 package. Review the package through the curated control plane, not raw repo
 chronology.
 
+Status labels used on this branch:
+
+- `retained`: on the current flagship claim surface
+- `bounded`: quantitatively strong, but not promoted as fully closed
+- `live gate`: still open and actively being worked
+
 ## Start Here If You Are Reviewing The Current Paper
 
 1. [docs/CURRENT_FLAGSHIP_ENTRYPOINT_2026-04-14.md](docs/CURRENT_FLAGSHIP_ENTRYPOINT_2026-04-14.md)
-2. [docs/publication/ci3_z3/README.md](docs/publication/ci3_z3/README.md)
-3. [docs/publication/ci3_z3/PUBLICATION_CONTROL_PLANE.md](docs/publication/ci3_z3/PUBLICATION_CONTROL_PLANE.md)
-4. [docs/publication/ci3_z3/PUBLICATION_MATRIX.md](docs/publication/ci3_z3/PUBLICATION_MATRIX.md)
-5. [docs/publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md](docs/publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md)
+2. [docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md](docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md)
+3. [docs/publication/ci3_z3/README.md](docs/publication/ci3_z3/README.md)
+4. [docs/publication/ci3_z3/PUBLICATION_CONTROL_PLANE.md](docs/publication/ci3_z3/PUBLICATION_CONTROL_PLANE.md)
+5. [docs/publication/ci3_z3/PUBLICATION_MATRIX.md](docs/publication/ci3_z3/PUBLICATION_MATRIX.md)
+6. [docs/publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md](docs/publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md)
 
 ## Current Flagship Paper Surface
 
@@ -20,7 +44,7 @@ Retained core:
 - weak-field gravity through the Poisson / Newton chain
 - weak-field WEP and time dilation on that same retained gravity surface
 - restricted strong-field gravity closure on the current star-supported
-  finite-rank class
+  finite-rank class, not full nonlinear GR in full generality
 - exact native `SU(2)`
 - graph-first structural `SU(3)`
 - anomaly-forced `3+1`
@@ -39,7 +63,7 @@ Observation-facing bounded portfolio:
 - zero-import `m_t = 169.4 GeV` on the current 2-loop bounded route
 - CKM magnitude package
 - cosmology companions such as `Omega_Lambda`, `n_s`, `w = -1`
-- Higgs and sharp companion predictions
+- bounded Higgs lane and sharp companion predictions
 
 Live flagship gates:
 
