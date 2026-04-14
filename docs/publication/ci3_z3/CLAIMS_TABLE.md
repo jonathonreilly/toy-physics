@@ -6,17 +6,15 @@ validation map says how each claim is evidenced and released.
 
 ## External inputs
 
-The current paper conditions some phenomenology on three explicit external
-inputs:
+The current paper conditions phenomenology on two explicit cosmological
+boundary conditions:
 
-- cosmological boundary conditions:
-  - `T_CMB = 2.7255 K`
-  - `H_0 = 67.4 km/s/Mpc`
-- electroweak-scale boundary input:
-  - `v = 246 GeV`
+- `T_CMB = 2.7255 K`
+- `H_0 = 67.4 km/s/Mpc`
 
-`v` should not be described as just another cosmological boundary condition.
-It is the unresolved electroweak-scale / hierarchy input.
+The electroweak scale is not an external input on the current paper surface.
+It is derived on the exact minimal hierarchy block with
+`v = 245.080424447914 GeV` (`0.4628%` low relative to `246.22 GeV`).
 
 ## Retained core
 
@@ -30,6 +28,7 @@ It is the unresolved electroweak-scale / hierarchy input.
 | graph-first structural `SU(3)` closure | retained | main text | [GRAPH_FIRST_SU3_INTEGRATION_NOTE.md](../../GRAPH_FIRST_SU3_INTEGRATION_NOTE.md) | [frontier_graph_first_su3_integration.py](../../../scripts/frontier_graph_first_su3_integration.py) |
 | left-handed `+1/3` / `-1` charge matching on the selected-axis surface | retained corollary | main text or SI corollary | [GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md](../../GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md) | [frontier_graph_first_su3_integration.py](../../../scripts/frontier_graph_first_su3_integration.py) |
 | anomaly-forced `3+1` closure | retained | main text | [ANOMALY_FORCES_TIME_THEOREM.md](../../ANOMALY_FORCES_TIME_THEOREM.md) | [frontier_anomaly_forces_time.py](../../../scripts/frontier_anomaly_forces_time.py) |
+| electroweak hierarchy / `v` scale on the exact minimal `3+1` block | retained exact theorem | main text or Extended Data theorem box | [OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md](../../OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md) | [frontier_hierarchy_observable_principle_from_axiom.py](../../../scripts/frontier_hierarchy_observable_principle_from_axiom.py) |
 | retained `S^3` compactification / topology closure | retained | main text or SI theorem box | [/Users/jonreilly/Projects/Physics/.claude/worktrees/youthful-neumann/docs/S3_GENERAL_R_DERIVATION_NOTE.md](/Users/jonreilly/Projects/Physics/.claude/worktrees/youthful-neumann/docs/S3_GENERAL_R_DERIVATION_NOTE.md), [/Users/jonreilly/Projects/Physics/.claude/worktrees/youthful-neumann/docs/S3_CAP_UNIQUENESS_NOTE.md](/Users/jonreilly/Projects/Physics/.claude/worktrees/youthful-neumann/docs/S3_CAP_UNIQUENESS_NOTE.md) | [frontier_s3_boundary_link_theorem.py](../../../scripts/frontier_s3_boundary_link_theorem.py), [frontier_s3_cap_uniqueness.py](../../../scripts/frontier_s3_cap_uniqueness.py), [frontier_s3_general_r.py](../../../scripts/frontier_s3_general_r.py) |
 | full-framework one-generation matter closure | retained | main text | [GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md](../../GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md) | [frontier_right_handed_sector.py](../../../scripts/frontier_right_handed_sector.py) |
 | three-generation matter structure in the framework | retained | main text | [GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md](../../GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md) | [frontier_generation_fermi_point.py](../../../scripts/frontier_generation_fermi_point.py), [frontier_generation_rooting_undefined.py](../../../scripts/frontier_generation_rooting_undefined.py), [frontier_generation_axiom_boundary.py](../../../scripts/frontier_generation_axiom_boundary.py) |
@@ -50,7 +49,7 @@ cleanly or closed.
 | renormalized `y_t` bridge | bounded | arXiv / SI only | `review-active` bounded `y_t` notes |
 | CKM / Higgs `Z_3` route | bounded | arXiv / SI only | `review-active` bounded CKM notes |
 | cosmology windows (`w=-1`, graviton mass, `Omega_Lambda`, `n_s`) | bounded / conditional | arXiv companion only | `review-active` bounded cosmology notes |
-| Higgs / Coleman-Weinberg mass lane | bounded | arXiv companion only | `claude/youthful-neumann` Higgs derivation note + runner |
+| Higgs mass / Coleman-Weinberg mass lane (`m_H = 125 GeV`) | bounded | arXiv companion only | `claude/youthful-neumann` Higgs derivation note + runner |
 | proton lifetime | bounded sharp prediction | arXiv companion only | `claude/youthful-neumann` proton lifetime note + runner |
 | Lorentz-violation cubic fingerprint | bounded sharp prediction | arXiv companion only | `claude/youthful-neumann` Lorentz-violation note + runner |
 | BH entropy / RT ratio | bounded companion | arXiv companion only | `claude/youthful-neumann` BH entropy note + runner |

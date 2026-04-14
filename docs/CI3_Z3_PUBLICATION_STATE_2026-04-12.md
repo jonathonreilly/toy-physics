@@ -15,18 +15,22 @@ paper surface.
 ## External inputs used in the current paper
 
 The framework sentence is ontological, not a claim that every phenomenological
-normalization is already closed. The current paper still conditions some
-downstream phenomenology on a small set of external inputs:
+normalization is already closed. The current flagship paper still conditions
+downstream phenomenology on two explicit cosmological boundary conditions:
 
-- cosmological boundary conditions:
-  - `T_CMB = 2.7255 K`
-  - `H_0 = 67.4 km/s/Mpc`
-- electroweak-scale boundary input:
-  - `v = 246 GeV`
+- `T_CMB = 2.7255 K`
+- `H_0 = 67.4 km/s/Mpc`
 
-The cosmological inputs specify which universe / epoch is being matched.
-The electroweak-scale input is different in kind: it is the unresolved
-hierarchy input, not merely a "where/when are we?" datum.
+These specify which universe / epoch is being matched.
+
+The electroweak scale is no longer treated as an external boundary input on the
+current paper surface. On the exact minimal hierarchy block, the additive
+CPT-even source generator derived from the lattice Grassmann Gaussian fixes the
+local scalar hierarchy observable, and the unique minimal resolved APBC orbit
+selects `L_t = 4`, giving:
+
+- `v = 245.080424447914 GeV`
+- relative error vs `246.22 GeV`: `-0.462828%`
 
 ## Retained backbone
 
@@ -56,6 +60,12 @@ The current retained backbone is:
   - derived time supplies chirality
   - anomaly cancellation fixes the right-handed singlet completion on the
     Standard Model branch
+- electroweak hierarchy / `v` closure on the exact minimal `3+1` block:
+  - exact exponent `16 = 2 x 2^3`
+  - exact scalar observable principle from the additive CPT-even source
+    response `log|det(D+J)|`
+  - unique minimal resolved temporal selector `L_t = 4`
+  - predicted `v = 245.080424447914 GeV`
 - three-generation matter closure in the framework:
   - exact orbit algebra `8 = 1 + 1 + 3 + 3`
   - physical species structure on the lattice surface
@@ -78,6 +88,13 @@ surface:
 - exact CPT theorem for the free staggered `Cl(3)` lattice
 - exact native cubic `SU(2)` algebra
 - exact graph-first `su(3)` commutant closure on the retained selector surface
+- exact hierarchy observable principle on the minimal APBC block:
+  - `|Z|` is multiplicative on independent subsystems
+  - `log|Z|` is therefore the unique additive CPT-even scalar generator
+  - local scalar order parameters are the source-response coefficients of that
+    generator
+  - the resulting curvature kernel reproduces the exact hierarchy coefficient
+    and internally selects the `L_t = 4` orbit
 
 ## High-impact gates still open
 
@@ -109,7 +126,7 @@ section, but they are not yet retained closure:
 - CKM/Higgs `Z_3` selection arguments
 - gauge-coupling normalization notes
 - cosmology companions such as `w = -1`, graviton mass, `Omega_Lambda`, `n_s`
-- Higgs / Coleman-Weinberg mass notes
+- Higgs mass / Coleman-Weinberg notes (`m_H` still bounded even though `v` is now derived)
 - proton lifetime, Lorentz-violation, BH-entropy, gravitational-decoherence,
   magnetic-monopole, and GW-echo companion predictions
 
@@ -118,7 +135,7 @@ section, but they are not yet retained closure:
 The full claim ledger now also tracks the overnight companion claims that are
 scientifically relevant but not part of the flagship backbone:
 
-- Higgs / Coleman-Weinberg mechanism and bounded Higgs-mass lane
+- electroweak hierarchy / `v` closure together with the still-bounded Higgs-mass lane
 - proton lifetime
 - Lorentz-violation cubic fingerprint
 - BH entropy / RT ratio
@@ -135,7 +152,7 @@ For the flagship paper:
 - the main text should lead with the retained backbone
 - the external-input split must stay explicit:
   - `T_CMB` and `H_0` are cosmological boundary conditions
-  - `v` is an electroweak-scale boundary input
+  - `v` is now internally derived on the exact minimal hierarchy block
 - the three live gates must remain explicitly open or bounded
 - no note or script may promote a bounded lane to `CLOSED` unless the theorem
   survives direct Codex review on this branch
@@ -153,8 +170,10 @@ batches:
 
 > `Cl(3)` on `Z^3` yields weak-field gravity through the Poisson/Newton chain,
 > weak-field WEP and gravitational time dilation as corollaries of that same
-> surface, exact `SU(2)`, graph-first structural `SU(3)`, a retained `S^3`
-> compactification on the accepted topology infrastructure, a full-framework
-> one-generation Standard Model closure, and a retained three-generation
-> matter structure in the same framework. The remaining live paper gates are
-> DM relic mapping, renormalized `y_t`, and quantitative flavor closure.
+> surface, exact `SU(2)`, graph-first structural `SU(3)`, anomaly-forced
+> `3+1`, a retained `S^3` compactification on the accepted topology
+> infrastructure, a full-framework one-generation Standard Model closure, a
+> derived electroweak hierarchy / `v` scale on the exact minimal hierarchy
+> block, and a retained three-generation matter structure in the same
+> framework. The remaining live paper gates are DM relic mapping, renormalized
+> `y_t`, and quantitative flavor closure.

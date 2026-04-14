@@ -8,8 +8,9 @@ closed, but that a broad structural backbone now survives direct audit on one
 discrete theory: weak-field gravity through the Poisson/Newton chain, exact
 native `SU(2)`, graph-first structural `SU(3)`, anomaly-forced `3+1`, a
 retained `S^3` compactification / topology closure, a full-framework
-one-generation Standard Model closure, and a retained three-generation matter
-structure. We also retain exact supporting theorems for vanishing
+one-generation Standard Model closure, a derived electroweak hierarchy /
+electroweak scale on the exact minimal `3+1` block, and a retained
+three-generation matter structure. We also retain exact supporting theorems for vanishing
 third-order interference (`I_3 = 0`) on the Hilbert surface and exact CPT on
 the free staggered lattice. We separate this retained backbone from bounded
 phenomenology and from three still-live bridge problems: dark-matter relic
@@ -32,12 +33,14 @@ on one exact discrete surface, while bounded and open lanes are reported with
 their actual audited status.
 
 The current paper also conditions some phenomenology on a small explicit set
-of external inputs. Two are cosmological boundary conditions,
+of external inputs, but they are now cosmological only:
 `T_CMB = 2.7255 K` and `H_0 = 67.4 km/s/Mpc`, which specify the universe /
-epoch being matched. The third is different in kind: `v = 246 GeV` is the
-electroweak-scale boundary input, i.e. the unresolved hierarchy datum. The
-framework closes the EWSB structure more strongly than the Standard Model, but
-it does not yet derive the absolute electroweak scale.
+epoch being matched. The electroweak scale is no longer treated as an external
+datum on the current paper surface. On the exact minimal hierarchy block, the
+axiom-native scalar observable principle derived from the finite Grassmann
+Gaussian fixes the hierarchy normalization and yields
+`v = 245.080424447914 GeV`, within `0.4628%` of the measured electroweak
+scale, without electroweak input.
 
 ## 2. Retained Framework Surface
 
@@ -89,15 +92,33 @@ graph fixes the left-handed gauge and matter structure, and anomaly cancellation
 fixes the right-handed singlet completion on the Standard Model branch. That is
 the current one-generation closure surface.
 
-### 2.6 Three-generation matter structure
+### 2.6 Electroweak hierarchy / `v` scale
+
+The electroweak hierarchy is now retained on the same exact minimal block.
+On the APBC hierarchy block, the determinant exponent is exactly
+`16 = 2 x 2^3`, spatial APBC is selected by finiteness of the intensive
+`3+1` scalar observable, and the remaining observable-map gap is removed by the
+new source-response theorem: the finite Grassmann Gaussian makes `|Z|`
+multiplicative on independent subsystems, so `log|Z|` is the unique additive
+CPT-even scalar generator, and local scalar observables are its source-response
+coefficients. The resulting curvature kernel depends only on the
+sign/conjugation-invariant temporal weight `sin^2 omega`, so the unique
+minimal resolved orbit is `L_t = 4`. This gives
+`v = 245.080424447914 GeV`, `0.4628%` below `246.22 GeV`, without electroweak
+input.
+
+What remains bounded is not the hierarchy / `v` lane, but the physical Higgs
+mass `m_H = 125 GeV`.
+
+### 2.7 Three-generation matter structure
 
 The exact orbit algebra `8 = 1 + 1 + 3 + 3` remains central. On the present
 framework surface the lattice is physical rather than a regulator, so the three
 triplet sectors are retained as physical species structure within the theory.
-What remains bounded is detailed hierarchy and quantitative flavor data, not the
-existence of three species itself.
+What remains bounded is detailed fermion-mass hierarchy and quantitative flavor
+data, not the existence of three species itself.
 
-### 2.7 Retained `S^3` compactification / topology closure
+### 2.8 Retained `S^3` compactification / topology closure
 
 The current topology result is no longer a tentative appendix claim. On the
 accepted paper bar, the cone-cap family closes the compactification/classification
@@ -213,8 +234,9 @@ model, but it is also not yet a fully closed unification paper. The retained
 backbone is broad and nontrivial: weak-field gravity through the Poisson/Newton
 chain together with weak-field WEP and time dilation, exact native `SU(2)`,
 graph-first structural `SU(3)`, anomaly-forced `3+1`, a full-framework
-one-generation Standard Model closure, and a retained three-generation matter
-structure. Exact `I_3 = 0` and exact CPT strengthen the same framework
+one-generation Standard Model closure, a derived electroweak hierarchy / `v`
+scale on the exact minimal hierarchy block, and a retained three-generation
+matter structure. Exact `I_3 = 0` and exact CPT strengthen the same framework
 surface.
 
 The remaining bridge problems are explicit: dark-matter relic mapping,
