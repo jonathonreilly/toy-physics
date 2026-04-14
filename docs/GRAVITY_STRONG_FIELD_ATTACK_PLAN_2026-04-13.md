@@ -661,6 +661,19 @@ New exact/bounded microscopic shell-action result extracted after that:
 - see `docs/OH_SCHUR_BOUNDARY_ACTION_NOTE.md`
 - this removes the microscopic shell-action gap on the current source classes
 
+New exact/bounded microscopic Dirichlet-principle result extracted after that:
+
+- the sourced Schur boundary action is strictly convex on the current bridge
+  surface
+- the exact shell trace is the unique global minimizer of that microscopic
+  boundary energy
+- the native same-charge bridge is therefore the unique minimum-energy
+  discrete Dirichlet extension of the exact shell data on the current
+  star-supported class
+- see `docs/MICROSCOPIC_DIRICHLET_BRIDGE_PRINCIPLE_NOTE.md`
+- this removes the last "ansatz vs principle" ambiguity on the current bridge
+  surface
+
 ## Current promotable gravity statement
 
 At this point the branch supports a real **restricted strong-field closure**
@@ -668,7 +681,8 @@ statement:
 
 - on the exact local `O_h` star-supported source class, the framework has
   exact shell source, exact same-charge bridge, exact local shell-to-`3+1`
-  static conformal lift, and exact microscopic Schur boundary action
+  static conformal lift, exact microscopic Schur boundary action, and exact
+  minimum-energy discrete Dirichlet bridge principle
 - on the broader finite-rank family, the same closure package persists with
   only the already-controlled small within-orbit deformation
 
@@ -694,6 +708,18 @@ New exact/bounded local-bridge uniqueness extracted after that:
 - see `docs/LOCAL_BRIDGE_UNIQUENESS_NOTE.md`
 - this removes local scalar bridge reparameterization freedom from the live
   blocker list on the current class
+
+New exact/bounded bridge-variational result extracted after that:
+
+- the exact microscopic Schur boundary action admits a strict positive-definite
+  completion of the square around the native bridge trace
+- for both the exact local `O_h` family and the broader finite-rank family,
+  random shell-trace perturbations raise the exact boundary action by a
+  strictly positive amount
+- see `docs/MICROSCOPIC_DIRICHLET_BRIDGE_PRINCIPLE_NOTE.md`
+- this turns the current bridge from a well-motivated static conformal ansatz
+  into the unique minimum-energy discrete Dirichlet extension on the current
+  source classes
 
 ### Attack 3: only after metric closure, revisit horizon / echo claims
 

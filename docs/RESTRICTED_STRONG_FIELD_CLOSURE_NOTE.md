@@ -29,6 +29,10 @@ branch, the strong-field gravity program now has an exact restricted closure:
 5. **Exact microscopic boundary action**
    - the shell trace law is the stationary point of the exact Schur-complement
      boundary energy of the lattice Laplacian on the exterior domain
+6. **Exact microscopic Dirichlet principle**
+   - the shell trace is the unique global minimizer of that same boundary
+     energy, so the native same-charge bridge is the minimum-energy discrete
+     Dirichlet extension of the shell data
 
 So on this source class, the shell law, bridge, shell-to-`3+1` lift, and
 boundary action are no longer open. They form one exact restricted strong-field
@@ -45,6 +49,8 @@ For the broader exact finite-rank source family already on the branch:
   within-orbit shell variation:
   - `rho` about `1.4%`
   - `S` about `2.7%`
+- the same strict convexity also turns the bridge into a unique minimum-energy
+  Dirichlet extension on the current bridge surface
 
 So the broader-family gap is no longer a new shell law or new boundary action.
 It is a small pointwise deformation of the same closure package.
@@ -55,8 +61,9 @@ The following is now defensible to promote:
 
 > On the exact local `O_h` strong-field source class, the framework admits an
 > exact restricted strong-field closure consisting of an exact shell source,
-> unique same-charge bridge, exact local static conformal constraint lift, and
-> exact microscopic Schur boundary action.
+> unique same-charge bridge, exact local static conformal constraint lift,
+> exact microscopic Schur boundary action, and exact microscopic Dirichlet
+> principle.
 
 That is stronger than the earlier weak-field-only gravity surface.
 
