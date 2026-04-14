@@ -97,6 +97,19 @@ renormalization, so the missing primitive is not a better scalar fit. It is
 the extra tensorial support frame needed to source the second active direction
 canonically before any scalar collapse.
 
+## Support-side polarization-frame attempt
+
+The finite-rank support data were checked directly for a canonical
+polarization frame on the active quotient. The exact result is that the
+support-side response remains rank one after renormalization, while the active
+quotient is rank two. The second active quotient direction cannot be sourced
+canonically from the current support span without adding new independent
+support generators before the scalar collapse.
+
+The exact attempt and the rank obstruction are recorded in:
+
+- [FINITE_RANK_SUPPORT_POLARIZATION_FRAME_NOTE.md](./FINITE_RANK_SUPPORT_POLARIZATION_FRAME_NOTE.md)
+
 ## Verdict
 
 Finite-rank widening now has:

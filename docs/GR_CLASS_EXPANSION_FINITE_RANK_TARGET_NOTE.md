@@ -70,6 +70,7 @@ So the honest split is:
 The exact missing primitive is now explicit:
 
 - [FINITE_RANK_3PLUS1_PROMOTION_BLOCKER_NOTE.md](./FINITE_RANK_3PLUS1_PROMOTION_BLOCKER_NOTE.md)
+- [FINITE_RANK_SUPPORT_POLARIZATION_FRAME_NOTE.md](./FINITE_RANK_SUPPORT_POLARIZATION_FRAME_NOTE.md)
 
 ## Why widening looks more promising than direct universal GR
 
