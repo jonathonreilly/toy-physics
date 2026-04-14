@@ -721,6 +721,17 @@ New exact/bounded local-bridge uniqueness extracted after that:
 - this removes local scalar bridge reparameterization freedom from the live
   blocker list on the current class
 
+New exact/bounded generic-support bridge-uniqueness extension extracted after
+that:
+
+- on the broader generic finite-support bridge class, the affine bridge channel
+  still remains exactly exterior harmonic, while quadratic local scalar
+  deformations immediately fail both bulk harmonicity and the discrete
+  mean-value / Jensen test on realized exterior neighbor data
+- see `docs/GENERIC_LOCAL_BRIDGE_UNIQUENESS_NOTE.md`
+- this removes the most obvious “hidden nonlinear local scalar bridge” escape
+  hatch from the broader finite-support class as well
+
 New exact/bounded bridge-variational result extracted after that:
 
 - the exact microscopic Schur boundary action admits a strict positive-definite
@@ -781,4 +792,5 @@ gravity.” The actual task is:
 
 With the latest support-class widening, that theorem is now best phrased for
 generic finite-support sources on the current box rather than only the
-star-supported benchmark geometry.
+star-supported benchmark geometry. The remaining freedom is now best understood
+as genuinely beyond the current static conformal local-scalar bridge class.
