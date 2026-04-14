@@ -806,6 +806,22 @@ New exact/bounded scalar-completion no-go extracted after that:
 - this removes the last scalar-only escape hatch and forces any positive next
   step to be a genuinely tensor-valued matching law
 
+New exact/bounded tensor-matching localization extracted after that:
+
+- on the retained restricted family, the missing tensor completion is now
+  localized to the smallest non-scalar shell data compatible with the current
+  probes:
+  - one shift-like tensor boundary coordinate
+  - one traceless-shear boundary coordinate
+- see `docs/TENSOR_MATCHING_COMPLETION_THEOREM_NOTE.md`
+- on the current audited family, the mixed probe is locally additive in those
+  two channels, so they are not just necessary; they are also the smallest
+  locally sufficient tensor extension currently visible on the branch
+- this means the only honest positive route left is to derive:
+  - the microscopic source-to-tensor-channel map `eta`
+  - the symmetric positive-definite tensor boundary kernel `K_tensor`
+- see `docs/TENSOR_COMPLETION_NO_GO_OR_EXTENSION_NOTE.md`
+
 ### Attack 3: only after metric closure, revisit horizon / echo claims
 
 Current gap:
