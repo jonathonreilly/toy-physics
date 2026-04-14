@@ -684,6 +684,17 @@ New exact/bounded source-class extension extracted after that:
 - this removes source-class dependence within the current star-supported
   finite-rank sector from the live blocker list
 
+New exact/bounded local-bridge uniqueness extracted after that:
+
+- on the current star-supported finite-rank class, any local scalar bridge
+  channel that remains exterior harmonic on the exact shell exterior must be
+  affine in `phi_ext`
+- same-charge inheritance and the attractive temporal branch then fix the
+  native bridge `psi = 1 + phi_ext`, `chi = 1 - phi_ext`
+- see `docs/LOCAL_BRIDGE_UNIQUENESS_NOTE.md`
+- this removes local scalar bridge reparameterization freedom from the live
+  blocker list on the current class
+
 ### Attack 3: only after metric closure, revisit horizon / echo claims
 
 Current gap:

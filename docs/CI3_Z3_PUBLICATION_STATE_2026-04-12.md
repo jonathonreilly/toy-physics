@@ -1,7 +1,7 @@
 # CI(3) / Z^3 Publication State
 
 **Date:** 2026-04-13  
-**Branch:** `codex/review-active`  
+**Branch:** `codex/publication-prep`  
 **Status:** Codex-owned publication authority for the current flagship paper surface
 
 ## Framework sentence
@@ -44,6 +44,15 @@ The current retained backbone is:
     derived action
   - weak-field gravitational time dilation is retained on the same Poisson /
     Newton surface
+- restricted strong-field gravity closure on the current star-supported class:
+  - exact shell source on the sewing band `3 < r <= 5`
+  - unique same-charge bridge `psi = 1 + phi_ext`, `chi = 1 - phi_ext`
+  - exact local static conformal constraint lift on that bridge
+  - exact microscopic Schur-complement shell boundary action
+  - exact on the local `O_h` shell class and exact bridge-side closure across
+    the broader star-supported finite-rank class
+  - carried as an Extended Data / arXiv theorem, not as a full nonlinear-GR
+    flagship claim
 - exact native `Cl(3)` / `SU(2)` on `Z^3`
 - graph-first weak-axis selector
 - graph-first structural `su(3)` closure
@@ -81,11 +90,18 @@ surface:
   - weak equivalence principle from the derived eikonal action
   - weak-field time dilation from the same action on the retained Poisson
     profile
+- exact restricted strong-field bridge theorem on the current star-supported
+  class:
+  - exact shell source on `3 < r <= 5`
+  - exact same-charge bridge
+  - exact local shell-to-`3+1` static conformal constraint lift
+  - exact microscopic Schur boundary action
+  - exact source-class extension across the star-supported finite-rank sector
 - exact no-third-order-interference / `I_3 = 0` theorem on the Hilbert surface
   Note: this is **not** a standalone derivation of the Born rule from nothing;
   the safe statement is exact pairwise interference on the accepted Hilbert
-  probability surface, and the runner name is historical.
-- exact CPT theorem for the free staggered `Cl(3)` lattice on even periodic lattices
+  probability surface.
+- exact CPT theorem for the free staggered `Cl(3)` lattice
 - exact native cubic `SU(2)` algebra
 - exact graph-first `su(3)` commutant closure on the retained selector surface
 - exact hierarchy observable principle on the minimal APBC block:
@@ -120,6 +136,10 @@ section, but they are not yet retained closure:
   - conformal-metric / geodesic / light-bending notes
   - these remain useful, but the broader GR bundle is still not the paper-safe
     closure surface beyond the retained WEP / time-dilation corollaries
+- full nonlinear / fully general strong-field GR:
+  - the new restricted strong-field theorem is retained
+  - what remains bounded is the extension beyond the current static conformal
+    bridge and beyond the current source/support classes
 - direct lattice DM contact enhancement
 - DM coarse-graining / Stosszahlansatz notes
 - renormalized `y_t` running and matching notes
@@ -129,6 +149,21 @@ section, but they are not yet retained closure:
 - Higgs mass / Coleman-Weinberg notes (`m_H` still bounded even though `v` is now derived)
 - proton lifetime, Lorentz-violation, BH-entropy, gravitational-decoherence,
   magnetic-monopole, and GW-echo companion predictions
+
+## Overnight audit additions tracked in the ledger
+
+The full claim ledger now also tracks the overnight companion claims that are
+scientifically relevant but not part of the flagship backbone:
+
+- electroweak hierarchy / `v` closure together with the still-bounded Higgs-mass lane
+- proton lifetime
+- Lorentz-violation cubic fingerprint
+- BH entropy / RT ratio
+- gravitational decoherence
+- magnetic monopole mass
+- GW echo timing
+
+See [FULL_CLAIM_LEDGER.md](publication/ci3_z3/FULL_CLAIM_LEDGER.md).
 
 ## Publication rule
 
