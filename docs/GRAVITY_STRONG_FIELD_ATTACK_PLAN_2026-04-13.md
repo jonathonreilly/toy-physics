@@ -674,6 +674,16 @@ statement:
 
 See `docs/RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md`.
 
+New exact/bounded source-class extension extracted after that:
+
+- on the current bridge surface, the exact shell source, same-charge bridge,
+  local static conformal constraints, and microscopic Schur boundary action do
+  not depend on the benchmark `O_h` family alone
+- they extend exactly to the full star-supported finite-rank source class
+- see `docs/STAR_SUPPORTED_BRIDGE_CLASS_NOTE.md`
+- this removes source-class dependence within the current star-supported
+  finite-rank sector from the live blocker list
+
 ### Attack 3: only after metric closure, revisit horizon / echo claims
 
 Current gap:
