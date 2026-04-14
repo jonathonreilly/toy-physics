@@ -772,6 +772,40 @@ New exact/bounded bridge-variational result extracted after that:
   into the unique minimum-energy discrete Dirichlet extension on the current
   source classes
 
+New bounded first-tensor correction extracted after that:
+
+- the universal zero-monopole DtN anisotropic shell mode is a real first
+  tensor correction to the scalar bridge
+- promoted as the minimal traceless spatial shear, it lowers the 4D Einstein
+  residual on both the exact local `O_h` and broader finite-rank classes, but
+  does not close the gap
+- see `docs/TENSORIAL_BRIDGE_PRINCIPLE_NOTE.md`
+- this means the remaining freedom is not “no tensor correction exists”; it is
+  that the first tensor correction is insufficient
+
+New sharp tensorial-completion obstruction extracted after that:
+
+- keeping the exact scalar bridge fixed while turning on explicit shift and
+  traceless spatial tensor perturbations leaves the scalar Schur boundary
+  action unchanged but generates independent `G_{0i}` and traceless
+  `G_{ij}` residual channels
+- see `docs/TENSORIAL_EINSTEIN_REGGE_COMPLETION_NOTE.md`
+- this localizes the remaining gap: the current restricted `3+1` lift is
+  scalar-complete on the bridge surface, but it is not a full tensorial
+  completion theorem
+
+New exact/bounded scalar-completion no-go extracted after that:
+
+- the current microscopic boundary functional depends only on the scalar shell
+  trace / Schur data
+- explicit vector, traceless-shear, and mixed perturbations keep that scalar
+  data fixed while producing different tensorial Einstein channels
+- see `docs/SCALAR_TRACE_TENSOR_NO_GO_NOTE.md`
+- therefore no completion principle factoring only through the current scalar
+  shell trace / Schur data can determine the full `3+1` metric on this branch
+- this removes the last scalar-only escape hatch and forces any positive next
+  step to be a genuinely tensor-valued matching law
+
 ### Attack 3: only after metric closure, revisit horizon / echo claims
 
 Current gap:
