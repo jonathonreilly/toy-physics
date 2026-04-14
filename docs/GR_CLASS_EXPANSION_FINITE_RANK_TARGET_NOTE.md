@@ -67,6 +67,10 @@ So the honest split is:
 - exact scalar active-quotient amplitude law: extends cleanly
 - exact GR tensor dynamics identification: breaks at the current class edge
 
+The exact missing primitive is now explicit:
+
+- [FINITE_RANK_3PLUS1_PROMOTION_BLOCKER_NOTE.md](./FINITE_RANK_3PLUS1_PROMOTION_BLOCKER_NOTE.md)
+
 ## Why widening looks more promising than direct universal GR
 
 The finite-rank widening route already has:

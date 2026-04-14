@@ -62,3 +62,6 @@ After this note, the finite-rank widening frontier narrows to:
 > derive the tensorial `3+1` matching law from the exact support-renormalized
 > active-shell amplitude law and the projected DtN correction operator.
 
+The sharper missing primitive is now isolated in:
+
+- [FINITE_RANK_3PLUS1_PROMOTION_BLOCKER_NOTE.md](./FINITE_RANK_3PLUS1_PROMOTION_BLOCKER_NOTE.md)

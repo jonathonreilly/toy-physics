@@ -110,13 +110,15 @@ metric.
 
 What is missing is now sharper:
 
-> a tensorial matching/completion principle that promotes the exact scalar
-> active-quotient law to the full lapse-shift-spatial metric.
+> an exact `3+1` polarization lift that promotes the exact scalar active-
+> quotient law to the full lapse-shift-spatial metric.
 
 So route 3 is cleaner than the current `eta_floor_tf` endpoint route because
 it starts from exact finite-rank source renormalization and exact retained
 boundary/action laws, but it still stops at the scalar/active quotient before
-the tensorial `3+1` metric law.
+the tensorial `3+1` metric law. The exact missing primitive is isolated in:
+
+- [FINITE_RANK_3PLUS1_PROMOTION_BLOCKER_NOTE.md](./FINITE_RANK_3PLUS1_PROMOTION_BLOCKER_NOTE.md)
 
 ## Verdict
 

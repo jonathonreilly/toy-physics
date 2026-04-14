@@ -107,3 +107,7 @@ After this note, the perturbative target narrows again:
   operator on the active orbit quotient
 - the remaining theorem target is now the tensorial `3+1` promotion of the
   exact scalar active-quotient law
+
+The exact missing primitive for that promotion is isolated in:
+
+- [FINITE_RANK_3PLUS1_PROMOTION_BLOCKER_NOTE.md](./FINITE_RANK_3PLUS1_PROMOTION_BLOCKER_NOTE.md)
