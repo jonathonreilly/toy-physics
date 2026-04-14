@@ -909,7 +909,45 @@ New exact/bounded tensor-boundary-drive reduction extracted after that:
   - derive the exact two-channel law for `eta_floor_tf(E_x, T1x)`
   - then recover `c_eta` and the tensor completion as derived quantities
   - not by further reworking the scalar denominator, which is already exact on
-    the current audited exact source class
+  the current audited exact source class
+
+New exact/bounded local-Jacobian reduction extracted after that:
+
+- the local tensor-boundary-drive Jacobian around the scalar `A1` baselines of
+  both audited families is already exactly two-channel
+- the dark directions `E_perp`, `T1y`, and `T1z` vanish to numerical
+  precision under centered differentiation
+- see `docs/TENSOR_LOCAL_TWO_CHANNEL_JACOBIAN_NOTE.md`
+- the bright coefficients `beta_E_x` and `beta_T1x` are stable across the
+  audited epsilon window, so there is a real local response law rather than
+  only a finite-amplitude fit
+- the exact reduced shell amplitude law still matters:
+  - after normalizing by `A_aniso = c_aniso * Q`, the cross-family mismatch of
+    the bright coefficients narrows materially
+- but that normalization does **not** make the coefficients exact across the
+  two audited scalar baselines
+- so the remaining full-GR gap is now smallest and most explicit:
+  - one last `A1`-background renormalization law for the local bright
+    coefficients of `eta_floor_tf`
+  - not channel selection, not shell-amplitude selection, and not another
+  rewrite of the retained reduced shell toolbox
+
+New bounded scalar-background localization extracted after that:
+
+- the remaining bright coefficients are not behaving like generic
+  family-specific data
+- after exact shell-amplitude normalization and exact two-channel selection,
+  they vary smoothly and monotonically along the one-parameter scalar `A1`
+  background manifold
+- see `docs/TENSOR_A1_BACKGROUND_RATIO_SCAN_NOTE.md`
+- writing the scalar background as
+  `q_A1(r; Q) = Q * (e0 + r s) / (1 + sqrt(6) r)`, the last missing tensor
+  coefficient gap is now best understood as one scalar function of
+  `r = s/e0`
+- this is still bounded, not exact, but it means the remaining full-GR target
+  is no longer “derive a new tensor law” in the broad sense
+- it is:
+  - derive one scalar renormalization function on the `A1` background manifold
 
 ### Attack 3: only after metric closure, revisit horizon / echo claims
 
