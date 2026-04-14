@@ -986,6 +986,37 @@ New exact axiom-first blocker extracted after that:
     `A1 x {E_x, T1x}` block
   - then derive `r -> (gamma_E(r), gamma_T(r))` axiom-first
 
+New exact shell-blindness result extracted after that:
+
+- the current exact shell/junction stack is projectively blind to the scalar
+  `A1` ratio `r = s/e0` at fixed total charge
+- see `docs/TENSOR_A1_SHELL_PROJECTIVE_BLINDNESS_NOTE.md`
+- concretely:
+  - `A1(center)` and `A1(shell)` induce the same `u/Q` and `sigma/Q` on the
+    sewing band
+  - the exact shell/junction linear responses `du`, `d sigma`, `d rho`, `dS`
+    to the bright directions `E_x`, `T1x` are identical across the canonical
+    `Q=1` projective `A1` family
+  - but the current numerical tensor-drive coefficients still vary across that
+    same family
+- so the remaining `r`-law cannot come from more algebra on the current
+  shell/junction observables
+
+New cleaner axiom-first architecture implied by that:
+
+- the current `eta_floor_tf` program was useful for localization, but it is no
+  longer the cleanest primitive for closure
+- see `docs/ALTERNATIVE_AXIOM_FIRST_GR_PATH_NOTE.md`
+- the best next route is now:
+  1. derive the exact microscopic mixed response operator on the support block
+     `A1 x {E_x, T1x}`
+  2. derive the exact tensor boundary observable from that support-side
+     operator rather than from the current numerical Einstein-residual
+     pipeline
+  3. then close the tensor boundary action / completion theorem
+- this is cleaner because the support block is now the first place the missing
+  projective datum can honestly survive
+
 ### Attack 3: only after metric closure, revisit horizon / echo claims
 
 Current gap:
