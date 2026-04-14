@@ -59,14 +59,14 @@ cleanly or closed.
 | direct lattice DM contact enhancement and bounded relic chain | bounded | arXiv / SI only | [DM_RELIC_PAPER_NOTE.md](../../DM_RELIC_PAPER_NOTE.md), [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md) `F01` |
 | renormalized `y_t` bridge | bounded | arXiv / SI only | [YT_ZERO_IMPORT_CLOSURE_NOTE.md](../../YT_ZERO_IMPORT_CLOSURE_NOTE.md), [YT_GAUGE_CROSSOVER_THEOREM.md](../../YT_GAUGE_CROSSOVER_THEOREM.md) |
 | CKM / Higgs `Z_3` route | bounded | arXiv / SI only | [CKM_MASS_BASIS_NNI_NOTE.md](../../CKM_MASS_BASIS_NNI_NOTE.md), [CABIBBO_JARLSKOG_PREDICTION_2026-04-12.md](../../CABIBBO_JARLSKOG_PREDICTION_2026-04-12.md) |
-| cosmology windows (`w=-1`, graviton mass, `Omega_Lambda`, `n_s`) | bounded / conditional | arXiv companion only | [OMEGA_LAMBDA_DERIVATION_NOTE.md](../../OMEGA_LAMBDA_DERIVATION_NOTE.md), [PRIMORDIAL_SPECTRUM_NOTE.md](../../PRIMORDIAL_SPECTRUM_NOTE.md), [DARK_ENERGY_EOS_NOTE.md](../../DARK_ENERGY_EOS_NOTE.md) |
+| cosmology windows (`w=-1`, graviton mass, `Omega_Lambda`, `n_s`) | bounded / conditional | arXiv companion only | [OMEGA_LAMBDA_DERIVATION_NOTE.md](../../OMEGA_LAMBDA_DERIVATION_NOTE.md), [PRIMORDIAL_SPECTRUM_NOTE.md](../../PRIMORDIAL_SPECTRUM_NOTE.md), [DARK_ENERGY_EOS_NOTE.md](../../DARK_ENERGY_EOS_NOTE.md), [GRAVITON_MASS_DERIVED_NOTE.md](../../GRAVITON_MASS_DERIVED_NOTE.md) |
 | Higgs mass / Coleman-Weinberg mass lane (`m_H = 125 GeV`) | bounded | arXiv companion only | [HIGGS_MASS_DERIVED_NOTE.md](../../HIGGS_MASS_DERIVED_NOTE.md) |
 | proton lifetime | bounded sharp prediction | arXiv companion only | [PROTON_LIFETIME_DERIVED_NOTE.md](../../PROTON_LIFETIME_DERIVED_NOTE.md) |
 | Lorentz-violation cubic fingerprint | bounded sharp prediction | arXiv companion only | [LORENTZ_VIOLATION_DERIVED_NOTE.md](../../LORENTZ_VIOLATION_DERIVED_NOTE.md) |
 | BH entropy / RT ratio | bounded companion | arXiv companion only | [BH_ENTROPY_DERIVED_NOTE.md](../../BH_ENTROPY_DERIVED_NOTE.md) |
-| gravitational decoherence | bounded companion | arXiv companion only | [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md) `F07` |
+| gravitational decoherence | bounded companion | arXiv companion only | [GRAV_DECOHERENCE_DERIVED_NOTE.md](../../GRAV_DECOHERENCE_DERIVED_NOTE.md) |
 | magnetic monopole mass | bounded companion | arXiv companion only | [MONOPOLE_DERIVED_NOTE.md](../../MONOPOLE_DERIVED_NOTE.md) |
-| GW echo timing | bounded / off-scope companion | later companion paper only | [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md) `F07` |
+| GW echo timing | bounded / off-scope companion | later companion paper only | [GW_ECHO_DERIVED_NOTE.md](../../GW_ECHO_DERIVED_NOTE.md) |
 
 The branch-audited quantitative portfolio behind these rows is catalogued in
 [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md). Every intentionally excluded

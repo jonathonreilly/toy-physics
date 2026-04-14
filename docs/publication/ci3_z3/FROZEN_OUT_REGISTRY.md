@@ -104,10 +104,11 @@ beyond the retained flagship backbone.
 
 **Primary sources:**
 
-- `claude/youthful-neumann`: `COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md`,
-  `DARK_ENERGY_EOS_NOTE.md`, `PRIMORDIAL_SPECTRUM_NOTE.md`,
-  `GRAVITON_MASS_NOTE.md`
-- `codex/review-active`: `OMEGA_LAMBDA_DERIVATION_NOTE.md`
+- [COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md](../../COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md)
+- [DARK_ENERGY_EOS_NOTE.md](../../DARK_ENERGY_EOS_NOTE.md)
+- [PRIMORDIAL_SPECTRUM_NOTE.md](../../PRIMORDIAL_SPECTRUM_NOTE.md)
+- [GRAVITON_MASS_DERIVED_NOTE.md](../../GRAVITON_MASS_DERIVED_NOTE.md)
+- [OMEGA_LAMBDA_DERIVATION_NOTE.md](../../OMEGA_LAMBDA_DERIVATION_NOTE.md)
 
 **Needed to unfreeze:**
 
@@ -153,9 +154,10 @@ are still bounded.
 
 **Primary sources:**
 
-- `codex/review-active`: gravity no-go and tensor-gap notes
-- `origin/review-active` and `claude/youthful-neumann`: `ACCESSIBLE_PREDICTION_NOTE.md`,
-  `FROZEN_STARS_NOTE.md`, `GW_ECHO_DERIVED_NOTE.md`
+- gravity no-go and tensor-gap notes on `main`
+- [ACCESSIBLE_PREDICTION_NOTE.md](../../ACCESSIBLE_PREDICTION_NOTE.md)
+- [FROZEN_STARS_RIGOROUS_NOTE.md](../../FROZEN_STARS_RIGOROUS_NOTE.md)
+- [GW_ECHO_DERIVED_NOTE.md](../../GW_ECHO_DERIVED_NOTE.md)
 
 **Needed to unfreeze:**
 
@@ -175,12 +177,16 @@ spine.
 - BH entropy / RT ratio
 - gravitational decoherence
 - magnetic monopole mass
+- GW echo timing
 
 **Primary sources:**
 
-- `claude/youthful-neumann`: `PROTON_LIFETIME_DERIVED_NOTE.md`,
-  `LORENTZ_VIOLATION_DERIVED_NOTE.md`, `BH_ENTROPY_DERIVED_NOTE.md`,
-  `GRAV_DECOHERENCE_DERIVED_NOTE.md`, `MONOPOLE_DERIVED_NOTE.md`
+- [PROTON_LIFETIME_DERIVED_NOTE.md](../../PROTON_LIFETIME_DERIVED_NOTE.md)
+- [LORENTZ_VIOLATION_DERIVED_NOTE.md](../../LORENTZ_VIOLATION_DERIVED_NOTE.md)
+- [BH_ENTROPY_DERIVED_NOTE.md](../../BH_ENTROPY_DERIVED_NOTE.md)
+- [GRAV_DECOHERENCE_DERIVED_NOTE.md](../../GRAV_DECOHERENCE_DERIVED_NOTE.md)
+- [MONOPOLE_DERIVED_NOTE.md](../../MONOPOLE_DERIVED_NOTE.md)
+- [GW_ECHO_DERIVED_NOTE.md](../../GW_ECHO_DERIVED_NOTE.md)
 
 **Needed to unfreeze:**
 

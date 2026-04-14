@@ -97,6 +97,7 @@ external reviewer will ask about them whether or not they are retained.
 | Spectral tilt `n_s` | bounded/conditional | cosmology bridge remains conditional | [PRIMORDIAL_SPECTRUM_NOTE.md](../../PRIMORDIAL_SPECTRUM_NOTE.md) | matrix row `Spectral tilt \`n_s\``, `F04` |
 | Dark energy EOS `w` | bounded/conditional | interesting but topology/cosmology dependent | [DARK_ENERGY_EOS_NOTE.md](../../DARK_ENERGY_EOS_NOTE.md) | matrix row `Dark energy EOS \`w\``, `F04` |
 | Cosmological constant `\Lambda` | bounded/conditional | depends on retained topology plus additional cosmology identification | [COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md](../../COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md) | matrix row `Cosmological constant \`\Lambda\``, `F04` |
+| graviton mass `m_g` | bounded/conditional | sharp conditional prediction, but still depends on retained `S^3` plus observed `H_0` | [GRAVITON_MASS_DERIVED_NOTE.md](../../GRAVITON_MASS_DERIVED_NOTE.md) | matrix row `graviton mass \`m_g\``, `F04` |
 
 ### `y_t` / `\alpha_s` portfolio
 
@@ -120,9 +121,11 @@ external reviewer will ask about them whether or not they are retained.
 |---|---|---|---|---|
 | Higgs mass `m_H` | open/bounded | `v` is now retained, but the Higgs mass package is still not closed | [HIGGS_MASS_DERIVED_NOTE.md](../../HIGGS_MASS_DERIVED_NOTE.md) | matrix row `Higgs mass \`m_H\``, `F05` |
 | Bekenstein-Hawking entropy | bounded companion | useful companion signal, not part of flagship theorem spine | [BH_ENTROPY_DERIVED_NOTE.md](../../BH_ENTROPY_DERIVED_NOTE.md) | matrix row `Bekenstein-Hawking entropy`, `F07` |
+| gravitational decoherence | bounded companion | concrete BMV-class benchmark prediction, but still companion-only and unmeasured | [GRAV_DECOHERENCE_DERIVED_NOTE.md](../../GRAV_DECOHERENCE_DERIVED_NOTE.md) | matrix row `gravitational decoherence`, `F07` |
 | Proton lifetime | bounded sharp prediction | later companion or appendix material, not flagship core | [PROTON_LIFETIME_DERIVED_NOTE.md](../../PROTON_LIFETIME_DERIVED_NOTE.md) | matrix row `Proton lifetime`, `F07` |
 | Lorentz-violation fingerprint | bounded sharp prediction | interesting companion phenomenology, not retained backbone | [LORENTZ_VIOLATION_DERIVED_NOTE.md](../../LORENTZ_VIOLATION_DERIVED_NOTE.md) | matrix row `Lorentz-violation fingerprint`, `F07` |
 | Magnetic monopole mass | bounded sharp prediction | imported phenomenology layer still present | [MONOPOLE_DERIVED_NOTE.md](../../MONOPOLE_DERIVED_NOTE.md) | matrix row `Magnetic monopole mass`, `F07` |
+| GW echo timing | bounded / off-scope companion | sharp later-paper compact-object prediction, but not safe for flagship gravity claims | [GW_ECHO_DERIVED_NOTE.md](../../GW_ECHO_DERIVED_NOTE.md) | matrix row `GW echo timing`, `F07` |
 
 ## 4. Live flagship gates aligned to the matrix
 
