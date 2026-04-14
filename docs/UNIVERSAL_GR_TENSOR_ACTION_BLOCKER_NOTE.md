@@ -57,6 +57,14 @@ This is the first exact tensor-valued variational candidate on the direct
 route. It is exact as a construction, but not yet identified with
 Einstein/Regge dynamics.
 
+### Symmetric quotient kernel
+
+The strongest current identification result is that the Hessian kernel is the
+unique symmetric bilinear lift of the scalar generator on the `3+1`
+perturbation quotient. On the finite prototype used by the current runner, that
+quotient kernel is nondegenerate, so the route has no extra tensor bilinear
+freedom hiding in the scalar observable principle.
+
 ## What is missing
 
 The direct universal route still lacks the first exact tensor-valued object
@@ -64,9 +72,9 @@ that could upgrade the scalar generator into a full `3+1` metric law.
 
 The remaining missing primitive can now be stated more sharply:
 
-1. exact identification of the Hessian kernel with the Einstein/Regge tensor
-   law on the full `3+1` metric space
-2. if that fails, one additional primitive that makes the identification exact
+1. a curvature-localization map that identifies the unique symmetric `3+1`
+   Hessian kernel with the Einstein/Regge tensor law on the full metric space
+2. if that fails, one additional primitive that makes that localization exact
 
 Without one of those, the observable principle remains scalar-only at the
 closure level and the direct universal route cannot close full GR.
@@ -86,14 +94,16 @@ What the survey now makes explicit is the failure mode:
 - but the Einstein/Regge identification of the tensor Hessian has not yet been
   made exact
 
-So the universal route is not wrong. It is incomplete at exactly one primitive.
+So the universal route is not wrong. It is incomplete at exactly one
+localization primitive.
 
 ## Minimal missing primitive
 
 The smallest honest missing object is now:
 
-> exact identification of the tensor-valued `3+1` Hessian with the
-> Einstein/Regge tensor law on the `PL S^3 x R` background
+> a curvature-localization map that carries the unique symmetric `3+1`
+> Hessian kernel to the Einstein/Regge tensor law on the `PL S^3 x R`
+> background
 
 This is the thing that must be derived or axiomatized next.
 

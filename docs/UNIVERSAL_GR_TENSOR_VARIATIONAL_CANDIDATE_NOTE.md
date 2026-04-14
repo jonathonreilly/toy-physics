@@ -9,7 +9,8 @@ from the axiom-side observable principle and the exact `3+1` kinematic lift
 ## Verdict
 
 The direct universal route is still not closed, but it now has a concrete
-tensor-valued variational candidate.
+tensor-valued variational candidate and a sharper quotient-uniqueness
+statement on the current `3+1` perturbation space.
 
 The exact scalar observable principle gives the generator
 
@@ -70,18 +71,37 @@ This is enough to define a legitimate tensor-valued variational candidate.
 It is **not** yet enough to prove that the candidate equals the Einstein/Regge
 action on the full metric space.
 
+## Strongest exact identification result
+
+The current route now gives more than a bare candidate:
+
+1. the candidate is the exact second variation of the scalar observable
+   generator on the lifted background;
+2. on the symmetric `3+1` perturbation quotient, the Hessian is the unique
+   bilinear lift of the scalar generator at quadratic order;
+3. on the finite `3+1` prototype used by the current runner, the symmetric
+   quotient kernel is nondegenerate, so there are no extra null directions
+   hiding a second tensor degree of freedom.
+
+That is the strongest honest identification currently available on the atlas.
+It pins down the tensor kernel itself. It does **not** yet identify that kernel
+with Einstein/Regge curvature dynamics.
+
 ## What remains open
 
 The remaining theorem is now sharply localized:
 
-1. identify the Hessian kernel with the local Einstein/Regge tensor law, or
-2. derive an exact tensor-valued uniqueness theorem forcing that kernel, or
-3. prove the candidate cannot be promoted without an additional primitive
+1. identify the unique symmetric `3+1` Hessian kernel with the local
+   Einstein/Regge tensor law, or
+2. derive an exact tensor-valued uniqueness theorem forcing that
+   identification, or
+3. prove the candidate cannot be promoted without a new curvature-localization
+   primitive
 
 So the direct universal route is now one step more concrete:
 
 > scalar observable principle + exact `3+1` lift + exact tensor-valued
-> variational candidate
+> variational candidate + unique symmetric `3+1` quotient kernel
 
 but it is still not a full closure theorem.
 
@@ -92,6 +112,7 @@ The current direct-universal theorem step is:
 - exact scalar observable generator in hand
 - exact `3+1` kinematic lift in hand
 - exact tensor-valued variational candidate in hand
+- exact symmetric `3+1` quotient kernel in hand
 - exact Einstein/Regge identification still missing
 
 That is the cleanest statement available on the current atlas.

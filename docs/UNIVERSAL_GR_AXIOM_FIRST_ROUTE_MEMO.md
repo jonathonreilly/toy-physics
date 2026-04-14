@@ -117,6 +117,8 @@ The route has:
 
 - [`UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md`](./UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md)
 - [`frontier_universal_gr_tensor_variational_candidate.py`](../scripts/frontier_universal_gr_tensor_variational_candidate.py)
+- [`UNIVERSAL_GR_TENSOR_QUOTIENT_UNIQUENESS_NOTE.md`](./UNIVERSAL_GR_TENSOR_QUOTIENT_UNIQUENESS_NOTE.md)
+- [`frontier_universal_gr_tensor_quotient_uniqueness.py`](../scripts/frontier_universal_gr_tensor_quotient_uniqueness.py)
 - [`UNIVERSAL_GR_TENSOR_ACTION_BLOCKER_NOTE.md`](./UNIVERSAL_GR_TENSOR_ACTION_BLOCKER_NOTE.md)
 - [`frontier_universal_gr_tensor_action_blocker.py`](../scripts/frontier_universal_gr_tensor_action_blocker.py)
 
@@ -126,14 +128,25 @@ now has the first tensor-valued `3+1` variational candidate:
 
 `S_GR^cand[h] := 1/2 * D^2 W[g_*](h, h)`
 
-That candidate is still not a closure claim.
+That candidate is still not a closure claim, but it now has a sharper exact
+status: on the symmetric `3+1` quotient, the Hessian kernel is the unique
+bilinear lift of the scalar generator at quadratic order on the finite
+prototype basis.
 
-The remaining blocker is now the exact identification problem:
+The next step is now sharper than the original identification problem:
 
-- does the Hessian kernel equal the Einstein/Regge tensor law on the full
-  `3+1` metric space?
+- the Hessian kernel is the unique symmetric `3+1` quotient kernel at
+  quadratic order on the lifted background
+- the remaining blocker is the missing curvature-localization map that sends
+  that kernel to Einstein/Regge dynamics
+
+The remaining blocker is therefore:
+
+- does a curvature-localization map exist that identifies the unique
+  symmetric `3+1` Hessian kernel with the Einstein/Regge tensor law on the
+  full metric space?
 - if not, what is the single missing primitive needed to make that
-  identification exact?
+  localization exact?
 
 ## Formal support check
 
@@ -144,6 +157,10 @@ class language versus axiom-principle / action / self-consistency language.
 Use [`frontier_universal_gr_tensor_variational_candidate.py`](../scripts/frontier_universal_gr_tensor_variational_candidate.py)
 to audit the new tensor-valued variational candidate and its symmetry/bilinear
 structure.
+
+Use [`frontier_universal_gr_tensor_quotient_uniqueness.py`](../scripts/frontier_universal_gr_tensor_quotient_uniqueness.py)
+to audit the quotient-uniqueness candidate and the finite prototype rank
+check.
 
 The expected outcome is that the observable-principle / variational-action
 family ranks above the restricted tensor ladder for a direct-to-universal-GR

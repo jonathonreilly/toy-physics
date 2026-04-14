@@ -68,6 +68,21 @@ The 10 routes below are meant as research architectures, not claims of closure.
 - **Main risk/blocker:** the current exact finite-rank results still leave a nonzero tensor completion gap between families.
 - **Status:** promising.
 
+## 6b. Tensor quotient-uniqueness candidate
+
+- **One-line theorem idea:** show that the exact tensor Hessian on the `3+1`
+  perturbation quotient is the unique symmetric bilinear lift of the scalar
+  observable principle at quadratic order, then identify the remaining missing
+  primitive as the curvature-localization map.
+- **Uses:** exact scalar observable generator, exact `3+1` kinematic lift,
+  exact tensor-valued variational candidate, nondegenerate finite prototype
+  quotient kernel.
+- **Why cleaner:** it sharpens the direct-universal route without returning to
+  a special source family; the kernel itself is already fixed.
+- **Main risk/blocker:** quotient uniqueness is not the same as an
+  Einstein/Regge identification on the full metric space.
+- **Status:** promising.
+
 ## 7. Direct lattice Green/resolvent route to the full metric
 
 - **One-line theorem idea:** derive the full metric directly from the lattice Green/resolvent structure of the source operator, without first passing through the current shell boundary language.

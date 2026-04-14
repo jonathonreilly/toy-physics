@@ -69,13 +69,17 @@ def main() -> int:
         Check(
             "tensor-valued candidate is exact but not yet identified",
             has(cand, "metric-source hessian")
-            and has(blk, "not yet identified with")
+            and has(cand, "unique symmetric")
+            and has(cand, "quotient kernel")
+            and has(blk, "curvature-localization map")
             and has(blk, "einstein/regge"),
-            "candidate is exact as a construction, but the Einstein/Regge identification is still open",
+            "candidate is exact as a construction, but the curvature-localization primitive is still open",
         ),
         Check(
             "missing identification is now sharp",
-            has(blk, "exact identification of the tensor-valued `3+1` Hessian")
+            has(blk, "curvature-localization map")
+            and has(blk, "unique symmetric")
+            and has(blk, "hessian kernel")
             and has(blk, "einstein/regge tensor law"),
             "blocker note names the exact remaining identification problem",
         ),
