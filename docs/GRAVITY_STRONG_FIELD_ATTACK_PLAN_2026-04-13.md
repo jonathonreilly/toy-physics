@@ -949,6 +949,21 @@ New bounded scalar-background localization extracted after that:
 - it is:
   - derive one scalar renormalization function on the `A1` background manifold
 
+New bounded mechanics explanation extracted after that:
+
+- after exact shell-amplitude normalization, the remaining bright coefficients
+  are nearly independent of total charge `Q` at fixed `A1` background ratio
+  `r = s/e0`
+- see `docs/TENSOR_A1_BACKGROUND_MECHANICS_NOTE.md`
+- this means the actual mechanics of the last renormalization step are now
+  clear on the audited restricted class:
+  - the retained shell theorem fixes amplitude
+  - the exact local tensor law fixes channel selection
+  - the remaining gap is primarily one scalar shape law on the `A1` manifold
+- so the strongest honest open gravity target is now:
+  - derive the scalar background-shape law
+    `r -> (gamma_E(r), gamma_T(r))`
+
 ### Attack 3: only after metric closure, revisit horizon / echo claims
 
 Current gap:
