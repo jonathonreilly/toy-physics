@@ -881,9 +881,15 @@ New exact/bounded selector-transfer reduction extracted after that:
   - the `T1` sector raises `c_eta`
   - the full finite-rank shift is nearly additive in `E` and `T1`
 - see `docs/TENSOR_SUPPORT_IRREP_CHANNEL_NOTE.md`
+- and the current tensor orientation now reduces that again:
+  - only one aligned quadrupole direction `E_x` is bright
+  - only one aligned shift direction `T1x` is bright
+  - the orthogonal `E` direction and the transverse `T1` directions are dark
+    to numerical precision on the audited exact source class
+- see `docs/TENSOR_SUPPORT_IRREP_SELECTIVITY_NOTE.md`
 - so the open gravity target is now narrower again:
-  - derive the exact `E` and `T1` transfer coefficients into the tensor
-    boundary drive
+  - derive the exact transfer coefficients for the aligned channels `E_x` and
+    `T1x` into the tensor boundary drive
   - not from another rewrite of orbit-summed shell data or the retained
     reduced shell toolbox alone
 
