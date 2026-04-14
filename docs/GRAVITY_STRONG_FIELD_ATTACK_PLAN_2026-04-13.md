@@ -698,6 +698,18 @@ New exact/bounded source-class extension extracted after that:
 - this removes source-class dependence within the current star-supported
   finite-rank sector from the live blocker list
 
+New exact/bounded support-class widening extracted after that:
+
+- the same exact Schur boundary action and static conformal lift are not
+  confined to the star-supported benchmark geometry
+- on generic finite-support positive-semidefinite source operators inside the
+  same Dirichlet box, the exact finite-rank resolvent field still feeds the
+  same shell source, same-charge bridge, local static conformal constraints,
+  and microscopic boundary action
+- see `docs/GENERIC_FINITE_SUPPORT_SCHUR_BRIDGE_NOTE.md`
+- this removes the remaining star-specific geometry objection from the live
+  blocker list
+
 New exact/bounded local-bridge uniqueness extracted after that:
 
 - on the current star-supported finite-rank class, any local scalar bridge
@@ -766,3 +778,7 @@ gravity.” The actual task is:
 > derive one exact **3D shell/junction theorem** and its nonlinear **3+1**
 > spacetime lift, replacing the remaining strong-field ansatzes with a genuine
 > lattice theorem.
+
+With the latest support-class widening, that theorem is now best phrased for
+generic finite-support sources on the current box rather than only the
+star-supported benchmark geometry.

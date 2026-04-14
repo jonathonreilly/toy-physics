@@ -8,10 +8,13 @@
 - **Drafted the Nature letter and arXiv package** on main (`docs/publication/ci3_z3/`)
 - Nature draft is 6 sections, disciplined, leads with retained backbone only
 - Claims table separates retained core (8 items) from bounded companions (5 items)
-- Codex's impact scores: breakthrough 8.8, journal viability 7.7, mainstream 7.8, harshest critique 6.4
+- Codex's impact scores: breakthrough 8.8, journal viability 7.7, mainstream 7.8, harshest critique 6.6
 - Audited overnight claims: **none of the 4 gates promoted** (S³, DM, y_t, CKM all still bounded)
 - Added Newton law derived note to retained backbone (Poisson uniqueness + lattice Green's function)
 - Published full claim ledger
+- Strong-field gravity widened again on review-active: the exact bridge-side
+  closure package now extends from the star-supported finite-rank benchmark
+  class to generic finite-support source operators on the same box
 
 ### Mac Mini (youthful-neumann)
 - 6 new derivations landed:

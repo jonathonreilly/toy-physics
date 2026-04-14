@@ -44,6 +44,11 @@ Important updates since the last score change:
     matter claim in the framework
   - the remaining flavor weakness is quantitative hierarchy / CKM, not the
     existence of three species itself
+- the strong-field gravity package widened again:
+  - the exact bridge-side closure package is now support-agnostic on generic
+    finite-support source operators on the current box
+  - the remaining gravity gap is now genuinely beyond the static conformal
+    bridge itself, not just beyond the star-supported benchmark geometry
 - the quantitative phenomenology package is stronger but still mixed:
   - direct lattice Sommerfeld/contact enhancement is now real
   - `y_t` is stronger: bare UV normalization is fixed, but renormalized
@@ -71,11 +76,11 @@ Score deltas since the previous map:
   Reason: the project now looks less like a narrow discrete-wave curiosity and
   more like an actual unified gauge/gravity framework with explicit retained
   theorems. The remaining weaknesses are now localized rather than diffuse.
-- `Strength against harshest critique`: `4.8 -> 6.4`
+- `Strength against harshest critique`: `4.8 -> 6.6`
   Reason: the hostile reader can still press the open matter-sector and
   cosmology gaps, but they can no longer dismiss the whole package as
   “interesting numerics only.” The retained gauge backbone is much harder to
-  wave away.
+  wave away, and the gravity story is now less benchmark-specific.
 - `Field-shifting theory program`: `10.0 -> 10.0`
   Reason: unchanged at the ceiling. The program is now richer, not narrower.
 - `Landmark foundational breakthrough`: `7.1 -> 8.7`
@@ -102,6 +107,9 @@ Retained-claim status changes since the previous map:
   right-handed singlet completion on the SM branch.
 - `New positive`: the exact `8 = 1 + 1 + 3 + 3` orbit algebra now supports a
   closed three-generation matter claim in the framework.
+- `New positive`: the restricted strong-field gravity theorem now extends from
+  the benchmark star-supported finite-rank class to a generic finite-support
+  support class on the same bridge surface.
 - `Bounded, not closed`: `y_t` is stronger, but still conditional on the full
   gauged normalization theorem.
 - `Bounded, not closed`: `S^3 -> CC` remains blocked on compactification.
@@ -131,7 +139,7 @@ Score deltas that did not move:
 | Publishable as a foundational-physics breakthrough claim | `8.8/10` | now very high. The retained backbone is strong enough for a serious flagship theory claim, and the matter sector is no longer missing generation existence itself. The remaining holes are narrower and mostly quantitative/topological |
 | Likelihood of publication in very top field journals today (`PRL` / `PRX` / `Nature Physics`) | `7.7/10` | plausible if the paper stays disciplined and foregrounds the retained structural core; risk now sits more in topology/DM/`y_t` than in the existence of matter structure |
 | Ready for top-tier mainstream physics claims | `7.8/10` | much stronger than before because the paper now has real gauge content, 3+1 closure, and matter structure. Still not fully mainstream-proof because the `S^3`, relic, and renormalized matching gaps are live |
-| Strength against harshest critique | `6.4/10` | improved materially. The harsh critic still has real targets, but the attack surface is now concentrated in a few explicit quantitative/topological gates rather than generation existence itself |
+| Strength against harshest critique | `6.6/10` | improved materially. The harsh critic still has real targets, but the attack surface is now concentrated in a few explicit quantitative/topological gates rather than generation existence itself; gravity is less benchmark-specific now |
 | Field-shifting theory program | `10.0/10` | unchanged at the ceiling: the current state is enough to justify a full multi-lane research program even if the flagship paper still needs more closure |
 | Landmark foundational breakthrough | `8.7/10` | now clearly within range if the remaining topology and quantitative bridges close cleanly. The project no longer looks like a near-miss on weak-field numerics alone |
 | Nobel-scale breakthrough | `3.1/10` | still low, but the retained gauge/gravity/matter backbone gives a more credible long-horizon path if the open gates close and the result survives external scrutiny |
