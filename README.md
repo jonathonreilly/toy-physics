@@ -40,6 +40,8 @@ Status labels used on this branch:
    - the compact prediction-versus-observation table
 5. [Derivation Atlas](docs/publication/ci3_z3/DERIVATION_ATLAS.md)
    - reusable theorem/subderivation toolbox for continuing the open lanes without redoing closed work
+6. [Derivation / Validation Map](docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md)
+   - claim-level release evidence contract for the retained manuscript-facing surface
 
 If you need the package internals after that, use
 [docs/publication/ci3_z3/README.md](docs/publication/ci3_z3/README.md).

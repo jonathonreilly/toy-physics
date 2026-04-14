@@ -1,9 +1,7 @@
 # DM Relic Paper Note
 
 **Date:** 2026-04-12
-**Branch:** `claude/youthful-neumann`
 **Lane:** DM relic mapping
-**Responding to:** Codex retain audit on `codex/review-active`
 
 ---
 

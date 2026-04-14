@@ -16,7 +16,10 @@ If you are new to the repo, read these first:
 5. [Claims table](./CLAIMS_TABLE.md)
 6. [Frozen-out registry](./FROZEN_OUT_REGISTRY.md)
 7. [Derivation atlas](./DERIVATION_ATLAS.md)
-8. [Running package issues](./RUNNING_PACKAGE_ISSUES_2026-04-14.md)
+   - reusable theorem/subderivation toolbox for extending the open lanes
+8. [Derivation / validation map](./DERIVATION_VALIDATION_MAP.md)
+   - claim-level evidence contract for retained manuscript-facing claims
+9. [Running package issues](./RUNNING_PACKAGE_ISSUES_2026-04-14.md)
 
 That path makes four things explicit:
 
@@ -38,8 +41,8 @@ That path makes four things explicit:
 - [Stale-authority audit](./STALE_AUTHORITY_AUDIT_2026-04-14.md)
 - [Frozen-out registry](./FROZEN_OUT_REGISTRY.md)
 - [Remote branch audit](./REMOTE_BRANCH_AUDIT_2026-04-14.md)
-- [Derivation / validation map](./DERIVATION_VALIDATION_MAP.md)
 - [Derivation atlas](./DERIVATION_ATLAS.md)
+- [Derivation / validation map](./DERIVATION_VALIDATION_MAP.md)
 - [Full claim ledger](./FULL_CLAIM_LEDGER.md)
 - [Running package issues](./RUNNING_PACKAGE_ISSUES_2026-04-14.md)
 - [Results index](./RESULTS_INDEX.md)
@@ -56,10 +59,12 @@ That path makes four things explicit:
 ## Core authority docs on this branch
 
 - [Publication state](../../CI3_Z3_PUBLICATION_STATE_2026-04-12.md)
-- [Paper outline](../../PAPER_OUTLINE_2026-04-12.md)
-- [Flagship contribution statement](../../FLAGSHIP_PAPER_CONTRIBUTION_STATEMENT_NOTE.md)
-- [Gauge/matter closure gates](../../GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md)
-- [Remote branch audit](./REMOTE_BRANCH_AUDIT_2026-04-14.md)
+- [Publication matrix](./PUBLICATION_MATRIX.md)
+- [Derivation atlas](./DERIVATION_ATLAS.md)
+- [Derivation / validation map](./DERIVATION_VALIDATION_MAP.md)
+- [Left-handed charge matching](../../LEFT_HANDED_CHARGE_MATCHING_NOTE.md)
+- [One-generation matter closure](../../ONE_GENERATION_MATTER_CLOSURE_NOTE.md)
+- [Three-generation matter structure](../../THREE_GENERATION_STRUCTURE_NOTE.md)
 
 ## Current paper surface
 
@@ -128,7 +133,8 @@ Every promoted claim must have both:
 - one validation path, usually a runner with a pinned pass summary
 
 That contract lives in
-[DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md).
+[DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md). The reusable
+toolbox behind it lives in [DERIVATION_ATLAS.md](./DERIVATION_ATLAS.md).
 
 The repo-wide capture contract now also includes:
 

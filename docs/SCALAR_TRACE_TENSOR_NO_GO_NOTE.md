@@ -1,7 +1,6 @@
 # Scalar-Trace-Only Tensor Completion No-Go
 
 **Date:** 2026-04-14  
-**Branch:** `codex/review-active`  
 **Script:** `scripts/frontier_scalar_trace_tensor_nogo.py`  
 **Status:** exact scalar-data degeneracy plus bounded tensor-channel witness
 

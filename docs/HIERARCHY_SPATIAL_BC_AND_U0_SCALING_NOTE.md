@@ -1,7 +1,6 @@
 # Hierarchy Spatial-BC And `u_0`-Scaling Note
 
 **Date:** 2026-04-13  
-**Branch:** `codex/review-active`  
 **Script:** `scripts/frontier_hierarchy_spatial_bc_and_u0_scaling.py`
 
 ## Question

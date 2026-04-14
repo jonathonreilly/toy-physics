@@ -1,7 +1,6 @@
 # Tensor Block Closure Test
 
 **Date:** 2026-04-14  
-**Branch:** `codex/review-active`  
 **Script:** `scripts/frontier_tensor_block_closure_test.py`  
 **Status:** minimal rank-two tensor block is locally sufficient, but not universal across the audited restricted class
 

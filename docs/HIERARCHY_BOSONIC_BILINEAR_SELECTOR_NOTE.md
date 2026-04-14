@@ -1,7 +1,6 @@
 # Hierarchy Bosonic-Bilinear Selector Note
 
 **Date:** 2026-04-13  
-**Branch:** `codex/review-active`  
 **Script:** `scripts/frontier_hierarchy_bosonic_bilinear_selector.py`
 
 ## Question

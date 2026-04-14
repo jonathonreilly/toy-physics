@@ -89,6 +89,8 @@ The authoritative publication package on this branch lives under:
   - publication-relevant work intentionally kept out of the current flagship surface
 - [publication/ci3_z3/DERIVATION_ATLAS.md](publication/ci3_z3/DERIVATION_ATLAS.md)
   - reusable theorem/subderivation toolbox for extending the framework without redoing earlier work
+- [publication/ci3_z3/DERIVATION_VALIDATION_MAP.md](publication/ci3_z3/DERIVATION_VALIDATION_MAP.md)
+  - claim-level release evidence contract for the retained manuscript-facing surface
 - [publication/ci3_z3/RUNNING_PACKAGE_ISSUES_2026-04-14.md](publication/ci3_z3/RUNNING_PACKAGE_ISSUES_2026-04-14.md)
   - live consistency register for package mismatches and cleanup follow-up
 

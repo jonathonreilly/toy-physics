@@ -1,7 +1,6 @@
 # Exact Schur-Complement Boundary Action for the `O_h` Strong-Field Shell Law
 
 **Date:** 2026-04-13  
-**Branch:** `codex/review-active`  
 **Script:** `scripts/frontier_oh_schur_boundary_action.py`  
 **Status:** Exact microscopic shell-boundary action on current strong-field source classes
 

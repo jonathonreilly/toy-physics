@@ -1,7 +1,6 @@
 # Hierarchy Matsubara Decomposition Note
 
 **Date:** 2026-04-13  
-**Branch:** `codex/review-active`  
 **Script:** `scripts/frontier_hierarchy_matsubara_decomposition.py`
 
 ## Question

@@ -1,8 +1,14 @@
 # Gauge/Matter Closure Gates
 
 **Date:** 2026-04-12  
-**Status:** focused review memo for the remaining full-paper theory gates  
+**Status:** superseded route memo; no longer the canonical main-branch authority for retained matter claims
 **Scope:** full-framework matter closure and physical generation closure
+
+**Canonical main-branch matter authorities now live in:**
+
+- [LEFT_HANDED_CHARGE_MATCHING_NOTE.md](./LEFT_HANDED_CHARGE_MATCHING_NOTE.md)
+- [ONE_GENERATION_MATTER_CLOSURE_NOTE.md](./ONE_GENERATION_MATTER_CLOSURE_NOTE.md)
+- [THREE_GENERATION_STRUCTURE_NOTE.md](./THREE_GENERATION_STRUCTURE_NOTE.md)
 
 ---
 

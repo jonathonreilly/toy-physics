@@ -39,6 +39,10 @@ Start with:
    - the canonical result inventory
 4. [publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md](publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md)
    - the compact prediction-versus-observation table
+5. [publication/ci3_z3/DERIVATION_ATLAS.md](publication/ci3_z3/DERIVATION_ATLAS.md)
+   - reusable theorem/subderivation toolbox for future closures
+6. [publication/ci3_z3/DERIVATION_VALIDATION_MAP.md](publication/ci3_z3/DERIVATION_VALIDATION_MAP.md)
+   - claim-level evidence contract for the retained manuscript-facing surface
 
 Do **not** start with old lane summaries, side-branch notes, or raw
 chronology.

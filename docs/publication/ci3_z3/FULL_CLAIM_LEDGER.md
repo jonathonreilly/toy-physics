@@ -70,9 +70,9 @@ These rows correspond to Section A of
 |---|---|---|---|
 | exact native `SU(2)` | promoted | exact weak algebra on the cubic Clifford surface | [BOUNDED_NATIVE_GAUGE_NOTE.md](../../BOUNDED_NATIVE_GAUGE_NOTE.md) |
 | graph-first structural `SU(3)` | promoted | selector + commutant closure now defines the safe `SU(3)` statement; selector is unique up to graph automorphism | [GRAPH_FIRST_SU3_INTEGRATION_NOTE.md](../../GRAPH_FIRST_SU3_INTEGRATION_NOTE.md) |
-| left-handed charge matching | promoted corollary | safe selected-axis charge surface on the retained graph-first package | [GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md](../../GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md) |
-| one-generation closure | promoted | anomaly-complete right-handed completion now survives direct audit | [GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md](../../GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md) |
-| three-generation structure | promoted | exact orbit algebra `8 = 1 + 1 + 3 + 3` is retained as physical species structure, not as a taste artifact | [GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md](../../GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md) |
+| left-handed charge matching | promoted corollary | safe selected-axis charge surface on the retained graph-first package | [LEFT_HANDED_CHARGE_MATCHING_NOTE.md](../../LEFT_HANDED_CHARGE_MATCHING_NOTE.md) |
+| one-generation closure | promoted | anomaly-complete right-handed completion now survives direct audit | [ONE_GENERATION_MATTER_CLOSURE_NOTE.md](../../ONE_GENERATION_MATTER_CLOSURE_NOTE.md) |
+| three-generation structure | promoted | exact orbit algebra `8 = 1 + 1 + 3 + 3` is retained as physical species structure, not as a taste artifact | [THREE_GENERATION_STRUCTURE_NOTE.md](../../THREE_GENERATION_STRUCTURE_NOTE.md) |
 
 ### Electroweak hierarchy and exact companions
 

@@ -1,7 +1,6 @@
 # Tensor Source-to-Channel Map `eta` on the Restricted Gravity Class
 
 **Date:** 2026-04-14  
-**Branch:** `codex/review-active`  
 **Script:** `scripts/frontier_tensor_source_map_eta.py`  
 **Status:** exact rank-two source response on the current restricted class; not full nonlinear GR
 

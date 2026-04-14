@@ -1,8 +1,7 @@
 # CI(3) / Z^3 Publication State
 
 **Date:** 2026-04-14  
-**Branch:** `codex/publication-prep`  
-**Status:** Codex-owned publication authority for the current flagship paper surface
+**Status:** main-branch publication authority for the current flagship paper surface
 
 ## Framework sentence
 

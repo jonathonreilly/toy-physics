@@ -1,7 +1,6 @@
 # S^3 Cap-Map Uniqueness: The Framework Forces Cone-Capping
 
 **Date:** 2026-04-12
-**Branch:** `claude/youthful-neumann`
 **Script:** `scripts/frontier_s3_cap_uniqueness.py`
 **Lane:** S^3 / compactification (cap-map uniqueness gap)
 

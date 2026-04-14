@@ -1,7 +1,6 @@
 # Minimal Tensor Matching/Completion Theorem on the Retained Gravity Stack
 
 **Date:** 2026-04-14  
-**Branch:** `codex/review-active`  
 **Script:** `scripts/frontier_tensor_matching_completion_theorem.py`  
 **Status:** exact localization of the minimal tensor boundary data on the current restricted class
 

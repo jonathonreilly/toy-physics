@@ -1,7 +1,6 @@
 # Observable Principle From Axiom Note
 
 **Date:** 2026-04-13  
-**Branch:** `codex/review-active`  
 **Script:** `scripts/frontier_hierarchy_observable_principle_from_axiom.py`
 
 ## Question

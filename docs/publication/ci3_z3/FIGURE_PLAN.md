@@ -39,7 +39,7 @@ Companion captions live in [FIGURE_CAPTIONS.md](./FIGURE_CAPTIONS.md).
 ### Figure 4. Three-generation matter structure
 
 - purpose: display exact orbit structure `8 = 1 + 1 + 3 + 3` and the physical-lattice interpretation
-- source note: [GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md](../../GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md)
+- source note: [THREE_GENERATION_STRUCTURE_NOTE.md](../../THREE_GENERATION_STRUCTURE_NOTE.md)
 - source runners:
   - [frontier_generation_fermi_point.py](../../../scripts/frontier_generation_fermi_point.py)
   - [frontier_generation_rooting_undefined.py](../../../scripts/frontier_generation_rooting_undefined.py)

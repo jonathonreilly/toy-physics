@@ -1,7 +1,6 @@
 # Hierarchy Dimensional Compression Note
 
 **Date:** 2026-04-13  
-**Branch:** `codex/review-active`  
 **Script:** `scripts/frontier_hierarchy_dimensional_compression.py`
 
 ## Question

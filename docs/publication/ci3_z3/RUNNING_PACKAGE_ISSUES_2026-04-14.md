@@ -40,6 +40,32 @@ the canonical main-branch toolbox for:
 - closed subderivations on open lanes
 - canonical authority selection when multiple route variants existed
 
+### `I07` Matter rows depended on one umbrella route memo
+
+**Problem:** several retained matter rows still pointed at
+`GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md` instead of standalone canonical
+main-branch authority notes.
+
+**Fix:** the package now carries dedicated canonical matter notes:
+
+- [LEFT_HANDED_CHARGE_MATCHING_NOTE.md](../../LEFT_HANDED_CHARGE_MATCHING_NOTE.md)
+- [ONE_GENERATION_MATTER_CLOSURE_NOTE.md](../../ONE_GENERATION_MATTER_CLOSURE_NOTE.md)
+- [THREE_GENERATION_STRUCTURE_NOTE.md](../../THREE_GENERATION_STRUCTURE_NOTE.md)
+
+The atlas, derivation/validation map, matrix, claims table, ledger, results
+index, and figure plan now point to those notes directly.
+
+### `I08` Imported tool notes carried branch-local headers
+
+**Problem:** several main-branch authority/tool notes still carried
+`codex/review-active`, `claude/youthful-neumann`, or
+`codex/publication-prep` header lines even after they became authoritative on
+`main`.
+
+**Fix:** branch-local headers were stripped from the imported main-branch
+authority/tool notes. Main-branch status is now expressed through the package
+control plane rather than in per-note branch tags.
+
 ## Still open / follow-up
 
 ### `I03` Bounded companion authority normalization is incomplete
@@ -91,20 +117,6 @@ The next writing pass still needs:
 The matrix already captures the rows, but some families still point to mixed
 route-history notes. Over time, each bounded row should converge toward one
 current authority note on `main`.
-
-### `I07` Some canonical atlas rows still depend on umbrella notes
-
-The derivation atlas is now broad enough to function as the main toolbox, but a
-few retained matter rows still point to umbrella authorities such as
-`GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md` instead of fully split standalone
-component notes. That is acceptable for now, but the long-term cleaner state is
-one standalone canonical note per atlas row.
-
-### `I08` Imported tool notes still carry some branch-local headers
-
-Several newly imported toolbox notes still mention their source branch/date
-context in the document header. The authority paths are now on `main`, so this
-is only a documentation-polish issue, not a logic or package-consistency gap.
 
 ## Audit rule
 

@@ -1,7 +1,6 @@
 # R Is a Direct Observable of H, Not a Chain Through g -> alpha_s -> sigma_v
 
 **Date:** 2026-04-13
-**Branch:** `claude/youthful-neumann`
 **Scripts:** `scripts/frontier_dm_sigma_v_lattice.py`
 **Lane:** DM relic mapping
 **Resolves:** DM Blocker 1 (g_bare = 1 invariance question)

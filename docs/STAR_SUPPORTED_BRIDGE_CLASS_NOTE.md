@@ -1,7 +1,6 @@
 # Exact Bridge-Side Closure on the Star-Supported Finite-Rank Source Class
 
 **Date:** 2026-04-13  
-**Branch:** `codex/review-active`  
 **Script:** `scripts/frontier_star_supported_bridge_class.py`  
 **Status:** Exact bridge-side closure across the star-supported finite-rank class on the current bridge surface
 

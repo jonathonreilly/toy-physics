@@ -1,7 +1,6 @@
 # Restricted Strong-Field Closure on the Exact `O_h` Shell Class
 
 **Date:** 2026-04-13  
-**Branch:** `codex/review-active`  
 **Status:** Promotable restricted strong-field gravity theorem; not full nonlinear GR
 
 ## Statement
