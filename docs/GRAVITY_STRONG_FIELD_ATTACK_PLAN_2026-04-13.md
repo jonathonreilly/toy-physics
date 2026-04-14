@@ -633,6 +633,23 @@ Required outcome:
   that controls the finite-rank non-`O_h` junction deviation with a bounded
   `O(\epsilon^2)` remainder
 
+New exact/bounded local shell-to-`3+1` lift extracted after that:
+
+- on the current bridge surface, the exact shell source `sigma_R = H_0 phi_ext`
+  and the unique same-charge bridge
+  `psi = 1 + phi_ext`, `chi = 1 - phi_ext = alpha psi`
+  admit an exact local static conformal constraint lift
+- the pointwise shell density and stress-trace are fixed by
+  `rho = sigma_R / (2 pi psi^5)` and
+  `S = 0.5 rho (1/alpha - 1)`, and satisfy
+  `H_0 psi = 2 pi psi^5 rho`,
+  `H_0 chi = -2 pi alpha psi^5 (rho + 2S)` identically
+- on the exact local `O_h` source class, this lift is pointwise exact at orbit
+  resolution across the whole sewing band `3 < r <= 5`
+- see `docs/OH_STATIC_CONSTRAINT_LIFT_NOTE.md`
+- this removes the shell-to-`3+1` lift itself from the live blocker list on
+  the current bridge surface
+
 ### Attack 3: only after metric closure, revisit horizon / echo claims
 
 Current gap:
