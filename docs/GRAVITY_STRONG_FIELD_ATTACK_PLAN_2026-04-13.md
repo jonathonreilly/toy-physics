@@ -1016,6 +1016,21 @@ New cleaner axiom-first architecture implied by that:
   3. then close the tensor boundary action / completion theorem
 - this is cleaner because the support block is now the first place the missing
   projective datum can honestly survive
+- latest tightening on that new route:
+  - see `docs/TENSOR_SUPPORT_CENTER_EXCESS_LAW_NOTE.md`
+  - after fixing total charge, the exact `A1` support block retains one
+    microscopic scalar only:
+    - `delta_A1 = phi_support(center)/Q - phi_support(arm_mean)/Q`
+  - on the canonical `Q=1` `A1` family this is exact:
+    - `delta_A1(r) = 1 / (6 (1 + sqrt(6) r))`
+  - the current bright tensor coefficients are then almost exactly an affine
+    law in `delta_A1`
+  - so the remaining exact target is narrower still:
+    1. derive the exact tensor observable on `A1 x {E_x, T1x}`
+    2. derive its two `A1` endpoint coefficients at
+       - `e0`
+       - `s / sqrt(6)`
+    3. recover the full affine support law from those endpoint values
 
 ### Attack 3: only after metric closure, revisit horizon / echo claims
 
