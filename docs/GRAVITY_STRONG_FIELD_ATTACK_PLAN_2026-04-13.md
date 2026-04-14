@@ -869,9 +869,21 @@ New exact/bounded selector-transfer reduction extracted after that:
   - the distinguishing datum is microscopic intra-orbit shell-source fine
     structure
 - see `docs/TENSOR_INTRAORBIT_SOURCE_LAW_NOTE.md`
+- and that intra-orbit structure now has a canonical exact microscopic origin:
+  - the two `A1` support irreps lift to orbit-constant shell-source data
+  - the non-scalar `E ⊕ T1` support irreps lift to zero-mean intra-orbit shell
+    structure
+  - the finite-rank family’s shell fine structure is exactly the propagated
+    non-`A1` support content
+- see `docs/TENSOR_SUPPORT_IRREP_LIFT_NOTE.md`
+- and the first bounded tensor-drive response in those coordinates is now in:
+  - with the scalar `A1` sector fixed, the `E` sector lowers `c_eta`
+  - the `T1` sector raises `c_eta`
+  - the full finite-rank shift is nearly additive in `E` and `T1`
+- see `docs/TENSOR_SUPPORT_IRREP_CHANNEL_NOTE.md`
 - so the open gravity target is now narrower again:
-  - derive the transfer coefficient `tau_tensor` from an intra-orbit
-    shell-to-tensor lift law on the sewing band
+  - derive the exact `E` and `T1` transfer coefficients into the tensor
+    boundary drive
   - not from another rewrite of orbit-summed shell data or the retained
     reduced shell toolbox alone
 
