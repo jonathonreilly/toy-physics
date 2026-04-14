@@ -25,10 +25,13 @@ BOUNDARY CONDITIONS AT M_Pl (framework-derived):
   y_t(M_Pl) = g_3/sqrt(6) = 0.436            [Ward identity]
   lambda(M_Pl) ~ 0.01                        [insensitive, scanned]
 
-APPROACHES:
-  A. FORWARD: Run from M_Pl to v with framework BCs. Extract y_t(v).
-  B. BACKWARD: Start at v with alpha_s(v) = 0.1033 (derived), scan y_t(v)
-     to match Ward BC y_t(M_Pl) = 0.436. Avoids gauge trajectory issue.
+DERIVATION (backward Ward):
+  Start at v with alpha_s(v) = 0.1033 (derived), scan y_t(v)
+  to match Ward BC y_t(M_Pl) = 0.436. This is THE derivation.
+
+CONSISTENCY CHECKS:
+  Forward run (M_Pl to v) and CMT-constrained forward run are included
+  as cross-checks, not competing approaches.
 
 SENSITIVITY ANALYSIS:
   - 1-loop vs 2-loop comparison
@@ -398,12 +401,12 @@ log()
 
 
 # =====================================================================
-# APPROACH A: BACKWARD RUN (v -> M_Pl)
+# THE DERIVATION: BACKWARD RUN (v -> M_Pl)
 # =====================================================================
-# This is the preferred approach because it uses the DERIVED alpha_s(v)
-# as the starting condition, avoiding the gauge trajectory issue.
+# This is the derivation: use the DERIVED alpha_s(v) as the starting
+# condition and scan y_t(v) to match the Ward BC at M_Pl.
 log("=" * 78)
-log("APPROACH A: BACKWARD RUN (v -> M_Pl)")
+log("THE DERIVATION: BACKWARD RUN (v -> M_Pl)")
 log("=" * 78)
 log("""
   Start at v with:
@@ -571,14 +574,18 @@ log()
 
 
 # =====================================================================
-# APPROACH B: FORWARD RUN (M_Pl -> v)
+# CROSS-CHECK: FORWARD RUN (M_Pl -> v)
 # =====================================================================
+# NOT a competing derivation. This is a consistency check that shows
+# the forward gauge trajectory does not reproduce CMT alpha_s(v), as
+# expected (CMT sets alpha_s(v) by matching, not by running).
 log("=" * 78)
-log("APPROACH B: FORWARD RUN (M_Pl -> v)")
+log("CROSS-CHECK: FORWARD RUN (M_Pl -> v)")
 log("=" * 78)
 log("""
   Start at M_Pl with framework BCs, run to v.
   Question: does g_3(v) from the RGE match the derived alpha_s(v) = 0.1033?
+  (Answer: no, as expected -- CMT sets alpha_s(v) directly.)
 """)
 
 # Framework BCs at M_Pl
@@ -644,10 +651,10 @@ log()
 
 
 # =====================================================================
-# APPROACH C: FORWARD with CMT constraint
+# CROSS-CHECK: FORWARD with CMT constraint
 # =====================================================================
 log("=" * 78)
-log("APPROACH C: FORWARD with CMT constraint on alpha_s(v)")
+log("CROSS-CHECK: FORWARD with CMT constraint on alpha_s(v)")
 log("=" * 78)
 log("""
   Run all couplings forward from M_Pl to v, but at v, REPLACE g_3

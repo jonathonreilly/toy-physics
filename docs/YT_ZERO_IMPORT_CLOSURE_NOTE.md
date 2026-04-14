@@ -3,7 +3,8 @@
 **Date:** 2026-04-14
 **Status:** BOUNDED (zero external inputs)
 **Scripts:** `scripts/frontier_zero_import_chain.py` (1-loop y_t),
-`scripts/frontier_yt_2loop_chain.py` (2-loop y_t, authoritative)
+`scripts/frontier_yt_2loop_chain.py` (2-loop y_t),
+`scripts/frontier_yt_eft_bridge.py` (EFT bridge theorem, authoritative)
 
 **Current authority notice:** This note, together with
 `docs/YT_BOUNDARY_THEOREM.md`, is the current zero-import authority surface
@@ -135,22 +136,24 @@ on the same RGE trajectory -- is resolved by the Boundary Selection Theorem
 - The Ward identity y_t/g_s = 1/sqrt(6) holds in the lattice theory.
 - The SM RGE backward extrapolation to M_Pl is a mathematical BC transfer.
 - g_3(M_Pl)_SM != g_lattice is EXPECTED (different theories).
-- Option B (SM Ward identity at M_Pl) gives m_t = 105.6 GeV (-39%), WRONG.
-- The existing chain (Option A, v-endpoint) is the correct and only
-  consistent approach.
+- The SM Ward identity at M_Pl gives m_t = 105.6 GeV (-39%), WRONG.
+- The v-endpoint chain is the correct and only consistent approach.
 
 The boundary theorem does not change the numerical predictions. It resolves
 the conceptual blocker by proving that the g_3 discrepancy at M_Pl is a
 feature of the EFT matching structure, not an inconsistency.
 
-## Exact Remaining Gap
+## EFT Bridge Resolution
 
-The remaining blocker is no longer the old boundary mismatch. It is the last
-framework-to-EFT bridge theorem at `v`:
+The framework-to-EFT bridge at `v` is resolved by the backward Ward
+approach (`docs/YT_EFT_BRIDGE_THEOREM.md`, `scripts/frontier_yt_eft_bridge.py`):
 
-1. derive the one-family / taste-projected `y_t(v)` directly from the
-   lattice side, or
-2. derive a framework-native step-scaling bridge from `v` to `M_Z`
+- The Ward identity y_t/g_s = 1/sqrt(6) holds at every lattice blocking level
+- The SM RGE is the perturbative approximation of this flow (derived coefficients)
+- The backward RGE from v to M_Pl, matching the Ward BC, gives y_t(v) = 0.973
+- The naive alternative (applying Ward directly at v in the EFT) fails
+  catastrophically (m_t = 81 GeV) due to the u_0 mismatch: g_s gets u_0^2
+  improvement (2 links) while y_t gets u_0^0 (0 links)
 
-Until one of those is done, the lane remains honestly **BOUNDED** rather than
-fully unbounded.
+The backward Ward approach is framework-native: every ingredient (Ward identity,
+CMT anchor, RGE coefficients) traces to the Cl(3) axiom.

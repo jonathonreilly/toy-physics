@@ -218,11 +218,17 @@ Codex blocker: "derive whether the physical crossover endpoint is at `v`
 or at `M_Pl`, then run the entire gauge/Yukawa chain on that single
 surface."
 
-**Resolution:** The endpoint is `v`. The chain already runs on one surface:
-- alpha_s(v) from CMT (one matching condition at v)
-- y_t(v) from Ward BC transfer via SM RGE (one boundary condition)
-- m_t from y_t(v) * v / sqrt(2) (one prediction)
+**Resolution:** The endpoint is `v`. The chain runs on one surface via
+the backward Ward approach (`YT_EFT_BRIDGE_THEOREM.md`):
+- alpha_s(v) = 0.1033 from CMT (one matching condition at v)
+- y_t(v) = 0.973 from backward Ward BC transfer via derived SM RGE
+- m_t = y_t(v) * v / sqrt(2) = 169.4 GeV (one prediction)
 - g_3(M_Pl)_SM is an artifact, not a constraint
+
+The naive alternative (applying Ward identity directly at v in the EFT)
+fails catastrophically (m_t = 81 GeV) due to u_0 mismatch: the gauge
+coupling gets u_0^2 improvement (2 links) while the Yukawa gets u_0^0
+(0 links). See `frontier_yt_eft_bridge.py` Part 4 for the full diagnostic.
 
 The discrepancy `g_3(M_Pl)_SM != g_lattice` is the expected consequence
 of the domain separation between the lattice and EFT theories.
