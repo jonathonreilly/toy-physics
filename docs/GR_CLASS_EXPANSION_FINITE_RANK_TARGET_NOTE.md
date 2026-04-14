@@ -3,7 +3,7 @@
 **Date:** 2026-04-14  
 **Branch:** `codex/review-active`  
 **Script:** `scripts/frontier_gr_class_expansion_finite_rank_target.py`  
-**Status:** exact widening candidate beyond the current star-supported/static-conformal restricted class; not full GR
+**Status:** exact widening candidate beyond the current star-supported/static-conformal restricted class; exact projected DtN correction operator in hand; not full GR
 
 ## Question
 
@@ -30,12 +30,20 @@ beyond the current star-supported/static-conformal restricted class.
 
 The next honest widening is therefore not a new shell law or another tensor
 fit. It is to enlarge the source class while keeping the exact boundary/action
-structure:
+structure and the exact projected DtN correction operator on the active orbit
+quotient:
 
 > exact finite-rank source-to-exterior closure plus exact microscopic boundary
-> action, with bounded scalar metric reduction.
+> action, with bounded scalar metric reduction and an exact projected DtN
+> correction operator.
 
 That is already present in the finite-rank gravity route on the branch.
+
+The operator-level widening theorem is now sharper:
+
+> the finite-rank class admits an exact projected DtN correction operator on
+> the active orbit quotient, and that operator is the best exact intermediate
+> theorem between source renormalization and tensorial `3+1` matching.
 
 ## Does the current exact carrier/action naturally extend?
 

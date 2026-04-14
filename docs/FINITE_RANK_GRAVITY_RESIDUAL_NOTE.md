@@ -1,9 +1,9 @@
-# Finite-Rank Strong-Field Source Closure and 4D Einstein-Residual Test
+# Finite-Rank Strong-Field Source Closure and `3+1` Einstein-Residual Test
 
 **Date:** 2026-04-13  
 **Branch:** `codex/review-active`  
 **Script:** `scripts/frontier_finite_rank_gravity_residual.py`  
-**Status:** Exact finite-rank source theorem plus bounded 4D residual separation; not full nonlinear GR
+**Status:** Exact finite-rank source theorem plus bounded `3+1` residual separation; not full nonlinear GR
 
 ## Purpose
 
@@ -19,7 +19,7 @@ The obvious remaining objection was:
 > on its support
 
 This note pushes the source model one step further and then uses that stronger
-source object to test the 4D metric candidate directly.
+source object to test the `3+1` metric candidate directly.
 
 ## Exact theorem: finite-rank support operator
 
@@ -67,7 +67,7 @@ at every site outside the support.
 So the exterior strong-field data are still one exact harmonic object, now for
 a broader finite-rank source class.
 
-## Bounded 4D test: direct candidate vs monopole projection
+## Bounded `3+1` test: direct candidate vs monopole projection
 
 Using that exact harmonic field, define the same common-source metric candidate:
 
@@ -85,7 +85,7 @@ The new script tests two things:
 
 1. **Direct common-source candidate**
    - use the exact finite-rank `phi(x)` directly
-   - compute a numerical 4D Einstein tensor residual at exterior probe points
+   - compute a numerical `3+1` Einstein tensor residual at exterior probe points
 
 2. **Monopole-projected isotropic candidate**
    - shell-average the same exact `phi(x)`
@@ -93,7 +93,7 @@ The new script tests two things:
      `phi_shell(r) = a/r + b/r^3`
    - keep only the derived monopole coefficient `a`
    - rebuild the isotropic candidate from `phi_mono(r) = a/r`
-   - compute the same 4D Einstein residual
+   - compute the same `3+1` Einstein residual
 
 ## What the script finds
 
@@ -111,7 +111,7 @@ All three pass at machine precision.
    - fitted `a = 0.3465`
    - fitted `b = 0.6312`
    - relative RMS shell-fit error `~ 5.2%`
-5. the **direct** common-source 4D candidate has a nonzero vacuum Einstein
+5. the **direct** common-source `3+1` candidate has a nonzero vacuum Einstein
    residual outside the source
    - max sampled `|G_{mu nu}| ~ 9.85e-2`
 6. the **monopole-projected** isotropic candidate from the same exact field
@@ -130,7 +130,7 @@ This is the clearest Codex-side gravity statement so far:
 - feeding that object directly into the conformastatic metric ansatz is **not**
   yet a vacuum Einstein solution
 - but the monopole / isotropic projection of the same exact field is already
-  extremely close to vacuum at the sampled 4D residual level
+  extremely close to vacuum at the sampled `3+1` residual level
 
 So the remaining gravity gap is no longer vague. It is:
 

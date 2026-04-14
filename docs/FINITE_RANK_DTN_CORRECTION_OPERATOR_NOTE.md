@@ -81,7 +81,7 @@ non-`O_h` sector:
 
 This note still does **not** close:
 
-1. the derivation of the full 4D spacetime closure
+1. the derivation of the full `3+1` spacetime closure
 2. the lift from the active pair quotient to the complete nonlinear sewing
    law
 3. the exact scalar amplitude relation between the support Schur complement
@@ -95,4 +95,4 @@ After this note, the perturbative target narrows again:
   operator on the active orbit quotient
 - the remaining theorem target is to derive the scalar amplitude on that
   quotient directly from the support renormalization, then promote the result
-  into the full 4D closure
+into the full `3+1` closure

@@ -3,7 +3,7 @@
 **Date:** 2026-04-14  
 **Branch:** `codex/review-active`  
 **Script:** `scripts/frontier_finite_rank_source_to_metric_theorem.py`  
-**Status:** exact finite-rank source-to-exterior theorem plus bounded scalar metric reduction; not full nonlinear GR
+**Status:** exact finite-rank source-to-exterior theorem plus exact projected DtN correction operator; bounded `3+1` metric reduction; not full nonlinear GR
 
 ## Purpose
 
@@ -57,6 +57,17 @@ So the finite-rank source family does not merely give an exterior harmonic
 field. It also lands on the same exact microscopic boundary-action surface as
 the retained bridge law.
 
+## New exact intermediate theorem: projected DtN correction operator on the active orbit quotient
+
+The finite-rank source family now also determines the exact projected DtN
+correction operator on the sewing-band active orbit quotient. On the four
+active channels, the microscopic lattice solve produces a rank-two pair
+quotient with exact row antisymmetry and a universal leading output mode.
+
+This is the sharpest exact widening theorem currently in hand because it closes
+the active non-`O_h` ambiguity at the operator level while keeping the same
+source renormalization and boundary-action structure.
+
 ## Bounded theorem: the exterior field coarse-grains to a near-vacuum isotropic metric
 
 Shell averaging the exact finite-rank exterior field and projecting it onto
@@ -71,7 +82,7 @@ is `R_match = 5.0`:
 - improvement factor: `~1.48e3`
 
 So the finite-rank family does support a clean source-to-exterior-metric
-architecture at the scalar/isotropic level.
+architecture at the scalar/isotropic `3+1` level.
 
 ## Sharp blocker: the tensorial `3+1` matching map is still missing
 
@@ -99,6 +110,7 @@ the current tensor residual route:
 
 - exact finite-rank source-to-exterior closure: yes
 - exact microscopic boundary-action closure: yes
+- exact projected DtN correction operator on the active orbit quotient: yes
 - bounded coarse-grained source-to-metric reduction: yes
 - full tensorial `3+1` closure / full nonlinear GR: no
 
