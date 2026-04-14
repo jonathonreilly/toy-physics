@@ -23,6 +23,9 @@ Framework sentence:
 
 The current retained core is now materially stronger:
 
+- weak-field gravity on the retained lattice surface:
+  - Poisson self-consistency and operator-family uniqueness
+  - Newton's inverse-square law from the lattice Green's function on `Z^3`
 - exact native cubic `Cl(3)` / `SU(2)` on `Z^3`
 - graph-first weak-axis selector on the canonical cube-shift surface
 - graph-first integration theorem: once the selector picks an axis, the
@@ -48,9 +51,10 @@ The current retained core is now materially stronger:
 
 The paper-safe language is therefore:
 
-> On the retained cubic graph, `Cl(3)` yields exact `SU(2)`. The canonical
-> graph-shift selector derives a weak axis directly on the graph surface, and
-> the selected graph fibers plus the residual cubic swap give a commutant with
+> On the retained cubic graph, `Cl(3)` yields weak-field gravity through the
+> Poisson / Newton chain and exact `SU(2)`. The canonical graph-shift selector
+> derives a weak axis directly on the graph surface, and the selected graph
+> fibers plus the residual cubic swap give a commutant with
 > `su(3) \oplus u(1)` structure.
 
 That sentence is now defensible.
@@ -67,6 +71,7 @@ The strongest remaining open points are now narrower:
 
 Until those steps are written cleanly, the following claims stay bounded:
 
+- the broader GR-signature bundle beyond the Newton/Poisson core
 - any manuscript line that treats the abelian factor as fully closed for the
   full flavor sector rather than as one-generation-complete / left-handed matched
 - detailed hierarchy / CKM closure
@@ -107,7 +112,8 @@ Use this as the honest summary now:
 > The retained cubic graph yields exact `Cl(3)` / `SU(2)` structure. A
 > graph-first selector on the canonical cube-shift surface derives a weak axis,
 > and the selected graph fibers plus residual cubic swap have commutant
-> `su(3) \oplus u(1)`. The spatial graph fixes the left-handed gauge/matter
+> `su(3) \oplus u(1)`. The same lattice carries weak-field gravity through the
+> Poisson / Newton chain. The spatial graph fixes the left-handed gauge/matter
 > structure, the derived temporal direction supplies chirality, and anomaly
 > cancellation closes one Standard Model generation. The exact `1 + 1 + 3 + 3`
 > orbit structure supplies three matter species in the same framework.

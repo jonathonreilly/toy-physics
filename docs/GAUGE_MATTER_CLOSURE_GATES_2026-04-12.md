@@ -214,12 +214,11 @@ the gauge/matter gates cleanly.
 
 ## Practical next move
 
-If effort is focused correctly, the next four high-value lanes should be:
+If effort is focused correctly, the next three high-value lanes should be:
 
-1. `S^3` compactification / cap-link formalization
-2. DM relic mapping
-3. renormalized `y_t` matching
-4. CKM Higgs-`Z_3` universality
+1. DM relic mapping
+2. renormalized `y_t` matching
+3. CKM Higgs-`Z_3` universality
 
 Generation and full-framework one-generation closure should now be treated as
 paper-ready.

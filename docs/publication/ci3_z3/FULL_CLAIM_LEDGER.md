@@ -1,0 +1,175 @@
+# Full Claim Ledger
+
+**Date:** 2026-04-14  
+**Purpose:** narrative companion to the
+[PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md).
+
+The matrix is the canonical one-line capture surface. This ledger explains the
+publication decision behind each captured family and makes the paper framework
+explicitly cover the same science inventory.
+
+If the matrix and this ledger ever disagree, the matrix wins until this ledger
+is updated.
+
+Use this file together with:
+
+- [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md)
+- [QUANTITATIVE_SUMMARY_TABLE.md](./QUANTITATIVE_SUMMARY_TABLE.md)
+- [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md)
+- [CLAIMS_TABLE.md](./CLAIMS_TABLE.md)
+- [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md)
+- [PUBLICATION_CONTROL_PLANE.md](./PUBLICATION_CONTROL_PLANE.md)
+
+## 1. How to read the package
+
+The publication package now has four distinct layers:
+
+1. **Retained core**
+   - the claims the flagship paper may carry directly
+2. **Observation-facing bounded portfolio**
+   - quantitatively important results that reviewers will ask about even when
+     they are not promoted
+3. **Live flagship gates**
+   - open lanes whose closure would materially change the paper
+4. **Frozen-out families**
+   - scientifically relevant work that is intentionally excluded from the
+     flagship surface, but recorded so it is not lost
+
+This ledger mirrors those four layers directly.
+
+## 2. Retained core aligned to the matrix
+
+These rows correspond to Section A of
+[PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md).
+
+### Framework and spacetime backbone
+
+| Claim family | Current decision | Why it is retained | Primary authority |
+|---|---|---|---|
+| `Cl(3)` on `Z^3` is the working physical theory | promoted | framework sentence and ontological surface for the manuscript | [CI3_Z3_PUBLICATION_STATE_2026-04-12.md](../../CI3_Z3_PUBLICATION_STATE_2026-04-12.md) |
+| anomaly-forced `3+1` | promoted | single-clock codimension-1 theorem survives direct audit | [ANOMALY_FORCES_TIME_THEOREM.md](../../ANOMALY_FORCES_TIME_THEOREM.md) |
+| retained `S^3` compactification / topology closure | promoted | cone-cap family now clears the accepted topology bar and is no longer a live gate | `claude/youthful-neumann: S3_GENERAL_R_DERIVATION_NOTE.md`, `S3_CAP_UNIQUENESS_NOTE.md` |
+
+### Gravity
+
+| Claim family | Current decision | Why it is retained | Primary authority |
+|---|---|---|---|
+| weak-field Poisson / Newton chain | promoted | unique self-consistent local field equation plus lattice Green-function Newton law | [CI3_Z3_PUBLICATION_STATE_2026-04-12.md](../../CI3_Z3_PUBLICATION_STATE_2026-04-12.md) |
+| weak-field WEP | promoted corollary | survives on the same retained action surface | [BROAD_GRAVITY_DERIVATION_NOTE.md](../../BROAD_GRAVITY_DERIVATION_NOTE.md) |
+| weak-field time dilation | promoted corollary | survives on the same retained action surface | [BROAD_GRAVITY_DERIVATION_NOTE.md](../../BROAD_GRAVITY_DERIVATION_NOTE.md) |
+| restricted strong-field closure | promoted restricted theorem | exact on the current star-supported finite-rank class under the static conformal bridge; important enough to retain, but still source-class restricted | [RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md](../../RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md) |
+
+### Gauge and matter structure
+
+| Claim family | Current decision | Why it is retained | Primary authority |
+|---|---|---|---|
+| exact native `SU(2)` | promoted | exact weak algebra on the cubic Clifford surface | [BOUNDED_NATIVE_GAUGE_NOTE.md](../../BOUNDED_NATIVE_GAUGE_NOTE.md) |
+| graph-first structural `SU(3)` | promoted | selector + commutant closure now defines the safe `SU(3)` statement | [GRAPH_FIRST_SU3_INTEGRATION_NOTE.md](../../GRAPH_FIRST_SU3_INTEGRATION_NOTE.md) |
+| left-handed charge matching | promoted corollary | safe selected-axis charge surface on the retained graph-first package | [GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md](../../GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md) |
+| one-generation closure | promoted | anomaly-complete right-handed completion now survives direct audit | [GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md](../../GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md) |
+| three-generation structure | promoted | exact orbit algebra `8 = 1 + 1 + 3 + 3` is retained as physical species structure | [GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md](../../GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md) |
+
+### Electroweak hierarchy and exact companions
+
+| Claim family | Current decision | Why it is retained | Primary authority |
+|---|---|---|---|
+| electroweak scale `v` | promoted | exact minimal hierarchy block plus axiom-native observable principle now clear the paper bar | [OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md](../../OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md) |
+| exact `I_3 = 0` | promoted exact companion | safe statement is exact no-third-order interference on the Hilbert surface | [I3_ZERO_EXACT_THEOREM_NOTE.md](../../I3_ZERO_EXACT_THEOREM_NOTE.md) |
+| exact CPT | promoted exact companion | exact free staggered-lattice theorem on the retained framework surface | [CPT_EXACT_NOTE.md](../../CPT_EXACT_NOTE.md) |
+
+## 3. Observation-facing bounded portfolio aligned to the matrix
+
+These rows correspond to Section B of
+[PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md). They matter because an
+external reviewer will ask about them whether or not they are retained.
+
+### DM and cosmology companions
+
+| Quantity / lane | Current decision | Why not promoted | Primary authority | Matrix / freeze reference |
+|---|---|---|---|---|
+| Dark matter ratio `R` | bounded | structurally strong, but still tied to bounded relic/transport bridge | [DM_RELIC_PAPER_NOTE.md](../../DM_RELIC_PAPER_NOTE.md) | matrix row `Dark matter ratio \`R\``, `F01` |
+| `\Omega_\Lambda` conditional chain | bounded/conditional | depends on observed `\eta`, flatness, and bounded DM chain | [OMEGA_LAMBDA_DERIVATION_NOTE.md](../../OMEGA_LAMBDA_DERIVATION_NOTE.md) | matrix row `\Omega_\Lambda conditional chain`, `F01`, `F04` |
+| Spectral tilt `n_s` | bounded/conditional | cosmology bridge remains conditional | `claude/youthful-neumann: PRIMORDIAL_SPECTRUM_NOTE.md` | matrix row `Spectral tilt \`n_s\``, `F04` |
+| Dark energy EOS `w` | bounded/conditional | interesting but topology/cosmology dependent | `claude/youthful-neumann: DARK_ENERGY_EOS_NOTE.md` | matrix row `Dark energy EOS \`w\``, `F04` |
+| Cosmological constant `\Lambda` | bounded/conditional | depends on retained topology plus additional cosmology identification | `claude/youthful-neumann: COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md` | matrix row `Cosmological constant \`\Lambda\``, `F04` |
+
+### `y_t` / `\alpha_s` portfolio
+
+| Quantity / lane | Current decision | Why not promoted | Primary authority | Matrix / freeze reference |
+|---|---|---|---|---|
+| `\alpha_s(M_Z)` zero-import route | bounded | numerically strong, but the operator-to-coupling methodology bridge is still not fully internalized | `claude/youthful-neumann: YT_ZERO_IMPORT_CLOSURE_NOTE.md` | matrix row `\alpha_s(M_Z) zero-import route`, `F02` |
+| top mass `m_t` zero-import route | bounded | same zero-import chain remains bounded despite strong value | `claude/youthful-neumann: YT_ZERO_IMPORT_CLOSURE_NOTE.md` | matrix row `top mass \`m_t\` zero-import route`, `F02` |
+| top mass `m_t` import-allowed route | bounded | closer numerically, but still depends on imported matching coefficients | `claude/youthful-neumann: YT_GAUGE_CROSSOVER_THEOREM.md` | matrix row `top mass \`m_t\` import-allowed route`, `F02` |
+
+### Flavor / CKM portfolio
+
+| Quantity / lane | Current decision | Why not promoted | Primary authority | Matrix / freeze reference |
+|---|---|---|---|---|
+| CKM magnitude package `|V_us|`, `|V_cb|`, `|V_ub|` | bounded | improved magnitude story is real, but coefficient and phase closure still fail the flagship bar | `claude/youthful-neumann: CKM_MASS_BASIS_NNI_NOTE.md` | matrix row `CKM magnitudes`, `F03` |
+| Cabibbo angle `0.2236` vs `0.2243` | bounded / fitted | close numerically, but still sits on a fitted flavor surface | `claude/youthful-neumann: CABIBBO_JARLSKOG_PREDICTION_2026-04-12.md` | matrix row `Cabibbo angle`, `F03` |
+| Jarlskog invariant | bounded / partial | partial CP closure only; not safe as promoted CKM theorem | `claude/youthful-neumann: CABIBBO_JARLSKOG_PREDICTION_2026-04-12.md` | matrix row `Jarlskog invariant`, `F03` |
+
+### Higgs and sharp companions
+
+| Quantity / lane | Current decision | Why not promoted | Primary authority | Matrix / freeze reference |
+|---|---|---|---|---|
+| Higgs mass `m_H` | open/bounded | `v` is now retained, but the Higgs mass package is still not closed | `claude/youthful-neumann: HIGGS_MASS_DERIVED_NOTE.md` | matrix row `Higgs mass \`m_H\``, `F05` |
+| Bekenstein-Hawking entropy | bounded companion | useful companion signal, not part of flagship theorem spine | `claude/youthful-neumann: BH_ENTROPY_DERIVED_NOTE.md` | matrix row `Bekenstein-Hawking entropy`, `F07` |
+| Proton lifetime | bounded sharp prediction | later companion or appendix material, not flagship core | `claude/youthful-neumann: PROTON_LIFETIME_DERIVED_NOTE.md` | matrix row `Proton lifetime`, `F07` |
+| Lorentz-violation fingerprint | bounded sharp prediction | interesting companion phenomenology, not retained backbone | `claude/youthful-neumann: LORENTZ_VIOLATION_DERIVED_NOTE.md` | matrix row `Lorentz-violation fingerprint`, `F07` |
+| Magnetic monopole mass | bounded sharp prediction | imported phenomenology layer still present | `claude/youthful-neumann: MONOPOLE_DERIVED_NOTE.md` | matrix row `Magnetic monopole mass`, `F07` |
+
+## 4. Live flagship gates aligned to the matrix
+
+These rows correspond to Section C of
+[PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md).
+
+| Gate | Current best read | Why still open | Main authority |
+|---|---|---|---|
+| DM relic mapping | structural ratio is strong, full relic bridge still bounded | graph-to-relic transport and normalization closure still missing | `codex/review-active`, `claude/youthful-neumann` DM notes |
+| Renormalized `y_t` matching | multiple honest bounded readings | the last methodology / matching bridge still does not clear the theorem bar | `claude/youthful-neumann` `YT_*` notes |
+| CKM / quantitative flavor | some bounded matches are strong | coefficient and phase closure still absent | `claude/youthful-neumann` and `codex/review-active` `CKM_*` notes |
+
+## 5. Frozen-out families aligned to the matrix
+
+These rows correspond to Section D of
+[PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md) and the family details in
+[FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md).
+
+| Frozen family | Current decision | Why frozen out | Registry ref |
+|---|---|---|---|
+| DM quantitative companion portfolio | frozen-out of flagship core | bounded relic bridge even though several numbers are strong | `F01` |
+| `y_t` / `\alpha_s` quantitative companion portfolio | frozen-out of flagship core | still one of the three live gates | `F02` |
+| CKM / flavor quantitative portfolio | frozen-out of flagship core | still one of the three live gates | `F03` |
+| cosmology companion portfolio | frozen-out of flagship core | conditional/bounded companion layer | `F04` |
+| Higgs and mass-spectrum portfolio | frozen-out of flagship core | not closed even though `v` is now retained | `F05` |
+| gravity companions beyond retained weak-field + restricted strong-field package | frozen-out of flagship core | full GR generality and broader gravity phenomenology still bounded | `F06` |
+| sharp companion predictions | frozen-out of flagship core | scientifically useful, but companion-paper or appendix material | `F07` |
+| branch-local inventories and stale strategy docs | frozen-out as authority | useful for capture, unsafe as publication authority | `F08` |
+
+## 6. Historical and stale surfaces not to confuse with the matrix
+
+These are not missing science. They are just not part of the current flagship
+paper authority path.
+
+| Surface | Current status | Why it is not authority |
+|---|---|---|
+| older review packets and publication cards | stale / not-for-paper | often outran the audited claim surface |
+| older bounded-only `S^3` notes before the general-`R` / cap-uniqueness harmonization | historical | useful route history, no longer the controlling topology authority |
+| older full-closure notes for DM, `y_t`, CKM, gauge normalization | stale / not-for-paper | routinely promoted bounded sub-results too aggressively |
+| misnamed “Born rule derived” surfaces | stale naming | safe claim is exact `I_3 = 0`, not a standalone derivation of the full Born rule |
+| branch-local scorecards and inventories | inventory only | helpful for capture, not safe manuscript authority |
+
+## 7. Ledger rule
+
+Before a claim enters the manuscript:
+
+1. it must appear in [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md)
+2. it must be classified here in the same bucket family
+3. if it is manuscript-facing, it must also appear in
+   [CLAIMS_TABLE.md](./CLAIMS_TABLE.md)
+4. it must have a paired derivation/validation entry in
+   [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md)
+
+If a reviewer can find a result in the repo but not in the matrix and not in
+this ledger, the package is incomplete.

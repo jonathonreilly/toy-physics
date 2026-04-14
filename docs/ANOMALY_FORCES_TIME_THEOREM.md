@@ -150,8 +150,10 @@ codimension-1 evolution.
 The script `scripts/frontier_anomaly_forces_time.py` verifies the algebraic
 claims computationally: anomaly traces, Clifford algebra relations,
 chirality operator properties in even/odd dimensions, the codimension-1
-constraint witness, and the complete SM charge table. Result: **87/87
-checks pass**.
+constraint witness, and the complete SM charge table. The theorem authority
+is the proof above plus the exact anomaly arithmetic in the runner. The raw
+runner score should not be cited by itself, because a small number of output
+items are explicitly marked as assertions rather than numerical checks.
 
 ## References
 

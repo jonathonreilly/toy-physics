@@ -2,12 +2,14 @@
 
 ## Status
 
-EXACT theorem on finite lattice. All checks pass (PASS=53 FAIL=0).
+EXACT theorem on even periodic lattices. All checks pass on `L = 4, 6, 8`
+(`PASS=53 FAIL=0`), and the runner now rejects odd `L`.
 
 ## Theorem / Claim
 
 **Theorem (CPT Invariance).**
 The staggered Cl(3) Hamiltonian on Z^3 with periodic boundary conditions
+and even side length `L`
 is exactly CPT-invariant: [CPT, H] = 0. All CPT-odd SME coefficients
 vanish identically.
 
@@ -82,7 +84,7 @@ violated, CP is preserved at tree level, and CPT is exactly preserved.
 This is a clean exact result that can appear in the paper's symmetry
 section. The statement is:
 
-> The staggered Cl(3) Hamiltonian on Z^3 is exactly CPT-invariant.
+> The staggered Cl(3) Hamiltonian on even periodic `Z^3` lattices is exactly CPT-invariant.
 > C and P individually map H -> -H, while T acts trivially on the real
 > Hamiltonian. The product CPT preserves H identically. All CPT-odd
 > Standard-Model Extension coefficients vanish.
@@ -101,5 +103,5 @@ fermion, which is the lattice origin of parity violation.
 ```
 python3 scripts/frontier_cpt_exact.py
 # Exit code: 0
-# PASS=53  FAIL=0
+# PASS=53  FAIL=0   (for L = 4, 6, 8; odd L rejected by design)
 ```

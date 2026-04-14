@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-12  
 **Status:** exact theorem note for the retained Hilbert-surface interference result  
-**Runner:** `scripts/frontier_born_rule_derived.py`
+**Runner:** `scripts/frontier_born_rule_derived.py` (historical filename)
 
 ## Claim
 
@@ -41,6 +41,6 @@ Safe main-text wording:
 > linearly and probabilities are quadratic on the Hilbert surface, all
 > third-order interference cancels identically.
 
-Unsafe wording:
+Explicitly unsafe wording:
 
 > The Born rule is fully derived from the lattice axioms alone.
