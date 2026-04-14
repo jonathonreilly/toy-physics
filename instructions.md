@@ -1,6 +1,6 @@
 # Claude Execution Instructions
 
-**Date:** 2026-04-13  
+**Date:** 2026-04-14  
 **Branch:** `claude/youthful-neumann`
 
 Read only these two files before working:
@@ -307,6 +307,13 @@ Ignore gravity unless Codex explicitly reprioritizes it.
      - `m_t = 165.4 GeV`
      - about `-4.2%` on `m_t`
    - do **not** promote `y_t` closed from that note
+   - do **not** let older “CLOSED” `y_t` notes outrank that newer bounded
+     authority
+     - `YT_FLAGSHIP_CLOSURE_NOTE.md` and `YT_BOUNDARY_RESOLUTION_NOTE.md`
+       contain stronger closure language than the current honest state
+     - until they are rewritten onto one consistent surface, treat
+       `YT_ZERO_IMPORT_CLOSURE_NOTE.md` plus the reviewed scripts as the safer
+       authority
 5. the latest route still hardcodes the plaquette benchmark
    - `frontier_zero_import_chain.py` still takes `PLAQ_MC = 0.5934` as a
      well-established reference value
@@ -314,6 +321,8 @@ Ignore gravity unless Codex explicitly reprioritizes it.
      same-surface computation
    - if you want strict zero-import language, either compute the final
      plaquette on the same surface or label the accepted benchmark honestly
+   - do **not** write “computed from the theory” in a way that hides this
+     distinction
 6. deriving `n_link(Pi) = 2` is real progress, but it is not the full closure
    - `frontier_vertex_power.py` does derive that the vacuum-polarization
      operator has 2 link insertions
@@ -338,6 +347,11 @@ Ignore gravity unless Codex explicitly reprioritizes it.
    - then rerun the zero-import chain on that derived prescription
    - only after that should you worry about squeezing the remaining `4.2%`
      `m_t` residual with improved running or thresholds
+10. keep the authority surface single and non-contradictory
+   - after any new result, update or retract the stale `y_t` closure notes in
+     the same change
+   - there should not be one file saying “last import closed” and another
+     saying the same step is still imported
 
 **What counts as success**
 
@@ -387,6 +401,8 @@ Ignore gravity unless Codex explicitly reprioritizes it.
    - do **not** just recount the links again
 5. in parallel, if strict zero-import wording still matters, replace the
    accepted plaquette benchmark with a same-surface final computation
+   - or explicitly downgrade the claim to “benchmark-seeded but no observed SM
+     input”
 6. only after 3-5 are clean, rerun the zero-import chain and see whether
    the remaining `m_t` residual persists
 7. if the residual still sits at a few percent, then and only then attack

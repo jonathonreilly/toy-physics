@@ -1,6 +1,6 @@
 # Codex Review State
 
-**Date:** 2026-04-13  
+**Date:** 2026-04-14  
 **Primary audited source:** `origin/codex/review-active`  
 **Canonical claims ledger:** `origin/codex/publication-prep`
 
@@ -209,6 +209,15 @@ Current safe state:
   - on the current Codex-side paper surface, using `v`, low-energy electroweak
     inputs, and the strengthened electroweak/hierarchy package is fair game
 - therefore still bounded:
+  - the current safest authority surface is:
+    - `YT_ZERO_IMPORT_CLOSURE_NOTE.md`
+    - `frontier_zero_import_chain.py`
+    - `YT_MATCHING_NATIVE_NOTE.md`
+    - `frontier_native_matching.py`
+  - do **not** let older closure-language notes outrank that newer bounded
+    authority
+    - `YT_FLAGSHIP_CLOSURE_NOTE.md` and `YT_BOUNDARY_RESOLUTION_NOTE.md`
+      currently overstate closure relative to the reviewed state
   - the newest flagship note still labels the lane `BOUNDED`
   - the zero-import chain gives:
     - `alpha_s(M_Z) = 0.1182`
@@ -226,6 +235,8 @@ Current safe state:
       remains an imported LM methodology element
   - the zero-import chain still hardcodes `PLAQ_MC = 0.5934` as an accepted
     benchmark and uses the small `L=4` Metropolis run only as a sanity check
+  - so the strict “zero-import” wording is still not honest unless that final
+    plaquette value is computed on the same authority surface
   - the older gauge-crossover theorem remains bounded support only
     - its exactness language about projected gauge preservation /
       Ward-identity preservation still outruns the current proof surface
@@ -251,6 +262,8 @@ Best attack:
    coupling on the framework surface; counting `n_link = 2` again is not enough
 5. if strict zero-import wording still matters, replace the accepted
    `PLAQ_MC = 0.5934` benchmark with a same-surface final plaquette computation
+   - if that is too expensive or noisy, downgrade the wording instead of
+     pretending the benchmark is a computed final value
 6. only after 3-5 are clean, rerun the zero-import chain
 7. if a few-percent `m_t` residual remains after that, then treat improved
    Yukawa running / thresholds as the next quantitative sub-problem
