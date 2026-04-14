@@ -154,7 +154,7 @@ is the framework's native definition of the coupling at the EW scale.
 
 **Verdict on Option B:** The background-field computation confirms Z_F at
 the Planck scale and provides a CROSS-CHECK on the lattice coupling
-definition, but does not replace the LM prescription for extracting the
+definition, but does not replace the Coupling Map Theorem for extracting the
 coupling at the EW scale. What it CAN do is verify that alpha_bare/u_0^n
 with the correct n gives results consistent with the direct background-field
 extraction. See the script for this verification.
@@ -267,6 +267,7 @@ following provenance:
    This is the SAME counting rule as the hierarchy theorem (which uses
    n_link = 1 per hopping term in det(D)). The exponent 2 is derived
    from the Cl(3)/Z^3 operator structure, not imported from LM93.
+   Now superseded by the Coupling Map Theorem (YT_VERTEX_POWER_DERIVATION.md, Part 6).
    See `frontier_vertex_power.py` for numerical verification.
 
 2. **The V-to-MSbar conversion is NOT needed** -- our chain does NOT use
@@ -287,7 +288,7 @@ The current chain does NOT convert to MSbar and then run. Instead:
 ```
 alpha_s(v) = alpha_bare / u_0^2 = 0.1033   [vertex coupling at v]
                                              [runs 1 decade to M_Z]
-alpha_s(M_Z) = 0.1182                       [2-loop QCD]
+alpha_s(M_Z) = 0.1181                       [2-loop QCD]
 ```
 
 The 2-loop QCD beta function is scheme-independent to the order used.
@@ -352,18 +353,18 @@ gauge vertex carries exactly 2 powers of u_0 from the Cl(3)/Z^3 structure.~~
 3. The vertex insertion D' = dD/dA also has 1 link (derivative of 1 link).
 4. The vacuum polarization Pi = Tr[D^{-1}D'D^{-1}D'] has 2 such insertions.
 5. Total n_link = 2 for the operator that defines the gauge coupling.
-6. LM link-counting rule: alpha_gauge = alpha_bare / u_0^2.
+6. Coupling Map Theorem (YT_VERTEX_POWER_DERIVATION.md, Part 6): alpha_gauge = alpha_bare / u_0^2.
 
 Key numerical findings (frontier_vertex_power.py):
 - Z_F from log-determinant scales as u_0^0.01 (u_0-independent, as derived)
 - Z_F from Dirac sea energy scales as u_0^1.01 (confirming native_matching)
 - The distinction: log-det is u_0^0 because -N*ln(u_0) is A-independent
-- n_link = 2 is the unique value giving alpha_s(M_Z) = 0.1182 (+0.3% from PDG)
+- n_link = 2 is the unique value giving alpha_s(M_Z) = 0.1181 (+0.2% from PDG)
 
 ## Updated Assessment
 
 **What we have:** A zero-external-input chain from Cl(3) on Z^3 to
-alpha_s(M_Z) = 0.1182, using only computed/derived quantities plus
+alpha_s(M_Z) = 0.1181, using only computed/derived quantities plus
 standard physics infrastructure (1-decade QCD running).
 
 **What is derived:**

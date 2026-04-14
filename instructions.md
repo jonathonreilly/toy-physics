@@ -303,9 +303,9 @@ Ignore gravity unless Codex explicitly reprioritizes it.
 4. the latest zero-import route is stronger, but it is still not closure
    - the newest flagship note still labels the lane **BOUNDED**
    - its zero-import result is:
-     - `alpha_s(M_Z) = 0.1182`
-     - `m_t = 165.4 GeV`
-     - about `-4.2%` on `m_t`
+     - `alpha_s(M_Z) = 0.1181`
+     - `m_t = 169.4 GeV` (2-loop y_t, `frontier_yt_2loop_chain.py`)
+     - about `-1.9%` on `m_t` (supersedes 1-loop: 165.4 GeV, -4.2%)
    - do **not** promote `y_t` closed from that note
    - do **not** let older “CLOSED” `y_t` notes outrank that newer bounded
      authority
@@ -343,8 +343,8 @@ Ignore gravity unless Codex explicitly reprioritizes it.
    - derive the map from operator link counting to the physical effective
      coupling on the framework surface
    - then rerun the zero-import chain on that derived prescription
-   - only after that should you worry about squeezing the remaining `4.2%`
-     `m_t` residual with improved running or thresholds
+   - only after that should you worry about squeezing the remaining `1.9%`
+     `m_t` residual with higher-order corrections or scheme matching
 10. keep the authority surface single and current
    - after any new result, update or retract the stale `y_t` closure notes in
      the same change

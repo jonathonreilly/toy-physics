@@ -210,7 +210,7 @@ Spread: 0.0000%. This confirms gauge covariance of the decomposition.
 |--------|-----------|-------------|-------------|
 | 0 | 0.0796 | 0.0881 | -25.3% |
 | 1 | 0.0907 | 0.1019 | -13.6% |
-| **2** | **0.1033** | **0.1182** | **+0.3%** |
+| **2** | **0.1033** | **0.1181** | **+0.2%** |
 | 3 | 0.1177 | 0.1376 | +16.7% |
 | 4 | 0.1341 | 0.1608 | +36.4% |
 
@@ -254,7 +254,7 @@ Cl(3) on Z^3                                [axiom]
   |-> alpha_gauge = alpha_bare / u_0^2       [Coupling Map Theorem, Part 6]
   |-> alpha_s(v) = 0.1033                    [evaluated at EW scale]
   |-> 2-loop running v -> M_Z (with m_t threshold)
-  |-> alpha_s(M_Z) = 0.1182                  [+0.3% from PDG 0.1179]
+  |-> alpha_s(M_Z) = 0.1181                  [+0.2% from PDG 0.1179]
 ```
 
 ### 5.3 Import status
@@ -515,5 +515,5 @@ function in variables that fluctuate around the correct vacuum.
    Derived from a partition-function change of variables, not from the
    LM prescription as an external input.
 
-6. **alpha_s(M_Z) = 0.1182** -- with 2-loop running and m_t threshold
-   matching. +0.3% from PDG 0.1179. (Derived, not fitted.)
+6. **alpha_s(M_Z) = 0.1181** -- with 2-loop running and m_t threshold
+   matching. +0.2% from PDG 0.1179. (Derived, not fitted.)

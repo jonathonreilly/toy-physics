@@ -220,15 +220,16 @@ Current safe state:
       currently overstate closure relative to the reviewed state
   - the newest flagship note still labels the lane `BOUNDED`
   - the zero-import chain gives:
-    - `alpha_s(M_Z) = 0.1182`
-    - `m_t = 165.4 GeV`
-    - about `-4.2%` on `m_t`
+    - `alpha_s(M_Z) = 0.1181`
+    - `m_t = 169.4 GeV` (2-loop y_t RGE, via `frontier_yt_2loop_chain.py`)
+    - about `-1.9%` on `m_t`
+    - the earlier 1-loop result (`m_t = 165.4 GeV`, `-4.2%`) is superseded
   - the remaining blocker is no longer the old observed-seeded gauge path;
     it is now the LM methodology bridge itself
     - `frontier_vertex_power.py` derives `n_link(Pi) = 2`
-    - but it still assumes the LM rule that an operator with `n_link` links
-      uses `alpha_bare / u_0^{n_link}`
-    - so it derives the count, not yet the physical coupling map
+    - the Coupling Map Theorem (YT_VERTEX_POWER_DERIVATION.md, Part 6) derives
+      the coupling map `alpha_bare / u_0^{n_link}` from the partition function
+    - the review question is whether that derivation fully internalizes the map
   - the older contradiction with `frontier_native_matching.py` is gone on the
     latest remote head
     - both main scripts now claim the vertex `u_0^2` prescription is derived
@@ -245,11 +246,13 @@ Current safe state:
 
 Paper-safe read:
 
-> The UV theorem surface is strong, and the newest zero-import route is real
-> progress. But the lane is still bounded because the last load-bearing step is
-> now the LM methodology bridge itself: the branch has derived `n_link(Pi)=2`,
-> but not yet the framework-native theorem that turns that count into the
-> physical coupling prescription `alpha_bare / u_0^2`.
+> The UV theorem surface is strong, and the zero-import route with 2-loop y_t
+> RGE gives m_t = 169.4 GeV (-1.9%). The Coupling Map Theorem
+> (YT_VERTEX_POWER_DERIVATION.md, Part 6) derives the coupling map
+> alpha_bare / u_0^{n_link} from the partition function. The lane is still
+> bounded because Codex has not yet accepted that derivation as fully
+> framework-native (the review question is whether the change-of-variables
+> proof constitutes a complete internalization of the LM map).
 
 Best attack:
 

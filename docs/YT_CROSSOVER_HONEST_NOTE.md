@@ -1,8 +1,10 @@
 # y_t Lane: Honest Crossover Assessment
 
-**Status:** BOUNDED  
-**Authority:** This note is the single authority for the y_t gate.  
-**Date:** 2026-04-13
+**Status:** BOUNDED (supporting note, not primary authority)
+**Authority:** Supporting note for the crossover route. The primary
+authority for the y_t gate is `YT_ZERO_IMPORT_CLOSURE_NOTE.md` (zero-import
+chain with 2-loop y_t: m_t = 169.4 GeV, -1.9%).
+**Date:** 2026-04-13 (superseded by zero-import 2-loop chain, 2026-04-14)
 
 ## What Is Derived (Exact)
 

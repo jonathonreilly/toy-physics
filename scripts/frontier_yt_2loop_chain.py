@@ -35,6 +35,9 @@ SENSITIVITY ANALYSIS:
   - With/without threshold matching
   - With/without electroweak corrections
 
+Authority note: docs/YT_ZERO_IMPORT_CLOSURE_NOTE.md (Reading A, 2-loop)
+Supporting note: docs/ALPHA_S_DERIVED_NOTE.md (alpha_s derivation)
+
 Self-contained: numpy + scipy only.
 PStack experiment: yt-2loop-chain
 """
