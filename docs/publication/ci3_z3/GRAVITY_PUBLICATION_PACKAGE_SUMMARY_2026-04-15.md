@@ -49,27 +49,27 @@ The current gravity package has three layers:
      discrete net
    - exact compatible stationary section across the net
    - cylindrical linear and quadratic observables are refinement-independent
-   - authority: [UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md)
+   - authority: [UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md](../../UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md)
 
 7. **Direct-universal abstract Gaussian completion**
    - exact abstract Gaussian / Cameron-Martin completion of that same
      canonical discrete family
-   - authority: [UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md)
+   - authority: [UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md](../../UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md)
 
 8. **Direct-universal PL field interface**
    - exact project-native PL field realization of that same canonical
      discrete family
-   - authority: [UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md)
+   - authority: [UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md](../../UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md)
 
 9. **Direct-universal PL weak-form closure**
    - exact project-native coercive weak/Dirichlet system on that same
      canonical discrete family
-   - authority: [UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md)
+   - authority: [UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md](../../UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md)
 
 10. **Direct-universal PL Sobolev interface**
    - exact project-native first-order weak-field carrier on that same
      canonical discrete family
-   - authority: [UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md)
+   - authority: [UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md](../../UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md)
 
 ## Exact claim boundaries
 
