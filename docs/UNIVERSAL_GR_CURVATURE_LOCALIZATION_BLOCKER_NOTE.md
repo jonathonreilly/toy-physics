@@ -42,8 +42,8 @@ That isotropic operator-identification step has now been discharged by
 
 The live remaining object is now smaller still:
 
-> a stronger global solution-class / interpretation theorem beyond the exact
-> positive-background operator family.
+> a stronger global unrestricted-GR solution-class / interpretation theorem
+> beyond the exact positive-background local closure family.
 
 ## What is exact already
 
@@ -131,20 +131,21 @@ The present data now determine much more than before:
 
 What they still do not yet prove is:
 
-1. a stronger global solution-class / interpretation theorem beyond the exact
-   positive-background operator family.
+1. a stronger global unrestricted-GR solution-class / interpretation theorem
+   beyond the exact positive-background local closure family.
 
 ## Minimal missing primitive
 
 The smallest honest missing object is now:
 
 > a stronger global solution / interpretation theorem that upgrades the exact
-> positive-background operator family into a full unrestricted GR statement.
+> positive-background local closure family into a full unrestricted GR statement.
 
 Equivalently, the missing primitive is no longer a frame bundle, no longer an
 isotropic block-operator identification law, no longer invariant-family
-nonlinear completion, and no longer widening beyond the invariant family.
-It is the stronger global theorem beyond the exact local operator family.
+nonlinear completion, no longer widening beyond the invariant family, and no
+longer just a local operator-family theorem. It is the stronger global theorem
+beyond the exact local positive-background closure.
 
 ## Honest status
 
@@ -159,6 +160,7 @@ The current direct universal route is:
 - exact at the isotropic quadratic Einstein/Regge glue-operator level
 - exact at the invariant-family nonlinear completion level
 - exact at the positive-background extension level
-- still open only beyond that, at stronger global solution-class / interpretation level
+- exact at the positive-background local closure level
+- still open only beyond that, at stronger global unrestricted-GR solution-class / interpretation level
 
 That is the sharpest disciplined statement available on the current atlas.
