@@ -2,7 +2,10 @@
 
 **Date:** 2026-04-14
 **Status:** DERIVED -- standalone retained EW normalization lane on `main`
-**Primary runner:** `scripts/frontier_yt_ew_coupling_derivation.py`
+**Primary package carrier:** `scripts/frontier_complete_prediction_chain.py`
+**Supporting derivation inputs:** `scripts/frontier_yt_zero_import_chain.py`,
+`scripts/frontier_color_projection_mc.py`
+**Historical support scan:** `scripts/frontier_yt_ew_coupling_derivation.py`
 
 ---
 
@@ -14,18 +17,27 @@ multiplicative color-singlet projection factor:
 
     g_EW(physical) = g_EW(lattice) / sqrt(C_color)
 
-    C_color = (N_c^2 - 1)/N_c^2 = 8/9  for  N_c = 3
+    C_color = R_conn = (N_c^2 - 1)/N_c^2 + O(1/N_c^4)
+
+and on the current retained package surface we use the canonical leading-order
+value:
+
+    C_color = 8/9  for  N_c = 3
 
 Equivalently:
 
     alpha_EW(physical) = alpha_EW(lattice) * N_c^2/(N_c^2 - 1) = (9/8) alpha_EW(lattice)
 
 where alpha_EW(lattice) is the coupling obtained from the bare lattice
-couplings (g_2^2 = 1/4, g_Y^2 = 1/5) after taste threshold corrections
-and 2-loop running to v.
+couplings (g_2^2 = 1/4, g_Y^2 = 1/5) after the taste staircase and the
+framework-side running to v.
 
 This correction preserves sin^2(theta_W) exactly (it multiplies both g_1
 and g_2 by the same factor) while fixing the absolute normalization.
+
+The framework-scale retained quantities on this lane are `g_1(v)` and
+`g_2(v)`. The quoted `sin^2(theta_W)(M_Z)` and `1/alpha_EM(M_Z)` rows are the
+same package after the retained running bridge below `v`.
 
 This lane is structurally independent of the backward Ward / Yukawa chain and
 stands on its own on the current `main` package surface.
@@ -35,8 +47,8 @@ stands on its own on the current `main` package surface.
 ## Numerical Evidence
 
 Starting from bare couplings g_3^2 = 1, g_2^2 = 1/(d+1) = 1/4,
-g_Y^2 = 1/(d+2) = 1/5, with taste threshold corrections and 2-loop
-SM running (scripts/frontier_yt_ew_coupling_derivation.py):
+g_Y^2 = 1/(d+2) = 1/5, with the taste staircase, derived `R_conn = 8/9`
+support, and the retained package bridge:
 
 | Coupling     | Predicted | Observed | Ratio pred/obs |
 |--------------|-----------|----------|----------------|
@@ -546,7 +558,8 @@ derived with controlled corrections.
 
 ### 5.3 Status: DERIVED
 
-The correction 9/8 on the EW couplings is derived from R_conn = 8/9,
+The correction 9/8 on the EW couplings is derived from
+`R_conn = 8/9 + O(1/N_c^4)`,
 which is itself derived from the 1/N_c expansion (RCONN_DERIVED_NOTE.md).
 The full chain traces to Cl(3) with zero imports.
 
@@ -648,10 +661,10 @@ lambda is negligible for y_t (< 0.03% sensitivity).
 | u_0 = <P>^{1/4}           | 0.8777    | COMPUTED  | mean-field link                  |
 | taste staircase            | --        | DERIVED   | Cl(3) BZ orbit structure         |
 | SM RGE coefficients        | b_i, c_i  | DERIVED   | Cl(3) group theory               |
-| C_color = 8/9             | 0.8889    | DERIVED   | 1/N_c expansion (RCONN_DERIVED_NOTE.md) |
-| g_1_GUT(v) corrected      | 0.4644    | DERIVED   | bare + taste + 9/8 (0.08% match) |
-| g_2(v) corrected           | 0.6480    | DERIVED   | bare + taste + 9/8 (0.26% match) |
-| sin^2(theta_W)(M_Z)       | 0.23120   | DERIVED   | taste staircase (0.008% match)   |
+| C_color = 8/9             | 0.8889    | DERIVED   | 1/N_c expansion (RCONN_DERIVED_NOTE.md), with bounded `O(1/N_c^4)` correction |
+| g_1_GUT(v) corrected      | 0.4644    | DERIVED   | bare + taste + derived `R_conn` support (0.08% match) |
+| g_2(v) corrected           | 0.6480    | DERIVED   | bare + taste + derived `R_conn` support (0.26% match) |
+| sin^2(theta_W)(M_Z)       | 0.23120   | DERIVED   | framework-side EW package + retained running bridge |
 | alpha_s(v)                 | 0.1033    | DERIVED   | CMT, n_link = 2                  |
 
 ---

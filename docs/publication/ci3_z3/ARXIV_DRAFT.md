@@ -299,6 +299,12 @@ The current retained standalone quantitative lanes are:
 - `g_1(v) = 0.4644`
 - `g_2(v) = 0.6480`
 
+Here the framework-scale chain is:
+same-surface plaquette evaluation `\to u_0 \to \alpha_s(v)` and the
+derived leading-order color factor `R_{conn} = 8/9 + O(1/N_c^4)` for the EW
+normalization. The `M_Z`-quoted rows are the same package after the retained
+running bridge below `v`.
+
 These rows are package-grade. They are no longer merely “promising numerical
 coincidences.” They are the current retained quantitative component stack.
 

@@ -71,6 +71,9 @@ Current quantitative statuses:
 - retained EW normalization package:
   `sin^2(theta_W)(M_Z) = 0.2306`,
   `1/alpha_EM(M_Z) = 127.67`
+  with `g_1(v), g_2(v)` carried by the same package through the
+  same-surface plaquette chain plus derived `R_conn = 8/9` support, and the
+  `M_Z` rows then using the retained running bridge
 - promoted CKM atlas/axiom closure package
   (no quark-mass or fitted CKM inputs; canonical CMT `alpha_s(v)` input):
   `|V_us| = 0.22727`,

@@ -126,6 +126,9 @@ ledger:
 - retained `\alpha_s(M_Z) = 0.1181`
 - retained EW normalization package: `sin^2(theta_W) = 0.2306`,
   `1/\alpha_{EM} = 127.67`, `g_1(v) = 0.4644`, `g_2(v) = 0.6480`
+  where `alpha_s(v)` comes from the same-surface plaquette chain,
+  `g_1(v), g_2(v)` use derived `R_conn = 8/9` support, and the `M_Z`
+  rows use the retained running bridge
 - bounded `y_t(v) = 0.9176`
 - bounded `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
 - bounded Higgs / vacuum package: `m_H = 119.8 GeV` (2-loop support route),

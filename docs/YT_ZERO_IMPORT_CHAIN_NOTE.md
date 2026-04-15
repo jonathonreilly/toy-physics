@@ -171,10 +171,10 @@ The 1.84% deficit in m_t could indicate (a) missing 3-loop corrections in the ba
 - `docs/YT_FLAGSHIP_CLOSURE_NOTE.md` -- earlier attempt
 - All other `docs/YT_*.md` files
 
-**Supporting scripts** (historical, computations absorbed into the chain script):
+**Supporting scripts** (historical for the y_t gate; the standalone EW lane now
+uses its own package carrier):
 - `scripts/frontier_yt_eft_bridge.py` -- original backward Ward
-- `scripts/frontier_yt_ew_coupling_derivation.py` -- EW running and normalization support
-- `scripts/frontier_yt_ew_coupling_derivation.py` -- taste thresholds
+- `scripts/frontier_yt_ew_coupling_derivation.py` -- EW running, normalization, and taste-threshold support scan
 - `scripts/frontier_yt_color_projection_correction.py` -- color projection
 - `scripts/frontier_color_projection_mc.py` -- R_conn MC verification
 - `scripts/frontier_yt_qfp_insensitivity.py` -- QFP robustness check

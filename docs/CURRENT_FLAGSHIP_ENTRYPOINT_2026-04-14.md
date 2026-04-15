@@ -123,6 +123,9 @@ Current package status:
   `1/alpha_EM(M_Z) = 127.67`,
   `g_1(v) = 0.4644`,
   `g_2(v) = 0.6480`
+  where `alpha_s(v)` comes from the same-surface plaquette chain,
+  `g_1(v), g_2(v)` use derived `R_conn = 8/9` support, and the `M_Z`
+  rows use the retained running bridge
 - bounded `y_t(v) = 0.9176`
 - bounded `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
 - promoted CKM atlas/axiom closure package

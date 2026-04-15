@@ -2,8 +2,9 @@
 
 **Date:** 2026-04-15
 **Status:** retained quantitative lane on `main`
-**Primary runners:** `scripts/frontier_yt_zero_import_chain.py`,
-`scripts/frontier_alpha_s_determination.py`
+**Primary derivation runner:** `scripts/frontier_yt_zero_import_chain.py`
+**Current package carrier:** `scripts/frontier_complete_prediction_chain.py`
+**Historical support runner:** `scripts/frontier_alpha_s_determination.py`
 
 ## Authority Role
 
@@ -18,10 +19,11 @@ lane, not merely as a hidden subcomponent of a larger synthesis memo.
 The current retained lane gives:
 
 - `alpha_s(v) = alpha_bare / u_0^2 = 0.1033`
-- one-decade low-energy transfer from `v` to `M_Z`
+- one-decade low-energy transfer from `v` to `M_Z` on the retained running
+  bridge
 - `alpha_s(M_Z) = 0.1181`
 
-That is the current retained zero-input `alpha_s` result on `main`.
+That is the current retained same-surface-derived `alpha_s` result on `main`.
 
 ## Canonical Chain
 
@@ -48,6 +50,9 @@ This is a retained standalone quantitative lane, not a theorem-core row.
 Its quantitative anchor is the canonical same-surface plaquette evaluation in
 [PLAQUETTE_SELF_CONSISTENCY_NOTE.md](PLAQUETTE_SELF_CONSISTENCY_NOTE.md).
 
+The framework-side quantity is `alpha_s(v)`. The quoted `alpha_s(M_Z)` row is
+the same lane after the retained one-decade running bridge below `v`.
+
 It remains distinct from:
 
 - the retained hierarchy / `v` lane
@@ -67,4 +72,8 @@ It remains distinct from:
 Primary reruns on the current package surface:
 
 - `frontier_yt_zero_import_chain.py`
+- `frontier_complete_prediction_chain.py`
+
+Historical support, not canonical authority:
+
 - `frontier_alpha_s_determination.py`

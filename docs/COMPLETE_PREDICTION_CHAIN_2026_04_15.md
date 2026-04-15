@@ -2,10 +2,11 @@
 
 **Date:** 2026-04-15
 **Status:** DEFINITIVE -- this document supersedes all prior y_t, m_H, and EW notes
-**Scripts:** `frontier_yt_zero_import_chain.py`, `frontier_yt_color_projection_correction.py`,
+**Scripts:** `frontier_complete_prediction_chain.py`,
+`frontier_yt_zero_import_chain.py`, `frontier_yt_color_projection_correction.py`,
 `frontier_higgs_mass_stability.py`, `frontier_higgs_mass_corrected_yt.py`,
-`frontier_higgs_buttazzo_calibration.py`, `frontier_color_projection_mc.py`,
-`frontier_yt_ew_coupling_derivation.py`
+`frontier_higgs_buttazzo_calibration.py`, `frontier_color_projection_mc.py`
+**Historical support scan:** `frontier_yt_ew_coupling_derivation.py`
 
 ---
 
@@ -134,11 +135,11 @@ After staircase running, the color projection correction sqrt(9/8) is applied.
 | Observable | Derivation | Predicted | Observed | Deviation |
 |-----------|-----------|-----------|----------|-----------|
 | v | Hierarchy theorem: M_Pl * (7/8)^{1/4} * alpha_LM^16 | 246.28 GeV | 246.22 GeV | +0.03% |
-| alpha_s(M_Z) | CMT + 2-loop QCD running from v | 0.1181 | 0.1179 | +0.14% |
-| sin^2(theta_W)(M_Z) | Bare couplings + taste thresholds + 2-loop running | 0.2306 | 0.2312 | -0.26% |
-| 1/alpha_EM(M_Z) | From derived g_1, g_2 after color projection | 127.67 | 127.95 | -0.22% |
-| g_1(v) | Staircase + sqrt(9/8) | 0.4644 | 0.4640 | +0.08% |
-| g_2(v) | Staircase + sqrt(9/8) | 0.6480 | 0.6463 | +0.26% |
+| alpha_s(M_Z) | same-surface plaquette chain + one-decade running bridge from `v` | 0.1181 | 0.1179 | +0.14% |
+| sin^2(theta_W)(M_Z) | bare geometry + taste staircase + derived `R_conn` support + running bridge | 0.2306 | 0.2312 | -0.26% |
+| 1/alpha_EM(M_Z) | derived `g_1, g_2` package after color projection + running bridge | 127.67 | 127.95 | -0.22% |
+| g_1(v) | staircase + `sqrt(9/8)` from derived `R_conn` | 0.4644 | 0.4640 | +0.08% |
+| g_2(v) | staircase + `sqrt(9/8)` from derived `R_conn` | 0.6480 | 0.6463 | +0.26% |
 
 All four primary predictions (v, alpha_s, sin^2, 1/alpha_EM) pass their
 thresholds. The EW couplings agree with the color projection factor to

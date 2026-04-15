@@ -3,6 +3,10 @@
 Alpha_s Determination from Lattice Structure
 =============================================
 
+Support script only. This is not the canonical `alpha_s(M_Z)` authority on
+`main`. The live package row is carried by `frontier_yt_zero_import_chain.py`,
+`frontier_complete_prediction_chain.py`, and `docs/ALPHA_S_DERIVED_NOTE.md`.
+
 The dark matter ratio R = 5.47 requires alpha_s = 0.092 at the
 freeze-out/Planck scale (from the Sommerfeld enhancement).  The bare
 lattice coupling gives alpha_bare = g^2/(4*pi) ~ 0.080.  The 15% gap
@@ -85,6 +89,8 @@ R_BASE = 31.0 / 9.0
 log("=" * 78)
 log("ALPHA_s DETERMINATION FROM LATTICE STRUCTURE")
 log("=" * 78)
+log()
+log("Support script only: not the canonical alpha_s(M_Z) authority on main.")
 log()
 log("CAVEAT (review P1): This script determines alpha_s from the lattice")
 log("plaquette action, which IS a first-principles calculation. However,")

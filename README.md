@@ -110,6 +110,8 @@ That component stack now carries the following live statuses:
   `1/alpha_EM(M_Z) = 127.67`,
   `g_1(v) = 0.4644`,
   `g_2(v) = 0.6480`
+  from bare geometry + the same-surface plaquette chain + derived
+  `R_conn = 8/9` support; the `M_Z` rows then use the retained running bridge
 - bounded `y_t(v) = 0.9176`
 - bounded `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
 - promoted CKM atlas/axiom closure package
