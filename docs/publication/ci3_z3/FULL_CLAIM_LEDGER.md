@@ -64,6 +64,7 @@ These rows correspond to Section A of
 | weak-field time dilation | promoted corollary | survives on the same retained action surface | [BROAD_GRAVITY_DERIVATION_NOTE.md](../../BROAD_GRAVITY_DERIVATION_NOTE.md) |
 | restricted strong-field closure | promoted restricted theorem | exact on the current star-supported finite-rank class under the static conformal bridge; important enough to retain, but still source-class restricted | [RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md](../../RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md) |
 | full discrete `3+1` GR on the project route | promoted exact theorem | exact global Lorentzian Einstein/Regge stationary action family on `PL S^3 x R`; this is the direct-universal capstone on the discrete route | [UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md](../../UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md), [UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md](../../UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md), [UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md](../../UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md) |
+| UV-finite partition-density family on the project route | promoted exact companion | the direct-universal GR action already defines an exact finite-dimensional partition-density family on the project’s discrete `3+1` route, and its mean/stationary sector is exactly the same discrete Einstein/Regge stationary family | [UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md](../../UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md) |
 
 ### Gauge and matter structure
 

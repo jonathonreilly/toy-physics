@@ -19,6 +19,9 @@ The current flagship package is not “everything in the repo.” It is:
 - weak-field WEP and time dilation on that same retained gravity surface
 - direct-universal discrete global Lorentzian Einstein/Regge stationary action
   family on `PL S^3 x R`
+- exact UV-finite partition-density family on that same discrete `3+1` route,
+  whose mean/stationary sector reproduces the Einstein/Regge stationary family
+  - authority: [UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md](../../UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md)
 - exact native `SU(2)`
 - graph-first structural `SU(3)`
 - anomaly-forced `3+1`
@@ -59,7 +62,10 @@ paper’s gravity self-consistency claim is that Poisson is the unique local
 fixed point in the audited operator family; restricted strong-field closure is
 exact on the star-supported finite-rank class; and the capstone gravity claim
 is exact full discrete `3+1` GR on the project route, not an unqualified
-continuum-equivalence statement.
+continuum-equivalence statement. The new UV-finite partition theorem should
+also be read on the project’s own discrete route: it gives a finite
+partition-density family whose semiclassical/stationary sector is that same
+discrete GR family, not yet a mature continuum sum-over-geometries theorem.
 
 ## What is still open
 

@@ -22,6 +22,7 @@ If you are new to the repo, read these first:
    - claim-level evidence contract for retained manuscript-facing claims
 9. [Gravity publication package summary](./GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md)
    - compact gravity ladder and exact gravity claim boundary on the current package
+   - includes the UV-finite partition-density bridge from the direct-universal action to the discrete GR stationary family
 10. [Running package issues](./RUNNING_PACKAGE_ISSUES_2026-04-14.md)
 
 That path makes four things explicit:
@@ -84,6 +85,9 @@ Retained backbone:
   finite-rank class under the exact static conformal bridge
 - direct-universal exact global Lorentzian Einstein/Regge stationary action
   family on discrete `3+1` spacetime `PL S^3 x R`
+- exact UV-finite partition-density family on the same discrete `3+1` route,
+  with mean/stationary sector equal to that Einstein/Regge family
+  - authority: [UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md](../../UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md)
 - exact native `Cl(3)` / `SU(2)`
 - graph-first structural `SU(3)`
 - anomaly-forced `3+1`

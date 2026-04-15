@@ -73,8 +73,11 @@ The current flagship publication package is:
 - retained core: gauge/matter backbone, anomaly-forced `3+1`, derived
   electroweak scale, weak-field gravity, exact global Lorentzian
   Einstein/Regge stationary action family on discrete `3+1` spacetime
-  `PL S^3 x R`, retained `S^3`, one-generation closure, three-generation
-  structure, exact `I_3 = 0`, exact CPT
+  `PL S^3 x R`, exact UV-finite partition-density family whose
+  mean/stationary sector is that same discrete GR family, retained `S^3`,
+  one-generation closure, three-generation structure, exact `I_3 = 0`, exact
+  CPT
+  - partition authority: [UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md](UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md)
 - bounded observation-facing portfolio: DM ratio, `alpha_s`, `m_t`, CKM
   magnitudes, cosmology companions, bounded Higgs lane, and sharp companion
   predictions

@@ -29,6 +29,13 @@ The current gravity package has three layers:
    - exact `PL S^3 x R` global patching on finite atlases
    - exact Lorentzian signature-class extension
 
+4. **Direct-universal UV-finite partition bridge**
+   - exact finite-dimensional partition-density family on the same discrete
+     `3+1` route
+   - mean/stationary sector equals the same Einstein/Regge stationary family
+   - strongest current quantum-gravity-style bridge on the project route
+   - authority: [UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md)
+
 ## Exact claim boundaries
 
 The package can safely say:
@@ -37,6 +44,9 @@ The package can safely say:
 - restricted strong-field gravity is exact on the current finite-rank class
 - direct-universal gravity is exact as a discrete `3+1` Lorentzian
   Einstein/Regge stationary action family on `PL S^3 x R`
+- the same direct-universal action also defines an exact UV-finite
+  partition-density family on the project route, whose mean/stationary sector
+  reproduces that discrete GR family
 
 The package must **not** silently upgrade that to a general continuum-GR
 equivalence claim.
@@ -44,6 +54,12 @@ equivalence claim.
 If the manuscript wants the stronger continuum statement, that must be handled
 as a separate interpretation theorem, not as an automatic corollary of the
 discrete route.
+
+The new partition-density bridge sharpens that remaining issue:
+
+- it is no longer a UV-finiteness or local gravity-law problem
+- it is now a refinement / projective-system theorem for the exact discrete
+  density and stationary family
 
 ## Where this sits in the package
 
@@ -66,10 +82,10 @@ Avoid unless the relevant separate theorem is explicitly present:
 
 - “full continuum GR equivalence”
 - “unrestricted GR in the continuum sense”
+- “finished continuum quantum gravity”
 
 ## Integration note
 
 This summary is intended to be linked from the package front door and from the
 external reviewer guide. It does not change the claim tables by itself; it
 explains them.
-

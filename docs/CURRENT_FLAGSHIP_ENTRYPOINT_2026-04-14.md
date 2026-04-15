@@ -48,6 +48,9 @@ belongs on the current flagship surface.
   `3+1` spacetime `PL S^3 x R`
 - full discrete `3+1` GR on the project route; stronger continuum
   identification remains separate
+- exact UV-finite partition-density family on the same discrete `3+1` route,
+  with mean/stationary sector equal to that Einstein/Regge family
+  - authority: [UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md)
 - exact native `SU(2)`
 - graph-first structural `SU(3)`
 - anomaly-forced `3+1`

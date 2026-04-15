@@ -62,6 +62,9 @@ Retained core:
   `3+1` spacetime `PL S^3 x R`
 - this is full discrete `3+1` GR on the project route; stronger continuum
   identification remains separate
+- exact UV-finite partition-density family on that same discrete `3+1` route,
+  whose mean/stationary sector reproduces the discrete GR family
+  - authority: [UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md](docs/UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md)
 - exact native `SU(2)`
 - graph-first structural `SU(3)`
 - anomaly-forced `3+1`

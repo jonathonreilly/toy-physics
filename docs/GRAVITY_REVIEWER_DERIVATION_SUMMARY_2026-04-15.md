@@ -70,11 +70,28 @@ Primary authority:
 - [UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md)
 - [UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md)
 
+### 4. UV-finite partition-density bridge
+
+The same direct-universal action now also supports the strongest current
+quantum-gravity-style bridge on the project route:
+
+- exact finite-dimensional partition-density family on discrete `3+1`
+  spacetime `PL S^3 x R`
+- mean/stationary sector equals the same Einstein/Regge stationary family
+- covariance equals the inverse universal GR operator
+- atlas patching holds at the density level rather than only at the raw chart
+  scalar level
+
+Primary authority:
+
+- [UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md)
+
 ## Exact claim boundaries
 
 The current gravity route supports the following exact wording:
 
 - “exact discrete `3+1` Einstein/Regge stationary action family on `PL S^3 x R`”
+- “exact UV-finite partition-density family on the same discrete `3+1` route, whose mean/stationary sector reproduces that Einstein/Regge family”
 - “exact restricted strong-field closure on the star-supported finite-rank class”
 - “weak-field gravity through the Poisson / Newton chain”
 
@@ -83,7 +100,10 @@ continuum interpretation theorem is proved.
 
 Do not collapse the discrete-route theorem into a generic continuum GR claim.
 The discrete route is exact on its own terms; the continuum identification is a
-separate statement.
+separate statement. The new partition bridge sharpens that remaining issue:
+it is now a refinement / projective-system theorem for the exact discrete
+density and stationary family, not a missing local gravity theorem or UV
+finiteness problem.
 
 ## What a reviewer should take away
 
@@ -96,4 +116,3 @@ closures at progressively larger scope:
 
 That is the full gravity story supported by the current branch, with the
 continuum interpretation kept separate.
-
