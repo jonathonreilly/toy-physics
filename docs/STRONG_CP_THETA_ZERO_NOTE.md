@@ -186,6 +186,46 @@ Z = Σ_Q Z_Q with Z_Q ≥ 0 (real positive weights). Without a θ-phase,
 all sectors contribute constructively. No spontaneous CP violation
 occurs from the vacuum structure.
 
+## 3+1D APBC Extension
+
+The strong-CP question is intrinsically `3+1`-dimensional because the
+continuum topological density is `F \tilde F`. The retained framework is also
+`3+1` on its physical spacetime surface: spatial `Z^3` with a single temporal
+direction and antiperiodic temporal boundary conditions from the
+spin-statistics side of the anomaly-forced time closure.
+
+The original determinant audit was carried out on the spatial `Z^3` surface.
+The theorem is now strengthened by an explicit `3+1` APBC extension on
+`4^3 x 4`:
+
+- the staggered phases remain real in `3+1`
+- the APBC boundary signs are also real
+- the resulting `3+1` staggered Dirac operator stays anti-Hermitian on sampled
+  `SU(3)` configurations
+- `det(D + mI)` remains real positive on those sampled `3+1` configurations
+- sampled clover topological-charge values vary while the determinant phase
+  remains zero to machine precision
+
+This is still not a full instanton-measure theorem. It is the narrower and
+useful point needed here: the retained `θ_eff = 0` statement survives the
+physically relevant `3+1` APBC lattice surface.
+
+## Algebraic Extension of Leg A
+
+Leg A is not just a numerical observation on a few sample configurations. The
+anti-Hermiticity mechanism is structural:
+
+1. the staggered phases `η_μ(x)` are real
+2. the temporal APBC signs are real
+3. the gauge links are unitary
+4. the forward and backward hopping terms therefore remain exact Hermitian
+   conjugates with opposite sign
+
+So the same anti-Hermitian structure that gives determinant positivity on the
+spatial audit surface extends directly to the retained `3+1` APBC operator
+surface. The runner now verifies this numerically on sampled `3+1`
+configurations as an explicit audit.
+
 ## What Is Actually Proved
 
 ### Exact (theorem-grade):
@@ -197,13 +237,17 @@ occurs from the vacuum structure.
 5. Joint commutant of {su(2), τ} has dimension 10
 6. Z₃ eigenvalues are discrete cube roots of unity
 7. The axiom stack has 5 inputs, no room for θ
+8. The determinant-positivity audit extends to the retained `3+1` APBC
+   staggered operator surface on sampled `SU(3)` configurations
 
 ### Structural (logic-grade):
 
-8. θ_bare = 0 because the gauge action is fully axiom-determined
-9. arg det(M) = 0 because the staggered mass is real
-10. θ_eff = 0 on the retained action surface
-11. CP violation is confined to the weak sector via CKM
+9. The anti-Hermitian determinant mechanism extends algebraically from the
+   spatial surface to the retained `3+1` APBC surface
+10. θ_bare = 0 because the gauge action is fully axiom-determined
+11. arg det(M) = 0 because the staggered mass is real
+12. θ_eff = 0 on the retained action surface
+13. CP violation is confined to the weak sector via CKM
 
 ## What Remains Open
 
@@ -252,5 +296,5 @@ surface tightly enough to remove a bare strong-sector CP phase there.
 ```
 python3 scripts/frontier_strong_cp_theta_zero.py
 # Exit code: 0
-# PASS=56  FAIL=0
+# PASS=60  FAIL=0
 ```

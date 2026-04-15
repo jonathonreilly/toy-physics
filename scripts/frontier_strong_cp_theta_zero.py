@@ -139,6 +139,127 @@ def build_staggered_dirac(L, U_links):
     return D
 
 
+def random_gauge_config_3p1(L_s, L_t, rng):
+    """Random SU(3) gauge configuration on L_s^3 x L_t."""
+    U = {}
+    for t in range(L_t):
+        for x in range(L_s):
+            for y in range(L_s):
+                for z in range(L_s):
+                    for mu in range(4):
+                        U[(t, x, y, z, mu)] = random_su3(rng)
+    return U
+
+
+def build_staggered_dirac_3p1(L_s, L_t, U_links):
+    """Build the staggered Dirac operator on L_s^3 x L_t with APBC in time."""
+    N_c = 3
+    N_site = L_t * (L_s ** 3)
+    N = N_site * N_c
+    D = np.zeros((N, N), dtype=complex)
+    dims = (L_t, L_s, L_s, L_s)
+
+    def site_index(t, x, y, z):
+        return ((t * L_s + x) * L_s + y) * L_s + z
+
+    for t in range(L_t):
+        for x in range(L_s):
+            for y in range(L_s):
+                for z in range(L_s):
+                    site = (t, x, y, z)
+                    s_idx = site_index(t, x, y, z)
+                    for mu in range(4):
+                        eta = staggered_eta(mu, site)
+                        coords = [t, x, y, z]
+
+                        fwd = coords[:]
+                        fwd[mu] = (fwd[mu] + 1) % dims[mu]
+                        f_idx = site_index(*fwd)
+
+                        bwd = coords[:]
+                        bwd[mu] = (bwd[mu] - 1) % dims[mu]
+                        b_idx = site_index(*bwd)
+
+                        apbc_fwd = 1.0
+                        apbc_bwd = 1.0
+                        if mu == 0:
+                            if t == L_t - 1:
+                                apbc_fwd = -1.0
+                            if t == 0:
+                                apbc_bwd = -1.0
+
+                        U_fwd = U_links[(t, x, y, z, mu)]
+                        U_bwd = U_links[(bwd[0], bwd[1], bwd[2], bwd[3], mu)]
+
+                        for a in range(N_c):
+                            for b in range(N_c):
+                                D[s_idx * N_c + a, f_idx * N_c + b] += (
+                                    apbc_fwd * eta / 2.0 * U_fwd[a, b]
+                                )
+                                D[s_idx * N_c + a, b_idx * N_c + b] -= (
+                                    apbc_bwd * eta / 2.0 * np.conj(U_bwd[b, a])
+                                )
+
+    return D
+
+
+def compute_topological_charge_3p1(U_links, L_s, L_t):
+    """Clover-style topological charge audit on L_s^3 x L_t."""
+    dims = (L_t, L_s, L_s, L_s)
+
+    def get_link(coords, mu):
+        t, x, y, z = coords
+        return U_links[(t % L_t, x % L_s, y % L_s, z % L_s, mu)]
+
+    def plaquette(x, mu, nu):
+        xmu = list(x)
+        xmu[mu] = (xmu[mu] + 1) % dims[mu]
+        xnu = list(x)
+        xnu[nu] = (xnu[nu] + 1) % dims[nu]
+        return (
+            get_link(x, mu)
+            @ get_link(tuple(xmu), nu)
+            @ get_link(tuple(xnu), mu).conj().T
+            @ get_link(x, nu).conj().T
+        )
+
+    def clover(x, mu, nu):
+        xm = list(x)
+        xm[mu] = (xm[mu] - 1) % dims[mu]
+        xn = list(x)
+        xn[nu] = (xn[nu] - 1) % dims[nu]
+        xmn = list(x)
+        xmn[mu] = (xmn[mu] - 1) % dims[mu]
+        xmn[nu] = (xmn[nu] - 1) % dims[nu]
+        return (
+            plaquette(x, mu, nu)
+            + plaquette(tuple(xn), mu, nu).conj().T
+            + plaquette(tuple(xmn), mu, nu)
+            + plaquette(tuple(xm), mu, nu).conj().T
+        )
+
+    from itertools import permutations
+
+    levi = {}
+    for p in permutations(range(4)):
+        inv = sum(1 for i in range(4) for j in range(i + 1, 4) if p[i] > p[j])
+        levi[p] = (-1) ** inv
+
+    q_total = 0.0
+    for coords in np.ndindex(*dims):
+        x = list(coords)
+        for (mu, nu, rho, sig), eps in levi.items():
+            if mu >= nu or rho >= sig:
+                continue
+            if (mu, nu) >= (rho, sig):
+                continue
+            fmn = (clover(x, mu, nu) - clover(x, mu, nu).conj().T) / (8j)
+            frs = (clover(x, rho, sig) - clover(x, rho, sig).conj().T) / (8j)
+            q_total += eps * np.trace(fmn @ frs).real
+
+    return q_total / (16 * np.pi**2)
+
+
 def test_fermion_determinant(L_values=(4,)):
     print("\n=== LEG A: Fermion determinant reality and positivity ===\n")
 
@@ -383,6 +504,45 @@ def test_topology():
     return True
 
 
+def test_3p1_extension():
+    print("\n=== 3+1D extension: APBC determinant positivity ===\n")
+
+    L_s = 4
+    L_t = 4
+    mass = 0.1
+    n_configs = 6
+    rng = np.random.default_rng(20260415)
+
+    # Structural/algebraic spot check: staggered phases are real, APBC signs are real.
+    eta_values = {staggered_eta(mu, (1, 2, 3, 0)) for mu in range(4)}
+    check("3+1D staggered phases remain real (η_μ ∈ {±1})", eta_values <= {-1, 1}, f"η-set = {sorted(eta_values)}")
+
+    max_antiherm = 0.0
+    max_phase = 0.0
+    q_values = []
+
+    for cfg in range(n_configs):
+        U = random_gauge_config_3p1(L_s, L_t, rng)
+        D = build_staggered_dirac_3p1(L_s, L_t, U)
+        antiherm = float(np.max(np.abs(D + D.conj().T)))
+        max_antiherm = max(max_antiherm, antiherm)
+
+        sign, _ = np.linalg.slogdet(D + mass * np.eye(D.shape[0]))
+        phase = abs(float(np.angle(sign)))
+        max_phase = max(max_phase, phase)
+
+        q_values.append(compute_topological_charge_3p1(U, L_s, L_t))
+
+        if cfg < 2:
+            print(f"  cfg {cfg}: max|D+D†| = {antiherm:.2e}, |phase| = {phase:.2e}, Q = {q_values[-1]:.4f}")
+
+    check("3+1D APBC D[U] is anti-Hermitian on sampled SU(3) configurations", max_antiherm < 1e-11, f"max |D + D†| = {max_antiherm:.2e}")
+    check("3+1D APBC det(D+mI) is real positive on sampled SU(3) configurations", max_phase < 1e-9, f"max |phase| = {max_phase:.2e}")
+    check("3+1D clover topological-charge audit samples nontrivial values without inducing a determinant phase", np.std(q_values) > 1e-3 and max_phase < 1e-9, f"Q range = [{min(q_values):.3f}, {max(q_values):.3f}]")
+
+    return True
+
+
 def main():
     print("=" * 72)
     print("Strong CP / θ = 0 Theorem in the Cl(3) / Z³ Framework")
@@ -399,6 +559,7 @@ def main():
     test_theta_eff()
     test_interacting_cp()
     test_topology()
+    test_3p1_extension()
 
     print()
     print("=" * 72)

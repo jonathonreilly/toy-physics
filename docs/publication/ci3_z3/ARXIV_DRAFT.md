@@ -252,6 +252,11 @@ statement is:
 
 > `\theta_eff = 0` on the retained axiom-determined action surface.
 
+The retained support stack now also includes an explicit `3+1` APBC
+determinant-positivity audit on sampled `SU(3)` configurations, which extends
+the determinant argument onto the physically relevant spacetime lattice surface
+without broadening the theorem beyond that retained action surface.
+
 This is a genuine promoted row, not a bounded companion.
 
 ### 4.8 Confinement
