@@ -178,9 +178,11 @@ framework after the gauge/gravity derivation itself. The paper can state:
    limitation as standard lattice QCD and does not weaken the
    universality-based identification.
 
-3. **Emergent Lorentz invariance:** The continuum limit should produce
-   Lorentz-invariant physics, but a derivation of emergent Lorentz
-   symmetry from the cubic lattice is not yet established.
+3. **Emergent Lorentz invariance:** This is no longer an open structural
+   gap on `main`. The current package carries an exact retained Lorentz
+   theorem via [EMERGENT_LORENTZ_INVARIANCE_NOTE.md](EMERGENT_LORENTZ_INVARIANCE_NOTE.md).
+   The remaining comparison work is only optional textbook packaging, not a
+   missing Lorentz derivation.
 
 4. **Strong-field quantum gravity:** The continuum chain covers the
    weak-field/stationary sector. The full non-perturbative quantum

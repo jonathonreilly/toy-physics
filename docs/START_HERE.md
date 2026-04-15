@@ -10,6 +10,17 @@ Use this order on `main`:
 6. [Derivation / validation map](publication/ci3_z3/DERIVATION_VALIDATION_MAP.md)
 7. [Derivation atlas](publication/ci3_z3/DERIVATION_ATLAS.md)
 
+For framework assumptions, use both of these on purpose:
+
+- [SINGLE_AXIOM_INFORMATION_NOTE.md](SINGLE_AXIOM_INFORMATION_NOTE.md) and
+  [SINGLE_AXIOM_HILBERT_NOTE.md](SINGLE_AXIOM_HILBERT_NOTE.md) for the one-axiom
+  reduction story
+- [MINIMAL_AXIOMS_2026-04-11.md](MINIMAL_AXIOMS_2026-04-11.md) for the five
+  accepted operational inputs used by the current publication package
+
+That split is intentional: one underlying structural axiom, five current
+package inputs.
+
 For the gravity/QG continuum bridge specifically, the current capstones are:
 
 - [UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md](UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md)

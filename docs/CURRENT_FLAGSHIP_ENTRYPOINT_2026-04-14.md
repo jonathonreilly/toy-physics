@@ -10,6 +10,18 @@ The package has one framework sentence:
 > We take `Cl(3)` on `Z^3` as the physical theory. Everything else on the
 > current paper surface is either retained, bounded, or explicitly open.
 
+Framework-count convention for reviewers:
+
+- the deepest reduction claim is the one-axiom story in
+  [SINGLE_AXIOM_INFORMATION_NOTE.md](SINGLE_AXIOM_INFORMATION_NOTE.md) and
+  [SINGLE_AXIOM_HILBERT_NOTE.md](SINGLE_AXIOM_HILBERT_NOTE.md)
+- the current publication package is audited on the five accepted operational
+  inputs listed in [MINIMAL_AXIOMS_2026-04-11.md](MINIMAL_AXIOMS_2026-04-11.md)
+
+These are not competing counts. The package should be read as: one underlying
+structural axiom, five accepted package-level inputs on the current audited
+surface.
+
 ## What The Current Package Is
 
 The current flagship package has four layers:

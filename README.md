@@ -6,6 +6,17 @@ current front-door statement:
 > take `Cl(3)` on `Z^3` as the physical theory, then audit what is retained,
 > what is bounded, and what is still open.
 
+For axiom counting, the package now uses one explicit convention. The deepest
+structural reduction is the single-axiom story in
+[docs/SINGLE_AXIOM_INFORMATION_NOTE.md](docs/SINGLE_AXIOM_INFORMATION_NOTE.md)
+and
+[docs/SINGLE_AXIOM_HILBERT_NOTE.md](docs/SINGLE_AXIOM_HILBERT_NOTE.md). The
+current publication package is audited operationally on the five accepted
+framework inputs listed in
+[docs/MINIMAL_AXIOMS_2026-04-11.md](docs/MINIMAL_AXIOMS_2026-04-11.md). These
+are not competing framework counts: the first is the reduction claim, the
+second is the current package boundary.
+
 The front door on `main` is the current publication package plus the canonical
 authority notes it points to. Older lane history may remain in the repo, but
 it is not the default review surface.

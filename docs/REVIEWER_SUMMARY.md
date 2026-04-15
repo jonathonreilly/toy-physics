@@ -9,6 +9,17 @@ framework package with a retained theorem core, retained standalone
 quantitative lanes, bounded Yukawa/Higgs lanes, a bounded companion
 portfolio, and one explicitly open flagship gate.
 
+For axiom counting, use the following convention:
+
+- one underlying structural axiom:
+  [SINGLE_AXIOM_INFORMATION_NOTE.md](SINGLE_AXIOM_INFORMATION_NOTE.md),
+  [SINGLE_AXIOM_HILBERT_NOTE.md](SINGLE_AXIOM_HILBERT_NOTE.md)
+- five accepted package-level inputs on the current audited surface:
+  [MINIMAL_AXIOMS_2026-04-11.md](MINIMAL_AXIOMS_2026-04-11.md)
+
+The package is not claiming two incompatible counts. It is claiming one
+reduction story and one audited operational boundary.
+
 ## Current Read Order
 
 1. [CURRENT_FLAGSHIP_ENTRYPOINT_2026-04-14.md](CURRENT_FLAGSHIP_ENTRYPOINT_2026-04-14.md)

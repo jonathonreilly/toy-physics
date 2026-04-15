@@ -5,6 +5,17 @@ package.
 
 Use this package instead of browsing raw repo chronology.
 
+Framework-count convention:
+
+- one underlying structural axiom:
+  [SINGLE_AXIOM_INFORMATION_NOTE.md](../../SINGLE_AXIOM_INFORMATION_NOTE.md),
+  [SINGLE_AXIOM_HILBERT_NOTE.md](../../SINGLE_AXIOM_HILBERT_NOTE.md)
+- five accepted operational package inputs:
+  [MINIMAL_AXIOMS_2026-04-11.md](../../MINIMAL_AXIOMS_2026-04-11.md)
+
+These are not competing front-door claims. The first is the reduction story.
+The second is the current publication boundary actually audited on `main`.
+
 ## External Reviewer Read Order
 
 1. [Public arXiv draft](./ARXIV_DRAFT.md)

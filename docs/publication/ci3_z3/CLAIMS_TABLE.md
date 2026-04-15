@@ -19,6 +19,16 @@ boundary conditions:
 - `T_CMB = 2.7255 K`
 - `H_0 = 67.4 km/s/Mpc`
 
+Framework-count convention:
+
+- one underlying structural axiom on the reduction surface
+- five accepted operational package inputs on the current audited surface
+
+For those two layers, use
+[SINGLE_AXIOM_INFORMATION_NOTE.md](../../SINGLE_AXIOM_INFORMATION_NOTE.md),
+[SINGLE_AXIOM_HILBERT_NOTE.md](../../SINGLE_AXIOM_HILBERT_NOTE.md), and
+[MINIMAL_AXIOMS_2026-04-11.md](../../MINIMAL_AXIOMS_2026-04-11.md).
+
 The electroweak scale is not an external input on the current paper surface.
 The exact minimal hierarchy theorem fixes the source-response structure on the
 minimal block; the quoted value
