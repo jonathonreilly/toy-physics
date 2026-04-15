@@ -76,6 +76,7 @@ Review this as a modular component stack:
 4. Yukawa / top closure: [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
 5. QFP robustness support: [YT_QFP_INSENSITIVITY_THEOREM.md](../../YT_QFP_INSENSITIVITY_THEOREM.md)
 6. Higgs / vacuum: [HIGGS_VACUUM_PROMOTED_NOTE.md](../../HIGGS_VACUUM_PROMOTED_NOTE.md)
+7. CKM closure: [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md)
 
 Current status from that stack:
 
@@ -87,6 +88,12 @@ Current status from that stack:
   `g_2(v) = 0.6480`
 - bounded `y_t(v) = 0.9176`
 - bounded `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
+- promoted CKM no-import closure package:
+  `|V_us| = 0.22727`,
+  `|V_cb| = 0.04217`,
+  `|V_ub| = 0.003913`,
+  `delta = 65.905 deg`,
+  `J = 3.331 x 10^-5`
 - bounded Higgs / vacuum package:
   `m_H = 119.8 GeV` (2-loop),
   `129.7 GeV` (calibrated 3-loop estimate),
@@ -112,7 +119,7 @@ conventions is packaged separately and does not modify the theorem stack.
 ## Other Bounded Families
 
 - DM ratio and relic companions
-- older bounded CKM magnitude / Cabibbo / partial Jarlskog route history
+- older bounded CKM mass-basis / Cabibbo / partial Jarlskog route history
 - cosmology companions
 - sharp companion predictions
 

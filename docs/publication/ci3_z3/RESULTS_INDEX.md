@@ -103,6 +103,11 @@ Use alongside:
 | Component | Note | Runner |
 |---|---|---|
 | DM ratio / relic package | [DM_RELIC_PAPER_NOTE.md](../../DM_RELIC_PAPER_NOTE.md) | [frontier_dm_relic_paper.py](../../../scripts/frontier_dm_relic_paper.py) |
+
+## Promoted Quantitative Packages
+
+| Component | Note | Runner |
+|---|---|---|
 | CKM closure package | [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md) | [frontier_ckm_atlas_axiom_closure.py](../../../scripts/frontier_ckm_atlas_axiom_closure.py), [frontier_ckm_no_import_audit.py](../../../scripts/frontier_ckm_no_import_audit.py) |
 
 ## Package Rule
