@@ -119,8 +119,9 @@ ledger:
   `1/\alpha_{EM} = 127.67`, `g_1(v) = 0.4644`, `g_2(v) = 0.6480`
 - bounded `y_t(v) = 0.9176`
 - bounded `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
-- bounded Higgs / vacuum package: `m_H = 119.8 GeV` (2-loop),
-  `129.7 GeV` (calibrated 3-loop estimate), bounded vacuum-stability readout
+- bounded Higgs / vacuum package: `m_H = 119.8 GeV` (2-loop support route),
+  `125.3 GeV` (framework-side 3-loop route), bounded vacuum-stability readout
+  inherited from the bounded `y_t` lane
 - promoted CKM no-import closure package with full sharp `|V_us|`, `|V_cb|`, `|V_ub|`, `\delta`, and `J`
 - older bounded Cabibbo / NNI / partial Jarlskog notes retained only as route history
 - `\Omega_\Lambda`, `n_s`, `w = -1`, and `\Lambda` cosmology companions

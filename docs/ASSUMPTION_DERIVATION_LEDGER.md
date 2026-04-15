@@ -20,7 +20,7 @@ derived quantitative rows, and still-open companion lanes.
 | EW normalization package | derived / retained quantitative lane | `sin^2(theta_W)`, `1/alpha_EM`, `g_1(v)`, and `g_2(v)` form a standalone retained EW lane. |
 | renormalized `y_t` endpoint | bounded / derived | `y_t(v) = 0.9176` is a zero-import central value, but it inherits an approximately `3%` QFP/RGE-surrogate systematic. |
 | top pole mass package | bounded / derived | `m_t(pole) = 172.57 GeV` (2-loop) and `173.10 GeV` (3-loop) inherit the bounded `y_t` systematic. |
-| Higgs CW/stability package | bounded | the mechanism and boundary structure are derived, but exact `m_H` and vacuum stability remain bounded pending a framework-native full 3-loop implementation. |
+| Higgs CW/stability package | bounded | the mechanism, `lambda(M_Pl)=0` boundary, and framework-native full 3-loop Higgs implementation now exist; exact `m_H` and vacuum stability remain bounded only because they inherit the bounded `y_t` / QFP route. |
 | DM relic mapping | bounded/open | Strong bounded companions remain, but the relic bridge is still not closed. |
 | CKM quantitative closure | bounded/open | Strong bounded flavor subresults exist, but ab initio quantitative closure is not promoted. |
 

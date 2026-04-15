@@ -44,8 +44,8 @@ Canonical authority:
 | `g_2(v)` | `0.6480` | `0.6463` | `+0.26%` | DERIVED |
 | `y_t(v)` | `0.9176` | `~0.917` | `+0.06%` | DERIVED |
 | `m_t(pole)` | `172.57-173.10 GeV` | `172.69 GeV` | `within 0.24%` | DERIVED |
-| `m_H` | `119.8 GeV` (2-loop), `129.7 GeV` (full 3-loop) | `125.25 GeV` | `bracket / +3.5% boundary` | DERIVED |
-| Vacuum | `Absolutely stable` | `metastable in SM` | `qualitative prediction` | DERIVED |
+| `m_H` | `119.8 GeV` (2-loop support route), `125.3 GeV` (framework-side 3-loop route) | `125.25 GeV` | `bounded through y_t lane` | BOUNDED |
+| Vacuum | `qualitatively favorable` | `metastable in SM` | `qualitative prediction` | BOUNDED |
 
 ## Remaining Live Gates
 

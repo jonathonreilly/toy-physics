@@ -95,9 +95,9 @@ Current status from that stack:
   `delta = 65.905 deg`,
   `J = 3.331 x 10^-5`
 - bounded Higgs / vacuum package:
-  `m_H = 119.8 GeV` (2-loop),
-  `129.7 GeV` (calibrated 3-loop estimate),
-  bounded vacuum-stability readout
+  `m_H = 119.8 GeV` (2-loop support route),
+  `125.3 GeV` (framework-side 3-loop route),
+  bounded vacuum-stability readout inherited from the bounded `y_t` lane
 
 The most important gravity companion point is also framed carefully: the
 paper's gravity self-consistency claim is that Poisson is the unique local

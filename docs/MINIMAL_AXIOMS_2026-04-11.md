@@ -61,7 +61,7 @@ Safe current result:
 - retained `g_2(v) = 0.6480`
 - bounded `y_t(v) = 0.9176`
 - bounded `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
-- bounded `m_H = 119.8 GeV` (2-loop), `129.7 GeV` (calibrated 3-loop estimate)
+- bounded `m_H = 119.8 GeV` (2-loop support route), `125.3 GeV` (framework-side 3-loop route)
 - bounded vacuum-stability readout
 
 ## Mathematical Infrastructure Versus Physical Inputs
