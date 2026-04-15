@@ -114,20 +114,51 @@ This is exact on the current Route 2 stack because each component is exact:
 support/curvature boundary and carries the aligned bright channels plus the
 `PL S^3 x R` semigroup factor.
 
-But `B_R` is still not the missing polarization bundle:
+The strongest exact canonical selector latent in the direct universal stack is
+the rank-2 invariant `A1` projector
 
-- it does not canonically split lapse, shift, and spatial trace/shear
-- it does not supply a covariant connection
-- it does not define `Pi_3+1` or `Pi_curv`
+`Pi_A1 = diag(1,0,0,0,1,0,0,0,0,0)`,
 
-So the exact missing step is still a covariant `3+1` polarization-frame /
-projector bundle with a distinguished connection.
+which fixes lapse and spatial trace exactly but leaves the complementary
+`E \oplus T1` channels frame-dependent.
 
-The strongest exact common candidate construction is now written out in
-[`ROUTE2_POLARIZATION_COMMON_PRIMITIVE_NOTE.md`](./ROUTE2_POLARIZATION_COMMON_PRIMITIVE_NOTE.md).
-It packages the bridge triple `B_R = (K_R, I_TB, Xi_TB)` together with the
-exact localized-orbit output `O_R` and makes the compatibility conditions for
-`Pi_3+1` and `Pi_curv` explicit.
+From those exact pieces, the strongest axiom-native common bundle candidate is
+now sharper than the earlier orbit-only pair:
+
+> the common bundle candidate is the exact invariant `A1` core `Pi_A1`,
+> together with the exact Route 2 bridge triple `B_R`, together with the
+> exact orbit of localized `3+1` channel coefficients over valid polarization
+> frames.
+
+Concretely, the strengthened candidate object is
+
+`P_R^cand := (Pi_A1, B_R, O_R)`,
+
+where:
+
+- `Pi_A1` is the exact invariant selector onto lapse and spatial trace
+- `B_R = (K_R, I_TB, Xi_TB)`
+- `O_R` is the exact orbit of localized `3+1` channel coefficients over valid
+  `3+1` polarization frames
+
+This is now the strongest exact common construction because it already
+packages:
+
+- the canonical `A1` section from the universal side
+- the support-side scalar datum `delta_A1`
+- the aligned bright channels `E_x` and `T1x`
+- the exact `PL S^3 x R` semigroup factor `exp(-t Lambda_R)`
+- the exact tensor-valued variational candidate `S_GR^cand`
+
+The finite-rank support-side enlargement behind this candidate is documented
+separately in
+[`FINITE_RANK_SUPPORT_GENERATOR_FAMILY_NOTE.md`](./FINITE_RANK_SUPPORT_GENERATOR_FAMILY_NOTE.md):
+the exact support-irrep frame `A1(center) ⊕ A1(shell) ⊕ E ⊕ T1` and the
+aligned bright channels `u_E`, `u_T` give the largest exact noncanonical
+support-side enlargement currently built from the atlas objects.
+
+It is still not a finished polarization bundle, because `O_R` is an orbit, not
+a canonical section, and the complement of `Pi_A1` remains frame-dependent.
 
 ## Implications
 
@@ -145,6 +176,6 @@ object.
 
 The exact common primitive to pursue is:
 
-> a covariant `3+1` polarization-frame / projector bundle that canonically
-> splits lapse, shift, and spatial trace/shear, with support-side and
-> curvature-side specializations.
+> a covariant `3+1` polarization-frame / projector bundle with an invariant
+> `A1` core, support-side and curvature-side specializations, and a
+> distinguished connection that canonicalizes the complement of `Pi_A1`.

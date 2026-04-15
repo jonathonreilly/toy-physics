@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Cross-lane synthesis for the shared polarization primitive family.
 
-This is not a closure proof. It constructs the strongest exact Route 2 common
+This is not a closure proof. It constructs the strongest exact common bundle
 candidate and checks the compatibility conditions that any support-side
 `Pi_3+1` and curvature-side `Pi_curv` specialization must satisfy.
 
@@ -9,7 +9,7 @@ The intended conclusion is:
 
 - same primitive family: yes
 - same exact object: no
-- strongest exact common candidate: `P_R^cand = (B_R, O_R)` with
+- strongest exact common candidate: `P_R^cand = (Pi_A1, B_R, O_R)` with
   `B_R = (K_R, I_TB, Xi_TB)`
 - smallest missing axiom-native structure: a covariant `3+1` polarization
   bundle with a distinguished connection `\nabla_R`
@@ -31,10 +31,11 @@ DOCS = ROOT / "docs"
 
 FINITE_RANK = DOCS / "FINITE_RANK_3PLUS1_PROMOTION_BLOCKER_NOTE.md"
 FINITE_FRAME = DOCS / "FINITE_RANK_SUPPORT_POLARIZATION_FRAME_NOTE.md"
+UNIVERSAL_A1 = DOCS / "UNIVERSAL_GR_A1_INVARIANT_SECTION_NOTE.md"
 UNIVERSAL_FRAME = DOCS / "UNIVERSAL_GR_POLARIZATION_FRAME_BUNDLE_BLOCKER_NOTE.md"
 UNIVERSAL_CURV = DOCS / "UNIVERSAL_GR_CURVATURE_LOCALIZATION_BLOCKER_NOTE.md"
 ROUTE2 = DOCS / "S3_TIME_BILINEAR_TENSOR_ACTION_NOTE.md"
-CONSTRUCTION = DOCS / "ROUTE2_POLARIZATION_COMMON_PRIMITIVE_NOTE.md"
+CONSTRUCTION = DOCS / "POLARIZATION_COMMON_BUNDLE_CANDIDATE_NOTE.md"
 SYNTHESIS = DOCS / "POLARIZATION_COMMON_PRIMITIVE_SYNTHESIS_NOTE.md"
 
 SAME_SOURCE_METRIC = SourceFileLoader(
@@ -154,6 +155,11 @@ def main() -> int:
         "universal lane is explicitly post-candidate and localization-side",
     )
     record(
+        "universal A1 note exposes the exact invariant section latent in the current stack",
+        has(read(UNIVERSAL_A1), "Pi_A1") and has(read(UNIVERSAL_A1), "lapse") and has(read(UNIVERSAL_A1), "spatial trace"),
+        "the exact invariant selector is the canonical core of the strengthened common bundle candidate",
+    )
+    record(
         "universal curvature blocker says localization is frame-dependent across valid `3+1` frames",
         (matches(universal_curv, r"different localized channel\s+coefficients")
          or has(universal_curv, "canonical `Pi_curv`"))
@@ -173,8 +179,9 @@ def main() -> int:
         "the exact common construction is the Route 2 bridge triple, not a canonical bundle",
     )
     record(
-        "the Route 2 bridge triple yields an explicit common candidate object P_R^cand",
-        has(construction, "P_R^cand := (B_R, O_R)")
+        "the strengthened common bundle candidate includes the invariant A1 core and the Route 2 bridge triple",
+        has(construction, "P_R^cand := (Pi_A1, B_R, O_R)")
+        and has(construction, "Pi_A1")
         and has(construction, "B_R = (K_R, I_TB, Xi_TB)")
         and bridge_center_ok
         and bridge_shell_ok
@@ -228,20 +235,20 @@ def main() -> int:
     print("Shared primitive family: YES")
     print("Same exact object: NO")
     print(
-        "Strongest exact common candidate: `P_R^cand = (B_R, O_R)` with "
+        "Strongest exact common candidate: `P_R^cand = (Pi_A1, B_R, O_R)` with "
         "`B_R = (K_R, I_TB, Xi_TB)`."
     )
-    print("Associated exact output today: localization orbit over valid `3+1` frames.")
+    print("Associated exact output today: exact A1 core plus localization orbit over valid `3+1` frames.")
     print(
-        "Compatibility requirements: support-side `Pi_3+1` must preserve delta_A1, "
-        "u_E, u_T, and K_R; curvature-side `Pi_curv` must preserve the quotient "
-        "kernel, localization orbit, and Xi_TB."
+        "Compatibility requirements: support-side `Pi_3+1` must preserve Pi_A1, "
+        "delta_A1, u_E, u_T, and K_R; curvature-side `Pi_curv` must preserve the "
+        "quotient kernel, localization orbit, and Xi_TB."
     )
     print(
         "Still missing: a covariant `3+1` polarization-frame / projector bundle "
-        "with distinguished connection `\\nabla_R`."
+        "with distinguished connection `\\nabla_R` that canonicalizes the complement of Pi_A1."
     )
-    print("Support specialization target: canonical `Pi_3+1` before scalar collapse.")
+    print("Support specialization target: canonical `Pi_3+1` before scalar collapse, with Pi_A1 as the invariant core.")
     print("Curvature specialization target: canonical `Pi_curv` before localization.")
 
     n_pass = sum(c.ok for c in CHECKS)
