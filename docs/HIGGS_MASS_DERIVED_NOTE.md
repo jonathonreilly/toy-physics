@@ -1,162 +1,124 @@
-# Higgs Mass: Derivation Status (Honest Assessment)
+# Higgs Mass: Canonical Authority Boundary
 
-**Status:** SUPERSEDED by `COMPLETE_PREDICTION_CHAIN_2026_04_15.md`
+## Question
 
-> **WARNING:** This note predates the derivation of y_t (now 0.918 via
-> Ward + √(8/9) color projection), the stability boundary prediction
-> (λ(M_Pl) = 0 → m_H = 129.7 GeV), and the full EW coupling derivations.
-> The three-tier structure below is outdated:
-> - Tier 2 claimed y_t was "one free parameter" — y_t is now DERIVED
-> - Tier 3 claimed m_H "REQUIRES SM INPUT" — all inputs now DERIVED
-> - sin²θ_W = 3/8 was attributed to "GUT relation" — it comes from
->   bare couplings g_2²=1/4, g_Y²=1/5, NOT from GUT unification
-> See the complete prediction chain for the current derivation.
+After implementing the full 3-loop Higgs runner directly, what still keeps the
+Higgs lane bounded?
 
-## Question (HISTORICAL — see supersession note above)
+## Final reviewer answer
 
-Can the framework derive m_H = 125 GeV from first principles via the
-Coleman-Weinberg mechanism, or does m_H require SM couplings as input?
+The canonical Higgs posture remains `BOUNDED`, but the bound is now much
+narrower than before.
 
-## Three-Tier Answer
+The framework now supports all of the following:
 
-### Tier 1: FULLY DERIVED (zero free parameters)
+| Result | Status |
+|---|---|
+| taste condensate acts as the Higgs field | DERIVED |
+| lattice Coleman-Weinberg electroweak symmetry breaking occurs naturally | DERIVED |
+| the hierarchy problem is removed because the cutoff is physical (`pi/a`) | DERIVED |
+| the boundary condition `lambda(M_Pl) = 0` is framework-native | DERIVED |
+| a direct framework-side full 3-loop Higgs computation exists | DERIVED |
+| Buttazzo-style calibrated-fit dependence is required | NO |
 
-These results follow from the lattice axioms alone (Cl(3) on Z^3):
+What is **not** yet unbounded is the exact numerical Higgs claim by itself,
+because the Higgs lane still inherits the bounded `y_t(v)` route.
 
-| Result | Source | Status |
-|--------|--------|--------|
-| CW mechanism triggers EWSB | Taste condensate = Higgs field | DERIVED |
-| Hierarchy problem resolved | Lambda = pi/a is physical, Delta ~ O(1) | DERIVED |
-| EWSB with O(1) bare parameters | No fine-tuning needed | DERIVED |
-| Gauge group SU(2)_L x U(1)_Y | Cl(3) taste algebra | DERIVED |
-| Particle DOF count (n_i) | Taste doubling on Z^3 | DERIVED |
-| sin^2(theta_W) = 3/8 at M_Planck | Cl(3) GUT relation | DERIVED |
-| alpha_V = 0.092 at M_Planck | V-scheme plaquette action | DERIVED |
-| m_Z/m_W = 1/cos(theta_W) | Pure gauge structure | DERIVED |
+## Canonical retained claim
 
-The CW mechanism is the framework's NATURAL Higgs mechanism. No elementary
-scalar is postulated -- the Higgs field IS the taste condensate, and SSB
-is dynamically driven by quantum corrections with the lattice providing the
-physical UV cutoff.
+The paper-safe Higgs claim is now:
 
-The hierarchy problem is resolved because the cutoff IS the lattice spacing
-(= Planck scale). The Barbieri-Giudice fine-tuning measure is Delta ~ 0.5,
-compared to Delta ~ 10^34 in the continuum SM with a Planck cutoff.
+- the framework derives the Higgs mechanism itself
+- the framework derives the natural high-scale boundary `lambda(M_Pl) = 0`
+- the branch now contains a direct full 3-loop Higgs runner with no
+  Buttazzo-style parametric fit
+- for the current accepted central input `y_t(v) = 0.918`, that runner gives
+  `m_H ~= 125.3 GeV`
+- the exact Higgs lane is still `BOUNDED` only because the accepted `y_t`
+  route carries an inherited `~3%` QFP / backward-Ward systematic
 
-### Tier 2: BOUNDED (one free parameter)
+## What changed
 
-Given the derived gauge couplings, the CW potential gives m_H/m_W as a
-SPECIFIC FUNCTION of y_t (the top Yukawa coupling):
+The old Higgs bound had two distinct pieces:
 
-    m_H/m_W = f_CW(y_t; g, g', Lambda)
+1. the branch lacked a complete direct 3-loop Higgs implementation
+2. the accepted `y_t(v)` route was still bounded
 
-This is a genuine prediction: the framework reduces the Higgs sector from
-2 free parameters (mu^2, lambda) to 1 (y_t). The CW curve gives:
+The new runner
+[scripts/frontier_higgs_mass_full_3loop.py](../scripts/frontier_higgs_mass_full_3loop.py)
+removes blocker (1). It computes the Higgs mass directly from the framework
+boundary condition `lambda(M_Pl) = 0` using the full 3-loop SM RGE system and
+current framework-side low-energy inputs.
 
-- For y_t ~ 0.5-1.0: m_H/m_W ~ 1.5-2.5 (lattice a=1)
-- For y_t ~ 1.0 (observed): m_H/m_W ~ 1.85 (19% above SM value 1.56)
-- The ratio decreases toward the SM value as lattice spacing decreases
+So the remaining Higgs boundedness is no longer “missing Higgs machinery.”
+It is inherited from the still-bounded `y_t` lane.
 
-The top Yukawa is bounded by the IR quasi-fixed-point:
+## Current numerical posture
 
-    y_t* = sqrt(2/9 * (8*g_s^2 + 9/4*g^2 + 17/12*g'^2)) ~ 1.7
+For the current central input `y_t(v) = 0.918`, the full 3-loop Higgs runner
+gives:
 
-This is the right order of magnitude but 70% above the observed y_t = 0.994.
+- `m_H ~= 125.3 GeV` with no parametric fit
+- an inherited Higgs band of roughly `115.2-135.3 GeV` if the `y_t` route is
+  varied by the current `~3%` QFP systematic
 
-### Tier 3: REQUIRES SM INPUT (consistency check)
+That means the honest Higgs read is:
 
-The exact numerical value m_H = 125 GeV cannot be derived without:
+- **mechanism:** derived
+- **3-loop computation:** implemented
+- **central Higgs value:** framework-side and direct
+- **remaining bound:** inherited from `y_t`, not from missing Higgs code
 
-1. **y_t = 0.994** -- not predicted (only bounded by fixed point)
-2. **Exact g, g' at M_Z** -- Cl(3) gives sin^2(theta_W) = 3/8 at M_Planck,
-   but running to M_Z with SM RGEs gives ~40% deviations (the standard
-   non-unification problem, which needs threshold corrections to resolve)
-3. **2-loop CW corrections** -- the 1-loop CW gives m_H/m_W ~ 1.85 with
-   SM couplings, 19% above the SM value; 2-loop corrections would reduce this
+## Why exact Higgs closure is still bounded
 
-## Key Results
+Only two scientific cautions remain.
 
-### SSB is generic, not fine-tuned
+1. The accepted `y_t(v)` route is still bounded.
+   The backward-Ward / QFP bridge remains the limiting step for the Higgs lane.
+2. Vacuum stability inherits the same bound.
+   If `y_t` carries a bounded systematic, then the statement `lambda(mu) > 0`
+   for all scales inherits that same systematic.
 
-The CW mechanism triggers SSB for >50% of O(1) bare mass values.
-This is not a coincidence or tuning -- it is a structural consequence
-of the lattice UV cutoff bounding the quantum corrections.
+So the correct current claim is not “Higgs still lacks a real computation.”
+It is “Higgs is conditionally closed at 3-loop on the accepted bounded `y_t`
+route.”
 
-### The hierarchy problem IS resolved
+## Current route inventory
 
-| Framework | Cutoff | BG Fine-tuning Delta |
-|-----------|--------|---------------------|
-| SM (TeV) | 10^3 GeV | 4 |
-| SM (GUT) | 10^16 GeV | 4 x 10^26 |
-| SM (Planck) | 10^19 GeV | 6 x 10^32 |
-| **Lattice** | **pi/a ~ 3** | **~0.5** |
+### Canonical authority
 
-### m_H/m_W converges to SM with decreasing lattice spacing
+- [scripts/frontier_higgs_mass_full_3loop.py](../scripts/frontier_higgs_mass_full_3loop.py)
+  is now the primary quantitative authority runner for the Higgs lane.
+  Its job is to show that the Higgs-specific 3-loop blocker is gone.
+- [scripts/frontier_higgs_mass_derived.py](../scripts/frontier_higgs_mass_derived.py)
+  remains a useful mechanism / boundary companion, but it is no longer the
+  only honest Higgs-boundary runner.
 
-| a | Lambda | m_H/m_W | m_H (GeV) |
-|---|--------|---------|-----------|
-| 2.0 | 1.57 | 2.18 | 175 |
-| 1.0 | 3.14 | 1.85 | 149 |
-| 0.5 | 6.28 | 1.64 | 132 |
+### Supporting Higgs surfaces
 
-At a = 0.5, m_H/m_W = 1.64 is within 5% of the SM value 1.56.
+- [HIGGS_MECHANISM_NOTE.md](./HIGGS_MECHANISM_NOTE.md)
+  mechanism-level support
+- [HIGGS_FROM_LATTICE_NOTE.md](./HIGGS_FROM_LATTICE_NOTE.md)
+  bounded / historical quantitative support
+- [HIGGS_MASS_NOTE.md](./HIGGS_MASS_NOTE.md)
+  historical numerical CW support
 
-### Effect of taste scalar doublets on m_H
+These notes remain useful context, but they should not outrank this note when
+a reader asks what the Higgs lane currently claims.
 
-The Cl(3) framework predicts 4 Higgs doublets (from the 8 taste states
-decomposing as C^2 x C^4 under SU(2)_weak).  One doublet is the SM Higgs;
-the other 3 contribute 12 extra real bosonic DOF to the CW potential.
+## Paper-safe framing
 
-**Result:** Taste scalars push m_H UPWARD, not downward.
+**Can claim**
 
-| Configuration | m_H (GeV) | Shift |
-|---------------|-----------|-------|
-| SM-only (a=1) | 153 | baseline |
-| SM + 3 taste doublets (a=1) | 161 | +8 GeV (+5.3%) |
+- the Higgs mechanism emerges naturally from the lattice
+- the hierarchy problem is solved structurally
+- `lambda(M_Pl) = 0` is a framework-native Higgs boundary condition
+- the repo now contains a direct full 3-loop Higgs computation with no
+  Buttazzo-style calibrated-fit dependence
+- the remaining Higgs bound is inherited from the bounded `y_t` lane
 
-This is a robust consequence of the CW mechanism: bosonic loops add positive
-curvature at the CW minimum, always increasing m_H^2.  The taste scalar
-portal coupling is fixed by the gauge D-term: lambda_portal = (g^2+g'^2)/4.
+**Cannot claim**
 
-At small lattice spacing (a < 0.6), the taste scalars destroy SSB entirely
-(too much bosonic contribution overwhelms the top quark loop that drives
-symmetry breaking).  This constrains the physical lattice spacing to a > 0.6.
-
-**Implication:** The 153-to-125 gap must close through lattice spacing
-convergence and 2-loop corrections, not through taste scalar contributions.
-
-Script: `scripts/frontier_higgs_mass_derived.py`
-
-## What This Means for the Paper
-
-**CAN claim:**
-- The Higgs mechanism emerges from the lattice (CW, no elementary scalar)
-- The hierarchy problem is solved (cutoff = Planck, Delta ~ O(1))
-- m_H is of the right order of magnitude
-- m_H/m_W converges toward the SM as lattice spacing decreases
-
-**CANNOT claim:**
-- m_H = 125 GeV derived from first principles
-- y_t predicted (only bounded)
-- Complete gauge coupling unification (threshold corrections needed)
-
-**Recommended framing:**
-"The Coleman-Weinberg mechanism on the lattice provides a natural origin
-for electroweak symmetry breaking, resolves the hierarchy problem, and
-predicts m_H/m_W as a function of a single parameter (y_t). The observed
-Higgs mass is consistent with the framework."
-
-## Roadmap to Full Derivation
-
-1. Compute Planck-scale threshold corrections to gauge RGE
-   => fixes g, g' at M_Z
-2. Determine y_t from 2-loop IR fixed point + lattice matching
-   => pins y_t to ~20%
-3. Compute 2-loop CW potential on the lattice
-   => refines m_H/m_W to ~5%
-4. Show lambda_bare and m^2_bare are radiatively stable at O(1)
-   => completes naturalness argument
-
-## Script
-
-`scripts/frontier_higgs_mass_derived.py` -- self-contained, numpy + scipy only.
+- the Higgs lane is unbounded independently of `y_t`
+- vacuum stability is unbounded while `y_t` still carries the QFP bound
+- older lattice-CW or partial-Higgs notes as if they were the live authority
