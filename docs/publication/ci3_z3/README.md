@@ -20,14 +20,15 @@ Framework statement:
 1. [Public arXiv draft](./ARXIV_DRAFT.md)
 2. [External reviewer guide](./EXTERNAL_REVIEWER_GUIDE.md)
 3. [Publication state](../../CI3_Z3_PUBLICATION_STATE_2026-04-15.md)
-4. [Publication matrix](./PUBLICATION_MATRIX.md)
-5. [Quantitative summary table](./QUANTITATIVE_SUMMARY_TABLE.md)
-6. [Claims table](./CLAIMS_TABLE.md)
-7. [Derivation atlas](./DERIVATION_ATLAS.md)
-8. [Derivation / validation map](./DERIVATION_VALIDATION_MAP.md)
-9. [Full claim ledger](./FULL_CLAIM_LEDGER.md)
-10. [Frozen-out registry](./FROZEN_OUT_REGISTRY.md)
-11. [Results index](./RESULTS_INDEX.md)
+4. [Prediction surface](./PREDICTION_SURFACE_2026-04-15.md)
+5. [Publication matrix](./PUBLICATION_MATRIX.md)
+6. [Quantitative summary table](./QUANTITATIVE_SUMMARY_TABLE.md)
+7. [Claims table](./CLAIMS_TABLE.md)
+8. [Derivation atlas](./DERIVATION_ATLAS.md)
+9. [Derivation / validation map](./DERIVATION_VALIDATION_MAP.md)
+10. [Full claim ledger](./FULL_CLAIM_LEDGER.md)
+11. [Frozen-out registry](./FROZEN_OUT_REGISTRY.md)
+12. [Results index](./RESULTS_INDEX.md)
 
 For one-note gravity/gauge continuum positioning across the current package,
 use [CONTINUUM_IDENTIFICATION_NOTE.md](../../CONTINUUM_IDENTIFICATION_NOTE.md).
@@ -39,12 +40,16 @@ The package has four layers:
 1. retained theorem core
 2. retained standalone quantitative lanes (`alpha_s`, EW normalization)
 3. bounded Yukawa/top and Higgs/vacuum lanes
-4. bounded observation-facing portfolio plus live gates and frozen-out route
+4. bounded prediction surface plus live gates and frozen-out route
    history
 
 The public manuscript surface on `main` is now arXiv-first. Journal-specific
 packaging is private and is not kept as a competing public draft in this
 directory.
+
+The package is also already predictive in a reviewer-facing sense. For the
+shortest summary of what is already predicted on `main`, use
+[PREDICTION_SURFACE_2026-04-15.md](./PREDICTION_SURFACE_2026-04-15.md).
 
 ## Current Quantitative Component Stack
 
@@ -195,15 +200,21 @@ Reviewer-facing framing notes:
   [UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md](../../UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md)
   and is packaging-only.
 
-Observation-facing bounded portfolio:
+Bounded prediction surface:
 
 - DM ratio `R = 5.48` vs `5.47`
 - zero-import `\alpha_s(M_Z) = 0.1181`
-- best import-allowed `m_t = 171.0 GeV`
-- zero-import `m_t = 169.4 GeV` on the current 2-loop bounded route
+- bounded top package:
+  `y_t(v) = 0.9176`,
+  `m_t(pole) = 172.57 GeV` (2-loop),
+  `173.10 GeV` (3-loop),
+  with the current `~3%` QFP/RGE-surrogate systematic
 - promoted CKM atlas/axiom closure package with full sharp `|V_us|`, `|V_cb|`, `|V_ub|`, `\delta`, and `J`, no quark-mass or fitted CKM observables in the derivation, and canonical CMT `\alpha_s(v)` as the quantitative coupling input
 - cosmology companions such as `\Omega_\Lambda`, `n_s`, `w = -1`
-- Higgs and individual companion lanes
+- sharp bounded secondary predictions already on `main`:
+  proton lifetime, CKM neutron EDM, vacuum critical stability,
+  benchmark gravitational decoherence
+- Higgs and other bounded secondary lanes
 
 Live high-impact gates:
 

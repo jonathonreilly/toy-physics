@@ -10,7 +10,7 @@ The current package is:
 1. a retained theorem core
 2. retained standalone quantitative lanes for `alpha_s` and EW normalization
 3. promoted CKM atlas/axiom closure plus bounded Yukawa/top and Higgs/vacuum lanes
-4. a bounded observation-facing portfolio and a frozen-out registry for
+4. a bounded prediction surface and a frozen-out registry for
    important excluded families
 
 For framework counting, read the public package as a one-axiom program:
@@ -28,6 +28,10 @@ For the package-level gravity/gauge continuum positioning synthesis, use
 Read the gravity/QG side as exact on the discrete project route and on one
 chosen canonical textbook continuum target. The package is not asserting that
 every possible smooth or continuum packaging has been closed.
+
+Read the package as already predictive, not merely retrospective. For the
+short publication-facing list of what is already predicted on `main`, use
+[PREDICTION_SURFACE_2026-04-15.md](./PREDICTION_SURFACE_2026-04-15.md).
 
 ## Retained Core
 
@@ -148,12 +152,14 @@ continuum gravitational closure on the chosen realization are all exact on the
 authority path. Any optional comparison against alternative textbook
 conventions is packaged separately and does not modify the theorem stack.
 
-## Other Bounded Families
+## Bounded Prediction Surface
 
 - DM ratio and relic companions
 - older bounded CKM mass-basis / Cabibbo / partial Jarlskog route history
 - cosmology companions
-- individual companion lanes
+- bounded secondary predictions already on `main`, including proton lifetime,
+  CKM neutron EDM, vacuum critical stability, benchmark gravitational
+  decoherence, and monopole mass
 
 ## What Is Still Open
 

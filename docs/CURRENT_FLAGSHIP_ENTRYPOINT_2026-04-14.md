@@ -31,11 +31,15 @@ The current flagship package has four layers:
 1. retained theorem core
 2. retained standalone quantitative lanes (`alpha_s`, EW normalization)
 3. bounded Yukawa/top and Higgs/vacuum lanes
-4. bounded observation-facing companion portfolio plus live gates and
+4. bounded prediction surface plus live gates and
    explicit frozen-out families
 
 The package is therefore not "everything in the repo," and it is not older
 route history.
+
+It is also already predictive beyond the retained theorem spine. For the
+publication-facing prediction inventory, use
+[publication/ci3_z3/PREDICTION_SURFACE_2026-04-15.md](publication/ci3_z3/PREDICTION_SURFACE_2026-04-15.md).
 
 The public manuscript surface is now arXiv-first:
 
@@ -153,8 +157,9 @@ Current package status:
 - cosmology companions, now organized around one fixed-gap vacuum scale
   (`Lambda`, `w = -1`, graviton mass) plus the remaining matter bridge behind
   present-day `Omega_Lambda`
-- individual companion lanes such as proton lifetime,
-  BH entropy, graviton decoherence, monopole mass
+- bounded secondary predictions already on `main`, including proton lifetime,
+  CKM neutron EDM, vacuum critical stability, benchmark gravitational
+  decoherence, BH entropy, and monopole mass
 
 ## Live Gates
 

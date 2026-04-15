@@ -6,7 +6,7 @@
 This repository is not presently organized around the older toy-model or DAG
 exploration surfaces. The current review target is a `Cl(3)` on `Z^3`
 framework package with a retained theorem core, retained standalone
-quantitative lanes, bounded Yukawa/Higgs lanes, a bounded companion
+quantitative lanes, bounded Yukawa/Higgs lanes, a bounded prediction
 portfolio, and one explicitly open flagship gate.
 
 For framework counting, the public package should be read as a one-axiom
@@ -25,9 +25,10 @@ not a second foundation.
 1. [CURRENT_FLAGSHIP_ENTRYPOINT_2026-04-14.md](CURRENT_FLAGSHIP_ENTRYPOINT_2026-04-14.md)
 2. [publication/ci3_z3/ARXIV_DRAFT.md](publication/ci3_z3/ARXIV_DRAFT.md)
 3. [publication/ci3_z3/README.md](publication/ci3_z3/README.md)
-4. [publication/ci3_z3/PUBLICATION_MATRIX.md](publication/ci3_z3/PUBLICATION_MATRIX.md)
-5. [publication/ci3_z3/DERIVATION_ATLAS.md](publication/ci3_z3/DERIVATION_ATLAS.md)
-6. [publication/ci3_z3/DERIVATION_VALIDATION_MAP.md](publication/ci3_z3/DERIVATION_VALIDATION_MAP.md)
+4. [publication/ci3_z3/PREDICTION_SURFACE_2026-04-15.md](publication/ci3_z3/PREDICTION_SURFACE_2026-04-15.md)
+5. [publication/ci3_z3/PUBLICATION_MATRIX.md](publication/ci3_z3/PUBLICATION_MATRIX.md)
+6. [publication/ci3_z3/DERIVATION_ATLAS.md](publication/ci3_z3/DERIVATION_ATLAS.md)
+7. [publication/ci3_z3/DERIVATION_VALIDATION_MAP.md](publication/ci3_z3/DERIVATION_VALIDATION_MAP.md)
 
 For the package-level gravity/gauge continuum positioning synthesis, use
 [CONTINUUM_IDENTIFICATION_NOTE.md](CONTINUUM_IDENTIFICATION_NOTE.md).
@@ -99,12 +100,14 @@ Current quantitative statuses:
   `125.3 GeV` (framework-side 3-loop route),
   bounded vacuum-stability readout inherited from the bounded `y_t` / QFP lane
 
-## Other Bounded Families
+## Bounded Prediction Surface
 
 - DM ratio and relic companions
 - promoted CKM atlas/axiom closure package, with older Cabibbo / NNI / partial Jarlskog notes retained only as route history
 - cosmology companions
-- individual companion lanes
+- bounded secondary predictions already on `main`, including proton lifetime,
+  CKM neutron EDM, vacuum critical stability, benchmark gravitational
+  decoherence, and monopole mass
 
 ## Open Gates
 

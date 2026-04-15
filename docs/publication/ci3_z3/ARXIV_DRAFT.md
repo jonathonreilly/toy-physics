@@ -22,11 +22,13 @@ framework carries exact native `SU(2)`, graph-first structural `SU(3)`, exact
 compactification / topology closure, one-generation matter closure, retained
 three-generation matter structure, exact `I_3 = 0`, exact CPT, emergent
 Lorentz invariance with first anisotropic correction at dimension 6, and exact
-strong CP / `\theta_eff = 0` on the retained action surface. The current quantitative package retains
-`\alpha_s(M_Z)` and electroweak normalization lanes, promotes an atlas/axiom
-CKM closure package with no quark-mass or fitted-CKM inputs, and keeps
-top-Yukawa/top-mass, Higgs/vacuum, and cosmology as
-bounded companions. The single live flagship gate is dark-matter relic
+strong CP / `\theta_eff = 0` on the retained action surface. The current
+quantitative package retains `\alpha_s(M_Z)` and electroweak normalization
+lanes, promotes an atlas/axiom CKM closure package with no quark-mass or
+fitted-CKM inputs, and keeps top-Yukawa/top-mass, Higgs/vacuum, and cosmology
+as bounded lanes. The package also already carries a bounded prediction
+surface, including proton lifetime, CKM neutron EDM, vacuum critical
+stability, and benchmark gravitational decoherence. The single live flagship gate is dark-matter relic
 mapping. We present the retained claim surface, separate exact from bounded
 results, and state the public reproducibility surface that supports the
 current package.
@@ -63,13 +65,15 @@ exact on the axiom-determined action surface. Confinement is promoted as an
 exact structural theorem with a bounded string-tension readout. CKM is
 promoted as an atlas/axiom closure package with canonical CMT
 `\alpha_s(v)` input and no quark-mass or fitted-CKM derivation inputs, rather
-than a bounded flavor lane. The only live flagship gate left is dark-matter
-relic mapping.
+than a bounded flavor lane. The package is also already predictive beyond the
+retained theorem spine: it carries a bounded secondary prediction surface,
+not just post-hoc quantitative comparisons. The only live flagship gate left
+is dark-matter relic mapping.
 
 The correct reading of the manuscript is therefore no longer “promising
 framework with many open bridges.” It is “broad retained discrete backbone,
-promoted quantitative support where the package actually closes, bounded
-companions where it does not, and one live flagship gate.”
+promoted quantitative support where the package actually closes, a bounded
+prediction surface where it does not, and one live flagship gate.”
 
 ## 2. Framework and Claim Surface
 
@@ -295,7 +299,7 @@ plaquette-derived normalization chain gives
 
 - `v = 246.282818290129 GeV`
 
-which is `0.4628%` low relative to `246.22 GeV`.
+which is `+0.0255%` relative to `246.22 GeV`.
 
 The important package distinction is that the exact theorem is the
 source-response structure on the minimal block. The quoted number is the pinned
@@ -364,7 +368,7 @@ The key point is not whether the central number can be made near the observed
 one. The key point is whether the whole route is closed on the same exact
 surface. It is not yet. The bounded label stays.
 
-## 6. Bounded Companions and the Remaining Live Gate
+## 6. Bounded Prediction Surface and the Remaining Live Gate
 
 ### 6.1 The live gate: dark-matter relic mapping
 
@@ -374,7 +378,7 @@ lane, but the graph-to-relic transport/normalization bridge is still not
 closed at the package bar. That is why DM stays open even though several
 individual numbers are promising.
 
-### 6.2 Cosmology companions
+### 6.2 Conditional cosmology prediction lanes
 
 The cosmology lane is now cleaner than before and no longer needs to be
 treated as several unrelated blockers. `\Lambda`, `w = -1`, and the present
@@ -382,19 +386,29 @@ treated as several unrelated blockers. `\Lambda`, `w = -1`, and the present
 remaining matter-content bridge. That is useful, but the cosmology family is
 still bounded/conditional on the current public package surface.
 
-### 6.3 Other companions
+### 6.3 Sharp bounded predictions already on the package surface
 
-The broader program also contains several companion or discriminator rows
-outside the retained flagship surface:
+The broader program already carries several bounded secondary predictions that
+are worth stating explicitly rather than leaving as vague later-paper
+phenomenology:
 
-- proton lifetime;
-- Bekenstein-Hawking entropy companion;
-- gravitational decoherence;
-- monopole mass;
-- other later-paper phenomenology.
+- proton lifetime:
+  - `tau_p ~ 4 x 10^47 years`
+- CKM neutron EDM on the retained `theta_eff = 0` surface:
+  - `d_n(CKM) ~ 8 x 10^-33 e cm`
+- vacuum critical stability on the current `lambda(M_Pl)=0` route
+- benchmark gravitational decoherence at the original BMV geometry:
+  - `gamma_grav = 0.253 Hz`
+  - `Phi_ent = 12.4 rad`
 
-These rows matter for the broader program, but they are not required for the
-main arXiv paper to be coherent.
+These are not retained theorem-core rows, and they are not being sold as
+fully promoted flagship claims. But they are real prediction surfaces already
+carried by the package. The current manuscript should therefore not read as if
+the framework is only retrospective until DM closes.
+
+More weakly packaged bounded secondary lanes such as the monopole-mass readout
+and Bekenstein-Hawking entropy comparison remain repo-captured but are not
+load-bearing for the main paper.
 
 ## 7. Reproducibility and Public Repo Surface
 
@@ -447,7 +461,8 @@ What remains bounded is explicit:
 - top-Yukawa / top-pole matching;
 - Higgs/vacuum closure;
 - cosmology companions;
-- broader phenomenology companions.
+- bounded secondary predictions such as proton lifetime, CKM neutron EDM,
+  vacuum critical stability, and benchmark gravitational decoherence.
 
 What remains genuinely open as a flagship gate is also explicit:
 
