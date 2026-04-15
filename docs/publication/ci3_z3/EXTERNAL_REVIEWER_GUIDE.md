@@ -96,7 +96,7 @@ For the explicit package boundary, use:
 - exact `I_3 = 0`
 - exact CPT
 - emergent Lorentz invariance with first anisotropic correction at dimension 6 and unique cubic-harmonic `\ell = 4` signature; on the retained hierarchy surface the correction is `(E/M_{Pl})^2` suppressed
-- exact strong CP / `theta_eff = 0` on the retained action surface, now with an explicit `3+1` APBC determinant-positivity audit in the retained support stack
+- exact strong CP / `theta_eff = 0` on the retained action surface, now with an explicit `3+1` APBC determinant-positivity audit and an exact fermion-effective-action spectral audit in the retained support stack
 
 ## Quantitative Component Stack
 

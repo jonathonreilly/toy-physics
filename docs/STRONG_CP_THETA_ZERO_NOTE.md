@@ -169,14 +169,16 @@ at tree level:
    covariant CP transform of U_μ)
 3. Full action S = S_gauge + S_f is CP-even at tree level
 
-The standard argument that CP-even actions generate only CP-even
-effective operators applies, but an explicit one-loop verification
-in the full gauge+fermion theory is not computed here. This is a
-companion-level open item, not a gap in the θ = 0 argument (which
-rests on the real-positive partition function, not on loop-level CP).
+What is now computed explicitly is the exact fermion effective action on the
+retained `3+1` APBC surface. The staggered Grassmann integral is Gaussian, so
+`det(D+m)` is the full fermion contribution to the effective action; there are
+no higher fermion loops beyond that determinant. The new eigenvalue audit below
+verifies directly that the CP-odd fermion phase vanishes on sampled `3+1`
+configurations through exact `±λ` pairing of `iD`.
 
-This partially addresses open item 1 of CPT_EXACT_NOTE.md for the CP
-sector. A full one-loop computation would close it completely.
+This strengthens the retained `θ_eff = 0` theorem substantially on the fermion
+side. What remains open is the broader gauge-sector radiative/chiral/topological
+closure beyond that exact fermion-effective-action computation.
 
 ## S³ Topology
 
@@ -226,6 +228,37 @@ spatial audit surface extends directly to the retained `3+1` APBC operator
 surface. The runner now verifies this numerically on sampled `3+1`
 configurations as an explicit audit.
 
+## Exact Fermion Effective Action
+
+The staggered fermion path integral
+
+`∫ Dψ Dψ̄ exp(-ψ̄(D+m)ψ)`
+
+is Gaussian. It evaluates exactly to `det(D+m)`. So `Γ_f = -Tr ln(D+m)` is not
+just a perturbative one-loop approximation here; it is the exact fermion
+contribution to the effective action on the retained lattice surface.
+
+The CP-odd part is
+
+`Im Γ_f = -Σ_k arctan(λ_k / m)`
+
+where `{i λ_k}` are the eigenvalues of `D`. On the retained staggered lattice,
+the sublattice operator `ε(x) = (-1)^{Σx}` gives `εD + Dε = 0`, so the
+eigenvalues of `iD` come in exact `±λ` pairs. Since `arctan` is odd, the
+CP-odd fermion phase cancels pairwise.
+
+The runner now verifies on sampled `4^3 x 4` APBC `SU(3)` configurations that:
+
+- `εD + Dε = 0` holds to machine precision on the retained `3+1` surface
+- the eigenvalues of `iD` pair as `±λ` to machine precision
+- the spectral phase `Im Γ_f` vanishes to machine precision
+- the spectral phase matches the determinant phase extracted from
+  `det(D+mI)`
+
+This is a real strengthening of the strong-CP lane. It closes the fermion-side
+effective-action phase directly, without broadening the main theorem beyond the
+retained action surface.
+
 ## What Is Actually Proved
 
 ### Exact (theorem-grade):
@@ -240,14 +273,23 @@ configurations as an explicit audit.
 8. The determinant-positivity audit extends to the retained `3+1` APBC
    staggered operator surface on sampled `SU(3)` configurations
 
+### Computed exact fermion-effective-action support:
+
+9. `εD + Dε = 0` on the retained `3+1` APBC surface
+10. the eigenvalues of `iD` pair as `±λ` on sampled retained `3+1`
+    configurations
+11. the spectral CP-odd fermion phase `Im Γ_f = -Σ arctan(λ_k/m)` vanishes on
+    those sampled retained `3+1` configurations
+12. the spectral phase matches the determinant phase of `det(D+mI)`
+
 ### Structural (logic-grade):
 
-9. The anti-Hermitian determinant mechanism extends algebraically from the
+13. The anti-Hermitian determinant mechanism extends algebraically from the
    spatial surface to the retained `3+1` APBC surface
-10. θ_bare = 0 because the gauge action is fully axiom-determined
-11. arg det(M) = 0 because the staggered mass is real
-12. θ_eff = 0 on the retained action surface
-13. CP violation is confined to the weak sector via CKM
+14. θ_bare = 0 because the gauge action is fully axiom-determined
+15. arg det(M) = 0 because the staggered mass is real
+16. θ_eff = 0 on the retained action surface
+17. CP violation is confined to the weak sector via CKM
 
 ## External Consistency Support
 
@@ -279,10 +321,10 @@ they are **not** promoted here as new framework-native closure theorems.
    Z = Σ_Q Z_Q is established, the detailed instanton measure Z_Q on
    the physical S³ lattice is not computed here.
 
-3. **Radiative / chiral closure beyond support level.** The current repo has
-   strong consistency support for radiative stability of the retained
-   `θ_eff = 0` surface, but it does not yet promote a framework-native
-   interacting chiral/anomaly closure theorem.
+3. **Gauge-sector radiative / chiral / topological closure beyond the exact
+   fermion effective action.** The current repo now computes the fermion-side
+   effective-action phase exactly on the retained surface, but it still does
+   not promote a full interacting gauge-sector closure theorem beyond that.
 
 4. **Axion necessity beyond the retained action surface.** The theorem here is
    only that the retained action surface already gives `θ_eff = 0`. Whether
@@ -331,5 +373,5 @@ surface tightly enough to remove a bare strong-sector CP phase there.
 ```
 python3 scripts/frontier_strong_cp_theta_zero.py
 # Exit code: 0
-# PASS=60  FAIL=0
+# PASS=64  FAIL=0
 ```

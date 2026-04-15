@@ -554,6 +554,73 @@ def test_3p1_extension():
     return True
 
 
+def test_exact_fermion_effective_action():
+    print("\n=== EXACT FERMION EFFECTIVE ACTION: eigenvalue audit ===\n")
+
+    print("  The staggered fermion path integral is Gaussian, so det(D+m)")
+    print("  is the exact fermion contribution to the effective action.")
+    print("  This audit checks the CP-odd phase directly from the spectrum.\n")
+
+    L_s = 4
+    L_t = 4
+    mass = 0.1
+    n_configs = 5
+    rng = np.random.default_rng(2718281)
+
+    N = L_t * L_s ** 3 * 3
+    eps_diag = np.zeros(N)
+    idx = 0
+    for coords in np.ndindex(L_t, L_s, L_s, L_s):
+        eps_val = (-1) ** sum(coords)
+        for _ in range(3):
+            eps_diag[idx] = eps_val
+            idx += 1
+    eps_mat = np.diag(eps_diag)
+
+    U_test = random_gauge_config_3p1(L_s, L_t, rng)
+    D_test = build_staggered_dirac_3p1(L_s, L_t, U_test)
+    anticomm = eps_mat @ D_test + D_test @ eps_mat
+    max_anticomm = float(np.max(np.abs(anticomm)))
+    check("Sublattice symmetry εD + Dε = 0 on the retained 3+1 APBC surface", max_anticomm < 1e-12, f"max |εD + Dε| = {max_anticomm:.2e}")
+
+    max_pair_residual = 0.0
+    max_im_gamma = 0.0
+    max_phase_match = 0.0
+
+    for cfg in range(n_configs):
+        U = random_gauge_config_3p1(L_s, L_t, rng)
+        D = build_staggered_dirac_3p1(L_s, L_t, U)
+
+        lambdas = np.linalg.eigvalsh((1j * D).astype(complex))
+        lambdas_sorted = np.sort(lambdas)
+        n_eigs = len(lambdas_sorted)
+        pair_residuals = [
+            abs(lambdas_sorted[n_eigs - 1 - k] + lambdas_sorted[k])
+            for k in range(n_eigs // 2)
+        ]
+        max_pair_residual = max(max_pair_residual, max(pair_residuals, default=0.0))
+
+        im_gamma = float(-np.sum(np.arctan(lambdas / mass)))
+        max_im_gamma = max(max_im_gamma, abs(im_gamma))
+
+        sign, _ = safe_slogdet(D + mass * np.eye(D.shape[0]))
+        phase_det = float(np.angle(sign))
+        phase_match = abs(np.angle(np.exp(1j * (phase_det + im_gamma))))
+        max_phase_match = max(max_phase_match, phase_match)
+
+        if cfg < 2:
+            print(
+                f"  cfg {cfg}: pair res = {max(pair_residuals, default=0.0):.2e}, "
+                f"Im Γ = {im_gamma:.2e}, det phase = {phase_det:.2e}"
+            )
+
+    check("±λ eigenvalue pairing holds on sampled 3+1 APBC configurations", max_pair_residual < 1e-10, f"max |λ_k + λ_(N-1-k)| = {max_pair_residual:.2e}")
+    check("CP-odd fermion effective-action phase Im Γ vanishes on sampled 3+1 APBC configurations", max_im_gamma < 1e-10, f"max |Im Γ| = {max_im_gamma:.2e}")
+    check("Spectral Im Γ matches the determinant phase of det(D+mI)", max_phase_match < 1e-10, f"max wrapped |arg det + Im Γ| = {max_phase_match:.2e}")
+
+    return True
+
+
 def main():
     print("=" * 72)
     print("Strong CP / θ = 0 Theorem in the Cl(3) / Z³ Framework")
@@ -571,6 +638,7 @@ def main():
     test_interacting_cp()
     test_topology()
     test_3p1_extension()
+    test_exact_fermion_effective_action()
 
     print()
     print("=" * 72)
@@ -583,7 +651,9 @@ def main():
 
     print()
     print("All checks passed.  θ_eff = 0 is a structural prediction")
-    print("of the Cl(3)/Z³ framework on the retained action surface.")
+    print("of the Cl(3)/Z³ framework on the retained action surface,")
+    print("with exact fermion-effective-action phase cancellation")
+    print("verified on the retained 3+1 APBC surface.")
     return 0
 
 
