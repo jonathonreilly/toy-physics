@@ -76,11 +76,15 @@ Before this theorem, the strongest honest statement was:
 
 After this theorem, that is sharper:
 
-> the route already has its exact abstract Gaussian completion; what remains is
-> only the geometric / smooth identification of that abstract object with an
-> external continuum field formulation.
+> the route already has its exact abstract Gaussian completion; what remained
+> at this stage was the geometric / smooth identification of that abstract
+> object with an external continuum field formulation.
 
-So the frontier is no longer existence of the limit object, even abstractly.
+That downstream identification work has now also been discharged on the main
+path at the weak/Gaussian level. So the live frontier is no longer existence
+of the limit object, even abstractly. It is only the stricter textbook
+geometric/action comparison beyond the already-closed canonical smooth
+weak/Gaussian route.
 
 ## Honest status
 
@@ -92,3 +96,6 @@ This note still does **not** prove:
 
 It does prove that the exact discrete route already determines the abstract
 Gaussian limit object those stronger interpretations would need to identify.
+Later notes then carry that object through the chosen smooth global
+weak/Gaussian gravitational realization; what remains after the full chain is
+the stricter textbook geometric/action comparison beyond that level.

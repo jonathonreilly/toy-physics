@@ -12,8 +12,10 @@ step:
   - the compatible stationary section defines a consistent mean functional on
     that same cylindrical space.
 
-What remains after this theorem is not existence of the abstract limit object,
-but comparison to more canonical external continuum field / measure targets.
+What remains after this theorem is not existence of the abstract limit object.
+That geometric/smooth identification work is already closed later on the main
+path. The live stronger issue is now stricter textbook geometric/action
+comparison beyond the already-closed weak/Gaussian route.
 """
 
 from __future__ import annotations
@@ -132,7 +134,7 @@ def main() -> int:
     record(
         "the exact inverse-limit Gaussian cylinder family is already closed on the canonical refinement net",
         "inverse-limit gaussian cylinder" in inv_text
-        and "canonicalization" in cont_text,
+        and "stricter textbook geometric/action comparison" in cont_text,
         "this theorem starts from the exact projective-limit Gaussian family already present on the discrete route",
     )
     record(
@@ -151,9 +153,9 @@ def main() -> int:
         f"min covariance eigenvalue={min_cov_eig:.6e}, min sampled cylindrical norm={min_cov_norm:.6e}",
     )
     record(
-        "the remaining stronger issue is therefore comparison of the exact abstract Gaussian completion to more canonical external continuum field/measure targets, not existence of the limit object",
+        "the remaining stronger issue is therefore not existence of the abstract Gaussian completion, but stricter textbook geometric/action comparison beyond the already-closed weak/Gaussian route",
         max_cov_form_err < 1e-10 and max_mean_form_err < 1e-10 and min_cov_eig > 0.0,
-        "the exact discrete route already determines one abstract Gaussian/Cameron-Martin completion with a compatible mean functional; what remains is comparison to more canonical external continuum field / measure formulations",
+        "the exact discrete route already determines one abstract Gaussian/Cameron-Martin completion with a compatible mean functional; later notes close the smooth weak/Gaussian identifications, so the live stronger issue is now stricter textbook geometric/action comparison",
     )
 
     print("UNIVERSAL QG ABSTRACT GAUSSIAN COMPLETION")
@@ -173,8 +175,9 @@ def main() -> int:
     )
     print(
         "So the remaining stronger continuum issue is not existence of the "
-        "abstract limit object. It is comparison of that object to more "
-        "canonical external continuum field / measure formulations."
+        "abstract limit object. Later notes already close the smooth "
+        "weak/Gaussian identifications built on it; the live frontier is now "
+        "stricter textbook geometric/action comparison beyond that level."
     )
 
     print("\n" + "=" * 78)

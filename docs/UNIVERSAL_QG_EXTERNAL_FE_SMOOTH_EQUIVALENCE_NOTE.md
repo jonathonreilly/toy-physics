@@ -67,13 +67,15 @@ This theorem **does** close:
 > the external FE-to-smooth / weak-form / measure-equivalence step for the
 > chosen external smooth Sobolev weak Gaussian formulation.
 
-This theorem does **not** yet prove:
+This theorem does **not** by itself yet prove:
 
-- equivalence to a standard textbook Einstein-Hilbert continuum weak problem;
-- equivalence to a canonical continuum GR/QG measure independent of the chosen
+- canonical textbook weak/measure equivalence independent of the chosen
   external completion target;
-- uniqueness of the external smooth interpretation beyond that chosen target.
+- smooth gravitational identification of that canonical object;
+- stronger textbook geometric/action comparison beyond the weak/Gaussian
+  level.
 
-So the remaining stronger issue, if pushed further, is no longer existence of
-an external smooth weak/measure formulation. It is comparison to more standard
-or canonical external continuum formulations.
+Those first two have now been discharged by later authority notes. So the live
+remaining stronger issue on the main path is no longer existence of an
+external smooth weak/measure formulation. It is only stricter textbook
+geometric/action comparison beyond the already-closed weak/Gaussian route.

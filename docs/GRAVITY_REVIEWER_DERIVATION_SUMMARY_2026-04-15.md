@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-15  
 **Scope:** reviewer-facing summary of the gravity ladder only  
-**Boundary:** discrete-route gravity theorem, not continuum equivalence beyond the project route
+**Boundary:** direct-universal gravity and weak/Gaussian continuum bridge on the chosen smooth realization, not stronger textbook geometric/action comparison beyond that level
 
 ## One-line verdict
 
@@ -168,32 +168,76 @@ Primary authority:
 
 - [UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md)
 
+### 11. Canonical textbook weak/measure closure
+
+The same exact route now also determines one canonical textbook weak Sobolev /
+Gaussian cylinder object:
+
+- exact closed coercive weak problem on the completed carrier
+- exact Gaussian / Cameron-Martin structure from the same inverse covariance
+- no remaining chosen-target ambiguity at the weak/Gaussian level
+
+Primary authority:
+
+- [UNIVERSAL_QG_CANONICAL_TEXTBOOK_WEAK_MEASURE_EQUIVALENCE_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_WEAK_MEASURE_EQUIVALENCE_NOTE.md)
+
+### 12. Smooth local and finite-atlas gravitational identification
+
+The same canonical textbook weak/Gaussian object is already the local smooth
+gravitational weak/Gaussian object on the positive-background class, and it
+already patches on finite atlases:
+
+- exact local smooth gravitational identification
+- exact overlap covariance, action patching, stationary patching, and
+  covariance patching on finite atlases
+
+Primary authority:
+
+- [UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_LOCAL_IDENTIFICATION_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_LOCAL_IDENTIFICATION_NOTE.md)
+- [UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_ATLAS_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_ATLAS_NOTE.md)
+
+### 13. Smooth global weak/Gaussian gravitational solution class
+
+The same route now also closes globally on the chosen smooth realization:
+
+- exact projective time-slab exhaustion
+- exact Schur/global compatibility of stationary fields and covariances
+- exact smooth global weak gravitational stationary/Gaussian solution class
+
+Primary authority:
+
+- [UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_SOLUTION_CLASS_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_SOLUTION_CLASS_NOTE.md)
+
+### 14. Canonical smooth weak/measure equivalence
+
+The chosen smooth global gravitational weak/Gaussian realization is not a
+second target. It is the same canonical textbook weak/Gaussian object in
+smooth gravitational coordinates.
+
+Primary authority:
+
+- [UNIVERSAL_QG_CANONICAL_SMOOTH_GRAVITATIONAL_WEAK_MEASURE_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_CANONICAL_SMOOTH_GRAVITATIONAL_WEAK_MEASURE_NOTE.md)
+
 ## Exact claim boundaries
 
 The current gravity route supports the following exact wording:
 
 - “exact discrete `3+1` Einstein/Regge stationary action family on `PL S^3 x R`”
 - “exact UV-finite partition-density family on the same discrete `3+1` route, whose mean/stationary sector reproduces that Einstein/Regge family”
+- “exact canonical textbook weak/Gaussian object on the completed direct-universal route”
+- “exact chosen smooth global weak gravitational stationary/Gaussian solution class on the same route”
+- “exact canonical smooth weak/measure equivalence on that chosen realization”
 - “exact restricted strong-field closure on the star-supported finite-rank class”
 - “weak-field gravity through the Poisson / Newton chain”
 
-It does **not** support the stronger continuum wording unless a separate
-continuum interpretation theorem is proved.
+It does **not** support the stronger textbook Einstein-Hilbert / geometric
+action wording unless a separate comparison theorem is proved.
 
-Do not collapse the discrete-route theorem into a generic continuum GR claim.
-The discrete route is exact on its own terms; the continuum identification is a
-separate statement. The partition, Schur, refinement, inverse-limit, and
-abstract-completion theorems sharpen that remaining issue: the discrete route
-already has exact finite-dimensional projective closure, an exact canonical
-barycentric-dyadic refinement net, an exact inverse-limit Gaussian cylinder
-family, an exact abstract Gaussian completion, an exact project-native PL
-field realization, and an exact project-native PL weak/Dirichlet system, so
-an exact project-native PL `H^1`-type carrier, so the remaining issue is now a
-smooth / external continuum-equivalence theorem, not a missing local gravity
-theorem, UV-finiteness problem, missing geometric refinement structure,
-missing inverse-limit object, missing abstract limit object, missing
-project-native field carrier, missing project-native weak structure, or
-missing project-native Sobolev carrier.
+Do not collapse the direct-universal route into a stronger textbook action
+claim than the authority path actually closes. The discrete route plus its
+weak/Gaussian continuum bridge are exact on their own terms; the remaining
+separate issue is stricter textbook geometric/action comparison beyond that
+already-closed weak/Gaussian level.
 
 ## What a reviewer should take away
 

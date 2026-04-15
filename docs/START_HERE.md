@@ -3,6 +3,25 @@
 **Date:** 2026-04-15
 **Purpose:** root navigation for the current `main` package
 
+This repository is a discrete-axiom physics program asking one concrete
+question:
+
+> can a single discrete axiom, `Cl(3)` on `Z^3`, recover a nontrivial unified
+> physics package rather than only a toy model?
+
+The current answer on `main` is: partially yes. Some lanes are retained, some
+are quantitatively strong but still bounded, and a few flagship gates are
+still open.
+
+On the gravity route, the direct-universal branch now closes as an exact global
+Lorentzian Einstein/Regge stationary action family on discrete `3+1`
+spacetime `PL S^3 x R`. On the QG/continuum side, the exact project-native PL
+weak Gaussian Sobolev completion is now also identified with the canonical
+textbook weak/Gaussian object and with the chosen smooth global weak
+gravitational stationary/Gaussian solution class on the same route. The
+remaining stronger continuum/QG issue is stricter textbook geometric/action
+comparison beyond that already-closed weak/Gaussian level.
+
 This repo is too large to understand by browsing filenames. There are two
 reading modes:
 
@@ -56,3 +75,55 @@ Then use the historical organization layer:
 
 Those files are useful for history. They are not the current package front
 door.
+
+## Current Program Reality
+
+The current flagship publication package is:
+
+- framework: `Cl(3)` on `Z^3`
+- retained core: gauge/matter backbone, anomaly-forced `3+1`, derived
+  electroweak scale, weak-field gravity, exact global Lorentzian
+  Einstein/Regge stationary action family on discrete `3+1` spacetime
+  `PL S^3 x R`, exact UV-finite partition-density family whose
+  mean/stationary sector is that same discrete GR family, exact canonical
+  barycentric-dyadic refinement net for that same discrete density/section
+  family, exact inverse-limit Gaussian cylinder closure for that same
+  canonical discrete family, exact abstract Gaussian / Cameron-Martin
+  completion for that same canonical discrete family, exact project-native PL
+  field realization for that same canonical discrete family, exact
+  project-native PL weak/Dirichlet-form closure for that same canonical
+  discrete family, exact project-native PL `H^1`-type Sobolev interface for
+  that same canonical discrete family, exact external FE/Galerkin smooth
+  weak-field and Gaussian measure equivalence for that same canonical
+  discrete family, exact canonical textbook weak/measure equivalence for that
+  same canonical discrete family, exact smooth local gravitational
+  weak/Gaussian identification on the positive-background class, exact smooth
+  finite-atlas gravitational stationary-family identification, exact smooth
+  global weak gravitational stationary/Gaussian solution class on the chosen
+  smooth realization, exact canonical smooth gravitational weak/measure
+  equivalence on that same realization, retained `S^3`,
+  one-generation closure, three-generation structure, exact `I_3 = 0`, exact
+  CPT
+- bounded observation-facing portfolio: DM ratio, `alpha_s`, `m_t`, CKM
+  magnitudes, cosmology companions, bounded Higgs lane, and sharp companion
+  predictions
+- live gates: DM relic mapping, renormalized `y_t`, CKM / quantitative flavor
+
+## What Not To Do
+
+- do not assume the current repo center of gravity is an older frontier lane
+- do not assume old "flagship" docs are current authority
+- do not treat historical program families as the current manuscript surface
+
+## Minimal Read Order
+
+If you only want the current paper surface:
+
+1. [CURRENT_FLAGSHIP_ENTRYPOINT_2026-04-14.md](CURRENT_FLAGSHIP_ENTRYPOINT_2026-04-14.md)
+2. [publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md](publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md)
+3. [publication/ci3_z3/PUBLICATION_MATRIX.md](publication/ci3_z3/PUBLICATION_MATRIX.md)
+
+If you want the rest of the repo after that:
+
+1. [repo/LANE_STATUS_BOARD.md](repo/LANE_STATUS_BOARD.md)
+2. [repo/REPO_ORGANIZATION.md](repo/REPO_ORGANIZATION.md)

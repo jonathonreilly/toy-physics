@@ -66,3 +66,91 @@ Current safe package-level statements:
 
 If an older note is not linked from the package, it is not front-door
 authority.
+
+## Current Paper Surface
+
+Retained backbone:
+
+- weak-field gravity from the Poisson / Newton chain
+- weak-field WEP and time dilation as retained corollaries on that gravity
+  surface
+- restricted strong-field gravity closure on the current star-supported
+  finite-rank class under the exact static conformal bridge
+- direct-universal exact global Lorentzian Einstein/Regge stationary action
+  family on discrete `3+1` spacetime `PL S^3 x R`
+- exact UV-finite partition-density family on the same discrete `3+1` route,
+  with mean/stationary sector equal to that Einstein/Regge family
+  - authority: [UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md](../../UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md)
+- exact canonical geometric barycentric-dyadic refinement net for that same
+  discrete partition-density and stationary-section family
+  - authority: [UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md](../../UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md)
+- exact inverse-limit Gaussian cylinder closure for that same canonical
+  discrete QG family
+  - authority: [UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md](../../UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md)
+- exact abstract Gaussian / Cameron-Martin completion for that same canonical
+  discrete QG family
+  - authority: [UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md](../../UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md)
+- exact project-native PL field realization for that same canonical discrete
+  QG family
+  - authority: [UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md](../../UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md)
+- exact project-native PL weak/Dirichlet-form closure for that same canonical
+  discrete QG family
+  - authority: [UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md](../../UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md)
+- exact project-native PL `H^1`-type Sobolev interface for that same canonical
+  discrete QG family
+  - authority: [UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md](../../UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md)
+- exact external FE/Galerkin smooth weak-field and Gaussian measure
+  equivalence for that same canonical discrete QG family
+  - authority: [UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md](../../UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md)
+- exact canonical textbook weak/measure equivalence for that same canonical
+  discrete QG family
+  - authority: [UNIVERSAL_QG_CANONICAL_TEXTBOOK_WEAK_MEASURE_EQUIVALENCE_NOTE.md](../../UNIVERSAL_QG_CANONICAL_TEXTBOOK_WEAK_MEASURE_EQUIVALENCE_NOTE.md)
+- exact smooth local gravitational weak/Gaussian identification on the
+  positive-background class
+  - authority: [UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_LOCAL_IDENTIFICATION_NOTE.md](../../UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_LOCAL_IDENTIFICATION_NOTE.md)
+- exact smooth finite-atlas gravitational stationary-family identification on
+  the chosen smooth realization
+  - authority: [UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_ATLAS_NOTE.md](../../UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_ATLAS_NOTE.md)
+- exact smooth global weak gravitational stationary/Gaussian solution class on
+  the chosen smooth realization
+  - authority: [UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_SOLUTION_CLASS_NOTE.md](../../UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_SOLUTION_CLASS_NOTE.md)
+- exact canonical smooth gravitational weak/measure equivalence on the chosen
+  smooth realization
+  - authority: [UNIVERSAL_QG_CANONICAL_SMOOTH_GRAVITATIONAL_WEAK_MEASURE_NOTE.md](../../UNIVERSAL_QG_CANONICAL_SMOOTH_GRAVITATIONAL_WEAK_MEASURE_NOTE.md)
+- exact native `Cl(3)` / `SU(2)`
+- graph-first structural `SU(3)`
+- anomaly-forced `3+1`
+- electroweak hierarchy / `v`
+- retained `S^3` compactification / topology closure
+- full-framework one-generation closure
+- three-generation matter structure in the framework
+- exact `I_3 = 0` theorem on the Hilbert surface
+- exact CPT theorem on the free staggered lattice
+
+Reviewer-facing framing notes:
+
+- the gravity capstone is full discrete `3+1` GR on the project route; do not
+  silently upgrade that to an unqualified continuum-GR claim.
+- the QG bridge now also has its canonical textbook weak/measure closure,
+  smooth local gravitational identification, finite-atlas smooth gravitational
+  patching, smooth global weak/Gaussian solution class, and canonical smooth
+  weak/measure equivalence on the chosen realization.
+- the only live continuum/QG frontier on the current authority path is a
+  stricter textbook geometric/action comparison beyond that already-closed
+  weak/Gaussian level.
+
+Observation-facing bounded portfolio:
+
+- DM ratio `R = 5.48` vs `5.47`
+- zero-import `\alpha_s(M_Z) = 0.1181`
+- best import-allowed `m_t = 171.0 GeV`
+- zero-import `m_t = 169.4 GeV` on the current 2-loop bounded route
+- CKM magnitude package with strong `|V_us|`, `|V_cb|`, `|V_ub|`
+- cosmology companions such as `\Omega_\Lambda`, `n_s`, `w = -1`
+- Higgs and sharp companion predictions
+
+Live high-impact gates:
+
+1. DM relic mapping
+2. renormalized `y_t` matching
+3. CKM / quantitative flavor closure

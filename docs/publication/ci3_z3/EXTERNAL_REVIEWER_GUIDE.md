@@ -26,7 +26,23 @@ The current package is:
 - exact project-native PL weak/Dirichlet-form closure on that route
 - exact project-native PL `H^1`-type Sobolev interface on that route
 - exact external FE/Galerkin smooth weak-field and Gaussian measure
-  equivalence on that route
+  equivalence for that same canonical discrete QG family
+  - authority: [UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md](../../UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md)
+- exact canonical textbook weak/measure equivalence for that same canonical
+  discrete QG family
+  - authority: [UNIVERSAL_QG_CANONICAL_TEXTBOOK_WEAK_MEASURE_EQUIVALENCE_NOTE.md](../../UNIVERSAL_QG_CANONICAL_TEXTBOOK_WEAK_MEASURE_EQUIVALENCE_NOTE.md)
+- exact smooth local gravitational weak/Gaussian identification on the
+  positive-background class
+  - authority: [UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_LOCAL_IDENTIFICATION_NOTE.md](../../UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_LOCAL_IDENTIFICATION_NOTE.md)
+- exact smooth finite-atlas gravitational stationary-family identification on
+  the chosen smooth realization
+  - authority: [UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_ATLAS_NOTE.md](../../UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_ATLAS_NOTE.md)
+- exact smooth global weak gravitational stationary/Gaussian solution class on
+  the chosen smooth realization
+  - authority: [UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_SOLUTION_CLASS_NOTE.md](../../UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_SOLUTION_CLASS_NOTE.md)
+- exact canonical smooth gravitational weak/measure equivalence on the chosen
+  smooth realization
+  - authority: [UNIVERSAL_QG_CANONICAL_SMOOTH_GRAVITATIONAL_WEAK_MEASURE_NOTE.md](../../UNIVERSAL_QG_CANONICAL_SMOOTH_GRAVITATIONAL_WEAK_MEASURE_NOTE.md)
 - exact native `SU(2)`
 - graph-first structural `SU(3)`
 - anomaly-forced `3+1`
@@ -60,6 +76,21 @@ Current safe statements from that stack:
 - bounded import-allowed `m_t = 171.0 GeV`
 - Higgs mechanism derived; exact mass still bounded/open
 
+The most important gravity companion point is also framed carefully: the
+paper's gravity self-consistency claim is that Poisson is the unique local
+fixed point in the audited operator family; restricted strong-field closure is
+exact on the star-supported finite-rank class; and the capstone gravity claim
+is exact full discrete `3+1` GR on the project route, not an unqualified
+continuum-Einstein-Hilbert claim. The QG/continuum chain is also substantially
+stronger now: the UV-finite partition family, canonical refinement net,
+inverse-limit closure, abstract Gaussian completion, project-native PL
+field/weak/Sobolev structures, canonical textbook weak/measure object, smooth
+local and finite-atlas gravitational identifications, smooth global weak
+gravitational solution class, and canonical smooth weak/measure equivalence on
+the chosen realization are all exact on the authority path. What still remains
+is only a stricter textbook geometric/action comparison beyond that
+already-closed weak/Gaussian level.
+
 ## Other Bounded Families
 
 - DM ratio and relic companions
@@ -74,6 +105,11 @@ Current safe statements from that stack:
 3. CKM / quantitative flavor closure
 
 Exact Higgs-mass closure also remains outside the retained flagship surface.
+
+- Higgs mass `m_H`
+- stricter textbook geometric/action comparison beyond the already-closed
+  canonical smooth weak/Gaussian gravitational equivalence
+- several companion phenomenology bridges
 
 ## Read The Package In Order
 
