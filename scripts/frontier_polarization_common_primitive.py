@@ -120,6 +120,7 @@ def main() -> int:
     print("Shared primitive family: YES")
     print("Same exact object: NO")
     print("Strongest exact common construction: Route 2 bridge triple `B_R = (K_R, I_TB, Xi_TB)`")
+    print("Associated exact output today: localization orbit over valid `3+1` frames.")
     print(
         "Still missing: a covariant `3+1` polarization-frame / projector bundle "
         "with distinguished connection."

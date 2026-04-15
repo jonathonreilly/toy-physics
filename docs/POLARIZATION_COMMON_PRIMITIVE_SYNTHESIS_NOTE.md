@@ -18,6 +18,9 @@ The direct universal lane is blocked **after** the exact `3+1` kinematic lift
 and tensor Hessian candidate are already in hand: it needs a covariant
 polarization-frame / projector bundle that can localize the unique symmetric
 quotient kernel into the same lapse, shift, and spatial trace/shear channels.
+The strongest exact universal-side output so far is an associated family of
+such localizations over valid `3+1` polarization frames, not a canonical
+section.
 
 So the two blockers are different stage-specific realizations of the same
 missing family:

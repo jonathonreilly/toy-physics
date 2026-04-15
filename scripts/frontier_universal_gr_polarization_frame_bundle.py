@@ -10,8 +10,8 @@ This is not a closure proof. It checks that the current atlas gives:
 4. the exact unique symmetric `3+1` quotient kernel;
 5. a sharpened blocker stating that the missing primitive is a covariant
    `3+1` polarization frame / projector bundle;
-6. a frame-dependence check showing that the current stack does not supply a
-   canonical `Pi_curv` from the quotient kernel alone.
+6. a frame-orbit check showing that the current stack determines an
+   associated family of localizations, not a canonical section.
 """
 
 from __future__ import annotations
@@ -286,11 +286,11 @@ def main() -> int:
             "blocker is still sharpened to the localization primitive",
         ),
         Check(
-            "curvature-localization blocker isolates the missing primitive",
-            has(curv, "Pi_curv")
-            and has(curv, "covariant `3+1` polarization frame")
-            and has(curv, "projector bundle"),
-            "the missing object is now named as a frame primitive plus Pi_curv",
+            "curvature-localization blocker isolates the frame-orbit obstruction",
+            has(curv, "associated family of candidate localizations")
+            and has(curv, "polarization-frame orbit")
+            and has(curv, "distinguished connection"),
+            "the exact output is a localization orbit, not a canonical section",
         ),
         Check(
             "frame-bundle note records the same missing primitive",
@@ -334,8 +334,8 @@ def main() -> int:
             "Direct-universal progress: the scalar observable principle and the "
             "3+1 lift now support an exact tensor-valued variational candidate "
             "with a unique symmetric quotient kernel, but the exact curvature-"
-            "localization operator is still missing and is frame-dependent on "
-            "the current stack."
+            "localization operator is still missing and only an associated "
+            "localization orbit is currently determined."
         )
         return 0
 

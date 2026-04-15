@@ -36,6 +36,11 @@ frames. It cannot. The localized channel coefficients move under frame
 rotation, so the current stack does not canonically fix the lapse/shift/shear
 splitting.
 
+The strongest exact object available here is the associated orbit of
+localized channels over the valid `3+1` polarization frames. That orbit is
+exact, but the stack does not supply a distinguished connection or horizontal
+distribution that picks a canonical section.
+
 ## What is exact already
 
 ### Scalar generator
@@ -94,13 +99,16 @@ dynamics law.
 The smallest honest missing object is now:
 
 > a covariant `3+1` polarization-frame / projector bundle, equipped with a
-> distinguished connection, that canonically splits the unique symmetric
-> Hessian kernel into lapse, shift, and spatial trace/shear channels before
+> distinguished connection, that canonically selects one section from the
+> exact orbit of localized channels and splits the unique symmetric Hessian
+> kernel into lapse, shift, and spatial trace/shear channels before
 > localization.
 
 Equivalently, the missing primitive is still a covariant `3+1`
 curvature-localization operator `Pi_curv`, but the current stack shows that
-`Pi_curv` is not derivable without that extra frame primitive.
+`Pi_curv` is not derivable without that extra frame primitive. The exact
+structure available today is the frame-orbit family of candidate
+localizations, not a canonical projector bundle.
 
 ## Honest status
 

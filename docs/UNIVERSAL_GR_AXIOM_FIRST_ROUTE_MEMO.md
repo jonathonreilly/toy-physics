@@ -163,7 +163,12 @@ The latest bundle attempt makes the obstruction sharper:
 - the quotient kernel is unique
 - the localized channel coefficients change under valid `3+1` frame rotations
 - so the current stack determines an associated family of candidate
-  localizations, not a canonical section or projector bundle
+  localizations over the valid `3+1` polarization-frame orbit, not a
+  canonical section or projector bundle
+
+The strongest exact universal-side output today is therefore the localization
+orbit itself. What is missing is not another candidate kernel; it is the
+distinguished connection that would turn that orbit into a canonical section.
 
 The missing primitive is therefore not just `Pi_curv` itself. It is a
 covariant `3+1` polarization-frame / projector bundle, with a distinguished

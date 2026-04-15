@@ -24,6 +24,10 @@ What it does **not** give is a canonical section or projector bundle that
 splits the symmetric kernel into lapse, shift, and spatial trace/shear
 channels before localization.
 
+What it does give, exactly, is an associated family of localized channel
+coefficients indexed by valid `3+1` polarization frames. That family is
+covariant as a set, but it is not yet a canonical section.
+
 ## Attempted derivation
 
 The natural attempt is:

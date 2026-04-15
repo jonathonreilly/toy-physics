@@ -33,6 +33,12 @@ frame. It cannot. Two valid `3+1` polarization frames give different
 localized channel coefficients for the same tensor candidate, so the current
 stack does not supply a canonical `Pi_curv`.
 
+The strongest exact object the current stack does supply is therefore an
+associated family of candidate localizations over the valid `3+1`
+polarization-frame orbit. That family is exact, but it is not a section: the
+current stack does not pick a distinguished connection that reduces the orbit
+to one canonical projector.
+
 ## What is exact already
 
 ### Scalar generator
@@ -91,13 +97,16 @@ dynamics law.
 The smallest honest missing object is now:
 
 > a covariant `3+1` polarization-frame / projector bundle, with a
-> distinguished connection, that canonically splits the unique symmetric
+> distinguished connection, that canonically selects one section from the
+> exact family of frame-localized candidates and splits the unique symmetric
 > Hessian kernel into lapse, shift, and spatial trace/shear channels before
 > localization.
 
 Equivalently, the missing primitive is still a covariant `3+1`
 curvature-localization operator `Pi_curv`, but the current stack shows that
-`Pi_curv` is not derivable without that extra frame primitive.
+`Pi_curv` is not derivable without that extra frame primitive. What is exact
+today is only the orbit of frame-dependent localized channels, not a
+canonical section of that orbit.
 
 The localization operator itself would then turn the quotient kernel into a
 curvature law rather than merely a bilinear form.
