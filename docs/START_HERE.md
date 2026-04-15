@@ -10,17 +10,14 @@ Use this order on `main`:
 6. [Derivation / validation map](publication/ci3_z3/DERIVATION_VALIDATION_MAP.md)
 7. [Derivation atlas](publication/ci3_z3/DERIVATION_ATLAS.md)
 
-If you want the quantitative synthesis memo, go to:
+If you are checking the promoted quantitative lanes directly, use:
 
-- [COMPLETE_PREDICTION_CHAIN_2026_04_15.md](COMPLETE_PREDICTION_CHAIN_2026_04_15.md)
-
-If you are checking supporting quantitative theorems behind that package, use:
-
+- [ALPHA_S_DERIVED_NOTE.md](ALPHA_S_DERIVED_NOTE.md)
 - [RCONN_DERIVED_NOTE.md](RCONN_DERIVED_NOTE.md)
 - [YT_EW_COLOR_PROJECTION_THEOREM.md](YT_EW_COLOR_PROJECTION_THEOREM.md)
 - [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
 - [YT_QFP_INSENSITIVITY_THEOREM.md](YT_QFP_INSENSITIVITY_THEOREM.md)
-- [HIGGS_MASS_FROM_AXIOM_NOTE.md](HIGGS_MASS_FROM_AXIOM_NOTE.md)
+- [HIGGS_VACUUM_PROMOTED_NOTE.md](HIGGS_VACUUM_PROMOTED_NOTE.md)
 
 Remaining live gates are now:
 

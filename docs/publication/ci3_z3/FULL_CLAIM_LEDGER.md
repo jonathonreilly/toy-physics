@@ -112,8 +112,7 @@ external reviewer will ask about them whether or not they are retained.
 
 | Quantity / lane | Current decision | Why not promoted | Primary authority | Matrix / freeze reference |
 |---|---|---|---|---|
-| complete prediction chain | synthesis only | release-snapshot memo for the promoted component stack; not a standalone canonical lane | [COMPLETE_PREDICTION_CHAIN_2026_04_15.md](../../COMPLETE_PREDICTION_CHAIN_2026_04_15.md) | package synthesis note, n/a |
-| `alpha_s(M_Z)` | promoted | now carried as its own quantitative lane rather than hidden inside a one-piece card | [COMPLETE_PREDICTION_CHAIN_2026_04_15.md](../../COMPLETE_PREDICTION_CHAIN_2026_04_15.md) | matrix row `\alpha_s(M_Z)`, n/a |
+| `alpha_s(M_Z)` | promoted | standalone strong-coupling lane on `main` | [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md) | matrix row `\alpha_s(M_Z)`, n/a |
 | EW normalization package | promoted | now promoted with the complete chain rather than left as a bounded component stack | [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md) | matrix row `EW normalization package`, n/a |
 | Yukawa / top package | promoted | `y_t` and `m_t` are now carried as promoted quantitative rows | [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md) | matrix row `Yukawa / top package`, n/a |
 
@@ -129,7 +128,7 @@ external reviewer will ask about them whether or not they are retained.
 
 | Quantity / lane | Current decision | Why not promoted | Primary authority | Matrix / freeze reference |
 |---|---|---|---|---|
-| Higgs / vacuum package | promoted quantitative package | now carried by the complete prediction chain and auxiliary Higgs note rather than a bounded Higgs lane | [COMPLETE_PREDICTION_CHAIN_2026_04_15.md](../../COMPLETE_PREDICTION_CHAIN_2026_04_15.md), [HIGGS_MASS_FROM_AXIOM_NOTE.md](../../HIGGS_MASS_FROM_AXIOM_NOTE.md) | matrix row `Higgs / vacuum package`, n/a |
+| Higgs / vacuum package | promoted quantitative package | standalone Higgs/vacuum lane on `main` with auxiliary direct-Higgs support retained separately | [HIGGS_VACUUM_PROMOTED_NOTE.md](../../HIGGS_VACUUM_PROMOTED_NOTE.md) | matrix row `Higgs / vacuum package`, n/a |
 | Bekenstein-Hawking entropy | bounded companion | useful companion signal, not part of flagship theorem spine | [BH_ENTROPY_DERIVED_NOTE.md](../../BH_ENTROPY_DERIVED_NOTE.md) | matrix row `Bekenstein-Hawking entropy`, `F07` |
 | gravitational decoherence | bounded companion | concrete BMV-class benchmark prediction, but still companion-only and unmeasured | [GRAV_DECOHERENCE_DERIVED_NOTE.md](../../GRAV_DECOHERENCE_DERIVED_NOTE.md) | matrix row `gravitational decoherence`, `F07` |
 | Proton lifetime | bounded sharp prediction | later companion or appendix material, not flagship core | [PROTON_LIFETIME_DERIVED_NOTE.md](../../PROTON_LIFETIME_DERIVED_NOTE.md) | matrix row `Proton lifetime`, `F07` |

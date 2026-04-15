@@ -41,19 +41,15 @@ The current package is:
 
 Review this as a modular component stack:
 
-1. `alpha_s` / synthesis support: [COMPLETE_PREDICTION_CHAIN_2026_04_15.md](../../COMPLETE_PREDICTION_CHAIN_2026_04_15.md)
+1. `alpha_s`: [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md)
 2. color-factor support: [RCONN_DERIVED_NOTE.md](../../RCONN_DERIVED_NOTE.md)
 3. EW normalization: [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md)
 4. Yukawa / top closure: [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
 5. QFP robustness support: [YT_QFP_INSENSITIVITY_THEOREM.md](../../YT_QFP_INSENSITIVITY_THEOREM.md)
-6. Higgs / vacuum support: [HIGGS_MASS_FROM_AXIOM_NOTE.md](../../HIGGS_MASS_FROM_AXIOM_NOTE.md)
-
-The complete-chain memo is a synthesis artifact tying those rows together. It
-is not the canonical lane list.
+6. Higgs / vacuum: [HIGGS_VACUUM_PROMOTED_NOTE.md](../../HIGGS_VACUUM_PROMOTED_NOTE.md)
 
 Current promoted statements from that stack:
 
-- `v = 246.28 GeV`
 - `alpha_s(M_Z) = 0.1181`
 - `sin^2(theta_W)(M_Z) = 0.2306`
 - `1/alpha_EM(M_Z) = 127.67`

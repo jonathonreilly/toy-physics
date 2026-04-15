@@ -50,19 +50,15 @@ it is not the default review surface.
 
 The current canonical quantitative stack is modular:
 
-- `alpha_s` / synthesis note: [COMPLETE_PREDICTION_CHAIN_2026_04_15.md](docs/COMPLETE_PREDICTION_CHAIN_2026_04_15.md)
+- [ALPHA_S_DERIVED_NOTE.md](docs/ALPHA_S_DERIVED_NOTE.md)
 - [RCONN_DERIVED_NOTE.md](docs/RCONN_DERIVED_NOTE.md)
 - [YT_EW_COLOR_PROJECTION_THEOREM.md](docs/YT_EW_COLOR_PROJECTION_THEOREM.md)
 - [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](docs/YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
 - [YT_QFP_INSENSITIVITY_THEOREM.md](docs/YT_QFP_INSENSITIVITY_THEOREM.md)
-- [HIGGS_MASS_FROM_AXIOM_NOTE.md](docs/HIGGS_MASS_FROM_AXIOM_NOTE.md)
-
-The complete-chain memo is a synthesis surface over those promoted lanes. It is
-not itself the canonical lane taxonomy of the repo.
+- [HIGGS_VACUUM_PROMOTED_NOTE.md](docs/HIGGS_VACUUM_PROMOTED_NOTE.md)
 
 That component stack now supports the following promoted statements:
 
-- `v = 246.28 GeV`
 - `alpha_s(M_Z) = 0.1181`
 - `sin^2(theta_W)(M_Z) = 0.2306`
 - `1/alpha_EM(M_Z) = 127.67`

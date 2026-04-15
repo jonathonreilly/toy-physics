@@ -52,19 +52,15 @@ route history.
 
 The current canonical quantitative stack is modular:
 
-- `alpha_s` / synthesis note: [COMPLETE_PREDICTION_CHAIN_2026_04_15.md](COMPLETE_PREDICTION_CHAIN_2026_04_15.md)
+- [ALPHA_S_DERIVED_NOTE.md](ALPHA_S_DERIVED_NOTE.md)
 - [RCONN_DERIVED_NOTE.md](RCONN_DERIVED_NOTE.md)
 - [YT_EW_COLOR_PROJECTION_THEOREM.md](YT_EW_COLOR_PROJECTION_THEOREM.md)
 - [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
 - [YT_QFP_INSENSITIVITY_THEOREM.md](YT_QFP_INSENSITIVITY_THEOREM.md)
-- [HIGGS_MASS_FROM_AXIOM_NOTE.md](HIGGS_MASS_FROM_AXIOM_NOTE.md)
-
-The complete-chain memo is a synthesis surface over the promoted lanes. It is
-not itself the canonical lane taxonomy.
+- [HIGGS_VACUUM_PROMOTED_NOTE.md](HIGGS_VACUUM_PROMOTED_NOTE.md)
 
 Current promoted package-level statements:
 
-- `v = 246.28 GeV`
 - `alpha_s(M_Z) = 0.1181`
 - `sin^2(theta_W)(M_Z) = 0.2306`
 - `1/alpha_EM(M_Z) = 127.67`
