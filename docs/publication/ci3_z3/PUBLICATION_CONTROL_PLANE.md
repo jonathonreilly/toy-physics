@@ -67,6 +67,7 @@ Canonical files:
 | [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md) | evidence contract for retained/manuscript-facing claims |
 | [QUANTITATIVE_SUMMARY_TABLE.md](./QUANTITATIVE_SUMMARY_TABLE.md) | reviewer-facing prediction/observation table |
 | [RESULTS_INDEX.md](./RESULTS_INDEX.md) | manuscript section to note/runner map |
+| [GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md](./GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md) | compact gravity-package overview and theorem ladder |
 | [REPRODUCIBILITY_FREEZE_2026-04-14.md](./REPRODUCIBILITY_FREEZE_2026-04-14.md) | current pinned release slice |
 | [STALE_AUTHORITY_AUDIT_2026-04-14.md](./STALE_AUTHORITY_AUDIT_2026-04-14.md) | quarantine list for stale authority |
 | [NATURE_PACKAGE.md](./NATURE_PACKAGE.md) | letter package rule set |

@@ -17,6 +17,8 @@ The current flagship package is not “everything in the repo.” It is:
 - `Cl(3)` on `Z^3` as the working physical theory
 - weak-field gravity through the Poisson / Newton chain
 - weak-field WEP and time dilation on that same retained gravity surface
+- direct-universal discrete global Lorentzian Einstein/Regge stationary action
+  family on `PL S^3 x R`
 - exact native `SU(2)`
 - graph-first structural `SU(3)`
 - anomaly-forced `3+1`
@@ -54,8 +56,10 @@ paper core.
 
 The most important gravity companion point is also framed carefully: the
 paper’s gravity self-consistency claim is that Poisson is the unique local
-fixed point in the audited operator family, while broader strong-field
-generality remains restricted.
+fixed point in the audited operator family; restricted strong-field closure is
+exact on the star-supported finite-rank class; and the capstone gravity claim
+is exact full discrete `3+1` GR on the project route, not an unqualified
+continuum-equivalence statement.
 
 ## What is still open
 
@@ -77,8 +81,9 @@ Also still open:
 4. [CLAIMS_TABLE.md](./CLAIMS_TABLE.md)
 5. [FULL_CLAIM_LEDGER.md](./FULL_CLAIM_LEDGER.md)
 6. [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md)
-7. [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md)
-8. then the manuscript surfaces:
+7. [GRAVITY_REVIEWER_DERIVATION_SUMMARY_2026-04-15.md](../../GRAVITY_REVIEWER_DERIVATION_SUMMARY_2026-04-15.md)
+8. [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md)
+9. then the manuscript surfaces:
    - [NATURE_DRAFT.md](./NATURE_DRAFT.md)
    - [ARXIV_DRAFT.md](./ARXIV_DRAFT.md)
 

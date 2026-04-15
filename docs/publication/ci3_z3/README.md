@@ -20,7 +20,9 @@ If you are new to the repo, read these first:
      inline import class and last-audited coverage notes
 8. [Derivation / validation map](./DERIVATION_VALIDATION_MAP.md)
    - claim-level evidence contract for retained manuscript-facing claims
-9. [Running package issues](./RUNNING_PACKAGE_ISSUES_2026-04-14.md)
+9. [Gravity publication package summary](./GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md)
+   - compact gravity ladder and exact gravity claim boundary on the current package
+10. [Running package issues](./RUNNING_PACKAGE_ISSUES_2026-04-14.md)
 
 That path makes four things explicit:
 
@@ -44,6 +46,7 @@ That path makes four things explicit:
 - [Remote branch audit](./REMOTE_BRANCH_AUDIT_2026-04-14.md)
 - [Derivation atlas](./DERIVATION_ATLAS.md)
 - [Derivation / validation map](./DERIVATION_VALIDATION_MAP.md)
+- [Gravity publication package summary](./GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md)
 - [Full claim ledger](./FULL_CLAIM_LEDGER.md)
 - [Running package issues](./RUNNING_PACKAGE_ISSUES_2026-04-14.md)
 - [Results index](./RESULTS_INDEX.md)
@@ -79,6 +82,8 @@ Retained backbone:
 - weak-field WEP and time dilation as retained corollaries on that gravity surface
 - restricted strong-field gravity closure on the current star-supported
   finite-rank class under the exact static conformal bridge
+- direct-universal exact global Lorentzian Einstein/Regge stationary action
+  family on discrete `3+1` spacetime `PL S^3 x R`
 - exact native `Cl(3)` / `SU(2)`
 - graph-first structural `SU(3)`
 - anomaly-forced `3+1`
@@ -103,6 +108,8 @@ Reviewer-facing framing notes:
   taste-artifact statement.
 - the gravity claim uses a self-consistency principle: Poisson is the unique
   local fixed point in the audited operator family.
+- the gravity capstone is now full discrete `3+1` GR on the project route;
+  do not silently upgrade that to an unqualified continuum-GR claim.
 - the paper is positioned against other discrete/unification programs only at a
   compact framing level; it is not trying to be a survey.
 
