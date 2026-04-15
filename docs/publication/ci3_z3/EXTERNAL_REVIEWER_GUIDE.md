@@ -107,6 +107,8 @@ Current status from that stack:
   rows use the retained running bridge
 - bounded `y_t(v) = 0.9176`
 - bounded `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
+  with the current `~3%` QFP/RGE-surrogate systematic carried explicitly by
+  the Yukawa/top lane
 - promoted CKM atlas/axiom closure package
   (no quark-mass or fitted CKM inputs; canonical CMT `alpha_s(v)` input):
   `|V_us| = 0.22727`,
@@ -117,7 +119,7 @@ Current status from that stack:
 - bounded Higgs / vacuum package:
   `m_H = 119.8 GeV` (2-loop support route),
   `125.3 GeV` (framework-side 3-loop route),
-  bounded vacuum-stability readout inherited from the bounded `y_t` lane
+  bounded vacuum-stability readout inherited from the bounded `y_t` / QFP lane
 
 The most important gravity companion point is also framed carefully: the
 paper's gravity self-consistency claim is that Poisson is the unique local
@@ -150,7 +152,7 @@ conventions is packaged separately and does not modify the theorem stack.
 ## Read The Package In Order
 
 1. [ARXIV_DRAFT.md](./ARXIV_DRAFT.md)
-2. [CI3_Z3_PUBLICATION_STATE_2026-04-12.md](../../CI3_Z3_PUBLICATION_STATE_2026-04-12.md)
+2. [CI3_Z3_PUBLICATION_STATE_2026-04-15.md](../../CI3_Z3_PUBLICATION_STATE_2026-04-15.md)
 3. [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md)
 4. [QUANTITATIVE_SUMMARY_TABLE.md](./QUANTITATIVE_SUMMARY_TABLE.md)
 5. [CLAIMS_TABLE.md](./CLAIMS_TABLE.md)

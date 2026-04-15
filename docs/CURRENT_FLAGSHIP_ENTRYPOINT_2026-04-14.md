@@ -128,6 +128,8 @@ Current package status:
   rows use the retained running bridge
 - bounded `y_t(v) = 0.9176`
 - bounded `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
+  with the current `~3%` QFP/RGE-surrogate systematic carried explicitly by
+  the Yukawa/top lane
 - promoted CKM atlas/axiom closure package
   (no quark-mass or fitted CKM inputs; canonical CMT `alpha_s(v)` input):
   `|V_us| = 0.22727`,
@@ -138,7 +140,7 @@ Current package status:
 - bounded Higgs / vacuum package:
   `m_H = 119.8 GeV` (2-loop support route),
   `125.3 GeV` (framework-side 3-loop route),
-  bounded vacuum-stability readout inherited from the bounded `y_t` lane
+  bounded vacuum-stability readout inherited from the bounded `y_t` / QFP lane
 
 ## Other Bounded Families
 

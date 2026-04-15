@@ -109,7 +109,7 @@ inventories or frozen-out sources, not as publication authority.
 
 Key retained inputs from this branch:
 
-- `CI3_Z3_PUBLICATION_STATE_2026-04-12.md`
+- `CI3_Z3_PUBLICATION_STATE_2026-04-15.md`
 - `CLAIMS_TABLE.md`
 - `DERIVATION_VALIDATION_MAP.md`
 - `RESULTS_INDEX.md`

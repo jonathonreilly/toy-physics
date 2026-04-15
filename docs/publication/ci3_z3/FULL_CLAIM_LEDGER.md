@@ -51,7 +51,7 @@ These rows correspond to Section A of
 
 | Claim family | Current decision | Why it is retained | Primary authority |
 |---|---|---|---|
-| `Cl(3)` on `Z^3` is the working physical theory | promoted | framework sentence and ontological surface for the manuscript | [CI3_Z3_PUBLICATION_STATE_2026-04-12.md](../../CI3_Z3_PUBLICATION_STATE_2026-04-12.md) |
+| `Cl(3)` on `Z^3` is the working physical theory | promoted | framework sentence and ontological surface for the manuscript | [CI3_Z3_PUBLICATION_STATE_2026-04-15.md](../../CI3_Z3_PUBLICATION_STATE_2026-04-15.md) |
 | anomaly-forced `3+1` | promoted | single-clock codimension-1 theorem survives direct audit | [ANOMALY_FORCES_TIME_THEOREM.md](../../ANOMALY_FORCES_TIME_THEOREM.md) |
 | retained `S^3` compactification / topology closure | promoted | cone-cap family now clears the accepted topology bar and is no longer a live gate | [S3_GENERAL_R_DERIVATION_NOTE.md](../../S3_GENERAL_R_DERIVATION_NOTE.md), [S3_CAP_UNIQUENESS_NOTE.md](../../S3_CAP_UNIQUENESS_NOTE.md) |
 
@@ -59,7 +59,7 @@ These rows correspond to Section A of
 
 | Claim family | Current decision | Why it is retained | Primary authority |
 |---|---|---|---|
-| weak-field Poisson / Newton chain | promoted | unique self-consistent local field equation plus lattice Green-function Newton law | [CI3_Z3_PUBLICATION_STATE_2026-04-12.md](../../CI3_Z3_PUBLICATION_STATE_2026-04-12.md) |
+| weak-field Poisson / Newton chain | promoted | unique self-consistent local field equation plus lattice Green-function Newton law | [CI3_Z3_PUBLICATION_STATE_2026-04-15.md](../../CI3_Z3_PUBLICATION_STATE_2026-04-15.md) |
 | weak-field WEP | promoted corollary | survives on the same retained action surface | [BROAD_GRAVITY_DERIVATION_NOTE.md](../../BROAD_GRAVITY_DERIVATION_NOTE.md) |
 | weak-field time dilation | promoted corollary | survives on the same retained action surface | [BROAD_GRAVITY_DERIVATION_NOTE.md](../../BROAD_GRAVITY_DERIVATION_NOTE.md) |
 | restricted strong-field closure | promoted restricted theorem | exact on the current star-supported finite-rank class under the static conformal bridge; important enough to retain, but still source-class restricted | [RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md](../../RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md) |

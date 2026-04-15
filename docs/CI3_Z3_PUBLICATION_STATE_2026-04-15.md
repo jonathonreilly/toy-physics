@@ -1,6 +1,6 @@
 # CI(3) / Z^3 Publication State
 
-**Date:** 2026-04-14  
+**Date:** 2026-04-15  
 **Status:** main-branch publication authority for the current flagship paper surface
 
 ## Framework sentence
@@ -58,7 +58,7 @@ local scalar hierarchy observable, and the unique minimal resolved APBC orbit
 selects `L_t = 4`, giving:
 
 - `v = 246.282818290129 GeV`
-- relative error vs `246.22 GeV`: `-0.462828%`
+- relative error vs `246.22 GeV`: `+0.025513%`
 
 ## Retained backbone
 
@@ -111,6 +111,11 @@ The current retained backbone is:
   - `T = 0` confinement is structural on that gauge sector
   - bounded `sqrt(sigma) ≈ 465 MeV` follows through retained `alpha_s`
     plus the low-energy EFT bridge
+- emergent Lorentz invariance on the retained hierarchy surface:
+  - the leading correction is CPT-even, P-even, dimension-6, and
+    `(E/M_Pl)^2`-suppressed
+  - the cubic-harmonic `\ell = 4` structure is exact on the retained theorem
+    surface
 - strong CP / `θ_eff = 0` structural closure on the retained action surface:
   - the axiom-determined Wilson-plus-staggered action leaves no bare `θ`
   - the real-mass staggered determinant carries no phase
@@ -131,9 +136,11 @@ ledger:
   rows use the retained running bridge
 - bounded `y_t(v) = 0.9176`
 - bounded `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
+  with the current `~3%` QFP/RGE-surrogate systematic carried explicitly by
+  the Yukawa/top lane
 - bounded Higgs / vacuum package: `m_H = 119.8 GeV` (2-loop support route),
   `125.3 GeV` (framework-side 3-loop route), bounded vacuum-stability readout
-  inherited from the bounded `y_t` lane
+  inherited from the bounded `y_t` / QFP lane
 - promoted CKM no-import closure package with full sharp `|V_us|`, `|V_cb|`, `|V_ub|`, `\delta`, and `J`
 - older bounded Cabibbo / NNI / partial Jarlskog notes retained only as route history
 - `\Omega_\Lambda`, `n_s`, `w = -1`, and `\Lambda` cosmology companions
@@ -194,13 +201,6 @@ The remaining live paper gates are:
 Those are the only live flagship gates. Everything else in the package should
 now be legible as either retained, bounded, or explicitly frozen-out.
 
-Recent Claude work and direct Codex review materially narrowed the attack
-surface. The audit bar now remains:
-
-- DM relic mapping: still bounded even after Stosszahlansatz / Friedmann tightening
-- renormalized `y_t`: promoted on the complete prediction chain
-- CKM: still bounded even after NNI / coefficient / `c_23` work
-
 ## Honest bounded lanes
 
 The following are useful and may appear in SI or a bounded phenomenology
@@ -217,13 +217,13 @@ section, but they are not yet retained closure:
 - direct lattice DM contact enhancement
 - DM coarse-graining / Stosszahlansatz notes
 - renormalized `y_t` running and matching notes
-- CKM/Higgs `Z_3` selection arguments
 - gauge-coupling normalization notes
 - cosmology companions such as `w = -1`, graviton mass, `Omega_Lambda`, `n_s`
 - older Higgs mass / Coleman-Weinberg route notes now superseded by the
   complete prediction chain
-- proton lifetime, Lorentz-violation, BH-entropy, gravitational-decoherence,
-  magnetic-monopole, and GW-echo companion predictions
+- proton lifetime, vacuum-critical-stability, BH-entropy,
+  gravitational-decoherence, magnetic-monopole, and GW-echo companion
+  predictions
 
 ## Frozen-out work families
 
@@ -232,9 +232,9 @@ part of the retained flagship core:
 
 - DM quantitative companion portfolio
 - superseded YT / Higgs route-history stack
-- CKM / flavor quantitative companion portfolio
+- older CKM bounded route-history portfolio
 - cosmology companion portfolio
-- individual companion lanes
+- individual bounded secondary lanes
 - gravity companions beyond retained weak-field plus restricted strong-field package
 - branch-local inventories and stale strategy docs
 

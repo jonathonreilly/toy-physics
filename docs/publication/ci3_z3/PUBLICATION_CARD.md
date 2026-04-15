@@ -42,9 +42,9 @@ Canonical authority:
 | `1/alpha_EM` | `127.67` | `127.95` | `-0.22%` | DERIVED (derived `g_1(v), g_2(v)` package after retained running bridge) |
 | `g_1(v)` | `0.4644` | `0.4640` | `+0.08%` | DERIVED (bare geometry + same-surface plaquette chain + derived `R_conn` support) |
 | `g_2(v)` | `0.6480` | `0.6463` | `+0.26%` | DERIVED (bare geometry + same-surface plaquette chain + derived `R_conn` support) |
-| `y_t(v)` | `0.9176` | `~0.917` | `+0.06%` | DERIVED |
-| `m_t(pole)` | `172.57-173.10 GeV` | `172.69 GeV` | `within 0.24%` | DERIVED |
-| `m_H` | `119.8 GeV` (2-loop support route), `125.3 GeV` (framework-side 3-loop route) | `125.25 GeV` | `bounded through y_t lane` | BOUNDED |
+| `y_t(v)` | `0.9176` | `~0.917` | `+0.06%` | BOUNDED / DERIVED |
+| `m_t(pole)` | `172.57-173.10 GeV` | `172.69 GeV` | `within 0.24%` | BOUNDED / DERIVED |
+| `m_H` | `119.8 GeV` (2-loop support route), `125.3 GeV` (framework-side 3-loop route) | `125.25 GeV` | `bounded through inherited y_t / QFP lane` | BOUNDED |
 | Vacuum | `qualitatively favorable` | `metastable in SM` | `qualitative prediction` | BOUNDED |
 
 ## Remaining Live Gates

@@ -1,7 +1,7 @@
-# y_t Quasi-Fixed-Point Insensitivity Theorem
+# y_t Quasi-Fixed-Point Insensitivity Bound
 
 **Date:** 2026-04-14
-**Status:** THEOREM
+**Status:** bounded support
 **Script:** `scripts/frontier_yt_qfp_insensitivity.py`
 
 ## The Codex Blocker
@@ -17,7 +17,7 @@ uses the SM RGE above v as a mathematical interpolation to transfer
 the Ward boundary condition from M_Pl to v. The objection is that
 the SM EFT is the WRONG theory above v.
 
-This theorem does not claim the SM RGE is the physical description
+This bound does not claim the SM RGE is the physical description
 above v. It proves something narrower and sufficient: the backward
 Ward prediction y_t(v) = 0.973 is insensitive to the choice of RG
 flow above v, because the y_t beta function has a strong IR quasi-
@@ -180,9 +180,9 @@ at v converges due to focusing.
 
 ---
 
-## Part 5: Formal Statement
+## Part 5: Bounded Support Statement
 
-**Theorem (QFP Insensitivity).** Let F denote a family of RG flows
+**Bound (QFP Insensitivity Support).** Let F denote a family of RG flows
 {F_a} for the gauge-Yukawa system (g_3, y_t) on the interval
 [v, M_Pl], satisfying:
 
