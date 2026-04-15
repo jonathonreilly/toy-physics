@@ -10,7 +10,7 @@ already in hand
 
 ## Verdict
 
-The direct universal route is still blocked.
+This note is now historical/superseded as the live direct-universal blocker.
 
 The current axiom-first stack gives:
 
@@ -26,8 +26,9 @@ It does **not** yet give:
   `3+1` metric space
 
 So the remaining gap is no longer a scalar problem, no longer a
-quotient-uniqueness problem, and no longer a complement-frame problem on the
-invariant background. It is now the final operator-identification step.
+quotient-uniqueness problem, no longer a complement-frame problem on the
+invariant background, and no longer an isotropic operator-identification
+problem either.
 
 The older frame-orbit blocker was too strong. The direct universal branch now
 has:
@@ -36,9 +37,12 @@ has:
 - exact Casimir block localization into lapse / shift / trace / shear
 - exact isotropic-background Schur localization on `diag(a,b,b,b)`
 
-The live missing object is therefore smaller: an exact Einstein/Regge
-operator-identification / normalization theorem on that already-localized
-background.
+That isotropic operator-identification step has now been discharged by
+[UNIVERSAL_GR_ISOTROPIC_GLUE_OPERATOR_NOTE.md](/private/tmp/physics-review-active/docs/UNIVERSAL_GR_ISOTROPIC_GLUE_OPERATOR_NOTE.md).
+
+The live remaining object is now smaller still:
+
+> nonlinear completion beyond the exact isotropic quadratic surface.
 
 ## What is exact already
 
@@ -126,23 +130,19 @@ The present data now determine much more than before:
 
 What they still do not yet prove is:
 
-1. that this already-localized operator is exactly the Einstein/Regge
-   constraint/dynamics operator on `PL S^3 x R`;
-2. the final sign/normalization interpretation of the localized blocks as the
-   GR operator rather than merely an exact universal Hessian normal form.
+1. nonlinear completion beyond the quadratic Hessian/slice-generator glue;
+2. widening beyond the invariant background family `diag(a,b,b,b)`.
 
 ## Minimal missing primitive
 
 The smallest honest missing object is now:
 
-> an exact operator-identification theorem that matches the already-localized
-> isotropic universal Hessian with the Einstein/Regge operator, including the
-> final sign/normalization interpretation of the lapse / shift / trace /
-> shear blocks on `PL S^3 x R`.
+> a nonlinear completion principle that lifts the exact isotropic quadratic
+> glue operator beyond Hessian order on `PL S^3 x R`.
 
-Equivalently, the missing primitive is no longer a frame bundle. It is the
-final Einstein/Regge identification / normalization law on the exact
-isotropic block form.
+Equivalently, the missing primitive is no longer a frame bundle and no longer
+an isotropic block-operator identification law. It is the nonlinear
+completion law beyond the exact quadratic/invariant surface.
 
 ## Honest status
 
@@ -153,6 +153,8 @@ The current direct universal route is:
 - exact at the symmetric `3+1` quotient-kernel level
 - exact at the canonical block-localization level
 - exact at the invariant-background Schur-localization level
-- still open only at the final Einstein/Regge operator-identification level
+- exact at the local isotropic supermetric-normal-form level
+- exact at the isotropic quadratic Einstein/Regge glue-operator level
+- still open only beyond that, at nonlinear completion / wider-background extension
 
 That is the sharpest disciplined statement available on the current atlas.
