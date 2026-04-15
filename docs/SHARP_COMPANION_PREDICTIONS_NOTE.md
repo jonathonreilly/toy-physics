@@ -113,24 +113,27 @@ the framework's interference structure.
 
 - y_t(v) = 0.9176 (bounded quantitative lane)
 - m_H(3-loop) = 125.3 GeV (bounded, matches observed 125.25 GeV)
-- At the framework's y_t, the quartic coupling λ remains positive
-  up to M_Planck → absolutely stable vacuum
+- At the framework's y_t, the quartic coupling λ(M_Pl) = 0: the vacuum
+  sits at the critical stability boundary
 
 ### The prediction:
 
-The electroweak vacuum is absolutely stable, not metastable.
+The electroweak vacuum is stable, not metastable. Specifically, the
+framework places the vacuum at the critical stability boundary:
+λ(M_Pl) = 0. The quartic coupling runs to zero at the Planck scale
+but never goes negative.
 
-This contradicts the Standard Model prediction of metastability (where
-λ crosses zero at μ ~ 10¹⁰ GeV with SM-observed y_t ≈ 0.935). The
-framework's lower y_t = 0.9176 keeps λ positive throughout.
+This contrasts with the Standard Model prediction of metastability
+(where λ crosses zero at μ ~ 10⁶–10¹⁰ GeV with SM-observed
+y_t ≈ 0.935). The framework's lower y_t = 0.9176 pushes the zero
+crossing up to M_Planck itself.
 
 ### Falsification criterion:
 
-If the vacuum is demonstrated to be metastable (e.g., through precision
-measurements of m_t and m_H that definitively place the SM in the
-metastable region), and if the framework's y_t is confirmed to be
-correct, then the framework's stability prediction survives. If the
-framework's y_t is wrong, the prediction fails.
+If precision measurements of m_t and m_H definitively place the
+vacuum deep in the metastable region (λ crossing zero well below
+M_Pl), that would be in tension with the framework's y_t. The
+prediction is bounded through the y_t lane.
 
 ### Why this matters:
 
@@ -151,7 +154,7 @@ produces sharp, distinguishing predictions.
 |-----------|-----------|----------------------|-----------------|
 | τ_p | 10⁴⁷·⁶ years | 10³⁴–10³⁶ (GUTs) | yes (13 orders) |
 | γ_grav | Penrose-Diosi exact | model-dependent | testable (BMV) |
-| Vacuum | absolutely stable | metastable (SM) | yes (qualitative) |
+| Vacuum | critical stability (λ(M_Pl) = 0) | metastable (SM) | yes (qualitative) |
 
 None of these predictions are needed for the flagship paper argument.
 But they demonstrate that the framework is not just a parameter-fitting
