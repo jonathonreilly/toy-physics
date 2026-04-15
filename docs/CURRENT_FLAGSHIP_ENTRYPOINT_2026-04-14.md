@@ -86,6 +86,7 @@ For the one-note positioning layer across gravity and gauge, use
 - retained three-generation matter structure
 - exact `I_3 = 0`
 - exact CPT on the free staggered lattice
+- emergent Lorentz invariance with first anisotropic correction at dimension 6 and unique cubic-harmonic `\ell = 4` signature; on the retained hierarchy surface the correction is `(E/M_{Pl})^2` suppressed
 - exact strong CP / `theta_eff = 0` on the axiom-determined action surface
 
 ## Quantitative Component Stack
@@ -128,7 +129,7 @@ Current package status:
 - cosmology companions, now organized around one fixed-gap vacuum scale
   (`Lambda`, `w = -1`, graviton mass) plus the remaining matter bridge behind
   present-day `Omega_Lambda`
-- sharp companion predictions such as proton lifetime, Lorentz fingerprint,
+- sharp companion predictions such as proton lifetime,
   BH entropy, graviton decoherence, monopole mass
 
 ## Live Gates

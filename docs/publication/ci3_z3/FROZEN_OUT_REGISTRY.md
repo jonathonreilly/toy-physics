@@ -182,7 +182,6 @@ spine.
 **Captured work:**
 
 - proton lifetime
-- Lorentz-violation cubic fingerprint
 - BH entropy / RT ratio
 - gravitational decoherence
 - magnetic monopole mass

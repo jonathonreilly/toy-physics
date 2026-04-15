@@ -101,6 +101,7 @@ These rows correspond to Section A of
 | electroweak scale `v` | promoted | exact minimal hierarchy theorem plus axiom-native observable principle now clear the paper bar; the numerical value is a pinned evaluation on the current `u_0` / plaquette surface | [OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md](../../OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md) |
 | exact `I_3 = 0` | promoted exact companion | safe statement is exact no-third-order interference on the Hilbert surface | [I3_ZERO_EXACT_THEOREM_NOTE.md](../../I3_ZERO_EXACT_THEOREM_NOTE.md) |
 | exact CPT | promoted exact companion | exact free staggered-lattice theorem on the retained framework surface | [CPT_EXACT_NOTE.md](../../CPT_EXACT_NOTE.md) |
+| emergent Lorentz invariance | promoted exact structural theorem | exact `O_h` symmetry and exact CPT/P protection force the first anisotropic correction to appear only at dimension 6 with unique `\ell = 4` cubic-harmonic signature; on the retained hierarchy surface the correction is `(E/M_{Pl})^2` suppressed | [EMERGENT_LORENTZ_INVARIANCE_NOTE.md](../../EMERGENT_LORENTZ_INVARIANCE_NOTE.md) |
 
 ## 3. Observation-facing bounded portfolio aligned to the matrix
 
@@ -141,7 +142,6 @@ external reviewer will ask about them whether or not they are retained.
 | Bekenstein-Hawking entropy | bounded companion | useful companion signal, not part of flagship theorem spine | [BH_ENTROPY_DERIVED_NOTE.md](../../BH_ENTROPY_DERIVED_NOTE.md) | matrix row `Bekenstein-Hawking entropy`, `F07` |
 | gravitational decoherence | bounded companion | concrete BMV-class benchmark prediction, but still companion-only and unmeasured | [GRAV_DECOHERENCE_DERIVED_NOTE.md](../../GRAV_DECOHERENCE_DERIVED_NOTE.md) | matrix row `gravitational decoherence`, `F07` |
 | Proton lifetime | bounded sharp prediction | later companion or appendix material, not flagship core | [PROTON_LIFETIME_DERIVED_NOTE.md](../../PROTON_LIFETIME_DERIVED_NOTE.md) | matrix row `Proton lifetime`, `F07` |
-| Lorentz-violation fingerprint | bounded sharp prediction | interesting companion phenomenology, not retained backbone | [LORENTZ_VIOLATION_DERIVED_NOTE.md](../../LORENTZ_VIOLATION_DERIVED_NOTE.md) | matrix row `Lorentz-violation fingerprint`, `F07` |
 | Magnetic monopole mass | bounded sharp prediction | imported phenomenology layer still present | [MONOPOLE_DERIVED_NOTE.md](../../MONOPOLE_DERIVED_NOTE.md) | matrix row `Magnetic monopole mass`, `F07` |
 | GW echo null result | bounded / off-scope companion | later work resolved the compact-object echo question to observational silence rather than a positive timing prediction; this remains companion-only material | [GW_ECHO_NULL_RESULT_NOTE.md](../../GW_ECHO_NULL_RESULT_NOTE.md) | matrix row `GW echo null result`, `F07` |
 

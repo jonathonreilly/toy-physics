@@ -19,7 +19,8 @@ framework carries exact native `SU(2)`, graph-first structural `SU(3)`, exact
 `T = 0` confinement of the graph-first `SU(3)` sector with bounded
 `\sqrt{\sigma} \approx 465 MeV`, anomaly-forced `3+1`, retained `S^3`
 compactification / topology closure, one-generation matter closure, retained
-three-generation matter structure, exact `I_3 = 0`, exact CPT, and exact
+three-generation matter structure, exact `I_3 = 0`, exact CPT, emergent
+Lorentz invariance with first anisotropic correction at dimension 6, and exact
 strong CP / `\theta_eff = 0`. The current quantitative package retains
 `\alpha_s(M_Z)` and electroweak normalization lanes, promotes a no-import CKM
 closure package, and keeps top-Yukawa/top-mass, Higgs/vacuum, and cosmology as
@@ -221,7 +222,25 @@ These are not decorative extras. They certify that the same discrete framework
 supports both the gauge/matter backbone and nontrivial exact consistency
 theorems.
 
-### 4.6 Strong CP
+### 4.6 Emergent Lorentz invariance
+
+Lorentz symmetry is now retained on the exact structural surface, not merely as
+a bounded phenomenological fingerprint. Exact cubic `O_h`, exact CPT, and exact
+parity force the first anisotropic correction to appear only at dimension 6,
+with a unique cubic-harmonic `\ell = 4` signature. On the retained hierarchy
+surface, where the lattice scale is identified with the Planck scale, that
+correction is `(E/M_{Pl})^2` suppressed.
+
+The safe public statement is:
+
+> the infrared theory is Lorentz invariant at leading order, and the first
+> anisotropic correction is CPT-even, parity-even, dimension-6, and carries a
+> unique cubic-harmonic `\ell = 4` fingerprint.
+
+This is a retained structural theorem with a retained hierarchy-scale
+interpretation, not a standalone SME-fit exercise.
+
+### 4.7 Strong CP
 
 Strong CP is now retained as an exact structural theorem on the
 axiom-determined Wilson-plus-staggered action surface. The framework carries
@@ -233,7 +252,7 @@ statement is:
 
 This is a genuine promoted row, not a bounded companion.
 
-### 4.7 Confinement
+### 4.8 Confinement
 
 The graph-first `SU(3)` gauge sector now also carries an exact `T = 0`
 confinement theorem. The bounded quantitative companion on top of that is the
@@ -338,7 +357,6 @@ The broader program also contains several companion or discriminator rows
 outside the retained flagship surface:
 
 - proton lifetime;
-- Lorentz-violation fingerprint;
 - Bekenstein-Hawking entropy companion;
 - gravitational decoherence;
 - monopole mass;
@@ -387,6 +405,7 @@ What is now genuinely retained is broad:
 - retained hierarchy / `v`;
 - exact `I_3 = 0`;
 - exact CPT;
+- emergent Lorentz invariance with first anisotropic correction at dimension 6;
 - exact strong CP / `\theta_eff = 0`;
 - retained `\alpha_s` and EW normalization lanes;
 - promoted no-import CKM closure.
