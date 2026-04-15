@@ -31,6 +31,26 @@ The exact finite-rank support result is:
 So the current finite-rank support data do **not** determine a canonical
 support-side polarization frame.
 
+That said, the current atlas does support an exact noncanonical enlargement of
+the support side. The exact support-irrep frame
+
+- `A1(center) ⊕ A1(shell) ⊕ E ⊕ T1`
+
+reconstructs the finite-rank shell source exactly, and the Route 2 bridge
+triple exposes the aligned bright coordinates
+
+- `u_E = <E_x, q>`
+- `u_T = <T1x, q>`
+
+as exact support-side coordinates on the same source. So the support side can
+already be enlarged constructively to a three-channel frame
+
+- total charge / scalar `A1`
+- aligned bright `E` channel
+- aligned bright `T1` channel
+
+but that enlargement is still noncanonical.
+
 However, the strongest exact support-side specialization available on the
 current stack is not the scalar line alone. It is the exact Route 2 bilinear
 carrier
@@ -63,6 +83,13 @@ bright aligned readouts are exactly the Route 2 coordinates
 But these are still only candidate support observables, not canonical support
 generators, because the exact support Hessian has no mixed `A1`-bright block
 and the support-to-active operator annihilates the bright channels.
+
+In other words, the support side already has an exact enlargement from atlas
+objects, but the enlargement is only a frame candidate:
+
+- exact support-irrep frame: yes
+- exact Route 2 bright coordinates: yes
+- canonical `Pi_3+1`: no
 
 The singular-value form of the obstruction is equally sharp:
 
@@ -119,6 +146,14 @@ The smallest extra primitive needed beyond the current support stack is:
 > a tensor-valued support-side polarization frame with rank at least three
 > before scalar renormalization, i.e. two additional independent support
 > generators beyond total charge.
+
+Concretely, the smallest explicit extra support-side generator set visible in
+the atlas is the aligned bright pair
+
+- `u_E`
+- `u_T`
+
+backed microscopically by the non-scalar `E ⊕ T1` support-irrep content.
 
 In concrete support-side terms, the only exact candidate channels visible on
 the current class are the aligned bright observables `u_E` and `u_T`, but the

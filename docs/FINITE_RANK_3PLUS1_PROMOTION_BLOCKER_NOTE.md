@@ -44,6 +44,15 @@ So the current finite-rank exact data determine:
 That is enough for the source-to-exterior and scalar source-to-metric
 architecture.
 
+The current atlas also supports an exact noncanonical enlargement of the
+support side:
+
+- exact support-irrep frame `A1(center) ⊕ A1(shell) ⊕ E ⊕ T1`
+- exact Route 2 bright channels `u_E` and `u_T`
+
+This is the constructive enlargement found by the new support-generator-family
+audit. It is exact, but it is still not canonical.
+
 ## Why tensor promotion still fails
 
 The exact finite-rank active quotient is still scalar after renormalization.
@@ -100,6 +109,13 @@ become canonical support generators because the exact support Green/Hessian
 has no mixed `A1`-bright block and the support-to-active operator kills those
 channels as independent sources.
 
+So the smallest explicit extra support-side generator set visible from the
+atlas is:
+
+- two non-scalar generators beyond total charge
+- concretely the aligned bright pair `u_E` and `u_T`
+- microscopically the `E ⊕ T1` support-irrep content
+
 ## Exact minimal missing primitive
 
 The missing primitive is now sharper than the previous blocker:
@@ -118,6 +134,12 @@ The minimal extra primitive is therefore:
 > with rank at least three before the scalar renormalization step, so that
 > lapse, shift, and spatial-trace/shear are all represented by independent
 > support-side generators rather than by the single scalar total-charge mode.
+
+This is now a canonicalization statement, not an existence statement:
+
+- existence of a noncanonical enlargement: yes
+- canonical `Pi_3+1`: no
+- smallest explicit extra generator set: `u_E`, `u_T`
 
 The current stack only supplies one support-side generator after
 renormalization, so the missing primitive is not a better scalar fit. It is

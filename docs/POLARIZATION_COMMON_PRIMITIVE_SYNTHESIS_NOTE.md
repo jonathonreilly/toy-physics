@@ -116,6 +116,12 @@ But `B_R` is still not the missing polarization bundle:
 So the exact missing step is still a covariant `3+1` polarization-frame /
 projector bundle with a distinguished connection.
 
+The strongest exact common candidate construction is now written out in
+[`ROUTE2_POLARIZATION_COMMON_PRIMITIVE_NOTE.md`](./ROUTE2_POLARIZATION_COMMON_PRIMITIVE_NOTE.md).
+It packages the bridge triple `B_R = (K_R, I_TB, Xi_TB)` together with the
+exact localized-orbit output `O_R` and makes the compatibility conditions for
+`Pi_3+1` and `Pi_curv` explicit.
+
 ## Implications
 
 1. A successful derivation of the common polarization bundle would advance
