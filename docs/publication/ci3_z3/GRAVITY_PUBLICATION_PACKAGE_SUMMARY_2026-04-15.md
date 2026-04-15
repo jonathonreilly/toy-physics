@@ -71,6 +71,32 @@ The current gravity package has three layers:
      canonical discrete family
    - authority: [UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md](../../UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md)
 
+11. **Direct-universal canonical textbook weak/measure closure**
+   - exact canonical textbook weak Sobolev / Gaussian cylinder object for that
+     same canonical discrete family
+   - authority: [UNIVERSAL_QG_CANONICAL_TEXTBOOK_WEAK_MEASURE_EQUIVALENCE_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_WEAK_MEASURE_EQUIVALENCE_NOTE.md)
+
+12. **Direct-universal smooth local gravitational identification**
+   - exact identification of that canonical textbook weak/Gaussian object with
+     the positive-background local gravitational weak/Gaussian object
+   - authority: [UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_LOCAL_IDENTIFICATION_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_LOCAL_IDENTIFICATION_NOTE.md)
+
+13. **Direct-universal smooth finite-atlas gravitational identification**
+   - exact patching of that same object as one smooth finite-atlas
+     gravitational stationary family on the chosen realization
+   - authority: [UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_ATLAS_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_ATLAS_NOTE.md)
+
+14. **Direct-universal smooth global weak/Gaussian solution class**
+   - exact projective global weak gravitational stationary/Gaussian solution
+     class on the chosen realization of `PL S^3 x R`
+   - authority: [UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_SOLUTION_CLASS_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_SOLUTION_CLASS_NOTE.md)
+
+15. **Direct-universal canonical smooth weak/measure equivalence**
+   - exact identification of the chosen smooth global gravitational
+     weak/Gaussian realization with the same canonical textbook weak/Gaussian
+     object
+   - authority: [UNIVERSAL_QG_CANONICAL_SMOOTH_GRAVITATIONAL_WEAK_MEASURE_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_CANONICAL_SMOOTH_GRAVITATIONAL_WEAK_MEASURE_NOTE.md)
+
 ## Exact claim boundaries
 
 The package can safely say:
@@ -83,12 +109,12 @@ The package can safely say:
   partition-density family on the project route, whose mean/stationary sector
   reproduces that discrete GR family
 
-The package must **not** silently upgrade that to a general continuum-GR
-equivalence claim.
+The package must **not** silently upgrade that to a stronger textbook
+Einstein-Hilbert / geometric-action claim.
 
-If the manuscript wants the stronger continuum statement, that must be handled
-as a separate interpretation theorem, not as an automatic corollary of the
-discrete route.
+If the manuscript wants that stronger textbook statement, it must be handled
+as a separate comparison theorem, not as an automatic corollary of the
+already-closed weak/Gaussian route.
 
 The partition and refinement theorems sharpen that remaining issue:
 
@@ -105,8 +131,14 @@ The partition and refinement theorems sharpen that remaining issue:
   same route
 - exact project-native PL `H^1`-type Sobolev carrier is also now in hand on
   that same route
-- it is now specifically a smooth / external continuum-equivalence theorem for
-  that exact discrete project-native PL weak Sobolev limit object
+- exact canonical textbook weak/measure closure is now also in hand
+- exact smooth local and finite-atlas gravitational identifications are now
+  also in hand
+- exact smooth global weak gravitational solution class is now also in hand
+- exact canonical smooth weak/measure equivalence on the chosen realization is
+  now also in hand
+- it is now specifically a stricter textbook geometric/action comparison
+  beyond that already-closed weak/Gaussian gravitational route
 
 ## Where this sits in the package
 
@@ -129,7 +161,7 @@ Avoid unless the relevant separate theorem is explicitly present:
 
 - “full continuum GR equivalence”
 - “unrestricted GR in the continuum sense”
-- “finished continuum quantum gravity”
+- “finished textbook Einstein-Hilbert equivalence”
 
 ## Integration note
 

@@ -11,8 +11,10 @@ This runner proves the next honest theorem:
     cylinder family of the corresponding external Gaussian formulation.
 
 This closes the FE-to-smooth / weak-form / measure-equivalence step for the
-chosen external target. What it does not prove is equivalence to a more
-canonical textbook continuum GR/QG formulation.
+chosen external target. Later notes close the canonical textbook and smooth
+gravitational weak/Gaussian identifications built on this step. The live
+stronger issue is now stricter textbook geometric/action comparison beyond
+that level.
 """
 
 from __future__ import annotations
@@ -195,14 +197,14 @@ def main() -> int:
         f"max covariance-cylinder error={max_cov_err:.3e}",
     )
     record(
-        "the remaining stronger issue is therefore no longer existence of a chosen external smooth weak/measure formulation, but comparison to more canonical external continuum formulations",
+        "the remaining stronger issue is therefore no longer existence of a chosen external smooth weak/measure formulation, but stricter textbook geometric/action comparison beyond the already-closed weak/Gaussian route",
         "project-native pl weak sobolev" in cont_text.lower()
         and prolong_assoc_err < 1e-12
         and max_h1_err < 1e-12
         and max_form_err < 1e-10
         and max_source_err < 1e-10
         and max_cov_err < 1e-10,
-        "the exact discrete route is already the FE/Galerkin cylinder realization of one chosen external smooth Sobolev weak Gaussian formulation; what remains, if pushed further, is comparison to more canonical textbook continuum targets",
+        "the exact discrete route is already the FE/Galerkin cylinder realization of one chosen external smooth Sobolev weak Gaussian formulation; later notes close the canonical textbook and smooth gravitational weak/Gaussian identifications built on this step, so the live stronger issue is now stricter textbook geometric/action comparison",
     )
 
     print("UNIVERSAL QG EXTERNAL FE-SMOOTH EQUIVALENCE")
@@ -218,8 +220,10 @@ def main() -> int:
         "The exact project-native PL weak Gaussian Sobolev completion is "
         "already exactly the FE/Galerkin cylinder realization of a chosen "
         "external smooth Sobolev weak-field and Gaussian formulation. So the "
-        "remaining issue is no longer absence of such an external formulation, "
-        "but comparison to more canonical external continuum targets."
+        "remaining issue is no longer absence of such an external formulation. "
+        "Later notes close the canonical textbook and smooth gravitational "
+        "weak/Gaussian identifications built on this step; the live stronger "
+        "issue is now stricter textbook geometric/action comparison."
     )
 
     print("\n" + "=" * 78)

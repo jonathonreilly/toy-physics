@@ -19,8 +19,17 @@ The current flagship package has four layers:
 3. bounded observation-facing companion portfolio
 4. two live gates plus explicit frozen-out families
 
-The package is therefore not “everything in the repo,” and it is not older
+The package is therefore not "everything in the repo," and it is not older
 route history.
+
+On the gravity side, the direct-universal route now closes as an exact global
+Lorentzian Einstein/Regge stationary action family on discrete `3+1`
+spacetime `PL S^3 x R`. On the QG/continuum side, the exact project-native PL
+weak Gaussian Sobolev completion is now also identified with the canonical
+textbook weak/Gaussian object and with the chosen smooth global weak
+gravitational stationary/Gaussian solution class on the same route. The
+remaining stronger continuum/QG issue is stricter textbook geometric/action
+comparison beyond that already-closed weak/Gaussian level.
 
 ## Retained Core
 
@@ -37,7 +46,17 @@ route history.
 - exact project-native PL weak/Dirichlet-form closure on that same route
 - exact project-native PL `H^1`-type Sobolev interface on that same route
 - exact external FE/Galerkin smooth weak-field and Gaussian measure
-  equivalence on that same route
+  equivalence for that same canonical discrete QG family
+- exact canonical textbook weak/measure equivalence for that same canonical
+  discrete QG family
+- exact smooth local gravitational weak/Gaussian identification on the
+  positive-background class
+- exact smooth finite-atlas gravitational stationary-family identification on
+  the chosen smooth realization
+- exact smooth global weak gravitational stationary/Gaussian solution class on
+  the chosen smooth realization
+- exact canonical smooth gravitational weak/measure equivalence on the chosen
+  smooth realization
 - exact native `SU(2)`
 - graph-first structural `SU(3)`
 - anomaly-forced `3+1`

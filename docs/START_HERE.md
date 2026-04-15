@@ -10,6 +10,11 @@ Use this order on `main`:
 6. [Derivation / validation map](publication/ci3_z3/DERIVATION_VALIDATION_MAP.md)
 7. [Derivation atlas](publication/ci3_z3/DERIVATION_ATLAS.md)
 
+For the gravity/QG continuum bridge specifically, the current capstones are:
+
+- [UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md](UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md)
+- [UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md](UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md)
+
 If you are checking the promoted quantitative lanes directly, use:
 
 - [ALPHA_S_DERIVED_NOTE.md](ALPHA_S_DERIVED_NOTE.md)

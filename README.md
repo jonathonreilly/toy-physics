@@ -19,6 +19,15 @@ it is not the default review surface.
 5. [Derivation atlas](docs/publication/ci3_z3/DERIVATION_ATLAS.md)
 6. [Derivation / validation map](docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md)
 
+The direct-universal gravity route now closes as an exact global Lorentzian
+Einstein/Regge stationary action family on discrete `3+1` spacetime
+`PL S^3 x R`. On the QG/continuum side, the exact project-native PL weak
+Gaussian Sobolev completion is now also identified with the canonical textbook
+weak/Gaussian object and with the chosen smooth global weak gravitational
+stationary/Gaussian solution class on the same route. The remaining stronger
+continuum/QG issue is stricter textbook geometric/action comparison beyond that
+already-closed weak/Gaussian level.
+
 ## Retained Core
 
 - `Cl(3)` on `Z^3` as the working physical theory
@@ -35,7 +44,17 @@ it is not the default review surface.
 - exact project-native PL weak/Dirichlet-form closure on that same route
 - exact project-native PL `H^1`-type Sobolev interface on that same route
 - exact external FE/Galerkin smooth weak-field and Gaussian measure
-  equivalence on that same route
+  equivalence for that same canonical discrete QG family
+- exact canonical textbook weak/measure equivalence for that same canonical
+  discrete QG family
+- exact smooth local gravitational weak/Gaussian identification on the
+  positive-background class
+- exact smooth finite-atlas gravitational stationary-family identification on
+  the chosen smooth realization
+- exact smooth global weak gravitational stationary/Gaussian solution class on
+  the chosen smooth realization
+- exact canonical smooth gravitational weak/measure equivalence on the chosen
+  smooth realization
 - exact native `SU(2)`
 - graph-first structural `SU(3)`
 - anomaly-forced `3+1`

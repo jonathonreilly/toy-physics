@@ -5,29 +5,37 @@
 
 ## Verdict
 
-The geometric refinement-net step is now closed on the project’s discrete
-route.
+The internal continuum/QG bridge is now closed through the smooth global
+weak/Gaussian level on the chosen realization.
 
 The unresolved step is **not**:
 
 - local operator closure;
 - local stationarity;
-- atlas patching on finite discrete spacetime;
+- finite-atlas patching;
 - ultraviolet finiteness of the local partition family;
-- geometric refinement-net existence on the discrete route.
+- geometric refinement-net existence on the discrete route;
+- inverse-limit Gaussian existence;
+- abstract Gaussian / Cameron-Martin completion;
+- project-native PL field realization;
+- project-native PL weak/Dirichlet-form closure;
+- project-native PL `H^1`-type Sobolev interface;
+- existence of a chosen external smooth weak/measure realization;
+- canonical textbook weak/measure equivalence;
+- smooth local gravitational weak/Gaussian identification;
+- smooth finite-atlas gravitational identification;
+- smooth global weak gravitational stationary/Gaussian solution class;
+- canonical smooth weak/measure equivalence on the chosen realization.
 
-Those are already in hand on the project’s discrete route.
+Those are already in hand on the project route.
 
-The unresolved step is now:
+The unresolved step is now only:
 
-> comparison / canonicalization against more standard external continuum
-> weak-field and Gaussian-measure formulations, beyond the already-closed
-> chosen external FE/Galerkin smooth Sobolev weak Gaussian realization of the
-> exact project-native PL `H^1`-type weak Gaussian / Dirichlet system
-> determined by the inverse-limit family.
+> stricter textbook geometric/action comparison beyond the already-closed
+> canonical smooth weak/Gaussian gravitational route.
 
-That is the cleanest honest formulation of the remaining stronger continuum
-bridge.
+That is the cleanest honest formulation of the remaining stronger
+continuum-interpretation frontier.
 
 ## What is already exact
 
@@ -48,7 +56,13 @@ The direct-universal route already supplies:
 9. exact project-native PL weak/Dirichlet-form closure on that same net;
 10. exact project-native PL `H^1`-type Sobolev interface on that same net;
 11. exact external FE/Galerkin smooth weak-field and Gaussian measure
-    equivalence for one chosen external smooth target.
+    equivalence for one chosen external smooth target;
+12. exact canonical textbook weak/measure equivalence;
+13. exact smooth local gravitational weak/Gaussian identification;
+14. exact smooth finite-atlas gravitational stationary-family identification;
+15. exact smooth global weak gravitational stationary/Gaussian solution class;
+16. exact canonical smooth gravitational weak/measure equivalence on the
+    chosen realization.
 
 So the current branch no longer lacks a gravity law, a stationary family, or a
 finite partition bridge on its own discrete setting.
@@ -70,16 +84,16 @@ The algebraic Schur/projective closure step has now also been discharged:
 integrating out fine modes keeps the family inside the same Gaussian class and
 is associative under repeated coarse-graining.
 
-So the live remaining issue is narrower still: how to compare the exact chosen
-external FE/Galerkin smooth weak Gaussian realization of the project-native PL
-`H^1`-type weak Gaussian / Dirichlet system to more canonical textbook
-continuum weak-field and Gaussian-measure formulations.
+So the live remaining issue is narrower still: how to compare the already
+closed canonical smooth weak/Gaussian gravitational route to stricter textbook
+geometric/action formulations beyond the weak Sobolev / Gaussian level.
 
 That is the precise continuum-interpretation frontier now.
 
 ## Honest status
 
-This note does **not** prove a full continuum theorem.
+This note does **not** prove the final stricter textbook geometric/action
+comparison.
 
 It does prove that the remaining stronger continuum theorem has been reduced to
 the right object:
@@ -98,8 +112,10 @@ the right object:
 - **not** missing a chosen external smooth weak-field / Gaussian-measure
   formulation for that now-closed discrete project-native PL weak Sobolev
   limit object;
-- **but** comparison / canonicalization against more standard external
-  continuum weak-field and Gaussian-measure targets.
+- **not** missing canonical textbook weak/measure closure;
+- **not** missing smooth global weak/Gaussian gravitational closure on the
+  chosen realization;
+- **but** stricter textbook geometric/action comparison beyond that level.
 
 That is real progress because it tells us what still has to be built, and what
 no longer needs to be rediscovered.
