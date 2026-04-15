@@ -25,6 +25,10 @@ surface.
 For the package-level gravity/gauge continuum positioning synthesis, use
 [CONTINUUM_IDENTIFICATION_NOTE.md](../../CONTINUUM_IDENTIFICATION_NOTE.md).
 
+Read the gravity/QG side as exact on the discrete project route and on one
+chosen canonical textbook continuum target. The package is not asserting that
+every possible smooth or continuum packaging has been closed.
+
 ## Retained Core
 
 - weak-field gravity through the Poisson / Newton chain

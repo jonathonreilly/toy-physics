@@ -1,23 +1,23 @@
 # Continuum Identification: Gravity and Gauge
 
 **Date:** 2026-04-15
-**Status:** retained exact (gravity); retained structural + bounded EFT bridge (gauge)
+**Status:** retained exact on the chosen gravity target; retained structural +
+bounded EFT bridge (gauge)
 **Script:** `scripts/frontier_continuum_identification_audit.py`
 
 ## Purpose
 
 This note consolidates the continuum identification status across both
-sectors of the Cl(3)/Z³ framework: gravity and gauge. The discrete
-lattice theory must connect to standard continuum formulations to be
-physically meaningful. This note shows that connection is exact for
-gravity and correctly positioned for gauge through the retained
-structural plus bounded EFT bridge.
+sectors of the Cl(3)/Z³ framework: gravity and gauge. The package carries one
+chosen canonical textbook continuum target for the gravity route and one
+standard universality/EFT positioning layer for the gauge route. This note
+states exactly that claim boundary.
 
-## Gravity: Exact Continuum Identification (CLOSED)
+## Gravity: Exact Identification on the Chosen Canonical Target (CLOSED)
 
 The discrete-to-continuum chain for gravity is a 19-step exact
-identification ladder, all retained on `main`. Every step has an
-authority note and a validated runner.
+identification ladder on one chosen canonical textbook target, all retained on
+`main`. Every step has an authority note and a validated runner.
 
 ### The chain
 
@@ -62,6 +62,10 @@ Only the optional comparison note
 (UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md), which packages the
 result against alternative gauge-fixings and notation conventions. This
 is packaging, not a structural gap.
+
+This closed chain is therefore a theorem about the chosen canonical textbook
+target. It is not a statement that every continuum realization or every
+possible smooth packaging is now closed in the same way.
 
 ## Gauge: Structural Identification via EFT Bridge (POSITIONED)
 
@@ -147,7 +151,7 @@ because:
 
 | Sector | Continuum identification | Status | Gaps |
 |--------|-------------------------|--------|------|
-| Gravity | Exact 19-step chain to textbook Einstein-Hilbert | retained exact | none on chosen target |
+| Gravity | Exact 19-step chain to one chosen canonical textbook target | retained exact | none on chosen target |
 | SU(3) gauge | Wilson YM at β = 6.0 + universality → continuum QCD | retained structural + bounded EFT | formal RG flow (same as standard lattice QCD) |
 | SU(2) weak | Exact from Cl(3) + EWSB → standard electroweak | retained structural | — |
 | Fermion sector | Staggered-Dirac on Z³ → SM matter content | retained structural | rooting/taste (physical-lattice axiom resolves) |
@@ -157,15 +161,15 @@ because:
 The continuum identification is the strongest structural result in the
 framework after the gauge/gravity derivation itself. The paper can state:
 
-> The discrete Cl(3)/Z³ framework reproduces standard continuum physics
-> in both sectors. For gravity, an exact 19-step identification chain
-> connects the discrete partition-density family on PL S³ × R to the
-> canonical textbook Einstein-Hilbert weak/stationary action, with no
-> remaining theorem gap. For gauge theory, the Wilson plaquette SU(3)
-> action at β = 6.0 is positioned on the continuum-QCD surface through
-> the retained structural SU(3) closure, retained α_s(M_Z) = 0.1181,
-> confinement with √σ ≈ 465 MeV, and the standard universality/EFT
-> bridge.
+> On the chosen package surface, the discrete Cl(3)/Z³ framework is matched
+> to standard continuum physics in both sectors. For gravity, an exact 19-step
+> identification chain connects the discrete partition-density family on
+> PL S³ × R to one chosen canonical textbook weak/stationary gravitational
+> target, with no remaining theorem gap on that target. For gauge theory, the
+> Wilson plaquette SU(3) action at β = 6.0 is positioned on the continuum-QCD
+> surface through the retained structural SU(3) closure, retained
+> α_s(M_Z) = 0.1181, confinement with √σ ≈ 465 MeV, and the standard
+> universality/EFT bridge.
 
 ## Honest Limitations
 

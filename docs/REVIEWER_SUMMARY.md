@@ -32,6 +32,10 @@ not a second foundation.
 For the package-level gravity/gauge continuum positioning synthesis, use
 [CONTINUUM_IDENTIFICATION_NOTE.md](CONTINUUM_IDENTIFICATION_NOTE.md).
 
+Read the gravity side as exact on the discrete project route and on one chosen
+canonical textbook continuum target, not as a blanket closure claim for every
+continuum packaging.
+
 ## Retained Core
 
 - weak-field gravity through the Poisson / Newton chain

@@ -52,8 +52,10 @@ textbook weak/Gaussian object, the chosen smooth global weak gravitational
 stationary/Gaussian solution class, the same project-native smooth
 geometric/action family, the canonical textbook Einstein-Hilbert-style
 geometric/action family, and one canonical textbook continuum gravitational
-weak/stationary action family on the same route. What remains beyond that is
-only optional comparison against alternative textbook packaging conventions.
+weak/stationary action family on the same route. This is a chosen-target
+identification theorem, not a claim about every continuum completion. What
+remains beyond that is only optional comparison against alternative textbook
+packaging conventions.
 For the one-note positioning layer across gravity and gauge, use
 [CONTINUUM_IDENTIFICATION_NOTE.md](CONTINUUM_IDENTIFICATION_NOTE.md).
 

@@ -11,8 +11,9 @@ the lattice Green-function Newton law together with weak-field weak
 equivalence principle and time dilation; a restricted strong-field closure on
 an exact star-supported finite-rank class; an exact discrete global
 Lorentzian Einstein/Regge stationary-action family on `PL S^3 x R`; and an
-exact quantum-gravity bridge extending through UV-finite partition densities,
-canonical refinement, inverse-limit Gaussian completion, project-native PL
+exact QG/continuum identification chain on one chosen canonical textbook
+target, extending through UV-finite partition densities, canonical
+refinement, inverse-limit Gaussian completion, project-native PL
 weak/Sobolev closure, and canonical textbook continuum gravitational
 identification on a chosen smooth target. On the gauge/matter side, the same
 framework carries exact native `SU(2)`, graph-first structural `SU(3)`, exact
@@ -56,11 +57,13 @@ only those rows.
 Several shifts distinguish the current package from earlier states of the
 program. The direct-universal gravity route now closes as exact full discrete
 `3+1` GR on the project route. The QG/continuum chain now closes on a chosen
-canonical textbook target. Strong CP is exact on the axiom-determined action
-surface. Confinement is promoted as an exact structural theorem with a bounded
-string-tension readout. CKM is promoted as an atlas/axiom closure package with
-canonical CMT `\alpha_s(v)` input and no quark-mass or fitted-CKM derivation
-inputs, rather than a bounded flavor lane. The only live flagship gate left is dark-matter
+canonical textbook target. That is a chosen-target identification theorem, not
+a blanket statement about every possible continuum completion. Strong CP is
+exact on the axiom-determined action surface. Confinement is promoted as an
+exact structural theorem with a bounded string-tension readout. CKM is
+promoted as an atlas/axiom closure package with canonical CMT
+`\alpha_s(v)` input and no quark-mass or fitted-CKM derivation inputs, rather
+than a bounded flavor lane. The only live flagship gate left is dark-matter
 relic mapping.
 
 The correct reading of the manuscript is therefore no longer “promising
@@ -139,7 +142,8 @@ actually generated it.
 ### 3.4 UV-finite QG and the continuum bridge
 
 The quantum-gravity/continuum chain is no longer an aspiration. It is now a
-closed theorem stack on the chosen canonical target. The exact chain includes:
+closed theorem stack on one chosen canonical textbook target for the project
+route. The exact chain includes:
 
 1. UV-finite partition-density family whose mean/stationary sector is the
    discrete `3+1` Einstein/Regge family;
@@ -163,6 +167,10 @@ gauge continuum positioning note then states the correct combined posture:
 - gravity: exact on the chosen canonical textbook target;
 - gauge: positioned through the retained structural plus universality/EFT
   bridge, not by an analogous exact 19-step theorem chain.
+
+This is not a claim that every smooth or continuum packaging of gravity has
+been closed. It is a claim that, for one chosen canonical textbook target, the
+project route no longer has a theorem gap.
 
 ### 3.5 What is still not claimed
 
