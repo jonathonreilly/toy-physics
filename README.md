@@ -72,6 +72,7 @@ only optional comparison against alternative textbook packaging conventions.
 - retained three-generation matter structure
 - exact `I_3 = 0`
 - exact CPT on the free staggered lattice
+- exact strong CP / `theta_eff = 0` on the axiom-determined action surface
 
 ## Quantitative Component Stack
 

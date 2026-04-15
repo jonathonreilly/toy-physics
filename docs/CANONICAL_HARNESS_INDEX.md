@@ -12,6 +12,7 @@ Use this file to find the current canonical note/runner pair on `main`.
 | graph-first structural `SU(3)` | [GRAPH_FIRST_SU3_INTEGRATION_NOTE.md](GRAPH_FIRST_SU3_INTEGRATION_NOTE.md) | `frontier_graph_first_su3_integration.py` |
 | anomaly-forced `3+1` | [ANOMALY_FORCES_TIME_THEOREM.md](ANOMALY_FORCES_TIME_THEOREM.md) | `frontier_anomaly_forces_time.py` |
 | `S^3` compactification | [S3_GENERAL_R_DERIVATION_NOTE.md](S3_GENERAL_R_DERIVATION_NOTE.md), [S3_CAP_UNIQUENESS_NOTE.md](S3_CAP_UNIQUENESS_NOTE.md) | `frontier_s3_boundary_link_theorem.py`, `frontier_s3_general_r.py`, `frontier_s3_cap_uniqueness.py` |
+| strong CP / `θ_eff = 0` | [STRONG_CP_THETA_ZERO_NOTE.md](STRONG_CP_THETA_ZERO_NOTE.md) | `frontier_strong_cp_theta_zero.py` |
 
 ## Quantitative Component Stack
 
@@ -23,10 +24,10 @@ Use this file to find the current canonical note/runner pair on `main`.
 | bounded Yukawa / top | [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](YT_COLOR_PROJECTION_CORRECTION_NOTE.md) | `frontier_yt_color_projection_correction.py` |
 | QFP bounded-support theorem | [YT_QFP_INSENSITIVITY_THEOREM.md](YT_QFP_INSENSITIVITY_THEOREM.md) | `frontier_yt_qfp_insensitivity.py` |
 | bounded Higgs / vacuum | [HIGGS_VACUUM_PROMOTED_NOTE.md](HIGGS_VACUUM_PROMOTED_NOTE.md) | `frontier_higgs_mass_full_3loop.py`, `frontier_yt_color_projection_correction.py`, `frontier_direct_yt_extraction.py` |
+| promoted CKM closure | [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](CKM_ATLAS_AXIOM_CLOSURE_NOTE.md) | `frontier_ckm_atlas_axiom_closure.py`, `frontier_ckm_no_import_audit.py` |
 
 ## Remaining Live Gates
 
 | lane | authority | primary runner |
 |---|---|---|
 | DM relic mapping | [DM_RELIC_PAPER_NOTE.md](DM_RELIC_PAPER_NOTE.md) | `frontier_dm_relic_paper.py` |
-| CKM quantitative closure | [CKM_MASS_BASIS_NNI_NOTE.md](CKM_MASS_BASIS_NNI_NOTE.md) | `frontier_ckm_mass_basis_nni.py` |

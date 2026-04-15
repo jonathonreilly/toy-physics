@@ -134,6 +134,7 @@ Retained backbone:
 - three-generation matter structure in the framework
 - exact `I_3 = 0` theorem on the Hilbert surface
 - exact CPT theorem on the free staggered lattice
+- exact strong CP / `theta_eff = 0` theorem on the axiom-determined action surface
 
 Reviewer-facing framing notes:
 

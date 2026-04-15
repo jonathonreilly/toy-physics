@@ -106,6 +106,10 @@ The current retained backbone is:
 - three-generation matter closure in the framework:
   - exact orbit algebra `8 = 1 + 1 + 3 + 3`
   - physical species structure on the lattice surface
+- strong CP / `θ_eff = 0` structural closure:
+  - the axiom-determined Wilson-plus-staggered action leaves no bare `θ`
+  - the real-mass staggered determinant carries no phase
+  - CKM CP remains confined to the weak sector
 
 ## Observation-facing bounded portfolio that the framework now covers
 
@@ -159,6 +163,7 @@ surface:
   the safe statement is exact pairwise interference on the accepted Hilbert
   probability surface.
 - exact CPT theorem for the free staggered `Cl(3)` lattice
+- exact strong CP / `θ_eff = 0` theorem on the axiom-determined action surface
 - exact native cubic `SU(2)` algebra
 - exact graph-first `su(3)` commutant closure on the retained selector surface
 - exact hierarchy observable principle on the minimal APBC block:

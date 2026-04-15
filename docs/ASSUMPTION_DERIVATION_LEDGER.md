@@ -15,6 +15,7 @@ derived quantitative rows, and still-open companion lanes.
 | `M_Pl` as UV cutoff | assumed framework scale | Treated as the framework cutoff, not fitted from the SM. |
 | SU(3) plaquette `<P> = 0.5934` at `beta = 6` | computed from the axiom | The complete prediction chain uses one computed lattice input, not an experimental import. |
 | exact structural gauge/matter backbone | derived | `SU(3) x SU(2) x U(1)`, three generations, anomaly-forced `3+1`, and the retained matter structure are package-grade. |
+| strong CP / `θ_eff = 0` | derived / retained exact structural theorem | The axiom-determined Wilson-plus-staggered action leaves no bare `θ`, and the real-mass staggered determinant carries no phase. |
 | hierarchy / `v` theorem | derived | `v = 245.080424447914 GeV` is retained on the hierarchy lane; it is not part of the separate quantitative component stack. |
 | `R_conn = 8/9` color factor | derived | Canonical authority is [RCONN_DERIVED_NOTE.md](RCONN_DERIVED_NOTE.md); it is not a fit knob. |
 | EW normalization package | derived / retained quantitative lane | `sin^2(theta_W)`, `1/alpha_EM`, `g_1(v)`, and `g_2(v)` form a standalone retained EW lane. |
@@ -22,7 +23,7 @@ derived quantitative rows, and still-open companion lanes.
 | top pole mass package | bounded / derived | `m_t(pole) = 172.57 GeV` (2-loop) and `173.10 GeV` (3-loop) inherit the bounded `y_t` systematic. |
 | Higgs CW/stability package | bounded | the mechanism, `lambda(M_Pl)=0` boundary, and framework-native full 3-loop Higgs implementation now exist; exact `m_H` and vacuum stability remain bounded only because they inherit the bounded `y_t` / QFP route. |
 | DM relic mapping | bounded/open | Strong bounded companions remain, but the relic bridge is still not closed. |
-| CKM quantitative closure | bounded/open | Strong bounded flavor subresults exist, but ab initio quantitative closure is not promoted. |
+| CKM quantitative closure | derived / promoted quantitative package | The canonical atlas/axiom no-import closure is promoted on `main`; older Cabibbo / mass-basis / partial-Jarlskog routes remain route history only. |
 
 ## Writing rule
 

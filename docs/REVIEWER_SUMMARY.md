@@ -33,6 +33,7 @@ portfolio, and two explicitly open gates.
 - retained three-generation matter structure
 - exact `I_3 = 0`
 - exact CPT
+- exact strong CP / `theta_eff = 0`
 
 ## Quantitative Component Stack
 

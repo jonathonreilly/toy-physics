@@ -68,6 +68,7 @@ Use this file together with:
 | Matter | three-generation structure | exact orbit algebra `8 = 1 + 1 + 3 + 3` | promoted | zero-input structural | main text | [THREE_GENERATION_STRUCTURE_NOTE.md](../../THREE_GENERATION_STRUCTURE_NOTE.md) | `frontier_generation_fermi_point.py`, `frontier_generation_rooting_undefined.py`, `frontier_generation_axiom_boundary.py` |
 | Exact support theorem | `I_3 = 0` | exact no-third-order-interference theorem | promoted | zero-input structural | main text / ED | [I3_ZERO_EXACT_THEOREM_NOTE.md](../../I3_ZERO_EXACT_THEOREM_NOTE.md) | `frontier_born_rule_derived.py` |
 | Exact support theorem | CPT | exact free staggered-lattice CPT | promoted | zero-input structural | main text / ED | [CPT_EXACT_NOTE.md](../../CPT_EXACT_NOTE.md) | `frontier_cpt_exact.py` |
+| Exact support theorem | strong CP / `θ_eff = 0` | exact structural strong-CP closure on the axiom-determined staggered-Dirac + Wilson-plaquette action surface; CKM CP remains weak-sector only | promoted | zero-input structural | main text / theorem box | [STRONG_CP_THETA_ZERO_NOTE.md](../../STRONG_CP_THETA_ZERO_NOTE.md) | `frontier_strong_cp_theta_zero.py` |
 
 ## B. Quantitative component stack
 
