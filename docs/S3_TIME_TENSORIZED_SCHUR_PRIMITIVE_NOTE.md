@@ -5,6 +5,12 @@
 compatible with the current exact scalar Schur backbone and the existing
 bounded two-channel tensor prototype
 
+**Update (2026-04-15):** superseded on the carrier-existence point by
+`S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md` and
+`S3_TIME_BILINEAR_TENSOR_ACTION_NOTE.md`. The linear-carrier no-go in this
+note remains useful, but the exact bilinear carrier `K_R` now exists on the
+current branch.
+
 ## Verdict
 
 The exact tensor carrier is still absent on the current support stack.

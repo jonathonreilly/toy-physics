@@ -6,6 +6,10 @@ These manifests organize the whole repo by major research lane.
 
 - [`staggered/README.md`](staggered/README.md)
 
+## Active Quantitative Lanes
+
+- [`flavor/README.md`](flavor/README.md)
+
 ## Historical And Comparison Lanes
 
 - [`mirror/README.md`](mirror/README.md)

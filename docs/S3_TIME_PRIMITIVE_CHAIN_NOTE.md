@@ -5,6 +5,12 @@
 dependency, and derive the smallest missing primitive from the current exact
 and bounded stack so they can become future atlas tools
 
+**Update (2026-04-15):** superseded on Primitive `P1` by
+`S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md` and
+`S3_TIME_BILINEAR_TENSOR_ACTION_NOTE.md`. The exact support-side carrier is
+now closed as the bilinear object `K_R`; the live blocker has moved downstream
+to the final dynamics identification step.
+
 ## Verdict
 
 Route 2 is no longer a hunt for a hidden GR theorem.

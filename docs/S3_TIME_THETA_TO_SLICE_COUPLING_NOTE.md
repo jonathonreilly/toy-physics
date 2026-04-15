@@ -5,6 +5,12 @@
 support observable `Theta_R` into the exact slice generator `Lambda_R` /
 bounded transfer law `T_R = exp(-Lambda_R)` on `PL S^3 x R`
 
+**Update (2026-04-15):** superseded on the carrier-existence point by
+`S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md` and
+`S3_TIME_BILINEAR_TENSOR_ACTION_NOTE.md`. The exact support-side carrier is no
+longer missing; what remains open is the final dynamics identification of that
+exact carrier.
+
 ## Verdict
 
 The cleanest current answer is **bounded, not exact**.
