@@ -1,4 +1,4 @@
-# `alpha_s(M_Z)` Retained Zero-Import Authority
+# `alpha_s(M_Z)` Retained Same-Surface-Derived Authority
 
 **Date:** 2026-04-15
 **Status:** retained quantitative lane on `main`
@@ -15,7 +15,7 @@ lane, not merely as a hidden subcomponent of a larger synthesis memo.
 
 ## Safe Statement
 
-The current zero-input lane gives:
+The current retained lane gives:
 
 - `alpha_s(v) = alpha_bare / u_0^2 = 0.1033`
 - one-decade low-energy transfer from `v` to `M_Z`
@@ -28,7 +28,7 @@ That is the current retained zero-input `alpha_s` result on `main`.
 ```
 Cl(3) on Z^3
   |-> g_bare = 1
-  |-> <P> = 0.5934
+  |-> <P> = 0.5934  (same-surface evaluated; see plaquette self-consistency)
   |-> u_0 = <P>^(1/4)
   |
   |-> hierarchy theorem:
@@ -45,6 +45,8 @@ Cl(3) on Z^3
 ## Package Role
 
 This is a retained standalone quantitative lane, not a theorem-core row.
+Its quantitative anchor is the canonical same-surface plaquette evaluation in
+[PLAQUETTE_SELF_CONSISTENCY_NOTE.md](PLAQUETTE_SELF_CONSISTENCY_NOTE.md).
 
 It remains distinct from:
 

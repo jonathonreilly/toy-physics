@@ -58,6 +58,7 @@ import sys
 import time
 
 import numpy as np
+from canonical_plaquette_surface import CANONICAL_ALPHA_BARE, CANONICAL_ALPHA_LM, CANONICAL_ALPHA_S_V, CANONICAL_PLAQUETTE, CANONICAL_U0
 
 try:
     from scipy.integrate import solve_ivp
@@ -104,7 +105,7 @@ D_SPATIAL = 3
 M_PL = 1.2209e19           # GeV, unreduced Planck mass
 
 # Lattice MC observables
-PLAQ = 0.5934               # <P> at beta = 6
+PLAQ = CANONICAL_PLAQUETTE               # <P> at beta = 6
 R_CONN = (N_C**2 - 1.0) / N_C**2   # = 8/9, connected color trace ratio
 
 # Bare couplings from Cl(3) geometry

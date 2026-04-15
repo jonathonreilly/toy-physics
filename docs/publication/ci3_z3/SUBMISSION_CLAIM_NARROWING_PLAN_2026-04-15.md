@@ -169,7 +169,7 @@ those surfaces.
 **Action**
 
 - Keep the lanes if desired, but narrow the description:
-  - one computed plaquette input
+  - canonical same-surface plaquette evaluation
   - connected-color-trace condition
   - threshold-running bridge
 - Stop saying “all else derived.”

@@ -35,8 +35,8 @@ Cl(3) on Z^3                                            [AXIOM]
   |      g_2^2 = 1/4       (Z_2 bipartite, d+1 dirs)     [DERIVED]
   |      g_Y^2 = 1/5       (chirality sector, d+2 dirs)  [DERIVED]
   |
-  +--- LATTICE MC
-  |      <P> = 0.5934      (SU(3) plaquette at beta=6)   [COMPUTED]
+  +--- SAME-SURFACE EVALUATION
+  |      <P> = 0.5934      (SU(3) plaquette at beta=6)   [EVALUATED]
   |      R_conn = 8/9      (connected color trace ratio)  [COMPUTED]
   |
   +--- INTERMEDIATE QUANTITIES
@@ -77,7 +77,7 @@ Cl(3) on Z^3                                            [AXIOM]
 | Cl(3) on Z^3           | axiom        | AXIOM          | Starting postulate                   |
 | N_c = 3                | 3            | AXIOM          | Cl(3) spatial dimension              |
 | M_Pl                   | 1.221e19 GeV | AXIOM          | Framework UV cutoff                  |
-| < P >                  | 0.5934       | COMPUTED       | SU(3) lattice MC at beta = 6        |
+| < P >                  | 0.5934       | EVALUATED      | same-surface plaquette evaluation at beta = 6 |
 | R_conn                 | 8/9          | COMPUTED       | Color trace ratio (MC, 0.24%)        |
 | g_3^2(bare)            | 1            | DERIVED        | Z_3 clock-shift algebra              |
 | g_2^2(bare)            | 1/4          | DERIVED        | Z_2 bipartite, d+1 directions       |
@@ -95,7 +95,7 @@ Cl(3) on Z^3                                            [AXIOM]
 | lambda(v)              | 0.1908       | DERIVED        | Full 1-loop CW on lattice BZ         |
 | m_b, m_c thresholds    | 4.18, 1.27   | INFRASTRUCTURE | v -> M_Z running only                |
 
-**No row says IMPORTED or BOUNDED.**  Every v-scale quantity is fully DERIVED from the axiom.  INFRASTRUCTURE items affect only the v -> M_Z cross-check transfer.
+**No row says IMPORTED or BOUNDED.**  Every v-scale quantity is derived from the axiom plus the canonical same-surface plaquette evaluation.  INFRASTRUCTURE items affect only the v -> M_Z cross-check transfer.
 
 ---
 

@@ -23,6 +23,13 @@ PStack experiment: higgs-buttazzo-calibration
 from __future__ import annotations
 import sys, time
 import numpy as np
+from canonical_plaquette_surface import (
+    CANONICAL_ALPHA_BARE,
+    CANONICAL_ALPHA_LM,
+    CANONICAL_ALPHA_S_V,
+    CANONICAL_PLAQUETTE,
+    CANONICAL_U0,
+)
 from scipy.integrate import solve_ivp
 from scipy.optimize import brentq
 
@@ -53,16 +60,16 @@ M_C_MSBAR = 1.27
 M_Z = 91.1876
 
 # Framework-derived
-PLAQ = 0.5934
+PLAQ = CANONICAL_PLAQUETTE
 R_CONN = (N_C**2 - 1.0) / N_C**2   # 8/9
 SQRT_R_CONN = np.sqrt(R_CONN)       # sqrt(8/9) = 0.9428
 SQRT_INV_R_CONN = np.sqrt(1.0 / R_CONN)  # sqrt(9/8) = 1.0607
 
-U0 = PLAQ**0.25
-ALPHA_BARE = 1.0 / (4.0 * PI)
-ALPHA_S_V = ALPHA_BARE / U0**2      # 0.1033
+U0 = CANONICAL_U0
+ALPHA_BARE = CANONICAL_ALPHA_BARE
+ALPHA_S_V = CANONICAL_ALPHA_S_V
 C_APBC = (7.0 / 8.0)**0.25
-ALPHA_LM = ALPHA_BARE / U0
+ALPHA_LM = CANONICAL_ALPHA_LM
 V_DERIVED = M_PL * C_APBC * ALPHA_LM**16   # 246.28 GeV
 
 G3_V = np.sqrt(4.0 * PI * ALPHA_S_V)   # 1.139

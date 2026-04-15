@@ -233,7 +233,7 @@ the exact support story needs to be.
 **Current public posture**
 
 - retained / derived
-- “one computed plaquette input, all else derived”
+- “canonical same-surface plaquette evaluation, all else derived”
 
 Representative surfaces:
 

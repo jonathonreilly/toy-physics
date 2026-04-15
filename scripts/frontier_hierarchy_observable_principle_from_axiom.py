@@ -24,6 +24,7 @@ import math
 import sys
 
 import numpy as np
+from canonical_plaquette_surface import CANONICAL_ALPHA_LM, CANONICAL_PLAQUETTE, CANONICAL_U0
 
 np.set_printoptions(precision=10, linewidth=120, suppress=True)
 
@@ -359,11 +360,11 @@ def test_hierarchy_value_from_internal_observable_principle():
     print("=" * 78)
 
     c4 = (7.0 / 8.0) ** 0.25
-    plaquette = 0.5934
+    plaquette = CANONICAL_PLAQUETTE
     m_planck = 1.2209e19
-    u0 = plaquette ** 0.25
+    u0 = CANONICAL_U0
     alpha_bare = 1.0 / (4.0 * math.pi)
-    alpha_lm = alpha_bare / u0
+    alpha_lm = CANONICAL_ALPHA_LM
     baseline = m_planck * alpha_lm**16
     v_pred = baseline * c4
     v_meas = 246.22

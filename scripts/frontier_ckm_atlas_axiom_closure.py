@@ -44,6 +44,13 @@ import sys
 
 import numpy as np
 from _frontier_loader import load_frontier
+from canonical_plaquette_surface import (
+    CANONICAL_ALPHA_BARE,
+    CANONICAL_ALPHA_LM,
+    CANONICAL_ALPHA_S_V,
+    CANONICAL_PLAQUETTE,
+    CANONICAL_U0,
+)
 
 np.set_printoptions(precision=10, linewidth=120, suppress=True)
 
@@ -118,12 +125,12 @@ def j_from_angles(s12: float, s23: float, s13: float, delta: float) -> float:
 PI = math.pi
 
 # Framework inputs: branch-local exact/derived surfaces
-PLAQ_MC = 0.5934
+PLAQ_MC = CANONICAL_PLAQUETTE
 M_PLANCK = 1.2209e19
 SELECTOR_CORRECTION = (7.0 / 8.0) ** 0.25
-U0_HIERARCHY = PLAQ_MC ** 0.25
-ALPHA_BARE = 1.0 / (4.0 * PI)
-ALPHA_LM = ALPHA_BARE / U0_HIERARCHY
+U0_HIERARCHY = CANONICAL_U0
+ALPHA_BARE = CANONICAL_ALPHA_BARE
+ALPHA_LM = CANONICAL_ALPHA_LM
 V_DERIVED_CURRENT = M_PLANCK * SELECTOR_CORRECTION * ALPHA_LM**16
 
 # Exact structural counts from the retained atlas surface
@@ -165,9 +172,9 @@ print("STEP 1: FRAMEWORK COUPLING AT v")
 print("=" * 78)
 print()
 
-u0 = PLAQ_MC ** 0.25
-alpha_bare = 1.0 / (4.0 * PI)
-alpha_s_v_from_plaquette = alpha_bare / (u0 * u0)
+u0 = CANONICAL_U0
+alpha_bare = CANONICAL_ALPHA_BARE
+alpha_s_v_from_plaquette = CANONICAL_ALPHA_S_V
 alpha_s_v_from_hierarchy = 4.0 * PI * (V_DERIVED_CURRENT / (SELECTOR_CORRECTION * M_PLANCK)) ** (1.0 / 8.0)
 alpha_s_v = alpha_s_v_from_plaquette
 

@@ -45,6 +45,7 @@ from __future__ import annotations
 
 import sys
 import numpy as np
+from canonical_plaquette_surface import CANONICAL_ALPHA_BARE, CANONICAL_ALPHA_S_V, CANONICAL_PLAQUETTE, CANONICAL_U0
 
 np.set_printoptions(precision=10, linewidth=120, suppress=True)
 
@@ -305,10 +306,10 @@ def test_color_weak_factorisation():
 def test_mass_determinant_phase():
     print("\n=== Mass matrix determinant phase ===\n")
 
-    P_plaq = 0.5934
-    u_0 = P_plaq ** 0.25
-    alpha_bare = 1.0 / (4 * np.pi)
-    alpha_s_v = alpha_bare / u_0 ** 2
+    P_plaq = CANONICAL_PLAQUETTE
+    u_0 = CANONICAL_U0
+    alpha_bare = CANONICAL_ALPHA_BARE
+    alpha_s_v = CANONICAL_ALPHA_S_V
 
     lam = np.sqrt(alpha_s_v / 2)
     A = np.sqrt(2.0 / 3.0)

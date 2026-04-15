@@ -52,6 +52,7 @@ import sys
 import time
 
 import numpy as np
+from canonical_plaquette_surface import CANONICAL_ALPHA_BARE, CANONICAL_ALPHA_LM, CANONICAL_ALPHA_S_V, CANONICAL_PLAQUETTE, CANONICAL_U0
 
 try:
     from scipy.integrate import solve_ivp
@@ -72,10 +73,10 @@ N_H = 1            # Higgs doublets (G_5 condensate)
 M_PL = 1.2209e19   # GeV, unreduced Planck mass
 
 # Framework-derived constants
-PLAQ = 0.5934                     # <P> at beta = 6 (MC computed)
-U0 = PLAQ ** 0.25                 # mean-field link
-ALPHA_BARE = 1.0 / (4.0 * PI)    # g_bare = 1
-ALPHA_LM = ALPHA_BARE / U0       # 1 link per hop (hierarchy)
+PLAQ = CANONICAL_PLAQUETTE                     # <P> at beta = 6 (MC computed)
+U0 = CANONICAL_U0                 # mean-field link
+ALPHA_BARE = CANONICAL_ALPHA_BARE    # g_bare = 1
+ALPHA_LM = CANONICAL_ALPHA_LM       # 1 link per hop (hierarchy)
 ALPHA_S_V = ALPHA_BARE / U0**2   # 2 links per vertex (CMT)
 C_APBC = (7.0 / 8.0) ** 0.25     # APBC factor
 V_DERIVED = M_PL * C_APBC * ALPHA_LM ** 16

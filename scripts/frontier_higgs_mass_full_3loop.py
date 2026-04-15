@@ -44,6 +44,7 @@ import sys
 import time
 
 import numpy as np
+from canonical_plaquette_surface import CANONICAL_ALPHA_BARE, CANONICAL_ALPHA_LM, CANONICAL_ALPHA_S_V, CANONICAL_PLAQUETTE, CANONICAL_U0
 from scipy.integrate import solve_ivp
 from scipy.optimize import brentq
 
@@ -74,10 +75,10 @@ ALPHA_EM_MZ = 1.0 / 127.951
 SIN2_TW_MZ = 0.23122
 
 # Framework-derived values
-PLAQ = 0.5934
-U0 = PLAQ ** 0.25
-ALPHA_BARE = 1.0 / (4.0 * PI)
-ALPHA_LM = ALPHA_BARE / U0
+PLAQ = CANONICAL_PLAQUETTE
+U0 = CANONICAL_U0
+ALPHA_BARE = CANONICAL_ALPHA_BARE
+ALPHA_LM = CANONICAL_ALPHA_LM
 ALPHA_S_V_DERIVED = ALPHA_BARE / U0**2  # = 0.1033
 C_APBC = (7.0 / 8.0) ** 0.25
 V_DERIVED = M_PL * C_APBC * ALPHA_LM**16

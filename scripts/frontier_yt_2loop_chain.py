@@ -49,6 +49,7 @@ import sys
 import time
 
 import numpy as np
+from canonical_plaquette_surface import CANONICAL_ALPHA_BARE, CANONICAL_ALPHA_LM, CANONICAL_ALPHA_S_V, CANONICAL_PLAQUETTE, CANONICAL_U0
 
 try:
     from scipy.integrate import solve_ivp
@@ -79,10 +80,10 @@ ALPHA_S_MZ_OBS = 0.1179     # PDG 2024
 Y_T_OBS = np.sqrt(2) * M_T_OBS / V_OBS  # ~ 0.992
 
 # Framework-derived values
-PLAQ_BENCHMARK = 0.5934     # <P> at beta = 6
+PLAQ_BENCHMARK = CANONICAL_PLAQUETTE     # <P> at beta = 6
 U0 = PLAQ_BENCHMARK ** 0.25
-ALPHA_BARE = 1.0 / (4.0 * PI)
-ALPHA_LM = ALPHA_BARE / U0  # 0.09066
+ALPHA_BARE = CANONICAL_ALPHA_BARE
+ALPHA_LM = CANONICAL_ALPHA_LM  # 0.09066
 ALPHA_S_V = ALPHA_BARE / U0**2  # 0.1033
 C_APBC = (7.0 / 8.0) ** 0.25
 V_DERIVED = M_PL * C_APBC * ALPHA_LM ** 16

@@ -50,6 +50,7 @@ import sys
 import time
 
 import numpy as np
+from canonical_plaquette_surface import CANONICAL_ALPHA_BARE, CANONICAL_ALPHA_LM, CANONICAL_ALPHA_S_V, CANONICAL_PLAQUETTE, CANONICAL_U0
 
 try:
     from scipy.integrate import solve_ivp
@@ -91,11 +92,11 @@ FAC_2LOOP = FAC_1LOOP**2
 # Framework-derived constants (from Cl(3) on Z^3)
 N_C = 3
 M_PL = 1.2209e19           # GeV, unreduced Planck mass
-PLAQ = 0.5934               # <P> at beta = 6
+PLAQ = CANONICAL_PLAQUETTE               # <P> at beta = 6
 R_CONN = 8.0 / 9.0          # connected color trace ratio
 U0 = PLAQ**0.25             # mean-field link = 0.8776
-ALPHA_BARE = 1.0 / (4.0 * PI)
-ALPHA_LM = ALPHA_BARE / U0
+ALPHA_BARE = CANONICAL_ALPHA_BARE
+ALPHA_LM = CANONICAL_ALPHA_LM
 ALPHA_S_V = ALPHA_BARE / U0**2  # = 0.1033
 C_APBC = (7.0 / 8.0)**0.25
 V_DERIVED = M_PL * C_APBC * ALPHA_LM**16  # hierarchy theorem

@@ -36,6 +36,7 @@ from __future__ import annotations
 
 import sys
 import numpy as np
+from canonical_plaquette_surface import CANONICAL_ALPHA_BARE, CANONICAL_ALPHA_S_V, CANONICAL_PLAQUETTE, CANONICAL_U0
 
 np.set_printoptions(precision=10, linewidth=120, suppress=True)
 
@@ -62,14 +63,14 @@ def check(name, condition, detail="", kind="EXACT"):
 # Framework constants
 # =============================================================================
 
-P_PLAQ = 0.5934        # plaquette expectation on the Cl(3)/Z³ surface
-U0 = P_PLAQ ** 0.25    # tadpole factor
-ALPHA_BARE = 1.0 / (4 * np.pi)
+P_PLAQ = CANONICAL_PLAQUETTE        # plaquette expectation on the Cl(3)/Z³ surface
+U0 = CANONICAL_U0                   # tadpole factor
+ALPHA_BARE = CANONICAL_ALPHA_BARE
 G_BARE_SQ = 4 * np.pi * ALPHA_BARE  # = 1
 N_C = 3
 BETA_LATTICE = 2 * N_C / G_BARE_SQ  # = 6.0
 
-ALPHA_S_V = ALPHA_BARE / U0 ** 2  # = 0.1033
+ALPHA_S_V = CANONICAL_ALPHA_S_V
 V_EW = 246.28281829012906  # GeV, hierarchy theorem
 M_Z = 91.1876  # GeV
 ALPHA_S_MZ = 0.1181  # retained zero-import lane

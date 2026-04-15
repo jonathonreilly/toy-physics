@@ -50,6 +50,7 @@ import sys
 import time
 
 import numpy as np
+from canonical_plaquette_surface import CANONICAL_ALPHA_BARE, CANONICAL_ALPHA_LM, CANONICAL_ALPHA_S_V, CANONICAL_PLAQUETTE, CANONICAL_U0
 from scipy.linalg import expm
 from scipy.integrate import solve_ivp
 
@@ -59,7 +60,7 @@ PI = np.pi
 N_C = 3
 M_PL = 1.2209e19
 
-PLAQ_MC = 0.5934
+PLAQ_MC = CANONICAL_PLAQUETTE
 V_OBS = 246.22
 ALPHA_S_MZ_OBS = 0.1179
 M_Z = 91.1876

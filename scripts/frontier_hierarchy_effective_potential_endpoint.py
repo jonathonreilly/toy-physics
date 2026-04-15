@@ -182,11 +182,11 @@ def test_dimension4_endpoint_factor():
     print("PART 4: DIMENSION-4 ENDPOINT CORRECTION")
     print("=" * 78)
 
-    alpha_bare = 1.0 / (4.0 * math.pi)
+    alpha_bare = CANONICAL_ALPHA_BARE
     m_planck = 1.2209e19
-    plaquette = 0.5934
-    u0 = plaquette ** 0.25
-    alpha_lm = alpha_bare / u0
+    plaquette = CANONICAL_PLAQUETTE
+    u0 = CANONICAL_U0
+    alpha_lm = CANONICAL_ALPHA_LM
     c_obs = 246.22 / (m_planck * alpha_lm**16)
     c_inf = exact_dimension4_endpoint_factor()
     c_none = 1.0

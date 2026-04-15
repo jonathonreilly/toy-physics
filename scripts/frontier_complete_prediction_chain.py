@@ -18,16 +18,23 @@ Subcomponent provenance:
 from __future__ import annotations
 
 import math
+from canonical_plaquette_surface import (
+    CANONICAL_ALPHA_BARE,
+    CANONICAL_ALPHA_LM,
+    CANONICAL_ALPHA_S_V,
+    CANONICAL_PLAQUETTE,
+    CANONICAL_U0,
+)
 
 PI = math.pi
 M_PL = 1.2209e19
-PLAQ = 0.5934
+PLAQ = CANONICAL_PLAQUETTE
 R_CONN = 8.0 / 9.0
 
-U0 = PLAQ ** 0.25
-ALPHA_BARE = 1.0 / (4.0 * PI)
-ALPHA_LM = ALPHA_BARE / U0
-ALPHA_S_V = ALPHA_BARE / (U0 ** 2)
+U0 = CANONICAL_U0
+ALPHA_BARE = CANONICAL_ALPHA_BARE
+ALPHA_LM = CANONICAL_ALPHA_LM
+ALPHA_S_V = CANONICAL_ALPHA_S_V
 V = M_PL * ((7.0 / 8.0) ** 0.25) * (ALPHA_LM ** 16)
 TASTE_WEIGHT = (7.0 / 8.0) * 0.5 * R_CONN
 

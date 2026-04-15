@@ -13,7 +13,7 @@ derived quantitative rows, and still-open companion lanes.
 |---|---|---|
 | `Cl(3)` on `Z^3` as physical theory | assumed framework axiom | This is the starting physical postulate of the package. |
 | `M_Pl` as UV cutoff | assumed framework scale | Treated as the framework cutoff, not fitted from the SM. |
-| SU(3) plaquette `<P> = 0.5934` at `beta = 6` | computed from the axiom | The complete prediction chain uses one computed lattice input, not an experimental import. |
+| SU(3) plaquette `<P> = 0.5934` at `beta = 6` | same-surface evaluated / derived | The complete prediction chain uses the canonical plaquette evaluation of the retained partition function, not an experimental import or a free parameter. |
 | exact structural gauge/matter backbone | derived | `SU(3) x SU(2) x U(1)`, three generations, anomaly-forced `3+1`, and the retained matter structure are package-grade. |
 | `SU(3)` confinement / `\sqrt{\sigma}` | derived / retained structural theorem + bounded quantitative prediction | `T = 0` confinement is structural on the graph-first `SU(3)` gauge sector at canonical `g_bare^2 = 1`; the bounded `\sqrt{\sigma} \approx 465 MeV` readout uses the retained `\alpha_s` lane plus the standard low-energy EFT bridge. |
 | strong CP / `θ_eff = 0` | derived / retained exact structural theorem | On the retained axiom-determined Wilson-plus-staggered action surface, no bare `θ` appears and the real-mass staggered determinant carries no phase. |

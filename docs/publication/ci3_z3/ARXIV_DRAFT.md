@@ -93,7 +93,7 @@ data for the bounded cosmology companion portfolio. By contrast, the
 electroweak scale is no longer an external datum on the current paper surface.
 The retained hierarchy theorem fixes the exact minimal-block source-response
 structure internally, and the quoted numerical value is the pinned evaluation
-on the current plaquette / `u_0` surface.
+on the canonical same-surface plaquette-derived normalization chain.
 
 ## 3. Gravity and the QG/Continuum Chain
 
@@ -273,8 +273,8 @@ bounded by that bridge.
 The electroweak hierarchy lane is retained on the exact minimal `3+1` block.
 The finite Grassmann Gaussian makes `\log|Z|` the unique additive CPT-even
 scalar generator on that surface, and the resulting source-response theorem
-fixes the hierarchy kernel. The pinned evaluation on the current plaquette /
-`u_0` surface gives
+fixes the hierarchy kernel. The canonical evaluation on the same-surface
+plaquette-derived normalization chain gives
 
 - `v = 246.282818290129 GeV`
 

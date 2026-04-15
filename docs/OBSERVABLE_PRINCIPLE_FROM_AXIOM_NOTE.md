@@ -182,5 +182,6 @@ At this point the hierarchy closure is as clean as the current framework can
 make it.
 
 The remaining `0.03%` is no longer an open theorem gap in the observable
-principle. It sits in the numerical input surface (`u_0` / plaquette value)
-rather than in the axiom-to-observable map itself.
+principle. It sits in the canonical same-surface plaquette evaluation and its
+downstream normalization chain rather than in the axiom-to-observable map
+itself.

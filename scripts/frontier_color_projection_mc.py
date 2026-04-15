@@ -22,6 +22,7 @@ Self-contained: numpy + scipy only.
 """
 
 import numpy as np
+from canonical_plaquette_surface import CANONICAL_PLAQUETTE
 from scipy import sparse
 from scipy.sparse.linalg import bicgstab
 import time
@@ -616,7 +617,7 @@ def run_simulation(L, n_therm, n_meas, meas_interval, use_heatbath=True):
 
     plaq_mean = np.mean(plaquette_values)
     plaq_err = np.std(plaquette_values) / np.sqrt(len(plaquette_values))
-    plaq_expected = 0.5934
+    plaq_expected = CANONICAL_PLAQUETTE
 
     print(f"\nPlaquette <P>:")
     print(f"  Measured:  {plaq_mean:.4f} +/- {plaq_err:.4f}")

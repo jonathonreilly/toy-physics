@@ -43,6 +43,12 @@ import time
 from math import comb
 
 import numpy as np
+from canonical_plaquette_surface import (
+    CANONICAL_ALPHA_LM,
+    CANONICAL_ALPHA_S_V,
+    CANONICAL_PLAQUETTE,
+    CANONICAL_U0,
+)
 
 try:
     from scipy.integrate import solve_ivp
@@ -95,7 +101,7 @@ D_SPATIAL = 3           # from Cl(3)
 M_PL = 1.2209e19       # GeV, unreduced Planck mass (framework UV cutoff)
 
 # -- Lattice MC observables (COMPUTED from axiom) --
-PLAQ = 0.5934                        # <P> at beta = 6
+PLAQ = CANONICAL_PLAQUETTE           # canonical same-surface plaquette at beta = 6
 R_CONN = 8.0 / 9.0                  # connected color trace ratio (MC-verified)
 
 # -- Bare couplings (DERIVED from lattice geometry) --
@@ -109,9 +115,9 @@ ALPHA_Y_BARE = GY_SQ_BARE / (4.0 * PI)   # 1/(20 pi)
 ALPHA_1_GUT_BARE = (5.0 / 3.0) * ALPHA_Y_BARE  # GUT-normalized U(1)
 
 # -- Derived intermediate quantities --
-U0 = PLAQ ** 0.25                          # mean-field link
-ALPHA_LM = ALPHA_3_BARE / U0              # Lepage-Mackenzie coupling
-ALPHA_S_V = ALPHA_3_BARE / U0 ** 2        # Coupling Map Theorem, n_link = 2
+U0 = CANONICAL_U0                          # mean-field link
+ALPHA_LM = CANONICAL_ALPHA_LM              # Lepage-Mackenzie coupling
+ALPHA_S_V = CANONICAL_ALPHA_S_V            # Coupling Map Theorem, n_link = 2
 G_S_V = np.sqrt(4.0 * PI * ALPHA_S_V)    # g_s at v
 C_APBC = (7.0 / 8.0) ** 0.25              # APBC factor
 V_DERIVED = M_PL * C_APBC * ALPHA_LM ** 16  # hierarchy theorem

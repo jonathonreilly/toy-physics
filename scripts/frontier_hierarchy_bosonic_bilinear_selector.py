@@ -23,6 +23,7 @@ from __future__ import annotations
 import cmath
 import math
 import sys
+from canonical_plaquette_surface import CANONICAL_ALPHA_LM
 
 PASS_COUNT = 0
 FAIL_COUNT = 0
@@ -102,12 +103,8 @@ def measured_v() -> float:
 
 
 def hierarchy_baseline() -> float:
-    plaquette = 0.5934
     m_planck = 1.2209e19
-    u0 = plaquette ** 0.25
-    alpha_bare = 1.0 / (4.0 * math.pi)
-    alpha_lm = alpha_bare / u0
-    return m_planck * alpha_lm**16
+    return m_planck * CANONICAL_ALPHA_LM**16
 
 
 def selected_v(baseline: float | None = None) -> float:

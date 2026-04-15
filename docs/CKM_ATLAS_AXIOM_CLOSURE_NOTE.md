@@ -46,7 +46,7 @@ The current hierarchy-pinned `v` surface is only a consistency check:
 
 So the review-safe statement is:
 
-- canonical CKM coupling: plaquette / CMT route
+- canonical CKM coupling: same-surface plaquette / CMT route
 - hierarchy `v` route: consistency surface, not a second averaged theorem
 
 ## Exact Constants
@@ -199,7 +199,7 @@ CKM authority surface.
 
 The review-safe theorem statement is now:
 
-- canonical coupling from the CMT plaquette surface
+- canonical coupling from the same-surface CMT plaquette derivation
 - exact phase dressing from the `1 + 5` projector
 - exact `1 -> 3` tensor-slot theorem from `K_R`
 

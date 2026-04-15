@@ -98,7 +98,7 @@ These rows correspond to Section A of
 
 | Claim family | Current decision | Why it is retained | Primary authority |
 |---|---|---|---|
-| electroweak scale `v` | promoted | exact minimal hierarchy theorem plus axiom-native observable principle now clear the paper bar; the numerical value is a pinned evaluation on the current `u_0` / plaquette surface | [OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md](../../OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md) |
+| electroweak scale `v` | promoted | exact minimal hierarchy theorem plus axiom-native observable principle now clear the paper bar; the numerical value is the canonical evaluation on the same-surface plaquette-derived normalization chain | [OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md](../../OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md) |
 | exact `I_3 = 0` | promoted exact companion | safe statement is exact no-third-order interference on the Hilbert surface | [I3_ZERO_EXACT_THEOREM_NOTE.md](../../I3_ZERO_EXACT_THEOREM_NOTE.md) |
 | exact CPT | promoted exact companion | exact free staggered-lattice theorem on the retained framework surface | [CPT_EXACT_NOTE.md](../../CPT_EXACT_NOTE.md) |
 | emergent Lorentz invariance | promoted exact structural theorem | exact `O_h` symmetry and exact CPT/P protection force the first anisotropic correction to appear only at dimension 6 with unique `\ell = 4` cubic-harmonic signature; on the retained hierarchy surface the correction is `(E/M_{Pl})^2` suppressed | [EMERGENT_LORENTZ_INVARIANCE_NOTE.md](../../EMERGENT_LORENTZ_INVARIANCE_NOTE.md) |
