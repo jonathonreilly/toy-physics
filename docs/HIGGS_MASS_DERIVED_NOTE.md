@@ -89,6 +89,32 @@ of the lattice UV cutoff bounding the quantum corrections.
 
 At a = 0.5, m_H/m_W = 1.64 is within 5% of the SM value 1.56.
 
+### Effect of taste scalar doublets on m_H
+
+The Cl(3) framework predicts 4 Higgs doublets (from the 8 taste states
+decomposing as C^2 x C^4 under SU(2)_weak).  One doublet is the SM Higgs;
+the other 3 contribute 12 extra real bosonic DOF to the CW potential.
+
+**Result:** Taste scalars push m_H UPWARD, not downward.
+
+| Configuration | m_H (GeV) | Shift |
+|---------------|-----------|-------|
+| SM-only (a=1) | 153 | baseline |
+| SM + 3 taste doublets (a=1) | 161 | +8 GeV (+5.3%) |
+
+This is a robust consequence of the CW mechanism: bosonic loops add positive
+curvature at the CW minimum, always increasing m_H^2.  The taste scalar
+portal coupling is fixed by the gauge D-term: lambda_portal = (g^2+g'^2)/4.
+
+At small lattice spacing (a < 0.6), the taste scalars destroy SSB entirely
+(too much bosonic contribution overwhelms the top quark loop that drives
+symmetry breaking).  This constrains the physical lattice spacing to a > 0.6.
+
+**Implication:** The 153-to-125 gap must close through lattice spacing
+convergence and 2-loop corrections, not through taste scalar contributions.
+
+Script: `scripts/frontier_taste_scalar_cw.py`
+
 ## What This Means for the Paper
 
 **CAN claim:**
