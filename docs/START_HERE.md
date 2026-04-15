@@ -15,6 +15,17 @@ For the gravity/QG continuum bridge specifically, the current capstones are:
 - [UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md](UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md)
 - [UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md](UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md)
 
+On the gravity route, the direct-universal branch now closes as an exact global
+Lorentzian Einstein/Regge stationary action family on discrete `3+1`
+spacetime `PL S^3 x R`. On the QG/continuum side, the exact project-native PL
+weak Gaussian Sobolev completion is now also identified with the canonical
+textbook weak/Gaussian object, the chosen smooth global weak gravitational
+stationary/Gaussian solution class, the same project-native smooth
+geometric/action family, the canonical textbook Einstein-Hilbert-style
+geometric/action family, and one canonical textbook continuum gravitational
+weak/stationary action family on the same route. What remains beyond that is
+only optional comparison against alternative textbook packaging conventions.
+
 If you are checking the promoted quantitative lanes directly, use:
 
 - [ALPHA_S_DERIVED_NOTE.md](ALPHA_S_DERIVED_NOTE.md)

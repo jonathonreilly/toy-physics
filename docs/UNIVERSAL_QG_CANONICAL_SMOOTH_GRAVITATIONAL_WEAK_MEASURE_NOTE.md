@@ -49,14 +49,11 @@ This theorem **does** close:
 > the canonical smooth global weak gravitational weak/measure identification
 > step for the direct-universal route.
 
-This theorem does **not** yet prove:
+This theorem does **not** yet by itself prove:
 
-- a stronger textbook Einstein-Hilbert action identification beyond the weak
-  coercive operator level;
-- a more specialized continuum gravitational measure interpretation in any
-  stricter textbook sense than the already-closed weak/Gaussian one.
+- the project-native smooth geometric/action comparison;
+- canonical textbook geometric/action equivalence;
+- canonical textbook continuum gravitational closure.
 
-So the remaining stronger issue, if pushed further, is now:
-
-> a stricter textbook geometric/action comparison beyond the already-closed
-> canonical smooth weak/Gaussian gravitational equivalence.
+The next theorems close those. What remains beyond that is only optional
+comparison against alternative textbook packaging conventions.

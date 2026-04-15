@@ -137,8 +137,8 @@ The partition and refinement theorems sharpen that remaining issue:
 - exact smooth global weak gravitational solution class is now also in hand
 - exact canonical smooth weak/measure equivalence on the chosen realization is
   now also in hand
-- it is now specifically a stricter textbook geometric/action comparison
-  beyond that already-closed weak/Gaussian gravitational route
+- it now closes through canonical textbook geometric/action and canonical
+  textbook continuum gravitational closure on the chosen target
 
 ## Where this sits in the package
 

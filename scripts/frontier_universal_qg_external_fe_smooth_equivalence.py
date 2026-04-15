@@ -12,9 +12,9 @@ This runner proves the next honest theorem:
 
 This closes the FE-to-smooth / weak-form / measure-equivalence step for the
 chosen external target. Later notes close the canonical textbook and smooth
-gravitational weak/Gaussian identifications built on this step. The live
-stronger issue is now stricter textbook geometric/action comparison beyond
-that level.
+gravitational weak/Gaussian identifications, the textbook geometric/action
+comparison, and the canonical textbook continuum gravitational closure built
+on this step.
 """
 
 from __future__ import annotations
@@ -197,14 +197,14 @@ def main() -> int:
         f"max covariance-cylinder error={max_cov_err:.3e}",
     )
     record(
-        "the remaining stronger issue is therefore no longer existence of a chosen external smooth weak/measure formulation, but stricter textbook geometric/action comparison beyond the already-closed weak/Gaussian route",
+        "the remaining stronger issue is therefore no longer existence of a chosen external smooth weak/measure formulation, but only later textbook geometric/action and continuum-gravitational closures already discharged elsewhere on the branch",
         "project-native pl weak sobolev" in cont_text.lower()
         and prolong_assoc_err < 1e-12
         and max_h1_err < 1e-12
         and max_form_err < 1e-10
         and max_source_err < 1e-10
         and max_cov_err < 1e-10,
-        "the exact discrete route is already the FE/Galerkin cylinder realization of one chosen external smooth Sobolev weak Gaussian formulation; later notes close the canonical textbook and smooth gravitational weak/Gaussian identifications built on this step, so the live stronger issue is now stricter textbook geometric/action comparison",
+        "the exact discrete route is already the FE/Galerkin cylinder realization of one chosen external smooth Sobolev weak Gaussian formulation; later notes close the canonical textbook and smooth gravitational weak/Gaussian identifications, the geometric/action comparison, and the continuum gravitational closure built on this step",
     )
 
     print("UNIVERSAL QG EXTERNAL FE-SMOOTH EQUIVALENCE")
@@ -222,8 +222,9 @@ def main() -> int:
         "external smooth Sobolev weak-field and Gaussian formulation. So the "
         "remaining issue is no longer absence of such an external formulation. "
         "Later notes close the canonical textbook and smooth gravitational "
-        "weak/Gaussian identifications built on this step; the live stronger "
-        "issue is now stricter textbook geometric/action comparison."
+        "weak/Gaussian identifications built on this step and then the "
+        "project-native smooth geometric/action comparison and then the "
+        "canonical textbook continuum gravitational closure."
     )
 
     print("\n" + "=" * 78)

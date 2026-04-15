@@ -77,7 +77,6 @@ This theorem does **not** by itself yet prove:
 - a final textbook geometric/action comparison beyond the weak/Gaussian
   level.
 
-The first two of those have now been discharged by later authority notes. So
-the live remaining stronger issue on the main path is now only the stricter
-textbook geometric/action comparison beyond the already-closed canonical
-smooth weak/Gaussian route.
+Those have now been discharged by later authority notes. So what remains beyond
+this theorem is only optional comparison against alternative textbook
+packaging conventions, not a missing theorem on the chosen canonical target.

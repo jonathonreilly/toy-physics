@@ -112,6 +112,15 @@ Retained backbone:
 - exact canonical smooth gravitational weak/measure equivalence on the chosen
   smooth realization
   - authority: [UNIVERSAL_QG_CANONICAL_SMOOTH_GRAVITATIONAL_WEAK_MEASURE_NOTE.md](../../UNIVERSAL_QG_CANONICAL_SMOOTH_GRAVITATIONAL_WEAK_MEASURE_NOTE.md)
+- exact canonical smooth geometric/action equivalence on the chosen smooth
+  realization
+  - authority: [UNIVERSAL_QG_CANONICAL_SMOOTH_GEOMETRIC_ACTION_NOTE.md](../../UNIVERSAL_QG_CANONICAL_SMOOTH_GEOMETRIC_ACTION_NOTE.md)
+- exact canonical textbook Einstein-Hilbert-style geometric/action
+  equivalence on the chosen smooth realization
+  - authority: [UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md](../../UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md)
+- exact canonical textbook continuum gravitational weak/stationary action
+  family on the chosen smooth realization
+  - authority: [UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md](../../UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md)
 - exact native `Cl(3)` / `SU(2)`
 - graph-first structural `SU(3)`
 - anomaly-forced `3+1`
@@ -128,11 +137,14 @@ Reviewer-facing framing notes:
   silently upgrade that to an unqualified continuum-GR claim.
 - the QG bridge now also has its canonical textbook weak/measure closure,
   smooth local gravitational identification, finite-atlas smooth gravitational
-  patching, smooth global weak/Gaussian solution class, and canonical smooth
-  weak/measure equivalence on the chosen realization.
-- the only live continuum/QG frontier on the current authority path is a
-  stricter textbook geometric/action comparison beyond that already-closed
-  weak/Gaussian level.
+  patching, smooth global weak/Gaussian solution class, canonical smooth
+  weak/measure equivalence, canonical smooth geometric/action equivalence,
+  canonical textbook Einstein-Hilbert-style geometric/action equivalence, and
+  canonical textbook continuum gravitational closure on the chosen
+  realization.
+- there is no remaining theorem gap on the chosen canonical textbook
+  continuum target; what remains beyond this package is only optional
+  comparison against alternative textbook packaging conventions.
 
 Observation-facing bounded portfolio:
 

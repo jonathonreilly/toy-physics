@@ -72,10 +72,10 @@ This theorem does **not** by itself yet prove:
 - canonical textbook weak/measure equivalence independent of the chosen
   external completion target;
 - smooth gravitational identification of that canonical object;
-- stronger textbook geometric/action comparison beyond the weak/Gaussian
-  level.
+- stronger external textbook continuum Einstein-Hilbert-style comparison
+  beyond the weak/Gaussian and project-native smooth geometric/action level.
 
-Those first two have now been discharged by later authority notes. So the live
-remaining stronger issue on the main path is no longer existence of an
-external smooth weak/measure formulation. It is only stricter textbook
-geometric/action comparison beyond the already-closed weak/Gaussian route.
+Those first two have now been discharged by later authority notes. Later notes
+also close the canonical textbook geometric/action and continuum gravitational
+theorems on the chosen target. So what remains beyond this theorem is only
+optional comparison against alternative textbook packaging conventions.

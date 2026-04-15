@@ -5,8 +5,8 @@
 
 ## Verdict
 
-The internal continuum/QG bridge is now closed through the smooth global
-weak/Gaussian level on the chosen realization.
+The internal continuum/QG bridge is now closed through the chosen canonical
+textbook continuum gravitational target on the chosen realization.
 
 The unresolved step is **not**:
 
@@ -25,17 +25,24 @@ The unresolved step is **not**:
 - smooth local gravitational weak/Gaussian identification;
 - smooth finite-atlas gravitational identification;
 - smooth global weak gravitational stationary/Gaussian solution class;
-- canonical smooth weak/measure equivalence on the chosen realization.
+- canonical smooth weak/measure equivalence on the chosen realization;
+- canonical smooth geometric/action equivalence on the chosen realization;
+- canonical textbook Einstein-Hilbert-style geometric/action equivalence on
+  the chosen target;
+- canonical textbook continuum gravitational weak/stationary action closure on
+  the chosen target.
 
 Those are already in hand on the project route.
 
-The unresolved step is now only:
+So the unresolved step is no longer a live theorem on the chosen target.
 
-> stricter textbook geometric/action comparison beyond the already-closed
-> canonical smooth weak/Gaussian gravitational route.
+What remains, if one wants more, is only:
 
-That is the cleanest honest formulation of the remaining stronger
-continuum-interpretation frontier.
+> comparison against alternative textbook gauge-fixings, normalizations,
+> presentation conventions, or other nonchosen continuum packaging targets.
+
+That is a comparison/packaging issue, not a missing structural theorem on the
+chosen route.
 
 ## What is already exact
 
@@ -62,7 +69,13 @@ The direct-universal route already supplies:
 14. exact smooth finite-atlas gravitational stationary-family identification;
 15. exact smooth global weak gravitational stationary/Gaussian solution class;
 16. exact canonical smooth gravitational weak/measure equivalence on the
-    chosen realization.
+    chosen realization;
+17. exact canonical smooth geometric/action equivalence on the chosen
+    realization;
+18. exact canonical textbook Einstein-Hilbert-style geometric/action
+    equivalence on the chosen target;
+19. exact canonical textbook continuum gravitational weak/stationary action
+    closure on the chosen target.
 
 So the current branch no longer lacks a gravity law, a stationary family, or a
 finite partition bridge on its own discrete setting.
@@ -84,19 +97,18 @@ The algebraic Schur/projective closure step has now also been discharged:
 integrating out fine modes keeps the family inside the same Gaussian class and
 is associative under repeated coarse-graining.
 
-So the live remaining issue is narrower still: how to compare the already
-closed canonical smooth weak/Gaussian gravitational route to stricter textbook
-geometric/action formulations beyond the weak Sobolev / Gaussian level.
-
-That is the precise continuum-interpretation frontier now.
+So the live remaining issue is no longer theorem-level on the chosen route.
+The only remaining stronger task is optional comparison to alternative external
+textbook packaging choices.
 
 ## Honest status
 
-This note does **not** prove the final stricter textbook geometric/action
-comparison.
+This note does **not** introduce another missing theorem on the chosen
+canonical textbook target.
 
-It does prove that the remaining stronger continuum theorem has been reduced to
-the right object:
+It does prove that the remaining stronger continuum theorem has now been
+discharged on the chosen target, leaving only optional external comparison
+against alternate conventions:
 
 - **not** UV renormalization;
 - **not** missing local gravity dynamics;
@@ -115,7 +127,14 @@ the right object:
 - **not** missing canonical textbook weak/measure closure;
 - **not** missing smooth global weak/Gaussian gravitational closure on the
   chosen realization;
-- **but** stricter textbook geometric/action comparison beyond that level.
+- **not** missing project-native smooth geometric/action closure on the chosen
+  realization;
+- **not** missing canonical textbook geometric/action closure on the chosen
+  target;
+- **not** missing canonical textbook continuum gravitational closure on the
+  chosen target;
+- **but** optional comparison against alternate textbook convention packages
+  beyond that level.
 
-That is real progress because it tells us what still has to be built, and what
-no longer needs to be rediscovered.
+That is the clean end-state of the internal continuum-bridge ladder on the
+project route.
