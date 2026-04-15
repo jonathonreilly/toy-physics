@@ -21,23 +21,24 @@ The current axiom-first stack gives:
 
 It does **not** yet give:
 
-- an exact curvature-localization operator that carries that Hessian kernel
-  into the Einstein/Regge tensor law on the full `3+1` metric space
+- the final operator-identification theorem that turns the already-localized
+  isotropic universal Hessian into the Einstein/Regge tensor law on the full
+  `3+1` metric space
 
-So the remaining gap is no longer a scalar or quotient-uniqueness problem.
-It is the missing localization map itself.
+So the remaining gap is no longer a scalar problem, no longer a
+quotient-uniqueness problem, and no longer a complement-frame problem on the
+invariant background. It is now the final operator-identification step.
 
-The current runner now also checks whether that localization map can be
-reconstructed from the present quotient kernel plus a choice of channel
-frame. It cannot. Two valid `3+1` polarization frames give different
-localized channel coefficients for the same tensor candidate, so the current
-stack does not supply a canonical `Pi_curv`.
+The older frame-orbit blocker was too strong. The direct universal branch now
+has:
 
-The strongest exact object the current stack does supply is therefore an
-associated family of candidate localizations over the valid `3+1`
-polarization-frame orbit. That family is exact, but it is not a section: the
-current stack does not pick a distinguished connection that reduces the orbit
-to one canonical projector.
+- exact `Pi_A1` invariant section
+- exact Casimir block localization into lapse / shift / trace / shear
+- exact isotropic-background Schur localization on `diag(a,b,b,b)`
+
+The live missing object is therefore smaller: an exact Einstein/Regge
+operator-identification / normalization theorem on that already-localized
+background.
 
 ## What is exact already
 
@@ -78,54 +79,70 @@ identify the kernel with Einstein/Regge curvature dynamics.
 
 ### Exact invariant section
 
-The strongest exact projector latent in the current localization orbit is the
+The strongest exact invariant selector latent in the universal route is the
 rank-2 `A1` projector onto lapse and spatial trace:
 
 `Pi_A1 = diag(1,0,0,0,1,0,0,0,0,0)`.
 
 This projector is frame-independent across the sampled valid `3+1`
 polarization frames and is the exact minimal-covariance selector already
-present in the current construction. It is exact, but it only fixes the
-invariant `A1` block; it does not localize the remaining `E \oplus T1`
-channels.
+present in the current construction.
 
-## Why the current stack stops here
+### Exact canonical block localization
 
-The present data determine a unique bilinear kernel on the symmetric quotient,
-and they also determine the exact `A1` invariant projector, but they do not
-specify how to localize the complementary `E \oplus T1` channels into
-curvature channels on `PL S^3 x R`.
+The universal complement also localizes exactly by the `SO(3)` Casimir into:
 
-In particular, the current stack has no exact operator that:
+- shift (`j=1`)
+- traceless shear (`j=2`)
 
-1. is tensor-valued and covariant on the `3+1` quotient;
-2. splits the Hessian kernel into lapse, shift, and spatial trace/shear
-   components;
-3. identifies those components with the Einstein/Regge tensor law.
+So the direct universal route already has the exact block projectors
 
-Without that operator, the Hessian remains a variational candidate, not a GR
-dynamics law. The exact `A1` projector is the strongest selector already
-latent in the current stack, but it is not the missing curvature-localization
-map.
+- `P_lapse`
+- `P_shift`
+- `P_trace`
+- `P_shear`
+
+### Exact invariant-background Schur localization
+
+On the correct `SO(3)`-invariant lifted background, the fixed background
+subspace is exactly the 2D `A1` core, so the background has the form
+
+`diag(a,b,b,b)`.
+
+On that background the universal Hessian candidate Schur-localizes exactly:
+
+- all cross-block leakages vanish;
+- the shift block is scalar;
+- the shear block is scalar;
+- the old anisotropic `trace ↔ shear` mixer disappears identically.
+
+## Why the current stack still stops short of full GR
+
+The present data now determine much more than before:
+
+1. a unique bilinear kernel on the symmetric quotient;
+2. an exact canonical block split into lapse / shift / trace / shear;
+3. an exact isotropic-background Schur form for the universal Hessian.
+
+What they still do not yet prove is:
+
+1. that this already-localized operator is exactly the Einstein/Regge
+   constraint/dynamics operator on `PL S^3 x R`;
+2. the final sign/normalization interpretation of the localized blocks as the
+   GR operator rather than merely an exact universal Hessian normal form.
 
 ## Minimal missing primitive
 
 The smallest honest missing object is now:
 
-> a covariant `3+1` polarization-frame / projector bundle, with a
-> distinguished connection, that extends the exact rank-2 `A1` projector on
-> lapse and spatial trace to the complementary `E \oplus T1` channels and
-> splits the unique symmetric Hessian kernel into lapse, shift, and spatial
-> trace/shear channels before localization.
+> an exact operator-identification theorem that matches the already-localized
+> isotropic universal Hessian with the Einstein/Regge operator, including the
+> final sign/normalization interpretation of the lapse / shift / trace /
+> shear blocks on `PL S^3 x R`.
 
-Equivalently, the missing primitive is still a covariant `3+1`
-curvature-localization operator `Pi_curv`, but the current stack shows that
-`Pi_curv` is not derivable without that extra frame primitive. What is exact
-today is only the orbit of frame-dependent localized channels, not a
-canonical section of that orbit.
-
-The localization operator itself would then turn the quotient kernel into a
-curvature law rather than merely a bilinear form.
+Equivalently, the missing primitive is no longer a frame bundle. It is the
+final Einstein/Regge identification / normalization law on the exact
+isotropic block form.
 
 ## Honest status
 
@@ -134,6 +151,8 @@ The current direct universal route is:
 - exact at the scalar observable level
 - exact at the `3+1` kinematic lift level
 - exact at the symmetric `3+1` quotient-kernel level
-- blocked at the curvature-localization level
+- exact at the canonical block-localization level
+- exact at the invariant-background Schur-localization level
+- still open only at the final Einstein/Regge operator-identification level
 
 That is the sharpest disciplined statement available on the current atlas.

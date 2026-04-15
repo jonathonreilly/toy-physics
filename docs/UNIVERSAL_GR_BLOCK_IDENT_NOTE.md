@@ -7,24 +7,17 @@
 
 ## Verdict
 
-The canonical universal block projectors are exact, but the unique universal
-Hessian does **not** already identify the Einstein/Regge law blockwise in the
-strong sense.
+This note records the anisotropic finite-prototype audit only.
 
-What it does identify exactly is:
+On the bookkeeping prototype `diag(2,3,5,7)`, the canonical universal block
+projectors are exact, but the unique universal Hessian does **not** identify
+the Einstein/Regge law blockwise in the strong sense because it carries a
+rank-1 `trace ↔ shear` mixer.
 
-- lapse
-- shift
-- spatial trace
-
-What remains blocked is the final `trace ↔ shear` localization inside the
-traceless spatial sector.
-
-So the strongest exact blockwise statement is:
-
-> the universal Hessian is canonically block-localized on lapse and shift,
-> but it still carries a rank-1 trace-shear mixer, so the blockwise
-> Einstein/Regge identification is not complete yet.
+That is **not** the current live direct-universal blocker on the invariant
+`PL S^3 x R` background. The exact invariant-background result is now in
+[UNIVERSAL_GR_ISOTROPIC_SCHUR_LOCALIZATION_NOTE.md](/private/tmp/physics-review-active/docs/UNIVERSAL_GR_ISOTROPIC_SCHUR_LOCALIZATION_NOTE.md),
+where the `trace ↔ shear` mixer vanishes identically on `diag(a,b,b,b)`.
 
 ## Exact block projectors
 
@@ -93,17 +86,10 @@ localization inside the traceless spatial sector.
 
 ## Honest status
 
-The current direct universal route is:
+The honest current reading is:
 
-- exact at the scalar observable level;
-- exact at the `3+1` kinematic lift level;
-- exact at the invariant `A1` core level;
-- exact at the lapse/shift block level;
-- blocked at the trace-shear block-localization level.
-
-So the answer to the blockwise question is:
-
-> no, the unique universal Hessian does not yet identify the Einstein/Regge
-> law blockwise all the way through; the exact remaining block-level
-> obstruction is a rank-1 trace-shear mixer.
-
+- this note proves a real anisotropic prototype obstruction;
+- the direct universal branch has since improved on the invariant
+  `PL S^3 x R` background;
+- the live remaining gap is now operator identification / normalization on
+  the already-localized isotropic background, not trace-shear leakage.
