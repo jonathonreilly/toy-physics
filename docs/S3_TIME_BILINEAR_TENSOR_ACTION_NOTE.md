@@ -52,6 +52,11 @@ This is the tensor analogue of the earlier bounded `Xi_R^(0)` construction,
 but now built from an exact microscopic carrier rather than the bounded
 `Theta_R^(0)` readout.
 
+This tensorized construction is the strongest exact Route 2 interface object
+currently available between the finite-rank support specialization and the
+universal curvature-side specialization. It is exact as a bridge object, but
+it is not yet the canonical polarization bundle itself.
+
 ## What is now closed
 
 On the current Route-2 build program:

@@ -87,6 +87,32 @@ two lanes because it already separates:
 That stack does **not** yet close either lane by itself, but it gives the
 common bundle a concrete place to act.
 
+## Strongest exact common construction from Route 2
+
+The strongest exact common object the current Route 2 interface actually
+supports is the bridge triple
+
+`B_R := (K_R, I_TB, Xi_TB)`.
+
+This is exact on the current Route 2 stack because each component is exact:
+
+- `K_R` is the exact support-side bilinear carrier
+- `I_TB` is the exact tensorized action/coupling construction
+- `Xi_TB` is the exact spacetime carrier on `PL S^3 x R`
+
+`B_R` is the best common interface object because it already lives at the
+support/curvature boundary and carries the aligned bright channels plus the
+`PL S^3 x R` semigroup factor.
+
+But `B_R` is still not the missing polarization bundle:
+
+- it does not canonically split lapse, shift, and spatial trace/shear
+- it does not supply a covariant connection
+- it does not define `Pi_3+1` or `Pi_curv`
+
+So the exact missing step is still a covariant `3+1` polarization-frame /
+projector bundle with a distinguished connection.
+
 ## Implications
 
 1. A successful derivation of the common polarization bundle would advance

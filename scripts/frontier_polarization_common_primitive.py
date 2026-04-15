@@ -102,6 +102,13 @@ def main() -> int:
         "Route 2 carries the aligned bright channels plus the `PL S^3 x R` semigroup factor",
     )
     record(
+        "Route 2 supports the strongest exact common bridge triple B_R",
+        has(synthesis, "B_R := (K_R, I_TB, Xi_TB)")
+        and has(synthesis, "strongest exact common object")
+        and has(synthesis, "bridge triple"),
+        "the exact common construction is the Route 2 bridge triple, not a canonical bundle",
+    )
+    record(
         "the synthesis note states the same-family / not-same-object conclusion",
         matches(synthesis, r"same missing\s+primitive family") and has(synthesis, "not the same exact object"),
         "the note isolates a shared polarization-bundle family with two specializations",
@@ -112,12 +119,13 @@ def main() -> int:
     print("=" * 78)
     print("Shared primitive family: YES")
     print("Same exact object: NO")
+    print("Strongest exact common construction: Route 2 bridge triple `B_R = (K_R, I_TB, Xi_TB)`")
     print(
-        "Smallest common primitive: a covariant `3+1` polarization-frame / projector "
-        "bundle with support-side and curvature-side specializations."
+        "Still missing: a covariant `3+1` polarization-frame / projector bundle "
+        "with distinguished connection."
     )
-    print("Support specialization: exact bilinear carrier `K_R` before canonical `Pi_3+1`.")
-    print("Curvature specialization: `Pi_curv` before Einstein/Regge localization.")
+    print("Support specialization target: canonical `Pi_3+1` before scalar collapse.")
+    print("Curvature specialization target: canonical `Pi_curv` before localization.")
 
     n_pass = sum(c.ok for c in CHECKS)
     n_fail = sum(not c.ok for c in CHECKS)
