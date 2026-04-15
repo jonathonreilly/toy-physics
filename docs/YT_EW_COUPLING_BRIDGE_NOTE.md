@@ -254,7 +254,7 @@ at O(3%), comparable to the 2-loop truncation uncertainty.
 | <P> = 0.5934        | 0.5934    | COMPUTED  | SU(3) MC at beta = 6            |
 | alpha_LM            | 0.09066   | DERIVED   | alpha_bare/u_0                   |
 | alpha_s(v)          | 0.1033    | DERIVED   | CMT, n_link = 2                  |
-| v                   | 246.3 GeV | DERIVED   | Hierarchy theorem                |
+| v                   | 246.28 GeV | DERIVED   | Hierarchy theorem                |
 | y_t(M_Pl)           | 0.436     | DERIVED   | Ward identity                    |
 | g_1_GUT(v)          | 0.590     | DERIVED   | 1-loop U(1) running from M_Pl   |
 | g_2(v)              | 0.646     | IMPORTED  | sin^2(theta_W)(M_Z) = 0.23122   |

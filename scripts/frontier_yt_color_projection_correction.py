@@ -26,7 +26,7 @@ DERIVATION CHAIN:
 
 FRAMEWORK INPUTS (ALL DERIVED, zero imports):
   alpha_s(v) = alpha_bare / u_0^2 = 0.1033  [CMT]
-  v = 246.3 GeV                               [hierarchy theorem]
+  v = 246.28 GeV                              [hierarchy theorem]
   Ward BC: y_t(M_Pl) = g_3(M_Pl) / sqrt(6)   [lattice Ward identity]
   R_conn = (N_c^2 - 1) / N_c^2 = 8/9          [color projection, COMPUTED]
   g_1(v), g_2(v) from taste staircase + color projection

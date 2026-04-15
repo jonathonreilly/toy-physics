@@ -57,7 +57,7 @@ Numerically:
 
 - `C_inf^(4D) ~= 0.964678630`
 - observed hierarchy prefactor
-  `C_obs = 246.22 / 253.4 ~= 0.971665351`
+  `C_obs = 246.22 / 254.643210673818 ~= 0.966921519`
 
 So the observed prefactor lies **inside the exact 3+1 endpoint band**
 between:
@@ -88,7 +88,7 @@ Equivalently:
 1. why the physical order parameter should pick the `L_t = 2` endpoint,
    or a derived function of this exact endpoint pair
 2. how that exact intensive normalization enters the `det -> v` map
-3. whether the remaining `~0.7%` difference is then just the plaquette / `u_0`
+3. whether the remaining `~0.22%` difference is then just the plaquette / `u_0`
    input uncertainty
 
 ## Honest conclusion

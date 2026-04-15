@@ -32,7 +32,7 @@ BETA FUNCTIONS (all terms to 3-loop):
 FRAMEWORK INPUTS:
   y_t(v) = 0.918 (derived central value, but still bounded by the QFP route)
   g_2 = 0.648, g_1 = 0.464, alpha_s = 0.1033
-  v = 246.3 GeV, M_Pl = 1.22e19
+  v = 246.28 GeV, M_Pl = 1.22e19
 
 Self-contained: numpy + scipy only. ZERO IMPORTS from parametric fits.
 PStack experiment: higgs-mass-full-3loop
@@ -80,7 +80,7 @@ ALPHA_BARE = 1.0 / (4.0 * PI)
 ALPHA_LM = ALPHA_BARE / U0
 ALPHA_S_V_DERIVED = ALPHA_BARE / U0**2  # = 0.1033
 C_APBC = (7.0 / 8.0) ** 0.25
-V_DERIVED = 246.3            # From hierarchy theorem (GeV)
+V_DERIVED = M_PL * C_APBC * ALPHA_LM**16
 YT_V_DERIVED = 0.918         # From Ward identity + 2-loop running
 
 # SM couplings at M_Z for cross-check
@@ -925,7 +925,7 @@ def part3_framework_prediction():
       y_t(v) = 0.918       (backward Ward identity + 2-loop running)
       g_2(v) = 0.648       (from alpha_s via sin^2(theta_W) running)
       g_1(v) = 0.464       (GUT normalized, from EW)
-      v = 246.3 GeV        (hierarchy theorem)
+      v = 246.28 GeV       (hierarchy theorem)
       M_Pl = 1.22e19 GeV   (axiom)
 
     Boundary condition: lambda(M_Pl) = 0 (classicality at Planck scale)
@@ -934,7 +934,7 @@ def part3_framework_prediction():
     print("PART 3: FRAMEWORK PREDICTION -- All Derived Inputs")
     print("=" * 78)
 
-    # Framework-derived couplings at v = 246.3 GeV
+    # Framework-derived couplings at v = 246.28 GeV
     g1_fw = 0.464     # GUT-normalized U(1)
     g2_fw = 0.648     # SU(2)
     g3_fw = np.sqrt(4 * PI * ALPHA_S_V_DERIVED)  # from alpha_s = 0.1033
@@ -1148,7 +1148,7 @@ def part5_authority_summary(sm_results, fw_results, sensitivity):
        - alpha_s(v) = 0.1033 from lattice mean-field
        - y_t(v) = 0.918 from backward Ward identity
        - g_2, g_1 from EW sector
-       - v = 246.3 GeV from hierarchy theorem
+       - v = 246.28 GeV from hierarchy theorem
 
   WHAT THIS SCRIPT DOES NOT CLOSE:
     - It does not remove the bounded status of the y_t route itself.

@@ -43,7 +43,7 @@ Cl(3) on Z^3                                            [AXIOM]
   |      u_0 = <P>^{1/4} = 0.8776                        [DERIVED]
   |      alpha_LM = alpha_bare / u_0 = 0.0907            [DERIVED]
   |      alpha_s(v) = alpha_bare / u_0^2 = 0.1033  (CMT) [DERIVED]
-  |      v = M_Pl * (7/8)^{1/4} * alpha_LM^16 = 246.3   [DERIVED]
+  |      v = M_Pl * (7/8)^{1/4} * alpha_LM^16 = 246.28  [DERIVED]
   |
   +--- TASTE THRESHOLDS + COLOR PROJECTION
   |      taste_weight = (7/8)*T_F*(8/9) = 7/18           [DERIVED]
@@ -85,7 +85,7 @@ Cl(3) on Z^3                                            [AXIOM]
 | u_0                    | 0.8777       | DERIVED        | < P >^{1/4}                         |
 | alpha_LM               | 0.0907       | DERIVED        | alpha_bare / u_0                     |
 | alpha_s(v)             | 0.1033       | DERIVED        | CMT: alpha_bare / u_0^2              |
-| v                      | 246.3 GeV    | DERIVED        | Hierarchy theorem                    |
+| v                      | 246.28 GeV   | DERIVED        | Hierarchy theorem                    |
 | taste_weight           | 7/18         | DERIVED        | (7/8) * T_F * (8/9)                 |
 | g_1(v)                 | 0.4644       | DERIVED        | Bare + taste + color projection      |
 | g_2(v)                 | 0.6480       | DERIVED        | Bare + taste + color projection      |
@@ -137,7 +137,7 @@ The observed deviation of -1.84% exceeds the estimated systematic by about 1.2%.
 - m_t = 169.5 GeV from zero SM imports (-1.84% from observed)
 - alpha_s(M_Z) = 0.1181 from CMT anchor (+0.14%)
 - sin^2(theta_W)(M_Z) = 0.2306 from geometric bare couplings (-0.26%)
-- v = 246.3 GeV from hierarchy theorem (+0.03%)
+- v = 246.28 GeV from hierarchy theorem (+0.03%)
 - lambda(v) = 0.1908 from full 1-loop CW on the lattice BZ (DERIVED)
 - m_H = 152.2 GeV (framework PREDICTION, +21.5% from observed; converges toward 125 GeV as lattice spacing a -> 0)
 - All RGE coefficients from Cl(3) group theory

@@ -73,7 +73,7 @@ For the package-level gravity/gauge continuum positioning synthesis, use
 - exact `T = 0` confinement of the graph-first `SU(3)` gauge sector, with
   bounded `sqrt(sigma) ≈ 465 MeV`
 - anomaly-forced `3+1`
-- retained electroweak hierarchy / `v = 245.080424447914 GeV`
+- retained electroweak hierarchy / `v = 246.282818290129 GeV`
 - retained `S^3` compactification / topology closure
 - full-framework one-generation matter closure
 - retained three-generation matter structure

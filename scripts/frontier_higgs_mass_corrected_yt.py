@@ -13,7 +13,7 @@ FRAMEWORK INPUTS (all derived, zero imports):
   g_2(v)     = taste staircase * sqrt(9/8) (EW color projection)
   g_1(v)     = taste staircase * sqrt(9/8) (EW color projection)
   g_3(v)     = 1.139  (alpha_s = 0.1033)
-  v          = 246.3 GeV
+  v          = 246.28 GeV
 
 SM COMPARISON (y_t = 0.917, same procedure):
   g_2(v) = 0.653, g_1(v) = 0.462, alpha_s(m_t) ~ 0.1085
@@ -64,7 +64,7 @@ ALPHA_BARE = 1.0 / (4.0 * PI)
 ALPHA_S_V = ALPHA_BARE / U0**2      # 0.1033
 C_APBC = (7.0 / 8.0)**0.25
 ALPHA_LM = ALPHA_BARE / U0
-V_DERIVED = M_PL * C_APBC * ALPHA_LM**16   # 246.3 GeV
+V_DERIVED = M_PL * C_APBC * ALPHA_LM**16   # 246.28 GeV
 
 G3_V = np.sqrt(4.0 * PI * ALPHA_S_V)   # 1.139
 

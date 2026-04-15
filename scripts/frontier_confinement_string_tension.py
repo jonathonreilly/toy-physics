@@ -70,7 +70,7 @@ N_C = 3
 BETA_LATTICE = 2 * N_C / G_BARE_SQ  # = 6.0
 
 ALPHA_S_V = ALPHA_BARE / U0 ** 2  # = 0.1033
-V_EW = 245.080424447914  # GeV, hierarchy theorem
+V_EW = 246.28281829012906  # GeV, hierarchy theorem
 M_Z = 91.1876  # GeV
 ALPHA_S_MZ = 0.1181  # retained zero-import lane
 

@@ -32,7 +32,7 @@ Framework statement:
 The electroweak scale is not an external input on the current paper surface.
 The exact minimal hierarchy theorem fixes the source-response structure on the
 minimal block; the quoted value
-`v = 245.080424447914 GeV` (`0.4628%` low relative to `246.22 GeV`) is the
+`v = 246.282818290129 GeV` (`+0.0255%` relative to `246.22 GeV`) is the
 pinned numerical evaluation on the current `u_0` / plaquette surface.
 
 ## Retained core

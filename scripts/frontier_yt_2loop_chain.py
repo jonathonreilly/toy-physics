@@ -14,7 +14,7 @@ MOTIVATION:
 THE CHAIN (same framework boundary conditions):
   alpha_LM   = 0.09066     [derived from Cl(3) on Z^3, <P> = 0.5934]
   alpha_s(v) = 0.1033      [vertex-level LM, alpha_bare/u_0^2]
-  v          = 246.3 GeV   [hierarchy theorem]
+  v          = 246.28 GeV  [hierarchy theorem]
   g_3(M_Pl)  = sqrt(4 pi alpha_LM) = 1.068
   y_t(M_Pl)  = g_3(M_Pl) / sqrt(6) = 0.436  [Ward identity]
 

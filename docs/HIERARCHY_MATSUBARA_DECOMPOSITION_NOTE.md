@@ -77,7 +77,7 @@ density ratio between `L_t = 10` and `L_t = 2` at `u_0 = 0.9`, `m = 10^-2` is:
 
 The crucial compression result is:
 
-- `R^(-1/16) ~= 0.99105`  (too small to explain the observed `253 -> 246` gap)
+- `R^(-1/16) ~= 0.99105`  (too small to explain the observed `254.64 -> 246.22` gap)
 - `R^(-1/4)  ~= 0.96468`  (in the right few-percent range)
 
 So the exact Matsubara formulas support the interpretation that the final
@@ -99,7 +99,7 @@ What remains open:
 1. why the physical electroweak order parameter is the `L_t = 2` UV endpoint,
    or an explicitly derived function of the exact Matsubara average
 2. why the corresponding normalization lands on the observed
-   `C_obs ~= 0.97`
+   `C_obs ~= 0.96692`
 3. the spatial APBC issue on even `L = 2`
 4. the framework-native derivation of `alpha_LM`
 

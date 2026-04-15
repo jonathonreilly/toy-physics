@@ -14,7 +14,7 @@ FRAMEWORK INPUTS (all derived, zero imports):
   g_1(v)     = 0.464  (taste staircase + sqrt(9/8))
   g_2(v)     = 0.648  (taste staircase + sqrt(9/8))
   alpha_s(v) = 0.1033 (CMT: alpha_bare / u_0^2)
-  v          = 246.3 GeV
+  v          = 246.28 GeV
 
 Self-contained: numpy + scipy only.
 PStack experiment: higgs-buttazzo-calibration
@@ -63,7 +63,7 @@ ALPHA_BARE = 1.0 / (4.0 * PI)
 ALPHA_S_V = ALPHA_BARE / U0**2      # 0.1033
 C_APBC = (7.0 / 8.0)**0.25
 ALPHA_LM = ALPHA_BARE / U0
-V_DERIVED = M_PL * C_APBC * ALPHA_LM**16   # 246.3 GeV
+V_DERIVED = M_PL * C_APBC * ALPHA_LM**16   # 246.28 GeV
 
 G3_V = np.sqrt(4.0 * PI * ALPHA_S_V)   # 1.139
 

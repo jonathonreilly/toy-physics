@@ -57,7 +57,7 @@ CPT-even source generator derived from the lattice Grassmann Gaussian fixes the
 local scalar hierarchy observable, and the unique minimal resolved APBC orbit
 selects `L_t = 4`, giving:
 
-- `v = 245.080424447914 GeV`
+- `v = 246.282818290129 GeV`
 - relative error vs `246.22 GeV`: `-0.462828%`
 
 ## Retained backbone
@@ -102,7 +102,7 @@ The current retained backbone is:
   - exact scalar observable principle from the additive CPT-even source
     response `log|det(D+J)|`
   - unique minimal resolved temporal selector `L_t = 4`
-  - predicted `v = 245.080424447914 GeV`
+  - predicted `v = 246.282818290129 GeV`
 - three-generation matter closure in the framework:
   - exact orbit algebra `8 = 1 + 1 + 3 + 3`
   - physical species structure on the lattice surface

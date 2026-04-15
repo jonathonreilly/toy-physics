@@ -35,7 +35,7 @@ DERIVATION (backward Ward):
     - All ingredients trace to the Cl(3) axiom
 
 RESULT:
-  m_t = y_t(v) * v / sqrt(2) = 0.973 * 246.3 / sqrt(2) = 169.4 GeV
+  m_t = y_t(v) * v / sqrt(2) = 0.973 * 246.28 / sqrt(2) = 169.4 GeV
   alpha_s(M_Z) = 0.1181 (+0.2%)
 
 Authority note: docs/YT_EFT_BRIDGE_THEOREM.md

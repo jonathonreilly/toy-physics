@@ -341,7 +341,7 @@ print("""
     y_t(v) = y_t_bare / u_0^{n_link_Y} where n_link_Y = 0
     => y_t(v) = 0.408
 
-  This gives m_t = 0.408 * 246.3 / sqrt(2) = 71.1 GeV -- WRONG.
+  This gives m_t = 0.408 * 246.28 / sqrt(2) = 71.1 GeV -- WRONG.
 """)
 
 g_bare = 1.0

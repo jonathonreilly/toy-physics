@@ -156,7 +156,7 @@ physical meaning:
 
 The hierarchy formula already includes C_APBC:
 
-    v = M_Pl * C_APBC * alpha_LM^16 = 246.3 GeV
+    v = M_Pl * C_APBC * alpha_LM^16 = 246.28 GeV
 
 where C_APBC = (7/8)^{1/4} = 0.9672 enters from the L_t=4 eigenvalue
 magnitude ratio:

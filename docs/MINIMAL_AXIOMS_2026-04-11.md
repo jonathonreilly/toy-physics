@@ -53,7 +53,7 @@ The current canonical quantitative stack is:
 
 Safe current result:
 
-- retained `v = 245.080424447914 GeV`
+- retained `v = 246.282818290129 GeV`
 - retained `alpha_s(M_Z) = 0.1181`
 - retained `sin^2(theta_W)(M_Z) = 0.2306`
 - retained `1/alpha_EM(M_Z) = 127.67`

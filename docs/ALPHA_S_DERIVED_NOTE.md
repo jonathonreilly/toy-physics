@@ -33,7 +33,7 @@ Cl(3) on Z^3
   |
   |-> hierarchy theorem:
   |     alpha_LM = alpha_bare / u_0
-  |     v = 245.080424447914 GeV
+  |     v = 246.282818290129 GeV
   |
   |-> vertex-power theorem:
         alpha_s(v) = alpha_bare / u_0^2 = 0.1033

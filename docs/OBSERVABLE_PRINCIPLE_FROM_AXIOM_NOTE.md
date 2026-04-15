@@ -141,9 +141,13 @@ The exact selector correction is
 
 `C = (7/8)^(1/4) = 0.967168210134`.
 
-Using the current baseline `253.4 GeV`, this gives
+Using the current hierarchy baseline
 
-`v = 245.080424447914 GeV`.
+`M_Pl * alpha_LM^16 = 254.643210673818 GeV`,
+
+this gives
+
+`v = 246.282818290129 GeV`.
 
 Compared with measurement,
 
@@ -151,8 +155,8 @@ Compared with measurement,
 
 the difference is:
 
-- `delta v = -1.139575552086 GeV`
-- relative error `= -0.462828%`
+- `delta v = +0.062818290129 GeV`
+- relative error `= +0.025513%`
 
 ## What this closes
 
@@ -177,6 +181,6 @@ hierarchy normalization surface.
 At this point the hierarchy closure is as clean as the current framework can
 make it.
 
-The remaining `0.46%` is no longer an open theorem gap in the observable
+The remaining `0.03%` is no longer an open theorem gap in the observable
 principle. It sits in the numerical input surface (`u_0` / plaquette value)
 rather than in the axiom-to-observable map itself.

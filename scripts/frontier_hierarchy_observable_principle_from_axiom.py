@@ -359,12 +359,18 @@ def test_hierarchy_value_from_internal_observable_principle():
     print("=" * 78)
 
     c4 = (7.0 / 8.0) ** 0.25
-    baseline = 253.4
+    plaquette = 0.5934
+    m_planck = 1.2209e19
+    u0 = plaquette ** 0.25
+    alpha_bare = 1.0 / (4.0 * math.pi)
+    alpha_lm = alpha_bare / u0
+    baseline = m_planck * alpha_lm**16
     v_pred = baseline * c4
     v_meas = 246.22
     rel = (v_pred - v_meas) / v_meas
 
     print(f"  C_4 = {c4:.12f}")
+    print(f"  baseline = M_Pl * alpha_LM^16 = {baseline:.12f} GeV")
     print(f"  v_pred = {v_pred:.12f} GeV")
     print(f"  v_meas = {v_meas:.12f} GeV")
     print(f"  relative error = {rel:.6%}")

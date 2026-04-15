@@ -41,8 +41,8 @@ the runner.
 The current hierarchy-pinned `v` surface is only a consistency check:
 
 - `alpha_s(v)_hier = 4*pi (v/(C M_Pl))^(1/8)`
-- current main-branch `v = 245.080424447914 GeV`
-- relative gap from the canonical CMT coupling: about `6.1e-4`
+- current main-branch `v = 246.282818290129 GeV`
+- relative gap from the canonical CMT coupling: `0` to numerical precision
 
 So the review-safe statement is:
 

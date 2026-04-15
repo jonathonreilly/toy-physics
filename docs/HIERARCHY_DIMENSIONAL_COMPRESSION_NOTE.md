@@ -24,12 +24,12 @@ From the Codex intensive-order-parameter diagnostics:
 
 - condensate-density ratio
   `R = cond(L_t=10) / cond(L_t=2) ~= 1.15469`
-- current hierarchy prediction
-  `v_pred ~= 253.4 GeV`
+- current pre-selector hierarchy baseline
+  `v_pred = M_Pl * alpha_LM^16 ~= 254.64 GeV`
 - observed electroweak scale
   `v_obs = 246.22 GeV`
 - required prefactor
-  `C_obs = v_obs / v_pred ~= 0.97167`
+  `C_obs = v_obs / v_pred ~= 0.96692`
 
 ## Compression candidates
 
@@ -37,7 +37,7 @@ Using the same residual ratio `R`:
 
 - direct scale-like (`1/16` root):
   - `R^(-1/16) ~= 0.99105`
-  - too small to explain the full `253 -> 246` shift
+  - too small to explain the full pre-selector `254.64 -> 246.22` shift
 
 - dimension-4 effective-potential-like (`1/4` root):
   - `R^(-1/4) ~= 0.96468`
@@ -63,7 +63,7 @@ It does sharpen the remaining surface:
 ## Practical conclusion
 
 If the remaining theorem closes through the effective-potential density, the
-size of the observed `~3%` discrepancy is no longer mysterious. The magnitude
+size of the observed `~3.1%` pre-selector discrepancy is no longer mysterious. The magnitude
 is already in the right range.
 
 What is still open:

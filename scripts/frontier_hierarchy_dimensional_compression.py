@@ -98,7 +98,11 @@ def main():
     Ls = 2
     u0 = 0.9
     mass = 1e-2
-    v_pred = 253.4
+    alpha_bare = 1.0 / (4.0 * np.pi)
+    m_planck = 1.2209e19
+    hierarchy_u0 = 0.5934 ** 0.25
+    alpha_lm = alpha_bare / hierarchy_u0
+    v_pred = m_planck * alpha_lm**16
     v_obs = 246.22
     c_obs = v_obs / v_pred
 
@@ -124,7 +128,7 @@ def main():
         print(f"    inverse shift       = {(inv_root - 1) * 100:+.3f}%")
         print(f"    distance to C_obs   = {abs(inv_root - c_obs):.6f}")
 
-    check("16th-root compression is too small to explain the full 253 -> 246 shift",
+    check("16th-root compression is too small to explain the full pre-selector hierarchy shift",
           abs(candidates[16][1] - c_obs) > 0.01,
           f"ratio^(-1/16) = {candidates[16][1]:.6f}, C_obs = {c_obs:.6f}")
 

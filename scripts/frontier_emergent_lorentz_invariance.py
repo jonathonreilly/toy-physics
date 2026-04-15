@@ -355,7 +355,7 @@ def test_cpt_protection():
 def test_planck_suppression():
     """Compute the LV magnitude from retained framework quantities.
 
-    The hierarchy theorem (retained) pins v = 245.08 GeV on the minimal
+    The hierarchy theorem (retained) pins v = 246.28 GeV on the minimal
     APBC block, which determines a ~ 1/M_Planck.  The Planck suppression
     therefore follows from retained quantities alone — no external input.
     """
@@ -368,7 +368,7 @@ def test_planck_suppression():
     # |δE²|/E² = (a²/3) × (3/5) × p⁴/E² ≈ (1/5) × (E/M_Planck)²
     #
     # The lattice spacing a is pinned by the hierarchy theorem:
-    #   v = 245.08 GeV (retained) → a ~ 1/M_Planck (retained)
+    #   v = 246.28 GeV (retained) → a ~ 1/M_Planck (retained)
     # So the Planck suppression is a retained consequence.
 
     # At E = 1 GeV:

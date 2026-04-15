@@ -274,7 +274,7 @@ scalar generator on that surface, and the resulting source-response theorem
 fixes the hierarchy kernel. The pinned evaluation on the current plaquette /
 `u_0` surface gives
 
-- `v = 245.080424447914 GeV`
+- `v = 246.282818290129 GeV`
 
 which is `0.4628%` low relative to `246.22 GeV`.
 

@@ -198,7 +198,7 @@ quantitatively.
 | Parameter    | Value    | Status    | Source                           |
 |-------------|----------|-----------|----------------------------------|
 | alpha_s(v)  | 0.1033   | DERIVED   | CMT, n_link = 2                  |
-| v           | 246.3 GeV| DERIVED   | Hierarchy theorem                |
+| v           | 246.28 GeV| DERIVED   | Hierarchy theorem                |
 | g_1_GUT(v)  | 0.590    | DERIVED   | 1-loop RGE from M_Pl (+27%)      |
 | g_2(v)      | --       | BOUNDED   | CMT est / backward constraint    |
 | lambda(v)   | --       | BOUNDED   | Stability + CW estimate          |

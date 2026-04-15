@@ -101,7 +101,18 @@ def measured_v() -> float:
     return 246.22
 
 
-def selected_v(baseline: float = 253.4) -> float:
+def hierarchy_baseline() -> float:
+    plaquette = 0.5934
+    m_planck = 1.2209e19
+    u0 = plaquette ** 0.25
+    alpha_bare = 1.0 / (4.0 * math.pi)
+    alpha_lm = alpha_bare / u0
+    return m_planck * alpha_lm**16
+
+
+def selected_v(baseline: float | None = None) -> float:
+    if baseline is None:
+        baseline = hierarchy_baseline()
     return baseline * c_lt(4)
 
 
@@ -188,6 +199,7 @@ def test_selected_prediction():
     rel = delta / measured_v()
 
     print(f"  C_4 = {c4:.12f}")
+    print(f"  baseline = M_Pl * alpha_LM^16 = {hierarchy_baseline():.12f} GeV")
     print(f"  v_4 = {v4:.12f} GeV")
     print(f"  v_meas = {measured_v():.12f} GeV")
     print(f"  delta = {delta:.12f} GeV")

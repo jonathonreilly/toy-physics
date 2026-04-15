@@ -191,7 +191,11 @@ def test_uv_endpoint_interpretation():
     ratio = cond10 / cond2
     root4 = ratio ** (-1 / 4)
     root16 = ratio ** (-1 / 16)
-    c_obs = 246.22 / 253.4
+    alpha_bare = 1.0 / (4.0 * math.pi)
+    m_planck = 1.2209e19
+    hierarchy_u0 = 0.5934 ** 0.25
+    alpha_lm = alpha_bare / hierarchy_u0
+    c_obs = 246.22 / (m_planck * alpha_lm**16)
 
     print(f"  cond(Lt=2)  = {cond2:.10f}")
     print(f"  cond(Lt=10) = {cond10:.10f}")

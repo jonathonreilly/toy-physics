@@ -32,12 +32,9 @@ those surfaces.
 
 **Action**
 
-- Demote `v` from retained core to bounded quantitative lane unless the
-  `253.4 GeV` baseline and exponent `16` are derived on the same theorem
-  surface.
-- Remove all wording that says `v` is “no longer an external datum.”
-- Add explicit disclosure of:
-  - baseline `253.4 GeV`
+- Resolved on `main`: the hierarchy lane now uses the single canonical surface
+  `v = M_Pl * (7/8)^(1/4) * alpha_LM^16 = 246.282818290129 GeV`.
+- Keep the public disclosure of:
   - `M_Pl`
   - exponent `16`
   - the role of the plaquette / `u_0` surface

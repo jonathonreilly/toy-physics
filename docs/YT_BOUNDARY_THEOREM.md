@@ -83,7 +83,7 @@ conditions derived from the Cl(3)/Z^3 partition function:
   (Coupling Map Theorem, derived from partition-function change of
   variables `U = u_0 V`).
 
-- **Electroweak VEV:** `v = M_Pl * C * alpha_LM^16 = 246.3 GeV`
+- **Electroweak VEV:** `v = M_Pl * C * alpha_LM^16 = 246.28 GeV`
   (Hierarchy Theorem, derived from taste determinant factorization).
 
 - **Top Yukawa:** `y_t(v)_SM` is determined by the RGE boundary
@@ -213,7 +213,7 @@ All results from `frontier_yt_boundary_consistency.py`:
 
 | Observable | Predicted | Observed | Deviation | Source |
 |-----------|-----------|----------|-----------|--------|
-| v | 246.3 GeV | 246.2 GeV | +0.03% | hierarchy theorem |
+| v | 246.28 GeV | 246.2 GeV | +0.03% | hierarchy theorem |
 | alpha_s(v) | 0.1033 | -- | -- | coupling map theorem |
 | alpha_s(M_Z) | 0.1181 | 0.1179 | +0.14% | 2-loop running |
 | m_t (Option A) | 169.4 GeV | 172.7 GeV | -1.9% | Ward BC + 2-loop RGE |

@@ -103,8 +103,8 @@ Representative surfaces:
 
 - the minimal hierarchy / selector theorem is real
 - the exact minimal-block source-response structure is real
-- the quoted numerical `v = 245.080424447914 GeV` still sits on additional
-  pinned structure in the public code paths
+- the quoted numerical `v = 246.282818290129 GeV` now sits on the same
+  canonical hierarchy surface used across the public code paths
 
 Primary evidence:
 
@@ -114,12 +114,12 @@ Primary evidence:
 
 **Adjustment class**
 
-- real claim-surface issue, not just wording drift
+- repo cleanup resolved on `main`; no separate `v` inconsistency remains
 
 **Why**
 
-The selector theorem and the pinned numeric value are currently being presented
-as if they are the same theorem surface. They are not.
+The selector theorem and the pinned numeric value now sit on the same
+canonical hierarchy surface.
 
 ### B. Gravity / QG paper posture
 

@@ -69,9 +69,13 @@ uniformly weighted. That is why the exact correction becomes
 
 ## Consequence
 
-Using the current hierarchy baseline `253.4 GeV`, the selected value is
+Using the current hierarchy baseline
 
-`v = 253.4 * (7/8)^(1/4) = 245.080424447914 GeV`.
+`M_Pl * alpha_LM^16 = 254.643210673818 GeV`,
+
+the selected value is
+
+`v = 254.643210673818 * (7/8)^(1/4) = 246.282818290129 GeV`.
 
 Compared with measurement,
 
@@ -79,8 +83,8 @@ Compared with measurement,
 
 the remaining difference is
 
-- `delta v = -1.139575552086 GeV`
-- relative error `= -0.4628%`
+- `delta v = +0.062818290129 GeV`
+- relative error `= +0.0255%`
 
 ## Honest status
 

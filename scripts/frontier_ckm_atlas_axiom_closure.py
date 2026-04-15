@@ -121,7 +121,10 @@ PI = math.pi
 PLAQ_MC = 0.5934
 M_PLANCK = 1.2209e19
 SELECTOR_CORRECTION = (7.0 / 8.0) ** 0.25
-V_DERIVED_CURRENT = 245.080424447914
+U0_HIERARCHY = PLAQ_MC ** 0.25
+ALPHA_BARE = 1.0 / (4.0 * PI)
+ALPHA_LM = ALPHA_BARE / U0_HIERARCHY
+V_DERIVED_CURRENT = M_PLANCK * SELECTOR_CORRECTION * ALPHA_LM**16
 
 # Exact structural counts from the retained atlas surface
 RESIDUAL_COLOR_PAIR = 2
@@ -180,9 +183,8 @@ check("canonical alpha_s(v) is the CMT plaquette coupling", abs(alpha_s_v - alph
 check("canonical alpha_s(v) is positive and perturbative", 0.09 < alpha_s_v < 0.11)
 check(
     "current hierarchy-pinned v surface is consistent with the canonical coupling",
-    abs(alpha_s_v_from_hierarchy - alpha_s_v) / alpha_s_v < 1e-3,
+    abs(alpha_s_v_from_hierarchy - alpha_s_v) / alpha_s_v < 1e-12,
     f"relative gap = {abs(alpha_s_v_from_hierarchy - alpha_s_v) / alpha_s_v:.3e}",
-    kind="BOUNDED",
 )
 
 

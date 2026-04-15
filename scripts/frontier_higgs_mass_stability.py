@@ -22,7 +22,7 @@ FRAMEWORK INPUTS (ALL DERIVED, zero SM imports):
   g_1(v)    = 0.464     same chain (GUT-normalized)
   g_Y(v)    = g_1 * sqrt(3/5) = 0.359
   alpha_s(v)= 0.1033    CMT: alpha_bare / u_0^2
-  v         = 246.3 GeV hierarchy theorem
+  v         = 246.28 GeV hierarchy theorem
   M_Pl      = 1.22e19 GeV
 
 RGE SYSTEM:
@@ -107,7 +107,7 @@ G1_V = 0.464                                # GUT-normalized
 GY_V = G1_V * np.sqrt(3.0 / 5.0)           # = 0.359
 YT_V_WARD = 0.979                           # backward Ward + lattice matching
 YT_V_NO_CORRECTION = 0.973                  # without matching correction
-V_EW = V_DERIVED                            # = 246.3 GeV
+V_EW = V_DERIVED                            # = 246.28 GeV
 
 # SM observed values (COMPARISON ONLY)
 M_H_OBS = 125.25            # GeV
