@@ -27,7 +27,7 @@ Use this file together with:
 | Workstream | Main contribution to publication package | Capture status |
 |---|---|---|
 | `origin/codex/publication-prep` | canonical publication package and manuscript surfaces | fully captured |
-| `origin/codex/review-active` | current hierarchy and restricted strong-field gravity authority | fully captured |
+| `origin/codex/review-active` | current hierarchy and direct-universal / discrete-global gravity authority | fully captured |
 | `origin/claude/youthful-neumann` | DM / `y_t` / CKM bounded lanes, `S^3` theorem notes, companion predictions | captured through bounded or frozen-out rows |
 | `origin/review-active` | older quantitative inventory and legacy bounded phenomenology | captured through bounded or frozen-out rows |
 | `origin/codex/main-graph-first` | earlier package structure and graph-first framing | captured as superseded package history |
@@ -42,6 +42,7 @@ Use this file together with:
 | Gravity corollary | weak-field WEP | retained corollary on same action surface | promoted | zero-input structural | main text / ED | [BROAD_GRAVITY_DERIVATION_NOTE.md](../../BROAD_GRAVITY_DERIVATION_NOTE.md) | `frontier_broad_gravity.py` |
 | Gravity corollary | weak-field time dilation | retained corollary on same action surface | promoted | zero-input structural | main text / ED | [BROAD_GRAVITY_DERIVATION_NOTE.md](../../BROAD_GRAVITY_DERIVATION_NOTE.md) | `frontier_broad_gravity.py` |
 | Strong-field gravity | restricted strong-field closure | exact on current star-supported finite-rank class under static conformal bridge | promoted | zero-input structural | Extended Data / arXiv theorem box | [RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md](../../RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md) | `frontier_oh_static_constraint_lift.py`, `frontier_oh_schur_boundary_action.py`, `frontier_star_supported_bridge_class.py` |
+| Gravity | full discrete `3+1` GR on the project route | exact global Lorentzian Einstein/Regge stationary action family on `PL S^3 x R` | promoted | zero-input structural | main text / theorem box | [UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md](../../UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md), [UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md](../../UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md), [UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md](../../UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md) | `frontier_universal_gr_discrete_global_closure.py`, `frontier_universal_gr_lorentzian_global_atlas_closure.py`, `frontier_universal_gr_lorentzian_signature_extension.py` |
 | Gauge | exact native `SU(2)` | exact cubic `Cl(3)` / weak algebra | promoted | zero-input structural | main text | [BOUNDED_NATIVE_GAUGE_NOTE.md](../../BOUNDED_NATIVE_GAUGE_NOTE.md) | `frontier_non_abelian_gauge.py` |
 | Gauge | graph-first structural `SU(3)` | retained selector + commutant closure | promoted | zero-input structural | main text | [GRAPH_FIRST_SU3_INTEGRATION_NOTE.md](../../GRAPH_FIRST_SU3_INTEGRATION_NOTE.md) | `frontier_graph_first_su3_integration.py` |
 | Matter/gauge corollary | left-handed charge matching | retained `+1/3` / `-1` surface | promoted | zero-input structural | main text / SI | [LEFT_HANDED_CHARGE_MATCHING_NOTE.md](../../LEFT_HANDED_CHARGE_MATCHING_NOTE.md) | `frontier_graph_first_su3_integration.py` |
@@ -97,7 +98,7 @@ not promoted.
 | CKM / flavor quantitative companion portfolio | still a live gate | `F03` |
 | cosmology companion portfolio | conditional / bounded | `F04` |
 | Higgs and mass-spectrum portfolio | not closed | `F05` |
-| gravity companions beyond retained weak-field + restricted strong-field package | bounded / later-paper material | `F06` |
+| continuum / unrestricted gravity beyond the project's discrete `3+1` route | bounded / later-paper material | `F06` |
 | sharp companion predictions (proton, Lorentz, BH, decoherence, monopole, null-echo phenomenology) | companion-only material | `F07` |
 | branch-local inventories and stale strategy docs | inventory only, not authority | `F08` |
 
