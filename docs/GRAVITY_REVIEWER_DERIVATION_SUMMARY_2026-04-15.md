@@ -101,9 +101,10 @@ continuum interpretation theorem is proved.
 Do not collapse the discrete-route theorem into a generic continuum GR claim.
 The discrete route is exact on its own terms; the continuum identification is a
 separate statement. The new partition bridge sharpens that remaining issue:
-it is now a refinement / projective-system theorem for the exact discrete
-density and stationary family, not a missing local gravity theorem or UV
-finiteness problem.
+finite-dimensional Schur/projective closure is already exact, so the remaining
+issue is now a canonical geometric refinement / projective-system theorem for
+the exact discrete density and stationary family, not a missing local gravity
+theorem or UV finiteness problem.
 
 ## What a reviewer should take away
 

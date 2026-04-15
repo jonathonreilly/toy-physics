@@ -58,8 +58,10 @@ discrete route.
 The new partition-density bridge sharpens that remaining issue:
 
 - it is no longer a UV-finiteness or local gravity-law problem
-- it is now a refinement / projective-system theorem for the exact discrete
-  density and stationary family
+- exact Schur/projective closure is already in hand under finite-dimensional
+  coarse-graining
+- it is now specifically a canonical geometric refinement / projective-system
+  theorem for the exact discrete density and stationary family
 
 ## Where this sits in the package
 

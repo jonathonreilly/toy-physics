@@ -103,6 +103,9 @@ So the partition theorem and the GR capstone fit together cleanly:
 - **gravity side:** exact global Lorentzian stationary action family;
 - **bridge:** the partition mean/stationary sector equals the GR stationary
   field.
+- **coarse-graining side:** the family is also exactly closed under
+  finite-dimensional Schur coarse-graining, so the remaining continuum issue is
+  no longer algebraic projective compatibility
 
 ## Honest status
 
@@ -119,4 +122,6 @@ What this does **not** yet claim:
 - a continuum renormalizability theorem beyond the project’s discrete route.
 
 So this is best read as an exact **discrete semiclassical quantum-gravity
-closure step**, not yet the last word on continuum quantum gravity.
+closure step**, not yet the last word on continuum quantum gravity. The
+remaining stronger bridge is now specifically a canonical geometric
+refinement/coarsening theorem on the actual `PL S^3 x R` atlas family.
