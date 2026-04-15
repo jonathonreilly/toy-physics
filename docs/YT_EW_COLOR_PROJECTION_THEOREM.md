@@ -1,8 +1,8 @@
 # Color-Singlet Projection Theorem for EW Couplings
 
 **Date:** 2026-04-14
-**Status:** DERIVED -- promoted EW support inside `COMPLETE_PREDICTION_CHAIN_2026_04_15.md`
-**Scripts:** `scripts/frontier_complete_prediction_chain.py` (package synthesis), `scripts/frontier_yt_ew_coupling_derivation.py` (support scan)
+**Status:** DERIVED -- standalone retained EW normalization lane on `main`
+**Primary runner:** `scripts/frontier_yt_ew_coupling_derivation.py`
 
 ---
 
@@ -26,6 +26,9 @@ and 2-loop running to v.
 
 This correction preserves sin^2(theta_W) exactly (it multiplies both g_1
 and g_2 by the same factor) while fixing the absolute normalization.
+
+This lane is structurally independent of the backward Ward / Yukawa chain and
+stands on its own on the current `main` package surface.
 
 ---
 

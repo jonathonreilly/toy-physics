@@ -1,13 +1,13 @@
-# Higgs / Vacuum Promoted Authority
+# Higgs / Vacuum Bounded Authority
 
 **Date:** 2026-04-15
-**Status:** promoted quantitative lane on `main`
+**Status:** bounded quantitative lane on `main`
 **Primary runners:** `scripts/frontier_higgs_buttazzo_calibration.py`,
 `scripts/frontier_yt_color_projection_correction.py`
 
 ## Authority Role
 
-This note is the standalone authority for the promoted Higgs / vacuum lane on
+This note is the standalone authority for the bounded Higgs / vacuum lane on
 the current package surface.
 
 It is separate from:
@@ -23,13 +23,18 @@ supporting auxiliary derivation. It is not the lane summary by itself.
 
 ## Safe Statement
 
-Using the corrected Yukawa route and the promoted package inputs:
+The framework derives the Higgs mechanism and the composite-Higgs boundary
+structure, but the exact low-energy Higgs mass is still bounded on the current
+package surface.
+
+Using the corrected Yukawa route and current package inputs:
 
 - `m_H(2-loop) = 119.8 GeV`
-- `m_H(full 3-loop boundary) = 129.7 GeV`
-- the framework predicts absolute vacuum stability rather than SM metastability
+- `m_H(full 3-loop boundary calibrated estimate) = 129.7 GeV`
+- vacuum stability is qualitatively favorable on the same corrected-input
+  route, but remains bounded with the Higgs mass lane
 
-These are the current Higgs / vacuum rows promoted on `main`.
+These are the current bounded Higgs / vacuum rows on `main`.
 
 ## Component Structure
 
@@ -39,9 +44,13 @@ These are the current Higgs / vacuum rows promoted on `main`.
 2. The corrected Yukawa/color-projection route shifts the 2-loop CW/stability
    result to:
    `m_H(2-loop) = 119.8 GeV`
-3. The full 3-loop boundary calibration with the derived package inputs gives:
+3. The full 3-loop boundary calibration with the derived package inputs gives
+   the current calibrated estimate:
    `m_H = 129.7 GeV`
-4. On that same corrected-input route, the vacuum stays absolutely stable.
+4. On that same corrected-input route, the vacuum stays absolutely stable, but
+   that statement inherits the same bounded status because the lane still
+   depends on the bounded Yukawa/QFP route and a non-framework-native 3-loop
+   calibration.
 
 ## Supporting Notes
 
@@ -52,9 +61,9 @@ These are the current Higgs / vacuum rows promoted on `main`.
 ## Validation Snapshot
 
 - `m_H(2-loop) = 119.77 GeV`
-- `m_H(full 3-loop) = 129.7 GeV`
+- `m_H(full 3-loop calibrated estimate) = 129.7 GeV`
 - observed comparator: `125.25 GeV`
-- vacuum prediction: absolutely stable
+- vacuum prediction: absolutely stable on the current corrected-input route
 
 Primary reruns:
 

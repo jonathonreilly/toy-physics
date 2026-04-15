@@ -19,7 +19,7 @@ bounded component stacks, supporting notes, and explicit live-gate bookkeeping.
 
 Retained core notes and runners.
 
-Current promoted YT / EW / Higgs component package:
+Current quantitative component package:
 
 - [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md)
 - [RCONN_DERIVED_NOTE.md](../../RCONN_DERIVED_NOTE.md)

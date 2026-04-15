@@ -13,16 +13,16 @@ Use this file to find the current canonical note/runner pair on `main`.
 | anomaly-forced `3+1` | [ANOMALY_FORCES_TIME_THEOREM.md](ANOMALY_FORCES_TIME_THEOREM.md) | `frontier_anomaly_forces_time.py` |
 | `S^3` compactification | [S3_GENERAL_R_DERIVATION_NOTE.md](S3_GENERAL_R_DERIVATION_NOTE.md), [S3_CAP_UNIQUENESS_NOTE.md](S3_CAP_UNIQUENESS_NOTE.md) | `frontier_s3_boundary_link_theorem.py`, `frontier_s3_general_r.py`, `frontier_s3_cap_uniqueness.py` |
 
-## Promoted YT / EW / Higgs Component Stack
+## Quantitative Component Stack
 
 | lane | authority | primary runner |
 |---|---|---|
-| `alpha_s` | [ALPHA_S_DERIVED_NOTE.md](ALPHA_S_DERIVED_NOTE.md) | `frontier_yt_zero_import_chain.py` |
+| retained `alpha_s` | [ALPHA_S_DERIVED_NOTE.md](ALPHA_S_DERIVED_NOTE.md) | `frontier_yt_zero_import_chain.py` |
 | color factor `R_conn = 8/9` | [RCONN_DERIVED_NOTE.md](RCONN_DERIVED_NOTE.md) | `frontier_color_projection_mc.py` |
-| EW color projection | [YT_EW_COLOR_PROJECTION_THEOREM.md](YT_EW_COLOR_PROJECTION_THEOREM.md) | `frontier_yt_ew_coupling_derivation.py` |
-| Yukawa color projection | [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](YT_COLOR_PROJECTION_CORRECTION_NOTE.md) | `frontier_yt_color_projection_correction.py` |
-| QFP robustness | [YT_QFP_INSENSITIVITY_THEOREM.md](YT_QFP_INSENSITIVITY_THEOREM.md) | `frontier_yt_qfp_insensitivity.py` |
-| Higgs / vacuum | [HIGGS_VACUUM_PROMOTED_NOTE.md](HIGGS_VACUUM_PROMOTED_NOTE.md) | `frontier_higgs_buttazzo_calibration.py`, `frontier_yt_color_projection_correction.py` |
+| retained EW normalization | [YT_EW_COLOR_PROJECTION_THEOREM.md](YT_EW_COLOR_PROJECTION_THEOREM.md) | `frontier_yt_ew_coupling_derivation.py` |
+| bounded Yukawa / top | [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](YT_COLOR_PROJECTION_CORRECTION_NOTE.md) | `frontier_yt_color_projection_correction.py` |
+| QFP bounded-support theorem | [YT_QFP_INSENSITIVITY_THEOREM.md](YT_QFP_INSENSITIVITY_THEOREM.md) | `frontier_yt_qfp_insensitivity.py` |
+| bounded Higgs / vacuum | [HIGGS_VACUUM_PROMOTED_NOTE.md](HIGGS_VACUUM_PROMOTED_NOTE.md) | `frontier_higgs_buttazzo_calibration.py`, `frontier_yt_color_projection_correction.py` |
 
 ## Remaining Live Gates
 

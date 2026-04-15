@@ -26,7 +26,7 @@ geometric/action family, and one canonical textbook continuum gravitational
 weak/stationary action family on the same route. What remains beyond that is
 only optional comparison against alternative textbook packaging conventions.
 
-If you are checking the promoted quantitative lanes directly, use:
+If you are checking the quantitative lanes directly, use:
 
 - [ALPHA_S_DERIVED_NOTE.md](ALPHA_S_DERIVED_NOTE.md)
 - [RCONN_DERIVED_NOTE.md](RCONN_DERIVED_NOTE.md)

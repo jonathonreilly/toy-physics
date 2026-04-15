@@ -40,9 +40,9 @@ Retained current consequences:
   [OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md](OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)
 - retained gravity and topology stack as captured in the publication package
 
-## Current Promoted Quantitative Package Built On The Same Stack
+## Current Quantitative Package Built On The Same Stack
 
-The current canonical promoted package is:
+The current canonical quantitative stack is:
 
 - [ALPHA_S_DERIVED_NOTE.md](ALPHA_S_DERIVED_NOTE.md)
 - [RCONN_DERIVED_NOTE.md](RCONN_DERIVED_NOTE.md)
@@ -54,15 +54,15 @@ The current canonical promoted package is:
 Safe current result:
 
 - retained `v = 245.080424447914 GeV`
-- promoted `alpha_s(M_Z) = 0.1181`
-- promoted `sin^2(theta_W)(M_Z) = 0.2306`
-- promoted `1/alpha_EM(M_Z) = 127.67`
-- promoted `g_1(v) = 0.4644`
-- promoted `g_2(v) = 0.6480`
-- promoted `y_t(v) = 0.9176`
-- promoted `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
-- promoted `m_H = 119.8 GeV` (2-loop), `129.7 GeV` (full 3-loop boundary)
-- promoted vacuum stability: absolutely stable
+- retained `alpha_s(M_Z) = 0.1181`
+- retained `sin^2(theta_W)(M_Z) = 0.2306`
+- retained `1/alpha_EM(M_Z) = 127.67`
+- retained `g_1(v) = 0.4644`
+- retained `g_2(v) = 0.6480`
+- bounded `y_t(v) = 0.9176`
+- bounded `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
+- bounded `m_H = 119.8 GeV` (2-loop), `129.7 GeV` (calibrated 3-loop estimate)
+- bounded vacuum-stability readout
 
 ## Mathematical Infrastructure Versus Physical Inputs
 

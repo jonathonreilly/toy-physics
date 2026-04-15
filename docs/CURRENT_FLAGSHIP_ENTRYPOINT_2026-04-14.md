@@ -15,9 +15,10 @@ The package has one framework sentence:
 The current flagship package has four layers:
 
 1. retained theorem core
-2. promoted YT / EW / Higgs quantitative component stack
-3. bounded observation-facing companion portfolio
-4. two live gates plus explicit frozen-out families
+2. retained standalone quantitative lanes (`alpha_s`, EW normalization)
+3. bounded Yukawa/top and Higgs/vacuum lanes
+4. bounded observation-facing companion portfolio plus live gates and
+   explicit frozen-out families
 
 The package is therefore not "everything in the repo," and it is not older
 route history.
@@ -75,7 +76,7 @@ only optional comparison against alternative textbook packaging conventions.
 - exact `I_3 = 0`
 - exact CPT on the free staggered lattice
 
-## Promoted YT / EW / Higgs Component Stack
+## Quantitative Component Stack
 
 The current canonical quantitative stack is modular:
 
@@ -86,17 +87,20 @@ The current canonical quantitative stack is modular:
 - [YT_QFP_INSENSITIVITY_THEOREM.md](YT_QFP_INSENSITIVITY_THEOREM.md)
 - [HIGGS_VACUUM_PROMOTED_NOTE.md](HIGGS_VACUUM_PROMOTED_NOTE.md)
 
-Current promoted package-level statements:
+Current package status:
 
-- `alpha_s(M_Z) = 0.1181`
-- `sin^2(theta_W)(M_Z) = 0.2306`
-- `1/alpha_EM(M_Z) = 127.67`
-- `g_1(v) = 0.4644`
-- `g_2(v) = 0.6480`
-- `y_t(v) = 0.9176`
-- `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
-- `m_H = 119.8 GeV` (2-loop), `129.7 GeV` (full 3-loop boundary)
-- vacuum stability: absolutely stable
+- retained `alpha_s(M_Z) = 0.1181`
+- retained EW normalization package:
+  `sin^2(theta_W)(M_Z) = 0.2306`,
+  `1/alpha_EM(M_Z) = 127.67`,
+  `g_1(v) = 0.4644`,
+  `g_2(v) = 0.6480`
+- bounded `y_t(v) = 0.9176`
+- bounded `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
+- bounded Higgs / vacuum package:
+  `m_H = 119.8 GeV` (2-loop),
+  `129.7 GeV` (calibrated 3-loop estimate),
+  bounded vacuum-stability readout
 
 ## Other Bounded Families
 

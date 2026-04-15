@@ -114,19 +114,19 @@ current publication surface and must stay visible through the matrix and
 ledger:
 
 - DM ratio `R = 5.48` vs `5.47`
-- promoted `\alpha_s(M_Z) = 0.1181`
-- promoted EW normalization package: `sin^2(theta_W) = 0.2306`,
+- retained `\alpha_s(M_Z) = 0.1181`
+- retained EW normalization package: `sin^2(theta_W) = 0.2306`,
   `1/\alpha_{EM} = 127.67`, `g_1(v) = 0.4644`, `g_2(v) = 0.6480`
-- promoted `y_t(v) = 0.9176`
-- promoted `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
-- promoted Higgs / vacuum package: `m_H = 119.8 GeV` (2-loop),
-  `129.7 GeV` (full 3-loop boundary), absolute vacuum stability
+- bounded `y_t(v) = 0.9176`
+- bounded `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
+- bounded Higgs / vacuum package: `m_H = 119.8 GeV` (2-loop),
+  `129.7 GeV` (calibrated 3-loop estimate), bounded vacuum-stability readout
 - CKM magnitude package with strong `|V_us|`, `|V_cb|`, `|V_ub|`
 - Cabibbo and partial Jarlskog companions
 - `\Omega_\Lambda`, `n_s`, `w = -1`, and `\Lambda` cosmology companions
 - Higgs, BH-entropy, proton-lifetime, Lorentz, and monopole companions
 
-The current promoted YT / EW / Higgs component stack on `main` is:
+The current quantitative component stack on `main` is:
 
 - [ALPHA_S_DERIVED_NOTE.md](ALPHA_S_DERIVED_NOTE.md)
 - [RCONN_DERIVED_NOTE.md](RCONN_DERIVED_NOTE.md)

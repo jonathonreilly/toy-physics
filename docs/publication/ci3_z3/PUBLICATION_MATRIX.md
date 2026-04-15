@@ -6,8 +6,9 @@ paper package.
 
 This matrix is stricter than a scorecard and broader than the retained theorem
 surface. Every publication-relevant workstream audited across the current remote
-branches should appear here exactly once with one of four dispositions:
+branches should appear here exactly once with one of five dispositions:
 
+- `retained`
 - `promoted`
 - `bounded`
 - `open`
@@ -27,7 +28,7 @@ Use this file together with:
 | Local package surface | Main contribution to publication package | Capture status |
 |---|---|---|
 | retained local authority notes | current theorem core and retained manuscript-facing rows | fully captured |
-| promoted quantitative authority notes | current YT / EW / Higgs / vacuum package | fully captured |
+| quantitative authority notes | current `alpha_s`, EW, Yukawa/top, and Higgs/vacuum lanes | fully captured |
 | bounded local authority notes | DM, CKM, cosmology, and sharp companion rows | captured through bounded or frozen-out rows |
 | local historical notes and inventories | route history and planning material | captured as superseded or non-authority history |
 
@@ -68,18 +69,18 @@ Use this file together with:
 | Exact support theorem | `I_3 = 0` | exact no-third-order-interference theorem | promoted | zero-input structural | main text / ED | [I3_ZERO_EXACT_THEOREM_NOTE.md](../../I3_ZERO_EXACT_THEOREM_NOTE.md) | `frontier_born_rule_derived.py` |
 | Exact support theorem | CPT | exact free staggered-lattice CPT | promoted | zero-input structural | main text / ED | [CPT_EXACT_NOTE.md](../../CPT_EXACT_NOTE.md) | `frontier_cpt_exact.py` |
 
-## B. Promoted quantitative package
+## B. Quantitative component stack
 
-These rows are intentionally broader than the retained theorem core. They are
-publication-relevant because reviewers will ask about them even when they are
-not promoted.
+These rows supplement the retained theorem core. Some are now retained
+standalone quantitative lanes. Others remain bounded and must carry their
+qualifiers explicitly.
 
 | Quantity / lane | Workstream | Framework result | Observation / comparator | Status | Import class | Current publication decision | Authority / best source | Frozen-out ref |
 |---|---|---|---|---|---|---|---|---|
-| `\alpha_s(M_Z)` | strong-coupling lane | `0.1181` | `0.1179` | promoted | one computed lattice input + derived running | promoted package | [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md) | n/a |
-| EW normalization package | EW lane | `sin^2(theta_W)=0.2306`, `1/\alpha_{EM}=127.67`, `g_1(v)=0.4644`, `g_2(v)=0.6480` | observed values | promoted | one computed lattice input + derived running | promoted package | [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md) | n/a |
-| Yukawa / top package | YT package | `y_t(v)=0.9176`, `m_t(pole)=172.57/173.10 GeV` | `~0.917`, `172.69 GeV` | promoted | one computed lattice input + derived running | promoted package | [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md) | n/a |
-| Higgs / vacuum package | Higgs package | `m_H=119.8/129.7 GeV`, absolute vacuum stability | `125.25 GeV`, SM metastability comparator | promoted | one computed lattice input + derived running | promoted package | [HIGGS_VACUUM_PROMOTED_NOTE.md](../../HIGGS_VACUUM_PROMOTED_NOTE.md) | n/a |
+| `\alpha_s(M_Z)` | strong-coupling lane | `0.1181` | `0.1179` | retained | one computed lattice input + derived running | retained standalone quantitative lane | [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md) | n/a |
+| EW normalization package | EW lane | `sin^2(theta_W)=0.2306`, `1/\alpha_{EM}=127.67`, `g_1(v)=0.4644`, `g_2(v)=0.6480` | observed values | retained | one computed lattice input + derived running | retained standalone quantitative lane | [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md) | n/a |
+| Yukawa / top package | YT package | `y_t(v)=0.9176`, `m_t(pole)=172.57/173.10 GeV` | `~0.917`, `172.69 GeV` | bounded | one computed lattice input + derived running | bounded quantitative lane; zero SM imports, but `~3%` QFP surrogate systematic | [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md) | n/a |
+| Higgs / vacuum package | Higgs package | `m_H=119.8 GeV` (2-loop), `129.7 GeV` (calibrated 3-loop estimate), qualitative vacuum stability | `125.25 GeV`, SM metastability comparator | bounded | one computed lattice input + derived running | bounded quantitative lane; mechanism derived, exact mass pending framework-native 3-loop implementation | [HIGGS_VACUUM_PROMOTED_NOTE.md](../../HIGGS_VACUUM_PROMOTED_NOTE.md) | n/a |
 | Dark matter ratio `R` | DM relic chain | `5.48` | `5.47` | bounded | one-parameter + imported perturbative pieces | arXiv companion only | [DM_RELIC_PAPER_NOTE.md](../../DM_RELIC_PAPER_NOTE.md) | `F01` |
 | `\Omega_\Lambda` conditional chain | cosmology from `R` | `0.686` | `0.685` | bounded/conditional | observed `\eta` + flatness + bounded `R` | arXiv companion only | [OMEGA_LAMBDA_DERIVATION_NOTE.md](../../OMEGA_LAMBDA_DERIVATION_NOTE.md) | `F01`, `F04` |
 | CKM magnitudes | mass-basis NNI route | `|V_us|=0.2251`, `|V_cb|=0.0420`, `|V_ub|=0.00435` | PDG values `0.2243`, `0.0422`, `0.00382` | bounded | framework + bounded coefficient route | arXiv bounded appendix only | [CABIBBO_BOUND_NOTE.md](../../CABIBBO_BOUND_NOTE.md), [CKM_MASS_BASIS_NNI_NOTE.md](../../CKM_MASS_BASIS_NNI_NOTE.md) | `F03` |

@@ -63,14 +63,14 @@ pinned numerical evaluation on the current `u_0` / plaquette surface.
 | exact CPT on the free staggered lattice | retained exact companion | main text or Extended Data | [CPT_EXACT_NOTE.md](../../CPT_EXACT_NOTE.md) | [frontier_cpt_exact.py](../../../scripts/frontier_cpt_exact.py) (even periodic lattices only) |
 | single-axiom Hilbert/locality reduction | SI framing only | SI / framing box | [SINGLE_AXIOM_HILBERT_NOTE.md](../../SINGLE_AXIOM_HILBERT_NOTE.md), [SINGLE_AXIOM_INFORMATION_NOTE.md](../../SINGLE_AXIOM_INFORMATION_NOTE.md) | [frontier_single_axiom_hilbert.py](../../../scripts/frontier_single_axiom_hilbert.py), [frontier_single_axiom_information.py](../../../scripts/frontier_single_axiom_information.py) |
 
-## Promoted quantitative component stack
+## Quantitative component stack
 
 | Claim | Status | Placement | Authority | Primary runner |
 |---|---|---|---|---|
-| `alpha_s(M_Z) = 0.1181` | promoted quantitative package | quantitative table | [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md) | [frontier_yt_zero_import_chain.py](../../../scripts/frontier_yt_zero_import_chain.py) |
-| `sin^2(theta_W) = 0.2306`, `1/alpha_EM = 127.67`, `g_1(v) = 0.4644`, `g_2(v) = 0.6480` | promoted quantitative package | quantitative table / SI | [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md) | [frontier_yt_ew_coupling_derivation.py](../../../scripts/frontier_yt_ew_coupling_derivation.py) |
-| `y_t(v) = 0.9176`, `m_t(pole) = 172.57-173.10 GeV` | promoted quantitative package | quantitative table | [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md) | [frontier_yt_color_projection_correction.py](../../../scripts/frontier_yt_color_projection_correction.py) |
-| `m_H = 119.8 GeV` (2-loop), `129.7 GeV` (full 3-loop boundary), absolute vacuum stability | promoted quantitative package | quantitative table / discussion | [HIGGS_VACUUM_PROMOTED_NOTE.md](../../HIGGS_VACUUM_PROMOTED_NOTE.md) | [frontier_higgs_buttazzo_calibration.py](../../../scripts/frontier_higgs_buttazzo_calibration.py), [frontier_yt_color_projection_correction.py](../../../scripts/frontier_yt_color_projection_correction.py) |
+| `alpha_s(M_Z) = 0.1181` | retained quantitative lane | quantitative table | [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md) | [frontier_yt_zero_import_chain.py](../../../scripts/frontier_yt_zero_import_chain.py) |
+| `sin^2(theta_W) = 0.2306`, `1/alpha_EM = 127.67`, `g_1(v) = 0.4644`, `g_2(v) = 0.6480` | retained quantitative lane | quantitative table / SI | [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md) | [frontier_yt_ew_coupling_derivation.py](../../../scripts/frontier_yt_ew_coupling_derivation.py) |
+| `y_t(v) = 0.9176`, `m_t(pole) = 172.57-173.10 GeV` | bounded quantitative lane | quantitative table | [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md), [YT_QFP_INSENSITIVITY_THEOREM.md](../../YT_QFP_INSENSITIVITY_THEOREM.md) | [frontier_yt_color_projection_correction.py](../../../scripts/frontier_yt_color_projection_correction.py), [frontier_yt_qfp_insensitivity.py](../../../scripts/frontier_yt_qfp_insensitivity.py) |
+| `m_H = 119.8 GeV` (2-loop), `129.7 GeV` (calibrated 3-loop estimate), bounded vacuum stability readout | bounded quantitative lane | quantitative table / discussion | [HIGGS_VACUUM_PROMOTED_NOTE.md](../../HIGGS_VACUUM_PROMOTED_NOTE.md) | [frontier_higgs_buttazzo_calibration.py](../../../scripts/frontier_higgs_buttazzo_calibration.py), [frontier_yt_color_projection_correction.py](../../../scripts/frontier_yt_color_projection_correction.py) |
 
 ## Bounded companions
 

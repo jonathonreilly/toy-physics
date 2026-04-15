@@ -8,9 +8,10 @@ package rather than raw repo history.
 The current package is:
 
 1. a retained theorem core
-2. a promoted modular quantitative stack
-3. a bounded observation-facing portfolio
-4. a frozen-out registry for important excluded families
+2. retained standalone quantitative lanes for `alpha_s` and EW normalization
+3. bounded Yukawa/top and Higgs/vacuum lanes
+4. a bounded observation-facing portfolio and a frozen-out registry for
+   important excluded families
 
 ## Retained Core
 
@@ -62,7 +63,7 @@ The current package is:
 - exact `I_3 = 0`
 - exact CPT
 
-## Promoted YT / EW / Higgs Component Stack
+## Quantitative Component Stack
 
 Review this as a modular component stack:
 
@@ -73,17 +74,20 @@ Review this as a modular component stack:
 5. QFP robustness support: [YT_QFP_INSENSITIVITY_THEOREM.md](../../YT_QFP_INSENSITIVITY_THEOREM.md)
 6. Higgs / vacuum: [HIGGS_VACUUM_PROMOTED_NOTE.md](../../HIGGS_VACUUM_PROMOTED_NOTE.md)
 
-Current promoted statements from that stack:
+Current status from that stack:
 
-- `alpha_s(M_Z) = 0.1181`
-- `sin^2(theta_W)(M_Z) = 0.2306`
-- `1/alpha_EM(M_Z) = 127.67`
-- `g_1(v) = 0.4644`
-- `g_2(v) = 0.6480`
-- `y_t(v) = 0.9176`
-- `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
-- `m_H = 119.8 GeV` (2-loop), `129.7 GeV` (full 3-loop boundary)
-- vacuum stability: absolutely stable
+- retained `alpha_s(M_Z) = 0.1181`
+- retained EW normalization package:
+  `sin^2(theta_W)(M_Z) = 0.2306`,
+  `1/alpha_EM(M_Z) = 127.67`,
+  `g_1(v) = 0.4644`,
+  `g_2(v) = 0.6480`
+- bounded `y_t(v) = 0.9176`
+- bounded `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
+- bounded Higgs / vacuum package:
+  `m_H = 119.8 GeV` (2-loop),
+  `129.7 GeV` (calibrated 3-loop estimate),
+  bounded vacuum-stability readout
 
 The most important gravity companion point is also framed carefully: the
 paper's gravity self-consistency claim is that Poisson is the unique local

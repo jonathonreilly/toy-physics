@@ -1,7 +1,7 @@
 # Color-Singlet Projection Correction to y_t
 
 **Date:** 2026-04-14
-**Status:** DERIVED -- R_conn = 8/9 from 1/N_c expansion (RCONN_DERIVED_NOTE.md), 0.07% m_t match
+**Status:** BOUNDED quantitative lane -- zero SM imports, but inherits an approximately `3%` QFP/RGE-surrogate systematic from [YT_QFP_INSENSITIVITY_THEOREM.md](./YT_QFP_INSENSITIVITY_THEOREM.md)
 **Script:** `scripts/frontier_yt_color_projection_correction.py` (7/7 PASS)
 
 ---
@@ -22,6 +22,11 @@ This is the SAME R_conn = (N_c^2 - 1)/N_c^2 = 8/9 already computed
 from the Cl(3) axiom (frontier_color_projection_mc.py), now applied
 to the scalar channel rather than the EW vacuum polarization.
 
+The color-projection correction itself is derived. The full low-energy
+`y_t(v)` / `m_t(pole)` lane remains bounded because the backward Ward transfer
+above `v` uses an EFT surrogate whose error is only bounded, not eliminated,
+by the QFP theorem.
+
 ---
 
 ## Numerical Results
@@ -34,6 +39,10 @@ With the correction applied and proper MSbar-to-pole conversion:
 | m_t(pole, 3-loop)     | 173.10 GeV | 172.69 GeV | +0.24%   |
 | m_H(2-loop, lam=0)    | 119.77 GeV | 125.25 GeV | -4.37%   |
 | alpha_s(M_Z)           | 0.1181     | 0.1179     | +0.14%   |
+
+These central values are the current package readout, but they carry an
+approximately `3%` inherited systematic from the backward Ward / QFP
+surrogate above `v`.
 
 Improvement from the correction:
 

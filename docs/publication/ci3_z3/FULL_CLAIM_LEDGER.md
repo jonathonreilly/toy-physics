@@ -116,13 +116,13 @@ external reviewer will ask about them whether or not they are retained.
 | Cosmological constant `\Lambda` | bounded/conditional | depends on retained topology plus additional cosmology identification | [COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md](../../COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md) | matrix row `Cosmological constant \`\Lambda\``, `F04` |
 | graviton mass `m_g` | bounded/conditional | sharp conditional prediction, but still depends on retained `S^3` plus observed `H_0` | [GRAVITON_MASS_DERIVED_NOTE.md](../../GRAVITON_MASS_DERIVED_NOTE.md) | matrix row `graviton mass \`m_g\``, `F04` |
 
-### Promoted YT / EW / Higgs package
+### Quantitative component stack
 
 | Quantity / lane | Current decision | Why not promoted | Primary authority | Matrix / freeze reference |
 |---|---|---|---|---|
-| `alpha_s(M_Z)` | promoted | standalone strong-coupling lane on `main` | [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md) | matrix row `\alpha_s(M_Z)`, n/a |
-| EW normalization package | promoted | now promoted with the complete chain rather than left as a bounded component stack | [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md) | matrix row `EW normalization package`, n/a |
-| Yukawa / top package | promoted | `y_t` and `m_t` are now carried as promoted quantitative rows | [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md) | matrix row `Yukawa / top package`, n/a |
+| `alpha_s(M_Z)` | retained quantitative lane | standalone strong-coupling lane on `main` | [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md) | matrix row `\alpha_s(M_Z)`, n/a |
+| EW normalization package | retained quantitative lane | standalone EW lane on `main`; independent of the Yukawa/Higgs chain | [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md) | matrix row `EW normalization package`, n/a |
+| Yukawa / top package | bounded quantitative lane | zero SM imports, but still carries an approximately `3%` QFP/RGE-surrogate systematic | [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md) | matrix row `Yukawa / top package`, n/a |
 
 ### Flavor / CKM portfolio
 
@@ -136,7 +136,7 @@ external reviewer will ask about them whether or not they are retained.
 
 | Quantity / lane | Current decision | Why not promoted | Primary authority | Matrix / freeze reference |
 |---|---|---|---|---|
-| Higgs / vacuum package | promoted quantitative package | standalone Higgs/vacuum lane on `main` with auxiliary direct-Higgs support retained separately | [HIGGS_VACUUM_PROMOTED_NOTE.md](../../HIGGS_VACUUM_PROMOTED_NOTE.md) | matrix row `Higgs / vacuum package`, n/a |
+| Higgs / vacuum package | bounded quantitative lane | mechanism derived, but exact mass and vacuum readout still depend on bounded Yukawa support and a calibrated 3-loop estimate | [HIGGS_VACUUM_PROMOTED_NOTE.md](../../HIGGS_VACUUM_PROMOTED_NOTE.md) | matrix row `Higgs / vacuum package`, n/a |
 | Bekenstein-Hawking entropy | bounded companion | useful companion signal, not part of flagship theorem spine | [BH_ENTROPY_DERIVED_NOTE.md](../../BH_ENTROPY_DERIVED_NOTE.md) | matrix row `Bekenstein-Hawking entropy`, `F07` |
 | gravitational decoherence | bounded companion | concrete BMV-class benchmark prediction, but still companion-only and unmeasured | [GRAV_DECOHERENCE_DERIVED_NOTE.md](../../GRAV_DECOHERENCE_DERIVED_NOTE.md) | matrix row `gravitational decoherence`, `F07` |
 | Proton lifetime | bounded sharp prediction | later companion or appendix material, not flagship core | [PROTON_LIFETIME_DERIVED_NOTE.md](../../PROTON_LIFETIME_DERIVED_NOTE.md) | matrix row `Proton lifetime`, `F07` |

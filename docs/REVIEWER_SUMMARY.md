@@ -5,9 +5,9 @@
 
 This repository is not presently organized around the older toy-model or DAG
 exploration surfaces. The current review target is a `Cl(3)` on `Z^3`
-framework package with a retained theorem core, a modular promoted
-quantitative stack, a bounded companion portfolio, and two explicitly open
-gates.
+framework package with a retained theorem core, retained standalone
+quantitative lanes, bounded Yukawa/Higgs lanes, a bounded companion
+portfolio, and two explicitly open gates.
 
 ## Current Read Order
 
@@ -34,7 +34,7 @@ gates.
 - exact `I_3 = 0`
 - exact CPT
 
-## Promoted YT / EW / Higgs Component Stack
+## Quantitative Component Stack
 
 Canonical quantitative stack:
 
@@ -45,15 +45,18 @@ Canonical quantitative stack:
 - [YT_QFP_INSENSITIVITY_THEOREM.md](YT_QFP_INSENSITIVITY_THEOREM.md)
 - [HIGGS_VACUUM_PROMOTED_NOTE.md](HIGGS_VACUUM_PROMOTED_NOTE.md)
 
-Promoted quantitative statements:
+Current quantitative statuses:
 
-- `alpha_s(M_Z) = 0.1181`
-- `sin^2(theta_W)(M_Z) = 0.2306`
-- `1/alpha_EM(M_Z) = 127.67`
-- `y_t(v) = 0.9176`
-- `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
-- `m_H = 119.8 GeV` (2-loop), `129.7 GeV` (full 3-loop boundary)
-- vacuum stability: absolutely stable
+- retained `alpha_s(M_Z) = 0.1181`
+- retained EW normalization package:
+  `sin^2(theta_W)(M_Z) = 0.2306`,
+  `1/alpha_EM(M_Z) = 127.67`
+- bounded `y_t(v) = 0.9176`
+- bounded `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
+- bounded Higgs / vacuum package:
+  `m_H = 119.8 GeV` (2-loop),
+  `129.7 GeV` (calibrated 3-loop estimate),
+  bounded vacuum-stability readout
 
 ## Other Bounded Families
 
