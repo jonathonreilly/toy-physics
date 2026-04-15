@@ -1,7 +1,8 @@
 # Emergent Lorentz Invariance from the Cubic Z³ Lattice
 
 **Date:** 2026-04-15
-**Status:** retained exact structural theorem (zero bounded lanes)
+**Status:** retained exact (dispersion structure, CPT/P protection, cubic harmonic);
+bounded (numerical Planck suppression via UV identification a ~ 1/M_Planck)
 **Script:** `scripts/frontier_emergent_lorentz_invariance.py`
 
 ## Theorem
@@ -131,20 +132,47 @@ invariance framing is more important: it addresses the concern
 
 ## What Is Actually Proved
 
-### Exact (theorem-grade):
+### Exact (theorem-grade, free theory):
 
 1. Staggered dispersion E² = (1/a²) Σ sin²(p_i a)
 2. Taylor expansion gives p² − (a²/3) Σ p_i⁴ + O(a⁴)
 3. Leading LV is dimension-6 (verified numerically)
 4. CPT exact → no CPT-odd LV operators
-5. P exact → no dimension-5 LV operators
+5. P exact at tree level → no dimension-5 LV in the CP-conserving sector
 6. Angular structure is unique cubic harmonic K₄ at ℓ = 4
 7. O_h cubic symmetry exact on the lattice
 
-### Retained (Planck-scale identification via hierarchy theorem):
+### Bounded (interacting theory and Planck identification):
 
-8. Hierarchy theorem pins a ~ 1/M_Planck (retained) → |δE/E| ~ (E/M_Pl)²
-9. Experimental context: all SME bounds exceeded by ≥7 orders (not part of theorem)
+8. Hierarchy theorem pins a ~ 1/M_Planck → |δE/E| ~ (E/M_Pl)²
+   (bounded through the UV identification)
+9. Interacting-theory corrections (gauge coupling, taste-breaking) are
+   also O(a²) and could modify the angular structure at O(a² α_s)
+10. Experimental context: all SME bounds exceeded by ≥7 orders
+
+## Honest Caveats
+
+**Boost invariance:** This note demonstrates emergent rotational SO(3)
+invariance from the spatial dispersion relation. Boost invariance is
+not independently derived — it is imposed by the 3+1 anomaly-forced
+closure and the APBC time structure. The full SO(3,1) emergence
+requires both the spatial isotropy result (shown here) and the
+time-direction structure (from ANOMALY_FORCES_TIME_THEOREM).
+
+**Taste-breaking degeneracy:** Staggered fermions have O(a²)
+taste-breaking corrections at the same order as the LV corrections.
+In the interacting theory, both contribute; their relative magnitude
+depends on gauge coupling effects not computed in the free-field
+analysis. The free-field cubic harmonic signature may be modified by
+gluon exchange at O(a² α_s).
+
+**P symmetry and CKM:** P is exact in the free theory and at tree level
+in the gauge sector. Once the CKM phase is included, P is individually
+violated (while CPT remains exact). This means dimension-5 LV in the
+CP-violating sector is constrained by CPT alone, not doubly protected.
+However, such operators would be further suppressed by weak coupling
+factors (α_weak × a p³), making them subdominant to the dimension-6
+term.
 
 ## Experimental Predictions
 
