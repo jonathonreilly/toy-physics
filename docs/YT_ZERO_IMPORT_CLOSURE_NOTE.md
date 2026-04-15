@@ -12,6 +12,19 @@ for the renormalized `y_t` lane. Older Planck-boundary / matching-band notes
 such as `YT_FULL_CLOSURE_NOTE.md` and `YT_CLEAN_DERIVATION_NOTE.md` are
 historical derivation audits, not the current flagship authority surface.
 
+**2026-04-15 authority correction:** the numerical values in this note track
+the older 2-loop zero-import chain (`y_t(v) = 0.973`, `m_t = 169.4 GeV`).
+The current branch posture is narrower and more honest:
+
+- the `y_t` lane remains `BOUNDED`
+- the accepted central route is carried with an inherited `~3%` QFP /
+  backward-Ward systematic
+- there is no practical direct-lattice bypass on accessible lattices
+
+For that current boundary read, also use
+[YT_FLAGSHIP_CLOSURE_NOTE.md](./YT_FLAGSHIP_CLOSURE_NOTE.md) and
+[scripts/frontier_direct_yt_extraction.py](../scripts/frontier_direct_yt_extraction.py).
+
 ## Result
 
 | Observable | Predicted | Observed | Deviation |

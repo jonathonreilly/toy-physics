@@ -9,6 +9,17 @@ surface together with `docs/YT_ZERO_IMPORT_CLOSURE_NOTE.md`. It resolves the
 old `g_3(M_Pl)_SM` versus `g_lattice` mismatch objection, but it does **not**
 by itself make the lane unbounded.
 
+**2026-04-15 authority correction:** this note resolves the endpoint /
+domain-separation objection, but its worked numerical example still follows
+the older 2-loop branch chain (`y_t(v) = 0.973`, `m_t = 169.4 GeV`).
+The current branch boundary remains:
+
+- `y_t` is still bounded by the backward-Ward / QFP surrogate at `~3%`
+- direct lattice extraction does not yet provide a feasible low-energy bypass
+
+Use this note for the conceptual theorem, not for the final quantitative
+claim boundary by itself.
+
 ---
 
 ## The Blocker (Codex Review)
