@@ -47,6 +47,23 @@ This is the exact support-side tensor carrier already isolated by the Route 2
 interface. It is the maximal exact support-side polarization prototype we can
 build from the current support stack without inventing new generators.
 
+The exact support-irrep lift shows where the candidate extra support content
+would have to come from if the frame were to enlarge:
+
+- the non-scalar `E` sector
+- the non-scalar `T1` sector
+
+On the exact star-supported class those sectors really are present as
+independent support-irrep content, and on the finite-rank widening class their
+bright aligned readouts are exactly the Route 2 coordinates
+
+- `u_E = <E_x, q>`
+- `u_T = <T1x, q>`
+
+But these are still only candidate support observables, not canonical support
+generators, because the exact support Hessian has no mixed `A1`-bright block
+and the support-to-active operator annihilates the bright channels.
+
 The singular-value form of the obstruction is equally sharp:
 
 - support singular spectrum: one dominant mode, the rest numerically null
@@ -102,6 +119,13 @@ The smallest extra primitive needed beyond the current support stack is:
 > a tensor-valued support-side polarization frame with rank at least three
 > before scalar renormalization, i.e. two additional independent support
 > generators beyond total charge.
+
+In concrete support-side terms, the only exact candidate channels visible on
+the current class are the aligned bright observables `u_E` and `u_T`, but the
+current exact support Green/Hessian kills them as independent generators. So
+the obstruction is sharper than "rank one": the current support stack has the
+right irrep labels but not a canonical support-side frame that promotes those
+labels into independent generators before renormalization.
 
 Equivalently, the current stack needs at least one additional tensor channel
 that survives renormalization so the second active quotient mode is sourced

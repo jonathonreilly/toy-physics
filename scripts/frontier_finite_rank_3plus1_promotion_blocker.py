@@ -8,6 +8,10 @@ spatial `3+1` matching map on the finite-rank widening lane.
 The answer should be no if the exact support stack is still rank one after
 renormalization; in that case the remaining missing primitive is the tensor
 polarization lift `Pi_3+1`.
+
+The only exact candidate extra support observables are the aligned Route 2
+channels `u_E` and `u_T`, but they remain carrier coordinates inside the
+bilinear support object `K_R` rather than canonical support generators.
 """
 
 from __future__ import annotations
@@ -160,8 +164,10 @@ def main() -> int:
         "primitive is an exact `3+1` polarization lift `Pi_3+1` that separates the active "
         "scalar quotient into lapse, shift, and spatial-trace/shear channels. The current "
         "support response matrix has identical columns and rank one, so the support span "
-        "cannot canonically source the second active quotient mode. The lift therefore "
-        "cannot be derived from the existing finite-rank data alone."
+        "cannot canonically source the second active quotient mode. The only exact "
+        "candidate extra support observables on the current class are the aligned `u_E` "
+        "and `u_T` channels inside `K_R`, but they do not become canonical generators. "
+        "The lift therefore cannot be derived from the existing finite-rank data alone."
     )
 
     print("\n" + "=" * 78)

@@ -94,6 +94,12 @@ So the best honest conclusion is:
 > the projected DtN correction operator plus the exact scalar active-quotient
 > law are not enough to force the full tensorial `3+1` matching map.
 
+The only exact candidate extra support observables visible on the current
+class are the aligned bright Route 2 channels `u_E` and `u_T`. They do not
+become canonical support generators because the exact support Green/Hessian
+has no mixed `A1`-bright block and the support-to-active operator kills those
+channels as independent sources.
+
 ## Exact minimal missing primitive
 
 The missing primitive is now sharper than the previous blocker:

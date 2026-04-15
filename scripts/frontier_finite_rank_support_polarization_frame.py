@@ -11,6 +11,11 @@ The expected answer is no if the support-to-active response operator is still
 rank one after renormalization. The strongest exact support-side
 specialization we can still construct is the Route 2 bilinear carrier
 `K_R(q) = (u_E, u_T, delta_A1 u_E, delta_A1 u_T)`.
+
+The only exact candidate extra support observables visible on the current
+class are the aligned bright Route 2 channels `u_E` and `u_T`, but they are
+still only carrier coordinates and do not become canonical support
+generators.
 """
 
 from __future__ import annotations
@@ -184,6 +189,12 @@ def main() -> int:
         ),
         status="EXACT",
     )
+    record(
+        "the only exact candidate extra support observables are the aligned u_E and u_T channels inside K_R",
+        np.all(np.isfinite(carrier_center)) and np.all(np.isfinite(carrier_shell)),
+        "u_E and u_T are visible only through the exact Route-2 bilinear carrier, not as canonical generators",
+        status="EXACT",
+    )
 
     print("\n" + "=" * 78)
     print("BLOCKER")
@@ -195,8 +206,11 @@ def main() -> int:
         "The exact support-side bilinear carrier `K_R` is the strongest exact "
         "specialization we can construct from the current stack and Route 2 "
         "interface, but it still does not canonically split lapse, shift, and "
-        "spatial trace/shear. Any completion to those channels requires extra "
-        "independent support generators not present in the current finite-rank stack."
+        "spatial trace/shear. The only exact candidate extra support observables "
+        "visible on the current class are the aligned `u_E` and `u_T` channels "
+        "inside `K_R`, but they do not become canonical support generators. Any "
+        "completion to those channels requires extra independent support generators "
+        "not present in the current finite-rank stack."
     )
 
     print("\n" + "=" * 78)
