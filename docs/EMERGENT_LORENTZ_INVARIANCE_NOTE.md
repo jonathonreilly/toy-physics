@@ -1,19 +1,17 @@
 # Emergent Lorentz Invariance from the Cubic Z³ Lattice
 
 **Date:** 2026-04-15
-**Status:** retained exact structural theorem with retained hierarchy-scale
-interpretation; experimental comparison is companion context
+**Status:** retained exact (dispersion structure, CPT/P protection, cubic harmonic);
+bounded (numerical Planck suppression via UV identification a ~ 1/M_Planck)
 **Script:** `scripts/frontier_emergent_lorentz_invariance.py`
 
 ## Theorem
 
 **Theorem (Emergent Lorentz Invariance).**
-On the cubic `Cl(3)/Z^3` lattice, the infrared dispersion is isotropic at
-leading order, and the first non-isotropic correction is a CPT-even,
-parity-even, dimension-6 operator with unique cubic-harmonic angular
-signature at `\ell = 4`. On the retained hierarchy surface
-`a \sim 1/M_{Planck}`, the correction is suppressed by `(E/M_{Planck})^2`,
-so Lorentz invariance is emergent to all currently accessible precision.
+The Cl(3)/Z³ framework on the cubic lattice produces Lorentz-invariant
+physics at all experimentally accessible energies. The leading
+Lorentz-violating correction is dimension-6, CPT-even, suppressed by
+(E/E_Planck)², with a unique cubic-harmonic angular signature at ℓ = 4.
 
 ## The Problem
 
@@ -59,8 +57,7 @@ These symmetries forbid:
 - All CPT-odd SME coefficients (a_μ, b_μ, etc.)
 
 The leading allowed LV operator is dimension-6 (CPT-even, P-even).
-This is the weakest possible lattice-induced Lorentz-violating correction on
-the current symmetry surface.
+This is the weakest possible Planck-scale LV — doubly protected.
 
 ### Step 3: Planck suppression
 
@@ -104,7 +101,7 @@ On L = 8 lattice:
 - At p = 0.01: relative anisotropy = 2.2 × 10⁻⁵ (matches expected O(p²))
 - At p = 0.05: lattice-continuum deviation < 0.1% in all directions
 
-## Phenomenological Context
+## SME Bounds Comparison
 
 | Experiment | Bound | Framework | Safe by |
 |-----------|-------|-----------|---------|
@@ -115,10 +112,6 @@ On L = 8 lattice:
 | Atomic clock | 10⁻²² | 6.7 × 10⁻³⁹ GeV⁻² | 16 orders |
 
 All CPT-odd bounds: framework predicts exactly 0 (CPT exact).
-
-This table is not the theorem. It is the phenomenological context obtained
-after combining the exact lattice theorem with the retained hierarchy-scale
-identification `a \sim 1/M_{Planck}`.
 
 ## Relation to Existing Notes
 
@@ -139,20 +132,47 @@ invariance framing is more important: it addresses the concern
 
 ## What Is Actually Proved
 
-### Exact / retained theorem surface:
+### Exact (theorem-grade, free theory):
 
 1. Staggered dispersion E² = (1/a²) Σ sin²(p_i a)
 2. Taylor expansion gives p² − (a²/3) Σ p_i⁴ + O(a⁴)
 3. Leading LV is dimension-6 (verified numerically)
 4. CPT exact → no CPT-odd LV operators
-5. P exact → no dimension-5 LV operators
+5. P exact at tree level → no dimension-5 LV in the CP-conserving sector
 6. Angular structure is unique cubic harmonic K₄ at ℓ = 4
-7. `O_h` cubic symmetry exact on the lattice
+7. O_h cubic symmetry exact on the lattice
 
-### Retained bridge used in the physical interpretation:
+### Bounded (interacting theory and Planck identification):
 
-8. Hierarchy theorem pins a ~ 1/M_Planck (retained) → |δE/E| ~ (E/M_Pl)²
-9. Experimental context: all SME bounds exceeded by ≥7 orders (not part of theorem)
+8. Hierarchy theorem pins a ~ 1/M_Planck → |δE/E| ~ (E/M_Pl)²
+   (bounded through the UV identification)
+9. Interacting-theory corrections (gauge coupling, taste-breaking) are
+   also O(a²) and could modify the angular structure at O(a² α_s)
+10. Experimental context: all SME bounds exceeded by ≥7 orders
+
+## Honest Caveats
+
+**Boost invariance:** This note demonstrates emergent rotational SO(3)
+invariance from the spatial dispersion relation. Boost invariance is
+not independently derived — it is imposed by the 3+1 anomaly-forced
+closure and the APBC time structure. The full SO(3,1) emergence
+requires both the spatial isotropy result (shown here) and the
+time-direction structure (from ANOMALY_FORCES_TIME_THEOREM).
+
+**Taste-breaking degeneracy:** Staggered fermions have O(a²)
+taste-breaking corrections at the same order as the LV corrections.
+In the interacting theory, both contribute; their relative magnitude
+depends on gauge coupling effects not computed in the free-field
+analysis. The free-field cubic harmonic signature may be modified by
+gluon exchange at O(a² α_s).
+
+**P symmetry and CKM:** P is exact in the free theory and at tree level
+in the gauge sector. Once the CKM phase is included, P is individually
+violated (while CPT remains exact). This means dimension-5 LV in the
+CP-violating sector is constrained by CPT alone, not doubly protected.
+However, such operators would be further suppressed by weak coupling
+factors (α_weak × a p³), making them subdominant to the dimension-6
+term.
 
 ## Experimental Predictions
 
@@ -166,7 +186,7 @@ invariance framing is more important: it addresses the concern
 ## How This Changes the Paper
 
 This result addresses the conceptual objection "how can a cubic lattice
-produce relativistic physics?" The answer is:
+produce Lorentz-invariant physics?" The answer is:
 
 > The cubic Z³ lattice has octahedral symmetry O_h, not the full Lorentz
 > group SO(3,1). However, the leading Lorentz-violating corrections are
@@ -181,5 +201,5 @@ produce relativistic physics?" The answer is:
 ```
 python3 scripts/frontier_emergent_lorentz_invariance.py
 # Exit code: 0
-# PASS=37  FAIL=0
+# PASS=42  FAIL=0
 ```

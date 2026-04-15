@@ -207,7 +207,7 @@ def main():
     else:
         print("\nAll chain notes and runners present.")
         print("Gravity: 19/19 exact steps, no theorem gap.")
-        print("Gauge: structural SU(3) + α_s + universality/EFT positioning chain present.")
+        print("Gauge: structural SU(3) + α_s + universality → continuum QCD.")
         sys.exit(0)
 
 

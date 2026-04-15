@@ -69,30 +69,48 @@ This overestimates by ~18% due to accumulated two-loop matching errors
 in Λ^(3).
 
 **Method 2: Sommer scale at β = 6.0.**
-At the framework's coupling β = 6.0, standard lattice QCD gives:
-- r₀/a = 5.37 (Sommer parameter in lattice units)
+This method imports standard lattice QCD results for SU(3) Yang-Mills
+at β = 6.0. The framework claims its gauge sector IS SU(3) YM; these
+results follow as consequences of that identification. The imported
+values are properties of SU(3) YM dynamics, not of a specific lattice
+setup:
+- r₀/a = 5.37 (Sommer parameter in lattice units, from continuum-limit
+  lattice QCD at β = 6.0)
 - σa² = 0.0465 (Creutz ratio from large Wilson loops)
-- a = 0.088 fm
-- √σ_quenched = 484 MeV (quenched value at the framework's coupling)
-- With dynamical quark screening (factor ~0.96): √σ ≈ 465 MeV
+- a = 0.088 fm (from r₀ = 0.472 fm)
+- √σ_quenched = 484 MeV
 
-**Comparison:** √σ_exp ≈ 440 ± 20 MeV. The framework prediction (465 MeV)
-is +5.6% high, within the uncertainty of the screening correction.
+With N_f = 2+1 dynamical quark screening, the string tension decreases.
+The range from the literature is √σ ∈ [435, 484] MeV, depending on the
+screening treatment. The rough central estimate is √σ ≈ 460 MeV.
+
+**Comparison:** √σ_exp ≈ 440 ± 20 MeV. The framework's range [435, 484]
+overlaps with experiment.
 
 **Sensitivity:** A 0.2% change in α_s(M_Z) shifts √σ by ~1.2%. The
 framework's 0.2% accuracy in α_s propagates to ~1% accuracy in √σ.
 
-## Monte Carlo Verification
+**Important caveat:** The Sommer-scale lattice data are derived from
+standard lattice QCD simulations at a ≈ 0.09 fm, not from the
+framework's Planck-scale lattice. The application to the framework
+rests on the identification "the framework's gauge sector = SU(3) YM,"
+which is the structural claim. The quantitative string tension is
+therefore bounded through this identification.
+
+## Monte Carlo Verification (qualitative consistency check)
 
 Pure-gauge SU(3) Monte Carlo at β = 6.0 on a 4⁴ lattice
-(PASS = 30, FAIL = 0):
+(PASS = 30, FAIL = 0). This is a qualitative consistency check, not a
+quantitative extraction — the 4⁴ volume is far too small for asymptotic
+string tension measurement:
 
-- ⟨P⟩_MC = 0.5973 ± 0.0006 (framework: 0.5934, within finite-size effects)
+- ⟨P⟩_MC = 0.5973 ± 0.0006 (framework: 0.5934; the 0.7% shift is a
+  known finite-size effect at this volume)
 - W(1,1) = 0.597, W(1,2) = 0.391, W(2,2) = 0.205
 - Clear area-law decay: W decreases exponentially with loop area
-- Creutz ratio χ(2,2) = 0.226 > 0 (positive string tension)
-- On a 4⁴ lattice, χ includes short-distance perturbative contributions
-  and overestimates the asymptotic σa² = 0.0465
+- Creutz ratio χ(2,2) = 0.226 > 0 (positive string tension, but
+  dominated by short-distance perturbative contributions at this scale)
+- Quantitative σa² extraction requires volumes ≥ 16⁴
 
 ## What Is Actually Proved
 

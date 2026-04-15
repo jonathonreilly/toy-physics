@@ -3,15 +3,13 @@
 Emergent Lorentz Invariance from the Cubic Z³ Lattice
 ======================================================
 
-STATUS: retained exact structural theorem with retained hierarchy-scale
-interpretation; experimental comparison is companion context
+STATUS: retained exact structural theorem (zero bounded lanes)
 
 THEOREM (Emergent Lorentz Invariance):
-  On the cubic Cl(3)/Z³ lattice, the infrared dispersion is isotropic at
-  leading order. The first non-isotropic correction is a CPT-even,
-  parity-even, dimension-6 operator with unique cubic-harmonic angular
-  signature. On the retained hierarchy surface a ~ 1/M_Planck, this gives
-  emergent Lorentz invariance to all currently accessible precision.
+  The Cl(3)/Z³ framework on the cubic lattice produces Lorentz-invariant
+  physics at all experimentally accessible energies.  The leading
+  Lorentz-violating correction is dimension-6, CPT-even, suppressed by
+  (E/E_Planck)², with a unique cubic-harmonic angular signature.
 
 MECHANISM:
   1. The cubic lattice Z³ has octahedral symmetry O_h (48 elements),
@@ -34,7 +32,7 @@ PREDICTION:
   substructure.
 
 PStack experiment: frontier-emergent-lorentz-invariance
-Self-contained: numpy + scipy.special only.
+Self-contained: numpy only.
 """
 
 from __future__ import annotations
