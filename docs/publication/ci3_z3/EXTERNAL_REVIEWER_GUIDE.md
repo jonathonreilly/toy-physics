@@ -13,6 +13,9 @@ The current package is:
 4. a bounded observation-facing portfolio and a frozen-out registry for
    important excluded families
 
+For the package-level gravity/gauge continuum positioning synthesis, use
+[CONTINUUM_IDENTIFICATION_NOTE.md](../../CONTINUUM_IDENTIFICATION_NOTE.md).
+
 ## Retained Core
 
 - weak-field gravity through the Poisson / Newton chain

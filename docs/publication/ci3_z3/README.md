@@ -18,6 +18,9 @@ Use this package instead of browsing raw repo chronology.
 9. [Frozen-out registry](./FROZEN_OUT_REGISTRY.md)
 10. [Results index](./RESULTS_INDEX.md)
 
+For one-note gravity/gauge continuum positioning across the current package,
+use [CONTINUUM_IDENTIFICATION_NOTE.md](../../CONTINUUM_IDENTIFICATION_NOTE.md).
+
 ## Current Package Shape
 
 The package has four layers:
@@ -151,6 +154,11 @@ Reviewer-facing framing notes:
   realization.
 - there is no remaining theorem gap on the chosen canonical textbook
   continuum target.
+- the package-level gravity/gauge continuum positioning note is
+  [CONTINUUM_IDENTIFICATION_NOTE.md](../../CONTINUUM_IDENTIFICATION_NOTE.md):
+  gravity is exact on the chosen canonical textbook target, while the gauge
+  side is positioned through the structural `SU(3)` / Wilson / `alpha_s` /
+  universality-EFT bridge rather than a parallel 19-step theorem chain.
 - optional comparison against alternative textbook packaging conventions is
   collected separately in
   [UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md](../../UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md)

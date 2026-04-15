@@ -29,6 +29,8 @@ geometric/action family, the canonical textbook Einstein-Hilbert-style
 geometric/action family, and one canonical textbook continuum gravitational
 weak/stationary action family on the same route. What remains beyond that is
 only optional comparison against alternative textbook packaging conventions.
+For the package-level continuum positioning across gravity and gauge, use
+[docs/CONTINUUM_IDENTIFICATION_NOTE.md](docs/CONTINUUM_IDENTIFICATION_NOTE.md).
 
 ## Retained Core
 

@@ -17,6 +17,9 @@ portfolio, and two explicitly open gates.
 4. [publication/ci3_z3/DERIVATION_ATLAS.md](publication/ci3_z3/DERIVATION_ATLAS.md)
 5. [publication/ci3_z3/DERIVATION_VALIDATION_MAP.md](publication/ci3_z3/DERIVATION_VALIDATION_MAP.md)
 
+For the package-level gravity/gauge continuum positioning synthesis, use
+[CONTINUUM_IDENTIFICATION_NOTE.md](CONTINUUM_IDENTIFICATION_NOTE.md).
+
 ## Retained Core
 
 - weak-field gravity through the Poisson / Newton chain
