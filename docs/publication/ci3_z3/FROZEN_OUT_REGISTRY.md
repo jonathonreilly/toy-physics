@@ -64,11 +64,12 @@ were superseded by the complete prediction chain and its support stack.
 
 - nothing; this family is kept as history rather than a live promotion target
 
-### `F03` CKM / flavor quantitative portfolio
+### `F03` Older CKM bounded route-history portfolio
 
-**Status:** frozen out of the retained paper core; still one of the two live gates.
-**Why frozen out:** quantitative flavor is not closed even though some bounded
-matches are strong.
+**Status:** frozen out as superseded authority.
+**Why frozen out:** the promoted CKM atlas/axiom closure package now controls
+the live authority surface on `main`; the older bounded Cabibbo / mass-basis /
+Jarlskog rows remain useful only as route history and comparison material.
 
 **Captured work:**
 
@@ -80,16 +81,15 @@ matches are strong.
 
 **Primary sources:**
 
-- `main`: `CKM_MASS_BASIS_NNI_NOTE.md`,
+- promoted authority on `main`: `CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`
+- bounded historical companions on `main`: `CKM_MASS_BASIS_NNI_NOTE.md`,
   `CABIBBO_BOUND_NOTE.md`, `JARLSKOG_PHASE_BOUND_NOTE.md`
 - work history: `CABIBBO_JARLSKOG_ROUTE_NOTE_2026-04-12.md`
 - `codex/review-active`: bounded `CKM_*` notes
 
 **Needed to unfreeze:**
 
-- quantitative coefficient closure
-- phase / Jarlskog closure
-- ab initio flavor bridge at theorem grade
+- nothing; this family is retained only as superseded bounded route history
 
 ### `F04` Cosmology companion portfolio
 

@@ -38,4 +38,3 @@ If you are checking the quantitative lanes directly, use:
 Remaining live gates are now:
 
 1. DM relic mapping
-2. CKM / quantitative flavor closure

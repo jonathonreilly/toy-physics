@@ -105,7 +105,7 @@ Current package status:
 ## Other Bounded Families
 
 - DM ratio and relic companions
-- CKM magnitude package plus Cabibbo / partial Jarlskog companions
+- older bounded CKM magnitude / Cabibbo / partial Jarlskog route history
 - cosmology companions such as `Omega_Lambda`, `n_s`, `w = -1`, `Lambda`
 - sharp companion predictions such as proton lifetime, Lorentz fingerprint,
   BH entropy, graviton decoherence, monopole mass
@@ -113,7 +113,6 @@ Current package status:
 ## Live Gates
 
 1. DM relic mapping
-2. CKM / quantitative flavor closure
 
 ## Where The Current Package Lives
 

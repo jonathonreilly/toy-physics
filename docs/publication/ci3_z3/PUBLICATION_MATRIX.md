@@ -83,8 +83,7 @@ qualifiers explicitly.
 | Higgs / vacuum package | Higgs package | `m_H=119.8 GeV` (2-loop), `129.7 GeV` (calibrated 3-loop estimate), qualitative vacuum stability | `125.25 GeV`, SM metastability comparator | bounded | one computed lattice input + derived running | bounded quantitative lane; mechanism derived, exact mass pending framework-native 3-loop implementation | [HIGGS_VACUUM_PROMOTED_NOTE.md](../../HIGGS_VACUUM_PROMOTED_NOTE.md) | n/a |
 | Dark matter ratio `R` | DM relic chain | `5.48` | `5.47` | bounded | one-parameter + imported perturbative pieces | arXiv companion only | [DM_RELIC_PAPER_NOTE.md](../../DM_RELIC_PAPER_NOTE.md) | `F01` |
 | `\Omega_\Lambda` conditional chain | cosmology from `R` | `0.686` | `0.685` | bounded/conditional | observed `\eta` + flatness + bounded `R` | arXiv companion only | [OMEGA_LAMBDA_DERIVATION_NOTE.md](../../OMEGA_LAMBDA_DERIVATION_NOTE.md) | `F01`, `F04` |
-| CKM magnitudes | mass-basis NNI route | `|V_us|=0.2251`, `|V_cb|=0.0420`, `|V_ub|=0.00435` | PDG values `0.2243`, `0.0422`, `0.00382` | bounded | framework + bounded coefficient route | arXiv bounded appendix only | [CABIBBO_BOUND_NOTE.md](../../CABIBBO_BOUND_NOTE.md), [CKM_MASS_BASIS_NNI_NOTE.md](../../CKM_MASS_BASIS_NNI_NOTE.md) | `F03` |
-| Jarlskog invariant | Z3 CP phase route | `3.145 x 10^-5` | `3.08 x 10^-5` | bounded / partial | derived phase + observed angles | bounded companion only | [JARLSKOG_PHASE_BOUND_NOTE.md](../../JARLSKOG_PHASE_BOUND_NOTE.md) | `F03` |
+| CKM closure package | atlas/axiom no-import route | `|V_us|=0.22727`, `|V_cb|=0.04217`, `|V_ub|=0.003913`, `\delta=65.905^\circ`, `J=3.331 x 10^-5` | PDG magnitudes `0.2243`, `0.0422`, `0.00394`; coherent angle package `\delta=65.5^\circ`, `J_{recon}=3.304 x 10^-5` | closed | canonical CMT `\alpha_s(v)` + exact atlas counts `{2,3,6}` + exact `1/6` projector + exact bilinear tensor carrier `K_R` + exact `Z_3` source + exact Schur cascade | promoted quantitative package / SI theorem box | [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md) | n/a |
 | Spectral tilt `n_s` | graph-growth cosmology | `0.9667` | `0.9649 +/- 0.0042` | bounded/conditional | growth-model assumptions | arXiv companion only | [PRIMORDIAL_SPECTRUM_NOTE.md](../../PRIMORDIAL_SPECTRUM_NOTE.md) | `F04` |
 | Dark energy EOS `w` | spectral-gap cosmology | `w = -1` exactly | observationally near `-1` | bounded/conditional | topology/cosmology dependent | arXiv companion only | [DARK_ENERGY_EOS_NOTE.md](../../DARK_ENERGY_EOS_NOTE.md) | `F04` |
 | Cosmological constant `\Lambda` | spectral-gap cosmology | `1.59 x 10^-52 m^-2` | `1.09 x 10^-52 m^-2` | bounded/conditional | depends on `S^3` / Hubble-scale identification | arXiv companion only | [COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md](../../COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md) | `F04` |
@@ -101,15 +100,13 @@ qualifiers explicitly.
 | Gate | Best current read | Status | Main blocker | Best current branch / authority |
 |---|---|---|---|---|
 | DM relic mapping | structural ratio is strong; full relic bridge still bounded | open | graph-to-relic transport / normalization closure | [DM_RELIC_PAPER_NOTE.md](../../DM_RELIC_PAPER_NOTE.md), [OMEGA_LAMBDA_DERIVATION_NOTE.md](../../OMEGA_LAMBDA_DERIVATION_NOTE.md) |
-| CKM / quantitative flavor | some bounded magnitude matches are strong; phase/ab initio closure still absent | open | quantitative coefficient and phase closure | [CABIBBO_BOUND_NOTE.md](../../CABIBBO_BOUND_NOTE.md), [CKM_MASS_BASIS_NNI_NOTE.md](../../CKM_MASS_BASIS_NNI_NOTE.md), [JARLSKOG_PHASE_BOUND_NOTE.md](../../JARLSKOG_PHASE_BOUND_NOTE.md) |
-
 ## D. Workstreams intentionally frozen out of the flagship paper
 
 | Workstream family | Why not in flagship paper | Registry entry |
 |---|---|---|
 | DM quantitative companion portfolio | bounded relic bridge | `F01` |
 | superseded YT / EW / Higgs route-history stack | historical only; replaced by the promoted quantitative package and complete prediction chain | `F02` |
-| CKM / flavor quantitative companion portfolio | still a live gate | `F03` |
+| older CKM bounded route-history portfolio | superseded by the promoted CKM closure package | `F03` |
 | cosmology companion portfolio | conditional / bounded | `F04` |
 | Higgs and mass-spectrum companions beyond the promoted package | not part of the flagship spine | `F05` |
 | gravity companions beyond the retained core | bounded / later-paper material | `F06` |

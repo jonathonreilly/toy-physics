@@ -2,7 +2,7 @@
 
 **Status:** historical promotion artifact; not a front-door authority surface
 **Paper state:** retained theorem core plus promoted quantitative prediction
-package, with bounded companions and two remaining live gates
+package, with bounded companions and one remaining live gate
 
 ## Retained Core
 
@@ -50,7 +50,6 @@ Canonical authority:
 ## Remaining Live Gates
 
 1. DM relic mapping
-2. CKM / quantitative flavor closure
 
 ## Rule
 

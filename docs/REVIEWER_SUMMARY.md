@@ -61,14 +61,13 @@ Current quantitative statuses:
 ## Other Bounded Families
 
 - DM ratio and relic companions
-- CKM magnitude package plus Cabibbo / partial Jarlskog companions
+- promoted CKM no-import closure package, with older Cabibbo / NNI / partial Jarlskog notes retained only as route history
 - cosmology companions
 - sharp companion predictions
 
 ## Open Gates
 
 1. DM relic mapping
-2. CKM / quantitative flavor closure
 
 ## Review Rule
 

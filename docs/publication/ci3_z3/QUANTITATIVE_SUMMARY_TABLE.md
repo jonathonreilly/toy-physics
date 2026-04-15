@@ -18,7 +18,7 @@ remaining bounded companions
 | `m_H` calibrated 3-loop estimate | `129.7 GeV` | `125.25 GeV` | `+3.5%` | bounded | uses a calibrated 3-loop fit, not a framework-native from-scratch implementation | [HIGGS_VACUUM_PROMOTED_NOTE.md](../../HIGGS_VACUUM_PROMOTED_NOTE.md) |
 | Vacuum stability | absolutely stable | SM metastability comparator | qualitative prediction | bounded | inherits the bounded Higgs / Yukawa status on the current route | [HIGGS_VACUUM_PROMOTED_NOTE.md](../../HIGGS_VACUUM_PROMOTED_NOTE.md) |
 | Dark matter ratio `R` | `5.48` | `5.47` | near-match | bounded | bounded companion lane | [DM_RELIC_PAPER_NOTE.md](../../DM_RELIC_PAPER_NOTE.md) |
-| CKM magnitudes | strong bounded package | PDG values | mixed but strong | bounded | bounded flavor package | [CKM_MASS_BASIS_NNI_NOTE.md](../../CKM_MASS_BASIS_NNI_NOTE.md) |
+| CKM closure package | `|V_us|=0.22727`, `|V_cb|=0.04217`, `|V_ub|=0.003913`, `\delta=65.905^\circ`, `J=3.331 x 10^-5` | PDG magnitudes plus coherent angle package `\delta=65.5^\circ`, `J_{recon}=3.304 x 10^-5` | `+1.32%`, `-0.06%`, `-0.69%`, `+0.62%`, `+0.82%` | closed / derived | no-import atlas/axiom package from canonical CMT coupling + exact atlas counts + exact projector + exact tensor slot + Schur cascade | [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md) |
 
 ## Reading rule
 

@@ -121,8 +121,8 @@ ledger:
 - bounded `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
 - bounded Higgs / vacuum package: `m_H = 119.8 GeV` (2-loop),
   `129.7 GeV` (calibrated 3-loop estimate), bounded vacuum-stability readout
-- CKM magnitude package with strong `|V_us|`, `|V_cb|`, `|V_ub|`
-- Cabibbo and partial Jarlskog companions
+- promoted CKM no-import closure package with full sharp `|V_us|`, `|V_cb|`, `|V_ub|`, `\delta`, and `J`
+- older bounded Cabibbo / NNI / partial Jarlskog notes retained only as route history
 - `\Omega_\Lambda`, `n_s`, `w = -1`, and `\Lambda` cosmology companions
 - Higgs, BH-entropy, proton-lifetime, Lorentz, and monopole companions
 
@@ -173,7 +173,6 @@ surface:
 The remaining live paper gates are:
 
 1. DM relic mapping
-2. CKM / quantitative flavor closure
 
 Those are the only live flagship gates. Everything else in the package should
 now be legible as either retained, bounded, or explicitly frozen-out.

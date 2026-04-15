@@ -128,9 +128,7 @@ external reviewer will ask about them whether or not they are retained.
 
 | Quantity / lane | Current decision | Why not promoted | Primary authority | Matrix / freeze reference |
 |---|---|---|---|---|
-| Cabibbo angle `|V_us|` | bounded companion | strong bounded flavor sub-result on `main`, but still sits inside an open CKM lane rather than a closed flavor theorem | [CABIBBO_BOUND_NOTE.md](../../CABIBBO_BOUND_NOTE.md) | matrix row `CKM magnitudes`, `F03` |
-| CKM magnitude package `|V_us|`, `|V_cb|`, `|V_ub|` | bounded | improved magnitude story is real, but coefficient and phase closure still fail the flagship bar | [CKM_MASS_BASIS_NNI_NOTE.md](../../CKM_MASS_BASIS_NNI_NOTE.md) | matrix row `CKM magnitudes`, `F03` |
-| Jarlskog invariant | bounded / partial | partial CP closure only; derived `Z_3` phase is real, but the CKM angles are still imported on the strongest current row | [JARLSKOG_PHASE_BOUND_NOTE.md](../../JARLSKOG_PHASE_BOUND_NOTE.md) | matrix row `Jarlskog invariant`, `F03` |
+| CKM closure package | closed promoted quantitative package | full no-import CKM package is now carried by the canonical CMT coupling, exact atlas counts, exact `1/6` projector, exact bilinear tensor carrier `K_R`, exact `Z_3` source, and exact Schur cascade; older bounded Cabibbo/NNI/Jarlskog notes are superseded as authority | [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md) | matrix row `CKM closure package`, n/a |
 
 ### Higgs and sharp companions
 
@@ -152,7 +150,6 @@ These rows correspond to Section C of
 | Gate | Current best read | Why still open | Main authority |
 |---|---|---|---|
 | DM relic mapping | structural ratio is strong, full relic bridge still bounded | graph-to-relic transport and normalization closure still missing | [DM_RELIC_PAPER_NOTE.md](../../DM_RELIC_PAPER_NOTE.md), [OMEGA_LAMBDA_DERIVATION_NOTE.md](../../OMEGA_LAMBDA_DERIVATION_NOTE.md) |
-| CKM / quantitative flavor | some bounded matches are strong | coefficient and phase closure still absent | [CKM_MASS_BASIS_NNI_NOTE.md](../../CKM_MASS_BASIS_NNI_NOTE.md), [JARLSKOG_PHASE_BOUND_NOTE.md](../../JARLSKOG_PHASE_BOUND_NOTE.md) |
 
 ## 5. Frozen-out families aligned to the matrix
 

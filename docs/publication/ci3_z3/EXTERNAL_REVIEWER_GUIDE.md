@@ -112,14 +112,13 @@ conventions is packaged separately and does not modify the theorem stack.
 ## Other Bounded Families
 
 - DM ratio and relic companions
-- CKM magnitude package plus Cabibbo / partial Jarlskog companions
+- older bounded CKM magnitude / Cabibbo / partial Jarlskog route history
 - cosmology companions
 - sharp companion predictions
 
 ## What Is Still Open
 
 1. DM relic mapping
-2. CKM / quantitative flavor closure
 
 - Higgs mass `m_H`
 - several companion phenomenology bridges

@@ -159,12 +159,10 @@ Observation-facing bounded portfolio:
 - zero-import `\alpha_s(M_Z) = 0.1181`
 - best import-allowed `m_t = 171.0 GeV`
 - zero-import `m_t = 169.4 GeV` on the current 2-loop bounded route
-- CKM magnitude package with strong `|V_us|`, `|V_cb|`, `|V_ub|`
+- promoted CKM no-import closure package with full sharp `|V_us|`, `|V_cb|`, `|V_ub|`, `\delta`, and `J`
 - cosmology companions such as `\Omega_\Lambda`, `n_s`, `w = -1`
 - Higgs and sharp companion predictions
 
 Live high-impact gates:
 
 1. DM relic mapping
-2. renormalized `y_t` matching
-3. CKM / quantitative flavor closure

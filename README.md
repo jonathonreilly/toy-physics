@@ -94,6 +94,12 @@ That component stack now carries the following live statuses:
   `g_2(v) = 0.6480`
 - bounded `y_t(v) = 0.9176`
 - bounded `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
+- promoted CKM no-import closure package:
+  `|V_us| = 0.22727`,
+  `|V_cb| = 0.04217`,
+  `|V_ub| = 0.003913`,
+  `delta = 65.905 deg`,
+  `J = 3.331 x 10^-5`
 - bounded Higgs / vacuum package:
   `m_H = 119.8 GeV` (2-loop),
   `129.7 GeV` (calibrated 3-loop estimate),
@@ -102,7 +108,6 @@ That component stack now carries the following live statuses:
 ## Live Gates
 
 1. DM relic mapping
-2. CKM / quantitative flavor closure
 
 ## Review Rule
 
