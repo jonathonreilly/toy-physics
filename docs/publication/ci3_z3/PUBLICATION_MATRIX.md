@@ -22,16 +22,13 @@ Use this file together with:
 - [FULL_CLAIM_LEDGER.md](./FULL_CLAIM_LEDGER.md)
 - [PUBLICATION_CONTROL_PLANE.md](./PUBLICATION_CONTROL_PLANE.md)
 
-## Branch/workstream coverage
+## Capture Coverage
 
-| Workstream | Main contribution to publication package | Capture status |
+| Local package surface | Main contribution to publication package | Capture status |
 |---|---|---|
-| `origin/codex/publication-prep` | canonical publication package and manuscript surfaces | fully captured |
-| `origin/codex/review-active` | current hierarchy and direct-universal / discrete-global gravity authority | fully captured |
-| `origin/claude/youthful-neumann` | DM / `y_t` / CKM bounded lanes, `S^3` theorem notes, companion predictions | captured through bounded or frozen-out rows |
-| `origin/review-active` | older quantitative inventory and legacy bounded phenomenology | captured through bounded or frozen-out rows |
-| `origin/codex/main-graph-first` | earlier package structure and graph-first framing | captured as superseded package history |
-| `origin/main` | repo baseline | baseline only |
+| retained local authority notes | current theorem core and retained manuscript-facing rows | fully captured |
+| bounded local authority notes | current EW / `y_t` / Higgs, DM, CKM, cosmology, and sharp companion rows | captured through bounded or frozen-out rows |
+| local historical notes and inventories | route history and planning material | captured as superseded or non-authority history |
 
 ## A. Promoted retained publication core
 
@@ -72,8 +69,8 @@ not promoted.
 |---|---|---|---|---|---|---|---|---|
 | Dark matter ratio `R` | DM relic chain | `5.48` | `5.47` | bounded | one-parameter + imported perturbative pieces | arXiv companion only | [DM_RELIC_PAPER_NOTE.md](../../DM_RELIC_PAPER_NOTE.md) | `F01` |
 | `\Omega_\Lambda` conditional chain | cosmology from `R` | `0.686` | `0.685` | bounded/conditional | observed `\eta` + flatness + bounded `R` | arXiv companion only | [OMEGA_LAMBDA_DERIVATION_NOTE.md](../../OMEGA_LAMBDA_DERIVATION_NOTE.md) | `F01`, `F04` |
-| `\alpha_s(M_Z)` zero-import route | `y_t` / `\alpha_s` chain | `0.1181` | `0.1179` | bounded | zero-input chain, still bounded by review | review-only until closure | [YT_ZERO_IMPORT_CLOSURE_NOTE.md](../../YT_ZERO_IMPORT_CLOSURE_NOTE.md) | `F02` |
-| top mass `m_t` zero-import route | `y_t` / `\alpha_s` chain | `169.4 GeV` | `172.69 GeV` | bounded | zero-input 2-loop chain, still bounded | review-only until closure | [YT_ZERO_IMPORT_CLOSURE_NOTE.md](../../YT_ZERO_IMPORT_CLOSURE_NOTE.md) | `F02` |
+| `\alpha_s(M_Z)` zero-import route | `y_t` / `\alpha_s` chain | `0.1181` | `0.1179` | bounded | zero-input chain, still bounded by review | review-only until closure | [YT_ZERO_IMPORT_CLOSURE_NOTE.md](../../YT_ZERO_IMPORT_CLOSURE_NOTE.md), [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md), [YT_VERTEX_POWER_DERIVATION.md](../../YT_VERTEX_POWER_DERIVATION.md) | `F02` |
+| top mass `m_t` zero-import route | `y_t` / `\alpha_s` chain | `169.4 GeV` | `172.69 GeV` | bounded | zero-input 2-loop chain, still bounded | review-only until closure | [YT_ZERO_IMPORT_CLOSURE_NOTE.md](../../YT_ZERO_IMPORT_CLOSURE_NOTE.md), [YT_BOUNDARY_THEOREM.md](../../YT_BOUNDARY_THEOREM.md), [YT_EFT_BRIDGE_THEOREM.md](../../YT_EFT_BRIDGE_THEOREM.md) | `F02` |
 | top mass `m_t` import-allowed route | gauge crossover route | `171.0 GeV` | `173.0 +/- 0.6 GeV` | bounded | imported matching coefficients | arXiv bounded appendix only | [YT_GAUGE_CROSSOVER_THEOREM.md](../../YT_GAUGE_CROSSOVER_THEOREM.md) | `F02` |
 | CKM magnitudes | mass-basis NNI route | `|V_us|=0.2251`, `|V_cb|=0.0420`, `|V_ub|=0.00435` | PDG values `0.2243`, `0.0422`, `0.00382` | bounded | framework + bounded coefficient route | arXiv bounded appendix only | [CABIBBO_BOUND_NOTE.md](../../CABIBBO_BOUND_NOTE.md), [CKM_MASS_BASIS_NNI_NOTE.md](../../CKM_MASS_BASIS_NNI_NOTE.md) | `F03` |
 | Jarlskog invariant | Z3 CP phase route | `3.145 x 10^-5` | `3.08 x 10^-5` | bounded / partial | derived phase + observed angles | bounded companion only | [JARLSKOG_PHASE_BOUND_NOTE.md](../../JARLSKOG_PHASE_BOUND_NOTE.md) | `F03` |
@@ -81,7 +78,7 @@ not promoted.
 | Dark energy EOS `w` | spectral-gap cosmology | `w = -1` exactly | observationally near `-1` | bounded/conditional | topology/cosmology dependent | arXiv companion only | [DARK_ENERGY_EOS_NOTE.md](../../DARK_ENERGY_EOS_NOTE.md) | `F04` |
 | Cosmological constant `\Lambda` | spectral-gap cosmology | `1.59 x 10^-52 m^-2` | `1.09 x 10^-52 m^-2` | bounded/conditional | depends on `S^3` / Hubble-scale identification | arXiv companion only | [COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md](../../COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md) | `F04` |
 | graviton mass `m_g` | `S^3` / topology cosmology | `3.52 x 10^-33 eV` | strongest current bound `m_g < 1.76 x 10^-23 eV` | bounded/conditional | conditional on retained `S^3` + observed `H_0` | arXiv companion only | [GRAVITON_MASS_DERIVED_NOTE.md](../../GRAVITON_MASS_DERIVED_NOTE.md) | `F04` |
-| Higgs mass `m_H` | Higgs / CW lane | mechanism derived; exact mass bounded | `125 GeV` | open/bounded | multiple remaining assumptions and route ambiguity | not for flagship promotion | [HIGGS_MASS_DERIVED_NOTE.md](../../HIGGS_MASS_DERIVED_NOTE.md) | `F05` |
+| Higgs mass `m_H` | Higgs / CW lane | mechanism derived; exact mass bounded | `125 GeV` | open/bounded | multiple remaining assumptions and route ambiguity | not for flagship promotion | [HIGGS_MASS_DERIVED_NOTE.md](../../HIGGS_MASS_DERIVED_NOTE.md), [HIGGS_MECHANISM_NOTE.md](../../HIGGS_MECHANISM_NOTE.md), [HIGGS_FROM_LATTICE_NOTE.md](../../HIGGS_FROM_LATTICE_NOTE.md) | `F05` |
 | Bekenstein-Hawking entropy | BH entropy companion | `S/S_max = 0.2364` (`5.4%` from `1/4`) | BH area law target | bounded | companion identification layer | arXiv companion only | [BH_ENTROPY_DERIVED_NOTE.md](../../BH_ENTROPY_DERIVED_NOTE.md) | `F07` |
 | gravitational decoherence | BMV-class gravity companion | `\gamma = 0.253 Hz`, `\Phi_{ent} = 12.4 rad` (BMV benchmark) | no direct measurement yet; benchmark budget `\gamma_{tot} < 0.5 Hz` | bounded | derived gravity chain + experimental benchmark geometry | later companion or arXiv appendix | [GRAV_DECOHERENCE_DERIVED_NOTE.md](../../GRAV_DECOHERENCE_DERIVED_NOTE.md) | `F07` |
 | Proton lifetime | proton decay companion | `\tau_p ~ 4 x 10^47 yr` | lower bounds only | bounded sharp prediction | imported EFT decay-rate layer | later companion or arXiv appendix | [PROTON_LIFETIME_DERIVED_NOTE.md](../../PROTON_LIFETIME_DERIVED_NOTE.md) | `F07` |
@@ -94,7 +91,7 @@ not promoted.
 | Gate | Best current read | Status | Main blocker | Best current branch / authority |
 |---|---|---|---|---|
 | DM relic mapping | structural ratio is strong; full relic bridge still bounded | open | graph-to-relic transport / normalization closure | [DM_RELIC_PAPER_NOTE.md](../../DM_RELIC_PAPER_NOTE.md), [OMEGA_LAMBDA_DERIVATION_NOTE.md](../../OMEGA_LAMBDA_DERIVATION_NOTE.md) |
-| Renormalized `y_t` matching | zero-import 2-loop route now reaches `m_t = 169.4 GeV`; import-allowed route stays near `171 GeV` | open | latest authority still self-classifies the lane bounded after the coupling-map theorem and crossover/matching chain | [YT_ZERO_IMPORT_CLOSURE_NOTE.md](../../YT_ZERO_IMPORT_CLOSURE_NOTE.md), [YT_GAUGE_CROSSOVER_THEOREM.md](../../YT_GAUGE_CROSSOVER_THEOREM.md) |
+| Renormalized `y_t` matching | zero-import 2-loop route now reaches `m_t = 169.4 GeV`; import-allowed route stays near `171 GeV` | open | current canonical component stack still keeps the low-energy bridge bounded and the Higgs lane non-final | [YT_ZERO_IMPORT_CLOSURE_NOTE.md](../../YT_ZERO_IMPORT_CLOSURE_NOTE.md), [YT_BOUNDARY_THEOREM.md](../../YT_BOUNDARY_THEOREM.md), [YT_EFT_BRIDGE_THEOREM.md](../../YT_EFT_BRIDGE_THEOREM.md), [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md), [YT_VERTEX_POWER_DERIVATION.md](../../YT_VERTEX_POWER_DERIVATION.md), [YT_GAUGE_CROSSOVER_THEOREM.md](../../YT_GAUGE_CROSSOVER_THEOREM.md), [HIGGS_MASS_DERIVED_NOTE.md](../../HIGGS_MASS_DERIVED_NOTE.md), [HIGGS_MECHANISM_NOTE.md](../../HIGGS_MECHANISM_NOTE.md), [HIGGS_FROM_LATTICE_NOTE.md](../../HIGGS_FROM_LATTICE_NOTE.md) |
 | CKM / quantitative flavor | some bounded magnitude matches are strong; phase/ab initio closure still absent | open | quantitative coefficient and phase closure | [CABIBBO_BOUND_NOTE.md](../../CABIBBO_BOUND_NOTE.md), [CKM_MASS_BASIS_NNI_NOTE.md](../../CKM_MASS_BASIS_NNI_NOTE.md), [JARLSKOG_PHASE_BOUND_NOTE.md](../../JARLSKOG_PHASE_BOUND_NOTE.md) |
 
 ## D. Workstreams intentionally frozen out of the flagship paper

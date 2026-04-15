@@ -1,94 +1,74 @@
 # Higgs Mass: Canonical Authority Boundary
 
+**Date:** 2026-04-15
+**Status:** bounded authority surface
+**Primary runner:** `scripts/frontier_higgs_mass_derived.py`
+
 ## Question
 
-Can the framework honestly promote a non-import Higgs mass derivation, or is
-the Higgs lane still bounded?
+Can the framework honestly promote an exact Higgs-mass derivation, or is the
+Higgs lane still bounded?
 
-## Final reviewer answer
+## Final Reviewer Answer
 
 The canonical Higgs posture remains `BOUNDED`.
 
-The framework does derive the Higgs mechanism itself:
+What the current package does support:
 
-| Result | Status |
-|---|---|
-| taste condensate acts as the Higgs field | DERIVED |
-| lattice Coleman-Weinberg electroweak symmetry breaking occurs naturally | DERIVED |
-| the hierarchy problem is removed because the cutoff is physical (`pi/a`) | DERIVED |
-| the Higgs sector is quantitatively constrained | DERIVED |
+- the Higgs mechanism emerges naturally on the lattice
+- lattice Coleman-Weinberg electroweak symmetry breaking is structurally real
+- the hierarchy problem is removed structurally by the physical cutoff
+- the Higgs sector is quantitatively constrained on the current package
 
-What is **not** derived today is the exact numerical claim
-`m_H = 125.25 GeV`.
+What the current package does **not** support:
 
-## Canonical retained claim
+- one unique final non-import `m_H = 125 GeV` derivation
+- one final theorem-grade Higgs authority with no route ambiguity
+
+## Canonical Safe Claim
 
 The paper-safe Higgs claim is:
 
 - the framework gives a natural lattice Coleman-Weinberg origin of EWSB
 - the hierarchy problem is removed structurally by the physical lattice cutoff
-- the Higgs sector is quantitatively constrained
-- the observed Higgs mass is consistent with the framework at bounded,
-  not final, precision
+- the observed Higgs mass is consistent with the framework on bounded routes
+- exact Higgs-mass closure is not yet promoted
 
-## Why exact Higgs closure is still blocked
+## Why Exact Higgs Closure Is Still Blocked
 
-Three scientific blockers remain.
+1. the Higgs output still depends materially on which accepted `y_t(v)` route
+   is used
+2. the remaining quantitative Higgs routes are still bounded companions rather
+   than one canonical exact-mass authority
+3. the current runner is an honest boundary runner, not a final flagship
+   mass-closure runner
 
-1. The Higgs output depends strongly on the accepted `y_t(v)` route.
-   The old Ward route (`y_t(v) ~= 0.973`) and newer corrected or comparison
-   routes move `m_H` materially across the current scripts.
-2. The branch contains several incompatible Higgs stories:
-   older `m_H ~= 149-152 GeV` lattice-CW routes, the bounded `~120 GeV`
-   corrected-`y_t` companion route discussed elsewhere, and diagnostic scripts
-   that still sit nearer `~144 GeV`.
-3. There is no complete non-import higher-order Higgs implementation yet.
-   The remaining runners are still mechanism studies, bounded companions,
-   or historical diagnostics rather than a closed flagship mass derivation.
+## Current Support Stack
 
-## Current route inventory
+Canonical boundary note:
 
-### Canonical authority
+- this file
 
-- [scripts/frontier_higgs_mass_derived.py](../scripts/frontier_higgs_mass_derived.py)
-  remains the primary honest Higgs-boundary runner.
-  Its job is to establish the derived Higgs mechanism and the bounded claim
-  boundary, not to claim exact `125 GeV` closure.
-
-### Supporting Higgs surfaces
+Minimal supporting notes:
 
 - [HIGGS_MECHANISM_NOTE.md](./HIGGS_MECHANISM_NOTE.md)
-  mechanism-level support only
 - [HIGGS_FROM_LATTICE_NOTE.md](./HIGGS_FROM_LATTICE_NOTE.md)
-  bounded / historical quantitative support only
-- [HIGGS_MASS_NOTE.md](./HIGGS_MASS_NOTE.md)
-  historical numerical CW note only
 
-These notes are useful context, but they should not outrank this note when a
-reader asks what the Higgs lane currently claims.
+Primary runner:
 
-## Paper-safe framing
+- [scripts/frontier_higgs_mass_derived.py](../scripts/frontier_higgs_mass_derived.py)
+
+## Paper-Safe Framing
 
 **Can claim**
 
 - the Higgs mechanism emerges naturally from the lattice
 - the hierarchy problem is solved structurally
-- the framework gives bounded quantitative Higgs routes
-- the exact Higgs mass is not yet a closed flagship derivation
+- the Higgs sector has bounded quantitative routes
+- exact `m_H` closure is still open
 
 **Cannot claim**
 
-- `m_H = 125.25 GeV` derived from first principles
-- one unique final Higgs route from the current branch
-- older lattice-CW mechanism notes as if they were the live authority
-
-## Main promotion rule
-
-If Higgs material is promoted from this branch, promote only:
-
-- this note
-- the refreshed boundary runner
-- the minimum supporting mechanism notes needed to defend the bounded posture
-
-Do not promote overlapping historical Higgs attempts as if they were the
-current canonical authority.
+- exact `m_H = 125 GeV` derived from first principles on the current package
+- one unique final Higgs route on `main`
+- older Higgs route notes as if they were competing live authorities

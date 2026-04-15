@@ -1,17 +1,17 @@
 # Boundary Selection Theorem: v is the Physical Crossover Endpoint
 
 **Date:** 2026-04-14
-**Status:** THEOREM -- resolves the old boundary-consistency blocker
+**Status:** closed subderivation on open lane; bridge-conditioned
 **Script:** `scripts/frontier_yt_boundary_consistency.py`
 
 **Authority role:** This theorem is part of the current zero-import authority
 surface together with `docs/YT_ZERO_IMPORT_CLOSURE_NOTE.md`. It resolves the
 old `g_3(M_Pl)_SM` versus `g_lattice` mismatch objection, but it does **not**
-by itself make the lane unbounded.
+by itself close the renormalized `y_t` lane.
 
 ---
 
-## The Blocker (Codex Review)
+## Boundary question
 
 The 2-loop zero-import chain fixes `alpha_s(v) = 0.1033` (Coupling Map
 Theorem) and scans `y_t(v)` to match the Ward identity boundary condition
@@ -23,8 +23,9 @@ value `g_lattice(M_Pl) = sqrt(4 pi alpha_LM) = 1.067`. The 2.2x discrepancy
 means the Ward identity `y_t/g_3 = 1/sqrt(6)` is NOT satisfied at `M_Pl`
 in the SM EFT: the ratio `y_t/g_3 = 0.436/0.487 = 0.895`, not `0.408`.
 
-Codex's instruction was: derive whether the physical crossover endpoint is at
-`v` or at `M_Pl`, then run the entire gauge/Yukawa chain on one surface.
+The open question was whether the physical crossover endpoint sits at `v` or
+at `M_Pl`, and whether the `g_3(M_Pl)_SM` versus `g_lattice` mismatch is a
+real inconsistency or a domain-separation effect.
 
 ---
 
@@ -35,9 +36,10 @@ expected and required.
 
 What remains after this theorem is narrower:
 
-- derive the framework-to-EFT bridge at `v` fully internally
-- either as a direct one-family / taste-projected `y_t(v)` derivation
-- or as a framework-native step-scaling bridge from `v` to `M_Z`
+- keep the framework-to-EFT bridge at `v` on one clean bounded authority
+  surface
+- keep the low-energy transfer and quantitative route aligned to that surface
+- decide when that bridge is strong enough to leave the bounded portfolio
 
 ---
 
@@ -212,26 +214,22 @@ the same physics as A with a non-perturbative mechanism.
 
 ---
 
-## Status Relative to Codex Instructions
+## Package role
 
-Codex blocker: "derive whether the physical crossover endpoint is at `v`
-or at `M_Pl`, then run the entire gauge/Yukawa chain on that single
-surface."
+This theorem fixes the endpoint question:
 
-**Resolution:** The endpoint is `v`. The chain runs on one surface via
-the backward Ward approach (`YT_EFT_BRIDGE_THEOREM.md`):
-- alpha_s(v) = 0.1033 from CMT (one matching condition at v)
-- y_t(v) = 0.973 from backward Ward BC transfer via derived SM RGE
-- m_t = y_t(v) * v / sqrt(2) = 169.4 GeV (one prediction)
-- g_3(M_Pl)_SM is an artifact, not a constraint
+- the physical crossover endpoint is `v`
+- `g_3(M_Pl)_SM != g_lattice` is a domain-separation effect, not a contradiction
+- the naive SM-EFT Ward alternative fails and should not be treated as a live
+  competing route
 
-The naive alternative (applying Ward identity directly at v in the EFT)
-fails catastrophically (m_t = 81 GeV) due to u_0 mismatch: the gauge
-coupling gets u_0^2 improvement (2 links) while the Yukawa gets u_0^0
-(0 links). See `frontier_yt_eft_bridge.py` Part 4 for the full diagnostic.
+The theorem supports the current bounded authority stack together with:
 
-The discrepancy `g_3(M_Pl)_SM != g_lattice` is the expected consequence
-of the domain separation between the lattice and EFT theories.
+- [YT_ZERO_IMPORT_CLOSURE_NOTE.md](./YT_ZERO_IMPORT_CLOSURE_NOTE.md)
+- [YT_EFT_BRIDGE_THEOREM.md](./YT_EFT_BRIDGE_THEOREM.md)
+
+The lane still stays bounded because the full low-energy transfer is not yet
+packaged as one promoted same-surface closure theorem.
 
 ---
 

@@ -122,6 +122,17 @@ ledger:
 - `\Omega_\Lambda`, `n_s`, `w = -1`, and `\Lambda` cosmology companions
 - Higgs, BH-entropy, proton-lifetime, Lorentz, and monopole companions
 
+The current bounded EW / `y_t` / Higgs component stack on `main` is:
+
+- [OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md](OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)
+- [YT_ZERO_IMPORT_CLOSURE_NOTE.md](YT_ZERO_IMPORT_CLOSURE_NOTE.md)
+- [YT_BOUNDARY_THEOREM.md](YT_BOUNDARY_THEOREM.md)
+- [YT_EFT_BRIDGE_THEOREM.md](YT_EFT_BRIDGE_THEOREM.md)
+- [ALPHA_S_DERIVED_NOTE.md](ALPHA_S_DERIVED_NOTE.md)
+- [YT_VERTEX_POWER_DERIVATION.md](YT_VERTEX_POWER_DERIVATION.md)
+- [YT_GAUGE_CROSSOVER_THEOREM.md](YT_GAUGE_CROSSOVER_THEOREM.md)
+- [HIGGS_MASS_DERIVED_NOTE.md](HIGGS_MASS_DERIVED_NOTE.md)
+
 ## Exact supporting theorems now safe to carry
 
 These are exact or exact-enough supporting results on the current paper

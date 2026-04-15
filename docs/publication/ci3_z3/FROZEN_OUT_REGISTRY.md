@@ -31,8 +31,8 @@ mapping still depends on bounded transport / normalization steps.
 
 **Primary sources:**
 
-- `codex/review-active`: `DM_RELIC_PAPER_NOTE.md`, `OMEGA_LAMBDA_DERIVATION_NOTE.md`
-- `claude/youthful-neumann`: `DM_CONSOLIDATED_STATUS.md`, `DM_THEOREM_APPLICATION_NOTE.md`
+- [DM_RELIC_PAPER_NOTE.md](../../DM_RELIC_PAPER_NOTE.md)
+- [OMEGA_LAMBDA_DERIVATION_NOTE.md](../../OMEGA_LAMBDA_DERIVATION_NOTE.md)
 
 **Needed to unfreeze:**
 
@@ -50,18 +50,23 @@ results remain bounded.
 - import-allowed `m_t \approx 171 GeV`
 - zero-import 2-loop chain with `\alpha_s(M_Z) = 0.1181`, `m_t = 169.4 GeV`
 - hierarchy-linked gauge and vertex matching work
+- explicit endpoint and EFT-bridge support theorems for the zero-input route
 
 **Primary sources:**
 
-- `claude/youthful-neumann`: `YT_ZERO_IMPORT_CLOSURE_NOTE.md`,
-  `YT_GAUGE_CROSSOVER_THEOREM.md`, `ALPHA_S_DETERMINATION_NOTE.md`
+- [YT_ZERO_IMPORT_CLOSURE_NOTE.md](../../YT_ZERO_IMPORT_CLOSURE_NOTE.md)
+- [YT_BOUNDARY_THEOREM.md](../../YT_BOUNDARY_THEOREM.md)
+- [YT_EFT_BRIDGE_THEOREM.md](../../YT_EFT_BRIDGE_THEOREM.md)
+- [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md)
+- [YT_VERTEX_POWER_DERIVATION.md](../../YT_VERTEX_POWER_DERIVATION.md)
+- [YT_GAUGE_CROSSOVER_THEOREM.md](../../YT_GAUGE_CROSSOVER_THEOREM.md)
 
 **Needed to unfreeze:**
 
-- convert the strengthened coupling-map theorem and 2-loop chain into one
-  consistent theorem-grade authority surface
-- close the remaining low-energy crossover / matching uncertainty that keeps
-  the latest zero-import note at `BOUNDED`
+- replace the current bounded component stack with one same-surface closure
+  authority
+- remove the remaining low-energy bridge ambiguity between the bounded
+  zero-input and import-allowed readings
 
 ### `F03` CKM / flavor quantitative portfolio
 
@@ -127,18 +132,20 @@ mass-spectrum program remain bounded.
 **Captured work:**
 
 - Higgs / Coleman-Weinberg lane
+- Higgs mechanism support note and bounded quantitative support note
 - neutrino hierarchy / spectrum notes
 - generation-hierarchy and mass-spectrum notes
 
 **Primary sources:**
 
-- `claude/youthful-neumann`: `HIGGS_MASS_DERIVED_NOTE.md`,
-  `NEUTRINO_MASSES_NOTE.md`, `MASS_HIERARCHY_HONEST_ASSESSMENT_NOTE.md`
+- [HIGGS_MASS_DERIVED_NOTE.md](../../HIGGS_MASS_DERIVED_NOTE.md)
+- [HIGGS_MECHANISM_NOTE.md](../../HIGGS_MECHANISM_NOTE.md)
+- [HIGGS_FROM_LATTICE_NOTE.md](../../HIGGS_FROM_LATTICE_NOTE.md)
 
 **Needed to unfreeze:**
 
-- first-principles Higgs-mass derivation
-- same-surface mass-spectrum closure
+- first-principles exact Higgs-mass derivation
+- same-surface mass-spectrum closure after the accepted `y_t` route is final
 
 ### `F06` Gravity companions beyond the retained core
 
@@ -210,8 +217,8 @@ mix retained, bounded, fitted, conditional, and stale claims.
 
 **Primary sources:**
 
-- `claude/youthful-neumann`
-- `origin/review-active`
+- local package inventories and historical branch capture retained only as
+  non-authority history
 
 **Needed to unfreeze:**
 

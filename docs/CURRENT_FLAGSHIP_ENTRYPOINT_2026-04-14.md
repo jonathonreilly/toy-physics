@@ -1,139 +1,128 @@
 # Current Flagship Entrypoint
 
-**Date:** 2026-04-14  
-**Purpose:** one-page orientation for the current `Cl(3)` / `Z^3` paper
-surface
+**Date:** 2026-04-15
+**Purpose:** one-page orientation to the actual current package on `main`
 
 This is the correct root-level entrypoint for an external reviewer.
 
-The program is simple to state:
+The package has one framework sentence:
 
-> start from the discrete axiom `Cl(3)` on `Z^3`, treat the lattice as
-> physical rather than as a regulator, and ask how much of observed physics can
-> be recovered from that one starting point.
+> We take `Cl(3)` on `Z^3` as the physical theory. Everything else on the
+> current paper surface is either retained, bounded, or explicitly open.
 
-This repository is the working record of that program. The current paper
-surface is the audited subset of results that survived review and are organized
-for external reading.
+## What The Current Package Is
 
-On the gravity side, the direct-universal route now closes as an exact global
-Lorentzian Einstein/Regge stationary action family on discrete `3+1`
-spacetime `PL S^3 x R`. That counts as full discrete `3+1` GR on the project
-route. On the QG/continuum side, the exact project-native PL weak Gaussian
-Sobolev completion is also identified with a chosen external smooth Sobolev
-weak-field and Gaussian measure formulation at the FE/Galerkin cylinder level;
-stronger canonical textbook continuum identification remains separate.
+The current flagship package has four layers:
 
-Status labels used below:
-
-- `retained`: on the current flagship claim surface
-- `bounded`: quantitatively strong, but not promoted as fully closed
-- `live gate`: still open and under active work
-
-## What The Current Paper Actually Is
-
-The current flagship paper is a disciplined `Cl(3)` on `Z^3` package with:
-
-1. a retained theorem core
-2. a broader observation-facing bounded portfolio
+1. retained theorem core
+2. bounded observation-facing companion portfolio
 3. three live flagship gates
-4. an explicit frozen-out registry so important work is not lost
+4. explicit frozen-out families
 
-It is not intended as a claim that every exploratory result in the repository
-belongs on the current flagship surface.
+The package is therefore not “everything in the repo,” and it is not older
+route history.
 
 ## Retained Core
 
-- `Cl(3)` on `Z^3` as the working physical theory
 - weak-field gravity through the Poisson / Newton chain
-- weak-field WEP and time dilation
-- exact global Lorentzian Einstein/Regge stationary action family on discrete
-  `3+1` spacetime `PL S^3 x R`
-- full discrete `3+1` GR on the project route; stronger continuum
-  identification remains separate
-- exact UV-finite partition-density family on the same discrete `3+1` route,
-  with mean/stationary sector equal to that Einstein/Regge family
-  - authority: [UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md](UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md)
-- exact canonical geometric barycentric-dyadic refinement net for that same
-  discrete partition-density and stationary-section family
-  - authority: [UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md](UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md)
-- exact inverse-limit Gaussian cylinder closure for that same canonical
-  discrete QG family
-  - authority: [UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md](UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md)
-- exact abstract Gaussian / Cameron-Martin completion for that same canonical
-  discrete QG family
-  - authority: [UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md](UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md)
-- exact project-native PL field realization for that same canonical discrete
-  QG family
-  - authority: [UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md](UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md)
-- exact project-native PL weak/Dirichlet-form closure for that same canonical
-  discrete QG family
-  - authority: [UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md](UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md)
-- exact project-native PL `H^1`-type Sobolev interface for that same
-  canonical discrete QG family
-  - authority: [UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md](UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md)
+- weak-field WEP and time dilation on that retained gravity surface
+- restricted strong-field closure on the current star-supported finite-rank
+  class
+- full discrete `3+1` GR on the direct-universal project route
+- exact UV-finite partition-density family on that same discrete `3+1` route
+- exact canonical barycentric-dyadic refinement net on that same route
+- exact inverse-limit Gaussian cylinder closure on that same route
+- exact abstract Gaussian / Cameron-Martin completion on that same route
+- exact project-native PL field realization on that same route
+- exact project-native PL weak/Dirichlet-form closure on that same route
+- exact project-native PL `H^1`-type Sobolev interface on that same route
 - exact external FE/Galerkin smooth weak-field and Gaussian measure
-  equivalence for that same canonical discrete QG family
-  - authority: [UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md](UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md)
+  equivalence on that same route
 - exact native `SU(2)`
 - graph-first structural `SU(3)`
 - anomaly-forced `3+1`
-- derived electroweak scale `v = 245.080424447914 GeV`
+- retained electroweak hierarchy / `v`
 - retained `S^3` compactification / topology closure
 - full-framework one-generation matter closure
 - retained three-generation matter structure
 - exact `I_3 = 0`
 - exact CPT on the free staggered lattice
 
-## Observation-Facing Bounded Portfolio
+## Current Bounded YT / EW / Higgs Package
 
-- DM ratio `R = 5.48` vs `5.47`
-- zero-import `alpha_s(M_Z) = 0.1181`
-- best import-allowed `m_t = 171.0 GeV`
-- zero-import `m_t = 169.4 GeV` on the current 2-loop bounded route
-- CKM magnitude package
-- Cabibbo and partial Jarlskog companions
+The current canonical authority stack is:
+
+- retained EW hierarchy authority:
+  [OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md](OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)
+- bounded zero-import `y_t` authority:
+  [YT_ZERO_IMPORT_CLOSURE_NOTE.md](YT_ZERO_IMPORT_CLOSURE_NOTE.md)
+- supporting bounded zero-import stack:
+  [YT_BOUNDARY_THEOREM.md](YT_BOUNDARY_THEOREM.md),
+  [YT_EFT_BRIDGE_THEOREM.md](YT_EFT_BRIDGE_THEOREM.md),
+  [ALPHA_S_DERIVED_NOTE.md](ALPHA_S_DERIVED_NOTE.md),
+  [YT_VERTEX_POWER_DERIVATION.md](YT_VERTEX_POWER_DERIVATION.md)
+- import-allowed bounded companion:
+  [YT_GAUGE_CROSSOVER_THEOREM.md](YT_GAUGE_CROSSOVER_THEOREM.md)
+- bounded Higgs support stack:
+  [HIGGS_MASS_DERIVED_NOTE.md](HIGGS_MASS_DERIVED_NOTE.md),
+  [HIGGS_MECHANISM_NOTE.md](HIGGS_MECHANISM_NOTE.md),
+  [HIGGS_FROM_LATTICE_NOTE.md](HIGGS_FROM_LATTICE_NOTE.md)
+
+Current safe package-level statements:
+
+- retained hierarchy theorem:
+  `v = 245.080424447914 GeV`
+- bounded zero-input strong-coupling route:
+  `alpha_s(M_Z) = 0.1181`
+- bounded zero-input top-mass route:
+  `m_t = 169.4 GeV`
+- bounded import-allowed top-mass companion:
+  `m_t = 171.0 GeV`
+- Higgs mechanism derived; exact `m_H` still bounded/open
+
+What the package cannot yet say:
+
+- that the renormalized `y_t` lane is fully closed
+- that there is one final theorem-grade low-energy bridge with no parallel
+  bounded reading
+- that exact Higgs-mass closure has landed
+
+## Other Bounded Families
+
+- DM ratio and relic companions
+- CKM magnitude package plus Cabibbo / partial Jarlskog companions
 - cosmology companions such as `Omega_Lambda`, `n_s`, `w = -1`, `Lambda`
-- bounded Higgs lane (mechanism derived; exact mass still open) and sharp
-  companion predictions
+- sharp companion predictions such as proton lifetime, Lorentz fingerprint,
+  BH entropy, graviton decoherence, monopole mass
 
-These results matter and should be visible, but they are **not all promoted**
-into the retained flagship surface.
-
-## Live Flagship Gates
+## Live Gates
 
 1. DM relic mapping
 2. renormalized `y_t` matching
 3. CKM / quantitative flavor closure
 
-## Where The Curated Publication Package Lives
+## Where The Current Package Lives
 
-The authoritative publication package on this branch lives under:
+Start with:
 
 - [publication/ci3_z3/README.md](publication/ci3_z3/README.md)
-  - package map and reviewer-facing entry to the curated publication surface
-- [CI3_Z3_PUBLICATION_STATE_2026-04-12.md](CI3_Z3_PUBLICATION_STATE_2026-04-12.md)
-  - compact current-state summary of the flagship package
+- [publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md](publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md)
 - [publication/ci3_z3/PUBLICATION_MATRIX.md](publication/ci3_z3/PUBLICATION_MATRIX.md)
-  - canonical inventory of promoted, bounded, open, and frozen-out results
-- [publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md](publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md)
-  - compact prediction-versus-observation table
-- [publication/ci3_z3/FULL_CLAIM_LEDGER.md](publication/ci3_z3/FULL_CLAIM_LEDGER.md)
-  - explanatory claim ledger behind the matrix and drafts
-- [publication/ci3_z3/FROZEN_OUT_REGISTRY.md](publication/ci3_z3/FROZEN_OUT_REGISTRY.md)
-  - publication-relevant work intentionally kept out of the current flagship surface
 - [publication/ci3_z3/DERIVATION_ATLAS.md](publication/ci3_z3/DERIVATION_ATLAS.md)
-  - reusable theorem/subderivation toolbox for extending the framework without redoing earlier work
 - [publication/ci3_z3/DERIVATION_VALIDATION_MAP.md](publication/ci3_z3/DERIVATION_VALIDATION_MAP.md)
-  - claim-level release evidence contract for the retained manuscript-facing surface
-- [publication/ci3_z3/RUNNING_PACKAGE_ISSUES_2026-04-14.md](publication/ci3_z3/RUNNING_PACKAGE_ISSUES_2026-04-14.md)
-  - live consistency register for package mismatches and cleanup follow-up
 
-If you are reviewing the paper, that package is the authority surface.
+If you want the package internals after that, use:
 
-## Claim Status Rule
+- [publication/ci3_z3/FULL_CLAIM_LEDGER.md](publication/ci3_z3/FULL_CLAIM_LEDGER.md)
+- [publication/ci3_z3/FROZEN_OUT_REGISTRY.md](publication/ci3_z3/FROZEN_OUT_REGISTRY.md)
+- [publication/ci3_z3/RESULTS_INDEX.md](publication/ci3_z3/RESULTS_INDEX.md)
+- [publication/ci3_z3/PUBLICATION_CONTROL_PLANE.md](publication/ci3_z3/PUBLICATION_CONTROL_PLANE.md)
 
-- the publication matrix is the canonical inventory
-- the claims table is the promoted flagship claim surface
-- the frozen-out registry records important work that is not on the current
-  flagship surface
+## Front-Door Rule
+
+- the matrix is the canonical publication inventory
+- the claims table is the retained flagship claim surface
+- the derivation / validation map is the retained evidence contract
+- the derivation atlas is the reusable theorem / subderivation toolbox
+- historical route notes are not front-door authority unless the package links
+  to them explicitly
