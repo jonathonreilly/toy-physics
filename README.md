@@ -17,6 +17,11 @@ It includes:
 - a broader bounded quantitative portfolio against observation
 - a small number of live flagship gates that are still being closed
 
+On the gravity side, the direct-universal route now closes as an exact global
+Lorentzian Einstein/Regge stationary action family on discrete `3+1`
+spacetime `PL S^3 x R`. That counts as full discrete `3+1` GR on the project
+route; continuum identification is a separate interpretation step.
+
 The repo also contains the work history that led to the current package, but
 the front door for external review is the curated publication surface, not raw
 repo chronology.
@@ -53,8 +58,10 @@ Retained core:
 - `Cl(3)` on `Z^3` as the working physical theory
 - weak-field gravity through the Poisson / Newton chain
 - weak-field WEP and time dilation on that same retained gravity surface
-- restricted strong-field gravity closure on the current star-supported
-  finite-rank class, not full nonlinear GR in full generality
+- exact global Lorentzian Einstein/Regge stationary action family on discrete
+  `3+1` spacetime `PL S^3 x R`
+- this is full discrete `3+1` GR on the project route; stronger continuum
+  identification remains separate
 - exact native `SU(2)`
 - graph-first structural `SU(3)`
 - anomaly-forced `3+1`

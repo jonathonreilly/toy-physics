@@ -13,6 +13,11 @@ The current answer on `main` is: partially yes. Some lanes are retained, some
 are quantitatively strong but still bounded, and a few flagship gates are
 still open.
 
+On the gravity route, the direct-universal branch now closes as an exact
+global Lorentzian Einstein/Regge stationary action family on discrete `3+1`
+spacetime `PL S^3 x R`. That is full discrete `3+1` GR on the project route;
+continuum identification remains a separate interpretation step.
+
 This repo is too large to understand by browsing filenames. There are two
 different entry modes:
 
@@ -66,9 +71,10 @@ The current flagship publication package is:
 
 - framework: `Cl(3)` on `Z^3`
 - retained core: gauge/matter backbone, anomaly-forced `3+1`, derived
-  electroweak scale, weak-field gravity, restricted strong-field gravity
-  theorem (not full nonlinear GR), retained `S^3`, one-generation closure,
-  three-generation structure, exact `I_3 = 0`, exact CPT
+  electroweak scale, weak-field gravity, exact global Lorentzian
+  Einstein/Regge stationary action family on discrete `3+1` spacetime
+  `PL S^3 x R`, retained `S^3`, one-generation closure, three-generation
+  structure, exact `I_3 = 0`, exact CPT
 - bounded observation-facing portfolio: DM ratio, `alpha_s`, `m_t`, CKM
   magnitudes, cosmology companions, bounded Higgs lane, and sharp companion
   predictions

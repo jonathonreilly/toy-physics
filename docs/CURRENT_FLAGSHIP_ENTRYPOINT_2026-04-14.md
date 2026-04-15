@@ -16,6 +16,11 @@ This repository is the working record of that program. The current paper
 surface is the audited subset of results that survived review and are organized
 for external reading.
 
+On the gravity side, the direct-universal route now closes as an exact global
+Lorentzian Einstein/Regge stationary action family on discrete `3+1`
+spacetime `PL S^3 x R`. That counts as full discrete `3+1` GR on the project
+route; continuum identification remains a separate interpretation step.
+
 Status labels used below:
 
 - `retained`: on the current flagship claim surface
@@ -39,8 +44,10 @@ belongs on the current flagship surface.
 - `Cl(3)` on `Z^3` as the working physical theory
 - weak-field gravity through the Poisson / Newton chain
 - weak-field WEP and time dilation
-- restricted strong-field gravity closure on the current star-supported
-  finite-rank class, not full nonlinear GR in full generality
+- exact global Lorentzian Einstein/Regge stationary action family on discrete
+  `3+1` spacetime `PL S^3 x R`
+- full discrete `3+1` GR on the project route; stronger continuum
+  identification remains separate
 - exact native `SU(2)`
 - graph-first structural `SU(3)`
 - anomaly-forced `3+1`
