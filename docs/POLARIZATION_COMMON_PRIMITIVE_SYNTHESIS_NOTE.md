@@ -18,8 +18,14 @@ The direct universal lane is blocked **after** the exact `3+1` kinematic lift
 and tensor Hessian candidate are already in hand: it needs a covariant
 polarization-frame / projector bundle that can localize the unique symmetric
 quotient kernel into the same lapse, shift, and spatial trace/shear channels.
-The strongest exact universal-side output so far is an associated family of
-such localizations over valid `3+1` polarization frames, not a canonical
+The strongest exact universal-side output so far is:
+
+- an exact rank-2 `A1` projector onto lapse and spatial trace;
+- an associated family of such localizations over valid `3+1`
+  polarization frames on the complementary `E \oplus T1` channels.
+
+So the universal side already has a canonical invariant section, but it does
+not yet have a canonical full polarization bundle or curvature-localization
 section.
 
 So the two blockers are different stage-specific realizations of the same
@@ -83,6 +89,7 @@ The Route 2 bilinear carrier/action stack is the natural interface between the
 two lanes because it already separates:
 
 - the exact scalar background datum `delta_A1`
+- the exact invariant `A1` selector `Pi_A1`
 - the aligned bright channels `E_x` and `T1x`
 - the exact `PL S^3 x R` semigroup factor `exp(-t Lambda_R)`
 - the exact support-side bilinear carrier `K_R`

@@ -119,6 +119,8 @@ The route has:
 - [`frontier_universal_gr_tensor_variational_candidate.py`](../scripts/frontier_universal_gr_tensor_variational_candidate.py)
 - [`UNIVERSAL_GR_TENSOR_QUOTIENT_UNIQUENESS_NOTE.md`](./UNIVERSAL_GR_TENSOR_QUOTIENT_UNIQUENESS_NOTE.md)
 - [`frontier_universal_gr_tensor_quotient_uniqueness.py`](../scripts/frontier_universal_gr_tensor_quotient_uniqueness.py)
+- [`UNIVERSAL_GR_A1_INVARIANT_SECTION_NOTE.md`](./UNIVERSAL_GR_A1_INVARIANT_SECTION_NOTE.md)
+- [`frontier_universal_gr_a1_invariant_section.py`](../scripts/frontier_universal_gr_a1_invariant_section.py)
 - [`UNIVERSAL_GR_TENSOR_ACTION_BLOCKER_NOTE.md`](./UNIVERSAL_GR_TENSOR_ACTION_BLOCKER_NOTE.md)
 - [`frontier_universal_gr_tensor_action_blocker.py`](../scripts/frontier_universal_gr_tensor_action_blocker.py)
 - [`UNIVERSAL_GR_POLARIZATION_FRAME_BUNDLE_ATTEMPT.md`](./UNIVERSAL_GR_POLARIZATION_FRAME_BUNDLE_ATTEMPT.md)
@@ -167,13 +169,17 @@ The latest bundle attempt makes the obstruction sharper:
   canonical section or projector bundle
 
 The strongest exact universal-side output today is therefore the localization
-orbit itself. What is missing is not another candidate kernel; it is the
-distinguished connection that would turn that orbit into a canonical section.
+orbit itself, together with an exact rank-2 `A1` projector onto lapse and
+spatial trace. What is missing is not another candidate kernel; it is the
+distinguished connection that would turn the remaining `E \oplus T1`
+complement into a canonical section.
 
 The missing primitive is therefore not just `Pi_curv` itself. It is a
 covariant `3+1` polarization-frame / projector bundle, with a distinguished
-connection, that canonically splits the symmetric kernel into lapse, shift,
-and spatial trace/shear channels before curvature localization.
+connection, that extends the exact `Pi_A1` selector on lapse and spatial trace
+to the complementary `E \oplus T1` channels and canonically splits the full
+symmetric kernel into lapse, shift, and spatial trace/shear channels before
+curvature localization.
 
 This is the smallest universal-route primitive that is still not in the
 current atlas.

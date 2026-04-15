@@ -65,6 +65,17 @@ perturbation quotient. On the finite prototype used by the current runner, that
 quotient kernel is nondegenerate, so the route has no extra tensor bilinear
 freedom hiding in the scalar observable principle.
 
+### Exact invariant selector
+
+The current tensor candidate also contains an exact rank-2 `A1` projector
+onto lapse and spatial trace:
+
+`Pi_A1 = diag(1,0,0,0,1,0,0,0,0,0)`.
+
+This is the strongest exact selector latent in the current construction. It is
+canonical on the invariant block, but it does not resolve the complementary
+`E \oplus T1` channels needed for the full tensor action.
+
 ## What is missing
 
 The direct universal route still lacks the first exact tensor-valued object
@@ -73,8 +84,9 @@ that could upgrade the scalar generator into a full `3+1` metric law.
 The remaining missing primitive can now be stated more sharply:
 
 1. a covariant `3+1` polarization-frame / projector bundle with a
-   distinguished connection that canonically splits lapse, shift, and spatial
-   trace/shear before localization
+   distinguished connection that extends the exact `Pi_A1` selector on lapse
+   and spatial trace to the complementary `E \oplus T1` channels before
+   localization
 2. the induced curvature-localization map `Pi_curv` that identifies the
    unique symmetric `3+1` Hessian kernel with the Einstein/Regge tensor law
    on the full metric space

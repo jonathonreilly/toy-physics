@@ -76,11 +76,25 @@ prototype used by the current runner, that quotient kernel is nondegenerate.
 That proves uniqueness of the tensor candidate on the quotient. It does not
 identify the kernel with Einstein/Regge curvature dynamics.
 
+### Exact invariant section
+
+The strongest exact projector latent in the current localization orbit is the
+rank-2 `A1` projector onto lapse and spatial trace:
+
+`Pi_A1 = diag(1,0,0,0,1,0,0,0,0,0)`.
+
+This projector is frame-independent across the sampled valid `3+1`
+polarization frames and is the exact minimal-covariance selector already
+present in the current construction. It is exact, but it only fixes the
+invariant `A1` block; it does not localize the remaining `E \oplus T1`
+channels.
+
 ## Why the current stack stops here
 
 The present data determine a unique bilinear kernel on the symmetric quotient,
-but they do not specify how to localize that kernel into curvature channels on
-`PL S^3 x R`.
+and they also determine the exact `A1` invariant projector, but they do not
+specify how to localize the complementary `E \oplus T1` channels into
+curvature channels on `PL S^3 x R`.
 
 In particular, the current stack has no exact operator that:
 
@@ -90,17 +104,19 @@ In particular, the current stack has no exact operator that:
 3. identifies those components with the Einstein/Regge tensor law.
 
 Without that operator, the Hessian remains a variational candidate, not a GR
-dynamics law.
+dynamics law. The exact `A1` projector is the strongest selector already
+latent in the current stack, but it is not the missing curvature-localization
+map.
 
 ## Minimal missing primitive
 
 The smallest honest missing object is now:
 
 > a covariant `3+1` polarization-frame / projector bundle, with a
-> distinguished connection, that canonically selects one section from the
-> exact family of frame-localized candidates and splits the unique symmetric
-> Hessian kernel into lapse, shift, and spatial trace/shear channels before
-> localization.
+> distinguished connection, that extends the exact rank-2 `A1` projector on
+> lapse and spatial trace to the complementary `E \oplus T1` channels and
+> splits the unique symmetric Hessian kernel into lapse, shift, and spatial
+> trace/shear channels before localization.
 
 Equivalently, the missing primitive is still a covariant `3+1`
 curvature-localization operator `Pi_curv`, but the current stack shows that

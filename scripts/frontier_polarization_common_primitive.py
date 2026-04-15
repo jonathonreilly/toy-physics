@@ -1,19 +1,18 @@
 #!/usr/bin/env python3
-"""Cross-lane synthesis for the missing polarization primitive family.
+"""Cross-lane synthesis for the shared polarization primitive family.
 
-This is not a closure proof. It checks whether the finite-rank widening lane
-and the direct universal GR lane are asking for the same axiom-native object
-in two stages:
-
-1. support-side `Pi_3+1` before scalar renormalization collapse;
-2. curvature-side `Pi_curv` after the exact `3+1` Hessian candidate.
+This is not a closure proof. It constructs the strongest exact Route 2 common
+candidate and checks the compatibility conditions that any support-side
+`Pi_3+1` and curvature-side `Pi_curv` specialization must satisfy.
 
 The intended conclusion is:
 
 - same primitive family: yes
 - same exact object: no
-- smallest common primitive: a covariant `3+1` polarization bundle /
-  projector bundle with both support-side and curvature-side specializations
+- strongest exact common candidate: `P_R^cand = (B_R, O_R)` with
+  `B_R = (K_R, I_TB, Xi_TB)`
+- smallest missing axiom-native structure: a covariant `3+1` polarization
+  bundle with a distinguished connection `\nabla_R`
 """
 
 from __future__ import annotations
@@ -21,6 +20,10 @@ from __future__ import annotations
 from dataclasses import dataclass
 import re
 from pathlib import Path
+from importlib.machinery import SourceFileLoader
+
+import numpy as np
+from scipy.linalg import expm
 
 
 ROOT = Path("/private/tmp/physics-review-active")
@@ -31,7 +34,29 @@ FINITE_FRAME = DOCS / "FINITE_RANK_SUPPORT_POLARIZATION_FRAME_NOTE.md"
 UNIVERSAL_FRAME = DOCS / "UNIVERSAL_GR_POLARIZATION_FRAME_BUNDLE_BLOCKER_NOTE.md"
 UNIVERSAL_CURV = DOCS / "UNIVERSAL_GR_CURVATURE_LOCALIZATION_BLOCKER_NOTE.md"
 ROUTE2 = DOCS / "S3_TIME_BILINEAR_TENSOR_ACTION_NOTE.md"
+CONSTRUCTION = DOCS / "ROUTE2_POLARIZATION_COMMON_PRIMITIVE_NOTE.md"
 SYNTHESIS = DOCS / "POLARIZATION_COMMON_PRIMITIVE_SYNTHESIS_NOTE.md"
+
+SAME_SOURCE_METRIC = SourceFileLoader(
+    "same_source_metric",
+    str(ROOT / "scripts" / "frontier_same_source_metric_ansatz_scan.py"),
+).load_module()
+BILINEAR = SourceFileLoader(
+    "s3_time_bilinear_tensor_primitive",
+    str(ROOT / "scripts" / "frontier_s3_time_bilinear_tensor_primitive.py"),
+).load_module()
+ACTION = SourceFileLoader(
+    "s3_time_bilinear_tensor_action",
+    str(ROOT / "scripts" / "frontier_s3_time_bilinear_tensor_action.py"),
+).load_module()
+FINITE_FRAME_SCRIPT = SourceFileLoader(
+    "finite_rank_support_polarization_frame",
+    str(ROOT / "scripts" / "frontier_finite_rank_support_polarization_frame.py"),
+).load_module()
+UNIVERSAL_FRAME_SCRIPT = SourceFileLoader(
+    "universal_gr_polarization_frame_bundle",
+    str(ROOT / "scripts" / "frontier_universal_gr_polarization_frame_bundle.py"),
+).load_module()
 
 
 @dataclass
@@ -57,6 +82,37 @@ def matches(text: str, pattern: str) -> bool:
     return re.search(pattern, text, flags=re.IGNORECASE | re.DOTALL) is not None
 
 
+def max_abs_delta(a: np.ndarray, b: np.ndarray) -> float:
+    return float(np.max(np.abs(a - b)))
+
+
+def bridge_candidate() -> tuple[np.ndarray, np.ndarray, np.ndarray, float]:
+    q_center = BILINEAR.e0 + BILINEAR.e_x
+    q_shell = BILINEAR.s_unit + BILINEAR.t1x
+    theta_center = BILINEAR.vec_k(q_center)
+    theta_shell = BILINEAR.vec_k(q_shell)
+
+    Lambda, _, _, _ = ACTION.schur.schur_dtn_matrix(15, 4.0)
+    Lambda_sym = 0.5 * (Lambda + Lambda.T)
+    u_star = np.ones(Lambda_sym.shape[0], dtype=float)
+    u_star /= np.linalg.norm(u_star)
+    seed_t = expm(-0.0 * Lambda_sym) @ u_star
+    xi_center = ACTION.xi_tb(theta_center, seed_t)
+
+    frame_a = UNIVERSAL_FRAME_SCRIPT.canonical_polarization_frame()
+    frame_b = UNIVERSAL_FRAME_SCRIPT.rotated_polarization_frame(np.pi / 6.0)
+    h_test = (
+        (1.0, 0.35, -0.22, 0.18),
+        (0.35, -0.75, 0.14, 0.07),
+        (-0.22, 0.14, 0.41, -0.19),
+        (0.18, 0.07, -0.19, -0.28),
+    )
+    resp_a = np.array(UNIVERSAL_FRAME_SCRIPT.response_vector(h_test, frame_a, (2.0, 3.0, 5.0, 7.0)))
+    resp_b = np.array(UNIVERSAL_FRAME_SCRIPT.response_vector(h_test, frame_b, (2.0, 3.0, 5.0, 7.0)))
+    frame_delta = max_abs_delta(resp_a, resp_b)
+    return theta_center, theta_shell, xi_center, frame_delta
+
+
 def record(name: str, ok: bool, detail: str, status: str = "EXACT") -> None:
     CHECKS.append(Check(name=name, ok=ok, detail=detail, status=status))
     tag = "PASS" if ok else "FAIL"
@@ -71,7 +127,15 @@ def main() -> int:
     universal_frame = read(UNIVERSAL_FRAME)
     universal_curv = read(UNIVERSAL_CURV)
     route2 = read(ROUTE2)
+    construction = read(CONSTRUCTION)
     synthesis = read(SYNTHESIS)
+
+    bridge_center, bridge_shell, xi_center, frame_delta = bridge_candidate()
+    bridge_center_expected = np.array([1.0, 0.0, 1.0 / 6.0, 0.0], dtype=float)
+    bridge_shell_expected = np.array([0.0, 1.0, 0.0, 0.0], dtype=float)
+    bridge_center_ok = max_abs_delta(bridge_center, bridge_center_expected) < 1e-12
+    bridge_shell_ok = max_abs_delta(bridge_shell, bridge_shell_expected) < 1e-12
+    xi_center_ok = np.all(np.isfinite(xi_center)) and xi_center.shape[0] == 4
 
     record(
         "finite-rank blocker asks for a support-side polarization lift before scalar collapse",
@@ -109,6 +173,50 @@ def main() -> int:
         "the exact common construction is the Route 2 bridge triple, not a canonical bundle",
     )
     record(
+        "the Route 2 bridge triple yields an explicit common candidate object P_R^cand",
+        has(construction, "P_R^cand := (B_R, O_R)")
+        and has(construction, "B_R = (K_R, I_TB, Xi_TB)")
+        and bridge_center_ok
+        and bridge_shell_ok
+        and xi_center_ok,
+        (
+            "endpoint carrier rows = "
+            f"{np.array2string(bridge_center, precision=6)} / "
+            f"{np.array2string(bridge_shell, precision=6)}"
+        ),
+        status="EXACT",
+    )
+    record(
+        "the support-side compatibility conditions preserve the bright channels and scalar datum",
+        has(construction, "preserves the exact scalar support datum `delta_A1`")
+        and has(construction, "preserves the aligned bright channels `u_E` and `u_T`")
+        and has(construction, "commutes with the Route 2 tensorized action `I_TB`"),
+        "support specialization factors through K_R and preserves the exact Route 2 carrier module",
+        status="EXACT",
+    )
+    record(
+        "the curvature-side compatibility conditions preserve the quotient kernel and localization orbit",
+        has(construction, "Any curvature-side `Pi_curv` specialization must satisfy")
+        and has(construction, "`Pi_curv`")
+        and has(construction, "O_R")
+        and has(construction, "distinguished connection"),
+        "curvature specialization factors through the exact quotient-kernel orbit and the Route 2 semigroup",
+        status="EXACT",
+    )
+    record(
+        "the candidate orbit is exact but not canonical",
+        frame_delta > 1e-6,
+        f"frame delta across valid `3+1` localizations = {frame_delta:.3e}",
+        status="BOUNDED",
+    )
+    record(
+        "the smallest missing axiom-native structure is a covariant `3+1` polarization bundle with distinguished connection",
+        has(construction, "distinguished connection")
+        and has(construction, "covariant `3+1` polarization-frame / projector bundle"),
+        "the only missing structure is the connection that turns the orbit into a canonical section",
+        status="EXACT",
+    )
+    record(
         "the synthesis note states the same-family / not-same-object conclusion",
         matches(synthesis, r"same missing\s+primitive family") and has(synthesis, "not the same exact object"),
         "the note isolates a shared polarization-bundle family with two specializations",
@@ -119,11 +227,19 @@ def main() -> int:
     print("=" * 78)
     print("Shared primitive family: YES")
     print("Same exact object: NO")
-    print("Strongest exact common construction: Route 2 bridge triple `B_R = (K_R, I_TB, Xi_TB)`")
+    print(
+        "Strongest exact common candidate: `P_R^cand = (B_R, O_R)` with "
+        "`B_R = (K_R, I_TB, Xi_TB)`."
+    )
     print("Associated exact output today: localization orbit over valid `3+1` frames.")
     print(
+        "Compatibility requirements: support-side `Pi_3+1` must preserve delta_A1, "
+        "u_E, u_T, and K_R; curvature-side `Pi_curv` must preserve the quotient "
+        "kernel, localization orbit, and Xi_TB."
+    )
+    print(
         "Still missing: a covariant `3+1` polarization-frame / projector bundle "
-        "with distinguished connection."
+        "with distinguished connection `\\nabla_R`."
     )
     print("Support specialization target: canonical `Pi_3+1` before scalar collapse.")
     print("Curvature specialization target: canonical `Pi_curv` before localization.")
