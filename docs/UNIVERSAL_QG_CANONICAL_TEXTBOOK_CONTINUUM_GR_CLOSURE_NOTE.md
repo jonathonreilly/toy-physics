@@ -58,11 +58,9 @@ its chosen canonical textbook external realization.
 
 ## What remains beyond this
 
-What remains, if desired, is only:
+What remains, if desired, is only the separate optional comparison note:
 
-- comparison to alternative textbook convention packages;
-- alternate gauge-fixed or differently normalized external targets;
-- exposition/presentation choices for reviewers.
+- [UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md](./UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md)
 
-Those are packaging/comparison problems, not missing structural theorems on the
-main route.
+That note is packaging-only. It does not change the closed theorem stack on
+the chosen canonical textbook target.

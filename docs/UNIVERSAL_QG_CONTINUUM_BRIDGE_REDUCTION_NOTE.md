@@ -36,12 +36,12 @@ Those are already in hand on the project route.
 
 So the unresolved step is no longer a live theorem on the chosen target.
 
-What remains, if one wants more, is only:
+What remains, if one wants more, is only the separate optional comparison
+note:
 
-> comparison against alternative textbook gauge-fixings, normalizations,
-> presentation conventions, or other nonchosen continuum packaging targets.
+- [UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md](./UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md)
 
-That is a comparison/packaging issue, not a missing structural theorem on the
+That note is packaging-only. It is not a missing structural theorem on the
 chosen route.
 
 ## What is already exact

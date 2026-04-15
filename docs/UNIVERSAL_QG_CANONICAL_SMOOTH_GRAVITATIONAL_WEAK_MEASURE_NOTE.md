@@ -55,5 +55,7 @@ This theorem does **not** yet by itself prove:
 - canonical textbook geometric/action equivalence;
 - canonical textbook continuum gravitational closure.
 
-The next theorems close those. What remains beyond that is only optional
-comparison against alternative textbook packaging conventions.
+The next theorems close those. What remains beyond that is only the separate
+optional comparison note
+[UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md](./UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md),
+which is packaging-only and not part of the theorem stack.

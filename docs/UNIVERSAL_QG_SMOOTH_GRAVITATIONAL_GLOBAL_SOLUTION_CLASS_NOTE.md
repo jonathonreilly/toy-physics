@@ -69,6 +69,6 @@ This theorem does **not** by itself yet prove:
   Gaussian level.
 
 Both of those have now been discharged by later authority notes. So what
-remains beyond this theorem is only optional comparison against alternative
-textbook packaging conventions, not a missing theorem on the chosen canonical
-target.
+remains beyond this theorem is only the separate optional comparison note
+[UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md](./UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md),
+which is packaging-only and not part of the theorem stack.

@@ -147,8 +147,11 @@ Reviewer-facing framing notes:
   canonical textbook continuum gravitational closure on the chosen
   realization.
 - there is no remaining theorem gap on the chosen canonical textbook
-  continuum target; what remains beyond this package is only optional
-  comparison against alternative textbook packaging conventions.
+  continuum target.
+- optional comparison against alternative textbook packaging conventions is
+  collected separately in
+  [UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md](../../UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md)
+  and is packaging-only.
 
 Observation-facing bounded portfolio:
 

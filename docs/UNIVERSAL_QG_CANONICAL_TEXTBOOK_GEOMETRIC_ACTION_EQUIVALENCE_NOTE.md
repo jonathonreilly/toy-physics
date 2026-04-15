@@ -69,8 +69,9 @@ canonical target.
 What still remains separate, if one wants more, is not a missing theorem on the
 chosen canonical textbook target. It is only:
 
-> comparison against alternative textbook gauge-fixings, normalizations,
-> presentation conventions, or other nonchosen continuum packaging targets.
+> comparison against alternative textbook gauge-fixings, normalizations, and
+> presentation conventions is collected separately in
+> [UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md](./UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md).
 
-That is a convention/comparison problem, not a missing gravity/QG theorem on
-the chosen route.
+That is a packaging-only comparison note and not a theorem problem on the
+chosen route.

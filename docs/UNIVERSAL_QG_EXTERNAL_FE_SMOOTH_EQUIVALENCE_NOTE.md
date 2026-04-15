@@ -77,5 +77,7 @@ This theorem does **not** by itself yet prove:
 
 Those first two have now been discharged by later authority notes. Later notes
 also close the canonical textbook geometric/action and continuum gravitational
-theorems on the chosen target. So what remains beyond this theorem is only
-optional comparison against alternative textbook packaging conventions.
+theorems on the chosen target. Any alternate textbook comparison is collected
+separately in
+[UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md](./UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md).
+That note is packaging-only and not part of the theorem stack.

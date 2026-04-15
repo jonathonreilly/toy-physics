@@ -53,6 +53,9 @@ The current package is:
 - exact canonical textbook continuum gravitational closure on the chosen
   smooth realization
   - authority: [UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md](../../UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md)
+- optional comparison against alternative textbook packaging conventions
+  - authority: [UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md](../../UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md)
+  - packaging-only; not part of the theorem stack
 - exact native `SU(2)`
 - graph-first structural `SU(3)`
 - anomaly-forced `3+1`
@@ -103,8 +106,8 @@ gravitational solution class, canonical smooth weak/measure equivalence, and
 canonical smooth geometric/action equivalence, canonical textbook
 Einstein-Hilbert-style geometric/action equivalence, and canonical textbook
 continuum gravitational closure on the chosen realization are all exact on the
-authority path. What still remains is only optional comparison against
-alternative textbook packaging conventions.
+authority path. Any optional comparison against alternative textbook
+conventions is packaged separately and does not modify the theorem stack.
 
 ## Other Bounded Families
 
