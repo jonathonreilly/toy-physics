@@ -1,7 +1,13 @@
 # y_t Bridge: EW Coupling Derivation and Sensitivity Analysis
 
 **Date:** 2026-04-14
-**Status:** PARTIAL DERIVATION — addresses the y_t bridge question
+**Status:** SUPERSEDED by `COMPLETE_PREDICTION_CHAIN_2026_04_15.md`
+
+> **WARNING:** This note predates the derivation of g_2 (from g_2²=1/4),
+> g_Y (from g_Y²=1/5), the color projection √(8/9) on y_t, and the
+> full CW lambda derivation. It lists g_2 and lambda as IMPORTED —
+> both are now DERIVED. See the complete prediction chain for current
+> status. Do NOT use the import table below for promotion decisions.
 **Scripts:**
 - `scripts/frontier_ew_coupling_derivation.py` (EW coupling derivation)
 - `scripts/frontier_yt_qfp_insensitivity.py` (QFP insensitivity, 14/14 PASS)

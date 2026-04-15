@@ -1,6 +1,18 @@
 # Higgs Mass: Derivation Status (Honest Assessment)
 
-## Question
+**Status:** SUPERSEDED by `COMPLETE_PREDICTION_CHAIN_2026_04_15.md`
+
+> **WARNING:** This note predates the derivation of y_t (now 0.918 via
+> Ward + √(8/9) color projection), the stability boundary prediction
+> (λ(M_Pl) = 0 → m_H = 129.7 GeV), and the full EW coupling derivations.
+> The three-tier structure below is outdated:
+> - Tier 2 claimed y_t was "one free parameter" — y_t is now DERIVED
+> - Tier 3 claimed m_H "REQUIRES SM INPUT" — all inputs now DERIVED
+> - sin²θ_W = 3/8 was attributed to "GUT relation" — it comes from
+>   bare couplings g_2²=1/4, g_Y²=1/5, NOT from GUT unification
+> See the complete prediction chain for the current derivation.
+
+## Question (HISTORICAL — see supersession note above)
 
 Can the framework derive m_H = 125 GeV from first principles via the
 Coleman-Weinberg mechanism, or does m_H require SM couplings as input?
