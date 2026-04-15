@@ -68,7 +68,6 @@ not promoted.
 
 | Quantity / lane | Workstream | Framework result | Observation / comparator | Status | Import class | Current publication decision | Authority / best source | Frozen-out ref |
 |---|---|---|---|---|---|---|---|---|
-| complete prediction chain | YT / EW / Higgs / vacuum | one canonical quantitative chain | package authority | promoted | one computed lattice input + derived running | promoted package | [COMPLETE_PREDICTION_CHAIN_2026_04_15.md](../../COMPLETE_PREDICTION_CHAIN_2026_04_15.md) | n/a |
 | `\alpha_s(M_Z)` | YT / EW package | `0.1181` | `0.1179` | promoted | one computed lattice input + derived running | promoted package | [COMPLETE_PREDICTION_CHAIN_2026_04_15.md](../../COMPLETE_PREDICTION_CHAIN_2026_04_15.md) | n/a |
 | EW normalization package | YT / EW package | `sin^2(theta_W)=0.2306`, `1/\alpha_{EM}=127.67`, `g_1(v)=0.4644`, `g_2(v)=0.6480` | observed values | promoted | one computed lattice input + derived running | promoted package | [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md), [COMPLETE_PREDICTION_CHAIN_2026_04_15.md](../../COMPLETE_PREDICTION_CHAIN_2026_04_15.md) | n/a |
 | Yukawa / top package | YT package | `y_t(v)=0.9176`, `m_t(pole)=172.57/173.10 GeV` | `~0.917`, `172.69 GeV` | promoted | one computed lattice input + derived running | promoted package | [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md) | n/a |

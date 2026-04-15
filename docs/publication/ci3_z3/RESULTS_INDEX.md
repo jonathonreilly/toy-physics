@@ -40,7 +40,8 @@ Use alongside:
 
 | Component | Note | Runner |
 |---|---|---|
-| complete prediction chain | [COMPLETE_PREDICTION_CHAIN_2026_04_15.md](../../COMPLETE_PREDICTION_CHAIN_2026_04_15.md) | [frontier_complete_prediction_chain.py](../../../scripts/frontier_complete_prediction_chain.py) |
+| package synthesis note | [COMPLETE_PREDICTION_CHAIN_2026_04_15.md](../../COMPLETE_PREDICTION_CHAIN_2026_04_15.md) | [frontier_complete_prediction_chain.py](../../../scripts/frontier_complete_prediction_chain.py) |
+| `alpha_s` running support | [COMPLETE_PREDICTION_CHAIN_2026_04_15.md](../../COMPLETE_PREDICTION_CHAIN_2026_04_15.md) | [frontier_yt_zero_import_chain.py](../../../scripts/frontier_yt_zero_import_chain.py) |
 | color-factor support `R_conn = 8/9` | [RCONN_DERIVED_NOTE.md](../../RCONN_DERIVED_NOTE.md) | [frontier_color_projection_mc.py](../../../scripts/frontier_color_projection_mc.py) |
 | EW normalization package | [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md) | [frontier_complete_prediction_chain.py](../../../scripts/frontier_complete_prediction_chain.py), [frontier_yt_ew_coupling_derivation.py](../../../scripts/frontier_yt_ew_coupling_derivation.py) |
 | Yukawa / top package | [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md) | [frontier_yt_color_projection_correction.py](../../../scripts/frontier_yt_color_projection_correction.py) |
@@ -56,5 +57,5 @@ Use alongside:
 
 ## Package Rule
 
-If a component appears on the publication card or in the matrix, it should
+If a component appears in the claims table or in the matrix, it should
 also be reachable here through one note / runner path.

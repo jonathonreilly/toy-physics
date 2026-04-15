@@ -5,12 +5,12 @@ Use this order on `main`:
 1. [Current flagship entrypoint](CURRENT_FLAGSHIP_ENTRYPOINT_2026-04-14.md)
 2. [Publication package README](publication/ci3_z3/README.md)
 3. [External reviewer guide](publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md)
-4. [Publication card](publication/ci3_z3/PUBLICATION_CARD.md)
+4. [Publication matrix](publication/ci3_z3/PUBLICATION_MATRIX.md)
 5. [Claims table](publication/ci3_z3/CLAIMS_TABLE.md)
 6. [Derivation / validation map](publication/ci3_z3/DERIVATION_VALIDATION_MAP.md)
 7. [Derivation atlas](publication/ci3_z3/DERIVATION_ATLAS.md)
 
-If you are reviewing the promoted prediction package directly, go to:
+If you want the quantitative synthesis memo, go to:
 
 - [COMPLETE_PREDICTION_CHAIN_2026_04_15.md](COMPLETE_PREDICTION_CHAIN_2026_04_15.md)
 

@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-14
 **Status:** DERIVED -- promoted EW support inside `COMPLETE_PREDICTION_CHAIN_2026_04_15.md`
-**Scripts:** `scripts/frontier_complete_prediction_chain.py` (canonical package card), `scripts/frontier_yt_ew_coupling_derivation.py` (support scan)
+**Scripts:** `scripts/frontier_complete_prediction_chain.py` (package synthesis), `scripts/frontier_yt_ew_coupling_derivation.py` (support scan)
 
 ---
 

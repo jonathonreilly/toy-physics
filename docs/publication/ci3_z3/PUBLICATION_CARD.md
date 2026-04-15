@@ -1,6 +1,6 @@
 # Publication Card
 
-**Status:** current flagship package card
+**Status:** historical promotion artifact; not a front-door authority surface
 **Paper state:** retained theorem core plus promoted quantitative prediction
 package, with bounded companions and two remaining live gates
 
@@ -21,6 +21,14 @@ package, with bounded companions and two remaining live gates
 - exact CPT
 
 ## Promoted Prediction Card
+
+This file is retained only as the compact promotion snapshot used to land the
+modular quantitative stack. The live package authority is now split across:
+
+- [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md)
+- [CLAIMS_TABLE.md](./CLAIMS_TABLE.md)
+- [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md)
+- [DERIVATION_ATLAS.md](./DERIVATION_ATLAS.md)
 
 Canonical authority:
 

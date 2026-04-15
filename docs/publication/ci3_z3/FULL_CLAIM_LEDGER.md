@@ -112,7 +112,8 @@ external reviewer will ask about them whether or not they are retained.
 
 | Quantity / lane | Current decision | Why not promoted | Primary authority | Matrix / freeze reference |
 |---|---|---|---|---|
-| complete prediction chain | promoted | one canonical quantitative chain now replaces the older bounded stack | [COMPLETE_PREDICTION_CHAIN_2026_04_15.md](../../COMPLETE_PREDICTION_CHAIN_2026_04_15.md) | matrix row `complete prediction chain`, n/a |
+| complete prediction chain | synthesis only | release-snapshot memo for the promoted component stack; not a standalone canonical lane | [COMPLETE_PREDICTION_CHAIN_2026_04_15.md](../../COMPLETE_PREDICTION_CHAIN_2026_04_15.md) | package synthesis note, n/a |
+| `alpha_s(M_Z)` | promoted | now carried as its own quantitative lane rather than hidden inside a one-piece card | [COMPLETE_PREDICTION_CHAIN_2026_04_15.md](../../COMPLETE_PREDICTION_CHAIN_2026_04_15.md) | matrix row `\alpha_s(M_Z)`, n/a |
 | EW normalization package | promoted | now promoted with the complete chain rather than left as a bounded component stack | [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md) | matrix row `EW normalization package`, n/a |
 | Yukawa / top package | promoted | `y_t` and `m_t` are now carried as promoted quantitative rows | [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md) | matrix row `Yukawa / top package`, n/a |
 

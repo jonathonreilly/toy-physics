@@ -15,7 +15,7 @@ The package has one framework sentence:
 The current flagship package has four layers:
 
 1. retained theorem core
-2. promoted YT / EW / Higgs quantitative package
+2. promoted YT / EW / Higgs quantitative component stack
 3. bounded observation-facing companion portfolio
 4. two live gates plus explicit frozen-out families
 
@@ -48,16 +48,19 @@ route history.
 - exact `I_3 = 0`
 - exact CPT on the free staggered lattice
 
-## Promoted YT / EW / Higgs Package
+## Promoted YT / EW / Higgs Component Stack
 
-The current canonical quantitative authority stack is:
+The current canonical quantitative stack is modular:
 
-- [COMPLETE_PREDICTION_CHAIN_2026_04_15.md](COMPLETE_PREDICTION_CHAIN_2026_04_15.md)
+- `alpha_s` / synthesis note: [COMPLETE_PREDICTION_CHAIN_2026_04_15.md](COMPLETE_PREDICTION_CHAIN_2026_04_15.md)
 - [RCONN_DERIVED_NOTE.md](RCONN_DERIVED_NOTE.md)
 - [YT_EW_COLOR_PROJECTION_THEOREM.md](YT_EW_COLOR_PROJECTION_THEOREM.md)
 - [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
 - [YT_QFP_INSENSITIVITY_THEOREM.md](YT_QFP_INSENSITIVITY_THEOREM.md)
 - [HIGGS_MASS_FROM_AXIOM_NOTE.md](HIGGS_MASS_FROM_AXIOM_NOTE.md)
+
+The complete-chain memo is a synthesis surface over the promoted lanes. It is
+not itself the canonical lane taxonomy.
 
 Current promoted package-level statements:
 

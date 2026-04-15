@@ -9,15 +9,14 @@ Use this package instead of browsing raw repo chronology.
 
 1. [External reviewer guide](./EXTERNAL_REVIEWER_GUIDE.md)
 2. [Publication state](../../CI3_Z3_PUBLICATION_STATE_2026-04-12.md)
-3. [Publication card](./PUBLICATION_CARD.md)
-4. [Publication matrix](./PUBLICATION_MATRIX.md)
-5. [Quantitative summary table](./QUANTITATIVE_SUMMARY_TABLE.md)
-6. [Claims table](./CLAIMS_TABLE.md)
-7. [Derivation atlas](./DERIVATION_ATLAS.md)
-8. [Derivation / validation map](./DERIVATION_VALIDATION_MAP.md)
-9. [Full claim ledger](./FULL_CLAIM_LEDGER.md)
-10. [Frozen-out registry](./FROZEN_OUT_REGISTRY.md)
-11. [Results index](./RESULTS_INDEX.md)
+3. [Publication matrix](./PUBLICATION_MATRIX.md)
+4. [Quantitative summary table](./QUANTITATIVE_SUMMARY_TABLE.md)
+5. [Claims table](./CLAIMS_TABLE.md)
+6. [Derivation atlas](./DERIVATION_ATLAS.md)
+7. [Derivation / validation map](./DERIVATION_VALIDATION_MAP.md)
+8. [Full claim ledger](./FULL_CLAIM_LEDGER.md)
+9. [Frozen-out registry](./FROZEN_OUT_REGISTRY.md)
+10. [Results index](./RESULTS_INDEX.md)
 
 ## Current Package Shape
 
@@ -28,16 +27,19 @@ The package has four layers:
 3. bounded observation-facing portfolio
 4. two remaining live gates plus frozen-out route history
 
-## Promoted YT / EW / Higgs Package
+## Promoted YT / EW / Higgs Component Stack
 
-The current canonical component stack is:
+The current canonical quantitative stack is modular:
 
-- [COMPLETE_PREDICTION_CHAIN_2026_04_15.md](../../COMPLETE_PREDICTION_CHAIN_2026_04_15.md)
+- `alpha_s` support and synthesis: [COMPLETE_PREDICTION_CHAIN_2026_04_15.md](../../COMPLETE_PREDICTION_CHAIN_2026_04_15.md)
 - [RCONN_DERIVED_NOTE.md](../../RCONN_DERIVED_NOTE.md)
 - [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md)
 - [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
 - [YT_QFP_INSENSITIVITY_THEOREM.md](../../YT_QFP_INSENSITIVITY_THEOREM.md)
 - [HIGGS_MASS_FROM_AXIOM_NOTE.md](../../HIGGS_MASS_FROM_AXIOM_NOTE.md)
+
+The complete-chain note is a synthesis memo over the promoted component lanes.
+It is not itself the lane structure of the repo.
 
 Current promoted package-level statements:
 

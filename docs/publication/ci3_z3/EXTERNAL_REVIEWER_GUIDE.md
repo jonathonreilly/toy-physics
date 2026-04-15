@@ -8,8 +8,8 @@ package rather than raw repo history.
 The current package is:
 
 1. a retained theorem core
-2. a bounded observation-facing portfolio
-3. three explicit live gates
+2. a promoted modular quantitative stack
+3. a bounded observation-facing portfolio
 4. a frozen-out registry for important excluded families
 
 ## Retained Core
@@ -37,16 +37,19 @@ The current package is:
 - exact `I_3 = 0`
 - exact CPT
 
-## Promoted YT / EW / Higgs Package
+## Promoted YT / EW / Higgs Component Stack
 
-Review this stack as one promoted quantitative package:
+Review this as a modular component stack:
 
-1. [COMPLETE_PREDICTION_CHAIN_2026_04_15.md](../../COMPLETE_PREDICTION_CHAIN_2026_04_15.md)
-2. [RCONN_DERIVED_NOTE.md](../../RCONN_DERIVED_NOTE.md)
-3. [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md)
-4. [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
-5. [YT_QFP_INSENSITIVITY_THEOREM.md](../../YT_QFP_INSENSITIVITY_THEOREM.md)
-6. [HIGGS_MASS_FROM_AXIOM_NOTE.md](../../HIGGS_MASS_FROM_AXIOM_NOTE.md)
+1. `alpha_s` / synthesis support: [COMPLETE_PREDICTION_CHAIN_2026_04_15.md](../../COMPLETE_PREDICTION_CHAIN_2026_04_15.md)
+2. color-factor support: [RCONN_DERIVED_NOTE.md](../../RCONN_DERIVED_NOTE.md)
+3. EW normalization: [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md)
+4. Yukawa / top closure: [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
+5. QFP robustness support: [YT_QFP_INSENSITIVITY_THEOREM.md](../../YT_QFP_INSENSITIVITY_THEOREM.md)
+6. Higgs / vacuum support: [HIGGS_MASS_FROM_AXIOM_NOTE.md](../../HIGGS_MASS_FROM_AXIOM_NOTE.md)
+
+The complete-chain memo is a synthesis artifact tying those rows together. It
+is not the canonical lane list.
 
 Current promoted statements from that stack:
 
