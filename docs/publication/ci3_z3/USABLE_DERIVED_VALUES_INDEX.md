@@ -18,8 +18,9 @@ Use this file when the question is:
   without an external phenomenology bridge
 - `retained / derived` means the quantity is numerically reusable on the
   current package surface and should be treated as canonical on `main`
-- `bounded / derived` means the number is useful, but downstream reuse must
-  carry its bounded qualifier explicitly
+- `derived with explicit systematic` means the number is useful and
+  framework-derived, but downstream reuse must carry its explicit systematic
+  qualifier explicitly
 - `same-surface evaluated / derived` means numerically evaluated on the
   retained framework surface rather than imported from experiment or chosen as
   a free parameter
@@ -64,10 +65,10 @@ These are usable, but only with their qualifiers attached.
 
 | Quantity | Canonical value on `main` | Claim class | Import class | Safe reuse | Authority |
 |---|---:|---|---|---|---|
-| `y_t(v)` | `0.9176` | bounded / derived | zero SM imports, bounded surrogate systematic | bounded Yukawa/Higgs lane reuse only | [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md) |
-| `m_t(pole)` 2-loop | `172.57 GeV` | bounded / derived | inherits bounded `y_t` lane | bounded top-mass reuse only | [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md) |
-| `m_t(pole)` 3-loop | `173.10 GeV` | bounded / derived | inherits bounded `y_t` lane | bounded top-mass reuse only | [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md) |
-| `m_H` framework-side 3-loop | `125.3 GeV` | bounded / derived | inherits bounded `y_t` lane | bounded Higgs/vacuum reuse only | [HIGGS_VACUUM_BOUNDED_NOTE.md](../../HIGGS_VACUUM_BOUNDED_NOTE.md) |
+| `y_t(v)` | `0.9176` | derived with explicit systematic | zero SM imports, explicit exact-bridge systematic | explicit-systematic Yukawa/Higgs lane reuse only | [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md) |
+| `m_t(pole)` 2-loop | `172.57 GeV` | derived with explicit systematic | inherits explicit `y_t` systematic | explicit-systematic top-mass reuse only | [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md) |
+| `m_t(pole)` 3-loop | `173.10 GeV` | derived with explicit systematic | inherits explicit `y_t` systematic | explicit-systematic top-mass reuse only | [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md) |
+| `m_H` framework-side 3-loop | `125.3 GeV` | derived with inherited explicit systematic | inherits explicit `y_t` systematic | explicit-systematic Higgs/vacuum reuse only | [HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md](../../HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md) |
 | `sqrt(sigma)` | `465 MeV` | bounded / derived | retained `alpha_s` + EFT bridge | bounded confinement phenomenology only | [CONFINEMENT_STRING_TENSION_NOTE.md](../../CONFINEMENT_STRING_TENSION_NOTE.md) |
 
 ## Rule for downstream work

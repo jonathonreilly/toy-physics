@@ -1,6 +1,6 @@
 # CI(3) / Z^3 Publication State
 
-**Date:** 2026-04-15  
+**Date:** 2026-04-14  
 **Status:** main-branch publication authority for the current flagship paper surface
 
 ## Framework sentence
@@ -15,15 +15,12 @@ The package now also carries a branch-audited publication-capture layer:
 
 - [publication/ci3_z3/PUBLICATION_MATRIX.md](publication/ci3_z3/PUBLICATION_MATRIX.md)
 - [publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md](publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md)
+- [publication/ci3_z3/FROZEN_OUT_REGISTRY.md](publication/ci3_z3/FROZEN_OUT_REGISTRY.md)
+- [publication/ci3_z3/REMOTE_BRANCH_AUDIT_2026-04-14.md](publication/ci3_z3/REMOTE_BRANCH_AUDIT_2026-04-14.md)
 - [publication/ci3_z3/PUBLICATION_CONTROL_PLANE.md](publication/ci3_z3/PUBLICATION_CONTROL_PLANE.md)
 
 Those files exist so no branch-local result family is silently lost between the
 retained theorem core and the broader bounded portfolio.
-
-Historical capture context now lives in the history bucket:
-
-- [Historical frozen-out registry](work_history/publication/FROZEN_OUT_REGISTRY.md)
-- [Historical remote-branch audit](work_history/publication/REMOTE_BRANCH_AUDIT_2026-04-14.md)
 
 ## Matrix-aligned paper framework
 
@@ -40,6 +37,7 @@ surface. The full package must therefore be read together with:
 - [publication/ci3_z3/PUBLICATION_MATRIX.md](publication/ci3_z3/PUBLICATION_MATRIX.md)
 - [publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md](publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md)
 - [publication/ci3_z3/FULL_CLAIM_LEDGER.md](publication/ci3_z3/FULL_CLAIM_LEDGER.md)
+- [publication/ci3_z3/FROZEN_OUT_REGISTRY.md](publication/ci3_z3/FROZEN_OUT_REGISTRY.md)
 - [publication/ci3_z3/PUBLICATION_CONTROL_PLANE.md](publication/ci3_z3/PUBLICATION_CONTROL_PLANE.md)
 
 ## External inputs used in the current paper
@@ -59,8 +57,8 @@ CPT-even source generator derived from the lattice Grassmann Gaussian fixes the
 local scalar hierarchy observable, and the unique minimal resolved APBC orbit
 selects `L_t = 4`, giving:
 
-- `v = 246.282818290129 GeV`
-- relative error vs `246.22 GeV`: `+0.025513%`
+- `v = 245.080424447914 GeV`
+- relative error vs `246.22 GeV`: `-0.462828%`
 
 ## Retained backbone
 
@@ -104,7 +102,7 @@ The current retained backbone is:
   - exact scalar observable principle from the additive CPT-even source
     response `log|det(D+J)|`
   - unique minimal resolved temporal selector `L_t = 4`
-  - predicted `v = 246.282818290129 GeV`
+  - predicted `v = 245.080424447914 GeV`
 - three-generation matter closure in the framework:
   - exact orbit algebra `8 = 1 + 1 + 3 + 3`
   - physical species structure on the lattice surface
@@ -113,12 +111,7 @@ The current retained backbone is:
   - `T = 0` confinement is structural on that gauge sector
   - bounded `sqrt(sigma) ≈ 465 MeV` follows through retained `alpha_s`
     plus the low-energy EFT bridge
-- emergent Lorentz invariance on the retained hierarchy surface:
-  - the leading correction is CPT-even, P-even, dimension-6, and
-    `(E/M_Pl)^2`-suppressed
-  - the cubic-harmonic `\ell = 4` structure is exact on the retained theorem
-    surface
-- strong CP / `θ_eff = 0` structural closure on the retained action surface:
+- strong CP / `θ_eff = 0` structural closure:
   - the axiom-determined Wilson-plus-staggered action leaves no bare `θ`
   - the real-mass staggered determinant carries no phase
   - CKM CP remains confined to the weak sector
@@ -133,20 +126,26 @@ ledger:
 - retained `\alpha_s(M_Z) = 0.1181`
 - retained EW normalization package: `sin^2(theta_W) = 0.2306`,
   `1/\alpha_{EM} = 127.67`, `g_1(v) = 0.4644`, `g_2(v) = 0.6480`
-  where `alpha_s(v)` comes from the same-surface plaquette chain,
-  `g_1(v), g_2(v)` use derived `R_conn = 8/9` support, and the `M_Z`
-  rows use the retained running bridge
-- bounded `y_t(v) = 0.9176`
-- bounded `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
-  with the current `~3%` QFP/RGE-surrogate systematic carried explicitly by
-  the Yukawa/top lane
-- bounded Higgs / vacuum package: `m_H = 119.8 GeV` (2-loop support route),
-  `125.3 GeV` (framework-side 3-loop route), bounded vacuum-stability readout
-  inherited from the bounded `y_t` / QFP lane
+- derived-with-explicit-systematic `y_t(v) = 0.9176`
+- derived-with-explicit-systematic `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
+  - the branch now carries a package-native forced-UV transport law with
+    explicit bridge budget:
+    `1.2147511%` conservative, `0.75500635%` support-tight on the current
+    support stack
+  - selector origin is closed at leading order, higher-order and nonlocal
+    corrections are small, broad scanned-family uniqueness is closed at the
+    intrinsic UV-centered class level, and branch-scale microscopic
+    admissibility into the exact Schur class is closed; the remaining issue
+    is only the explicit exact-bridge endpoint budget, so the lane is now
+    best read as derived with explicit systematic rather than structurally
+    bounded
+- derived-with-inherited-explicit-systematic Higgs / vacuum package: `m_H = 119.8 GeV` (2-loop support route),
+  `125.3 GeV` (framework-side 3-loop route), vacuum-stability readout
+  inherited from the explicit `y_t` systematic
 - promoted CKM no-import closure package with full sharp `|V_us|`, `|V_cb|`, `|V_ub|`, `\delta`, and `J`
 - older bounded Cabibbo / NNI / partial Jarlskog notes retained only as route history
 - `\Omega_\Lambda`, `n_s`, `w = -1`, and `\Lambda` cosmology companions
-- vacuum-critical-stability, BH-entropy, proton-lifetime, gravitational-decoherence, and monopole companions
+- Higgs, BH-entropy, proton-lifetime, Lorentz, and monopole companions
 
 The current quantitative component stack on `main` is:
 
@@ -154,8 +153,21 @@ The current quantitative component stack on `main` is:
 - [RCONN_DERIVED_NOTE.md](RCONN_DERIVED_NOTE.md)
 - [YT_EW_COLOR_PROJECTION_THEOREM.md](YT_EW_COLOR_PROJECTION_THEOREM.md)
 - [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
-- [YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md](YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md)
-- [HIGGS_VACUUM_BOUNDED_NOTE.md](HIGGS_VACUUM_BOUNDED_NOTE.md)
+- [YT_QFP_INSENSITIVITY_THEOREM.md](YT_QFP_INSENSITIVITY_THEOREM.md)
+- [YT_UNBOUNDED_PROGRAM_NOTE.md](YT_UNBOUNDED_PROGRAM_NOTE.md)
+- [YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md](YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md)
+- [YT_BRIDGE_ACTION_INVARIANT_NOTE.md](YT_BRIDGE_ACTION_INVARIANT_NOTE.md)
+- [YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md](YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md)
+- [YT_BRIDGE_MOMENT_CLOSURE_NOTE.md](YT_BRIDGE_MOMENT_CLOSURE_NOTE.md)
+- [YT_BRIDGE_VARIATIONAL_SELECTOR_NOTE.md](YT_BRIDGE_VARIATIONAL_SELECTOR_NOTE.md)
+- [YT_BRIDGE_HESSIAN_SELECTOR_NOTE.md](YT_BRIDGE_HESSIAN_SELECTOR_NOTE.md)
+- [YT_BRIDGE_HIGHER_ORDER_CORRECTIONS_NOTE.md](YT_BRIDGE_HIGHER_ORDER_CORRECTIONS_NOTE.md)
+- [YT_BRIDGE_NONLOCAL_CORRECTIONS_NOTE.md](YT_BRIDGE_NONLOCAL_CORRECTIONS_NOTE.md)
+- [YT_BRIDGE_ENDPOINT_SHIFT_BOUND_NOTE.md](YT_BRIDGE_ENDPOINT_SHIFT_BOUND_NOTE.md)
+- [YT_EXACT_INTERACTING_BRIDGE_TRANSPORT_NOTE.md](YT_EXACT_INTERACTING_BRIDGE_TRANSPORT_NOTE.md)
+- [YT_BRIDGE_UV_CLASS_UNIQUENESS_NOTE.md](YT_BRIDGE_UV_CLASS_UNIQUENESS_NOTE.md)
+- [YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md](YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md)
+- [HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md](HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md)
 
 ## Exact supporting theorems now safe to carry
 
@@ -180,7 +192,7 @@ surface:
   the safe statement is exact pairwise interference on the accepted Hilbert
   probability surface.
 - exact CPT theorem for the free staggered `Cl(3)` lattice
-- exact strong CP / `θ_eff = 0` theorem on the retained axiom-determined action surface
+- exact strong CP / `θ_eff = 0` theorem on the axiom-determined action surface
 - exact native cubic `SU(2)` algebra
 - exact graph-first `su(3)` commutant closure on the retained selector surface
 - exact `T = 0` confinement of the graph-first `SU(3)` gauge sector, with
@@ -203,6 +215,13 @@ The remaining live paper gates are:
 Those are the only live flagship gates. Everything else in the package should
 now be legible as either retained, bounded, or explicitly frozen-out.
 
+Recent Claude work and direct Codex review materially narrowed the attack
+surface. The audit bar now remains:
+
+- DM relic mapping: still bounded even after Stosszahlansatz / Friedmann tightening
+- renormalized `y_t`: promoted on the complete prediction chain
+- CKM: still bounded even after NNI / coefficient / `c_23` work
+
 ## Honest bounded lanes
 
 The following are useful and may appear in SI or a bounded phenomenology
@@ -219,13 +238,13 @@ section, but they are not yet retained closure:
 - direct lattice DM contact enhancement
 - DM coarse-graining / Stosszahlansatz notes
 - renormalized `y_t` running and matching notes
+- CKM/Higgs `Z_3` selection arguments
 - gauge-coupling normalization notes
 - cosmology companions such as `w = -1`, graviton mass, `Omega_Lambda`, `n_s`
 - older Higgs mass / Coleman-Weinberg route notes now superseded by the
   complete prediction chain
-- proton lifetime, vacuum-critical-stability, BH-entropy,
-  gravitational-decoherence, magnetic-monopole, and GW-echo companion
-  predictions
+- proton lifetime, Lorentz-violation, BH-entropy, gravitational-decoherence,
+  magnetic-monopole, and GW-echo companion predictions
 
 ## Frozen-out work families
 
@@ -234,10 +253,11 @@ part of the retained flagship core:
 
 - DM quantitative companion portfolio
 - superseded YT / Higgs route-history stack
-- older CKM bounded route-history portfolio
+- CKM / flavor quantitative companion portfolio
 - cosmology companion portfolio
-- individual bounded secondary lanes
+- sharp companion predictions
 - gravity companions beyond retained weak-field plus restricted strong-field package
+- sharp companion predictions
 - branch-local inventories and stale strategy docs
 
 The package-control docs now make that split operational:

@@ -48,25 +48,21 @@ The current canonical quantitative stack is:
 - [RCONN_DERIVED_NOTE.md](RCONN_DERIVED_NOTE.md)
 - [YT_EW_COLOR_PROJECTION_THEOREM.md](YT_EW_COLOR_PROJECTION_THEOREM.md)
 - [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
-- [YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md](YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md)
-- [HIGGS_VACUUM_BOUNDED_NOTE.md](HIGGS_VACUUM_BOUNDED_NOTE.md)
+- [YT_QFP_INSENSITIVITY_THEOREM.md](YT_QFP_INSENSITIVITY_THEOREM.md)
+- [HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md](HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md)
 
 Safe current result:
 
-- retained `v = 246.282818290129 GeV`
+- retained `v = 245.080424447914 GeV`
 - retained `alpha_s(M_Z) = 0.1181`
 - retained `sin^2(theta_W)(M_Z) = 0.2306`
 - retained `1/alpha_EM(M_Z) = 127.67`
 - retained `g_1(v) = 0.4644`
 - retained `g_2(v) = 0.6480`
-- bounded `y_t(v) = 0.9176`
-- bounded `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
-- bounded Yukawa/top lane carries the current `~3%` QFP/RGE-surrogate
-  systematic
-- bounded `m_H = 119.8 GeV` (2-loop support route), `125.3 GeV`
-  (framework-side 3-loop route), with vacuum-stability readout inherited from
-  the bounded `y_t` / QFP lane
-- bounded vacuum-stability readout
+- derived-with-explicit-systematic `y_t(v) = 0.9176`
+- derived-with-explicit-systematic `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
+- derived-with-inherited-explicit-systematic `m_H = 119.8 GeV` (2-loop support route), `125.3 GeV` (framework-side 3-loop route)
+- derived-with-inherited-explicit-systematic vacuum-stability readout
 
 ## Mathematical Infrastructure Versus Physical Inputs
 

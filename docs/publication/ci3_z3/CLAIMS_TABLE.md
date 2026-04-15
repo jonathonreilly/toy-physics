@@ -8,8 +8,8 @@ For the full branch-audited publication capture, also use:
 
 - [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md)
 - [QUANTITATIVE_SUMMARY_TABLE.md](./QUANTITATIVE_SUMMARY_TABLE.md)
-- [Historical frozen-out registry](../../work_history/publication/FROZEN_OUT_REGISTRY.md)
-- [Historical remote-branch audit](../../work_history/publication/REMOTE_BRANCH_AUDIT_2026-04-14.md)
+- [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md)
+- [REMOTE_BRANCH_AUDIT_2026-04-14.md](./REMOTE_BRANCH_AUDIT_2026-04-14.md)
 
 ## External inputs
 
@@ -19,22 +19,11 @@ boundary conditions:
 - `T_CMB = 2.7255 K`
 - `H_0 = 67.4 km/s/Mpc`
 
-Framework statement:
-
-- the paper-level framework is the one-axiom reduction surface in
-  [SINGLE_AXIOM_INFORMATION_NOTE.md](../../SINGLE_AXIOM_INFORMATION_NOTE.md)
-  and
-  [SINGLE_AXIOM_HILBERT_NOTE.md](../../SINGLE_AXIOM_HILBERT_NOTE.md)
-- [MINIMAL_AXIOMS_2026-04-11.md](../../MINIMAL_AXIOMS_2026-04-11.md) is the
-  operational package-boundary memo used to audit the current implementation
-  surface
-
 The electroweak scale is not an external input on the current paper surface.
 The exact minimal hierarchy theorem fixes the source-response structure on the
 minimal block; the quoted value
-`v = 246.282818290129 GeV` (`+0.0255%` relative to `246.22 GeV`) is the
-canonical numerical evaluation on the same-surface plaquette-derived
-normalization chain.
+`v = 245.080424447914 GeV` (`0.4628%` low relative to `246.22 GeV`) is the
+pinned numerical evaluation on the current `u_0` / plaquette surface.
 
 ## Retained core
 
@@ -63,7 +52,7 @@ normalization chain.
 | exact canonical textbook Einstein-Hilbert-style geometric/action equivalence on the chosen smooth realization | retained exact companion | Extended Data / arXiv theorem box | [UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md](../../UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md) | [frontier_universal_qg_canonical_textbook_geometric_action_equivalence.py](../../../scripts/frontier_universal_qg_canonical_textbook_geometric_action_equivalence.py) |
 | exact canonical textbook continuum gravitational weak/stationary action closure on the chosen smooth realization of `PL S^3 x R` | retained exact companion | Extended Data / arXiv theorem box | [UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md](../../UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md) | [frontier_universal_qg_canonical_textbook_continuum_gr_closure.py](../../../scripts/frontier_universal_qg_canonical_textbook_continuum_gr_closure.py) |
 | continuum identification positioning across the current gravity and gauge package surface | retained positioning | main text / discussion | [CONTINUUM_IDENTIFICATION_NOTE.md](../../CONTINUUM_IDENTIFICATION_NOTE.md) | [frontier_continuum_identification_audit.py](../../../scripts/frontier_continuum_identification_audit.py) |
-| exact native `SU(2)` from cubic `Cl(3)` | retained | main text | [NATIVE_GAUGE_CLOSURE_NOTE.md](../../NATIVE_GAUGE_CLOSURE_NOTE.md) | [frontier_non_abelian_gauge.py](../../../scripts/frontier_non_abelian_gauge.py) |
+| exact native `SU(2)` from cubic `Cl(3)` | retained | main text | [BOUNDED_NATIVE_GAUGE_NOTE.md](../../BOUNDED_NATIVE_GAUGE_NOTE.md) | [frontier_non_abelian_gauge.py](../../../scripts/frontier_non_abelian_gauge.py) |
 | graph-first structural `SU(3)` closure (selector unique up to graph automorphism) | retained | main text | [GRAPH_FIRST_SU3_INTEGRATION_NOTE.md](../../GRAPH_FIRST_SU3_INTEGRATION_NOTE.md) | [frontier_graph_first_su3_integration.py](../../../scripts/frontier_graph_first_su3_integration.py) |
 | exact `T = 0` confinement of the graph-first `SU(3)` gauge sector, with bounded `\sqrt{\sigma} \approx 465 MeV` | retained structural theorem + bounded quantitative prediction | main text / theorem box | [CONFINEMENT_STRING_TENSION_NOTE.md](../../CONFINEMENT_STRING_TENSION_NOTE.md) | [frontier_confinement_string_tension.py](../../../scripts/frontier_confinement_string_tension.py) |
 | left-handed `+1/3` / `-1` charge matching on the selected-axis surface | retained corollary | main text or SI corollary | [LEFT_HANDED_CHARGE_MATCHING_NOTE.md](../../LEFT_HANDED_CHARGE_MATCHING_NOTE.md) | [frontier_graph_first_su3_integration.py](../../../scripts/frontier_graph_first_su3_integration.py) |
@@ -74,19 +63,17 @@ normalization chain.
 | three-generation matter structure in the framework (physical species structure, not a taste artifact) | retained | main text | [THREE_GENERATION_STRUCTURE_NOTE.md](../../THREE_GENERATION_STRUCTURE_NOTE.md) | [frontier_generation_fermi_point.py](../../../scripts/frontier_generation_fermi_point.py), [frontier_generation_rooting_undefined.py](../../../scripts/frontier_generation_rooting_undefined.py), [frontier_generation_axiom_boundary.py](../../../scripts/frontier_generation_axiom_boundary.py) |
 | exact `I_3 = 0` / no third-order interference on the Hilbert surface | retained exact companion | main text or Extended Data | [I3_ZERO_EXACT_THEOREM_NOTE.md](../../I3_ZERO_EXACT_THEOREM_NOTE.md) | [frontier_born_rule_derived.py](../../../scripts/frontier_born_rule_derived.py) (historical filename) |
 | exact CPT on the free staggered lattice | retained exact companion | main text or Extended Data | [CPT_EXACT_NOTE.md](../../CPT_EXACT_NOTE.md) | [frontier_cpt_exact.py](../../../scripts/frontier_cpt_exact.py) (even periodic lattices only) |
-| emergent Lorentz invariance: leading correction is CPT-even, P-even, dimension-6 with unique cubic-harmonic `\ell = 4` signature, and is `(E/M_{Pl})^2`-suppressed on the retained hierarchy surface | retained exact structural theorem | main text / discussion | [EMERGENT_LORENTZ_INVARIANCE_NOTE.md](../../EMERGENT_LORENTZ_INVARIANCE_NOTE.md) | [frontier_emergent_lorentz_invariance.py](../../../scripts/frontier_emergent_lorentz_invariance.py) |
-| strong CP / `θ_eff = 0` on the retained axiom-determined action surface | retained exact structural theorem | main text / theorem box | [STRONG_CP_THETA_ZERO_NOTE.md](../../STRONG_CP_THETA_ZERO_NOTE.md) | [frontier_strong_cp_theta_zero.py](../../../scripts/frontier_strong_cp_theta_zero.py) |
+| strong CP / `θ_eff = 0` from the axiom-determined action | retained exact structural theorem | main text / theorem box | [STRONG_CP_THETA_ZERO_NOTE.md](../../STRONG_CP_THETA_ZERO_NOTE.md) | [frontier_strong_cp_theta_zero.py](../../../scripts/frontier_strong_cp_theta_zero.py) |
 | single-axiom Hilbert/locality reduction | SI framing only | SI / framing box | [SINGLE_AXIOM_HILBERT_NOTE.md](../../SINGLE_AXIOM_HILBERT_NOTE.md), [SINGLE_AXIOM_INFORMATION_NOTE.md](../../SINGLE_AXIOM_INFORMATION_NOTE.md) | [frontier_single_axiom_hilbert.py](../../../scripts/frontier_single_axiom_hilbert.py), [frontier_single_axiom_information.py](../../../scripts/frontier_single_axiom_information.py) |
 
 ## Quantitative component stack
 
 | Claim | Status | Placement | Authority | Primary runner |
 |---|---|---|---|---|
-| `alpha_s(M_Z) = 0.1181` | retained quantitative lane | quantitative table | [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md) | [frontier_yt_zero_import_chain.py](../../../scripts/frontier_yt_zero_import_chain.py), [frontier_complete_prediction_chain.py](../../../scripts/frontier_complete_prediction_chain.py) |
-| `sin^2(theta_W) = 0.2306`, `1/alpha_EM = 127.67`, `g_1(v) = 0.4644`, `g_2(v) = 0.6480` | retained quantitative lane | quantitative table / SI | [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md), [RCONN_DERIVED_NOTE.md](../../RCONN_DERIVED_NOTE.md) | [frontier_complete_prediction_chain.py](../../../scripts/frontier_complete_prediction_chain.py), [frontier_color_projection_mc.py](../../../scripts/frontier_color_projection_mc.py) |
-| CKM atlas/axiom closure package (`|V_us|`, `|V_cb|`, `|V_ub|`, `\delta`, `J`) | promoted quantitative package | quantitative table / SI theorem box | [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md) | [frontier_ckm_atlas_axiom_closure.py](../../../scripts/frontier_ckm_atlas_axiom_closure.py), [frontier_ckm_no_import_audit.py](../../../scripts/frontier_ckm_no_import_audit.py) |
-| `y_t(v) = 0.9176`, `m_t(pole) = 172.57-173.10 GeV` | bounded quantitative lane | quantitative table | [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md), [RCONN_DERIVED_NOTE.md](../../RCONN_DERIVED_NOTE.md), [YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md](../../YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md) | [frontier_yt_color_projection_correction.py](../../../scripts/frontier_yt_color_projection_correction.py), [frontier_color_projection_mc.py](../../../scripts/frontier_color_projection_mc.py), [frontier_yt_qfp_insensitivity.py](../../../scripts/frontier_yt_qfp_insensitivity.py) |
-| `m_H = 119.8 GeV` (2-loop support route), `125.3 GeV` (framework-side 3-loop route), bounded vacuum stability readout | bounded quantitative lane | quantitative table / discussion | [HIGGS_VACUUM_BOUNDED_NOTE.md](../../HIGGS_VACUUM_BOUNDED_NOTE.md) | [frontier_higgs_mass_full_3loop.py](../../../scripts/frontier_higgs_mass_full_3loop.py), [frontier_yt_color_projection_correction.py](../../../scripts/frontier_yt_color_projection_correction.py) |
+| `alpha_s(M_Z) = 0.1181` | retained quantitative lane | quantitative table | [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md) | [frontier_yt_zero_import_chain.py](../../../scripts/frontier_yt_zero_import_chain.py) |
+| `sin^2(theta_W) = 0.2306`, `1/alpha_EM = 127.67`, `g_1(v) = 0.4644`, `g_2(v) = 0.6480` | retained quantitative lane | quantitative table / SI | [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md) | [frontier_yt_ew_coupling_derivation.py](../../../scripts/frontier_yt_ew_coupling_derivation.py) |
+| `y_t(v) = 0.9176`, `m_t(pole) = 172.57-173.10 GeV` | derived with explicit systematic quantitative lane | quantitative table | [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md), [YT_QFP_INSENSITIVITY_THEOREM.md](../../YT_QFP_INSENSITIVITY_THEOREM.md), [YT_EXACT_COARSE_GRAINED_BRIDGE_OPERATOR_NOTE.md](../../YT_EXACT_COARSE_GRAINED_BRIDGE_OPERATOR_NOTE.md), [YT_AXIOM_FIRST_MICROSCOPIC_BRIDGE_THEOREM.md](../../YT_AXIOM_FIRST_MICROSCOPIC_BRIDGE_THEOREM.md), [YT_MICROSCOPIC_SCHUR_CLASS_ADMISSIBILITY_NOTE.md](../../YT_MICROSCOPIC_SCHUR_CLASS_ADMISSIBILITY_NOTE.md), [YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md](../../YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md), [YT_UNBOUNDED_PROGRAM_NOTE.md](../../YT_UNBOUNDED_PROGRAM_NOTE.md), [YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md](../../YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md), [YT_BRIDGE_ACTION_INVARIANT_NOTE.md](../../YT_BRIDGE_ACTION_INVARIANT_NOTE.md), [YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md](../../YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md), [YT_BRIDGE_MOMENT_CLOSURE_NOTE.md](../../YT_BRIDGE_MOMENT_CLOSURE_NOTE.md), [YT_BRIDGE_VARIATIONAL_SELECTOR_NOTE.md](../../YT_BRIDGE_VARIATIONAL_SELECTOR_NOTE.md), [YT_BRIDGE_HESSIAN_SELECTOR_NOTE.md](../../YT_BRIDGE_HESSIAN_SELECTOR_NOTE.md), [YT_BRIDGE_HIGHER_ORDER_CORRECTIONS_NOTE.md](../../YT_BRIDGE_HIGHER_ORDER_CORRECTIONS_NOTE.md), [YT_BRIDGE_NONLOCAL_CORRECTIONS_NOTE.md](../../YT_BRIDGE_NONLOCAL_CORRECTIONS_NOTE.md), [YT_BRIDGE_ENDPOINT_SHIFT_BOUND_NOTE.md](../../YT_BRIDGE_ENDPOINT_SHIFT_BOUND_NOTE.md), [YT_EXACT_INTERACTING_BRIDGE_TRANSPORT_NOTE.md](../../YT_EXACT_INTERACTING_BRIDGE_TRANSPORT_NOTE.md), [YT_BRIDGE_UV_CLASS_UNIQUENESS_NOTE.md](../../YT_BRIDGE_UV_CLASS_UNIQUENESS_NOTE.md), [YT_SCHUR_STABILITY_GAP_NOTE.md](../../YT_SCHUR_STABILITY_GAP_NOTE.md) | [frontier_yt_color_projection_correction.py](../../../scripts/frontier_yt_color_projection_correction.py), [frontier_yt_qfp_insensitivity.py](../../../scripts/frontier_yt_qfp_insensitivity.py), [frontier_yt_constructive_uv_bridge.py](../../../scripts/frontier_yt_constructive_uv_bridge.py), [frontier_yt_bridge_action_invariant.py](../../../scripts/frontier_yt_bridge_action_invariant.py), [frontier_yt_bridge_rearrangement_principle.py](../../../scripts/frontier_yt_bridge_rearrangement_principle.py), [frontier_yt_bridge_moment_closure.py](../../../scripts/frontier_yt_bridge_moment_closure.py), [frontier_yt_bridge_variational_selector.py](../../../scripts/frontier_yt_bridge_variational_selector.py), [frontier_yt_bridge_hessian_selector.py](../../../scripts/frontier_yt_bridge_hessian_selector.py), [frontier_yt_bridge_higher_order_corrections.py](../../../scripts/frontier_yt_bridge_higher_order_corrections.py), [frontier_yt_bridge_nonlocal_corrections.py](../../../scripts/frontier_yt_bridge_nonlocal_corrections.py), [frontier_yt_bridge_endpoint_shift_bound.py](../../../scripts/frontier_yt_bridge_endpoint_shift_bound.py), [frontier_yt_exact_interacting_bridge_transport.py](../../../scripts/frontier_yt_exact_interacting_bridge_transport.py), [frontier_yt_bridge_uv_class_uniqueness.py](../../../scripts/frontier_yt_bridge_uv_class_uniqueness.py), [frontier_yt_exact_coarse_grained_bridge_operator.py](../../../scripts/frontier_yt_exact_coarse_grained_bridge_operator.py), [frontier_yt_microscopic_schur_class_admissibility.py](../../../scripts/frontier_yt_microscopic_schur_class_admissibility.py), [frontier_yt_schur_stability_gap.py](../../../scripts/frontier_yt_schur_stability_gap.py), [frontier_yt_explicit_systematic_budget.py](../../../scripts/frontier_yt_explicit_systematic_budget.py) |
+| `m_H = 119.8 GeV` (2-loop support route), `125.3 GeV` (framework-side 3-loop route), vacuum stability with inherited explicit Yukawa systematic | derived with inherited explicit systematic quantitative lane | quantitative table / discussion | [HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md](../../HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md) | [frontier_higgs_mass_full_3loop.py](../../../scripts/frontier_higgs_mass_full_3loop.py), [frontier_yt_color_projection_correction.py](../../../scripts/frontier_yt_color_projection_correction.py) |
 
 ## Bounded companions
 
@@ -96,20 +83,20 @@ cleanly or closed.
 
 | Claim | Status | Placement | Authority |
 |---|---|---|---|
-| weak-field GR-signature companions beyond Newton/Poisson/WEP/time-dilation | bounded | arXiv / SI only | [Historical frozen-out registry](../../work_history/publication/FROZEN_OUT_REGISTRY.md) `F06` |
-| direct lattice DM contact enhancement and bounded relic chain | bounded | arXiv / SI only | [DM_RELIC_PAPER_NOTE.md](../../DM_RELIC_PAPER_NOTE.md), [Historical frozen-out registry](../../work_history/publication/FROZEN_OUT_REGISTRY.md) `F01` |
+| weak-field GR-signature companions beyond Newton/Poisson/WEP/time-dilation | bounded | arXiv / SI only | [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md) `F06` |
+| direct lattice DM contact enhancement and bounded relic chain | bounded | arXiv / SI only | [DM_RELIC_PAPER_NOTE.md](../../DM_RELIC_PAPER_NOTE.md), [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md) `F01` |
+| CKM atlas/axiom closure package | closed | promoted quantitative package / SI theorem box | [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md) |
 | cosmology windows (`Lambda`, `w=-1`, graviton mass, `Omega_Lambda`, `n_s`) | bounded / conditional | arXiv companion only | [COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md](../../COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md), [COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md](../../COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md), [OMEGA_LAMBDA_DERIVATION_NOTE.md](../../OMEGA_LAMBDA_DERIVATION_NOTE.md), [PRIMORDIAL_SPECTRUM_NOTE.md](../../PRIMORDIAL_SPECTRUM_NOTE.md), [DARK_ENERGY_EOS_NOTE.md](../../DARK_ENERGY_EOS_NOTE.md), [GRAVITON_MASS_DERIVED_NOTE.md](../../GRAVITON_MASS_DERIVED_NOTE.md) |
-| proton lifetime | bounded companion prediction | arXiv companion only | [PROTON_LIFETIME_DERIVED_NOTE.md](../../PROTON_LIFETIME_DERIVED_NOTE.md) |
-| vacuum critical stability | bounded companion prediction | arXiv companion only | [VACUUM_CRITICAL_STABILITY_NOTE.md](../../VACUUM_CRITICAL_STABILITY_NOTE.md) |
-| CKM neutron EDM bounded lane | bounded secondary prediction | arXiv appendix only | [CKM_NEUTRON_EDM_BOUND_NOTE.md](../../CKM_NEUTRON_EDM_BOUND_NOTE.md) |
+| proton lifetime | bounded sharp prediction | arXiv companion only | [PROTON_LIFETIME_DERIVED_NOTE.md](../../PROTON_LIFETIME_DERIVED_NOTE.md) |
+| Lorentz-violation cubic fingerprint | bounded sharp prediction | arXiv companion only | [LORENTZ_VIOLATION_DERIVED_NOTE.md](../../LORENTZ_VIOLATION_DERIVED_NOTE.md) |
 | BH entropy / RT ratio | bounded companion | arXiv companion only | [BH_ENTROPY_DERIVED_NOTE.md](../../BH_ENTROPY_DERIVED_NOTE.md) |
 | gravitational decoherence | bounded companion | arXiv companion only | [GRAV_DECOHERENCE_DERIVED_NOTE.md](../../GRAV_DECOHERENCE_DERIVED_NOTE.md) |
-| magnetic monopole mass | bounded companion prediction | arXiv companion only | [MONOPOLE_DERIVED_NOTE.md](../../MONOPOLE_DERIVED_NOTE.md) |
+| magnetic monopole mass | bounded companion | arXiv companion only | [MONOPOLE_DERIVED_NOTE.md](../../MONOPOLE_DERIVED_NOTE.md) |
 | GW echo null result / observational silence of frozen stars | bounded / off-scope companion | later companion paper only | [GW_ECHO_NULL_RESULT_NOTE.md](../../GW_ECHO_NULL_RESULT_NOTE.md) |
 
 The branch-audited quantitative portfolio behind these rows is catalogued in
 [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md). Every intentionally excluded
-family is documented in [Historical frozen-out registry](../../work_history/publication/FROZEN_OUT_REGISTRY.md).
+family is documented in [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md).
 
 ## Open paper gates
 

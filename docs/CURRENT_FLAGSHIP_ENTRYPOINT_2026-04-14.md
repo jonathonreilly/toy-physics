@@ -10,36 +10,18 @@ The package has one framework sentence:
 > We take `Cl(3)` on `Z^3` as the physical theory. Everything else on the
 > current paper surface is either retained, bounded, or explicitly open.
 
-Framework statement for reviewers:
-
-- the framework is presented as a one-axiom program on the current reduction
-  surface:
-  [SINGLE_AXIOM_INFORMATION_NOTE.md](SINGLE_AXIOM_INFORMATION_NOTE.md),
-  [SINGLE_AXIOM_HILBERT_NOTE.md](SINGLE_AXIOM_HILBERT_NOTE.md)
-- the separate memo
-  [MINIMAL_AXIOMS_2026-04-11.md](MINIMAL_AXIOMS_2026-04-11.md)
-  records the accepted operational package boundary used to audit the current
-  public lanes on `main`
-
-That memo is implementation-facing package hygiene, not a competing foundation
-count.
-
 ## What The Current Package Is
 
 The current flagship package has four layers:
 
 1. retained theorem core
 2. retained standalone quantitative lanes (`alpha_s`, EW normalization)
-3. bounded Yukawa/top and Higgs/vacuum lanes
-4. bounded prediction surface plus live gates and
+3. derived-with-explicit-systematic Yukawa/top and derived-with-inherited-explicit-systematic Higgs/vacuum lanes
+4. bounded observation-facing companion portfolio plus live gates and
    explicit frozen-out families
 
 The package is therefore not "everything in the repo," and it is not older
 route history.
-
-It is also already predictive beyond the retained theorem spine. For the
-publication-facing prediction inventory, use
-[publication/ci3_z3/PREDICTION_SURFACE_2026-04-15.md](publication/ci3_z3/PREDICTION_SURFACE_2026-04-15.md).
 
 The public manuscript surface is now arXiv-first:
 
@@ -56,10 +38,8 @@ textbook weak/Gaussian object, the chosen smooth global weak gravitational
 stationary/Gaussian solution class, the same project-native smooth
 geometric/action family, the canonical textbook Einstein-Hilbert-style
 geometric/action family, and one canonical textbook continuum gravitational
-weak/stationary action family on the same route. This is a chosen-target
-identification theorem, not a claim about every continuum completion. What
-remains beyond that is only optional comparison against alternative textbook
-packaging conventions.
+weak/stationary action family on the same route. What remains beyond that is
+only optional comparison against alternative textbook packaging conventions.
 For the one-note positioning layer across gravity and gauge, use
 [CONTINUUM_IDENTIFICATION_NOTE.md](CONTINUUM_IDENTIFICATION_NOTE.md).
 
@@ -104,12 +84,9 @@ For the one-note positioning layer across gravity and gauge, use
 - retained `S^3` compactification / topology closure
 - full-framework one-generation matter closure
 - retained three-generation matter structure
-  via the physical-lattice / no-rooting boundary and anomaly-forced
-  full-framework chirality
 - exact `I_3 = 0`
 - exact CPT on the free staggered lattice
-- emergent Lorentz invariance with first anisotropic correction at dimension 6 and unique cubic-harmonic `\ell = 4` signature; on the retained hierarchy surface the correction is `(E/M_{Pl})^2` suppressed
-- exact strong CP / `theta_eff = 0` on the retained axiom-determined action surface
+- exact strong CP / `theta_eff = 0` on the axiom-determined action surface
 
 ## Quantitative Component Stack
 
@@ -119,8 +96,14 @@ The current canonical quantitative stack is modular:
 - [RCONN_DERIVED_NOTE.md](RCONN_DERIVED_NOTE.md)
 - [YT_EW_COLOR_PROJECTION_THEOREM.md](YT_EW_COLOR_PROJECTION_THEOREM.md)
 - [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
-- [YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md](YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md)
-- [HIGGS_VACUUM_BOUNDED_NOTE.md](HIGGS_VACUUM_BOUNDED_NOTE.md)
+- [YT_QFP_INSENSITIVITY_THEOREM.md](YT_QFP_INSENSITIVITY_THEOREM.md)
+- [YT_UNBOUNDED_PROGRAM_NOTE.md](YT_UNBOUNDED_PROGRAM_NOTE.md)
+- [YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md](YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md)
+- [YT_BRIDGE_ACTION_INVARIANT_NOTE.md](YT_BRIDGE_ACTION_INVARIANT_NOTE.md)
+- [YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md](YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md)
+- [YT_BRIDGE_MOMENT_CLOSURE_NOTE.md](YT_BRIDGE_MOMENT_CLOSURE_NOTE.md)
+- [YT_BRIDGE_VARIATIONAL_SELECTOR_NOTE.md](YT_BRIDGE_VARIATIONAL_SELECTOR_NOTE.md)
+- [HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md](HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md)
 - [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](CKM_ATLAS_AXIOM_CLOSURE_NOTE.md)
 
 Current package status:
@@ -131,24 +114,28 @@ Current package status:
   `1/alpha_EM(M_Z) = 127.67`,
   `g_1(v) = 0.4644`,
   `g_2(v) = 0.6480`
-  where `alpha_s(v)` comes from the same-surface plaquette chain,
-  `g_1(v), g_2(v)` use derived `R_conn = 8/9` support, and the `M_Z`
-  rows use the retained running bridge
-- bounded `y_t(v) = 0.9176`
-- bounded `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
-  with the current `~3%` QFP/RGE-surrogate systematic carried explicitly by
-  the Yukawa/top lane
-- promoted CKM atlas/axiom closure package
-  (no quark-mass or fitted CKM inputs; canonical CMT `alpha_s(v)` input):
+- derived-with-explicit-systematic `y_t(v) = 0.9176`
+- derived-with-explicit-systematic `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
+  - the bridge is no longer generically open: constructive, invariant,
+    rearrangement, moment closure, the conditional variational selector, and
+    the local-Hessian selector derivation now force a UV-localized
+    two-moment class and explain the leading selector on that class; the
+    branch now carries an explicit bridge budget of `1.2147511%`
+    conservative (`0.75500635%` support-tight), the broad scanned family is
+    closed at the intrinsic UV-centered class level, and exact local
+    microscopic bridge operators now reduce into the same stable Schur class;
+    the lane still stays bounded because that exact bridge still carries the
+    explicit package-native endpoint budget
+- promoted CKM no-import closure package:
   `|V_us| = 0.22727`,
   `|V_cb| = 0.04217`,
   `|V_ub| = 0.003913`,
   `delta = 65.905 deg`,
   `J = 3.331 x 10^-5`
-- bounded Higgs / vacuum package:
+- derived-with-inherited-explicit-systematic Higgs / vacuum package:
   `m_H = 119.8 GeV` (2-loop support route),
   `125.3 GeV` (framework-side 3-loop route),
-  bounded vacuum-stability readout inherited from the bounded `y_t` / QFP lane
+  vacuum-stability readout inherited from the explicit `y_t` systematic
 
 ## Other Bounded Families
 
@@ -157,9 +144,8 @@ Current package status:
 - cosmology companions, now organized around one fixed-gap vacuum scale
   (`Lambda`, `w = -1`, graviton mass) plus the remaining matter bridge behind
   present-day `Omega_Lambda`
-- bounded secondary predictions already on `main`, including proton lifetime,
-  CKM neutron EDM, vacuum critical stability, benchmark gravitational
-  decoherence, BH entropy, and monopole mass
+- sharp companion predictions such as proton lifetime, Lorentz fingerprint,
+  BH entropy, graviton decoherence, monopole mass
 
 ## Live Gates
 
@@ -179,14 +165,9 @@ Start with:
 If you want the package internals after that, use:
 
 - [publication/ci3_z3/FULL_CLAIM_LEDGER.md](publication/ci3_z3/FULL_CLAIM_LEDGER.md)
+- [publication/ci3_z3/FROZEN_OUT_REGISTRY.md](publication/ci3_z3/FROZEN_OUT_REGISTRY.md)
 - [publication/ci3_z3/RESULTS_INDEX.md](publication/ci3_z3/RESULTS_INDEX.md)
 - [publication/ci3_z3/PUBLICATION_CONTROL_PLANE.md](publication/ci3_z3/PUBLICATION_CONTROL_PLANE.md)
-
-For optional historical context, use:
-
-- [Historical frozen-out registry](work_history/publication/FROZEN_OUT_REGISTRY.md)
-- [Historical remote-branch audit](work_history/publication/REMOTE_BRANCH_AUDIT_2026-04-14.md)
-- [Historical lane status board](work_history/repo/LANE_STATUS_BOARD.md)
 
 ## Front-Door Rule
 

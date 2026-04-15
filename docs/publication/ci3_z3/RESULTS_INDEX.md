@@ -35,17 +35,16 @@ Use alongside:
 | Canonical textbook Einstein-Hilbert-style geometric/action equivalence | [UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md](../../UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md) | [frontier_universal_qg_canonical_textbook_geometric_action_equivalence.py](../../../scripts/frontier_universal_qg_canonical_textbook_geometric_action_equivalence.py) |
 | Canonical textbook continuum gravitational closure | [UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md](../../UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md) | [frontier_universal_qg_canonical_textbook_continuum_gr_closure.py](../../../scripts/frontier_universal_qg_canonical_textbook_continuum_gr_closure.py) |
 | Continuum identification synthesis | [CONTINUUM_IDENTIFICATION_NOTE.md](../../CONTINUUM_IDENTIFICATION_NOTE.md) | [frontier_continuum_identification_audit.py](../../../scripts/frontier_continuum_identification_audit.py) |
-| Exact native `SU(2)` | [NATIVE_GAUGE_CLOSURE_NOTE.md](../../NATIVE_GAUGE_CLOSURE_NOTE.md) | [frontier_non_abelian_gauge.py](../../../scripts/frontier_non_abelian_gauge.py) |
+| Exact native `SU(2)` | [BOUNDED_NATIVE_GAUGE_NOTE.md](../../BOUNDED_NATIVE_GAUGE_NOTE.md) | [frontier_non_abelian_gauge.py](../../../scripts/frontier_non_abelian_gauge.py) |
 | Graph-first structural `SU(3)` | [GRAPH_FIRST_SU3_INTEGRATION_NOTE.md](../../GRAPH_FIRST_SU3_INTEGRATION_NOTE.md) | [frontier_graph_first_su3_integration.py](../../../scripts/frontier_graph_first_su3_integration.py) |
 | `SU(3)` confinement / string tension | [CONFINEMENT_STRING_TENSION_NOTE.md](../../CONFINEMENT_STRING_TENSION_NOTE.md) | [frontier_confinement_string_tension.py](../../../scripts/frontier_confinement_string_tension.py) |
 | Anomaly-forced `3+1` | [ANOMALY_FORCES_TIME_THEOREM.md](../../ANOMALY_FORCES_TIME_THEOREM.md) | [frontier_anomaly_forces_time.py](../../../scripts/frontier_anomaly_forces_time.py) |
 | Electroweak hierarchy / `v` | [OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md](../../OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md) | [frontier_hierarchy_observable_principle_from_axiom.py](../../../scripts/frontier_hierarchy_observable_principle_from_axiom.py) |
 | Retained `S^3` compactification / topology closure | [S3_GENERAL_R_DERIVATION_NOTE.md](../../S3_GENERAL_R_DERIVATION_NOTE.md), [S3_CAP_UNIQUENESS_NOTE.md](../../S3_CAP_UNIQUENESS_NOTE.md) | [frontier_s3_boundary_link_theorem.py](../../../scripts/frontier_s3_boundary_link_theorem.py), [frontier_s3_cap_uniqueness.py](../../../scripts/frontier_s3_cap_uniqueness.py), [frontier_s3_general_r.py](../../../scripts/frontier_s3_general_r.py) |
 | One-generation matter closure | [ONE_GENERATION_MATTER_CLOSURE_NOTE.md](../../ONE_GENERATION_MATTER_CLOSURE_NOTE.md) | [frontier_right_handed_sector.py](../../../scripts/frontier_right_handed_sector.py), [frontier_anomaly_forces_time.py](../../../scripts/frontier_anomaly_forces_time.py) |
-| Three-generation matter structure | [THREE_GENERATION_STRUCTURE_NOTE.md](../../THREE_GENERATION_STRUCTURE_NOTE.md), [GENERATION_AXIOM_BOUNDARY_NOTE.md](../../GENERATION_AXIOM_BOUNDARY_NOTE.md), [THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md](../../THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md) | [frontier_generation_fermi_point.py](../../../scripts/frontier_generation_fermi_point.py), [frontier_generation_rooting_undefined.py](../../../scripts/frontier_generation_rooting_undefined.py), [frontier_generation_axiom_boundary.py](../../../scripts/frontier_generation_axiom_boundary.py), [frontier_anomaly_forces_time.py](../../../scripts/frontier_anomaly_forces_time.py) |
+| Three-generation matter structure | [THREE_GENERATION_STRUCTURE_NOTE.md](../../THREE_GENERATION_STRUCTURE_NOTE.md), [GENERATION_AXIOM_BOUNDARY_NOTE.md](../../GENERATION_AXIOM_BOUNDARY_NOTE.md) | [frontier_generation_fermi_point.py](../../../scripts/frontier_generation_fermi_point.py), [frontier_generation_rooting_undefined.py](../../../scripts/frontier_generation_rooting_undefined.py), [frontier_generation_axiom_boundary.py](../../../scripts/frontier_generation_axiom_boundary.py) |
 | Exact `I_3 = 0` | [I3_ZERO_EXACT_THEOREM_NOTE.md](../../I3_ZERO_EXACT_THEOREM_NOTE.md) | [frontier_born_rule_derived.py](../../../scripts/frontier_born_rule_derived.py) |
 | Exact CPT | [CPT_EXACT_NOTE.md](../../CPT_EXACT_NOTE.md) | [frontier_cpt_exact.py](../../../scripts/frontier_cpt_exact.py) |
-| Emergent Lorentz invariance | [EMERGENT_LORENTZ_INVARIANCE_NOTE.md](../../EMERGENT_LORENTZ_INVARIANCE_NOTE.md) | [frontier_emergent_lorentz_invariance.py](../../../scripts/frontier_emergent_lorentz_invariance.py) |
 | Strong CP / `θ_eff = 0` | [STRONG_CP_THETA_ZERO_NOTE.md](../../STRONG_CP_THETA_ZERO_NOTE.md) | [frontier_strong_cp_theta_zero.py](../../../scripts/frontier_strong_cp_theta_zero.py) |
 
 ## Quantitative Component Package
@@ -54,10 +53,21 @@ Use alongside:
 |---|---|---|
 | retained `alpha_s` lane | [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md) | [frontier_yt_zero_import_chain.py](../../../scripts/frontier_yt_zero_import_chain.py) |
 | color-factor support `R_conn = 8/9` | [RCONN_DERIVED_NOTE.md](../../RCONN_DERIVED_NOTE.md) | [frontier_color_projection_mc.py](../../../scripts/frontier_color_projection_mc.py) |
-| retained EW normalization package | [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md), [RCONN_DERIVED_NOTE.md](../../RCONN_DERIVED_NOTE.md) | [frontier_complete_prediction_chain.py](../../../scripts/frontier_complete_prediction_chain.py), [frontier_color_projection_mc.py](../../../scripts/frontier_color_projection_mc.py) |
-| bounded Yukawa / top package | [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md), [RCONN_DERIVED_NOTE.md](../../RCONN_DERIVED_NOTE.md) | [frontier_yt_color_projection_correction.py](../../../scripts/frontier_yt_color_projection_correction.py), [frontier_color_projection_mc.py](../../../scripts/frontier_color_projection_mc.py) |
-| QFP robustness support | [YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md](../../YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md) | [frontier_yt_qfp_insensitivity.py](../../../scripts/frontier_yt_qfp_insensitivity.py) |
-| bounded Higgs / vacuum package | [HIGGS_VACUUM_BOUNDED_NOTE.md](../../HIGGS_VACUUM_BOUNDED_NOTE.md) | [frontier_higgs_mass_full_3loop.py](../../../scripts/frontier_higgs_mass_full_3loop.py), [frontier_yt_color_projection_correction.py](../../../scripts/frontier_yt_color_projection_correction.py), [frontier_direct_yt_extraction.py](../../../scripts/frontier_direct_yt_extraction.py) |
+| retained EW normalization package | [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md) | [frontier_yt_ew_coupling_derivation.py](../../../scripts/frontier_yt_ew_coupling_derivation.py) |
+| derived-with-explicit-systematic Yukawa / top package | [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md) | [frontier_yt_color_projection_correction.py](../../../scripts/frontier_yt_color_projection_correction.py) |
+| QFP robustness support | [YT_QFP_INSENSITIVITY_THEOREM.md](../../YT_QFP_INSENSITIVITY_THEOREM.md) | [frontier_yt_qfp_insensitivity.py](../../../scripts/frontier_yt_qfp_insensitivity.py) |
+| UV-localized bridge class support | [YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md](../../YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md) | [frontier_yt_constructive_uv_bridge.py](../../../scripts/frontier_yt_constructive_uv_bridge.py) |
+| bridge action invariant support | [YT_BRIDGE_ACTION_INVARIANT_NOTE.md](../../YT_BRIDGE_ACTION_INVARIANT_NOTE.md) | [frontier_yt_bridge_action_invariant.py](../../../scripts/frontier_yt_bridge_action_invariant.py) |
+| bridge rearrangement support | [YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md](../../YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md) | [frontier_yt_bridge_rearrangement_principle.py](../../../scripts/frontier_yt_bridge_rearrangement_principle.py) |
+| bridge moment-closure support | [YT_BRIDGE_MOMENT_CLOSURE_NOTE.md](../../YT_BRIDGE_MOMENT_CLOSURE_NOTE.md) | [frontier_yt_bridge_moment_closure.py](../../../scripts/frontier_yt_bridge_moment_closure.py) |
+| bridge variational-selector support | [YT_BRIDGE_VARIATIONAL_SELECTOR_NOTE.md](../../YT_BRIDGE_VARIATIONAL_SELECTOR_NOTE.md) | [frontier_yt_bridge_variational_selector.py](../../../scripts/frontier_yt_bridge_variational_selector.py) |
+| bridge local-Hessian selector support | [YT_BRIDGE_HESSIAN_SELECTOR_NOTE.md](../../YT_BRIDGE_HESSIAN_SELECTOR_NOTE.md) | [frontier_yt_bridge_hessian_selector.py](../../../scripts/frontier_yt_bridge_hessian_selector.py) |
+| bridge higher-order correction support | [YT_BRIDGE_HIGHER_ORDER_CORRECTIONS_NOTE.md](../../YT_BRIDGE_HIGHER_ORDER_CORRECTIONS_NOTE.md) | [frontier_yt_bridge_higher_order_corrections.py](../../../scripts/frontier_yt_bridge_higher_order_corrections.py) |
+| bridge nonlocal correction support | [YT_BRIDGE_NONLOCAL_CORRECTIONS_NOTE.md](../../YT_BRIDGE_NONLOCAL_CORRECTIONS_NOTE.md) | [frontier_yt_bridge_nonlocal_corrections.py](../../../scripts/frontier_yt_bridge_nonlocal_corrections.py) |
+| bridge endpoint-shift bound support | [YT_BRIDGE_ENDPOINT_SHIFT_BOUND_NOTE.md](../../YT_BRIDGE_ENDPOINT_SHIFT_BOUND_NOTE.md) | [frontier_yt_bridge_endpoint_shift_bound.py](../../../scripts/frontier_yt_bridge_endpoint_shift_bound.py) |
+| exact interacting bridge transport support | [YT_EXACT_INTERACTING_BRIDGE_TRANSPORT_NOTE.md](../../YT_EXACT_INTERACTING_BRIDGE_TRANSPORT_NOTE.md) | [frontier_yt_exact_interacting_bridge_transport.py](../../../scripts/frontier_yt_exact_interacting_bridge_transport.py) |
+| UV-class uniqueness audit | [YT_BRIDGE_UV_CLASS_UNIQUENESS_NOTE.md](../../YT_BRIDGE_UV_CLASS_UNIQUENESS_NOTE.md) | [frontier_yt_bridge_uv_class_uniqueness.py](../../../scripts/frontier_yt_bridge_uv_class_uniqueness.py) |
+| derived-with-inherited-explicit-systematic Higgs / vacuum package | [HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md](../../HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md) | [frontier_higgs_mass_full_3loop.py](../../../scripts/frontier_higgs_mass_full_3loop.py), [frontier_yt_color_projection_correction.py](../../../scripts/frontier_yt_color_projection_correction.py), [frontier_direct_yt_extraction.py](../../../scripts/frontier_direct_yt_extraction.py) |
 
 ## Public Manuscript Mapping
 
@@ -98,9 +108,8 @@ Use alongside:
   - full-framework one-generation closure
   - three-generation matter structure
   - exact `I_3 = 0` and CPT as compact supporting theorems
-  - emergent Lorentz invariance with first anisotropic correction at dimension 6 and unique cubic-harmonic `\ell = 4` signature
-  - exact strong CP / `theta_eff = 0` on the retained action surface
-  - promoted CKM atlas/axiom closure package as part of the quantitative manuscript surface
+  - exact strong CP / `theta_eff = 0`
+  - promoted CKM no-import closure package as part of the quantitative manuscript surface
 - Public package companions / appendices:
   - bounded weak-field GR companions beyond Newton / Poisson / WEP / time-dilation
   - derivation chains
@@ -118,13 +127,6 @@ Use alongside:
 | Dark-energy EOS companion | [DARK_ENERGY_EOS_NOTE.md](../../DARK_ENERGY_EOS_NOTE.md) | [frontier_dark_energy_eos.py](../../../scripts/frontier_dark_energy_eos.py) |
 | Conditional `Omega_Lambda` chain | [OMEGA_LAMBDA_DERIVATION_NOTE.md](../../OMEGA_LAMBDA_DERIVATION_NOTE.md) | [frontier_omega_lambda_derivation.py](../../../scripts/frontier_omega_lambda_derivation.py) |
 | Graviton-mass companion | [GRAVITON_MASS_DERIVED_NOTE.md](../../GRAVITON_MASS_DERIVED_NOTE.md) | [frontier_graviton_mass_derived.py](../../../scripts/frontier_graviton_mass_derived.py) |
-| Gravitational decoherence companion | [GRAV_DECOHERENCE_DERIVED_NOTE.md](../../GRAV_DECOHERENCE_DERIVED_NOTE.md) | [frontier_grav_decoherence_derived.py](../../../scripts/frontier_grav_decoherence_derived.py) |
-| CKM neutron-EDM bounded lane | [CKM_NEUTRON_EDM_BOUND_NOTE.md](../../CKM_NEUTRON_EDM_BOUND_NOTE.md) | [frontier_ckm_neutron_edm_bound.py](../../../scripts/frontier_ckm_neutron_edm_bound.py) |
-| Proton-lifetime companion | [PROTON_LIFETIME_DERIVED_NOTE.md](../../PROTON_LIFETIME_DERIVED_NOTE.md) | [frontier_proton_lifetime_derived.py](../../../scripts/frontier_proton_lifetime_derived.py) |
-| Vacuum critical stability companion | [VACUUM_CRITICAL_STABILITY_NOTE.md](../../VACUUM_CRITICAL_STABILITY_NOTE.md) | [frontier_higgs_mass_full_3loop.py](../../../scripts/frontier_higgs_mass_full_3loop.py), [frontier_yt_color_projection_correction.py](../../../scripts/frontier_yt_color_projection_correction.py), [frontier_direct_yt_extraction.py](../../../scripts/frontier_direct_yt_extraction.py) |
-| Bekenstein-Hawking entropy companion | [BH_ENTROPY_DERIVED_NOTE.md](../../BH_ENTROPY_DERIVED_NOTE.md) | [frontier_bh_entropy_derived.py](../../../scripts/frontier_bh_entropy_derived.py) |
-| Magnetic-monopole companion | [MONOPOLE_DERIVED_NOTE.md](../../MONOPOLE_DERIVED_NOTE.md) | [frontier_monopole_derived.py](../../../scripts/frontier_monopole_derived.py) |
-| GW echo null companion | [GW_ECHO_NULL_RESULT_NOTE.md](../../GW_ECHO_NULL_RESULT_NOTE.md) | [frontier_echo_null_result.py](../../../scripts/frontier_echo_null_result.py) |
 
 ## Promoted Quantitative Packages
 

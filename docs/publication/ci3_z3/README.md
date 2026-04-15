@@ -5,37 +5,19 @@ package.
 
 Use this package instead of browsing raw repo chronology.
 
-Framework statement:
-
-- the public package stands on the one-axiom reduction notes
-  [SINGLE_AXIOM_INFORMATION_NOTE.md](../../SINGLE_AXIOM_INFORMATION_NOTE.md)
-  and
-  [SINGLE_AXIOM_HILBERT_NOTE.md](../../SINGLE_AXIOM_HILBERT_NOTE.md)
-- [MINIMAL_AXIOMS_2026-04-11.md](../../MINIMAL_AXIOMS_2026-04-11.md) is the
-  operational package-boundary memo for the current audited implementation
-  surface, not a competing axiom count
-
 ## External Reviewer Read Order
 
 1. [Public arXiv draft](./ARXIV_DRAFT.md)
 2. [External reviewer guide](./EXTERNAL_REVIEWER_GUIDE.md)
 3. [Publication state](../../CI3_Z3_PUBLICATION_STATE_2026-04-15.md)
-4. [Prediction surface](./PREDICTION_SURFACE_2026-04-15.md)
-5. [Publication matrix](./PUBLICATION_MATRIX.md)
-6. [Quantitative summary table](./QUANTITATIVE_SUMMARY_TABLE.md)
-7. [Inputs and qualifiers](./INPUTS_AND_QUALIFIERS_NOTE.md)
-8. [What this paper does not claim](./WHAT_THIS_PAPER_DOES_NOT_CLAIM.md)
-9. [Claims table](./CLAIMS_TABLE.md)
-10. [Derivation atlas](./DERIVATION_ATLAS.md)
-11. [Derivation / validation map](./DERIVATION_VALIDATION_MAP.md)
-12. [Full claim ledger](./FULL_CLAIM_LEDGER.md)
-13. [Results index](./RESULTS_INDEX.md)
-
-## Optional History Bucket
-
-- [Historical frozen-out registry](../../work_history/publication/FROZEN_OUT_REGISTRY.md)
-- [Historical remote-branch audit](../../work_history/publication/REMOTE_BRANCH_AUDIT_2026-04-14.md)
-- [Historical stale-authority audit](../../work_history/publication/STALE_AUTHORITY_AUDIT_2026-04-14.md)
+4. [Publication matrix](./PUBLICATION_MATRIX.md)
+5. [Quantitative summary table](./QUANTITATIVE_SUMMARY_TABLE.md)
+6. [Claims table](./CLAIMS_TABLE.md)
+7. [Derivation atlas](./DERIVATION_ATLAS.md)
+8. [Derivation / validation map](./DERIVATION_VALIDATION_MAP.md)
+9. [Full claim ledger](./FULL_CLAIM_LEDGER.md)
+10. [Frozen-out registry](./FROZEN_OUT_REGISTRY.md)
+11. [Results index](./RESULTS_INDEX.md)
 
 For one-note gravity/gauge continuum positioning across the current package,
 use [CONTINUUM_IDENTIFICATION_NOTE.md](../../CONTINUUM_IDENTIFICATION_NOTE.md).
@@ -46,21 +28,13 @@ The package has four layers:
 
 1. retained theorem core
 2. retained standalone quantitative lanes (`alpha_s`, EW normalization)
-3. bounded Yukawa/top and Higgs/vacuum lanes
-4. bounded prediction surface plus live gates and frozen-out route
+3. explicit-systematic Yukawa/top and inherited-explicit-systematic Higgs/vacuum lanes
+4. bounded observation-facing portfolio plus live gates and frozen-out route
    history
 
 The public manuscript surface on `main` is now arXiv-first. Journal-specific
 packaging is private and is not kept as a competing public draft in this
 directory.
-
-The package is also already predictive in a reviewer-facing sense. For the
-shortest summary of what is already predicted on `main`, use
-[PREDICTION_SURFACE_2026-04-15.md](./PREDICTION_SURFACE_2026-04-15.md).
-For the explicit package boundary, use:
-
-- [INPUTS_AND_QUALIFIERS_NOTE.md](./INPUTS_AND_QUALIFIERS_NOTE.md)
-- [WHAT_THIS_PAPER_DOES_NOT_CLAIM.md](./WHAT_THIS_PAPER_DOES_NOT_CLAIM.md)
 
 ## Current Quantitative Component Stack
 
@@ -70,8 +44,21 @@ The current canonical quantitative stack is modular:
 - [RCONN_DERIVED_NOTE.md](../../RCONN_DERIVED_NOTE.md)
 - [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md)
 - [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
-- [YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md](../../YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md)
-- [HIGGS_VACUUM_BOUNDED_NOTE.md](../../HIGGS_VACUUM_BOUNDED_NOTE.md)
+- [YT_QFP_INSENSITIVITY_THEOREM.md](../../YT_QFP_INSENSITIVITY_THEOREM.md)
+- [YT_UNBOUNDED_PROGRAM_NOTE.md](../../YT_UNBOUNDED_PROGRAM_NOTE.md)
+- [YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md](../../YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md)
+- [YT_BRIDGE_ACTION_INVARIANT_NOTE.md](../../YT_BRIDGE_ACTION_INVARIANT_NOTE.md)
+- [YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md](../../YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md)
+- [YT_BRIDGE_MOMENT_CLOSURE_NOTE.md](../../YT_BRIDGE_MOMENT_CLOSURE_NOTE.md)
+- [YT_BRIDGE_VARIATIONAL_SELECTOR_NOTE.md](../../YT_BRIDGE_VARIATIONAL_SELECTOR_NOTE.md)
+- [YT_BRIDGE_HESSIAN_SELECTOR_NOTE.md](../../YT_BRIDGE_HESSIAN_SELECTOR_NOTE.md)
+- [YT_BRIDGE_HIGHER_ORDER_CORRECTIONS_NOTE.md](../../YT_BRIDGE_HIGHER_ORDER_CORRECTIONS_NOTE.md)
+- [YT_BRIDGE_NONLOCAL_CORRECTIONS_NOTE.md](../../YT_BRIDGE_NONLOCAL_CORRECTIONS_NOTE.md)
+- [YT_BRIDGE_ENDPOINT_SHIFT_BOUND_NOTE.md](../../YT_BRIDGE_ENDPOINT_SHIFT_BOUND_NOTE.md)
+- [YT_EXACT_INTERACTING_BRIDGE_TRANSPORT_NOTE.md](../../YT_EXACT_INTERACTING_BRIDGE_TRANSPORT_NOTE.md)
+- [YT_BRIDGE_UV_CLASS_UNIQUENESS_NOTE.md](../../YT_BRIDGE_UV_CLASS_UNIQUENESS_NOTE.md)
+- [YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md](../../YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md)
+- [HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md](../../HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md)
 - [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md)
 
 Current package status:
@@ -82,24 +69,27 @@ Current package status:
   `1/alpha_EM(M_Z) = 127.67`,
   `g_1(v) = 0.4644`,
   `g_2(v) = 0.6480`
-  where `alpha_s(v)` comes from the same-surface plaquette chain,
-  `g_1(v), g_2(v)` use derived `R_conn = 8/9` support, and the `M_Z`
-  rows use the retained running bridge
-- bounded `y_t(v) = 0.9176`
-- bounded `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
-  with the current `~3%` QFP/RGE-surrogate systematic carried explicitly by
-  the Yukawa/top lane
-- promoted CKM atlas/axiom closure package
-  (no quark-mass or fitted CKM inputs; canonical CMT `alpha_s(v)` input):
+- derived-with-explicit-systematic `y_t(v) = 0.9176`
+- derived-with-explicit-systematic `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
+  - the bridge is no longer open at the selector level: the local-Hessian
+    derivation now explains the leading positive local quadratic selector on
+    the forced UV window, the first higher-order and nonlocal corrections
+    above that selector are small on the viable family, and the branch now
+    has an explicit `1.2147511%` conservative transport budget
+    (`0.75500635%` support-tight); broad scanned-family uniqueness,
+    exact Schur-class uniqueness, Schur stability, and branch-scale
+    microscopic admissibility are now all closed, so the remaining issue is
+    only the explicit exact-bridge endpoint budget
+- promoted CKM no-import closure package:
   `|V_us| = 0.22727`,
   `|V_cb| = 0.04217`,
   `|V_ub| = 0.003913`,
   `delta = 65.905 deg`,
   `J = 3.331 x 10^-5`
-- bounded Higgs / vacuum package:
+- derived-with-inherited-explicit-systematic Higgs / vacuum package:
   `m_H = 119.8 GeV` (2-loop support route),
   `125.3 GeV` (framework-side 3-loop route),
-  bounded vacuum-stability readout inherited from the bounded `y_t` / QFP lane
+  vacuum-stability readout inherited from the explicit `y_t` systematic
 
 ## Package Rules
 
@@ -181,12 +171,9 @@ Retained backbone:
 - retained `S^3` compactification / topology closure
 - full-framework one-generation closure
 - three-generation matter structure in the framework
-  via the physical-lattice / no-rooting boundary and anomaly-forced
-  full-framework chirality
 - exact `I_3 = 0` theorem on the Hilbert surface
 - exact CPT theorem on the free staggered lattice
-- emergent Lorentz invariance with first anisotropic correction at dimension 6 and unique cubic-harmonic `\ell = 4` signature; on the retained hierarchy surface the correction is `(E/M_{Pl})^2` suppressed
-- exact strong CP / `theta_eff = 0` theorem on the retained axiom-determined action surface
+- exact strong CP / `theta_eff = 0` theorem on the axiom-determined action surface
 
 Reviewer-facing framing notes:
 
@@ -211,21 +198,15 @@ Reviewer-facing framing notes:
   [UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md](../../UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md)
   and is packaging-only.
 
-Bounded prediction surface:
+Observation-facing bounded portfolio:
 
 - DM ratio `R = 5.48` vs `5.47`
 - zero-import `\alpha_s(M_Z) = 0.1181`
-- bounded top package:
-  `y_t(v) = 0.9176`,
-  `m_t(pole) = 172.57 GeV` (2-loop),
-  `173.10 GeV` (3-loop),
-  with the current `~3%` QFP/RGE-surrogate systematic
-- promoted CKM atlas/axiom closure package with full sharp `|V_us|`, `|V_cb|`, `|V_ub|`, `\delta`, and `J`, no quark-mass or fitted CKM observables in the derivation, and canonical CMT `\alpha_s(v)` as the quantitative coupling input
+- best import-allowed `m_t = 171.0 GeV`
+- zero-import `m_t = 169.4 GeV` on the current 2-loop bounded route
+- promoted CKM no-import closure package with full sharp `|V_us|`, `|V_cb|`, `|V_ub|`, `\delta`, and `J`
 - cosmology companions such as `\Omega_\Lambda`, `n_s`, `w = -1`
-- sharp bounded secondary predictions already on `main`:
-  proton lifetime, CKM neutron EDM, vacuum critical stability,
-  benchmark gravitational decoherence
-- Higgs and other bounded secondary lanes
+- Higgs and sharp companion predictions
 
 Live high-impact gates:
 

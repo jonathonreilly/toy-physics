@@ -6,36 +6,20 @@
 This repository is not presently organized around the older toy-model or DAG
 exploration surfaces. The current review target is a `Cl(3)` on `Z^3`
 framework package with a retained theorem core, retained standalone
-quantitative lanes, bounded Yukawa/Higgs lanes, a bounded prediction
+quantitative lanes, explicit-systematic Yukawa/Higgs lanes, a bounded companion
 portfolio, and one explicitly open flagship gate.
-
-For framework counting, the public package should be read as a one-axiom
-program:
-
-- [SINGLE_AXIOM_INFORMATION_NOTE.md](SINGLE_AXIOM_INFORMATION_NOTE.md)
-- [SINGLE_AXIOM_HILBERT_NOTE.md](SINGLE_AXIOM_HILBERT_NOTE.md)
-
-The separate file
-[MINIMAL_AXIOMS_2026-04-11.md](MINIMAL_AXIOMS_2026-04-11.md) is the operational
-package-boundary memo used to audit current implementation-facing lanes. It is
-not a second foundation.
 
 ## Current Read Order
 
 1. [CURRENT_FLAGSHIP_ENTRYPOINT_2026-04-14.md](CURRENT_FLAGSHIP_ENTRYPOINT_2026-04-14.md)
 2. [publication/ci3_z3/ARXIV_DRAFT.md](publication/ci3_z3/ARXIV_DRAFT.md)
 3. [publication/ci3_z3/README.md](publication/ci3_z3/README.md)
-4. [publication/ci3_z3/PREDICTION_SURFACE_2026-04-15.md](publication/ci3_z3/PREDICTION_SURFACE_2026-04-15.md)
-5. [publication/ci3_z3/PUBLICATION_MATRIX.md](publication/ci3_z3/PUBLICATION_MATRIX.md)
-6. [publication/ci3_z3/DERIVATION_ATLAS.md](publication/ci3_z3/DERIVATION_ATLAS.md)
-7. [publication/ci3_z3/DERIVATION_VALIDATION_MAP.md](publication/ci3_z3/DERIVATION_VALIDATION_MAP.md)
+4. [publication/ci3_z3/PUBLICATION_MATRIX.md](publication/ci3_z3/PUBLICATION_MATRIX.md)
+5. [publication/ci3_z3/DERIVATION_ATLAS.md](publication/ci3_z3/DERIVATION_ATLAS.md)
+6. [publication/ci3_z3/DERIVATION_VALIDATION_MAP.md](publication/ci3_z3/DERIVATION_VALIDATION_MAP.md)
 
 For the package-level gravity/gauge continuum positioning synthesis, use
 [CONTINUUM_IDENTIFICATION_NOTE.md](CONTINUUM_IDENTIFICATION_NOTE.md).
-
-Read the gravity side as exact on the discrete project route and on one chosen
-canonical textbook continuum target, not as a blanket closure claim for every
-continuum packaging.
 
 ## Retained Core
 
@@ -55,8 +39,7 @@ continuum packaging.
 - retained three-generation matter structure
 - exact `I_3 = 0`
 - exact CPT
-- emergent Lorentz invariance with first anisotropic correction at dimension 6 and unique cubic-harmonic `\ell = 4` signature; on the retained hierarchy surface the correction is `(E/M_{Pl})^2` suppressed
-- exact strong CP / `theta_eff = 0` on the retained action surface
+- exact strong CP / `theta_eff = 0`
 
 ## Quantitative Component Stack
 
@@ -66,8 +49,14 @@ Canonical quantitative stack:
 - [RCONN_DERIVED_NOTE.md](RCONN_DERIVED_NOTE.md)
 - [YT_EW_COLOR_PROJECTION_THEOREM.md](YT_EW_COLOR_PROJECTION_THEOREM.md)
 - [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
-- [YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md](YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md)
-- [HIGGS_VACUUM_BOUNDED_NOTE.md](HIGGS_VACUUM_BOUNDED_NOTE.md)
+- [YT_QFP_INSENSITIVITY_THEOREM.md](YT_QFP_INSENSITIVITY_THEOREM.md)
+- [YT_UNBOUNDED_PROGRAM_NOTE.md](YT_UNBOUNDED_PROGRAM_NOTE.md)
+- [YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md](YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md)
+- [YT_BRIDGE_ACTION_INVARIANT_NOTE.md](YT_BRIDGE_ACTION_INVARIANT_NOTE.md)
+- [YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md](YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md)
+- [YT_BRIDGE_MOMENT_CLOSURE_NOTE.md](YT_BRIDGE_MOMENT_CLOSURE_NOTE.md)
+- [YT_BRIDGE_VARIATIONAL_SELECTOR_NOTE.md](YT_BRIDGE_VARIATIONAL_SELECTOR_NOTE.md)
+- [HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md](HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md)
 - [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](CKM_ATLAS_AXIOM_CLOSURE_NOTE.md)
 
 Current quantitative statuses:
@@ -76,38 +65,34 @@ Current quantitative statuses:
 - retained EW normalization package:
   `sin^2(theta_W)(M_Z) = 0.2306`,
   `1/alpha_EM(M_Z) = 127.67`
-  with `g_1(v), g_2(v)` carried by the same package through the
-  same-surface plaquette chain plus derived `R_conn = 8/9` support, and the
-  `M_Z` rows then using the retained running bridge
-- promoted CKM atlas/axiom closure package
-  (no quark-mass or fitted CKM inputs; canonical CMT `alpha_s(v)` input):
+- promoted CKM no-import closure package:
   `|V_us| = 0.22727`,
   `|V_cb| = 0.04217`,
   `|V_ub| = 0.003913`,
   `delta = 65.905 deg`,
   `J = 3.331 x 10^-5`
-- retained three-generation matter structure is a physical-lattice claim, not
-  a conventional rooting workaround: the triplet sectors are retained as
-  species structure because rooting is undefined in Hamiltonian `Cl(3)` on
-  `Z^3`, and chirality is supplied only on the full-framework anomaly-forced
-  `3+1` surface
-- bounded `y_t(v) = 0.9176`
-- bounded `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
-  with the current `~3%` QFP/RGE-surrogate systematic carried explicitly by
-  the Yukawa/top lane
-- bounded Higgs / vacuum package:
+- derived-with-explicit-systematic `y_t(v) = 0.9176`
+- derived-with-explicit-systematic `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
+  - the YT bridge is now narrowed beyond selector origin: the forced
+    UV-localized two-moment class and its leading positive local quadratic
+    selector are in hand, the first higher-order and nonlocal corrections
+    above that selector are small on the viable family, the branch now
+    carries an explicit `1.2147511%` conservative bridge budget, broad
+    scanned-family uniqueness is closed at the intrinsic UV-centered class
+    level, and branch-scale microscopic admissibility into the stable Schur
+    class is closed; the remaining issue is the explicit endpoint budget
+    itself, not structural bridge ontology
+- derived-with-inherited-explicit-systematic Higgs / vacuum package:
   `m_H = 119.8 GeV` (2-loop support route),
   `125.3 GeV` (framework-side 3-loop route),
-  bounded vacuum-stability readout inherited from the bounded `y_t` / QFP lane
+  vacuum-stability readout inherited from the explicit `y_t` systematic
 
-## Bounded Prediction Surface
+## Other Bounded Families
 
 - DM ratio and relic companions
-- promoted CKM atlas/axiom closure package, with older Cabibbo / NNI / partial Jarlskog notes retained only as route history
+- promoted CKM no-import closure package, with older Cabibbo / NNI / partial Jarlskog notes retained only as route history
 - cosmology companions
-- bounded secondary predictions already on `main`, including proton lifetime,
-  CKM neutron EDM, vacuum critical stability, benchmark gravitational
-  decoherence, and monopole mass
+- sharp companion predictions
 
 ## Open Gates
 
@@ -117,7 +102,6 @@ Current quantitative statuses:
 
 - If a result is not in the publication matrix, it is not package-captured.
 - If it is in the matrix but not in the claims table, it is not retained.
-- If it is important but excluded, it must appear in the historical
-  frozen-out registry under the history bucket.
+- If it is important but excluded, it must appear in the frozen-out registry.
 - Older route-history notes are not current authority unless the package
   points to them directly.

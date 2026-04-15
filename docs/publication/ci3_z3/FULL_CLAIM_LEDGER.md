@@ -15,7 +15,7 @@ Use this file together with:
 
 - [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md)
 - [QUANTITATIVE_SUMMARY_TABLE.md](./QUANTITATIVE_SUMMARY_TABLE.md)
-- [Historical frozen-out registry](../../work_history/publication/FROZEN_OUT_REGISTRY.md)
+- [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md)
 - [CLAIMS_TABLE.md](./CLAIMS_TABLE.md)
 - [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md)
 - [PUBLICATION_CONTROL_PLANE.md](./PUBLICATION_CONTROL_PLANE.md)
@@ -86,7 +86,7 @@ These rows correspond to Section A of
 
 | Claim family | Current decision | Why it is retained | Primary authority |
 |---|---|---|---|
-| exact native `SU(2)` | promoted | exact weak algebra on the cubic Clifford surface | [NATIVE_GAUGE_CLOSURE_NOTE.md](../../NATIVE_GAUGE_CLOSURE_NOTE.md) |
+| exact native `SU(2)` | promoted | exact weak algebra on the cubic Clifford surface | [BOUNDED_NATIVE_GAUGE_NOTE.md](../../BOUNDED_NATIVE_GAUGE_NOTE.md) |
 | graph-first structural `SU(3)` | promoted | selector + commutant closure now defines the safe `SU(3)` statement; selector is unique up to graph automorphism | [GRAPH_FIRST_SU3_INTEGRATION_NOTE.md](../../GRAPH_FIRST_SU3_INTEGRATION_NOTE.md) |
 | `SU(3)` confinement / `\sqrt{\sigma}` | promoted structural theorem + bounded quantitative prediction | graph-first `SU(3)` at canonical `g_bare^2 = 1` gives Wilson `beta = 6`; `T = 0` confinement is structural on that gauge sector, and the bounded string-tension readout is `\sqrt{\sigma} \approx 465 MeV` through the retained `\alpha_s` lane plus the standard low-energy EFT bridge | [CONFINEMENT_STRING_TENSION_NOTE.md](../../CONFINEMENT_STRING_TENSION_NOTE.md) |
 | left-handed charge matching | promoted corollary | safe selected-axis charge surface on the retained graph-first package | [LEFT_HANDED_CHARGE_MATCHING_NOTE.md](../../LEFT_HANDED_CHARGE_MATCHING_NOTE.md) |
@@ -98,10 +98,9 @@ These rows correspond to Section A of
 
 | Claim family | Current decision | Why it is retained | Primary authority |
 |---|---|---|---|
-| electroweak scale `v` | promoted | exact minimal hierarchy theorem plus axiom-native observable principle now clear the paper bar; the numerical value is the canonical evaluation on the same-surface plaquette-derived normalization chain | [OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md](../../OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md) |
+| electroweak scale `v` | promoted | exact minimal hierarchy theorem plus axiom-native observable principle now clear the paper bar; the numerical value is a pinned evaluation on the current `u_0` / plaquette surface | [OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md](../../OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md) |
 | exact `I_3 = 0` | promoted exact companion | safe statement is exact no-third-order interference on the Hilbert surface | [I3_ZERO_EXACT_THEOREM_NOTE.md](../../I3_ZERO_EXACT_THEOREM_NOTE.md) |
 | exact CPT | promoted exact companion | exact free staggered-lattice theorem on the retained framework surface | [CPT_EXACT_NOTE.md](../../CPT_EXACT_NOTE.md) |
-| emergent Lorentz invariance | promoted exact structural theorem | exact `O_h` symmetry and exact CPT/P protection force the first anisotropic correction to appear only at dimension 6 with unique `\ell = 4` cubic-harmonic signature; on the retained hierarchy surface the correction is `(E/M_{Pl})^2` suppressed | [EMERGENT_LORENTZ_INVARIANCE_NOTE.md](../../EMERGENT_LORENTZ_INVARIANCE_NOTE.md) |
 
 ## 3. Observation-facing bounded portfolio aligned to the matrix
 
@@ -126,26 +125,25 @@ external reviewer will ask about them whether or not they are retained.
 |---|---|---|---|---|
 | `alpha_s(M_Z)` | retained quantitative lane | standalone strong-coupling lane on `main` | [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md) | matrix row `\alpha_s(M_Z)`, n/a |
 | EW normalization package | retained quantitative lane | standalone EW lane on `main`; independent of the Yukawa/Higgs chain | [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md) | matrix row `EW normalization package`, n/a |
-| Yukawa / top package | bounded quantitative lane | zero SM imports, but still carries an approximately `3%` QFP/RGE-surrogate systematic | [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md) | matrix row `Yukawa / top package`, n/a |
+| Yukawa / top package | derived with explicit systematic quantitative lane | zero SM imports; selector origin now closed at leading order, the first higher-order/nonlocal corrections are small, the branch now carries an explicit package-native bridge budget of `1.2147511%` conservative (`0.75500635%` support-tight), broad scanned-family uniqueness is closed at the intrinsic UV-centered class level, and branch-scale microscopic admissibility into the exact Schur class is closed. The remaining issue is only that explicit endpoint budget, now decomposed as the live systematic rather than an open structural loophole. | [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md), [YT_UNBOUNDED_PROGRAM_NOTE.md](../../YT_UNBOUNDED_PROGRAM_NOTE.md), [YT_BRIDGE_ENDPOINT_SHIFT_BOUND_NOTE.md](../../YT_BRIDGE_ENDPOINT_SHIFT_BOUND_NOTE.md), [YT_EXACT_INTERACTING_BRIDGE_TRANSPORT_NOTE.md](../../YT_EXACT_INTERACTING_BRIDGE_TRANSPORT_NOTE.md), [YT_MICROSCOPIC_SCHUR_CLASS_ADMISSIBILITY_NOTE.md](../../YT_MICROSCOPIC_SCHUR_CLASS_ADMISSIBILITY_NOTE.md), [YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md](../../YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md) | matrix row `Yukawa / top package`, n/a |
 
 ### Flavor / CKM portfolio
 
 | Quantity / lane | Current decision | Why not promoted | Primary authority | Matrix / freeze reference |
 |---|---|---|---|---|
-| CKM closure package | closed promoted quantitative package | atlas/axiom CKM package is now carried by canonical CMT `\alpha_s(v)` as the quantitative coupling input, exact atlas counts, exact `1/6` projector, exact bilinear tensor carrier `K_R`, exact `Z_3` source, and exact Schur cascade; no quark masses or fitted CKM observables enter the derivation, and older bounded Cabibbo/NNI/Jarlskog notes are superseded as authority | [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md) | matrix row `CKM closure package`, n/a |
+| CKM closure package | closed promoted quantitative package | full no-import CKM package is now carried by the canonical CMT coupling, exact atlas counts, exact `1/6` projector, exact bilinear tensor carrier `K_R`, exact `Z_3` source, and exact Schur cascade; older bounded Cabibbo/NNI/Jarlskog notes are superseded as authority | [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md) | matrix row `CKM closure package`, n/a |
 
-### Higgs and individual companion lanes
+### Higgs and sharp companions
 
 | Quantity / lane | Current decision | Why not promoted | Primary authority | Matrix / freeze reference |
 |---|---|---|---|---|
-| Higgs / vacuum package | bounded quantitative lane | mechanism derived and the framework-native 3-loop Higgs computation now exists, but exact mass and vacuum readout still inherit the bounded Yukawa / QFP route | [HIGGS_VACUUM_BOUNDED_NOTE.md](../../HIGGS_VACUUM_BOUNDED_NOTE.md) | matrix row `Higgs / vacuum package`, n/a |
-| Bekenstein-Hawking entropy | bounded companion lane | useful companion signal, not part of flagship theorem spine | [BH_ENTROPY_DERIVED_NOTE.md](../../BH_ENTROPY_DERIVED_NOTE.md) | matrix row `Bekenstein-Hawking entropy` |
-| gravitational decoherence | bounded companion lane | concrete BMV-class benchmark prediction, but still companion-only and unmeasured | [GRAV_DECOHERENCE_DERIVED_NOTE.md](../../GRAV_DECOHERENCE_DERIVED_NOTE.md) | matrix row `gravitational decoherence` |
-| CKM neutron EDM bounded lane | bounded secondary lane | observable consequence of retained `\theta_eff = 0` plus promoted CKM closure, but still bridge-conditioned by standard EFT estimates | [CKM_NEUTRON_EDM_BOUND_NOTE.md](../../CKM_NEUTRON_EDM_BOUND_NOTE.md) | matrix row `CKM neutron EDM bounded lane` |
-| Proton lifetime | bounded companion lane | later companion or appendix material, not flagship core | [PROTON_LIFETIME_DERIVED_NOTE.md](../../PROTON_LIFETIME_DERIVED_NOTE.md) | matrix row `Proton lifetime` |
-| Vacuum critical stability | bounded companion lane | extracted from the bounded Higgs / vacuum package and useful as a discriminator, but still inherits the bounded Yukawa / Higgs route | [VACUUM_CRITICAL_STABILITY_NOTE.md](../../VACUUM_CRITICAL_STABILITY_NOTE.md) | matrix row `Vacuum critical stability` |
-| Magnetic monopole mass | bounded companion lane | imported phenomenology layer still present | [MONOPOLE_DERIVED_NOTE.md](../../MONOPOLE_DERIVED_NOTE.md) | matrix row `Magnetic monopole mass` |
-| GW echo null result | bounded / off-scope companion lane | later work resolved the compact-object echo question to observational silence rather than a positive timing prediction; this remains companion-only material | [GW_ECHO_NULL_RESULT_NOTE.md](../../GW_ECHO_NULL_RESULT_NOTE.md) | matrix row `GW echo null result` |
+| Higgs / vacuum package | derived with inherited explicit systematic quantitative lane | mechanism derived and the framework-native 3-loop Higgs computation now exists; exact mass and vacuum readout inherit the explicit Yukawa systematic rather than a structurally open Higgs blocker | [HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md](../../HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md) | matrix row `Higgs / vacuum package`, n/a |
+| Bekenstein-Hawking entropy | bounded companion | useful companion signal, not part of flagship theorem spine | [BH_ENTROPY_DERIVED_NOTE.md](../../BH_ENTROPY_DERIVED_NOTE.md) | matrix row `Bekenstein-Hawking entropy`, `F07` |
+| gravitational decoherence | bounded companion | concrete BMV-class benchmark prediction, but still companion-only and unmeasured | [GRAV_DECOHERENCE_DERIVED_NOTE.md](../../GRAV_DECOHERENCE_DERIVED_NOTE.md) | matrix row `gravitational decoherence`, `F07` |
+| Proton lifetime | bounded sharp prediction | later companion or appendix material, not flagship core | [PROTON_LIFETIME_DERIVED_NOTE.md](../../PROTON_LIFETIME_DERIVED_NOTE.md) | matrix row `Proton lifetime`, `F07` |
+| Lorentz-violation fingerprint | bounded sharp prediction | interesting companion phenomenology, not retained backbone | [LORENTZ_VIOLATION_DERIVED_NOTE.md](../../LORENTZ_VIOLATION_DERIVED_NOTE.md) | matrix row `Lorentz-violation fingerprint`, `F07` |
+| Magnetic monopole mass | bounded sharp prediction | imported phenomenology layer still present | [MONOPOLE_DERIVED_NOTE.md](../../MONOPOLE_DERIVED_NOTE.md) | matrix row `Magnetic monopole mass`, `F07` |
+| GW echo null result | bounded / off-scope companion | later work resolved the compact-object echo question to observational silence rather than a positive timing prediction; this remains companion-only material | [GW_ECHO_NULL_RESULT_NOTE.md](../../GW_ECHO_NULL_RESULT_NOTE.md) | matrix row `GW echo null result`, `F07` |
 
 ## 4. Live flagship gates aligned to the matrix
 
@@ -160,7 +158,7 @@ These rows correspond to Section C of
 
 These rows correspond to Section D of
 [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md) and the family details in
-[Historical frozen-out registry](../../work_history/publication/FROZEN_OUT_REGISTRY.md).
+[FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md).
 
 | Frozen family | Current decision | Why frozen out | Registry ref |
 |---|---|---|---|
@@ -170,6 +168,7 @@ These rows correspond to Section D of
 | cosmology companion portfolio | frozen-out of flagship core | conditional/bounded companion layer | `F04` |
 | Higgs and mass-spectrum companions beyond the promoted package | frozen-out of flagship core | the promoted Higgs/vacuum package is live, but the broader mass-spectrum and neutrino programs remain outside the flagship spine | `F05` |
 | gravity companions beyond the retained core | frozen-out of flagship core | weak-field GR-signature companions and broader non-flagship gravity phenomenology remain outside the flagship core even though the direct-universal discrete GR and canonical textbook continuum-QG route are now promoted | `F06` |
+| sharp companion predictions | frozen-out of flagship core | scientifically useful, but companion-paper or appendix material | `F07` |
 | branch-local inventories and stale strategy docs | frozen-out as authority | useful for capture, unsafe as publication authority | `F08` |
 
 ## 6. Historical and stale surfaces not to confuse with the matrix

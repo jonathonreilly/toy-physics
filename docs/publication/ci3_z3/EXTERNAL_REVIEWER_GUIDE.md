@@ -9,33 +9,12 @@ The current package is:
 
 1. a retained theorem core
 2. retained standalone quantitative lanes for `alpha_s` and EW normalization
-3. promoted CKM atlas/axiom closure plus bounded Yukawa/top and Higgs/vacuum lanes
-4. a bounded prediction surface plus an explicit history bucket for
+3. promoted CKM closure plus explicit-systematic Yukawa/top and inherited-explicit-systematic Higgs/vacuum lanes
+4. a bounded observation-facing portfolio and a frozen-out registry for
    important excluded families
-
-For framework counting, read the public package as a one-axiom program:
-
-- [SINGLE_AXIOM_INFORMATION_NOTE.md](../../SINGLE_AXIOM_INFORMATION_NOTE.md)
-- [SINGLE_AXIOM_HILBERT_NOTE.md](../../SINGLE_AXIOM_HILBERT_NOTE.md)
-
-Use [MINIMAL_AXIOMS_2026-04-11.md](../../MINIMAL_AXIOMS_2026-04-11.md) only as
-the operational package-boundary memo for the current audited implementation
-surface.
 
 For the package-level gravity/gauge continuum positioning synthesis, use
 [CONTINUUM_IDENTIFICATION_NOTE.md](../../CONTINUUM_IDENTIFICATION_NOTE.md).
-
-Read the gravity/QG side as exact on the discrete project route and on one
-chosen canonical textbook continuum target. The package is not asserting that
-every possible smooth or continuum packaging has been closed.
-
-Read the package as already predictive, not merely retrospective. For the
-short publication-facing list of what is already predicted on `main`, use
-[PREDICTION_SURFACE_2026-04-15.md](./PREDICTION_SURFACE_2026-04-15.md).
-For the explicit package boundary, use:
-
-- [INPUTS_AND_QUALIFIERS_NOTE.md](./INPUTS_AND_QUALIFIERS_NOTE.md)
-- [WHAT_THIS_PAPER_DOES_NOT_CLAIM.md](./WHAT_THIS_PAPER_DOES_NOT_CLAIM.md)
 
 ## Retained Core
 
@@ -85,14 +64,10 @@ For the explicit package boundary, use:
 - exact `T = 0` confinement of the graph-first `SU(3)` gauge sector, with
   bounded `sqrt(sigma) ≈ 465 MeV`
 - anomaly-forced `3+1`
-- retained electroweak hierarchy / `v = 246.282818290129 GeV`
+- retained electroweak hierarchy / `v = 245.080424447914 GeV`
 - retained `S^3` compactification / topology closure
 - full-framework one-generation matter closure
 - retained three-generation matter structure
-- reviewer-facing three-generation / chirality boundary:
-  physical-lattice species structure + no-rooting in Hamiltonian `Cl(3)` +
-  anomaly-forced full-framework chirality, not a conventional regulator
-  loophole
 - exact `I_3 = 0`
 - exact CPT
 - emergent Lorentz invariance with first anisotropic correction at dimension 6 and unique cubic-harmonic `\ell = 4` signature; on the retained hierarchy surface the correction is `(E/M_{Pl})^2` suppressed
@@ -106,11 +81,9 @@ Review this as a modular component stack:
 2. color-factor support: [RCONN_DERIVED_NOTE.md](../../RCONN_DERIVED_NOTE.md)
 3. EW normalization: [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md)
 4. Yukawa / top closure: [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
-5. QFP robustness support: [YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md](../../YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md)
-6. Higgs / vacuum: [HIGGS_VACUUM_BOUNDED_NOTE.md](../../HIGGS_VACUUM_BOUNDED_NOTE.md)
+5. QFP robustness support: [YT_QFP_INSENSITIVITY_THEOREM.md](../../YT_QFP_INSENSITIVITY_THEOREM.md)
+6. Higgs / vacuum: [HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md](../../HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md)
 7. CKM closure: [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md)
-8. three-generation / chirality boundary:
-   [THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md](../../THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md)
 
 Current status from that stack:
 
@@ -120,24 +93,18 @@ Current status from that stack:
   `1/alpha_EM(M_Z) = 127.67`,
   `g_1(v) = 0.4644`,
   `g_2(v) = 0.6480`
-  where `alpha_s(v)` comes from the same-surface plaquette chain,
-  `g_1(v), g_2(v)` use derived `R_conn = 8/9` support, and the `M_Z`
-  rows use the retained running bridge
-- bounded `y_t(v) = 0.9176`
-- bounded `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
-  with the current `~3%` QFP/RGE-surrogate systematic carried explicitly by
-  the Yukawa/top lane
-- promoted CKM atlas/axiom closure package
-  (no quark-mass or fitted CKM inputs; canonical CMT `alpha_s(v)` input):
+- derived-with-explicit-systematic `y_t(v) = 0.9176`
+- derived-with-explicit-systematic `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
+- promoted CKM no-import closure package:
   `|V_us| = 0.22727`,
   `|V_cb| = 0.04217`,
   `|V_ub| = 0.003913`,
   `delta = 65.905 deg`,
   `J = 3.331 x 10^-5`
-- bounded Higgs / vacuum package:
+- derived-with-inherited-explicit-systematic Higgs / vacuum package:
   `m_H = 119.8 GeV` (2-loop support route),
   `125.3 GeV` (framework-side 3-loop route),
-  bounded vacuum-stability readout inherited from the bounded `y_t` / QFP lane
+  vacuum-stability readout inherited from the explicit `y_t` systematic
 
 The most important gravity companion point is also framed carefully: the
 paper's gravity self-consistency claim is that Poisson is the unique local
@@ -156,14 +123,12 @@ continuum gravitational closure on the chosen realization are all exact on the
 authority path. Any optional comparison against alternative textbook
 conventions is packaged separately and does not modify the theorem stack.
 
-## Bounded Prediction Surface
+## Other Bounded Families
 
 - DM ratio and relic companions
 - older bounded CKM mass-basis / Cabibbo / partial Jarlskog route history
 - cosmology companions
-- bounded secondary predictions already on `main`, including proton lifetime,
-  CKM neutron EDM, vacuum critical stability, benchmark gravitational
-  decoherence, and monopole mass
+- sharp companion predictions
 
 ## What Is Still Open
 
@@ -179,18 +144,12 @@ conventions is packaged separately and does not modify the theorem stack.
 6. [DERIVATION_ATLAS.md](./DERIVATION_ATLAS.md)
 7. [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md)
 8. [FULL_CLAIM_LEDGER.md](./FULL_CLAIM_LEDGER.md)
-9. [Results index](./RESULTS_INDEX.md)
-
-## Optional Historical Context
-
-- [Historical frozen-out registry](../../work_history/publication/FROZEN_OUT_REGISTRY.md)
-- [Historical remote-branch audit](../../work_history/publication/REMOTE_BRANCH_AUDIT_2026-04-14.md)
+9. [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md)
 
 ## Review Rule
 
 - If a result is not in the matrix, it is not publication-captured.
 - If it is in the matrix but not in the claims table, it is not retained.
-- If it is important but excluded, it should appear in the historical
-  frozen-out registry.
+- If it is important but excluded, it should appear in the frozen-out registry.
 - If you are editing rather than reviewing, use
   [PUBLICATION_CONTROL_PLANE.md](./PUBLICATION_CONTROL_PLANE.md).
